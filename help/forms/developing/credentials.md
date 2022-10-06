@@ -1,8 +1,8 @@
 ---
 title: 使用憑證
-seo-title: 使用憑證
+seo-title: Working with Credentials
 description: 使用信任管理器API和Java API將憑證匯入AEM Forms。 此外，還可了解如何使用信任管理器API和Java API刪除憑證。
-seo-description: 使用信任管理器API和Java API將憑證匯入AEM Forms。 此外，還可了解如何使用信任管理器API和Java API刪除憑證。
+seo-description: Import credentials into AEM Forms using the Trust Manager API and Java API. In addition, learn how to delete credentials using the Trust Manager API and Java API.
 uuid: b794428f-49bf-4a91-bc5f-d855881f4f38
 contentOwner: admin
 content-type: reference
@@ -13,12 +13,12 @@ role: Developer
 exl-id: 1101c85a-6a90-471d-a7be-8d25765e84bf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
 
-# 使用憑據{#working-with-credentials}
+# 使用憑證 {#working-with-credentials}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
@@ -26,8 +26,8 @@ ht-degree: 0%
 
 憑據包含簽名或標識文檔所需的私鑰資訊。 憑證是您為信任所設定的公開金鑰資訊。 AEM Forms使用憑證和憑證有數種用途：
 
-* Acrobat Reader DC擴充功能使用憑證來啟用PDF檔案中的Adobe Reader使用權限。 （請參閱[將使用權套用至PDF檔案](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)。）
-* 簽名服務在執行諸如數位簽署PDF文檔等操作時訪問證書和憑據。 （請參閱[數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)。）
+* Acrobat Reader DC擴充功能會使用憑證，啟用PDF檔案中的Adobe Reader使用權限。 (請參閱 [將使用權應用於PDF文檔](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).)
+* 簽名服務在執行諸如數字簽名PDF文檔等操作時訪問證書和憑據。 (請參閱 [數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
 
 您可以使用信任管理器Java API，以程式設計方式與憑證服務互動。 您可以執行下列工作：
 
@@ -36,13 +36,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您也可以使用管理控制台來匯入和刪除憑證。 （請參閱[管理幫助。](https://www.adobe.com/go/learn_aemforms_admin_63)）
+>您也可以使用管理控制台來匯入和刪除憑證。 (請參閱 [管理說明。](https://www.adobe.com/go/learn_aemforms_admin_63))
 
-## 使用信任管理器API {#importing-credentials-by-using-the-trust-manager-api}導入憑據
+## 使用信任管理器API導入憑據 {#importing-credentials-by-using-the-trust-manager-api}
 
-您可以使用信任管理器API，以程式設計方式將憑證匯入AEM Forms。 例如，您可以匯入用來簽署PDF檔案的憑證。 （請參閱[數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)）。
+您可以使用信任管理器API，以程式設計方式將憑證匯入AEM Forms。 例如，您可以導入用於簽署PDF文檔的憑據。 (請參閱 [數位簽署PDF檔案](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents))。
 
-導入憑據時，需為憑據指定別名。 別名用於執行需要憑據的Forms操作。 匯入後，即可在管理控制台中檢視憑證，如下圖所示。 請注意，憑據的別名為&#x200B;*Secure*。
+導入憑據時，需為憑據指定別名。 別名用於執行需要憑據的Forms操作。 匯入後，即可在管理控制台中檢視憑證，如下圖所示。 請注意，憑據的別名為 *安全*.
 
 ![ww_ww_truststore](assets/ww_ww_truststore.png)
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 >
 >您無法使用網站服務將憑證匯入AEM Forms。
 
-### 步驟{#summary-of-steps}的摘要
+### 步驟摘要 {#summary-of-steps}
 
 要將憑據導入AEM Forms，請執行以下步驟：
 
@@ -71,11 +71,11 @@ ht-degree: 0%
 * adobe-utilities.jar(若AEM Forms部署在JBoss上則為必要)
 * jbossall-client.jar(若AEM Forms部署在JBoss上則為必要)
 
-有關這些JAR檔案的位置的資訊，請參閱[包括AEM Forms Java庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有關這些JAR檔案的位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **建立憑據服務客戶端**
 
-在以寫程式方式將憑據導入AEM Forms之前，請先建立憑據服務客戶端。 有關資訊，請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+在以寫程式方式將憑據導入AEM Forms之前，請先建立憑據服務客戶端。 如需詳細資訊，請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 **引用憑據**
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 [使用信任管理器API刪除憑證](credentials.md#deleting-credentials-by-using-the-trust-manager-api)
 
-### 使用Java API {#import-credentials-using-the-java-api}導入憑據
+### 使用Java API匯入憑證 {#import-credentials-using-the-java-api}
 
 使用信任管理器API(Java)將憑證匯入AEM Forms:
 
@@ -107,23 +107,23 @@ ht-degree: 0%
 
 1. 建立憑據服務客戶端
 
-   * 建立包含連接屬性的`ServiceClientFactory`對象。
-   * 使用其建構子並傳遞`ServiceClientFactory`物件，以建立`CredentialServiceClient`物件。
+   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
+   * 建立 `CredentialServiceClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 物件。
 
 1. 引用憑據
 
-   * 使用其建構子建立`java.io.FileInputStream`物件。 傳遞一個字串值，指定憑據的位置。
-   * 使用`com.adobe.idp.Document`建構子建立`com.adobe.idp.Document`物件以儲存憑證。 將包含憑據的`java.io.FileInputStream`對象傳遞到建構子。
+   * 建立 `java.io.FileInputStream` 物件，使用其建構子。 傳遞一個字串值，指定憑據的位置。
+   * 建立 `com.adobe.idp.Document` 使用 `com.adobe.idp.Document` 建構子。 傳遞 `java.io.FileInputStream` 包含建構子憑據的對象。
 
 1. 執行導入操作
 
-   * 建立包含一個元素的字串陣列。 將值`truststore.usage.type.sign`指派給元素。
-   * 調用`CredentialServiceClient`對象的`importCredential`方法並傳遞以下值：
+   * 建立包含一個元素的字串陣列。 指派值 `truststore.usage.type.sign` 至元素。
+   * 叫用 `CredentialServiceClient` 物件 `importCredential` 方法，並傳遞下列值：
 
       * 指定憑據的別名值的字串值。
-      * 儲存憑據的`com.adobe.idp.Document`實例。
+      * 此 `com.adobe.idp.Document` 儲存憑證的例項。
       * 一個字串值，它指定與憑據關聯的密碼。
-      * 包含使用值的字串陣列。 例如，您可以指定此值`truststore.usage.type.sign`。 要導入Reader擴展憑據，請指定`truststore.usage.type.lcre`。
+      * 包含使用值的字串陣列。 例如，您可以指定此值 `truststore.usage.type.sign`. 要導入Reader擴展憑據，請指定 `truststore.usage.type.lcre`.
 
 **另請參閱**
 
@@ -135,7 +135,7 @@ ht-degree: 0%
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用信任管理器API {#deleting-credentials-by-using-the-trust-manager-api}刪除憑據
+## 使用信任管理器API刪除憑證 {#deleting-credentials-by-using-the-trust-manager-api}
 
 您可以使用信任管理器API以程式設計方式刪除憑據。 在刪除憑據時，可以指定與憑據對應的別名。 刪除後，憑據無法用於執行操作。
 
@@ -143,7 +143,7 @@ ht-degree: 0%
 >
 >您無法使用Web服務將憑證刪除至AEM Forms。
 
-### 步驟{#summary_of_steps-1}的摘要
+### 步驟摘要 {#summary_of_steps-1}
 
 要刪除憑據，請執行以下步驟：
 
@@ -161,11 +161,11 @@ ht-degree: 0%
 * adobe-utilities.jar(若AEM Forms部署在JBoss上則為必要)
 * jbossall-client.jar(若AEM Forms部署在JBoss上則為必要)
 
-有關這些JAR檔案的位置的資訊，請參閱[包括AEM Forms Java庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有關這些JAR檔案的位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **建立憑據服務客戶端**
 
-在以寫程式方式刪除憑據之前，請先建立資料整合服務客戶端。 建立服務客戶端時，您定義調用服務所需的連接設定。 有關資訊，請參閱[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+在以寫程式方式刪除憑據之前，請先建立資料整合服務客戶端。 建立服務客戶端時，您定義調用服務所需的連接設定。 如需詳細資訊，請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 **執行刪除操作**
 
@@ -181,7 +181,7 @@ ht-degree: 0%
 
 [使用Java API匯入憑證](credentials.md#import-credentials-using-the-java-api)
 
-### 使用Java API {#deleting-credentials-using-the-java-api}刪除憑據
+### 使用Java API刪除憑證 {#deleting-credentials-using-the-java-api}
 
 使用信任管理器API(Java)從AEM Forms中刪除憑據：
 
@@ -191,12 +191,12 @@ ht-degree: 0%
 
 1. 建立憑據服務客戶端
 
-   * 建立包含連接屬性的`ServiceClientFactory`對象。
-   * 使用其建構子並傳遞`ServiceClientFactory`物件，以建立`CredentialServiceClient`物件。
+   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
+   * 建立 `CredentialServiceClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 物件。
 
 1. 執行刪除操作
 
-   調用`CredentialServiceClient`對象的`deleteCredential`方法，並傳遞指定別名值的字串值。
+   叫用 `CredentialServiceClient` 物件 `deleteCredential` 方法，並傳遞指定別名值的字串值。
 
 **另請參閱**
 

@@ -1,8 +1,8 @@
 ---
 title: 企業 DevOps
-seo-title: 企業 DevOps
+seo-title: Enterprise DevOps
 description: 了解輕鬆部署、簡化共同作業所需的程序、方法和溝通方式。
-seo-description: 了解輕鬆部署、簡化共同作業所需的程序、方法和溝通方式。
+seo-description: Learn about the processes, methods and communication required to ease deployment and simplify collaboration.
 uuid: ca4806d2-c845-4c18-9498-4b66f0980a5e
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -12,7 +12,7 @@ discoiquuid: 934eda2a-bd3b-4018-86dc-dbb01d246386
 exl-id: e67f848a-a8cd-4585-a734-e6b1de8a8d74
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '989'
 ht-degree: 93%
 
 ---
@@ -62,7 +62,7 @@ Adobe Experience Manager(AEM)部署通常由多個環境組成，用於不同層
 
 ### 品質保證 {#quality-assurance}
 
-品質保證團隊會使用此環境來全面[測試](/help/sites-developing/test-plan.md)您的新系統；設計和功能。 此環境應同時具備製作環境、發佈環境及適當的內容，並提供所有啟用完整測試套件所需的服務。
+品質保證團隊會使用此環境，以全面 [測試](/help/sites-developing/test-plan.md) 新系統；設計和功能。 此環境應同時具備製作環境、發佈環境及適當的內容，並提供所有啟用完整測試套件所需的服務。
 
 ### 分段 {#staging}
 
@@ -140,6 +140,6 @@ AEM專案常會觸發程式碼部署：
 內容可經由下列途徑轉移：
 
 * 在不同環境間：透過匯出和匯入套件。
-* 在不同例項之間 — 透過直接復寫([AEM復寫](/help/sites-deploying/replication.md))內容（使用HTTP或HTTPS、連線）。
+* 在不同執行個體之間 — 透過直接複製([AEM復寫](/help/sites-deploying/replication.md))內容（使用HTTP或HTTPS、連線）。
 
 ![chlimage_1-1](assets/chlimage_1-1.png)

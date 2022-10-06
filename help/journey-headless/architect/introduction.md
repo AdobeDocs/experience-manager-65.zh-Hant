@@ -1,7 +1,8 @@
 ---
 title: AEM無頭式內容架構者歷程
 description: 介紹Adobe Experience Manager強大、靈活、無頭的功能，以及如何為專案建立內容模型。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 0%

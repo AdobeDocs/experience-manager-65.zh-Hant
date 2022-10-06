@@ -1,8 +1,8 @@
 ---
 title: 在We.Retail中嘗試內容片段
-seo-title: 在We.Retail中嘗試內容片段
+seo-title: Trying out Content Fragments in We.Retail
 description: 在We.Retail中嘗試內容片段
-seo-description: 'null'
+seo-description: null
 uuid: 66daddfe-8e98-47b6-8499-db055887ac17
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,73 +12,71 @@ discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 5%
+source-wordcount: '452'
+ht-degree: 4%
 
 ---
 
-# 在We.Retail{#trying-out-content-fragments-in-we-retail}中嘗試內容片段
+# 在We.Retail中嘗試內容片段{#trying-out-content-fragments-in-we-retail}
 
-內容片段可讓您建立管道中性內容，以及（可能是管道特定的）變化。 **We.Retail** (如AEM的現成可用例項中所示)提供Lofotenas中的 **北極衝** 浪片段作為基本範例。這說明：
+內容片段可讓您建立管道中性內容，以及（可能是管道特定的）變化。 **We.Retail** (在AEM的現成可用例項中可用)提供片段 **洛福滕的北極衝浪** 作為基本範例。 這說明：
 
 * Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md)。它們可讓您建立管道中性內容，以及（可能是管道特定的）變化。
 
-   * 請參閱[在We.Retail](#where-to-find-content-fragments-in-we-retail)中尋找內容片段資產的位置
+   * 請參閱 [在We.Retail中尋找內容片段資產的位置](#where-to-find-content-fragments-in-we-retail)
 
-* 然後，您可以在編寫內容頁面時](/help/sites-authoring/content-fragments.md)使用這些片段及其變化。[
+* 然後 [在編寫時使用這些片段及其變數](/help/sites-authoring/content-fragments.md) 您的內容頁面。
 
-   * 請參閱[其中We.Retail](#where-content-fragments-are-used-in-we-retail)中使用內容片段
+   * 請參閱 [We.Retail中使用內容片段的位置](#where-content-fragments-are-used-in-we-retail)
 
 如需建立、管理、使用和開發內容片段的完整檔案：
 
-* 請參閱[更多資訊](#further-information)
+* 請參閱 [更多資訊](#further-information)
 
 >[!NOTE]
 >
->**內容** 片段和 **[體驗](/help/sites-authoring/experience-fragments.md)** 片段是AEM內的不同功能：
+>**內容片段** 和 **[體驗片段](/help/sites-authoring/experience-fragments.md)** 是AEM中的不同功能：
 >
->* **內容** 片段是編輯內容，主要是文字和相關影像。它們是純內容，沒有設計和佈局。
->* **體驗** 片段內容已完整規劃；網頁的片段。
-
+>* **內容片段** 是編輯內容，主要是文字和相關影像。 它們是純內容，沒有設計和佈局。
+>* **體驗片段** 內容全面；網頁的片段。
 >
->
-體驗片段可以包含內容片段形式的內容，但不能以相反的方式。
+>體驗片段可以包含內容片段形式的內容，但不能以相反的方式。
 
-## 在We.Retail {#where-to-find-content-fragments-in-we-retail}中尋找內容片段的位置
+## 在We.Retail中尋找內容片段的位置 {#where-to-find-content-fragments-in-we-retail}
 
-We.Retail中有數個範例內容片段；透過&#x200B;**Assets**、**Files**、**We.Retail**、**English**、**Experiences**&#x200B;導覽。
+We.Retail中有數個範例內容片段；透過 **資產**, **檔案**, **We.Retail**, **英文**, **體驗**.
 
-這些包括Lofoten的&#x200B;**北極衝浪**、片段以及相關的視覺資產：
+這些包括 **洛福滕的北極衝浪**，片段及相關的視覺資產：
 
-* 透過&#x200B;**Assets**、**Files**、**We.Retail**、**English**、**Experiences**、**Lofoten**&#x200B;的Artic Surfing導覽：
+* 透過導覽 **資產**, **檔案**, **We.Retail**, **英文**, **體驗**, **羅福滕的藝術衝浪**:
 
    * [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
 
 ![cf-44](assets/cf-44.png)
 
-您可以選擇並編輯Lofoten **中的**&#x200B;北極衝浪片段：
+您可以選取並編輯 **洛福滕的北極衝浪** 片段：
 
 * [http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten](http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten)
 
-您可以在此使用標籤（左側面板）編輯和管理](/help/assets/content-fragments/content-fragments.md)您的片段：[
+在這裡，您可以 [編輯和管理](/help/assets/content-fragments/content-fragments.md) 使用標籤的片段（左側面板）:
 
 <!--![](do-not-localize/cf-45-aa.png) ![](do-not-localize/cf-45-a.png) ASSET does not exist-->
 
-* **[](/help/assets/content-fragments/content-fragments-variations.md)** 變數，包括 [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
+* **[變異](/help/assets/content-fragments/content-fragments-variations.md)** 包括 [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
 * **[相關聯的內容](/help/assets/content-fragments/content-fragments-assoc-content.md)**
 * **[中繼資料](/help/assets/content-fragments/content-fragments-metadata.md)**
 
 ![cf-46](assets/cf-46.png)
 
-## 其中內容片段用於We.Retail {#where-content-fragments-are-used-in-we-retail}
+## We.Retail中使用內容片段的位置 {#where-content-fragments-are-used-in-we-retail}
 
-為了說明使用內容片段](/help/sites-authoring/content-fragments.md)製作[頁面，下方提供數個範例頁面，例如：
+為了說明 [使用內容片段製作頁面](/help/sites-authoring/content-fragments.md) 底下提供數個範例頁面，例如：
 
 * [http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience](http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience)
 
-例如，Lofoten **內容片段的**&#x200B;北極衝浪在「網站」頁面中參考：
+例如， **洛福滕的北極衝浪** 「網站」頁面中參考的內容片段：
 
-* 透過&#x200B;**Sites**、**We.Retail**、**語言主版**、**英文版**、**Experience**&#x200B;導覽。 然後開啟&#x200B;**Lofoten的北極衝浪活動**&#x200B;進行編輯：
+* 透過導覽 **網站**, **We.Retail**, **語言主版**, **英文**, **體驗**. 然後開啟 **洛福滕的北極衝浪** 編輯：
 
    * [http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html](http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html)
 

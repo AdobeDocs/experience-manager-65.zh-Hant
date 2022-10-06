@@ -1,8 +1,8 @@
 ---
 title: 自訂處理中報表
-seo-title: 自訂處理中報表
+seo-title: Custom Reports in Process Reporting
 description: 您可以建立自訂報表，並將這些報表新增至JEE程式報表UI上的AEM Forms。
-seo-description: 您可以建立自訂報表，並將這些報表新增至JEE程式報表UI上的AEM Forms。
+seo-description: You can create custom reports and add these reports to the AEM Forms on JEE Process Reporting UI.
 uuid: 81039fe8-d757-4c85-a1eb-88e4e6aa8500
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,7 +12,7 @@ docset: aem65
 exl-id: 30720061-d0e5-453b-a334-6a3aa9ca4c87
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -21,18 +21,18 @@ ht-degree: 0%
 
 您可以使用QueryBuilder的REST介面，或使用QueryBuilder API建立OSGi服務以建立自訂報表。
 
-## 建立自訂報表的一般步驟{#generic-steps-to-build-a-custom-report}
+## 建立自訂報表的一般步驟 {#generic-steps-to-build-a-custom-report}
 
 新增任何自訂報表之前，請執行下列範本程式：
 
-1. 自訂報表中使用的資料必須可在「處理報告」中使用。 若要確保資料的可用性，請排程cron作業，或在「處理報表」UI上使用&#x200B;**[Sync](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)**&#x200B;選項。
-1. URL要求（封裝所需的查詢）必須傳回適當的查詢結果物件。 若要建立查詢，您可以使用[QueryBuilder](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)的REST介面，使用QueryBuilder API建立OSGi服務。 您可以建立動態或靜態查詢。
+1. 自訂報表中使用的資料必須可在「處理報告」中使用。 為確保資料的可用性，請排程cron作業或使用 **[同步](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** 選項。
+1. URL要求（封裝所需的查詢）必須傳回適當的查詢結果物件。 若要建立查詢，您可以使用 [QueryBuilder](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html) 使用QueryBuilder API建立OSGi服務。 您可以建立動態或靜態查詢。
 
 1. 建立自訂使用者介面以顯示結果。 您可以建立獨立的用戶介面，或將結果與現有的「流程報告」UI整合。
 
-## 使用QueryBuilder {#using-the-rest-interface-of-the-querybuilder}的REST介面
+## 使用QueryBuilder的REST介面 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST介面會透過Java API和REST API公開「資產共用查詢產生器」的功能。 了解如何在執行下列步驟之前，使用[CRX QueryBuilder REST介面](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html):
+CRX QueryBuilder REST介面會透過Java API和REST API公開「資產共用查詢產生器」的功能。 了解如何使用 [CRX QueryBuilder REST介面](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)，然後再執行下列步驟：
 
 1. 瀏覽至URL `https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. 根據Process Reporting儲存節點結構和節點屬性建立查詢。
@@ -49,7 +49,7 @@ CRX QueryBuilder REST介面會透過Java API和REST API公開「資產共用查�
 
 ## 使用查詢產生器API建立服務  {#creating-a-service-using-query-builder-api-nbsp}
 
-使用查詢產生器API建立服務的先決條件是[建立並部署CQ OSGI套件組合](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html)及[使用查詢產生器API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)。
+使用查詢產生器API建立服務的先決條件為 [建立和部署CQ OSGI套件組合](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) 和 [使用查詢產生器API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html).
 
 1. 建立包含適當註解的OSGi服務。 若要存取QueryBuilder，請使用：
 
@@ -65,7 +65,7 @@ CRX QueryBuilder REST介面會透過Java API和REST API公開「資產共用查�
     predicateGroup.setAllRequired(true);
    ```
 
-1. 將謂詞添加到新建立的謂片語。 一些有用的謂詞結構是[JcrBoolPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html)、[JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html)、[RangePropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html)、[DateRangePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)和[TypePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html)。
+1. 將謂詞添加到新建立的謂片語。 一些有用的謂詞結構包括 [JcrBoolPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html), [JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html), [RangePropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html), [DateRangePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)，和 [TypePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html).
 
    若為靜態報表，會以硬式編碼撰寫述詞，若為動態報表，則從請求擷取述詞。
 
@@ -136,13 +136,13 @@ CRX QueryBuilder REST介面會透過Java API和REST API公開「資產共用查�
                        out.write(row.toString().getBytes());
    ```
 
-1. 使用`org.apache.felix maven-bundle-plugin`為servlet建立OSGi套件組合。
+1. 使用 `org.apache.felix maven-bundle-plugin` 為servlet建立OSGi套件組合。
 
 1. 在CRX伺服器上部署套件組合。
 
-### 服務示例{#service-example}
+### 服務範例 {#service-example}
 
-以下服務示例計算每月、每季和每年結束時處於&#x200B;**RUNNING**&#x200B;和&#x200B;**COMPLETE**&#x200B;狀態的進程實例。
+以下服務範例會計算 **執行中** 和 **完成** 每個月、季度和年末的州。
 
 ```java
 package custom.reporting.service;
@@ -340,7 +340,7 @@ public class PeriodicProcessVolume {
 }
 ```
 
-要在服務上方建置的範例`pom.xml`檔案為：
+範例 `pom.xml`要在服務之上建置的檔案為：
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
@@ -424,10 +424,10 @@ public class PeriodicProcessVolume {
 
 ## 建立個別UI  {#creating-a-separate-ui-nbsp}
 
-建立個別UI以顯示結果的先決條件是[Sling Basics](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html)、[建立CRX節點](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node)並提供適當的[存取權限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)。
+建立個別UI以顯示結果的先決條件為 [Sling基本介紹](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html), [建立CRX節點](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) 提供適當 [訪問權限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
 
-1. 在`/apps`節點建立CRX節點，並授予適當的存取權限。 (PERM_PROCESS_REPORTING_USER)
-1. 在`/content`節點定義轉譯器。
+1. 在 `/apps` 節點和授予適當的存取權限。 (PERM_PROCESS_REPORTING_USER)
+1. 在 `/content` 節點。
 1. 將JSP或HTML檔案添加到在步驟1中建立的節點。 您也可以新增CSS檔案。
 
    ![包含JSP和CSS檔案的示例節點](assets/nodewith_jsp_css_new.png)
@@ -632,18 +632,18 @@ response.setCharacterEncoding("utf-8");
 
 ## 將報表UI整合至現有的程式報表UI  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-建立個別UI以顯示結果的先決條件是[Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)、[建立CRX節點](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node)並提供適當的[存取權限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)。
+建立個別UI以顯示結果的先決條件為 [Sling基本介紹](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [建立CRX節點](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) 提供適當 [訪問權限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
 
 1. 建立個別的UI。
-1. 在`/content/process-reporting-runtime/custom-reports`節點為每個可插拔報告建立子節點`nt:unstructured`。
+1. 建立子項 `nt:unstructured` 節點 `/content/process-reporting-runtime/custom-reports` 每個可插拔報告的節點。
 
-   * **id** — 指定報表的唯一識別碼。
-   * **name** — 指定報表的名稱。名稱會顯示在UI中。
-   * **連結** — 指定個別UI之轉譯器的相對連結。連結會建立在步驟1。
-   * **description** — 指定報表的單行說明。您可以將說明欄位留空。
-   * **圖示** — 指定要以圖形方式表示報表的影像。您可以將圖示欄位保留為空白。
+   * **id** — 指定報告的唯一標識號。
+   * **名稱** — 指定報表的名稱。 名稱會顯示在UI中。
+   * **連結** — 指定個別UI的轉譯器的相對連結。 連結會建立在步驟1。
+   * **說明** — 指定報表的一行說明。 您可以將說明欄位留空。
+   * **圖示** — 指定要以圖形方式表示報表的影像。 您可以將圖示欄位保留為空白。
 
-   ![節點的屬性  ](assets/node_properties_new.png)
+   ![節點的屬性 ](assets/node_properties_new.png)
 
    節點的屬性
 
@@ -657,8 +657,8 @@ response.setCharacterEncoding("utf-8");
 
    自訂報表的結果畫面
 
-## 示例包{#sample-package}
+## 範例套件 {#sample-package}
 
-將`sample-report-pkg-1.zip`套件匯入至「程式管理UI」，以整合文章中討論的自訂報表和UI。
+匯入 `sample-report-pkg-1.zip` 套件，將文章中討論的自訂報表和UI整合至流程管理UI。
 
 [取得檔案](assets/sample-report-pkg-1.zip)

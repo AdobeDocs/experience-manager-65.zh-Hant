@@ -1,8 +1,8 @@
 ---
 title: 表單資料整合服務JavaAPI快速入門(SOAP)
-seo-title: 表單資料整合服務JavaAPI快速入門(SOAP)
-description: 使用表單資料整合服務將資料匯入PDF表單，並使用Java API從PDF表單匯出資料。
-seo-description: 使用表單資料整合服務將資料匯入PDF表單，並使用Java API從PDF表單匯出資料。
+seo-title: Form Data Integration Service JavaAPI Quick Start(SOAP)
+description: 使用「表單資料整合」服務將資料匯入PDF表單，並使用Java API從PDF表單匯出資料。
+seo-description: Use the Form Data Integration service to import data into a PDF form and export data from a PDF form using the Java API.
 uuid: bde8e83d-56d3-4331-a025-82b327c219b7
 contentOwner: admin
 content-type: reference
@@ -13,12 +13,12 @@ role: Developer
 exl-id: a2560c87-ae95-4d65-869a-8cba177a1cd6
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
 
-# 表單資料整合服務Java API快速入門(SOAP){#form-data-integration-service-javaapi-quick-start-soap}
+# 表單資料整合服務Java API快速入門(SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
 
 表單資料整合服務提供下列快速入門。
 
@@ -30,11 +30,11 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計中的快速入門是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（如UNIX），請用適用作業系統支援的路徑取代Windows專用路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表單進行程式設計中的快速入門是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（如UNIX），請用適用作業系統支援的路徑取代Windows專用路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-importing-form-data-using-the-java-api}匯入表單資料
+## 快速入門（SOAP模式）:使用Java API匯入表單資料 {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-以下Java代碼示例將資料導入PDF表單中。 資料位於名為&#x200B;*Loan_data.xml*&#x200B;的XML檔案中，而PDF表單將另存為名為&#x200B;*ResultLoanForm.pdf*&#x200B;的PDF檔案。 （請參閱[匯入表單資料](/help/forms/developing/importing-exporting-data.md#importing-form-data)。）
+下列Java程式碼範例會將資料匯入PDF表單。 資料位於名為的XML檔案中 *Loan_data.xml* 而PDF表單會儲存為PDF檔案，名為 *ResultLoanForm.pdf*. (請參閱 [匯入表單資料](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
 
 ```java
  /*
@@ -134,9 +134,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-exporting-form-data-using-the-java-api}匯出表單資料
+## 快速入門（SOAP模式）:使用Java API匯出表單資料 {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
-以下Java代碼示例將資料從PDF表單導出。 表單資料會儲存為名為&#x200B;*Loan_data.xml*&#x200B;的XML檔案。 （請參閱[匯出表單資料](/help/forms/developing/importing-exporting-data.md#exporting-form-data)。）
+下列Java程式碼範例會從PDF表單匯出資料。 表單資料會儲存為名為的XML檔案 *Loan_data.xml*. (請參閱 [匯出表單資料](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
 
 ```java
  /*

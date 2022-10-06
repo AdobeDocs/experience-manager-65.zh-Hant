@@ -1,8 +1,8 @@
 ---
 title: 以維護模式執行AEM表單
-seo-title: 以維護模式執行AEM表單
+seo-title: Running AEM forms in maintenance mode
 description: 維護模式在執行修補DSC、升級AEM表單或套用Service Pack等工作時很有用。 進一步了解如何以維護模式執行AEM表單。
-seo-description: 維護模式在執行修補DSC、升級AEM表單或套用Service Pack等工作時很有用。 進一步了解如何以維護模式執行AEM表單。
+seo-description: Maintenance mode is useful when performing tasks such as patching a DSC, upgrading AEM forms, or applying a service pack. Learn more about running AEM forms in maintenance mode.
 uuid: 9aa3be20-f17e-4384-b4ce-daaee2898c96
 contentOwner: admin
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: 94047c12-ba3d-457a-954f-e035c7cc3ecd
 exl-id: 6f5ce18b-26b4-4c31-b48a-43ccbb3912f6
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
 
-# 在維護模式{#running-aem-forms-in-maintenance-mode}中運行AEM表單
+# 以維護模式執行AEM表單 {#running-aem-forms-in-maintenance-mode}
 
 維護模式在執行修補DSC、升級AEM表單或套用Service Pack等工作時很有用。
 

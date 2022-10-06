@@ -1,8 +1,8 @@
 ---
 title: 社交圖表要點
-seo-title: 社交圖表要點
+seo-title: Social Graph Essentials
 description: 後續元件和下列元件概觀
-seo-description: 後續元件和下列元件概觀
+seo-description: follow component and following component overview
 uuid: 8ea33760-62b1-4de2-b07f-bc2417ade156
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,20 +12,20 @@ discoiquuid: f8d85d72-0215-4680-a334-e37a530fba58
 exl-id: c037a788-c943-4f95-a028-1fcb0ef48f86
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '249'
 ht-degree: 2%
 
 ---
 
-# 社交圖表要點{#social-graph-essentials}
+# 社交圖表要點  {#social-graph-essentials}
 
-社區成員能夠遵循[活動](essentials-activities.md)並遵循這些活動，具體表現在以下兩個部分：
+社群成員遵循的能力 [活動](essentials-activities.md) 並透過兩個元件來建立：
 
-`following`元件必須與其他資源關聯，並且已為[社區站點](overview.md#communitiessites)中的現有社區成員和功能建立此關聯。
+此 `following` 元件必須與另一個資源關聯，並且此關聯已針對 [社群網站](overview.md#communitiessites).
 
-`following`元件列出當前成員後面或當前成員後面的成員。 此社交圖形中，成員之間關係包含在為社群網站建立的使用者設定檔中。
+此 `following` 元件列出當前成員後面或當前成員後面的成員。 此社交圖形中，成員之間關係包含在為社群網站建立的使用者設定檔中。
 
-## 客戶端{#essentials-for-client-side}的要點
+## 用戶端的要點 {#essentials-for-client-side}
 
 ### 關注 {#following}
 
@@ -53,20 +53,20 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱<a href="socialgraph.md">使用社交圖表</a></td>
+   <td>請參閱 <a href="socialgraph.md">使用社交圖表</a></td>
   </tr>
   <tr>
-   <td><strong> optional<br />屬性</strong></td>
+   <td><strong> 可選<br /> 屬性</strong></td>
    <td>
     <ul>
      <li>名稱: <strong><code>outgoing</code></strong></li>
      <li>類型：布林值</li>
      <li>值:<br />
       <ul>
-       <li><i>True  </i> — 元 <code>following</code> 件將列出當前登錄成員的成員 <code>follows</code></li>
-       <li><i>False  </i> — 元 <code>following</code> 件將列出當前登 <code>follow </code>錄成員的成員</li>
+       <li><i>True </i>- <code>following</code> 元件將列出當前登錄成員的成員 <code>follows</code></li>
+       <li><i>False </i>- <code>following</code> 元件將列出 <code>follow </code>當前已登錄的成員</li>
       </ul> </li>
-    </ul> <p>如果屬性遺失，則預設為<i>true</i>。 目前，無法在製作模式中使用編輯對話方塊來設定此屬性。 必須使用<a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>將屬性新增至<code>following </code>節點的例項。</p> </td>
+    </ul> <p>預設為 <i>true</i> 如果屬性遺失。 目前，無法在製作模式中使用編輯對話方塊來設定此屬性。 屬性必須新增至的例項 <code>following </code>節點使用 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -81,7 +81,7 @@ ht-degree: 2%
 
 * [用戶端自訂](client-customize.md)
 
-## 伺服器端{#essentials-for-server-side}的要點
+## 伺服器端的Essentials {#essentials-for-server-side}
 
 * [社交圖表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
 

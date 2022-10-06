@@ -1,7 +1,8 @@
 ---
 title: 翻譯內容
 description: 使用翻譯連接器和規則來翻譯無頭內容。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: a2c2bb9f-97b9-42fd-9bd1-e75c113fb514
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '2174'
 ht-degree: 0%

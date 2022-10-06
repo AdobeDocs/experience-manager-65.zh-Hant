@@ -1,8 +1,8 @@
 ---
 title: 行動應用程式
-seo-title: 行動應用程式
+seo-title: Mobile Apps
 description: 此頁面可做為開始編寫、開發及管理行動應用程式的登陸頁面。
-seo-description: 此頁面可做為開始編寫、開發及管理行動應用程式的登陸頁面。
+seo-description: This page serves as a landing page to get started with authoring, developing, and administering mobile apps.
 uuid: 0cc9e6d6-c6ea-48f9-9b7f-9ead0f2d199e
 contentOwner: msm-service
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: f73bfa98-df2d-4b0f-93a2-1337f783e4bc
 exl-id: ffd2d029-b81a-4768-8e58-66aa5cf3772d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 5%
+source-wordcount: '136'
+ht-degree: 4%
 
 ---
 
@@ -32,4 +32,4 @@ AEM Mobile提供多種建立應用程式的方法。 您建立應用程式的不
 
 >[!NOTE]
 >
->若您是Adobe Experience Manager的新手，可能想要逐步了解AEM](/help/sites-deploying/deploy.md)快速入門。[
+>如果您是Adobe Experience Manager的新手，可能要 [AEM快速入門](/help/sites-deploying/deploy.md).

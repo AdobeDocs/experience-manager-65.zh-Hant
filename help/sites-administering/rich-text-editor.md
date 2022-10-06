@@ -145,7 +145,6 @@ RTE的基本功能會由 `features` 屬性。
 >* **名稱**: `configPath`
 >* **類型**: `String`
 >* **值**:包含實際配置的節點的路徑
-
 >
 >請勿將RTE設定節點命名為 `config`. 否則，RTE設定只對管理員有效，對群組中的使用者無效 `content-author`.
 
@@ -192,7 +191,6 @@ RTE的基本功能會由 `features` 屬性。
 >
 >* `/libs/wcm/foundation/components/text`
 >* `/libs/foundation/components/text`
-
 >
 >若要建立您自己的文字元件，請複製上述元件，而非編輯這些元件。
 

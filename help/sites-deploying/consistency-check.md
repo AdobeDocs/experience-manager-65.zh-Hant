@@ -1,18 +1,18 @@
 ---
 title: 一致性和遍歷檢查
-seo-title: 一致性和遍歷檢查
+seo-title: Consistency and Traversal Checks
 description: 了解如何執行一致性和周遊檢查。
-seo-description: 了解如何執行一致性和周遊檢查。
+seo-description: Learn how to perform consistency and traversal checks.
 uuid: 0304e378-7c60-4bf5-9052-d01149d2a6df
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 discoiquuid: af9a3e9d-194a-42e5-be28-b238e0c1e55e
-feature: 設定
+feature: Configuring
 exl-id: 10dde29b-5dc7-4d4e-80ae-3d4fd0397f7e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -31,14 +31,14 @@ javax.jcr.RepositoryException: Error indexing workspace: Error indexing workspac
 ...
 ```
 
-## 執行一致性檢查{#perform-a-consistency-check}
+## 執行一致性檢查 {#perform-a-consistency-check}
 
 要執行一致性檢查，請導航到JMX Mbean** com.adobe.granite（儲存庫）**的管理頁。 從AEM主畫面，前往：
 
 **「工具」>「Web控制台」>「主（在菜單欄上）」>「JMX」>「com.adobe.granite（儲存庫）」**
 
-在預設安裝中，可在以下位置找到： **[|顯示我|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
+在預設安裝中，可在以下位置找到：  **[|顯示我|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
 
-在頁面的&#x200B;**Operations**&#x200B;區段中，您會找到兩種方法：**`traversalCheck`**&#x200B;和&#x200B;**`consistencyCheck`**。 要執行檢查，請按一下操作並輸入所需的參數。
+在 **操作** 區段，您會找到兩種方法： **`traversalCheck`** 和 **`consistencyCheck`**. 要執行檢查，請按一下操作並輸入所需的參數。
 
 ![chlimage_1-117](assets/chlimage_1-117.png)

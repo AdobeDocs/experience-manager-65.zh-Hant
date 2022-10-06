@@ -1,8 +1,8 @@
 ---
 title: 設定AEM Forms應用程式的環境
-seo-title: 設定AEM Forms應用程式的環境
+seo-title: Set up environment for AEM Forms app
 description: 建置和部署AEM Forms應用程式的硬體、軟體和授權。
-seo-description: 建置和部署AEM Forms應用程式的硬體、軟體和授權。
+seo-description: Hardware, software, and licenses to build and deploy the AEM Forms app.
 uuid: 4123a6b7-5766-476c-9afb-f57029b148ad
 contentOwner: robhagat
 content-type: reference
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 1d1f9db2-83cf-4612-ac8c-d2638c3bbaea
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
@@ -22,26 +22,26 @@ ht-degree: 0%
 
 您需要下列硬體、軟體和授權才能建置和部署AEM Forms應用程式：
 
-## 對於Windows設備{#for-windows-devices}
+## Windows裝置 {#for-windows-devices}
 
 * Microsoft Windows 10
 * Microsoft Visual Studio 2015
-* 適用於Apache Cordova的Microsoft Visual Studio Tools
+* Microsoft Visual Studio Tools for Apache Cordova
 
-## 對於iOS設備{#for-ios-devices}
+## 適用於iOS裝置 {#for-ios-devices}
 
-* 運行Mac OS X 10.9.5或更高版本的基於Intel的Apple Mac
+* 運行Mac OS X 10.9.5或更高版本的基於英特爾的Apple Mac
 * iOS SDK 8.4或更新版本
 * Xcode版本：適用於OS X或更新版本的Xcode 6.4
-* iOS開發人員企業計畫會員資格
+* iOS開發人員企業計畫成員
 * 用於發佈內部iOS應用程式的企業憑證
-* 使用iOS 8.4或更新版本的Apple iPad
+* Apple iPad搭配iOS 8.4或更新版本
 
-## 針對Android裝置{#for-android-devices}
+## Android裝置 {#for-android-devices}
 
-* 可從[https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)下載的Android開發工具套件（ADT套件組合）
-* 如果環境是在MAC系統上設定的，則應將ADT安裝在Applications資料夾中。
-* 如果ADT安裝在MAC上的任何其他位置，或者環境是在Windows系統上設定的，則ADT SDK路徑需要在`local.properties`檔案中更新，該檔案位於已提取的源歸檔檔案`mobileworkspace-src.zip`的`src\android`資料夾中。 在此檔案中，將`sdk.dir`變數指向案頭上的ADT SDK位置。
+* Android開發工具套件（ADT套件組合），可從 [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)
+* 如果環境是在MAC系統上設定，ADT應安裝在Applications資料夾中。
+* 如果ADT安裝在MAC上的任何其他位置，或環境是在Windows系統上設定，則ADT SDK路徑必須在 `local.properties` 檔案 `src\android` 資料夾（在已提取的源存檔中） `mobileworkspace-src.zip`. 在此檔案中，指向 `sdk.dir` 變數至案頭上的ADT SDK位置。
 
 >[!NOTE]
 >

@@ -1,8 +1,8 @@
 ---
 title: 更改驗證的評估順序
-seo-title: 更改驗證的評估順序
+seo-title: Change the order of evaluation for authentication
 description: 您可以變更AEM Forms評估多個驗證提供者的順序。
-seo-description: 您可以變更AEM Forms評估多個驗證提供者的順序。
+seo-description: You can change the order in which AEM forms evaluates multiple authentication providers.
 uuid: c2693e5b-cf09-4bb8-815a-2b20ebf6eea0
 contentOwner: admin
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: 5434df9c-ecf6-450a-aa7e-d9ab69b66fe6
 exl-id: 7e29c9d4-fb82-4308-aac7-0f5cb1f4aef2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '147'
 ht-degree: 0%
 
 ---
 
-# 更改驗證評估的順序{#change-the-order-of-evaluation-for-authentication}
+# 更改驗證的評估順序 {#change-the-order-of-evaluation-for-authentication}
 
 如果您設定了多個驗證提供者，則可以變更AEM表單評估驗證的順序。 config.xml檔案中列出的驗證提供程式的順序決定了驗證的評估順序。
 
@@ -43,7 +43,7 @@ ht-degree: 0%
     </node>
    ```
 
-   在`<entry key="order" value="3" />`中，編輯每個節點的值以設定驗證評估的順序。
+   在 `<entry key="order" value="3" />`，編輯每個節點的值以設定驗證評估的順序。
 
 1. 若要匯入更新的檔案，請在「使用者管理」中按一下「設定>匯入和匯出設定檔」。
 1. 按一下「瀏覽」以查找檔案，按一下「導入」，然後按一下「確定」。

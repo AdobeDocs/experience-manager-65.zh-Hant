@@ -4,17 +4,17 @@ description: 設定Experience Manager Assets以與Adobe資產連結擴充功能�
 contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
-source-git-commit: e91fa04d87c7ecacf3ad8a148227948eafe15b1e
+exl-id: 3a9b44d4-1756-4ad5-91df-df8d53e82193
+source-git-commit: 84b16dd1a60f731b568dd87ef89699875cb86596
 workflow-type: tm+mt
 source-wordcount: '3149'
 ht-degree: 1%
 
 ---
 
-
 # 設定Experience Manager Assets以Adobe資產連結 {#adobe-asset-link}
 
-[Adobe資產連結(AAL)](https://www.adobe.com/tw/creativecloud/business/enterprise/adobe-asset-link.html) 可簡化創意人員與行銷人員在內容建立程式中的協作。 它可將Adobe Experience Manager Assets與Creative Cloud案頭應用程式Adobe InDesign、Adobe Photoshop和Adobe Illustrator連接在一起。 「Adobe資產連結」面板可讓創意人員存取及修改儲存在AEM Assets中的內容，而不需離開最熟悉的創意應用程式。
+[Adobe資產連結(AAL)](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html) 可簡化創意人員與行銷人員在內容建立程式中的協作。 它可將Adobe Experience Manager Assets與Creative Cloud案頭應用程式Adobe InDesign、Adobe Photoshop和Adobe Illustrator連接在一起。 「Adobe資產連結」面板可讓創意人員存取及修改儲存在AEM Assets中的內容，而不需離開最熟悉的創意應用程式。
 
 若要設定Experience Manager Assets以搭配資產連結使用，請執行下列工作。 使用Experience Manager管理員帳戶進行配置：
 
@@ -288,12 +288,7 @@ Experience Manager提供僅用於版位(FPO)的轉譯。 這些FPO轉譯的檔�
 
 >[!MORELIKETHIS]
 >
->* [關於 Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+>* [關於 Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)
 >* [在Creative Cloud案頭應用程式中使用資產連結及管理資產](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
->* [設定Adobe Experience Manager Assetsas a Cloud Service](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
-
-
-
-
-
+>* [設定Adobe Experience Manager Assetsas a Cloud Service](https://helpx.adobe.com/tw/enterprise/using/configure-aem-assets-for-asset-link.html).
 

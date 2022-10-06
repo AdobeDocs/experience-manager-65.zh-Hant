@@ -1,8 +1,8 @@
 ---
 title: 更改介面上的字型
-seo-title: 更改介面上的字型
+seo-title: Changing the font on the interface
 description: 如何有選擇地更改用戶介面上的字型。
-seo-description: 如何有選擇地更改用戶介面上的字型。
+seo-description: How to change the fonts on the user interface selectively.
 uuid: 421fdd24-441a-4092-8c52-f3ed3d5d5671
 contentOwner: robhagat
 content-type: reference
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: 226f70f0-8eb4-4724-b496-5801dc6b436f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 0%
+source-wordcount: '276'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 您可以變更AEM Forms工作區中顯示的字型。 在用戶介面的特定部分中使用的字型在樣式表的相應部分中定義。 您可以選擇性地更改用戶介面上的字型。
 
-請依照[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)操作，並根據您的需求，遵循自訂CSS、HTML或兩者的步驟。
+關注 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md) 並根據您的需求，請依照自訂CSS、HTML或兩者的步驟進行。
 
 1. 以現有樣式更改或添加字型系列。
 1. 更改或添加HTML元素的字型系列內嵌。
@@ -30,8 +30,8 @@ ht-degree: 0%
 
 例如，要將頂部導航欄錨點文本的字型更改為「Courier New」，請執行以下步驟：
 
-1. 通過訪問`https://'[server]:[port]'/lc/crx/de/index.jsp`登錄CRXDE Lite。
-1. 執行下列任一操作：
+1. 透過存取 `https://'[server]:[port]'/lc/crx/de/index.jsp`.
+1. 執行下列任一項作業：
 
    1. 若要以現有樣式變更字型系列，請在位於/apps/ws/css的newStyle.css檔案中新增下列內容。
 
@@ -41,7 +41,7 @@ ht-degree: 0%
       }
       ```
 
-   1. 若要為HTML元素新增字型系列內嵌，請將`/libs/ws/js/runtime/templates/appnavigation.html`檔案複製到`/apps/ws/js/runtime/templates/appnavigation.html`。
+   1. 若要為HTML元素內嵌新增字型系列，請複製 `/libs/ws/js/runtime/templates/appnavigation.html` 檔案 `/apps/ws/js/runtime/templates/appnavigation.html`.
 
       按如下方式更新/apps/ws/js/runtime/templates/appnavigation.html檔案：
 
@@ -52,7 +52,7 @@ ht-degree: 0%
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      開啟/apps/ws/js/registry.js檔案進行編輯，並將`text!/lc/libs/ws/js/runtime/templates/appnavigation.html`替換為`text!/lc/apps/ws/js/runtime/templates/appnavigation.html`。
+      開啟/apps/ws/js/registry.js檔案以進行編輯和取代 `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` with `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
 
    1. 要添加定義font-family的樣式，請在位於/apps/ws/css的newStyle.css檔案中添加以下內容。
 
@@ -62,7 +62,7 @@ ht-degree: 0%
       }
       ```
 
-      若要為HTML元素新增字型系列內嵌，請在appnavigation.html檔案中（網址為/apps/ws/js/runtime/templates）新增下列內容。
+      若要為HTML元素新增字型系列內嵌，請在位於/apps/ws/js/runtime/templates的appnavigation.html檔案中新增下列內容。
 
       ```jsp
       <div id="topnav" class="myNewFontStyle">

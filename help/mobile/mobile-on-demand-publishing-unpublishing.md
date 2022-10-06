@@ -1,8 +1,8 @@
 ---
 title: 發佈取消發佈內容
-seo-title: 發佈取消發佈內容
+seo-title: Publish UnPublish Content
 description: 在您熟悉文章、橫幅和集合的內容管理動作後，請依照本頁面了解如何發佈內容。 您也可以取消發佈內容。
-seo-description: 在您熟悉文章、橫幅和集合的內容管理動作後，請依照本頁面了解如何發佈內容。 您也可以取消發佈內容。
+seo-description: Once you are familiar with content management actions on articles, banners, and collections, follow this page to learn about how you can publish your content. Also you can unpublish your content.
 uuid: 75179aa8-022c-4876-9664-6dd2b826174c
 contentOwner: User
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 8c88a2ff-766f-481b-b6dc-0b3e2eed8596
 exl-id: 3924bb8f-27cb-4648-8be2-9444e9a58c66
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 0%
+source-wordcount: '268'
+ht-degree: 1%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->若要深入了解AEM Mobile應用程式的設計考量事項，請參閱線上說明中的[AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)。
+>若要進一步了解AEM Mobile應用程式的設計考量事項，請參閱 [AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) 中。
 
-## 發佈/取消發佈內容{#publishing-unpublishing-the-content}
+## 發佈/取消發佈內容 {#publishing-unpublishing-the-content}
 
 這與「AEM發佈」不同。 我們不會將內容推送至AEM Publish伺服器執行個體，以便公開檢視。 在此，我們會通知Mobile On-Demand，選取的內容應在即時行動隨選應用程式中公開。
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ![chlimage_1-9](assets/chlimage_1-9.gif)
 
-### 後續步驟{#the-next-steps}
+### 後續步驟 {#the-next-steps}
 
 了解建立和發佈內容後，請參閱
 

@@ -1,8 +1,8 @@
 ---
 title: 建立和配置角色
-seo-title: 建立和配置角色
+seo-title: Creating and configuring roles
 description: 了解如何將使用者和群組與已屬於使用者管理資料庫一部分的角色建立關聯。 您也可以建立、編輯和刪除角色。
-seo-description: 了解如何將使用者和群組與已屬於使用者管理資料庫一部分的角色建立關聯。 您也可以建立、編輯和刪除角色。
+seo-description: Learn how to associate users and groups with roles that are already part of the User Management database. You can also create, edit, and delete roles.
 uuid: e8e4331d-48e1-4fa9-8f44-f885f4ab1a54
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 737fb4d1-adef-47e1-9a0d-8cddd13132cb
 exl-id: b447e545-f73e-4fde-a001-86e0e1cf4a12
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2526'
 ht-degree: 0%
 
 ---
@@ -23,71 +23,71 @@ ht-degree: 0%
 
 「使用者管理」有兩種角色：
 
-**可變角色：** 可以編輯和刪除此類型的角色，也可以從這些角色類型中新增和刪除角色權限。您建立的任何角色都視為可變角色。 您可以新增或移除指派給可變角色的使用者和群組。
+**可變角色：** 可以編輯和刪除此類型的角色，也可以從這些角色類型中添加和刪除角色權限。 您建立的任何角色都視為可變角色。 您可以新增或移除指派給可變角色的使用者和群組。
 
-**不可變角色：** 「使用者管理」中包含的預設角色是不可變角色。無法編輯或刪除這些角色。 但是，您可以添加或刪除分配給不可變角色的用戶和組。
+**不可變角色：** 「用戶管理」中包含的預設角色是不可變的角色。 無法編輯或刪除這些角色。 但是，您可以添加或刪除分配給不可變角色的用戶和組。
 
 您也可以透過AEM Forms API建立可變和不可變角色。
 
-## 預設角色{#default-roles}
+## 預設角色 {#default-roles}
 
 用戶管理資料庫中包括以下預設角色。
 
-**管理控制台使用者：** 可以存取管理控制台。
+**管理控制台使用者：** 可存取管理控制台。
 
-**應用程式管理員：** 可以使用所有Workbench功能。可以使用管理控制台中的「應用程式和服務」頁來配置服務運行時屬性、端點和安全性。
+**應用程式管理員：** 可使用所有Workbench功能。 可以使用管理控制台中的「應用程式和服務」頁來配置服務運行時屬性、端點和安全性。
 
 **AEM forms管理員：** 可以對所有已安裝的服務執行所有任務。
 
-**安全管理員：** 控制「用戶管理」設定，並管理與任何「用戶管理員」域關聯的用戶和組
+**安全管理員：** 控制「用戶管理」設定，並管理與任何「用戶管理」域關聯的用戶和組
 
-**服務使用者：** 可以檢視和叫用任何服務
+**服務用戶：** 可以查看和調用任何服務
 
 **超級管理員：** 可存取系統中的所有管理功能，包括服務
 
 **信任管理員：** 可以管理管理控制台中「信任儲存管理」頁中管理的PKI信任設定和PKI憑據
 
-### 其他預設角色{#additional-default-roles}
+### 其他預設角色 {#additional-default-roles}
 
 視您安裝的AEM表單元件而定，可能包含下列其他預設角色
 
-**檔案上傳應用程式使用者：** 可以使用Flex Remoting上傳檔案。
+**文檔上載應用程式用戶：** 可使用Flex Remoting上傳檔案。
 
 **Forms管理員：** 可以從「管理控制台」的「Forms」頁面檢視及修改設定
 
-**AEM forms Contentspace管理員：** 可以從管理控制台的「內容服務（已過時）」頁面檢視及修改設定
+**AEM forms Contentspace管理員：** 可從管理控制台的「內容服務（已過時）」頁面檢視及修改設定
 
 **AEM forms Contentspace使用者：** 可登入Contentspace（已過時）網頁
 
-**Documentum Connector管理員：** 可以在管理控制台的「EMC Documentum的連接器」頁中查看和修改設定
+**Documentum Connector管理員：** 可以從管理控制台的「EMC Documentum連接器」頁查看和修改設定
 
-**AEM forms FileNet Connector管理員：** 可以在管理控制台中從「IBM FileNet連接器」頁查看和修改設定
+**AEM forms FileNet Connector管理員：** 可從管理控制台的「IBM FileNet的連接器」頁面檢視及修改設定
 
-**AEM forms IBM CM Connector管理員：** 可以在管理控制台的「IBM Content Manager連接器」頁面中查看和修改設定
+**AEM forms IBM CM Connector管理員：** 可以從管理控制台的「IBM內容管理員的連接器」頁面檢視及修改設定
 
-**Rights Management管理員：** 執行相關Rights Management頁面上所有伺服器設定所需的所有工作
+**Rights Management管理員：** 執行相關Rights Management頁上所有伺服器配置所需的所有任務
 
-**Rights Management使用者：** 可存取Rights Management使用者網頁
+**Rights Management最終用戶：** 可訪問Rights Management最終用戶網頁
 
 **Rights Management邀請使用者：** 可以邀請使用者
 
-**Rights Management管理受邀和本機使用者：** 可執行管理相關Rights Management頁面上所有受邀和本機使用者所需的工作
+**Rights Management管理受邀和本地用戶：** 可執行管理相關Rights Management頁面上所有受邀和本機使用者所需的工作
 
 **Rights Management策略集管理員：** 執行相關Rights Management頁上所有策略集所需的所有任務
 
-**Rights Management超級管理員：** 執行Rights Management頁面中需要的所有任務
+**Rights Management超級管理員：** 執行「Rights Management」頁中所需的所有任務
 
-**AEM Forms Workspace管理員：** 可從「管理控制台」的「工作區」頁面檢視及修改設定
+**AEM forms Workspace管理員：** 可從「管理控制台」的「工作區」頁面檢視及修改設定
 
-***注意&#x200B;**:AEM Forms版本已不再使用Flex Workspace。*
+***附註&#x200B;**:AEM Forms版本已不再使用Flex Workspace。*
 
-**工作區使用者：** 可登入工作區一般使用者應用程式
+**工作區用戶：** 可登入Workspace一般使用者應用程式
 
-**輸出管理員：** 可以從管理控制台的「輸出」頁面檢視和修改設定
+**輸出管理員：** 可以從管理控制台的「輸出」頁查看和修改設定
 
-**PDFG管理員：** 可以在管理控制台中從「PDF產生器」頁面檢視和修改設定
+**PDFG管理員：** 可以從管理控制台的「PDF產生器」頁面檢視及修改設定
 
-**PDFG使用者：** 可以存取PDF產生器的所有非管理功能
+**PDFG用戶：** 可存取PDF產生器的所有非管理功能
 
 **Acrobat Reader DC擴充功能Web應用程式：** 可以使用Acrobat Reader DC擴充功能Web應用程式
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 >
 >AEM Forms版本已不再使用Flex Workspace。
 
-## 建立角色{#create-a-role}
+## 建立角色 {#create-a-role}
 
 1. 在管理控制台中，按一下「設定>使用者管理>角色管理」，然後按一下「新增角色」。
 1. 在「角色名稱」框中，鍵入角色的名稱，並（可選）鍵入角色的說明，然後按一下「下一步」。
@@ -114,14 +114,14 @@ ht-degree: 0%
 
    * 按一下「尋找使用者/群組」 。
    * 在「尋找」方塊中，輸入您的搜尋條件。
-   * 選取「名稱」、「電子郵件」或「使用者ID」，然後選取「使用者」、「群組」或「使用者和群組」。
+   * 選取「名稱」、「電子郵件」或「使用者ID」，然後選取「使用者」、「群組」或「使用者與群組」。
    * 選擇域，選擇要顯示的結果數，然後按一下「查找」。
    * 為用戶和組選擇要分配此角色的複選框，然後按一下確定。
 
 1. 若要檢視使用者和群組詳細資訊，請選取實體。
 1. 按一下「OK（確定）」 ，然後按一下「Finish（完成）」。
 
-## 編輯角色{#edit-a-role}
+## 編輯角色 {#edit-a-role}
 
 1. 在管理控制台中，按一下「設定」>「用戶管理」>「角色管理」，然後按一下「角色名稱」。
 
@@ -138,7 +138,7 @@ ht-degree: 0%
    * 若要將角色指派給新使用者和群組，請按一下「尋找使用者/群組」 ，然後填寫搜尋資訊。 為要分配此角色的每個用戶和組選擇複選框，按一下確定，然後按一下保存。
    * 若要移除角色，請選取使用者或群組的核取方塊，按一下取消指派，然後按一下儲存。
 
-## 刪除角色{#delete-a-role}
+## 刪除角色 {#delete-a-role}
 
 您可以刪除您建立的任何角色，但不能刪除產品中包含的預設AEM表單角色。
 
@@ -148,7 +148,7 @@ ht-degree: 0%
 
 1. 選擇要刪除的角色的複選框，按一下「刪除」，然後按一下「確定」。
 
-## 將角色分配給用戶和組{#assign-a-role-to-users-and-groups}
+## 將角色指派給使用者和群組 {#assign-a-role-to-users-and-groups}
 
 1. 在管理控制台中，按一下「設定>使用者管理>使用者和群組」。
 1. 指定要縮小搜索範圍的資訊，然後按一下「查找」。 搜尋結果會列在頁面底部。 您可以按一下任何欄標題來排序清單。
@@ -157,7 +157,7 @@ ht-degree: 0%
 
 您也可以使用「角色管理」頁面來指派角色。
 
-## 確定分配給角色{#determine-who-is-assigned-to-a-role}的人員
+## 確定指派給角色的人員 {#determine-who-is-assigned-to-a-role}
 
 1. 在管理控制台中，按一下「設定」>「用戶管理」>「角色管理」，然後按一下「角色名稱」。
 
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 1. 在「角色詳細資訊」頁上，按一下「角色用戶」頁簽。 隨即顯示與角色直接關聯的使用者和群組清單。
 
-## 更改角色權限{#change-role-permissions}
+## 變更角色權限 {#change-role-permissions}
 
 您可以變更所建立任何角色的權限。 您無法變更產品中包含之預設AEM表單角色的權限。
 
@@ -177,19 +177,19 @@ ht-degree: 0%
 1. 要更改這些權限，請按一下「查找權限」，選中要添加到角色的權限複選框，按一下「確定」，然後按一下「保存」。
 1. 若要刪除權限，請選取權限，按一下「刪除」，然後按一下「儲存」。
 
-### AEM forms權限{#aem-forms-permissions}
+### AEM forms權限 {#aem-forms-permissions}
 
 **ADD_REMOVE_ENDPOINT_PERM:** 添加、刪除和修改服務的端點
 
 **Admin Console登入：** 檢視管理控制台
 
-**憑證修改：** 修改信任存放區中任何憑證的信任設定
+**證書修改：** 修改信任儲存中任何證書的信任設定
 
-**憑證讀取：** 讀取信任存放區中的任何憑證
+**證書讀：** 讀取信任儲存中的任何證書
 
-**憑證寫入：** 新增憑證至信任存放區
+**證書寫入：** 將證書添加到信任儲存
 
-**元件新增：** 在系統中安裝新元件
+**元件添加：** 在系統中安裝新元件
 
 **元件刪除：** 刪除系統中的任何元件
 
@@ -197,37 +197,37 @@ ht-degree: 0%
 
 **Contentspace管理員：** Contentspace的權限（已廢止）管理員
 
-**Contentspace主控台登入：** Contentspace的權限（已過時）主控台登入
+**Contentspace控制台登錄：** Contentspace的權限（已廢止）主控台登入
 
-**核心設定控制：** 在管理控制台的「核心繫統設定」頁面上管理設定
+**核心設定控制項：** 在管理控制台的核心繫統設定頁面上管理設定
 
 **CREATE_VERSION_PERM:** 建立服務的新版本
 
 **憑據修改：** 修改信任儲存中的任何簽名憑據
 
-**憑據讀取：** 讀取信任儲存中的任何簽名憑據
+**憑據讀：** 在信任儲存中讀取任何簽名憑據
 
-**憑據寫入：** 將簽名憑據添加到信任儲存
+**憑據寫入：** 向信任儲存添加簽名憑據
 
 **CRL修改：** 修改信任儲存中的任何CRL（證書吊銷清單）
 
-**CRL讀取：** 讀取信任儲存中的任何CRL
+**CRL讀取：** 在信任儲存中讀取任何CRL
 
 **CRL寫入：** 將CRL添加到信任儲存
 
 **委派：** 在資源上設定ACL
 
-**DELETE_VERSION_PERM:** 刪除服務版本
+**DELETE_版本_權限：** 刪除服務版本
 
-**檔案上傳：** 以AEM表單上傳檔案
+**文檔上載：** 以AEM表單上傳檔案
 
 **域控制：** 建立、刪除或修改任何用戶管理域的設定，包括其身份驗證和目錄提供程式
 
 **事件類型編輯：** 編輯至事件類型
 
-**身份模擬控制：** 在User Manager中模擬身份
+**身份模擬控制：** 在使用者管理員中模擬身分
 
-**INVOKE_PERM:** 叫用服務上的所有操作
+**INVOKE_PERM:** 調用服務上的所有操作
 
 **LCDS資料模型控制：** 在資料服務中讀取和部署資料模型
 
@@ -235,11 +235,11 @@ ht-degree: 0%
 
 **MODIFY_CONFIG_PERM:** 修改服務的設定
 
-**** 修改服務版本
+**詞語** 修改服務版本
 
 **PDFGAdminPermission:** PDFG管理員
 
-**PDFGserPermission:** PDFG用戶
+**PDFGUserPermission:** PDFG用戶
 
 **PERM_DCTM_ADMIN:** Documentum Connector管理員
 
@@ -251,45 +251,45 @@ ht-degree: 0%
 
 **PERM_OUTPUT_ADMIN:** 輸出管理員
 
-**PERM_READER_擴展_WEB_應用程式：** 使用Acrobat Reader DC擴展Web應用程式
+**PERM_READER_擴展_WEB_應用程式：** 使用Acrobat Reader DC擴充功能Web應用程式
 
-**PERM_SP_ADMIN:** 管理SharePoint連接器設定
+**PERM_SP_ADMIN:** 管理SharePoint Connector設定
 
 **PERM_WORKSPACE_ADMIN:** 管理工作區設定
 
-**PERM_WORKSPACE_USER:** 登入Workspace一般使用者應用程式
+**PERM_WORKSPACE_USER:** 登入工作區一般使用者應用程式
 
-**主控制：** 管理任何域的用戶和組，以及管理任何域中所有用戶和組的角色分配
+**主要控制：** 管理任何域的用戶和組，以及管理任何域中所有用戶和組的角色分配
 
-**處理記錄讀取/刪除：** 列出並檢索工作流審覈實例
+**進程記錄讀/刪除：** 列出和檢索工作流審覈實例
 
 **PROCESS_OWNER_PERM:** 查看趨勢資料，對從流程建立的服務執行管理操作
 
-**讀取：** 讀取資源的內容
+**閱讀：** 讀取資源的內容
 
 **READ_PERM:** 讀取或查看服務
 
-**續訂斷言：** 在使用者管理中續訂斷言
+**續訂斷言：** 在用戶管理中更新斷言
 
-**存放庫委派：** 在資源上設定ACL
+**儲存庫委派：** 在資源上設定ACL
 
-**存放庫已讀取：** 讀取資源的內容
+**儲存庫閱讀：** 讀取資源的內容
 
-**存放庫周遊：** 將資源納入清單資源請求或讀取資源的中繼資料
+**存放庫周遊：** 在清單資源請求中包含資源或讀取資源的元資料
 
-**存放庫寫入：** 寫入存放庫中繼資料和內容
+**儲存庫寫入：** 寫入儲存庫元資料和內容
 
 **Rights Management更改策略所有者：** 更改策略所有者
 
-**Rights Management一般使用者主控台登入：** 登入Rights Management一般使用者UI
+**Rights Management最終用戶控制台登錄：** 登入Rights Management使用者UI
 
 **Rights Management管理配置：** 管理伺服器配置
 
-**Rights Management管理受邀和本機使用者：** 管理受邀和本機使用者
+**Rights Management管理受邀和本地用戶：** 管理受邀和本機使用者
 
 **Rights Management管理策略集：** 管理任何策略集中的所有策略和文檔
 
-**Rights Management策略集添加協調器：** 添加、刪除和更改策略集協調器的權限
+**Rights Management策略集添加協調器：** 添加、刪除和更改策略集協調員的權限
 
 **Rights Management策略集建立策略：** 為策略集建立新策略
 
@@ -297,37 +297,37 @@ ht-degree: 0%
 
 **Rights Management策略集編輯策略：** 編輯策略集中的策略
 
-**Rights Management策略集管理文檔發佈者：** 建立策略集時，為用戶分配文檔發佈者的角色。文檔發佈者是使用策略保護文檔的用戶。
+**Rights Management策略集管理文檔發佈器：** 建立策略集時，您為用戶分配文檔發佈者的角色。 文檔發佈者是使用策略保護文檔的用戶。
 
 **Rights Management策略集刪除協調器：** 從策略集中刪除策略集協調器
 
 **Rights Management策略集撤消文檔：** 撤消對策略集中文檔的訪問
 
-**Rights Management策略集切換策略：** 切換文檔的策略
+**Rights Management策略集交換機策略：** 切換文檔的策略
 
-**Rights Management策略集取消撤銷文檔：** 取消撤銷文檔
+**Rights Management策略集取消撤消文檔：** 取消撤銷文檔
 
 **Rights Management策略集查看事件：** 查看策略集中任何策略或文檔的策略和文檔事件
 
-**Rights Management檢視伺服器事件：** 搜尋並檢視所有稽核事件
+**Rights Management檢視伺服器事件：** 搜索並查看所有審核事件
 
-**角色控制：** 在使用者管理中建立、刪除和修改角色
+**角色控制：** 在「使用者管理」中建立、刪除和修改角色
 
-**服務啟動：** 啟動任何服務，使其可供呼叫
+**服務激活：** 啟動任何服務，使其可用於調用
 
-**服務添加：** 將新服務部署到服務註冊表。這包括新增程式和程式變體
+**服務添加：** 將新服務部署到服務註冊表。 這包括新增程式和程式變體
 
 **服務停用：** 停止系統中的任何服務
 
 **服務刪除：** 刪除系統中的任何服務，包括流程和流程變體
 
-**服務調用：** 調用運行時可用的服務註冊表中的任何服務
+**服務調用：** 在運行時可用的服務註冊表中調用任何服務
 
-**服務修改：** 修改系統中任何服務的配置屬性。這包括在IDE中鎖定和解鎖服務，以及從服務中添加或刪除端點
+**服務修改：** 修改系統中任何服務的配置屬性。 這包括在IDE中鎖定和解鎖服務，以及從服務中添加或刪除端點
 
-**服務讀取：** 讀取系統中的任何服務。這包括所有流程和流程變體
+**服務讀：** 閱讀系統中的任何服務。 這包括所有流程和流程變體
 
-**SERVICE_AGENT_PERM:** 查看從進程建立的服務的資料並與進程實例交互
+**SERVICE_AGENT_PERM:** 檢視資料，並與從程式建立之服務的程式例項互動
 
 **SERVICE_MANAGER_PERM:** 對從流程建立的服務執行負載平衡和其他管理操作
 
@@ -335,9 +335,9 @@ ht-degree: 0%
 
 **SUPERVISOR_PERM:** 查看從進程建立的服務的進程實例資料
 
-**周遊：** 將資源包含在清單資源請求中，或讀取資源的中繼資料
+**周遊：** 在清單資源請求中包含資源或讀取資源的元資料
 
-**寫入：** 寫入儲存庫元資料和內容
+**寫：** 寫入儲存庫元資料和內容
 
 **在Workbench中開啟檔案**
 
@@ -348,7 +348,7 @@ ht-degree: 0%
 * 服務調用
 * 服務讀取
 
-## 從角色{#remove-a-user-or-group-from-a-role}中移除用戶或組
+## 從角色中移除用戶或組 {#remove-a-user-or-group-from-a-role}
 
 使用「角色管理」頁可從特定角色中刪除用戶和組。 如果用戶或組繼承了角色分配，則不能在用戶或組級別刪除該角色。 從繼承樹中刪除用戶或組，或從父級中刪除角色。
 

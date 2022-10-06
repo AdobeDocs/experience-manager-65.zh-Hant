@@ -1,62 +1,60 @@
 ---
 title: 自定義獨立安裝
-seo-title: 自定義獨立安裝
+seo-title: Custom Standalone Install
 description: 了解安裝獨立AEM執行個體時可用的選項。
-seo-description: 了解安裝獨立AEM執行個體時可用的選項。
+seo-description: Learn about the options available when installing a standalone AEM instance.
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
 source-git-commit: 3e18eed63d676e22e12483a1ee68e7e0148d8083
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1609'
 ht-degree: 0%
 
 ---
 
 # 自定義獨立安裝{#custom-standalone-install}
 
-本節說明安裝獨立AEM執行個體時可用的選項。 您也可以閱讀[儲存元素](/help/sites-deploying/storage-elements-in-aem-6.md) ，以取得在新安裝AEM 6後選擇後端儲存類型的詳細資訊。
+本節說明安裝獨立AEM執行個體時可用的選項。 您也可以閱讀 [儲存元素](/help/sites-deploying/storage-elements-in-aem-6.md) 以取得在新安裝AEM 6後選擇後端儲存類型的詳細資訊。
 
-## 通過更名檔案{#changing-the-port-number-by-renaming-the-file}更改埠號
+## 通過更名檔案更改埠號 {#changing-the-port-number-by-renaming-the-file}
 
-AEM的預設埠為4502。 如果該埠不可用或已在使用中，Quickstart會自動配置自身以使用第一個可用埠號，如下所示：4502、8080、8081、8082、8083、8084、8085、8888、9362、`<*random*>`。
+AEM的預設埠為4502。 如果該埠不可用或已在使用中，Quickstart會自動配置自身以使用第一個可用埠號，如下所示：4502、8080、8081、8082、8083、8084、8085、8888、9362、 `<*random*>`.
 
-您也可以通過更名quickstart jar檔案來設定埠號，以便檔案名包括埠號；例如， `cq5-publish-p4503.jar`或`cq5-author-p6754.jar`。
+您也可以通過更名quickstart jar檔案來設定埠號，以便檔案名包括埠號；例如， `cq5-publish-p4503.jar` 或 `cq5-author-p6754.jar`.
 
 更名quickstart jar檔案時，應遵循各種規則：
 
-* 重新命名檔案時，其開頭必須為`cq;`，如`cq5-publish-p4503.jar`中。
+* 重新命名檔案時，其開頭必須為 `cq;` 和 `cq5-publish-p4503.jar`.
 
-* 建議您&#x200B;*always*&#x200B;為埠號加上前置詞 — p;如cq5-publish-p4503.jar或cq5-author-p6754.jar中。
+* 建議您 *always* 在埠號前加上 — p;如cq5-publish-p4503.jar或cq5-author-p6754.jar中。
 
 >[!NOTE]
 >
->這是為了確保您無需擔心完全填寫用於提取埠號的規則：
+>這是為了確保您不需要擔心完全提交用於提取埠號的規則：
 >
 >* 埠號必須為4位或5位
 >* 這些數字必須在破折號後
->* 如果檔案名中有其他位數，則埠號必須帶有前置詞`-p`
+>* 如果檔案名中有其他位數，則埠號必須帶有前置詞 `-p`
 >* 檔案名稱開頭的&quot;cq5&quot;前置詞會遭忽略
-
 >
-
 
 
 >[!NOTE]
 >
->您也可以使用start命令中的`-port`選項更改埠號。
+>您也可以使用 `-port` 選項。
 
-### Java 11考量事項{#java-considerations}
+### Java 11考量事項 {#java-considerations}
 
 如果您正在運行OracleJava 11（或通常8以上的Java版本），則啟動AEM時，需要將其他開關添加到命令行中。
 
-* 需要添加以下 — `-add-opens`交換機，以防止`stdout.log`中出現相關的反射訪問警告消息
+* 以下項目 —  `-add-opens` 需要添加交換機，以防止在 `stdout.log`
 
 ```shell
 --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning
 ```
 
-* 此外，您需要使用`-XX:+UseParallelGC`交換機，以緩解任何潛在的效能問題。
+* 此外，您必須使用 `-XX:+UseParallelGC` 切換以緩解任何潛在的效能問題。
 
 以下是在Java 11上啟動AEM時，其他JVM參數的樣本：
 
@@ -64,19 +62,19 @@ AEM的預設埠為4502。 如果該埠不可用或已在使用中，Quickstart�
 -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning
 ```
 
-最後，如果您執行的是從AEM 6.3升級的執行個體，請確定`sling.properties`下的下列屬性已設為&#x200B;**true**:
+最後，如果您執行的是從AEM 6.3升級的執行個體，請確定下列屬性設為 **true** 在 `sling.properties`:
 
 * `felix.bootdelegation.implicit`
 
 ## 執行模式 {#run-modes}
 
-**執** 行模式，根據特定用途調整AEM執行個體；例如，製作或發佈、測試、開發、內部網路等。這些模式也可讓您控制範例內容的使用。 此示例內容在構建快速入門之前定義，可以包括包、配置等。 如果您想要保持安裝精簡，且不含範例內容，此功能對於生產就緒型安裝特別有用。 如需詳細資訊，請參閱：
+**執行模式** 可讓您針對特定用途調整AEM執行個體；例如，製作或發佈、測試、開發、內部網路等。 這些模式也可讓您控制範例內容的使用。 此示例內容在構建快速入門之前定義，可以包括包、配置等。 如果您想要保持安裝精簡，且不含範例內容，此功能對於生產就緒型安裝特別有用。 如需詳細資訊，請參閱：
 
 * [執行模式](/help/sites-deploying/configure-runmodes.md)
 
-## 添加檔案安裝提供程式{#adding-a-file-install-provider}
+## 添加檔案安裝提供程式 {#adding-a-file-install-provider}
 
-預設情況下，會監視檔案的資料夾`crx-quickstart/install`。
+依預設，資料夾 `crx-quickstart/install` 會監看檔案。
 此資料夾不存在，但只需在執行階段建立即可。
 
 如果將包、配置或內容包放入此目錄中，則會自動拾取並安裝該包。 如果移除，則會解除安裝。
@@ -86,31 +84,31 @@ AEM的預設埠為4502。 如果該埠不可用或已在使用中，Quickstart�
 
 * 在開發期間，將某些內容放入檔案系統可能會比較容易。
 * 如果發生錯誤，則無法存取Web主控台和存放庫。 通過此操作，您可以將其他套件組合放入此目錄中，並應安裝這些套件組合。
-* 在快速入門之前可以建立`crx-quickstart/install`資料夾，並可將其他包放在那裡。
+* 此 `crx-quickstart/install` 可以在快速入門開始之前建立資料夾，並可將其他包放在那裡。
 
 >[!NOTE]
 >
->如需範例，請參閱[如何在伺服器啟動時自動安裝CRX套件](https://helpx.adobe.com/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html) 。
+>另請參閱 [如何在伺服器啟動時自動安裝CRX套件](https://helpx.adobe.com/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html) 。
 
 ## 安裝和啟動Adobe Experience Manager as a Windows Service {#installing-and-starting-adobe-experience-manager-as-a-windows-service}
 
 >[!NOTE]
 >
->請務必在以管理員身份登錄時執行以下過程，或使用&#x200B;**以管理員身份運行**&#x200B;上下文菜單選擇開始/運行這些步驟。
+>以管理員身分登入時，請務必執行下列程式，或使用 **以管理員身份運行** 內容功能表選取項目。
 >
->以具有管理員權限的用戶身份登錄的是&#x200B;**indequited**。 如果完成這些步驟時未以管理員身份登錄，則會收到&#x200B;**拒絕訪問**&#x200B;錯誤。
+>以具有管理員權限的用戶身份登錄的是 **不足**. 如果您在完成這些步驟時未以管理員身分登入，您會收到 **拒絕訪問** 錯誤。
 
 若要安裝AEM as a Windows服務並啟動：
 
 1. 在文字編輯器中開啟crx-quickstart\opt\helpers\instsrv.bat檔案。
-1. 如果要配置64位Windows伺服器，請根據您的作業系統，用以下命令之一替換prunsrv的所有實例：
+1. 如果要配置64位Windows伺服器，請根據您的作業系統，用以下命令之一替換所有prunsrv實例：
 
    * prunsrv_amd64
    * prunsrv_ia64
 
    此命令調用適當的指令碼，該指令碼以64位Java（而非32位Java）啟動Windows服務守護程式。
 
-1. 要防止進程跳入多個進程，請增加最大堆大小和PermGen JVM參數。 找到`set jvm_options`命令，然後按如下方式設定值：
+1. 要防止進程跳入多個進程，請增加最大堆大小和PermGen JVM參數。 找出 `set jvm_options` 命令，並按如下方式設定值：
 
    `set jvm_options=-XX:MaxPermSize=256M;-Xmx1792m`
 
@@ -118,7 +116,7 @@ AEM的預設埠為4502。 如果該埠不可用或已在使用中，Quickstart�
 
    `instsrv.bat cq5`
 
-   要驗證是否已建立服務，請開啟「管理工具」控制面板中的「服務」，或在命令提示符中鍵入`start services.msc`。 cq5服務會出現在清單中。
+   要驗證是否已建立服務，請開啟「管理工具」控制面板中的「服務」或鍵入 `start services.msc` 命令提示符中。 cq5服務會出現在清單中。
 
 1. 執行下列任一操作以啟動服務：
 
@@ -130,7 +128,7 @@ AEM的預設埠為4502。 如果該埠不可用或已在使用中，Quickstart�
 
    ![chlimage_1-12](assets/chlimage_1-12.png)
 
-1. Windows表示服務正在運行。 AEM啟動，並且prunsrv執行檔出現在任務管理器中。 在網頁瀏覽器中，導覽至AEM，例如`https://localhost:4502`以開始使用AEM。
+1. Windows表示服務正在運行。 AEM啟動，並且prunsrv執行檔出現在任務管理器中。 在您的網頁瀏覽器中，導覽至AEM，例如 `https://localhost:4502` 以開始使用AEM。
 
    ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -140,15 +138,15 @@ AEM的預設埠為4502。 如果該埠不可用或已在使用中，Quickstart�
 
 >[!NOTE]
 >
->安裝AEM as服務時，必須從Configuration Manager為`com.adobe.xmp.worker.files.ncomm.XMPFilesNComm`中的日誌目錄提供絕對路徑。
+>安裝AEM as服務時，您必須提供中記錄目錄的絕對路徑 `com.adobe.xmp.worker.files.ncomm.XMPFilesNComm` 從Configuration Manager。
 
-要卸載服務，請按一下&#x200B;**Services**&#x200B;控制面板或命令行中的&#x200B;**Stop**，導航到資料夾並鍵入`instsrv.bat -uninstall cq5`。 鍵入`net start`時，該服務將從&#x200B;**服務**&#x200B;控制面板的清單或命令行的清單中刪除。
+若要解除安裝服務，請按一下 **停止** 在 **服務** 控制面板或在命令行中，導航到資料夾並鍵入 `instsrv.bat -uninstall cq5`. 服務會從 **服務** 輸入 `net start`.
 
-## 重新定義臨時工作目錄{#redefining-the-location-of-the-temporary-work-directory}的位置
+## 重新定義臨時工作目錄的位置 {#redefining-the-location-of-the-temporary-work-directory}
 
-Java電腦的臨時資料夾的預設位置為`/tmp`。 AEM也會使用此資料夾，例如在建立套件時。
+Java電腦的臨時資料夾的預設位置為 `/tmp`. AEM也會使用此資料夾，例如在建立套件時。
 
-如果要更改臨時資料夾的位置（例如，如果需要具有更多可用空間的目錄），請通過添加JVM參數來定義* `<new-tmp-path>`*:
+如果要更改臨時資料夾的位置（例如，如果需要具有更多可用空間的目錄），請定義* `<new-tmp-path>`*添加JVM參數：
 
 `-Djava.io.tmpdir="/<*new-tmp-path*>"`
 
@@ -157,7 +155,7 @@ Java電腦的臨時資料夾的預設位置為`/tmp`。 AEM也會使用此資料
 * 伺服器啟動命令行
 * serverctl或啟動指令碼中的CQ_JVM_OPTS環境參數
 
-## 快速入門檔案{#further-options-available-from-the-quickstart-file}中提供的其他選項
+## 快速入門檔案提供的其他選項 {#further-options-available-from-the-quickstart-file}
 
 快速入門幫助檔案中介紹了更多選項和更名約定，該檔案可通過 — help選項獲得。 若要存取說明，請輸入：
 
@@ -248,9 +246,9 @@ Log files
 --------------------------------------------------------------------------------
 ```
 
-## 在Amazon EC2環境{#installing-aem-in-the-amazon-ec-environment}中安裝AEM
+## 在Amazon EC2環境中安裝AEM {#installing-aem-in-the-amazon-ec-environment}
 
-在Amazon Elastic Compute Cloud(EC2)實例上安裝AEM時，如果在EC2實例上同時安裝作者和發佈，則按照[安裝AEM Manager](#installinginstancesofaemmanager)實例上的過程，可以正確安裝作者實例；不過，Publish例項會變成「作者」。
+在Amazon Elastic Compute Cloud(EC2)實例上安裝AEM時，如果在EC2實例上同時安裝作者和發佈，則Author實例將按照 [安裝AEM Manager的例項](#installinginstancesofaemmanager);不過，Publish例項會變成「作者」。
 
 在EC2環境上安裝發佈實例之前，請執行以下操作：
 
@@ -262,7 +260,7 @@ Log files
 
    >[!NOTE]
    >
-   >如果您在第一次啟動執行個體後變更&#x200B;**模式，則無法變更執行模式。**
+   >如果您變更模式 **after** 第一次啟動執行個體時，您無法變更執行模式。
 
 1. 執行以啟動執行個體：
 
@@ -274,7 +272,7 @@ Log files
    >
    >請務必在解壓縮執行個體後，先執行上述命令，以便執行執行個體。 否則，將不會生成quickstart.properties填充。 若沒有此檔案，任何日後的AEM升級都將失敗。
 
-1. 在&#x200B;**bin**&#x200B;資料夾中，開啟&#x200B;**start**&#x200B;指令碼並檢查以下部分：
+1. 在 **bin** 資料夾，開啟 **開始** 指令碼並檢查下列區段：
 
    ```xml
    # runmode(s)
@@ -283,7 +281,7 @@ Log files
    fi
    ```
 
-1. 將執行模式變更為&#x200B;**publish**&#x200B;並儲存檔案。
+1. 將執行模式變更為 **發佈** 並儲存檔案。
 
    ```xml
    # runmode(s)
@@ -292,9 +290,9 @@ Log files
    fi
    ```
 
-1. 停止執行個體，並執行&#x200B;**start**&#x200B;指令碼以重新啟動。
+1. 停止執行個體，然後執行 **開始** 指令碼。
 
-## 驗證安裝{#verifying-the-installation}
+## 驗證安裝 {#verifying-the-installation}
 
 以下連結可用來驗證您的安裝是否可運作（所有範例都以執行個體在localhost的連接埠8080上執行，以及CRX安裝在/crx下，而Launchpad安裝在/下）為基礎：
 
@@ -304,23 +302,23 @@ CRXDE Lite主控台。
 * `https://localhost:8080/system/console`
 Web控制台。
 
-## 安裝後的操作{#actions-after-installation}
+## 安裝後的動作 {#actions-after-installation}
 
 雖然設定AEM WCM有許多可能，但您應採取某些動作，或至少在安裝後立即檢閱：
 
-* 請參閱[安全檢查清單](/help/sites-administering/security-checklist.md)以了解確保系統安全所需的任務。
-* 查看隨AEM WCM安裝的預設用戶和組清單。 檢查您是否要對任何其他帳戶採取操作 — 有關詳細資訊，請參閱[安全和用戶管理](/help/sites-administering/security.md)。
+* 請參閱 [安全性檢查清單](/help/sites-administering/security-checklist.md) 確保系統安全所需的任務。
+* 查看隨AEM WCM安裝的預設用戶和組清單。 檢查您是否要對任何其他帳戶採取操作 — 請參閱 [安全性與使用者管理](/help/sites-administering/security.md) 以取得詳細資訊。
 
-## 訪問CRXDE Lite和Web控制台{#accessing-crxde-lite-and-the-web-console}
+## 存取CRXDE Lite和Web主控台 {#accessing-crxde-lite-and-the-web-console}
 
 AEM WCM啟動後，您也可以存取：
 
 * [CRXDE Lite](#accessing-crxde-lite)  — 用於存取和管理存放庫
 * [Web主控台](#accessing-the-web-console)  — 用於管理或配置OSGi套件組合（也稱為OSGi主控台）
 
-### 訪問CRXDE Lite{#accessing-crxde-lite}
+### 存取CRXDE Lite {#accessing-crxde-lite}
 
-若要開啟CRXDE Lite，您可以從歡迎畫面選取&#x200B;**CRXDE Lite**，或使用瀏覽器導覽至
+若要開啟CRXDE Lite，您可以選取 **CRXDE Lite** 從歡迎畫面或使用瀏覽器導覽至
 
 ```
  https://<<i>host</i>>:<<i>port</i>>/crx/de/index.jsp
@@ -330,9 +328,9 @@ AEM WCM啟動後，您也可以存取：
 
 ![installcq_crxdelite](assets/installcq_crxdelite.png)
 
-#### 訪問Web控制台{#accessing-the-web-console}
+#### 存取Web主控台 {#accessing-the-web-console}
 
-若要存取Adobe CQ Web主控台，您可以從歡迎畫面中選取&#x200B;**OSGi主控台**，或使用瀏覽器導覽至
+若要存取Adobe CQ Web主控台，您可以選取 **OSGi主控台** 從歡迎畫面或使用瀏覽器導覽至
 
 ```
  https://<host>:<port>/system/console
@@ -345,7 +343,7 @@ AEM WCM啟動後，您也可以存取：
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
-如需詳細資訊，請參閱[使用Web控制台進行OSGi配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 。
+請參閱 [使用Web控制台進行OSGi配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 以取得詳細資訊。
 
 ## 疑難排解 {#troubleshooting}
 
@@ -361,6 +359,6 @@ AEM WCM啟動後，您也可以存取：
 
 >[!NOTE]
 >
->Adobe強烈建議您先備份儲存庫再刪除AEM。 如果刪除整個&lt;cq-installation-directory>，則會刪除儲存庫。 若要在刪除前保留存放庫資料，請先將&lt;cq-installation-directory>/crx-quickstart/repository資料夾移動或複製到其他位置，然後再刪除其他資料夾。
+>Adobe強烈建議您先備份儲存庫再刪除AEM。 如果您刪除 &lt;cq-installation-directory>，您將刪除存放庫。 若要在刪除、移動或複製 &lt;cq-installation-directory>/crx-quickstart/repository資料夾，再刪除其他資料夾。
 
 如果安裝AEM時使用外部儲存（例如資料庫伺服器），則刪除資料夾不會自動刪除資料，但會刪除儲存配置，這會使JCR內容的還原變得困難。

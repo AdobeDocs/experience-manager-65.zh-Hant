@@ -1,7 +1,8 @@
 ---
 title: 如何透過AEM Assets API更新您的內容
 description: 在AEM無頭開發人員歷程的這部分，了解如何使用REST API存取及更新內容片段的內容。
-source-git-commit: 7f43d9d6b631b26f7b9293aa109498d0c8040436
+exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 2%
@@ -224,7 +225,7 @@ Associated content is currently not exposed.
 >* `/content/path/to/page` **does** 需要使用 `.model` 選取器。
 
 
-### 操作 {#operation}
+### 作業 {#operation}
 
 HTTP方法會決定要執行的操作：
 
@@ -326,6 +327,6 @@ API參考檔案中已定義支援請求的確切格式。
    * [API參考](/help/assets/assets-api-content-fragments.md#api-reference)
 * [Adobe Experience Manager Assets API — 內容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)
-* [AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
+* [AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM說明](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [影片 — 使用AEM為CORS開發](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)

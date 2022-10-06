@@ -1,25 +1,25 @@
 ---
 title: Forms 6.5中的存放庫重新調整架構
-seo-title: Forms 6.5中的存放庫重新調整架構
+seo-title: Forms Repository Restructuring in AEM 6.5
 description: 了解如何進行必要的變更，以移轉至AEM 6.5 for Forms中的新存放庫結構。
-seo-description: 了解如何進行必要的變更，以移轉至AEM 6.5 for Forms中的新存放庫結構。
+seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.5 for Forms.
 uuid: e60830d4-23ca-4be9-941a-ee4abe4786a6
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 1ce9a622-5968-407f-a74b-d325a2bff669
-feature: 升級
+feature: Upgrading
 exl-id: d555422e-dc97-4d45-9525-4299d22315e2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '532'
 ht-degree: 7%
 
 ---
 
-# Forms 6.5{#forms-repository-restructuring-in-aem}中的存放庫重新調整
+# Forms 6.5中的存放庫重新調整架構{#forms-repository-restructuring-in-aem}
 
-如上層[AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的存放庫重組頁面所述，升級至AEM 6.5的客戶應使用此頁面評估與影響AEM Forms解決方案的存放庫變更相關的工作量。 有些變更需要AEM 6.5升級程式中的工作量，而有些變更可能會延遲至日後升級。
+如父項所述 [AEM 6.5中的存放庫重新調整架構](/help/sites-deploying/repository-restructuring.md) 頁面中，升級至AEM 6.5的客戶應使用此頁面評估與影響AEM Forms解決方案的存放庫變更相關的工作量。 有些變更需要AEM 6.5升級程式中的工作量，而有些變更可能會延遲至日後升級。
 
 **使用6.5升級**
 
@@ -32,7 +32,7 @@ ht-degree: 7%
 * [TypekitCloud Service配置](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md#typekit-cloud-service-configurations)
 * [雜項](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md#misc)
 
-## 使用6.5升級{#with-upgrade}
+## 使用6.5升級 {#with-upgrade}
 
 ### 雜項 {#misc}
 
@@ -90,42 +90,42 @@ ht-degree: 7%
 | **重組指導** | 我們從不建議或支援變更這些clientlib。 如果已對這些clientlib進行修改，則應復原以使用AEM提供的程式碼。 |
 | **附註** | 不適用 |
 
-## 未來升級前{#prior-to-upgrade}
+## 未來升級前 {#prior-to-upgrade}
 
-### EchosignCloud Service配置{#echosign-cloud-service-configuration}
+### EchosignCloud Service配置 {#echosign-cloud-service-configuration}
 
 | **上一位置** | `/etc/cloudservices/echosign` |
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/echosign` |
-| **重組指導** | 要從Forms移轉UI觸發的[延遲內容移轉](/help/sites-deploying/lazy-content-migration.md)公用程式。 |
+| **重組指導** | 此 [延遲內容移轉](/help/sites-deploying/lazy-content-migration.md) 公用程式從Forms移轉UI觸發。 |
 | **附註** | 不適用 |
 
-### RecaptchaCloud Service配置{#recaptcha-cloud-service-configurations}
+### RecaptchaCloud Service配置 {#recaptcha-cloud-service-configurations}
 
 | **上一位置** | `/etc/cloudservices/recaptcha` |
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/recaptcha` |
-| **重組指導** | 要從Forms移轉UI觸發的[延遲內容移轉](/help/sites-deploying/lazy-content-migration.md)公用程式。 |
+| **重組指導** | 此 [延遲內容移轉](/help/sites-deploying/lazy-content-migration.md) 公用程式從Forms移轉UI觸發。 |
 | **附註** | 不適用 |
 
-### TypekitCloud Service配置{#typekit-cloud-service-configurations}
+### TypekitCloud Service配置 {#typekit-cloud-service-configurations}
 
 | **上一位置** | `/etc/cloudservices/typekit` |
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/typekit` |
-| **重組指導** | 要從Forms移轉UI觸發的[延遲內容移轉](/help/sites-deploying/lazy-content-migration.md)公用程式。 |
+| **重組指導** | 此 [延遲內容移轉](/help/sites-deploying/lazy-content-migration.md) 公用程式從Forms移轉UI觸發。 |
 | **附註** | 不適用 |
 
-### Misc {#misc-1}
+### 雜項 {#misc-1}
 
 | **上一位置** | `/etc/cloudservices/fdm` |
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/fdm` |
-| **重組指導** | 要從Forms移轉UI觸發的[延遲內容移轉](/help/sites-deploying/lazy-content-migration.md)公用程式。 |
+| **重組指導** | 此 [延遲內容移轉](/help/sites-deploying/lazy-content-migration.md) 公用程式從Forms移轉UI觸發。 |
 | **附註** | 不適用 |
 
 | **上一位置** | `/etc/designs/fd/fp` |
 |---|---|
 | **新位置** | `/libs/fd/fp` |
-| **重組指導** | 對/etc範本的任何參照最終應更新為指向其`/libs`對應項。 |
+| **重組指導** | 對/etc範本的任何參照最終應更新為指向其 `/libs` 對應。 |
 | **附註** | 不適用 |

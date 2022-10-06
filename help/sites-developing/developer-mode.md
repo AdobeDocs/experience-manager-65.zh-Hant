@@ -1,8 +1,8 @@
 ---
 title: 開發人員模式
-seo-title: 開發人員模式
+seo-title: Developer Mode
 description: 開發人員模式會開啟側面板，其中包含數個標籤，為開發人員提供目前頁面的相關資訊
-seo-description: 開發人員模式會開啟側面板，其中包含數個標籤，為開發人員提供目前頁面的相關資訊
+seo-description: Developer mode opens a side panel with several tabs that provide a developer with infomation about the current page
 uuid: 8301ab51-93d6-44f9-a813-ba7f03f54485
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,18 +13,18 @@ docset: aem65
 exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
-# 開發者模式{#developer-mode}
+# 開發人員模式{#developer-mode}
 
-在AEM中編輯頁面時，有數個[模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui)可供使用，包括開發人員模式。 這會開啟一個側面板，其中包含數個標籤，為開發人員提供目前頁面的相關資訊。 這三個標籤是：
+在AEM中編輯頁面時， [模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) 可用，包括開發人員模式。 這會開啟一個側面板，其中包含數個標籤，為開發人員提供目前頁面的相關資訊。 這三個標籤是：
 
-* **[](#components)** 元件，用於查看結構和效能資訊。
-* **[](#tests)** 測試執行測試和分析結果。
-* **[](#errors)** 錯誤，無法查看發生的任何問題。
+* **[元件](#components)** 查看結構和效能資訊。
+* **[測試](#tests)** 用於運行測試和分析結果。
+* **[錯誤](#errors)** 看到發生的任何問題。
 
 這些功能可協助開發人員：
 
@@ -38,11 +38,9 @@ ht-degree: 0%
 >
 >* 僅適用於觸控式UI（編輯頁面時）。
 >* 在行動裝置上或案頭上的小視窗上皆無法使用（因空間限制）。
-
    >
-   >   
-   * 當寬度小於1024px時即會發生此情況。
->* 僅對`administrators`組成員的用戶可用。
+   >   * 當寬度小於1024px時即會發生此情況。
+>* 僅適用於 `administrators` 群組。
 
 
 >[!CAUTION]
@@ -53,31 +51,27 @@ ht-degree: 0%
 >
 >* 在使用nosamplecontent執行模式的製作例項上
 >* 發佈例項
-
 >
->
-使用後應再次停用。
+>使用後應再次停用。
 
 >[!NOTE]
 >
 >請參閱：
 >
->* 知識庫文章[疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步提示和工具。
->* AEM Gems工作階段關於[AEM 6.0開發人員模式](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)。
-
+>* 知識庫文章， [疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得更多秘訣和工具。
+>* AEM Gem課程關於 [AEM 6.0開發人員模式](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html).
 >
 
 
+## 開啟開發人員模式 {#opening-developer-mode}
 
-## 開啟開發人員模式{#opening-developer-mode}
-
-開發人員模式是作為側面板實作到頁面編輯器。 若要開啟面板，請從頁面編輯器工具列的模式選取器中選取&#x200B;**開發人員**:
+開發人員模式是作為側面板實作到頁面編輯器。 若要開啟面板，請選取 **開發人員** 從頁面編輯器工具列中的模式選取器：
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
 面板分為兩個標籤：
 
-* **[元件](/help/sites-developing/developer-mode.md#components)**  — 這會顯示與作者內容樹狀結構 [類](/help/sites-authoring/author-environment-tools.md#content-tree) 似的元件樹
+* **[元件](/help/sites-developing/developer-mode.md#components)**  — 這會顯示類似於 [內容樹](/help/sites-authoring/author-environment-tools.md#content-tree) 供作者使用
 
 * **[錯誤](/help/sites-developing/developer-mode.md#errors)**  — 發生問題時，會顯示每個元件的詳細資訊。
 
@@ -106,7 +100,7 @@ ht-degree: 0%
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-* **查看詳細資訊**:一個清單連結，其中顯示：
+* **檢視詳細資料**:一個清單連結，其中顯示：
 
    * 用於呈現元件的所有元件指令碼。
    * 此特定元件的儲存庫內容路徑。
@@ -126,18 +120,18 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->有些連結指向`/libs`下的指令碼。 但是，這些僅供參考，您&#x200B;**不得**&#x200B;編輯`/libs`下的任何內容，因為您所做的任何更改都可能丟失。 這是因為當您升級或套用Hotfix/Feature Pack時，此分支很可能會發生變更。 您需要的任何變更都應在`/apps`下進行，請參閱[覆蓋和覆寫](/help/sites-developing/overlays.md)。
+>有些連結指向下的指令碼 `/libs`. 不過，這些僅供參考，您 **不能** 在下面編輯任何內容 `/libs`，因為您所做的任何變更可能會遺失。 這是因為當您升級或套用Hotfix/Feature Pack時，此分支很可能會發生變更。 您需要的任何變更都應在 `/apps`，請參閱 [覆蓋和覆寫](/help/sites-developing/overlays.md).
 
 ### 錯誤 {#errors}
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-希望&#x200B;**Errors**&#x200B;標籤將始終為空（如上所示），但當出現問題時，將顯示每個元件的以下詳細資訊：
+希望 **錯誤** 標籤將一律為空白（如上所示），但當發生問題時，會針對每個元件顯示下列詳細資料：
 
 * 如果元件將項目寫入錯誤記錄，以及錯誤的詳細資訊，並將連結導向CRXDE Lite內的適當程式碼，則會發出警告。
 * 元件開啟管理工作階段時出現警告。
 
-例如，在呼叫未定義方法的情況下，產生的錯誤會顯示在&#x200B;**Errors**&#x200B;標籤中：
+例如，在呼叫未定義方法的情況下，產生的錯誤會顯示在 **錯誤** 標籤：
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
@@ -149,4 +143,4 @@ ht-degree: 0%
 >
 >在AEM 6.2中，開發人員模式的測試功能已重新實作為獨立工具應用程式。
 >
->如需完整詳細資訊，請參閱[測試您的UI](/help/sites-developing/hobbes.md)。
+>如需完整詳細資訊，請參閱 [測試您的UI](/help/sites-developing/hobbes.md).

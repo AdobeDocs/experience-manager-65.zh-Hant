@@ -1,6 +1,6 @@
 ---
 title: 條碼式Forms服務Java APIQ快速入門(SOAP)
-seo-title: 條碼式Forms服務Java APIQ快速入門(SOAP)
+seo-title: Barcoded Forms Service Java APIQuick Start(SOAP)
 description: 條碼式Forms服務Java APIQ快速入門(SOAP)
 uuid: a6739695-ee0b-4480-8cef-0f91a72deaad
 contentOwner: admin
@@ -12,12 +12,12 @@ role: Developer
 exl-id: 907c12be-dab4-48b5-9da1-a76b711f49f2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
-# 條碼式Forms服務Java API快速入門(SOAP){#barcoded-forms-service-java-apiquick-start-soap}
+# 條碼式Forms服務Java API快速入門(SOAP) {#barcoded-forms-service-java-apiquick-start-soap}
 
 Java API快速入門(SOAP)適用於條碼式Forms服務：
 
@@ -27,11 +27,11 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
 
 >[!NOTE]
 >
->使用AEM Forms進行程式設計中的快速入門是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（如UNIX），請用適用作業系統支援的路徑取代Windows專用路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM Forms進行程式設計中的快速入門是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（如UNIX），請用適用作業系統支援的路徑取代Windows專用路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}解碼條碼式表單資料
+## 快速入門（SOAP模式）:使用Java API解碼條碼式表單資料 {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
 
-以下Java代碼會解碼儲存為Loan.pdf的PDF表單中的表單資料。 解碼的資料被保存為名為extractedData.xml的XML檔案。 此代碼示例將`org.w3c.dom.Document`對象轉換為`com.adobe.idp.Document`對象。 （請參閱[解碼條碼表單資料](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data)。）
+以下Java代碼會解碼位於儲存為Loan.pdf的PDF表單中的表單資料。 解碼的資料被保存為名為extractedData.xml的XML檔案。 此程式碼範例會轉換 `org.w3c.dom.Document` 物件 `com.adobe.idp.Document` 物件。 (請參閱 [解碼條碼式表單資料](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data).)
 
 ```java
  /*
@@ -220,4 +220,4 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
 
 >[!NOTE]
 >
->在相同的應用程式邏輯中同時使用`org.w3c.dom.Document`對象和`com.adobe.idp.Document`對象時，完全限定這兩個對象是一種好做法。
+>同時使用 `org.w3c.dom.Document` 物件和 `com.adobe.idp.Document` 對象在同一應用邏輯中，完全限定兩個對象是好做法。

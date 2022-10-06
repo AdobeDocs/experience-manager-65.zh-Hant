@@ -1,8 +1,8 @@
 ---
 title: 如何在AEM中稽核使用者管理作業
-seo-title: 如何在AEM中稽核使用者管理作業
+seo-title: How to Audit User Management Operations in AEM
 description: 了解如何在AEM中稽核使用者管理作業。
-seo-description: 了解如何在AEM中稽核使用者管理作業。
+seo-description: Learn how to audit User Management Operations in AEM.
 uuid: 9d177afb-172c-4858-a678-254c97cfa472
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,15 +11,15 @@ content-type: reference
 discoiquuid: ba6a56e5-b91c-4779-9154-d4300b2827f8
 docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
-feature: 運作
+feature: Operations
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '308'
 ht-degree: 1%
 
 ---
 
-# 如何審核AEM{#how-to-audit-user-management-operations-in-aem}中的用戶管理操作
+# 如何在AEM中稽核使用者管理作業{#how-to-audit-user-management-operations-in-aem}
 
 ## 簡介 {#introduction}
 
@@ -31,24 +31,24 @@ AEM已導入記錄權限變更的功能，以便稍後進行稽核。
 * 要新增至群組的使用者
 * 現有用戶或組的權限更改
 
-預設情況下，這些條目將寫入`error.log`檔案。 為了更方便進行監控，建議將其重新導向至單獨的日誌檔案。 有關如何執行此操作的更多資訊，請參閱以下段落。
+依預設，這些項目會寫入 `error.log` 檔案。 為了更方便進行監控，建議將其重新導向至單獨的日誌檔案。 有關如何執行此操作的更多資訊，請參閱以下段落。
 
-## 將輸出重定向到單獨的日誌檔案{#redirecting-the-output-to-a-separate-log-file}
+## 將輸出重定向到單獨的日誌檔案 {#redirecting-the-output-to-a-separate-log-file}
 
-若要將記錄輸出重新導向至個別的記錄檔，您需要建立新的&#x200B;**Apache Sling Logger**&#x200B;設定。 在以下範例中，我們將使用`useraudit.log`作為個別檔案的名稱。
+若要將記錄輸出重新導向至個別的記錄檔，您將需要建立新 **Apache Sling Logging Logger** 設定。 我們會用 `useraudit.log` 做為下列範例中個別檔案的名稱。
 
-1. 瀏覽至&#x200B;*https://serveraddress:serverport/system/console/configMgr*，前往Web主控台
-1. 搜尋&#x200B;**Apache Sling Logging Logger Configuration**。 然後，按條目右側的「+」以建立新的工廠配置。
+1. 瀏覽至 *https://serveraddress:serverport/system/console/configMgr*
+1. 搜尋 **Apache Sling Logging Logger Configuration**. 然後，按條目右側的「+」以建立新的工廠配置。
 1. 建立下列設定：
 
    * **記錄層級：** 資訊
-   * **記錄檔：** logs/useraudit.log
-   * **訊息模式：** 層級預設
+   * **日誌檔案：** logs/useraudit.log
+   * **消息模式：** 級別預設值
    * **記錄器：** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizabledServlet
 
-   要在&#x200B;**記錄器**&#x200B;欄位中輸入兩個記錄器，您需要輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱來建立另一個欄位。
+   若要將兩個記錄器輸入 **記錄器** 欄位，您需要輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱，以建立另一個欄位。
 
-## 輸出示例{#example-output}
+## 範例輸出 {#example-output}
 
 如果已正確設定，輸出應如下所示：
 

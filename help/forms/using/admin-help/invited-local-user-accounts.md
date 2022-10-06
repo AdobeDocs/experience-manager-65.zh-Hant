@@ -1,29 +1,29 @@
 ---
 title: 管理受邀和本機使用者帳戶
-seo-title: 管理受邀和本機使用者帳戶
+seo-title: Managing invited and local user accounts
 description: 使用文檔安全性，您可以搜索、查看、編輯、鎖定、解鎖和刪除邀請的和本地用戶帳戶。
-seo-description: 使用文檔安全性，您可以搜索、查看、編輯、鎖定、解鎖和刪除邀請的和本地用戶帳戶。
+seo-description: Using document security, you can search for, view, edit, lock, unlock, and delete invited and local user accounts.
 uuid: 0d0c717a-6e6e-4e42-96eb-3a7166e215ab
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 65720eed-ab06-463f-9567-2fdc468b6219
-feature: 文件安全性
+feature: Document Security
 exl-id: 23f71b34-a0cb-4664-bb8b-a60f33dc70d8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1196'
 ht-degree: 0%
 
 ---
 
-# 管理受邀和本地用戶帳戶{#managing-invited-and-local-user-accounts}
+# 管理受邀和本機使用者帳戶 {#managing-invited-and-local-user-accounts}
 
 使用「受邀和本地用戶」頁可管理您的受邀和本地用戶。 只有在滿足下列要求時，才會顯示此頁面：
 
-* 您是分配了文檔安全性「管理已邀請和本地用戶」角色和管理控制台「用戶」角色的管理員。 （請參閱[建立和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。）
-* 已啟用邀請的用戶註冊。 （請參閱[配置邀請的用戶註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。）
+* 您是分配了文檔安全性「管理已邀請和本地用戶」角色和管理控制台「用戶」角色的管理員。 (請參閱 [建立和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
+* 已啟用邀請的用戶註冊。 (請參閱 [配置邀請的用戶註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 「邀請的用戶」和「本地用戶」頁包含兩個頁簽，可用於搜索、查看、編輯、鎖定、解鎖和刪除邀請的用戶帳戶和本地用戶帳戶。
 
@@ -33,18 +33,18 @@ ht-degree: 0%
 >
 >也可以通過文檔安全引用的LDAP目錄直接添加被邀請的用戶，或者當用戶或管理員在建立或編輯策略時邀請新用戶時，則可以直接添加被邀請的用戶，因此，將啟動註冊邀請電子郵件。 如果在「邀請的用戶註冊」頁上啟用「啟用邀請的用戶註冊」選項，則用戶可以將新的受邀用戶添加到策略。
 
-## 添加受邀用戶{#add-an-invited-user}
+## 新增受邀的使用者 {#add-an-invited-user}
 
 您一次可以新增一或多個受邀的使用者帳戶以記錄安全性。 若要新增受邀的使用者帳戶，您需要該使用者的電子郵件地址。 新增使用者時，檔案安全性會傳送註冊電子郵件，邀請該使用者註冊。
 
 1. 在管理控制台中，按一下「服務」>「文檔安全性」>「已邀請和本地用戶」，然後按一下「邀請新用戶」。
-1. 輸入您要邀請之使用者的電子郵件地址。 在一行中輸入多個地址，用逗號分隔。
+1. 輸入您要邀請之使用者的電子郵件地址。 在一行中輸入多個地址，以逗號分隔。
 
-   您在啟用邀請的用戶註冊時建立的消息將發送到用戶。 （請參閱[配置邀請的用戶註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。）
+   您在啟用邀請的用戶註冊時建立的消息將發送到用戶。 (請參閱 [配置邀請的用戶註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 1. 按一下「確定」。
 
-## 查看有關本地用戶{#view-information-about-a-local-user}的資訊
+## 查看有關本地用戶的資訊 {#view-information-about-a-local-user}
 
 您可以檢視本機使用者的相關資訊，包括名稱、電子郵件地址、組織、註冊狀態和網域。
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
    將顯示用戶詳細資訊，您可以重置用戶的密碼並停用帳戶。
 
-## 向未註冊的外部用戶{#send-an-email-to-an-unregistered-external-user}發送電子郵件
+## 傳送電子郵件給未註冊的外部使用者 {#send-an-email-to-an-unregistered-external-user}
 
 當您新增受邀的使用者時，檔案安全性會自動傳送註冊電子郵件請求給該使用者。 您也可以手動產生註冊電子郵件，以傳送給尚未註冊的受邀使用者。 例如，如果受邀使用者的註冊電子郵件過期，您可能會想要傳送新邀請。
 
@@ -61,17 +61,17 @@ ht-degree: 0%
 1. 在使用者清單中，選取每個使用者的核取方塊，以傳送註冊電子郵件至，然後按一下重新傳送邀請電子郵件。
 1. 查看所選用戶的清單，然後按一下「確定」。
 
-## 重置本地用戶密碼{#reset-a-local-user-password}
+## 重設本地用戶密碼 {#reset-a-local-user-password}
 
 您可以為已註冊了文檔安全性但忘記其密碼的已激活用戶重置密碼。 當您重設密碼時，會產生包含使用者之暫時新密碼的電子郵件。
 
-當您啟用邀請的用戶註冊過程時，您建立了一條電子郵件，將發送給提示用戶重置密碼的用戶。 （請參閱[配置邀請的用戶註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)。）
+當您啟用邀請的用戶註冊過程時，您建立了一條電子郵件，將發送給提示用戶重置密碼的用戶。 (請參閱 [配置邀請的用戶註冊](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 1. 在管理控制台中，按一下「服務」>「文檔安全性」>「已邀請和本地用戶」，然後按一下「本地用戶」頁簽。
 1. 在使用者清單中，選取適當的使用者。
 1. 在「管理本地用戶」頁上，按一下「重置密碼」，然後按一下「確定」。 系統會傳送包含新密碼的重設密碼電子郵件給使用者。
 
-## 啟用或禁用用戶帳戶{#enable-or-disable-a-user-account}
+## 啟用或禁用用戶帳戶 {#enable-or-disable-a-user-account}
 
 您可以停用本機使用者帳戶，暫時限制使用者登入檔案安全性。 當禁用帳戶時，用戶不能使用受策略保護的文檔或建立或應用策略。
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 1. 在使用者清單中，選取適當的使用者。
 1. 在「本地用戶詳細資訊」頁上，按一下「帳戶啟用」。
 
-## 刪除邀請的用戶帳戶{#remove-an-invited-user-account}
+## 移除受邀的使用者帳戶 {#remove-an-invited-user-account}
 
 您可以從檔案安全性中刪除邀請的使用者帳戶。 例如，當使用者變更其個人電子郵件帳戶資訊時，您可能會想要刪除帳戶。
 
@@ -102,28 +102,28 @@ ht-degree: 0%
 1. 在管理控制台中，按一下「服務」>「文檔安全性」>「已邀請和本地用戶」，然後按一下「已邀請用戶」頁簽。
 1. 選取一或多個使用者旁的核取方塊，按一下「刪除」，然後按一下「確定」。
 
-## 搜索受邀用戶帳戶{#search-for-an-invited-user-account}
+## 搜尋受邀的使用者帳戶 {#search-for-an-invited-user-account}
 
 您可以使用電子郵件地址來搜尋受邀的使用者帳戶。
 
 1. 在管理控制台中，按一下「服務」>「文檔安全性」>「已邀請和本地用戶」。
 1. 在「查找電子郵件」框中，鍵入用戶的電子郵件地址，然後按一下「查找」。
 
-## 搜索本地用戶帳戶{#search-for-a-local-user-account}
+## 搜尋本機使用者帳戶 {#search-for-a-local-user-account}
 
 您可以使用使用者的電子郵件地址或名稱及網域來搜尋本機使用者。
 
 1. 在管理控制台中，按一下「服務」>「文檔安全性」>「已邀請和本地用戶」，然後按一下「本地用戶」頁簽。
 1. 在「查找」框中鍵入搜索標準，選擇「名稱」或「電子郵件」，然後按一下「查找」。
 
-## 刪除本地用戶帳戶{#remove-a-local-user-account}
+## 移除本機使用者帳戶 {#remove-a-local-user-account}
 
 您可以從檔案安全性中刪除本機使用者帳戶。 例如，當使用者變更其個人電子郵件帳戶資訊時，您可能會想要刪除帳戶。
 
 1. 在管理控制台中，按一下「服務」>「文檔安全性」>「已邀請和本地用戶」，然後按一下「本地用戶」頁簽。
 1. 選取一或多個使用者旁的核取方塊，按一下「刪除」，然後按一下「確定」。
 
-## 對用戶清單{#sort-the-user-list}進行排序
+## 排序使用者清單 {#sort-the-user-list}
 
 您可以依欄標題排序使用者清單，更輕鬆找到使用者。 欄標題旁的三角形圖示表示目前用來排序的欄：
 

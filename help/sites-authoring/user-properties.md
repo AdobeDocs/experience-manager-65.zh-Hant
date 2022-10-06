@@ -1,8 +1,8 @@
 ---
 title: 設定帳戶環境
-seo-title: 設定帳戶環境
+seo-title: Configuring Your Account Environment
 description: AEM可讓您設定帳戶，以及製作環境的某些方面
-seo-description: AEM可讓您設定帳戶，以及製作環境的某些方面
+seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment
 uuid: ef31be29-5c18-4dc9-ad51-fb001588b31e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,30 +13,30 @@ docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '517'
 ht-degree: 10%
 
 ---
 
-# 配置帳戶環境{#configuring-your-account-environment}
+# 設定帳戶環境{#configuring-your-account-environment}
 
 AEM可讓您設定帳戶，以及製作環境的某些方面。
 
 使用頁 [首和相關「我的首選項](/help/sites-authoring/user-properties.md#user-settings) 」對話框中的「用戶」選項 [](/help/sites-authoring/basic-handling.md#the-header)[](#userpreferences) ，可以修改用戶選項，例如。
 
-首先，訪問標題中的[User](/help/sites-authoring/user-properties.md#user-settings)選項。
+首先，存取 [使用者](/help/sites-authoring/user-properties.md#user-settings) 選項。
 
 ## 使用者設定 {#user-settings}
 
-**User**&#x200B;設定對話框允許您訪問：
+此 **使用者** 「設定」對話方塊可讓您存取：
 
 * 模擬為
 
-   * 透過[模擬為](/help/sites-administering/security.md#impersonating-another-user)功能，使用者可以代表其他使用者運作。
+   * 使用 [模擬為](/help/sites-administering/security.md#impersonating-another-user) 功能使用者可以代表其他使用者運作。
 
 * 設定檔
 
-   * 提供指向[用戶設定](/help/sites-administering/security.md)的便利連結)
+   * 提供您 [使用者設定](/help/sites-administering/security.md))
 
 * [我的喜好設定](/help/sites-authoring/user-properties.md#my-preferences)
 
@@ -46,7 +46,7 @@ AEM可讓您設定帳戶，以及製作環境的某些方面。
 
 ### 我的喜好設定 {#my-preferences}
 
-**My Preferences**&#x200B;對話框通過標題中的[User](/help/sites-authoring/user-properties.md#user-settings)選項訪問。
+此 **我的偏好設定** 對話方塊是透過 [使用者](/help/sites-authoring/user-properties.md#user-settings) 選項。
 
 每個使用者都可為自己設定特定屬性。
 
@@ -109,7 +109,7 @@ AEM可讓您設定帳戶，以及製作環境的某些方面。
 
 * **使用傳統製作體驗**
 
-   此選項會啟用[傳統UI](/help/sites-classic-ui-authoring/home.md)型頁面編寫。 預設會使用標準UI。
+   此選項啟用 [傳統UI](/help/sites-classic-ui-authoring/home.md)頁面編寫。 預設會使用標準UI。
 
 * **啟用資產首頁**
 
@@ -117,4 +117,4 @@ AEM可讓您設定帳戶，以及製作環境的某些方面。
 
 * **Stock 設定**
 
-   此選項可指定慣用的Adobe Stock配置，且僅在系統管理員啟用[Adobe Stock整合](/help/assets/aem-assets-adobe-stock.md)時可用。
+   此選項可指定慣用的Adobe Stock配置，且僅在系統管理員已啟用時才可用 [Adobe Stock整合](/help/assets/aem-assets-adobe-stock.md).

@@ -1,8 +1,8 @@
 ---
 title: 使用工作流程
-seo-title: 使用工作流程
-description: AEM工作流程可讓您自動執行頁面或資產上的一系列步驟。 例如，發佈時，編輯器必須先檢閱內容 — 網站管理員才會啟動頁面。 自動執行此示例的工作流會在需要執行其所需工作時通知每個參與者。
-seo-description: AEM工作流程可讓您自動執行頁面或資產上的一系列步驟。 例如，發佈時，編輯器必須先檢閱內容 — 網站管理員才會啟動頁面。 自動執行此示例的工作流會在需要執行其所需工作時通知每個參與者。
+seo-title: Working with Workflows
+description: AEM工作流程可讓您自動執行頁面或資產上執行的一系列步驟。 例如，發佈時，編輯器必須先檢閱內容 — 網站管理員才會啟動頁面。 自動執行此示例的工作流會在需要執行其所需工作時通知每個參與者。
+seo-description: AEM Workflows allows you to automate a series of steps that are performed on a page or asset. For example, when publishing, an editor has to review the content - before a site administrator activates the page. A workflow that automates this example notifies each participant when it is time to perform their required work.
 uuid: 3eb6e790-6589-414a-8e51-33c358f47a73
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,14 +12,14 @@ discoiquuid: b11f0e4c-4dec-4b66-9f54-a0aa13ac77b9
 exl-id: 298fcfeb-dc8d-4edc-8743-83c0e5e5bc08
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 5%
+source-wordcount: '212'
+ht-degree: 6%
 
 ---
 
 # 使用工作流程{#working-with-workflows}
 
-AEM工作流程可讓您自動執行頁面或資產上的一系列步驟。 例如，發佈時，編輯器必須先檢閱內容 — 網站管理員才會啟動頁面。 自動執行此示例的工作流在需要執行其所需工作時通知每個參與者：
+AEM工作流程可讓您自動執行頁面或資產上執行的一系列步驟。 例如，發佈時，編輯器必須先檢閱內容 — 網站管理員才會啟動頁面。 自動執行此示例的工作流在需要執行其所需工作時通知每個參與者：
 
 1. 作者會將工作流程套用至頁面。
 1. 編輯器會收到指出需要它們來檢閱頁面內容的工作項目。 完成後，它們將指示其工作項已完成。

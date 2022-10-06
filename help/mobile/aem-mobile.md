@@ -2,7 +2,7 @@
 title: AEM Mobile On-Demand
 seo-title: AEM Mobile On-Demand
 description: 請依照本頁面操作，開始管理AEM Mobile On-Demand Services應用程式。 它概略說明AEM管理員對On-Demand服務的角色和責任。
-seo-description: 請依照本頁面操作，開始管理AEM Mobile On-Demand Services應用程式。 它概略說明AEM管理員對On-Demand服務的角色和責任。
+seo-description: Follow this page to get started with administering AEM mobile On-Demand services app. It provides an overview of the roles and responsibilities of an AEM administrator for On-Demand services.
 uuid: fd99c032-287a-489b-9690-b18980c55c29
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -12,12 +12,12 @@ discoiquuid: 5e1e6a51-67e1-42e3-bcb0-e16bc92c9cb3
 exl-id: 95cbedaf-9a94-45fa-8ddb-15be7a09f86d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '294'
 ht-degree: 2%
 
 ---
 
-# AEM Mobile隨選{#aem-mobile-on-demand}
+# AEM Mobile On-Demand {#aem-mobile-on-demand}
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您沒有使用AEM作為內容管理來源，請參閱[AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
+>如果您沒有使用AEM作為內容管理來源，請參閱 [AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 ## AEM 管理員 {#aem-administrator}
 
@@ -33,13 +33,13 @@ ht-degree: 2%
 >
 >**必備條件:**
 >
->開始設定AEM Mobile On-demand Services環境之前，請參閱[AEM Mobile應用程式控制面板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
+>開始設定AEM Mobile On-demand Services環境之前，請參閱 [AEM Mobile應用程式控制面板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-***AEM管理員***&#x200B;負責使用建立精靈建立新應用程式或匯入現有應用程式，將新應用程式新增至AEM Mobile目錄。 使用AEM Mobile的&#x200B;*建立精靈*&#x200B;建立新應用程式的AEM管理員，通常會從現成的參考範例或（在大多數情況下）由&#x200B;*AEM開發人員建立的自訂應用程式範本中，選取所需的應用程式範本之一。*
+安 ***AEM管理員*** 負責使用建立精靈建立新應用程式，或匯入現有應用程式，將新應用程式新增至AEM Mobile目錄。 使用AEM Mobile建立新應用程式的AEM管理員 *建立精靈* 通常會從現成可用的參考範例中，或（在大多數情況下）從建立的自訂應用程式範本中，選取所需的應用程式範本 *AEM開發人員。*
 
 >[!NOTE]
 >
->有關設定AEM組和權限的詳細資訊，請按一下聯機幫助中的[建立用戶角色和授予訪問權限](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)。
+>如需設定AEM群組和權限的詳細資訊，請按一下 [建立用戶角色和授予訪問權限](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) 中。
 
 使用AEM Mobile On-demand Services建立應用程式時，AEM管理員負責下列工作：
 

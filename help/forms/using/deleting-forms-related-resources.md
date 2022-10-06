@@ -1,8 +1,8 @@
 ---
 title: 刪除表單和相關資源
-seo-title: 刪除表單和相關資源
+seo-title: Deleting forms and related resources
 description: 如何刪除AEM Forms中的表單或資產，以及對參考和反向連結資產及XFA表單的影響。
-seo-description: 如何刪除AEM Forms中的表單或資產，以及對參考和反向連結資產及XFA表單的影響。
+seo-description: How to delete a form or an asset in AEM Forms and the impact on referenced and referring assets and XFA forms.
 uuid: df522b87-59d8-4678-922d-c9aab82b1381
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,7 +12,7 @@ role: Admin
 exl-id: b31f9f56-dd33-4478-ad34-01ac7d5a1b40
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,8 @@ ht-degree: 0%
 
 ## 如何刪除表單 {#how-to-delete-a-form}
 
-1. 存取`https://[hostname]:'port'/aem/forms.html.`以登入AEM Forms使用者介面
-1. 導覽至並選取您要刪除的表單。 按一下工具列中的「刪除![aem6forms_delete2](assets/aem6forms_delete2.png) 」，並確認刪除操作。
+1. 透過存取 `https://[hostname]:'port'/aem/forms.html.`
+1. 導覽至並選取您要刪除的表單。 按一下「刪除」 ![aem6forms_delete2](assets/aem6forms_delete2.png) 確認刪除操作。
 
    >[!NOTE]
    >
@@ -46,6 +46,6 @@ ht-degree: 0%
 
 在AEM Forms中，最適化表單或其他XFA表單範本都可參照XFA表單範本。 此外，範本可以參照資源或其他XFA範本。
 
-不建議刪除最適化表單所參照的XFA表單，因為這可能會損毀最適化表單。 適用性表單參考XFA表單時，其欄位會系結。 刪除XFA後，適用性表單無法將其欄位與XFA欄位同步，且會顯示這類欄位的錯誤訊息。 要進一步了解引用的XFA刪除的影響和有關臟的AF，請參閱[更新引用的XFA表單](/help/forms/using/get-xdp-pdf-documents-aem.md#p-updating-referenced-xfa-forms-p)。
+不建議刪除最適化表單所參照的XFA表單，因為這可能會損毀最適化表單。 適用性表單參考XFA表單時，其欄位會系結。 刪除XFA後，適用性表單無法將其欄位與XFA欄位同步，且會顯示這類欄位的錯誤訊息。 若要進一步了解引用XFA刪除的影響以及臟AF的相關資訊，請參閱 [更新參考的XFA表單](/help/forms/using/get-xdp-pdf-documents-aem.md#p-updating-referenced-xfa-forms-p).
 
 若要刪除此類XFA表單，請更新最適化表單並移除與XFA欄位的系結。

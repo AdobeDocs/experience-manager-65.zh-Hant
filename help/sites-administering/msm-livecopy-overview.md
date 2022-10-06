@@ -1,26 +1,26 @@
 ---
 title: Live Copy概述主控台
-seo-title: Live Copy概述主控台
+seo-title: Live Copy Overview Console
 description: 了解Live Copy概觀主控台的基本概念。
-seo-description: 了解Live Copy概觀主控台的基本概念。
+seo-description: Learn about the basics of the Live Copy Overview Console.
 uuid: 6b1841ec-950e-455b-9b30-b5f5050a67b8
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
-feature: 多站點管理員
+feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
 
 # Live Copy概述主控台{#live-copy-overview-console}
 
-**即時副本概述**&#x200B;可讓您：
+此 **即時副本概述** 可讓您：
 
 * 檢視/管理整個網站的繼承：
 
@@ -30,19 +30,19 @@ ht-degree: 2%
 
 * 執行轉出動作
 
-## 開啟即時副本概述{#opening-the-live-copy-overview}
+## 開啟即時副本概述 {#opening-the-live-copy-overview}
 
 您可以從以下位置開啟「即時副本概述」：
 
 * [參考Blueprint頁面的側面板（網站主控台）](#opening-live-copy-overview-references-for-a-blueprint-page)
 * [Blueprint頁面的屬性](#opening-live-copy-overview-properties-of-a-blueprint-page)
 
-### 開啟即時副本概述 — Blueprint頁面{#opening-live-copy-overview-references-for-a-blueprint-page}的參考
+### 開啟即時副本概述 — Blueprint頁面的參考 {#opening-live-copy-overview-references-for-a-blueprint-page}
 
-您可以從&#x200B;**Sites**&#x200B;控制台的&#x200B;**References**&#x200B;側面板開啟&#x200B;**Live Copy概述**:
+此 **即時副本概述** 可從 **參考** 側面板 **網站** 主控台：
 
-1. 在&#x200B;**Sites**&#x200B;控制台中，[導覽至您的Blueprint頁面並選取它](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
-1. 開啟&#x200B;**[References](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板，然後選取&#x200B;**Live Copys**。
+1. 在 **網站** 主控台， [導覽至您的blueprint頁面並加以選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
+1. 開啟 **[參考](/help/sites-authoring/basic-handling.md#references)** 面板和選取 **Live Copies**.
 
    ![chlimage_1-359](assets/chlimage_1-359.png)
 
@@ -50,34 +50,34 @@ ht-degree: 2%
    >
    >您也可以先開啟「參考」，然後選取Blueprint。
 
-1. 選擇「即時副本概述」(**Live Copy Overview**)以顯示並使用與所選藍圖相關的所有即時副本的概述。
-1. 使用&#x200B;**關閉**&#x200B;退出並返回&#x200B;**Sites**&#x200B;控制台。
+1. 選擇 **即時副本概述** 顯示和使用與所選Blueprint相關的所有Live Copy的概述。
+1. 使用 **關閉** 退出並返回 **網站** 控制台。
 
-### 開啟即時副本概述 — Blueprint頁面{#opening-live-copy-overview-properties-of-a-blueprint-page}的屬性
+### 開啟即時副本概述 — Blueprint頁面的屬性 {#opening-live-copy-overview-properties-of-a-blueprint-page}
 
-檢視Blueprint頁面的屬性時，可以開啟&#x200B;**即時副本概述**:
+此 **即時副本概述** 可在檢視blueprint頁面的屬性時開啟：
 
-1. 開啟適當Blueprint頁面的&#x200B;**屬性**。
-1. 開啟&#x200B;**Blueprint**&#x200B;標籤 — 頂端工具列會顯示&#x200B;**即時副本概述**&#x200B;選項：
+1. 開啟 **屬性** ，以取得適當的blueprint頁面。
+1. 開啟 **Blueprint** 標籤 —  **即時副本概述** 選項會顯示在頂端工具列中：
 
    ![chlimage_1-360](assets/chlimage_1-360.png)
 
-1. 選擇「即時副本概述」(**Live Copy Overview**)以顯示並使用與當前Blueprint相關的所有即時副本的概述。
+1. 選擇 **即時副本概述** 顯示和使用與目前Blueprint相關的所有即時副本的概觀。
 
    >[!NOTE]
    >
-   >有關詳細資訊，另請參閱知識庫文章[Livecopy狀態消息 — 最新/綠色/同步](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)。
+   >有關詳細資訊，另請參閱知識庫文章 [Livecopy狀態訊息 — 最新/綠色/同步](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html).
 
-1. 使用&#x200B;**關閉**&#x200B;退出並返回&#x200B;**Sites**&#x200B;控制台。
+1. 使用 **關閉** 退出並返回 **網站** 控制台。
 
-## 使用即時副本概述{#using-the-live-copy-overview}
+## 使用即時副本概述 {#using-the-live-copy-overview}
 
-**即時副本概述**&#x200B;也可用於在即時副本上執行動作：
+此 **即時副本概述** 也可用來在即時副本上執行動作：
 
-1. 開啟&#x200B;**即時副本概述**。
-1. 選取所需的Blueprint或即時副本頁面 — 工具列將會更新，以顯示可用的動作。 可用的[actions](/help/sites-administering/msm.md#terms-used)取決於您選取的是[blueprint](#actions-for-a-blueprint-page)或[即時副本](#actions-for-a-live-copy-page)頁面：
+1. 開啟 **即時副本概述**.
+1. 選取所需的Blueprint或即時副本頁面 — 工具列將會更新，以顯示可用的動作。 此 [動作](/help/sites-administering/msm.md#terms-used) 可用取決於您是否選取 [Blueprint](#actions-for-a-blueprint-page) 或 [即時副本](#actions-for-a-live-copy-page) 頁面：
 
-### Blueprint頁面{#actions-for-a-blueprint-page}的動作
+### Blueprint頁面的動作 {#actions-for-a-blueprint-page}
 
 選取Blueprint頁面時，可執行下列動作：
 
@@ -91,7 +91,7 @@ ht-degree: 2%
 
    * 執行轉出以將變更從來源推送至LiveCopy。
 
-### 即時副本頁面{#actions-for-a-live-copy-page}的動作
+### 即時副本頁面的動作 {#actions-for-a-live-copy-page}
 
 選取即時副本頁面時，可使用下列動作：
 
@@ -127,18 +127,18 @@ ht-degree: 2%
 
 ## 關係狀態 {#relationship-status}
 
-**關係狀態**&#x200B;控制台有兩個頁簽，提供一系列功能：
+此 **關係狀態** 主控台有兩個標籤，提供一系列功能：
 
 * [關係狀態資訊](#relationship-status-information)
 * [即時副本資訊](#live-copy-information)
 
-### 關係狀態資訊{#relationship-status-information}
+### 關係狀態資訊 {#relationship-status-information}
 
 此索引標籤提供Blueprint與Live Copy之間關係狀態的詳細資訊：
 
 ![chlimage_1-363](assets/chlimage_1-363.png)
 
-### 即時副本資訊{#live-copy-information}
+### 即時副本資訊 {#live-copy-information}
 
 此索引標籤可讓您檢視和編輯即時副本設定：
 

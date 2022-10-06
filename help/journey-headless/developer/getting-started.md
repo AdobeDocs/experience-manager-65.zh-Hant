@@ -1,7 +1,8 @@
 ---
 title: AEM Headless 快速入門
 description: 在AEM無頭式開發人員歷程的這部分，了解AEM無頭式必要條件。
-source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
+exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 1%

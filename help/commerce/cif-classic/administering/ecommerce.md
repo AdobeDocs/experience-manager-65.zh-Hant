@@ -85,7 +85,7 @@ Adobe提供兩個版本的Commerce Integration Framework:
   </tr>
   <tr>
    <td>可用性</td>
-   <td><p>可以。 SAPCommerce Cloud(更新擴充功能以支援AEM 6.4和Hybris 5（預設），並維持與Hybris 4的相容性</p> <p>SalesforceCommerce Cloud(支援AEM 6.4的Connector開源)</p> </td>
+   <td><p>是。 SAPCommerce Cloud(更新擴充功能以支援AEM 6.4和Hybris 5（預設），並維持與Hybris 4的相容性</p> <p>SalesforceCommerce Cloud(支援AEM 6.4的Connector開源)</p> </td>
    <td>是，透過GitHub透過開放原始碼。 Adobe Commerce(支援2.3.2（預設），並與2.3.1相容)。</td>
   </tr>
   <tr>

@@ -1,8 +1,8 @@
 ---
 title: 覆蓋社群元件
-seo-title: 覆蓋社群元件
+seo-title: Overlay communities components
 description: 覆蓋社群元件
-seo-description: 覆蓋社群元件
+seo-description: Overlay communities components
 uuid: 872f7006-959a-49d2-b025-3a5abb7c6dca
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: 18376805-c2ed-439a-abc7-e9657afe8baf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
 
-# 覆蓋社區元件{#overlay-communities-components}
+# 覆蓋社群元件 {#overlay-communities-components}
 
-[覆蓋](/help/communities/client-customize.md#overlays)預設元件的意圖是全局更改元件的外觀或行為，以便對元件進行所有相對引用。 在/libs資料夾中搜尋之前，會仰賴Sling的性質來解析至/apps資料夾。 因此，元件的路徑與預設元件的路徑相同，只是它位於/apps資料夾中，而不是/libs資料夾中。
+其意圖 [覆蓋](/help/communities/client-customize.md#overlays) 預設元件是全局更改元件的外觀或行為，以用於元件的所有相對參照。 在/libs資料夾中搜尋之前，會仰賴Sling的性質來解析至/apps資料夾。 因此，元件的路徑與預設元件的路徑相同，只是它位於/apps資料夾中，而不是/libs資料夾中。
 
 ## 範例 {#example}
 
@@ -36,9 +36,9 @@ ht-degree: 0%
 
 **覆蓋通知電子郵件**
 
-假設您要自訂電子郵件通知的訊息，您可以透過[覆蓋](/help/communities/client-customize.md#overlays)位於&#x200B;**/libs/settings/community/templates/email/html**&#x200B;的範本來執行此操作。
+假設您要自訂電子郵件通知的訊息，您可以透過 [覆蓋](/help/communities/client-customize.md#overlays) 範本位於 **/libs/settings/community/templates/email/html**.
 
-例如，若要修改提及電子郵件通知（針對建立ugc的特定社群元件），請在您啟用&#x200B;**@mentions**&#x200B;支援的元件範本中，新增&#x200B;**if**&#x200B;條件，以支援動詞&#x200B;**提及**。
+例如，若要修改提及電子郵件通知（針對建立ugc的特定社群元件），請新增 **if** 動詞條件 **提及** 在元件的範本中啟用 **@mentions** 支援。
 
 ```java
 {{#equals this.verb "mention"}}\
@@ -46,4 +46,4 @@ ht-degree: 0%
 {{/equals}}\
 ```
 
-若要修改部落格註解中@mention的電子郵件通知範本，請放置於：`/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
+若要修改部落格註解中@mention的電子郵件通知範本，請放置於： `/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`

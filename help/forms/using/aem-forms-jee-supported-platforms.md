@@ -438,7 +438,7 @@ Adobe Experience Manager Forms需要Java虛擬機才能運行，該虛擬機由J
   </tr>
   <tr>
    <td>Microsoft Sharepoint </td>
-   <td>2019年<br /> </td>
+   <td>2019<br /> </td>
   </tr>
  </tbody>
 </table>

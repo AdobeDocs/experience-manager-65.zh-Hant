@@ -39,33 +39,32 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
 >
 >關於後述資訊：:
 >
->* 參與工作流程，請參閱[使用工作流程](/help/sites-authoring/workflows.md)。
->* 管理工作流程和工作流程例項，請參閱[管理工作流程](/help/sites-administering/workflows.md)。
->* 如需端對端社群文章，請參閱使用Adobe Experience Manager工作流程修改數位資產。](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)[
->* 請參閱[向AEM專家提問線上講座，了解工作流程](https://bit.ly/ATACE218)。
->* 如需端對端社群文章，請參閱[建立自訂Adobe Experience Manager 6.3動態參與者步驟](https://helpx.adobe.com/experience-manager/using/dynamic-steps-aem63.html)。
->* 資訊位置的變更請參閱AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的[存放庫重新調整和[工作流程最佳實務 — 位置](/help/sites-developing/workflows-best-practices.md#locations)。
-
+>* 參與工作流程，請參閱 [使用工作流程](/help/sites-authoring/workflows.md).
+>* 管理工作流程和工作流程例項，請參閱 [管理工作流程](/help/sites-administering/workflows.md).
+>* 如需端對端社群文章，請參閱 [使用Adobe Experience Manager工作流程修改數位資產。](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
+>* 請參閱 [向AEM專家提問工作流程網路研討會](https://bit.ly/ATACE218).
+>* 如需端對端社群文章，請參閱 [建立自訂Adobe Experience Manager 6.3動態參與者步驟](https://helpx.adobe.com/experience-manager/using/dynamic-steps-aem63.html).
+>* 資訊位置的變更請參閱 [AEM 6.5中的存放庫重新調整架構](/help/sites-deploying/repository-restructuring.md) 和 [工作流程最佳實務 — 位置](/help/sites-developing/workflows-best-practices.md#locations).
 >
 
 
 ## 模型 {#model}
 
-`WorkflowModel`表示工作流的定義（模型）。 它由`WorkflowNodes`和`WorkflowTransitions`組成。 這些轉變會連接節點並定義&#x200B;*flow*。 「模型」(Model)始終包含起始節點和終止節點。
+A `WorkflowModel` 代表工作流程的定義（模型）。 是由 `WorkflowNodes` 和 `WorkflowTransitions`. 轉變會連結節點並定義 *流量*. 「模型」(Model)始終包含起始節點和終止節點。
 
 ### 運行時模型 {#runtime-model}
 
 工作流程模型版本化。 當您運行工作流實例時，它將使用（並保留）工作流的運行時模型（在啟動工作流時可用）。
 
-在工作流模型編輯器](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model)中觸發&#x200B;**同步**&#x200B;時，會產生執行階段模型[。
+運行時模型是 [產生時間 **同步** 在工作流程模型編輯器中觸發](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model).
 
-對發生的工作流模型和/或產生的執行階段模型的編輯（在&#x200B;*啟動特定執行個體後*）將不會套用至該執行個體。
+對發生的工作流模型和/或產生的執行階段模型進行編輯， *after* 已啟動的特定實例將不會應用於該實例。
 
 >[!CAUTION]
 >
->執行的步驟由[運行時模型](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model)定義；這會在工作流程模型編輯器中觸發&#x200B;**Sync**&#x200B;動作時產生。
+>執行的步驟為 [運行時模型](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model);這是在 **同步** 動作會在工作流程模型編輯器中觸發。
 >
->如果在此時間點後變更了工作流程模型（未觸發&#x200B;**同步**），則執行階段例項不會反映這些變更。 只有更新後產生的執行階段模型才會反映變更。 除了基礎ECMA指令碼之外，它們僅保留一次，因此會對這些指令碼進行更改。
+>如果在此時間點後更改了工作流模型(不包括 **同步** 觸發)，則執行階段例項不會反映這些變更。 只有更新後產生的執行階段模型才會反映變更。 除了基礎ECMA指令碼之外，它們僅保留一次，因此會對這些指令碼進行更改。
 
 ### 步驟 {#step}
 
@@ -77,23 +76,23 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
 * 或分割/連接：使用邏輯決定要在工作流程中執行下一個步驟。
 * 和分割/連接：允許同時執行多個步驟。
 
-所有步驟共用下列共同屬性：`Autoadvance`和`Timeout`警報（可編寫指令碼）。
+所有步驟共用下列共同屬性： `Autoadvance` 和 `Timeout` 警報（可編寫指令碼）。
 
 ### 切換 {#transition}
 
-`WorkflowTransition`表示`WorkflowModel`的兩個`WorkflowNodes`之間的轉變。
+A `WorkflowTransition` 代表兩個 `WorkflowNodes` a `WorkflowModel`.
 
 * 它定義了兩個連續步驟之間的連結。
 * 可以套用規則。
 
 ### 工作項目 {#workitem}
 
-`WorkItem`是通過`WorkflowModel`的`Workflow`實例傳遞的單位。 它包含執行個體所執行的`WorkflowData`，以及描述基礎工作流步驟的`WorkflowNode`參考。
+A `WorkItem` 是通過 `Workflow` 例項 `WorkflowModel`. 它包含 `WorkflowData` 該案件對 `WorkflowNode` 說明基礎工作流程步驟。
 
 * 它用於識別任務，並放入相應的收件箱。
-* 工作流實例可以同時具有一個或多個`WorkItems`（取決於工作流模型）。
-* `WorkItem`引用工作流實例。
-* 在儲存庫中，`WorkItem`儲存在工作流實例的下方。
+* 工作流例項可以有一或多個 `WorkItems` 同時（視工作流程模型而定）。
+* 此 `WorkItem` 參考工作流程例項。
+* 在存放庫中， `WorkItem` 儲存在工作流程例項下。
 
 ### 裝載 {#payload}
 
@@ -116,9 +115,9 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
 
 ### 收件匣 {#inbox}
 
-每個用戶帳戶都有其自己的工作流收件箱，可在其中訪問指派的`WorkItems`。
+每個使用者帳戶都有其專屬的工作流程收件匣，指派給 `WorkItems` 即可存取。
 
-`WorkItems`會直接指派給使用者帳戶或其所屬的群組。
+此 `WorkItems` 會直接指派給使用者帳戶，或指派給使用者所屬的群組。
 
 ### 工作流程類型 {#workflow-types}
 
@@ -140,7 +139,7 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
 
 ### 暫時性工作流程 {#transient-workflows}
 
-標準工作流程在執行期間會儲存執行階段（歷史記錄）資訊。 您也可以將工作流程模型定義為&#x200B;**暫時**，以避免此類歷史記錄持續存在。 這用於效能調整，因為它可節省/避免用於保存資訊的時間/資源。
+標準工作流程在執行期間會儲存執行階段（歷史記錄）資訊。 您也可以將工作流模型定義為 **暫時** 以避免這種歷史持續存在。 這用於效能調整，因為它可節省/避免用於保存資訊的時間/資源。
 
 暫時性工作流程可用於任何具備下列條件的工作流程：
 
@@ -151,50 +150,49 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[建立暫時工作流](/help/sites-developing/workflows-models.md#creating-a-transient-workflow) 。
+>請參閱 [建立暫時性工作流程](/help/sites-developing/workflows-models.md#creating-a-transient-workflow) 以取得詳細資訊。
 
 >[!CAUTION]
 >
 >當工作流程模型已標示為「暫時」時，有些情況會持續保存執行階段資訊：
 >
 >* 裝載類型（例如視訊）需要外部步驟來處理；在這種情況下，需要運行時歷史記錄才能確認狀態。
->* 工作流輸入&#x200B;**AND Split**;在這種情況下，需要運行時歷史記錄才能確認狀態。
+>* 工作流程會輸入 **和分割**;在這種情況下，需要運行時歷史記錄才能確認狀態。
 >* 當臨時工作流進入參與者步驟時，它將模式（在運行時）更改為非臨時工作流；當任務傳遞給某個人時，歷史需要持續存在
-
 >
 
 
 >[!CAUTION]
 >
->在暫時性工作流程中，您不應使用&#x200B;**轉至步驟**。
+>在暫時性工作流程中，您不應使用 **轉至步驟**.
 >
->這是因為&#x200B;**Goto Step**&#x200B;會建立Sling工作以在`goto`點繼續工作流程。 這否定了讓工作流程暫時性的目的，並在記錄檔中產生錯誤。
+>這是 **轉至步驟** 會建立sling作業，以在 `goto` 指向。 這否定了讓工作流程暫時性的目的，並在記錄檔中產生錯誤。
 >
->若要在暫時性工作流程中進行決策，您可以使用&#x200B;**OR Split**。
+>若要在暫時性工作流程中進行決策，您可以使用 **或分割**.
 
 >[!NOTE]
 >
->如需暫時性工作流程如何影響資產效能的詳細資訊，請參閱[資產最佳實務](/help/assets/performance-tuning-guidelines.md#transient-workflows)。
+>請參閱 [資產最佳實務](/help/assets/performance-tuning-guidelines.md#transient-workflows) 如需暫時性工作流程如何影響資產效能的詳細資訊。
 
 ### 多重資源支援 {#multi-resource-support}
 
-為工作流模型激活&#x200B;**多資源支援**&#x200B;意味著即使您選擇多個資源，也將啟動單個工作流實例；這些會以套件形式附加。
+啟用 **多資源支援** 對於工作流模型，表示即使您選取多個資源，也會啟動單一工作流例項；這些會以套件形式附加。
 
-如果未為工作流模型激活&#x200B;**多資源支援**&#x200B;並且選擇了多個資源，則將為每個資源啟動單個工作流實例。
+若 **多資源支援** 不會為工作流模型啟用，且會選取多個資源，然後會為每個資源啟動個別的工作流程例項。
 
 >[!NOTE]
 >
->有關詳細資訊，請參閱[為多資源支援配置工作流](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)。
+>請參閱 [為多資源支援配置工作流](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support) 以取得詳細資訊。
 
 ### 工作流程階段 {#workflow-stages}
 
-工作流程階段有助於視覺化處理任務時的工作流程進度。 它們可用來提供工作流程經過處理的程度的概述，例如當工作流程執行時，使用者可以檢視&#x200B;**Stage**&#x200B;所述的進度（與個別步驟相反）。
+工作流程階段有助於視覺化處理任務時的工作流程進度。 它們可用來提供工作流程經過處理的程度概覽，例如當執行工作流程時，使用者可以檢視 **階段** （而非個別步驟）。
 
 由於各個步驟名稱可以是特定的、技術的，因此可以定義階段名稱以提供工作流進程的概念視圖。
 
 例如，對於具有六個步驟和四個階段的工作流程：
 
-1. 您可以[配置工作流階段（顯示工作流進度），然後將適當的階段分配給工作流](/help/sites-developing/workflows-models.md#configuring-workflow-stages-that-show-workflow-progress)中的每個步驟：
+1. 您可以 [配置工作流階段（顯示工作流進度），然後將適當的階段分配給工作流中的每個步驟](/help/sites-developing/workflows-models.md#configuring-workflow-stages-that-show-workflow-progress):
 
    * 可以建立多個階段名稱。
    * 然後，將單個階段名稱分配給每個步驟（階段名稱可分配給一個或多個步驟）。
@@ -208,14 +206,14 @@ AEM提供數種工具和資源，用於建立工作流程模型、開發工作�
    | 步驟 5 | 完成 |
    | 步驟 6 | 完成 |
 
-1. 運行工作流時，用戶可以根據階段名稱（而非步驟名稱）查看進度。 工作流進度將顯示在[收件箱](/help/sites-authoring/inbox.md)中所列工作項](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)的任務詳細資訊窗口的[工作流資訊頁簽中。
+1. 運行工作流時，用戶可以根據階段名稱（而非步驟名稱）查看進度。 工作流程進度會顯示在 [工作項的任務詳細資訊窗口的「工作流資訊」頁簽](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions) 列於 [收件匣](/help/sites-authoring/inbox.md).
 
 ### 工作流程與Forms {#workflows-and-forms}
 
-工作流程通常用於在AEM中處理表單提交。 這可以是透過標準AEM例項中可用的[核心元件表單元件](https://helpx.adobe.com/experience-manager/core-components/using/form-container.html)，或透過[AEM Forms解決方案](/help/forms/using/aem-forms-workflow.md)。
+工作流程通常用於在AEM中處理表單提交。 這可以是 [核心元件表單元件](https://helpx.adobe.com/experience-manager/core-components/using/form-container.html) 標準AEM例項中提供，或 [AEM Forms解決方案](/help/forms/using/aem-forms-workflow.md).
 
 建立新表單時，表單提交可輕鬆與工作流模型關聯；例如，將內容儲存在儲存庫的特定位置，或通知使用者表單提交及其內容。
 
 ### 工作流程和翻譯 {#workflows-and-translation}
 
-工作流程也是[翻譯](/help/sites-administering/translation.md)程式的一個完整部分。
+工作流程也是 [翻譯](/help/sites-administering/translation.md) 程式。

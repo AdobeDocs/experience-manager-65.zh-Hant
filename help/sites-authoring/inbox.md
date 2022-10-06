@@ -1,8 +1,8 @@
 ---
 title: 您的收件匣
-seo-title: 您的收件匣
+seo-title: Your Inbox
 description: 使用收件箱管理任務
-seo-description: 使用收件箱管理任務
+seo-description: Managing your tasks with the inbox
 uuid: ddd48019-ce69-4a47-be2b-5b66ae2fe3c8
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1140'
 ht-degree: 11%
 
 ---
@@ -23,14 +23,14 @@ ht-degree: 11%
 
 * 任務：
 
-   * 這些範本也可以在AEM UI中的各個時間點建立，例如在&#x200B;**專案**&#x200B;底下，
-   * 這些可以是工作流&#x200B;**建立任務**&#x200B;或&#x200B;**建立項目任務**&#x200B;步驟的產品。
+   * 這些也可以在AEM UI內的各個時間點建立，例如在 **專案**,
+   * 這些可以是工作流程的產品 **建立任務** 或 **建立項目任務** 步驟。
 
 * 工作流程:
 
    * 代表您需要對頁面內容執行之動作的工作項目；
 
-      * 這些是工作流&#x200B;**參與者**&#x200B;步驟的產品
+      * 這些是工作流程的產品 **參與者** 步驟
    * 失敗項目，以允許管理員重試失敗的步驟。
 
 
@@ -38,29 +38,30 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->現成可用的AEM會預先載入指派給管理員使用者群組的管理工作。 如需詳細資訊，請參閱[現成可用的管理工作](#out-of-the-box-administrative-tasks)。
+>現成可用的AEM會預先載入指派給管理員使用者群組的管理工作。 請參閱 [現成可用的管理任務](#out-of-the-box-administrative-tasks) 以取得詳細資訊。
 
 >[!NOTE]
 >
 >有關項目類型的詳細資訊，另請參閱：
 >
 >* [專案](/help/sites-authoring/touch-ui-managing-projects.md)
-* [項目 — 使用任務](/help/sites-authoring/task-content.md)
-* [工作流程](/help/sites-authoring/workflows.md)
-* [表單](/help/forms/home.md)
+>* [項目 — 使用任務](/help/sites-authoring/task-content.md)
+>* [工作流程](/help/sites-authoring/workflows.md)
+>* [Forms](/help/forms/home.md)
+>
 
 
-
-## 標題{#inbox-in-the-header}中的收件箱
+## 標題中的收件匣 {#inbox-in-the-header}
 
 從任何主控台中，收件匣中目前的項目數會顯示在標題中。 也可以開啟指示器以提供對需要操作的頁面的快速訪問，或訪問收件箱：
 
 ![wf-80](assets/wf-80.png)
 
 >[!NOTE]
-某些動作也會顯示在適當資源](/help/sites-authoring/basic-handling.md#card-view)的[卡片檢視中。
+>
+>某些動作也會顯示在 [適當資源的卡片檢視](/help/sites-authoring/basic-handling.md#card-view).
 
-## 現成管理任務{#out-of-the-box-administrative-tasks}
+## 現成可用的管理任務  {#out-of-the-box-administrative-tasks}
 
 現成可用的AEM會預先載入指派給管理員使用者群組的四個工作。
 
@@ -69,7 +70,7 @@ ht-degree: 11%
 * 啟用彙總使用狀況統計資料的收集
 * [設定 HTTPS](/help/sites-administering/ssl-by-default.md)
 
-## 開啟收件箱{#opening-the-inbox}
+## 開啟收件匣 {#opening-the-inbox}
 
 若要開啟AEM通知收件匣：
 
@@ -78,20 +79,21 @@ ht-degree: 11%
 1. 選擇「 **全部查看**」。「 **AEM收件匣** 」將會開啟。收件匣會顯示工作流程、專案和工作中的項目。
 1. 預設視圖是「列 [表視圖](#inbox-list-view)」，但您也可以切換到「日 [歷視圖」](#inbox-calendar-view)。這是使用檢視選取器 (工具列，右上方) 完成。
 
-   對於這兩個視圖，您也可以定義[View Settings](#inbox-view-settings);可用的選項取決於當前視圖。
+   對於這兩個檢視，您也可以定義 [檢視設定](#inbox-view-settings);可用的選項取決於當前視圖。
 
    ![wf-79](assets/inbox-list-view.png)
 
 >[!NOTE]
-收件箱作為控制台運行，因此，在您完成 [後，使用全局導航](/help/sites-authoring/basic-handling.md#global-navigation)[](/help/sites-authoring/search.md) 或搜索導航到其他位置。
+>
+>收件箱作為控制台運行，因此，在您完成 [後，使用全局導航](/help/sites-authoring/basic-handling.md#global-navigation)[](/help/sites-authoring/search.md) 或搜索導航到其他位置。
 
-### 收件箱 — 清單視圖{#inbox-list-view}
+### 收件箱 — 清單視圖 {#inbox-list-view}
 
 此檢視會列出所有項目，以及主要相關資訊：
 
 ![wf-82](assets/wf-82.png)
 
-### 收件箱 — 日曆視圖{#inbox-calendar-view}
+### 收件箱 — 日曆視圖 {#inbox-calendar-view}
 
 此視圖會根據項目在日曆中的位置和您選擇的精確視圖顯示項目：
 
@@ -99,22 +101,22 @@ ht-degree: 11%
 
 您可以：
 
-* 選擇特定視圖；**時間軸**, **列**, **清單**
+* 選擇特定視圖； **時間表**, **欄**, **清單**
 
-* 根據&#x200B;**Schedule**&#x200B;指定要顯示的任務；**所有**、**計畫**、**正在進行中**、**即將到期**、**逾期**
+* 指定要根據 **排程**; **全部**, **已規劃**, **進行中**, **即將到期**, **過期**
 
 * 深入查看有關物料的詳細資訊
 * 選取要聚焦檢視的日期範圍：
 
 ![wf-91](assets/wf-91.png)
 
-### 收件匣 — 設定{#inbox-view-settings}
+### 收件匣 — 設定 {#inbox-view-settings}
 
 對於兩個檢視（清單和日曆），您可以定義設定：
 
 * **日曆檢視**
 
-   對於&#x200B;**日曆視圖**，可以配置：
+   針對 **日曆檢視** 您可以設定：
 
    * **分組依據**
    * **排程** 或無 ****
@@ -124,14 +126,14 @@ ht-degree: 11%
 
 * **清單檢視**
 
-   對於&#x200B;**清單視圖**，可以配置排序機制：
+   針對 **清單檢視** 您可以配置排序機制：
 
    * **排序欄位**
    * **排序順序**
 
    ![wf-83](assets/inbox-settings.png)
 
-### 收件箱 — 管理控制{#inbox-admin-control}
+### 收件匣 — 管理控制 {#inbox-admin-control}
 
 「管理控制」選項可讓管理員：
 
@@ -141,30 +143,31 @@ ht-degree: 11%
 
 * 控制頁首中可用導航連結的顯示
 
-「管理控制」選項僅對`administrators`或`workflow-administrators`組的成員可見。
+「管理控制」選項只對 `administrators` 或 `workflow-administrators` 群組。
 
 * **欄自訂**:自訂AEM收件匣以變更欄的預設標題、重新排序欄的位置，以及根據工作流程的資料顯示其他欄。
-   * **新增欄**:選取要新增至AEM收件匣的欄。
-   * **編輯欄**:將滑鼠移到欄標題上，點選「  ![](assets/edit.svg) editicon」以輸入欄顯示名稱。
-   * **刪除欄**:點選刪除 ![](assets/delete_updated.svg) 圖示以從AEM收件匣中刪除欄。
-   * **移動列**:拖曳 ![](assets/move_updated.svg) 移動圖示可將欄移至AEM收件匣中的新位置。
+   * **添加列**:選取要新增至AEM收件匣的欄。
+   * **編輯欄**:將滑鼠暫留在欄標題上，然後點選 ![編輯](assets/edit.svg) 表徵圖，輸入列顯示名稱。
+   * **刪除列**:點選 ![刪除](assets/delete_updated.svg) 圖示以從AEM收件匣中刪除欄。
+   * **移動列**:拖曳 ![移動](assets/move_updated.svg) 圖示將欄移至AEM收件匣中的新位置。
 
    ![admin-control](assets/admin-control-column-customize.png)
 
 * **品牌自訂**
 
-   * **自訂頁首文字：** 指定要顯示在頁首中的文字，以取代預 **設的Adobe** Experience Manager文字。
+   * **自訂標題文字：** 指定要在標題中顯示的文字以取代預設 **Adobe Experience Manager** 文字。
 
-   * **自訂標誌：** 指定要在標題中顯示為標誌的影像。在數位資產管理(DAM)中上傳影像，並在欄位中參照該影像。
+   * **自定義徽標：** 指定要在標題中顯示為標誌的影像。 在數位資產管理(DAM)中上傳影像，並在欄位中參照該影像。
 
 * **使用者導覽**
-   * **隱藏導覽選項：** 選擇此選項可隱藏頁首中可用的導覽選項。導覽選項包括其他解決方案的連結、說明連結，以及點選Adobe Experience Manager標誌或文字時可用的製作選項。
+   * **隱藏導航選項：** 選擇此選項可隱藏頁首中可用的導航選項。 導覽選項包括其他解決方案的連結、說明連結，以及點選Adobe Experience Manager標誌或文字時可用的製作選項。
 * **儲存：** 點選/按一下此選項以儲存設定。
 
-## 對項{#taking-action-on-an-item}執行操作
+## 對項目採取操作 {#taking-action-on-an-item}
 
 >[!NOTE]
-雖然可以選取多個項目，但一次只能對一個項目執行動作。
+>
+>雖然可以選取多個項目，但一次只能對一個項目執行動作。
 
 
 1. 要對項目執行操作，請為相應項目選擇縮圖。 適用於該項目的動作圖示會顯示在工具列中：
@@ -173,20 +176,22 @@ ht-degree: 11%
 
    這些動作適合項目，包括：
 
-   * **** 完整；例如，任務或工作流項。
-   * **重新指派**/**** 刪除項目。
-   * **** 開啟項目；根據項目類型，此動作可以：
+   * **完成** 行動；例如，任務或工作流項。
+   * **重新指派**/**委派** 項目。
+   * **開啟** 物品；根據項目類型，此動作可以：
 
       * 顯示項目屬性
       * 開啟適當的控制面板或精靈以執行進一步動作
       * 開啟相關檔案
-   * **回** 到上一步。
+   * **後退** 改為上一步。
    * 檢視工作流程的裝載。
    * 從項目建立專案。
 
    >[!NOTE]
-   如需詳細資訊，請參閱：
-   * 工作流程項目 — [參與工作流程](/help/sites-authoring/workflows-participating.md)
+   >
+   >如需詳細資訊，請參閱：
+   >
+   >* 工作流程項目 —  [參與工作流程](/help/sites-authoring/workflows-participating.md)
 
 
 1. 根據所選項目，將啟動操作；例如：
@@ -195,7 +200,7 @@ ht-degree: 11%
    * 將啟動操作嚮導。
    * 檔案頁面將會開啟。
 
-   例如， **Re-assign**&#x200B;將開啟一個對話框：
+   例如， **重新指派** 將開啟對話方塊：
 
    ![wf-85](assets/wf-85.png)
 
@@ -206,12 +211,12 @@ ht-degree: 11%
    * 後箭；例如，如果操作嚮導或文檔頁面已開啟，則可以返回「收件箱」。
 
 
-## 建立任務{#creating-a-task}
+## 建立任務 {#creating-a-task}
 
 從收件箱中，您可以建立任務：
 
-1. 選擇&#x200B;**建立**，然後選擇&#x200B;**任務**。
-1. 填寫&#x200B;**Basic**&#x200B;和&#x200B;**Advanced**&#x200B;標籤中的必要欄位；只有&#x200B;**Title**&#x200B;是必填項目，其他所有項目皆為選用項目：
+1. 選擇 **建立**，然後 **任務**.
+1. 填妥 **基本** 和 **進階** 標籤；只有 **標題** 為必填項目，其他所有項目則為選用項目：
 
    * **基本**:
 
@@ -228,24 +233,26 @@ ht-degree: 11%
 
    * **進階**
 
-      * **名稱**:這將用來形成URL;如果空白，則會以標題為 **基礎**。
+      * **名稱**:這將用來形成URL;若空白，則會以 **標題**.
 
    ![wf-87](assets/wf-87.png)
 
-1. 選擇&#x200B;**Submit**。
+1. 選擇 **提交**.
 
-## 建立項目{#creating-a-project}
+## 建立專案 {#creating-a-project}
 
-對於某些任務，您可以根據該任務建立[項目](/help/sites-authoring/projects.md):
+對於某些任務，您可以建立 [專案](/help/sites-authoring/projects.md) 基於該任務：
 
 1. 點選/按一下縮圖，以選取適當的任務。
 
    >[!NOTE]
-   只有使用&#x200B;**收件箱**&#x200B;的&#x200B;**建立**&#x200B;選項建立的任務才能用於建立項目。
-   無法使用工作項目（來自工作流程）來建立專案。
+   >
+   >僅使用 **建立** 選項 **收件匣** 可用來建立專案。
+   >
+   >無法使用工作項目（來自工作流程）來建立專案。
 
 1. 從工 **具列選擇** 「建立專案」以開啟精靈。
-1. 選取適當的範本，然後選取&#x200B;**Next**。
+1. 選取適當的範本，然後 **下一個**.
 1. 指定所需的屬性：
 
    * **基本**
@@ -254,20 +261,21 @@ ht-degree: 11%
       * **說明**
       * **開始日期**
       * **到期日期**
-      * **** 使用者和角色
+      * **使用者** 和角色
    * **進階**
 
       * **名稱**
    >[!NOTE]
-   如需完整資訊，請參閱[建立專案](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)。
+   >
+   >請參閱 [建立專案](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project) 以取得完整資訊。
 
-1. 選擇&#x200B;**建立**&#x200B;以確認操作。
+1. 選擇 **建立** 以確認動作。
 
-## 篩選AEM收件匣中的項目{#filtering-items-in-the-aem-inbox}
+## 篩選AEM收件匣中的項目 {#filtering-items-in-the-aem-inbox}
 
 您可以篩選列出的項目：
 
-1. 開啟&#x200B;**AEM收件匣**。
+1. 開啟 **AEM收件匣**.
 
 1. 開啟篩選選擇器：
 
@@ -278,4 +286,5 @@ ht-degree: 11%
    ![wf-89](assets/wf-89.png)
 
    >[!NOTE]
-   使用[View Settings](#inbox-view-settings)，也可以在使用[List View](#inbox-list-view)時配置排序順序。
+   >
+   >使用 [檢視設定](#inbox-view-settings) 您也可以在使用 [清單檢視](#inbox-list-view).

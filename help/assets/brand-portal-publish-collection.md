@@ -1,8 +1,8 @@
 ---
 title: 將集合發佈至 Brand Portal
-seo-title: 將集合發佈至 Brand Portal
+seo-title: Publish collections to Brand Portal
 description: 了解如何將集合發佈和取消發佈至Brand Portal。
-seo-description: 了解如何將集合發佈和取消發佈至Brand Portal。
+seo-description: Learn how to publish and unpublish collections to Brand Portal.
 uuid: 7de58548-4cfa-4a94-bac7-9e914dee9042
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,12 +10,12 @@ topic-tags: brand-portal
 content-type: reference
 discoiquuid: 90e3fd0e-9bc3-4aff-8c7b-7408f5b940e8
 docset: aem65
-feature: 品牌入口網站
+feature: Brand Portal
 role: User
 exl-id: 8f426012-d9ec-418e-8ab6-78e4aeff7538
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '322'
 ht-degree: 36%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->內容片段無法發佈至 Brand Portal。因此，如果您在AEM作者上選取內容片段，則無法使用&#x200B;**發佈至Brand Portal**&#x200B;動作。
+>內容片段無法發佈至 Brand Portal。因此，如果您在AEM作者上選取內容片段，則 **發佈至Brand Portal** 無法使用動作。
 >
 >如果從AEM Author將包含內容片段的集合發佈至Brand Portal，則除了內容片段以外，資料夾的所有內容都會複製到Brand Portal介面。
 

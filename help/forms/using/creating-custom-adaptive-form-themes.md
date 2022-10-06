@@ -1,8 +1,8 @@
 ---
 title: 建立自訂最適化表單主題
-seo-title: 建立自訂最適化表單主題
+seo-title: Creating custom adaptive form themes
 description: 最適化表單主題是AEM用戶端資料庫，可用來定義最適化表單的樣式（外觀和風格）。 了解如何建立自訂最適化表單主題。
-seo-description: 最適化表單主題是AEM用戶端資料庫，可用來定義最適化表單的樣式（外觀和風格）。 了解如何建立自訂最適化表單主題。
+seo-description: An adaptive form theme is an AEM client library that you use to define the styles (look and feel) for an adaptive form. Learn how you can create custom adaptive form themes.
 uuid: b25df10e-b07c-4e9d-a799-30f1c6fb3c44
 content-type: reference
 topic-tags: customization
@@ -11,32 +11,32 @@ discoiquuid: 437e6581-4eb1-4fbd-a6da-86b9c90cec89
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
 
-# 建立自訂最適化表單主題{#creating-custom-adaptive-form-themes}
+# 建立自訂最適化表單主題 {#creating-custom-adaptive-form-themes}
 
 >[!CAUTION]
 >
->AEM Forms提供[主題編輯器](/help/forms/using/themes.md)功能，可建立及修改最適化表單[主題](/help/forms/using/themes.md)。 只有當您從沒有[主題編輯器](/help/forms/using/themes.md)的版本升級，且您對使用較少/CSS檔案（預先主題編輯器方法）建立的主題已有現有投資時，才可執行本文章所列的步驟。
+>AEM Forms提供 [主題編輯器](/help/forms/using/themes.md) 建立和修改最適化表單的功能 [主題](/help/forms/using/themes.md). 只有在您已從沒有的版本升級時，才執行本文所列步驟 [主題編輯器](/help/forms/using/themes.md) 而且，您對使用Less/CSS檔案（預主題編輯器方法）建立的主題已有了投資。
 
 ## 必備條件 {#prerequisites}
 
 * 了解LESS(Leaner CSS)框架
 * 如何在Adobe Experience Manager中建立用戶端程式庫
-* [使用您建立的](/help/forms/using/custom-adaptive-forms-templates.md) 主題建立最適化表單範本
+* [建立最適化表單範本](/help/forms/using/custom-adaptive-forms-templates.md) 用於使用您建立的主題
 
-## 最適化表單主題{#adaptive-form-theme}
+## 最適化表單主題 {#adaptive-form-theme}
 
-**最適化表單主題**&#x200B;是AEM用戶端資料庫，您可用來定義最適化表單的樣式（外觀和風格）。
+安 **適用性表單主題** 是AEM用戶端程式庫，您可用來定義最適化表單的樣式（外觀和風格）。
 
-您可以建立&#x200B;**適用性範本**&#x200B;並將主題套用至範本。 然後，可使用此自訂範本建立&#x200B;**最適化表單**。
+您建立 **適用性範本** 並將主題套用至範本。 然後，您可使用此自訂範本來建立 **適用性表單**.
 
 ![適用性表單和用戶端程式庫](assets/hierarchy.png)
 
-## 建立最適化表單主題{#to-create-an-adaptive-form-theme}的方式
+## 建立最適化表單主題 {#to-create-an-adaptive-form-theme}
 
 >[!NOTE]
 >
@@ -44,30 +44,30 @@ ht-degree: 0%
 >
 >如果使用名稱執行這些步驟，則生成的模板應與以下快照相似：
 
-![森林主題自適應表](assets/thumbnail.png)
-**單快照圖：** *森林主題範例*
+![森林主題最適化表單快照](assets/thumbnail.png)
+**圖：** *森林主題範例*
 
-1. 在`/apps`節點下建立`cq:ClientLibraryFolder`類型的節點。
+1. 建立類型的節點 `cq:ClientLibraryFolder` 在 `/apps`節點。
 
    例如，建立下列節點：
 
    `/apps/myAfThemes/forestTheme`
 
-1. 將多值字串屬性`categories`添加到節點並適當設定其值。
+1. 新增多值字串屬性 `categories` 設定值。
 
-   例如，將屬性設為：`af.theme.forest`。
+   例如，將屬性設為： `af.theme.forest`.
 
    ![CRX儲存庫快照](assets/3-2.png)
 
-1. 將兩個資料夾`less`和`css`以及一個檔案`css.txt`添加到步驟1中建立的節點中：
+1. 添加兩個資料夾， `less` 和 `css`，和檔案 `css.txt` 到步驟1中建立的節點：
 
-   * `less` 資料夾：包含 `less` 用來定義變數和 `less` 管 `less mixins` 理.css樣式的變數檔案。
+   * `less` 資料夾：包含 `less` 您定義 `less` 變數和 `less mixins` 來管理.css樣式。
 
-      此資料夾由`less`變數檔案、`less` mixin檔案、`less`檔案組成，這些檔案使用mixin和變數定義樣式。 然後，所有這些較少的檔案都以styles.less導入。
+      此資料夾包含 `less` 變數檔案， `less` 混合檔案， `less` 檔案使用mixin和變數定義樣式。 然後，所有這些較少的檔案都以styles.less導入。
 
    * `css`資料夾：包含.css檔案，您可在其中定義要在主題中使用的靜態樣式。
 
-   **變數檔案較少**:這些是檔案，您可在其中定義或覆寫用於定義CSS樣式的變數。
+   **變數較少的檔案**:這些是檔案，您可在其中定義或覆寫用於定義CSS樣式的變數。
 
    適用性表單提供下列.less檔案中定義的OOTB變數：
 
@@ -94,7 +94,7 @@ ht-degree: 0%
    @button-font-color: #ffffff;
    ```
 
-   若要覆寫`less`變數：
+   若要覆寫 `less`變數：
 
    1. 匯入預設適用性表單變數：
 
@@ -109,7 +109,7 @@ ht-degree: 0%
    @button-hover-bg-color: rgb(30, 156, 67);
    ```
 
-   **混合檔案較少：** 您可以定義接受變數作為引數的函式。這些函式的輸出即為產生的樣式。 在不同樣式內使用這些混合，以避免重複的CSS樣式。
+   **混合檔案較少：** 您可以定義接受變數作為引數的函式。 這些函式的輸出即為產生的樣式。 在不同樣式內使用這些混合，以避免重複的CSS樣式。
 
    適用性表單提供以下定義的OOTB mixin:
 
@@ -135,9 +135,9 @@ ht-degree: 0%
    }
    ```
 
-   **Styles.less File:** 使用此檔案來包含用戶端程式庫中需要使用的所有較少檔案（變數、mixin、樣式）。
+   **Styles.less檔案：** 使用此檔案來包含用戶端程式庫中需要使用的所有較少檔案（變數、mixin、樣式）。
 
-   在以下示例`styles.less`檔案中，可以按任意順序放置匯入語句。
+   在下列範例中 `styles.less` 檔案中，可以按任意順序放置匯入語句。
 
    匯入下列.less檔案的陳述式為必填：
 
@@ -174,7 +174,7 @@ ht-degree: 0%
    }
    ```
 
-   `css.txt`包含要為程式庫下載的.css檔案路徑。
+   此 `css.txt` 包含要為程式庫下載的.css檔案路徑。
 
    例如：
 
@@ -204,15 +204,15 @@ ht-degree: 0%
    >
    >**`styles.less`**
 
-## 在最適化表單{#to-use-a-theme-in-an-adaptive-form}中使用主題
+## 在最適化表單中使用主題 {#to-use-a-theme-in-an-adaptive-form}
 
 建立最適化表單主題後，請執行下列步驟以在最適化表單中使用此主題：
 
-1. 若要包含在[中建立的主題以建立最適化表單主題](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p)區段，請建立類型`cq:Component`的自訂頁面。
+1. 納入中建立的主題 [建立最適化表單主題](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) 區段，建立類型的自訂頁面 `cq:Component`.
 
    例如， `/apps/myAfCustomizations/myAfPages/forestPage`
 
-   1. 新增`sling:resourceSuperType`屬性，並將其值設為`fd/af/components/page/base`。
+   1. 新增 `sling:resourceSuperType` 屬性，並將其值設為 `fd/af/components/page/base`.
 
       ![CRX儲存庫快照](assets/1-2.png)
 
@@ -220,7 +220,7 @@ ht-degree: 0%
 
       然後，您會匯入在中建立的主題，以建立本文的最適化表單主題區段。
 
-      下列范常式式碼片段匯入`af.theme.forest`主題。
+      下列范常式式碼片段會匯入 `af.theme.forest` 主題。
 
       ```jsp
       <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -229,7 +229,7 @@ ht-degree: 0%
 
    1. **可選**:在自訂頁面中，視需要覆寫header.jsp、footer.jsp和body.jsp。
 
-1. 建立自訂範本(例如：`/apps/myAfCustomizations/myAfTemplates/forestTemplate`)，其jcr:content指向上一步中建立的自訂頁面(例如：`myAfCustomizations/myAfPages/forestPage)`。
+1. 建立自訂範本(例如： `/apps/myAfCustomizations/myAfTemplates/forestTemplate`)，其jcr:content指向上一步驟中建立的自訂頁面(例如： `myAfCustomizations/myAfPages/forestPage)`.
 
    ![CRX儲存庫快照](assets/2-1.png)
 

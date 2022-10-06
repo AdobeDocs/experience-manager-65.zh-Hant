@@ -104,7 +104,6 @@ ht-degree: 2%
 >
 >* 您想要透過觸發至Quickview來為視訊新增互動功能。
 >* 您的Experience Manager實作可 *not* 使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM® WebSphere® Commerce、Elastic Path、Hybris或Intershop)提取至Experience Manager中。 請參閱 [Experience Manager Assets中的電子商務概念](/help/commerce/cif-classic/administering/concepts.md).
-
 >
 >如果您的Experience Manager實作使用電子商務，您可以略過此工作，並繼續執行下一個工作。
 
@@ -283,7 +282,7 @@ ht-degree: 2%
 **為視頻添加交互功能：**
 
 1. 在「資產」檢視中，導覽至您上傳且想要互動的影片。
-1. 執行下列任一操作：
+1. 執行下列任一項作業：
 
    * 暫留在影像上，然後選取 **[!UICONTROL 選擇]** （勾選圖示）。 在工具列上，選取 **[!UICONTROL 編輯]**.
 
@@ -315,11 +314,11 @@ ht-degree: 2%
         </tr>
         <tr>
         <td>3分鐘以上</td>
-        <td>60秒</td>
+        <td>60 秒</td>
         </tr>
         <tr>
         <td>2-3分鐘</td>
-        <td>30秒</td>
+        <td>30 秒</td>
         </tr>
         <tr>
         <td>1-2 分鐘</td>
@@ -327,11 +326,11 @@ ht-degree: 2%
         </tr>
         <tr>
         <td>30-60秒</td>
-        <td>10秒</td>
+        <td>10 秒</td>
         </tr>
         <tr>
         <td>30秒或更短時間</td>
-        <td>5秒</td>
+        <td>5 秒</td>
         </tr>
       </tbody>
     </table>
@@ -461,7 +460,7 @@ ht-degree: 2%
 
    縮圖影像中會新增文字標籤。
 
-1. 執行下列任一操作：
+1. 執行下列任一項作業：
 
    * 重複步驟6-11，將更多縮圖影像新增至影片中的時間軸區段。
    * 繼續執行可選步驟13。
@@ -652,7 +651,7 @@ ht-degree: 2%
 
 因此，只需取消對上面突出顯示的代碼片段的注釋，並用特定網頁專用的代碼替換虛擬處理程式主體。
 
-標準內嵌程式碼中有兩個預設回呼處理常式： `quickViewActivate` 和 `initComplete`. 此 `quickViewActivate` 在檢視器中選取縮圖時，處理常式就會觸發。 使用它將檢視器與Quickview啟用邏輯整合。 此 `initComplete` 檢視器載入頁面時，處理常式只會觸發一次。 此處理常式用於調整網頁DOM中的「快速檢視」對話方塊位置。
+標準內嵌程式碼中有兩個預設回呼處理常式： `quickViewActivate` 和 `initComplete`. 此 `quickViewActivate` 在檢視器中選取縮圖時，處理常式就會觸發。 使用它將檢視器與Quickview啟用邏輯整合。 此 `initComplete` 檢視器載入頁面時，處理常式只會觸發一次。 此處理常式可用來調整網頁DOM中的「快速檢視」對話方塊位置。
 
 建構Quickview URL的程式與識別本主題前面涵蓋的縮圖變數的程式相反。 使用先前識別的Quickview URL範例，您可以了解每種情況下如何建構Quickview URL:
 

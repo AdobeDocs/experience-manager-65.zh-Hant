@@ -1,24 +1,24 @@
 ---
 title: 自訂HTML5表單的錯誤訊息
-seo-title: 自訂HTML5表單的錯誤訊息
+seo-title: Customizing error messages for HTML5 forms
 description: 了解如何自訂HTML5表單的錯誤訊息顯示，包括如何變更其位置和外觀。
-seo-description: 了解如何自訂HTML5表單的錯誤訊息顯示，包括如何變更其位置和外觀。
+seo-description: Learn how to customize the display of error messages for HTML5 forms including how to change their position and appearance.
 uuid: 6f48b64e-858f-4323-ad50-88e25f3c2e3d
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 44e49789-9075-41b3-bce8-03e8efce2d5a
-feature: 行動表單
+feature: Mobile Forms
 exl-id: c4ae53a3-8de1-4985-a73e-829749de9814
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
-# 自訂HTML5表單{#customizing-error-messages-for-html-forms}的錯誤訊息
+# 自訂HTML5表單的錯誤訊息 {#customizing-error-messages-for-html-forms}
 
-在HTML5表單中，錯誤訊息和警告會立即顯示固定的位置和外觀（字型和顏色），錯誤只會針對選取的欄位而顯示，並且只會顯示一個錯誤。
+在HTML5表單中，錯誤訊息和警告的立即可用位置和外觀（字型和顏色）固定，錯誤只針對選定欄位顯示，並且只顯示一個錯誤。
 
 文章提供自訂HTML5表單錯誤訊息的步驟，
 
@@ -36,10 +36,10 @@ ht-degree: 0%
 
 ### 自訂錯誤訊息的位置  {#customizing-the-position-of-error-messages-nbsp}
 
-若要自訂錯誤訊息的位置，請針對每個錯誤和警告欄位新增&lt;div>標籤、在左側或右側放置&lt;div>標籤，並在&lt;div>標籤上套用css樣式。 如需詳細步驟，請參閱下列程式：
+若要自訂錯誤訊息的位置，請新增 &lt;div> 標籤中填入 &lt;div> 標籤，並在 &lt;div> 標籤。 如需詳細步驟，請參閱下列程式：
 
-1. 導覽至`CustomErrorManager-1.0-SNAPSHOT`資料夾，並開啟`etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript`資料夾。
-1. 開啟`customErrorManager.js`檔案進行編輯。 檔案中的`markError`函式接受下列參數：
+1. 導覽至 `CustomErrorManager-1.0-SNAPSHOT`資料夾並開啟 `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` 檔案夾。
+1. 開啟 `customErrorManager.js` 檔案進行編輯。 此 `markError` 函式接受下列參數：
 
    |  |  |
    |---|---|
@@ -77,7 +77,7 @@ ht-degree: 0%
    ```
 
 1. 儲存並關閉檔案。
-1. 導覽至`CustomErrorManager-1.0-SNAPSHOT`資料夾，並建立jcr_root和META-INF資料夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
+1. 導覽至 `CustomErrorManager-1.0-SNAPSHOT` 資料夾，並建立jcr_root和META-INF資料夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
 1. 使用套件管理器來上傳和安裝套件。
 
 ## 顯示多個欄位的錯誤訊息  {#display-error-messages-for-multiple-fields-nbsp}
@@ -120,9 +120,9 @@ ht-degree: 0%
 
 ## 使用新的配置檔案呈現表單。  {#render-the-form-with-the-new-profile-nbsp}
 
-html5表單會立即使用預設設定檔：https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名稱>
+html5表單會立即使用預設設定檔：https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; the=&quot;&quot; xdp=&quot;&quot;>
 
-若要檢視含有自訂錯誤訊息的表單，請以錯誤設定檔呈現表單：https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名稱>
+若要檢視含有自訂錯誤訊息的表單，請以錯誤設定檔呈現表單：https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; the=&quot;&quot; xdp=&quot;&quot;>
 
 >[!NOTE]
 >

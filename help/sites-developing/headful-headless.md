@@ -1,7 +1,8 @@
 ---
 title: AEM中的Headful和Headless
 description: AEM專案可以採用無頭和無頭模型，但選項不是二進位。 AEM提供在單一專案中充分運用這兩種模型優點的彈性。
-source-git-commit: cf7e9061bac9004c7efd2f045b4900e4a92d67e9
+exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Manager專案可以採用帶頭和無頭兩種模型，但選擇並非二進位。 AEM提供在單一專案中充分運用這兩種模型優點的彈性。 本檔案概述不同的模型，並說明SPA整合的層級。
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 AEM提供強大的工具，可在單一平台中管理內容的建立及其傳遞。 這是傳統的「有頭腦」內容管理模式，內容作者和開發人員可在相同平台上工作，將體驗提供給內容消費者。
 

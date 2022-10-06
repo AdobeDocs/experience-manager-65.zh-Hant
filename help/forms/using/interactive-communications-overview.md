@@ -42,7 +42,7 @@ ht-degree: 7%
 
 ### 工作流程 {#workflow}
 
-若要建立互動式通訊，請使用 [構建基礎](#buildingblocks) 針對互動式通訊，然後完成下列步驟：
+若要建立互動式通訊，請使用 [構建基礎](#buildingblocks) 為「互動式通訊就緒」，然後完成下列步驟：
 
 1. 選擇 [建立互動式通訊](/help/forms/using/create-interactive-communication.md).
 

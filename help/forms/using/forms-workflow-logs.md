@@ -1,8 +1,8 @@
 ---
 title: 登入AEM Forms工作流程
-seo-title: 登入AEM Forms工作流程
+seo-title: Logging in AEM Forms workflows
 description: 使用記錄檔對AEM Forms工作流程問題進行除錯。
-seo-description: 使用記錄檔對AEM Forms工作流程問題進行除錯。
+seo-description: Use logs to debug AEM Forms workflow issues.
 uuid: 869d0271-c7e3-4b6d-8e63-893dc6af8b8a
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,7 +12,7 @@ docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '279'
 ht-degree: 5%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 Forms工作流程步驟可方便地提供詳細記錄，以偵錯工作流程相關問題。 啟用AEM Forms工作流程的除錯記錄以檢視記錄。
 
-依預設，所有記錄資訊都可在&#x200B;*/crx-repository/logs/*&#x200B;目錄的&#x200B;**error.log**&#x200B;檔案中取得。
+依預設，所有記錄資訊皆可在 **error.log** 檔案 */crx-repository/logs/* 目錄。
 
 表單工作流程的除錯記錄包括：
 
@@ -76,21 +76,21 @@ Forms工作流程步驟可方便地提供詳細記錄，以偵錯工作流程相
 
 如果有例外，您可以檢視完整的堆疊追蹤，以評估錯誤的原因。
 
-## 啟用AEM Forms工作流程{#enable-debug-logging-for-aem-forms-workflows}的除錯記錄
+## 為AEM Forms工作流程啟用除錯記錄 {#enable-debug-logging-for-aem-forms-workflows}
 
 執行下列步驟以啟用AEM Forms工作流程的除錯記錄：
 
 1. 前往AEM Web主控台組態管理器：
 
-   https://&#39;[server]:[port]&#39;/system/console/configMgr
+   https://&#39;[伺服器]:[埠]「/system/console/configMgr
 
-1. 選擇&#x200B;**[!UICONTROL Sling]** > **[!UICONTROL 日誌支援]**。
-1. 點選&#x200B;**[!UICONTROL 新增記錄器。]**
-1. 選擇&#x200B;**[!UICONTROL Debug]**&#x200B;作為&#x200B;**[!UICONTROL 日誌級別]**。
-1. 指定記錄檔的位置。 記錄檔的預設位置為：*logs\error.log*
-1. 在&#x200B;**[!UICONTROL Logger]**&#x200B;欄中，將套件名稱指定為&#x200B;**com.adobe.granite.workflow.core**。
+1. 選擇 **[!UICONTROL Sling]** > **[!UICONTROL 記錄支援]**.
+1. 點選 **[!UICONTROL 添加新記錄器。]**
+1. 選擇 **[!UICONTROL 除錯]** 作為 **[!UICONTROL 記錄層級]**.
+1. 指定記錄檔的位置。 記錄檔的預設位置為： *logs\error.log*
+1. 將包的名稱指定為 **com.adobe.granite.workflow.core** 在 **[!UICONTROL 記錄器]** 欄。
 
-   執行這些步驟可儲存&#x200B;**com.adobe.granite.workflow.core**&#x200B;套件的除錯記錄。 點選&#x200B;**[!UICONTROL +]**&#x200B;並將下列套件名稱新增至清單：
+   執行這些步驟可儲存 **com.adobe.granite.workflow.core** 包。 點選 **[!UICONTROL +]** 並將以下程式包名稱添加到清單中：
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace

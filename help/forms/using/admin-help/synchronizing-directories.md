@@ -1,8 +1,8 @@
 ---
 title: 同步目錄
-seo-title: 同步目錄
+seo-title: Synchronizing directories
 description: 了解如何使用手動或計畫同步將用戶管理資料庫與源目錄伺服器的更改同步。
-seo-description: 了解如何使用手動或計畫同步將用戶管理資料庫與源目錄伺服器的更改同步。
+seo-description: Learn how to synchronize the User Management database with changes to the source directory servers using manual or scheduled synchronization.
 uuid: 71cbc04d-6172-49b7-a490-ff3233c1b2bb
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,16 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
 exl-id: cb642289-4137-4ba7-8bde-0e458c8c94fe
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2a2f8538b6554540b546f4d345c0b3c0d3e706f3
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
 
-# 正在同步目錄{#synchronizing-directories}
+# 同步目錄 {#synchronizing-directories}
 
-要同步域，您可以選擇執行手動或計畫的同步。 *手動同步*&#x200B;同步任何選定域。 *計畫同步*&#x200B;同步所有域。
+要同步域，您可以選擇執行手動或計畫的同步。 A *手動同步* 同步任何選定域。 A *排程同步* 同步所有域。
 
 目錄同步用於將您在目錄設定中指定的目錄伺服器的詳細資訊提取到用戶管理資料庫中。 之後，如果目錄伺服器上發生更改或更新，您也可以手動同步。 例如，如果新增了使用者和群組或對使用者帳戶進行了變更，則可以執行手動同步。
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe®LiveCycle® Content Services ES（已過時）是隨LiveCycle安裝的內容管理系統。 它使用戶能夠設計、管理、監控和優化以人為中心的流程。 內容服務（已過時）支援將於12/31/2014終止。 請參閱[Adobe產品生命週期文檔](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。 若要了解如何設定內容服務（已淘汰），請參閱[管理內容服務](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)。
+>Adobe®LiveCycle® Content Services ES（已過時）是隨LiveCycle安裝的內容管理系統。 它使用戶能夠設計、管理、監控和優化以人為中心的流程。 內容服務（已過時）支援將於12/31/2014終止。 請參閱 [Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
 
-## 啟用增量目錄同步{#enable-delta-directory-synchronization}
+## 啟用增量目錄同步 {#enable-delta-directory-synchronization}
 
 增量目錄同步提高了目錄同步的效率。 啟用增量目錄同步時，用戶管理僅同步自上次同步以來已添加或更新的用戶和組。
 
@@ -55,16 +55,16 @@ ht-degree: 0%
 
 1. 在管理控制台中，按一下「設定>使用者管理>網域管理」。
 1. 在「增量同步」(Delta Synch)下，選中複選框，然後按一下「保存」(Save)。
-1. 編輯將使用增量目錄同步功能的每個企業域的目錄設定。 在「用戶設定」和「組設定」頁上，找到「修改時間戳」設定，並輸入`modify TimeStamp`作為值。 有關編輯企業域的詳細資訊，請參閱[編輯和轉換現有域](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)。
+1. 編輯將使用增量目錄同步功能的每個企業域的目錄設定。 在「用戶設定」和「組設定」頁上，找到「修改時間戳」設定並輸入 `modify TimeStamp` 作為值。 如需編輯企業網域的詳細資訊，請參閱 [編輯和轉換現有網域](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).
 
-## 在同步{#enable-or-disable-detailed-logging-during-synchronization}期間啟用或禁用詳細記錄
+## 在同步期間啟用或禁用詳細記錄 {#enable-or-disable-detailed-logging-during-synchronization}
 
 依預設，使用者管理會記錄同步程式期間的詳細統計資料。
 
 1. 在管理控制台中，按一下「設定」>「用戶管理」>「配置」>「配置高級系統屬性」。
 1. 在「同步統計記錄」下，取消選中複選框以禁用詳細記錄，或選擇它以啟用記錄，然後按一下「保存」。
 
-## 配置目錄同步重試選項{#configure-the-directory-synchronization-retry-option}
+## 配置目錄同步重試選項 {#configure-the-directory-synchronization-retry-option}
 
 您可以配置「用戶管理」以定期檢查是否有任何失敗的目錄同步嘗試。 然後，「用戶管理」將嘗試完成失敗的同步。
 
@@ -73,15 +73,15 @@ ht-degree: 0%
 
    預設值為0 0/13 &amp;ast;? &amp;ast;，這表示每13分鐘會進行一次檢查。
 
-## 手動同步目錄{#manually-synchronize-directories}
+## 手動同步目錄 {#manually-synchronize-directories}
 
 1. 在管理控制台中，按一下「設定>使用者管理>網域管理」。
 1. （可選）若要將使用者和群組資訊推送至內容服務（已淘汰），請選取此選項，將使用者和群組推送至已註冊的外部主要儲存提供者選項。 透過「使用者和群組」頁面新增使用者和群組時，也適用此選項。
 1. 為要同步的每個企業域選擇複選框，然後按一下「立即同步」。
 
-   如果選擇多個域，則可同時運行所有域的域同步。 但是，如果單獨選擇域，則一次只能運行一個域同步。
+   如果選擇多個域，則可以同時運行所有域的域同步。 但是，如果單獨選擇域，則一次只能運行一個域同步。
 
-## 計畫目錄同步{#schedule-directory-synchronization}
+## 計畫目錄同步 {#schedule-directory-synchronization}
 
 1. 在管理控制台中，按一下「設定>使用者管理>網域管理」。
 1. 計畫同步：
@@ -95,7 +95,7 @@ cron表達式的使用基於Quartz開放源作業調度系統1.4.0版。
 * （可選）若要將使用者和群組資訊推送至內容服務（已淘汰），請選取此選項，將使用者和群組推送至已註冊的外部主要儲存提供者選項。 透過「使用者和群組」頁面新增使用者和群組時，也適用此選項。
 * 按一下「儲存」。
 
-## 停止當前正在進行的{#stop-all-directory-synchronizations-currently-in-progress}所有目錄同步
+## 停止當前正在進行的所有目錄同步 {#stop-all-directory-synchronizations-currently-in-progress}
 
 1. 在管理控制台中，按一下「設定>使用者管理>網域管理」。
 1. 按一下「中止」。 只有在進行目錄同步時，才會顯示此按鈕。

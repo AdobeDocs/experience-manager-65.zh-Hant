@@ -14,7 +14,7 @@ exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
 source-git-commit: 4fc42469e4b97f2f2c5d7489837012d31c63f86d
 workflow-type: tm+mt
 source-wordcount: '6645'
-ht-degree: 2%
+ht-degree: 14%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->有關效能的一般准則，請閱讀[效能准則](/help/sites-deploying/performance-guidelines.md)頁。
+>如需效能的一般准則，請參閱 [效能准則](/help/sites-deploying/performance-guidelines.md) 頁面。
 >
->有關故障排除和修復效能問題的詳細資訊，另請參閱[效能樹](/help/sites-deploying/performance-tree.md)。
+>如需疑難排解和修正效能問題的詳細資訊，另請參閱 [效能樹](/help/sites-deploying/performance-tree.md).
 >
->此外，您還可以閱讀[效能調整提示的知識庫文章。](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
+>此外，您可以在 [效能調整提示。](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
 
 一個主要問題是您的網站回應訪客請求所花的時間。 雖然此值會因每個請求而異，但可定義平均目標值。 一旦此值被證實可達且可維護，即可用來監控網站的效能，並指出潛在問題的發展。
 
@@ -42,8 +42,8 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->* 為效能最佳化進行配置後，請按照[Tough Day](/help/sites-developing/tough-day.md)中的過程來測試負載較重的環境。
->* 另請參閱[效能調整提示。](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
+>* 為效能最佳化進行配置後，請遵循 [艱難的一天](/help/sites-developing/tough-day.md) 在重負載下測試環境。
+>* 另請參閱 [效能調校提示。](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
 
 
 ## 效能最佳化方法 {#performance-optimization-methodology}
@@ -68,7 +68,7 @@ AEM專案的效能最佳化方法可歸納為五個非常簡單的規則，可�
 
 一旦您「上線」，效能最佳化就不會結束。 這是您在系統上遇到「實際」負載的時間點。 在啟動後，請務必規劃其他調整。
 
-由於系統負載更改且系統的效能配置檔案隨時間變化，因此應將效能「調整」或「運行狀況檢查」安排為6-12個月間隔。
+由於系統負載更改且系統的效能配置檔案隨時間變化，因此應將效能「調整」或「運行狀況檢查」安排為6-12個月的間隔。
 
 ### 模擬現實 {#simulate-reality}
 
@@ -115,7 +115,7 @@ AEM專案的效能最佳化方法可歸納為五個非常簡單的規則，可�
 * 在發佈時測量（沒有與製作環境相關的開支）
 * 在伺服器上測量（無網路開銷）
 * 未快取(無AEM輸出快取、無Dispatcher快取)
-* 僅適用於具有許多相依性的複雜項目(HTML、JS、PDF、...)
+* 僅適用於具有許多相依性的複雜項目(HTML、JS、PDF、..)
 * 系統上沒有其他負載
 
 某些問題經常導致效能問題。 這些主要圍繞：
@@ -129,7 +129,7 @@ JVM和作業系統級別調整通常不會導致效能大幅提升，因此應�
 
 在通常的效能最佳化練習中，您最好的朋友是：
 
-* `request.log`
+* 此 `request.log`
 * 基於元件的定時
 * 最後，但不是最不重要的是Java探查器。
 
@@ -160,7 +160,7 @@ JVM和作業系統級別調整通常不會導致效能大幅提升，因此應�
 
 效能（或缺少效能）是使用者首先注意到的事項之一，因此，與任何具有使用者介面的應用程式一樣，效能至關重要。 若要最佳化AEM安裝的效能，您必須監控執行個體的各種屬性及其行為。
 
-有關如何執行效能監視的資訊，請參閱[監視效能](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance)。
+有關如何執行效能監視的資訊，請參見 [監控效能](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance).
 
 導致效能問題的問題往往很難追蹤，即使它們的效果很容易看到。
 
@@ -173,7 +173,7 @@ JVM和作業系統級別調整通常不會導致效能大幅提升，因此應�
 效能也是容量和容量之間的平衡：
 
 * **卷**  — 系統處理和傳送的輸出量。
-* **容量**  — 系統傳送卷的能力。
+* **容量**  — 系統交付卷的能力。
 
 這可以在整個Web鏈的不同位置中說明。
 
@@ -189,12 +189,12 @@ JVM和作業系統級別調整通常不會導致效能大幅提升，因此應�
 
 在最佳化效能時，應謹記某些規則：
 
-* 效能調整&#x200B;*必須*&#x200B;是每個項目的一部分。
+* 效能調整 *必須* 成為每個項目的一部分。
 * 請勿在開發週期初期最佳化。
 * 效能僅與最薄弱的環節一樣好。
 * 始終考慮容量與容量。
 * 首先優化重要內容。
-* 若沒有&#x200B;*實際*&#x200B;目標，絕不最佳化。
+* 永遠不優化 *現實* 目標。
 
 >[!NOTE]
 >
@@ -206,7 +206,7 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 >[!NOTE]
 >
->有關其他資訊，請參閱[KB文章](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)。
+>如需其他資訊，請參閱 [知識庫文章](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
 
 ### 搜尋索引 {#search-indexing}
 
@@ -221,28 +221,28 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 限制並行運行的工作流進程的數量以提高效能。 依預設，工作流引擎會並行處理許多工作流，與Java VM可用的處理器一樣多。 當工作流步驟需要大量處理資源（RAM或CPU）時，並行運行其中幾個工作流可能會對可用伺服器資源帶來高需求。
 
-例如，上傳影像（或一般的DAM資產）時，工作流程會自動將影像匯入DAM。 影像通常是高解析度的，並且可以輕鬆地佔用數百MB的堆進行處理。 並行處理這些影像會給儲存器子系統和垃圾收集器帶來高負載。
+例如，上傳影像（或一般的DAM資產）時，工作流程會自動將影像匯入DAM。 影像通常是高解析度的，並且可以輕鬆地佔用數百MB的堆來進行處理。 並行處理這些影像會給儲存器子系統和垃圾收集器帶來高負載。
 
 工作流程引擎使用Apache Sling工作佇列來處理和排程工作項目處理。 下列作業佇列服務依預設已從Apache Sling Job Queue Configuration Service Factory建立，用於處理工作流程作業：
 
 * Granite工作流程佇列：大部分的工作流程步驟（例如處理DAM資產的步驟）都會使用Granite工作流程佇列服務。
-* Granite工作流外部進程作業隊列：此服務用於特殊的外部工作流步驟，通常用於聯繫外部系統和輪詢結果。 例如，InDesign媒體擷取程式步驟會實作為外部程式。 工作流程引擎使用外部佇列來處理輪詢。 (請參閱[com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html)。)
+* Granite工作流外部進程作業隊列：此服務用於特殊的外部工作流步驟，通常用於聯繫外部系統和輪詢結果。 例如，InDesign媒體擷取程式步驟會實作為外部程式。 工作流程引擎使用外部佇列來處理輪詢。 (請參閱 [com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html).)
 
 配置這些服務以限制並行運行的工作流進程的最大數量。
 
 >[!NOTE]
 >
->配置這些作業隊列會影響所有工作流，除非您已為特定工作流模型建立了作業隊列（請參閱下面的[為特定工作流模型配置隊列](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow)）。
+>配置這些作業隊列會影響所有工作流，除非您已為特定工作流模型建立作業隊列(請參閱 [配置特定工作流模型的隊列](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) )。
 
 #### 儲存庫中的設定 {#configuration-in-the-repo}
 
-如果您使用sling:OsgiConfig節點](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)來設定服務[，則需要找到現有服務的PID，例如：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web控制台來發現PID。
+如果您正在配置服務 [使用sling:OsgiConfig節點](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)，您需要尋找現有服務的PID，例如：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web控制台來發現PID。
 
-您需要配置名為`queue.maxparallel`的屬性。
+您需要設定名為 `queue.maxparallel`.
 
 #### Web主控台中的設定 {#configuration-in-the-web-console}
 
-若要使用Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)配置這些服務[，請在Apache Sling Job Queue Configuration Service工廠下方找到現有配置項。
+要配置這些服務 [使用Web主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)，請在Apache Sling Job Queue Configuration Service工廠下方找到現有的設定項目。
 
 您需要配置名為「最大並行作業數」的屬性。
 
@@ -255,15 +255,15 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 * `com/adobe/granite/workflow/job*`
 * `com/adobe/granite/workflow/external/job*`
 
-工作流模型生成的實際作業主題包括模型特定尾碼。 例如， **DAM更新資產**&#x200B;工作流程模型會產生具有下列主題的作業：
+工作流模型生成的實際作業主題包括模型特定尾碼。 例如， **DAM更新資產** 工作流程模型會產生具有下列主題的作業：
 
 `com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/model`
 
 因此，您可以為主題建立與工作流模型的作業主題匹配的作業隊列。 配置隊列的效能相關屬性只會影響生成與隊列主題匹配的作業的工作流模型。
 
-以下過程使用&#x200B;**DAM更新資產**&#x200B;工作流建立工作流的作業隊列。
+以下過程使用 **DAM更新資產** 工作流程。
 
-1. 執行要為其建立作業隊列的工作流模型，以便生成主題統計資訊。 例如，將影像新增至「資產」以執行&#x200B;**DAM更新資產**&#x200B;工作流程。
+1. 執行要為其建立作業隊列的工作流模型，以便生成主題統計資訊。 例如，將影像新增至資產以執行 **DAM更新資產** 工作流程。
 1. 開啟Sling作業主控台(`https://<host>:<port>/system/console/slingevent`)。
 1. 探索主控台中與工作流程相關的主題。 若為DAM更新資產，會找到下列主題：
 
@@ -273,13 +273,13 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 1. 為每個主題建立一個作業隊列。 若要建立作業佇列，請為Apache Sling Job Queue工廠服務建立工廠設定。
 
-   工廠配置類似於[併發工作流處理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)中描述的Granite工作流隊列，但主題屬性與工作流作業的主題匹配。
+   工廠設定類似於 [同時處理工作流程](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)，但「主題」屬性與工作流程作業的主題相符。
 
 ### AEM DAM Asset Synchronization Service {#cq-dam-asset-synchronization-service}
 
-`AssetSynchronizationService`用於從掛載的儲存庫（包括LiveLink、Documentum等）同步資產。 預設情況下，每300秒（5分鐘）會進行一次定期檢查，因此，如果您不使用已裝載的儲存庫，則可以禁用此服務。
+此 `AssetSynchronizationService` 用於從掛載的儲存庫（包括LiveLink、Documentum等）同步資產。 預設情況下，每300秒（5分鐘）會進行一次定期檢查，因此，如果您不使用已裝載的儲存庫，則可以禁用此服務。
 
-這是透過[設定OSGi服務](/help/sites-deploying/configuring-osgi.md) **CQ DAM資產同步服務**&#x200B;來完成，以將&#x200B;**同步期間**(`scheduler.period`)設為（最少1年）（以秒為單位定義）。
+這是由 [設定OSGi服務](/help/sites-deploying/configuring-osgi.md) **CQ DAM資產同步服務** 設定 **同步期間** ( `scheduler.period`)至（最少為）1年（以秒為單位定義）。
 
 ### 多個DAM例項 {#multiple-dam-instances}
 
@@ -297,9 +297,9 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 效能對您的發佈環境至關重要。 因此，在實作專案時，您必須仔細規劃和分析針對發佈環境所進行的效能測試。
 
-本節旨在標準化概述在&#x200B;*publish*&#x200B;環境中為效能測試專門定義測試概念時所涉及的問題。 這主要是QA工程師、項目經理和系統管理員感興趣的。
+本節旨在針對您的 *發佈* 環境。 這主要是QA工程師、項目經理和系統管理員感興趣的。
 
-以下內容涵蓋在&#x200B;*Publish*&#x200B;環境中針對AEM應用程式進行效能測試的標準化方法。 這包括下列5個階段：
+以下內容涵蓋針對AEM應用程式在 *發佈* 環境。 這包括下列5個階段：
 
 * [知識驗證](#verification-of-knowledge)
 * [範圍的定義](#scope-definition)
@@ -337,7 +337,7 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 * 最重要的業務使用案例
 * 最關鍵的技術使用案例
 
-使用案例的數量由您決定，但應限制在可輕鬆管理的數量（例如5到10之間）。
+使用案例的數量由您決定，但應限制在可輕鬆管理的數量（例如5到10個）。
 
 選取關鍵使用案例後，就可針對每個案例定義關鍵績效指標(KPI)和用來測量它們的工具。 常見KPI的範例包括：
 
@@ -355,7 +355,7 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 * 單元測試
 * 組合元件測試
-* *正在發* 生
+* *上線* 藍本
 * 錯誤情況
 
 根據以下原則。
@@ -386,10 +386,10 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 在這兩種情況下，當預定義的用戶數使用系統時，您可以定義每秒的預期事務數。
 
-| 元件 | 測試類型 | 否. 使用者 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
+| Component | 測試類型 | 否. 使用者 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
 |---|---|---|---|---|---|
-| 首頁單一使用者 | 平均 | 1 | 3 |  |  |
-|  | 峰值 | 3 | 3 |  |  |
+| 首頁單一使用者 | 平均 | 1 | 1 |  |  |
+|  | 峰值 | 1 | 3 |  |  |
 | 首頁100個用戶 | 平均 | 100 | 3 |  |  |
 |  | 峰值 | 100 | 3 |  |
 
@@ -399,10 +399,10 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 | 藍本 | 元件 | 否. 使用者 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
 |---|---|---|---|---|---|
-| 混合平均 | 首頁 | 10 | 3 |  |  |
-|  | 搜尋 | 10 | 3 |  |  |
+| 混合平均 | 首頁 | 10 | 1 |  |  |
+|  | 搜尋 | 10 | 1 |  |  |
 |  | 新聞 | 10 | 2 |  |  |
-|  | 事件 | 10 | 3 |  |  |
+|  | 事件 | 10 | 1 |  |  |
 |  | 啟用 | 10 | 3 |  | 作者行為模擬。 |
 | 混合峰 | 首頁 | 100 | 5 |  |  |
 |  | 搜尋 | 50 | 5 |  |  |
@@ -433,10 +433,10 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 | 錯誤方案 | 錯誤類型 | 否. 使用者 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
 |---|---|---|---|---|---|
-| 搜尋元件過載 | 搜索全局通配符（星號） | 10 | 3 |  | 僅&amp;ast;&amp;ast;&amp;ast;中。 |
+| 搜尋元件過載 | 搜索全局通配符（星號） | 10 | 1 |  | 僅&amp;ast;&amp;ast;&amp;ast;中。 |
 |  | 停止字 | 20 | 2 |  | 正在搜索停止詞。 |
-|  | 空字串 | 10 | 3 |  | 正在搜索空字串。 |
-|  | 特殊字元 | 10 | 3 |  | 搜尋特殊字元。 |
+|  | 空字串 | 10 | 1 |  | 正在搜索空字串。 |
+|  | 特殊字元 | 10 | 1 |  | 搜尋特殊字元。 |
 
 #### 耐力測試 {#endurance-tests}
 
@@ -444,11 +444,11 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 | 藍本 | 測試類型 | 否. 使用者 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
 |---|---|---|---|---|---|
-| 耐力測試（72小時） | 首頁 | 10 | 3 |  |  |
-|  | 搜尋 | 10 | 3 |  |  |
+| 耐力測試（72小時） | 首頁 | 10 | 1 |  |  |
+|  | 搜尋 | 10 | 1 |  |  |
 |  | 新聞 | 20 | 2 |  |  |
-|  | 事件 | 10 | 3 |  |  |
-|  | 啟用 | 3 | 3 |  | 作者行為模擬。 |
+|  | 事件 | 10 | 1 |  |  |
+|  | 啟用 | 1 | 3 |  | 作者行為模擬。 |
 
 ### 最佳化 {#optimization}
 
@@ -463,7 +463,7 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 * [JMeter](https://jakarta.apache.org/jmeter/)
 * [載入運行器](https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview)
-* [](https://www.determyne.com/) DetrymyneInsideApps
+* [德特米內](https://www.determyne.com/) InsideApps
 * [InfraRED](https://www.infraredsoftware.com/)
 * [Java互動式設定檔](https://jiprof.sourceforge.net/)
 * 還有更多……
@@ -483,43 +483,42 @@ AEM的某些方面（和/或基礎存放庫）可進行設定，以最佳化效�
 
 ## 使用Dispatcher時最佳化效能 {#optimizing-performance-when-using-the-dispatcher}
 
-[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)是Adobe的快取和/或負載平衡工具。 使用Dispatcher時，您應考慮針對快取效能最佳化您的網站。
+此 [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 是Adobe的快取和/或負載平衡工具。 使用Dispatcher時，您應考慮針對快取效能最佳化您的網站。
 
 >[!NOTE]
 >
->Dispatcher版本與AEM無關，但AEM檔案內嵌有Dispatcher檔案。 請一律使用檔案中內嵌的Dispatcher檔案，以取得最新版AEM。
+>Dispatcher版本與AEM無關，但Dispatcher文檔嵌入到文檔AEM中。 請始終使用文檔中嵌入的Dispatcher文檔獲取最新版本AEM。
 >
 >如果您依循連結至 Dispatcher 文件，且該連結內嵌於舊版 AEM 的文件中，您可能會被重新導向至本頁。
 
-Dispatcher提供許多內建機制，如果您的網站善用這些機制，您可以用它來最佳化效能。 本節說明如何設計您的網站，以發揮快取的最大效益。
+Dispatcher提供許多內建機制，如果您的網站善用這些機制，您可以用它來最佳化效能。 本節將說明如何設計網站，好讓快取的優點最大化。
 
 >[!NOTE]
 >
->這可協助您記住，Dispatcher會將快取儲存在標準Web伺服器上。 這表示您：
+>記住 Dispatcher 會將快取儲存在標準網頁伺服器上可能會有所幫助。 這表示您：
 >
 >* 可以使用URL將您可儲存為頁面並要求的所有內容快取
 >* 無法儲存其他項目，例如Cookie、工作階段資料和表單資料。
-
 >
->一般而言，許多快取策略都需要選取好的URL，而不需仰賴這些額外資料。
+>一般來說，許多快取策略與選取良好 URL 而且不依賴這些額外資料有關。
 >
->若使用Dispatcher 4.1.11版，您也可以快取回應標題，請參閱「快取HTTP回應標題」](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)。[
+>若使用Dispatcher 4.1.11版，您也可以快取回應標題，請參閱 [快取HTTP回應標題](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache).
 
 ### 計算Dispatcher快取比率 {#calculating-the-dispatcher-cache-ratio}
 
 快取比率公式估計快取處理的請求數百分比，佔進入系統的請求總數。 要計算快取比率，需要執行以下操作：
 
-* 請求總數。 此資訊可在Apache `access.log`中找到。 如需詳細資訊，請參閱[官方Apache檔案](https://httpd.apache.org/docs/2.4/logs.html#accesslog)。
+* 請求總數。 此資訊可在Apache中取得 `access.log`. 如需詳細資訊，請參閱 [官方Apache檔案](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
 
-* Publish例項所提供的請求數。 此資訊可在執行個體的`request.log`中取得。 如需詳細資訊，請參閱[解譯request.log](/help/sites-deploying/monitoring-and-maintaining.md#interpreting-the-request-log)和[尋找記錄檔](/help/sites-deploying/monitoring-and-maintaining.md#finding-the-log-files)。
+* Publish例項所提供的請求數。 此資訊可在 `request.log` 例項。 如需詳細資訊，請參閱 [解譯request.log](/help/sites-deploying/monitoring-and-maintaining.md#interpreting-the-request-log) 和 [查找日誌檔案](/help/sites-deploying/monitoring-and-maintaining.md#finding-the-log-files).
 
 計算快取比率的公式為：
 
-* （請求總數&#x200B;**減去**&#x200B;發佈時的請求數）**除以**&#x200B;請求總數。
+* (請求總數 **減號** 發佈中的請求數) **劃分** 請求總數。
 
-例如，如果請求總數為129491，而Publish例項提供的請求數為58959，則快取比率為：**(129491 - 58959)/129491= 54.5%**。
+例如，如果請求總數為129491，而Publish例項提供的請求數為58959，則快取比率為： **(129491 - 58959)/129491= 54.5%**.
 
-如果您沒有一對一的發佈者/Dispatcher配對，則需要將來自所有Dispatcher和發佈者的請求新增到一起，才能取得精確的測量。 另請參閱[建議部署](/help/sites-deploying/recommended-deploys.md)。
+如果您沒有一對一的發佈者/Dispatcher配對，則需要將來自所有Dispatcher和發佈者的請求新增到一起，才能取得精確的測量。 另請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md).
 
 >[!NOTE]
 >
@@ -527,24 +526,24 @@ Dispatcher提供許多內建機制，如果您的網站善用這些機制，您�
 
 #### 使用一致的頁面編碼 {#using-consistent-page-encoding}
 
-使用Dispatcher 4.1.11版，您可以快取回應標題。 如果您不是在Dispatcher上快取回應標題，則如果您將頁面編碼資訊儲存在標題中，就會發生問題。 在此情況下，當Dispatcher從快取中提供頁面時，頁面會使用Web伺服器的預設編碼。 有兩種方法可以避免此問題：
+使用Dispatcher 4.1.11版，您可以快取回應標題。 如果您不是在Dispatcher上快取回應標題，則如果您將頁面編碼資訊儲存在標題中，就會發生問題。 在此情況下，當 Dispatcher 從快取中提供頁面時，將會對此頁面使用網頁伺服器的預設編碼。 有兩種方式可避免此問題：
 
-* 如果您只使用一種編碼，請確定Web伺服器上使用的編碼與AEM網站的預設編碼相同。
-* 在HTML `head`區段中使用`<META>`標籤來設定編碼，如下列範例所示：
+* 如果您只使用一種編碼，請確定在網頁伺服器上使用的編碼與 AEM 網站的預設編碼相同。
+* 在 HTML `head` 區段中使用 `<META>` 標記來設定編碼，如以下範例所示：
 
 ```xml
         <META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 ```
 
-#### 避免URL參數 {#avoid-url-parameters}
+#### 避免 URL 參數 {#avoid-url-parameters}
 
-如有可能，請避免要快取之頁面的URL參數。 例如，如果您有圖片庫，則不會快取下列URL（除非Dispatcher已相應地設定[](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)）:
+可能的話，請避免針對您想要快取的頁面使用 URL 參數。 例如，如果您有圖片庫，則絕對不會快取以下 URL (除非 Dispatcher [已適當地設定](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache))：
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
 ```
 
-不過，您可以將這些參數放入頁面URL中，如下所示：
+不過，您可以將這些參數放到頁面 URL 中，如下所示：
 
 ```xml
 www.myCompany.com/pictures/gallery.christmas.1.html
@@ -552,15 +551,15 @@ www.myCompany.com/pictures/gallery.christmas.1.html
 
 >[!NOTE]
 >
->此URL會呼叫與`gallery.html`相同的頁面和範本。 在範本定義中，您可以指定哪個指令碼轉譯頁面，或對所有頁面使用相同的指令碼。
+>此URL會呼叫相同的頁面，以及與 `gallery.html`. 在範本定義中，您可以指定哪一個指令碼會轉譯頁面，或者針對所有頁面使用相同指令碼。
 
-#### 依URL自訂 {#customize-by-url}
+#### 使用 URL 自訂 {#customize-by-url}
 
-如果您允許使用者變更字型大小（或任何其他版面自訂），請確定URL中反映不同的自訂。
+如果您允許使用者變更字體大小 (或是其他任何版面自訂內容)，請確定不同自訂內容會反映在 URL 中。
 
-例如，系統不會快取Cookie，因此若您將字型大小儲存在Cookie中（或類似的機制），則不會為快取頁面保留字型大小。 因此，Dispatcher會隨機傳回任何字型大小的檔案。
+例如，不會快取 Cookie，所以如果您將字體大小儲存在 Cookie (或類似機制) 中，將不會為快取頁面保留字體大小。 因此，Dispatcher 會隨機傳回任何字體大小的文件。
 
-在URL中加入字型大小作為選取器可避免此問題：
+在 URL 中包含字體大小當作選擇器可避免這個問題：
 
 ```xml
 www.myCompany.com/news/main.large.html
@@ -568,86 +567,86 @@ www.myCompany.com/news/main.large.html
 
 >[!NOTE]
 >
->對於大多數的版面方面，也可以使用樣式表和/或用戶端指令碼。 這些功能在快取方面通常非常有效。
+>對於大多數版面方面，也可以使用樣式表及/或用戶端指令碼。 這些通常可以與快取一起良好地運作。
 >
->在列印版本中，這也很實用，您可以在其中使用URL，例如：
+>這也適用於列印版本，您可以在列印版本中使用類似以下的 URL：
 >
 >`www.myCompany.com/news/main.print.html`
 >
->使用模板定義的指令碼全域功能，可以指定一個單獨的指令碼來呈現打印頁。
+>使用範本定義的指令碼萬用字元時，您可以指定轉譯列印頁面的個別指令碼。
 
-#### 使用作標題的影像檔案失效 {#invalidating-image-files-used-as-titles}
+#### 讓用作標題的影像檔案失效 {#invalidating-image-files-used-as-titles}
 
-如果您將頁面標題或其他文字呈現為圖片，則建議儲存這些檔案，以便在頁面上的內容更新時刪除這些檔案：
+如果您將頁面標題或其他文字轉譯為圖片，建議您儲存檔案，以便在頁面內容更新時將其刪除：
 
-1. 將影像檔案放置在與頁面相同的資料夾中。
-1. 對影像檔案使用以下命名格式：
+1. 將影像檔案放在與頁面相同的資料夾中。
+1. 針對影像檔案使用以下命名格式：
 
    `<page file name>.<image file name>`
 
-例如，您可以將頁面的標題`myPage.html`儲存在`file myPage.title.gif`中。 如果頁面更新，則會自動刪除此檔案，因此對頁面標題所做的任何變更都會自動反映在快取中。
+例如，您可以儲存頁面的標題 `myPage.html` 在 `file myPage.title.gif`. 頁面更新時會自動刪除此檔案，所以對頁面標題所做的任何變更都會自動反映到快取中。
 
 >[!NOTE]
 >
->影像檔案不一定實際存在於AEM例項上。 您可以使用動態建立影像檔案的指令碼。 Dispatcher接著會將檔案儲存在Web伺服器上。
+>影像檔案不一定實際存在於 AEM 執行個體上。 您可以使用可動態建立影像檔案的指令碼。 然後 Dispatcher 會將檔案儲存在網頁伺服器上。
 
-#### 使用於導航的影像檔案失效 {#invalidating-image-files-used-for-navigation}
+#### 讓用於導覽的影像檔案失效 {#invalidating-image-files-used-for-navigation}
 
-如果您使用圖片作為導航條目，則方法與標題基本相同，只是略微複雜。 將所有導航影像與目標頁面一起儲存。 如果您將兩張圖片用於正常和活動，則可以使用以下指令碼：
+如果您將圖片用於導覽項目，此方法基本上與標題相同，但是稍微複雜一點。 將所有導覽影像與目標頁面一起儲存。 如果您將兩張圖片用於一般和活躍情境，可以使用以下指令碼：
 
 * 正常顯示頁面的指令碼。
-* 處理「.normal」請求並傳回一般圖片的指令碼。
-* 處理「.active」請求並返回激活圖片的指令碼。
+* 處理「.normal」請求並傳回正常圖片的指令碼。
+* 處理「.active」請求並傳回已啟用的圖片的指令碼。
 
-請務必使用與頁面相同的命名控制代碼建立這些圖片，以確保內容更新會刪除這些圖片和頁面。
+請務必使用與頁面相同的命名識別碼來建立這些圖片，以確保內容更新會刪除這些圖片及頁面。
 
-對於未修改的頁面，圖片仍會保留在快取中，儘管頁面本身通常會自動失效。
+對於未修改的頁面，圖片還是會留在快取中，但是頁面本身通常會自動失效。
 
-#### 個性化 {#personalization}
+#### 個人化 {#personalization}
 
-建議您將個人化限制在必要的位置。 說明原因：
+建議您將個人化限制在必要的位置。 以下說明原因：
 
-* 如果您使用可自由自訂的開始頁面，則每次使用者要求時，都必須組成該頁面。
-* 相較之下，如果您提供10個不同的開始頁面選項，則可以快取其中每一個頁面，從而提高效能。
+* 如果您使用可自由地自訂的起始頁，則每次使用者請求該頁面時都必須編寫它。
+* 反之，如果您提供 10 個不同起始頁的選擇，您可以快取每一個起始頁，進而提高效能。
 
 >[!TIP]
->如需設定Dispatcher快取的詳細資訊，請參閱[AEM Dispatcher快取教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)及其關於[快取保護內容的區段。](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html#dispatcher-tips-and-tricks)
+>如需設定Dispatcher快取的詳細資訊，請參閱 [AEM Dispatcher快取教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html) 和 [快取受保護的內容。](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html#dispatcher-tips-and-tricks)
 
 如果您個人化每個頁面（例如將使用者名稱放入標題列），可能會影響效能。
 
 >[!TIP]
->有關快取安全內容的資訊，請參閱Dispatcher指南中的[快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
+>有關快取安全內容的資訊，請參閱 [快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html) （在Dispatcher指南中）。
 
 若要在單一頁面上混合限制內容和公開內容，您可以考慮採用在Dispatcher中納入伺服器端，或在瀏覽器中透過Ajax納入用戶端的策略。
 
 >[!TIP]
 >
->如需處理混合的公用和受限內容，請參閱[設定Sling Dynamic Include。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html)
+>如需處理混合的公開和限制內容，請參閱 [設定Sling Dynamic Include。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html)
 
-#### 黏著連線 {#sticky-connections}
+#### 黏性連線 {#sticky-connections}
 
-[黏著](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#the-benefits-of-load-balancing) 連線，確保同一個使用者的檔案都是在同一台伺服器上撰寫。如果使用者離開此資料夾，稍後返回該資料夾，連線仍會持續。 定義一個資料夾，以保留網站需要黏著連線的所有檔案。 請盡量不要有其他檔案。 如果您使用個人化頁面和工作階段資料，這會影響負載平衡。
+[黏性連線](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#the-benefits-of-load-balancing)可確保同一個使用者的文件都會在相同伺服器上編寫。 如果使用者離開此資料夾並於稍後返回，連線仍然保持不變。 定義一個資料夾來保存所有需要網站的黏性連線的文件。 試著不要將其他文件放在該資料夾中。 如果您使用個人化頁面和工作階段資料，這會影響負載平衡。
 
-#### MIME類型 {#mime-types}
+#### MIME 類型 {#mime-types}
 
-瀏覽器有兩種方式可判斷檔案類型：
+瀏覽器可使用兩種方式來判斷檔案的類型：
 
-1. 透過其擴充功能(例如`.html`、`.gif`、`.jpg`等)
-1. 由伺服器隨檔案傳送的MIME類型。
+1. 透過其擴充功能(例如 `.html`, `.gif`, `.jpg`等)
+1. 透過伺服器隨著檔案一起傳送的 MIME 類型。
 
-對於大多數檔案，副檔名中隱含MIME類型。 i.e.:
+對於大多數檔案，MIME 類型會隱含在副檔名中。 換句話說：
 
-1. 透過其擴充功能(例如`.html`、`.gif`、`.jpg`等)
-1. 由伺服器隨檔案傳送的MIME類型。
+1. 透過其擴充功能(例如 `.html`, `.gif`, `.jpg`等)
+1. 透過伺服器隨著檔案一起傳送的 MIME 類型。
 
-如果檔案名沒有副檔名，則會顯示為純文字。
+如果檔案名稱沒有副檔名，則會顯示為純文字。
 
 使用Dispatcher 4.1.11版，您可以快取回應標題。 如果您沒有在Dispatcher上快取回應標題，請注意MIME類型是HTTP標題的一部分。 因此，如果AEM應用程式傳回的檔案未辨識為結尾，而是仰賴MIME類型，這些檔案可能會不正確顯示。
 
-要確保正確快取檔案，請遵循以下准則：
+若要確保檔案可以正確地快取，請遵循以下準則：
 
-* 請確定檔案的副檔名一律正確。
-* 避免一般檔案伺服指令碼，這些指令碼具有`download.jsp?file=2214`等URL。 重寫指令碼以使用包含檔案規範的URL。 在上一個範例中，這會是`download.2214.pdf`。
+* 確定檔案總是有適當的副檔名。
+* 請避免一般檔案伺服指令碼，這些指令碼具有 `download.jsp?file=2214`. 重寫指令碼以使用包含檔案規範的URL。在上一個範例中，這會是 `download.2214.pdf`.
 
 ## 備份效能 {#backup-performance}
 
@@ -686,17 +685,17 @@ AEM設定會將存放庫和資料存放區放置在相同的邏輯卷上，並�
 
 備份基準包括兩種主要情形：在系統處於嚴重應用程式負載下時進行備份，在系統空閒時進行備份。 雖然一般建議在AEM盡可能空閒時執行備份，但在某些情況下，系統負載不足時必須運行備份。
 
-* **空閒狀態**  — 執行備份時，AEM上沒有其他活動。
-* **在負載下**  — 當系統從聯機進程中的負載低於80%時執行備份。備份延遲變化，以查看對負載的影響。
+* **空閒狀態**  — 在AEM上執行備份時沒有其他活動。
+* **負載不足**  — 在系統從聯機進程中負載不足80%時執行備份。 備份延遲變化，以查看對負載的影響。
 
-從AEM伺服器記錄檔中取得備份時間和產生的備份大小。 通常建議在AEM空閒時（如半夜）將備份安排為非時間。 這種情況是建議方法的代表。
+從AEM伺服器記錄檔取得備份時間和產生的備份大小。 通常建議在AEM空閒時（如半夜）將備份安排為非時間。 這種情況是建議方法的代表。
 
 Load將包含頁面建立/刪除、周遊和查詢，其中大部分的載入來自頁面周遊和查詢。 新增和移除太多頁面會持續增加工作區大小，使備份無法完成。 指令碼將使用的載入分佈為75%的頁面周遊、24%的查詢和1%的頁面建立（沒有巢狀子頁面的單級）。 空閒系統上每秒的峰值平均事務數是通過4個併發線程實現的，這是在負載下測試備份時將使用的線程數。
 
 負載對備份效能的影響可以通過使用和不使用此應用程式負載時的效能之間的差異來估計。 通過比較每小時事務中的方案吞吐量，以及當前和未進行並行備份，以及備份以不同的「備份延遲」設定運行，可以發現備份對應用程式吞吐量的影響。
 
-* **延遲設定**  — 在幾種情況下，我們還使用10毫秒（預設值）、1毫秒和0毫秒來更改備份延遲設定，以探討此設定如何影響備份的效能。
-* **備份類型**  — 所有備份都是儲存庫的外部備份，但不建立zip，除非在比較時直接使用tar命令。由於增量備份不能建立到zip檔案，或者當以前的完整備份是zip檔案時，備份目錄方法是生產情況中最常使用的方法。
+* **延遲設定**  — 在幾種情況下，我們還使用10毫秒（預設值）、1毫秒和0毫秒來更改備份延遲設定，以探討此設定如何影響備份效能。
+* **備份類型**  — 所有備份都是儲存庫的外部備份，但不建立zip，除非在比較時直接使用tar命令。 由於增量備份不能建立到zip檔案，或者當以前的完整備份是zip檔案時，備份目錄方法是生產情況中最常使用的方法。
 
 ### 結果摘要 {#summary-of-results}
 
@@ -724,7 +723,7 @@ Load將包含頁面建立/刪除、周遊和查詢，其中大部分的載入來
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
-要比較使用檔案系統備份（使用&#39;tar&#39;）備份同一儲存庫檔案時獲得的吞吐量。 tar的效能可比，但略高於將延遲設為零的備份。 即使設定一個小延遲，也會大大降低備份吞吐量，而10毫秒的預設延遲將大大降低吞吐量。 在備份可能在總體應用程式使用率很低或應用程式完全空閒時進行計畫的情況下，最好將延遲降低到預設值以下，以便允許備份更快地進行。
+要比較使用檔案系統備份（使用&#39;tar&#39;）備份同一儲存庫檔案時獲得的吞吐量。 tar的效能可比，但略高於將延遲設為零的備份。 即使設定一個小延遲，也會大大降低備份吞吐量，而10毫秒的預設延遲會導致吞吐量大大降低。 在備份可能在總體應用程式使用率很低或應用程式完全空閒時進行計畫的情況下，最好將延遲降低到預設值以下，以便允許備份更快地進行。
 
 持續備份的應用程式吞吐量的實際影響取決於應用程式和基礎架構的詳細資訊。 延遲值的選擇應通過應用程式的經驗分析進行，但應盡可能小，以便備份能盡快完成。 由於延遲值的選擇與對應用程式吞吐量的影響之間只存在微弱的關聯，因此選擇延遲應有利於縮短總體備份時間，以最大限度地減少備份的整體影響。 備份需要8小時才能完成，但對吞吐量的影響是–20%，其總體影響可能比完成需要2小時但對吞吐量的影響是–30%的備份大。
 

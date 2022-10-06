@@ -129,7 +129,7 @@ Livefyre for AEM套件包含AEM Communities設定檔與Livefyre SSO服務之間�
 您只能在Livefyre Studio中設定和編輯Livefyre元件。 從AEM:
 
 1. 按一下Livefyre元件以進行設定。
-1. 按一下 **設定** 圖示（扳手）以開啟設定對話方塊。
+1. 按一下 **設定** 圖示（扳手）以開啟「設定」對話方塊。
 1. 按一下 **若要編輯此元件，請前往Livefyre Studio**.
 1. 在Livefyre Studio中編輯應用程式。
 

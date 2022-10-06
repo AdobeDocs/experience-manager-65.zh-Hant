@@ -1,7 +1,8 @@
 ---
 title: 了解內容建模基本知識
 description: 了解使用內容片段為無頭CMS建模內容的基本知識。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: a53fef09-6495-4bb7-8df1-ba3c113d88f6
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '905'
 ht-degree: 4%
@@ -79,7 +80,7 @@ AEM提供下列資料類型，供您建立內容模型：
 * 單行文字
 * 多行文字
 * 數量
-* 布林值 (Boolean)
+* 布林值
 * 日期時間
 * 列舉
 * 標記

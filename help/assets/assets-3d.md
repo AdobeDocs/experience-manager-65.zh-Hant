@@ -1,6 +1,6 @@
 ---
-title: Working with 3D assets in Dynamic Media
-description: Learn how to work with 3D assets in Dynamic Media
+title: 在Dynamic Media中使用3D資產
+description: 了解如何在Dynamic Media中使用3D資產
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
@@ -15,279 +15,280 @@ ht-degree: 2%
 
 ---
 
-# Work with 3D assets in Dynamic Media {#working-with-three-d-assets-dm}
+# 在Dynamic Media中使用3D資產 {#working-with-three-d-assets-dm}
 
-Dynamic Media lets you upload, manage, view, and deliver 3D assets as immersive experiences.
+Dynamic Media可讓您上傳、管理、檢視及傳遞3D資產，盡享沈浸式體驗。
 
-* ****
-* Optimized support for viewing 3D assets with the high-quality, interactive Dimensional viewer preset powered by Adobe Dimension.
-* The 3D Media WCM component lets you easily add 3D assets to your Adobe Experience Manager Sites pages.
+* 按一下發佈(使用 **[!UICONTROL 快速發佈]** （在工具列上）以產生URL。
+* 使用Adobe Dimension提供的高品質互動式維度檢視器預設集，最佳化支援檢視3D資產。
+* 3D Media WCM元件可讓您輕鬆將3D資產新增至Adobe Experience Manager Sites頁面。
 
-There is no additional configuration required to use 3D assets in Dynamic Media.
+在Dynamic Media中使用3D資產不需要額外設定。
 
-![](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)**
+![3d鞋](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png) *三維鞋的細節頁面。*
 
 <!-- See also [Dynamic Media 3D Release Notes](/help/release-notes/aem3d-release-notes.md). -->
 
-## 3D formats supported in Dynamic Media {#supported-three-d-file-formats-in-dm}
+## Dynamic Media支援3D格式 {#supported-three-d-file-formats-in-dm}
 
-Dynamic Media supports the following 3D formats.
+Dynamic Media支援下列3D格式。
 
-[](/help/assets/assets-formats.md)
+另請參閱 [支援3D格式](/help/assets/assets-formats.md).
 
-| 3D file extension | File format | MIME type | 附註 |
+| 3D檔案副檔名 | 檔案格式 | MIME類型 | 附註 |
 |---|---|---|---|
-| GLB | Binary GL Transmission | model/gltf-binary | Includes the materials and textures as a single asset. |
-| OBJ | WaveFront 3D Object File | application/x-tgif |  |
-| STL | Stereolithography | application/vnd.ms-pki.stl |  |
-| USDZ | Universal Scene Description Zip archive | model/vnd.usdz+zip | ** |
+| GLB | 二進位GL傳輸 | 模型/gltf二進位 | 將材料和紋理作為單一資產包含。 |
+| OBJ | WaveFront 3D對象檔案 | application/x-tgif |  |
+| STL | 光固化成形 | application/vnd.ms-pki.stl |  |
+| USDZ | 通用場景描述Zip封存 | model/vnd.usdz+zip | *僅支援擷取；沒有可用的檢視或互動。* USDZ是專屬的3D格式，可由Safari和iOS裝置原生檢視。 |
 
 >[!NOTE]
 >
->The 3D Media WCM component and 3D preview on an asset&#39;s Details page is not compatible with the latest version of Chrome (97.x). Instead, to work with 3D assets, use Firefox or Safari, or use an earlier version of Chrome (96.x).
+>資產的「詳細資料」頁面上的3D Media WCM元件和3D預覽與最新版Chrome(97.x)不相容。 請改為使用3D資產、使用Firefox或Safari，或使用舊版Chrome(96.x)。
 
-## Quick Start: 3D assets in Dynamic Media {#quick-start-three-d}
+## 快速入門：Dynamic Media3D資產 {#quick-start-three-d}
 
-The following step-by-step workflow description is designed to help you get up and running quickly with 3D assets in Dynamic Media - Scene7 mode.
+下列逐步工作流程說明旨在協助您在Dynamic Media - Scene7模式中快速上手並執行3D資產。
 
 >[!IMPORTANT]
 >
->3D assets are not supported in Dynamic Media - Hybrid mode.
+>Dynamic Media — 混合模式不支援3D資產。
 
-Before you work with 3D assets in Dynamic Media, make sure that your Experience Manager administrator has already enabled and configured Dynamic Media Cloud Services in Dynamic Media - Scene7 mode.
+在Dynamic Media中處理3D資產之前，請確定您的Experience Manager管理員已在Dynamic Media - Scene7模式中啟用並設定Dynamic MediaCloud Services。
 
-[](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)[](/help/assets/troubleshoot-dms7.md)
+請參閱 [設定E Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) 在設定Dynamic Media - Scene7模式和 [疑難排解Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md).
 
-1. ****
+1. **上傳3D資產**
 
-   * [](/help/assets/manage-assets.md#uploading-assets)
-   * [](#supported-three-d-file-formats-in-dm)
+   * [上傳要在Dynamic Media中使用的3D資產](/help/assets/manage-assets.md#uploading-assets).
+   * [支援的3D檔案格式，可在Dynamic Media中上傳](#supported-three-d-file-formats-in-dm).
 
-1. ****
+1. **管理3D資產**
 
-   * Organize and search 3D assets
+   * 組織和搜尋3D資產
 
-      * [](/help/assets/organize-assets.md#organize-digital-assets)
-      * [](/help/assets/search-assets.md)
-      * [](/help/assets/search-assets.md#custompredicates)
-   * View 3D assets
+      * [組織數位資產](/help/assets/organize-assets.md#organize-digital-assets).
+      * [搜尋3D資產](/help/assets/search-assets.md).
+      * [使用自訂述詞來篩選搜尋結果](/help/assets/search-assets.md#custompredicates).
+   * 檢視3D資產
 
-      * [](#viewing-three-d-assets)
-      * [](/help/assets/managing-viewer-presets.md)
-   * Work with 3D asset metadata
+      * [檢視及與3D資產互動](#viewing-three-d-assets).
+      * [管理維查看器預設集](/help/assets/managing-viewer-presets.md).
+   * 使用3D資產中繼資料
 
-      * [](/help/assets/metadata.md)
-      * [](/help/assets/metadata-schemas.md)
+      * [管理數位資產的中繼資料](/help/assets/metadata.md).
+      * [中繼資料結構](/help/assets/metadata-schemas.md).
 
 
 
-1. ****
+1. **發佈3D資產**
 
-   * [Publish static Dynamic Media 3D assets](#publishing-three-d-assets)
-   * [Alternate methods for publishing Dynamic Media 3D assets using the Dimensional viewer](#alternate-publish-methods)
+   * [發佈靜態Dynamic Media 3D資產](#publishing-three-d-assets)
+   * [使用維度檢視器發佈Dynamic Media 3D資產的替代方法](#alternate-publish-methods)
 
-## About viewing and interacting with 3D assets {#viewing-three-d-assets}
+## 關於檢視與與3D資產互動 {#viewing-three-d-assets}
 
-This section describes how to view and interact with 3D assets two different ways: from within the asset details page and from within the 3D Media component in Experience Manager Sites.
+本節說明如何以兩種不同的方式檢視及與3D資產互動：從資產詳細資訊頁面內和Experience Manager Sites的3D媒體元件內。
 
-The interactive 3D viewer includes, among other things, a collection of interactive camera controls that let you orbit, zoom, and pan the 3D asset.
+互動式3D檢視器除其他外，還包含一系列互動式相機控制項，可讓您環繞、縮放和平移3D資產。
 
-The time it takes to open a 3D asset in the Asset Details page view depends on several factors. These factors include such things as the following:
+在「資產詳細資料」頁面檢視中開啟3D資產所花的時間，取決於數個因素。 這些因素包括：
 
-* Bandwidth to the server.
-* Latencies to the server
-* Complexity of the image.
+* 到伺服器的頻寬。
+* 伺服器延遲
+* 影像的複雜性。
 
-In addition, the capabilities of the client computer-such as a workstation, notebook, or mobile touch device-are also important to consider when you manipulate the camera interactively. A reasonably powerful system with good graphics capabilities can make the interactive 3D viewing experience smoother and more favorable.
+此外，在交互操作攝像機時，客戶端電腦（如工作站、筆記型電腦或移動觸摸設備）的功能也很重要。 具有良好圖形功能的強大系統可讓互動式3D觀看體驗更流暢、更有利。
 
 >[!TIP]
 >
->You can open the Dimensional viewer preset in the Viewer Preset Editor to practice navigating a 3D asset without the need to first upload any 3D files. The Dimensional viewer preset has a built-in 3D asset for you to interact with.
+>您可以在檢視器預設集編輯器中開啟維度檢視器預設集，以練習導覽3D資產，而不需先上傳任何3D檔案。 「維度」檢視器預設集內建3D資產，供您互動。
 >
->[](/help/assets/managing-viewer-presets.md)
+>請參閱 [管理檢視器預設集](/help/assets/managing-viewer-presets.md).
 
-## View and interact with a 3D asset from the asset details page {#viewing-three-d-assets-from-asset-details-page}
+## 從資產詳細資訊頁面檢視3D資產並與之互動 {#viewing-three-d-assets-from-asset-details-page}
 
-[](/help/assets/previewing-assets.md)
+另請參閱 [使用軟體介面預覽資產](/help/assets/previewing-assets.md).
 
-****
+**若要從資產詳細資訊頁面檢視3D資產並與之互動：**
 
-1. Make sure you have uploaded 3D assets into Experience Manager.
+1. 請確定您已將3D資產上傳至Experience Manager。
 
-   [](/help/assets/manage-assets.md#uploading-assets)
+   請參閱 [上傳要在Dynamic Media中使用的3D資產](/help/assets/manage-assets.md#uploading-assets).
 
-1. ************
-1. ********
-1. Navigate to a 3D asset that you want to view.
-1. Select the card of the 3D asset.
-1. On the details view page for the 3D asset, do any of the following:
+1. 從Experience Manager，在 **[!UICONTROL 導覽]** 頁面，移至 **[!UICONTROL 資產]** > **[!UICONTROL 檔案]**.
+1. 在頁面的右上角附近，從 **[!UICONTROL 檢視]** 下拉清單，選擇 **[!UICONTROL 卡片檢視]**.
+1. 導覽至您要檢視的3D資產。
+1. 選取3D資產的卡片。
+1. 在3D資產的詳細資訊檢視頁面上，執行下列任一操作：
 
-   | 檢視 | 說明 | Mouse action | Touch screen action |
+   | 檢視 | 說明 | 滑鼠動作 | 觸控式螢幕動作 |
    | --- | --- | --- | --- |
-   | **** | 使檢視畫面在 3D 場景和物件周圍環繞 | Left click + drag. | Single-finger press + drag. |
-   | **** | Pan your view left, right, up, or down. | Right click + drag. | Two-finger press + drag. |
-   | **** | Move in and out of areas in the 3D scene. | Scroll wheel. | Two-finger pinch. |
-   | **** | Recenter your camera to a point on an object in the 3D scene. | Double-click. | Double-tap. |
-   | **重設** | Near the lower-right corner of the page, select the Reset icon to restore the view target point to the center of the 3D asset. Reset also moves the camera closer or further away to show the asset in its entirety and at a reasonable viewing size. |  |  |
-   | **** | To enter full screen mode, in the lower-right corner of the page, select the Fullscreen icon. |  |  |
+   | **轉動你的相機** | 使檢視畫面在 3D 場景和物件周圍環繞 | 按一下左鍵+拖曳。 | 用單指按+拖動。 |
+   | **平移您的相機** | 向左、向右、向上或向下平移視圖。 | 按一下右鍵+拖動。 | 用雙指按+拖。 |
+   | **縮放您的相機** | 移入和移出3D場景中的區域。 | 滾輪。 | 雙指夾。 |
+   | **重新輸入您的相機** | 將相機重新輸入到3D場景中某個對象上的某個點。 | 按兩下。 | 按兩下。 |
+   | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點還原到3D資產的中央。 重置還使相機更近或更遠地移開，以便以合理的觀看大小顯示資產的整體。 |  |  |
+   | **全螢幕模式** | 若要進入全螢幕模式，請在頁面的右下角，選取全螢幕圖示。 |  |  |
 
-1. ****
+1. 在頁面的右上角，選取 **[!UICONTROL 關閉]** 返回「資產」頁面。
 
-## Viewing and interacting with a 3D asset inside a 3D Media component {#interacting-with-asset-inside-three-d-media-component}
+## 在3D媒體元件內檢視3D資產並與之互動 {#interacting-with-asset-inside-three-d-media-component}
 
-********
+當網頁位於 **[!UICONTROL 編輯]** 模式，則無法與3D資產互動。 若要讓資產成為互動式，您可以使用 **[!UICONTROL 預覽]** 功能，可在頁面編輯器中檢視網頁，且可完整存取3D媒體元件的功能。
 
 >[!IMPORTANT]
 >
->You can accomplish this task only after you have added a 3D Media component to a web page and assigned a 3D asset to the component. [](#adding-the-three-d-media-component-to-a-web-page)[](#assigning-a-three-d-asset-to-the-component)
+>只有在將3D媒體元件新增至網頁並將3D資產指派至元件後，才能完成此工作。 請參閱 [將3D媒體元件新增至網頁](#adding-the-three-d-media-component-to-a-web-page) 和 [為3D介質元件分配3D資產](#assigning-a-three-d-asset-to-the-component).
 
-[](/help/assets/previewing-assets.md)
+另請參閱 [使用軟體介面預覽資產](/help/assets/previewing-assets.md).
 
-****
+**若要在3D媒體元件內檢視3D資產並與之互動：**
 
-1. ****
+1. 當網頁位於 **[!UICONTROL 編輯]** 模式中，執行下列任一操作：
 
-   * ********
-   * `/editor.html`
+   * 在頁面右上方附近，選取 **[!UICONTROL 預覽]** 輸入 **[!UICONTROL 預覽]** 模式。
+   * 刪除 `/editor.html` 從瀏覽器的頁面URL。
 
-A fully interactive 3D asset as displayed in    ![](/help/assets/assets-dm/3d-asset-in-3d-media.png)****
+完全互動的3D資產，如    ![3D資產顯示在3D媒體元件內](/help/assets/assets-dm/3d-asset-in-3d-media.png)
+完全互動的3D資產，如 **[!UICONTROL 預覽]** 模式。
 
-1. ****
+1. 在 **[!UICONTROL 預覽]** 模式，執行下列任一操作：
 
-   | 檢視 | 說明 | Mouse action | Touch screen action |
+   | 檢視 | 說明 | 滑鼠動作 | 觸控式螢幕動作 |
    | --- | --- | --- | --- |
-   | **** | 使檢視畫面在 3D 場景和物件周圍環繞 | Left click + drag. | Single-finger press + drag. |
-   | **** | Pan your view left, right, up, or down. | Right click + drag. | Two-finger press + drag. |
-   | **** | Move in and out of areas in the 3D scene. | Scroll wheel. | Two-finger pinch. |
-   | **** | Recenter your camera to a point on an object in the 3D scene. | Double-click. | Double-tap. |
-   | **重設** | Near the lower-right corner of the page, select the Reset icon to restore the view target point to the center of the 3D asset. Reset also moves the camera closer or further away to show the asset in its entirety and at a reasonable viewing size. |  |  |
-   | **** | To enter full screen mode, in the lower-right corner of the page, select the Fullscreen icon. |  |  |
+   | **轉動你的相機** | 使檢視畫面在 3D 場景和物件周圍環繞 | 按一下左鍵+拖曳。 | 用單指按+拖動。 |
+   | **平移您的相機** | 向左、向右、向上或向下平移視圖。 | 按一下右鍵+拖動。 | 用雙指按+拖。 |
+   | **縮放您的相機** | 移入和移出3D場景中的區域。 | 滾輪。 | 雙指夾。 |
+   | **重新輸入您的相機** | 將相機重新輸入到3D場景中某個對象上的某個點。 | 按兩下。 | 按兩下。 |
+   | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點還原到3D資產的中央。 重置還使相機更近或更遠地移開，以便以合理的觀看大小顯示資產的整體。 |  |  |
+   | **全螢幕模式** | 若要進入全螢幕模式，請在頁面的右下角，選取全螢幕圖示。 |  |  |
 
-## About working with the 3D Media component {#working-with-three-d-media-component}
+## 關於使用3D媒體元件 {#working-with-three-d-media-component}
 
-Dynamic Media includes a Dynamic Media 3D Media component that you can use in Adobe Experience Manager Sites to enable interactive viewing of 3D models on your web pages.
+Dynamic Media包含Dynamic Media 3D媒體元件，可在Adobe Experience Manager Sites中使用，以互動式檢視網頁上的3D模型。
 
-* [Add the 3D Media component to the page template](#adding-three-d-media-component-to-page-template)
-* [Add the 3D Media component to a web page](#adding-the-three-d-media-component-to-a-web-page)
-   * [Optional - Configure the 3D Media component](#configuring-the-three-d-component)
-* [Assign a 3D asset to the 3D Media component](#assigning-a-three-d-asset-to-the-component)
+* [將3D媒體元件新增至頁面範本](#adding-three-d-media-component-to-page-template)
+* [將3D媒體元件新增至網頁](#adding-the-three-d-media-component-to-a-web-page)
+   * [可選 — 配置3D介質元件](#configuring-the-three-d-component)
+* [將3D資產分配給3D介質元件](#assigning-a-three-d-asset-to-the-component)
 
-## Add the 3D Media component to the page template {#adding-three-d-media-component-to-page-template}
+## 將3D媒體元件新增至頁面範本 {#adding-three-d-media-component-to-page-template}
 
-1. ************
-1. Navigate to the page template that you want to enable the 3D component in and select the template.
-1. ****
-1. ****
+1. 導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 範本]**.
+1. 導航到要在中啟用3D元件的頁面模板，然後選擇該模板。
+1. 選擇 **[!UICONTROL 編輯]** 以便開啟範本。
+1. 在頁面右上方附近，在下拉式功能表中，選取 **[!UICONTROL 結構]** 模式（如果尚未激活）。
 
    ![3d-media-component-structure](/help/assets/assets-dm/3d-media-component-structure.png)
 
-1. ****
-1. ********
-1. ****************
-1. ********
+1. 在 **[!UICONTROL 版面容器]** 區域，以便您選取它並開啟其相關的工具列。
+1. 在工具列上，選取 **[!UICONTROL 原則]** 圖示以開啟 **[!UICONTROL 策略編輯器]**.
+1. 在 **[!UICONTROL 屬性]** 部分，在 **[!UICONTROL 允許的元件]** 頁簽，滾動到 **[!UICONTROL Dynamic Media]**，然後展開清單並檢查 **[!UICONTROL 3D媒體]**.
+1. 選擇 **[!UICONTROL 完成]** 儲存變更並關閉 **[!UICONTROL 策略編輯器]**.
 
-   You can now place the Dynamic Media 3D Media component on all pages that use this template.
+   您現在可以將Dynamic Media 3D媒體元件放置在使用此範本的所有頁面上。
 
-## Add the 3D Media component on a web page {#adding-the-three-d-media-component-to-a-web-page}
+## 在網頁上新增3D媒體元件 {#adding-the-three-d-media-component-to-a-web-page}
 
-If you use Experience Manager as your web content management system, you can add 3D assets to your web pages by way of the 3D Media component.
+如果您使用Experience Manager作為網頁內容管理系統，則可以通過3D媒體元件將3D資產添加到網頁。
 
-[](/help/assets/adding-dynamic-media-assets-to-pages.md)
+另請參閱 [在頁面上新增Dynamic Media資產](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
-****
+**要在網頁上添加3D介質元件：**
 
-1. Open Experience Manager Sites and select the web page to which you want to add the Dynamic Media 3D Media component.
-1. ********
+1. 開啟Experience Manager Sites，然後選取您要新增Dynamic Media 3D媒體元件的網頁。
+1. 選取 **[!UICONTROL 編輯]** （鉛筆）圖示，讓您可以在頁面編輯器中開啟頁面。 確保 **[!UICONTROL 編輯]** 在頁面右上角附近選取「模式」。
 
    ![3d-media-component-add](/help/assets/assets-dm/3d-media-component-edit.png)
 
-1. On the toolbar, select the Side Panel icon to toggle or &quot;turn on&quot; the display of the panel.
+1. 在工具欄上，選擇「側面板」表徵圖以切換或「開啟」面板的顯示。
 
-1. ****
+1. 在側面板中，選取加號圖示以開啟 **[!UICONTROL 元件]** 清單。
 
    ![3d-media-component-drag-drop](/help/assets/assets-dm/3d-assets-filter.png)
 
-1. ********
+1. 拖曳 **[!UICONTROL 3D媒體]** 元件 **[!UICONTROL 元件]** 清單到您希望3D查看器顯示的頁面上的位置。
 
-You are now ready to assign a 3D asset to the component.
+您現在可以將3D資產指派給元件。
 
-[](#assigning-a-three-d-asset-to-the-component)
+請參閱 [將3D資產分配給3D介質元件](#assigning-a-three-d-asset-to-the-component).
 
-### Optional - Configure the 3D Media component {#configuring-the-three-d-component}
+### 可選 — 配置3D介質元件 {#configuring-the-three-d-component}
 
-1. ****
-1. ****
+1. 在Experience Manager Sites頁面編輯器中，選取 **[!UICONTROL 3D媒體查看器]** 元件。
+1. 選取 **[!UICONTROL 設定]** 圖示（扳手），以開啟元件設定對話方塊。
 
    ![3d-media-component-config](/help/assets/assets-dm/3d-media-component-config.png)
 
-1. ****
+1. 在「3D媒體」(3D Media)對話框中，從「查看器預設集」(Viewer Preset)下拉清單中，選擇 **[!UICONTROL 維度]** 將「維」查看器預設集分配給元件。
 
    ![3d-media-component-edit-config](/help/assets/assets-dm/3d-media-component-edit-config.png)
 
-1. In the upper-right corner, select the check mark to save your changes.
+1. 在右上角選取核取記號以儲存變更。
 
-## Assign a 3D asset to the 3D Media component {#assigning-a-three-d-asset-to-the-component}
+## 將3D資產分配給3D介質元件 {#assigning-a-three-d-asset-to-the-component}
 
-After you have added a 3D Media component to a web page, you can assign a 3D asset to it.
+將3D媒體元件新增至網頁後，您就可以指派3D資產給該頁面。
 
-[](#adding-the-three-d-media-component-to-a-web-page)
+請參閱 [將3D媒體元件新增至網頁](#adding-the-three-d-media-component-to-a-web-page).
 
-****
+**要將3D資產分配給3D介質元件，請執行以下操作：**
 
-1. ********
-1. ****
-1. In the side panel, search for or scroll to the 3D asset that you want to view on the page being edited.
-1. ****
+1. 在Experience Manager Sites頁面編輯器中，選取 **[!UICONTROL 資產]** 表徵圖 **[!UICONTROL 資產]** 在側面板中。
+1. 在下拉式清單中，選取 **[!UICONTROL 3D]** 僅顯示3D資產檔案類型。
+1. 在側面板中，搜索或滾動到要在正在編輯的頁面上查看的3D資產。
+1. 從「資產」側面板拖曳3D資產，並將其拖曳至 **[!UICONTROL 3D媒體]** 元件。
 
-   ![](/help/assets/assets-dm/3d-asset-add.png)
+   ![將3D資產分配給3D介質元件](/help/assets/assets-dm/3d-asset-add.png)
 
 >[!NOTE]
 >
->********
+>當網頁位於Experience Manager Sites **[!UICONTROL 編輯]** 模式中，3D媒體元件會顯示3D資產，但無法與資產互動。 若要讓資產成為互動式，您可以使用 **[!UICONTROL 預覽]** 功能，可在頁面編輯器中檢視網頁，且可完整存取3D媒體元件的功能。
 
-## Publish static Dynamic Media 3D assets {#publishing-three-d-assets}
+## 發佈靜態Dynamic Media 3D資產 {#publishing-three-d-assets}
 
-**** The reason is because Dynamic Media Imaging Server does not recognize 3D formats. As such, after you publish a 3D asset in Dynamic Media, you have an instant URL that you can copy. The URL for the 3D asset follows the usual Dynamic Media URL structure. However, you cannot edit any parameters in the asset&#39;s URL, unlike traditional image assets in Dynamic Media.
+Dynamic Media接受各種支援的3D檔案格式 *靜態內容* 在Dynamic Media。 靜態內容表示您可以上傳和發佈3D資產，但不支援 *變數成像* 或與3D資產相關聯的影像重新整理。 原因在於Dynamic Media Imaging Server無法識別3D格式。 因此，在Dynamic Media中發佈3D資產後，您就可以複製即時URL。 3D資產的URL會遵循一般的Dynamic Media URL結構。 不過，您無法編輯資產URL中的任何參數，這與Dynamic Media中的傳統影像資產不同。
 
-[](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-a-static-asset)
+另請參閱 [取得靜態資產的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-a-static-asset).
 
-****&#x200B;在「清 **[!UICONTROL 單檢視]**」中，「已發佈」 **** 欄會指出已發佈或未發佈的資產。
+在 **[!UICONTROL 卡片檢視]**，資產名稱正下方及日期與時間左側會顯示一個小型全球圖示，以指出資產已發佈。 在「清 **[!UICONTROL 單檢視]**」中，「已發佈」 **** 欄會指出已發佈或未發佈的資產。
 
-If you use Experience Manager as your WCM, use this publishing method to add the Dynamic Media 3D assets directly on your web page.
+如果您使用Experience Manager作為WCM，請使用此發佈方法直接在網頁上新增Dynamic Media 3D資產。
 
-[](publishing-dynamicmedia-assets.md)
+另請參閱 [發佈Dynamic Media資產](publishing-dynamicmedia-assets.md).
 
-[](/help/sites-authoring/publishing-pages.md)
+另請參閱 [發佈頁面](/help/sites-authoring/publishing-pages.md).
 
-****
+**若要發佈靜態Dynamic Media 3D資產：**
 
-1. Open a 3D asset (GLB, OBJ, or STL file format) so you can view it in the asset details page.
-1. ****
+1. 開啟3D資產（GLB、OBJ或STL檔案格式），以便在資產詳細資訊頁面中查看。
+1. 在工具列上，選取 **[!UICONTROL 快速發佈]**.
 
    ![3d-asset-quick-publish](/help/assets/assets-dm/3d-asset-quick-publish.png)
 
-1. ****
-1. ****
+1. 選擇 **[!UICONTROL 關閉]** 退出對話方塊並返回資產詳細資訊頁面。
+1. 從3D資產檔案名稱左側的下拉式清單中，選取 **[!UICONTROL 轉譯]**.
 
    ![3d-asset-renditions](/help/assets/assets-dm/3d-asset-renditions.png)
 
-1. ********
-   * The 3D asset is a supported format (GLB, OBJ, STL, and USDZ).
-   * The 3D asset was ingested into the Dynamic Media Image Production System (IPS).
-   * The 3D asset is published.
+1. 選擇 **[!UICONTROL 原始]**. 3D資產發佈（或「啟用」）時， **[!UICONTROL URL]** 按鈕會出現在頁面左下角附近（如果符合下列所有3D資產條件）:
+   * 3D資產是支援的格式（GLB、OBJ、STL和USDZ）。
+   * 3D資產已擷取至Dynamic Media影像生產系統(IPS)。
+   * 3D資產已發佈。
 
    ![3d-asset-url](/help/assets/assets-dm/3d-asset-url.png)
 
-1. ****
+1. 選擇 **[!UICONTROL URL]** 以便顯示3D資產的直接生產URL，您可以複製該URL並用於網頁。
 
-### Alternate methods for publishing Dynamic Media 3D assets using the Dimensional viewer {#alternate-publish-methods}
+### 使用維度檢視器發佈Dynamic Media 3D資產的替代方法 {#alternate-publish-methods}
 
-**
+若您有，請使用下列兩種方法來發佈Dynamic Media 3D資產 *not* 使用Experience Manager作為WCM。
 
-* ********
+* **[!UICONTROL URL]**  — 使用 **[!UICONTROL URL]** 如果您使用協力廠商網頁內容管理系統，且您想使用維度檢視器將Dynamic Media 3D資產連結至網頁。
 
-   [](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)
+   請參閱 [將URL連結至您的Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset).
 
-* ********&#x200B;您可將內嵌代碼複製到剪貼簿，以便貼到網頁中。****
+* **[!UICONTROL 內嵌]**  — 使用 **[!UICONTROL 內嵌]** 當您想要使用「維度」檢視器檢視內嵌在網頁上的Dynamic Media 3D資產時。 您可將內嵌代碼複製到剪貼簿，以便貼到網頁中。中不允許編輯程式碼 **[!UICONTROL 內嵌]** 對話框。
 
-   [](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page)
+   請參閱 [將Dynamic Media視訊、影像檢視器或維度檢視器內嵌在網頁上](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page).

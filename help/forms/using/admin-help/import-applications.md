@@ -1,8 +1,8 @@
 ---
 title: 導入和管理應用程式
-seo-title: 導入和管理應用程式
+seo-title: Import and manage applications
 description: 了解如何匯入和管理應用程式。
-seo-description: 了解如何匯入和管理應用程式。
+seo-description: Learn how to import and manage applications.
 uuid: 7fba6c4e-1a3e-4a4b-9201-acf2ff66a9df
 contentOwner: admin
 content-type: reference
@@ -12,16 +12,16 @@ discoiquuid: dc53a6d0-317a-4abd-990c-455e13f8b824
 exl-id: f17726c0-3591-4d25-a8b5-3a7024249a56
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
 
 # 導入和管理應用程式{#import-and-manage-applications}
 
-在AEM表單中， *application*&#x200B;是儲存實作AEM表單解決方案所需資產的容器。 資產的範例包括表單設計、表單片段、影像、處理、DDX檔案、表單指南、HTML頁面和SWF檔案。 在專案的開發階段期間，Workbench使用者可以直接從Workbench的「應用程式」檢視部署應用程式。 部署後，這些應用程式將顯示在管理控制台中的「應用程式管理」頁的「應用程式」頁簽上。
+在AEM表單中， *應用程式* 是儲存實作AEM表單解決方案所需資產的容器。 資產的範例包括表單設計、表單片段、影像、程式、DDX檔案、表單指南、HTML頁面和SWF檔案。 在專案的開發階段期間，Workbench使用者可以直接從Workbench的「應用程式」檢視部署應用程式。 部署後，這些應用程式將顯示在管理控制台中的「應用程式管理」頁的「應用程式」頁簽上。
 
-當應用程式完成並準備好部署至生產伺服器時，Workbench使用者會將應用程式封裝至&#x200B;*AEM表單應用程式檔案*(.lca)中。 然後，管理員使用管理控制台，使用「應用程式管理」頁上的「應用程式」頁簽導入和部署應用程式檔案。
+當應用程式完成並準備好部署至生產伺服器時，Workbench使用者會將應用程式封裝至 *AEM forms應用程式檔案* (.lca)。 然後，管理員使用管理控制台，使用「應用程式管理」頁上的「應用程式」頁簽導入和部署應用程式檔案。
 
 您也可以使用「應用程式管理」頁面上的封存標籤，匯入使用Workbench 8.x建立的LCA。
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 * 端點配置設定
 * 安全設定檔
 
-## 導入應用程式或存檔{#import-an-application-or-archive}
+## 匯入應用程式或封存 {#import-an-application-or-archive}
 
 1. 在管理控制台中，按一下「服務」>「應用程式和服務」>「應用程式管理」。
 1. 按一下「匯入」。
@@ -55,9 +55,9 @@ ht-degree: 0%
 
    右側的「屬性」頁簽顯示所選CRX節點的屬性。
 
-   **syncState**&#x200B;屬性指示AEM表單伺服器與CRX存放庫之間資料同步的狀態。 匯入程式一開始，此狀態就會設為0（零）。 此狀態表示資料當前未同步。 資料同步時，狀態會設為1。
+   此 **syncState** 屬性會指出AEM表單伺服器與CRX存放庫之間資料的同步狀態。 匯入程式一開始，此狀態就會設為0（零）。 此狀態表示資料當前未同步。 資料同步時，狀態會設為1。
 
-## 部署應用程式{#deploy-an-application}
+## 部署應用程式 {#deploy-an-application}
 
 您可以部署已匯入的應用程式，或從Workbench匯入的Workbench使用者。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 1. 選中要部署的應用程式旁的複選框，然後按一下「部署」。
 1. 在顯示的確認對話方塊中，按一下確定。
 
-## 取消部署應用程式{#undeploy-an-application}
+## 取消部署應用程式 {#undeploy-an-application}
 
 您可以從執行階段取消部署應用程式。
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 1. 選中要取消部署的應用程式旁邊的複選框，然後按一下取消部署。
 1. 在顯示的確認對話方塊中，按一下確定。
 
-## 從伺服器{#remove-an-application-from-the-server}中刪除應用程式
+## 從伺服器中刪除應用程式 {#remove-an-application-from-the-server}
 
 先取消部署應用程式，然後再從伺服器中刪除它。
 
@@ -81,17 +81,17 @@ ht-degree: 0%
 1. 選取您要移除之應用程式旁的核取方塊，然後按一下「移除」 。
 1. 在顯示的確認對話方塊中，按一下確定。
 
-## 導入應用程式的運行時配置{#import-an-application-s-runtime-configuration}
+## 匯入應用程式的執行階段設定 {#import-an-application-s-runtime-configuration}
 
 如果應用程式管理員導出了應用程式的運行時配置，則可以將其導入已部署的應用程式。 您可以使用管理控制台或通過指令碼式LCA部署導入它。
 
 1. 在管理控制台中，按一下「服務」>「應用程式和服務」>「應用程式管理」。
 1. 按一下應用程式的名稱。
-1. 按一下「導入運行時配置」。
+1. 按一下「導入運行時配置」(Import Runtime Config)。
 1. 按一下「瀏覽」，然後選擇包含運行時配置的XML檔案。
 1. 按一下「匯入」。
 
-## 導出應用程式的運行時配置{#export-an-application-s-runtime-configuration}
+## 導出應用程式的運行時配置 {#export-an-application-s-runtime-configuration}
 
 您可以導出已部署應用程式的運行時配置資訊。
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 1. 按一下應用程式的名稱。
 1. 按一下「導出運行時配置」(Export Runtime Config)，並保存生成的配置檔案(XML)。
 
-## AEM表單應用程式的指令碼部署{#scripted-deployment-of-aem-forms-applications}
+## AEM表單應用程式的指令碼部署 {#scripted-deployment-of-aem-forms-applications}
 
 您也可以使用指令碼部署工具來部署應用程式檔案，包括指定以下設定的settings.xml檔案：
 
@@ -110,7 +110,7 @@ ht-degree: 0%
 
 指令碼部署無需在啟動部署的應用程式之前手動重新配置生產環境中的設定。
 
-1. 從命令提示字元，導覽至&#x200B;*[aem-forms根]*/sdk/misc/Foundation/ArchiveManagement。
+1. 從命令提示字元導覽至 *[aem-forms根]*/sdk/misc/Foundation/ArchiveManagement。
 1. 查看ReadMe.txt檔案，以獲取更詳細的說明。
 1. 如readme.txt檔案所述，手動修改scriptedDeploy.bat和sample-files/sample.xml檔案。
 1. 運行scriptedDeploy.bat檔案。 此動作會部署AEM表單封存檔案及覆寫設定。

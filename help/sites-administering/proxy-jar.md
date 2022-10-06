@@ -1,8 +1,8 @@
 ---
 title: 代理伺服器工具(proxy.jar)
-seo-title: 代理伺服器工具(proxy.jar)
+seo-title: Proxy Server Tool (proxy.jar)
 description: 了解AEM中的Proxy伺服器工具。
-seo-description: 了解AEM中的Proxy伺服器工具。
+seo-description: Learn about the Proxy Server Tool in AEM.
 uuid: 2fc1df24-8d5a-4be7-83fa-238ae65591b0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1161'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 例如，您可以在通過TCP/IP網路通信的任何兩個應用程式之間定位代理伺服器；例如網頁瀏覽器和AEM。 這可讓您監控要求AEM頁面時的確切情況。
 
-## 啟動代理伺服器工具{#starting-the-proxy-server-tool}
+## 啟動代理伺服器工具 {#starting-the-proxy-server-tool}
 
 此工具可在AEM安裝程式的/opt/helpers資料夾中找到。 要啟動它，請鍵入：
 
@@ -46,13 +46,13 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 
 ### 選項 {#options}
 
-* **q（安靜模式）** 不會將請求寫入主控台視窗。如果您不想減緩連線速度，或將輸出記錄到檔案（請參閱 — logfile選項），請使用此選項。
-* **b（二進位模式）** 如果您要在流量中尋找特定位元組組合，請啟用二進位模式。輸出將包含十六進位和字元輸出。
-* **t（時間戳記記錄項目）** 向每個記錄輸出新增時間戳記。時間戳記以秒為單位，因此可能不適合檢查單一請求。 如果您使用代理伺服器的時間較長，則可使用它查找在特定時間發生的事件。
-* **logfile( &lt;filename> 寫入日誌檔案)** 將客戶端伺服器對話寫入日誌檔案。此參數也可在安靜模式下運作。
-* **i( &lt;numindentions> 新增縮排)** 每個作用中的連線都會縮排，以提高可讀性。預設為16個層級。 （proxy.jar 1.16版中的新功能）。
+* **q（靜默模式）** 不會將請求寫入主控台視窗。 如果您不想減緩連線速度，或將輸出記錄到檔案（請參閱 — logfile選項），請使用此選項。
+* **b（二進位模式）** 如果要在流量中查找特定的位元組組合，請啟用二進位模式。 輸出將包含十六進位和字元輸出。
+* **t（時間戳記記錄項）** 將時間戳添加到每個日誌輸出。 時間戳記以秒為單位，因此可能不適合檢查單一請求。 如果您使用代理伺服器的時間較長，則可使用它查找在特定時間發生的事件。
+* **記錄檔 &lt;filename> （寫入日誌檔案）** 將客戶端 — 伺服器對話寫入日誌檔案。 此參數也可在安靜模式下運作。
+* **i &lt;numindentions> （添加縮進）** 每個作用中的連線都會縮排，以提高可讀性。 預設為16個層級。 （proxy.jar 1.16版中的新功能）。
 
-## 使用代理伺服器工具{#uses-of-the-proxy-server-tool}
+## 使用代理伺服器工具 {#uses-of-the-proxy-server-tool}
 
 下列案例說明了可以使用代理伺服器工具的一些用途：
 
@@ -64,7 +64,7 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 C-6-#000635 -> [Cookie: cq3session=7e39bc51-ac72-3f48-88a9-ed80dbac0693; Show=ShowMode; JSESSIONID=68d78874-cabf-9444-84a4-538d43f5064d ]
 ```
 
-**檢查標題及其** 值以下日誌條目示例顯示伺服器能夠建立保持活動連接，並且內容長度標題已正確設定：
+**檢查標題及其值** 以下日誌條目示例說明伺服器能夠建立保持活動連接，並且內容長度標頭已正確設定：
 
 ```xml
 S-7-#000017 -> [Connection: Keep-Alive ]
@@ -74,7 +74,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **檢查「保留」是否有效**
 
-**「保留** 」表示客戶端重新使用與伺服器的連接來傳輸多個檔案（頁碼、圖片、樣式表等）。若不保持運作，用戶端必須為每個請求建立新連線。
+**保存** 表示用戶端會重新使用與伺服器的連線來傳輸多個檔案（頁面程式碼、圖片、樣式表等）。 若不保持運作，用戶端必須為每個請求建立新連線。
 
 檢查保持活動是否有效：
 
@@ -100,7 +100,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 1. 等待或將訪問日誌寫入檔案 — 每個條目都有時間戳。
 1. 當請求開始掛起時，您可以查看已開啟的連接數，以及哪個請求導致了問題。
 
-## 日誌消息的格式{#the-format-of-log-messages}
+## 記錄訊息的格式 {#the-format-of-log-messages}
 
 proxy.jar產生的記錄項目皆具有下列格式：
 
@@ -117,7 +117,7 @@ C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]
 * C表示此項目來自用戶端（這是網頁的要求）
 * 0是連接號（連接計數器從0開始）
 * # 00000位元組資料流中的偏移。 這是第一個條目，因此偏移為0。
-* [GET &lt;?>] 是請求的內容，在其中一個HTTP標題(url)的範例中。
+* [GET &lt;?>] 是要求的內容，在其中一個HTTP標題(url)的範例中。
 
 當連線關閉時，會記錄下列資訊：
 
@@ -128,7 +128,7 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 
 這顯示在第6個連接上以平均速度在客戶端和伺服器之間傳遞的位元組數。
 
-## 日誌輸出{#an-example-of-log-output}的示例
+## 記錄輸出的範例 {#an-example-of-log-output}
 
 我們將審核一個簡單模板，該模板在請求時生成以下代碼：
 
@@ -150,7 +150,7 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 java -jar proxy.jar localhost 4303 4444 -logfile test.log
 ```
 
-您可以不使用代理伺服器訪問伺服器(`localhost:4303`)，但如果通過`localhost:4444`訪問該伺服器，則代理伺服器將記錄該通信。 開啟瀏覽器並存取使用上述範本建立的頁面。 之後，查看記錄檔。
+您可以存取伺服器(`localhost:4303`)，但若您透過 `localhost:4444`，代理伺服器將記錄通訊。 開啟瀏覽器並存取使用上述範本建立的頁面。 之後，查看記錄檔。
 
 >[!NOTE]
 >
@@ -163,7 +163,7 @@ starting proxy for localhost:4303 on port 4444
 using logfile: C:\CQUnify355default\opt\helpers\test.log
 ```
 
-在請求主HTML頁面的第一個連接(0)的開頭列出了以下標題欄位：
+第一個連接(0)的開頭列出了以下標題欄位，它請求主HTML頁：
 
 ```xml
 C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102936796533 HTTP/1.1 ]
@@ -204,7 +204,7 @@ S-0-#000158 -> [Set-Cookie: JSESSIONID=4161a56b-f193-d8-88a5-e09c5ff7ef2a;Path=/
 S-0-#000232 -> [ ]
 ```
 
-在此，伺服器會開始在連線0上傳送HTML程式碼：
+在此，伺服器會開始在連線0上傳送HTML代碼：
 
 ```xml
 S-0-#000234 -> [<html> ]
@@ -218,14 +218,14 @@ S-0-#000357 -> [.</body> ]
 S-0-#000367 -> [</html>]
 ```
 
-HTML檔案提供後，連線0會立即關閉：
+提供HTML檔案後，連接0立即關閉：
 
 ```xml
 C-0-Finished: 516 bytes (0.0 kb/s)
 S-0-Finished: 374 bytes (0.0 kb/s)
 ```
 
-現在，連線1的輸出會開始，而連線1會下載HTML程式碼中的影像：
+現在，連線1的輸出會開始，而連線1會下載HTML程式碼中包含的影像：
 
 ```xml
 C-1-#000000 -> [GET /author/logo.gif HTTP/1.1 ]
@@ -278,7 +278,7 @@ C-1-Finished: 403 bytes (0.0 kb/s)
 
 上述範例相對簡單，因為兩個連線會依序發生：
 
-* 首先，伺服器會傳回HTML程式碼
+* 首先，伺服器返回HTML代碼
 * 接著瀏覽器會要求影像並開啟新連線
 
 實際上，頁面可能會針對影像、樣式表、JavaScript檔案等產生許多平行請求。 這表示記錄檔具有重疊的並行開啟連線項目。 在此情況下，我們建議使用選項 — i來改善可讀性。

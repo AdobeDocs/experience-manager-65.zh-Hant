@@ -1,7 +1,7 @@
 ---
 title: 管理專案
 seo-title: Managing Projects
-description: 項目允許您通過將資源分組到一個實體中來組織項目，該實體可在Projects控制台中訪問和管理
+description: 專案可讓您將資源分組為一個可在「專案」主控台中存取和管理的實體，借此組織專案
 seo-description: Projects lets you organize your project by grouping resources into one entity which can be acessed and managed intheProjects console
 uuid: ac937582-181f-429b-9404-3c71d1241495
 contentOwner: Guillaume Carlino
@@ -20,146 +20,146 @@ ht-degree: 1%
 
 # 管理專案 {#managing-projects}
 
-在 **項目** 控制台，您可以訪問和管理項目。
+在 **專案** 主控台，您可以存取和管理您的專案。
 
-![項目控制台](assets/projects-console.png)
+![專案主控台](assets/projects-console.png)
 
-使用控制台，您可以建立項目、將資源與項目關聯，還可以刪除項目或資源連結。
+使用控制台，您可以建立專案、將資源與專案建立關聯，以及刪除專案或資源連結。
 
-## 訪問要求 {#access-requirements}
+## 存取需求 {#access-requirements}
 
-項目標準AEM功能，不需要任何附加設定。
+專案標準AEM功能，不需要任何額外設定。
 
-但是，對於項目中的用戶在使用項目時要查看其他用戶/組，例如在建立項目、建立任務/工作流或查看和管理團隊時，這些用戶需要具有對的讀取權限 `/home/users` 和 `/home/groups`。
+不過，若要讓專案中的使用者在使用專案時查看其他使用者/群組（例如建立專案、建立工作/工作流程或檢視和管理團隊時），這些使用者必須具有讀取存取權 `/home/users` 和 `/home/groups`.
 
-最簡單的方法就是 **項目用戶** 組讀取訪問權限 `/home/users` 和 `/home/groups`。
+最簡單的方法就是 **專案 — 使用者** 群組讀取存取權 `/home/users` 和 `/home/groups`.
 
-## 建立項目 {#creating-a-project}
+## 建立專案 {#creating-a-project}
 
-按照以下步驟建立新項目。
+請依照下列步驟建立新專案。
 
-1. 在 **項目** 控制台，點擊或按一下 **建立** 開啟 **建立項目** 的子菜單。
-1. 選擇模板並按一下 **下一個**。 您可以瞭解有關標準項目模板的詳細資訊 [給。](/help/sites-authoring/projects.md#project-templates)
+1. 在 **專案** 主控台，點選或按一下 **建立** 開啟 **建立專案** 嚮導。
+1. 選取範本，然後按一下 **下一個**. 您可以進一步了解標準專案範本 [這裡。](/help/sites-authoring/projects.md#project-templates)
 
-   ![建立項目嚮導](assets/create-project-wizard.png)
+   ![建立專案精靈](assets/create-project-wizard.png)
 
-1. 定義 **標題** 和 **說明** 並添加 **縮略圖** 影像。 您還可以添加或刪除用戶及其所屬的組。
+1. 定義 **標題** 和 **說明** 並新增 **縮圖** 影像（如果需要）。 您也可以新增或刪除使用者，以及使用者所屬的群組。
 
    ![嚮導的屬性步驟](assets/create-project-wizard-properties.png)
 
-1. 點擊/按一下 **建立**。 確認會詢問您是要開啟新項目還是要返回控制台。
+1. 點選/按一下 **建立**. 確認會詢問您是否要開啟新專案或返回主控台。
 
-建立項目的過程與所有項目模板的過程相同。 項目類型之間的差異與可用項目有關 [用戶角色](/help/sites-authoring/projects.md) 和 [工作流。](/help/sites-authoring/projects-with-workflows.md)
+所有專案範本的建立程式都相同。 項目類型之間的差異與可用項目有關 [使用者角色](/help/sites-authoring/projects.md) 和 [工作流程。](/help/sites-authoring/projects-with-workflows.md)
 
-### 將資源與項目關聯 {#associating-resources-with-your-project}
+### 將資源與您的專案關聯 {#associating-resources-with-your-project}
 
-項目使您能夠將資源分組到一個實體中，以便將資源作為一個整體進行管理。 因此，您需要將資源與項目關聯。 這些資源在項目中分組為 **磁貼**。 可添加的資源類型在中介紹 [項目磁貼](/help/sites-authoring/projects.md#project-tiles)。
+專案可讓您將資源分組為一個實體，以便將其整體管理。 因此，您需要將資源與專案建立關聯。 這些資源在專案中分組為 **圖磚**. 可新增的資源類型於 [專案圖磚](/help/sites-authoring/projects.md#project-tiles).
 
-要將資源與項目關聯，請執行以下操作：
+將資源與項目關聯：
 
-1. 從 **項目** 控制台。
-1. 點擊/按一下 **添加磁貼** 並選擇要連結到項目的磁貼。 可以選擇多種類型的磁貼。
+1. 從 **專案** 控制台。
+1. 點選/按一下 **添加磁貼** 並選取您要連結至專案的圖磚。 您可以選取多種圖磚類型。
 
    ![添加磁貼](assets/project-add-tile.png)
 
-1. 點擊/按一下 **建立**。 您的資源已連結到您的項目，從現在開始，您可以從您的項目訪問它。
+1. 點選/按一下 **建立**. 您的資源已連結至專案，從現在開始，您就可以從專案存取。
 
-### 將項目添加到磁貼 {#adding-items-to-a-tile}
+### 將項目新增至圖磚 {#adding-items-to-a-tile}
 
-在某些磁貼中，您可能想添加多個項。 例如，您可能同時運行多個工作流或多次運行一次。
+在某些圖磚中，您可能想要新增多個項目。 例如，您可能一次執行多個工作流程或執行多個體驗。
 
-要將項目添加到磁貼：
+若要將項目新增至圖磚：
 
-1. 在 **項目**，導航到項目，然後按一下要向其中添加項目的磁貼右上角的向下雪佛龍表徵圖，並選擇相應的選項。
+1. 在 **專案**，導覽至專案，然後按一下您要新增項目的圖磚右上角的向下>形圖示，並選取適當的選項。
 
-   * 該選項取決於磁貼的類型。 例如，它可能 **建立任務** 為 **任務** 拼貼 **啟動工作流** 為 **工作流** 平鋪。
+   * 選項取決於圖磚的類型。 例如，它可能是 **建立任務** 針對 **工作** 拼貼或 **開始工作流程** 針對 **工作流程** 方塊。
 
-   ![瓦形](assets/project-tile-create-task.png)
+   ![Tile雪佛龍](assets/project-tile-create-task.png)
 
-1. 將項目添加到磁貼中，與建立新磁貼時一樣。 描述了項目磁貼 [給。](/help/sites-authoring/projects.md#project-tiles)
+1. 將項目新增至圖磚，如同建立新圖磚時一樣。 說明專案圖磚 [這裡。](/help/sites-authoring/projects.md#project-tiles)
 
 ## 查看項目資訊 {#viewing-project-info}
 
-項目的主要目的是將相關資訊分組到一個地方，使其更易於訪問和操作。 您有多種訪問此資訊的方法。
+專案的主要用途是將相關資訊群組在一個地方，讓資訊更方便存取且易於操作。 您有許多存取此資訊的方法。
 
 ### 開啟磁貼 {#opening-a-tile}
 
-您可能希望查看當前磁貼中包含哪些項目，或修改或刪除磁貼中的項目。
+您可能想要查看當前表徵圖中包含的項目，或修改或刪除表徵圖中的項目。
 
-要開啟磁貼，以便查看或修改項目：
+要開啟圖磚，以便查看或修改項目：
 
-1. 點擊或按一下磁貼右下角的橢圓表徵圖。
+1. 點選或按一下圖磚右下方的點圖示。
 
-   ![任務平鋪](assets/project-tile-tasks.png)
+   ![任務表徵圖](assets/project-tile-tasks.png)
 
-1. 打AEM開控制台，查看與磁貼關聯的項目類型以及基於所選項目的篩選器。
+1. AEM會開啟主控台，顯示與圖磚相關聯的項目類型，並根據選取的專案進行篩選。
 
-   ![項目任務](assets/project-tasks.png)
+   ![專案任務](assets/project-tasks.png)
 
-### 查看項目時間線 {#viewing-a-project-timeline}
+### 檢視專案時間軸 {#viewing-a-project-timeline}
 
-項目時間表提供有關上次使用項目中資產的時間的資訊。 要查看項目時間線，請執行以下步驟。
+專案時間軸提供上次使用專案中資產的時間。 要查看項目時間表，請按照以下步驟操作。
 
-1. 在 **項目** 控制台，按一下或點擊 **時間軸** 在控制台左上角的滑軌選擇器中。
-   ![選擇時間線模式](assets/projects-timeline-rail.png)
-2. 在控制台中，選擇要查看其時間線的項目。
-   ![項目時間線視圖](assets/project-timeline-view.png)
+1. 在 **專案** 主控台，按一下或點選 **時間表** 在主控台左上角的邊欄選取器中。
+   ![選擇時間軸模式](assets/projects-timeline-rail.png)
+2. 在主控台中，選取您要檢視其時間軸的專案。
+   ![項目時間軸視圖](assets/project-timeline-view.png)
 
-資產顯示在鐵軌中。 完成後，使用滑軌選擇器返回到普通視圖。
+資產會顯示在邊欄中。 完成後，使用邊欄選取器返回一般檢視。
 
-### 查看非活動項目 {#viewing-active-inactive-projects}
+### 檢視非作用中專案 {#viewing-active-inactive-projects}
 
-在活動和 [非活動項目，](#making-projects-inactive-or-active) 的 **項目** 控制台，按一下 **切換活動項目** 的子菜單。
+在使用中和之間切換 [非作用中專案，](#making-projects-inactive-or-active) 在 **專案** 主控台，按一下 **切換作用中的專案** 圖示。
 
-![切換活動項目表徵圖](assets/projects-toggle-active.png)
+![切換作用中的專案圖示](assets/projects-toggle-active.png)
 
-預設情況下，控制台顯示活動項目。 按一下 **切換活動項目** 表徵圖以切換到查看非活動項目。 再次按一下它以切換回活動項目。
+依預設，主控台會顯示使用中的專案。 按一下 **切換作用中的專案** 圖示切換至檢視非使用中專案。 再按一下，以切換回使用中的專案。
 
-## 組織項目 {#organizing-projects}
+## 組織專案 {#organizing-projects}
 
-有幾個選項可幫助您組織項目以保留 **項目** 控制台可管理。
+有數個選項可協助組織您的專案，以保留 **專案** 主控台可管理。
 
-### 項目資料夾 {#project-folders}
+### 專案資料夾 {#project-folders}
 
-您可以在 **項目** 控制台對類似項目進行分組和組織。
+您可以在 **專案** 控制台來分組和組織類似的專案。
 
-1. 在 **項目** 按一下控制台 **建立** 然後 **建立資料夾**。
+1. 在 **專案** 主控台點選或按一下 **建立** 然後 **建立資料夾**.
 
    ![建立資料夾](assets/project-create-folder.png)
 
-1. 給資料夾一個標題並按一下 **建立**。
+1. 為資料夾輸入標題，然後按一下 **建立**.
 
-1. 資料夾將添加到控制台。
+1. 資料夾會新增至主控台。
 
-現在，您可以在資料夾中建立項目。 您可以建立多個資料夾，也可以嵌套資料夾。
+您現在可以在資料夾中建立專案。 您可以建立多個資料夾，也可以巢狀內嵌資料夾。
 
-### 停用項目 {#making-projects-inactive-or-active}
+### 停用專案 {#making-projects-inactive-or-active}
 
-如果項目已完成，您可能希望將其標籤為非活動，但仍希望保留有關該項目的資訊。 [不活動的項目現在顯示](#viewing-active-inactive-projects) 在 **項目** 控制台。
+如果項目已完成，您可能希望將該項目標籤為非活動項目，但仍希望保留有關該項目的資訊。 [非使用中專案現在會顯示](#viewing-active-inactive-projects) 依預設，在 **專案** 控制台。
 
-要使項目處於非活動狀態，請執行以下步驟。
+若要讓專案停用，請依照下列步驟操作。
 
-1. 開啟 **項目屬性** 的子菜單。
-   * 通過選擇項目或通過 **項目資訊** 平鋪。
-1. 在 **項目屬性** 窗口，更改 **項目狀態** 滑塊 **活動** 至 **非活動**。
+1. 開啟 **專案屬性** 的下限。
+   * 您可以從主控台選取專案，或從專案內透過 **專案資訊** 方塊。
+1. 在 **專案屬性** 窗口，更改 **專案狀態** 滑桿 **作用中** to **非作用中**.
 
-   ![「屬性」窗口中的項目狀態選擇器](assets/project-status.png)
+   ![屬性窗口中的項目狀態選擇器](assets/project-status.png)
 
-1. 點擊或按一下 **保存並關閉** 的子菜單。
+1. 點選或按一下 **儲存並關閉** 來儲存變更。
 
-### 刪除項目 {#deleting-a-project}
+### 刪除專案 {#deleting-a-project}
 
-按照以下步驟刪除項目。
+請依照下列步驟刪除專案。
 
-1. 導航至 **項目** 控制台。
-1. 在控制台中選擇項目。
-1. 點擊或按一下 **刪除** 的子菜單。
-1. 可以AEM在項目刪除時刪除/修改關聯的項目資料。 選擇在 **刪除項目** 對話框。
+1. 導覽至 **專案** 控制台。
+1. 在主控台中選取您的專案。
+1. 點選或按一下 **刪除** 的下一頁。
+1. AEM可在刪除專案時移除/修改相關的專案資料。 在 **刪除專案** 對話框。
    * 移除專案群組和角色
-   * 刪除項目資產資料夾
+   * 刪除專案資產資料夾
    * 終止專案工作流程
 
-   ![項目刪除選項](assets/project-delete-options.png)
-1. 點擊或按一下 **刪除** 的子菜單。
+   ![專案刪除選項](assets/project-delete-options.png)
+1. 點選或按一下 **刪除** 刪除已選選項的項目。
 
-要瞭解有關由項目自動建立的組的詳細資訊，請參閱 [自動建立組](/help/sites-authoring/projects.md#auto-group-creation) 的雙曲餘切值。
+若要深入了解專案自動建立的群組，請參閱 [自動建立群組](/help/sites-authoring/projects.md#auto-group-creation) 以取得詳細資訊。

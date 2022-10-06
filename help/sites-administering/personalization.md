@@ -1,5 +1,5 @@
 ---
-title: 個性化
+title: 個人化
 seo-title: Personalization
 description: 了解AEM中的個人化。
 seo-description: Learn about personalization in AEM.
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ---
 
-# 個性化 {#personalization}
+# 個人化 {#personalization}
 
 ## 什麼是個人化？ {#what-is-personalization}
 
@@ -105,7 +105,7 @@ ht-degree: 1%
 #### 快取 {#caching}
 
 * 快取是使用者在效能和準確度方面會看到的一環，也就是網站提供個人化內容的速度，而且是否一律為最新狀態。
-* 快取是設定個人化時的重要考量，您必須花時間確保使用正確的實作。
+* 快取是設定個人化時的關鍵考量，您必須花時間確保使用正確的實作。
 
 >[!TIP]
 >

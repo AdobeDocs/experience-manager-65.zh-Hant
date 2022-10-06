@@ -1,8 +1,8 @@
 ---
 title: 將草稿和提交元件與資料庫整合的範例
-seo-title: 將草稿和提交元件與資料庫整合的範例
+seo-title: Sample for integrating drafts & submissions component with database
 description: 參考自訂資料和中繼資料服務的實作，以整合草稿和提交元件與資料庫。
-seo-description: 參考自訂資料和中繼資料服務的實作，以整合草稿和提交元件與資料庫。
+seo-description: Reference implementation of customized data and metadata services to integrate drafts and submissions component with a database.
 uuid: ccdb900e-2c2e-4ed3-8a88-5c97aa0092a1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,44 +11,44 @@ discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1467'
 ht-degree: 1%
 
 ---
 
-# 將草稿和提交元件與資料庫{#sample-for-integrating-drafts-submissions-component-with-database}整合的範例
+# 將草稿和提交元件與資料庫整合的範例 {#sample-for-integrating-drafts-submissions-component-with-database}
 
-## 範例概述{#sample-overview}
+## 範例概觀 {#sample-overview}
 
 AEM Forms portal草稿和提交元件可讓使用者將表單儲存為草稿，並稍後從任何裝置提交。 此外，使用者也可以在入口網站上檢視其提交的表單。 為了啟用此功能，AEM Forms提供資料和中繼資料服務，將使用者填入的資料儲存在表單中，以及與草稿和已提交表單相關聯的表單中繼資料。 預設情況下，此資料會儲存在CRX存放庫中。 不過，當使用者透過AEM發佈例項與表單互動時（通常不在企業防火牆之外），組織可能會想要自訂資料儲存，以提高安全性和可靠性。
 
-本檔案中討論的範例是自訂資料和中繼資料服務的參考實作，以將草稿和提交元件與資料庫整合。 範例實作中使用的資料庫為&#x200B;**MySQL 5.6.24**。 不過，您可以將草稿和提交元件與您選擇的任何資料庫整合。
+本檔案中討論的範例是自訂資料和中繼資料服務的參考實作，以將草稿和提交元件與資料庫整合。 範例實作中使用的資料庫為 **MySQL 5.6.24**. 不過，您可以將草稿和提交元件與您選擇的任何資料庫整合。
 
 >[!NOTE]
 >
 >* 本文檔中解釋的示例和配置是根據MySQL 5.6.24進行的，您必須將它們適當替換為資料庫系統。
->* 請確定您已安裝最新版的AEM Forms附加元件套件。 如需可用套件的清單，請參閱[AEM Forms發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章。
+>* 請確定您已安裝最新版的AEM Forms附加元件套件。 如需可用套件的清單，請參閱 [AEM Forms版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
 >* 範例套件僅適用於適用性Forms提交動作。
 
 
-## 設定範例{#set-up-and-configure-the-sample}
+## 設定範例 {#set-up-and-configure-the-sample}
 
 在所有製作和發佈執行個體上執行下列步驟，以安裝和設定範例：
 
-1. 將下列&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;套件下載至您的檔案系統。
+1. 下載下列 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 封裝至您的檔案系統。
 
    資料庫整合的示例包
 
 [取得檔案](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. 前往AEM套件管理器，網址為https://[*host*]:[*port*]/crx/packmgr/。
-1. 按一下「**[!UICONTROL 上傳套件]**」。
+1. 前往AEM套件管理器，網址為https://[*主機*]:[*埠*]/crx/packmgr/。
+1. 按一下 **[!UICONTROL 上傳套件]**.
 
-1. 瀏覽以選取&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;套件，然後按一下&#x200B;**[!UICONTROL OK]**。
-1. 按一下&#x200B;**[!UICONTROL 安裝]** ，安裝該軟體包。
-1. 前往&#x200B;**[!UICONTROL AEM Web控制台配置]**
-https://[*host*]:[*port*]/system/console/configMgr的頁面。
-1. 按一下以在編輯模式中開啟&#x200B;**[!UICONTROL Forms入口網站草稿和提交設定]**。
+1. 瀏覽以選取 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 封裝，按一下 **[!UICONTROL 確定]**.
+1. 按一下 **[!UICONTROL 安裝]** ，即可安裝套件。
+1. 前往 **[!UICONTROL AEM Web主控台設定]**
+https://[*主機*]:[*埠*]/system/console/configMgr。
+1. 按一下以開啟 **[!UICONTROL Forms入口網站草稿和提交設定]** 在編輯模式中。
 
 1. 指定屬性的值，如下表所述：
 
@@ -63,7 +63,7 @@ https://[*host*]:[*port*]/system/console/configMgr的頁面。
 
    >[!NOTE]
    >
-   >服務的解析方式為其名稱（作為`aem.formsportal.impl.prop`鍵的值），如下所示：
+   >這些服務會由其名稱解析，其名稱提及為 `aem.formsportal.impl.prop` 索引鍵如下：
 
    ```java
    @Service(value = {SubmitDataService.class, DraftDataService.class})
@@ -85,10 +85,10 @@ https://[*host*]:[*port*]/system/console/configMgr的頁面。
    >
    >如果您變更表格名稱，請在「表單入口網站」設定中提供這些名稱。
 
-1. 保留其他配置原樣，然後按一下「**[!UICONTROL 保存]**」。
+1. 保留其他設定原樣，然後按一下 **[!UICONTROL 儲存]**.
 
 1. 資料庫連線可透過Apache Sling Connection Pooled Data Source完成。
-1. 若為Apache Sling連線，請尋找並按一下，以Web主控台設定中的編輯模式開啟&#x200B;**[!UICONTROL Apache Sling連線Pooled DataSource]**。 指定屬性的值，如下表所述：
+1. 若為Apache Sling連線，請尋找並按一下以開啟 **[!UICONTROL Apache Sling Connection Pooled DataSource]** 在「Web控制台配置」的編輯模式下。 指定屬性的值，如下表所述：
 
 <table>
  <tbody>
@@ -106,7 +106,7 @@ https://[*host*]:[*port*]/system/console/configMgr的頁面。
   </tr>
   <tr>
    <td>JDBC連接URI<br /> </td>
-   <td>jdbc[<em>host</em>]:[<em>port</em>]/[<em>schemaname</em>]</td>
+   <td>jdbc:mysql://[<em>主機</em>]:[<em>埠</em>]/[<em>schema_name</em>]</td>
   </tr>
   <tr>
    <td>使用者名稱</td>
@@ -163,12 +163,10 @@ https://[*host*]:[*port*]/system/console/configMgr的頁面。
 >
 > * 示例中未提供MySQL的JDBC驅動程式。 請確保已為其進行了配置，並提供配置JDBC連接池所需的資訊。
 > * 指向您的製作和發佈執行個體以使用相同的資料庫。 所有製作和發佈實例的JDBC連接URI欄位值必須相同。
-
->
-
+   >
 
 
-1. 保留其他配置原樣，然後按一下「**[!UICONTROL 保存]**」。
+1. 保留其他設定原樣，然後按一下 **[!UICONTROL 儲存]**.
 
 1. 如果資料庫架構中已有表，請跳到下一步。
 
@@ -304,49 +302,49 @@ https://[*host*]:[*port*]/system/console/configMgr的頁面。
 
 現在已設定範例實作，您可以用來列出草稿和提交，同時將所有資料和中繼資料儲存在資料庫中。 現在來查看範例中資料和中繼資料服務的設定方式。
 
-## 安裝mysql-connector-java-5.1.39-bin.jar檔案{#install-mysql-connector-java-bin-jar-file}
+## 安裝mysql-connector-java-5.1.39-bin.jar檔案 {#install-mysql-connector-java-bin-jar-file}
 
 在所有製作執行個體和發佈執行個體上執行下列步驟，以安裝mysql-connector-java-5.1.39-bin.jar檔案：
 
-1. 導航到`https://'[server]:[port]'/system/console/depfinder`並搜索com.mysql.jdbc包。
+1. 導覽至 `https://'[server]:[port]'/system/console/depfinder` 並搜索com.mysql.jdbc包。
 1. 在「匯出依據」欄中，檢查套件是否由任何套件匯出。
 
    如果包未由任何包導出，請繼續。
 
-1. 導覽至`https://'[server]:[port]'/system/console/bundles`，然後按一下&#x200B;**[!UICONTROL 安裝/更新]**。
-1. 按一下「**[!UICONTROL 選擇檔案]**」，然後瀏覽以選擇mysql-connector-java-5.1.39-bin.jar檔案。 此外，選擇&#x200B;**[!UICONTROL Start Bundle]**&#x200B;和&#x200B;**[!UICONTROL Refresh Packages]**&#x200B;複選框。
-1. 按一下&#x200B;**[!UICONTROL 安裝或更新]**。 完成後，重新啟動伺服器。
-1. （*僅Windows*）關閉作業系統的系統防火牆。
+1. 導覽至 `https://'[server]:[port]'/system/console/bundles` 按一下 **[!UICONTROL 安裝/更新]**.
+1. 按一下 **[!UICONTROL 選擇檔案]** 並瀏覽以選擇mysql-connector-java-5.1.39-bin.jar檔案。 此外，請選取 **[!UICONTROL 開始套件組合]** 和 **[!UICONTROL 刷新包]** 複選框。
+1. 按一下 **[!UICONTROL 安裝或更新]**. 完成後，重新啟動伺服器。
+1. (*僅限Windows*)關閉作業系統的系統防火牆。
 
-## 表單入口網站資料和中繼資料服務的范常式式碼{#sample-code-for-forms-portal-data-and-metadata-service}
+## 表單入口網站資料和中繼資料服務的范常式式碼 {#sample-code-for-forms-portal-data-and-metadata-service}
 
-以下zip包含資料和中繼資料服務介面的`FormsPortalSampleDataServiceImpl`和`FormsPortalSampleMetadataServiceImpl`（實作類別）。 此外，它包含編譯上述實施類所需的所有類。
+下列zip包含 `FormsPortalSampleDataServiceImpl` 和 `FormsPortalSampleMetadataServiceImpl` （實作類別），用於資料和中繼資料服務介面。 此外，它包含編譯上述實施類所需的所有類。
 
 [取得檔案](assets/sample_package.zip)
 
-## 驗證檔案名{#verify-length-of-the-file-name}的長度
+## 驗證檔案名的長度  {#verify-length-of-the-file-name}
 
 Forms Portal的資料庫實作使用其他中繼資料表格。 該表具有基於表的「鍵」和「id」列的複合主鍵。 MySQL允許主鍵長達255個字元。 您可以使用下列用戶端驗證指令碼來驗證附加至檔案介面工具集的檔案名稱長度。 附加檔案時會執行驗證。 下列程式中提供的指令碼會在檔案名稱大於150（包括副檔名）時顯示訊息。 您可以修改指令碼，以檢查其是否有不同數量的字元。
 
-執行下列步驟以建立[用戶端程式庫](/help/sites-developing/clientlibs.md)並使用指令碼：
+執行下列步驟以建立 [客戶端庫](/help/sites-developing/clientlibs.md) 並使用指令碼：
 
 1. 登入CRXDE並導覽至/etc/clientlibs/
-1. 建立&#x200B;**cq:ClientLibraryFolder**&#x200B;類型的節點，並提供該節點的名稱。 例如， `validation`。
+1. 建立類型的節點 **cq:ClientLibraryFolder** 和提供節點的名稱。 例如， `validation`.
 
-   按一下「**[!UICONTROL 全部保存]**」。
+   按一下 **[!UICONTROL 全部儲存]**.
 
-1. 按一下右鍵節點，按一下&#x200B;**[!UICONTROL 建立新檔案]**，然後建立副檔名為.txt的檔案。 例如，將以下代碼添加到新建立的.txt檔案中，然後按一下「**[!UICONTROL 保存全部]**」。`js.txt`
+1. 以滑鼠右鍵按一下節點，按一下 **[!UICONTROL 建立新檔案]**，並建立副檔名為.txt的檔案。 例如， `js.txt`將下列程式碼新增至新建立的.txt檔案，然後按一下 **[!UICONTROL 全部儲存]**.
 
    ```javascript
    #base=util
     util.js
    ```
 
-   在上述程式碼中，`util`是資料夾的名稱，`util.js`是`util`資料夾中檔案的名稱。 在以下步驟中建立`util`資料夾和`util.js`檔案。
+   在上述程式碼中， `util` 是資料夾的名稱， `util.js` 檔案名稱 `util` 檔案夾。 此 `util` 資料夾和 `util.js` 檔案是在遵循步驟中建立。
 
-1. 按一下右鍵在步驟2中建立的`cq:ClientLibraryFolder`節點，選擇「建立」>「建立資料夾」。 建立名為`util`的資料夾。 按一下「**[!UICONTROL 全部保存]**」。 按一下右鍵`util`資料夾，選擇「建立」>「建立檔案」。 建立名為`util.js`的檔案。 按一下「**[!UICONTROL 全部保存]**」。
+1. 以滑鼠右鍵按一下 `cq:ClientLibraryFolder` 在步驟2中建立的節點，選擇「建立」>「建立資料夾」。 建立名為 `util`. 按一下 **[!UICONTROL 全部儲存]**. 以滑鼠右鍵按一下 `util` 資料夾，選擇「建立」>「建立檔案」。 建立名為 `util.js`. 按一下 **[!UICONTROL 全部儲存]**.
 
-1. 將下列程式碼新增至util.js檔案，然後按一下「**[!UICONTROL 儲存全部]**」。 程式碼會驗證檔案名稱的長度。
+1. 將下列程式碼新增至util.js檔案，然後按一下 **[!UICONTROL 全部儲存]**. 程式碼會驗證檔案名稱的長度。
 
    ```javascript
    /*
@@ -403,7 +401,7 @@ Forms Portal的資料庫實作使用其他中繼資料表格。 該表具有基�
    >
    >指令碼適用於現成(OOTB)附件Widget元件。 如果您已自訂OOTB附件Widget，請變更上述指令碼以併入個別變更。
 
-1. 將下列屬性新增至步驟2中建立的資料夾，然後按一下「**[!UICONTROL 儲存全部]**」。
+1. 將下列屬性新增至步驟2中建立的資料夾，然後按一下 **[!UICONTROL 全部儲存]**.
 
    * **[!UICONTROL 名稱：]** 類別
 
@@ -411,14 +409,14 @@ Forms Portal的資料庫實作使用其他中繼資料表格。 該表具有基�
 
    * **[!UICONTROL 值：]** fp.validation
 
-   * **[!UICONTROL 多選項：]** 啟用
+   * **[!UICONTROL 多選項：]** 已啟用
 
-1. 導覽至`/libs/fd/af/runtime/clientlibs/guideRuntime`，並將`fp.validation`值附加至內嵌屬性。
+1. 導覽至 `/libs/fd/af/runtime/clientlibs/guideRuntime`並附加 `fp.validation` 值。
 
-1. 導覽至/libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA，並將`fp.validation`值附加至內嵌屬性。
+1. 導覽至/libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA並附加 `fp.validation` 要內嵌屬性的值。
 
    >[!NOTE]
    >
    >如果您使用自訂用戶端程式庫，而非guideRuntime和guideRuntimeWithXfa用戶端程式庫，請使用類別名稱，將此程式中建立的用戶端程式庫內嵌至執行階段載入的自訂程式庫。
 
-1. 按一下「**[!UICONTROL 全部保存」。]** 現在，當檔案名稱大於150（包括副檔名）字元時，就會顯示訊息。
+1. 按一下 **[!UICONTROL 全部儲存。]** 現在，當檔案名稱大於150（包括副檔名）字元時，就會顯示訊息。

@@ -1,39 +1,39 @@
 ---
 title: 在設計器中更改頁面零內容
-seo-title: 在設計器中更改頁面零內容
-description: 在非Adobe PDF檢視器中檢視XFA PDF時，您知道如何變更PDF的「Page Zero」（頁面零）上顯示的訊息？
-seo-description: 在非Adobe PDF檢視器中檢視XFA PDF時，您知道如何變更PDF的「Page Zero」（頁面零）上顯示的訊息？
+seo-title: Changing Page Zero content in Designer
+description: 在非Adobe PDF檢視器中檢視時，您知道如何變更XFAPDF的「頁面零」上顯示的訊息？
+seo-description: Do you know how you can change the message displayed on Page Zero of an XFA PDF when viewing it in a non-Adobe PDF viewer?
 uuid: ac23fb21-3f15-48ea-aeeb-4ecc12b771ac
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 56b6a573-8aba-43e7-acb7-c2da45869d95
 docset: aem65
-feature: 適用性表單
+feature: Adaptive Forms
 exl-id: 466b7e85-a2f8-4e1e-8afc-1566b0ccb84c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 1%
 
 ---
 
-# 更改設計器{#changing-page-zero-content-in-designer}中的頁面零內容
+# 在設計器中更改頁面零內容 {#changing-page-zero-content-in-designer}
 
-當非Adobe PDF檢視器（例如[!DNL Chrome]或[!DNL Firefox]中的預設PDF檢視器）無法讀取PDF/XFA表單的內容時，預設會顯示「頁面零」內容。 預設的Page Zero訊息如下所示。
+非Adobe PDF檢視器時(例如中的預設PDF檢視器)，預設會顯示「頁面零」內容 [!DNL Chrome] 或 [!DNL Firefox]，無法讀取PDF/XFA表單的內容。 預設的Page Zero訊息如下所示。
 
 ![defaultpage0message](assets/defaultpage0message.png)
 
-[!DNL AEM Forms] 「設計器」的版本允許您更改「頁面零」上顯示的消息。要更改「零頁」消息，請執行以下步驟：
+[!DNL AEM Forms] 「設計器」的版本允許您更改「頁面零」上顯示的消息。 要更改「零頁」消息，請執行以下步驟：
 
-1. 確保已安裝[!DNL AEM Forms]版本的Designer。 您可以從設計工具的「關於」畫面中檢查版本。
+1. 確保您擁有 [!DNL AEM Forms] 已安裝Designer版本。 您可以從設計工具的「關於」畫面中檢查版本。
 
 1. 開啟您要變更「頁面零」內容的表單。
 
-1. 按一下「**[!UICONTROL 檔案]** > **[!UICONTROL 表單屬性]**」。
+1. 按一下 **[!UICONTROL 檔案]** > **[!UICONTROL 表單屬性]**.
 
-1. 在[!UICONTROL 表單屬性]對話方塊中，按一下![加號](assets/plus.png)（加號圖示）以新增自訂屬性。
+1. 在 [!UICONTROL 表單屬性] 對話框，按一下 ![plus](assets/plus.png) （加號圖示）以新增自訂屬性。
 
-1. 指定&#x200B;**_pagezerocontent**&#x200B;作為屬性的名稱。
+1. 指定 **_pagezerocontent** 作為屬性的名稱。
 1. 以RTF格式新增「頁面零」訊息作為值。 例如：
 
 

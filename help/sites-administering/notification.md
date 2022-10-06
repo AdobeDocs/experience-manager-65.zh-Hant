@@ -13,7 +13,7 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 source-git-commit: ea5abbbe8f928a63b7d3d6f96f3007a3c82706e0
 workflow-type: tm+mt
 source-wordcount: '2116'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -284,7 +284,7 @@ subject=<text_1>
 
 * `${payload.type}`，裝載類型
 * `${payload.path}`，裝載的路徑
-* `${host.prefix}`，主機首碼，例如：http://localhost:4502
+* `${host.prefix}`，主機前置詞，例如：http://localhost:4502
 
 ### 新增新語言的電子郵件範本 {#adding-an-email-template-for-a-new-language}
 
@@ -368,7 +368,7 @@ AEM提供OAuth2的整合式Mailer服務支援，讓組織能夠遵守安全的�
 
 ![oauth smtp提供程式](assets/oauth-smtpprov2.png)
 
-現在，啟動OAuth元件。 您可以透過下列方式執行此作業：
+現在，啟動OAuth元件。 您可以透過以下方式達成此目的：
 
 1. 請造訪此URL，前往元件主控台： `http://serveraddress:serverport/system/console/components`
 1. 尋找下列元件
@@ -451,7 +451,7 @@ AEM提供OAuth2的整合式Mailer服務支援，讓組織能夠遵守安全的�
 
 ![](assets/oauth-outlook-smptconfig.png)
 
-現在，啟動OAuth元件。 您可以透過下列方式執行此作業：
+現在，啟動OAuth元件。 您可以透過以下方式達成此目的：
 
 1. 請造訪此URL，前往元件主控台： `http://serveraddress:serverport/system/console/components`
 1. 尋找下列元件

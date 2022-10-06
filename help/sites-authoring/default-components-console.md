@@ -1,8 +1,8 @@
 ---
 title: 元件主控台
-seo-title: 元件主控台
+seo-title: Components Console
 description: 元件主控台
-seo-description: 'null'
+seo-description: null
 uuid: a4e34d81-7875-4e26-8b48-4473e2905c37
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 24%
+source-wordcount: '262'
+ht-degree: 23%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 24%
 
 >[!NOTE]
 >
->元件控制台顯示系統中的所有元件。 [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)顯示可供作者使用的元件，並隱藏以句點(`.`)開頭的任何元件組。
+>元件控制台顯示系統中的所有元件。 此 [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser) 顯示可供作者使用的元件，並隱藏以句點( `.`)。
 
 ## 搜尋 {#searching}
 
@@ -36,7 +36,7 @@ ht-degree: 24%
 
 ![screen-shot_2019-03-05at113251](assets/screen-shot_2019-03-05at113251.png)
 
-### 元件詳細資訊{#component-details}
+### 元件詳細資訊 {#component-details}
 
 若要檢視特定元件的詳細資訊，請點選/按一下所需資源。 提供三個標籤：
 
@@ -47,15 +47,15 @@ ht-degree: 24%
    在「屬性」索引標籤上，您可以：
 
    * 查看元件的常規屬性。
-   * 查看如何為元件定義[表徵圖或縮寫](/help/sites-developing/components-basics.md#component-icon-in-touch-ui)。
+   * 檢視 [已定義表徵圖或縮寫](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) （元件）。
 
       * 按一下圖示的來源即會將您導向該元件。
-   * 查看元件的&#x200B;**資源類型**&#x200B;和&#x200B;**資源超類型**（如果已定義）。
+   * 檢視 **資源類型** 和 **資源超類型** （若已定義）。
 
       * 按一下「資源超類型」(Resource Super Type)會將您導向該元件。
    >[!NOTE]
    >
-   >由於`/apps`在執行階段不可編輯，因此元件控制台為只讀。
+   >因為 `/apps` 在運行時無法編輯，元件控制台是只讀的。
 
 * **原則**
 
@@ -71,6 +71,6 @@ ht-degree: 24%
 
 * **文件**
 
-   如果開發人員已提供元件](/help/sites-developing/developing-components.md#documenting-your-component)的[檔案，則會顯示在&#x200B;**Documentation**&#x200B;標籤上。 如果沒有可用的檔案，則不會顯示&#x200B;**Documentation**&#x200B;標籤。
+   如果開發人員已提供 [元件的檔案](/help/sites-developing/developing-components.md#documenting-your-component)，則會顯示在 **檔案** 標籤。 如果沒有可用的檔案，則 **檔案** 標籤。
 
    ![chlimage_1-171](assets/chlimage_1-171.png)

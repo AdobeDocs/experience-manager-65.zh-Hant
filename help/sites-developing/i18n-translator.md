@@ -1,8 +1,8 @@
 ---
 title: 使用翻譯工具管理字典
-seo-title: 使用翻譯工具管理字典
+seo-title: Using Translator to Manage Dictionaries
 description: AEM提供主控台，可管理元件UI中使用的各種文字翻譯
-seo-description: AEM提供主控台，可管理元件UI中使用的各種文字翻譯
+seo-description: AEM provides a console for managing the various translations of texts used in component UI
 uuid: 4eea3110-e958-473e-8d22-c84fa435edbd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ discoiquuid: adf3364c-11f1-45c6-b41d-2c7d48b626f9
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2325'
 ht-degree: 0%
 
 ---
 
-# 使用翻譯器管理字典{#using-translator-to-manage-dictionaries}
+# 使用翻譯工具管理字典{#using-translator-to-manage-dictionaries}
 
 AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控制台可在
 
@@ -25,13 +25,13 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
 使用翻譯工具管理英文字串及其翻譯。 字典是在存放庫中建立，例如/apps/myproject/i18n。
 
-請注意，翻譯工具和您管理的字典是用於以不同語言呈現元件UI。 如果要翻譯頁面或用戶生成的內容，請參閱[翻譯多語言站點的內容](/help/sites-administering/translation.md)和[翻譯用戶生成的內容](/help/communities/translate-ugc.md)。
+請注意，翻譯工具和您管理的字典是用於以不同語言呈現元件UI。 如果您想要翻譯頁面或使用者產生的內容，請參閱 [轉譯多語言網站的內容](/help/sites-administering/translation.md) 和 [翻譯使用者產生的內容](/help/communities/translate-ugc.md).
 
 >[!CAUTION]
 >
->僅編輯為您的項目建立並位於`/apps`下的字典。
+>僅編輯為您的專案建立且位於 `/apps`.
 >
->AEM系統字典也可在此工具中使用。 請勿變更AEM系統字典，因為這可能會造成AEM UI問題。 此外，升級時可能會遺失變更。 AEM系統字典位於`/libs`下。
+>AEM系統字典也可在此工具中使用。 請勿變更AEM系統字典，因為這可能會造成AEM UI問題。 此外，升級時可能會遺失變更。 AEM系統字典位於 `/libs`.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
 您也可以從此主控台將i18n字典新增至翻譯專案。 您可以建立新專案或新增至現有專案。
 
-1. 按一下「**翻譯字典**」。
+1. 按一下 **翻譯字典**.
 
    ![chlimage_1-206](assets/chlimage_1-206.png)
 
@@ -55,17 +55,17 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
 1. 視需要填寫欄位，然後按一下「確定」。 ![chlimage_1-208](assets/chlimage_1-208.png)
 
-1. 您現在可以按一下&#x200B;**OK**&#x200B;或查看Target字典。
+1. 您現在可以按一下 **確定** 或參閱Target字典。
 
    >[!NOTE]
    >
-   >有關翻譯項目的詳細資訊，請參閱[管理翻譯項目](/help/sites-administering/tc-manage.md)。
+   >如需翻譯專案的詳細資訊，請參閱 [管理翻譯專案](/help/sites-administering/tc-manage.md).
 
-## 建立字典{#creating-a-dictionary}
+## 建立字典 {#creating-a-dictionary}
 
 建立字典以管理本地化的UI字串。 建立字典後，可以使用翻譯工具來管理它。
 
-1. 使用CRXDE Lite，為新字典新增根節點(`sling:Folder`)，作為存放語言定義的結構：
+1. 使用CRXDE Lite，新增根節點( `sling:Folder`)，以作為存放語言定義的結構：
 
    ` /apps/<projectName>/i18n`
 
@@ -83,27 +83,27 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
    >[!NOTE]
    >
-   >這是[Sling i18n模組](https://sling.apache.org/site/internationalization-support.html)中的結構。
+   >這是 [Sling i18n模組](https://sling.apache.org/site/internationalization-support.html).
 
-1. 重新載入翻譯器和字典路徑(例如`/apps/myProject/i18n`)將可在工具列的下拉式選取器中使用。 選擇此選項可開始添加字串及其翻譯。
+1. 重新載入翻譯器和字典路徑(例如 `/apps/myProject/i18n`)即可供工具列的下拉式選取器使用。 選擇此選項可開始添加字串及其翻譯。
 
    >[!NOTE]
    >
-   >翻譯器只會儲存路徑下實際存在的語言的翻譯(例如`/apps/myProject/i18n`)。
+   >翻譯器只會儲存路徑下實際存在的語言的翻譯(例如 `/apps/myProject/i18n`)。
    >
    >請確定這些語言對應至格線中顯示的語言。
 
-## 管理字典字串{#managing-dictionary-strings}
+## 管理字典字串 {#managing-dictionary-strings}
 
 使用翻譯工具管理字典中的字串。 您可以新增、修改和移除英文字串，也可提供翻譯的字串。
 
 >[!CAUTION]
 >
->僅編輯為您的項目建立並位於`/apps`下的字典。
+>僅編輯為您的專案建立且位於 `/apps`.
 >
->請勿變更AEM系統字典，因為這可能會造成AEM UI問題。 此外，升級時可能會遺失變更。 AEM系統字典位於`/libs`下。
+>請勿變更AEM系統字典，因為這可能會造成AEM UI問題。 此外，升級時可能會遺失變更。 AEM系統字典位於 `/libs`.
 
-### 添加、更改和刪除字串{#adding-changing-and-removing-strings}
+### 添加、更改和刪除字串 {#adding-changing-and-removing-strings}
 
 將英文字串添加到元件已國際化的字典中。 僅添加國際化的字串，這樣您就不會通過轉換未使用的字串來浪費資源。
 
@@ -121,7 +121,7 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
 若要在本地化字串中加入變數，請將括弧內的索引放置在get方法第一個引數中變數的位置。 請使用本地化提示來說明值。 翻譯者必須了解變數的意義，因為不同語言使用不同的句子結構。
 
-請注意，要求翻譯字串](/help/sites-developing/i18n-dev.md#including-variables-in-localized-sentences)的代碼會根據上下文為索引變數提供值。[
+請注意 [請求翻譯字串的代碼](/help/sites-developing/i18n-dev.md#including-variables-in-localized-sentences) 根據上下文提供索引變數的值。
 
 例如，當使用者登入網站且包含在字典中時，會顯示下列字串：
 
@@ -164,7 +164,7 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 使用以下過程從字典中刪除字串。
 
 1. 在「字典」下拉式功能表中，選取您要移除字串的字典。
-1. 按一下「移除」。
+1. 按一下移除。
 
    ![chlimage_1-213](assets/chlimage_1-213.png)
 
@@ -172,12 +172,12 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
    ![chlimage_1-214](assets/chlimage_1-214.png)
 
-### 搜索字串{#searching-for-strings}
+### 搜尋字串 {#searching-for-strings}
 
 「轉換器」工具底部的搜索欄提供了字串選擇選項：
 
-* **依文字篩選：** 與英文字串、註解或翻譯相符的模式。只有符合模式全部或部分的項目才會出現在表格中。
-* **變更：任何、已修改、新增、已刪除：** 顯示已變更且未儲存的項目。
+* **依文字篩選：** 與英文字串、註解或翻譯相符的模式。 只有符合模式全部或部分的項目才會出現在表格中。
+* **變更：任何、已修改、新建、已刪除：** 顯示已變更且未儲存的項目。
 
    * 任何：顯示已修改、新增或移除的項目。
    * 已修改：顯示已變更的項目。
@@ -194,19 +194,19 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 1. 若要使用選項進行篩選，請按一下「篩選」。
 1. 若要移除篩選器並查看字典中的所有項目，請按一下清除。
 
-### 編輯翻譯的字串{#editing-translated-strings}
+### 編輯翻譯的字串 {#editing-translated-strings}
 
-將英文字串新增至字典後，您可以新增字串的翻譯。 您也可以[匯出字典](/help/sites-developing/i18n-translator.md#exporting-a-dictionary)，讓第三方翻譯字典。
+將英文字串新增至字典後，您可以新增字串的翻譯。 您也可以 [匯出字典](/help/sites-developing/i18n-translator.md#exporting-a-dictionary) 由第三方翻譯。
 
-1. 選擇[您的項目特定字典](#creating-a-dictionary)，因為它指定了包含翻譯的儲存庫中的路徑。 例如，選擇&#x200B;**字典**&#x200B;作為：
+1. 選擇 [您的專案特定字典](#creating-a-dictionary) 因為它指定了儲存庫中保存翻譯的路徑。 例如，選取 **字典** 如下：
 
    `/apps/myProject/i18n`
 
    >[!CAUTION]
    >
-   >僅編輯為您的項目建立並位於`/apps`下的字典。
+   >僅編輯為您的專案建立且位於 `/apps`.
    >
-   >AEM系統字典也可在此工具中使用。 請勿變更AEM系統字典，因為這可能會造成AEM UI問題。 此外，升級時可能會遺失變更。 AEM系統字典位於`/libs`下。
+   >AEM系統字典也可在此工具中使用。 請勿變更AEM系統字典，因為這可能會造成AEM UI問題。 此外，升級時可能會遺失變更。 AEM系統字典位於 `/libs`.
 
 1. 若要編輯其中一個字串的翻譯文本，您可以執行以下操作：
 
@@ -214,34 +214,34 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
-   * 連按兩下所需字串的&#x200B;**字串**&#x200B;或&#x200B;**注釋**&#x200B;欄位以開啟&#x200B;**編輯字串**&#x200B;對話方塊，視需要編輯翻譯，然後按一下&#x200B;**確定**&#x200B;以關閉對話方塊：
+   * 按兩下 **字串** 或 **註解** 用於開啟 **編輯字串** 對話框，視需要編輯翻譯，然後按一下 **確定** 若要關閉對話方塊：
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
-1. 按一下工具列中的&#x200B;**儲存**&#x200B;以提交變更。
+1. 按一下 **儲存** 在工具列中，提交變更。
 
    >[!NOTE]
    >
-   >按一下&#x200B;**重設並重新整理**（而非&#x200B;**儲存**）會回復對先前文字的任何變更。
+   >按一下 **重設和重新整理** (而非 **儲存**)會回復先前文字的任何變更。
 
-## 使用第三方翻譯員{#using-third-party-translators}
+## 使用第三方翻譯人員 {#using-third-party-translators}
 
 為支援使用第三方翻譯服務，翻譯工具允許您導出和導入字典。
 
-### 導出字典{#exporting-a-dictionary}
+### 匯出字典 {#exporting-a-dictionary}
 
 將字典匯出至XLIFF檔案，讓協力廠商服務可翻譯字典字串。
 
 * 匯出字典，並包含語言的英文和翻譯詞語。
 * 匯出部分或全部英文字串。
 
-導出XLIFF檔案並包含語言時，儲存庫中字典的節點結構必須包含該語言。 如果未包含該語言，則會發生錯誤。 例如，要導出法文XLIFF檔案，字典資料夾必須包含名為`fr`的`mix:language`子節點。 （請參閱[建立字典](/help/sites-developing/i18n-translator.md#creating-a-dictionary)。）
+導出XLIFF檔案並包含語言時，儲存庫中字典的節點結構必須包含該語言。 如果未包含該語言，則會發生錯誤。 例如，要導出法文XLIFF檔案，字典資料夾必須包含 `mix:language` 子節點已命名 `fr`. (請參閱 [建立字典](/help/sites-developing/i18n-translator.md#creating-a-dictionary).)
 
 使用以下過程導出特定語言的XLIFF檔案。
 
-1. 開啟翻譯工具`http://<host>:<port>/libs/cq/i18n/translator.html`
+1. 開啟翻譯工具 `http://<host>:<port>/libs/cq/i18n/translator.html`
 1. 使用「字典」下拉式功能表來選取要匯出的字典。
-1. 按一下「導出」>「導出完整&#x200B;*XX* Xliff選項」，其中&#x200B;*XX*&#x200B;是雙字母語言代碼，如DE或FR。
+1. 按一下「導出」>「導出完整」 *XX* Xliff選項，其中 *XX* 是雙字母語言代碼，如DE或FR。
 
    「XLIFF檔案」（XLIFF檔案）將在新頁簽或窗口中開啟。
 
@@ -249,25 +249,25 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
 請依照下列步驟，匯出全部或部分英文字串。
 
-1. 開啟「翻譯」工具。`http://<host>:<port>/libs/cq/i18n/translator.html`
+1. 開啟「翻譯」工具。 `http://<host>:<port>/libs/cq/i18n/translator.html`
 1. 使用「字典」下拉式功能表來選取要匯出的字典。
 1. 如果要匯出字串的子集，請選取要匯出的字典中的項目。 選擇任何項目將導出所有項目。
 1. 按一下「匯出>將選取項目匯出為Xliff」（僅限字串）。
 1. 在出現的對話方塊中，複製文字並貼到文字檔案中。
 
-### 導入字典{#importing-a-dictionary}
+### 匯入字典 {#importing-a-dictionary}
 
 將XLIFF檔案匯入字典以填入字典。 當字典包含英文字串的翻譯，而XLIFF檔案包含相同字串的不同翻譯時，將替換字典翻譯。
 
-1. 開啟翻譯工具`http://<host>:<port>/libs/cq/i18n/translator.html`
+1. 開啟翻譯工具 `http://<host>:<port>/libs/cq/i18n/translator.html`
 1. 按一下「導入」(Import)>「XLIFF翻譯」(XLIFF Translations)。
 1. 選擇要導入的檔案，然後按一下「確定」。
 
-## 管理支援的語言{#managing-supported-lanuages}
+## 管理支援的語言 {#managing-supported-lanuages}
 
 新增或移除翻譯工具支援以及提供給網頁使用者的語言。
 
-### 更改字典表{#changing-languages-listed-in-the-dictionary-table}中列出的語言
+### 更改字典表中列出的語言 {#changing-languages-listed-in-the-dictionary-table}
 
 「翻譯工具」在字典表中包含以下語言：
 
@@ -289,9 +289,9 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
 1. 在此節點上，建立屬性：
 
-   * **名稱**:  `languages`
-   * **類型**:  `Multi-String`
-   * **值**:要顯示的語言清單。例如：
+   * **名稱**: `languages`
+   * **類型**: `Multi-String`
+   * **值**:要顯示的語言清單。 例如：
 
       * fr
       * es
@@ -300,19 +300,19 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
    >
    >語言代碼必須為小寫。
 
-1. 按一下CRXDE Lite中的「**保存全部**」並重新載入轉換器。 將更新格線以顯示定義的語言。
+1. 按一下 **全部儲存** 在CRXDE Lite中，並重新載入翻譯器。 將更新格線以顯示定義的語言。
 
    >[!NOTE]
    >
-   >翻譯器將僅保存字典](#creating-a-dictionary)中實際存在的[語言的翻譯（即字典路徑下的`/apps/myProject/i18n`）。
+   >翻譯者只會儲存實際上 [在字典里](#creating-a-dictionary) (亦即在字典路徑下，例如 `/apps/myProject/i18n`)。
    >
    >請確定這些語言對應至格線中顯示的語言。
 
-### 讓作者能使用語言{#making-languages-available-to-authors}
+### 讓作者能使用語言 {#making-languages-available-to-authors}
 
-為AEM例項的新語言定義字典後，您需要讓作者可以選取該語言（例如，用於&#x200B;**Preferences**）:
+為AEM例項新的語言定義字典後，您需要讓作者可以選取該語言(例如，以用於 **偏好設定**):
 
-1. 要更改&#x200B;**Security**&#x200B;控制台的&#x200B;**Preferences**&#x200B;中可用語言的清單：
+1. 若要變更可用語言的清單，請參閱 **偏好設定** 的 **安全性** 主控台：
 
    1. 在您的應用程式程式碼中建立覆蓋，以執行下列作業：
 
@@ -321,7 +321,7 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
        and update as required.
       ```
 
-1. 若要從&#x200B;**Websites**&#x200B;控制台使語言在&#x200B;**Preferences**&#x200B;中可用，您需要在應用程式中進行以下更改：
+1. 若要讓語言在 **偏好設定** 從 **網站** 主控台時，您必須在應用程式中進行下列變更：
 
    1. 在下面為結構建立覆蓋：
 
@@ -333,15 +333,15 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
 1. 儲存所有內容並重新載入適當的主控台。
 
-### 更改語言名稱和預設國家{#changing-language-names-and-default-countries}
+### 更改語言名稱和預設國家 {#changing-language-names-and-default-countries}
 
-各國都使用同樣的語言，例如美國、英國和澳大利亞都使用英語。 這由代碼指示，該代碼指示語言和國家/地區，如`en_US`、`en_GB`和`en_AU`。
+各國都使用同樣的語言，例如美國、英國和澳大利亞都使用英語。 這會以指出語言和國家/地區的程式碼來表示，例如 `en_US`, `en_GB` 和 `en_AU`.
 
 顯示標幟時會使用預設國家（地區）（例如在語言復本對話方塊中），而用來解析語言代碼的國家（地區）。
 
 >[!NOTE]
 >
->對於由上面的翻譯器管理的本地化，只有確切的語言才有效。 如果語言首選項下拉清單使用`en_uk`，則儲存庫中必須有`en_uk`字典。
+>對於由上面的翻譯器管理的本地化，只有確切的語言才有效。 如果語言偏好設定下拉式清單使用 `en_uk`，必須 `en_uk` 字典。
 
 若要變更預設定義：
 
@@ -353,9 +353,9 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
    `/apps/wcm/core/resources/languages`
 
-   然後在那裡更改或擴展清單。 語言節點上的屬性`defaultCountry`(例如`ja`)必須包含完整代碼，例如`ja_jp`，這會將`jp`定義為語言`ja`的預設國家/地區。
+   然後在那裡更改或擴展清單。 屬性 `defaultCountry` 在語言節點(例如 `ja`)必須包含完整程式碼，例如 `ja_jp`，定義 `jp` 作為語言的預設國家/地區 `ja`.
 
-1. 更新&#x200B;**CQ WCM語言管理器**。
+1. 更新 **CQ WCM語言管理員**.
 
    * **語言清單**:
 
@@ -370,7 +370,7 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
    https://<hostname>:<port-number>/system/console/configMgr/com.day.cq.wcm.core.impl.LanguageManagerImpl
    ```
 
-## 發佈字典{#publishing-dictionaries}
+## 發佈字典 {#publishing-dictionaries}
 
 將字典併入AEM應用程式的發行管理程式。 例如，將字典包含在應用程式的內容套件中，以部署至發佈例項。 此策略提供下列優點：
 
@@ -385,4 +385,4 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
 >[!NOTE]
 >
->使用Dispatcher時，您需要[使快取頁面](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)無效，以在已轉譯的元件字串中包含新的字典字串。
+>使用Dispatcher時，您必須 [使快取頁面無效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html) 在已轉譯的元件字串中加入新的字典字串。

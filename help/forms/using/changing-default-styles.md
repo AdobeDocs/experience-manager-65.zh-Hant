@@ -1,20 +1,20 @@
 ---
-title: 變更HTML5表單的預設樣式
-seo-title: 變更HTML5表單的預設樣式
+title: 更改HTML5表單的預設樣式
+seo-title: Changing default styles of HTML5 forms
 description: HTML5表單樣式是以CSS為基礎。 您可以變更表單的預設樣式。
-seo-description: HTML5表單樣式是以CSS為基礎。 您可以變更表單的預設樣式。
+seo-description: HTML5 forms styling is based on CSS. You can change the default styles of the form.
 uuid: 5e23237d-42d8-4d29-b79e-4dc276ef65ff
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 582b0fe8-a92b-4a1d-b859-57f13f53d0d8
 docset: aem65
-feature: 行動表單
+feature: Mobile Forms
 exl-id: 4c84cfd1-50a4-416f-b4a5-7f2f4c7f10af
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 1%
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -22,29 +22,29 @@ ht-degree: 1%
 
 HTML5表單是使用HTML5功能呈現，而呈現表單的樣式是使用CSS完成。 HTML5表單的預設外觀與其PDF轉譯類似。 開發人員可使用自訂CSS來變更HTML5表單的預設外觀。
 
-本文提供變更HTML5表單樣式的逐步資訊，而[樣式簡介](/help/forms/using/css-styles.md)文章則包含HTML5表單各樣式方面的詳細資訊。 請務必先閱讀樣式文章的簡介，再執行本文提及的步驟。
+本文提供逐步資訊，以變更HTML5表單的樣式，以及 [樣式簡介](/help/forms/using/css-styles.md) 文章包含有關HTML5表單各種樣式方面的詳細資訊。 請務必先閱讀樣式文章的簡介，再執行本文提及的步驟。
 
 以下兩張影像顯示預設樣式和自訂樣式之間的差異。
 
 ![圖片–002 — 小](assets/pictures-002-small.png)
 
-## 設定表單樣式{#style-your-forms}
+## 設定表單樣式 {#style-your-forms}
 
 1. **選擇要新增自訂樣式的設定檔**
 
-   在URL存取CRX DE介面：**https://&lt;server>:&lt;port>/crx/de**&#x200B;並建立設定檔或選擇現有的設定檔。 若要了解如何建立設定檔，請參閱[建立新設定檔](/help/forms/using/custom-profile.md)
+   在URL存取CRX DE介面： **https://&lt;server>:&lt;port>/crx/de** 和建立設定檔或選擇現有設定檔。 若要了解如何建立設定檔，請參閱 [建立新設定檔](/help/forms/using/custom-profile.md)
 
-1. **建立HTML5表單的樣式的CSS樣式表**
+1. **建立CSS樣式表以設定HTML5表單的樣式**
 
    導覽至您建立描述檔轉譯器的資料夾，並建立CSS樣式表檔案。 以下步驟為
 
-   1. 按一下右鍵該資料夾，然後從菜單中選擇&#x200B;**create** > **create File**
+   1. 以滑鼠右鍵按一下資料夾並選取 **建立** > **建立檔案** 從功能表
 
    1. 在「建立檔案」對話框中，輸入樣式表的名稱。 請務必使用副檔名.css（例如stylesheet.css）
    1. 從導覽窗格中，開啟您已建立的CSS檔案。
    1. 定義要設定樣式的元件的CSS類，並在這些類中添加樣式。
 
-   若要了解要在HTML5表單中為特定元件建立哪些CSS類別，請參閱[樣式簡介](/help/forms/using/css-styles.md)。
+   若要了解要在HTML5表單中為特定元件建立哪些CSS類別，請參閱 [樣式簡介](/help/forms/using/css-styles.md).
 
 1. **在描述檔轉譯器中加入樣式表**
 
@@ -52,10 +52,10 @@ HTML5表單是使用HTML5功能呈現，而呈現表單的樣式是使用CSS完�
 
    1. 在轉譯器頁面中搜尋下列行：
 
-      &lt;cq:includeclientlib categories=&quot;xfaforms.profile&quot; />
+      &lt;cq:includeClientLib categories=&quot;xfaforms.profile&quot; />
 
    1. 在上面的行下插入以下內容以包括樣式表：
 
-      &lt;link href=&quot;/path/to/stylesheet&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; />
+      &lt;link href=&quot;/path/to/stylesheet&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/>
 
    1. 儲存檔案。

@@ -1,7 +1,8 @@
 ---
 title: 配置翻譯規則
 description: 了解如何定義翻譯規則，以識別翻譯內容。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 0%

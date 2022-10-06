@@ -9,17 +9,17 @@ content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
-feature: 協作，資產管理
+feature: Collaboration,Asset Management
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 4%
+source-wordcount: '419'
+ht-degree: 5%
 
 ---
 
 # 使用 Dynamic Media {#working-with-dynamic-media}
 
-[動態](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 媒體可協助您隨需提供豐富的視覺化銷售和行銷資產，並自動調整規模以供網頁、行動裝置和社交網站使用。Dynamic Media使用一組主要來源資產，透過其全球、可擴充、效能最佳化的網路，即時產生並提供多種豐富內容變異。
+[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 可協助您隨需提供豐富的視覺化銷售和行銷資產，並自動調整規模以供網頁、行動裝置和社交網站使用。 Dynamic Media使用一組主要來源資產，透過其全球、可擴充、效能最佳化的網路，即時產生並提供多種豐富內容變異。
 
 Dynamic Media提供互動式檢視體驗，包括縮放、360度回轉和視訊。 Dynamic Media獨特地整合了Adobe Experience Manager數位資產管理(Assets)解決方案的工作流程，以簡化和簡化數位行銷活動管理流程。
 
@@ -29,7 +29,7 @@ Dynamic Media提供互動式檢視體驗，包括縮放、360度回轉和視訊�
 
 ## 你能用Dynamic Media做什麼 {#what-you-can-do-with-dynamic-media}
 
-Dynamic Media可讓您在發佈資產之前先管理資產。 [使用數位資產](manage-assets.md)中會詳細說明如何使用資產。 一般主題包括上傳、下載、編輯和發佈資產；檢視及編輯屬性，以及搜尋資產。
+Dynamic Media可讓您在發佈資產之前先管理資產。 如何使用一般資產，將詳細說明 [使用數位資產](manage-assets.md). 一般主題包括上傳、下載、編輯和發佈資產；檢視及編輯屬性，以及搜尋資產。
 
 僅限Dynamic Media的功能包括下列項目：
 
@@ -46,11 +46,11 @@ Dynamic Media可讓您在發佈資產之前先管理資產。 [使用數位資�
 * [管理資產](managing-assets.md)
 * [使用Quickview建立自訂快顯視窗](custom-pop-ups.md)
 
-另請參閱[設定Dynamic Media](administering-dynamic-media.md)。
+另請參閱 [設定Dynamic Media](administering-dynamic-media.md).
 
 >[!NOTE]
 >
->若要了解使用Dynamic Media與整合Dynamic Media Classic與Adobe Experience Manager之間的差異，請參閱[Dynamic Media Classic整合與Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。
+>若要了解使用Dynamic Media與整合Dynamic Media Classic與Adobe Experience Manager之間的差異，請參閱 [Dynamic Media Classic整合與Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media).
 
 ## Dynamic Media啟用與Dynamic Media停用 {#dynamic-media-on-versus-dynamic-media-off}
 
@@ -60,11 +60,11 @@ Dynamic Media可讓您在發佈資產之前先管理資產。 [使用數位資�
 * 影像集、回轉集、混合媒體集皆可使用。
 * 會建立PTIFF轉譯。
 
-當您選取影像資產時，Dynamic Media [enabled](config-dynamic.md#enabling-dynamic-media)的資產檢視會不同。 Dynamic Media使用隨選HTML5檢視器。
+當您選取影像資產時，資產的檢視與Dynamic Media不同 [已啟用](config-dynamic.md#enabling-dynamic-media). Dynamic Media使用隨需HTML5檢視器。
 
 ### 動態轉譯 {#dynamic-renditions}
 
-啟用Dynamic Media時，可使用動態轉譯，例如影像和檢視器預設集（位於&#x200B;**[!UICONTROL Dynamic]**&#x200B;下）。
+動態轉譯，例如影像和檢視器預設集(位於 **[!UICONTROL 動態]**)即可使用。
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
@@ -76,13 +76,13 @@ Dynamic Media可讓您在發佈資產之前先管理資產。 [使用數位資�
 
 ### PTIFF轉譯 {#ptiff-renditions}
 
-啟用Dynamic Media的資產包括`pyramid.tiffs`。
+Dynamic Media啟用的資產包括 `pyramid.tiffs`.
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
 ### 資產檢視變更 {#asset-views-change}
 
-啟用Dynamic Media後，按一下`+`和`-`按鈕即可放大和縮小。 您也可以按一下/點選以放大至特定區域。 還原功能可將您帶到原始版本，您可以按一下對角線箭頭來使影像成為全螢幕。 啟用Dynamic Media的項目如下所示：
+啟用Dynamic Media後，按一下 `+` 和 `-` 按鈕。 您也可以按一下/點選以放大至特定區域。 還原功能可將您帶到原始版本，您可以按一下對角線箭頭來使影像成為全螢幕。 啟用Dynamic Media的項目如下所示：
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 

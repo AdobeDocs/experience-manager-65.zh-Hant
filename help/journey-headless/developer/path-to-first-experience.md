@@ -1,7 +1,8 @@
 ---
 title: 使用AEM無頭式的第一次體驗路徑
 description: 在AEM無頭式開發人員歷程的這部分中，您將了解在AEM中實作第一個無頭式體驗的步驟，包括規劃考量事項，並了解最佳實務，讓路徑盡可能順暢。
-source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
+exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 0%

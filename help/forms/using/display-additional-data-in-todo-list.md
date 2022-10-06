@@ -1,8 +1,8 @@
 ---
 title: 在ToDo清單中顯示其他資料
-seo-title: 在ToDo清單中顯示其他資料
+seo-title: Displaying additional data in ToDo list
 description: 自訂LiveCycleAEM Forms工作區待辦事項清單的顯示方式，以顯示預設值以外的詳細資訊。
-seo-description: 自訂LiveCycleAEM Forms工作區待辦事項清單的顯示方式，以顯示預設值以外的詳細資訊。
+seo-description: How-to customize the display of the To-do list of LiveCycle AEM Forms workspace to show more information besides the default.
 uuid: 9467c655-dce2-43ce-8e8f-54542fe81279
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,31 +12,31 @@ docset: aem65
 exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 0%
+source-wordcount: '282'
+ht-degree: 1%
 
 ---
 
-# 在ToDo清單{#displaying-additional-data-in-todo-list}中顯示其他資料
+# 在ToDo清單中顯示其他資料{#displaying-additional-data-in-todo-list}
 
 依預設，AEM Forms工作區待辦事項清單會顯示任務顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期。 您也可以新增圖示並變更顯示的樣式。
 
-![查看顯示預設設定的HTML工作區待辦事項標籤](assets/html-todo-list.png)
+![查看顯示預設配置的「HTML工作區待辦事項」標籤](assets/html-todo-list.png)
 
 本文詳細說明了為「待辦事項」清單中的每個任務添加顯示資訊的步驟。
 
-## 可新增的內容{#what-can-be-added}
+## 可新增內容 {#what-can-be-added}
 
-可以添加伺服器發送的`task.json`中可用的資訊。 資訊可以以純文字檔案形式添加，也可以使用樣式來格式化資訊。
+您可以新增 `task.json` 由伺服器傳送。 資訊可以以純文字檔案形式添加，也可以使用樣式來格式化資訊。
 
-如需JSON物件說明的詳細資訊，請參閱[this](/help/forms/using/html-workspace-json-object-description.md)文章。
+如需JSON物件說明的詳細資訊，請參閱 [此](/help/forms/using/html-workspace-json-object-description.md) 文章。
 
-## 顯示任務{#displaying-information-on-a-task}的資訊
+## 顯示任務的資訊 {#displaying-information-on-a-task}
 
-1. 請依照[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)操作。
-1. 要顯示任務的其他資訊，必須在`translation.json`的任務塊中添加相應的鍵值值對。
+1. 關注 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md).
+1. 若要顯示任務的其他資訊，必須在的任務區塊中新增對應的索引鍵值組 `translation.json`.
 
-   例如，英文的`/apps/ws/locales/en-US/translation.json`變更：
+   例如變更 `/apps/ws/locales/en-US/translation.json` 英語：
 
    ```json
    "task" : {
@@ -121,9 +121,9 @@ ht-degree: 0%
    }
    ```
 
-## 定義新屬性{#defining-css-for-the-new-property}的CSS
+## 定義新屬性的CSS {#defining-css-for-the-new-property}
 
-1. 您可以將樣式套用至新增至任務的資訊（屬性）。 為此，需要為添加到`/apps/ws/css/newStyle.css`的新屬性添加樣式資訊。
+1. 您可以將樣式套用至新增至任務的資訊（屬性）。 若要這麼做，您必須為新增至的新屬性新增樣式資訊 `/apps/ws/css/newStyle.css`.
 
    例如，新增：
 
@@ -135,7 +135,7 @@ ht-degree: 0%
    }
    ```
 
-## 在HTML範本{#adding-entry-in-the-html-template}中新增項目
+## 在HTML範本中新增項目 {#adding-entry-in-the-html-template}
 
 最後，您需要在開發套件中加入要新增至任務之每個屬性的項目。 若要建立，請參閱建立AEM Forms工作區程式碼。
 
@@ -144,9 +144,9 @@ ht-degree: 0%
    * 從: `/libs/ws/js/runtime/templates/`
    * 至: `/apps/ws/js/runtime/templates/`
 
-1. 將新資訊添加到`/apps/ws/js/runtime/templates/task.html`。
+1. 新增資訊至 `/apps/ws/js/runtime/templates/task.html`.
 
-   例如，在`div class="taskProperties"`下新增：
+   例如，在下方新增 `div class="taskProperties"`:
 
    ```jsp
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>

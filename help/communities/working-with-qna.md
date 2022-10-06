@@ -1,8 +1,8 @@
 ---
 title: 問答論壇功能
-seo-title: 問答論壇功能
+seo-title: Q&A Forum Feature
 description: 將QnA論壇功能添加到頁
-seo-description: 將QnA論壇功能添加到頁
+seo-description: Adding the QnA forum feature to a page
 uuid: e0d95009-0d04-4fa7-8d05-5948c4e37f08
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 17081710-35e0-4f5b-9485-1f85c065fd70
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1368'
 ht-degree: 7%
 
 ---
@@ -35,29 +35,29 @@ QnA（問題和解答）論壇功能為社區成員提供了詢問和回答問�
 說明檔案說明：
 
 * 將QnA論壇功能添加到AEM站點。
-* `QnA`元件的組態設定。
+* 的組態設定 `QnA`元件。
 
-## 將問答論壇新增至頁面{#adding-a-q-a-forum-to-a-page}
+## 新增問答論壇至頁面 {#adding-a-q-a-forum-to-a-page}
 
-若要在製作模式下將`QnA`元件添加到頁面，請使用元件瀏覽器查找`Communities / QnA`，並將其拖動到應出現QnA論壇的頁面上的位置。
+新增 `QnA` 在製作模式中，使用元件瀏覽器來尋找 `Communities / QnA` 並將其拖到應顯示QnA論壇的頁面上。
 
-如需必要資訊，請造訪[Communities Components Basics](/help/communities/basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-包含[必要的用戶端程式庫](/help/communities/qna-essentials.md#essentials-for-client-side)時，以下是`QnA`元件的顯示方式：
+當 [必要的用戶端程式庫](/help/communities/qna-essentials.md#essentials-for-client-side) 包含在內，以下為方式 `QnA` 元件隨即出現：
 
 ![qna元件](assets/qna-component.png)
 
 ### 配置QnA {#configuring-qna}
 
-選取要存取的放置`QnA`元件，並選取開啟編輯對話方塊的`Configure`圖示。
+選取已放置的 `QnA` 要存取的元件並選取 `Configure` 表徵圖，開啟「編輯」對話框。
 
 ![設定](assets/configure-new.png)
 
 ![qna-config](assets/qna-config.png)
 
-#### 設定頁簽{#settings-tab}
+#### 設定標籤 {#settings-tab}
 
-在&#x200B;**Settings**&#x200B;標籤下，指定主題（問題）和回覆（答案）的設定：
+在 **設定** 索引標籤，指定主題（問題）和回覆（答案）的設定：
 
 * **允許附件縮圖**
 
@@ -93,7 +93,7 @@ QnA（問題和解答）論壇功能為社區成員提供了詢問和回答問�
 
 * **允許標記**
 
-   如果選中此選項，則允許成員向其貼文中添加標籤標籤（請參閱&#x200B;**標籤欄位**&#x200B;標籤）。 已取消選取預設值。
+   若勾選此選項，允許成員將標籤新增至其貼文(請參閱 **標籤欄位** 標籤)。 已取消選取預設值。
 
 * **允許檔案上傳**
 
@@ -101,7 +101,7 @@ QnA（問題和解答）論壇功能為社區成員提供了詢問和回答問�
 
 * **允許關注**
 
-   若勾選此選項，請加入下列論壇貼文功能，讓成員能[收到新貼文的通知](/help/communities/notifications.md)。 已取消選取預設值。
+   若勾選此選項，請加入下列論壇貼文功能，讓成員可 [通知](/help/communities/notifications.md) 新貼文。 已取消選取預設值。
 
 * **允許釘選**
 
@@ -109,15 +109,15 @@ QnA（問題和解答）論壇功能為社區成員提供了詢問和回答問�
 
 * **允許電子郵件訂閱**
 
-   若勾選此選項，允許透過電子郵件([subscription](/help/communities/subscriptions.md))通知成員新貼文。 需要檢查「允許以下內容」，並配置[電子郵件](/help/communities/email.md)。 已取消選取預設值。
+   若勾選此選項，可允許成員透過電子郵件([訂閱](/help/communities/subscriptions.md))。 需要檢查允許跟蹤並 [電子郵件已設定](/help/communities/email.md). 已取消選取預設值。
 
 * **最大檔案大小**
 
-   僅當檢查`Allow File Uploads`時相關。 此欄位會限制上傳之檔案的大小（以位元組為單位）。 預設為104857600(10 Mb)。
+   只有在 `Allow File Uploads` 已勾選。 此欄位會限制上傳之檔案的大小（以位元組為單位）。 預設為104857600(10 Mb)。
 
 * **允許的檔案類型**
 
-   僅當檢查`Allow File Uploads`時相關。 副檔名清單（以逗號分隔），請使用「點」分隔符號。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許上載那些未指定的檔案類型。 未指定預設值，因此允許** **所有檔案類型。
+   只有在 `Allow File Uploads` 已勾選。 副檔名清單（以逗號分隔），請使用「點」分隔符號。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許上載那些未指定的檔案類型。 未指定預設值，因此允許** **所有檔案類型。
 
 * **附加影像檔案最大大小**
 
@@ -148,11 +148,11 @@ QnA（問題和解答）論壇功能為社區成員提供了詢問和回答問�
    如果選中，則顯示的第一個答案為選定的答案。 已取消選取預設值。
 * **顯示徽章**
 
-   如果選中，則顯示已獲得的並已分配[徽章](/help/communities/implementing-scoring.md)，並包含成員的部落格條目。 已取消選取預設值。
+   如果選中，則顯示已獲得和已分配 [徽章](/help/communities/implementing-scoring.md) 會員的部落格條目。 已取消選取預設值。
 
 * **允許主要內容**
 
-   若勾選，可將構想識別為[精選內容](/help/communities/featured.md)。 已取消選取預設值。
+   若勾選，可將構想識別為 [精選內容](/help/communities/featured.md). 已取消選取預設值。
 
 * **啟用提及功能**
 
@@ -164,11 +164,11 @@ QnA（問題和解答）論壇功能為社區成員提供了詢問和回答問�
 
 * **UI 提及模式**
 
-   指定允許的模式字串，以標籤(@mention)貼文中的註冊使用者。 例如， `~{{familyName}}{{givenName}}`。
+   指定允許的模式字串，以標籤(@mention)貼文中的註冊使用者。 例如， `~{{familyName}}{{givenName}}`.
 
-#### 使用者協調標籤{#user-moderation-tab}
+#### 使用者協調標籤 {#user-moderation-tab}
 
-在&#x200B;**使用者協調**&#x200B;標籤下，指定如何管理已張貼的主題（問題）和答案（使用者產生的內容）。 如需詳細資訊，請參閱[協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+在 **使用者協調** 頁簽，指定如何管理已發佈的主題（問題）和答案（用戶生成的內容）。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md).
 
 * **拒絕回答**
 
@@ -178,8 +178,8 @@ QnA（問題和解答）論壇功能為社區成員提供了詢問和回答問�
 
    如果選中，受信任的成員協調者可以關閉問題（主題）以進一步編輯和回答，也可以重新開啟問題。 已取消選取預設值。
 
-* **移動**
-主題如果勾選此選項，允許發佈端協調者移動問題。已取消選取預設值。
+* **移動主題**
+如果勾選此選項，允許發佈端協調者移動問題。 已取消選取預設值。
 
 * **標幟貼文**
 
@@ -201,45 +201,45 @@ QnA（問題和解答）論壇功能為社區成員提供了詢問和回答問�
 
    輸入在從公共視圖中隱藏某個問題或答案之前必須標籤的次數。 如果設為–1，則標籤的問題或答案永遠不會在公共視圖中隱藏。 否則，此數字必須大於或等於協調臨界值。 預設為5。
 
-#### 標籤欄位標籤{#tag-field-tab}
+#### 標籤欄位標籤 {#tag-field-tab}
 
-在&#x200B;**標籤欄位**&#x200B;標籤下，如果&#x200B;**設定**&#x200B;標籤下允許，則可根據所選的命名空間來限制可套用的標籤。
+在 **標籤欄位** 標籤中，如果允許，可套用的標籤位於 **設定** 標籤，會根據所選的命名空間而受到限制。
 
 * **允許的命名空間**
 
-   若已在&#x200B;**Settings**&#x200B;標籤下勾選`Allow Tagging`則相關。 可套用的標籤僅限於所檢查命名空間類別中的標籤。 命名空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，這表示允許所有命名空間。
+   若 `Allow Tagging` 在 **設定** 標籤。 可套用的標籤僅限於所檢查命名空間類別中的標籤。 命名空間清單包含「標準標籤」（預設命名空間）和「包含所有標籤」。 預設值未勾選，這表示允許所有命名空間。
 
 * **建議限制**
 
    輸入要作為建議顯示給論壇成員的標籤數。 值**-**1表示沒有限制。 預設為0。
 
-#### 排序設定頁簽{#sort-settings-tab}
+#### 排序設定標籤 {#sort-settings-tab}
 
-在&#x200B;**排序設定**&#x200B;標籤下，指定顯示張貼留言時的排序方式。
+在 **排序設定** 頁簽，指定在顯示張貼的留言時排序的方式。
 
 * **排序方式**
 
-   檢查所有允許的排序選擇：`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 預設值為`Newest, Oldest, Last Updated`。
+   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 預設為 `Newest, Oldest, Last Updated`.
 
 * **設為預設值**
 
-   下拉清單以選取其中一個要顯示為預設的核取排序選項。 預設值為`Newest`。
+   下拉式清單以選取其中一個核取的排序選項，以顯示為預設值。 預設為 `Newest`.
 
 * **選取 Analytics 排序的時間選項**
 
-   下拉式清單以選取`All, Last 24 Hours, Last 7 Days, Last 30 Days`中的一個。 預設值為`All`。
+   下拉式清單以選取其中一個 `All, Last 24 Hours, Last 7 Days, Last 30 Days`. 預設為 `All`.
 
-## 網站訪客體驗{#site-visitor-experience}
+## 網站訪客體驗 {#site-visitor-experience}
 
-### 識別答案{#identifying-answers}
+### 確定答案 {#identifying-answers}
 
-使用`Select Answer`按鈕，一個答案可標籤為正確或有用的答案。 將「問題」標籤為「已回答」後，使用`Unmark Chosen Answer`按鈕取消選擇第一個答案之前，無法選擇另一個答案。
+一個答案可使用 `Select Answer` 按鈕。 將「問題」標示為「已回答」後，必須使用取消選取第一個答案，才能選取另一個答案 `Unmark Chosen Answer` 按鈕。
 
-一旦選擇為可行答案，則可使用`Unmark Chosen Answer`按鈕取消選擇該答案。
+一旦選取為可行答案，即可使用 `Unmark Chosen Answer` 按鈕。
 
-一旦選擇了可行答案，則主QnA頁面上的問題主題旁將顯示問題已`Answered`的指示。
+一旦選擇了一個答案作為可行答案，就表明問題已經 `Answered` 會顯示在QnA首頁面上的問題主題旁邊。
 
-#### 協調者和管理員{#moderators-and-administrators}
+#### 協調者與管理員 {#moderators-and-administrators}
 
 當登入的使用者擁有版主或管理員權限時，無論是撰寫問題或回答的人，都能執行元件組態所允許的協調工作。
 
@@ -260,8 +260,8 @@ QnA（問題和解答）論壇功能為社區成員提供了詢問和回答問�
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人員的[QnA Essentials](/help/communities/qna-essentials.md)頁面。
+如需詳細資訊，請參閱 [QnA要點](/help/communities/qna-essentials.md) 頁面。
 
-有關已張貼主題和留言的調節，請參閱[調節用戶生成的內容](/help/communities/moderate-ugc.md)。
+如需已張貼主題和留言的協調，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md).
 
-有關標籤已發佈的主題和評論，請參閱[標籤用戶生成的內容](/help/communities/tag-ugc.md)。
+有關標籤已發佈的主題和評論，請參閱 [標籤使用者產生的內容](/help/communities/tag-ugc.md).

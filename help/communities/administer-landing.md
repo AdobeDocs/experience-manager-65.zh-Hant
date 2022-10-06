@@ -1,8 +1,8 @@
 ---
 title: 社群網站
-seo-title: 社群網站
+seo-title: Communities Sites
 description: AEM Communities檔案概觀
-seo-description: AEM Communities檔案概觀
+seo-description: Overview of the AEM Communities documentation
 uuid: 9842ce6c-1af8-4b27-b199-07410e797ab2
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ role: Admin
 exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '470'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 本節內容適用於管理AEM Communities且熟悉AEM Communities功能的使用者。
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 如需概述和快速入門教學課程，請造訪：
 
@@ -34,9 +34,9 @@ ht-degree: 4%
 
 ### Communities站點建立和管理 {#communities-site-creation-and-management}
 
-* Communities [consoles](consoles.md)
+* 社群 [主控台](consoles.md)
 
-   * [網站](sites-console.md)
+   * [Sites](sites-console.md)
 
       * [組（子社區）](groups.md)
    * [審核](moderation.md)
@@ -45,7 +45,7 @@ ht-degree: 4%
    * [報表](reports.md)
 
 
-* 社區&#x200B;[*工具*](tools.md):
+* 社群 [*工具*](tools.md):
 
    * [網站範本](sites.md)
    * [群組範本](tools-groups.md)
@@ -59,10 +59,10 @@ ht-degree: 4%
 
 AEM Communities的主要功能是透過登入的網站訪客（成員）產生使用者產生的內容(UGC)。 若要進一步了解如何使用UGC，請造訪：
 
-* [常見UGC商店](working-with-srp.md):UGC共用儲存的SRP選擇
+* [通用UGC儲存](working-with-srp.md):UGC共用儲存的SRP選擇
 * [調節UGC](moderate-ugc.md):受信任的成員可以批量或在上下文中協調UGC
 * [標籤UGC](tag-ugc.md):功能可配置為允許成員標籤內容
-* [轉譯UGC](translate-ugc.md):功能可配置為翻譯所有UGC或允許成員翻譯所選貼文
+* [翻譯UGC](translate-ugc.md):功能可配置為翻譯所有UGC或允許成員翻譯所選貼文
 * [Analytics設定](analytics.md):啟用Adobe Analytics，報告關於成員活動的各種量度
 
 ### 社群成員 {#community-members}
@@ -70,10 +70,10 @@ AEM Communities的主要功能是透過登入的網站訪客（成員）產生�
 * [管理使用者和使用者群組](users.md):社區成員和成員組（包括特權成員）的詳細資訊。
 * [貢獻限制](limits.md):能夠限制由新成員張貼。
 * [通道服務](deploy-communities.md#tunnel-service-on-author):允許從製作環境存取發佈端成員和成員群組。
-* [成員和群組主控台](members.md):允許從製作環境建立和管理發布端成員和成員群組。
+* [成員和組控制台](members.md):允許從製作環境建立和管理發布端成員和成員群組。
 * [使用者同步](sync.md):用於跨多個發佈實例同步成員和成員組。
 * [使用Facebook和Twitter進行社交登入](social-login.md):網站訪客可使用其Facebook或Twitter憑證成為社群成員。
-* [計分與徽章](implementing-scoring.md):指派徽章以識別成員角色的能力，以及透過成員參與社群而獲得徽章的能力。
+* [計分和徽章](implementing-scoring.md):指派徽章以識別成員角色的能力，以及透過成員參與社群而獲得徽章的能力。
 * [通知](notifications.md):可通知成員其所遵循的活動。
 * [訂閱](subscriptions.md):讓成員使用外部電子郵件與社群互動。
 * [傳訊](messaging.md):讓成員使用內部訊息與社群互動。
@@ -96,12 +96,12 @@ AEM Communities的主要功能是透過登入的網站訪客（成員）產生�
 
 * [最新Communities Feature Pack](deploy-communities.md#latestfeaturepack)
 
-請參閱其他Communities特定資訊的部署頁面，如[Upgrading](upgrade.md)、[Dispatcher](dispatcher.md)和[Replication](deploy-communities.md#replication-agents-on-author)。
+有關其他Communities特定資訊(如 [升級](upgrade.md), [Dispatcher](dispatcher.md) 和 [復寫](deploy-communities.md#replication-agents-on-author).
 
 ## 相關社群檔案 {#related-communities-documentation}
 
-* 請造訪[部署Communities](deploy-communities.md)以了解建議的部署。
+* 瀏覽 [部署社群](deploy-communities.md) 了解建議的部署。
 
-* 請造訪[開發社群](communities.md)以了解社交元件架構(SCF)和自訂社群元件和功能。
+* 瀏覽 [開發社區](communities.md) 了解社交元件架構(SCF)和自訂社群元件和功能。
 
-* 請造訪[編寫社群元件](author-communities.md)，了解如何使用和設定社群元件。
+* 瀏覽 [編寫Communities元件](author-communities.md) 了解如何使用和設定Communities元件。

@@ -20,7 +20,7 @@ ht-degree: 0%
 有了Dynamic Media，您有數個選項：
 
 * 如果您的網站托管於Adobe Experience Manager，則您想要直接將Dynamic Media資產新增至頁面。
-* 如果您的網站未Experience Manager，請參閱觸控式使用者介面中的[傳送Dynamic Media資產](/help/assets/delivering-dynamic-media-assets.md) 。
+* 如果您的網站未Experience Manager，請參閱 [傳送Dynamic Media資產](/help/assets/delivering-dynamic-media-assets.md) 在觸控式使用者介面中。
 
 如需詳細資訊，請參閱下列主題：
 

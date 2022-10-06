@@ -1,8 +1,8 @@
 ---
 title: 報表主控台
-seo-title: 報表主控台
+seo-title: Reports Console
 description: 了解如何存取報表
-seo-description: 了解如何存取報表
+seo-description: Learn how to access reports
 uuid: 7bb15a15-077b-4bfb-aaf4-50fddc67f237
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -14,14 +14,14 @@ role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '618'
 ht-degree: 7%
 
 ---
 
 # 報表主控台 {#reports-console}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 針對AEM Communities，有多種報表可從製作環境以數種方式存取。
 
@@ -29,7 +29,7 @@ ht-degree: 7%
 
 * [指定任務報表](#assignments-report)
 
-   針對[啟用社群](/help/communities/overview.md#enablement-community)，提供學習者指派進度的概觀，包括若實作SCORM標準時的相關分數。
+   對於 [啟用社群](/help/communities/overview.md#enablement-community)，提供學習者指派工作的進度概覽，包括實施SCORM標準時的相關分數。
 
 * [檢視報表](#views-report)
 
@@ -39,7 +39,7 @@ ht-degree: 7%
 
    提供依社群成員到任何社群網站的各種貼文類型的圖表。
 
-當[Adobe Analytics啟用](/help/communities/sites-console.md#analytics)時，報表將包含每個啟用資源的檢視次數、播放次數、留言數和評等數。
+當 [Adobe Analytics已啟用](/help/communities/sites-console.md#analytics)，報表將包含每個啟用資源隨著時間的檢視次數、播放次數、留言數和評等。
 
 表格報表可匯出為.csv格式，以供後續處理。
 
@@ -47,7 +47,7 @@ ht-degree: 7%
 
 ### 社群網站報表 {#reports-for-community-sites}
 
-* 從全局導航：**[!UICONTROL 導航]** > **[!UICONTROL Communities]** > **[!UICONTROL 報表]**
+* 從全局導航： **[!UICONTROL 導覽]** > **[!UICONTROL 社群]** >  **[!UICONTROL 報表]**
 
 * 選擇：
 
@@ -67,13 +67,13 @@ ht-degree: 7%
 
 ### 啟用資源和學習路徑報表 {#reports-for-enablement-resources-and-learning-paths}
 
-* 從全局導航：**[!UICONTROL 導航]** > **[!UICONTROL Communities]** > **[!UICONTROL 資源]**
+* 從全局導航： **[!UICONTROL 導覽]** > **[!UICONTROL 社群]** >  **[!UICONTROL 資源]**
 
 * 選擇現有啟用社區站點：
 
-   * 選擇&#x200B;**Report**&#x200B;表徵圖以生成涵蓋所有啟用資源的報表。
+   * 選擇 **報表** 圖示，以產生涵蓋所有啟用資源的報表。
    * 選擇啟用學習路徑。
-   * 選擇&#x200B;**Report**&#x200B;表徵圖以生成以下項的報表：
+   * 選擇 **報表** 圖示來產生報表：
 
       * 隨附的啟用資源。
       * 指派給學習路徑的學習者。
@@ -88,7 +88,7 @@ ht-degree: 7%
       * 評論數
       * 給定星級
 
-如需詳細資訊，請參閱資源控制台的[報表區段](/help/communities/resources.md#report)。
+如需詳細資訊，請參閱 [報表區段](/help/communities/resources.md#report) （在資源控制台中）。
 
 ## 指定任務報表 {#assignments-report}
 
@@ -114,7 +114,7 @@ ht-degree: 7%
 
    從指派給所選學習者的培訓資源中進行選擇。
 
-選擇&#x200B;**Generate**&#x200B;以建立報表：
+選擇 **產生** 若要建立報表：
 
 ![generate-report](assets/generate-assignment-report.png)
 
@@ -143,7 +143,7 @@ ht-degree: 7%
    * 過去 90 天
    * 去年
 
-選擇&#x200B;**[!UICONTROL 生成]**&#x200B;以建立報告。
+選擇 **[!UICONTROL 產生]** 來建立報表。
 
 ![generate-views](assets/generate-views.png)
 
@@ -172,7 +172,7 @@ ht-degree: 7%
    * 過去 90 天
    * 去年
 
-選擇&#x200B;**[!UICONTROL 生成]**&#x200B;以建立報告。
+選擇 **[!UICONTROL 產生]** 來建立報表。
 
 ![generate-report](assets/generate-posts-report.png)
 
@@ -184,6 +184,6 @@ ht-degree: 7%
 
 ### 報表未顯示在AEM製作例項中 {#reports-do-not-show-in-aem-author-instance}
 
-如果報表未顯示在AEM製作例項中，請檢查是否有自訂項目，例如「發佈」例項上的URL對應。 如果僅在社群網站的AEM Publish例項上完成URL對應，請確定已在&#x200B;**網站趨勢報表社交元件工廠**&#x200B;設定的AEM Author例項中設定相同的URL對應。
+如果報表未顯示在AEM製作例項中，請檢查是否有自訂項目，例如「發佈」例項上的URL對應。 如果僅在社群網站的AEM Publish例項上完成URL對應，請確定已在中的AEM Author例項中設定相同的URL對應 **網站趨勢報表社交元件工廠** 設定。
 
 ![AEM作者上的URL對應](assets/sitetrend.png)

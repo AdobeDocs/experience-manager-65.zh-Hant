@@ -1,10 +1,11 @@
 ---
 title: AEM無頭內容製作歷程
 description: 介紹Adobe Experience Manager強大、彈性、無頭的功能，以及如何為專案製作內容。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

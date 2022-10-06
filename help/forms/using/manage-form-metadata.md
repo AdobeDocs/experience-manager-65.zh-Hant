@@ -1,8 +1,8 @@
 ---
 title: 管理表單中繼資料
-seo-title: 管理表單中繼資料
+seo-title: Manage form metadata
 description: 中繼資料可讓資產更輕鬆地分類和組織，並協助尋找特定資產的使用者。
-seo-description: 中繼資料可讓資產更輕鬆地分類和組織，並協助尋找特定資產的使用者。
+seo-description: Metadata allows for easier categorization and organization of assets and helps users who are looking for a specific asset.
 uuid: d982df6f-a256-4bad-868f-74fcd08350f8
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -13,20 +13,20 @@ role: Admin
 exl-id: f82bbd39-b655-47a9-bca9-21d7cd30c082
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1972'
 ht-degree: 1%
 
 ---
 
 # 管理表單中繼資料{#manage-form-metadata}
 
-## 概覽  {#overview-nbsp}
+## 總覽  {#overview-nbsp}
 
 中繼資料可讓資產更輕鬆地分類和組織，並協助尋找特定資產的使用者。
 
 AEM Forms依預設會提供每個資產類型的一組已定義中繼資料。 除了預設中繼資料，您還可以新增自訂中繼資料至每個資產類型。 AEM Forms也為您提供合適的方式，讓您為表單有效地建立、管理和交換所有中繼資料。
 
-如果您是開發人員或網站擁有者，可以自訂Forms Portal(AEM Forms的一般使用者介面)，以反映您在組織中使用的中繼資料。 如需Forms Portal的詳細資訊，請參閱[在入口網站上發佈表單的簡介](../../forms/using/introduction-publishing-forms.md)。
+如果您是開發人員或網站擁有者，可以自訂Forms Portal(AEM Forms的一般使用者介面)，以反映您在組織中使用的中繼資料。 如需Forms Portal的詳細資訊，請參閱 [在入口網站發佈表單簡介](../../forms/using/introduction-publishing-forms.md).
 
 ## AEM Forms中的中繼資料 {#metadata-in-aem-forms}
 
@@ -38,8 +38,8 @@ AEM Forms支援下列資產類型：
 
 * 表單範本（XFA表單）
 * PDF forms
-* 文檔（一般PDF）
-* 適用性表單
+* 文檔(平面PDF)
+* 調適型表單
 * 資源
 * XFS
 
@@ -57,12 +57,12 @@ AEM Forms支援下列資產類型：
   <tr> 
    <td>標題</td> 
    <td>除了資源</td> 
-   <td>窗體的顯示名稱。<br /> </td> 
+   <td>表單的顯示名稱。<br /> </td> 
   </tr> 
   <tr> 
    <td>說明</td> 
    <td>除了資源</td> 
-   <td>表單說明。 用戶可以指定此值。<br /> </td> 
+   <td>表單說明。 使用者可以指定此值。<br /> </td> 
   </tr> 
   <tr> 
    <td>類型</td> 
@@ -132,7 +132,7 @@ AEM Forms支援下列資產類型：
   <tr> 
    <td>HTML呈現設定檔</td> 
    <td>表單範本</td> 
-   <td>以HTML格式呈現表單範本時使用的HTML呈現設定檔。</td> 
+   <td>以HTML格式呈現表單範本時使用的HTML呈現描述檔。</td> 
   </tr> 
   <tr> 
    <td>呈現格式</td> 
@@ -156,7 +156,7 @@ AEM Forms支援下列資產類型：
     <ul> 
      <li>指：目前表單所指的資產。</li> 
      <li>引用者：指流動資產的資產。</li> 
-    </ul> <p>這些資產會顯示為連結，按一下它們即可直接存取其中繼資料。<br /> </p> </td> 
+    </ul> <p>這些資產會顯示為連結，按一下資產即可直接存取其中繼資料。<br /> </p> </td> 
   </tr> 
   <tr> 
    <td>表單模型(XDP/XSD)選項</td> 
@@ -182,21 +182,21 @@ AEM Forms支援下列資產類型：
 
 1. 使用下列其中一種方式開啟屬性頁面：
 
-   1. 按一下「快速操作」中的「查看屬性」 ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png)表徵圖。
+   1. 按一下「View Properties（查看屬性）」 ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png) 表徵圖。
 
       >[!NOTE]
       >
       >「快速動作」是滑鼠暫留時在縮圖上顯示的動作項目。
 
-   1. 選擇該表單，然後按一下工具欄中顯示的「查看屬性」 ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png)表徵圖。
-   1. 不在選取模式時，按一下表單縮圖以導覽至表單詳細資訊頁面。 現在，按一下右上方的![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png)眼睛圖示，然後按一下其下方清單中的「屬性」 。
+   1. 選擇表單並按一下「查看屬性」 ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png) 表徵圖。
+   1. 不在選取模式時，按一下表單縮圖以導覽至表單詳細資訊頁面。 現在，按一下 ![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png) 眼睛圖示，然後按一下右上方的清單中的「屬性」 。
 
 1. 開啟的屬性頁面會顯示僅包含那些包含某些值的中繼資料屬性的結構。
 
    屬性頁面有一個工具列，其中包含兩個動作圖示：
 
-   * 編輯：![aem6forms_edit](assets/aem6forms_edit.png)編輯中繼資料屬性值
-   * 查看：![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png)導覽至「表單詳細資訊」頁面，該頁面會在預覽模式中開啟表單。
+   * 編輯： ![aem6forms_edit](assets/aem6forms_edit.png) 編輯中繼資料屬性值
+   * 查看： ![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png) 導覽至表單詳細資訊頁面，該頁面會在預覽模式中開啟表單。
 
    內容部分分為兩部分：
 
@@ -212,7 +212,7 @@ AEM Forms支援下列資產類型：
 
 1. 請依照上一節中提及的步驟，開啟屬性頁面，供檢視所選表單的現有中繼資料。
 
-1. 在工具列中，按一下編輯圖示![aem6forms_edit](assets/aem6forms_edit.png) ，將頁面模式從唯讀變更為讀/寫。
+1. 在工具列中按一下編輯圖示 ![aem6forms_edit](assets/aem6forms_edit.png) 將頁面模式從只讀更改為讀/寫。
 
 1. 開啟的屬性頁面包含混合了可編輯輸入欄位和靜態文本的架構。
 
@@ -222,8 +222,8 @@ AEM Forms支援下列資產類型：
 
    此頁面有一個工具列，其中包含兩個與檢視模式中不同的動作圖示：
 
-   * 取消：![aem6forms_close](assets/aem6forms_close.svg_w24.png)取消迄今對中繼資料屬性值所做的任何變更
-   * 完成：![aem6forms_check](assets/aem6forms_check.png)儲存目前對中繼資料屬性值所做的所有變更
+   * 取消： ![aem6forms_close](assets/aem6forms_close.svg_w24.png) 取消目前對中繼資料屬性值所做的任何變更
+   * 完成： ![aem6forms_check](assets/aem6forms_check.png) 目前儲存對中繼資料屬性值所做的所有變更
 
    這兩個動作都會將使用者引導回包含已更新值的屬性頁面的唯讀模式。
 
@@ -231,32 +231,30 @@ AEM Forms支援下列資產類型：
 
 屬性頁面中的左側面板會顯示表單的縮圖。 依預設，顯示的縮圖是建立表單（最適化表單）時或表單上傳時產生的縮圖。
 
-對於所有表單類型，您可以選擇按一下「**[!UICONTROL 上傳影像]**」並從本機目錄瀏覽影像檔案，以上傳影像。 選取的影像會作為縮圖，而非預設影像。
+對於所有表單類型，您可以選擇按一下 **[!UICONTROL 上傳影像]** 和從本地目錄瀏覽影像檔案。 選取的影像會作為縮圖，而非預設影像。
 
-針對適用性表單，提供額外功能，可讓使用者產生縮圖，作為目前適用性表單預覽的快照。 由於AEM Forms也支援製作最適化表單，每次您變更最適化表單時，最適化表單的預覽可能會改變。 產生縮圖的功能可協助您根據目前的預覽狀態，取得最適化表單的全新縮圖。 按一下「**[!UICONTROL 產生預覽]**」以執行此動作。
+針對適用性表單，提供額外功能，可讓使用者產生縮圖，作為目前適用性表單預覽的快照。 由於AEM Forms也支援製作最適化表單，每次您變更最適化表單時，最適化表單的預覽可能會改變。 產生縮圖的功能可協助您根據目前的預覽狀態，取得最適化表單的全新縮圖。 按一下 **[!UICONTROL 產生預覽]** 來執行此動作。
 
 >[!NOTE]
 >
 >* 對縮圖使用正方形影像。 使用非正方形影像並在清單視圖中查看縮略圖時，縮略圖將出現剪貼。
 >* 上傳或產生新影像後，縮圖會由此影像取代，且無法重設為上一個影像。
-
 >
-
 
 
 ## 新增自訂中繼資料 {#add-custom-metadata}
 
 除了現成可用的中繼資料，AEM Forms也支援新的自訂中繼資料。
 
-提供工具（中繼資料結構編輯器）來定義中繼資料配置的結構；也就是說，表單的&#x200B;**[!UICONTROL 屬性]**&#x200B;頁面中顯示內容的佈局。 中繼資料結構編輯器可讓您新增或修改資產的自訂結構。
+提供工具（中繼資料結構編輯器）來定義中繼資料配置的結構；即，顯示於 **[!UICONTROL 屬性]** 頁面。 中繼資料結構編輯器可讓您新增或修改資產的自訂結構。
 
 AEM Forms會在此工具中公開支援表單類型的中繼資料結構。 如此一來，您便可存取這些結構，並使用中繼資料結構編輯器中提供的功能來新增自訂屬性。
 
 ### 導覽中繼資料結構編輯器 {#navigate-the-metadata-schema-editor}
 
-1. 導覽至「**[!UICONTROL 工具>資產>中繼資料結構]**」。
+1. 導覽至 **[!UICONTROL 工具>資產>中繼資料結構]**.
 
-1. 從列出的架構表單中按一下&#x200B;**[!UICONTROL forms]**。
+1. 按一下 **[!UICONTROL 表單]** 從列出的結構描述表單中。
 
 1. 從開啟的清單中，按一下您要新增自訂中繼資料的資產類型。
 
@@ -264,9 +262,9 @@ AEM Forms會在此工具中公開支援表單類型的中繼資料結構。 如�
    >
    >這些結構包含出廠提供的元資料屬性，且不得更改/編輯（選中複選框，然後從工具欄按一下編輯），以避免出現功能問題。
 
-1. 所點按的任何資產類型都會開啟包含`extendedmetadata`選項的清單。 編輯此架構。
+1. 所點按的任何資產類型都會開啟包含 `extendedmetadata` 選項。 編輯此架構。
 
-1. 選取`extendedmetadata`旁的核取方塊，然後按一下工具列中顯示的編輯![aem6forms_edit](assets/aem6forms_edit.png)圖示。
+1. 選取旁邊的核取方塊 `extendedmetadata` 然後按一下「編輯」 ![aem6forms_edit](assets/aem6forms_edit.png) 表徵圖。
 
 1. AEM Forms會開啟所選資產類型的中繼資料結構編輯器/表單產生器（在此例中為最適化表單）。
 
@@ -280,14 +278,14 @@ AEM Forms會在此工具中公開支援表單類型的中繼資料結構。 如�
 
    1. 您可以按一下+符號來新增其他標籤。
 
-   1. 您可以將欄位元件從&#x200B;**[!UICONTROL Build Form]**&#x200B;區段拖曳至架構頁面，以新增所需類型的自訂欄位。
-   1. 按一下欄位後，可在&#x200B;**[!UICONTROL Settings]**&#x200B;區段下提供此欄位的規格。
+   1. 您可以從 **[!UICONTROL 建置表單]** 區段（位於結構頁面）。
+   1. 此欄位的規格可在 **[!UICONTROL 設定]** 區段。
 
 ### 在結構編輯器中新增自訂中繼資料屬性 {#add-custom-metadata-property-in-schema-editor}
 
 1. 導覽至您要新增自訂屬性的索引標籤（現有或新）。
 
-1. 從&#x200B;**[!UICONTROL Build Form]**&#x200B;區段拖曳所需類型的元件至左側面板，放置在方便的位置。
+1. 從 **[!UICONTROL 建置表單]** 區段移至左側面板，並放置於方便的位置。
 
    >[!NOTE]
    >
@@ -296,7 +294,7 @@ AEM Forms會在此工具中公開支援表單類型的中繼資料結構。 如�
 1. 按一下您剛拖曳的元件。 在右側面板中開啟的「設定」標籤中，填寫下列欄位的資訊：
 
    1. 指定欄位標籤，在架構中放置的欄位上方作為顯示名稱(例如：部門)
-   1. 在「對應至屬性」欄位下，您會看到預填值&#x200B;**&#39;。/jcr:content/metadata/default&#39;**。 將「**default**」變更為所需的屬性名稱，該名稱用於將屬性儲存在crx儲存庫中(例如：&#39;。/jcr:content/metadata/department&#39;)
+   1. 在「對應至屬性」欄位下，您可以看到預填的值 **&#39;。/jcr:content/metadata/default&#39;**. 更改「**預設**「 」至所需的屬性名稱，此名稱用於將屬性儲存在crx存放庫中(例如：&#39;。/jcr:content/metadata/department&#39;)
 
       >[!NOTE]
       >
@@ -305,10 +303,10 @@ AEM Forms會在此工具中公開支援表單類型的中繼資料結構。 如�
       >此外，屬性名稱必須是唯一的，以避免為存放庫中相同位置的兩個或兩個以上屬性寫入值。 因此，建議您變更「default」值。
 
    1. 根據需求填入其他設定。 例如：如果要將欄位設為必填欄位，請選取「必填」選項。
-   1. 若要刪除您新增的欄位，請選取欄位，然後按一下刪除![delete-1](assets/delete-1.png)圖示。
+   1. 若要刪除您新增的欄位，請選取欄位，然後按一下刪除 ![delete-1](assets/delete-1.png) 表徵圖。
 
 1. 如有必要，請依照步驟1至3新增其他屬性。
-1. 進行所有變更後，按一下「**完成**」。
+1. 按一下 **完成** 進行所有變更之後。
 
    您已成功新增自訂中繼資料屬性。
 

@@ -1,8 +1,8 @@
 ---
 title: 啟動
-seo-title: 啟動
+seo-title: Launches
 description: 啟動可讓您有效開發未來版本的內容。 它們可讓您做好變更準備，以供日後發佈，同時維護您目前的頁面
-seo-description: 啟動可讓您有效開發未來版本的內容。 它們可讓您做好變更準備，以供日後發佈，同時維護您目前的頁面
+seo-description: Launches enable you to efficiently develop content for a future release. They allow you to make changes ready for future publication, while maintaining your current pages
 uuid: 4bbd9865-735d-4232-b69c-b64193ac5d83
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 source-git-commit: 47870c05d231bacc424cfbf308f78bc1eaeb907b
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '827'
 ht-degree: 6%
 
 ---
@@ -34,15 +34,15 @@ ht-degree: 6%
 啟動也可以是：
 
 * 為多個根分支建立。 雖然您可以為整個網站建立啟動（並在那裡進行變更），但由於需要複製整個網站，這可能不切實際。 當涉及數百頁甚至數千頁時，複製操作以及升級任務所需的稍後比較都會影響系統要求和效能。
-* 巢狀內嵌（啟動內的啟動），可讓您從現有啟動建立啟動，讓作者可以利用已進行的變更，而不必對每次啟動多次進行相同的變更。
+* 巢狀內嵌（啟動內的啟動），可讓您從現有啟動建立啟動，讓作者可以利用已進行的變更，而不必對每次啟動執行多次相同的變更。
 
-本節說明如何從Sites主控台內或[啟動主控台](#the-launches-console)中建立、編輯和促銷（若有需要[delete](/help/sites-authoring/launches-creating.md#deleting-a-launch)）啟動頁面：
+本節說明如何建立、編輯和促銷（如有需要，還有） [刪除](/help/sites-authoring/launches-creating.md#deleting-a-launch))從Sites Console中啟動頁面，或 [啟動主控台](#the-launches-console):
 
 * [建立啟動 ](/help/sites-authoring/launches-creating.md)
 * [編輯啟動](/help/sites-authoring/launches-editing.md)
 * [提升啟動](/help/sites-authoring/launches-promoting.md)
 
-## 啟動 — 事件順序{#launches-the-order-of-events}
+## 啟動 — 事件順序 {#launches-the-order-of-events}
 
 啟動可讓您為未來發行的一或多個已啟動的網頁，有效開發內容。
 
@@ -66,15 +66,15 @@ ht-degree: 6%
 
    * 手動:
 
-      * 將啟動內容提升回&#x200B;**Target**（來源頁面），以便發佈。
+      * 將您的啟動內容提升回 **目標** （來源頁面）。
       * 從來源頁面發佈內容（向後推廣後）。
       * 提升所有頁面，或僅提升已修改的頁面。
    * 自動 — 這包括下列項目：
 
-      * **Launch**(**Live**)**date**&#x200B;欄位：這可在建立或編輯啟動時設定。
+      * 此 **Launch**(**即時**) **日期** 欄位：這可在建立或編輯啟動時設定。
 
-      * **Production Ready**&#x200B;標幟：這只能在編輯啟動時設定。
-      * 如果設定了&#x200B;**Production Ready**&#x200B;標幟，啟動會自動升級至指定&#x200B;**Launch**(**Live**)**date**&#x200B;上的生產頁面。 促銷後，生產頁面會自動發佈。\
+      * 此 **生產就緒** 標幟：這只能在編輯啟動時設定。
+      * 若 **生產就緒** 標幟時，啟動會自動升級至指定之 **Launch**(**即時**) **日期**. 促銷後，生產頁面會自動發佈。\
          如果尚未設定日期，標幟將無效。
 
 
@@ -85,10 +85,10 @@ ht-degree: 6%
 
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
-* [建立巢狀啟動](/help/sites-authoring/launches-creating.md#creating-a-nested-launch)  — 在啟動中啟動：
+* [建立巢狀啟動](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - launch中的啟動：
 
    * 來源是現有的啟動。
-   * 您可以[將巢狀啟動](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch)提升至任何目標；這可以是上層啟動或頂層來源頁面（生產）。
+   * 您可以 [提升巢狀啟動](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch) 對任何目標；這可以是上層啟動或頂層來源頁面（生產）。
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
@@ -98,7 +98,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->建立和編輯啟動需要`/content/launches`的存取權 — 與預設群組`content-authors`一樣。
+>建立和編輯啟動需要存取權限 `/content/launches`  — 與預設組一樣 `content-authors`.
 >
 >如果您遇到任何問題，請與系統管理員聯繫。
 
@@ -109,19 +109,19 @@ ht-degree: 6%
 >頁面升級時，會反映任何內容變更，但元件位置不會變更。
 
 
-### 啟動控制台{#the-launches-console}
+### 啟動主控台 {#the-launches-console}
 
 啟動控制台會提供啟動的概觀，並可讓您對列出的動作執行。 此主控台可透過下列方式存取：
 
-* **工具**&#x200B;控制台：**工具**、**Sites**、**啟動**。
+* 此 **工具** 主控台： **工具**, **網站**, **啟動**.
 
-* 或直接使用[https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
+* 或直接搭配 [https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
-## 參考中的啟動（網站控制台）{#launches-in-references-sites-console}
+## 參考中的啟動（網站主控台） {#launches-in-references-sites-console}
 
-1. 在&#x200B;**Sites**&#x200B;主控台中，導覽至啟動的來源。
-1. 開啟&#x200B;**參考**&#x200B;邊欄，然後選取來源頁面。
-1. 選取&#x200B;**啟動**，將列出現有啟動：
+1. 在 **網站** 主控台，導覽至launch的來源。
+1. 開啟 **參考** 邊欄並選取來源頁面。
+1. 選擇 **啟動**，則會列出現有的launch:
 
    ![screen-shot_2019-03-05at121901-1](assets/screen-shot_2019-03-05at121901-1.png)
 

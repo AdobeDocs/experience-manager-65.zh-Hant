@@ -10,10 +10,10 @@ discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
-feature: 資產管理，轉譯
+feature: Asset Management,Renditions
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '310'
 ht-degree: 1%
 
 ---
@@ -29,11 +29,11 @@ ht-degree: 1%
 
    * 將您的視訊或影像嵌入網站。
    * 將URL連結至您的Web應用程式。 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，請使用連結。
-   * 如果您的網站回應迅速，您可以[傳送最佳化的影像](/help/assets/responsive-site.md)。
+   * 如果您的網站回應式，您可以 [傳遞最佳化的影像](/help/assets/responsive-site.md).
 
 >[!NOTE]
 >
->智慧型影像處理可與您現有的影像預設集搭配使用，並會在傳送時的最後毫秒內運用智慧，根據瀏覽器或網路連線速度進一步縮小影像檔案大小。 如需詳細資訊，請參閱[智慧影像](/help/assets/imaging-faq.md)。
+>智慧型影像處理可與您現有的影像預設集搭配使用，並會在傳送時的最後毫秒內運用智慧，根據瀏覽器或網路連線速度進一步縮小影像檔案大小。 請參閱 [智慧型影像](/help/assets/imaging-faq.md) 以取得更多資訊。
 
 如需詳細資訊，請參閱下列主題：
 
@@ -43,7 +43,7 @@ ht-degree: 1%
 * [將URL連結至您的Web應用程式](/help/assets/linking-urls-to-yourwebapplication.md)
 * [為回應式網站提供最佳化的影像](/help/assets/responsive-site.md)
 * [HTTP2 傳送內容](/help/assets/http2.md)
-* [透過Dynamic Media Classic使CDN快取失效](/help/assets/invalidate-cdn-cache-dm-classic.md)
+* [透過Dynamic Media Classic使您的CDN快取失效](/help/assets/invalidate-cdn-cache-dm-classic.md)
 * [使用規則集來轉換URL](/help/assets/using-rulesets-to-transform-urls.md)
 
 
@@ -51,4 +51,4 @@ ht-degree: 1%
 
 Experience Manager現在支援透過HTTP/2傳送所有Dynamic Media內容（影像和影片）。 也就是說，影像或視訊的已發佈URL或內嵌程式碼可與接受託管資產的任何應用程式整合。 然後會透過HTTP/2通訊協定來傳送已發佈的資產。 此傳遞方法可改善瀏覽器和伺服器通訊的方式，讓所有Dynamic Media資產的回應和載入時間都更佳。
 
-若要進一步了解，請參閱[HTTP/2內容傳送常見問題](/help/sites-administering/scene7-http2faq.md)。
+若要進一步了解，請參閱 [HTTP/2傳送內容常見問題](/help/sites-administering/scene7-http2faq.md).

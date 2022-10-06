@@ -1,8 +1,8 @@
 ---
 title: 指定XCI配置選項
-seo-title: 指定XCI配置選項
+seo-title: Specifying XCI configuration options
 description: 了解如何指定XCI設定選項。
-seo-description: 了解如何指定XCI設定選項。
+seo-description: Learn how to specify XCI configuration options.
 uuid: 5d3c10c1-4a93-4336-b311-20faaf835b9f
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ discoiquuid: 162c9fda-f4d4-4ad5-a9ab-7554828e821c
 exl-id: 7cd10389-63e6-41f2-a132-92fd9e40a9b7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '130'
 ht-degree: 1%
 
 ---
 
-# 指定XCI配置選項{#specifying-xci-configuration-options}
+# 指定XCI配置選項 {#specifying-xci-configuration-options}
 
-Forms可讓您指定用於轉譯的自訂XCI檔案。 (請參閱[設定Forms的位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。) 依預設，Forms會覆寫XCI檔案中指定的部分選項，包括：
+Forms可讓您指定用於轉譯的自訂XCI檔案。 (請參閱 [配置Forms位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms).) 依預設，Forms會覆寫XCI檔案中指定的部分選項，包括：
 
 * `config/present/xdp/packets`
 * `config/present/pdf/creator`

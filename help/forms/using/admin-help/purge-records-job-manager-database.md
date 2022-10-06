@@ -1,8 +1,8 @@
 ---
 title: 從作業管理員資料庫中清除記錄
-seo-title: 從作業管理員資料庫中清除記錄
+seo-title: Purge records from the Job Manager database
 description: 大型處理資料可能導致AEM表單效能下降。 當不再需要記錄時，最好清除流程資料。
-seo-description: 大型處理資料可能導致AEM表單效能下降。 當不再需要記錄時，最好清除流程資料。
+seo-description: Large process data can result in lower AEM forms performance. It is good practice to purge process data when records are no longer necessary.
 uuid: cf214498-36e9-4dcc-b4d4-e7c46f80dbab
 contentOwner: admin
 content-type: reference
@@ -12,16 +12,16 @@ discoiquuid: 69a406f2-4fa8-40bb-b671-7b0f5b6a2c4c
 exl-id: 5279f6c3-5954-472c-9ea0-18e8a7ec860e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
 
-# 從作業管理器資料庫{#purge-records-from-the-job-manager-database}中清除記錄
+# 從作業管理員資料庫中清除記錄 {#purge-records-from-the-job-manager-database}
 
 調用長壽命進程時生成的進程資料可能會變得太大，導致AEM表單效能降低，並且會使用不必要的磁碟空間。 當不再需要記錄時，最好清除流程資料。
 
-您可以使用管理控制台執行一次性清除過期記錄，或排程定期自動清除。 在[清除流程資料](/help/forms/using/admin-help/purging-process-data.md#purging-process-data)中討論了清除過時記錄的其他方法。
+您可以使用管理控制台執行一次性清除過期記錄，或排程定期自動清除。 清除過時記錄的其他方法在 [清除流程資料](/help/forms/using/admin-help/purging-process-data.md#purging-process-data).
 
 **訪問「作業清除調度程式」頁**
 
@@ -47,14 +47,14 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果指定的開始日期和時間過去，則按一下「開始排程器」時，將立即執行清除。
+   >如果指定的開始日期和時間過去，則按一下「開始排程器」時，會立即清除。
 
 1. 按一下「啟動排程器」。 任何先前排程的排程器設定都會取代為新設定。
 
 **配置自動清除計畫**
 
 1. 選擇「循環間隔」，並指定清除之間的天數或周數。
-1. 在「清除已完成的記錄篩選器」區域中，指定記錄被視為過時並準備清除的天數或周數。 無法將值設定為`0`。
+1. 在「清除已完成的記錄篩選器」區域中，指定記錄被視為過時並準備清除的天數或周數。 您無法將值設為 `0`.
 
    >[!NOTE]
    >

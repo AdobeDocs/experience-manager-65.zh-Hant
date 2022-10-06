@@ -1,8 +1,8 @@
 ---
 title: 製作
-seo-title: 製作
+seo-title: Authoring
 description: AEM中的製作概念
-seo-description: AEM中的製作概念
+seo-description: Concepts of authoring in AEM
 uuid: eaa5f613-a138-4215-8f84-dfc962fe7fa7
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 1%
+source-wordcount: '538'
+ht-degree: 0%
 
 ---
 
 # 製作{#authoring}
 
-## 製作（和發佈）的概念{#concept-of-authoring-and-publishing}
+## 製作（和發佈）的概念 {#concept-of-authoring-and-publishing}
 
 AEM提供兩種環境：
 
@@ -38,9 +38,9 @@ AEM提供兩種環境：
 
 在製作環境中，AEM的功能可透過兩個UI使用。 針對發佈環境，您可設計供使用者使用之介面的完整外觀與風格。
 
-### 製作環境{#author-environment}
+### 製作環境 {#author-environment}
 
-作者的工作環境稱為&#x200B;**作者環境**。 這為建立內容提供了一個易於使用的介面(圖形用戶介面（GUI或UI）)。 它通常位於提供完整保護的公司防火牆後，需要作者使用已指派適當存取權限的帳戶登入。
+作者的工作方式為 **作者環境**. 這為建立內容提供了一個易於使用的介面(圖形用戶介面（GUI或UI）)。 它通常位於提供完整保護的公司防火牆後，需要作者使用已指派適當存取權限的帳戶登入。
 
 >[!NOTE]
 >
@@ -64,15 +64,15 @@ AEM提供兩種環境：
 
 >[!NOTE]
 >
->AEM也是來自製作環境的[經管](/help/sites-administering/home.md)（大部分工作）。
+>AEM也 [受管](/help/sites-administering/home.md) （大部分任務）。
 
-#### 發佈環境{#publish-environment}
+#### 發佈環境 {#publish-environment}
 
-準備就緒後，AEM網站的內容會發佈至&#x200B;**發佈環境**。 在此，網站的頁面會根據設計介面的外觀與風格提供給預定對象使用。
+準備就緒後，AEM網站的內容會發佈至 **發佈環境**. 在此，網站的頁面會根據設計介面的外觀與風格提供給預定對象使用。
 
 發佈環境通常位於非軍事區內；換句話說，網際網路可用，但不再受內部網路的完全保護。
 
-當AEM網站是[社群網站](/help/communities/overview.md)，或包含[社群元件](/help/communities/author-communities.md)時，登入網站的訪客（成員）可能會與社群功能互動。 例如，他們可以張貼至論壇、張貼意見或關注其他成員。 可授予成員執行通常限於製作環境之活動的權限，例如建立新頁面（社群群組）、部落格文章及協調其他成員的貼文。
+當AEM網站為 [社群網站](/help/communities/overview.md)，或包含 [Communities元件](/help/communities/author-communities.md)，登入網站訪客（成員）可能會與Communities功能互動。 例如，他們可以張貼至論壇、張貼意見或關注其他成員。 可授予成員執行通常限於製作環境之活動的權限，例如建立新頁面（社群群組）、部落格文章及協調其他成員的貼文。
 
 >[!NOTE]
 >
@@ -80,18 +80,15 @@ AEM提供兩種環境：
 >
 >* **發佈/取消發佈**
    >  這些是可讓您的內容在您的發佈環境（或不可）上公開的動作的主要辭彙。
-   >
-   >
-* **啟用/停用**
+>
+>* **啟用/停用**
    >  這些詞語等同於發佈/取消發佈。
-   >
-   >
-* **複製/複製**
+>
+>* **複製/複製**
    >  這些技術術語用於指示資料（例如頁面內容、檔案、代碼、用戶注釋）從一個環境到另一個環境的移動；即發佈或反向復寫使用者留言時。
 >
 
 
-
 #### Dispatcher {#dispatcher}
 
-為了最佳化網站訪客的效能，**[dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)**&#x200B;實作負載平衡和快取。
+若要最佳化網站訪客的效能，請 **[dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)** 實作負載平衡和快取。

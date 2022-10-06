@@ -1,8 +1,8 @@
 ---
 title: 將資料夾發佈至 Brand Portal
-seo-title: 將資料夾發佈至 Brand Portal
+seo-title: Publish folders to Brand Portal
 description: 了解如何將資料夾發佈和取消發佈至Brand Portal。
-seo-description: 了解如何將資料夾發佈和取消發佈至Brand Portal。
+seo-description: Learn how to publish and unpublish folders to Brand Portal.
 uuid: 350beb85-c0fb-4a1c-8597-c03592c02d3d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,12 +10,12 @@ topic-tags: brand-portal
 content-type: reference
 discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
-feature: 品牌入口網站
+feature: Brand Portal
 role: User
 exl-id: 92a156f0-ce2a-4c83-bd57-0c29efbf784f
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '566'
 ht-degree: 38%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 38%
 
 ## 將資料夾發佈至 Brand Portal {#publish-folders-to-brand-portal-1}
 
-1. 從AEM Assets介面中，暫留在所需的資料夾上，然後從快速動作中選取&#x200B;**發佈**&#x200B;選項。
+1. 在AEM Assets介面中，暫留在所需資料夾上並選取 **發佈** 選項。
 
    或者，選取所需的資料夾，然後依照進一步步驟操作。
 
@@ -40,10 +40,10 @@ ht-degree: 38%
 
    若要將所選資料夾發佈至 Brand Portal，請執行下列其中一項操作：
 
-   * 在工具列中選取&#x200B;**快速發佈**。然後，從功能表中選取&#x200B;**發佈至Brand Portal**。
+   * 在工具列中選取&#x200B;**快速發佈**。然後，從功能表中選取 **發佈至Brand Portal**.
 
    * 在工具列中選取&#x200B;**管理出版物**。
-   1. 從&#x200B;**Action**&#x200B;選擇&#x200B;**發佈到Brand Portal**，從&#x200B;**Scheduling**&#x200B;選擇&#x200B;**Now**，然後按一下&#x200B;**Next.**
+   1. 從 **動作** 選取 **發佈至Brand Portal**&#x200B;從 **排程** 選取 **現在**，然後按一下 **下一個。**
    1. 在&#x200B;**範圍**&#x200B;中確認您的選取項目，然後按一下&#x200B;**發佈至 Brand Portal**。
 
    系統會顯示訊息，指出資料夾已排入佇列，等候發佈至 Brand Portal。登入Brand Portal介面，查看已發佈的資料夾。
@@ -52,8 +52,8 @@ ht-degree: 38%
 
    若要將資產資料夾的發佈至Brand Portal工作流程排程至之後的日期或時間：
 
-   1. 選取要發佈的資產/資料夾後，請從頂端的工具列選取&#x200B;**管理出版物**。
-   1. 從&#x200B;**Action**&#x200B;選擇&#x200B;**發佈到Brand Portal**，從&#x200B;**Scheduling**&#x200B;選擇&#x200B;**Later**。
+   1. 選取要發佈的資產/資料夾後，請選取 **管理出版物** 從頂端的工具列。
+   1. 從 **動作** 選取 **發佈至Brand Portal**&#x200B;從 **排程** 選取 **稍後**.
 
       ![publishlaterbp](assets/publishlaterbp.png)
 
@@ -75,14 +75,14 @@ ht-degree: 38%
 
    ![publish2bp-1](assets/publish2bp.png)
 
-1. 在工具欄中，按一下&#x200B;**管理出版物**。
+1. 在工具列中，按一下 **管理出版物**.
 
 1. **立即從Brand Portal取消發佈**
 
    若要從Brand Portal快速取消發佈所需的資料夾：
 
    1. 在工具列中選取&#x200B;**管理出版物**。
-   1. 從&#x200B;**Action**&#x200B;中，選擇&#x200B;**從Brand Portal**&#x200B;取消發佈，從&#x200B;**Scheduling**&#x200B;中選擇&#x200B;**Now**，然後按一下&#x200B;**Next.**
+   1. 從 **動作** 選取 **從Brand Portal取消發佈**&#x200B;從 **排程** 選取 **現在**，然後按一下 **下一個。**
    1. 在&#x200B;**範圍**&#x200B;中確認您的選取項目，然後按一下&#x200B;**從 Brand Portal 取消發佈**。
 
    ![confirm-unpublish](assets/confirm-unpublish.png)
@@ -92,10 +92,10 @@ ht-degree: 38%
    若要將資料夾從Brand Portal發佈排程到之後的日期和時間：
 
    1. 在工具列中選取&#x200B;**管理出版物**。
-   1. 從&#x200B;**Action**&#x200B;選擇&#x200B;**從Brand Portal**&#x200B;取消發佈，從&#x200B;**Scheduling**&#x200B;選擇&#x200B;**Later**。
+   1. 從 **動作** 選取 **從Brand Portal取消發佈**，從 **排程** 選取 **稍後**.
    1. 選取&#x200B;**啟用日期**&#x200B;並指定時間。按一下&#x200B;**下一步**。
    1. 在&#x200B;**範圍**&#x200B;中確認您的選取項目，然後按一下&#x200B;**下一步**。
-   1. 在&#x200B;**工作流程**&#x200B;中指定&#x200B;**工作流程標題**。按一下&#x200B;**稍後取消發佈。**
+   1. 在&#x200B;**工作流程**&#x200B;中指定&#x200B;**工作流程標題**。按一下 **稍後取消發佈。**
 
       ![unpublishworkflows](assets/unpublishworkflows.png)
 

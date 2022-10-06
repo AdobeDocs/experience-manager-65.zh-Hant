@@ -1,8 +1,8 @@
 ---
 title: 您的混合應用程式已準備好迎接AEM Mobile嗎？
-seo-title: 您的混合應用程式已準備好迎接AEM Mobile嗎？
+seo-title: Is your hybrid app ready for AEM Mobile?
 description: 請詳閱本頁以了解混合應用程式。 AEM中的應用程式通常分為兩個部分。 「shell」和「content」以及此頁面提供關於這些主題的更深入分析。
-seo-description: 請詳閱本頁以了解混合應用程式。 AEM中的應用程式通常分為兩個部分。 「shell」和「content」以及此頁面提供關於這些主題的更深入分析。
+seo-description: Follow this page to learn about hrybrid apps. An app in AEM is commonly divided into two parts. The 'shell' and 'content' and this page provides more insight on these topics.
 uuid: cbcce3fa-9100-46ea-9f24-931b42666709
 contentOwner: User
 content-type: reference
@@ -13,12 +13,12 @@ pagetitle: Is your hybrid app ready for AEM Mobile?
 exl-id: 4625890c-2b76-4c78-88e8-23741bc09f5b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '741'
 ht-degree: 0%
 
 ---
 
-# 您的混合應用程式是否已準備好迎接AEM Mobile?{#is-your-hybrid-app-ready-for-aem-mobile}
+# 您的混合應用程式已準備好迎接AEM Mobile嗎？{#is-your-hybrid-app-ready-for-aem-mobile}
 
 >[!NOTE]
 >
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
-在此範例中，我們將製作應用程式的歡迎頁面。 查看源[https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75)。 我們發現應用程式開發人員已定義歡迎頁面，並提供應用程式轉譯之頁面的範本。 這是應用程式開發人員和AEM開發人員需要協調的位置。 混合參考應用程式中歡迎頁面範本的路徑定義為「content/mobileapps/hybrid-reference-app/en/welcome.template.html」。 此路徑非常重要，因為AEM開發人員會使用相同的路徑，在AEM存放庫中製作其歡迎頁面。
+在此範例中，我們將製作應用程式的歡迎頁面。 看看源頭 [https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75). 我們發現應用程式開發人員已定義歡迎頁面，並提供應用程式轉譯之頁面的範本。 這是應用程式開發人員和AEM開發人員需要協調的位置。 混合參考應用程式中歡迎頁面範本的路徑定義為「content/mobileapps/hybrid-reference-app/en/welcome.template.html」。 此路徑非常重要，因為AEM開發人員會使用相同的路徑，在AEM存放庫中製作其歡迎頁面。
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 

@@ -104,7 +104,6 @@ SPA的主要思想是減少呼叫和對伺服器的依賴，以將伺服器呼�
 >
 >* [AEM 6.4版（含service pack 2）](/help/release-notes/release-notes.md)
 >* [在此安裝範例GitHub上可用的We.Retail Journal應用程式。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
-
 >
 
 

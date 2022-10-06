@@ -1,7 +1,8 @@
 ---
 title: AEM檔案歷程
 description: 檔案歷程在AEM檔案中提供敘述性結構，將複雜和不同的功能結合在一起，以最佳實務方式解決業務目標。 歷程是以AEM初學者為核心而設計，會介紹概念和功能，以達成從A到Z的目標。
-source-git-commit: 2523d9dcdbbfd9107e43ca53e2bb586452be1cb8
+exl-id: bb0a26e2-5686-4fb7-bb6e-231dafc8268b
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1234'
 ht-degree: 1%

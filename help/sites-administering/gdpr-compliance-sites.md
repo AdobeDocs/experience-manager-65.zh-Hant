@@ -1,8 +1,8 @@
 ---
 title: AEM Sites - GDPR整備
-seo-title: AEM Sites - GDPR整備
+seo-title: AEM Sites - GDPR Readiness
 description: 了解AEM Sites GDPR整備的詳細資訊。
-seo-description: 了解AEM Sites GDPR整備的詳細資訊。
+seo-description: Learn about the details of GDPR Readiness for AEM Sites.
 uuid: 00d1fdce-ef9a-4902-a7a5-7225728e8ffc
 contentOwner: aheimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -27,41 +27,41 @@ ht-degree: 0%
 
 AEM Sites已準備好協助客戶履行其GDPR法規遵循義務。 本頁引導客戶完成在AEM Sites中處理GDPR請求的程式。 它說明了儲存的私人資料位置，以及如何手動或使用程式碼移除這些資料。
 
-如需詳細資訊，請參閱Adobe隱私權中心](https://www.adobe.com/privacy/general-data-protection-regulation.html)的[GDPR頁面。
+如需詳細資訊，請參閱 [Adobe隱私權中心的GDPR頁面](https://www.adobe.com/privacy/general-data-protection-regulation.html).
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[AEM GDPR整備](/help/managing/data-protection-and-privacy.md) 。
+>請參閱 [AEM GDPR整備](/help/managing/data-protection-and-privacy.md) 以取得詳細資訊。
 
-## 作者伺服器{#author-server}
+## 作者伺服器 {#author-server}
 
-[Platform GDPR檔案](/help/managing/data-protection-and-privacy.md)中涵蓋製作伺服器上的使用者帳戶和UGC內容。
+作者伺服器上的使用者帳戶和UGC內容在 [平台GDPR檔案](/help/managing/data-protection-and-privacy.md).
 
-## 發佈伺服器{#publish-server}
+## 發佈伺服器 {#publish-server}
 
-用於驗證網站訪客的使用者帳戶，以及發佈伺服器上的UGC內容，在[Platform GDPR檔案](/help/managing/data-protection-and-privacy.md)中介紹。
+用於驗證網站訪客的使用者帳戶，以及發佈伺服器上的UGC內容，在 [平台GDPR檔案](/help/managing/data-protection-and-privacy.md).
 
 依預設，AEM Sites元件不會儲存訪客在發佈伺服器上輸入的表單資料。 建議將資料轉送至協力廠商系統或Adobe Campaign以進行進一步處理。
 
-## 選擇加入/選擇退出{#opt-in-opt-out}
+## 選擇加入/選擇退出 {#opt-in-opt-out}
 
-AEM有[cookie選擇退出服務](/help/sites-developing/cookie-optout.md)，可用來管理使用者的選擇加入/退出。
+AEM有 [cookie選擇退出服務](/help/sites-developing/cookie-optout.md) 可用來管理使用者的選擇加入/退出。
 
-## Analytics的增強深入分析{#enhanced-insights-by-analytics}
+## Analytics提供的增強深入分析 {#enhanced-insights-by-analytics}
 
 AEM Sites包含選用的Enhanced Insights by Analytics整合，該整合使用Adobe Analytics On-demand Service中的功能。
 
-如需管理與Adobe Analytics相關的GDPR資料主體請求的詳細資訊，請參閱[Adobe Analytics和GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)。
+如需管理與Adobe Analytics相關之GDPR資料主體請求的詳細資訊，請參閱 [Adobe Analytics與GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html).
 
-## 依Target增強個人化{#enhanced-personalization-by-target}
+## 增強Target的個人化功能 {#enhanced-personalization-by-target}
 
 AEM Sites包含選用的與Enhanced Personalization by Target整合，該整合使用Adobe Target隨需服務中的功能。
 
-如需管理與Adobe Target相關的GDPR資料主體請求的詳細資訊，請參閱[Adobe Target — 隱私權與一般資料保護規範](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)。
+如需管理與Adobe Target相關之GDPR資料主體請求的詳細資訊，請參閱 [Adobe Target — 隱私權與一般資料保護規範](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 
-AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的選用資料層。 這可讓瀏覽器中的訪客專屬資料保留，以用於規則型個人化。
+AEM提供選用的資料層，搭配 [ContextHub](/help/sites-developing/contexthub.md). 這可讓瀏覽器中的訪客專屬資料保留，以用於規則型個人化。
 
 依預設，此訪客資料不會儲存在AEM中；AEM會將規則傳送至資料層，以在瀏覽器中做出個人化決策。
 
@@ -71,7 +71,7 @@ AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的選用資料
 >
 >Adobe CQ 5.5及更舊版本現已停用，本檔案未涵蓋。
 
-### 實作選擇加入/選擇退出{#implementing-opt-in-opt-out}
+### 實作選擇加入/選擇退出 {#implementing-opt-in-opt-out}
 
 網站擁有者必鬚根據下列准則實作選擇退出元件。
 
@@ -103,7 +103,7 @@ AEM提供具有[ContextHub](/help/sites-developing/contexthub.md)的選用資料
    // if isOptedOut is true, ContextHub is running in opt-out mode
    ```
 
-### 預覽ContextHub {#previewing-persistence-of-contexthub}的持續性
+### ContextHub的預覽持續性 {#previewing-persistence-of-contexthub}
 
 若要預覽使用ContextHub的持續時間，使用者可以：
 
@@ -191,7 +191,7 @@ var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persiste
 console.log(storage.getTree());
 ```
 
-### 清除ContextHub {#clearing-persistence-of-contexthub}的持續性
+### 清除ContextHub的持續性 {#clearing-persistence-of-contexthub}
 
 若要清除ContextHub持續性：
 

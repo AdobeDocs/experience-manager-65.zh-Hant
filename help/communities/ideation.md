@@ -1,8 +1,8 @@
 ---
 title: 構想要點
-seo-title: 構想要點
+seo-title: Ideation Essentials
 description: 構思功能概觀
-seo-description: 構思功能概觀
+seo-description: Ideation feature overview
 uuid: abaf03ee-8bf4-4241-96c3-474c95a30a88
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,16 +12,16 @@ discoiquuid: a9e4f2f0-d1ff-40c0-abcf-645e40586a84
 exl-id: 7ad3592b-f8b5-45c0-97bc-15f781d7b811
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '106'
 ht-degree: 3%
 
 ---
 
-# 構想要點{#ideation-essentials}
+# 構想要點 {#ideation-essentials}
 
 本頁面提供使用構思功能的基本資訊，這類功能類似於論壇，但能儲存為草稿，且提供更協作的風格。
 
-## 客戶端{#essentials-for-client-side}的要點
+## 用戶端的要點 {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -47,7 +47,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱<a href="ideation-feature.md">構想功能</a></td>
+   <td>請參閱 <a href="ideation-feature.md">構思功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -56,4 +56,4 @@ ht-degree: 3%
 
 ### 創意力功能 {#ideation-function}
 
-包括[標識函式](functions.md#ideation-function)的社區站點結構包括配置的`ideation`元件。
+包含 [標識函式](functions.md#ideation-function)，包含已設定的 `ideation` 元件。

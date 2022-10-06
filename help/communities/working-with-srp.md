@@ -1,8 +1,8 @@
 ---
 title: SRP — 社群內容儲存
-seo-title: SRP — 社群內容儲存
+seo-title: SRP - Community Content Storage
 description: 自AEM Communities 6.1起，用戶生成的內容(UGC)儲存在由儲存資源提供商(SRP)提供的單個公共儲存中
-seo-description: 自AEM Communities 6.1起，用戶生成的內容(UGC)儲存在由儲存資源提供商(SRP)提供的單個公共儲存中
+seo-description: As of AEM Communities 6.1, user generated content (UGC) is stored in a single, common store provided by a storage resource provider (SRP)
 uuid: d45e03c4-378b-4510-a6a0-d48c8cb879d9
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -14,7 +14,7 @@ role: Admin
 exl-id: e29aae44-67be-43d2-8004-c986412d9e63
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -27,19 +27,19 @@ ht-degree: 0%
 
 與舊版不同，UGC不會跨AEM執行個體進行反向/正向復寫。 相反地，SRP可讓UGC直接存取，以便從所有製作和發佈執行個體建立、讀取、更新和刪除(CRUD)作業，JSRP則例外。
 
-以下是每個SRP選項](#characteristics-of-srp-options)的[特性，這是選擇適當SRP和[基礎部署](/help/communities/topologies.md)時決策過程的關鍵資訊。
+以下是 [每個SRP選項的特性](#characteristics-of-srp-options)，此為選擇適當的SRP和 [基礎部署](/help/communities/topologies.md).
 
-有關UGC使用SRP的詳細資訊，請參閱[儲存資源提供者概述](/help/communities/srp.md)。
+如需UGC使用SRP的詳細資訊，請參閱 [儲存資源提供程式概述](/help/communities/srp.md).
 
 >[!NOTE]
 >
->SRP僅適用於社群內容。 它不會影響儲存網站內容的位置([node store](/help/sites-deploying/data-store-config.md))，也不會影響在AEM例項之間安全處理使用者註冊、使用者設定檔和使用者群組（另請參閱[管理使用者資料](#managing-user-data)）。
+>SRP僅適用於社群內容。 它不會影響儲存網站內容的位置([節點存放區](/help/sites-deploying/data-store-config.md))，且不會影響在AEM例項之間安全處理使用者註冊、使用者設定檔和使用者群組(另請參閱 [管理使用者資料](#managing-user-data))。
 
 >[!CAUTION]
 >
->自AEM 6.1起，不會復寫[UGC](#ugc-never-replicated)。
+>自AEM 6.1起， [UGC從未複製](#ugc-never-replicated).
 >
->當部署不包含通用商店時（例如預設的[JSRP](/help/communities/topologies.md#jsrp)拓撲）,UGC只會顯示在輸入UGC的AEM發佈或製作執行個體上。 只有當拓撲中包含發佈群集時，UGC才會顯示在任何發佈實例上。
+>當部署不包含公用儲存時，例如預設 [JSRP](/help/communities/topologies.md#jsrp) 拓撲中，UGC只會顯示在輸入UGC的AEM發佈或製作執行個體上。 只有當拓撲中包含發佈群集時，UGC才會顯示在任何發佈實例上。
 
 ## SRP選項的特點 {#characteristics-of-srp-options}
 
@@ -107,7 +107,7 @@ JSRP:
 
 ## 配置SRP {#configuring-srp}
 
-根據基礎部署指定預設儲存選項，通過[儲存配置控制台](/help/communities/srp-config.md)進行。
+根據基礎部署指定預設儲存選項，會透過 [儲存配置控制台](/help/communities/srp-config.md).
 
 如需每個選項的設定詳細資訊，請參閱：
 
@@ -132,12 +132,12 @@ JSRP:
 
 ### 管理使用者資料 {#managing-user-data}
 
-CommuniticIes還關注&#x200B;[*users*、*user groups*&#x200B;和&#x200B;*user profiles*](/help/communities/users.md)。 當拓撲為[publish farm](/help/sites-deploying/recommended-deploys.md#tarmk-farm)時，此用戶相關資料在發佈環境中建立和更新時，必須可供其他發佈實例使用。
+對於中共來說，同樣感興趣的是 [*使用者*, *使用者群組*，和 *使用者設定檔*](/help/communities/users.md). 當此用戶相關資料在發佈環境中建立和更新時，拓撲為 [發佈農場](/help/sites-deploying/recommended-deploys.md#tarmk-farm).
 
-自AEM Communities 6.1起，使用者相關資料會使用Sling分送同步，而非復寫。 有關詳細資訊，請訪問[用戶同步](/help/communities/sync.md)。
+自AEM Communities 6.1起，使用者相關資料會使用Sling分送同步，而非復寫。 如需詳細資訊，請造訪 [使用者同步](/help/communities/sync.md).
 
 ### 升級至AEM Communities 6.5 {#upgrading-to-aem-communities}
 
 升級至AEM 6.5社群時，如果需要保留原有的UGC，則應根據AEM 5.6.1或AEM 6.0社群是否使用Adobe隨選儲存或UGC的內部部署儲存，採取步驟。
 
-如需詳細資訊，請造訪[升級至AEM Communities 6.5](/help/communities/upgrade.md)。
+如需詳細資訊，請造訪 [升級至AEM Communities 6.5](/help/communities/upgrade.md).

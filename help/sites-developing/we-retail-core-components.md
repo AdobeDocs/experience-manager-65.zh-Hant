@@ -1,8 +1,8 @@
 ---
 title: 在We.Retail中試用核心元件
-seo-title: 在We.Retail中試用核心元件
+seo-title: Trying out Core Components in We.Retail
 description: 在We.Retail中試用核心元件
-seo-description: 'null'
+seo-description: null
 uuid: 8d1cea0b-99d9-49b2-b275-41f14864b1ff
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,18 +12,18 @@ discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 2%
+source-wordcount: '537'
+ht-degree: 1%
 
 ---
 
-# 在We.Retail{#trying-out-core-components-in-we-retail}中試用核心元件
+# 在We.Retail中試用核心元件{#trying-out-core-components-in-we-retail}
 
 核心元件是現代化、有彈性的元件，具有輕鬆的擴充性，並可輕鬆整合至您的專案。 核心元件是以數種主要設計原則為基礎而建立，例如HTL、可用性、現成可用性、可設定性、版本設定和擴充性。 We.Retail已建置在核心元件上。
 
-## 嘗試{#trying-it-out}
+## 試試 {#trying-it-out}
 
-1. 從We.Retail範例內容開始AEM，然後開啟[元件主控台](/help/sites-authoring/default-components-console.md)。
+1. 從We.Retail範例內容開啟AEM，然後開啟 [元件主控台](/help/sites-authoring/default-components-console.md).
 
    **全局導航 — >工具 — >元件**
 
@@ -32,37 +32,37 @@ ht-degree: 2%
    * `.core-wcm`:標準核心元件
    * `.core-wcm-form`:表單提交核心元件
 
-   選擇`.core-wcm`。
+   選擇 `.core-wcm`.
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. 請注意，所有核心元件均命名為&#x200B;**v1**，這反映出這是此核心元件的第一個版本。 日後將發行一般版本，其版本與AEM相容，且可輕鬆升級，以便您運用最新功能。
-1. 按一下「**文字(v1)**」。
+1. 請注意，所有核心元件均已命名 **v1**，反映此為此核心元件的第一個版本。 日後將發行一般版本，其版本與AEM相容，且可輕鬆升級，以便您運用最新功能。
+1. 按一下 **文字(v1)**.
 
-   請參閱元件的&#x200B;**資源類型**&#x200B;是`/apps/core/wcm/components/text/v1/text`。 核心元件位於`/apps/core/wcm/components`下，並根據元件進行版本控制。
+   請參閱 **資源類型** 的 `/apps/core/wcm/components/text/v1/text`. 核心元件位於 `/apps/core/wcm/components` 和已根據元件進行版本控制。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. 按一下&#x200B;**Documentation**&#x200B;標籤，查看元件的開發人員檔案。
+1. 按一下 **檔案** 標籤，以查看元件的開發人員檔案。
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
-1. 返回元件控制台。 篩選群組&#x200B;**We.Retail**&#x200B;並選取&#x200B;**Text**&#x200B;元件。
-1. 請參閱&#x200B;**資源類型**&#x200B;如`/apps/weretail`下預期指向元件，但&#x200B;**資源超類型**&#x200B;指向核心元件`/apps/core/wcm/components/text/v1/text`。
+1. 返回元件控制台。 群組的篩選 **We.Retail** ，然後選取 **文字** 元件。
+1. 請參閱 **資源類型** 指向元件，如 `/apps/weretail` 但 **資源超類型** 指向核心元件 `/apps/core/wcm/components/text/v1/text`.
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
-1. 按一下&#x200B;**即時使用**&#x200B;標籤，查看目前使用此元件的頁面。 按一下第一個&#x200B;**感謝**&#x200B;頁面以編輯頁面。
+1. 按一下 **使用中** 頁簽，查看當前正在使用此元件的頁面。 按一下第一個 **謝謝** 頁面來編輯頁面。
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
 1. 在感謝頁面上，選擇文本元件，然後在元件的編輯菜單中按一下取消繼承表徵圖。
 
-   [We.Retail具有全球化的網站結](/help/sites-developing/we-retail-globalized-site-structure.md) 構，其中內容會透過稱為繼承 [的機制從語言主版推播至即時副本](/help/sites-administering/msm.md)。因此，必須取消繼承，才能讓使用者手動編輯文字。
+   [We.Retail具有全球化的網站結構](/help/sites-developing/we-retail-globalized-site-structure.md) 內容從語言主版推播至 [透過稱為繼承的機制執行即時副本](/help/sites-administering/msm.md). 因此，必須取消繼承，才能讓使用者手動編輯文字。
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. 按一下&#x200B;**Yes**&#x200B;確認取消。
+1. 按一下以確認取消 **是**.
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -74,8 +74,8 @@ ht-degree: 2%
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. 從&#x200B;**頁面資訊**&#x200B;菜單中選擇&#x200B;**編輯模板**。
-1. 在頁面的「模板編輯器」中，按一下頁面的&#x200B;**「佈局容器」**&#x200B;中文本元件的&#x200B;**Policy**&#x200B;表徵圖。
+1. 從 **頁面資訊** 功能表選取 **編輯範本**.
+1. 在頁面的範本編輯器中，按一下 **原則** 表徵圖 **版面容器** 頁面的下一個頁面。
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
@@ -87,6 +87,6 @@ ht-degree: 2%
 
 ## 更多資訊 {#further-information}
 
-如需核心元件的詳細資訊，請參閱製作檔案[核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)以取得核心元件功能的概觀，並參閱開發人員檔案[開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)以取得技術概觀。
+如需核心元件的詳細資訊，請參閱製作檔案 [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 以概略了解核心元件的功能，以及開發人員檔案 [開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以取得技術概觀。
 
-您也可以進一步調查[可編輯的範本](/help/sites-developing/we-retail-editable-templates.md)。 有關可編輯模板的完整詳細資訊，請參閱創作文檔[建立頁面模板](/help/sites-authoring/templates.md)或開發人員文檔Page [Templates - Editable](/help/sites-developing/page-templates-editable.md)。
+您也可以進一步調查 [可編輯的範本](/help/sites-developing/we-retail-editable-templates.md). 請參閱編寫檔案 [建立頁面範本](/help/sites-authoring/templates.md) 或開發人員文檔頁面 [範本 — 可編輯](/help/sites-developing/page-templates-editable.md) 以取得可編輯範本的完整詳細資訊。

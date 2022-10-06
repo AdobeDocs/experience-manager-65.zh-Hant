@@ -1,6 +1,6 @@
 ---
 title: 艱難的一天
-description: Tough Daytest模擬在最壞情況下的每日大約1000個作者的負載，同時進行所有操作。
+description: Tough Day（嚴格日）測試模擬在最壞情況下約1000位作者的每日負載，同時進行所有操作。
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
@@ -15,33 +15,33 @@ ht-degree: 2%
 
 ## 艱難的第2天 {#what-is-tough-day}
 
-「艱難的第2天」是一個應用程式，它允許您強調test實例的AEM限制。 它可以使用預設的test套件在開箱後運行，也可以根據您的測試需要配置。 你可以看 [此錄制](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) 的子菜單。
+「Tough Day 2」是一項應用程式，可讓您強調測試AEM例項的限制。 可透過預設測試套裝立即執行，或依您的測試需求設定。 你可以看 [這個錄音](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) 以呈現應用程式。
 
 >[!CAUTION]
 >
->艱難的2日需要Java 8。
+>艱難的第2天需要Java 8。
 
-## 如何運行艱難的第2天 {#how-to-run-tough-day}
+## 如何經營艱難的一天2 {#how-to-run-tough-day}
 
-從下載 [Adobe儲存庫](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/)。 下載應用程式後，可以通過提供 `host` 的下界。 在以下示例中，實AEM例在本地運行， `localhost` 值：
+從下載最新版的Tough Day 2 [Adobe存放庫](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/). 下載應用程式後，您可以提供 `host` 參數。 在下列範例中，AEM例項會在本機執行，因此 `localhost` 值的使用方式：
 
 ```xml
 java -jar toughday2.jar --host=localhost
 ```
 
-添加參數後運行的預設套件名為 `toughday`。 它包含以下使用案例：
+新增參數後執行的預設套裝名為 `toughday`. 其包含下列使用案例：
 
-* 為它們建立頁面和即時拷貝（包括部署）
-* 獲取首頁
-* 在querybuilder中運行查詢
-* 建立資產層次結構
+* 建立頁面和其即時副本（包括轉出）
+* 取得首頁
+* 在querybuilder中執行查詢
+* 建立資產階層
 * 刪除資產
 
-套件包含15%的寫操作和85%的讀操作。
+套裝包含15%寫入動作和85%讀取動作。
 
-要運行套件test, Tough Day 2將安裝其預設內容包。 通過設定 `installsamplecontent`參數 `false`，但請記住，您還應更改要運行的test的預設路徑。 如果jar在沒有參數的情況下運行，則Tough Day 2將顯示 [幫助資訊](/help/sites-developing/tough-day.md#getting-help)。
+若要執行套裝測試，Tough Day 2將安裝其預設內容套件。 若要避免此情況，請設定 `installsamplecontent`參數 `false`，但請記住，您也應變更要執行之測試的預設路徑。 如果在沒有參數的情況下運行jar，則Tough Day 2（艱難日2）將顯示 [說明資訊](/help/sites-developing/tough-day.md#getting-help).
 
-一般來說，您可以通過以下模式使用應用程式：
+一般而言，您可以依照此模式使用應用程式：
 
 ```xml
 java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  [<global arguments> | <actions> | --runmode | --publishmode]
@@ -49,17 +49,17 @@ java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  
 
 >[!NOTE]
 >
->艱難的第2天沒有清理步驟。 因此，建議在克隆的試運行實例上運行Tough Day 2 ，而不是在主生產實例上運行。 應在test後刪除臨時實例。
+>艱難的第2天沒有清理步驟。 因此，建議在複製的測試執行個體上執行Tough Day 2 ，而非在主要生產執行個體上。 測試後應捨棄測試執行個體。
 
-### 獲取幫助 {#getting-help}
+### 取得說明 {#getting-help}
 
-Tough Day 2提供了一系列可以從命令行訪問的幫助選項。 例如：
+艱難的第2天提供了一系列可從命令行訪問的幫助選項。 例如：
 
 ```xml
 java -jar toughday2.jar --help_full
 ```
 
-在下表中，可找到相關幫助參數。
+在下表中，您可以找到相關的說明參數。
 
 <table>
  <tbody>
@@ -70,84 +70,84 @@ java -jar toughday2.jar --help_full
   </tr>
   <tr>
    <td>--說明</td>
-   <td>打印全局資訊，例如：可用操作、預定義的套件、運行模式和全局參數。</td>
+   <td>打印全局資訊，例如：可用的動作、預先定義的套裝、執行模式和全域參數。</td>
    <td> </td>
   </tr>
   <tr>
-   <td> — 幫助_發佈</td>
+   <td>—help_publish</td>
    <td>打印所有可用的發佈器。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>-help_test</td>
-   <td>打印test類及其說明。</td>
+   <td>—help_tests</td>
+   <td>打印測試類及其說明。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>-help_full</td>
-   <td>打印以上所有元件，以及test、發佈器和套件元件。</td>
+   <td>—help_full</td>
+   <td>列印上述所有項目，以及測試、發佈商和套裝元件。</td>
    <td> </td>
   </tr>
   <tr>
    <td> —help —runmode/publishmode type=&lt;mode&gt;</td>
-   <td>列出有關指定運行或發佈模式的資訊。</td>
-   <td><p>java -jar toughday2.jar —help —runmode type=constanload</p> <p>java -jar toughday2.jar — 幫助 — publishmode type=intervals</p> </td>
+   <td>列出有關指定運行模式或發佈模式的資訊。</td>
+   <td><p>java -jar toughday2.jar —help —runmode type=constantload</p> <p>java -jar toughday2.jar —help —publishmode type=intervals</p> </td>
   </tr>
   <tr>
-   <td> — 幫助 — 套件=&lt;suitename&gt;</td>
-   <td>列出給定套件的所有test及其各自的可配置屬性。</td>
-   <td><br /> java -jar toughday2.jar —help —suite=gettest</td>
+   <td>—help —suite=&lt;suitename&gt;</td>
+   <td>列出指定套裝的所有測試及其各自的可設定屬性。</td>
+   <td><br /> java -jar toughday2.jar —help —suite=get_tests</td>
   </tr>
   <tr>
-   <td>  — 幫助 — 標籤=&lt;tag&gt;</td>
+   <td> —help —tag=&lt;tag&gt;</td>
    <td><br /> 列出具有指定標籤的所有項目。</td>
-   <td>java -jar toughday2.jar —help -tag=publish</td>
+   <td>java -jar toughday2.jar —help —tag=publish</td>
   </tr>
   <tr>
-   <td> — 幫助 &lt;testclass publisherclass=""&gt;</td>
-   <td><br /> 列出給定test或發佈者的所有可配置屬性。</td>
-   <td><p>java -jar toughday2.jar — 幫助UploadPDFTest</p> <p>java -jar toughday2.jar — 幫助CSVPublisher</p> </td>
+   <td> — 說明 &lt;testclass publisherclass=""&gt;</td>
+   <td><br /> 列出給定測試或發佈器的所有可配置屬性。</td>
+   <td><p>java -jar toughday2.jar — 幫助上傳PDFTest</p> <p>java -jar toughday2.jar — 幫助CSVPublisher</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 全局參數 {#global-parameters}
+### 全域參數 {#global-parameters}
 
-Tough Day 2提供了設定或更改test環境的全局參數。 這些包括目標主機、埠號、使用的協定、實例的用戶和密碼等。 例如：
+艱難的第2天提供設定或變更測試環境的全域參數。 包括目標主機、埠號、使用的通訊協定、執行個體的使用者和密碼等。 例如：
 
 ```xml
 java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m --dryrun=true
 ```
 
-您可以在以下清單中找到相關參數：
+您可以在下列清單中找到相關參數：
 
 | **參數** | **說明** | **預設值** | **可能的值** |
 |---|---|---|---|
-| `--installsamplecontent=<Val>` | 安裝或跳過預設的Tough Day 2內容包。 | true | 真或假 |
+| `--installsamplecontent=<Val>` | 安裝或略過預設的Tough Day 2內容套件。 | true | true或false |
 | `--protocol=<Val>` | 用於主機的協定。 | http | http或https |
-| `--host=<Val>` | 要作為目標的主機名或IP。 |  |  |
+| `--host=<Val>` | 要定位的主機名或IP。 |  |  |
 | `--port=<Val>` | 主機的埠。 | 4502 |  |
-| `--user=<Val>` | 實例的用戶名。 | 管理員 |  |
+| `--user=<Val>` | 例項的使用者名稱。 | 管理員 |  |
 | `--password=<Val>` | 給定用戶的密碼。 | 管理員 |  |
-| `--duration=<Val>` | test的持續時間。 可以以(表示&#x200B;**s**)秒，(**米**)inut,(**h**)**d**)。 | 1d |  |
-| `--timeout=<Val>` | test在中斷並標籤為失敗之前將運行多長時間。 以秒錶示。 | 180 |  |
-| `--suite=<Val>` | 值可以是預定義test套件的一個或清單（用逗號分隔）。 | 艱難 |  |
+| `--duration=<Val>` | 測試的持續時間。 可以以(**s**)秒，(**m**)inutes,(**h**)**d**)天。 | 1d |  |
+| `--timeout=<Val>` | 測試在中斷並標示為失敗之前的執行時間。 以秒為單位表示。 | 180 |  |
+| `--suite=<Val>` | 值可以是預先定義之測試套裝的一或清單（以逗號區隔）。 | 強度 |  |
 | `--configfile=<Val>` | 目標yaml配置檔案。 |  |  |
-| `--contextpath=<Val>` | 實例的上下文路徑。 |  |  |
-| `--loglevel=<Val>` | Tough Day 2引擎的日誌級別。 | 資訊 | 全部、調試、資訊、警告、錯誤、致命、關閉 |
-| `--dryrun=<Val>` | 如果為true，則打印結果配置，且不運行任何test。 | false | 真或假 |
+| `--contextpath=<Val>` | 例項的內容路徑。 |  |  |
+| `--loglevel=<Val>` | Tough Day 2引擎的日誌級別。 | 資訊 | 全部，調試，資訊，警告，錯誤，致命，關閉 |
+| `--dryrun=<Val>` | 如果為true，則列印產生的設定，且不會執行任何測試。 | false | true或false |
 
-## 自定義 {#customizing}
+## 自訂 {#customizing}
 
-可以通過兩種方式實現定制：命令行參數或yaml配置檔案。 **配置檔案通常用於大型自定義套件，並且它們將覆蓋Tough Day 2預設參數。 命令行參數將覆蓋配置檔案和預設參數。**
+定制可以通過兩種方式實現：命令行參數或yaml配置檔案。 **組態檔通常用於大型自訂套裝，且會覆寫第2天的預設參數。 命令行參數會覆蓋配置檔案和預設參數。**
 
-保存test配置的唯一方法是以yaml格式複製它。
+儲存測試設定的唯一方法是以yaml格式複製。
 
-### 添加新Test {#adding-a-new-test}
+### 新增測試 {#adding-a-new-test}
 
-如果不想使用預設 `toughday` 您可以使用 `add` 的下界。 以下示例說明如何添加 `CreateAssetTreeTest` test，方法是使用命令行參數或yaml配置檔案。
+如果您不想使用預設值 `toughday` 套裝，您可使用 `add` 參數。 下列範例說明如何新增 `CreateAssetTreeTest` 使用命令行參數或yaml配置檔案進行測試。
 
-使用命令行參數：
+使用命令列參數：
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest
@@ -162,11 +162,11 @@ tests:
   - add : CreateAssetTreeTest
 ```
 
-### 添加同一Test的多個實例  {#adding-multiple-instances-of-the-same-test}
+### 新增相同測試的多個例項  {#adding-multiple-instances-of-the-same-test}
 
-您也可以添加和運行同一test的多個實例，但每個實例必須具有唯一的名稱。 以下示例說明如何使用命令行參數或yaml配置檔案添加同一test的兩個實例。
+您也可以新增及執行相同測試的多個例項，但每個例項必須具有唯一的名稱。 以下範例說明如何使用命令列參數或yaml設定檔案，新增相同測試的兩個例項。
 
-使用命令行參數：
+使用命令列參數：
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest name=FirstAssetTree --add CreateAssetTreeTest name=SecondAssetTree
@@ -186,19 +186,19 @@ tests:
       name : SecondAssetTree
 ```
 
-### 更改Test屬性 {#changing-the-test-properties}
+### 變更測試屬性 {#changing-the-test-properties}
 
-如果需要更改一個或多個test屬性，可以將該屬性添加到命令行或yaml配置檔案。 要查看所有可用test屬性，請添加 `--help <TestClass/PublisherClass>` 命令行的參數，例如：
+如果需要更改一個或多個測試屬性，可將該屬性添加到命令行或yaml配置檔案。 若要查看所有可用的測試屬性，請新增 `--help <TestClass/PublisherClass>` 命令列的參數，例如：
 
 ```xml
 java -jar toughday2.jar --help CreatePageTreeTest
 ```
 
-請記住，yaml配置檔案將覆蓋Tough Day 2預設參數，命令行參數將覆蓋配置檔案和預設值。
+請記住，yaml配置檔案將覆蓋第2天的預設參數，命令行參數將覆蓋配置檔案和預設值。
 
-以下示例說明如何更改 `template` 屬性 `CreatePageTreeTest` test，方法是使用命令行參數或yaml配置檔案。
+下列範例說明如何變更 `template` 屬性 `CreatePageTreeTest` 使用命令行參數或yaml配置檔案進行測試。
 
-使用命令行參數：
+使用命令列參數：
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreatePageTreeTest template=/conf/toughday-templates/settings/wcm/templates/toughday-template
@@ -215,13 +215,13 @@ tests:
       template : /conf/toughday-templates/settings/wcm/templates/toughday-template
 ```
 
-### 使用預定義Test套件 {#working-with-predefined-test-suites}
+### 使用預先定義的測試套裝 {#working-with-predefined-test-suites}
 
-以下示例說明如何將test添加到預定義的套件以及如何從預定義的套件重新配置和排除現有test。
+下列範例說明如何將測試新增至預先定義的套裝，以及如何重新設定現有測試並從預先定義的套裝中排除。
 
-您可以使用 `add` 參數並指定目標預定義套件。
+您可以使用 `add` 參數，並指定目標預先定義的套裝。
 
-使用命令行參數：
+使用命令列參數：
 
 ```xml
 java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTest
@@ -237,11 +237,11 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-給定套件中的現有test也可以使用 `config`* *參數。 請注意，您還必須指定套件名稱和test的實際名稱(而不是Test類名稱)。 您可以在 `name` test類的屬性。 有關如何查找test屬性的詳細資訊，請閱讀 [更改Test屬性](/help/sites-developing/tough-day.md#changing-the-test-properties) 的子菜單。
+指定套裝中的現有測試也可以使用 `config`* *參數。 請注意，您還必須指定測試的套件名稱和實際名稱（而不是測試類名稱）。 您可以在 `name` 測試類的屬性。 如需如何尋找測試屬性的詳細資訊，請參閱 [更改測試屬性](/help/sites-developing/tough-day.md#changing-the-test-properties) 區段。
 
-在下面的示例中， `CreatePageTreeTest` （命名） `UploadAsset`)更改為「NewAsset」。
+在以下範例中， `CreatePageTreeTest` （已命名） `UploadAsset`)已變更為「NewAsset」。
 
-使用命令行參數：
+使用命令列參數：
 
 ```xml
 java -jar toughday2.jar --host=localhost --suite=toughday --config UploadAsset title=NewAsset
@@ -259,9 +259,9 @@ tests:
       title : NewAsset
 ```
 
-此外，您還可以使用以下命令從預設配置中刪除預定義套件或發佈伺服器中的test資訊： `exclude` 的下界。 請注意，您還必須指定套件名稱和test的實際名稱(不是TestC) `lass` 名稱)。 您可以在 `name` test類的屬性。 在下面的示例中， `CreatePageTreeTest` （命名） `UploadAsset`)test將從toughday套件中刪除。
+此外，您也可以使用，從預先定義的套裝或發佈器，從預設設定中移除測試，並 `exclude` 參數。 請注意，您還必須指定測試的套裝名稱和實際名稱(而不是測試C `lass` 名稱)。 您可以在 `name` 測試類的屬性。 在以下範例中， `CreatePageTreeTest` （已命名） `UploadAsset`)測試從toughday套裝中移除。
 
-使用命令行參數：
+使用命令列參數：
 
 ```xml
 java -jar toughday2.jar --host=localhost --suite=toughday --exclude UploadAsset
@@ -279,15 +279,15 @@ tests:
 
 ### 執行模式 {#run-modes}
 
-艱難的第2天可以以下模式之一運行： **正** 和 **恆載荷**。
+艱難的第2天可以以下列其中一種模式執行： **正常** 和 **恆載荷**.
 
-的 **正** 運行模式有兩個參數：
+此 **正常** 執行模式有兩個參數：
 
-* `concurrency` - concurrency表示Tough Day 2為執行test而建立的線程數。 在這些線程上，將執行test，直到持續時間已用完或不再執行test。
+* `concurrency`  — 並發表示Tough Day 2為測試執行而建立的線程數。 在這些執行緒上，會執行測試，直到持續時間已用完或不再執行測試為止。
 
-* `waittime`  — 同一線程上兩個連續test執行之間的等待時間。 該值必須以毫秒為單位表示。
+* `waittime`  — 同一線程上兩個連續測試執行之間的等待時間。 值必須以毫秒錶示。
 
-以下示例說明如何使用命令行添加參數：
+以下範例說明如何使用命令列來新增參數：
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest --runmode=normal concurrency=20
@@ -302,13 +302,13 @@ runmode:
   concurrency : 200
 ```
 
-的 **恆載荷** 運行模式與普通運行模式不同，它生成了恆定數量的啟動test執行，而不是恆定數量的線程。 可使用具有相同名稱的運行模式參數來設定載荷。
+此 **恆載荷** 運行模式與正常運行模式不同，它通過生成恆定數量的已啟動測試執行，而不是恆定數量的線程。 可以使用具有相同名稱的運行模式參數來設定負載。
 
-### Test選擇 {#test-selection}
+### 測試選擇 {#test-selection}
 
-test選擇過程對於兩種運行模式都相同，如下所示：所有test `weight` 屬性，它確定線程中執行的可能性。 例如，如果我們有兩個test，一個重量為5，另一個重量為10，則後者被執行的可能性是前者的兩倍。
+對於兩種運行模式，測試選擇過程都相同，其步驟如下：所有測試都有 `weight` 屬性，它決定執行緒中的可能性。 例如，如果我們有兩項測試，一項的權重為5，另一項的權重為10，則後者執行的可能性是前者的2倍。
 
-此外，test可以 `count` 屬性，該屬性將執行數限制為給定數。 傳遞此數字後，將不再執行test。 所有已運行的test實例將按照配置完成運行。 以下示例說明如何在命令行或使用yaml配置檔案添加這些參數。
+此外，測試可以 `count` 屬性，此屬性會將執行數限制為指定數字。 通過此數字後，將不再執行測試。 所有已執行的測試執行個體都會依照設定完成執行。 以下示例說明如何在命令行或使用yaml配置檔案添加這些參數。
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --add CreatePageTreeTest weight=10 count=100 --runmode=normal concurrency=20
@@ -329,11 +329,11 @@ java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --ad
 
 >[!NOTE]
 >
->由於並行執行，實際test運行數將與 `count` 的下界。 期望與運行線程數成比例的偏差(由 `concurrency parameter`)。
+>由於並行執行，實際的測試執行數量將不會完全等同於 `count` 參數。 期望與運行線程數成比例的偏差(由 `concurrency parameter`)。
 
 ### 排練 {#dry-run}
 
-乾式運行將解析所有給定輸入（命令行參數或配置檔案），並將其與預設值合併，然後輸出結果。 它不執行任何test。
+乾式執行會剖析所有指定的輸入（命令列參數或設定檔案），並將其與預設值合併，然後輸出結果。 它不執行任何測試。
 
 ```xml
 java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTest --dryrun=true
@@ -341,42 +341,42 @@ java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTe
 
 ## 輸出 {#output}
 
-Tough Day 2輸出test度量和日誌。 有關詳細資訊，請閱讀以下部分。
+艱難的第2天會輸出測試量度和記錄。 如需詳細資訊，請閱讀下列章節。
 
-### Test度量 {#test-metrics}
+### 測試量度 {#test-metrics}
 
-艱難的第2天當前報告9個可評估的test指標。 使用 **&#42;** 符號僅在成功運行後報告：
+艱難的第2天目前報告9個您可評估的測試量度。 量度搭配 **&#42;** 只有在成功執行後才會報告符號：
 
 | **名稱** | **說明** |
 |---|---|
-| 時間戳 | 上次完成test運行的時間戳。 |
-| 已通過 | 成功運行的數量。 |
+| 時間戳記 | 上次完成測試運行的時間戳。 |
+| 已通過 | 成功執行的次數。 |
 | 已失敗 | 失敗的運行數。 |
-| 最小值&#42; | test執行的最短持續時間。 |
-| 最大值&#42; | 執行test的最長時間。 |
-| 中等&#42; | 計算所有test執行的中值持續時間。 |
-| 平均&#42; | 計算所有test執行的平均持續時間。 |
-| 標準開發&#42; | 標準差。 |
-| 90便士&#42; | 90百分點。 |
-| 99便士&#42; | 99百分點。 |
-| 99.9便士&#42; | 99.9百分點。 |
+| 最小值&#42; | 測試執行的最短持續時間。 |
+| 最大值&#42; | 測試執行的最長持續時間。 |
+| 中等&#42; | 所有測試執行的計算中位數持續時間。 |
+| 平均&#42; | 所有測試執行的計算平均持續時間。 |
+| StdDev&#42; | 標準差。 |
+| 90p&#42; | 第90個百分位。 |
+| 99便士&#42; | 第99個百分位。 |
+| 99.9便士&#42; | 第99.9個百分位數。 |
 | 實際吞吐量&#42; | 運行數除以已用執行時間。 |
 
-這些度量是在發佈者的幫助下編寫的，發佈者可與 `add` 參數(類似於添加test)。 目前有兩種選擇：
+這些量度是在發佈者的協助下撰寫，可與 `add` 參數（類似於新增測試）。 目前有兩個選項：
 
 * **CSVPublisher**  — 輸出為CSV檔案。
-* **控制台發佈伺服器**  — 輸出顯示在控制台中。
+* **ConsolePublisher**  — 輸出會顯示在主控台中。
 
-預設情況下，兩個發佈器都處於啟用狀態。
+依預設，會啟用兩個發佈者。
 
-此外，還有兩種模式報告度量：
+此外，報告量度的模式有兩種：
 
-* 的 **簡單** 發佈模式 — 報告從執行開始到發佈的結果。
-* 的 **間隔** 發佈模式 — 在給定時間範圍內報告結果。 可以使用 **間隔** 發佈模式參數。
+* 此 **簡單** 發佈模式 — 報告從執行開始到發佈點的結果。
+* 此 **間隔** 發佈模式 — 在指定時間範圍內報告結果。 您可以使用 **間隔** 發佈模式參數。
 
-以下示例說明如何配置 `intervals` 命令行或使用yaml配置檔案來設定參數。
+下列範例說明如何設定 `intervals` 在命令行或使用yaml配置檔案進行參數設定。
 
-使用命令行參數：
+使用命令列參數：
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreatePageTreeTest --publishmode type=intervals interval=10s
@@ -394,12 +394,12 @@ publishmode:
 
 ### 記錄 {#logging}
 
-Tough Day 2在運行Tough Day 2的同一目錄下建立日誌資料夾。 此資料夾包含兩種類型的日誌：
+Tough Day 2會在您執行Tough Day 2的相同目錄中建立記錄檔資料夾。 此資料夾包含兩種記錄檔：
 
 * **toughday.log**:包含與應用程式狀態、調試資訊和全局消息相關的消息。
-* **強日&lt;testname>.日誌**:與指定test相關的消息。
+* **toughday_&lt;testname>.log**:與指定測試相關的訊息。
 
-日誌不會被覆蓋，後續運行會將消息附加到現有日誌。 日誌有幾個級別，有關詳細資訊，請參閱 ` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`。
+不會覆寫記錄檔，後續執行會將訊息附加至現有記錄檔。 記錄有數個層級，如需詳細資訊，請參閱 ` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`.
 
 <!--
 #### Example Usage {#example-usage}

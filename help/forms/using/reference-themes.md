@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 參考主題{#reference-themes}
 
-[](../../forms/using/themes.md) 它們可讓您在不深入了解CSS的情況下建立表單樣式。除了預設主題，您還可以安裝[AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)以取得下列主題：
+[主題](../../forms/using/themes.md) 讓您在不深入了解CSS的情況下建立表單樣式。 除了預設主題，您還可以安裝 [AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en):
 
 * 柏利
 * 執行
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 此套件中包含的主題具有回應性，且這些主題中的樣式已針對行動裝置和案頭顯示器定義。 多種裝置上的現代瀏覽器，都能輕鬆演算以其中一種主題套用的表單。
 
-有關安裝包的詳細資訊，請參閱[如何使用包](/help/sites-administering/package-manager.md)。
+如需安裝套件的詳細資訊，請參閱 [如何使用套件](/help/sites-administering/package-manager.md).
 
 ## 柏利 {#beryl}
 

@@ -1,8 +1,8 @@
 ---
 title: 為行動裝置製作頁面
-seo-title: 為行動裝置製作頁面
+seo-title: Authoring a Page for Mobile Devices
 description: 為行動裝置製作內容時，您可以在多個模擬器之間切換，以查看一般使用者所看到的內容
-seo-description: 為行動裝置製作內容時，您可以在多個模擬器之間切換，以查看一般使用者所看到的內容
+seo-description: When authoring for mobile, you can switch between several emulators to see what the end-user sees
 uuid: a7a1ba68-d608-4819-88d1-0dab5955d3f4
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 9554cdb3-b604-4d50-9760-89b9e7a7755f
 exl-id: 9c6c6386-5ffd-4fa6-9aa1-f5b0e31d1046
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -25,16 +25,16 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->若要根據現有標準網站建立行動網站，請建立標準網站的即時副本。 （請參閱[為不同通道建立即時副本](/help/sites-administering/msm-livecopy.md)。）
+>若要根據現有標準網站建立行動網站，請建立標準網站的即時副本。 (請參閱 [為不同管道建立即時副本](/help/sites-administering/msm-livecopy.md).)
 >
->AEM開發人員可以建立新裝置群組。 （請參閱[建立設備組篩選器](/help/sites-developing/groupfilters.md)。）
+>AEM開發人員可以建立新裝置群組。 (請參閱 [建立裝置群組篩選器](/help/sites-developing/groupfilters.md).)
 
 請依照下列程式製作行動頁面：
 
-1. 在全局導航中，開啟&#x200B;**Sites**&#x200B;控制台。
-1. 開啟頁面&#x200B;**We.Retail** -> **美國** -> **英文**。
+1. 從全局導航開啟 **網站** 控制台。
+1. 開啟頁面 **We.Retail** -> **美國** -> **英文**.
 
-1. 切換至&#x200B;**預覽**&#x200B;模式。
+1. 切換至 **預覽** 模式。
 1. 按一下頁面頂端的裝置圖示，切換至所需的模擬器。
 1. 將元件從元件瀏覽器拖放至頁面。
 

@@ -1,7 +1,8 @@
 ---
 title: 配置翻譯連接器
 description: 了解如何將AEM連線至翻譯服務。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: a1a4b1ca-d353-46e2-a992-f38be6be338e
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 0%

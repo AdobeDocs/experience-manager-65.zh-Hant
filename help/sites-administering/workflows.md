@@ -1,8 +1,8 @@
 ---
 title: 管理工作流程
-seo-title: 管理工作流程
+seo-title: Administering Workflows
 description: 了解如何在AEM中管理工作流程。
-seo-description: 了解如何在AEM中管理工作流程。
+seo-description: Learn how to administer workflows in AEM.
 uuid: d000a13c-97cb-4b1b-809e-6c3eb0d675e8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 exl-id: 10eecfb8-d43d-4f01-9778-87c752dee64c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 2%
+source-wordcount: '779'
+ht-degree: 1%
 
 ---
 
@@ -38,17 +38,15 @@ ht-degree: 2%
 >
 >如需詳細資訊，請參閱：
 >
->* 套用和參與工作流程：[使用工作流程](/help/sites-authoring/workflows.md)。
->* 建立工作流模型並擴展工作流功能：[開發和擴展工作流](/help/sites-developing/workflows.md)。
->* 改善使用大量伺服器資源的工作流程的效能：[並行工作流處理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)。
-
+>* 套用和參與工作流程： [使用工作流程](/help/sites-authoring/workflows.md).
+>* 建立工作流模型並擴展工作流功能： [開發和擴充工作流程](/help/sites-developing/workflows.md).
+>* 改善使用大量伺服器資源的工作流程的效能： [同時處理工作流程](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing).
 >
 
 
+## 工作流程模型和例項 {#workflow-models-and-instances}
 
-## 工作流模型和實例{#workflow-models-and-instances}
-
-[AEM中](/help/sites-developing/workflows.md#model) 的工作流模型是業務流程的表示和實現：
+[工作流程模型](/help/sites-developing/workflows.md#model) 在AEM中，表示和實施業務流程：
 
 * 通常它們會在頁面或資產上運作，以取得特定結果。
 * 這些頁面和/或資產稱為工作流程裝載。
@@ -59,7 +57,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->執行的步驟是在生成實例時由工作流模型&#x200B;*定義的步驟*。 如需詳細資訊，請參閱[開發工作流程](/help/sites-developing/workflows.md#model)。
+>執行的步驟是由工作流模型定義的步驟 *在產生例項時*. 請參閱 [開發工作流程](/help/sites-developing/workflows.md#model) 以取得詳細資訊。
 
 工作流程例項會在下列生命週期中進行：
 
@@ -76,7 +74,7 @@ ht-degree: 2%
 
 許多實用的工作流程模型都隨AEM提供。 此外，您組織的開發人員可以根據您業務流程的特定需求，建立自訂的工作流模型。
 
-## 工作流步驟{#workflow-steps}
+## 工作流程步驟 {#workflow-steps}
 
 執行工作流程步驟時，這些步驟會與工作流程例項相關聯。 工作流程例項的歷史記錄包含針對該例項執行之每個步驟的相關資訊。 此資訊對於調查執行期間發生的問題非常有用。
 
@@ -89,28 +87,28 @@ ht-degree: 2%
 >
 >如果發生錯誤，服務/步驟實作應處理錯誤情境的行為。 工作流程引擎本身將重試該作業，然後記錄錯誤並停止執行個體。
 
-## 工作流狀態和操作{#workflow-status-and-actions}
+## 工作流程狀態和動作 {#workflow-status-and-actions}
 
 工作流程可具有下列其中一個狀態：
 
 * **執行中**:工作流實例正在運行。
 * **已完成**:已成功結束工作流實例。
 
-* **已暫停**:將工作流程標示為暫停。不過，請參閱下方的警告說明，了解此狀態的已知問題。
+* **已暫停**:將工作流程標示為暫停。 不過，請參閱下方的警告說明，了解此狀態的已知問題。
 * **已中止**:工作流實例已終止。
-* **過時**:工作流實例的推進要求執行後台作業，但在系統中找不到該作業。執行工作流程時發生錯誤時，可能會發生此情況。
+* **過時**:工作流實例的推進要求執行後台作業，但在系統中找不到該作業。 執行工作流程時發生錯誤時，可能會發生此情況。
 
 >[!NOTE]
 >
->當執行「進程步驟」導致錯誤時，該步驟將出現在管理員的收件箱中，工作流狀態為&#x200B;**RUNNING**。
+>當執行「進程步驟」導致錯誤時，該步驟會出現在管理員的「收件箱」中，工作流狀態為 **執行中**.
 
 根據當前狀態，當您需要干預工作流實例的正常進展時，可以對運行的工作流實例執行操作：
 
-* **暫停**:暫停會將工作流程狀態變更為暫停。請參閱下列警告：
+* **暫停**:暫停會將工作流程狀態變更為暫停。 請參閱下列警告：
 
 >[!CAUTION]
 >
 >將工作流程狀態標示為「暫停」有已知問題。 在此狀態下，可以對收件箱中掛起的工作流項執行操作。
 
 * **繼續**:使用相同的配置在暫停的執行點重新啟動暫停的工作流。
-* **終止**:結束工作流程執行並將狀態變更為 **ABORTED**。無法重新啟動中止的工作流實例。
+* **終止**:結束工作流程執行並將狀態變更為 **已中止**. 無法重新啟動中止的工作流實例。

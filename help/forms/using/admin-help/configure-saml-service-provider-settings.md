@@ -1,8 +1,8 @@
 ---
 title: 配置SAML服務提供程式設定
-seo-title: 配置SAML服務提供程式設定
+seo-title: Configure SAML service provider settings
 description: 您可以設定SAML服務提供者設定，讓使用者透過指定的第三方身分提供者(IDP)登入及驗證AEM表單。
-seo-description: 您可以設定SAML服務提供者設定，讓使用者透過指定的第三方身分提供者(IDP)登入及驗證AEM表單。
+seo-description: You can configure SAML service provider settings to allow users to login and authenticate to AEM forms via a specified third-party identity provider (IDP).
 uuid: 14c706ad-8b1c-4c03-9cd4-97424f2162bc
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 1169d0d1-cbfb-486b-acca-9b9de3d410dc
 exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 0%
 
 安全斷言標籤語言(SAML)是在為企業或混合域配置授權時可選擇的選項之一。 SAML主要用於支援跨多個網域的SSO。 將SAML設為驗證提供者時，使用者會透過指定的協力廠商身分提供者(IDP)登入AEM表單並進行驗證。
 
-如需SAML的說明，請參閱[安全斷言標籤語言(SAML)V2.0技術概述](https://www.oasis-open.org/committees/download.php/20645/sstc-saml-tech-overview-2%200-draft-10.pdf)。
+如需SAML的說明，請參閱 [安全聲明標籤語言(SAML)V2.0技術概述](https://www.oasis-open.org/committees/download.php/20645/sstc-saml-tech-overview-2%200-draft-10.pdf).
 
 1. 在管理控制台中，按一下「設定>使用者管理>設定> SAML服務提供者設定」 。
-1. 在「服務提供者實體ID」方塊中，輸入唯一ID以用作AEM表單服務提供者實作的識別碼。 在設定IDP時，您也可以指定此唯一ID（例如`um.lc.com`）。 您也可以使用用來存取AEM表單的URL（例如`https://AEMformsserver`）。
-1. 在「服務提供者基本URL」框中，鍵入表單伺服器的基本URL（例如`https://AEMformsserver:8080`）。
+1. 在「服務提供者實體ID」方塊中，輸入唯一ID以用作AEM表單服務提供者實作的識別碼。 您也可在設定IDP時指定此唯一ID(例如 `um.lc.com`.) 您也可以使用用來存取AEM表單的URL(例如 `https://AEMformsserver`)。
+1. 在「服務提供者基本URL」方塊中，輸入表單伺服器的基本URL(例如， `https://AEMformsserver:8080`)。
 1. （可選）若要讓AEM表單傳送已簽署的驗證請求給IDP，請執行下列工作：
 
-   * 使用信任管理器以PKCS #12格式導入憑據，並選擇文檔簽名憑據作為信任儲存類型。 （請參閱[管理本地憑據](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials)。）
+   * 使用信任管理器以PKCS #12格式導入憑據，並選擇文檔簽名憑據作為信任儲存類型。 (請參閱 [管理本機憑證](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials).)
    * 在「服務提供程式憑據密鑰別名」清單中，選擇在信任儲存中分配給憑據的別名。
    * 按一下「匯出」 ，將URL內容儲存至檔案，然後將該檔案匯入您的IDP。
 

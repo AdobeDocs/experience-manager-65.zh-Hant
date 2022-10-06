@@ -1,8 +1,8 @@
 ---
 title: 部署最佳實務
-seo-title: 部署最佳實務
+seo-title: Deploying Best Practices
 description: 部署和維護最佳實務。
-seo-description: 部署和維護最佳實務。
+seo-description: Deploying and maintaining best practices.
 uuid: 4546ed2c-43d5-40f3-874f-567b324e78c2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
 exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 8%
+source-wordcount: '430'
+ht-degree: 9%
 
 ---
 
@@ -38,14 +38,14 @@ ht-degree: 8%
 
 ## OAK {#oak}
 
-[](/help/sites-deploying/platform.md) Oak是可擴充且效能優異的階層式內容存放庫，是AEM的基礎。
+[Oak](/help/sites-deploying/platform.md) 是可擴充且高效能的階層式內容存放庫，是AEM的基礎。
 
 <table>
  <tbody>
   <tr>
    <td><p>可擴充性、效能和災難恢復</p> </td>
    <td><a href="/help/sites-deploying/performance.md">效能和可擴充性</a></td>
-   <td>提供一份白皮書，討論技術靈活性、高效能和健全的災難恢復功能</td>
+   <td>提供了一份白皮書，討論技術靈活性、高效能和健全的災難恢復功能</td>
   </tr>
   <tr>
    <td>建議的OAK部署</td>
@@ -74,9 +74,9 @@ ht-degree: 8%
 
 AEM Communities可簡化內部部署社群的建立和管理作業。 以下說明AEM Communities的最佳實務：
 
-[社群內容存放區](/help/communities/working-with-srp.md)  — 討論使用者產生內容(UGC)的新共用儲存功能，以及選擇基礎拓撲的考 [量事項](/help/communities/topologies.md)。
+[社群內容商店](/help/communities/working-with-srp.md)  — 討論用戶生成的內容(UGC)的新共用儲存功能，以及選擇基礎內容的注意事項 [拓撲](/help/communities/topologies.md).
 
-[建議的社群部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 說明建議的社群部署。 |
+[針對社群的建議部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 說明Communities的建議部署。 |
 
 ## UI {#ui}
 
@@ -95,11 +95,11 @@ AEM目前有兩個UI:在相同版本中使用傳統和觸控最佳化UI。 因�
   <tr>
    <td>品質保證最佳實務</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">品質保證最佳實務</a></td>
-   <td>標準化概述在您的<em>publish</em>環境中為效能測試專門定義測試概念時所涉及的問題。 這主要是QA工程師、項目經理和系統管理員感興趣的。</td>
+   <td>針對您的 <em>發佈</em> 環境。 這主要是QA工程師、項目經理和系統管理員感興趣的。</td>
   </tr>
   <tr>
-   <td>搭配使用 Dispatcher 與 CDN</td>
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">搭配使用 Dispatcher 與 CDN</a></td>
+   <td>搭配 CDN 使用 Dispatcher</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">搭配 CDN 使用 Dispatcher</a></td>
    <td>內容傳遞網路 (CDN) (例如 Akamai Edge Delivery 或 Amazon Cloud Front) 會從接近使用者的位置傳遞內容。</td>
   </tr>
   <tr>
@@ -110,7 +110,7 @@ AEM目前有兩個UI:在相同版本中使用傳統和觸控最佳化UI。 因�
   <tr>
    <td>效能測試</td>
    <td><a href="/help/sites-deploying/best-practices-for-performance-testing.md">效能測試最佳實務</a></td>
-   <td>說明在AEM部署上執行效能測試的最佳實務。<br /> </td>
+   <td>說明在AEM部署上執行效能測試的最佳作法。<br /> </td>
   </tr>
  </tbody>
 </table>

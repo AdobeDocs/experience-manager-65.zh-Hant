@@ -1,8 +1,8 @@
 ---
 title: 互動式通信配置屬性
-seo-title: 互動式通信配置屬性
+seo-title: Interactive Communication configuration properties
 description: 編輯Interactive Communications的預設配置屬性
-seo-description: 編輯Interactive Communications的預設配置屬性
+seo-description: Edit default configuration properties for Interactive Communications
 uuid: 4030078f-64a3-40bb-9892-49e22a8da561
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,20 +10,20 @@ content-type: reference
 topic-tags: interactive-communications
 discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
-feature: 互動式通訊
+feature: Interactive Communication
 exl-id: 09eeade6-e16d-4159-b26a-803c7201097a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 5%
+source-wordcount: '614'
+ht-degree: 7%
 
 ---
 
 # 互動式通信配置屬性{#interactive-communications-configuration-properties}
 
-「互動式通訊」包含安裝[AEM Forms附加元件](../../forms/using/installing-configuring-aem-forms-osgi.md)套件後自動設定的屬性。 互動式通訊作者可使用&#x200B;**Adobe Experience Manager Web主控台設定**&#x200B;頁面編輯這些預設設定屬性。
+互動式通訊包括在安裝 [AEM Forms附加元件](../../forms/using/installing-configuring-aem-forms-osgi.md) 包。 互動式通訊作者可使用 **Adobe Experience Manager Web主控台設定** 頁面。
 
-使用下列URL開啟「**Adobe Experience Manager Web Console設定**」頁面：
+開啟 **Adobe Experience Manager Web主控台設定** 頁面的URL:
 
 `https:/[server]:[port]/<contextPath>/system/console/configMgr`
 
@@ -34,9 +34,9 @@ ht-degree: 5%
 * [最適化表單與互動式通訊Web通道設定](#adaptive-form-and-interactive-communication-web-channel-configuration)
 * [最適化表單與互動式通訊Web通道主題設定](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
 
-## 文檔片段配置{#document-fragments-configuration}
+## 檔案片段設定 {#document-fragments-configuration}
 
-點選&#x200B;**Adobe Experience Manager Web Console Configuration**&#x200B;頁面上的&#x200B;**檔案片段設定** ，以檢視檔案片段的設定屬性。
+點選 **檔案片段設定** 在 **Adobe Experience Manager Web主控台設定** 頁面，檢視檔案片段的設定屬性。
 
 <table>
  <tbody> 
@@ -80,9 +80,9 @@ ht-degree: 5%
  </tbody> 
 </table>
 
-## 建立通信配置{#create-correspondence-configuration}
+## 建立通信配置 {#create-correspondence-configuration}
 
-點選&#x200B;**Adobe Experience Manager Web Console Configuration**&#x200B;頁面上的&#x200B;**建立通信設定** ，以檢視代理UI的設定屬性。
+點選 **建立通信配置** 在 **Adobe Experience Manager Web主控台設定** 頁面，查看代理UI的配置屬性。
 
 <table>
  <tbody> 
@@ -105,17 +105,17 @@ ht-degree: 5%
    <td>不適用</td> 
   </tr> 
   <tr> 
-   <td>啟用PDF中的字型內嵌</td> 
-   <td><p>選中複選框以啟用PDF文檔中的嵌入字型。 選擇此選項後，可以在使用代理UI生成或預覽PDF文檔後嵌入新字型。 使用互動式通信的打印通道生成和預覽PDF文檔。</p> <p>如果用於生成PDF的電腦上有字型，並且用於訪問PDF的客戶端電腦上沒有字型，則將字型嵌入PDF文檔非常有用。</p> <p>有關嵌入字型的詳細資訊，請參閱<a href="../../forms/using/customize-text-editor.md" target="_blank">自定義文本編輯器</a>。</p> </td> 
+   <td>啟用字型嵌入PDF</td> 
+   <td><p>選中複選框以啟用PDF文檔中的嵌入字型。 選擇此選項後，可以在使用代理UI生成或預覽PDF文檔後嵌入新字型。 使用互動式通信的打印通道生成和預覽PDF文檔。</p> <p>如果在用於生成PDF的電腦上可用字型，並且在訪問PDF的客戶端電腦上不可用，則將字型嵌入到PDF文檔中非常有用。</p> <p>有關嵌入字型的詳細資訊，請參閱 <a href="../../forms/using/customize-text-editor.md" target="_blank">自訂文字編輯器</a>.</p> </td> 
    <td>未選擇</td> 
    <td>不適用</td> 
   </tr> 
  </tbody> 
 </table>
 
-## 最適化表單與互動式通訊Web通道配置{#adaptive-form-and-interactive-communication-web-channel-configuration}
+## 最適化表單與互動式通訊Web通道設定 {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-點選&#x200B;**Adobe Experience Manager Web Console Configuration**&#x200B;頁面上的&#x200B;**適用性表單和互動式通訊Web通道設定** ，以檢視適用性Forms和互動式通訊Web通道的設定屬性。 下表介紹了與Interactive Communications相關的屬性：
+點選 **最適化表單與互動式通訊Web通道設定** 在 **Adobe Experience Manager Web主控台設定** 頁面，檢視適用性Forms和互動式通訊Web通道的設定屬性。 下表介紹了與Interactive Communications相關的屬性：
 
 | 屬性 | 說明 | 預設 | 可接受的值 |
 |---|---|---|---|
@@ -123,9 +123,9 @@ ht-degree: 5%
 | 最大快取條目數 | 設定使用快取記憶體可擷取的最大適用性表單和互動式通訊數量。 | 100 | 數量 |
 | 使檔案名稱唯一 | 選取核取方塊，在適用性Forms和互動式通訊中為包含作為附件的檔案指定唯一名稱。 | 未選擇 | 不適用 |
 
-## 最適化表單與互動式通訊Web通道主題配置{#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
+## 最適化表單與互動式通訊Web通道主題設定 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-點選&#x200B;**Adobe Experience Manager Web控制台配置**&#x200B;頁面上的&#x200B;**適用性表單和互動式通信Web通道主題配置**&#x200B;以查看適用性Forms和互動式通信Web通道主題的配置屬性。
+點選 **最適化表單與互動式通訊Web通道主題設定** 在 **Adobe Experience Manager Web主控台設定** 頁面，檢視適用性Forms和互動式通訊Web通道主題的設定屬性。
 
 <table>
  <tbody> 

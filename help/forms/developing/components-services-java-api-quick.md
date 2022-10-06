@@ -1,6 +1,6 @@
 ---
 title: 元件和服務Java APIQ快速入門(SOAP)
-seo-title: 元件和服務Java APIQ快速入門(SOAP)
+seo-title: Components and Services Java APIQuick Start(SOAP)
 description: 元件和服務Java APIQ快速入門(SOAP)
 uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
 contentOwner: admin
@@ -10,14 +10,14 @@ topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 role: Developer
 exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
-# 元件和服務Java API快速入門(SOAP){#components-and-services-java-apiquick-start-soap}
+# 元件和服務Java API快速入門(SOAP) {#components-and-services-java-apiquick-start-soap}
 
 元件和服務均可使用Java API快速入門(SOAP)。
 
@@ -43,15 +43,15 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計中的快速入門是以部署在JBoss和Windows作業系統上的Forms伺服器為基礎。 但是，如果您使用其他作業系統（如Unix），請以適用作業系統支援的路徑取代windows特定路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表單進行程式設計中的快速入門是以部署在JBoss和Windows作業系統上的Forms伺服器為基礎。 但是，如果您使用其他作業系統（如Unix），請以適用作業系統支援的路徑取代windows特定路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 >[!NOTE]
 >
->如果您有自訂元件，並且使用SOAP或EJB協定來調用同一本地伺服器上的DSC，並且這些調用在升級後停止工作，則使用in-VM([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY))調用策略。 使用預設的ServiceClientFactory的VM內DSC調用方法，並且不使用SOAP或EJB協定構建ServiceClientFactory。
+>如果您有自定義元件，並且使用SOAP或EJB協定來調用同一本地伺服器上的DSC，並且這些調用在升級後停止工作，則使用VM內調用策略。 使用預設的ServiceClientFactory的VM內DSC調用方法，並且不使用SOAP或EJB協定構建ServiceClientFactory。
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-deploying-a-component-using-the-java-api}部署元件
+## 快速入門（SOAP模式）:使用Java API部署元件 {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
-以下Java示例部署了基於名為&#x200B;*adobe-emailSample-dsc.jar*&#x200B;的JAR檔案的元件。
+以下Java示例部署了基於名為的JAR檔案的元件 *adobe-emailSample-dsc.jar*.
 
 ```java
  /* 
@@ -151,9 +151,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}設定服務的執行內容
+## 快速入門（SOAP模式）:使用Java API設定服務的執行內容 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
 
-以下Java代碼示例將Run-As Invoker執行上下文設定為名為&#x200B;*EncryptDocument*&#x200B;的示例服務。
+以下Java代碼示例將「運行方式調用程式」執行上下文設定為一個名為 *EncryptDocument*.
 
 ```java
  /* 
@@ -243,9 +243,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-disabling-service-security-using-the-java-api}禁用服務安全
+## 快速入門（SOAP模式）:使用Java API停用服務安全性 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
 
-以下Java代碼示例禁用了示例EncryptDocument服務以及從此服務（設定值和加密服務）中調用的服務的安全性。
+以下Java代碼示例禁用了示例EncryptDocument服務以及從此服務中調用的服務（設定值和加密服務）的安全性。
 
 ```java
  /* 
@@ -356,9 +356,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-starting-a-service-using-the-java-api}啟動服務
+## 快速入門（SOAP模式）:使用Java API啟動服務 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
 
-以下Java代碼示例啟動名為&#x200B;*SendEmailService*&#x200B;的服務。
+以下Java代碼示例將啟動名為 *SendEmailService*.
 
 ```java
  package com.adobe.sample.servicemanager; 
@@ -414,7 +414,7 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}修改服務配置值
+## 快速入門（SOAP模式）:使用Java API修改服務配置值 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
 以下Java示例修改屬於SendEmail服務的配置值。
 
@@ -526,7 +526,7 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-removing-components-using-the-java-api}移除元件
+## 快速入門（SOAP模式）:使用Java API移除元件 {#quick-start-soap-mode-removing-components-using-the-java-api}
 
 下列Java程式碼範例會使用Java API來移除元件。
 

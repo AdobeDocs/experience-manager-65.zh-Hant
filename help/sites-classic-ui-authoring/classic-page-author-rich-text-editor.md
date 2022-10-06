@@ -32,7 +32,7 @@ WYSIWYG編輯對話框提供了多種功能：
 >
 >可用的功能可針對個別專案進行設定，因此安裝時可能會有所不同。
 
-## 就地編輯{#in-place-editing}
+## 就地編輯 {#in-place-editing}
 
 除了以對話方塊為基礎的RTF編輯模式外，AEM也提供就地編輯模式，當文字顯示在頁面版面中時，可直接編輯文字。
 
@@ -48,17 +48,17 @@ WYSIWYG編輯對話框提供了多種功能：
 >
 >如果未開啟內容尋找器，則不會顯示工具列。
 
-目前，已針對&#x200B;**Text**&#x200B;和&#x200B;**Title**&#x200B;元件產生的頁面元素啟用就地編輯模式。
+目前，已針對 **文字** 和 **標題** 元件。
 
 >[!NOTE]
 >
->[!UICONTROL Title]元件設計為包含短文本，不帶換行符。 在「就地編輯模式」中編輯標題時，輸入換行符將開啟標題下方的新&#x200B;**Text**&#x200B;元件。
+>此 [!UICONTROL 標題] 元件設計為包含不帶換行符的短文本。 在「就地編輯模式」中編輯標題時，輸入換行符將開啟新的 **文字** 元件。
 
-## RTF編輯器{#features-of-the-rich-text-editor}的功能
+## RTF編輯器的功能 {#features-of-the-rich-text-editor}
 
-RTF編輯器提供一系列功能，這些[取決於個別元件的設定](/help/sites-administering/rich-text-editor.md)。 觸控最佳化和傳統UI皆提供這些功能。
+RTF編輯器提供一系列功能，這些 [取決於設定](/help/sites-administering/rich-text-editor.md) 個別元件中。 觸控最佳化和傳統UI皆提供這些功能。
 
-### 基本字元格式{#basic-character-formats}
+### 基本字元格式 {#basic-character-formats}
 
 ![](do-not-localize/cq55_rte_basicchars.png)
 
@@ -72,23 +72,23 @@ RTF編輯器提供一系列功能，這些[取決於個別元件的設定](/help
 
 ![cq55_rte_basicchars_use](assets/cq55_rte_basicchars_use.png)
 
-所有動作都可切換，因此重新選取會移除格式。
+所有選項都會切換，因此重新選取會移除格式。
 
-### 預定義樣式和格式{#predefined-styles-and-formats}
+### 預先定義的樣式和格式 {#predefined-styles-and-formats}
 
 ![cq55_rte_stylesparagh](assets/cq55_rte_stylesparagraph.png)
 
-您的安裝可包含預先定義的樣式和格式。 這些清單可與&#x200B;**[!UICONTROL Style]**&#x200B;和&#x200B;**[!UICONTROL Format]**&#x200B;下拉清單一起使用，並可應用於您已選擇的文本。
+您的安裝可包含預先定義的樣式和格式。 這些可搭配 **[!UICONTROL 樣式]** 和 **[!UICONTROL 格式]** 下拉式清單，可套用至您選取的文字。
 
 樣式可套用至特定字串（與CSS關聯的樣式）:
 
 ![cq55_rte_styles_use](assets/cq55_rte_styles_use.png)
 
-雖然格式已套用至整個文欄位落（格式是以HTML為基礎）:
+雖然格式被應用於整個文本段落(格式是基於HTML的):
 
 ![cq55_rte_paragh_use](assets/cq55_rte_paragraph_use.png)
 
-只能更改特定格式（預設為&#x200B;**[!UICONTROL Paragraph]**）。
+只能更改特定格式(預設為 **[!UICONTROL 段落]**)。
 
 樣式可移除；將游標置於已應用樣式的文本中，然後按一下移除表徵圖：
 
@@ -96,22 +96,21 @@ RTF編輯器提供一系列功能，這些[取決於個別元件的設定](/help
 >
 >實際上，請不要重新選擇已應用樣式或表徵圖將被停用的任何文本。
 
-### 剪切，複製，貼上{#cut-copy-paste}
+### 剪下，複製，貼上 {#cut-copy-paste}
 
 ![](do-not-localize/cq55_rte_cutcopypaste.png)
 
-可使用&#x200B;**[!UICONTROL Cut]**&#x200B;和&#x200B;**[!UICONTROL Copy]**&#x200B;的標準函式。 提供了多種類型的&#x200B;**[!UICONTROL Paste]**，以適應不同的格式。
+標準函式 **[!UICONTROL 剪下]** 和 **[!UICONTROL 複製]** 的URL區段。 幾種 **[!UICONTROL 貼上]** 被提供以適應不同的格式。
 
 * 剪切(Ctrl-X)
 * 複製(Ctrl-C)
-* 貼上
-這是元件的預設貼上機制(Ctrl-V);當安裝為現成可用時，此設定為「從Word]貼上」。[!UICONTROL 
+* 貼上這是元件的預設貼上機制(Ctrl-V);當安裝為現成可用時，這會設定為 [!UICONTROL 從Word貼上].
 
 * 貼上為文字：移除所有樣式和格式，僅貼上純文字。
 
 * 從Word貼上：這會將內容貼上為HTML（含一些必要的重新格式設定）。
 
-### 還原，重做{#undo-redo}
+### 還原，重做 {#undo-redo}
 
 ![](do-not-localize/cq55_rte_undoredo.png)
 
@@ -169,15 +168,15 @@ URL的連結（在您的網站內或外部位置）是透過醒目提示所需�
 
 * 直接鍵入URI
 * 使用網站地圖來選取網站內的頁面
-* 輸入URI，然後附加目標錨點；例如`www.TargetUri.org#AnchorName`
+* 輸入URI，然後附加目標錨點；例如 `www.TargetUri.org#AnchorName`
 * 僅輸入錨點（以參考「目前頁面」）;例如， `#anchor`
 * 在內容尋找器中搜尋頁面，然後將頁面圖示拖放至超連結對話方塊中
 
 >[!NOTE]
 >
->URI可以前面加上為安裝配置的任何協定。 在標準安裝中，這些參數為`https://`、`ftp://`和`mailto:`。 未為安裝配置的協定將被拒絕，並標籤為無效。
+>URI可以前面加上為安裝配置的任何協定。 在標準安裝中，這些 `https://`, `ftp://`，和 `mailto:`. 未為安裝配置的協定將被拒絕，並標籤為無效。
 
-要斷開連結位置，游標將位於連結文本內的任意位置，然後按一下[!UICONTROL Unlink]表徵圖：
+要將游標置於連結文本內的任意位置，請按一下 [!UICONTROL 取消連結] 圖示：
 
 ![](do-not-localize/chlimage_1-10.png)
 
@@ -185,9 +184,9 @@ URL的連結（在您的網站內或外部位置）是透過醒目提示所需�
 
 ![](do-not-localize/cq55_rte_anchor.png)
 
-錨點可以通過定位游標或選擇某些文本在文本中的任意位置建立。 然後按一下&#x200B;**錨點**&#x200B;圖示以開啟對話方塊。
+錨點可以通過定位游標或選擇某些文本在文本中的任意位置建立。 然後按一下 **錨點** 圖示以開啟對話方塊。
 
-輸入錨點的名稱，然後按一下「**確定**」以保存。
+輸入錨點名稱，然後按一下 **確定** 儲存。
 
 ![cq55_rte_anchor_use](assets/cq55_rte_anchor_use.png)
 
@@ -195,19 +194,19 @@ URL的連結（在您的網站內或外部位置）是透過醒目提示所需�
 
 ![chlimage_1-104](assets/chlimage_1-104.png)
 
-### 查找和替換{#find-and-replace}
+### 查找和替換 {#find-and-replace}
 
 ![](do-not-localize/cq55_rte_findreplace.png)
 
-AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)函式。
+AEM提供 **查找** 和 **取代** （尋找和取代）函式。
 
-這兩者都有一個&#x200B;**Find next**&#x200B;按鈕，用於搜索所指定文本的開啟元件。 您也可以指定是否需要比對大小寫（上/下）。
+都有 **查找下一個** 按鈕，搜索開啟的元件以查找指定的文本。 您也可以指定是否需要比對大小寫（上/下）。
 
 搜索將始終從文本中的當前游標位置開始。 到達元件結尾時，會顯示訊息，通知您下一個搜尋作業將從頂端開始。
 
 ![cq55_rte_find_use](assets/cq55_rte_find_use.png)
 
-**Replace**&#x200B;選項可讓您&#x200B;**Find**，然後使用指定文字取代&#x200B;**個別執行個體，或取代目前元件中的所有**&#x200B;執行個體。****
+此 **取代** 選項 **查找**，然後 **取代** 具有指定文字的個別例項，或 **全部替換** 例項。
 
 ![cq55_rte_findreplace_use](assets/cq55_rte_findreplace_use.png)
 
@@ -219,9 +218,9 @@ AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)�
 
 >[!NOTE]
 >
->AEM也提供專用元件，以供進行更詳細的影像設定。 例如，**Image**&#x200B;和&#x200B;**Text Image**&#x200B;元件可用。
+>AEM也提供專用元件，以供進行更詳細的影像設定。 例如 **影像** 和 **文字影像** 元件可供使用。
 
-### 拼寫檢查器{#spelling-checker}
+### 拼寫檢查程式 {#spelling-checker}
 
 ![](do-not-localize/cq55_rte_spellchecker.png)
 
@@ -233,31 +232,31 @@ AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)�
 
 >[!NOTE]
 >
->拼字檢查程式會以網站的語言執行，方法是取用子樹狀結構的語言屬性或從URL擷取語言。 例如，將檢查`en`分支中是否有英文，以及檢查`de`分支中是否有德文。
+>拼字檢查程式會以網站的語言執行，方法是取用子樹狀結構的語言屬性或從URL擷取語言。 例如 `en` 將檢查分支是否為英文， `de` 德文分行。
 
 ### 表格 {#tables}
 
 表格可同時使用：
 
-* 作為&#x200B;**表**&#x200B;元件
+* 作為 **表格** 元件
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
-* 從&#x200B;**Text**&#x200B;元件內
+* 從 **文字** 元件
 
    ![](do-not-localize/chlimage_1-11.png)
 
    >[!NOTE]
    >
-   >雖然表在RTE中可用，但建議在建立表時使用&#x200B;**Table**&#x200B;元件。
+   >雖然表格可在RTE中使用，但建議使用 **表格** 元件。
 
-在&#x200B;**Text**&#x200B;和&#x200B;**Table**&#x200B;元件表功能都可通過在表內按一下的上下文菜單（通常是滑鼠右鍵）獲得；例如：
+在 **文字** 和 **表格** 元件表格功能可透過內容功能表（通常是滑鼠右鍵）按一下表格內；例如：
 
 ![cq55_rte_tablemenu](assets/cq55_rte_tablemenu.png)
 
 >[!NOTE]
 >
->在&#x200B;**表**&#x200B;元件中，還提供了專用工具欄，包括各種標準RTF編輯器函式以及表特定函式的子集。
+>在 **表格** 元件，也提供專用工具列，包括各種標準RTF編輯器函式，以及表特定函式的子集。
 
 表的特定函式為：
 
@@ -271,11 +270,11 @@ AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)�
 * [嵌套表](#creating-nested-tables)
 * [刪除表](#remove-table)
 
-#### 表屬性{#table-properties}
+#### 表屬性 {#table-properties}
 
 ![cq55_rte_tableproperties_icon](assets/cq55_rte_tableproperties_icon.png)
 
-按一下&#x200B;**OK**&#x200B;以儲存之前，可以配置表的基本屬性：
+按一下「 」之前，可以設定表格的基本屬性 **確定** 要保存：
 
 ![cq55_rte_tableproperties_dialog](assets/cq55_rte_tableproperties_dialog.png)
 
@@ -283,9 +282,9 @@ AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)�
 
 * **高度**:表的總高度。
 
-* **邊框**:表邊框的大小。
+* **邊框**:表格邊框的大小。
 
-* **單元格邊框間距**:這會定義儲存格內容與其邊界之間的空白。
+* **單元格填充**:這會定義儲存格內容與其邊界之間的空白。
 
 * **儲存格間距**:這會定義儲存格之間的距離。
 
@@ -297,7 +296,7 @@ AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)�
 >
 >Adobe建議您為表格定義寬度。
 
-#### 單元格屬性{#cell-properties}
+#### 儲存格屬性 {#cell-properties}
 
 ![cq55_rte_cellproperties_icon](assets/cq55_rte_cellproperties_icon.png)
 
@@ -312,7 +311,7 @@ AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)�
 * **儲存格類型** — 資料或標題
 * **套用至：** 單一儲存格、整列、整欄
 
-#### 添加或刪除行{#add-or-delete-rows}
+#### 新增或刪除列 {#add-or-delete-rows}
 
 ![cq55_rte_rows](assets/cq55_rte_rows.png)
 
@@ -320,7 +319,7 @@ AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)�
 
 也可刪除目前的列。
 
-#### 添加或刪除列{#add-or-delete-columns}
+#### 添加或刪除列 {#add-or-delete-columns}
 
 ![cq55_rte_columns](assets/cq55_rte_columns.png)
 
@@ -328,15 +327,15 @@ AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)�
 
 也可以刪除當前列。
 
-#### 選擇整行或列{#selecting-entire-rows-or-columns}
+#### 選擇整行或列 {#selecting-entire-rows-or-columns}
 
-![chlimage_1-105](assets/chlimage_1-106.png)
+![chlimage_1-106](assets/chlimage_1-106.png)
 
 選擇整個當前行或列。 之後即可使用特定動作（例如合併）。
 
-#### 合併單元格{#merge-cells}
+#### 合併儲存格 {#merge-cells}
 
-![cq55_rte_](assets/cq55_rte_cellmerge.png) ![cellmergecq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
+![cq55_rte_cellmerge](assets/cq55_rte_cellmerge.png) ![cq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
 
 * 如果您已選取一組儲存格，則可將這些儲存格合併為一個。
 * 如果您只選取一個儲存格，則可將其與右下方的儲存格合併。
@@ -350,7 +349,7 @@ AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)�
 * 水準分割儲存格會在目前欄內，產生目前儲存格右側的新儲存格。
 * 垂直分割儲存格會在目前儲存格下方，但在目前列內產生新儲存格。
 
-#### 建立嵌套表{#creating-nested-tables}
+#### 建立嵌套表 {#creating-nested-tables}
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
@@ -364,11 +363,11 @@ AEM同時提供&#x200B;**Find**&#x200B;和&#x200B;**Replace**(find and replace)�
 >* Firefox:拖曳指標以選取儲存格範圍。
 
 
-#### 刪除表{#remove-table}
+#### 刪除表 {#remove-table}
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
 
-使用選項從&#x200B;**[!UICONTROL Text]**&#x200B;元件內刪除表。
+使用選項從 **[!UICONTROL 文字]** 元件。
 
 ### 特殊字元 {#special-characters}
 
@@ -380,7 +379,7 @@ RTF編輯器可使用特殊字元；這些值可能會因您的安裝而異。
 
 使用滑鼠查看該字元的放大版本，然後按一下以將其包含在文本中的當前位置。
 
-### 源編輯模式{#source-editing-mode}
+### 源編輯模式 {#source-editing-mode}
 
 ![](do-not-localize/cq55_rte_sourceedit.png)
 

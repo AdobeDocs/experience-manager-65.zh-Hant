@@ -1,8 +1,8 @@
 ---
 title: 應用程式伺服器安裝
-seo-title: 應用程式伺服器安裝
+seo-title: Application Server Install
 description: 了解如何使用應用程式伺服器安裝AEM。
-seo-description: 了解如何使用應用程式伺服器安裝AEM。
+seo-description: Learn how to install AEM with an application server.
 uuid: c9571f80-6ed1-46fe-b7c3-946658dfc3f4
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`JAR` 和 `WAR` 中是否發行了檔案類型AEM。這些格式正在進行質量保證，以滿足Adobe所承諾的支援級別。
+>`JAR` 和 `WAR` 是否在中發行檔案類型AEM。 這些格式正在進行質量保證，以滿足Adobe所承諾的支援級別。
 
-
-本節說明如何使用應用程式伺服器安裝Adobe Experience Manager(AEM)。 請參閱[支援的平台](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers)部分，查看為各個應用程式伺服器提供的特定支援級別。
+本節說明如何使用應用程式伺服器安裝Adobe Experience Manager(AEM)。 請參閱 [支援平台](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) 區段，查看為個別應用程式伺服器提供的特定支援層級。
 
 以下應用程式伺服器的安裝步驟說明：
 
@@ -37,32 +36,32 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您在WAR部署中使用Dynamic Media，請參閱[Dynamic Media檔案](/help/assets/config-dynamic.md#enabling-dynamic-media)。
+>如果您在WAR部署中使用Dynamic Media，請參閱 [Dynamic Media檔案](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
-## 一般說明{#general-description}
+## 一般說明 {#general-description}
 
-### 在應用程式伺服器{#default-behaviour-when-installing-aem-in-an-application-server}中安裝AEM時的預設行為
+### 在應用程式伺服器中安裝AEM時的預設行為 {#default-behaviour-when-installing-aem-in-an-application-server}
 
 AEM是要部署的單一戰爭檔案。
 
 如果部署，預設會發生下列情況：
 
-* 運行模式為`author`
-* 例項（存放庫、Felix OSGI環境、套件組合等） 安裝在`${user.dir}/crx-quickstart`中，其中`${user.dir}`是當前工作目錄，此crx-quickstart路徑稱為`sling.home`
+* 執行模式為 `author`
+* 例項（存放庫、Felix OSGI環境、套件組合等） 安裝於 `${user.dir}/crx-quickstart`where `${user.dir}` 是當前工作目錄，此crx-quickstart路徑稱為 `sling.home`
 
-* 上下文根是戰爭檔案名，例如：`aem-6`
+* 上下文根是戰爭檔案名，例如： `aem-6`
 
 #### 設定 {#configuration}
 
 您可以透過下列方式變更預設行為：
 
-* 執行模式：在部署之前，在AEM war檔案的`WEB-INF/web.xml`檔案中配置`sling.run.modes`參數
+* 執行模式：設定 `sling.run.modes` 參數 `WEB-INF/web.xml` 部署前的AEM war檔案
 
-* sling.home:在部署之前，在AEM war檔案的`WEB-INF/web.xml`檔案中配置`sling.home`參數
+* sling.home:設定 `sling.home` 參數 `WEB-INF/web.xml`部署前的AEM war檔案
 
 * 內容根：重新命名AEM戰爭檔案
 
-#### 發佈安裝{#publish-installation}
+#### 發佈安裝 {#publish-installation}
 
 若要部署發佈執行個體，您必須將執行模式設為發佈：
 
@@ -71,14 +70,14 @@ AEM是要部署的單一戰爭檔案。
 * 將web.xml檔案重寫為AEM war檔案
 * 部署AEM war檔案
 
-#### 安裝檢查{#installation-check}
+#### 安裝檢查 {#installation-check}
 
 若要檢查是否已安裝全部，您可以：
 
-* 尾隨`error.log`檔案，查看所有內容皆已安裝
-* 在`/system/console`中查看所有包都已安裝
+* 跟蹤 `error.log`檔案，查看所有內容都已安裝
+* 查看 `/system/console` 安裝所有套件
 
-#### 同一應用程式伺服器上的兩個實例{#two-instances-on-the-same-application-server}
+#### 同一應用程式伺服器上的兩個執行個體 {#two-instances-on-the-same-application-server}
 
 為了示範的目的，可以在一個應用程式伺服器中安裝製作和發佈執行個體。 為此，請執行以下操作：
 
@@ -94,11 +93,11 @@ AEM是要部署的單一戰爭檔案。
 1. 在製作例項和發佈例項中，請確保在sling.properties檔案中，屬性felix.service.urlhandlers=false已設為false（預設為將其設為true）。
 1. 重新啟動兩個Web應用程式。
 
-## 應用程式伺服器安裝過程{#application-servers-installation-procedures}
+## 應用程式伺服器安裝過程 {#application-servers-installation-procedures}
 
 ### WebSphere 8.5 {#websphere}
 
-部署之前，請閱讀上面的[一般說明](#general-description)。
+部署之前，請閱讀 [一般說明](#general-description) 上。
 
 **伺服器準備**
 
@@ -127,15 +126,15 @@ AEM是要部署的單一戰爭檔案。
 
 #### JBoss EAP 6.3.0/6.4.0 {#jboss-eap}
 
-部署之前，請閱讀上面的[一般說明](#general-description)。
+部署之前，請閱讀 [一般說明](#general-description) 上。
 
 **準備JBoss伺服器**
 
-在您的「conf」檔案中設定記憶體引數(例如`standalone.conf`
+在您的「conf」檔案中設定記憶體引數(例如 `standalone.conf`)
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-如果您使用的deployment-scanner來安裝AEM Web應用程式，則最好在實例的xml檔案（例如`configuration/standalone.xml)`）中增加該集`deployment-timeout`屬性的`deployment-timeout,`:
+如果您使用的deployment-scanner來安裝AEM web應用程式，則增加 `deployment-timeout,` 對於 `deployment-timeout` 屬性(例如 `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -151,30 +150,30 @@ AEM是要部署的單一戰爭檔案。
 
 #### OracleWebLogic 12.1.3/12.2 {#oracle-weblogic}
 
-部署之前，請閱讀上面的[一般說明](#general-description)。
+部署之前，請閱讀 [一般說明](#general-description) 上。
 
 這會使用簡單的伺服器配置，而只使用管理伺服器。
 
 **WebLogic伺服器準備**
 
-* 在`${myDomain}/config/config.xml`中，將添加到安全配置部分：
+* 在 `${myDomain}/config/config.xml`新增至「安全設定」區段：
 
-   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>` 請參 [閱https://xmlns.oracle.com/weblogic/domain/1.0/domain.](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) xsd ，以取得正確的位置（根據預設，若要將其置於區段結尾為ok）
+   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>` 查看 [https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) 對於正確位置（預設情況下，將其定位在截面末端為ok）
 
 * 增加VM記憶體設定：
 
-   * 開啟`${myDomain}/bin/setDomainEnv.cmd`(resp .sh)搜索WLS_MEM_ARGS，例如設定`WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
+   * open `${myDomain}/bin/setDomainEnv.cmd` (resp .sh)搜索WLS_MEM_ARGS，設定如下： `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
    * 重新啟動WebLogic伺服器
 
-* 在`${myDomain}`軟體包資料夾中建立，在cq資料夾中建立，並在其中建立Plan資料夾
+* 在中建立 `${myDomain}` 包資料夾和cq資料夾內，以及它的Plan資料夾
 
 **部署AEM Web應用程式**
 
 * 下載AEM war檔案
 * 將AEM War檔案放入${myDomain}/packages/cq資料夾
-* 視需要在`WEB-INF/web.xml`中進行配置（請參閱上文「一般說明」中的）
+* 在 `WEB-INF/web.xml` 視需要（請參閱上文的一般說明）
 
-   * 解壓縮`WEB-INF/web.xml`檔案
+   * 解包 `WEB-INF/web.xml`檔案
    * 將sling.run.modes參數變更為發佈
    * 取消註解sling.home初始參數，並視需要設定此路徑（請參閱一般說明）
    * 重新修復web.xml檔案
@@ -182,21 +181,21 @@ AEM是要部署的單一戰爭檔案。
 * 將AEM war檔案部署為應用程式（對於其他設定，請使用預設設定）
 * 安裝可能需要時間……
 * 檢查安裝是否已如「一般說明」中所述完成（例如追蹤error.log）
-* 您可以在WebLogic `/console`中Web應用程式的「配置」頁簽中更改上下文根
+* 您可以在WebLogic中Web應用程式的「配置」頁簽中更改上下文根 `/console`
 
 #### Tomcat 8/8.5 {#tomcat}
 
-部署之前，請閱讀上面的[一般說明](#general-description)。
+部署之前，請閱讀 [一般說明](#general-description) 上。
 
 * **準備Tomcat伺服器**
 
    * 增加VM記憶體設定：
 
-      * 在`bin/catalina.bat`(resp `catalina.sh` on unix)中，新增下列設定：
+      * 在 `bin/catalina.bat` (resp `catalina.sh` 在unix上)新增下列設定：
       * `set "JAVA_OPTS= -Xmx2048m`
-   * 安裝時，Tomcat不會啟用管理員或管理員的訪問權限。 因此，您必須手動編輯`tomcat-users.xml`才能允許訪問以下帳戶：
+   * 安裝時，Tomcat不會啟用管理員或管理員的訪問權限。 因此，您必須手動編輯 `tomcat-users.xml` 允許訪問這些帳戶：
 
-      * 編輯`tomcat-users.xml`以包含管理員和管理員的存取權。 設定看起來應類似下列範例：
+      * 編輯 `tomcat-users.xml` 包括管理員和管理員的存取權。 設定看起來應類似下列範例：
 
          ```xml
          <?xml version='1.0' encoding='utf-8'?>
@@ -221,7 +220,7 @@ AEM是要部署的單一戰爭檔案。
 
       `webapps/manager/WEB-INF/web.xml`
 
-      並將最大檔案大小和最大請求大小增加到至少500MB，請參閱以下`multipart-config`示例`web.xml`檔案。
+      並將檔案大小上限和請求大小上限增加到至少500MB，請參閱下列內容 `multipart-config` 這樣a `web.xml` 檔案。
 
       ```xml
       <multipart-config>

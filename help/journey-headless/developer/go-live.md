@@ -1,7 +1,8 @@
 ---
 title: 如何與無頭應用程式一起運行
 description: 在AEM無頭式開發人員歷程的這部分，了解如何即時部署無頭式應用程式。
-source-git-commit: 20d46a7c37663dac36e6af9582d569a7f782eab7
+exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 0%
@@ -172,7 +173,7 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 
 ## 疑難排解 {#troubleshooting}
 
-### 除錯 {#debugging}
+### 偵錯 {#debugging}
 
 請遵循下列最佳實務作為偵錯的一般方法：
 

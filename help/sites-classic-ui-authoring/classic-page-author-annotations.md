@@ -1,8 +1,8 @@
 ---
 title: 編輯頁面時的註解
-seo-title: 編輯頁面時的註解
+seo-title: Annotations when Editing a Page
 description: 將內容新增至網站的頁面通常要經過實際發佈前的討論。 為此，許多與內容直接相關的元件允許您添加註釋。
-seo-description: 將內容新增至網站的頁面通常要經過實際發佈前的討論。 為此，許多與內容直接相關的元件允許您添加註釋。
+seo-description: Adding content to the pages of your website is often subject to discussions prior to it actually being published. To aid this, many components directly related to content allow you to add an annotation.
 page-status-flag: de-activated
 uuid: d8d6ba76-f2aa-4044-98bf-5d506742d90d
 contentOwner: Chris Bohnert
@@ -13,7 +13,7 @@ discoiquuid: 9bee0197-f275-49cc-922d-62cba826c4e5
 exl-id: d60e9601-d15b-4378-a33e-e90961f63195
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 根據段落設計，注釋可作為上下文菜單上的選項（通常是在所需段落上滑鼠右鍵）或作為段落編輯欄上的按鈕使用。
 
-無論是哪種情況，請選擇&#x200B;**注釋**。 將對段落應用彩色註解，您將立即處於「編輯」模式，允許您直接添加文本：
+無論是哪種情況，請選擇 **注釋**. 將對段落應用彩色註解，您將立即處於「編輯」模式，允許您直接添加文本：
 
 ![chlimage_1-137](assets/chlimage_1-137.png)
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 >
 >註解無法添加到已被其他用戶鎖定的頁面。
 
-## 注釋草繪{#annotation-sketches}
+## 注釋草繪 {#annotation-sketches}
 
 >[!NOTE]
 >
@@ -78,9 +78,7 @@ ht-degree: 0%
 >
 >* 將不會顯示圖示。
 >* 將不顯示在其他瀏覽器中建立的現有草繪。
-
 >
-
 
 
 草繪是注釋的一種特徵，允許您在瀏覽器窗口（可見部分）上的任意位置建立簡單的線圖形：
@@ -96,12 +94,12 @@ ht-degree: 0%
 
    * 直線：
 
-      按住`ALT`並按一下起始點和終止點；按兩下即可完成。
+      按住 `ALT` 按一下起點和終點；按兩下即可完成。
 
 * 退出草繪方式後，可以按一下草繪線以選取該草繪。
 * 通過選取草繪，然後將其拖動到所需位置來移動草繪。
 * 草圖會覆蓋內容。 這表示在草繪的4個角內，不能按一下基礎段落；例如，如果您需要編輯或存取連結。 如果這成為問題（例如，您有一個草圖覆蓋了頁面的很大區域），則將適當的注釋最小化，因為這也會使所有相關草圖最小化，從而允許您訪問基礎區域。
-* 要刪除單個草繪 — 選擇所需的草繪，然後按&#x200B;**Delete**&#x200B;鍵（**fn**-**MAC上的背景空間**）。
+* 要刪除單個草繪 — 選取所需草繪，然後按 **刪除** 鍵(**fn**-**空格** 在MAC上)。
 
 * 如果移動或複製段落，則任何相關注釋及其草繪也將移動或複製；他們對該款的立場將保持不變。
 * 如果刪除注釋，則附加到該注釋的所有草繪也將被刪除。

@@ -1,8 +1,8 @@
 ---
 title: 效能樹
-seo-title: 效能樹
+seo-title: Performance Tree
 description: 了解在AEM中疑難排解效能問題所需採取的步驟。
-seo-description: 了解在AEM中疑難排解效能問題所需採取的步驟。
+seo-description: Learn about the steps that need to be taken in order to troubleshoot performance issues in AEM.
 uuid: ab0624f7-6b39-4255-89e0-54c74b54cd98
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 4%
+source-wordcount: '1188'
+ht-degree: 5%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 4%
 
 圖表中的每個步驟都會連結至檔案資源或建議。
 
-## 先決條件和假設{#prerequisites-and-assumptions}
+## 先決條件和假設 {#prerequisites-and-assumptions}
 
 假設是在指定頁面(AEM主控台或網頁)上觀察到效能問題，且可一致地重新產生。 在開始調查之前，必須具備測試或監控效能的方法。
 
@@ -45,13 +45,13 @@ ht-degree: 4%
 
 ### 區段 4 {#section-3}
 
-![chlimage_1-105](assets/chlimage_1-106.png)
+![chlimage_1-106](assets/chlimage_1-106.png)
 
-### 第5節{#section-4}
+### 區段 5 {#section-4}
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-## 參考連結{#reference-links}
+## 參考連結 {#reference-links}
 
 <table>
  <tbody>
@@ -63,27 +63,27 @@ ht-degree: 4%
   <tr>
    <td><strong>步驟 0</strong></td>
    <td>分析請求流程</td>
-   <td><p>您可以在瀏覽器中使用標準HTTP請求分析來分析請求流程。 如需如何在Chrome上執行此動作的詳細資訊，請參閱：<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> loadinghttps://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing</a><br /> </p> </td>
+   <td><p>您可以在瀏覽器中使用標準HTTP請求分析來分析請求流程。 如需如何在Chrome上執行此動作的詳細資訊，請參閱：<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步驟 2</strong></td>
    <td>請求是否來自外部主機？</td>
-   <td>您可以在瀏覽器中使用標準HTTP請求分析來分析請求流程。 請參閱上述連結，了解如何在Chrome上執行此操作。<br /> </td>
+   <td>您可以在瀏覽器中使用標準HTTP請求分析來分析請求流程。 請參閱上述連結，了解如何在Chrome上執行此作業。<br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 3</strong></td>
    <td>是否可快取請求？</td>
-   <td>如需可快取請求和一般Dispatcher效能最佳化建議的詳細資訊，請參閱<a href="/help/sites-deploying/configuring-performance.md#optimizing-performance-when-using-the-dispatcher">Dispatcher效能最佳化</a>。</td>
+   <td>如需可快取請求和一般Dispatcher效能最佳化建議的詳細資訊，請參閱 <a href="/help/sites-deploying/configuring-performance.md#optimizing-performance-when-using-the-dispatcher">Dispatcher效能最佳化</a>.</td>
   </tr>
   <tr>
    <td><strong>步驟 4</strong></td>
    <td>是否來自Dispatcher的請求？</td>
-   <td><p>查看<a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#debugging">Dispatcher偵錯檔案</a>，查看請求是否已正確快取。<br /> </p> </td>
+   <td><p>檢查 <a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#debugging">Dispatcher除錯檔案</a> 來查看請求是否已正確快取。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步驟 5</strong></td>
    <td>Dispatcher是否嘗試透過AEM驗證每個請求？</td>
-   <td>在傳送快取資源之前，檢查Dispatcher是否將<code>HEAD</code>請求傳送至AEM以進行驗證。 您可以在AEM <code>access.log</code>中尋找<code>HEAD</code>請求，以完成此操作。 如需詳細資訊，請參閱<a href="/help/sites-deploying/configure-logging.md">記錄</a>.<br /> </td>
+   <td>檢查Dispatcher是否傳送 <code>HEAD</code> 傳送快取資源前，向AEM要求驗證。 您可以尋找 <code>HEAD</code> AEM中的請求 <code>access.log</code>. 如需詳細資訊，請參閱 <a href="/help/sites-deploying/configure-logging.md">記錄</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 6</strong></td>
@@ -98,7 +98,7 @@ ht-degree: 4%
   <tr>
    <td><strong>步驟 8</strong></td>
    <td>慢速可透過本機執行個體重現嗎？</td>
-   <td><br /> <p>使用<a href="/help/sites-developing/tough-day.md">Tough Day</a>從生產執行個體複製「真實世界」條件。 如果對於您的開發的方案來說，這不現實，請確保在不同的網路上下文中測試生產實例（或相同的測試實例）。<br /> </p> </td>
+   <td><br /> <p>使用 <a href="/help/sites-developing/tough-day.md">艱難的一天</a> 從生產實例中複製「真實世界」條件。 如果對於您的開發環境而言，這並不現實，請務必在不同網路內容中測試生產執行個體（或相同的預備執行個體）。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步驟 9</strong></td>
@@ -108,7 +108,7 @@ ht-degree: 4%
   <tr>
    <td><strong>步驟10和29</strong></td>
    <td>調查網路層</td>
-   <td><p>調查網路層的飽和和延遲問題。</p> <p>若為製作層級，建議不要超過100毫秒。</p> <p>有關效能最佳化提示的詳細資訊，請參閱本頁</a>。<a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html"></a></p> </td>
+   <td><p>調查網路層的飽和和延遲問題。</p> <p>若為製作層級，建議不要超過100毫秒。</p> <p>如需效能最佳化提示的詳細資訊，請參閱 <a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">本頁</a>.</p> </td>
   </tr>
   <tr>
    <td><strong>步驟 11</strong></td>
@@ -123,7 +123,7 @@ ht-degree: 4%
   <tr>
    <td><strong>步驟 13</strong></td>
    <td>檢查硬體需求</td>
-   <td>查看<a href="/help/managing/hardware-sizing-guidelines.md">硬體調整指南</a>上的文檔。<br /> </td>
+   <td>查看 <a href="/help/managing/hardware-sizing-guidelines.md">硬體調整指南</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 14</strong></td>
@@ -133,12 +133,12 @@ ht-degree: 4%
   <tr>
    <td><strong>步驟 15</strong></td>
    <td>尋找慢速請求</td>
-   <td><p>您可以分析<code>request.log</code>或使用<code>rlog.jar</code>來檢查緩慢的請求。</p> <p>有關使用rlog.jar的詳細資訊，請參見本頁。</p> <p>請參閱<a href="/help/sites-deploying/monitoring-and-maintaining.md#using-rlog-jar-to-find-requests-with-long-duration-times">使用rlog.jar尋找持續時間較長的請求</a>。<br /> </p> <p> </p> </td>
+   <td><p>您可以分析 <code>request.log</code> 或 <code>rlog.jar</code>.</p> <p>有關使用rlog.jar的詳細資訊，請參見本頁。</p> <p>請參閱 <a href="/help/sites-deploying/monitoring-and-maintaining.md#using-rlog-jar-to-find-requests-with-long-duration-times">使用rlog.jar尋找持續時間較長的請求</a>.<br /> </p> <p> </p> </td>
   </tr>
   <tr>
    <td><strong>步驟 16</strong></td>
    <td>設定檔伺服器</td>
-   <td><p>有關可與AEM一起使用的效能分析工具的資訊，請參閱<a href="/help/sites-deploying/monitoring-and-maintaining.md#tools-for-monitoring-and-analyzing-performance">效能監控和分析工具</a>。<br /> </p> </td>
+   <td><p>如需可搭配AEM使用之分析工具的相關資訊，請參閱 <a href="/help/sites-deploying/monitoring-and-maintaining.md#tools-for-monitoring-and-analyzing-performance">監控和分析效能的工具</a>.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步驟 17</strong></td>
@@ -148,7 +148,7 @@ ht-degree: 4%
   <tr>
    <td><strong>步驟 18</strong></td>
    <td>分析的常見情況</td>
-   <td>請參閱效能優化部分中的<a href="/help/sites-deploying/monitoring-and-maintaining.md#analyzing-specific-scenarios">分析特定方案</a>。<br /> </td>
+   <td>請參閱 <a href="/help/sites-deploying/monitoring-and-maintaining.md#analyzing-specific-scenarios">分析特定方案</a> 在「效能最佳化」區段中。<br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 19</strong></td>
@@ -168,12 +168,12 @@ ht-degree: 4%
   <tr>
    <td><strong>步驟 21</strong></td>
    <td>磁碟I/O</td>
-   <td><p>請參閱監視和維護文檔中的<a href="/help/sites-deploying/monitoring-and-maintaining.md#disk-i-o">磁碟I/O</a>部分。</p> </td>
+   <td><p>請參閱 <a href="/help/sites-deploying/monitoring-and-maintaining.md#disk-i-o">磁碟I/O</a> 一節。</p> </td>
   </tr>
   <tr>
    <td><strong>步驟22和22.1</strong></td>
    <td>快取比</td>
-   <td>請參閱<a href="/help/sites-deploying/configuring-performance.md#calculating-the-dispatcher-cache-ratio">計算Dispatcher快取比率</a>。<br /> <br /> </td>
+   <td>請參閱 <a href="/help/sites-deploying/configuring-performance.md#calculating-the-dispatcher-cache-ratio">計算Dispatcher快取比率</a>.<br /> <br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 23</strong></td>
@@ -213,7 +213,7 @@ ht-degree: 4%
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">Assets同步服務</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">多個DAM例項</a></li>
-     <li>效能調整提示文章<a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">here</a>和<a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">here</a>。<br /> </li>
+     <li>效能調整提示文章 <a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">此處</a> 和 <a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">此處</a>.<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -229,7 +229,7 @@ ht-degree: 4%
   <tr>
    <td><strong>步驟 31</strong></td>
    <td>在Dispatcher前面使用CDN</td>
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">搭配使用 Dispatcher 與 CDN</a><br /> </td>
+   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">搭配 CDN 使用 Dispatcher</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 32</strong></td>
@@ -243,7 +243,7 @@ ht-degree: 4%
     <ol>
      <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html">一般Dispatcher設定</a></li>
      <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache">設定Dispatcher快取</a></li>
-    </ol> <p>如何提高快取率；讓請求可快取（Dispatcher最佳作法）</p> <p>此外，請考慮下列設定，以最佳化快取設定<br /> </p>
+    </ol> <p>如何提高快取率；讓請求可快取（Dispatcher最佳作法）</p> <p>此外，請考量下列設定，以最佳化快取設定<br /> </p>
     <ol>
      <li>為非GET的HTTP請求設定無快取規則</li>
      <li>將查詢字串設定為不可快取</li>
@@ -288,17 +288,17 @@ ht-degree: 4%
   <tr>
    <td><strong>步驟45<br /> 和47</strong><br /> </td>
    <td>使用HTTP/2</td>
-   <td>有關步驟37、38和39，請參見Gem會議。 此外，請查看<a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">此</a>關於HTTP/2支援的論壇貼文。<br /> </td>
+   <td>有關步驟37、38和39，請參見Gem會議。 此外，請查看 <a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">此</a> 關於HTTP/2支援的論壇文章。<br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 49</strong></td>
    <td>縮減裝載大小</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">啟</a> 用Gzip並 <a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">縮小影像大小</a>。<br /> </td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">啟用Gzip</a> 和 <a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">縮小影像大小</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>步驟42和43</strong></td>
    <td>保存</td>
-   <td><p><code>Keep-Alive</code>標題是否出現在重新使用連線的不同請求中？ 否則，這表示每個請求都會導致另一個連接建立，這會帶來不必要的開銷。 （瀏覽器中的標準HTTP要求分析）</p> <p>您可以檢查<a href="/help/sites-administering/proxy-jar.md">代理伺服器工具</a>以檢查保持連接。<br /> </p> </td>
+   <td><p>是 <code>Keep-Alive</code> 標題是否存在於重新使用連接的不同請求中？ 否則，這表示每個請求都會導致另一個連接建立，這會帶來不必要的開銷。 （瀏覽器中的標準HTTP要求分析）</p> <p>您可以檢查 <a href="/help/sites-administering/proxy-jar.md">代理伺服器工具</a> 來檢查「保持活動」的連接。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步驟 44</strong></td>
@@ -313,7 +313,7 @@ ht-degree: 4%
      <li>串連資源（影像、CSS精靈、JSON等）<br /> </li>
      <li>Clientlibs內嵌：
       <ol>
-       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">建立用戶端程式庫資料夾</a>  — 請參閱使用內嵌來將請求最小化標題</li>
+       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">建立客戶端庫資料夾</a>  — 請參閱使用內嵌來將請求減至最少標題</li>
       </ol> </li>
     </ol> </td>
   </tr>

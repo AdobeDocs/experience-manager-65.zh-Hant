@@ -1,8 +1,8 @@
 ---
 title: 檔案庫功能
-seo-title: 檔案庫功能
+seo-title: File Library Feature
 description: 「檔案庫」功能可讓登入的網站訪客上傳、管理和下載檔案
-seo-description: 「檔案庫」功能可讓登入的網站訪客上傳、管理和下載檔案
+seo-description: The File Library feature lets signed-in site visitors upload, manage, and download files
 uuid: e78a90bd-f1d3-44f8-98eb-1498a55e8217
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 05cfaab5-a12d-475f-9095-a9fb13571d0a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '735'
 ht-degree: 7%
 
 ---
@@ -27,33 +27,33 @@ ht-degree: 7%
 本檔案的本節說明：
 
 * 將檔案程式庫功能新增至AEM網站。
-* `File Library`元件的組態設定。
+* 的組態設定 `File Library` 元件。
 
-### 將檔案庫添加到頁{#adding-a-file-library-to-a-page}
+### 將檔案庫新增至頁面 {#adding-a-file-library-to-a-page}
 
-若要在製作模式中將`File Library`元件新增至頁面，請找出元件：
+新增 `File Library` 在製作模式中，找到元件至頁面：
 
 * `Communities / File Library`
 
 並將其拖曳到頁面上。
 
-如需必要資訊，請造訪[Communities Components Basics](/help/communities/basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-包含[必要的用戶端程式庫](/help/communities/essentials-file-library.md#essentials-for-client-side)時，以下是`File Library`元件的顯示方式：
+當 [必要的用戶端程式庫](/help/communities/essentials-file-library.md#essentials-for-client-side) 包含在內，以下為方式 `File Library` 元件隨即出現：
 
 ![file-library1](assets/file-library1.png)
 
-### 配置檔案庫{#configuring-file-library}
+### 配置檔案庫 {#configuring-file-library}
 
-選取要存取的放置`File Library`元件，並選取開啟編輯對話方塊的`Configure`圖示。
+選取已放置的 `File Library` 要存取的元件並選取 `Configure` 表徵圖，開啟「編輯」對話框。
 
 ![configure-new](assets/configure-new.png)
 
 ![file-library2](assets/file-library2.png)
 
-#### 「注釋」頁簽{#comments-tab}
+#### 「注釋」頁簽 {#comments-tab}
 
-在&#x200B;**Comments**&#x200B;標籤下，指定上傳檔案的備注是否及顯示方式：
+在 **註解** 索引標籤，指定上傳檔案的註解是否及顯示方式：
 
 * **允許在檔案上填寫意見**
 
@@ -61,7 +61,7 @@ ht-degree: 7%
 
 * **每頁的評論數**
 
-   限制每頁顯示的留言數以及顯示的回覆數。 預設值為&#x200B;**10**。
+   限制每頁顯示的留言數以及顯示的回覆數。 預設為 **10**.
 
 * **最大檔案大小**
 
@@ -101,7 +101,7 @@ ht-degree: 7%
 
 * **允許關注**
 
-   若勾選此選項，請為部落格文章加入下列功能，讓成員能[收到新貼文的通知](/help/communities/notifications.md)。 預設為未勾選。
+   若勾選此選項，請為部落格文章加入下列功能，以便讓成員 [通知](/help/communities/notifications.md) 新貼文。 預設為未勾選。
 
 * **啟用提及功能**
 
@@ -113,15 +113,15 @@ ht-degree: 7%
 
 * **UI 提及模式**
 
-   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如，~{{familyName}}{{givenName}}。
+   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如~{{familyName}}{{givenName}}.
 
 * **允許執行緒式回覆**
 
    如果選中，則允許對已發佈的評論進行答復。 預設為未勾選。
 
-#### 使用者協調標籤{#user-moderation-tab}
+#### 使用者協調標籤 {#user-moderation-tab}
 
-在&#x200B;**使用者協調**&#x200B;標籤下，設定留言的協調（如果允許留言）:
+在 **使用者協調** ，設定留言的協調（如果允許留言）:
 
 * **事先審核**
 
@@ -157,9 +157,9 @@ ht-degree: 7%
 
 * **標幟限制**
 
-   輸入在從公共視圖中隱藏評論之前必須標籤該評論的次數。 此數字必須大於或等於&#x200B;**協調臨界值**。 預設為5。
+   輸入在從公共視圖中隱藏評論之前必須標籤該評論的次數。 此數字必須大於或等於 **協調臨界值**. 預設為5。
 
-### 排序設定頁簽{#sort-settings-tab}
+### 排序設定標籤 {#sort-settings-tab}
 
 排序方式
 
@@ -167,8 +167,8 @@ ht-degree: 7%
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人員的[File Library Essentials](/help/communities/essentials-file-library.md)頁面。
+如需詳細資訊，請參閱 [檔案庫要點](/help/communities/essentials-file-library.md) 頁面。
 
-有關已張貼主題和留言的調節，請參閱[調節用戶生成的內容](/help/communities/moderate-ugc.md)。
+如需已張貼主題和留言的協調，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md).
 
-有關標籤已發佈的主題和評論，請參閱[標籤用戶生成的內容](/help/communities/tag-ugc.md)。
+有關標籤已發佈的主題和評論，請參閱 [標籤使用者產生的內容](/help/communities/tag-ugc.md).

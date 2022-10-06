@@ -1,8 +1,8 @@
 ---
 title: Communities工具
-seo-title: Communities工具
+seo-title: Communities Tools
 description: 如何存取Communities工具主控台
-seo-description: 如何存取Communities工具主控台
+seo-description: How to access Communities Tools console
 uuid: 3172fe00-7132-4cee-9fd1-b6f96eb43200
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -14,7 +14,7 @@ role: Admin
 exl-id: ba6c4ad3-c393-42d8-9f1f-d59947c3e7ab
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
@@ -23,18 +23,18 @@ ht-degree: 0%
 
 若要存取Communities工具主控台，請登入您的製作執行個體：
 
-* 從全局導航：**[!UICONTROL 工具]** > **[!UICONTROL Communities]**。
+* 從全局導航： **[!UICONTROL 工具]** > **[!UICONTROL 社群]**.
 
    ![社群](assets/communities-home.png)
 
-* [網站範本](sites.md)  — 網站範本建立與管理的主控台。
+* [網站範本](sites.md)  — 用於建立和管理站點模板的控制台。
 
-* [群組範本](tools-groups.md)  — 用於建立和管理群組範本的主控台。
+* [群組範本](tools-groups.md)  — 用於建立和管理組模板的控制台。
 
-* [社群功能](functions.md)  — 用於建立和管理社群功能的主控台。
+* [社群功能](functions.md)  — 用於建立和管理社區功能的控制台。
 
-* [儲存配置](srp-config.md)  — 配置和選擇預設SRP的 [控制台](working-with-srp.md)。
+* [儲存配置](srp-config.md)  — 用於配置和選擇 [預設SRP](working-with-srp.md).
 
-* [元件指南](components-guide.md)  — 開啟一個互動式網站，以試驗SCF元件的工作方式以及如何配置或定制元件。
+* [元件指南](components-guide.md)  — 開啟一個互動式站點，以試驗SCF元件的工作方式以及如何配置或定制元件。
 
-* [徽章](badges.md)  — 可從中新增自訂徽章以用於計分和徽章規 [則的主控台](implementing-scoring.md)
+* [徽章](badges.md)  — 可新增自訂徽章以用於的主控台 [計分和簽名規則](implementing-scoring.md)

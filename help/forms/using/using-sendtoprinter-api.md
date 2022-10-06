@@ -1,8 +1,8 @@
 ---
 title: 使用sendToPrinter API
-seo-title: 使用sendToPrinter API
+seo-title: Using the sendToPrinter API
 description: 使用sendToPrinter服務將文檔發送到打印機。
-seo-description: 使用sendToPrinter服務將文檔發送到打印機。
+seo-description: Using the sendToPrinter service to send a document to printer.
 uuid: c6a3fe8d-ec19-4350-b4a6-4c3d1971b501
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,14 +11,14 @@ discoiquuid: c2d564ba-fa5a-4130-b7fe-7e2c64d92170
 exl-id: 5fb38afd-7517-494e-b084-1fdd4aef3ca4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 13%
+source-wordcount: '362'
+ht-degree: 14%
 
 ---
 
 # 使用sendToPrinter API {#using-the-sendtoprinter-api}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 在AEM Forms中，您可以使用SendToPrinter服務將文檔發送到打印機。 SendToPrinter服務支援以下打印訪問機制：
 
@@ -34,7 +34,7 @@ ht-degree: 13%
    * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
    * **CIFS**:輸出服務支援通用Internet檔案系統(CIFS)打印協定。
 
-## 使用SendToPrinter服務{#using-sendtoprinter-service}
+## 使用SendToPrinter服務 {#using-sendtoprinter-service}
 
 下表列出：
 
@@ -61,12 +61,12 @@ ht-degree: 13%
 | CIFS | 無效 | 任何 | 使用CIFS打印時出現未知錯誤。 |
 | CIFS | 空白 | 任何 | 表示必要參數sPrintServerUri不能為空的異常。 |
 
-## 驗證支援{#authentication-support}
+## 驗證支援 {#authentication-support}
 
 只有CIFS打印才支援身份驗證。 要驗證，請在PrinterSpec中提供用戶名/密碼/域。 您可以透過執行下列步驟，使用AEM Granite CyprotoSupport Service加密密碼：
 
-1. 轉到https://&lt;server>:&lt;port>/system/console。
+1. 前往https://&lt;server>:&lt;port>/system/console。
 
-1. 轉至&#x200B;**[!UICONTROL Main]** > **[!UICONTROL Crypto Support]**。
+1. 前往 **[!UICONTROL 主要]** > **[!UICONTROL 加密支援]**.
 
-1. 輸入一些純文字，然後按一下&#x200B;**[!UICONTROL Protect]**。
+1. 輸入一些純文字，然後按一下 **[!UICONTROL Protect]**.

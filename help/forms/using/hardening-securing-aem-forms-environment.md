@@ -1,8 +1,8 @@
 ---
 title: 在OSGi環境中強化和保護AEM表單
-seo-title: 在OSGi環境中強化和保護AEM表單
+seo-title: Hardening and Securing AEM forms on OSGi environment
 description: 了解在OSGi伺服器上保護AEM Forms的建議和最佳實務。
-seo-description: 了解在OSGi伺服器上保護AEM Forms的建議和最佳實務。
+seo-description: Learn recommendations and best practices for securing AEM Forms on OSGi server.
 uuid: abca7e7c-38c3-44f5-8d8a-4615cfce26c6
 topic-tags: Security
 discoiquuid: b1bd04bf-0d6d-4e6b-8c7c-eafd1a24b5fe
@@ -10,7 +10,7 @@ role: Admin
 exl-id: 5da3cc59-4243-4098-b1e0-438304fcd0c5
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
@@ -49,11 +49,11 @@ AEM Forms可高度自訂，且可在多種不同環境中運作。 有些建議�
 <table> 
  <tbody>
   <tr>
-   <td>元件</td> 
+   <td>Component</td> 
    <td>URI</td> 
   </tr>
   <tr>
-   <td>適用性表單</td> 
+   <td>調適型表單</td> 
    <td>
     <ul> 
      <li>/content/dam/formsanddocuments/AF_PATH/jcr:content</li> 
@@ -145,16 +145,16 @@ AEM Forms會將資料儲存至預先定義的位置和臨時資料夾。 您應�
 
 您可以設定儲存服務以透過連線傳送至處理叢集，而不需在發佈節點上將任何項目儲存於本機。 處理群集位於私有防火牆後的安全區域，資料保持安全。
 
-使用AEM DS設定服務處理伺服器的認證，將資料從發佈節點發佈到處理伺服器。 建議使用具有處理伺服器儲存庫讀寫權限的受限非管理用戶的憑據。 有關詳細資訊，請參閱[為草稿和提交配置儲存服務](/help/forms/using/configuring-draft-submission-storage.md)。
+使用AEM DS設定服務處理伺服器的認證，將資料從發佈節點發佈到處理伺服器。 建議使用具有處理伺服器儲存庫讀寫權限的受限非管理用戶的憑據。 如需詳細資訊，請參閱 [配置草稿和提交的儲存服務](/help/forms/using/configuring-draft-submission-storage.md).
 
 ### 由表單資料模型(FDM)處理的安全資料 {#secure-data-handled-by-form-data-model-fdm}
 
 使用具有最低所需權限的使用者帳戶來設定表單資料模型(FDM)的資料來源。 使用管理帳戶可以為未經授權的用戶提供對元資料和架構實體的開放訪問。\
 資料整合也提供授權FDM服務要求的方法。 您可以插入執行前和執行後授權機制來驗證請求。 在預填表單、提交表單和通過規則調用服務時生成服務請求。
 
-**預處理授權：** 您可以在執行請求之前，使用預處理授權來驗證請求的真實性。您可以使用輸入、服務和請求詳細資訊來允許或停止執行請求。 如果停止執行，則可以返回資料整合異常OPERATION_ACCESS_DENIED。 您也可以在傳送用戶端請求以供執行之前加以修改。 例如，變更輸入並新增其他資訊。
+**處理前授權：** 您可以使用預先處理授權，在執行請求之前驗證請求的真實性。 您可以使用輸入、服務和請求詳細資訊來允許或停止執行請求。 如果停止執行，則可以返回資料整合異常OPERATION_ACCESS_DENIED。 您也可以在傳送用戶端請求以供執行之前加以修改。 例如，變更輸入並新增其他資訊。
 
-**處理後授權：** 您可以在將結果返回給請求者之前，使用處理後授權來驗證和控制結果。您也可以篩選、修剪及插入其他資料至結果。
+**進程後授權：** 在將結果返回給請求者之前，可以使用後處理授權來驗證和控制結果。 您也可以篩選、修剪及插入其他資料至結果。
 
 ### 限制使用者存取權 {#limit-user-access}
 
@@ -198,4 +198,4 @@ AEM Forms會將資料儲存至預先定義的位置和臨時資料夾。 您應�
 
 ### 使用AEM最佳實務來保護AEM Forms環境 {#use-aem-best-practices-to-secure-an-aem-forms-environment}
 
-本檔案提供AEM Forms環境的特定指示。 您應採取措施，確保部署時基礎AEM安裝安全無虞。 如需詳細指示，請參閱[AEM安全性檢查清單](/help/sites-administering/security-checklist.md)檔案。
+本檔案提供AEM Forms環境的特定指示。 您應採取措施，確保部署時基礎AEM安裝安全無虞。 如需詳細指示，請參閱 [AEM安全性檢查清單](/help/sites-administering/security-checklist.md) 檔案。

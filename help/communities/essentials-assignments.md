@@ -1,8 +1,8 @@
 ---
 title: 工作總攬
-seo-title: 工作總攬
+seo-title: Assignments Essentials
 description: 啟用社群的工作總攬功能概觀
-seo-description: 啟用社群的工作總攬功能概觀
+seo-description: Assignments feature overview for enablement communities
 uuid: e49fce26-1091-4f37-93e8-c4ec85371811
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: 75cef5da-4f93-4721-99c0-ad44c8ab76d4
 source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 11%
+source-wordcount: '214'
+ht-degree: 12%
 
 ---
 
 # 工作總攬 {#assignments-essentials}
 
-請閱讀以了解使用[啟用社群](/help/communities/overview.md#enablement-community)網站指派功能的基本資訊。
+閱讀以了解使用的工作任務功能的基本資訊 [啟用社群](/help/communities/overview.md#enablement-community) 網站。
 
 指派功能是將啟用資源和學習路徑指派給啟用社群的成員。
 
@@ -38,7 +38,7 @@ ht-degree: 11%
   </tr>
   <tr>
    <td> <a href="/help/communities/clientlibs.md"><strong>clientllibs</strong></a></td>
-   <td>cq.social.enablement.hbs.breadcrumbs<br /> cq.social.enablement.hbs.myassigned<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td>
+   <td>cq.social.enablement.hbs.beadcrumbs<br /> cq.social.enablement.hbs.myassigned<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td>
   </tr>
   <tr>
    <td> <strong>範本</strong></td>
@@ -50,7 +50,7 @@ ht-degree: 11%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱<a href="/help/communities/assignments.md">工作總攬功能</a></td>
+   <td>請參閱 <a href="/help/communities/assignments.md">工作總攬功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -85,7 +85,7 @@ ht-degree: 11%
 
 ### 指定任務功能 {#assignments-function}
 
-包含[分配函式](/help/communities/functions.md#assignments-function)的社區站點結構包括配置的` [assignments](/help/communities/assignments.md)`元件。
+包含 [分配函式](/help/communities/functions.md#assignments-function)，包含已設定的 ` [assignments](/help/communities/assignments.md)` 元件。
 
 ### 參考API {#reference-apis}
 

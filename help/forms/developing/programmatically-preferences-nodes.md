@@ -1,8 +1,8 @@
 ---
 title: 以寫程式方式管理PreferencesNodes
-seo-title: 以寫程式方式管理PreferencesNodes
+seo-title: Programmatically managing the PreferencesNodes
 description: 使用Preferences Manager Service API(Java)以寫程式方式管理Preferences節點。
-seo-description: 使用Preferences Manager Service API(Java)以寫程式方式管理Preferences節點。
+seo-description: Use the Preferences Manager Service API (Java) to programmatically manage the Preferences Nodes.
 uuid: f0cb117a-a6cc-4ca5-8511-b3bc9f6738e9
 contentOwner: admin
 content-type: reference
@@ -13,20 +13,20 @@ role: Developer
 exl-id: 108eb249-879b-4e4f-b431-8118b8656e62
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
 
-# 以寫程式方式管理首選項節點{#programmatically-managing-the-preferencesnodes}
+# 以寫程式方式管理首選項節點 {#programmatically-managing-the-preferencesnodes}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
 本主題說明如何使用Preferences Manager Service API(Java)以程式設計方式管理Preferences節點。
 
-您可以從管理員UI手動變更配置設定。 若要變更選項，請導覽至`Home>Settings>User Management> Configuration>Manual Configuration`。 進行變更後，您會發現除了在節點`/Adobe/Adobe Experience Manager Forms/Config/UM persist`進行的變更外，所有變更都會遺失。 `config.xml`「使用者管理匯入和匯出」的預覽不支援變更其他元件的組態設定。 現在，您可以使用`PreferencesManagerServiceClient` API進行這些變更。
+您可以從管理員UI手動變更配置設定。 若要變更選項，請導覽至 `Home>Settings>User Management> Configuration>Manual Configuration`. 匯入 `config.xml` 進行變更後，您會注意到除了在節點進行的變更以外的所有變更 `/Adobe/Adobe Experience Manager Forms/Config/UM persist` 會遺失。 「使用者管理匯入和匯出」的預覽不支援變更其他元件的組態設定。 現在，您可以透過 `PreferencesManagerServiceClient` API。
 
-**步驟摘**&#x200B;要要以寫程式方式管理「首選項節點」，請執行以下步驟：
+**步驟摘要**&#x200B;要以寫程式方式管理「首選項節點」，請執行以下步驟：
 
 1. 包含專案檔案。
 1. 建立PreferencesManagerService客戶端

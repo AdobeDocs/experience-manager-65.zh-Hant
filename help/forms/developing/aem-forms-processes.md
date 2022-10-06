@@ -1,6 +1,6 @@
 ---
 title: 了解AEM Forms程式
-seo-title: 了解AEM Forms程式
+seo-title: Understanding AEM Forms Processes
 description: 了解AEM Forms程式
 uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
@@ -12,16 +12,16 @@ role: Developer
 exl-id: 434ac316-8a01-43a6-844b-1b792f60fa21
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '803'
 ht-degree: 0%
 
 ---
 
-# 了解AEM Forms流程{#understanding-aem-forms-processes}
+# 了解AEM Forms程式 {#understanding-aem-forms-processes}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
-一組AEM Forms服務在單一檔案上運作的常見使用案例為。 您可以使用Workbench建立程式，將請求傳送至服務容器。 流程表示您正在自動化的業務流程。 有關建立流程的資訊，請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。
+一組AEM Forms服務在單一檔案上運作的常見使用案例為。 您可以使用Workbench建立程式，將請求傳送至服務容器。 流程表示您正在自動化的業務流程。 如需建立程式的相關資訊，請參閱 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
 一旦啟動進程，它就會變成服務，可以像其他服務一樣叫用。 標準服務（如加密服務）和源自進程的服務之間的一個區別是，後者具有執行多個操作的一個操作。 相反，標準服務有許多操作。 每個操作通常執行一個操作，例如將策略應用於文檔或加密文檔。
 
@@ -43,32 +43,32 @@ ht-degree: 0%
 
 **短期流程示例**
 
-下圖是名為&#x200B;*MyApplication/EncryptDocument*&#x200B;的短期進程的示例。
+下圖是名為 *MyApplication/EncryptDocument*.
 
 >[!NOTE]
 >
->此程式並非以現有的AEM Forms程式為基礎。 若要遵循討論如何叫用此程式的程式碼範例，請使用Workbench建立名為`MyApplication/EncryptDocument`的程式。 （請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
+>此程式並非以現有的AEM Forms程式為基礎。 若要遵循討論如何叫用此程式的程式碼範例，請建立名為 `MyApplication/EncryptDocument` 使用Workbench。 (請參閱 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 調用此短期進程時，它將執行以下操作：
 
-1. 獲取將傳遞至流程的不安全PDF文檔作為輸入值。
-1. 使用密碼加密PDF檔案。 此進程的輸入參數名稱為`inDoc`，資料類型為文檔。
-1. 將密碼加密的PDF文檔另存為PDF檔案到本地檔案系統。 此過程將加密的PDF文檔返回為輸出值。 此進程的輸出參數的名稱為`outDoc`，資料類型為文檔。
+1. 獲取傳遞至流程的不安全PDF文檔作為輸入值。
+1. 使用密碼加密PDF文檔。 此過程的輸入參數的名稱為 `inDoc` 而資料類型是文檔。
+1. 將密碼加密的PDF文檔作為PDF檔案保存到本地檔案系統。 此過程將加密的PDF文檔返回為輸出值。 此過程的輸出參數的名稱為 `outDoc` 而資料類型是文檔。
 
-   此進程在調用該進程的同一執行線程上同步完成。 此短期進程的名稱為`MyApplication/EncryptDocument`，其操作為`invoke`。
+   此進程在調用該進程的同一執行線程上同步完成。 這個短期過程的名稱是 `MyApplication/EncryptDocument`它的操作 `invoke`.
 
    >[!NOTE]
    >
-   >通常，短期流程包含三個以上的動作。 您可以使用Workbench建立流程。 （請參閱[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
+   >通常，短期流程包含三個以上的動作。 您可以使用Workbench建立流程。 (請參閱 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
-   *使用AEM表*&#x200B;單進行寫程式描述了以下方法，可以用程式設計方式調用此短期流程：
+   *使用AEM表單進行程式設計*&#x200B;描述了以下可以用程式設計方式調用此短期進程的方法：
 
-   * [使用AEM Forms Remoting(使用Flex應用程式)傳遞不安全的檔案](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) ，以叫用短期處理程式
-   * [使用叫用API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) （Java叫用API）叫用短期處理程式
-   * [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （Web服務範例）
-   * [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （Web服務範例）
+   * [使用AEM Forms Remoting傳遞不安全的檔案，以叫用短期處理程式](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (使用Flex應用程式)
+   * [使用叫用API叫用短期處理程式](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) （Java調用API）
+   * [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （網站服務範例）
+   * [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （網站服務範例）
    * [使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) （網站服務範例）
-   * [使用透過HTTP的BLOB資料叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http) （Web服務範例）
+   * [透過HTTP使用BLOB資料叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http) （網站服務範例）
    * [使用DIME叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime) （網站服務範例）
    * [使用REST調用MyApplication/EncryptDocument進程](/help/forms/developing/invoking-aem-forms-using-rest.md)
 
@@ -76,8 +76,8 @@ ht-degree: 0%
 
 下圖是長期處理程式的範例。
 
-申請人提交貸款表時，會援引此程式。 在貸款官員批准或拒絕貸款請求之前，該過程才會完成。 此長期進程的名稱為&#x200B;*FirstAppSolution/PreLoanProcess*，其操作為`invoke_Async`。 必須非同步叫用此程式。 有關以寫程式方式調用此長壽命進程的資訊，請參見[調用以人為中心的長壽命進程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)。
+申請人提交貸款表時，會援引此程式。 在貸款官員批准或拒絕貸款請求之前，該過程才會完成。 這個長期過程的名稱是 *FirstAppSolution/PreLoanProcess* 它的操作 `invoke_Async`. 必須非同步叫用此程式。 有關以寫程式方式調用此長期進程的資訊，請參見 [調用以人為中心的長壽命過程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).
 
 >[!NOTE]
 >
->您可以依照[建立您的第一個AEM Forms應用程式](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63)中指定的教學課程，建立此程式。
+>您可以依照 [建立您的第一個AEM Forms應用程式](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63).

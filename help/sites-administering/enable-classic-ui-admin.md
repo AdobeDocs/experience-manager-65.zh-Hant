@@ -1,8 +1,8 @@
 ---
 title: Admin Console
-seo-title: Admin Console
+seo-title: Admin Consoles
 description: 了解如何使用AEM中可用的Admin Console。
-seo-description: 了解如何使用AEM中可用的Admin Console。
+seo-description: Lear how to use the Admin Consoles available in AEM.
 uuid: 82ab5267-2f2a-4772-85d5-678d883a0294
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 依預設，已停用透過管理控制台切換至傳統UI的功能。 因此，將滑鼠游標移至特定控制台圖示上時會顯示的快顯圖示（可存取傳統UI）將不再顯示。
 
-`/libs/cq/core/content/nav`中具有傳統UI版本的每個控制台都可以單獨重新啟用，這樣&#x200B;**傳統UI**&#x200B;選項就會在將滑鼠移到控制台表徵圖上時再次彈出。
+每個主控台的 `/libs/cq/core/content/nav` 可個別重新啟用，以便 **傳統UI** 將滑鼠移到控制台圖示上時，選項會再次彈出。
 
 在此範例中，我們將重新啟用Sites主控台的傳統UI。
 
@@ -38,9 +38,9 @@ ht-degree: 0%
 
    `/libs/cq/core/content/nav/sites`
 
-1. 使用&#x200B;**覆蓋節點**&#x200B;選項建立覆蓋；例如：
+1. 使用 **覆蓋節點** 選項；例如：
 
-   * **路徑**:  `/apps/cq/core/content/nav/sites`
+   * **路徑**: `/apps/cq/core/content/nav/sites`
    * **重疊位置**: `/apps/`
    * **匹配節點類型**:活動（選取核取方塊）
 
@@ -48,7 +48,7 @@ ht-degree: 0%
 
    `enableDesktopOnly = {Boolean}true`
 
-1. 在管理控制台中，「**傳統UI**」選項會再次顯示為彈出式選項。
+1. 此 **傳統UI** 「管理控制台」中的彈出視窗選項可再次使用「 」選項。
 
    ![](assets/syui-01-2019-02-27-15-16-55.png)
 

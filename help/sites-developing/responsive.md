@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: 4472da2e9aa0b45e0d5f03bfdc53a2748d82cdb3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '5351'
+source-wordcount: '5317'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe建議針對需要單頁應用程式架構用戶端轉譯的專案使用SPA編輯器(例如 _React_)。 [了解更多](/help/sites-developing/spa-overview.md).
-
->[!NOTE]
->
->各種範例都以Geometrixx範例內容為基礎，這些內容已由We.Retail取代，不再隨AEM提供。 請參閱檔案 [We.Retail參考實作](/help/sites-developing/we-retail.md#we-retail-geometrixx) 以了解如何下載和安裝Geometrixx。
 
 設計您的網頁，使其與顯示其的用戶端檢視區相適應。 透過回應式設計，相同的頁面可以兩種方向有效地顯示在多個裝置上。 下列影像示範頁面可以透過哪些方式回應檢視區大小的變更：
 

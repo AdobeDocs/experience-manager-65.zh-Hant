@@ -79,7 +79,7 @@ ht-degree: 9%
 
 **說明**
 
-定義`commentattachment`節點的節點類型
+定義 `commentattachment` 節點
 
 **定義**
 
@@ -165,7 +165,7 @@ ht-degree: 9%
 * `@prop jcr:description`  — 此頁面的說明。
 * `@prop cq:template`  — 用於建立頁面的範本路徑。
 * `@prop cq:allowedTemplates`  — 用於確定允許範本的路徑的規則運算式清單。
-* `@prop pageTitle`  — 標題通常顯示在標 `<title>` 記中。
+* `@prop pageTitle`  — 標題通常顯示在 `<title>` 標籤。
 * `@prop navTitle`  — 導覽中通常使用的標題。
 * `@prop hideInNav`  — 指定是否應在導覽中隱藏頁面。
 * `@prop onTime`  — 此頁面生效的時間。
@@ -201,7 +201,7 @@ ht-degree: 9%
 * `@node jcr:content`  — 新頁面的預設內容。
 * `@node icon.png`  — 包含特徵表徵圖的檔案。
 * `@node thumbnail.png`  — 保存特徵縮圖影像的檔案。
-* `@node workflows`  — 自動分配工作流配置。配置將遵循以下結構：
+* `@node workflows`  — 自動分配工作流配置。 配置將遵循以下結構：
    * `+ workflows`
       * `+ name1`
          * `- cq:path`
@@ -236,18 +236,18 @@ ht-degree: 9%
 * `@prop dialogPath`  — 主要對話方塊路徑（對話方塊的替代方案）。
 * `@node design_dialog`  — 設計對話方塊。
 * `@prop cq:cellName`  — 設計單元格的名稱。
-* `@prop cq:isContainer`  — 指出這是否為容器元件。這會強制使用子元件的單元格名稱，而不是路徑名稱。 例如， `parsys`是容器元件。 如果未定義此值，則會根據`cq:childEditConfig`的存在進行檢查。
-* `@prop cq:noDecoration`  — 如果為true，則包含 `div` 此元件時不會繪製裝飾標籤。
+* `@prop cq:isContainer`  — 指出這是否為容器元件。 這會強制使用子元件的單元格名稱，而不是路徑名稱。 例如， `parsys` 是容器元件。 如果未定義此值，則會根據 `cq:childEditConfig`.
+* `@prop cq:noDecoration`  — 若為true，則無裝飾 `div` 加入此元件時會繪製標籤。
 * `@node cq:editConfig`  — 定義編輯欄參數的配置。
 * `@node cq:childEditConfig`  — 子元件繼承的編輯配置。
-* `@node cq:htmlTag`  — 定義包含元件時，新增至「周圍」 `div` 標籤的其他標籤屬性。
+* `@node cq:htmlTag`  — 定義新增至「周圍」的其他標籤屬性 `div` 標籤時（當包含元件時）。
 * `@node icon.png` — 包含特徵表徵圖的檔案。
 * `@node thumbnail.png`  — 保存特徵縮圖影像的檔案。
 * `@prop allowedParents`  — 規則運算式模式，用於判斷可作為父元件的元件的路徑。
 * `@prop allowedChildren`  — 規則運算式模式，用於確定允許作為子元件的元件的路徑。
 * `@node virtual`  — 包含反映用於元件拖放的虛擬元件的子節點。
 * `@prop componentGroup`  — 元件組的名稱，用於元件拖放。
-* `@node cq:infoProviders`  — 包含子節點，每個子節點都 `className` 有參照的屬 `PageInfoProvider`性。
+* `@node cq:infoProviders`  — 包含子節點，每個子節點都有屬性 `className` 指 `PageInfoProvider`.
 
 **定義**
 
@@ -301,7 +301,7 @@ ht-degree: 9%
 * `@prop cq:actions` — 操作清單（編輯欄按鈕或菜單項）。
 * `@node cq:actionConfigs`  — 編輯條或菜單項的介面工具集配置。
 * `@prop cq:emptyText`  — 如果沒有視覺內容，則顯示的文字。
-* `@node cq:dropTargets`  — 節點的 `{@link cq:DropTargetConfig}` 集合。
+* `@node cq:dropTargets`  — 集合 `{@link cq:DropTargetConfig}` 節點。
 
 **定義**
 
@@ -320,7 +320,7 @@ ht-degree: 9%
 
 配置元件的一個放置目標。 此節點的名稱將用作拖放的ID。
 
-* `@prop accept`  — 此刪除目標接受的mime類型清單；例如  `["image/*"]`
+* `@prop accept`  — 此刪除目標接受的mime類型清單；例如 `["image/*"]`
 * `@prop groups`  — 接受源的拖放組的清單。
 * `@prop propertyName`  — 用於儲存引用的屬性名稱。
 
@@ -448,7 +448,7 @@ DAM資產。
 
 **說明**
 
-`cq:attributes` 是ContentBus版本標籤的節點類型。此節點只有一系列屬性；其中三個預先定義為「已建立」、「csd」和「timestampe」。
+`cq:attributes` 是ContentBus版本標籤的節點類型。 此節點只有一系列屬性；其中三個預先定義為「已建立」、「csd」和「timestampe」。
 
 * `@prop created (long) mandatory copy`  — 建立版本資訊的時間戳，通常是簽入前一版本的時間或建立頁面的時間。
 * `@prop csd (string) mandatory copy` - csd標準屬性，頁節點的cq:csd屬性的副本
@@ -467,13 +467,13 @@ DAM資產。
 
 **說明**
 
-節點類型`cq:contentPage`包含ContentBus內容頁面的屬性和子節點定義。 只有當此混合類型添加到`cq:page`類型的節點時，節點才會變成ContentBus內容頁。
+節點類型 `cq:contentPage` 包含ContentBus內容頁面的屬性和子節點定義。 僅當此混合類型添加到類型的節點時 `cq:page`，節點會變成ContentBus內容頁面。
 
-`cq:Cq4ContentPage`中的項目為：
+中的項目 `cq:Cq4ContentPage` 為：
 
 * `@prop cq:csd`  — 頁面的ContentBusCSD。
-* `@node cq:content`  — 頁面內容。如果頁面節點處於「Existing with content」或「Deleted」狀態，則此子節點不存在。
-* `@node cq:attributes`  — 頁面屬性清單，先前稱為版本標籤。此節點是cq:contentPage類型的必要節點。 當頁面為節點時，屬性節點會進行版本控制。
+* `@node cq:content`  — 頁面內容。 如果頁面節點處於「Existing with content」或「Deleted」狀態，則此子節點不存在。
+* `@node cq:attributes`  — 頁面屬性清單，先前稱為版本標籤。 此節點是cq:contentPage類型的必要節點。 當頁面為節點時，屬性節點會進行版本控制。
 
 **定義**
 
@@ -490,8 +490,8 @@ DAM資產。
 輪詢配置。
 
 * `@prop source (String) mandatory`  — 資料源URI，此為必要值，不得為空
-* `@prop target (String)`  — 儲存從資料源檢索到的資料的目標位置。此為選用項目，預設值為cq:PollConfig節點。
-* `@prop interval (Long)`  — 輪詢資料源中新資料或更新資料的間隔秒數。此為選用值，預設值為30分鐘（1800秒）。
+* `@prop target (String)`  — 儲存從資料源檢索到的資料的目標位置。 此為選用項目，預設值為cq:PollConfig節點。
+* `@prop interval (Long)`  — 輪詢資料源中新資料或更新資料的間隔秒數。 此為選用值，預設值為30分鐘（1800秒）。
 * [建立Adobe Experience Manager的自訂資料匯入工具服務](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **定義**
@@ -818,7 +818,7 @@ Blueprint動作
 
 **說明**
 
-新增可由使用者修改的`cq:userContent`子節點。 每個使用者都有其自己的`cq:userContent/<userid>`子節點，通常有mixin `cq:UserTaggable`。
+新增 `cq:userContent` 可由使用者修改的子節點。 每個使用者都有自己的 `cq:userContent/<userid>` 子節點，通常具有mixin `cq:UserTaggable`.
 
 **定義**
 
@@ -826,7 +826,7 @@ Blueprint動作
    * `mixin`
    * `+ cq:userContent (nt:unstructured)`
 
-擴展變體，更明確地定義`cq:userContent`樹
+擴展變體，更明確地定義 `cq:userContent` 樹
 
 * `[cq:AllowsUserContent]`
    * `mixin`

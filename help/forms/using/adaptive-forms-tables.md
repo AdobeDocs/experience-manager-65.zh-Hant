@@ -1,18 +1,18 @@
 ---
 title: 適用性表單中的表格
-seo-title: 適用性表單中的表格
+seo-title: Tables in adaptive forms
 description: AEM Forms中的表格元件可讓您以回應行動配置的最適化表單建立表格，也允許使用XDP表格元件。
-seo-description: AEM Forms中的表格元件可讓您以回應行動配置的最適化表單建立表格，也允許使用XDP表格元件。
+seo-description: The Table component in AEM Forms lets you create tables in adaptive forms that are responsive to mobile layouts, and also allows using XDP table components.
 uuid: 03436c81-42f0-430f-9e52-14a4ab0e877d
 topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
-feature: 適用性表單
+feature: Adaptive Forms
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
 source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2398'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 ### 關於標題和內文儲存格 {#about-header-and-body-cells}
 
-標題儲存格是文字欄位。 要更改標題的標籤，請按一下右鍵標題單元格，然後按一下&#x200B;**Edit**。 在「編輯」對話方塊中，更新&#x200B;**Value**&#x200B;欄位中的標籤，然後按一下&#x200B;**OK**。
+標題儲存格是文字欄位。 若要變更標題的標籤，請以滑鼠右鍵按一下標題儲存格，然後按一下 **編輯**. 在「編輯」對話方塊中，更新 **值** 欄位，按一下 **確定**.
 
 內文儲存格預設為文字方塊。 您可以將內文儲存格取代為sidekick中可用的任何其他適用性表單元件，例如數值方塊、日期選取器或下拉式清單。
 
@@ -49,7 +49,7 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 ![row-cell-types](assets/row-cell-types.png)
 
-通過選擇要合併的單元格，按一下右鍵，然後選擇&#x200B;**Merge**，可以合併兩個或更多主體單元格。 您也可以對合併的儲存格按一下滑鼠右鍵並選取&#x200B;**「分割儲存格」**&#x200B;來分割該儲存格。
+您可以選取要合併的儲存格，按一下滑鼠右鍵並選取「 」，以合併兩個或多個內文儲存格 **合併**. 您也可以對合併的儲存格按一下滑鼠右鍵並選取 **分割儲存格**.
 
 ### 添加、刪除、移動行和列 {#add-delete-move-rows-and-columns}
 
@@ -73,9 +73,9 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 您可以新增表格說明，說明如何組織資訊，讓螢幕助讀程式解譯及閱讀。 若要新增說明：
 
-1. 選取表格，然後點選![cmppr](assets/cmppr.png)以在側邊欄中查看其屬性。
+1. 選取表格並點選 ![cppr](assets/cmppr.png) 以在側欄中查看其屬性。
 1. 在「輔助功能」頁簽中指定摘要。
-1. 按一下&#x200B;**Done**。
+1. 按一下 **完成**.
 
 ### 對表中的列進行排序 {#sortcolumnstable}
 
@@ -91,13 +91,13 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 啟用排序：
 
-1. 選取表格，然後點選![configure_icon](assets/configure_icon.png)(Configure)。 您也可以使用互動式通訊的側腳中的&#x200B;**Content**&#x200B;瀏覽器選取表格。
-1. 選擇&#x200B;**啟用排序**。
-1. 點選![done_icon](assets/done_icon.png)以儲存表格屬性。 欄標題中的排序圖示（向上和向下箭頭）代表已啟用排序。
+1. 選取表格並點選 ![configure_icon](assets/configure_icon.png) （配置）。 您也可以使用 **內容** 瀏覽器。
+1. 選擇 **啟用排序**.
+1. 點選 ![done_icon](assets/done_icon.png) 以保存表屬性。 欄標題中的排序圖示（向上和向下箭頭）代表已啟用排序。
 
    ![啟用排序](assets/enable_sorting_new.png)
 
-1. 切換至&#x200B;**預覽**&#x200B;模式以檢視輸出。 表格會根據表格的第一欄自動排序。
+1. 切換至 **預覽** 模式來查看輸出。 表格會根據表格的第一欄自動排序。
 1. 按一下欄標題，以根據欄來排序值。
 
    帶上箭頭的列標題表示表是根據該列排序的。 此外，欄中的值會以升序顯示。
@@ -106,40 +106,40 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
    同樣地，帶有向下箭頭的欄標題表示欄中的值以降序顯示。
 
-   您也可以在&#x200B;**預覽**&#x200B;模式下對表格進行更改，然後再次按一下列標題以排序列值。
+   您也可以在 **預覽** 模式，然後再按一下欄標題來排序欄值。
 
 ## 設定表的列寬 {#set-column-width}
 
 執行下列步驟來設定表格的欄寬：
 
-1. 在&#x200B;**[!UICONTROL Content]**&#x200B;標籤中，點選&#x200B;**[!UICONTROL Table]**&#x200B;元件，然後點選「設定」(![Configure](assets/configure-icon.svg))圖示。
+1. 在 **[!UICONTROL 內容]** 標籤，點選 **[!UICONTROL 表格]** 元件，然後點選「設定」(![設定](assets/configure-icon.svg))圖示。
 
-1. 在&#x200B;**[!UICONTROL 欄寬]**&#x200B;欄位中輸入以逗號分隔的值清單，以指定表格中各欄的比例寬度。 例如，對於包含3列的表，在&#x200B;**[!UICONTROL 列寬]**&#x200B;欄位中指定2,4,6作為值，結果將列寬設定為第一列的2/12，第二列的4/12，第三列的6/12。 2/12：第一列的寬度是表寬度的六分之一。 同樣，4/12將第二列寬度設定為表寬的三分之一，而6/12將第三列寬度設定為表寬的一半。
+1. 在 **[!UICONTROL 欄寬]** 欄位來指定表格中每欄的比例寬度。 例如，對於包含3欄的表格，將2,4,6指定為 **[!UICONTROL 欄寬]** 欄位會將第一欄的欄寬設為2/12，第二欄設為4/12，第三欄設為6/12。 2/12：第一列的寬度是表寬度的六分之一。 同樣，4/12將第二列寬度設定為表寬的三分之一，而6/12將第三列寬度設定為表寬的一半。
 
 ## 配置表樣式 {#configure}
 
 可以使用頁面工具欄中的樣式模式來定義表的樣式。 執行下列步驟以切換至樣式模式並編輯表格樣式
 
-1. 在頁面工具列的「預覽」之前，點選![Canvas-drop-down](assets/canvas-drop-down.png) > **Style**。
+1. 在頁面工具列中的「預覽」之前，點選 ![畫布下拉式清單](assets/canvas-drop-down.png) > **樣式**.
 
-1. 在側欄中選取表格，然後點選「編輯」按鈕![edit-button](assets/edit-button.png)。
+1. 在側欄中選取表格，然後點選「編輯」按鈕 ![編輯按鈕](assets/edit-button.png).
 您可以在側欄中看到樣式屬性。
 
 ![表的樣式屬性](assets/style-table.png)
 
 >[!NOTE]
 >
->您可以變更LESS變數的值，以變更標題和內文列的顏色主題。 如需詳細資訊，請參閱[AEM Forms中的主題](/help/forms/using/themes.md)。
+>您可以變更LESS變數的值，以變更標題和內文列的顏色主題。 如需詳細資訊，請參閱 [AEM Forms主題](/help/forms/using/themes.md).
 
 ## 動態新增或刪除列 {#add-or-delete-a-row-dynamically}
 
 表格提供立即可用的支援，可在執行階段動態新增或刪除列。
 
-1. 選取表格列，然後點選![cmppr](assets/cmppr.png)。
+1. 選取表格列並點選 ![cppr](assets/cmppr.png).
 1. 在「重複設定」索引標籤中，指定限制表格中列數的最小和最大計數。
-1. 按一下&#x200B;**Done**。
+1. 按一下 **完成**.
 
-在執行階段中，您會看到&#x200B;**+**&#x200B;和&#x200B;*-*&#x200B;按鈕來新增或刪除列。
+在執行階段中，您會看到 **+** 和 *-* 按鈕添加或刪除行。
 
 ![add-delete-rows-dynamically](assets/add-delete-rows-dynamically.png)
 
@@ -153,8 +153,8 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 雖然表格和列僅支援可見性運算式，以便根據運算式傳回的值來控制其可見性，但儲存格支援下列運算式：
 
-* **初始化指令碼：** 對欄位初始化執行動作。
-* **值提交指令碼：** 在更改欄位的值後更改表單的元件。
+* **初始化指令碼：** 對欄位初始化執行操作。
+* **值提交指令碼：** 更改欄位值後表單的元件。
 
 >[!NOTE]
 >
@@ -167,7 +167,7 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 表或行的可見性表達式可在其相應「編輯」元件對話框的「面板屬性」頁簽中定義。 儲存格的運算式可在其「編輯」元件對話方塊的「指令碼」索引標籤中定義。
 
-如需適用性表單類別、事件、物件和公用API的完整清單，請參閱適用性表單的[ JavaScript程式庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)。
+如需適用性表單類別、事件、物件和公用API的完整清單，請參閱 [適用於最適化表單的JavaScript程式庫API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 ## 行動版面 {#mobile-layouts}
 
@@ -215,11 +215,11 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 
 在此範例中，為下列項目提供的Element name屬性：
 
-* 行為&#x200B;**Row1**
-* 「交易日期」下的正文單元格為&#x200B;**tableItem1**
-* 說明下的內文儲存格為&#x200B;**tableItem2**
-* 「事務類型」下的正文單元格為&#x200B;**type**
-* 以USD表示的金額下方的正文儲存格為&#x200B;**tableItem3**
+* 行是 **列1**
+* 「交易日期」下的正文儲存格為 **tableItem1**
+* 「說明」下的正文單元格為 **tableItem2**
+* 「事務類型」下的正文單元格為 **type**
+* 以USD表示的體單元格為 **tableItem3**
 
 包含以下格式的資料的XML檔案：
 
@@ -279,9 +279,9 @@ AEM Forms在側欄的「元件」瀏覽器中提供「表格」元件，可讓�
 </afData>
 ```
 
-在示例XML中，行的資料由`<Row1>`標籤定義，該標籤是表中行的元素名稱。 在`<Row1>`標籤中，每個儲存格的資料都會在標籤中定義其元素名稱，例如`<tableItem1>`、`<tableItem2>`、`<tableItem3>`和`<type>`。
+在範例XML中，列的資料由 `<Row1>` 標籤，即表格中列的元素名稱。 在 `<Row1>` 標籤，則每個儲存格的資料會在標籤中定義其元素名稱，例如 `<tableItem1>`, `<tableItem2>`, `<tableItem3>`，和 `<type>`.
 
-要在運行時將此資料與表合併，我們需要將包含表的最適化表單指向禁用wcmmode的絕對XML位置。 例如，如果適用性表單位於&#x200B;*https://localhost:4502/myForms/bankTransaction.html*，而資料XML檔案儲存在&#x200B;*C:/myTransactions/bankSummary.xml*，則您可以在下列URL檢視含有資料的表格：
+若要在執行階段將此資料與表格合併，我們需要將包含表格的最適化表單指向停用wcmmode時的絕對XML位置。 例如，如果適用性表單位於 *https://localhost:4502/myForms/bankTransaction.html* 而資料XML檔案儲存在 *C:/myTransactions/bankSummary.xml*，您可以在下列URL中檢視含有資料的表格：
 
 *https://localhost:4502/myForms/bankTransaction.html?dataRef=file:/// C:/myTransactions/bankSummary.xml&amp;wcmmode=disabled*
 

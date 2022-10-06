@@ -1,8 +1,8 @@
 ---
 title: 建立自訂工具列動作
-seo-title: 建立自訂工具列動作
+seo-title: Creating a custom toolbar action
 description: 表單開發人員可在AEM Forms中為最適化表單建立自訂工具列動作。 使用自訂動作，表單作者可以為使用者提供更多工作流程和選項。
-seo-description: 表單開發人員可在AEM Forms中為最適化表單建立自訂工具列動作。 使用自訂動作，表單作者可以為使用者提供更多工作流程和選項。
+seo-description: Form developers can create custom toolbar actions for adaptive forms in AEM Forms. Using custom actions form authors can provide more workflows and options to their end users.
 uuid: cd785cfb-e1bb-4158-be9b-d99e04eccc02
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,18 +12,18 @@ docset: aem65
 exl-id: 17f7f0e1-09d8-45cd-a4f6-0846bdb079b6
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
 
-# 建立自定義工具欄操作{#creating-a-custom-toolbar-action}
+# 建立自訂工具列動作{#creating-a-custom-toolbar-action}
 
 ## 必備條件 {#prerequisite}
 
-建立自訂工具列動作之前，請先熟悉[使用用戶端程式庫](/help/sites-developing/clientlibs.md)和[使用CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)開發。
+建立自訂工具列動作之前，請先熟悉 [使用用戶端程式庫](/help/sites-developing/clientlibs.md) 和 [使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md).
 
-## 什麼是動作{#what-is-an-action-br}
+## 什麼是動作 {#what-is-an-action-br}
 
 適用性表單提供工具列，可讓表單作者設定一組選項。 這些選項定義為最適化表單的動作。 按一下「面板」工具列中的「編輯」按鈕，設定最適化表單支援的動作。
 
@@ -35,26 +35,26 @@ ht-degree: 0%
 
 為了說明如何建立自訂工具列動作，下列步驟將引導您建立按鈕，讓使用者在提交已填寫的表單前，先檢閱所有最適化表單欄位。
 
-1. 適用性表單支援的所有預設動作都顯示在`/libs/fd/af/components/actions`資料夾中。 在CRXDE中，將`fileattachmentlisting`節點從`/libs/fd/af/components/actions/fileattachmentlisting`複製到`/apps/customaction`。
+1. 最適化表單支援的所有預設動作都顯示在 `/libs/fd/af/components/actions` 檔案夾。 在CRXDE中，複製 `fileattachmentlisting` 節點從 `/libs/fd/af/components/actions/fileattachmentlisting` to `/apps/customaction`.
 
-1. 將節點複製到`apps/customaction`資料夾後，將節點名稱更名為`reviewbeforesubmit`。 此外，還更改節點的`jcr:title`和`jcr:description`屬性。
+1. 將節點複製到 `apps/customaction` 資料夾，將節點名稱更名為 `reviewbeforesubmit`. 此外，請變更 `jcr:title` 和 `jcr:description` 節點的屬性。
 
-   `jcr:title`屬性包含工具欄對話框中顯示的操作的名稱。 `jcr:description`屬性包含當使用者將指標暫留在動作上時，所顯示的詳細資訊。
+   此 `jcr:title` 屬性包含工具列對話方塊中顯示的動作名稱。 此 `jcr:description` 屬性包含當使用者將指標暫留在動作上時，所顯示的詳細資訊。
 
    ![用於工具欄定製的節點層次](assets/action3.png)
 
-1. 在`reviewbeforesubmit`節點中選擇`cq:template`節點。 請確定`guideNodeClass`屬性的值為`guideButton`，並相應地變更`jcr:title`屬性。
-1. 更改`cq:Template`節點中的type屬性。 在目前範例中，將type屬性變更為按鈕。
+1. 選擇 `cq:template` 節點 `reviewbeforesubmit` 節點。 請確定 `guideNodeClass` 屬性為 `guideButton` 變更 `jcr:title` 屬性。
+1. 變更 `cq:Template` 節點。 在目前範例中，將type屬性變更為按鈕。
 
-   類型值會在元件產生的HTML中新增為CSS類別。 使用者可以使用該CSS類別來設定其動作的樣式。 行動裝置和案頭裝置的預設樣式是針對按鈕、提交、重設和儲存類型值而提供。
+   類型值會新增為元件所產生HTML中的CSS類別。 使用者可以使用該CSS類別來設定其動作的樣式。 行動裝置和案頭裝置的預設樣式是針對按鈕、提交、重設和儲存類型值而提供。
 
 1. 從最適化表單編輯工具列對話方塊中選取自訂動作。 面板的工具欄中將顯示「審閱」按鈕。
 
-   ![工具欄中提供自定義操](assets/custom_action_available_in_toolbar.png) ![作顯示自定義建立的工具欄操作](assets/action7.png)
+   ![工具列中提供自訂動作](assets/custom_action_available_in_toolbar.png) ![顯示自訂建立的工具列動作](assets/action7.png)
 
-1. 要為「查看」按鈕提供功能，請在init.jsp檔案中添加一些JavaScript和CSS代碼以及伺服器端代碼，該代碼出現在`reviewbeforesubmit`節點內。
+1. 要為「查看」按鈕提供功能，請在init.jsp檔案中添加一些JavaScript和CSS代碼以及伺服器端代碼，該代碼出現在 `reviewbeforesubmit` 節點。
 
-   在`init.jsp`中新增下列程式碼。
+   在中新增下列程式碼 `init.jsp`.
 
    ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
@@ -112,7 +112,7 @@ ht-degree: 0%
    </div><!-- /.modal -->
    ```
 
-   在`ReviewBeforeSubmit.js`檔案中新增下列程式碼。
+   在 `ReviewBeforeSubmit.js` 檔案。
 
    ```javascript
    /*anonymous function to handle show of review before submit view */
@@ -147,7 +147,7 @@ ht-degree: 0%
    });
    ```
 
-   將下列程式碼新增至`ReviewBeforeSubmit.css`檔案。
+   將下列程式碼新增至 `ReviewBeforeSubmit.css` 檔案。
 
    ```css
    .modal-list .reviewlabel {
@@ -180,7 +180,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >`GuideBridge`程式庫未在製作模式中載入。 因此，此自訂動作在製作模式中無法運作。
+   >此 `GuideBridge` 程式庫未在製作模式中載入。 因此，此自訂動作在製作模式中無法運作。
 
    ![自訂檢閱按鈕的動作展示](assets/action9.png)
 

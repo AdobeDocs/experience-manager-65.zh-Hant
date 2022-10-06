@@ -1,10 +1,11 @@
 ---
 title: 了解如何在內容片段中使用參考
 description: 了解如何在內容片段、內容、其他片段和其他資產（媒體）中使用參考。 介紹無頭式CMS製作的巢狀片段的必要性和機制。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '731'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 

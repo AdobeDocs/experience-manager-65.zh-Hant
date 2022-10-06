@@ -1,8 +1,8 @@
 ---
 title: 設定帳戶環境
-seo-title: 設定帳戶環境
+seo-title: Configuring your account environment
 description: AEM可讓您設定帳戶，以及製作環境的某些方面。
-seo-description: AEM可讓您設定帳戶，以及製作環境的某些方面。
+seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment.
 uuid: a4a408f4-e33e-4304-90ab-f564ae772b7d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: 9abdaa6d-79ee-448e-a23f-d216433591f8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 12%
+source-wordcount: '224'
+ht-degree: 11%
 
 ---
 
@@ -22,29 +22,27 @@ ht-degree: 12%
 
 AEM可讓您設定帳戶，以及製作環境的某些方面。
 
-使用[帳戶設定](#account-settings)和[用戶首選項](#user-preferences)可以定義以下選項和首選項：
+使用 [帳戶設定](#account-settings) 和 [使用者偏好設定](#user-preferences) 可定義下列選項和偏好設定：
 
-* **編輯工**
-具欄選擇是否要具有全局編輯工具欄。此工具列會顯示在瀏覽器視窗頂端，提供您 
-**複製**、 **剪下**、 **貼上**、刪除按鈕，以便與該頁 **** 面上的段落元件一起使用：
+* **編輯工具列**
+選擇是否要具有全局編輯工具欄。 此工具列會顯示在瀏覽器視窗頂端，提供您 
+**複製**, **剪下**, **貼上**, **刪除** 用於與該頁面上的段落元件一起使用的按鈕：
 
    * 需要時顯示 (預設)
    * 永遠顯示
    * 隱藏
 
-* **模擬**
-為使用 [者可](/help/sites-administering/security.md#impersonating-another-user) 以代表其他使用者運作的模擬功能。
+* **模擬為**
+使用 [模擬為](/help/sites-administering/security.md#impersonating-another-user) 功能使用者可以代表其他使用者運作。
 
-* ****
-語言用於製作環境UI的語言。從可用清單中選取所需語言。
+* **語言**
+用於製作環境UI的語言。 從可用清單中選取所需語言。
 
-* **窗口**
-管理選擇：
+* **視窗管理**
+選擇以下任一項：
 
-   * 多個視窗（預設）
-頁面將在新視窗中開啟。
-   * 單一視窗
-將在當前窗口中開啟頁面。
+   * 將在新窗口中開啟多個窗口（預設）頁。
+   * 將在當前窗口中開啟單個窗口頁。
 
 ## 帳戶設定 {#account-settings}
 
@@ -59,7 +57,7 @@ AEM可讓您設定帳戶，以及製作環境的某些方面。
 
 ### 使用者偏好設定 {#user-preferences}
 
-每個使用者都可自行設定特定屬性。 這可從控制台右上角的&#x200B;**偏好設定**&#x200B;對話方塊取得。
+每個使用者都可自行設定特定屬性。 這可從 **偏好設定** 對話方塊。
 
 ![screen_shot_2012-02-08at105033am](assets/screen_shot_2012-02-08at105033am.png)
 

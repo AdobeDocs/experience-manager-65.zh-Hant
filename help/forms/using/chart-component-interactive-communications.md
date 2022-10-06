@@ -1,19 +1,19 @@
 ---
 title: 在互動式通信中使用圖表
-seo-title: 互動式通訊中的圖表元件
+seo-title: Chart component in Interactive Communications
 description: 在互動式通信中使用圖表，可以將大量資訊濃縮成易於分析的視覺格式
-seo-description: AEM Forms提供圖表元件，您可在互動式通訊中用來建立圖表。 本檔案說明圖表元件的基本和代理設定。
+seo-description: AEM Forms provides a chart component that you can use to create charts in your Interactive Communication. This document explains basic and agent configurations of the chart component.
 uuid: 978aa431-9a5b-4964-b37c-7bfa8c3f49b9
 content-type: reference
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
-feature: 互動式通訊
+feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2648'
+source-wordcount: '2613'
 ht-degree: 2%
 
 ---
@@ -24,17 +24,17 @@ ht-degree: 2%
 
 建立互動式通訊時，您可以新增圖表，以從互動式通訊的表單資料模型以視覺化方式呈現二維資料。 圖表元件允許您添加和配置以下類型的圖表：圓形圖、列、環形圖、條形圖、線條圖、線條圖和點圖、點圖、區域圖和像限圖。
 
-## 在交互通信{#add-and-configure-chart-in-an-interactive-communication}中添加和配置圖表
+## 在互動式通訊中新增及設定圖表 {#add-and-configure-chart-in-an-interactive-communication}
 
 執行下列步驟以在互動式通訊中新增和設定圖表：
 
-1. 從「Interactive Communication（互動式通信）」的側面點選「**Components**」。
-1. 將&#x200B;**Chart**&#x200B;元件拖放到以下元件之一：
+1. 點選 **元件** 從互動式通訊的旁邊。
+1. 拖放 **圖表** 元件至下列其中一個元件：
 
    * 打印通道：目標區域或影像欄位
    * Web頻道：面板或目標區域
 
-1. 點選「互動式通訊」編輯器中的圖表元件，然後從「元件」工具列選取「設定」(]**![configure_icon](assets/configure_icon.png))。**[!UICONTROL 
+1. 在「互動式通訊」編輯器中點選圖表元件，然後選取 **[!UICONTROL 配置(]** ![configure_icon](assets/configure_icon.png))。
 
    圖表屬性顯示在左窗格中。
 
@@ -46,16 +46,16 @@ ht-degree: 2%
 
    Web通道中線型圖的基本屬性
 
-1. 根據通道類型配置[圖表屬性](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties)。
-1. （僅打印通道）在&#x200B;**[!UICONTROL 代理設定]**&#x200B;中，指定代理是否必須使用此圖表。 如果未選擇「代理使用此圖表」選項，則代理可以點選「代理UI」的「**[!UICONTROL 內容]**」頁簽中圖表的眼睛表徵圖，以顯示或隱藏圖表。****
+1. 設定 [圖表屬性](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties) 根據通道類型。
+1. （僅限列印管道） **[!UICONTROL 代理設定]**，指定代理是否必須使用此圖表。 如果 **[!UICONTROL t是代理使用此圖表的必填項目]** 選項，則代理可以點選 **[!UICONTROL 內容]** 頁簽顯示或隱藏圖表。
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
-1. 點選![done_icon](assets/done_icon.png)以儲存圖表屬性。
+1. 點選 ![done_icon](assets/done_icon.png) 以保存圖表屬性。
 
-   點選「**[!UICONTROL 預覽]**」以檢視與圖表相關聯的外觀和資料。 點選&#x200B;**[!UICONTROL 編輯]**&#x200B;以重新設定圖表的屬性。
+   點選 **[!UICONTROL 預覽]** 查看與圖表關聯的外觀和資料。 點選 **[!UICONTROL 編輯]** 重新配置圖表的屬性。
 
-## 配置圖表屬性{#configure-chart-properties}
+## 配置圖表屬性 {#configure-chart-properties}
 
 在為打印通道和Web通道建立圖表時配置以下屬性：
 
@@ -83,7 +83,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>系列&gt;資料模型物件</td>
-   <td>要向圖表添加多個系列的表單資料模型集合項的名稱。<br /> 為在X軸和Y軸上繪製的屬性選擇父表單資料模型對象屬性，以形成有意義的系列。綁定的資料模型對象必須為Number、String或Date類型。</td>
+   <td>要向圖表添加多個系列的表單資料模型集合項的名稱。<br /> 為在X軸和Y軸上繪製的屬性選擇父表單資料模型對象屬性，以形成有意義的系列。 綁定的資料模型對象必須為Number、String或Date類型。</td>
    <td>打印和Web</td>
   </tr>
   <tr>
@@ -153,7 +153,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>工具提示</td>
-   <td><p>工具提示出現在Web頻道圖表中資料點滑鼠上的格式。 預設值為${x}(${y})。 根據圖表類型，當您將滑鼠指向圖表中的點、條或切片時，變數${x}和${y}將動態替換為X軸和Y軸上的相應值，並顯示在工具提示中。</p> <p>要禁用工具提示，請將<span class="uicontrol">工具提示</code>欄位留空。 此選項不適用於折線圖和區域圖。 例如，請參閱<a href="#chartoutputprintweb">範例1:打印和Web</a>中的圖表輸出。</code></p> </td>
+   <td><p>工具提示出現在Web頻道圖表中資料點滑鼠上的格式。 預設值為${x}(${y})。 根據圖表類型，當您將滑鼠指向圖表中的點、條或切片時，變數${x}和${y}將動態替換為X軸和Y軸上的相應值，並顯示在工具提示中。</p> <p>若要停用工具提示，請保留 <span class="uicontrol">工具提示</code> 欄位空白。 此選項不適用於折線圖和區域圖。 例如，請參閱 <a href="#chartoutputprintweb">範例1:打印和Web中的圖表輸出</a>.</code></p> </td>
    <td>Web</td>
   </tr>
   <tr>
@@ -161,19 +161,19 @@ ht-degree: 2%
    <td><p>除了常見設定外，還提供下列圖表專屬設定：</p>
     <ul>
      <li><strong>顯示圖例： </strong>顯示圓形圖或環圈圖的圖例。</li>
-     <li><strong>圖例位置： </strong>指定圖例相對於圖表的位置。可用選項有「右」、「左」、「上」和「下」。 建議在列印管道中使用右側圖例。</li>
+     <li><strong>圖例位置： </strong>指定圖例相對於圖表的位置。 可用選項有「右」、「左」、「上」和「下」。 建議在列印管道中使用右側圖例。</li>
      <li><strong>內半徑</strong>:供環圈圖指定圖表中內圓的半徑（以像素為單位）。</li>
      <li><strong>線條顏色</strong>:折線圖、折線圖、折線圖、點圖和面積圖可指定圖表中折線的顏色。</li>
-     <li><strong>點顏色</strong>:可用於點、折線圖和點圖，以指定圖表中點的顏色。<br /> </li>
+     <li><strong>點顏色</strong>:可用於點圖、折線圖和點圖，以指定圖表中點的顏色。<br /> </li>
      <li><strong>區域顏色</strong>:區域圖可用於指定圖表中折線下方區域的顏色。</li>
-     <li><strong>參考點&gt;綁定類型： </strong>可用於像限<strong> </strong>圖以指定參考點的綁定類型。使用靜態文本或資料模型對象屬性來定義參考點的值。</li>
-     <li><strong>參照點&gt; X軸： </strong>如果從「綁定類型」(Binding Type)下 <span class="uicontrol"></code> 拉清單中選擇「狀態」(Static)，以指定參照點的X軸值，則可用於像限圖。</code></li>
-     <li><strong>參照點&gt; Y軸： </strong>如果從「綁定類型」(Binding Type)下 <span class="uicontrol"></code> 拉清單中選擇「靜態」(Static)，以指定參照點的Y軸值，則可用於像限圖。</code></li>
-     <li><strong>系列的參考點&gt;資料模型對象： </strong>如果從「綁定類型」下拉清單中 <span class="uicontrol">選擇「</code> 資料模型對象」，則可用於多個序列像限圖。定義表單資料模型物件屬性以確認參考點的系列. </code></li>
-     <li><strong>系列的參考點&gt;資料模型對象值： </strong>如果從「綁定類型」下拉清單中 <span class="uicontrol">選擇「</code> 資料模型對象」，則可用於多個序列像限圖。使用系列的表單資料模型對象屬性和此欄位中定義的值，以標識參考點的系列。</code></li>
-     <li><strong>參照點&gt;參照點的資料模型對象： </strong>如果從「綁定類型」下拉清 <span class="uicontrol">單中</code> 選擇「資料模型對象」，則可用於像限圖。定義表單資料模型對象屬性，該屬性與在X軸和Y軸上繪製的屬性同級。 此外，對於多個系列，定義一個資料模型對象屬性，該屬性是為該系列定義的資料模型對象屬性的子實體。</code></li>
-     <li><strong>參考點&gt;資料模型對象值參考點： </strong>如果從「綁定類型」下拉清 <span class="uicontrol">單中</code> 選擇「資料模型對象」，則可用於像限圖。對參考點使用表單資料模型對象屬性以及此欄位中定義的值，以標識圖表的參考點。<br /> <strong>像限標籤&gt;左上： </strong> 可用於像限圖以指定左上像限的名稱。</code></li>
-     <li><strong>像限標籤&gt;右上： </strong> 可用於像限圖以指定右上像限的名稱。</li>
+     <li><strong>參考點&gt;綁定類型： </strong>可用於像限圖<strong> </strong>指定引用點的綁定類型。 使用靜態文本或資料模型對象屬性來定義參考點的值。</li>
+     <li><strong>參照點&gt; X軸： </strong>如果選擇，則可用於像限圖 <span class="uicontrol">靜態</code> 從「綁定類型」(Binding Type)下拉清單中，指定參照點的X軸值。</code></li>
+     <li><strong>參照點&gt; Y軸： </strong>如果選擇，則可用於像限圖 <span class="uicontrol">靜態</code> 從「綁定類型」(Binding Type)下拉清單中，指定參照點的Y軸值。</code></li>
+     <li><strong>系列的參考點&gt;資料模型對象： </strong>如果選擇，則可用於多個系列像限圖 <span class="uicontrol">資料模型物件</code> 從「綁定類型」下拉清單中。 定義表單資料模型物件屬性以確認參考點的系列. </code></li>
+     <li><strong>系列的參考點&gt;資料模型對象值： </strong>如果選擇，則可用於多個系列像限圖 <span class="uicontrol">資料模型物件</code> 從「綁定類型」下拉清單中。 使用系列的表單資料模型對象屬性和此欄位中定義的值，以標識參考點的系列。</code></li>
+     <li><strong>參照點&gt;參照點的資料模型對象： </strong>如果選擇，則可用於像限圖 <span class="uicontrol">資料模型物件</code> 從「綁定類型」下拉清單中。 定義表單資料模型對象屬性，該屬性與在X軸和Y軸上繪製的屬性同級。 此外，對於多個系列，定義一個資料模型對象屬性，該屬性是為該系列定義的資料模型對象屬性的子實體。</code></li>
+     <li><strong>參考點&gt;資料模型對象值參考點： </strong>如果選擇，則可用於像限圖 <span class="uicontrol">資料模型物件</code> 從「綁定類型」下拉清單中。 對參考點使用表單資料模型對象屬性以及此欄位中定義的值，以標識圖表的參考點。<br /> <strong>像限標籤&gt;左上：</strong> 可用於像限圖以指定左上像限的名稱。</code></li>
+     <li><strong>像限標籤&gt;右上：</strong> 可用於像限圖表以指定右上像限的名稱。</li>
      <li><strong>像限標籤&gt;右下： </strong>可用於像限圖以指定右下像限的名稱。</li>
      <li><strong>像限標籤&gt;左下： </strong>可用於像限圖以指定左下像限的名稱。</li>
     </ul> </td>
@@ -182,33 +182,33 @@ ht-degree: 2%
  </tbody>
 </table>
 
-## 在圖表{#use-functions-in-chart}中使用函式
+## 在圖表中使用函式 {#use-functions-in-chart}
 
 您可以設定圖表，使用統計函式從來源資料計算值，以便在圖表上繪製。 在圖表中套用函式，即可繪製非表單資料模型直接提供的資料。
 
 ![圖表中的函式](assets/functions_charts_new.png)
 
-雖然圖表元件帶有一些內置函式，但您可以編寫[自定義函式](#customfunctionsweb)，並將它們用於Web通道的圖表配置中。
+雖然圖表元件附帶一些內建功能，但您可以編寫 [自訂函式](#customfunctionsweb) 並讓它們可用於網頁頻道的圖表設定中。
 
 圖表元件預設提供下列函式：
 
-**平均值（平均值）** 傳回X或Y軸上其他軸上指定值的平均值。
+**平均值** 傳回X或Y軸上其他軸上指定值的平均值。
 
-**** Sum返回X或Y軸上另一個軸上給定值的所有值的總和。
+**總和** 傳回X或Y軸上其他軸上指定值的所有值總和。
 
-**** Maximum（最大值）返回X或Y軸上另一個軸上給定值的最大值。
+**最大值** 傳回X或Y軸上另一個軸上給定值的最大值。
 
-**** 頻率返回X或Y軸上另一個軸上給定值的值數。
+**頻率** 傳回X軸或Y軸上其他軸上指定值的值數。
 
-**** 範圍返回X軸或Y軸上另一個軸上給定值的最大值和最小值之間的差值。
+**範圍** 傳回X或Y軸上另一個軸上指定值之值的最大值與最小值之差。
 
-**** 中位數傳回在X或Y軸上，將較高和較低值分成兩半的值，以分割另一個軸上的指定值。
+**中位數** 傳回在X或Y軸上，將較高和較低值分隔為一半的值，以分隔另一個軸上的指定值。
 
-**** 最小值返回X或Y軸上另一個軸上給定值的最小值。
+**最低** 傳回X或Y軸上另一個軸上給定值的最小值。
 
-**** 模式返回值，其中X或Y軸上最多出現另一個軸上給定值的值。
+**模式** 傳回值，在X或Y軸上，最常出現另一個軸上指定值的值。
 
-如需詳細資訊，請參閱[範例2:求和和和頻率函式線上圖](#applicationsumfrequency)中的應用
+如需詳細資訊，請參閱 [範例2:和頻函式線上圖中的應用](#applicationsumfrequency).
 
 ### Web通道中的自訂函式 {#customfunctionsweb}
 
@@ -228,18 +228,18 @@ Multiply(valueArray, category) {
 
 撰寫自訂函式後，請執行下列操作，使其可用於圖表配置：
 
-1. 在與相關互動式通訊相關聯的用戶端程式庫中新增自訂函式。 如需詳細資訊，請參閱[設定提交動作](/help/forms/using/configuring-submit-actions.md)和[使用用戶端程式庫](/help/sites-developing/clientlibs.md)。
+1. 在與相關互動式通訊相關聯的用戶端程式庫中新增自訂函式。 如需詳細資訊，請參閱 [設定提交動作](/help/forms/using/configuring-submit-actions.md) 和 [使用用戶端程式庫](/help/sites-developing/clientlibs.md).
 
-1. 若要在「函式」下拉式清單中顯示自訂函式，請在CRXDe Lite中，使用下列屬性在應用程式資料夾中建立`nt:unstructured`節點：
+1. 若要在「函式」下拉式清單中顯示自訂函式，請在CRXDe Lite中建立 `nt:unstructured` 節點（位於應用資料夾中），具有以下屬性：
 
-   * 新增屬性`guideComponentType`，其值為`fd/af/reducer`。 （強制）
+   * 新增屬性 `guideComponentType` 值為 `fd/af/reducer`. （強制）
 
-   * 將屬性`value`新增至自訂JavaScript™函式的完全限定名稱。 （必要），並將其值設為自訂函式的名稱，例如「乘」。
-   * 新增屬性`jcr:description` ，其值要顯示為「函式」下拉式清單中顯示之自訂函式的名稱。 例如， **Pully**。
+   * 新增屬性 `value` 填入自訂JavaScript™函式的完全限定名稱。 （必要），並將其值設為自訂函式的名稱，例如「乘」。
+   * 新增屬性 `jcr:description` 以「函式」下拉式清單中顯示的自訂函式名稱。 例如， **乘**.
 
-   * 新增屬性`qtip`，其值將是自訂函式的簡短說明。 在&#x200B;**Function**&#x200B;下拉式清單中，將指標移至函式名稱時，工具提示會顯示。
+   * 新增屬性 `qtip` 值，此值將簡短說明自訂函式。 將指標暫留在 **函式** 下拉式清單。
 
-1. 按一下「**全部保存」以保存配置。**
+1. 按一下 **全部儲存** 以儲存設定。
 
 函式現在可在圖表中使用。
 
@@ -254,9 +254,9 @@ Multiply(valueArray, category) {
 要完成此操作，請指定以下屬性：
 
 * **[!UICONTROL 名稱]**  — 指定圖表的名稱。
-* **[!UICONTROL 圖表類型]**  — 從下 **** 拉清單中選擇列。
+* **[!UICONTROL 圖表類型]**  — 選擇 **欄** 從下拉式清單中。
 * **[!UICONTROL 標題]**  — 指定X軸的費用類型和Y軸的事務處理金額。
-* **[!UICONTROL 資料模型對象]**  — 選擇資料模型對象屬性以建立X軸（費用類型）和Y軸（事務處理金額）的資料綁定。
+* **[!UICONTROL 資料模型物件]**  — 選擇資料模型對象屬性，以建立X軸（費用類型）和Y軸（事務處理金額）的資料綁定。
 
 ![互動式通信的打印通道中的清單](assets/sample_chart_print_column_new.png)
 
@@ -267,10 +267,10 @@ Multiply(valueArray, category) {
 要完成此操作，請指定以下屬性：
 
 * **[!UICONTROL 名稱]**  — 指定圖表的名稱。
-* **[!UICONTROL 圖表類型]**  — 從下 **** 拉式清單中選取「核取」。
-* **[!UICONTROL 資料模型對象]**  — 選擇資料模型對象屬性以建立X軸（費用類型）和Y軸（事務處理金額）的資料綁定。
+* **[!UICONTROL 圖表類型]**  — 選擇 **[!UICONTROL 環形圖]** 從下拉式清單中。
+* **[!UICONTROL 資料模型物件]**  — 選擇資料模型對象屬性，以建立X軸（費用類型）和Y軸（事務處理金額）的資料綁定。
 * **[!UICONTROL 內半徑]**  — 將「內半徑」值指定為150，以指定圖表中內圓的半徑（以像素為單位）。
-* **[!UICONTROL 工具提示]**  — 使用${x}(${y})預設格式來顯示工具提示。工具提示顯示為：費用類型（事務處理金額）。 範例：比特幣借記(10000)。
+* **[!UICONTROL 工具提示]**  — 使用${x}(${y})預設格式顯示工具提示。 工具提示顯示為：費用類型（事務處理金額）。 範例：比特幣借記(10000)。
 
 ![互動式通訊網路通道中的環圈圖](assets/sample_chart_web_new.png)
 
@@ -284,7 +284,7 @@ Multiply(valueArray, category) {
 
 線性圖，不含兩筆「AirBnB借記」交易
 
-### 總和函式{#sum-function}
+### 求和函式 {#sum-function}
 
 您可以套用求和函式來加總相同資料屬性的多個例項的值，且只顯示一次。 例如，在下圖中，Sum函式應用於Y軸，以加總AirBnB交易（2050和1050）的兩個借記金額，並僅顯示一個交易(3100)。
 
@@ -292,28 +292,28 @@ Multiply(valueArray, category) {
 
 ![折線圖總和](assets/line_chart_web_sum_new.png)
 
-### 頻率函式{#frequency-function}
+### 頻率函式 {#frequency-function}
 
 頻率函式返回另一個軸上給定值的Y軸數。 在Y軸（事務量）上應用頻率函式後，圖形顯示AirBnB事務有兩次借記，其餘事務有一次借記。
 
 ![折線圖頻率](assets/line_chart_web_functions_frequency_new.png)
 
-## 範例3:Web {#example-multi-series-quadrant-chart-in-web}中的多序列像限圖
+## 範例3:Web中的多系列像限圖 {#example-multi-series-quadrant-chart-in-web}
 
 圖表繪製在特定日期範圍內執行的事務處理的金額。 像限圖表可將圖表區域劃分為四個標籤部分。 該字元對X軸和Y軸使用靜態參照點。 使用多系列功能，根據銀行名稱來隔離資料。
 
 要完成此操作，請指定以下屬性：
 
 * **名稱：** 指定圖表的名稱。
-* **圖表類型：** 從下 **** 拉式清單中選取「像限」。
+* **圖表類型：** 選擇 **像限** 從下拉式清單中。
 
-* 選中&#x200B;**多系列**&#x200B;複選框。
-* **資料模型物件**:指定系列的資料模型對象屬性。銀行名稱的資料模型對象屬性是在X軸和Y軸中繪製的資料模型對象屬性的父屬性。
-* **資料模型對象：** 選擇資料模型對象屬性，以建立X軸（事務日期）和Y軸（事務金額）的資料綁定。
-* 在&#x200B;**參考點**&#x200B;部分中，選擇&#x200B;**靜態**&#x200B;作為綁定類型。
+* 選取 **多系列** 核取方塊。
+* **資料模型物件**:指定系列的資料模型對象屬性。 銀行名稱的資料模型對象屬性是在X軸和Y軸中繪製的資料模型對象屬性的父屬性。
+* **資料模型對象：** 選擇資料模型對象屬性以建立X軸（事務日期）和Y軸（事務金額）的資料綁定。
+* 在 **參考點** 部分，選擇 **靜態** 作為綁定類型。
 
 * 指定X軸和Y軸參照點的值。
 * 指定左上、右上、右下和左下四像限的像限標籤。
-* 選中&#x200B;**顯示圖例**&#x200B;複選框以顯示銀行名稱的顏色代碼。
+* 選取 **顯示圖例** 核取方塊以顯示銀行名稱的顏色代碼。
 
 ![像限圖](assets/charts_quadrant_example_new.png)

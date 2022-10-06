@@ -19,7 +19,7 @@ ht-degree: 0%
 
 進階
 
-JEE叢集上的AEM Forms是一種拓撲，其設計目的是讓JEE上的AEM Forms能夠抵御叢集節點的故障，並擴展系統容量，使其超出單一節點的能力。 群集將多個節點合併到單個邏輯系統中，該邏輯系統共用資料並允許事務在執行時跨越多個節點。 叢集是在JEE上擴充AEM Forms的最一般方式，因為可支援處理任何工作負載組合的任何服務組合。 JEE叢集上的AEM Forms不一定最適合所有類型的部署，尤其是非叢集伺服器負載平衡架構在許多情況下可能最合適。
+JEE叢集上的AEM Forms是一種拓撲，其設計目的是讓JEE上的AEM Forms能夠抵御叢集節點的故障，並且擴展系統容量，使其超出單一節點的能力。 群集將多個節點合併到單個邏輯系統中，該邏輯系統共用資料並允許事務在執行時跨越多個節點。 叢集是在JEE上擴充AEM Forms的最一般方式，因為可支援處理任何工作負載組合的任何服務組合。 JEE叢集上的AEM Forms不一定最適合所有類型的部署，尤其是非叢集伺服器負載平衡架構在許多情況下可能最合適。
 
 本檔案旨在討論JEE叢集上AEM Forms的特定設定需求和可能遇到的問題。
 
@@ -35,7 +35,7 @@ JEE叢集上的AEM Forms需仰賴基礎應用程式伺服器的叢集功能。 �
 
 ### GemFire快取 {#gemfire-cache}
 
-GemFire快取是在每個群集節點中實現的分佈式快取機制。 節點之間互相查找，並構建一個在節點之間保持一致的邏輯快取。 互相查找的節點聯在一起，以維護圖1中顯示為雲的單個名義快取。 與GDS和資料庫不同，快取是純名義實體。 實際快取內容儲存在記憶體中，並儲存在每個群集節點的`LC_TEMP`目錄中。
+GemFire快取是在每個群集節點中實現的分佈式快取機制。 節點之間互相查找，並構建一個在節點之間保持一致的邏輯快取。 互相查找的節點聯在一起，以維護圖1中顯示為雲的單個名義快取。 與GDS和資料庫不同，快取是純名義實體。 實際快取內容儲存在記憶體中，並儲存在 `LC_TEMP` 目錄。
 
 ### 資料庫 {#database}
 
@@ -77,7 +77,7 @@ Gemfire快取可能會發生數個錯誤。 兩種典型情況為：
 
 多播設定：
 
-* `adobe.cache.multicast-port`:用於與分佈式系統的其他成員通信的多播埠。如果此設定為零，則會禁用成員發現和分發的多播。
+* `adobe.cache.multicast-port`:用於與分佈式系統的其他成員通信的多播埠。 如果此設定為零，則會禁用成員發現和分發的多播。
 
 * `gemfire.mcast-address` （可選）:覆寫Gemfire使用的預設IP位址。
 
@@ -117,7 +117,7 @@ GemFire會生成日誌資訊，這些資訊可用於診斷GemFire快取發現和
 
 `.../LC_TEMP/adobeZZ__123456/Caching/Gemfire.log`
 
-`adobeZZ_`之後的數值字串對於伺服器節點是唯一的，因此您必須搜索臨時目錄的實際內容。 `adobe`之後的兩個字元取決於應用程式伺服器類型：`wl`、`jb`或`ws`。
+之後的數值字串 `adobeZZ_` 是伺服器節點唯一的，因此您必須搜索臨時目錄的實際內容。 後面的兩個字元 `adobe` 取決於應用程式伺服器類型：heer `wl`, `jb`，或 `ws`.
 
 下列範例記錄顯示雙節點叢集發現自身時會發生什麼事。
 
@@ -163,7 +163,7 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
                 at com.adobe.livecycle.bootstrap.bootstrappers.DSCBootstrapper.bootstrap(DSCBootstrapper.java:68)
 ```
 
-在這種情況下，bootstrapper正與GemFire協作以訪問所需表，通過JDBC訪問的表與GemFire返回的快取表資訊之間存在不一致，快取表資訊來自具有不同基礎資料庫的不同群集。
+在這種情況下，bootstrapper正在與GemFire協作以訪問所需表，通過JDBC訪問的表與GemFire返回的快取表資訊之間存在不一致，快取表資訊來自具有不同基礎資料庫的不同群集。
 
 雖然重複埠在引導期間通常會變得明顯，但是，在其他群集的引導出現時，當群集在關閉後重新啟動，或當網路配置更改為使先前為多播目的而隔離的群集彼此可見時，這種情況有可能在以後顯示。
 
@@ -177,7 +177,7 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
 
 GDS共用是在JEE本身的AEM Forms外部設定，在O/S層級，您必須安排相同的共用目錄結構才能供所有叢集節點使用。 在Windows類型系統上，通常通過設定一個檔案共用來完成，該檔案共用可以從一個節點到另一個節點，也可以從一個遠程檔案系統（如NAS設備）到所有節點。 在UNIX系統上， GDS共用通常通過NFS檔案共用來完成，同樣，從一個節點到另一個節點，或從NAS設備完成。
 
-群集可能的故障模式是，此遠程檔案共用不可用或存在細微問題。 遠程裝載可能因網路問題、安全設定或配置錯誤而失敗。 系統重新啟動可能會導致在事前幾天或幾週所做的配置更改生效，並且這可能導致意外。
+群集的可能故障模式是此遠程檔案共用不可用或存在細微問題。 遠程裝載可能因網路問題、安全設定或配置錯誤而失敗。 系統重新啟動可能會導致在事前幾天或幾週所做的配置更改生效，並且這可能導致意外。
 
 **如果NFS共用無法裝載，會發生什麼？**
 
@@ -258,18 +258,17 @@ and ones like:
 
 * `-Dadobe.cache.cluster-locators=xxx`
 
-請注意，某個設定使用「叢集」和「定位器」之間的句號，另一個則使用連字型大小。 與應用軟體補丁程式相比，這易於實施，風險也更低，但它涉及人為地建立一個令人困惑的、名稱錯誤的配置設定。
+請注意，某個設定使用「叢集」和「定位器」之間的句號，而另一個設定使用連字型大小。 與應用軟體補丁程式相比，這易於實施，風險也更低，但它涉及人為地建立一個令人困惑的、名稱錯誤的配置設定。
 
 ### 如何檢查Quartz是否作為單個節點或群集運行？ {#check-quartz}
 
 若要判斷Quartz如何自行設定，您必須查看AEM Forms在JEE排程器服務上於啟動期間產生的訊息。 這些消息在INFO嚴重性時生成，可能需要調整日誌級別並重新啟動才能獲取消息。 在JEE上的AEM Forms啟動序列中，Quartz初始化從以下行開始：
 
-INFO `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPSchedulerService onLoad
-請務必在記錄中找出第一行，因為某些應用程式伺服器也使用Quartz，且其Quartz例項不應與AEM Forms在JEE排程器服務上使用的例項混淆。 這表示調度程式服務正在啟動，其後面的線路將告訴您它是否在群集模式下正確啟動。 此序列中會顯示多條消息，這是顯示Quartz配置方式的最後一條「已啟動」消息：
+資訊  `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPSschedulerService onLoad在日誌中找到第一行非常重要，因為某些應用程式伺服器也使用Quartz，其Quartz實例不應與AEM Forms在JEE排程器服務上使用的實例混淆。 這表示調度程式服務正在啟動，其後面的線路將告訴您它是否在群集模式下正確啟動。 此序列中會顯示多條消息，這是顯示Quartz配置方式的最後一條「已啟動」消息：
 
-此處提供了Quartz實例的名稱：`IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`。 調度程式的Quartz實例的名稱將始終以字串`IDPSchedulerService_$_`開頭。 附加到此結尾的字串將告訴您Quartz是否在群集模式下運行。 從節點的主機名和長位字串（此處`ap-hp8.ottperflab.adobe.com1312883903975`）生成的長唯一標識符指示它正在群集中運行。 如果以單一節點運作，則識別碼會是兩位數字「20」：
+此處提供了Quartz實例的名稱： `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`. 排程器的Quartz執行個體名稱一律以字串開頭 `IDPSchedulerService_$_`. 附加到此結尾的字串將告訴您Quartz是否在群集模式下運行。 從節點的主機名和長位字串中生成的長唯一標識符，此處 `ap-hp8.ottperflab.adobe.com1312883903975`，表示其正在叢集中運作。 如果以單一節點運作，則識別碼會是兩位數字「20」：
 
-INFO `[org.quartz.core.QuartzScheduler]`計畫程式`IDPSchedulerService_$_20`已啟動。
+資訊  `[org.quartz.core.QuartzScheduler]` 排程器 `IDPSchedulerService_$_20` 已開始。
 必須對所有群集節點單獨執行此檢查，因為每個節點的調度程式獨立地確定是否在群集模式下運行。
 
 ### 如果Quartz以錯誤的模式運行，會導致哪些問題？ {#quartz-running-in-wrong-mode}
@@ -326,7 +325,7 @@ JEE上的AEM Forms中，某些檔案路徑設定會在叢集範圍內建立，�
 1. 系統字型目錄的位置
 1. 資料服務配置檔案的位置
 
-群集中每個配置設定只有一個路徑設定。 例如，您的Temp目錄位置可能是`/home/project/QA2/LC_TEMP`。 在群集中，每個節點實際上都必須具有此特定路徑的可訪問性。 如果一個節點有預期的臨時檔案路徑，而另一個節點沒有，則無法正常運作的節點。
+群集中每個配置設定只有一個路徑設定。 例如，您的Temp目錄位置可能 `/home/project/QA2/LC_TEMP`. 在群集中，每個節點實際上都必須具有此特定路徑的可訪問性。 如果一個節點有預期的臨時檔案路徑，而另一個節點沒有，則無法正常運作的節點。
 
 雖然這些檔案和路徑可以在節點之間共用或單獨定位，或在遠程檔案系統上共用，但通常最佳做法是它們是本地節點磁碟儲存上的本地副本。
 

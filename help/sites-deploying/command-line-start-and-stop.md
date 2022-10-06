@@ -1,8 +1,8 @@
 ---
 title: 命令行開始和停止
-seo-title: 命令行開始和停止
+seo-title: Command Line Start and Stop
 description: 了解如何從命令列啟動和停止AEM。
-seo-description: 了解如何從命令列啟動和停止AEM。
+seo-description: Learn how to start and stop AEM from the command line.
 uuid: 585f071c-2286-4a2c-af07-404bf298cba8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,16 +12,16 @@ discoiquuid: 9333ff84-f624-4cfa-a9e4-c5e3882171ff
 exl-id: 21041b55-240c-487d-9d79-c54c877f4e1e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
 # 命令行開始和停止{#command-line-start-and-stop}
 
-## 從命令行{#starting-adobe-experience-manager-from-the-command-line}啟動Adobe Experience Manager
+## 從命令列啟動Adobe Experience Manager {#starting-adobe-experience-manager-from-the-command-line}
 
-`start`指令碼可在&#x200B;*&lt;cq-installation>/bin*&#x200B;目錄下使用。 提供Unix和Windows版本。 指令碼將啟動安裝在&#x200B;*&lt;cq-installation>*&#x200B;目錄中的實例。
+此 `start` 指令碼可在 *the &lt;cq-installation>/bin* 目錄。 提供Unix和Windows版本。 指令碼會啟動安裝於 *&lt;cq-installation>* 目錄。
 
 這兩個版本支援可用來啟動及調整AEM例項的環境變數清單。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>CQ_HOST</td>
-   <td>主機名<br /> </td>
+   <td>主機名稱<br /> </td>
   </tr>
   <tr>
    <td>CQ_INTERFACE</td>
@@ -45,11 +45,11 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>CQ_RUNMODE</td>
-   <td>以逗號<br />分隔的運行模式 </td>
+   <td>以逗號分隔的Runmode<br /> </td>
   </tr>
   <tr>
    <td>CQ_JARFILE</td>
-   <td>jarfile<br />的名稱 </td>
+   <td>jarfile的名稱<br /> </td>
   </tr>
   <tr>
    <td>CQ_USE_JAAS</td>
@@ -68,15 +68,15 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->請注意，某些執行模式（包括製作和發佈）必須在首次啟動AEM之前設定，且之後無法變更。 在設定應用於生產環境的AEM執行個體之前，請參閱[執行模式檔案](/help/sites-deploying/configure-runmodes.md)以取得詳細資訊。
+>請注意，某些執行模式（包括製作和發佈）必須在首次啟動AEM之前設定，且之後無法變更。 在設定應用於生產環境的AEM例項之前，請參閱 [運行模式文檔](/help/sites-deploying/configure-runmodes.md) 以取得詳細資訊。
 
-### Windows平台start.bat指令碼示例{#windows-platform-start-bat-script-example}
+### Windows平台start.bat指令碼示例 {#windows-platform-start-bat-script-example}
 
 ```shell
 SET CQ_PORT=1234 & ./start.bat
 ```
 
-### Unix平台啟動指令碼示例{#unix-platform-start-script-example}
+### Unix平台啟動指令碼示例 {#unix-platform-start-script-example}
 
 ```shell
 CQ_PORT=1234 ./start
@@ -84,7 +84,7 @@ CQ_PORT=1234 ./start
 
 >[!NOTE]
 >
->啟動指令碼會啟動安裝在&#x200B;*&lt;cq-installation>/app*&#x200B;資料夾下的AEM Quickstart。
+>啟動指令碼會啟動安裝在 *the &lt;cq-installation>/app* 檔案夾。
 
 ## 停止Adobe Experience Manager {#stopping-adobe-experience-manager}
 
@@ -92,24 +92,24 @@ CQ_PORT=1234 ./start
 
 * 視您使用的平台而定：
 
-   * 如果從指令碼或命令行啟動AEM，請按&#x200B;**Ctrl+C**&#x200B;以關閉伺服器。
+   * 如果您從指令碼或命令列啟動AEM，請按 **Ctrl+C** 關閉伺服器。
    * 如果在UNIX上使用了啟動指令碼，則必須使用停止指令碼來停止AEM。
 
-* 如果您通過按兩下jar檔案來啟動AEM，請按一下啟動窗口上的&#x200B;**On**&#x200B;按鈕（該按鈕隨後更改為&#x200B;**Off**）以關閉伺服器。
+* 如果您是透過連按兩下jar檔案來啟動AEM，請按一下 **開啟** 按鈕(然後按鈕將更改為 **關閉**)關閉伺服器。
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
-## 從命令行{#stopping-adobe-experience-manager-from-the-command-line}停止Adobe Experience Manager
+## 從命令列停止Adobe Experience Manager {#stopping-adobe-experience-manager-from-the-command-line}
 
-`stop`指令碼可在&#x200B;*&lt;cq-installation>/bin*&#x200B;目錄下使用。 提供Unix和Windows版本。 指令碼會停止&#x200B;*&lt;cq-installation>*&#x200B;目錄中安裝的執行個體。
+此 `stop` 指令碼可在 *the &lt;cq-installation>/bin* 目錄。 提供Unix和Windows版本。 指令碼會停止安裝在 *&lt;cq-installation>* 目錄。
 
-### Unix平台停止指令碼示例{#unix-platform-stop-script-example}
+### Unix平台停止指令碼示例 {#unix-platform-stop-script-example}
 
 ```shell
 ./stop
 ```
 
-### Windows平台stop.bat指令碼示例{#windows-platform-stop-bat-script-example}
+### Windows平台stop.bat指令碼示例 {#windows-platform-stop-bat-script-example}
 
 ```shell
 ./stop.bat
@@ -117,10 +117,10 @@ CQ_PORT=1234 ./start
 
 如果只想預配置儲存庫（而不重新調整儲存庫的位置），則只需：
 
-* 將`repository.xml`提取到所需位置
+* 擷取 `repository.xml` 到所需位置
 
-* 視需要更新`repository.xml`
+* 更新 `repository.xml` 必填
 
-* 建立`bootstrap.properties`並定義`repository.config`
+* 建立 `bootstrap.properties` 定義 `repository.config`
 
 同樣，在開始實際安裝之前。

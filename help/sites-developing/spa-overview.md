@@ -1,7 +1,7 @@
 ---
-title: 編SPA輯器概述
+title: SPA編輯器概述
 seo-title: SPA Editor Overview
-description: 本文全面概述了編輯SPA器及其工作方式，包括了編輯器在內交互的SPA詳細工AEM作流。
+description: 本文提供SPA Editor的完整概述，以及其運作方式，包括SPA Editor在AEM中互動的詳細工作流程。
 seo-description: This article gives a comprehensive overview of the SPA Editor and how it works included detailed workflows of interaction of the SPA Editor within AEM.
 uuid: c283abab-f5bc-414a-bc81-bf3bdce38534
 contentOwner: bohnert
@@ -18,187 +18,187 @@ ht-degree: 1%
 
 ---
 
-# 編SPA輯器概述{#spa-editor-overview}
+# SPA編輯器概述{#spa-editor-overview}
 
-單頁應用程式 (SPA) 可為網站使用者提供引人入勝的體驗。開發人員希望能夠使用框架構建站SPA點，而作者希望無縫地編輯使用這AEM種框架構建的站點的內容。
+單頁應用程式 (SPA) 可為網站使用者提供引人入勝的體驗。開發人員希望能使用SPA架構建立網站，而作者則想在AEM中為使用此架構建立的網站順暢地編輯內容。
 
-編輯SPA器提供了一個全面的解決方案，用於SPA支援內AEM部。 本頁概述了支SPA持的結構AEM、編SPA輯器的工作SPA方式以及框架和AEM保持同步。
+SPA編輯器提供全方位的解決方案，可支援AEM中的SPA。 本頁概略說明AEM中SPA支援的結構、SPA編輯器的運作方式，以及SPA架構和AEM如何保持同步。
 
 >[!NOTE]
 >
->編輯SPA器是需要基於框架的SPA客戶端呈現(例如，反應或Angular)的項目的推薦解決方案。
+>若專案需要SPA架構的用戶端轉譯(例如React或Angular),SPA Editor是建議的解決方案。
 
 ## 簡介 {#introduction}
 
-使用常SPA用框架(如React和Angular)構建的站點通過動態JSON載入其內容，並且不提供頁面編輯器能夠放置編輯控AEM件所必需的HTML結構。
+使用通用SPA架構(例如React和Angular)建置的網站會透過動態JSON載入其內容，不提供AEM頁面編輯器必須的HTML結構才能放置編輯控制項。
 
-要啟用在中的編SPA輯AEM，需要在儲存庫中的JSON輸SPA出和內容模型之AEM間進行映射以保存對內容的更改。
+若要啟用AEM內的SPA編輯功能，需要SPA的JSON輸出與AEM存放庫中的內容模型之間的對應，才能儲存內容的變更。
 
-SPA中的AEM支援引入了一個精簡JS層，當載入到頁面編輯器中時，該層與SPAJS代碼交互，可通過該層發送事件，並激活編輯控制項的位置以允許上下文編輯。 此功能基於Content Services API端點概念，因為來自內容的內SPA容需要通過Content Services載入。
+AEM中的SPA支援導入了精簡JS層，當載入頁面編輯器時，此層會與SPA JS程式碼互動，以便傳送事件，並啟用編輯控制項的位置以允許內容內編輯。 此功能以「內容服務API端點」概念為基礎，因為SPA的內容需透過「內容服務」載入。
 
-有關中的更SPA多詳AEM細資訊，請參閱以下文檔：
+如需AEM中SPA的詳細資訊，請參閱下列檔案：
 
-* [藍SPA圖](/help/sites-developing/spa-blueprint.md) 的技術要SPA求
-* [入SPA門AEM](/help/sites-developing/spa-getting-started-react.md) 快速瀏覽一SPA下
+* [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 符合SPA的技術需求
+* [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 快速導覽簡單SPA
 
 ## Design {#design}
 
-某的頁元件SPA不會通過JSP或HTL檔案提供其子元件的HTML元素。 此操作已委託到該SPA框架。 子元件或模型的表示從JCR中作為JSON資料結構提取。 然SPA後根據該結構將元件添加到頁面。 此行為將頁面元件的初始主體組合與非對SPA應項區分。
+SPA的頁面元件不會透過JSP或HTL檔案提供其子元件的HTML元素。 此操作已委派給SPA架構。 子元件或模型的表示會從JCR以JSON資料結構的形式擷取。 接著會根據該結構將SPA元件新增至頁面。 此行為可區分頁面元件的初始內文組成，而非SPA對應。
 
 ### 頁面模型管理 {#page-model-management}
 
-頁面模型之解決方案及管理已委託 `PageModel` 的下界。 必須SPA使用頁面模型庫才能初始化並由編輯器SPA創作。 「頁面模型」庫通過以下方式間AEM接提供給「頁面」元件： `aem-react-editable-components` npm。 頁面模型是和之間的解AEM釋器，因SPA此必須始終存在。 創作頁面時，附加庫 `cq.authoring.pagemodel.messaging` 必須添加才能啟用與頁面編輯器的通信。
+頁面模型的解析度及管理已委派給提供 `PageModel` 程式庫。 SPA必須使用頁面模型程式庫，才能初始化並由SPA編輯器製作。 透過間接提供給AEM頁面元件的頁面模型程式庫 `aem-react-editable-components` npm。 「頁面模型」是AEM與SPA之間的解譯器，因此必須始終存在。 製作頁面時，需額外的程式庫 `cq.authoring.pagemodel.messaging` 必須新增，才能啟用與頁面編輯器的通訊。
 
-如果頁SPA面元件繼承自頁面核心元件，則有兩個選項 `cq.authoring.pagemodel.messaging` 客戶端庫類別可用：
+如果SPA頁面元件繼承自頁面核心元件，有兩個選項可讓 `cq.authoring.pagemodel.messaging` 客戶端庫類別可用：
 
-* 如果模板是可編輯的，請將其添加到頁面策略中。
-* 或使用 `customfooterlibs.html`。
+* 如果模板是可編輯的，請將其添加到頁策略中。
+* 或使用 `customfooterlibs.html`.
 
-對於導出模型中的每個資源，SPA將映射一個將執行渲染的實際元件。 然後，使用容器內的元件映射來呈現表示為JSON的模型。
+對於匯出模型中的每個資源，SPA會對應將執行轉譯的實際元件。 接著，系統會使用容器內的元件對應來轉譯模型（以JSON表示）。
 ![screen_shot_2018-08-20at144152](assets/screen_shot_2018-08-20at144152.png)
 
 >[!CAUTION]
 >
->包含 `cq.authoring.pagemodel.messaging` 類別應限於編輯器的上SPA下文。
+>納入 `cq.authoring.pagemodel.messaging` 類別應限於SPA編輯器的內容。
 
 ### 通信資料類型 {#communication-data-type}
 
-當 `cq.authoring.pagemodel.messaging` 類別被添加到頁面中，它將向頁面編輯器發送消息以建立JSON通信資料類型。 當通信資料類型設定為JSON時，GET請求將與元件的Sling Model端點通信。 在頁面編輯器中發生更新後，更新元件的JSON表示形式將發送到頁面模型庫。 然後，頁面模型庫通知SPA更新。
+當 `cq.authoring.pagemodel.messaging` 類別新增至頁面，則會傳送訊息至頁面編輯器以建立JSON通訊資料類型。 當通訊資料類型設為JSON時，GET要求會與元件的Sling模型端點通訊。 在頁面編輯器中發生更新後，更新元件的JSON表示會傳送至頁面模型程式庫。 然後頁面模型程式庫會通知SPA更新。
 
 ![screen_shot_2018-08-20at143628](assets/screen_shot_2018-08-20at143628.png)
 
 ## 工作流程 {#workflow}
 
-您可以通過將編輯作為SPA兩者之AEM間的調SPA解者來理解和之間的交互。
+您可以將SPA編輯器視為SPA與AEM之間的調解者，借此了解與之間互動的流程。
 
-* 頁面編輯器與之之間的SPA通信是使用JSON而不是HTML。
-* 頁面編輯器通過iframe和消息傳遞API向SPA提供頁面模型的最新版本。
-* 頁面模型管理器通知編輯器已準備好編輯，並將頁面模型作為JSON結構傳遞。
-* 編輯器不會改變或甚至訪問正在創作的頁面的DOM結構，而是提供最新的頁面模型。
+* 頁面編輯器與SPA之間的通訊是使用JSON而非HTML。
+* 頁面編輯器會透過iframe和傳訊API，為SPA提供最新版本的頁面模型。
+* 頁面模型管理員會通知編輯器已準備好進行編輯，並以JSON結構傳遞頁面模型。
+* 編輯器不會變更或甚至存取所製作頁面的DOM結構，而是提供最新的頁面模型。
 
 ![screen_shot_2018-08-20at144324](assets/screen_shot_2018-08-20at144324.png)
 
-### 基本編SPA輯器工作流 {#basic-spa-editor-workflow}
+### 基本SPA編輯器工作流程 {#basic-spa-editor-workflow}
 
-在編輯器的關鍵要素SPA中，在中編輯的高級工作SPA流AEM將如下所示。
+銘記SPA編輯器的關鍵元素，作者可在AEM中編輯SPA的高階工作流程如下所示。
 
 ![無標題1](assets/untitled1.gif)
 
-1. 編SPA輯器載入。
-1. 裝SPA載在單獨的框架中。
-1. 請SPA求JSON內容並呈現元件客戶端。
-1. 編SPA輯器檢測渲染元件並生成疊加。
-1. 作者按一下「覆蓋」，顯示元件的編輯工具欄。
-1. 編SPA輯器繼續編輯，並向伺服器發出POST請求。
-1. 編SPA輯器向編輯器請SPA求更新的JSON，該編輯器將用DOM事SPA件發送到。
-1. 重SPA新呈現相關元件，更新其DOM。
+1. SPA編輯器載入。
+1. SPA會載入個別影格中。
+1. SPA要求JSON內容並轉譯用戶端元件。
+1. SPA編輯器會偵測轉譯的元件並產生覆蓋。
+1. 製作按一下覆蓋圖，顯示元件的編輯工具列。
+1. SPA編輯器會持續編輯並提出POST請求給伺服器。
+1. SPA編輯器向SPA編輯器請求更新JSON，此編輯器會以DOM事件傳送至SPA。
+1. SPA會重新轉譯相關元件，並更新其DOM。
 
 >[!NOTE]
 >
->記住：
+>請記住：
 >
->* 總是SPA由顯示器負責。
->* 編SPA輯器與本SPA身隔離。
->* 在生產（發佈）中，從SPA不載入編輯器。
+>* SPA一律負責顯示。
+>* SPA編輯器與SPA本身隔離。
+>* 在生產環境中（發佈），不會載入SPA編輯器。
 >
 
 
 ### 客戶端 — 伺服器頁編輯工作流 {#client-server-page-editing-workflow}
 
-這是編輯時客戶端與伺服器交互的更詳細概SPA述。
+這是編輯SPA時，用戶端與伺服器互動的更詳細概述。
 
 ![page_editor_spa_authoringmediator-2](assets/page_editor_spa_authoringmediator-2.png)
 
-1. 初始SPA化自身，並從Sling模型導出器請求頁面模型。
-1. Sling模型導出器請求從儲存庫合成頁面的資源。
-1. 儲存庫返回資源。
-1. Sling模型導出器返回頁面的模型。
-1. 根SPA據頁面模型實例化其元件。
-1. **6a** 內容通知編輯器它已準備好進行創作。
+1. SPA會自行初始化，並向Sling模型匯出器要求頁面模型。
+1. Sling模型匯出工具會要求從存放庫組成頁面的資源。
+1. 存放庫會傳回資源。
+1. Sling模型匯出器會傳回頁面的模型。
+1. SPA會根據頁面模型將元件實例化。
+1. **6a** 內容會通知編輯器已可供編寫。
 
-   **6b** 頁面編輯器請求元件創作配置。
+   **6b** 頁面編輯器會要求元件編寫設定。
 
-   **6c** 頁面編輯器接收元件配置。
-1. 當作者編輯元件時，頁面編輯器將修改請求發佈到預設POSTservlet。
-1. 資源在儲存庫中更新。
-1. 將更新的資源提供給POSTservlet。
-1. 預設POSTservlet通知頁面編輯器資源已更新。
-1. 頁面編輯器請求新頁面模型。
-1. 從儲存庫請求構成頁面的資源。
-1. 組成頁面的資源由儲存庫提供給Sling模型導出器。
-1. 更新的頁面模型將返回給編輯器。
-1. 頁面編輯器更新的頁面模型引SPA用。
-1. 根SPA據新頁面模型引用更新其元件。
-1. 更新頁面編輯器的元件配置。
+   **6c** 頁面編輯器會接收元件設定。
+1. 作者編輯元件時，頁面編輯器會向預設的POSTservlet發佈修改請求。
+1. 資源會在存放庫中更新。
+1. 更新的資源提供給POSTservlet。
+1. 預設的POSTservlet會通知頁面編輯器資源已更新。
+1. 頁面編輯器會要求新的頁面模型。
+1. 系統會從存放庫請求組成頁面的資源。
+1. 組成頁面的資源由存放庫提供給Sling模型匯出工具。
+1. 更新的頁面模型會傳回至編輯器。
+1. 頁面編輯器會更新SPA的頁面模型參考。
+1. SPA會根據新的頁面模型參考來更新其元件。
+1. 更新頁面編輯器的元件設定。
 
-   **17a** 該信SPA號指示頁面編輯器內容已就緒。
+   **17a** SPA代表頁面編輯器內容已就緒。
 
-   **17b** 頁面編輯器為SPA提供元件配置。
+   **17b** 頁面編輯器為SPA提供元件設定。
 
-   **17c** 提供SPA更新的元件配置。
+   **17c** SPA提供更新的元件設定。
 
-### 創作工作流 {#authoring-workflow}
+### 製作工作流程 {#authoring-workflow}
 
-這是更詳細的概述，重點介紹創作體驗。
+此為更詳細的概述，著重於製作體驗。
 
-![spa_content_authoring模型](assets/spa_content_authoringmodel.png)
+![spa_content_authoringmodel](assets/spa_content_authoringmodel.png)
 
-1. 讀取SPA頁面模型。
-1. **2a** 頁面模型為編輯器提供創作所需的資料。
+1. SPA會擷取頁面模型。
+1. **2a** 頁面模型為編輯器提供編寫所需的資料。
 
-   **2b** 當收到通知後，component orchestrator將更新頁面的內容結構。
-1. 元件orchestrator查詢資源類AEM型和元件之SPA間的映射。
-1. 元件管理器基於頁面模SPA型和元件映射動態實例化元件。
-1. 頁面編輯器更新頁面模型。
-1. **6a** 頁面模型向頁面編輯器提供更新的創作資料。
+   **2b** 通知後，元件管理器將更新頁面的內容結構。
+1. 元件Orchestrator會查詢AEM資源類型與SPA元件之間的映射。
+1. 元件Orchestrator根據頁面模型和元件映射動態實例化SPA元件。
+1. 頁面編輯器會更新頁面模型。
+1. **6a** 頁面模型會向頁面編輯器提供更新的製作資料。
 
-   **6b** 頁面模型將更改派發給component orchestrator。
-1. 元件orchestrator讀取元件映射。
-1. 元件orchestrator更新頁面的內容。
-1. 完成SPA頁面內容更新後，頁面編輯器將載入創作環境。
+   **6b** 頁模型將更改分派到元件Orchestrator。
+1. 元件Orchestrator會擷取元件對應。
+1. 元件Orchestrator會更新頁面內容。
+1. 當SPA完成更新頁面內容時，頁面編輯器會載入製作環境。
 
-## 要求和限制 {#requirements-limitations}
+## 需求與限制 {#requirements-limitations}
 
-要使作者能夠使用頁面編輯器編輯內容SPA，必SPA須實現應用程式以與編輯器AEMSDKSPA交互。 請參閱 [入SPA門AEM](/help/sites-developing/spa-getting-started-react.md) 你至少需要知道的檔案才能運行。
+若要讓作者能使用頁面編輯器來編輯SPA的內容，您必須實作SPA應用程式，才能與AEM SPA Editor SDK互動。 請參閱 [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 檔案，以便讓您執行。
 
-### 支援的框架 {#supported-frameworks}
+### 支援的架構 {#supported-frameworks}
 
-Editor SPA SDK支援以下最低版本：
+SPA Editor SDK支援下列最低版本：
 
-* 響應16.x和更高
-* Angular6.x及更高
+* React 16.x及更新
+* Angular6.x及更新版本
 
-這些框架的早期版本可能與AEM編SPA輯器SDK配合使用，但不受支援。
+這些架構的舊版可與AEM SPA Editor SDK搭配使用，但不支援。
 
-### 附加框架 {#additional-frameworks}
+### 其他框架 {#additional-frameworks}
 
-可SPA以實施其他框架以與AEMEditorSPA SDK配合使用。 請參閱 [藍SPA圖](/help/sites-developing/spa-blueprint.md) 文檔，說明框架必須滿足的要求，以便建立由模組、元件和服務組成的框架特定層，以便與編AEM輯器SPA協作。
+可實作其他SPA架構以搭配AEM SPA Editor SDK使用。 請參閱 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 說明框架必須滿足的要求，以便建立由模組、元件和服務組成的框架特定層，以便與AEM SPA Editor一起使用。
 
-### 使用多個選擇器 {#multiple-selectors}
+### 使用多個選取器 {#multiple-selectors}
 
-可以定義其他自定義選擇器，並將其用SPA作為為AEMSDK開發的一SPA部分。 但是，此支援要求 `model` 選擇器是第一個選擇器，副檔名是 `.json` 如 [JSON導出器所需。](json-exporter-components.md#multiple-selectors)
+其他自訂選取器可定義，並用於為AEM SPA SDK開發的SPA中。 但此支援需要 `model` 選取器是第一個選取器，擴充功能是 `.json` as [JSON匯出工具所需。](json-exporter-components.md#multiple-selectors)
 
-### 文本編輯器要求 {#text-editor-requirements}
+### 文字編輯器需求 {#text-editor-requirements}
 
-如果要使用在中建立的文本元件的就地編輯器，SPA則需要其他配置。
+如果要使用在SPA中建立之文字元件的就地編輯器，則需要其他設定。
 
-1. 在包含文本HTML的容器包裝元素上設定屬性（可以是任意屬性）。 如果是WKND日誌樣本內容，則 `<div>` 元素和已使用的選擇器 `data-rte-editelement`。
-1. 設定配置 `editElementQuery` 對應文AEM本元件的 `cq:InplaceEditingConfig` 指向該選擇器，例如 `data-rte-editelement`。 這樣編輯器就能知道HTML文本的HTML元素。
+1. 在包含文字HTML的容器包裝元素上設定屬性（可以是任何屬性）。 若是WKND日誌範例內容，則是 `<div>` 元素和已使用的選取器 `data-rte-editelement`.
+1. 設定 `editElementQuery` 對應AEM文字元件的 `cq:InplaceEditingConfig` 指向該選取器，例如 `data-rte-editelement`. 這可讓編輯者知道哪個HTML元素會包裝HTML文字。
 
-有關如何執行此操作的示例，請參見 [WKND日誌示例內容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
+如需如何執行此作業的範例，請參閱 [WKND日誌示例內容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 
-有關 `editElementQuery` 屬性和富格文本編輯器的配置，請參見 [配置RTF編輯器。](/help/sites-administering/rich-text-editor.md)
+如需 `editElementQuery` rtf編輯器的屬性和設定，請參閱 [設定RTF編輯器。](/help/sites-administering/rich-text-editor.md)
 
 ### 限制 {#limitations}
 
-Editor AEM SDK隨AEM6.4 Service Pack 2而推出。 它得到Adobe的充分支援，並繼續得到加強和擴大。 編輯AEM器尚不支援以SPA下功能：
+AEM SPA Editor SDK已隨AEM 6.4 Service Pack 2推出。 它得到Adobe的充分支援，並繼續得到增強和擴展。 SPA Editor尚未支援下列AEM功能：
 
 * 目標模式
 * ContextHub
-* 內聯影像編輯
-* 編輯配置(例如 監聽器)
-* 撤消/重做
-* 頁面差異和時間偏差
-* 執行HTML重寫伺服器端的功能，如連結檢查器、CDN重寫器服務、URL縮短等。
+* 內嵌影像編輯
+* 編輯設定(例如 偵聽器)
+* 還原/重做
+* 頁面差異和時間扭曲
+* 執行HTML重新寫入伺服器端的功能，例如連結檢查程式、CDN重新寫入程式服務、URL縮短等。
 * 開發人員模式
-* 啟AEM動
+* AEM啟動

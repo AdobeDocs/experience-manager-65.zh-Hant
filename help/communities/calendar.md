@@ -1,8 +1,8 @@
 ---
 title: 日曆功能
-seo-title: 日曆功能
+seo-title: Calendar Feature
 description: 以日曆格式提供社群活動資訊
-seo-description: 以日曆格式提供社群活動資訊
+seo-description: Provides community event information in a calendar format
 uuid: 262f6afa-d8aa-4815-8440-a8ed5668c76d
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,12 +13,12 @@ docset: aem65
 exl-id: c9b34b00-525d-4ca3-bd18-11bb7ce66787
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1160'
 ht-degree: 5%
 
 ---
 
-# 日曆功能{#calendar-feature}
+# 日曆功能 {#calendar-feature}
 
 ## 簡介 {#introduction}
 
@@ -27,33 +27,33 @@ ht-degree: 5%
 本檔案的本節說明
 
 * 新增日曆功能至AEM網站
-* `Calendar`元件的組態設定
+* 配置設定 `Calendar` 元件
 
-## 將日曆添加到頁{#adding-a-calendar-to-a-page}
+## 將日曆新增至頁面 {#adding-a-calendar-to-a-page}
 
-若要在製作模式中將`Calendar`元件新增至頁面，請使用元件瀏覽器來找出
+新增 `Calendar` 在製作模式中，使用元件瀏覽器來尋找
 
 * `Communities / Calendar`
 
 並將其拖曳至頁面上的位置，例如與功能相對的位置，供使用者檢閱。
 
-如需必要資訊，請造訪[Communities Components Basics](/help/communities/basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-包含[必要的用戶端程式庫](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side)時，會以此方式顯示`Calendar`元件。
+當 [必要的用戶端程式庫](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) 包含在內，以下為方式 `Calendar` 元件隨即顯示。
 
 ![日曆元件](assets/calendar-component.png)
 
-### 配置日曆{#configuring-calendar}
+### 配置日曆 {#configuring-calendar}
 
-選取要存取的放置`Calendar`元件，並選取開啟編輯對話方塊的`Configure`圖示。
+選取已放置的 `Calendar` 要存取的元件並選取 `Configure` 表徵圖，開啟「編輯」對話框。
 
 ![設定](assets/configure-new.png)
 
 ![configure-calendar](assets/configure-calendar1.png)
 
-#### 設定頁簽{#settings-tab}
+#### 設定標籤 {#settings-tab}
 
-在&#x200B;**設定**&#x200B;標籤下，指定是否允許將標籤應用於日曆條目。
+在 **設定** ，指定是否允許將標籤應用於日曆條目。
 
 * **每個頁面的事件**
 
@@ -73,7 +73,7 @@ ht-degree: 5%
 
 * **允許標記**
 
-   如果選中此選項，則允許成員將標籤標籤添加到他們發佈的事件（請參閱&#x200B;**標籤欄位**&#x200B;頁簽）。 已勾選預設值。
+   若勾選此選項，允許成員將標籤標籤新增至其張貼的事件(請參閱 **標籤欄位** 標籤)。 已勾選預設值。
 
 * **允許檔案上傳**
 
@@ -85,11 +85,11 @@ ht-degree: 5%
 
 * **最大檔案大小**
 
-   僅當檢查`Allow File Uploads`時相關。 此欄位將限制上傳檔案的大小（以位元組為單位）。 預設為104857600(10 Mb)。
+   只有在 `Allow File Uploads` 已勾選。 此欄位將限制上傳檔案的大小（以位元組為單位）。 預設為104857600(10 Mb)。
 
 * **允許的檔案類型**
 
-   僅當檢查`Allow File Uploads`時相關。 副檔名清單（以逗號分隔）以「點」分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許上載未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   只有在 `Allow File Uploads` 已勾選。 副檔名清單（以逗號分隔）以「點」分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許上載未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **附加影像檔案最大大小**
 
@@ -97,7 +97,7 @@ ht-degree: 5%
 
 * **允許的封面影像類型**
 
-   以逗號分隔的影像副檔名清單，以「點」分隔符號。 預設值為`.jpg,.jpeg,.png,.gif,.bmp`。
+   以逗號分隔的影像副檔名清單，以「點」分隔符號。 預設為 `.jpg,.jpeg,.png,.gif,.bmp`.
 
 * **允許執行緒式回覆**
 
@@ -121,11 +121,11 @@ ht-degree: 5%
 
 * **允許主要內容**
 
-   若勾選，可將構想識別為[精選內容](/help/communities/featured.md)。 預設為未勾選。
+   若勾選，可將構想識別為 [精選內容](/help/communities/featured.md). 預設為未勾選。
 
-在&#x200B;**使用者協調**&#x200B;標籤下，指定如何管理已張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱[協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+在 **使用者協調** 索引標籤，指定如何管理已張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md).
 
-#### 使用者協調標籤{#user-moderation-tab}
+#### 使用者協調標籤 {#user-moderation-tab}
 
 * **拒絕貼文**
 
@@ -155,13 +155,13 @@ ht-degree: 5%
 
    輸入在從公開檢視隱藏事件或留言之前，必須加以標籤的次數。 如果設為–1，則標籤的主題或評論永遠不會在公共視圖中隱藏。 否則，此數字必須大於或等於協調臨界值。 預設為5。
 
-#### 標籤欄位標籤{#tag-field-tab}
+#### 標籤欄位標籤 {#tag-field-tab}
 
-在&#x200B;**標籤欄位**&#x200B;標籤下，如果&#x200B;**設定**&#x200B;標籤下允許，則可以套用的標籤會根據所選的命名空間受到限制。
+在 **標籤欄位** 標籤中，如果允許，則可套用的標籤 **設定** 標籤，會根據所選的命名空間而受到限制。
 
 * **允許的命名空間**
 
-   若已在&#x200B;**Settings**&#x200B;標籤下勾選`Allow Tagging`則相關。 可套用的標籤僅限於所檢查命名空間類別中的標籤。 命名空間清單包含「標準標籤」（預設命名空間）以及「包含所有標籤」。 預設值未勾選，這表示允許所有命名空間。
+   若 `Allow Tagging` 在 **設定** 標籤。 可套用的標籤僅限於所檢查命名空間類別中的標籤。 命名空間清單包含「標準標籤」（預設命名空間）以及「包含所有標籤」。 預設值未勾選，這表示允許所有命名空間。
 
 * **建議限制**
 
@@ -169,17 +169,17 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->請造訪[管理標籤](/help/sites-administering/tags.md)，了解如何新增標籤命名空間（分類法）。
+>瀏覽 [管理標籤](/help/sites-administering/tags.md) 了解如何新增標籤命名空間（分類法）。
 
-#### 翻譯標籤{#translation-tab}
+#### 翻譯標籤 {#translation-tab}
 
-在&#x200B;**Translation**&#x200B;標籤下，如果為社群網站啟用了翻譯，則可以設定翻譯來翻譯整個執行緒（事件和留言），而不是特定貼文。
+在 **翻譯** 索引標籤，如果為社群網站啟用翻譯，則可設定翻譯來翻譯整個執行緒（事件和留言），而非特定貼文。
 
 * **全部轉換**
 
    若勾選此選項，則事件和留言會翻譯成使用者偏好的語言。 已勾選預設值。
 
-## 網站訪客體驗{#site-visitor-experience}
+## 網站訪客體驗 {#site-visitor-experience}
 
 在發佈環境中，日曆功能會顯示一個搜尋欄位，其中包含預設的日期範圍，以及任何落在該範圍內的日曆事件。
 
@@ -187,15 +187,15 @@ ht-degree: 5%
 
 其他功能取決於網站訪客是版主、管理員、社群成員、有權限的成員還是匿名。
 
-### 協調者和管理員{#moderators-and-administrators}
+### 協調者與管理員 {#moderators-and-administrators}
 
-當登入的使用者擁有版主或管理員權限時，他們就能對發佈至事件的所有日曆事件和留言執行[仲裁任務](/help/communities/moderate-ugc.md)（元件的設定允許）。
+當登入的使用者擁有版主或管理員權限時，就能執行 [協調任務](/help/communities/moderate-ugc.md) （元件的設定允許），以處理張貼至事件的所有日曆事件和留言。
 
 ![協調者檢視](assets/moderators-view.png)
 
 #### 成員 {#members}
 
-當登入的用戶是社區成員或[特權成員](/help/communities/users.md#privileged-members-group)時（取決於配置），他們可以選擇`New Event`建立並發佈新日曆事件。
+登入的使用者是社群成員或 [特權成員](/help/communities/users.md#privileged-members-group) （視設定而定），他們可以選取 `New Event` 來建立和發佈新日曆事件。
 
 具體而言，他們可以：
 
@@ -217,10 +217,10 @@ ht-degree: 5%
 
 ## 其他資訊 {#additional-information}
 
-開發人員可在[Calendar Essentials](/help/communities/calendar-basics-for-developers.md)頁面上找到更多資訊。
+如需詳細資訊，請參閱 [日曆要點](/help/communities/calendar-basics-for-developers.md) 頁面。
 
-如需日曆事件和留言的協調，請參閱[協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+如需日曆事件和留言的協調，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md).
 
-有關標籤日曆事件和注釋的資訊，請參閱[標籤用戶生成的內容](/help/communities/tag-ugc.md)。
+如需日曆事件和註解的標籤，請參閱 [標籤使用者產生的內容](/help/communities/tag-ugc.md).
 
-有關日曆事件和注釋的轉換，請參閱[轉換用戶生成的內容](/help/communities/translate-ugc.md)。
+有關日曆事件和注釋的翻譯，請參見 [轉譯使用者產生的內容](/help/communities/translate-ugc.md).

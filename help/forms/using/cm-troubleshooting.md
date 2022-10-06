@@ -1,25 +1,25 @@
 ---
 title: 「通信管理：疑難排解」
-seo-title: 通信管理疑難排解
+seo-title: Correspondence Management Troubleshooting
 description: 通信管理疑難排解
-seo-description: 通信管理疑難排解
+seo-description: Correspondence Management Troubleshooting
 uuid: 25828cdd-110e-4a84-8f31-d82cd610a54f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
-feature: 通信管理
+feature: Correspondence Management
 exl-id: cf06796b-bb8c-4a65-8f42-02fb0cfa3ebd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 2%
+source-wordcount: '199'
+ht-degree: 1%
 
 ---
 
-# 通信管理：疑難排解{#correspondence-management-troubleshooting}
+# 通信管理：疑難排解 {#correspondence-management-troubleshooting}
 
-## 保存字母{#errors-when-saving-a-letter}時出錯
+## 儲存信函時發生錯誤 {#errors-when-saving-a-letter}
 
 ### 問題 {#issue}
 
@@ -39,18 +39,18 @@ ht-degree: 2%
 
 請確定您在信函中使用的資料字典在伺服器上存在，且名稱中沒有底線(_)。
 
-## 預覽字母{#error-when-previewing-a-letter}時出錯
+## 預覽信函時出錯 {#error-when-previewing-a-letter}
 
 ### 問題 {#issue-1}
 
 預覽信函時，出現「載入信函時發生錯誤：無法從XML輸入匯入資產」，即使信函中已發佈先前未發佈的文字資產時亦會出現。
 
-### 解決方法{#workaround-1}
+### 因應措施 {#workaround-1}
 
 使用下列步驟在發佈執行個體上重設信函快取，然後重試檢視信函：
 
-1. 前往&#x200B;**`https://'[server]:[port]'/[contextPath]/system/console/configMgr`**&#x200B;並以管理員身分登入。
-1. 選擇&#x200B;**通信管理配置**。
-1. 在&#x200B;**通信管理配置**&#x200B;中，禁用&#x200B;**啟用信函快取**，然後按一下&#x200B;**保存。**
-1. 啟用&#x200B;**啟用字母快取**，然後按一下&#x200B;**保存**。
+1. 前往 **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** 並以管理員身分登入。
+1. 選擇 **通信管理配置**.
+1. 在 **通信管理配置**，停用 **啟用信函快取**&#x200B;然後按一下&#x200B;**儲存。**
+1. 啟用 **啟用信函快取** 然後按一下 **儲存**.
 1. 重試查看信函。

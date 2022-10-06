@@ -1,8 +1,8 @@
 ---
 title: 與Adobe Campaign整合
-seo-title: 與Adobe Campaign整合
+seo-title: Integrating with Adobe Campaign
 description: 了解如何整合AEM與Adobe Campaign。
-seo-description: 了解如何整合AEM與Adobe Campaign。
+seo-description: Learn how to integrate AEM with Adobe Campaign.
 uuid: 6113279e-d1f5-46c3-ac94-50270fa55060
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: fd96f30c-0616-445e-adb9-050d52862ffc
 exl-id: ab41e540-1d43-4fc2-99d4-621ff2290e77
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '139'
 ht-degree: 0%
 
 ---
@@ -35,4 +35,4 @@ Adobe Campaign是一組解決方案，可讓您個人化所有線上和離線管
 
 >[!NOTE]
 >
->若要檢閱相關AEM社群文章，請參閱：[整合Adobe Experience Manager和Adobe Campaign Standard以建立Newletters](https://helpx.adobe.com/experience-manager/using/aem_campaign.html)。
+>若要檢閱相關AEM社群文章，請參閱： [整合Adobe Experience Manager和Adobe Campaign Standard以建立Newleters](https://helpx.adobe.com/experience-manager/using/aem_campaign.html).

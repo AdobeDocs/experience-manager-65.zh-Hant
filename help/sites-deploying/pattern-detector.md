@@ -1,8 +1,8 @@
 ---
 title: 使用模式檢測器評估升級複雜性
-seo-title: 使用模式檢測器評估升級複雜性
+seo-title: Assessing the Upgrade Complexity with the Pattern Detector
 description: 了解如何使用模式偵測器來評估升級的複雜性。
-seo-description: 了解如何使用模式偵測器來評估升級的複雜性。
+seo-description: Learn how to use the Pattern Detector to assess the complexity of your upgrade.
 uuid: 84d0add9-3123-4188-9877-758911b1899f
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,18 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
-feature: 升級
+feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
 
 # 使用模式檢測器評估升級複雜性
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 此功能可讓您偵測使用中的模式，以檢查現有AEM例項的升級性：
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 ## 設定方法 {#how-to-set-up}
 
-模式偵測器會以[一個套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)形式個別發行，適用於以AEM 6.5升級為目標的6.1到6.5之任何來源AEM版本。 可使用[軟體包管理器](/help/sites-administering/package-manager.md)進行安裝。
+模式偵測器會以 [一個包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) 使用以AEM 6.5升級為目標的任何來源AEM 6.1到6.5版。 可使用 [封裝管理員](/help/sites-administering/package-manager.md).
 
 ## 使用方式 {#how-to-use}
 
@@ -42,17 +42,15 @@ ht-degree: 1%
 >
 >* 提高檢測率
 >* 避免業務關鍵型實例出現任何延遲
-
 >
->
-同時，建議您在預備環境&#x200B;**上執行**，盡可能接近使用者應用程式、內容和設定領域的生產環境。
+>同時建議執行 **在測試環境中** 在使用者應用程式、內容和設定方面，與生產環境盡可能接近。
 
 您可以使用數種方法來檢查「模式偵測器」輸出：
 
 * **透過Felix Inventory主控台：**
 
-1. 瀏覽至&#x200B;*https://serveraddress:serverport/system/console/configMgr*，前往AEM Web主控台
-1. 選取&#x200B;**狀態 — 模式偵測器**，如下圖所示：
+1. 瀏覽至，前往AEM Web Console *https://serveraddress:serverport/system/console/configMgr*
+1. 選擇 **狀態 — 模式偵測器** 如下圖所示：
 
    ![螢幕截圖 — 2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
@@ -61,7 +59,7 @@ ht-degree: 1%
 
 以下詳細說明這兩種方法：
 
-## 無功介面{#reactive-interface}
+## 無功介面 {#reactive-interface}
 
 被動介面允許在檢測到懷疑時立即處理違規報告。
 
@@ -70,7 +68,7 @@ ht-degree: 1%
 1. 純文字介面
 1. JSON介面
 
-## 處理純文字檔案介面{#handling-the-plain-text-interface}
+## 處理純文字介面 {#handling-the-plain-text-interface}
 
 輸出中的資訊將格式化為一系列事件條目。 有兩個管道：一個用於發佈違規，另一個用於發佈當前進度。
 
@@ -86,7 +84,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 2018-02-13T14:18:32.071+01:00 [SUSPICION] The pattern=ECU/extraneous.content.usage was found by detector=ContentAccessDetector with id=a07fd94318f12312c165e06d890cbd3c2c8b8dad0c030663db8b4c800dd7c33f message="Cross-boundary overlay of internal marked path /libs/granite/operations/components/commons/commons.jsp/jcr:content referenced at /apps/granite/operations/components/commons/commons.jsp/jcr:content with properties redefined: jcr:lastModifiedBy, jcr:mimeType, jcr:data, jcr:lastModified, jcr:uuid". More info at=https://www.adobe.com/go/aem6_EC
 ```
 
-可使用`grep`命令篩選進度：
+可使用 `grep` 命令：
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.txt | tee patterns-report.log | grep PROGRESS
@@ -100,9 +98,9 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 2018-02-13T14:19:35.685+01:00 [PROGRESS] Finished in period=PT13.782
 ```
 
-## 處理JSON介面{#handling-the-json-interface}
+## 處理JSON介面 {#handling-the-json-interface}
 
-同樣地，JSON在發佈後也可以使用[jq工具](https://stedolan.github.io/jq/)來處理。
+同樣地，您也可以使用 [jq工具](https://stedolan.github.io/jq/) 一發佈。
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == true)'
@@ -212,7 +210,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 >[!NOTE]
 >
->建議的方法是將curl的整個輸出儲存到檔案中，然後透過`jq`或`grep`處理它，以篩選資訊類型。
+>建議的方法是將整個輸出從curl儲存至檔案，然後透過 `jq` 或 `grep` 來篩選資訊類型。
 
 ## 檢測範圍 {#scope}
 

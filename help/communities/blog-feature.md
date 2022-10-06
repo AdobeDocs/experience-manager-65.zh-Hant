@@ -1,8 +1,8 @@
 ---
 title: 部落格功能
-seo-title: 部落格功能
+seo-title: Blog Feature
 description: 以日誌格式提供社區資訊
-seo-description: 以日誌格式提供社區資訊
+seo-description: Community information in a journaling format
 uuid: 7323063f-81e8-45c3-9035-bf7df6124830
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,12 +13,12 @@ docset: aem65
 exl-id: 4650ac36-5506-4efc-be35-fac9e5a58f3d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1666'
 ht-degree: 6%
 
 ---
 
-# 部落格功能{#blog-feature}
+# 部落格功能 {#blog-feature}
 
 ## 簡介 {#introduction}
 
@@ -31,11 +31,11 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 * 發佈端建立部落格文章和評論
 * RTF編輯
 * 內嵌影像（支援拖放）
-* 嵌入的社交網路內容([oEmbed support](/help/communities/blog-developer-basics.md#allowing-rich-media))
+* 嵌入式社交網路內容([oEmbed支援](/help/communities/blog-developer-basics.md#allowing-rich-media))
 * 草稿模式
 * 排程發佈
-* 代表撰寫（[特權成員](/help/communities/users.md#privileged-members-group)可以代表不同社群成員建立內容）
-* [部落格文章與評論的內](/help/communities/moderate-ugc.md) 容與大量協調
+* 代表撰寫(a [特權成員](/help/communities/users.md#privileged-members-group) 可以代表不同社群成員建立內容)
+* [內容內容與大量協調](/help/communities/moderate-ugc.md) 部落格文章和評論
 
 本檔案的本節說明：
 
@@ -44,11 +44,11 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 >[!NOTE]
 >
->元件`Journal`和`Journal Sidebar`的標題為`Blog`和`Blog Sidebar`。
+>元件 `Journal` 和 `Journal Sidebar` 標題 `Blog` 和 `Blog Sidebar`.
 >
 >AEM 6.0及舊版中的部落格功能現已移除。 此範本以範本為基礎，僅允許作者在製作環境中建立內容。
 
-## 將部落格元件添加到頁面{#adding-blog-components-to-a-page}
+## 將部落格元件新增至頁面 {#adding-blog-components-to-a-page}
 
 如果想要以作者模式將部落格新增至頁面，請使用元件瀏覽器來尋找
 
@@ -57,23 +57,23 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 並將它們拖曳到應該出現部落格的頁面上。
 
-如需必要資訊，請造訪[Communities Components Basics](/help/communities/basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-包含[必要的用戶端程式庫](/help/communities/blog-developer-basics.md#essentials-for-client-side)時，以下是`Blog`元件的顯示方式：
+當 [必要的用戶端程式庫](/help/communities/blog-developer-basics.md#essentials-for-client-side) 包含在內，以下為方式 `Blog` 元件隨即出現：
 
 ![add-blog-component](assets/add-blog-component.png)
 
-### 配置部落格{#configuring-blog}
+### 配置部落格 {#configuring-blog}
 
-選取要存取的放置`Blog`元件，並選取開啟編輯對話方塊的`Configure`圖示。
+選取已放置的 `Blog` 要存取的元件並選取 `Configure` 表徵圖，開啟「編輯」對話框。
 
 ![設定](assets/configure-new.png)
 
 ![部落格設定](assets/blog-configure.png)
 
-#### 設定頁簽{#settings-tab}
+#### 設定標籤 {#settings-tab}
 
-在&#x200B;**Settings**&#x200B;標籤下，指定部落格的基本功能：
+在 **設定** 頁簽，指定部落格的基本功能：
 
 * **允許附件縮圖**
 
@@ -135,7 +135,7 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 * **允許標記**
 
-   如果選中此選項，則允許成員向其貼文中添加標籤標籤（請參閱&#x200B;**標籤欄位**&#x200B;標籤）。 預設為未勾選。
+   若勾選此選項，允許成員將標籤新增至其貼文(請參閱 **標籤欄位** 標籤)。 預設為未勾選。
 
 * **允許檔案上傳**
 
@@ -143,11 +143,11 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 * **最大檔案大小**
 
-   僅當檢查`Allow File Uploads`時相關。 此欄位將限制上傳檔案的大小（以位元組為單位）。 預設為104857600(10 Mb)。
+   只有在 `Allow File Uploads` 已勾選。 此欄位將限制上傳檔案的大小（以位元組為單位）。 預設為104857600(10 Mb)。
 
 * **允許的檔案類型**
 
-   僅當檢查`Allow File Uploads`時相關。 副檔名清單（以逗號分隔）以「點」分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許上載未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   只有在 `Allow File Uploads` 已勾選。 副檔名清單（以逗號分隔）以「點」分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許上載未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **附加影像檔案最大大小**
 
@@ -167,21 +167,21 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 * **允許關注**
 
-   若勾選此選項，請為部落格文章加入下列功能，讓成員能[收到新貼文的通知](/help/communities/notifications.md)。 預設為未勾選。
+   若勾選此選項，請為部落格文章加入下列功能，以便讓成員 [通知](/help/communities/notifications.md) 新貼文。 預設為未勾選。
 
 * **允許電子郵件訂閱**
 
-   若勾選此選項，允許透過電子郵件([subscription](/help/communities/subscriptions.md))通知成員新貼文。 需要檢查`Allow Following`，並配置[電子郵件](/help/communities/email.md)。 預設為未勾選。
+   若勾選此選項，可允許成員透過電子郵件([訂閱](/help/communities/subscriptions.md))。 需要 `Allow Following` 要檢查和 [電子郵件已設定](/help/communities/email.md). 預設為未勾選。
 
 * **顯示徽章**
 
-   如果選中，則顯示已獲得的並已分配[徽章](/help/communities/implementing-scoring.md)，並包含成員的部落格條目。 預設為未勾選。
+   如果選中，則顯示已獲得和已分配 [徽章](/help/communities/implementing-scoring.md) 會員的部落格條目。 預設為未勾選。
 
 * **不在清單頁面上取得回覆**
 
 * **允許主要內容**
 
-   若勾選，可將構想識別為[精選內容](/help/communities/featured.md)。 預設為未勾選。
+   若勾選，可將構想識別為 [精選內容](/help/communities/featured.md). 預設為未勾選。
 
 * **啟用提及功能**
 
@@ -193,11 +193,11 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 * **UI 提及模式**
 
-   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如，~{{familyName}}{{givenName}}。
+   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如~{{familyName}}{{givenName}}.
 
-#### 使用者協調標籤{#user-moderation-tab}
+#### 使用者協調標籤 {#user-moderation-tab}
 
-在&#x200B;**使用者協調**&#x200B;標籤下，指定協調設定：
+在 **使用者協調** ，指定協調設定：
 
 * **拒絕貼文**
 
@@ -213,7 +213,7 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 * **標誌原因清單**
 
-   如果選中，則允許成員從下拉清單中選擇其標籤主題或評論為不適當的原因。 預設為未勾選。
+   如果選中，則允許成員從下拉清單中選擇其標籤主題或注釋為不適當的原因。 預設為未勾選。
 
 * **自訂標幟原因**
 
@@ -227,23 +227,23 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
    輸入主題或留言在從公共視圖中隱藏之前必須標籤的次數。 如果設為–1，則標籤的主題或評論永遠不會在公共視圖中隱藏。 否則，此數字必須大於或等於協調臨界值。 預設為5。
 
-#### 標籤欄位標籤{#tag-field-tab}
+#### 標籤欄位標籤 {#tag-field-tab}
 
-在&#x200B;**標籤欄位**&#x200B;標籤下，指定如果在&#x200B;**設定**&#x200B;標籤上勾選&#x200B;**允許標籤**，可套用哪些標籤：
+在 **標籤欄位** ，指定在 **允許標籤** 是 **設定** 索引標籤：
 
 * **允許的命名空間**
 
-   若已在&#x200B;**Settings**&#x200B;標籤下勾選`Allow Tagging`則相關。 可套用的標籤僅限於所檢查命名空間類別中的標籤。 命名空間清單包含「標準標籤」（預設命名空間）以及「包含所有標籤」。 預設值未勾選，這表示允許所有命名空間。
+   若 `Allow Tagging` 在 **設定** 標籤。 可套用的標籤僅限於所檢查命名空間類別中的標籤。 命名空間清單包含「標準標籤」（預設命名空間）以及「包含所有標籤」。 預設值未勾選，這表示允許所有命名空間。
 
 * **建議限制**
 
    輸入要作為建議顯示給論壇成員的標籤數。 值–1表示沒有限制。 預設為0。
 
-### 配置部落格側欄{#configuring-blog-sidebar}
+### 配置部落格側欄 {#configuring-blog-sidebar}
 
-按兩下`Blog Sidebar`元件時，將開啟編輯對話框。
+當您連按兩下 `Blog Sidebar` 元件中，將開啟編輯對話框。
 
-在&#x200B;**日誌側欄設定**&#x200B;標籤下，指定存檔的日期格式以及要在側欄中顯示的條目類型：
+在 **日誌側欄設定** 頁簽，指定封存檔的日期格式以及要在側欄中顯示的條目類型：
 
 ![blog-component-sidebar](assets/blog-component-sidebar.png)
 
@@ -269,7 +269,7 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 * **Blopg元件路徑**
 
-   *（可選）* 要列出部落格文章的部落格資源位置。若保留為空白，則會使用顯示在相同頁面上的resourceType `social/journal/components/hbs/journal`元件。
+   *（可選）* 要列出部落格文章的部落格資源的位置。 若保留為空白，則使用resourceType的元件 `social/journal/components/hbs/journal` 顯示在相同頁面上。
 
    * 例如， `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
@@ -277,7 +277,7 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
    要顯示的部落格文章數。 值–1表示無限制。 預設為–1。
 
-## 網站訪客體驗{#site-visitor-experience}
+## 網站訪客體驗 {#site-visitor-experience}
 
 在發佈環境中，部落格功能會依照建立的順序，顯示最新的部落格文章，之後會顯示較舊的部落格文章。 部落格側邊欄可讓網站訪客套用篩選器，以限制所顯示部落格文章的選取。
 
@@ -287,7 +287,7 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 其他功能取決於網站訪客是版主、管理員、社群成員、有權限的成員還是匿名。
 
-### 使用文章{#working-with-articles}
+### 使用文章 {#working-with-articles}
 
 建立新部落格文章時，可以選擇：
 
@@ -297,15 +297,15 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 部落格文章會顯示在適當的標籤下（已發佈、草稿或已排程），供能夠在發佈時撰寫的成員使用。
 
-#### 協調者和管理員{#moderators-and-administrators}
+#### 協調者與管理員 {#moderators-and-administrators}
 
-當登入的使用者擁有版主或管理員權限時，他們可以對發佈至部落格的所有部落格文章和留言執行[仲裁任務](/help/communities/moderate-ugc.md)（元件的設定允許）。
+當登入的使用者擁有版主或管理員權限時，就能執行 [協調任務](/help/communities/moderate-ugc.md) （經元件設定允許）張貼至部落格的所有部落格文章和評論。
 
 ![版主首頁](assets/moderator-homepage.png)
 
 #### 成員 {#members}
 
-當登入的使用者是社群成員或[特權成員](/help/communities/users.md#privileged-members-group)時（視設定而定），他們可以選取`New Article`來建立和張貼新的部落格文章。
+登入的使用者是社群成員或 [特權成員](/help/communities/users.md#privileged-members-group) （視設定而定），他們可以選取 `New Article` 建立並發佈新部落格文章。
 
 具體而言，他們可以：
 
@@ -328,10 +328,10 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人員的[部落格要點](/help/communities/blog-developer-basics.md)頁面。
+如需詳細資訊，請參閱 [部落格要點](/help/communities/blog-developer-basics.md) 頁面。
 
-有關部落格條目和留言的調節，請參閱[調節用戶生成的內容](/help/communities/moderate-ugc.md)。
+有關管理部落格條目和留言的資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md).
 
-有關標籤部落格條目和注釋的資訊，請參閱[標籤用戶生成的內容](/help/communities/tag-ugc.md)。
+如需標籤部落格項目和評論，請參閱 [標籤使用者產生的內容](/help/communities/tag-ugc.md).
 
-有關部落格條目和注釋的翻譯，請參閱[ Transling User Generated Content](/help/communities/translate-ugc.md)。
+有關部落格條目和評論的翻譯，請參見 [轉譯使用者產生的內容](/help/communities/translate-ugc.md).

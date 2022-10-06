@@ -1,8 +1,8 @@
 ---
 title: 使用RTF編輯器來製作內容
-seo-title: 使用RTF編輯器來製作內容
+seo-title: Using the Rich Text Editor to Author Content
 description: 使用RTF編輯器來製作內容
-seo-description: 使用RTF編輯器來製作內容
+seo-description: Using the Rich Text Editor to Author Content
 uuid: 70f4d4b2-cbc6-4fef-9262-1696804008d8
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,12 +11,12 @@ docset: aem65
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '260'
 ht-degree: 6%
 
 ---
 
-# 使用RTF編輯器來製作內容{#use-rich-text-editor-to-author-content}
+# 使用RTF編輯器來製作內容 {#use-rich-text-editor-to-author-content}
 
 RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成了各種元件的基礎，包括：
 
@@ -24,9 +24,9 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 * 文字影像
 * 表格
 
-## 就地編輯{#in-place-editing}
+## 就地編輯 {#in-place-editing}
 
-只要點選或按一下，選取包含文字的元件，就會顯示[元件工具列](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)如同任何元件。
+只要點選或按一下，選取文字型元件即會顯示 [元件工具列](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 和任何元件一樣。
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -44,11 +44,11 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 * **關閉**
 * **儲存**
 
-## 全螢幕編輯{#full-screen-editing}
+## 全螢幕編輯 {#full-screen-editing}
 
-對於基於文本的元件，從工具欄![](do-not-localize/screen_shot_2018-03-21at163236.png)點選全螢幕模式將開啟RTF編輯器並隱藏其餘的頁面內容。
+對於文字元件，請從工具列點選全螢幕模式 ![](do-not-localize/screen_shot_2018-03-21at163236.png) 開啟RTF編輯器並隱藏其餘的頁面內容。
 
-全螢幕模式會顯示您可用於編寫的所有已設定選項。 可用性為選項[取決於配置](/help/sites-administering/rich-text-editor.md)。
+全螢幕模式會顯示您可用於編寫的所有已設定選項。 可用性是選項 [取決於設定](/help/sites-administering/rich-text-editor.md).
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
@@ -65,4 +65,4 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 
 >[!NOTE]
 >
->將巢狀清單從Microsoft Word複製到RTE可能會產生不一致的結果，而且在將文字貼入RTE後，可能需要手動調整。
+>將巢狀清單從Microsoft Word複製到RTE可能會產生不一致的結果，且在將文字貼入RTE後可能需要手動調整。

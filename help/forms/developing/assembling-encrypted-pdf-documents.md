@@ -1,8 +1,8 @@
 ---
-title: 組裝加密的PDF檔案
-seo-title: 組裝加密的PDF檔案
+title: 組裝加密的PDF文檔
+seo-title: Assembling Encrypted PDF Documents
 description: 使用Java API和Web服務API組合加密的PDF檔案。
-seo-description: 使用Java API和Web服務API組合加密的PDF檔案。
+seo-description: Assemble encrypted PDF documents using the Java API and Web Service API.
 uuid: d0948ec9-ab67-4fe4-9062-1c4938460b43
 contentOwner: admin
 content-type: reference
@@ -14,16 +14,16 @@ role: Developer
 exl-id: 2caaca74-640a-4257-a81b-3e8b295cd182
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
 
-# 組合加密的PDF文檔{#assembling-encrypted-pdf-documents}
+# 組裝加密的PDF文檔 {#assembling-encrypted-pdf-documents}
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
 
-您可以使用組合器服務，使用密碼加密PDF文檔。 使用密碼加密PDF檔案後，使用者必須指定密碼，才能在Adobe Reader或Acrobat中檢視PDF檔案。 要使用密碼加密PDF文檔，DDX文檔必須包含加密PDF文檔所需的加密元素值。
+您可以使用組合器服務使用密碼加密PDF文檔。 使用密碼加密PDF檔案後，使用者必須指定密碼才能檢視Adobe Reader或Acrobat中的PDF檔案。 要使用密碼加密PDF文檔，DDX文檔必須包含加密PDF文檔所需的加密元素值。
 
 在本討論中，假定使用了以下DDX文檔。
 
@@ -39,21 +39,21 @@ ht-degree: 0%
  </DDX>
 ```
 
-在此DDX文檔中，請注意源屬性被分配了值`inDoc`。 在僅將一個輸入的PDF文檔傳遞到組合器服務並返回一個PDF文檔，並調用`invokeOneDocument`操作的情況下，將值`inDoc`分配給PDF源屬性。 調用`invokeOneDocument`操作時，`inDoc`值是必須在DDX文檔中指定的預定義鍵。
+在此DDX文檔中，請注意源屬性被分配了值 `inDoc`. 在只將一個輸入PDF文檔傳遞到組合器服務並返回一個PDF文檔的情況下，您將調用 `invokeOneDocument` 操作，指定值 `inDoc` 至PDF來源屬性。 叫用 `invokeOneDocument` 操作， `inDoc` 值是必須在DDX文檔中指定的預定義鍵。
 
-相反，將兩個或兩個以上輸入的PDF文檔傳遞到組合器服務時，可以調用`invokeDDX`操作。 在此情況下，將輸入PDF文檔的檔案名分配給`source`屬性。
+相反地，當將兩個或更多輸入PDF文檔傳遞到組合器服務時，可以調用 `invokeDDX` 操作。 在此情況下，將輸入PDF文檔的檔案名分配給 `source` 屬性。
 
-加密服務不必是AEM表單安裝的一部分，就能使用密碼加密PDF檔案。 請參閱[加密和解密PDF文檔](/help/forms/developing/encrypting-decrypting-pdf-documents.md)。
-
->[!NOTE]
->
->有關組合器服務的詳細資訊，請參閱[AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+加密服務不必是AEM表單安裝的一部分，即可使用密碼加密PDF檔案。 請參閱 [加密和解密PDF文檔](/help/forms/developing/encrypting-decrypting-pdf-documents.md).
 
 >[!NOTE]
 >
->有關DDX文檔的詳細資訊，請參閱[組合器服務和DDX引用](https://www.adobe.com/go/learn_aemforms_ddx_63)。
+>有關組合器服務的詳細資訊，請參見 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## 步驟{#summary-of-steps}的摘要
+>[!NOTE]
+>
+>有關DDX文檔的詳細資訊，請參見 [組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63).
+
+## 步驟摘要 {#summary-of-steps}
 
 要組合加密的PDF文檔，請執行以下步驟：
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 1. 參考不安全的PDF檔案。
 1. 設定運行時選項。
 1. 加密文檔。
-1. 儲存加密的PDF檔案。
+1. 保存加密的PDF文檔。
 
 **包含項目檔案**
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 * adobe-utilities.jar(若AEM Forms部署在JBoss上則為必要)
 * jbossall-client.jar(若AEM Forms部署在JBoss上則為必要)
 
-如果AEM Forms部署在JBoss以外的受支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為AEM Forms所部署之J2EE應用程式伺服器專屬的JAR檔案。 有關所有AEM Forms JAR檔案的位置資訊，請參閱[包含AEM Forms Java庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+如果AEM Forms部署在JBoss以外的受支援J2EE應用程式伺服器上，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為AEM Forms所部署之J2EE應用程式伺服器專屬的JAR檔案。 如需所有AEM Forms JAR檔案位置的相關資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **建立組合器客戶端**
 
@@ -85,23 +85,23 @@ ht-degree: 0%
 
 **參考現有的DDX文檔**
 
-必須參考DDX文檔才能組合PDF文檔。 例如，請考量本節中引入的DDX檔案。 要加密PDF文檔，DDX文檔必須包含`PasswordEncryptionProfile`元素。
+必須引用DDX文檔來組合PDF文檔。 例如，請考量本節中引入的DDX檔案。 要加密PDF文檔，DDX文檔必須包含 `PasswordEncryptionProfile` 元素。
 
-**參考不安全的PDF檔案**
+**參考不安全的PDF文檔**
 
-必須參考不安全的PDF檔案，並將其傳遞至組合器服務進行加密。 如果您參考已加密的PDF檔案，則會擲回例外狀況。
+不安全的PDF文檔必須被引用並傳遞到組合器服務以加密。 如果引用已加密的PDF文檔，則會引發異常。
 
 **設定運行時選項**
 
-您可以設定運行時選項，以控制組合器服務在執行作業時的行為。 例如，您可以設定一個選項，指示組合器服務在遇到錯誤時繼續處理作業。 如需可設定的執行階段選項相關資訊，請參閱[AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`AssemblerOptionSpec`類別參考。
+您可以設定運行時選項，以控制組合器服務在執行作業時的行為。 例如，您可以設定一個選項，指示組合器服務在遇到錯誤時繼續處理作業。 如需可設定的執行階段選項相關資訊，請參閱 `AssemblerOptionSpec` 類引用 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **加密文檔**
 
-建立組合器服務客戶端後，請參考包含加密資訊的DDX文檔、引用不安全的PDF文檔和設定運行時選項，可以調用`invokeOneDocument`操作。 因為只有一個輸入的PDF文檔被傳遞到組合器服務（並且返回一個文檔），所以可以使用`invokeOneDocument`操作，而不是`invokeDDX`操作。
+建立組合器服務客戶端後，請參考包含加密資訊的DDX文檔、引用不安全的PDF文檔和設定運行時選項，可以調用 `invokeOneDocument` 操作。 因為只有一個輸入PDF文檔被傳遞到組合器服務（並且返回一個文檔），所以可以使用 `invokeOneDocument` 操作，而非 `invokeDDX` 操作。
 
-**儲存加密的PDF檔案**
+**保存加密的PDF文檔**
 
-如果僅將單個PDF文檔傳遞到組合器服務，組合器服務將返回單個文檔，而不是集合對象。 也就是說，調用`invokeOneDocument`操作時，返回單個文檔。 由於本節中引用的DDX文檔包含加密資訊，因此組合器服務返回一個使用密碼加密的PDF文檔。
+如果僅將單個PDF文檔傳遞到組合器服務，則組合器服務將返回單個文檔而不是集合對象。 也就是說，叫用 `invokeOneDocument` 操作時，將返回單個文檔。 由於本節中引用的DDX文檔包含加密資訊，因此組合器服務返回使用密碼加密的PDF文檔。
 
 **另請參閱**
 
@@ -109,9 +109,9 @@ ht-degree: 0%
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[以寫程式方式組合PDF文檔](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
-## 使用Java API {#assemble-an-encrypted-pdf-document-using-the-java-api}組合加密的PDF文檔
+## 使用Java API組合加密的PDF檔案 {#assemble-an-encrypted-pdf-document-using-the-java-api}
 
 1. 包含專案檔案。
 
@@ -119,103 +119,103 @@ ht-degree: 0%
 
 1. 建立組合器客戶端。
 
-   * 建立包含連接屬性的`ServiceClientFactory`對象。
-   * 使用其建構子並傳遞`ServiceClientFactory`物件，以建立`AssemblerServiceClient`物件。
+   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
+   * 建立 `AssemblerServiceClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 物件。
 
 1. 參考現有的DDX文檔。
 
-   * 使用DDX文檔的建構子並傳遞指定DDX檔案位置的字串值，建立代表DDX文檔的`java.io.FileInputStream`對象。
-   * 使用其建構子並傳遞`java.io.FileInputStream`物件，以建立`com.adobe.idp.Document`物件。
+   * 建立 `java.io.FileInputStream` 表示DDX文檔的對象，方法是使用其建構子並傳遞指定DDX檔案位置的字串值。
+   * 建立 `com.adobe.idp.Document` 對象，使用其建構子並傳遞 `java.io.FileInputStream` 物件。
 
 1. 參考不安全的PDF檔案。
 
-   * 使用其建構子並傳遞不安全PDF檔案的位置，建立`java.io.FileInputStream`物件。
-   * 建立`com.adobe.idp.Document`物件並傳遞包含PDF檔案的`java.io.FileInputStream`物件。 此`com.adobe.idp.Document`物件會傳遞至`invokeOneDocument`方法。
+   * 建立 `java.io.FileInputStream` 對象，方法是使用其建構子並傳遞不安全PDF文檔的位置。
+   * 建立 `com.adobe.idp.Document` 物件，並傳遞 `java.io.FileInputStream` 包含PDF文檔的對象。 此 `com.adobe.idp.Document` 物件會傳遞至 `invokeOneDocument` 方法。
 
 1. 設定運行時選項。
 
-   * 使用其建構子建立`AssemblerOptionSpec`物件，以儲存執行時選項。
-   * 通過調用屬於`AssemblerOptionSpec`對象的方法來設定運行時選項以滿足您的業務要求。 例如，要指示組合器服務在發生錯誤時繼續處理作業，請調用`AssemblerOptionSpec`對象的`setFailOnError`方法並傳遞`false`。
+   * 建立 `AssemblerOptionSpec` 使用其建構子儲存執行時選項的物件。
+   * 通過調用屬於的方法來設定運行時選項以滿足您的業務需求 `AssemblerOptionSpec` 物件。 例如，要指示組合器服務在發生錯誤時繼續處理作業，請調用 `AssemblerOptionSpec` 物件 `setFailOnError` 方法和傳遞 `false`.
 
 1. 加密文檔。
 
-   調用`AssemblerServiceClient`對象的`invokeOneDocument`方法並傳遞以下值：
+   叫用 `AssemblerServiceClient` 物件 `invokeOneDocument` 方法，並傳遞下列值：
 
-   * 代表DDX文檔的`com.adobe.idp.Document`對象。 確保此DDX文檔包含PDF源元素的`inDoc`值。
-   * `com.adobe.idp.Document`物件，包含不安全的PDF檔案。
-   * `com.adobe.livecycle.assembler.client.AssemblerOptionSpec`對象，它指定運行時選項，包括預設字型和作業日誌級別。
+   * A `com.adobe.idp.Document` 表示DDX文檔的對象。 確保此DDX文檔包含值 `inDoc` (針對PDF來源元素)。
+   * A `com.adobe.idp.Document` 包含不安全PDF文檔的對象。
+   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 指定運行時選項的對象，包括預設字型和作業日誌級別。
 
-   `invokeOneDocument`方法返回包含密碼加密PDF文檔的`com.adobe.idp.Document`對象。
+   此 `invokeOneDocument` 方法傳回 `com.adobe.idp.Document` 包含密碼加密PDF文檔的對象。
 
-1. 儲存加密的PDF檔案。
+1. 保存加密的PDF文檔。
 
-   * 建立`java.io.File`物件，並確定副檔名為.pdf。
-   * 調用`Document`對象的`copyToFile`方法，將`Document`對象的內容複製到檔案。 請確定您使用`invokeOneDocument`方法傳回的`Document`物件。
+   * 建立 `java.io.File` 物件，並確定副檔名為.pdf。
+   * 叫用 `Document` 物件 `copyToFile` 複製內容的方法 `Document` 物件。 請確定您使用 `Document` 物件 `invokeOneDocument` 方法傳回。
 
 **另請參閱**
 
 [快速入門（SOAP模式）:使用Java API組裝加密的PDF檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
 
-## 使用Web服務API {#assemble-an-encrypted-pdf-document-using-the-web-service-api}組合加密的PDF文檔
+## 使用Web服務API組合加密的PDF文檔 {#assemble-an-encrypted-pdf-document-using-the-web-service-api}
 
 1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft .NET項目。 在設定服務引用時，請確保使用以下WSDL定義：`http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 在設定服務引用時，請確保使用以下WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >將`localhost`取代為托管AEM Forms之伺服器的IP位址。
+   >取代 `localhost` 和托管AEM Forms之伺服器的IP位址。
 
 1. 建立組合器客戶端。
 
-   * 使用其預設建構子建立`AssemblerServiceClient`物件。
-   * 使用`System.ServiceModel.EndpointAddress`建構子建立`AssemblerServiceClient.Endpoint.Address`物件。 將指定WSDL的字串值傳遞到AEM Forms服務（例如`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 您不需要使用`lc_version`屬性。 建立服務參考時，會使用此屬性。
-   * 獲取`AssemblerServiceClient.Endpoint.Binding`欄位的值，建立`System.ServiceModel.BasicHttpBinding`對象。 將傳回值轉換為`BasicHttpBinding`。
-   * 將`System.ServiceModel.BasicHttpBinding`物件的`MessageEncoding`欄位設為`WSMessageEncoding.Mtom`。 此值可確保使用MTOM。
+   * 建立 `AssemblerServiceClient` 物件，使用其預設建構函式。
+   * 建立 `AssemblerServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 您不需要使用 `lc_version` 屬性。 建立服務參考時，會使用此屬性。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `AssemblerServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
    * 通過執行以下任務來啟用基本HTTP身份驗證：
 
-      * 將AEM表單使用者名稱指派給欄位`AssemblerServiceClient.ClientCredentials.UserName.UserName`。
-      * 將相應的密碼值分配給欄位`AssemblerServiceClient.ClientCredentials.UserName.Password`。
-      * 將常數值`HttpClientCredentialType.Basic`指派給欄位`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 將常數值`BasicHttpSecurityMode.TransportCredentialOnly`指派給欄位`BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位 `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * 為欄位分配相應的密碼值 `AssemblerServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
 1. 參考現有的DDX文檔。
 
-   * 使用其建構子建立`BLOB`物件。 `BLOB`對象用於儲存DDX文檔。
-   * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示DDX文檔的檔案位置以及在中開啟檔案的模式。
-   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 通過獲取`System.IO.FileStream`對象的`Length`屬性，可以確定位元組陣列的大小。
-   * 調用`System.IO.FileStream`對象的`Read`方法並傳遞要讀取的位元組陣列、啟動位置和流長度，以流資料填充位元組陣列。
-   * 為`MTOM`欄位指定位元組陣列的內容，以填入`BLOB`物件。
+   * 建立 `BLOB` 物件，使用其建構子。 此 `BLOB` 對象用於儲存DDX文檔。
+   * 建立 `System.IO.FileStream` 對象，方法是調用其建構子並傳遞一個字串值，該字串值表示DDX文檔的檔案位置以及在中開啟檔案的模式。
+   * 建立位元組陣列，用於儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件 `Read` 方法，並傳遞位元組陣列、起始位置及流長度以讀取。
+   * 填入 `BLOB` 對象，通過賦值 `MTOM` 位元組陣列內容的欄位。
 
 1. 參考不安全的PDF檔案。
 
-   * 使用其建構子建立`BLOB`物件。 `BLOB`對象用於儲存輸入的PDF文檔。 此`BLOB`物件會以引數的形式傳遞至`invokeOneDocument`。
-   * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示輸入PDF文檔的檔案位置以及在中開啟檔案的模式。
-   * 建立儲存`System.IO.FileStream`對象內容的位元組陣列。 通過獲取`System.IO.FileStream`對象的`Length`屬性，可以確定位元組陣列的大小。
-   * 調用`System.IO.FileStream`對象的`Read`方法並傳遞要讀取的位元組陣列、啟動位置和流長度，以流資料填充位元組陣列。
-   * 為`MTOM`欄位指定位元組陣列的內容，以填入`BLOB`物件。
+   * 建立 `BLOB` 物件，使用其建構子。 此 `BLOB` 對象用於儲存輸入PDF文檔。 此 `BLOB` 物件會傳遞至 `invokeOneDocument` 作為引數。
+   * 建立 `System.IO.FileStream` 對象，方法是調用其建構子並傳遞一個字串值，該字串值表示輸入PDF文檔的檔案位置以及在中開啟檔案的模式。
+   * 建立位元組陣列，用於儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件 `Read` 方法，並傳遞位元組陣列、起始位置及流長度以讀取。
+   * 填入 `BLOB` 對象，通過賦值 `MTOM` 位元組陣列內容的欄位。
 
 1. 設定運行時選項。
 
-   * 使用其建構子建立`AssemblerOptionSpec`物件，以儲存執行時選項。
-   * 為屬於`AssemblerOptionSpec`對象的資料成員分配值，以設定運行時選項以滿足您的業務要求。 例如，要指示組合器服務在發生錯誤時繼續處理作業，請將`false`分配給`AssemblerOptionSpec`對象的`failOnError`資料成員。
+   * 建立 `AssemblerOptionSpec` 使用其建構子儲存執行時選項的物件。
+   * 為屬於的資料成員指定值，以設定運行時選項以滿足您的業務需求 `AssemblerOptionSpec` 物件。 例如，要指示組合器服務在發生錯誤時繼續處理作業，請分配 `false` 到 `AssemblerOptionSpec` 物件 `failOnError` 資料成員。
 
 1. 加密文檔。
 
-   調用`AssemblerServiceClient`對象的`invokeOneDocument`方法並傳遞以下值：
+   叫用 `AssemblerServiceClient` 物件 `invokeOneDocument` 方法，並傳遞下列值：
 
-   * 代表DDX文檔的`BLOB`對象
-   * `BLOB`物件，代表不安全的PDF檔案
-   * 指定運行時選項的`AssemblerOptionSpec`對象
+   * A `BLOB` 表示DDX文檔的對象
+   * A `BLOB` 表示不安全PDF文檔的對象
+   * 安 `AssemblerOptionSpec` 指定運行時選項的對象
 
-   `invokeOneDocument`方法返回包含加密PDF文檔的`BLOB`對象。
+   此 `invokeOneDocument` 方法傳回 `BLOB` 包含加密PDF文檔的對象。
 
-1. 儲存加密的PDF檔案。
+1. 保存加密的PDF文檔。
 
-   * 通過調用其建構子並傳遞一個字串值來建立`System.IO.FileStream`對象，該字串值表示加密PDF文檔的檔案位置以及在中開啟檔案的模式。
-   * 建立位元組陣列，用於儲存`invokeOneDocument`方法返回的`BLOB`對象的內容。 獲取`BLOB`對象的`MTOM`資料成員的值，以填充位元組陣列。
-   * 通過調用其建構子並傳遞`System.IO.FileStream`對象來建立`System.IO.BinaryWriter`對象。
-   * 調用`System.IO.BinaryWriter`對象的`Write`方法並傳遞位元組陣列，將位元組陣列的內容寫入PDF檔案。
+   * 建立 `System.IO.FileStream` 對象，方法是調用其建構子並傳遞一個字串值，該字串值表示加密PDF文檔的檔案位置以及在中開啟檔案的模式。
+   * 建立位元組陣列，用於儲存 `BLOB` 物件 `invokeOneDocument` 方法傳回。 取得 `BLOB` 物件 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 對象，調用其建構子並傳遞 `System.IO.FileStream` 物件。
+   * 調用 `System.IO.BinaryWriter` 物件 `Write` 方法，並傳遞位元組陣列。
 
 **另請參閱**
 

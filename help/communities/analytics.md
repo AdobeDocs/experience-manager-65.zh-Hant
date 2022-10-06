@@ -21,7 +21,7 @@ ht-degree: 3%
 
 # Communities功能的Analytics設定 {#analytics-configuration-for-communities-features}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解決方案。
 
@@ -134,7 +134,6 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 >* **`evar1`** through **`evar11`**
 >
 >* **`event1`** through **`event7`**
-
 >
 >**然後在社群網站發佈之前，** 請務必移動在社群網站啟用AEM時自動對應至Analytics變數的Analytics變數，以還原原先存在的對應。
 >
@@ -578,7 +577,6 @@ Analytics會自動用於數個Communities功能。
 >* **`evar1`** through **`evar11`**
 >
 >* **`event1`** through **`event7`**
-
 >
 >**然後在社群網站發佈之前，** 請務必還原原先現有的對應，並將自動對應的Communities AEM變數（當為社群網站啟用Analytics時）移至其他Analytics變數。 此重新對應應在所有Communities元件之間保持一致。
 >

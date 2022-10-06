@@ -1,31 +1,31 @@
 ---
 title: Protect代表其他使用者的檔案
-seo-title: Protect代表其他使用者的檔案
+seo-title: Protect a document on behalf of another user
 description: Protect代表其他使用者的檔案
 uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
-feature: 文件安全性
+feature: Document Security
 exl-id: e5c80569-d3c0-4358-9b91-b98a64d1c004
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
 
-# Protect代表其他用戶{#protect-a-document-on-behalf-of-another-user}的文檔
+# Protect代表其他使用者的檔案 {#protect-a-document-on-behalf-of-another-user}
 
 AEM Forms Document Security Java SDK提供API，讓使用者帳戶能代表其他使用者保護檔案，而無須取得編輯檔案的權限。 您可以在工作流程程式中使用API，或以程式設計方式將API用作檔案服務。 新API包括：
 
-* **** protectDocumentUseProtectDocument API以代表將策略應用到文檔
+* **protectDocumentUse** 代表將策略應用到文檔的ProtectDocument API
 
    另一個使用者帳戶。 用於應用策略的用戶帳戶的權限仍僅限於保護文檔。 它沒有獲得開啟和查看檔案的權利。 RMSecureDocumentResult protectDocument（Document inDoc, String documentName, String policySetName, String policyName, RMLocale區域設定，布林值bExactMatchForNames）
 
-* **** createLicenseUse CreateLicense API代表其他使用者帳戶為原則建立授權。PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
-* **** protectDocumentWithCoverPageUseProtectDocumentWithCoverPage API可代表其他使用者套用原則並新增封面至檔案。用於應用策略的用戶帳戶的權限仍僅限於保護文檔。 它沒有獲得開啟和查看檔案的權利。 RMSecureDocumentResultprotectDocumentWithCoverPage(Document inDoc, String documentName, String policySetName, String policyName, Document coverDoc, boolean bExactMatchForNames)
+* **createLicenseUse** 建立許可證API，以代表其他用戶帳戶為策略建立許可證。 PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
+* **protectDocumentWithCoverPageUse** 用於應用策略並代表另一用戶向文檔添加封面的ProtectDocumentWithCoverPage API。 用於應用策略的用戶帳戶的權限仍僅限於保護文檔。 它沒有獲得開啟和查看檔案的權利。 RMSecureDocumentResultprotectDocumentWithCoverPage(Document inDoc, String documentName, String policySetName, String policyName, Document coverDoc, boolean bExactMatchForNames)
 
-## 使用API代表其他使用者{#using-the-apis-to-protect-a-document-on-behalf-of-another-user}保護檔案
+## 使用API代表其他使用者保護檔案 {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
 
 執行以下步驟以代表其他用戶保護文檔，而不獲得編輯文檔的權限：
 

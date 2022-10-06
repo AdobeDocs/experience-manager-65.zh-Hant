@@ -1,8 +1,8 @@
 ---
 title: 測試 — 何時與誰？
-seo-title: 測試 — 何時與誰？
+seo-title: Testing - when and with whom?
 description: 測試和項目開發的各個階段可能涉及各種角色
-seo-description: 測試和項目開發的各個階段可能涉及各種角色
+seo-description: Various roles can be involved in testing and at various stages of project development
 uuid: 431e8f06-80eb-4fb3-a4c7-2580608b0a1c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ discoiquuid: 6148f8e6-ab62-4eb8-8a2d-c431b8318000
 exl-id: 5a16be40-eede-4a47-b03b-3993e285232e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
-# 測試 — 何時與與誰？{#testing-when-and-with-whom}
+# 測試 — 何時與誰？{#testing-when-and-with-whom}
 
 測試和項目開發的各個階段可以涉及各種角色。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
     <ul>
      <li><p>為客戶提供開發專案的體驗。</p> </li>
      <li><p>提供客戶的早期意見反應。</p> </li>
-     <li><p>用戶往往根據過去的經驗來表達自己的需求；讓客戶盡早參與測試，在<i>實際操作</i>體驗方面，可提升其新專案的體驗。</p> </li>
+     <li><p>用戶往往根據過去的經驗來表達自己的需求；讓客戶盡早參與測試，以增加他們對新專案的體驗， <i>動手</i> 體驗。</p> </li>
     </ul> </td>
    <td><p>雖然客戶使用的任何版本都應穩定且功能合理，但是搶先使用也是好事。</p> <p>第一印象總是很重要。</p> </td>
   </tr>

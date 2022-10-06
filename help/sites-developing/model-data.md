@@ -1,8 +1,8 @@
 ---
 title: 資料模型 — 大衛·紐謝勒的模型
-seo-title: 資料模型 — 大衛·紐謝勒的模型
+seo-title: Data Modeling - David Nuescheler's Model
 description: David Nuescheler的內容模型建議
-seo-description: David Nuescheler的內容模型建議
+seo-description: David Nuescheler's content modelling recommendations
 uuid: acb27e81-9143-4e0d-a37a-ba26491a841f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ discoiquuid: 39546c0a-b72f-42df-859b-98428ee0d5fb
 exl-id: 6ce6a204-db59-4ed2-8383-00c6afba82b4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
 
-# 資料模型 — David Nuescheler的模型{#data-modeling-david-nuescheler-s-model}
+# 資料模型 — 大衛·紐謝勒的模型{#data-modeling-david-nuescheler-s-model}
 
 ## 來源 {#source}
 
@@ -25,9 +25,9 @@ ht-degree: 0%
 
 Day Software AG是全球內容管理和內容基礎架構軟體的領先提供商，Day Software AG於2010年被Adobe收購。 他現在是Adobe企業技術部的資深副總裁，也領導了JSR-170，即Java Content Repository(JCR)應用程式寫程式介面(API)，即內容管理技術標準的開發。
 
-您也可以在[https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel)上看到更新。
+您也可以在 [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
 
-## David {#introduction-from-david}簡介
+## David簡介 {#introduction-from-david}
 
 在各種討論中，我發現開發人員對JCR在內容建模方面所呈現的特性和功能有些不安。 關於如何在存放庫中建立內容模型，以及為何一個內容模型優於另一個內容模型，目前尚無相關指南和極少的體驗。
 
@@ -39,11 +39,11 @@ Day Software AG是全球內容管理和內容基礎架構軟體的領先提供�
 >
 >免責聲明：這些准則表達了我的個人觀點，有時也帶有爭議。 我期待就這些准則展開辯論並加以完善。
 
-## 七個簡單規則{#seven-simple-rules}
+## 七條簡單規則 {#seven-simple-rules}
 
-### 規則#1:資料先，結構後。 也許吧。{#rule-data-first-structure-later-maybe}
+### 規則#1:資料先，結構後。 也許吧。 {#rule-data-first-structure-later-maybe}
 
-#### 說明{#explanation-1}
+#### 說明 {#explanation-1}
 
 我建議不要擔心ERD意義上的宣告資料結構。 一開始。
 
@@ -59,11 +59,11 @@ Day Software AG是全球內容管理和內容基礎架構軟體的領先提供�
 
 #### 範例 {#example-1}
 
-上述在例如&quot;blog post&quot;節點上使用`lastModified` Date屬性的範例，實際上並不表示需要特殊nodetype。 至少一開始，我一定會將`nt:unstructured`用於部落格貼文節點。 因為在我的部落格應用程式中，我要做的就是顯示最後一個修改的日期（可能是「訂購」日期），我根本不在乎它是否是日期。 由於我隱含地相信部落格撰寫應用程式會將「日期」放在那裡，因此實際上不需要以nodetype的形式來宣告`lastModified`日期的存在。
+上述使用 `lastModified` 「部落格貼文」節點上的日期屬性，其實並不表示需要特殊的nodetype。 我肯定會用 `nt:unstructured` 至少最初是這樣。 因為在我的部落格應用程式中，我要做的就是顯示最後一個修改的日期（可能是「訂購」日期），我根本不在乎它是否是日期。 由於我暗中信任我的部落格撰寫應用程式，因此，實際上不需要宣佈存在 `lastModified` 以nodetype的a形式顯示日期。
 
-### 規則#2:驅動內容階層，別讓它發生。{#rule-drive-the-content-hierarchy-don-t-let-it-happen}
+### 規則#2:驅動內容階層，別讓它發生。 {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 
-#### 說明{#explanation-2}
+#### 說明 {#explanation-2}
 
 內容階層是非常有價值的資產。 所以別讓它發生，設計它。 如果一個節點沒有「好」、人類看得懂的名稱，那麼你可能應該重新考慮。 武斷的數字從來就不是「好名字」。
 
@@ -77,7 +77,7 @@ Day Software AG是全球內容管理和內容基礎架構軟體的領先提供�
 >
 >內容存放庫的結構方式也會影響效能。 為獲得最佳效能，內容儲存庫中連接到單個節點的子節點數通常不應超過1&#39;000。
 >
->請參閱[CRX可以處理多少資料？](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html) 以取得更多資訊。
+>請參閱 [CRX可以處理多少資料？](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html) 以取得更多資訊。
 
 #### 範例 {#example-2}
 
@@ -99,11 +99,11 @@ Day Software AG是全球內容管理和內容基礎架構軟體的領先提供�
 
 使用上述內容模型，我可以輕鬆允許「匿名」使用者「建立」註解，但讓匿名使用者在工作區的其餘部分以唯讀方式保留。
 
-### 規則#3:工作區用於clone()、merge()和update()。 {#rule-workspaces-are-for-clone-merge-and-update}
+### 規則#3:工作區適用於clone()、merge()和update()。 {#rule-workspaces-are-for-clone-merge-and-update}
 
-#### 說明{#explanation-3}
+#### 說明 {#explanation-3}
 
-如果您未在應用程式中使用`clone()`、`merge()`或`update()`方法，則使用單一工作區可能是最佳方法。
+如果您不使用 `clone()`, `merge()` 或 `update()` 在您的應用程式中，使用單一工作區的方法可能是最理想的作法。
 
 「對應節點」是JCR規範中定義的概念。 基本上，歸結為在不同所謂工作區中代表相同內容的節點。
 
@@ -130,9 +130,9 @@ JCR引入了Workspaces非常抽象的概念，這讓許多開發人員不清楚�
 * 不同目標對象的不同內容，例如公開、私人、本機、..
 * 不同使用者的郵件收件匣
 
-### 規則#4:請注意同名兄弟姐妹。{#rule-beware-of-same-name-siblings}
+### 規則#4:請注意同名兄弟姐妹。 {#rule-beware-of-same-name-siblings}
 
-#### 說明{#explanation-4}
+#### 說明 {#explanation-4}
 
 雖然在規範中引入了同名同級(SNS)，允許與專為XML設計並通過XML表示的資料結構相容，因此對JCR極有價值，但SNS對儲存庫帶來了巨大的開銷和複雜性。
 
@@ -156,9 +156,9 @@ JCR引入了Workspaces非常抽象的概念，這讓許多開發人員不清楚�
 /content/blog[1]/post[2]
 ```
 
-### 規則#5:被認為有害的參考。{#rule-references-considered-harmful}
+### 規則#5:被認為有害的參考。 {#rule-references-considered-harmful}
 
-#### 說明{#explanation-5}
+#### 說明 {#explanation-5}
 
 引用意味著參照完整性。 我發現，重要的一點是要了解，參考不僅會為管理參考完整性的儲存庫增加額外成本，而且從內容靈活性的角度來看，這些參考也會帶來很大成本。
 
@@ -172,17 +172,17 @@ JCR引入了Workspaces非常抽象的概念，這讓許多開發人員不清楚�
 
 我認為，在一些使用案例中，一個系統如果一個引用被晃來晃去，就真的無法運作，但是，我無法從我的直接經驗中得出一個好的、「真實」但簡單的例子。
 
-### 規則#6:檔案是檔案。{#rule-files-are-files}
+### 規則#6:檔案是檔案。 {#rule-files-are-files}
 
-#### 說明{#explanation-6}
+#### 說明 {#explanation-6}
 
-如果內容模型公開某些甚至遠程&#x200B;*聞起*&#x200B;的東西，如我嘗試使用（或從中擴展）`nt:file`、`nt:folder`和`nt:resource`的檔案或資料夾。
+如果內容模型公開的內容甚至遠程 *氣味* 就像我嘗試使用的檔案或資料夾（或從延伸） `nt:file`, `nt:folder` 和 `nt:resource`.
 
 在我的經驗中，許多通用應用程式允許以隱式方式與nt:folder和nt:files交互，並且知道如果這些事件富含其他元資訊，如何處理和顯示這些事件。 例如，與檔案伺服器實施（如CIFS或WebDAV）的直接交互（位於JCR之上）變為隱式。
 
-我認為，作為經驗法則，人們可以使用以下方法：如果您需要儲存檔案名稱和mime類型，則`nt:file`/ `nt:resource`非常符合。 如果您可以有多個「檔案」，則nt:folder是儲存這些檔案的好地方。
+我認為，作為經驗法則，人們可以使用以下方法：如果您需要儲存檔案名稱和mime類型，則 `nt:file`/ `nt:resource` 是場很棒的比賽。 如果您可以有多個「檔案」，則nt:folder是儲存這些檔案的好地方。
 
-如果您需要為資源新增中繼資訊，假設是「author」或「description」屬性，請擴充`nt:resource`而非`nt:file`。 我很少擴展nt:file ，並經常擴展`nt:resource`。
+如果您需要為資源新增中繼資訊，例如「作者」或「說明」屬性，請擴充 `nt:resource` 不是 `nt:file`. 我很少擴展nt:file，並經常擴展 `nt:resource`.
 
 #### 範例 {#example-6}
 
@@ -202,9 +202,9 @@ JCR引入了Workspaces非常抽象的概念，這讓許多開發人員不清楚�
 /content/myblog/posts/iphone_shipping/attachments/front.jpg/jcr:content [nt:resource]
 ```
 
-### 規則#7:身份是邪惡的。{#rule-ids-are-evil}
+### 規則#7:身份是邪惡的。 {#rule-ids-are-evil}
 
-#### 說明{#explanation-7}
+#### 說明 {#explanation-7}
 
 在關係資料庫中，ID是表達關係的必要手段，因此人們往往也會在內容模型中使用它們。 主要是因為錯誤的原因。
 
@@ -214,13 +214,13 @@ JCR引入了Workspaces非常抽象的概念，這讓許多開發人員不清楚�
 
 還要記住，項目可以通過路徑來識別，而「symlinks」對於大多數用戶來說比在unix檔案系統中的硬連結更有意義，因此，路徑對於大多數應用程式來說都是可以引用目標節點的。
 
-更重要的是，它&#x200B;**mix**:referenceable，這表示當您實際需要參照時，它可以套用至節點。
+更重要的是， **混合**:referenceable，這表示當您實際需要參考節點時，可將其套用至節點。
 
 因此，假設您想要能夠參考「Document」類型的節點，並不表示您的「Document」節點類型必須以靜態方式從mix:referenceable延伸，因為它可以動態地新增至「Document」的任何例項。
 
 #### 範例 {#example-7}
 
-使用：
+使用:
 
 ```xml
 /content/myblog/posts/iphone_shipping/attachments/front.jpg

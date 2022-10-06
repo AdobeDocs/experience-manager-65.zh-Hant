@@ -1,24 +1,24 @@
 ---
 title: 升級後卸載的過時套件組合清單
-seo-title: 升級後卸載的過時套件組合清單
+seo-title: List of Obsolete Bundles Uninstalled After the Upgrade
 description: 詳細說明升級至AEM 6.3時自動解除安裝的套件組合的清單。
-seo-description: 詳細說明升級至AEM 6.3時自動解除安裝的套件組合的清單。
+seo-description: A list detailing the bundles that are automatically uninstalled when upgrading to AEM 6.3.
 uuid: b015e857-31c1-4982-b71c-f3201b49ec8e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: 797a6f3b-d2a8-4835-81ab-a1602677417f
-feature: 升級
+feature: Upgrading
 exl-id: 0defbdc7-d414-4662-a31f-88c8d63d68eb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-# 升級{#list-of-obsolete-bundles-uninstalled-after-the-upgrade}後卸載的過時套件組合清單
+# 升級後卸載的過時套件組合清單{#list-of-obsolete-bundles-uninstalled-after-the-upgrade}
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 **AEM 6.1:**
 
-* org.eclipse.equinox.region，版本1.1.0.v20120522-1841，活動
+* org.eclipse.equinox.region,1.1.0.v20120522-1841版，活動
 * org.apache.sling.installer.factory.subsems，版本1.0.0，活動
 * org.apache.aries.subsystem.core，版本1.2.0，活動
 * org.apache.aries.subsystem.api，版本1.1.0，活動

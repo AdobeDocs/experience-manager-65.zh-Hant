@@ -1,23 +1,23 @@
 ---
 title: 註冊為用戶
-seo-title: 註冊為用戶
+seo-title: Registering as a User
 description: 了解如何使用從文檔安全用戶收到的受策略保護的文檔，即使您是用戶組織的外部人員。
-seo-description: 了解如何使用從文檔安全用戶收到的受策略保護的文檔，即使您是用戶組織的外部人員。
+seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user’s organization.
 uuid: 4648b358-f545-434f-a3b2-2937e961dc64
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
-feature: 文件安全性
+feature: Document Security
 exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '700'
 ht-degree: 6%
 
 ---
 
-# 註冊為用戶{#registering-as-a-user}
+# 註冊為用戶 {#registering-as-a-user}
 
 您可以使用從文檔安全用戶收到的受策略保護的文檔，即使您是用戶組織的外部人員。 要使用受策略保護的文檔，必須使用文檔安全性註冊。 如果您先前未受邀註冊，則當發生以下事件時，文檔安全性將啟動註冊流程：
 
@@ -36,7 +36,7 @@ ht-degree: 6%
 >
 >如果您收到受策略保護的文檔，但未收到註冊電子郵件邀請，請與向您發送該文檔的人員聯繫以獲取詳細資訊。
 
-## 註冊為受邀用戶{#register-as-an-invited-user}
+## 註冊為受邀用戶 {#register-as-an-invited-user}
 
 如果您是受邀用戶，並且您從文檔安全收到電子郵件註冊消息，則可以使用消息中的URL來註冊，以開啟聯機註冊頁。 註冊後，您將收到關於啟用帳戶的第二次通知。
 
@@ -45,19 +45,19 @@ ht-degree: 6%
 1. 在相應的框中鍵入您的姓名、電話號碼、地址、組織和密碼，然後在「確認密碼」框中重新鍵入您的密碼。 您的密碼可以是八個字元的任意組合。
 1. 按一下「儲存」。系統會顯示感謝訊息，通知您檢查電子郵件中是否有啟用電子郵件訊息。 您現在必須啟用帳戶才能完成註冊程式。
 
-## 激活邀請的用戶帳戶{#activate-your-invited-user-account}
+## 啟用您的受邀使用者帳戶 {#activate-your-invited-user-account}
 
 註冊後，檔案安全性會傳送啟動電子郵件給您。 您必須使用訊息中的URL來啟用帳戶。 然後，您可以登錄到文檔安全性，以使用您有權訪問的受策略保護的文檔。 根據管理員為外部用戶啟用的功能，您可能具有建立策略、將策略應用到文檔以及將其他外部用戶添加到策略的權限。
 
 您的帳戶在管理員停用或刪除之前仍為有效狀態。
 
 1. 開啟文檔安全註冊確認電子郵件。
-1. 按一下訊息中顯示的 URL。隨即顯示文檔安全激活頁。
+1. 按一下訊息中顯示的 URL。隨即顯示檔案安全性啟動頁面。
 1. 按一下這裡以前往登入頁面。
 1. 在「用戶名」框中，鍵入您在文檔安全性下註冊的電子郵件地址。 此電子郵件地址是您的預設文檔安全用戶名。
 1. 在「密碼」框中，鍵入註冊時建立的密碼，然後按一下「登錄」。
 
-## 重設密碼{#reset-your-password}
+## 重設密碼 {#reset-your-password}
 
 如果忘記密碼，策略管理員可為您重置密碼。 重設密碼會產生電子郵件，邀請您使用暫時密碼登入。 然後，您可以建立新密碼。
 

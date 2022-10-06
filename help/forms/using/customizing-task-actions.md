@@ -1,8 +1,8 @@
 ---
 title: 自定義任務操作
-seo-title: 自定義任務操作
+seo-title: Customizing Task Actions
 description: 您可以自定義任務操作的外觀、僅對操作使用影像，以及自定義路由操作中使用的影像。
-seo-description: 您可以自定義任務操作的外觀、僅對操作使用影像，以及自定義路由操作中使用的影像。
+seo-description: You can customize appearance of the task actions, use only images for actions, and customize the images used in route actions.
 uuid: f6aebcd5-beac-41bf-95bf-2c07d36afa8b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,18 +11,18 @@ discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 exl-id: d17863fb-7950-493d-b378-16861c4af176
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
 
-# 自定義任務操作{#customizing-task-actions}
+# 自定義任務操作 {#customizing-task-actions}
 
-AEM Forms工作區可讓使用者自訂工作動作。 在自訂任務動作之前，請務必遵循[AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)中列出的步驟。
+AEM Forms工作區可讓使用者自訂工作動作。 在自定義任務操作之前，請確保您遵循 [AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md).
 
-## 自定義文本樣式{#customizing-text-style}
+## 自訂文字樣式 {#customizing-text-style}
 
-若要自訂文字樣式，請在`/apps/ws/css/newStyle.css`檔案中新增下列程式碼片段：
+若要自訂文字樣式，請在 `/apps/ws/css/newStyle.css` 檔案：
 
 ```css
 /*-------- For Task Actions visible in task list task action popup ----------------------------------------------------*/
@@ -108,9 +108,9 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂任務動作之�
 }
 ```
 
-## 自訂影像{#customizing-images}
+## 自訂影像 {#customizing-images}
 
-若要自訂影像，請在`/apps/ws/css/newStyle.css`檔案中新增下列程式碼片段。 下列程式碼片段會自訂&#x200B;*lock*&#x200B;動作的影像：
+若要自訂影像，請在 `/apps/ws/css/newStyle.css` 檔案。 下列程式碼片段會自訂 *鎖* 動作：
 
 ```css
 #taskarea .taskActionsPopUp .lock, .task .taskActionsPopUp .lock{
@@ -131,15 +131,15 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂任務動作之�
 }
 ```
 
-## 僅顯示操作{#showing-only-images-for-actions}的影像
+## 僅顯示動作的影像 {#showing-only-images-for-actions}
 
-要僅顯示操作的影像，請自定義路由操作中使用的影像。 有關詳細資訊，請參閱[路由操作的影像](/help/forms/using/images-route-actions.md)。
+要僅顯示操作的影像，請自定義路由操作中使用的影像。 如需詳細資訊，請參閱 [路由操作的影像](/help/forms/using/images-route-actions.md).
 
-### 任務清單任務操作彈出菜單{#task-list-task-action-nbsp-pop-up-menu}
+### 任務清單任務操作彈出菜單 {#task-list-task-action-nbsp-pop-up-menu}
 
-1. 您需要開發套件來自訂AEM Forms工作區「工作清單任務」動作快顯功能表的項目。 如需建立開發套件的詳細資訊，請參閱建立AEM Forms工作區程式碼。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)[
+1. 您需要開發套件來自訂AEM Forms工作區「工作清單任務」動作快顯功能表的項目。 如需建立開發套件的詳細資訊，請參閱 [建立AEM Forms工作區程式碼。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-1. 將/libs/ws/js/runtime/templates/task.html複製到`/apps/ws/js/runtime/templates/task.html`取代下列程式碼片段：
+1. 將/libs/ws/js/runtime/templates/task.html複製到 `/apps/ws/js/runtime/templates/task.html`取代下列程式碼片段：
 
    ```html
    // Orignal code
@@ -212,7 +212,7 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂任務動作之�
        </div>
    ```
 
-1. 從`/apps/ws/css/newStyle.css`檔案中移除指派給錨點標籤的固定寬度：
+1. 從 `/apps/ws/css/newStyle.css` 檔案：
 
    ```css
    .task .taskActionsPopUp ul{
@@ -262,12 +262,12 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂任務動作之�
    }
    ```
 
-### 「任務詳細資訊」任務操作彈出菜單{#task-details-task-action-pop-up-menu}
+### 「任務詳細資訊」任務操作彈出菜單 {#task-details-task-action-pop-up-menu}
 
 執行以下步驟自定義「詳細資訊」任務操作彈出菜單：
 
-* 將/libs/ws/js/runtime/templates/taskdetails.html檔案複製到`/apps/ws/js/runtime/templates/`資料夾：
-* 在錨點標籤內封裝圖示標籤，而非文字。 例如，下方列出的&#x200B;*new code*&#x200B;封裝錨點標籤中的表徵表徵圖簽：
+* 將/libs/ws/js/runtime/templates/taskdetails.html檔案複製到 `/apps/ws/js/runtime/templates/` 資料夾：
+* 在錨點標籤內封裝圖示標籤，而非文字。 例如， *新代碼* 下列所封裝錨點標籤中的圖示標籤：
 
 ```html
 // Original code
@@ -359,5 +359,5 @@ AEM Forms工作區可讓使用者自訂工作動作。 在自訂任務動作之�
 ```
 
 * 開啟/apps/ws/js/registry.js檔案進行編輯。
-* 找出下列文字：`text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
-* 將找到的文字取代為下列文字：`text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
+* 找出下列文字： `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
+* 將找到的文字取代為下列文字： `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`

@@ -1,8 +1,8 @@
 ---
 title: 轉譯專用內容片段設定元件
-seo-title: 轉譯專用內容片段設定元件
+seo-title: Content Fragments Configuring Components for Rendering
 description: 轉譯專用內容片段設定元件
-seo-description: 轉譯專用內容片段設定元件
+seo-description: Content Fragments Configuring Components for Rendering
 uuid: 3f5aaf36-e6a7-4a3c-b305-e35ebcc98d0d
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
@@ -12,20 +12,20 @@ docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 9%
+source-wordcount: '455'
+ht-degree: 7%
 
 ---
 
 # 轉譯專用內容片段設定元件{#content-fragments-configuring-components-for-rendering}
 
-有幾個與內容片段呈現相關的[進階服務](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration)。 若要使用這些服務，此類元件的資源類型必須讓內容片段架構知道。
+有幾個 [進階服務](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration) 與內容片段的轉譯相關。 若要使用這些服務，此類元件的資源類型必須讓內容片段架構知道。
 
-這可透過設定[OSGi服務 — 內容片段元件設定](#osgi-service-content-fragment-component-configuration)來完成。
+這可透過設定 [OSGi服務 — 內容片段元件設定](#osgi-service-content-fragment-component-configuration).
 
 >[!CAUTION]
 >
->如果您不需要下面所述的[進階服務](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration)，可以忽略此配置。
+>如果您不需要 [進階服務](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration) 如下所述，您可以忽略此配置。
 
 >[!CAUTION]
 >
@@ -37,28 +37,28 @@ ht-degree: 9%
 >
 >因此，建議使用核心元件。
 
-## 需要配置{#definition-of-advanced-services-that-need-configuration}的高級服務的定義
+## 需要配置的高級服務的定義 {#definition-of-advanced-services-that-need-configuration}
 
 需要註冊元件的服務包括：
 
 * 在發佈期間正確判斷相依性（亦即，如果片段和模型自上次發佈以來已變更，則可以透過頁面自動發佈）。
 * 支援全文搜尋的內容片段。
-* 管理/處理介於內容之間的&#x200B;*。*
-* 管理/處理&#x200B;*混合媒體資產。*
+* 管理/處理 *內容。*
+* 管理/處理 *混合媒體資產。*
 * 已參照片段的Dispatcher排清（如果包含片段的頁面已重新發佈）。
 * 使用段落式轉譯。
 
 如果您需要一或多個這些功能，（通常）使用現成可用的功能會比從頭開發更輕鬆。
 
-## OSGi服務 — 內容片段元件設定{#osgi-service-content-fragment-component-configuration}
+## OSGi服務 — 內容片段元件設定 {#osgi-service-content-fragment-component-configuration}
 
-配置需要綁定到OSGi服務&#x200B;**內容片段元件配置**:
+配置需要綁定到OSGi服務 **內容片段元件設定**:
 
 `com.adobe.cq.dam.cfm.impl.component.ComponentConfigImpl`
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[設定OSGi](/help/sites-deploying/configuring-osgi.md) 。
+>請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊。
 
 例如：
 
@@ -76,12 +76,12 @@ OSGi設定為：
   <tr>
    <td><strong>資源類型</strong></td>
    <td><code>dam.cfm.component.resourceType</code></td>
-   <td>要註冊的資源類型；例如<br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
+   <td>要註冊的資源類型；例如 <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
   </tr>
   <tr>
    <td><strong>參考屬性</strong></td>
    <td><code>dam.cfm.component.fileReferenceProp</code></td>
-   <td>包含片段參考的屬性名稱；例如<code>fragmentPath</code>或 <code>fileReference</code></td>
+   <td>包含片段參考的屬性名稱；例如 <code>fragmentPath</code> 或 <code>fileReference</code></td>
   </tr>
   <tr>
    <td><strong>Element(s)屬性</strong></td>
@@ -106,15 +106,15 @@ OSGi設定為：
   </tr>
   <tr>
    <td><code>paragraphRange</code></td>
-   <td><p>在<em>單元素呈現模式</em>中定義要輸出的段落範圍的字串屬性。</p> <p>格式:</p>
+   <td><p>字串屬性，定義要輸出的段落範圍(若為 <em>單一元素演算模式</em>.</p> <p>格式:</p>
     <ul>
-     <li><code>1</code> 或<code>1-3</code>或<code>1-3;6;7-8</code>或 <code>*-3;5-*</code></li>
-     <li>僅當<code>paragraphScope</code>設定為 <code>range</code></li>
+     <li><code>1</code> 或 <code>1-3</code> 或 <code>1-3;6;7-8</code> 或 <code>*-3;5-*</code></li>
+     <li>只有 <code>paragraphScope</code> 設為 <code>range</code></li>
     </ul> </td>
   </tr>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>字串屬性，定義在<em>單元素呈現模式</em>中如何輸出段落。</p> <p>值:</p>
+   <td><p>字串屬性，定義如果在中，如何輸出段落 <em>單一元素演算模式</em>.</p> <p>值:</p>
     <ul>
      <li><code>all</code> :轉譯所有段落</li>
      <li><code>range</code> :呈現提供的段落範圍 <code>paragraphRange</code></li>
@@ -122,7 +122,7 @@ OSGi設定為：
   </tr>
   <tr>
    <td><code>paragraphHeadings</code></td>
-   <td>一個布林屬性，定義標題（例如<code>h1</code>、<code>h2</code>、<code>h3</code>）是否被計為段落(<code>true</code>)或不(<code>false</code>)</td>
+   <td>一個布林值屬性，定義if標題(例如 <code>h1</code>, <code>h2</code>, <code>h3</code>)會計為段落(<code>true</code>)或否(<code>false</code>)</td>
   </tr>
  </tbody>
 </table>

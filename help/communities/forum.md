@@ -1,8 +1,8 @@
 ---
 title: 論壇功能
-seo-title: 論壇功能
+seo-title: Forum Feature
 description: 如何新增和設定論壇功能
-seo-description: 如何新增和設定論壇功能
+seo-description: How to add and configure the forum feature
 uuid: e69be4e1-c9d5-4d51-8e7e-609e5460e378
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 2b1a4917-9db6-436a-a5fd-c102fe41fb9d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1216'
 ht-degree: 8%
 
 ---
@@ -34,33 +34,33 @@ ht-degree: 8%
 本檔案的本節說明：
 
 * 將論壇功能新增至AEM網站。
-* `Forum`元件的組態設定。
+* 的組態設定 `Forum` 元件。
 
-### 將論壇添加到頁面{#adding-a-forum-to-a-page}
+### 將論壇新增至頁面 {#adding-a-forum-to-a-page}
 
-若要在製作模式中將`Forum`元件新增至頁面，請使用元件瀏覽器來找出
+新增 `Forum` 在製作模式中，使用元件瀏覽器來尋找
 
 * `Communities / Forum`
 
 並將其拖曳至應該出現論壇的頁面上。
 
-如需必要資訊，請造訪[Communities Components Basics](/help/communities/basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-包含[必要的用戶端程式庫](/help/communities/essentials-forum.md#essentials-for-client-side)時，以下是`Forum`元件的顯示方式：
+當 [必要的用戶端程式庫](/help/communities/essentials-forum.md#essentials-for-client-side) 包含在內，以下為方式 `Forum` 元件隨即出現：
 
 ![論壇元件](assets/forum-component.png)
 
-### 配置論壇{#configuring-a-forum}
+### 設定論壇 {#configuring-a-forum}
 
-選取要存取的放置`Forum`元件，並選取開啟編輯對話方塊的`Configure`圖示。
+選取已放置的 `Forum` 要存取的元件並選取 `Configure` 表徵圖，開啟「編輯」對話框。
 
 ![configure-new](assets/configure-new.png)
 
 ![論壇 — 配置](assets/forum-config.png)
 
-#### 設定頁簽{#settings-tab}
+#### 設定標籤 {#settings-tab}
 
-在&#x200B;**Settings**&#x200B;標籤下，指定主題和回覆的設定：
+在 **設定** 索引標籤，指定主題和回覆的設定：
 
 * **允許附件縮圖**
 
@@ -93,7 +93,7 @@ ht-degree: 8%
 
 * **允許標記**
 
-   如果選中此選項，則允許成員向其貼文中添加標籤標籤（請參閱&#x200B;**標籤欄位**&#x200B;標籤）。 預設為未勾選。
+   若勾選此選項，允許成員將標籤新增至其貼文(請參閱 **標籤欄位** 標籤)。 預設為未勾選。
 
 * **允許檔案上傳**
 
@@ -101,7 +101,7 @@ ht-degree: 8%
 
 * **允許關注**
 
-   若勾選此選項，請加入下列論壇貼文功能，讓成員能[收到新貼文的通知](/help/communities/notifications.md)。 預設為未勾選。
+   若勾選此選項，請加入下列論壇貼文功能，讓成員可 [通知](/help/communities/notifications.md) 新貼文。 預設為未勾選。
 
 * **允許釘選**
 
@@ -109,26 +109,26 @@ ht-degree: 8%
 
 * **允許主要內容**
 
-   若勾選，可將構想識別為[精選內容](/help/communities/featured.md)。 預設為未勾選。
+   若勾選，可將構想識別為 [精選內容](/help/communities/featured.md). 預設為未勾選。
 
 * **允許電子郵件訂閱**
 
-   若勾選此選項，允許透過電子郵件([subscription](/help/communities/subscriptions.md))通知成員新貼文。 需要檢查`Allow Following`，並配置[電子郵件](/help/communities/email.md)。 預設為未勾選。
+   若勾選此選項，可允許成員透過電子郵件([訂閱](/help/communities/subscriptions.md))。 需要 `Allow Following` 要檢查和 [電子郵件已設定](/help/communities/email.md). 預設為未勾選。
 
 * **最大檔案大小**
 
-   僅當檢查`Allow File Uploads`時相關。 此欄位將限制上傳檔案的大小（以位元組為單位）。 預設為104857600(10 Mb)。
+   只有在 `Allow File Uploads` 已勾選。 此欄位將限制上傳檔案的大小（以位元組為單位）。 預設為104857600(10 Mb)。
 
 * **允許的檔案類型**
 
-   僅當檢查`Allow File Uploads`時相關。 副檔名清單（以逗號分隔）以「點」分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許上載未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   只有在 `Allow File Uploads` 已勾選。 副檔名清單（以逗號分隔）以「點」分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許上載未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
-* **最大附加影像檔案**
-大小僅在勾選「允許檔案上傳」時相關。上傳的影像檔案可能具有的最大位元組數。 預設為2097152(2 Mb)。
+* **附加影像檔案的最大大小**
+僅在勾選「允許檔案上傳」時相關。 上傳的影像檔案可能具有的最大位元組數。 預設為2097152(2 Mb)。
 
 * **允許執行緒式回覆**
 
-   如果選中，則允許對發佈到主題的評論的回復。 預設為未勾選。
+   如果選中，則允許對發佈到主題的評論的回覆。 預設為未勾選。
 
 * **允許投票**
 
@@ -144,7 +144,7 @@ ht-degree: 8%
 
 * **顯示徽章**
 
-   如果選中，則顯示已獲得的並已分配[徽章](/help/communities/implementing-scoring.md)，並包含成員的部落格條目。 預設為未勾選。
+   如果選中，則顯示已獲得和已分配 [徽章](/help/communities/implementing-scoring.md) 會員的部落格條目。 預設為未勾選。
 
 * **允許有特殊權限的成員**
 
@@ -168,15 +168,15 @@ ht-degree: 8%
 
 * **UI 提及模式**
 
-   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如`~{{familyName}}{{givenName}}`。
+   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如 `~{{familyName}}{{givenName}}`.
 
 >[!NOTE]
 >
->可能需要同時檢查`AllowThreaded Replies`和`Allow users to Delete Comments and Topics`以啟用對主題的注釋。
+>可能需要檢查兩者 `AllowThreaded Replies` 和 `Allow users to Delete Comments and Topics` 啟用主題的注釋。
 
-#### 使用者協調標籤{#user-moderation-tab}
+#### 使用者協調標籤 {#user-moderation-tab}
 
-在&#x200B;**使用者協調**&#x200B;標籤下，指定如何管理已張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱[協調使用者產生的內容](/help/communities/moderate-ugc.md)。
+在 **使用者協調** 索引標籤，指定如何管理已張貼的主題和回覆（使用者產生的內容）。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md).
 
 * **拒絕貼文**
 
@@ -196,7 +196,7 @@ ht-degree: 8%
 
 * **標誌原因清單**
 
-   如果選中，則允許成員從下拉清單中選擇其標籤主題或評論為不適當的原因。 預設為未勾選。
+   如果選中，則允許成員從下拉清單中選擇其標籤主題或注釋為不適當的原因。 預設為未勾選。
 
 * **自訂標幟原因**
 
@@ -210,50 +210,50 @@ ht-degree: 8%
 
    輸入主題或留言在從公共視圖中隱藏之前必須標籤的次數。 如果設為–1，則標籤的主題或評論永遠不會在公共視圖中隱藏。 否則，此數字必須大於或等於協調臨界值。 預設為5。
 
-#### 標籤欄位標籤{#tag-field-tab}
+#### 標籤欄位標籤 {#tag-field-tab}
 
-在&#x200B;**標籤欄位**&#x200B;標籤下，如果&#x200B;**設定**&#x200B;標籤下允許，則可以套用的標籤會根據所選的命名空間受到限制。
+在 **標籤欄位** 標籤中，如果允許，則可套用的標籤 **設定** 標籤，會根據所選的命名空間而受到限制。
 
 * **允許的命名空間**
 
-   若已在&#x200B;**Settings**&#x200B;標籤下勾選`Allow Tagging`則相關。 可套用的標籤僅限於所檢查命名空間類別中的標籤。 命名空間清單包含「標準標籤」（預設命名空間）以及「包含所有標籤」。 預設值未勾選，這表示允許所有命名空間。
+   若 `Allow Tagging` 在 **設定** 標籤。 可套用的標籤僅限於所檢查命名空間類別中的標籤。 命名空間清單包含「標準標籤」（預設命名空間）以及「包含所有標籤」。 預設值未勾選，這表示允許所有命名空間。
 
 * **建議限制**
 
    輸入要作為建議顯示給論壇成員的標籤數。 預設為**-**1（無限制）。
 
-#### 翻譯標籤{#translation-tab}
+#### 翻譯標籤 {#translation-tab}
 
-在&#x200B;**翻譯**&#x200B;標籤下，如果為社群網站啟用翻譯，則可以設定翻譯以翻譯整個主題或選取的貼文。
+在 **翻譯** 標籤，如果為社群網站啟用翻譯，則可設定翻譯以翻譯整個主題或選取的貼文。
 
 * **全部轉換**
 
    如果選中，則論壇線程將轉換為用戶的首選語言。 預設為未勾選。
 
-#### 排序設定頁簽{#sort-settings-tab}
+#### 排序設定標籤 {#sort-settings-tab}
 
-在&#x200B;**排序設定**&#x200B;標籤下，指定顯示張貼留言時的排序方式。
+在 **排序設定** 頁簽，指定在顯示張貼的留言時排序的方式。
 
 * **排序方式**
 
-   檢查所有允許的排序選擇：`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 預設值為`Newest, Oldest, Last Updated`。
+   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 預設為 `Newest, Oldest, Last Updated`.
 
 * **設為預設值**
 
-   下拉清單以選取其中一個要顯示為預設的核取排序選項。 預設值為`Newest`。
+   下拉式清單以選取其中一個核取的排序選項，以顯示為預設值。 預設為 `Newest`.
 
 * **選取 Analytics 排序的時間選項**
 
-   下拉式清單以選取下列其中一個選項：`All, Last 24 Hours, Last 7 Days, Last 30 Days`。
+   下拉式清單以選取下列其中一個選項： `All, Last 24 Hours, Last 7 Days, Last 30 Days`.
 
-   預設值為`All`。
+   預設為 `All`.
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱開發人員的[Forum Essentials](/help/communities/essentials-forum.md)頁面。
+如需詳細資訊，請參閱 [論壇要點](/help/communities/essentials-forum.md) 頁面。
 
-有關已張貼主題和留言的調節，請參閱[調節用戶生成的內容](/help/communities/moderate-ugc.md)。
+如需已張貼主題和留言的協調，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md).
 
-有關標籤已發佈的主題和評論，請參閱[標籤用戶生成的內容](/help/communities/tag-ugc.md)。
+有關標籤已發佈的主題和評論，請參閱 [標籤使用者產生的內容](/help/communities/tag-ugc.md).
 
-有關已張貼主題和評論的翻譯，請參閱[翻譯用戶生成的內容](/help/communities/translate-ugc.md)。
+如需已張貼主題和留言的翻譯，請參閱 [轉譯使用者產生的內容](/help/communities/translate-ugc.md).

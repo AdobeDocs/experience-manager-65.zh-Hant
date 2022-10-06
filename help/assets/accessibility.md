@@ -85,13 +85,13 @@ Possible topics to cover in this article are below.
 | 欄檢視(在 [!DNL Assets] 使用者介面 | 向上和向下鍵 | 導覽至相同階層中的檔案和資料夾。 |
 | 欄檢視(在 [!DNL Assets] 使用者介面 | 向左和向右方向鍵 | 導航到當前資料夾上或下方的檔案和資料夾。 |
 | 在中瀏覽資料夾 [!DNL Assets] | `/` | 開啟Omnisearch方塊叫用搜尋。 |
-| [!DNL Assets] 主控台 | &amp;grave; | 切換邊欄 |
+| [!DNL Assets] 主控台 | &grave; | 切換邊欄 |
 | [!DNL Assets] 主控台 | `Alt + 1` | 開啟內容樹。 |
 | [!DNL Assets] 主控台 | `Alt + 2` | 開啟 [!UICONTROL 導覽] 左側邊欄。 |
 | [!DNL Assets] 主控台 | `Alt + 3` | 顯示 [!UICONTROL 時間表] 的子句。 |
 | [!DNL Assets] 主控台 | `Alt + 4` | 開啟所選資產的即時副本參考。 |
 | [!DNL Assets] 主控台 | `Alt + 5` | 在所選資料夾中開始搜索和搜索。 |
-| 已選取資產或資料夾 | 空格 | 刪除選取的資產或資料夾。 |
+| 已選取資產或資料夾 | 退格字元 | 刪除選取的資產或資料夾。 |
 | 已選取資產或資料夾 | `p` | 開啟所選資產的「屬性」頁面。 |
 | 已選取資產或資料夾 | `e` | 編輯選取的資產。 |
 | 已選取資產或資料夾 | `m` | 移動所選資產。 |

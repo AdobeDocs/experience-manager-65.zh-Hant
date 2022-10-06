@@ -1,8 +1,8 @@
 ---
 title: 動態填入下拉式清單
-seo-title: 動態填入下拉式清單
+seo-title: Dynamically populating drop-down lists
 description: 根據某些邏輯動態填入下拉式清單的程式
-seo-description: 根據某些邏輯動態填入下拉式清單的程式
+seo-description: Procedure to dynamically populate drop-down lists based on some logic
 uuid: b3408aee-ac24-43af-a380-a5892abf0248
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,12 +12,12 @@ docset: aem65
 exl-id: 64b88423-aaae-4258-bf48-73df5c9353ea
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
-# 動態填入下拉式清單{#dynamically-populating-drop-down-lists}
+# 動態填入下拉式清單 {#dynamically-populating-drop-down-lists}
 
 ## 必備條件 {#prerequisites}
 
@@ -26,9 +26,9 @@ ht-degree: 0%
 * [建立最適化表單](../../forms/using/creating-adaptive-form.md)
 * [製作最適化表單](../../forms/using/introduction-forms-authoring.md)
 
-## 動態填入下拉式清單的程式{#procedure-to-dynamically-populate-drop-down-lists}
+## 動態填入下拉式清單的程式 {#procedure-to-dynamically-populate-drop-down-lists}
 
-假設您要根據您在&#x200B;**Country**&#x200B;下拉式清單中選取的值，填入&#x200B;**State**&#x200B;下拉式清單的案例。 如果您在&#x200B;**Country**&#x200B;下拉式清單中選取Australia，則&#x200B;**State**&#x200B;下拉式清單會顯示Australia內的州。 以下過程說明如何完成此任務。
+假設您要填入 **狀態** 下拉式清單中所選取的值 **國家/地區** 下拉式清單。 若您在 **國家/地區** 下拉式清單， **狀態** 下拉式清單會顯示澳大利亞內的州。 以下過程說明如何完成此任務。
 
 1. 使用下列模組建立專案：
 
@@ -146,16 +146,16 @@ ht-degree: 0%
    }
    ```
 
-1. 在應用程式中特定資料夾階層下建立下拉式節點（例如，在/apps/myfolder/demo下建立節點）。 請確定節點的`sling:resourceType`參數與servlet指向的參數相同(/apps/populatedropdown)。
+1. 在應用程式中特定資料夾階層下建立下拉式節點（例如，在/apps/myfolder/demo下建立節點）。 確保 `sling:resourceType` 節點的參數與servlet指向的參數相同(/apps/populatedropdown)。
 
    ![建立下拉式節點](assets/dropdown-node.png)
 
-1. 封裝內容節點並將.jar檔案內嵌在特定位置（例如/apps/myfolder/demo/install/）。 在伺服器上部署相同的檔案。
+1. 封裝內容節點，並將.jar檔案內嵌在特定位置（例如/apps/myfolder/demo/install/）。 在伺服器上部署相同的檔案。
 1. 建立最適化表單，並新增兩個下拉式清單：國家/地區和州。 國家/地區清單可以包含國家/地區的名稱。 「州」清單可動態填入您在第一個清單中選取之國家/地區的州名稱。
 
    新增國家/地區名稱以在「國家/地區」清單中顯示。 在「國家/地區」清單中，新增指令碼，以根據「國家/地區」清單中的國家/地區名稱填入指令碼。
 
-   ![新增國](assets/country-dropdown.png) ![家/地區名稱新增指令碼以填入州](assets/state-dropdown.png) ![名稱國家/地區和州下拉式清單以收集](assets/2dropdowns.png)
+   ![新增國家/地區名稱](assets/country-dropdown.png) ![新增指令碼以填入狀態名稱](assets/state-dropdown.png) ![要收集的國家/地區和州下拉式清單](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(

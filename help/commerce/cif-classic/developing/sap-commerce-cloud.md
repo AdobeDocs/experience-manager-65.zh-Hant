@@ -429,9 +429,9 @@ public class AxisFilter implements VariantFilter {
       * `String CommerceSession.getProductPrice(Product product)`
 
 
-**儲存**
+**儲存空間**
 
-* 儲存
+* 儲存空間
 
    * 在hybris案例中， hybris伺服器擁有購物車。
    * 在AEM-generic案例中，購物車儲存在 [ClientContext](/help/sites-administering/client-context.md).

@@ -1,8 +1,8 @@
 ---
 title: 與BrightEdge Content Optimizer整合
-seo-title: 與BrightEdge Content Optimizer整合
+seo-title: Integrating with BrightEdge Content Optimizer
 description: 了解如何整合AEM與BrightEdge Content Optimizer。
-seo-description: 了解如何整合AEM與BrightEdge Content Optimizer。
+seo-description: Learn about integrating AEM with BrightEdge Content Optimizer.
 uuid: 7075dd3c-2fd6-4050-af1c-9b16ad4366ec
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
 exl-id: f14cc5fd-aeab-4619-b926-b6f1df7e50e5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 1. 輸入設定的標題。 （可選）鍵入用於將配置儲存在儲存庫中的節點的名稱。 按一下建立。
 1. 在「BrightEdge Content Optimizer配置」對話框中，鍵入BrightEdge帳戶的用戶名和密碼，然後按一下「確定」。
 
-## 編輯BrightEdge配置{#editing-a-brightedge-configuration}
+## 編輯BrightEdge組態 {#editing-a-brightedge-configuration}
 
 視需要修改BrightEdge設定的使用者名稱和密碼。 修改會影響使用設定的所有頁面。
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 1. 按一下您要編輯的組態名稱。
 1. 按一下「編輯」，修改屬性值，然後按一下「確定」。
 
-## 將頁面與BrightEdge配置{#associating-pages-with-a-brightedge-configuration}關聯
+## 將頁面與BrightEdge組態關聯 {#associating-pages-with-a-brightedge-configuration}
 
 將頁面與BrightEdge設定關聯，以將頁面資料傳送至BrightEdge服務進行分析。 將頁面與配置關聯時，子頁面將繼承關聯。 通常，您會將網站的首頁建立關聯，以便從所有頁面傳送資料至BrightEdge。
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
    ![chlimage_1-6](assets/chlimage_1-6a.png)
 
-## 激活BrightEdge配置{#activating-a-brightedge-configuration}
+## 啟用BrightEdge組態 {#activating-a-brightedge-configuration}
 
 啟動BrightEdge設定，以在發佈執行個體上複製該設定，並讓已發佈頁面與BrightEdge服務互動。
 

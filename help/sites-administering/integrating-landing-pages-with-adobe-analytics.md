@@ -1,8 +1,8 @@
 ---
 title: 整合登錄頁面與Adobe Analytics
-seo-title: 整合登錄頁面與Adobe Analytics
+seo-title: Integrating Landing Pages with Adobe Analytics
 description: 了解如何將登錄頁面與Adobe Analytics整合。
-seo-description: 了解如何將登錄頁面與Adobe Analytics整合。
+seo-description: Learn how to integrate landing pages with Adobe Analytics.
 uuid: 8f6672d1-497f-4ccb-b3cc-f6120fc467ba
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,14 +12,14 @@ discoiquuid: 8ae7ccec-489b-4d20-ac56-6101402fb18a
 exl-id: da3f7b7e-87e5-446a-9a77-4b12b850a381
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
 
-# 將登錄頁面與Adobe Analytics整合{#integrating-landing-pages-with-adobe-analytics}
+# 整合登錄頁面與Adobe Analytics{#integrating-landing-pages-with-adobe-analytics}
 
-AEM已透過下列呼叫動作(CTA)元件，將登錄頁面解決方案與[Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst)整合：
+AEM已將登錄頁面解決方案與 [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) 使用下列動作呼叫(CTA)元件：
 
 1. 點進元件
 1. 圖形連結元件
@@ -28,11 +28,11 @@ AEM已透過下列呼叫動作(CTA)元件，將登錄頁面解決方案與[Adobe
 
 ## 必備條件 {#prerequisites}
 
-Adobe建議您進行[現有的AEM-Adobe Analytics整合](/help/sites-administering/adobeanalytics.md)，了解此整合的運作方式。
+Adobe建議您執行 [現有AEM-Adobe Analytics整合](/help/sites-administering/adobeanalytics.md) 以了解此整合的運作方式。
 
-## 可用於映射{#components-available-for-mapping}的元件
+## 可用於映射的元件 {#components-available-for-mapping}
 
-在AEM中，顯示於sidekick中的&#x200B;**動作呼叫**&#x200B;元件 — **點進連結**&#x200B;和&#x200B;**GraphicalLink** — 可對應至Adobe Analytics變數。
+在AEM中， **行動要求** 元件 —  **ClickThroughLink** 和 **GraphicalLink**  — 顯示在sidekick的此處，可對應至Adobe Analytics變數。
 
 ![chlimage_1-21](assets/chlimage_1-21a.jpeg)
 
@@ -89,7 +89,7 @@ Adobe建議您進行[現有的AEM-Adobe Analytics整合](/help/sites-administeri
 </table>
 
 1. 從內容尋找器將這些公開的屬性對應至任何Adobe Analytics變數。 架構現已可供使用。
-1. 您現在可以建立新的登錄頁面，或開啟具有現有CTA元件的現有登錄頁面，然後從sidekick按一下&#x200B;**Page Properties**&#x200B;中的&#x200B;**Cloud Services**&#x200B;標籤(在觸控最佳化的UI中，選取&#x200B;**開啟屬性**，然後按一下&#x200B;**Cloud Services**)，並設定框架以與登錄頁面搭配使用。 從下拉式清單中選取架構。
+1. 您現在可以建立新的登錄頁面，或使用現有的CTA元件開啟現有的登錄頁面，然後按一下 **Cloud Services** 標籤 **頁面屬性** 從sidekick(在觸控最佳化的UI中，選取 **開啟屬性** 按一下 **Cloud Services**)及設定框架以搭配登陸頁面使用。 從下拉式清單中選取架構。
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
 

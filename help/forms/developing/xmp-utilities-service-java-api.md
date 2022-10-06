@@ -1,8 +1,8 @@
 ---
 title: XMP公用程式服務Java APIQ快速啟動(SOAP)
-seo-title: XMP公用程式服務Java APIQ快速啟動(SOAP)
+seo-title: XMP Utilities Service Java APIQuick Start(SOAP)
 description: 使用XMP公用程式服務來匯出和匯入XMP中繼資料。
-seo-description: 使用XMP公用程式服務來匯出和匯入XMP中繼資料。
+seo-description: Use the XMP Utilities service to export and import XMP metadata.
 uuid: 5db4c623-75db-4a34-9ad2-3c917619e296
 contentOwner: admin
 content-type: reference
@@ -13,12 +13,12 @@ role: Developer
 exl-id: 699a7309-a976-480e-886f-2e466a477348
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
 
-# XMP實用程式服務Java API快速入門(SOAP){#xmp-utilities-service-java-apiquick-start-soap}
+# XMP公用程式服務Java API快速入門(SOAP) {#xmp-utilities-service-java-apiquick-start-soap}
 
 下列快速入門適用於XMP公用程式服務。
 
@@ -30,11 +30,11 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計中的快速入門是以Forms伺服器為基礎（如果您使用其他作業系統，例如UNIX），請以適用作業系統支援的路徑取代windows專用路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表單進行程式設計中的快速入門是以Forms伺服器為基礎（如果您使用其他作業系統，例如UNIX），請以適用作業系統支援的路徑取代windows專用路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}匯出XMP中繼資料
+## 快速入門（SOAP模式）:使用Java API匯出XMP中繼資料 {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
 
-下列程式碼範例會擷取、檢查及儲存XMP中繼資料。 （請參閱[從PDF文檔導出元資料](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents)。）
+下列程式碼範例會擷取、檢查及儲存XMP中繼資料。 (請參閱 [從PDF文檔導出元資料](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents).)
 
 ```java
  /*
@@ -137,9 +137,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}匯入XMP中繼資料
+## 快速入門（SOAP模式）:使用Java API匯入XMP中繼資料 {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
 
-下列程式碼範例會匯入XMP中繼資料，並將新的PDF檔案儲存至磁碟。 PDF檔案以名為Loan.pdf的PDF檔案為基礎。 包含要導入到PDF文檔的元資料的XML文檔基於名為&#x200B;*LoanMetaData.xml*&#x200B;的XML檔案。 有關此XML檔案的資訊，請參閱[將元資料導入PDF文檔](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents)。
+下列程式碼範例會匯入XMP中繼資料，並將新的PDF檔案儲存至磁碟。 PDF檔案以名為Loan.pdf的PDF檔案為基礎。 包含要導入到PDF文檔的元資料的XML文檔基於名為的XML檔案 *LoanMetaData.xml*. 有關此XML檔案的資訊，請參見 [將中繼資料匯入PDF檔案](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
 
 ```java
  /*

@@ -183,7 +183,6 @@ TagID包含 [命名空間](#tag-namespace) 後面接著本機TagID。 [容器標
 >* 頁面( `cq:Page`)，其中 `jcr:content`節點的類型 `cq:PageContent` 包括 `cq:Taggable` 米辛。
 >
 >* 資產( `cq:Asset`)，其中 `jcr:content/metadata` 節點總是有 `cq:Taggable` 米辛。
-
 >
 
 

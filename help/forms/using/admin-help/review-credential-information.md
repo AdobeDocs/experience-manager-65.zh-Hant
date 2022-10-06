@@ -1,8 +1,8 @@
 ---
 title: 查看憑據使用資訊
-seo-title: 查看憑據使用資訊
+seo-title: Review credential use information
 description: 了解如何查看憑據使用資訊。
-seo-description: 了解如何查看憑據使用資訊。
+seo-description: Learn how to review credential use information.
 uuid: 02af75f9-c235-470d-a98b-a2102aa31381
 contentOwner: admin
 content-type: reference
@@ -12,18 +12,18 @@ discoiquuid: cdf61cff-768b-49f7-9926-400bc96b0708
 exl-id: a8e16cf8-f3c8-48ce-87da-2f0de0b10a6e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
 
-# 查看憑據使用資訊{#review-credential-use-information}
+# 查看憑據使用資訊 {#review-credential-use-information}
 
 憑證包含的資訊說明其預期用途，可透過Acrobat Reader DC擴充功能一般使用者Web應用程式存取。 您可以使用此資訊來確定安裝的憑據類型（評估或生產）及其有效日期。
 
 1. 開啟Web瀏覽器並輸入此URL:
 
-   http://localhost:port/ReaderExtensions（其中&#x200B;*port*&#x200B;是應用伺服器的埠號）
+   http://localhost:port/ReaderExtensions(其中 *埠* 是應用程式伺服器的埠號)
 
 1. 使用預設用戶名和密碼登錄：
 

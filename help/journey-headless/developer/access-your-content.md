@@ -1,7 +1,8 @@
 ---
 title: 如何透過AEM傳送API存取您的內容
 description: 在AEM無周邊開發人員歷程的這部分，了解如何使用GraphQL查詢來存取您的內容片段內容。
-source-git-commit: 7f43d9d6b631b26f7b9293aa109498d0c8040436
+exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 1%

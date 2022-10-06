@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # OWASP前10名{#owasp-top}
 
-[開放Web應用程式安全項目](https://www.owasp.org)(OWASP)維護一個清單，列出它們認為的[前10個Web應用程式安全風險](https://www.owasp.org/index.php/OWASP_Top_Ten_Project)。
+此 [開啟Web應用程式安全項目](https://www.owasp.org) (OWASP)保留一份他們認為 [10大Web應用程式安全風險](https://www.owasp.org/index.php/OWASP_Top_Ten_Project).
 
 下面列出了這些檔案，以及CRX如何處理這些檔案的說明。
 
@@ -32,13 +32,13 @@ ht-degree: 0%
 
 ## 2.跨網站指令碼(XSS) {#cross-site-scripting-xss}
 
-一般的緩解做法是使用基於[OWASP Encoder](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)和[AntiSamy](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project)的伺服器端XSS保護庫對用戶生成的內容的所有輸出進行編碼。
+一般的緩解做法是使用基於的伺服器端XSS保護庫，對用戶生成內容的所有輸出進行編碼 [OWASP編碼器](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project) 和 [AntiSamy](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project).
 
 在測試和開發期間，XSS都是最優先順序，而發現的任何問題（通常）都可立即解決。
 
 ## 3.失效驗證和會話管理 {#broken-authentication-and-session-management}
 
-AEM使用聲音和經驗證的驗證技術，依賴[Apache Jackrabbit](https://jackrabbit.apache.org/)和[Apache Sling](https://sling.apache.org/)。 AEM中未使用瀏覽器/HTTP工作階段。
+AEM使用聲音和經驗證的驗證技術， [阿帕奇·傑克拉布特](https://jackrabbit.apache.org/) 和 [Apache Sling](https://sling.apache.org/). AEM中未使用瀏覽器/HTTP工作階段。
 
 ## 4.不安全的直接對象引用 {#insecure-direct-object-references}
 
@@ -48,13 +48,13 @@ AEM使用聲音和經驗證的驗證技術，依賴[Apache Jackrabbit](https://j
 
 自動將密碼編譯Token插入所有表單和AJAX請求，並針對每個POST在伺服器上驗證此Token，借此緩解跨網站請求偽造(CSRF)。
 
-此外，AEM隨附反向連結標題型篩選器，此篩選器可設定為&#x200B;*only*&#x200B;允許來自特定主機的POST請求（在清單中定義）。
+此外，AEM也隨附反向連結標題型篩選器，此篩選器可設定為 *僅限* 允許來自特定主機的POST請求（在清單中定義）。
 
 ## 6.安全配置錯誤 {#security-misconfiguration}
 
-無法保證所有軟體都始終正確配置。 然而，我們努力提供盡可能多的指導，並盡可能簡化配置。 此外，AEM隨[整合的Security Healthchecks](/help/sites-administering/operations-dashboard.md)一起提供，可幫助您一目瞭然地監控安全配置。
+無法保證所有軟體都始終正確配置。 然而，我們努力提供盡可能多的指導，並盡可能簡化配置。 此外，AEM隨附 [整合的Security Healthchecks](/help/sites-administering/operations-dashboard.md) 可協助您快速監控安全設定。
 
-請查看[安全檢查清單](/help/sites-administering/security-checklist.md)以了解為您提供逐步強化說明的詳細資訊。
+請查看 [安全性檢查清單](/help/sites-administering/security-checklist.md) 以取得逐步強化指示的詳細資訊。
 
 ## 7.不安全的加密儲存 {#insecure-cryptographic-storage}
 
@@ -64,7 +64,7 @@ AEM使用聲音和經驗證的驗證技術，依賴[Apache Jackrabbit](https://j
 
 ## 8.未能限制URL存取 {#failure-to-restrict-url-access}
 
-儲存庫允許通過訪問控制項為任何給定用戶或組設定[微調權限（如JCR所指定）](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)，以在任何給定路徑上。 存取限制由存放庫強制執行。
+存放庫可讓 [微調權限（如JCR所指定）](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html) 對於任何指定路徑上的任何給定用戶或組，通過訪問控制項。 存取限制由存放庫強制執行。
 
 ## 9.傳輸層保護不足 {#insufficient-transport-layer-protection}
 

@@ -6,18 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 61cd5751-0dc8-48e0-873e-3a64899489bb
-feature: 升級
+feature: Upgrading
 exl-id: 4e736924-74ea-431a-be19-1c4ff022f464
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '413'
 ht-degree: 4%
 
 ---
 
 # Dynamic Media 6.5的存放庫重新調整 {#dynamic-media-repository-restructuring-in-aem}
 
-如上層[Adobe Experience Manager 6.5中的存放庫重新調整頁面所述，升級至Experience Manager6.5的客戶應使用此頁面評估與影響Dynamic Media的存放庫變更相關的工作成果。 ](/help/sites-deploying/repository-restructuring.md)某些變更需要Experience Manager6.5升級程式期間的工作量，而其他變更可能會延遲至日後升級。
+如父項所述 [Adobe Experience Manager 6.5中的存放庫重新調整](/help/sites-deploying/repository-restructuring.md) 頁面中，升級至Experience Manager6.5的客戶應使用此頁面評估與影響Dynamic Media的存放庫變更相關的工作量。 某些變更需要Experience Manager6.5升級程式期間的工作量，而其他變更可能會延遲至日後升級。
 
 **未來升級前**
 
@@ -66,7 +66,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>客戶可以在此位置運行遷移指令碼：<br /> </p>
+   <td><p>客戶可在以下位置執行移轉指令碼：<br /> </p>
     <ul>
      <li><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></li>
      <li>重新啟動Dynamic Media OSGi套件組合。</li>
@@ -97,7 +97,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A<br /> </td>
+   <td>不適用<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -116,11 +116,11 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td><p>1.從YouTube<br /> 2取消發佈所有視訊。 使用新的觸控式UI（來自<code>/conf</code>）建立YouTube設定，包括從舊位置<br /> 3複製所有通道。 將所有影片發佈回YouTube。</p> <p>此工作流程會產生新的YouTube URL。 如果您在建立觸控式UI YouTube設定前未取消發佈，則「屬性」下方會列出多個YouTube URL，因為重新建立的管道會重新發佈（如果有機會的話）。 此功能表示您的「屬性」下方會列出無用的URL。</p> </td>
+   <td><p>1.從YouTube取消發佈所有影片<br /> 2. 使用新的觸控式UI建立YouTube設定(從 <code>/conf</code>)，包括從舊位置複製所有通道<br /> 3. 將所有影片發佈回YouTube。</p> <p>此工作流程會產生新的YouTube URL。 如果您在建立觸控式UI YouTube設定前未取消發佈，則「屬性」下方會列出多個YouTube URL，因為重新建立的管道會重新發佈（如果有機會的話）。 此功能表示您的「屬性」下方會列出無用的URL。</p> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A<br /> </td>
+   <td>不適用<br /> </td>
   </tr>
  </tbody>
 </table>

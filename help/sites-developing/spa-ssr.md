@@ -1,8 +1,8 @@
 ---
 title: SPA和伺服器端轉譯
-seo-title: SPA和伺服器端轉譯
-description: '"SPA與伺服器端轉譯"'
-seo-description: 'null'
+seo-title: SPA and Server-Side Rendering
+description: "SPA與伺服器端轉譯"
+seo-description: null
 uuid: 27e26e3f-65d4-4069-b570-58b8b9e2a1ae
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
 source-git-commit: eeb4c7f6a80d6bad5cd1b540dfacfc7bc5071664
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1756'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ ht-degree: 0%
 >
 >AEM 6.5.1.0或更新版本是使用SPA伺服器端轉譯功能的必要條件，如本檔案所述。
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
-單頁應用程式(SPA)可為使用者提供豐富的動態體驗，以熟悉的方式回應和運作，通常就像原生應用程式。 [這是通過依靠客戶端在前面載入內容，然後進行用戶交互的重](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) 擔，從而最小化客戶端和伺服器之間需要的通信量，使應用更加被動。
+單頁應用程式(SPA)可為使用者提供豐富的動態體驗，以熟悉的方式回應和運作，通常就像原生應用程式。 [這是通過依靠客戶端將內容預先載入，然後進行用戶交互的繁重提升來實現的](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) 從而將客戶端與伺服器之間所需的通訊量降至最低，使應用程式更具反應性。
 
 不過，這可能會導致較長的初始載入時間，尤其是如果SPA很大且內容豐富。 為了最佳化載入時間，某些內容可在伺服器端轉譯。 使用伺服器端轉譯(SSR)可以加速頁面的初始載入，然後將轉譯傳遞給用戶端。
 
@@ -42,18 +42,18 @@ ht-degree: 0%
 
 SSR通常在下列任一問題都有明確的「是」時提供一些值：
 
-* **SEO:** 您的網站是否仍需要SSR才能由帶來流量的搜尋引擎正確編列索引？請記住，主要搜尋引擎編目程式現在會評估JS。
-* **頁面速度：** SSR是否能在實際環境中大幅提升速度，並為整體使用者體驗增添新元素？
+* **SEO:** 您的網站是否仍需要SSR才能由帶來流量的搜尋引擎正確編列索引？ 請記住，主要搜尋引擎編目程式現在會評估JS。
+* **頁面速度：** SSR是否在真實環境中提供了可衡量的速度改進，並增加了總體用戶體驗？
 
 只有在這兩個問題中至少有一個以明確的「是」回答，您的專案才會Adobe建議實作SSR。 以下各節將說明如何使用Adobe I/O Runtime執行此作業。
 
 ## Adobe I/O Runtime {#adobe-i-o-runtime}
 
-如果您[確信您的專案需要實作SSR](/help/sites-developing/spa-ssr.md#when-to-use-ssr)，則Adobe的建議解決方案是使用Adobe I/O Runtime。
+若您 [確信您的項目需要實施SSR](/help/sites-developing/spa-ssr.md#when-to-use-ssr),Adobe的建議解決方案是使用Adobe I/O Runtime。
 
 如需Adobe I/O Runtime的詳細資訊，請參閱
 
-* [https://www.adobe.io/apis/experienceplatform/runtime.html](https://www.adobe.io/apis/experienceplatform/runtime.html)  — 此服務的概觀
+* [https://www.adobe.io/apis/experienceplatform/runtime.html](https://www.adobe.io/apis/experienceplatform/runtime.html)  — 服務概觀
 * [https://www.adobe.io/apis/experienceplatform/runtime/docs.html](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)  — 如需有關平台的詳細檔案
 
 以下幾節將詳細說明如何使用Adobe I/O Runtime，在兩種不同的模型中為SPA實作SSR:
@@ -63,40 +63,40 @@ SSR通常在下列任一問題都有明確的「是」時提供一些值：
 
 >[!NOTE]
 >
->Adobe建議每個環境（預備、生產、測試等）分別使用Adobe I/O Runtime工作區。 這允許典型的系統開發生命週期(SDLC)模式，將不同版本的單個應用程式部署到不同的環境。 如需詳細資訊，請參閱適用於Project Firefly Applications](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/guides/ci_cd_for_firefly_apps.md)的檔案[CI/CD 。
+>Adobe建議每個環境（預備、生產、測試等）分別使用Adobe I/O Runtime工作區。 這允許典型的系統開發生命週期(SDLC)模式，將不同版本的單個應用程式部署到不同的環境。 請參閱檔案 [適用於Project Firefly應用程式的CI/CD](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/guides/ci_cd_for_firefly_apps.md) 以取得更多資訊。
 >
 >每個例項（製作、發佈）不需要個別的工作區，除非每個例項類型在執行階段實施中有差異。
 
-## 遠程渲染器配置{#remote-renderer-configuration}
+## 遠程轉譯器配置 {#remote-renderer-configuration}
 
-AEM必須知道可在何處擷取遠端轉譯的內容。 無論您選擇為SSR實作哪個模型[，都需要指定](#adobe-i-o-runtime)以AEM如何存取此遠端轉譯服務。
+AEM必須知道可在何處擷取遠端轉譯的內容。 無論 [您選擇對SSR實施的模型，](#adobe-i-o-runtime) 您需要指定AEM如何存取此遠端呈現服務。
 
-這是通過&#x200B;**RemoteContentRenderer - Configuration Factory OSGi服務**&#x200B;完成的。 在位於`http://<host>:<port>/system/console/configMgr`的Web控制台配置控制台中搜索字串&quot;RemoteContentRenderer&quot;。
+這是透過 **RemoteContentRenderer — 配置工廠OSGi服務**. 在Web控制台配置控制台中搜索字串&quot;RemoteContentRenderer&quot;(位於 `http://<host>:<port>/system/console/configMgr`.
 
 ![轉譯器配置](assets/rendererconfig.png)
 
 下列欄位適用於設定：
 
-* **內容路徑模式**  — 必要時，用來比對部分內容的規則運算式
-* **遠端端點URL**  — 負責產生內容之端點的URL
+* **內容路徑模式**  — 必要的規則運算式，以匹配部分內容
+* **遠端端點URL**  — 負責產生內容的端點URL
    * 如果本地網路中沒有，請使用安全的HTTPS協定。
 * **其他請求標題**  — 要新增至傳送至遠端端點之請求的其他標題
-   * 模式：`key=value`
-* **請求超時**  — 遠程主機請求超時（毫秒）
+   * 模式： `key=value`
+* **請求逾時**  — 遠程主機請求超時（毫秒）
 
 >[!NOTE]
 >
->無論您選擇實作[AEM導向的通訊流](#aem-driven-communication-flow)或[Adobe I/O Runtime導向的流量，](#adobe-i-o-runtime-driven-communication-flow)您都必須定義遠端內容轉譯器設定。
+>無論您是否選擇實作 [AEM驅動的通信流](#aem-driven-communication-flow) 或 [Adobe I/O Runtime驅動的流，](#adobe-i-o-runtime-driven-communication-flow) 您必須定義遠端內容轉譯器設定。
 >
->如果您選擇[使用自訂Node.js伺服器，也必須定義此設定。](#using-node-js)
+>如果您選擇 [使用自訂Node.js伺服器。](#using-node-js)
 
 >[!NOTE]
 >
->此配置利用[遠程內容呈現器](#remote-content-renderer)，該呈現器具有其他可用的擴展和自定義選項。
+>此設定會利用 [遠端內容轉譯器、](#remote-content-renderer) 其他擴充功能和自訂選項可供使用。
 
-## AEM驅動通信流{#aem-driven-communication-flow}
+## AEM導向的通訊流程 {#aem-driven-communication-flow}
 
-使用SSR時，AEM中SPA的[元件互動工作流程](/help/sites-developing/spa-overview.md#workflow)包含Adobe I/O Runtime上產生應用程式初始內容的階段。
+使用SSR時， [元件交互工作流](/help/sites-developing/spa-overview.md#workflow) 的SPA包含在Adobe I/O Runtime上產生應用程式初始內容的階段。
 
 1. 瀏覽器會向AEM要求SSR內容。
 
@@ -108,7 +108,7 @@ AEM必須知道可在何處擷取遠端轉譯的內容。 無論您選擇為SSR�
 
 ![伺服器端轉譯 — cms-drivenaemnode-adobeio](assets/server-side-rendering-cms-drivenaemnode-adobeio.png)
 
-## Adobe I/O Runtime驅動通信流{#adobe-i-o-runtime-driven-communication-flow}
+## Adobe I/O Runtime驅動的通訊流 {#adobe-i-o-runtime-driven-communication-flow}
 
 上一節將說明針對AEM中的SPA而執行伺服器端轉譯的標準和建議實作，AEM會執行內容的引導及服務。
 
@@ -120,7 +120,7 @@ AEM必須知道可在何處擷取遠端轉譯的內容。 無論您選擇為SSR�
  <tbody>
   <tr>
    <th><strong>引導</strong></th>
-   <th><strong>優勢</strong></th>
+   <th><strong>優點</strong></th>
    <th><strong>缺點</strong></th>
   </tr>
   <tr>
@@ -128,7 +128,7 @@ AEM必須知道可在何處擷取遠端轉譯的內容。 無論您選擇為SSR�
    <td>
     <ul>
      <li>AEM會視需要管理注入程式庫</li>
-     <li>只需在AEM<br />上維護資源 </li>
+     <li>只需在AEM上維護資源<br /> </li>
     </ul> </td>
    <td>
     <ul>
@@ -143,7 +143,7 @@ AEM必須知道可在何處擷取遠端轉譯的內容。 無論您選擇為SSR�
     </ul> </td>
    <td>
     <ul>
-     <li>應用程式所需的Clientlib資源（例如CSS和JavaScript）將需要由AEM開發人員透過<code><a href="/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet">allowProxy</a></code>屬性<br />提供 </li>
+     <li>應用程式所需的Clientlib資源（例如CSS和JavaScript）將需要由AEM開發人員透過 <code><a href="/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet">allowProxy</a></code> 屬性<br /> </li>
      <li>必須在AEM和Adobe I/O Runtime之間同步資源<br /> </li>
      <li>若要啟用SPA的編寫功能，可能需要Adobe I/O Runtime的代理伺服器</li>
     </ul> </td>
@@ -151,13 +151,13 @@ AEM必須知道可在何處擷取遠端轉譯的內容。 無論您選擇為SSR�
  </tbody>
 </table>
 
-## SSR {#planning-for-ssr}規劃
+## SSR規劃 {#planning-for-ssr}
 
 通常，只有應用程式的一部分需要呈現在伺服器端。 常見的範例是，在頁面初始載入時，會在折頁上方顯示的內容會呈現在伺服器端。 這樣可將已呈現的內容傳送給用戶端，節省時間。 當使用者與SPA互動時，用戶端會轉譯其他內容。
 
 當您考慮為SPA實作伺服器端轉譯時，需要檢閱應用程式的哪些部分是必要的。
 
-## 使用SSR {#developing-an-spa-using-ssr}開發SPA
+## 用SSR開發SPA {#developing-an-spa-using-ssr}
 
 SPA元件可由用戶端（在瀏覽器中）或伺服器端轉譯。 呈現伺服器端時，瀏覽器屬性（例如視窗大小和位置）不存在。 因此，SPA元件應為同構，不須假設其轉譯位置。
 
@@ -169,18 +169,18 @@ AEM中的SPA適用的SSR需要Adobe I/O Runtime，這是轉譯應用程式內容
 
 正如AEM可立即支援Angular和React SPA架構，Angular和React應用程式也支援伺服器端轉譯。 如需詳細資訊，請參閱這兩個架構的NPM檔案。
 
-* React:[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
-* Angular:[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
+* React: [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
+* Angular: [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
 
-如需簡化的範例，請參閱[We.Retail Journal應用程式](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)。 它會呈現整個應用程式伺服器端。 雖然這不是現實中的例子，但它確實說明了實施SSR需要什麼。
+如需簡單化的範例，請參閱 [We.Retail Journal應用程式](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal). 它會呈現整個應用程式伺服器端。 雖然這不是現實中的例子，但它確實說明了實施SSR需要什麼。
 
 >[!CAUTION]
 >
->[We.Retail Journal應用程式](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)僅供示範之用，因此會使用Node.js作為簡單範例，而非建議的Adobe I/O Runtime。 此範例不應用於任何專案工作。
+>此 [We.Retail Journal應用程式](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) 僅供展示之用，因此會使用Node.js作為簡單範例，而非建議的Adobe I/O Runtime。 此範例不應用於任何專案工作。
 
 >[!NOTE]
 >
->任何AEM專案都應運用[AEM專案原型](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype/overview.html)，這可支援使用React或Angular的SPA專案，並運用SPA SDK。
+>任何AEM專案皆應運用 [AEM專案原型](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype/overview.html)，可支援使用React或Angular的SPA專案，並運用SPA SDK。
 
 ## 使用Node.js {#using-node-js}
 
@@ -196,9 +196,9 @@ Adobe I/O Runtime是在AEM中實作SPA SSR的建議解決方案。
 >
 >如果SSR必須透過Node.js實作，Adobe建議為每個AEM環境（製作、發佈、預備等）使用個別的Node.js例項。
 
-## 遠程內容呈現器{#remote-content-renderer}
+## 遠端內容轉譯器 {#remote-content-renderer}
 
-在AEM中搭配SPA使用SSR所需的[遠端內容轉譯器設定](#remote-content-renderer-configuration)會點選更廣義的轉譯服務，以符合您的需求並加以擴充和自訂。
+此 [遠端內容轉譯器設定](#remote-content-renderer-configuration) 在AEM中搭配SPA使用SSR時，需要點選更廣泛的轉譯服務，這些服務可擴充及自訂，以符合您的需求。
 
 ### RemoteContentRenderingService {#remotecontentrenderingservice}
 
@@ -206,13 +206,13 @@ Adobe I/O Runtime是在AEM中實作SPA SSR的建議解決方案。
 
 `RemoteContentRenderingService` 可在需要進行其他內容操作時，透過相依性反轉插入自訂Sling模型或servlet中。
 
-此服務由[RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet)在內部使用。
+此服務由 [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
 
 ### RemoteContentRendererRequestHandlerServlet {#remotecontentrendererrequesthandlerservlet}
 
-`RemoteContentRendererRequestHandlerServlet`可用來以程式設計方式設定請求配置。 `DefaultRemoteContentRendererRequestHandlerImpl`，提供預設請求處理常式實作，可讓您建立多個OSGi設定，以將內容結構中的位置對應至遠端端點。
+此 `RemoteContentRendererRequestHandlerServlet` 可用來以程式設計方式設定要求設定。 `DefaultRemoteContentRendererRequestHandlerImpl`，提供預設請求處理常式實作，可讓您建立多個OSGi設定，以將內容結構中的位置對應至遠端端點。
 
-若要新增自訂請求處理常式，請實作`RemoteContentRendererRequestHandler`介面。 請務必將`Constants.SERVICE_RANKING`元件屬性設定為大於100的整數，即`DefaultRemoteContentRendererRequestHandlerImpl`的排名。
+若要新增自訂請求處理常式，請實作 `RemoteContentRendererRequestHandler` 介面。 請務必將 `Constants.SERVICE_RANKING` 元件屬性轉換為高於100的整數，這是 `DefaultRemoteContentRendererRequestHandlerImpl`.
 
 ```
 @Component(immediate = true,
@@ -223,9 +223,9 @@ Adobe I/O Runtime是在AEM中實作SPA SSR的建議解決方案。
 public class CustomRemoteContentRendererRequestHandlerImpl implements RemoteContentRendererRequestHandler {}
 ```
 
-### 配置預設處理程式{#configure-default-handler}的OSGi配置
+### 配置預設處理程式的OSGi配置 {#configure-default-handler}
 
-預設處理程式的配置必須如[遠程內容呈現器配置](#remote-content-renderer-configuration)一節中所述配置。
+預設處理常式的設定必須依照一節所述進行設定 [遠端內容轉譯器設定](#remote-content-renderer-configuration).
 
 ### 遠端內容轉譯器用途 {#usage}
 
@@ -244,4 +244,4 @@ public class CustomRemoteContentRendererRequestHandlerImpl implements RemoteCont
 
 ### 需求 {#requirements}
 
-servlet會利用Sling模型匯出工具來序列化元件資料。 預設情況下，`com.adobe.cq.export.json.ContainerExporter`和`com.adobe.cq.export.json.ComponentExporter`都支援作為Sling模型適配器。 如有必要，您可以新增應調整請求以使用`RemoteContentRendererServlet`和實作`RemoteContentRendererRequestHandler#getSlingModelAdapterClasses`的類。 其他類必須擴展`ComponentExporter`。
+servlet會利用Sling模型匯出工具來序列化元件資料。 依預設， `com.adobe.cq.export.json.ContainerExporter` 和 `com.adobe.cq.export.json.ComponentExporter` 支援作為Sling型號轉接器。 如有必要，您可以新增類，讓要求適應使用 `RemoteContentRendererServlet` 和 `RemoteContentRendererRequestHandler#getSlingModelAdapterClasses`. 其他類必須擴展 `ComponentExporter`.

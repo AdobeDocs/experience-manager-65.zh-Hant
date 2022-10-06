@@ -1,8 +1,8 @@
 ---
 title: 系統資訊服務API
-seo-title: 系統資訊服務API
+seo-title: System information Service APIs
 description: 本檔案提供有關係統資訊服務所提供API的詳細資訊。
-seo-description: 本檔案提供有關係統資訊服務所提供API的詳細資訊。
+seo-description: This document provides detailed information about the APIs provided bythesystem information service.
 uuid: 7f624216-56e6-4d49-b9a1-3c9af045dabe
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
 exl-id: 4da96c8f-8bd0-4cad-9087-18e324f084e7
 source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '336'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
   <tr>
    <td><p>SystemInfo.properties</p></td>
    <td><p>https://'[server]:[port]'/rest/services/SystemInfo.properties'</p></td>
-   <td><p>此API是<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API的包裝函式。 它會擷取目前工作環境的設定。 </p></td>
+   <td><p>此API是的包裝函式 <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API。 它會擷取目前工作環境的設定。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.envVar</p></td>
@@ -106,7 +106,7 @@ ht-degree: 0%
   <tr>
    <td><p>SystemInfo.info</p></td>
    <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.info</p></td>
-   <td><p>此API是所有系統資訊服務API的包裝函式。 在內部，它會執行所有系統資訊API，並以zip格式下載資訊。 </p><p><i><strong>注意</strong>:SystemInfo.info不提供活動線程的計數和堆棧跟蹤。 </i></p></td>
+   <td><p>此API是所有系統資訊服務API的包裝函式。 在內部，它會執行所有系統資訊API，並以zip格式下載資訊。 </p><p><i><strong>附註</strong>:SystemInfo.info不提供活動線程的計數和堆棧跟蹤。 </i></p></td>
   </tr>
  </tbody>
 </table>

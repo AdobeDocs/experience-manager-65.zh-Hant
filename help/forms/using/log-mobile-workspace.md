@@ -1,8 +1,8 @@
 ---
 title: 登入AEM Forms應用程式
-seo-title: 登入AEM Forms應用程式
+seo-title: Logging in to AEM Forms app
 description: 登入AEM Forms應用程式的步驟。
-seo-description: 登入AEM Forms應用程式的步驟。
+seo-description: Steps to log into the AEM Forms app.
 uuid: da8cb0b2-6333-4ead-95f2-fb753149dc5e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,7 +12,7 @@ docset: aem65
 exl-id: d19cba33-0646-40d4-b4a3-b28d6db4a1f3
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 啟動AEM Forms應用程式時，您必須先提供登入憑證和AEM Forms伺服器URL。
 
-## 啟動應用程式{#to-start-the-app}的方式
+## 啟動應用程式的方式 {#to-start-the-app}
 
 1. 點選行動裝置上的AEM Forms應用程式圖示。
 1. 若要登入應用程式，請輸入使用者名稱、密碼和AEM Forms伺服器URL。
@@ -34,7 +34,7 @@ ht-degree: 0%
    >    * 您可以選取要透過應用程式登入的AEM Forms伺服器URL。
 
 
-登入應用程式時，系統會將您導向至&#x200B;[**Home**&#x200B;畫面](../../forms/using/home-screen.md)。
+登入應用程式時，會將您導向至 [**首頁** 螢幕](../../forms/using/home-screen.md).
 
 >[!NOTE]
 >

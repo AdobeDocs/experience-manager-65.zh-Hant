@@ -1,7 +1,8 @@
 ---
 title: 如何使用WS-security標頭傳遞憑據？
 description: 了解如何使用WS-security標頭傳遞憑證
-source-git-commit: 9b118ef4f852e3df1e717bb27b9be272caeb0456
+exl-id: 519d57ad-81ab-4caf-ae25-4390ae2eee13
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
@@ -38,5 +39,4 @@ ht-degree: 0%
 >[!MORELIKETHIS]
 >
 >* [使用WS-Security標頭傳遞憑據](assets/passing-credentials-using-ws-security-headers.pdf)
-
 

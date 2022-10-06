@@ -1,8 +1,8 @@
 ---
 title: 疑難排解
-seo-title: 疑難排解
+seo-title: Troubleshooting
 description: 本文涵蓋您在使用AEM時可能會遇到的部分安裝問題。
-seo-description: 本文涵蓋您在使用AEM時可能會遇到的部分安裝問題。
+seo-description: This article covers some of the installation issues you might encounter with AEM.
 uuid: 2ca898c3-b074-4ccd-a383-b92f226e6c14
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 本節包含可協助您進行疑難排解之記錄的詳細資訊，也包含您可能遇到AEM部分問題的相關資訊。
 
-## 疑難排解作者效能{#troubleshoot-author-performance}
+## 疑難排解作者效能 {#troubleshoot-author-performance}
 
 在製作例項上分析緩慢的效能可能會變得相當複雜。 作為第一步，需要確定效能正在降低的技術堆棧的級別。
 
@@ -29,25 +29,25 @@ ht-degree: 0%
 
 ![chlimage_1-75](assets/chlimage_1-75.png)
 
-## 基本優化{#basic-optimization}
+## 基本最佳化 {#basic-optimization}
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
-## 配置日誌檔案和審核日誌{#configuring-log-files-and-audit-logs}
+## 配置日誌檔案和審核日誌 {#configuring-log-files-and-audit-logs}
 
-AEM會記錄您為疑難排解安裝問題而可能要設定的詳細記錄。 有關資訊，請參閱[使用審核記錄和日誌檔案](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)部分。
+AEM會記錄您為疑難排解安裝問題而可能要設定的詳細記錄。 如需詳細資訊，請參閱 [使用審核記錄和日誌檔案](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) 區段。
 
-## 使用詳細選項{#using-the-verbose-option}
+## 使用詳細選項 {#using-the-verbose-option}
 
 啟動AEM WCM時，可以將 — v(verbose)選項添加到命令行，如下所示：java -jar cq-wcm-quickstart-&lt;version>.jar -v。
 
 詳細選項在控制台上顯示一些快速入門日誌輸出，以便用於故障排除。
 
-## 常見安裝問題{#common-installation-issues}
+## 常見安裝問題 {#common-installation-issues}
 
 以下章節說明一些安裝問題及其解決方案。
 
-### 按兩下Quickstart Jar後，該Jar將沒有任何效果，或使用其他程式（如Archive manager）{#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}開啟該jar檔案
+### 按兩下Quickstart Jar不會產生任何效果，或使用其他程式（例如，歸檔管理器）開啟jar檔案 {#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}
 
 這通常表示作業系統的案頭環境設定為開啟副檔名為.jar的檔案時出現問題。 也可能表示您尚未安裝Java，或您使用的Java版本不受支援。
 
@@ -64,16 +64,16 @@ AEM會記錄您為疑難排解安裝問題而可能要設定的詳細記錄。 �
 * 有時重新安裝支援的Java版本有助於恢復正確的關聯。
 * 您始終可以使用命令行或啟動/停止指令碼運行CRX，如本文檔前面所述。
 
-### 我在CRX上執行的應用程式擲回記憶體不足錯誤{#my-application-running-on-crx-throws-out-of-memory-errors}
+### 我在CRX上執行的應用程式擲回記憶體不足錯誤 {#my-application-running-on-crx-throws-out-of-memory-errors}
 
 >[!NOTE]
 >
->另請參閱[分析記憶體問題](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)。
+>另請參閱 [分析記憶體問題](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html).
 
 
 CRX公司本身的記憶體佔用空間很小。 如果在CRX內運行的應用程式記憶體要求較高，或請求記憶體密集型操作（如大事務），則需要使用適當的記憶體設定來啟動CRX運行的JVM實例。
 
-使用Java命令選項定義JVM的記憶體設定（例如，java -Xmx512m -jar crx&amp;ast;.jar將heapsize設定為512MB）。
+使用Java命令選項定義JVM的記憶體設定（例如，java -Xmx512m -jar crx&amp;ast;.jar可將heapsize設定為512MB）。
 
 從命令列啟動AEM WCM時，指定記憶體設定選項。 管理AEM WCM啟動的AEM WCM啟動/停止指令碼或自訂指令碼也可修改，以定義所需的記憶體設定。
 
@@ -83,9 +83,9 @@ CRX公司本身的記憶體佔用空間很小。 如果在CRX內運行的應用�
 
 java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
-這將生成堆轉儲檔案(**java_..hprof**)，以備流程記憶體不足時使用。 生成堆轉儲後，該進程可繼續運行。 通常，一個堆轉儲檔案就足以分析問題。
+這會生成堆轉儲檔案(**java_..hprof**)，而不是記憶體不足時。 生成堆轉儲後，該進程可繼續運行。 通常，一個堆轉儲檔案就足以分析問題。
 
-### 按兩下AEM Quickstart {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}後，瀏覽器中不會顯示「AEM歡迎」畫面
+### 按兩下「AEM快速入門」後，瀏覽器中不會顯示「AEM歡迎」畫面 {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
 
 在某些情況下，即使存放庫本身已成功執行，AEM WCM歡迎畫面也不會自動顯示。 這取決於作業系統設定、瀏覽器設定或類似因素。
 
@@ -97,13 +97,13 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 如果其他所有項目都失敗，請查看記錄，了解發生的情況。
 
-### 網站沒有透過Java 11 {#the-website-does-not-load-or-fails-intermittently-with-java11}間歇性載入或失敗
+### 網站沒有透過Java 11載入或間歇性失敗 {#the-website-does-not-load-or-fails-intermittently-with-java11}
 
 AEM 6.5在Java 11上執行時有一個已知問題，網站可能無法間歇性載入或失敗。
 
 若發生此情況，請依照下列因應措施：
 
-1. 開啟`crx-quickstart/conf/`資料夾下的`sling.properties`檔案
+1. 開啟 `sling.properties` 檔案 `crx-quickstart/conf/` 資料夾
 1. 找出下列行：
 
    `org.osgi.framework.bootdelegation=sun.,com.sun.`
@@ -114,21 +114,21 @@ AEM 6.5在Java 11上執行時有一個已知問題，網站可能無法間歇性
 
 1. 重新啟動執行個體。
 
-## 使用應用程式伺服器{#troubleshooting-installations-with-an-application-server}進行安裝故障排除
+## 使用應用程式伺服器進行安裝故障排除 {#troubleshooting-installations-with-an-application-server}
 
-### 要求geometrixx-outdour頁面{#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}時傳回Page Not Found
+### 要求geometrixx-outdoor頁面時傳回Page Not Found {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}
 
 **適用於WebLogic 10.3.5和JBoss 5.1**
 
 當geometrixx-outdoors/en頁面要求傳回404（找不到頁面）時，您可能會重新檢查是否已在這些特定應用程式伺服器所需的sling.properties檔案中設定其他sling屬性。
 
-有關詳細資訊，請參閱&#x200B;*部署AEM Web應用程式*&#x200B;步驟中的。
+請參閱 *部署AEM Web應用程式* 詳細資訊的步驟。
 
-### 響應標頭大小可以大於4Kb {#response-header-size-can-be-greater-than-kb}
+### 回應標頭大小可以大於4Kb {#response-header-size-can-be-greater-than-kb}
 
-502錯誤可能表示Web伺服器無法處理AEM HTTP回應標頭的大小。 AEM可產生HTTP回應標頭，其中包含大於4Kb的Cookie。 請確定已設定Servlet容器，讓最大回應標頭大小可超過4kb。
+502錯誤可能表示Web伺服器無法處理AEM HTTP回應標頭的大小。 AEM可產生包含大於4Kb Cookie的HTTP回應標題。 請確定已設定Servlet容器，讓最大回應標頭大小可超過4kb。
 
-例如，對於Tomcat 7.0,[HTTP連接器](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html)的maxHttpHeaderSize屬性可控制標頭大小的限制。
+例如，對於Tomcat 7.0, [HTTP連接器](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) 控制標頭大小的限制。
 
 ## 解除安裝Adobe Experience Manager {#uninstalling-adobe-experience-manager}
 
@@ -138,11 +138,11 @@ AEM 6.5在Java 11上執行時有一個已知問題，網站可能無法間歇性
 
 >[!NOTE]
 >
->Adobe強烈建議您先備份儲存庫再刪除AEM。 如果刪除整個&lt;cq-installation-directory>，則會刪除儲存庫。 若要在刪除前保留存放庫資料，請先將&lt;cq-installation-directory>/crx-quickstart/repository資料夾移動或複製到其他位置，然後再刪除其他資料夾。
+>Adobe強烈建議您先備份儲存庫再刪除AEM。 如果您刪除 &lt;cq-installation-directory>，您將刪除存放庫。 若要在刪除、移動或複製 &lt;cq-installation-directory>/crx-quickstart/repository資料夾，再刪除其他資料夾。
 
 如果安裝AEM時使用外部儲存（例如資料庫伺服器），則刪除資料夾不會自動刪除資料，但會刪除儲存配置，這會使JCR內容的還原變得困難。
 
-### 未在JBoss {#jsp-files-are-not-compiled-on-jboss}上編譯JSP檔案
+### JSP檔案未在JBoss上編譯 {#jsp-files-are-not-compiled-on-jboss}
 
 如果您安裝或更新JSP檔案以在JBoss上Experience Manager，且未編譯對應的servlet，請確保已正確配置JBoss JSP編譯器。 如需詳細資訊，請參閱
-[JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html)文章中的JSP編譯問題。
+[JBoss中JSP編譯問題](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) 文章。

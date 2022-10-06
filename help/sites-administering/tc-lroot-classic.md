@@ -1,8 +1,8 @@
 ---
 title: 使用傳統UI建立語言根
-seo-title: 使用傳統UI建立語言根
+seo-title: Creating a Language Root Using the Classic UI
 description: 了解如何使用傳統UI建立語言根目錄。
-seo-description: 了解如何使用傳統UI建立語言根目錄。
+seo-description: Learn how to create a language root using the Classic UI.
 uuid: 62e40d39-2868-4d3d-9af7-c60a1a658be0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,24 +10,24 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
-feature: 語言副本
+feature: Language Copy
 exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 1%
+source-wordcount: '316'
+ht-degree: 0%
 
 ---
 
-# 使用傳統UI{#creating-a-language-root-using-the-classic-ui}建立語言根
+# 使用傳統UI建立語言根{#creating-a-language-root-using-the-classic-ui}
 
-下列程式使用傳統UI來建立網站的語言根目錄。 如需詳細資訊，請參閱[建立語言根](/help/sites-administering/tc-prep.md#creating-a-language-root)。
+下列程式使用傳統UI來建立網站的語言根目錄。 如需詳細資訊，請參閱 [建立語言根](/help/sites-administering/tc-prep.md#creating-a-language-root).
 
 1. 在網站控制台的網站樹中，選擇網站的根頁面。 ([http://localhost:4502/siteadmin#](http://localhost:4502/siteadmin#))
 1. 新增代表網站語言版本的新子頁面：
 
    1. 按一下「新增>新增頁面」。
-   1. 在對話方塊中，指定標題和名稱。 名稱的格式必須為`<language-code>`或`<language-code>_<country-code>`，例如en、en_US、en_us、en_GB、en_gb。
+   1. 在對話方塊中，指定標題和名稱。 名稱的格式必須為 `<language-code>` 或 `<language-code>_<country-code>`，例如en_US、en_us、en_GB、en_gb。
 
       * 支援的語言代碼為小寫，由ISO-639-1定義的雙字母代碼
       * 支援的國家/地區代碼為小寫或大寫，由ISO 3166定義，為雙字母代碼

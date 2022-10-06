@@ -1,81 +1,79 @@
 ---
 title: AEM Forms鍵盤快速鍵
-seo-title: AEM Forms鍵盤快速鍵
+seo-title: AEM Forms Keyboard Shortcuts
 description: 本文列出可與適用於Windows和Macintosh作業系統的適用性表單編輯器、主題編輯器、內容瀏覽器和通信管理一起使用的鍵盤快速鍵。
-seo-description: 本文列出可與適用性表單編輯器、主題編輯器、內容瀏覽器和通信管理搭配使用的鍵盤快速鍵。
+seo-description: This article lists the keyboard shortcuts that can be used with Adaptive Form Editor, Theme Editor, Content Browser, and Correspondence Management.
 uuid: 1a16c2e6-c0f1-42e0-9ab4-692f3e58eeaf
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: author, correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
-feature: 適用性表單
+feature: Adaptive Forms
 exl-id: 01f4fdd3-fd2a-4e90-9c91-c1b05bbc2c6a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1147'
 ht-degree: 1%
 
 ---
 
-# AEM Forms鍵盤快速鍵{#aem-forms-keyboard-shortcuts}
+# AEM Forms鍵盤快速鍵 {#aem-forms-keyboard-shortcuts}
 
 本文列出可與適用於Windows和Macintosh作業系統的適用性表單編輯器、主題編輯器、內容瀏覽器和通信管理一起使用的鍵盤快速鍵。
 
 ## 適用性表單編輯器 {#adaptiveformeditor}
 
-| **動作** | **Windows上的快捷方式** | **Mac OS上的快捷方式** |
+| **動作** | **Windows上的快捷方式** | **Mac OS的捷徑** |
 |---|---|---|
 | 開啟所選適用性表單元件的「屬性」瀏覽器 | Alt+Enter | Alt+Return |
 | 針對所選適用性表單元件關閉屬性瀏覽器 | Ctrl+Alt+W | Command+Alt+W |
 | 在屬性瀏覽器中儲存所選適用性表單元件的變更 | Ctrl+S | Command+S |
 | 編輯所選適用性表單元件的規則 | Ctrl+Alt+Enter | Command+Alt+Return |
-| 在「預覽」和目前選取的模式之間切換（例如「編輯」、「支架」等） | Ctrl+Shift+M | Ctrl+Shift+M&amp;ast; |
-| 撤消上次更改 | Ctrl+Z | Ctrl+Z&amp;Amp;ast; |
-| 取消上次更改 | Ctrl+Y | Ctrl+Y&amp;Amp;ast; |
+| 在「預覽」和目前選取的模式之間切換（例如「編輯」、「支架」等） | Ctrl+Shift+M | Ctrl+Shift+M&amp;Ast; |
+| 撤消上次更改 | Ctrl+Z | Ctrl+Z&amp;Ast; |
+| 取消上次更改 | Ctrl+Y | Ctrl+Y&amp;Ast; |
 | 選取多個元件 | 按住Shift鍵並按一下 | 按住Shift鍵並按一下 |
-| 複製所選元件 | Ctrl-C | Ctrl-C&amp;Amp;ast; |
-| 剪切所選元件。 剪切元件貼到新位置後才會消失。 | Ctrl-X | Ctrl-X&amp;Amp;ast; |
+| 複製所選元件 | Ctrl-C | Ctrl-C&amp;Ast; |
+| 剪切所選元件。 剪切元件貼到新位置後才會消失。 | Ctrl-X | Ctrl-X&amp;Ast; |
 | 貼上元件 | Ctrl+V | Ctrl+V |
-| 刪除所選元件 | Ctrl+Del | Ctrl+Del&amp;Amp;ast; |
-| 刪除所選元件 | Ctrl+空格鍵 | Ctrl+Backspace&amp;ast; |
-| 在預覽模式中使用RTF編輯器元件時，將文字設為粗體 | Ctrl+B | Ctrl+B&amp;A;ast; |
-| 在預覽模式中使用RTF編輯器元件時將文字設為斜體 | Ctrl+I | Ctrl+I&amp;Amp;ast; |
-| 在預覽模式中使用RTF編輯器元件時，將文字設為粗體 | Ctrl+U | Ctrl+U&amp;Amp;ast; |
+| 刪除所選元件 | Ctrl+Del | Ctrl+Del&amp;Ast; |
+| 刪除所選元件 | Ctrl+空格鍵 | Ctrl+Backspace&amp;Ast; |
+| 在預覽模式中使用RTF編輯器元件時，將文字設為粗體 | Ctrl+B | Ctrl+B&amp;Ast; |
+| 在預覽模式中使用RTF編輯器元件時將文字設為斜體 | Ctrl+I | Ctrl+I&amp;Ast; |
+| 在預覽模式中使用RTF編輯器元件時，將文字設為粗體 | Ctrl+U | Ctrl+U&amp;Ast; |
 
 >[!NOTE]
 >
->在Mac OS上，以「&amp;ast；」標示的捷徑可搭配Ctrl鍵和「命令」鍵使用。
+>標有「&amp;ast；」的快捷鍵可搭配Mac OS上的Ctrl鍵和Command鍵使用。
 
 >[!NOTE]
 >
 >案頭設備上的多選：
 >
 >* 窗口：按住Ctrl鍵並按一下所需元件。
->* MAC OS:按住Command鍵並按一下所需元件。
-
+>* Mac OS:按住Command鍵並按一下所需元件。
 >
-
 
 
 ## 主題編輯器  {#themeeditor}
 
-| **動作** | **Windows上的快捷方式** | **Mac OS上的快捷方式** |
+| **動作** | **Windows上的快捷方式** | **Mac OS的捷徑** |
 |---|---|---|
 | 開啟主題中所選元件的屬性瀏覽器 | Alt+Enter | Alt+Return |
 | 關閉主題中所選元件的屬性瀏覽器 | Ctrl+Alt+W | Command+Alt+W |
-| 撤消上次更改 | Ctrl+Z | Ctrl+Z&amp;Amp;ast; |
-| 取消上次更改 | Ctrl+Y | Ctrl+Y&amp;Amp;ast; |
-| 在「屬性」瀏覽器中保存主題中選定元件的更改 | Ctrl+S | Ctrl+S&amp;Amp;ast; |
+| 撤消上次更改 | Ctrl+Z | Ctrl+Z&amp;Ast; |
+| 取消上次更改 | Ctrl+Y | Ctrl+Y&amp;Ast; |
+| 在「屬性」瀏覽器中保存主題中選定元件的更改 | Ctrl+S | Ctrl+S&amp;Ast; |
 
 >[!NOTE]
 >
->在Mac OS上，以「&amp;ast；」標示的捷徑可搭配Ctrl鍵和「命令」鍵使用。
+>標有「&amp;ast；」的快捷鍵可搭配Mac OS上的Ctrl鍵和Command鍵使用。
 
 ## 內容瀏覽器  {#contentbrowser}
 
-| **動作** | **Windows上的快捷方式** | **Mac OS上的快捷方式** |
+| **動作** | **Windows上的快捷方式** | **Mac OS的捷徑** |
 |---|---|---|
-| 聚焦時，展開內容瀏覽器的「表單物件」樹狀結構中的所有設定檔 | 按Ctrl+A鍵以選取所有折疊式，然後按向右箭頭以展開 | Command + A以選取所有設定符號，後面接著右箭頭以展開 |
+| 聚焦時，展開內容瀏覽器的「表單物件」樹狀結構中的所有設定檔 | 按Ctrl+A鍵以選取所有折疊式，然後按向右箭頭以展開 | 按Command+A鍵以選擇所有折疊式，然後按向右箭頭展開 |
 | 聚焦時，折疊內容瀏覽器的「表單對象」樹中的所有折疊符 | 按Ctrl+A鍵以選取所有折疊符，然後按左箭頭折疊 | Command + A以選取所有折疊符，後面接著向左箭頭以折疊 |
 | 展開「表單對象」樹中的選定折疊式功能表 | 向右鍵 | 向右鍵 |
 | 折疊「表單對象」樹中的選定折疊器 | 左箭頭 | 左箭頭 |
@@ -83,23 +81,23 @@ ht-degree: 1%
 | 在「Forms對象」樹中選擇前一個項 | 向上鍵 | 向上鍵 |
 
 [1] 針對Windows取代Ctrl +向右箭頭，針對Mac OS取代Command +向右箭頭。\
-[2] 取代Ctrl + Left Arrow for Windows，以及Command + Left Arrow for Mac OS。
+[2] 針對Windows取代Ctrl +向左箭頭，針對Mac OS取代Ctrl +向左箭頭。
 
 ## 通信管理 {#correspondence-management}
 
 本節列出了各種鍵盤和輔助工具快捷方式，可用於通信管理文本編輯器。 您可以在下列情況下使用這些捷徑：
 
-* 建立或編輯[文字](texts-interactive-communications.md)資產
-* 在[建立通信時點選相關的「編輯」圖示(![edittextmodule](assets/edittextmodule.png))後編輯文字模組。](/help/forms/using/create-correspondence.md)
+* 建立或編輯 [文字](texts-interactive-communications.md) 資產
+* 點選相關的「編輯」圖示( ![edittextmodule](assets/edittextmodule.png))時 [建立通信](/help/forms/using/create-correspondence.md).
 
-### 文本選擇和在{#text-selection-and-moving-the-cursor-around}周圍移動游標
+### 文本選擇和游標移動 {#text-selection-and-moving-the-cursor-around}
 
 <table> 
  <tbody>
   <tr>
-   <th><strong>操作</strong></th> 
+   <th><strong>作業</strong></th> 
    <th><strong>Windows上的快捷方式</strong></th> 
-   <th><strong>Mac OS上的快捷方式</strong><br /> </th> 
+   <th><strong>Mac OS的捷徑</strong><br /> </th> 
   </tr>
   <tr>
    <td><p>選擇當前字</p> </td> 
@@ -129,7 +127,7 @@ ht-degree: 1%
   <tr>
    <td><p>將游標移到下一個單詞的開頭</p> </td> 
    <td><p>Ctrl+向右鍵</p> </td> 
-   <td>Option+向右箭頭<em><sup>[1]</sup></em></td> 
+   <td>選項+向右箭頭 <em><sup>[1]</sup></em></td> 
   </tr>
   <tr>
    <td><p>將游標移到前一個單詞的開頭</p> </td> 
@@ -189,7 +187,7 @@ ht-degree: 1%
   <tr>
    <td><p>從目前位置到結尾（模組的）選取文字</p> </td> 
    <td><p>Shift + Ctrl +結束</p> </td> 
-   <td>Command + Shift +向下箭頭<br /> </td> 
+   <td>Command + Shift +向下鍵<br /> </td> 
   </tr>
   <tr>
    <td><p>從當前位置到開始（模組的）選擇文本</p> </td> 
@@ -210,14 +208,14 @@ ht-degree: 1%
 </table>
 
 
-### 文本對齊{#text-alignment}
+### 文字對齊方式 {#text-alignment}
 
 <table> 
  <tbody>
   <tr>
-   <th><p><strong>操作</strong></p> </th> 
+   <th><p><strong>作業</strong></p> </th> 
    <th><p><strong>Windows上的快捷方式<br /> </strong></p> </th> 
-   <th><strong>Mac OS上的快捷方式</strong></th> 
+   <th><strong>Mac OS的捷徑</strong></th> 
   </tr>
   <tr>
    <td><p>使段落中心對齊</p> </td> 
@@ -242,14 +240,14 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 還原和重做動作{#undo-and-redo-actions}
+### 還原和重做動作 {#undo-and-redo-actions}
 
 <table> 
  <tbody>
   <tr>
-   <th><strong>操作</strong></th> 
+   <th><strong>作業</strong></th> 
    <th><strong>Windows上的快捷方式 </strong></th> 
-   <th><strong>Mac OS上的快捷方式</strong><br /> </th> 
+   <th><strong>Mac OS的捷徑</strong><br /> </th> 
   </tr>
   <tr>
    <td><p>復原 </p> </td> 
@@ -264,14 +262,14 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 更改字型大小{#changing-font-size}
+### 更改字型大小 {#changing-font-size}
 
 <table> 
  <tbody>
   <tr>
-   <th><p><strong>操作</strong></p> </th> 
+   <th><p><strong>作業</strong></p> </th> 
    <th><p><strong>Windows上的快捷方式</strong></p> </th> 
-   <th><strong>Mac OS上的快捷方式</strong></th> 
+   <th><strong>Mac OS的捷徑</strong></th> 
   </tr>
   <tr>
    <td><p>增加字型大小 </p> </td> 
@@ -286,14 +284,14 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 刪除單詞{#deleting-a-word}
+### 刪除字 {#deleting-a-word}
 
 <table> 
  <tbody>
   <tr>
-   <th><strong>操作</strong></th> 
+   <th><strong>作業</strong></th> 
    <th><strong>Windows上的快捷方式</strong></th> 
-   <th><strong>Mac OS上的快捷方式</strong></th> 
+   <th><strong>Mac OS的捷徑</strong></th> 
   </tr>
   <tr>
    <td><p>刪除游標左側的字</p> </td> 
@@ -308,14 +306,14 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 複製並貼上{#copy-and-paste}
+### 複製並貼上 {#copy-and-paste}
 
 <table> 
  <tbody>
   <tr>
-   <th><strong>操作</strong></th> 
+   <th><strong>作業</strong></th> 
    <th><strong>Windows上的快捷方式<br /> </strong></th> 
-   <th><strong>Mac OS上的快捷方式</strong></th> 
+   <th><strong>Mac OS的捷徑</strong></th> 
   </tr>
   <tr>
    <td><p>貼上文字 </p> </td> 
@@ -340,9 +338,9 @@ ht-degree: 1%
 <table> 
  <tbody>
   <tr>
-   <th><strong>操作</strong></th> 
+   <th><strong>作業</strong></th> 
    <th><strong>Windows上的快捷方式</strong></th> 
-   <th><strong>Mac OS上的快捷方式</strong></th> 
+   <th><strong>Mac OS的捷徑</strong></th> 
   </tr>
   <tr>
    <td><p>將字母設為粗體</p> </td> 

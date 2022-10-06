@@ -1,8 +1,8 @@
 ---
 title: 轉譯使用者產生的內容
-seo-title: 轉譯使用者產生的內容
+seo-title: Translating User Generated Content
 description: 翻譯功能如何運作
-seo-description: 翻譯功能如何運作
+seo-description: How the translation feature works
 uuid: 7ee3242c-2aca-4787-a60d-b807161401ad
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,14 +13,14 @@ role: Admin
 exl-id: ac54f06e-1545-44bb-9f8f-970f161ebb72
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1108'
 ht-degree: 0%
 
 ---
 
 # 轉譯使用者產生的內容 {#translating-user-generated-content}
 
-AEM Communities的翻譯功能將[翻譯頁面內容](../../help/sites-administering/translation.md)的概念擴展到使用[社交元件框架(SCF)元件](scf.md)發佈到社區站點的用戶生成內容(UGC)。
+AEM Communities的翻譯功能擴展了 [翻譯頁面內容](../../help/sites-administering/translation.md) 發佈至社群網站的使用者產生的內容(UGC)，使用 [社交元件框架](scf.md).
 
 UGC的翻譯可讓網站訪客和成員透過移除語言障礙來體驗全球社群。
 
@@ -32,29 +32,29 @@ UGC的翻譯可讓網站訪客和成員透過移除語言障礙來體驗全球�
 * 來自法國的成員使用翻譯功能將日文評論翻譯成法文。
 * 全球通信。
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
-本文檔部分具體討論翻譯服務如何與UGC一起工作，同時假定您了解如何將AEM連接到[翻譯服務提供商](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider)，並通過配置[翻譯整合框架](../../help/sites-administering/tc-tic.md)將該服務整合到網站中。
+本檔案的這一節專門討論翻譯服務如何與UGC搭配運作，同時假設您了解如何將AEM連線至 [翻譯服務提供者](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider) 並透過設定 [翻譯整合框架](../../help/sites-administering/tc-tic.md).
 
 當翻譯服務提供者與站點相關聯時，站點的每個語言副本維護其通過SCF元件（如注釋）發佈的UGC線程。
 
-當除了翻譯服務提供者之外配置翻譯整合框架時，站點的每個語言副本可以共用UGC的單個線程，從而提供跨語言副本的全局通信。 配置的[全局共用儲存](#global-translation-of-ugc)使整個線程可以顯示，而不管從哪個語言副本查看它，都不能顯示討論線程。 此外，可以配置多個翻譯整合配置，為全局參與者的邏輯分組（例如按區域）指定不同的全局共用儲存。
+當除了翻譯服務提供者之外配置翻譯整合框架時，站點的每個語言副本可以共用UGC的單個線程，從而提供跨語言副本的全局通信。 所配置的不是按語言分隔的討論線程，而是 [全域共用存放區](#global-translation-of-ugc) 使整個線程都可以顯示，而不管從哪個語言副本查看。 此外，可以配置多個翻譯整合配置，為全局參與者的邏輯分組（例如按區域）指定不同的全局共用儲存。
 
 ## 預設翻譯服務 {#the-default-translation-service}
 
-AEM Communities包含[試用授權](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) ，適用於[預設翻譯服務](../../help/sites-administering/tc-msconf.md)，適用於多種語言。
+AEM Communities包含 [試用許可](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) a [預設翻譯服務](../../help/sites-administering/tc-msconf.md) 已啟用多種語言。
 
-當[建立社區站點](sites-console.md)時，當從[TRANSLATION](sites-console.md#translation)子面板中檢查`Allow Machine Translation`時，將啟用預設翻譯服務。
+當 [建立社群網站](sites-console.md)，預設翻譯服務會在 `Allow Machine Translation` 已從 [翻譯](sites-console.md#translation) 的下一頁。
 
 >[!CAUTION]
 >
 >預設翻譯服務僅用於演示。
 >
->對於生產系統，需要許可的翻譯服務。 如果未獲得許可，預設翻譯服務應為[關閉](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors)。
+>對於生產系統，需要許可的翻譯服務。 如果未獲得許可，預設翻譯服務應為 [關閉](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors).
 
 ## UGC的全球翻譯 {#global-translation-of-ugc}
 
-當網站有多個[語言副本](../../help/sites-administering/tc-prep.md)時，預設翻譯服務不識別在一個網站上輸入的UGC可能與在另一個網站上輸入的UGC有關，就像UGC基本上由同一元件（包含該元件的頁面的語言副本）產生一樣。
+當網站有多個 [語言副本](../../help/sites-administering/tc-prep.md)，預設翻譯服務不會識別在一個網站上輸入的UGC可能與在另一個網站上輸入的UGC相關，因為UGC實際上是由相同元件（包含元件的頁面的語言副本）產生。
 
 與參加一個對話的一個大型群組中的每個人相比，這類群組討論話題時，他們不知道在非他們自己的群組中發表的評論。
 
@@ -66,7 +66,7 @@ AEM Communities包含[試用授權](../../help/sites-administering/tc-msconf.md#
 >
 >全域轉譯前存在的任何UGC都不再可見。
 >
->雖然UGC仍位於[common store](working-with-srp.md)中，但它位於語言特定的UGC位置下，而配置全域轉換後新增的新內容則從全域共用儲存位置中擷取。
+>當UGC仍位於 [公用商店](working-with-srp.md)，則會位於語言特定的UGC位置下，而設定全域翻譯後新增的新內容，則會從全域共用存放區位置擷取。
 >
 >沒有移轉工具可將語言特定內容移動或合併至全域共用存放區。
 
@@ -75,20 +75,20 @@ AEM Communities包含[試用授權](../../help/sites-administering/tc-msconf.md#
 若要建立新的翻譯整合，將翻譯服務連接器與製作執行個體上的網站整合：
 
 * 以管理員身分登入
-* 從[主菜單](http://localhost:4502/)
-* 選擇&#x200B;**[!UICONTROL 工具]**
-* 選擇&#x200B;**[!UICONTROL 操作]**
-* 選擇&#x200B;**[!UICONTROL 雲]**
-* 選擇&#x200B;**[!UICONTROL Cloud Services]**
-* 向下捲動至&#x200B;**[!UICONTROL 翻譯整合]**
+* 從 [主菜單](http://localhost:4502/)
+* 選擇 **[!UICONTROL 工具]**
+* 選擇 **[!UICONTROL 操作]**
+* 選擇 **[!UICONTROL 雲]**
+* 選擇 **[!UICONTROL Cloud Services]**
+* 向下捲動至 **[!UICONTROL 翻譯整合]**
 
    ![翻譯整合](assets/translation-integration.png)
 
-* 選擇&#x200B;**[!UICONTROL 顯示配置]**
+* 選擇 **[!UICONTROL 顯示配置]**
 
    ![show-configuration](assets/translation-integration1.png)
 
-* 選擇&#x200B;**[!UICONTROL 可用配置]**&#x200B;旁的`[+]`表徵圖以建立新配置
+* 選擇 `[+]` 表徵圖 **[!UICONTROL 可用配置]** 建立新配置
 
 #### 建立配置對話框 {#create-configuration-dialog}
 
@@ -96,7 +96,7 @@ AEM Communities包含[試用授權](../../help/sites-administering/tc-msconf.md#
 
 * **[!UICONTROL 父設定]**
 
-   （必要）通常保留為預設值。 預設值為`/etc/cloudservices/translation`。
+   （必要）通常保留為預設值。 預設為 `/etc/cloudservices/translation`.
 
 * **[!UICONTROL 標題]**
 
@@ -106,30 +106,30 @@ AEM Communities包含[試用授權](../../help/sites-administering/tc-msconf.md#
 
    （可選）輸入配置的名稱。 預設值是基於標題的節點名稱。
 
-* 選擇&#x200B;**[!UICONTROL 建立]**
+* 選擇 **[!UICONTROL 建立]**
 
 #### 翻譯設定對話方塊 {#translation-config-dialog}
 
 ![configuration-dialog](assets/translation-integration3.png)
 
-有關詳細說明，請訪問[建立翻譯整合配置](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration)
+如需詳細指示，請造訪 [建立翻譯整合設定](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration)
 
-* **** Sitestab:可保留為預設值。
+* **[!UICONTROL 網站]** 標籤：可保留為預設值。
 
-* **** 通訊標籤：
-   * **[!UICONTROL 翻譯提]**
-供程式從下拉清單中選擇翻譯提供程式。預設為 
+* **[!UICONTROL 社群]** 標籤：
+   * **[!UICONTROL 翻譯提供者]**
+從下拉式清單中選取翻譯提供者。 預設為 
 `microsoft`，試用版。
 
-   * **[!UICONTROL 內]**
-容類別選擇描述要翻譯的內容的類別。預設為 
+   * **[!UICONTROL 內容類別]**
+選取描述要翻譯內容的類別。 預設為 
 `General.`
 
    * **[!UICONTROL 選擇地區……]**
-（可選）選擇儲存UGC的地區設定後，來自所有語言副本的貼文將出現在一個全域對話中。根據慣例，為網站的[基語](sites-console.md#translation)選擇語言環境。 選擇`No Common Store`將禁用全局轉換。 預設情況下，全局翻譯將被禁用。
+（可選）選擇儲存UGC的地區設定後，來自所有語言副本的貼文將出現在一個全域對話中。 根據慣例，選擇 [基礎語言](sites-console.md#translation) 的URL區段。 選擇 `No Common Store` 將禁用全局翻譯。 預設情況下，全局翻譯將被禁用。
 
-* **** Assetstab:可保留為預設值。
-* 選擇&#x200B;**[!UICONTROL OK]**
+* **[!UICONTROL 資產]** 標籤：可保留為預設值。
+* 選擇 **[!UICONTROL 確定]**
 
 #### 啟動 {#activation}
 

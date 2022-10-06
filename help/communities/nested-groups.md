@@ -61,7 +61,7 @@ ht-degree: 3%
 
 繼續使用下列設定瀏覽其他面板：
 
-* **[!UICONTROL 設計]**
+* **[!UICONTROL Design]**
 
    * 更改設計或允許預設父站點的設計。
    * 選擇 **[!UICONTROL 下一個]**.

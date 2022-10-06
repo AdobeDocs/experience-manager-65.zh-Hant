@@ -1,10 +1,11 @@
 ---
 title: 了解如何在AEM中建立內容片段模型
 description: 了解使用內容片段模型為無頭式CMS建立內容模型的概念和機制。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 

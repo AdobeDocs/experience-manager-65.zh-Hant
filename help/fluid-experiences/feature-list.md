@@ -2,12 +2,12 @@
 title: AEM Fluid Experiences功能清單
 description: 流暢的體驗功能清單
 index: n
-feature: 製作
+feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 8%
+source-wordcount: '350'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Adobe Experience Manager Fluid Experiences利用AEM Sites、AEM Dynamic Media和AEM Assets等強大功能集，為無頭式內容傳送提供強大的解決方案。
 
-AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送使用案例。 [完整的AEM Sites、資產和Dynamic Media解決方案提供標題式內容製作和傳送，以及AEM對混合使用案例的強大支援。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送使用案例。 透過提供有頭緒的內容製作和傳送，以及AEM對混合使用案例的強大支援 [完整的AEM Sites、資產和Dynamic Media解決方案。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
 
 下表定義AEM Fluid Experiences的功能，並連結至相關支援檔案。
 
@@ -37,7 +37,7 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 | [影像轉譯](/help/assets/image-presets.md) |
 | [中繼資料和標籤管理](/help/assets/metadata.md) |
 | [搜尋](/help/assets/manage-assets.md) |
-| [](/help/assets/manage-assets.md) 集合和燈 [箱](/help/assets/light-box.md) |
+| [集合](/help/assets/manage-assets.md) 和 [lightbox](/help/assets/light-box.md) |
 | [設定檔](/help/assets/processing-profiles.md) |
 | [版本控制](/help/assets/manage-assets.md) |
 | [重複檢測](/help/assets/duplicate-detection.md) |
@@ -54,13 +54,13 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 | 結構化內容的HTTP API（讀取） |
 | 適用於結構化內容的HTTP API(CRUD) |
 | [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) |
-| [動態媒體](/help/assets/dynamic-media.md) |
+| [Dynamic Media](/help/assets/dynamic-media.md) |
 
 ## 管理與整合功能 {#admin-and-integration-features}
 
 |  |
 |---|
-| [使用者管理](/help/sites-administering/user-group-ac-admin.md) |
+| [User management](/help/sites-administering/user-group-ac-admin.md) |
 | [多語言資產管理](/help/assets/multilingual-assets.md) |
 | [國際化](/help/sites-developing/i18n.md) |
 | [內容翻譯](/help/sites-administering/translation.md) |

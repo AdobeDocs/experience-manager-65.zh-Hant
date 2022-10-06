@@ -1,6 +1,6 @@
 ---
-title: Configure a Dynamic Media company alias account
-description: Learn how to configure a company alias account in Dynamic Media.
+title: 設定Dynamic Media公司別名帳戶
+description: 了解如何在Dynamic Media中設定公司別名帳戶。
 contentOwner: Rick Brough
 topic-tags: administering
 content-type: reference
@@ -18,38 +18,39 @@ ht-degree: 0%
 <!-- hide: yes
 hidefromtoc: yes -->
 
-# About configuring a Dynamic Media company alias account {#about-dm-alias-acct}
+# 關於設定Dynamic Media公司別名帳戶 {#about-dm-alias-acct}
 
-Dynamic Media URLs and viewer embed code contain your company account name. This account name was created at the time of provisioning Dynamic Media. There may be scenarios where your business has undergone an acquisition, or a rebranding, or you simply want to use a more memorable name. In such scenarios, it is not easy to manually update your company account name in all URLs and viewer embed code that comes out of the box. Furthermore, there is the possibility that you may impact your existing Dynamic Media repository or impact live content. To resolve this issue, you can configure a Dynamic Media company alias account.
+Dynamic Media URL和檢視器內嵌程式碼包含您的公司帳戶名稱。 此帳戶名稱是在布建Dynamic Media時建立。 在某些情況下，您的企業可能已經經歷了收購或品牌重塑，或者您只想使用一個更令人難忘的名稱。 在這類情況下，若要手動更新所有URL和檢視器內嵌程式碼（隨即推出）中的公司帳戶名稱並不容易。 此外，您也可能會影響現有的Dynamic Media存放庫或影響即時內容。 若要解決此問題，您可以設定Dynamic Media公司別名帳戶。
 
-A Dynamic Media company alias account ensures that all out-of-the-box Dynamic Media URLs and viewer embed code in the user interface reflect any updates made to your business context, such as rebranding. An alias account also has a positive impact on your SEO (Search Engine Optimization) because the Dynamic Media URLs and viewer embed code reflect the new company account name.
+Dynamic Media公司別名帳戶可確保使用者介面中的所有現成Dynamic Media URL和檢視器內嵌程式碼，都能反映對您業務內容所做的任何更新，例如品牌重塑。 別名帳戶對您的SEO（搜尋引擎最佳化）也有正面影響，因為Dynamic Media URL和檢視器內嵌程式碼會反映新的公司帳戶名稱。
 
-When you configure a Dynamic Media company alias account, be aware of the following:
+設定Dynamic Media公司別名帳戶時，請注意下列事項：
 
-* ** However, any URLs or viewers embed code with your original Dynamic Media company name continue to work for existing or new assets.
-* The Dynamic Media company alias account capability is limited to Experience Manager Assets Authoring mode and delivery. The company alias name does not work with Experience Manager Sites. WCM (Web Content Management) components are not updated for this change. Those components continue to work with the original Dynamic Media company name for fetching Dynamic Media assets.
-* **** However, you can create as many company alias accounts by way of a support case, and manually reflect the necessary alias name in the Dynamic Media URLs or viewer embed code.
-* [](/help/assets/invalidate-cdn-cache-dynamic-media.md)
-* **************
+* 您的任何現有Dynamic Media URL或檢視器內嵌程式碼 *live* 必須手動更新數字屬性，以反映新的別名。 不過，任何URL或檢視器內嵌程式碼搭配您原始的Dynamic Media公司名稱，仍可繼續用於現有或新資產。
+* Dynamic Media公司別名帳戶功能僅限於Experience Manager Assets編寫模式和傳送。 公司別名不適用於Experience Manager Sites。 未針對此變更更新WCM（Web內容管理）元件。 這些元件會繼續與原始Dynamic Media公司名稱搭配使用，以擷取Dynamic Media資產。
+* 您只能在 **[!UICONTROL 編輯Dynamic Media設定]** 頁面。 不過，您可以透過支援案例建立任意數量的公司別名帳戶，並在Dynamic Media URL或檢視器內嵌程式碼中手動反映必要的別名。
+* 現成可用 [快取失效](/help/assets/invalidate-cdn-cache-dynamic-media.md) Dynamic Media的功能會讓Cloud Services中「Dynamic Media設定」頁面中已設定之公司帳戶和公司別名帳戶的URL失效。
+* 當您在 **[!UICONTROL 編輯Dynamic Media設定]** 頁面，若要快取失效成功，您必須使 *both* the **[!UICONTROL 公司]** 帳戶和 **[!UICONTROL 公司別名]** 帳戶，同時。
 
-[](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)
+另請參閱 [在Cloud Services中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)
 
-## Configure a Dynamic Media company alias Account {#configure-dm-alias-account}
+## 設定Dynamic Media公司別名帳戶 {#configure-dm-alias-account}
 
-You begin configuring a Dynamic Media company alias account by first submitting a Support case. This step is required.
+您必須先提交支援案例，以開始設定Dynamic Media公司別名帳戶。 此步驟為必要。
 
-1. [](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html)
-1. Provide the following information in your support case:
+1. [使用Admin Console建立支援案例](https://helpx.adobe.com/tw/enterprise/using/support-for-experience-cloud.html).
+1. 在您的支援案例中提供下列資訊：
 
-   * The Dynamic Media company alias name you want to use. **
-   * Your region.
-   * [](/help/assets/using-rulesets-to-transform-urls.md)
+   * 您要使用的Dynamic Media公司別名。 名稱必須包含 *僅限* 字母（允許混合大小寫）、數字、連字型大小和下划線。
+   * 你的地區。
+   * 是否有 [規則集](/help/assets/using-rulesets-to-transform-urls.md) 以前是用來透過替代的Dynamic Media公司帳戶名稱來提供Dynamic Media內容。
 
-1. After the Dynamic Media alias account is created by Support, in Experience Manager as a Cloud Service Author instance, select the Experience Manager as a Cloud Service logo to access the global navigation console.
-1. ****
-1. ************
+1. 在「支援」建立Dynamic Media別名帳戶後，在「Experience Manageras a Cloud Service作者」例項中，選取Experience Manageras a Cloud Service標誌以存取全域導覽主控台。
+1. 在主控台左側，選取「工具」圖示，然後前往 **[!UICONTROL Cloud Services> Dynamic Media設定]**.
+1. 在Dynamic Media設定瀏覽器頁面的左窗格中，選取 **[!UICONTROL 全球]** (不要選取 **[!UICONTROL 全球]**)。 然後選取 **[!UICONTROL 編輯]**.
 
-   ![](/help/assets/assets-dm/dm-company-alias.png)
+   ![Dynamic Media公司別名文字欄位](/help/assets/assets-dm/dm-company-alias.png)
 
-1. ********
-1. **** The Dynamic Media company alias account is now saved and enabled; all URLs and viewer embed code for existing and new assets now reflect the new company alias name.
+1. 在 **[!UICONTROL 編輯Dynamic Media設定]** 頁面，在 **[!UICONTROL 公司別名]** 文字欄位，輸入您先前在支援案例中指定的Dynamic Media別名帳戶名稱。
+1. 在頁面的右上方，選取 **[!UICONTROL 儲存]**.
+Dynamic Media公司別名帳戶現已儲存並啟用；現在，現有和新資產的所有URL和檢視器內嵌程式碼都會反映新公司別名。

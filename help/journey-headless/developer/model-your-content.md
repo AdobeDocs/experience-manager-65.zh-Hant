@@ -1,7 +1,8 @@
 ---
 title: 如何建立內容模型
 description: 在AEM無頭式開發人員歷程的這部分，了解如何使用內容模型搭配內容片段模型和內容片段，為AEM無頭式傳送建立內容模型。
-source-git-commit: 0458a811b5bd062abbe8a42ec141bc786491e19e
+exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 2%
@@ -180,7 +181,7 @@ AEM提供下列資料類型，供您建立內容模型：
 * 單行文字
 * 多行文字
 * 數量
-* 布林值 (Boolean)
+* 布林值
 * 日期時間
 * 列舉
 * 標記

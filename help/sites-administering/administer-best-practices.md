@@ -1,8 +1,8 @@
 ---
 title: 最佳作法
-seo-title: 最佳作法
+seo-title: Best Practices
 description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助管理員快速上手並執行。
-seo-description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助管理員快速上手並執行。
+seo-description: Find best practices compiled by Adobe engineering and consulting teams to help administrators get up and running.
 uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '524'
 ht-degree: 3%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 3%
 
 以下幾方面提供有關最佳做法的檔案：
 
-* [資產](#assets)
-* [網站](#sites)
+* [Assets](#assets)
+* [Sites](#sites)
 
 如需製作、部署和維護或開發的最佳實務，請參閱下列其中一項：
 
@@ -57,8 +57,8 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>影像預設集選項</td>
-   <td>了解<a href="/help/assets/managing-image-presets.md#understanding-image-presets">影像預設集</a>和<a href="/help/assets/managing-image-presets.md#image-preset-options">影像預設集最佳作法</a></td>
-   <td>在<a href="/help/assets/managing-image-presets.md">管理影像預設集</a>的檔案中，以下主題說明了哪些影像預設集以及選擇影像預設集選項的最佳做法。</td>
+   <td>了解 <a href="/help/assets/managing-image-presets.md#understanding-image-presets">影像預設集</a> 和 <a href="/help/assets/managing-image-presets.md#image-preset-options">影像預設集最佳作法</a></td>
+   <td>作為 <a href="/help/assets/managing-image-presets.md">管理影像預設集</a>，以下主題說明哪些影像預設集以及選取影像預設集選項的最佳實務。</td>
   </tr>
   <tr>
    <td>Dynamic Media與Scene7直接整合</td>

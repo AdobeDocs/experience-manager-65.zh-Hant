@@ -7,12 +7,12 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
-feature: 資產管理
+feature: Asset Management
 role: User, Admin
 exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
 source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '112'
 ht-degree: 14%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 14%
 
 Dynamic Media資產（影像、影片和互動式資產）在上傳後會涉及許多工作，包括預覽、下載或發佈。
 
-預覽時，您也可以套用影像預設集（僅限影像）或檢視器預設集（適用於視訊和影像）。 您不能同時套用至資產。 請參閱「[套用檢視器預設集](/help/assets/viewer-presets.md)」和「[套用影像預設集](/help/assets/image-sets.md)」。
+預覽時，您也可以套用影像預設集（僅限影像）或檢視器預設集（適用於視訊和影像）。 您不能同時套用至資產。 請參閱 [套用檢視器預設集](/help/assets/viewer-presets.md) 和 [套用影像預設集](/help/assets/image-sets.md).
 
-有關管理資產的一般資訊，請參閱[管理資產](/help/assets/manage-assets.md)。
+有關管理資產的一般資訊，請參閱 [管理資產](/help/assets/manage-assets.md).
 
 以下主題說明如何管理Dynamic Media資產：
 

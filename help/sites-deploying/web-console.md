@@ -1,26 +1,26 @@
 ---
 title: Web 主控台
-seo-title: Web 主控台
+seo-title: Web Console
 description: 了解如何使用AEM Web主控台。
-seo-description: 了解如何使用AEM Web主控台。
+seo-description: Learn how to use the AEM web console.
 uuid: 7856b2b3-4216-421d-a315-cd9a55936362
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 4a33fddd-0399-40e4-8687-564fb6765b76
-feature: 設定
+feature: Configuring
 exl-id: 9acbf61f-73a8-4998-9421-dd933f30ac8a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
 
 # Web 主控台{#web-console}
 
-AEM中的Web主控台以[Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html)為基礎。 Apache Felix是社群的努力成果，目的是實作OSGi R4服務平台，其中包含OSGi架構和標準服務。
+AEM中的Web主控台以 [Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社群的努力成果，目的是實作OSGi R4服務平台，其中包含OSGi架構和標準服務。
 
 >[!NOTE]
 >
@@ -30,25 +30,25 @@ AEM中的Web主控台以[Apache Felix Web Management Console](https://felix.apac
 
 Web主控台提供一系列標籤，用於維護OSGi套件組合，包括：
 
-* [配置](#configuration):用於配置OSGi套件組合，因此是配置AEM系統參數的基礎機制
+* [設定](#configuration):用於配置OSGi套件組合，因此是配置AEM系統參數的基礎機制
 * [套件組合](#bundles):用於安裝套件
 * [元件](#components):用於控制AEM所需元件的狀態
 
 所做的任何更改都會立即應用於運行的系統。 不需要重新啟動。
 
-可從`../system/console`存取主控台；例如：
+此主控台可從 `../system/console`;例如：
 
 `http://localhost:4502/system/console/components`
 
 ## 設定 {#configuration}
 
-**Configuration**&#x200B;頁簽用於配置OSGi包，因此是配置AEM系統參數的基礎機制。
+此 **設定** tab可用來設定OSGi套件組合，因此是設定AEM系統參數的基礎機制。
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱[使用Web控制台進行OSGi配置](/help/sites-deploying/configuring-osgi.md) 。
+>請參閱 [使用Web控制台進行OSGi配置](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊。
 
-**Configuration**&#x200B;頁簽可通過以下任一項訪問：
+此 **設定** 標籤可透過下列任一方存取：
 
 * 下拉式功能表：
 
@@ -64,14 +64,14 @@ Web主控台提供一系列標籤，用於維護OSGi套件組合，包括：
 
 此畫面上的下拉式清單提供兩種設定：
 
-* ****
-設定可讓您更新現有的設定。這些ID具有永久性身分(PID)，可以是：
+* **配置**
+可讓您更新現有的設定。 這些ID具有永久性身分(PID)，可以是：
 
    * 標準及整體AEM;如果刪除，則這些值會恢復為預設設定。
    * 從工廠配置建立的實例；這些執行個體由使用者建立，deletion會移除執行個體。
 
-* **工廠**
-配置允許您建立所需功能對象的實例。
+* **工廠配置**
+可讓您建立所需功能物件的例項。
 
    系統會分配「永久性身分」，然後列在「設定」下拉式清單中。
 
@@ -105,7 +105,7 @@ Web主控台提供一系列標籤，用於維護OSGi套件組合，包括：
 
 ## 套件組合 {#bundles}
 
-**Bundles**&#x200B;標籤是安裝AEM所需OSGi套件組合的機制。 索引標籤可透過下列任一方法存取：
+此 **套件組合** tab是安裝AEM所需OSGi套件組合的機制。 索引標籤可透過下列任一方法存取：
 
 * 下拉式功能表：
 
@@ -123,7 +123,7 @@ Web主控台提供一系列標籤，用於維護OSGi套件組合，包括：
 
 * **安裝或更新**
 
-   您可以&#x200B;**瀏覽**&#x200B;來查找包含捆綁包的檔案，並指定它是否應立即&#x200B;**啟動**，以及在哪個&#x200B;**啟動級別**。
+   您可以 **瀏覽** 尋找包含套件的檔案，並指定是否應該 **開始** 立即 **開始層級**.
 
 * **重新載入**
 
@@ -153,11 +153,11 @@ Web主控台提供一系列標籤，用於維護OSGi套件組合，包括：
 
 >[!NOTE]
 >
->建議在&#x200B;**更新**&#x200B;之後執行&#x200B;**刷新包**。
+>之後 **更新** 建議您執行 **刷新包**.
 
 ## 元件 {#components}
 
-**元件**&#x200B;頁簽允許您啟用和/或禁用各種元件。 可透過下列任一方存取：
+此 **元件** 索引標籤可讓您啟用和/或停用各種元件。 可透過下列任一方存取：
 
 * 下拉式功能表：
 

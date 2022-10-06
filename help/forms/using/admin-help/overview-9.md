@@ -1,8 +1,8 @@
 ---
 title: Forms工作流程概觀
-seo-title: Forms工作流程概觀
+seo-title: Overview of Forms workflow
 description: Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流程。 使用表單工作流程，用戶還可以管理連接系統和人員的自動化業務流程應用程式。
-seo-description: Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流程。 使用表單工作流程，用戶還可以管理連接系統和人員的自動化業務流程應用程式。
+seo-description: Forms workflow lets users design, manage, and optimize human-centric processes. Using forms workflow, users can also manage automated business-process applications that connect systems and people.
 uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
 exl-id: 68a9d95a-d51c-4a97-ae36-d4cb16c6fac0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '254'
 ht-degree: 2%
 
 ---
 
-# Forms工作流程概述{#overview-of-forms-workflow}
+# Forms工作流程概觀 {#overview-of-forms-workflow}
 
 Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流程。 使用表單工作流程，用戶還可以管理連接系統和人員的自動化業務流程應用程式。
 
@@ -26,7 +26,7 @@ Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流
 <table>
  <thead>
   <tr>
-   <th><p>頁面</p></th>
+   <th><p>Page</p></th>
    <th><p>任務</p></th>
    <th><p>請參閱</p></th>
   </tr>

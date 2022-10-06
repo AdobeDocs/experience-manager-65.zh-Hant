@@ -1,26 +1,26 @@
 ---
 title: 將自訂動作新增至資產清單檢視
-seo-title: 將自訂動作新增至資產清單檢視
+seo-title: Add custom action to the Asset Listing view
 description: 本文說明如何將自訂動作新增至資產清單檢視
-seo-description: 本文說明如何將自訂動作新增至資產清單檢視
+seo-description: This article teaches how to add custom action to the Asset Listing view
 uuid: 45f25cfb-f08f-42c6-99c5-01900dd8cdee
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
-feature: 通信管理
+feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1360'
 ht-degree: 2%
 
 ---
 
 # 將自訂動作新增至資產清單檢視{#add-custom-action-to-the-asset-listing-view}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 通信管理解決方案可讓您將自訂動作新增至「管理資產」使用者介面。
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 * 一或多個資產類型或信函
 * 在選取單一、多個資產/信函或未選取時執行（動作/命令變為作用中）
 
-此自訂方式以新增「下載一般PDF」命令至信函的資產清單檢視的案例來示範。 此自訂案例可讓您的使用者下載單一選定信函的一般PDF。
+此自訂方式以新增「下載一般PDF」命令至「信函」的「資產清單」檢視的案例來示範。 此自訂案例可讓您的使用者下載單一所選信函的一般PDF。
 
 ### 必備條件 {#prerequisites}
 
@@ -41,15 +41,15 @@ ht-degree: 2%
 
 ## 案例：向字母清單用戶介面添加命令以下載普通PDF版本的字母 {#addcommandtoletters}
 
-下列步驟將「下載一般PDF」命令新增至「信函的資產清單」檢視，並讓使用者下載所選信函的一般PDF。 搭配適當的程式碼和參數使用這些步驟，您可以為不同資產新增一些其他功能，例如資料字典或文字。
+下列步驟將「下載一般PDF」命令新增至「信函」的「資產清單」檢視，並允許使用者下載所選信函的一般PDF。 搭配適當的程式碼和參數使用這些步驟，您可以為不同資產新增一些其他功能，例如資料字典或文字。
 
-若要自訂通信管理，讓使用者下載一般PDF的信函，請完成下列步驟：
+若要自訂通信管理，讓您的使用者下載一般PDF的信函，請完成下列步驟：
 
-1. 前往`https://'[server]:[port]'/[ContextPath]/crx/de`並以管理員身分登入。
+1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
 
 1. 在「應用程式」資料夾中，使用下列步驟建立名為「項目」的資料夾，其路徑/結構類似於位於選取資料夾中的項目資料夾：
 
-   1. 按一下右鍵以下路徑的&#x200B;**items**&#x200B;資料夾，然後選擇&#x200B;**覆蓋節點**:
+   1. 以滑鼠右鍵按一下 **項目** 資料夾（位於以下路徑），然後選取 **覆蓋節點**:
 
       `/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items`
 
@@ -74,21 +74,21 @@ ht-degree: 2%
 
    1. 按一下&#x200B;**「確定」**。資料夾結構會在應用程式資料夾中建立。
 
-      按一下「**全部保存**」。
+      按一下 **全部儲存**.
 
 1. 在新建立的項目資料夾下，為特定資產中的自訂按鈕/動作新增節點(範例：downloadFlatPDF)，使用下列步驟：
 
-   1. 按一下右鍵&#x200B;**items**&#x200B;資料夾，然後選擇&#x200B;**Create** > **Create Node**。
+   1. 以滑鼠右鍵按一下 **項目** 資料夾和選取 **建立** > **建立節點**.
 
-   1. 確保「建立節點」對話框具有以下值，然後按一下&#x200B;**OK**:
+   1. 確保「建立節點」對話框具有以下值，然後按一下 **確定**:
 
-      **名稱：** downloadFlatPDF（或您要為此屬性提供的名稱）
+      **名稱：** downloadFlatPDF（或您要為此屬性指定的名稱）
 
-      **類型：** nt:unstructured
+      **類型：** nt：非結構化
 
    1. 按一下您建立的新節點（此處為downloadFlatPDF）。 CRX顯示節點的屬性。
 
-   1. 將下列屬性新增至節點（此處為downloadFlatPDF），然後按一下&#x200B;**Save All**:
+   1. 將下列屬性新增至節點（此處為downloadFlatPDF），然後按一下 **全部儲存**:
 
       <table>
         <tbody>
@@ -105,12 +105,12 @@ ht-degree: 2%
         <tr>
         <td>foundation-collection-action</td>
         <td>字串</td>
-        <td><p>{"target":"。cq-manageasset-admin-childpages", "activeSelectionCount":"single","type":"LETTER"}<br /> <br /> <br /> <strong> activeSelectionCount</strong>可以是單個或多個，以允許選擇執行自定義操作的單個或多個資產。</p> <p><strong></strong> 類型為下列項目的一或多個（逗號分隔多個項目）:字母、文字、清單、條件、字典</p> </td>
+        <td><p>{"target":"。cq-manageasset-admin-childpages", "activeSelectionCount":"single","type":"LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> 可為單一或多個，以允許選取要執行自訂動作的單一或多個資產。</p> <p><strong>type</strong> 可以是下列項目的一或多個（逗號分隔多個項目）:字母、文字、清單、條件、字典</p> </td>
         </tr>
         <tr>
         <td>圖示</td>
         <td>字串</td>
-        <td>icon-download<br /> <br /> 「通信管理」顯示在命令/菜單左側的表徵圖。 如需不同的可用圖示和設定，請參閱<a href="https://docs.adobe.com/docs/en/aem/6-3/develop/ref/coral-ui/coralui3/Coral.Icon.html" target="_blank">CoralUI圖示檔案</a>.<br /> </td>
+        <td>圖示下載<br /> <br /> 「通信管理」(Correspondence Management)表徵圖顯示在命令/菜單的左側。 如需不同的可用圖示和設定，請參閱 <a href="https://docs.adobe.com/docs/en/aem/6-3/develop/ref/coral-ui/coralui3/Coral.Icon.html" target="_blank">CoralUI圖示檔案</a>.<br /> </td>
         </tr>
         <tr>
         <td>jcr:primaryType</td>
@@ -128,21 +128,21 @@ ht-degree: 2%
         <td>granite/ui/components/endor/actionbar/button</td>
         </tr>
         <tr>
-        <td>文字</td>
+        <td>text</td>
         <td>字串</td>
-        <td>下載一般PDF（或任何其他標籤）<br /> <br />資產清單介面中顯示的命令</td>
+        <td>下載普通PDF（或任何其他標籤）<br /> <br /> 顯示在「資產清單」介面中的命令</td>
         </tr>
         <tr>
         <td>標題</td>
         <td>字串</td>
-        <td>下載所選信函的一般PDF（或任何其他標籤/Alt文字）<br /> <br />標題是當使用者將游標暫留在自訂命令上時，Correspondence Management所顯示的替代文字。</td>
+        <td>下載所選信函的平面PDF（或任何其他標籤/替代文字）<br /> <br /> 標題是當使用者將游標暫留在自訂命令上時， 「通信管理」所顯示的替代文字。</td>
         </tr>
         </tbody>
        </table>
 
 1. 在應用程式資料夾中，使用下列步驟建立名為js的資料夾，其路徑/結構類似於位於管理資料夾中的項目資料夾：
 
-   1. 以滑鼠右鍵按一下以下路徑的&#x200B;**js**&#x200B;資料夾，然後選取&#x200B;**覆蓋節點**:
+   1. 以滑鼠右鍵按一下 **js** 資料夾（位於以下路徑），然後選取 **覆蓋節點**:
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
@@ -154,11 +154,11 @@ ht-degree: 2%
 
       **匹配節點類型：** 已選取
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在應用程式資料夾中建立。 按一下「**全部保存**」。
+   1. 按一下&#x200B;**「確定」**。資料夾結構會在應用程式資料夾中建立。 按一下 **全部儲存**.
 
 1. 在js資料夾中，使用按鈕的動作處理程式碼，建立名為formaction.js的檔案，步驟如下：
 
-   1. 按一下右鍵以下路徑的&#x200B;**js**&#x200B;資料夾，然後選擇&#x200B;**建立>建立檔案**:
+   1. 以滑鼠右鍵按一下 **js** 資料夾（位於以下路徑），然後選取 **建立>建立檔案**:
 
       `/apps/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
@@ -169,7 +169,7 @@ ht-degree: 2%
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js/formaction.js`
 
-      然後在formaction.js檔案（在/apps分支下）的結尾附加下列程式碼，然後按一下&#x200B;**儲存全部**:
+      然後在formaction.js檔案（在/apps分支底下）的結尾附加下列程式碼，然後按一下 **全部儲存**:
 
       ```javascript
       /* Action url for xml file to be added.*/
@@ -232,7 +232,7 @@ ht-degree: 2%
 
 1. 在應用程式資料夾中，使用下列步驟建立名為items的資料夾，其路徑/結構類似於位於actionhandlers資料夾中的items資料夾：
 
-   1. 按一下右鍵以下路徑的&#x200B;**items**&#x200B;資料夾，然後選擇&#x200B;**覆蓋節點**:
+   1. 以滑鼠右鍵按一下 **項目** 資料夾（位於以下路徑），然後選取 **覆蓋節點**:
 
       `/libs/fd/cm/ma/gui/content/commons/actionhandlers/items/`
 
@@ -246,21 +246,21 @@ ht-degree: 2%
 
    1. 按一下&#x200B;**「確定」**。資料夾結構會在應用程式資料夾中建立。
 
-   1. 按一下「**全部保存**」。
+   1. 按一下 **全部儲存**.
 
 1. 在新建立的項目節點下，為特定資產中的自訂按鈕/動作新增節點(範例：letterpdfdownloader)，使用下列步驟：
 
-   1. 按一下右鍵項資料夾，然後選擇&#x200B;**建立>建立節點**。
+   1. 按一下右鍵項目資料夾並選擇 **建立>建立節點**.
 
-   1. 確保「建立節點」對話框具有以下值，然後按一下&#x200B;**OK**:
+   1. 確保「建立節點」對話框具有以下值，然後按一下 **確定**:
 
-      **名稱：** letterpdfdownloader（或您要為此屬性指定的名稱）必須是唯一的。若您在此處使用不同名稱，請在formaction.js檔案的ACTION_URL變數中指定相同的名稱。)
+      **名稱：** letterpdfdownloader（或您要為此屬性指定的名稱）必須是唯一的。 若您在此處使用不同名稱，請在formaction.js檔案的ACTION_URL變數中指定相同的名稱。)
 
-      **類型：** nt:unstructured
+      **類型：** nt：非結構化
 
    1. 按一下您建立的新節點（此處為downloadFlatPDF）。 CRX顯示節點的屬性。
 
-   1. 將下列屬性新增至節點（此處為letterpdfdownloader），然後按一下&#x200B;**儲存全部**:
+   1. 將下列屬性新增至節點（此處為letterpdfdownloader），然後按一下 **全部儲存**:
 
       | **名稱** | **類型** | **值** |
       |---|---|---|
@@ -270,18 +270,18 @@ ht-degree: 2%
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-   1. 按一下右鍵以下路徑的&#x200B;**admin**&#x200B;資料夾，然後選擇&#x200B;**建立>建立檔案**:
+   1. 以滑鼠右鍵按一下 **管理員** 資料夾（位於以下路徑），然後選取 **建立>建立檔案**:
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
       將檔案命名為POST.jsp。 (檔案名稱只需POST.jsp。)
 
-   1. 按兩下&#x200B;**POST.jsp**&#x200B;檔案，以在CRX中開啟它。
-   1. 將以下代碼添加到POST.jsp檔案中，然後按一下&#x200B;**保存全部**:
+   1. 按兩下 **POST.jsp** 檔案以在CRX中開啟。
+   1. 將以下代碼添加到POST.jsp檔案中，然後按一下 **全部儲存**:
 
-      此代碼是信函轉譯服務專屬的代碼。 針對任何其他資產，將該資產的Java程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱[AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en)。
+      此代碼是信函轉譯服務專屬的代碼。 針對任何其他資產，將該資產的Java程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱 [AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en).
 
-      如需AEM程式庫的詳細資訊，請參閱AEM [元件](/help/sites-developing/components.md)。
+      如需AEM程式庫的詳細資訊，請參閱AEM [元件](/help/sites-developing/components.md).
 
       ```xml
       /*Import libraries. Here we are downloading letter flat pdf with input xml data so we require letterRender Api. For any other Module functionality we need to first import that library. */
@@ -348,26 +348,26 @@ ht-degree: 2%
       %>
       ```
 
-## 使用自訂功能{#download-flat-pdf-of-a-letter-using-the-custom-functionality}下載一般信函PDF
+## 使用自訂功能下載一般PDF的信函 {#download-flat-pdf-of-a-letter-using-the-custom-functionality}
 
-新增自訂功能以下載信函的一般PDF後，您可以使用下列步驟來下載所選信函的一般PDF版本：
+新增自訂功能以下載一般PDF的信函後，您可以使用下列步驟來下載所選信函的一般PDF版本：
 
-1. 前往`https://'[server]:[port]'/[ContextPath]/projects.html`並登入。
+1. 前往 `https://'[server]:[port]'/[ContextPath]/projects.html` 並登入。
 
-1. 選擇&#x200B;**Forms >字母**。 通信管理列出系統中可用的信函。
-1. 按一下&#x200B;**選擇**，然後按一下字母選擇它。
-1. 選擇&#x200B;**更多** > **&lt;下載一般PDF>**（使用本文說明建立的自訂功能）。 將顯示「以PDF格式下載信函」對話框。
+1. 選擇 **Forms >字母**. 通信管理列出系統中可用的信函。
+1. 按一下 **選擇** 然後按一下字母加以選取。
+1. 選擇 **更多** > **&lt;download flat=&quot;&quot; pdf=&quot;&quot;>** （依照本文指示建立的自訂功能）。 「Download Letter as Tage(下載PDF)」對話框出現。
 
-   菜單項名稱、功能和alt-text是根據[方案中建立的自定義項：向字母清單用戶介面添加命令以下載普通PDF版本的字母。](#addcommandtoletters)
+   功能表項目名稱、功能和alt-text是根據 [案例：向字母清單用戶介面添加命令以下載普通PDF版本的字母。](#addcommandtoletters)
 
-   ![自訂功能：下載一般PDF](assets/5_downloadflatpdf.png)
+   ![自訂功能：下載普通PDF](assets/5_downloadflatpdf.png)
 
-1. 在「以PDF格式下載信函」對話方塊中，選取您要從中填入PDF資料的相關XML。
+1. 在「以PDF方式下載信函」對話方塊中，選取您要在PDF中填入資料的相關XML。
 
    >[!NOTE]
    >
-   >在將信函下載為一般PDF之前，您可以使用&#x200B;**建立報表**&#x200B;選項，以信函中的資料建立XML檔案。
+   >在將信函下載為一般PDF之前，您可以使用 **建立報表** 選項。
 
-   ![以PDF格式下載信函](assets/6_downloadflatpdf.png)
+   ![下載信函作為PDF](assets/6_downloadflatpdf.png)
 
-   信件會以一般PDF格式下載至您的電腦。
+   該信作為普通PDF下載到您的電腦。

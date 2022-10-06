@@ -1,24 +1,24 @@
 ---
 title: 使用Mutual SSL進行複製
-seo-title: 使用Mutual SSL進行複製
+seo-title: Replicating Using Mutual SSL
 description: 了解如何設定AEM，讓製作執行個體上的復寫代理使用相互SSL(MSSL)連線至發佈執行個體。 復寫代理程式和發佈執行個體上的HTTP服務會使用憑證來相互驗證。
-seo-description: 了解如何設定AEM，讓製作執行個體上的復寫代理使用相互SSL(MSSL)連線至發佈執行個體。 復寫代理程式和發佈執行個體上的HTTP服務會使用憑證來相互驗證。
+seo-description: Learn how to configure AEM so that a replication agent on the author instance uses mutual SSL (MSSL) to connect with the publish instance. Using MSSL, the replication agent and the HTTP service on the publish instance use certificates to authenticate each other.
 uuid: f4bc5e61-a58c-4fd2-9a24-b31e0c032c15
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
-feature: 設定
+feature: Configuring
 exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1409'
 ht-degree: 3%
 
 ---
 
-# 使用相互SSL{#replicating-using-mutual-ssl}進行複製
+# 使用Mutual SSL進行複製{#replicating-using-mutual-ssl}
 
 設定AEM，讓製作執行個體上的復寫代理使用相互SSL(MSSL)連線至發佈執行個體。 復寫代理程式和發佈執行個體上的HTTP服務會使用憑證來相互驗證。
 
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 您必須確定執行複製的用戶帳戶。 在發佈執行個體上安裝信任的作者憑證時，憑證會與此使用者帳戶相關聯。
 
-## 獲取或建立MSSL {#obtaining-or-creating-credentials-for-mssl}的憑據
+## 取得或建立MSSL的憑證 {#obtaining-or-creating-credentials-for-mssl}
 
 製作和發佈執行個體需要私密金鑰和公開憑證：
 
@@ -45,11 +45,11 @@ ht-degree: 3%
 * 證書必須包含在pkcs#12或JKS格式中。 此外，「CER」格式中的憑證也可新增至Granite Truststore。
 * 證書可由認可的CA自行簽署或簽署。
 
-### JKS格式{#jks-format}
+### JKS格式 {#jks-format}
 
-以JKS格式產生私密金鑰和憑證。 私鑰儲存在KeyStore檔案中，證書儲存在TrustStore檔案中。 使用[Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html)來建立兩者。
+以JKS格式產生私密金鑰和憑證。 私鑰儲存在KeyStore檔案中，證書儲存在TrustStore檔案中。 使用 [Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html) 來建立兩者。
 
-使用Java `keytool`建立私鑰和憑據，請執行以下步驟：
+使用Java執行下列步驟 `keytool` 要建立私鑰和憑據，請執行以下操作：
 
 1. 在KeyStore中產生私密 — 公開金鑰組。
 1. 建立或取得憑證：
@@ -84,9 +84,9 @@ ht-degree: 3%
    | -file | author.cer | publish.cer |
    | -keystore | author.keystore | publish.keystore |
 
-### pkcs#12格式{#pkcs-format}
+### pkcs#12格式 {#pkcs-format}
 
-以pkcs#12格式生成私鑰和證書。 使用[openSSL](https://www.openssl.org/)來產生。 請依照下列步驟產生私密金鑰和憑證要求。 若要取得憑證，請使用您的私密金鑰（自行簽署憑證）簽署要求，或將要求傳送至CA。 然後，生成包含私鑰和證書的pkcs#12歸檔檔案。
+以pkcs#12格式生成私鑰和證書。 使用 [openSSL](https://www.openssl.org/) 來產生。 請依照下列步驟產生私密金鑰和憑證要求。 若要取得憑證，請使用您的私密金鑰（自行簽署憑證）簽署要求，或將要求傳送至CA。 然後，生成包含私鑰和證書的pkcs#12歸檔檔案。
 
 1. 開啟命令列視窗或終端機。 要建立私鑰，請使用下表中的選項值輸入以下命令：
 
@@ -136,7 +136,7 @@ ht-degree: 3%
    | -在 | author.cer | publish.cer |
    | -名稱 | 作者 | 發佈 |
 
-## 在作者{#install-the-private-key-and-truststore-on-author}上安裝私密金鑰和TrustStore
+## 在作者上安裝私密金鑰和TrustStore {#install-the-private-key-and-truststore-on-author}
 
 在製作執行個體上安裝下列項目：
 
@@ -145,7 +145,7 @@ ht-degree: 3%
 
 若要執行下列程式，您必須以製作執行個體管理員的身分登入。
 
-### 安裝製作私密金鑰{#install-the-author-private-key}
+### 安裝製作私密金鑰 {#install-the-author-private-key}
 
 1. 開啟製作例項的「使用者管理」頁面。 ([http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html))
 1. 若要開啟使用者帳戶的屬性，請按一下或點選您的使用者名稱。
@@ -164,7 +164,7 @@ ht-degree: 3%
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-### 安裝發佈憑證{#install-the-publish-certificate}
+### 安裝發佈憑證 {#install-the-publish-certificate}
 
 1. 開啟製作例項的「使用者管理」頁面。 ([http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html))
 1. 若要開啟使用者帳戶的屬性，請按一下或點選您的使用者名稱。
@@ -179,7 +179,7 @@ ht-degree: 3%
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
-## 在發佈{#install-private-key-and-truststore-on-publish}時安裝私鑰和TrustStore
+## 在發佈時安裝私密金鑰和TrustStore {#install-private-key-and-truststore-on-publish}
 
 在發佈執行個體上安裝下列項目：
 
@@ -188,7 +188,7 @@ ht-degree: 3%
 
 若要執行下列程式，您必須以發佈執行個體管理員的身分登入。
 
-### 安裝發佈私鑰{#install-the-publish-private-key}
+### 安裝發佈私密金鑰 {#install-the-publish-private-key}
 
 1. 開啟發佈例項的「使用者管理」頁面。 ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
 1. 若要開啟使用者帳戶的屬性，請按一下或點選您的使用者名稱。
@@ -199,7 +199,7 @@ ht-degree: 3%
 1. 輸入密鑰儲存的別名和密碼。 輸入私鑰的別名和密碼，然後按一下提交。
 1. 關閉「KeyStore管理」對話框。
 
-### 安裝製作憑證{#install-the-author-certificate}
+### 安裝製作憑證 {#install-the-author-certificate}
 
 1. 開啟發佈例項的「使用者管理」頁面。 ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
 1. 找到您用來執行復寫請求的使用者帳戶，然後按一下或點選使用者名稱。
@@ -209,9 +209,9 @@ ht-degree: 3%
 1. 確定已選取「將憑證對應至使用者」選項。 按一下「選取憑證檔案」，選取「author.cer」，然後按一下「開啟」。
 1. 按一下「提交」，然後關閉「TrustStore管理」對話框。
 
-## 在發佈{#configure-the-http-service-on-publish}時配置HTTP服務
+## 在發佈時設定HTTP服務 {#configure-the-http-service-on-publish}
 
-在發佈執行個體上設定Apache Felix Jetty Based HTTP Service的屬性，以便在存取Granite金鑰存放區時使用HTTPS。 服務的PID為`org.apache.felix.http`。
+在發佈執行個體上設定Apache Felix Jetty Based HTTP Service的屬性，以便在存取Granite金鑰存放區時使用HTTPS。 服務的PID為 `org.apache.felix.http`.
 
 下表列出了配置是否使用Web控制台所需的OSGi屬性。
 
@@ -222,9 +222,9 @@ ht-degree: 3%
 | HTTPS 連接埠 | org.osgi.service.http.port.secure | 8443（或其他需要的埠） |
 | 用戶端憑證 | org.apache.felix.https.clientcertificate | &quot;需要客戶端證書&quot; |
 
-## 在作者{#configure-the-replication-agent-on-author}上設定復寫代理
+## 在作者上設定復寫代理 {#configure-the-replication-agent-on-author}
 
-在連線至發佈執行個體時，在製作執行個體上設定復寫代理，以使用HTTPS通訊協定。 有關配置複製代理的完整資訊，請參見[配置複製代理](/help/sites-deploying/replication.md#configuring-your-replication-agents)。
+在連線至發佈執行個體時，在製作執行個體上設定復寫代理，以使用HTTPS通訊協定。 有關配置複製代理的完整資訊，請參見 [配置複製代理](/help/sites-deploying/replication.md#configuring-your-replication-agents).
 
 要啟用MSSL，請根據下表配置「傳輸」頁簽上的屬性：
 

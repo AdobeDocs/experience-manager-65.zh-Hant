@@ -1,8 +1,8 @@
 ---
 title: 最佳作法
-seo-title: 最佳作法
+seo-title: Best Practices
 description: 如何以最有效率、最有效的方式使用AEM
-seo-description: 如何以最有效率、最有效的方式使用AEM
+seo-description: How to use AEM in the most efficient and most effective way possible
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '287'
 ht-degree: 5%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 5%
 
 以下幾方面提供有關最佳做法的檔案：
 
-* [資產](#assets)
-* [網站](#sites)
-* [表單](#forms)
+* [Assets](#assets)
+* [Sites](#sites)
+* [Forms](#forms)
 
 如需管理、部署和維護或開發的最佳實務，請參閱下列其中一項：
 
@@ -71,11 +71,11 @@ ht-degree: 5%
 |  |  |  |
 |---|---|---|
 | 製作工具 | [製作環境和工具](/help/sites-authoring/author-environment-tools.md) | 提供製作頁面所用工具的概觀。 |
-| 組織頁面 | [建立及組織頁面](/help/sites-authoring/managing-pages.md) | 提供如何以最佳方式組織頁面的概觀，包括命名慣例。 |
+| 組織頁面 | [建立及組織頁面](/help/sites-authoring/managing-pages.md) | 提供如何以最佳方式組織頁面的概述，包括命名慣例。 |
 
-## 表單 {#forms}
+## Forms {#forms}
 
 |  |  |  |
 |---|---|---|
-| 適用性表單 | [使用最適化表單的最佳實務](/help/forms/using/adaptive-forms-best-practices.md) | 說明設定、製作和自訂最適化表單的最佳實務。 |
-| HTML5表單 | [設計HTML5表單的最佳作法](/help/forms/using/best-practices-for-html5-forms.md) | 說明處理HTML5表單版面與設計的最佳作法。 |
+| 調適型表單 | [使用最適化表單的最佳實務](/help/forms/using/adaptive-forms-best-practices.md) | 說明設定、製作和自訂最適化表單的最佳實務。 |
+| HTML5表單 | [設計HTML5表單的最佳實務](/help/forms/using/best-practices-for-html5-forms.md) | 說明處理HTML5表單版面與設計的最佳實務。 |

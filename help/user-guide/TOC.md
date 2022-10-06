@@ -4,12 +4,12 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5使用手冊
 user-guide-description: 概略說明了解、安裝、管理和使用AEM 6.5所需的所有必要資源
-feature: 發行資訊
+feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 4%
+source-wordcount: '60'
+ht-degree: 1%
 
 ---
 

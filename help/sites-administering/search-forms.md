@@ -15,11 +15,11 @@ ht-degree: 11%
 
 # 設定搜尋表單{#configuring-search-forms}
 
-使用&#x200B;**搜尋Forms**&#x200B;來自訂在各種AEM主控台和/或製作環境面板中可用的搜尋面板中所使用的搜尋述詞選擇。 自訂這些面板，可讓搜尋功能根據您的特定需求而多用。
+使用 **搜尋Forms** 自訂在各種AEM主控台和/或製作環境面板中可用的搜尋面板中所使用的搜尋述詞選擇。 自訂這些面板，可讓搜尋功能根據您的特定需求而多用。
 
-預述詞](#predicates-and-their-settings)的[範圍可立即使用。 您可以新增多個述詞，其中包括（其中包括）「屬性述詞」以搜尋符合您所指定之單一屬性的資產，或「選項述詞」以搜尋符合您為特定屬性所指定之一或多個值的資產。
+A [謂語範圍](#predicates-and-their-settings)可立即使用。 您可以新增多個述詞，其中包括（其中包括）「屬性述詞」以搜尋符合您所指定之單一屬性的資產，或「選項述詞」以搜尋符合您為特定屬性所指定之一或多個值的資產。
 
-您可以[設定在各種主控台和資產瀏覽器（編輯頁面時）中使用的搜尋表單](#configuring-your-search-forms)。 可通過以下方式訪問用於配置這些表單的[對話框：](#configuring-your-search-forms)
+您可以 [配置搜索表單](#configuring-your-search-forms) 用於各種主控台和資產瀏覽器（編輯頁面時）。 此 [配置這些表單的對話框](#configuring-your-search-forms) 可透過下列方式存取：
 
 * **工具**
 
@@ -27,7 +27,7 @@ ht-degree: 11%
 
       * **搜尋表單**
 
-首次訪問此控制台時，您會看到所有配置都帶有掛鎖符號。 這表示適當的設定是預設（現成）設定，且無法刪除。 自定義配置後，鎖定將消失 — 除非您[刪除自定義配置](#deleting-a-configuration-to-reinstate-the-default)，在這種情況下，預設（和掛鎖指示器）將恢復。
+首次訪問此控制台時，您會看到所有配置都帶有掛鎖符號。 這表示適當的設定是預設（現成）設定，且無法刪除。 自訂設定後，鎖就會消失 — 除非您 [刪除自訂配置](#deleting-a-configuration-to-reinstate-the-default)，則會恢復預設值（和掛鎖指示器）。
 
 ![chlimage_1-374](assets/chlimage_1-374.png)
 
@@ -95,7 +95,7 @@ ht-degree: 11%
 
    此設定會定義搜尋專案時使用者可用的搜尋選項。
 
-## 謂語及其設定{#predicates-and-their-settings}
+## 謂語及其設定 {#predicates-and-their-settings}
 
 ### 謂語 {#predicates}
 
@@ -124,7 +124,7 @@ ht-degree: 11%
   </tr>
   <tr>
    <td>元件 </td>
-   <td>可讓作者搜尋/篩選含有特定元件的頁面。 例如，影像庫。<br /> </td>
+   <td>可讓作者搜尋/篩選含有特定元件的頁面。 例如影像庫。<br /> </td>
    <td>
     <ul>
      <li>欄位標籤</li>
@@ -190,7 +190,7 @@ ht-degree: 11%
   </tr>
   <tr>
    <td>選項 </td>
-   <td><p>選項是使用者建立的內容節點。</p> <p>如需詳細資訊，請參閱<a href="#addinganoptionspredicate">新增選項述詞</a> 。</p> </td>
+   <td><p>選項是使用者建立的內容節點。</p> <p>請參閱 <a href="#addinganoptionspredicate">新增選項述詞</a> 以取得更多資訊。</p> </td>
    <td>
     <ul>
      <li>欄位標籤</li>
@@ -283,7 +283,7 @@ ht-degree: 11%
   </tr>
   <tr>
    <td>相對日期 </td>
-   <td>根據資產建立的相對日期搜尋資產<br /> </td>
+   <td>根據資產建立的相對日期來搜尋資產<br /> </td>
    <td>
     <ul>
      <li>欄位標籤</li>
@@ -330,19 +330,15 @@ ht-degree: 11%
 >
 >* 常見的搜尋述詞定義於：
    >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
-   >
-   >
-   >
-
-* 僅與網站管理員（傳統UI）相關的搜尋述詞位於：
+>
+>
+>* 僅與網站管理員（傳統UI）相關的搜尋述詞位於：
    > `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
    >   * 這些規則已過時，且僅適用於回溯相容性。
-
 >
->
-此資訊僅供參考，您不得對`/libs`進行變更。
+>此資訊僅供參考，您不得變更 `/libs`.
 
-### 謂詞設定{#predicate-settings}
+### 謂詞設定 {#predicate-settings}
 
 根據謂語，選擇的設定可用於配置：
 
@@ -360,9 +356,9 @@ ht-degree: 11%
 
 * **屬性名稱**
 
-   要搜尋的屬性。 它使用相對路徑，通配符`*/*/*`指定相對於`jcr:content`節點的屬性深度（每個星號表示一個節點級別）。
+   要搜尋的屬性。 它會使用相對路徑和萬用字元 `*/*/*` 指定相對於 `jcr:content` 節點（每個星號代表一個節點級別）。
 
-   如果只想在`jcr:content`節點上具有`x`屬性的資源的第一級子節點上搜索，請使用`*/jcr:content/x`
+   如果您只想在具有 `x` 屬性 `jcr:content` 節點使用 `*/jcr:content/x`
 
 * **屬性深度**
 
@@ -370,44 +366,44 @@ ht-degree: 11%
 
 * **屬性值**
 
-   屬性值作為絕對字串或作為表達式語言；例如`cq:Page`或
+   屬性值作為絕對字串或作為表達式語言；例如， `cq:Page` 或
 
    `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`。
 
 * **範圍文字**
 
-   **日期範圍**&#x200B;謂語中範圍欄位的標籤。
+   範圍欄位在 **日期範圍** 謂語。
 
 * **選項路徑**
 
-   用戶可以使用謂詞設定頁簽中的路徑瀏覽器選擇路徑。 選取&#x200B;**+**&#x200B;圖示後，系統會將選取項目新增至有效選項清單（視需要而移除的&#x200B;**-**&#x200B;圖示）。
+   用戶可以使用謂詞設定頁簽中的路徑瀏覽器選擇路徑。 選取 **+** 表徵圖用於將所選內容添加到有效選項清單(然後 **-** 圖示以移除（如果需要）。
 
    這些選項是用戶建立的內容節點，具有以下結構：
 
    `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
-* **選項節**
-點路徑與 
-**選項路徑**，只有這在通用述詞欄位中，另一個是資產專屬的。
+* **選項節點路徑**
+實際上與 
+**選項路徑**，只有此欄位在通用述詞欄位中，而另一個欄位是資產專屬欄位。
 
 * **單選**
-項如果選中，則選項將呈現為僅允許單個選擇的複選框。如果錯誤選取，則可取消選取核取方塊。
+如果選中，則選項將呈現為僅允許單個選擇的複選框。 如果錯誤選取，則可取消選取核取方塊。
 
-* **Publish和Live Copy屬性名稱**
- Sites特定述詞的發佈和Live Copy核取方塊標籤。
+* **發佈和即時副本屬性名稱**
+Sites特定述詞的發佈和即時副本核取方塊標籤。
 
-* &amp;ast;在&#x200B;**設定**&#x200B;標籤中的欄位標籤上，表示欄位為必填欄位，若保留為空白，則會顯示錯誤訊息
+* &amp;ast;在 **設定** 標籤表示欄位為必填欄位，若保留為空白，則會顯示錯誤訊息
 
-## 設定搜尋Forms {#configuring-your-search-forms}
+## 設定您的搜尋Forms {#configuring-your-search-forms}
 
-### 建立/開啟自定義配置{#creating-opening-a-customized-configuration}
+### 建立/開啟自訂設定 {#creating-opening-a-customized-configuration}
 
-1. 導覽至&#x200B;**工具**、**一般**、**搜尋Forms**。
+1. 導覽至 **工具**, **一般**, **搜尋Forms**.
 
 1. 選取您要自訂的設定。
-1. 使用&#x200B;**Edit**&#x200B;圖示開啟要更新的配置。
-1. 如果是新的自訂，您可能想要[新增謂詞欄位，並視需要定義設定](#add-edit-a-predicate-field-and-define-field-settings)。 如果現有自定義項，則可以選擇現有欄位並更新設定](#add-edit-a-predicate-field-and-define-field-settings)。[
-1. 選擇&#x200B;**Done**&#x200B;以保存配置。
+1. 使用 **編輯** 圖示以開啟要更新的設定。
+1. 如果您想要新自訂 [新增謂語欄位並定義設定](#add-edit-a-predicate-field-and-define-field-settings) 視需要。 如果現有自訂，您可以選取現有欄位，並 [更新設定](#add-edit-a-predicate-field-and-define-field-settings).
+1. 選擇 **完成** 以儲存設定。
 
    >[!NOTE]
    >
@@ -417,31 +413,31 @@ ht-degree: 11%
    >* `/apps/commerce/gui/content/facets/<option>`
 
 
-### 添加/編輯謂詞欄位和定義欄位設定{#add-edit-a-predicate-field-and-define-field-settings}
+### 新增/編輯述詞欄位和定義欄位設定 {#add-edit-a-predicate-field-and-define-field-settings}
 
 您可以新增或編輯欄位，並定義/更新其設定：
 
-1. [開啟要更新的](#creating-opening-a-customized-configuration) 自訂設定。
-1. 如果要添加新欄位，請開啟&#x200B;**Select Predicate**&#x200B;頁簽，並將所需的謂詞拖到所需位置。 例如，**日期範圍述詞**:
+1. [開啟自訂的設定](#creating-opening-a-customized-configuration) 以更新。
+1. 如果要新增欄位，請開啟 **選擇謂詞** 標籤，並將所需謂語拖曳至所需位置。 例如， **日期範圍述詞**:
 
-   ![chlimage_1-376](assets/chlimage_1-375.png)
+   ![chlimage_1-375](assets/chlimage_1-375.png)
 
 1. 取決於：
 
    * 正在添加新欄位：
 
-      新增述詞後，**Settings**&#x200B;標籤將開啟並顯示可定義的屬性。
+      新增述詞後， **設定** 標籤，並顯示可定義的屬性。
 
    * 要更新現有謂詞：
 
-      選擇謂語欄位（在右側），然後開啟&#x200B;**Settings**&#x200B;標籤。
-   例如，**日期範圍述詞**&#x200B;的設定：
+      選取謂語欄位（位於右側），然後開啟 **設定** 標籤。
+   例如， **日期範圍述詞**:
 
    ![chlimage_1-376](assets/chlimage_1-376.png)
 
-1. 視需要進行變更，並使用&#x200B;**Done**&#x200B;確認。
+1. 視需要進行變更，並使用確認 **完成**.
 
-### 預覽搜索配置{#previewing-the-search-configuration}
+### 預覽搜尋設定 {#previewing-the-search-configuration}
 
 1. 選取「預覽」圖示：
 
@@ -451,20 +447,20 @@ ht-degree: 11%
 
    ![chlimage_1-377](assets/chlimage_1-377.png)
 
-1. **** 關閉預覽以傳回並完成設定。
+1. **關閉** 預覽，返回並完成配置。
 
-### 刪除謂詞欄位{#deleting-a-predicate-field}
+### 刪除謂詞欄位 {#deleting-a-predicate-field}
 
-1. [開啟要更新的](#creating-opening-a-customized-configuration) 自訂設定。
-1. 選取謂語欄位（在右側），開啟&#x200B;**Settings**&#x200B;標籤，然後選取&#x200B;**Delete**&#x200B;圖示（左下）。
+1. [開啟自訂的設定](#creating-opening-a-customized-configuration) 以更新。
+1. 選取謂語欄位（位於右側），開啟 **設定** 標籤，然後選取 **刪除** 圖示（左下）。
 
    ![](do-not-localize/chlimage_1-32.png)
 
 1. 對話方塊會要求確認刪除動作。
 
-1. 以&#x200B;**Done**&#x200B;確認此變更和任何其他變更。
+1. 確認此項目，以及使用 **完成**.
 
-### 刪除配置（恢復預設值）{#deleting-a-configuration-to-reinstate-the-default}
+### 刪除配置（恢復預設值） {#deleting-a-configuration-to-reinstate-the-default}
 
 自訂設定後，這將覆寫預設值。 您可以刪除自訂設定，以重新設定預設設定。
 
@@ -474,13 +470,13 @@ ht-degree: 11%
 
 從主控台刪除自訂設定：
 
-1. 選擇所需的配置(例如&#x200B;**頁面編輯器（段落搜索）**)，然後在工具欄中選擇&#x200B;**刪除**&#x200B;表徵圖：
+1. 選取所需的設定(例如 **頁面編輯器（段落搜尋）**)，然後 **刪除** 圖示：
 
    ![chlimage_1-378](assets/chlimage_1-378.png)
 
 1. 將刪除自定義配置並恢復預設配置（這由控制台中的掛鎖符號的再現指示）。
 
-### 添加選項謂詞{#adding-options-predicates}
+### 添加選項謂語 {#adding-options-predicates}
 
 選項謂語（選項、選項屬性）可讓您設定要搜尋的項目。 它們通常用於直接在頁面下方搜尋內容；例如，頁面節點上的屬性。
 
@@ -499,22 +495,22 @@ ht-degree: 11%
 
    >[!NOTE]
    >
-   >您&#x200B;***必須***&#x200B;不要變更`/libs`路徑中的任何項目。
+   >您 ***必須*** 不會變更 `/libs` 路徑。
    >
-   >這是因為下次升級執行個體時會覆寫`/libs`的內容（而當您套用Hotfix或Feature Pack時，很可能會覆寫）。
+   >這是因為 `/libs` 下次升級執行個體時即會覆寫（而當您套用Hotfix或Feature Pack時，很可能會覆寫）。
    >
    >設定和其他變更的建議方法為：
    >
-   >1. 在`/apps`下重新建立所需項，因為它存在於`/libs`中。 在此案例中，來源為：
+   >1. 重新建立所需項目，因為它存在於 `/libs`，在 `/apps`. 在此案例中，來源為：
    >1. `/libs/cq/gui/content/common/options/predicates`
-   >1. 在`/apps.`內進行任何更改
+   >1. 在內進行任何變更 `/apps.`
 
 
-1. 開啟&#x200B;**搜尋Forms**&#x200B;主控台，並選取您要更新的設定。 例如， **網站管理員搜尋邊欄**。
+1. 開啟 **搜尋Forms** 主控台，然後選取您要更新的設定。 例如， **網站管理員搜尋邊欄**.
 
-   然後按一下/點選&#x200B;**編輯搜尋表單**&#x200B;圖示。
+   然後按一下/點選 **編輯搜索表單** 表徵圖。
 
-1. 視設定而定，將&#x200B;**Options**&#x200B;或&#x200B;**Options屬性**&#x200B;新增至設定。
+1. 視設定而定，新增 **選項** 或 **選項屬性** 至設定。
 1. 更新欄位，尤其是：
 
    * **屬性名稱**
@@ -530,8 +526,8 @@ ht-degree: 11%
       `/apps/cq/gui/content/common/options/predicates/templatetype`
    ![chlimage_1-380](assets/chlimage_1-380.png)
 
-1. 選擇&#x200B;**Done**&#x200B;以保存配置。
-1. 導覽至適當的主控台（在此範例中，為&#x200B;**Sites**），然後開啟&#x200B;**Search**&#x200B;邊欄。 新定義的搜尋表單以及各種選項將會顯示。 選擇查看搜索結果所需的選項：
+1. 選擇 **完成** 以儲存您的設定。
+1. 導覽至適當的主控台(在此範例中， **網站**)並開啟 **搜尋** 欄。 新定義的搜尋表單以及各種選項將會顯示。 選擇查看搜索結果所需的選項：
 
    ![chlimage_1-381](assets/chlimage_1-381.png)
 
@@ -547,15 +543,15 @@ ht-degree: 11%
   </tr>
   <tr>
    <td>編輯 </td>
-   <td>對<code>/apps </code>節點讀取、寫入權限。</td>
+   <td>讀取、寫入 <code>/apps </code>節點。</td>
   </tr>
   <tr>
    <td>刪除</td>
-   <td><code>/apps</code>節點的讀、寫、刪除權限</td>
+   <td>讀取、寫入、刪除 <code>/apps</code> 節點</td>
   </tr>
   <tr>
    <td>預覽</td>
-   <td><code>/var/dam/content</code>節點的讀、寫、刪除權限。<br /> 讀取，寫入節點的 <code>/apps</code> 權限。</td>
+   <td>讀取、寫入、刪除 <code>/var/dam/content</code> 節點。<br /> 讀取、寫入 <code>/apps</code> 節點。</td>
   </tr>
  </tbody>
 </table>

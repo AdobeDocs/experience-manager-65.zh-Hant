@@ -1,19 +1,19 @@
 ---
-title: 'AEM 6.5 Sites無頭開發 '
+title: AEM 6.5 Sites無頭開發
 description: 了解AEM 6.5的無周邊功能（例如內容模型、內容片段和GraphQL API）如何搭配運作，讓您集中管理體驗，並跨管道提供體驗。
-source-git-commit: 2f400d209148278f0695f7b9523b58bba6845cfb
+exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
 
 ---
 
-
 # AEM 6.5 Sites無頭開發 {#headless-development}
 
 了解AEM 6.5的無周邊功能（例如內容模型、內容片段和GraphQL API）如何搭配運作，讓您集中管理體驗，並跨管道提供體驗。
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 無頭式實作對於將體驗提供給對象（無論對象在何處、無論管道為何）越來越重要。
 

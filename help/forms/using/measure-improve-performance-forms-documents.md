@@ -1,8 +1,8 @@
 ---
 title: 測量並改善表單的效用和轉換
-seo-title: 測量並改善表單的效用和轉換
+seo-title: Measure and improve effectiveness and conversion of forms
 description: AEM Forms與Adobe Target和Adobe Analytics解決方案整合，可讓您測量並改善表單的效能和轉換率。
-seo-description: AEM Forms與Adobe Target和Adobe Analytics解決方案整合，可讓您測量並改善表單的效能和轉換率。
+seo-description: AEM Forms integrates with Adobe Target and Adobe Analytics solutions that allows you to measure and improve the performance and conversion rate of your forms.
 uuid: fd2f087c-39f5-457d-8b44-c3ec4400b3fc
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,14 +12,14 @@ docset: aem65
 exl-id: 4f45ad22-611b-4b4f-8e89-cb64a122b70a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
 
-# 測量並改進表單的有效性和轉換{#measure-and-improve-effectiveness-and-conversion-of-forms}
+# 測量並改善表單的效用和轉換{#measure-and-improve-effectiveness-and-conversion-of-forms}
 
-## 挑戰{#the-challenge-br}
+## 挑戰 {#the-challenge-br}
 
 組織正日益增強其能力，並鼓勵客戶使用跨多個管道的數位自助服務進行交易。 然而，如果沒有一對一的意見回饋機制，測量成功並試驗數位表單以增強客戶體驗並提高轉換率就變得十分困難。
 
@@ -31,22 +31,22 @@ ht-degree: 0%
 * 客戶面臨問題的問題領域是什麼？
 * 我要帶入哪些變更，以及如何測試什麼會造成更好的轉換？
 
-## 解決方案{#the-solution}
+## 解決方案 {#the-solution}
 
-AEM Forms與[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)解決方案 — [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html)和[Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)整合 — 可協助您監控和分析表單的執行情形，並讓您實驗及識別可帶來更佳轉換率的體驗。
+AEM Forms整合 [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html) 解決方案 —  [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) 和 [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)  — 可協助您監控和分析表單的執行情形，並讓您試驗和識別可帶來更高轉換率的體驗。
 
-## 工作流{#the-workflow}
+## 工作流程 {#the-workflow}
 
 讓我們詳細了解您如何測量效能並改善表單的轉換率。
 
-### 目標對象{#target-audience}
+### 目標對象 {#target-audience}
 
 * 負責行銷策略與成功的業務使用者和分析人員
 * 負責基礎架構和解決方案設定與維護的IT人員
 
-### AEM Forms元件和相關功能{#aem-forms-components-and-features-involved}
+### AEM Forms元件和相關功能 {#aem-forms-components-and-features-involved}
 
-* 適用性表單
+* 調適型表單
 * 與Adobe Analytics整合，以收集、組織和報告客戶與最適化表單的互動
 * 與Adobe Target整合，執行最適化表單的A/B測試
 
@@ -55,9 +55,9 @@ AEM Forms與[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)�
 * 您已有Adobe Marketing Cloud帳戶，且已註冊Analytics和Target解決方案。
 * 您有已發佈的最適化表單，客戶可以存取。
 
-### 工作流步驟{#workflow-steps}
+### 工作流程步驟 {#workflow-steps}
 
-#### 步驟1:在AEM Forms中設定Analytics和Target {#step-configure-analytics-and-target-in-aem-forms-br}
+#### 步驟1:在AEM Forms中設定Analytics和Target  {#step-configure-analytics-and-target-in-aem-forms-br}
 
 **設定 Analytics**
 
@@ -69,19 +69,19 @@ AEM Forms與[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)�
 1. 在AEM中設定AEM Forms Analytics設定服務
 1. 在AEM的表單上啟用analytics
 
-如需詳細步驟，請參閱[設定最適化表單的分析和報表](../../forms/using/configure-analytics-forms-documents.md)。
+如需詳細步驟，請參閱 [為最適化表單設定分析和報表](../../forms/using/configure-analytics-forms-documents.md).
 
 **設定Target**
 
-若要針對適用性表單建立和執行A/B測試，請依照[在AEM Forms中設定和整合Target](../../forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p)中所述，在AEM Forms中設定Target。
+若要建立並執行適用性表單的A/B測試，請依照 [在AEM Forms中設定和整合Target](../../forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p).
 
-#### 步驟2:檢視分析報表{#step-view-analytics-report-br}
+#### 步驟2:檢視分析報表 {#step-view-analytics-report-br}
 
 當您的客戶存取並與已啟用Analytics的表單互動時，其互動會擷取到高度安全的Analytics資料庫中。 資料庫由客戶端分段，並可通過安全連接訪問。
 
 您可以從AEM中檢視報表，以取得啟用分析的表單並分析資料。 若要檢視報表：
 
-1. 在AEM伺服器上，導覽至&#x200B;**Forms > Forms與檔案**。
+1. 在AEM伺服器上，導覽至 **Forms > Forms與檔案**.
 1. 選取您要其分析報表的表單。
 1. 按一下「Analytics報表」圖示。 報表隨即顯示。
 
@@ -92,14 +92,14 @@ AEM Forms與[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)�
 適用性表單的分析報表會在表單層級擷取下列關鍵績效指標(KPI):
 
 * **平均填充時間**:填寫表單的平均逗留時間
-* **曝光**:表單出現在搜尋結果中的次數
+* **曝光數**:表單出現在搜尋結果中的次數
 
 * **轉譯**:表單呈現或開啟的次數
 * **草稿**:表單已儲存為草稿的次數
 
 * **提交**:提交表單的次數
 * **中止**:使用者未填妥表單就離開的次數
-* **造訪/提交**:每次提交的造訪率
+* **瀏覽/提交**:每次提交的造訪率
 
 此外，您還可在表單中取得每個面板的下列詳細資料：
 
@@ -111,13 +111,13 @@ AEM Forms與[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)�
 
 ![最適化表單的分析報表範例](assets/summary-report.png)
 
-如需表單分析報表的詳細資訊，請參閱[檢視及了解AEM Forms分析報表](../../forms/using/view-understand-aem-forms-analytics-reports.md)。
+如需表單分析報表的詳細資訊，請參閱 [檢視及了解AEM Forms分析報表](../../forms/using/view-understand-aem-forms-analytics-reports.md).
 
 >[!NOTE]
 >
 >您可以在Adobe Marketing Cloud上的Analytics帳戶中，檢視詳細報表，並深入了解客戶及其與表單的互動。
 
-#### 步驟3:分析資料點{#step-analyze-data-points}
+#### 步驟3:分析資料點 {#step-analyze-data-points}
 
 在此步驟中，您將分析分析報表中的資料點，並推斷表單的執行方式。 如果它不符合您的成功KPI，您將會根據資料建立假設，並尋找可能的解決方案來修正問題。 例如：
 
@@ -127,7 +127,7 @@ AEM Forms與[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)�
 
 分析這些資料點並得出假設後，請在表單中進行必要的變更。
 
-#### 步驟4:驗證分析和修正{#step-validate-your-analysis-and-fixes}
+#### 步驟4:驗證分析和修正 {#step-validate-your-analysis-and-fixes}
 
 在此步驟中，您將驗證您在表單中所做的變更，並確認其是否影響轉換率。
 
@@ -135,11 +135,11 @@ AEM Forms與[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)�
 
 AEM Forms與Target的整合可建立最適化表單的A/B測試。 在A/B測試中，您會隨機即時向客戶呈現不同的表單體驗，以了解哪個體驗更有效或導致更多轉換。 一旦您有重要資料指出某個體驗提供的轉換比另一個體驗更好，您就可以宣告該體驗為獲勝者，而隨後，它將成為所有客戶皆可看到的預設體驗。
 
-如需針對適用性表單建立A/B測試的詳細資訊，請參閱適用性表單的[A/B測試](../../forms/using/ab-testing-adaptive-forms.md)。
+如需針對適用性表單建立A/B測試的詳細資訊，請參閱 [適用性表單的A/B測試](../../forms/using/ab-testing-adaptive-forms.md).
 
 ![最適化表單A/B測試的範例摘要報表](assets/ab-test-report-4.png)
 
-## 最佳實務{#best-practices}
+## 最佳實務 {#best-practices}
 
 真正的最佳實務是您在執行此工作流程時自行識別的實務。 它們與您的環境和需求不同。 透過工作流程擷取您的學習成果，並將其記錄為最佳實務。
 

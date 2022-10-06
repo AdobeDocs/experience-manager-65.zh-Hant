@@ -1,8 +1,8 @@
 ---
 title: 工具主控台
-seo-title: 工具主控台
+seo-title: Tools Consoles
 description: 了解 AEM 中各種不同的工具主控台。
-seo-description: 了解 AEM 中各種不同的工具主控台。
+seo-description: Learn about the different tools consoles throughout AEM.
 uuid: 44439f8e-7c47-4ea9-afe1-a9a23489a20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 34%
+source-wordcount: '609'
+ht-degree: 33%
 
 ---
 
 # 工具主控台{#tools-consoles}
 
-**「工具」**&#x200B;主控台可供存取多種特殊工具，協助您管理網站、數位資產和內容存放庫的其他方面。根據您使用的UI，目前&#x200B;**工具**&#x200B;控制台有兩種類型：
+**「工具」**&#x200B;主控台可供存取多種特殊工具，協助您管理網站、數位資產和內容存放庫的其他方面。目前有兩種 **工具** 主控台取決於您使用的UI:
 
 * [工具 — 觸控最佳化UI](#tools-touch-optimized-ui)
 * [工具 — 傳統UI](#tools-classic-ui)
@@ -377,7 +377,7 @@ ht-degree: 34%
    <td>用於管理多個站點的集中點。</td>
   </tr>
   <tr>
-   <td>客戶端上下文配置<br /> </td>
+   <td>用戶端內容設定<br /> </td>
    <td>「用戶端內容」代表動態組合的使用者資料集合。 預設和Marketing Cloud設定保留在此處。<br /> </td>
   </tr>
   <tr>
@@ -390,7 +390,7 @@ ht-degree: 34%
   </tr>
   <tr>
    <td>商務</td>
-   <td>提供對匯入工具和各種產品資料的存取。</td>
+   <td>提供匯入工具和各種產品資料的存取權。</td>
   </tr>
   <tr>
    <td>DAM </td>
@@ -398,7 +398,7 @@ ht-degree: 34%
   </tr>
   <tr>
    <td>控制面板</td>
-   <td>可讓您建立報表控制面板；這些功能提供可自訂的方式，來定義顯示統一資料的頁面。</td>
+   <td>可讓您建立報表控制面板；這些提供可自訂的方式來定義顯示統一資料的頁面。</td>
   </tr>
   <tr>
    <td>自訂檔案</td>

@@ -1,32 +1,32 @@
 ---
 title: 最適化表單元件的內嵌樣式
-seo-title: 適用性表單元件的內嵌CSS屬性
+seo-title: Inline CSS properties for adaptive form components
 description: 您可以在適用性表單上套用自訂樣式，也可以在適用性表單的個別元件上套用內嵌CSS屬性。
-seo-description: 您可以在適用性表單上套用自訂樣式，也可以在適用性表單的個別元件上套用內嵌CSS屬性。
+seo-description: While you can apply custom styles on an adaptive form, you can also apply inline CSS properties on individual components of an adaptive form.
 uuid: e863780e-2250-4bea-9569-22be5638d54e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
-feature: 適用性表單
+feature: Adaptive Forms
 exl-id: 67cfecb8-c31d-4192-904d-7bfaa1a31ea5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '525'
 ht-degree: 2%
 
 ---
 
-# 適用性表單元件的內嵌樣式{#inline-styling-of-adaptive-form-components}
+# 最適化表單元件的內嵌樣式 {#inline-styling-of-adaptive-form-components}
 
-您可以使用[主題編輯器](../../forms/using/themes.md)指定樣式，以定義最適化表單的整體外觀和樣式。 此外，您也可以將內嵌CSS樣式套用至個別的最適化表單元件，並即時預覽變更。 內嵌樣式會覆寫主題中提供的樣式。
+您可以使用 [主題編輯器](../../forms/using/themes.md). 此外，您也可以將內嵌CSS樣式套用至個別的最適化表單元件，並即時預覽變更。 內嵌樣式會覆寫主題中提供的樣式。
 
-## 套用內嵌CSS屬性{#apply-inline-css-properties}
+## 套用內嵌CSS屬性 {#apply-inline-css-properties}
 
 若要將內嵌樣式新增至元件：
 
-1. 在表單編輯器中開啟表單，並將模式變更為樣式模式。 若要將模式變更為樣式模式，請在頁面工具列中，點選![canvas-drop-down](assets/canvas-drop-down.png) > **Style**。
-1. 在頁面中選取元件，然後點選「編輯」按鈕![edit-button](assets/edit-button.png)。 樣式屬性在側欄中開啟。
+1. 在表單編輯器中開啟表單，並將模式變更為樣式模式。 若要將模式變更為樣式模式，請在頁面工具列中，點選 ![畫布下拉式清單](assets/canvas-drop-down.png) > **樣式**.
+1. 在頁面中選取元件，然後點選「編輯」按鈕 ![編輯按鈕](assets/edit-button.png). 樣式屬性在側欄中開啟。
 
    您也可以從側欄的表單階層樹狀結構中選取元件。 表單層次結構樹在側欄中作為表單對象可用。
 
@@ -44,9 +44,9 @@ ht-degree: 2%
    * 進階（可讓您編寫元件的自訂CSS）
 
 1. 同樣地，您也可以為元件的其他部分（如Widget、Caption和Help）應用樣式。
-1. 點選&#x200B;**完成**&#x200B;以確認變更，或點選&#x200B;**取消**&#x200B;以捨棄變更。
+1. 點選 **完成** 確認變更或 **取消** 放棄更改。
 
-## 範例：欄位元件{#example-inline-styles-for-a-field-component}的內嵌樣式
+## 範例：欄位元件的內嵌樣式 {#example-inline-styles-for-a-field-component}
 
 下列影像說明套用內嵌樣式之前和之後的文字欄位。
 

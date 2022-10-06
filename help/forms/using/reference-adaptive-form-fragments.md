@@ -1,7 +1,7 @@
 ---
 title: 參考最適化表單片段
 seo-title: Reference adaptive form fragments
-description: 'AEM Forms提供最適化表單片段，供您作為資產來快速建立表單。 '
+description: AEM Forms提供最適化表單片段，供您作為資產來快速建立表單。
 seo-description: AEM Forms provides adaptive form fragments that you can use as assets to create a form quickly.
 uuid: 85401274-6691-4726-8b70-b93fd46de053
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -18,9 +18,9 @@ ht-degree: 2%
 
 # 參考最適化表單片段{#reference-adaptive-form-fragments}
 
-[適用性](../../forms/using/adaptive-form-fragments.md) 表單會分割一組欄位，或包含一組欄位的面板，供您在建立表單時使用。它可讓您輕鬆快速地建立表單。 您可以使用側欄中的資產瀏覽器，將最適化表單片段拖放至表單中，也可以在表單編輯器中編輯。
+[最適化表單片段](../../forms/using/adaptive-form-fragments.md) 是一組欄位，或是包含一組欄位的面板，在您建立表單時可以使用這些欄位。 它可讓您輕鬆快速地建立表單。 您可以使用側欄中的資產瀏覽器，將最適化表單片段拖放至表單中，也可以在表單編輯器中編輯。
 
-針對最適化表單作者，[AEM Forms附加套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)中提供參考片段。 包含下列片段：
+針對最適化表單作者， [AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). 包含下列片段：
 
 * 地址
 * 連絡人資訊
@@ -33,7 +33,7 @@ ht-degree: 2%
 * 條款與條件
 * 使用手寫的條款與條件
 
-安裝套件時，會在Forms與檔案下方建立包含參考片段的參考片段資料夾。 有關安裝軟體包的資訊，請參閱[如何使用軟體包](/help/sites-administering/package-manager.md)。
+安裝套件時，會在Forms與檔案下方建立包含參考片段的參考片段資料夾。 如需安裝套件，請參閱 [如何使用套件](/help/sites-administering/package-manager.md).
 
 ![列出的所有片段](assets/ootb-frags.png)
 

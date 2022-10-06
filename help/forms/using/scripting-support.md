@@ -1,26 +1,26 @@
 ---
-title: HTML5表單的指令碼支援
-seo-title: HTML5表單的指令碼支援
+title: 支援HTML5表單的指令碼
+seo-title: Scripting support for HTML5 forms
 description: HTML5 Forms支援的JavaScript、FormCalc屬性和其他方法。
-seo-description: HTML5 Forms支援的JavaScript、FormCalc屬性和其他方法。
+seo-description: JavaScript, FormCalc properties, and other methods that are supported in HTML5 Forms.
 uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
-feature: 行動表單
+feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '3911'
+source-wordcount: '3892'
 ht-degree: 6%
 
 ---
 
-# HTML5表單{#scripting-support-for-html-forms}的指令碼支援
+# 支援HTML5表單的指令碼 {#scripting-support-for-html-forms}
 
-HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
+HTML5表單支援的JavaScript、FormCalc屬性和方法如下：
 
 ## $event {#event}
 
@@ -36,8 +36,8 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>指定欄位內容，之後欄位會隨使用者的動作而變更。 可以回調此值，類似於還原功能。</td>
    <td><p>下拉式清單和清單方塊無法運作。 <code>PrevText </code>無法正確運作的問題：</p>
     <ul>
-     <li>在iPad的數值欄位中輸入一些特殊字元索引鍵(例如$、()、&amp;、@等)時，以及 </li>
-     <li>對於「日期」欄位（通過日曆輸入日期時）。<br /> </li>
+     <li>在iPad的數值欄位中輸入一些特殊字元索引鍵(例如$、(、)、&amp;、@等)時，以及 </li>
+     <li>用於「日期」欄位（通過日曆輸入日期時）。<br /> </li>
     </ul> <p>不支援通過指令碼設定值。</p> </td>
   </tr>
   <tr>
@@ -48,11 +48,11 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   <tr>
    <td><code>newtext</code></td>
    <td>指定欄位在隨使用者動作而變更後的內容。</td>
-   <td><p><code>newText</code>屬性無法針對下列案例正常運作：</p>
+   <td><p>此 <code>newText</code> 屬性在下列情況下無法正常運作：</p>
     <ul>
      <li>論文本的選換</li>
      <li>在刪除、複製和貼上文本時。</li>
-     <li>在數值欄位<br />中鍵入一些特殊字元鍵(例如$、(、)、&amp;、@等)時 </li>
+     <li>在數值欄位中輸入一些特殊字元索引鍵時(例如$、(、)、&amp;、@等)<br /> </li>
      <li>使用Shift+英數字元組合時。 </li>
      <li>使用日期/時間欄位時。</li>
     </ul>
@@ -67,7 +67,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
     <ul>
      <li>論文本的選換</li>
      <li>在刪除、複製和貼上文本時。</li>
-     <li>在數值欄位<br />中鍵入一些特殊字元鍵(例如$、()、&amp;、@等)時 </li>
+     <li>在數值欄位中輸入一些特殊字元索引鍵時(例如$、(、)、&amp;、@等)<br /> </li>
      <li>使用Shift+英數字元組合時。 </li>
      <li>使用日期/時間欄位時。</li>
     </ul> <p>不支援通過指令碼設定值。</p> </td>
@@ -79,7 +79,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   </tr>
   <tr>
    <td>修飾詞</td>
-   <td>確定在執行特定事件時是否按住修飾符鍵(例如Microsoft® Windows®上的Ctrl)。</td>
+   <td>決定在執行特定事件時是否按住修飾鍵(例如，Microsoft® Windows®上的Ctrl)。</td>
    <td>無</td>
   </tr>
  </tbody>
@@ -97,7 +97,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   <tr>
    <td><code>apptype</code></td>
    <td>返回主機的應用程式類型。 僅適用於客戶端應用程式。</td>
-   <td>傳回<code>HTML 5</code>。</td>
+   <td>傳回 <code>HTML 5</code>.</td>
   </tr>
   <tr>
    <td><code>name</code></td>
@@ -117,7 +117,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   <tr>
    <td><code>title</code></td>
    <td>指定文檔的標題。 它僅適用於客戶端應用程式。</td>
-   <td>它會以表單傳回HTML檔案的標題，而非表單中繼資料標題(如果是PDF forms)。</td>
+   <td>它會以表單傳回HTML檔案的標題，而非如PDF forms情況般傳回表單中繼資料標題。</td>
   </tr>
   <tr>
    <td><code>version</code></td>
@@ -184,7 +184,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   <tr>
    <td><code>access</code></td>
    <td>控制用戶對內容的訪問。</td>
-   <td>無法用於排除群組。 此外，HTML5表單對非互動和受保護的對象給予相同的處理。<br /> </td>
+   <td>無法用於排除群組。 此外，HTML5表單給非互動和受保護的物體同樣的處理。<br /> </td>
   </tr>
   <tr>
    <td><code>name</code></td>
@@ -204,17 +204,17 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   <tr>
    <td><code>formattedValue</code></td>
    <td>指定此欄位的格式化值。</td>
-   <td>不支援通過指令碼設定<code>formattedValue</code>。</td>
+   <td>設定 <code>formattedValue</code> 不支援通過指令碼。</td>
   </tr>
   <tr>
    <td><code>editValue</code></td>
    <td>指定此欄位的編輯值。</td>
-   <td>不支援通過指令碼設定<code>editValue </code>。</td>
+   <td>設定 <code>editValue </code>不支援通過指令碼。</td>
   </tr>
   <tr>
    <td><code>formatMessage</code></td>
    <td>指定此欄位的格式驗證消息字串。</td>
-   <td>不支援通過指令碼設定<code>formatMessage </code>。</td>
+   <td>設定 <code>formatMessage </code>不支援通過指令碼。</td>
   </tr>
   <tr>
    <td><code>fillcolor</code></td>
@@ -339,7 +339,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   <tr>
    <td>parentSubform</td>
    <td>指定此欄位的父子表單（頁面）。</td>
-   <td>一律傳回父子表單，而非傳回第一個非範圍劃分的父子表單。<br /> </td>
+   <td>一律會傳回父子表單，而非傳回第一個非範圍的父子表單。<br /> </td>
   </tr>
   <tr>
    <td>selectedIndex</td>
@@ -370,7 +370,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
 | `moveInstance` | 將表單模型對象的子對象移動到表單模型內的另一個指定位置。 對象的相應資料模型資訊也被重新定位在資料模型內。 |
 | `insertInstance` | 將子表單或子表單集的新實例插入到此節點。 |
 
-## 清單 {#list}
+## list {#list}
 
 | 屬性 | 說明 |
 |---|---|
@@ -508,7 +508,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>
     <ul>
      <li>xfa.nodes、desc不支援</li>
-     <li>針對PDF和HTML報告的節點數不同。 </li>
+     <li>報告的PDF和HTML節點數不同。 </li>
     </ul> </td>
   </tr>
   <tr>
@@ -577,7 +577,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>變更會反映在模型中，且可用於指令碼，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
+     <li>變更會反映在模型中，且可供指令碼使用，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -598,7 +598,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>變更會反映在模型中，且可用於指令碼，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
+     <li>變更會反映在模型中，且可供指令碼使用，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -619,7 +619,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>變更會反映在模型中，且可用於指令碼，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
+     <li>變更會反映在模型中，且可供指令碼使用，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -636,7 +636,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   </tr>
   <tr>
    <td>邊緣</td>
-   <td>邊對象描述了弧、線或邊框或矩形的一側。<br /> </td>
+   <td>邊對象描述弧、線或邊框或矩形的一側。<br /> </td>
    <td>不支援顏色、大寫等屬性。<br /> </td>
   </tr>
  </tbody>
@@ -657,7 +657,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>變更會反映在模型中，且可用於指令碼，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
+     <li>變更會反映在模型中，且可供指令碼使用，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -678,7 +678,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>變更會反映在模型中，且可用於指令碼，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
+     <li>變更會反映在模型中，且可供指令碼使用，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -699,7 +699,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>變更會反映在模型中，且可用於指令碼，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
+     <li>變更會反映在模型中，且可供指令碼使用，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -757,7 +757,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>
     <ul>
      <li>無法擷取預設值。 </li>
-     <li>變更會反映在模型中，且可用於指令碼，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
+     <li>變更會反映在模型中，且可供指令碼使用，但不會同步至HTML元素。 因此，UI不會反映這些變更。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -775,7 +775,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   <tr>
    <td>邊框</td>
    <td>邊框對象描述了checkButton對象周圍的邊框。 </td>
-   <td>變更會反映在模型中，且可用於指令碼，但不會同步至HTML元素。 因此，這些變更不會反映在UI中。<br /> </td>
+   <td>變更會反映在模型中，且可供指令碼使用，但不會同步至HTML元素。 因此，UI不會反映這些變更。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -865,7 +865,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   </tr>
   <tr>
    <td>邊緣</td>
-   <td>邊對象描述了弧、線或邊框或矩形的一側。<br /> </td>
+   <td>邊對象描述弧、線或邊框或矩形的一側。<br /> </td>
    <td>不支援顏色、大寫等屬性。</td>
   </tr>
  </tbody>
@@ -1011,7 +1011,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   </tr>
   <tr>
    <td>邊緣</td>
-   <td>邊對象描述了弧、線或邊框或矩形的一側。<br /> </td>
+   <td>邊對象描述弧、線或邊框或矩形的一側。<br /> </td>
    <td>不支援顏色、大寫等屬性。 </td>
   </tr>
  </tbody>
@@ -1028,7 +1028,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
   </tr>
   <tr>
    <td>邊緣</td>
-   <td>邊對象描述了弧、線或邊框或矩形的一側。<br /> </td>
+   <td>邊對象描述弧、線或邊框或矩形的一側。<br /> </td>
    <td>不支援顏色、大寫等屬性。 </td>
   </tr>
  </tbody>
@@ -1084,7 +1084,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>決定目前表單的頁數。</td>
    <td>
     <ul>
-     <li>layout.pageCount()方法會傳回PDF和HTML表單的不同值。</li>
+     <li>layout.pageCount()方法針對PDF和HTML表單傳回不同值。</li>
      <li>透過隱藏物件來降低頁面計數時，abspagecount方法會傳回錯誤值。<br /> </li>
     </ul> </td>
   </tr>
@@ -1098,7 +1098,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
    <td>決定目前表單的頁數。</td>
    <td>
     <ul>
-     <li>layout.pageCount()方法會傳回PDF和HTML表單的不同值。</li>
+     <li>layout.pageCount()方法針對PDF和HTML表單傳回不同值。</li>
      <li>透過隱藏物件來降低頁面計數時，abspagecount方法會傳回錯誤值。</li>
     </ul> </td>
   </tr>
@@ -1115,9 +1115,9 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下：
 
 FormCalc是XFA專用的語言，用於建立電子錶單中心邏輯和計算根。 FormCalculation提供了一組功能強大的生成函式。
 
-### FormCalc支援的函式{#formcalc-supported-functions}
+### 支援的FormCalc函式 {#formcalc-supported-functions}
 
-### 表單計算表達式支援{#formcalc-expression-support}
+### 表單計算表達式支援 {#formcalc-expression-support}
 
 <table>
  <tbody>
@@ -1143,7 +1143,7 @@ FormCalc是XFA專用的語言，用於建立電子錶單中心邏輯和計算根
      <li>邏輯（和/或）</li>
      <li>比較（大/小/等於）</li>
     </ul> </td>
-   <td>A或1<br />1 &lt;&gt;2<br />A NE B<br />A或1<br />1 &lt;&gt;2<br />A NE B</td>
+   <td>A或1<br /> 1 &lt;&gt; 2<br /> A NE B<br /> A或1<br /> 1 &lt;&gt; 2<br /> A NE B</td>
   </tr>
   <tr>
    <td>If運算式</td>
@@ -1156,14 +1156,14 @@ FormCalc是XFA專用的語言，用於建立電子錶單中心邏輯和計算根
    <td>而(ilt 5)do i = i + 1結束時</td>
   </tr>
   <tr>
-   <td>的</td>
+   <td>代表</td>
    <td><br type="_moz" /> </td>
-   <td>若為i = 100，則向下至1 <br />, do s = s + i結束</td>
+   <td>若為i = 100，則從1 <br /> do s = s + i結束</td>
   </tr>
   <tr>
    <td>每</td>
    <td><br type="_moz" /> </td>
-   <td>對於(1, 2, 3)<br />中的每個i, do s = s + iendfor</td>
+   <td>(1、2、3)中每個i <br /> do s = s + i結束</td>
   </tr>
   <tr>
    <td>函式聲明</td>
@@ -1173,7 +1173,7 @@ FormCalc是XFA專用的語言，用於建立電子錶單中心邏輯和計算根
  </tbody>
 </table>
 
-### Acrobat API支援{#acrobat-api-support}
+### Acrobat API支援 {#acrobat-api-support}
 
 1. **算術函式**
 
@@ -1196,7 +1196,7 @@ FormCalc是XFA專用的語言，用於建立電子錶單中心邏輯和計算根
    1. Atan2()
    1. Cos()
    1. Sin()
-   1. 譚()
+   1. 棕褐色()
    1. Exp()
    1. 記錄檔()
    1. Pow()
@@ -1338,7 +1338,7 @@ FormCalc是XFA專用的語言，用於建立電子錶單中心邏輯和計算根
  </tbody>
 </table>
 
-## 支援的XFA事件{#supported-xfa-events}
+## 支援的XFA事件 {#supported-xfa-events}
 
 支援下列用戶端XFA事件：
 
@@ -1353,4 +1353,4 @@ FormCalc是XFA專用的語言，用於建立電子錶單中心邏輯和計算根
 
 >[!NOTE]
 >
->HTML5表單會在用戶端（瀏覽器）上轉譯。 建議使用用戶端&#x200B;**validate**&#x200B;和&#x200B;**calculate**&#x200B;指令碼，而非伺服器端指令碼。
+>HTML5表單會在用戶端（瀏覽器）上轉譯。 建議使用用戶端 **驗證** 和 **計算** 指令碼，而非伺服器端指令碼。

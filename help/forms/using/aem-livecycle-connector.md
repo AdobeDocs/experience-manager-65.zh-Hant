@@ -1,8 +1,8 @@
 ---
 title: 將AEM Forms與AdobeLiveCycle
-seo-title: 將AEM Forms與AdobeLiveCycle
+seo-title: Connecting AEM Forms with Adobe LiveCycle
 description: AEMLiveCycle連接器可讓您從AEM應用程式和工作流程中啟動LiveCycleES4檔案服務。
-seo-description: AEMLiveCycle連接器可讓您從AEM應用程式和工作流程中啟動LiveCycleES4檔案服務。
+seo-description: AEM LiveCycle connector allows you to start LiveCycle ES4 Document Services from within AEM apps and workflows.
 uuid: 7dc9d5ec-7b19-4d93-936d-81ceb45dfffa
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,7 +12,7 @@ role: Admin
 exl-id: 562f8a22-cbab-4915-bc0d-da9bea7d18fa
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,15 @@ Adobe Experience Manager(AEM)LiveCycle連接器可讓AdobeLiveCycleES4檔案服�
 
 ## 將AEM伺服器連接到AdobeLiveCycle {#connecting-aem-server-to-adobe-livecycle}
 
-AEMLiveCycle連接器是[AEM Forms附加元件封裝](/help/forms/using/installing-configuring-aem-forms-osgi.md)的一部分。 安裝AEM Forms附加元件套件後，請執行下列步驟，將LiveCycle伺服器的詳細資訊新增至AEM Web Console。
+AEMLiveCycle連接器是 [AEM Forms附加元件套件](/help/forms/using/installing-configuring-aem-forms-osgi.md). 安裝AEM Forms附加元件套件後，請執行下列步驟，將LiveCycle伺服器的詳細資訊新增至AEM Web Console。
 
 1. 在AEM Web主控台配置管理器中，找到AdobeLiveCycle用戶端SDK配置元件。
 1. 按一下元件可編輯配置伺服器URL、用戶名和密碼。
-1. 查看設定，然後按一下&#x200B;**Save**。
+1. 檢閱設定，然後按一下 **儲存**.
 
 雖然這些屬性是不言自明的，但重要的是：
 
-* **伺服器URL**  — 指定LiveCycle伺服器的URL。如果要讓LiveCycle和AEM通過https通信，請使用以下JVM啟動AEM
+* **伺服器URL**  — 指定LiveCycle伺服器的URL。 如果要讓LiveCycle和AEM通過https通信，請使用以下JVM啟動AEM
 
    ```java
    argument
@@ -40,9 +40,9 @@ AEMLiveCycle連接器是[AEM Forms附加元件封裝](/help/forms/using/installi
 
    選項。
 
-* **使用者名稱** — 指定用於建立AEM與LiveCycle間通訊的帳戶的使用者名稱。帳戶是具有啟動Document Services權限的LiveCycle使用者帳戶。
+* **使用者名稱** — 指定用於建立AEM與LiveCycle之間通信的帳戶的用戶名。 帳戶是具有啟動Document Services權限的LiveCycle使用者帳戶。
 * **密碼** — 指定密碼。
-* **服務名稱**  — 指定使用「用戶名」和「密碼」欄位中提供的用戶憑據啟動的服務。依預設，啟動LiveCycle服務時不會傳遞任何憑證。
+* **服務名稱**  — 指定使用「用戶名」和「密碼」欄位中提供的用戶憑據啟動的服務。 依預設，啟動LiveCycle服務時不會傳遞任何憑證。
 
 ## 啟動文檔服務 {#starting-document-services}
 
@@ -54,7 +54,7 @@ AEMLiveCycle連接器是[AEM Forms附加元件封裝](/help/forms/using/installi
 
 AEMLiveCycle連接器會將這些用戶端例項公開為可透過標準OSGi方式存取的OSGi服務，借此簡化流程。 LiveCycle連接器提供下列功能：
 
-* 作為OSGi服務的客戶端實例：打包為OSGI包的客戶端列在[Document Services list](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)部分。 每個客戶端jar都將客戶端實例註冊為OSGi服務註冊表。
+* 作為OSGi服務的客戶端實例：封裝為OSGI套件組合的用戶端列於 [文檔服務清單](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) 區段。 每個客戶端jar都將客戶端實例註冊為OSGi服務註冊表。
 * 用戶憑據傳播：連接到LiveCycle伺服器所需的連接詳細資訊在中央位置進行管理。
 * ServiceClientFactory服務：要啟動進程，客戶端應用程式可以訪問ServiceClientFactory實例。
 
@@ -82,7 +82,7 @@ AEMLiveCycle連接器會將這些用戶端例項公開為可透過標準OSGi方�
    </dependency>
    ```
 
-   若要啟動服務，請為服務新增對應的Maven相依性。 有關依賴項的清單，請參閱[文檔服務清單](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)。 例如，為產生PDF服務新增下列相依性：
+   若要啟動服務，請為服務新增對應的Maven相依性。 如需相依性清單，請參閱 [文檔服務清單](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). 例如，對於「生成PDF」服務，添加以下相依性：
 
    ```xml
    <dependency>

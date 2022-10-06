@@ -1,8 +1,8 @@
 ---
 title: SPA與Adobe Experience Platform Launch整合
-seo-title: SPA與Adobe Experience Platform Launch整合
+seo-title: SPA and Adobe Experience Platform Launch Integration
 description: Adobe Experience Platform Launch是在SPA中實作Analytics、Target和Audience Manager的建議方式。
-seo-description: Adobe Experience Platform Launch是在SPA中實作Analytics、Target和Audience Manager的建議方式。
+seo-description: Adobe Experience Platform Launch is the recommended way to implement Analytics, Target, and Audience Manager within SPAs.
 uuid: 5e13ad32-bb84-4a60-ba72-6ecc9ed36f3b
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: ca4c3161-90a8-4c02-8554-125eac62dff7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform Launch是在單頁應用程式(SPA)中實作Analytics�
 
 ## 教學課程 {#tutorial}
 
-若要了解如何將SPA與Adobe Experience Platform Launch整合，請參閱[本知識庫文章和教學課程](https://helpx.adobe.com/experience-manager/kt/integration/using/launch-reference-architecture-SPA-tutorial-implement.html)，引導您完成Launch設定，並實作內建Angular或React的Experience Cloud。
+若要了解如何將SPA與Adobe Experience Platform Launch整合，請參閱 [本知識庫文章和教程](https://helpx.adobe.com/experience-manager/kt/integration/using/launch-reference-architecture-SPA-tutorial-implement.html)，此功能將引導您完成Launch設定，並實作內建的Experience Cloud(透過Angular或React)。
 
 >[!NOTE]
 >

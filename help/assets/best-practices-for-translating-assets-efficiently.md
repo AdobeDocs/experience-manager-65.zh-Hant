@@ -3,20 +3,20 @@ title: 轉譯資產的最佳實務
 description: 高效管理資產的最佳做法，以同步各種翻譯版本並簡化翻譯工作流程。
 contentOwner: AG
 role: Admin
-feature: 資產管理
+feature: Asset Management
 exl-id: e632dcdb-b2b9-45bc-89e7-337b44b6fc61
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 0%
+source-wordcount: '416'
+ht-degree: 1%
 
 ---
 
 # 轉譯資產的最佳實務 {#best-practices-for-translating-assets-efficiently}
 
-[!DNL Adobe Experience Manager Assets] 支援多語言工作流程，將數位資產的二進位檔、中繼資料和標籤轉譯為多個地區設定，以及管理翻譯的資產。如需詳細資訊，請參閱[多語言資產](multilingual-assets.md)。
+[!DNL Adobe Experience Manager Assets] 支援多語言工作流程，將數位資產的二進位檔、中繼資料和標籤轉譯為多個地區設定，以及管理翻譯的資產。 如需詳細資訊，請參閱 [多語言資產](multilingual-assets.md).
 
-為了有效管理資產以確保不同翻譯版本保持同步，請在執行翻譯工作流程之前建立資產的[語言副本](preparing-assets-for-translation.md)。
+為有效管理資產以確保不同翻譯版本保持同步，請建立 [語言副本](preparing-assets-for-translation.md) 執行翻譯工作流程之前取得Assets的說明。
 
 資產或一組資產的語言副本是具有類似內容階層的語言同層級項目（或相同語言中的資產版本）。
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 您也可以對一些工作流程和翻譯整合框架進行一些配置更改，以進一步簡化流程。
 
-1. 執行下列任一操作：
+1. 執行下列任一項作業：
 
    * [設定檔案資料儲存](/help/sites-deploying/data-store-config.md)
    * [設定Amazon S3資料存放區](/help/sites-deploying/data-store-config.md)
@@ -43,9 +43,9 @@ ht-degree: 0%
    >Disabling the [!UICONTROL DAM MetaData Writeback] workflow turns off XMP metadata write-back on asset binaries. Consequently, future metadata changes are no longer be saved within the assets. Evaluate the consequences before disabling this workflow.
 -->
 
-1. 啟用[!UICONTROL 設定上次修改日期]工作流。
+1. 啟用 [!UICONTROL 設定上次修改日期] 工作流程。
 
-   [!UICONTROL  DAM MetaData回寫]工作流程會設定資產的上次修改日期。 由於您在步驟2中停用此工作流程，因此[!DNL Assets]無法再將資產的上次修改日期保持為最新。 因此，請啟用&#x200B;*設定上次修改日期*&#x200B;工作流程，確保資產的上次修改日期為最新狀態。 具有過時的上次修改日期的資產可能會導致錯誤。
+   此 [!UICONTROL DAM中繼資料回寫] 工作流程會設定資產的上次修改日期。 因為您在步驟2中停用此工作流程， [!DNL Assets] 無法再將資產的最後修改日期保持為最新。 因此，請啟用 *設定上次修改日期* 工作流程，確保資產的上次修改日期為最新。 具有過時的上次修改日期的資產可能會導致錯誤。
 
-1. [設定翻譯整合架構，](/help/sites-administering/tc-tic.md) 以停止轉譯資產二進位檔。取消選取[!UICONTROL Assets]標籤下的&#x200B;**[!UICONTROL Translate Assets]**&#x200B;選項，以停止轉譯Asset二進位檔。
-1. 使用[多語言資產工作流程](multilingual-assets.md)翻譯資產中繼資料/標籤。
+1. [配置翻譯整合框架](/help/sites-administering/tc-tic.md) 停止轉譯資產二進位檔。 取消選取 **[!UICONTROL 轉換資產]** 選項 [!UICONTROL 資產] 標籤，停止轉譯資產二進位檔。
+1. 使用 [多語言資產工作流程](multilingual-assets.md).

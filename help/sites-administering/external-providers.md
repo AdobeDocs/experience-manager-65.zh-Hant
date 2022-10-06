@@ -1,8 +1,8 @@
 ---
 title: Analytics與外部提供者
-seo-title: Analytics與外部提供者
+seo-title: Analytics with External Providers
 description: 了解Analytics與外部提供者。
-seo-description: 了解Analytics與外部提供者。
+seo-description: Learn about Analytics with External Providers.
 uuid: 31a773ca-901e-45f2-be8f-951c26f9dbc5
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,12 +13,12 @@ docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
-# 外部提供者{#analytics-with-external-providers}的Analytics
+# Analytics與外部提供者 {#analytics-with-external-providers}
 
 Analytics可提供您有關網站使用方式的重要且有趣的資訊。
 
@@ -27,13 +27,13 @@ Analytics可提供您有關網站使用方式的重要且有趣的資訊。
 * [Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * [Adobe Target](/help/sites-administering/target.md)
 
-您也可以配置自己的&#x200B;**一般分析程式碼片段**&#x200B;例項，以定義新的服務設定。
+您也可以設定自己的例項， **一般Analytics程式碼片段** 定義新服務配置。
 
 然後，通過添加到網頁的小代碼片段來收集資訊。 例如：
 
 >[!CAUTION]
 >
->指令碼不得括在`script`標籤中。
+>指令碼不得括在 `script` 標籤。
 
 ```
 var _gaq = _gaq || [];
@@ -56,19 +56,19 @@ _gaq.push(['_trackPageview']);
 
 >[!CAUTION]
 >
->已設定「Geometrixx — 戶外」示範網站，讓「頁面屬性」中提供的屬性附加至對應`js`指令碼的html原始碼（緊接在`</html>`結尾標籤上方）。
+>已設定「Geometrixx — 戶外」示範網站，讓「頁面屬性」中提供的屬性附加至html原始碼(位於 `</html>` endtag) `js` 指令碼。
 >
->如果您自己的`/apps`未繼承預設頁面元件(`/libs/foundation/components/page`)，則您（或您的開發人員）必須確認已包含對應的`js`指令碼，例如包含`cq/cloudserviceconfigs/components/servicescomponents`或使用類似的機制。
+>若您擁有 `/apps` 不繼承預設頁面元件( `/libs/foundation/components/page`)您（或您的開發人員）必須確定對應 `js` 包含指令碼，例如透過 `cq/cloudserviceconfigs/components/servicescomponents`，或使用類似的機制。
 >
 >若未這麼做，任何服務（一般、Analytics、Target等）都無法運作。
 
-## 使用通用代碼段{#creating-a-new-service-with-a-generic-snippet}建立新服務
+## 使用一般程式碼片段建立新服務 {#creating-a-new-service-with-a-generic-snippet}
 
 對於基本配置：
 
-1. 開啟&#x200B;**Tools**&#x200B;控制台。
-1. 從左窗格展開&#x200B;**Cloud Services配置**。
-1. 連按兩下&#x200B;**一般分析程式碼片段**&#x200B;以開啟頁面：
+1. 開啟 **工具** 控制台。
+1. 從左窗格展開 **Cloud Services配置**.
+1. 按兩下 **一般Analytics程式碼片段** 若要開啟頁面：
 
    ![](assets/analytics_genericoverview.png)
 
@@ -76,28 +76,28 @@ _gaq.push(['_trackPageview']);
 
    ![](assets/analytics_addconfig.png)
 
-1. 按一下「**建立**」，程式碼片段對話方塊將立即開啟 — 將適當的Javascript程式碼片段貼入欄位：
+1. 按一下 **建立**，則會立即開啟「 」對話方塊 — 將適當的javascript程式碼片段貼入「 」欄位：
 
    ![](assets/analytics_snippet.png)
 
-1. 按一下&#x200B;**OK**&#x200B;以儲存。
+1. 按一下 **確定** 儲存。
 
-## 在{#using-your-new-service-on-pages}頁上使用新服務
+## 在頁面上使用您的新服務 {#using-your-new-service-on-pages}
 
 建立服務設定後，您現在需要設定所需頁面才能使用：
 
 1. 導覽至頁面。
-1. 從sidekick開啟&#x200B;**Page Properties**，然後開啟&#x200B;**Cloud Services**&#x200B;標籤。
-1. 按一下「**添加服務**」，然後選擇所需服務；例如， **一般分析程式碼片段**:
+1. 開啟 **頁面屬性** 從sidekick，然後 **Cloud Services** 標籤。
+1. 按一下 **添加服務**，然後選取所需服務；例如， **一般Analytics程式碼片段**:
 
    ![](assets/analytics_selectservice.png)
 
-1. 按一下&#x200B;**OK**&#x200B;以儲存。
-1. 您將返回到&#x200B;**Cloud Services**&#x200B;頁簽。 **一般Analytics程式碼片段**&#x200B;現在會與訊息`Configuration reference missing`一併列出。 使用下拉式清單來選取您的特定服務執行個體；例如google-analytics:
+1. 按一下 **確定** 儲存。
+1. 您將會返回 **Cloud Services** 標籤。 此 **一般Analytics程式碼片段** 現在會與訊息一併列出 `Configuration reference missing`. 使用下拉式清單來選取您的特定服務執行個體；例如google-analytics:
 
    ![](assets/analytics_selectspecificservice.png)
 
-1. 按一下&#x200B;**OK**&#x200B;以儲存。
+1. 按一下 **確定** 儲存。
 
    如果您檢視頁面的「頁面來源」，現在便可檢視此程式碼片段。
 

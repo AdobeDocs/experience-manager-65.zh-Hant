@@ -1,8 +1,8 @@
 ---
 title: 搜索進程實例
-seo-title: 搜索進程實例
+seo-title: Searching for process instances
 description: 使用「流程搜索」頁可以輸入查找流程實例的搜索標準。
-seo-description: 使用「流程搜索」頁可以輸入查找流程實例的搜索標準。
+seo-description: Use the Process Search page to enter search criteria for finding a process instance.
 uuid: 4a9c5b05-add5-4278-9c6f-d1928b6860d2
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 88b634bb-8f6c-4830-ad01-821668609615
 exl-id: 35f9acbf-7a82-43b1-9e17-9be4de666212
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 您可以輸入基本條件以執行一般搜索，輸入要執行詳細搜索的特定屬性，或輸入基本條件和特定屬性的組合以執行組合搜索。
 
-## 執行常規搜索{#perform-a-general-search}
+## 執行一般搜索 {#perform-a-general-search}
 
 如果您知道進程實例的進程ID、要查找一組相關進程實例，或者只運行了幾個進程實例，則最適合對進程進行一般搜索。
 
@@ -32,14 +32,14 @@ ht-degree: 0%
 1. 在管理控制台中，按一下「服務>Forms工作流程>處理搜尋」。
 1. 在「流程搜索」頁的「一般搜索」下，提供以下條件：
 
-   * **進程ID:** 識別每個唯一進程實例的正整數。
-   * **處理狀態：** 從清單中選取狀態。
-   * **應用程式：** 從清單中選取應用程式。僅顯示已部署的應用程式。
-   * **流程名稱 — 版本：** 從功能表中選擇流程名稱。只顯示已部署的進程。
+   * **進程ID:** 標識每個唯一進程實例的正整數。
+   * **進程狀態：** 從清單中選取狀態。
+   * **應用程式：** 從清單中選取應用程式。 僅顯示已部署的應用程式。
+   * **進程名稱 — 版本：** 從菜單中選擇進程名。 只顯示已部署的進程。
 
 1. 按一下「搜尋」。 此時將出現「進程實例」頁，列出找到的實例。
 
-## 對進程{#perform-a-detailed-search-for-a-process}執行詳細搜索
+## 對流程執行詳細搜索 {#perform-a-detailed-search-for-a-process}
 
 您可以輸入特定屬性以執行詳細搜索。 如果您有許多執行中的程式例項，且您需要依特定條件縮小可能的尋找範圍，則最適合進行詳細搜尋。
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 [關於流程實例狀態](/help/forms/using/admin-help/processes.md#about-process-instance-statuses)
 
-## 對進程{#perform-a-combined-search-for-a-process}執行組合搜索
+## 對流程執行組合搜索 {#perform-a-combined-search-for-a-process}
 
 要根據常規搜索和詳細搜索建立搜索，並在區域之間加上隱含的AND，請在「流程搜索」頁的「常規搜索」和「詳細搜索」區域中輸入搜索標準。
 

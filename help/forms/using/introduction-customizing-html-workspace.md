@@ -1,8 +1,8 @@
 ---
 title: 自訂AEM表單工作區簡介
-seo-title: 自訂AEM表單工作區簡介
+seo-title: Introduction to Customizing AEM form workspace
 description: 快速簡介，內含概念與技術資訊，可自訂LiveCycleAEM Forms工作區以進行流程管理。
-seo-description: 快速簡介，內含概念與技術資訊，可自訂LiveCycleAEM Forms工作區以進行流程管理。
+seo-description: A quick introduction, with conceptual and technical information, to customize LiveCycle AEM Forms workspace for process management.
 uuid: 38759071-e6b8-4976-8b06-909ad7a786cd
 contentOwner: robhagat
 content-type: reference
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: b183d42f-343c-4acb-bc73-f80ad72e54df
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1763'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ AEM form workspace提供修改其介面的呈現語義和功能的功能。 以�
 
 自訂工作區的範例
 
-## 自定義類型{#types-of-customizations}
+## 自訂類型 {#types-of-customizations}
 
 AEM Forms工作區支援多種自訂功能，以更新使用者介面的版面、外觀、功能等。 這些自訂項目包括更新下列其中一或多個項目：
 
@@ -34,13 +34,13 @@ AEM Forms工作區支援多種自訂功能，以更新使用者介面的版面�
 * 使用語義自定義的功能
 * 在其他應用程式中重複使用HTML元件
 
-### 用戶介面更改{#user-interface-changes}
+### 使用者介面變更 {#user-interface-changes}
 
 您可以變更AEM Forms工作區的外觀、版面配置和其他呈現語意。 透過自訂CSS、HTML範本和JavaScript™檔案來變更工作區。 所有預設檔案都在預設安裝中提供。
 
-最常適用的步驟在[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)中涵蓋。 如需這類自訂的特定範例，包括詳細步驟，請參閱本文結尾的相關文章。
+最常適用的步驟涵蓋於 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md). 如需這類自訂的特定範例，包括詳細步驟，請參閱本文結尾的相關文章。
 
-#### 了解樣式表{#understanding-the-style-sheet}
+#### 了解樣式表 {#understanding-the-style-sheet}
 
 在自訂工作區之前，請詳閱AEM Forms提供的預設樣式表，網址為/libs/ws/css/style.css。
 
@@ -127,26 +127,26 @@ CSS自訂的頂層步驟為：
 
 * 建立CSS檔案。
 * 新增樣式項目至此CSS。 如需詳細資訊，請參閱了解CSS樣式。
-* 在`html.jsp`中更新其引用。
+* 在 `html.jsp`.
 
-如需這些自訂的確切步驟，請參閱[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)。 AEM Forms工作區隨附的CSS檔案位於/libs/ws/css/。 有關與CSS相關的定製，請使用[發運包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)。 如需CSS相關自訂的特定範例，請參閱本文結尾的相關說明主題。
+如需這些自訂的確切步驟，請參閱 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md). AEM Forms工作區隨附的CSS檔案位於/libs/ws/css/。 如需CSS相關的自訂，請使用 [發運包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p). 如需CSS相關自訂的特定範例，請參閱本文結尾的相關說明主題。
 
 #### 影像 {#image}
 
-您可以自訂AEM Forms工作區，以新增使用者的變身，或新增組織的標誌。 對於這些自定義項，請使用[發運包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)。
+您可以自訂AEM Forms工作區，以新增使用者的變身，或新增組織的標誌。 對於這些自訂項目，請使用 [發運包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p).
 
 自訂影像的頂層步驟為：
 
 * 安裝和配置WebDAV。
 * 新增影像。
 * 新增與新增的影像對應的新樣式。
-* 連結至`html.jsp`檔案中的新CSS檔案。
+* 連結至 `html.jsp` 檔案。
 
-若要開始自訂AEM Forms工作區中的影像，請遵循[AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md)。 如需影像相關自訂的特定範例，請參閱本文結尾的相關說明主題。
+若要開始自訂AEM Forms工作區中的影像，請遵循 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md). 如需影像相關自訂的特定範例，請參閱本文結尾的相關說明主題。
 
-#### HTML範本{#html-template}
+#### HTML範本 {#html-template}
 
-HTML範本有助於定義工作區使用者介面的外觀和版面。 更新預設的HTML範本後，您可以自訂版面預設使用者介面。
+HTML範本有助於定義工作區使用者介面的外觀和版面。 更新預設HTML範本後，您可以自訂版面預設使用者介面。
 
 自訂HTML範本的頂層步驟為：
 
@@ -154,9 +154,9 @@ HTML範本有助於定義工作區使用者介面的外觀和版面。 更新預
 * 在使用者定義的資料夾中新增範本。
 * 對複製的檔案（如新範本的路徑）進行相關更新。
 
-如需這類自訂的特定範例，請參閱本文結尾提供的說明主題。 根據要自定義的模板，在[發運包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)或[開發包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)之間進行選擇。
+如需這類自訂的特定範例，請參閱本文結尾提供的說明主題。 在 [發運包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p) 或 [開發套件](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)，視要自訂的範本而定。
 
-### 語義更改{#semantic-changes}
+### 語義變化 {#semantic-changes}
 
 若要修改AEM Forms工作區功能，請變更JavaScript原始碼。 核心功能中的修改會標示為「語義變更」。 您可以修改作為AEM Forms工作區原始碼一部分提供的模型、檢視和範本。
 
@@ -167,26 +167,26 @@ HTML範本有助於定義工作區使用者介面的外觀和版面。 更新預
 * 進行相關更新，例如更新預設JavaScript檔案中新增模型和檢視的路徑。
 * 縮小套件以最佳化效能。
 
-有關屬於原始碼一部分的元件的詳細概念資訊，請參閱[可重複使用元件的說明](/help/forms/using/description-reusable-components.md)。 對於這些自訂項目，請使用開發套件。
+如需原始碼中元件的詳細概念資訊，請參閱 [可重複使用元件的說明](/help/forms/using/description-reusable-components.md). 對於這些自訂項目，請使用開發套件。
 
-### 可重複使用的元件{#reusable-components}
+### 可重複使用的元件 {#reusable-components}
 
 由於AEM Forms工作區是以元件為基礎的軟體，因此可輕鬆自訂及重複使用。 您可以輕鬆將工作區元件與網頁應用程式整合。
 
-有關更多概念資訊，請參閱[可重複使用元件的說明](/help/forms/using/description-reusable-components.md)和有關使用元件的說明，請參閱[將AEM Forms工作區元件整合到Web應用程式](/help/forms/using/description-reusable-components.md)。
+如需更多概念資訊，請參閱 [可重複使用元件的說明](/help/forms/using/description-reusable-components.md) 如需有關使用元件的說明，請參閱 [將AEM Forms工作區元件整合至網頁應用程式](/help/forms/using/description-reusable-components.md).
 
-## 建立AEM Forms工作區程式碼{#building-html-workspace-code}
+## 建立AEM Forms工作區程式碼 {#building-html-workspace-code}
 
-### SDK套件{#sdk-package}
+### SDK套件 {#sdk-package}
 
-套件包含AEM Forms工作區的原始碼。 此包在`[LC root]\sdk\html-workspace\adobe-lc-workspace-src.zip`處可用。
+套件包含AEM Forms工作區的原始碼。 此套件可於 `[LC root]\sdk\html-workspace\adobe-lc-workspace-src.zip`.
 
 主要用於自訂，因為它提供產生下列內容的功能：
 
-* 發運、偵錯和開發設定檔的CRX套件（[CRX套件](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)中提及）。
+* 發運、除錯和開發設定檔的CRX套件(如下所述： [CRX套件](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p))。
 * 自訂程式碼的縮製版本（用於語義變更）。
 
-#### WS內容{#ws-content}
+#### WS內容 {#ws-content}
 
 * client-pkg:
 
@@ -211,9 +211,9 @@ HTML範本有助於定義工作區使用者介面的外觀和版面。 更新預
 
             * 初始值設定項 — 包含初始化主幹視圖和AEM Forms工作區中使用的模型時使用的初始值設定項.js。
             * 模型 — 包含AEM Forms工作區中所有元件的骨幹模型。
-            * routes — 包含JavaScript檔案和HTML檔案，這些檔案在AEM Forms工作區中載入啟動程式、todo、追蹤和偏好設定。
+            * routes — 包含JavaScript檔案和HTML檔案，這些檔案和檔案載入AEM Forms工作區中的啟動進程、操作、跟蹤和首選項。
             * 服務 — 包含AEM Forms工作區中使用的service.js。 所有伺服器呼叫都是透過service.js進行。
-            * 範本 — 包含AEM Forms工作區中所有檢視的所有範本，即HTML檔案。
+            * 範本 — 包含所有範本，即AEM Forms工作區中所有檢視的HTML檔案。
             * util — 包含AEM Forms工作區中使用的所有公用程式檔案(javascript)。
             * 檢視 — 包含AEM Forms工作區中所有元件的骨幹檢視。
          * main.js
@@ -232,9 +232,9 @@ HTML範本有助於定義工作區使用者介面的外觀和版面。 更新預
 
 
 
-### CRX包{#crx-package}
+### CRX套件 {#crx-package}
 
-CRX套件可部署在CRX™存放庫上。 可在`[LC root]\crx-repository\install\adobe-lc-workspace-pkg.zip`取得。
+CRX套件可部署在CRX™存放庫上。 可於 `[LC root]\crx-repository\install\adobe-lc-workspace-pkg.zip`.
 
 可使用下列三個設定檔來建立此套件。
 
@@ -244,14 +244,14 @@ CRX套件可部署在CRX™存放庫上。 可在`[LC root]\crx-repository\insta
 | 除錯設定檔 | 此配置檔案將建立中等效率的CRX包。 包的大小比使用發運配置檔案建立的包稍大。 此套件將大部分的JavaScript檔案合併為單一JS檔案。 | 使用此配置檔案進行調試。 |
 | 開發設定檔 | 此配置檔案會建立最大可能大小的CRX包。 所有JavaScript檔案均可個別使用，如同SDK套件中一樣。 | 納入語義變更時，請使用此設定檔。 |
 
-#### 發運配置檔案{#ship-profile}
+#### 發運配置檔案 {#ship-profile}
 
 #### 命令 {#command}
 
 * mvn clean -P發運安裝在發運到客戶端的源包的client-pkg資料夾上。
 * 發運配置檔案命令僅在64位JVM上工作。
 
-#### WS內容{#ws-content-1}
+#### WS內容 {#ws-content-1}
 
 * css — 包含style.css、ie.css和jquery-ui.css。
 * 影像 — 包含所有影像。
@@ -289,14 +289,14 @@ CRX套件可部署在CRX™存放庫上。 可在`[LC root]\crx-repository\insta
 * content.xml
 * _rep_policy.xml
 
-#### 調試配置檔案{#debug-profile}
+#### 除錯設定檔 {#debug-profile}
 
-#### 命令{#command-1}
+#### 命令 {#command-1}
 
 * mvn clean -P在client-pkg上安裝調試
 * 調試配置檔案命令僅在64位JVM上工作。
 
-#### WS內容{#ws-content-2}
+#### WS內容 {#ws-content-2}
 
 * css — 包含style.css、ie.css和jquery-ui.css。
 * 影像 — 包含所有影像。
@@ -334,13 +334,13 @@ CRX套件可部署在CRX™存放庫上。 可在`[LC root]\crx-repository\insta
 * content.xml
 * _rep_policy.xml
 
-#### 開發配置檔案{#dev-profile}
+#### 開發設定檔 {#dev-profile}
 
-#### 命令{#command-2}
+#### 命令 {#command-2}
 
 mvn clean -P Dev安裝在client-pkg上
 
-#### WS內容{#ws-content-3}
+#### WS內容 {#ws-content-3}
 
 * css — 包含style.css、ie.css和jquery-ui.css。
 * 影像 — 包含所有影像。
@@ -353,7 +353,7 @@ mvn clean -P Dev安裝在client-pkg上
 
       * 初始值設定項 — 包含初始值設定項.js和modelcontrollerpath.js。
       * 模型 — 包含AEM Forms工作區中所有元件的模型。
-      * routes — 包含JavaScript檔案和HTML檔案，這些檔案在AEM Forms工作區中載入啟動程式、todo、追蹤和偏好設定。
+      * routes — 包含JavaScript檔案和HTML檔案，這些檔案和檔案載入AEM Forms工作區中的啟動進程、操作、跟蹤和首選項。
       * 服務 — 包含AEM Forms工作區中使用的service.js。
       * 範本 — 包含所有範本，即AEM Forms工作區中所有元件的HTML檔案。
       * util — 包含AEM Forms工作區中使用的所有公用程式檔案(JavaScript)。

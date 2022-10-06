@@ -1,35 +1,35 @@
 ---
 title: 在表單入口網站上使用已提交表單的API
-seo-title: 在表單入口網站上使用已提交表單的API
-description: AEM Forms提供API，可用於在表單入口網站中查詢已提交表單資料並採取動作。
-seo-description: AEM Forms提供API，可用於在表單入口網站中查詢已提交表單資料並採取動作。
+seo-title: APIs to work with submitted forms on forms portal
+description: AEM Forms提供API，可用來在表單入口網站中查詢已提交的表單資料並採取動作。
+seo-description: AEM Forms provides APIs that you can use to query and take actions on submitted forms data in forms portal.
 uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish, developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
-feature: 表單入口網站
+feature: Forms Portal
 exl-id: a685889e-5d24-471c-926d-dbb096792bc8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 5%
+source-wordcount: '541'
+ht-degree: 7%
 
 ---
 
-# 在表單入口網站{#apis-to-work-with-submitted-forms-on-forms-portal}上使用已提交表單的API
+# 在表單入口網站上使用已提交表單的API {#apis-to-work-with-submitted-forms-on-forms-portal}
 
 AEM Forms提供API，供您用來查詢透過表單入口網站提交的表單資料。 此外，您也可以使用本檔案說明的API，張貼意見或更新已提交表單的屬性。
 
 >[!NOTE]
 >
->將調用API的用戶必須按[將提交審核者與表單關聯](/help/forms/using/adding-reviewers-form.md)中所述添加到審核者組。
+>將叫用API的使用者必須新增至審核者群組，如 [將提交審核者與表單關聯](/help/forms/using/adding-reviewers-form.md).
 
 ## GET/content/forms/portal/submission.review.json?func=getFormsFormsSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
 返回所有合格表單的清單。
 
-### URL參數{#url-parameters}
+### URL參數 {#url-parameters}
 
 此API不需要其他參數。
 
@@ -47,7 +47,7 @@ AEM Forms提供API，供您用來查詢透過表單入口網站提交的表單�
 
 ### 範例 {#example}
 
-**請求URL**
+**請求 URL**
 
 ```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsForSubmissionReview
@@ -63,7 +63,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 傳回所有已提交表單的詳細資訊。 不過，您可以使用URL參數來限制結果。
 
-### URL參數{#url-parameters-1}
+### URL參數 {#url-parameters-1}
 
 在請求URL中指定下列參數：
 
@@ -75,27 +75,27 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>formPath</code></td>
-   <td>指定表單所在的CRX儲存庫路徑。 如果未指定表單路徑，則返回空響應。<br /> </td>
+   <td>指定表單所在的CRX儲存庫路徑。 如果您未指定表單路徑，則會傳回空回應。<br /> </td>
   </tr>
   <tr>
    <td><code>offset</code> (可選)</td>
-   <td>指定結果集索引中的起始點。 預設值為<strong>0</strong>。</td>
+   <td>指定結果集索引中的起始點。 預設值為 <strong>0</strong>.</td>
   </tr>
   <tr>
    <td><code>limit</code> (可選)</td>
-   <td>限制結果數。 預設值為<strong>30</strong>。</td>
+   <td>限制結果數。 預設值為 <strong>30</strong>.</td>
   </tr>
   <tr>
    <td><code>orderby</code> <br /> (可選)</td>
-   <td>指定排序結果的屬性。 預設值為<strong>jcr:lastModified</strong>，它會根據上次修改的時間對結果排序。</td>
+   <td>指定排序結果的屬性。 預設值為 <strong>jcr:lastModified</strong>，會根據上次修改的時間排序結果。</td>
   </tr>
   <tr>
    <td><code>sort</code> <br /> (可選)</td>
-   <td>指定排序結果的順序。 預設值為<strong>desc</strong>，會以降序排序結果。 您可以指定<code>asc</code>以升序排序結果。</td>
+   <td>指定排序結果的順序。 預設值為 <strong>desc</strong>，排序會以降序排序。 您可以指定 <code>asc</code> 以升序排序結果。</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (可選)</td>
-   <td>指定要包含在結果中的表單屬性清單（以逗號分隔）。 預設屬性為：<br /> <code>formName</code>、<code>formPath</code>、<code>submitID</code>、<code>formType</code>、<code>jcr:lastModified</code>、 <code>owner</code></td>
+   <td>指定要包含在結果中的表單屬性清單（以逗號分隔）。 預設屬性為：<br /> <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (可選)</td>
@@ -117,7 +117,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 ### 範例 {#example-1}
 
-**請求URL**
+**請求 URL**
 
 ```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSubmissions&formPath=/content/dam/formsanddocuments/forms-review/form2
@@ -133,7 +133,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 
 將注釋添加到指定的提交實例。
 
-### URL參數{#url-parameters-2}
+### URL參數 {#url-parameters-2}
 
 在請求URL中指定下列參數：
 
@@ -148,7 +148,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 
 ### 範例 {#example-2}
 
-**請求URL**
+**請求 URL**
 
 ```http
 https://[host:'port'/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
@@ -164,7 +164,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 傳回張貼在指定提交例項上的所有留言。
 
-### URL參數{#url-parameters-3}
+### URL參數 {#url-parameters-3}
 
 在請求URL中指定下列參數：
 
@@ -186,7 +186,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 ### 範例 {#example-3}
 
-**請求URL**
+**請求 URL**
 
 ```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
@@ -202,7 +202,7 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 更新指定已提交表單實例的指定屬性的值。
 
-### URL參數{#url-parameters-4}
+### URL參數 {#url-parameters-4}
 
 在請求URL中指定下列參數：
 
@@ -218,7 +218,7 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 ### 範例 {#example-4}
 
-**請求URL**
+**請求 URL**
 
 ```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop

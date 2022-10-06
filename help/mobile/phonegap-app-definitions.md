@@ -1,8 +1,8 @@
 ---
 title: 應用程式定義
-seo-title: 應用程式定義
+seo-title: App definitions
 description: 請參閱本頁面，了解應用程式定義，以辨識哪些空格和其他設定適合應用程式。 應用程式定義可讓使用者新增空間，而無須重新編譯應用程式。
-seo-description: 請參閱本頁面，了解應用程式定義，以辨識哪些空格和其他設定適合應用程式。 應用程式定義可讓使用者新增空間，而無須重新編譯應用程式。
+seo-description: Follow this page to learn about app definitions, that are a way to identify what spaces and other configurations are appropriate for the app. App definitions allows the user to add space, without having to recompile the app.
 uuid: bdb4063b-1597-47e2-96d4-c4cc7c78c3d7
 contentOwner: User
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 860dde0b-7cb4-4668-9fac-6f954f1ec0a7
 exl-id: 4c1c44fd-e685-462c-83a0-3cd2f74ab5c7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 2%
+source-wordcount: '227'
+ht-degree: 3%
 
 ---
 
@@ -29,19 +29,19 @@ ht-degree: 2%
 >
 >應用程式定義會系結至應用程式，因此需在AEM Mobile應用程式主控台中建立應用程式。
 
-## 建立新應用程式定義{#creating-a-new-app-definition}
+## 建立新應用程式定義 {#creating-a-new-app-definition}
 
-1. 從AEM導覽主控台選擇&#x200B;**Mobile**。
+1. 選擇 **行動** 從AEM導覽主控台。
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. 從&#x200B;**Mobile**&#x200B;中選擇&#x200B;**Apps**，然後按一下&#x200B;**Create.**
+1. 選擇 **應用程式** 從 **行動** 按一下 **建立。**
 
-   選擇&#x200B;**App**&#x200B;以並輸入詳細資訊以建立新應用程式。
+   選擇 **應用程式** ，然後輸入詳細資訊以建立您的新應用程式。
 
    ![chlimage_1-11](assets/chlimage_1-11.gif)
 
-### 後續步驟{#the-next-steps}
+### 後續步驟 {#the-next-steps}
 
 熟悉應用程式定義後，即可進一步了解下列製作資源：
 

@@ -1,8 +1,8 @@
 ---
 title: 建立自訂工具列版面
-seo-title: 建立自訂工具列版面
+seo-title: Creating custom toolbar layout
 description: 您可以指定表單的工具列版面。 工具欄佈局定義命令和窗體上工具欄的佈局。
-seo-description: 您可以指定表單的工具列版面。 工具欄佈局定義命令和窗體上工具欄的佈局。
+seo-description: You can specify a toolbar layout for the form. The toolbar layout defines the commands and the layout of the toolbar on the form.
 uuid: 389a715a-4c91-4a63-895d-bb2d0f1054eb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,18 +12,18 @@ docset: aem65
 exl-id: 44516956-00aa-41d5-a7e9-746c7618e5db
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
-# 建立自定義工具欄佈局{#creating-custom-toolbar-layout}
+# 建立自訂工具列版面{#creating-custom-toolbar-layout}
 
-## 工具列配置 {#layout}
+## 工具欄佈局 {#layout}
 
 建立最適化表單時，您可以指定表單的工具列版面。 工具欄佈局定義命令和窗體上工具欄的佈局。
 
-工具列配置使用時，主要依賴由複雜JavaScript和CSS程式碼驅動的用戶端處理。 組織並最佳化此程式碼的服務可能是個複雜的問題。 為協助處理此問題，AEM提供用戶端程式庫資料夾，可讓您將用戶端程式碼儲存在存放庫中、將其組織為類別，以及定義將各類別的程式碼提供給用戶端的時間和方式。 然後，用戶端資料庫系統會負責在您的最終網頁中產生正確的連結，以載入正確的程式碼。 如需詳細資訊，請參閱[用戶端程式庫在AEM中的運作方式。](/help/sites-developing/clientlibs.md)
+工具列配置使用時，主要依賴由複雜JavaScript和CSS程式碼驅動的用戶端處理。 組織並最佳化此程式碼的服務可能是個複雜的問題。 為協助處理此問題，AEM提供用戶端程式庫資料夾，可讓您將用戶端程式碼儲存在存放庫中、將其組織為類別，以及定義將各類別的程式碼提供給用戶端的時間和方式。 然後，用戶端資料庫系統會負責在您的最終網頁中產生正確的連結，以載入正確的程式碼。 如需詳細資訊，請參閱 [用戶端程式庫在AEM中的運作方式。](/help/sites-developing/clientlibs.md)
 
 ![工具列的範例版面](assets/default_toolbar_layout.png)
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 適用性表單提供一組現成的配置：
 
-![可用的工具列配置  ](assets/toolbar1.png)
+![可用的工具列配置 ](assets/toolbar1.png)
 
 可用的工具列配置
 
@@ -39,14 +39,14 @@ ht-degree: 0%
 
 以下過程詳細說明了建立自定義工具欄的步驟，該工具欄在工具欄中顯示三個操作，在工具欄的下拉清單中顯示其他操作。
 
-附加的內容套件包含下列說明的整個程式碼。 安裝內容套件後，請開啟`/content/forms/af/CustomLayoutDemo.html`以檢視自訂工具列版面示範。
+附加的內容套件包含下列說明的整個程式碼。 安裝內容套件後，請開啟 `/content/forms/af/CustomLayoutDemo.html` 檢視自訂工具列版面示範。
 
 CustomToolbarLayoutDemo.zip
 
-[獲取檔](assets/customtoolbarlayoutdemo.zip)
-案演示自定義工具欄佈局
+[取得檔案](assets/customtoolbarlayoutdemo.zip)
+演示自定義工具欄佈局
 
-## 建立自定義工具欄佈局{#layout-1}
+## 建立自訂工具列版面 {#layout-1}
 
 1. 建立資料夾以維護自訂工具列配置。 例如：
 
@@ -56,25 +56,25 @@ CustomToolbarLayoutDemo.zip
 
    `/libs/fd/af/layouts/toolbar`
 
-   例如，將`mobileFixedToolbarLayout`節點從`/libs/fd/af/layouts/toolbar`資料夾複製到`/apps/customlayout/toolbar`資料夾。
+   例如，複製 `mobileFixedToolbarLayout` 節點 `/libs/fd/af/layouts/toolbar` 檔案夾 `/apps/customlayout/toolbar` 檔案夾。
 
-   同時，將toolbarCommon.jsp複製到`/apps/customlayout/toolbar`資料夾。
+   同時，將工具欄Common.jsp複製到 `/apps/customlayout/toolbar` 檔案夾。
 
    >[!NOTE]
    >
-   >您為維護自定義佈局而建立的資料夾很多都是使用`apps`資料夾建立的。
+   >您建立用來維護自訂配置的資料夾，很多資料都是使用 `apps` 檔案夾。
 
-1. 將複製的節點`mobileFixedToolbarLayout`更名為`customToolbarLayout.`
+1. 更名複製的節點， `mobileFixedToolbarLayout`，到 `customToolbarLayout.`
 
-   此外，請提供節點的相關說明。 例如，將節點的jcr:description更改為工具欄&#x200B;**自定義佈局**。
+   此外，請提供節點的相關說明。 例如，將節點的jcr:description變更為 **工具列的自訂版面**.
 
-   節點的`guideComponentType`屬性決定佈局類型。 在這種情況下，版面類型是工具欄，因此它會顯示在工具欄版面選擇下拉清單中。
+   此 `guideComponentType` 節點的屬性決定佈局類型。 在這種情況下，版面類型是工具欄，因此它會顯示在工具欄版面選擇下拉清單中。
 
    ![具有相關說明的節點](assets/toolbar3.png)
 
    具有相關說明的節點
 
-   新的自定義工具欄佈局顯示在&#x200B;**適用性表單工具欄**&#x200B;對話框配置中。
+   新的自訂工具列版面會顯示在 **適用性表單工具列** 對話框配置。
 
    ![可用工具欄佈局清單](assets/toolbar4.png)
 
@@ -86,7 +86,7 @@ CustomToolbarLayoutDemo.zip
 
 1. 選取此自訂工具列版面，然後按一下「確定」。
 
-   在`/etc/customlayout`節點中新增clientlib（javascript和css），並在`customToolbarLayout.jsp`中包含clientlib的參考。
+   在 `/etc/customlayout` 節點，並在 `customToolbarLayout.jsp`.
 
    ![customToolbarLayout.css檔案的路徑](assets/toolbar_3.png)
 

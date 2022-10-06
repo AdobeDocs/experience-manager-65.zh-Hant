@@ -1,10 +1,11 @@
 ---
 title: AEM無頭式內容架構者歷程
 description: 從這裡開始，引導您逐步了解AEM強大且有彈性的無頭式功能、其功能，以及如何在您的第一個無頭式專案中建立內容模型。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 44c58ece-225e-4361-929c-faa110fe2842
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '786'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 

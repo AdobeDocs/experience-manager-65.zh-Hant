@@ -1,24 +1,24 @@
 ---
 title: AEM 6.5中的存放庫重新調整架構
-seo-title: AEM 6.5中的存放庫重新調整架構
+seo-title: Repository Restructuring in AEM 6.5
 description: 了解AEM 6.5中重新調整存放庫架構的基本概念和推理
-seo-description: 了解AEM 6.5中重新調整存放庫架構的基本概念和推理
+seo-description: Learn about the basics and reasoning behind the repository restructuring in AEM 6.5
 uuid: e9cd3e88-e352-44a8-9b97-69488d3267cb
 contentOwner: chaikels
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: fc879b0b-823b-4bdc-aaa6-36f53a33fb22
-feature: 升級
+feature: Upgrading
 exl-id: 2572aa8d-2a3a-4e5b-ae5f-07e1017ea0f4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
 
-# AEM 6.5{#repository-restructuring-in-aem}中的存放庫重新調整
+# AEM 6.5中的存放庫重新調整架構{#repository-restructuring-in-aem}
 
 ## 簡介 {#introduction}
 
@@ -31,14 +31,14 @@ ht-degree: 0%
 * AEM產品程式碼一律會放置在/libs中，且不得由自訂程式碼覆寫
 * 自訂程式碼應放置在/apps、/content和/conf中
 
-## 對6.5升級的影響{#impact-on-upgrades}
+## 對6.5升級的影響 {#impact-on-upgrades}
 
 升級至AEM 6.5時，/etc底下的大部分內容會複製到存放庫中的其他資料夾中。 這些新位置是參考內容的偏好位置。 不過，我們已嘗試讓AEM 6.5升級回溯相容/etc資料夾中的先前位置，因此在大多數情況下，AEM程式碼會繼續參考舊位置，直到在客戶應用程式中主動（且在許多情況下手動）進行變更為止。 從時間軸的觀點來看，有兩類變更：
 
 * 若使用6.5升級 — 少數/etc重組變更無法回溯相容，因此在AEM 6.5升級中，應規劃並實作修改。
 * 未來升級前 — 大部分的/etc重組更改都可以推遲到將來的升級後的某個時間。 如先前所述，AEM 6.5程式碼將繼續參考舊位置，直到修改在客戶版本中實作為止。 雖然沒有應進行變更的強制時間表，但建議您在未來升級前進行變更，因為未來功能可能需仰賴參考的新位置。 此外，根據慣例，特定功能的檔案會參考新位置，因此，如果仍使用舊位置，則可能會造成混淆。
 
-### 重組指南{#restructuring-guidance}
+### 重組指導 {#restructuring-guidance}
 
 規劃升級至AEM 6.5時，應參考下列各解決方案頁面，以評估工作成果：
 

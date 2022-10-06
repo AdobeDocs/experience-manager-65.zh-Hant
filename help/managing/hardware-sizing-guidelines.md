@@ -1,8 +1,8 @@
 ---
 title: 硬體調整指南
-seo-title: 硬體調整指南
+seo-title: Hardware Sizing Guidelines
 description: 這些調整准則提供部署AEM專案所需硬體資源的概約值。
-seo-description: 這些調整准則提供部署AEM專案所需硬體資源的概約值。
+seo-description: These sizing guidelines offer an approximation of the hardware resources required to deploy an AEM project.
 uuid: 395f9869-17c4-4b9b-99f8-d35a44dd6256
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 5837ef4f-d4e0-49d7-a671-87d5547e0d98
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2835'
+source-wordcount: '2816'
 ht-degree: 0%
 
 ---
@@ -52,32 +52,32 @@ ht-degree: 0%
 
 ## 架構 {#architecture}
 
-典型的AEM設定包含製作和發佈環境。 這些環境對基礎硬體大小和系統配置有不同的要求。 [作者環境](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations)和[發佈環境](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations)各節中會詳細說明這兩種環境的詳細考量事項。
+典型的AEM設定包含製作和發佈環境。 這些環境對基礎硬體大小和系統配置有不同的要求。 有關這兩種環境的詳細考量，請參閱 [作者環境](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations) 和 [發佈環境](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations) 區段。
 
 在一般的專案設定中，您有數個環境要在其中預先放置專案階段：
 
-* **開發**
-環境開發新功能或進行重大變更。最佳實務是使用每個開發人員的開發環境（通常是個人系統上的本機安裝）。
+* **開發環境**
+開發新功能或進行重大變更。 最佳實務是使用每個開發人員的開發環境（通常是個人系統上的本機安裝）。
 
-* **製作測試環**
-境驗證變更。測試環境的數量可能會因專案需求而異（例如，針對QA、整合測試或使用者接受測試而分開）。
+* **製作測試環境**
+驗證變更。 測試環境的數量可能會因專案需求而異（例如，針對QA、整合測試或使用者接受測試而分開）。
 
-* **發佈測**
-試環境主要用於測試社交協作使用案例及/或作者與多個發佈例項之間的互動。
+* **發佈測試環境**
+主要用於測試社交協作使用案例和/或作者與多個發佈例項之間的互動。
 
-* **製作生產環**
-境供作者編輯內容。
+* **製作生產環境**
+供作者編輯內容。
 
-* **發佈生產環**
-境以提供已發佈的內容。
+* **發佈生產環境**
+提供已發佈的內容。
 
 此外，環境可能有所不同，從運行AEM的單伺服器系統和應用程式伺服器，到高度擴展的多伺服器、多CPU群集實例集。 建議您為每個生產系統使用單獨的電腦，並且不要在這些電腦上運行其他應用程式。
 
-## 通用硬體調整注意事項{#generic-hardware-sizing-considerations}
+## 一般硬體大小考量事項 {#generic-hardware-sizing-considerations}
 
 以下各節提供了如何計算硬體需求的指南，同時考慮到各種因素。 對於大型系統，建議您對參考配置執行一組簡單的內部基準測試。
 
-效能最佳化是一項基本任務，需要先執行，然後才能對特定項目進行任何基準設定。 在執行任何基準測試並將其結果用於任何硬體大小計算之前，請確保應用[效能優化文檔](/help/sites-deploying/configuring-performance.md)中提供的建議。
+效能最佳化是一項基本任務，需要先執行，然後才能對特定項目進行任何基準設定。 請務必套用 [效能最佳化檔案](/help/sites-deploying/configuring-performance.md) 執行任何基準測試，並將其結果用於任何硬體大小計算。
 
 高級使用案例的硬體大小要求需要基於對項目的詳細效能評估。 需要特殊硬體資源的高級使用案例的特點包括：
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 * 廣泛使用自訂程式碼、自訂工作流程或第三方軟體庫
 * 整合不受支援的外部系統
 
-### 磁碟空間/硬碟{#disk-space-hard-drive}
+### 磁碟空間/硬碟 {#disk-space-hard-drive}
 
 所需的磁碟空間與Web應用程式的卷和類型密切相關。 計算時應考慮：
 
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 AEM在虛擬化環境中運行良好，但可能有CPU或I/O等因素無法直接與物理硬體相等。 建議選擇更高的I/O速度（通常），因為這在大多數情況下是一個關鍵因素。 為環境設定基準，才能精確了解需要哪些資源。
 
-#### AEM實例{#parallelization-of-aem-instances}的並行化
+#### AEM例項的平行化 {#parallelization-of-aem-instances}
 
 **失敗安全性**
 
@@ -114,28 +114,28 @@ AEM在虛擬化環境中運行良好，但可能有CPU或I/O等因素無法直�
 
 **系統資源可擴充性**
 
-當所有系統都在運行時，可以提高計算效能。 額外效能不一定與群集節點數量呈線性關係，因為這種關係高度依賴於技術環境；如需詳細資訊，請參閱[叢集檔案](/help/sites-deploying/recommended-deploys.md) 。
+當所有系統都在運行時，可以提高計算效能。 額外效能不一定與群集節點數量呈線性關係，因為這種關係高度依賴於技術環境；請參閱 [叢集檔案](/help/sites-deploying/recommended-deploys.md) 以取得更多資訊。
 
 根據特定Web項目的基本要求和具體使用情況，對需要的簇節點數進行估計：
 
 * 從失敗安全性的角度來看，對於所有環境，必鬚根據群集節點恢復所需的時間來確定關鍵故障的程度和故障補償時間。
-* 在可擴充性方面，寫操作的數量基本上是最重要的因素；請參閱[作者平行工作](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel)以了解作者環境，以及[社交協作](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations)了解發佈環境。 可以為僅僅為了處理讀取操作而訪問系統的操作建立負載平衡；如需詳細資訊，請參閱[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) 。
+* 在可擴充性方面，寫操作的數量基本上是最重要的因素；請參閱 [作者並行工作](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) 為製作環境和 [社交協作](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) （適用於發佈環境）。 可以為僅僅為了處理讀取操作而訪問系統的操作建立負載平衡；請參閱 [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) 以取得詳細資訊。
 
-## 製作環境特定計算{#author-environment-specific-calculations}
+## 製作環境特定計算 {#author-environment-specific-calculations}
 
 為了設定基準，Adobe已針對獨立製作例項開發了一些基準測試。
 
 * **基準測試1**
-計算負載設定檔的最大吞吐量，其中使用者在300個現有頁面的基本負載上，執行簡單的建立頁面練習，而所有類似性質的頁面皆為。相關步驟包括登入網站、使用SWF和影像/文字建立頁面、新增標籤雲，然後啟用頁面。
+計算載入設定檔的最大吞吐量，其中使用者在300個現有頁面的基本載入上，執行簡單的建立頁面練習，而所有的現有頁面都具有類似的性質。 相關步驟包括登入網站、建立含有SWF和影像/文字的頁面、新增標籤雲，然後啟用頁面。
 
-   * ****
-ResultMaxium吞吐量對於如上所述的簡單頁面建立練習（視為一個交易）的最大值為1730個交易/小時。
+   * **結果**
+如上所示，簡單頁面建立練習（視為一個交易）的吞吐量上限為1730個交易/小時。
 
 * **基準測試2**
-當載入設定檔混合了全新頁面建立(10%)、修改現有頁面(80%)和建立然後連續修改頁面(10%)時，計算最大吞吐量。頁面的複雜度與基準測試1的設定檔相同。 基本修改頁面的方式為新增影像及修改文字內容。 同樣地，此練習是在300頁的基礎載入上執行的，其複雜度與基準測試1中定義的相同。
+當載入設定檔混合了全新頁面建立(10%)、修改現有頁面(80%)和建立然後連續修改頁面(10%)時，計算最大吞吐量。 頁面的複雜度與基準測試1的設定檔相同。 基本修改頁面的方式為新增影像及修改文字內容。 同樣地，此練習是在300頁的基礎載入上執行的，其複雜度與基準測試1中定義的相同。
 
-   * ****
-發現此混合操作方案的最大吞吐量為每小時3252個事務。
+   * **結果**
+發現這種混合操作方案的最大吞吐量為每小時3252個事務。
 
 >[!NOTE]
 >
@@ -147,23 +147,23 @@ ResultMaxium吞吐量對於如上所述的簡單頁面建立練習（視為一�
 
 在製作環境中，快取效率通常會低很多，因為網站的變更更頻繁，而且內容的互動性和個人化程度也很高。 使用Dispatcher，您可以快取AEM程式庫、JavaScripts、CSS檔案和版面影像。 這可加速製作程式的某些方面。 將Web伺服器設定為額外設定標頭，以便在這些資源上快取瀏覽器，將減少HTTP要求的數量，進而改善作者所體驗的系統回應能力。
 
-### 作者並行{#authors-working-in-parallel}
+### 作者並行工作 {#authors-working-in-parallel}
 
 在作者環境中，並行工作的作者數量，以及他們交互的載入是系統的主要限制因素。 因此，我們建議您根據資料的共用吞吐量來調整系統規模。
 
 對於這類情況，Adobe在兩個節點的無共用製作例項叢集上執行基準測試。
 
-* **基準測試1**
-使用2個製作例項的主動 — 主動 — 無共用叢集，使用載入設定檔來計算最大吞吐量，使用者可在300個現有頁面的基本載入上，執行簡單的建立頁面練習，而所有內容都類似。
+* **基準測試1a**
+若使用2個製作例項的主動 — 主動 — 無共用叢集，透過載入設定檔計算最大吞吐量，使用者可在300個現有頁面的基本載入上，執行簡單的建立頁面練習，而且性質都類似。
 
-   * ****
-結果簡單頁面建立練習（如上所述）的最大吞吐量（視為一個交易）為2016交易/小時。與相同基準測試的獨立製作例項相比，這大約增加16%。
+   * **結果**
+如上所述，簡單頁面建立練習（視為一個交易）的最大吞吐量為2016年交易/小時。 與相同基準測試的獨立製作例項相比，這大約增加16%。
 
-* **基準測試2**
-b使用2個製作例項的主動 — 主動 — 無共用叢集，當載入設定檔混合了新頁面建立(10%)、修改現有頁面(80%)和連續建立和修改頁面(10%)時，可計算最大吞吐量。頁面的複雜度與基準測試1的設定檔相同。 基本修改頁面的方式為新增影像及修改文字內容。 同樣地，此練習是在300頁複雜度的基礎載入上執行的，與基準測試1中定義的相同。
+* **基準測試2b**
+若使用2個製作例項的主動 — 主動 — 無共用叢集，當載入設定檔混合了全新頁面建立(10%)、修改現有頁面(80%)以及連續建立和修改頁面(10%)時，就會計算最大吞吐量。 頁面的複雜度與基準測試1的設定檔相同。 基本修改頁面的方式為新增影像及修改文字內容。 同樣地，此練習是在300頁複雜度的基礎載入上執行的，與基準測試1中定義的相同。
 
-   * ****
-發現此混合操作方案的最大吞吐量為6288個事務/小時。與相同基準測試的獨立製作例項相比，這大約增加93%。
+   * **結果**
+發現這種混合操作方案的最大吞吐量為6288個事務/小時。 與相同基準測試的獨立製作例項相比，這大約增加93%。
 
 >[!NOTE]
 >
@@ -179,7 +179,7 @@ b使用2個製作例項的主動 — 主動 — 無共用叢集，當載入設�
 
 當作者使用AEM執行基本操作時，此公式可作為調整CPU規模的一般准則。 假設系統和應用程式已經優化。 不過，進階功能（例如MSM或資產）的公式將不會成立（請參閱下節）。
 
-另請參閱[並行化](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances)和[效能優化](/help/sites-deploying/configuring-performance.md)上的其他注釋。
+另請參閱 [並行化](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) 和 [效能最佳化](/help/sites-deploying/configuring-performance.md).
 
 ### 硬體Recommendations {#hardware-recommendations}
 
@@ -196,9 +196,9 @@ Adobe的基準測試是使用RedHat 5.5作業系統執行的，該作業系統�
 
 AEM執行個體的堆大小最小為256M，堆大小最大為1024M。
 
-## 發佈環境特定計算{#publish-environment-specific-calculations}
+## 發佈環境特定計算 {#publish-environment-specific-calculations}
 
-### 快取效率和流量{#caching-efficiency-and-traffic}
+### 快取效率和流量 {#caching-efficiency-and-traffic}
 
 快取效率對於網站速度至關重要。 下表顯示最佳化AEM系統可使用反向代理（例如Dispatcher）每秒處理多少頁：
 
@@ -217,7 +217,7 @@ AEM執行個體的堆大小最小為256M，堆大小最大為1024M。
 
 快取比率是調度程式無須存取AEM即可傳回的頁面百分比。 100%表示Dispatcher會回應所有請求，0%表示AEM會計算每個單一頁面。
 
-### 模板和應用程式的複雜性{#complexity-of-templates-and-applications}
+### 範本和應用程式的複雜性 {#complexity-of-templates-and-applications}
 
 如果您使用複雜範本AEM，則需要更多時間來轉譯頁面。 從快取取的頁面不受此影響，但考慮整體回應時間時，頁面大小仍相關。 轉譯複雜頁面所花的時間，可能會比轉譯簡單頁面長10倍。
 
@@ -267,40 +267,40 @@ AEM執行個體的堆大小最小為256M，堆大小最大為1024M。
 
 如果您有更複雜的網站，您還需要更強大的Web伺服器，讓AEM能在可接受的時間回應請求。
 
-* 複雜度低於4:
-· 1024 MB JVM記憶體*
+* 複雜度低於4:· 1024 MB JVM RAM&#42;
 ·中低效能CPU
 
-* 4到8之間的複雜性：
-· 2048 MB JVM記憶體*
+* 4到8之間的複雜性：· 2048 MB JVM RAM&#42;
 ·中高效能CPU
 
-* 複雜度超過8:
-· 4096 MB JVM記憶體*
+* 複雜度超過8:· 4096 MB JVM RAM&#42;
 ·高到高端效能CPU
 
 >[!NOTE]
 >
->*除了JVM所需的記憶體外，還為作業系統保留足夠的記憶體。
+>&#42; 除了JVM所需的記憶體外，還為作業系統保留足夠的記憶體。
 
-## 其他用例特定計算{#additional-use-case-specific-calculations}
+## 其他使用案例特定計算 {#additional-use-case-specific-calculations}
 
 除了預設Web應用程式的計算外，您可能需要針對下列使用案例考慮特定因素。 計算值將添加到預設計算。
 
-### 資產特定考量事項{#assets-specific-considerations}
+### 特定資產考量事項 {#assets-specific-considerations}
 
 大量處理數字資產需要優化的硬體資源，最相關的因素是影像大小和處理後影像的峰值吞吐量。
 
-分配至少16GB的堆，並配置[!UICONTROL DAM更新資產]工作流，以使用[Camera Raw套件](/help/assets/camera-raw.md)擷取原始影像。
+分配至少16GB的堆並配置 [!UICONTROL DAM更新資產] 要使用的工作流程 [Camera Raw套件](/help/assets/camera-raw.md) 用於擷取原始影像。
 
 >[!NOTE]
-影像的吞吐量越高，表示計算資源需要能夠跟上系統I/O，反之亦然。 例如，如果工作流程是透過匯入影像來啟動，則透過WebDAV上傳許多影像可能會造成工作流程積壓。
-對TarPM、資料儲存和搜索索引使用單獨的磁碟有助於優化系統I/O行為（但通常將搜索索引保持在本地是合理的）。
+>
+>影像的吞吐量越高，表示計算資源需要能夠跟上系統I/O，反之亦然。 例如，如果工作流程是透過匯入影像來啟動，則透過WebDAV上傳許多影像可能會造成工作流程積壓。
+>
+>對TarPM、資料儲存和搜索索引使用單獨的磁碟有助於優化系統I/O行為（但通常將搜索索引保持在本地是合理的）。
 
 >[!NOTE]
-另請參閱[資產效能指南](/help/sites-deploying/assets-performance-sizing.md)。
+>
+>另請參閱 [資產效能指南](/help/sites-deploying/assets-performance-sizing.md).
 
-### 多站點管理器{#multi-site-manager}
+### 多網站管理員 {#multi-site-manager}
 
 在製作環境上使用AEM MSM時的資源耗用量，很大程度上取決於特定的使用案例。 基本因素包括：
 
@@ -313,7 +313,7 @@ AEM執行個體的堆大小最小為256M，堆大小最大為1024M。
 
 另外也請考量，如果AEM MSM使用案例消耗的資源超過計畫，同時工作的作者會察覺效能的副作用。
 
-### AEM Communities調整考量事項{#aem-communities-sizing-considerations}
+### AEM Communities大小調整考量事項 {#aem-communities-sizing-considerations}
 
 包含AEM Communities功能（社群網站）的AEM網站，會在發佈環境中與網站訪客（成員）進行高層互動。
 

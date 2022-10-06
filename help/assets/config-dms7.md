@@ -153,7 +153,7 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
    在Dynamic Media - Scene7模式中不支援版本設定。 此外，延遲啟動僅適用於在「編輯動態媒體設定」頁面中的「發佈資產 ********」設定為「啟動時」，然後只適用於在首次啟動資產時。
    啟動資產後，任何更新都會立即上線發佈至S7傳送。
 
-1. 選擇 **[!UICONTROL 儲存]**.
+1. 選取&#x200B;**[!UICONTROL 儲存]**。
 1. 為了在發佈Dynamic Media內容之前安全地預覽，Experience Manager作者預設會使用Token型驗證，因此Experience Manager作者會預覽Dynamic Media內容。 不過，您可以允許列出更多IP，讓使用者存取安全預覽內容。 若要在Experience Manager中設定此動作，請參閱 [設定影像伺服器的Dynamic Media發佈設定 — 「安全性」標籤](/help/assets/dm-publish-settings.md#security-tab).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
@@ -340,7 +340,7 @@ Dynamic Media色彩管理可讓您為資產加上色彩校正。 透過色彩校
 
 請參閱 [上傳資產](/help/assets/manage-assets.md#uploading-assets).
 
-**要編輯支援格式的MIME類型：**
+**要編輯支援格式的MIME類型，請執行以下操作：**
 
 1. 在Experience Manager中，選取Experience Manager標誌以存取全域導覽主控台，然後導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**.
 1. 在左側邊欄中，導覽至下列項目：
@@ -633,7 +633,7 @@ Granite傳輸工作流程佇列用於 **[!UICONTROL DAM更新資產]** 工作流
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. 選擇 **[!UICONTROL 儲存]**.
+1. 選取&#x200B;**[!UICONTROL 儲存]**。
 
 #### 更新Granite工作流程佇列 {#updating-the-granite-workflow-queue}
 
@@ -652,7 +652,7 @@ Granite工作流程佇列用於非暫時性的工作流程。 在Dynamic Media�
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-1. 選擇 **[!UICONTROL 儲存]**.
+1. 選取&#x200B;**[!UICONTROL 儲存]**。
 
 #### 更新Dynamic Media Classic上傳連線 {#updating-the-scene-upload-connection}
 
@@ -671,7 +671,7 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-1. 選擇 **[!UICONTROL 儲存]**.
+1. 選取&#x200B;**[!UICONTROL 儲存]**。
 
 ### （選用）篩選資產以進行復寫 {#optional-filtering-assets-for-replication}
 

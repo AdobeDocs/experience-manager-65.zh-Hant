@@ -1,8 +1,8 @@
 ---
 title: 使用定位模式製作目標內容
-seo-title: 使用定位模式製作目標內容
+seo-title: Authoring Targeted Content Using Targeting Mode
 description: 鎖定目標模式和Target元件提供工具，用於建立體驗的內容
-seo-description: 鎖定目標模式和Target元件提供工具，用於建立體驗的內容
+seo-description: Targeting mode and the Target component provide tools for creating content for experiences
 uuid: cea85c1b-1bc3-4498-9eaa-4ad10dc58ea4
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '5374'
+source-wordcount: '5355'
 ht-degree: 6%
 
 ---
@@ -31,18 +31,18 @@ ht-degree: 6%
 * 模擬使用者體驗。
 * 如需更多自訂項目，請設定Target元件。
 
-您可以使用AEM或Adobe Target作為定位引擎(您必須具備有效的Adobe Target帳戶才能使用Adobe Target)。 如果您使用Adobe Target，必須先設定整合。 請參閱[與Adobe Target整合的指示](/help/sites-administering/target.md)。
+您可以使用AEM或Adobe Target作為定位引擎(您必須具備有效的Adobe Target帳戶才能使用Adobe Target)。 如果您使用Adobe Target，必須先設定整合。 請參閱 [與Adobe Target整合的指示](/help/sites-administering/target.md).
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
-您在Target模式中看到的活動和體驗會反映[活動主控台](/help/sites-authoring/activitylib.md):
+您在Target模式中看到的活動和體驗會反映 [活動主控台](/help/sites-authoring/activitylib.md):
 
 * 您使用定位模式對活動和體驗所做的變更會反映在活動主控台中。
 * 在「活動」控制台中所做的變更會反映在「定位」模式中。
 
 >[!NOTE]
 >
->在Adobe Target中建立促銷活動時，會將`thirdPartyId`屬性指派給每個促銷活動。 刪除Adobe Target中的促銷活動時，不會刪除thirdPartyId。 您無法針對不同類型(AB、XT)的促銷活動重新使用`thirdPartyId`，且無法手動移除。 為避免此問題，請為每個促銷活動命名一個唯一的名稱；因此，無法在不同促銷活動類型中重複使用促銷活動名稱。
+>您在Adobe Target中建立促銷活動時，會指派一個名為 `thirdPartyId`至每個促銷活動。 刪除Adobe Target中的促銷活動時，不會刪除thirdPartyId。 您無法重新使用 `thirdPartyId` 針對不同類型的促銷活動(AB、XT)，且無法手動移除。 為避免此問題，請為每個促銷活動命名一個唯一的名稱；因此，無法在不同促銷活動類型中重複使用促銷活動名稱。
 >
 >如果您在相同的促銷活動類型中使用相同名稱，則會覆寫現有的促銷活動。
 >
@@ -52,7 +52,7 @@ ht-degree: 6%
 >
 >鎖定目標時，品牌和活動組合會保留在使用者層級，而非管道層級。
 
-## 切換至定位模式{#switching-to-targeting-mode}
+## 切換至定位模式 {#switching-to-targeting-mode}
 
 切換至Target模式，存取製作目標內容的工具。
 
@@ -63,11 +63,11 @@ ht-degree: 6%
 
    ![chlimage_1-9](assets/chlimage_1-9.png)
 
-1. 按一下或點選「**目標定位**」。 定位選項會顯示在頁面頂端。
+1. 按一下或點選 **定位**. 定位選項會顯示在頁面頂端。
 
    ![chlimage_1-10](assets/chlimage_1-10.png)
 
-## 使用定位模式{#adding-an-activity-using-targeting-mode}新增活動
+## 使用定位模式新增活動 {#adding-an-activity-using-targeting-mode}
 
 使用鎖定目標模式將活動新增至品牌。 新增活動時，活動會包含預設體驗。 新增活動後，就會開始活動的內容鎖定目標程式。
 
@@ -75,46 +75,46 @@ ht-degree: 6%
 
 此外，您可以管理所有Adobe Target活動的目標和量度，並管理您的Adobe Target對象。 也包含Adobe Target活動報表，包括轉換A/B測試的獲勝者。
 
-新增活動時，它也會出現在[活動主控台](/help/sites-authoring/activitylib.md)中。
+新增活動時，它也會顯示在 [活動主控台](/help/sites-authoring/activitylib.md).
 
 若要新增活動：
 
-1. 使用&#x200B;**Brand**&#x200B;下拉式功能表，選取您要建立活動的品牌。
+1. 使用 **品牌** 下拉式功能表，選取您要建立活動的品牌。
 
    >[!NOTE]
    >
-   >建議您透過活動控制台](/help/sites-authoring/activitylib.md#creating-a-brand-using-the-activities-console)建立品牌。[
+   >建議您 [透過活動主控台建立品牌](/help/sites-authoring/activitylib.md#creating-a-brand-using-the-activities-console).
    >
    >
-   >如果您以其他方式建立品牌，請確定節點`/campaigns/<brand>/master`存在，或嘗試建立活動時會產生錯誤。
+   >如果您以其他方式建立品牌，請確定節點 `/campaigns/<brand>/master` 存在，或嘗試建立活動時會產生錯誤。
 
-1. 按一下或點選&#x200B;**活動**&#x200B;下拉式選單旁的+。
+1. 按一下或點選 **活動** 下拉式功能表。
 1. 輸入活動的名稱。
 
    >[!NOTE]
    >
    >當您建立新活動並將Adobe Target雲端設定附加至頁面或其其中一個上層時，AEM會自動假設Adobe Target為引擎。
 
-1. 在&#x200B;**定位**&#x200B;引擎下拉式選單中，選取您的定位引擎。
+1. 在 **定位** 引擎下拉式選單中，選取您的定位引擎。
 
-   * 如果您選取&#x200B;**ContextHub AEM**，其餘欄位將呈現灰色且無法使用。 按一下或點選&#x200B;**建立**。
+   * 如果您選取 **ContextHub AEM**，其餘欄位則會呈現灰色且無法使用。 按一下或點選 **建立**.
 
-   * 如果您選取&#x200B;**Adobe Target**，則可以選取設定（依預設，這是您在[設定帳戶](/help/sites-administering/opt-in.md)時提供的設定）和活動類型。
+   * 如果您選取 **Adobe Target**，您可以選取設定（預設為您提供的設定） [已設定帳戶](/help/sites-administering/opt-in.md))和活動類型。
 
-   * 如果您使用AEM/Adobe Campaign整合且要傳送目標內容（電子報），請選取&#x200B;**Adobe Campaign**。 如需詳細資訊，請參閱[與Adobe Campaign整合](/help/sites-administering/campaign.md) 。
+   * 如果您使用AEM/Adobe Campaign整合併傳送目標內容（電子報），請選取 **Adobe Campaign**. 請參閱 [與Adobe Campaign整合](/help/sites-administering/campaign.md) 以取得更多資訊。
 
-1. 在「活動」功能表中，選取&#x200B;**體驗鎖定目標**&#x200B;或&#x200B;**A/B測試**。
+1. 在「活動」功能表中，選取 **體驗鎖定** 或 **A/B測試**.
 
    * 體驗鎖定目標 — 從AEM管理Adobe Target活動。
    * A/B測試 — 從AEM在Adobe Target中建立/管理A/B測試活動。
 
-## 定位程式：建立、定位、目標與設定{#the-targeting-process-create-target-and-goals-settings}
+## 定位程式：建立、鎖定目標及目標與設定 {#the-targeting-process-create-target-and-goals-settings}
 
 定位模式可讓您設定活動的數個方面。 使用下列三個步驟程式來建立品牌活動的目標內容：
 
 1. [建立](#create-authoring-the-experiences):新增或移除體驗，以及為每個體驗新增選件。
-1. [目標](#diagramtargetconfiguringtheaudiences):指定每個體驗鎖定的對象。您可以鎖定特定對象，如果使用A/B測試決定要將多少百分比的流量傳至哪個體驗。
-1. [目標與設定](#settingsgoalssettingsconfiguringtheactivityandsettinggoals):排程活動並設定優先順序。您也可以設定成功量度目標。
+1. [目標](#diagramtargetconfiguringtheaudiences):指定每個體驗鎖定的對象。 您可以鎖定特定對象，如果使用A/B測試決定要將多少百分比的流量傳至哪個體驗。
+1. [目標與設定](#settingsgoalssettingsconfiguringtheactivityandsettinggoals):排程活動並設定優先順序。 您也可以設定成功量度目標。
 
 請依照下列程式，開始活動的內容定位程式。
 
@@ -124,23 +124,23 @@ ht-degree: 6%
 
 若要新增活動：
 
-1. 在&#x200B;**Brand**&#x200B;下拉式功能表中，選取包含您正在使用之活動的品牌。
-1. 在&#x200B;**Activity**&#x200B;下拉式選單中，選取您要為其編寫目標內容的活動。
-1. 若要顯示引導您完成定位程式的控制項，請按一下或點選&#x200B;**開始定位**。
+1. 在 **品牌** 下拉式功能表中，選取包含您正在使用之活動的品牌。
+1. 在 **活動** 下拉式選單中，選取您要為其編寫目標內容的活動。
+1. 若要顯示引導您完成定位程式的控制項，請按一下或點選 **開始鎖定目標**.
 
    ![chlimage_1-11](assets/chlimage_1-11.png)
 
    >[!NOTE]
    >
-   >若要變更您正在使用的活動，請按一下或點選&#x200B;**Back**。
+   >若要變更您正在使用的活動，請按一下或點選 **返回**.
 
-## 建立：編寫體驗{#create-authoring-the-experiences}
+## 建立：編寫體驗 {#create-authoring-the-experiences}
 
 內容鎖定目標的建立步驟涉及建立體驗。 在此步驟中，您可以建立或刪除活動的體驗，並新增選件至每個體驗。
 
-### 在定位模式{#seeing-experience-offers-in-targeting-mode}中查看體驗選件
+### 在鎖定模式中查看體驗選件 {#seeing-experience-offers-in-targeting-mode}
 
-在您[開始定位程式](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)後，選取體驗以查看為該體驗提供的選件。 當您選取體驗時，頁面上的目標元件會變更，以顯示該體驗的選件。
+在 [啟動目標定位程式](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)，請選取體驗以查看為該體驗提供的選件。 當您選取體驗時，頁面上的目標元件會變更，以顯示該體驗的選件。
 
 >[!CAUTION]
 >
@@ -162,32 +162,32 @@ ht-degree: 6%
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
-當訪客屬性與對應至體驗的任何區段不符時，也會顯示預設體驗。 請參閱[使用定位模式新增體驗](#adding-and-removing-experiences-using-targeting-mode)。
+當訪客屬性與對應至體驗的任何區段不符時，也會顯示預設體驗。 請參閱 [使用定位模式新增體驗](#adding-and-removing-experiences-using-targeting-mode).
 
-### 自訂選件和資料庫選件{#custom-offers-and-library-offers}
+### 自訂選件和資料庫選件 {#custom-offers-and-library-offers}
 
-在頁面](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer)上撰寫並用於單一體驗的選件，稱為自訂選件。 [下列影像疊加在自訂選件的內容上：
+選件為 [在頁面上撰寫](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer) 和用於單一體驗的稱為自訂選件。 下列影像疊加在自訂選件的內容上：
 
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
-從選件資料庫](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)新增的選件會與下列影像重疊：[
+選件為 [從選件資料庫新增](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library) 與下列影像疊加：
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
 如果您決定要重複使用自訂選件，可將自訂選件儲存至選件資料庫。 如果您想要修改體驗的內容，也可以將程式庫選件轉換為自訂選件。 編輯後，您可以再次將選件儲存回程式庫。
 
-### 使用定位模式{#adding-and-removing-experiences-using-targeting-mode}新增和移除體驗
+### 使用定位模式新增和移除體驗 {#adding-and-removing-experiences-using-targeting-mode}
 
-使用[目標定位程式](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)的建立步驟，您可以新增和移除體驗。 此外，您可以複製體驗並重新命名。
+使用的建立步驟 [目標定位過程](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)，您可以新增和移除體驗。 此外，您可以複製體驗並重新命名。
 
-#### 使用定位模式{#adding-experiences-using-targeting-mode}新增體驗
+#### 使用定位模式新增體驗 {#adding-experiences-using-targeting-mode}
 
 若要新增體驗：
 
-1. 若要新增體驗，請按一下或點選「**+** **新增體驗鎖定目標**」，顯示於「**對象**」窗格中現有體驗下方。
-1. 選取和對象。 依預設，該名稱為體驗的名稱。 您可以視需要輸入其他名稱。 按一下或點選&#x200B;**確定**。
+1. 若要新增體驗，請按一下或點選 **+** **新增體驗鎖定目標** 顯示在 **對象** 框。
+1. 選取和對象。 依預設，該名稱為體驗的名稱。 您可以視需要輸入其他名稱。 按一下或點選 **確定**.
 
-#### 使用定位模式{#removing-experiences-using-targeting-mode}移除體驗
+#### 使用定位模式移除體驗 {#removing-experiences-using-targeting-mode}
 
 若要刪除體驗：
 
@@ -195,57 +195,57 @@ ht-degree: 6%
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
-1. 按一下&#x200B;**Delete**。
+1. 按一下&#x200B;**刪除**。
 
-#### 使用定位模式重新命名體驗{#renaming-experiences-using-targeting-mode}
+#### 使用定位模式重新命名體驗 {#renaming-experiences-using-targeting-mode}
 
 若要使用定位模式重新命名體驗：
 
 1. 按一下或點選體驗名稱旁的箭頭。
-1. 按一下「**重新命名體驗**」 ，然後輸入新名稱。
+1. 按一下 **重新命名體驗** 並輸入新名稱。
 1. 按一下或點選畫面上的其他位置，以儲存變更。
 
-#### 使用定位模式{#editing-audiences-using-targeting-mode}編輯對象
+#### 使用鎖定模式編輯對象 {#editing-audiences-using-targeting-mode}
 
 若要使用鎖定模式編輯對象：
 
 1. 按一下或點選體驗名稱旁的箭頭。
-1. 按一下「**編輯對象**」並選取新對象。
+1. 按一下 **編輯對象** 並選取新對象。
 1. 按一下&#x200B;**「確定」**。
 
-#### 使用定位模式複製體驗{#duplicating-experiences-using-targeting-mode}
+#### 使用定位模式複製體驗 {#duplicating-experiences-using-targeting-mode}
 
 若要使用定位模式複製體驗：
 
 1. 按一下或點選體驗名稱旁的箭頭。
-1. 按一下「**複製**」並選擇對象。
-1. 視需要重新命名體驗，然後按一下&#x200B;**確定**。
+1. 按一下 **複製** 並選擇對象。
+1. 視需要重新命名體驗，然後按一下 **確定**.
 
-### 使用定位模式{#creating-offers-using-targeting-mode}建立選件
+### 使用定位模式建立優惠方案 {#creating-offers-using-targeting-mode}
 
 定位元件以建立體驗的選件。 目標元件提供用作體驗選件的內容。
 
-* [定位現有元件](/help/sites-authoring/content-targeting-touch.md#creating-a-default-offer-by-targeting-an-existing-component)。內容會變成預設體驗的選件。
+* [定位現有元件](/help/sites-authoring/content-targeting-touch.md#creating-a-default-offer-by-targeting-an-existing-component). 內容會變成預設體驗的選件。
 * [新增Target元件](/help/sites-authoring/content-targeting-touch.md#creating-an-offer-by-adding-a-target-component)，然後新增內容至元件。
 
 將元件定位後，您就可以為每個體驗新增選件：
 
-* [新增自訂選件](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer)。
-* [從資料庫新增選件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)。
+* [新增自訂選件](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer).
+* [從程式庫新增選件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library).
 
 使用選件時可使用下列工具：
 
-* [將自訂選件新增至選件資料庫](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer-to-a-library)。
-* [將程式庫選件轉換為自訂選件](/help/sites-authoring/content-targeting-touch.md#converting-a-library-offer-to-a-custom-library)。
-* [開啟程式庫選件並編輯內容](/help/sites-authoring/content-targeting-touch.md#editing-a-library-offer)。
+* [將自訂選件新增至選件資料庫](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer-to-a-library).
+* [將程式庫選件轉換為自訂選件](/help/sites-authoring/content-targeting-touch.md#converting-a-library-offer-to-a-custom-library).
+* [開啟程式庫選件並編輯內容](/help/sites-authoring/content-targeting-touch.md#editing-a-library-offer).
 
-#### 定位現有元件{#creating-a-default-offer-by-targeting-an-existing-component}以建立預設選件
+#### 定位現有元件以建立預設選件 {#creating-a-default-offer-by-targeting-an-existing-component}
 
 在頁面上定位元件，以用作活動的預設體驗選件。 當您定位元件時，元件會封裝在Target元件中，其內容會變成預設體驗的選件。
 
 當您定位元件時，選件中只能使用該元件。 您無法從選件中移除元件，或將其他元件新增至選件。
 
-在[啟動目標進程](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)之後執行以下過程。
+在之後執行下列程式 [開始定位程式](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings).
 
 1. 按一下或點選要定位的元件。 元件的工具列隨即出現，如下列範例所示。
 
@@ -255,17 +255,17 @@ ht-degree: 6%
 
    ![](do-not-localize/chlimage_1.png)
 
-   元件內容是預設體驗的選件。 定位元件時，會針對每個體驗複製其預設節點。 在體驗特定製作期間編輯正確的內容節點時，需要用到此功能。 針對這些非預設體驗，請[新增自訂選件](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer)或[新增資料庫選件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)。
+   元件內容是預設體驗的選件。 定位元件時，會針對每個體驗複製其預設節點。 在體驗特定製作期間編輯正確的內容節點時，需要用到此功能。 對於這些非預設體驗， [新增自訂選件](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer) 或 [新增程式庫選件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library).
 
-#### 新增Target元件{#creating-an-offer-by-adding-a-target-component}以建立選件
+#### 新增Target元件以建立選件 {#creating-an-offer-by-adding-a-target-component}
 
 新增Target元件以建立預設體驗的選件。 Target元件是其他元件的容器，放在其中的元件會成為目標。 使用Target元件時，您可以新增數個元件以建立選件。 此外，您也可以在每個體驗中使用不同的元件，以建立不同的選件。
 
-如需自訂此元件的詳細資訊，請參閱[設定Target元件選項](/help/sites-authoring/content-targeting-touch.md#configuring-target-component-options)。
+請參閱 [配置Target元件選項](/help/sites-authoring/content-targeting-touch.md#configuring-target-component-options) 以取得自訂此元件的資訊。
 
 >[!NOTE]
 >
->您使用[選件控制台](/help/sites-authoring/offerlib.md)建立的選件也可包含數個元件。 這些選件屬於選件資料庫，可用於多個體驗。
+>您使用 [選件主控台](/help/sites-authoring/offerlib.md) 也可包含數個元件。 這些選件屬於選件資料庫，可用於多個體驗。
 
 由於Target元件是容器，因此會顯示為其他元件的拖放區域。
 
@@ -285,7 +285,7 @@ ht-degree: 6%
 
 您可以在編輯模式或目標模式中將Target元件新增至頁面。 您只能以「目標」模式將元件新增至「目標」元件。 Target元件屬於個人化元件群組。
 
-如果編輯目標內容，您必須先按一下或點選「開始鎖定目標」**，才能這麼做。**
+如果編輯目標內容，您必須按一下或點選 **開始鎖定目標** 之後才可以。
 
 1. 將Target元件拖曳至您要顯示選件的頁面。
 1. 預設情況下，未設定任何位置ID。 按一下或點選「設定齒輪」以設定位置。
@@ -295,20 +295,20 @@ ht-degree: 6%
    >如果由管理員設定，則可能需要明確設定位置。
    >
    >
-   >管理員可以在&#x200B;**https://&lt;host>:&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**&#x200B;決定是否需要設定此設定
+   >管理員可以決定是否需要在 **https://&lt;host>:&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**
    要要求用戶輸入位置，請選中**強制位置**複選框。
 
 1. 選取您要建立選件的體驗。
 1. 建立選件：
 
    * 針對預設體驗，將元件拖曳至目標放置區，並照常編輯元件屬性，以建立選件的內容。
-   * 針對非預設體驗，請[新增自訂選件](#adding-a-custom-offer)或[新增資料庫選件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)。
+   * 對於非預設體驗， [新增自訂選件](#adding-a-custom-offer) 或 [新增程式庫選件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library).
 
-#### 新增自訂選件{#adding-a-custom-offer}
+#### 新增自訂選件 {#adding-a-custom-offer}
 
 在「鎖定目標」模式中編寫目標元件的內容，以建立選件。 建立自訂選件時，會將其用作單一體驗的選件。
 
-如果您決定可將該選件用於其他體驗，您可以建立自訂選件，然後[將其新增至資料庫](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer-to-a-library)。 如需使用優惠方案控制台來建立可重複使用優惠方案的相關資訊，請參閱[將優惠方案新增至優惠方案程式庫](/help/sites-authoring/offerlib.md#add-an-offer-to-an-offer-library)。
+如果您決定可將選件用於其他體驗，您可以建立自訂選件，並 [將其新增至程式庫](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer-to-a-library). 如需使用優惠方案控制台來建立可重複使用優惠方案的相關資訊，請參閱 [將選件新增至選件資料庫](/help/sites-authoring/offerlib.md#add-an-offer-to-an-offer-library).
 
 1. 選取您要新增選件的體驗。
 1. 若要顯示元件功能表，請按一下或點選您要新增選件的目標元件。
@@ -325,9 +325,9 @@ ht-degree: 6%
 
 1. 編輯元件的內容。
 
-#### 從選件資料庫{#adding-an-offer-from-an-offer-library}新增選件
+#### 從優惠方案庫新增優惠方案 {#adding-an-offer-from-an-offer-library}
 
-將選件從[選件資料庫](/help/sites-authoring/offerlib.md)新增至體驗。 您可以從您目前鎖定的品牌資料庫新增任何選件。
+從 [優惠方案庫](/help/sites-authoring/offerlib.md) 至體驗。 您可以從您目前鎖定的品牌資料庫新增任何選件。
 
 您無法將程式庫選件新增至預設體驗。
 
@@ -346,36 +346,36 @@ ht-degree: 6%
 
    選件選擇器可讓您瀏覽或篩選選件。 瀏覽或篩選時，您也可能想要排序選件，並變更檢視選件的方式。 右上角的數字代表目前程式庫中有多少個可用選件。
 
-   * 按一下或點選&#x200B;**瀏覽**&#x200B;以導覽至其他資料夾。 導覽窗格隨即開啟，您按一下箭頭即可深入檢視資料夾。 再次按一下或點選&#x200B;**瀏覽**&#x200B;以關閉導覽窗格。
+   * 按一下或點選 **瀏覽** 導覽至其他資料夾。 導覽窗格隨即開啟，您按一下箭頭即可深入檢視資料夾。 按一下或點選 **瀏覽** 再次，以關閉導覽窗格。
 
    ![chlimage_1-24](assets/chlimage_1-24.png)
 
-   * 按一下或點選&#x200B;**「篩選**」，以根據關鍵字或標籤來篩選選件。 您可以輸入關鍵字，並從下拉式選單中選取標籤。 再按一下或點選&#x200B;**篩選**&#x200B;以關閉篩選窗格。
+   * 按一下或點選 **篩選** 以根據關鍵字或標籤來篩選選件。 您可以輸入關鍵字，並從下拉式選單中選取標籤。 按一下或點選 **篩選** 再次，關閉篩選窗格。
 
    ![chlimage_1-25](assets/chlimage_1-25.png)
 
-   * 按一下或點選&#x200B;**最新至最舊**&#x200B;旁的箭頭，變更優惠方案的排序方式。 選件可以按最新到最舊或最舊到最新排序。
+   * 按一下或點選旁邊的箭頭，變更選件排序方式 **最新到最舊**. 選件可以按最新到最舊或最舊到最新排序。
 
    ![chlimage_1-26](assets/chlimage_1-26.png)
 
-   按一下或點選「以&#x200B;**檢視方式**」旁的圖示，以圖磚或清單形式檢視選件。
+   按一下或點選旁的圖示 **檢視方式** 以圖磚或清單形式檢視選件。
 
    ![chlimage_1-27](assets/chlimage_1-27.png)
 
-#### 將自訂選件新增至程式庫{#adding-a-custom-offer-to-a-library}
+#### 將自訂選件新增至程式庫 {#adding-a-custom-offer-to-a-library}
 
-當您想要重複使用自訂選件作為多個體驗的選件時，請將自訂選件新增至[選件資料庫](/help/sites-authoring/offerlib.md)。 您可以將選件新增至您所定位之目前品牌的資料庫。
+將自訂選件新增至 [優惠方案庫](/help/sites-authoring/offerlib.md) 當您想要重複使用它作為多個體驗的選件時。 您可以將選件新增至您所定位之目前品牌的資料庫。
 
-如需使用優惠方案控制台來建立可重複使用優惠方案的相關資訊，請參閱[將優惠方案新增至優惠方案程式庫](/help/sites-authoring/offerlib.md#add-an-offer-to-an-offer-library)。
+如需使用優惠方案控制台來建立可重複使用優惠方案的相關資訊，請參閱 [將選件新增至選件資料庫](/help/sites-authoring/offerlib.md#add-an-offer-to-an-offer-library).
 
 1. 選取要顯示自訂選件的體驗。
-1. 按一下或點選自訂選件以顯示選件功能表，然後按一下或點選「儲存選件至選件資料庫」**圖示。**
+1. 按一下或點選自訂選件以顯示選件選單，然後按一下或點選 **將選件儲存至選件資料庫** 表徵圖。
 
    ![](do-not-localize/chlimage_1-4.png)
 
 1. 輸入選件的名稱，然後選取您要新增選件的資料庫，然後按一下或點選核取標籤圖示。
 
-#### 將程式庫選件轉換為自訂程式庫{#converting-a-library-offer-to-a-custom-library}
+#### 將程式庫選件轉換為自訂程式庫 {#converting-a-library-offer-to-a-custom-library}
 
 將程式庫選件轉換為自訂選件，以變更目前體驗的選件，而不變更其他體驗中的選件。
 
@@ -384,19 +384,19 @@ ht-degree: 6%
 
    ![](do-not-localize/chlimage_1-5.png)
 
-#### 編輯程式庫選件{#editing-a-library-offer}
+#### 編輯程式庫選件 {#editing-a-library-offer}
 
 在鎖定目標模式中從體驗開啟程式庫選件，以編輯選件。 您所做的變更會顯示在使用選件的所有體驗中。
 
 1. 選取要顯示程式庫選件的體驗。
-1. 將程式庫選件轉換為本機/自訂選件。 請參閱[將程式庫選件轉換為自訂程式庫](#converting-a-library-offer-to-a-custom-library)。
+1. 將程式庫選件轉換為本機/自訂選件。 請參閱 [將程式庫選件轉換為自訂程式庫](#converting-a-library-offer-to-a-custom-library).
 1. 編輯選件的內容。
 
-1. 將其儲存回程式庫。 請參閱[將自訂選件新增至程式庫](#adding-a-custom-offer-to-a-library)。
+1. 將其儲存回程式庫。 請參閱 [將自訂選件新增至程式庫](#adding-a-custom-offer-to-a-library).
 
-## 目標：設定對象{#target-configuring-the-audiences}
+## 目標：設定對象 {#target-configuring-the-audiences}
 
-[鎖定目標程式](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)的鎖定目標步驟涉及將對象對應至您在建立步驟中使用的體驗。 Target頁面會顯示每個體驗鎖定的對象。 您可以指定或變更每個體驗的對象。 如果您使用Adobe Target，您也可以建立A/B測試，以鎖定特定體驗對象的流量百分比。
+的目標步驟 [目標定位過程](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings) 包括將對象對應至您在建立步驟中處理的體驗。 Target頁面會顯示每個體驗鎖定的對象。 您可以指定或變更每個體驗的對象。 如果您使用Adobe Target，您也可以建立A/B測試，以鎖定特定體驗對象的流量百分比。
 
 ### 如果您使用AEM鎖定目標或Adobe Target（體驗鎖定目標）。.. {#if-you-are-using-aem-targeting-or-adobe-target-experience-targeting}
 
@@ -406,19 +406,19 @@ ht-degree: 6%
 
 使用區段定義對象。 頁面偵測的雲端設定會決定您可用的區段。 頁面未與Adobe Target雲端設定相關聯時，可使用AEM區段來定義對象。 頁面與Adobe Target雲端設定相關聯時，您會使用Target區段。
 
-如需定位引擎的資訊，請參閱[定位引擎](/help/sites-authoring/personalization.md#targeting-engine)。
+如需定位引擎的資訊，請參閱 [定位引擎](/help/sites-authoring/personalization.md#targeting-engine).
 
 一個對象不得用於多個體驗。 當體驗對應至已對應至其他體驗的對象時，該體驗旁會顯示警告符號。
 
 ![](do-not-localize/chlimage_1-6.png)
 
-### 將體驗與對象(AEM或Adobe Target)關聯{#associating-experiences-with-audiences-aem-or-adobe-target}
+### 將體驗與對象(AEM或Adobe Target)關聯 {#associating-experiences-with-audiences-aem-or-adobe-target}
 
 使用AEM鎖定目標(或Adobe Target體驗鎖定目標)時，請依照下列程式將體驗與對象建立關聯：
 
 1. 按一下或點選對應至體驗之對象方塊中旁邊的下拉式箭頭。
-1. （選用）按一下或點選&#x200B;**編輯**，然後輸入關鍵字以搜尋所需的區段。
-1. 在對象清單中，選取對象，然後按一下或點選&#x200B;**確定**。
+1. （可選）按一下或點選 **編輯** 然後輸入關鍵字以搜尋所需的區段。
+1. 在對象清單中，選取對象並按一下或點選 **確定**.
 
 ### 如果您使用A/B測試(Adobe Target)。.. {#if-you-are-using-a-b-testing-adobe-target}
 
@@ -426,19 +426,19 @@ ht-degree: 6%
 
 只要加總為100%，您就可以變更百分比。 受眾可供A/B測試中的多個體驗使用。
 
-![chlimage_1-21](assets/chlimage_1-29.png)
+![chlimage_1-29](assets/chlimage_1-29.png)
 
-### 將對象和流量百分比與A/B測試{#associating-audiences-and-traffic-percentages-with-a-b-testing}關聯
+### 將對象和流量百分比與A/B測試關聯 {#associating-audiences-and-traffic-percentages-with-a-b-testing}
 
 1. 按一下或點選對應至體驗之對象旁的下拉式方塊。
-1. （選用）按一下「**編輯**」，然後輸入關鍵字以搜尋所需區段。
-1. 按一下或點選「**確定」。**
+1. （選用）按一下 **編輯**，然後輸入關鍵字以搜尋所需的區段。
+1. 按一下或點選 **好。**
 1. 以百分比輸入，以設定對象流量如何路由至每個體驗。 總數必須等於100。
 1. （選用）按一下體驗名稱旁的下拉式功能表，編輯體驗名稱。
 
-## 目標與設定：設定活動和設定目標{#goals-settings-configuring-the-activity-and-setting-goals}
+## 目標與設定：設定活動和設定目標 {#goals-settings-configuring-the-activity-and-setting-goals}
 
-[定位程式](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)的目標與設定步驟涉及設定品牌活動的行為。 指定活動何時開始和結束，以及活動優先順序。 此外，您也可以追蹤目標。 具體來說，您可以決定要以活動測量什麼。
+的「目標與設定」步驟 [目標定位過程](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings) 包括設定品牌活動的行為。 指定活動何時開始和結束，以及活動優先順序。 此外，您也可以追蹤目標。 具體來說，您可以決定要以活動測量什麼。
 
 目標量度只有在您使用Adobe Target作為目標引擎時才可用。 您至少必須定義一個目標量度。 如果您已設定Adobe Analytics且有A4T Analytics雲端設定，則可以選取您要讓報表來源為Adobe Target或Adobe Analytics。
 
@@ -464,8 +464,8 @@ ht-degree: 6%
    <td><strong>轉換</strong></td>
    <td><p>按一下所測試體驗任何部分的訪客百分比。 每個訪客或任何訪客每次完成轉換時，都可計算一次轉換。 轉換量度會設為下列其中一項：</p>
     <ul>
-     <li><strong>已檢視頁面</strong>  — 您可以選取URL，然後定義URL或多個URL，或選取 <strong>URL包</strong> 含器，然後新增路徑或關鍵字，以定義受 <strong>眾已檢</strong> 視的頁面。</li>
-     <li><strong>已檢視mbox</strong>  — 您可以輸入mbox的名稱，以定義已檢視的mbox對象。您可以按一下「新增Mbox</strong>」來輸入多個mbox。<strong></strong></li>
+     <li><strong>已檢視頁面</strong>  — 您可以選取對象所檢視的頁面 <strong>URL是</strong> 然後定義URL或多個URL，或選取 <strong>URL包含</strong> 然後新增路徑或關鍵字。</li>
+     <li><strong>已檢視mbox</strong>  — 您可以輸入mbox名稱，以定義對象所檢視的mbox。 您可以按一下 <strong>新增mbox</strong>.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -492,7 +492,7 @@ ht-degree: 6%
 
 此外，進階設定可讓您判斷如何計算成功量度。 選項包括計算每次曝光的量度或每位訪客一次，以及選擇是否讓使用者留在活動中或移除這些量度。
 
-使用進階設定來判斷使用者達到目標量度後&#x200B;**會發生什麼事。**&#x200B;下表顯示可用選項。
+使用進階設定來判斷會發生什麼事 **after** 使用者遇到目標量度。 下表顯示可用選項。
 
 <table>
  <tbody>
@@ -529,42 +529,42 @@ ht-degree: 6%
  </tbody>
 </table>
 
-如需成功量度的詳細資訊，請參閱[Adobe Target檔案](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)。
+請參閱 [Adobe Target檔案](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html) 以取得成功量度的詳細資訊。
 
-### 配置設定(AEM定位){#configuring-settings-aem-targeting}
+### 配置設定(AEM定位) {#configuring-settings-aem-targeting}
 
 若要在使用AEM鎖定目標時進行設定：
 
-1. 若要指定活動何時開始，請使用&#x200B;**Start**&#x200B;下拉式功能表來選取下列其中一個值：
+1. 若要指定活動何時開始，請使用 **開始** 下拉式選單中選取下列其中一個值：
 
    * **啟動時**:活動從包含目標內容的頁面啟動時開始。
-   * **指定的日期和時間**:特定時間。選取此選項時，按一下或點選日曆圖示，選取日期，並指定啟動活動的時間。
+   * **指定的日期和時間**:特定時間。 選取此選項時，按一下或點選日曆圖示，選取日期，並指定啟動活動的時間。
 
-1. 若要指定活動結束時間，請使用&#x200B;**End**&#x200B;下拉式選單來選取下列其中一個值：
+1. 若要指定活動結束時間，請使用 **結束** 下拉式選單中選取下列其中一個值：
 
    * **停用時**:活動會在包含目標內容的頁面停用時結束。
-   * **指定的日期和時間**:特定時間。選取此選項時，按一下或點選日曆圖示，選取日期，並指定結束活動的時間。
+   * **指定的日期和時間**:特定時間。 選取此選項時，按一下或點選日曆圖示，選取日期，並指定結束活動的時間。
 
-1. 要指定活動的優先順序，請使用滑桿選擇&#x200B;**Low**、**Normal**&#x200B;或&#x200B;**High**。
+1. 若要指定活動的優先順序，請使用滑桿來選取 **低**, **正常**，或 **高**.
 
-### 設定目標與設定(Adobe Target){#configuring-goals-settings-adobe-target}
+### 設定目標與設定(Adobe Target) {#configuring-goals-settings-adobe-target}
 
 若要在使用Adobe Target時設定目標與設定：
 
-1. 若要指定活動何時開始，請使用&#x200B;**Start**&#x200B;下拉式功能表來選取下列其中一個值：
+1. 若要指定活動何時開始，請使用 **開始** 下拉式選單中選取下列其中一個值：
 
    * **啟動時**:活動從包含目標內容的頁面啟動時開始。
-   * **指定的日期和時間**:特定時間。選取此選項時，按一下或點選日曆圖示，選取日期，並指定啟動活動的時間。
+   * **指定的日期和時間**:特定時間。 選取此選項時，按一下或點選日曆圖示，選取日期，並指定啟動活動的時間。
 
-1. 若要指定活動結束時間，請使用&#x200B;**End**&#x200B;下拉式選單來選取下列其中一個值：
+1. 若要指定活動結束時間，請使用 **結束** 下拉式選單中選取下列其中一個值：
 
    * **停用時**:活動會在包含目標內容的頁面停用時結束。
-   * **指定的日期和時間**:特定時間。選取此選項時，按一下或點選日曆圖示，選取日期，並指定結束活動的時間。
+   * **指定的日期和時間**:特定時間。 選取此選項時，按一下或點選日曆圖示，選取日期，並指定結束活動的時間。
 
-1. 要指定活動的優先順序，請使用滑桿選擇&#x200B;**Low**、**Normal**&#x200B;或&#x200B;**High**。
-1. 如果您已使用Adobe Target帳戶設定Adobe分析，則會看到「**報表來源**」下拉式功能表。 選取 **Adobe Target****或** Adobe Analytics做為來源。
+1. 若要指定活動的優先順序，請使用滑桿來選取 **低**, **正常**，或 **高**.
+1. 如果您已使用Adobe Target帳戶設定Adobe分析，則您會看到 **報表來源** 下拉式功能表。 選取 **Adobe Target****或** Adobe Analytics做為來源。
 
-   如果您選取&#x200B;**Adobe Analytics**，請選取公司和報表套裝。 如果您選取&#x200B;**Adobe Target**，則不需要任何動作。
+   如果您選取 **Adobe Analytics**，請選取公司和報表套裝。 如果您選取 **Adobe Target**，則不需要任何動作。
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
@@ -574,7 +574,7 @@ ht-degree: 6%
 
    如果您需要清除所有欄位，請按一下右上角的三個點，然後選取「清除所 **有欄位」**。
 
-   所有量度也有您可定義的進階設定。 選擇&#x200B;**高級設定**&#x200B;以訪問這些設定。 請參閱上表中成功量度計算方式的定義，並參閱[Adobe Target檔案](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)。
+   所有量度也有您可定義的進階設定。 選擇 **進階設定** 來存取那些。 請參閱上表中成功量度計算方式的定義，並參閱 [Adobe Target檔案](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html).
 
    >[!NOTE]
    必須至少定義一個目標。
@@ -584,29 +584,29 @@ ht-degree: 6%
    >[!NOTE]
    如果量度中缺少資訊，量度周圍會出現紅線。
 
-1. 按一下「**新增量度**」以設定其他成功量度。
+1. 按一下 **新增量度** 設定其他成功量度。
 
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
    >[!NOTE]
-   您可以按一下或點選三個點，然後按一下或點選&#x200B;**Delete**，以移除其他目標。 AEM要求您至少定義一個目標。
+   您可以按一下或點選三個點，然後按一下或點選，以移除其他目標 **刪除**. AEM要求您至少定義一個目標。
 
-1. 如果您想要進一步控製成功量度的計算方式，請按一下或點選「**進階設定** 」以存取這些量度。
+1. 如果您想要進一步控製成功量度的計算方式，請按一下或點選 **進階設定** 來存取那些。
 1. 按一下「**儲存**」。
 
-設定後，您可以[檢視使用Adobe Target（體驗或A/B測試鎖定目標）之活動的效能](/help/sites-authoring/activitylib.md#viewing-performance-and-converting-winning-experiences-a-b-test)。 此外，使用A/B測試鎖定目標，您可以[轉換獲勝者。](/help/sites-authoring/activitylib.md#viewing-performance-and-converting-winning-experiences-a-b-test)
+設定後，您可以 [檢視活動的效能](/help/sites-authoring/activitylib.md#viewing-performance-and-converting-winning-experiences-a-b-test) 使用Adobe Target（體驗或A/B測試鎖定目標）的訪客。 此外，透過A/B測試鎖定目標，您可以 [轉換獲勝者。](/help/sites-authoring/activitylib.md#viewing-performance-and-converting-winning-experiences-a-b-test)
 
-## 模擬體驗{#simulating-an-experience}
+## 模擬體驗 {#simulating-an-experience}
 
 模擬訪客的體驗，以根據您目標內容的設計，確認頁面內容如預期般顯示。 模擬時，載入不同的使用者設定檔，並查看該使用者的目標內容。
 
 下列條件會決定模擬訪客體驗時顯示的內容：
 
 * 使用者工作階段存放區中的資料（透過Context Hub）。
-* 位於](/help/sites-authoring/activitylib.md)的[活動。
-* 定義區段](/help/sites-administering/campaign-segmentation.md)的[規則。
+* 此 [開啟的活動](/help/sites-authoring/activitylib.md).
+* 此 [定義區段的規則](/help/sites-administering/campaign-segmentation.md).
 * Target元件中的體驗內容。
-* 定位引擎](/help/sites-authoring/activitylib.md)的[配置。
+* 此 [定位引擎的設定](/help/sites-authoring/activitylib.md).
 
 如果載入設定檔時頁面上出現非預期的內容，請檢查此清單中每個項目的設定。
 
@@ -618,7 +618,7 @@ ht-degree: 6%
 * 定位模式中的模擬活動：頁面會顯示目前在Context Hub中選取之使用者的選件。 您可以編輯以使用者為目標的選件。
 * 預覽模式：使用「內容中樞」來選取符合您的體驗所根據之區段標準的使用者和位置。 當您的「內容中心」選取項目變更時，目標內容會隨之變更。
 
-1. 若要切換至「預覽」模式，請在工具列上按一下或點選「**預覽**」。
+1. 若要切換至「預覽」模式，請在工具列上按一下或點選 **預覽**.
 1. 在工具列上，按一下或點選「內容中樞」圖示。
 
    ![](do-not-localize/chlimage_1-7.png)
@@ -631,7 +631,7 @@ ht-degree: 6%
 
 1. 若要變更顯示的選件，請切換至「定位」模式。 在選取模擬活動後，編輯您在預覽模式中設定之內容的選件。
 
-## 配置目標元件選項{#configuring-target-component-options}
+## 配置目標元件選項 {#configuring-target-component-options}
 
 您可以透過下列兩種方式之一存取元件的選項來自訂Target元件：
 
@@ -665,7 +665,7 @@ ht-degree: 6%
   </tr>
   <tr>
    <td><strong>引擎</strong></td>
-   <td>根據您要使用的引擎，在<strong>用戶端規則（不追蹤）、Adobe Target、ContextHub、</strong>和<strong> Adobe Campaign </strong>之間選取。</td>
+   <td>在之間選擇 <strong>用戶端規則（不追蹤）、Adobe Target、ContextHub、 </strong>和<strong> Adobe Campaign </strong>視您要使用的引擎而定。</td>
   </tr>
  </tbody>
 </table>
@@ -682,7 +682,7 @@ ht-degree: 6%
   </tr>
   <tr>
    <td><strong>準確定位</strong></td>
-   <td><p>啟用正確定位可告知元件，在將請求傳送至Adobe Target之前，應等待用戶端內容或內容中樞資料可供使用。 這可能會增載入入時間。 在製作時，一律會啟用精確鎖定目標。</p> <p>如果您選取<strong>精確鎖定目標</strong>核取方塊，mbox會先執行<code>mboxDefine</code>，然後執行<code>mboxUpdate</code>，在資料可用時產生Ajax要求。</p> <p>如果您未選取<strong>精確鎖定目標</strong>核取方塊， mbox會執行<code>mboxCreate</code>立即產生同步請求（在此案例中，並非所有內容資料都可用）。</p> <p><strong>注意：</strong> 對特定元件啟用或停用精確鎖定目標不會影響您已全域設定的設定。您一律可以選取元件中的「精確鎖定目標」 ，以覆寫全域設定。</p> </td>
+   <td><p>啟用正確定位可告知元件，在將請求傳送至Adobe Target之前，應等待用戶端內容或內容中樞資料可供使用。 這可能會增載入入時間。 在製作時，一律會啟用精確鎖定目標。</p> <p>如果您選取 <strong>準確定位</strong> 核取方塊，mbox會執行 <code>mboxDefine</code> 第一個 <code>mboxUpdate</code> 之後，資料可用時就會產生Ajax要求。</p> <p>如果您未選取 <strong>準確定位</strong> 核取方塊，mbox會執行 <code>mboxCreate</code> 立即產生同步請求（在此案例中，並非所有內容資料都可供使用）。</p> <p><strong>注意：</strong> 對特定元件啟用或停用精確鎖定不會影響您已全域設定的設定。 您一律可以選取元件中的「精確鎖定目標」 ，以覆寫全域設定。</p> </td>
   </tr>
   <tr>
    <td><strong>包括已解析的區段</strong></td>
@@ -694,11 +694,11 @@ ht-degree: 6%
   </tr>
   <tr>
    <td><strong>內容參數</strong></td>
-   <td>按一下或點選「<strong>新增欄位</strong> 」，以設定其他內容參數（與Target架構中可用的參數相同）。 添加到元件的上下文參數僅應用於<i></i>元件，而不應用於其他元件，如果直接將上下文參數添加到框架，則情況會如此。</td>
+   <td>按一下或點選 <strong>新增欄位</strong> 設定其他內容參數（與Target架構中可用的參數相同）。 套用新增至元件的內容參數 <i>僅限</i> 直接將上下文參數新增至架構時，會如同情況，新增至元件，而非新增至其他元件。</td>
   </tr>
   <tr>
    <td><strong>靜態參數</strong></td>
-   <td>按一下或點選<strong>新增欄位</strong>以設定其他靜態參數（與Target架構中可用的參數相同）。 新增至元件的靜態參數只會將<i></i>套用至元件，而不會套用至其他元件，如同您直接新增靜態參數至架構時的情況。 靜態參數不來自內容（內容中心的用戶端內容）。</td>
+   <td>按一下或點選 <strong>新增欄位</strong> 設定其他靜態參數（與Target架構中可用的參數相同）。 套用新增至元件的靜態參數 <i>僅限</i> 直接將靜態參數新增至架構時，會如同的情況，新增至元件，而非新增至其他元件。 靜態參數不來自內容（內容中心的用戶端內容）。</td>
   </tr>
  </tbody>
 </table>
@@ -722,12 +722,12 @@ ht-degree: 6%
     <ul>
      <li><strong>第一個</strong>:清單中排名最前的體驗，如促銷活動中所排序。</li>
      <li><strong>隨機</strong>:已使用任何體驗。</li>
-     <li><strong>點按流分數</strong>:會使用在用戶端內容中追蹤的標籤和相關標籤點擊。會比較預告頁面上定義之標籤的點擊率。</li>
+     <li><strong>點按流分數</strong>:會使用在用戶端內容中追蹤的標籤和相關標籤點擊。 會比較預告頁面上定義之標籤的點擊率。</li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-如果您要整合AEM與Adobe Campaign，請選取&#x200B;**Adobe Campaign**&#x200B;作為引擎。 如需詳細資訊，請參閱[將AEM與Adobe Campaign整合](/help/sites-administering/campaign.md) 。
+您選取 **Adobe Campaign** 作為引擎。 請參閱 [整合AEM與Adobe Campaign](/help/sites-administering/campaign.md) 以取得更多資訊。
 
-如果您使用ContextHub進行定位，請選取&#x200B;**ContextHub**&#x200B;作為引擎。 請參閱[設定ContextHub。](/help/sites-developing/ch-configuring.md)
+選擇 **ContextHub** 做為引擎。 請參閱 [設定ContextHub。](/help/sites-developing/ch-configuring.md)

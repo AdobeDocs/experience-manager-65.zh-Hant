@@ -17,7 +17,7 @@ ht-degree: 0%
 
 使用JMX控制台建立並部署MBean以管理服務。 公開服務屬性和操作，以便執行管理任務。
 
-有關使用JMX控制台的資訊，請參閱[使用JMX控制台監視伺服器資源](/help/sites-administering/jmx-console.md)。
+有關使用JMX控制台的資訊，請參見 [使用JMX控制台監視伺服器資源](/help/sites-administering/jmx-console.md).
 
 ## Felix和CQ5中的JMX架構 {#the-jmx-framework-in-felix-and-cq}
 
@@ -37,24 +37,24 @@ ht-degree: 0%
 
 ### 使用注釋提供MBean資訊 {#using-annotations-to-provide-mbean-information}
 
-[com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)套件提供數個注釋和類，以便輕鬆地向JMX控制台提供MBean元資料。 使用這些注釋和類，而不是直接將資訊添加到MBean的MBeanInfo對象。
+此 [com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html) package提供了多個注釋和類，以便輕鬆將MBean元資料提供到JMX控制台。 使用這些注釋和類，而不是直接將資訊添加到MBean的MBeanInfo對象。
 
 **註解**
 
-向管理介面添加註釋以指定MBean元資料。 資訊會顯示在JMX控制台中，用於部署的每個實施類。 下列為可用的註解（如需完整資訊，請參閱[com.adobe.granite.jmx.annotation JavaDocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)）:
+向管理介面添加註釋以指定MBean元資料。 資訊會顯示在JMX控制台中，用於部署的每個實施類。 下列註解可供使用(如需完整資訊，請參閱 [com.adobe.granite.jmx.annotation JavaDocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)):
 
-* **說明：** 提供MBean類或方法的說明。在類聲明上使用時，說明將出現在MBean的「JMX控制台」頁上。 在方法上使用時，說明會顯示為對應屬性或操作的暫留文字。
-* **影響：** 方法的影響。有效參數值是由[javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html)定義的欄位。
+* **說明：** 提供MBean類或方法的說明。 在類聲明上使用時，說明將出現在MBean的「JMX控制台」頁上。 在方法上使用時，說明會顯示為對應屬性或操作的暫留文字。
+* **影響：** 方法的影響。 有效參數值是定義的欄位 [javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html).
 
-* **名稱：** 指定要為操作參數顯示的名稱。使用此注釋覆蓋介面中使用的方法參數的實際名稱。
-* **OpenTypeInfo:** 指定在JMX控制台中用於表示複合資料或表格資料的類。用於Open MBean
+* **名稱：** 指定操作參數要顯示的名稱。 使用此注釋覆蓋介面中使用的方法參數的實際名稱。
+* **OpenTypeInfo:** 指定在JMX控制台中用於表示複合資料或表格資料的類。 用於Open MBean
 * **TabularTypeInfo:** 用於注釋用於表示表格資料的類。
 
 **類別**
 
 提供的類用於建立動態MBean，這些ean使用您添加到其介面的注釋：
 
-* **AnnotatedStandardMBean:** javax.management.StandardMBean類的子類，它自動向JMX控制台提供注釋元資料。
+* **AnnotatedStandardMBean:** javax.management.StandardMBean類的子類，可自動為JMX控制台提供注釋元資料。
 * **OpenAnnotatedStandardMBean:** AnnotatedStandardMBean類的子類，用於建立使用OpenTypeInfo注釋的Open Mbean。
 
 ### 開發MBean {#developing-mbeans}
@@ -64,7 +64,7 @@ ht-degree: 0%
 * 管理介面：使用getter、setter和is方法定義屬性。 使用任何其他公用方法定義操作。 使用注釋來提供BeanInfo對象的元資料。
 * MBean類：實作管理介面。 擴展AnnotatedStandardMBean類，以便處理介面上的注釋。
 
-以下範例MBean提供有關CRX存放庫的資訊。 介面使用「說明」注釋來向JMX控制台提供資訊。
+以下示例MBean提供了有關CRX儲存庫的資訊。 介面使用「說明」注釋來向JMX控制台提供資訊。
 
 #### 管理介面 {#management-interface}
 
@@ -134,15 +134,15 @@ public class ExampleMBeanImpl extends AnnotatedStandardMBean implements ExampleM
 
 除了與OSGi相關的元資料之外，您還必須提供元資料，Aries JMX Whiteboard模組需要這些元資料，以便向MBean伺服器註冊MBean:
 
-* **DynamicMBean介面的名稱：** 聲明MBean服務實 `javax.management.DynamicMBea`施n介面。此聲明通知Aries JMX白板模組，該服務是MBean服務。
+* **DynamicMBean介面的名稱：** 聲明MBean服務實施 `javax.management.DynamicMBea`n介面。 此聲明通知Aries JMX白板模組，該服務是MBean服務。
 
-* **MBean網域和索引鍵屬性：** 在Felix上，您以MBean的OSGi服務的屬性提供此資訊。這與通常在`javax.management.ObjectName`對象中提供給MBean伺服器的資訊相同。
+* **MBean域和密鑰屬性：** 在Felix上，您將此資訊作為MBean的OSGi服務的屬性提供。 這與您通常在 `javax.management.ObjectName` 物件。
 
-如果MBean是單一服務的反映，則只需要MBean服務的單個實例。 在此情況下，如果使用Felix SCR Maven插件，則可以使用MBean實施類上的Apache Felix服務元件運行時(SCR)注釋來指定與JMX相關的元資料。 要實例化多個MBean實例，可以建立另一個類，用於執行MBean的OSGi服務的註冊。 在這種情況下，在運行時生成與JMX相關的元資料。
+如果MBean是單一服務的反映，則只需要MBean服務的單個實例。 在此情況下，如果使用Felix SCR Maven插件，則可以使用MBean實施類上的Apache Felix服務元件運行時(SCR)注釋來指定與JMX相關的元資料。 要實例化多個MBean實例，可以建立另一個類，用於執行MBean的OSGi服務的註冊。 在這種情況下，將在運行時生成與JMX相關的元資料。
 
 **單MBean**
 
-可以使用MBean實現類中的SCR注釋來部署可在設計時定義所有屬性和操作的MBean。 在以下示例中，`Service`批注的`value`屬性聲明服務實現`DynamicMBean`介面。 `Property`批注的`name`屬性指定JMX域和鍵屬性。
+可以使用MBean實現類中的SCR注釋來部署可在設計時定義所有屬性和操作的MBean。 在下列範例中， `value` 屬性 `Service` 批注聲明服務實施 `DynamicMBean` 介面。 此 `name` 屬性 `Property` 批注指定JMX域和鍵屬性。
 
 #### 具有SCR注釋的MBean實施類 {#mbean-implementation-class-with-scr-annotations}
 
@@ -228,7 +228,7 @@ MBean元資料顯示在JMX控制台中，其中包含com.adobe.example域、work
 
 ### 示例MBean {#the-example-mbean}
 
-此示例需要MBean介面和實現，該介面是`com.day.cq.workflow.model.WorkflowModel`介面上的反映。 MBean非常簡單，因此示例可以專注於設計的配置和部署方面。 MBean會公開單一屬性，即模型名稱。
+此示例需要MBean介面和實現，這是 `com.day.cq.workflow.model.WorkflowModel` 介面。 MBean非常簡單，因此示例可以專注於設計的配置和部署方面。 MBean會公開單一屬性，即模型名稱。
 
 #### WorkflowMBean介面 {#workflowmbean-interface}
 
@@ -429,7 +429,7 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
 * Apache Felix Maven套件組合外掛程式：建立套件和資訊清單
 * Apache Felix Maven SCR外掛程式：建立元件描述符檔案並配置服務元件清單標頭。
 
-**注意：** 撰寫時，Maven scr外掛程式與Eclipse適用的m2e外掛程式不相容。（請參閱[Felix bug 3170](https://issues.apache.org/jira/browse/FELIX-3170)。） 若要使用Eclipse IDE，請安裝Maven並使用命令列介面來執行組建。
+**注意：** 撰寫時， maven scr外掛程式與Eclipse適用的m2e外掛程式不相容。 (請參閱 [Felix bug 3170](https://issues.apache.org/jira/browse/FELIX-3170).) 若要使用Eclipse IDE，請安裝Maven並使用命令列介面來執行組建。
 
 #### 範例POM檔案 {#example-pom-file}
 

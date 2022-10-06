@@ -1,8 +1,8 @@
 ---
 title: 疑難排解程式報告
-seo-title: 疑難排解程式報告
+seo-title: Troubleshooting Process Reporting
 description: 疑難排解AEM Forms on JEE程式報告的問題
-seo-description: 疑難排解AEM Forms on JEE程式報告的問題
+seo-description: Troubleshoot issues in AEM Forms on JEE Process Reporting
 page-status-flag: de-activated
 uuid: 1c1cc27c-fbed-4366-bffe-e1581d269a93
 content-type: reference
@@ -11,16 +11,16 @@ discoiquuid: 0a818d19-8804-4c69-b721-31c347c593c0
 exl-id: 165d4c69-d7ca-45f8-a9de-764cb8ecab7e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
 
-# 疑難排解程式報告{#troubleshooting-process-reporting}
+# 疑難排解程式報告 {#troubleshooting-process-reporting}
 
-## 在Microsoft Windows 7上建立Internet Explorer 9篩選器時遇到的問題{#issues-faced-in-creating-filters-on-internet-explorer-on-microsoft-windows}
+## 在Microsoft Windows 7上建立Internet Explorer 9篩選器時遇到的問題 {#issues-faced-in-creating-filters-on-internet-explorer-on-microsoft-windows}
 
-如果您為預先定義的報表建立篩選器，則&#x200B;**Internet Explorer 9**&#x200B;中針對&#x200B;**Microsoft Windows 7**&#x200B;環境時會間歇性發生下列問題：
+如果您為預先定義的報表建立篩選器，下列問題會在 **Internet Explorer 9** for **Microsoft Windows 7** 環境：
 
 * 值欄位中的下拉式清單會顯示唯一識別碼，而非值。
 * 「值」欄位中的「日曆」控制項顯示日文字元。

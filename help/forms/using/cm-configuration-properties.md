@@ -1,25 +1,25 @@
 ---
 title: 通信管理配置屬性
-seo-title: 通信管理配置屬性
+seo-title: Correspondence Management Configuration Properties
 description: 本主題說明如何使用解決方案專屬設定修改資產撰寫器。 本主題詳細說明您可編輯的屬性，以及其說明、預設值和可接受的值。
-seo-description: 本主題說明如何使用解決方案專屬設定修改資產撰寫器。 本主題詳細說明您可編輯的屬性，以及其說明、預設值和可接受的值。
+seo-description: This topic explains how you can modify Asset Composer with solution-specific configurations. This topic details the properties you can edit, with their description, default values, and acceptable values.
 uuid: 6b401d51-9332-459b-b751-42a9b5a1462d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: f2955419-c680-44a7-9913-c594b4577551
-feature: 通信管理
+feature: Correspondence Management
 exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '845'
 ht-degree: 3%
 
 ---
 
-# 通信管理配置屬性{#correspondence-management-configuration-properties}
+# 通信管理配置屬性 {#correspondence-management-configuration-properties}
 
-若要設定這些屬性，請在瀏覽器中開啟下列URL:`https://<server>:<port>/<contextPath>/system/console/configMgr`並選擇&#x200B;**通信管理配置**。
+若要設定這些屬性，請在瀏覽器中開啟下列URL: `https://<server>:<port>/<contextPath>/system/console/configMgr` 選取 **通信管理配置**.
 
 通信管理具有以下配置屬性：
 
@@ -56,7 +56,7 @@ ht-degree: 3%
    <td>HTML轉譯/PDF轉譯</td>
   </tr>
   <tr>
-   <td><p>啟用CCR PDF突出顯示</p> </td>
+   <td><p>啟用CCRPDF突出顯示</p> </td>
    <td><p>在建立通信應用程式中啟用對PDF的突出顯示</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
@@ -104,8 +104,8 @@ ht-degree: 3%
    <td><p>任何數字</p> </td>
   </tr>
   <tr>
-   <td><p>PDF文檔參數名稱</p> </td>
-   <td><p>後續處理中PDF文檔的參數名</p> </td>
+   <td><p>PDF文檔參數名</p> </td>
+   <td><p>後處理中PDF文檔的參數名</p> </td>
    <td><p>inPDFDoc</p> </td>
    <td><p>任何字串變數名稱</p> </td>
   </tr>
@@ -129,7 +129,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>PDF提交類型</p> </td>
-   <td><p>PDF提交類型（從「建立通信」應用程式提交時生成的PDF類型）</p> </td>
+   <td><p>PDF提交類型(從「建立通信」應用程式提交時生成的PDF類型)</p> </td>
    <td><p>nonInteractive</p> </td>
    <td><p>互動/非互動</p> </td>
   </tr>
@@ -249,13 +249,13 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>字母快取大小</p> </td>
-   <td><p>指定要保留在快取中的字母數上限。</p> <p>更改此值將導致<code>in-memory</code>快取的清除。</p> </td>
+   <td><p>指定要保留在快取中的字母數上限。</p> <p>若變更此值，將會導致 <code>in-memory</code> 快取。</p> </td>
    <td><p>100</p> </td>
    <td><p>任何數值</p> </td>
   </tr>
   <tr>
    <td><p>啟用信函快取</p> </td>
-   <td><p>啟用/停用信函快取。</p> <p>更改此值將導致<code>in-memory </code>快取的清除。</p> </td>
+   <td><p>啟用/停用信函快取。</p> <p>若變更此值，將會導致 <code>in-memory </code> 快取。</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -291,7 +291,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>調試目錄 </p> <p> </p> </td>
-   <td>用於調試的檔案系統資料夾位置。 如果目錄不是<code>exists</code>，則不會生成調試轉儲。</td>
+   <td>用於調試的檔案系統資料夾位置。 如果目錄不是 <code>exists</code>，則不會產生除錯轉儲。</td>
    <td>acm.debugDirectory</td>
    <td> </td>
   </tr>

@@ -1,8 +1,8 @@
 ---
 title: AEM Forms工作區JSON物件說明
-seo-title: AEM Forms工作區JSON物件說明
+seo-title: AEM Forms workspace JSON object description
 description: LiveCycleAEM Forms工作區以自訂、擴充、修改和重複使用所使用之JSON JavaScript物件的概念資訊。
-seo-description: LiveCycleAEM Forms工作區以自訂、擴充、修改和重複使用所使用之JSON JavaScript物件的概念資訊。
+seo-description: Conceptual information about the JSON JavaScript objects used in LiveCycle AEM Forms workspace for customization, extension, modification, and reuse.
 uuid: 91c923c8-144a-4453-ba91-6a5193f1c4c4
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ discoiquuid: 61b7246d-ed28-4470-a0a2-a4aaf1a061a4
 exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2109'
 ht-degree: 2%
 
 ---
 
-# AEM Forms工作區JSON物件說明{#aem-forms-workspace-json-object-description}
+# AEM Forms工作區JSON物件說明 {#aem-forms-workspace-json-object-description}
 
 AEM Forms工作區中使用的JSON物件說明如下。
 
@@ -59,7 +59,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>categoryList</td>
    <td>T</td>
-   <td>包含類別<br type="_moz" />的直接子類別清單 </td>
+   <td>包含類別的直接子類別清單<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
@@ -99,7 +99,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>classOfTask</td>
    <td>F</td>
-   <td>任務類為「LC8」，而任務為lc8任務，則為「Standard」。<br /> </td>
+   <td>任務為lc8任務，而任務為「標準」時，任務類為「LC8」。<br /> </td>
   </tr>
   <tr>
    <td>completeTime<br /> </td>
@@ -109,7 +109,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>consultGroupId<br /> </td>
    <td>F</td>
-   <td>它包含可以咨詢任務的組的ID。 在過程設計期間設定。<br /> </td>
+   <td>它包含可以咨詢任務的組的ID。 在設計過程中設定。<br /> </td>
   </tr>
   <tr>
    <td>createTime<br /> </td>
@@ -129,7 +129,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>截止日期<br /> </td>
    <td>F</td>
-   <td>它包含任務到達其截止時間的時間戳。<br /> </td>
+   <td>它包含任務達到其截止時間的時間戳記。<br /> </td>
   </tr>
   <tr>
    <td>說明<br /> </td>
@@ -144,7 +144,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>forwardGroupId<br /> </td>
    <td>F</td>
-   <td>它包含可轉發任務的組的ID。 在過程設計期間設定。<br /> </td>
+   <td>它包含可轉發任務的組的ID。 在設計過程中設定。<br /> </td>
   </tr>
   <tr>
    <td>說明<br /> </td>
@@ -174,7 +174,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>isShowAttachments<br /> </td>
    <td>F</td>
-   <td>如果為true，則顯示附件。<br /> </td>
+   <td>如果為true，則會顯示附件。<br /> </td>
   </tr>
   <tr>
    <td>isStartTask<br /> </td>
@@ -187,14 +187,14 @@ AEM Forms工作區中使用的JSON物件說明如下。
    <td>如果工作區中顯示任務，則返回true。<br /> </td>
   </tr>
   <tr>
-   <td>nextTemment<br /> </td>
+   <td>nextTimmer<br /> </td>
    <td>F</td>
    <td>下次提醒的時間戳。<br /> </td>
   </tr>
   <tr>
    <td>優先順序<br /> </td>
    <td>F</td>
-   <td>它包含任務的優先順序。<br /> 1 =最高優先順序<br /> 2 =高優先順序<br /> 3 =一般優先順序<br /> 4 =低優先順序<br /> 5 =最低優先順序<br /> </td>
+   <td>它包含任務的優先順序。<br /> 1 =最高優先順序<br /> 2 =高優先順序<br /> 3 =正常優先順序<br /> 4 =低優先順序<br /> 5 =最低優先順序<br /> </td>
   </tr>
   <tr>
    <td>processInstanceId</td>
@@ -207,14 +207,14 @@ AEM Forms工作區中使用的JSON物件說明如下。
    <td>任務的進程實例的狀態。<br /> </td>
   </tr>
   <tr>
-   <td>timentCount<br /> </td>
+   <td>menternCount<br /> </td>
    <td>F</td>
    <td>它包含任務的提醒計數。<br /> </td>
   </tr>
   <tr>
    <td>routeList<br /> </td>
    <td>F</td>
-   <td>它包含與任務關聯的路由清單。 用戶可以通過從路由清單中選擇任何一條路由來完成任務。<br /> </td>
+   <td>它包含與任務關聯的路由清單。 用戶可以通過從路由清單中選擇任何一條路由來完成該任務。<br /> </td>
   </tr>
   <tr>
    <td>selectedRoute<br /> </td>
@@ -224,7 +224,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>serializedImageTicket<br /> </td>
    <td>F</td>
-   <td>它包含與任務對應的影像票證。 此映像票證用於任務的imageUrl欄位，以從伺服器獲取任務的映像。<br /> <br /> </td>
+   <td>它包含與任務對應的影像票證。 此映像票證用於任務的imageUrl欄位中，以從伺服器獲取任務的映像。<br /> <br /> </td>
   </tr>
   <tr>
    <td>serviceName<br /> </td>
@@ -244,7 +244,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>stepName<br /> </td>
    <td>F</td>
-   <td>它包含進程設計期間任務集的名稱。<br /> </td>
+   <td>它包含流程設計期間任務集的名稱。<br /> </td>
   </tr>
   <tr>
    <td>summaryUrl<br /> </td>
@@ -269,12 +269,12 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>formUrl<br /> </td>
    <td>T</td>
-   <td>它包含任務的表單url。<br /> </td>
+   <td>它包含任務的表單URL。<br /> </td>
   </tr>
   <tr>
    <td>taskFormType<br /> </td>
    <td>T</td>
-   <td>它包含任務表單類型。 使用此欄位，任務在客戶端上以pdf格式呈現，swf表單等。<br /> </td>
+   <td>它包含任務表單類型。 使用此欄位，任務在用戶端上會呈現為的PDF、swf表單等。<br /> </td>
   </tr>
   <tr>
    <td>showDirectActions<br /> </td>
@@ -284,7 +284,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>showACLAactions<br /> </td>
    <td>T</td>
-   <td>如果為true，則在工作區中可看到轉發、查詢、共用等操作。<br /> </td>
+   <td>若為true，則後續、諮詢、共用等動作會顯示在工作區中。<br /> </td>
   </tr>
   <tr>
    <td>supportsOffline<br /> </td>
@@ -304,22 +304,22 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>isDefaultImage<br /> </td>
    <td>T</td>
-   <td>表示是否為進程指定了映像。 如果沒有與進程相關聯的影像，則返回true。<br /> </td>
+   <td>表示是否為進程指定了映像。 如果沒有與進程相關聯的影像，則返回true；否則返回false。<br /> </td>
   </tr>
   <tr>
    <td>historyTaskList<br /> </td>
    <td>T</td>
-   <td>它包含任務詳細資訊歷史記錄頁簽中使用的任務清單。<br /> </td>
+   <td>它包含任務詳細資訊的歷史記錄頁簽中使用的任務清單。<br /> </td>
   </tr>
   <tr>
    <td>isOwner<br /> </td>
    <td>T</td>
-   <td>如果登入的用戶是任務的所有者，則為true。<br /> </td>
+   <td>如果登入的使用者是任務的擁有者，則為true。<br /> </td>
   </tr>
   <tr>
    <td>availableCommands<br /> </td>
    <td>T</td>
-   <td>它包含可以對任務執行的所有操作。<br /> </td>
+   <td>它包含可對任務執行的所有操作。<br /> </td>
   </tr>
   <tr>
    <td>availableCommands.directCommands<br /> </td>
@@ -334,7 +334,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>availableCommands.otherCommands<br /> </td>
    <td>T</td>
-   <td>它包含諸如鎖定、解鎖、放棄、返回、聲明等命令，如可用。<br /> </td>
+   <td>它包含諸如鎖定、解鎖、放棄、返回、聲明等可用命令。<br /> </td>
   </tr>
   <tr>
    <td>processInstanceInfo<br /> </td>
@@ -359,17 +359,17 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>dataUrl<br /> </td>
    <td>T</td>
-   <td>它是任務形式資料的url。<br /> </td>
+   <td>它是任務形式資料的URL。<br /> </td>
   </tr>
   <tr>
    <td>externalAppConfig<br /> </td>
    <td>T</td>
-   <td>這是第三方應用程式表單的配置。<br /> </td>
+   <td>這是協力廠商應用程式表單的設定。<br /> </td>
   </tr>
   <tr>
    <td>已提交<br /> </td>
    <td>T</td>
-   <td>如果已提交任務，則返回true。<br /> </td>
+   <td>如果提交了任務，則返回true。<br /> </td>
   </tr>
   <tr>
    <td>附件<br /> </td>
@@ -398,7 +398,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>isDefault <br type="_moz" /> </td>
    <td>F</td>
-   <td>如果隊列是登錄用戶的預設隊列，則為true，否則為false。<br type="_moz" /> </td>
+   <td>如果佇列是登入使用者的預設佇列，則為true，否則為false。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>名稱<br type="_moz" /> </td>
@@ -413,7 +413,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>類型</td>
    <td>F</td>
-   <td>它包含佇列的類型。<br /> 0 — 使用者佇列。<br /> 1. 共用佇列。<br /> 2.組隊列。<br type="_moz" /> </td>
+   <td>它包含佇列的類型。<br /> 0 — 使用者佇列。<br /> 1. 共用佇列。<br /> 2. 組隊列。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>查詢</td>
@@ -442,17 +442,17 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>dateRanges<br type="_moz" /> </td>
    <td>F</td>
-   <td>它包含使用者不在辦公室的排程的陣列物件。 在每個計畫對象中， startDate欄位包含計畫的開始日期和dendDate欄位包含計畫的結束日期。 如果endDate在調度中為Null，則表示用戶尚未調度外出調度的結束日期。<br type="_moz" /> </td>
+   <td>它包含使用者不在辦公室的排程的陣列物件。 在每個計畫對象中， startDate欄位包含計畫的開始日期和dendDate欄位包含計畫的結束日期。 如果排程中的endDate為null，表示使用者尚未排程離職排程的結束日期。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>isNoPrimaryDesignate<br type="_moz" /> </td>
    <td>F</td>
-   <td>如果用戶不在辦公室，則沒有主要指定值，則返回true。<br type="_moz" /> </td>
+   <td>若使用者不在辦公室，則沒有主要指定值，則為true。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>isOutOfOffice<br type="_moz" /> </td>
    <td>F</td>
-   <td>如果用戶不在辦公室，則為true。<br type="_moz" /> </td>
+   <td>如果使用者不在辦公室，則為true。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>outOfOfficeDesignate<br type="_moz" /> </td>
@@ -460,19 +460,19 @@ AEM Forms工作區中使用的JSON物件說明如下。
    <td>它包含被用戶指定為主要指定的用戶的詳細資訊。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>processSpecificDistans<br type="_moz" /> </td>
+   <td>processSpecificDistant<br type="_moz" /> </td>
    <td>F</td>
    <td>它包含特定於進程的離職指定的對象陣列。 在每個特定於進程的指定對象中，processName包含進程的名稱；如果未為相應進程分配用戶，則isNotDesignated為true；如果未為相應進程分配用戶的其他詳細資訊，則userDesignated為null。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>進程<br type="_moz" /> </td>
+   <td>流程<br type="_moz" /> </td>
    <td>T</td>
    <td>它包含用戶可用的所有進程的清單。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>initialOutOfOfficeSettings<br type="_moz" /> </td>
    <td>T</td>
-   <td>它包含最初提取的用戶的初始外出設定。<br type="_moz" /> </td>
+   <td>它包含最初擷取的使用者初始離職設定。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>outOfOfficeSettings<br type="_moz" /> </td>
@@ -482,7 +482,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>userSearchHistory<br type="_moz" /> </td>
    <td>T</td>
-   <td>它包含截至日期由登錄用戶搜索的用戶清單。<br type="_moz" /> </td>
+   <td>它包含登入使用者截至日期所搜尋的使用者清單。<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
@@ -501,7 +501,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>說明<br type="_moz" /> </td>
    <td>F</td>
-   <td>進程實例的說明<br type="_moz" /> </td>
+   <td>流程實例的說明<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>發起人</td>
@@ -526,12 +526,12 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>processInstanceStatus<br type="_moz" /> </td>
    <td>F</td>
-   <td>0 =起始<br /> 1 =運行<br /> 2 =完成<br /> 3 =完成<br /> 4 =終止<br /> 5 =終止<br /> 6 =暫停<br /> 7 =暫停<br /> 8 =取消暫停<br type="_moz" /> </td>
+   <td>0 =起始<br /> 1 =執行中<br /> 2 =完成<br /> 3 =完成<br /> 4 =終止<br /> 5 =終止<br /> 6 =暫停<br /> 7 =暫停<br /> 8 =取消暫停<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processName<br type="_moz" /> </td>
    <td>F</td>
-   <td>進程名稱。<br type="_moz" /> </td>
+   <td>程式名稱。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processStartTime<br type="_moz" /> </td>
@@ -544,7 +544,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
    <td>進程變數的對象陣列。 每個進程變數對象都包含進程變數的名稱、進程變數值和進程變數類型。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>tasklist<br type="_moz" /> </td>
+   <td>任務清單<br type="_moz" /> </td>
    <td>T</td>
    <td>此進程實例生成的任務。<br type="_moz" /> </td>
   </tr>
@@ -563,22 +563,22 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>processMajorVersion<br type="_moz" /> </td>
    <td>F</td>
-   <td>進程的主要版本。<br type="_moz" /> </td>
+   <td>程式的主要版本。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processMinorVersion<br type="_moz" /> </td>
    <td>F</td>
-   <td>進程的次要版本。<br type="_moz" /> </td>
+   <td>程式的次要版本。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processName<br type="_moz" /> </td>
    <td>F</td>
-   <td>進程名稱。<br type="_moz" /> </td>
+   <td>程式名稱。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processTitle<br type="_moz" /> </td>
    <td>F</td>
-   <td>進程的標題。<br type="_moz" /> </td>
+   <td>程式的標題。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processInstanceList<br type="_moz" /> </td>
@@ -612,7 +612,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>assignmentUpdateTime<br type="_moz" /> </td>
    <td>F</td>
-   <td>更新此任務分配時的時間戳。<br type="_moz" /> </td>
+   <td>更新任務的此分配時的時間戳。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>queueId<br type="_moz" /> </td>
@@ -646,12 +646,12 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>canAddAttachments<br type="_moz" /> </td>
    <td>F</td>
-   <td>如果為true，則可將附件添加到任務。<br type="_moz" /> </td>
+   <td>如果為true，則可將附件添加到任務中。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>canAddNotes<br type="_moz" /> </td>
    <td>F</td>
-   <td>如果為true，則可將注釋添加到任務。<br type="_moz" /> </td>
+   <td>如果為true，則可將附註添加到任務中。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>canClaim<br type="_moz" /> </td>
@@ -661,7 +661,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>canConsult<br type="_moz" /> </td>
    <td>F</td>
-   <td>如果為true，則可咨詢任務。<br type="_moz" /> </td>
+   <td>如果是真的，可以咨詢任務。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>canForward<br type="_moz" /> </td>
@@ -695,12 +695,12 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>creatorId<br type="_moz" /> </td>
    <td>F</td>
-   <td>添加附件的用戶ID。<br type="_moz" /> </td>
+   <td>新增附件的使用者ID。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>creatorName<br type="_moz" /> </td>
    <td>F</td>
-   <td>添加附件的用戶的名稱。<br type="_moz" /> </td>
+   <td>新增附件的使用者名稱。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>說明<br type="_moz" /> </td>
@@ -745,12 +745,12 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>類型<br type="_moz" /> </td>
    <td>F</td>
-   <td>「類型」是檔案的附件，「類型」是注釋。<br type="_moz" /> </td>
+   <td>「類型」是檔案的附件，「類型」是注釋的注釋。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>formattedCreationDate<br type="_moz" /> </td>
    <td>T</td>
-   <td>它根據用戶的UI設定包含附件建立日期。<br type="_moz" /> </td>
+   <td>它會根據使用者的UI設定包含附件建立日期。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>formattedDescription<br type="_moz" /> </td>
@@ -760,7 +760,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>formattedFileName<br type="_moz" /> </td>
    <td>T</td>
-   <td>格式化附件名稱。 用於顯示AEM Forms工作區中附件名稱中出現的特殊字元。 僅供附註之用。<br type="_moz" /> </td>
+   <td>格式化附件名稱。 用於顯示AEM Forms工作區中附件名稱中出現的特殊字元。 這僅供注釋。<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
@@ -779,62 +779,62 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>地址<br type="_moz" /> </td>
    <td>F</td>
-   <td>用戶的地址。<br type="_moz" /> </td>
+   <td>使用者的地址。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>commonName<br type="_moz" /> </td>
    <td>F</td>
-   <td>用戶的公用名。<br type="_moz" /> </td>
+   <td>使用者的一般名稱。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>說明<br type="_moz" /> </td>
    <td>F</td>
-   <td>用戶的說明。<br type="_moz" /> </td>
+   <td>使用者的說明。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>directGroupMemberships<br type="_moz" /> </td>
    <td>F</td>
-   <td>用戶組的清單。<br type="_moz" /> </td>
+   <td>使用者群組的清單。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>displayName<br type="_moz" /> </td>
    <td>F</td>
-   <td>顯示用戶的名稱。<br type="_moz" /> </td>
+   <td>使用者的顯示名稱。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>email<br type="_moz" /> </td>
    <td>F</td>
-   <td>用戶的電子郵件ID。<br type="_moz" /> </td>
+   <td>使用者的電子郵件ID。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>isOutOfOffice<br type="_moz" /> </td>
    <td>F</td>
-   <td>如果用戶不在辦公室，則為true。<br type="_moz" /> </td>
+   <td>如果使用者不在辦公室，則為true。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>lastName<br type="_moz" /> </td>
    <td>F</td>
-   <td>用戶的姓氏。<br type="_moz" /> </td>
+   <td>使用者的姓氏。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>firstName<br type="_moz" /> </td>
    <td>F</td>
-   <td>用戶的名字。<br type="_moz" /> </td>
+   <td>使用者的名字。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>oid<br type="_moz" /> </td>
    <td>F</td>
-   <td>用戶的ID。<br type="_moz" /> </td>
+   <td>使用者ID。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>org<br type="_moz" /> </td>
    <td>F</td>
-   <td>用戶的組織名稱。<br type="_moz" /> </td>
+   <td>使用者的組織名稱。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>postalAddress<br type="_moz" /> </td>
+   <td>郵遞區號<br type="_moz" /> </td>
    <td>F</td>
-   <td>用戶的郵遞區號。<br type="_moz" /> </td>
+   <td>使用者的郵遞區號。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>電話<br type="_moz" /> </td>
@@ -849,7 +849,7 @@ AEM Forms工作區中使用的JSON物件說明如下。
   <tr>
    <td>userid<br type="_moz" /> </td>
    <td>F</td>
-   <td>登錄用戶的id。<br type="_moz" /> </td>
+   <td>登入使用者的id。<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>

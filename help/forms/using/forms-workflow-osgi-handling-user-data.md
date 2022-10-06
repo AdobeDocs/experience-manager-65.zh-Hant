@@ -1,6 +1,6 @@
 ---
 title: Forms OSGi工作流程 |處理用戶資料
-seo-title: Forms OSGi工作流程 |處理用戶資料
+seo-title: Forms-centric workflows on OSGi | Handling user data
 description: Forms OSGi工作流程 |處理用戶資料
 uuid: 6eefbe84-6496-4bf8-b065-212aa50cd074
 topic-tags: grdp
@@ -10,7 +10,7 @@ role: Admin
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -22,12 +22,12 @@ ht-degree: 0%
 可透過下列任何方法來觸發或啟動表單導向工作流程：
 
 * 從AEM收件匣提交應用程式
-* 從AEM [!DNL Forms]應用程式提交應用程式
+* 從AEM提交應用程式 [!DNL Forms] 應用程式
 * 提交最適化表單
 * 使用已監看的資料夾
 * 提交互動式通訊或信函
 
-如需以Forms為中心的AEM工作流程和功能的詳細資訊，請參閱OSGi](/help/forms/using/aem-forms-workflow.md)上以Forms為中心的工作流程。[
+如需以Forms為中心的AEM工作流程和功能的詳細資訊，請參閱 [Forms以OSGi為中心的工作流程](/help/forms/using/aem-forms-workflow.md).
 
 ## 使用者資料和資料儲存 {#user-data-and-data-stores}
 
@@ -47,7 +47,7 @@ ht-degree: 0%
    <td><b>AEM 6.3 [!DNL Forms]</b></td>
   </tr>
   <tr>
-   <td><strong>工作流<br />實例</strong></td>
+   <td><strong>工作流程 <br /> 執行個體</strong></td>
    <td>/var/workflow/instances/[server_id]/&lt;date&gt;/[workflow-instance]/</td>
    <td>/etc/workflow/instances/[server_id]/[date]/[workflow-instance]/</td>
   </tr>
@@ -73,18 +73,18 @@ ht-degree: 0%
 
 您可以從存放庫的工作流程例項中存取和刪除使用者資料。 要達到此目的，您必須知道與使用者相關聯的工作流程例項的例項ID。 通過使用啟動工作流實例的用戶的用戶名或工作流實例的當前受託人，可以查找工作流實例的實例ID。
 
-但是，在以下情況下，在標識與啟動器關聯的工作流時，您無法識別或結果可能不明確：
+但是，在以下情況下，在標識與啟動器關聯的工作流時，您不能識別或結果可能不明確：
 
-* **透過已監看資料夾觸發的工作流程**:如果工作流程是由已觀看的資料夾觸發，則無法使用其啟動器來識別工作流程例項。在這種情況下，用戶資訊被編碼在儲存的資料中。
-* **從發佈AEM例項啟動的工作流程**:從AEM發佈例項提交最適化表單、互動式通訊或信函時，所有工作流程例項都是使用服務使用者建立。在這些情況下，工作流程例項資料中不會擷取登入使用者的使用者名稱。
+* **透過已監看資料夾觸發的工作流程**:如果工作流程是由已觀看的資料夾觸發，則無法使用其啟動器來識別工作流程例項。 在這種情況下，用戶資訊被編碼在儲存的資料中。
+* **從發佈AEM例項啟動的工作流程**:從AEM發佈例項提交最適化表單、互動式通訊或信函時，所有工作流程例項都是使用服務使用者建立。 在這些情況下，工作流程例項資料中不會擷取登入使用者的使用者名稱。
 
 ### 存取使用者資料 {#access}
 
 要標識和訪問為工作流實例儲存的用戶資料，請執行以下步驟：
 
-1. 在AEM製作例項上，前往`https://'[server]:[port]'/crx/de`並導覽至&#x200B;**[!UICONTROL 工具>查詢]**。
+1. 在AEM製作例項上，前往 `https://'[server]:[port]'/crx/de` 並導覽至 **[!UICONTROL 工具>查詢]**.
 
-   從&#x200B;**[!UICONTROL Type]**&#x200B;下拉清單中選擇&#x200B;**[!UICONTROL SQL2]**。
+   選擇 **[!UICONTROL SQL2]** 從 **[!UICONTROL 類型]** 下拉式清單。
 
 1. 根據可用資訊，執行以下查詢之一：
 
@@ -98,7 +98,7 @@ ht-degree: 0%
 
    查詢返回指定的工作流啟動器或當前工作流受託人的所有工作流實例的位置。
 
-   例如，以下查詢從工作流啟動器為`srose`的`/var/workflow/instances`節點返回兩個工作流實例路徑。
+   例如，下列查詢會從 `/var/workflow/instances` 其工作流啟動器的節點 `srose`.
 
    ![workflow-instance](assets/workflow-instance.png)
 
@@ -106,7 +106,7 @@ ht-degree: 0%
 
    ![狀態](assets/status.png)
 
-1. 在工作流實例節點中，導航至`data/payload/`。 `path`屬性儲存工作流實例的裝載路徑。 您可以導覽至路徑，以存取儲存在裝載中的資料。
+1. 在工作流程例項節點中，導覽至 `data/payload/`. 此 `path` 屬性會儲存工作流程例項之裝載的路徑。 您可以導覽至路徑，以存取儲存在裝載中的資料。
 
    ![裝載路徑](assets/payload-path.png)
 
@@ -122,38 +122,38 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >AEM [!DNL Forms]應用程式也會以離線模式儲存資料。 工作流程例項的資料可能儲存在本機個別裝置上，並在應用程式與伺服器同步時提交至[!DNL Forms]伺服器。
+   >AEM [!DNL Forms] 應用程式也會以離線模式儲存資料。 工作流程例項的資料可能儲存在本機個別裝置上，並提交至 [!DNL Forms] 伺服器。
 
 ### 刪除使用者資料 {#delete-user-data}
 
 您必須是AEM管理員，才能執行下列步驟，從工作流程例項刪除使用者資料：
 
-1. 按照[訪問用戶資料](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access)中的說明，並注意以下事項：
+1. 遵循 [存取使用者資料](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access) 並注意以下事項：
 
    * 與使用者相關聯的工作流程例項路徑
    * 工作流實例的狀態
    * 工作流實例的裝載路徑
    * 工作流程例項的草稿和歷史記錄路徑
 
-1. 在&#x200B;**RUNNING**、**SUSPENDED**&#x200B;或&#x200B;**STALE**&#x200B;狀態中，對工作流實例執行此步驟：
+1. 在中對工作流程例項執行此步驟 **執行中**, **已暫停**，或 **過時** 狀態：
 
-   1. 前往`https://'[server]:[port]'/aem/start.html`並使用管理員憑證登入。
-   1. 導覽至「**[!UICONTROL 工具>工作流程>例項]**」。
-   1. 為用戶選擇相關的工作流實例，然後點選&#x200B;**[!UICONTROL Terminate]**&#x200B;以終止運行實例。
+   1. 前往 `https://'[server]:[port]'/aem/start.html` 並使用管理員憑證登入。
+   1. 導覽至 **[!UICONTROL 「工具」>「工作流」>「實例」]**.
+   1. 為使用者選取相關的工作流程例項，然後點選 **[!UICONTROL 終止]** 終止正在運行的實例。
 
-      有關使用工作流實例的詳細資訊，請參閱[管理工作流實例](/help/sites-administering/workflows-administering.md)。
+      如需使用工作流程例項的詳細資訊，請參閱 [管理工作流程例項](/help/sites-administering/workflows-administering.md).
 
-1. 前往[!DNL CRXDE Lite]主控台，導覽至工作流程例項的裝載路徑，並刪除`payload`節點。
-1. 導覽至工作流程例項的草稿路徑，並刪除`draft`節點。
-1. 導航到工作流實例的歷史記錄路徑，然後刪除`history`節點。
-1. 導覽至工作流實例的工作流實例路徑，並刪除工作流的`[workflow-instance-ID]`節點。
+1. 前往 [!DNL CRXDE Lite] 主控台，導覽至工作流程例項的裝載路徑，然後刪除 `payload` 節點。
+1. 導覽至工作流程例項的草稿路徑，並刪除 `draft` 節點。
+1. 導覽至工作流程例項的歷史記錄路徑，並刪除 `history` 節點。
+1. 導覽至工作流程例項的工作流程例項路徑，並刪除 `[workflow-instance-ID]` 節點。
 
    >[!NOTE]
    >
    >刪除工作流實例節點將刪除所有工作流參與者的工作流實例。
 
 1. 對於為使用者識別的所有工作流程例項，重複步驟2至6。
-1. 識別並刪除工作流程參與者的AEM [!DNL Forms]應用程式外框中的離線草稿和提交資料，以避免提交至伺服器。
+1. 識別並刪除AEM中的離線草稿和提交資料 [!DNL Forms] 應用程式工作流程參與者的輸出方塊，以避免任何提交至伺服器。
 
 您也可以使用API來存取和移除節點與屬性。 如需詳細資訊，請參閱下列檔案。
 

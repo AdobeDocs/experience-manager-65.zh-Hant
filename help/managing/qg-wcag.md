@@ -88,7 +88,7 @@ WCAG 2.1 包含四大無障礙設計原則，有時簡稱為 **POUR**。說明�
 * [WCAG 2 常見問題](https://www.w3.org/WAI/standards-guidelines/wcag/faq/)
 
 
-### What is New in WCAG 2.1 (WCAG 2.1 的新增內容) {#what-is-new}
+### What is New in WCAG 2.1 (WCAG 2.1 的新增內容)  {#what-is-new}
 
 此指引提供 WCAG 2.1 新增內容的相關資訊：
 
@@ -96,7 +96,7 @@ WCAG 2.1 包含四大無障礙設計原則，有時簡稱為 **POUR**。說明�
 
 * 《[WCAG 2.0 and 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/#versions)》(WCAG 2.0 和 2.1) 一節則進一步釐清兩者的關係。
 
-### Techniques for WCAG 2.1 (WCAG 2.1 的專用技術) {#techniques-for-wcag}
+### Techniques for WCAG 2.1 (WCAG 2.1 的專用技術)  {#techniques-for-wcag}
 
 WCAG 2.1 的專用技術闡明於《[Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/)》(WCAG 2.1 的專用技術) 頁面中。
 
@@ -121,7 +121,7 @@ WCAG 2.1 的專用技術闡明於《[Techniques for WCAG 2.1](https://www.w3.org
 
 技術清單尚未完整，WAI 仍持續以新範例來更新清單，藉此反映網路技術、設計方式和研究發現的發展。因此，非常建議您定期檢查技術清單中的新增內容。
 
-### Understanding WCAG 2.1 (了解 WCAG 2.1) {#understanding-wcag}
+### Understanding WCAG 2.1 (了解 WCAG 2.1)  {#understanding-wcag}
 
 此部分透過一系列文件提供建議，協助讀者了解特定指引和成功標準的目的。您可以[下載簡介，並取得其他詳細資訊的連結](https://www.w3.org/WAI/WCAG21/Understanding/)。
 
@@ -141,7 +141,7 @@ WCAG 2.1 的專用技術闡明於《[Techniques for WCAG 2.1](https://www.w3.org
 
 您可在如下章節找到範例：[了解成功標準 1.1.1 (「非文字內容」)](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content)。
 
-### How to Meet WCAG 2.1 (如何達成 WCAG 2.1) {#how-to-meet-wcag}
+### How to Meet WCAG 2.1 (如何達成 WCAG 2.1)  {#how-to-meet-wcag}
 
 《[How To Meet WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)》(如何達成 WCAG 2.1) 頁面中提供「如何達成」指引的相關章節。此節提供 WCAG 的替代簡報，方便讀者將指引內容精簡成與自身興趣和/或環境最相關的內容。讀者可以指定特定網路內容技術 (例如階層式樣式表或指令碼) 或指定特定優先層級，藉此篩選想要檢視的成功標準技術。
 

@@ -1,8 +1,8 @@
 ---
 title: 最佳作法
-seo-title: 最佳作法
+seo-title: Best Practices
 description: 製作最佳實務說明如何以盡可能最有效率和最有效的方式使用AEM。 這份不斷增加的主題清單包含AEM中的多個領域。
-seo-description: 製作最佳實務說明如何以盡可能最有效率和最有效的方式使用AEM。 這份不斷增加的主題清單包含AEM中的多個領域。
+seo-description: Authoring best practices describe how to use AEM in the most efficient and most effective way possible. This growing list of topics includes a variety of areas in AEM.
 uuid: d1f58335-0aa6-4b35-bdcd-cf6051bd1439
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
 source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '282'
 ht-degree: 3%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 3%
 
 以下幾方面提供有關最佳做法的檔案：
 
-* [資產](#assets)
-* [網站](#sites)
-* [表單](#forms)
+* [Assets](#assets)
+* [Sites](#sites)
+* [Forms](#forms)
 
 如需管理、部署和維護或開發的最佳實務，請參閱下列其中一項：
 
@@ -68,10 +68,10 @@ ht-degree: 3%
 
 管理和編寫網站內容有一些最佳實務，概述如下：
 
-編寫：[製作環境和工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — 提供如何製作頁面的概觀。
+編寫： [製作環境和工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md)  — 提供如何編寫頁面的概觀。
 
-## 表單 {#forms}
+## Forms {#forms}
 
-適用性表單：[使用最適化表單的最佳實務](/help/forms/using/adaptive-forms-best-practices.md) — 說明設定、製作和自訂最適化表單的最佳實務。
+適用性表單： [使用最適化表單的最佳實務](/help/forms/using/adaptive-forms-best-practices.md)  — 說明設定、製作和自訂最適化表單的最佳實務。
 
-HTML5表單：[設計HTML5表單的最佳實務](/help/forms/using/best-practices-for-html5-forms.md) — 說明處理HTML5表單版面與設計的最佳實務。
+HTML5表單： [設計HTML5表單的最佳實務](/help/forms/using/best-practices-for-html5-forms.md)  — 說明處理HTML5表單版面與設計的最佳實務。

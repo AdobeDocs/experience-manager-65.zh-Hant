@@ -1,8 +1,8 @@
 ---
 title: 內容分析
-seo-title: 內容分析
+seo-title: Content Insight
 description: 「內容分析」使用網站分析和SEO建議，提供頁面效能的相關資訊
-seo-description: 「內容分析」使用網站分析和SEO建議，提供頁面效能的相關資訊
+seo-description: Content Insight provides information about page performance using web analytics and SEO recommendation
 uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
 exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 1%
+source-wordcount: '521'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 * 目標：您的頁面包含選件之促銷活動的報表。
 * BrightEdge:頁面功能報告可改善頁面對搜尋引擎的可見性，並建議應實作的功能。
 
-請參閱[開啟Analytics和Recommendations以取得頁面](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page)。
+請參閱 [開啟頁面適用的Analytics和Recommendations](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
 
 ## 報告期
 
@@ -46,13 +46,13 @@ ht-degree: 1%
 
 您也可以指定報告資料的粒度，例如，您可以看到每日、每週、每月或每年的資料。
 
-請參閱[變更報告期間](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period)。
+請參閱 [變更報告時段](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
 
 >[!NOTE]
 >
->「內容分析」報表要求管理員將AEM與SiteCatalyst、Target和BrightEdge整合。 請參閱[與SightCatalyst整合](/help/sites-administering/adobeanalytics.md)、[與Adobe Target整合](/help/sites-administering/target.md)和[與BrightEdge整合](/help/sites-administering/brightedge.md)。
+>「內容分析」報表要求管理員將AEM與SiteCatalyst、Target和BrightEdge整合。 請參閱 [與SightCatalyst整合](/help/sites-administering/adobeanalytics.md), [與Adobe Target整合](/help/sites-administering/target.md)，和 [與BrightEdge整合](/help/sites-administering/brightedge.md).
 
-## 檢視報表{#the-views-report}
+## 檢視報表 {#the-views-report}
 
 「檢視」報表包含評估頁面流量的下列功能：
 
@@ -64,7 +64,7 @@ ht-degree: 1%
 
 ![chlimage_1-312](assets/chlimage_1-312.png)
 
-## 頁面平均參與報表{#the-page-average-engaged-report}
+## 頁面平均參與報表 {#the-page-average-engaged-report}
 
 「頁面平均參與」報表包含下列用於評估頁面效益的功能：
 
@@ -73,28 +73,28 @@ ht-degree: 1%
 
 ![chlimage_1-313](assets/chlimage_1-313.png)
 
-## 來源報表{#the-sources-report}
+## 來源報表 {#the-sources-report}
 
 「來源」報表會指出使用者導覽至頁面的方式，例如從搜尋引擎結果或使用已知的URL。
 
 ![chlimage_1-314](assets/chlimage_1-314.png)
 
-## 跳出報表{#the-bounces-report}
+## 跳出報告 {#the-bounces-report}
 
 「跳出數」報表包含一個圖表，顯示在選定報告時段內發生的頁面跳出數。
 
 ![chlimage_1-315](assets/chlimage_1-315.png)
 
-## 促銷活動報表{#the-campaign-activity-report}
+## 促銷活動報表 {#the-campaign-activity-report}
 
-對於頁面處於作用中狀態的每個促銷活動，會顯示名為&#x200B;*促銷活動名稱*&#x200B;活動的報表。 報表會顯示每個提供優惠方案的區段的頁面曝光次數和轉換次數。
+對於頁面處於作用中狀態的每個促銷活動，會出現一個名為 *促銷活動名稱* 活動。 報表會顯示每個提供優惠方案的區段的頁面曝光次數和轉換次數。
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
-## SEO Recommendations報表{#the-seo-recommendations-report}
+## SEO Recommendations報表 {#the-seo-recommendations-report}
 
 SEO Recommendations報表包含頁面的BrightEdge分析結果。 報表是頁面功能的檢查清單，指出頁面有哪些功能，以及沒有包括以最大化使用搜尋引擎的搜尋效能。
 
-報表可讓您建立工作，以便改善頁面搜尋效能。 Recommendations指出已建立執行建議的任務。 請參閱[為SEO Recommendations指派工作](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations)。
+報表可讓您建立工作，以便改善頁面搜尋效能。 Recommendations指出已建立執行建議的任務。 請參閱 [指派SEO Recommendations的工作](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
 
 ![chlimage_1-317](assets/chlimage_1-317.png)

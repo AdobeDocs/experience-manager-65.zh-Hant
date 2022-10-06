@@ -1,8 +1,8 @@
 ---
 title: 使用工作流程
-seo-title: 使用工作流程
+seo-title: Working with Workflows
 description: AEM中的工作流程可讓您自動執行頁面或資產上執行的一系列步驟。
-seo-description: AEM中的工作流程可讓您自動執行頁面或資產上執行的一系列步驟。
+seo-description: Workflows in AEM allow you to automate a series of steps that are performed on a page or asset.
 uuid: c4442d2a-c6b0-49d4-a1ce-384017c45bf0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 7cb99618-d903-4cfb-b0d9-b23d189f6e78
 exl-id: 7383d590-c6b7-440a-a33d-196dce9736ef
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '180'
 ht-degree: 7%
 
 ---
