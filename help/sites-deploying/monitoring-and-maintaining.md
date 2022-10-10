@@ -12,9 +12,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: ad0f5f536657a90a8b2476b43576060f3dc85868
 workflow-type: tm+mt
-source-wordcount: '5866'
+source-wordcount: '5868'
 ht-degree: 0%
 
 ---
@@ -100,48 +100,68 @@ ht-degree: 0%
 
 ### 總覽 {#overview}
 
-此 **清除版本** 工具 **[工具](/help/sites-administering/tools-consoles.md) 主控台** 在 **版本設定** 或直接在：
-
-`https://<server>:<port>/etc/versioning/purge.html`
-
-![screen_shot_2012-03-15at14418pm](assets/screen_shot_2012-03-15at14418pm.png)
-
-**起始路徑** 必須執行清除的絕對路徑。 通過按一下儲存庫樹導航器，可以選擇「起始路徑」。
-
-**遞歸** 清除資料時，可以選擇在一個節點上或整個層次上執行操作，方法是選擇遞歸。 在最後一種情況下，指定路徑定義階層的根節點。
-
-**要保留的最大版本** 節點要保留的最大版本數。 當這些數字超過此值時，系統會清除最舊的版本。
-
-**最大版本年齡** 節點版本的最大年齡。 當版本的年齡超過此值時，就會清除該值。
-
-**乾流** 由於刪除內容的版本是確定的，並且在不還原備份的情況下無法還原，因此「清除版本」工具提供了乾運行模式，允許您預覽清除的版本。 要啟動清除過程的乾式運行，請按一下「乾式運行」。
-
-**清除** 啟動清除由起始路徑定義的節點上的版本。
+此 **清除版本** 工具可作為每週維護任務使用。 需要先新增，然後再設定，才能首次使用。 之後可依要求或每週執行。
 
 ### 清除網站版本 {#purging-versions-of-a-web-site}
 
 要清除網站的版本，請按以下步驟進行：
 
-1. 導覽至 **[工具](/help/sites-administering/tools-consoles.md)** **主控台**，選取 **版本設定** 按兩下 **清除版本。**
-1. 設定要清除的內容的開始路徑(例如 `/content/geometrixx-outdoors`)。
+1. 導覽至 **[工具](/help/sites-administering/tools-consoles.md)** **主控台**，選取 **操作**, **維護**，然後 **每週維護窗口**.
 
-   * 如果只想清除路徑定義的節點，請取消選取 **遞歸**.
-   * 如果要清除由路徑及其子體定義的節點，請選擇 **遞歸**.
+1. 選擇 **+新增** 的上界。
 
-1. 設定要保留的最大版本數（針對每個節點）。 保留為空，不使用此設定。
+   ![添加版本清除](assets/version-purge-add.png)
 
-1. 設定您要保留的最大版本年齡（每個節點），單位為天。 保留為空，不使用此設定。
+1. 選擇 **版本清除** 從 **添加新任務** 對話框。 然後 **儲存**.
 
-1. 按一下 **乾流** 預覽清除流程的功能。
-1. 按一下 **清除** 來啟動程式。
+   ![添加版本清除](assets/version-purge-add-new-task.png)
+
+1. 此 **版本清除** 任務。 使用卡片動作可：
+   * 選取 — 將在頂端工具列中顯示其他動作
+   * 運行 — 立即運行配置的清除
+   * 配置 — 配置每週清除任務
+
+   ![版本清除操作](assets/version-purge-actions.png)
+
+1. 選取 **設定** 為開啟Web控制台的操作 **Day CQ WCM版本清除任務**，您可於此設定：
+
+   ![版本清除配置](assets/version-purge-configuration.png)
+
+   * **清除路徑**
+設定要清除的內容的開始路徑(例如 
+`/content/geometrixx-outdoors`)。
+
+   * **遞歸清除版本**
+
+      * 取消選取是否要僅清除路徑定義的節點。
+      * 選擇是否要清除路徑及其子體定義的節點。
+   * **最大版本數**
+設定要保留的最大版本數（針對每個節點）。 保留為空，不使用此設定。
+
+   * **最低版本數**
+設定您要保留的最低版本數（針對每個節點）。 保留為空，不使用此設定。
+
+   * **最大版本年齡**
+設定您要保留的最大版本年齡（針對每個節點），單位為天。 保留為空，不使用此設定。
+   然後 **儲存**.
+
+1. 導覽/返回 **每週維護窗口** 窗口和選擇 **執行** 立即啟動程式。
 
 >[!CAUTION]
 >
+>您可以使用傳統UI對話方塊來執行 [乾流](#analyzing-the-console) 配置：
+>
+>* http://localhost:4502/etc/versioning/purge.html
+>
 >如果未還原儲存庫，則無法還原已清除的節點。 您應處理您的設定，因此我們建議您一律執行乾式執行，然後再清除。
 
-### 分析主控台 {#analyzing-the-console}
+#### 乾式運行 — 分析控制台 {#analyzing-the-console}
 
-此 **乾流** 和 **清除** 進程列出所有已處理的節點。 在過程中，節點可以具有以下狀態之一：
+傳統UI提供 **乾流** 選項：
+
+* http://localhost:4502/etc/versioning/purge.html
+
+進程會列出所有已處理的節點。 在過程中，節點可以具有以下狀態之一：
 
 * `ignore (not versionnable)`:節點不支援版本設定，且在處理期間會忽略。
 
@@ -650,7 +670,7 @@ OSGi事件也會產生稽核記錄，可從 **配置狀態** tab -> **記錄檔*
 
 ### 解譯request.log {#interpreting-the-request-log}
 
-此檔案會註冊對AEM提出之每個請求的基本資訊。 從這些有價值的結論中可以提煉出來。
+此檔案會註冊對AEM提出之每個請求的基本資訊。 從中可以得出有價值的結論。
 
 此 `request.log` 提供內建的方式，讓您查看要求需要多久的時間。 就發展而言， `tail -f` the `request.log` 注意反應緩慢。 分析更大的 `request.log` 我們建議 [使用 `rlog.jar` 可讓您排序並篩選回應時間](#using-rlog-jar-to-find-requests-with-long-duration-times).
 
