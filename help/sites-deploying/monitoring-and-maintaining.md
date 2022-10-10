@@ -12,9 +12,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: ad0f5f536657a90a8b2476b43576060f3dc85868
+source-git-commit: a6067ebb1b5be67515cd3567f56c72463c5f7123
 workflow-type: tm+mt
-source-wordcount: '5868'
+source-wordcount: '5901'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,12 @@ ht-degree: 0%
 設定要清除的內容的開始路徑(例如 
 `/content/geometrixx-outdoors`)。
 
+      >[!CAUTION]
+      >
+      >強烈建議您針對每個網站定義多個路徑。
+      >
+      >定義包含太多子項的路徑會延長執行清除的時間。
+
    * **遞歸清除版本**
 
       * 取消選取是否要僅清除路徑定義的節點。
@@ -173,7 +179,7 @@ ht-degree: 0%
 此外，主控台還提供版本的實用資訊：
 
 * `V 1.0`:版本號碼。
-* `V 1.0.1`&#42;:星號表示版本為當前版本。
+* `V 1.0.1`&#42;:星號表示版本是當前（基本）版本，無法清除。
 
 * `Thu Mar 15 2012 08:37:32 GMT+0100`:版本日期。
 
