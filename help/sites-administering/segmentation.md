@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d546462b4b78a743e047dcfea5fc2dc92d131bb5
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1787'
 ht-degree: 1%
 
 ---
@@ -35,9 +35,13 @@ AEM可讓您輕鬆個人化您的使用者體驗。 也可讓您驗證區段定�
 
 此 [對象](/help/sites-authoring/managing-audiences.md) console可用來管理ContextHub或用戶端內容的區段，以及您Adobe Target帳戶的對象。 本檔案涵蓋管理ContextHub的區段。 針對 [用戶端內容區段](/help/sites-administering/campaign-segmentation.md) 和Adobe Target區段，請參閱相關檔案。
 
-若要存取區段，請在全域導覽中選取 **導覽>個人化>對象**.
+若要存取區段，您必須選取您的設定。 在全域導覽中選取 **導覽>個人化>對象**. 您會看到可用的設定：
 
-![chlimage_1-310](assets/chlimage_1-310.png)
+![受眾 — 設定](assets/segmentation-access-confs.png)
+
+選取您的設定以查看區段，例如WKND網站：
+
+![對象 — 區段](assets/segmentation-access-segments.png)
 
 ## 區段編輯器 {#segment-editor}
 
@@ -130,7 +134,7 @@ AEM可讓您輕鬆個人化您的使用者體驗。 也可讓您驗證區段定�
 
 若要定義新區段：
 
-1. 之後 [存取區段](/help/sites-administering/segmentation.md#accessing-segments), [導覽至資料夾](#organizing-segments) 建立區段或將其保留在根目錄中的位置。
+1. 之後 [存取區段](/help/sites-administering/segmentation.md#accessing-segments), [導覽至資料夾](#organizing-segments) 建立區段的位置。
 
 1. 按一下或點選「建立」按鈕，然後選取 **建立ContextHub區段**.
 
