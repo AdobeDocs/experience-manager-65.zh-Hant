@@ -6,10 +6,10 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
+source-git-commit: 0df4bce6651517c6049578d0a1434726ab04e240
 workflow-type: tm+mt
-source-wordcount: '3803'
-ht-degree: 18%
+source-wordcount: '3837'
+ht-degree: 17%
 
 ---
 
@@ -70,7 +70,9 @@ ht-degree: 18%
 
 ### 連線資產架構 {#connected-assets-architecture}
 
-Experience Manager可讓您將遠端DAM部署連結為來源，以連接多個Experience Manager [!DNL Sites] 部署。 最多可以連接4個 [!DNL Sites] 部署至來源遠端DAM。 不過，您可以連結 [!DNL Sites] 只部署一個遠端DAM部署。
+Experience Manager可讓您將遠端DAM部署連結為來源，以連接多個Experience Manager [!DNL Sites] 部署。 不過，您可以連結 [!DNL Sites] 只部署一個遠端DAM部署。
+
+評估要連線至遠端DAM部署的最佳Sites例項數量。 Adobe建議以增量方式將Sites例項連結到部署，並測試遠端DAM不會影響效能，因為每個連線的Sites例項都會造成遠端DAM上的資料流量。
 
 下列圖表說明了支援的方案：
 
@@ -264,9 +266,9 @@ Experience Manager可讓您將遠端DAM部署連結為來源，以連接多個Ex
 
 +++
 
-+++**多少 [!DNL Sites] 在設定連線資產後，您是否可以連線至遠端DAM部署？**
++++**您能連接多個 [!DNL Sites] 配置連線資產後部署至遠端DAM?**
 
-最多可以連接4個 [!DNL Sites] 在設定連線資產後部署至遠端DAM。 如需詳細資訊，請參閱 [連線資產架構](#connected-assets-architecture).
+是，您可以連接多個 [!DNL Sites] 在設定連線資產後部署至遠端DAM。 如需詳細資訊，請參閱 [連線資產架構](#connected-assets-architecture).
 
 +++
 
