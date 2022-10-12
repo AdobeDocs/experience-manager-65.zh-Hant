@@ -12,9 +12,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 85987222e8b216f22ae1fec4e080488d01f23063
+source-git-commit: b9a3db4144a571291bdf1c9a9f0e841f284df0c8
 workflow-type: tm+mt
-source-wordcount: '5905'
+source-wordcount: '5972'
 ht-degree: 0%
 
 ---
@@ -609,12 +609,12 @@ OSGi事件也會產生稽核記錄，可從 **配置狀態** tab -> **記錄檔*
   <tr>
    <td>線程轉儲</td>
    <td>觀察JVM線程。 確定爭議、鎖和長跑者。</td>
-   <td><p>取決於作業系統：<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows（控制台模式）:Ctrl-Break<br /> </p> <p>也提供分析工具，例如 <a href="https://java.net/projects/tda/">TDA</a>.<br /> </p> </td>
+   <td><p>取決於作業系統：<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows（控制台模式）:Ctrl-Break<br /> </p> <p>也提供分析工具，例如 <a href="https://github.com/irockel/tda">TDA</a>.<br /> </p> </td>
   </tr>
   <tr>
    <td>堆轉儲</td>
    <td>記憶體不足，導致效能緩慢。</td>
-   <td><p>新增：<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> 選項呼叫AEM。</p> <p>請參閱 <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">Java SE 6與熱點VM的故障排除指南</a>.</p> </td>
+   <td><p>新增：<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> 選項呼叫AEM。</p> <p>請參閱 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/prepapp002.html#CEGBHDFH">「JVM的選項/標誌」疑難解答頁</a>.</p> </td>
   </tr>
   <tr>
    <td>系統呼叫</td>
@@ -624,7 +624,7 @@ OSGi事件也會產生稽核記錄，可從 **配置狀態** tab -> **記錄檔*
   <tr>
    <td>阿帕奇板凳</td>
    <td>識別記憶體洩漏，有選擇地分析響應時間。</td>
-   <td><p>基本用法為：</p> <p><code>ab -k -n &lt;<em>requests</em>&gt; -c &lt;<em>concurrency</em>&gt; &lt;<em>url</em>&gt;</code></p> <p>請參閱 <a href="#apache-bench">阿帕奇板凳</a> 和 <a href="https://httpd.apache.org/docs/2.2/programs/ab.html">ab手冊頁</a> 以取得完整詳細資訊。</p> </td>
+   <td><p>基本用法為：</p> <p><code>ab -k -n &lt;<em>requests</em>&gt; -c &lt;<em>concurrency</em>&gt; &lt;<em>url</em>&gt;</code></p> <p>請參閱 <a href="#apache-bench">阿帕奇板凳</a> 和 <a href="https://httpd.apache.org/docs/2.4/programs/ab.html">ab手冊頁</a> 以取得完整詳細資訊。</p> </td>
   </tr>
   <tr>
    <td>搜尋分析</td>
@@ -634,7 +634,7 @@ OSGi事件也會產生稽核記錄，可從 **配置狀態** tab -> **記錄檔*
   <tr>
    <td>JMeter</td>
    <td>負載和功能測試。</td>
-   <td><a href="https://jakarta.apache.org/jmeter/">https://jakarta.apache.org/jmeter/</a></td>
+   <td><a href="https://jmeter.apache.org/">https://jmeter.apache.org/</a></td>
   </tr>
   <tr>
    <td>JProfiler</td>
@@ -642,14 +642,19 @@ OSGi事件也會產生稽核記錄，可從 **配置狀態** tab -> **記錄檔*
    <td><a href="https://www.ej-technologies.com/">https://www.ej-technologies.com/</a></td>
   </tr>
   <tr>
+   <td>Java飛行記錄器</td>
+   <td>Java飛行記錄器(JFR)是一種工具，用於收集有關正在運行的Java應用程式的診斷和效能分析資料。</td>
+   <td><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE</a></td>
+  </tr>
+  <tr>
    <td>JConsole</td>
    <td>觀察JVM度量和線程。</td>
-   <td><p>用法：jconsole</p> <p>請參閱 <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a> 和 <a href="#monitoring-performance-using-jconsole">使用JConsole監控效能</a>.</p> <p><strong>注意：</strong> 使用JDK 1.6,JConsole可通過插件進行擴展；例如Top或TDA（線程轉儲分析器）。</p> </td>
+   <td><p>用法：jconsole</p> <p>請參閱 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html">jconsole</a> 和 <a href="#monitoring-performance-using-jconsole">使用JConsole監控效能</a>.</p> <p><strong>注意：</strong> 使用JDK 1.8,JConsole可通過插件進行擴展；例如Top或TDA（線程轉儲分析器）。</p> </td>
   </tr>
   <tr>
    <td>Java VisualVM</td>
    <td>觀察JVM度量、線程、記憶體和效能分析。</td>
-   <td><p>用法：jvisualvm或visualvm<br /> </p> <p>請參閱 <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">jvisualvm</a>, <a href="https://visualvm.dev.java.net/">visualvm</a> 和 <a href="#monitoring-performance-using-j-visualvm">使用(J)VisualVM監控效能</a>.</p> <p><strong>注意：</strong> 使用JDK 1.6,VisualVM可通過插件進行擴展。</p> </td>
+   <td><p>用法：visualvm或visualvm<br /> </p> <p>請參閱 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/">visualvm</a> 和 <a href="#monitoring-performance-using-j-visualvm">使用(J)VisualVM監控效能</a>.</p> <p><strong>注意：</strong> 使用JDK 1.8,VisualVM可通過插件進行擴展。 在JDK 9之後，VisualVM將停止運行。 請改用Java飛行記錄器。</p> </td>
   </tr>
   <tr>
    <td>桁架/橫架，lof</td>
@@ -664,7 +669,7 @@ OSGi事件也會產生稽核記錄，可從 **配置狀態** tab -> **記錄檔*
   <tr>
    <td>CPU和記憶體分析工具<br /> </td>
    <td><a href="#interpreting-the-request-log">在開發期間分析緩慢的請求時使用</a>.</td>
-   <td>例如， <a href="https://www.yourkit.com/">YourKit</a>.</td>
+   <td>例如， <a href="https://www.yourkit.com/">YourKit</a>. 或 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">Java飛行記錄器</a>.</td>
   </tr>
   <tr>
    <td><a href="#information-collection">資訊收集</a></td>
@@ -810,7 +815,7 @@ $ java -jar ../opt/helpers/rlog.jar -n 10 request.log
 
 ### 阿帕奇板凳 {#apache-bench}
 
-為了將特殊情況（如垃圾收集等）的影響降至最低，建議使用工具，例如 `apachebench` (請參閱 [ab](https://httpd.apache.org/docs/2.2/programs/ab.html) 以便進一步了解相關資訊)，幫助識別記憶體洩漏，並有選擇地分析響應時間。
+為了將特殊情況（如垃圾收集等）的影響降至最低，建議使用工具，例如 `apachebench` (請參閱 [ab](https://httpd.apache.org/docs/2.4/programs/ab.html) 以便進一步了解相關資訊)，幫助識別記憶體洩漏，並有選擇地分析響應時間。
 
 Apache Bench可透過下列方式使用：
 
@@ -921,7 +926,7 @@ Percentage of the requests served within a certain time (ms)
 
 ### 使用(J)VisualVM監控效能 {#monitoring-performance-using-j-visualvm}
 
-自JDK 1.6以來，工具命令 `jvisualvm` 的URL區段。 安裝JDK 1.6後，您可以：
+對於JDK 6-8，工具命令 `visualvm` 的URL區段。 安裝JDK後，您可以：
 
 1. 啟動您的AEM例項。
 
@@ -932,7 +937,7 @@ Percentage of the requests served within a certain time (ms)
 1. 執行下列任一項：
 
    * `jvisualvm`:（測試版本）
-   * `visualvm`:可從下載 [VisualVM](https://visualvm.dev.java.net/) （出血邊緣版本）
+   * `visualvm`:可從下載 [VisualVM](https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/) （出血邊緣版本）
 
 1. 從 `Local` 應用程式，按兩下 `com.day.crx.quickstart.Main`;預設會顯示「概述」：
 
@@ -1185,7 +1190,7 @@ Java虛擬機(JVM)在優化方面已有顯著改進（特別是自Java 7以來�
    ```
 
 * 然後使用JConsole連接到JVM;請參閱：
-   ` [https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html)`
+   ` [https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html)`
 
 這將幫助您了解正在使用多少記憶體、使用了哪些GC算法、運行所花的時間，以及這對應用程式效能的影響。 如果沒有這個，調音只是「隨機擺弄旋鈕」。
 
@@ -1193,4 +1198,4 @@ Java虛擬機(JVM)在優化方面已有顯著改進（特別是自Java 7以來�
 >
 >對於Oracle的VM，還有以下資訊：
 >
->[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
+>[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)
