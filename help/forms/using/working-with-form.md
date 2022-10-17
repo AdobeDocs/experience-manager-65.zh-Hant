@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 8a5e038e-b39a-41de-88a0-47642e5bd5bf
 exl-id: adff5339-e026-4924-a401-f249f37fc6e6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3c691a9e8673f3229368abbd550982d207eb8ac6
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,15 @@ ht-degree: 0%
 
 若要同步多個表單，請在製作執行個體中，在forms manager中選取多個表單，然後點選 **與AEM Forms應用程式同步**. 表單發佈後，AEM Forms應用程式可連線至發佈伺服器並擷取表單。
 
+如果您的AFA(AEM表單應用程式)Android應用程式無法同步，請執行下列步驟以修正同步問題：
+
+1. 前往 **https://&#39;[伺服器]:[埠]&#39;system/console/configMgr**.
+1. 搜尋 **[!UICONTROL AdobeGranite代號驗證處理常式]** 按一下 **[!UICONTROL 編輯]**.
+1. 選取 **[!UICONTROL 無]** 選項(位於 **[!UICONTROL 登入代號Cookie的SameSite屬性]** 屬性。
+1. 按一下「**[!UICONTROL 儲存]**」。
+
+![與AFA Android應用程式同步影像](/help/forms/using/assets/afaandroid.png)
+
 >[!NOTE]
 >
 >支援的表單：
@@ -39,7 +48,8 @@ ht-degree: 0%
 >
 >與AEM Forms OSGi伺服器同步的AEM Forms應用程式中擷取的適用性表單中，不支援表單層級附件。 如果作者在編寫表單時已啟用欄位層級附件，則使用者可以在欄位中附加檔案。
 
+
 **開啟和更新表單**
 
-1. 若要開啟表單，請點選主畫面中的表單。
+1. 若要開啟表單，請點選 **[!UICONTROL 表單]** 在主畫面中。
 1. 您可以更新表單的欄位、新增附件、另存為草稿及提交。
