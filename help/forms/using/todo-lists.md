@@ -11,9 +11,9 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 exl-id: c80bf347-d1ed-488f-a41a-ceb05a6df9e4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 51e36e874fe84eab8558271b5c84b1c2e2f58ef0
 workflow-type: tm+mt
-source-wordcount: '3999'
+source-wordcount: '4034'
 ht-degree: 0%
 
 ---
@@ -281,7 +281,10 @@ AEM Forms工作區有下列三種待辦事項清單：
 
 >[!NOTE]
 >
->若要將工作區設定為使用適當的電子郵件範本，請參閱 [AEM Forms JEE管理員指南](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
+>* 若要將工作區設定為使用適當的電子郵件範本，請參閱 [AEM Forms JEE管理員指南](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
+>
+>* 如果在AEM Forms工作區中提交任務後轉送草稿，則會傳送電子郵件通知。 如果從AEM Forms工作區的起始點轉送草稿，則不會傳送任何電子郵件通知。
+
 
 當您透過電子郵件完成工作時，該工作會從AEM Forms工作區的「待辦事項」清單中移除。
 
