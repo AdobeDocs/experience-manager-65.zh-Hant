@@ -21,7 +21,7 @@ ht-degree: 4%
 + 發行說明 {#release-notes-new-features}
    + [發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
    + [新功能摘要](using/whats-new.md)
-   + [過時的功能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html)
+   + [過時的功能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html?lang=zh-Hant)
 + 快速入門 {#getting-started}
    + [AEM Forms簡介](using/introduction-aem-forms.md)
    + [製作最適化表單簡介](using/introduction-forms-authoring.md)
