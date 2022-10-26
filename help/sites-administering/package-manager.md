@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: d303a374fd4ab8e398fd909dec4ce6155a2163f5
+source-git-commit: b48b7631c501cea7e4ef1133a452fb6984e4547f
 workflow-type: tm+mt
 source-wordcount: '3573'
 ht-degree: 1%
@@ -489,6 +489,16 @@ curl -v -X POST --user admin:admin -F file=@/Users/SomeGuy/Desktop/core.wcm.comp
 
 在安裝軟體包之前，軟體包管理器會自動建立包含將被覆蓋內容的快照軟體包。 如果卸載軟體包，則將重新安裝此快照。
 
+>[!CAUTION]
+>
+>* 如果您要安裝數位資產，您必須：
+   >  首先，停用WorkflowLauncher。
+   >  使用OSGi控制台的「元件」菜單選項來停用
+   >  `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl.`
+>* 接下來，安裝完成後，重新激活WorkflowLauncher。
+>
+>停用WorkflowLauncher可確保資產匯入工具架構在安裝時不會（無意中）操控資產。
+
 1. [訪問包管理器。](#accessing)
 
 1. 按一下包名稱，從包清單中開啟要安裝的包的包詳細資訊。
@@ -506,16 +516,6 @@ curl -v -X POST --user admin:admin -F file=@/Users/SomeGuy/Desktop/core.wcm.comp
 1. 按一下 **安裝**.
 
 1. 活動日誌詳細說明了安裝的進度。
-
->[!CAUTION]
->
->* 如果您要安裝數位資產，您必須：
-   >  首先，停用WorkflowLauncher。
-   >  使用OSGi控制台的「元件」菜單選項來停用
-   >  `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl.`
->* 接下來，安裝完成後，重新激活WorkflowLauncher。
->
->停用WorkflowLauncher可確保資產匯入工具架構在安裝時不會（無意中）操控資產。
 
 安裝完成並成功後，將更新包清單和單詞 **已安裝** 出現在套件狀態中。
 
