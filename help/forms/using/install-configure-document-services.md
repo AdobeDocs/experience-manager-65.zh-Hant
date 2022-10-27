@@ -8,12 +8,13 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 652f2f9b55857b8962f5bfd4edb85f3700866485
+source-git-commit: b80886f1e45e0ed65ce2309ef6ea43bfa373a52b
 workflow-type: tm+mt
-source-wordcount: '5535'
+source-wordcount: '5529'
 ht-degree: 1%
 
 ---
+
 
 # 安裝和配置文檔服務 {#installing-and-configuring-document-services}
 
@@ -286,14 +287,6 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
    `-Djava.security.properties= [path of newly created Java.security file].`
 
-### （僅限Windows）配置安裝油墨和手寫服務 {#configure-install-ink-and-handwriting-service}
-
-如果運行的是Microsoft® Windows Server，請配置Ink and Shartting服務。 需要此服務才能開啟使用Microsoft® Office連結功能的Microsoft® PowerPoint檔案：
-
-1. 開啟「伺服器管理器」。 按一下 **[!UICONTROL 伺服器管理員]** 表徵圖。
-1. 按一下 **[!UICONTROL 新增功能]** 在 **[!UICONTROL 功能]** 功能表。 選取 **[!UICONTROL 墨跡和手寫服務]** 框。
-1. **[!UICONTROL 選擇功能]** 對話框 **[!UICONTROL 墨跡和手寫服務]** 已選取。 按一下 **[!UICONTROL 安裝]** 且已安裝服務。
-
 ### （僅限Windows）配置Microsoft® Office的檔案塊設定 {#configure-the-file-block-settings-for-microsoft-office}
 
 更改Microsoft® Office信任中心設定，使PDF生成器服務能夠轉換使用舊版Microsoft® Office建立的檔案。
@@ -479,7 +472,9 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 
    1. 開啟 [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) 下載 `adobe-aemfd-pdfg-common-pkg-[version].zip` 檔案。
    1. 將下載的.zip檔案解壓縮。 以管理權限開啟命令提示符。
-   1. 導覽至 [解壓縮 — zip檔案]`\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\adobe-aemfd-pdfg-common-pkg-[version]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` 目錄。 運行以下批處理檔案：
+   1. 導覽至 `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\`
+   1. 將 `adobe-aemfd-pdfg-common-pkg-[version]`.
+   1. 導覽至 `[downloaded-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` 目錄。 運行以下批處理檔案：
 
       `Acrobat_for_PDFG_Configuration.bat`
 
@@ -589,7 +584,7 @@ DocAssurance服務可以將使用權應用於PDF文檔。 要將使用權應用�
 
 ## 系統就緒工具(SRT) {#SRT}
 
-「系統就緒」工具會檢查電腦是否已正確配置以運行PDF生成器轉換。 工具會在指定路徑產生報表。 若要執行工具：
+此 [系統整備工具](#srt-configuration) 檢查電腦是否已正確設定以執行PDF產生器轉換。 工具會在指定路徑產生報表。 若要執行工具：
 
 1. 開啟命令提示符。 導覽至 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` 檔案夾。
 
@@ -597,39 +592,47 @@ DocAssurance服務可以將使用權應用於PDF文檔。 要將使用權應用�
 
    `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
 
-   命令將生成報告，並建立srt_config.yaml檔案。
+   命令將生成報告，並建立srt_config.yaml檔案。 您可以用它來配置SRT工具的選項。 可選配置SRT工具的選項。
 
    >[!NOTE]
    >
    > * 如果「系統整備工具」報告pdfgen.api檔案不在Acrobat外掛程式資料夾中，則從 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目錄 `[Acrobat_root]\Acrobat\plug_ins` 目錄。
-   >
-   > * 您可以使用srt_config.yaml檔案來配置的各種設定。 檔案格式為：
 
-       # SRT配置
-       
-       #注意 — 請遵循正確格式，以避免解析失敗
-       
-       #例如 &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
-       
-       #locale:（必填欄位）要用於SRT的地區設定。 支援的地區設定[en/fr/de/ja]。
-       區域：en
-       
-       #aemTempDir:AEM臨時目錄
-       aemTempDir:
-       
-       #users:提供PDFG轉換使用者清單
-       #users:
-       # - user1
-       # — 用戶2
-       使用者：
-       
-       #profile:選擇配置檔案以運行特定檢查。 從[LCM]中選擇，即將新增更多內容
-       設定檔：
-       
-       #outputDir:保存輸出檔案的目錄
-       outputDir:
-   >
 1. 導覽至 `[Path_of_reports_folder]`。開啟SystemReadinessTool.html檔案。 驗證報表並修正上述問題。
+
+### 配置SRT工具的選項 {#srt-configuration}
+
+您可以使用srt_config.yaml檔案來配置SRT工具的各種設定。 檔案格式為：
+
+```shell
+   # =================================================================
+   # SRT Configuration
+   # =================================================================
+   #Note - follow correct format to avoid parsing failures
+   #e.g. <param name>:<space><param value> 
+   #locale: (mandatory field)Locale to be used for SRT. Supported locales [en/fr/de/ja].
+   locale: en
+   
+   #aemTempDir: AEM Temp direcotry
+   aemTempDir:
+   
+   #users: provide PDFG converting users list
+   #users:
+   # - user1
+   # - user2
+   users:
+   
+   #profile: select profile to run specific checks. Choose from [LCM], more will be added soon 
+   profile:
+   
+   #outputDir: directory where output files will be saved
+   outputDir:
+```
+
+* **地區：** 此為必要參數。 它支援英文(en)、德文(de)、法文(fr)和日文(ja)。 預設值為en。 這對在OSGi上在AEM Forms上執行的PDF產生器服務沒有影響。
+* **aemTempDir:** 此為選用參數。 它會指定Adobe Experience Manager的暫時儲存位置。
+* **使用者：** 此為選用參數。 您可以指定一個用戶，以檢查該用戶是否擁有運行PDF生成器所需目錄的必需權限和讀/寫訪問權限。 如果未指定任何使用者，則會略過使用者專屬的檢查，並在報表中顯示為失敗。
+* **outputDir:** 指定保存SRT報告的位置。 預設位置是SRT工具的當前工作目錄。
 
 ## 疑難排解
 
@@ -655,7 +658,7 @@ DocAssurance服務可以將使用權應用於PDF文檔。 要將使用權應用�
 * 確保32位 [支援的版本 ](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) 安裝Microsoft Office，並取消所有應用程式的開啟對話框。
 * 確認PDF產生器使用者已新增至PDF設定UI。
 * 確認PDF產生器使用者為管理員群組的成員，且 [取代處理層級代號](#grant-the-replace-a-process-level-token-privilege) 已為用戶設定權限。
-* 確認已在PDF產生器UI中設定使用者，並執行下列動作：
+* 確認使用者已在PDF產生器UI中設定，並執行下列動作：
    1. 使用Microsoft產生器使用者登入PDF® Windows。
    1. 開啟Microsoft® Office或OpenOffice應用程式並取消所有對話。
    1. 將AdobePDF設為預設打印機。
@@ -666,7 +669,7 @@ DocAssurance服務可以將使用權應用於PDF文檔。 要將使用權應用�
 
 **Linux®**
 
-* 安裝 [支援的版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) OpenOffice的。 AEM Forms支援32位元和64位元版本。 安裝後，開啟所有OpenOffice應用程式，取消所有對話框窗口，然後關閉應用程式。 重新開啟應用程式，並確保開啟OpenOffice應用程式時不顯示對話框。
+* 安裝 [支援的版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) OpenOffice的。 AEM Forms支援32位元和64位元版本。 安裝後，開啟所有OpenOffice應用程式，取消所有對話框窗口，然後關閉應用程式。 重新開啟應用程式，並確保開啟OpenOffice應用程式時不顯示任何對話框。
 
 * 建立環境變數 `OpenOffice_PATH` 並將其設定為指向OpenOffice安裝 [主控台](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) 或dt（設備樹）配置檔案。
 * 如果安裝OpenOffice時出現問題，請確保 [32位元程式庫](#extrarequirements) 可以使用OpenOffice安裝所需的。
@@ -687,7 +690,7 @@ DocAssurance服務可以將使用權應用於PDF文檔。 要將使用權應用�
    ldd phantomjs | grep not
    ```
 
-* 請確定JAVA_HOME_32環境變數指向正確位置。
+* 請確定JAVA_HOME_32環境變數指向正確的位置。
 
 **Linux®和Solaris™（WebKit轉換路由）**
 
@@ -762,7 +765,7 @@ DocAssurance服務可以將使用權應用於PDF文檔。 要將使用權應用�
 
 * 如果您有Adobe Acrobat的現有授權，且已過期， [下載最新版Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html)，並遷移序列號。 之前 [遷移序列號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
 
-   * 使用以下命令生成prov.xml並使用prov.xml檔案重新序列化現有安裝，而不是使用中提供的命令 [遷移序列號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 數字文章。
+   * 使用以下命令生成prov.xml並使用prov.xml檔案保留現有安裝，而不是使用中提供的命令 [遷移序列號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 數字文章。
 
           &quot;
           
