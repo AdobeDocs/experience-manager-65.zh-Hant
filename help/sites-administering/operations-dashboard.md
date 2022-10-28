@@ -12,10 +12,10 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: 891cb5bb8cc9b7114d23617c9164fd428718b302
+source-git-commit: ee45113daee495d9b56a0f6e2c463d9cca006540
 workflow-type: tm+mt
-source-wordcount: '6200'
-ht-degree: 1%
+source-wordcount: '6230'
+ht-degree: 2%
 
 ---
 
@@ -107,14 +107,14 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
 
    新節點上應設定下列屬性：
 
-   * **名稱：** `sling:resourceType`
+   * **名稱:** `sling:resourceType`
 
       * **類型：** `String`
-      * **值：** `granite/operations/components/mbean`
-   * **名稱：** `resource`
+      * **值:** `granite/operations/components/mbean`
+   * **名稱:** `resource`
 
       * **類型：** `String`
-      * **值：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
+      * **值:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
 
    >[!NOTE]
    >
@@ -163,20 +163,20 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
 
    例如，如果您已建立設定，並設定 **hc.mbean.name** 值 **磁碟使用情況**，設定節點如下所示：
 
-   * **名稱：** `Composite Health Check`
+   * **名稱:** `Composite Health Check`
 
       * **類型：** `nt:unstructured`
 
    具有下列屬性：
 
-   * **名稱：** `sling:resourceType`
+   * **名稱:** `sling:resourceType`
 
       * **類型：** `String`
-      * **值：** `granite/operations/components/mbean`
-   * **名稱：** `resource`
+      * **值:** `granite/operations/components/mbean`
+   * **名稱:** `resource`
 
       * **類型：** `String`
-      * **值：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
+      * **值:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
 
    >[!NOTE]
    >
@@ -324,6 +324,12 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
   </tr>
  </tbody>
 </table>
+
+### 運行狀況檢查配置 {#health-check-configuration}
+
+依預設，對於現成的AEM例項，健康狀態檢查每60秒執行一次。
+
+您可以設定 **時段** 和 [OSGi配置](/help/sites-deploying/configuring-osgi.md) **查詢運行狀況檢查配置** (com.adobe.granite.queries.impl.hc.QueryHealthCheckMetrics)。
 
 ## 使用Nagios進行監控 {#monitoring-with-nagios}
 
