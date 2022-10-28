@@ -4,9 +4,9 @@ description: 了解如何執行就地升級。
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 6d2b7e341dcdedf3c000b9fb0ecd21722bdf2a27
+source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
@@ -116,8 +116,6 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 * 如果您在Java記憶體映射未正確處理的Windows系統上執行升級，請添加 `--disable-mmap` 參數。
 
-* 如果您使用Java 7，請新增 `-XX:MaxPermSize=2048m` 參數 `-Xmx` 參數。
-
 如需使用crx2oak工具的其他指示，請參閱使用 [CRX2Oak移轉工具](/help/sites-deploying/using-crx2oak.md). 如有需要，可手動升級crx2oak helper JAR，方法是在解壓縮快速入門程式後，以較新版本手動取代它。 其在AEM安裝資料夾中的位置為： `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`. 最新版的CRX2Oak移轉工具可從Adobe存放庫下載： [https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)
 
 如果移轉成功完成，則工具會退出，退出代碼為零。 此外，檢查 `upgrade.log` 檔案，位於 `crx-quickstart/logs` 在AEM安裝目錄中，因為這些可能表示移轉期間發生非致命錯誤。
@@ -181,7 +179,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 1. 尋找AEM程式。 看起來會像這樣：
 
    ```shell
-   /usr/bin/java -server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar crx-quickstart/app/cq-quickstart-6.2.0-standalone-quickstart.jar start -c crx-quickstart -i launchpad -p 4502 -Dsling.properties=conf/sling.properties
+   /usr/bin/java -server -Xmx1024m -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar crx-quickstart/app/cq-quickstart-6.5.0-standalone-quickstart.jar start -c crx-quickstart -i launchpad -p 4502 -Dsling.properties=conf/sling.properties
    ```
 
 1. 通過替換現有jar的路徑( `crx-quickstart/app/aem-quickstart*.jar` 在本例中)，新jar是 `crx-quickstart` 檔案夾。 以上一個命令為例，我們的命令會是：

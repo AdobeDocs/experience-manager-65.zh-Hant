@@ -6,7 +6,7 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 1a741ff01fcf17dfdcc8c1cebcd858052d07361c
+source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
 workflow-type: tm+mt
 source-wordcount: '3583'
 ht-degree: 2%
@@ -353,7 +353,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 確認已安裝MongoDB，且執行個體為 `mongod` 執行中。
 1. 使用下列命令啟動AEM :
 
-   `java -Xmx1024m -XX:MaxPermSize=256M -jar cq-quickstart.jar -r crx3,crx3mongo`
+   `java -Xmx1024m -jar cq-quickstart.jar -r crx3,crx3mongo`
 
 1. 對第二個AEM例項重複步驟1到4。
 1. 啟動第二個AEM例項。

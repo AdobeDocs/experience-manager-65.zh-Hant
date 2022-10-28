@@ -3,7 +3,7 @@ title: 應用程式伺服器安裝的升級步驟
 description: 了解如何升級透過應用程式伺服器部署的AEM例項。
 feature: Upgrading
 exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
-source-git-commit: 5e875e0420540ca209e7d677046e8d010ae4e145
+source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 1. 現在，使用crx2oak移轉工具移轉存放庫。 若要這麼做，請從下載最新版crx2oak [此位置](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/).
 
    ```shell
-   SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -XX:MaxPermSize=2048M -jar crx2oak.jar --load-profile segment-fds
+   SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -jar crx2oak.jar --load-profile segment-fds
    ```
 
 1. 請執行下列動作，刪除sling.properties檔案中的必要屬性：
