@@ -12,7 +12,7 @@ role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Troubleshooting
 mini-toc-levels: 3
-source-git-commit: d5824078ca3e1ff2b48874446aaebe3fdd60cfdc
+source-git-commit: 9c3df2491f99fe31e4b64b47442dd583af06974e
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 1%
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 | **屬性** | **範例** | **說明** |
 |---|---|---|
-| `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a|364266`** | 節點連結至Dynamic Media的一般指標。 |
+| `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a\|364266`** | 節點連結至Dynamic Media的一般指標。 |
 | `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** 錯誤文字 | 資產上傳至Dynamic Media的狀態。 |
 | `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | 必須填入，才能產生URL至Dynamic Media的遠端資產。 |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **成功** 或 **失敗：`<error text>`** | 集（回轉集、影像集等）、影像預設集、檢視器預設集、資產的影像地圖更新或已編輯影像的同步狀態。 |
