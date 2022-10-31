@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: b80886f1e45e0ed65ce2309ef6ea43bfa373a52b
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '5529'
 ht-degree: 1%
@@ -252,7 +252,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 >* 在基於UNIX的平台上，將OpenOffice安裝為/root。 如果OpenOffice未作為根安裝，PDF生成器服務將無法將OpenOffice文檔轉換為PDF文檔。 如果您需要以非根用戶身份安裝並運行OpenOffice，則為非根用戶提供sudo權限。
 >* 如果在基於UNIX的平台上使用OpenOffice，請運行以下命令以設定路徑變數：
 >
-> `export OpenOffice_PATH=/opt/openoffice.org4`
+>  `export OpenOffice_PATH=/opt/openoffice.org4`
 
 ### (僅適用於IBM® WebSphere®)設定IBM® SSL通訊端提供者 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
@@ -415,7 +415,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
    >[!NOTE]
    >
    >非Adobe方提供的字型的使用權受此類方向您提供的這些字型的許可協定管轄，而使用Adobe軟體的許可不涵蓋這些字型。 Adobe建議您在將非Adobe字型與Adobe軟體搭配使用前，尤其是在伺服器環境中使用字型時，務必檢閱並確保您符合所有適用的非Adobe授權合約。
-   > 在字型資料夾中安裝新字型時，請重新啟動AEM Forms執行個體。
+   >在字型資料夾中安裝新字型時，請重新啟動AEM Forms執行個體。
 
 ### 設定本機使用者帳戶以執行PDF產生器服務  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
 
@@ -596,7 +596,8 @@ DocAssurance服務可以將使用權應用於PDF文檔。 要將使用權應用�
 
    >[!NOTE]
    >
-   > * 如果「系統整備工具」報告pdfgen.api檔案不在Acrobat外掛程式資料夾中，則從 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目錄 `[Acrobat_root]\Acrobat\plug_ins` 目錄。
+   >* 如果「系統整備工具」報告pdfgen.api檔案不在Acrobat外掛程式資料夾中，則從 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目錄 `[Acrobat_root]\Acrobat\plug_ins` 目錄。
+
 
 1. 導覽至 `[Path_of_reports_folder]`。開啟SystemReadinessTool.html檔案。 驗證報表並修正上述問題。
 

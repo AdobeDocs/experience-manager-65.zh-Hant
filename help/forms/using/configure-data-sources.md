@@ -10,7 +10,7 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 98854fa3b852f511cf95adc13b945c06b1afff96
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '2011'
 ht-degree: 1%
@@ -190,7 +190,7 @@ OData服務由其服務根URL識別。 若要在AEM雲端服務中設定OData服
 
 >[!NOTE]
 >
-> 表單資料模型支援 [OData第4版](https://www.odata.org/documentation/).
+>表單資料模型支援 [OData第4版](https://www.odata.org/documentation/).
 >有關配置Microsoft Dynamics 365的線上或內部部署的逐步指南，請參閱 [Microsoft Dynamics OData設定](/help/forms/using/ms-dynamics-odata-configuration.md).
 
 1. 前往 **[!UICONTROL 工具>Cloud Services>資料來源]**. 點選以選取您要建立雲端設定的資料夾。

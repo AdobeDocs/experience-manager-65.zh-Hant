@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: 72012fa441edb01deb7e557b707fb068d8e9892e
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1220'
 ht-degree: 0%
@@ -131,9 +131,9 @@ AEM體驗片段可匯出至Adobe Target中的預設工作區，或匯出至Adobe
    >
    >外部化程式域是可選的。
    >
-   > 當您希望匯出的內容指向特定 *發佈* 網域。 如需更多詳細資訊，請參閱 [設定AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer).
+   >當您希望匯出的內容指向特定 *發佈* 網域。 如需更多詳細資訊，請參閱 [設定AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer).
    >
-   > 另請注意，外部化程式網域僅與傳送至Target的體驗片段內容相關，而與檢視選件內容等中繼資料無關。
+   >另請注意，外部化程式網域僅與傳送至Target的體驗片段內容相關，而與檢視選件內容等中繼資料無關。
 
    例如，對於資料夾：
 

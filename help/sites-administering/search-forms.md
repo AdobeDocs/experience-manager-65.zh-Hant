@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '2042'
 ht-degree: 11%
@@ -331,9 +331,8 @@ A [謂語範圍](#predicates-and-their-settings)可立即使用。 您可以新�
 >* 常見的搜尋述詞定義於：
    >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
->
 >* 僅與網站管理員（傳統UI）相關的搜尋述詞位於：
-   > `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
+   >  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
    >   * 這些規則已過時，且僅適用於回溯相容性。
 >
 >此資訊僅供參考，您不得變更 `/libs`.

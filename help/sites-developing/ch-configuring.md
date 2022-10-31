@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1842'
 ht-degree: 0%
@@ -41,9 +41,9 @@ ContextHub是儲存、操控和呈現內容資料的架構。 如需ContextHub�
 >
 >[由於AEM 6.4的存放庫重新調整架構，](/help/sites-deploying/repository-restructuring.md) ContextHub設定的位置已從 `/etc/cloudsettings` 至：
 >
-> * `/libs/settings/cloudsettings`
-> * `/conf/global/settings/cloudsettings`
-> * `/conf/<tenant>/settings/cloudsettings`
+>* `/libs/settings/cloudsettings`
+>* `/conf/global/settings/cloudsettings`
+>* `/conf/<tenant>/settings/cloudsettings`
 
 
 ## 顯示和隱藏ContextHub UI {#showing-and-hiding-the-contexthub-ui}

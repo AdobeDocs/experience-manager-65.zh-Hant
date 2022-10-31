@@ -9,7 +9,7 @@ feature: Commerce Integration Framework
 kt: 3046
 thumbnail: 28952.jpg
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -46,7 +46,7 @@ AEM Live Copy和Language Copy的多網站管理功能與Commerce Integration Fra
 
    >[!TIP]
    >
-   > 可使用ID或UID來定址商務目錄。 Adobe Commerce 2.4.2導入了UID。只有在您的商務後端支援2.4.2版或更新版本的GraphQL架構時，才啟用此功能。
+   >可使用ID或UID來定址商務目錄。 Adobe Commerce 2.4.2導入了UID。只有在您的商務後端支援2.4.2版或更新版本的GraphQL架構時，才啟用此功能。
 
 4. 將子配置指派給AEM站點
 

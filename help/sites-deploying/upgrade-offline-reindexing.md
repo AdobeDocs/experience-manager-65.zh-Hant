@@ -7,7 +7,7 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 1%
@@ -127,7 +127,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 >[!NOTE]
 >
-> 只有 `oak-run-1.12.0` 版本之後。 目標定位是使用Granite存放庫套件完成 `com.adobe.granite.repository-x.x.xx.jar`.
+>只有 `oak-run-1.12.0` 版本之後。 目標定位是使用Granite存放庫套件完成 `com.adobe.granite.repository-x.x.xx.jar`.
 
 上述步驟會建立名為的JSON檔案 `merge-index-definitions_target.json` 即索引定義。
 
@@ -141,7 +141,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 >[!NOTE]
 >
-> 稍後導入索引時，將刪除此檢查點。
+>稍後導入索引時，將刪除此檢查點。
 
 如需詳細資訊，請參閱 [查核點建立](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html#out-of-band-create-checkpoint) 從Oak檔案。
 

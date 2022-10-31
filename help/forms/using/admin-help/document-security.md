@@ -12,7 +12,7 @@ discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
 feature: Document Security
 exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
-source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -276,4 +276,4 @@ A *原則* 定義一組機密設定，以及可以訪問應用策略的文檔的
 
    >[!NOTE]
    >
-   > 您可以使用 [getAllPolicysetnames()](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API，最多可檢索1000個策略集名稱。 在內部，API最多檢索1000個策略，其中API調用者具有文檔發佈者權限，然後建立並返回與檢索的策略相關聯的唯一策略集名稱清單。 例如，當API檢索1000個策略，且檢索到的策略總共與200個策略集關聯時，API僅返回200個策略集名稱。
+   >您可以使用 [getAllPolicysetnames()](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API，最多可檢索1000個策略集名稱。 在內部，API最多檢索1000個策略，其中API調用者具有文檔發佈者權限，然後建立並返回與檢索的策略相關聯的唯一策略集名稱清單。 例如，當API檢索1000個策略，且檢索到的策略總共與200個策略集關聯時，API僅返回200個策略集名稱。

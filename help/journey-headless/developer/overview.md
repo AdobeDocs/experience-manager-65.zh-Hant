@@ -2,10 +2,10 @@
 title: AEM Headless Developer Journey
 description: AEM Headless CMS 文件。從這裡開始，逐步引導您了解 AEM 強大且有彈性的無周邊功能、其功能，以及如何在您的第一個開發專案中運用這些功能。
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1212'
-ht-degree: 5%
+ht-degree: 13%
 
 ---
 
@@ -23,17 +23,17 @@ ht-degree: 5%
 * 了解AEM無頭功能，以及它們如何共同合作以提供無頭體驗。
 * 能夠採取實作第一個AEM無頭專案的前幾個步驟。
 
-## AEM檔案歷程 {#documentation-journeys}
+## AEM 文件歷程 {#documentation-journeys}
 
-[檔案歷程](/help/journey-documentation/home.md) 將許多不同的、可能複雜的主題和特徵聯繫起來，提供一種敘述，幫助讀者從頭到尾理解並解決業務問題，同時假定事先的主題或AEM知識最少。
+[文件歷程](/help/journey-documentation/home.md)提供敘述來協助剛開始使用 AEM 的讀者，讓他們能從頭到尾理解和解決業務問題，同時將採用的先前主題或 AEM 知識降至最低，藉以連結許多不同且複雜的主題和功能。
 
-說明檔案歷程是根據最佳實務原則而設計，根據Adobe的最新研究、Adobe顧問經驗證的實作經驗，以及客戶專案的意見回饋。
+文件歷程根據最佳實務原則而設計，其中包含 Adobe 的最新研究、Adobe 顧問的成熟實施經驗以及客戶專案的意見回饋。
 
 如果您想了解Adobe建議如何使用AEM解決無頭式業務案例， [AEM無頭歷程](/help/journey-headless/home.md) 是開始的位置。
 
 >[!TIP]
 >
-> 如果您偏好 **學習** 且在技術上有傾向，請造訪AEM Headless教學課程，這些教學課程由API和架構組織，並可在 [「其他資源」部分](#additional-resources) 在此文檔的末尾。
+>如果您偏好 **學習** 且在技術上有傾向，請造訪AEM Headless教學課程，這些教學課程由API和架構組織，並可在 [「其他資源」部分](#additional-resources) 在此文檔的末尾。
 
 ## 對象 {#audience}
 
@@ -54,11 +54,11 @@ ht-degree: 5%
 
 您將在此歷程中探索許多主題。 以下文章提供您AEM中無頭的基礎知識，並連結至詳細的技術檔案。
 
-雖然您可以直接前往歷程的特定部分，但許多概念都是以先前文章中的概念為基礎而建立。 因此，如果您剛接觸AEM中的無頭部，建議您從頭開始，依序進行。
+儘管您可以直接進入歷程的特定部分，但許多概念都是以先前文章中的概念為基礎。因此，如果您剛接觸AEM中的無頭部，建議您從頭開始，依序進行。
 
 | # | 文章 | 說明 |
 |---|---|---|
-| 0 | AEM Headless Developer Journey | 此文檔 |
+| 0 | AEM Headless Developer Journey | 本文件 |
 | 1 | [了解CMS無頭開發](learn-about.md) | 了解無頭技術及其使用時機。 |
 | 2 | [AEM Headless 快速入門](getting-started.md) | 了解AEM Headless必要條件 |
 | 3 | [使用AEM Headless的第一次體驗路徑](path-to-first-experience.md) | 設定您的開發環境，並了解如何將簡單應用程式與AEM Headless整合 |

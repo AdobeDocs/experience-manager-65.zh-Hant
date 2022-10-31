@@ -9,7 +9,7 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
-source-git-commit: 014731aa9c5c4d7d419ff8b037142b47e7b7da01
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 4%
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
-> 搜尋引擎最佳化 (SEO) 已成為許多行銷人員的重點考量。因此，許多AEM專案都需要解決SEO疑慮。 請閱讀 [SEO和URL管理最佳作法](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) 以取得其他資訊。
+>搜尋引擎最佳化 (SEO) 已成為許多行銷人員的重點考量。因此，許多AEM專案都需要解決SEO疑慮。 請閱讀 [SEO和URL管理最佳作法](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) 以取得其他資訊。
 
 [AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components) 提供進階設定，可自訂產品和類別頁面的URL。 許多實作會為了搜尋引擎最佳化(SEO)目的自訂這些URL。 以下影片詳細說明如何設定 `UrlProvider` 服務與功能 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) 自訂產品和類別頁面的URL。
 
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
-> 自AEM CIF核心元件2.0.0版起，URL提供者設定僅提供預先定義的url格式，而非1.x版中可使用的自由文字設定格式。 此外，在URL中使用選取器傳遞資料的做法已取代為尾碼。
+>自AEM CIF核心元件2.0.0版起，URL提供者設定僅提供預先定義的url格式，而非1.x版中可使用的自由文字設定格式。 此外，在URL中使用選取器傳遞資料的做法已取代為尾碼。
 
 ### 產品頁面URL格式 {#product}
 
@@ -73,7 +73,7 @@ ht-degree: 4%
 
 >[!NOTE]
 > 
-> 此 `url_path` 是 `url_keys` 產品或類別的祖先和產品或類別的 `url_key` 分隔 `/` 斜線。
+>此 `url_path` 是 `url_keys` 產品或類別的祖先和產品或類別的 `url_key` 分隔 `/` 斜線。
 
 ### 特定類別/產品頁面 {#specific-pages}
 

@@ -2,7 +2,7 @@
 title: 延伸 [!DNL Adobe Experience Manager] 6.5使用Adobe Developer App Builder。
 description: 延伸 [!DNL Adobe Experience Manager] 6.5使用Adobe Developer App Builder。
 exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
@@ -27,7 +27,7 @@ App Builder可讓客戶在各種使用案例中輕鬆擴充Adobe Experience Mana
 
 >[!NOTE]
 >
-> 若為想運用App Builder的AEMas a Cloud Service客戶，請前往 [使用Adobe Developer App Builder擴充Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html).
+>若為想運用App Builder的AEMas a Cloud Service客戶，請前往 [使用Adobe Developer App Builder擴充Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html).
 
 ## 架構 {#architecture}
 

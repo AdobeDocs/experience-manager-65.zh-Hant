@@ -2,7 +2,7 @@
 title: 編寫商務體驗
 description: 工作商務體驗
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '703'
 ht-degree: 0%
@@ -71,7 +71,7 @@ CIF產品目錄頁面是即時轉譯的虛擬頁面。 因此，無法內嵌一�
 
     >[!NOTE]
     >
-    >如果同時選取類別和產品，則會採取產品。
+    >如果同時選取類別和產品，則會採用產品。
 
 這會建立預留位置連結，在轉譯頁面時，該連結會以實際連結取代。
 
@@ -101,4 +101,4 @@ CIF產品目錄頁面是即時轉譯的虛擬頁面。 因此，無法內嵌一�
 
     >[!NOTE]
     >
-    > Omnisearch中的全文搜尋不支援相關聯的內容片段。 使用SKU或UID來尋找相關的內容片段。
+    >Omnisearch中的全文搜尋不支援相關聯的內容片段。 使用SKU或UID來尋找相關的內容片段。

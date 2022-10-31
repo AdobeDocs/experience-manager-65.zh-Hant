@@ -11,7 +11,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
 role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '2460'
 ht-degree: 0%
@@ -76,7 +76,7 @@ OSGi上的AEM Forms和JEE上的AEM Forms都具備工作流程功能。 您可以
 
    >[!NOTE]
    >
-   > Adobe建議使用協力廠商資料存放區來儲存最終處理的資料，而非使用AEM存放庫。
+   >Adobe建議使用協力廠商資料存放區來儲存最終處理的資料，而非使用AEM存放庫。
 
 * **儲存來自發佈例項之通信資料的後續處理：** AEM工作流程會對對應的信函定義執行選擇性的後置處理。 這些工作流程可將最終處理的資料儲存至適當的外部資料存放區。
 

@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 1%
@@ -161,9 +161,8 @@ https://[*主機*]:[*埠*]/system/console/configMgr。
 
 >[!NOTE]
 >
-> * 示例中未提供MySQL的JDBC驅動程式。 請確保已為其進行了配置，並提供配置JDBC連接池所需的資訊。
-> * 指向您的製作和發佈執行個體以使用相同的資料庫。 所有製作和發佈實例的JDBC連接URI欄位值必須相同。
-   >
+>* 示例中未提供MySQL的JDBC驅動程式。 請確保已為其進行了配置，並提供配置JDBC連接池所需的資訊。
+>* 指向您的製作和發佈執行個體以使用相同的資料庫。 所有製作和發佈實例的JDBC連接URI欄位值必須相同。
 
 
 1. 保留其他設定原樣，然後按一下 **[!UICONTROL 儲存]**.

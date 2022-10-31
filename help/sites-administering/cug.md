@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
 exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
-source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 1%
+source-wordcount: '794'
+ht-degree: 0%
 
 ---
 
@@ -82,11 +82,11 @@ ht-degree: 1%
 
    ![螢幕截圖_2018-10-30at163003](assets/screenshot_2018-10-30at163003.png)
 
-   >[注意!]
+   >[!NOTE]
    >
-   > 請注意，「權限」頁簽中的CUG無法從Blueprint轉出到Live Copy。 設定Live Copy時，請針對此進行規劃。
+   >請注意，「權限」頁簽中的CUG無法從Blueprint轉出到Live Copy。 設定Live Copy時，請針對此進行規劃。
    >
-   > 如需詳細資訊，請參閱 [本頁](closed-user-groups.md#aem-livecopy).
+   >如需詳細資訊，請參閱 [本頁](closed-user-groups.md#aem-livecopy).
 
 1. 在下列視窗中尋找並新增您的CUG — 在此案例中，新增名為 **cug_access**. 最後，按 **儲存**.
 1. 按一下 **已啟用** 來定義此頁面（以及任何子頁面）屬於CUG。

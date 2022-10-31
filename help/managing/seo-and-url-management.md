@@ -7,7 +7,7 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3802'
 ht-degree: 75%
@@ -366,9 +366,9 @@ AEM使用 [Apache Sling Sitemap模組](https://github.com/apache/sling-org-apach
 
 >[!NOTE]
 >
-> 自Adobe Experience Manager 6.5.11.0版起，即可使用此功能。
+>自Adobe Experience Manager 6.5.11.0版起，即可使用此功能。
 > 
-> 若是舊版，您可以自行註冊Sling Servlet，以監聽 `sitemap.xml` 呼叫，並使用透過servlet API提供的資源來查詢目前頁面及其子系，以輸出sitemap.xml檔案。
+>若是舊版，您可以自行註冊Sling Servlet，以監聽 `sitemap.xml` 呼叫，並使用透過servlet API提供的資源來查詢目前頁面及其子系，以輸出sitemap.xml檔案。
 
 Apache Sling Sitemap模組會區分頂層Sitemap和巢狀Sitemap，兩者皆為具有 `sling:sitemapRoot` 屬性設定為 `true`. 一般而言，網站地圖是使用樹狀結構頂層Sitemap路徑上的選取器來轉譯，該路徑是沒有其他Sitemap根上階的資源。 此頂層Sitemap根目錄也會顯示Sitemap索引，這通常是網站擁有者在搜尋引擎的設定入口網站中所設定或新增至網站的索引 `robots.txt`.
 
@@ -380,7 +380,7 @@ Apache Sling Sitemap模組會區分頂層Sitemap和巢狀Sitemap，兩者皆為�
 
 >[!NOTE]
 >
-> 選取器 `sitemap` 和 `sitemap-index` 可能會干擾自訂實施。 如果您不想使用產品功能，請使用 `service.ranking` 高於0。
+>選取器 `sitemap` 和 `sitemap-index` 可能會干擾自訂實施。 如果您不想使用產品功能，請使用 `service.ranking` 高於0。
 
 在預設設定中，「頁面屬性」對話方塊提供將頁面標示為Sitemap根的選項，因此，如上所述，會產生本身及其子系的Sitemap。 此行為由 `SitemapGenerator` 介面，並可透過新增替代實作來擴充。 但是，由於重新生成XML站點映射的頻率高度取決於內容創作工作流和工作負載，因此產品不會發運任何 `SitemapScheduler` 設定。 這可讓功能有效地選擇加入。
 

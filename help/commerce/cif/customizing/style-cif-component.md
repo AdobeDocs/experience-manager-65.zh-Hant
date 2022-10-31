@@ -9,7 +9,7 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: dceb187ba28ad7c377e98d29d6c815fe37e23077
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '2567'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
-> 使用 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 開始您自己的商務實作時。
+>使用 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 開始您自己的商務實作時。
 
 ## 您要建置的
 
@@ -40,7 +40,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-> **歡迎使用現有專案** (根據包含CIF的AEM專案原型)，並略過本節。
+>**歡迎使用現有專案** (根據包含CIF的AEM專案原型)，並略過本節。
 
 1. 執行下列git命令以複製專案：
 
@@ -137,7 +137,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   > 類似的檔案會從原始碼控制項中忽略，因為它們應在建置期間產生。
+   >類似的檔案會從原始碼控制項中忽略，因為它們應在建置期間產生。
 
 1. Inspect檔案 `ui.frontend/clientlib.config.js`.
 
@@ -168,7 +168,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   > 類似的檔案也會從原始碼控制項中忽略，因為這些檔案應在建置期間產生。
+   >類似的檔案也會從原始碼控制項中忽略，因為這些檔案應在建置期間產生。
 
 1. 接下來檢查項目生成的其他客戶端庫：
 
@@ -190,7 +190,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   > 只有基礎程式庫會在頁面指令碼中「硬式編碼」。 `venia.site` 未包含在這些檔案中，而是包含在頁面範本中，以獲得更大的彈性。 稍後會檢查。
+   >只有基礎程式庫會在頁面指令碼中「硬式編碼」。 `venia.site` 未包含在這些檔案中，而是包含在頁面範本中，以獲得更大的彈性。 稍後會檢查。
 
 1. 從終端機，建立整個專案並部署至本機AEM例項：
 
@@ -265,7 +265,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   > 若要從AEM開始畫面檢視所有可用的範本，請導覽至 **工具** > **一般** > **範本**.
+   >若要從AEM開始畫面檢視所有可用的範本，請導覽至 **工具** > **一般** > **範本**.
 
 1. 在左上角，選取 **頁面資訊** 圖示並按一下 **頁面原則**.
 
@@ -328,7 +328,7 @@ ht-degree: 2%
 
    >[!CAUTION]
    >
-   > 如果出現與Sass相關的錯誤，請停止伺服器並運行命令 `npm rebuild node-sass` 並重複上述步驟。 如果您有不同版本的 `npm` 和 `node` 然後在專案中指定 `aem-cif-guides-venia/pom.xml`.
+   >如果出現與Sass相關的錯誤，請停止伺服器並運行命令 `npm rebuild node-sass` 並重複上述步驟。 如果您有不同版本的 `npm` 和 `node` 然後在專案中指定 `aem-cif-guides-venia/pom.xml`.
 
 1. 導覽至 [http://localhost:8080/](http://localhost:8080/) 在與AEM登入例項具有相同瀏覽器的新索引標籤中。 您應該會透過webpack-dev-server看到Venia首頁：
 

@@ -4,9 +4,9 @@ description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，協助�
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: c6ccd204dbd514d6195424aff495bc38f1f31bce
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -56,9 +56,9 @@ MSM是可自動部署內容的可設定架構。 實作通常涉及網站的主�
 
 使用Live Copy建立新網站時，建立Blueprint設定是有利的，以確保完整MSM功能集的可用性。
 
->[注意!]
+>[!NOTE]
 >
-> 請注意，「權限」頁簽中的CUG無法從Blueprint轉出到Live Copy。 設定Live Copy時，請針對此進行規劃。
+>請注意，「權限」頁簽中的CUG無法從Blueprint轉出到Live Copy。 設定Live Copy時，請針對此進行規劃。
 
 ## 元件和容器同步 {#components-and-container-synchronization}
 

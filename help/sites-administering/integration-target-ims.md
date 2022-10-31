@@ -2,7 +2,7 @@
 title: 使用IMS與Adobe Target整合
 description: 了解如何使用IMS整合AEM與Adobe Target
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: eb05fb92491932e4c2489c5adb533bbbae1d2870
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1500'
 ht-degree: 1%
@@ -278,9 +278,9 @@ AEM透過Target Standard API與Adobe Target整合時，需要使用Adobe Develop
 
 >[!NOTE]
 >
-> 如果要變更現有的Target設定：
+>如果要變更現有的Target設定：
 >
-> 1. 重新輸入租用戶ID。
-> 2. 重新連線至Target。
-> 3. 儲存設定。
+>1. 重新輸入租用戶ID。
+>2. 重新連線至Target。
+>3. 儲存設定。
 

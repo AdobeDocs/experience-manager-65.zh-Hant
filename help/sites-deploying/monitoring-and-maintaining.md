@@ -12,7 +12,7 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: b9a3db4144a571291bdf1c9a9f0e841f284df0c8
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '5972'
 ht-degree: 0%
@@ -448,11 +448,12 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >| `'.'yyyy-MM-dd-HH-mm` | 每分鐘一開始輪流。 |
    >
    >注意：指定時間/日期時：
-   > 1. 您應在一對單引號(「)中「逸出」文字；
-      >
-      >     這是為了避免某些字元被解釋為模式字母。
    >
-   >  1. 只允許在選項中任意位置使用有效檔案名的字元。
+   >1. 您應在一對單引號(「)中「逸出」文字；
+      >
+      >    這是為了避免某些字元被解釋為模式字母。
+   >
+   >1. 只允許在選項中任意位置使用有效檔案名的字元。
 
 
 1. 使用您選擇的工具讀取新日誌檔案。

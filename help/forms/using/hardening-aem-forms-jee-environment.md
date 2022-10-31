@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: d2661ee6614261179b5e8d2d9ffb7c240ce676dc
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -204,9 +204,11 @@ AEM Forms on JEE依預設會使用LocalSystem帳戶來安裝服務。 內置的L
 
    >[!NOTE]
    >
-   > JBoss Application Server的預設安裝位置：
-   > * 窗口：C:\Adobe\Adobe_Experience_Manager_Forms\jboss
-   > * Linux:/opt/jboss/
+   >JBoss Application Server的預設安裝位置：
+   >
+   >* 窗口：C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   >* Linux:/opt/jboss/
+
 
 1. 啟動應用程式伺服器。
 
@@ -1024,9 +1026,10 @@ JEE上的AEM Forms統包安裝預設會使用本機系統帳戶來設定服務�
 
    >[!NOTE]
    >
-   > JBoss Application Server的預設安裝位置：
-   > * 窗口：C:\Adobe\Adobe_Experience_Manager_Forms\jboss
-   > * Linux:/opt/jboss/。
+   >JBoss Application Server的預設安裝位置：
+   >
+   >* 窗口：C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   >* Linux:/opt/jboss/。
 
 
 1. 啟動應用程式伺服器服務。

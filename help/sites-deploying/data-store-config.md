@@ -6,7 +6,7 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3583'
 ht-degree: 2%
@@ -493,11 +493,12 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 >在叢集或共用資料存放區設定（含Mongo或Segment Tar）中執行垃圾收集時，記錄檔可能會顯示無法刪除某些Blob ID的警告。 這是因為以前垃圾收集中刪除的blob ID被沒有ID刪除資訊的其他群集或共用節點重新錯誤引用。 因此，執行垃圾收集時，會在嘗試刪除上次執行中已刪除的ID時記錄警告。 此行為不會影響效能或功能。
 
 >[!NOTE]
-> 如果您使用共用資料儲存設定且資料儲存垃圾收集已停用，則運行Lucene Binary清除任務可能會突然增加使用的磁碟空間。 若要避免此情況，您必須依下列方式在所有製作和發佈執行個體上停用BlobTracker:
 >
-> 1. 停止AEM例項。
-> 2. 新增 `blobTrackSnapshotIntervalInSecs=L"0"` 參數 `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` 檔案。 此參數需有Oak 1.12.0、1.10.2或更新版本。
-> 3. 重新啟動AEM例項。
+>如果您使用共用資料儲存設定且資料儲存垃圾收集已停用，則運行Lucene Binary清除任務可能會突然增加使用的磁碟空間。 若要避免此情況，您必須依下列方式在所有製作和發佈執行個體上停用BlobTracker:
+>
+>1. 停止AEM例項。
+>2. 新增 `blobTrackSnapshotIntervalInSecs=L"0"` 參數 `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` 檔案。 此參數需有Oak 1.12.0、1.10.2或更新版本。
+>3. 重新啟動AEM例項。
 
 
 使用較新的AEM版本時，資料存放區垃圾收集也可在多個存放庫共用的資料存放區上執行。 為了能夠在共用資料儲存上運行資料儲存垃圾收集，請執行以下步驟：
