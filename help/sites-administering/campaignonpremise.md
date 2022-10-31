@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 7fed5ce55f6ee7638d2578ee7ef2d84deb24277f
+source-git-commit: 4712f57808ae769646b00d1098648686815121b6
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 將AEM與Adobe Campaign整合後，您就可以直接在AEM中管理電子郵件傳遞、內容和表單。 需要Adobe Campaign Classic和AEM中的設定步驟，才能啟用解決方案之間的雙向通訊。
 
-此整合可讓AEM和Adobe Campaign Classic獨立使用。 行銷人員可在Adobe Campaign中建立行銷活動及使用鎖定目標，而內容建立者可同時在AEM中進行內容設計。 整合可讓Adobe Campaign鎖定AEM中促銷活動的內容與設計，並加以傳送。
+此整合可讓AEM和Adobe Campaign Classic獨立使用。 行銷人員可在Adobe Campaign中建立行銷活動及使用鎖定目標，而內容建立者可同時在AEM中進行內容設計。 透過整合，Adobe Campaign可定位並傳送在AEM中建立之促銷活動的內容與設計。
 
 ## 整合步驟 {#integration-steps}
 
@@ -44,7 +44,7 @@ AEM和Campaign之間的整合需要兩個解決方案中的許多步驟。
    * 若您需要有關如何設定和設定Adobe Campaign Classic的其他詳細資訊，請參閱 [Adobe Campaign Classic檔案，](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html) 特別是《安裝及設定指南》。
 * 管理員AEM存取權
 
-## 在Campaign安裝AEM整合套件 {#install-package}
+## 在Campaign中安裝AEM整合套件 {#install-package}
 
 此 **AEM整合** Adobe Campaign中的套件包含連線至AEM所需的許多標準設定。
 
@@ -68,7 +68,7 @@ AEM和Campaign之間的整合需要兩個解決方案中的許多步驟。
 
 整合套件現已安裝。
 
-## 在Campaign中建立AEM的運算子 {#create-operator}
+## 在促銷活動中建立AEM的運算子 {#create-operator}
 
 整合套件會自動建立 `aemserver` 運算子(AEM用來連線至Adobe Campaign)。 必須為此運算子定義安全區域並設定其密碼。
 
@@ -152,7 +152,7 @@ AEM現在可與Adobe Campaign通訊。
 >
 >請確定您的Adobe Campaign伺服器可透過網際網路存取。 AEM無法存取專用網路。
 
-## 設定復寫至AEM Publish執行個體 {#replication}
+## 設定復寫至AEM發佈執行個體 {#replication}
 
 促銷活動內容是由內容作者在AEM製作例項上建立。 此例項通常僅供貴組織內部使用。 若要讓行銷活動的收件者存取影像和資產等內容，您需要發佈該內容。
 
@@ -194,7 +194,7 @@ AEM現在可與Adobe Campaign通訊。
 
 1. 點選或按一下 **儲存**.
 
-您已設定Externalizer且Adobe Campaign無法存取您的內容。
+您已設定Externalizer，而Adobe Campaign現在可以存取您的內容。
 
 >[!NOTE]
 必須可從Adobe Campaign伺服器存取發佈執行個體。 如果指向 `localhost:4503` 或Adobe Campaign無法存取的其他伺服器，來自AEM的影像將不會顯示在Adobe Campaign主控台中。
