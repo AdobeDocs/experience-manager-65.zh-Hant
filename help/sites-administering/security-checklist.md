@@ -12,7 +12,7 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: f60d3049b10a8ec500dd0cd4b1b5d4efbe415d84
+source-git-commit: 58c89e0b96da0f36d233cb8c14e259cc595ddda7
 workflow-type: tm+mt
 source-wordcount: '2859'
 ht-degree: 3%
@@ -409,18 +409,18 @@ WebDAV應在製作和發佈環境中皆停用。 您可以停止適當的OSGi套
 1. 存取AEM例項，通常為製作例項，其中包含要複製的重要資料；
 1. 在本機檔案系統中找到com.adobe.granite.crypto.file套件組合。 例如，在此路徑下：
 
-   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25`
 
    此 `bundle.info` 每個資料夾內的檔案會識別套件組合名稱。
 
 1. 導覽至資料夾。 例如：
 
-   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
 1. 複製HMAC和主檔案。
 1. 接著，前往您要複製HMAC金鑰的目標執行個體，並導覽至資料夾。 例如：
 
-   * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+   * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
 1. 貼上您先前複製的兩個檔案。
 1. [刷新加密包](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) 如果目標實例已在運行。
