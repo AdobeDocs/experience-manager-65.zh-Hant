@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
 exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 64d174cc824c8bf200cece4e29f60f946ee5560e
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,8 @@ ht-degree: 0%
 
 * [將此群組套用至必要頁面](#applying-your-closed-user-group-to-content-pages) 並選擇（或建立）登錄頁供CUG成員使用；也會在將CUG套用至內容頁面時指定。
 
-* [建立某種形式的連結，到受保護區域內的至少一個頁面](#linking-to-the-realm)，否則將無法顯示。
+* [建立某種形式的連結，到受保護區域內的至少一個頁面](#linking-to-the-cug-pages)，否則將無法顯示。
+
 * [設定Dispatcher](#configure-dispatcher-for-cugs) 若使用中。
 
 >[!CAUTION]
@@ -67,58 +68,63 @@ ht-degree: 0%
 
 ## 將封閉的使用者群組套用至內容頁面 {#applying-your-closed-user-group-to-content-pages}
 
-要將CUG應用到頁面，請執行以下操作：
+若要將CUG套用至頁面或頁面：
 
 1. 導覽至您要指派給CUG之限制區段的根頁面。
-1. 按一下頁面縮圖，然後按一下 **屬性** 的上界。
+1. 按一下頁面縮圖並選取，以選取頁面 **屬性** 的下一頁。
 
    ![螢幕截圖_2018-10-30at162632](assets/screenshot_2018-10-30at162632.png)
 
-1. 在下列視窗中，前往 **進階** 標籤。
-1. 向下捲動並啟用 **驗證需求** 區段。
+1. 在下列視窗中，開啟 **進階** 標籤。
 
-1. 在下面添加配置路徑，然後按保存。
-1. 接下來，前往 **權限** 按 **編輯已關閉的用戶組** 按鈕。
+1. 向下捲動至 **驗證需求** 區段。
+
+   1. 啟動 **啟用** tickbox。
+
+   1. 將路徑新增至 **登入頁面**.
+若將保留為空白，系統會使用標準登入頁面，此為選用項目。
+
+   ![新增CUG](assets/cug-authentication-requirement.png)
+
+1. 接下來，前往 **權限** 索引標籤和選取 **編輯已關閉的用戶組**.
 
    ![螢幕截圖_2018-10-30at163003](assets/screenshot_2018-10-30at163003.png)
 
    >[!NOTE]
    >
-   >請注意，「權限」頁簽中的CUG無法從Blueprint轉出到Live Copy。 設定Live Copy時，請針對此進行規劃。
+   >「權限」頁簽中的CUG無法從Blueprint轉出到Live Copy。 設定Live Copy時，請針對此進行規劃。
    >
    >如需詳細資訊，請參閱 [本頁](closed-user-groups.md#aem-livecopy).
 
-1. 在下列視窗中尋找並新增您的CUG — 在此案例中，新增名為 **cug_access**. 最後，按 **儲存**.
-1. 按一下 **已啟用** 來定義此頁面（以及任何子頁面）屬於CUG。
-1. 指定 **登入頁面** 集團成員將使用的；例如：
+1. 此 **編輯已關閉的用戶組** 對話框將開啟。 您可以在此搜尋並選取您的CUG，然後使用確認群組選取項目 **儲存**.
 
-   `/content/geometrixx/en/toolbar/login.html`
+   該組將被添加到清單中；例如，群組 **cug_access**.
 
-   若將保留為空白，系統會使用標準登入頁面，此為選用項目。
+   ![新增CUG](assets/cug-added.png)
 
-1. 新增 **允許的組**. 使用+來新增群組，或使用 — 來移除。 只有這些群組的成員才能登入及存取頁面。
-1. 指派 **領域** （頁面群組的名稱）。 留空將使用頁面標題。
-1. 按一下 **確定** 保存規範。
+1. 使用確認變更 **儲存並關閉**.
 
-請參閱 [Identity Management](/help/sites-administering/identity-management.md) 以取得發佈環境中的設定檔以及提供登入和登出表單的相關資訊。
+>[!NOTE]
+>
+>請參閱 [Identity Management](/help/sites-administering/identity-management.md) 以取得發佈環境中的設定檔以及提供登入和登出表單的相關資訊。
 
-## 連結到領域 {#linking-to-the-realm}
+## 連結至CUG頁面 {#linking-to-the-cug-pages}
 
-由於匿名用戶看不到指向CUG領域的任何連結的目標，因此連結檢查器將刪除此類連結。
+由於匿名用戶看不到指向CUG頁面的任何連結的目標，因此連結檢查器將刪除此類連結。
 
-為避免此問題，建議您建立未受保護的重新導向頁面，這些頁面會指向CUG領域內的頁面。 然後，將呈現導航條目，而不會導致連結檢查器出現任何問題。 只有在實際存取重新導向頁面時，使用者才會在CUG領域內重新導向 — 成功提供登入憑證後。
+若要避免此問題，建議您建立未受保護的重新導向頁面，以指向CUG區域內的頁面。 然後，將呈現導航條目，而不會導致連結檢查器出現任何問題。 只有在實際存取重新導向頁面時，使用者才會在CUG區域內重新導向 — 成功提供登入憑證後。
 
 ## 為CUG設定Dispatcher {#configure-dispatcher-for-cugs}
 
 如果您使用Dispatcher，則需要使用下列屬性來定義Dispatcher伺服器陣列：
 
-* [虛擬主機](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#identifying-virtual-hosts-virtualhosts):匹配CUG應用的頁面路徑。
+* [虛擬主機](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#identifying-virtual-hosts-virtualhosts):匹配CUG應用的頁面路徑。
 * \sessionmanagement:請參閱下方。
-* [快取](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache):專用於CUG應用的檔案的快取目錄。
+* [快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache):專用於CUG應用的檔案的快取目錄。
 
 ### 為CUG設定Dispatcher工作階段管理 {#configuring-dispatcher-session-management-for-cugs}
 
-設定 [dispatcher.any檔案中的工作階段管理](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) CUG的。 為CUG頁面請求存取時使用的驗證處理常式，決定了如何設定工作階段管理。
+設定 [dispatcher.any檔案中的工作階段管理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) CUG的。 為CUG頁面請求存取時使用的驗證處理常式，決定了如何設定工作階段管理。
 
 ```xml
 /sessionmanagement
@@ -132,7 +138,7 @@ ht-degree: 0%
 >當Dispatcher伺服器陣列已啟用工作階段管理時，系統不會快取伺服器陣列處理的所有頁面。 若要快取CUG以外的頁面，請在dispatcher.any中建立第二個伺服器陣列
 >來處理非CUG頁面。
 
-1. 設定 [/sessionmanagement](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) 定義 `/directory`;例如：
+1. 設定 [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) 定義 `/directory`;例如：
 
    ```xml
    /sessionmanagement
@@ -142,4 +148,4 @@ ht-degree: 0%
      }
    ```
 
-1. 設定 [/allowAuthorized](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#caching-when-authentication-is-used) to `0`.
+1. 設定 [/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-when-authentication-is-used) to `0`.
