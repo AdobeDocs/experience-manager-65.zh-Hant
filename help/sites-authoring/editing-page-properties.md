@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
+source-git-commit: 1cd63d2ce5c5caf408b11eb6bac9b1a54dae0b25
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1886'
 ht-degree: 8%
 
 ---
@@ -368,7 +368,7 @@ ht-degree: 8%
 
       * 當您選取 **完成**.
       * 當欄位為多值時（例如「標籤」），您可以附加新值或移除通用值。
-   * 在不同頁面上共有但值不同的欄位，將會以特殊值（例如文字）指出 `<Mixed Entries>`. 編輯此類欄位時應謹慎處理，以防止資料遺失。
+   * 在不同頁面上共有但值不同的欄位，將會以特殊值（例如文字）指出 `<Mixed Entries>`.
 
 
 >[!NOTE]
