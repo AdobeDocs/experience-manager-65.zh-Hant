@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -131,5 +131,4 @@ AEM 6.4已淘汰傳統UI，且Adobe不打算對傳統UI進一步增強。 請注
 
 * [在觸控式UI中自訂頁面編寫](/help/sites-developing/customizing-page-authoring-touch.md) （包含范常式式碼）。
 
-* [AEM Gem接觸式自訂課程](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html).
 * [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html).

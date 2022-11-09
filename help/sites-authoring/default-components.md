@@ -10,10 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 2%
+source-wordcount: '427'
+ht-degree: 1%
 
 ---
 
@@ -57,7 +57,7 @@ Adobe Experience Manager(AEM)隨附各種現成可用的元件，可為網站作
 
 以下頁面提供有關元件的其他重要資訊的連結：
 
-* [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)  — 核心元件提供彈性且功能豐富的製作功能，提供建立頁面所需的基本內容類型。
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)  — 核心元件提供彈性且功能豐富的製作功能，提供建立頁面所需的基本內容類型。
 
 * [社群](/help/communities/author-communities.md)  — 元件為網站提供互動式功能，如論壇和評論。 其中許多元件會包含在 [社群網站](/help/communities/overview.md) 中所有規則的URL區段。
 

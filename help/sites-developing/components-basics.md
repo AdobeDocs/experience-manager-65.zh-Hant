@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
 workflow-type: tm+mt
-source-wordcount: '4952'
+source-wordcount: '4948'
 ht-degree: 1%
 
 ---
@@ -67,13 +67,13 @@ ht-degree: 1%
 
 建議您將負責標籤和轉譯的程式碼與控制用來選取元件內容之邏輯的程式碼分開。
 
-這一理念得到了支援 [HTL](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)，故意限制為確保使用真實寫程式語言來定義基礎業務邏輯的模板語言。 系統會透過特定命令從HTL叫用此（選用）邏輯。 此機制會反白標示為指定檢視所呼叫的程式碼，並視需要為相同元件的不同檢視允許特定邏輯。
+這一理念得到了支援 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，故意限制為確保使用真實寫程式語言來定義基礎業務邏輯的模板語言。 系統會透過特定命令從HTL叫用此（選用）邏輯。 此機制會反白標示為指定檢視所呼叫的程式碼，並視需要為相同元件的不同檢視允許特定邏輯。
 
 ### HTL與JSP {#htl-vs-jsp}
 
 HTL是AEM 6.0推出的HTML範本語言。
 
-是否使用 [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) 或JSP(Java Server Pages)開發自己的元件時，應該能簡單明瞭，因為HTL現在是AEM的建議指令碼語言。
+是否使用 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 或JSP(Java Server Pages)開發自己的元件時，應該能簡單明瞭，因為HTL現在是AEM的建議指令碼語言。
 
 HTL和JSP皆可用來開發傳統和觸控式UI的元件。 雖然有可能會假設HTL僅適用於傳統UI的觸控式UI和JSP，但這是一種誤解，更多是因為時間的緣故。 大約在相同時段內，觸控式UI和HTL已整合至AEM。 由於HTL現在是建議的語言，因此會用於新元件，而這類元件通常用於觸控式UI。
 
@@ -712,7 +712,7 @@ AEM內的元件受3個不同階層的規範：
   </tr>
   <tr>
    <td><code>rollover</code></td>
-   <td>預設值。 元件版本可透過點按和/或內容功能表「滑鼠移過」存取。<br /> 若需進階使用，請注意對應的用戶端物件為： <code>CQ.wcm.EditRollover</code>.</td>
+   <td>預設值。 元件版本可透過點按和/或內容功能表「滑鼠停留」來存取。<br /> 若需進階使用，請注意對應的用戶端物件為： <code>CQ.wcm.EditRollover</code>.</td>
   </tr>
   <tr>
    <td><code>editbar</code></td>

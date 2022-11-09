@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 總覽 {#overview}
 
-AEM Brackets擴充功能提供順暢的工作流程，可編輯AEM元件和用戶端程式庫，並運用 [方括弧](https://brackets.io/) 程式碼編輯器，可從程式碼編輯器記憶體取Photoshop檔案和層。 擴充功能提供的輕鬆同步化功能（不需要Maven或File Vault）可提高開發人員的效率，也有助於具備有限AEM知識的前端開發人員參與專案。 此擴充功能也提供 [HTML範本語言(HTL)](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)，這消除了JSP的複雜性，使元件開發更輕鬆、更安全。
+AEM Brackets擴充功能提供順暢的工作流程，可編輯AEM元件和用戶端程式庫，並運用 [方括弧](https://brackets.io/) 程式碼編輯器，可從程式碼編輯器記憶體取Photoshop檔案和層。 擴充功能提供的輕鬆同步化功能（不需要Maven或File Vault）可提高開發人員的效率，也有助於具備有限AEM知識的前端開發人員參與專案。 此擴充功能也提供 [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，這消除了JSP的複雜性，使元件開發更輕鬆、更安全。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 

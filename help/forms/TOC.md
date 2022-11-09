@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 99c9eddad7a2ec7eb23b3c374a1c0e65e141da20
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '3811'
-ht-degree: 4%
+source-wordcount: '3801'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 4%
    + [製作最適化表單簡介](using/introduction-forms-authoring.md)
    + [互動式通訊簡介](using/interactive-communications-overview.md)
    + [管理表單簡介](using/introduction-managing-forms.md)
-   + [自動表單轉換服務簡介](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
+   + [自動表單轉換服務簡介](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
    + 教學課程：建立第一個最適化表單 {#create-first-adaptive-form}
       + [教學課程：建立第一個最適化表單](using/create-your-first-adaptive-form.md)
       + [教學課程：建立最適化表單](using/create-adaptive-form.md)
@@ -57,12 +57,12 @@ ht-degree: 4%
    + [適用於AEM Forms的架構和部署拓撲](using/aem-forms-architecture-deployment.md)
    + [為AEM Forms安裝選擇持續性類型](using/choosing-persistence-type-for-aem-forms.md)
    + 在OSGi上安裝AEM Forms {#osgi-installation}
-      + [OSGi上AEM表單的支援平台](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/introduction/technical-requirements.html)
+      + [OSGi上AEM表單的支援平台](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html)
       + [安裝和配置文檔服務](using/install-configure-document-services.md)
       + [安裝和配置資料捕獲功能](using/installing-configuring-aem-forms-osgi.md)
       + [在OSGi上安裝和設定以Forms為中心的工作流程](using/installing-configuring-forms-centric-workflow-on-osgi.md)
       + [安裝和配置互動式通信](using/installing-configuring-intreactive-communication-correspondence-management.md)
-      + [安裝及設定Automated forms conversion服務](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
+      + [安裝及設定Automated forms conversion服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + 在JEE上安裝AEM Forms {#jee-installation}
       + [JEE版AEM Forms支援平台](using/aem-forms-jee-supported-platforms.md)
       + [在JEE上使用JBoss整套工具安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_65)
@@ -578,8 +578,8 @@ ht-degree: 4%
    + [流程報告中的臨機查詢](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md)
    + [疑難排解程式報告](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 開發人員參考 {#developer-reference}
-   + [開發人員基本知識](https://docs.adobe.com/content/help/en/experience-manager-65/developing/home.html)
-   + [HTML 範本語言](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
+   + [開發人員基本知識](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+   + [HTML 範本語言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
    + [AEM外掛程式以偵錯適用性表單](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
    + [AEM Forms on JEE Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)

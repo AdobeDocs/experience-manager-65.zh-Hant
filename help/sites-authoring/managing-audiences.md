@@ -11,9 +11,9 @@ topic-tags: personalization
 discoiquuid: 9a7a31f9-aeb8-455f-a07e-7b1d1f0a88b6
 docset: aem65
 exl-id: 97e02986-049f-4747-a67a-6aa0677b281e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '980'
 ht-degree: 8%
 
 ---
@@ -91,13 +91,13 @@ Audiences Console可讓您建立、組織和管理Adobe Target帳戶的對象，
 
 | **屬性** | **說明** | **如需詳細資訊，請參閱** |
 |---|---|---|
-| **行動** | 根據參數(例如行動裝置、裝置類型、裝置廠商、畫面維度（依像素）等)來鎖定行動裝置。 | 請參閱 [行動檔案](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/mobile.html) 在Adobe Target。 |
-| **自訂** | 自訂參數為mbox參數。 如果您將任何mbox參數傳遞至mbox，或使用targetPageParams函式，這些參數會顯示在此以供對象使用。 | 請參閱 [自訂參數檔案](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) 在Adobe Target。 |
+| **行動** | 根據參數(例如行動裝置、裝置類型、裝置廠商、畫面維度（依像素）等)來鎖定行動裝置。 | 請參閱 [行動檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) 在Adobe Target。 |
+| **自訂** | 自訂參數為mbox參數。 如果您將任何mbox參數傳遞至mbox，或使用targetPageParams函式，這些參數會顯示在此以供對象使用。 | 請參閱 [自訂參數檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) 在Adobe Target。 |
 | **OS** | 您可以鎖定使用特定作業系統的訪客。 | 目標使用Linux、Macintosh或Windows的使用者。 |
-| **網站頁面** | 定位位於特定頁面或具有特定mbox參數的訪客。 | 請參閱 [網頁檔案](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/site-pages.html) 在Adobe Target。 |
+| **網站頁面** | 定位位於特定頁面或具有特定mbox參數的訪客。 | 請參閱 [網頁檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) 在Adobe Target。 |
 | **瀏覽器** | 您可以鎖定造訪您的頁面時使用特定瀏覽器或特定瀏覽器選項的使用者。 | 請參閱 [瀏覽器選項檔案](https://docs.adobe.com/help/en/target/using/audiences/create-audiences/categories-audiences/browser.html)在Adobe Target。 |
-| **訪客設定檔** | 符合特定設定檔參數的Target訪客。 | 請參閱 [訪客資料檔案](https://docs.adobe.com/content/help/en/target/using/audiences/visitor-profiles/visitor-profile.html) 在Adobe Target。 |
-| **流量來源** | 根據參照至您網站的搜尋引擎或著陸頁面來定位訪客。 | 請參閱 [流量來源檔案](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) 在Adobe Target。 |
+| **訪客設定檔** | 符合特定設定檔參數的Target訪客。 | 請參閱 [訪客資料檔案](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile.html) 在Adobe Target。 |
+| **流量來源** | 根據參照至您網站的搜尋引擎或著陸頁面來定位訪客。 | 請參閱 [流量來源檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) 在Adobe Target。 |
 
 ## 在受眾主控台中修改受眾 {#modifying-an-audience-in-the-audiences-console}
 

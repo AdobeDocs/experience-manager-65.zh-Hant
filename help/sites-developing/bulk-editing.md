@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '414'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >此範例假設已在執行個體上安裝核心元件，如果執行個體執行We.Retail範例內容，即為此情況。 請參閱 [核心元件檔案](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 以取得更多資訊。
+   >此範例假設已在執行個體上安裝核心元件，如果執行個體執行We.Retail範例內容，即為此情況。 請參閱 [核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 以取得更多資訊。
 
 1. 導覽至 `cq:dialog` 定義。
 1. 在欄位節點上定義下列屬性：

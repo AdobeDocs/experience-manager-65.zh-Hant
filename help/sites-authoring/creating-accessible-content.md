@@ -2,10 +2,10 @@
 title: 建立Adobe Experience Manager的無障礙內容（符合WCAG 2.1）
 description: 使用AEM協助讓身心障礙人士可存取及使用網頁內容
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '13956'
-ht-degree: 5%
+source-wordcount: '13950'
+ht-degree: 4%
 
 ---
 
@@ -66,11 +66,11 @@ ht-degree: 5%
 
 #### 如何達成 — 非文字內容(1.1.1) {#how-to-meet-non-text-content}
 
-對於靜態圖形，基本要求是為圖形提供等效文本替代。 您可以在 **替代文字** 欄位；如需核心元件的相關資訊，請參閱 **[影像](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/image.translate.html)**.
+對於靜態圖形，基本要求是為圖形提供等效文本替代。 您可以在 **替代文字** 欄位；如需核心元件的相關資訊，請參閱 **[影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)**.
 
 >[!NOTE]
 >
->部分現成可用的核心元件，例如 **[輪播](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/components/carousel.html)** 不提供 **替代文字** 欄位，將替代文字說明新增至個別影像，但有 **標籤** 欄位()**[協助工具](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** 標籤)，以取得Advertising Cloud的說明。
+>部分現成可用的核心元件，例如 **[輪播](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)** 不提供 **替代文字** 欄位，將替代文字說明新增至個別影像，但有 **標籤** 欄位()**[協助工具](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** 標籤)，以取得Advertising Cloud的說明。
 >
 >當針對您的AEM例項實作這些版本時，您的開發團隊將需要設定這些元件以支援 `alt` 屬性，讓作者可將其新增至內容(請參閱 [新增對其他HTML元素和屬性的支援](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes))。
 

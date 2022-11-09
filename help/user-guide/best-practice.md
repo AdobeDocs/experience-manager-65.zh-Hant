@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Best Practices
 description: AEM 6.5最佳實務、疑難排解和訓練的資源
 seo-description: Resources for best practices, troubleshooting and training for AEM 6.5
 exl-id: 077c00b9-f2ec-49a3-8d85-a3d3ecf287bb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '425'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ AEM在組織中有許多用途，其範圍足夠廣，可跨公司提供功能�
 * [AEM Communities快速入門](/help/communities/getting-started.md)
 * [AEM Livefyre快速入門](https://answers.livefyre.com/developers/getting-started/)
 
-我們還有 [WKND教學課程，此教學課程是使用AEM建立第一個網站的逐步指南](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 以及 [部署我們的Digital Foundation解決方案的逐步方式](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html)，其中AEM是關鍵建置區塊。
+我們還有 [WKND教學課程，此教學課程是使用AEM建立第一個網站的逐步指南](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant) 以及 [部署我們的Digital Foundation解決方案的逐步方式](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html)，其中AEM是關鍵建置區塊。
 
 ## 建議的AEM部署 {#deployments}
 

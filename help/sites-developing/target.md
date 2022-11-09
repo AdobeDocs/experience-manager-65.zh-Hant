@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: bff078cd-c390-4870-ad1d-192807c67ca4
 docset: aem65
 exl-id: 92b62532-4f79-410d-903e-d2bca6d0fd1c
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -199,7 +199,7 @@ JSP會將所需的analytics javascript物件和參考新增至用戶端javascrip
 
 用於建立mbox的預設mbox.js檔案位於/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js。 若要使用客戶mbox.js檔案，請將檔案新增至Target雲端設定。 若要新增檔案，檔案系統上必須有mbox.js檔案。
 
-例如，如果您想使用 [Marketing CloudID服務](https://docs.adobe.com/content/help/en/id-service/using/home.html) 您需要下載mbox.js，使其包含 `imsOrgID` 變數，此變數會以您的租用戶為基礎。 若要與Marketing CloudID服務整合，此變數為必要項目。 如需詳細資訊，請參閱 [Adobe Analytics作為Adobe Target的報表來源](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/a4t.html) 和 [實作之前](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/before-implement.html).
+例如，如果您想使用 [Marketing CloudID服務](https://experienceleague.adobe.com/docs/id-service/using/home.html) 您需要下載mbox.js，使其包含 `imsOrgID` 變數，此變數會以您的租用戶為基礎。 若要與Marketing CloudID服務整合，此變數為必要項目。 如需詳細資訊，請參閱 [Adobe Analytics作為Adobe Target的報表來源](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) 和 [實作之前](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html).
 
 >[!NOTE]
 >
@@ -235,7 +235,7 @@ JSP會將所需的analytics javascript物件和參考新增至用戶端javascrip
 >
 >若您未使用DTM，請將訂單確認傳送至Adobe Target。
 
-若要追蹤網站效能，請從訂單確認頁面傳送購買資訊至Adobe Target。 (請參閱 [建立orderConfirmPage mbox](https://docs.adobe.com/content/help/en/dtm/implementing/target/configure-target/mboxes/order-confirmation-mbox.html) (在Adobe Target檔案中)。 當您的MBox名稱為 `orderConfirmPage` 並使用下列特定參數名稱：
+若要追蹤網站效能，請從訂單確認頁面傳送購買資訊至Adobe Target。 (請參閱 [建立orderConfirmPage mbox](https://experienceleague.adobe.com/docs/dtm/implementing/target/configure-target/mboxes/order-confirmation-mbox.html) (在Adobe Target檔案中)。 當您的MBox名稱為 `orderConfirmPage` 並使用下列特定參數名稱：
 
 * productPurchasedId:識別已購買產品的ID清單。
 * orderId:訂單ID。

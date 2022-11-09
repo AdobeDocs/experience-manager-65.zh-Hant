@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '4874'
+source-wordcount: '4872'
 ht-degree: 10%
 
 ---
@@ -604,7 +604,7 @@ AEM現在提供兩種基本範本類型：
 >
 >初始內容的用途是準備元件和頁面版面，以作為建立內容的起點。 其目的並非實際內容可維持原樣。 因此，無法翻譯初始內容。
 >
->如果您需要在範本中納入可翻譯的文字，例如在頁首或頁尾中，您可以使用 [核心元件的本地化功能](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/get-started/localization.html).
+>如果您需要在範本中納入可翻譯的文字，例如在頁首或頁尾中，您可以使用 [核心元件的本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
 
 ### 編輯範本 — 版面 — 範本作者 {#editing-a-template-layout-template-author}
 

@@ -11,10 +11,10 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 25%
+source-wordcount: '1089'
+ht-degree: 26%
 
 ---
 
@@ -121,7 +121,7 @@ ht-degree: 25%
 1. 開啟 **[!UICONTROL Forms Common Configuration Service].**
 1. 在 **[!UICONTROL 允許]** 欄位， **選取** 所有用戶 — 所有用戶（匿名或已登錄）都可以預覽附件、驗證和簽名表單，然後按一下 **[!UICONTROL 儲存].** 製作例項已設定為使用 [!DNL Adobe Sign].
 1. 發佈設定。
-1. 使用 [複製](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html) 在對應的發佈執行個體上建立相同設定。
+1. 使用 [複製](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=zh-Hant) 在對應的發佈執行個體上建立相同設定。
 
 現在， [!DNL Adobe Sign] 與AEM整合 [!DNL Forms] 並可在最適化表單中使用。 結束日期 [在最適化表單中使用Adobe Sign服務](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，請在適用性表單屬性中指定上述建立的設定容器。
 

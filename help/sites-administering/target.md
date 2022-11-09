@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 454854f8-6053-406c-888d-f427777bf570
 exl-id: 2b17d8cd-a43c-4d54-b990-a6f0cb1db22b
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '598'
 ht-degree: 1%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 1%
 
 將AEM與Adobe Target整合需要Adobe Target、AEM活動管理和AEM對象管理的相關知識。 您應熟悉下列資訊：
 
-* Adobe Target(請參閱 [Adobe Target檔案](https://docs.adobe.com/content/help/en/target/using/target-home.html))。
+* Adobe Target(請參閱 [Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/target-home.html))。
 * AEM活動主控台(請參閱 [管理活動](/help/sites-authoring/activitylib.md))。
 * AEM對象(請參閱 [管理對象](/help/sites-authoring/managing-audiences.md))。
 

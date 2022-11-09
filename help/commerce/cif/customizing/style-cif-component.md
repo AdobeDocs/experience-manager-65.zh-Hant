@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2567'
+source-wordcount: '2551'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 2%
 
 借由新增和覆寫由這些用戶端程式庫管理的CSS，可將品牌特定樣式套用至AEM CIF核心元件。 了解用戶端程式庫的結構化及包含在頁面上的方式至關重要。
 
-此 [ui.frontend](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html) 是專屬 [webpack](https://webpack.js.org/) 專案，管理專案的所有前端資產。 這可讓前端開發人員使用任意數量的語言和技術，例如 [TypeScript](https://www.typescriptlang.org/), [薩斯](https://sass-lang.com/) 還有更多。
+此 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) 是專屬 [webpack](https://webpack.js.org/) 專案，管理專案的所有前端資產。 這可讓前端開發人員使用任意數量的語言和技術，例如 [TypeScript](https://www.typescriptlang.org/), [薩斯](https://sass-lang.com/) 還有更多。
 
 此 `ui.frontend` 模組也是Maven模組，通過使用NPM模組與較大的項目整合 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator). 在建置期間， `aem-clientlib-generator` 將編譯的CSS和JavaScript檔案複製到 `ui.apps` 模組。
 
@@ -79,7 +79,7 @@ ht-degree: 2%
 
 ## 更新預告樣式 {#ui-frontend-module}
 
-接下來，對Teaser樣式進行小幅變更，以了解 `ui.frontend` 模組和用戶端程式庫可運作。 使用 [您選擇的IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#set-up-the-development-ide) 匯入Venia專案。 使用的螢幕擷取畫面來自 [Visual Studio代碼IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
+接下來，對Teaser樣式進行小幅變更，以了解 `ui.frontend` 模組和用戶端程式庫可運作。 使用 [您選擇的IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#set-up-the-development-ide) 匯入Venia專案。 使用的螢幕擷取畫面來自 [Visual Studio代碼IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
 
 1. 導覽及展開 **ui.frontend** 模組，然後展開資料夾階層以： `ui.frontend/src/main/styles/commerce`:
 
@@ -176,7 +176,7 @@ ht-degree: 2%
 
    這些用戶端程式庫不由 `ui.frontend` 模組。 而是這些用戶端程式庫包含Adobe提供的CSS和JavaScript相依性。 這些用戶端程式庫的定義位於 `.content.xml` 檔案。
 
-   **clientlib-base**  — 這是空的用戶端程式庫，僅內嵌來自 [AEM核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html). 類別為 `venia.base`.
+   **clientlib-base**  — 這是空的用戶端程式庫，僅內嵌來自 [AEM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). 類別為 `venia.base`.
 
    **clientlib-cif**  — 這也是空的用戶端程式庫，僅內嵌來自 [AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components). 類別為 `venia.cif`.
 
@@ -443,7 +443,7 @@ ht-degree: 2%
    ```
 
    >[!NOTE]
-   >還有其他 [IDE設定和工具](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#set-up-an-integrated-development-environment) 可直接將專案檔案同步至本機AEM執行個體，而無須執行完整的Maven組建。
+   >還有其他 [IDE設定和工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#set-up-an-integrated-development-environment) 可直接將專案檔案同步至本機AEM執行個體，而無須執行完整的Maven組建。
 
 ## 檢視更新的Product Teaser {#view-updated-product-teaser}
 
@@ -471,7 +471,7 @@ AEM也會嘗試快取用戶端程式庫以提升效能。 有時，在程式碼�
 
 ## 獎金挑戰 {#bonus-challenge}
 
-使用 [AEM樣式系統](/help/sites-authoring/style-system.md) 建立可供內容作者開啟/關閉的兩種樣式。 [與風格體系一起發展](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html) 包含如何完成此作業的詳細步驟和資訊。
+使用 [AEM樣式系統](/help/sites-authoring/style-system.md) 建立可供內容作者開啟/關閉的兩種樣式。 [與風格體系一起發展](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/style-system.html) 包含如何完成此作業的詳細步驟和資訊。
 
 ![獎金挑戰 — 風格系統](../assets/style-cif-component/bonus-challenge.png)
 
@@ -479,7 +479,7 @@ AEM也會嘗試快取用戶端程式庫以提升效能。 有時，在程式碼�
 
 * [AEM 專案原型](https://github.com/adobe/aem-project-archetype)
 * [AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components)
-* [設定本機AEM開發環境](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
+* [設定本機AEM開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 * [用戶端資源庫](/help/sites-developing/clientlibs.md)
-* [開始使用AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-* [與風格體系一起發展](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
+* [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
+* [與風格體系一起發展](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/style-system.html)

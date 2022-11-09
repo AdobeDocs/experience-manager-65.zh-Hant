@@ -11,9 +11,9 @@ discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 role: Admin
 exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '883'
 ht-degree: 1%
 
 ---
@@ -62,10 +62,10 @@ ht-degree: 1%
 
 執行下列步驟，在Dispatcher上啟用和設定快取最適化表單：
 
-1. 為您環境的每個發佈例項開啟下列URL，並 [為您的環境的發佈實例啟用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance):
+1. 為您環境的每個發佈例項開啟下列URL，並 [為您的環境的發佈實例啟用刷新代理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance):
    `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
 
-1. [將下列內容新增至您的dispatcher.any檔案](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files):
+1. [將下列內容新增至您的dispatcher.any檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files):
 
    ```JSON
       /invalidate
@@ -94,7 +94,7 @@ ht-degree: 1%
    * 最適化表單會保留在快取中，直到未發佈更新後的表單版本為止。
 
    * 發佈最適化表單中參考的較新版本資源時，受影響的最適化表單會自動失效。 引用資源的自動失效有一些例外。 有關例外的解決方法，請參閱 [疑難排解](#troubleshooting) 區段。
-1. [新增下列rules dispatcher.any或自訂規則檔案](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache). 它會排除不支援快取的URL。 例如，互動式通訊。
+1. [新增下列rules dispatcher.any或自訂規則檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache). 它會排除不支援快取的URL。 例如，互動式通訊。
 
    ```JSON
       /0000 {
@@ -118,7 +118,7 @@ ht-degree: 1%
       }
    ```
 
-1. [將下列參數新增至忽略URL參數清單](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters):
+1. [將下列參數新增至忽略URL參數清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters):
 
    ```JSON
       /ignoreUrlParams {
@@ -128,7 +128,7 @@ ht-degree: 1%
       }
    ```
 
-您的AEM環境已設定為快取最適化表單。 它會快取所有類型的最適化表單。 如果您需要在傳送快取頁面之前檢查頁面的使用者存取權限，請參閱 [快取安全內容](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html).
+您的AEM環境已設定為快取最適化表單。 它會快取所有類型的最適化表單。 如果您需要在傳送快取頁面之前檢查頁面的使用者存取權限，請參閱 [快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
 
 ## 疑難排解 {#troubleshooting}
 

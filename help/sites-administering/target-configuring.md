@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: f64319e88687ba1f53c98d4768492a0b4f4b08b8
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2204'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在AEM 6.3中，您可以選取Target資料庫檔案， [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html)，此元件為新的Adobe Target實作程式庫，專為典型Web實作和單頁應用程式而設計。
+>在AEM 6.3中，您可以選取Target資料庫檔案， [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html)，此元件為新的Adobe Target實作程式庫，專為典型Web實作和單頁應用程式而設計。
 >
 >AT.js提供幾項優於mbox.js資料庫的改善：
 >
@@ -107,7 +107,7 @@ ht-degree: 0%
 手動與Adobe Target整合，而非使用選擇加入精靈。
 
 >[!NOTE]
-目標庫檔案， [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html)，是新的Adobe Target實作程式庫，專為典型Web實作和單頁應用程式而設計。 Adobe建議您使用AT.js（而非mbox.js）作為用戶端程式庫。
+目標庫檔案， [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html)，是新的Adobe Target實作程式庫，專為典型Web實作和單頁應用程式而設計。 Adobe建議您使用AT.js（而非mbox.js）作為用戶端程式庫。
 AT.js提供幾項優於mbox.js資料庫的改善：
 * 改善Web實作的頁面載入時間
 * 提高安全性
@@ -209,7 +209,7 @@ AT.js提供幾項優於mbox.js資料庫的改善：
 
 ### 將活動與Target雲端設定關聯  {#associating-activities-with-the-target-cloud-configuration}
 
-關聯您的 [AEM活動](/help/sites-authoring/activitylib.md) 搭配您的Target雲端設定，以便鏡射 [Adobe Target](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html).
+關聯您的 [AEM活動](/help/sites-authoring/activitylib.md) 搭配您的Target雲端設定，以便鏡射 [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 
 >[!NOTE]
 可用的活動類型由下列項目決定：

@@ -12,9 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: f2a208acfa28f23cbf63d055c5d28698df476892
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '3485'
+source-wordcount: '3477'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ AEM元件可用來保留、格式化及轉譯可在您的網頁上使用的內�
 
 ### 使用HTML範本語言 {#using-the-html-template-language}
 
-此 [HTML範本語言(HTL)](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)，隨AEM 6.0推出，取代JSP(JavaServer Pages)，成為偏好和建議的伺服器端HTML範本系統。 對於需要建立強大企業網站的網頁開發人員，HTL有助於提升安全性和開發效率。
+此 [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，隨AEM 6.0推出，取代JSP(JavaServer Pages)，成為偏好和建議的伺服器端HTML範本系統。 對於需要建立強大企業網站的網頁開發人員，HTL有助於提升安全性和開發效率。
 
 >[!NOTE]
 >
@@ -433,7 +433,7 @@ GITHUB上的程式碼
 
 >[!NOTE]
 >
->現在，使用時，可在UI中輕鬆設定元件例項的自動建立 [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 和可編輯的範本。 請參閱 [建立頁面範本](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 有關定義與指定介質類型自動關聯的元件的詳細資訊。
+>現在，使用時，可在UI中輕鬆設定元件例項的自動建立 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和可編輯的範本。 請參閱 [建立頁面範本](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 有關定義與指定介質類型自動關聯的元件的詳細資訊。
 
 ## 使用AEM Brackets擴充功能 {#using-the-aem-brackets-extension}
 
@@ -442,7 +442,7 @@ GITHUB上的程式碼
 擴充功能：
 
 * 簡化同步（無需Maven或File Vault），以幫助提高開發人員的效率，並幫助具有有限AEM知識的前端開發人員參與項目。
-* 提供部分 [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) 支援，此範本語言旨在簡化元件開發並提高安全性。
+* 提供部分 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 支援，此範本語言旨在簡化元件開發並提高安全性。
 
 >[!NOTE]
 >
@@ -454,7 +454,7 @@ GITHUB上的程式碼
 
 * HTL
 
-   * 使用 [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) 並非強制性，但如果您的元件需要更新，則是考慮的理想時機 [從JSP移轉至HTL](/help/sites-developing/components-basics.md#htl-vs-jsp).
+   * 使用 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 並非強制性，但如果您的元件需要更新，則是考慮的理想時機 [從JSP移轉至HTL](/help/sites-developing/components-basics.md#htl-vs-jsp).
 
 * 元件
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: 4df14f837569997c3e4da8161ac2b099c39d89a6
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '1940'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本檔案著重於使用 [基礎元件](/help/sites-authoring/default-components-foundation.md) 在傳統UI中。 Adobe建議使用 [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 和 [隱藏條件](/help/sites-developing/hide-conditions.md) ，以在觸控式UI中開發表單。
+>本檔案著重於使用 [基礎元件](/help/sites-authoring/default-components-foundation.md) 在傳統UI中。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [隱藏條件](/help/sites-developing/hide-conditions.md) ，以在觸控式UI中開發表單。
 
 ## 預先載入表單值 {#preloading-form-values}
 

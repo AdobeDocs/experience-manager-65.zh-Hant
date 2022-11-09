@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '4703'
+source-wordcount: '4689'
 ht-degree: 2%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 2%
    1. 選擇 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
    2. 選取套件的版本和類型。 您也可以使用 **[!UICONTROL 搜尋下載]** 選項來篩選結果。
 1. 點選 **we-gov-forms.pkg.all-&lt;version>.zip** 包名稱，選擇 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
-1. 開啟[套件管理器](https://docs.adobe.com/content/help/zh-Hant/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
+1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
 1. 選取套件，然後按一下 **[!UICONTROL 安裝]**.
 
    ![我們gov forms套件](assets/wegov_forms_package.jpg)
@@ -203,7 +203,7 @@ ht-degree: 2%
 #### 雲端設定 {#cloud-configuration}
 
 1. 檢閱必要條件。 請參閱 [AEM SSL設定](../../forms/using/forms-install-configure-gov-reference-site.md#aemsslconfig) ，以完成必要的SSL設定。
-1. 導航到:
+1. 瀏覽到:
 
    *https://&lt;aemserver>:&lt;port>/libs/adobesign/cloudservices/adobesign.html/conf/we-gov*
 
@@ -225,12 +225,12 @@ ht-degree: 2%
 
 **引用:**
 
-1. [Microsoft Dynamics OData設定](https://docs.adobe.com/content/help/en/experience-manager-64/forms/form-data-model/ms-dynamics-odata-configuration.html)
+1. [Microsoft Dynamics OData設定](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/ms-dynamics-odata-configuration.html)
 1. [設定Microsoft Dynamics for AEM Forms](https://helpx.adobe.com/experience-manager/kt/forms/using/config-dynamics-for-aem-forms.html)
 
 #### MS Dynamics OData雲服務 {#ms-dynamics-odata-cloud-service}
 
-1. 導航到:
+1. 瀏覽到:
 
    https://&lt;aemserver>:&lt;port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
 
@@ -293,7 +293,7 @@ ht-degree: 2%
 
 雲端設定完成後，您可能需要測試表單資料模型。
 
-1. 導航到
+1. 瀏覽到
 
    *https://&lt;aemserver>:&lt;port>/aem/forms.html*
 
@@ -448,7 +448,7 @@ AEM Forms Analytics資料可在離線時使用，若 `we-gov-forms.ui.analytics-
 >[!NOTE]
 AEM Forms Analytics資料可在離線時使用，若 `we-gov-forms.ui.analytics-<version>.zip` 已安裝套件，但AEM Sites資料需要使用中的雲端設定。
 
-1. 導航到
+1. 瀏覽到
 
    *https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 
@@ -472,7 +472,7 @@ AEM Forms Analytics資料可在離線時使用，若 `we-gov-forms.ui.analytics-
 
 閱讀進一步說明前，請先檢閱以下內容：
 
-* [設定自動表單轉換服務](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html)
+* [設定自動表單轉換服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
 
 #### 建立IMS設定第1部分 {#creating-ims-config}
 
@@ -569,7 +569,7 @@ AEM Forms Analytics資料可在離線時使用，若 `we-gov-forms.ui.analytics-
 
 1. 針對此設定，我們將兩個核取方塊值保留為空白。
 
-   * 若要進一步了解這些選項，請參閱 [設定雲端服務](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
+   * 若要進一步了解這些選項，請參閱 [設定雲端服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
 
 #### 配置雲配置（We.Finance AFC生產） {#configure-cloud-configuration-wefinance}
 
@@ -599,7 +599,7 @@ AEM Forms Analytics資料可在離線時使用，若 `we-gov-forms.ui.analytics-
 
 1. 針對此設定，我們將兩個核取方塊值保留為空白。
 
-   * 若要進一步了解這些選項，請參閱 [設定雲端服務](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
+   * 若要進一步了解這些選項，請參閱 [設定雲端服務](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
 
 #### 測試表單轉換（We.Gov註冊應用程式） {#test-forms-conversion}
 
@@ -639,7 +639,7 @@ AEM Forms Analytics資料可在離線時使用，若 `we-gov-forms.ui.analytics-
 
 #### 已知問題與附註 {#known-issues-notes}
 
-automated forms conversion服務包含 [最佳實務，已知的複雜模式](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)，和 [已知問題](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html). 開始使用AEM FormsAutomated forms conversion服務前，請先檢閱這些項目。
+automated forms conversion服務包含 [最佳實務，已知的複雜模式](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)，和 [已知問題](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/known-issues.html). 開始使用AEM FormsAutomated forms conversion服務前，請先檢閱這些項目。
 
 1. 如果要在轉換後將表單綁定到FDM，則生成具有生成適用性表單而不啟用資料綁定的表單。
 

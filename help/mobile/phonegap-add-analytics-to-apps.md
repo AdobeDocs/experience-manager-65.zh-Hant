@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ Geometrixx Outdoors應用配置.xml位於 */content/phonegap/geometrixx-outdoors
 
 ### 測量您的程式碼以進行完整的應用程式追蹤 {#instrument-your-code-for-full-app-tracking}
 
-中提供數個追蹤API [AMS Phonegap外掛程式API。](https://docs.adobe.com/content/help/en/mobile-services/ios/phonegap-ios/phonegap-methods.html)
+中提供數個追蹤API [AMS Phonegap外掛程式API。](https://experienceleague.adobe.com/docs/mobile-services/ios/phonegap-ios/phonegap-methods.html)
 
 這些功能可讓您追蹤狀態和動作，例如使用者在您的應用程式中導覽至的頁面位置，這些控制項的使用頻率最高。 要檢測您的應用程式以進行追蹤，最簡單的方式是使用AMS外掛程式提供的Analytics API。
 

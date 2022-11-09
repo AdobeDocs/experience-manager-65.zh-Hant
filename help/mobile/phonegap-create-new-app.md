@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 27605eb7-59b2-42d4-8cc5-02cfa52b4491
 exl-id: be093025-b19f-4499-a7b5-aae5ab74f966
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ AEM Mobile應用程式以定義頁面結構和屬性的blueprint為基礎。 您
 建置雲端服務及將AdobeMobile Services SDK外掛程式整合至您的應用程式中，已有其他（及選用）標籤。
 
 * 建置：按一下「管理設定」，然後在這裡設定您的build.phonegap.com組建服務。 然後，您將可從下拉式清單中選取新建立的PhoneGap組建雲端服務。
-* Analytics:按一下「管理配置」並設定 [AdobeMobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/home.html) 雲端服務。 然後，您將可從下拉式清單中選取新建立的Mobile Service，以整合至您的行動應用程式。
+* Analytics:按一下「管理配置」並設定 [AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html) 雲端服務。 然後，您將可從下拉式清單中選取新建立的Mobile Service，以整合至您的行動應用程式。
 
 ## 使用應用程式範本 {#using-app-templates}
 

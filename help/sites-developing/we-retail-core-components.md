@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 1%
+source-wordcount: '535'
+ht-degree: 3%
 
 ---
 
@@ -87,6 +87,6 @@ ht-degree: 1%
 
 ## 更多資訊 {#further-information}
 
-如需核心元件的詳細資訊，請參閱製作檔案 [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 以概略了解核心元件的功能，以及開發人員檔案 [開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以取得技術概觀。
+如需核心元件的詳細資訊，請參閱製作檔案 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 以概略了解核心元件的功能，以及開發人員檔案 [開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以取得技術概觀。
 
 您也可以進一步調查 [可編輯的範本](/help/sites-developing/we-retail-editable-templates.md). 請參閱編寫檔案 [建立頁面範本](/help/sites-authoring/templates.md) 或開發人員文檔頁面 [範本 — 可編輯](/help/sites-developing/page-templates-editable.md) 以取得可編輯範本的完整詳細資訊。

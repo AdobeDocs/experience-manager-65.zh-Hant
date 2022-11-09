@@ -10,9 +10,9 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 exl-id: 6d127e14-767e-46ad-aaeb-0ce9dd14d553
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '536'
 ht-degree: 4%
 
 ---
@@ -78,7 +78,7 @@ https://<server>:<port>/content/page.model.selector1.selector2.json
 
 ## 範例 {#example}
 
-核心元件自發行以來就支援JSON匯出 [核心元件1.1.0](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) 和可作為參考。
+核心元件自發行以來就支援JSON匯出 [核心元件1.1.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和可作為參考。
 
 如需範例，請參閱影像核心元件及其註解介面的Sling模型實作。
 
@@ -98,4 +98,4 @@ GITHUB上的程式碼
 * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用內容片段製作](/help/sites-authoring/content-fragments.md)
 * [內容服務的JSON匯出工具](/help/sites-developing/json-exporter.md)
-* [核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) 和 [內容片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [內容片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)

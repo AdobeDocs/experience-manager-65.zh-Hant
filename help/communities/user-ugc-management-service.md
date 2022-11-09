@@ -12,9 +12,9 @@ discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
 role: Admin
 exl-id: 526ef0fa-3f20-4de4-8bc5-f435c60df0d0
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -31,11 +31,11 @@ AEM Communities會公開API的現成可用功能，以管理使用者設定檔�
 
 >[!NOTE]
 >
->如果您已設定 [Adobe Analytics在AEM Communities](/help/communities/analytics.md) 網站上，擷取的使用者資料會傳送至Adobe Analytics伺服器。 Adobe Analytics提供的API可讓您存取、匯出和刪除使用者資料，並遵守GDPR。 如需詳細資訊，請參閱 [提交存取和刪除請求](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html).
+>如果您已設定 [Adobe Analytics在AEM Communities](/help/communities/analytics.md) 網站上，擷取的使用者資料會傳送至Adobe Analytics伺服器。 Adobe Analytics提供的API可讓您存取、匯出和刪除使用者資料，並遵守GDPR。 如需詳細資訊，請參閱 [提交存取和刪除請求](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html).
 
 若要使用這些API，您必須啟用 `/services/social/ugcmanagement` 端點，方法是啟用UserUgcManagement服務。 若要啟用此服務，請安裝 [範例servlet](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) 可於 [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). 然後，使用類似以下的http要求，以適當的參數點擊您社群網站的發佈執行個體上的端點：
 
-`https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`. 不過，您也可以建置UI（使用者介面），以管理使用者設定檔和使用者在系統中產生的內容。
+`https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`。不過，您也可以建置UI（使用者介面），以管理使用者設定檔和使用者在系統中產生的內容。
 
 這些API可執行下列功能。
 
@@ -63,7 +63,7 @@ AEM Communities會公開API的現成可用功能，以管理使用者設定檔�
 
 ### 從Adobe Analytics刪除UGC {#delete-ugc-from-adobe-analytics}
 
-若要從Adobe Analytics刪除使用者資料，請遵循 [GDPR Analytics工作流程](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html);因為API不會從Adobe Analytics刪除使用者資料。
+若要從Adobe Analytics刪除使用者資料，請遵循 [GDPR Analytics工作流程](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html);因為API不會從Adobe Analytics刪除使用者資料。
 
 若為AEM Communities使用的Adobe Analytics變數對應，請參閱下列影像：
 

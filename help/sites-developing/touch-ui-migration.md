@@ -11,10 +11,10 @@ topic-tags: introduction
 discoiquuid: b315720f-e9b8-4063-99e2-1b9aa6bba460
 docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 5%
+source-wordcount: '667'
+ht-degree: 4%
 
 ---
 
@@ -137,8 +137,8 @@ ht-degree: 5%
 雖然與移轉至觸控式UI並非直接相關，但有相關問題需同時考慮，因為也是建議的作法：
 
 * [範本](/help/sites-developing/templates.md) - [可編輯的範本](/help/sites-developing/page-templates-editable.md)
-* [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
-* [HTL](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 >[!NOTE]
 >
@@ -150,7 +150,7 @@ ht-degree: 5%
 
 * [開發使用手冊](/help/sites-developing/home.md)
 * [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
-* [AEM 6.5 SitesTutorials和影片](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/overview.html)
+* [AEM 6.5 SitesTutorials和影片](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 * [開始開發 AEM Sites - WKND 教學課程](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
 * [AEM 現代化工具](https://opensource.adobe.com/aem-modernize-tools/)

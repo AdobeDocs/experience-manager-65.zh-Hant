@@ -11,9 +11,9 @@ topic-tags: personalization
 discoiquuid: 9d940744-3b00-4721-829a-96d17bb738e8
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '5355'
+source-wordcount: '5349'
 ht-degree: 6%
 
 ---
@@ -529,7 +529,7 @@ ht-degree: 6%
  </tbody>
 </table>
 
-請參閱 [Adobe Target檔案](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html) 以取得成功量度的詳細資訊。
+請參閱 [Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) 以取得成功量度的詳細資訊。
 
 ### 配置設定(AEM定位) {#configuring-settings-aem-targeting}
 
@@ -568,13 +568,13 @@ ht-degree: 6%
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. 在「目 **標量度** 」區域的「我的主要目標 **** 」下方，選取您要追蹤的成功量度——轉換、收入、參與——並輸入量度的測量方式 (或觀眾採取哪些動作來指出已達成目標)。請參閱上表中目標量度的定義，並參閱 [Adobe Target成功量度的相關檔案](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html) 。
+1. 在「目 **標量度** 」區域的「我的主要目標 **** 」下方，選取您要追蹤的成功量度——轉換、收入、參與——並輸入量度的測量方式 (或觀眾採取哪些動作來指出已達成目標)。請參閱上表中目標量度的定義，並參閱 [Adobe Target成功量度的相關檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) 。
 
    您可以按一下右上角的三個點並選取「重新命名」，以重新命名目 **標**。
 
    如果您需要清除所有欄位，請按一下右上角的三個點，然後選取「清除所 **有欄位」**。
 
-   所有量度也有您可定義的進階設定。 選擇 **進階設定** 來存取那些。 請參閱上表中成功量度計算方式的定義，並參閱 [Adobe Target檔案](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html).
+   所有量度也有您可定義的進階設定。 選擇 **進階設定** 來存取那些。 請參閱上表中成功量度計算方式的定義，並參閱 [Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html).
 
    >[!NOTE]
    必須至少定義一個目標。

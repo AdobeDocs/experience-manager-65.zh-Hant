@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
-source-git-commit: eeb4c7f6a80d6bad5cd1b540dfacfc7bc5071664
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1754'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ AEM必須知道可在何處擷取遠端轉譯的內容。 無論 [您選擇對SS
 * **遠端端點URL**  — 負責產生內容的端點URL
    * 如果本地網路中沒有，請使用安全的HTTPS協定。
 * **其他請求標題**  — 要新增至傳送至遠端端點之請求的其他標題
-   * 模式： `key=value`
+   * 模式: `key=value`
 * **請求逾時**  — 遠程主機請求超時（毫秒）
 
 >[!NOTE]
@@ -180,7 +180,7 @@ AEM中的SPA適用的SSR需要Adobe I/O Runtime，這是轉譯應用程式內容
 
 >[!NOTE]
 >
->任何AEM專案皆應運用 [AEM專案原型](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype/overview.html)，可支援使用React或Angular的SPA專案，並運用SPA SDK。
+>任何AEM專案皆應運用 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，可支援使用React或Angular的SPA專案，並運用SPA SDK。
 
 ## 使用Node.js {#using-node-js}
 
@@ -242,6 +242,6 @@ public class CustomRemoteContentRendererRequestHandlerImpl implements RemoteCont
 <sly data-sly-resource="${resource @ resourceType='cq/remote/content/renderer/request/handler'}" />
 ```
 
-### 需求 {#requirements}
+### 要求 {#requirements}
 
 servlet會利用Sling模型匯出工具來序列化元件資料。 依預設， `com.adobe.cq.export.json.ContainerExporter` 和 `com.adobe.cq.export.json.ComponentExporter` 支援作為Sling型號轉接器。 如有必要，您可以新增類，讓要求適應使用 `RemoteContentRendererServlet` 和 `RemoteContentRendererRequestHandler#getSlingModelAdapterClasses`. 其他類必須擴展 `ComponentExporter`.

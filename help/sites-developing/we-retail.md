@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 9%
+source-wordcount: '750'
+ht-degree: 8%
 
 ---
 
@@ -36,10 +36,10 @@ We.Retail以AEM標準參考實作形式展示AEM的一些最強大功能。
 | [全球化網站結構](/help/sites-administering/tc-bp.md) | We.Retail包含語言主版，這些語言主版會即時複製至特定國家/地區的網站。 | [試試！](/help/sites-developing/we-retail-globalized-site-structure.md) |
 | [回應式版面](/help/sites-authoring/responsive-layout.md) | 所有頁面都具備回應式版面，可動態調整以適應螢幕和裝置大小。 | [試試！](/help/sites-developing/we-retail-responsive-layout.md) |
 | [可編輯的範本](/help/sites-developing/page-templates-editable.md) | 所有頁面都以可編輯的範本為基礎，讓非開發人員可調整和自訂範本。 | [試試！](/help/sites-developing/we-retail-editable-templates.md) |
-| [HTML 範本語言](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html) | 所有元件皆以HTL為基礎 |  |
+| [HTML 範本語言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 所有元件皆以HTL為基礎 |  |
 | [電子商務功能](/help/commerce/cif-classic/developing/ecommerce.md) | 功能產品目錄 |  |
 | [社群網站](/help/communities/overview.md) | 允許訪客加入社群討論、閱讀部落格等 |  |
-| [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) | 所有元件都以新的核心元件為基礎，且更可用且可供使用者立即設定 | [試試！](/help/sites-developing/we-retail-core-components.md) |
+| [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | 所有元件都以新的核心元件為基礎，且更可用且可供使用者立即設定 | [試試！](/help/sites-developing/we-retail-core-components.md) |
 | [內容片段](/help/assets/content-fragments/content-fragments.md) | 「We.Retail體驗」區段展示透過內容片段重複使用內容的強大功能。 | [試試！](/help/sites-developing/we-retail-content-fragments.md) |
 | [體驗片段](/help/sites-authoring/experience-fragments.md) | 體驗片段是一或多個元件的群組，包括可在頁面中參照的內容和版面。 | [試試！](/help/sites-developing/we-retail-experience-fragments.md) |
 

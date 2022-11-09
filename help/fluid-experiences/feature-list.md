@@ -4,10 +4,10 @@ description: 流暢的體驗功能清單
 index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 9%
+source-wordcount: '342'
+ht-degree: 6%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 Adobe Experience Manager Fluid Experiences利用AEM Sites、AEM Dynamic Media和AEM Assets等強大功能集，為無頭式內容傳送提供強大的解決方案。
 
-AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送使用案例。 透過提供有頭緒的內容製作和傳送，以及AEM對混合使用案例的強大支援 [完整的AEM Sites、資產和Dynamic Media解決方案。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送使用案例。 透過提供有頭緒的內容製作和傳送，以及AEM對混合使用案例的強大支援 [完整的AEM Sites、資產和Dynamic Media解決方案。](https://experienceleague.adobe.com/docs/experience-manager-65/user-guide/home.html)
 
 下表定義AEM Fluid Experiences的功能，並連結至相關支援檔案。
 
@@ -53,7 +53,7 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 | [體驗片段](/help/sites-authoring/experience-fragments.md) |
 | 結構化內容的HTTP API（讀取） |
 | 適用於結構化內容的HTTP API(CRUD) |
-| [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html) |
+| [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) |
 | [Dynamic Media](/help/assets/dynamic-media.md) |
 
 ## 管理與整合功能 {#admin-and-integration-features}
@@ -66,7 +66,7 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 | [內容翻譯](/help/sites-administering/translation.md) |
 | [監控](/help/sites-deploying/monitoring-and-maintaining.md) |
 | [備份](/help/sites-administering/backup-and-restore.md) |
-| [Cloud manager](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) |
+| [Cloud manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) |
 | [PIM整合](/help/sites-authoring/managing-product-information.md) |
 | [專案和工作](/help/sites-authoring/projects.md) |
 | [工作流程](/help/sites-administering/workflows-starting.md) |
@@ -85,7 +85,7 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 * [無頭使用案例的流暢使用體驗](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
 * [AEM內容服務：什麼，為什麼，怎麼？](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
 * [使用內容服務](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
-* [開發行動應用程式](https://docs.adobe.com/content/help/en/experience-manager-64/mobile/developing/developing-content-services.html)
+* [開發行動應用程式](https://experienceleague.adobe.com/docs/experience-manager-64/mobile/developing/developing-content-services.html)
 * [協力廠商存取常見問題集](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
 * [無處不在的流暢體驗](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
 * [使用Sling API](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)

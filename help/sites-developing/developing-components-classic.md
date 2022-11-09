@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
 workflow-type: tm+mt
-source-wordcount: '2394'
+source-wordcount: '2392'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 >
 >雖然HTML範本語言(HTL)和JSP都可用來開發傳統UI的元件，但本頁說明如何使用JSP進行開發。 這完全是因為傳統UI中使用JSP的記錄。
 >
->HTL現在是AEM建議的指令碼語言。 請參閱 [HTL](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html) 和 [開發AEM元件](/help/sites-developing/developing-components.md) 來比較方法。
+>HTL現在是AEM建議的指令碼語言。 請參閱 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 和 [開發AEM元件](/help/sites-developing/developing-components.md) 來比較方法。
 
 ## 結構 {#structure}
 

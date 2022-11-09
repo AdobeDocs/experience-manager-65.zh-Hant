@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1111'
-ht-degree: 2%
+source-wordcount: '1107'
+ht-degree: 3%
 
 ---
 
@@ -151,8 +151,8 @@ AEM收件匣只會顯示作用中任務。 已完成的任務不會顯示在清�
       .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
    ```
 
-1. [建立屬性索引並將其設為true](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index).
+1. [建立屬性索引並將其設為true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index).
 
 1. 在CRX DE中設定索引或透過套件部署後， [重新索引儲存庫](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex).
 
-https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html
+https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html

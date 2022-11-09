@@ -2,10 +2,10 @@
 title: AEM 內容與商務
 description: 了解如何使用及管理AEM內容與商務，以及我們有關整合的實用文章，以及如何開始使用AEM Storefront。
 exl-id: b5b074e7-6da7-49ed-9cdb-f7c37d08e08c
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: 3ac32e5a2a1b2b266e2fc9f4ba8c7393a0566ff4
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 27%
+source-wordcount: '355'
+ht-degree: 24%
 
 ---
 
@@ -33,20 +33,20 @@ ht-degree: 27%
 | [Administering 指南](/help/sites-administering/home.md) | 了解如何管理AEM |
 | [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
 | [傳統UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中於AEM中編寫的概念。 |
-| [Screens使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解數位看板解決方案，以發佈動態的互動式數位體驗。 |
+| [Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解數位看板解決方案，以發佈動態的互動式數位體驗。 |
 | [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南會說明AEM的基本概念。 |
 | [開發使用手冊](/help/sites-developing/home.md) | 了解如何建置您的AEM例項。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
+| [AEM Livefyre](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 
 ## 重要AEM資源
 
 * [AEM教學課程](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
-* [Dispatcher使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-dispatcher/using/dispatcher.html)
-* [HTL使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
-* [核心元件使用手冊](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://docs.adobe.com/content/help/zh-Hant/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
+* [HTL使用手冊](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+* [核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [GDPR 整備](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
 * [AEM 社群論壇](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)

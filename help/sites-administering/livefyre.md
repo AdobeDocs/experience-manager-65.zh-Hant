@@ -10,9 +10,9 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 exl-id: 6327b571-4c7f-4a5e-ba93-45d0a064aa1f
-source-git-commit: e1536c370b37d82d4d7890dcc063af85145730bb
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1650'
+source-wordcount: '1648'
 ht-degree: 2%
 
 ---
@@ -141,7 +141,7 @@ Livefyre for AEM套件包含AEM Communities設定檔與Livefyre SSO服務之間�
 
 >[!NOTE]
 >
->在使用Assets匯入UGC之前，您必須先在Livefyre Studio中設定Social帳戶和權限要求帳戶。 請參閱 [設定：權限要求](https://docs.adobe.com/content/help/en/livefyre/using/rights-requests/c-how-requesting-rights-works.html) 以取得更多資訊。
+>在使用Assets匯入UGC之前，您必須先在Livefyre Studio中設定Social帳戶和權限要求帳戶。 請參閱 [設定：權限要求](https://experienceleague.adobe.com/docs/livefyre/using/rights-requests/c-how-requesting-rights-works.html) 以取得更多資訊。
 
 若要將UGC匯入AEM Assets:
 

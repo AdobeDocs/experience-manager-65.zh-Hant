@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: 1cd63d2ce5c5caf408b11eb6bac9b1a54dae0b25
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1886'
+source-wordcount: '1884'
 ht-degree: 8%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 8%
    >* 不應設為現有頁面。
 
 
-   您也需要設定Dispatcher，以啟用虛名URL的存取權。 請參閱 [啟用虛名URL的存取](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 以取得更多詳細資訊。
+   您也需要設定Dispatcher，以啟用虛名URL的存取權。 請參閱 [啟用虛名URL的存取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 以取得更多詳細資訊。
 
 * **重新導向虛名 URL**
 

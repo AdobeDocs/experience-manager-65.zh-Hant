@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 10%
+source-wordcount: '463'
+ht-degree: 8%
 
 ---
 
@@ -32,7 +32,7 @@ Adobe 工程和顧問團隊已經為 AEM 開發人員發展出一組完整的最
 * [程式碼陷阱](/help/sites-developing/code-pitfalls.md)
 * [JCR互動](/help/sites-developing/jcr-integration.md)
 * [OSGi套件組合](/help/sites-developing/osgi-bundles.md)
-* [Java API最佳作法](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
+* [Java API最佳作法](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ### 其他最佳實務資訊 {#additional-best-practices-information}
 
@@ -96,7 +96,7 @@ HTML模板語言(HTL)是以AEM 6.0為基礎而推出的一種新型HTML模板系
 
 |  |  |  |
 |---|---|---|
-| HTL 總覽 | [HTL概觀和語法](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html) | 本檔案說明HTL是什麼、如何改用HTL、範例專案、語法、運算式和陳述式 |
+| HTL 總覽 | [HTL概觀和語法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 本檔案說明HTL是什麼、如何改用HTL、範例專案、語法、運算式和陳述式 |
 | 在java中使用API | [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api.html) | HTL Java Use-API可讓HTL檔案存取自訂Java類別中的Helper方法。 |
 
 >[!NOTE]

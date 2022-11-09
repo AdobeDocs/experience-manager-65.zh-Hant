@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ae4a6e97-c0d7-472d-a25f-b89b1abf4df3
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 >
 >您的帳戶也必須由Target團隊啟用，才能使用整合。
 >
->如果情況並非如此，請聯繫 [Adobe客戶服務](https://docs.adobe.com/content/help/en/target/using/cmp-resources-and-contact-information.html).
+>如果情況並非如此，請聯繫 [Adobe客戶服務](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html).
 
 ## 啟用目標複製代理 {#enabling-the-target-replication-agent}
 

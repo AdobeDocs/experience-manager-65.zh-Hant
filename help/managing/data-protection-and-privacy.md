@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 discoiquuid: 0bcd7ac4-3071-466d-bd11-701f35ccf5bd
 docset: aem65
 exl-id: 46c1ca14-78f6-4b33-9fdf-1b90a9875f66
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '923'
 ht-degree: 1%
 
 ---
@@ -115,9 +115,9 @@ Adobe提供處理Adobe Experience Manager存取、刪除和選擇退出相關隱
 這些Adobe Experience Manager整合包含資料保護與隱私權（例如GDPR或CCPA）就緒服務。 AEM中不會儲存任何來自Adobe Target或Adobe Analytics的與整合相關的個人資料。
 如需詳細資訊，請參閱：
 
-* [Adobe Target — 隱私權概觀](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/privacy.html)
+* [Adobe Target — 隱私權概觀](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/privacy.html)
 
-* [Adobe Analytics資料隱私權工作流程](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html)
+* [Adobe Analytics資料隱私權工作流程](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html)
 
 ## AEM Communities {#aem-communities}
 

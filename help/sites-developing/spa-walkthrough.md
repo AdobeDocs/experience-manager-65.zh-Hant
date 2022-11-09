@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
 docset: aem65
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1966'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ SPA編輯器提供全方位的解決方案，可支援AEM中的SPA。 本文逐�
 >
 >本檔案使用 [We.Retail Journal應用程式](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) 僅供示範之用。 它不應用於任何項目工作。
 >
->任何AEM專案皆應運用 [AEM專案原型](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype/overview.html)，可支援使用React或Angular的SPA專案，並運用SPA SDK。
+>任何AEM專案皆應運用 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，可支援使用React或Angular的SPA專案，並運用SPA SDK。
 
 ### 什麼是SPA? {#what-is-a-spa}
 

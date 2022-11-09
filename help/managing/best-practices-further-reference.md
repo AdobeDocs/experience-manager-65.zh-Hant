@@ -10,9 +10,9 @@ topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '3757'
+source-wordcount: '3755'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 1%
 請考量您將使用的AEM功能，以及對您設計的影響；例如：
 
 * [商務](/help/commerce/cif-classic/administering/ecommerce.md)
-* [畫面](https://docs.adobe.com/content/help/zh-Hant/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [畫面](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 * [Assets](/help/assets/assets.md)
 * [標記](/help/sites-administering/tags.md)
 * [多網站管理與翻譯](/help/sites-administering/msm-and-translation.md)
@@ -175,7 +175,7 @@ AEM可與其他Adobe產品及/或協力廠商服務整合。 這些功能可增�
 * 如果設定為過低波動，則不能突出顯示
 * 以確保可重複及一致地測量
 * 以平衡所測量的不同因素
-* 某些量度會與測試環境相關，但有些量度應反映實際情況，因為它們必須可測量且可重複，在您的生產網站上
+* 某些量度會與測試環境相關，但有些量度應反映實際情況，因為它們必須可測量，且可重複，在您的生產網站上
 * 根據量度對網站的重要性排列量度的優先順序
 * 將量度限制為可實際監控的集合
 

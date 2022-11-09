@@ -11,10 +11,10 @@ topic-tags: introduction
 discoiquuid: 95346ce1-84b7-4bd1-a1e2-6a803139dc69
 docset: aem65
 exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 22%
+source-wordcount: '259'
+ht-degree: 18%
 
 ---
 
@@ -30,16 +30,16 @@ ht-degree: 22%
 
 ![WKND](assets/screen_shot_2018-11-23at152453.png)
 
-[您可在此處取得WKND開發人員教學課程](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 並透過最新技術和最佳實務，引導您建立AEM專案。
+[您可在此處取得WKND開發人員教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant) 並透過最新技術和最佳實務，引導您建立AEM專案。
 
 ## 核心概念 {#core-concepts}
 
 本教學課程實作運用AEM的許多強大功能。 網站的實作方式為：
 
-* [HTL](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [觸控式 UI](/help/sites-developing/touch-ui-concepts.md)
-* [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [可編輯的範本](/help/sites-developing/page-templates-editable.md)
 
 請先完成本教學課程，然後再詳細說明上述概念。

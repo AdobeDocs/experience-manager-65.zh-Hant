@@ -9,9 +9,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1312'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 2%
 
 ## 使用 {#use}
 
-為了演示此功能，我們將使用 [WKND](https://docs.adobe.com/content/help/zh-Hant/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)核心元件的實作 [標題元件](https://www.adobe.com/go/aem_cmp_title_v2) 作為範例。
+為了演示此功能，我們將使用 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)核心元件的實作 [標題元件](https://www.adobe.com/go/aem_cmp_title_v2) 作為範例。
 
 以下幾節 [作為內容作者](#as-a-content-author) 和 [作為範本作者](#as-a-template-author) 介紹如何使用WKND的樣式系統測試樣式系統的功能。
 

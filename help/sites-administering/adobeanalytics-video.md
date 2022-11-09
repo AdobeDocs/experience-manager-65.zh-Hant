@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1743'
 ht-degree: 1%
 
 ---
@@ -140,7 +140,7 @@ XX尾碼是定義里程碑的追蹤位移。 例如，指定4、8、16、20和28
 
 1. 若要將CQ變數對應至Adobe Analytics屬性，請從元件上CQ變數旁的ContentFinder拖曳Adobe Analytics屬性。
 
-   如需關於最佳化對應的資訊，請參閱 [在Adobe Analytics測量視訊](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) 指南。
+   如需關於最佳化對應的資訊，請參閱 [在Adobe Analytics測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html) 指南。
 
 1. [添加框架](/help/sites-administering/adobeanalytics.md) 到頁面。
 1. 若要在 **預覽模式**，播放影片以取得Adobe Analytics呼叫以觸發。
@@ -275,7 +275,7 @@ eventdata.events.milestoneXX
 
 1. 若要將CQ變數對應至Adobe Analytics屬性，請從元件上CQ變數旁的ContentFinder拖曳Adobe Analytics屬性。
 
-   如需關於最佳化對應的資訊，請參閱 [在Adobe Analytics測量視訊](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) 指南。
+   如需關於最佳化對應的資訊，請參閱 [在Adobe Analytics測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html) 指南。
 
 1. [添加框架](/help/sites-administering/adobeanalytics.md) 到頁面。
 1. 若要在 **預覽模式**，播放影片以取得Adobe Analytics呼叫以觸發。
@@ -383,4 +383,4 @@ eventdata.events.milestoneXX
 
 **本教學課程中使用的參考：**
 
-[0] [https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
+[0] [https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)

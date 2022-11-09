@@ -4,10 +4,10 @@ seo-title: Learn About AEM 6.5 Capabilities
 description: 說明AEM 6.5的基本功能
 seo-description: An description of the essential capabilities of AEM 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: 52385af23b04cda33a88ec42bb150650eb58fe4e
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 7%
+source-wordcount: '398'
+ht-degree: 6%
 
 ---
 
@@ -38,7 +38,7 @@ AEM Forms將表單製作、管理和發佈與通信管理功能、檔案安全�
 
 ## AEM Screens {#aem-screens}
 
-Screens是Adobe Experience Manager的功能，可讓您發佈動態的互動式數位體驗和互動，其中包含不同類型的螢幕，並搭配完整的數位行銷平台。  [了解更多.](https://docs.adobe.com/content/help/zh-Hant/experience-manager-screens/user-guide/aem-screens-introduction.html)
+Screens是Adobe Experience Manager的功能，可讓您發佈動態的互動式數位體驗和互動，其中包含不同類型的螢幕，並搭配完整的數位行銷平台。  [了解更多.](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## AEM Communities {#aem-communities}
 

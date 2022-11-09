@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 6bc228866aca785ec768daefb73970fc24568ef0
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '2584'
-ht-degree: 0%
+source-wordcount: '2582'
+ht-degree: 1%
 
 ---
 
@@ -33,8 +33,8 @@ ht-degree: 0%
 >本頁面應與 [重複使用內容：多網站管理員](/help/sites-administering/msm.md).
 >
 >AEM 6.4中的以下網站存放庫重新調整可能也值得關注：
->* [多站點管理器Blueprint配置](https://docs.adobe.com/content/help/en/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html#multi-site-manager-blueprint-configurations)
->* [多網站管理員轉出設定](https://docs.adobe.com/content/help/en/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html#multi-site-manager-rollout-configurations)
+>* [多站點管理器Blueprint配置](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html?lang=en#multi-site-manager-blueprint-configurations)
+>* [多網站管理員轉出設定](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html#multi-site-manager-rollout-configurations)
 
 
 >[!CAUTION]
@@ -188,7 +188,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 1. 開放CRXDE Lite;例如：
    [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
-1. 導航到 :
+1. 瀏覽到 :
    `/apps/msm/<your-project>/rolloutconfigs`
 
    >[!NOTE]

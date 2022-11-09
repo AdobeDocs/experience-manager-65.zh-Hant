@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1528'
 ht-degree: 8%
 
 ---
@@ -87,7 +87,7 @@ AEM預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料中�
 >
 >由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。
 >
->此 [ActivityMap外掛程式由Adobe Analytics提供](https://docs.adobe.com/content/help/zh-Hant/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。
+>此 [ActivityMap外掛程式由Adobe Analytics提供](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。
 
 ## 為Activity Map配置 {#configuring-for-the-activity-map}
 
@@ -95,7 +95,7 @@ AEM預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料中�
 >
 >由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。
 >
->此 [ActivityMap外掛程式由Adobe Analytics提供](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。
+>此 [ActivityMap外掛程式由Adobe Analytics提供](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。
 
 ## 建立Adobe Analytics架構 {#creating-a-adobe-analytics-framework}
 
@@ -184,7 +184,7 @@ AEM預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料中�
 1. 選擇 **儲存並關閉**.
 1. **[發佈](/help/sites-authoring/publishing-pages.md)** 用於激活該頁和所有連接的配置/檔案的頁。
 1. 最後一步是瀏覽發佈例項上的頁面，並使用 **搜尋** 元件。
-1. 之後，您就可以使用適當的工具來檢查對Adobe Analytics進行的呼叫；例如， [Adobe Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html).
+1. 之後，您就可以使用適當的工具來檢查對Adobe Analytics進行的呼叫；例如， [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html).
 1. 在提供的範例中，呼叫應包含eVar7中輸入的值（即茄子），而事件清單應包含event3。
 
 ### 頁面檢視 {#page-views}

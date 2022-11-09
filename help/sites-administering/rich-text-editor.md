@@ -3,9 +3,9 @@ title: 設定RTF編輯器以在Adobe Experience Manager中製作內容。
 description: 了解如何設定Adobe Experience Manager RTF編輯器以在Adobe Experience Manager中編寫內容。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3020'
 ht-degree: 0%
 
 ---
@@ -181,9 +181,9 @@ RTE的基本功能會由 `features` 屬性。
 
 >[!NOTE]
 >
->此 [核心元件文字元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) 允許模板編輯器將GUI中的許多RTE插件配置為內容策略，而無需進行技術配置。 內容原則可搭配RTE UI設定使用，如本檔案所述。
+>此 [核心元件文字元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=en#the-text-component-and-the-rich-text-editor) 允許模板編輯器將GUI中的許多RTE插件配置為內容策略，而無需進行技術配置。 內容原則可搭配RTE UI設定使用，如本檔案所述。
 >
->如需詳細資訊，請參閱 [RTE UI設定和內容原則](/help/sites-administering/rich-text-editor.md) 以及 [建立頁面範本](/help/sites-authoring/templates.md) 和 [核心元件開發人員檔案](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/developing.html).
+>如需詳細資訊，請參閱 [RTE UI設定和內容原則](/help/sites-administering/rich-text-editor.md) 以及 [建立頁面範本](/help/sites-authoring/templates.md) 和 [核心元件開發人員檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
 
 >[!NOTE]
 >

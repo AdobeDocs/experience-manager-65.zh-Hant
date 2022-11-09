@@ -10,10 +10,10 @@ topic-tags: components
 content-type: reference
 discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 7%
+source-wordcount: '590'
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 7%
 * 有標準化的使用者介面。
 * 具有可設定的編輯行為。
 * 使用根據Granite UI元件使用子元素建立的對話方塊
-* 使用 [HTL](https://docs.adobe.com/content/help/zh-Hant/experience-manager-htl/using/overview.html) （建議）或JSP。
+* 使用 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) （建議）或JSP。
 * 可開發以建立可擴充預設功能的自訂元件。
 
 由於元件是模組化的，因此您可以：
@@ -64,7 +64,7 @@ AEM隨附各種 [現成可用的元件](/help/sites-authoring/default-components
 
 提供兩組Adobe提供的AEM元件：
 
-* [核心元件](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/introduction.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [基礎元件](/help/sites-authoring/default-components-foundation.md)
 
 **核心元件** AEM 6.3已推出，提供彈性且功能豐富的製作功能。 此 [We.Retail參考網站](/help/sites-developing/we-retail.md) 說明如何使用核心元件，並代表元件開發的目前最佳實務。
@@ -73,7 +73,7 @@ AEM隨附各種 [現成可用的元件](/help/sites-authoring/default-components
 
 >[!NOTE]
 >
->[核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) 代表元件設計和開發的目前最佳實務，並可作為參考實作。
+>[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 代表元件設計和開發的目前最佳實務，並可作為參考實作。
 >
 >[AEM現代化工具](modernization-tools.md) 有助於移轉至核心元件。
 
@@ -106,7 +106,7 @@ AEM隨附各種 [現成可用的元件](/help/sites-authoring/default-components
 * [內容片段的元件](/help/sites-developing/components-content-fragments.md)
 * [取得JSON格式的頁面資訊](/help/sites-developing/pageinfo.md)
 * [國際化元件](/help/sites-developing/i18n.md)
-* [核心元件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [使用隱藏條件](/help/sites-developing/hide-conditions.md)
 * 傳統 UI
 

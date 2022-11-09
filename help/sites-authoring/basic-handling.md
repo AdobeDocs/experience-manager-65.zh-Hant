@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 440aa5a2f4a020a16104f11eaf484a2cf7291e1f
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2969'
+source-wordcount: '2967'
 ht-degree: 5%
 
 ---
@@ -124,7 +124,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
   </tr>
   <tr>
    <td>畫面</td>
-   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a> 可讓您管理所有面向客戶的螢幕、任何大小和位置。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a> 可讓您管理所有面向客戶的螢幕、任何大小和位置。</td>
   </tr>
   <tr>
    <td>Sites</td>

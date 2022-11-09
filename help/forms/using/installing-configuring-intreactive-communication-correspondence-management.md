@@ -9,10 +9,10 @@ discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1385'
-ht-degree: 7%
+source-wordcount: '1383'
+ht-degree: 6%
 
 ---
 
@@ -96,7 +96,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
    1. 選擇 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
    2. 選取套件的版本和類型。 您也可以使用 **[!UICONTROL 搜尋下載]** 選項來篩選結果。
 1. 點選適用於您作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
-1. 開啟[套件管理器](https://docs.adobe.com/content/help/zh-Hant/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
+1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
 1. 選取套件，然後按一下 **[!UICONTROL 安裝]**.
 
    您也可以透過 [AEM Forms版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
