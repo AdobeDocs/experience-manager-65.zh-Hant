@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 feature: Configuring
 exl-id: 429c96ff-4185-4215-97e8-9bd2c130a9b1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 08a6777bf1ff3abf62f45fe1e164ef2027996848
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2364'
 ht-degree: 1%
 
 ---
@@ -237,7 +237,7 @@ Apache Sling Job Consumer Manager服務提供主題允許清單和封鎖清單�
 
 >[!CAUTION]
 >
->自動生成的複製代理的已知問題要求您手動建立新的複製代理。 依照 [使用自動生成的複製代理時出現問題](/help/sites-deploying/offloading.md#problems-using-the-automatically-generated-replication-agents) 建立卸載代理之前。
+>自動生成的複製代理的已知問題要求您手動建立新的複製代理。
 
 建立複製代理，用於在執行個體之間傳輸作業裝載以供卸載。 下圖顯示從作者卸載至背景執行個體所需的代理。 製作者的Sling ID為1，工作執行個體的Sling ID為2:
 
