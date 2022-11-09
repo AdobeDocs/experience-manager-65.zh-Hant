@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b60278940f48731ee9085635c0d4a3d7da24ebc8
 workflow-type: tm+mt
-source-wordcount: '4679'
+source-wordcount: '4664'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ Solr索引可配置為在AEM伺服器上嵌入用於開發環境，或可卸載�
 
 >[!NOTE]
 >
->採用整合的Solr搜索方法將允許將索引卸載到Solr伺服器。 如果通過基於爬蟲的方法使用Solr伺服器的更高級功能，則需要進行額外的配置工作。 Headwire已建立 [開源連接器](https://www.aemsolrsearch.com/#/) 來加速這類實作。
+>採用整合的Solr搜索方法將允許將索引卸載到Solr伺服器。 如果通過基於爬蟲的方法使用Solr伺服器的更高級功能，則需要進行額外的配置工作。
 
 採用此方法的缺點是，雖然預設情況下AEM查詢會遵守ACL，因此會隱藏使用者無法存取的結果，將搜尋外部化至Solr伺服器將不支援此功能。 如果要以此方式將搜尋外部化，則必須格外小心，以確保使用者不會看到他們不應看到的結果。
 
@@ -458,7 +458,7 @@ Lucene索引的Oak檔案列出設計索引時要考量的幾項事項：
 
 *在維護窗口/低使用期間執行步驟1(a-b)，因為在此操作期間遍歷節點儲存，這可能會對系統造成大量負載。*
 
-1a。 執行 `oak-run.jar --generate` 建立預先擷取其文字的節點清單。
+1a. 執行 `oak-run.jar --generate` 建立預先擷取其文字的節點清單。
 
 1b. 節點清單(1a)以CSV檔案形式儲存到檔案系統
 
@@ -468,9 +468,9 @@ Lucene索引的Oak檔案列出設計索引時要考量的幾項事項：
 
 *步驟2(a-c)只會與資料存放區互動，才能在AEM正常運作期間執行。*
 
-2a。 執行 `oak-run.jar --tika` 若要預先擷取(1b)中產生之CSV檔案中列舉之二進位節點的文字
+2a. 執行 `oak-run.jar --tika` 若要預先擷取(1b)中產生之CSV檔案中列舉之二進位節點的文字
 
-2b。 在(2a)中啟動的程式可直接存取在資料存放區的CSV中定義的二進位節點，並擷取文字。
+2b. 在(2a)中啟動的程式可直接存取在資料存放區的CSV中定義的二進位節點，並擷取文字。
 
 2c。  擷取的文字會以Oak重新索引程式(3a)可擷取的格式儲存在檔案系統上
 
@@ -482,6 +482,6 @@ Lucene索引的Oak檔案列出設計索引時要考量的幾項事項：
 
 *在維護/低使用期間執行重新索引（步驟3a-b），因為在此操作期間遍歷節點儲存，這可能會對系統造成重大負載。*
 
-3a。 [重新索引](#how-to-re-index) 在AEM中叫用的Lucene索引
+3a. [重新索引](#how-to-re-index) 在AEM中叫用的Lucene索引
 
 3b. Apache Jackrabbit Oak DataStore PreExtractedTextProvider OSGi設定（設定為透過檔案系統路徑指向擷取的文字）指示Oak從擷取的檔案中取得全文，並避免直接點擊和處理儲存在存放庫中的資料。
