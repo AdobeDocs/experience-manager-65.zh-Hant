@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6612f89d-c518-4e5a-8df1-6487cc330a9a
 docset: aem65
 exl-id: b07134b2-074a-4d52-8d0c-7e7abe51fc3a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85895215904b8706830d20f7714de5512b2c3ec2
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '375'
 ht-degree: 1%
 
 ---
@@ -58,3 +58,7 @@ ht-degree: 1%
    * 使用AJAX來包含內容的元件
    * 單頁應用程式
    * 在使用者互動時操控DOM的Javascript型元件。
+
+>[!NOTE]
+>
+>只有具有有效cq:editConfig節點的元件才能使用頁面差異比較。
