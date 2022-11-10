@@ -10,16 +10,16 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: e4aaef48ce7d6e49e9a76f78a74b7dea127f6cce
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2042'
 ht-degree: 1%
 
 ---
 
 # 設定資料來源{#configure-data-sources}
 
-![](do-not-localize/data-integeration.png)
+![資料整合](do-not-localize/data-integeration.png)
 
 AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列類型可立即使用。 不過，只要很少自訂，您也可以整合其他資料來源。
 
@@ -35,7 +35,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 
 您可以使用AEM Web控制台配置配置關係資料庫。 請執行下列動作：
 
-1. 前往AEM Web主控台，網址為https://server:host/system/console/configMgr 。
+1. 前往AEM Web主控台，網址為 `https://server:host/system/console/configMgr`.
 1. 尋找 **[!UICONTROL Apache Sling Connection Pooled DataSource]** 設定。 點選以在編輯模式中開啟設定。
 1. 在配置對話框中，指定要配置的資料庫的詳細資訊，例如：
 
@@ -49,14 +49,10 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
    >
    >在配置資料源之前，請確保加密密碼等敏感資訊。 要加密：
    >
-   >    
-   >    
-   >    1. 前往https://&#39;[伺服器]:[埠]「/system/console/crypto」。
-   >    1. 在 **[!UICONTROL 純文字]** 欄位，指定要加密和點選的密碼或任何字串 **[!UICONTROL Protect]**.
+   > 1. 前往https://&#39;[伺服器]:[埠]「/system/console/crypto」。
+   > 1. 在 **[!UICONTROL 純文字]** 欄位，指定要加密和點選的密碼或任何字串 **[!UICONTROL Protect]**.
 
-   >    
-   >    
-   >    
+   >
    >加密的文字會顯示在「受保護的文字」欄位中，您可以在配置中指定該欄位。
 
 1. 啟用 **[!UICONTROL 借閱時測試]** 或 **[!UICONTROL 返回時測試]** 指定在從和中借用對象或將對象返回到池之前，分別驗證對象。
@@ -67,13 +63,17 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 
 1. 點選 **[!UICONTROL 儲存]** 以儲存設定。
 
+   >[!NOTE]
+   >
+   > 如果您的Forms資料模型包含的物件是關係資料庫的保留關鍵字，可能會導致資料新增、更新或擷取問題。 因此，請避免在表單資料模型中使用這類物件。
+
 ## 設定AEM使用者設定檔 {#configure-aem-user-profile}
 
 您可以使用AEM Web Console中的「使用者設定檔連接器」設定來設定AEM使用者設定檔。 請執行下列動作：
 
 1. 前往AEM Web主控台，網址為https://&#39;[伺服器]:[埠]&#39;system/console/configMgr.
 1. 尋找 **[!UICONTROL AEM Forms資料整合 — 使用者設定檔連接器設定]** 並點選以在編輯模式中開啟設定。
-1. 在「用戶配置檔案連接器配置」對話框中，可以添加、刪除或更新用戶配置檔案屬性。 指定的屬性將可用於表單資料模型。 使用以下格式指定用戶配置檔案屬性：
+1. 在「用戶配置檔案連接器配置」對話框中，可以添加、刪除或更新用戶配置檔案屬性。 指定的屬性可用於表單資料模型。 使用以下格式指定用戶配置檔案屬性：
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
 
@@ -161,7 +161,6 @@ RESTful Web服務可使用 [Swagger規格](https://swagger.io/specification/) JS
 
    * 指定 **[!UICONTROL 通訊端逾時]** 欄位。 預設值為30秒。
 
-
 ## 配置SOAP Web服務 {#configure-soap-web-services}
 
 描述基於SOAP的Web服務，使用 [網站服務描述語言(WSDL)規範](https://www.w3.org/TR/wsdl). 若要在AEM雲端服務中設定以SOAP為基礎的網站服務，請確定您有網站服務的WSDL URL，並執行下列動作：
@@ -224,4 +223,4 @@ OData服務由其服務根URL識別。 若要在AEM雲端服務中設定OData服
 
 ## 後續步驟 {#next-steps}
 
-您已設定資料來源。 接下來，您可以建立表單資料模型，或者如果您已建立表單資料模型而不使用資料來源，則可將其與您剛設定的資料來源建立關聯。 請參閱 [建立表單資料模型](/help/forms/using/create-form-data-models.md) 以取得詳細資訊。
+您已設定資料來源。 接下來，您可以建立表單資料模型，或者如果您已建立表單資料模型而不使用資料來源，則可將其與您設定的資料來源建立關聯。 請參閱 [建立表單資料模型](/help/forms/using/create-form-data-models.md) 以取得詳細資訊。

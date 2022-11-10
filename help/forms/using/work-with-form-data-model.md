@@ -10,9 +10,9 @@ discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 feature: Form Data Model
 exl-id: 16b76265-9ec4-4993-9ac0-b7aef1b1e5f1
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: e4aaef48ce7d6e49e9a76f78a74b7dea127f6cce
 workflow-type: tm+mt
-source-wordcount: '4128'
+source-wordcount: '4165'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,10 @@ ht-degree: 0%
    ![所選對象](assets/selected-objects.png)
 
    所選資料模型對象和服務
+
+   >[!NOTE]
+   >
+   > 如果您的Forms資料模型包含的物件是關係資料庫的保留關鍵字，可能會導致資料新增、更新或擷取問題。 因此，請避免在表單資料模型中使用這類物件。
 
    「模型」(Model)頁簽顯示所有資料模型對象及其屬性的圖形表示，這些對象及其屬性添加到表單資料模型中。 每個資料模型物件由表單資料模型中的方塊表示。
 
