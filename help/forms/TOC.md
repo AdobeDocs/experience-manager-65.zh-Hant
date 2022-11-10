@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 55e9344c088a38bc4c9f916a13c310a029b3b2f4
 workflow-type: tm+mt
-source-wordcount: '3801'
+source-wordcount: '3819'
 ht-degree: 3%
 
 ---
@@ -685,6 +685,7 @@ ht-degree: 3%
    + [無法對某些版本的OracleJDK使用某些表單功能](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
    + [在JEE版本上取得適用性Forms附件電子郵件的其他步驟](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
    + [無法在Windows Server上將Word或Excel檔案轉換為PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
+   + [無法在Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer或Apple Safari中開啟以XFA為基礎的PDF forms](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
 + 舊版檔案 {#legacy-documentation}
    + [在JEE Workbench上使用AEM Forms中的執行指令碼服務來建立XML資料](developing/building-xml.md)
    + [在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案](developing/compressing-decompressing-custom-dsc.md)
