@@ -2,7 +2,7 @@
 title: 無法在Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer或Apple Safari中開啟以XFA為基礎的PDF forms
 seo-title: Unable to open XFA-based PDF forms in Google Chrome, Firefox, Microsoft Edge, Microsoft Internet Explorer, or Apple Safari
 feature: Adaptive Forms
-source-git-commit: abaef885f1324c4e0e4c5d74485d5b419ff88e2b
+source-git-commit: f2b76ce0c2f296f81c3748794bf2ab74ccd5bb95
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -16,7 +16,8 @@ ht-degree: 0%
 
 * 使用 [Adobe®Acrobat®](https://www.adobe.com/acrobat.html) 或 [Adobe®Adobe®Reader®](https://get.adobe.com/reader/)，第8版或更新版本，以開啟並提交XFA型PDF forms。
 * Acrobat和Reader(位於Microsoft® Windows®上)可讓您設定以「受保護檢視」模式開啟PDF，這會防止開啟以XFA為基礎的PDF forms。 請確定您的Acrobat或Reader中的「受保護檢視」模式已停用。 如需詳細資訊，請參閱 [受保護視圖（僅限Windows）](https://helpx.adobe.com/in/reader/using/protected-mode-windows.html).
-* (適用於Forms開發人員)Adobe Experience Manager Forms也支援
+* (適用於Forms開發人員)Adobe Experience Manager Forms也支援：
+
    * [將XFA型表單轉譯至HTML5 Forms](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/introduction.html?#key-capabilities-of-html-forms-br) 如此便可在支援HTML5的瀏覽器中開啟表單，包括在iPad等行動裝置上執行的表單。 表單的HTML5轉譯可維護表單設計的版面配置，並支援內嵌於XFA表單範本中的大部分表單邏輯（例如JavaScript、表單計算和表單驗證）。
    * [將XFA型表單轉換為行動回應式適用性Forms](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/creating-adaptive-form.html?#create-an-adaptive-form-based-on-an-xfa-form-template). 這些表單提供回應式版面配置、個人化功能，並視需要新增或移除欄位或區段，以動態調整以適應使用者回應。 這些介面還可立即用於各種資料來源、記錄檔案功能，以及輕鬆連線至Adobe Analytics以進行效能評估。 如需詳細資訊，請參閱 [主要功能](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/key-features.html).
 
