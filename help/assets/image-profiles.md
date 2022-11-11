@@ -10,7 +10,7 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
+source-git-commit: 3b869153e0fdee08df2a4aaf73fe3ce9fbebaad7
 workflow-type: tm+mt
 source-wordcount: '2831'
 ht-degree: 9%
@@ -21,13 +21,10 @@ ht-degree: 9%
 
 上傳影像時，您可以透過將影像設定檔套用至資料夾，在上傳時自動裁切影像。
 
->[!NOTE]
->
->智慧型裁切功能僅適用於Dynamic Media - Scene7模式。
-
 >[!IMPORTANT]
 >
->影像描述檔不適用於PDF、動畫GIF或INDD(Adobe InDesign)檔案。
+>·智慧型裁切功能僅適用於Dynamic Media - Scene7模式。
+·影像設定檔不適用於PDF、動畫GIF或INDD(Adobe InDesign)檔案。
 
 ## 裁切選項 {#crop-options}
 
@@ -58,8 +55,7 @@ ht-degree: 9%
 您可以使 **[!UICONTROL 用「銳利化遮色片]** 」來微調最終縮減取樣影像的銳利化濾鏡效果。您可以控制效果的強度、效果半徑（以像素計量），以及忽略的對比度臨界值。 此效果使用的選項與Adobe Photoshop *不銳利化遮色片* 篩選。
 
 >[!NOTE]
->
->不銳利化遮色片只會套用至縮減取樣超過50%的PTIFF（金字塔Tiff）內縮減縮放的轉譯。 這表示Ptiff中大小最大的轉譯不受遮色片銳利化影響，而大小較小的轉譯（例如縮圖）則有所變更（並顯示遮色片銳利化）。
+不銳利化遮色片只會套用至縮減取樣超過50%的PTIFF（金字塔Tiff）內縮減縮放的轉譯。 這表示Ptiff中大小最大的轉譯不受遮色片銳利化影響，而大小較小的轉譯（例如縮圖）則有所變更（並顯示遮色片銳利化）。
 
 在 **[!UICONTROL 不銳利化遮色片]**，您有下列篩選選項：
 
@@ -163,9 +159,8 @@ ht-degree: 9%
 
 ## 編輯單一影像的智慧型裁切或智慧型色票 {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
->[!NOTE]
->
->智慧型裁切功能僅適用於Dynamic Media - Scene7模式。
+>[!IMPORTANT]
+智慧型裁切功能僅適用於Dynamic Media - Scene7模式。
 
 您可以手動重新對齊或調整影像的智慧型裁切視窗大小，以進一步細化其焦點。
 
