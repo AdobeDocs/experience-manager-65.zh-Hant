@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 3b869153e0fdee08df2a4aaf73fe3ce9fbebaad7
+source-git-commit: 008a27c6a1c818a96a24dfcc7f5650409d31e7c2
 workflow-type: tm+mt
-source-wordcount: '2831'
+source-wordcount: '2835'
 ht-degree: 9%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 9%
 
 當您在影像上實作智慧型裁切時，Adobe會建議下列最佳實務並強制執行下列限制：
 
-| 限制類型 | 最佳實務 | 限制 | 2022年12月31日上限的變更 |
-| --- | --- | --- | --- |
-| 每個影像的智慧作業數 | 5 | 100 | 20 |
+| 限制類型 | 最佳實務 | 限制 |
+| --- | --- | --- |
+| 每個影像的智慧作業數 | 5 | 100 |
 
 另請參閱 [Dynamic Media限制](/help/assets/limitations.md).
 
@@ -160,7 +160,7 @@ ht-degree: 9%
 ## 編輯單一影像的智慧型裁切或智慧型色票 {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
 >[!IMPORTANT]
-智慧型裁切功能僅適用於Dynamic Media - Scene7模式。
+·智慧型裁切功能僅適用於Dynamic Media - Scene7模式。
 
 您可以手動重新對齊或調整影像的智慧型裁切視窗大小，以進一步細化其焦點。
 
@@ -188,6 +188,9 @@ ht-degree: 9%
 1. 在頁面的右上角附近，選取 **[!UICONTROL 儲存]**，然後選取 **[!UICONTROL 關閉]** 返回資產資料夾。
 
 ## 編輯多個影像的智慧型裁切或智慧型色票 {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
+
+>[!IMPORTANT]
+·智慧型裁切功能僅適用於Dynamic Media - Scene7模式。
 
 將包含智慧型裁切的影像設定檔套用至資料夾後，該資料夾中的所有影像都會套用裁切至這些影像。 如果需要，您可以 *手動* 重新對齊或調整多個影像中智慧型裁切窗口的大小，以進一步細化其焦點。
 
