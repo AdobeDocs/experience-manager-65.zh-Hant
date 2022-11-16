@@ -8,9 +8,9 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
-source-git-commit: 7c0d5f7d1286bdcc0189f3c6ffecbd2149d6a78a
+source-git-commit: cd4342740a09cb5315c640768bf24af6c7788a48
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '279'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 4%
 
 | 資產 — 限制類型 | 最佳實務 | 限制 | 2022年12月31日上限的變更 |
 | --- | --- | --- | --- |
-| **影像**  — 每個影像的智慧作業數 | 5 | 100 | 20 |
+| **影像**  — 每個影像的智慧作業數 | 5 | 100 | 不適用 |
 | **所有集**  — 每組重複資產數 | 無重複項目 | 20 | 不適用 |
 | **所有集**  — 每組資產的最大數量 | 每組5-10頁影像 | 1000 | 不適用 |
 | **回轉集**  — 每2D集的最大行數/列數 | 每組12-18頁圖片 | 1000 | 不適用 |
