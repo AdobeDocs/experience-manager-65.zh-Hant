@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 3a745e8255580778e30abaa72d7d0453e574f341
+source-git-commit: 420b7f83939aef548501b4676ddca1ec9fc2aa03
 workflow-type: tm+mt
-source-wordcount: '5531'
+source-wordcount: '5530'
 ht-degree: 1%
 
 ---
@@ -89,8 +89,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
 ### 基於UNIX的作業系統的額外需求 {#extrarequirements}
 
-如果使用基於UNIX的作業系統，請從相應作業系統的安裝介質安裝以下32位版本的軟體包：
-
+如果使用基於UNIX的作業系統，請從相應作業系統的安裝介質安裝以下32位包：
 <table>
  <tbody>
   <tr>
