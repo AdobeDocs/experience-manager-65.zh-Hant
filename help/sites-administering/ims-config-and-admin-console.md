@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-source-git-commit: 1651fadeda0f2b37c90af2e1b2f84d74c118ccd9
+source-git-commit: 778987e69a23f81584f7a86db2fe24df64035919
 workflow-type: tm+mt
-source-wordcount: '1690'
-ht-degree: 10%
+source-wordcount: '1683'
+ht-degree: 9%
 
 ---
 
@@ -124,7 +124,7 @@ AEM Managed Services客戶應該已布建組織，而在IMS布建過程中，客
 
 如需新群組功能的詳細資訊，請參閱：
 
-[https://github.com/adobe-apiplatform/user-sync.py/blob/v2/docs/en/user-manual/advanced_configuration](https://github.com/adobe-apiplatform/user-sync.py/blob/v2/docs/en/user-manual/advanced_configuration.md#additional-group-options)
+[https://adobe-apiplatform.github.io/user-sync.py/en/user-manual/advanced_configuration.html#additional-group-options](https://adobe-apiplatform.github.io/user-sync.py/en/user-manual/advanced_configuration.html#additional-group-options)
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ AEM Managed Services客戶應該已布建組織，而在IMS布建過程中，客
 
 ![screen_shot_2018-09-17at105601pm](assets/screen_shot_2018-09-17at105601pm.png)
 
-在每個「產品內容」例項下，都會有相關聯的產品設定檔。 此產品設定檔用於指派存取權給使用者和群組。
+在每個「產品內容」例項下，都會有相關聯的「產品設定檔」。 此產品設定檔用於指派存取權給使用者和群組。
 
 ![image2018-9-18_7-48-50](assets/image2018-9-18_7-48-50.png)
 
