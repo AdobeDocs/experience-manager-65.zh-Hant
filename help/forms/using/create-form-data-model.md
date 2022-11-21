@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c3178eefb5aca3afea2f3df8381b52461247d6f3
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1518'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,7 @@ AEM [!DNL Forms] 資料整合模組允許您從不同的後端資料源(如AEM�
 
 1. 為安裝JDBC驅動程式 [!DNL MySQL] 資料庫作為OSGi捆綁包：
 
+   1. 下載 [[!DNL MySQL] JDBC驅動程式OSGi套件](http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html).
    1. 登入AEM [!DNL Forms] 以管理員身分製作執行個體，並前往AEM Web主控台套件組合。 預設URL為 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
 
    1. 點選 **[!UICONTROL 安裝/更新]**. 安 [!UICONTROL 上傳/安裝套件組合] 對話框。
@@ -73,8 +74,18 @@ AEM [!DNL Forms] 資料整合模組允許您從不同的後端資料源(如AEM�
       * **資料源服務屬性名稱**:指定包含DataSource名稱的服務屬性的名稱。 在將資料源實例註冊為OSGi服務時指定。 例如， **datasource.name**.
       * **JDBC驅動程式類**:指定JDBC驅動程式的Java類名。 針對 [!DNL MySQL] 資料庫，指定 **com.mysql.jdbc.driver**.
       * **JDBC連接URI**:指定資料庫的連接URL。 針對 [!DNL MySQL] 在埠3306和架構weretail上運行的資料庫，URL為： `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+
+      >[!NOTE]
+      >
+      > 當 [!DNL MySQL] 資料庫位於防火牆後，則資料庫主機名不是公用DNS。 資料庫的IP位址需要新增至 */etc/hosts* AEM主機的檔案。
+
       * **用戶名：** 資料庫的用戶名。 需要啟用JDBC驅動程式來建立與資料庫的連接。
       * **密碼：** 資料庫的密碼。 需要啟用JDBC驅動程式來建立與資料庫的連接。
+
+      >[!NOTE]
+      >
+      >AEM Forms不支援的NT驗證 [!DNL MySQL]. 前往AEM Web主控台，網址為 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) 和搜索「Apache Sling Connection Pooled Datasource」。對於「JDBC連接URI」屬性，將「integratedSecurity」的值設定為False，並使用建立的用戶名和密碼連接 [!DNL MySQL] 資料庫。
+
       * **借用時測試：** 啟用 **[!UICONTROL 借閱時測試]** 選項。
       * **返回時測試：** 啟用 **[!UICONTROL 返回時測試]** 選項。
       * **驗證查詢：** 指定SQL SELECT查詢以驗證池中的連接。 查詢必須至少返回一行。 例如， **選取 &#42; 來自customerdetails**.
@@ -85,6 +96,8 @@ AEM [!DNL Forms] 資料整合模組允許您從不同的後端資料源(如AEM�
          系統會建立類似下列的設定。
 
          ![relational-database-data-source-configuration](assets/relational-database-data-source-configuration.png)
+
+
 
 ## 步驟2:建立表單資料模型 {#create-fdm}
 
