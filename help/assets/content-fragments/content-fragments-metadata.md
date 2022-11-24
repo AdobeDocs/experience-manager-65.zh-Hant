@@ -4,9 +4,9 @@ description: 了解如何檢視和編輯AEM中內容片段的中繼資料屬性�
 feature: Content Fragments
 role: User
 exl-id: 6316ef72-7647-4e85-b8cf-152557b26540
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '222'
 ht-degree: 5%
 
 ---
@@ -24,7 +24,6 @@ ht-degree: 5%
 
    * 選擇 [**檢視屬性** 開啟對話框](/help/assets/manage-assets.md#editing-properties). 開啟以供檢視後，您也可以編輯。
    * 開啟內容片段以進行編輯，然後選取 **中繼資料** 從側面板。
-
    ![中繼資料](assets/cfm-metadata-01.png)
 
 3. 此 **基本** 索引標籤提供您可檢視或編輯的選項：
@@ -36,5 +35,10 @@ ht-degree: 5%
    * **標記**
       * [標籤](/help/sites-authoring/tags.md) 在組織片段時，效能尤其強大，因為片段可用於內容分類和分類。 標籤可用來尋找內容（依標籤）並套用大量作業。
 例如，您可以將相關片段標籤為「聖誕節啟動」，以允許僅以子集形式瀏覽這些片段，或複製這些片段，以便與新資料夾中其他未來啟動搭配使用。
-   * 已建立（僅顯示）
+      >[!NOTE]
+      >
+      >**標籤** 也可在 [編寫變異內容](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) 和 [建立變數](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation).
+
+   * **已建立** （僅顯示）
+   例如：
    ![中繼資料](assets/cfm-metadata-02.png)

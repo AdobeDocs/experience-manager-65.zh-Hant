@@ -4,9 +4,9 @@ description: 了解如何在實作AEM無頭式解決方案時，輕鬆預覽內�
 feature: Content Fragments
 role: User
 exl-id: c58a3cfd-6348-4a2e-996a-5fdb96415adb
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '113'
 ht-degree: 1%
 
 ---
@@ -23,4 +23,6 @@ ht-degree: 1%
 
 ![內容片段編輯器 — 片段預覽](assets/cfm-preview-02.png)
 
-**複製URL** 可讓您將URL複製到剪貼簿，以供製作或發佈。
+<!--
+**Copy URL** allows you to copy to clipboard the URL for either author or publish.
+-->

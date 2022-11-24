@@ -4,10 +4,10 @@ description: 了解變異如何讓您在AEM中的無頭式內容更有彈性，�
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
 workflow-type: tm+mt
-source-wordcount: '2256'
-ht-degree: 13%
+source-wordcount: '2426'
+ht-degree: 11%
 
 ---
 
@@ -45,19 +45,32 @@ ht-degree: 13%
 例如：
 
 ![全螢幕編輯器](assets/cfm-variations-02.png)
+
 您可以：
 
-* 直接在中進行編輯 **變異** 標籤
+* 直接在 **變異** 標籤；每種資料類型提供不同的編輯選項，例如：
 
-   * 每種資料類型提供不同的編輯選項
+   * for **多行文本** 您也可以開啟的欄位 [全螢幕編輯器](#full-screen-editor) 至：
 
-* for **多行文本** 您也可以開啟的欄位 [全螢幕編輯器](#full-screen-editor) 至：
+      * 選取 [格式](#formats)
+      * 查看更多編輯選項( [RTF](#rich-text) 格式)
+      * 存取範圍 [動作](#actions)
+   * 針對 **片段參考** 欄位 [編輯內容片段](#fragment-references-edit-content-fragment) 選項可供使用，具體取決於模型定義。
 
-   * 選取 [格式](#formats)
-   * 查看更多編輯選項( [RTF](#rich-text) 格式)
-   * 存取範圍 [動作](#actions)
 
-* 針對 **片段參考** 欄位 **[編輯內容片段](#fragment-references-edit-content-fragment)** 選項可供使用，具體取決於模型定義。
+* 指派 **標籤** 對當前變化的影響；可新增、更新及移除標籤
+
+   * [標籤](/help/sites-authoring/tags.md) 在組織片段時，效能尤其強大，因為片段可用於內容分類和分類。 標籤可用來尋找內容（依標籤）並套用大量作業。
+
+      * 搜尋標籤時，會傳回片段，並反白顯示標籤的變數。
+      * 變異標籤也可用來將特定內容傳遞網路(CDN)設定檔的變異分組（用於CDN快取），而非使用變異名稱。
+
+      例如，您可以將相關片段標籤為「聖誕節啟動」，以允許僅以子集形式瀏覽這些片段，或複製這些片段，以便與新資料夾中其他未來啟動搭配使用。
+   >[!NOTE]
+   >
+   >**標籤** 也可以新增(至 **主版** 變異) [中繼資料](/help/assets/content-fragments/content-fragments-metadata.md)
+
+* [建立和管理變數](#managing-variations) 的 **主版** 內容。
 
 ### 全螢幕編輯器 {#full-screen-editor}
 
@@ -389,6 +402,9 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
    >[!NOTE]
    建立新變異時，一律 **主版** 會複製，而非目前開啟的變數。
 
+   >[!NOTE]
+   建立新變數時，所有 **標籤** 目前已指派給 **主版** 變異會複製到您的新變異。
+
 ### 編輯變異 {#editing-a-variation}
 
 您可以在下列任一項之後，變更變異內容：
@@ -435,7 +451,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 >[!CAUTION]
 同步僅可用於將更改從 *主&#x200B;**版複製**到變化*。
 只會同步變數的目前元素。
-同步只適用於多 **行文本** -資料類型。
+同步只適用於 **多行文本** 資料類型。
 將變 *更從變更傳輸&#x200B;**至Master*** ，不提供選項。
 
 <!-- needs new screenshot for synchronize effect -->
@@ -460,4 +476,4 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    ![與主同步](assets/cfm-variations-11c.png)
 
-1. 選擇 **同步**，變數會更新並顯示。
+1. 選擇 **同步**，則會更新並顯示變數。
