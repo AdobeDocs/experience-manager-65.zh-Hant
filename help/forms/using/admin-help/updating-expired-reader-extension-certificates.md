@@ -2,7 +2,7 @@
 title: Reader擴充功能憑證的到期日及其影響
 description: Reader擴充功能憑證的到期日及其影響
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: f35a35577f06686558bb1277b0d9bb17f6f0b7bf
+source-git-commit: bcbfdcd305b7319506a11677909895c38f92a6cf
 workflow-type: tm+mt
 source-wordcount: '1114'
 ht-degree: 2%
@@ -27,7 +27,9 @@ Adobe利用公鑰基礎設施(PKI)發放用於許可和功能啟用的數字證�
 A.Adobe根CA是核發Acrobat Reader擴充功能憑證的憑證機構。 2023年1月7日起，「Adobe根CA」及其核發的所有憑證即將到期。
 
 **Q.之前曾有一份Adobe來函，內容涉及證書的過期以及對使用/開啟PDF檔案的影響。 應該忽略這種溝通嗎？**
-A.根據對情況的重新評估，2023年1月7日之前使用舊的&quot;Adobe根CA&quot;簽發的生產證書延期的所有PDF檔案在2023年1月7日之後仍可繼續運作，且無任何變更。 如果您已更新PDF，則體驗不會變更
+
+A.根據對情況的重新評估，2023年1月7日之前使用舊的&quot;Adobe根CA&quot;簽發的生產證書延期的所有PDF檔案在2023年1月7日之後仍可繼續運作，且無任何變更。 如果您已更新PDF，則體驗不會變更。
+
 
 **如果有其他問題，應該聯絡誰？**
 
