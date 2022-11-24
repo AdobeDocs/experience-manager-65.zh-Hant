@@ -2,9 +2,9 @@
 title: Reader擴充功能憑證的到期日及其影響
 description: Reader擴充功能憑證的到期日及其影響
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: bbc8fdf2eb7dd35600e2e2a87550e9de557f0eb0
+source-git-commit: f35a35577f06686558bb1277b0d9bb17f6f0b7bf
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1114'
 ht-degree: 2%
 
 ---
@@ -26,9 +26,8 @@ Adobe利用公鑰基礎設施(PKI)發放用於許可和功能啟用的數字證�
 
 A.Adobe根CA是核發Acrobat Reader擴充功能憑證的憑證機構。 2023年1月7日起，「Adobe根CA」及其核發的所有憑證即將到期。
 
-**問：之前有Adobe發來的信函，內容是憑證到期及對使用/開啟PDF的影響？ 應該忽略這種溝通嗎？**
+**Q.之前曾有一份Adobe來函，內容涉及證書的過期以及對使用/開啟PDF檔案的影響。 應該忽略這種溝通嗎？**
 A.根據對情況的重新評估，2023年1月7日之前使用舊的&quot;Adobe根CA&quot;簽發的生產證書延期的所有PDF檔案在2023年1月7日之後仍可繼續運作，且無任何變更。 如果您已更新PDF，則體驗不會變更
-
 
 **如果有其他問題，應該聯絡誰？**
 
@@ -44,11 +43,11 @@ A.新Acrobat Reader擴充功能憑證的說明提及 **G3-P24** 作為方案名�
 
 **問：如何取得最新憑證？**
 
-A.所有獲得授權的Forms客戶（具有作用中授權）均可從以下網址下載新憑證(以「Adobe根CA G2」為基礎的憑證): [Adobe授權網站](https://licensing.adobe.com/). 如果您在Adobe授權網站上找不到憑證，請聯絡 [Adobe支援](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=en#support) 或提供支援票。
+A.所有獲授權的Forms客戶（具有作用中授權）都可從以下網址下載新憑證(以「Adobe根CA G2」為基礎的憑證): [Adobe授權網站](https://licensing.adobe.com/). 如果您在Adobe授權網站上找不到憑證，請聯絡 [Adobe支援](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=en#support) 或提供支援票。
 
-**問：2023年1月7日之後，我使用「Adobe根CA」（舊憑證授權單位）核發的憑證延期的PDF檔案是否仍可繼續運作？**
+**問：我使用「Adobe根CA」（舊的憑證授權單位）核發的憑證延期的PDF檔案，在2023年1月7日之後能繼續運作嗎？**
 
-A.是的，在2023年1月7日之前，所有使用從「Adobe根CA」（舊憑證授權單位）核發的生產憑證延期的PDF檔案，在2023年1月7日之後都可繼續運作，且無任何變更。 使用評估證書擴展的PDF文檔在過期後停止工作。
+A.是的，在2023年1月7日之前，所有使用「Adobe根CA」（舊憑證授權單位）核發的生產憑證延期的PDF檔案，在2023年1月7日之後仍可繼續運作，且無任何變更。 使用評估證書擴展的PDF文檔在過期後停止工作。
 
 **問：若要繼續使用以「Adobe根CA」（舊的憑證授權單位）核發的憑證擴充的PDF檔案，需要使用哪個Adobe Acrobat Reader版本？**
 
@@ -70,7 +69,7 @@ A.Adobe Acrobat Reader 2020或更新版本必須使用以「Adobe根CA 2」（�
 
 答：是，可在多個環境中使用相同的Acrobat Reader擴充功能憑證。
 
-**問：如何檢查套用在PDF檔案上的使用權利？**
+**問：如何檢查套用至PDF檔案的使用權限？**
 
 A.您可以使用 [getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=en#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) API，擷取套用至PDF檔案的使用權限相關資訊。
 
