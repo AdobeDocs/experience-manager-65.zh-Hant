@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b33c42edb44617d26ead0df3a9de7bdb39c2e9f4
+source-git-commit: 89bb9223bb5e1e1d8719c5d957ec380872ed3e96
 workflow-type: tm+mt
-source-wordcount: '6282'
+source-wordcount: '6489'
 ht-degree: 3%
 
 ---
@@ -154,7 +154,9 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
    啟動資產後，任何更新都會立即上線發佈至S7傳送。
 
 1. 選取&#x200B;**[!UICONTROL 儲存]**。
-1. 為了在發佈Dynamic Media內容之前安全地預覽，Experience Manager作者預設會使用Token型驗證，因此Experience Manager作者會預覽Dynamic Media內容。 不過，您可以允許列出更多IP，讓使用者存取安全預覽內容。 若要在Experience Manager中設定此動作，請參閱 [設定影像伺服器的Dynamic Media發佈設定 — 「安全性」標籤](/help/assets/dm-publish-settings.md#security-tab).
+1. 為了在發佈Dynamic Media內容之前安全地預覽，Experience Manager作者預設會使用Token型驗證，因此Experience Manager作者會預覽Dynamic Media內容。 不過，您可以「允許清單」更多IP，讓使用者存取安全預覽內容。 若要在Experience Manager中設定此動作，請參閱 [設定影像伺服器的Dynamic Media發佈設定 — 「安全性」標籤](/help/assets/dm-publish-settings.md#security-tab).
+
+如果要進一步自定義配置，例如啟用ACL（訪問控制清單）權限，您可以選擇完成以下任何任務 [（選用）在Dynamic Media - Scene7模式中設定進階設定](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
@@ -165,8 +167,6 @@ Feature Pack 18912可讓您透過FTP大量內嵌資產，或在Experience Manage
     * In the upper-right corner of the page, select **[!UICONTROL Save]**. -->
 
 您現在已完成基本設定；您已準備好使用Dynamic Media - Scene7模式。
-
-如果您想進一步自訂設定，您可以選擇完成下方的任何工作 [（選用）在Dynamic Media - Scene7模式中設定進階設定](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
 
 ### 變更Dynamic Media的密碼 {#change-dm-password}
 
@@ -203,6 +203,8 @@ Dynamic Media中的密碼過期時間會從目前系統日期開始設為100年�
 
 如果您想進一步自訂Dynamic Media - Scene7模式的設定和設定，或最佳化其效能，您可以完成下列一或多個作業 *可選* 任務：
 
+* [（選用）在Dynamic Media - Scene7模式中啟用ACL權限](#optional-enable-acl)
+
 * [（選用）設定Dynamic Media - Scene7模式，以上傳大於2 GB的資產](#optional-config-dms7-assets-larger-than-2gb)
 
 * [（選用）Dynamic Media - Scene7模式設定的設定與設定](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
@@ -210,6 +212,33 @@ Dynamic Media中的密碼過期時間會從目前系統日期開始設為100年�
 * [（選用）調整Dynamic Media - Scene7模式的效能](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
 * [（選用）篩選資產以進行復寫](#optional-filtering-assets-for-replication)
+
+### （選用）在Dynamic Media - Scene7模式中啟用存取控制清單權限 {#optional-enable-acl}
+
+當您在AEM上執行Dynamic Media - Scene7模式時，它目前會轉送 `/is/image` 請求保護預覽影像伺服，而不檢查PlatformServerServlet的ACL（存取控制清單）權限。 不過， *啟用* ACL權限。 這樣會轉發授權 `/is/image` 要求。 如果使用者未獲授權存取資產，則會顯示「403 — 禁止」錯誤。
+
+**若要在Dynamic Media - Scene7模式中啟用ACL權限：**
+
+1. 從Experience Manager導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web主控台]**.
+
+   ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
+
+1. 新的瀏覽器標籤隨即開啟， **[!UICONTROL Adobe Experience Manager Web主控台設定]** 頁面。
+
+   ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
+
+1. 在頁面上，捲動至名稱 *Adobe CQ Scene7 PlatformServer*.
+
+1. 在名稱的右側，選取鉛筆圖示(**[!UICONTROL 編輯配置值]**)。
+
+1. 在 **com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.name** 頁面中，選取下列兩個設定的核取方塊：
+
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name`  — 啟用後，此設定會快取要保存的2分鐘（預設值）權限結果。
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.validate.userAccess.name`  — 啟用後，此設定會透過Dynamic Media Image Server預覽資產時，驗證使用者的存取權。
+
+   ![在Dynamic Media - Scene7模式中啟用存取控制清單設定](/help/assets/assets-dm/acl.png)
+
+1. 在頁面的右下角附近，選取 **[!UICONTROL 儲存]**.
 
 ### （選用）設定Dynamic Media - Scene7模式，以上傳大於2 GB的資產 {#optional-config-dms7-assets-larger-than-2gb}
 
@@ -660,7 +689,7 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 
 **若要更新Dynamic Media Classic上傳連線：**
 
-1. 導航到 `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
+1. 瀏覽到 `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
 1. 在 **[!UICONTROL 連接數]** 欄位和/或 **[!UICONTROL 活動作業超時]** 欄位，視需要變更數字。
 
    此 **[!UICONTROL 連接數]** 設定會控制Experience Manager上傳至Dynamic Media所允許的HTTP連線數量上限；通常，十個連線的預先定義值就足夠了。
