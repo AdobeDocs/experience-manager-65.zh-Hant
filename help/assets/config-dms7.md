@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 89bb9223bb5e1e1d8719c5d957ec380872ed3e96
+source-git-commit: d3045e1a68d05eb257a6444f75a30faae4950db1
 workflow-type: tm+mt
 source-wordcount: '6489'
 ht-degree: 3%
@@ -369,7 +369,7 @@ Dynamic Media色彩管理可讓您為資產加上色彩校正。 透過色彩校
 
 請參閱 [上傳資產](/help/assets/manage-assets.md#uploading-assets).
 
-**要編輯支援格式的MIME類型，請執行以下操作：**
+**要編輯支援格式的MIME類型：**
 
 1. 在Experience Manager中，選取Experience Manager標誌以存取全域導覽主控台，然後導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**.
 1. 在左側邊欄中，導覽至下列項目：
