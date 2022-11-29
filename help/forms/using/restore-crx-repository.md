@@ -2,9 +2,9 @@
 title: 無法還原適用於JEE群集伺服器的損壞的CRX儲存庫
 description: 還原損壞的CRX儲存庫的步驟
 exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
-source-git-commit: cf034e8765317ee022aad4693ced37c3fa793ff2
+source-git-commit: c4f776b08cb8cc8c6eea78a3757735e063bec20c
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '179'
 ht-degree: 2%
 
 ---
@@ -35,4 +35,4 @@ ht-degree: 2%
 
 此解決方案適用於：
 
-* AEM Forms on JEE叢集環境
+* AEM Forms on JEE叢集
