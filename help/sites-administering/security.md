@@ -12,9 +12,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: bc3dd7d229a75323b98a96d60dcbb3ae2b8c09ab
+source-git-commit: 97b0cec1c8091bbc5736bd68bdee257ca423f93e
 workflow-type: tm+mt
-source-wordcount: '5469'
+source-wordcount: '5454'
 ht-degree: 1%
 
 ---
@@ -215,16 +215,17 @@ AEM WCM使用存取控制清單(ACL)來組織套用至各種頁面的權限。
 
 >[!NOTE]
 >
->示例中包含了ACL。 建議您檢閱並決定適合您應用程式的項目。 要查看包含的ACL，請轉到**CRXDE **並選擇 **存取控制** 頁簽中指定的內容：
+>示例中包含了ACL。 建議您檢閱並決定適合您應用程式的項目。 要查看包含的ACL，請轉到 **CRXDE** ，然後選取 **存取控制** 頁簽中指定的內容：
 >
->`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`:允許每個人讀取訪問權限。
->`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`:允許每個人讀取訪問權限。
->`/home/users/geometrixx-outdoors`:允許每個人讀取 `*/profile*` 和
->`*/social/relationships/following/*`.
+>* `/etc/cloudservices`
+>* `/home/users/we-retail`
 >
->您的自定義應用程式可以設定其他關係(如 `*/social/relationships/friend/*` 或 `*/social/relationships/pending-following/*`.
+>您的自定義應用程式可以設定其他關係的訪問權限，例如：
 >
->建立特定於社區的ACL時，加入這些社區的成員可能會獲得附加權限。 例如，當使用者在 `/content/geometrixx-outdoors/en/community/hiking` 或 `/content/geometrixx-outdoors/en/community/winter-sports`.
+>* `*/social/relationships/friend/*`
+>* 或 `*/social/relationships/pending-following/*`.
+>
+>建立特定於社區的ACL時，加入這些社區的成員可能會獲得附加權限。 例如，當使用者在以下位置加入社群時，即可能發生此情況： `/content/we-retail/us/en/community`
 
 ### 權限狀態 {#permission-states}
 
