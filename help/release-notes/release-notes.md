@@ -2,9 +2,9 @@
 title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 937af2df46b93aab6c9010814175d72a9bd583db
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '3176'
+source-wordcount: '3853'
 ht-degree: 2%
 
 ---
@@ -105,9 +105,44 @@ ht-degree: 2%
 
 ## [!DNL Forms] {#forms-6515}
 
->[!NOTE]
->
->中的修正 [!DNL Experience Manager] Forms會在排程一週後，透過個別的附加套件傳送 [!DNL Experience Manager] Service Pack發行日期。 在此情況下，附加元件套件將於2022年12月1日星期四發行。 此外，本節也將新增Forms修正和增強功能清單。
+### 主要功能 {#keyfeatures}
+
+* AEM Forms Designer現在提供西班牙文地區設定。 (LC-3920051)
+* 您現在可以使用OAuth2來使用Microsoft Office 365郵件伺服器通訊協定（SMTP和IMAP）進行驗證。 (NPR-35177)
+* 您可以設定 [在伺服器上重新驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) 屬性設為true ，以識別伺服器端之記錄檔案中要排除的隱藏欄位。 (NPR-38149)
+* AEM Forms Designer需要32位元版本的Visual C++ 2019 Redistributable(x86)。  (NPR-36690)
+
+### 修正 {#fixes}
+
+* 切換適用性表單的資料停用屬性時，選項按鈕和核取方塊群組的外觀不會變更。 (NPR-39368)
+* 翻譯適用性表單時，部分翻譯會遺漏，且無法正確顯示。 (NPR-39367)
+* 將頁面的屬性設定為隱藏時，不會從表單集中移除頁面。 (NPR-39325)
+* 在記錄檔案中，頁面結尾的動態腳注區段不存在。 (NPR-39322)
+* 為適用性表單產生記錄檔案時，選項按鈕和核取方塊僅允許垂直對齊。 用戶無法設定單選按鈕和複選框的水準對齊方式。 (NPR-39321)
+* 部署通信管理後，如果多個使用者嘗試存取表單， org.apache.sling.i18n.impl.JcrResourceBundle.loadPetonialLanguageRoots就會成為瓶頸，且大部分執行緒會遭到觸發。 即使伺服器的負載很低，各種表單頁面請求也往往需要1分鐘以上的時間才能載入。 (NPR-39176、CQ-4347710)
+* 在適用性表單中，當您在延遲載入適用性表單片段中使用RTF欄位時，會發生下列部分錯誤：
+   * 您無法編輯內容或將任何內容附加至「RTF」欄位。
+   * 套用至RTF的顯示模式不會執行。 
+   * 提交表單時不會顯示最小欄位長度的錯誤訊息。
+   * 此RTF欄位的內容在產生的submit-XML中已包括多次。 (NPR-39168)
+* 在適用性表單中使用「日期」選擇器選項時，無法將值轉換為正確的格式。 (NPR-39156)
+* 以HTML表單預覽適用性表單時，無法正確轉譯，因為部分子表單與父表單重疊。 (NPR-39046)
+* 如果面板有隱藏的表格，且使用表格檢視轉譯適用性表單，則第一個標籤上的欄位無法正確顯示。 (NPR-39025)
+* 此 `Body` OOTB（現成可用）範本缺少標籤。 (NPR-39022)
+* 記錄檔案不會以最適化表單的語言產生。 它總是以英語產生。 (NPR-39020)
+* 當適用性表單有多個面板，且部分面板使用現成可用的 **檔案附件** 元件， `Error occurred while draft saving` 發生錯誤。 (NPR-38978)
+* 當 `=` 符號用於「適用性表單」的核取方塊、下拉式清單或選項按鈕欄位，並產生「記錄檔案」，然後 `=` 生成的記錄文檔中不顯示符號。(NPR-38859)
+* 6.5.11.0 Service Pack升級後，通知批次處理錯誤的數量增加了數量多倍。 (NPR-39636)
+* 若您未提供測試資料，通信管理信函無法載入代理程式UI中。 (CQ-4348702)
+* 使用者從使用IBM® WebSphere®部署的AEM Forms套用AEM Forms Service Pack 14(SP14)時，啟動程式在初始化資料庫和 `java.lang.NoClassDefFoundError:org/apache/log4j/Logger` 發生錯誤。(NPR-39414)
+* 在OSGi伺服器上的AEM表單中，當您使用檔案服務API來驗證PDF時，表單會失敗並出現錯誤：com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException:AEM-DSS-311-003。 (NPR-38855)
+* 當使用者嘗試使用包裝服務來轉譯具有AEM 6.3 Forms的信函時， `java.lang.reflect.UndeclaredThrowableException` 發生錯誤。 (CQ-4347259)
+* 當XDP呈現為HTML5表單時，無論對象在適用性表單中的位置如何，都會先呈現首頁的內容。 (CQ-4345218)
+* 目標伺服器上的應用程式配置將更改為源伺服器上定義的設定，即使 **完成匯入時覆寫設定** 匯入應用程式時未核取選項。 (NPR-39044)
+* 當使用者嘗試使用Configuration Manager更新連接器組態時，會失敗。(CQ-4347077)
+* 當使用者在變更管理員使用者的預設密碼後，嘗試在JEE修補程式上執行AEM Forms時，會發生例外狀況 `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 發生。 (CQ-4348277)
+* 在AEM Designer中，沒有標題的表單欄位會放置在表格儲存格中，包括核取方塊。(LC-3920410)
+* 當使用者嘗試在AEM Forms Designer中開啟「說明」時，無法正確顯示。 (CQ-4341996)
 
 ## [!DNL Sites] {#sites-6515}
 
@@ -284,7 +319,7 @@ UberJar [!DNL Experience Manager] 6.5.15.0可在 [Maven Central存放庫](https:
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [AEM內容片段，含GraphQL索引套件1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+* [AEM內容片段搭配GraphQL索引套件1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 使用GraphQL的客戶需要此軟體包；這可讓使用者根據實際使用的功能，新增所需的索引定義。
 
 * As [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL AEM Forms 6.5.10.0].

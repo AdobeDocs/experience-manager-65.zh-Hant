@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 43a1cff0d7c2fe1d25e41cff3d02d1a55e6792c5
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '3824'
+source-wordcount: '3830'
 ht-degree: 3%
 
 ---
@@ -371,6 +371,7 @@ ht-degree: 3%
    + [Reader使用Portable Protection Library擴展受策略保護的PDF文檔](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
    + [使AEM能夠搜索受文檔安全保護的PDF和Microsoft Office文檔](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [Protect代表其他使用者的檔案](using/protect-document-on-behalf-of-another-user.md)
+   + [oAuth2.0支援Microsoft Mail Service](/help/forms/using/oauth2-support-for-mail-service.md)
 + Forms Designer {#use-forms-designer}
    + [Forms Designer說明](using/forms-designer-help.md)
    + [使用設計工具](https://www.adobe.com/go/learn_aemforms_designer_65)

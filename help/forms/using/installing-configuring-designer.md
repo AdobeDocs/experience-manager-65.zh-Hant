@@ -12,9 +12,9 @@ discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
 role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
-source-git-commit: a3cf926bde4a4b3a0810058e84ac01012a4a3a57
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '290'
 ht-degree: 1%
 
 ---
@@ -23,19 +23,20 @@ ht-degree: 1%
 
 ## 先決條件 {#pre-requisites}
 
-AEM Forms Designer安裝程式需要32位元版本 [Visual C++可再分發運行時包2012](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0) 和 [Visual C++可再分發運行時包2013](https://support.microsoft.com/en-in/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). 開始安裝之前，請確定已安裝先前提到的可再分發的執行階段套件。
-
-安裝或卸載Designer需要管理員權限。
+* 安裝32位版本  [Visual C++ 2019可再發行(x86)](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170). 開始安裝之前，請確定已安裝先前提到的可再分發的執行階段套件。
+* 具有安裝或卸載Designer的管理員權限的用戶。
 
 ## 安裝設計器 {#install-designer}
 
 Designer作為獨立安裝程式提供，並與WorkBench捆綁。 如果您使用Designer的獨立安裝程式，請執行以下步驟：
 
-1. 從Adobe下載設計器 [授權網站](https://licensing.adobe.com/).
+1. 解除安裝舊版AEM Forms Designer（如果已安裝）。
+1. 從下載Designer [Adobe授權網站](https://licensing.adobe.com/).
 
    >[!NOTE]
    >
-   >如果已安裝舊版Designer，請先卸載舊版，然後再繼續。
+   > * Adobe Experience Manager 6.5 Forms Service Pack 15(6.5.15.0)以上的Forms Designer版本也包含Service Pack版本。 例如，對於Service Pack 15，版本號為6.5.15.20221112.1.0。在此示例中，6.5.15是Service Pack版本。
+
 
 1. 按兩下setup.exe以啟動Designer安裝程式。
 1. 繼續，在「個人化」畫面上提供您的詳細資訊和序號。
@@ -57,5 +58,3 @@ msiexec /i "<absolute path>\Designer.msi" /passive SERIALNUMBER=****-****-****-*
 ```shell
 msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-****-****-****
 ```
-
-
