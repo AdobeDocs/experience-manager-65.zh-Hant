@@ -1,18 +1,16 @@
 ---
-title: Microsoft® Office 365郵件伺服器通訊協定的OAuth2支援
-description: Microsoft® Office 365郵件伺服器通訊協定的Oauth2支援
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+title: 為Microsoft® Office 365郵件伺服器通訊協定配置OAuth2型驗證
+description: 為Microsoft® Office 365郵件伺服器通訊協定配置OAuth2型驗證
+source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
 
-# OAuth 2.0支援Microsoft® Office 365郵件伺服器通訊協定 {#oauth2-support-for-the-microsoft-mail-server-protocols}
+# 與Microsoft® Office 365郵件伺服器協定整合 {#oauth2-support-for-the-microsoft-mail-server-protocols}
 
-AEM Forms提供OAuth 2.0支援，以與Microsoft® Office 365郵件伺服器通訊協定整合，讓組織能符合安全的電子郵件需求。 Azure Active Directory(Azure AD)提供OAuth 2.0身份驗證服務，使您的應用程式能夠與各種協定（如IMAP、POP或SMTP）連接，並訪問Office 365用戶的電子郵件資料。
-
-以下是配置Microsoft® Office 365郵件伺服器協定以通過OAuth 2.0服務進行身份驗證的逐步說明：
+為了讓組織遵守安全的電子郵件要求，AEM Forms提供OAuth 2.0支援，以與Microsoft® Office 365郵件伺服器通訊協定整合。 您可以使用Azure Active Directory(Azure AD)OAuth 2.0身份驗證服務，與各種協定（如IMAP、POP或SMTP）連接，並訪問Office 365用戶的電子郵件資料。 以下是配置Microsoft® Office 365郵件伺服器協定以通過OAuth 2.0服務進行身份驗證的逐步說明：
 
 1. 登入 [https://portal.azure.com/](https://portal.azure.com/) 和搜索 **Azure Active Directory** 在搜尋列中，按一下結果。
 或者，您可以直接瀏覽至 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
@@ -22,9 +20,8 @@ AEM Forms提供OAuth 2.0支援，以與Microsoft® Office 365郵件伺服器通�
 
 1. 根據您的需求填寫資訊，然後按一下 **註冊**.
    ![支援的帳戶](/help/forms/using/assets/azure_suuportedaccountype.png)
-
-
-   在上述情況中， **任何組織目錄（任何Azure AD目錄 — 多租用戶）中的帳戶和個人Microsoft®帳戶（例如Skype、Xbox）** 選項。
+在上述情況中， 
+**任何組織目錄（任何Azure AD目錄 — 多租用戶）中的帳戶和個人Microsoft®帳戶（例如Skype、Xbox）** 選項。
 
    >[!NOTE]
    >
@@ -88,7 +85,9 @@ AEM Forms提供OAuth 2.0支援，以與Microsoft® Office 365郵件伺服器通�
 ## 產生重新整理代號 {#generating-the-refresh-token}
 
 接下來，您需要產生重新整理Token，如下列步驟所述：
+
 1. 開啟命令提示字元，然後使用下列cURL命令來取得refreshToken。
+
 1. 取代 `clientID`, `client_secret` 和 `redirect_uri` 與應用程式的值，以及 `<code>`:
 
    `curl -H “ContentType application/x-www-form-urlencoded” -d “client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]” -X POST https://login.microsoftonline.com/common/oauth2/v2.0/token`
@@ -163,9 +162,4 @@ AEM Forms提供OAuth 2.0支援，以與Microsoft® Office 365郵件伺服器通�
 * 如果電子郵件服務無法正常運作。 嘗試重新產生 `Refresh Token` 如上所述。 部署新值需要幾分鐘的時間。
 
 * 使用Workbench在電子郵件端點中設定電子郵件伺服器詳細資訊時發生錯誤。請嘗試透過管理員UI（而非Workbench）來設定端點。
-
-
-
-
-
 

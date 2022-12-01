@@ -2,9 +2,9 @@
 title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
 workflow-type: tm+mt
-source-wordcount: '3853'
+source-wordcount: '3858'
 ht-degree: 2%
 
 ---
@@ -107,9 +107,9 @@ ht-degree: 2%
 
 ### 主要功能 {#keyfeatures}
 
-* AEM Forms Designer現在提供西班牙文地區設定。 (LC-3920051)
-* 您現在可以使用OAuth2來使用Microsoft Office 365郵件伺服器通訊協定（SMTP和IMAP）進行驗證。 (NPR-35177)
-* 您可以設定 [在伺服器上重新驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) 屬性設為true ，以識別伺服器端之記錄檔案中要排除的隱藏欄位。 (NPR-38149)
+* AEM Forms Designer現在可在 [西班牙語地區](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). (LC-3920051)
+* 您現在可以使用 [OAuth2用於通過Microsoft Office 365郵件伺服器協定（SMTP和IMAP）進行身份驗證](/help/forms/using/oauth2-support-for-mail-service.md). (NPR-35177)
+* 您可以設定 [在伺服器上重新驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br) 屬性設為true ，以識別伺服器端之記錄檔案中要排除的隱藏欄位。 (NPR-38149)
 * AEM Forms Designer需要32位元版本的Visual C++ 2019 Redistributable(x86)。  (NPR-36690)
 
 ### 修正 {#fixes}
