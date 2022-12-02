@@ -12,9 +12,9 @@ discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 002b9035f37a1379556378686b64d26bbbc30288
 workflow-type: tm+mt
-source-wordcount: '2427'
+source-wordcount: '2445'
 ht-degree: 2%
 
 ---
@@ -47,13 +47,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果需要工作階段，建議您使用SSO解決方案或使用黏著工作階段，並讓客戶在切換至其他發佈者時登入。
+>如果需要工作階段，建議您使用SSO解決方案或使用黏著工作階段，並在客戶切換至其他發佈執行個體時讓客戶登入。
 
 >[!CAUTION]
 >
->同步 ***管理員*** 群組不受支援，即使使用者同步已啟用亦然。 相反，「導入差異」失敗將記錄在錯誤日誌中。
+>同步 **管理員** 群組不受支援，即使使用者同步已啟用亦然。 相反，「導入差異」失敗將記錄在錯誤日誌中。
 >
->因此，當部署為發佈伺服器陣列時，如果將使用者新增至或從*中移除&#x200B;**管理員** 群組中，必須在每個發佈例項上手動進行修改。
+>因此，當部署為發佈伺服器陣列時，若將使用者新增至 **管理員** 群組中，必須在每個發佈例項上手動進行修改。
 
 ## 啟用用戶同步 {#enable-user-sync}
 
@@ -71,7 +71,7 @@ ht-degree: 2%
 
 ### 必備條件 {#prerequisites}
 
-1. 如果使用者和使用者群組已在一個發佈者上建立，建議您 [手動同步](#manually-syncing-users-and-user-groups) 在配置和啟用用戶同步之前，將用戶資料發送給所有發佈者。
+1. 如果已在一個發佈執行個體上建立使用者和使用者群組，建議您 [手動同步](#manually-syncing-users-and-user-groups) 在設定並啟用使用者同步之前，將使用者資料傳送至所有發佈執行個體。
 
 啟用使用者同步後，只會同步新建立的使用者和群組。
 
@@ -159,7 +159,7 @@ ht-degree: 2%
 
 **設定權限**
 
-一旦成為授權使用者，即為**`administrators`**使用者群組（已在所有發佈例項上建立），必須在作者上將該已授權使用者識別為具有從作者同步使用者資料至發佈之權限。
+一旦授權使用者， **`administrators`** 使用者群組（已在所有發佈例項上建立），必須在作者上將已授權使用者識別為具有從作者同步使用者資料至發佈之權限。
 
 * **論作者**
 
@@ -181,7 +181,7 @@ ht-degree: 2%
 
 **啟用用戶同步**
 
-* **發佈時間**:
+* **每個發佈例項**:
 
    * 以管理員權限登入
    * 存取 [Web主控台](/help/sites-deploying/configuring-osgi.md)
@@ -193,7 +193,7 @@ ht-degree: 2%
 
       * 選取 `Enabled` 核取方塊
       * 選取 `Save`
-   * **對每個發佈執行個體**復
+   * **重複** 每個發佈例項
 
 
 
@@ -267,13 +267,13 @@ ht-degree: 2%
 ![](assets/chlimage_1-25.png)
 
 * **導出器端點**
-每個發佈者都應有匯出端點。 例如，如果有2個發佈者，localhost:4503和4504，則應有2個項目：
+每個發佈實例都應有一個導出端點。 例如，如果有2個發佈例項localhost:4503和4504，則應有2個項目：
 
    * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
    * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
 
 * **匯入工具端點**
-每個發佈者都應有匯入工具端點。 例如，如果有2個發佈者，localhost:4503和4504，則應有2個項目：
+每個發佈例項都應有匯入工具端點。 例如，如果有2個發佈例項localhost:4503和4504，則應有2個項目：
 
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
@@ -400,7 +400,7 @@ ht-degree: 2%
 
 根據設計，在發佈環境中建立的使用者和設定檔（自行註冊）不會出現在製作環境中。
 
-當拓撲為 [發佈農場](/help/sites-deploying/recommended-deploys.md#tarmk-farm) 和使用者同步已正確設定， *user *和 *使用者設定檔* 會使用Sling分送在整個發佈伺服器陣列中同步。
+當拓撲為 [發佈農場](/help/sites-deploying/recommended-deploys.md#tarmk-farm) 和使用者同步已正確設定， *使用者* 和 *使用者設定檔* 會使用Sling分送在整個發佈伺服器陣列中同步。
 
 ### 使用安全控制台建立用戶或組 {#users-or-user-groups-are-created-using-security-console}
 
@@ -412,7 +412,7 @@ ht-degree: 2%
 
 ### 如何讓使用者同步離線 {#how-to-take-user-sync-offline}
 
-若要讓使用者同步離線， [刪除發佈者](#how-to-remove-a-publisher) 或 [手動同步資料](#manually-syncing-users-and-user-groups)，則分發隊列必須為空和安靜。
+若要讓使用者離線同步， [移除發佈執行個體](#how-to-remove-a-publish-instance) 或 [手動同步資料](#manually-syncing-users-and-user-groups)，則分發隊列必須為空和安靜。
 
 要檢查分發隊列的狀態，請執行以下操作：
 
@@ -455,7 +455,7 @@ ht-degree: 2%
 
 ![](assets/chlimage_1-28.png)
 
-#### 如何為發佈者運行診斷程式 {#how-to-run-diagnostics-for-publishers}
+#### 如何對發佈實例運行診斷程式 {#how-to-run-diagnostics-for-publish-instances}
 
 從製作環境執行診斷程式時，通過/失敗結果將包含 [資訊] 區段顯示已設定的發佈例項清單以供確認。
 
@@ -531,7 +531,7 @@ ht-degree: 2%
 
 ### 手動同步使用者和使用者群組 {#manually-syncing-users-and-user-groups}
 
-* 在存在用戶和組的發佈商上：
+* 在存在使用者和使用者群組的發佈例項上：
 
    * [如果啟用，則禁用用戶同步](#how-to-take-user-sync-offline)
    * [建立套件](/help/sites-administering/package-manager.md#creating-a-new-package) of `/home`
@@ -549,13 +549,13 @@ ht-degree: 2%
 
 要配置或啟用用戶同步，請轉至步驟1: [Apache Sling Distribution Agent — 同步代理工廠](#apache-sling-distribution-agent-sync-agents-factory)
 
-### 發佈者無法使用時 {#when-a-publisher-becomes-unavailable}
+### 發佈例項無法使用時 {#when-a-publish-instance-becomes-unavailable}
 
-發佈例項無法使用時，如果日後重新上線，則不應將其移除。 變更會排入發佈者佇列，一旦重新上線，就會處理變更。
+發佈例項無法使用時，如果日後重新上線，則不應將其移除。 變更會排入發佈例項的佇列，一旦重新上線，就會處理變更。
 
 如果發佈例項永遠不會重新上線，如果永久離線，則必須移除它，因為佇列累積會在製作環境中造成相當程度的磁碟空間使用。
 
-當發佈者關閉時，製作記錄會有類似下列的例外：
+當發佈例項關閉時，製作記錄會有類似下列的例外：
 
 ```
 28.01.2016 15:57:48.475 ERROR
@@ -565,14 +565,14 @@ ht-degree: 2%
  org.apache.sling.distribution.packaging.DistributionPackageImportException: failed in importing package ...
 ```
 
-### 如何移除發佈者 {#how-to-remove-a-publisher}
+### 如何移除發佈執行個體 {#how-to-remove-a-publish-instance}
 
-從 [Apache Sling Distribution Agent — 同步代理工廠](#apache-sling-distribution-agent-sync-agents-factory)，則分發隊列必須為空和安靜。
+若要從 [Apache Sling Distribution Agent — 同步代理工廠](#apache-sling-distribution-agent-sync-agents-factory)，則分發隊列必須為空和安靜。
 
 * 在作者上：
 
    * [讓使用者離線同步](#how-to-take-user-sync-offline)
-   * 追隨 [步驟7](#apache-sling-distribution-agent-sync-agents-factory) 要從兩個伺服器清單中刪除發佈者：
+   * 追隨 [步驟7](#apache-sling-distribution-agent-sync-agents-factory) 要從兩個伺服器清單中刪除發佈實例：
 
       * `Exporter Endpoints`
       * `Importer Endpoints`
