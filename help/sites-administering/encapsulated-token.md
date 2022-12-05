@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: 32e2a30d9f3327d26b81a07730ace04e4e68b0d1
+source-git-commit: f8d249f5d3fac243b4989c3eca4be2730dcf16ec
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -68,16 +68,12 @@ ht-degree: 0%
 
 ### 複製HMAC密鑰 {#replicating-the-hmac-key}
 
-HMAC密鑰以二進位屬性的形式存在 `/etc/key` 儲存庫中。 您可以按 **檢視** 連結旁：
-
-![chlimage_1-35](assets/chlimage_1-35a.png)
-
 若要跨執行個體復寫金鑰，您必須：
 
 1. 存取AEM例項，通常為製作例項，其中包含要複製的重要資料；
 1. 找出 `com.adobe.granite.crypto.file` 在本機檔案系統中捆綁。 例如，在此路徑下：
 
-   * &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
 
    此 `bundle.info` 每個資料夾內的檔案會識別套件組合名稱。
 

@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f453427d-c813-48b7-b2f9-adadea39c67d
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f841e3886771fb00eee6e476d7111d4a335a9d51
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 >
 >匿名使用者的發佈例項上沒有代號。
 
-## 需求 {#requirements}
+## 要求 {#requirements}
 
 ### 相依性 {#dependencies}
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ### 複製加密密鑰 {#replicating-crypto-keys}
 
-若要使用代號，您必須復寫 `/etc/keys/hmac` 二進位至部署中的所有執行個體。 將HMAC密鑰複製到所有實例的一個方便方法是建立包含密鑰的包，並通過包管理器在所有實例上安裝它。
+若要使用代號，您需要將HMAC二進位檔復寫至部署中的所有執行個體。 請參閱 [複製HMAC密鑰](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) 以取得更多詳細資訊。
 
 >[!NOTE]
 >
