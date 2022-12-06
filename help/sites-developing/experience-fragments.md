@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 6e54073a0c1d67218283b096db3f2e5597f10376
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1784'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,19 @@ ht-degree: 0%
 純格式副本選擇器使用變壓器，而不使用其他指令碼；the [Sling重寫器](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) 用作變壓器。 此設定於
 
 * `/libs/experience-fragments/config/rewriter/experiencefragments`
+
+### 設定HTML轉譯產生 {#configuring-html-rendition-generation}
+
+HTML轉譯是使用Sling Rewriter管道產生。 管道定義於 `/libs/experience-fragments/config/rewriter/experiencefragments`. HTML變壓器支援下列選項：
+
+* `allowedCssClasses`
+   * RegEx運算式，符合最終轉譯中應保留的CSS類別。
+   * 如果客戶想要移除某些特定CSS類別，這個功能會很實用
+* `allowedTags`
+   * 要在最終轉譯中允許的HTML標籤清單。
+   * 依預設，允許下列標籤（不需要設定）:html, head，標題， body, img, p, span, ul, li, a, b, i, em, strong, h1, h2, h3, h5, h6, br, noscript, div, link和script
+
+建議使用覆蓋來設定重寫器。 請參閱 [AEMas a Cloud Service中的覆蓋](/help/sites-developing/overlays.md)
 
 ## 社交變數 {#social-variations}
 
