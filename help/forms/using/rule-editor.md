@@ -10,16 +10,16 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 84ae92f889661a639e931b2a7ba9a999d5258841
+source-git-commit: 26403941129f3a80fdb3e9b964cb943a04b3bfa1
 workflow-type: tm+mt
-source-wordcount: '6794'
+source-wordcount: '6888'
 ht-degree: 0%
 
 ---
 
 # 適用性表單規則編輯器{#adaptive-forms-rule-editor}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使用者和開發人員針對最適化表單物件撰寫規則。 這些規則會根據預設條件、使用者輸入和表單上的使用者動作，定義要在表單物件上觸發的動作。 它有助於進一步簡化表單填寫體驗，確保準確性和速度。
 
@@ -572,6 +572,9 @@ AEM Forms會追蹤您上次用來撰寫規則的規則編輯器模式。 下次�
    1. 字串
    1. 數字
    1. 布林值
+   1. 範圍
+
+   範圍用於最適化表單的反向連結欄位。 當表單使用延遲載入時，您可以使用 `scope` 來存取其欄位。 在載入欄位時或欄位標示為全域時，您可以存取欄位。
 
    所有其他參數類型則分為上述其中一個類型。 不支援無。 請確定您選取上述其中一種類型。 類型不區分大小寫。 參數中不允許空格 `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
@@ -586,6 +589,29 @@ AEM Forms會追蹤您上次用來撰寫規則的規則編輯器模式。 下次�
    1. 布林值
 
    所有其他回訪類型則歸入上述其中一個類別。 不支援無。 請確定您選取上述其中一種類型。 傳回類型不區分大小寫。
+
+* **此**
+語法： 
+`@this currentComponent`
+
+   使用@this來參照已寫入規則的適用性表單元件。
+
+   下列範例是以欄位值為基礎。 在以下範例中，規則會隱藏表單中的欄位。 此 `this` 部分 `this.value` 是指寫入規則的基礎適用性表單元件。
+
+   ```
+      /**
+      * @function myTestFunction
+      * @this currentComponent
+      * @param {scope} scope in which code inside function will be executed.
+      */
+      myTestFunction = function (scope) {
+         if(this.value == "O"){
+               scope.age.visible = true;
+         } else {
+            scope.age.visible = false;
+         }
+      }
+   ```
 
 >[!NOTE]
 >
