@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 02afc4eb78acaacc40d3ba1830ccb1e9c3907d0f
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1877'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->客戶端上下文已被ContextHub取代。 如需詳細資訊，請參閱 [配置]ch-configuring.md)和 [開發人員](/help/sites-developing/contexthub.md) 檔案。
+>客戶端上下文已被ContextHub取代。 如需詳細資訊，請參閱 [配置](/help/sites-developing/ch-configuring.md) 和 [開發人員](/help/sites-developing/contexthub.md) 檔案。
 
 「用戶端內容」是一種機制，可提供您目前頁面和訪客的特定資訊。 可使用 **Ctrl-Alt-c** (windows)或 **control-option-c** (Mac):
 
