@@ -6,9 +6,9 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 461424de9158e14e251037004ea3590ed35bb4a0
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3584'
 ht-degree: 2%
 
 ---
@@ -121,7 +121,7 @@ File Data Store提供的效能比MongoDB更好，而且Mongo備份和還原操�
 
 ### 檔案資料存放區 {#file-data-store}
 
-這是 [FileDataStore](https://jackrabbit.apache.org/api/2.8/org/apache/jackrabbit/core/data/FileDataStore.html) 在傑克拉布2號。 它提供了將二進位資料作為普通檔案儲存在檔案系統上的方法。 它會使用 `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore` PID。
+這是 [FileDataStore](https://jackrabbit.apache.org/api/trunk/org/apache/jackrabbit/core/data/FileDataStore.html) 在傑克拉布2號。 它提供了將二進位資料作為普通檔案儲存在檔案系統上的方法。 它會使用 `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore` PID。
 
 可使用下列設定選項：
 
@@ -228,7 +228,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 >
 >S3連接器支援IAM用戶身份驗證和IAM角色身份驗證。 要使用IAM角色身份驗證，請忽略 `accessKey` 和 `secretKey` 值。 S3連接器將預設為 [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) 指派給例項。
 
-| 關鍵 | 說明 | 預設 | 必要 |
+| 金鑰 | 說明 | 預設 | 必要 |
 | --- | --- | --- | --- |
 | accessKey | 具有儲存桶訪問權限的IAM用戶的Access Key ID。 |  | 是，當不使用IAM角色時。 |
 | secretKey | 具有儲存桶訪問權限的IAM用戶的秘密訪問密鑰。 |  | 是，當不使用IAM角色時。 |
