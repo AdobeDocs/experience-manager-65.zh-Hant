@@ -1,19 +1,19 @@
 ---
-title: 在AEM中編輯外部SPA
+title: 在 AEM 中編輯外部 SPA
 description: 本檔案說明將獨立SPA上傳至AEM執行個體、新增可編輯的內容區段及啟用編寫的建議步驟。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 237de641ba02705f8171b1526946a4dc1b60b6a3
+source-git-commit: 90f3fb05581820167ea0dcf50fb23048609af31d
 workflow-type: tm+mt
-source-wordcount: '2392'
-ht-degree: 0%
+source-wordcount: '2446'
+ht-degree: 1%
 
 ---
 
-# 在AEM中編輯外部SPA {#editing-external-spa-within-aem}
+# 在 AEM 中編輯外部 SPA {#editing-external-spa-within-aem}
 
 在決定外部SPA和AEM之間要具備的整合層級時，您通常需要在AEM中編輯和檢視SPA。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 本檔案說明將獨立SPA上傳至AEM執行個體、新增可編輯的內容區段及啟用編寫的建議步驟。
 
@@ -358,6 +358,10 @@ mvn clean install -PautoInstallSinglePackage
 1. 確認是否在AEM中編輯頁面。
 
    * 將專案部署至AEM，並導覽至新建立的 `test` 頁面。 現在會呈現頁面內容，且AEM元件可編輯。
+
+## 架構限制 {#framework-limitations}
+
+RemotePage元件預期實施會提供類似的資產資訊清單 [找到。](https://github.com/shellscape/webpack-manifest-plugin) 不過，RemotePage元件僅通過測試與React框架（和Next.js通過remote-page-next元件）一起使用，因此不支援從其他框架(如Angular)遠程載入應用程式。
 
 ## 其他資源 {#additional-resources}
 
