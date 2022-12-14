@@ -1,8 +1,8 @@
 ---
 title: 修訂清除
 seo-title: Revision Cleanup
-description: 了解如何使用AEM 6.3中的修訂清除功能。
-seo-description: Learn how to use the Revision Cleanup functionality in AEM 6.3.
+description: 了解如何使用AEM 6.5中的修訂清除功能。
+seo-description: Learn how to use the Revision Cleanup functionality in AEM 6.5.
 uuid: 321f5038-44b0-4f1e-a1aa-2d29074eed70
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 550e7993f88367ec4b5c1d024dc742c087c1a9eb
+source-git-commit: b7f9b5256e07d4bfbc0c3454e8d2fe112ea650e8
 workflow-type: tm+mt
-source-wordcount: '5912'
+source-wordcount: '5918'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 每個對儲存庫的更新都會建立新的內容修訂。 因此，每次更新時，存放庫的大小都會增加。 為避免儲存庫增長失控，需要清理舊修訂版本以釋放磁碟資源。 此維護功能稱為修訂清除。 自AEM 6.0起，已可作為離線常式使用。
 
-AEM 6.3導入了名為「線上修訂清除」的線上版本。 與必須關閉AEM例項的離線修訂清除相比，當AEM例項上線時，可執行線上修訂清除。 「線上修訂清除」預設為開啟，這是執行修訂清除的建議方式。
+在AEM 6.3及更新版本中，引入了名為「線上修訂清除」的線上版本功能。 與必須關閉AEM例項的離線修訂清除相比，當AEM例項上線時，可執行線上修訂清除。 「線上修訂清除」預設為開啟，這是執行修訂清除的建議方式。
 
 **附註**: [請參閱影片](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/revision-cleanup-technical-video-use.html) 以了解簡介及如何使用「線上修訂清除」。
 
@@ -162,16 +162,16 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>仍支援舊版Tar格式嗎？</strong></td>
-   <td>AEM 6.3僅支援新的Oak Segment Tar。</td>
+   <td>AEM 6.3或更新版本僅支援新的Oak Segment Tar。</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>內容移轉一律為強制項目嗎？</strong></td>
-   <td>是。 除非您從最新的例項開始，否則您永遠必須移轉內容。</td>
+   <td>可以。除非您從最新的例項開始，否則您永遠必須移轉內容。</td>
    <td> </td>
   </tr>
   <tr>
-   <td><strong>我可以升級至6.3，稍後再進行移轉（例如，使用其他維護視窗）嗎？</strong></td>
+   <td><strong>我是否可升級至6.3或更新版本，稍後再進行移轉（例如，使用其他維護視窗）?</strong></td>
    <td>否，如上所述，內容移轉是強制性的。</td>
    <td> </td>
   </tr>
@@ -249,7 +249,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>執行線上修訂清除之前是否有任何先決條件？</strong></td>
-   <td><p>「線上修訂清除」僅適用於AEM 6.3和更新版本。 此外，如果您使用舊版AEM，則需要移轉至新 <a href="/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar">Oak Segment Tar</a>.</p> </td>
+   <td><p>「線上修訂清除」僅適用於AEM 6.3及更新版本。 此外，如果您使用舊版AEM，則需要移轉至新 <a href="/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar">Oak Segment Tar</a>.</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -309,7 +309,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>如果效能影響太大，是否可以安全地中止自動壓縮？</strong></td>
-   <td>是。 自AEM 6.3起，它可通過Operations Dashboard中的Maintenance Task Window或JMX安全地停止。</td>
+   <td>可以。自AEM 6.3起，它可通過Operations Dashboard中的Maintenance Task Window或JMX安全地停止。</td>
    <td> </td>
   </tr>
   <tr>
@@ -522,7 +522,7 @@ TarMK GC: no base state available, running full compaction instead
   <tr>
     <th>階段</th>
     <th>記錄訊息</th>
-    <th>說明</th>
+    <th>解釋</th>
     <th>後續步驟</th>
   </tr>  
   <tr>
