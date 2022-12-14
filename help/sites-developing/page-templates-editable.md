@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 2801ef5ec5ed7b01f4eb046baa439f6d5de56b75
+source-git-commit: d30bfb9e67d0a2a0e870ee0841ed14060def7756
 workflow-type: tm+mt
-source-wordcount: '3249'
+source-wordcount: '3252'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 1%
 >
 >[靜態範本](/help/sites-developing/page-templates-static.md) 也可供使用。
 
-本文檔：
+本文件:
 
 * 提供建立可編輯範本的概觀
 
@@ -183,7 +183,7 @@ ht-degree: 1%
 * 以程式設計方式或使用CRXDE Lite
 * 使用設定瀏覽器
 
-## 使用CRXDE Lite {#using-crxde-lite}
+## 使用 CRXDE Lite {#using-crxde-lite}
 
 1. 可以以程式設計方式或使用CRXDE Lite為執行個體建立新資料夾（在/conf下）。
 
@@ -435,7 +435,7 @@ ht-degree: 1%
 1. 建立範本，如同處理任何可編輯的範本 [這裡記載的](/help/sites-authoring/templates.md#creating-a-new-template-template-author)，這將作為範本類型的基礎。
 1. 使用CRXDE Lite，從 `templates` 節點 `template-types` 節點 [範本資料夾](/help/sites-developing/page-templates-editable.md#template-folders).
 1. 從 `templates` 節點 [範本資料夾](/help/sites-developing/page-templates-editable.md#template-folders).
-1. 在位於 `template-types` 節點，全部刪除 `cq:template` 和 `cq:templateType` `jcr:content` 屬性。
+1. 在位於 `template-types` 節點，全部刪除 `cq:template` 和 `cq:templateType` 全部屬性 `jcr:content` 節點。
 
 您也可以使用可編輯範本範例來開發自己的範本類型，此範本可在GitHub上取得。
 
