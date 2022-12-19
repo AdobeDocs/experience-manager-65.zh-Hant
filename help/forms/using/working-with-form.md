@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 8a5e038e-b39a-41de-88a0-47642e5bd5bf
 exl-id: adff5339-e026-4924-a401-f249f37fc6e6
-source-git-commit: 3c691a9e8673f3229368abbd550982d207eb8ac6
+source-git-commit: eb71119474f03a969a721c792b6f1ac330f9dbf3
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 如果您的AFA(AEM表單應用程式)Android應用程式無法同步，請執行下列步驟以修正同步問題：
 
-1. 前往 **https://&#39;[伺服器]:[埠]&#39;system/console/configMgr**.
+1. 前往 **https://[伺服器]:[埠]/system/console/configMgr**.
 1. 搜尋 **[!UICONTROL AdobeGranite代號驗證處理常式]** 按一下 **[!UICONTROL 編輯]**.
 1. 選取 **[!UICONTROL 無]** 選項(位於 **[!UICONTROL 登入代號Cookie的SameSite屬性]** 屬性。
 1. 按一下「**[!UICONTROL 儲存]**」。
