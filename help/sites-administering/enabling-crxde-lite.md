@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a4183bb9d72763ebea3b464c77fce978c723e053
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 0%
+source-wordcount: '258'
+ht-degree: 1%
 
 ---
 
@@ -30,6 +30,16 @@ ht-degree: 0%
 ```
 
 雖然此建議旨在盡可能減少攻擊面，但系統管理員有時需要存取CRXDE Lite，才能瀏覽生產執行個體的內容或除錯問題。
+
+您可以使用 [OSGi設定](#enabling-crxde-lite-osgi) 或 [cURL命令](#enabling-crxde-lite-curl).
+
+>[!WARNING]
+>
+>由於這些方法的運作方式稍有差異，您應使用 ***heer*** OSGI ***或*** cURL。
+>
+>兩種方法為 ***not*** 可互換。
+
+## 使用OSGI啟用CRXDE Lite {#enabling-crxde-lite-osgi}
 
 如果禁用，則可以按照以下過程開啟CRXDE Lite:
 
@@ -48,6 +58,8 @@ ht-degree: 0%
    * 勾選下方的方塊 **使用絕對URI**.
 
 1. 使用完CRXDE Lite後，請務必再次停用WebDAV。
+
+## 使用cURL啟用CRXDE Lite {#enabling-crxde-lite-curl}
 
 您也可以執行以下命令，透過cURL啟用CRXDE Lite:
 
