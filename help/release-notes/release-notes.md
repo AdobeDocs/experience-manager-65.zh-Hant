@@ -3,9 +3,9 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: a0e9bfd4bcbf7091d5537c6d88025ef4d6046b4d
+source-git-commit: 214c5e27567a515837c0ab52601f3491a9144120
 workflow-type: tm+mt
-source-wordcount: '3989'
+source-wordcount: '3946'
 ht-degree: 2%
 
 ---
@@ -109,7 +109,7 @@ ht-degree: 2%
 ### 主要功能 {#keyfeatures}
 
 * AEM Forms Designer現在可在 [西班牙語地區](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). (LC-3920051)
-* 您現在可以使用 [OAuth2用於通過Microsoft Office 365郵件伺服器協定（SMTP和IMAP）進行身份驗證](/help/forms/using/oauth2-support-for-mail-service.md). (NPR-35177)
+* 您現在可以使用 [OAuth2用Microsoft® Office 365郵件伺服器協定（SMTP和IMAP）進行驗證](/help/forms/using/oauth2-support-for-mail-service.md). (NPR-35177)
 * 您可以設定 [在伺服器上重新驗證](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br) 屬性設為true ，以識別伺服器端之記錄檔案中要排除的隱藏欄位。 (NPR-38149)
 * AEM Forms Designer需要32位元版本的Visual C++ 2019 Redistributable(x86)。  (NPR-36690)
 
@@ -141,14 +141,14 @@ ht-degree: 2%
 * 當XDP呈現為HTML5表單時，無論對象在適用性表單中的位置如何，都會先呈現首頁的內容。 (CQ-4345218)
 * 目標伺服器上的應用程式配置將更改為源伺服器上定義的設定，即使 **完成匯入時覆寫設定** 匯入應用程式時未核取選項。 (NPR-39044)
 * 當使用者嘗試使用Configuration Manager更新連接器組態時，會失敗。(CQ-4347077)
-* 當使用者在變更管理員使用者的預設密碼後，嘗試在JEE修補程式上執行AEM Forms時，會發生例外狀況 `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 發生。 (CQ-4348277)
+* 當使用者在變更管理員使用者的預設密碼後，嘗試在JEE修補程式上執行AEM表單時，會發生例外狀況 `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 發生。 (CQ-4348277)
 * 在AEM Designer中，沒有標題的表單欄位會放置在表格儲存格中，包括核取方塊。(LC-3920410)
 * 當使用者嘗試在AEM Forms Designer中開啟「說明」時，無法正確顯示。 (CQ-4341996)
 
 ## [!DNL Sites] {#sites-6515}
 
 * Experience Manager Sites啟動主控台的顯示為空白。 (NPR-39188)
-* 在頁面移動期間，也需要啟動具有參考的頁面時，參考未經過調整。 (NPR-39061)
+* 在頁面移動期間，也需要啟動具有參考的頁面時，參考未經調整。 (NPR-39061)
 * 使用父容器取消隱藏「配置」容器時，配置變更不會套用至巢狀容器內的所有元件。 (NPR-39041)
 * 以320像素寬度顯示的內容現在不再與其他內容重疊。 (SITES-8885)
 * 關閉對話方塊後新增焦點。 (SITES-8885)
@@ -166,7 +166,7 @@ ht-degree: 2%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQL提出了一個例外。 例如，您無法從內容片段取得變異標籤。 「電氣」的名稱沒有變化。 此問題是由於呼叫 `getVariationTags` 對於引發例外的非現有變數。 (SITES-8898)
+* GraphQL引發異常。 例如，您無法從內容片段取得變異標籤。 「電氣」的名稱沒有變化。 此問題是由於呼叫 `getVariationTags` 對於引發例外的非現有變數。 (SITES-8898)
 * 在「清單」檢視中排序標題順序（升序和降序），標題的順序為A、C、B。(SITES-7585)
 * 新增內容片段變異的標籤支援。 (SITES-8168)
 * 從Experience Manager6.5中識別並移除不必要的Odin特定程式碼。 (SITES-3574)
@@ -221,15 +221,6 @@ ht-degree: 2%
 
 ### 在上安裝Service Pack [!DNL Experience Manager] 6.5 {#install-service-pack}
 
->[!NOTE]
->
-> 安裝最新版本之前 [AEM 6.5.15.0 service pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，請執行下列步驟：
-> 1. 安裝 [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet片段。
-> 1. 等待應用程式伺服器穩定。
-> 1. 安裝 [AEM 6.5.15.0 service pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip).
-
-
-
 1. 如果執行個體處於更新模式（從舊版更新執行個體時），請先重新啟動執行個體再進行安裝。 Adobe建議，如果執行個體的目前正常運行時間很長，則重新啟動。
 
 1. 安裝之前，請拍攝快照或對 [!DNL Experience Manager] 例項。
@@ -269,7 +260,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您安裝了 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip),CRX/套件組合和開始頁面會顯示服務無法使用的錯誤， [按一下這裡](/help/forms/using/aem-service-pack-installation-solution.md).
+>如果您安裝了 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip),CRX/套件組合和開始頁面會顯示服務無法使用的錯誤， [按一下這裡](/help/forms/using/aem-service-pack-installation-solution.md) 以了解疑難排解步驟。
 
 
 ### 安裝 [!DNL Experience Manager] Forms附加元件套件 {#install-aem-forms-add-on-package}
@@ -293,11 +284,13 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 >
 >如果您沒有在JEE上使用AEM Forms，請略過。 中的修正 [!DNL Experience Manager] Forms on JEE是透過個別安裝程式提供。
 
-有關為安裝累積安裝程式的資訊 [!DNL Experience Manager] Forms on JEE和部署後設定，請參閱 [發行說明](jee-patch-installer-65.md).
+使用JBoss EAP 7.4.0以外的任何應用程式伺服器，對JEE環境上的所有AEM Forms執行以下步驟。
 
->[!NOTE]
->
->安裝的累積安裝程式後 [!DNL Experience Manager] Forms（在JEE上），安裝最新的Service Pack。 成功安裝Service Pack後，請安裝最新的Forms附加元件套件，從 `crx-repository\install` ，然後重新啟動伺服器。
+1. 安裝的累積安裝程式 [!DNL Experience Manager] Forms on JEE和部署後設定，請參閱 [發行說明](jee-patch-installer-65.md).
+
+1. 安裝 [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet片段，並等待應用程式伺服器穩定。
+1. 安裝 [AEM 6.5.15.0 service pack](#install-service-pack).
+1. 安裝 [最新Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，請從 `crx-repository\install` ，然後重新啟動伺服器。
 
 ### UberJar {#uber-jar}
 
@@ -322,7 +315,7 @@ UberJar [!DNL Experience Manager] 6.5.15.0可在 [Maven Central存放庫](https:
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
