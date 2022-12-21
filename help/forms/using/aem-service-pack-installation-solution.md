@@ -1,9 +1,9 @@
 ---
 title: 安裝最新的6.5.15.0 Service Pack後，CRX/套件組合和啟動頁面服務無法使用的錯誤
 description: 安裝最新的6.5.15.0 Service Pack後，CRX/套件組合和啟動頁面服務無法使用的錯誤
-source-git-commit: be7a9cfc226537ab4b360064220fa03bf2045310
+source-git-commit: f5bf33e0a2ff73b8884a55bbe77e87ee991aeef9
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '344'
 ht-degree: 2%
 
 ---
@@ -37,10 +37,9 @@ ht-degree: 2%
 
 1. 導航到網址: `[aem-forms root]\crx-repository\launchpad\felix\bundle[x]\version0.1`.
 1. 搜尋 `bundle.jar` 並重新命名 `bundle.jar` to `bundle.jar.bak`.
-1. 複製 `bundle.jar` 從 [Software Distribution](https://jira.corp.adobe.com/secure/attachment/9402702/bundle.jar).
+1. 複製 `bundle.jar` 從 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
 1. 啟動應用程式伺服器，等待日誌穩定並檢查捆綁狀態。
-1. 所有套件組合都處於啟動狀態後，請安裝 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` 來自的servlet片段 `system/console/bundles` 從 [軟體分發。](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
-1. 同樣，請等待應用程式伺服器穩定。
+1. 所有套件組合都處於啟動狀態後，請安裝 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` 來自的servlet片段 `system/console/bundles` 從 [軟體分發。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 等待應用伺服器穩定。
 1. 停止應用程式伺服器。
 1. 導覽至 `[aem-forms root]\crx-repository\launchpad\felix\bundle52\version0.1` 和刪除 `bundle.jar`.
 1. 重新命名 `bundle.jar.bak` 到 `bundle.jar`.
