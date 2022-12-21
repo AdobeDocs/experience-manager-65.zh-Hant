@@ -3,9 +3,9 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: b383f9c55e1066666254f9fa788fd19fe23a4d41
+source-git-commit: c98ca7cafd559aaf0b0b889f8f03690de880e944
 workflow-type: tm+mt
-source-wordcount: '3974'
+source-wordcount: '3975'
 ht-degree: 2%
 
 ---
@@ -166,7 +166,7 @@ ht-degree: 2%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQL提出了一個例外。 例如，您無法從內容片段取得變異標籤。 「電氣」的名稱沒有變化。 此問題是由於呼叫 `getVariationTags` 對於引發例外的非現有變數。 (SITES-8898)
+* GraphQL引發異常。 例如，您無法從內容片段取得變異標籤。 「電氣」的名稱沒有變化。 此問題是由於呼叫 `getVariationTags` 對於引發例外的非現有變數。 (SITES-8898)
 * 在「清單」檢視中排序標題順序（升序和降序），標題的順序為A、C、B。(SITES-7585)
 * 新增內容片段變異的標籤支援。 (SITES-8168)
 * 從Experience Manager6.5中識別並移除不必要的Odin特定程式碼。 (SITES-3574)
@@ -315,7 +315,7 @@ UberJar [!DNL Experience Manager] 6.5.15.0可在 [Maven Central存放庫](https:
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
@@ -327,8 +327,8 @@ UberJar [!DNL Experience Manager] 6.5.15.0可在 [Maven Central存放庫](https:
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [AEM內容片段搭配GraphQL索引套件1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-使用GraphQL的客戶需要此軟體包；這可讓使用者根據實際使用的功能，新增所需的索引定義。
+* [AEM內容片段，含GraphQL索引套件1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+使用GraphQL的客戶需要此套件；這可讓使用者根據實際使用的功能，新增所需的索引定義。
 
 * As [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL AEM Forms 6.5.10.0].
 
