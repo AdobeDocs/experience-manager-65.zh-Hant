@@ -12,7 +12,7 @@ discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 role: Admin
 exl-id: 6430ed96-5d96-41b6-866f-90b34ff84f7a
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 42feafa381c129117dae5345255702f0b0951a17
 workflow-type: tm+mt
 source-wordcount: '815'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 另請參閱 [SRP選項的特點](/help/communities/working-with-srp.md#characteristics-of-srp-options) 和 [建議的拓撲](/help/communities/topologies.md).
 
-## 需求 {#requirements}
+## 要求 {#requirements}
 
 使用ASRP需要額外的許可。
 
@@ -97,7 +97,7 @@ ASRP必須識別為所有製作和發佈執行個體上的通用存放區。
 
 在AEM Author例項上：
 
-* 從主功能表導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 復寫]**
+* 從主功能表導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]**
 * 選擇 **激活樹**
 * **起始路徑**:瀏覽 `/conf/global/settings/communities/srpc/`
 * 取消選擇 **僅已修改**
