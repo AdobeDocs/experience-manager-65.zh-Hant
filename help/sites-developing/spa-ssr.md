@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 1ee82589ca9284a8ad5ecf3ca156fe10f314846a
 workflow-type: tm+mt
 source-wordcount: '1754'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 >
 >AEM 6.5.1.0或更新版本是使用SPA伺服器端轉譯功能的必要條件，如本檔案所述。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 單頁應用程式(SPA)可為使用者提供豐富的動態體驗，以熟悉的方式回應和運作，通常就像原生應用程式。 [這是通過依靠客戶端將內容預先載入，然後進行用戶交互的繁重提升來實現的](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) 從而將客戶端與伺服器之間所需的通訊量降至最低，使應用程式更具反應性。
 
@@ -170,7 +170,7 @@ AEM中的SPA適用的SSR需要Adobe I/O Runtime，這是轉譯應用程式內容
 正如AEM可立即支援Angular和React SPA架構，Angular和React應用程式也支援伺服器端轉譯。 如需詳細資訊，請參閱這兩個架構的NPM檔案。
 
 * React: [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
-* Angular: [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
+* Angular: [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/angular-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/angular-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
 
 如需簡單化的範例，請參閱 [We.Retail Journal應用程式](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal). 它會呈現整個應用程式伺服器端。 雖然這不是現實中的例子，但它確實說明了實施SSR需要什麼。
 
