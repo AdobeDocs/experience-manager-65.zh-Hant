@@ -3,7 +3,7 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: e73a65569963a5f60f7a4670998ada29deeb26b8
+source-git-commit: a27e460a19d3f986ee87b33263b8db1e45897497
 workflow-type: tm+mt
 source-wordcount: '4036'
 ht-degree: 2%
@@ -148,7 +148,7 @@ ht-degree: 2%
 ## [!DNL Sites] {#sites-6515}
 
 * Experience Manager Sites啟動主控台的顯示為空白。 (NPR-39188)
-* 在頁面移動期間，也需要啟動具有參考的頁面時，參考未經調整。 (NPR-39061)
+* 在頁面移動期間，也需要啟動具有參考的頁面時，參考未經過調整。 (NPR-39061)
 * 使用父容器取消隱藏「配置」容器時，配置變更不會套用至巢狀容器內的所有元件。 (NPR-39041)
 * 以320像素寬度顯示的內容現在不再與其他內容重疊。 (SITES-8885)
 * 關閉對話方塊後新增焦點。 (SITES-8885)
@@ -288,6 +288,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
    >[!NOTE]
    >
    >如果您安裝了 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，安裝之前 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 在JEE環境上的AEM 6.5 Forms上，CRX/套件和開始頁面可能會停止運作，而您會遇到服務無法使用錯誤。 若要解決問題，請執行動作 [此處列出](/help/forms/using/aem-service-pack-installation-solution.md).
+
 1. 安裝 [最新Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，請從 `crx-repository\install` ，然後重新啟動伺服器。
 
 ### UberJar {#uber-jar}
