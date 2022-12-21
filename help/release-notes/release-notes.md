@@ -3,9 +3,9 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: 5d04a479001c5ea6423599969b39a4697a2da590
+source-git-commit: 3e0380e85c300305cbb97e4d0a0918a60542610b
 workflow-type: tm+mt
-source-wordcount: '3974'
+source-wordcount: '3970'
 ht-degree: 2%
 
 ---
@@ -148,7 +148,7 @@ ht-degree: 2%
 ## [!DNL Sites] {#sites-6515}
 
 * Experience Manager Sites啟動主控台的顯示為空白。 (NPR-39188)
-* 在頁面移動期間，也需要啟動具有參考的頁面時，參考未經過調整。 (NPR-39061)
+* 在頁面移動期間，也需要啟動具有參考的頁面時，參考未經調整。 (NPR-39061)
 * 使用父容器取消隱藏「配置」容器時，配置變更不會套用至巢狀容器內的所有元件。 (NPR-39041)
 * 以320像素寬度顯示的內容現在不再與其他內容重疊。 (SITES-8885)
 * 關閉對話方塊後新增焦點。 (SITES-8885)
@@ -166,7 +166,7 @@ ht-degree: 2%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQL引發異常。 例如，您無法從內容片段取得變異標籤。 「電氣」的名稱沒有變化。 此問題是由於呼叫 `getVariationTags` 對於引發例外的非現有變數。 (SITES-8898)
+* GraphQL提出了一個例外。 例如，您無法從內容片段取得變異標籤。 「電氣」的名稱沒有變化。 此問題是由於呼叫 `getVariationTags` 對於引發例外的非現有變數。 (SITES-8898)
 * 在「清單」檢視中排序標題順序（升序和降序），標題的順序為A、C、B。(SITES-7585)
 * 新增內容片段變異的標籤支援。 (SITES-8168)
 * 從Experience Manager6.5中識別並移除不必要的Odin特定程式碼。 (SITES-3574)
@@ -258,10 +258,6 @@ ht-degree: 2%
 
 1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.13版或更新版本(使用Web控制台： `/system/console/bundles`)。 <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
->[!NOTE]
->
->如果您安裝了 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，在片段servlet之前 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` 若為JEE上的AEM Forms環境，CRX/套件組合和開始頁面會顯示服務無法使用的錯誤， [按一下這裡](/help/forms/using/aem-service-pack-installation-solution.md) 以了解疑難排解步驟。
-
 ### 安裝 [!DNL Experience Manager] Forms附加元件套件 {#install-aem-forms-add-on-package}
 
 >[!NOTE]
@@ -289,6 +285,11 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 1. 安裝 [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet片段，等待應用程式伺服器穩定。
 1. 安裝 [AEM 6.5.15.0 service pack](#install-service-pack).
+
+   >[!NOTE]
+   >
+   >如果您安裝了 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，在片段servlet之前 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` 在JEE環境中，CRX/套件組合和開始頁面會顯示服務無法使用的錯誤 [按一下這裡](/help/forms/using/aem-service-pack-installation-solution.md) 以了解疑難排解步驟。
+
 1. 安裝 [最新Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，請從 `crx-repository\install` ，然後重新啟動伺服器。
 
 ### UberJar {#uber-jar}
@@ -327,7 +328,7 @@ UberJar [!DNL Experience Manager] 6.5.15.0可在 [Maven Central存放庫](https:
  -->
 
 * [AEM內容片段搭配GraphQL索引套件1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-使用GraphQL的客戶需要此軟體包；這可讓使用者根據實際使用的功能，新增所需的索引定義。
+使用GraphQL的客戶需要此套件；這可讓使用者根據實際使用的功能，新增所需的索引定義。
 
 * As [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL AEM Forms 6.5.10.0].
 
