@@ -3,9 +3,9 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: 3e0380e85c300305cbb97e4d0a0918a60542610b
+source-git-commit: b383f9c55e1066666254f9fa788fd19fe23a4d41
 workflow-type: tm+mt
-source-wordcount: '3970'
+source-wordcount: '3974'
 ht-degree: 2%
 
 ---
@@ -148,7 +148,7 @@ ht-degree: 2%
 ## [!DNL Sites] {#sites-6515}
 
 * Experience Manager Sites啟動主控台的顯示為空白。 (NPR-39188)
-* 在頁面移動期間，也需要啟動具有參考的頁面時，參考未經調整。 (NPR-39061)
+* 在頁面移動期間，也需要啟動具有參考的頁面時，參考未經過調整。 (NPR-39061)
 * 使用父容器取消隱藏「配置」容器時，配置變更不會套用至巢狀容器內的所有元件。 (NPR-39041)
 * 以320像素寬度顯示的內容現在不再與其他內容重疊。 (SITES-8885)
 * 關閉對話方塊後新增焦點。 (SITES-8885)
@@ -283,12 +283,12 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 1. 安裝的累積安裝程式 [!DNL Experience Manager] Forms on JEE和部署後設定，請參閱 [發行說明](jee-patch-installer-65.md).
 
-1. 安裝 [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet片段，等待應用程式伺服器穩定。
+1. 安裝 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet片段，等待應用程式伺服器穩定。
 1. 安裝 [AEM 6.5.15.0 service pack](#install-service-pack).
 
    >[!NOTE]
    >
-   >如果您安裝了 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，在片段servlet之前 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` 在JEE環境中，CRX/套件組合和開始頁面會顯示服務無法使用的錯誤 [按一下這裡](/help/forms/using/aem-service-pack-installation-solution.md) 以了解疑難排解步驟。
+   >如果您安裝了 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，在 `Fragment for AEM 6.5 Forms on JEE Service Pack 15` 在JEE環境中，CRX/套件組合和開始頁面會顯示服務無法使用的錯誤 [按一下這裡](/help/forms/using/aem-service-pack-installation-solution.md) 以了解疑難排解步驟。
 
 1. 安裝 [最新Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，請從 `crx-repository\install` ，然後重新啟動伺服器。
 
@@ -315,7 +315,7 @@ UberJar [!DNL Experience Manager] 6.5.15.0可在 [Maven Central存放庫](https:
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
@@ -328,7 +328,7 @@ UberJar [!DNL Experience Manager] 6.5.15.0可在 [Maven Central存放庫](https:
  -->
 
 * [AEM內容片段搭配GraphQL索引套件1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-使用GraphQL的客戶需要此套件；這可讓使用者根據實際使用的功能，新增所需的索引定義。
+使用GraphQL的客戶需要此軟體包；這可讓使用者根據實際使用的功能，新增所需的索引定義。
 
 * As [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL AEM Forms 6.5.10.0].
 
