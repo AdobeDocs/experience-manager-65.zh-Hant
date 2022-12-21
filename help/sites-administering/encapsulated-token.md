@@ -10,7 +10,7 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: f8d249f5d3fac243b4989c3eca4be2730dcf16ec
+source-git-commit: ed2cb35593780cd627c15f493e58d3b68c55519b
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 0%
@@ -73,18 +73,18 @@ ht-degree: 0%
 1. 存取AEM例項，通常為製作例項，其中包含要複製的重要資料；
 1. 找出 `com.adobe.granite.crypto.file` 在本機檔案系統中捆綁。 例如，在此路徑下：
 
-   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25`
 
    此 `bundle.info` 每個資料夾內的檔案會識別套件組合名稱。
 
 1. 導覽至資料夾。 例如：
 
-   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
 1. 複製HMAC和主檔案。
 1. 接著，前往您要複製HMAC金鑰的目標執行個體，並導覽至資料夾。 例如：
 
-   * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+   * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
 1. 貼上您先前複製的兩個檔案。
 1. [刷新加密包](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) 如果目標實例已在運行。
