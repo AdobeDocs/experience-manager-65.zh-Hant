@@ -3,9 +3,9 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: a27e460a19d3f986ee87b33263b8db1e45897497
+source-git-commit: d3b830730ef06fb9968a46d6f26a275417cf36f0
 workflow-type: tm+mt
-source-wordcount: '4036'
+source-wordcount: '4046'
 ht-degree: 2%
 
 ---
@@ -144,6 +144,7 @@ ht-degree: 2%
 * 當使用者在變更管理員使用者的預設密碼後，嘗試在JEE修補程式上執行AEM表單時，會發生例外狀況 `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 發生。 (CQ-4348277)
 * 在AEM Designer中，沒有標題的表單欄位會放置在表格儲存格中，包括核取方塊。(LC-3920410)
 * 當使用者嘗試在AEM Forms Designer中開啟「說明」時，無法正確顯示。 (CQ-4341996)
+* 具有多個地區設定的適用性Forms載入速度緩慢。 (NPR-39176)
 
 ## [!DNL Sites] {#sites-6515}
 
@@ -166,7 +167,7 @@ ht-degree: 2%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQL提出了一個例外。 例如，您無法從內容片段取得變異標籤。 「電氣」的名稱沒有變化。 此問題是由於呼叫 `getVariationTags` 對於引發例外的非現有變數。 (SITES-8898)
+* GraphQL引發異常。 例如，您無法從內容片段取得變異標籤。 「電氣」的名稱沒有變化。 此問題是由於呼叫 `getVariationTags` 對於引發例外的非現有變數。 (SITES-8898)
 * 在「清單」檢視中排序標題順序（升序和降序），標題的順序為A、C、B。(SITES-7585)
 * 新增內容片段變異的標籤支援。 (SITES-8168)
 * 從Experience Manager6.5中識別並移除不必要的Odin特定程式碼。 (SITES-3574)
@@ -326,7 +327,7 @@ UberJar [!DNL Experience Manager] 6.5.15.0可在 [Maven Central存放庫](https:
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [AEM內容片段，含GraphQL索引套件1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+* [AEM內容片段搭配GraphQL索引套件1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 使用GraphQL的客戶需要此套件；這可讓使用者根據實際使用的功能，新增所需的索引定義。
 
 * As [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL AEM Forms 6.5.10.0].
