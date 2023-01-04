@@ -2,9 +2,9 @@
 title: Reader擴充功能憑證的到期日及其影響
 description: Reader擴充功能憑證的到期日及其影響
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: 5f8061ebd2143f11567ac5b78162bdd02106d2e3
+source-git-commit: 6e9a7f3307ed05f887d60c7c7310100cd4596b23
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1121'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 2%
 
 Adobe Experience Manager Forms(AEM Forms)擁有Adobe Managed Services或內部部署企業基礎授權的客戶，有權使用Acrobat Reader DC擴充功能服務。 此服務可讓組織透過擴充Acrobat Reader的功能與其他使用權限，輕鬆共用互動式PDF檔案。 該服務向PDF文檔添加使用權限，並激活在使用Adobe Acrobat Reader開啟PDF文檔時不可用的功能，如向文檔添加註釋、填寫表單和保存文檔。 協力廠商使用者不需要其他軟體或外掛程式，即可使用啟用權限的檔案。 添加了使用權限的PDF文檔稱為啟用權限的文檔。 在Acrobat Reader中開啟啟用權限的PDF文檔的用戶可以執行為該文檔啟用的操作。
 
-Adobe利用公鑰基礎設施(PKI)發放用於許可和功能啟用的數字證書。 Adobe已根據憑證授權單位「Adobe根CA」核發憑證，該憑證設定於2023年1月7日到期。 現在提供新的憑證授權單位「Adobe根CA G2」，以及以新憑證授權單位為基礎的憑證。
+Adobe利用公鑰基礎設施(PKI)發放用於許可和功能啟用的數字證書。 Adobe一直在憑證機構簽發證書 **Adobe根CA**，該服務將於2023年1月7日到期。 憑證的過期不會影響使用下列產品核發的生產憑證延長的PDF檔案： **Adobe根CA** 基於證書（舊證書）。 所有PDF檔案(使用2023年1月7日之前的舊憑證延長的Reader，包括客戶下載的憑證)都會繼續使用套用至這些檔案的所有使用權限，且不需要任何更新。
 
-2023年1月7日後，舊憑證(以「Adobe根CA」為基礎的憑證)將無法繼續運作。 Adobe建議您開始使用新憑證(以「Adobe根CA G2」為基礎的憑證)，以Reader在2023年1月7日或之前延長PDF檔案。  您可以 [從Adobe授權網站取得新憑證](https://licensing.adobe.com/) 或Adobe支援。
-
-所有PDF檔案(使用2023年1月7日之前的舊版憑證延期的Reader，包括客戶下載的憑證)都會繼續使用套用至這些檔案的所有使用權限，且不需要任何更新。
+新的證書頒發機構， **Adobe根CA G2**&#x200B;現在提供以新憑證授權為基礎的、和憑證。 2023年1月7日或之前，開始使用新憑證，這些憑證以 **Adobe根CA G2** —Reader擴展新PDF文檔。  您可以 [從Adobe授權網站取得新憑證](https://licensing.adobe.com/) 或Adobe支援。
 
 ## 常見問答
 
@@ -30,7 +28,7 @@ A.Adobe根CA是核發Acrobat Reader擴充功能憑證的憑證機構。 2023年1
 
 A.根據對情況的重新評估，2023年1月7日之前使用舊的&quot;Adobe根CA&quot;簽發的生產證書延期的所有PDF檔案在2023年1月7日之後仍可繼續運作，且無任何變更。 如果您已更新PDF檔案，體驗不會有任何變更。
 
-**如果有其他問題，應該聯絡誰？**
+**如果有其他問題，我應該聯絡誰？**
 
 A.您可以聯絡 [Adobe支援](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support) 或提供支援票。
 
@@ -56,7 +54,7 @@ A.Adobe Acrobat Reader 2020或更新版本必須使用以「Adobe根CA」（舊�
 
 **問：若要繼續使用以「Adobe根CA 2」（新憑證授權單位）核發的憑證擴充的PDF檔案，需要使用哪個Adobe Acrobat Reader版本？**
 
-A.Adobe Acrobat Reader 2020或更新版本必須使用以「Adobe根CA 2」（新憑證授權單位）擴充的PDF檔案。 如果您使用 [不支援的Adobe Acrobat Reader版本](https://helpx.adobe.com/support/programs/eol-matrix.html),Adobe建議您 [下載並安裝最新版Adobe Acrobat Reader](https://get.adobe.com/reader/).
+A.Adobe Acrobat Reader 2020或更新版本必須使用以「Adobe根CA 2」（新憑證授權單位）擴充的PDF檔案。 如果您使用 [不支援的Adobe Acrobat Reader版本](https://helpx.adobe.com/tw/support/programs/eol-matrix.html),Adobe建議您 [下載並安裝最新版Adobe Acrobat Reader](https://get.adobe.com/reader/).
 
 **問：我可以刪除舊的Acrobat Reader擴充功能憑證，並在Adobe Experience Manager Forms伺服器上新增憑證，同時繼續使用現有的別名嗎？**
 
