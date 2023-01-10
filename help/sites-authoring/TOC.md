@@ -11,7 +11,7 @@ role: User
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
 source-wordcount: '291'
-ht-degree: 47%
+ht-degree: 48%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 47%
    + [搜尋](search.md)
    + [設定帳戶環境](user-properties.md)
    + [您的收件匣](inbox.md)
-   + [控制台的鍵盤快速鍵](keyboard-shortcuts.md)
+   + [鍵盤快速鍵 控制台](keyboard-shortcuts.md)
    + [選取您的UI](select-ui.md)
 + 製作 {#authoring}
    + [製作環境和工具](author-environment-tools.md)
@@ -80,7 +80,7 @@ ht-degree: 47%
    + [內容分析](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/content-insights.html)
    + [分析頁面效能](ci-analyze.md)
    + [查看頁面分析資料](pa-using.md)
-+ 個性化 {#personalization}
++ 個人化 {#personalization}
    + [個人化](personalization.md)
    + [使用 ContextHub 資料預覽頁面](ch-previewing.md)
    + [使用定位模式製作目標內容](content-targeting-touch.md)
@@ -89,7 +89,7 @@ ht-degree: 47%
    + [管理活動](activitylib.md)
    + [管理對象](managing-audiences.md)
    + [建立和管理選件](offerlib.md)
-   + [了解區段](segmentation-overview.md)
+   + [了解分段](segmentation-overview.md)
 + AEM和Adobe Campaign {#aem-adobe-campaign}
    + [使用Adobe Campaign](adobe-campaign.md)
    + [協作使用Adobe Campaign Classic和Adobe Campaign Standard](campaign.md)

@@ -11,7 +11,7 @@ role: Architect
 source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
 source-wordcount: '327'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 11%
    + [監視和維護您的AEM例項](monitoring-and-maintaining.md)
    + [卸載作業](offloading.md)
    + [單一登入](single-sign-on.md)
-   + [資源映射](resource-mapping.md)
+   + [資源對應](resource-mapping.md)
    + [透過SSL啟用HTTP](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ssl-by-default.html)
    + [一致性和遍歷檢查](consistency-check.md)
    + [效能准則](performance-guidelines.md)

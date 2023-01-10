@@ -11,7 +11,7 @@ role: Admin
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 14%
+ht-degree: 27%
 
 ---
 
@@ -22,23 +22,23 @@ ht-degree: 14%
    + [網站管理](msm-and-translation.md)
    + [非同步作業](asynchronous-jobs.md)
    + [重複使用內容：多網站管理員和即時副本](msm.md)
-   + [Live Copy概述主控台](msm-livecopy-overview.md)
-   + [配置Live Copy同步](msm-sync.md)
-   + [建立和同步Live Copy](msm-livecopy.md)
+   + [Live Copy 概觀主控台](msm-livecopy-overview.md)
+   + [設定 Live Copy 同步](msm-sync.md)
+   + [建立和同步 Live Copy](msm-livecopy.md)
    + [MSM轉出衝突](msm-rollout-conflicts.md)
    + [疑難排解MSM問題和常見問題集](troubleshoot-msm.md)
-   + [MSM最佳實務](msm-best-practices.md)
-   + [轉譯多語言網站的內容](translation.md)
+   + [MSM 最佳實務](msm-best-practices.md)
+   + [翻譯多語言網站的內容](translation.md)
    + [管理翻譯專案](tc-manage.md)
    + [識別要翻譯的內容](tc-rules.md)
    + [準備翻譯內容](tc-prep.md)
    + [使用傳統UI建立語言根](tc-lroot-classic.md)
-   + [連接到Microsoft Translator](tc-msconf.md)
-   + [配置翻譯整合框架](tc-tic.md)
-   + [語言副本嚮導](tc-wizard.md)
+   + [連線到 Microsoft Translator](tc-msconf.md)
+   + [設定翻譯整合框架](tc-tic.md)
+   + [語言複製精靈](tc-wizard.md)
    + [翻譯增強功能](tc-enhancements.md)
    + [翻譯最佳實務](tc-bp.md)
-   + [配置和配置瀏覽器](configurations.md)
+   + [設定和設定瀏覽器](configurations.md)
    + [AEM常見問題集](aem-faqs.md)
 + 運作 {#operations}
    + [控制面板](dashboards.md)
@@ -99,12 +99,12 @@ ht-degree: 14%
    + [內容處置篩選器](content-disposition-filter.md)
    + [AEM 6.5中的自訂使用者群組對應](/help/sites-administering/cug-mapping.md)
    + [相同網站Cookie支援](same-site-cookie-support.md)
-+ 個性化 {#personalization}
++ 個人化 {#personalization}
    + [個人化](personalization.md)
-   + [設定ContextHub](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
+   + [設定 ContextHub](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
    + [ClientContext](client-context.md)
    + [促銷活動](campaigns.md)
-   + [使用ContextHub設定區段](segmentation.md)
+   + [使用 ContextHub 設定分段](segmentation.md)
    + [設定區段](campaign-segmentation.md)
    + [擴充和設定登錄頁面的設計匯入工具](extending-the-design-importer-for-landingpages.md)
    + [整合登錄頁面與Adobe Analytics](integrating-landing-pages-with-adobe-analytics.md)
@@ -112,7 +112,7 @@ ht-degree: 14%
    + [與第三方服務整合](third-party-services.md)
    + [與Salesforce整合](salesforce.md)
    + [整合 Adobe Target](target.md)
-   + [與Adobe學習管理員整合](adobe-learningmanager.md)
+   + [與 Adobe Learning Manager 整合](adobe-learningmanager.md)
    + [整合 Adobe Analytics](adobeanalytics.md)
    + [連接Adobe Analytics和建立框架](adobeanalytics-connect.md)
    + [設定Adobe Analytics的連結追蹤](adobeanalytics-link.md)
@@ -137,7 +137,7 @@ ht-degree: 14%
    + [與BrightEdge Content Optimizer整合](brightedge.md)
    + [目錄製作者](catalog-producer.md)
    + [與Silverpop Engage整合](silverpop.md)
-   + [與Adobe Campaign整合](campaign.md)
+   + [與 Adobe Campaign 整合](campaign.md)
    + [與ExactTarget整合](exacttarget.md)
    + [Analytics與外部提供者](external-providers.md)
    + [與Adobe Marketing Cloud整合](marketing-cloud.md)
@@ -146,13 +146,13 @@ ht-degree: 14%
    + [使用IMS與Adobe Target整合](integration-target-ims.md)
    + [Adobe分類](adobeanalytics-classifications.md)
    + [解決方案整合](integration.md)
-   + [將體驗片段匯出至Adobe Target](experience-fragments-target.md)
+   + [將體驗片段匯出到 Adobe Target](experience-fragments-target.md)
    + [電子郵件範本最佳作法](best-practices-for-email-templates.md)
    + [與 Livefyre 整合](livefyre.md)
 + 最佳作法 {#bestpractices}
    + [最佳作法](administer-best-practices.md)
    + [翻譯最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
-   + [MSM最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
+   + [MSM 最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR整備](gdpr-compliance-sites.md)
    + [處理AEM Foundation的GDPR請求](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
    + [AEM商務 — GDPR整備](gdpr-compliance-commerce.md)

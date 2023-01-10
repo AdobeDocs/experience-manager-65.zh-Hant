@@ -31,4 +31,4 @@ ht-degree: 41%
    + [AEM與網頁協助工具准則](web-accessibility.md)
    + [WCAG 2.1快速指南](qg-wcag.md)
 + 資料保護 {#data-protection}
-   + [AEM 對資料保護與資料隱私權法規的整備](data-protection-and-privacy.md)
+   + [AEM 的資料保護與資料隱私權法規整備](data-protection-and-privacy.md)
