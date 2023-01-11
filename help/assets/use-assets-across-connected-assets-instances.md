@@ -6,9 +6,9 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 0df4bce6651517c6049578d0a1434726ab04e240
+source-git-commit: cd7800546ec4ebc950c5ebca4d7c80779cb2632c
 workflow-type: tm+mt
-source-wordcount: '3837'
+source-wordcount: '3877'
 ht-degree: 17%
 
 ---
@@ -356,6 +356,13 @@ Experience Manager可讓您將遠端DAM部署連結為來源，以連接多個Ex
 * 如果您無法從本機存取遠端DAM部署 [!DNL Sites] 部署，確保允許跨網站cookie，並 [相同網站Cookie支援](/help/sites-administering/same-site-cookie-support.md) 已設定。 如果跨網站Cookie被封鎖， [!DNL Experience Manager] 不能驗證。 例如， [!DNL Google Chrome] 在無痕模式中，可能會封鎖第三方Cookie。 若要在 [!DNL Chrome] 瀏覽器，按一下位址列中的「眼睛」圖示，導覽至 **網站無法運作** > **已阻止**，選取「遠端DAM URL」 ，並允許登入代號Cookie。 或者，請參見 [如何啟用協力廠商cookie](https://support.google.com/chrome/answer/95647).
 
    ![Chrome瀏覽器中無痕模式出現Cookie錯誤](assets/chrome-cookies-incognito-dialog.png)
+
+* 如果您無法從Experience Manager Sitesas a Cloud ServiceSites部署存取Adobe Managed Services遠端DAM部署，請更新 `aem_author.vhost` 檔案，可在 `"/etc/httpd/conf.d/available_vhosts`，讓遠端DAM在Dispatcher設定中包含下列標題：
+
+   ```xml
+   Header Set Access-Control-Allow-Origin <Local Sites instance host>
+   Header Set Access-Control-Allow-Credentials true
+   ```
 
 * 如果未檢索遠程引用並導致錯誤消息，請檢查 [!DNL Sites] 部署可用，並檢查網路連線問題。 稍後重試以檢查。 [!DNL Assets] 部署嘗試兩次建立連接 [!DNL Sites] 部署後報告失敗。
 
