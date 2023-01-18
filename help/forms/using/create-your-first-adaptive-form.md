@@ -9,10 +9,10 @@ discoiquuid: 1142bcd4-e3a7-41ce-a710-132ae6c21dbe
 docset: aem65
 feature: Adaptive Forms
 exl-id: 77a05f83-ac9a-4221-85ac-439e82623a28
-source-git-commit: 471d7f48dc4653000b4852dbbeb886b05e28e644
+source-git-commit: 318347178fd626dea8e5a15caa7cdad8fe353eba
 workflow-type: tm+mt
-source-wordcount: '957'
-ht-degree: 0%
+source-wordcount: '965'
+ht-degree: 9%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 ### 必備條件 {#prerequisite}
 
-* 設定AEM製作例項。
+* 設定 [AEM製作例項](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#author-and-publish-installs)
 * 安裝 [AEM Forms附加元件](../../forms/using/installing-configuring-aem-forms-osgi.md) 在製作例項上。
 * 從資料庫提供程式獲取JDBC資料庫驅動程式（JAR檔案）。 本教學課程中的範例以 [!DNL MySQL] 資料庫與使用 [!DNL Oracle's] [MySQL JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
