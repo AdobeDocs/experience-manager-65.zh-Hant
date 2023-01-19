@@ -6,10 +6,10 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: e8026cb0c7de3b1c903bf95dc31e567076e837eb
+source-git-commit: 72ed4ceee560839c6573461cb5d4d6cbccfd696f
 workflow-type: tm+mt
-source-wordcount: '3488'
-ht-degree: 1%
+source-wordcount: '3525'
+ht-degree: 0%
 
 ---
 
@@ -201,6 +201,16 @@ Adobe Experience Manager可搭配下列伺服器平台用於生產環境：
 1. Adobe Managed Services支援的Linux發佈。
 1. Microsoft Windows生產部署可支援升級至6.5的客戶，以及非生產用途。 AEM Sites和Assets的新部署可應要求提供。
 1. AEM Forms在Microsoft視窗伺服器上不受支援層級R限制支援。
+
+>[!NOTE]
+>
+>如果您要安裝AEM Forms 6.5，請確定您已安裝下列32位元Microsoft Visual C++可轉散發套件。
+>
+>* Microsoft Visual C++ 2008可再發行
+>* Microsoft Visual C++ 2010可再發行
+>* Microsoft Visual C++ 2012可再發行
+>* Microsoft Visual C++ 2013可再發行（截至6.5日）
+
 
 
 ### 虛擬和雲計算環境 {#virtual-cloud-computing-environments}
