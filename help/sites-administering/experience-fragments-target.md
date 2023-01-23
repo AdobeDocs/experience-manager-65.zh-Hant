@@ -1,7 +1,7 @@
 ---
-title: 將體驗片段匯出至Adobe Target
+title: 將體驗片段匯出到 Adobe Target
 seo-title: Exporting Experience Fragments to Adobe Target
-description: 將體驗片段匯出至Adobe Target
+description: 將體驗片段匯出到 Adobe Target
 seo-description: Exporting Experience Fragments to Adobe Target
 uuid: 2df0faab-5d5e-4fc1-93b3-28b7e6f3c306
 contentOwner: carlino
@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 88763b318e25efb16f61bc16530082877392c588
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 0%
+source-wordcount: '1553'
+ht-degree: 1%
 
 ---
 
-# 將體驗片段匯出至Adobe Target{#exporting-experience-fragments-to-adobe-target}
+# 將體驗片段匯出到 Adobe Target{#exporting-experience-fragments-to-adobe-target}
 
 >[!CAUTION]
 >
@@ -210,3 +210,85 @@ AEM體驗片段可匯出至Adobe Target中的預設工作區，或匯出至Adobe
       * 由於體驗片段HTML推送至Target，選件可能仍會呈現
       * 如果參考的資產也在AEM中刪除，體驗片段中的任何參考可能也無法正常運作。
    * 當然，由於體驗片段已不存在，因此無法對體驗片段進行任何進一步修改。
+
+
+
+## 從匯出至Target的體驗片段中移除ClientLib {#removing-clientlibs-from-fragments-exported-target}
+
+體驗片段包含完整的html標籤和所有必要的用戶端程式庫(CSS/JS)，以便呈現片段完全等同於由體驗片段內容作者建立的片段。 這是按部就班的。
+
+在AEM傳送的頁面上搭配使用體驗片段選件與Adobe Target時，目標頁面已包含所有必要的用戶端資料庫。 此外，體驗片段選件中不需要多餘的html(請參閱 [考量事項](#considerations))。
+
+以下是體驗片段選件中html的偽範例：
+
+```html
+<!DOCTYPE>
+<html>
+   <head>
+      <title>…</title>
+      <!-- all of the client libraries (css/js) -->
+      …
+   </head>
+   <body>
+        <!--/* Actual XF Offer content would appear here... */-->
+   </body>
+</html>
+```
+
+在高階上，當AEM將體驗片段匯出至Adobe Target時，會使用數個其他Sling選取器執行此操作。 例如，匯出的體驗片段URL可能如下所示(注意 `nocloudconfigs.atoffer`):
+
+* http://www.your-aem-instance.com/content/experience-fragments/my-offers/my-xf-offer.nocloudconfigs.atoffer.html
+
+此 `nocloudconfigs` 選取器是透過使用HTL來定義，可透過從複製來覆蓋：
+
+* /libs/cq/experience-fragments/components/xfpage/nocloudconfigs.html
+
+此 `atoffer` 選取器實際會套用後處理，使用 [Sling重寫器](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html). 可以用於刪除客戶端庫。
+
+### 範例 {#example}
+
+為此，我們將說明如何使用 `nocloudconfigs`.
+
+>[!NOTE]
+>
+>請參閱 [可編輯的範本](/help/sites-developing/templates.md#editable-templates) 以取得詳細資訊。
+
+#### 覆蓋 {#overlays}
+
+在此特定範例中， [覆蓋](/help/sites-developing/overlays.md) 包含將刪除客戶端庫 *和* 無關的html。 假設您已建立體驗片段範本類型。 需要從 `/libs/cq/experience-fragments/components/xfpage/` 包括：
+
+* `nocloudconfigs.html`
+* `head.nocloudconfigs.html`
+* `body.nocloudconfigs.html`
+
+#### 範本類型覆蓋圖 {#template-type-overlays}
+
+在此範例中，我們將使用下列結構：
+
+![範本類型覆蓋圖](assets/xf-target-integration-02.png "範本類型覆蓋圖")
+
+這些檔案的內容如下：
+
+* `body.nocloudconfigs.html`
+
+   ![body.nocloudconfigs.html](assets/xf-target-integration-03.png "body.nocloudconfigs.html")
+
+* `head.nocloudconfigs.html`
+
+   ![head.nocloudconfigs.html](assets/xf-target-integration-04.png "head.nocloudconfigs.html")
+
+* `nocloudconfigs.html`
+
+   ![nocloudconfigs.html](assets/xf-target-integration-05.png "nocloudconfigs.html")
+
+>[!NOTE]
+>
+>使用 `data-sly-unwrap` 移除您需要的body標籤 `nocloudconfigs.html`.
+
+### 考量事項 {#considerations}
+
+如果您需要使用Adobe Target中的體驗片段選件來支援AEM網站和非AEM網站，則需要建立兩個體驗片段（兩種不同的範本類型）:
+
+* 具有覆蓋以移除clientlibs/額外html的
+
+* 沒有覆蓋，因此包含必要的clientlib
