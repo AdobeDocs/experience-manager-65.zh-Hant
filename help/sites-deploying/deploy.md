@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 85a0c578a2cf57e2b4d65123cffe3816624211c8
+source-git-commit: 2a350548674ff3f8dc49defa47ac2b028da76f4b
 workflow-type: tm+mt
 source-wordcount: '1802'
 ht-degree: 2%
@@ -165,7 +165,7 @@ AEM軟體套件提供兩種格式：
 
    *請注意，檔案目錄的路徑只能包含US ASCII字元。*
 
-1. 放置 **jar** 和 **授權**&#x200B;此目錄中的檔案：
+1. 放置 **jar** 和 **授權** 此目錄中的檔案：
 
    ```shell
    <aem-install>/
