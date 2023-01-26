@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: d30bfb9e67d0a2a0e870ee0841ed14060def7756
+source-git-commit: ae56ffafff38fe60530a8850732de58ba8c8f8f9
 workflow-type: tm+mt
 source-wordcount: '3252'
 ht-degree: 1%
@@ -539,7 +539,7 @@ GITHUB上的程式碼
 
 ### 內容原則 {#content-policies}
 
-內容（或設計）原則會定義元件的設計屬性。 例如，可用元件或最小/最大尺寸。 這些規則適用於範本（以及使用範本建立的頁面）。 可在範本編輯器中建立並選取內容原則。
+內容（或設計）策略定義元件的設計屬性，如元件的可用性或最小/最大維。 這些規則適用於範本（以及使用範本建立的頁面）。 可在範本編輯器中建立並選取內容原則。
 
 * 屬性 `cq:policy`，在 `root` 節點
    `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
