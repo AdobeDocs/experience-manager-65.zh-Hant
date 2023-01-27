@@ -1,5 +1,5 @@
 ---
-title: SPA Blueprint
+title: SPA 藍圖
 seo-title: SPA Blueprint
 description: 本檔案說明任何SPA架構在AEM中實作可編輯SPA元件時，都應履行的一般、獨立於架構合約。
 seo-description: This document describes the general, framework-independent contract that any SPA framework should fulfill in order to implement editable SPA components within AEM.
@@ -10,14 +10,14 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: e13953bed73481738832a00a7563a07149c2d3bd
+source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
 workflow-type: tm+mt
 source-wordcount: '2079'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# SPA Blueprint{#spa-blueprint}
+# SPA 藍圖{#spa-blueprint}
 
 為了讓作者能使用AEM SPA編輯器來編輯SPA的內容，SPA必須符合一些要求，本檔案將加以說明。
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 模型中呈現的每個項目都包含 `:type` 公開AEM資源類型的欄位。 裝載時，前端元件可使用從基礎庫接收的模型片段來呈現自身。
 
-#### 元件映射的動態模型 {#dynamic-model-to-component-mapping}
+#### 動態模型到元件對應 {#dynamic-model-to-component-mapping}
 
 如需有關Javascript SPA SDK for AEM中如何發生動態模型與元件對應的詳細資訊，請參閱文章 [SPA的動態模型與元件對應](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
@@ -150,7 +150,7 @@ npm模組： [@adobe/aem-angular-editable-components](https://www.npmjs.com/pack
 
 容器是用於包含和呈現子元件的元件。 若要這麼做，容器會反覆 `:itemsOrder`, `:items` 和 `:children` 其模型的屬性。
 
-容器會從的存放區動態取得子元件 ` [ComponentMapping](/help/sites-developing/spa-blueprint.md#componentmapping)` 程式庫。 然後，容器會使用「模型提供者」功能擴充子元件，最後將其實例化。
+容器會從的存放區動態取得子元件 [`ComponentMapping`](/help/sites-developing/spa-blueprint.md#componentmapping) 程式庫。 然後，容器會使用「模型提供者」功能擴充子元件，最後將其實例化。
 
 ### Page {#page}
 

@@ -10,9 +10,9 @@ topic-tags: spa
 content-type: reference
 discoiquuid: d9f1e24e-51a9-4f28-b2cd-2e97aed63a24
 exl-id: eaef65ec-2e4d-490f-8158-d48d738e3409
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 509ea0945e6c80e50f6f5bffd4c68282d586504a
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->目前，We.Retail Journal範例React專案說明自動化方法，而Angular專案則說明手動方法。 半自動方法也是有效的使用案例。
+>此 [We.Retail日誌](https://github.com/adobe/aem-sample-we-retail-journal) 範例React專案說明自動化方法，而Angular專案說明手動方法。 半自動方法也是有效的使用案例。
 
 >[!CAUTION]
 >
@@ -60,7 +60,7 @@ ht-degree: 0%
 依預設，會自動啟用此行為。 若要停用，SPA應呈現下列中繼屬性：
 
 ```
-<meta property="cq:pagemodel_router" content="disable"\>
+<meta property="cq:pagemodel_router" content="disabled"\>
 ```
 
 請注意，SPA的每條路由都應對應至AEM中可存取的資源(例如「 `/content/mysite/mypage"`) `PageModelManager` 將在選取路由後，自動嘗試載入相應的頁面模型。 不過，如有需要，SPA也可以定義路由的「封鎖清單」，這些路由應被 `PageModelManager`:
