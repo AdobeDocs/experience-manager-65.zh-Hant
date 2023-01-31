@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 2a889134943d75d147af6d06ea67397f75158d40
-workflow-type: ht
-source-wordcount: '825'
-ht-degree: 100%
+source-git-commit: 6fa3679429527e026313b22d953267503598d1a9
+workflow-type: tm+mt
+source-wordcount: '850'
+ht-degree: 95%
 
 ---
 
@@ -117,7 +117,15 @@ SAML 聲明已經過簽署，並可選擇進行加密。為了使其運作，您
 >
 >只有在處理常式應該能簽署或解密訊息時，才需要執行下方的步驟。
 
-1. 按一下「**選取私密金鑰檔案**」，上傳私密金鑰檔案。金鑰必須採用 PKCS#8 格式與 DER 編碼。
+1. 建立AEM的憑證/鑰匙組。 透過openssl產生此變數的命令應類似以下範例：
+
+   `openssl req -newkey rsa:2048 -new -x509 -days 3652 -nodes -out certificate.crt -keyout key.pem`
+
+1. 使用DER編碼將密鑰轉換為PKCS#8格式。 這是AEM金鑰存放區所需的格式。
+
+   `openssl pkcs8 -topk8 -inform PEM -outform DER -in key.pem -out key.der -nocrypt`
+
+1. 按一下「**選取私密金鑰檔案**」，上傳私密金鑰檔案。
 1. 按一下「**選擇證書鏈檔案**」，上傳憑證檔案。
 1. 指派別名，如下所示：
 
