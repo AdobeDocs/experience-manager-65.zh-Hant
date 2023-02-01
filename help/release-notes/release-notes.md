@@ -3,9 +3,9 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: d3b830730ef06fb9968a46d6f26a275417cf36f0
+source-git-commit: ec9094f25cfbcd1497a6bbc87cce9754e247a770
 workflow-type: tm+mt
-source-wordcount: '4046'
+source-wordcount: '3759'
 ht-degree: 2%
 
 ---
@@ -149,7 +149,7 @@ ht-degree: 2%
 ## [!DNL Sites] {#sites-6515}
 
 * Experience Manager Sites啟動主控台的顯示為空白。 (NPR-39188)
-* 在頁面移動期間，也需要啟動具有參考的頁面時，參考未經過調整。 (NPR-39061)
+* 在頁面移動期間，也需要啟動具有參考的頁面時，參考未經調整。 (NPR-39061)
 * 使用父容器取消隱藏「配置」容器時，配置變更不會套用至巢狀容器內的所有元件。 (NPR-39041)
 * 以320像素寬度顯示的內容現在不再與其他內容重疊。 (SITES-8885)
 * 關閉對話方塊後新增焦點。 (SITES-8885)
@@ -167,7 +167,7 @@ ht-degree: 2%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQL引發異常。 例如，您無法從內容片段取得變異標籤。 「電氣」的名稱沒有變化。 此問題是由於呼叫 `getVariationTags` 對於引發例外的非現有變數。 (SITES-8898)
+* GraphQL提出了一個例外。 例如，您無法從內容片段取得變異標籤。 「電氣」的名稱沒有變化。 此問題是由於呼叫 `getVariationTags` 對於引發例外的非現有變數。 (SITES-8898)
 * 在「清單」檢視中排序標題順序（升序和降序），標題的順序為A、C、B。(SITES-7585)
 * 新增內容片段變異的標籤支援。 (SITES-8168)
 * 從Experience Manager6.5中識別並移除不必要的Odin特定程式碼。 (SITES-3574)
@@ -218,7 +218,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Adobe不建議您移除或解除安裝 [!DNL Experience Manager] 6.5.15.0包。 因此，在安裝該包之前，您應建立 `crx-repository` 以防你需要把它卷回去。 <!-- UPDATE FOR EACH NEW RELEASE -->
+> * Adobe不建議您移除或解除安裝 [!DNL Experience Manager] 6.5.15.0包。 因此，在安裝該包之前，您應建立 `crx-repository` 以防你需要把它卷回去。 <!-- UPDATE FOR EACH NEW RELEASE -->
+> * 如需安裝AEM Forms適用的Service Pack的指示，請參閱 [AEM Forms Service Pack安裝指示](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
+
 
 ### 在上安裝Service Pack [!DNL Experience Manager] 6.5 {#install-service-pack}
 
@@ -259,38 +261,9 @@ ht-degree: 2%
 
 1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.13版或更新版本(使用Web控制台： `/system/console/bundles`)。 <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
-### 安裝 [!DNL Experience Manager] Forms附加元件套件 {#install-aem-forms-add-on-package}
+### 在上安裝Service Pack [!DNL Experience Manager] Forms {#install-service-pack-on-aemforms}
 
->[!NOTE]
->
->如果您未使用 [!DNL Experience Manager] Forms。
-
-<!-- 
-Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
--->
-
-1. 確認您已安裝 [!DNL Experience Manager] 服務包。
-1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)所列出的對應 Forms 附加套件。
-1. 依照 [安裝AEM Forms附加元件套件](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-1. 若您在Experience Manager6.5 Forms中使用信函，請安裝 [最新AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates).
-
-### 安裝 [!DNL Experience Manager] Forms on JEE {#install-aem-forms-jee-installer}
-
->[!NOTE]
->
->如果您沒有在JEE上使用AEM Forms，請略過。 中的修正 [!DNL Experience Manager] Forms on JEE是透過個別安裝程式提供。
-
-使用JBoss EAP 7.4.0以外的任何應用程式伺服器，對JEE環境上的所有AEM Forms執行以下步驟。
-1. 安裝 [AEM Forms JEE修補程式](jee-patch-installer-65.md). 包含JEE上AEM 6.5 Forms所有元件的所有已修正問題。
-1. 安裝 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar). 片段新增安裝AEM Service Pack 15(6.5.15.0)所需的相依性。
-1. 安裝片段後，等待應用程式伺服器穩定。
-1. [在Experience Manager6.5上安裝Service Pack](#install-service-pack).
-
-   >[!NOTE]
-   >
-   >如果您安裝了 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，安裝之前 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 在JEE環境上的AEM 6.5 Forms上，CRX/套件和開始頁面可能會停止運作，而您會遇到服務無法使用錯誤。 若要解決問題，請執行動作 [此處列出](/help/forms/using/aem-service-pack-installation-solution.md).
-
-1. 安裝 [最新Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，請從 `crx-repository\install` ，然後重新啟動伺服器。
+如需在AEM Forms上安裝Service Pack的指示，請參閱 [AEM Forms Service Pack安裝指示](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
 
 ### UberJar {#uber-jar}
 
