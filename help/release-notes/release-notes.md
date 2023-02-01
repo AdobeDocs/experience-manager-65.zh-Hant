@@ -3,7 +3,7 @@ title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: ec9094f25cfbcd1497a6bbc87cce9754e247a770
+source-git-commit: f0746c6b7ada548c47d13089160ecccec5f2bd2b
 workflow-type: tm+mt
 source-wordcount: '3759'
 ht-degree: 2%
@@ -259,7 +259,7 @@ ht-degree: 2%
 
 1. 所有OSGi套件組合 **[!UICONTROL 活動]** 或 **[!UICONTROL 片段]** 在OSGi控制台中(使用Web控制台： `/system/console/bundles`)。
 
-1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.13版或更新版本(使用Web控制台： `/system/console/bundles`)。 <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
+1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.13版或更新版本(使用Web控制台： `/system/console/bundles`)。
 
 ### 在上安裝Service Pack [!DNL Experience Manager] Forms {#install-service-pack-on-aemforms}
 
