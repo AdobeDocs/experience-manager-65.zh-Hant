@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 9247a81a518b1bd6e037c234a6c67f95209bfde8
+source-git-commit: 1759b6b2a0360b6fc173e711aaf88484c554eae8
 workflow-type: tm+mt
-source-wordcount: '3005'
+source-wordcount: '3000'
 ht-degree: 8%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 8%
 | 半徑 | 決定邊緣像素周圍會影響銳利化的像素數量。若是高解析度影像，輸入介於 1 到 2 之間的值。低數值只會銳利化邊緣的像素；高數值會銳利化較寬的像素範圍。正確的值取決於影像大小。預設值為0.2。範圍為0-250。 |
 | 臨界值 | 確定應用不銳利化遮色片濾鏡時要忽略的對比度範圍。換句話說，此選項可決定銳化像素與周圍區域的差異程度，之後才會被視為邊緣像素且銳化。 為避免引入雜訊，請使用0-255之間的值進行實驗。 |
 
-銳利化在 [銳利化影像](/help/assets/assets/sharpening_images.pdf)。
+銳利化在 [銳利化影像](/help/assets/assets/sharpening_images.pdf).
 
 ## 建立Dynamic Media影像設定檔 {#creating-image-profiles}
 
