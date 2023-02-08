@@ -1,5 +1,5 @@
 ---
-title: 配置Live Copy同步
+title: 設定 Live Copy 同步
 seo-title: Configuring Live Copy Synchronization
 description: 了解如何設定Live Copy同步。
 seo-description: Learn about configuring Live Copy Synchronization.
@@ -12,14 +12,14 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96aa75dec7433aa3961944fa57a80c4719316ba5
 workflow-type: tm+mt
-source-wordcount: '2697'
-ht-degree: 3%
+source-wordcount: '2696'
+ht-degree: 4%
 
 ---
 
-# 配置Live Copy同步{#configuring-live-copy-synchronization}
+# 設定 Live Copy 同步{#configuring-live-copy-synchronization}
 
 執行以下任務以控制即時副本與其源內容同步的方式和時間。
 
@@ -172,7 +172,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>referencesUpdate</td>
-   <td><p>在即時副本上，此同步動作會更新類似連結的參考。<br /> 它會搜尋即時副本頁面中指向Blueprint內資源的路徑。 找到後，會更新路徑，以指向即時副本（而非Blueprint）中的相關資源。 在Blueprint外具有目標的參照不會變更。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">設定CQ MSM參考更新動作服務</a> 指定要排除的節點類型、段落項和頁面屬性。 </p> </td>
+   <td><p>在即時副本上，此同步動作會更新連結之類的參考。<br /> 它會搜尋即時副本頁面中指向Blueprint內資源的路徑。 找到後，會更新路徑，以指向即時副本（而非Blueprint）中的相關資源。 在Blueprint外具有目標的參照不會變更。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">設定CQ MSM參考更新動作服務</a> 指定要排除的節點類型、段落項和頁面屬性。 </p> </td>
    <td> </td>
   </tr>
   <tr>
