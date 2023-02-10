@@ -13,10 +13,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
+source-git-commit: 05af34f8be6a4e32c3488ec05bc0133154caff7f
 workflow-type: tm+mt
 source-wordcount: '7792'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -161,13 +161,13 @@ Dynamic Media-Hybrid必須啟用並設定為使用。 根據您的使用案例�
 
    * 新增 `-r dynamicmedia` 到命令行的結尾。
 
-   ```shell
+   ```shellsession {.line-numbers}
    java -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -r dynamicmedia
    ```
 
    如果您要發佈至s7delivery，您也必須包含下列trustStore引數：
 
-   ```
+   ```shellsession {.line-numbers}
    -Djavax.net.ssl.trustStore=<absoluteFilePath>/customerTrustStoreFileName>
    
     -Djavax.net.ssl.trustStorePassword=<passwordForTrustStoreFile>
@@ -216,7 +216,7 @@ Dynamic Media預設未啟用。 不過，如果您先前已啟用Dynamic Media�
 
    * 不添加 `-r dynamicmedia` 到命令行。
 
-   ```shell
+   ```shellsession {.line-numbers}
    java -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar
    ```
 
@@ -1019,12 +1019,12 @@ Adobe的標準色彩設定集僅在您有 [Software Distribution的Feature Pack 
    <td>CIERGB</td>
   </tr>
   <tr>
-   <td>CobatedFogra27</td>
+   <td>CoatedFogra27</td>
    <td>CMYK</td>
    <td>塗層FOGRA27(ISO 12647-2:2004)</td>
   </tr>
   <tr>
-   <td>CobatedFogra39</td>
+   <td>CoatedFogra39</td>
    <td>CMYK</td>
    <td>塗層FOGRA39(ISO 12647-2:2004)</td>
   </tr>
@@ -1079,7 +1079,7 @@ Adobe的標準色彩設定集僅在您有 [Software Distribution的Feature Pack 
    <td>Japan Web Cobated（廣告）</td>
   </tr>
   <tr>
-   <td>新聞紙SNAP2007</td>
+   <td>NewsprintSNAP2007</td>
    <td>CMYK</td>
    <td>美國新聞紙(SNAP 2007)</td>
   </tr>
@@ -1129,7 +1129,7 @@ Adobe的標準色彩設定集僅在您有 [Software Distribution的Feature Pack 
    <td>sRGB IEC61966-2.1</td>
   </tr>
   <tr>
-   <td>無塗層Fogra29</td>
+   <td>UncoatedFogra29</td>
    <td>CMYK</td>
    <td>無塗層FOGRA29(ISO 12647-2:2004)</td>
   </tr>
@@ -1139,17 +1139,17 @@ Adobe的標準色彩設定集僅在您有 [Software Distribution的Feature Pack 
    <td>美國塗層網板(SWOP)v2</td>
   </tr>
   <tr>
-   <td>WebCobatedFogra28</td>
+   <td>WebCoatedFogra28</td>
    <td>CMYK</td>
    <td>Web Cobated FOGRA28(ISO 12647-2:2004)</td>
   </tr>
   <tr>
-   <td>WebCobatedGrade3</td>
+   <td>WebCoatedGrade3</td>
    <td>CMYK</td>
    <td>SWOP 2006三級紙</td>
   </tr>
   <tr>
-   <td>WebCobatedGrade5</td>
+   <td>WebCoatedGrade5</td>
    <td>CMYK</td>
    <td>SWOP 2006五級紙</td>
   </tr>

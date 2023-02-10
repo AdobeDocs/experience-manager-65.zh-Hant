@@ -1,9 +1,6 @@
 ---
-title: 使用Quickview建立自訂快顯視窗
-seo-title: Use Quickview to create custom pop-ups
+title: 使用 Quickview 建立自訂快顯視窗
 description: 預設的「快速檢視」用於電子商務體驗，其中會顯示包含產品資訊的快顯視窗以促進購買。 您可以觸發自訂內容以顯示在快顯視窗中。
-seo-description: The default Quickview is used in ecommerce experiences whereby a pop-up is displayed with product information to drive a purchase. You can trigger custom content to display in the pop-ups.
-uuid: b906cfff-ac44-4989-b6da-8a9bbf02af03
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -12,14 +9,14 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 05af34f8be6a4e32c3488ec05bc0133154caff7f
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 0%
+source-wordcount: '1052'
+ht-degree: 1%
 
 ---
 
-# 使用Quickview建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
+# 使用 Quickview 建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
 預設的「快速檢視」用於電子商務體驗，其中會顯示包含產品資訊的快顯視窗以促進購買。 不過，您可以觸發自訂內容以顯示在快顯視窗中。 根據檢視器，此功能可讓使用者在熱點、縮圖影像或影像地圖上選取，以查看資訊或相關內容。
 
@@ -35,7 +32,7 @@ Dynamic Media中的下列檢視器支援Quickview:
 
 1. 為已上傳的資產建立快速檢視。
 
-   您通常會在編輯資產以用於使用的檢視器時建立快速檢視。
+   您通常會在編輯資產以用於使用的檢視器的同時建立快速檢視。
 
    <table>
     <tbody>
@@ -44,11 +41,11 @@ Dynamic Media中的下列檢視器支援Quickview:
     <td><strong>如果要建立快速檢視，請完成這些步驟</strong></td>
     </tr>
     <tr>
-    <td>互動影像</td>
+    <td>互動式影像</td>
     <td><a href="/help/assets/interactive-images.md#adding-hotspots-to-an-image-banner" target="_blank">向影像橫幅添加熱點</a>.</td>
     </tr>
     <tr>
-    <td>互動影片</td>
+    <td>互動式影片</td>
     <td><a href="/help/assets/interactive-videos.md#adding-interactivity-to-your-video" target="_blank">為視訊新增互動功能</a>.</td>
     </tr>
     <tr>
