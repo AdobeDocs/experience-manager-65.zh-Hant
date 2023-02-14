@@ -1,20 +1,11 @@
 ---
 title: 管理翻譯專案
-seo-title: Managing Translation Projects
 description: 了解如何在AEM中管理翻譯專案。
-seo-description: Learn how to manage translation projects in AEM.
-uuid: f6f79b5b-dc08-4dde-b464-719345d233a6
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
-feature: Language Copy
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7efb1b8d345b07835e5f45a1afe9da13163411b2
 workflow-type: tm+mt
-source-wordcount: '3442'
-ht-degree: 0%
+source-wordcount: '3536'
+ht-degree: 1%
 
 ---
 
@@ -418,6 +409,16 @@ AEM會偵測正在為內容的初始翻譯建立翻譯專案，還是更新已�
    ![chlimage_1-39](assets/chlimage_1-39.jpeg)
 
 1. 按一下或點選「開始」。
+
+## 移動或更名源頁 {#move-source}
+
+如果需要翻譯的源頁面 [重新命名或移動](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)，移動後重新轉譯頁面會根據新頁面名稱/位置建立新語言副本。 根據先前名稱/位置的舊語言副本仍會存在。
+
+此情境的最佳實務是遵循此程式：
+1. 取消發佈與要移動的源頁面關聯的語言副本。
+1. 刪除它們。
+1. 從新移動的源頁面建立新語言副本。
+1. 發佈新建立的語言副本。
 
 ## 使用專案主控台建立翻譯專案 {#creating-a-translation-project-using-the-projects-console}
 
