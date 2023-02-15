@@ -2,9 +2,9 @@
 title: AEM Forms適用於AEM Forms的修補程式安裝指示
 description: AEM Forms Service Pack安裝OSGi和JEE環境的指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 72e4d6372a013acde1c2cf7e46cc36e3525e53bf
+source-git-commit: 0083de8ba459662d04ba80d8c63f21735d82ac82
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1797'
 ht-degree: 8%
 
 ---
@@ -91,7 +91,8 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
       >[!NOTE]
       >
-      > 使用 **ConfigurationManager.bat** 檔案可幫助您避免手動更新.lax檔案的名稱。
+      >* 更新或更換 **ConfigurationManager.bat** 檔案可幫助您避免手動更新.lax檔案的名稱。
+
 
 1. **[僅基於Unix]:** 此 **啟動Configuration Manager** 複選框。 按一下 **[!UICONTROL 完成]** 以立即運行Configuration Manager或運行 **Configuration Manager** 稍後，取消選取 **啟動Configuration Manager** 選項 **[!UICONTROL 完成]**. 您可以開始 **Configuration Manager** 稍後在 `[AEM_forms_root]/configurationManager/bin` 目錄。
 
@@ -104,7 +105,6 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
    * [安裝和部署AEM forms for WebSphere®叢集](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
    * [安裝和部署AEM Forms for WebLogic叢集](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
 
-是
 
 >[!NOTE]
 >
@@ -245,8 +245,6 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 +++
 
 ## 疑難排解
-
-* 如果AEM Forms Service Pack安裝期間發生錯誤，請重新安裝。 如果問題仍然存在，請聯繫Adobe支援。
 
 * 若 **套件管理器UI上的對話方塊** 在安裝Service Pack期間退出，請等待錯誤記錄穩定，再存取部署。 請等待與卸載更新程式捆綁相關的特定日誌，然後確保安裝成功。 此問題通常會在Safari瀏覽器中發生，但可能在任何瀏覽器上間歇性發生。
 
