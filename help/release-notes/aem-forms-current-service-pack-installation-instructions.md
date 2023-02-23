@@ -2,9 +2,9 @@
 title: AEM Forms適用於AEM Forms的修補程式安裝指示
 description: AEM Forms Service Pack安裝OSGi和JEE環境的指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 0083de8ba459662d04ba80d8c63f21735d82ac82
+source-git-commit: c4584e34b5b12f29dc995bd5483bcbad476a82ef
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1767'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 |---|---|
 | 版本 | 6.5.15.0 |
 | 類型 | Service Pack發行 |
-| 日期 | 2022 年 12 月 01 日 |
+| 日期 | 2023年12月1日 |
 | 下載 URL | [最新AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -114,7 +114,12 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
 +++4. 安裝Servlet片段
 
-必須安裝 **servlet片段** 對於除運行在JBoss® EAP 7.4.0上的應用程式伺服器以外的所有應用程式伺服器。要下載和安裝servlet片段，請執行以下操作：
+>[!NOTE]
+>
+> 必須安裝 **servlet片段** 除運行於的應用程式伺服器外 **JBoss® EAP 7.4.0**.
+
+
+要下載和安裝Servlet片段，請執行以下操作：
 
 1. 如果您尚未下載片段，請從下載 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar).
 
@@ -132,7 +137,7 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
 1. 如果執行個體處於更新模式（從舊版更新執行個體時），請先重新啟動執行個體再進行安裝。 Adobe建議，如果執行個體的目前正常運行時間很長，則重新啟動。
 1. 安裝之前，請拍攝快照或對 [!DNL Experience Manager] 例項。
-1. 從下載Service Pack [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 從下載Service Pack [Software Distribution](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). <!-- UPDATE FOR EACH NEW RELEASE -->
 1. 開啟「套件管理器」，然後選取 **[!UICONTROL 上傳套件]** 上傳套件。 要了解更多資訊，請參閱 [封裝管理員](/help/sites-administering/package-manager.md).
 1. 選取套件，然後選取 **[!UICONTROL 安裝]**.
 1. 若要更新S3連接器，請在安裝Service Pack後停止執行個體，以安裝資料夾中提供的新二進位檔案取代現有連接器，然後重新啟動執行個體。 請參閱 [Amazon S3 Data Store](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector).
@@ -169,18 +174,6 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
 +++
 
-
-<!-- 1. (JBoss only) After installing the patch and configuring the server, delete  tmp  and work directories of JBoss application server.
-
->[!IMPORTANT]
->
->Before installing [AEM 6.5.15.0 service pack](#install-the-aem-service-pack-install-aem-service-pack), for all the AEM Forms on JEE environments using any application servers other than JBoss EAP 7.4.0: 
-> * Install  the [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet fragment and wait for the application server to stabilize.
->* If you install the latest [AEM service pack (6.5.15.0)](#install-the-aem-service-pack-install-aem-service-pack), prior to the fragment servlet `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` on JEE environment, the CRX/bundle and the start page show service unavailable errors, [click here](/help/forms/using/aem-service-pack-installation-solution.md) to know the troubleshooting steps. 
-
-### !-->
-
-
 ## 在OSGi環境的AEM表單上下載和安裝Service Pack {#download-and-install-for-osgi-service-pack}
 
 ![OSGi安裝步驟](/help/forms/using/assets/osgiinstallation.png)
@@ -207,7 +200,7 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
 1. 如果執行個體處於更新模式（從舊版更新執行個體時），請先重新啟動執行個體再進行安裝。 Adobe建議，如果執行個體的目前正常運行時間很長，則重新啟動。
 1. 安裝之前，請拍攝快照或對 [!DNL Experience Manager] 例項。
-1. 從下載Service Pack [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 從下載Service Pack [Software Distribution](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). <!-- UPDATE FOR EACH NEW RELEASE -->
 1. 開啟「套件管理器」，然後選取 **[!UICONTROL 上傳套件]** 上傳套件。 要了解更多資訊，請參閱 [封裝管理員](/help/sites-administering/package-manager.md).
 1. 選取套件，然後選取 **[!UICONTROL 安裝]**.
 1. 若要更新S3連接器，請在安裝Service Pack後停止執行個體，以安裝資料夾中提供的新二進位檔案取代現有連接器，然後重新啟動執行個體。 請參閱 [Amazon S3 Data Store](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector).
@@ -250,4 +243,4 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
 * 安裝完成後，檢查監視器記錄(error.log)以查看任何活動。 等候幾分鐘，直到記錄中沒有任何活動。 重新啟動AEM執行個體。
 
-* 萬一你 **服務不可用錯誤** 安裝最新的AEM Forms 6.5.15.0 service pack後， [安裝servlet片段和套件組合](/help/forms/using/aem-service-pack-installation-solution.md) 來修正錯誤。
+* 萬一你 **服務不可用錯誤** 安裝AEM Forms 6.5.15.0 service pack後， [安裝servlet片段和套件組合](/help/forms/using/aem-service-pack-installation-solution.md) 來修正錯誤。
