@@ -1,5 +1,5 @@
 ---
-title: 將URL連結至您的Web應用程式
+title: 將 URL 連結至您的網頁應用程式
 description: 如何在Dynamic Media中將URL連結至您的Web應用程式
 uuid: cf599e66-b1f9-40c0-b572-cea19f2e6793
 contentOwner: Rick Brough
@@ -10,14 +10,14 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: User, Admin
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: Configuration
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: dacbfbc8b4677ac7b63b92c45602e030031de3a1
 workflow-type: tm+mt
-source-wordcount: '1276'
-ht-degree: 4%
+source-wordcount: '1278'
+ht-degree: 6%
 
 ---
 
-# 將URL連結至您的Web應用程式 {#linking-urls-to-your-web-application}
+# 將 URL 連結至您的網頁應用程式 {#linking-urls-to-your-web-application}
 
 您的網站和應用程式會透過URL呼叫存取Dynamic Media服務。 發佈資產後，Dynamic Media會啟用參考資產的URL字串。 您可以將這些URL貼到網頁瀏覽器中以進行測試。
 
@@ -158,7 +158,7 @@ Dynamic Media支援靜態資產的傳送，除了影像和視訊，這是其他�
 
    此範例是已發佈視訊轉譯的完整視訊URL。
 
-## 取得最適化串流(HLS)的視訊URL {#obtaining-a-video-url-for-adaptive-streaming-hls}
+## 取得最適化串流（DASH或HLS）的視訊URL {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. 在Experience Manager中，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 雲]** > **[!UICONTROL Cloud Services]**.
 1. 在 **[!UICONTROL Cloud Services]** 頁面，向下捲動至 **[!UICONTROL Dynamic MediaCloud Services]** 標題，然後選取 **[!UICONTROL 顯示配置]**.

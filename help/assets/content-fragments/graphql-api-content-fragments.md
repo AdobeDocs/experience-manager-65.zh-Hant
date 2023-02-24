@@ -1,22 +1,22 @@
 ---
 title: AEM GraphQL API以搭配內容片段使用
-description: 了解如何搭配AEM GraphQL API使用Adobe Experience Manager(AEM)中的內容片段來傳送無周邊內容。
+description: 了解如何搭配AEM GraphQL API使用Adobe Experience Manager(AEM)中的內容片段進行無頭式內容傳送。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
+source-git-commit: 42ef4694a3301ae1cd34766ce4c19f4b0e2f2c38
 workflow-type: tm+mt
-source-wordcount: '4089'
+source-wordcount: '3695'
 ht-degree: 1%
 
 ---
 
 # AEM GraphQL API以搭配內容片段使用 {#graphql-api-for-use-with-content-fragments}
 
-了解如何搭配AEM GraphQL API使用Adobe Experience Manager(AEM)中的內容片段來傳送無周邊內容。
+了解如何搭配AEM GraphQL API使用Adobe Experience Manager(AEM)中的內容片段進行無頭式內容傳送。
 
-AEM與內容片段搭配使用的GraphQL API大多以標準的開放原始碼GraphQL API為基礎。
+AEM GraphQL API搭配內容片段使用，主要是以標準的開放原始碼GraphQL API為基礎。
 
-在AEM中使用GraphQL API，可在無周邊CMS實作中，有效將內容片段傳送至JavaScript用戶端：
+在AEM中使用GraphQL API，可在無頭式CMS實作中，有效率地將內容片段傳送至JavaScript用戶端：
 
 * 避免像REST一樣迭代API請求，
 * 確保傳送內容僅限於特定需求，
@@ -24,27 +24,27 @@ AEM與內容片段搭配使用的GraphQL API大多以標準的開放原始碼Gra
 
 >[!NOTE]
 >
->Adobe Experience Manager(AEM)中目前有兩種（個別）的情況使用GraphQL:
+>GraphQL目前用於Adobe Experience Manager(AEM)的兩種（個別）情況：
 >
 >* [AEM商務會透過GraphQL取用來自商務平台的資料](/help/commerce/cif/integrating/magento.md).
->* AEM內容片段可與AEM GraphQL API（以標準GraphQL為基礎的自訂實作）搭配使用，提供結構化內容以供您的應用程式使用。
+>* AEM內容片段可與AEM GraphQL API(以標準GraphQL為基礎的自訂實作)搭配使用，提供結構化內容以供您的應用程式使用。
 
 
 ## GraphQL API {#graphql-api}
 
-GraphQL為：
+GraphQL是：
 
-* &quot;*...API的查詢語言，以及使用您現有資料完成這些查詢的執行階段。 GraphQL提供API中資料的完整且易於理解的說明，讓用戶端能夠確切要求他們需要的內容，而無需其他任何內容，讓API隨著時間而更易於演變，並支援功能強大的開發人員工具。*」。
+* &quot;*...API的查詢語言，以及使用您現有資料完成這些查詢的執行階段。 GraphQL提供API中資料的完整且易於理解的說明，讓客戶能夠確切要求所需內容，而無需其他任何內容，更輕鬆隨時間演變API，並啟用功能強大的開發人員工具。*」。
 
    請參閱 [GraphQL.org](https://graphql.org)
 
-* &quot;*...靈活API層的開放規格。 將GraphQL放在您現有的後端，以比以往更快的速度構建產品…….*」。
+* &quot;*...靈活API層的開放規格。 將GraphQL放在您現有的後端，以前所未有的速度建置產品…….*」。
 
-   請參閱 [了解GraphQL](https://www.graphql.com).
+   請參閱 [探索GraphQL](https://www.graphql.com).
 
-* *&quot;。..由Facebook於2012年在內部開發的資料查詢語言和規格，2015年公開開放。 它提供了基於REST的體系結構的替代方案，其目的是提高開發人員的工作效率，並最大限度地減少資料傳輸量。 GraphQL被數百個大小的組織用於生產……」*
+* *&quot;。..由Facebook於2012年在內部開發的資料查詢語言和規格，2015年公開開放。 它提供了基於REST的體系結構的替代方案，其目的是提高開發人員的工作效率，並最大限度地減少資料傳輸量。 GraphQL被數百個規模的組織用於生產……」*
 
-   請參閱 [GraphQL基礎](https://foundation.graphql.org/).
+   請參閱 [GraphQL Foundation](https://foundation.graphql.org/).
 
 <!--
 "*Explore GraphQL is maintained by the Apollo team. Our goal is to give developers and technical leaders around the world all of the tools they need to understand and adopt GraphQL.*". 
@@ -56,7 +56,7 @@ GraphQL為：
 
    * [GraphQL簡介](https://graphql.org/learn)
 
-   * [GraphQL規格](https://spec.graphql.org/)
+   * [GraphQL規範](https://spec.graphql.org/)
 
 * At [graphql.com](https://graphql.com):
 
@@ -66,27 +66,27 @@ GraphQL為：
 
    * [案例分析](https://www.graphql.com/case-studies/)
 
-適用於AEM實作的GraphQL以標準GraphQL Java程式庫為基礎。 請參閱：
+GraphQL for AEM實作以標準GraphQL Java程式庫為基礎。 請參閱：
 
 * [graphQL.org - Java](https://graphql.org/code/#java)
 
-* [GitHub上的GraphQL Java](https://github.com/graphql-java)
+* [GraphQL Java at GitHub](https://github.com/graphql-java)
 
 ### GraphQL術語 {#graphql-terminology}
 
-GraphQL使用下列功能：
+GraphQL使用下列項目：
 
 * **[查詢](https://graphql.org/learn/queries/)**
 
 * **[結構和類型](https://graphql.org/learn/schema/)**:
 
    * 結構由AEM根據內容片段模型產生。
-   * GraphQL會使用您的結構來呈現GraphQL for AEM實作所允許的類型和操作。
+   * GraphQL會使用您的結構，說明GraphQL for AEM實作允許的類型和操作。
 
 * **[欄位](https://graphql.org/learn/queries/#fields)**
 
-* **[GraphQL端點](#graphql-aem-endpoint)**
-   * AEM中的路徑，可回應GraphQL查詢，並提供對GraphQL結構的存取。
+* **[GraphQL 端點](#graphql-aem-endpoint)**
+   * AEM中的路徑，可回應GraphQL查詢並提供GraphQL結構的存取。
 
    * 請參閱 [啟用GraphQL端點](#enabling-graphql-endpoint) 以取得詳細資訊。
 
@@ -94,26 +94,40 @@ GraphQL使用下列功能：
 
 ### GraphQL查詢類型 {#graphql-query-types}
 
-使用GraphQL，您可以執行查詢以返回：
+透過GraphQL，您可以執行查詢以傳回：
 
 * A **單次登入**
 
 * A **[條目清單](https://graphql.org/learn/schema/#lists-and-non-null)**
 
-您也可以執行：
+AEM提供將查詢（兩種類型）轉換為 [持續查詢](/help/assets/content-fragments/persisted-queries.md),Dispatcher和CDN可快取這些資料。
 
-* [持續查詢，已快取](#persisted-queries-caching)
+### GraphQL查詢最佳作法（Dispatcher和CDN） {#graphql-query-best-practices}
+
+此 [持續查詢](/help/assets/content-fragments/persisted-queries.md) 是用於發佈執行個體的建議方法，如下所示：
+
+* 快取
+* 由AEM集中管理
 
 >[!NOTE]
->您可以使用 [GraphiQL IDE](#graphiql-interface).
+>
+>作者上通常沒有Dispatcher/CDN，因此使用持續的查詢不會帶來任何好處；除了測試它們。
 
-## AEM端點的GraphQL {#graphql-aem-endpoint}
+不建議使用POST請求的GraphQL查詢，因為它們未進行快取，因此在預設例項上，Dispatcher會設定為封鎖這類查詢。
 
-端點是用來存取AEM適用的GraphQL的路徑。 使用此路徑，您（或您的應用程式）可以：
+雖然GraphQL也支援GET要求，但這些可能會達到限制（例如URL的長度），而這些限制可以使用持續查詢來避免。
 
-* 訪問GraphQL架構，
-* 發送您的GraphQL查詢，
-* 接收回應（對您的GraphQL查詢）。
+>[!NOTE]
+>
+>未來某個時間點可能會淘汰執行直接查詢的功能。
+
+## GraphQL for AEM端點 {#graphql-aem-endpoint}
+
+端點是用來存取GraphQL for AEM的路徑。 使用此路徑，您（或您的應用程式）可以：
+
+* 存取GraphQL架構，
+* 傳送您的GraphQL查詢，
+* 接收回應(對您的GraphQL查詢)。
 
 AEM中有兩種端點類型：
 
@@ -142,14 +156,14 @@ GraphQL for AEM全域端點的存放庫路徑為：
 
 `/content/_cq_graphql/global/endpoint.json`
 
-若要為AEM適用的GraphQL啟用端點，您需要：
+若要啟用GraphQL for AEM的端點，您必須：
 
-* [啟用GraphQL端點](#enabling-graphql-endpoint)
-* [發佈GraphQL端點](#publishing-graphql-endpoint)
+* [啟用您的GraphQL端點](#enabling-graphql-endpoint)
+* [發佈您的GraphQL端點](#publishing-graphql-endpoint)
 
 ### 啟用GraphQL端點 {#enabling-graphql-endpoint}
 
-要啟用GraphQL端點，您首先需要有適當的配置。 請參閱 [內容片段 — 設定瀏覽器](/help/assets/content-fragments/content-fragments-configuration-browser.md).
+若要啟用GraphQL端點，您必須先具備適當的設定。 請參閱 [內容片段 — 設定瀏覽器](/help/assets/content-fragments/content-fragments-configuration-browser.md).
 
 >[!CAUTION]
 >
@@ -161,7 +175,7 @@ GraphQL for AEM全域端點的存放庫路徑為：
 1. 選擇 **建立**。
 1. 此 **建立新的GraphQL端點** 對話框將開啟。 您可以在此處指定：
    * **名稱**:端點名稱；您可以輸入任何文字。
-   * **使用由提供的GraphQL架構**:使用下拉式清單來選取所需的網站/專案。
+   * **使用GraphQL結構**:使用下拉式清單來選取所需的網站/專案。
 
    >[!NOTE]
    >
@@ -187,17 +201,19 @@ GraphQL for AEM全域端點的存放庫路徑為：
 >
 >端點可供所有人存取。
 >
->在發佈執行個體上，這可能會造成安全疑慮，因為GraphQL查詢可能會對伺服器造成沈重負載。
+>在發佈例項上，這可能會造成安全疑慮，因為GraphQL查詢可能會對伺服器造成重量負載。
 >
 >您必須在端點上設定與您的使用案例相適用的ACL。
 
 ## GraphiQL介面 {#graphiql-interface}
 
-標準的實施 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) 介面可與AEM GraphQL搭配使用。 這可以是 [安裝於AEM](#installing-graphiql-interface).
+標準的實施 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) 介面可與AEM GraphQL搭配使用。
 
 >[!NOTE]
 >
->GraphiQL綁定了全局端點（並且無法與特定Sites配置的其他端點一起使用）。
+>GraphiQL包含在AEM的所有環境中（但只有在配置端點時才能存取/顯示）。
+>
+>在以前的版本中，安裝GraphiQL IDE時需要一個包。 如果您已安裝此程式碼，現在可將其移除。
 
 此介面允許您直接輸入和測試查詢。
 
@@ -209,13 +225,9 @@ GraphQL for AEM全域端點的存放庫路徑為：
 
 ![GraphiQL介面](assets/cfm-graphiql-interface.png "GraphiQL介面")
 
-### 安裝AEM GraphQL介面 {#installing-graphiql-interface}
-
-GraphiQL使用者介面可安裝在AEM上，並附上專用套件：the [GraphiQL內容包v0.0.6(2021.3)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-graphql/graphiql-0.0.6.zip) 包。
-
 >[!NOTE]
 >
->可用的套件與AEM 6.5.10.0和AEMas a Cloud Service完全相容。
+>如需詳細資訊，請參閱 [使用GraphiQL IDE](/help/assets/content-fragments/graphiql-ide.md).
 
 ## 製作和發佈環境的使用案例 {#use-cases-author-publish-environments}
 
@@ -233,13 +245,17 @@ GraphiQL使用者介面可安裝在AEM上，並附上專用套件：the [GraphiQ
 
 權限是存取資產所需的權限。
 
+GraphQL查詢是在基礎請求的AEM使用者權限下執行。 如果使用者沒有某些片段的讀取存取權（儲存為資產），則這些片段不會成為結果集的一部分。
+
+此外，使用者必須擁有GraphQL端點的存取權，才能執行GraphQL查詢。
+
 ## 結構產生 {#schema-generation}
 
-GraphQL是強式類型的API，這表示資料必須依類型清楚地建構和組織。
+GraphQL是強制類型的API，這表示資料必須依類型清楚地建構和組織。
 
-GraphQL規範提供了一系列准則，說明如何建立強大的API，以查詢特定執行個體上的資料。 若要這麼做，用戶端必須擷取 [結構](#schema-generation)，包含查詢所需的所有類型。
+GraphQL規格提供一系列准則，說明如何建立強大的API，以詢問特定執行個體上的資料。 若要這麼做，用戶端必須擷取 [結構](#schema-generation)，包含查詢所需的所有類型。
 
-對於內容片段，GraphQL結構（結構和類型）以 **已啟用** [內容片段模型](/help/assets/content-fragments/content-fragments-models.md) 及其資料類型。
+針對內容片段，GraphQL結構（結構和類型）以 **已啟用** [內容片段模型](/help/assets/content-fragments/content-fragments-models.md) 及其資料類型。
 
 >[!CAUTION]
 >
@@ -253,8 +269,8 @@ GraphQL規範提供了一系列准則，說明如何建立強大的API，以查�
 
    ![與GraphQL搭配使用的內容片段模型](assets/cfm-graphqlapi-01.png "與GraphQL搭配使用的內容片段模型")
 
-1. 對應的GraphQL架構（從GraphiQL自動文檔輸出）:
-   ![基於內容片段模型的GraphQL架構](assets/cfm-graphqlapi-02.png "基於內容片段模型的GraphQL架構")
+1. 對應的GraphQL架構（GraphiQL自動檔案輸出）:
+   ![GraphQL結構（以內容片段模型為基礎）](assets/cfm-graphqlapi-02.png "GraphQL結構（以內容片段模型為基礎）")
 
    這會顯示產生的類型 `ArticleModel` 包含數個 [欄位](#fields).
 
@@ -262,9 +278,9 @@ GraphQL規範提供了一系列准則，說明如何建立強大的API，以查�
 
    * 其他欄位是由AEM自動新增的，是提供特定內容片段相關資訊的實用方法；在本例中， `_path`, `_metadata`, `_variations`. 這些 [輔助欄位](#helper-fields) 標籤有 `_` 區分使用者定義的項目和自動產生的項目。
 
-1. 使用者根據文章模型建立內容片段後，就可透過GraphQL進行詢問。 如需範例，請參閱 [範例查詢](/help/assets/content-fragments/content-fragments-graphql-samples.md#graphql-sample-queries) (根據 [與GraphQL搭配使用的範例內容片段結構](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql))。
+1. 使用者根據文章模型建立內容片段後，就可透過GraphQL詢問。 如需範例，請參閱 [範例查詢](/help/assets/content-fragments/content-fragments-graphql-samples.md#graphql-sample-queries) (根據 [與GraphQL搭配使用的範例內容片段結構](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql))。
 
-在AEM適用的GraphQL中，架構是有彈性的。 這表示每次建立、更新或刪除內容片段模型時，都會自動產生內容片段模型。 更新內容片段模型時，也會重新整理資料架構快取。
+在GraphQL for AEM中，結構是彈性的。 這表示每次建立、更新或刪除內容片段模型時，都會自動產生內容片段模型。 更新內容片段模型時，也會重新整理資料架構快取。
 
 Sites GraphQL服務會監聽（在背景）對內容片段模型所做的任何修改。 檢測到更新時，只重新生成該架構的該部分。 此最佳化可節省時間並提供穩定性。
 
@@ -272,7 +288,7 @@ Sites GraphQL服務會監聽（在背景）對內容片段模型所做的任何�
 
 1. 安裝包含 `Content-Fragment-Model-1` 和 `Content-Fragment-Model-2`:
 
-   1. 適用於的GraphQL類型 `Model-1` 和 `Model-2` 即會產生。
+   1. GraphQL類型 `Model-1` 和 `Model-2` 即會產生。
 
 1. 然後修改 `Content-Fragment-Model-2`:
 
@@ -284,7 +300,7 @@ Sites GraphQL服務會監聽（在背景）對內容片段模型所做的任何�
 >
 >請務必注意，以備您想透過REST api或其他方式，對內容片段模型執行大量更新時使用。
 
-架構是透過與GraphQL查詢相同的端點提供，用戶端會處理使用擴充功能呼叫架構的事實 `GQLschema`. 例如，執行簡單 `GET` 要求 `/content/cq:graphql/global/endpoint.GQLschema` 會導致輸出具有Content-type的架構： `text/x-graphql-schema;charset=iso-8859-1`.
+此結構會透過與GraphQL查詢相同的端點提供，且用戶端會處理以擴充功能呼叫結構的事實 `GQLschema`. 例如，執行簡單 `GET` 要求 `/content/cq:graphql/global/endpoint.GQLschema` 會導致輸出具有Content-type的架構： `text/x-graphql-schema;charset=iso-8859-1`.
 
 ### 結構產生 — 取消發佈的模型 {#schema-generation-unpublished-models}
 
@@ -306,13 +322,13 @@ Sites GraphQL服務會監聽（在背景）對內容片段模型所做的任何�
 
    * 還有 **呈現為** 屬性，因為使用者可以設定某些資料類型；例如，作為單行文字或多欄位。
 
-* AEM適用的GraphQL也會產生 [輔助欄位](#helper-fields).
+* GraphQL for AEM也會產生許多 [輔助欄位](#helper-fields).
 
    這些用於識別內容片段，或用於取得有關內容片段的詳細資訊。
 
 ### 欄位類型 {#field-types}
 
-GraphQL for AEM支援類型清單。 所有支援的內容片段模型資料類型和對應的GraphQL類型均表示：
+GraphQL for AEM支援類型清單。 所有支援的內容片段模型資料類型和對應的GraphQL類型皆會呈現：
 
 | 內容片段模型 — 資料類型 | GraphQL類型 | 說明 |
 |--- |--- |--- |
@@ -323,12 +339,12 @@ GraphQL for AEM支援類型清單。 所有支援的內容片段模型資料類�
 | 日期和時間 | 日曆 |  用於以ISO 8086格式顯示日期和時間。 根據選取的類型，AEM GraphQL中有三種可用的方式： `onlyDate`, `onlyTime`, `dateTime` |
 | 列舉 |  String |  用於從建立模型時定義的選項清單中顯示選項 |
 |  標記 |  [String] |  用來顯示代表AEM中所用標籤之字串的清單 |
-| 內容參考資料 |  字串 |  用於顯示AEM中其他資產的路徑 |
+| 內容參考資料 |  String |  用於顯示AEM中其他資產的路徑 |
 | 片段引用 |  *模型類型* |  用於參照建立模型時定義的特定模型類型的另一個內容片段 |
 
 ### 協助欄位 {#helper-fields}
 
-除了使用者產生欄位的資料類型外，GraphQL for AEM也會產生許多 *協助者* 欄位，以協助識別內容片段，或提供有關內容片段的其他資訊。
+除了使用者產生欄位的資料類型，GraphQL for AEM也會產生許多 *協助者* 欄位，以協助識別內容片段，或提供有關內容片段的其他資訊。
 
 #### 路徑 {#path}
 
@@ -367,7 +383,7 @@ GraphQL for AEM支援類型清單。 所有支援的內容片段模型資料類�
 
 #### 中繼資料 {#metadata}
 
-AEM也會透過GraphQL公開內容片段的中繼資料。 中繼資料是描述內容片段的資訊，例如內容片段的標題、縮圖路徑、內容片段的說明、建立日期等。
+透過GraphQL,AEM也會公開內容片段的中繼資料。 中繼資料是描述內容片段的資訊，例如內容片段的標題、縮圖路徑、內容片段的說明、建立日期等。
 
 由於中繼資料是透過結構編輯器產生，因此沒有特定結構，因此， `TypedMetaData` 已實作GraphQL類型，以公開內容片段的中繼資料。 `TypedMetaData` 顯示按以下標量類型分組的資訊：
 
@@ -406,7 +422,7 @@ AEM也會透過GraphQL公開內容片段的中繼資料。 中繼資料是描述
 }
 ```
 
-如果查看生成的GraphQL架構，則可以查看所有元資料GraphQL類型。 所有模型類型都具有相同 `TypedMetaData`.
+如果您檢視「產生的GraphQL」結構，可以檢視所有中繼資料GraphQL類型。 所有模型類型都具有相同 `TypedMetaData`.
 
 >[!NOTE]
 >
@@ -443,7 +459,7 @@ AEM也會透過GraphQL公開內容片段的中繼資料。 中繼資料是描述
 
 ## GraphQL變數 {#graphql-variables}
 
-GraphQL允許將變數放置在查詢中。 如需詳細資訊，請參閱 [變數的GraphQL檔案](https://graphql.org/learn/queries/#variables).
+GraphQL允許在查詢中放置變數。 如需詳細資訊，請參閱 [GraphQL變數檔案](https://graphql.org/learn/queries/#variables).
 
 例如，若要取得類型的所有內容片段 `Article` 具有特定變數時，您可以指定變數 `variation` 在GraphiQL中。
 
@@ -456,6 +472,7 @@ query GetArticlesByVariation($variation: String!) {
         items {
             _path
             author
+            _variations
         }
     }
 }
@@ -466,13 +483,13 @@ query GetArticlesByVariation($variation: String!) {
 }
 ```
 
-## GraphQL指令 {#graphql-directives}
+## GraphQL指示 {#graphql-directives}
 
-在GraphQL中，可以根據變數（稱為GraphQL指令）更改查詢。
+在GraphQL中，可以根據稱為GraphQL指示的變數變更查詢。
 
 例如，您可以在 `adventurePrice` 欄位（在查詢中） `AdventureModels`，根據變數 `includePrice`.
 
-![GraphQL指令](assets/cfm-graphqlapi-04.png "GraphQL指令")
+![GraphQL指示](assets/cfm-graphqlapi-04.png "GraphQL指示")
 
 ```xml
 ### query
@@ -493,7 +510,7 @@ query GetAdventureByType($includePrice: Boolean!) {
 
 ## 篩選 {#filtering}
 
-您也可以在GraphQL查詢中使用篩選功能來傳回特定資料。
+您也可以在GraphQL查詢中使用篩選來傳回特定資料。
 
 篩選使用以邏輯運算子和運算式為基礎的語法。
 
@@ -524,7 +541,7 @@ query {
 
 如需更多範例，請參閱：
 
-* 的 [適用於AEM擴充功能的GraphQL](#graphql-extensions)
+* 的 [GraphQL for AEM擴充功能](#graphql-extensions)
 
 * [使用此範例內容和結構的範例查詢](/help/assets/content-fragments/content-fragments-graphql-samples.md#graphql-sample-queries-sample-content-fragment-structure)
 
@@ -534,7 +551,7 @@ query {
 
 ## GraphQL for AEM — 擴充功能摘要 {#graphql-extensions}
 
-使用AEM適用的GraphQL進行查詢的基本操作符合標準GraphQL規範。 若是使用AEM的GraphQL查詢，有幾個擴充功能：
+使用GraphQL for AEM的查詢基本操作符合標準GraphQL規格。 若為具有AEM的GraphQL查詢，有幾個擴充功能：
 
 * 如果您需要單一結果：
    * 使用模型名稱；eg city
@@ -609,7 +626,7 @@ query {
 
 
 
-* 支援GraphQL聯合類型：
+* GraphQL聯合類型受支援：
 
    * use `... on`
       * 請參閱 [具有內容參考之特定模型的內容片段查詢範例](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-fragment-specific-model-content-reference)
@@ -618,43 +635,46 @@ query {
 
    * 如果請求的變異不存在於巢狀片段中，則 **主版** 將會傳回變數。
 
-## 持續查詢（快取） {#persisted-queries-caching}
+<!--
+## Persisted Queries (Caching) {#persisted-queries-caching}
 
-使用POST要求準備查詢後，可使用HTTP快取或CDN快取的GET要求來執行查詢。
+After preparing a query with a POST request, it can be executed with a GET request that can be cached by HTTP caches or a CDN.
 
-這是必需的，因為通常不快取POST查詢，如果將GET與查詢搭配使用作為參數，則存在很大的風險，即參數對HTTP服務和中間產品而言過大。
+This is required as POST queries are usually not cached, and if using GET with the query as a parameter there is a significant risk of the parameter becoming too large for HTTP services and intermediates.
 
-持續查詢必須一律使用與 [適當的站點配置](#graphql-aem-endpoint);以便兩者皆可使用：
+Persisted queries must always use the endpoint related to the [appropriate Sites configuration](#graphql-aem-endpoint); so they can use either, or both:
 
-* 全域設定和端點查詢可存取所有內容片段模型。
-* 特定網站配置和端點為特定網站配置建立持續查詢時，需要對應的網站配置特定端點（以提供對相關內容片段模型的存取）。
-例如，要為WKND Sites配置特別建立持續查詢，必須事前建立相應的WKND特定Sites配置和WKND特定端點。
-
->[!NOTE]
->
->請參閱 [在設定瀏覽器中啟用內容片段功能](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser) 以取得更多詳細資訊。
->
->此 **GraphQL持久性查詢** 需要啟用，才能進行適當的Sites設定。
-
-例如，如果有一個名為的特定查詢 `my-query`，此模型使用 `my-model` 從Sites配置 `my-conf`:
-
-* 您可以使用 `my-conf` 特定端點，則查詢將儲存為下列內容：
-   `/conf/my-conf/settings/graphql/persistentQueries/my-query`
-* 您可以使用 `global` 端點，但查詢將儲存如下：
-   `/conf/global/settings/graphql/persistentQueries/my-query`
+* The Global configuration and endpoint
+  The query has access to all Content Fragment Models.
+* Specific Sites configuration(s) and endpoint(s)
+  Creating a persisted query for a specific Sites configuration requires a corresponding Sites-configuration-specific endpoint (to provide access to the related Content Fragment Models). 
+  For example, to create a persisted query specifically for the WKND Sites configuration, a corresponding WKND-specific Sites configuration, and a WKND-specific endpoint must be created in advance.
 
 >[!NOTE]
 >
->這是兩個不同的查詢 — 儲存在不同的路徑下。
+>See [Enable Content Fragment Functionality in Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser) for more details.
 >
->他們只是碰巧使用相同的模型，但透過不同的端點。
+>The **GraphQL Persistence Queries** need to be enabled, for the appropriate Sites configuration. 
+
+For example, if there is a particular query called `my-query`, which uses a model `my-model` from the Sites configuration `my-conf`:
+
+* You can create a query using the `my-conf` specific endpoint, and then the query will be saved as following: 
+`/conf/my-conf/settings/graphql/persistentQueries/my-query`
+* You can create the same query using `global` endpoint, but then the query will be saved as following:
+`/conf/global/settings/graphql/persistentQueries/my-query`
+
+>[!NOTE]
+>
+>These are two different queries - saved under different paths. 
+>
+>They just happen to use the same model - but via different endpoints.
 
 
-以下是保留指定查詢所需的步驟：
+Here are the steps required to persist a given query:
 
-1. 將查詢PUT輸入新端點URL以準備該查詢 `/graphql/persist.json/<config>/<persisted-label>`.
+1. Prepare the query by PUTing it to the new endpoint URL `/graphql/persist.json/<config>/<persisted-label>`.
 
-   例如，建立持續查詢：
+   For example, create a persisted query:
 
    ```xml
    $ curl -X PUT \
@@ -675,32 +695,32 @@ query {
    }'
    ```
 
-1. 此時，請檢查回應。
+1. At this point, check the response.
 
-   例如，檢查是否成功：
+   For example, check for success:
 
-   ```xml
-   {
-     "action": "create",
-     "configurationName": "wknd",
-     "name": "plain-article-query",
-     "shortPath": "/wknd/plain-article-query",
-     "path": "/conf/wknd/settings/graphql/persistentQueries/plain-article-query"
-   }
-   ```
+     ```xml
+     {
+       "action": "create",
+       "configurationName": "wknd",
+       "name": "plain-article-query",
+       "shortPath": "/wknd/plain-article-query",
+       "path": "/conf/wknd/settings/graphql/persistentQueries/plain-article-query"
+     }
+     ```
 
-1. 然後，您可以透過取得URL來重播保存的查詢 `/graphql/execute.json/<shortPath>`.
+1. You can then replay the persisted query by GETing the URL `/graphql/execute.json/<shortPath>`.
 
-   例如，使用持續查詢：
+   For example, use the persisted query:
 
    ```xml
    $ curl -X GET \
        http://localhost:4502/graphql/execute.json/wknd/plain-article-query
    ```
 
-1. 將POSTing更新為已存在的查詢路徑，以保存查詢。
+1. Update a persisted query by POSTing to an already existing query path.
 
-   例如，使用持續查詢：
+   For example, use the persisted query:
 
    ```xml
    $ curl -X POST \
@@ -724,9 +744,9 @@ query {
    }'
    ```
 
-1. 建立包裝的純查詢。
+1. Create a wrapped plain query.
 
-   例如：
+   For example:
 
    ```xml
    $ curl -X PUT \
@@ -737,9 +757,9 @@ query {
    '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }"}'
    ```
 
-1. 使用快取控制項建立包裝的純查詢。
+1. Create a wrapped plain query with cache control.
 
-   例如：
+   For example:
 
    ```xml
    $ curl -X PUT \
@@ -750,9 +770,9 @@ query {
    '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
    ```
 
-1. 使用參數建立持續查詢：
+1. Create a persisted query with parameters:
 
-   例如：
+   For example:
 
    ```xml
    $ curl -X PUT \
@@ -776,69 +796,69 @@ query {
      }'
    ```
 
-1. 使用參數執行查詢。
+1. Executing a query with parameters.
 
-   例如：
+   For example:
 
    ```xml
    $ curl -X POST \
        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-   
+
    $ curl -X GET \
        "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    ```
 
-1. 要在發佈時執行查詢，需要複製相關的持久樹
+1. To execute the query on publish, the related persist tree need to replicated
 
-   * 使用POST進行複製：
+   * Using a POST for replication:
 
-      ```xml
-      $curl -X POST   http://localhost:4502/bin/replicate.json \
-        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-        -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
-        -F cmd=activate
-      ```
+     ```xml
+     $curl -X POST   http://localhost:4502/bin/replicate.json \
+       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
+       -F cmd=activate
+     ```
 
-   * 使用套件：
-      1. 建立新的包定義。
-      1. 納入設定(例如 `/conf/wknd/settings/graphql/persistentQueries`)。
-      1. 建立套件。
-      1. 複製包。
-   * 使用復寫/發佈工具。
-      1. 前往發佈工具。
-      1. 為配置選擇樹激活(例如 `/conf/wknd/settings/graphql/persistentQueries`)。
-   * 使用工作流程（透過工作流程啟動器設定）:
-      1. 定義工作流啟動器規則，用於執行將在不同事件上複製配置的工作流模型（例如，建立、修改等）。
+   * Using a package:
+     1. Create a new package definition.
+     1. Include the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
+     1. Build the package.
+     1. Replicate the package.
 
+   * Using replication/distribution tool.
+     1. Go to the Distribution tool.
+     1. Select tree activation for the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
 
+   * Using a workflow (via workflow launcher configuration):
+     1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, amongst others).
 
-1. 在查詢設定開啟發佈後，會套用相同的原則，只使用發佈端點。
-
-   >[!NOTE]
-   >
-   >對於匿名訪問，系統假定ACL允許「每個人」訪問查詢配置。
-   >
-   >若非如此，則無法執行。
+1. Once the query configuration is on publish, the same principles apply, just using the publish endpoint.
 
    >[!NOTE]
    >
-   >URL中的任何分號(&quot;;&quot;)都需要編碼。
+   >For anonymous access the system assumes that the ACL allows "everyone" to have access to the query configuration.
    >
-   >例如，如執行持續查詢的請求中：
+   >If that is not the case it will not be able to execute.
+
+   >[!NOTE]
    >
+   >Any semicolons (";") in the URLs need to be encoded.
    >
-   ```xml
+   >For example, as in the request to Execute a persisted query:
+   >
+   >```xml
    >curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    >```
 
-## 從外部網站查詢GraphQL端點 {#query-graphql-endpoint-from-external-website}
+## Querying the GraphQL endpoint from an External Website {#query-graphql-endpoint-from-external-website}
 
-若要從外部網站存取GraphQL端點，您需要設定：
+To access the GraphQL endpoint from an external website you need to configure the:
 
-* [CORS篩選器](#cors-filter)
-* [反向連結篩選](#referrer-filter)
+* [CORS Filter](#cors-filter)
+* [Referrer Filter](#referrer-filter)
+-->
 
 ### CORS篩選器 {#cors-filter}
 
@@ -850,7 +870,7 @@ query {
 
 此配置必須指定受信任的網站源 `alloworigin` 或 `alloworiginregexp` 必須授予其存取權。
 
-例如，要授予對GraphQL端點和持續查詢端點的存取權， `https://my.domain` 您可以使用：
+例如，若要授予對GraphQL端點和持續查詢端點的存取權， `https://my.domain` 您可以使用：
 
 ```xml
 {
@@ -887,7 +907,7 @@ query {
 
 如果您已設定端點的虛名路徑，也可以在 `allowedpaths`.
 
-### 反向連結篩選 {#referrer-filter}
+### 推薦者篩選器 {#referrer-filter}
 
 除了CORS設定，反向連結篩選器還必須設定為允許從第三方主機存取。
 
@@ -926,7 +946,7 @@ query {
 >
 >* 僅授予受信任域的訪問權限
 >* 確保未公開任何敏感資訊
->* 不使用通配符 [*] 語法；這既會停用對GraphQL端點的驗證存取，也會將其公開給全世界。
+>* 不使用通配符 [*] 語法；這將會停用GraphQL端點的已驗證存取權，並將其公開給全世界。
 
 
 >[!CAUTION]
@@ -955,11 +975,11 @@ query {
 
 出現的問題：
 
-1. **Q**:&quot;*適用於AEM的GraphQL API與Query Builder API有何不同？*&quot;
+1. **Q**:&quot;*AEM的GraphQL API與Query Builder API有何不同？*&quot;
 
-   * **A**:&quot;*AEM GraphQL API提供對JSON輸出的完整控制，且是查詢內容的業界標準。
-日後，AEM計畫投資AEM GraphQL API。*&quot;
+   * **A**:&quot;*AEM GraphQL API提供JSON輸出的總計控制，且是查詢內容的業界標準。
+日後AEM將計畫投資AEM GraphQL API。*&quot;
 
-## 教學課程 — 開始使用AEM無周邊和GraphQL {#tutorial}
+## 教學課程 — AEM Headless和GraphQL快速入門 {#tutorial}
 
-尋找實作教學課程？ 結帳 [開始使用AEM無周邊和GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) 端對端教學課程，說明如何在無周邊CMS情境下，使用AEM GraphQL API建置和公開內容，並供外部應用程式使用。
+尋找實作教學課程？ 結帳 [AEM Headless和GraphQL快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) 端對端教學課程，說明如何在無頭CMS情境中，使用AEM GraphQL API建置和公開內容，並供外部應用程式使用。

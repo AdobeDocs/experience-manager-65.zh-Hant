@@ -12,9 +12,9 @@ feature: Video Profiles
 role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: dacbfbc8b4677ac7b63b92c45602e030031de3a1
 workflow-type: tm+mt
-source-wordcount: '3689'
+source-wordcount: '3727'
 ht-degree: 9%
 
 ---
@@ -77,22 +77,22 @@ Dynamic Media已隨附預先定義的最適化視訊編碼設定檔。 此現成
   </tr>
   <tr>
    <td><p>MP4 H.264(mp4)</p> </td>
-   <td>自動</td>
+   <td>auto</td>
    <td>540</td>
    <td>是</td>
-   <td>2000年<br /> </td>
+   <td>2000<br /> </td>
    <td>30</td>
-   <td>杜比HE-AAC</td>
+   <td>Dolby HE-AAC</td>
    <td>128</td>
   </tr>
   <tr>
    <td><p>MP4 H.264(mp4)</p> </td>
-   <td>自動</td>
+   <td>auto</td>
    <td>720<br /> </td>
    <td>是</td>
    <td>3000<br /> </td>
    <td>30</td>
-   <td>杜比HE-AAC</td>
+   <td>Dolby HE-AAC</td>
    <td>128</td>
   </tr>
  </tbody>
@@ -284,7 +284,7 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
    <td><code>keyframe</code></td>
    <td>關鍵幀之間的幀的目標數量。 計算此值，以便每2-10秒生成一個關鍵幀。 例如，在每秒30幀時，關鍵幀間隔應為60-300。<br /> <br /> 較低的關鍵幀間隔可改善最適化視頻編碼的流搜索和流切換行為，還可能改善具有大量運動的視頻的質量。 但是，由於關鍵幀會增加檔案的大小，因此較低的關鍵幀間隔通常會導致以指定位元速率顯示的整體視頻質量較低。</td>
    <td><code>String</code></td>
-   <td><p>正數。</p> <p>預設為300。</p> <p>HLS（HTTP即時串流）的建議值為60-90。</p> </td>
+   <td><p>正數。</p> <p>預設為300。</p> <p>DASH或HLS的建議值為60-90。 (若要對影片使用DASH，必須先在您的帳戶啟用。 請參閱 <a href="/help/assets/video.md#enable-dash">在您的帳戶上啟用DASH</a>.)</p> </td>
   </tr>
   <tr>
    <td><code>minBitrate</code></td>
@@ -302,7 +302,7 @@ Dynamic Media已隨附預先定義的適用性視訊編碼設定檔，此設定�
    <td><code>audioBitrateCustom</code></td>
    <td>將值設定為 <code>true</code> 強制音頻流的恆定位元速率（如果受音頻編解碼器支援）。</td>
    <td><code>String</code></td>
-   <td><p><code>true</code>/<code>false</code></p> <p>預設為 <code>false</code>.</p> <p>HLS（HTTP即時串流）的建議值為 <code>false</code>.</p> <p> </p> </td>
+   <td><p><code>true</code>/<code>false</code></p> <p>預設為 <code>false</code>.</p> <p>DASH或HLS的建議值為 <code>false</code>. (若要對影片使用DASH，必須先在您的帳戶啟用。 請參閱 <a href="/help/assets/video.md#enable-dash">在您的帳戶上啟用DASH</a>.)</p> <p> </p> </td>
   </tr>
  </tbody>
 </table>

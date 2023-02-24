@@ -4,10 +4,10 @@ description: 了解如何在設定瀏覽器中啟用特定內容片段功能，�
 feature: Content Fragments
 role: User
 exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
-source-git-commit: 8dc8eff86ff25534a578dd227033aa185853d930
+source-git-commit: da41f48d08b7629a734e2f60077af6190a7fee8f
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 17%
+source-wordcount: '271'
+ht-degree: 21%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 17%
 使用內容片段之前，您需要使用 **配置瀏覽器** 啟用：
 
 * **內容片段模型** 必填
-* **GraphQL持久查詢**  — 可選
+* **GraphQL永久查詢**  — 可選
 
 >[!CAUTION]
 >
@@ -43,10 +43,6 @@ ht-degree: 17%
 >
 >如需詳細資訊，另請參閱 [配置瀏覽器：](/help/sites-administering/configurations.md#using-configuration-browser).
 
->[!CAUTION]
->
->支援與內容片段搭配使用的子設定（在設定內巢狀的設定），但無法用於GraphQL查詢。
-
 1. 導覽至「 **工具**」、「 **一般**」，然後開啟「 **設定瀏覽器**」。
 
 1. 使用 **建立** 開啟對話框，其中：
@@ -54,7 +50,7 @@ ht-degree: 17%
    1. 指定 **標題**.
    1. 啟用其使用選擇
       * **內容片段模型**
-      * **GraphQL持久查詢**
+      * **GraphQL永久查詢**
 
       ![定義配置](assets/cfm-conf-01.png)
 

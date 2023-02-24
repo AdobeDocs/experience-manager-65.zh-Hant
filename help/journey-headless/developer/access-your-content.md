@@ -1,19 +1,19 @@
 ---
 title: 如何透過AEM傳送API存取您的內容
-description: 在AEM無周邊開發人員歷程的這部分，了解如何使用GraphQL查詢來存取您的內容片段內容。
+description: 在AEM無頭式開發人員歷程的這部分，了解如何使用GraphQL查詢來存取您的內容片段內容。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 1%
+source-wordcount: '1335'
+ht-degree: 3%
 
 ---
 
 # 如何透過AEM傳送API存取您的內容 {#access-your-content}
 
-在 [AEM無頭開發者歷程，](overview.md) 您可以了解如何使用GraphQL查詢來存取內容片段的內容，並將其饋送至您的應用程式（無周邊傳送）。
+在 [AEM無頭開發者歷程，](overview.md) 您可以了解如何使用GraphQL查詢來存取內容片段的內容，並將其饋送至您的應用程式（無頭傳送）。
 
-## 迄今為止的故事 {#story-so-far}
+## 到目前為止 {#story-so-far}
 
 在AEM無頭歷程的上一份檔案中， [如何建立內容模型](model-your-content.md) 您已了解AEM中內容模型的基本知識，因此您現在應了解如何建立內容結構模型，然後使用AEM內容片段模型和內容片段來實現該結構：
 
@@ -22,12 +22,12 @@ ht-degree: 1%
 * 了解如何使用AEM內容片段模型（以及使用內容片段製作內容）來實現此結構。
 * 了解如何建立內容模型；基本樣本的原則。
 
-本文以這些基本知識為基礎，讓您了解如何使用AEM GraphQL API存取AEM中現有的無周邊內容。
+本文以這些基本知識為基礎，讓您了解如何使用AEM GraphQL API存取AEM中現有的無頭內容。
 
 * **對象**:入門者
 * **目標**:了解如何使用AEM GraphQL查詢存取內容片段的內容：
-   * 導入GraphQL和AEM GraphQL API。
-   * 深入了解AEM GraphQL API的詳細資訊。
+   * 介紹GraphQL和AEM GraphQL API。
+   * 深入探討AEM GraphQL API的詳細資訊。
    * 查看一些範例查詢，了解實際運作方式。
 
 ## 那麼，您想要訪問您的內容？ {#so-youd-like-to-access-your-content}
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 您需要的是鎖定特定內容、選取所需內容，然後將其傳回至應用程式以進行進一步處理的方式。
 
-透過Adobe Experience Manager(AEM)，您可以使用AEM GraphQL API，選擇性地存取內容片段，以僅傳回您需要的內容。 這表示您可以實現結構化內容的無頭傳送，以便用於您的應用程式。
+透過Adobe Experience Manager(AEM)，您可以使用AEM GraphQL API選擇性地存取內容片段，以只傳回您需要的內容。 這表示您可以實現結構化內容的無頭傳送，以便用於您的應用程式。
 
 >[!NOTE]
 >
@@ -44,14 +44,14 @@ ht-degree: 1%
 
 ## GraphQL — 簡介 {#graphql-introduction}
 
-GraphQL是開放原始碼規範，提供：
+GraphQL是開放原始碼規格，提供：
 
 * 一種查詢語言，可讓您從結構化物件中選取特定內容。
 * 一個運行時，用您的結構化內容來完成這些查詢。
 
-GraphQL是 *強烈* 輸入API。 這表示 *all* 內容必須依類型清楚地架構和組織，以便GraphQL *理解* 存取的項目及方式。 資料欄位是在GraphQL結構中定義的，可定義內容物件的結構。
+GraphQL是 *強烈* 輸入API。 這表示 *all* 內容必須清楚結構化且依類型組織，以便GraphQL *理解* 存取的項目及方式。 資料欄位是在GraphQL結構中定義，可定義內容物件的結構。
 
-然後，GraphQL端點會提供回應GraphQL查詢的路徑。
+GraphQL端點接著會提供回應GraphQL查詢的路徑。
 
 這些都表示您的應用程式能夠準確、可靠且有效地選取所需內容，與AEM搭配使用時，為您所需的內容。
 
@@ -79,15 +79,15 @@ GraphQL is used in various locations in AEM; for example:
 
 ## AEM GraphQL API {#aem-graphql-api}
 
-AEM GraphQL API是以標準GraphQL API規格為基礎的自訂版本，經特別設定，可讓您對內容片段執行（複雜）查詢。
+AEM GraphQL API是根據標準GraphQL API規格的自訂版本，專門設定為可讓您對內容片段執行（複雜）查詢。
 
-內容片段是使用的，因為內容是根據內容片段模型建構。 這滿足了GraphQL的基本要求。
+內容片段是使用的，因為內容是根據內容片段模型建構。 這符合GraphQL的基本要求。
 
 * 內容片段模型是由一或多個欄位所建立。
    * 每個欄位都根據資料類型定義。
 * 內容片段模型用於產生對應的AEM GraphQL結構。
 
-若要實際存取AEM適用的GraphQL（和內容），會使用端點來提供存取路徑。
+若要實際存取GraphQL for AEM（和內容），會使用端點來提供存取路徑。
 
 透過AEM GraphQL API傳回的內容，便可供您的應用程式使用。
 
@@ -95,7 +95,7 @@ AEM GraphQL API是以標準GraphQL API規格為基礎的自訂版本，經特別
 
 >[!NOTE]
 >
->AEM GraphQL API實作以GraphQL Java程式庫為基礎。
+>AEM GraphQL API實作是以GraphQL Java程式庫為基礎。
 
 <!--
 ### Use Cases for Author and Publish Environments {#use-cases-author-publish-environments}
@@ -111,9 +111,9 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
     * The REST API can be used for CR(u)D operations.
 -->
 
-## 與AEM GraphQL API搭配使用的內容片段 {#content-fragments-use-with-aem-graphql-api}
+## 要與AEM GraphQL API搭配使用的內容片段 {#content-fragments-use-with-aem-graphql-api}
 
-內容片段可作為AEM結構和查詢的GraphQL基礎，如下：
+內容片段可作為GraphQL的基礎，以供AEM結構描述和查詢：
 
 * 它們可讓您設計、建立、組織和發佈不受頁面影響的內容，而這些內容可無端傳送。
 * 它們以內容片段模型為基礎，該模型使用一系列資料類型預先定義產生片段的結構。
@@ -137,7 +137,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 
    * 定義為 **多重摘要**，則主要片段可參考（擷取）多個子片段。
 
-### JSON預覽 {#json-preview}
+### JSON 預覽 {#json-preview}
 
 若要協助您設計和開發內容片段模型，您可以在內容片段編輯器中預覽JSON輸出。
 
@@ -245,9 +245,8 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
    * 使用工具 — >資產 — > GraphQL
    * [啟用GraphQL端點](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
 
-* 安裝GraphiQL（如果需要）
-   * 安裝為專用軟體包
-   * [安裝AEM GraphQL介面](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface)
+* 訪問GraphiQL（如果需要）
+   * [AEM GraphiQL介面](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)
 
 ### 範例結構 {#sample-structure}
 
@@ -266,13 +265,13 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 將使用片段模型：
 
 * 在內容片段編輯器中建立內容時
-* 生成要查詢的GraphQL結構
+* 產生要查詢的GraphQL結構
 
 ### 在何處測試查詢 {#where-to-test-your-queries}
 
-查詢可在GraphiQL介面中輸入，例如：
+查詢可在 [GraphiQL介面](/help/assets/content-fragments/graphiql-ide.md)，例如：
 
-* `http://localhost:4502/content/graphiql.html`
+* `http://localhost:4502/aem/graphiql.html`
 
 ![GraphiQL介面](assets/graphiql-interface.png "GraphiQL介面")
 
@@ -350,24 +349,24 @@ query {
 
 * 學習如何搭配AEM使用GraphQL
 * 範例內容片段結構
-* 學習如何搭配AEM使用GraphQL — 範例內容與查詢
+* 了解透過 AEM 使用 GraphQL - 範例內容和查詢
 
 ## 下一步 {#whats-next}
 
-現在您已了解如何使用AEM GraphQL API存取和查詢無周邊內容 [了解如何使用REST API存取及更新內容片段的內容](update-your-content.md).
+現在您已了解如何使用AEM GraphQL API存取及查詢無頭內容 [了解如何使用REST API存取及更新內容片段的內容](update-your-content.md).
 
 ## 其他資源 {#additional-resources}
 
 * [GraphQL.org](https://graphql.org)
    * [結構描述](https://graphql.org/learn/schema/)
    * [變數](https://graphql.org/learn/queries/#variables)
-   * [GraphQL Java庫](https://graphql.org/code/#java)
+   * [GraphQL Java程式庫](https://graphql.org/code/#java)
 * [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql)
 * [學習如何搭配AEM使用GraphQL](/help/assets/content-fragments/graphql-api-content-fragments.md)
    * [啟用GraphQL端點](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
    * [安裝AEM GraphQL介面](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface)
 * [範例內容片段結構](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
-* [學習如何搭配AEM使用GraphQL — 範例內容與查詢](/help/assets/content-fragments/content-fragments-graphql-samples.md)
+* [了解透過 AEM 使用 GraphQL - 範例內容和查詢](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    * [範例查詢 — 單一特定城市片段](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
    * [中繼資料的範例查詢 — 列出題為GB的獎項中繼資料](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
    * [範例查詢 — 具有已命名變數的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
@@ -376,7 +375,7 @@ query {
    * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
    * [JSON輸出](/help/assets/content-fragments/content-fragments-json-preview.md)
 * [了解跨原始資源共用(CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=en#understand-cross-origin-resource-sharing-(cors))
-* [AEM Headless快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)  — 簡短的教學課程系列影片，概述如何使用AEM無周邊功能，包括內容模型和GraphQL。
+* [AEM Headless快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)  — 簡短的教學課程系列影片，概述如何使用AEM無標題功能，包括內容模型和GraphQL。
 
 <!--
 * [Generating Access Tokens for Server Side APIs](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md)
