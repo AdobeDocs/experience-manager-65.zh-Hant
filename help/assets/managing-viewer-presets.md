@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: f578a3c5dee24bbb9995329777eea02bb8f1b654
+source-git-commit: 40ae6c06f3296bfd4affe3e862d57df747d9bb82
 workflow-type: tm+mt
-source-wordcount: '4507'
+source-wordcount: '4520'
 ht-degree: 8%
 
 ---
@@ -461,7 +461,7 @@ Experience Manager從 **[!UICONTROL 詳細資料檢視]** > **[!UICONTROL 檢視
 1. 在「檢視器預設集編輯器」頁面上，選取 **[!UICONTROL 行為]** 標籤。 或者，您也可以在檢視器中選取任何視覺元素，以選取它進行設定。
 例如，對於 *VideoPlayer* 類型，在 **[!UICONTROL 修飾元]** > **[!UICONTROL 播放]**，您可以從三個最適化串流選項之一中選取：
 
-   * **[!UICONTROL 破折號]**  — 視訊僅以破折號形式串流。
+   * **[!UICONTROL 破折號]**  — 視訊僅以破折號形式串流。 不過，在Safari/iOS裝置上，您必須選取 **[!UICONTROL hls]** 作為類型。
    * **[!UICONTROL hls]**  — 視訊資料流僅限hls。
    * **[!UICONTROL 自動]**  — 最佳實務。 DASH和HLS資料流的建立已經過儲存優化。 因此，Adobe建議您一律選取 **[!UICONTROL 自動]** 作為播放類型。 視訊以破折號、hls或漸進式方式串流，如下所示：
       * 如果瀏覽器支援DASH，則首先使用DASH串流。

@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 2c4be989decbac2a4109e7c02cd9d6231c1d0753
+source-git-commit: 86394ab7e7de89615218d6ddd6843ec9276275cd
 workflow-type: tm+mt
-source-wordcount: '12541'
+source-wordcount: '12734'
 ht-degree: 5%
 
 ---
@@ -231,17 +231,17 @@ HLS是適用性視訊串流的Apple標準，可根據網路頻寬容量自動調
   <tr>
    <td>桌面</td>
    <td>Firefox 45或更新版本</td>
-   <td>DASH*或HLS</td>
+   <td>DASH*或HLS最適化串流。</td>
   </tr>
   <tr>
    <td>桌面</td>
    <td>鉻黃</td>
-   <td>DASH*或HLS</td>
+   <td>DASH*或HLS最適化串流。</td>
   </tr>
   <tr>
    <td>桌面</td>
    <td>Safari(Mac)</td>
-   <td>HLS</td>
+   <td>HLS最適化串流。</td>
   </tr>
   <tr>
    <td>行動</td>
@@ -251,7 +251,7 @@ HLS是適用性視訊串流的Apple標準，可根據網路頻寬容量自動調
   <tr>
    <td>行動</td>
    <td>Chrome(Android™ 7或更新版本)</td>
-   <td>DASH*或HLS</td>
+   <td>DASH*或HLS最適化串流。</td>
   </tr>
   <tr>
    <td>行動</td>
@@ -261,17 +261,17 @@ HLS是適用性視訊串流的Apple標準，可根據網路頻寬容量自動調
   <tr>
    <td>行動</td>
    <td>Safari(iOS)</td>
-   <td>HLS</td>
+   <td>HLS最適化串流。</td>
   </tr>
   <tr>
    <td>行動</td>
    <td>Chrome(iOS)</td>
-   <td>DASH*或HLS</td>
+   <td>HLS最適化串流。</td>
   </tr>
   <tr>
    <td>行動</td>
    <td>BlackBerry®</td>
-   <td>DASH*或HLS</td>
+   <td>DASH*或HLS最適化串流。/td&gt;
   </tr>
  </tbody>
 </table>
@@ -432,7 +432,7 @@ Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用
 
 ### 在您的帳戶上啟用DASH {#enable-dash}
 
-DASH(Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，在不同的視訊觀看者中廣泛採用。 啟用「破折號」時，您可以選擇HLS或DASH以進行最適化視訊串流。 您也可以選擇兩者，並自動切換播放器。
+DASH(Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，在不同的視訊觀看者中廣泛採用。 在帳戶上啟用「破折號」時，您可以選擇使用「破折號」或HLS進行最適化視訊串流。 或者，您可以選擇兩者，並在 **[!UICONTROL 自動]** 在檢視器預設集中，已選取為播放類型。
 
 在您的帳戶上啟用DASH的一些主要優點包括：
 
@@ -447,12 +447,28 @@ DASH(Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，在�
    >
    >目前，您的帳戶僅在北美提供啟用DASH。
 
+在您的帳戶上啟用DASH需要兩個步驟：
+
+* 將Dynamic Media設為使用DASH，讓您輕鬆自在。
+* 將Experience Manager6.5設定為使用DASH，這是透過您建立和提交的Adobe客戶支援案例來完成。
+
 **要啟用帳戶上的DASH，請執行以下操作：**
 
-1. 導覽至 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+1. **設定Dynamic Media**  — 在Dynamic Media的Experience Manager6.5中，導覽至 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 1. 搜尋 **AEM Assets Dynamic Media視訊進階串流** 功能標幟。
 1. 選中複選框以啟用（開啟）破折號。
 1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. **配置Experience Manager6.5** - [使用Admin Console開始建立新的支援案例](https://helpx.adobe.com/tw/enterprise/using/support-for-experience-cloud.html).
+1. 請依照指示建立支援案例，同時確保您提供下列資訊：
+
+   * 主要聯繫人姓名、電子郵件、電話。
+   * 您的Dynamic Media帳戶名稱。
+   * 指定要在Experience Manager6.5上啟用DASH。
+
+1. Adobe客戶支援會根據提交請求的順序將您新增至DASH客戶等待清單。
+1. 當Adobe準備好處理您的請求時，客戶支援會聯絡您，協調並設定啟用破折號的目標日期。
+1. 客戶支援在完成後通知您。
+1. 建立 [視訊檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) 照常。
 
 ## 將影片發佈至YouTube {#publishing-videos-to-youtube}
 
