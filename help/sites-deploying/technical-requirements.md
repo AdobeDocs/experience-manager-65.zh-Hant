@@ -6,10 +6,10 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 26e71c5f09eb9fa3f3eda01deb871ac63e348a30
+source-git-commit: 93de94bb17ea898f0fe15e62fb031cab239a3682
 workflow-type: tm+mt
-source-wordcount: '3529'
-ht-degree: 0%
+source-wordcount: '3534'
+ht-degree: 1%
 
 ---
 
@@ -119,6 +119,7 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
 | 將二進位檔儲存在檔案系統的TAR檔案中 `[1]` | 二進位檔 | Z:不支援生產 |
 | Amazon S3 | 二進位檔 | 答：支援 |
 | Microsoft Azure Blob儲存 | 二進位檔 | 答：支援 |
+| MongoDB Enterprise 4.4 | 存放庫 | 答：支援 `[2, 3, 4]` |
 | MongoDB Enterprise 4.2 | 存放庫 | 答：支援 `[2, 3, 4]` |
 | MongoDB Enterprise 4.0 | 存放庫 | Z:不支援 |
 | MongoDB Enterprise 3.6 | 存放庫 | Z:不支援 |
