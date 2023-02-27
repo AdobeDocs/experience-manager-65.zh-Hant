@@ -10,9 +10,9 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: User, Admin
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: Configuration
-source-git-commit: dacbfbc8b4677ac7b63b92c45602e030031de3a1
+source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1279'
 ht-degree: 6%
 
 ---
@@ -158,7 +158,7 @@ Dynamic Media支援靜態資產的傳送，除了影像和視訊，這是其他�
 
    此範例是已發佈視訊轉譯的完整視訊URL。
 
-## 取得最適化串流（DASH或HLS）的視訊URL {#obtaining-a-video-url-for-adaptive-streaming-hls}
+## 取得適用位元速率串流（DASH或HLS）的視訊URL {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. 在Experience Manager中，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 雲]** > **[!UICONTROL Cloud Services]**.
 1. 在 **[!UICONTROL Cloud Services]** 頁面，向下捲動至 **[!UICONTROL Dynamic MediaCloud Services]** 標題，然後選取 **[!UICONTROL 顯示配置]**.

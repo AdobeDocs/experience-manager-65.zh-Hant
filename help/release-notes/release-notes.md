@@ -2,9 +2,9 @@
 title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 156e83ad9f73e200da70f824b598a713c0e2e97f
+source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
 workflow-type: tm+mt
-source-wordcount: '2195'
+source-wordcount: '2196'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 Dynamic Media的主要改善如下：
 
-推出全新通訊協定DASH（透過HTTP的動態最適化串流）支援，以在Dynamic Media視訊傳送中適應性串流（含CMAF） [常見媒體應用程式格式] 已啟用)。
+推出全新通訊協定DASH(Dynamic Adaptive Streaming over HTTP)支援，以在Dynamic Media視訊傳送中適用性位元速率串流（含CMAF） [常見媒體應用程式格式] 已啟用)。
 
 * 最適化串流(DASH/HLS)可確保提供更佳的視訊使用者檢視體驗。
 * DASH是自適應視頻流的國際標準協定，在業界得到廣泛的應用。
@@ -244,7 +244,7 @@ UberJar [!DNL Experience Manager] 6.5.16.0可在 [Maven Central存放庫](https:
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|

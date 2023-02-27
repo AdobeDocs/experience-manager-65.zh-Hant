@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 40ae6c06f3296bfd4affe3e862d57df747d9bb82
+source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
 workflow-type: tm+mt
-source-wordcount: '4520'
+source-wordcount: '4522'
 ht-degree: 8%
 
 ---
@@ -459,7 +459,7 @@ Experience Manager從 **[!UICONTROL 詳細資料檢視]** > **[!UICONTROL 檢視
 
 1. （可選）在「編輯檢視器預設集」頁面頂端附近，選取 **[!UICONTROL 案頭]**, **[!UICONTROL 平板電腦]**，或 **[!UICONTROL 電話]** 以針對不同的裝置和螢幕類型唯一定義視覺樣式。
 1. 在「檢視器預設集編輯器」頁面上，選取 **[!UICONTROL 行為]** 標籤。 或者，您也可以在檢視器中選取任何視覺元素，以選取它進行設定。
-例如，對於 *VideoPlayer* 類型，在 **[!UICONTROL 修飾元]** > **[!UICONTROL 播放]**，您可以從三個最適化串流選項之一中選取：
+例如，對於 *VideoPlayer* 類型，在 **[!UICONTROL 修飾元]** > **[!UICONTROL 播放]**，您可以從三個適用位元速率串流選項之一中選取：
 
    * **[!UICONTROL 破折號]**  — 視訊僅以破折號形式串流。 不過，在Safari/iOS裝置上，您必須選取 **[!UICONTROL hls]** 作為類型。
    * **[!UICONTROL hls]**  — 視訊資料流僅限hls。
@@ -492,7 +492,7 @@ Experience Manager從 **[!UICONTROL 詳細資料檢視]** > **[!UICONTROL 檢視
 
    >[!IMPORTANT]
    >
-   >對於使用最適化串流設定檔的舊視訊，URL會繼續照常播放（與HLS串流），直到您 [重新處理視訊資產](/help/assets/processing-profiles.md#reprocessing-assets). 重新處理後，相同的URL仍可繼續運作，但現在可搭配 *both* 已啟用DASH和HLS串流。
+   >對於使用最適化位元速率串流設定檔的舊視訊，URL會繼續照常播放（與HLS串流一樣），直到您 [重新處理視訊資產](/help/assets/processing-profiles.md#reprocessing-assets). 重新處理後，相同的URL仍可繼續運作，但現在可搭配 *both* 已啟用DASH和HLS串流。
 
 ### 建立互動式檢視器預設集的特殊考量事項 {#special-considerations-for-creating-an-interactive-viewer-preset}
 
