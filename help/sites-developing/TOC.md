@@ -8,10 +8,10 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南說明如何建立 AEM 執行個體。
 feature: Developing
 role: Developer
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: c5bc743f845281bdbad522053c0e57791921ffd2
 workflow-type: tm+mt
-source-wordcount: '1297'
-ht-degree: 32%
+source-wordcount: '1317'
+ht-degree: 31%
 
 ---
 
@@ -139,8 +139,10 @@ ht-degree: 32%
       + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
       + [內容片段 REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
       + [內容片段GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
-      + [AEM GraphQL API及內容片段 — 範例內容與查詢](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
+      + [使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphiql-ide.html)
+      + [持續查詢](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/persisted-queries.html)
       + [內容片段的遠端AEM GraphQL查詢驗證](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
+      + [AEM GraphQL API及內容片段 — 範例內容與查詢](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
 + 混合與SPA AEM開發{#spas}
    + [使用 AEM 的混合式和 SPA](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [SPA 簡介和逐步解說](spa-walkthrough.md)
