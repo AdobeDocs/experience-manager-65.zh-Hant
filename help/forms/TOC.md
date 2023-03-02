@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 29b283970f2c37782700b69302715e8404ce83ae
+source-git-commit: 071d7bf2e7c9ceb3328e77262cc45ed3f2e303cc
 workflow-type: tm+mt
-source-wordcount: '3835'
+source-wordcount: '3846'
 ht-degree: 3%
 
 ---
@@ -689,6 +689,7 @@ ht-degree: 3%
    + [無法在Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer或Apple Safari中開啟以XFA為基礎的PDF forms](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
    + [無法還原CRX儲存庫](/help/forms/using/restore-crx-repository.md)
    + [安裝AEM 6.5.15.0 Service Pack後，服務無法使用錯誤](/help/forms/using/aem-service-pack-installation-solution.md)
+   + [AEM Forms JEE 6.5.15.0 Service Pack在JBoss Linux環境上安裝問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
 + 舊版檔案 {#legacy-documentation}
    + [在JEE Workbench上使用AEM Forms中的執行指令碼服務來建立XML資料](developing/building-xml.md)
    + [在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案](developing/compressing-decompressing-custom-dsc.md)

@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 93de94bb17ea898f0fe15e62fb031cab239a3682
+source-git-commit: 74535a6ad78abf795f55f1ba4e1123b58802aefe
 workflow-type: tm+mt
-source-wordcount: '3534'
+source-wordcount: '3536'
 ht-degree: 1%
 
 ---
@@ -131,7 +131,7 @@ Adobe Experience Manager可搭配下列版本的Java虛擬機運作：
 | 阿帕奇索爾 | 搜尋服務 | 答：支援 |
 
 1. 「檔案系統」包括符合POSIX的塊儲存。 這包括網路儲存技術。 請注意，檔案系統效能可能會有所不同，並影響整體效能。 建議結合網路/遠端檔案系統載入測試AEM。
-1. MongoDB Enterprise 4.2至少需要AEM 6.5 SP9。
+1. MongoDB Enterprise 4.2和4.4版至少需要AEM 6.5 SP9。
 1. AEM不支援MongoDB共用。
 1. 僅支援MongoDB儲存引擎WiredTiger。
 1. 支援AEM Forms升級客戶。 不支援新安裝。

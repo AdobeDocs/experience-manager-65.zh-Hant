@@ -2,10 +2,10 @@
 title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
+source-git-commit: 676472125cf472d42b792fae87dffe263e499014
 workflow-type: tm+mt
-source-wordcount: '2196'
-ht-degree: 3%
+source-wordcount: '2605'
+ht-degree: 2%
 
 ---
 
@@ -78,13 +78,30 @@ Dynamic Media的主要改善如下：
 
 ## [!DNL Forms] {#forms-6516}
 
->[!NOTE]
->
->中的修正 [!DNL Experience Manager] Forms會在排程一週後，透過個別的附加套件傳送 [!DNL Experience Manager] Service Pack發行日期。 在此情況下，附加元件套件將於2023年3月2日星期四發行。 此外，本區段還新增了Forms修正和增強功能清單。
+### [!DNL Forms] 主要功能 {#forms-features-6516}
 
-<!--
-### [!DNL Forms] Fixes {#forms-fixes-6516}
--->
+* [無頭式適用性Forms](https://experienceleague.corp.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 可讓您的開發人員建立、發佈及管理可透過API存取和互動的互動式表單，而非透過傳統的圖形使用者介面。
+
+* [適用性Forms核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features) 是一組24個開放原始碼、符合BEM規範的元件，建置於Adobe Experience Manager WCM核心元件之上。 這些元件是開放原始碼，讓開發人員能夠輕鬆自訂和擴充這些元件，以符合其組織的特定需求。 任何具備定制技能的人 [WCM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html?lang=en) 可輕鬆自訂和設定這些元件的樣式。
+
+* OSGi上的Reader擴充功能服務現在提供個別選項，以啟用PDF的匯入和匯出使用權，以在Adobe Acrobat Reader中匯入或匯出資料。 (NPR-39909)
+
+### [!DNL Forms] 修正 {#forms-fixes-6516}
+
+* 使用「指派任務」**步驟來傳送指派任務的通知時，會傳送兩封電子郵件，而非一封給指派的個人。 (NPR-40078)
+* 當使用者隱藏表格標題時，會取消設定先前設定的欄寬，而所有欄會保留相同的寬度。 (NPR-40063)
+* 如果您將管理員使用者的預設密碼從 `admin`，同時執行 `Prepare Adobe Experience Manager Server For DSC deployment` 檢查AEM Forms JEE service pack失敗。 (NPR-40062)、(NPR-39387)
+* OutputService和AssemblerService API無法將PDF表單轉換為PDF/A。(NPR-39990)
+* 組合器服務無法將PDF轉換為PDF/A。當使用者將PDF轉換為PDF/A時，會發生下列錯誤： `PDFAConformance isCompliant="false" compliance="PDF/A-1b" resultLevel="Summary" ignoreUnusedResources="true" allowCertificationSignatures="true"> <Violation count="6" key="PDFA_CS_001_NOT_DEVICE_INDEPENDENT" description="ColorSpace is not device independent`. (NPR-39956)
+* 當GuideSubmitServlet API呼叫的伺服器端驗證失敗時，傳送至用戶端的回應中不會傳回錯誤。 (NPR-39925)
+* 在Windows伺服器上升級至AEM 6.5.15.0 Service Pack後，使用者遇到多個錯誤訊息，且電子郵件服務無法運作。(NPR-39919)
+* 升級至AEM 6.5.14.0並使用importData服務來將PDF與XML合併時，會發生下列錯誤： `Caused by: java.lang.NoSuchMethodError: com.adobe.xfa.form.FormModel.isXFABarcode(Lcom/adobe/xfa/Node;)Ljava/lang/Boolean`.(NPR-39807)
+* 使用者安裝時 **文檔安全辦公室** 擴充功能，發生下列問題：
+   * Microsoft® Excel經常當機。
+   * 開啟安全文檔時， **檔案安全辦公室** 未在電腦上檢測到已安裝擴展。 指示使用者下載並安裝安全性擴充功能。 (NPR-39768)
+* 使用者升級至AEM 6.5.15.0 Service Pack後，PostScript轉Pdf轉換無法運作。 (NPR-39765)、(NPR-39764)
+* 當使用者在開啟適用性表單後嘗試開啟導覽畫面時，畫面會因NullPointer例外狀況而失敗：`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:”` (NPR-39654)
+* 在Windows中，當使用者啟用高對比黑色設定時，當HTML5 Forms內容在瀏覽器中以HTML預覽呈現時變得不清楚。 (NPR-39018)
 
 ## Integrations {#integrations-6516}
 
@@ -205,16 +222,7 @@ Dynamic Media的主要改善如下：
 
 ### 安裝Service Pack [!DNL Experience Manager] Forms {#install-aem-forms-add-on-package}
 
->[!NOTE]
->
->如果您未使用 [!DNL Experience Manager] Forms。
-
-中的修正 [!DNL Experience Manager] Forms會在排程一週後透過個別的附加套件傳送 [!DNL Experience Manager] Service Pack版本。
-
-<!-- 
-
-For instructions to install the service pack on AEM Forms, see [AEM Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
--->
+如需在AEM Forms上安裝Service Pack的指示，請參閱 [AEM Forms Service Pack安裝指示](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
 
 ### UberJar {#uber-jar}
 
@@ -244,7 +252,7 @@ UberJar [!DNL Experience Manager] 6.5.16.0可在 [Maven Central存放庫](https:
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
@@ -264,7 +272,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * 請更新您的GraphQL查詢（可能已使用內容模型的自訂API名稱），改為使用內容模型的預設名稱。
 
-* As [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL AEM Forms 6.5.10.0].
+* As [!DNL Microsoft®® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss®® EAP 7.1], [!DNL Microsoft®® Windows Server 2019] 不支援全包安裝 [!DNL AEM Forms 6.5.10.0].
 
 * 如果您升級 [!DNL Experience Manager] 從6.5.0到6.5.4的執行個體到Java™ 11上最新的Service Pack，您會看到 `RRD4JReporter` 例外 `error.log` 檔案。 若要停止例外，請重新啟動您的例項 [!DNL Experience Manager]. <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
@@ -289,6 +297,9 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
      ]
    "refresh": true
    ```
+
+* 在AEM Forms中，POP3通訊協定無法用於Microsoft® Office 365的電子郵件端點。
+* 在JBoss® 7.1.4平台上，當使用者安裝AEM 6.5.16.0 Service Pack時， `adobe-livecycle-jboss.ear` 部署失敗。
 
 ## 包含的OSGi套件組合和內容套件 {#osgi-bundles-and-content-packages-included}
 

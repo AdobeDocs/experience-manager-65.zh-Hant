@@ -1,10 +1,11 @@
 ---
 title: 為Microsoft® Office 365郵件伺服器通訊協定配置OAuth2型驗證
 description: 為Microsoft® Office 365郵件伺服器通訊協定配置OAuth2型驗證
-source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
+exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
+source-git-commit: d19de2955adef56570378a6d62ec0015718f9039
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 0%
+source-wordcount: '975'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +14,7 @@ ht-degree: 0%
 為了讓組織遵守安全的電子郵件要求，AEM Forms提供OAuth 2.0支援，以與Microsoft® Office 365郵件伺服器通訊協定整合。 您可以使用Azure Active Directory(Azure AD)OAuth 2.0身份驗證服務，與各種協定（如IMAP、POP或SMTP）連接，並訪問Office 365用戶的電子郵件資料。 以下是配置Microsoft® Office 365郵件伺服器協定以通過OAuth 2.0服務進行身份驗證的逐步說明：
 
 1. 登入 [https://portal.azure.com/](https://portal.azure.com/) 和搜索 **Azure Active Directory** 在搜尋列中，按一下結果。
-或者，您可以直接瀏覽至 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
+或者，您可以直接瀏覽到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 1. 按一下 **新增** > **應用程式註冊** > **新註冊**
 
    ![應用程式註冊](/help/forms/using/assets/outh_outlook_microsoft_azure.png)
@@ -26,7 +27,7 @@ ht-degree: 0%
    >[!NOTE]
    >
    > * 針對 **任何組織目錄（任何Azure AD目錄 — 多租用戶）中的帳戶** 應用程式時，建議使用工作帳戶，而非個人電子郵件帳戶。
-   > * **僅限個人Microsoft®賬戶** 和 **單一租用戶** 不支援應用程式。
+   > * **僅限個人Microsoft®賬戶** 不支援應用程式。
    > * 建議使用 **多租用戶和個人Microsoft®帳戶** 應用程式。
 
 
@@ -71,6 +72,10 @@ ht-degree: 0%
 
    ```https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=[clientid]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login```
 
+   >[!NOTE]
+   >
+   > 若為單一租用戶應用程式，請取代 `common` 與 `[tenantid]` 在以下URL中，用於產生授權代碼： `https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/authorize?client_id=[[clientid]]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20openid%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
+
 1. 當您輸入上述URL時，系統會將您重新導向至登入畫面：
    ![登入畫面](/help/forms/using/assets/azure_loginscreen.png)
 
@@ -82,7 +87,7 @@ ht-degree: 0%
 
 1. 複製 `<code>` 從上述URL從 `0.ASY...` to `&session_state` 填入。
 
-## 產生重新整理代號 {#generating-the-refresh-token}
+## 產生重新整理權杖 {#generating-the-refresh-token}
 
 接下來，您需要產生重新整理Token，如下列步驟所述：
 
@@ -91,6 +96,11 @@ ht-degree: 0%
 1. 取代 `clientID`, `client_secret` 和 `redirect_uri` 與應用程式的值，以及 `<code>`:
 
    `curl -H “ContentType application/x-www-form-urlencoded” -d “client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]” -X POST https://login.microsoftonline.com/common/oauth2/v2.0/token`
+
+   >[!NOTE]
+   >
+   > 在單一租用戶應用程式中，若要產生重新整理Token，請使用下列cURL命令並取代 `common` 和 `[tenantid]` 在：
+   >`curl -H “ContentType application/x-www-form-urlencoded” -d “client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]” -X POST https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/token`
 
 1. 記下重新整理Token。
 
@@ -116,7 +126,7 @@ ht-degree: 0%
    >[!NOTE]
    >
    >* 傳輸安全協定的有效值為：&#39;blank&#39;、&#39;SSL&#39;或&#39;TLS&#39;。 您必須設定 **SMTP傳輸安全性** 和 **接收傳輸安全性** to **TLS** 啟用oAuth驗證服務。
-   >* **POP3協定** 不支援OAuth。
+   >* **POP3協定** 使用電子郵件端點時不支援OAuth。
 
 
    ![連線設定](/help/forms/using/assets/oauth_connectionsettings.png)
@@ -162,4 +172,3 @@ ht-degree: 0%
 * 如果電子郵件服務無法正常運作。 嘗試重新產生 `Refresh Token` 如上所述。 部署新值需要幾分鐘的時間。
 
 * 使用Workbench在電子郵件端點中設定電子郵件伺服器詳細資訊時發生錯誤。請嘗試透過管理員UI（而非Workbench）來設定端點。
-

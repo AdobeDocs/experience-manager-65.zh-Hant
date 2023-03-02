@@ -2,9 +2,9 @@
 title: AEM Forms適用於AEM Forms的修補程式安裝指示
 description: AEM Forms Service Pack安裝OSGi和JEE環境的指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: c4584e34b5b12f29dc995bd5483bcbad476a82ef
+source-git-commit: b15581701aaff72db2fc0030b0062d2f12150d8f
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1726'
 ht-degree: 8%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 8%
 
 | 產品 | Adobe Experience Manager 6.5Forms |
 |---|---|
-| 版本 | 6.5.15.0 |
+| 版本 | 6.5.16.0 |
 | 類型 | Service Pack發行 |
-| 日期 | 2023年12月1日 |
+| 日期 | 2023年3月2日 |
 | 下載 URL | [最新AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -33,7 +33,7 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
 >[!NOTE]
 >
-> Adobe會在每6個Service Pack後發行完整安裝程式。 JEE上的AEM 6.5 Forms Service Pack 12(6.5.12.0)是最後一個完整安裝程式。 完整安裝程式可支援新平台，而一般Service Pack安裝程式僅包含錯誤修正和一般改良。 若您要執行全新安裝或規劃以在JEE環境中使用AEM 6.5 Forms的最新軟體，Adobe建議在JEE上使用AEM 6.5.12.0 Forms的完整安裝程式，而非2019年4月08日發行的AEM 6.5 Forms安裝程式。 使用完整安裝程式後，安裝最新的Service Pack。
+> Adobe每6個Service Pack發行完整安裝程式。 JEE上的AEM 6.5 Forms Service Pack 12(6.5.12.0)是最後一個完整安裝程式。 完整安裝程式可支援新平台，而一般Service Pack安裝程式則包含新功能、錯誤修正和一般改良。 若您要執行全新安裝或規劃以在JEE環境中使用AEM 6.5 Forms的最新軟體，Adobe建議在JEE上使用AEM 6.5.12.0 Forms的完整安裝程式，而非2019年4月08日發行的AEM 6.5 Forms安裝程式。 使用完整安裝程式後，安裝最新的Service Pack。
 
 ## 在JEE環境的AEM表單上下載和安裝Service Pack {#download-and-install-for-jee-service-pack}
 
@@ -42,7 +42,7 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 +++1. 備份現有環境：
 
 1. 備份 [CRX儲存庫、資料庫架構和GDS（全局文檔儲存）](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
-1. 備份&lt;*AEM_forms_root*>/部署資料夾。 如果您決定解除安裝Service Pack，則此為必要操作。
+1. 備份&lt;*AEM_forms_root*>/部署資料夾。
 
 >[!NOTE]
 >
@@ -52,8 +52,8 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
 +++2.下載所需軟體：
 
-* [AEM Forms on JEE 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
-* [AEM 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
+* [AEM Forms on JEE Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
 * [Forms 附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 * [片段Servlet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
 
@@ -62,7 +62,7 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 +++3. 在JEE Service Pack上安裝AEM Forms :
 
 1. 停止應用程式伺服器。
-1. 擷取 **AEM Forms on JEE 6.5.15.0 Service Pack安裝程式封存** 到硬碟：
+1. 擷取 **AEM Forms on JEE Service Pack安裝程式封存** 到硬碟：
 
    * **Windows**
 在複製安裝程式的硬碟上，導覽至安裝媒體或資料夾上的適當目錄，然後按兩下 
@@ -91,7 +91,7 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
       >[!NOTE]
       >
-      >* 更新或更換 **ConfigurationManager.bat** 檔案可幫助您避免手動更新.lax檔案的名稱。
+      >* 更新或更換 **ConfigurationManager.bat** 檔案可幫助您避免手動更新.lax檔案。
 
 
 1. **[僅基於Unix]:** 此 **啟動Configuration Manager** 複選框。 按一下 **[!UICONTROL 完成]** 以立即運行Configuration Manager或運行 **Configuration Manager** 稍後，取消選取 **啟動Configuration Manager** 選項 **[!UICONTROL 完成]**. 您可以開始 **Configuration Manager** 稍後在 `[AEM_forms_root]/configurationManager/bin` 目錄。
@@ -116,7 +116,9 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
 >[!NOTE]
 >
-> 必須安裝 **servlet片段** 除運行於的應用程式伺服器外 **JBoss® EAP 7.4.0**.
+> * 如果是，您從 **AEM Service Pack 6.5.15.0**，則不需要安裝 **servlet片段**. 如果您從舊版升級 **AEM Service Pack 6.5.15.0**，必須安裝 **servlet片段**.
+> * 必須安裝 **servlet片段** 除運行於的應用程式伺服器外 **JBoss® EAP 7.4.0**.
+
 
 
 要下載和安裝Servlet片段，請執行以下操作：
@@ -140,11 +142,10 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 1. 從下載Service Pack [Software Distribution](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). <!-- UPDATE FOR EACH NEW RELEASE -->
 1. 開啟「套件管理器」，然後選取 **[!UICONTROL 上傳套件]** 上傳套件。 要了解更多資訊，請參閱 [封裝管理員](/help/sites-administering/package-manager.md).
 1. 選取套件，然後選取 **[!UICONTROL 安裝]**.
-1. 若要更新S3連接器，請在安裝Service Pack後停止執行個體，以安裝資料夾中提供的新二進位檔案取代現有連接器，然後重新啟動執行個體。 請參閱 [Amazon S3 Data Store](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector).
 
 **自動安裝**
 
-您可以使用兩種不同的方法來自動安裝 [!DNL ExperienceManager] 6.5.15.0。<!--       UPDATE FOR EACH NEW RELEASE -->
+您可以使用兩種不同的方法來自動安裝 [!DNL ExperienceManager] 服務包。<!--       UPDATE FOR EACH NEW RELEASE -->
 
 * 將包裝放入 `../crx-quickstart/install` 資料夾。
 程式包會自動安裝。
@@ -153,15 +154,15 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
    >[!NOTE]
    >
-   >Experience Manager6.5.15.0不支援Bootstrap安裝。 <!-- UPDATE FOR EACHNEW RELEASE -->
+   >Experience Manager服務包不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **驗證安裝**
 
 若要了解經認證可與此版本搭配使用的平台，請參閱 [技術要求](/help/sites-deploying/technical-requirements.md).
 
-1. 產品資訊頁面(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience      Manager (6.5.15.0)` 在 [!UICONTROL 已安裝的產品].<!-- UPDATE FOR EACH NEW RELEASE -->
+1. 產品資訊頁面(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (spversion)` 在 [!UICONTROL 已安裝的產品].<!-- UPDATE FOR EACH NEW RELEASE -->
 1. 所有OSGi套件組合 **[!UICONTROL 活動]** 或 **[!UICONTROL 片段]** 在OSGi控制台中(使用Web控制台： `/system/console/bundles`)。
-1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.13版或更新版本(使用WebConsole: `/system/console/     bundles`)。
+1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.14版或更新版本(使用WebConsole: `/system/console/     bundles`)。
 
 +++
 
@@ -191,7 +192,7 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 
 +++2.下載所需軟體：
 
-* [AEM 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
+* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
 * [Forms 附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
 +++
@@ -203,28 +204,27 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 1. 從下載Service Pack [Software Distribution](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). <!-- UPDATE FOR EACH NEW RELEASE -->
 1. 開啟「套件管理器」，然後選取 **[!UICONTROL 上傳套件]** 上傳套件。 要了解更多資訊，請參閱 [封裝管理員](/help/sites-administering/package-manager.md).
 1. 選取套件，然後選取 **[!UICONTROL 安裝]**.
-1. 若要更新S3連接器，請在安裝Service Pack後停止執行個體，以安裝資料夾中提供的新二進位檔案取代現有連接器，然後重新啟動執行個體。 請參閱 [Amazon S3 Data Store](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector).
 
 **自動安裝**
 
-您可以使用兩種不同的方法來自動安裝 [!DNL Experience Manager] 6.5.15.0。<!--       UPDATE FOR EACH NEW RELEASE -->
+您可以使用兩種不同的方法來自動安裝 [!DNL Experience Manager] 服務包。<!--  UPDATE FOR EACH NEW RELEASE -->
 
 * 將包裝放入 `../crx-quickstart/install` 資料夾。 程式包會自動安裝。
 * 使用 [來自套件管理器的HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html). 使用 `cmd=install&recursive=true` 以便安裝嵌套包。
 
    >[!NOTE]
    >
-   >Experience Manager6.5.15.0不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
+   >Experience Manager服務包不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **驗證安裝**
 
 若要了解經認證可與此版本搭配使用的平台，請參閱 [技術要求](/help/sites-deploying/technical-requirements.md).
 
-1. 產品資訊頁面(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience      Manager (6.5.15.0)` 在 [!UICONTROL 已安裝的產品]. <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 產品資訊頁面(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (spversion)` 在 [!UICONTROL 已安裝的產品]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. 所有OSGi套件組合 **[!UICONTROL 活動]** 或 **[!UICONTROL 片段]** 在OSGi控制台中(使用Web控制台： `/system/console/bundles`)。
 
-   1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.13版或更新版本(使用Web控制台： `/system/console/bundles`)。
+   1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.14版或更新版本(使用Web控制台： `/system/console/bundles`)。
 
 +++
 
