@@ -7,9 +7,9 @@ solution: Experience Manager, Dynamic Media Classic
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: Collaboration,Dynamic Media Classic
-source-git-commit: cdf6a22e8a0fd2e73cd4d25074e0c7162c047d92
+source-git-commit: a7f1f41d54663b753bc22c6e5d54b4cb621609fd
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
     * Summit customer spotlight: Under Armour.
     * Never miss an Experience Insider webinar.
     * Public sector spotlight: The urgent need for digital enrollment.
-    * Look what’s new in Experience Manager Innovation.
+    * Look what's new in Experience Manager Innovation.
     * Build your Experience Manager skills *live* with the Adobe pros.
     * Connect with the Adobe Experience Manager Community.
     * Fast-track your Adobe expertise with Adobe Experience League. -->
@@ -54,7 +54,7 @@ ht-degree: 0%
    * 觀看Dynamic Media Classic的隨需技能建立網路研討會。
    * 從2020線上Adobe Summit檢視Dynamic Media課程。
    * 進一步了解Adobe的免費Dynamic Media Classic稽核。
-   * 集合 `John Monroe`，客戶成功服務高級計畫經理。
+   * 集合 `Jon Monroe`,Adobe客戶解決方案高級計畫經理。
 
 * **[2020年2月第2期](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
@@ -65,7 +65,7 @@ ht-degree: 0%
    * 探索如何運用Dynamic Media的裁剪魔力。
    * 為協助您從Dynamic Media Classic中獲得更多價值，請善用免費Adobe稽核。
    * 了解Dynamic Media Classic的全新使用者介面。
-   * 集合 `Georgia Myers`,Adobe Experience Cloud客戶成功經理。
+   * 集合 `Georgia Myers` 的Adobe帳戶團隊。
 
 * **[2020年1月總第1期](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_01_2020_Jan.html)**
 

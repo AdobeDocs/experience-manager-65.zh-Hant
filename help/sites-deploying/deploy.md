@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 2a350548674ff3f8dc49defa47ac2b028da76f4b
+source-git-commit: 9052ed3e89fdc67d94fc60bbff64d42255565767
 workflow-type: tm+mt
 source-wordcount: '1802'
 ht-degree: 2%
@@ -77,7 +77,7 @@ Adobe Experience Manager是以web為基礎的用戶端 — 伺服器系統，用
 * **網站**
 * **行動應用程式**
 * **數位出版物**
-* **表單**
+* **Forms**
 * **數位資產**
 * **社群**
 * **線上商務**
@@ -117,7 +117,7 @@ AEM Managed Services是數位體驗管理的完整解決方案。 它在雲端�
 
 透過AEM Managed Services，客戶可實現下列優點：
 
-**加速上市時間：** 透過Adobe Managed Services的彈性雲端基礎架構，組織可以快速規劃、啟動並最佳化成功的數位體驗。 Adobe無需額外的資金、硬體或軟體即可管理雲架構，Adobe的客戶成功工程師可提供AEM架構、布建、自訂以連接後端應用程式和上線最佳實踐方面的幫助。
+**加速上市時間：** 透過Adobe Managed Services的彈性雲端基礎架構，組織可以快速規劃、啟動並最佳化成功的數位體驗。 Adobe無需額外的資金、硬體或軟體即可管理雲架構，Adobe的客戶解決方案工程師可提供AEM架構、資源調配、連接後端應用程式的定製以及上線最佳實踐方面的幫助。
 
 **更高的效能：** 為您的企業提供可靠的數字型驗，提供4種服務可用性選項：99.5%、99.9%、99.95%和99.99%。 此外，它還允許自動備份和多模式災難恢復模型，以幫助確保可靠性和應急管理。
 

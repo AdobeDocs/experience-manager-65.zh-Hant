@@ -1,5 +1,5 @@
 ---
-title: 互動影片
+title: 互動式影片
 description: 了解如何在Dynamic Media中使用互動式視訊和可購買視訊
 uuid: c3ff6839-fff5-4709-8163-5c4245b80e6d
 contentOwner: Rick Brough
@@ -11,10 +11,10 @@ docset: aem65
 feature: Interactive Videos
 role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: eb7051582a51d983851c876025770668b258bff5
+source-git-commit: 9052ed3e89fdc67d94fc60bbff64d42255565767
 workflow-type: tm+mt
 source-wordcount: '6036'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 2%
 在上播放逐步說明 [如何建立互動式視訊](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo) （7分30秒）。
 雖然視訊逐步說明已加上「隨選資產」品牌，但Adobe Experience Manager Assets中的「互動式視訊」仍適用原則和步驟。
 
-### Adobe客戶成功網路研討會 {#adobe-customer-success-webinar}
+### Adobe客戶解決方案網路研討會 {#adobe-customer-success-webinar}
 
 「在Experience Manager Assets中使用互動式視訊、連結共用和YouTube共用」網路研討會教您如何使用互動式視訊和其他功能，將轉換導向的事件連結至您的視訊行銷內容。
 
@@ -72,8 +72,9 @@ ht-degree: 2%
 互動式影片步驟：
 
 1. **（可選）識別Quickview變數**  — 首先，識別您現有Quickview實作所使用的動態變數。 建立互動式視訊時，您可以使用變數將產品縮圖對應至其對應的產品Quickview。 請參閱 [（可選）識別Quickview變數](#optional-identifying-quickview-variables).
-   *只有在以下所有情況皆為真時，才需要執行此步驟*:·您想要透過觸發Quickview來為視訊新增互動功能。
-·您實作的Experience Manager *not* 使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM® WebSphere® Commerce、Elastic Path、Hybris或Intershop)提取至Experience Manager中。 請參閱 [Experience Manager Assets中的電子商務概念](/help/commerce/cif-classic/administering/concepts.md).
+   *只有在以下所有情況皆為真時，才需要執行此步驟*:
+   * 您想要透過觸發至Quickview來為視訊新增互動功能。
+   * 您的Experience Manager實作可 *not* 使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM® WebSphere® Commerce、Elastic Path、Hybris或Intershop)提取至Experience Manager中。 請參閱 [Experience Manager Assets中的電子商務概念](/help/commerce/cif-classic/administering/concepts.md).
 
 1. **（選用）建立互動式視訊檢視器預設集**  — 自訂構成播放器的各種元件的外觀和行為，例如視訊清除程式和互動式縮圖。
 如果您要使用現成可用的互動式視訊檢視器預設集，則不需要建立您自己的互動式視訊檢視器預設集 `Shoppable_Video_Light` 或 `Shoppable_Video_Dark` 。
@@ -105,7 +106,7 @@ ht-degree: 2%
 >* 您想要透過觸發至Quickview來為視訊新增互動功能。
 >* 您的Experience Manager實作可 *not* 使用電子商務整合架構，將產品資料從任何電子商務解決方案(例如IBM® WebSphere® Commerce、Elastic Path、Hybris或Intershop)提取至Experience Manager中。 請參閱 [Experience Manager Assets中的電子商務概念](/help/commerce/cif-classic/administering/concepts.md).
 >
->如果您的Experience Manager實作使用電子商務，您可以略過此工作，並繼續執行下一個工作。
+如果您的Experience Manager實作使用電子商務，您可以略過此工作，並繼續執行下一個工作。
 
 首先，找出您現有Quickview實作所使用的動態變數，以便您可以在互動式視訊建立程式期間，將產品縮圖對應至其對應的產品Quickview。
 
@@ -245,8 +246,7 @@ ht-degree: 2%
 如果您已上傳視訊和縮圖資產，請繼續 [為影片增加互動功能](#adding-interactivity-to-your-video).
 
 >[!NOTE]
->
->尚不支援MXF視訊格式以搭配Dynamic Media中的互動式視訊使用。
+尚不支援MXF視訊格式以搭配Dynamic Media中的互動式視訊使用。
 
 如果您上傳了錯誤的影片或影像，或想要刪除您不再需要的已上傳影片或影像，請參閱 [刪除資產](/help/assets/manage-assets.md#deleting-assets).
 
@@ -268,12 +268,10 @@ ht-degree: 2%
 請參閱 [體驗片段](/help/sites-authoring/experience-fragments.md).
 
 >[!NOTE]
->
->將檢視器內嵌在體驗片段時，不支援互動式視訊中的社交媒體共用工具。 若要解決此問題，您可以使用或建立沒有社交媒體共用工具的檢視器預設集。 這類檢視器預設集可讓您成功將其內嵌在體驗片段中。
+將檢視器內嵌在體驗片段時，不支援互動式視訊中的社交媒體共用工具。 若要解決此問題，您可以使用或建立沒有社交媒體共用工具的檢視器預設集。 這類檢視器預設集可讓您成功將其內嵌在體驗片段中。
 
 >[!NOTE]
->
->如果您的互動式內容有連結與相對URL(尤其是連結至Experience Manager Sites頁面)，則無法使用以URL為基礎的連結方法。
+如果您的互動式內容有連結與相對URL(尤其是連結至Experience Manager Sites頁面)，則無法使用以URL為基礎的連結方法。
 
 目前建立/編輯工作階段期間，支援在頁面右上角附近還原和重做選項。
 
@@ -494,8 +492,7 @@ ht-degree: 2%
    完成後，請選取 **[!UICONTROL 儲存]**.
 
    >[!NOTE]
-   >
-   >當您儲存互動式視訊時，會自動 `.vtt` 儲存相關的檔案。此 `.vtt` 檔案會儲存至 `_VTT` 根目錄的資料夾 **[!UICONTROL 資產]**. 您的互動式視訊必須有檔案和資料夾才能在網站上正確播放。因此，請勿移動、編輯或刪除資料夾 `_VTT` 或其內容。
+   當您儲存互動式視訊時，會自動 `.vtt` 儲存相關的檔案。此 `.vtt` 檔案會儲存至 `_VTT` 根目錄的資料夾 **[!UICONTROL 資產]**. 您的互動式視訊必須有檔案和資料夾才能在網站上正確播放。因此，請勿移動、編輯或刪除資料夾 `_VTT` 或其內容。
 
 1. 發佈互動式影片。 發佈會建立內嵌程式碼或URL，您最終會將其複製並貼到您的網站體驗。
 
@@ -504,8 +501,7 @@ ht-degree: 2%
    請參閱 [發佈資產](publishing-dynamicmedia-assets.md).
 
    >[!NOTE]
-   >
-   >若要使用Quickview發佈可購買的視訊，請確定您也從您的商務區域個別發佈每個視訊的相關影像資產。
+   若要使用Quickview發佈可購買的視訊，請確定您也從您的商務區域個別發佈每個視訊的相關影像資產。
 
    新增時間軸區段並發佈互動式視訊後，您就可以將其新增至現有的網站登陸頁面。 請參閱 [將互動式視訊與您的網站整合](#integrating-an-interactive-video-with-your-website).
 
@@ -530,10 +526,8 @@ ht-degree: 2%
 複製的內嵌程式碼會針對回應式環境進行設定，以自動符合先前由靜態視訊佔用的區域。
 
 >[!NOTE]
->
->此時，如果您只以超連結網頁新增互動功能，即可完成。
->
->不過，如果您新增任何互動來觸發Quickview，互動式視訊旁的縮圖僅會用於顯示用途；它們尚未與您現有的Quickview整合。 在這種情況下，您現在必須將互動式視訊與網站上現有的Quickview整合。
+此時，如果您只以超連結網頁新增互動功能，即可完成。
+不過，如果您新增任何互動來觸發Quickview，互動式視訊旁的縮圖僅會用於顯示用途；它們尚未與您現有的Quickview整合。 在這種情況下，您現在必須將互動式視訊與網站上現有的Quickview整合。
 
 **範例**
 
@@ -575,8 +569,7 @@ ht-degree: 2%
 ## 將互動式視訊與現有的Quickview整合 {#integrating-an-interactive-video-with-an-existing-quickview}
 
 >[!NOTE]
->
->只有當您是獨立Experience Manager Assets客戶時，才適用此工作。
+只有當您是獨立Experience Manager Assets客戶時，才適用此工作。
 
 此程式的最後一個步驟是將您的互動式視訊與網站上使用的現有Quickview實作整合。 整合沒有適用於所有情況的解決方案。 每個Quickview實作都是唯一的。 因此，需要一種具體的方法，需要前端IT人員的協助。
 
@@ -651,7 +644,7 @@ ht-degree: 2%
 
 因此，只需取消對上面突出顯示的代碼片段的注釋，並用特定網頁專用的代碼替換虛擬處理程式主體。
 
-標準內嵌程式碼中有兩個預設回呼處理常式： `quickViewActivate` 和 `initComplete`. 此 `quickViewActivate` 在檢視器中選取縮圖時，處理常式就會觸發。 使用它將檢視器與Quickview啟用邏輯整合。 此 `initComplete` 檢視器載入頁面時，處理常式只會觸發一次。 此處理常式可用來調整網頁DOM中的「快速檢視」對話方塊位置。
+標準內嵌程式碼中有兩個預設回呼處理常式： `quickViewActivate` 和 `initComplete`. 此 `quickViewActivate` 在檢視器中選取縮圖時，處理常式就會觸發。 使用它將檢視器與Quickview啟用邏輯整合。 此 `initComplete` 檢視器載入頁面時，處理常式只會觸發一次。 此處理常式用於調整網頁DOM中的「快速檢視」對話方塊位置。
 
 建構Quickview URL的程式與識別本主題前面涵蓋的縮圖變數的程式相反。 使用先前識別的Quickview URL範例，您可以了解每種情況下如何建構Quickview URL:
 
@@ -772,6 +765,6 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
-## 使用Quickview建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
+## 使用 Quickview 建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
 請參閱 [使用Quickview建立自訂快顯視窗](/help/assets/custom-pop-ups.md).
