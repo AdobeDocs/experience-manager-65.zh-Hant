@@ -1,5 +1,5 @@
 ---
-title: 使用Dynamic Media
+title: 在Sites Classic製作中使用Dynamic Media
 description: Dynamic Media可協助您隨需提供豐富的視覺化銷售和行銷資產，並自動調整規模以供網頁、行動裝置及社交網站使用。 Dynamic Media使用一組主要來源資產，透過其全球、可擴充、效能最佳化的網路，即時產生並提供多種豐富內容變異。
 uuid: 201d7ff5-0ebc-4680-9ac4-00c229be5f04
 contentOwner: Chris Bohnert
@@ -8,14 +8,14 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 2a60cacf-0551-44d4-9965-705a715d44c5
 exl-id: b00d83ab-aeec-4199-bfe4-4f928fb49930
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 59e182c165f6fd4b822eaf0e34f6e4b3bb18eb14
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 0%
+source-wordcount: '205'
+ht-degree: 1%
 
 ---
 
-# 使用Dynamic Media{#working-with-dynamic-media}
+# 使用 Dynamic Media{#working-with-dynamic-media}
 
 [Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 可協助您隨需提供豐富的視覺化銷售和行銷資產，並自動調整規模以供網頁、行動裝置和社交網站使用。 Dynamic Media使用一組主要來源資產，透過其全球、可擴充、效能最佳化的網路，即時產生並提供多種豐富內容變異。
 
