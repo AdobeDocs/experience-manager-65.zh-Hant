@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: b7f9b5256e07d4bfbc0c3454e8d2fe112ea650e8
+source-git-commit: 28046104e75a833736f53b0e9d1edf4c8fbe6249
 workflow-type: tm+mt
-source-wordcount: '5918'
+source-wordcount: '5898'
 ht-degree: 0%
 
 ---
@@ -547,14 +547,14 @@ TarMK GC: no base state available, running full compaction instead
   </td>
   </tr>
    <tr>
-    <td>不適用</td>
+    <td>N/A</td>
     <td>TarMK GC #2:壓縮已取消：${REASON}。</td>
     <td>壓縮階段提前終止。 可能會中斷壓縮階段的事件範例：主機系統上的記憶體或磁碟空間不足。 此外，還可以通過關閉系統或通過管理介面（如操作儀表板中的維護窗口）顯式取消壓縮來取消壓縮。</td>
     <td>這取決於特定原因。</td>
   </td>
   </tr>
   <tr>
-    <td>不適用</td>
+    <td>N/A</td>
     <td>TarMK GC #2:壓縮在5次循環後32.902分鐘(1974140毫秒)內失敗。</td>
     <td>此訊息不表示有無法復原的錯誤，但只有壓縮在經過特定嘗試後才會終止。 此外，請閱讀 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">後面的段落。</a></td>
     <td>請閱讀以下內容 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak檔案</a>，以及執行線上修訂清除區段的最後一個問題。</a></td>
@@ -574,15 +574,9 @@ TarMK GC: no base state available, running full compaction instead
 
 >[!CAUTION]
 >
->您需使用不同版本的Oak執行工具，端視您與AEM安裝搭配使用的Oak版本而定。 使用此工具之前，請先檢查下方的版本需求清單：
->
->* 適用於Oak版本 **1.0.0 - 1.0.11**&#x200B;或&#x200B;**1.1.0 - 1.1.6**，使用Oak-run版本** 1.0.11**
->
->* 適用於Oak版本 **較上文更新**，請使用符合AEM安裝之Oak核心的Oak-run版本。
->
+>使用Oak執行工具版本，其版本號碼（主要和次要）符合AEM安裝的Oak核心版本。 例如，若您的AEM執行個體有Oak core 1.22.x版，則您應使用Oak-run工具1.22.x版。
 
-
-Adobe提供以下工具： **Oak-run** 用於執行修訂清除。 可在下列位置下載：
+Adobe提供以下工具： **Oak-run** 執行修訂清除。 可在下列位置下載：
 
 [https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-run/](https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-run/)
 
