@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 66e9e8e1d9f43faa3d0e4fe61e8206bdab1348f6
+source-git-commit: 7efe4a011d831c34f6aafd877654e8b41fec96e0
 workflow-type: tm+mt
-source-wordcount: '2859'
+source-wordcount: '2889'
 ht-degree: 3%
 
 ---
@@ -86,19 +86,25 @@ AEM管理員帳戶的密碼可透過 [Granite操作 — 使用者](/help/sites-a
 
 #### 變更OSGi Web主控台管理密碼 {#changing-the-osgi-web-console-admin-password}
 
-您還必須更改用於訪問Web控制台的密碼。 這是透過設定 [Apache Felix OSGi Management Console](/help/sites-deploying/osgi-configuration-settings.md):
+您還必須更改用於訪問Web控制台的密碼。 這是使用 [OSGI設定](/help/sites-deploying/configuring-osgi.md) 要更新以下屬性，請 **Apache Felix OSGi Management Console**:
 
-**使用者名稱** 和 **密碼**，此為存取Apache Felix Web Management Console本身的憑證。
-初始安裝後，必須變更密碼，以確保執行個體的安全性。
+* **使用者名稱** 和 **密碼**，此為存取Apache Felix Web Management Console本身的憑證。
+必須更改密碼 *after* 初始安裝，以確保執行個體的安全性。
 
 要執行此操作：
 
-1. 導覽至Web主控台，位置為 `<server>:<port>/system/console/configMgr`.
-1. 導覽至 **Apache Felix OSGi Management Console** 並改變 **使用者名稱** 和 **密碼**.
+>[!NOTE]
+>
+>請參閱 [OSGI設定](/help/sites-deploying/configuring-osgi.md) 以取得設定OSGi設定的完整詳細資訊。
+
+1. 使用 **工具**, **操作** 菜單，開啟 **Web主控台** 並導覽至 **設定** 區段。
+例如，在 `<server>:<port>/system/console/configMgr`.
+1. 導覽至，然後開啟 **Apache Felix OSGi Management Console**.
+1. 變更 **使用者名稱** 和 **密碼**.
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
-1. 按一下「**儲存**」。
+1. 選取&#x200B;**儲存**。
 
 ### 實作自訂錯誤處理常式 {#implement-custom-error-handler}
 
@@ -344,7 +350,7 @@ WebDAV應在製作和發佈環境中皆停用。 您可以停止適當的OSGi套
 
    `https://<*host*>:<*port*>/system/console`
 
-   例如 `http://localhost:4503/system/console/bundles`.
+   例如 `http://localhost:4503/system/console/bundles`。
 
 1. 在套件組合清單中，找到名為的套件組合：
 
