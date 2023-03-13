@@ -11,7 +11,7 @@ role: Developer
 source-git-commit: c5bc743f845281bdbad522053c0e57791921ffd2
 workflow-type: tm+mt
 source-wordcount: '1317'
-ht-degree: 31%
+ht-degree: 34%
 
 ---
 
@@ -96,7 +96,7 @@ ht-degree: 31%
       + [使用和擴充Widget（傳統UI）](widgets.md)
       + [使用xtype（傳統UI）](xtypes.md)
       + [開發Forms（傳統UI）](developing-forms.md)
-+ [AEM 中的 Headful 和 Headless](headful-headless.md)
++ [AEM Headful 和 Headless 技術](headful-headless.md)
 + 無頭式體驗管理{#headless}
    + [無頭式與AEM](headless/introduction.md)
    + Headless 歷程 {#journeys}
@@ -104,19 +104,19 @@ ht-degree: 31%
          + [了解 AEM 中的 Headless](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
          + [了解 CMS Headless 開發](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)
          + [AEM Headless as a Cloud Service 快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html)
-         + [踏上使用 AEM Headless 初體驗之路](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
+         + [踏上首次使用 AEM Headless 之路](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
          + [如何將您的內容模型化為 AEM 內容模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html)
          + [如何透過 AEM Delivery API 存取您的內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
          + [如何透過 AEM Assets API 更新您的內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
          + [如何整合一切](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
-         + [如何使用無周邊應用程式](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
+         + [如何將無周邊應用程式上線](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
          + [選擇性 - 如何使用 AEM 建立單頁應用程式](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
       + Headless 內容架構者歷程 {#architect}
          + [AEM Headless 內容架構者歷程概觀](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
          + [使用 AEM 建立 Headless 的內容模型 - 簡介](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
-         + [學習使用 AEM 建立 Headless 內容模型的基礎知識](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
+         + [了解 AEM Headless 內容模型基本知識](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
          + [了解如何在 AEM 中建立內容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html)
-   + 快速入門手冊 {#getting-started}
+   + 快速入門指南 {#getting-started}
       + [簡介](headless/getting-started/introduction.md)
       + [建立設定](headless/getting-started/create-configuration.md)
       + [建立內容片段模型](headless/getting-started/create-content-model.md)
@@ -139,9 +139,9 @@ ht-degree: 31%
       + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
       + [內容片段 REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
       + [內容片段GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
-      + [使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphiql-ide.html)
+      + [使用 GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphiql-ide.html)
       + [持續查詢](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/persisted-queries.html)
-      + [內容片段的遠端AEM GraphQL查詢驗證](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
+      + [針對內容片段之遠端 AEM GraphQL 查詢的驗證](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
       + [AEM GraphQL API及內容片段 — 範例內容與查詢](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
 + 混合與SPA AEM開發{#spas}
    + [使用 AEM 的混合式和 SPA](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
