@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 5c26a043d735921d91044156f2749dc761dbb566
+source-git-commit: 24a64e603d460c659467c7679934bbdfd381aaa8
 workflow-type: tm+mt
-source-wordcount: '5901'
+source-wordcount: '5903'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-每個對儲存庫的更新都會建立新的內容修訂。 因此，每次更新時，存放庫的大小都會增加。 為避免儲存庫增長失控，需要清理舊修訂版本以釋放磁碟資源。 此維護功能稱為修訂清除。 自AEM 6.0起，已可作為離線常式使用。
+每個對儲存庫的更新都會建立新的內容修訂。 因此，每次更新時，儲存庫的大小都會增加。 需要清理舊修訂版本以釋放磁碟資源 — 這對於避免儲存庫增長失控非常重要。 此維護功能稱為修訂清除。 自AEM 6.0起，已可作為離線常式使用。
 
 在AEM 6.3及更新版本中，引入了名為「線上修訂清除」的線上版本功能。 與必須關閉AEM例項的離線修訂清除相比，當AEM例項上線時，可執行線上修訂清除。 「線上修訂清除」預設為開啟，這是執行修訂清除的建議方式。
 
