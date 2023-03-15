@@ -1,5 +1,5 @@
 ---
-title: SPA WKND教學課程
+title: SPA WKND 教學課程
 seo-title: SPA WKND Tutorial
 description: 透過此多部分教學課程，讓您沈浸於SPA開發中，逐步完成專案設定、元件對應、前端開發工具，以及應用程式路由選擇，以實作您自己的SPA。
 seo-description: Immerse yourself in SPA development with this multi-part tutorial leading you through project setup, component mapping, front-end development tools, and application routing to implement your own SPA.
@@ -13,11 +13,11 @@ exl-id: 59ada14e-3cb1-4f2c-b866-a2bb130db3fc
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 13%
+ht-degree: 17%
 
 ---
 
-# SPA WKND教學課程{#spa-wknd-tutorial}
+# SPA WKND 教學課程{#spa-wknd-tutorial}
 
 透過此多部分教學課程，讓您沈浸於SPA開發中，逐步完成專案設定、元件對應、前端開發工具，以及應用程式路由選擇，以實作您自己的SPA。
 

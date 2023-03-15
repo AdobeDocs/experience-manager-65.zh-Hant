@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 配置草稿和提交的儲存服務 {#configuring-storage-services-for-drafts-and-submissions}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 透過AEM Forms，您可以儲存：
 

@@ -13,7 +13,7 @@ exl-id: 76b76e0e-531b-4f80-be70-68532ef81a7f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '336'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 4%
 
 * **[!UICONTROL 主要內容的位置]**
 
-   *（必要）* 瀏覽至包含可能具有功能之內容的頁面（該頁面的元件必須設定為「允許精選內容」）。 例如， `/content/sites/engage/en/forum`.
+   *（必要）* 瀏覽至包含可能具有功能之內容的頁面（該頁面的元件必須設定為「允許精選內容」）。 例如, `/content/sites/engage/en/forum`.
 
 * **[!UICONTROL 顯示限制]**
 

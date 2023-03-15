@@ -5,7 +5,7 @@ exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
 source-wordcount: '347'
-ht-degree: 24%
+ht-degree: 26%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 24%
 
 了解AEM 6.5的管理。這些指南涵蓋網站功能、部署作業、安全功能、個人化、整合等。
 
-## 重要文章
+## 重要  文章
 
 * [AEM快速入門](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
 * [AEM 6.5發行說明](/help/release-notes/home.md)
@@ -35,7 +35,7 @@ ht-degree: 24%
 | [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南會說明AEM的基本概念。 |
 | [開發使用手冊](/help/sites-developing/home.md) | 了解如何建置您的AEM例項。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
-| [商務使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
+| [Commerce 使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
 | [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 

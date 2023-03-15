@@ -5,7 +5,7 @@ exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
 source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 35%
+ht-degree: 37%
 
 ---
 
@@ -31,7 +31,7 @@ AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、�
 | [Administering 指南](/help/sites-administering/home.md) | 了解如何管理AEM |
 | [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
 | [傳統UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中於AEM中編寫的概念。 |
-| [Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=en) | 了解數位看板解決方案，以發佈動態的互動式數位體驗。 |
+| [Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=zh-Hant) | 了解數位看板解決方案，以發佈動態的互動式數位體驗。 |
 | [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南會說明AEM的基本概念。 |
 | [開發使用手冊](/help/sites-developing/home.md) | 了解如何建置您的AEM例項。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |

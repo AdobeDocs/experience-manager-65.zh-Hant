@@ -26,7 +26,7 @@ ht-degree: 1%
 
 另請參閱 [SRP選項的特點](working-with-srp.md#characteristics-of-srp-options) 和 [建議的拓撲](topologies.md).
 
-## 需求 {#requirements}
+## 要求 {#requirements}
 
 * [MongoDB](https://www.mongodb.org/):
 

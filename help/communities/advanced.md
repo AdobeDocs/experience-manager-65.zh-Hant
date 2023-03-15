@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 進階計分和徽章{#advanced-scoring-and-badges}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 高級評分允許授予徽章以將成員標識為專家。 進階計分會根據數量來指派點數 *和* 由成員建立的內容品質，而基本計分則僅根據建立的內容數量來分配點。
 
@@ -134,7 +134,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>badgingPath</td>
-   <td>String[]</td>
+   <td>字串[]</td>
    <td><em>（必要）</em> 徽章的多值字串，影像數最多為badgingLevels。 必須排序徽章影像路徑，以便將第一個路徑授予最高專家。 如果徽章數少於badgingLevels所指示的，陣列中的最後一個徽章會填滿陣列的其餘部分。 範例項目：<br /> <code>/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
   </tr>
   <tr>

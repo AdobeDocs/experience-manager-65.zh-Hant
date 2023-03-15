@@ -313,7 +313,7 @@ IMS 設定包括兩個步驟：
 
 | 使用者 | 群組 | 權限 | 在用戶首選項中接受庫存配置 | 存取資產 | 存取Adobe Stock |
 | --- | --- | --- | --- | --- | --- |
-| 管理員 | N/A | 全部 | 不適用 | 是 | 是 |
+| 管理員 | N/A | 全部 | N/A | 是 | 是 |
 | test-doc1 | DAM 使用者 | /conf/global /settings/stock/cloud-config | 是 | 是 | 是 |
 | test-doc1 | DAM 使用者 | /conf/global /settings/stock/cloud-config | 否 | 錯誤：無法載入資料 | 否 |
 | test-doc1 | DAM 使用者 | **允許**:/conf/global /settings/stock     **拒絕**:/cloud-config | 庫存配置不可見 | 是 | 否 |

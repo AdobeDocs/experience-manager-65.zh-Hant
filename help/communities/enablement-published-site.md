@@ -13,7 +13,7 @@ exl-id: 801416ed-d321-45a2-8032-8935094a4d44
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1228'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -72,7 +72,7 @@ ht-degree: 1%
 
    ![站點驗證](assets/site-authentication.png)
 
-1. 新增登入頁面的路徑。 例如， `/content/......./GetStarted`.
+1. 新增登入頁面的路徑。 例如, `/content/......./GetStarted`.
 1. 發佈頁面。
 
 ## 已註冊成員 {#enrolled-member}
@@ -104,11 +104,11 @@ ht-degree: 1%
 
 「分配」類型由卡片左上角的表徵圖指示。 道路的影像用於包含啟用資源數的學習路徑。
 
-![分配1](assets/assignment1.png)
+![assignment1](assets/assignment1.png)
 
 選取 *滑雪課* 會顯示學習路徑所參考的兩個啟用資源。
 
-![assigned2](assets/assignment2.png)
+![assignment2](assets/assignment2.png)
 
 選取 *滑雪課程1* 將開啟啟用資源的詳細資訊頁面。
 
@@ -116,7 +116,7 @@ ht-degree: 1%
 
 與啟用資源的互動會顯示在作者環境中可存取的「報表」區段中。
 
-![分配3](assets/assignment3.png)
+![assignment3](assets/assignment3.png)
 
 ### 滑雪目錄 {#ski-catalog}
 

@@ -8,11 +8,11 @@ exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
 source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
 workflow-type: tm+mt
 source-wordcount: '1433'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# Digital Rights Management資產 {#digital-rights-management-in-assets}
+# 資產的 Digital Rights Management {#digital-rights-management-in-assets}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |

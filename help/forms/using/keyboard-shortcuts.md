@@ -95,7 +95,7 @@ ht-degree: 1%
 <table> 
  <tbody>
   <tr>
-   <th><strong>作業</strong></th> 
+   <th><strong>操作</strong></th> 
    <th><strong>Windows上的快捷方式</strong></th> 
    <th><strong>Mac OS的捷徑</strong><br /> </th> 
   </tr>
@@ -213,7 +213,7 @@ ht-degree: 1%
 <table> 
  <tbody>
   <tr>
-   <th><p><strong>作業</strong></p> </th> 
+   <th><p><strong>操作</strong></p> </th> 
    <th><p><strong>Windows上的快捷方式<br /> </strong></p> </th> 
    <th><strong>Mac OS的捷徑</strong></th> 
   </tr>
@@ -245,7 +245,7 @@ ht-degree: 1%
 <table> 
  <tbody>
   <tr>
-   <th><strong>作業</strong></th> 
+   <th><strong>操作</strong></th> 
    <th><strong>Windows上的快捷方式 </strong></th> 
    <th><strong>Mac OS的捷徑</strong><br /> </th> 
   </tr>
@@ -267,7 +267,7 @@ ht-degree: 1%
 <table> 
  <tbody>
   <tr>
-   <th><p><strong>作業</strong></p> </th> 
+   <th><p><strong>操作</strong></p> </th> 
    <th><p><strong>Windows上的快捷方式</strong></p> </th> 
    <th><strong>Mac OS的捷徑</strong></th> 
   </tr>
@@ -289,7 +289,7 @@ ht-degree: 1%
 <table> 
  <tbody>
   <tr>
-   <th><strong>作業</strong></th> 
+   <th><strong>操作</strong></th> 
    <th><strong>Windows上的快捷方式</strong></th> 
    <th><strong>Mac OS的捷徑</strong></th> 
   </tr>
@@ -311,7 +311,7 @@ ht-degree: 1%
 <table> 
  <tbody>
   <tr>
-   <th><strong>作業</strong></th> 
+   <th><strong>操作</strong></th> 
    <th><strong>Windows上的快捷方式<br /> </strong></th> 
    <th><strong>Mac OS的捷徑</strong></th> 
   </tr>
@@ -338,7 +338,7 @@ ht-degree: 1%
 <table> 
  <tbody>
   <tr>
-   <th><strong>作業</strong></th> 
+   <th><strong>操作</strong></th> 
    <th><strong>Windows上的快捷方式</strong></th> 
    <th><strong>Mac OS的捷徑</strong></th> 
   </tr>

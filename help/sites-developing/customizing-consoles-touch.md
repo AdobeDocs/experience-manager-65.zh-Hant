@@ -14,7 +14,7 @@ exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
 source-wordcount: '670'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ AEM提供多種機制，讓您自訂主控台(和 [頁面製作功能](/help/sit
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱：
+>如需進一步詳細資訊，請參閱：
 >
 >* 使用和建立 [clientlibs](/help/sites-developing/clientlibs.md).
 >* 使用和建立 [覆蓋](/help/sites-developing/overlays.md).

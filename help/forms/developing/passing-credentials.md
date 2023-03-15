@@ -32,7 +32,7 @@ ht-degree: 0%
 * 使用WS-Security標頭調用加密服務
 
 
-## 需求 {#requirements}
+## 要求 {#requirements}
 
 若要充分運用本檔案，您必須對JEE上的AEM Forms軟體有紮實的了解。
 

@@ -5,7 +5,7 @@ exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -130,10 +130,10 @@ AEM透過Analytics Standard API與Adobe Analytics整合時，需要使用Adobe D
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-選取特定專案項目，以顯示有關設定的詳細資訊。 這些包括：
+選取特定專案項目，以顯示有關設定的詳細資訊。 這些類別包括：
 
 * 專案概述
-* 分析
+* Insights
 * 憑證
    * 服務帳戶(JWT)
       * 憑據詳細資訊
@@ -160,7 +160,7 @@ AEM透過Analytics Standard API與Adobe Analytics整合時，需要使用Adobe D
 
    ![AEM IMS設定詳細資訊](assets/integrate-analytics-io-10.png)
 
-1. 確認為 **建立**.
+1. 使用&#x200B;**建立**&#x200B;確認。
 
 1. 您的Adobe Analytics設定會顯示在AEM主控台中。
 
@@ -199,7 +199,7 @@ AEM透過Analytics Standard API與Adobe Analytics整合時，需要使用Adobe D
 
    您也可以選取所需的範本（如果有多個範本可用）。
 
-1. 確認為 **建立**.
+1. 使用&#x200B;**建立**&#x200B;確認。
 
    此 **編輯元件** 對話框將開啟。
 

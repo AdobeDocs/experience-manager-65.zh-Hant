@@ -113,7 +113,7 @@ ht-degree: 7%
 
 * **UI 提及模式**
 
-   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如~{{familyName}}{{givenName}}.
+   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如 ~{{familyName}}{{givenName}}.
 
 * **允許執行緒式回覆**
 

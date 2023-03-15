@@ -22,7 +22,7 @@ ht-degree: 4%
 
 若為AEM Communities，資源主控台位於 [啟用管理員](users.md) 建立、管理資源並指派給啟用社群網站的成員。
 
-## 需求 {#requirements}
+## 要求 {#requirements}
 
 新增社群網站的啟用資源之前，必須正確設定AEM例項，包括：
 

@@ -97,7 +97,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -120,7 +120,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -143,7 +143,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用</td>
+   <td>N/A</td>
   </tr>
  </tbody>
 </table>
@@ -164,7 +164,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用</td>
+   <td>N/A</td>
   </tr>
  </tbody>
 </table>

@@ -98,7 +98,7 @@ ht-degree: 0%
 
 本節介紹與AEM版本化功能相關的維護操作。 此 **清除版本** 工具的用途是清除儲存庫中節點版本或節點階層。 其主要用途是透過移除舊版節點，協助您縮小存放庫的大小。
 
-### 總覽 {#overview}
+### 概觀 {#overview}
 
 此 **清除版本** 工具可作為每週維護任務使用。 需要先新增，然後再設定，才能首次使用。 之後可依要求或每週執行。
 
@@ -297,7 +297,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
       其中 `<identifier>` 替換為您（必須）輸入以識別執行個體的自由文字（您無法忽略此資訊）。
 
-      例如， `org.apache.sling.commons.log.LogManager.factory.config-MINE`
+      例如, `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
    * 類型: `sling:OsgiConfig`
    >[!NOTE]
@@ -391,7 +391,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 名稱： `org.apache.sling.commons.log.LogManager.factory.writer-<identifier>` （因為這是作者）
 
-      跟記錄器一樣， `<identifier>` 替換為您（必須）輸入以識別執行個體的自由文字（您無法忽略此資訊）。 例如， `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
+      跟記錄器一樣， `<identifier>` 替換為您（必須）輸入以識別執行個體的自由文字（您無法忽略此資訊）。 例如, `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
    * 類型: `sling:OsgiConfig`
    >[!NOTE]
@@ -510,7 +510,7 @@ OSGi事件也會產生稽核記錄，可從 **配置狀態** tab -> **記錄檔*
 
    ![chlimage_1](assets/chlimage_1.jpeg)
 
-   您可以在此：
+   您可以在這裡：
 
    * 查看是否啟用了代理。
    * 查看任何複製的目標。

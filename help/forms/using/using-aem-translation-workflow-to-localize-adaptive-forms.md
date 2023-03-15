@@ -13,7 +13,7 @@ exl-id: ebec03a3-67a0-4ecd-84bb-8580388e048a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '753'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 1. 在AEM Forms UI上，選取表單，然後點選 **新增字典** 選項。
 1. 在 **在翻譯專案中新增字典** 螢幕上，選取 **建立新的翻譯專案** 或 **新增至現有的翻譯專案** 選項。
-1. 在 **專案標題** 欄位，指定標題。 例如， `Government Reference Site - German locale.`
+1. 在 **專案標題** 欄位，指定標題。 例如, `Government Reference Site - German locale.`
 1. 在 **目標語言** 欄位，指定地區(例如 `German(de)`)，然後按一下 **完成**. 您可以指定多個地區設定。 表單會轉譯為 **目標語言** 欄位。
 1. 在「新增字典」對話方塊中，按一下 **開啟專案**. 在「專案」畫面中，開啟新建立的專案。
 1. 按一下 **橢圓** 在 **翻譯摘要** 方塊。 「翻譯摘要」畫面隨即開啟。
@@ -56,23 +56,23 @@ ht-degree: 0%
 
 ## 使用人工翻譯將最適化表單及其記錄檔案翻譯為本地化 {#localizing-an-adaptive-form-and-its-document-of-record-using-human-translation}
 
-在人翻譯中，內容被發送給翻譯提供者，並由專業翻譯員翻譯。 完成時，會傳回翻譯的內容並匯入AEM。 當您的翻譯提供者與AEM整合時，內容會自動在AEM和翻譯提供者之間傳送。
+在人翻譯中，內容被發送給翻譯提供者，並由專業翻譯員翻譯。 完成後，翻譯後的內容將傳回並匯入到 AEM 中。如果您的翻譯提供商與 AEM 相整合，內容會在 AEM 和翻譯提供商之間自動傳送。
 
 對於翻譯，與專業翻譯人員共用包含XLIFF格式檔案的字典。 字典包含每個區域設定的個別XLIFF檔案。 每個XLIFF檔案都包含將向最終用戶顯示的文本以及相應本地化文本的佔位符。
 
 使用「人工翻譯員」執行以下步驟將表單及其記錄文檔本地化：
 
-1. [將AEM與您的翻譯服務提供商連接](/help/sites-administering/tc-tic.md) 和 [建立翻譯整合框架配置](/help/sites-administering/tc-tic.md).
+1. [將 AEM 與您的翻譯服務提供商連接](/help/sites-administering/tc-tic.md)並[建立翻譯整合框架設定](/help/sites-administering/tc-tic.md)。
 
-1. [關聯語言主版的頁面](/help/sites-administering/tc-tic.md) 和框架配置。
+1. [將您語言主版的頁面](/help/sites-administering/tc-tic.md) 與翻譯服務和框架設定相關聯。
 
-1. [識別內容類型](/help/sites-administering/tc-rules.md) 翻譯。
+1. [識別要翻譯的內容類型](/help/sites-administering/tc-rules.md)。
 
-1. [準備翻譯內容](/help/sites-administering/tc-prep.md) 編寫語言主版並建立語言副本的根頁面。
+1. 編寫語言主版並建立語言副本的根頁面，[以備妥內容進行翻譯](/help/sites-administering/tc-prep.md)。
 
-1. [建立翻譯專案](/help/sites-administering/tc-manage.md) 收集要翻譯的內容並準備翻譯程式。
+1. [建立翻譯專案](/help/sites-administering/tc-manage.md)以收集要翻譯的內容並準備翻譯流程。
 
-1. 使用翻譯專案 [管理內容翻譯流程](/help/sites-administering/tc-manage.md).
+1. 使用翻譯專案[管理內容翻譯流程](/help/sites-administering/tc-manage.md)。
 
 >[!NOTE]
 >

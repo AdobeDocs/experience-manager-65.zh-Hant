@@ -8,7 +8,7 @@ exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
 source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
 workflow-type: tm+mt
 source-wordcount: '647'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -32,7 +32,7 @@ Adobe動態Tag Management是啟用數位行銷工具的工具。 此服務免費
 
    * 選取 **[!UICONTROL Web屬性]** ，然後按一下 **[!UICONTROL 新增屬性]**.
 
-   * 視需要更新欄位，然後按一下 **[!UICONTROL 建立屬性]**. 請參閱 [檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).
+   * 視需要更新欄位，然後按一下 **[!UICONTROL 建立屬性]**. 請參閱 [檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant).
 
    ![建立編輯Web屬性](assets/Create-edit-web-property.png)
 

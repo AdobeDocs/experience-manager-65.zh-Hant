@@ -21,7 +21,7 @@ ht-degree: 7%
 
 # 報表主控台 {#reports-console}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 針對AEM Communities，有多種報表可從製作環境以數種方式存取。
 

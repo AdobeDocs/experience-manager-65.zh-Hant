@@ -11,7 +11,7 @@ exl-id: c29f6213-1df6-45af-91c8-14b255276d82
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
 source-wordcount: '2910'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -220,7 +220,7 @@ AEM通用解決方案提供管理存放在存放庫中的商務資訊的方法�
 
 您可以使用CRXDE Lite修改現有小面或新增小面：
 
-1. 導航到:
+1. 瀏覽到:
 
    `http://localhost:4502/crx/de/index.jsp#/libs/commerce/gui/content/products/aside/items/search/items/searchpanel/facets`
 
@@ -492,7 +492,7 @@ AEM通用解決方案提供管理存放在存放庫中的商務資訊的方法�
 
 1. 使用 **章節Blueprint** 範本。
 
-   例如， `Swimwear`.
+   例如, `Swimwear`.
 
 1. 開啟新 `Swimwear` 頁面，然後按一下 **編輯Blueprint** 開啟 **屬性** 對話框，可在此設定 **產品** 中。
 

@@ -151,11 +151,11 @@ ht-degree: 3%
 
 * **重新導向URL**
 
-   輸入訊息傳送後顯示之頁面的URL。 例如， `../messaging.html`.
+   輸入訊息傳送後顯示之頁面的URL。 例如, `../messaging.html`.
 
 * **取消 URL**
 
-   如果發件人取消郵件，請輸入顯示的頁面URL。 例如， `../messaging.html`.
+   如果發件人取消郵件，請輸入顯示的頁面URL。 例如, `../messaging.html`.
 
 * **消息主體的最大長度**
 

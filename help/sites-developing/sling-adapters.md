@@ -79,11 +79,11 @@ Node node = resource.adaptTo(Node.class);
 
 在第一種情況中，Javadoc可以說明 `adaptTo-targets` 都是可能的。 但是，對於特定子類（例如基於JCR的資源），這通常是不可能的。 在後一種情況下， `AdapterFactory` 通常是套件組合的專用類別的一部分，因此在用戶端API中不會公開，也不會列在javadoc中。 從理論上講，可以訪問所有 `AdapterFactory` 實施 [OSGi](/help/sites-deploying/configuring-osgi.md) 服務運行時並查看其「適配器」（源和目標）配置，但不將它們相互映射。 最後，這取決於內部邏輯，必須加以記錄。 因此，這個參考。
 
-## 引用 {#reference}
+## 參考 {#reference}
 
 ### Sling {#sling}
 
-[**資源**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) 適應於：
+[**資源**](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) 適應於：
 
 <table>
  <tbody>
@@ -104,16 +104,16 @@ Node node = resource.adaptTo(Node.class);
    <td>如果這是基於JCR節點的資源（或其他資源支援值映射），則返回屬性的映射。</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a></td>
+   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a></td>
    <td>如果屬性是基於JCR節點的資源（或其他資源支援值映射），則返回屬性的方便使用映射。 也可使用<br /> <code><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceUtil.html#getvaluemap%28org.apache.sling.api.resource.resource%29">ResourceUtil.getValueMap(Resource)</a></code> （處理空大小寫等）。</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/inherit/InheritanceValueMap.html">InheritanceValueMap</a></td>
-   <td>的擴充功能 <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a> 這可讓您在尋找屬性時考慮資源的階層。</td>
+   <td>的擴充功能 <a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a> 這可讓您在尋找屬性時考慮資源的階層。</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ModifiableValueMap.html">可修改的值映射</a></td>
-   <td>的擴充功能 <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a>，可讓您修改該節點上的屬性。</td>
+   <td>的擴充功能 <a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a>，可讓您修改該節點上的屬性。</td>
   </tr>
   <tr>
    <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html">InputStream</a></td>
@@ -144,15 +144,15 @@ Node node = resource.adaptTo(Node.class);
    <td>如果這是JCR節點型資源。</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html">Page</a></td>
+   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html">Page</a></td>
    <td>如果這是JCR型資源，且節點為 <code>cq:Page</code> (或 <code>cq:PseudoPage</code>)。</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html">Component</a></td>
+   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html">Component</a></td>
    <td>如果這是 <code>cq:Component</code> 節點資源。</td>
   </tr>  
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Design.html">Design</a></td>
+   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Design.html">設計</a></td>
    <td>如果這是設計節點(<code>cq:Page</code>)。</td>
   </tr>
   <tr>
@@ -160,7 +160,7 @@ Node node = resource.adaptTo(Node.class);
    <td>如果這是 <code>cq:Template</code> 節點資源。</td>
   </tr>  
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/Blueprint.html">Blueprint</a></td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/Blueprint.html">藍圖</a></td>
    <td>如果這是 <code>cq:Template</code> 節點資源。</td>
   </tr>
   <tr>
@@ -214,7 +214,7 @@ Node node = resource.adaptTo(Node.class);
  </tbody>
 </table>
 
-[**ResourceResolver**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceResolver.html) 適應於：
+[**ResourceResolver**](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceResolver.html) 適應於：
 
 <table>
  <tbody>
@@ -223,7 +223,7 @@ Node node = resource.adaptTo(Node.class);
    <td>如果這是以JCR為基礎的資源解析器（預設），則要求的JCR工作階段。</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html">PageManager</a></td>
+   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html">PageManager</a></td>
    <td> </td>
   </tr>
   <tr>
@@ -231,7 +231,7 @@ Node node = resource.adaptTo(Node.class);
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Designer.html">Designer</a></td>
+   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Designer.html">Designer</a></td>
    <td> </td>
   </tr>
   <tr>
@@ -266,11 +266,11 @@ Node node = resource.adaptTo(Node.class);
  </tbody>
 </table>
 
-[**SlingHttpServletRequest**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html) 適應於：
+[**SlingHttpServletRequest**](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html) 適應於：
 
 尚無目標，但實施了可適應性，可作為自定義AdapterFactory中的源。
 
-[**SlingHttpServletResponse**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletResponse.html) 適應於：
+[**SlingHttpServletResponse**](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletResponse.html) 適應於：
 
 <table>
  <tbody>
@@ -283,12 +283,12 @@ Node node = resource.adaptTo(Node.class);
 
 #### WCM {#wcm}
 
-**[頁面](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)** 適應於：
+**[頁面](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)** 適應於：
 
 <table>
  <tbody>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resource</a><br /> </td>
+   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resource</a><br /> </td>
    <td>頁面的資源。</td>
   </tr>
   <tr>
@@ -308,7 +308,7 @@ Node node = resource.adaptTo(Node.class);
 
 **[元件](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html)** 適應於：
 
-| [資源](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | 元件的資源。 |
+| [Resource](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | 元件的資源。 |
 |---|---|
 | [LakedResource](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/LabeledResource.html) | 標示為資源(==此)。 |
 | [節點](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | 元件的節點。 |
@@ -319,7 +319,7 @@ Node node = resource.adaptTo(Node.class);
 <table>
  <tbody>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resource</a><a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html"><br /> </a></td>
+   <td><a href="https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resource</a><a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html"><br /> </a></td>
    <td>範本的資源。</td>
   </tr>
   <tr>
@@ -349,7 +349,7 @@ Node node = resource.adaptTo(Node.class);
 
 **資產** 適應於：
 
-| [資源](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | 資產的資源。 |
+| [Resource](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | 資產的資源。 |
 |---|---|
 | [節點](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | 資產的節點。 |
 | ... | 資產資源可適應的所有項目。 |
@@ -358,7 +358,7 @@ Node node = resource.adaptTo(Node.class);
 
 **標籤** 適應於：
 
-| [資源](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | 標籤的資源。 |
+| [Resource](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | 標籤的資源。 |
 |---|---|
 | [節點](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | 標籤的節點。 |
 | ... | 標籤資源可調整的所有項目。 |

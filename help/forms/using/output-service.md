@@ -19,7 +19,7 @@ ht-degree: 6%
 
 # 輸出服務{#output-service}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 輸出服務是AEM檔案服務的一部分。 輸出服務支援AEM Forms Designer的各種輸出格式和輸出設計功能。 輸出服務可以轉換XFA模板和XML資料，以生成各種格式的打印文檔。
 

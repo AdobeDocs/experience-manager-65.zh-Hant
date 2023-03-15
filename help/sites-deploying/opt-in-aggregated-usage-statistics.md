@@ -14,7 +14,7 @@ exl-id: e626bdd8-b7ae-4de5-a0a0-47fb74c080d7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 >
 >有各種資料保護和隱私法規；包括，例如GDPR和CCPA。 AEM Sites已準備好協助客戶履行其資料保護和隱私權法規遵循義務。 此頁面會引導客戶完成選擇加入（或退出）匯總使用量統計資料收集的程式。
 >
->如需詳細資訊，另請參閱 [Adobe的隱私中心](https://www.adobe.com/privacy.html).
+>如需詳細資訊，另請參閱 [Adobe的隱私中心](https://www.adobe.com/tw/privacy.html).
 
 >[!NOTE]
 >

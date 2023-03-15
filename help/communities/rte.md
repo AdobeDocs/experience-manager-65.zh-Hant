@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # RTF編輯器要點 {#rich-text-editor-essentials}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 RTF編輯器(RTE)提供使用標籤輸入文本的功能。
 

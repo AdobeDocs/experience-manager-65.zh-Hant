@@ -7,7 +7,7 @@ exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
 source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
 source-wordcount: '1989'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 3%
 * [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)  — 使用您的片段的markdown語法
 * [使用關聯內容](/help/assets/content-fragments/content-fragments-assoc-content.md)  — 新增關聯內容
 * [中繼資料 — 片段屬性](/help/assets/content-fragments/content-fragments-metadata.md)  — 查看和編輯片段屬性
-* 使用 [內容片段與GraphQL搭配，可傳送內容](/help/assets/content-fragments/content-fragments-graphql.md) 以用於您的應用程式。 若要協助您進行此操作，您可以預覽 [JSON輸出](/help/assets/content-fragments/content-fragments-json-preview.md).
+* 使用 [內容片段與GraphQL搭配，以傳送內容](/help/assets/content-fragments/content-fragments-graphql.md) 以用於您的應用程式。 若要協助您進行此操作，您可以預覽 [JSON輸出](/help/assets/content-fragments/content-fragments-json-preview.md).
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ ht-degree: 3%
 >* [自訂和擴充內容片段](/help/sites-developing/customizing-content-fragments.md)
 >* [轉譯專用內容片段設定元件](/help/sites-developing/content-fragments-config-components-rendering.md)
 >* [AEM Assets HTTP API 內容片段支援](/help/assets/assets-api-content-fragments.md)
->* [AEM GraphQL API以搭配內容片段使用](/help/assets/content-fragments/graphql-api-content-fragments.md)
+>* [與內容片段搭配使用的 AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md)
 
 
 通信渠道的數量每年都在增加。 通常管道是指傳送機制，如下所示：

@@ -1,5 +1,5 @@
 ---
-title: 建立啟動
+title: 建立 Launch
 seo-title: Creating Launches
 description: 您可以建立啟動，以啟用更新新版本的現有網頁，以供日後啟用。
 seo-description: You can create a launch to enable the updating of a new version of existing web pages for future activation.
@@ -14,11 +14,11 @@ exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '986'
-ht-degree: 15%
+ht-degree: 17%
 
 ---
 
-# 建立啟動 {#creating-launches}
+# 建立 Launch{#creating-launches}
 
 建立啟動，以啟用更新新版本的現有網頁，以供日後啟用。 建立Launch時，需指定標題和來源頁面：
 
@@ -40,10 +40,10 @@ ht-degree: 15%
 
 1. 視您使用的主控台而定：
 
-   * **啟動**:
+   * **Launch**:
 
       1. 選擇 **建立Launch** ，開啟精靈。
-   * **Sites**:
+   * **網站**:
 
       1. 選擇 **建立** ，開啟選取方塊。
       1. 從此選擇 **建立Launch** 來開啟嚮導。
@@ -168,4 +168,4 @@ ht-degree: 15%
 
 >[!CAUTION]
 >
->刪除啟動會移除啟動本身和所有子系巢狀啟動。
+>刪除 Launch 將移除 Launch 本身和所有子系巢狀 Launch。

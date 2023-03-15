@@ -9,7 +9,7 @@ exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '5484'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -420,7 +420,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有在Experience
 
 您必須先設定下列項目，才能將資產推送至Dynamic Media Classic而不發佈：
 
-1. [使用Admin Console建立支援案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). 在您的支援案例中，請為您的Dynamic Media Classic帳戶啟用安全預覽功能。
+1. [使用Admin Console建立支援案例](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). 在您的支援案例中，請為您的Dynamic Media Classic帳戶啟用安全預覽功能。
 1. [設定Dynamic Media Classic帳戶的安全預覽](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=en).
 
 這些步驟與您在Dynamic Media Classic中建立任何安全測試設定時要遵循的步驟相同。
@@ -462,7 +462,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有在Experience
 
 啟用安全預覽表示資產已取消發佈並推送至安全預覽伺服器。
 
-若 **[!UICONTROL 安全預覽]** 啟用後，請導覽至Dynamic Media Classic元件(位於Experience Manager中)。 選擇 **[!UICONTROL 編輯]**. 資產的URL中列有安全預覽伺服器。 在Experience Manager中發佈後，檔案參考中的伺服器網域會從預覽URL更新至生產URL。
+若 **[!UICONTROL 安全預覽]** 啟用後，請導覽至Dynamic Media Classic元件(位於Experience Manager中)。 選取&#x200B;**[!UICONTROL 編輯]**。資產的URL中列有安全預覽伺服器。 在Experience Manager中發佈後，檔案參考中的伺服器網域會從預覽URL更新至生產URL。
 
 ### 為WCM啟用Dynamic Media Classic {#enabling-scene-for-wcm}
 
@@ -567,7 +567,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有在Experience
 1. 在CRXDE Lite頁面的右側，選取 **[!UICONTROL 屬性]** 標籤。
 1. 在 **[!UICONTROL jobParam]** 值欄位。
 
-   例如， `psprocess="rasterize"&psresolution=120` .
+   例如, `psprocess="rasterize"&psresolution=120` .
 
    請參閱 [Adobe Dynamic Media Classic Image Production System API](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/c-overview.html) 如需更多上傳工作參數，請使用。
 

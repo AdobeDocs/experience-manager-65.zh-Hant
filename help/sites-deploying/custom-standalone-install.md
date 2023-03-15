@@ -350,7 +350,8 @@ AEM WCM啟動後，您也可以存取：
  https://<<i>host</i>>:<<i>port</i>>/crx/de/index.jsp
 ```
 
-例如：`https://localhost:4502/crx/de/index.jsp`
+例如:
+`https://localhost:4502/crx/de/index.jsp`
 
 ![installcq_crxdelite](assets/installcq_crxdelite.png)
 

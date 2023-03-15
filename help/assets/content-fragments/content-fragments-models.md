@@ -7,7 +7,7 @@ exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
 source-git-commit: 6b9eb1a6df7cc4a8afab1c83d93d8a53bd94f6f5
 workflow-type: tm+mt
 source-wordcount: '2332'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -30,7 +30,7 @@ AEM中的內容片段模型會定義 [內容片段，](/help/assets/content-frag
 
    >[!CAUTION]
    >
-   >若 [尚未啟用內容片段模型的使用](/help/assets/content-fragments/content-fragments-configuration-browser.md), **建立** 選項將無法使用。
+   >如果[尚未啟用使用內容片段模型](/help/assets/content-fragments/content-fragments-configuration-browser.md)，則&#x200B;**建立**&#x200B;選項將無法使用。
 
 1. 指定「模 **型標題」**。您也可以新增 **標籤**, **說明**，然後選取 **啟用模型** to [啟用模型](#enabling-disabling-a-content-fragment-model) （如果需要）。
 
@@ -104,28 +104,28 @@ AEM中的內容片段模型會定義 [內容片段，](/help/assets/content-frag
    * 添加一行文本的一個或多個欄位；可定義的最大長度
 * **多行文字**
    * 可為RTF、純文字或Markdown的文字區域
-* **數量**
+* **數字**
    * 添加一個或多個數字欄位
 * **布林值**
    * 新增布林值核取方塊
-* **日期時間**
+* **日期和時間**
    * 新增日期和/或時間
 * **列舉**
    * 新增一組核取方塊、選項按鈕或下拉式欄位
 * **標記**
    * 允許片段作者存取和選取標籤區域
-* **內容參考資料**
+* **內容參考**
    * 參考任何類型的其他內容；可用於 [建立巢狀內容](#using-references-to-form-nested-content)
    * 如果參照影像，您可以選擇顯示縮圖
-* **片段引用**
+* **片段參考**
    * 參考其他內容片段；可用於 [建立巢狀內容](#using-references-to-form-nested-content)
-   * 資料類型可設定為允許片段作者：
+   * 可以設定此資料類型以允許片段作者：
       * 直接編輯參考的片段。
-      * 根據適當的模型建立新內容片段
+      * 根據適當的模型建立新的內容片段
 * **JSON 物件**
    * 允許內容片段作者在片段的對應元素中輸入JSON語法。
       * 允許AEM儲存您從其他服務複製/貼上的直接JSON。
-      * JSON會傳遞，並在GraphQL中以JSON格式輸出。
+      * JSON會傳遞，並在GraphQL中輸出為JSON。
       * 在內容片段編輯器中包含JSON語法醒目提示、自動完成和錯誤醒目提示。
 * **標籤預留位置**
    * 允許導入頁簽，以便在編輯內容片段內容時使用。
@@ -134,7 +134,7 @@ AEM中的內容片段模型會定義 [內容片段，](/help/assets/content-frag
 
       >[!NOTE]
       >
-      >此資料類型僅用於格式設定，AEM GraphQL架構會忽略此資料類型。
+      >此資料類型僅用於格式設定，AEM GraphQL結構會忽略它。
 
 ## 屬性 {#properties}
 
@@ -202,20 +202,20 @@ AEM中的內容片段模型會定義 [內容片段，](/help/assets/content-frag
 
 * **單行文字**
    * 比較預先定義的規則運算式。
-* **數量**
+* **數字**
    * 檢查特定值。
-* **內容參考資料**
+* **內容參考**
    * 測試特定內容類型。
    * 只能參考指定檔案大小或較小的資產。
    * 只能參考預先定義的寬度和/或高度範圍內（以像素為單位）的影像。
-* **片段引用**
+* **片段參考**
    * 測試特定內容片段模型。
 
 ## 使用參考來形成巢狀內容 {#using-references-to-form-nested-content}
 
 內容片段可使用下列其中一種資料類型，以形成巢狀內容：
 
-* **[內容參考資料](#content-reference)**
+* **[內容參考](#content-reference)**
    * 提供對其他內容的簡單參考；任何類型。
    * 可針對一或多個參照（在產生的片段中）進行設定。
 
@@ -225,21 +225,21 @@ AEM中的內容片段模型會定義 [內容片段，](/help/assets/content-frag
 
       >[!NOTE]
       >
-      >該方法與 [使用內容片段搭配GraphQL的無周邊內容傳送](/help/assets/content-fragments/content-fragments-graphql.md).
+      >該方法與 [透過GraphQL使用內容片段進行無頭式內容傳送](/help/assets/content-fragments/content-fragments-graphql.md).
    * 可針對一或多個參照（在產生的片段中）進行設定。
 
 >[!NOTE]
 >
 >AEM對以下項目提供重複防護：
 >
->* 內容參考資料
+>* 內容參考
    >  這會防止使用者新增參考至目前的片段。 這可能會導致空白的片段參考選擇器對話方塊。
 >
 >* GraphQL中的片段參考
    >  如果您建立深層查詢，並傳回彼此參照的多個內容片段，則第一次出現時會傳回null。
 
 
-### 內容參考資料 {#content-reference}
+### 內容參考 {#content-reference}
 
 「內容參考」可讓您從其他來源轉譯內容；例如影像或內容片段。
 
@@ -252,7 +252,7 @@ AEM中的內容片段模型會定義 [內容片段，](/help/assets/content-frag
    * 顯示縮圖
    * 高度和寬度的影像限制
 
-![內容參考資料](assets/cfm-content-reference.png)
+![內容參考](assets/cfm-content-reference.png)
 
 ### 片段參考（巢狀片段） {#fragment-reference-nested-fragments}
 
@@ -279,7 +279,7 @@ type CompanyModel {
 
 >[!NOTE]
 >
->這與 [使用內容片段搭配GraphQL的無周邊內容傳送](/help/assets/content-fragments/content-fragments-graphql.md).
+>這與 [透過GraphQL使用內容片段進行無頭式內容傳送](/help/assets/content-fragments/content-fragments-graphql.md).
 
 除了標準屬性之外，您還可以定義：
 
@@ -301,7 +301,7 @@ type CompanyModel {
 
    * **碎裂組合**  — 可讓片段作者選取多個片段，以建立複合
 
-   ![片段引用](assets/cfm-fragment-reference.png)
+   ![片段參考](assets/cfm-fragment-reference.png)
 
 >[!NOTE]
 >
@@ -319,7 +319,7 @@ type CompanyModel {
 
 * 建立新內容片段時可供選取。
 * 可從內容片段模型內參考。
-* 可用於GraphQL;以便產生架構。
+* 適用於GraphQL;以便產生架構。
 
 啟用標籤為以下任一項的模型：
 
@@ -341,7 +341,7 @@ type CompanyModel {
 * 不過：
    * GraphQL結構會持續產生且仍可查詢（以避免影響JSON API）。
    * 您仍可以查詢任何以模型為基礎的內容片段，並從GraphQL端點傳回。
-* 無法再參照模型，但現有的參照保持不變，仍可查詢並從GraphQL端點傳回。
+* 無法再參照模型，但現有參照保持不變，仍可查詢並從GraphQL端點傳回。
 
 禁用標籤為的模型 **已啟用** 您使用 **停用** 選項，可從以下任一項取得：
 
@@ -350,7 +350,7 @@ type CompanyModel {
 
 ![禁用啟用的模型](assets/cfm-status-disable.png)
 
-## 允許資產資料夾上的內容片段模型 {#allowing-content-fragment-models-assets-folder}
+## 允許資產資料夾中的內容片段模型 {#allowing-content-fragment-models-assets-folder}
 
 若要實作內容控管，您可以設定 **原則** 在「資產」資料夾中，控制可在該資料夾中建立片段的內容片段模型。
 
@@ -404,7 +404,7 @@ type CompanyModel {
 
 ## 發佈內容片段模型 {#publishing-a-content-fragment-model}
 
-發佈任何相依內容片段時/之前，必須發佈內容片段模型。
+內容片段模型需要在任何相關內容片段發佈時/之前發佈。
 
 若要發佈內容片段模型：
 

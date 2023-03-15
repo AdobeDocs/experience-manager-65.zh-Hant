@@ -294,7 +294,7 @@ bindRef</code> 欄位顯示樹元素與架構中的元素或屬性之間的關�
 
 >[!NOTE]
 >
->屬性具有 `@` 符號 `bindRef`值來區分元素。 例如， `/config/projectDetails/@duration`.
+>屬性具有 `@` 符號 `bindRef`值來區分元素。 例如, `/config/projectDetails/@duration`.
 
 **為什麼我無法為可重複的子表單拖曳子表單的個別元素（從任何複雜類型產生的結構）（minOccours或maxOccurs值大於1）?**
 

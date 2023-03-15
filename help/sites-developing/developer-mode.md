@@ -14,7 +14,7 @@ exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '687'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->開發人員模式：
+>開發人員模式:
 >
 >* 僅適用於觸控式UI（編輯頁面時）。
 >* 在行動裝置上或案頭上的小視窗上皆無法使用（因空間限制）。

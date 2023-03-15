@@ -1,5 +1,5 @@
 ---
-title: 最佳作法
+title: 最佳做法
 seo-title: Best Practices
 description: Adobe工程與諮詢團隊已為AEM開發人員開發了一套完整的最佳實務
 seo-description: Adobe Engineering and Consulting teams have developed a comprehensive set of best practices for AEM developers
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 ---
 
-# 最佳作法{#best-practices}
+# 最佳做法{#best-practices}
 
 ## 開發人員最佳實務 — 快速入門 {#best-practices-for-developers-getting-started}
 
@@ -50,7 +50,7 @@ Adobe 工程和顧問團隊已經為 AEM 開發人員發展出一組完整的最
 * [製作最佳實務](/help/sites-authoring/best-practices.md)
 * [部署最佳實務](/help/sites-deploying/best-practices.md)
 
-## 網站 {#sites}
+## Sites {#sites}
 
 管理和編寫網站內容有一些最佳實務，概述如下：
 

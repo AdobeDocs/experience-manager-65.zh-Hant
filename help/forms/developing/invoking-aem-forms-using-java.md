@@ -964,7 +964,7 @@ AEM Forms服務作業可透過服務的強制類型API來叫用，此API稱為Ja
 
 設定連線屬性後，請建立 `ServiceClientFactory` 用於實例化Java對象的對象，它允許您調用服務。 每個具有Java客戶端庫的服務都有相應的客戶端對象。 例如，要調用儲存庫服務，請建立 `ResourceRepositoryClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 物件。 此 `ServiceClientFactory` 物件負責維護叫用AEM Forms服務所需的連線設定。
 
-雖然已取得 `ServiceClientFactory` 通常速度很快，當首次使用工廠時會涉及一些開銷。 此對象經過優化以便重複使用，因此，如果可能，請使用 `ServiceClientFactory` 對象。 也就是說，請勿建立個別 `ServiceClientFactory` 您建立的每個用戶端程式庫物件的物件。
+雖然已取得 `ServiceClientFactory` 通常速度很快，當首次使用工廠時，會涉及一些開銷。 此對象經過優化以便重複使用，因此，如果可能，請使用 `ServiceClientFactory` 對象。 也就是說，請勿建立個別 `ServiceClientFactory` 您建立的每個用戶端程式庫物件的物件。
 
 有一個「使用者管理員」設定，可控制位於 `com.adobe.idp.Context` 影響 `ServiceClientFactory` 物件。 此設定會控制整個AEM Forms中的所有驗證內容存留期，包括使用Java API執行的所有叫用。 依預設， `ServiceCleintFactory` 物件的使用時間為2小時。
 

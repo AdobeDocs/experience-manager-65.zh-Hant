@@ -32,7 +32,7 @@ ht-degree: 0%
 
 使用互動式探索製作或發佈例項 [社群元件指南](components-guide.md).
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在SCF中，元件由SocialComponent POJO、Handlebars JS範本（用於呈現元件）和CSS（用於設定元件樣式）組成。
 

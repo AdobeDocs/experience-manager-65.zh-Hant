@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # AEM Forms應用程式簡介 {#aem-forms-app}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Forms應用程式可讓您根據伺服器，在行動裝置上同步適用性表單、行動表單和表單。 您可以定義 [Forms OSGi工作流程](/help/forms/using/aem-forms-workflow.md) 或JEE上的Forms工作流程。 例如，您經營一家銀行，並使用AEM Forms管理客戶應用程式和通信。 您的客戶填寫表格並提交以進行驗證。 如果您在行動裝置上啟用表單，您的客戶就可以在AEM Forms應用程式中填寫表單。 您也可以在行動裝置上啟用驗證表單，以管理驗證工作流程。 您的現場工作人員可以將移動設備帶給客戶、驗證詳細資訊並提交表單。 AEM Forms應用程式會與AEM Forms伺服器同步，並擷取為行動裝置啟用的表單。 如果應用程式離線，會將資料儲存在本機。
 

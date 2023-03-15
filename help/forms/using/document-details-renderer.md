@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-在AEM Forms工作區中，可順暢地支援多種表單類型。 這些包括：
+在AEM Forms工作區中，可順暢地支援多種表單類型。 這些類別包括：
 
 * PDF forms(XDP / Acroform /平面PDF)
 * 新HTML表單

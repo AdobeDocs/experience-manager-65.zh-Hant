@@ -1,5 +1,5 @@
 ---
-title: 套用Dynamic Media影像預設集
+title: 套用 Dynamic Media 影像預設集
 description: 了解如何在Dynamic Media中套用影像預設集
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
@@ -13,7 +13,7 @@ exl-id: 98d88b59-eb8f-42db-abb8-04506a5b8c30
 source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
 workflow-type: tm+mt
 source-wordcount: '327'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 

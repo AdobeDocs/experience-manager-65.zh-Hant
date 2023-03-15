@@ -19,7 +19,7 @@ ht-degree: 4%
 
 # 適用於Communities元件的OSGi事件  {#osgi-events-for-communities-components}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 當成員與Communities功能互動時，會傳送可觸發非同步接聽程式的OSGi事件，例如通知或遊戲化（計分和簽章）。
 

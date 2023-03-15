@@ -29,7 +29,7 @@ Adobe提供兩個版本的Commerce Integration Framework:
 | 前端 | AEM伺服器端轉譯的頁面 | 混合頁面應用程式（混合演算） |
 | 產品目錄 |  — 產品匯入工具、編輯器、AEM中的快取 <br> — 包含AEM或Proxy頁面的一般目錄 |  — 無產品匯入 <br> — 一般範本 <br> — 透過連接器提供隨選資料 |
 | 可擴充性 |  — 最多可支援數百萬種產品（取決於使用案例） <br> - Dispatcher上的快取 |  — 無卷限制 <br> — 快取Dispatcher或CDN |
-| 標準化資料模型 | 否 | 是，Adobe Commerce GraphQL架構 |
+| 標準化資料模型 | 否 | 是，Adobe Commerce GraphQL結構 |
 | 可用性 | 是：<br> - SAPCommerce Cloud(更新擴充功能以支援AEM 6.4和Hybris 5（預設），並維持與Hybris 4的相容性 <br>- SalesforceCommerce Cloud(Connector開源支援AEM 6.4) | 是，透過GitHub透過開放原始碼。 <br> Adobe Commerce(支援2.3.2（預設），並與2.3.1相容)。 |
 | 使用時機 | 有限的使用案例：對於可能需要匯入小型靜態目錄的情況 | 大多數使用案例中的首選解決方案 |
 

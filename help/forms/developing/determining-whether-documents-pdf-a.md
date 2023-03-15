@@ -15,13 +15,13 @@ exl-id: 096fd2ac-616f-484a-b093-9d98b2f87093
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2082'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 # 確定文檔是否符合PDF/A {#determining-whether-documents-are-pdf-a-compliant}
 
-通過使用組合器服務，可以確定PDF文檔是否PDF/A相容。 PDF/檔案是存檔格式，用於長期保存檔案的內容。 這些字型嵌入到文檔中，並且該檔案被解壓縮。 因此，PDF/A文檔通常比標準PDF文檔大。 此外，PDF/檔案不包含音訊和視訊內容。
+通過使用組合器服務，可以確定PDF文檔是否PDF/A相容。 PDF/檔案是存檔格式，用於長期保存檔案的內容。 字體內嵌在文件中，檔案未壓縮。因此，PDF/A 文件通常比標準 PDF 文件大。此外，PDF/A 文件不包含音訊和視訊內容。
 
 PDF/A-1規範由兩個符合級別組成，即A和B。這兩個級別之間的主要差異是邏輯結構（可訪問性）支援，這對於符合級別B不是必需的。無論符合級別如何，PDF/A-1都規定所有字型都嵌入生成的PDF/A文檔中。 目前驗證（和轉換）僅支援PDF/A-1b。
 

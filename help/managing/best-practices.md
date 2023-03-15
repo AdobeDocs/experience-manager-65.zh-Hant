@@ -14,7 +14,7 @@ exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
 source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
 workflow-type: tm+mt
 source-wordcount: '3262'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -389,7 +389,7 @@ ht-degree: 0%
    >
    >在正常使用AEM期間，這一進程必須繼續，但這些初始階段是最關鍵的。
 
-### 轉出 {#rollout}
+### 推出 {#rollout}
 
 新應用程式的推出需要謹慎規劃，以確保順利上線。 這包括確認高安全性、培訓所有潛在使用者，並進行多次干預，以確認所有問題均已解決。
 

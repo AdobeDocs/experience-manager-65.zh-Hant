@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 通信管理中的自訂特殊字元{#custom-special-characters-in-correspondence-management}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 通信管理內建210個特殊字元的預設支援，您可輕鬆將其插入字母中。
 

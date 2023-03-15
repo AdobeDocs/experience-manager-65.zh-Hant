@@ -49,7 +49,7 @@ AEM內容中稱為CUG的步驟如下：
 
 同樣，在不更改有效權限設定的情況下，可以用驗證要求來標籤給定的樹。 組合和結果會列在 [結合CUG策略和身份驗證要求](/help/sites-administering/closed-user-groups.md#combining-cug-policies-and-the-authentication-requirement) 區段。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 ### 授權：限制讀取訪問 {#authorization-restricting-read-access}
 
@@ -95,7 +95,7 @@ CUG政策的權限評估以及與預設或任何其他授權模型的互動，�
 * 但是，它不影響訪問控制節點的兄弟和祖先；
 * 給定CUG的繼承將停止在嵌套CUG處。
 
-#### 最佳作法 {#best-practices}
+#### 最佳做法 {#best-practices}
 
 在定義通過CUG的受限讀取權限時，應考慮以下最佳做法：
 
@@ -173,7 +173,7 @@ Apache Sling驗證需求應透過頁面或節點階層繼承。 繼承和驗證�
 >
 >僅對與配置的支援路徑中的資源關聯的請求執行評估。 對於任何其他請求，將評估判斷登入路徑的替代方式。
 
-#### 最佳作法 {#best-practices-1}
+#### 最佳做法 {#best-practices-1}
 
 定義驗證需求時，應考量下列最佳實務：
 
@@ -686,7 +686,7 @@ CUG重寫的身份驗證相關部分僅附帶與AdobeGranite身份驗證要求�
 
 ### 製作例項 {#author-instances}
 
-| **&quot;Apache Jackrabbit Oak CUG Configuration&quot;** | **說明** |
+| **&quot;Apache Jackrabbit Oak CUG Configuration&quot;** | **解釋** |
 |---|---|
 | 支援的路徑 `/content` | 已啟用CUGpolicies的訪問控制管理。 |
 | CUG評估已啟用FALSE | 禁用權限評估。 CUG政策沒有生效。 |
@@ -698,17 +698,17 @@ CUG重寫的身份驗證相關部分僅附帶與AdobeGranite身份驗證要求�
 
 ### 發佈例項 {#publish-instances}
 
-| **&quot;Apache Jackrabbit Oak CUG Configuration&quot;** | **說明** |
+| **&quot;Apache Jackrabbit Oak CUG Configuration&quot;** | **解釋** |
 |---|---|
 | 支援的路徑 `/content` | CUG策略的訪問控制管理在配置的路徑下啟用。 |
 | 啟用CUG評估TRUE | 權限評估會在已設定的路徑下方啟用。 CUG政策於 `Session.save()`. |
 | 等級 | 200 | 請參閱Oak檔案。 |
 
-| **&quot;Apache Jackrabbit Oak CUG Exclude List&quot;** | **說明** |
+| **&quot;Apache Jackrabbit Oak CUG Exclude List&quot;** | **解釋** |
 |---|---|
 | 主體名稱管理員 | 不包括管理員主體（CUG評估）。 |
 
-| **「AdobeGranite驗證需求和登入路徑處理常式」** | **說明** |
+| **「AdobeGranite驗證需求和登入路徑處理常式」** | **解釋** |
 |---|---|
 | 支援的路徑  `/content` | 存放庫中定義的驗證要求，透過 `granite:AuthenticationRequired` 混合類型在以下生效 `/content` up `Session.save()`. Sling Authenticator會更新。 在支援的路徑之外新增mixin類型會遭忽略。 |
 

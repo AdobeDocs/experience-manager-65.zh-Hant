@@ -128,7 +128,7 @@ ht-degree: 1%
       }
    ```
 
-您的AEM環境已設定為快取最適化表單。 它會快取所有類型的最適化表單。 如果您需要在傳送快取頁面之前檢查頁面的使用者存取權限，請參閱 [快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
+您的AEM環境已設定為快取最適化表單。 它會快取所有類型的最適化表單。 如果您需要在傳送快取頁面之前檢查頁面的使用者存取權限，請參閱 [快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-Hant).
 
 ## 疑難排解 {#troubleshooting}
 

@@ -50,7 +50,7 @@ ht-degree: 21%
 | dps-shortAbstract | 字串 |  |
 | dps-department | 字串 |  |
 | dps-category | 字串 |  |
-| dps-keywords | String[] |  |
+| dps-keywords | 字串[] |  |
 | dps-internalKeywords | 字串[] |  |
 | dps-imperience | 字串[] | 重要性來自{&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;} |
 

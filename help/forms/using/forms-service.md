@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Forms 服務 {#forms-service}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Forms服務可讓您建立互動式資料擷取用戶端應用程式，以驗證、處理、轉換及傳遞通常在Designer中建立的表單。 Forms服務會以PDF檔案的形式呈現，記錄您開發的任何表單設計。
 

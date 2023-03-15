@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 自訂建立通信UI{#customize-create-correspondence-ui}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 通信管理可讓您重新品牌化其解決方案範本，以提升品牌價值，並符合貴組織的品牌標準。 品牌化使用者介面包括變更組織標誌，該標誌會顯示在「建立通信UI」的左上角。
 

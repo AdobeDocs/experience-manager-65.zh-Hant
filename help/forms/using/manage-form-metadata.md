@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 管理表單中繼資料{#manage-form-metadata}
 
-## 總覽  {#overview-nbsp}
+## 概觀  {#overview-nbsp}
 
 中繼資料可讓資產更輕鬆地分類和組織，並協助尋找特定資產的使用者。
 

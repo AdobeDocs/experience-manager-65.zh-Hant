@@ -15,7 +15,7 @@ exl-id: 8d8a7237-8e87-4730-be90-2a18144fc65a
 source-git-commit: d6c875e85d553b8ef557b811c9fa43f46824f297
 workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -42,7 +42,7 @@ AEM傳送與內容管理API:
 * 核心元件(JSON)
 
    * [JSON匯出工具](/help/sites-developing/json-exporter.md)
-   * [為元件啟用JSON匯出](/help/sites-developing/json-exporter-components.md)
+   * [為元件啟用 JSON 匯出](/help/sites-developing/json-exporter-components.md)
    * 請參閱 [開發使用手冊中的元件區段](/help/sites-developing/home.md) 詳細資訊
 
 * **資產**:Assets HTTP API允許對Assets執行建立 — 讀取 — 更新 — 刪除(CRUD)操作，包括二進位、中繼資料、轉譯和註解。 請參閱 [AEM Assets HTTP API](/help/assets/mac-api-assets.md)

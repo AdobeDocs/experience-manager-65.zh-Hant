@@ -13,7 +13,7 @@ exl-id: 10eecfb8-d43d-4f01-9778-87c752dee64c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '779'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱：
+>如需進一步詳細資訊，請參閱：
 >
 >* 套用和參與工作流程： [使用工作流程](/help/sites-authoring/workflows.md).
 >* 建立工作流模型並擴展工作流功能： [開發和擴充工作流程](/help/sites-developing/workflows.md).

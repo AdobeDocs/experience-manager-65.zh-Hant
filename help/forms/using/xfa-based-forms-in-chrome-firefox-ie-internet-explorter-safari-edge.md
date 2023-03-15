@@ -3,13 +3,13 @@ title: 無法在Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Ex
 description: 無法在Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer或Apple Safari中開啟以XFA為基礎的PDF forms
 seo-title: Unable to open XFA-based PDF forms in Google Chrome, Firefox, Microsoft Edge, Microsoft Internet Explorer, or Apple Safari
 feature: Adaptive Forms
-source-git-commit: f2b76ce0c2f296f81c3748794bf2ab74ccd5bb95
+exl-id: fdd15315-e0d6-4d80-acb4-2e0ecec716c4
+source-git-commit: 2f1e6eb5451e76b9688401b32d4866ed74cca84e
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
 
 ---
-
 
 # 無法在Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer或Apple Safari中開啟以XFA為基礎的PDF forms{#unable-to-open-XFA-based-PDF-forms-in-Google-Chrome-Firefox-Microsoft-Edge-Microsoft-Internet-Explorer-or-Apple-Safari}
 

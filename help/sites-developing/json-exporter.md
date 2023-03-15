@@ -1,5 +1,5 @@
 ---
-title: 內容服務的JSON匯出工具
+title: 內容服務的 JSON 匯出工具
 seo-title: JSON Exporter for Content Services
 description: AEM Content Services的設計目的，是為了將AEM中/來自的內容的說明和傳送，歸納為網頁上的重點以外。 它們使用可供任何用戶端使用的標準化方法，將內容傳遞至非傳統AEM網頁的頻道。
 seo-description: AEM Content Services are designed to generalize the description and delivery of content in/from AEM beyond a focus on web pages. They provide the delivery of content to channels that are not traditional AEM web pages, using standardized methods that can be consumed by any client.
@@ -13,11 +13,11 @@ exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
 source-wordcount: '441'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
-# 內容服務的JSON匯出工具{#json-exporter-for-content-services}
+# 內容服務的 JSON 匯出工具{#json-exporter-for-content-services}
 
 AEM Content Services的設計目的，是為了將AEM中/來自的內容的說明和傳送，歸納為網頁上的重點以外。
 
@@ -101,6 +101,6 @@ AEM Content Services的設計目的，是為了將AEM中/來自的內容的說�
 
 * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用內容片段製作](/help/sites-authoring/content-fragments.md)
-* [為元件啟用JSON匯出](/help/sites-developing/json-exporter-components.md)
+* [為元件啟用 JSON 匯出](/help/sites-developing/json-exporter-components.md)
 
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [內容片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)

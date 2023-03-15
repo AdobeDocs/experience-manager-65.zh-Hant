@@ -1,5 +1,5 @@
 ---
-title: 使用用戶端端程式庫
+title: 使用用戶端程式庫
 seo-title: Using Client-Side Libraries
 description: AEM提供用戶端程式庫資料夾，可讓您將用戶端程式碼儲存在存放庫中、將其組織為類別，以及定義將每類程式碼提供給用戶端的時間和方式
 seo-description: AEM provides Client-side Library Folders, which allow you to store your client-side code in the repository, organize it into categories, and define when and how each category of code is to be served to the client
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ---
 
-# 使用用戶端端程式庫{#using-client-side-libraries}
+# 使用用戶端程式庫{#using-client-side-libraries}
 
 現代網站嚴重依賴由複雜JavaScript和CSS程式碼驅動的用戶端處理。 組織並最佳化此程式碼的服務可能是個複雜的問題。
 

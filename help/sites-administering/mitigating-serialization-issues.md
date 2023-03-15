@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 緩解AEM中的序列化問題{#mitigating-serialization-issues-in-aem}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Adobe的AEM團隊一直與開放原始碼專案密切合作 [NotSoSerial](https://github.com/kantega/notsoserial) 協助減輕 **CVE-2015-7501**. NotSoSerial是在 [Apache 2授權](https://www.apache.org/licenses/LICENSE-2.0) 並包括根據其自身許可的ASM代碼 [類BSD許可證](https://asm.ow2.org/license.html).
 

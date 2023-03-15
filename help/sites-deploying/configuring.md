@@ -143,7 +143,7 @@ AEM可讓您設定：
 
 請參閱 [單一登入](/help/sites-deploying/single-sign-on.md) 以取得詳細資訊。
 
-### 資源映射 {#resource-mapping}
+### 資源對應 {#resource-mapping}
 
 資源對應可用來定義AEM的重新導向、虛名URL和虛擬主機。
 

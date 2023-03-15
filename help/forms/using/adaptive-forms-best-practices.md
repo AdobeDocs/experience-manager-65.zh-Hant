@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 使用最適化表單的最佳實務 {#best-practices-for-working-with-adaptive-forms}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Adobe Experience Manager(AEM)表單可協助您將複雜的交易轉換為簡單、令人愉悅的數位體驗。 但是，它需要協調努力，以實施、構建、執行和維護高效和高效的AEM Forms生態系統。
 
@@ -128,11 +128,11 @@ AEM Forms提供 [規則編輯器](/help/forms/using/rule-editor.md) 可讓您建
 規則編輯器提供用於編寫規則的可視化編輯器和代碼編輯器。 使用程式碼編輯器模式撰寫規則時，請考量下列事項：
 
 * 對表單欄位和元件使用有意義的唯一名稱，以避免在編寫規則時產生任何可能的衝突。
-* 使用 `this` 運算子，以在規則運算式中引用元件本身。 這可確保即使元件名稱變更，規則仍有效。 例如， `field1.valueCommit script: this.value > 10`.
+* 使用 `this` 運算子，以在規則運算式中引用元件本身。 這可確保即使元件名稱變更，規則仍有效。 例如, `field1.valueCommit script: this.value > 10`.
 
-* 參考其他表單元件時，請使用元件名稱。 使用 `value` 屬性，以擷取欄位或元件的值。 例如， `field1.value`.
+* 參考其他表單元件時，請使用元件名稱。 使用 `value` 屬性，以擷取欄位或元件的值。 例如, `field1.value`.
 
-* 依相對唯一階層來參照元件，以避免任何衝突。 例如， `parentName.fieldName`.
+* 依相對唯一階層來參照元件，以避免任何衝突。 例如, `parentName.fieldName`.
 
 * 處理複雜或常用的規則時，請考慮將業務邏輯撰寫為個別用戶端程式庫中的函式，以便在最適化表單中指定和重複使用。 用戶端程式庫應為獨立的程式庫，且除jQuery和Underscore.js外，不應有任何外部相依性。 您也可以使用用戶端程式庫來強制執行 [伺服器端重新驗證](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) 已提交的表單資料。
 * 適用性表單提供一組API，可用來與最適化表單通訊及執行動作。 部分關鍵API如下。 如需詳細資訊，請參閱 [適用性Forms的JavaScript程式庫API參考](https://adobe.com/go/learn_aemforms_documentation_63).

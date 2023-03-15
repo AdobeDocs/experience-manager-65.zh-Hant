@@ -167,13 +167,13 @@ ht-degree: 4%
 
 * **評論資源類型**
 
-   導覽至延伸功能的resourceType `comment` /apps中的元件（單條注釋）。 例如， `/apps/social/commons/components/hbs/comments/comment`
+   導覽至延伸功能的resourceType `comment` /apps中的元件（單條注釋）。 例如, `/apps/social/commons/components/hbs/comments/comment`
 
    此資源可識別訪客發佈留言時所建立之UGC的resourceType。
 
 * **投票資源類型**
 
-   導覽至延伸功能的resourceType `voting` 元件。 例如， `/apps/social/components/hbs/voting`
+   導覽至延伸功能的resourceType `voting` 元件。 例如, `/apps/social/components/hbs/voting`
 
    此資源可識別訪客張貼投票時所建立之UGC的資源類型。
 

@@ -8,7 +8,7 @@ exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
 source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
 source-wordcount: '465'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果您使用 [!DNL Experience Manager] 如果您打算處理大量大型PSD或PSB檔案，請在Adobe Managed Services(AMS)上聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，為您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
+>如果您使用 [!DNL Experience Manager] 如果您打算處理大量大型PSD或PSB檔案，請在Adobe Managed Services(AMS)上聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，為您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 [!DNL Experience Manager] 可能無法處理超過 30000 x 23000 像素的極高解析度 PSB 檔案。
 
 ## [!DNL Adobe Camera Raw] 資料庫 {#adobe-camera-raw-library}
 

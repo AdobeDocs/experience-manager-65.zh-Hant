@@ -1,5 +1,5 @@
 ---
-title: 編輯啟動
+title: 編輯 Launch
 seo-title: Editing Launches
 description: 為頁面（或一組頁面）建立啟動後，您可以編輯頁面啟動復本中的內容。
 seo-description: After creating a launch for your page (or set of pages) you can edit the content in the launch copy of the page(s).
@@ -15,11 +15,11 @@ exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
 source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
 workflow-type: tm+mt
 source-wordcount: '525'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
-# 編輯啟動{#editing-launches}
+# 編輯 Launch{#editing-launches}
 
 ## 編輯啟動頁面 {#editing-launch-pages}
 
@@ -73,7 +73,7 @@ livecopy可用來將來源 *分支的內容*** 同步到啟動分支 (以便讓�
 
    * the [啟動主控台](/help/sites-authoring/launches.md#the-launches-console):
 
-      * 選擇 **編輯**.
+      * 選取&#x200B;**編輯**。
    * [參考（網站控制台）](/help/sites-authoring/launches.md#launches-in-references-sites-console) 顯示可用操作：
 
       * 選擇 **編輯啟動**.

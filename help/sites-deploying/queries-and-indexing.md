@@ -150,7 +150,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 為了為上述查詢定義Lucene屬性索引，可以通過在下建立新節點來添加以下定義 **oak:index:**
 
-* **名稱：** `LucenePropertyIndex`
+* **名稱:** `LucenePropertyIndex`
 * **類型：** `oak:QueryIndexDefinition`
 
 建立節點後，新增下列屬性：
@@ -209,23 +209,23 @@ select * from [nt:base] where [alias] = '/admin'
 
 1. 將屬性新增至預設節點，並具有下列屬性：
 
-   * **名稱：** `class`
+   * **名稱:** `class`
    * **類型：** `String`
-   * **值：** `org.apache.lucene.analysis.standard.StandardAnalyzer`
+   * **值:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
 
    值是要使用的分析器類的名稱。
 
    您也可以使用可選 `luceneMatchVersion` 字串屬性。 與Lucene 4.7一起使用的有效合成酶是：
 
-   * **名稱：** `luceneMatchVersion`
+   * **名稱:** `luceneMatchVersion`
    * **類型：** `String`
-   * **值：** `LUCENE_47`
+   * **值:** `LUCENE_47`
 
    若 `luceneMatchVersion` 未提供，則Oak會使用隨附的Lucene版本。
 
 1. 如果要向分析器配置中添加秒數檔案，可以在 `default` 其中一個具有以下屬性：
 
-   * **名稱：** `stopwords`
+   * **名稱:** `stopwords`
    * **類型：** `nt:file`
 
 #### 透過合成建立分析器 {#creating-analyzers-via-composition}
@@ -234,35 +234,35 @@ select * from [nt:base] where [alias] = '/admin'
 
 以此節點結構為例：
 
-* **名稱：** `analyzers`
+* **名稱:** `analyzers`
 
-   * **名稱：** `default`
+   * **名稱:** `default`
 
-      * **名稱：** `charFilters`
+      * **名稱:** `charFilters`
       * **類型：** `nt:unstructured`
 
-         * **名稱：** `HTMLStrip`
-         * **名稱：** `Mapping`
-      * **名稱：** `tokenizer`
+         * **名稱:** `HTMLStrip`
+         * **名稱:** `Mapping`
+      * **名稱:** `tokenizer`
 
          * **屬性名稱:** `name`
 
             * **類型：** `String`
-            * **值：** `Standard`
-      * **名稱：** `filters`
+            * **值:** `Standard`
+      * **名稱:** `filters`
       * **類型：** `nt:unstructured`
 
-         * **名稱：** `LowerCase`
-         * **名稱：** `Stop`
+         * **名稱:** `LowerCase`
+         * **名稱:** `Stop`
 
             * **屬性名稱:** `words`
 
                * **類型：** `String`
-               * **值：** `stop1.txt, stop2.txt`
-            * **名稱：** `stop1.txt`
+               * **值:** `stop1.txt, stop2.txt`
+            * **名稱:** `stop1.txt`
 
                * **類型：** `nt:file`
-            * **名稱：** `stop2.txt`
+            * **名稱:** `stop2.txt`
 
                * **類型：** `nt:file`
 
@@ -430,7 +430,7 @@ ACS Commons包還公開可用於建立屬性索引的OSGi配置。
 
 #### MBean輸出 {#mbean-output}
 
-在某些情況下，提供索引相關MBean的輸出以進行偵錯是很有幫助的。 您可以透過以下方式達成此目的：
+在某些情況下，提供索引相關MBean的輸出以進行偵錯是很有幫助的。 您可以透過以下方式進行：
 
 1. 前往JMX控制台：
    `https://serveraddress:port/system/console/jmx`

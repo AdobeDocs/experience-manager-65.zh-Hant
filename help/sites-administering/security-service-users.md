@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # AEM中的服務使用者{#service-users-in-aem}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在AEM中取得管理工作階段或資源解析程式的主要方式是使用 `SlingRepository.loginAdministrative()` 和 `ResourceResolverFactory.getAdministrativeResourceResolver()` 方法。
 
@@ -184,7 +184,7 @@ ht-degree: 0%
    </Sling-Initial-Content>
    ```
 
-1. 安裝您的套件，並確認已安裝工廠設定。 您可以透過以下方式達成此目的：
+1. 安裝您的套件，並確認已安裝工廠設定。 您可以透過以下方式進行：
 
    * 前往Web主控台(位於 *https://serverhost:serveraddress/system/console/configMgr*
    * 搜尋 **Apache Sling Service使用者對應程式服務修正**

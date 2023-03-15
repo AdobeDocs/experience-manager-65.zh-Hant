@@ -62,7 +62,7 @@ ht-degree: 2%
    <td>章節</td>
    <td>靜態文字</td>
    <td>FDM </td>
-   <td>代理UI</td>
+   <td>Agent UI</td>
    <td>影像</td>
   </tr>
   <tr>
@@ -94,7 +94,7 @@ ht-degree: 2%
      <li>狀態代碼</li>
      <li>連接數</li>
     </ul> </td>
-   <td>—</td>
+   <td>--</td>
   </tr>
   <tr>
    <td>清單匯總</td>
@@ -108,7 +108,7 @@ ht-degree: 2%
      <li>到期金額</li>
      <li>到期日期</li>
     </ul> </td>
-   <td>—</td>
+   <td>--</td>
   </tr>
   <tr>
    <td>費用匯總</td>
@@ -126,7 +126,7 @@ ht-degree: 2%
      <li>應付總額（usagecharges計算欄位）</li>
     </ul> <p>表 — 清單</p> </td>
    <td>無欄位</td>
-   <td>—</td>
+   <td>--</td>
   </tr>
   <tr>
    <td>分項呼叫 — 傳出</td>
@@ -134,26 +134,26 @@ ht-degree: 2%
     <ul>
      <li>日期</li>
      <li>時間</li>
-     <li>數量</li>
+     <li>數字</li>
      <li>持續時間</li>
      <li>費用</li>
     </ul> </td>
    <td><p>所有值</p> <p>表格 — 呼叫</p> </td>
    <td>無欄位</td>
-   <td>—</td>
+   <td>--</td>
   </tr>
   <tr>
    <td>立即支付</td>
-   <td>—</td>
-   <td>—</td>
-   <td>—</td>
+   <td>--</td>
+   <td>--</td>
+   <td>--</td>
    <td>PayNow</td>
   </tr>
   <tr>
    <td>增值服務</td>
-   <td>—</td>
-   <td>—</td>
-   <td>—</td>
+   <td>--</td>
+   <td>--</td>
+   <td>--</td>
    <td>ValueAddedServices</td>
   </tr>
  </tbody>

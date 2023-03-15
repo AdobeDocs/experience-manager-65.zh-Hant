@@ -73,7 +73,7 @@ ht-degree: 7%
 
 * 多目錄系結，可讓作者在AEM產品主控台中系結多個目錄。 建立綁定後，作者還可以編輯和查看目錄綁定屬性。
 
-* 使用GraphQL的React式用戶端結帳和迷你購物車支援完整的基本購物歷程。
+* 使用GraphQL的React式用戶端結帳和Mini Cart支援完整的基本購物歷程。
 
 * 結帳元件包括地址表單、付款選擇和運送方法選擇。
 
@@ -97,7 +97,7 @@ ht-degree: 7%
 
 * 多存放區/網站功能，可在多個AEM網站結構上使用CIF核心元件，並讓基礎的GraphQL用戶端實作可連線至不同的Adobe Commerce存放區/存放區檢視。
 
-* 透過HTTPGET為特定GraphQL查詢啟用GraphQL快取，以縮短回應時間。
+* GraphQL快取已透過HTTPGET啟用某些GraphQL查詢，以縮短回應時間。
 
 * 在AEM產品控制台中啟用產品說明檢視。
 

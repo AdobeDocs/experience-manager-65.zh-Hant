@@ -115,7 +115,7 @@ AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力�
 
    * 日誌檔案為&lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
 
-   * 例如， `.../crx-quickstart/logs/scoring-debug.log`
+   * 例如, `.../crx-quickstart/logs/scoring-debug.log`
 
 ![計分日誌](assets/scoring-log.png)
 

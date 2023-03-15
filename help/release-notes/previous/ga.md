@@ -102,7 +102,7 @@ UI已經過多種增強功能，讓工作效率更高，使用更輕鬆。
 
 * 快速入門發佈使用Eclipse Jetty 9.4.15作為servlet引擎(AEM 6.4隨9.3.22提供)。
 
-### [!DNL Experience Manager] Sites {#experience-manager-sites}
+### [!DNL Experience Manager] 網站 {#experience-manager-sites}
 
 #### 托管單頁應用程式 {#managed-single-page-apps}
 
@@ -137,7 +137,7 @@ AEM可以從堆疊的不同層級以各種格式提供內容。 自2008年以來
 * 使用動態預留位置，依資料觸發內容的位置或設定進行個人化。
 * Adobe Analytics與AEM Screens Player整合所推動的統一分析
 
-如需AEM Screens變更的詳細資訊 — 請參閱 [AEM Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=en).
+如需AEM Screens變更的詳細資訊 — 請參閱 [AEM Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=zh-Hant).
 
 #### 元件和範本開發 {#component-amp-template-development}
 
@@ -222,7 +222,7 @@ AEM可以從堆疊的不同層級以各種格式提供內容。 自2008年以來
 * 依預設，在Live Copy結構內建立頁面會建立獨立頁面。
 * 在使用JS SDK的單頁應用程式中使用MSM功能(又稱為SPA Editor)
 
-#### 啟動 {#launches}
+#### Launch {#launches}
 
 * 啟動的新審核和核准工作流程，以及僅可提升已核准啟動頁面的功能
 * 新增 [選項，以選擇在促銷步驟後立即刪除Launch](/help/sites-authoring/launches-promoting.md#promoting-launch-pages)
@@ -326,11 +326,11 @@ AEM 6.5導入了下列功能和增強功能，以提升AEM使用者、DAM角色�
 
 深入了解 [!DNL Experience Manager] 6.5，以最佳方式支援您的內容速度使用案例。
 
-##### Adobe資產連結 {#aal}
+##### Adobe Asset Link {#aal}
 
 [!DNL Adobe Asset Link] 加強創意人員與行銷人員在內容建立程式中的協作。 創作者可存取儲存在 [!DNL Experience Manager Assets]，而不需離開他們最熟悉的應用程式。 創意人員可使用 [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]，和 [!DNL Adobe InDesign] 應用程式。
 
-[!DNL Adobe Asset Link] 是 [企業Creative Cloud](https://www.adobe.com/creativecloud/business/enterprise.html) 提供。 如需詳細資訊，包括 [!DNL Experience Manager] 部署，請參閱 [Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html).
+[!DNL Adobe Asset Link] 是 [企業Creative Cloud](https://www.adobe.com/tw/creativecloud/business/enterprise.html) 提供。 如需詳細資訊，包括 [!DNL Experience Manager] 部署，請參閱 [Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html).
 
 ![在Adobe Photoshop中搜尋資產](/help/release-notes/assets/asset_search_photoshop.png)
 
@@ -453,7 +453,7 @@ Adobe已制定程式和程式，以收集、排定優先順序及追蹤以客戶
 * 方括弧程式碼編輯器的擴充功能([了解詳情及下載](/help/sites-developing/aem-brackets.md))
 * Maven/Gradle相依性([下載連結](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/))
 
-**Sites**
+**網站**
 
 * 核心元件([GitHub專案](https://github.com/adobe/aem-core-wcm-components))
 * We.Retail參考實作([閱讀更多資訊](/help/sites-developing/we-retail.md))
@@ -473,7 +473,7 @@ Adobe已制定程式和程式，以收集、排定優先順序及追蹤以客戶
 
 * AEM最新化工具套裝，例如對話方塊轉換工具。 ([GitHub專案](https://github.com/adobe/aem-modernize-tools))
 
-**Assets**
+**資產**
 
 * 新增增強PDF模擬轉譯器([閱讀更多資訊](/help/assets/aem-pdf-rasterizer.md))
 * 要添加擴展RAW映像支援的包([閱讀更多資訊](/help/assets/camera-raw.md))
@@ -557,7 +557,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 * **使用頁面版本**: [如果頁面已移動，則您無法再對移動前進行的任何版本執行預覽](/help/sites-authoring/working-with-page-versions.md#previewing-a-version).
 
-### Assets {#assets}
+### 資產 {#assets}
 
 * **搜尋：** 如果搜尋字串包含前導空格([OAK-4786](https://issues.apache.org/jira/browse/OAK-4786))
 * **資料夾中繼資料結構**:新增選擇按鈕後，ID和值欄位無法如預期呈現，且刪除功能無法運作。 (CQ-4261144)

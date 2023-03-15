@@ -412,7 +412,8 @@ NOTE to WRITER: Unfinished sentence above.
 
 **嘗試使用OpenOffice作為備援轉換器**:當選取此選項，且使用Microsoft Excel的轉換失敗或達到指定的逾時限制時，PDF產生器會使用OpenOffice來嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的超時限制，則會將異常寫入日誌檔案。
 
-**副檔名**:指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `xls,xlsx`。請勿在擴充功能之前加上句號或之間加上空格。
+**副檔名**:指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `xls,xlsx`。
+請勿在擴充功能之前加上句號或之間加上空格。
 
 **建立PDF/A-1a相容檔案**:強制使用PDF/A-1b:2005RGBAdobe PDF設定。
 
@@ -474,7 +475,8 @@ NOTE to WRITER: Unfinished sentence above.
 
 這些選項決定如何轉換Microsoft專案檔案。 如需存取這些選項的指示，請參閱 [建立或編輯檔案類型設定](#create-or-edit-file-type-settings).
 
-1. **[!UICONTROL 副檔名：]** 指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `mpp`。請勿在擴充功能之前加上句號或之間加上空格。
+1. **[!UICONTROL 副檔名：]** 指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `mpp`。
+請勿在擴充功能之前加上句號或之間加上空格。
 
 1. **[!UICONTROL 轉換文檔資訊]**:從源檔案的「屬性」對話框添加文檔資訊，包括標題、主題、作者、關鍵字、經理、公司、類別和注釋。 預設會選取此選項。
 1. **[!UICONTROL 將源檔案附加到Adobe PDF]**:將源檔案作為附件添加到PDF檔案中。
@@ -487,7 +489,8 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 嘗試使用OpenOffice作為備援轉換器]**:當選取此選項，且使用Microsoft Word的轉換失敗或達到指定的逾時限制時，PDF產生器會使用OpenOffice來嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的超時限制，則會將異常寫入日誌檔案。
 
-**[!UICONTROL 副檔名]**:指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `doc,docx,rtf,txt`。請勿在擴充功能之前加上句號或之間加上空格。
+**[!UICONTROL 副檔名]**:指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `doc,docx,rtf,txt`。
+請勿在擴充功能之前加上句號或之間加上空格。
 
 **[!UICONTROL 轉換文檔資訊]**:從源檔案的「屬性」對話框添加文檔資訊，包括標題、主題、作者、關鍵字、經理、公司、類別和注釋。 預設會選取此選項。
 
@@ -545,13 +548,15 @@ styleName1=level1[,styleName2=level2...]
 
 這些選項決定如何轉換Microsoft Publisher檔案。 如需存取這些選項的指示，請參閱 [建立或編輯檔案類型設定](#create-or-edit-file-type-settings).
 
-**[!UICONTROL 副檔名]**:指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `pub`。請勿在擴充功能之前加上句號或之間加上空格。
+**[!UICONTROL 副檔名]**:指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `pub`。
+請勿在擴充功能之前加上句號或之間加上空格。
 
 ## AutoCAD設定（僅限Windows） {#autocad-settings-windows-only}
 
 這些選項決定了AutoCAD檔案的轉換方式。 如需存取這些選項的指示，請參閱 [建立或編輯檔案類型設定](/help/forms/using/admin-help/configuring-file-type-settings2.md#create-or-edit-file-type-settings).
 
-**[!UICONTROL 副檔名]**:指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `dwg`。請勿在擴充功能之前加上句號或之間加上空格。
+**[!UICONTROL 副檔名]**:指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `dwg`。
+請勿在擴充功能之前加上句號或之間加上空格。
 
 **[!UICONTROL 轉換文檔資訊]**:從源檔案的「屬性」對話框添加文檔資訊，包括標題、主題、作者、關鍵字、經理、公司、類別和注釋。 預設會選取此選項。
 
@@ -587,7 +592,8 @@ styleName1=level1[,styleName2=level2...]
 
 **嘗試將PDFMaker作為後備轉換器**:當選擇此選項，且使用OpenOffice的轉換失敗或達到指定的超時限制時，PDF生成器將嘗試使用PDFMaker進行轉換。 如果使用PDFMaker的轉換失敗或達到指定的逾時限制，則會將例外寫入日誌檔案。
 
-**副檔名**:指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `odt,odp,ods,odg,odf,sxw,sxi,sxd`。請勿在擴充功能之前加上句號或之間加上空格。
+**副檔名**:指定此應用程式接受的檔案類型的副檔名（以逗號分隔）。 預設為 `odt,odp,ods,odg,odf,sxw,sxi,sxd`。
+請勿在擴充功能之前加上句號或之間加上空格。
 
 **範圍**:轉換所有頁面，或指定特定頁面或頁面範圍。 如果未定義頁面範圍，則會轉換所有頁面。 若要匯出一系列頁面，請使用3-6格式。 若要匯出單頁，請使用7;9;11格式。 您可以使用3-6;8;10;12等格式，匯出頁面範圍和單頁的組合。
 

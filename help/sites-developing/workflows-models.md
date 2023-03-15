@@ -52,7 +52,7 @@ ht-degree: 1%
 >
 >`/var/workflow/models`
 >
->例如， `/var/workflow/models/prototypes`
+>例如, `/var/workflow/models/prototypes`
 >
 >然後，此資料夾可用於 [管理對該資料夾中模型的訪問](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that).
 
@@ -115,7 +115,7 @@ ht-degree: 1%
 若要將步驟新增至工作流程模型：
 
 1. 開啟現有的工作流模型進行編輯。 從 **工作流程模型** 控制台，選擇所需的模型，然後 **編輯**.
-1. 開啟步驟瀏覽器；使用 **切換側面板**，位於頂端工具列的最左側。 您可以在此：
+1. 開啟步驟瀏覽器；使用 **切換側面板**，位於頂端工具列的最左側。 您可以在這裡：
 
    * **篩選** ，以了解特定步驟。
    * 使用下拉式選取器，將選取範圍限制為特定的一組步驟。
@@ -247,7 +247,7 @@ ht-degree: 1%
 
    可以將一個階段分配給多個步驟。 例如：
 
-   | **步驟** | **分段** |
+   | **步驟** | **測試** |
    |---|---|
    | 步驟 1 | 建立 |
    | 步驟 2 | 建立 |

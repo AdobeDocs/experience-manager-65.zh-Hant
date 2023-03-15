@@ -1,5 +1,5 @@
 ---
-title: 使用規則集來轉換URL
+title: 使用規則集轉換 URL
 description: 您可以在Dynamic Media中部署規則集以轉換URL。 規則集是以指令碼語言（如JavaScript）編寫的一組指令，這些指令可評估XML資料，並在資料滿足某些條件時採取某些操作。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS

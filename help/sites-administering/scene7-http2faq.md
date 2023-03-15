@@ -9,7 +9,7 @@ exl-id: 2428914c-5fb0-439e-a1ef-8ee30b890f58
 source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
 workflow-type: tm+mt
 source-wordcount: '774'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe自己的測試得出以下結果：
 
 ## 為我的Dynamic Media帳戶啟用HTTP/2的程式為何？ {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
-1. [使用Admin Console建立支援案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) 請求切換到HTTP/2;不會自動為您完成。
+1. [使用Admin Console建立支援案例](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) 請求切換到HTTP/2;不會自動為您完成。
 1. 在您的支援案例中提供下列資訊：
 
    * 主要聯繫人姓名、電子郵件和電話號碼。

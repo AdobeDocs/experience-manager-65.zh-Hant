@@ -13,7 +13,7 @@ exl-id: a8d50c09-72d0-406e-874e-50a985227a56
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2325'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -69,7 +69,7 @@ AEM提供主控台，可管理元件UI中使用的各種文字翻譯。 此控�
 
    ` /apps/<projectName>/i18n`
 
-   例如， `/apps/myProject/i18n`
+   例如, `/apps/myProject/i18n`
 
 1. 在此根下添加所需的語言結構。 例如：
 

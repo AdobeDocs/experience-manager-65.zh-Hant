@@ -1,13 +1,13 @@
 ---
 title: 安裝最新的6.5.15.0 Service Pack後，CRX/套件組合和啟動頁面服務無法使用的錯誤
 description: 安裝最新的6.5.15.0 Service Pack後，CRX/套件組合和啟動頁面服務無法使用的錯誤
-source-git-commit: 974796a6b9e921f8c2f40d72a4764eb9f4d8b92b
+exl-id: dfe015a3-3a24-41c5-aede-8e086851d62b
+source-git-commit: e961f0c7107b4eacb0d5e50565cb64f5fa30e265
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 2%
 
 ---
-
 
 # 安裝AEM(6.5.15.0)Service Pack後，服務無法使用錯誤 {#steps-to-resolve-error-after-installing-service-pack}
 

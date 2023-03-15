@@ -22,7 +22,7 @@ ht-degree: 1%
 
 本節說明如何使用Oak-run工具為存放庫重新編列索引 **befor** 執行升級，從而減少實際升級期間的停機時間。 所呈現的步驟可套用至 [盧塞內](https://jackrabbit.apache.org/oak/docs/query/lucene.html) AEM 6.4及更新版本的索引。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 新版AEM會在功能集展開時對Oak索引定義進行變更。 升級AEM執行個體時，Oak索引的變更會強制重新索引。 由於資產中的文字（例如pdf檔案中的文字）會擷取並編列索引，因此重新索引資產部署的成本很高。 有了MongoMK儲存庫，資料會透過網路保存，進一步增加重新索引所需的時間。
 

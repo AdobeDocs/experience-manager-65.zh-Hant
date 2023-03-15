@@ -103,7 +103,7 @@ Dynamic Media的主要改善如下：
 * 當使用者在開啟適用性表單後嘗試開啟導覽畫面時，畫面會因NullPointer例外狀況而失敗：`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:”` (NPR-39654)
 * 在Windows中，當使用者啟用高對比黑色設定時，當HTML5 Forms內容在瀏覽器中以HTML預覽呈現時變得不清楚。 (NPR-39018)
 
-## Integrations {#integrations-6516}
+## 整合 {#integrations-6516}
 
 * 從Experience Manager6.5中移除AdobeSearch&amp;Promote程式碼和相依性。AdobeSearch&amp;Promote於2022年9月終止服務。 請參閱 [AdobeSearch&amp;Promote服務終止公告](https://experienceleague.adobe.com/docs/discontinued/using/search-promote.html?lang=en). (NPR-39706)
 
@@ -256,7 +256,7 @@ UberJar [!DNL Experience Manager] 6.5.16.0可在 [Maven Central存放庫](https:
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
-| Integrations | 此 **[!UICONTROL AEM雲端服務選擇加入]** 螢幕已過時，因為 [!DNL Experience Manager] 和 [!DNL Adobe Target] 整合已於 [!DNL Experience Manager] 6.5.整合支援Adobe Target Standard API。 API使用Adobe IMS驗證，並 [!DNL Adobe I/O Runtime]. 它支援AdobeLaunch在儀器方面日益發揮的作用 [!DNL Experience Manager] 分析和個人化的頁面，選擇加入精靈的功能與您無關。 | 設定系統連線、Adobe IMS驗證，以及 [!DNL Adobe I/O Runtime] 透過個別 [!DNL Experience Manager] 雲端服務。 |
+| 整合 | 此 **[!UICONTROL AEM雲端服務選擇加入]** 螢幕已過時，因為 [!DNL Experience Manager] 和 [!DNL Adobe Target] 整合已於 [!DNL Experience Manager] 6.5.整合支援Adobe Target Standard API。 API使用Adobe IMS驗證，並 [!DNL Adobe I/O Runtime]. 它支援AdobeLaunch在儀器方面日益發揮的作用 [!DNL Experience Manager] 分析和個人化的頁面，選擇加入精靈的功能與您無關。 | 設定系統連線、Adobe IMS驗證，以及 [!DNL Adobe I/O Runtime] 透過個別 [!DNL Experience Manager] 雲端服務。 |
 | 連接器 | Microsoft® SharePoint 2010和Microsoft® SharePoint 2013的AdobeJCR Connector已於 [!DNL Experience Manager] 6.5。 | N/A |
 
 ## 已知問題 {#known-issues}

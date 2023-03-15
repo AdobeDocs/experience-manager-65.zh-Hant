@@ -156,7 +156,7 @@ ht-degree: 2%
 
 1. 選取元件的 `jcr:content` 節點
 
-   例如， `/content/community-components/en/comments/jcr:content`
+   例如, `/content/community-components/en/comments/jcr:content`
 
 1. 新增屬性
 
@@ -171,9 +171,9 @@ ht-degree: 2%
 
 1. 請注意，範本、CSS和資料現在有3個索引標籤。
 
-![社群 — 元件5](assets/community-component5.png)
+![community-component5](assets/community-component5.png)
 
-![社群元件6](assets/community-component6.png)
+![community-component6](assets/community-component6.png)
 
 ### 範本標籤 {#templates-tab}
 

@@ -1,5 +1,5 @@
 ---
-title: 了解區段
+title: 了解分段
 seo-title: Understanding Segmentation
 description: 區段是建立促銷活動時的主要考量。 在大多數情況下，您在開始行銷活動之前必須先定義區段。
 seo-description: Segmentation is a key consideration when creating a campaign. In most cases, you will need to have segments already defined before starting your campaign.
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ---
 
-# 了解區段{#understanding-segmentation}
+# 了解分段{#understanding-segmentation}
 
 區段是建立促銷活動時的主要考量。 在大多數情況下，您在開始行銷活動之前必須先定義區段。
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 **區段** 區段是共用特定特徵的訪客集合。 區段應具有獨特性，且與其他區段之間應有最低重疊。
 
-**行為特徵** 行為特徵是指與訪客在網站上的行為相關的特徵。 這些包括：
+**行為特徵** 行為特徵是指與訪客在網站上的行為相關的特徵。 這些類別包括：
 
 * 您網站的興趣；包括瀏覽的頁面和購買的產品。
 * 引用網站的興趣；包括搜索詞，或點擊廣告。

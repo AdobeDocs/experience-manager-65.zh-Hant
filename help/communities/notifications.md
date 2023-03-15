@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # Communities通知 {#communities-notifications}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Communities提供通知區段，顯示已登入社群成員感興趣的事件。
 
@@ -51,7 +51,7 @@ As of Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepac
 
 未來的通道包括行動裝置和案頭裝置。
 
-### 需求 {#requirements}
+### 要求 {#requirements}
 
 **設定電子郵件**
 
@@ -114,13 +114,13 @@ A [嚮導建立的社群站點](/help/communities/sites-console.md) 現在包含
 
 造訪已發佈的網站時，請選取 `Notifications` 連結將顯示成員的所有通知。
 
-![通知4](assets/notifications4.png)
+![notifications4](assets/notifications4.png)
 
 ### 電子郵件通知 {#email-notifications}
 
 啟用電子郵件通道時，成員會收到包含指向Web上內容的連結的電子郵件。
 
-![通知5](assets/notifications5.png)
+![notifications5](assets/notifications5.png)
 
 ## 自訂電子郵件通知 {#customize-email-notifications}
 

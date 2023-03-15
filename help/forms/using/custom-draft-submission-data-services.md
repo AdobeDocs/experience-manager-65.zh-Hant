@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 自訂草稿和提交資料服務 {#customizing-draft-and-submission-data-services}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Forms可讓使用者將最適化表單儲存為草稿。 草稿功能可讓使用者選擇維護進行中表單。 然後，使用者可以隨時從任何裝置填妥並提交表單。
 

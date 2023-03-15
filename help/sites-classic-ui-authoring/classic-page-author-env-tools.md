@@ -14,7 +14,7 @@ exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
 source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '899'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -169,10 +169,10 @@ AEM可讓您檢視哪些頁面連結至您目前正在使用的頁面。
 
 在某些情況下，可從Sidekick取得其他動作，包括：
 
-* [啟動](/help/sites-classic-ui-authoring/classic-launches.md)
-* [即時副本](/help/sites-administering/msm.md)
+* [Launch](/help/sites-classic-ui-authoring/classic-launches.md)
+* [Live Copy](/help/sites-administering/msm.md)
 
-* [Blueprint](/help/sites-administering/msm-best-practices.md)
+* [藍圖](/help/sites-administering/msm-best-practices.md)
 
 其他 [可在網站主控台中看到頁面間關係](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console).
 

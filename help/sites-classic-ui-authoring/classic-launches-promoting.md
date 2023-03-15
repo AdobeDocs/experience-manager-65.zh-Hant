@@ -1,5 +1,5 @@
 ---
-title: 提升啟動
+title: 提升 Launch
 seo-title: Promoting Launches
 description: 發佈前，您必須促銷啟動頁面，才能將內容移回來源（生產）。 啟動頁面升級時，來源頁面的對應頁面會取代為升級頁面的內容。
 seo-description: You need to promote launch pages to move the content back into the source (production) before publishing. When a launch page is promoted, the corresponding page of the source pages is replaced with the content of the promoted page.
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 ---
 
-# 提升啟動{#promoting-launches}
+# 提升 Launch{#promoting-launches}
 
 發佈前，您必須促銷啟動頁面，才能將內容移回來源（生產）。 啟動頁面升級時，來源頁面的對應頁面會取代為升級頁面的內容。 提升啟動頁面時，可使用下列選項：
 

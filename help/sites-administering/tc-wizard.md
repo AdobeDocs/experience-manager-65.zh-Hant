@@ -1,5 +1,5 @@
 ---
-title: 語言副本嚮導
+title: 語言複製精靈
 seo-title: Language Copy Wizard
 description: 了解如何在AEM中使用語言副本精靈。
 seo-description: Learn about using the Language Copy Wizard in AEM.
@@ -15,11 +15,11 @@ exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-# 語言副本嚮導{#language-copy-wizard}
+# 語言複製精靈{#language-copy-wizard}
 
 「語言副本」精靈是建立和檢測多語言內容結構的引導式體驗。 現在建立語言副本的方式簡單快捷。
 

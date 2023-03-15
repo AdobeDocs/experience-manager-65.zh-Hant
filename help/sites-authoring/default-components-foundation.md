@@ -65,7 +65,7 @@ ht-degree: 8%
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 。
 
 您可以定義包含標題和說明的連結。
 
@@ -606,7 +606,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
-### 引用 {#reference}
+### 參考 {#reference}
 
 >[!CAUTION]
 >
@@ -616,7 +616,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 * **段落引用**
 
-   * **引用**
+   * **參考**
 
       指定您要參考的頁面和段落（包括內容）的路徑。
 

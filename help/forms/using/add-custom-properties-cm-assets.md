@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # 新增自訂屬性至通信管理資產{#add-custom-properties-to-correspondence-management-assets}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 您可以自訂通信管理使用者介面，並向使用者提供量身打造的屬性和索引標籤集。 此自訂功能包括將自訂欄位/屬性和索引標籤新增至特定資產類型/信函，或所有資產類型和信函。
 

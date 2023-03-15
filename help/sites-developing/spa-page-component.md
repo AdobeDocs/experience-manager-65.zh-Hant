@@ -1,5 +1,5 @@
 ---
-title: SPA頁面元件
+title: SPA 頁面元件
 seo-title: SPA Page Component
 description: 在SPA中，頁面元件不提供其子元件的HTML元素，而是將此元素委派至SPA架構。 本檔案說明如何讓SPA的頁面元件獨一無二。
 seo-description: In an SPA the page component doesn't provide the HTML elements of its child components, but instead delegates this to the SPA framework. This document explains how this makes the page component of an SPA unique.
@@ -14,11 +14,11 @@ exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
 source-git-commit: 17c198c744111753ffffcc0758f98859524c964e
 workflow-type: tm+mt
 source-wordcount: '730'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 
-# SPA頁面元件{#spa-page-component}
+# SPA 頁面元件{#spa-page-component}
 
 在SPA中，頁面元件不提供其子元件的HTML元素，而是將此元素委派至SPA架構。 本檔案說明如何讓SPA的頁面元件獨一無二。
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件的HTML元素。 此操作已委派給SPA架構。 子元件的表示方式會以JSON資料結構（即模型）擷取。 接著會根據提供的JSON模型，將SPA元件新增至頁面。 因此，頁面元件初始主體組成與其預先呈現的HTML對應不同。
+SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件的HTML元素。 此操作委託給 SPA 框架。子元件的表示方式會以JSON資料結構（即模型）擷取。 接著會根據提供的JSON模型，將SPA元件新增至頁面。 因此，頁面元件初始主體組成與其預先呈現的HTML對應不同。
 
 ## 頁面模型管理 {#page-model-management}
 
@@ -41,11 +41,11 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 
 別忘了限制 `cq.authoring.pagemodel.messaging` 類別來識別頁面編輯器的內容。
 
-## 通信資料類型 {#communication-data-type}
+## 通訊資料類型 {#communication-data-type}
 
-通訊資料類型是使用在AEM Page元件內設定HTML元素， `data-cq-datatype` 屬性。 當通訊資料類型設為JSON時，GET要求會點擊元件的Sling模型端點。 在頁面編輯器中發生更新後，更新元件的JSON表示會傳送至頁面模型程式庫。 然後頁面模型程式庫會警告SPA有更新。
+通訊資料類型是使用在AEM Page元件內設定HTML元素， `data-cq-datatype` 屬性。 當通訊資料類型設為JSON時，GET要求會點擊元件的Sling模型端點。 在頁面編輯器中完成更新後，已更新元件的 JSON 表示將傳送到頁面模型庫。然後頁面模型程式庫會警告SPA有更新。
 
-**SPA頁面元件 —`body.html`**
+**SPA 頁面元件 -`body.html`**
 
 ```
 <div id="page"></div>
@@ -53,7 +53,7 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 
 除了非是避免延遲DOM產生的良好作法，SPA架構還需要在內文結尾新增指令碼。
 
-**SPA頁面元件 —`customfooterlibs.html`**
+**SPA 頁面元件 -`customfooterlibs.html`**
 
 ```
 <sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"></sly>
@@ -64,7 +64,7 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 
 描述SPA內容的元資源屬性：
 
-**SPA頁面元件 —`customheaderlibs.html`**
+**SPA 頁面元件 -`customheaderlibs.html`**
 
 ```
 <meta property="cq:datatype" data-sly-test="${wcmmode.edit || wcmmode.preview}" content="JSON"/>
@@ -91,9 +91,9 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 
 >[!CAUTION]
 >
->本檔案僅將We.Retail Journal應用程式用於示範用途。 它不應用於任何項目工作。
+>本檔案僅將We.Retail Journal應用程式用於示範用途。 它不應用於任何專案。
 >
->任何AEM專案皆應運用 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，可支援使用React或Angular的SPA專案，並運用SPA SDK。AEM上的所有SPA專案都應以SPA Starter Kit的Maven原型為基礎。
+>任何AEM專案皆應運用 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，可支援使用React或Angular的SPA專案，並運用SPA SDK。AEM上的所有SPA專案都應以SPA Starter Kit的Maven原型為基礎。
 
 ## 頁面編輯器覆蓋同步 {#page-editor-overlay-synchronization}
 

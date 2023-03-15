@@ -139,10 +139,10 @@ AEM透過Target Standard API與Adobe Target整合時，需要使用Adobe Develop
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-選擇 **檢視** （位於特定專案項目的右側），以顯示有關設定的詳細資訊。 這些包括：
+選擇 **檢視** （位於特定專案項目的右側），以顯示有關設定的詳細資訊。 這些類別包括：
 
 * 專案概述
-* 分析
+* Insights
 * 憑證
    * 服務帳戶(JWT)
       * 憑據詳細資訊
@@ -169,7 +169,7 @@ AEM透過Target Standard API與Adobe Target整合時，需要使用Adobe Develop
 
    ![](assets/integrate-target-io-10.png)
 
-1. 確認為 **建立**.
+1. 使用&#x200B;**建立**&#x200B;確認。
 
 1. 您的Adobe Target設定會顯示在AEM主控台中。
 
@@ -210,7 +210,7 @@ AEM透過Target Standard API與Adobe Target整合時，需要使用Adobe Develop
 
    您也可以選取所需的範本（如果有多個範本可用）。
 
-1. 確認為 **建立**.
+1. 使用&#x200B;**建立**&#x200B;確認。
 
    此 **編輯元件** 對話框將開啟。
 

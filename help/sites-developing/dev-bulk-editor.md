@@ -66,7 +66,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td> colsValue / cv<br /> </td>
-   <td> String[]</td>
+   <td> 字串[]</td>
    <td> 搜索的屬性（選中的colsSelection中的值顯示為複選框）</td>
   </tr>
   <tr>

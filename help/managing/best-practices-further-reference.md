@@ -35,7 +35,7 @@ ht-degree: 1%
 
 * [商務](/help/commerce/cif-classic/administering/ecommerce.md)
 * [畫面](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
-* [Assets](/help/assets/assets.md)
+* [資產](/help/assets/assets.md)
 * [標記](/help/sites-administering/tags.md)
 * [多網站管理與翻譯](/help/sites-administering/msm-and-translation.md)
 * [Forms](/help/forms/home.md)
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 此外，請檢查 [發行說明](/help/release-notes/release-notes.md)，以查看何時新增任何新功能。
 
-### Integrations {#integrations}
+### 整合 {#integrations}
 
 AEM可與其他Adobe產品及/或協力廠商服務整合。 這些功能可增加您可支配的功能。
 
@@ -64,7 +64,7 @@ AEM可與其他Adobe產品及/或協力廠商服務整合。 這些功能可增�
 
 ## 基本基本准則 {#basic-ground-rules}
 
-與任何項目一樣，盡快建立基本規則至關重要。 這些包括：
+與任何項目一樣，盡快建立基本規則至關重要。 這些類別包括：
 
 >[!NOTE]
 >
@@ -568,7 +568,7 @@ AEM可與其他Adobe產品及/或協力廠商服務整合。 這些功能可增�
  </tbody>
 </table>
 
-## 進一步閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
 此外，以下幾節特別感興趣：
 
@@ -576,7 +576,7 @@ AEM可與其他Adobe產品及/或協力廠商服務整合。 這些功能可增�
 * [技術需求](/help/sites-deploying/technical-requirements.md)
 * [監視和維護您的執行個體](/help/sites-deploying/monitoring-and-maintaining.md)
 
-### 最佳作法 {#best-practices}
+### 最佳做法 {#best-practices}
 
 Adobe針對所有階段和對象提供進一步的最佳實務：
 

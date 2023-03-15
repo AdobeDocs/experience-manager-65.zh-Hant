@@ -9,7 +9,7 @@ user-guide-description: 建立、管理、處理和分配數位資產。
 source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
 workflow-type: tm+mt
 source-wordcount: '681'
-ht-degree: 46%
+ht-degree: 48%
 
 ---
 
@@ -97,9 +97,9 @@ ht-degree: 46%
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
    + [中的內容片段支援 [!DNL Assets] HTTP API](assets-api-content-fragments.md)
    + [用於內容片段的 GraphQL API](content-fragments/graphql-api-content-fragments.md)
-   + [使用GraphiQL IDE](content-fragments/graphiql-ide.md)
+   + [使用 GraphiQL IDE](content-fragments/graphiql-ide.md)
    + [持續查詢](content-fragments/persisted-queries.md)
-   + [內容片段的遠端GraphQL查詢驗證](content-fragments/graphql-authentication-content-fragments.md)
+   + [針對內容片段之遠端 GraphQL 查詢的驗證](content-fragments/graphql-authentication-content-fragments.md)
    + [GraphQL API含有內容片段 — 範例內容與查詢](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [[!DNL Assets] 代理開發](proxy.md)
 + 管理資產 {#administer}

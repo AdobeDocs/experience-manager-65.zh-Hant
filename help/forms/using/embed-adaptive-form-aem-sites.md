@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 在AEM網站頁面中內嵌最適化表單或互動式通訊 {#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-page}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Forms可讓表單開發人員將最適化表單和互動式通訊流暢內嵌至AEM Sites頁面或AEM以外托管的網頁。 內嵌的最適化表單和互動式通訊功能完整，使用者無需離開頁面即可填寫及提交表單。 它可協助使用者停留在網頁上其他元素的內容中，並同時與表單或互動式通訊互動。
 

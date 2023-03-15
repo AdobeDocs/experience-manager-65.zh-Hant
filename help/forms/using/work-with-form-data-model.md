@@ -481,7 +481,7 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
    <td>Swagger和WSDL</td> 
   </tr> 
   <tr> 
-   <td>exclusiveMinum</td> 
+   <td>exclusiveMinimum</td> 
    <td>指定數值的下限。 指定為下限的最小值不得分配給輸入資料中的參數。</td> 
    <td>Swagger和WSDL</td> 
   </tr> 

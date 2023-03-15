@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # ConvertPDF Service {#convertpdf-service}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 「轉換PDF」服務將PDF文檔轉換為PostScript或影像檔案(JPEG、JPEG2000、PNG和TIFF)。 將PDF文檔轉換為PostScript對於在任何PostScript打印機上基於伺服器的無人值守打印非常有用。 將PDF文檔轉換為多頁TIFF檔案對於在不支援PDF文檔的內容管理系統中歸檔文檔非常實用。
 

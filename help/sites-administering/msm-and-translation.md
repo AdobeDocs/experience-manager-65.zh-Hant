@@ -13,7 +13,7 @@ exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '341'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 * Multi Site Manager(MSM)可讓您在多個位置中使用相同的網站內容，同時允許變數：
 
-   * [重複使用內容：多網站管理員和即時副本](/help/sites-administering/msm.md)
+   * [重複使用內容：多網站管理員和 Live Copy](/help/sites-administering/msm.md)
 
 * 翻譯可讓您自動翻譯頁面內容、資產和使用者產生的內容，以建立和維護多語言網站：
 
-   * [轉譯多語言網站的內容](/help/sites-administering/translation.md)
+   * [翻譯多語言網站的內容](/help/sites-administering/translation.md)
 
 * 這兩項功能可結合，以迎合同時兼顧的網站需求 [多國語和多語言](#multinational-and-multilingual-sites).
 

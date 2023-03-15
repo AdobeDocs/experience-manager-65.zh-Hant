@@ -82,7 +82,7 @@ ht-degree: 1%
 1. 建立 [監看資料夾](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) 並加以設定以使用批次API:
    1. 登入AEM Forms製作例項。
    1. 導覽至 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置監視資料夾]**. 點選 **[!UICONTROL 新增]**.
-   1. 指定 **[!UICONTROL 名稱]** 物理 **[!UICONTROL 路徑]** 的下限。 例如， `c:\batchprocessing`.
+   1. 指定 **[!UICONTROL 名稱]** 物理 **[!UICONTROL 路徑]** 的下限。 例如, `c:\batchprocessing`.
    1. 選取 **[!UICONTROL 服務]** 選項 **[!UICONTROL 處理檔案使用]** 欄位。
    1. 選取 **[!UICONTROL com.adobe.fd.ccm.m多頻道.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** 服務 **[!UICONTROL 服務名稱]** 欄位。
    1. 指定 **[!UICONTROL 輸出檔案模式]**. 例如，%F/ [圖樣](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) 指定「監看資料夾」可在「監看資料夾」的子資料夾\input資料夾中找到輸入檔案。
@@ -144,7 +144,7 @@ ht-degree: 1%
 1. 建立 [監看資料夾](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) 並加以設定，以使用批次API服務：
    1. 登入AEM Forms製作例項。
    1. 導覽至 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置監視資料夾]**. 點選 **[!UICONTROL 新增]**.
-   1. 指定 **[!UICONTROL 名稱]** 物理 **[!UICONTROL 路徑]** 的下限。 例如， `c:\batchprocessing`.
+   1. 指定 **[!UICONTROL 名稱]** 物理 **[!UICONTROL 路徑]** 的下限。 例如, `c:\batchprocessing`.
    1. 選取 **[!UICONTROL 服務]** 選項 **[!UICONTROL 處理檔案使用]** 欄位。
    1. 選取 **[!UICONTROL com.adobe.fd.ccm.m多頻道.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** 服務 **[!UICONTROL 服務名稱]** 欄位。
    1. 指定 **[!UICONTROL 輸出檔案模式]**. 例如，%F/ [圖樣](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) 指定「監看資料夾」可在「監看資料夾」的子資料夾\input資料夾中找到輸入檔案。

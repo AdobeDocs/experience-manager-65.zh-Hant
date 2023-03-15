@@ -10,7 +10,7 @@ exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
 source-git-commit: 9ad531738ac5e3c9d888f685b47c8b322712a89e
 workflow-type: tm+mt
 source-wordcount: '2778'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -129,7 +129,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->此 [內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 現在建議使用。 請參閱 [開發核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html) 以取得更多詳細資訊。
+>此 [內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 現在建議使用。 請參閱 [開發核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hant) 以取得更多詳細資訊。
 
 可從AEM頁面參照內容片段，如同任何其他資產類型。 AEM提供 [**內容片段** 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) - a [可讓您在頁面上包含內容片段的元件](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). 您也可以延伸，這 **內容片段** 核心元件。
 
@@ -414,7 +414,7 @@ ht-degree: 1%
 
 當使用者在其中一個編輯器頁面中開啟內容片段時，就會啟動編輯工作階段。 當使用者借由選取任一選項離開編輯器時，編輯工作階段就會完成 **儲存** 或 **取消**.
 
-### 需求 {#requirements}
+### 要求 {#requirements}
 
 控制編輯工作階段的需求為：
 

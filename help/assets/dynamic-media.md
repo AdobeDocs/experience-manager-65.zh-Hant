@@ -1,5 +1,5 @@
 ---
-title: 使用Dynamic Media
+title: 使用 Dynamic Media
 description: 了解如何使用Dynamic Media來傳送資產，供網站、行動裝置和社交網站使用。
 uuid: 4dc0f436-d20e-4e8b-aeff-5515380fa44d
 contentOwner: Rick Brough
@@ -13,7 +13,7 @@ feature: Collaboration,Asset Management
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '419'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
@@ -35,16 +35,16 @@ Dynamic Media可讓您在發佈資產之前先管理資產。 如何使用一般
 
 * [輪播橫幅](carousel-banners.md)
 * [影像集](image-sets.md)
-* [互動影像](interactive-images.md)
-* [互動影片](interactive-videos.md)
+* [互動式影像](interactive-images.md)
+* [互動式影片](interactive-videos.md)
 * [混合媒體集](mixed-media-sets.md)
 * [全景影像](panoramic-images.md)
 
 * [迴轉集](spin-sets.md)
 * [影片](video.md)
-* [傳送Dynamic Media資產](delivering-dynamic-media-assets.md)
+* [傳遞 Dynamic Media 資產](delivering-dynamic-media-assets.md)
 * [管理資產](managing-assets.md)
-* [使用Quickview建立自訂快顯視窗](custom-pop-ups.md)
+* [使用 Quickview 建立自訂快顯視窗](custom-pop-ups.md)
 
 另請參閱 [設定Dynamic Media](administering-dynamic-media.md).
 

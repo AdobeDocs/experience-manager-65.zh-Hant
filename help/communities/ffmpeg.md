@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 適用於社群的FFmpeg {#ffmpeg-for-communities}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 FFmpeg是轉換和串流音訊和視訊的解決方案，安裝後用於適當轉碼 [影片資產](../../help/sites-authoring/default-components-foundation.md#video) 以及AEM Communities啟用功能。
 
@@ -41,7 +41,7 @@ FFmpeg應安裝在托管AEM的伺服器上 *作者* 例項。
 
    您應該可以從系統中的任何目錄運行FFmpeg。
 
-   * 例如， `ffmpeg -version`.
+   * 例如, `ffmpeg -version`.
 
 ## 配置FFmpeg轉碼服務 {#configure-ffmpeg-transcoding-service}
 

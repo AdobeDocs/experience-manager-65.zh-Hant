@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 在AEM Forms中取得XDP和PDF檔案{#getting-xdp-and-pdf-documents-in-aem-forms}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 您可以上傳至AEM Forms，將表單從本機檔案系統匯入CRX存放庫。 下列資產類型支援上傳操作：
 

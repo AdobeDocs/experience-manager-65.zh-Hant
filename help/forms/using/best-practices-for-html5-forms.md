@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # HTML5表單的最佳實務{#best-practices-for-html-forms}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Forms有一個名為「HTML5表單」的元件。 有助於以HTML5格式轉譯現有XFA型PDF forms（XDP檔案）。 本檔案提供准則和建議，以縮短載入時間並改善行動裝置上HTML5表單的效能。
 

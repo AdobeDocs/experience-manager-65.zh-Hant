@@ -81,7 +81,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -104,7 +104,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -140,7 +140,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -163,7 +163,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -196,7 +196,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -215,11 +215,11 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>重組指導</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -252,7 +252,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -285,7 +285,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -318,7 +318,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>

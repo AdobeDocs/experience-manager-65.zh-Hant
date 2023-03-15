@@ -13,7 +13,7 @@ exl-id: 65f5d5e1-ac11-4a3c-8a51-ce06a741c264
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
 source-wordcount: '626'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 隱藏條件可用來判斷元件資源是否已呈現。 範本作者設定核心元件時即為此範例 [清單元件](https://helpx.adobe.com/experience-manager/core-components/using/list.html) 在 [範本編輯器](/help/sites-authoring/templates.md) 並決定停用根據子頁面建立清單的選項。 在設計對話框中禁用此選項會設定一個屬性，以便在呈現清單元件時計算隱藏條件，並且不顯示顯示子頁的選項。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 對話可能會變得非常複雜，用戶可能只使用一小部分可供選擇的選項。 這可能導致使用者的使用者介面體驗過量。
 

@@ -1,19 +1,19 @@
 ---
 sub-product: AEM Content and Commerce
-user-guide-title: AEM 內容與商務
+user-guide-title: AEM Content and Commerce
 breadcrumb-title: Commerce 指南
 user-guide-description: 了解如何使用及管理 AEM 內容與商務。
 source-git-commit: 0ae78938641c383a65462096235e3b62d6b67e23
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 68%
+ht-degree: 69%
 
 ---
 
 
 # 商務 {#commerce}
 
-+ [AEM 內容與商務](/help/commerce/home.md)
++ [AEM Content and Commerce](/help/commerce/home.md)
 + [AEM內容與商務的重大變更](cif/changes.md)
 + [簡介和概觀](cif/introduction.md)
 + 整合 {#integrations}
@@ -46,7 +46,7 @@ ht-degree: 68%
    + [2019](cif/release-notes/release-notes-2019.md)
 + [常見問題集](cif/faq.md)
 + AEM CIF Classic {#classic}
-   + [概覽](/help/commerce/cif-classic/home.md)
+   + [概觀](/help/commerce/cif-classic/home.md)
    + 部署 {#deploying}
       + [電子商務概述](/help/commerce/cif-classic/deploying/ecommerce.md)
       + [SAPCommerce Cloud](/help/commerce/cif-classic/deploying/sap-commerce-cloud.md)

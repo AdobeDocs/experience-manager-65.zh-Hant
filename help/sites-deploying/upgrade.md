@@ -25,7 +25,7 @@ ht-degree: 1%
 * [使用模式檢測器評估升級複雜性](/help/sites-deploying/pattern-detector.md)
 * [AEM 6.5的向後相容性](/help/sites-deploying/backward-compatibility.md)
 
-<!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
+   <!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 * [升級程式](/help/sites-deploying/upgrade-procedure.md)
 * [升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md)
 * [升級前維護任務](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)

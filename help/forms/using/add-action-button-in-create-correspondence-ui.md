@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 在建立通信UI中新增自訂動作按鈕 {#add-custom-action-button-in-create-correspondence-ui}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 通信管理解決方案可讓您將自訂動作新增至「建立通信」使用者介面。
 

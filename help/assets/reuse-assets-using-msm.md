@@ -1,5 +1,5 @@
 ---
-title: 使用MSM重複使用資產
+title: 使用 MSM 重複使用資產
 description: 在衍生自父資產並連結至父資產的多個頁面/資料夾中使用資產。 資產會與主要副本保持同步，只要按幾下，就會從父資產接收更新。
 contentOwner: AG
 mini-toc-levels: 1

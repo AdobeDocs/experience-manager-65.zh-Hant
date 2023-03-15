@@ -13,7 +13,7 @@ exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
 source-git-commit: d2661ee6614261179b5e8d2d9ffb7c240ce676dc
 workflow-type: tm+mt
 source-wordcount: '7665'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -902,7 +902,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
  <thead> 
   <tr> 
    <th><p>用途</p> </th> 
-   <th><p>埠</p> </th> 
+   <th><p>連接埠</p> </th> 
   </tr> 
  </thead> 
  <tbody>
@@ -923,7 +923,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
  <thead> 
   <tr> 
    <th><p>用途</p> </th> 
-   <th><p>埠</p> </th> 
+   <th><p>連接埠</p> </th> 
   </tr> 
  </thead> 
  <tbody>

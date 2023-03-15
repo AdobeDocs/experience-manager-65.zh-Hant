@@ -313,7 +313,7 @@ ht-degree: 0%
 
 1. 按一下「儲存」。
 
-![發佈例項](/help/forms/using/assets/correspondencemanagement.png)
+![發佈執行個體](/help/forms/using/assets/correspondencemanagement.png)
 
 開啟信函例項的儲存時，您可以選擇要儲存信函例項的位置。 儲存字母例項有兩個選項：本地保存或遠程保存。
 

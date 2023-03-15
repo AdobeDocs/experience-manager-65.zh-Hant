@@ -120,7 +120,7 @@ HTTP APIPOST端點是透過實作 `SlingPostOperation` 介面（包） `org.apac
 
 范常式式碼可在 [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) 存放庫。 搜尋以下項目中的其中一個 `aem-communities` 或 `aem-scf`.
 
-## 最佳作法 {#best-practices}
+## 最佳做法 {#best-practices}
 
 檢視 [編碼准則](code-guide.md) 區段，了解AEM Communities開發人員的各種編碼准則和最佳實務。
 

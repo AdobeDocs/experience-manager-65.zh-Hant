@@ -11,11 +11,11 @@ exl-id: b325fc82-01e3-4122-8a86-ed605b135b01
 source-git-commit: 7d0dd5d96ef0174ce2a99c11be83ce2fbabdcb65
 workflow-type: tm+mt
 source-wordcount: '83'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
-# 與Adobe學習管理員整合{#integrating-with-adobe-learning}
+# 與 Adobe Learning Manager 整合{#integrating-with-adobe-learning}
 
 Adobe學習管理器(ALM)與Adobe Experience Manager(AEM)網站整合。 這可讓您為Adobe學習管理員建立自己的網站和回應式行動介面，且編碼工作量最小。 透過這項整合，您可以為使用者建立自訂的學習體驗。
 

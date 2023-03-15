@@ -14,7 +14,7 @@ exl-id: 966c3554-25df-4467-866e-11c43cc15b58
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2358'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -33,7 +33,7 @@ DocConverter服務可將PDF文檔轉換為PDA/A文檔。 您可以使用此服�
 
 ## 將文檔轉換為PDF/A文檔 {#converting-documents-to-pdf-a-documents}
 
-可以使用DocConverter服務將PDF文檔轉換為PDF/文檔。 由於PDF/A是用於長期保存文檔內容的存檔格式，因此所有字型都被嵌入並且檔案被解壓縮。 因此，PDF/A文檔通常比標準PDF文檔大。 此外，PDF/檔案不包含音訊和視訊內容。 將PDF文檔轉換為PDF/A文檔之前，請確保PDF文檔不是PDF/A文檔。
+可以使用DocConverter服務將PDF文檔轉換為PDF/文檔。 由於PDF/A是用於長期保存文檔內容的存檔格式，因此所有字型都被嵌入並且檔案被解壓縮。 因此，PDF/A 文件通常比標準 PDF 文件大。此外，PDF/A 文件不包含音訊和視訊內容。將PDF文檔轉換為PDF/A文檔之前，請確保PDF文檔不是PDF/A文檔。
 
 PDF/A-1規範由兩個符合級別組成，即A和B。這兩個級別之間的主要區別在於邏輯結構（可訪問性）支援，這對於符合級別B不是必需的。無論符合級別如何，PDF/A-1都規定所有字型都嵌入在生成的PDF/A文檔中。 目前驗證（和轉換）僅支援PDF/A-1b。
 

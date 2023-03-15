@@ -13,7 +13,7 @@ exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '418'
-ht-degree: 3%
+ht-degree: 10%
 
 ---
 
@@ -61,8 +61,8 @@ ht-degree: 3%
 
 1. 新增屬性至 `googleanalyticspage`:
 
-   * **名稱：** `cq:defaultView`
-   * **值：** `html`
+   * **名稱:** `cq:defaultView`
+   * **值:** `html`
 
 1. 建立名為 `content.jsp` 在 `/apps/acs/analytics/components/googleanalyticspage`，包含下列內容：
 

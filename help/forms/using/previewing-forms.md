@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # 預覽表單 {#previewing-a-form}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在AEM Forms中，您可以預覽存放庫中顯示的表單和檔案。 預覽有助於確切了解表單發佈給使用者時的外觀和行為。
 

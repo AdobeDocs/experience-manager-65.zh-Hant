@@ -209,7 +209,7 @@ Forms服務會傳回下列值，指出其是否已完成資料處理：
 1. 擷取表單資料
 
    * 若要擷取張貼至Java Servlet的表單資料，請建立 `com.adobe.idp.Document` 對象，使用其建構子並調用 `javax.servlet.http.HttpServletResponse` 物件 `getInputStream` 方法。
-   * 建立 `RenderOptionsSpec` 物件，使用其建構子。 調用 `RenderOptionsSpec` 物件 `setLocale` 方法，並傳遞指定區域設定值的字串值。
+   * 建立 `RenderOptionsSpec` 物件，使用其建構子。 調用 `RenderOptionsSpec` 物件 `setLocale` 方法，並傳遞指定區域設定的字串值。
 
    >[!NOTE]
    >
@@ -219,7 +219,7 @@ Forms服務會傳回下列值，指出其是否已完成資料處理：
 
       * 此 `com.adobe.idp.Document` 包含表單資料的物件。
       * 一個字串值，它指定包括所有相關HTTP標題的環境變數。 指定要處理的內容類型。 要處理XML資料，請為此參數指定以下字串值： `CONTENT_TYPE=text/xml`. 若要處理PDF資料，請為此參數指定下列字串值： `CONTENT_TYPE=application/pdf`.
-      * 指定 `HTTP_USER_AGENT` 標題值，例如。 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. 此參數值為選用值。
+      * 指定 `HTTP_USER_AGENT` 標題值，例如。 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。此參數值為選用值。
       * A `RenderOptionsSpec` 儲存運行時選項的對象。
 
       此 `processFormSubmission` 方法傳回 `FormsResult` 包含表單提交結果的物件。

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 代理UI允許代理準備並將互動式通信發送到後續進程。 代理程式會根據允許進行所需的修改，並將互動式通訊提交至後置程式，例如電子郵件或列印。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 建立互動式通信後，代理可以在代理UI中開啟互動式通信，並通過輸入資料和管理內容和附件準備特定於收件人的副本。 最後，代理可將互動式通訊提交至後續程式。
 
@@ -320,7 +320,7 @@ public class CCRDraftService implements CCRDocumentInstanceService {
 <table> 
  <tbody>
  <tr>
-  <td><p><strong>作業</strong></p></td>
+  <td><p><strong>操作</strong></p></td>
   <td><p><strong>資料庫服務示例</strong></p></td> 
    </tr>
   <tr>

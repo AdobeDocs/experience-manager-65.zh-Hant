@@ -58,8 +58,8 @@ Imaging Condricing Library提供CMYK支援和完整Alpha支援，但CMYK -Alpha�
 
 * `X`:類似 [!DNL Experience Manager]. 例如 — 調整大小319。
 * `WxH`:外觀比例沒有維護，例如 `-resize 319x319`.
-* `Wx`:固定寬度並計算保持長寬比的高度。 例如 `-resize 319x`.
-* `xH`:固定高度並計算保持外觀比例的寬度。 例如 `-resize x319`.
+* `Wx`:固定寬度並計算保持長寬比的高度。 例如 `-resize 319x`。
+* `xH`:固定高度並計算保持外觀比例的寬度。 例如 `-resize x319`。
 
 ```shell
  -AllowUpsampling (Resizes smaller images)

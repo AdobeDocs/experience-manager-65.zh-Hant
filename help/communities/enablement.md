@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 配置啟用功能 {#configuring-enablement-features}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 啟用功能可讓您建立 [啟用社群](overview.md#enablement-community).
 

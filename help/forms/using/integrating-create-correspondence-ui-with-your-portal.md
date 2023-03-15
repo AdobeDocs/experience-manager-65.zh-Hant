@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # 將建立通信UI與您的自訂入口網站整合{#integrating-create-correspondence-ui-with-your-custom-portal}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 本文詳細說明如何將建立通信解決方案與您的環境整合。
 

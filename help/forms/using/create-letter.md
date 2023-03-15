@@ -383,7 +383,7 @@ ht-degree: 2%
    <td>是</td> 
    <td>是</td> 
    <td>N/A</td> 
-   <td>不適用</td> 
+   <td>N/A</td> 
   </tr> 
   <tr> 
    <td><strong>次</strong></td> 
@@ -392,8 +392,8 @@ ht-degree: 2%
    <td>是</td> 
    <td>是</td> 
    <td>是</td> 
-   <td>不適用</td> 
-   <td>不適用</td> 
+   <td>N/A</td> 
+   <td>N/A</td> 
   </tr> 
   <tr> 
    <td><strong>日期時間</strong></td> 
@@ -402,8 +402,8 @@ ht-degree: 2%
    <td>是</td> 
    <td>是</td> 
    <td>是</td> 
-   <td>不適用</td> 
-   <td>不適用</td> 
+   <td>N/A</td> 
+   <td>N/A</td> 
   </tr> 
   <tr> 
    <td><strong>整數</strong></td> 
@@ -412,8 +412,8 @@ ht-degree: 2%
    <td>是</td> 
    <td>是</td> 
    <td>是<br /> </td> 
-   <td>不適用</td> 
-   <td>不適用</td> 
+   <td>N/A</td> 
+   <td>N/A</td> 
   </tr> 
   <tr> 
    <td><strong>浮點</strong></td> 
@@ -422,7 +422,7 @@ ht-degree: 2%
    <td>是</td> 
    <td>是</td> 
    <td>是<br /> </td> 
-   <td>不適用</td> 
+   <td>N/A</td> 
    <td>N/A<br /> </td> 
   </tr> 
   <tr> 
@@ -432,8 +432,8 @@ ht-degree: 2%
    <td>是</td> 
    <td>是</td> 
    <td>是</td> 
-   <td>不適用</td> 
-   <td>不適用</td> 
+   <td>N/A</td> 
+   <td>N/A</td> 
   </tr> 
   <tr> 
    <td><strong>樸素</strong> <strong>文字</strong></td> 
@@ -442,8 +442,8 @@ ht-degree: 2%
    <td>是</td> 
    <td>是</td> 
    <td>是</td> 
-   <td>不適用</td> 
-   <td>不適用</td> 
+   <td>N/A</td> 
+   <td>N/A</td> 
   </tr> 
   <tr> 
    <td><strong>影像</strong></td> 
@@ -452,8 +452,8 @@ ht-degree: 2%
    <td>否</td> 
    <td>是</td> 
    <td>否</td> 
-   <td>不適用</td> 
-   <td>不適用</td> 
+   <td>N/A</td> 
+   <td>N/A</td> 
   </tr> 
   <tr> 
    <td><strong>簽名</strong></td> 
@@ -462,8 +462,8 @@ ht-degree: 2%
    <td>否<br /> </td> 
    <td>是</td> 
    <td>否</td> 
-   <td>不適用</td> 
-   <td>不適用<br /> </td> 
+   <td>N/A</td> 
+   <td>N/A<br /> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -107,7 +107,7 @@ A `WorkItem` 是通過 `Workflow` 例項 `WorkflowModel`. 它包含 `WorkflowDat
 可在工作流程例項上執行下列動作：
 
 * 終止
-* 擱置
+* 暫停
 * 繼續
 * 重新啟動
 

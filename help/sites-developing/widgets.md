@@ -328,7 +328,7 @@ where
 若要使用 **任意** 對話框：
 
 1. 取代 **動態對話方塊** 元件 **任意** 對話框：請依照 [範例2:單一面板對話方塊](#example-single-panel-dialog)
-1. 編輯元件：對話方塊顯示如下：
+1. Edit the component: the dialog displays as follows:
 
 ![screen_shot_2012-02-01at115300am](assets/screen_shot_2012-02-01at115300am.png)
 
@@ -340,8 +340,8 @@ where
 
 * 由節點定義(節點類型= `cq:Dialog`, xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
 * 顯示1個表格介面工具集(節點類型= `cq:Widget`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#textpanel)`)，具有1個面板(節點類型= `cq:Panel`)。
-* 此面板具有選取/核取方塊Widget(節點類型= `cq:Widget`, xtype = ` [selection](/help/sites-developing/xtypes.md#selection)`, type = ` [checkbox](/help/sites-developing/xtypes.md#checkbox)`)和可折疊的對話欄位集widget(節點類型= `cq:Widget`, xtype = ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)`)，預設為隱藏，包含2個文字欄位小工具(節點類型= `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)。
-* 由 `togglefields` 節點位於：
+* `cq:Widget`` [selection](/help/sites-developing/xtypes.md#selection)`` [checkbox](/help/sites-developing/xtypes.md#checkbox)``cq:Widget`` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)``cq:Widget`` [textfield](/help/sites-developing/xtypes.md#textfield)`
+* `togglefields`
    `/apps/extjstraining/components/dynamicdialogs/togglefields`
 * 會透過要求：
    `https://localhost:4502/apps/extjstraining/components/dynamicdialogs/togglefields.-1.json`
@@ -425,10 +425,10 @@ AEM隨附的現成可用Widget應涵蓋大部分使用案例。 不過，有時�
 
 自訂 **樹狀瀏覽** 基於介面工具集的對話框顯示一個窗口，其中包含一個包含自定義路徑瀏覽介面工具集的頁簽：按一下箭頭時，會向上開啟一個窗口，您可以在其中瀏覽層次並選擇項目。 然後，項目的路徑會新增至路徑欄位，並在對話方塊關閉時持續保存。
 
-自定義樹瀏覽對話框：
+The custom treebrowse dialog:
 
-* 由節點定義(節點類型= `cq:Dialog`, xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
-* 顯示1個表格介面工具集(節點類型= `cq:Widget`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`)包含面板(節點類型= `cq:Widget`, xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`)。
+* `cq:Dialog`` [dialog](/help/sites-developing/xtypes.md#dialog)`
+* `cq:Widget`` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)``cq:Widget`` [panel](/help/sites-developing/xtypes.md#panel)`
 * 面板具有自訂Widget(節點類型= `cq:Widget`, xtype = `ejstbrowse`)
 * 由 `treebrowse` 節點位於：
    `/apps/extjstraining/components/customwidgets/treebrowse`
@@ -499,11 +499,11 @@ RTE外掛程式：
 
 此 **RTF編輯器(RTE)外掛程式** 基於對話方塊的顯示如下：
 
-![screen_shot_2012-02-01at120254pm](assets/screen_shot_2012-02-01at120254pm.png)
+![](assets/screen_shot_2012-02-01at120254pm.png)
 
 >[!NOTE]
 >
->此範例僅顯示如何實作邏輯的用戶端部分：佔位符(*[文字]*)，則會在伺服器端明確剖析（例如在元件JSP中）。
+>*[]*
 
 ### 樹概述 {#tree-overview}
 
@@ -512,8 +512,8 @@ RTE外掛程式：
 若要包含 **樹概述** 元件至範例頁面：
 
 1. 新增 **4. 樹概述** 元件至範例頁面(從 **使用ExtJS Widget** 標籤 **Sidekick**.
-1. 元件隨即顯示：
-   * 標題，帶有文字
+1. The component displays:
+   * a title, with some text
    * a **屬性** 連結：按一下以顯示儲存庫中儲存的段落的屬性。 再按一下以隱藏屬性。
    * 浮動視窗，內含存放庫的樹狀表示，可展開。
 
@@ -592,7 +592,7 @@ RTE外掛程式：
 
 在其現成可用的版本中， **格線概述** 元件以表格格式顯示含靜態資料的視窗。 在此示例中，邏輯通過兩種方式嵌入到元件jsp中：
 
-* 一般邏輯定義於 &lt;script>&lt;/script> 標籤
+* the generic logic is defined between &lt;script>&lt;/script> tags
 * 特定邏輯可在單獨的.js檔案中使用，並在jsp中連結到。 This setup enables to easily switch between the two logic (static/dynamic) by commenting the desired &lt;script> tags.
 
 網格概述元件：
@@ -604,11 +604,11 @@ RTE外掛程式：
 元件jsp:
 
 * 從儲存庫中檢索寬度、高度和停靠屬性。
-* 顯示一些文本作為網格概述資料格式的簡介。
-* 參考定義GridPanel對象的Javascript代碼：
+* Displays some text as introduction to the grid overview data format.
+* References javascript code that defines the GridPanel object:
    `<script type="text/javascript" src="/apps/extjstraining/components/gridoverview/defaultgrid.js"></script>`
 
-   `defaultgrid.js` 將一些靜態資料定義為GridPanel對象的基礎。
+   `defaultgrid.js`
 * 在javascript標籤之間嵌入javascript代碼，該標籤定義使用GridPanel對象的窗口對象。
 * 定義於：
    `apps/extjstraining/components/gridoverview/content.jsp`

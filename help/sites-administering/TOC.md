@@ -11,7 +11,7 @@ role: Admin
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 27%
+ht-degree: 29%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 27%
 + Sites功能 {#introduction}
    + [網站管理](msm-and-translation.md)
    + [非同步作業](asynchronous-jobs.md)
-   + [重複使用內容：多網站管理員和即時副本](msm.md)
+   + [重複使用內容：多網站管理員和 Live Copy](msm.md)
    + [Live Copy 概觀主控台](msm-livecopy-overview.md)
    + [設定 Live Copy 同步](msm-sync.md)
    + [建立和同步 Live Copy](msm-livecopy.md)
-   + [MSM轉出衝突](msm-rollout-conflicts.md)
+   + [MSM 推出衝突](msm-rollout-conflicts.md)
    + [疑難排解MSM問題和常見問題集](troubleshoot-msm.md)
-   + [MSM 最佳實務](msm-best-practices.md)
+   + [MSM 最佳做法](msm-best-practices.md)
    + [翻譯多語言網站的內容](translation.md)
    + [管理翻譯專案](tc-manage.md)
    + [識別要翻譯的內容](tc-rules.md)
@@ -150,9 +150,9 @@ ht-degree: 27%
    + [電子郵件範本最佳作法](best-practices-for-email-templates.md)
    + [與 Livefyre 整合](livefyre.md)
 + 最佳作法 {#bestpractices}
-   + [最佳作法](administer-best-practices.md)
+   + [最佳做法](administer-best-practices.md)
    + [翻譯最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
-   + [MSM 最佳實務](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
+   + [MSM 最佳做法](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR整備](gdpr-compliance-sites.md)
    + [處理AEM Foundation的GDPR請求](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
    + [AEM商務 — GDPR整備](gdpr-compliance-commerce.md)

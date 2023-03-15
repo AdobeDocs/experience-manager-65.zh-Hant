@@ -151,7 +151,7 @@ ht-degree: 4%
 * [開發使用手冊](/help/sites-developing/home.md)
 * [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 SitesTutorials和影片](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
-* [開始開發 AEM Sites - WKND 教學課程](/help/sites-developing/getting-started.md)
+* [開發 AEM Sites 快速入門 - WKND 教學課程](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
 * [AEM 現代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 

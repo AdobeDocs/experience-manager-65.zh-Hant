@@ -103,7 +103,7 @@ AEM Forms應用程式提供數個立即可用的中繼資料變數（索引鍵�
 <table>
  <tbody> 
   <tr> 
-   <td>關鍵</td> 
+   <td>金鑰</td> 
    <td>說明</td> 
   </tr> 
   <tr> 

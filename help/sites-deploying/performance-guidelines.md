@@ -60,7 +60,7 @@ ht-degree: 5%
    <td><p>目標</p> </td>
   </tr>
   <tr>
-   <td><p>Assets</p> </td>
+   <td><p>資產</p> </td>
    <td><p>Publish-HA</p> </td>
    <td><p>Solaris</p> </td>
    <td><p>WebLogic</p> </td>
@@ -584,7 +584,7 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
   <tr>
    <td>DocumentNodeStoreService</td>
    <td><p><code>cache</code></p> <p><code>nodeCachePercentage</code></p> <p><code>childrenCachePercentage</code></p> <p><code>diffCachePercentage</code></p> <p><code>docChildrenCachePercentage</code></p> <p><code>prevDocCachePercentage</code></p> <p><code>persistentCache</code></p> </td>
-   <td><p>2048年</p> <p>35(25)</p> <p>20(10)</p> <p>30(5)</p> <p>10(3)</p> <p>4(4)</p> <p>./cache,size=2048，二進位=0,-compact,-compress</p> </td>
+   <td><p>2048</p> <p>35 (25)</p> <p>20 (10)</p> <p>30 (5)</p> <p>10 (3)</p> <p>4 (4)</p> <p>./cache,size=2048，二進位=0,-compact,-compress</p> </td>
    <td><p>快取的預設大小設定為256 MB。</p> <p>會影響執行快取失效所花費的時間。</p> </td>
   </tr>
   <tr>
@@ -610,10 +610,10 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 | RAM | 32GB | 32GB |
 | 磁碟 | 磁性 — 超過1k IOPS | 磁性 — 超過1k IOPS |
 | Java | OracleJRE第8版 | N/A |
-| JVM堆 | 16GB | 不適用 |
+| JVM堆 | 16GB | N/A |
 | 產品 | AEM 6.2 | MongoDB 3.2 WiredTiger |
-| Nodestore | MongoMK | 不適用 |
-| 資料存放區 | 檔案DS | 不適用 |
+| Nodestore | MongoMK | N/A |
+| 資料存放區 | 檔案DS | N/A |
 | 藍本 | 單一產品：資產/ 30個並行執行緒 | 單一產品：資產/ 30個並行執行緒 |
 
 ### 效能基準結果 {#performance-benchmark-results-1}
@@ -699,13 +699,13 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
   <tr>
    <td>Java</td>
    <td>OracleJRE第8版</td>
-   <td>不適用</td>
+   <td>N/A</td>
    <td> </td>
   </tr>
   <tr>
    <td>JVM堆16GB</td>
    <td>16GB</td>
-   <td>不適用</td>
+   <td>N/A</td>
    <td> </td>
   </tr>
   <tr>
@@ -717,13 +717,13 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
   <tr>
    <td>Nodestore</td>
    <td>TarMK或MongoMK</td>
-   <td>不適用</td>
+   <td>N/A</td>
    <td> </td>
   </tr>
   <tr>
    <td>資料存放區</td>
    <td>檔案DS </td>
-   <td>不適用</td>
+   <td>N/A</td>
    <td> </td>
   </tr>
   <tr>
@@ -787,13 +787,13 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
    <td>Java</td>
    <td>OracleJRE第8版</td>
    <td><br /> OracleJRE第8版</td>
-   <td>不適用</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <td>JVM堆16GB</td>
    <td>30GB</td>
    <td>30GB</td>
-   <td>不適用</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <td>產品 </td>
@@ -805,13 +805,13 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
    <td>Nodestore</td>
    <td>TarMK </td>
    <td>MongoMK</td>
-   <td><br /> 不適用</td>
+   <td><br /> N/A</td>
   </tr>
   <tr>
    <td>資料存放區</td>
    <td>檔案DS </td>
    <td><br /> 檔案DS</td>
-   <td><br /> 不適用</td>
+   <td><br /> N/A</td>
   </tr>
   <tr>
    <td>藍本</td>

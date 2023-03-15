@@ -164,7 +164,7 @@ AEM隨附數個現成可用的範本。 可用的範本取決於個別網站。 
 
 ### 元件 {#components}
 
-元件是AEM提供的元素，可讓您新增特定類型的內容。 AEM隨附一系列 [現成可用的元件](/help/sites-authoring/default-components-console.md) 提供全面功能。 這些包括：
+元件是AEM提供的元素，可讓您新增特定類型的內容。 AEM隨附一系列 [現成可用的元件](/help/sites-authoring/default-components-console.md) 提供全面功能。 這些類別包括：
 
 * 文字
 * 影像

@@ -14,7 +14,7 @@ exl-id: 1fc56829-db81-4450-b1d8-b4a31110199e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '352'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
    預設內容策略的路徑為： `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 
-   在 `gridFluidLayout` 資料夾中，複製並貼上預設原則，然後重新命名。 例如， `myPolicy`.
+   在 `gridFluidLayout` 資料夾中，複製並貼上預設原則，然後重新命名。 例如, `myPolicy`.
 
    ![複製預設策略](assets/crx-default1.png)
 

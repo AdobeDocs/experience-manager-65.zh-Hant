@@ -1,5 +1,5 @@
 ---
-title: 連接到Microsoft Translator
+title: 連線到 Microsoft Translator
 seo-title: Connecting to Microsoft Translator
 description: 了解如何將AEM連線至Microsoft Translator。
 seo-description: Learn how to connect AEM to Microsoft Translator.
@@ -14,11 +14,11 @@ exl-id: ca575a30-fc3e-4f38-9aa7-dbecbc089f87
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '604'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# 連接到Microsoft Translator{#connecting-to-microsoft-translator}
+# 連線到 Microsoft Translator{#connecting-to-microsoft-translator}
 
 為Microsoft Translator雲端服務建立設定，以使用您的Microsoft翻譯帳戶來轉譯AEM頁面內容、社群內容或資產。
 

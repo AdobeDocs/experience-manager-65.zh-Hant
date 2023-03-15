@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 草稿和提交元件的自訂儲存 {#custom-storage-for-drafts-and-submissions-component}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Forms可讓您將表單儲存為草稿。 草稿功能可讓您維護進行中表單，您可以從任何裝置完成並稍後提交。
 

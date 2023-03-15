@@ -1,5 +1,5 @@
 ---
-title: MSM最佳實務
+title: MSM 最佳做法
 description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，協助您快速上手並執行AEM多網站管理員。
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
@@ -7,11 +7,11 @@ exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
 source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1616'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# MSM最佳實務{#msm-best-practices}
+# MSM 最佳做法{#msm-best-practices}
 
 ## 一般 {#general}
 
@@ -44,7 +44,7 @@ MSM是可自動部署內容的可設定架構。 實作通常涉及網站的主�
 
 ## 即時副本來源和Blueprint設定 {#live-copy-sources-and-blueprint-configurations}
 
-請記住，您可使用 [一般頁面](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page) 或 [Blueprint設定](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration). 兩者皆為有效的使用案例。
+請記住，您可使用 [一般頁面](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page) 或 [Blueprint設定](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration). 兩者都是有效的使用案例。
 
 使用Blueprint配置的額外好處是：
 
@@ -194,7 +194,7 @@ MSM轉出設定可高度自訂。 請注意，自動轉出可能會產生深遠�
 
 本頁及以下各頁涵蓋相關問題：
 
-* [建立和同步Live Copy](/help/sites-administering/msm-livecopy.md)
-* [Live Copy概述主控台](/help/sites-administering/msm-livecopy-overview.md)
-* [配置Live Copy同步](/help/sites-administering/msm-sync.md)
-* [MSM轉出衝突](/help/sites-administering/msm-rollout-conflicts.md)
+* [建立和同步 Live Copy](/help/sites-administering/msm-livecopy.md)
+* [Live Copy 概觀主控台](/help/sites-administering/msm-livecopy-overview.md)
+* [設定 Live Copy 同步](/help/sites-administering/msm-sync.md)
+* [MSM 推出衝突](/help/sites-administering/msm-rollout-conflicts.md)

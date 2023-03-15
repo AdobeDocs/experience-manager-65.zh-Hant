@@ -220,7 +220,7 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 此服務將用於外掛至Target轉存的體驗片段，以便存取各種連結。
 
-例如， `ComponentService`:
+例如, `ComponentService`:
 
 ```java
 import com.adobe.cq.xf.ExperienceFragmentLinkRewriterProvider;
@@ -295,8 +295,7 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 
 作為輸入，方法接收以下參數：
 
-* `link`
-此 
+* `link`  
 `String` 表示目前正在處理的連結。 這通常是指向製作例項上資源的相對URL。
 
 * `tag`

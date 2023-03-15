@@ -22,7 +22,7 @@ ht-degree: 2%
 
 # 社群計分和徽章 {#communities-scoring-and-badges}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力。
 

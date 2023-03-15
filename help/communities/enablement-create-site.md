@@ -69,9 +69,9 @@ ht-degree: 2%
 
 （選用）上傳橫幅影像以在網站頁面間顯示。 橫幅會釘在瀏覽器的左側邊緣、社群網站標題和功能表（導覽連結）之間。 橫幅高度會裁切為120像素。 橫幅沒有調整大小以符合瀏覽器寬度和120像素高度。
 
-![站點品牌1](assets/site-branding1.png)
+![site-branding1](assets/site-branding1.png)
 
-![網站品牌推廣2](assets/site-branding2.png)
+![site-branding2](assets/site-branding2.png)
 
 選擇 **下一個**.
 

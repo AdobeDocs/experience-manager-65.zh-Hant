@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## 建立儲存庫實例 {#create-a-repository-instance}
 
-雖然連接到儲存庫和建立連接有不同的方法，但本開發文章使用屬於的靜態方法 `org.apache.jackrabbit.commons.JcrUtils` 類別。 方法的名稱為 `getRepository`. 此方法會採用代表Adobe CQ伺服器URL的字串參數。 例如 `http://localhost:4503/crx/server`.
+雖然連接到儲存庫和建立連接有不同的方法，但本開發文章使用屬於的靜態方法 `org.apache.jackrabbit.commons.JcrUtils` 類別。 方法的名稱為 `getRepository`. 此方法會採用代表Adobe CQ伺服器URL的字串參數。 例如 `http://localhost:4503/crx/server`。
 
 此 `getRepository`方法傳回 `Repository`例項，如下列程式碼範例所示。
 

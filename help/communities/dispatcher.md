@@ -13,7 +13,7 @@ exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
 source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
 source-wordcount: '668'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 9%
 
 ## Dispatcher快取 {#dispatcher-caching}
 
-### 總覽 {#overview}
+### 概觀 {#overview}
 
 AEM Communities的Dispatcher快取是Dispatcher提供社群網站頁面完整快取版本的功能。
 
@@ -41,7 +41,7 @@ AEM Communities的Dispatcher快取是Dispatcher提供社群網站頁面完整快
 
 設定為支援Dispatcher快取時，標頭會新增TTL型的「最大頁面」過期時間，以確保Dispatcher快取頁面為最新狀態。
 
-### 需求 {#requirements}
+### 要求 {#requirements}
 
 * Dispatcher 4.1.2版或更新版本(請參閱 [安裝Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) （適用於最新版本）
 * [ACS AEM Commons套件](https://adobe-consulting-services.github.io/acs-aem-commons/)
@@ -64,7 +64,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標題 — 最大期限** �
 
 * **篩選模式**
 
-   *（必要）* 一或多個社群頁面路徑。 例如， `/content/sites/engage/(.*)`.
+   *（必要）* 一或多個社群頁面路徑。 例如, `/content/sites/engage/(.*)`.
 
 * **快取控制最大時間**
 
@@ -95,7 +95,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標題 — 最大期限** �
 
 >[!CAUTION]
 >
->請參閱 [Dispatcher 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)，了解使用 Dispatcher 限制存取時的更多考量事項。 此外，請閱讀 [AEM安全性檢查清單](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) 有關AEM安裝的其他安全詳細資訊。
+>請參閱 [Dispatcher 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)，了解使用 Dispatcher 限制存取時的更多考量事項。此外，請閱讀 [AEM安全性檢查清單](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) 有關AEM安裝的其他安全詳細資訊。
 
 應將下列項添加到/filter節的結尾，尤其是在所有拒絕項後。
 

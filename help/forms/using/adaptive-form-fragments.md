@@ -178,7 +178,7 @@ ht-degree: 0%
 <table>
  <tbody>
   <tr>
-   <td><p><strong>作業</strong></p> </td>
+   <td><p><strong>操作</strong></p> </td>
    <td><p><strong>說明</strong></p> </td>
   </tr>
   <tr>

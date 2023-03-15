@@ -1,5 +1,5 @@
 ---
-title: 配置翻譯整合框架
+title: 設定翻譯整合框架
 seo-title: Configuring the Translation Integration Framework
 description: 了解如何配置翻譯整合框架。
 seo-description: Learn how to configure the Translation Integration Framework.
@@ -14,21 +14,21 @@ exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
 source-git-commit: 6dea3a23c70fdb5f07bdf724547e799776002c61
 workflow-type: tm+mt
 source-wordcount: '1553'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
-# 配置翻譯整合框架{#configuring-the-translation-integration-framework}
+# 設定翻譯整合框架{#configuring-the-translation-integration-framework}
 
 翻譯整合框架與第三方翻譯服務整合，以協調AEM內容的翻譯。
 
-* 連接到翻譯服務提供商。
-* 建立翻譯整合架構設定。
+* 連接到您的翻譯服務提供者。
+* 建立翻譯整合框架設定。
 * 將雲端設定與您的頁面建立關聯。
 
 如需AEM中內容翻譯功能的概觀，請參閱 [轉譯多語言網站的內容](/help/sites-administering/translation.md).
 
-## 連接到翻譯服務提供商 {#connecting-to-a-translation-service-provider}
+## 連接到翻譯服務提供者 {#connecting-to-a-translation-service-provider}
 
 建立將AEM連接至翻譯服務提供者的雲端設定。 AEM預設包含連線至Microsoft Translator的功能。
 下列翻譯廠商提供翻譯專案的新API實作。 深入了解整合的連結：
@@ -64,10 +64,10 @@ ht-degree: 1%
 
 ## 建立翻譯整合設定 {#creating-a-translation-integration-configuration}
 
-建立翻譯整合架構設定，以指定如何翻譯您的內容。 設定包含下列資訊：
+建立翻譯整合架構設定，以指定如何翻譯您的內容。 設定包括以下資訊：
 
-* 要使用哪個翻譯服務提供商。
-* 無論是人翻譯還是機器翻譯。
+* 要使用哪個翻譯服務提供者.
+* 是否進行人工翻譯或機器翻譯.
 * 是否翻譯與頁面或資產相關聯的其他內容，例如標籤。
 
 建立框架配置後，可將雲配置與要根據配置翻譯的頁面相關聯。 當翻譯過程開始時，翻譯工作流程會根據相關的框架配置進行。

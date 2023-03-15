@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 配置屬性的加密支援{#encryption-support-for-configuration-properties}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此功能可讓所有OSGi設定屬性以受保護的加密形式儲存，而非透明文字。 Web控制台UI中的表單用於使用系統寬加密主密鑰從明文建立加密文本。
 

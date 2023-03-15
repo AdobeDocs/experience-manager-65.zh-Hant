@@ -1,6 +1,6 @@
 ---
 title: 影片
-description: 了解集中式視訊資產管理Adobe Experience Manager Assets，您可以在其中上傳視訊以自動編碼至Dynamic Media Classic，並直接從Experience Manager Assets存取Dynamic Media Classic視訊。 Dynamic Media Classic視訊整合將最佳化視訊的觸角延伸至所有畫面。
+description: 了解集中式視訊資產管理Adobe Experience Manager Assets，您可在其中上傳視訊以自動編碼至Dynamic Media Classic，並直接從Experience Manager Assets存取Dynamic Media Classic視訊。 Dynamic Media Classic視訊整合將最佳化視訊的觸角延伸至所有畫面。
 uuid: 8b3423f1-d96b-44d9-bdb7-e3b77875b25d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -14,7 +14,7 @@ feature: Video
 source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
 source-wordcount: '1563'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 

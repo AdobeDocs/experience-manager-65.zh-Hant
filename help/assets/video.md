@@ -562,7 +562,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
    `https://<servername.domain>:<port_number>`
 
-   例如， `https://1a2b3c.mycompany.com:4321`
+   例如, `https://1a2b3c.mycompany.com:4321`
 
    **附註**:上述路徑範例僅供示範之用。
 
@@ -572,7 +572,7 @@ Google會定期變更其使用者介面。 因此，將影片發佈至YouTube的
 
    `https://<servername.domain>:<port_number>/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   例如， `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
+   例如, `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
    **附註**:上述路徑範例僅供示範之用。
 

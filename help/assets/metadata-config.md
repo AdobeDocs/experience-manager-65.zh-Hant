@@ -89,7 +89,7 @@ ht-degree: 4%
 | [!UICONTROL 區段標題] | 欄位標籤， <br> 說明 |
 | [!UICONTROL 單行文字] | 欄位標籤， <br> 對應至屬性， <br> 預設值 |
 | [!UICONTROL 多值文字] | 欄位標籤， <br> 對應至屬性， <br> 預設值 |
-| [!UICONTROL 數量] | 欄位標籤， <br> 對應至屬性， <br> 預設值 |
+| [!UICONTROL 數字] | 欄位標籤， <br> 對應至屬性， <br> 預設值 |
 | [!UICONTROL 日期] | 欄位標籤， <br> 對應至屬性， <br> 預設值 |
 | [!UICONTROL 標準標記] | 欄位標籤， <br> 對應至屬性， <br> 預設值， <br> 說明 |
 
@@ -187,7 +187,7 @@ To apply a metadata profile globally, follow these steps:
 | [!UICONTROL 區段標題] | 新增區段標題，以取得通用元件清單。 |
 | [!UICONTROL 單行文字] | 新增單行文字屬性。 會儲存為字串。 |
 | [!UICONTROL 多值文字] | 新增多值文字屬性。 會儲存為字串陣列。 |
-| [!UICONTROL 數量] | 新增數字元件。 |
+| [!UICONTROL 數字] | 新增數字元件。 |
 | [!UICONTROL 日期] | 新增日期元件。 |
 | [!UICONTROL 下拉式] | 新增下拉式清單。 |
 | [!UICONTROL 標準標記] | 新增標記. |

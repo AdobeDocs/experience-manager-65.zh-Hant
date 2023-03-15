@@ -21,7 +21,7 @@ ht-degree: 3%
 
 # Communities功能的Analytics設定 {#analytics-configuration-for-communities-features}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解決方案。
 
@@ -640,7 +640,7 @@ Adobe Analytics憑證會經過加密。 為方便製作者與發佈者之間復�
 * 導覽至 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). 例如， [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
 
 * 在語言根的jcr:content節點下(例如 `/content/sites/engage/en/jcr:content),`導覽至為Analytics報表設定的元件。
-例如， **`analytics/reportConfigs/social_forum_components_hbs_topic`**
+例如, **`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
 * 請注意建立的時段：
 

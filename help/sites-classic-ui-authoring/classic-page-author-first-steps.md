@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ### 建立新頁面 {#creating-a-new-page}
 
-編輯前，您需要 [建立新頁面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
+編輯之前，您需要 [建立新頁面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
 
 ### 開啟頁面 {#opening-a-page}
 

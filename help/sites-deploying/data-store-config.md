@@ -243,7 +243,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 | proxyPort | 設定客戶端將通過的可選代理埠。 |  | 否. |
 | s3Bucket | S3儲存貯體的名稱。 |  | 是 |
 | s3EndPoint | S3 REST API端點。 |  | 否. |
-| s3地區 | 貯體所在的地區。 看這個 [頁面](https://docs.aws.amazon.com/general/latest/gr/s3.html) 以取得更多詳細資訊。 | 執行AWS例項的地區。 | 否. |
+| s3Region | 貯體所在的地區。 看這個 [頁面](https://docs.aws.amazon.com/general/latest/gr/s3.html) 以取得更多詳細資訊。 | 執行AWS例項的地區。 | 否. |
 | socketTimeout | 設定在連接超時和關閉之前，通過已建立的開啟連接傳輸資料的等待時間（以毫秒為單位）。 | 50000 | 否. |
 | stagingPurgeInterval | 從預備快取清除已完成上傳的間隔（秒）。 | 300 | 否. |
 | stagingRetryInterval | 重試上傳失敗的間隔（秒）。 | 600 | 否. |
@@ -314,7 +314,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 非同步上傳是多執行緒，且執行緒數目是使用 `uploadThreads` 參數。
 
-上傳完成後，檔案會移至主下載快取。 當暫存快取大小超過其限制時，檔案會同步上傳至DataStore，直到先前的非同步上傳完成，且暫存快取中的空間可再次使用為止。 上傳的檔案會由定期作業從測試區域中移除，而期間由 `stagingPurgeInterval` 參數。
+上傳完成後，檔案會移至主下載快取。 當中繼快取大小超過其限制時，檔案會同步上傳至DataStore，直到先前的非同步上傳完成，且中繼快取中的空間可再次使用為止。 上傳的檔案會由定期作業從測試區域中移除，而期間由 `stagingPurgeInterval` 參數。
 
 失敗的上載（例如，由於網路中斷）將放在重試隊列上並定期重試。 重試間隔的設定方式為： `stagingRetryInterval parameter`.
 
@@ -345,7 +345,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    * *org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService*.*config*
 
-   * *org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore*.*設定*
+   * *org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore*.*config*
 
    建立檔案後，視需要新增設定選項。
 

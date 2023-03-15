@@ -1,5 +1,5 @@
 ---
-title: 著陸頁面
+title: 登陸頁面
 seo-title: Landing Pages
 description: 登錄頁面功能可讓您快速輕鬆地將設計和內容直接匯入AEM頁面。 網頁開發人員可準備HTML和其他資產，這些資產可匯入為完整頁面或僅匯入頁面的一部分。
 seo-description: The landing pages feature allows quick and easy importing of a design and content right into an AEM page. A web developer can prepare the HTML and additional assets that can be imported as a full page or only a part of a page.
@@ -14,11 +14,11 @@ exl-id: 0f1014a7-b0ba-4455-b3a4-5023bcd4c5a1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '3335'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# 著陸頁面{#landing-pages}
+# 登陸頁面{#landing-pages}
 
 登錄頁面功能可讓您快速輕鬆地將設計和內容直接匯入AEM頁面。 網頁開發人員可準備HTML和其他資產，這些資產可匯入為完整頁面或僅匯入頁面的一部分。 此功能對於建立僅在有限時間內有效且需要快速建立的行銷登錄頁面非常有用。
 

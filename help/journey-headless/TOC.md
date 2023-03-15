@@ -8,7 +8,7 @@ role: Developer, Architect
 source-git-commit: 2523d9dcdbbfd9107e43ca53e2bb586452be1cb8
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 92%
 # AEM Headless 歷程 {#headless-journey}
 
 + [AEM Headless 歷程](/help/journey-headless/home.md)
-+ AEM Headless Developer Journey {#developer}
++ AEM Headless 開發人員歷程 {#developer}
    + [了解 AEM 中的 Headless](developer/overview.md)
    + [了解 CMS Headless 開發](developer/learn-about.md)
    + [AEM Headless 快速入門](developer/getting-started.md)
@@ -27,18 +27,18 @@ ht-degree: 92%
    + [如何整合一切](developer/put-it-all-together.md)
    + [如何使用無周邊應用程式](developer/go-live.md)
    + [選擇性 - 如何使用 AEM 建立單頁應用程式](developer/create-spa.md)
-+ AEM無頭式內容架構者歷程 {#architect}
++ AEM Headless 內容架構師歷程 {#architect}
    + [AEM Headless 內容架構者歷程概觀](architect/overview.md)
    + [使用 AEM 建立 Headless 的內容模型 - 簡介](architect/introduction.md)
    + [學習使用 AEM 建立 Headless 內容模型的基礎知識](architect/basics.md)
    + [了解如何在 AEM 中建立內容片段模型](architect/model-structure.md)
-+ AEM無頭內容製作歷程 {#author}
++ AEM Headless 內容作者歷程 {#author}
    + [AEM Headless 內容作者歷程 - 概觀](author/overview.md)
    + [使用 AEM 編寫 Headless - 簡介](author/introduction.md)
    + [使用 AEM 編寫 Headless 的基礎知識](author/basics.md)
    + [了解如何在內容片段中使用參照](author/references.md)
    + [了解如何為內容片段定義中繼資料和標記](author/metadata-tagging.md)
-+ AEM無頭翻譯歷程 {#translation}
++ AEM Headless 翻譯歷程 {#translation}
    + [了解 AEM 中的 Headless 翻譯](translation/overview.md)
    + [AEM Headless 翻譯快速入門](translation/getting-started.md)
    + [了解 Headless 內容以及如何在 AEM 中翻譯](translation/learn-about.md)

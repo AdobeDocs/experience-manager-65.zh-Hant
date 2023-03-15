@@ -1,5 +1,5 @@
 ---
-title: 最佳作法
+title: 最佳做法
 seo-title: Best Practices
 description: 如何以最有效率、最有效的方式使用AEM
 seo-description: How to use AEM in the most efficient and most effective way possible
@@ -17,13 +17,13 @@ ht-degree: 5%
 
 ---
 
-# 最佳作法{#best-practices}
+# 最佳做法{#best-practices}
 
 製作最佳實務說明如何以盡可能最有效率和最有效的方式使用AEM。 這份不斷增加的主題清單包含AEM中的多個領域。
 
 以下幾方面提供有關最佳做法的檔案：
 
-* [Assets](#assets)
+* [資產](#assets)
 * [Sites](#sites)
 * [Forms](#forms)
 
@@ -64,7 +64,7 @@ ht-degree: 5%
  </tbody>
 </table>
 
-## 網站 {#sites}
+## Sites {#sites}
 
 管理和編寫網站內容有一些最佳實務，概述如下：
 

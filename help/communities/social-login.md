@@ -395,7 +395,7 @@ facebook和Twitter的後續步驟相同：
 >
 >請注意，不要將驗證處理常式與的Facebook或Twitter例項混淆 *AdobeGranite OAuth應用程式和提供者*.
 
-![graniteauth1](assets/graniteoauth1.png)
+![graniteoauth1](assets/graniteoauth1.png)
 
 ### AdobeGranite OAuth應用程式和提供者 {#adobe-granite-oauth-application-and-provider}
 

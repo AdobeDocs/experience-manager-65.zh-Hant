@@ -212,7 +212,7 @@ Adobe建議啟用HTTPS，因為許多公司都有可偵聽HTTP流量的防火牆
 >
 >ImageMagick `policy.xml` 和 `configure.xml` 檔案可在 `/usr/lib64/ImageMagick-&#42;/config/` 而非 `/etc/ImageMagick/`。請參閱 [ImageMagick檔案](https://www.imagemagick.org/script/resources.php) ，以了解設定檔的位置。
 
-如果您使用 [!DNL Experience Manager] 如果您打算處理大量大型PSD或PSB檔案，請在Adobe Managed Services(AMS)上聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，為您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
+如果您使用 [!DNL Experience Manager] 如果您打算處理大量大型PSD或PSB檔案，請在Adobe Managed Services(AMS)上聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，為您的AMS部署實作這些最佳實務，並為Adobe的專屬格式選擇最佳的工具和模型。 [!DNL Experience Manager] 可能無法處理超過 30000 x 23000 像素的極高解析度 PSB 檔案。
 
 ### XMP回寫 {#xmp-writeback}
 
@@ -226,7 +226,7 @@ XMP回寫會在中修改中繼資料時更新原始資產 [!DNL Experience Manag
 
 如果已勾選執行工作流程標幟，匯入大量中繼資料可能會導致耗用大量資源的XMP回寫活動。 在精益伺服器使用期間規劃此類匯入，以免其他使用者的效能受到影響。
 
-## 複寫 {#replication}
+## 複製 {#replication}
 
 將資產複製至大量發佈執行個體時（例如在Sites實作中）,Adobe建議您使用鏈式復寫。 在這種情況下，製作例項會複製到單一發佈例項，然後複製到其他發佈例項，釋放製作例項。
 

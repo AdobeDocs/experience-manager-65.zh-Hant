@@ -19,7 +19,7 @@ ht-degree: 4%
 
 # 搜尋要點 {#search-essentials}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 搜尋功能是AEM Communities的一項基本功能。 除了 [AEM platform search](../../help/sites-deploying/queries-and-indexing.md) 功能，AEM Communities提供 [UGC搜尋API](#ugc-search-api) 以搜尋使用者產生的內容(UGC)。 UGC具有唯一屬性，因為它是單獨輸入和儲存的，與其他AEM內容和用戶資料分開。
 
@@ -116,7 +116,7 @@ ht-degree: 4%
 | 已標籤 | *布林值* |
 | 已新增 | *日期* |
 | modifiedDate | *日期* |
-| 狀態 | *String* |
+| 狀態 | *字串* |
 | userIdentifier | *字串* |
 | 回復 | *長整數* |
 | jcr:title | *字串* |

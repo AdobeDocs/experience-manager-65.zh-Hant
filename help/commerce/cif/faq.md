@@ -1,8 +1,8 @@
 ---
 title: AEM — 使用Commerce Integration Framework進行商務整合常見問題集
 description: AEM — 使用Commerce Integration Framework進行商務整合常見問題集
-exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+exl-id: d541607f-c4c9-4dd5-aadf-64d4cb5f9f2a
+source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
 workflow-type: tm+mt
 source-wordcount: '963'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## 1. CIF GraphQL是否僅用於商務？還是可用於查詢AEM上創作的內容？ JCR?
 
-Adobe已採用Adobe Commerce的GraphQL API作為其官方商務API，以用於所有商務相關資料。 因此，AEM使用GraphQL透過I/O Runtime與Adobe Commerce及任何商務引擎交換商務資料。 此GraphQL API獨立於AEM GraphQL API以存取內容片段。
+Adobe已採用Adobe Commerce的GraphQL API作為其所有商務相關資料的官方商務API。 因此，AEM會使用GraphQL透過I/O Runtime與Adobe Commerce及任何商務引擎交換商務資料。 此GraphQL API與AEM GraphQL API無關，可存取內容片段。
 
 ## 2.產品資產（影像）是否可透過Adobe Commerce管理員從AEM儲存及參考？ 如何使用來自Dynamic Media的資產？
 
@@ -43,7 +43,7 @@ PIM資料會透過GraphQL請求公開給AEM和用戶端。 我們的建議是將
 
 ## 8.您是否也能透過Dispatcher快取定價和其他資料。 這是否會導致快取失效頻繁？
 
-Dispatcher不會快取價格或庫存等動態資料。 動態資料會透過GraphQL API以Web元件直接擷取用戶端。 Dispatcher上只會快取靜態資料（例如產品或類別資料）。 如果產品資料變更，則需要失效快取。
+Dispatcher不會快取價格或庫存等動態資料。 動態資料會透過GraphQL API以Web元件直接在用戶端擷取。 Dispatcher上只會快取靜態資料（例如產品或類別資料）。 如果產品資料變更，則需要失效快取。
 
 ## 9. AEM Dispatcher的快取失效如何與AEM和商務搭配運作？
 
@@ -55,7 +55,7 @@ Dispatcher不會快取價格或庫存等動態資料。 動態資料會透過Gra
 
 ## 11. CIF如何搭配AEM和商務使用Search?
 
-CIF提供搜尋列和搜尋結果元件。 搜尋列元件會傳送含有搜尋詞的GraphQL請求給商務解決方案，商務解決方案會傳回產品清單，其中包含產品名稱、價格、SLUG等。 然後，在AEM中建立的搜索結果頁面上，「搜索結果」元件將在庫視圖中顯示搜索結果。 「搜尋」支援基本全文搜尋。 我們使用SLUG/url索引鍵來建立PDP的參考。
+CIF提供搜尋列和搜尋結果元件。 搜尋列元件會傳送含有搜尋詞的GraphQL請求給商務解決方案，然後商務解決方案會傳回產品清單，其中包含產品名稱、價格、匯總等。 然後，在AEM中建立的搜索結果頁面上，「搜索結果」元件將在庫視圖中顯示搜索結果。 「搜尋」支援基本全文搜尋。 我們使用SLUG/url索引鍵來建立PDP的參考。
 
 ## 12.如何在MSM或翻譯中使用產品資料？
 

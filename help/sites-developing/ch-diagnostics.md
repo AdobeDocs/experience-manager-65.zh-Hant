@@ -1,5 +1,5 @@
 ---
-title: ContextHub診斷
+title: ContextHub 診斷
 seo-title: ContextHub Diagnostics
 description: ContextHub提供診斷頁面，您可在其中查看ContextHub架構的概觀
 seo-description: ContextHub provides a diagnostics page where you can see an overview of the ContextHub framework
@@ -11,11 +11,11 @@ exl-id: b833c28b-76c6-42a2-b690-3e81ddf91bc2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '474'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# ContextHub診斷 {#contexthub-diagnostics}
+# ContextHub 診斷 {#contexthub-diagnostics}
 
 ContextHub提供診斷頁面，您可在其中查看ContextHub架構的概觀。 若要開啟頁面，請前往 `contexthub.diagnostics.html` AEM author例項的頁面，例如：
 

@@ -14,7 +14,7 @@ exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1648'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -290,12 +290,12 @@ Communities Sites控制台提供嚮導，引導用戶完成建立社區站點的
 
 1. 新建立 `localhost.4503` 已選節點：
 
-   * 添加屬性：
+   * 新增屬性:
 
    * **名稱** sling:match
       * **類型** 字串
       * **值** localhost.4503/$（必須以「$」字元結尾）
-   * 添加屬性：
+   * 新增屬性:
 
       * **名稱** sling:internalRedirect
       * **類型** 字串

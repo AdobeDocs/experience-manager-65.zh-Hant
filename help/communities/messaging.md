@@ -21,7 +21,7 @@ ht-degree: 1%
 
 # 配置消息 {#configure-messaging}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Communities的傳訊功能可讓登入的網站訪客（成員）相互傳送訊息，這些訊息在登入網站時便可存取。
 

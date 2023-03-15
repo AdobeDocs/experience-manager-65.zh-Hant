@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # 成員和群組管理主控台 {#members-groups-management-consoles}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Communities功能通常會要求網站訪客在參與發佈環境的社群之前，必須先註冊及登入。 其使用者註冊只需存在於發佈環境中，通常稱為 *成員* 區分 *使用者* 註冊於製作環境中。
 

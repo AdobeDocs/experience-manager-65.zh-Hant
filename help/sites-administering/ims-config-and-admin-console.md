@@ -14,7 +14,7 @@ feature: Security
 source-git-commit: 778987e69a23f81584f7a86db2fe24df64035919
 workflow-type: tm+mt
 source-wordcount: '1683'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->AEM目前不支援將群組指派給設定檔。  使用者應改為個別新增。
+>AEM 目前不支援指派群組到設定檔。應單獨新增使用者。
 
 ## 簡介 {#introduction}
 
@@ -158,7 +158,7 @@ AEM Managed Services客戶應該已布建組織，而在IMS布建過程中，客
 
 ![screen_shot_2018-09-17at105601pm](assets/screen_shot_2018-09-17at105601pm.png)
 
-在每個「產品內容」例項下，都會有相關聯的「產品設定檔」。 此產品設定檔用於指派存取權給使用者和群組。
+在每個「產品內容」例項下，都會有相關聯的產品設定檔。 此產品設定檔用於指派存取權給使用者和群組。
 
 ![image2018-9-18_7-48-50](assets/image2018-9-18_7-48-50.png)
 
@@ -176,7 +176,7 @@ AEM可繼續支援管理員使用者的本機登入，因為登入畫面可以�
 
 #### IMS 登入 {#ims-based-login}
 
-若是其他使用者，在例項上設定 IMS 後，即可使用 IMS 登入。使用者會先按一下 **使用Adobe登入** 按鈕，如下所示：
+若是其他使用者，在執行個體上設定 IMS 後，即可使用 IMS 登入。使用者會先按一下 **使用Adobe登入** 按鈕，如下所示：
 
 ![image2018-9-18_0-10-32](assets/image2018-9-18_0-10-32.png)
 

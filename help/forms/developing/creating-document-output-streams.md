@@ -385,7 +385,7 @@ ht-degree: 0%
 
 ## 建立PDF/檔案 {#creating-pdf-a-documents}
 
-您可以使用輸出服務來建立PDF/文檔。 由於PDF/A是用於長期保存文檔內容的存檔格式，因此所有字型都被嵌入並且檔案被解壓縮。 因此，PDF/A文檔通常比標準PDF文檔大。 此外，PDF/檔案不包含音訊和視訊內容。 與其他輸出服務任務一樣，您提供表單設計和要與表單設計合併的資料，以建立PDF/文檔。
+您可以使用輸出服務來建立PDF/文檔。 由於PDF/A是用於長期保存文檔內容的存檔格式，因此所有字型都被嵌入並且檔案被解壓縮。 因此，PDF/A 文件通常比標準 PDF 文件大。此外，PDF/檔案不包含音訊和視訊內容。 與其他輸出服務任務一樣，您提供表單設計和要與表單設計合併的資料，以建立PDF/文檔。
 
 PDF/A-1規範由兩個符合級別組成，即a和b。兩者的主要差異在於邏輯結構（協助工具）支援，這不是一致性層級b的必要條件。無論PDF級別如何，PDF/A-1都規定所有字型都嵌入到生成的字型/A文檔中。
 
@@ -906,14 +906,14 @@ ResourceRepositoryClient
 
 1. 從AEM Forms存放庫擷取表單設計。
 
-   叫用 `ResourceRepositoryClient` 物件 `readResourceContent` 方法，並將指定URI位置的字串值傳遞至XDP檔案。 例如， `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. 此值是必填的。 此方法會傳回 `com.adobe.idp.Document` 代表XDP檔案的例項。
+   叫用 `ResourceRepositoryClient` 物件 `readResourceContent` 方法，並將指定URI位置的字串值傳遞至XDP檔案。 例如, `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. 此值是必填的。 此方法會傳回 `com.adobe.idp.Document` 代表XDP檔案的例項。
 
 1. 轉譯非互動式PDF表單。
 
    叫用 `OutputClient` 物件 `generatePDFOutput2` 方法，並傳遞下列值：
 
    * A `TransformationFormat` 枚舉值。 要生成PDF文檔，請指定 `TransformationFormat.PDF`.
-   * 一個字串值，它指定影像等其他資源所在的內容根。 例如， `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
+   * 一個字串值，它指定影像等其他資源所在的內容根。 例如, `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
    * A `com.adobe.idp.Document` 代表表單設計的物件(使用 `ResourceRepositoryClient` 物件 `readResourceContent` 方法)。
    * A `PDFOutputOptionsSpec` 包含PDF運行時選項的對象。
    * A `RenderOptionsSpec` 包含呈現運行時選項的對象。

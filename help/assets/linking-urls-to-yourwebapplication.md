@@ -115,7 +115,7 @@ Dynamic Media支援靜態資產的傳送，除了影像和視訊，這是其他�
 
       * `https://*<server_name>*/is/content/*<company_name>*/*<static_asset_filename>*.*<extension>*`
 
-         例如， `https://aem.com/is/content/adobe/image.gif`.
+         例如, `https://aem.com/is/content/adobe/image.gif`.
    * 選擇 **[!UICONTROL 資產]** > **[!UICONTROL 動態轉譯]**，然後選取靜態資產的動態轉譯並複製URL。
 
       變更複製的URL以使用 `is/content` （而非） `is/image/`.

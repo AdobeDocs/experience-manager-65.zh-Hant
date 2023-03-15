@@ -773,7 +773,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
      <li>最大堆，由返回 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryMXBean.html#getHeapMemoryUsage--">MemoryMXBean</a></li>
     </ul> </td>
    <td>N/A</td>
-   <td>不適用</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <td>執行個體</td>
@@ -783,8 +783,8 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
      <li>運行模式清單</li>
      <li>執行個體的啟動日期</li>
     </ul> </td>
-   <td>不適用</td>
-   <td>不適用</td>
+   <td>N/A</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <td>存放庫</td>
@@ -804,8 +804,8 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
       </ul> </li>
      <li>如果沒有自訂外部資料存放區，則會顯示指出此事實的訊息</li>
     </ul> </td>
-   <td>不適用</td>
-   <td>不適用</td>
+   <td>N/A</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <td>發佈代理程式</td>
@@ -878,7 +878,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
     <ul>
      <li>使用者應調查何時有未預期狀態或計數較高的作業。</li>
     </ul> </td>
-   <td>不適用</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <td>預估節點計數</td>
@@ -890,14 +890,14 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
      <li>可授權</li>
      <li>節點總數<br /> </li>
     </ul> <p>從nodeCounterMBean獲取節點總數，其餘統計資訊從IndexInfoService獲取。</p> </td>
-   <td>不適用</td>
-   <td>不適用</td>
+   <td>N/A</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <td>備份</td>
    <td>如果是，則顯示「正在進行線上備份」。</td>
-   <td>不適用</td>
-   <td>不適用</td>
+   <td>N/A</td>
+   <td>N/A</td>
   </tr>
   <tr>
    <td>索引</td>
@@ -906,8 +906,8 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
      <li>"正在編制索引"</li>
      <li>"正在進行查詢"</li>
     </ul> <p>如果線程轉儲中存在索引或查詢線程。</p> </td>
-   <td>不適用</td>
-   <td>不適用</td>
+   <td>N/A</td>
+   <td>N/A</td>
   </tr>
  </tbody>
 </table>

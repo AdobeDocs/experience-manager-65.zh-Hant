@@ -478,7 +478,7 @@ ASP.NET應用程式執行以下任務：
 
 ### 建立ASP.NET Web應用程式 {#create-an-asp-net-web-application}
 
-建立Microsoft .NET C# ASP.NET Web應用程式。 下圖顯示ASP.NET專案的內容，名為 *InvokePreLoanProcess*.
+建立Microsoft .NET C# ASP.NET Web應用程式。 下圖顯示ASP.NET項目名稱 *InvokePreLoanProcess*.
 
 注意「服務參考」下有兩個項目。 第一項名為* JobManager*。 此引用使ASP.NET應用程式能夠調用作業管理器服務。 此服務會傳回有關長期進程狀態的資訊。 例如，如果進程當前正在運行，則此服務將返回一個數值，該數值指定當前正在運行的進程。 第二個引用的名稱為&#x200B;*PreLoanProcess*. 此服務參考代表對* FirstAppSolution/PreLoanProcess *process的參考。 建立服務參考後，與AEM Forms服務相關聯的資料類型便可在您的.NET專案中使用。
 

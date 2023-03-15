@@ -1,5 +1,5 @@
 ---
-title: '"[!DNL Assets] HTTP API。」'
+title: "[!DNL Assets] HTTP API."
 description: 在以下位置使用HTTP API建立、讀取、更新、刪除、管理數位資產： [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 role: Developer
@@ -20,7 +20,7 @@ ht-degree: 1%
 | AEM 6.5 | 本文 |
 | AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/extending/mac-api-assets.html?lang=en) |
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此 [!DNL Assets] HTTP API允許對數位資產（包括中繼資料、轉譯和註解）以及使用的結構化內容執行建立 — 讀取 — 更新 — 刪除(CRUD)操作 [!DNL Experience Manager] 內容片段。 在 `/api/assets` 並實作為REST API。 包括 [支援內容片段](/help/assets/assets-api-content-fragments.md).
 
@@ -70,7 +70,7 @@ A [內容片段](/help/assets/content-fragments/content-fragments.md) 是資產�
 * `parent`:連結至父資料夾。
 * `thumbnail`:（選用）連結至資料夾縮圖影像。
 
-### Assets {#assets}
+### 資產 {#assets}
 
 在Experience Manager中，資產包含下列元素：
 

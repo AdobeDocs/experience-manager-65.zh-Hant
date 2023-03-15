@@ -8,7 +8,7 @@ exl-id: 6c149d31-1e64-4d29-a32a-58bd69e9fa98
 source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
 source-wordcount: '693'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ ImageMagick是用於建立、編輯、合成或轉換點陣圖影像的軟體插
 
 >[!NOTE]
 >
->如果您使用 [!DNL Experience Manager] on [!DNL Adobe Managed Services] (AMS)，如果您打算處理許多高解析度PSD或PSB檔案，請聯絡Adobe客戶支援。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000像素的高解析度PSB檔案。
+>如果您使用 [!DNL Experience Manager] on [!DNL Adobe Managed Services] (AMS)，如果您打算處理許多高解析度PSD或PSB檔案，請聯絡Adobe客戶支援。 [!DNL Experience Manager] 可能無法處理超過 30000 x 23000 像素的極高解析度 PSB 檔案。
 
 ## 安裝ImageMagick {#installing-imagemagick}
 

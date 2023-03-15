@@ -121,7 +121,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -164,8 +164,8 @@ ht-degree: 2%
 | **上一位置** | `/etc/dam/drm/licenses/` |
 |---|---|
 | **新位置** | `/libs/settings/dam/drm` |
-| **重組指導** | 不適用 |
-| **附註** | 不適用 |
+| **重組指導** | N/A |
+| **附註** | N/A |
 
 ### 連結共用電子郵件通知模板 {#link-share-e-mail-notification-template}
 
@@ -256,7 +256,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用</td>
+   <td>N/A</td>
   </tr>
  </tbody>
 </table>
@@ -283,7 +283,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用</td>
+   <td>N/A</td>
   </tr>
  </tbody>
 </table>
@@ -306,7 +306,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>不適用<br /> </td>
+   <td>N/A<br /> </td>
   </tr>
  </tbody>
 </table>

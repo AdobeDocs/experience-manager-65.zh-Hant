@@ -10,7 +10,7 @@ exl-id: 48479725-8b52-4ff2-a599-d20958b26ee6
 source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
 workflow-type: tm+mt
 source-wordcount: '871'
-ht-degree: 7%
+ht-degree: 10%
 
 ---
 
@@ -150,7 +150,7 @@ CIF核心元件可用於任何專案，方法是納入所提供的 `all` 套件�
 
 ### 將AEM連線至Commerce System
 
-要將項目連接到商務系統AEM，必須使用商務系統的GraphQL端點進行配置。
+若要將專案連結至商務系統AEM，必須使用商務系統的GraphQL端點進行設定。
 
 兩者，由 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 或 [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)，已包含 [預設設定](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json) 必須調整。
 
@@ -158,9 +158,9 @@ CIF核心元件可用於任何專案，方法是納入所提供的 `all` 套件�
 
 AEM Commerce Add-On和CIF Core Components可透過AEM伺服器直接透過瀏覽器連線至commerce GraphQL端點。 用戶端CIF核心元件和CIF附加元件製作工具預設會連線至 `/api/graphql`. 如有需要，可透過CIFCloud Service設定加以調整（請參閱下方）。
 
-CIF附加元件提供GraphQL代理Servlet，位於 `/api/graphql`. 如果您不打算使用本機AEM Dispatcher，建議您也設定GraphQL代理Servlet。
+CIF附加元件提供位於的GraphQL Proxy Servlet `/api/graphql`. 如果您不打算使用本機AEM Dispatcher，建議您也設定GraphQL代理Servlet。
 
-導覽至http://localhost:4502/system/console/configMgr並建立 `Adobe CIF GraphQL Proxy Configuration` 服務。 使用與上述GraphQL客戶端所用的商務系統的相同GraphQL端點。
+導覽至http://localhost:4502/system/console/configMgr並建立 `Adobe CIF GraphQL Proxy Configuration` 服務。 使用與上述GraphQL用戶端所用相同之商務系統GraphQL端點。
 
 ## 其他資源
 

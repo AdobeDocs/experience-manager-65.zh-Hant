@@ -14,7 +14,7 @@ exl-id: 2d28cee6-31b0-4288-bad3-4d2ecad7b626
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '737'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -118,7 +118,7 @@ AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 
 
    | 名稱 | 類型 | 值 |
    |---|---|---|
-   | `categories` | String[] | `granite.testing.hobbes.tests` |
+   | `categories` | 字串[] | `granite.testing.hobbes.tests` |
    | `dependencies` | 字串[] | `granite.testing.hobbes.testrunner` |
 
    >[!NOTE]

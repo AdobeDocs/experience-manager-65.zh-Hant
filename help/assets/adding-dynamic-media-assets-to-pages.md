@@ -18,7 +18,7 @@ ht-degree: 6%
 
 ---
 
-# 新增Dynamic Media資產至頁面{#adding-dynamic-media-assets-to-pages}
+# 將 Dynamic Media 資產新增至頁面{#adding-dynamic-media-assets-to-pages}
 
 若要將動態媒體功能新增至您在網站上使用的資產，您可以直接在頁面上新增 **Dynamic Media**、 **Interactive Media**、 **Media**&#x200B;或 **** Video 360全景媒體元件。您可以進入「版面」模式並啟用Dynamic Media元件，以新增元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。動態媒體元件是智慧型的——他們知道您是新增影像還是視訊，而可用的設定選項也會隨之變更。
 

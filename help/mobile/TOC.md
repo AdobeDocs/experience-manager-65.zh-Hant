@@ -41,7 +41,7 @@ ht-degree: 10%
    + [內容屬性和節點](content-properties.md)
    + [建立共用資源導出配置](creating-shared-resources-export-configuration.md)
    + [建立和新增範本和元件](mobile-ondemand-app-templates.md)
-   + [最佳作法](best-practices-aem-mobile.md)
+   + [最佳做法](best-practices-aem-mobile.md)
    + [建立文章匯出設定](creating-article-export-configuration.md)
    + [具有內容同步的行動裝置](mobile-ondemand-contentsync.md)
    + [行動應用程式的頁面範本](apps-architecture.md)

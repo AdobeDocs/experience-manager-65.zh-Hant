@@ -73,8 +73,8 @@ AEM 6.1、6.2SP1、6.3、6.4和6.4 SP1可使用Livefyre Adobe Experience Manager
 
 實作步驟：
 
-1. [快速入門](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html)
-1. [設定AEM以使用Livefyre](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html)
+1. [快速入門](https://helpx.adobe.com/tw/experience-manager/6-3/sites/administering/using/livefyre.html)
+1. [設定AEM以使用Livefyre](https://helpx.adobe.com/tw/experience-manager/6-3/sites/administering/using/livefyre.html)
 1. [將AEM Media Wall元件拖放至頁面](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMSites)
 1. [設定串流並新增規則以組織UGC並顯示在「媒體塗鴉牆」元件上](https://experienceleague.adobe.com/docs/livefyre/using/streams/c-streams.html)
 
@@ -96,7 +96,7 @@ AEM 6.1、6.2SP1、6.3、6.4和6.4 SP1可使用Livefyre Adobe Experience Manager
 
 ### AEM整合 {#aem-integration-1}
 
-AEM 6.1、6.2SP1、6.3、6.4和6.4 SP1可使用Livefyre Adobe Experience Manager套件。 不支援AEM 5.x和6.0。 如需詳細指示，請參閱 [與Livefyre整合](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
+AEM 6.1、6.2SP1、6.3、6.4和6.4 SP1可使用Livefyre Adobe Experience Manager套件。 不支援AEM 5.x和6.0。 如需詳細指示，請參閱 [與Livefyre整合](https://helpx.adobe.com/tw/experience-manager/6-4/sites/administering/using/livefyre.html).
 
 ### 傳統實作(適用於自訂的AEM元件) {#traditional-implementation-for-customized-aem-components-1}
 
@@ -161,7 +161,7 @@ AEM 6.1、6.2SP1、6.3、6.4和6.4 SP1可使用Livefyre Adobe Experience Manager
 
 ### AEM整合 {#aem-integration-2}
 
-AEM 6.1、6.2SP1、6.3、6.4和6.4 SP1可使用Livefyre Adobe Experience Manager套件。 不支援AEM 5.x和6.0。 如需詳細指示，請參閱 [與Livefyre整合](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
+AEM 6.1、6.2SP1、6.3、6.4和6.4 SP1可使用Livefyre Adobe Experience Manager套件。 不支援AEM 5.x和6.0。 如需詳細指示，請參閱 [與Livefyre整合](https://helpx.adobe.com/tw/experience-manager/6-4/sites/administering/using/livefyre.html).
 
 查看元件不是AEM 6.1支援的元件。請檢查 [AEM所有Livefyre應用程式的支援矩陣](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps).
 

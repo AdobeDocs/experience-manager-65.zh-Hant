@@ -69,7 +69,7 @@ ht-degree: 1%
 
 * [建立和新增範本和元件](/help/mobile/mobile-ondemand-app-templates.md)
 * [使用內容屬性來匯出內容](/help/mobile/on-demand-content-properties-exporting.md)
-* [最佳作法](/help/mobile/best-practices-aem-mobile.md)
+* [最佳做法](/help/mobile/best-practices-aem-mobile.md)
 * [開發AEM Mobile內容服務](/help/mobile/developing-content-services.md)
 
 ### 其他資源 {#additional-resources}

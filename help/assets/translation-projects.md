@@ -8,7 +8,7 @@ exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1874'
-ht-degree: 15%
+ht-degree: 17%
 
 ---
 
@@ -137,7 +137,7 @@ ht-degree: 15%
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. 按一下 **翻譯工作** 並排，以在翻譯工作流程中檢視資產。 翻譯工作清單也會顯示資產中繼資料和標籤的項目。 這些項目表示資產的中繼資料和標籤也會翻譯。
+1. 按一下 **翻譯工作** 並排，以在翻譯工作流程中檢視資產。 翻譯工作清單也會顯示資產中繼資料和標記項目。這些項目表示資產中繼資料和標記也已翻譯。
 
    >[!NOTE]
    >

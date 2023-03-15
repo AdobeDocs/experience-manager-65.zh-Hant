@@ -160,8 +160,8 @@ HTML標籤以插入文本元件( `foundation/components/text`)(在設計套件�
 
 要添加包含清單的文本，請執行以下操作：
 
-* 第1
-* 第2
+* 1st
+* 2nd
 
 可在RTE編輯器中編輯的檔案：
 
@@ -453,7 +453,7 @@ HTML標籤中設定的Lang屬性應由設計匯入工具擷取並保留為屬性
 
 data-cq-component中的路徑應為元件的resourceType。
 
-### 最佳作法 {#best-practices}
+### 最佳做法 {#best-practices}
 
 若要搭配在匯入時標示為要進行元件轉換的元素使用，不建議使用類似下列的CSS選取器。
 

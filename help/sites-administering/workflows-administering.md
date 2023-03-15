@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 8b4459c69b73159ce5afd819dfb772df5c51cd16
+source-git-commit: 1b57fca352457e973bd7395e060e3d0495a9d920
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
@@ -98,13 +98,13 @@ ht-degree: 0%
 
 * **失敗詳細資訊**
 開啟視窗以顯示 
-**失敗訊息**, **步驟** 和 **失敗堆棧**.
+**失敗訊息**, **步驟**，和 **失敗堆棧**.
 
 * **開啟歷史記錄**
 顯示工作流歷史記錄的詳細資訊。
 
 * **重試步驟** 再次執行指令碼步驟元件實例。 修正了原始錯誤的原因後，請使用「重試步驟」命令。 例如，在您修正了「處理步驟」所執行指令碼中的錯誤後，請重試該步驟。
-* **終止** 如果錯誤導致工作流的不可重複情況，則終止工作流。 例如，工作流可以依賴於環境條件，例如儲存庫中對工作流實例不再有效的資訊。
+* **終止** 如果錯誤導致工作流不可調解的情況，則終止工作流。 例如，工作流可以依賴環境條件，例如對工作流實例不再有效的儲存庫中的資訊。
 * **終止並重試** 類似 **終止** 除了使用原始裝載、標題和說明來啟動新的工作流程例項。
 
 要調查失敗，然後恢復或之後終止工作流，請執行以下步驟：
@@ -159,7 +159,7 @@ ht-degree: 0%
   <tr>
    <td>要清除的模型</td>
    <td>scheduledpurge.modelIds</td>
-   <td><p>要清除的工作流模型的ID。 ID是指向模型節點的路徑，例如：<br /> /conf/global/settings/workflow/models/dam/update_asset/jcr:content/model<br /> 指定不要清除所有工作流模型的實例的值。</p> <p>若要指定多個模型，請按一下Web控制台中的+按鈕。 </p> </td>
+   <td><p>要清除的工作流模型的ID。 ID是指向模型節點的路徑，例如：<br /> /var/workflow/models/dam/update/asset<br /> </p> <p>若要指定多個模型，請按一下Web控制台中的+按鈕。 </p> <p>請勿指定任何值來清除所有工作流模型的實例。</p> </td>
   </tr>
   <tr>
    <td>工作流程年齡</td>
@@ -193,7 +193,7 @@ ht-degree: 0%
 
 屬性 *userMetadataPersistenceEnabled* 將儲存在 *jcr:content節點* 工作流模型。 此標幟會以 *cq:userMetaDataCustomPersistenceEnabled*.
 
-下圖顯示必須在工作流程上設定標幟。
+下圖顯示如何在工作流程上設定標幟。
 
 ![workflow-externalize-config](assets/workflow-externalize-config.png)
 

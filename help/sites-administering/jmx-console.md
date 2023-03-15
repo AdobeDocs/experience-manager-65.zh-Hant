@@ -244,7 +244,7 @@ CRX存放庫相關資訊
 <table>
  <tbody>
   <tr>
-   <th>關鍵</th>
+   <th>金鑰</th>
    <th>值</th>
   </tr>
   <tr>

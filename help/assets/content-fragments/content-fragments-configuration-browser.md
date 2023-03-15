@@ -7,7 +7,7 @@ exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
 source-git-commit: da41f48d08b7629a734e2f60077af6190a7fee8f
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 21%
+ht-degree: 27%
 
 ---
 
@@ -52,14 +52,14 @@ ht-degree: 21%
       * **內容片段模型**
       * **GraphQL永久查詢**
 
-      ![定義配置](assets/cfm-conf-01.png)
+      ![定義設定](assets/cfm-conf-01.png)
 
 
 1. 選擇 **建立** 以儲存定義。
 
 <!-- 1. Select the location appropriate to your website. -->
 
-### 將設定套用至資產資料夾 {#apply-the-configuration-to-your-assets-folder}
+### 套用設定到資產資料夾 {#apply-the-configuration-to-your-assets-folder}
 
 設定時 **全球** 已啟用內容片段功能，然後套用至任何「資產」資料夾。
 

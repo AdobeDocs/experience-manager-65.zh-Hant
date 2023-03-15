@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # AEM Brackets擴充功能{#aem-brackets-extension}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Brackets擴充功能提供順暢的工作流程，可編輯AEM元件和用戶端程式庫，並運用 [方括弧](https://brackets.io/) 程式碼編輯器，可從程式碼編輯器記憶體取Photoshop檔案和層。 擴充功能提供的輕鬆同步化功能（不需要Maven或File Vault）可提高開發人員的效率，也有助於具備有限AEM知識的前端開發人員參與專案。 此擴充功能也提供 [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，這消除了JSP的複雜性，使元件開發更輕鬆、更安全。
 

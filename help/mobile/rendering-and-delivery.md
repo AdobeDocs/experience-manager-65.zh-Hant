@@ -12,7 +12,7 @@ exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -78,7 +78,7 @@ AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉�
   </tr>
   <tr>
    <td>includeComponents</td>
-   <td>String[]</td>
+   <td>字串[]</td>
    <td>包含所有內容</td>
    <td>sling:resourceType</td>
    <td>從JSON匯出中排除具有指定sling:resourceType之節點的詳細資料</td>
@@ -120,7 +120,7 @@ AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉�
   </tr>
   <tr>
    <td>excludeChildren</td>
-   <td>String[]<br /> <br /> </td>
+   <td>字串[]<br /> <br /> </td>
    <td>排除無</td>
    <td>子名稱</td>
    <td>僅包含來自JSON匯出的指定子項，排除其他</td>
@@ -141,7 +141,7 @@ AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉�
 
 | 名稱 | resourceTypeOverrides |
 |---|---|
-| jcr:primaryType | nt：非結構化 |
+| jcr:primaryType | nt:unstructured |
 
 下表顯示屬性：
 

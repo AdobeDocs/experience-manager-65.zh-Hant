@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 在安裝時設定管理員密碼{#configure-the-admin-password-on-installation}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 自6.3版開始，AEM允許在安裝新執行個體時使用命令列設定管理員密碼。
 

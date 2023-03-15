@@ -14,7 +14,7 @@ exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
 source-git-commit: 1ee82589ca9284a8ad5ecf3ca156fe10f314846a
 workflow-type: tm+mt
 source-wordcount: '1754'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -180,7 +180,7 @@ AEM中的SPA適用的SSR需要Adobe I/O Runtime，這是轉譯應用程式內容
 
 >[!NOTE]
 >
->任何AEM專案皆應運用 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，可支援使用React或Angular的SPA專案，並運用SPA SDK。
+>任何 AEM 專案都應利用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，它支援使用 React 或 Angular 的 SPA 專案並利用 SPA SDK。
 
 ## 使用Node.js {#using-node-js}
 

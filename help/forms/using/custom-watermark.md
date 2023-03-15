@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 信函PDF預覽中的自訂浮水印{#custom-watermark-in-letter-pdf-preview}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在「建立通信」UI中，代理用戶會以最終形式預覽通信，在該形式下，通信將被發送到後置處理，例如用於電子郵件或打印。
 

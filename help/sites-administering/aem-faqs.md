@@ -86,7 +86,7 @@ Adobe Experience Manager(AEM)6.4隨SSL精靈提供，並提供使用者介面以
 
 請參閱 [了解升級AEM的理由](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html) 說明考慮升級至最新版Adobe Experience Manager之客戶的主要功能高階劃分。
 
-## Assets {#assets}
+## 資產 {#assets}
 
 ### 上傳MP4檔案（例如，使用拖放方法）時，為何「資產」工作流程會重複？ {#why-the-assets-workflow-repeats-itself-while-uploading-mp-files-for-example-using-drag-and-drop-method}
 

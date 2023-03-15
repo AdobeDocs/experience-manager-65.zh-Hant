@@ -1,7 +1,7 @@
 ---
-title: 開始開發 AEM Sites - WKND 教學課程
+title: 開發 AEM Sites 快速入門 - WKND 教學課程
 seo-title: Getting Started Developing AEM Sites - WKND Tutorial
-description: 剛開發AEM? 需要重新整理最佳實務嗎？ 這是開始的地方！ 本多部分教學課程的目標是教導剛接觸AEM的開發人員如何使用最新標準和技術在AEM中實作網站。
+description: 第一次開發 AEM？需要複習最佳做法？這是開始的地方！這個由多個部分組成的教學課程的目標是指導 AEM 新手開發人員如何使用最新的標準和技術在 AEM 中實作網站。
 seo-description: New to developing AEM? Need a refresher on best practices? This is the place to start! The goal for this multi-part tutorial is to teach a developer who is new to AEM how to implement a website in AEM using the latest standards and technologies.
 uuid: 12861ca8-b5b9-404e-9788-9d13aa7c5a68
 contentOwner: User
@@ -14,27 +14,27 @@ exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
 source-wordcount: '259'
-ht-degree: 18%
+ht-degree: 78%
 
 ---
 
-# 開始開發 AEM Sites - WKND 教學課程{#getting-started-developing-aem-sites-wknd-tutorial}
+# 開發 AEM Sites 快速入門 - WKND 教學課程{#getting-started-developing-aem-sites-wknd-tutorial}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
-剛開發AEM? 需要重新整理最佳實務嗎？ 這是開始的地方！
+第一次開發 AEM？需要複習最佳做法？這是開始的地方！
 
-本多部分教學課程的目標是教導剛接觸AEM的開發人員如何使用最新標準和技術在AEM中實作網站。 希望在本教學課程結束時，您能了解AEM平台的基本基礎，並了解一些常見設計模式的知識。
+這個由多個部分組成的教學課程的目標是指導 AEM 新手開發人員如何使用最新的標準和技術在 AEM 中實作網站。希望在本教學課程結束時，您將了解 AEM 平台的基本知識和一些常見設計模式的知識。
 
 ## WKND 開發人員教學課程 {#wknd-developer-tutorial}
 
 ![WKND](assets/screen_shot_2018-11-23at152453.png)
 
-[您可在此處取得WKND開發人員教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant) 並透過最新技術和最佳實務，引導您建立AEM專案。
+[這裡提供 WKND 開發人員教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)，它會逐步指導您如何使用最新技術和最佳做法建立 AEM 專案。
 
 ## 核心概念 {#core-concepts}
 
-本教學課程實作運用AEM的許多強大功能。 網站的實作方式為：
+教學課程實作利用 AEM 的許多強大功能。此網站將使用以下項目實作：
 
 * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)

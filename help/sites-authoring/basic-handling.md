@@ -139,7 +139,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
 
 ![bh-04](assets/bh-04.png)
 
-## 標題 {#the-header}
+## 標頭 {#the-header}
 
 標題一律顯示在畫面頂端。 雖然無論您位於系統中的哪個位置，標題中的大多數選項都保持不變，但有些選項是內容專屬的。
 
@@ -298,7 +298,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
 
 ![bh-13](assets/bh-13.png)
 
-## 檢視及選取資源 {#viewing-and-selecting-resources}
+## 檢視和選擇資源 {#viewing-and-selecting-resources}
 
 檢視、導覽和選取在所有檢視中的概念上都相同，但處理方式的變異很小，取決於您使用的檢視。
 
@@ -510,7 +510,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
 
    ![bh-24](assets/bh-24.png)
 
-## 邊欄選取器 {#rail-selector}
+## 邊欄選擇器 {#rail-selector}
 
 此 **邊欄選取器** 在視窗左上角，並根據您目前的主控台顯示選項。
 
@@ -551,7 +551,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
       * [評論](#timelineaddingandviewingcomments)
       * 註解
       * 活動
-      * [啟動](/help/sites-authoring/launches.md)
+      * [Launch](/help/sites-authoring/launches.md)
       * [版本](/help/sites-authoring/working-with-page-versions.md)
       * [工作流程](/help/sites-authoring/workflows-applying.md)
 
@@ -574,7 +574,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
 
 **參考** 顯示與所選資源的任何連接。 例如，在 **網站** 主控台 [參照](/help/sites-authoring/author-environment-tools.md#showingpagereferences) 頁面顯示：
 
-* [啟動](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+* [Launch](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 * [即時副本](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)
 * [語言副本](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
 * 內容參考：

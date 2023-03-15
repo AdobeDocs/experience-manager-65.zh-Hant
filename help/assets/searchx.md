@@ -22,7 +22,7 @@ ht-degree: 19%
 
 >[!CAUTION]
 >
->截止日期 [!DNL Experience Manager] 6.4，已棄用傳統UI。 如需公告，請參閱 [過時和移除的功能](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html). Adobe建議使用觸控式UI。 如需自訂，請參閱 [搜尋面向](/help/assets/search-facets.md).
+>截止日期 [!DNL Experience Manager] 6.4，已棄用傳統UI。 如需公告，請參閱 [過時和移除的功能](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html?lang=zh-Hant). Adobe建議使用觸控式UI。 如需自訂，請參閱 [搜尋面向](/help/assets/search-facets.md).
 
 ## 覆蓋 {#overlaying}
 
@@ -293,7 +293,7 @@ ht-degree: 19%
 | 崩潰 | 字串 | 折疊級別。 預設為 `level1` |
 | triggerSearch | 布林值 | 用於在檢查時觸發搜索的標籤。 預設為false |
 | searchCallback | 函數 | 觸發搜尋的回呼。 預設為 `CQ.wcm.SiteAdmin.doSearch` |
-| searchTimeoutTime | 數量 | 觸發searchCallback前的逾時。 預設為800毫秒 |
+| searchTimeoutTime | 數字 | 觸發searchCallback前的逾時。 預設為800毫秒 |
 
 ## 自訂搜尋結果 {#customizing-search-results}
 

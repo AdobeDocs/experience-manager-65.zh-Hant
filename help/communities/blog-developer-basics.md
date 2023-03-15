@@ -98,7 +98,7 @@ UGC應使用其中一種標準的協調方法來協調。
 
 **UGC在存放庫中的位置和格式可能會變更，恕不另行警告**.
 
-請參閱 :
+請參閱：
 
 * [儲存資源提供程式概述](/help/communities/srp.md)  — 簡介和存放庫使用概觀。
 * [SRP和UGC要點](/help/communities/srp-and-ugc.md) - SRP實用程式方法和示例。

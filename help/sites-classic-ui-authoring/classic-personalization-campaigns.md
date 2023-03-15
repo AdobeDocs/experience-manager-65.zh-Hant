@@ -13,7 +13,7 @@ exl-id: d1741525-a475-4a76-bd16-55318023495e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '628'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -27,10 +27,10 @@ ht-degree: 1%
 
 * [茶匙和策略](/help/sites-classic-ui-authoring/classic-personalization-campaigns-teasers-strategy.md)
 * [電子郵件行銷](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email.md)
-* [著陸頁面](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
+* [登陸頁面](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
 * [目標選件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-target-offers.md)
 * [與行銷活動經理合作](/help/sites-classic-ui-authoring/classic-personalization-campaigns-mktg-manager.md)
-* [了解區段](/help/sites-classic-ui-authoring/classic-personalization-campaigns-segmentation.md)
+* [了解分段](/help/sites-classic-ui-authoring/classic-personalization-campaigns-segmentation.md)
 * [設定您的行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns-setting-up-your.md)
 
 行銷活動管理由各種元素組成：

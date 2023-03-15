@@ -9,7 +9,7 @@ exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
 workflow-type: tm+mt
 source-wordcount: '3630'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -93,7 +93,7 @@ ht-degree: 7%
 | [!UICONTROL 區段標題] | 新增區段標題，以取得通用元件清單。 |
 | [!UICONTROL 單行文字] | 新增單行文字屬性。 會儲存為字串。 |
 | [!UICONTROL 多值文字] | 新增多值文字屬性。 會儲存為字串陣列。 |
-| [!UICONTROL 數量] | 新增數字元件。 |
+| [!UICONTROL 數字] | 新增數字元件。 |
 | [!UICONTROL 日期] | 新增日期元件。 |
 | [!UICONTROL 下拉式] | 新增下拉式清單。 |
 | [!UICONTROL 標準標記] | 新增標記. |
@@ -155,7 +155,7 @@ ht-degree: 7%
 
 #### 在架構表單中新增或刪除索引標籤 {#adding-deleting-a-tab-in-the-schema-form}
 
-架構編輯器可讓您新增或刪除標籤。預設架構表單包含 **[!UICONTROL 基本]**, **[!UICONTROL 進階]** , **[!UICONTROL IPTC]**，和 **[!UICONTROL IPTC擴展]** 標籤。
+架構編輯器可讓您新增或刪除標籤。預設架構表單包含 **[!UICONTROL 基本]**, **[!UICONTROL 進階]** , **[!UICONTROL IPTC]**，和 **[!UICONTROL IPTC擴展]** 頁簽。
 
 按一下 `+` 在架構表單上添加頁簽。 依預設，新索引標籤的名稱為 `Unnamed-1`. 您可以從 **[!UICONTROL 設定]** 標籤。 按一下 `X` 刪除頁簽。
 
@@ -233,7 +233,7 @@ ht-degree: 7%
    ![select_dependentfield](assets/select_dependentfield.png)
 
 1. 在 **[!UICONTROL 需求]**，選擇 **[!UICONTROL 必要，根據新規則]** 選項。
-1. 按一下 **[!UICONTROL 新增規則]** 並選擇 **[!UICONTROL 資產類型]** 欄位來建立相依性。 也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。按一下 **[!UICONTROL 完成]** 以儲存變更。
+1. 按一下 **[!UICONTROL 新增規則]** 並選擇 **[!UICONTROL 資產類型]** 欄位來建立相依性。 也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。按一下「**[!UICONTROL 完成]**」以儲存變更。
 
    ![define_rule](assets/define_rule.png)
 
@@ -243,7 +243,7 @@ ht-degree: 7%
 
 1. 在「可 **[!UICONTROL 見性]**」下，選擇「可 **[!UICONTROL 見」，根據新規則選項]** 。
 
-1. 按一下 **[!UICONTROL 新增規則]** 並選擇 **[!UICONTROL 資產類型]** 欄位來建立相依性。 也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。按一下 **[!UICONTROL 完成]** 以儲存變更。
+1. 按一下 **[!UICONTROL 新增規則]** 並選擇 **[!UICONTROL 資產類型]** 欄位來建立相依性。 也選擇要在其上建立相關性的欄位值。在這種情況下，請選擇「 **[!UICONTROL 視訊」]**。按一下「**[!UICONTROL 完成]**」以儲存變更。
 
    ![define_visibilityrule](assets/define_visibilityrule.png)
 

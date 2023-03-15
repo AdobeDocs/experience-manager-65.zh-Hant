@@ -1,5 +1,5 @@
 ---
-title: 設定ContextHub
+title: 設定 ContextHub
 seo-title: Configuring ContextHub
 description: 了解如何設定Context Hub。
 seo-description: Learn how to configure Context Hub.
@@ -12,11 +12,11 @@ exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
 source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1842'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 設定ContextHub {#configuring-contexthub}
+# 設定 ContextHub {#configuring-contexthub}
 
 ContextHub是儲存、操控和呈現內容資料的架構。 如需ContextHub的詳細資訊，請參閱 [開發人員檔案](/help/sites-developing/contexthub.md). ContextHub取代 [用戶端內容](/help/sites-administering/client-context.md) 在觸控式UI中。
 
@@ -135,7 +135,7 @@ UI模組屬性包含詳細設定，您可在此提供模組特定屬性的值。
 
 Detail Configuration屬性的值是 `config` 物件。
 
-### 備用儲存示例 {#sample-store-candidates}
+### 範例商店候選者 {#sample-store-candidates}
 
 AEM提供下列範例存放區候選項，供您建立存放區。
 

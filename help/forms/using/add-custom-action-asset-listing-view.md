@@ -20,7 +20,7 @@ ht-degree: 2%
 
 # 將自訂動作新增至資產清單檢視{#add-custom-action-to-the-asset-listing-view}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 通信管理解決方案可讓您將自訂動作新增至「管理資產」使用者介面。
 

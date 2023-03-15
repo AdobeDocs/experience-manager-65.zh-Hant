@@ -55,7 +55,7 @@ ht-degree: 4%
    <td>這些主控台可讓您匯入 <a href="/help/sites-classic-ui-authoring/classicui-assets.md">管理數位資產</a> 例如影像、視頻、文檔和音頻檔案。 然後，在相同AEM例項上執行的任何網站都可以使用這些資產。 </td>
   </tr>
   <tr>
-   <td><strong>啟動</strong></td>
+   <td><strong>Launch</strong></td>
    <td>這可協助您管理 <a href="/help/sites-classic-ui-authoring/classic-launches.md">啟動</a>;這些功能可讓您開發內容，以供日後發行一或多個已啟動的網頁使用。<br /> <i>注意：在觸控式UI中，Sites主控台和「參考」邊欄提供大部分相同的功能。</i> <i>如有需要，此控制台可從「工具」控制台使用；依次選擇操作和啟動。</i></td>
   </tr>
   <tr>
@@ -204,7 +204,7 @@ ht-degree: 4%
    <td>顯示頁面已鎖定的時間以及已鎖定的使用者帳戶。</td>
   </tr>
   <tr>
-   <td>即時副本</td>
+   <td>Live Copy</td>
    <td>指出頁面是即時副本的一部分。</td>
   </tr>
  </tbody>
@@ -223,7 +223,7 @@ ht-degree: 4%
 | 已發佈 | 紅色 | 發行失敗. 與發佈執行個體沒有連線。 這也代表內容已停用。 |
 | 已發佈 | *blank* | 此頁面從未發佈。 |
 | 修改時間 | 藍色 | 自上次發佈後已修改頁面。 |
-| 修改時間 | *空白* | 自上次發佈後，此頁從未被修改過，也未被修改過。 |
+| 修改時間 | *blank* | 自上次發佈後，此頁從未被修改過，也未被修改過。 |
 
 ## 內容功能表 {#context-menus}
 

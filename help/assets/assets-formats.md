@@ -29,21 +29,21 @@ ht-degree: 9%
 
 支援的點陣影像格式 [!DNL Assets] 為：
 
-| 格式 | 儲存空間 | 中繼資料管理 | 中繼資料擷取 | 縮圖產生 | 編輯 | 中繼資料回寫 | 分析 |
+| 格式 | 儲存空間 | 中繼資料管理 | 中繼資料擷取 | 縮圖產生 | 編輯 | 中繼資料回寫 | Insights |
 | ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ |
-| TIFF | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| TIFF | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| BMP | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ |
-| PNM | ✓ | ✓ | - | - | - | - | ✓ |
-| PGM | ✓ | ✓ | - | - | - | - | ✓ |
-| PBM | ✓ | ✓ | - | - | - | - | ✓ |
-| PPM | ✓ | ✓ | - | - | - | - | ✓ |
-| PSD協定 | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
-| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | - | ✓ | - |
-| PICT | - | - | - | - | - | - | ✓ |
-| PSB | ✓ | ✓ | ✓ | ✓ | - | - | - |
+| BMP | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| PNM | ✓ | ✓ | − | − | − | − | ✓ |
+| PGM | ✓ | ✓ | − | − | − | − | ✓ |
+| PBM | ✓ | ✓ | − | − | − | − | ✓ |
+| PPM | ✓ | ✓ | − | − | − | − | ✓ |
+| PSD協定 | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
+| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | − | ✓ | − |
+| PICT | − | − | − | − | − | − | ✓ |
+| PSB | ✓ | ✓ | ✓ | ✓ | − | − | − |
 
 *從PSD檔案擷取合併的影像。 這是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 
@@ -63,12 +63,12 @@ ht-degree: 9%
 
 | 格式 | 儲存空間 | 版本設定 | 工作流程 | 發佈 | 存取控制 | 縮圖預覽 | 3D預覽 | Dynamic Media傳送 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ | - | - |
-| gLB | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
-| gLTF | ✓ | ✓ | ✓ |  | ✓ | - | ✓ | - |
-| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
-| STL | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
-| USDz | ✓ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
+| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ | − | − |
+| gLB | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| gLTF | ✓ | ✓ | ✓ |  | ✓ | − | ✓ | − |
+| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| STL | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| USDz | ✓ | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
 
 ## 支援的PDF模擬轉譯器程式庫 {#supported-pdf-rasterizer-library}
 
@@ -98,47 +98,47 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 
 | 格式 | 儲存空間 | [中繼資料管理](metadata.md) | 全文<br> 摘取 | [中繼資料擷取](metadata.md) | 縮圖<br> 產生 | [子資產提取](managing-linked-subassets.md) | [中繼資料回寫](xmp-writeback.md) | [連線資產](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|---|---|---|---|---|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ | - |
-| DOC | ✓ | ✓ | ✓ | ✓ | - | - | - | ✓ |
-| DOCX | ✓ | ✓ | ✓ | ✓ | - | - | - | ✓ |
-| ODT | ✓ | ✓ | ✓ | - | - | - | - | ✓ |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
+| DOC | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
+| DOCX | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
+| ODT | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
 | [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| HTML | ✓ | ✓ | ✓ | - | - | - | - | ✓ |
-| RTF | ✓ | ✓ | ✓ | - | - | - | - | ✓ |
-| TXT | ✓ | ✓ | ✓ | - | - | - | - | ✓ |
-| XLS | ✓ | ✓ | ✓ | - | - | - | - | ✓ |
-| XLSX | ✓ | ✓ | ✓ | ✓ | - | - | - | ✓ |
-| ODS | ✓ | ✓ | ✓ | - | - | - | - | - |
-| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ |
-| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ |
-| ODP | ✓ | ✓ | ✓ | - | - | - | - | - |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ | - |
-| PS | ✓ | ✓ | - | - | - | - | - | - |
-| QXP | ✓ | ✓ | - | - | - | - | - | - |
-| ePub | ✓ | ✓ | - | ✓ | ✓ | - | - | - |
+| HTML | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| RTF | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| TXT | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| XLS | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| XLSX | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
+| ODS | ✓ | ✓ | ✓ | − | − | − | − | − |
+| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| ODP | ✓ | ✓ | ✓ | − | − | − | − | − |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
+| PS | ✓ | ✓ | − | − | − | − | − | − |
+| QXP | ✓ | ✓ | − | − | − | − | − | − |
+| ePub | ✓ | ✓ | − | ✓ | ✓ | − | − | − |
 
 ## 支援的多媒體格式 {#supported-multimedia-formats}
 
 |  | 儲存空間 | 中繼資料管理 | 中繼資料擷取 | 縮圖產生 | FFmpeg轉碼 |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ | - | - | &#42; |
-| MIDI | ✓ | ✓ | - | - | &#42; |
-| 3GP | ✓ | ✓ | - | - | &#42; |
-| MP3 | ✓ | ✓ | ✓ | - | &#42; |
-| MPG | ✓ | ✓ | - | - | &#42; |
-| OGA | ✓ | ✓ | - | - | &#42; |
-| OGG | ✓ | ✓ | - | - | &#42; |
-| RA | ✓ | ✓ | - | - | &#42; |
-| WAV | ✓ | ✓ | - | - | &#42; |
-| WMA | ✓ | ✓ | - | - | &#42; |
-| DVI | ✓ | ✓ | - | &#42; | &#42; |
-| FLV | ✓ | ✓ | - | &#42; | &#42; |
-| M4V | ✓ | ✓ | - | &#42; | &#42; |
-| MPEG | ✓ | ✓ | - | &#42; | &#42; |
-| OGV | ✓ | ✓ | - | &#42; | &#42; |
-| MOV | ✓ | ✓ | - | &#42; | &#42; |
-| WMV | ✓ | ✓ | - | &#42; | &#42; |
-| SWF | ✓ | ✓ | - | - | - |
+| AAC | ✓ | ✓ | − | − | &#42; |
+| MIDI | ✓ | ✓ | − | − | &#42; |
+| 3GP | ✓ | ✓ | − | − | &#42; |
+| MP3 | ✓ | ✓ | ✓ | − | &#42; |
+| MPG | ✓ | ✓ | − | − | &#42; |
+| OGA | ✓ | ✓ | − | − | &#42; |
+| OGG | ✓ | ✓ | − | − | &#42; |
+| RA | ✓ | ✓ | − | − | &#42; |
+| WAV | ✓ | ✓ | − | − | &#42; |
+| WMA | ✓ | ✓ | − | − | &#42; |
+| DVI | ✓ | ✓ | − | &#42; | &#42; |
+| FLV | ✓ | ✓ | − | &#42; | &#42; |
+| M4V | ✓ | ✓ | − | &#42; | &#42; |
+| MPEG | ✓ | ✓ | − | &#42; | &#42; |
+| OGV | ✓ | ✓ | − | &#42; | &#42; |
+| MOV | ✓ | ✓ | − | &#42; | &#42; |
+| WMV | ✓ | ✓ | − | &#42; | &#42; |
+| SWF | ✓ | ✓ | − | − | − |
 
 ## 支援的封存格式 {#supported-archive-formats}
 
@@ -146,10 +146,10 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 
 | 格式 | 儲存空間 | 版本設定 | 工作流程 | 發佈 | 存取控制 | Dynamic Media傳送 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| TGZ | ✓ | ✓ | ✓ | ✓ | ✓ | - |
-| JAR | ✓ | ✓ | ✓ | ✓ | ✓ | - |
-| RAR | ✓ | ✓ | ✓ | ✓ | ✓ | - |
-| TAR | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| TGZ | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| JAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| RAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| TAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | ZIP | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ## 其他支援的格式 {#other-supported-formats}
@@ -158,11 +158,11 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 
 | 格式 | 儲存空間 | 版本設定 | 工作流程 | 發佈 | 存取控制 | Dynamic Media傳送 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| SVG | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| SVG | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| JavaScript（若已設定自己的傳送網域） | - | - | - | - | - | ✓ |
+| JavaScript（若已設定自己的傳送網域） | − | − | − | − | − | ✓ |
 
 >[!NOTE]
 >
@@ -186,7 +186,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | AVI | video/x-msvideo |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | BMP | image/bmp |  |  |
 | CSS | text/css |  |  |
-| 檔案 | application/msword |  |  |
+| DOC | application/msword |  |  |
 | EPS | <ul><li>application/postscript</li><li>應用程式/eps</li><li>application/x-eps</li><li>影像/eps</li><li>image/x-eps</li></ul> |  |  |
 | F4V | video/x-f4v |  | ExcludeMasterVideoFromAVS |
 | FLA | application/x-shockwave-flash |  |  |
@@ -197,14 +197,14 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | ICM | application/vnd.iccprofile |  |  |
 | INDD | application/x-indesign |  |  |
 | JPEG | image/jpeg |  |  |
-| JPG | 影像/jpeg |  |  |
+| JPG | image/jpeg |  |  |
 | M2V | video/mpeg |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | M4V | video/x-m4v |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | MOV | video/quicktime |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | MP3 | audio/mpeg |  |  |
 | MP4 | video/mp4 |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
-| MPEG | 視頻/mpeg |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
-| MPG | 視頻/mpeg |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
+| MPEG | video/mpeg |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
+| MPG | video/mpeg |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | MTS | model/vnd.mts |  |  |
 | OGV | video/ogg |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | OTF | application/x-font-otf |  |  |
@@ -238,14 +238,14 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 |---|---|---|---|
 | AVI | A/V插播 | XVID、DIVX、HDV、MiniDV(DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
 | FLV、F4V | AdobeFlash | H264/AVC, Flix VP6, H263, Sorenson | SWF（向量動畫檔案） |
-| M4V | Apple iTunes | H264/AVC | - |
-| MKV | 馬特羅斯卡 | H264/AVC | - |
+| M4V | Apple iTunes | H264/AVC | − |
+| MKV | 馬特羅斯卡 | H264/AVC | − |
 | MOV, QT | Apple QuickTime | H264/AVC、Apple ProRes422和HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV(DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple中級，Apple動畫 |
-| MP4 | MPEG-4 | H264/AVC（所有配置檔案） | - |
-| MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
-| MXF‡ | MXF | Sony XDCAM、MPEG-2、MPEG-4、松下DVCPro | - |
-| 奧格夫、奧格 | 奧格 | 蒂奧拉，VP3，狄拉克 | - |
-| WebM | WebM | Google VP8 | - |
+| MP4 | MPEG-4 | H264/AVC（所有配置檔案） | − |
+| MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | − |
+| MXF‡ | MXF | Sony XDCAM、MPEG-2、MPEG-4、松下DVCPro | − |
+| 奧格夫、奧格 | 奧格 | 蒂奧拉，VP3，狄拉克 | − |
+| WebM | WebM | Google VP8 | − |
 | WMV | Windows Media 9 | WMV3(v9)、WMV2(v8)、WMV1(v7)、GoToMeeting(G2M2、G2M3、G2M4) | Microsoft®螢幕(MSS2)、Microsoft®照片(WVP2) |
 
 *此視訊格式尚不支援與Dynamic Media中的互動式視訊搭配使用，或與Experience Manager Assets中的附註搭配使用。
@@ -254,8 +254,8 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 
 | 格式 | 上傳<br> （輸入格式） | 建立<br> 影像<br> 預設集<br> （輸出格式） | 預覽<br> 動態<br> 轉譯 | 傳遞<br> 動態<br> 轉譯 | 下載<br> 動態<br> 轉譯 |
 |---|:---:|:---:|:---:|:---:|:---:|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | - | - | - | - |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | - | - | - | - |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | − | − | − | − |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | − | − | − | − |
 | [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) （請參閱下方附註） | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 >[!NOTE]
@@ -275,13 +275,13 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | 格式 | 上傳<br> （輸入格式） | 建立<br> 影像<br> 預設集<br> （輸出格式） | 預覽<br> 動態<br> 轉譯 | 傳遞<br> 動態<br> 轉譯 | 下載<br> 動態<br> 轉譯 | 設定支援此格式的類型 |
 |---|:---:|:---:|:---:|:---:|:---:| --- |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md), [混合媒體](/help/assets/mixed-media-sets.md)，和 [回轉](/help/assets/spin-sets.md) |
-| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md), [混合媒體](/help/assets/mixed-media-sets.md)，和 [回轉](/help/assets/spin-sets.md) |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md), [混合媒體](/help/assets/mixed-media-sets.md)，和 [回轉](/help/assets/spin-sets.md) |
-| BMP | ✓ | - | - | - | - | [影像](/help/assets/image-sets.md), [混合媒體](/help/assets/mixed-media-sets.md)，和 [回轉](/help/assets/spin-sets.md) |
-| PSD協定 | ✓ | - | - | - | - | - |
-| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | - |
-| PICT | ✓ | - | - | - | - | - |
+| BMP | ✓ | − | − | − | − | [影像](/help/assets/image-sets.md), [混合媒體](/help/assets/mixed-media-sets.md)，和 [回轉](/help/assets/spin-sets.md) |
+| PSD協定 | ✓ | − | − | − | − | − |
+| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| PICT | ✓ | − | − | − | − | − |
 
 *從PSD檔案擷取合併的影像。 這是由Adobe Photoshop產生並包含在PSD檔案中的影像。 根據設定，合併的影像可能是實際影像，也可能不是實際影像。
 

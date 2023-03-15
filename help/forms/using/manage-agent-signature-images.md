@@ -14,13 +14,13 @@ exl-id: f044ed75-bb72-4be1-aef6-2fb3b2a2697b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 管理代理簽名映像{#manage-agent-signature-images}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在通信管理中，您可以使用影像在信函中呈現代理簽名。 設定代理簽名影像後，在建立信函時，可以將信函中的代理簽名影像呈現為發件人代理的簽名。
 

@@ -1,22 +1,22 @@
 ---
-title: 內容片段的遠端AEM GraphQL查詢驗證
-description: 了解遠端AEM GraphQL查詢所需的驗證，以保護無周邊內容的傳送安全。
+title: 針對內容片段之遠端 AEM GraphQL 查詢的驗證
+description: 了解必須對遠程 AEM GraphQL 查詢執行的驗證，以確保無周邊內容傳遞的安全。
 feature: Content Fragments,GraphQL API
 exl-id: 167f3318-7bc7-48fc-aaa9-73da43433f2f
 source-git-commit: 9278ba4fe85edca4ab5741f89c0fc0ef2cf2764d
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 0%
+ht-degree: 61%
 
 ---
 
-# 內容片段的遠端AEM GraphQL查詢驗證 {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
+# 針對內容片段之遠端 AEM GraphQL 查詢的驗證 {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
 
-主要使用案例 [Adobe Experience Manager(AEM)用於內容片段傳送的GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) 接受來自第三方應用程式或服務的遠程查詢。 這些遠端查詢可能需要經過驗證的API存取，以保護無頭式內容傳送的安全。
+主要使用案例 [Adobe Experience Manager(AEM)GraphQL API內容片段傳送](/help/assets/content-fragments/graphql-api-content-fragments.md) 接受來自第三方應用程式或服務的遠程查詢。 這些遠端查詢可能需要經驗證的 API 存取權，以確保無周邊內容傳遞的安全。
 
 >[!NOTE]
 >
->若要進行測試和開發，您也可以直接使用 [GraphiQL介面](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) 介面。
+>對於測試和開發，您還可以使用 [GraphiQL 介面](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)直接存取 AEM GraphQL API。
 
 為了驗證，協力廠商服務需要使用AEM帳戶使用者名稱和密碼進行驗證。
 

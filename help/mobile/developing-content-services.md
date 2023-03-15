@@ -1,7 +1,7 @@
 ---
 title: Content Services
 seo-title: Content Services
-description: 內容服務
+description: Content Services
 seo-description: null
 uuid: 7bd09c91-3931-400b-bdfc-b064b9ca9668
 contentOwner: User
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 ---
 
-# 內容服務{#content-services}
+# Content Services{#content-services}
 
 >[!NOTE]
 >

@@ -14,7 +14,7 @@ exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
 source-git-commit: c7958efbc4557ab3e50732da59faabf4e36c3844
 workflow-type: tm+mt
 source-wordcount: '1564'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -131,7 +131,7 @@ AEM與Salesforce之間雙向且可擴充的整合可讓：
 
 要配置Salesforce.com導出工作流，請執行以下操作：
 
-1. 導航到 `http://localhost:4502/cf#/etc/workflow/models/salesforce-com-export.html.`
+1. 瀏覽到 `http://localhost:4502/cf#/etc/workflow/models/salesforce-com-export.html.`
 
    ![chlimage_1-16](assets/chlimage_1-16.jpeg)
 

@@ -644,7 +644,7 @@ Blueprint動作
 * `[cq:Console] > sling:VanityPath, mix:title`
    * `mixin`
 
-## 複寫 {#replication}
+## 複製 {#replication}
 
 ### cq:ReplicationStatus {#cq-replicationstatus}
 

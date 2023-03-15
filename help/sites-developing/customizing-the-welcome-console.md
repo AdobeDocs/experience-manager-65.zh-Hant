@@ -13,7 +13,7 @@ exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 7%
 
 * **收件匣：** `/libs/cq/workflow/content/inbox`
 
-* **用戶：** `/libs/cq/security/content/admin`
+* **使用者:** `/libs/cq/security/content/admin`
 
 * **工具：** `/libs/wcm/core/content/misc`
 
@@ -97,7 +97,7 @@ ht-degree: 7%
    <td><code>/libs/cq/core/content/welcome/resources/taskmanager</code></td>
   </tr>
   <tr>
-   <td> 複寫</td>
+   <td> 複製</td>
    <td><code>/libs/cq/core/content/welcome/resources/replication</code></td>
   </tr>
   <tr>
@@ -191,7 +191,7 @@ ht-degree: 7%
 
 在 `/libs/cq/core/components/welcome/welcome.jsp` 使用 [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)，會對具有屬性的節點執行查詢：
 
-* `jcr:mixinTypes` 值： `cq:Console`
+* `jcr:mixinTypes` 值為: `cq:Console`
 
 >[!NOTE]
 >
@@ -209,4 +209,4 @@ ht-degree: 7%
 
 新增自訂項目至清單 `cq:Console` 混合至您的介面工具集或資源。 這可透過定義屬性來完成：
 
-* `jcr:mixinTypes` 值： `cq:Console`
+* `jcr:mixinTypes` 值為: `cq:Console`

@@ -367,9 +367,9 @@ RemotePage元件預期實施會提供類似的資產資訊清單 [找到。](htt
 
 下列參考資料有助於在AEM中了解SPA。
 
-* [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
 * [WKND SPA專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html)
-* [AEM中使用React的SPA快速入門](spa-getting-started-react.md)
+* [開始在 AEM 中使用 React 建立 SPA](spa-getting-started-react.md)
 * [SPA參考資料（API參考）](spa-reference-materials.md)
 * [SPA Blueprint和PageModelManager](spa-blueprint.md#pagemodelmanager)
 * [SPA模型路由](spa-routing.md)

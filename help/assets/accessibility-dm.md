@@ -10,11 +10,11 @@ exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
 source-git-commit: 01de1d5064f5ebf00acd2fe9f138d852f41f7273
 workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 中的協助工具 [!DNL Dynamic Media] {#working-with-three-d-assets-dm}
+# [!DNL Dynamic Media] 中的協助工具 {#working-with-three-d-assets-dm}
 
 [!DNL Dynamic Media] 在製作使用者介面上支援鍵盤控制和輔助技術，例如JAWS和NVDA螢幕閱讀器。
 
@@ -69,5 +69,5 @@ Dynamic Media支援透過隱藏式字幕傳送視訊和最適化視訊集。 標
 >[!MORELIKETHIS]
 >
 >* [Adobe解決方案的協助工具](https://www.adobe.com/accessibility.html)
->* [中的協助工具 [!DNL Experience Manager Assets]](/help/assets/accessibility.md)
+>* [ [!DNL Experience Manager Assets]](/help/assets/accessibility.md) 中的協助工具
 

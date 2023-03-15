@@ -13,11 +13,11 @@ exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
 source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
 source-wordcount: '334'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
-# 為回應式網站提供最佳化的影像 {#delivering-optimized-images-for-a-responsive-site}
+# 為回應式網站傳遞最佳化影像 {#delivering-optimized-images-for-a-responsive-site}
 
 當您想要與網頁開發人員共用程式碼以進行回應式服務時，請使用回應式程式碼功能。 您複製回應式(**[!UICONTROL RESS]**)程式碼，以便與網頁開發人員共用。
 

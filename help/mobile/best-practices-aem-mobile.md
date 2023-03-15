@@ -1,5 +1,5 @@
 ---
-title: 最佳作法
+title: 最佳做法
 seo-title: Best Practices
 description: 請依照本頁面所述，了解最佳實務和准則，協助有經驗的網站AEM開發人員建立行動應用程式範本和元件。
 seo-description: Follow this page to  learn best practices and guidelines that will help experienced AEM developers for sites, who want to build mobile app templates and components.
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ---
 
-# 最佳作法 {#best-practices}
+# 最佳做法 {#best-practices}
 
 >[!NOTE]
 >

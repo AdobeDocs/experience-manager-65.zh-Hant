@@ -164,7 +164,7 @@ QnA（問題和解答）論壇功能為社區成員提供了詢問和回答問�
 
 * **UI 提及模式**
 
-   指定允許的模式字串，以標籤(@mention)貼文中的註冊使用者。 例如， `~{{familyName}}{{givenName}}`.
+   指定允許的模式字串，以標籤(@mention)貼文中的註冊使用者。 例如, `~{{familyName}}{{givenName}}`.
 
 #### 使用者協調標籤 {#user-moderation-tab}
 

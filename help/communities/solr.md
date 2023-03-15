@@ -28,7 +28,7 @@ ht-degree: 2%
 
 針對生產環境， [SolrCloud模式](#solrcloud-mode) 與獨立模式（單個本地Solr設定）相比，提供了更好的效能。
 
-### 需求 {#requirements}
+### 要求 {#requirements}
 
 下載並安裝Apache Solr:
 

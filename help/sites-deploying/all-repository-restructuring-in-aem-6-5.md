@@ -12,7 +12,7 @@ discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
 source-git-commit: 3f64bd7f5b4eb43aeefb9277a94e10ef1f0df59c
 workflow-type: tm+mt
-source-wordcount: '2693'
+source-wordcount: '2690'
 ht-degree: 2%
 
 ---
@@ -747,7 +747,7 @@ ht-degree: 2%
 | **重組指導** | 無需任何動作。 |
 | **附註** | 樹激活Web控制台現在可通過 **工具>部署>複製>激活樹**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 廠商翻譯連接器Cloud Services {#vendor-translation-connector-cloud-services}
 
@@ -772,7 +772,7 @@ ht-degree: 2%
        <li>手動建立新的供應商翻譯連接器Cloud Services配置，通過 <strong>AEM編寫UI，網址為「工具&gt;Cloud Services&gt;翻譯Cloud Services」</strong>.<br /> 或 </li>
        <li>將任何新的供應商翻譯連接器Cloud Services配置從以前的位置複製到新位置(<code>/apps</code>, <code>/conf/global </code>或 <code>/conf/&lt;tenant&gt;</code>)。</li>
       </ul> </li>
-     <li>將適用的AEM設定與AEM內容階層建立關聯。
+     <li>將適用的AEM設定與AEM內容階層關聯。
       <ol>
        <li>AEM Sites頁面階層 <strong>AEM Sites &gt;頁面&gt;頁面屬性&gt;進階標籤&gt;雲端設定</strong>.</li>
        <li>AEM體驗片段階層，透過 <strong>AEM體驗片段&gt;體驗片段&gt;屬性&gt;Cloud Services標籤&gt;雲端設定</strong>.</li>

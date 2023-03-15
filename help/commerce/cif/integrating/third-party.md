@@ -6,7 +6,7 @@ exl-id: e99899a4-df86-4108-991a-8b30d303a279
 source-git-commit: 885d0763fca9ad4eab499081adca9b83875b27e1
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 >
 >如果沒有可用的即時API，則整合應使用具有API的外部產品快取。 範例 [Magento開放原始碼](https://business.adobe.com/products/magento/open-source.html).
 
-不需要實作完整的GraphQL架構，只需架構的物件即可啟用所需的使用案例。
+不需要實作完整的GraphQL結構，只需結構的物件即可啟用所需的使用案例。
 
 ## 後端使用案例
 
@@ -48,7 +48,7 @@ CIF透過即時產品目錄存取和產品體驗管理工具，延伸Experience 
 
 建議您使用 [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html) （整合層）。 CIF附加元件中包含第三方。 由於它與類似微服務的方法配合使用，因此非常適合於輕鬆整合多個解決方案。
 
-此 [參考實作](https://github.com/adobe/commerce-cif-graphql-integration-reference) 是建置與商務解決方案整合的絕佳起點。 雖然支援GraphQL，但也可與任何其他類型的API（例如REST）整合。
+此 [參考實作](https://github.com/adobe/commerce-cif-graphql-integration-reference) 是建置與商務解決方案整合的絕佳起點。 雖然可支援GraphQL，但也可與任何其他類型的API（例如REST）整合。
 
 如果協力廠商層可用（例如Mulesoft），或整合建置在協力廠商解決方案之上，則不需要此整合層。
 
@@ -61,4 +61,4 @@ CIF透過即時產品目錄存取和產品體驗管理工具，延伸Experience 
 
 >[!TIP]
 >
->連接器雖然有助於專案加速商務整合，但不是外掛程式。 企業商務解決方案通常需大量自訂，且需要自訂整合。 您必須熟悉商務平台、Adobe Commerce GraphQL結構和Adobe I/O Runtime。
+>連接器雖然有助於專案加速商務整合，但不是外掛程式。 企業商務解決方案通常需大量自訂，且需要自訂整合。 您必須熟悉商務平台、Adobe Commerce GraphQL結構描述和Adobe I/O Runtime。

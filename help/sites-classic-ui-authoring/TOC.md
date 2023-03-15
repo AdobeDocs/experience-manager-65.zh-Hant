@@ -10,7 +10,7 @@ role: User
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
 source-wordcount: '264'
-ht-degree: 25%
+ht-degree: 26%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 25%
    + [選取您的UI](author-env-select-ui.md)
    + [搜尋](author-env-search.md)
    + [您的收件匣](author-env-inbox.md)
-   + [控制台的鍵盤快速鍵](author-env-keyboard-shortcuts.md)
+   + [鍵盤快速鍵 控制台](author-env-keyboard-shortcuts.md)
 + 製作 {#authoring}
    + [編寫頁面](classic-page-author.md)
    + [製作 — 環境和工具](classic-page-author-env-tools.md)
@@ -55,14 +55,14 @@ ht-degree: 25%
    + [使用工作流程](classic-workflows.md)
    + [將工作流程套用至頁面](classic-workflows-applying.md)
 + 啟動 {#launches}
-   + [啟動](classic-launches.md)
-   + [建立啟動 ](classic-launches-creating.md)
-   + [編輯啟動](classic-launches-editing.md)
-   + [提升啟動](classic-launches-promoting.md)
-+ 個性化 {#personalization}
-   + [了解區段](classic-personalization-campaigns-segmentation.md)
+   + [Launch](classic-launches.md)
+   + [建立 Launch](classic-launches-creating.md)
+   + [編輯 Launch](classic-launches-editing.md)
+   + [提升 Launch](classic-launches-promoting.md)
++ 個人化 {#personalization}
+   + [了解分段](classic-personalization-campaigns-segmentation.md)
    + [Campaign Management](classic-personalization-campaigns.md)
-   + [著陸頁面](classic-personalization-campaigns-landingpage.md)
+   + [登陸頁面](classic-personalization-campaigns-landingpage.md)
    + [目標選件](classic-personalization-campaigns-target-offers.md)
    + [電子郵件行銷](classic-personalization-campaigns-email.md)
    + [追蹤跳出的電子郵件](classic-personalization-campaigns-email-tracking-bounces.md)

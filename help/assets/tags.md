@@ -1,5 +1,5 @@
 ---
-title: 整合Dynamic Media檢視器與Adobe Analytics和Experience Platform標籤
+title: 整合 Dynamic Media 檢視器與 Analytics 和 Adobe Experience Platform 標記
 description: 了解適用於Experience Platform標籤的Dynamic Media檢視器擴充功能和Dynamic Media檢視器5.13。它可讓Adobe Analytics和Experience Platform標籤的客戶在其Experience Platform標籤設定中使用Dynamic Media檢視器專屬的事件和資料。
 mini-toc-levels: 3
 contentOwner: Rick Brough
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 ---
 
-# 整合Dynamic Media檢視器與Adobe Analytics和Experience Platform標籤 {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
+# 整合 Dynamic Media 檢視器與 Analytics 和 Adobe Experience Platform 標記 {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
 
 ## 什麼是Dynamic Media檢視器與Adobe Analytics和Experience Platform標籤整合？ {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
 
@@ -518,7 +518,7 @@ Adobe建議您仔細檢閱本節之前的所有檔案，以了解完整的整合
 另請參閱 [建立標籤屬性](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-mobile-android-apps-with-launch/configure-launch/launch-create-a-property.html#configure-launch).
 
 1. 在Experience Platform標籤中，選取 **[!UICONTROL 新屬性]**.
-1. 在「建 **[!UICONTROL 立屬性]** 」對話方塊的「名稱 **** 」欄位中，輸入描述性名稱，例如網站的標題。例如， `DynamicMediaViewersProp.`
+1. 在「建 **[!UICONTROL 立屬性]** 」對話方塊的「名稱 **** 」欄位中，輸入描述性名稱，例如網站的標題。例如, `DynamicMediaViewersProp.`
 1. 在 **[!UICONTROL 網域]** 欄位，輸入網站的網域。
 1. 在 **[!UICONTROL 進階選項]** 下拉清單，啟用 **[!UICONTROL 為擴充功能開發進行配置（以後無法修改）]** 如果您想使用的擴充功能，在本例中， *Dynamic Media檢視器* — 尚未發行。
 
@@ -808,7 +808,7 @@ Experience Manager設定包含下列兩個主要步驟：
 1. 在頁面左上角附近，選取 **[!UICONTROL 建立]**.
 1. 在 **[!UICONTROL 一般]** 第（1/3頁）頁 **[!UICONTROL 建立Experience Platform標籤設定]** ，請填寫以下欄位：
 
-   * **[!UICONTROL 標題]**  — 輸入描述性配置標題。 例如， `We.Retail Tags cloud configuration`.
+   * **[!UICONTROL 標題]**  — 輸入描述性配置標題。 例如, `We.Retail Tags cloud configuration`.
 
    * **[!UICONTROL 相關聯的Adobe IMS設定]**  — 選取您先前於 [設定Experience ManagerIMS](#configuring-aem-ims).
 
@@ -831,7 +831,7 @@ Experience Manager設定包含下列兩個主要步驟：
    >檢查以確定自動填入的庫URI（統一資源標識符）的格式不正確。 如有必要，請修正它，使URI表示協定相對URI。 也就是說，從雙正斜線開始。
    >
    >
-   >例如： `//assets.adobetm.com/launch-xxxx`.
+   >例如：`//assets.adobetm.com/launch-xxxx`。
 
    您的 **[!UICONTROL 測試]** 頁面的顯示可能類似下列。 此 **[!UICONTROL 封存]** 和 **[!UICONTROL 非同步載入程式庫]** 選項 ***not*** 設定：
 

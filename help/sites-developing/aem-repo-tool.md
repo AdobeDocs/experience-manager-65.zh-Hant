@@ -23,7 +23,7 @@ AEM Repo Tool是一個簡單的解決方案，可透過與FTP相仿的命令列�
 
 此工具可簡化開發人員的檔案傳輸，也可整合至IntelliJ和Eclipse，讓開發更有效率。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 對於 `jcr_root` 檔案系統上的檔案預設結構，AEM Repo Tool會為整個子樹狀結構建立一個包含單一篩選器的包，並將其推送到伺服器(類似於FTP `put`)，從伺服器擷取( `get`)或比較差異( `status` 和 `diff`)。
 

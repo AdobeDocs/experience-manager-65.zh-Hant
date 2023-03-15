@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 使用Maven for Communities {#using-maven-for-communities}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Communities檔案的本節另外包括：
 

@@ -8,7 +8,7 @@ feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 source-git-commit: acc4b78f551e0e0694f41149fff7e24d855f504f
 workflow-type: tm+mt
-source-wordcount: '2164'
+source-wordcount: '2161'
 ht-degree: 3%
 
 ---
@@ -40,14 +40,14 @@ ht-degree: 3%
 | [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | 音訊/mpeg<br><b>重要</b>  — 上傳MP3檔案時， [使用協力廠商程式庫處理](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). 如果MP3具有可變位元速率(VBR)，則程式庫會計算非精確的約略長度。 |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | 影像/圖片 |
-| [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>影像/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
+| [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
 | [!UICONTROL MSOfficeHandler] | com.day.cq.dam.handler.standard.msoffice.MSOfficeHandler | application/msword |
 | [!UICONTROL MSPowerPointHandler] | com.day.cq.dam.handler.standard.msoffice.MSPowerPointHandler | application/vnd.ms-powerpoint |
 | [!UICONTROL OpenOfficeHandler] | com.day.cq.dam.handler.standard.ooxml.OpenOfficeHandler | <ul><li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li><li> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li><li> application/vnd.openxmlformats-officedocument.presentationml.presentation</li></ul> |
 | [!UICONTROL EPubHandler] | com.day.cq.dam.handler.standard.epub.EPubHandler | application/epub+zip |
 | [!UICONTROL GenericAssetHandler] | com.day.cq.dam.core.impl.handler.GenericAssetHandler | 備援，以備找不到其他處理常式，從資產中擷取資料時使用 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 所有處理程式都執行下列任務：
 
@@ -79,7 +79,7 @@ ht-degree: 3%
 要啟用/禁用媒體處理程式：
 
 1. 在您的瀏覽器中，導覽至 `https://<host>:<port>/system/console/components`.
-1. 按一下 **[!UICONTROL 停用]** 在媒體處理程式的名稱旁邊。 例如： `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
+1. 按一下 **[!UICONTROL 停用]** 在媒體處理程式的名稱旁邊。 例如：`com.day.cq.dam.handler.standard.mp3.Mp3Handler`。
 1. 重新整理頁面：媒體處理程式旁會顯示圖示，指出其已停用。
 1. 要啟用媒體處理程式，請按一下 **[!UICONTROL 啟用]** 在媒體處理程式的名稱旁邊。
 
@@ -483,7 +483,7 @@ package my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;tr
 
    >[!NOTE]
    >
-   >在某些版本的Windows中，轉換命令可能無法運行，因為它與屬於的本機轉換實用程式衝突 [!DNL Windows] 安裝。 在此案例中，請提及 [!DNL ImageMagick] 用於將影像檔案轉換為縮圖的軟體。 例如， `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
+   >在某些版本的Windows中，轉換命令可能無法運行，因為它與屬於的本機轉換實用程式衝突 [!DNL Windows] 安裝。 在此案例中，請提及 [!DNL ImageMagick] 用於將影像檔案轉換為縮圖的軟體。 例如, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
 
 1. 要查看工具是否正常運行，請將JPG映像添加到工作目錄並運行命令convert `<image-name>.jpg -flip <image-name>-flipped.jpg` 在命令行上。 已翻轉的影像將添加到目錄中。 然後，將命令列處理步驟新增至 **[!UICONTROL DAM更新資產]** 工作流程。
 1. 前往 **[!UICONTROL 工作流程]** 控制台。

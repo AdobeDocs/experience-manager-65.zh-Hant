@@ -242,13 +242,13 @@ ht-degree: 8%
    >
    >「權限」索引標籤不允許建立空的CUG群組，這作為拒絕每位使用者存取的簡單方式非常有用。 必須使用CRX Explorer才能執行此操作。 請參閱檔案 [使用者、群組和存取權限管理](/help/sites-administering/user-group-ac-admin.md) 以取得更多資訊。
 
-### Blueprint {#blueprint}
+### 藍圖 {#blueprint}
 
-* **Blueprint**
+* **藍圖**
 
    在中定義Blueprint頁面的屬性 [多網站管理](/help/sites-administering/msm.md). 控制修改將傳播至即時副本的情況。
 
-### 即時副本 {#live-copy}
+### Live Copy {#live-copy}
 
 * **即時副本**
 

@@ -13,11 +13,11 @@ feature: Publishing
 source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
 source-wordcount: '461'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-# 發佈Dynamic Media資產 {#publishing-dynamic-media-assets}
+# 發佈 Dynamic Media 資產 {#publishing-dynamic-media-assets}
 
 您可以選取已上傳的資產並點選，以發佈Dynamic Media資產 **[!UICONTROL 發佈]** 或 **[!UICONTROL 快速發佈]**. 發佈Dynamic Media資產後，您就可以透過URL或將程式碼嵌入頁面，將其加入網頁。
 

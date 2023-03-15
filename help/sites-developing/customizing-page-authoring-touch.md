@@ -44,7 +44,7 @@ AEM提供多種機制，讓您自訂頁面編寫功能(以及 [主控台](/help/
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱：
+>如需進一步詳細資訊，請參閱：
 >
 >* 使用和建立 [clientlibs](/help/sites-developing/clientlibs.md).
 >* 使用和建立 [覆蓋](/help/sites-developing/overlays.md).

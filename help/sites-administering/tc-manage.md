@@ -5,7 +5,7 @@ exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
 source-git-commit: 7efb1b8d345b07835e5f45a1afe9da13163411b2
 workflow-type: tm+mt
 source-wordcount: '3536'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 翻譯專案可讓您管理AEM內容的翻譯。 翻譯專案是一種AEM [專案](/help/sites-authoring/projects.md) 包含要翻譯成其他語言的資源。 這些資源是 [語言副本](/help/sites-administering/tc-prep.md) 由語言主版建立。
 
-將資源新增至翻譯專案時，會為資源建立翻譯工作。 作業提供命令和狀態資訊，用於管理在資源上執行的人工翻譯和機器翻譯工作流。
+將資源新增至翻譯專案時，會為資源建立翻譯工作。 工作會提供相關命令和狀態資訊，您可用來管理在資源上執行的人工翻譯和機器翻譯工作流程。
 
 >[!NOTE]
 >

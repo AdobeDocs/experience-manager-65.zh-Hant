@@ -380,7 +380,7 @@ ht-degree: 4%
 
 [資訊欄](#selecting-and-positioning-the-data-columns) 關於：
 
-* 頁面
+* Page
 * 時間
 * 類型
 * 使用者
@@ -405,7 +405,7 @@ ht-degree: 4%
 
 * 日期
 * IP 位址
-* 頁面
+* Page
 * 反向連結
 * 類型
 * 使用者識別碼

@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 您要建置的
 
-Venia品牌最近開始使用可持續材料製造一些產品，而企業想要展示 **生態友好** 徽章作為Product Teaser的一部分。 系統會在Adobe Commerce中建立新的自訂屬性，以指出產品是否使用 **生態友好** 材料。 然後，此自訂屬性將會新增為GraphQL查詢的一部分，並顯示在指定產品的產品預告上。
+Venia品牌最近開始使用可持續材料製造一些產品，而企業想要展示 **生態友好** 徽章作為Product Teaser的一部分。 系統會在Adobe Commerce中建立新的自訂屬性，以指出產品是否使用 **生態友好** 材料。 然後，此自訂屬性將會新增為GraphQL查詢的一部分，並顯示在指定產品的Product Teaser上。
 
 ![Eco友好徽章最終實施](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
@@ -137,7 +137,7 @@ AEM中顯示的產品和產品資料會儲存在Adobe Commerce中。 接下來�
 
 ## 使用GraphQL IDE驗證屬性 {#use-graphql-ide}
 
-跳入AEM程式碼前，請先探索 [Adobe Commerce GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) 使用GraphQL IDE。 Adobe Commerce與AEM的整合主要是透過一系列GraphQL查詢完成。 了解和修改GraphQL查詢是擴充CIF核心元件的關鍵方式之一。
+跳入AEM程式碼前，請先探索 [Adobe CommerceGraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) 使用GraphQL IDE。 Adobe Commerce與AEM的整合主要透過一系列GraphQL查詢完成。 了解和修改GraphQL查詢是擴充CIF核心元件的主要方式之一。
 
 接下來，使用GraphQL IDE驗證 `eco_friendly` 屬性已新增至產品屬性集。 本教學課程中的螢幕擷取畫面使用 [Altair GraphQL客戶端](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja).
 
@@ -178,11 +178,11 @@ AEM中顯示的產品和產品資料會儲存在Adobe Commerce中。 接下來�
 
    ![範例GraphQL回應](../assets/customize-cif-components/sample-graphql-query.png)
 
-   請注意， **是** 是整數 **1**. 以Java編寫GraphQL查詢時，此功能會相當實用。
+   請注意， **是** 是整數 **1**. 以Java撰寫GraphQL查詢時，這個用法會很實用。
 
    >[!TIP]
    >
-   >有關 [Adobe Commerce GraphQL位於此處](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
+   >有關 [Adobe CommerceGraphQL可在此處找到](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
 
 ## 更新Product Teaser的Sling模型 {#updating-sling-model-product-teaser}
 
@@ -263,7 +263,7 @@ Sling模型以Java方式實作，可在 **核心** 生成項目的模組。
 
    請注意，產品GraphQL查詢已使用 `extendProductQueryWith` 擷取其他 `created_at` 屬性。 此屬性稍後會作為 `isShowBadge()` 方法。
 
-1. 更新GraphQL查詢以包括 `eco_friendly` 屬性：
+1. 更新GraphQL查詢以包含 `eco_friendly` 屬性：
 
    ```java
    //MyProductTeaserImpl.java
@@ -496,7 +496,7 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 這是透過覆�
 
 ## 其他資源 {#additional-resources}
 
-- [AEM原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+- [AEM原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
 - [AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components)
 - [自訂AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components/wiki/Customizing-CIF-Core-Components)
 - [自訂核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)

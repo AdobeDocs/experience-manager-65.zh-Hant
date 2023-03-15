@@ -33,7 +33,7 @@ ht-degree: 14%
 
 ## 創意人員、行銷人員和DAM使用者的共同作業需求 {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
-| 需求 | 使用案例 | 相關曲面 |
+| 要求 | 使用案例 | 相關曲面 |
 |---|---|---|
 | 簡化案頭創意人員的體驗 | 簡化從DAM存取資產([!DNL Experience Manager Assets])，適用於創意專業人員，更廣泛而言，適用於案頭使用者，使用原生資產建立應用程式。 他們需要簡單明瞭的方式來探索、使用（開啟）、編輯和儲存變更，以 [!DNL Experience Manager]，以及上傳新檔案。 | Win或Mac案頭； [!DNL Creative Cloud] app |
 | 提供高品質、現成可用的資產，來自 [!DNL Adobe Stock] | 行銷人員可協助進行資產來源搜尋和探索，協助加速內容建立流程。 創意專業人員可直接在其創意工具中使用已核准的資產。 | [!DNL Experience Manager Assets]; [!DNL Adobe Stock] 市場；中繼資料欄位 |
@@ -43,7 +43,7 @@ ht-degree: 14%
 
 | 相關角色的價值主張 | Adobe產品 | 相關曲面 |
 |---|---|---|
-| 創意使用者可從 [!DNL Experience Manager]，開啟並使用這些變更，編輯和上傳變更 [!DNL Experience Manager]，以及將新檔案上傳至 [!DNL Experience Manager]，不離開 [!DNL Creative Cloud] 應用程式。 | [Adobe資產連結](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], 和 [!DNL Adobe InDesign]. |
+| 創意使用者可從 [!DNL Experience Manager]，開啟並使用這些變更，編輯和上傳變更 [!DNL Experience Manager]，以及將新檔案上傳至 [!DNL Experience Manager]，不離開 [!DNL Creative Cloud] 應用程式。 | [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、[!DNL Adobe Illustrator] 和 [!DNL Adobe InDesign]。 |
 | 業務使用者可簡化開啟和使用資產、編輯和上傳變更至 [!DNL Experience Manager]，以及將新檔案上傳至 [!DNL Experience Manager] 從案頭環境。 他們會使用一般整合來開啟原生案頭應用程式中的任何資產類型，包括非Adobe的資產類型。 | [Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] Win和Mac案頭應用程式 |
 | 行銷人員和商務使用者可探索、預覽、授權及儲存，並管理 [!DNL Adobe Stock] 資產內 [!DNL Experience Manager]. 授權和儲存的資產提供精選 [!DNL Adobe Stock] 元資料，以改善控管。 | [Experience Manager與Adobe Stock整合](aem-assets-adobe-stock.md) | [!DNL Experience Manager] 網頁介面 |
 
@@ -97,7 +97,7 @@ ht-degree: 14%
 
 * 請參閱 [案頭應用程式最佳作法](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html#best-practices-to-prevent-troubles)
 * 請參閱 [Adobe Stock整合](aem-assets-adobe-stock.md)
-* 請參閱 [Adobe資產連結](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+* 請參閱 [Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)
 
 以下是 [!DNL Experience Manager] 和 [!DNL Creative Cloud] 整合。 閱讀本檔案的其餘部分，以詳細了解這些內容。
 
@@ -231,7 +231,7 @@ Adobe資產連結對此使用案例提供良好支援：
 
 >[!MORELIKETHIS]
 >
->* [Adobe資產連結](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+>* [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html)
 >* [Experience Manager案頭應用程式最佳實務](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/archive/best-practices-for-v1.html)
 >* [Experience ManagerBrand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
 >* [Experience Manager與Adobe Stock整合](aem-assets-adobe-stock.md)

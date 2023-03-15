@@ -23,7 +23,7 @@ ht-degree: 8%
 
 ## 發行日期：2021年11月
 
-| 元件 | 版本 | 詳細資料 |
+| Component | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.11.18.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.11.18.00.zip) |
 | CIF核心元件 | 2.4.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.2) |
@@ -41,7 +41,7 @@ ht-degree: 8%
 
 ## 發行日期：2021年10月
 
-| 元件 | 版本 | 詳細資料 |
+| Component | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.10.20.02 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.10.20.02.zip) |
 | CIF核心元件 | 2.4.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.0) |
@@ -49,7 +49,7 @@ ht-degree: 8%
 
 ### 新增功能 {#what-is-new-october}
 
-* CIF附加元件支援最新的Commerce v2.4.3，並提供新的GraphQL API和結構
+* CIF附加元件支援最新的Commerce v2.4.3，提供新的GraphQL API和結構
 
 * 作者可使用RTF編輯器(RTE)，在文字欄位中新增產品和目錄頁面的連結。 RTE工具列中已新增CIF圖示，可開啟選擇器以快速搜尋並選取產品或類別，而不需離開內容。
 
@@ -61,7 +61,7 @@ ht-degree: 8%
 
 ## 發行日期：2021年9月
 
-| 元件 | 版本 | 詳細資料 |
+| Component | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.09.27 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.27.zip) |
 | CIF核心元件 | 2.2.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.2.0) |
@@ -89,7 +89,7 @@ ht-degree: 8%
 
 ## 發行日期：2021年8月
 
-| 元件 | 版本 | 詳細資料 |
+| Component | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.09.02 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.02.zip) |
 | CIF核心元件 | 2.1.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.1.0) |
@@ -115,7 +115,7 @@ ht-degree: 8%
 
 ## 發行日期：2021年7月
 
-| 元件 | 版本 | 詳細資料 |
+| Component | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.07.21 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
 | CIF核心元件 | 2.0.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.0.0) |
@@ -132,7 +132,7 @@ ht-degree: 8%
 
 ## 發行日期：2021年6月
 
-| 元件 | 版本 | 詳細資料 |
+| Component | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.06.18 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
 | CIF核心元件 | 1.12.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.12.0) |
@@ -149,7 +149,7 @@ ht-degree: 8%
 
 ## 發行日期：2021年5月
 
-| 元件 | 版本 | 詳細資料 |
+| Component | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.05.26 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.05.26.zip) |
 | CIF核心元件 | 1.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.11.0) |
@@ -167,7 +167,7 @@ ht-degree: 8%
 
 ## 發行日期：2021年4月
 
-| 元件 | 版本 | 詳細資料 |
+| Component | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.04.22 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
 | CIF核心元件 | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |

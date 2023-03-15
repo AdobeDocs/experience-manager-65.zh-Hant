@@ -327,7 +327,7 @@ RTE中的可用選項從用戶介面配置流向內容策略。
 
 尤其要查看可用的外掛程式和相關選項：
 
-* 此 [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) 元件提供用於編輯已設定樣式的文本資訊(rtf)的表單欄位。 若要了解RTF表單可用的所有參數，請參閱設定選項。
+* 此 [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) 元件提供用於編輯已設定樣式的文本資訊(RTF)的表單欄位。 若要了解RTF表單可用的所有參數，請參閱設定選項。
 * RtfText元件使用下列外掛程式，提供多種功能： [CQ.form.rte.plugins.Plugin](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin). 對於每個外掛程式：
 
    * 如需可啟用（或停用）功能的詳細資訊，請參閱功能

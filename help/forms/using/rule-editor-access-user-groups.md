@@ -20,7 +20,7 @@ ht-degree: 6%
 
 # 將規則編輯器存取權授予給所選的使用者群組{#grant-rule-editor-access-to-select-user-groups}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 您可能有不同類型的使用者，具備與適用性Forms搭配使用的不同技能。 雖然專家使用者可能擁有使用指令碼和複雜規則的適當知識，但可能有基本層級的使用者，他們只需要使用最適化表單的版面和基本屬性。
 

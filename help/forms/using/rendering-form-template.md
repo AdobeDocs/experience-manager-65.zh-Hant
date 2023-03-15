@@ -25,7 +25,7 @@ HTML5表單的概念是 **設定檔** 以REST端點形式公開，以啟用表�
 
 https://&lt;*主機*>:&lt;*埠*>/content/xfaforms/profiles/default.html?contentRoot=&lt;*包含xdp的資料夾路徑*>&amp;template=&lt;*xdp的名稱*>
 
-例如， `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
+例如, `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
 對於自訂設定檔，端點會據此變更。 例如，具有名稱hrforms的自訂設定檔的端點為：
 

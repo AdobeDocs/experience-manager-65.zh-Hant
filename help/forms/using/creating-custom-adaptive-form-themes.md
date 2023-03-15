@@ -210,7 +210,7 @@ ht-degree: 0%
 
 1. 納入中建立的主題 [建立最適化表單主題](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) 區段，建立類型的自訂頁面 `cq:Component`.
 
-   例如， `/apps/myAfCustomizations/myAfPages/forestPage`
+   例如, `/apps/myAfCustomizations/myAfPages/forestPage`
 
    1. 新增 `sling:resourceSuperType` 屬性，並將其值設為 `fd/af/components/page/base`.
 

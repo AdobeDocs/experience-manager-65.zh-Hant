@@ -1,5 +1,5 @@
 ---
-title: 擴充ContextHub
+title: 延伸 ContextHub
 seo-title: Extending ContextHub
 description: 當提供的儲存和模組不符合您的解決方案需求時，定義新類型的ContextHub儲存和模組
 seo-description: Define new types of ContextHub stores and modules when the ones provided do not meet your solution requirements
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# 擴充ContextHub{#extending-contexthub}
+# 延伸 ContextHub{#extending-contexthub}
 
 當提供的儲存和模組不符合您的解決方案需求時，定義新類型的ContextHub儲存和模組。
 

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 從適用性表單叫用表單資料模型服務的API {#api-to-invoke-form-data-model-service-from-adaptive-forms}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Forms可讓表單作者從最適化表單欄位中叫用在表單資料模型中設定的服務，進一步簡化並增強表單填寫體驗。 若要叫用資料模型服務，您可以在視覺編輯器中建立規則，或使用 `guidelib.dataIntegrationUtils.executeOperation` API(位於 [規則編輯器](/help/forms/using/rule-editor.md).
 

@@ -29,7 +29,7 @@ AEM Forms與Analytics整合，可讓您擷取及追蹤已發佈表單和檔案�
 
 您也可以使用Adobe啟動來執行分析。 如需如何將AEM Forms與AdobeLaunch整合的詳細資訊，請參閱 [使用Adobe啟動的Analytics](/help/forms/using/integrate-aem-forms-with-adobe-analytics.md).
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 您可以使用Adobe Analytics來探索使用者在使用最適化表單、HTML5表單和互動式通訊時所面臨的互動模式和問題。 Adobe分析會立即追蹤並儲存下列參數的相關資訊：
 

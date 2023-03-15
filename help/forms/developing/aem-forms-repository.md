@@ -147,7 +147,7 @@ ht-degree: 0%
 
    * A `com.adobe.repository.infomodel.Id` 要指派給資源的UUID識別碼。
    * A `com.adobe.repository.infomodel.Lid` 要指派給資源的UUID識別碼。
-   * A `java.lang.String` 包含資源集合的名稱。 例如， `FormsFolder`.
+   * A `java.lang.String` 包含資源集合的名稱。 例如, `FormsFolder`.
 
    方法會傳回 `com.adobe.repository.infomodel.bean.ResourceCollection` 代表新資料夾的物件。
 

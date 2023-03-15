@@ -71,7 +71,7 @@ ht-degree: 0%
 
 **登入程式**
 
-當用戶端應用程式啟動時，您可以向 `/um/login` 安全servlet。 例如， `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. 當請求到達「使用者管理員」安全servlet時，會執行下列步驟：
+當用戶端應用程式啟動時，您可以向 `/um/login` 安全servlet。 例如, `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. 當請求到達「使用者管理員」安全servlet時，會執行下列步驟：
 
 1. 它會尋找名為 `lcAuthToken`. 如果使用者已登入其他Forms應用程式，則此Cookie會存在。 如果找到Cookie，則會驗證其內容。
 1. 如果啟用了基於標頭的SSO，則servlet將查找已配置的標頭以確定用戶的標識。

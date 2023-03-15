@@ -77,7 +77,7 @@ ht-degree: 2%
 
 * 導覽至目錄頁面上的目錄資源
 
-   * 例如， `/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
+   * 例如, `/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
 
 * 添加子篩選器節點
 

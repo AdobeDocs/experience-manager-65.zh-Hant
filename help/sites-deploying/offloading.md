@@ -14,7 +14,7 @@ exl-id: 429c96ff-4185-4215-97e8-9bd2c130a9b1
 source-git-commit: 08a6777bf1ff3abf62f45fe1e164ef2027996848
 workflow-type: tm+mt
 source-wordcount: '2364'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -352,7 +352,7 @@ The following procedure assumes the following characteristics for the offloading
 1. On the instances that perform the background processing of DAM assets, disable the workflow launchers that execute the [!UICONTROL DAM Update Asset] workflow.
 -->
 
-## 進一步閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
 除了本頁顯示的詳細資訊外，您還可以閱讀以下內容：
 

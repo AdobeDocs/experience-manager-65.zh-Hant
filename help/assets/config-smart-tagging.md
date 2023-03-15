@@ -60,7 +60,7 @@ ht-degree: 24%
 
    **[!UICONTROL 服務 URL]**: `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
 
-   例如， `https://smartcontent.adobe.io/apac`. 您可以指定 `na`, `emea`，或 `apac` 作為托管Experience Manager製作例項的地區。
+   例如, `https://smartcontent.adobe.io/apac`. 您可以指定 `na`, `emea`，或 `apac` 作為托管Experience Manager製作例項的地區。
 
    >[!NOTE]
    >

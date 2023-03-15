@@ -1789,63 +1789,63 @@ Rights Management服務會在發生特定操作時跟蹤這些操作，例如將
     </tr>
     <tr>
     <td><p><code>DOCUMENT_VIEW_EVENT </code></p></td>
-    <td><p>2000年</p></td>
+    <td><p>2000</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_PRINT_LOW_EVENT </code></p></td>
-    <td><p>2001年</p></td>
+    <td><p>2001</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_PRINT_HIGH_EVENT </code></p></td>
-    <td><p>2002年</p></td>
+    <td><p>2002</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_SIGN_EVENT </code></p></td>
-    <td><p>2003年</p></td>
+    <td><p>2003</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_ADD_ANNOTATION_EVENT </code></p></td>
-    <td><p>2004年</p></td>
+    <td><p>2004</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_FORM_FILL_EVENT </code></p></td>
-    <td><p>2005年</p></td>
+    <td><p>2005</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_CLOSE_EVENT </code></p></td>
-    <td><p>2006年</p></td>
+    <td><p>2006</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_MODIFY_EVENT </code></p></td>
-    <td><p>2007年</p></td>
+    <td><p>2007</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_CHANGE_SECURITY_HANDLER_EVENT </code></p></td>
-    <td><p>2008年</p></td>
+    <td><p>2008</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_SWITCH_POLICY_EVENT </code></p></td>
-    <td><p>2009年</p></td>
+    <td><p>2009</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_REVOKE_EVENT </code></p></td>
-    <td><p>2010年</p></td>
+    <td><p>2010</p></td>
     </tr>
     <tr>
     <td><p><code>$1</code></p></td>
-    <td><p>2011年</p></td>
+    <td><p>2011</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_SECURE_EVENT </code></p></td>
-    <td><p>2012年</p></td>
+    <td><p>2012</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_UNKNOWN_CLIENT_EVENT </code></p></td>
-    <td><p>2013年</p></td>
+    <td><p>2013</p></td>
     </tr>
     <tr>
     <td><p><code>DOCUMENT_CHANGE_REVOKE_URL_EVENT </code></p></td>
-    <td><p>2014年</p></td>
+    <td><p>2014</p></td>
     </tr>
     <tr>
     <td><p><code>POLICY_CHANGE_EVENT </code></p></td>

@@ -13,7 +13,7 @@ exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '835'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 3%
 
 ## 控制面板元件 {#dashboard-components}
 
-### 總覽 {#overview}
+### 概觀 {#overview}
 
 控制面板元件只是一般元件 [AEM元件](/help/sites-developing/developing-components-samples.md). 本節說明AEM隨附的報表元件。
 
@@ -158,7 +158,7 @@ AEM隨一組元件提供，可呈現 [SiteCatalyst](/help/sites-administering/ad
 
 ## 延伸控制面板 {#extending-dashboard}
 
-### 總覽 {#overview-1}
+### 概觀 {#overview-1}
 
 控制面板是一般頁面( `cq:Page`)，因此，任何元件都可用來組合控制面板。
 

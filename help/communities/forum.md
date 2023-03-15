@@ -14,7 +14,7 @@ exl-id: 2b1a4917-9db6-436a-a5fd-c102fe41fb9d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1216'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -168,7 +168,7 @@ ht-degree: 8%
 
 * **UI 提及模式**
 
-   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如 `~{{familyName}}{{givenName}}`.
+   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如 `~{{familyName}}{{givenName}}`。
 
 >[!NOTE]
 >

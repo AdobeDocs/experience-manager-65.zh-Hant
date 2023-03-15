@@ -8,7 +8,7 @@ exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
 source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
 source-wordcount: '344'
-ht-degree: 19%
+ht-degree: 23%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 19%
 
 在Experience Manager中建立、管理、處理和發佈數位資產。 這些指南說明最佳實務、協助工具功能，以及如何使用AEM 6.5資產。
 
-## 金鑰 [!DNL Experience Manager] 文章
+## 重要 [!DNL Experience Manager] 文章
 
 * [Experience Manager6.5發行說明](/help/release-notes/home.md)
 * [近期文件更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
@@ -36,7 +36,7 @@ ht-degree: 19%
 | [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南會說明Experience Manager的基本知識。 |
 | [開發使用手冊](/help/sites-developing/home.md) | 了解如何建置您的Experience Manager部署。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理Experience Manager專案。 |
-| [商務使用手冊](/help/commerce/home.md) | 了解Experience Manager上的Commerce Integration Framework。 |
+| [Commerce 使用手冊](/help/commerce/home.md) | 了解Experience Manager上的Commerce Integration Framework。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
 | [Experience ManagerLivefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南會說明如何與共用使用者產生的內容 [!DNL Livefyre]. |
 
@@ -48,5 +48,5 @@ ht-degree: 19%
 * [Experience Manager Assets社群論壇](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager-assets/ct-p/experience-manager-assets-community)
 * [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
 * [HTL使用手冊](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hant)
-* [核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hant)

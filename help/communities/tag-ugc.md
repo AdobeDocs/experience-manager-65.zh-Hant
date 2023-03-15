@@ -20,7 +20,7 @@ ht-degree: 3%
 
 # 標籤使用者產生的內容 {#tagging-user-generated-content}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 標籤使用者產生的內容(UGC)是社群成員可協助其他成員搜尋內容的方式。
 

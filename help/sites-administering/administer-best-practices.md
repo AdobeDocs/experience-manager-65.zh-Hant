@@ -1,5 +1,5 @@
 ---
-title: 最佳作法
+title: 最佳做法
 seo-title: Best Practices
 description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助管理員快速上手並執行。
 seo-description: Find best practices compiled by Adobe engineering and consulting teams to help administrators get up and running.
@@ -13,17 +13,17 @@ exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '524'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
-# 最佳作法{#best-practices}
+# 最佳做法{#best-practices}
 
 最佳實務說明如何以盡可能最有效率和最有效的方式開發、管理或使用AEM。 這份不斷增加的主題清單包含AEM中的多個領域。
 
 以下幾方面提供有關最佳做法的檔案：
 
-* [Assets](#assets)
+* [資產](#assets)
 * [Sites](#sites)
 
 如需製作、部署和維護或開發的最佳實務，請參閱下列其中一項：
@@ -68,7 +68,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-## 網站 {#sites}
+## Sites {#sites}
 
 管理和編寫網站內容有一些最佳實務，概述如下：
 
@@ -77,7 +77,7 @@ ht-degree: 3%
   <tr>
    <td>GDPR法規遵循</td>
    <td><a href="/help/sites-administering/gdpr-compliance-sites.md">AEM Sites GDPR法規遵循</a></td>
-   <td>歐盟資料隱私權一般資料保護規範自2018年5月起生效。 AEM Sites符合GDPR。 本頁引導客戶完成在AEM Sites中處理GDPR請求的程式。 它說明了儲存的私人資料位置，以及如何手動或使用程式碼移除這些資料。</td>
+   <td>歐盟資料隱私權一般資料保護規範自2018年5月起生效。 AEM Sites符合GDPR。 本頁引導客戶完成在AEM Sites中處理GDPR請求的程式。 它描述了儲存私人資料的位置，以及如何以手動方式或使用程式碼移除它們。</td>
   </tr>
   <tr>
    <td>定義執行個體的預設UI。</td>
@@ -86,7 +86,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>多網站管理</td>
-   <td><a href="/help/sites-administering/msm-best-practices.md">MSM最佳實務</a></td>
+   <td><a href="/help/sites-administering/msm-best-practices.md">MSM 最佳做法</a></td>
    <td>使用MSM來自動部署內容的最佳作法。 </td>
   </tr>
   <tr>

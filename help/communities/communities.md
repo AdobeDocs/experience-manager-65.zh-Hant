@@ -19,7 +19,7 @@ ht-degree: 5%
 
 # 開發社區  {#developing-communities}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Communities可簡化社群功能的建立和自訂作業，例如論壇、使用者群組、部落格、問答、日曆、留言、評論、投票、評分和指派。 這些功能會導致在發佈環境中輸入使用者產生的內容(UGC)。
 

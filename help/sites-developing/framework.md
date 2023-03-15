@@ -1,5 +1,5 @@
 ---
-title: AEM標籤架構
+title: AEM 標記框架
 seo-title: AEM Tagging Framework
 description: 標籤內容並運用AEM標籤基礎結構
 seo-description: Tag content and leverage the AEM Tagging infrastructure
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# AEM標籤架構 {#aem-tagging-framework}
+# AEM 標記框架 {#aem-tagging-framework}
 
 若要標籤內容並運用AEM標籤基礎結構：
 

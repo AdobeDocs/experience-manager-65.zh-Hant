@@ -510,7 +510,7 @@ George批准Aya的應用程式，由於現有的自動化工作流程，確認�
 
 ### Adobe Analytics Forms報導(Camila) {#camila-reviews-forms-reporting-we-gov-adobe-analytics}
 
-1. 導航到
+1. 瀏覽到
 
    *https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 

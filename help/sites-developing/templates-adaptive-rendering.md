@@ -13,7 +13,7 @@ exl-id: 58cac3b1-b7cd-44b2-b89b-f5ee8811c198
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '486'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 最適化範本轉譯提供管理含有變異之頁面的方法。 此功能原本可用於為行動裝置提供各種HTML輸出（例如功能電話與智慧電話），但當體驗必須傳送至需要不同標籤或HTML輸出的各種裝置時，此功能就十分實用。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 範本通常以回應式格線為基礎建置，而根據這些範本建立的頁面完全回應，會自動調整至用戶端裝置的檢視區。 使用頁面編輯器中的「模擬器」工具列，作者可以將佈局目標定位到特定設備。
 

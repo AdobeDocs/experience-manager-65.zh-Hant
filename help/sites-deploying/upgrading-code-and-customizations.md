@@ -29,7 +29,7 @@ ht-degree: 0%
 * [AEM自訂](#aem-customizations)
 * [測試程式](#testing-procedure)
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 1. **圖樣偵測器**  — 按升級計畫中所述運行模式檢測器，並詳細說明 [本頁](/help/sites-deploying/pattern-detector.md) 若要取得模式偵測器報表，除了Target版本的AEM中無法使用的API/套件組合外，還須詳細了解需要處理的區域。 「模式偵測」報表應可指出程式碼中有任何不相容之處，如果沒有相容，表示您的部署已相容6.5，您仍可以選擇進行新開發，以利用6.5功能，但您不僅需要它來維護相容性。 如果報告了不相容，則可以選擇a)以相容模式運行，並推遲新的6.5功能或相容性的開發；b)升級後決定進行開發，然後移至步驟2。 請參閱 [AEM 6.5的向後相容性](/help/sites-deploying/backward-compatibility.md) 以取得更多詳細資訊。
 

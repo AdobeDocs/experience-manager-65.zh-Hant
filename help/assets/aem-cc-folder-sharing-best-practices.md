@@ -29,7 +29,7 @@ ht-degree: 0%
 >
 >閱讀本檔案之前，您可以檢閱整體 [Experience Manager與Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md) 以取得整合的概觀。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [!DNL Experience Manager] to [!DNL Creative Cloud] 資料夾共用依賴於伺服器端在 [!DNL Assets] 和 [!DNL Creative Cloud] 帳戶。 創意專業人員，使用 [!DNL Creative Cloud] 案頭應用程式，可使用 [!DNL Adobe CreativeSync] 技術。
 

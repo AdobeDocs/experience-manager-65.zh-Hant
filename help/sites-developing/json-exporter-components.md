@@ -1,5 +1,5 @@
 ---
-title: 為元件啟用JSON匯出
+title: 為元件啟用 JSON 匯出
 seo-title: Enabling JSON Export for a Component
 description: 元件可適合根據建模器架構產生其內容的JSON匯出。
 seo-description: Components can be adapted to generate JSON export of their content based on a modeler framework.
@@ -13,15 +13,15 @@ exl-id: 6d127e14-767e-46ad-aaeb-0ce9dd14d553
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
-# 為元件啟用JSON匯出{#enabling-json-export-for-a-component}
+# 為元件啟用 JSON 匯出{#enabling-json-export-for-a-component}
 
 元件可適合根據建模器架構產生其內容的JSON匯出。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 JSON匯出以 [Sling模型](https://sling.apache.org/documentation/bundles/models.html)，和 [Sling模型導出器](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) 框架(本身依賴 [傑克森注釋](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations))。
 
@@ -58,7 +58,7 @@ Sling Model實作類別必須加上下列註解：
 >
 >此 `ExporterConstants` 和 `ComponentExporter` 課程來自 `com.adobe.cq.export.json` 捆綁。
 
-### 使用多個選取器 {#multiple-selectors}
+### 使用多個選擇器 {#multiple-selectors}
 
 雖然不是標準使用案例，但除了 `model` 選取器。
 
@@ -97,5 +97,5 @@ GITHUB上的程式碼
 
 * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用內容片段製作](/help/sites-authoring/content-fragments.md)
-* [內容服務的JSON匯出工具](/help/sites-developing/json-exporter.md)
+* [內容服務的 JSON 匯出工具](/help/sites-developing/json-exporter.md)
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [內容片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)

@@ -79,7 +79,7 @@ OLD content of the above NOTE, changed wrt CQDOC-18661.
 
 此 `Asset Download Servlet` 可在 [!DNL Experience Manager] 更新Dispatcher設定以封鎖任何資產下載請求，以發佈執行個體。 您也可以直接透過OSGi主控台手動停用servlet。
 
-1. 若要透過Dispatcher設定封鎖資產下載請求，請編輯 `dispatcher.any` 設定，並將規則新增至 [篩選器區段](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
+1. 若要透過Dispatcher設定封鎖資產下載請求，請編輯 `dispatcher.any` 設定，並新增規則至 [篩選器區段](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
 1. 若要在發佈執行個體上停用OSGi元件，請在 `http://[aem_server]:[port]/system/console/components`. 找出 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` 按一下 **[!UICONTROL 停用]**.
 

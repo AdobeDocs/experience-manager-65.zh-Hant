@@ -22,7 +22,7 @@ ht-degree: 0%
 
 本節說明如何擴充 [查詢產生器](/help/sites-developing/querybuilder-api.md) 實施自訂述詞求值器。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此 [查詢產生器](/help/sites-developing/querybuilder-api.md) 提供了查詢內容儲存庫的簡單方法。 CQ隨附一組可協助您處理資料的謂語評估器。
 

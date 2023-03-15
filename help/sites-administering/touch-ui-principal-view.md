@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # 權限管理的主體視圖{#principal-view-for-permissions-management}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM 6.5推出使用者和群組的權限管理。 主要功能與傳統UI相同，但更方便使用且更有效率。
 

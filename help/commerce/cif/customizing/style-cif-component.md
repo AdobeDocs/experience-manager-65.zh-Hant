@@ -479,7 +479,7 @@ AEM也會嘗試快取用戶端程式庫以提升效能。 有時，在程式碼�
 
 * [AEM 專案原型](https://github.com/adobe/aem-project-archetype)
 * [AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components)
-* [設定本機AEM開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
+* [設定本機AEM開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)
 * [用戶端資源庫](/help/sites-developing/clientlibs.md)
 * [開始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
 * [與風格體系一起發展](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/style-system.html)

@@ -8,7 +8,7 @@ exl-id: d167cf97-6829-45a7-ba46-2239d530b060
 source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
 source-wordcount: '987'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -99,7 +99,7 @@ ht-degree: 1%
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
-1. 按一下 **[!UICONTROL 更新]**. 立即將資產與AEM Assets例項同步。
+1. 按一下&#x200B;**[!UICONTROL 更新]**。立即將資產與AEM Assets例項同步。
 
 ## 測試同步 {#test-the-synchronization}
 

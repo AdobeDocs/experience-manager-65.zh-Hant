@@ -22,7 +22,7 @@ ht-degree: 4%
 
 本節內容適用於管理AEM Communities且熟悉AEM Communities功能的使用者。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 如需概述和快速入門教學課程，請造訪：
 

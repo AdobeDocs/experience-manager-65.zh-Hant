@@ -1,7 +1,7 @@
 ---
-title: AEM Developer Tools for Eclipse
+title: Eclipse 適用的 AEM 開發人員工具
 seo-title: AEM Developer Tools for Eclipse
-description: AEM Developer Tools for Eclipse
+description: Eclipse 適用的 AEM 開發人員工具
 seo-description: null
 uuid: 566e49f2-6f28-4aa7-bfe0-b5f9675310bf
 contentOwner: User
@@ -13,15 +13,15 @@ exl-id: 00473769-c447-4966-a71e-117c669e0151
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '808'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
-# AEM Developer Tools for Eclipse{#aem-developer-tools-for-eclipse}
+# Eclipse 適用的 AEM 開發人員工具{#aem-developer-tools-for-eclipse}
 
 ![](do-not-localize/chlimage_1-9.png)
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Developer Tools for Eclipse是以 [適用於Apache Sling的Eclipse外掛程式](https://sling.apache.org/documentation/development/ide-tooling.html) 依Apache授權2發行。
 
@@ -33,7 +33,7 @@ AEM Developer Tools for Eclipse是以 [適用於Apache Sling的Eclipse外掛程�
 * 透過特定專案建立精靈簡單引導AEM專案。
 * 輕鬆編輯JCR屬性。
 
-## 需求 {#requirements}
+## 要求 {#requirements}
 
 使用AEM開發人員工具之前，您需要：
 

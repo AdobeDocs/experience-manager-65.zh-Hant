@@ -21,7 +21,7 @@ ht-degree: 2%
 
 # 相容性套件{#compatibility-package}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在AEM Forms 6.5中建立客戶通訊是預設且建議的互動式通訊方式。若要繼續在AEM Forms 6.5中使用信函，您必須安裝最新的 [AEMFD相容性套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
 

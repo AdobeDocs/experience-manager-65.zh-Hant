@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 將AEM表單工作區與Microsoft Office SharePoint Server整合{#integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server}
 
-**— 需求**
+**- 要求**
 
 **必備知識**
 您必須具備SharePoint伺服器的存取權限，才能將AEM Forms Workspace新增至SharePoint伺服器，而且您必須知道存取Workspace的URL。 下列步驟假設您對SharePoint伺服器有豐富的知識。 有關SharePoint Server中Web部件的詳細資訊，請參閱Windows SharePoint服務中的Web部件。

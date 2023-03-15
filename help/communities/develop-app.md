@@ -13,7 +13,7 @@ exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
 source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
 source-wordcount: '570'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 第一步是將資源超類型屬性添加到 `/apps/an-scf-sandbox/components/playpage` 節點，以便它繼承超類型的指令碼和屬性。
 
-使用CRXDE Lite:
+使用 CRXDE Lite:
 
 1. 選擇節點 `/apps/an-scf-sandbox/components/playpage`.
 1. 在「屬性」頁簽中，輸入新屬性，其值如下：

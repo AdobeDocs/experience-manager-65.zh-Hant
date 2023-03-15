@@ -34,7 +34,7 @@ ht-degree: 2%
 | 雲端提供者 | 服務版本 | 狀態 |
 |---|---|---|
 | Adobe Sign | v5 API | **支援** |
-| Microsoft Dynamics 365 | 1710(9.1.0.3020) | **支援** |
+| Microsoft Dynamics 365 | 1710 (9.1.0.3020) | **支援** |
 | Adobe Analytics | v1.4 Rest API | **支援** |
 **軟體包安裝考量事項：**
 

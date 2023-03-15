@@ -13,7 +13,7 @@ exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1920'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -347,7 +347,7 @@ Sling作業處理主控台將顯示：
 
 ## 更多資訊 {#further-information}
 
-如需詳細資訊，請參閱：
+如需進一步詳細資訊，請參閱：
 
 * [使用工作流程](/help/sites-authoring/workflows.md)
 * [管理工作流程](/help/sites-administering/workflows.md)

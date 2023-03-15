@@ -13,13 +13,13 @@ exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
 source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
 workflow-type: tm+mt
 source-wordcount: '642'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 如何使用IntelliJ IDEA開發AEM專案{#how-to-develop-aem-projects-using-intellij-idea}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 若要開始使用IntelliJ上的AEM開發，需執行下列步驟。
 

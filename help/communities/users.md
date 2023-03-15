@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 管理使用者和使用者群組 {#managing-users-and-user-groups}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在AEM Communities中，使用者可在發佈環境中自行註冊和編輯其設定檔。 有了適當的權限，他們也可以：
 

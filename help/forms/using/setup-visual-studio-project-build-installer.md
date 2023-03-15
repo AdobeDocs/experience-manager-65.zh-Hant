@@ -87,7 +87,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 源包含構建自定�
 
 1. 視需要在參數中進行變更，例如應用程式組建的版本和輸出位置。
 
-   ![createapppackeswizard2](assets/createapppackageswizard2.png)
+   ![createapppackageswizard2](assets/createapppackageswizard2.png)
 
 1. 建置專案後，您可以使用以下項目安裝應用程式：
 

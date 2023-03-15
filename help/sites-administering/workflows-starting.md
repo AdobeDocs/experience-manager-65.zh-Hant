@@ -21,7 +21,7 @@ ht-degree: 4%
 
 管理工作流程時，您可以使用各種方法來開始：
 
-* 手動:
+* 手動：
 
    * 從 [工作流模型](#workflow-models).
    * 使用工作流程套件 [批次處理](#workflow-packages-for-batch-processing).

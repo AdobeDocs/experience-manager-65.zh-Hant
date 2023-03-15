@@ -1,5 +1,5 @@
 ---
-title: 與Adobe Campaign整合
+title: 與 Adobe Campaign 整合
 seo-title: Integrating with Adobe Campaign
 description: 了解如何整合AEM與Adobe Campaign。
 seo-description: Learn how to integrate AEM with Adobe Campaign.
@@ -13,11 +13,11 @@ exl-id: ab41e540-1d43-4fc2-99d4-621ff2290e77
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-# 與Adobe Campaign整合{#integrating-with-adobe-campaign}
+# 與 Adobe Campaign 整合{#integrating-with-adobe-campaign}
 
 Adobe Campaign是一組解決方案，可讓您個人化所有線上和離線管道，並傳送行銷活動。
 

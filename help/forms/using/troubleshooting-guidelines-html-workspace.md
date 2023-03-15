@@ -161,7 +161,7 @@ ht-degree: 0%
 
 * **在Firefox中除錯**:Firefox中有數個附加元件可用來偵錯指令碼和樣式。 例如，Firebug是這類偵錯公用程式([https://getfirebug.com](https://getfirebug.com))。
 
-## 常見問題集 {#faqs}
+## 常見問題 {#faqs}
 
 1. PDF表單無法在Google Chrome中轉譯或提交。
 

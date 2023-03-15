@@ -14,7 +14,7 @@ exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
 source-git-commit: 9052ed3e89fdc67d94fc60bbff64d42255565767
 workflow-type: tm+mt
 source-wordcount: '1802'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 2%
 * [設定作法文章](/help/sites-deploying/ht-deploy.md)
 * [Web 主控台](/help/sites-deploying/web-console.md)
 * [疑難排解復寫](/help/sites-deploying/troubleshoot-rep.md)
-* [最佳作法](/help/sites-deploying/best-practices.md)
+* [最佳做法](/help/sites-deploying/best-practices.md)
 * [部署社群](/help/communities/deploy-communities.md)
 * [AEM Platform簡介](/help/sites-deploying/platform.md)
 * [效能准則](/help/sites-deploying/performance-guidelines.md)
@@ -95,7 +95,7 @@ AEM伺服器為 **Java型** 並在支援該平台的大部分作業系統上運�
 
 這些實例與安裝的軟體相同。 它們僅由配置區別。 此外，大部分安裝都使用Dispatcher:
 
-* **Dispatcher**:靜態Web伺服器(Apache httpd、Microsoft IIS等) 與AEM dispatcher模組搭配增強。 它會快取由發佈例項產生的網頁，以提升效能。
+* **Dispatcher**:靜態Web伺服器(Apache httpd、Microsoft IIS等) 與AEM dispatcher模組搭配增強。 它快取發佈執行個體產生的網頁以提升效能。
 
 此設定有許多進階選項和說明，但製作、發佈和調度程式的基本模式是大部分部署的核心。 首先，我們將專注於一個相對簡單的機構。 下面將討論高級部署選項。
 
@@ -308,7 +308,7 @@ AEM會啟動網頁瀏覽器，並自動將其重新導向至適當的頁面，�
 * [設定作法文章](/help/sites-deploying/ht-deploy.md)
 * [Web 主控台](/help/sites-deploying/web-console.md)
 * [疑難排解復寫](/help/sites-deploying/troubleshoot-rep.md)
-* [最佳作法](/help/sites-deploying/best-practices.md)
+* [最佳做法](/help/sites-deploying/best-practices.md)
 * [部署社群](/help/communities/deploy-communities.md)
 * [AEM Platform簡介](/help/sites-deploying/platform.md)
 * [效能准則](/help/sites-deploying/performance-guidelines.md)

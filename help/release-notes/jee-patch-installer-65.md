@@ -87,4 +87,4 @@ AEM 6.5 Forms JEE修補程式安裝程式包含在此修補程式發行前，AEM
 * 文件安全性
 * Foundation JEE
 
-[聯絡支援](https://www.adobe.com/account/sign-in.supportportal.html)
+[聯絡支援](https://www.adobe.com/tw/account/sign-in.supportportal.html)

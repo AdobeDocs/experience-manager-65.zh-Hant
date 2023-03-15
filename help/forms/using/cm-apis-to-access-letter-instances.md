@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 存取信函例項的API {#apis-to-access-letter-instances}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 使用Correspondence Management的「建立通信UI」，您可以在進行中儲存信函例項的草稿，且會提交信函例項。
 

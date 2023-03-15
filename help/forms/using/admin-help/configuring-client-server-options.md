@@ -860,7 +860,7 @@ Acrobat Reader DC Extensions for Microsoft Office是與Microsoft Office產品Mic
    * Sun Solaris
    * HP-UX
 
-   `SDKVersions` 指定客戶端應用程式使用的文檔安全性C++客戶端API的版本。 例如， `"8.2"`.
+   `SDKVersions` 指定客戶端應用程式使用的文檔安全性C++客戶端API的版本。 例如, `"8.2"`.
 
    `APPFamilies` 由用戶端API定義。
 

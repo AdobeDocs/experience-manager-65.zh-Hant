@@ -1,17 +1,17 @@
 ---
-title: 自訂HTTP標題
+title: 自訂 HTTP 標頭
 description: 設定自訂HTTP標題
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
-# 自訂HTTP標題 {#custom-http-headers}
+# 自訂 HTTP 標頭 {#custom-http-headers}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 為了進一步控制其後端，作者可以設定要傳送至商務引擎的自訂HTTP標題，以及CIF已傳送的標題。 常見的使用案例包括多存放區設定，您可在其中使用HTTP標題來控制商務後端的回應。
 

@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # 員工招聘參考網站逐步說明 {#employee-recruitment-reference-site-walkthrough}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 We.Finance是一個組織，允許候選人通過參考網站門戶申請就業。 該組織還使用門戶網站管理候選人的面試時間安排、入圍和內部溝通。 網站會管理下列項目：
 
@@ -186,7 +186,7 @@ Sarah按一下電子郵件中的「提供詳細資訊」連結。 表單隨即�
 
 Sarah按一下電子郵件中的連結以開啟其他資訊表單
 
-![其他資訊2](assets/additionalinformation2.png)
+![additionalinformation2](assets/additionalinformation2.png)
 
 Sarah會按照John Doe的要求填充其他資訊，然後按一下「提交」
 

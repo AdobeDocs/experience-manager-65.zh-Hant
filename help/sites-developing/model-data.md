@@ -43,7 +43,7 @@ Day Software AG是全球內容管理和內容基礎架構軟體的領先提供�
 
 ### 規則#1:資料先，結構後。 也許吧。 {#rule-data-first-structure-later-maybe}
 
-#### 說明 {#explanation-1}
+#### 解釋 {#explanation-1}
 
 我建議不要擔心ERD意義上的宣告資料結構。 一開始。
 
@@ -63,7 +63,7 @@ Day Software AG是全球內容管理和內容基礎架構軟體的領先提供�
 
 ### 規則#2:驅動內容階層，別讓它發生。 {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 
-#### 說明 {#explanation-2}
+#### 解釋 {#explanation-2}
 
 內容階層是非常有價值的資產。 所以別讓它發生，設計它。 如果一個節點沒有「好」、人類看得懂的名稱，那麼你可能應該重新考慮。 武斷的數字從來就不是「好名字」。
 
@@ -101,7 +101,7 @@ Day Software AG是全球內容管理和內容基礎架構軟體的領先提供�
 
 ### 規則#3:工作區適用於clone()、merge()和update()。 {#rule-workspaces-are-for-clone-merge-and-update}
 
-#### 說明 {#explanation-3}
+#### 解釋 {#explanation-3}
 
 如果您不使用 `clone()`, `merge()` 或 `update()` 在您的應用程式中，使用單一工作區的方法可能是最理想的作法。
 
@@ -132,7 +132,7 @@ JCR引入了Workspaces非常抽象的概念，這讓許多開發人員不清楚�
 
 ### 規則#4:請注意同名兄弟姐妹。 {#rule-beware-of-same-name-siblings}
 
-#### 說明 {#explanation-4}
+#### 解釋 {#explanation-4}
 
 雖然在規範中引入了同名同級(SNS)，允許與專為XML設計並通過XML表示的資料結構相容，因此對JCR極有價值，但SNS對儲存庫帶來了巨大的開銷和複雜性。
 
@@ -158,7 +158,7 @@ JCR引入了Workspaces非常抽象的概念，這讓許多開發人員不清楚�
 
 ### 規則#5:被認為有害的參考。 {#rule-references-considered-harmful}
 
-#### 說明 {#explanation-5}
+#### 解釋 {#explanation-5}
 
 引用意味著參照完整性。 我發現，重要的一點是要了解，參考不僅會為管理參考完整性的儲存庫增加額外成本，而且從內容靈活性的角度來看，這些參考也會帶來很大成本。
 
@@ -174,7 +174,7 @@ JCR引入了Workspaces非常抽象的概念，這讓許多開發人員不清楚�
 
 ### 規則#6:檔案是檔案。 {#rule-files-are-files}
 
-#### 說明 {#explanation-6}
+#### 解釋 {#explanation-6}
 
 如果內容模型公開的內容甚至遠程 *氣味* 就像我嘗試使用的檔案或資料夾（或從延伸） `nt:file`, `nt:folder` 和 `nt:resource`.
 
@@ -204,7 +204,7 @@ JCR引入了Workspaces非常抽象的概念，這讓許多開發人員不清楚�
 
 ### 規則#7:身份是邪惡的。 {#rule-ids-are-evil}
 
-#### 說明 {#explanation-7}
+#### 解釋 {#explanation-7}
 
 在關係資料庫中，ID是表達關係的必要手段，因此人們往往也會在內容模型中使用它們。 主要是因為錯誤的原因。
 

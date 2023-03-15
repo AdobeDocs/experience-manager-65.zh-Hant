@@ -1,5 +1,5 @@
 ---
-title: 產品建議
+title: 產品推薦
 description: Adobe Commerce提供由Adobe Sensei提供技術支援的建議引擎。 了解如何在Adobe Experience Manager(AEM)店面中動態插入這些產品建議。
 sub-product: Commerce
 version: 6.5
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 ---
 
-# 產品建議
+# 產品推薦
 
 Adobe Commerce提供由Adobe Sensei提供技術支援的建議引擎。 了解如何在Adobe Experience Manager(AEM)店面中動態插入這些產品建議。
 

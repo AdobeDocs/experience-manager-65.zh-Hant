@@ -32,7 +32,7 @@ ht-degree: 9%
 >可使用內容片段：
 >
 >* 編寫頁面時；請參閱 [使用內容片段進行頁面編寫](/help/sites-authoring/content-fragments.md).
->* for [使用內容片段搭配GraphQL的無周邊內容傳送](/help/assets/content-fragments/content-fragments-graphql.md).
+>* for [透過GraphQL使用內容片段進行無頭式內容傳送](/help/assets/content-fragments/content-fragments-graphql.md).
 
 
 >[!NOTE]

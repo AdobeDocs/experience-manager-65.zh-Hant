@@ -1,7 +1,8 @@
 ---
 title: 取得附件電子郵件的其他步驟
 description: 取得附件電子郵件的其他步驟
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
+source-git-commit: 2e9b9c40f54aa54a946e4320341ed4a760c56fd1
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%

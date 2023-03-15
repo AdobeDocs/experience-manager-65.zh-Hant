@@ -444,7 +444,7 @@ ContextHub.Store.JSONPStore延伸 [ContextHub.Store.Core](/help/sites-developing
 * **埠：** （數字）服務的埠號。
 * **安全：** （字串或布林值）決定要用於服務URL的通訊協定：
 
-   * 自動：/
+   * auto: //
    * true:https://
    * false:https://
 
@@ -481,7 +481,7 @@ A `string` 代表服務URL的值。
       * 埠：（數字）服務的埠號。
       * 安全：（字串或布林值）決定要用於服務URL的通訊協定：
 
-         * 自動：/
+         * auto: //
          * true:https://
          * false:https://
       * 逾時：（數字）等待JSONP服務在超時前響應的時間長度（以毫秒為單位）。

@@ -33,7 +33,7 @@ ht-degree: 6%
 | [了解搜尋結果和行為](#searchbehavior) | [修改搜尋刻面](#searchfacets) | [大量中繼資料更新](#metadataupdates) |
 | [搜尋排名和提升](#searchrank) | [文字擷取](#extracttextupload) | [智慧型集合](#collections) |
 | [高級搜索：篩選和搜尋範圍](#scope) | [自訂述詞](#custompredicates) | [了解並疑難排解非預期的結果](#unexpected-results) |
-| [從其他解決方案和應用程式中搜尋](#search-assets-other-surfaces):<ul><li>[Adobe資產連結](#aal)</li><li>[Brand Portal](#brand-portal)</li><li>[Experience Manager案頭應用程式](#desktop-app)</li><li>[Adobe Stock影像](#adobe-stock)</li><li>[Dynamic Media資產](#dynamic-media)</li></ul> |  |  |
+| [從其他解決方案和應用程式中搜尋](#search-assets-other-surfaces):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brand-portal)</li><li>[Experience Manager案頭應用程式](#desktop-app)</li><li>[Adobe Stock影像](#adobe-stock)</li><li>[Dynamic Media資產](#dynamic-media)</li></ul> |  |  |
 | [資產選擇器](#asset-picker) |  |  |
 | [限制](#limitations) 和 [提示](#tips) |  |  |
 | [插圖範例](#samples) |  |  |
@@ -164,7 +164,7 @@ ht-degree: 6%
 | 中繼資料欄位 | Facet值和使用狀況 |
 |---|---|
 | 標題 | 標題：John |
-| 產生器 | 建立者：約翰 |
+| 建立者 | 建立者：約翰 |
 | 位置 | 位置：不適用 |
 | 說明 | 說明：&quot;範例影像&quot; |
 | 建立者工具 | 建立工具：&quot;Adobe Photoshop&quot; |

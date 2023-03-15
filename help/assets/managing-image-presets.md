@@ -128,12 +128,12 @@ Adobe Illustrator的檔案格式是PDF的變體。 Experience Manager Assets的�
   </tr>
   <tr>
    <td>寬度上限</td>
-   <td>2048年</td>
+   <td>2048</td>
    <td>產生的預覽轉譯的最大寬度（像素）。<br /> </td>
   </tr>
   <tr>
    <td>高度上限</td>
-   <td>2048年</td>
+   <td>2048</td>
    <td>產生的預覽轉譯的最大高度（像素）。<br /> </td>
   </tr>
   <tr>

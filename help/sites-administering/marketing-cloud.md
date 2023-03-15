@@ -95,7 +95,7 @@ AEM 6.3已移除Audience Manager整合。
 
 <!-- Search&Promote is end of life as of September 1, 2022 For information about integrating AEM and Search&Promote, see [Integrating with Adobe Search&Promote](/help/sites-administering/search-and-promote.md). -->
 
-## 與Adobe Campaign整合 {#integrating-with-adobe-campaign}
+## 與 Adobe Campaign 整合 {#integrating-with-adobe-campaign}
 
 [Adobe Campaign](https://www.adobe.com/solutions/campaign-management.html) 可讓您直接在Adobe Experience Manager中管理電子郵件傳送內容。
 

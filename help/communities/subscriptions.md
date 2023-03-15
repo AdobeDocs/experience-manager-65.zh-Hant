@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # Communities 訂閱 {#communities-subscriptions}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 As of Communities [FP1](deploy-communities.md#latestfeaturepack)，社群成員可能會使用稱為訂閱的功能，透過電子郵件與社群互動。
 
@@ -32,7 +32,7 @@ As of Communities [FP1](deploy-communities.md#latestfeaturepack)，社群成員�
 * 成員只需選擇 `Email Subscriptions` 後。
 * 設定電子郵件回覆時，成員只要回覆收到的電子郵件，即可有效張貼內容。
 
-### 需求 {#requirements}
+### 要求 {#requirements}
 
 **設定電子郵件**
 

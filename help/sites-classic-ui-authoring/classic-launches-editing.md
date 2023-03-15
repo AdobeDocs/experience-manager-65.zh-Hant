@@ -1,5 +1,5 @@
 ---
-title: 編輯啟動
+title: 編輯 Launch
 seo-title: Editing Launches
 description: 為頁面（或一組頁面）建立啟動後，您可以編輯頁面啟動復本中的內容。
 seo-description: When a launch has been created for a page (or set of pages) you can edit the content in the launch copy of the page(s).
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 ---
 
-# 編輯啟動{#editing-launches}
+# 編輯 Launch{#editing-launches}
 
 ## 編輯啟動頁面 {#editing-launch-pages}
 

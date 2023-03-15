@@ -282,7 +282,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 繼續參閱檔案，了解簡單的SPA如何運作並親自試驗SPA [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md).
 
-## 進一步閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
 如需AEM中SPA的詳細資訊，請參閱下列檔案：
 

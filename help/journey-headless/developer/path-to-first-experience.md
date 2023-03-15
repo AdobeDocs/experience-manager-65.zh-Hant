@@ -1,153 +1,153 @@
 ---
-title: 使用AEM無頭式的第一次體驗路徑
-description: 在AEM無頭式開發人員歷程的這部分中，您將了解在AEM中實作第一個無頭式體驗的步驟，包括規劃考量事項，並了解最佳實務，讓路徑盡可能順暢。
+title: 踏上首次使用 AEM Headless 之路
+description: 在 AEM Headless 開發人員歷程的這一部分中，您將了解在 AEM 中實作您的第一個無周邊體驗的步驟 (包括規劃考量事項)，並學習最佳做法以使您的操作過程盡可能順利。
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1982'
-ht-degree: 0%
+ht-degree: 97%
 
 ---
 
-# 使用AEM無頭式的第一次體驗路徑 {#path-to-first-experience}
+# 踏上首次使用 AEM Headless 之路 {#path-to-first-experience}
 
-在 [AEM無頭開發者歷程，](overview.md) 您將了解在AEM中實作第一個無頭體驗的步驟，包括規劃考量事項，並了解最佳實務，讓路徑盡可能順暢。
+在 [AEM Headless 開發人員歷程](overview.md)的這一部分中，您將了解在 AEM 中實作您的第一個無周邊體驗的步驟 (包括規劃考量事項)，並學習最佳做法以使您的操作過程盡可能順利。
 
-## 迄今為止的故事 {#story-so-far}
+## 到目前為止 {#story-so-far}
 
-在AEM無頭歷程的上一份檔案中， [AEM Headless快速入門](getting-started.md) 您學到了無頭式CMS的基本理論，現在應該：
+在 AEM 無周邊歷程的上一個文件「[AEM Headless 快速入門](getting-started.md)」中，您已了解 Headless CMS 的基本理論，您現在應該：
 
-* 了解AEM無頭功能的基本概念。
-* 了解使用AEM無頭功能的必要條件。
-* 請注意AEM無頭整合層級。
-* 能夠根據範圍定義專案。
+* 了解 AEM 無周邊功能的基本概念。
+* 了解 AEM 無周邊功能的使用先決條件。
+* 明白 AEM 無周邊整合層級。
+* 能夠根據範圍定義您的專案。
 
-本文以這些基本知識為基礎，讓您了解如何準備您自己的AEM無頭專案。
+本文章以這些基本知識為基礎，以便您了解如何準備您自己的 AEM 無周邊專案。
 
 ## 目標 {#objective}
 
-本檔案可協助您了解實作第一個專案所需的步驟。 閱讀後，您應：
+本文件可協助您了解實作第一個專案所需的步驟。閱讀本文件後，您應該：
 
-* 了解設計內容時的重要規劃考量事項。
-* 了解在AEM中實作無頭的步驟。
-* 了解需要哪些必要工具和AEM設定。
-* 了解最佳實務，讓無頭的歷程順暢、保持內容產生的效率，並確保內容能快速傳遞。
+* 了解設計內容的重要規劃考量事項。
+* 了解在 AEM 中實作無周邊的步驟。
+* 了解需要哪些必要工具和 AEM 設定。
+* 了解使您的無周邊歷程順暢、持續高效產生內容以及確保內容快速傳遞的最佳做法。
 
-## 需求 {#requirements}
+## 要求 {#requirements}
 
-繼續處理本檔案之前，請確定您已檢閱AEM Headless Developer Journey中的先前檔案， [AEM Headless快速入門](getting-started.md) 請確定您：
+在繼續閱讀本文件之前，務必先查閱 AEM Headless 開發人員歷程的上一篇文件[AEM Headless 快速入門](getting-started.md)，以確保您：
 
-* 滿足所列要求。
+* 符合列出的要求。
 * 已考慮您自己的專案定義，包括範圍、角色和效能。
 
-## 成功規劃 {#planning-for-success}
+## 為成功做規劃 {#planning-for-success}
 
-若要開始您的第一個AEM無頭專案，您必須確保擁有的內容模型可支援您要在所有管道進行的個人化和更新。
+若要開始您的第一個 AEM 無周邊專案，需要確保您有一個內容模型，可支援您想要跨所有管道進行的個人化和更新。
 
 與AEM分開，如果您要建置用戶端應用程式，以便根據對AEM的API呼叫測試用戶端，也請確定您已設定正確的開發環境。
 
-### 定義內容模型和API {#defining-models}
+### 定義內容模型和 API {#defining-models}
 
-您想要推動一致的體驗，並管理各管道的個人化行銷活動，因此您可以將每個個別管道和表面視為要交付的各自不同內容結構。 然而，要維護每個管道都有各自的內容模型，將是一項挑戰。
+您想要促成一致的體驗並管理跨管道的個人化行銷活動，您可以將每個單獨的管道和表面視為其自己獨特的內容結構來傳遞。然而，讓每個管道都有自己的內容模型將很難維護。
 
-相反地，您應根據組織原則（例如品牌和產品階層、商品或曲面的類別或客戶歷程中的步驟），考慮不同曲面上的內容的關聯方式。 例如，如果您有一組表面支援您製造的特定品牌汽車，則您可能希望從內容模型開始，以獲取對整輛汽車來說是正確的常規資訊，然後擁有更多特定元素，例如在汽車開始到出現服務問題時所需的內容。 這種模型將強制繼承一般汽車品牌內容，同時允許根據所需的特定上下文進行換班。 這也有助於日後管理此內容的更新，因為您可以根據角色強制執行控制，例如整個汽車品牌的整體行銷人員或產品經理，與負責「起動汽車」體驗的作者。
+相反地，您應該根據組織原則，例如品牌和產品階層、商品或表面目錄或是客戶歷程中的步驟，來考慮不同表面上的內容如何相關。例如，如果您有一組表面可支援您製造的特定品牌汽車，您可能想要從內容模型開始，取得適用於整輛汽車的一般資訊，然後是較為特定項目，例如車輛啟動時到出現維修問題時所需的內容。這類模型會強制繼承一般汽車品牌內容，也允許根據所需特定情境進行變換。這也能協助在未來管理此內容的更新，因為您可以根據角色強制執行控制，例如整體行銷人員或整個汽車品牌的產品經理，對比負責「啟動汽車」體驗的作者。
 
-一旦您擁有了內容模型，並清楚了解了內容需要呈現到的各種客戶端後，您就需要確保將與訪問各種內容模型相關聯的GraphQL/API發佈給需要此內容的所有客戶端。 如何存取特定內容有不同的選項。 您可以要求靜態的特定內容片段，以啟用內容快取和高效能。 您也可以要求動態產生的內容，而這需要更多處理。 確保客戶運用最符合其業務需求的API。
+當您有了內容模型並清楚需要此內容的各種用戶端，您必須確保與存取各種內容模型關聯的 GraphQL/API 會發佈到需要此內容的所有用戶端。有不同方法可以存取特定內容。您可以要求一段特定的靜態內容，這樣可以快取內容並提高效能。您也可以要求動態產生的內容，這將需要更多處理。確保用戶端會利用最能滿足其業務需求的 API。
 
 ## 了解您的環境 {#understanding-environments}
 
-AEM中有三種環境類型：開發、測試和生產。
+AEM 有三種類型的環境：開發、預備和生產。
 
-開發環境（您可以有多個環境）是實驗和嘗試想法的安全場所。 在專案的初始階段，Adobe建議使用開發環境來嘗試內容模型的變異，並查看哪個模型提供曲面的預期輸出。
+開發環境 (您可以有多個) 是實驗和嘗試想法的安全地方。在專案的初始階段，Adobe 建議使用開發環境來嘗試各種版本的內容模型，並查看哪些版本為表面提供預期的輸出。
 
-無頭專案的測試環境可用來在新AEM產品發行推出至生產環境之前驗證。 請保留生產內容模型的最新清單和內容的子集，這樣當您進行變更或AEM發行引入變更時，您就可以呈現JSON檔案來比較它們，仍會提供相同的輸出
+無周邊專案的預備環境用於在新的 AEM 產品版本推送到生產環境之前對其進行驗證。在那裡保留最新的生產內容模型清單和內容子集，當您進行變更或 AEM 版本引入變更時，您就可以呈現 JSON 檔案以比較它們是否仍然提供相同的輸出。
 
-內容作者可在生產環境中建立和管理其實際內容。 生產中的模型變更必須謹慎執行，並考慮到回溯相容性。
+生產環境是內容作者建立和管理其實際內容的地方。在生產環境變更模型必須小心進行，並謹記回溯相容性。
 
-在開發階段，建議您使用開發和測試環境。 當您改用效能測試時，會想要改用生產環境。
+在開發階段，建議您使用開發和預備環境。當您轉向效能測試時，您會想要移至生產環境。
 
-### 開發人員與內容作者的合作 {#cooperation}
+### 開發人員和內容作者協力合作 {#cooperation}
 
-開發人員需要使用填入的內容模型來設定AEM開發環境。 開發人員開發用戶端，當內容作者仍在建立內容時，會從AEM無頭取用內容。 這就是為什麼API定義非常重要。 透過運用AEM SDK，開發人員可建立測試連結，以建立用戶端和單元測試，確保用戶端能夠正確轉譯內容。
+開發人員需要的 AEM 開發環境是內含填入的內容模型。由於內容作者仍在建立內容，開發人員開發的用戶端將取用 AEM 的無周邊內容。這就是 API 定義非常重要的原因。利用 AEM SDK，開發人員可以建立測試連結，以便建立用戶端和單元測試以確保用戶端能夠正確呈現內容。
 
-內容作者會根據已在測試環境中定義的內容模型來建立內容。 使用內容片段製作工具，作者將建立新內容片段或編輯現有內容片段。 發佈前，作者可與開發人員合作，將內容模型推送至開發，或僅供作者預覽內容模型在用戶端中的外觀，借此預覽在用戶端中的外觀。
+內容作者根據已在預備環境定義的內容模型建立內容。使用內容片段編寫工具，作者可以建立新的內容片段或編輯現有的內容片段。在發佈之前，作者可以與開發人員合作將內容模型推送至開發環境，或僅為作者設定開發人員環境，來預覽它在用戶端中的外觀。
 
 ## 設定 {#setup}
 
-開始使用AEM中的無頭功能前，您必須確定所有必要功能皆已啟用。 本節概述必要項目。 完成這些步驟的實際步驟將在 [AEM無頭開發人員歷程。](#overview.md)
+在 AEM 中開始使用無周邊技術之前，您需要確保已啟用所有必要的功能。本章節概述相關要求。完成這些步驟的實際步驟將在 [AEM Headless 開發人員歷程](#overview.md)的後續部分詳細說明。
 
-您也可以選擇參閱 [其他資源](#additional-resources) 以取得個別主題的詳細資訊。
+您也可以選擇參考[其他資源](#additional-resources)以取得個別主題的詳細資訊。
 
 ### 設定 {#configuration}
 
 1. 啟用內容片段
-1. 啟用GraphQL
-1. 設定無頭式SDK
+1. 啟用 GraphQL
+1. 設定 Headless SDK
 
-## 實作您的第一個AEM Headless應用程式
+## 實作您的第一個 AEM Headless 應用程式
 
-以下概述使用AEM實作您的第一個無頭應用程式以傳送內容所需的項目。 如需執行這些步驟的詳細說明，請參閱無頭式開發人員歷程的後續章節。
+這是概述需要哪些東西才能使用 AEM 實作您的第一個無周邊應用程式以傳遞您的內容。如何執行這些步驟將在Headless 開發人員歷程的後面部分詳細描述。
 
 1. 建立內容片段模型
 1. 建立內容片段
-1. 使用GraphQL查詢內容
+1. 使用 GraphQL 查詢內容
 
-## 最佳作法 {#best-practices}
+## 最佳做法 {#best-practices}
 
-一個無頭的項目不僅因為實施了技術而成功，還因為有良好的規劃和項目治理。 以下是內容作者和開發人員在規劃專案時應謹記的一些最佳實務。
+無周邊專案的成功不僅在於實作的技術，還在於良好的規劃和專案管理。以下是內容作者和開發人員在規劃專案時要謹記的一些最佳做法。
 
-### 組織內容 {#organizing-content}
+### 組織您的內容 {#organizing-content}
 
-* 盡可能使結構複雜，但請盡可能簡單。 更簡單的內容結構有助於簡化內容治理並改進系統效能。
-* 在策略中優先重複使用內容。 建立子模型和內容參考，以便在多個較高層級的模型和管道中重複使用。
-* 讓內容結構盡可能不言自明，讓內容作者可快速學習並適應製作工作。
-* 如果您有存取限制，請嘗試將您的內容模型與存取需求一致。
-* 當您有存取需求時，這些需求應會驅動您的內容階層。 將內容分組，由同一組人員編輯。
-* 將類似內容分組到資料夾中。
-   * 內容作者更有可能複製並貼上現有內容以建立新內容。 因此，在相同資料夾中完成此操作可讓其更有效率。
-   * AEM允許對每個資料夾設定允許的模型，以便 **新建** 按鈕只會顯示該位置支援的模型。
-* 若在模型中設定根資料夾，則可簡化新內容片段的內嵌內容片段編輯器建立作業。 從業者不必選擇位置，只需提供名稱，即可開始編輯新參照。
+* 使結構具有所需的複雜度，但盡可能保持簡單。更簡單的內容結構有助於簡化內容管理並提高系統效能。
+* 您的策略要優先考慮內容重複使用。建立可跨多個高層級模型和管道重複使用的子模型和內容參考。
+* 使內容結構盡可能簡單易懂，以便內容作者可以快速學習並適應編寫任務。
+* 如果您有存取限制，請嘗試使您的內容模型與存取要求保持一致。
+* 當您有存取要求時，它們應該推動您的內容階層。將同一組人員編輯的內容群組在一起。
+* 將類似內容群組到一個資料夾中。
+   * 內容作者更有可能複製並貼上現有內容來建立新內容。因此，在同一資料夾中完成此操作可以提高效率。
+   * AEM 允許為每個資料夾設定允許的模型，因此&#x200B;**新建**&#x200B;按鈕將僅顯示該位置支援的模型。
+* 如果在模型中設定了根資料夾，則內聯內容片段編輯器建立新內容片段的作業將可簡化。然後從業人員不必選擇位置，只需提供名稱即可開始編輯新參考。
 
-### 製作內容 {#authoring}
+### 編寫內容 {#authoring}
 
-* 針對管道特定版本的內容，請考慮使用內容片段變體。 系統會與內容主版同步變數，以簡化內容變更管理。
-* 邀請其他內容製作者檢閱內容，並提供附註和意見回饋，這些可在內容片段編輯器中取得，且可在內容片段Admin Console中跨全域存取。
-* 盡可能少使用必要元素，讓一切保持順暢。 強制元素可封鎖工作流程。
+* 對於內容的管道特定版本，請考慮使用內容片段變化。變化與內容主版同步，以簡化內容變更管理。
+* 邀請其他內容製作者審查內容並提供意見回饋 (內含註解和評論)，這些可在內容片段編輯器中取得，也可在內容片段 Admin Console 中跨片段全域取得。
+* 使用盡可能少使用必要元素讓事情繼續進行。必要元素會讓工作流程無法進行。
 
-### 製作全域內容 {#localization}
+### 編寫全域內容 {#localization}
 
-* 建立內容翻譯的規則與控管。 要降低系統負載，請將轉換建立為非同步過程，可以以較長的時間間隔運行。 請預留時間進行本地化品質控制和錯誤修正。
-* 利用翻譯技術系統提供的所有功能，這些功能可以與AEM整合，如翻譯記憶庫。
-* 了解多媒體內容（例如影像和視訊）是否需要本地化。
+* 建立內容翻譯規則和控管。為了降低系統負載，將翻譯工作建立為能以較長間隔執行的非同步流程。留出時間進行本地化品質控制和錯誤修正。
+* 利用您的翻譯技術系統提供的所有功能，您可以將這些功能與 AEM 相整合，例如翻譯記憶庫。
+* 了解多媒體內容 (例如影像和視訊) 是否需要本地化。
 
 ## 下一步 {#what-is-next}
 
-現在您已完成AEM Headless Developer Journey的這一部分，您應：
+您已完成此部分的 AEM Headless 開發人員歷程，您應該：
 
-* 了解設計內容時的重要規劃考量事項。
-* 了解在AEM中實作無頭的步驟。
-* 了解需要哪些必要工具和AEM設定。
-* 了解最佳實務，讓無頭的歷程順暢、保持內容產生的效率，並確保內容能快速傳遞。
+* 了解設計內容的重要規劃考量事項。
+* 了解在 AEM 中實作無周邊的步驟。
+* 了解需要哪些必要工具和 AEM 設定。
+* 了解使您的無周邊歷程順暢、持續高效產生內容以及確保內容快速傳遞的最佳做法。
 
-我們希望您能以此基礎知識為基礎，充分了解AEM Headless的強大功能和彈性，以便您能將其運用於自己的專案。 要執行此操作，您有選項。
+我們希望您以此基本知識為基礎，充分了解 AEM Headless 的強大功能和靈活性，以便利用在自己的專案上。為此，您有多種選擇。
 
-### 選擇自己的冒險 {#choose-your-path}
+### 選擇你自己的冒險 {#choose-your-path}
 
-無論您的學習方式為何，Adobe都希望您在開始使用AEM Headless專案時能成功。
+無論您的學習方式為何，Adobe 都希望您能順利開始您的 AEM Headless 專案。
 
-* 如果您偏好繼續 **了解無頭概念和AEM無頭技術**，您應該繼續進行AEM無頭歷程，方法是接下來檢閱檔案 [如何將內容模型為AEM內容模型](model-your-content.md) 可在此了解如何在AEM中建立內容結構模型。
-* 如果您偏好 **學習**，您可以跳到 [AEM Headless實作教學課程快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) 透過實作簡單專案來公開AEM無頭式內容，您將直接進入AEM開發。
+* 如果您偏好繼續&#x200B;**了解無周邊概念和 AEM 的無周邊技術**，您應該建議繼續您的 AEM 無周邊歷程，接著閱讀此文件[如何為您的內容建立 AEM 內容模型](model-your-content.md)，您可以在此了解如何在 AEM 中建立內容結構的模型。
+* 如果您偏好&#x200B;**做中學**，您可以移至 [AEM Headless 入門實作教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)，在這裡您將直接進入 AEM Headless 開發，方式是實作一個簡單專案以公開 AEM 無周邊內容。
 
 ## 其他資源 {#additional-resources}
 
-雖然建議您透過檢閱檔案，繼續進行無頭式開發歷程的下一個階段 [如何將內容模型為AEM內容模型，](model-your-content.md) 以下是一些額外的選用資源，可更深入探討本檔案中提及的一些概念，但您不需要繼續進行無頭歷程。
+雖然建議您查閱文件[如何為您的內容建立 AEM 內容模型](model-your-content.md)來繼續無周邊開發歷程的下個部分，以下也有一些其他選擇性資源，在深入探究本文件提到的一些概念，但不是繼續無周邊歷程的必要條件。
 
-* [AEM無頭翻譯歷程](/help/journey-headless/translation/overview.md)  — 本檔案歷程可讓您廣泛了解無頭式技術、AEM如何提供無頭式內容，以及如何翻譯內容。
-* [AEM Sites無頭開發](/help/sites-developing/headless/introduction.md)  — 快速介紹如何指定AEM Headless開發人員及其所需功能
-* [AEM無頭Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)  — 使用這些實作教學課程，探索如何使用各種選項，透過AEM將內容傳遞至無頭端點，並選擇適合您的方式。
-* [使用GraphQL API進行無周邊內容管理](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses)  — 請參閱本課程，概略了解在AEM中實作的GraphQL API。 需要透過AdobeID進行驗證。
-* [AEM指南WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql)  — 此GitHub專案包含醒目提示AEM GraphQL API的範例應用程式。
+* [AEM Headless 翻譯歷程](/help/journey-headless/translation/overview.md) - 此文件歷程讓您對無周邊技術、AEM 如何提供無周邊內容以及如何翻譯它，有廣泛的了解。
+* [AEM Sites 的 Headless 開發](/help/sites-developing/headless/introduction.md) - 快速介紹讓 AEM Headless 開發人員熟悉必要的功能
+* [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 利用這些實作教學課程來探索如何運用各種不同方式使用 AEM 將內容傳遞到無周邊端點，並選擇適合您的方式。
+* [使用 GraphQL API 進行 Headless 內容管理](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;Launch=ExperienceManager-D-1-2020.1.headless#courses) - 按照本課程說明對 AEM 中實作的 GraphQL API 有概略的了解。必須透過 AdobeID 進行驗證。
+* [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - 此 GitHub 專案包含以 AEM GraphQL API 為重點的範例應用程式。
 * [無頭入門手冊](/help/sites-developing/headless/introduction.md#getting-started)  — 為熟悉AEM的使用者快速介紹AEM無頭功能。
-* [建立內容片段模型](/help/assets/content-fragments/content-fragments-models.md)  — 內容片段模型的技術檔案
-* [建立內容片段](/help/assets/content-fragments/content-fragments.md)  — 內容片段的技術檔案
-* [使用GraphQL查詢內容](/help/assets/content-fragments/graphql-api-content-fragments.md) - GraphQL API的技術檔案
+* [建立內容片段模型](/help/assets/content-fragments/content-fragments-models.md) - 內容片段模型的技術文件
+* [建立內容片段](/help/assets/content-fragments/content-fragments.md) - 內容片段的技術文件
+* [使用 GraphQL 查詢內容](/help/assets/content-fragments/graphql-api-content-fragments.md) - GraphQL API 的技術文件

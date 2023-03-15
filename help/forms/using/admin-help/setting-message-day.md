@@ -45,4 +45,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->AEM Forms版本不再使用Flex Workspace。
+>AEM Forms版本已不再使用Flex Workspace。

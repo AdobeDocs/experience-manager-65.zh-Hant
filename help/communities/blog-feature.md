@@ -193,7 +193,7 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
 * **UI 提及模式**
 
-   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如~{{familyName}}{{givenName}}.
+   指定允許的模式字串，以標籤(@mention)貼文中已註冊的使用者。 例如 ~{{familyName}}{{givenName}}.
 
 #### 使用者協調標籤 {#user-moderation-tab}
 
@@ -271,7 +271,7 @@ AEM Communities的部落格功能已從編寫活動轉換為在發佈環境中�
 
    *（可選）* 要列出部落格文章的部落格資源的位置。 若保留為空白，則使用resourceType的元件 `social/journal/components/hbs/journal` 顯示在相同頁面上。
 
-   * 例如， `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
+   * 例如, `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
 * **建議限制**
 

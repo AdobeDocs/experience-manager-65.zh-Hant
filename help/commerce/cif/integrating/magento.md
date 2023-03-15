@@ -16,7 +16,7 @@ Experience Manager與Adobe Commerce可透過Commerce Integration Framework(CIF)�
 
 >[!NOTE]
 >
->最低支援的GraphQL API版本為2.3.5。某些功能僅在較新版本或Adobe Commerce版本中受支援。
+>最低支援的GraphQL API版本為2.3.5。某些功能僅支援較新版本，或僅支援Adobe Commerce版本。
 
 ## 架構概述 {#overview}
 
@@ -25,7 +25,7 @@ Experience Manager與Adobe Commerce可透過Commerce Integration Framework(CIF)�
 ![CIF架構概觀](../assets/AEM_Magento_Architecture.png)
 
 CIF內支援伺服器端和用戶端通訊模式。
-伺服器端API呼叫是使用內建的一般實作 [GraphQL客戶端](https://github.com/adobe/commerce-cif-graphql-client) 與 [生成的資料模型集](https://github.com/adobe/commerce-cif-magento-graphql) （商務GraphQL架構）。 此外，還可以使用GQL格式的任何GraphQL查詢或變異。
+伺服器端API呼叫是使用內建的一般實作 [GraphQL用戶端](https://github.com/adobe/commerce-cif-graphql-client) 與 [生成的資料模型集](https://github.com/adobe/commerce-cif-magento-graphql) (商務GraphQL結構)。 此外，還可以使用GQL格式的任何GraphQL查詢或變異。
 
 針對使用 [React](https://reactjs.org/), [阿波羅客戶](https://www.apollographql.com/docs/react/) 中所有規則的URL區段。
 

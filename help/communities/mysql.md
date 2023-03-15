@@ -24,7 +24,7 @@ MySQL是關係資料庫，主要用於SCORM追蹤和報告啟用資源的資料�
 
 這些說明說明如何連接到MySQL Server、建立啟用資料庫以及將初始資料填充到資料庫。
 
-## 需求 {#requirements}
+## 要求 {#requirements}
 
 在配置MySQL for Communities啟用功能之前，請務必
 

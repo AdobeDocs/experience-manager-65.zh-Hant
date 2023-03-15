@@ -44,67 +44,67 @@ ht-degree: 3%
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking_a_short_lived_process_using_the_invocation_api">使用叫用API叫用短期處理程式</a></p></td>
    <td><p>N/A</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_short_lived_process_using_the_invocation_api">快速入門：使用叫用API叫用短期處理程式</a></p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">使用Base64編碼叫用AEM Forms</a> （Java Web服務代理）</p></td>
-   <td><p>不適用</p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
+   <td><p>N/A</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_java_proxy_files_and_base64_encoding">快速入門：使用Java代理檔案和Base64編碼調用服務</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">使用Base64編碼叫用AEM Forms</a> （.NET Web服務代理）</p></td>
-   <td><p>不適用</p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
+   <td><p>N/A</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_base64_in_a_microsoft_net_project">快速入門：在Microsoft .NET專案中使用base64叫用服務</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom">使用MTOM叫用AEM Forms</a> （.NET Web服務示例）</p></td>
-   <td><p>不適用</p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
+   <td><p>N/A</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_mtom_in_a_net_project">快速入門：在.NET項目中使用MTOM調用服務</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref">使用SwaRef叫用AEM Forms</a> （Java Web服務示例）</p></td>
-   <td><p>不適用</p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
+   <td><p>N/A</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_swaref_in_a_java_project">快速入門：在Java項目中使用SwaRef調用服務</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">透過HTTP使用BLOB資料叫用AEM Forms</a> （Java Web服務示例）</p></td>
-   <td><p>不適用</p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
+   <td><p>N/A</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">快速入門：在.NET專案中透過HTTP使用BLOB資料叫用服務</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">透過HTTP使用BLOB資料叫用AEM Forms</a> （.NET Web服務示例）</p></td>
-   <td><p>不適用</p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
+   <td><p>N/A</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_java_project">快速入門：在Java專案中使用透過HTTP的BLOB資料叫用服務</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime">使用DIME叫用AEM Forms</a> （Java Web服務示例）</p></td>
-   <td><p>不適用</p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
+   <td><p>N/A</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_dime_in_a_java_project">快速入門：在Java項目中使用DIME調用服務</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">使用叫用AEM Forms(AEM表單已淘汰)AEM Forms Remoting</a></p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">快速入門：使用(AEM表單已過時)AEM Forms Remoting傳遞不安全的檔案，以叫用短期處理程式</a></p></td>
-   <td><p>不適用</p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
+   <td><p>N/A</p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#passing_secure_documents_to_invoke_processes_using_remoting">使用遠程功能傳遞安全文檔以調用進程</a></p></td>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">快速入門：使用(AEM表單已過時)AEM Forms Remoting傳遞安全檔案，以叫用短期處理程式</a></p></td>
-   <td><p>不適用</p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
+   <td><p>N/A</p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking_custom_component_services_using_remoting">使用遠程調用自定義元件服務</a></p></td>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-the-customer-custom-service-using-remoting">快速入門：使用叫用客戶自訂服務(AEM表單已淘汰)AEM Forms Remoting</a></p></td>
-   <td><p>不適用</p></td>
-   <td><p>不適用</p></td>
+   <td><p>N/A</p></td>
+   <td><p>N/A</p></td>
   </tr>
  </tbody>
 </table>

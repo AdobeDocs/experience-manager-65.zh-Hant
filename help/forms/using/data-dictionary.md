@@ -302,7 +302,7 @@ ht-degree: 1%
    <td>DDE的子類型：列舉。 僅允許用於STRING和NUMBER elementType。</td>
   </tr>
   <tr>
-   <td>關鍵</td>
+   <td>金鑰</td>
    <td>布林值</td>
    <td>指示DDE是否為關鍵元素的布林欄位。</td>
   </tr>

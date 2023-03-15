@@ -13,7 +13,7 @@ exl-id: 9528d92b-0989-4e2d-83be-ba6c07c845e2
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
 source-wordcount: '1016'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -37,9 +37,9 @@ SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 如需SPA在AEM中如何運作的詳細資訊，請參閱下列檔案：
 
-* [SPA簡介和逐步說明](/help/sites-developing/spa-walkthrough.md)
+* [SPA 簡介和逐步解說](/help/sites-developing/spa-walkthrough.md)
 * [SPA製作簡介](/help/sites-developing/spa-overview.md)
-* [SPA Blueprint](/help/sites-developing/spa-blueprint.md)
+* [SPA 藍圖](/help/sites-developing/spa-blueprint.md)
 
 >[!NOTE]
 >
@@ -114,7 +114,7 @@ module.exports = {
 
 ### AEM 專案原型 {#aem-project-archetype}
 
-任何AEM專案皆應運用 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，可支援使用React或Angular的SPA專案，並運用SPA SDK。
+任何 AEM 專案都應利用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，它支援使用 React 或 Angular 的 SPA 專案並利用 SPA SDK。
 
 ## 應用程式結構 {#application-structure}
 

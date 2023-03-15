@@ -24,7 +24,7 @@ MySQL是關係資料庫，可用於儲存用戶生成的內容(UGC)。
 
 這些說明說明如何連接到MySQL Server並建立UGC資料庫。
 
-## 需求 {#requirements}
+## 要求 {#requirements}
 
 * [最新Communities功能套件](deploy-communities.md#latestfeaturepack)
 * [MySQL的JDBC驅動程式](deploy-communities.md#jdbc-driver-for-mysql)

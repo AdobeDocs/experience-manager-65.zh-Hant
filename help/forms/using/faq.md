@@ -222,4 +222,4 @@ ht-degree: 0%
 
 1. HTML5表單中是否有任何保留的關鍵字？
 
-   答案：所有HTML5表單API都是保留的關鍵字。 若為自訂API/函式，請使用與 [HTML5 forms API](/help/forms/using/scripting-support.md). 除了保留的關鍵字外，如果您使用以下划線(_)開頭的對象名稱，建議在下划線後面添加唯一的前置詞。 新增首碼有助於避免與HTML5表單內部API發生任何可能衝突。 例如， `_fpField1`
+   答案：所有HTML5表單API都是保留的關鍵字。 若為自訂API/函式，請使用與 [HTML5 forms API](/help/forms/using/scripting-support.md). 除了保留的關鍵字外，如果您使用以下划線(_)開頭的對象名稱，建議在下划線後面添加唯一的前置詞。 新增首碼有助於避免與HTML5表單內部API發生任何可能衝突。 例如, `_fpField1`

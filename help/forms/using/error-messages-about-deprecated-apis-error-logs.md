@@ -22,7 +22,7 @@ ht-degree: 7%
 
 ## 解析度 {#workaround}
 
-1. 安裝 [Experience Manager Forms Service Pack 13或更新版本(6.5.13.0或更新版本)](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+1. 安裝 [Experience Manager Forms Service Pack 13或更新版本(6.5.13.0或更新版本)](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
 1. 使用以下連結從Software Distribution下載套件（.jar檔案，含解析度）:
 
    https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[...]pack/com.adobe.livecycle.dsc.externalloginmodule-4.0.8.jar

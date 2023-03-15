@@ -19,7 +19,7 @@ ht-degree: 0%
 
 了解如何透過We.Finance Reference網站的適用性表單，運用Microsoft® Dynamics 365服務進行家庭抵押工作流程
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Microsoft® Dynamics 365是一種客戶關係管理(CRM)和企業資源規劃(ERP)軟體，提供企業解決方案，用於建立和管理客戶帳戶、聯繫人、銷售機會、銷售機會和案例。
 

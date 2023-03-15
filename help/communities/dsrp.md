@@ -26,7 +26,7 @@ ht-degree: 2%
 
 另請參閱 [SRP選項的特點](working-with-srp.md#characteristics-of-srp-options) 和 [建議的拓撲](topologies.md).
 
-## 需求 {#requirements}
+## 要求 {#requirements}
 
 * [MySQL](#mysql-configuration)，關係資料庫。
 * [阿帕奇索爾](#solr-configuration)，即搜尋平台。

@@ -62,7 +62,7 @@ ht-degree: 3%
 
 1. 按一下 **概述** 並複製 **應用程式（客戶端）ID**, **目錄（租用戶）ID**，和 **用戶端密碼** 供稍後使用。
 
-   ![概覽](/help/forms/using/assets/azure_overview.png)
+   ![概觀](/help/forms/using/assets/azure_overview.png)
 
 ## 產生授權代碼 {#generating-the-authorization-code}
 

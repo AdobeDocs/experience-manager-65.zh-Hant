@@ -34,19 +34,19 @@ ht-degree: 3%
   <tr>
    <td><p>縮排</p> </td>
    <td>模組上的縮進<p> </p> </td>
-   <td><p>12.7毫米</p> </td>
+   <td><p>12.7mm</p> </td>
    <td><p>任何數字</p> </td>
   </tr>
   <tr>
    <td>數字最小寬度</td>
    <td>使用羅馬數字以外的編號清單時，要在項目符號/數字欄位上應用的最小寬度</td>
-   <td>8.0毫米</td>
+   <td>8.0mm</td>
    <td>任何數字</td>
   </tr>
   <tr>
    <td><p>羅馬數字最小寬度</p> </td>
    <td><p>使用羅馬數字時，要在項目符號/數字欄位上應用的最小寬度</p> </td>
-   <td><p>12.7毫米</p> </td>
+   <td><p>12.7mm</p> </td>
    <td><p>任何數字</p> </td>
   </tr>
   <tr>
@@ -161,7 +161,7 @@ ht-degree: 3%
    <td><p>資料編輯格式</p> </td>
    <td><p>編輯資料的格式。 將資料寫入為字串或從字串分析資料時，會使用此方法</p> </td>
    <td><p>locale=en_US;dateFormat=dd-MM-yyyy;numberDecimalSeparator=.;numberGroupSeparator=,;numberUseGroupSeparator=true</p> </td>
-   <td>—<p> </p> </td>
+   <td>--<p> </p> </td>
   </tr>
   <tr>
    <td><p>在發佈時管理信函例項</p> </td>
@@ -244,7 +244,7 @@ ht-degree: 3%
   <tr>
    <td><p>CM用戶根</p> </td>
    <td><p>包含所有通信管理用戶資產的資料夾的URL</p> </td>
-   <td><p>—</p> </td>
+   <td><p>--</p> </td>
    <td><p>有效的資料夾位置</p> </td>
   </tr>
   <tr>

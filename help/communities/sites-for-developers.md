@@ -93,7 +93,7 @@ ht-degree: 1%
 
 * [UGC](#user-generated-content)
 * [使用者群組](#community-user-groups)
-* [Assets](#enablement-assets)
+* [資產](#enablement-assets)
 * [資料庫記錄](#database-records)
 
 ### 社群不重複網站ID {#community-unique-site-id}
@@ -133,7 +133,7 @@ ht-degree: 1%
 * 前置詞為 `community`
 * 後跟 [唯一網站id](#community-unique-site-id)
 
-例如， `community-engage-x0e11-members`.
+例如, `community-engage-x0e11-members`.
 
 ### 啟用資產 {#enablement-assets}
 

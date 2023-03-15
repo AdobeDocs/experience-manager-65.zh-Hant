@@ -1,5 +1,5 @@
 ---
-title: 建立啟動
+title: 建立 Launch
 seo-title: Creating Launches
 description: 建立啟動，以啟用更新新版本的現有網頁，以供日後啟用。 建立Launch時，需指定標題和來源頁面。
 seo-description: Create a launch to enable the updating of a new version of existing web pages for future activation. When you create a Launch, you specify a title and the source page.
@@ -18,7 +18,7 @@ ht-degree: 15%
 
 ---
 
-# 建立啟動 {#creating-launches}
+# 建立 Launch{#creating-launches}
 
 建立啟動，以啟用更新新版本的現有網頁，以供日後啟用。 建立Launch時，需指定標題和來源頁面：
 

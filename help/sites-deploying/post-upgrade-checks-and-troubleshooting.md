@@ -201,6 +201,6 @@ grep -v UnrelatedErrorString
 
 在一些情況下，也可以找到WARN消息，因為可能存在導致此狀態的有效案例，並且應用程式並不總是能夠確定這是否是實際錯誤。 也請務必查詢這些訊息。
 
-### 聯絡Adobe支援 {#contacting-adobe-support}
+### 連絡 Adobe 支援人員 {#contacting-adobe-support}
 
 如果您已閱讀本頁的建議，但仍然看到問題，請聯絡Adobe支援。 要向負責您案例的支援工程師提供盡可能多的資訊，請確保從您的升級中包括upgrade.log檔案。

@@ -12,13 +12,13 @@ exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
 source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '385'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 # 商務多商店設定 {#multi-store}
 
-AEM CIF核心元件可用於多個AEM網站結構，且基礎的GraphQL用戶端實作可連線至不同的Adobe Commerce存放區/存放區檢視。 這可讓專案實作複雜的多商店/多網站設定。
+AEM CIF核心元件可用於多個AEM網站結構，且基礎的GraphQL用戶端實作可連線至不同的Adobe Commerce商店/商店檢視。 這可讓專案實作複雜的多商店/多網站設定。
 
 詳細說明整合多個Adobe Commerce商店檢視與Adobe Experience Manager Sites選項的視訊逐步說明。
 
@@ -61,4 +61,4 @@ AEM Live Copy和Language Copy的多網站管理功能與Commerce Integration Fra
 * [Adobe Commerce網站、商店和檢視](https://docs.magento.com/m2/ce/user_guide/stores/websites-stores-views.html)
 * [AEM CIF核心元件 — 多商店/網站設定](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-store--site-configuration)
 * [使用多網站管理員](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
-* [重複使用內容：多網站管理員和即時副本](/help/sites-administering/msm.md)
+* [重複使用內容：多網站管理員和 Live Copy](/help/sites-administering/msm.md)

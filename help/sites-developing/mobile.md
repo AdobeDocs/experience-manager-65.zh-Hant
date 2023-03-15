@@ -177,7 +177,7 @@ AEM行動架構可開發對發出請求的裝置敏感的元件。 下列程式�
 * 設備組由以下多個模擬器之一組成：設備組配置頁，例如/etc/mobile/groups/touch，包含 `emulators` 屬性下方 `jcr:content` 節點。
 注意：雖然同一模擬器可能屬於多個設備組，但這沒什麼意義。
 
-* 通過設備組的配置對話框， `emulators` 屬性是使用所需模擬器的路徑設定。 例如： `/libs/wcm/mobile/components/emulators/iPhone4`.
+* 通過設備組的配置對話框， `emulators` 屬性是使用所需模擬器的路徑設定。 例如：`/libs/wcm/mobile/components/emulators/iPhone4`。
 
 * 模擬器元件(例如 `/libs/wcm/mobile/components/emulators/iPhone4`)擴充基本行動模擬器元件( `/libs/wcm/mobile/components/emulators/base`)。
 

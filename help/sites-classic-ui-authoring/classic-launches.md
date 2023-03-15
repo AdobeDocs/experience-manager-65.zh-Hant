@@ -1,5 +1,5 @@
 ---
-title: 啟動
+title: Launch
 seo-title: Launches
 description: 建立啟動，以啟用更新新版本的現有網頁，以供日後啟用。 建立Launch時，需指定標題和來源頁面。
 seo-description: Create a launch to enable the updating of a new version of existing web pages for future activation. When you create a Launch, you specify a title and the source page.
@@ -13,15 +13,15 @@ exl-id: e64a66cb-d56a-4504-8883-609143d0daf8
 source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 1%
+ht-degree: 43%
 
 ---
 
-# 啟動{#launches}
+# Launch{#launches}
 
-啟動可讓您有效開發未來版本的內容。
+Launches 可讓您有效率地開發未來版本的內容。
 
-系統會建立啟動，讓您可針對未來的發佈進行變更（同時維護您目前的頁面）。 編輯和更新啟動頁面後，您可將其升級回來源頁面，然後啟動來源頁面（頂層）。 提升會將啟動內容複製回來源頁面，且可手動或自動完成（取決於建立和編輯啟動時設定的欄位）。
+建立 Launch 可讓您完成變更以供未來發佈 (同時維護目前的頁面)。在編輯和更新您的 Launch 頁面後，您將它們提升回來源，然後啟動來源頁面 (頂層)。提升功能會將 Launch 內容複製回來源頁面，可以手動或自動完成 (視建立和編輯 Launch 時設定的欄位)。
 
 >[!NOTE]
 >

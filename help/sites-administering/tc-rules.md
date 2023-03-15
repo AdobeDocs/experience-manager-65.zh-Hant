@@ -14,7 +14,7 @@ exl-id: 8ca7bbcc-413a-49a8-a836-7083a9cadda1
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1150'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 規則包含下列資訊：
 
 * 規則套用的節點路徑。 此規則也適用於節點的子系。
-* 包含要翻譯內容的節點屬性的名稱。 該屬性可以特定於特定資源類型或所有資源類型。
+* 包含要翻譯內容的節點屬性的名稱。 該屬性可專屬於特定資源類型或所有資源類型.
 
 例如，您可以建立規則，將作者新增的內容轉譯至您頁面上的所有AEM foundation Text元件。 規則可識別 `/content` 節點和 `text` 屬性 `foundation/components/text` 元件。
 
@@ -153,7 +153,7 @@ translation_rules.xml檔案由 `nodelist` 具有多個子項的元素 `node` 元
 
 控制台也可用於配置翻譯規則。
 
-若要存取：
+若要存取它：
 
 1. 導覽至 **工具** 然後 **一般**.
 

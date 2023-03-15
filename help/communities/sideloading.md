@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 元件側載 {#component-sideloading}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 將網頁設計為簡單的單頁應用程式時，會根據網站訪客所選取的項目動態變更顯示內容，Communities元件側載相當實用。
 

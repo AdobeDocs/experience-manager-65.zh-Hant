@@ -32,7 +32,7 @@ UGC的翻譯可讓網站訪客和成員透過移除語言障礙來體驗全球�
 * 來自法國的成員使用翻譯功能將日文評論翻譯成法文。
 * 全球通信。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 本檔案的這一節專門討論翻譯服務如何與UGC搭配運作，同時假設您了解如何將AEM連線至 [翻譯服務提供者](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider) 並透過設定 [翻譯整合框架](../../help/sites-administering/tc-tic.md).
 

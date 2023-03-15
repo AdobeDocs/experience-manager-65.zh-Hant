@@ -14,7 +14,7 @@ exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '4935'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -1290,7 +1290,7 @@ public class img_GET extends AbstractImageServlet {
 1. 複製下列節點並貼到apps/mywebsite/components/search節點：
 
    * `/libs/foundation/components/search/dialog`
-   * &quot; `/libs/foundation/components/search/i18n`
+   * `` `/libs/foundation/components/search/i18n`
 
    * `/libs/foundation/components/search/icon.png`
 

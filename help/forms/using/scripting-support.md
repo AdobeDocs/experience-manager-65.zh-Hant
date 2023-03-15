@@ -720,7 +720,7 @@ HTML5表單支援的JavaScript、FormCalc屬性和方法如下：
    <td> </td>
   </tr>
   <tr>
-   <td>字幕</td>
+   <td>caption</td>
    <td>標題對象描述與表單設計對象關聯的描述性標籤。</td>
    <td> </td>
   </tr>
@@ -948,7 +948,7 @@ HTML5表單支援的JavaScript、FormCalc屬性和方法如下：
    <td>無</td>
   </tr>
   <tr>
-   <td>字幕</td>
+   <td>caption</td>
    <td>標題對象描述與表單設計對象關聯的描述性標籤。<br /> </td>
    <td>無</td>
   </tr>
@@ -1216,7 +1216,7 @@ FormCalc是XFA專用的語言，用於建立電子錶單中心邏輯和計算根
    1. Ppmt()
    1. Pv()
    1. Rate()
-   1. 詞彙()
+   1. 術語()
 
 1. **邏輯函式**
 

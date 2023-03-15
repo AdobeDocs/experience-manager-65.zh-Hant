@@ -6,7 +6,7 @@ exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
 source-git-commit: 11cda989e6a28428f03a269c407a7672e6eab747
 workflow-type: tm+mt
 source-wordcount: '4406'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -165,7 +165,7 @@ ht-degree: 1%
 | `allowBlockTags` | 字串 | 定義允許的區塊標籤清單。 一些可能的區塊標籤包括： <ul> <li>標題(h1、h2、h3)</li> <li>第(p)段</li> <li>清單(ol, ul)</li> <li>表（表）</li> </ul> |
 | `fallbackBlockTag` | 字串 | 定義用於任何區塊的區塊標籤，其中區塊標籤未包含在 `allowBlockTags`. `p` 在大多數情況下都足夠了。 |
 | 表格 | nt:unstructured | 定義貼上表格時的行為。 此節點必須具有屬性 `allow` （類型布林值），定義是否允許貼上表格。 如果允許設為 `false`，您必須指定屬性 `ignoreMode` （類型字串），定義如何處理貼上的表格內容。 的有效值 `ignoreMode` 為： <ul> <li>`remove`:刪除表內容。</li> <li>`paragraph`:將表格儲存格轉換為段落。</li> </ul> |
-| list | nt：非結構化 | 定義貼上清單時的行為。 必須具有屬性 `allow` （類型布林值），定義是否允許貼上清單。 若 `allow` 設為 `false`，您必須指定屬性 `ignoreMode` （類型字串）來定義如何處理貼上的任何清單內容。 的有效值 `ignoreMode` 為： <ul><li> `remove`:移除清單內容。</li> <li>`paragraph`:將清單項目轉換為段落。</li> </ul> |
+| list | nt:unstructured | 定義貼上清單時的行為。 必須具有屬性 `allow` （類型布林值），定義是否允許貼上清單。 若 `allow` 設為 `false`，您必須指定屬性 `ignoreMode` （類型字串）來定義如何處理貼上的任何清單內容。 的有效值 `ignoreMode` 為： <ul><li> `remove`:移除清單內容。</li> <li>`paragraph`:將清單項目轉換為段落。</li> </ul> |
 
 有效的範例 `htmlPasteRules` 結構如下。
 
@@ -191,7 +191,7 @@ ht-degree: 1%
 
 ## 配置文本樣式 {#textstyles}
 
-作者可套用樣式以變更部分文字的外觀。 樣式以您在CSS樣式表中預先定義的CSS類別為基礎。 程式化內容包含在 `span` 標籤使用 `class` 屬性來參考CSS類別。 例如， `<span class=monospaced>Monospaced Text Here</span>`.
+作者可套用樣式以變更部分文字的外觀。 樣式以您在CSS樣式表中預先定義的CSS類別為基礎。 程式化內容包含在 `span` 標籤使用 `class` 屬性來參考CSS類別。 例如, `<span class=monospaced>Monospaced Text Here</span>`.
 
 首次啟用樣式外掛程式時，沒有可用的預設樣式。 快顯清單為空。 若要為作者提供樣式，請執行下列動作：
 

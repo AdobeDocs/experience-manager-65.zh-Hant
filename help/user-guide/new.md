@@ -26,7 +26,7 @@ Adobe Experience Manager(AEM)是以網頁為基礎的用戶端 — 伺服器系�
 
 [有關部署AEM軟體的詳細資訊。](/help/sites-deploying/home.md)
 
-請造訪 [AEM維護中心](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) 如需AEM版本的資訊。
+請造訪 [AEM維護中心](https://helpx.adobe.com/tw/experience-manager/aem-releases-updates.html) 如需AEM版本的資訊。
 
 ## 如何取得AEM的官方支援？ {#official-support}
 
@@ -43,12 +43,12 @@ Adobe Experience Manager(AEM)是以網頁為基礎的用戶端 — 伺服器系�
 * [AEM 6.2](https://helpx.adobe.com/tw/support/experience-manager/6-2.html)**
 * [AEM 6.1](https://docs.adobe.com/docs/zh-Hant/aem/6-1.html)**
 * [AEM 6.0](https://docs.adobe.com/docs/zh-Hant/aem/6-0.html)**
-* [AEM 5.6.1](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [AEM 5.6](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ 5.5](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ 5.4](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ 5.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CRX 2.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
+* [AEM 5.6.1](https://helpx.adobe.com/tw/experience-manager/aem-previous-versions.html)**
+* [AEM 5.6](https://helpx.adobe.com/tw/experience-manager/aem-previous-versions.html)**
+* [CQ 5.5](https://helpx.adobe.com/tw/experience-manager/aem-previous-versions.html)**
+* [CQ 5.4](https://helpx.adobe.com/tw/experience-manager/aem-previous-versions.html)**
+* [CQ 5.3](https://helpx.adobe.com/tw/experience-manager/aem-previous-versions.html)**
+* [CRX 2.3](https://helpx.adobe.com/tw/experience-manager/aem-previous-versions.html)**
 
 **表示Adobe不再正式支援版本。
 

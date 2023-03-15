@@ -1,5 +1,5 @@
 ---
-title: 在Dynamic Media中使用選擇性發佈
+title: 在 Dynamic Media 中使用選擇性發佈
 description: 您可以在資料夾層級選擇從Adobe Experience Manager或Dynamic Media發佈或取消發佈資產。 您可以使用「管理出版物」或「快速發佈」，而非僅能依賴在Dynamic Media執行個體使用相同資料夾設定的Dynamic Media組態。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS

@@ -376,7 +376,7 @@ ht-degree: 2%
 **若要預覽輪播橫幅：**
 
 1. 在 **[!UICONTROL 資產]**，導覽至您建立的現有輪播橫幅，並選取以開啟它。
-1. 選擇 **[!UICONTROL 編輯]**.
+1. 選取&#x200B;**[!UICONTROL 編輯]**。
 1. 在工具列右角的檢視器預設集清單中，選取檢視器以預覽轉盤橫幅。
 
    ![experience_fragment-carouselbanner-viewerdown](assets/experience_fragment-carouselbanner-viewerdropdown.png)
@@ -453,6 +453,6 @@ Experience Manager Assets傳回的內嵌程式碼已有可供使用的事件處�
 
 觸發Quickview URL並啟動Quickview面板的最後一個步驟很可能需要IT部門的前端IT人員協助。 他們具備最佳知識，了解如何從正確的步驟準確觸發Quickview實施，並擁有可供使用的Quickview URL。
 
-## 使用Quickview建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
+## 使用 Quickview 建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
 請參閱 [使用Quickview建立自訂快顯視窗](/help/assets/custom-pop-ups.md).

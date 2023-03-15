@@ -1,5 +1,5 @@
 ---
-title: 新增Dynamic Media資產至頁面
+title: 將 Dynamic Media 資產新增至頁面
 description: 若要將Dynamic Media功能新增至您在網站上使用的資產，您可以直接在頁面上新增Dynamic Media或互動式媒體元件。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,11 +9,11 @@ exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '1668'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# 新增Dynamic Media資產至頁面{#adding-dynamic-media-assets-to-pages}
+# 將 Dynamic Media 資產新增至頁面{#adding-dynamic-media-assets-to-pages}
 
 若要將Dynamic Media功能新增至您在網站上使用的資產，您可以新增 **[!UICONTROL Dynamic Media]** 或 **[!UICONTROL 互動式媒體]** 元件。 輸入 **[!UICONTROL 設計]** 模式及啟用Dynamic Media元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。Dynamic Media和互動式媒體元件是智慧型的，他們知道您是新增影像還是視訊，而可用的選項也會隨之變更。
 

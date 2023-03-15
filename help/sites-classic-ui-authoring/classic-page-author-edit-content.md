@@ -14,7 +14,7 @@ exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1755'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -183,7 +183,7 @@ ht-degree: 1%
 
 您可以取消（然後重新啟用）繼承。 視元件而定，這可從下列位置取得：
 
-1. **即時副本**
+1. **Live Copy**
 
    如果元件是Live Copy或啟動的一部分，則會以掛鎖圖示表示。 您可以按一下掛鎖來取消繼承。
 

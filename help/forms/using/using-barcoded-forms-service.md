@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 條碼式Forms服務{#barcoded-forms-service}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 條碼式Forms服務從條碼的電子影像中擷取資料。 該服務接受包括一個或多個條形碼的TIFF和PDF檔案作為輸入，並提取條形碼資料。 條碼資料可以以多種方式格式化，包括XML、分隔字串或使用JavaScript建立的任何自訂格式。
 

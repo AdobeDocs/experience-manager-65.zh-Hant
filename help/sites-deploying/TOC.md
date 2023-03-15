@@ -47,7 +47,7 @@ ht-degree: 12%
    + [OSGi組態設定](osgi-configuration-settings.md)
    + [執行模式](configure-runmodes.md)
    + [Web 主控台](web-console.md)
-   + [複寫](replication.md)
+   + [複製](replication.md)
    + [使用Mutual SSL進行複製](mssl-replication.md)
    + [疑難排解復寫](troubleshoot-rep.md)
    + [靜態對象的過期](expiration-static-objects.md)

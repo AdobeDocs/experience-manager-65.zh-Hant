@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 建立互動式通訊{#create-an-interactive-communication}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 互動式通訊可集中管理個人化與互動式通訊的建立、組裝與傳遞。 利用打印作為Web的主通道，可以最大限度地減少建立互動式通信的Web輸出時的工作重複。
 

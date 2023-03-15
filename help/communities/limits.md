@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 會員供款限制 {#member-contribution-limits}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 貢獻限制功能可限制社群成員的貢獻，作為防止垃圾郵件的工具。
 

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 在AEM Sites單頁應用程式中內嵌最適化表單或互動式通訊{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-single-page-application}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 AEM Forms可讓表單開發人員將最適化表單和互動式通訊順暢地嵌入AEM Sites單頁應用程式(SPA)。 內嵌的最適化表單和互動式通訊功能完整，使用者無需離開頁面即可填寫及提交表單。 它可協助使用者停留在網頁上的其他元素上，並同時與最適化表單或互動式通訊互動。
 

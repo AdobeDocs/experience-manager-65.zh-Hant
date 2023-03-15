@@ -69,7 +69,7 @@ Media Library提供下列使用案例的基本DAM功能：
 * 為資產加上注釋。
 * 將資產新增至 [!DNL Sites] 頁面。
 * 使用 [!DNL Content Fragments].
-* 請使用HTTP REST和GraphQL API，以執行 [!DNL Content Fragments] 和參考的媒體資產，依照Sites授權。
+* 請使用HTTP REST和GraphQL API，以 [!DNL Content Fragments] 和參考的媒體資產，依照Sites授權。
 * Marketing Cloud整合。
 * 自訂及擴充資產管理使用者介面。
 * 存取查詢產生器(API)以擴充搜尋功能。

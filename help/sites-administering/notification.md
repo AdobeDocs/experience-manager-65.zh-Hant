@@ -13,7 +13,7 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 source-git-commit: ea5abbbe8f928a63b7d3d6f96f3007a3c82706e0
 workflow-type: tm+mt
 source-wordcount: '2116'
-ht-degree: 2%
+ht-degree: 12%
 
 ---
 
@@ -368,7 +368,7 @@ AEM提供OAuth2的整合式Mailer服務支援，讓組織能夠遵守安全的�
 
 ![oauth smtp提供程式](assets/oauth-smtpprov2.png)
 
-現在，啟動OAuth元件。 您可以透過以下方式達成此目的：
+現在，啟動OAuth元件。 您可以透過以下方式進行：
 
 1. 請造訪此URL，前往元件主控台： `http://serveraddress:serverport/system/console/components`
 1. 尋找下列元件
@@ -391,15 +391,15 @@ AEM提供OAuth2的整合式Mailer服務支援，讓組織能夠遵守安全的�
 ### Microsoft Outlook {#microsoft-outlook}
 
 1. 前往 [https://portal.azure.com/](https://portal.azure.com/) 並登入。
-1. 搜尋 **Azure Active Directory** 在搜尋列中，按一下結果。 或者，您可以直接瀏覽至 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
-1. 按一下 **應用程式註冊** - **新註冊**
+1. 在搜尋列中搜尋 **Azure Active Directory**，然後按一下結果。或者，您可以直接瀏覽到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
+1. 按一下「**應用程式註冊** - **新註冊**」
 
    ![](assets/oauth-outlook1.png)
 
-1. 根據您的需求填寫資訊，然後按一下 **註冊**
-1. 前往新建立的應用程式，然後選取 **API權限**
-1. 前往 **新增權限** - **圖表權限** - **委派權限**
-1. 選取您應用程式的下列權限，然後按一下 **新增權限**:
+1. 根據您的要求填寫資訊，然後按一下「**註冊**」
+1. 前往新建的應用程式，然後選取「**API 權限**」
+1. 移至「**新增權限** - **Graph 權限** - **委派的權限**」
+1. 為您的應用程式選取以下權限，然後按一下「**新增權限**」：
    * `SMTP.Send`
    * `Mail.Read`
    * `Mail.Send`
@@ -409,15 +409,15 @@ AEM提供OAuth2的整合式Mailer服務支援，讓組織能夠遵守安全的�
    * `http://localhost:4503/services/mailer/oauth2/token`
 1. 對每個發佈例項重複上述步驟
 1. 根據您的需求配置設定
-1. 接下來，轉到 **憑證和機密**，按一下 **新用戶端密碼** 並依照畫面上的步驟建立密碼。 請務必注意此機密以供日後使用
-1. Press **概述** 並複製 **應用程式（客戶端）ID** 和 **目錄（租用戶）ID** 供稍後使用
+1. 接下來，移至「**憑證和密碼**」，按一下「**新增用戶端密碼**」，並按照畫面上的步驟建立密碼。請務必記下此密碼以備稍後使用
+1. 在左側窗格中按「**概觀**」並複製「**應用程式 (用戶端) ID**」和「**目錄 (租用戶) ID**」的值以供稍後使用
 
 若要重述，您需要下列資訊才能為AEM端的Mailer服務設定OAuth2:
 
-* 驗證URL，將以租用戶ID建構。 它會有此表格： `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
-* 代號URL，將以租用戶ID建構。 它會有此表格： `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
-* 將以租用戶ID建構的重新整理URL。 它會有此表格： `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
-* 用戶端ID
+* 驗證 URL，將使用租用戶 ID 建構。 它將具有此形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
+* 權杖 URL，將使用租用戶 ID 建構。 它將具有此形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 重新整理 URL，將使用租用戶 ID 建構。 它將具有此形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 用戶端 ID
 * 用戶端密碼
 
 **AEM端組態**
@@ -437,7 +437,7 @@ AEM提供OAuth2的整合式Mailer服務支援，讓組織能夠遵守安全的�
 1. 填寫所需資訊如下：
    * 建構授權URL、代號URL和重新整理代號URL，如下所述： [本程式的結尾](#microsoft-outlook)
    * 用戶端ID和用戶端密碼：使用您依上述方式擷取的值來設定這些欄位。
-   * 將以下作用域添加到配置中：
+   * 將以下範圍新增到設定中：
       * openid
       * offline_access
       * `https://outlook.office365.com/Mail.Send`
@@ -451,7 +451,7 @@ AEM提供OAuth2的整合式Mailer服務支援，讓組織能夠遵守安全的�
 
 ![](assets/oauth-outlook-smptconfig.png)
 
-現在，啟動OAuth元件。 您可以透過以下方式達成此目的：
+現在，啟動OAuth元件。 您可以透過以下方式進行：
 
 1. 請造訪此URL，前往元件主控台： `http://serveraddress:serverport/system/console/components`
 1. 尋找下列元件
@@ -459,7 +459,7 @@ AEM提供OAuth2的整合式Mailer服務支援，讓組織能夠遵守安全的�
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
 1. 按元件左側的「播放」圖示
 
-![元件2](assets/oauth-components-play.png)
+![components2](assets/oauth-components-play.png)
 
 最後，請依下列方式確認設定：
 

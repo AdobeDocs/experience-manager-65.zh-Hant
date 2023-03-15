@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 編寫商務體驗 {#authoring-commerce-experiences}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 CIF附加元件運用商務專用功能擴充AEM的製作功能。 這可讓作者不需離開內容，就能存取產品資料和內容，以有效率地建立及管理商務相關體驗。
 

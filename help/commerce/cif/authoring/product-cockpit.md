@@ -1,17 +1,17 @@
 ---
-title: 產品座艙
+title: 產品駕駛艙
 description: 使用產品座艙
 exl-id: 05ef2604-1d52-4397-a696-0b64717cc3cc
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 產品座艙 {#product-cockpit}
+# 產品駕駛艙 {#product-cockpit}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 「產品座艙」提供連結產品目錄和相關內容的統一概述。 所有相關內容都具有可從駕駛艙快速訪問的連結。
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ![配置的目錄](/help/commerce/cif/assets/catalog-overview.png)
 
-按一下類別會載入點按類別的子項。
+按一下類別會載入已點按類別的子項。
 
 ![類別子項](/help/commerce/cif/assets/catalog-category-children.png)
 

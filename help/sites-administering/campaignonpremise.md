@@ -192,7 +192,7 @@ AEM現在可與Adobe Campaign通訊。
 
    ![配置外部化程式](assets/acc-externalizer-config.png)
 
-1. 點選或按一下 **儲存**.
+1. 點選或按一下&#x200B;**儲存**。
 
 您已設定Externalizer，而Adobe Campaign現在可以存取您的內容。
 

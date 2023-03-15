@@ -6,7 +6,7 @@ exl-id: 4a82008c-af69-414e-bd98-c7f683a74905
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
 source-wordcount: '380'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 20%
 | [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南會說明AEM的基本概念。 |
 | [開發使用手冊](/help/sites-developing/home.md) | 了解如何建置您的AEM例項。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
-| [商務使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
+| [Commerce 使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
 | [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 

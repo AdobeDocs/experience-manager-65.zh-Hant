@@ -8,7 +8,7 @@ exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
 source-wordcount: '729'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -81,11 +81,11 @@ Adobe提供兩個版本的Commerce Integration Framework:
   <tr>
    <td>標準化資料模型</td>
    <td>否</td>
-   <td>是，Adobe Commerce GraphQL架構</td>
+   <td>是，Adobe Commerce GraphQL結構</td>
   </tr>
   <tr>
    <td>可用性</td>
-   <td><p>是。 SAPCommerce Cloud(更新擴充功能以支援AEM 6.4和Hybris 5（預設），並維持與Hybris 4的相容性</p> <p>SalesforceCommerce Cloud(支援AEM 6.4的Connector開源)</p> </td>
+   <td><p>可以。SAPCommerce Cloud(更新擴充功能以支援AEM 6.4和Hybris 5（預設），並維持與Hybris 4的相容性</p> <p>SalesforceCommerce Cloud(支援AEM 6.4的Connector開源)</p> </td>
    <td>是，透過GitHub透過開放原始碼。 Adobe Commerce(支援2.3.2（預設），並與2.3.1相容)。</td>
   </tr>
   <tr>
@@ -190,7 +190,7 @@ AEM eCommerce提供：
 * 該框架是可擴展的。
 * 框架不提供現成可用的網站。 要使框架適應您的規範，始終需要進行一定數量的開發工作。
 
-### 為什麼？ {#why}
+### 原因為何？ {#why}
 
 * 提供快速實現定制電子商務站點所需的基本機制。
 * Tp提供開發真實電子商務站點所需的靈活性。

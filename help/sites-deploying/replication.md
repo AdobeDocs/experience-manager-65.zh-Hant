@@ -1,5 +1,5 @@
 ---
-title: 複寫
+title: 複製
 seo-title: Replication
 description: 了解如何在AEM中設定和監視復寫代理。
 seo-description: Learn how to configure and monitor replication agents in AEM.
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ---
 
-# 複寫{#replication}
+# 複製{#replication}
 
 復寫代理是Adobe Experience Manager(AEM)的中心，作為用於：
 
@@ -533,7 +533,7 @@ AEM [社群](/help/communities/overview.md) 從不對UGC使用複製。 相反�
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-   您可以在此：
+   您可以在這裡：
 
    * 查看是否啟用了代理。
    * 查看任何複製的目標。

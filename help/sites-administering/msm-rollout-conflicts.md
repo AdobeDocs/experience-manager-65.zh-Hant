@@ -1,5 +1,5 @@
 ---
-title: MSM轉出衝突
+title: MSM 推出衝突
 seo-title: MSM Rollout Conflicts
 description: 了解如何處理多網站管理員轉出衝突。
 seo-description: Learn how to deal with Multi Site Manager rollout conflicts.
@@ -14,11 +14,11 @@ exl-id: e145e79a-c363-4a33-b9f9-99502ed20563
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '910'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# MSM轉出衝突{#msm-rollout-conflicts}
+# MSM 推出衝突{#msm-rollout-conflicts}
 
 如果在Blueprint分支和相依的即時副本分支中建立了具有相同頁面名稱的新頁面，則可能會發生衝突。
 

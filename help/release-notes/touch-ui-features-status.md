@@ -5,7 +5,7 @@ exl-id: 7b71e8db-e8c6-4470-bc22-db3d4600b7fc
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1063'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -118,7 +118,7 @@ AEM 6.4以上 [已棄用傳統UI](../release-notes/deprecated-removed-features.m
 | 元件清單 | 完成 |  |
 | 複製和貼上元件 | 完成 |  |
 | 剪貼簿中的元件清單 | 遺失 |  |
-| 還原/重做 | 完成 |  |
+| 還原/取消復原 | 完成 |  |
 | 將內容拖曳至元件預留位置 | 完成 |  |
 | 透過自動建立元件，將內容直接拖曳至parsys預留位置 | 完成 |  |
 

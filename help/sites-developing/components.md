@@ -1,7 +1,7 @@
 ---
 title: 元件概觀
 seo-title: Components
-description: 元件是模組化單元，可實現特定功能，以在您的網站上呈現您的內容
+description: 元件是模組化單元，可實現特定功能以在您的網站上展示您的內容
 seo-description: Components are modular units which realize specific functionality to present your content on your website
 uuid: fb39aeb8-8f43-4091-8083-ebfab89e6e63
 contentOwner: Guillaume Carlino
@@ -13,39 +13,39 @@ exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 4%
+ht-degree: 51%
 
 ---
 
 # 元件概觀{#components-overview}
 
-本頁概略介紹Adobe Experience Manager(AEM)元件，例如 [用於頁面製作](/help/sites-authoring/default-components-foundation.md).
+此頁面概述了 Adobe Experience Manager (AEM) 元件，例如那些[用於頁面編寫](/help/sites-authoring/default-components-foundation.md) 的元件。
 
-## 什麼是元件？ {#what-exactly-is-a-component}
+## 元件有哪些？ {#what-exactly-is-a-component}
 
-* 模組化單元，可實現在網站上呈現您內容的特定功能。
+* 一種模組化單元，可實現特定功能以在您的網站上展示您的內容。
 * 可重複使用。
-* 開發為存放庫一個資料夾內的獨立單位。
-* 沒有隱藏的配置檔案。
-* 可包含其他元件。
+* 在存放庫的一個資料夾中開發為獨立單元。
+* 沒有隱藏的設定檔案。
+* 可以包含其他元件。
 * 可在任何AEM系統內的任何位置執行。 也可以限制在特定元件下執行。
-* 有標準化的使用者介面。
-* 具有可設定的編輯行為。
+* 具有標準化的使用者介面。
+* 具有可以設定的編輯行為。
 * 使用根據Granite UI元件使用子元素建立的對話方塊
 * 使用 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) （建議）或JSP。
-* 可開發以建立可擴充預設功能的自訂元件。
+* 可以開發以建立擴充預設功能的自訂元件。
 
-由於元件是模組化的，因此您可以：
+因為元件是模組化的，所以您可以：
 
-* 在本機執行個體上開發新元件。
-* 將其部署至您的測試環境。
-* 將其部署至您的即時製作環境，讓作者和/或管理員可在其中新增和設定內容。
-* 將其部署至您的即時發佈環境，以便用於呈現網站訪客的內容。 某些元件（例如Communities）也接受使用者的輸入。
+* 在您的本機執行個體上開發新元件。
+* 將其部署到測試環境。
+* 將其部署到即時編寫環境，作者和/或管理員可以在其中新增和設定內容。
+* 將其部署到即時發佈環境，它們用於為您網站訪客呈現內容。某些元件（例如Communities）也接受使用者的輸入。
 
-每個AEM元件：
+每個 AEM 元件：
 
 * 是資源類型。
-* 是完全實現特定功能的指令碼集合。
+* 是完整實現特定功能的指令碼集合。
 * 可在中運作 *隔離*，即AEM或入口網站內。
 
 ## AEM內的現成元件 {#out-of-the-box-components-within-aem}
@@ -58,7 +58,7 @@ AEM隨附各種 [現成可用的元件](/help/sites-authoring/default-components
 * 影像，附帶的文字
 * 工具列
 
-提供的元件及其在 [範例We.Retail網站](/help/sites-developing/we-retail.md) 提供了如何實作和使用元件的說明。 這些元件提供了所有原始碼，可以按原樣使用，也可以作為修改或擴展元件的起始點。
+提供的元件及其在 [範例We.Retail網站](/help/sites-developing/we-retail.md) 提供了如何實作和使用元件的說明。 這些元件隨附所有原始程式碼，可以按原狀使用，也可以做為修改或擴充元件的起點。
 
 ### 核心元件與基礎元件 {#core-components-and-foundation-components}
 
@@ -79,19 +79,19 @@ AEM隨附各種 [現成可用的元件](/help/sites-authoring/default-components
 
 ### 檢視可用元件 {#viewing-available-components}
 
-如需AEM例項中所有可用元件的概觀，請使用 [元件主控台](/help/sites-authoring/default-components-console.md).
+如需 AEM 執行個體中所有可用元件的概觀，請使用[元件主控台](/help/sites-authoring/default-components-console.md)。
 
-或者，您也可以使用CRXDE Lite來取得存放庫中所有可用元件的清單。
+或者，您也可以使用 CRXDE Lite 取得存放庫中所有可用元件的清單。
 
-1. 在 **[!UICONTROL CRXDE Lite]**，選取 **[!UICONTROL 工具]** ，然後 **[!UICONTROL 查詢]**，會開啟 **[!UICONTROL 查詢]** 標籤。
+1. 在 **[!UICONTROL CRXDE Lite]** 中，從工具列中選擇&#x200B;**[!UICONTROL 工具]**，然後選擇&#x200B;**[!UICONTROL 查詢]**，**[!UICONTROL 查詢]**&#x200B;索引標籤會隨即開啟。
 
-1. 在 **[!UICONTROL 查詢]** 索引標籤，選取 `XPath` as **[!UICONTROL 類型]**.
+1. 在&#x200B;**[!UICONTROL 查詢]**&#x200B;索引標籤中，選擇 `XPath` 作為 **[!UICONTROL 類型]**。
 
-1. 在 **[!UICONTROL 查詢]** 輸入欄位，輸入下列字串：
+1. 在&#x200B;**[!UICONTROL 查詢]** 輸入欄位，輸入以下字串：
 
    `//element(*, cq:Component)`
 
-1. 按一下 **[!UICONTROL 執行]** 並列出元件。
+1. 按一下&#x200B;**[!UICONTROL 執行]**，元件隨即列出。
 
 ## 其他資源 {#further-reading}
 

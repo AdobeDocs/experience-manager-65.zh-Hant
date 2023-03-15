@@ -1,5 +1,5 @@
 ---
-title: 資源映射
+title: 資源對應
 seo-title: Resource Mapping
 description: 了解如何使用資源對應來定義AEM的重新導向、虛名URL和虛擬主機。
 seo-description: Learn how to define redirects, vanity URLs and virtual hosts for AEM by using resource mapping.
@@ -15,11 +15,11 @@ exl-id: 3eebdd38-da5b-4c38-868a-22c3c7a97b66
 source-git-commit: 7c24379c01f247f5ad45e3ecd40f3edef4ac3cfb
 workflow-type: tm+mt
 source-wordcount: '519'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# 資源映射{#resource-mapping}
+# 資源對應{#resource-mapping}
 
 資源對應可用來定義AEM的重新導向、虛名URL和虛擬主機。
 
@@ -76,7 +76,7 @@ ResourceResolver.map方法用來將資源路徑對應至URL的項目清單。
 
 若要重新導向請求：
 
-`https://localhost:4503/welcome` &quot;
+`https://localhost:4503/welcome` ``
 
 至:
 

@@ -9,7 +9,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 discoiquuid: 8f776f30-ff93-4d19-94c6-c4bfe6f1fae2
 docset: aem65
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
+source-git-commit: 45ca98ffb68e1e31e2f45f352e86f5aa1b6f0f00
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 # 建立和管理最適化表單的A/B測試{#create-and-manage-a-b-test-for-adaptive-forms}
 
-## 總覽 {#overview-br}
+## 概觀 {#overview-br}
 
 如果您的客戶提供的體驗不吸引人，他們可能會放棄表單。 雖然讓客戶感到沮喪，但它還可以提高貴組織的支援量和成本。 識別並提供適當的客戶體驗以提高轉換率既重要又具挑戰性。 Adobe Experience Manager Forms是這個問題的關鍵。
 
@@ -140,7 +141,7 @@ AEM可讓您建立對象，並用於A/B測試。 您在AEM中建立的對象可�
 1. 按一下 **更多** 然後選取 **編輯A/B測試**. 「更新A/B」測試頁面隨即開啟。
 
 1. 視需要更新對象和體驗分送。
-1. 按一下 **更新**.
+1. 按一下&#x200B;**更新**。
 
 ## 檢視和分析A/B測試報表 {#view-and-analyze-a-b-test-report}
 

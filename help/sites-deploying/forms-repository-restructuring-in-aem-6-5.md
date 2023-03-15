@@ -52,43 +52,43 @@ ht-degree: 7%
 |---|---|
 | **新位置** | `/libs/fd/af/authoring/clientlibs` |
 | **重組指導** | 對於用戶端LIB中可以由絕對路徑參照的資源，您需要在新資產中使用較新路徑。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 | **上一位置** | `/etc/clientlibs/fd/xfaforms` |
 |---|---|
 | **新位置** | `/libs/fd/xfaforms/clientlibs/` |
 | **重組指導** | 對於用戶端LIB中可以由絕對路徑參照的資源，您需要在新資產中使用較新路徑。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 | **上一位置** | `/etc/clientlibs/fd/af` |
 |---|---|
 | **新位置** | `/libs/fd/af/runtime/clientlibs` |
 | **重組指導** | 對於用戶端LIB中可以由絕對路徑參照的資源，您需要在新資產中使用較新路徑。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 | **上一位置** | `/etc/clientlibs/fd/af` |
 |---|---|
 | **新位置** | `/libs/fd/af/runtime/clientlibs` |
 | **重組指導** | 對於用戶端LIB中可以由絕對路徑參照的資源，您需要在新資產中使用較新路徑。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 | **上一位置** | `/etc/clientlibs/fd/expeditor` |
 |---|---|
 | **新位置** | `/libs/fd/expeditor/clientlibs` |
 | **重組指導** | 對於用戶端LIB中可以由絕對路徑參照的資源，您需要在新資產中使用較新路徑。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 | **上一位置** | `/etc/clientlibs/fd/fmaddon` |
 |---|---|
 | **新位置** | `/libs/fd/fmaddon` |
 | **重組指導** | 我們從不建議或支援變更這些clientlib。 如果已對這些clientlib進行修改，則應復原以使用AEM提供的程式碼。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 | **上一位置** | `/etc/aep` |
 |---|---|
 | **新位置** | `/var/fd/content/annotations` |
 | **重組指導** | 我們從不建議或支援變更這些clientlib。 如果已對這些clientlib進行修改，則應復原以使用AEM提供的程式碼。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 ## 未來升級前 {#prior-to-upgrade}
 
@@ -98,7 +98,7 @@ ht-degree: 7%
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/echosign` |
 | **重組指導** | 此 [延遲內容移轉](/help/sites-deploying/lazy-content-migration.md) 公用程式從Forms移轉UI觸發。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 ### RecaptchaCloud Service配置 {#recaptcha-cloud-service-configurations}
 
@@ -106,7 +106,7 @@ ht-degree: 7%
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/recaptcha` |
 | **重組指導** | 此 [延遲內容移轉](/help/sites-deploying/lazy-content-migration.md) 公用程式從Forms移轉UI觸發。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 ### TypekitCloud Service配置 {#typekit-cloud-service-configurations}
 
@@ -114,7 +114,7 @@ ht-degree: 7%
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/typekit` |
 | **重組指導** | 此 [延遲內容移轉](/help/sites-deploying/lazy-content-migration.md) 公用程式從Forms移轉UI觸發。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 ### 雜項 {#misc-1}
 
@@ -122,10 +122,10 @@ ht-degree: 7%
 |---|---|
 | **新位置** | `/conf/<tenant>/settings/cloudconfigs/fdm` |
 | **重組指導** | 此 [延遲內容移轉](/help/sites-deploying/lazy-content-migration.md) 公用程式從Forms移轉UI觸發。 |
-| **附註** | 不適用 |
+| **附註** | N/A |
 
 | **上一位置** | `/etc/designs/fd/fp` |
 |---|---|
 | **新位置** | `/libs/fd/fp` |
 | **重組指導** | 對/etc範本的任何參照最終應更新為指向其 `/libs` 對應。 |
-| **附註** | 不適用 |
+| **附註** | N/A |

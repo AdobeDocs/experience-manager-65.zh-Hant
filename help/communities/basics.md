@@ -13,13 +13,13 @@ exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # Communities元件基本知識 {#communities-components-basics}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 本檔案的製作區段說明如何以作者編輯模式將Communities功能新增至AEM網站，並說明元件設定。
 
@@ -88,5 +88,5 @@ ht-degree: 1%
 
 如需開發人員資訊：
 
-* [AEM標籤架構](../../help/sites-developing/framework.md)
+* [AEM 標記框架](../../help/sites-developing/framework.md)
 * [標籤要點](tag.md)

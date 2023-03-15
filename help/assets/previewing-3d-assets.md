@@ -1,5 +1,5 @@
 ---
-title: 預覽3D資產
+title: 預覽 3D 資產
 description: 了解如何以Experience Manager預覽3D資產。
 contentOwner: Rick Brough
 docset: aem65
@@ -9,7 +9,7 @@ exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
 source-git-commit: aa45839c53cb2c0715c9163847351aa2391309e0
 workflow-type: tm+mt
 source-wordcount: '580'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 

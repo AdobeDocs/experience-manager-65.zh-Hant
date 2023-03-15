@@ -77,7 +77,7 @@ Geometrixx網站上包含了說明此使用案例的範例：
   </tr>
   <tr>
    <td>根路徑</td>
-   <td>指示批量編輯器搜索的根路徑。<br /> 例如， <code>/content/geometrixx/en</code>. 批量編輯器會搜索所有子節點。</td>
+   <td>指示批量編輯器搜索的根路徑。<br /> 例如, <code>/content/geometrixx/en</code>. 批量編輯器會搜索所有子節點。</td>
   </tr>
   <tr>
    <td>查詢參數</td>

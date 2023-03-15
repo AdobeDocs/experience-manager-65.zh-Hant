@@ -599,7 +599,7 @@ Sling標籤程式庫包含實用的Sling函式。
 
 * SlingScriptHelper物件，包含指令碼的便利方法，主要是sling.include(&#39;/some/other/resource&#39;)，以包含此回應內其他資源的回應(例如 內嵌標題html片段)和sling.getService(foo.bar.Service.class)，以擷取Sling中可用的OSGi服務（類別標籤法，視指令碼語言而定）。
 
-**資源**
+**resource**
 
 * 要處理的目前資源物件，視請求的URL而定。 它與slingRequest.getResource()相同。
 

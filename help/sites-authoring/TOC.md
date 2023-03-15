@@ -45,7 +45,7 @@ ht-degree: 48%
    + [為行動裝置製作頁面](mobile.md)
    + [製作時疑難排解AEM](troubleshooting.md)
    + [編輯頁面時的鍵盤快速鍵](page-authoring-keyboard-shortcuts.md)
-   + [最佳作法](best-practices.md)
+   + [最佳做法](best-practices.md)
 + 網站和頁面功能 {#siteandpage}
    + [使用標記](tags.md)
    + [建立頁面範本](templates.md)
@@ -67,9 +67,9 @@ ht-degree: 48%
    + [創意專案與PIM整合](managing-product-information.md)
    + [使用專案工作流程](projects-with-workflows.md)
 + 啟動 {#launches}
-   + [啟動](launches.md)
-   + [建立啟動 ](launches-creating.md)
-   + [編輯啟動](launches-editing.md)
+   + [Launch](launches.md)
+   + [建立 Launch](launches-creating.md)
+   + [編輯 Launch](launches-editing.md)
    + [提升啟動](launches-promoting.md)
 + 工作流程 {#workflows}
    + [使用工作流程](workflows.md)

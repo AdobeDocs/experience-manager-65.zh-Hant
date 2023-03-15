@@ -18,7 +18,7 @@ ht-degree: 14%
 
 # 使用sendToPrinter API {#using-the-sendtoprinter-api}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在AEM Forms中，您可以使用SendToPrinter服務將文檔發送到打印機。 SendToPrinter服務支援以下打印訪問機制：
 
@@ -52,8 +52,8 @@ ht-degree: 14%
 | LPD | 有效 | 無效 | 表示找不到打印機的異常。 |
 | LPD | 有效 | 有效 | 成功打印作業。 |
 | CUPS | 空白 | 任何 | 表示必要參數sPrintServerUri不能為空的異常。 |
-| 杯 | 無效 | 任何 | 表示找不到打印機的異常。 |
-| 杯 | 有效 | 任何 | 打印作業成功。 |
+| CUPS | 無效 | 任何 | 表示找不到打印機的異常。 |
+| CUPS | 有效 | 任何 | 打印作業成功。 |
 | DirectIP | 空白 | 任何 | 表示必要參數sPrintServerUri不能為空的異常。 |
 | DirectIP | 無效 | 任何 | 表示找不到打印機的異常。 |
 | DirectIP | 有效 | 任何 | 打印作業成功。 |

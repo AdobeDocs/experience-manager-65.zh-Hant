@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # 標籤啟用資源 {#tagging-enablement-resources}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 啟用資源的標籤可讓成員瀏覽時篩選資源和學習路徑 [目錄](functions.md#catalog-function).
 

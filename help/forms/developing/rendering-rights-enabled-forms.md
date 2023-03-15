@@ -104,7 +104,7 @@ Forms服務轉譯已啟用權限的表單時，會傳回您必須寫入用戶端
 
    * 建立 `ReaderExtensionSpec` 物件，使用其建構子。
    * 通過調用 `ReaderExtensionSpec` 物件 `setReCredentialAlias` 方法，並指定代表別名值的字串值。
-   * 通過調用屬於的相應方法來設定每個使用權 `ReaderExtensionSpec` 物件。 但是，只有當引用的憑據允許您設定使用權限時，才可以設定使用權限。 也就是說，如果憑據不允許設定，則無法設定使用權。 例如。 若要設定使用權限，讓使用者能夠填寫表單欄位並儲存表單，請叫用 `ReaderExtensionSpec` 物件 `setReFillIn` 方法和傳遞 `true`.
+   * 通過調用屬於的相應方法來設定每個使用權 `ReaderExtensionSpec` 物件。 但是，只有當引用的憑據允許您設定使用權限時，才可以設定使用權限。 也就是說，如果憑據不允許設定，則無法設定使用權。 例如. 若要設定使用權限，讓使用者能夠填寫表單欄位並儲存表單，請叫用 `ReaderExtensionSpec` 物件 `setReFillIn` 方法和傳遞 `true`.
 
    >[!NOTE]
    >

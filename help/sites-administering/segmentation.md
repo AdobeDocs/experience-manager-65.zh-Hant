@@ -1,5 +1,5 @@
 ---
-title: 使用ContextHub設定區段
+title: 使用 ContextHub 設定分段
 seo-title: Configuring Segmentation with ContextHub
 description: 了解如何使用Context Hub設定區段。
 seo-description: Learn how to configure segmentation with Context Hub.
@@ -13,11 +13,11 @@ exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
 source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1787'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
-# 使用ContextHub設定區段{#configuring-segmentation-with-contexthub}
+# 使用 ContextHub 設定分段{#configuring-segmentation-with-contexthub}
 
 >[!NOTE]
 >
@@ -240,15 +240,15 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
    ![新增資料夾](assets/contexthub-create-segment.png)
 
-1. 提供 **標題** 和 **名稱** 的URL。
-   * 此 **標題** 應是描述性的。
-   * 此 **名稱** 會成為存放庫中的節點名稱。
-      * 根據標題自動產生並根據 [AEM命名慣例。](/help/sites-developing/naming-conventions.md)
+1. 為您的資料夾提供 **標題**&#x200B;和&#x200B;**名稱**。
+   * **標題** 應該是描述性的。
+   * **名稱**&#x200B;將成為存放庫中的節點名稱。
+      * 它會根據標題自動產生，並根據[AEM 命名慣例](/help/sites-developing/naming-conventions.md)進行調整
       * 如有需要，可加以調整。
 
    ![建立資料夾](assets/contexthub-create-folder.png)
 
-1. 點選或按一下 **建立**.
+1. 點選或按一下&#x200B;**建立**。
 
    ![確認資料夾](assets/contexthub-confirm-folder.png)
 

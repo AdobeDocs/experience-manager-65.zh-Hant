@@ -12,7 +12,7 @@ exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '968'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -32,13 +32,13 @@ ht-degree: 0%
 
 內容服務提供的材料有三種主要類型：
 
-1. **Assets**
+1. **資產**
 1. **封裝HTML內容(HTML/CSS/JS)**
 1. **獨立於頻道的內容**
 
 ![chlimage_1-154](assets/chlimage_1-154.png)
 
-## Assets {#assets}
+## 資產 {#assets}
 
 資產集合是AEM建構，包含對其他集合的參考。
 

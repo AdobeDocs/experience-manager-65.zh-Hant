@@ -13,7 +13,7 @@ exl-id: 2acd6b19-0fe8-4994-b0f4-c9d5b9f3fdf1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2121'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 您可以對以下操作使用裝配服務：
 
-## 匯編PDF文檔 {#assemble-pdf-documents}
+## 組合 PDF 文件 {#assemble-pdf-documents}
 
-您可以使用組合器服務將兩個或多個PDF文檔組合成單個PDF文檔或PDFPortfolio。 您也可以將功能套用至PDF檔案，以輔助導覽或增強安全性。 以下是匯編PDF文檔的一些方法：
+您可以使用組合器服務將兩個或多個PDF文檔組合成單個PDF文檔或PDFPortfolio。 您也可以將功能套用至PDF檔案，以輔助導覽或增強安全性。 以下是一些組合 PDF 文件的方法：
 
-### 組合簡單的PDF文檔 {#assemble-a-simple-pdf-document}
+### 組合一個簡單 PDF 文件 {#assemble-a-simple-pdf-document}
 
 下圖顯示三個源文檔被合併到單個合成文檔中。
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 * 從基本文檔(Doc1)採用的其他特性，包括元資料、頁標籤和頁大小
 * 可選地，生成的文檔包括從源文檔中的書籤構建的目錄
 
-### 建立PDFPortfolio {#create-a-pdf-portfolio}
+### 建立 PDF 組合 {#create-a-pdf-portfolio}
 
 組合器服務可以建立包含文檔集合和自包含用戶介面的PDFPortfolio。 該介面稱為「PDFPortfolio佈局」或「PDFPortfolio導航器」（導航器）。 PDFPortfolio新增導覽器、資料夾和歡迎頁面，以擴充PDF套件的功能。 此介面可善用本地化的文字字串、自訂色彩配置和圖形資源，以增強使用者體驗。 PDFPortfolio還可以包含資料夾，用於組織產品組合中的檔案。
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 </DDX>
 ```
 
-### 組合加密文檔 {#assemble-encrypted-documents}
+### 組合加密的文件 {#assemble-encrypted-documents}
 
 在組合文檔時，還可以使用密碼加密PDF文檔。 使用密碼加密PDF檔案後，使用者必須指定密碼才能檢視Adobe Reader或Acrobat中的PDF檔案。 要使用密碼加密PDF文檔，DDX文檔必須包含加密PDF文檔所需的加密元素值。
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 如果對一個或多個輸入文檔進行加密，則提供密碼以作為DDX的一部分開啟文檔。
 
-### 使用Bates編號來組合文檔 {#assemble-documents-using-bates-numbering}
+### 使用貝茨編號 (Bates numbering) 組合文件 {#assemble-documents-using-bates-numbering}
 
 在組合文檔時，可以使用Bates編號將唯一的頁標識符應用到每個頁。 使用Bates編號時，文檔（或文檔集）中的每個頁面都會分配一個唯一標識該頁面的編號。 例如，包含物料清單資訊且與元件生產相關聯的製造文檔可以包含標識符。 Bates數字包含循序遞增的數值以及選用的前置詞和尾碼。 前置詞+數值+尾碼稱為Bates模式。
 
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 PDF文檔，包含位於文檔標題中的唯一標識符
 
-### 平面化和組合檔案 {#flatten-and-assemble-documents}
+### 扁平化及組合文件 {#flatten-and-assemble-documents}
 
 您可以使用組合器服務將交互PDF文檔（例如，表單）轉換為非交互PDF文檔。 互動式PDF檔案可讓使用者輸入或修改位於PDF檔案欄位中的資料。 將互動式PDF文檔轉換為非互動式PDF文檔的過程稱為拼合。 平面化PDF文檔時，表單欄位將保留其圖形外觀，但不再具有交互性。 平面化PDF檔案的一個原因是為了確保資料無法修改。 此外，與欄位相關聯的指令碼將無法繼續運作。
 
@@ -260,11 +260,11 @@ source="myFragmentSource"/>
 </DDX>
 ```
 
-## 拆解PDF文檔 {#disassemble-pdf-documents}
+## 分解 PDF 文件 {#disassemble-pdf-documents}
 
-您可以使用組合器服務來拆解PDF文檔。 服務可從源文檔中提取頁面，或基於書籤分割源文檔。 通常，如果PDF文檔最初是從許多單個文檔（如語句集合）建立，則此任務非常有用。
+您可以使用組合器服務來拆解PDF文檔。 服務可從源文檔中提取頁面，或基於書籤分割源文檔。 通常，如果 PDF 文件最初是從許多個別的文件 (例如報表集合) 建立的，則此作業很有幫助。
 
-### 從源文檔中提取頁面 {#extract-pages-from-a-source-document}
+### 從來源文件擷取頁面 {#extract-pages-from-a-source-document}
 
 在下圖中，從源文檔中提取頁1-3，並將其放在新生成的文檔中。
 
@@ -280,7 +280,7 @@ source="myFragmentSource"/>
 </PDF>
 ```
 
-### 根據書籤劃分源文檔 {#divide-a-source-document-based-on-bookmarks}
+### 根據書籤分隔來源文件 {#divide-a-source-document-based-on-bookmarks}
 
 在下圖中，DocA被分為多個生成的文檔。 頁面上的第一級書籤標識新生成文檔的開始。
 
@@ -298,7 +298,7 @@ source="myFragmentSource"/>
 
 ## 確定文檔是否符合PDF/A {#determine-whether-documents-are-pdf-a-compliant}
 
-可以使用組合器服務來確定PDF文檔是否PDF/A相容。 PDF/A是一種存檔格式，用於對文檔的內容進行長期保存。 這些字型嵌入到文檔中，並且該檔案被解壓縮。 因此，PDF/A文檔通常比標準PDF文檔大。 此外，PDF/檔案不包含音訊和視訊內容。
+可以使用組合器服務來確定PDF文檔是否PDF/A相容。 PDF/A 是一種用於長期保存文件內容的封存格式。字體內嵌在文件中，檔案未壓縮。因此，PDF/A 文件通常比標準 PDF 文件大。此外，PDF/A 文件不包含音訊和視訊內容。
 
 ## 獲取有關PDF文檔的資訊 {#obtain-information-about-a-pdf-document}
 

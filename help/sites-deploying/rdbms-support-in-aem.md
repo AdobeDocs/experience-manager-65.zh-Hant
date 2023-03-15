@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # AEM 6.4中的RDBMS支援{#rdbms-support-in-aem}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 使用文檔微內覈實現了對AEM中關係資料庫持久性的支援。 文檔微內核是實現MongoDB持久性的基礎。
 
