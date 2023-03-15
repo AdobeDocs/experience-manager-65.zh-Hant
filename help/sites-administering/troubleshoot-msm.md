@@ -4,9 +4,9 @@ description: 了解如何疑難排解最常見的MSM相關問題，並取得最�
 feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
-source-git-commit: 289c4644063504ec3c8e02d930933ad7260600f0
+source-git-commit: a323e6c30bf2c226f6613d1b9b037a0beedbfc0d
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,14 @@ MSM會註冊多個可向資源URL上的選取器要求的servlet。 UI會使用�
 
 1. `http://<host>:<port>/content/path/to/bluprint/page.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
    * 在Blueprint頁面上使用此功能，可擷取連結至該Live Copy的所有Live Copy清單，以及其他Live Copy狀態資訊。
+   * 例如：
+      `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
+
+
 1. `http://<host>:<port>/content/path/to/livecopy/page.msm.json`
    * 在Live Copy頁面上使用此功能，可擷取其與Blueprint頁面連線的進階資訊。 如果頁面不是即時副本，則不會傳回任何內容。
+   * 例如：
+      `http://localhost:4502/content/wknd/ca/en.msm.json`
 
 這些servlet會透過 `com.day.cq.wcm.msm` 記錄器也可能有用。
 
