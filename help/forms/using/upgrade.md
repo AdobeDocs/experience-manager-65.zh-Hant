@@ -11,9 +11,9 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 879855af80ffdaa9c5f40e43f8b1543ed9305c13
+source-git-commit: a98550c11405e6d0f43ff7ed8905644a3aedd78c
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '330'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ AEM 6.5 Forms包含數項新功能和增強功能，可簡化使用表單和通�
 * AEM 6.1 JEE上的Forms
 * AEM 6.2 JEE上的Forms
 
-AEM 6.5.12.0 Forms on JEE提供兩種類型的安裝程式： [完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) 和 [修補程式安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en).
+AEM 6.5.12.0 Forms on JEE提供兩種類型的安裝程式： [完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 和 [修補程式安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
 **完整安裝程式**:您可以使用完整安裝程式來設定最新的AEM Forms執行個體，或從JEE上的AEM 6.3 Forms、JEE上的AEM 6.4執行升級，以及從JEE上的AEM 6.5.x.x Forms就地升級至JEE上的AEM 6.5.12.0 Forms。
 
@@ -66,7 +66,7 @@ AEM 6.5.12.0 Forms on JEE提供兩種類型的安裝程式： [完整安裝程�
 
 以下映像描述了使用完整安裝程式和修補程式安裝程式的感測器。
 
-![](assets/full-and-patch-installer.png)
+![完整安裝程式和修補程式安裝程式](/help/forms/using/assets/full-and-patch-installer.png)
 
 <!--
 [Work in Progress]
