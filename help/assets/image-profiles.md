@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media影像設定檔
+title: Dynamic Media 影像設定檔
 description: 建立包含遮色片銳利化設定、智慧型裁切或智慧型色票（或兩者）的影像描述檔，然後將描述檔套用至影像資產的資料夾。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
@@ -10,21 +10,21 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 1759b6b2a0360b6fc173e711aaf88484c554eae8
+source-git-commit: f93e57c861ceda20ee82019da38b3b16791dbd0d
 workflow-type: tm+mt
-source-wordcount: '3000'
-ht-degree: 8%
+source-wordcount: '3011'
+ht-degree: 6%
 
 ---
 
-# Dynamic Media影像設定檔 {#image-profiles}
+# Dynamic Media 影像設定檔 {#image-profiles}
 
-上傳影像時，您可以透過將影像設定檔套用至資料夾，在上傳時自動裁切影像。
+上傳影像時，您可以透過將影像描述檔套用至資料夾，在上傳時自動裁切影像。
 
 >[!IMPORTANT]
 >
 >·智慧型裁切功能僅適用於Dynamic Media - Scene7模式。
-·影像設定檔不適用於PDF、動畫GIF或INDD(Adobe InDesign)檔案。
+·影像描述檔不適用於PDF、動畫GIF或INDD(Adobe InDesign)檔案。
 
 ## 裁切選項 {#crop-options}
 
@@ -38,18 +38,21 @@ ht-degree: 8%
 
 <!-- CQDOC-16069 for paragraph directly below -->
 
-智慧型裁切座標取決於外觀比例。 對於影像設定檔中的各種智慧型裁切設定，如果影像設定檔中新增的維度的長寬比相同，則會將相同的長寬比傳送至Dynamic Media。 Adobe建議您使用相同的裁切區域。 這麼做可確保對影像設定檔中使用的不同維度沒有影響。
+智慧型裁切座標取決於外觀比例。 針對影像設定檔中的各種智慧型裁切設定，如果影像設定檔中新增的維度的外觀比例相同，則會將相同的外觀比例傳送至Dynamic Media。 Adobe建議您使用相同的裁切區域。 這樣做可確保對影像設定檔中使用的不同維度沒有影響。
 
 您建立的每個智慧型裁切產生都需要額外處理。 例如，新增超過五個智慧型裁切長寬比可能會導致資產擷取速度緩慢。 這也會增加系統的負載。 由於您可以在資料夾層級套用智慧型裁切，因此Adobe建議您在資料夾上使用智慧型裁切 *僅限* 需要的地方。
 
 **定義影像設定檔中智慧型裁切的准則**
 為了控制智慧型裁切的使用，並為處理時間和裁切的儲存進行最佳化，Adobe建議下列准則和提示：
 
-* 請避免建立具有相同寬度和高度值的重複智慧型裁切設定檔。
-* 根據裁切維度為智慧型裁切命名，而非根據最終用途。 這麼做有助於最佳化多個頁面上使用單一維度的重複項目。
+* 將套用智慧型裁切的影像資產必須至少為50 x 50像素或更大。 &lt;!— CQDOC-20087>
+* 不允許使用包含重複智慧型裁切維度的影像設定檔。 &lt;!— CQDOC-20087>
+* 不允許設定智慧型裁切選項的重複命名影像描述檔。 &lt;!— CQDOC-20087>
 * 為特定資料夾和子資料夾建立頁面式/資產類型式的影像設定檔，而非套用至所有資料夾或所有資產的通用智慧型裁切設定檔。
 * 您套用至子資料夾的影像設定檔會覆寫套用至資料夾的影像設定檔。
 * 理想情況下，每個影像要有10-15個智慧裁切，以針對螢幕比例和處理時間進行最佳化。
+<!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
+* Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages.-->
 
 您有兩個影像裁切選項可供選擇。 您也可以選擇自動建立顏色和影像色票，或保留目標解析度間的裁切內容。
 
@@ -91,7 +94,7 @@ ht-degree: 8%
 **若要建立Dynamic Media影像設定檔：**
 
 1. 選取Adobe Experience Manager標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像設定檔]**.
-1. 選擇 **[!UICONTROL 建立]** 以便您新增影像設定檔。
+1. 選擇 **[!UICONTROL 建立]** 以便您可以新增影像設定檔。
 1. 輸入描述檔名稱和值，以用於遮色片、裁切或色票，或兩者。
 
    使用符合其預定用途的設定檔名稱。 例如，如果要建立僅生成色板的配置檔案，即禁用（關閉）智慧裁切，啟用（開啟）顏色和影像色板 — 使用配置檔案名「智慧色板」。
@@ -105,7 +108,7 @@ ht-degree: 8%
 ## 編輯或刪除Dynamic Media影像設定檔 {#editing-or-deleting-image-profiles}
 
 1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像設定檔]**.
-1. 選取您要編輯或移除的影像設定檔。 若要編輯，請選取 **[!UICONTROL 編輯影像設定檔]**. 若要移除，請選取 **[!UICONTROL 刪除影像設定檔]**.
+1. 選擇要編輯或刪除的「影像配置檔案」。 若要編輯，請選取 **[!UICONTROL 編輯影像設定檔]**. 若要移除，請選取 **[!UICONTROL 刪除影像設定檔]**.
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
 
@@ -115,28 +118,28 @@ ht-degree: 8%
 
 將映像配置檔案分配給資料夾時，任何子資料夾都會自動從其父資料夾繼承配置檔案。 此工作流程表示您只能將一個影像設定檔指派給資料夾。 因此，請仔細考慮上傳、儲存、使用和封存資產的資料夾結構。
 
-如果您將不同的影像配置檔案分配給資料夾，則新配置檔案將覆蓋前一個配置檔案。 先前的資料夾資產維持不變。 新設定檔會套用至稍後新增至資料夾的資產。
+如果為資料夾分配了不同的影像配置檔案，則新配置檔案將覆蓋前一個配置檔案。 先前的資料夾資產維持不變。 新設定檔會套用至稍後新增至資料夾的資產。
 
 在用戶介面中，會使用卡片中顯示的配置檔案名稱來指示已為其分配配置檔案的資料夾。
 
-<!-- When you add smart crop to an existing image profile, you need to re-trigger the [DAM Update Asset workflow](assets-workflow.md) if you want to generate crops for existing assets in your asset repository. -->
+<!-- When you add smart crop to an existing Image Profile, you need to re-trigger the [DAM Update Asset workflow](assets-workflow.md) if you want to generate crops for existing assets in your asset repository. -->
 
 您可以將影像設定檔套用至特定資料夾，或全域套用至所有資產。
 
-您可以重新處理資料夾中的資產，該資料夾已有您之後已變更的現有影像設定檔。 請參閱 [編輯資料夾中的資產處理設定檔後，重新處理該資料夾中的資產](processing-profiles.md#reprocessing-assets).
+您可以重新處理資料夾中的資產，該資料夾中已有您後來變更的現有影像設定檔。 請參閱 [編輯資料夾中的資產處理設定檔後，重新處理該資料夾中的資產](processing-profiles.md#reprocessing-assets).
 
 ### 將Dynamic Media影像設定檔套用至特定資料夾 {#applying-image-profiles-to-specific-folders}
 
-您可以從「工具」菜單或在資料夾內的「屬性」中將影像配置檔案應 **[!UICONTROL 用到資料夾]******。本節將說明如何以兩種方式將映像配置檔案應用於資料夾。
+您可以從 **[!UICONTROL 工具]** ，或者如果您位於資料夾中，則從 **[!UICONTROL 屬性]**. 本節介紹如何以兩種方式將映像配置檔案應用到資料夾。
 
 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
 若資料夾中已有您之後已變更的現有視訊設定檔，您可以重新處理該資料夾中的資產。 請參閱 [編輯資料夾中的資產處理設定檔後，重新處理該資料夾中的資產](processing-profiles.md#reprocessing-assets).
 
-#### 從設定檔使用者介面將Dynamic Media影像設定檔套用至資料夾 {#applying-image-profiles-to-folders-from-profiles-user-interface}
+#### 將Dynamic Media影像設定檔套用至設定檔使用者介面的資料夾 {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
 1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像設定檔]**.
-1. 選取您要套用至資料夾或多個資料夾的影像設定檔。
+1. 選擇要應用於資料夾或多個資料夾的影像配置檔案。
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
 
@@ -144,7 +147,7 @@ ht-degree: 8%
 
 #### 從屬性將Dynamic Media影像設定檔套用至資料夾 {#applying-image-profiles-to-folders-from-properties}
 
-1. 選取Experience League標誌並導覽至 **[!UICONTROL 資產]**. 然後導覽至您要套用影像設定檔之資料夾的父資料夾。
+1. 選取Experience League標誌並導覽至 **[!UICONTROL 資產]**. 然後導覽至您要套用影像描述檔之資料夾的父資料夾。
 1. 在資料夾中，選取要選取的核取記號，然後選取 **[!UICONTROL 屬性]**.
 1. 選取 **[!UICONTROL 影像設定檔]** 標籤。 從 **[!UICONTROL 設定檔名稱]** 下拉式清單，選取設定檔，然後選取 **[!UICONTROL 儲存並關閉]**. 已為其分配配置檔案的資料夾將通過資料夾名稱正下方的配置檔案名稱顯示來指示。
 
@@ -205,7 +208,7 @@ ht-degree: 8%
 >[!IMPORTANT]
 ·智慧型裁切功能僅適用於Dynamic Media - Scene7模式。
 
-將包含智慧型裁切的影像設定檔套用至資料夾後，該資料夾中的所有影像都會套用裁切至這些影像。 如果需要，您可以 *手動* 重新對齊或調整多個影像中智慧型裁切窗口的大小，以進一步細化其焦點。
+將包含智慧型裁切的影像描述檔套用至資料夾後，該資料夾中的所有影像都會套用裁切至它們。 如果需要，您可以 *手動* 重新對齊或調整多個影像中智慧型裁切窗口的大小，以進一步細化其焦點。
 
 編輯智慧型裁切並儲存後，變更會傳播至您對特定影像使用裁切的所有位置。
 
@@ -213,7 +216,7 @@ ht-degree: 8%
 
 **要編輯多個影像的智慧型裁切或智慧型色票：**
 
-1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 資產]**，則會套用至智慧型裁切或智慧型色票影像設定檔的資料夾。
+1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 資產]**，則會套用至智慧型裁切或智慧型色票影像描述檔的資料夾。
 1. 在資料夾中，選取 **[!UICONTROL 更多動作]** (...)圖示，然後選取 **[!UICONTROL 智慧型裁切]**.
 
 1. 在 **[!UICONTROL 編輯智慧裁切]** 頁面，執行下列任一操作：
@@ -256,21 +259,21 @@ ht-degree: 8%
 
 ## 從資料夾移除Dynamic Media影像設定檔 {#removing-an-image-profile-from-folders}
 
-當您從資料夾中移除影像設定檔時，任何子資料夾都會自動從其父資料夾中繼承移除設定檔。 不過，資料夾內發生的檔案處理仍維持不變。
+從資料夾中移除影像配置檔案時，任何子資料夾都會自動從其父資料夾中繼承移除配置檔案。 不過，資料夾內發生的檔案處理仍維持不變。
 
-您可以從「工具」功能表內的資料夾中移除影像配置檔案，或者如果您位於資料夾中，則可以從「屬性」( **[!UICONTROL Properties)中移除影像配置檔案]******。本節將說明如何以兩種方式從資料夾中刪除映像配置檔案。
+您可以從 **[!UICONTROL 工具]** ，或者如果您位於資料夾中，則從 **[!UICONTROL 屬性]**. 本節介紹如何以兩種方式從資料夾中刪除映像配置檔案。
 
-### 透過Profiles使用者介面，從資料夾移除Dynamic Media影像設定檔 {#removing-image-profiles-from-folders-via-profiles-user-interface}
+### 透過Profiles使用者介面，從資料夾中移除Dynamic Media影像設定檔 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
 1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像設定檔]**.
 1. 選擇要從資料夾或多個資料夾中刪除的影像配置檔案。
 1. 選擇 **[!UICONTROL 從資料夾中移除處理設定檔]** ，然後選擇要用於從中刪除配置檔案的資料夾或多個資料夾，並選擇 **[!UICONTROL 移除]**.
 
-   您可以確認影像設定檔不再套用至資料夾，因為資料夾名稱下方不再顯示該名稱。
+   您可以確認「影像描述檔」不再套用至資料夾，因為名稱不再出現在資料夾名稱下方。
 
-### 透過屬性從資料夾移除Dynamic Media影像設定檔 {#removing-image-profiles-from-folders-via-properties}
+### 透過屬性從資料夾中移除Dynamic Media影像設定檔 {#removing-image-profiles-from-folders-via-properties}
 
-1. 選取Experience Manager標誌並導覽 **[!UICONTROL 資產]** ，然後轉到要從中刪除影像配置檔案的資料夾。
+1. 選取Experience Manager標誌並導覽 **[!UICONTROL 資產]** ，然後轉到要從中刪除映像配置檔案的資料夾。
 1. 在資料夾中，選取要選取的核取記號，然後選取 **[!UICONTROL 屬性]**.
 1. 選取 **[!UICONTROL 影像設定檔]** 標籤。
 1. 從 **[!UICONTROL 設定檔名稱]** 下拉清單，選擇 **[!UICONTROL 無]**，然後選取 **[!UICONTROL 儲存並關閉]**.
