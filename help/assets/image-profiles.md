@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 32ff13dbf8fbf17258a3df21b86575fa65c4ceeb
+source-git-commit: bbb64f44c80e96bafcd53277f6d753d84acf5189
 workflow-type: tm+mt
-source-wordcount: '3008'
+source-wordcount: '3047'
 ht-degree: 6%
 
 ---
@@ -45,12 +45,21 @@ ht-degree: 6%
 **定義影像設定檔中智慧型裁切的准則**
 為了控制智慧型裁切的使用，並為處理時間和裁切的儲存進行最佳化，Adobe建議下列准則和提示：
 
-* 將套用智慧型裁切的影像資產必須至少為50 x 50像素或更大。 <!-- CQDOC-20087 -->
-* 不允許使用包含重複智慧型裁切維度的影像設定檔。 <!-- CQDOC-20087 -->
-* 不允許設定智慧型裁切選項的重複命名影像描述檔。 <!-- CQDOC-20087 -->
+* 請避免建立具有相同寬度和高度值的重複智慧型裁切設定檔。
+* 根據裁切維度為智慧型裁切命名，而非根據最終用途。 這麼做有助於最佳化多個頁面上使用單一維度的重複項目。
+* 為特定資料夾和子資料夾建立頁面式/資產類型式的影像設定檔，而非套用至所有資料夾或所有資產的通用智慧型裁切設定檔。
+* 您套用至子資料夾的影像設定檔會覆寫套用至資料夾的影像設定檔。
 * 為特定資料夾和子資料夾建立頁面式/資產類型式的影像設定檔，而非套用至所有資料夾或所有資產的通用智慧型裁切設定檔。
 * 您套用至子資料夾的影像設定檔會覆寫套用至資料夾的影像設定檔。
 * 理想情況下，每個影像要有10-15個智慧裁切，以針對螢幕比例和處理時間進行最佳化。
+
+<!--
+* Image assets that are going to have a smart crop applied to them must be a minimum of 50 x 50 pixels or larger. CQDOC-20087
+* An Image Profile that contains duplicate smart crop dimensions is not permitted. CQDOC-20087
+* Duplicate named Image Profiles that have smart crop options set are not permitted. CQDOC-20087
+* Create page-wise/asset type-wise Image Profiles for specific folders and subfolders instead of a common smart crop profile that is applied to all folders or all assets.
+* An Image Profile that you apply to subfolders overrides an Image Profile that is applied to the folder.
+* Ideally, have 10-15 smart crops per image to optimize for screen ratios and processing time. -->
 <!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
 * Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
 
