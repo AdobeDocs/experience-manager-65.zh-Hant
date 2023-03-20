@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: d2661ee6614261179b5e8d2d9ffb7c240ce676dc
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 1%
@@ -958,7 +958,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 如需如何在JBoss、WebLogic和WebSphere上設定SSL的指示，請參閱 [管理說明](https://www.adobe.com/go/learn_aemforms_admin_64).
 
-有關如何將憑證匯入為AEM Forms伺服器設定的JVM(Java Virtual Machine)的說明，請參閱 [AEM Forms Workbench說明](http://www.adobe.com/go/learn_aemforms_workbench_65).
+有關如何將憑證匯入為AEM Forms伺服器設定的JVM(Java Virtual Machine)的說明，請參閱 [AEM Forms Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_65).
 
 ### 設定SSL重新導向 {#configuring-ssl-redirect}
 

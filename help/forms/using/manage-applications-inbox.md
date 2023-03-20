@@ -10,16 +10,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 3%
+source-wordcount: '1098'
+ht-degree: 2%
 
 ---
 
 # 在AEM收件匣中管理Forms應用程式和任務{#manage-forms-applications-and-tasks-in-aem-inbox}
 
-啟動或觸發以Forms為中心的工作流程的許多方式之一，就是透過AEM收件匣中的應用程式。 您需要建立工作流程應用程式，才能讓Forms工作流程在收件匣中作為應用程式可用。 如需工作流程應用程式和其他啟動Forms工作流程方法的詳細資訊，請參閱 [在OSGi上啟動以Forms為中心的工作流程](../../forms/using/aem-forms-workflow.md#launch).
+啟動或觸發以Forms為中心的工作流程的許多方式之一，就是透過AEM收件匣中的應用程式。 若要讓Forms工作流程可作為應用程式在收件匣中使用，請建立工作流程應用程式。 如需工作流程應用程式和其他啟動Forms工作流程方法的詳細資訊，請參閱 [在OSGi上啟動以Forms為中心的工作流程](../../forms/using/aem-forms-workflow.md#launch).
 
 此外，AEM收件匣整合來自各種AEM元件(包括Forms工作流程)的通知和工作。 觸發包含「分配」任務步驟的表單工作流時，關聯的應用程式將作為任務列在受託人的收件箱中。 如果受託人是組，則任務將出現在所有組成員的收件箱中，直到單個人請求或委託任務為止。
 
@@ -64,7 +64,7 @@ ht-degree: 3%
 開啟任務時，可以查看任務詳細資訊並執行可用操作。 在關聯的Forms工作流的「分配任務」步驟中定義了任務可用的操作。
 
 1. 點選以選取工作的縮圖。 開啟或委派所選任務的選項顯示在頂部。
-1. 點選 **開啟** 查看任務詳細資訊並採取操作。 將開啟詳細的任務視圖。 在此視圖中，您可以查看任務詳細資訊並對任務執行操作。
+1. 點選 **開啟** 查看任務詳細資訊。 將開啟詳細的任務視圖。 在此視圖中，您可以查看任務詳細資訊並處理該任務。
 
    >[!NOTE]
    >
@@ -99,11 +99,11 @@ ht-degree: 3%
 
 「操作」工具欄顯示該任務的所有可用選項。 雖然「儲存」、「重設」和「委派」是預設動作，但其他可用動作則設定於 [分配任務步驟](/help/sites-developing/workflows-step-ref.md). 在上述範例中，工作流程中已設定「核准」和「拒絕」。
 
-當您對任務採取動作時，它會在工作流程中繼續進行。
+在您處理任務時，它會在工作流程中繼續進行。
 
 ### 查看已完成的任務 {#view-completed-tasks}
 
-AEM收件匣只會顯示作用中任務。 已完成的任務不會顯示在清單中。 但是，您可以使用收件箱篩選器來根據任務類型、狀態、開始和結束日期等參數來篩選任務。 要查看已完成的任務：
+AEM收件匣只會顯示作用中任務。 已完成的任務不會顯示在清單中。 但是，您可以使用收件箱篩選器來根據任務類型、狀態以及開始和結束日期等參數來篩選任務。 要查看已完成的任務：
 
 1. 在AEM收件匣中，點選 ![切換側面板1](assets/toggle-side-panel1.png) 來開啟篩選選擇器。
 1. 點選 **[!UICONTROL 任務狀態]** 折疊式功能表及選取 **[!UICONTROL 完成]**. 所有已完成的任務都會顯示。
@@ -126,7 +126,7 @@ AEM收件匣只會顯示作用中任務。 已完成的任務不會顯示在清�
 
 ### 無法在AEM收件匣中檢視與AEM工作流程相關的項目 {#unable-to-see-aem-worklow-items}
 
-工作流模型擁有者無法在AEM收件匣中檢視與AEM Workflow相關的項目。 若要解決此問題，請將下列索引新增至您的AEM存放庫並重建索引。
+工作流模型擁有者無法在AEM收件匣中檢視與AEM Workflow相關的項目。 若要解決此問題，請將下列索引新增至您的AEM存放庫，然後重建索引。
 
 1. 使用下列其中一種方法來新增索引：
 
@@ -141,7 +141,7 @@ AEM收件匣只會顯示作用中任務。 已完成的任務不會顯示在清�
       | allowExplicitSharing | allowExplicitSharing | 布林值 |
 
 
-   * 透過AEM套件部署索引。 您可以使用 [AEM原型](https://docs.adobe.com/content/help/zh-Hant/experience-manager-core-components/using/developing/archetype) 建立可部署AEM套件的專案。 使用下列范常式式碼，將索引新增至AEM原型專案：
+   * 透過AEM套件部署索引。 您可以使用 [AEM原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en) 建立可部署AEM套件的專案。 使用下列范常式式碼，將索引新增至AEM原型專案：
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()

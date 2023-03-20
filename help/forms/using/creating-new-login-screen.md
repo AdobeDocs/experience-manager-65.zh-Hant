@@ -10,10 +10,10 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 exl-id: 5cb906b6-6a3c-498c-94f5-27a9071ea934
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 5%
+source-wordcount: '462'
+ht-degree: 7%
 
 ---
 
@@ -292,7 +292,7 @@ css.newLoginContentArea {
 1. 在中新增影像 `/apps/livecycle/core/content/login`. 添加影像：
 
    1. 安裝WebDAV客戶端。
-   1. 導覽至 `/apps/livecycle/core/content/login` 資料夾，使用webDAV客戶端。 如需詳細資訊，請參閱： [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   1. 導覽至 `/apps/livecycle/core/content/login` 資料夾，使用webDAV客戶端。 如需詳細資訊，請參閱： [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant).
 
    1. 新增影像。
 

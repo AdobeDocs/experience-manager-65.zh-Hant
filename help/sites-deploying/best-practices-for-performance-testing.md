@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: e8320b1dac681fd2c9e749344e8c126487d840ba
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ AEM中的許多效能測量（例如查詢回應時間）可能會受到系統�
 
 **觸控式UI中的開發人員模式**
 
-AEM 6的觸控式UI中，有一項新功能是開發人員模式。 就像作者可在編輯和預覽模式之間切換一樣，開發人員可在製作UI中切換至開發人員模式，以查看頁面上每個元件的轉譯時間，以及查看任何錯誤的堆疊追蹤。 如需開發人員模式的詳細資訊，請參閱 [CQ Gems簡報](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html).
+AEM 6的觸控式UI中，有一項新功能是開發人員模式。 就像作者可在編輯和預覽模式之間切換一樣，開發人員可在製作UI中切換至開發人員模式，以查看頁面上每個元件的轉譯時間，以及查看任何錯誤的堆疊追蹤。 如需開發人員模式的詳細資訊，請參閱 [CQ Gems簡報](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=en).
 
 **使用rlog.jar讀取請求日誌**
 

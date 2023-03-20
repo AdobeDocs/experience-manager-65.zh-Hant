@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1200'
 ht-degree: 5%
 
 ---
@@ -273,7 +273,7 @@ ht-degree: 5%
   <tr>
    <td><strong>步驟37和38</strong></td>
    <td>延遲載入</td>
-   <td><a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">請參閱AEM Web效能的Gem課程。</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">請參閱AEM Web效能的Gem課程。</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步驟 39</strong></td>
@@ -293,7 +293,7 @@ ht-degree: 5%
   <tr>
    <td><strong>步驟 49</strong></td>
    <td>縮減裝載大小</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">啟用Gzip</a> 和 <a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">縮小影像大小</a>.<br /> </td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">啟用Gzip</a> 和 <a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">縮小影像大小</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>步驟42和43</strong></td>
@@ -325,7 +325,7 @@ ht-degree: 5%
   <tr>
    <td><strong>步驟50和51</strong></td>
    <td>JS程式碼封鎖</td>
-   <td><a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">https://docs.adobe.com/ddc/en/gems/aem-web-performance.html</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en">https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=en</a></td>
   </tr>
  </tbody>
 </table>

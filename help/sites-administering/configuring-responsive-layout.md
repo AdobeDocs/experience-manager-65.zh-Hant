@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1288'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ AEM使用組合機制來實現頁面的回應式版面：
 
 ### 將您的網站連結到指定的設備組 {#link-your-site-to-the-specified-device-groups}
 
-若要納入您將網站連結至裝置群組所需的模擬器。 請參閱 [添加設備清單](/help/sites-developing/responsive.md#adding-the-devices-list) （適用於傳統和觸控最佳化UI）。
+若要包含模擬器，請將您的網站連結至裝置群組。 請參閱 [添加設備清單](/help/sites-developing/responsive.md#adding-the-devices-list) （適用於傳統和觸控最佳化UI）。
 
 ## 啟用網站的版面模式 {#activate-layout-mode-for-your-site}
 
@@ -98,7 +98,7 @@ AEM使用組合機制來實現頁面的回應式版面：
 
 * 定義標題和寬度：
 
-   * 標題說明一般裝置分組，如有需要，可提供方向；例如phone、tablet、tablelandscape。
+   * 標題描述了通用設備分組，如有必要，可以使用方向；例如，手機、平板電腦、平板電腦、平板電腦橫向。
    * 寬度以像素定義該通用設備分組的最大寬度。 例如，如果斷點電話的寬度為768，則該寬度為用於電話設備的佈局的最大寬度。
 
 * 使用模擬器時，在頁面編輯器頂端會顯示為標籤。
@@ -111,9 +111,9 @@ AEM使用組合機制來實現頁面的回應式版面：
 >
 >如果您要設定新專案：
 >
->* 您需要向模板添加斷點。
+>* 將斷點添加到模板。
 >
->如果您要移轉現有專案（含現有內容），您需要：
+>如果您要移轉現有專案（含現有內容），您必須：
 >
 >* 將斷點添加到模板
 >* 將相同的斷點添加到現有頁面
@@ -175,7 +175,7 @@ AEM使用組合機制來實現頁面的回應式版面：
 
 ### 將配置容器設定為主Parsys {#set-layout-container-as-main-parsys}
 
-若要將頁面的主要parsys設為版面容器，您必須將parsys定義為：
+若要將頁面的主要parsys設為版面容器，請將parsys定義為：
 
 `wcm/foundation/components/responsivegrid`
 
@@ -204,7 +204,7 @@ AEM使用組合機制來實現頁面的回應式版面：
 
 AEM使用LESS來產生部分必要的CSS，這些需要包含在您的專案中。
 
-您也需要建立 [用戶庫](https://docs.adobe.com/content/docs/en/aem/6-0/develop/the-basics/clientlibs.html) 提供其他設定和函式呼叫。 以下LESS提取是您需要向項目添加的最低值的示例：
+您也必須建立 [用戶庫](https://experienceleague.adobe.com/docs/) 提供其他設定和函式呼叫。 以下LESS提取是您必須添加到項目中的最小值的示例：
 
 ```java
 @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
@@ -238,7 +238,7 @@ AEM使用LESS來產生部分必要的CSS，這些需要包含在您的專案中�
 
 #### 樣式考量事項 {#styling-considerations}
 
-將根據響應網格大小調整保持在響應容器內的元件的大小(連同其各自的HTMLDOM元素)。 因此，在這些情況下，建議避免（或更新）固定寬度（包含）DOM元素的定義。
+根據響應網格大小對保持在響應容器內的元件進行調整(連同其各自的HTMLDOM元素)。 因此，在這些情況下，建議避免（或更新）固定寬度（包含）DOM元素的定義。
 
 例如：
 
