@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1180'
 ht-degree: 0%
 
 ---
@@ -54,13 +54,13 @@ AEM表單應可從下列故障中可靠地復原：
 1. 如果運行，請停止AEM forms服務和應用程式伺服器。
 1. 如有必要，請從系統映像中重新建立物理系統。 例如，如果恢復原因是錯誤的資料庫伺服器，則可能不需要執行此步驟。
 1. 將修補程式或更新套用至建立影像後所套用的AEM表單。 此資訊已記錄在備份過程中。 AEM表單必須修補到與備份系統時相同的修補程式級別。
-1. （WebSphere應用程式伺服器）如果要恢復到WebSphere應用程式伺服器的新實例，請運行restoreConfig.bat/sh命令。
+1. (WebSphere®應用程式伺服器)如果要恢復到WebSphere®應用程式伺服器的新實例，請運行restoreConfig.bat/sh命令。
 1. 首先使用資料庫備份檔案運行資料庫還原操作，然後將事務重做日誌應用到恢復的資料庫，以恢復AEM表單資料庫。 (請參閱 [AEM forms資料庫](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).) 如需詳細資訊，請參閱以下其中一篇知識庫文章：
 
-   * [OracleAEM表單的備份和恢復](https://www.adobe.com/go/kb403624)
-   * [AEM表單的MySQL備份和恢復](https://www.adobe.com/go/kb403625)
-   * [Microsoft SQL Server針對AEM表單的備份和恢復](https://www.adobe.com/go/kb403623)
-   * [AEM表單的DB2備份和恢復](https://www.adobe.com/go/kb403626)
+   * [AEM表單的DB2®備份和恢復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#db2)
+   * [OracleAEM表單的備份和恢復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#oracle)
+   * [Microsoft® SQL Server針對AEM表單的備份和恢復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#sql-server)
+   * [AEM表單的MySQL備份和恢復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#mysql)
 
 1. 通過先在AEM表單的現有安裝上刪除GDS目錄的內容，然後從備份的GDS中複製GDS目錄的內容，恢復GDS目錄。 如果更改了GDS目錄位置，請參閱 [在恢復期間更改GDS位置](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).
 1. 更名要還原的GDS備份目錄，如以下示例所示：
@@ -69,7 +69,7 @@ AEM表單應可從下列故障中可靠地復原：
    >
    >如果/restore目錄已存在，請備份該目錄，然後刪除該目錄，然後再更名包含最新資料的/backup目錄。
 
-   * (JBoss)重新命名 `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` 至：
+   * (JBoss®)重新命名 `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` 至：
 
       `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`。
 
@@ -77,7 +77,7 @@ AEM表單應可從下列故障中可靠地復原：
 
       `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`。
 
-   * (WebSphere)更名 `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` 至：
+   * (WebSphere®)更名 `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` 至：
 
       `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`。
 
@@ -99,7 +99,7 @@ AEM表單應可從下列故障中可靠地復原：
 
    * **獨立**
 
-      *還原製作和發佈執行個體*:如果發生災難，您可以執行 [備份和還原。](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)
+      *還原製作和發佈執行個體*:如果發生災難，您可以執行 [備份和還原。](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)
 
       完整還原「作者」節點也可確認還原Forms Manager和AEM Forms Workspace資料。
 

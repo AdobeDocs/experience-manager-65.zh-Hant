@@ -12,10 +12,10 @@ discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 feature: Mobile Forms
 exl-id: ed8349a1-f761-483f-9186-bf435899df7d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
 source-wordcount: '2011'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -33,9 +33,9 @@ HTML5表單功能在內嵌AEM例項中部署為套件，且會使用RESTful透�
 
 如需REST端點和支援請求參數的詳細資訊，請參閱 [轉譯表單範本](/help/forms/using/rendering-form-template.md).
 
-當使用者從用戶端裝置(例如iOS或Android瀏覽器)提出請求時，Sling會先根據請求URL解析設定檔節點。 從此配置檔案節點，它讀取 **sling:resourceSuperType** 和 **sling:resourceType** 確定可處理此表單呈現請求的所有可用指令碼。 接著會使用Sling要求選取器搭配要求方法來識別最適合處理此要求的指令碼。 一旦請求達到設定檔轉譯器JSP,JSP就會呼叫Forms OSGi服務。
+當使用者從用戶端裝置(例如iOS或Android™瀏覽器)提出請求時，Sling會先根據請求URL解析設定檔節點。 從此配置檔案節點，它讀取 **sling:resourceSuperType** 和 **sling:resourceType** 確定可處理此表單呈現請求的所有可用指令碼。 接著會使用Sling要求選取器搭配要求方法來識別最適合處理此要求的指令碼。 一旦請求達到設定檔轉譯器JSP,JSP就會呼叫Forms OSGi服務。
 
-如需Sling指令碼解析度的詳細資訊，請參閱 [AEM Sling速查表](https://docs.adobe.com/content/docs/en/cq/current/developing/sling_cheatsheet.html) 或 [Apache Sling Url分解](https://sling.apache.org/site/url-decomposition.html).
+如需Sling指令碼解析度的詳細資訊，請參閱 [AEM Sling速查表](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant) 或 [Apache Sling Url分解](https://sling.apache.org/documentation/the-sling-engine/url-decomposition.html).
 
 #### 典型表單處理呼叫流程 {#typical-form-processing-call-flow}
 
@@ -179,8 +179,8 @@ Sling套件包含與設定檔和設定檔轉譯器相關的內容。
 * **xfaforms.I18N。&lt;locale>**:此程式庫包含本地化資料。
 * **xfaforms.profile**:此程式庫包含XFA指令碼和版面引擎的實作。
 
-這些程式庫會模型化為CQ用戶端程式庫，其優點是可自動串連、縮制及壓縮CQ架構JavaScript程式庫。
-如需CQ用戶端Lib的詳細資訊，請參閱 [CQ Clientlib檔案](https://docs.adobe.com/docs/en/cq/current/developing/components/clientlibs.html).
+這些程式庫會模型化為CQ用戶端程式庫，以利用CQ架構JavaScript程式庫的自動串連、縮制和壓縮功能。
+如需CQ用戶端Lib的詳細資訊，請參閱 [CQ Clientlib檔案](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant).
 
 如上所述，設定檔轉譯器JSP會透過sling include呼叫Forms服務。 此JSP還根據管理員配置或請求參數設定各種調試選項。
 

@@ -10,10 +10,10 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 9%
+source-wordcount: '444'
+ht-degree: 11%
 
 ---
 
@@ -27,17 +27,17 @@ AEM Content Services的設計目的，是為了將AEM中/來自的內容的說�
 * 原生行動應用程式
 * AEM外部的其他通道和接觸點
 
-透過使用結構化內容的內容片段，您可以使用JSON匯出工具以JSON資料模型格式傳送(y)AEM頁面的內容，以提供內容服務。 然後，您自己的應用程式就可以使用此功能。
+透過使用結構化內容的內容片段，您可以使用JSON匯出工具以JSON資料模型格式傳送任何AEM頁面的內容，以提供內容服務。 然後，您自己的應用程式就可以使用此方法。
 
 >[!NOTE]
 >
->此處描述的功能適用於所有核心元件， [核心元件1.1.0版](https://docs.adobe.com/content/docs/en/core-components/v1.html).
+>此處描述的功能適用於所有核心元件， [核心元件1.1.0版](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant).
 
 ## 包含內容片段核心元件的JSON匯出工具 {#json-exporter-with-content-fragment-core-components}
 
-使用AEM JSON匯出工具，您可以以JSON資料模型格式傳送(y)AEM頁面的內容。 然後，您自己的應用程式就可以使用此功能。
+使用AEM JSON匯出工具，您可以以JSON資料模型格式傳送任何AEM頁面的內容。 然後，您自己的應用程式就可以使用此方法。
 
-在AEM內使用選取器來達到傳送 `model` 和 `.json` 擴充功能。
+在AEM中，是使用選取器來達成傳送 `model` 和 `.json` 擴充功能。
 
 `.model.json`
 
@@ -47,13 +47,13 @@ AEM Content Services的設計目的，是為了將AEM中/來自的內容的說�
    http://localhost:4502/content/we-retail/language-masters/en.model.json
    ```
 
-1. 將提供以下內容：
+1. 提供內容，例如：
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
 或者，您可以明確鎖定結構化內容片段，以傳送其內容。
 
-這是使用片段的整個路徑(透過 `jcr:content`);例如尾碼為，例如。
+使用片段的整個路徑(透過 `jcr:content`);例如，尾碼為，例如。
 
 `.../jcr:content/root/responsivegrid/contentfragment.model.json`
 
@@ -65,7 +65,7 @@ AEM Content Services的設計目的，是為了將AEM中/來自的內容的說�
    http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
    ```
 
-* 將提供以下內容：
+* 提供內容，例如：
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
@@ -97,10 +97,10 @@ AEM Content Services的設計目的，是為了將AEM中/來自的內容的說�
 
 如需詳細資訊，請參閱：
 
-* 此 [資產使用手冊中的內容片段主題](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
+* 此 [資產使用手冊中的內容片段主題](https://experienceleague.adobe.com/docs/experience-manager-64/assets/home.html?lang=en&amp;topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 
 * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用內容片段製作](/help/sites-authoring/content-fragments.md)
 * [為元件啟用 JSON 匯出](/help/sites-developing/json-exporter-components.md)
 
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [內容片段元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=en)

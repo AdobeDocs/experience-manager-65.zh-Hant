@@ -8,9 +8,9 @@ contentOwner: admin
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 discoiquuid: 20ca99e3-4843-4254-b3e9-0255cc752363
 exl-id: 50eea35d-d844-4f4b-9cbe-7d84bd6b1e3b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1735'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ AEM表單無法區分具有相同使用者ID和密碼但屬於不同網域的使
 
 使用SQL Server作為資料庫時，無法建立超過255個字元的用戶ID。
 
-使用MySQL時，用戶ID可以包含擴展字元。 不過，當在兩個字串（例如abcde和âbcdè）之間進行比較時，兩者會視為相同。 例如，同步時，如果新用戶被添加到資料庫，則會進行比較以檢查資料庫中是否存在具有相同用戶ID的用戶。 若使用者 *abcde* 當新用戶 *阿布奇* 新增，則比較無法區分這兩個名稱。 假設該用戶已存在於資料庫中，並且會忽略新用戶，而不會添加。
+使用MySQL時，用戶ID可以包含擴展字元。 不過，當在兩個字串（例如abcde和âbcdè）之間進行比較時，兩者會視為相同。 例如，同步時，如果新用戶被添加到資料庫，則會進行比較以檢查資料庫中是否存在具有相同用戶ID的用戶。 若使用者 *abcde* 當新用戶 *阿布奇* 新增，則比較無法區分這兩個名稱。 假設該用戶存在於資料庫中，並且會忽略新用戶，而不會添加。
 
 請避免建立以數字型大小(#)開頭的使用者名稱。 執行任務搜索不會返回這些用戶名的結果。 (請參閱 [使用任務](/help/forms/using/admin-help/tasks.md#working-with-tasks).)
 
@@ -173,4 +173,4 @@ AEM表單無法區分具有相同使用者ID和密碼但屬於不同網域的使
 
 CQ提供覆寫預設404處理常式jsp的機制。
 
-如需如何自訂錯誤處理頁面的詳細資訊，請參閱 [自訂由錯誤處理常式顯示的頁面](https://docs.adobe.com/docs/en/cq/current/developing/customizing_error_handler_pages.html) 在Adobe Experience Manager檔案中。
+如需如何自訂錯誤處理頁面的詳細資訊，請參閱 [自訂由錯誤處理常式顯示的頁面](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html?lang=en) 在Adobe Experience Manager檔案中。

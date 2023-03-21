@@ -10,10 +10,10 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 exl-id: 30720061-d0e5-453b-a334-6a3aa9ca4c87
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1010'
-ht-degree: 0%
+source-wordcount: '984'
+ht-degree: 8%
 
 ---
 
@@ -26,13 +26,13 @@ ht-degree: 0%
 新增任何自訂報表之前，請執行下列範本程式：
 
 1. 自訂報表中使用的資料必須可在「處理報告」中使用。 為確保資料的可用性，請排程cron作業或使用 **[同步](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** 選項。
-1. URL要求（封裝所需的查詢）必須傳回適當的查詢結果物件。 若要建立查詢，您可以使用 [QueryBuilder](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html) 使用QueryBuilder API建立OSGi服務。 您可以建立動態或靜態查詢。
+1. URL要求（封裝所需的查詢）必須傳回適當的查詢結果物件。 若要建立查詢，您可以使用 [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en) 使用QueryBuilder API建立OSGi服務。 您可以建立動態或靜態查詢。
 
 1. 建立自訂使用者介面以顯示結果。 您可以建立獨立的用戶介面，或將結果與現有的「流程報告」UI整合。
 
 ## 使用QueryBuilder的REST介面 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST介面會透過Java API和REST API公開「資產共用查詢產生器」的功能。 了解如何使用 [CRX QueryBuilder REST介面](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)，然後再執行下列步驟：
+CRX QueryBuilder REST介面會透過Java API和REST API公開「資產共用查詢產生器」的功能。 了解如何使用 [CRX QueryBuilder REST介面](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)，然後再執行下列步驟：
 
 1. 瀏覽至URL `https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. 根據Process Reporting儲存節點結構和節點屬性建立查詢。
@@ -49,7 +49,7 @@ CRX QueryBuilder REST介面會透過Java API和REST API公開「資產共用查�
 
 ## 使用查詢產生器API建立服務  {#creating-a-service-using-query-builder-api-nbsp}
 
-使用查詢產生器API建立服務的先決條件為 [建立和部署CQ OSGI套件組合](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) 和 [使用查詢產生器API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html).
+使用查詢產生器API建立服務的先決條件為 [建立和部署CQ OSGI套件組合](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant) 和 [使用查詢產生器API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en).
 
 1. 建立包含適當註解的OSGi服務。 若要存取QueryBuilder，請使用：
 
@@ -65,7 +65,7 @@ CRX QueryBuilder REST介面會透過Java API和REST API公開「資產共用查�
     predicateGroup.setAllRequired(true);
    ```
 
-1. 將謂詞添加到新建立的謂片語。 一些有用的謂詞結構包括 [JcrBoolPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html), [JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html), [RangePropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html), [DateRangePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)，和 [TypePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html).
+1. 將謂詞添加到新建立的謂片語。 一些有用的謂詞結構包括 [5.3中的JcrBoolPropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant), [5.3中的JcrPropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant), [5.3中的RangePropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant), [5.3中的DateRangePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)，和 [5.3中的TypePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant).
 
    若為靜態報表，會以硬式編碼撰寫述詞，若為動態報表，則從請求擷取述詞。
 
@@ -424,7 +424,7 @@ public class PeriodicProcessVolume {
 
 ## 建立個別UI  {#creating-a-separate-ui-nbsp}
 
-建立個別UI以顯示結果的先決條件為 [Sling基本介紹](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html), [建立CRX節點](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) 提供適當 [訪問權限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
+建立個別UI以顯示結果的先決條件為 [5.6.1版Sling基本介紹](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant), [建立CRX節點](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant) 提供適當 [訪問權限](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant).
 
 1. 在 `/apps` 節點和授予適當的存取權限。 (PERM_PROCESS_REPORTING_USER)
 1. 在 `/content` 節點。

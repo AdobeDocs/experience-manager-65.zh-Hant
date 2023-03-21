@@ -11,10 +11,10 @@ discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 2%
+source-wordcount: '1355'
+ht-degree: 3%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 * CRX
 * JavaScript
-* Java
+* Java™
 
 ## 案例：向字母清單用戶介面添加命令以下載普通PDF版本的字母 {#addcommandtoletters}
 
@@ -55,7 +55,7 @@ ht-degree: 2%
 
       >[!NOTE]
       >
-      >此路徑專用於建立可搭配選取多個資產/信函之一使用的動作。 如果您想要建立可在未選取的情況下運作的動作，則需要為下列路徑建立覆蓋節點，並據以完成其餘步驟：
+      >此路徑專用於建立可搭配選取多個資產/信函之一使用的動作。 如果您想要建立可在未選取的情況下運作的動作，請改為為下列路徑建立覆蓋節點，並據此完成其餘步驟：
       >
       >
       >`/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/default/items`
@@ -110,7 +110,7 @@ ht-degree: 2%
         <tr>
         <td>圖示</td>
         <td>字串</td>
-        <td>圖示下載<br /> <br /> 「通信管理」(Correspondence Management)表徵圖顯示在命令/菜單的左側。 如需不同的可用圖示和設定，請參閱 <a href="https://docs.adobe.com/docs/en/aem/6-3/develop/ref/coral-ui/coralui3/Coral.Icon.html" target="_blank">CoralUI圖示檔案</a>.<br /> </td>
+        <td>圖示下載<br /> <br /> 「通信管理」(Correspondence Management)表徵圖顯示在命令/菜單的左側。 如需不同的可用圖示和設定，請參閱 <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html" target="_blank">CoralUI圖示檔案</a>.<br /> </td>
         </tr>
         <tr>
         <td>jcr:primaryType</td>
@@ -279,7 +279,7 @@ ht-degree: 2%
    1. 按兩下 **POST.jsp** 檔案以在CRX中開啟。
    1. 將以下代碼添加到POST.jsp檔案中，然後按一下 **全部儲存**:
 
-      此代碼是信函轉譯服務專屬的代碼。 針對任何其他資產，將該資產的Java程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱 [AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en).
+      此代碼是信函轉譯服務專屬的代碼。 對於任何其他資產，將該資產的Java™程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱 [AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).
 
       如需AEM程式庫的詳細資訊，請參閱AEM [元件](/help/sites-developing/components.md).
 

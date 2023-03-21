@@ -12,9 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '3477'
+source-wordcount: '3456'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ AEM元件可用來保留、格式化及轉譯可在您的網頁上使用的內�
    * 建構 [社群](/help/communities/author-communities.md) 網站元件可提供資訊給訪客，並從訪客收集資訊。
 請參閱 [開發社區](/help/communities/communities.md) 以取得更多資訊。
 
-* 在發佈例項中，元件會呈現您的內容，並依您的網站訪客需求呈現。
+* 在發佈例項中，元件會呈現您的內容，並依您的需求向網站訪客呈現。
 
 >[!NOTE]
 >
@@ -51,9 +51,9 @@ AEM元件可用來保留、格式化及轉譯可在您的網頁上使用的內�
 
 ## 擴展現有元件和對話框 {#extending-existing-components-and-dialogs}
 
-視您要實作的元件而定，可擴充或自訂現有例項，而非定義和開發整個例項 [結構](#structure) 白手起家。
+視您要實作的元件而定，您可以擴充或自訂現有例項，而非定義和開發整個例項 [結構](#structure) 白手起家。
 
-在擴展或定制現有元件或對話框時，可以在進行更改之前複製或複製對話框所需的整個結構或結構。
+在擴展或自定義現有元件或對話框時，可以在進行更改之前複製或複製對話框所需的整個結構或結構。
 
 ### 擴充現有元件 {#extending-an-existing-component}
 
@@ -61,11 +61,11 @@ AEM元件可用來保留、格式化及轉譯可在您的網頁上使用的內�
 
 >[!NOTE]
 >
->元件也可以基於搜索路徑邏輯用覆蓋重新定義。 然而，在此情況下， [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) 不會觸發，且 `/apps` 必須定義整個覆蓋。
+>元件也可以基於搜索路徑邏輯用覆蓋重新定義。 然而，在此情況下， [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) 未觸發且 `/apps` 必須定義整個覆蓋。
 
 >[!NOTE]
 >
->此 [內容片段元件](/help/sites-developing/customizing-content-fragments.md) 也可自訂和延伸，不過必須考慮完整結構和與Assets的關係。
+>此 [內容片段元件](/help/sites-developing/customizing-content-fragments.md) 也可以自訂和擴充，不過必須考慮完整結構和與Assets的關係。
 
 ### 自訂現有元件對話方塊 {#customizing-a-existing-component-dialog}
 
@@ -95,11 +95,11 @@ AEM元件可用來保留、格式化及轉譯可在您的網頁上使用的內�
 
 ### 使用Java {#using-java}
 
-[HTL Java Use-API可讓HTL檔案存取自訂Java類別中的Helper方法](https://helpx.adobe.com/experience-manager/htl/using/use-api-java.html). 這可讓您使用Java程式碼來實作邏輯，以選取和設定元件內容。
+[HTL Java Use-API可讓HTL檔案存取自訂Java類別中的Helper方法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=en). 這可讓您使用Java程式碼來實作邏輯，以選取和設定元件內容。
 
 ### 使用JavaScript {#using-javascript}
 
-[HTL JavaScript Use-API可讓HTL檔案存取以JavaScript撰寫的協助程式碼](https://helpx.adobe.com/experience-manager/htl/using/use-api-javascript.html). 這可讓您使用JavaScript程式碼來實作邏輯，以選取和設定元件內容。
+[HTL JavaScript Use-API可讓HTL檔案存取以JavaScript撰寫的協助程式碼](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=en). 這可讓您使用JavaScript程式碼來實作邏輯，以選取和設定元件內容。
 
 ### 使用用戶端HTML程式庫 {#using-client-side-html-libraries}
 
@@ -117,13 +117,13 @@ AEM元件可用來保留、格式化及轉譯可在您的網頁上使用的內�
 
 ## 設定預覽行為 {#configuring-the-preview-behavior}
 
-此 [WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) 在切換為 **預覽** 模式，即使未重新整理頁面亦然。
+此 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 在切換為 **預覽** 模式，即使未重新整理頁面亦然。
 
 對於呈現時對WCM模式敏感的元件，必須定義元件以明確重新整理元件，然後仰賴Cookie的值。
 
 >[!NOTE]
 >
->在觸控式UI中，只有值 `EDIT` 和 `PREVIEW` 用於 [WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) cookie。
+>在觸控式UI中，只有值 `EDIT` 和 `PREVIEW` 用於 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) cookie。
 
 ## 建立和設定對話方塊 {#creating-and-configuring-a-dialog}
 
@@ -131,9 +131,9 @@ AEM元件可用來保留、格式化及轉譯可在您的網頁上使用的內�
 
 ### Coral UI和Granite UI {#coral-ui-and-granite-ui}
 
-[Coral UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) 和 [Granite UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) 定義AEM的現代外觀和風格。
+[Coral UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) 和 [Granite UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) 定義AEM的現代外觀和風格。
 
-[Granite UI提供大量基本元件(Widget)](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) 需要在製作環境中建立對話方塊。 如有必要，您可以擴充此選取範圍，並 [建立自己的介面工具集](#creatinganewwidget).
+[Granite UI提供大量基本元件(Widget)](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) 需要在製作環境中建立對話方塊。 如有必要，您可以擴充此選取範圍，並 [建立自己的介面工具集](#creatinganewwidget).
 
 如需完整詳細資訊，請參閱：
 
@@ -141,13 +141,13 @@ AEM元件可用來保留、格式化及轉譯可在您的網頁上使用的內�
 
    * 在所有雲端解決方案中提供一致的UI
    * [AEM觸控式UI的概念 — Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Coral UI 指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
+   * [Coral UI 指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
 
 * Granite UI
 
    * 提供包裝在Sling元件中的Coral UI標籤，以建立UI主控台和對話方塊
    * [AEM觸控式UI的概念 — Granite UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
+   * [Granite UI檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ newComponent (cq:Component)
 >
 >請參閱：
 >
->* AEM Gem課程於 [自訂對話方塊欄位](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
+>* AEM Gem課程於 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
 >* 下列相關范常式式碼 [程式碼範例 — 如何自訂對話方塊欄位](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields).
 >
 
@@ -211,13 +211,13 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->如需Granite UI的完整詳細資訊，請參閱 [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html).
+>如需Granite UI的完整詳細資訊，請參閱 [Granite UI檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
 如果您將對話方塊視為表單元素的簡單容器，則您也可以將對話方塊內容的主要內容視為表單欄位。 建立新表單欄位需要建立資源類型；這等同於建立新元件。 為協助您完成該工作，Granite UI提供要繼承的通用欄位元件(使用 `sling:resourceSuperType`):
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
-更具體來說，Granite UI提供一系列欄位元件，適合用於對話方塊(或更一般地，在 [表單](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html))。
+更具體來說，Granite UI提供一系列欄位元件，適合用於對話方塊(或更一般地，在 [表單](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html))。
 
 >[!NOTE]
 >
@@ -269,7 +269,7 @@ newComponent (cq:Component)
 1. 將欄位標示為指定的CSS類別( *鈎*)。
 1. 在您的用戶端資料庫中，定義與該CSS類別名稱掛鈎的JS接聽程式（這可確保您的自訂邏輯只限於欄位，不會影響相同類型的其他欄位）。
 
-若要達成此目標，您必須了解您要與之互動的基礎Widget程式庫。 請參閱 [Coral UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) 以識別您要對哪個事件做出反應。 這與您過去必須使用ExtJS執行的程式非常類似：尋找指定介面工具集的檔案頁面，然後查看其事件API的詳細資訊。
+若要達成此目標，您必須了解您要與之互動的基礎Widget程式庫。 請參閱 [Coral UI檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) 以識別您要對哪個事件做出反應。 這與您過去必須使用ExtJS執行的程式非常類似：尋找指定介面工具集的檔案頁面，然後查看其事件API的詳細資訊。
 
 如需範例，請參閱：
 
@@ -308,7 +308,7 @@ newComponent (cq:Component)
 
 #### 欄位驗證(Granite UI) {#field-validation-granite-ui}
 
-Granite UI和Granite UI元件（等同於Widget）中的欄位驗證是使用 `foundation-validation` API。 [請參閱 `foundation-valdiation` Granite檔案以取得詳細資訊。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
+Granite UI和Granite UI元件（等同於Widget）中的欄位驗證是使用 `foundation-validation` API。 [請參閱 `foundation-valdiation` Granite檔案以取得詳細資訊。](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
 
 如需範例，請參閱：
 
@@ -428,8 +428,8 @@ GITHUB上的程式碼
 
 您可以在GitHub上找到此頁面的程式碼
 
-* [在GitHub上開啟aem-project-archetype專案](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/archive/master.zip)
+* [在GitHub上開啟aem-project-archetype專案](https://github.com/adobe/aem-project-archetype)
+* 將專案下載為 [ZIP檔案](https://github.com/adobe/aem-project-archetype/archive/master.zip)
 
 >[!NOTE]
 >
@@ -464,12 +464,12 @@ GITHUB上的程式碼
 
 * 對話方塊
 
-   * 您必須建立新對話方塊，才能在觸控式UI中使用。 不過，為了相容性目的，當未為觸控式UI定義對話方塊時，觸控式UI可使用傳統UI對話方塊的定義。
+   * 建立對話方塊以用於觸控式UI。 不過，為了相容性目的，當未為觸控式UI定義對話方塊時，觸控式UI可使用傳統UI對話方塊的定義。
    * 此 [AEM現代化工具](/help/sites-developing/modernization-tools.md) 可協助您擴充現有元件。
    * [將ExtJS對應至Granite UI元件](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components) 提供ExtJS xtype和節點類型的相同Granite UI資源類型的便利概述。
-   * 自訂欄位，如需詳細資訊，請參閱AEM Gems課程，內容如下： [自訂對話方塊欄位](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
-   * 從vtype移轉至 [Granite UI驗證](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
-   * 使用JS監聽器，如需詳細資訊，請參閱 [處理欄位事件](#handling-field-events) 和AEM Gem課程 [自訂對話方塊欄位](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
+   * 自訂欄位，如需詳細資訊，請參閱AEM Gems課程，內容如下： [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
+   * 從vtype移轉至 [Granite UI驗證](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
+   * 使用JS監聽器，如需詳細資訊，請參閱 [處理欄位事件](#handling-field-events) 和AEM Gem課程 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
 
 ### 移轉cq:listener程式碼 {#migrating-cq-listener-code}
 
@@ -477,7 +477,7 @@ GITHUB上的程式碼
 
 如果您的專案正完全移轉至觸控式UI，則您需要取代此類程式碼，以使用與觸控式UI相關的物件和函式。
 
-不過，如果您的專案在移轉期間（通常的情況）必須同時適用傳統UI和觸控式UI，則您需要實作切換器，以區分參考適當物件的個別程式碼。
+不過，如果您的專案在移轉期間（通常的情況）必須同時適用傳統UI和觸控式UI，則您必須實作切換器，以區分參考適當物件的個別程式碼。
 
 此切換機制可實作為：
 
@@ -497,11 +497,11 @@ if (Granite.author) {
 * 預期用途
 * 內容結構和屬性
 * 公開的API和擴充功能點
-* 等
+* 等等
 
-因此，很容易就能在元件本身內使用任何現有的檔案標籤。
+因此，只要在元件本身中使用任何現有的檔案標籤，都相當容易。
 
-你只需把 `README.md` 檔案。 此標籤下拉式清單會顯示在 [元件主控台](/help/sites-authoring/default-components-console.md).
+放置 `README.md` 檔案。 此Markdown會顯示在 [元件主控台](/help/sites-authoring/default-components-console.md).
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 

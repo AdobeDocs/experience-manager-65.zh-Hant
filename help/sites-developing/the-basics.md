@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '3334'
+source-wordcount: '3324'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 在AEM上開發的必要條件 {#prerequisites-for-developing-on-aem}
 
-若要在AEM上進行開發，您需要下列技能：
+若要在AEM上開發，您需要下列技能：
 
 * Web應用技術的基本知識，包括：
 
@@ -39,25 +39,25 @@ ht-degree: 1%
 
 此外，建議您閱讀並遵循 [准則和最佳實務](/help/sites-developing/dev-guidelines-bestpractices.md).
 
-## Java內容儲存庫 {#java-content-repository}
+## Java™內容儲存庫 {#java-content-repository}
 
-Java Content Repository(JCR)標準， [JSR 283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html)，指定一種獨立於供應商且獨立於實施的方式，以在內容儲存庫的精細級別上雙向訪問內容。
+Java™ Content Repository(JCR)標準， [JSR 283](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html)，指定一種獨立於供應商且獨立於實施的方式，以在內容儲存庫的精細級別上雙向訪問內容。
 
 Adobe研究（瑞士）AG持有規格領頭。
 
-此 [JCR API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) 包， javax.jcr。&amp;ast;用於直接存取和操控存放庫內容。
+此 [JCR API 2.0](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) 包， javax.jcr。&amp;ast;用於直接存取和操控存放庫內容。
 
 ## Experience Server(CRX)和Jackrabbit {#experience-server-crx-and-jackrabbit}
 
-Experience Server提供AEM建置在上的體驗服務，可用來建置自訂應用程式，並內嵌在Jackrabbit的內容存放庫。
+Experience Server提供AEM建置的Experience Services，可用來建置自訂應用程式，並內嵌於Jackrabbit的內容存放庫。
 
-[阿帕奇·傑克拉布特](https://jackrabbit.apache.org/) 是JCR API 2.0的開放原始碼，完全符合。
+[阿帕奇·傑克拉布特](https://jackrabbit.apache.org/jcr/index.html) 是JCR API 2.0的開放原始碼，完全符合。
 
 ## Sling要求處理 {#sling-request-processing}
 
 ### Sling簡介 {#introduction-to-sling}
 
-AEM是使用 [Sling](https://sling.apache.org/site/index.html)，此Web應用程式框架基於REST原則，可輕鬆開發麵向內容的應用程式。 Sling會使用JCR存放庫（例如Apache Jackrabbit）或CRX Content Repository(如果是AEM)作為其資料存放區。 Sling已對Apache Software Foundation作出貢獻 — 如需詳細資訊，請參閱Apache。
+AEM是使用 [Sling](https://sling.apache.org/index.html)，此Web應用程式框架基於REST原則，可輕鬆開發麵向內容的應用程式。 Sling會使用JCR存放庫，例如Apache Jackrabbit，或(在AEM的例子中)CRX Content Repository，做為其資料存放區。 Sling已對Apache Software Foundation作出貢獻 — 如需詳細資訊，請參閱Apache。
 
 使用Sling時，要轉譯的內容類型不是第一個處理考量。 相反，主要考量是URL是否解析至內容物件，接著便找到指令碼來執行轉譯。 這為網頁內容作者提供絕佳的支援，以建立可輕鬆根據其需求自訂的頁面。
 
@@ -78,7 +78,7 @@ AEM是使用 [Sling](https://sling.apache.org/site/index.html)，此Web應用程
 Sling是 *以內容為中心*. 這表示處理作業會聚焦在內容上，因為每個(HTTP)請求會以JCR資源（存放庫節點）的形式對應至內容：
 
 * 第一個目標是保存內容的資源（JCR節點）
-* 其次，表示（或指令碼）是結合請求的特定部分（例如選取器和/或擴充功能）從資源屬性中找到
+* 其次，表示法或指令碼是從與請求的某些部分（例如選取器和/或擴充功能）結合的資源屬性中找到
 
 ### RESTful Sling {#restful-sling}
 
@@ -158,13 +158,13 @@ Sling也允許JCR節點以外的其他項目成為資源，但這是進階功能
 
 其他注意事項包括：
 
-* 當需要方法(GET、POST)時，將根據HTTP規範(如jobs.POST.esp)以大寫形式指定（請參閱下文）
+* 當需要方法(GET、POST)時，將根據HTTP規範(如jobs.POST.esp)以大寫形式指定（請參見下面）
 * 支援各種指令碼引擎：
 
    * HTL(HTML範本語言 — Adobe Experience Manager偏好且建議的HTML伺服器端範本系統): `.html`
    * ECMAScript(JavaScript)頁面（伺服器端執行）: `.esp, .ecma`
-   * Java伺服器頁（伺服器端執行）: `.jsp`
-   * Java Servlet編譯器（伺服器端執行）: `.java`
+   * Java™伺服器頁（伺服器端執行）: `.jsp`
+   * Java™ Servlet編譯器（伺服器端執行）: `.java`
    * JavaScript範本（用戶端執行）: `.jst`
 
 指定AEM例項支援的指令碼引擎清單會列在Felix Management Console( `http://<host>:<port>/system/console/slingscripting`)。
@@ -175,17 +175,17 @@ Sling也允許JCR節點以外的其他項目成為資源，但這是進階功能
 
 * GET/HEAD要求，以及結尾為.html的URL（預設請求類型、預設格式）
 
-   指令碼為/apps/hr/jobs/jobs.esp;sling:resourceType的最後一節會形成檔案名稱。
+   劇本是/apps/hr/jobs/jobs.esp;sling:resourceType的最後一節會形成檔案名稱。
 
 * POST請求(所有請求類型，除GET/HEAD外，方法名稱必須為大寫)
 
-   POST將用於指令碼名稱中。
+   POST用於指令碼名稱中。
 
-   指令碼將是 `/apps/hr/jobs/jobs.POST.esp`.
+   指令碼是 `/apps/hr/jobs/jobs.POST.esp`.
 
 * 其他格式的URL，不會以.html結尾
 
-   例如 `../content/corporate/jobs/developer.pdf`
+   例如, `../content/corporate/jobs/developer.pdf`
 
    指令碼將是 `/apps/hr/jobs/jobs.pdf.esp`;尾碼會新增至指令碼名稱。
 
@@ -317,7 +317,7 @@ OSGi定義了用於開發和部署模組化應用程式和庫的體系結構（�
 >
 >其「基礎教育」頁面尤其包含一系列簡報和教學課程。
 
-此架構可讓您使用應用程式特定模組來擴充Sling。 Sling會使用 [阿帕奇費利克斯](https://felix.apache.org/) OSGI（開放服務閘道計畫）的實作以OSGi服務平台第4版4.2版規格為基礎。 它們都是在OSGi架構內執行的OSGi套件組合集合。
+此架構可讓您使用應用程式特定模組來擴充Sling。 Sling會使用 [阿帕奇費利克斯](https://felix.apache.org/documentation/index.html) OSGI（開放服務閘道計畫）的實作以OSGi服務平台第4版4.2版規格為基礎。 它們都是在OSGi架構內執行的OSGi套件組合集合。
 
 這可讓您對安裝中的任何套件執行下列動作：
 
@@ -337,7 +337,7 @@ OSGi定義了用於開發和部署模組化應用程式和庫的體系結構（�
 
 **項目** 項目是節點或屬性。
 
-有關操作項目對象的詳細資訊，請參閱 [Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) 介面javax.jcr.Item的
+有關操作項目對象的詳細資訊，請參閱 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) 介面javax.jcr.Item的
 
 **節點（及其屬性）** 節點及其屬性在JCR API 2.0規範(JSR 283)中定義。 它們儲存內容、物件定義、轉譯指令碼和其他資料。
 
@@ -353,7 +353,7 @@ OSGi定義了用於開發和部署模組化應用程式和庫的體系結構（�
 
 當前節點對象為currentNode。
 
-有關操作節點對象的詳細資訊，請參閱 [Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
+有關操作節點對象的詳細資訊，請參閱 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
 
 **介面工具集** 在AEM中，所有使用者輸入由Widget管理。 這些檔案通常用於控制內容片段的編輯。
 
@@ -392,7 +392,7 @@ AEM已使用Widget的ExtJS程式庫開發。
 
 S`tring pageName = currentPage.getName();`
 
-將currentPage作為當前頁對象。 有關操控頁面對象的詳細資訊，請參閱 [Javadocs](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html).
+將currentPage作為當前頁對象。 有關操控頁面對象的詳細資訊，請參閱 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/Page.html).
 
 **頁面管理員** 頁面管理器是一個介面，提供頁面層級操作的方法。
 
@@ -400,11 +400,11 @@ S`tring pageName = currentPage.getName();`
 
 頁面myPage = pageManager.getContainingPage(myResource);
 
-將pageManager作為頁面管理器物件，將myResource作為資源物件。 如需頁面管理員所提供方法的詳細資訊，請參閱 [Javadocs](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html).
+將pageManager作為頁面管理器物件，將myResource作為資源物件。 如需頁面管理員所提供方法的詳細資訊，請參閱 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/PageManager.html).
 
 ## 存放庫內的結構 {#structure-within-the-repository}
 
-下列清單提供您在存放庫中會看到的結構概述。
+下列清單提供您在存放庫中所看到結構的概述。
 
 >[!CAUTION]
 >
@@ -414,7 +414,7 @@ S`tring pageName = currentPage.getName();`
 
 >[!CAUTION]
 >
->您不得變更 `/libs` 路徑。 對於配置和其他更改，請從 `/libs` to `/apps` 在 `/apps`.
+>請勿變更 `/libs` 路徑。 對於配置和其他更改，請從 `/libs` to `/apps` 在 `/apps`.
 
 * `/apps`
 
@@ -432,7 +432,7 @@ S`tring pageName = currentPage.getName();`
 
 * `/libs`
 
-   屬於AEM核心的程式庫和定義。 中的子資料夾 `/libs` 表示現成可用的AEM功能，例如搜尋或復寫。 中的內容 `/libs` 不應加以修改，因為它會影響AEM的運作方式。 您網站的特定功能應在 `/apps` (請參閱 [自訂元件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
+   屬於AEM核心的程式庫和定義。 中的子資料夾 `/libs` 代表現成可用的AEM功能，例如搜尋或復寫。 中的內容 `/libs` 不應加以修改，因為它會影響AEM的運作方式。 您網站的特定功能應在 `/apps` (請參閱 [自訂元件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
 
 * `/tmp`
 
@@ -448,11 +448,11 @@ S`tring pageName = currentPage.getName();`
 
 ## Dispatcher {#the-dispatcher}
 
-Dispatcher是Adobe的快取和/或負載平衡工具。 如需詳細資訊，請參閱 [dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html).
+Dispatcher是Adobe的快取和/或負載平衡工具。 如需詳細資訊，請參閱 [dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant).
 
 ## FileVault（源修訂系統） {#filevault-source-revision-system}
 
-FileVault為JCR儲存庫提供檔案系統映射和版本控制。 它可用於管理AEM開發項目，並完全支援在標準版本控制系統（例如Subversion）中儲存和版本化項目代碼、內容、配置等。
+FileVault為JCR儲存庫提供檔案系統映射和版本控制。 它可用於管理AEM開發項目，在標準版本控制系統（例如Subversion）中完全支援儲存和版本化項目代碼、內容、配置等。
 
 請參閱 [FileVault工具](/help/sites-developing/ht-vlttool.md) 檔案以取得詳細資訊。
 
@@ -466,7 +466,7 @@ FileVault為JCR儲存庫提供檔案系統映射和版本控制。 它可用於�
 
 Multi Site Manager(MSM)可讓您輕鬆管理多個共用相同內容的網站。 MSM可讓您定義網站之間的關係，以便一個網站中的內容變更會自動複製到其他網站。
 
-例如，網站通常以多種語言提供給國際受眾。 當相同語言的網站數量較少時（3到5個），即可透過手動程式跨網站同步內容。 不過，當網站數量增加或涉及多種語言時，自動化程式就會變得更有效率。
+例如，網站通常以多種語言提供給國際受眾。 當使用相同語言的網站數量較少時（3到5個），便可執行手動程式，跨網站同步內容。 不過，當網站數量增加或涉及多種語言時，自動化程式會變得更有效率。
 
 * 有效管理網站的不同語言版本。
 * 根據源站點自動更新一個或多個站點：

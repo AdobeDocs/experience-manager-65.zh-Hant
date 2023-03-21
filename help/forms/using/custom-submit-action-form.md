@@ -10,10 +10,10 @@ topic-tags: customization
 discoiquuid: 2a2e1156-4a54-4b0a-981c-d527fe22a27e
 docset: aem65
 exl-id: 7c3d0dac-4e19-4eb3-a43d-909d526acd55
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1629'
-ht-degree: 0%
+source-wordcount: '1616'
+ht-degree: 1%
 
 ---
 
@@ -53,11 +53,11 @@ XML資料會使用 **`jcr:data`** 要求參數。 提交動作可存取參數以
 
 ### 動作欄位 {#action-fields}
 
-「提交」動作可新增隱藏的輸入欄位(使用HTML [輸入](https://developer.mozilla.org/en/docs/Web/HTML/Element/Input) 標籤)轉換為轉譯的表單HTML。 這些隱藏欄位可包含處理表單提交時所需的值。 提交表單時，這些欄位值會以請求參數的形式發回，「提交」動作可在提交處理期間使用。 輸入欄位稱為動作欄位。
+「提交」動作可新增隱藏的輸入欄位(使用HTML [輸入](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input) 標籤)轉換為轉譯的表單HTML。 這些隱藏欄位可包含處理表單提交時所需的值。 提交表單時，這些欄位值會以請求參數的形式發回，「提交」動作可在提交處理期間使用。 輸入欄位稱為動作欄位。
 
 例如，如果「提交」動作也擷取填寫表單所花的時間，則可新增隱藏的輸入欄位 `startTime` 和 `endTime`.
 
-指令碼可提供 `startTime` 和 `endTime` 表單轉譯時和表單提交前的欄位。 提交操作指令碼 `post.jsp` 之後，您就可以使用請求參數存取這些欄位，並計算填寫表單所需的總時間。
+指令碼可提供 `startTime` 和 `endTime` 表單轉譯時和表單提交前的欄位。 提交ActionScript `post.jsp` 之後，您就可以使用請求參數存取這些欄位，並計算填寫表單所需的總時間。
 
 ### 檔案附件 {#file-attachments}
 
@@ -102,7 +102,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 ## 建立自訂提交動作 {#creating-a-custom-submit-action}
 
-執行下列步驟以建立自訂的「提交」動作，將資料儲存在CRX存放庫，然後傳送電子郵件給您。 適用性表單包含將資料儲存在CRX存放庫的OOTB提交動作存放區內容（已淘汰）。 此外，CQ也提供 [郵件](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/mailer/package-summary.html) 可用於傳送電子郵件的API。 使用郵件API之前， [設定](https://docs.adobe.com/docs/en/cq/current/administering/notification.html?wcmmode=disabled#Configuring郵件服務)透過系統主控台提供Day CQ Mail服務。 您可以重複使用「儲存內容（已廢止）」動作，將資料儲存在存放庫中。 「儲存內容（已廢止）」動作可在CRX存放庫的/libs/fd/af/components/guidesubmittype/store位置取得。
+執行下列步驟以建立自訂的「提交」動作，將資料儲存在CRX存放庫，然後傳送電子郵件給您。 適用性表單包含將資料儲存在CRX存放庫的OOTB提交動作存放區內容（已淘汰）。 此外，CQ也提供 [郵件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant) 可用於傳送電子郵件的API。 使用郵件API之前， [設定](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant&amp;wcmmode=disabled) Day CQ Mail服務（透過系統主控台）。 您可以重複使用「儲存內容（已廢止）」動作，將資料儲存在存放庫中。 「儲存內容（已廢止）」動作可在CRX存放庫的/libs/fd/af/components/guidesubmittype/store位置取得。
 
 1. 在URL https://登入CRXDE Lite&lt;server>:&lt;port>/crx/de/index.jsp。 在/apps/custom_submit_action資料夾中，使用屬性sling:Folder和name store_and_mail建立節點。 建立custom_submit_action資料夾（如果尚未存在）。
 
@@ -138,7 +138,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
    將post.POST.jsp指令碼新增至動作。 (/apps/custom_submit_action/store_and_mail/)。
 
-   執行OOTB儲存動作(post.POST.jsp指令碼)。 使用 [FormsHelper.runAction](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/wcm/foundation/forms/FormsHelper.html#runAction(java.lang.String, java.lang.String, org.apache.sling.api.resource.Resource, org.apache.sling.api.SlingHttpServletRequest, org.apache.sling.api.SlingHttpServletResponse))CQ在您的程式碼中提供的API，用以執行「儲存」動作。 在JSP檔案中添加以下代碼：
+   執行OOTB儲存動作(post.POST.jsp指令碼)。 使用 [FormsHelper.runAction](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)(java.lang.String, java.lang.String, org.apache.sling.api.resource.Resource, org.apache.sling.api.SlingHttpServletRequest, org.apache.sling.api.SlingHttpServletResponse)API,CQ會在您的程式碼中提供以執行「儲存」動作。 在JSP檔案中添加以下代碼：
 
    `FormsHelper.runAction("/libs/fd/af/components/guidesubmittype/store", "post", resource, slingRequest, slingResponse);`
 
