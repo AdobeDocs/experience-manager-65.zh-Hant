@@ -4,10 +4,10 @@ seo-title: AEM 6.5 Capabilities User Guide
 description: AEM 6.5基本功能概述
 seo-description: An overview of the essential capabilities of AEM 6.5
 exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 38%
+source-wordcount: '129'
+ht-degree: 41%
 
 ---
 
@@ -44,10 +44,6 @@ ht-degree: 38%
 ## AEM Communities {#aem-communities}
 
 [建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。](/help/communities/home.md)
-
-## AEM Livefyre {#aem-livefyre}
-
-[與AEM Livefyre共用使用者產生的內容。](https://experienceleague.adobe.com/docs/livefyre/using/home.html)
 
 ## AEM Mobile {#aem-mobile}
 

@@ -4,10 +4,10 @@ seo-title: AEM 6.5 Authoring User Guide
 description: 探索在AEM 6.5中建立內容和編寫的重要概念。您也可以找到使用標籤、範本和其他頁面功能的相關資訊。
 seo-description: Explains the concepts of authoring in AEM.
 exl-id: 38f229b4-10b2-4a67-9821-a03718b82215
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 24%
+source-wordcount: '343'
+ht-degree: 28%
 
 ---
 
@@ -39,7 +39,6 @@ ht-degree: 24%
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [Commerce 使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 
 ## 重要AEM資源
 

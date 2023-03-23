@@ -4,10 +4,10 @@ seo-title: AEM 6.5 Best Practices
 description: AEM 6.5最佳實務、疑難排解和訓練的資源
 seo-description: Resources for best practices, troubleshooting and training for AEM 6.5
 exl-id: 077c00b9-f2ec-49a3-8d85-a3d3ecf287bb
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 1%
+source-wordcount: '387'
+ht-degree: 3%
 
 ---
 
@@ -15,16 +15,15 @@ ht-degree: 1%
 
 ## 我可以在何處進一步了解AEM的訓練或教育？ {#training}
 
-Adobe有許多重要資源可協助您從AEM中獲得最佳效益。
+Adobe有各種重要資源，可協助您從AEM中獲得最佳體驗。
 
-* [我們的官方AEM培訓目錄在這裡。](https://training.adobe.com/training/current-courses.html#solution=adobeExperienceManager&amp;p=1)
-* 若您想取得AEM認證，我們的 [此處提供官方AEM認證的完整指南。](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager)
+* [官方AEM培訓目錄](https://training.adobe.com/training/current-courses.html#solution=adobeExperienceManager&amp;p=1).
+* 若您想要取得AEM認證，請 [此處提供官方AEM認證的完整指南](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
 
 AEM社群不斷製作範例工作流程、教學課程和建議與協作工作的內容程式碼範例。
 
-* [此處提供AEM 6.4教學課程和影片的完整清單。](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html)
-* [此處提供AEM Community說明文章的完整清單。](https://helpx.adobe.com/experience-manager/topics/how-to.html)
-* [此處提供AEM知識庫文章的完整清單。](https://helpx.adobe.com/experience-manager/kb/index/full_kb_list.html)
+* [此處提供AEM 6.5教學課程和影片的完整清單](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html).
+* [此處提供AEM社群操作說明文章的完整清單](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 ## AEM最佳作法 {#best-practices}
 
@@ -38,24 +37,23 @@ AEM社群不斷製作範例工作流程、教學課程和建議與協作工作�
 
 ## 不同AEM功能的快速入門手冊 {#getting-started}
 
-AEM在組織中有許多用途，其範圍足夠廣，可跨公司提供功能。 如果您想深入了解前幾個步驟，可以參閱我們的快速入門手冊：
+AEM在組織中有許多用途，其範圍足夠廣，可跨公司提供功能。 如果您想深入了解前幾個步驟，可以參閱快速入門手冊：
 
 * [AEM Platform和Sites快速入門](/help/sites-deploying/deploy.md#getting-started)
 * [AEM Forms快速入門](/help/forms/using/introduction-aem-forms.md)
 * [AEM Mobile快速入門](/help/mobile/getting-started-aem-mobile.md)
 * [AEM Communities快速入門](/help/communities/getting-started.md)
-* [AEM Livefyre快速入門](https://answers.livefyre.com/developers/getting-started/)
 
-我們還有 [WKND教學課程，此教學課程是使用AEM建立第一個網站的逐步指南](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant) 以及 [部署我們的Digital Foundation解決方案的逐步方式](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html)，其中AEM是關鍵建置區塊。
+Adobe有 [WKND教學課程，此教學課程是使用AEM建立第一個網站的逐步指南](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant). 此外， [部署Adobe的Digital Foundation解決方案的逐步方式](https://experienceleague.adobe.com/#courses)，其中AEM是關鍵建置區塊。
 
 ## 建議的AEM部署 {#deployments}
 
-MicroKernels充當持久性管理程式，了解這些是成功實施AEM的關鍵。 根據執行個體的用途和您考慮的部署類型，選擇符合您需求的部署。 [透過最常見的AEM設定了解其建議用途。](/help/sites-deploying/recommended-deploys.md)
+MicroKernels充當永續性管理程式，了解它們是成功實施AEM的關鍵。 根據執行個體的用途和您考慮的部署類型，選擇符合您需求的部署。 [透過最常見的AEM設定了解其建議用途。](/help/sites-deploying/recommended-deploys.md)
 
 ## AEM安全性檢查清單 {#security-checklist}
 
-安裝AEM時，安全性是重要考量。 [了解確保部署AEM時安全安裝所需的各種步驟和措施。](/help/sites-administering/security-checklist.md) 核對表將從上到下應用。
+安裝AEM時，安全性是重要考量。 [了解確保部署AEM時安全安裝所需的各種步驟和措施。](/help/sites-administering/security-checklist.md) 從上到下應用核對表。
 
 ## AEM常見問題 {#faq}
 
-檢查 [AEM常見問題集](/help/sites-administering/aem-faqs.md) 以取得關於AEM的一些最常見問題的解答。
+若要取得關於AEM的部分最常問問題的解答，請檢查 [AEM常見問題集](/help/sites-administering/aem-faqs.md).

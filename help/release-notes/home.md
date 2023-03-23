@@ -2,10 +2,10 @@
 title: Adobe Experience Manager 6.5發行說明
 description: AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。
 exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
-source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 37%
+source-wordcount: '355'
+ht-degree: 41%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 37%
 
 AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。
 
-* [最新發行說明](/help/release-notes/release-notes.md)
+* [最新版本注意事項](/help/release-notes/release-notes.md)
 
 ## 重要AEM文章
 
@@ -37,7 +37,6 @@ AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、�
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [Commerce 使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 
 ## 重要AEM資源
 

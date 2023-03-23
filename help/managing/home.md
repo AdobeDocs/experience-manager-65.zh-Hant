@@ -4,10 +4,10 @@ seo-title: AEM 6.5 Managing User Guide
 description: 了解如何透過重要資源的支援和完整的AEM 6.5使用手冊集，成功管理AEM專案。
 seo-description: Covers how to manage an AEM project successfully
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 25%
+source-wordcount: '337'
+ht-degree: 29%
 
 ---
 
@@ -39,7 +39,6 @@ ht-degree: 25%
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [Commerce 使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 
 ## 重要AEM資源
 

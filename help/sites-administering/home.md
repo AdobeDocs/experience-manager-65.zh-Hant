@@ -2,10 +2,10 @@
 title: AEM 6.5 管理使用指南
 description: 了解AEM 6.5的管理。這些指南涵蓋網站功能、部署作業、安全功能、個人化、整合等。
 exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 26%
+source-wordcount: '328'
+ht-degree: 30%
 
 ---
 
@@ -37,7 +37,6 @@ ht-degree: 26%
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [Commerce 使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 
 ## 重要AEM資源
 

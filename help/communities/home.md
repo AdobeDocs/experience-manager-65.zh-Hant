@@ -4,10 +4,10 @@ seo-title: Adobe Experience Manager 6.5 Communities Guide
 description: 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。瀏覽我們的指南，說明如何部署、管理、開發和編寫Communities。
 seo-description: Covers all AEM Communities tasks, such as creating online experiences such as forums, user groups, learning resources, and other social features.
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 27%
+source-wordcount: '355'
+ht-degree: 34%
 
 ---
 
@@ -39,15 +39,14 @@ ht-degree: 27%
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [Commerce 使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 
 ## 重要AEM資源
 
 * [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en)
+* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
 * [HTL使用手冊](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=en)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hant)
 * [GDPR 整備](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
 * [AEM 社群論壇](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)

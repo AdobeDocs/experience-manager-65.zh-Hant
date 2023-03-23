@@ -2,10 +2,10 @@
 title: 的一般發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5說明，概述發行資訊、新增功能、安裝方式，以及詳細的變更清單。」'
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '4697'
-ht-degree: 4%
+source-wordcount: '4675'
+ht-degree: 5%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 4%
 | 版本 | 6.5 |
 | 類型 | 主要版本 |
 | 正式發行日期 | 2019 年 4 月 8 日 |
-| 建議的更新 | 請參閱 [AEM近期更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en). |
+| 建議的更新 | 請參閱 [AEM近期更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant). |
 
-### Trivia {#trivia}
+### 特里維亞 {#trivia}
 
 此版本的 [!DNL Adobe Experience Manager] 自2018年4月4日起，經過23次反覆品質保證和錯誤修正，並於2019年3月28日結束。 此版本中修正的客戶相關問題（包括增強功能和新功能）總數為1345。
 
@@ -30,7 +30,7 @@ ht-degree: 4%
 
 ## 新增功能 {#what-s-new}
 
-[!DNL Adobe Experience Manager] 6.5是 [!DNL Adobe Experience Manager] 6.4代碼庫。 它提供全新且增強的功能、重要客戶修正、高優先順序的客戶增強功能，以及針對產品穩定化的一般錯誤修正。 也包含 [!DNL Adobe Experience Manager] 6.4 Service Pack最多發行SP4。
+[!DNL Adobe Experience Manager] 6.5是 [!DNL Adobe Experience Manager] 6.4代碼庫。 此版本提供全新的增強功能、重要客戶修正、高優先順序的客戶增強功能，以及針對產品穩定化的一般錯誤修正。也包含 [!DNL Adobe Experience Manager] 6.4 Service Pack最多發行SP4。
 
 以下清單提供概觀，而後續頁面則列出完整詳細資訊。
 
@@ -102,7 +102,7 @@ UI已經過多種增強功能，讓工作效率更高，使用更輕鬆。
 
 * 快速入門發佈使用Eclipse Jetty 9.4.15作為servlet引擎(AEM 6.4隨9.3.22提供)。
 
-### [!DNL Experience Manager] 網站 {#experience-manager-sites}
+### [!DNL Experience Manager] Sites {#experience-manager-sites}
 
 #### 托管單頁應用程式 {#managed-single-page-apps}
 
@@ -148,7 +148,7 @@ AEM可以從堆疊的不同層級以各種格式提供內容。 自2008年以來
    * 字串、陣列和對象的「in」運算子：
 
       ```html
-      ${'a' in 'abc’}
+      ${'a' in 'abc'}
       ${100 in myArray}
       ${'a' in myObject}
       ```
@@ -429,10 +429,6 @@ AEM 6.5 Forms提供數項新功能和增強功能。 重點包括：
 
 請參閱 [AEM 6.5 Forms的新功能和增強功能摘要](/help/forms/using/whats-new.md) 以取得新功能和改善功能與檔案資源的相關資訊。
 
-### [!DNL Experience Manager Livefyre] {#experience-manager-livefyre}
-
-您可以將Livefyre與AEM 6.5執行個體整合。 請參閱 [如何整合Livefyre與AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/livefyre.html).
-
 ### 使用以客戶為中心的開發 {#leverage-customer-focused-development}
 
 Adobe使用以客戶為中心的開發模型，允許客戶在規範、開發和測試期間為開發流程的所有階段作出貢獻。 在此過程中，我們感謝所有貢獻客戶和合作夥伴。
@@ -453,7 +449,7 @@ Adobe已制定程式和程式，以收集、排定優先順序及追蹤以客戶
 * 方括弧程式碼編輯器的擴充功能([了解詳情及下載](/help/sites-developing/aem-brackets.md))
 * Maven/Gradle相依性([下載連結](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/))
 
-**網站**
+**Sites**
 
 * 核心元件([GitHub專案](https://github.com/adobe/aem-core-wcm-components))
 * We.Retail參考實作([閱讀更多資訊](/help/sites-developing/we-retail.md))

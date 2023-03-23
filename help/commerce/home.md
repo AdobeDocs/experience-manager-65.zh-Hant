@@ -2,10 +2,10 @@
 title: AEM Content and Commerce
 description: 了解如何使用及管理AEM內容與商務，以及我們有關整合的實用文章，以及如何開始使用AEM Storefront。
 exl-id: b5b074e7-6da7-49ed-9cdb-f7c37d08e08c
-source-git-commit: 3ac32e5a2a1b2b266e2fc9f4ba8c7393a0566ff4
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 25%
+source-wordcount: '336'
+ht-degree: 28%
 
 ---
 
@@ -38,7 +38,6 @@ ht-degree: 25%
 | [開發使用手冊](/help/sites-developing/home.md) | 了解如何建置您的AEM例項。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 
 ## 重要AEM資源
 

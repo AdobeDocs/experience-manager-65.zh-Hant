@@ -4,10 +4,10 @@ seo-title: AEM 6.5 Forms Guide
 description: 使用本AEM 6.5指南來建立、管理、發佈和更新數位表單。 尋找安裝、升級和設定的說明，並了解如何編寫最適化表單。
 seo-description: Covers all AEM Forms tasks, including how to create, manage, publish, and update digital forms.
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 24%
+source-wordcount: '348'
+ht-degree: 29%
 
 ---
 
@@ -39,7 +39,6 @@ ht-degree: 24%
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [Commerce 使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 
 ## 重要AEM資源
 

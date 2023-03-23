@@ -3,10 +3,10 @@ title: AEM 6.5 Deploying使用指南
 seo-title: AEM 6.5 Deploying User Guide
 description: 了解如何安裝和部署Adobe Experience Manager 6.5及其架構，包括我們的Adobe Managed Services雲端部署。
 exl-id: 4a82008c-af69-414e-bd98-c7f683a74905
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 21%
+source-wordcount: '361'
+ht-degree: 25%
 
 ---
 
@@ -38,7 +38,6 @@ ht-degree: 21%
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [Commerce 使用手冊](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [行動使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南會說明如何與Livefyre共用使用者產生的內容。 |
 
 ## 重要AEM資源
 

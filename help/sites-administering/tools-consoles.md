@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '607'
 ht-degree: 33%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 33%
   </tr>
   <tr>
    <td> </td>
-   <td>範本</td>
+   <td>範例</td>
   </tr>
   <tr>
    <td> </td>
@@ -238,10 +238,6 @@ ht-degree: 33%
    <td>卸載</td>
   </tr>
   <tr>
-   <td> </td>
-   <td>Livefyre 設定</td>
-  </tr>
-  <tr>
    <td>安全性</td>
    <td> </td>
   </tr>
@@ -343,7 +339,7 @@ ht-degree: 33%
   </tr>
   <tr>
    <td> </td>
-   <td>網站範本<br /> </td>
+   <td>網站範例<br /> </td>
   </tr>
   <tr>
    <td> </td>
@@ -433,7 +429,7 @@ ht-degree: 33%
    <td>用於在發佈頁面時將資料從作者複製到發佈，或透過反向復寫將使用者評論從發佈環境傳回給作者。</td>
   </tr>
   <tr>
-   <td>報表</td>
+   <td>報告</td>
    <td>AEM提供一系列自訂報表，可讓您建立自訂報表及/或開發您自己的報表。</td>
   </tr>
   <tr>
