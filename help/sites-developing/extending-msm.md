@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 0caaa4b5de519567df4a527f62a2583abd7ed937
 workflow-type: tm+mt
-source-wordcount: '2582'
+source-wordcount: '2593'
 ht-degree: 1%
 
 ---
@@ -194,13 +194,14 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
    >[!NOTE]
    >這是您專案的自訂版本：
    >`/libs/msm/wcm/rolloutconfigs`
-   >如果這是您的第一個設定，則必須建立。
+   >如果這是您的第一個設定，則此 `/libs` 分支必須用作模板，才能在下建立新分支 `/apps`.
 
    >[!NOTE]
    >
    >您不得變更/libs路徑中的任何項目。
    >這是因為下次升級執行個體時會覆寫/libs的內容（而當您套用Hotfix或Feature Pack時，很可能會覆寫）。
    >設定和其他變更的建議方法為：
+   >
    >* 在/apps下重新建立所需項目（即/libs中存在的項目）
    >* 在/apps內進行任何變更
 
@@ -675,11 +676,11 @@ MSM會使用儲存的語言和國家/地區代碼清單，來判斷與頁面語�
 
 * 連絡人電子郵件:
 
-   * 會從已推出的屬性中排除；請參閱 [從同步中排除屬性和節點類型](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization).
+* 會從已推出的屬性中排除；請參閱 [從同步中排除屬性和節點類型](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization).
 
 * 關鍵視覺樣式：
 
-   * 請確保除非取消繼承，否則不允許在觸控式UI中編輯此屬性，然後您還可以恢復繼承；可通過按一下切換以指示連接狀態的鏈/斷鏈連結來控制。
+* 請確保除非取消繼承，否則不允許在觸控式UI中編輯此屬性，然後您還可以恢復繼承；可通過按一下切換以指示連接狀態的鏈/斷鏈連結來控制。
 
 是否要轉出頁面屬性，因此，在編輯時要取消/重新啟用繼承，由對話方塊屬性控制：
 
@@ -689,10 +690,10 @@ MSM會使用儲存的語言和國家/地區代碼清單，來判斷與頁面語�
    * 將在對話框中建立鏈結符號
    * 僅允許在取消繼承時進行編輯（鏈結斷開）
    * 僅適用於資源的第一個子級
-   * **類型**: `String`
+      * **類型**: `String`
 
-   * **值**:持有被代價物業之名稱（與該物業之價值相若） `name`;例如，請參閱
-      `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
+      * **值**:持有被代價物業之名稱（與該物業之價值相若） `name`;例如，請參閱
+         `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 當 `cq-msm-lockable` 已定義，斷裂/關閉鏈將透過以下方式與MSM互動：
 
