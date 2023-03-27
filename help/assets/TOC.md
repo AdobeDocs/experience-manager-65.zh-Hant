@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 建立、管理、處理和分配數位資產。
-source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
+source-git-commit: 0c6c269e9f0cbdcc0c5e3b925ef09b9923cbb2b3
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 48%
+source-wordcount: '683'
+ht-degree: 47%
 
 ---
 
@@ -158,6 +158,7 @@ ht-degree: 48%
 + 管理資產 {#managing}
    + [管理數位資產](manage-assets.md)
    + [管理收藏集](manage-collections.md)
+   + [資產選擇器](asset-selector.md)
    + [啟用重複檢測](duplicate-detection.md)
    + [組織數位資產](organize-assets.md)
    + [管理影片資產](managing-video-assets.md)
