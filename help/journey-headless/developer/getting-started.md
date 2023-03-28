@@ -2,7 +2,7 @@
 title: AEM Headless 快速入門
 description: 在 AEM Headless 開發人員歷程的這一部分，了解 AEM Headless 先決條件。
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 40e81b63e28a75c769507654d7f1d75da82f0bd6
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 100%
@@ -289,5 +289,5 @@ GraphQL 可作為 AEM 和無周邊內容取用者之間的「黏著劑」。Grap
 * [GraphQL 技術文件](https://graphql.org) - GraphQL 定義 (外部連結)
 * [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) - 說明如何建立要求以存取和傳遞內容片段的技術文件
 * [資產 REST API](/help/assets/assets-api-content-fragments.md) - 說明如何建立和修改內容片段 (和其他資產) 的技術文件
-* [持續性查詢](/help/assets/content-fragments/graphql-api-content-fragments.md#persisted-queries-caching) - 關於 AEM 持續性查詢的技術文件
+* [持續性查詢](/help/assets/content-fragments/persisted-queries.md) - 關於 AEM 持續性查詢的技術文件
 * [AEM Headful 和 Headless 技術 ](/help/sites-developing/headful-headless.md) - 對 AEM 中可用的無周邊整合層級的完整討論

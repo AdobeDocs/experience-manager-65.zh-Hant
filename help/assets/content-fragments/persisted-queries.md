@@ -1,16 +1,16 @@
 ---
 title: 持續性 GraphQL 查詢
-description: 了解如何在Adobe Experience Manager中保留GraphQL查詢以最佳化效能。 用戶端應用程式可以使用 HTTP GET 方法要求持續性查詢，回應可以在 Dispatcher 和 CDN 層快取，最終提高用戶端應用程式的效能。
-source-git-commit: 9369f7cb9c507bbd7d7761440ceef907552aeb7d
+description: 了解如何在Adobe Experience Manager中保留GraphQL查詢以最佳化效能。 用戶端應用程式可使用HTTPGET方法來請求持續查詢，且可在Dispatcher和CDN層快取回應，最終改善用戶端應用程式的效能。
+source-git-commit: a717382fa4aaf637c5b1bf3ce4aca3f90a059458
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 98%
+source-wordcount: '1428'
+ht-degree: 72%
 
 ---
 
 # 持續性 GraphQL 查詢 {#persisted-queries-caching}
 
-持續性查詢是在 Adobe Experience Manager (AEM) as a Cloud Service 伺服器上建立和儲存的 GraphQL 查詢。用戶端應用程式可以透過 GET 要求來要求它們。GET 要求的回應可以在 Dispatcher 和 CDN 層快取，最終提高發出要求之用戶端應用程式的效能。這與標準的 GraphQL 查詢不同，後者使用 POST 要求執行，其回應無法輕鬆快取。
+持續性查詢是在 Adobe Experience Manager (AEM) as a Cloud Service 伺服器上建立和儲存的 GraphQL 查詢。用戶端應用程式可以透過 GET 要求來要求它們。在Dispatcher與內容傳遞網路(CDN)層可快取GET要求的回應，最終改善請求用戶端應用程式的效能。 這與標準的 GraphQL 查詢不同，後者使用 POST 要求執行，其回應無法輕鬆快取。
 
 <!--
 >[!NOTE]
@@ -18,7 +18,7 @@ ht-degree: 98%
 >Persisted Queries are recommended. See [GraphQL Query Best Practices (Dispatcher)](/help/headless/graphql-api/content-fragments.md#graphql-query-best-practices) for details, and the related Dispatcher configuration.
 -->
 
-AEM 有提供 [GraphiQL IDE](/help/assets/content-fragments/graphiql-ide.md)，可讓您在[傳送到生產環境](#transfer-persisted-query-production)之前，開發、測試和保留您的 GraphQL 查詢。如果需要自訂 (例如[自訂快取](/help/assets/content-fragments/graphiql-ide.md#caching-persisted-queries)時)，您可以使用 API，請參閱[如何保留 GraphQL 查詢](#how-to-persist-query)中提供的 curl 範例。
+AEM 有提供 [GraphiQL IDE](/help/assets/content-fragments/graphiql-ide.md)，可讓您在[傳送到生產環境](#transfer-persisted-query-production)之前，開發、測試和保留您的 GraphQL 查詢。需要自訂的情況(例如 [自訂快取](/help/assets/content-fragments/graphiql-ide.md#caching-persisted-queries))您可以使用API;請參閱 [如何保留GraphQL查詢](#how-to-persist-query).
 
 ## 持續性查詢和端點 {#persisted-queries-and-endpoints}
 
@@ -56,10 +56,10 @@ AEM 有提供 [GraphiQL IDE](/help/assets/content-fragments/graphiql-ide.md)，�
 有多種保留查詢的方法，包括：
 
 * GraphiQL IDE - 請參閱[儲存持續性查詢](/help/assets/content-fragments/graphiql-ide.md#saving-persisted-queries) (首選方法)
-* curl - 請參閱以下範例。
+* cURL — 請參閱下列範例
 * 其他工具，包括 [Postman](https://www.postman.com/)
 
-GraphiQL IDE 是保留查詢的&#x200B;**首選**&#x200B;方法。若要使用 **curl** 命令列工具保留給定查詢：
+GraphiQL IDE 是保留查詢的&#x200B;**首選**&#x200B;方法。若要使用 **cURL** 命令行工具：
 
 1. 透過將查詢放入新端點 URL `/graphql/persist.json/<config>/<persisted-label>` 來準備查詢。
 
@@ -211,7 +211,7 @@ GET <AEM_HOST>/graphql/execute.json/<PERSISTENT_PATH>
 
    例如：
 
-   ```xml
+   ```bash
    $ curl -X GET \
        "https://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3Bapath%3D%2Fcontent%2Fdam%2Fwknd%2Fen%2Fmagazine%2Falaska-adventure%2Falaskan-adventures%3BwithReference%3Dfalse
    ```
@@ -259,46 +259,99 @@ query getAdventuresByActivity($activity: String!) {
 
 請注意，`%3B` 是 `;` 的 UTF-8 編碼，`%3D` 是 `=` 的編碼。查詢變數和任何特殊字元必須[正確編碼](#encoding-query-url)才能執行持續性查詢。
 
+## 快取持續性查詢 {#caching-persisted-queries}
+
+建議使用持續查詢，因為可在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 和內容傳遞網路(CDN)層，最終改善請求用戶端應用程式的效能。
+
+依預設，AEM會根據存留時間(TTL)定義使快取失效。 這些TTL可由下列參數定義。 這些參數可透過各種方式存取，而名稱會根據所使用的機制而改變：
+
+| 快取類型 | [HTTP標題](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi配置  |
+|--- |--- |--- |--- |--- |
+| 瀏覽器 | `max-age` | `cache-control : max-age` | `cacheControlMaxAge` |
+| CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` |
+| CDN | `stale-while-revalidate` | `surrogate-control : stale-while-revalidate ` | `surrogateControlStaleWhileRevalidate` |
+| CDN | `stale-if-error` | `surrogate-control : stale-if-error` | `surrogateControlStaleIfError` |
+
+### 製作例項 {#author-instances}
+
+對於製作例項，預設值為：
+
+* `max-age`  : 60
+* `s-maxage` : 60
+* `stale-while-revalidate` : 86400
+* `stale-if-error` : 86400
+
+這些：
+
+* 無法以OSGi設定覆寫
+* 可由使用cURL定義HTTP標題設定的請求覆寫；應包含適當的設定 `cache-control` 和/或 `surrogate-control`;如需範例，請參閱 [在持續查詢層級管理快取](#cache-persisted-query-level)
+
+<!-- CQDOC-20186 -->
+<!-- following entry is only when the GraphiQL IDE is ready; add cross-reference too -->
 <!--
-## Caching your persisted queries {#caching-persisted-queries}
+* can be overwritten if you specify values in the **Headers** dialog of the [GraphiQL IDE](#http-cache-headers-graphiql-ide)
+-->
 
-Persisted queries are recommended as they can be cached at the dispatcher and CDN layers, ultimately improving the performance of the requesting client application.
+### 發佈例項 {#publish-instances}
 
-By default AEM will invalidate the Content Delivery Network (CDN) cache based on a default Time To Live (TTL). 
+對於發佈例項，預設值為：
 
-This value is set to:
+* `max-age`  : 60
+* `s-maxage` : 7200
+* `stale-while-revalidate` : 86400
+* `stale-if-error` : 86400
 
-* 7200 seconds is the default TTL for the Dispatcher and CDN; also known as *shared caches*
-  * default: s-maxage=7200
-* 60 is the default TTL for the client (for example, a browser)
-  * default: maxage=60
+可以覆寫下列項目：
 
-If you want to change the TTL for your GraphLQ query, then the query must be either:
+<!-- CQDOC-20186 -->
+<!-- following entry is only when the GraphiQL IDE is ready -->
+<!--
+* [from the GraphQL IDE](#http-cache-headers-graphiql-ide)
+-->
 
-* persisted after managing the [HTTP Cache headers - from the GraphQL IDE](#http-cache-headers)
-* persisted using the [API method](#cache-api). 
+* [在持續查詢層級](#cache-persisted-query-level);這包括在命令列介面中使用cURL將查詢發佈至AEM，以及發佈持續查詢。
 
-### Managing HTTP Cache Headers in GraphQL  {#http-cache-headers-graphql}
+* [OSGi設定](#cache-osgi-configration)
+
+<!-- CQDOC-20186 -->
+<!-- keep for future use; check link -->
+<!--
+### Managing HTTP Cache Headers in the GraphiQL IDE {#http-cache-headers-graphiql-ide}
 
 The GraphiQL IDE - see [Saving Persisted Queries](/help/assets/content-fragments/graphiql-ide.md#managing-cache)
+-->
 
-### Managing Cache from the API {#cache-api}
+### 在持續查詢層級管理快取 {#cache-persisted-query-level}
 
-This involves posting the query to AEM using CURL in your command line interface. 
+這包括在命令列介面中使用cURL將查詢發佈至AEM。
 
-For an example:
+如需PUT（建立）方法的範例：
 
-```xml
-curl -X PUT \
-    -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-    -H "Content-Type: application/json" \
-    "https://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
-    -d \
-'{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
+```bash
+curl -u admin:admin -X PUT \
+--url "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
+--header "Content-Type: application/json" \
+--data '{ "query": "{articleList { items { _path author } } }", "cache-control": { "max-age": 300 }, "surrogate-control": {"max-age":600, "stale-while-revalidate":1000, "stale-if-error":1000} }'
 ```
 
-The `cache-control` can be set at the creation time (PUT) or later on (for example, via a POST request for instance). The cache-control is optional when creating the persisted query, as AEM can provide the default value. See [How to persist a GraphQL query](#how-to-persist-query), for an example of persisting a query using curl.
--->
+如需POST（更新）方法的範例：
+
+```bash
+curl -u admin:admin -X POST \
+--url "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
+--header "Content-Type: application/json" \
+--data '{ "query": "{articleList { items { _path author } } }", "cache-control": { "max-age": 300 }, "surrogate-control": {"max-age":600, "stale-while-revalidate":1000, "stale-if-error":1000} }'
+```
+
+`cache-control` 可以在建立時 (PUT) 或稍後 (例如透過 POST 要求) 設定。建立持續性查詢時，快取控制是選用的，因為 AEM 可以提供預設值。請參閱 [如何保留GraphQL查詢](#how-to-persist-query)，以示使用cURL保留查詢的範例。
+
+### 使用OSGi配置管理快取 {#cache-osgi-configration}
+
+若要全域管理快取，您可以 [配置OSGi設定](/help/sites-deploying/configuring-osgi.md) 針對 **持續查詢服務配置**. 否則，此OSGi設定會使用 [發佈例項的預設值](#publish-instances).
+
+>[!NOTE]
+>
+>OSGi設定僅適用於發佈執行個體。 設定存在於製作例項上，但會忽略。
 
 ## 編碼查詢 URL 以供應用程式使用 {#encoding-query-url}
 
@@ -306,7 +359,7 @@ The `cache-control` can be set at the creation time (PUT) or later on (for examp
 
 例如：
 
-```xml
+```bash
 curl -X GET \ "https://localhost:4502/graphql/execute.json/wknd/adventure-by-path%3BadventurePath%3D%2Fcontent%2Fdam%2Fwknd%2Fen%2Fadventures%2Fbali-surf-camp%2Fbali-surf-camp"
 ```
 
