@@ -12,9 +12,9 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: dd8f24ce412a8ca6c44224a7602533dae0898e92
+source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
 workflow-type: tm+mt
-source-wordcount: '6230'
+source-wordcount: '6065'
 ht-degree: 2%
 
 ---
@@ -23,30 +23,30 @@ ht-degree: 2%
 
 ## 簡介 {#introduction}
 
-AEM 6中的Operations Dashboard可協助系統運算子監控AEM系統運作狀況。 它還提供有關AEM相關方面的自動生成診斷資訊，並允許配置和運行獨立的維護自動化，以顯著減少項目操作和支援案例。 Operations Dashboard可以使用自訂的運行狀況檢查和維護任務進行擴展。 此外，Operations Dashboard資料可通過JMX從外部監控工具訪問。
+AEM 6中的Operations Dashboard可協助系統運算子監控AEM系統運作狀況。 它還提供有關AEM相關方面的自動生成的診斷資訊，並讓您配置和運行自包含的維護自動化，以顯著減少項目操作和支援案例。 Operations Dashboard可以使用自訂的運行狀況檢查和維護任務進行擴展。 此外，Operations Dashboard資料可通過JMX從外部監控工具訪問。
 
 **操作控制面板：**
 
 * 是一鍵式系統狀態，可幫助運營部門提高效率
 * 在單個集中位置提供系統運行狀況概觀
-* 減少查找、分析和修復問題的時間
+* 縮短尋找、分析和修正問題的時間
 * 提供獨立的維護自動化，幫助顯著降低項目操作成本
 
 您可以前往 **工具** - **操作** 從AEM歡迎畫面。
 
 >[!NOTE]
 >
->為了能夠存取「操作控制面板」，登入的使用者必須是「操作者」使用者群組的一員。 如需詳細資訊，請參閱 [使用者、群組和存取權限管理](/help/sites-administering/user-group-ac-admin.md).
+>若要存取「操作控制面板」，登入的使用者必須是「運算子」使用者群組的一員。 如需詳細資訊，請參閱 [使用者、群組和存取權限管理](/help/sites-administering/user-group-ac-admin.md).
 
 ## 健全狀態報表 {#health-reports}
 
-Health Report系統可透過Sling Health Check提供AEM例項健康狀況的相關資訊。 您可以透過OSGI、JMX、HTTP要求（透過JSON）或透過觸控式UI來完成此作業。 它提供某些可設定計數器的測量值和臨界值，在某些情況下，將提供如何解決問題的資訊。
+Health Report系統可透過Sling Health Check提供AEM例項健康狀況的相關資訊。 您需透過OSGI、JMX、HTTP要求（透過JSON）或觸控式UI來完成此作業。 它提供某些可設定計數器的測量值和臨界值，有時還提供如何解決問題的資訊。
 
 它有幾項功能，如下所述。
 
 ## 健康狀態檢查 {#health-checks}
 
-此 **運行狀況報告** 是一種卡片系統，它指明特定產品區域的健康狀況良好或不良。 這些卡片是Sling健康狀態檢查的視覺效果，可匯總來自JMX和其他來源的資料，並再次以MBean形式公開處理的資訊。 這些MBean也可以在 [JMX Web控制台](/help/sites-administering/jmx-console.md)，在 **org.apache.sling.healthcheck** 網域。
+此 **運行狀況報告** 是指特定產品區域健康狀況良好或不良的卡片系統。 這些卡片是Sling健康狀態檢查的視覺效果，可匯總來自JMX和其他來源的資料，並再次以MBean形式公開處理的資訊。 這些MBean也可以在 [JMX Web控制台](/help/sites-administering/jmx-console.md)，在 **org.apache.sling.healthcheck** 網域。
 
 健康狀態報告介面可透過 **工具** - **操作** - **運行狀況報告** ，或直接透過下列URL:
 
@@ -65,21 +65,21 @@ AEM 6中有兩種健康狀況檢查：
 1. 個別健康狀況檢查
 1. 複合運行狀況檢查
 
-安 **個別健康狀況檢查** 是與狀態卡對應的單一健康狀況檢查。 可以使用規則或閾值配置單個運行狀況檢查，它們可以提供一個或多個提示和連結，以解決已識別的運行狀況問題。 以「記錄錯誤」檢查為例：如果執行個體記錄中有「錯誤」項目，您會在健康狀況檢查的詳細資訊頁面上找到這些項目。 在頁面頂端，您會在「診斷工具」區段中看到「記錄訊息」分析器的連結，這可讓您更詳細地分析這些錯誤並重新設定記錄器。
+安 **個別健康狀況檢查** 是與狀態卡對應的單一健康狀況檢查。 可以使用規則或閾值配置單個運行狀況檢查，它們可以提供一個或多個提示和連結，以解決已識別的運行狀況問題。 以「記錄錯誤」檢查為例：如果執行個體記錄中有「錯誤」項目，請在健康狀況檢查的詳細資訊頁面上尋找。 在頁面頂端，您可以在診斷工具區段中看到「記錄訊息」分析器的連結，該連結可讓您更詳細地分析這些錯誤並重新設定記錄器。
 
 A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯總資訊。
 
-複合運行狀況檢查是使用 **篩選標籤**. 本質上，所有具有相同篩選標籤的單一檢查都會分組為複合健康狀態檢查。 只有當聚合的所有單次檢查也具有OK狀態時，複合運行狀況檢查才會具有OK狀態。
+複合運行狀況檢查是使用 **篩選標籤**. 本質上，所有具有相同篩選器標籤的單一檢查都會分組為複合健康狀態檢查。 只有當聚合的所有單個檢查也具有OK狀態時，複合運行狀況檢查才會具有OK狀態。
 
 ### 如何建立運行狀況檢查 {#how-to-create-health-checks}
 
-在「操作控制面板」中，您可以直觀地顯示單個和複合運行狀況檢查的結果。
+在「操作儀表板」中，可以直觀地顯示單個和複合運行狀況檢查的結果。
 
 ### 建立個別健康狀況檢查 {#creating-an-individual-health-check}
 
 建立個別健康檢查涉及兩個步驟：實作Sling健康狀況檢查，並在控制面板的設定節點中新增健康狀況檢查項目。
 
-1. 若要建立Sling健康狀況檢查，您需要建立實作Sling HealthCheck介面的OSGI元件。 您會將此元件新增至套件中。 元件的屬性將完全標識運行狀況檢查。 安裝元件後，將自動為運行狀況檢查建立JMX MBean。 請參閱 [Sling健康狀況檢查檔案](https://sling.apache.org/documentation/bundles/sling-health-check-tool.html) 以取得更多資訊。
+1. 若要建立Sling健康狀況檢查，請建立實作Sling HealthCheck介面的OSGI元件。 將此元件新增至套件組合中。 元件的屬性完全標識運行狀況檢查。 安裝元件後，將自動為運行狀況檢查建立JMX MBean。 請參閱 [Sling健康狀況檢查檔案](https://sling.apache.org/documentation/bundles/sling-health-check-tool.html) 以取得更多資訊。
 
    以OSGI服務元件註解撰寫的Sling健康狀態檢查元件範例：
 
@@ -101,9 +101,9 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
 
    >[!NOTE]
    >
-   >此 `MBEAN_NAME` 屬性定義將為此運行狀況檢查生成的mbean的名稱。
+   >此 `MBEAN_NAME` 屬性定義為此運行狀況檢查生成的mbean的名稱。
 
-1. 建立運行狀況檢查後，需要建立新的配置節點，以便在Operations Dashboard介面中訪問該節點。 在此步驟中，必須知道運行狀況檢查的JMX Mbean名稱( `MBEAN_NAME` 屬性)。 要建立健康檢查的配置，請開啟CRXDE並添加新節點(類型 **nt：非結構化**)下方： `/apps/settings/granite/operations/hc`
+1. 建立運行狀況檢查後，必須建立新的配置節點，以便在Operations Dashboard介面中訪問該節點。 在此步驟中，必須知道運行狀況檢查的JMX Mbean名稱( `MBEAN_NAME` 屬性)。 要建立健康檢查的配置，請開啟CRXDE並添加節點(類型 **nt：非結構化**)下方： `/apps/settings/granite/operations/hc`
 
    新節點上應設定下列屬性：
 
@@ -120,7 +120,7 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
    >
    >以上資源路徑的建立方式如下：如果運行狀況檢查的mbean名稱為「test」，請將「test」添加到路徑的結尾 `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck`
    >
-   >因此，最終的路徑將是：
+   >最後一條路是：
    >
    >`/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/test`
 
@@ -134,34 +134,34 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
    >`sling:configPropertyInherit`
    >
    >
-   >這會告訴配置管理器，將新配置與現有配置合併，其來源為 `/libs`.
+   >此程式會告訴設定管理員，將新設定與現有設定合併，來自 `/libs`.
 
 ### 建立複合運行狀況檢查 {#creating-a-composite-health-check}
 
-複合運行狀況檢查的角色是聚合多個共用一組公共功能的單個運行狀況檢查。 例如，安全複合運行狀況檢查將執行安全相關驗證的所有單個運行狀況檢查組合在一起。 建立複合檢查的第一步是新增OSGI設定。 若要在「操作控制面板」中顯示該節點，需要新增一個新的設定節點，就像進行簡單檢查時一樣。
+複合運行狀況檢查的角色是聚合多個共用一組常見功能的單個運行狀況檢查。 例如，安全複合運行狀況檢查將執行安全相關驗證的所有單個運行狀況檢查分組。 建立複合檢查的第一步是新增OSGI設定。 若要在「操作控制面板」中顯示該節點，必須添加新的配置節點，這與簡單檢查的方式相同。
 
 1. 前往OSGI主控台中的Web設定管理器。 您可以存取 `https://serveraddress:port/system/console/configMgr`
 1. 搜尋名為 **Apache Sling Composite Health Check**. 找到後，請注意已有兩種設定可用：一個用於系統檢查，另一個用於安全檢查。
-1. 按配置右側的「+」按鈕建立新配置。 隨即出現新視窗，如下所示：
+1. 按配置右側的「+」按鈕建立配置。 隨即出現新視窗，如下所示：
 
    ![chlimage_1-23](assets/chlimage_1-23.jpeg)
 
-1. 建立設定並儲存。 將使用新配置建立Mbean。
+1. 建立設定並儲存。 使用新配置建立Mbean。
 
    每個設定屬性的用途如下：
 
    * **名稱(hc.name):** 複合運行狀況檢查的名稱。 建議使用有意義的名稱。
    * **標籤(hc.tags):** 此運行狀況檢查的標籤。 如果此複合運行狀況檢查打算成為另一個複合運行狀況檢查的一部分（例如，在運行狀況檢查的層次結構中），請添加與此複合相關的標籤。
-   * **MBean名稱(hc.mbean.name):** 將分配給此複合運行狀況檢查的JMX MBean的Mbean的名稱。
-   * **篩選標籤(filter.tags):** 這是複合運行狀況檢查的特有屬性。 這些是複合應匯總的標籤。 複合運行狀況檢查將聚合到其組下的所有運行狀況檢查，這些檢查包含任何標籤，這些標籤與此複合的任何過濾器標籤匹配。 例如，具有篩選標籤的複合運行狀況檢查 **測試** 和 **check** 將匯總包含任何 **測試** 和 **check** 其標籤屬性中的標籤( `hc.tags`)。
+   * **MBean名稱(hc.mbean.name):** 此複合運行狀況檢查的JMX MBean所指定的Mbean的名稱。
+   * **篩選標籤(filter.tags):** 複合運行狀況檢查的特定屬性。 這些是複合應匯總的標籤。 複合健康狀況檢查在其組下匯總所有具有任何標籤匹配此複合的任何過濾器標籤的健康狀況檢查。 例如，具有篩選標籤的複合運行狀況檢查 **測試** 和 **check**，會匯總具有任何 **測試** 和 **check** 其標籤屬性中的標籤( `hc.tags`)。
 
    >[!NOTE]
    >
    >系統會為Apache Sling Composite Health Check的每個新設定建立新的JMX Mbean。**
 
-1. 最後，剛建立的複合運行狀況檢查條目需要添加到操作儀表板配置節點中。 此程式與個別健康狀況檢查的程式相同：類型的節點 **nt：非結構化** 需要在下建立 `/apps/settings/granite/operations/hc`. 節點的資源屬性將由 **hc.mean.name** （在OSGI設定中）。
+1. 最後，必須在Operations Dashboard配置節點中添加已建立的複合運行狀況檢查項。 此程式與個別健康狀況檢查相同：類型的節點 **nt：非結構化** 必須在下建立 `/apps/settings/granite/operations/hc`. 節點的資源屬性由 **hc.mean.name** （在OSGI設定中）。
 
-   例如，如果您已建立設定，並設定 **hc.mbean.name** 值 **磁碟使用情況**，設定節點如下所示：
+   例如，如果您建立設定，並設定 **hc.mbean.name** 值 **磁碟使用情況**，則設定節點如下所示：
 
    * **名稱:** `Composite Health Check`
 
@@ -180,9 +180,9 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
 
    >[!NOTE]
    >
-   >如果您建立邏輯上屬於預設已存在於控制面板中的複合檢查下的個別健康狀況檢查，則會在相應的複合檢查下自動捕獲和分組這些檢查。 因此，不需要為這些檢查建立新的配置節點。
+   >如果您建立邏輯上屬於預設已存在於控制面板中的複合檢查下的個別健康狀況檢查，則會在相應的複合檢查下自動捕獲和分組這些檢查。 因此，不需要為這些檢查建立配置節點。
    >
-   >例如，如果您建立個別安全狀況檢查，您只需將「**安全**&quot;標籤，並且已安裝，它將自動顯示在Operations Dashboard的Security Checks複合檢查下。
+   >例如，如果您建立個別安全性狀況檢查，請將「**安全**」標籤，且已安裝。 它會自動顯示在「操作控制面板」的「安全檢查」複合檢查下。
 
 ### 隨AEM提供的運行狀況檢查 {#health-checks-provided-with-aem}
 
@@ -248,10 +248,10 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
    <td><p>如果所有維護任務都按配置運行，則系統維護是一種複合檢查，返回「確定」。 請記住：</p>
     <ul>
      <li>每個維護任務都伴有相關的健康檢查</li>
-     <li>如果未將任務添加到維護窗口，則其運行狀況檢查將返回「關鍵」</li>
-     <li>您需要配置「審核日誌」和「工作流清除」維護任務，或從維護窗口中刪除這些任務。 如果未配置，則這些任務在首次嘗試運行時將失敗，因此系統維護檢查將返回關鍵狀態。</li>
+     <li>如果未將任務添加到維護窗口，其運行狀況檢查將返回「關鍵」</li>
+     <li>配置「審核日誌」和「工作流清除」維護任務，或從維護窗口中刪除它們。 如果未配置，則這些任務在第一次嘗試運行時失敗，因此系統維護檢查返回「關鍵」狀態。</li>
      <li><strong>使用AEM 6.4</strong>，也會提供 <a href="/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks">Lucene二進位檔維護</a> 任務</li>
-     <li>在AEM 6.2及更低版本中，系統維護檢查會在啟動後立即傳回警告狀態，因為任務從未執行。 從6.3開始，如果尚未到達第一個維護窗口，則它們將返回OK。</li>
+     <li>在AEM 6.2及更低版本中，系統維護檢查會在啟動後立即傳回警告狀態，因為任務從未執行。 從6.3開始，如果尚未到達第一個維護窗口，則返回OK。</li>
     </ul> <p>此運行狀況檢查的MBean為 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsystemchecks%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
@@ -312,8 +312,8 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
    <td><p>這是「運行狀況檢查」，用於驗證多個JVM條件，這些條件可觸發Java 7中存在的CodeCache錯誤：</p>
     <ul>
      <li>如果執行個體在Java 7上執行，並啟用「程式碼快取」排清，則會傳回警告</li>
-     <li>如果執行個體在Java 7上執行，且保留程式碼快取大小小於最小臨界值（預設值為90MB），則會傳回警告</li>
-    </ul> <p>此 <code>minimum.code.cache.size</code> 可設定臨界值。 如需錯誤的詳細資訊， <a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">check</a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"> 本頁</a>.</p> <p>此運行狀況檢查的MBean為 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a>.</p> </td>
+     <li>如果執行個體在Java 7上執行，且保留程式碼快取大小小於最小臨界值（預設值為90 MB），則會傳回警告</li>
+    </ul> <p>此 <code>minimum.code.cache.size</code> 可設定臨界值。 如需錯誤的詳細資訊， <a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">檢查此頁面</a>.</p> <p>此運行狀況檢查的MBean為 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
    <td>資源搜尋路徑錯誤</td>
@@ -335,14 +335,14 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
 
 健康狀況檢查控制面板可以透過Granite JMX Mbeans與Nagios整合。 以下範例說明如何新增檢查，以顯示執行AEM之伺服器上已使用的記憶體。
 
-1. 在監控伺服器上安裝和安裝Nagios。
+1. 在監控伺服器上設定和安裝Nagios。
 1. 接下來，安裝Nagios Remote Plugin Executor(NRPE)。
 
    >[!NOTE]
    >
-   >有關如何在您的系統上安裝Nagios和NRPE的更多資訊，請參閱 [Nagios檔案](https://library.nagios.com/library/products/nagioscore/manuals/).
+   >有關如何在系統上安裝Nagios和NRPE的詳細資訊，請參閱 [Nagios檔案](https://library.nagios.com/library/products/nagios-core/manuals//).
 
-1. 為AEM伺服器新增主機定義。 這可透過Nagios XI Web介面，使用Configuration Manager完成：
+1. 為AEM伺服器新增主機定義。 您可以透過Nagios XI Web介面，使用Configuration Manager來完成此工作：
 
    1. 開啟瀏覽器並指向Nagios伺服器。
    1. 按下 **設定** 按鈕。
@@ -402,7 +402,7 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
 
 ## 診斷工具 {#diagnosis-tools}
 
-操作儀表板還提供對診斷工具的訪問，這些工具可幫助查找和排除來自運行狀況檢查儀表板的警告的根本原因，並為系統操作員提供重要的調試資訊。
+操作儀表板還提供對診斷工具的訪問，這些工具可以幫助查找和排除來自運行狀況檢查儀表板的警告的根本原因，並為系統操作員提供重要的調試資訊。
 
 其最重要的功能包括：
 
@@ -416,18 +416,18 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
 
 ### 記錄訊息 {#log-messages}
 
-預設情況下，日誌消息用戶介面將顯示所有ERROR消息。 如果要顯示更多日誌消息，則需要使用相應的日誌級別配置記錄器。
+日誌消息用戶介面預設顯示所有ERROR消息。 如果要顯示更多日誌消息，請使用相應的日誌級別配置記錄器。
 
-記錄訊息會使用記憶體記錄中的附加程式，因此與記錄檔無關。 另一個結果是，更改此UI中的日誌級別將不會更改傳統日誌檔案中記錄的資訊。 在此UI中新增和移除記錄器只會影響記憶體記錄器中的。 另外，請注意，更改記錄器配置將反映在記憶體記錄器的將來 — 已記錄且不再相關的條目不會刪除，但類似的條目將來不會記錄。
+記錄訊息會使用記憶體記錄中的附加程式，因此與記錄檔無關。 另一個結果是，更改此UI中的日誌級別不會更改傳統日誌檔案中記錄的資訊。 在此UI中新增和移除記錄器只會影響記憶體記錄器。 此外，更改記錄器配置將反映在記憶體記錄器的未來。 已記錄且不再相關的項目不會刪除，但類似的項目將來不會記錄。
 
-您可以從UI的左上角齒輪按鈕提供記錄器設定，以設定記錄內容。 您可以在此添加、刪除或更新記錄器配置。 記錄器配置由 **記錄層級** （警告/資訊/除錯）和 **篩選器名稱**. 此 **篩選器名稱** 具有篩選日誌消息源的角色。 或者，如果記錄器應捕獲指定級別的所有日誌消息，則篩選器名稱應為「**根**」。 設定記錄器的級別將觸發所有級別等於或高於指定級別的消息的捕獲。
+您可以從UI的左上角齒輪按鈕提供記錄器設定，以設定記錄內容。 您可以在此添加、刪除或更新記錄器配置。 記錄器配置由 **記錄層級** （警告/資訊/除錯）和 **篩選器名稱**. 此 **篩選器名稱** 具有篩選日誌消息源的角色。 或者，如果記錄器應捕獲指定級別的所有日誌消息，則篩選器名稱應為「**根**」。 設定記錄器的級別會觸發所有消息的捕獲，級別等於或高於指定的級別。
 
 範例：
 
 * 如果您打算擷取 **錯誤** messages — 不需要設定。 預設會擷取所有ERROR訊息。
 * 如果您打算擷取 **錯誤**, **警告** 和 **資訊** messages — 記錄器名稱應設為：&quot;**根**「」，並將記錄器級別設定為： **資訊**.
 
-* 如果您打算擷取來自特定套件（例如com.adobe.granite）的所有訊息，記錄器名稱應設為：&quot;com.adobe.granite&quot;和記錄器層級為： **除錯** (這會擷取 **錯誤**, **警告**, **資訊** 和 **除錯** 訊息)，如下圖所示。
+* 如果您打算擷取來自特定套件（例如com.adobe.granite）的所有訊息，記錄器名稱應設為：&quot;com.adobe.granite&quot;。 而記錄器層級則設為： **除錯** (這樣會擷取 **錯誤**, **警告**, **資訊**，和 **除錯** 訊息)，如下圖所示。
 
 ![chlimage_1-121](assets/chlimage_1-121.png)
 
@@ -445,7 +445,7 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
 
 >[!NOTE]
 >
->**使用AEM 6.4**，則維護工作會以「資訊」層級的更豐富格式，立即登出。 這可讓您更清楚了解維護任務的狀態。
+>**使用AEM 6.4**，則維護工作會以「資訊」層級的更豐富格式，立即登出。 此工作流程可讓您更清楚掌握維護任務的狀態。
 >
 >如果您使用第三方工具（如Splunk）來監視和響應維護任務活動，則可以使用以下日誌陳述式：
 
@@ -456,7 +456,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 ### 請求效能 {#request-performance}
 
-「請求效能」頁面可讓您分析處理的最慢頁面請求。 本頁面僅註冊內容要求。 更具體來說，將會擷取下列要求：
+「請求效能」頁面可讓您分析處理的最慢頁面請求。 本頁面僅註冊內容請求。 更具體來說，會擷取下列請求：
 
 1. 請求訪問 `/content`
 1. 請求訪問 `/etc/design`
@@ -490,7 +490,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 針對任何指定查詢，Oak會根據存放庫底下的Oak索引，嘗試找出執行的最佳方式 **oak:index** 節點。 Oak可能會根據查詢選擇不同的索引。 了解Oak如何執行查詢，是最佳化查詢的第一步。
 
-Explain Query是說明Oak如何執行查詢的工具。 您可以前往 **工具 — 操作 — 診斷** 從「 AEM歡迎畫面」，然後按一下 **查詢效能** 並切換到 **說明查詢** 標籤。
+Explain Query是說明Oak如何執行查詢的工具。 您可以前往 **工具 — 操作 — 診斷** 從AEM歡迎畫面。 然後，按一下 **查詢效能** 然後切換到 **說明查詢** 標籤。
 
 **功能**
 
@@ -501,15 +501,15 @@ Explain Query是說明Oak如何執行查詢的工具。 您可以前往 **工具
 * 顯示實際Oak查詢引擎說明
 * 提供「慢速」和「熱門」查詢的點按載入清單
 
-進入「說明查詢」UI後，您只需要輸入查詢，然後按 **說明** 按鈕：
+在「說明查詢」UI中後，輸入查詢，然後按 **說明** 按鈕：
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
-「查詢說明」部分中的第一個條目是實際說明。 說明將顯示用於執行查詢的索引類型。
+「查詢說明」部分中的第一個條目是實際說明。 說明顯示用於執行查詢的索引類型。
 
 第二項是執行計畫。
 
-滴答聲 **包括執行時間** 框，則運行查詢時還將顯示在中執行查詢的時間。 此 **包含節點計數** 選項會報告節點計數。 這些功能可提供更多資訊，用於優化應用程式或部署的索引。
+滴答聲 **包括執行時間** 框，則運行查詢時還會顯示查詢的運行時間。 此 **包含節點計數** 選項會報告節點計數。 報表可讓您取得可用來最佳化應用程式或部署之索引的詳細資訊。
 
 ![chlimage_1-125](assets/chlimage_1-125.png)
 
@@ -527,7 +527,7 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 ### 下載狀態ZIP {#download-status-zip}
 
-這會觸發下載包含系統狀態和設定之實用資訊的zip。 封存包含執行個體設定、套件組合清單、OSGI、Sling量度和統計資料，因此可能會產生大型檔案。 您可以使用 **下載狀態ZIP**&#x200B;窗口。 該窗口可從以下位置訪問：**AEM >工具>操作>診斷>下載狀態ZIP。**
+此動作會觸發下載包含系統狀態和設定之實用資訊的zip。 封存包含執行個體設定、套件組合清單、OSGI、Sling量度和統計資料，可能會產生大型檔案。 您可以使用 **下載狀態ZIP**&#x200B;窗口。 該窗口可從以下位置訪問：**AEM >工具>操作>診斷>下載狀態ZIP。**
 
 在此窗口中，您可以選擇要導出的內容（日誌檔案和線程轉儲）以及下載中包含的相對於當前日期的日誌天數。
 
@@ -535,17 +535,17 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 ### 下載線程轉儲 {#download-thread-dump}
 
-這將觸發下載包含系統中存在之執行緒相關資訊的zip。 提供了有關每個線程的資訊，如其狀態、類載入器和堆棧跟蹤。
+此動作會觸發下載包含系統中執行緒相關資訊的zip。 提供了有關每個線程的資訊，如其狀態、類載入器和堆棧跟蹤。
 
 ### 下載堆轉儲 {#download-heap-dump}
 
-您還可以下載堆的快照，以便稍後分析該快照。 請注意，這會觸發以數百兆位元組為單位的大型檔案下載。
+您可以下載堆的快照，以便稍後進行分析。 此動作會觸發下載大型（數百兆位元組）檔案。
 
 ## 自動維護任務 {#automated-maintenance-tasks}
 
 「自動維護任務」頁是一個位置，您可以在其中查看和跟蹤計畫定期執行的建議維護任務。 這些任務與運行狀況檢查系統整合。 也可以從介面手動執行任務。
 
-若要前往「操作控制面板」中的「維護」頁面，您必須前往 **工具 — 操作 — 儀表板 — 維護** 從「 AEM歡迎」畫面，或直接遵循此連結：
+若要前往Operations Dashboard中的維護頁面，請從AEM歡迎畫面，前往 **工具 — 操作 — 儀表板 — 維護**，或直接遵循此連結：
 
 `https://serveraddress:port/libs/granite/operations/content/maintenance.html`
 
@@ -558,7 +558,7 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 1. 此 **審核日誌維護** 任務，位於 **每週維護窗口** 功能表。
 1. 此 **版本清除維護** 任務，位於 **每週維護窗口** 功能表。
 
-每日維護時段的預設時間為2 AM到5 AM。 週六的上午1:00至2:00之間，將執行在每週維護窗口中運行的任務。
+每日維護窗口的預設時間是凌晨2:00到凌晨5:00。在星期六的早上1:00到凌晨2:00之間，配置為在每週維護窗口中運行的任務將運行在每週維護窗口中。
 
 您也可以按兩張維護卡上的齒輪圖示來設定計時：
 
@@ -574,12 +574,12 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 ### Lucene 二進位清理 {#lucene-binaries-cleanup}
 
-使用Lucene二進位檔清除任務，可以清除lucene二進位檔，並降低執行中的資料存放區大小需求。 這是因為lucene的二進位流失率將會每天重新申請，而非先前依賴成功 [資料儲存垃圾收集](/help/sites-administering/data-store-garbage-collection.md) 執行。
+使用Lucene二進位檔清除任務，可以清除lucene二進位檔，並降低執行中的資料存放區大小需求。 Lucene的二進位流失率會每天回收，而非先前依賴成功 [資料儲存垃圾收集](/help/sites-administering/data-store-garbage-collection.md) 執行。
 
 雖然維護任務是為了減少Lucene相關修訂垃圾，但在運行任務時，總體效率有所提高：
 
-* 每週執行資料儲存垃圾收集任務將更快完成
-* 也可能會略微改善整體AEM效能
+* 資料儲存垃圾收集任務的每週運行可以更快完成。
+* 這也可能會稍微改善整體AEM效能。
 
 您可以從以下位置訪問Lucene二進位檔清除任務： **「AEM >工具>操作>維護>每日維護視窗> Lucene二進位檔清除」**.
 
@@ -589,10 +589,10 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 ### 工作流清除 {#workflow-purge}
 
-您也可以從維護控制面板清除工作流程。 要運行「工作流清除」任務，您需要：
+您也可以從維護控制面板清除工作流程。 要運行「工作流清除」任務，請執行以下操作：
 
 1. 按一下 **每週維護窗口** 頁面。
-1. 在下一頁中，按一下 **播放** 按鈕 **工作流清除** 卡片。
+1. 在下一頁，按一下 **播放** 在 **工作流清除** 卡片。
 
 >[!NOTE]
 >
@@ -604,9 +604,9 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 ### 版本清除 {#version-purge}
 
-您可以安排「版本清除」維護任務以自動刪除舊版本。 因此，這將手動使用 [版本清除工具](/help/sites-deploying/version-purging.md). 您可以通過訪問 **「工具」>「操作」>「維護」>「每週維護」窗口** 並遵循下列步驟：
+您可以安排「版本清除」維護任務以自動刪除舊版本。 此動作可將手動使用 [版本清除工具](/help/sites-deploying/version-purging.md). 您可以通過訪問 **「工具」>「操作」>「維護」>「每週維護」窗口** 並遵循下列步驟：
 
-1. 按一下 **新增** 按鈕。
+1. 按一下 **新增**.
 1. 選擇 **版本清除** 從下拉式功能表。
 
    ![version_purge_maintenancetask](assets/version_purge_maintenancetask.png)
@@ -622,11 +622,11 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 >[!NOTE]
 >
->停止維護任務意味著暫停其執行，而不丟失已在進行中的作業的跟蹤。
+>停止維護任務意味著掛起其運行，並且不丟失已在進行中的作業的跟蹤。
 
 >[!CAUTION]
 >
->要優化儲存庫大小，應經常運行版本清除任務。 當流量有限時，應在工作時間之外排程該任務。
+>要優化應經常運行版本清除任務的儲存庫大小。 當流量有限時，應在工作時間之外排程該任務。
 
 ## 自定義維護任務 {#custom-maintenance-tasks}
 
@@ -642,19 +642,19 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
   </tr>
   <tr>
    <td>granite.maintenance.isStoppable</td>
-   <td>布林屬性，定義用戶是否可以停止任務。 如果任務聲明其可停止，則必須在其執行期間檢查其是否已停止，然後採取相應行動。 預設值為false。</td>
+   <td>布林屬性，定義用戶是否可以停止任務。 如果任務聲明其可停止，則必須在運行期間檢查其是否已停止，然後採取相應行動。 預設值為false。</td>
    <td>true</td>
    <td>選用</td>
   </tr>
   <tr>
    <td>granite.maintenance.mandatory</td>
-   <td>布林屬性，定義任務是否為強制任務且必須定期運行。 如果任務是強制性任務，但當前不在任何活動的計畫窗口中，運行狀況檢查將將此報告為錯誤。 預設值為false。</td>
+   <td>布林屬性，定義任務是否為強制任務且必須定期運行。 如果任務是強制任務，但當前不在任何活動計畫窗口中，運行狀況檢查將報告此錯誤。 預設值為false。</td>
    <td>true</td>
    <td>選用</td>
   </tr>
   <tr>
    <td>granite.maintenance.name</td>
-   <td>任務的唯一名稱 — 此名稱用於引用任務。 這通常是個簡單的名稱。</td>
+   <td>任務的唯一名稱 — 該名稱用於引用任務，而且只是一個簡單名稱。</td>
    <td>MyMaintenanceTask</td>
    <td>必要</td>
   </tr>
@@ -666,16 +666,16 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
   </tr>
   <tr>
    <td>job.topics</td>
-   <td>這是維護任務的唯一主題。<br /> Apache Sling作業處理程式會啟動具有此主題的作業，以執行維護任務，並在為此主題註冊任務時執行。<br /> 主題的開頭必須為 <i>com/adobe/granite/maintenance/job/</i></td>
+   <td>維護任務的唯一主題。<br /> Apache Sling作業處理會啟動一個與此主題完全相同的作業，以執行維護任務，並在為此主題註冊任務時，就會執行該任務。<br /> 主題的開頭必須為 <i>com/adobe/granite/maintenance/job/</i></td>
    <td>com/adobe/granite/maintenance/job/MyMaintenanceTask</td>
    <td>必要</td>
   </tr>
  </tbody>
 </table>
 
-除上述服務屬性外， `process()` 方法 `JobConsumer` 介面需要透過新增應為維護任務執行的程式碼來實作。 提供的 `JobExecutionContext` 可用於輸出狀態資訊、檢查用戶是否停止了作業並建立結果（成功或失敗）。
+除上述服務屬性外， `process()` 方法 `JobConsumer` 必須新增應為維護任務執行的程式碼來實作介面。 提供的 `JobExecutionContext` 可用於輸出狀態資訊、檢查用戶是否停止了作業並建立結果（成功或失敗）。
 
-對於維護任務不應在所有安裝上運行的情況（例如，僅在發佈實例上運行），您可以通過添加使服務需要配置才能處於活動狀態 `@Component(policy=ConfigurationPolicy.REQUIRE)`. 然後，您可以根據儲存庫中的設定，將標示為執行模式。 如需詳細資訊，請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md#creating-the-configuration-in-the-repository).
+對於維護任務不應在所有安裝上運行的情況（例如，僅在發佈實例上運行），可以通過添加使服務需要配置處於活動狀態 `@Component(policy=ConfigurationPolicy.REQUIRE)`. 然後，您可以根據儲存庫中的設定，將標示為執行模式。 如需詳細資訊，請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md#creating-the-configuration-in-the-repository).
 
 以下是自定義維護任務的示例，該任務從過去24小時內修改的可配置臨時目錄中刪除檔案：
 
@@ -695,11 +695,11 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
-這會在/apps/granite/operations/config/maintenance/新增對應的資源`schedule`/`taskname`. 如果任務與運行模式相關，則需要在該節點上設定granite.operations.conditions.runmode屬性，其中運行模式的值需要為此維護任務處於活動狀態。
+此動作會在/apps/granite/operations/config/maintenance/新增對應的資源`schedule`/`taskname`. 如果任務與運行模式相關，則必須在該節點上設定granite.operations.conditions.runmode屬性，且運行模式的值必須對此維護任務處於活動狀態。
 
 ## 系統綜覽 {#system-overview}
 
-此 **系統概述控制面板** 顯示AEM例項的設定、硬體和運作狀況的概觀。 這表示系統健康狀態是透明的，所有資訊都會匯總到單一控制面板中。
+此 **系統概述控制面板** 顯示AEM例項的設定、硬體和運作狀況的概觀。 系統運行狀況狀態是透明的，並且所有資訊都匯總到單個儀表板中。
 
 >[!NOTE]
 >
@@ -713,9 +713,9 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 ### 系統概述儀表板說明 {#system-overview-dashboard-explained}
 
-下表說明了「系統概述控制面板」中顯示的所有資訊。 請記住，當沒有要顯示的相關資訊時（例如，備份未進行，沒有關鍵的運行狀況檢查），相應的部分將顯示「無條目」消息。
+下表說明了「系統概述控制面板」中顯示的所有資訊。 當沒有要顯示的相關資訊時（例如，備份未進行，沒有重要的運行狀況檢查），相應的部分將顯示「無條目」消息。
 
-您也可以下載 `JSON` 檔案，按一下 **下載** 按鈕。 `JSON` 端點為 `/libs/granite/operations/content/systemoverview/export.json` 它可用於 `curl` 外部監視的指令碼。
+您也可以下載 `JSON` 檔案，按一下 **下載** 按鈕。 此 `JSON` 端點為 `/libs/granite/operations/content/systemoverview/export.json` 它可用於 `curl` 外部監視的指令碼。
 
 <table>
  <tbody>
@@ -895,7 +895,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
   </tr>
   <tr>
    <td>備份</td>
-   <td>如果是，則顯示「正在進行線上備份」。</td>
+   <td>顯示「Online Backup in Progress（聯機備份正在進行）」（如果有）。</td>
    <td>N/A</td>
    <td>N/A</td>
   </tr>

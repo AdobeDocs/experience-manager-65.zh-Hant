@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1424'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## AEM平台解決方案 {#solr-for-aem-platform}
 
-安 [阿帕奇索爾](https://lucene.apache.org/solr/) 安裝可在 [節點存放區](../../help/sites-deploying/data-store-config.md) (Oak)和 [公用商店](working-with-srp.md) (SRP)，使用不同集合。
+安 [阿帕奇索爾](https://solr.apache.org/) 安裝可在 [節點存放區](../../help/sites-deploying/data-store-config.md) (Oak)和 [公用商店](working-with-srp.md) (SRP)，使用不同集合。
 
 如果Oak和SRP集合都大量使用，可能會基於效能原因安裝第二個Solr。
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 * [7.0版](https://archive.apache.org/dist/lucene/solr/7.0.0/)
 
-* Solr需要Java 1.7或更高版本
+* Solr需要Java™ 1.7或更高版本
 * 不需要任何服務
 * 運行模式的選擇：
 
@@ -70,7 +70,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 #### 1.將設定上傳至ZooKeeper {#upload-a-configuration-to-zookeeper}
 
 參考資料：
-[https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
+[https://solr.apache.org/guide/6_6/command-line-utilities.html](https://solr.apache.org/guide/6_6/command-line-utilities.html)
 
 用法：sh 。/scripts/cloud-scripts/zkcli.sh \
 -cmd upconfig \
@@ -82,7 +82,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 #### 2.建立集合 {#create-a-collection}
 
 參考資料：
-[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
+[https://solr.apache.org/guide/6_6/solr-control-script-reference.html#SolrControlScriptReference-Create](https://solr.apache.org/guide/6_6/solr-control-script-reference.html#SolrControlScriptReference-Create)
 
 使用狀況:
 ./bin/solr建立 \
@@ -98,7 +98,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 將集合連結到已上載到ZooKeeper的配置。
 
 參考資料：
-[https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
+[https://solr.apache.org/guide/6_6/command-line-utilities.html](https://solr.apache.org/guide/6_6/command-line-utilities.html)
 
 用法：sh 。/scripts/cloud-scripts/zkcli.sh \
 -cmd linkconfig \
@@ -110,7 +110,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 
 AEM Communities的多語言搜尋(MLS)是為Solr平台所建置，可改善所有支援語言（包括英文）的搜尋。
 
-AEM社群的MLS可作為標準MLS或進階MLS使用。 標準MLS僅包含Solr組態設定，並排除任何外掛程式或資源檔案。 進階MLS是更全面的解決方案，包含Solr組態設定、外掛程式和相關資源
+AEM Communities的MLS可作為標準MLS或進階MLS使用。 標準MLS僅包含Solr組態設定，並排除任何外掛程式或資源檔案。 進階MLS是更全面的解決方案，包含Solr組態設定、外掛程式和相關資源
 
 標準MLS包含下列語言的內容搜尋增強功能：
 
@@ -171,8 +171,8 @@ AEM社群的MLS可作為標準MLS或進階MLS使用。 標準MLS僅包含Solr組
 1. 下載到部署Solr的本地伺服器。
 
    * 找出 `jcr:content` 節點 `jcr:data` 屬性。
-   * 選擇 `view` 以開始下載。
-   * 請確定檔案的名稱和編碼為適當(UTF8)。
+   * 若要開始下載，請選取 `view`.
+   * 請確定檔案以適當的名稱和編碼(UTF8)儲存。
 
 1. 按照獨立模式或SolrCloud模式的安裝說明操作。
 
@@ -194,7 +194,7 @@ AEM社群的MLS可作為標準MLS或進階MLS使用。 標準MLS僅包含Solr組
 1. [建立集合](#create-a-collection) 指定必要的參數，如分片數、副本數和配置名。
 1. 如果建立集合期間未*提供設定名稱， [連結新建立的集合](#link-a-collection-to-a-configuration-set) 上傳至ZooKeeper的設定。
 
-1. 針對MSRP，執行 [MSRP重新索引工具](msrp.md#msrp-reindex-tool)，除非這是新安裝。
+1. 針對MSRP，執行 [MSRP重新索引工具](msrp.md#msrp-reindex-tool)，除非此安裝是新安裝。
 
 #### 獨立模式 — 標準MLS {#standalone-mode-standard-mls}
 
@@ -212,7 +212,7 @@ AEM社群的MLS可作為標準MLS或進階MLS使用。 標準MLS僅包含Solr組
 1. 複製下載的 **schema.xml** 和 **solrconfig.xml** 到同一目錄。
 
 1. 重新啟動Solr。
-1. 針對MSRP，執行 [MSRP重新索引工具](#msrpreindextool)，除非這是新安裝。
+1. 針對MSRP，執行 [MSRP重新索引工具](#msrpreindextool)，除非此安裝是新安裝。
 
 ### 安裝進階MLS {#installing-advanced-mls}
 
@@ -277,13 +277,13 @@ AEM社群的MLS可作為標準MLS或進階MLS使用。 標準MLS僅包含Solr組
 1. [建立集合](#create-a-collection) 指定必要的參數，如分片數、副本數和配置名。
 1. 如果設定名稱為 *not* 系列建立期間提供， [連結新建立的集合](#link-a-collection-to-a-configuration-set) 上傳至ZooKeeper的設定。
 
-1. 針對MSRP，執行 [MSRP重新索引工具](#msrpreindextool)，除非這是新安裝。
+1. 針對MSRP，執行 [MSRP重新索引工具](#msrpreindextool)，除非此安裝是新安裝。
 
 #### 獨立模式 — 進階MLS {#standalone-mode-advanced-mls}
 
 進階MLS套件中包含安裝指令碼。
 
-將軟體包的內容提取到托管獨立Solr伺服器的伺服器後，只需執行安裝指令碼即可安裝必要的資源和配置檔案。
+將軟體包的內容提取到托管獨立Solr伺服器的伺服器後，運行安裝指令碼以安裝必要的資源和配置檔案。
 
 * 以獨立模式安裝Solr。
 * 如果運行Solr5，請建立集合1（類似於Solr4）:
@@ -320,7 +320,7 @@ AEM社群的MLS可作為標準MLS或進階MLS使用。 標準MLS僅包含Solr組
 
 **注意**:
 
-* 安裝指令碼將先備份schema.xml和solrconfig.xml，然後再通過附加「.orig」來安裝新版本
+* 安裝指令碼在通過附加「.orig」來安裝新版本之前，會備份schema.xml和solrconfig.xml
 
 ### 關於solrconfig.xml {#about-solrconfig-xml}
 
