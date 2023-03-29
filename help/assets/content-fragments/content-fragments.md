@@ -4,7 +4,7 @@ description: 了解Adobe Experience Manager(AEM)中的內容片段如何讓您�
 feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1989'
 ht-degree: 4%
@@ -53,7 +53,7 @@ ht-degree: 4%
 >* [自訂和擴充內容片段](/help/sites-developing/customizing-content-fragments.md)
 >* [轉譯專用內容片段設定元件](/help/sites-developing/content-fragments-config-components-rendering.md)
 >* [AEM Assets HTTP API 內容片段支援](/help/assets/assets-api-content-fragments.md)
->* [與內容片段搭配使用的 AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md)
+>* [與內容片段搭配使用的 AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
 
 
 通信渠道的數量每年都在增加。 通常管道是指傳送機制，如下所示：
@@ -133,7 +133,7 @@ AEM內容片段可用來說明及管理結構化內容。 結構化內容定義�
 
    * 此 **內容片段** 元件可供頁面作者使用。 它可讓使用者以HTML或JSON格式參照和傳送所需的內容片段。
 
-* 可使用 [AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md).
+* 可使用 [AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md).
 
 內容片段是內容結構，可：
 

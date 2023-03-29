@@ -2,7 +2,7 @@
 title: 建立配置無頭快速入門手冊
 description: 建立設定，這是開始使用AEM 6.5無頭功能的第一步。
 exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 61%
@@ -34,7 +34,7 @@ ht-degree: 61%
    * **內容片段模型**
    * **GraphQL永久查詢**
 
-   ![建立設定](../assets/create-configuration.png)
+   ![建立設定](assets/create-configuration.png)
 
 1. 點選或按一下&#x200B;**建立**。
 

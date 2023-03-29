@@ -2,7 +2,7 @@
 title: 如何透過 AEM Delivery API 存取您的內容
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解如何使用 GraphQL 查詢來存取您的內容片段內容。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1335'
 ht-degree: 96%
@@ -243,10 +243,10 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 * 啟用您的端點
    * 使用工具 — >資產 — > GraphQL
-   * [啟用 GraphQL 端點](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
+   * [啟用 GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
 * 訪問GraphiQL（如果需要）
-   * [AEM GraphiQL介面](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)
+   * [AEM GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### 範例結構 {#sample-structure}
 
@@ -269,7 +269,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 ### 在哪裡測試你的查詢 {#where-to-test-your-queries}
 
-查詢可在 [GraphiQL介面](/help/assets/content-fragments/graphiql-ide.md)，例如：
+查詢可在 [GraphiQL介面](/help/sites-developing/headless/graphql-api/graphiql-ide.md)，例如：
 
 * `http://localhost:4502/aem/graphiql.html`
 
@@ -362,14 +362,14 @@ query {
    * [變數](https://graphql.org/learn/queries/#variables)
    * [GraphQL Java 程式庫](https://graphql.org/code/#java)
 * [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql)
-* [了解如何將 GraphQL 與 AEM 搭配使用](/help/assets/content-fragments/graphql-api-content-fragments.md)
-   * [啟用 GraphQL 端點](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
-   * [安裝 AEM GraphiQL 介面](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface)
-* [範例內容片段結構](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
-* [了解搭配使用 GraphQL 與 AEM - 範例內容和查詢](/help/assets/content-fragments/content-fragments-graphql-samples.md)
-   * [範例查詢 - 單一特定城市片段](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
-   * [中繼資料的範例查詢 - 列出 GB 獎項的中繼資料](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
-   * [範例查詢 - 所有具有名稱變化的城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
+* [了解如何將 GraphQL 與 AEM 搭配使用](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
+   * [啟用 GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
+   * [安裝 AEM GraphiQL 介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)
+* [範例內容片段結構](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
+* [了解搭配使用 GraphQL 與 AEM - 範例內容和查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
+   * [範例查詢 - 單一特定城市片段](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
+   * [中繼資料的範例查詢 - 列出 GB 獎項的中繼資料](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+   * [範例查詢 - 所有具有名稱變化的城市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
 * [在設定瀏覽器中啟用內容片段功能](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)
    * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)

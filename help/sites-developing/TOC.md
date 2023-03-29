@@ -8,10 +8,10 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南說明如何建立 AEM 執行個體。
 feature: Developing
 role: Developer
-source-git-commit: c5bc743f845281bdbad522053c0e57791921ffd2
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 34%
+source-wordcount: '1285'
+ht-degree: 35%
 
 ---
 
@@ -40,8 +40,8 @@ ht-degree: 34%
    + [Sling 速查表](sling-cheatsheet.md)
    + [使用 Sling 介面卡](sling-adapters.md)
    + [標籤程式庫](taglib.md)
-   + 範本{#templates}
-      + [範本](templates.md)
+   + 範例{#templates}
+      + [範例](templates.md)
       + [頁面範本 — 可編輯 ](page-templates-editable.md)
       + [頁面範本 — 靜態](page-templates-static.md)
       + [內容片段範本](content-fragment-templates.md)
@@ -97,7 +97,7 @@ ht-degree: 34%
       + [使用xtype（傳統UI）](xtypes.md)
       + [開發Forms（傳統UI）](developing-forms.md)
 + [AEM Headful 和 Headless 技術](headful-headless.md)
-+ 無頭式體驗管理{#headless}
++ Headless 體驗管理{#headless}
    + [無頭式與AEM](headless/introduction.md)
    + Headless 歷程 {#journeys}
       + Headless 開發人員歷程 {#developer}
@@ -138,11 +138,12 @@ ht-degree: 34%
    + 傳送API{#delivery-api}
       + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
       + [內容片段 REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
-      + [內容片段GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
-      + [使用 GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphiql-ide.html)
-      + [持續查詢](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/persisted-queries.html)
-      + [針對內容片段之遠端 AEM GraphQL 查詢的驗證](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
-      + [AEM GraphQL API及內容片段 — 範例內容與查詢](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
+      + [內容片段GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
+      + [管理GraphQL端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
+      + [使用 GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
+      + [持續查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md)
+      + [針對內容片段之遠端 AEM GraphQL 查詢的驗證](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md)
+      + [AEM GraphQL API及內容片段 — 範例內容與查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
 + 混合與SPA AEM開發{#spas}
    + [使用 AEM 的混合式和 SPA](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [SPA 簡介和逐步解說](spa-walkthrough.md)
@@ -220,7 +221,7 @@ ht-degree: 34%
       + [雲端服務設定](extending-cloud-config.md)
       + [建立自訂Cloud Service](extending-cloud-config-custom-cloud.md)
    + [建立自訂擴充功能](extending-campaign-extensions.md)
-   + 表單{#extending-forms}
+   + Forms{#extending-forms}
       + [建立自訂表單對應](extending-campaign-form-mapping.md)
       + [使用Adobe Campaign表單元件建立自訂AEM頁面範本](extending-campaign-custom-template.md)
       + [Request Analysis Script](analyze-request.md)

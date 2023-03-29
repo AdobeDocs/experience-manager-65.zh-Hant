@@ -4,7 +4,7 @@ description: 了解如何搭配GraphQL使用AEM內容片段來傳送無頭式內
 feature: Content Fragments
 role: User
 exl-id: 2debd678-2d73-41f2-b33c-c29d661f6a6b
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 27%
@@ -26,7 +26,7 @@ ht-degree: 27%
 >GraphQL目前用於Adobe Experience Manager(AEM)的兩種（個別）情況：
 >
 >* [AEM商務會透過GraphQL取用來自商務平台的資料](/help/commerce/cif/integrating/magento.md).
->* [AEM內容片段可與AEM GraphQL API(以標準GraphQL為基礎的自訂實作)搭配使用，提供結構化內容以供您的應用程式使用](/help/assets/content-fragments/graphql-api-content-fragments.md).
+>* [AEM內容片段可與AEM GraphQL API(以標準GraphQL為基礎的自訂實作)搭配使用，提供結構化內容以供您的應用程式使用](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md).
 
 
 ## Headless CMS {#headless-cms}
@@ -55,7 +55,7 @@ GraphQL 是：
 
 ## AEM GraphQL API {#aem-graphql-api}
 
-針對Adobe Experience，已開發標準GraphQL API的自訂實作。 請參閱 [AEM GraphQL API以搭配內容片段使用](/help/assets/content-fragments/graphql-api-content-fragments.md) 以取得詳細資訊。
+針對Adobe Experience，已開發標準GraphQL API的自訂實作。 請參閱 [AEM GraphQL API以搭配內容片段使用](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 以取得詳細資訊。
 
 AEM GraphQL API實作以 [GraphQL Java程式庫](https://graphql.org/code/#java).
 
@@ -107,7 +107,7 @@ AEM GraphQL API實作以 [GraphQL Java程式庫](https://graphql.org/code/#java)
 
 ## 了解搭配使用 GraphQL 與 AEM - 範例內容和查詢 {#learn-graphql-with-aem-sample-content-queries}
 
-請參閱 [學習如何搭配AEM使用GraphQL — 範例內容與查詢](/help/assets/content-fragments/content-fragments-graphql-samples.md) AEM GraphQL API的使用簡介。
+請參閱 [學習如何搭配AEM使用GraphQL — 範例內容與查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md) AEM GraphQL API的使用簡介。
 
 ## 教學課程 - AEM Headless 和 GraphQL 快速入門
 

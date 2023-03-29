@@ -2,7 +2,7 @@
 title: 如何將 Headless 應用程式上線
 description: 在AEM無頭式開發人員歷程的這部分，了解如何即時部署無頭式應用程式。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 54%
@@ -104,7 +104,7 @@ Node.js 是 JavaScript 執行階段環境，用於處理 AEM 專案 `ui.frontend
 
 ### 啟動前保護無頭應用程式 {#secure-and-scale-before-launch}
 
-1. 準備 [驗證](/help/assets/content-fragments/graphql-authentication-content-fragments.md) 針對GraphQL請求
+1. 準備 [驗證](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md) 針對GraphQL請求
 
 ### 模型結構與 GraphQL 輸出 {#structure-vs-output}
 

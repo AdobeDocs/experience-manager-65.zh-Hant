@@ -2,7 +2,7 @@
 title: 踏上首次使用 AEM Headless 之路
 description: 在 AEM Headless 開發人員歷程的這一部分中，您將了解在 AEM 中實作您的第一個無周邊體驗的步驟 (包括規劃考量事項)，並學習最佳做法以使您的操作過程盡可能順利。
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 97%
@@ -150,4 +150,4 @@ AEM 有三種類型的環境：開發、預備和生產。
 * [無頭入門手冊](/help/sites-developing/headless/introduction.md#getting-started)  — 為熟悉AEM的使用者快速介紹AEM無頭功能。
 * [建立內容片段模型](/help/assets/content-fragments/content-fragments-models.md) - 內容片段模型的技術文件
 * [建立內容片段](/help/assets/content-fragments/content-fragments.md) - 內容片段的技術文件
-* [使用 GraphQL 查詢內容](/help/assets/content-fragments/graphql-api-content-fragments.md) - GraphQL API 的技術文件
+* [使用 GraphQL 查詢內容](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - GraphQL API 的技術文件

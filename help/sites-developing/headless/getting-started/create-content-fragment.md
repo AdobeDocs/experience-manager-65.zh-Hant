@@ -2,7 +2,7 @@
 title: 建立內容片段無頭快速入門手冊
 description: 了解如何使用 AEM 的內容片段來設計、建立、規劃和使用每頁自主的內容以進行無周邊傳遞。
 exl-id: 5787204d-bcce-447e-b98c-2bc1c0d744c3
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 67%
@@ -32,16 +32,16 @@ ht-degree: 67%
    * 可用模型取決於您為內容片段建立所在資產資料夾所定義的&#x200B;[**雲端設定**](create-assets-folder.md)。
    * 如果您收到訊息 `We could not find any models`，檢查資產資料夾的設定。
 
-   ![選取內容片段模型](../assets/content-fragment-model-select.png)
+   ![選取內容片段模型](assets/content-fragment-model-select.png)
 1. 提供 **標題**, **說明**，和 **標籤** 視需要，點選或按一下 **建立**.
 
-   ![建立內容片段](../assets/content-fragment-create.png)
+   ![建立內容片段](assets/content-fragment-create.png)
 1. 點選或按一下 **開啟** 在確認窗口中。
 
-   ![內容片段已建立確認](../assets/content-fragment-confirmation.png)
+   ![內容片段已建立確認](assets/content-fragment-confirmation.png)
 1. 在內容片段編輯器中提供內容片段的詳細資訊。
 
-   ![內容片段編輯器](../assets/content-fragment-edit.png)
+   ![內容片段編輯器](assets/content-fragment-edit.png)
 1. 點選或按一下 **儲存** 或  **儲存並關閉**.
 
 內容片段可以參考其他內容片段，必要時允許巢狀內容結構。

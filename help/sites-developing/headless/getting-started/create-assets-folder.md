@@ -2,7 +2,7 @@
 title: 建立資產資料夾無頭快速入門手冊
 description: 使用 AEM 內容片段模型定義內容片段的結構，這是無周邊內容的基礎。
 exl-id: 8d913056-fcfa-4cdd-b40a-771f13dfd0f4
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 80%
@@ -33,16 +33,16 @@ ht-degree: 80%
       * 它會根據標題自動產生，並根據[AEM 命名慣例](/help/sites-developing/naming-conventions.md)進行調整
       * 如有需要，可加以調整。
 
-   ![建立資料夾](../assets/assets-folder-create.png)
+   ![建立資料夾](assets/assets-folder-create.png)
 1. 選取您剛建立的資料夾，然後選取 **屬性** (或使用 `p` [鍵盤快速鍵。](/help/sites-authoring/keyboard-shortcuts.md))
 1. 在&#x200B;**屬性**&#x200B;視窗中，選擇&#x200B;**雲端服務**&#x200B;索引標籤。
 1. 對於&#x200B;**雲端設定**，選擇您之前建立的[設定。](create-configuration.md)
 
-   ![設定資產資料夾](../assets/assets-folder-configure.png)
+   ![設定資產資料夾](assets/assets-folder-configure.png)
 1. 點選或按一下&#x200B;**儲存並關閉**。
 1. 點選或按一下&#x200B;**確定**。
 
-   ![確認視窗](../assets/assets-folder-confirmation.png)
+   ![確認視窗](assets/assets-folder-confirmation.png)
 
 您可以在剛建立的資料夾中建立其他子資料夾。子資料夾將繼承父資料夾的&#x200B;**雲端設定**。但是，如果您希望使用來自另一個設定的模型，這可以被覆寫。
 

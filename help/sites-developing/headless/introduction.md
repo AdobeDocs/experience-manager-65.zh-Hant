@@ -2,7 +2,7 @@
 title: AEM 6.5 Sites無頭開發
 description: 了解AEM 6.5的強大無頭功能(例如內容模型、內容片段和GraphQL API)如何搭配運作，讓您集中管理體驗，並跨管道提供體驗。
 exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ac70fb534a95c9eee6f8340d9b8720a607b9f79f
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 37%
@@ -19,7 +19,7 @@ ht-degree: 37%
 
 Headless 實作放棄了全堆疊和混合解決方案中的傳統頁面和元件管理，專注於建立管道中立、可重複使用的內容片段及其跨管道傳遞。它是實作網頁體驗的現代動態開發模式。
 
-![AEM 實作模型](assets/aem-implementation-models.png)
+![AEM 實作模型](/help/sites-developing/headless/getting-started/assets/aem-implementation-models.png)
 
 ## 比較有周邊和無周邊 {#headful-headless}
 
