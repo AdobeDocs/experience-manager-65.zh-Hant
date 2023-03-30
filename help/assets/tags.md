@@ -10,9 +10,9 @@ docset: aem65
 feature: Viewers
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: cd797b1a5edd05715761f5914ebc64fdb64745af
 workflow-type: tm+mt
-source-wordcount: '6633'
+source-wordcount: '6631'
 ht-degree: 6%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 6%
 * Dynamic Media檢視器的Experience Platform標籤整合無法在Experience Manager製作節點中運作。 在WCM頁面發佈前，您無法看到任何追蹤。
 * Dynamic Media檢視器的Experience Platform標籤整合不支援「快顯」操作模式，即使用「資產詳細資料」頁面上的「URL」按鈕取得檢視器URL。
 * Experience Platform標籤整合無法與舊版檢視器Analytics整合同時使用(透過 `config2=` 參數)。
-* 視訊追蹤支援僅限於「核心播放」追蹤，如 [追蹤概述](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events). 尤其是不支援QoS、廣告、章節/區段或錯誤追蹤。
+* 視訊追蹤支援僅限於「核心播放」追蹤，如 [追蹤概述](https://experienceleague.adobe.com/docs/media-analytics/using/tracking/track-av-playback/track-core-overview.html?lang=en). 尤其是不支援QoS、廣告、章節/區段或錯誤追蹤。
 * 資料元素不支援使用 *Dynamic Media檢視器* 擴充功能。 儲存持續時間必須設定為 **[!UICONTROL 無]**.
 
 ### 整合的使用案例 {#use-cases-for-the-integration}
@@ -133,7 +133,7 @@ Dynamic Media檢視器擴充功能會自動保留其資料元素的值為最新�
 
 請參閱 [安裝及設定擴充功能](#installing-and-setup-of-extensions).
 
-目前，視訊追蹤的支援僅限於「核心播放」追蹤，如 [追蹤概述](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events). 尤其是不支援QoS、廣告、章節/區段或錯誤追蹤。
+目前，視訊追蹤的支援僅限於「核心播放」追蹤，如 [追蹤概述](https://experienceleague.adobe.com/docs/media-analytics/using/tracking/track-av-playback/track-core-overview.html?lang=en). 尤其是不支援QoS、廣告、章節/區段或錯誤追蹤。
 
 ## 使用Dynamic Media Viewers擴充功能 {#using-the-dynamic-media-viewers-extension}
 
@@ -157,7 +157,7 @@ See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe
 
 在正確設定後，您可以使用Dynamic Media檢視器將Experience Platform標籤支援新增至網頁。
 
-請參閱 [新增Experience Platform標籤內嵌程式碼](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html#configure-launch) 若要進一步了解如何使用Experience Platform標籤程式庫內嵌程式碼。
+請參閱 [新增Experience Platform標籤內嵌程式碼](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-embed-code.html) 若要進一步了解如何使用Experience Platform標籤程式庫內嵌程式碼。
 
 <!-- To be reviewed and updated although this is found live in the Experience ManageraaCS version:
 See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of Experience Manager Dynamic Media.
@@ -422,7 +422,7 @@ Adobe建議您仔細檢閱本節之前的所有檔案，以了解完整的整合
 
 此外，如果此整合解決方案與Experience Manager Sites搭配使用，也必須進行下列設定：
 
-* [!DNL Adobe I/O] 主控台 — 已針對Experience Platform標籤建立整合。
+* [!DNL Adobe Developer Console]  — 已為Experience Platform標籤建立整合。
 * Experience Manager製作節點 — IMS設定和Experience Platform標籤雲端設定。
 
 在設定中，請確定您擁有已啟用Adobe Analytics和Experience Platform標籤之Adobe Experience Cloud公司的存取權。
@@ -453,7 +453,7 @@ Adobe建議您仔細檢閱本節之前的所有檔案，以了解完整的整合
 
    如果沒有可用的報表套裝，您或您的Adobe Analytics管理員必須先建立報表套裝，才能繼續進行設定。
 
-   請參閱 [報表與報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html#manage-report-suites) 和 [建立報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html).
+   請參閱 [報表與報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/report-suites-admin.html) 和 [建立報表套裝](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html).
 
    在Adobe Analytics中，報表套裝的管理方式為 **[!UICONTROL 管理]** > **[!UICONTROL 報表套裝]**.
 
@@ -515,10 +515,10 @@ Adobe建議您仔細檢閱本節之前的所有檔案，以了解完整的整合
 
 「Experience Platform標籤」中的屬性是已命名的設定，可保留所有設定。 會產生配置設定的程式庫，並發佈至不同的環境層級（開發、測試和生產）。
 
-另請參閱 [建立標籤屬性](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-mobile-android-apps-with-launch/configure-launch/launch-create-a-property.html#configure-launch).
+另請參閱 [建立標籤屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/initial-configuration/configure-tags.html).
 
 1. 在Experience Platform標籤中，選取 **[!UICONTROL 新屬性]**.
-1. 在「建 **[!UICONTROL 立屬性]** 」對話方塊的「名稱 **** 」欄位中，輸入描述性名稱，例如網站的標題。例如, `DynamicMediaViewersProp.`
+1. 在「建 **[!UICONTROL 立屬性]** 」對話方塊的「名稱 **** 」欄位中，輸入描述性名稱，例如網站的標題。例如 `DynamicMediaViewersProp.`
 1. 在 **[!UICONTROL 網域]** 欄位，輸入網站的網域。
 1. 在 **[!UICONTROL 進階選項]** 下拉清單，啟用 **[!UICONTROL 為擴充功能開發進行配置（以後無法修改）]** 如果您想使用的擴充功能，在本例中， *Dynamic Media檢視器* — 尚未發行。
 
@@ -540,7 +540,7 @@ Adobe建議您仔細檢閱本節之前的所有檔案，以了解完整的整合
 
 無需額外設定，接受任何建議的值。 完成後，請務必選取 **[!UICONTROL 儲存]**.
 
-請參閱 [Adobe Experience Cloud Identity Service擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html).
+請參閱 [Adobe Experience Cloud Identity Service擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/id-service/overview.html).
 
 * （必要） *Adobe Analytics* 擴充功能
 
@@ -560,7 +560,7 @@ Adobe建議您仔細檢閱本節之前的所有檔案，以了解完整的整合
 
 選取&#x200B;**[!UICONTROL 儲存]**。
 
-請參閱 [Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html).
+請參閱 [Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html).
 
 * (可選；只有在需要視訊追蹤時才需要) *Adobe MediumAnalytics for Audio and Video* 擴充功能
 
@@ -568,7 +568,7 @@ Adobe建議您仔細檢閱本節之前的所有檔案，以了解完整的整合
 
 所有其他欄位均為選用。
 
-請參閱 [Adobe MediumAnalytics for Audio and Video擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html).
+請參閱 [Adobe MediumAnalytics for Audio and Video擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics/overview.html).
 
 * （必要） *Dynamic Media檢視器* 擴充功能
 
@@ -683,7 +683,7 @@ Experience Manager設定包含下列兩個主要步驟：
 
    將顯示以下資訊消息：
 
-   *若要擷取有效的存取權杖，新憑證的公開金鑰會新增至Adobe I/O的技術帳戶！*
+   *若要擷取有效的存取權杖，新憑證的公開金鑰會新增至Adobe Developer Console的技術帳戶！*
 
    要關閉「資訊」對話框，請選擇 **[!UICONTROL 確定]**.
 
@@ -697,9 +697,9 @@ Experience Manager設定包含下列兩個主要步驟：
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
-1. 在新的瀏覽器標籤中，導覽至 [[!DNL Adobe I/O] 主控台](https://console.adobe.io/integrations).
+1. 在新的瀏覽器標籤中，導覽至 [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/integrations).
 
-1. 從 **[!UICONTROL Adobe I/O主控台整合]** 頁面，在右上角附近，選取 **[!UICONTROL 新整合]**.
+1. 從 **[!UICONTROL Adobe Developer主控台整合]** 頁面，在右上角附近，選取 **[!UICONTROL 新整合]**.
 1. 在 **[!UICONTROL 建立新整合]** 對話框，確保 **[!UICONTROL 存取API]** 選擇單選按鈕，然後選擇 **[!UICONTROL 繼續]**.
 
    ![2019-07-25_13-04-20](assets/2019-07-25_13-04-20.png)
@@ -808,7 +808,7 @@ Experience Manager設定包含下列兩個主要步驟：
 1. 在頁面左上角附近，選取 **[!UICONTROL 建立]**.
 1. 在 **[!UICONTROL 一般]** 第（1/3頁）頁 **[!UICONTROL 建立Experience Platform標籤設定]** ，請填寫以下欄位：
 
-   * **[!UICONTROL 標題]**  — 輸入描述性配置標題。 例如, `We.Retail Tags cloud configuration`.
+   * **[!UICONTROL 標題]**  — 輸入描述性配置標題。 例如， `We.Retail Tags cloud configuration`.
 
    * **[!UICONTROL 相關聯的Adobe IMS設定]**  — 選取您先前於 [設定Experience ManagerIMS](#configuring-aem-ims).
 
@@ -853,4 +853,4 @@ Experience Manager設定包含下列兩個主要步驟：
 
 您可以解決此限制。 在上方「Experience Platform發佈」節點的「Experience Manager標籤雲端」設定中，指定「平台標籤」程式庫的開發或測試URL。 這樣會使Experience Manager發佈節點使用「Experience Platform標籤」程式庫的開發或測試版本。
 
-請參閱 [透過將Experience Manager與Experience Platform標籤整合 [!DNL Adobe I/O]](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html) 以取得設定Experience Platform標籤雲端設定的詳細資訊。
+請參閱 [透過將Experience Manager與Experience Platform標籤整合 [!DNL Adobe Developer Console]](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html) 以取得設定Experience Platform標籤雲端設定的詳細資訊。

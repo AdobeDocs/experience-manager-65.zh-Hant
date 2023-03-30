@@ -12,9 +12,9 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
+source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
 workflow-type: tm+mt
-source-wordcount: '6065'
+source-wordcount: '6053'
 ht-degree: 2%
 
 ---
@@ -138,9 +138,9 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
 
 ### 建立複合運行狀況檢查 {#creating-a-composite-health-check}
 
-複合運行狀況檢查的角色是聚合多個共用一組常見功能的單個運行狀況檢查。 例如，安全複合運行狀況檢查將執行安全相關驗證的所有單個運行狀況檢查分組。 建立複合檢查的第一步是新增OSGI設定。 若要在「操作控制面板」中顯示該節點，必須添加新的配置節點，這與簡單檢查的方式相同。
+複合運行狀況檢查的角色是聚合多個共用一組常見功能的單個運行狀況檢查。 例如，安全複合運行狀況檢查將執行安全相關驗證的所有單個運行狀況檢查分組。 建立複合檢查的第一步是新增OSGI設定。 若要在「操作控制面板」中顯示該節點，必須以與簡單檢查相同的方式添加新配置節點。
 
-1. 前往OSGI主控台中的Web設定管理器。 您可以存取 `https://serveraddress:port/system/console/configMgr`
+1. 前往OSGI主控台中的Web設定管理器。 存取 `https://serveraddress:port/system/console/configMgr`
 1. 搜尋名為 **Apache Sling Composite Health Check**. 找到後，請注意已有兩種設定可用：一個用於系統檢查，另一個用於安全檢查。
 1. 按配置右側的「+」按鈕建立配置。 隨即出現新視窗，如下所示：
 
@@ -153,7 +153,7 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
    * **名稱(hc.name):** 複合運行狀況檢查的名稱。 建議使用有意義的名稱。
    * **標籤(hc.tags):** 此運行狀況檢查的標籤。 如果此複合運行狀況檢查打算成為另一個複合運行狀況檢查的一部分（例如，在運行狀況檢查的層次結構中），請添加與此複合相關的標籤。
    * **MBean名稱(hc.mbean.name):** 此複合運行狀況檢查的JMX MBean所指定的Mbean的名稱。
-   * **篩選標籤(filter.tags):** 複合運行狀況檢查的特定屬性。 這些是複合應匯總的標籤。 複合健康狀況檢查在其組下匯總所有具有任何標籤匹配此複合的任何過濾器標籤的健康狀況檢查。 例如，具有篩選標籤的複合運行狀況檢查 **測試** 和 **check**，會匯總具有任何 **測試** 和 **check** 其標籤屬性中的標籤( `hc.tags`)。
+   * **篩選標籤(filter.tags):** 複合運行狀況檢查的特定屬性。 這些標籤會由複合項目匯總。 複合健康狀況檢查在其組下匯總所有具有任何標籤匹配此複合的任何過濾器標籤的健康狀況檢查。 例如，具有篩選標籤的複合運行狀況檢查 **測試** 和 **check**，會匯總具有任何 **測試** 和 **check** 其標籤屬性中的標籤( `hc.tags`)。
 
    >[!NOTE]
    >
@@ -309,11 +309,11 @@ A **複合運行狀況檢查** 是一項檢查，會從數個個別檢查中匯�
   </tr>
   <tr>
    <td>代碼快取檢查</td>
-   <td><p>這是「運行狀況檢查」，用於驗證多個JVM條件，這些條件可觸發Java 7中存在的CodeCache錯誤：</p>
+   <td><p>「運行狀況檢查」將驗證多個JVM條件，這些條件可以觸發Java™ 7中存在的CodeCache錯誤：</p>
     <ul>
-     <li>如果執行個體在Java 7上執行，並啟用「程式碼快取」排清，則會傳回警告</li>
-     <li>如果執行個體在Java 7上執行，且保留程式碼快取大小小於最小臨界值（預設值為90 MB），則會傳回警告</li>
-    </ul> <p>此 <code>minimum.code.cache.size</code> 可設定臨界值。 如需錯誤的詳細資訊， <a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">檢查此頁面</a>.</p> <p>此運行狀況檢查的MBean為 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a>.</p> </td>
+     <li>如果執行個體在Java™ 7上執行，且已啟用程式碼快取排清，則會傳回警告</li>
+     <li>如果執行個體在Java™ 7上執行，且保留程式碼快取大小小於最小臨界值（預設值為90 MB），則會傳回警告</li>
+    </ul> <p>此 <code>minimum.code.cache.size</code> 可設定臨界值。 如需有關錯誤的詳細資訊，請參閱 <a href="https://bugs.java.com/bugdatabase/"> 然後搜尋錯誤ID 8012547</a>.</p> <p>此運行狀況檢查的MBean為 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
    <td>資源搜尋路徑錯誤</td>
@@ -630,7 +630,7 @@ UI可用來篩選表格中的索引，方法是在螢幕左上角的搜尋方塊
 
 ## 自定義維護任務 {#custom-maintenance-tasks}
 
-自訂維護任務可以作為OSGi服務實施。 由於維護任務基礎架構以Apache Sling的作業處理為基礎，因此維護任務必須實作java介面 ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)`. 此外，它必須聲明要檢測為維護任務的多個服務註冊屬性，如下所示：
+自訂維護任務可以作為OSGi服務實施。 由於維護任務基礎架構以Apache Sling的作業處理為基礎，因此維護任務必須實作Java™介面 ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)`. 此外，它必須聲明要檢測為維護任務的多個服務註冊屬性，如下所示：
 
 <table>
  <tbody>
@@ -767,7 +767,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
    <td>系統</td>
    <td>
     <ul>
-     <li>作業系統和作業系統版本(例如Mac OS X)</li>
+     <li>作業系統和作業系統版本(例如macOS X)</li>
      <li>系統負載平均，從 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/OperatingSystemMXBean.html#getSystemLoadAverage--">作業系統MXBeanusable</a></li>
      <li>磁碟空間（位於主目錄所在的分區上）</li>
      <li>最大堆，由返回 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryMXBean.html#getHeapMemoryUsage--">MemoryMXBean</a></li>

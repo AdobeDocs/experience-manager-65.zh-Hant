@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 8%
+source-wordcount: '1499'
+ht-degree: 6%
 
 ---
 
@@ -31,9 +31,9 @@ ht-degree: 8%
 
 ### Adobe Analytics帳戶 {#adobe-analytics-account}
 
-若要在Adobe Analytics中追蹤AEM資料，您必須具備有效的Adobe Marketing Cloud Adobe Analytics帳戶。
+若要在Adobe Analytics中追蹤AEM資料，您必須具備有效的Adobe Experience Cloud Adobe Analytics帳戶。
 
-Adobe Analytics帳戶需要：
+Adobe Analytics帳戶必須：
 
 * 有 **管理員** 權限
 * 指派給 **網站服務存取** 使用者群組。
@@ -44,36 +44,36 @@ Adobe Analytics帳戶需要：
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-繼續之前，請確定您的認證可讓您登入Adobe Analytics。 透過下列其中一種方式：
+繼續之前，請確定您的認證可讓您登入Adobe Analytics。 透過下列其中一項方式：
 
-* [Adobe Experience Cloud登入](https://login.experiencecloud.adobe.com/exc-content/login.html)
+* [Adobe Experience Cloud登入](https://experience.adobe.com/#/@login/home)
 
 * [Adobe Analytics登入](https://sc.omniture.com/login/)
 
 ### 設定AEM以使用您的Adobe Analytics資料中心 {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
-Adobe Analytics [資料中心](https://developer.omniture.com/en_US/content_page/concepts-terminology/c-how-is-data-stored) 收集、處理和儲存與您的Adobe Analytics報表套裝相關聯的資料。 您必須將AEM設定為使用托管Adobe Analytics報表套裝的資料中心。 下表列出可用的資料中心及其URL。
+Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics/analyze/reports-analytics/reporting-interface/overview-data-collection.html?lang=en) 收集、處理和儲存與您的Adobe Analytics報表套裝相關聯的資料。 設定AEM以使用托管Adobe Analytics報表套裝的資料中心。 您的合約中會提及資料中心。 請聯絡貴組織的管理員以取得此資訊。
+
+如有必要，請使用以下內容來路由到正確的資料中心： `https://api.omniture.com/`.
+
+如果您的組織需要從特定資料中心收集或擷取資料，請使用下列項目：
 
 | 資料中心 | URL |
 |---|---|
-| 聖荷西 | https://api.omniture.com/admin/1.4/rest/ |
-| 達拉斯 | https://api2.omniture.com/admin/1.4/rest/ |
-| 倫敦 | https://api3.omniture.com/admin/1.4/rest/ |
-| 新加坡 | https://api4.omniture.com/admin/1.4/rest/ |
-| 俄勒岡 | https://api5.omniture.com/admin/1.4/rest/ |
-
-AEM預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料中心。
+| 倫敦 | `https://api3.omniture.com/` |
+| 新加坡 | `https://api4.omniture.com/` |
+| 俄勒岡 | `https://api5.omniture.com/` |
 
 使用 [配置OSGi捆綁包的Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) **AdobeAEM Analytics HTTP用戶端**. 新增 **資料中心URL** 用於資料中心，其中包含您的AEM頁面收集資料的報表套裝。
 
 ![aa-07](assets/aa-07.png)
 
 1. 在網頁瀏覽器中開啟Web主控台。 ([https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr))
-1. 輸入您的憑證以存取主控台。
+1. 若要存取主控台，請輸入您的憑證。
 
    >[!NOTE]
    >
-   >請連絡您的網站管理員，了解您是否擁有此主控台的存取權。
+   >若要了解您是否擁有此控制台的存取權，請聯絡您的網站管理員。
 
 1. 選擇名為的配置項 **AdobeAEM Analytics HTTP用戶端**.
 1. 若要新增資料中心的URL，請按 **資料中心URL** 清單，然後在方塊中輸入URL。
@@ -125,13 +125,13 @@ AEM預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料中�
 
    架構隨即開啟供編輯。
 
-1. 在 **報表套裝** 按一下側面盒（主面板右側）的「 」部分 **新增項目**. 然後使用下拉式清單來選取報表套裝ID(例如 `geometrixxauth`)，架構將與此互動。
+1. 在 **報表套裝** 按一下側面盒（主面板右側）的「 」部分 **新增項目**. 然後使用下拉式清單來選取報表套裝ID(例如 `geometrixxauth`)，框架會與此互動。
 
    >[!NOTE]
    >
    >選取報表套裝ID時，左側的內容尋找器會填入Adobe Analytics變數(SiteCatalyst變數)。
 
-1. 然後使用 **運行模式** 下拉式清單（位於報表套裝ID旁），以選取您要傳送資訊至報表套裝的伺服器例項。
+1. 若要選取您要傳送資訊至報表套裝的伺服器例項，請使用 **運行模式** 下拉式清單（位於「報表套裝ID」旁）。
 
    ![aa-framework-01](assets/aa-framework-01.png)
 
@@ -153,19 +153,19 @@ AEM預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料中�
 
    * 包含用於傳送Adobe Analytics呼叫的URL
 
-      * cname — 預設為Adobe Analytics帳戶的 *公司名稱*
-      * d1 — 與資料中心相對應，資訊將傳送至（可為d1、d2或d3）
-      * sc.omtrdc.net — 網域名稱
+      * `cname`  — 預設為Adobe Analytics帳戶的 *公司名稱*
+      * `d1`  — 與資訊所送至的資料中心( `d1`, `d2`，或 `d3`)
+      * `sc.omtrdc.net`  — 域名
 
 * **安全追蹤伺服器**
 
    * 與追蹤伺服器有相同的區段
-   * 這可用來從安全頁面傳送資料(https://)
+   * 用於從安全頁面傳送資料(`https://`)
 
 * **訪客命名空間**
 
    * 命名空間會決定追蹤URL的第一部分。
-   * 例如，將命名空間變更為 **CNAME** 會讓對Adobe Analytics的呼叫看起來像 **CNAME.d1.omtrdc.net** 而非預設值。
+   * 例如，將命名空間變更為 **CNAME** 使對Adobe Analytics的呼叫看起來像 **CNAME.d1.omtrdc.net** 而非預設值。
 
 ## 將頁面與Adobe Analytics架構關聯 {#associating-a-page-with-a-adobe-analytics-framework}
 
@@ -177,14 +177,14 @@ AEM預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料中�
 1. 開啟 **[頁面屬性](/help/sites-authoring/editing-page-properties.md)**，可直接從主控台或頁面編輯器。
 1. 開啟**Cloud Services**標籤。
 
-1. 使用 **新增設定** 下拉式清單選取 **Adobe Analytics** 中。 如果已放置繼承，則需要在選取器可用前停用該功能。
+1. 使用 **新增設定** 下拉式清單選取 **Adobe Analytics** 中。 如果已放置繼承，請在選取器可用前停用。
 
-1. 的下拉式選取器 **Adobe Analytics** 會附加至可用選項。 使用此選項可選擇所需的框架配置。
+1. 的下拉式選取器 **Adobe Analytics** 會附加至可用選項。 選擇所需的框架配置。
 
 1. 選擇 **儲存並關閉**.
-1. **[發佈](/help/sites-authoring/publishing-pages.md)** 用於激活該頁和所有連接的配置/檔案的頁。
+1. 要激活該頁面和任何連接的配置/檔案， **[發佈](/help/sites-authoring/publishing-pages.md)** 頁面。
 1. 最後一步是瀏覽發佈例項上的頁面，並使用 **搜尋** 元件。
-1. 之後，您就可以使用適當的工具來檢查對Adobe Analytics進行的呼叫；例如， [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html).
+1. 之後，您就可以使用適當的工具來檢查對Adobe Analytics進行的呼叫；例如， [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html).
 1. 在提供的範例中，呼叫應包含eVar7中輸入的值（即茄子），而事件清單應包含event3。
 
 ### 頁面檢視 {#page-views}
@@ -208,7 +208,7 @@ AEM預設會使用聖荷西(https://api.omniture.com/admin/1.4/rest/)資料中�
 
 如同建立Adobe Analytics設定或架構時，請導覽至（舊版） **Cloud Services** 螢幕。 選擇 **顯示配置**，然後按一下連結至您要更新的特定設定。
 
-編輯Adobe Analytics設定時，您也需要按下 **編輯** 按鈕 **編輯元件** 對話框。
+編輯Adobe Analytics設定時，按 **編輯** 在設定頁面本身上開啟 **編輯元件** 對話框。
 
 ## 刪除Adobe Analytics架構 {#deleting-adobe-analytics-frameworks}
 
