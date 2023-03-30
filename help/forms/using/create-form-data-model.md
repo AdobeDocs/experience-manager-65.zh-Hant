@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: c3178eefb5aca3afea2f3df8381b52461247d6f3
+source-git-commit: e147605ff4d5c3d2403632285956559db235c084
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1512'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ AEM [!DNL Forms] 資料整合模組允許您從不同的後端資料源(如AEM�
 
 1. 為安裝JDBC驅動程式 [!DNL MySQL] 資料庫作為OSGi捆綁包：
 
-   1. 下載 [[!DNL MySQL] JDBC驅動程式OSGi套件](http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html).
+   1. 下載 [!DNL MySQL] JDBC驅動程式OSGi捆綁包 `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`. <!-- This URL is an insecure link but using https is not possible -->
    1. 登入AEM [!DNL Forms] 以管理員身分製作執行個體，並前往AEM Web主控台套件組合。 預設URL為 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
 
    1. 點選 **[!UICONTROL 安裝/更新]**. 安 [!UICONTROL 上傳/安裝套件組合] 對話框。

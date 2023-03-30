@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e147605ff4d5c3d2403632285956559db235c084
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,11 @@ ht-degree: 0%
 
 ## 綁定JDBC資料庫驅動程式 {#bundling-the-jdbc-database-driver}
 
-某些資料庫供應商在OSGi捆綁包中提供JDBC驅動程式，例如 [MySQL](https://www.mysql.com/downloads/connector/j/). 如果資料庫的JDBC驅動程式不能作為OSGi包，請獲取驅動程式JAR，並將其包裝在OSGi包中。 該套件必須導出與資料庫伺服器交互所需的包。 套件組合也必須匯入其參照的套件。
+某些資料庫供應商在OSGi捆綁包中提供JDBC驅動程式，例如 [MySQL](https://dev.mysql.com/downloads/connector/j/). 如果資料庫的JDBC驅動程式不能作為OSGi包，請獲取驅動程式JAR，並將其包裝在OSGi包中。 該套件必須導出與資料庫伺服器交互所需的包。 套件組合也必須匯入其參照的套件。
 
-下列範例使用 [適用於Maven的套件組合外掛程式](https://felix.apache.org/site/apache-felix-maven-bundle-plugin-bnd.html) 將HSQLDB驅動程式包裝在OSGi捆綁包中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb包都導出。
+下列範例使用 [適用於Maven的套件組合外掛程式](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html) 將HSQLDB驅動程式包裝在OSGi捆綁包中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb包都導出。
 
-外掛程式會自動判斷要匯入的套件，並將其列在套件組合的MANIFEST.MF檔案中。 如果CQ伺服器上沒有任何套件，則安裝時不會啟動套件組合。 兩種可能的解決方案如下：
+外掛程式會自動判斷要匯入的套件，並將其列在套件組合的MANIFEST.MF檔案中。 如果CQ伺服器上沒有任何套件，套件組合就不會在安裝時啟動。 兩種可能的解決方案如下：
 
 * 在POM中指出這些套件為選用。 當JDBC連接實際上不需要包成員時，請使用此解決方案。 使用Import-Package元素來指示可選包，如以下示例所示：
 
@@ -86,9 +86,9 @@ ht-degree: 0%
 
 下列連結會開啟某些熱門資料庫產品的下載頁面：
 
-* [Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=11774)
-* [Oracle](https://www.oracle.com/technetwork/database/features/jdbc/index-091264.html)
-* [IBM DB2](https://www-01.ibm.com/support/docview.wss?uid=swg27007053)
+* [Microsoft® SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=11774)
+* [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
+* [IBM® DB2®](https://www.ibm.com/support/pages/download-db2-fix-packs-version-db2-linux-unix-and-windows)
 
 ### 配置JDBC連接池服務 {#configuring-the-jdbc-connection-pool-service}
 
@@ -100,7 +100,7 @@ JDBC連接池( `com.day.commons.datasource.jdbcpool.JdbcPoolService`)是工廠�
 
 以下屬性可用於配置池連接服務。 屬性名稱會如Web控制台中的顯示一樣列出。 的對應名稱 `sling:OsgiConfig` 節點以括弧顯示。 顯示了HSQLDB伺服器和具有別名的資料庫的示例值 `mydb`:
 
-* JDBC驅動程式類( `jdbc.driver.class`):用於實現java.sql.Driver介面的Java類，例如 `org.hsqldb.jdbc.JDBCDriver`. 資料類型為 `String`.
+* JDBC驅動程式類( `jdbc.driver.class`):用於實現java.sql.Driver介面的Java™類，例如 `org.hsqldb.jdbc.JDBCDriver`. 資料類型為 `String`.
 
 * JDBC連接URI( `jdbc.connection.uri`):用於建立連接的資料庫的URL，例如 `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL的格式必須有效，才能與java.sql.DriverManager類的getConnection方法一起使用。 資料類型為 `String`.
 
@@ -127,7 +127,7 @@ JDBC連接池服務是工廠。 因此，若您使用 `sling:OsgiConfig` 要配�
 
 ### 連接到資料庫 {#connecting-to-the-database}
 
-在Java代碼中，使用DataSourcePool服務來獲取 `javax.sql.DataSource` 物件。 DataSourcePool服務提供 `getDataSource` 傳回 `DataSource` 給定資料源名稱的對象。 作為方法參數，請使用資料源名稱的值(或 `datasource.name`)為JDBC連接池配置指定的屬性。
+在Java™代碼中，使用DataSourcePool服務來獲取 `javax.sql.DataSource` 物件。 DataSourcePool服務提供 `getDataSource` 傳回 `DataSource` 給定資料源名稱的對象。 作為方法參數，請使用資料源名稱的值(或 `datasource.name`)為JDBC連接池配置指定的屬性。
 
 以下示例JSP代碼獲取hsqldbds資料源的實例，執行簡單的SQL查詢，並顯示返回的結果數。
 
@@ -169,8 +169,9 @@ JDBC連接池服務是工廠。 因此，若您使用 `sling:OsgiConfig` 要配�
 
 >[!NOTE]
 >
->如果getDataSource方法由於找不到資料源而擲回例外狀況，請確保連接池服務配置正確。 驗證屬性名稱、值和資料類型。
+>如果getDataSource方法由於找不到資料源而擲回例外，請確保連接池服務配置正確。 驗證屬性名稱、值和資料類型。
 
+<!-- Link below redirects to the "Get started with AEM Sites - WKND tutorial"
 >[!NOTE]
 >
->要了解如何將DataSourcePool插入OSGi捆綁包，請參閱 [將DataSourcePool服務注入Adobe Experience Manager OSGi套件組合](https://helpx.adobe.com/experience-manager/using/datasourcepool.html).
+>To learn how to inject a DataSourcePool into an OSGi bundle, see [Injecting a DataSourcePool Service into an Adobe Experience Manager OSGi bundle](https://helpx.adobe.com/experience-manager/using/datasourcepool.html). -->
