@@ -1,7 +1,7 @@
 ---
 title: 持續性 GraphQL 查詢
 description: 了解如何在Adobe Experience Manager中保留GraphQL查詢以最佳化效能。 用戶端應用程式可使用HTTPGET方法來請求持續查詢，且可在Dispatcher和CDN層快取回應，最終改善用戶端應用程式的效能。
-source-git-commit: d87b226d846c6d144e8dfe0b06ec4c296edcad05
+source-git-commit: f4a3b7edc9187c1984afedb4e3b4c558354a4d84
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 72%
@@ -271,6 +271,8 @@ query getAdventuresByActivity($activity: String!) {
 | CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` |
 | CDN | `stale-while-revalidate` | `surrogate-control : stale-while-revalidate ` | `surrogateControlStaleWhileRevalidate` |
 | CDN | `stale-if-error` | `surrogate-control : stale-if-error` | `surrogateControlStaleIfError` |
+
+{style="table-layout:auto"}
 
 ### 製作例項 {#author-instances}
 
