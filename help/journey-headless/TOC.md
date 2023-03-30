@@ -2,7 +2,7 @@
 sub-product: AEM Headless Journeys
 user-guide-title: AEM Headless 歷程
 breadcrumb-title: AEM Headless 歷程
-user-guide-description: 從這裡開始，逐步引導您了解 AEM 強大且有彈性的無周邊功能、其功能，以及如何在您的專案中運用這些功能。
+user-guide-description: 從這裡開始，逐步引導您了解 AEM 強大且有彈性的 Headless 功能、其功能，以及如何在您的專案中運用這些功能。
 feature: Developer Tools
 role: Developer, Architect
 source-git-commit: 2523d9dcdbbfd9107e43ca53e2bb586452be1cb8
@@ -25,7 +25,7 @@ ht-degree: 100%
    + [如何透過 AEM Delivery API 存取您的內容](developer/access-your-content.md)
    + [如何透過 AEM Assets API 更新您的內容](developer/update-your-content.md)
    + [如何整合一切](developer/put-it-all-together.md)
-   + [如何使用無周邊應用程式](developer/go-live.md)
+   + [如何使用 Headless 應用程式](developer/go-live.md)
    + [選擇性 - 如何使用 AEM 建立單頁應用程式](developer/create-spa.md)
 + AEM Headless 內容架構師歷程 {#architect}
    + [AEM Headless 內容架構者歷程概觀](architect/overview.md)
