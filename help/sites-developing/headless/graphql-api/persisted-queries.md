@@ -1,7 +1,7 @@
 ---
 title: 持續性 GraphQL 查詢
 description: 了解如何在Adobe Experience Manager中保留GraphQL查詢以最佳化效能。 用戶端應用程式可使用HTTPGET方法來請求持續查詢，且可在Dispatcher和CDN層快取回應，最終改善用戶端應用程式的效能。
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: d87b226d846c6d144e8dfe0b06ec4c296edcad05
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 72%
@@ -266,7 +266,7 @@ query getAdventuresByActivity($activity: String!) {
 依預設，AEM會根據存留時間(TTL)定義使快取失效。 這些TTL可由下列參數定義。 這些參數可透過各種方式存取，而名稱會根據所使用的機制而改變：
 
 | 快取類型 | [HTTP標題](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi配置  |
-|--- |--- |--- |--- |--- |
+|--- |--- |--- |--- |
 | 瀏覽器 | `max-age` | `cache-control : max-age` | `cacheControlMaxAge` |
 | CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` |
 | CDN | `stale-while-revalidate` | `surrogate-control : stale-while-revalidate ` | `surrogateControlStaleWhileRevalidate` |
