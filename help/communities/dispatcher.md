@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '636'
 ht-degree: 10%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 10%
 
 ## AEM Communities {#aem-communities}
 
-對於AEM Communities，必須設定Dispatcher，以確保 [社群網站](overview.md#community-sites). 當包含啟用社群和社交登入等功能時，則需要進行其他設定。
+對於AEM Communities，必須設定Dispatcher，以確保 [社群網站](overview.md#community-sites). 加入社交登入等功能時，需要進行其他設定。
 
 了解您的特定部署和站點設計需要什麼
 
@@ -64,15 +64,11 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標題 — 最大期限** �
 
 * **篩選模式**
 
-   *（必要）* 一或多個社群頁面路徑。 例如, `/content/sites/engage/(.*)`.
+   *（必要）* 一或多個社群頁面路徑。 例如， `/content/sites/engage/(.*)`.
 
 * **快取控制最大時間**
 
    *（必要）* 要新增至「快取控制」標題的最大時間（秒）。 值必須大於零(0)。
-
-## Dispatcher用戶端標題 {#dispatcher-client-headers}
-
-在 `dispatcher.any`，如果列出特定標題集，則必須包含 `"CSRF-Token"` 為了 [啟用功能](enablement.md) 才能正常運作。
 
 ## Dispatcher篩選器 {#dispatcher-filters}
 
@@ -129,16 +125,6 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標題 — 最大期限** �
 
 # enable personalization
 /0062 { /type "allow" /url "/libs/cq/personalization/*" }
-
-# for Enablement features
-/0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-/0171 { /type "allow" /url "/content/sites/*/resources/en/*" }
-/0172 { /type "allow" /url "/content/communities/enablement/reports/*" }
-/0173 { /type "allow" /url "/content/sites/*" }
-/0174 { /type "allow" /url "/content/communities/scorm/*" }
-/0175 { /type "allow" /url "/content/sites/*" }
-/0176 { /type "allow" /url "/libs/granite/security/userinfo.json"}
-/0177 { /type "allow" /url "/libs/granite/security/currentuser.json" }
 
 # Enable CSRF token otherwise nothings works.
 /5001 { /type "allow" /url "/libs/granite/csrf/token.json *"}
@@ -202,16 +188,6 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標題 — 最大期限** �
 
 # enable personalization
 /0062 { /type "allow" /url "/libs/cq/personalization/*" }
-
-# for Enablement features
-/0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-/0171 { /type "allow" /glob "POST /content/sites/*/resources/en/*" }
-/0172 { /type "allow" /glob "GET /content/communities/enablement/reports/*" }
-/0173 { /type "allow" /glob "GET /content/sites/*" }
-/0174 { /type "allow" /glob "GET /content/communities/scorm/*" }
-/0175 { /type "allow" /url "GET /content/sites/*" }
-/0176 { /type "allow" /url "GET /libs/granite/security/userinfo.json"}
-/0177 { /type "allow" /url "GET /libs/granite/security/currentuser.json" }
 
 # Enable CSRF token otherwise nothings works.
 /5001 { /type "allow" /glob "GET /libs/granite/csrf/token.json *"}
@@ -428,17 +404,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標題 — 最大期限** �
    /0064 { /type "allow" /url "/etc/cloudservices/*" }
    /0062 { /type "allow" /url "/libs/cq/personalization/*"  }  # enable personalization
 
-   # For Enablement features
-   /0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-   /0171 { /type "allow" /url "/content/sites/*/resources/en/*" }
-   /0172 { /type "allow" /url "/content/communities/enablement/reports/*" }
-   /0173 { /type "allow" /url "/content/sites/*" }
-   /0174 { /type "allow" /url "/content/communities/scorm/*" }
-   /0175 { /type "allow" /url "/content/sites/*" }
-   /0176 { /type "allow" /url "/libs/granite/security/userinfo.json"}
-   /0177 { /type "allow" /url "/libs/granite/security/currentuser.json" }
-
-      # Enable CSRF token otherwise nothings works.
+         # Enable CSRF token otherwise nothings works.
    /5001 { /type "allow" /url "/libs/granite/csrf/token.json *"}
 
    # Allow SCF User Model to bootstrap as it depends on the granite user
@@ -750,17 +716,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標題 — 最大期限** �
    /0063 { /type "allow" /glob "* /system/sling/logout*" }
    /0064 { /type "allow" /glob "GET /etc/cloudservices/*" }
    /0062 { /type "allow" /url "/libs/cq/personalization/*"  }  # enable personalization
-
-   # For Enablement features
-   /0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-   /0171 { /type "allow" /glob "POST /content/sites/*/resources/en/*" }
-   /0172 { /type "allow" /glob "GET /content/communities/enablement/reports/*" }
-   /0173 { /type "allow" /glob "GET /content/sites/*" }
-   /0174 { /type "allow" /glob "GET /content/communities/scorm/*" }
-   /0175 { /type "allow" /url "GET /content/sites/*" }
-   /0176 { /type "allow" /url "GET /libs/granite/security/userinfo.json"}
-   /0177 { /type "allow" /url "GET /libs/granite/security/currentuser.json" }
-
+   
       # Enable CSRF token otherwise nothings works.
    /5001 { /type "allow" /glob "GET /libs/granite/csrf/token.json *"}
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 role: Admin
 exl-id: dbe28334-3b38-4362-b4f8-e0630e634503
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,7 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-FFmpeg是轉換和串流音訊和視訊的解決方案，安裝後用於適當轉碼 [影片資產](../../help/sites-authoring/default-components-foundation.md#video) 以及AEM Communities啟用功能。
-
-FFmpeg用於製作環境，以取得上傳的啟用資源的中繼資料，並產生縮圖以在列出啟用資源時顯示。
+FFmpeg是轉換和串流音訊和視訊的解決方案，安裝後用於適當轉碼 [影片資產](../../help/sites-authoring/default-components-foundation.md#video).
 
 ## 安裝FFmpeg {#installing-ffmpeg}
 
@@ -41,7 +39,7 @@ FFmpeg應安裝在托管AEM的伺服器上 *作者* 例項。
 
    您應該可以從系統中的任何目錄運行FFmpeg。
 
-   * 例如, `ffmpeg -version`.
+   * 例如， `ffmpeg -version`.
 
 ## 配置FFmpeg轉碼服務 {#configure-ffmpeg-transcoding-service}
 

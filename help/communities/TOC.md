@@ -7,10 +7,10 @@ breadcrumb-title: Communities 指南
 user-guide-description: 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。
 feature: Communities
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 9%
+source-wordcount: '451'
+ht-degree: 10%
 
 ---
 
@@ -23,15 +23,10 @@ ht-degree: 9%
    + [AEM Communities概述](overview.md)
    + [AEM Communities發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/communities-release-notes.html)
    + [開始使用AEM Communities](getting-started.md)
-   + [AEM Communities啟用快速入門](getting-started-enablement.md)
    + [初始設定](setup.md)
    + [製作新的社群網站](create-site.md)
    + [體驗已發佈的網站](published-site.md)
    + [編寫巢狀群組](nested-groups.md)
-   + [啟用的初始設定](enablement-setup.md)
-   + [製作新的社群網站以進行培訓](enablement-create-site.md)
-   + [建立並指派啟用資源](resource.md)
-   + [體驗已發佈的啟用網站](enablement-published-site.md)
 + 部署 {#deploy}
    + [部署社群](deploy-communities.md)
    + [升級至AEM 6.5 Communities](upgrade.md)
@@ -42,7 +37,6 @@ ht-degree: 9%
    + [社群網站](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html)
    + [Communities主控台](consoles.md)
    + [Communities功能的Analytics設定](analytics.md)
-   + [配置啟用功能](enablement.md)
    + [設定傳訊](messaging.md)
    + [調節社群內容](moderate-ugc.md)
    + [設定電子郵件](email.md)
@@ -57,14 +51,12 @@ ht-degree: 9%
    + [成員和群組管理主控台](members.md)
    + [協調控制台](moderation.md)
    + [Communities工具](tools.md)
-   + [網站範本](sites.md)
+   + [網站範例](sites.md)
    + [群組範本](tools-groups.md)
    + [社群功能](functions.md)
    + [儲存設定](srp-config.md)
    + [徽章主控台](badges.md)
-   + [啟用資源控制台](resources.md)
    + [報表主控台](reports.md)
-   + [啟用功能的MySQL配置](mysql.md)
    + [適用於社群的FFmpeg](ffmpeg.md)
    + [內容內協調](in-context.md)
    + [進階計分和徽章](advanced.md)
@@ -75,7 +67,6 @@ ht-degree: 9%
    + [DSRP的MySQL配置](dsrp-mysql.md)
    + [JSRP - JCR儲存資源提供商](jsrp.md)
    + [SRP的Solr配置](solr.md)
-   + [標籤啟用資源](tag-resources.md)
    + [標籤使用者產生的內容](tag-ugc.md)
    + [轉譯使用者產生的內容](translate-ugc.md)
    + [Communities用戶同步](sync.md)
@@ -94,10 +85,8 @@ ht-degree: 9%
    + [儲存資源提供程式概述](srp.md)
    + [社群網站要點](sites-for-developers.md)
    + [活動資料流要點](essentials-activities.md)
-   + [工作總攬](essentials-assignments.md)
    + [部落格要點](blog-developer-basics.md)
    + [日曆要點](calendar-basics-for-developers.md)
-   + [目錄要點](catalog-developer-essentials.md)
    + [Communities元件的Clientlibs](clientlibs.md)
    + [注釋要點](essentials-comments.md)
    + [適用於Communities元件的OSGi事件](events.md)
@@ -141,14 +130,12 @@ ht-degree: 9%
    + [使用Maven for Communities](maven.md)
    + [命名慣例](naming-conventions.md)
    + [SocialUtils重構](socialutils.md)
-+ 製作 {#authoring}
++ 編寫 {#authoring}
    + [Communities元件](author-communities.md)
    + [Communities元件基本知識](basics.md)
    + [活動資料流功能](activities.md)
-   + [工作總攬功能](assignments.md)
    + [部落格功能](blog-feature.md)
    + [日曆功能](calendar.md)
-   + [目錄功能](catalog.md)
    + [使用注釋](comments.md)
    + [精選內容功能](featured.md)
    + [檔案庫功能](file-library.md)

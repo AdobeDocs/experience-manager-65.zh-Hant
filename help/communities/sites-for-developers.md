@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
@@ -93,7 +93,6 @@ ht-degree: 1%
 
 * [UGC](#user-generated-content)
 * [使用者群組](#community-user-groups)
-* [資產](#enablement-assets)
 * [資料庫記錄](#database-records)
 
 ### 社群不重複網站ID {#community-unique-site-id}
@@ -133,19 +132,4 @@ ht-degree: 1%
 * 前置詞為 `community`
 * 後跟 [唯一網站id](#community-unique-site-id)
 
-例如, `community-engage-x0e11-members`.
-
-### 啟用資產 {#enablement-assets}
-
-從主控台：
-
-* 選擇 **[!UICONTROL 資產]**.
-* 輸入 **[!UICONTROL 選擇]** 模式。
-* 選取名為的資料夾，其 [唯一網站識別碼](#community-unique-site-id).
-* 選擇 **[!UICONTROL 刪除]** (可能需要從 **[!UICONTROL 更多……]**)。
-
-### 資料庫記錄 {#database-records}
-
-沒有工具可選擇性地刪除一個特定啟用社區站點的資料庫條目。
-
-刪除所有社群網站時，請使用MySQL Workbench刪除enablementdb和scormengedb。
+例如， `community-engage-x0e11-members`.

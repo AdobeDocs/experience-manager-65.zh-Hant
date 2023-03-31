@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 role: Admin
 exl-id: 4237085a-d70d-41de-975d-153f58336daa
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
 workflow-type: tm+mt
-source-wordcount: '2168'
+source-wordcount: '1920'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,6 @@ ht-degree: 0%
 * 在社群網站內建立子社群(請參閱 [社群團體](creating-groups.md))。
 
 * [審核](moderation.md) 使用者產生的內容(UGC)。
-
-* Be [啟用資源](resources.md) 聯繫人。
 
 * Be [特權](#privileged-members-group) 為部落格、日曆、QnA和論壇建立條目。
 
@@ -79,8 +77,6 @@ ht-degree: 0%
 | 管理員 | 管理員組由系統管理員組成，他們具有社區管理員的所有能力以及管理社區管理員組的能力。 |
 | 社群管理員 | 社區管理員組自動成為所有社區站點和站點上建立的任何社區組的成員。 社區管理員組的初始成員是管理員組。 在製作環境中，社群管理員可以建立社群網站、管理網站、管理成員（他們可以禁止社群的成員），以及協調內容。 |
 | 社群&lt;*網站名稱*> Sitecontentmanager | 「社群網站內容管理員」可以執行傳統的AEM製作、內容建立和社群網站的修改頁面。 |
-| 社群培訓經理 | 「社群啟用管理員」群組包含可供指派管理社群網站「啟用管理員」群組的使用者。 |
-| 社群&lt;*網站名稱* > Siteenablementmanagers | 「社群網站啟用管理員」群組包含指派給管理社群網站啟用的使用者 [資源](resources.md). |
 | 無 | 匿名網站訪客可能無法存取製作環境。 |
 
 ### 系統管理員 {#system-administrators}
@@ -196,43 +192,11 @@ ht-degree: 0%
 | 管理 | 作者使用者 | 作者的使用者群組 | 發佈的成員 | 發佈時的成員組 |
 | requiles | 管理員權限 | 管理員權限 | 管理員權限，隧道服務，發佈場的使用者同步 | 管理員權限，隧道服務，發佈場的使用者同步 |
 
-### 社群啟用管理員角色 {#community-enablement-manager-role}
-
-網站訪客自行註冊的功能通常不允許 [啟用社群](overview.md#enablement-community) 因為每個成員都有相關的成本。 培訓使用者和資源由指派 [角色](#author-group-roles) of `enablement manager` [在網站建立期間](sites-console.md#enablement) 作者（新增為群組成員） `Community <site-name> Siteenablementmanagers`)。 此 `enablement manager` 也負責 [分配學習資源](resources.md) 向社群成員致意。
-
-只有是全球成員的用戶 `Community Enablement Managers` 群組可選為 `enablement manager` 特定社群網站。
-
-建立可被分配角色的用戶 `Community Site Enablement Manager`，請使用傳統UI安全性主控台來指定路徑：
-
-在製作例項上：
-
-1. 以管理員權限登入，瀏覽至傳統UI安全主控台。
-
-   例如， [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
-
-2. 從「編輯」菜單中，選擇 **[!UICONTROL 建立使用者]**.
-3. 填入 `Create User` 對話框。
-   * 路徑必須 `/home/users/community`.
-4. 選擇 **[!UICONTROL 建立]**。
-
-   ![create-community-user](assets/create-community-user.png)
-
-* 在左窗格中，搜索新建立的用戶並選擇顯示在右窗格中。
-
-   ![社群使用者](assets/view-community-user.png)
-
-在左窗格中：
-
-1. 清除搜索框並選擇 **[!UICONTROL 隱藏用戶]**.
-2. 找出並拖曳 `community-enablementmanagers` 到 **[!UICONTROL 群組]** 頁簽中。
-
-   ![assign-group](assets/assign-group.png)
-
 ### 社群管理員角色 {#community-administrators-role}
 
 如 [作者群組角色](#author-group-roles) 圖表中，社區管理員組的成員可以建立社區站點、管理站點、管理成員（他們可以禁止社區成員），以及審核內容。
 
-請依照建立使用者並將使用者指派給角色的相同步驟操作 [啟用管理員](#communitysiteenablementmanagerrole)，但加c `ommunity-administrators` 群組（在使用者的「群組」標籤下）。
+請依照建立使用者並將使用者指派給啟用管理員角色的相同步驟操作，但新增c `ommunity-administrators` 群組（在使用者的「群組」標籤下）。
 
 ### LDAP整合 {#ldap-integration}
 

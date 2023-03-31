@@ -5,9 +5,9 @@ description: 如何部署AEM Communities
 seo-description: How to deploy AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: 14a33b14043869614efcdbf8cb413333d0fa644b
+source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1682'
 ht-degree: 1%
 
 ---
@@ -71,13 +71,6 @@ ht-degree: 1%
          * UGC只會顯示在輸入UGC的AEM例項或叢集上。
       * 預設為JSRP
 
-   若 **[啟用功能](/help/communities/overview.md#enablement-community)**
-
-   * [安裝和配置FFmpeg](/help/communities/ffmpeg.md)
-   * [安裝MySQL的JDBC驅動程式](#jdbc-driver-for-mysql)
-   * [安裝AEM Communities SCORM引擎](#scorm-package)
-   * [安裝並配置MySQL以啟用](/help/communities/mysql.md)
-
 
 
 
@@ -99,9 +92,8 @@ AEM 6.5 Communities GA包含Communities套件。 了解AEM 6.5的更新 [社群]
 
 ### MySQL的JDBC驅動程式 {#jdbc-driver-for-mysql}
 
-兩個Communities功能使用MySQL資料庫：
+一個Communities功能使用MySQL資料庫：
 
-* 針對 [啟用](/help/communities/enablement.md):記錄SCORM活動和學習者
 * 針對 [DSRP](/help/communities/dsrp.md):儲存用戶生成的內容(UGC)
 
 必須單獨獲得並安裝MySQL連接器。
@@ -133,28 +125,6 @@ AEM 6.5 Communities GA包含Communities套件。 了解AEM 6.5的更新 [社群]
 #### 範例：已安裝的MySQL連接器套件組合 {#example-installed-mysql-connector-bundle}
 
 ![](../assets/mysql-connector.png)
-
-### SCORM套件 {#scorm-package}
-
-共用內容物件參考模型(SCORM)是數位學習的標準與規格的集合。 SCORM也定義了如何將內容封裝成可傳輸的ZIP檔案。
-
-AEM Communities SCORM引擎是 [啟用](/help/communities/overview.md#enablement-community) 功能。 AEM 6.5社群支援的Scorm套件：
-
-* [cq-social-scorm-package,2.3.7版](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) 包括 [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) 引擎。
-
-**安裝SCORM包**
-
-1. 安裝 [cq-social-scorm-package,2.3.7版](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) 從包共用
-1. 下載 `/libs/social/config/scorm/database_scormengine_data.sql` 從cq實例並在mysql伺服器中執行該實例，以建立升級的scormEngineDB架構。
-1. 新增 `/content/communities/scorm/RecordResults` 在CSRF篩選器的「排除的路徑」屬性中，從 `https://<hostname>:<port>/system/console/configMgr` 發佈商。
-
-#### SCORM記錄 {#scorm-logging}
-
-安裝後，所有啟用活動都會正確記錄到系統主控台。
-
-如有需要，可將 `RusticiSoftware.*` 包。
-
-如需使用記錄檔的相關資訊，請參閱 [使用審核記錄和日誌檔案](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files).
 
 ### AEM進階MLS {#aem-advanced-mls}
 

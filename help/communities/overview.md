@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 exl-id: d6243dff-a067-455c-a326-5f451f225efd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1273'
 ht-degree: 1%
 
 ---
@@ -21,10 +21,6 @@ ht-degree: 1%
 # AEM Communities概述 {#aem-communities-overview}
 
 Adobe Experience Manager(AEM)Communities可讓您快速建立內部部署社群網站，進而改善效能、改善網站管理，並鼓勵將網站訪客轉換為有價值的社群成員。
-
-<!--
-Contact your account representative for information regarding licensing of AEM Communities as well as additional licensing for enablement features and Adobe Analytics.
--->
 
 ## 社群功能 {#communities-features}
 
@@ -40,7 +36,6 @@ AEM Communities可讓您開發與網站訪客的關係，其可：
 * **檔案共用**,
 * **通知** 和 **活動資料流**,
 * 允許 **標籤** (@mention)使用者產生內容中其他已註冊成員，以吸引其注意。
-* 支援 **鍵盤導覽** 啟用元件（例如目錄和課程播放、工作總攬、檔案庫）。
 
 可使用 [AEM示範電腦](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) 可在GitHub.com上公開取得，或透過新的We.Retail參考實作取得。
 
@@ -120,11 +115,6 @@ AEM Communities可讓您開發與網站訪客的關係，其可：
 
    * 提供產生工作分配、貼文和檢視報表的能力。
 
-* [資源](/help/communities/resources.md) 主控台
-
-   * 提供建立啟用資源和學習路徑的功能。
-   * 提供啟用資源和學習路徑報表的存取權。
-
 全局工具控制台提供對以下Communities工具的訪問：
 
 * [網站範本](/help/communities/tools.md#sitetemplatesconsole) 主控台
@@ -183,9 +173,7 @@ AEM Communities可讓您開發與網站訪客的關係，其可：
 
 此 [社群元件指南](/help/communities/components-guide.md) 可供互動式探索元件。
 
-## 社群類型 {#types-of-communities}
-
-### 參與社群 {#engagement-community}
+## 參與社群 {#engagement-community}
 
 參與社群是社群網站，主要讓客戶提供相關資訊、徵求意見，並允許客戶以社群成員的身分互動。
 
@@ -208,23 +196,6 @@ AEM Communities可讓您開發與網站訪客的關係，其可：
 * Analytics報表
 
 若要體驗快速建立新參與社群的便利性，請造訪 [開始使用AEM Communities](/help/communities/getting-started.md).
-
-### 培訓社群 {#enablement-community}
-
-培訓社群是社群網站，包含線上學習功能。
-
-啟用社群的功能可能包括：
-
-* 的所有功能 [參與社群](#engagement-community).
-* 指派內容和學習的能力。 資源給成員和成員組。
-* 支援SCORM內容，例如測驗和測試。
-* 跟蹤任務完成。
-* 存取報告與分析。
-* 能夠通過論壇、報文傳送、評論和評分就學習資源進行對話。
-
-當 [已配置啟用附加元件](/help/communities/enablement.md)，而生產環境則需要額外的授權才能使用。 培訓社群網站將包含 [指派函式](#community-functions).
-
-若要體驗建立新啟用社群的便利性，請造訪 [AEM Communities啟用快速入門](/help/communities/getting-started-enablement.md).
 
 ## AEM示範電腦 {#aem-demo-machine}
 

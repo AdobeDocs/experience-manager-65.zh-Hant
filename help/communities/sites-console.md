@@ -12,10 +12,10 @@ discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 role: Admin
 exl-id: 426e3adf-3723-4d17-a988-6eb050939e68
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
 workflow-type: tm+mt
-source-wordcount: '3278'
-ht-degree: 3%
+source-wordcount: '3106'
+ht-degree: 4%
 
 ---
 
@@ -62,10 +62,6 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 要建立新的社區站點，請選擇 **建立** 表徵圖。
 
 若要存取現有的社群網站，為了製作、修改、發佈、匯出或新增巢狀群組，請選取網站的資料夾圖示。
-
-例如，下圖顯示主要的Communities Sites控制台，顯示兩個社群網站的資料夾： [啟用](/help/communities/getting-started-enablement.md) 和 [參與](/help/communities/getting-started.md):
-
-![網站主控台](assets/site-console.png)
 
 ## 建立網站 {#site-creation}
 
@@ -165,7 +161,6 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 * [協調](#moderation)
 * [ANALYTICS](#analytics)
 * [翻譯](#translation)
-* [啟用](#enablement)
 
 >[!NOTE]
 >
@@ -182,12 +177,6 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 #### 使用者管理 {#user-management}
 
 ![createsitesettings](assets/createsitesettings.png)
-
->[!NOTE]
->
->建議 [啟用社群網站](/help/communities/overview.md#enablement-community) 設為私人（如需詳細資訊，請連絡您的帳戶代表）。
->
->當匿名網站訪客被拒絕訪問、不能自行註冊，以及不能使用社交登錄時，社群網站是私有的。
 
 * **允許使用者註冊**
 
@@ -231,7 +220,7 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
 
 可套用至社群內容的標籤，是透過選取先前透過 [標籤主控台](/help/sites-administering/tags.md#tagging-console).
 
-此外，為社群網站選取標籤命名空間會限制定義目錄和資源時顯示的選取範圍。 請參閱 [標籤啟用資源](/help/communities/tag-resources.md) 以了解重要資訊。
+此外，為社群網站選取標籤命名空間會限制定義目錄和資源時顯示的選取範圍。
 
 * 文字搜尋方塊：開始輸入以識別允許在網站上使用的標籤。
 
@@ -350,21 +339,6 @@ Communities Sites控制台顯示任何現有的社區站點。 在此控制台�
    * `Always show contributions in the original language` (預設)
    * `Always show contributions in user preferred language`
    * `Show contributions in user preferred language for only logged-in users`
-
-#### 啟用 {#enablement}
-
-![網站啟用](assets/site-enablement.png)
-
-此 `ENABLEMENT`選擇的社區站點模板包括 [指派函式](/help/communities/functions.md#assignments-function)，啟用功能授權後即可使用， [已配置](/help/communities/enablement.md). 包括分配功能的參考站點模板為 `Reference Structured Learning Site Template.`
-
-* **啟用管理員**
-（必要）僅限 `Community Enablementmanagers` 可選擇組以管理此啟用社區。 啟用管理員負責將成員指派給資源。 另請參閱 [管理使用者和使用者群組](/help/communities/users.md).
-
-* **Marketing Cloud 組織 ID**
-
-   （選用） [視訊心率分析](/help/communities/analytics.md#video-heartbeat-analytics) 授權。
-
-* 選擇 **下一個**.
 
 ### 步驟4 :建立社區網站 {#step-create-communities-site}
 
@@ -487,12 +461,6 @@ BASIC面板允許修改：
 
 「縮圖」面板允許上傳影像以在Communities Sites控制台中表示站點。
 
-### 修改啟用 {#modify-enablement}
-
-「啟用」面板可讓您存取建立社群網站期間提供的設定。
-
-請參閱 [啟用](#enablement) 說明。
-
 ## 發佈網站 {#publishing-the-site}
 
 社群網站經過新建立或修改後，即可透過選取 `Publish Site` 表徵圖，滑鼠將滑鼠懸停在站點上。
@@ -511,7 +479,7 @@ BASIC面板允許修改：
 
 ![匯出網站](assets/export-site.png)
 
-選取將滑鼠移至網站上的匯出圖示，以建立同時儲存於 [封裝管理員](/help/sites-administering/package-manager.md) 和下載。
+選取匯出圖示，將滑鼠游標暫留在網站上，以建立同時儲存於 [封裝管理員](/help/sites-administering/package-manager.md) 和下載。
 
 請注意，網站套件中未包含UGC。
 

@@ -12,9 +12,9 @@ discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
-source-git-commit: 0f7d4aba0b8c79039918e1338007a4277a5030f2
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2694'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解
 
 Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的社群功能互動時，事件會傳送至Adobe Analytics，並從中產生報表。
 
-例如，當啟用社群網站的成員檢視指派給他們的視訊資源時，資源播放器會將事件傳送至Analytics，包括視訊心率資料。 從社群網站，管理員可以查看有關播放視訊的各種報表。
+例如，從社群網站，管理員可以查看有關播放視訊的各種報表。
 
 此外，對於以下情況，也需要分析：
 
@@ -44,7 +44,6 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
 支援的社群功能包括：
 
-* [啟用資源](/help/communities/resources.md)
 * [論壇](/help/communities/forum.md)
 * [QnA](/help/communities/working-with-qna.md)
 * [部落格](/help/communities/blog-feature.md)
@@ -151,7 +150,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 * 啟用 [社群網站的Analytics](#enable-analytics-for-a-community-site)
 * 關聯 `Marketing Cloud Org Id` 與社群網站
 
-此 `Marketing Cloud Org Id` 可於 [社群網站建立](/help/communities/sites-console.md#enablement) 或更新 [修改](/help/communities/sites-console.md#modifying-site-properties) 社區站點屬性。
+此 `Marketing Cloud Org Id` 可於 [社群網站建立](/help/communities/sites-console.md) 或更新 [修改](/help/communities/sites-console.md#modifying-site-properties) 社區站點屬性。
 
 ![marketing-org-id](assets/marketing-org-id.png)
 
@@ -180,7 +179,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 * **標題**
 
    （必要）設定的顯示標題。
-例如，輸入 *啟用社群分析*
+例如，輸入 *社群分析*
 
 * **名稱**
 
@@ -244,7 +243,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
 * 選擇 **確定**.
 
-   ![analytics-enablement-settings](assets/analytics-settings1.png)
+   ![analytics-settings](assets/analytics-settings1.png)
 
 ### 建立框架 {#create-framework}
 
@@ -256,7 +255,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
 * **標題**
 
-   （必要）框架的顯示標題例如，輸入 *啟用社群架構*.
+   （必要）框架的顯示標題例如，輸入 *社群架構*.
 
 * **名稱**
 
@@ -275,7 +274,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便成員與支援的�
 
 此架構的用途是將AEM變數對應至Analytics變數（eVar和事件）。 可用於對應的Analytics變數為 [在報表套裝中定義](#adobe-analytics-report-suite-for-video-reporting).
 
-![analytics-enablement-framework](assets/analytics-framework1.png)
+![analytics-framework](assets/analytics-framework1.png)
 
 ### 選取報表套裝 {#select-report-suite}
 
@@ -389,7 +388,7 @@ Analytics會自動用於數個Communities功能。
 
 如果使用將evar1到evar11以及event1到event7中任何變數對應的現有報表套裝，則必須 [重新映射AEM變數](#modifying-analytics-variable-mapping) 並恢復原始映射。
 
-以下是遵循 [快速入門教學課程](/help/communities/getting-started-enablement.md):
+以下是預設映射的範例：
 
 ![map-analytics](assets/map-analytics1.png)
 
@@ -640,7 +639,7 @@ Adobe Analytics憑證會經過加密。 為方便製作者與發佈者之間復�
 * 導覽至 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). 例如， [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
 
 * 在語言根的jcr:content節點下(例如 `/content/sites/engage/en/jcr:content),`導覽至為Analytics報表設定的元件。
-例如, **`analytics/reportConfigs/social_forum_components_hbs_topic`**
+例如 **`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
 * 請注意建立的時段：
 

@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 exl-id: 6bda0f09-7ae5-4540-b035-9dd249ac3186
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '673'
 ht-degree: 2%
 
 ---
@@ -51,8 +51,6 @@ ht-degree: 2%
 若要確認已安裝最新的Feature Pack，請造訪：
 
 * [最新發行](deploy-communities.md#latest-releases)
-
-若為建立 [啟用社群網站](overview.md#enablement-community)，造訪 [AEM Communities啟用快速入門](getting-started-enablement.md).
 
 ## 設定 Analytics {#configure-analytics}
 
@@ -130,7 +128,7 @@ ht-degree: 2%
 
 ## 建立教學課程標籤 {#create-tutorial-tags}
 
-使用的標籤命名空間，建立要用於參與和啟用教學課程的標籤 `Tutorial`.
+使用的標籤命名空間，建立要用於參與教學課程的標籤 `Tutorial`.
 
 使用 [標籤主控台](../../help/sites-administering/tags.md#tagging-console) 若要建立下列標籤：
 

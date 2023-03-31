@@ -12,10 +12,10 @@ discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
 role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 7%
+source-wordcount: '381'
+ht-degree: 9%
 
 ---
 
@@ -27,10 +27,6 @@ ht-degree: 7%
 
 一般而言，各種報告包括：
 
-* [指定任務報表](#assignments-report)
-
-   對於 [啟用社群](/help/communities/overview.md#enablement-community)，提供學習者指派工作的進度概覽，包括實施SCORM標準時的相關分數。
-
 * [檢視報表](#views-report)
 
    提供任何社群網站的社群成員和網站訪客的內容檢視圖表。
@@ -38,8 +34,6 @@ ht-degree: 7%
 * [貼文報表](#posts-report)
 
    提供依社群成員到任何社群網站的各種貼文類型的圖表。
-
-當 [Adobe Analytics已啟用](/help/communities/sites-console.md#analytics)，報表將包含每個啟用資源隨著時間的檢視次數、播放次數、留言數和評等。
 
 表格報表可匯出為.csv格式，以供後續處理。
 
@@ -64,59 +58,6 @@ ht-degree: 7%
 
 
 ![報告](assets/reports1.png)
-
-### 啟用資源和學習路徑報表 {#reports-for-enablement-resources-and-learning-paths}
-
-* 從全局導航： **[!UICONTROL 導覽]** > **[!UICONTROL 社群]** >  **[!UICONTROL 資源]**
-
-* 選擇現有啟用社區站點：
-
-   * 選擇 **報表** 圖示，以產生涵蓋所有啟用資源的報表。
-   * 選擇啟用學習路徑。
-   * 選擇 **報表** 圖示來產生報表：
-
-      * 隨附的啟用資源。
-      * 指派給學習路徑的學習者。
-
-* 這些報表提供：
-
-   * 表格資料，可下載為CSV:
-
-      * 識別學習者
-      * 他們的狀態
-      * 是否通過目錄分配或訪問
-      * 評論數
-      * 給定星級
-
-如需詳細資訊，請參閱 [報表區段](/help/communities/resources.md#report) （在資源控制台中）。
-
-## 指定任務報表 {#assignments-report}
-
-「工作總攬」控制台允許按啟用社區站點、用戶或組以及工作分配篩選報表。
-
-報告提供了有關其進展的資訊以及所提供的任何評論或評級。
-
-![分配報表](assets/assignment-report.png)
-
-選取報表的條件：
-
-* **網站**
-
-   選取啟用社群網站。
-
-* **使用者或群組**
-   * 選取「使用者」 ，為一個學習者產生報表。
-   * 選擇「組」(Group)為一組學習者生成報告。
-
-   通道服務將從發佈環境訪問成員和成員組。
-
-* **指定任務**
-
-   從指派給所選學習者的培訓資源中進行選擇。
-
-選擇 **產生** 若要建立報表：
-
-![generate-report](assets/generate-assignment-report.png)
 
 ## 檢視報表 {#views-report}
 

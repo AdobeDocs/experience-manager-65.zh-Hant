@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 exl-id: a43c1c4d-a6c2-4ef9-9047-a945978e618b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 18%
+source-wordcount: '207'
+ht-degree: 17%
 
 ---
 
@@ -39,11 +39,9 @@ AEM Communities功能要求網站訪客成為成員並登入 [社群網站](over
 ## 具有函式的元件 {#components-with-functions}
 
 * [活動資料流](essentials-activities.md)
-* [指定任務](essentials-assignments.md)
 * [部落格](blog-developer-basics.md) ( `Journal`)
 
 * [日曆](calendar-basics-for-developers.md)
-* [目錄](catalog-developer-essentials.md)
 * [主要內容](essentials-featured.md)
 * [檔案庫](essentials-file-library.md)
 * [論壇](essentials-forum.md)
