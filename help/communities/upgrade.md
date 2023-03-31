@@ -11,10 +11,10 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 exl-id: ea41d35c-967c-4606-b4ec-377e817902e4
-source-git-commit: 07f8a9f629122102d30676926b225d57e542147d
+source-git-commit: 066a61a332aa620078740d36bd7f8689282fbf14
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 1%
+source-wordcount: '624'
+ht-degree: 0%
 
 ---
 
@@ -33,12 +33,6 @@ ht-degree: 1%
 1. 安裝 [最新功能套件](/help/communities/deploy-communities.md#latestfeaturepack).
 1. 安裝 [最新Solr配置檔案](/help/communities/msrp.md#upgrading).
 1. 重新索引MSRP，請參閱一節 [MSRP重新索引工具](/help/communities/msrp.md#msrp-reindex-tool).
-
-### 啟用2.0 {#enablement}
-
-自AEM 6.3起，啟用功能不再將報表資訊儲存在MySQL中。 MySQL相依性僅用於追蹤SCORM內容。
-
-請聯繫 [客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html) 如需從啟用1.0移轉內容的協助。
 
 ## 從AEM 6.0升級 {#upgrading-from-aem}
 

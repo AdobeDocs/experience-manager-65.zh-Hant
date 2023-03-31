@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1601'
 ht-degree: 2%
 
 ---
@@ -78,9 +78,7 @@ Communities Sites控制台提供嚮導，引導用戶完成建立社區站點的
 
 ### 步驟3:設定 {#step-settings}
 
-在「設定」步驟中，於選取 `Next`，請注意，有七個區段提供對設定的存取，包括使用者管理、標籤、協調、群組管理、分析、翻譯和啟用。
-
-造訪 [AEM Communities啟用快速入門](/help/communities/getting-started-enablement.md) 使用啟用功能的教學課程。
+在「設定」步驟中，於選取 `Next`請注意，有7個區段提供對設定的存取，包括使用者管理、標籤、協調、群組管理、分析和翻譯。
 
 #### 使用者管理 {#user-management}
 
@@ -118,7 +116,7 @@ Communities Sites控制台提供嚮導，引導用戶完成建立社區站點的
 例如，
 
 * 類型 `q`
-* 選擇 [奎恩·哈珀](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* 選擇奎恩·哈珀
 
 >[!NOTE]
 >
@@ -152,16 +150,6 @@ Communities Sites控制台提供嚮導，引導用戶完成建立社區站點的
 * 保留預設持久性選項
 
 ![翻譯設定](assets/translation-settings.png)
-
-#### 啟用 {#enablement}
-
-建立參與社群時，請保留空白。
-
-如需快速建立 [啟用社群](/help/communities/overview.md#enablement-community)，請參閱 [AEM Communities啟用快速入門](/help/communities/getting-started-enablement.md).
-
-選擇 **下一個**.
-
-![啟用](assets/enablement.png)
 
 ### 步驟4:建立社區網站 {#step-create-communities-site}
 

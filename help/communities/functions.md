@@ -12,9 +12,9 @@ discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 role: Admin
 exl-id: 2395c895-c611-43ac-abb6-c2bc4b4a41f4
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '2448'
+source-wordcount: '2224'
 ht-degree: 6%
 
 ---
@@ -96,14 +96,6 @@ ht-degree: 6%
 
    如果選中，「活動」頁包含一個頁簽，該頁簽根據當前成員正在跟蹤的活動篩選活動。 已選取預設值。
 
-### 指定任務功能 {#assignments-function}
-
-指配函式是定義 [啟用社群網站](/help/communities/overview.md#enablement-community). 它可為社群成員指派啟用資源。 另請參閱 [工作總攬](/help/communities/essentials-assignments.md) 供開發人員使用。
-
-此函式是 [啟用附加元件](/help/communities/enablement.md). 啟用附加元件需要額外的授權才能在生產環境中使用。
-
-新增至範本時，唯一的設定是 [標題和URL設定](#title-and-url-settings).
-
 ### 部落格功能 {#blog-function}
 
 部落格功能是具有 [部落格元件](/help/communities/blog-feature.md) 已配置，用於標籤、檔案上傳、跟蹤、成員自我編輯、投票和協調。 另請參閱 [部落格要點](/help/communities/blog-developer-basics.md) 供開發人員使用。
@@ -159,25 +151,6 @@ ht-degree: 6%
 * **允許主要內容**
 
    如果選取，則會將其內容識別為 [精選內容](/help/communities/featured.md). 已選取預設值。
-
-### 目錄功能 {#catalog-function}
-
-目錄函式提供 [啟用社群](/help/communities/overview.md#enablement-community) 成員以瀏覽未分配給它們的啟用資源。 請參閱 [標籤啟用資源](/help/communities/tag-resources.md) 和 [目錄要點](/help/communities/catalog-developer-essentials.md) 供開發人員使用。
-
-社群網站的所有啟用資源和學習路徑（如果屬性為，則顯示在所有目錄中） ` [Show in Catalog](/help/communities/resources.md)`，則會設為true。 若要明確包含資源和學習路徑，必須套用 [預先篩選](/help/communities/catalog-developer-essentials.md#pre-filters) 到目錄。
-
-新增至範本時，設定可指定用於設定向網站訪客呈現的標籤篩選器的標籤命名空間：
-
-![目錄函式](assets/catalog-function.png)
-
-* [標題和URL設定](#title-and-url-settings)
-
-* **選取所有命名空間**
-
-   選取的標籤命名空間會定義訪客可選取的標籤，以篩選目錄中所列的啟用資源清單。
-如果選取，則社群網站允許的所有標籤命名空間都可用。
-如果取消選取，則可以選取社群網站允許的一或多個命名空間。
-已選取預設值。
 
 ### 精選內容功能 {#featured-content-function}
 

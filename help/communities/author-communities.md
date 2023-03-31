@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 28%
+source-wordcount: '273'
+ht-degree: 27%
 
 ---
 
@@ -28,7 +28,6 @@ AEM Communities取得授權時，除了建立社群網站外，您也可以使�
 
 * [AEM Communities概述](/help/communities/overview.md)
 * [開始使用AEM Communities](/help/communities/getting-started.md)
-* [AEM Communities啟用快速入門](/help/communities/getting-started-enablement.md)
 
 >[!NOTE]
 >
@@ -54,8 +53,6 @@ AEM Communities取得授權時，除了建立社群網站外，您也可以使�
 | 社群活動清單 | [活動趨勢](/help/communities/trends.md) |
 | 社群群組成員清單 | [社群群組](/help/communities/creating-groups.md) |
 | 撰寫訊息 | [傳送訊息](/help/communities/configure-messaging.md) |
-| 啟用任務 | [指定任務](/help/communities/assignments.md) |
-| 啟用目錄 | [目錄](/help/communities/catalog.md) |
 | 主要內容 | [主要內容](/help/communities/featured.md) |
 | 檔案庫 | [檔案庫](/help/communities/file-library.md) |
 | 關注 | [社交圖](/help/communities/socialgraph.md) |

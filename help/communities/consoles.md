@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 role: Admin
 exl-id: 36f2e3d2-46c7-48a8-a1e9-213f581bd9f3
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '311'
 ht-degree: 1%
 
 ---
@@ -63,13 +63,9 @@ ht-degree: 1%
 
    「成員」和「群組」主控台可用於從製作環境管理發布環境中存在的社群成員和成員群組。
 
-* [報表](reports.md)
+* [報告](reports.md)
 
    在「報表」控制台中，當社群網站具有 [啟用Adobe Analytics](sites-console.md#analytics). 主控台僅適用於製作環境。
-
-* [資源](resources.md)
-
-   資源控制台用於 [啟用管理員](enablement.md#communitymanagers) 建立、管理和指派資源給 [啟用社群網站](overview.md#enablement-community). 主控台僅適用於製作環境。
 
 ## 工具主控台 {#tools-console}
 

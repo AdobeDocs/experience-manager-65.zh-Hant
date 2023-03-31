@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '361'
 ht-degree: 2%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 2%
 
 允許標籤的功能： [部落格](blog-feature.md), [日曆](calendar.md), [檔案庫](file-library.md), [論壇](forum.md)
 
-使用標籤的功能： [目錄](catalog.md), [搜尋](search.md), [社交標籤雲](tagcloud.md)
+使用標籤的功能： [搜尋](search.md), [社交標籤雲](tagcloud.md)
 
 如需製作資訊：
 
@@ -84,7 +84,6 @@ ht-degree: 2%
 * 建立標籤命名空間（分類法）: [管理標籤](../../help/sites-administering/tags.md)
 * 社區站點配置：請參閱 [標籤](sites-console.md#tagging)
 * [標籤使用者產生的內容](../../help/sites-authoring/tags.md)
-* [標籤啟用資源](tag-resources.md)
 
 如需開發人員資訊：
 

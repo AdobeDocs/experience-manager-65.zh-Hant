@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 exl-id: 3ed3768a-1b3c-45a1-a34c-61694cd407d9
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '385'
 ht-degree: 5%
 
 ---
@@ -29,7 +29,6 @@ a [社群網站](overview.md#communitiessites) 是 [社會構成框架](scf.md) 
 
 * [AEM Communities概述](overview.md)
 * [開始使用AEM Communities](getting-started.md)
-* [AEM Communities啟用快速入門](getting-started-enablement.md)
 
 >[!NOTE]
 > 

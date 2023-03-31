@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 8799386a-c3b8-43cf-9f71-580ff2a81abc
 role: Admin
 exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '430'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 4%
 
 * [AEM Communities概述](overview.md)
 * [開始使用AEM Communities](getting-started.md)
-* [AEM Communities啟用快速入門](getting-started-enablement.md)
 
 ## 管理和設定主題 {#administration-and-configuration-topics}
 
@@ -41,13 +40,12 @@ ht-degree: 4%
       * [組（子社區）](groups.md)
    * [審核](moderation.md)
    * [成員和組管理](members.md)
-   * [啟用資源](resources.md)
-   * [報表](reports.md)
+   * [報告](reports.md)
 
 
 * 社群 [*工具*](tools.md):
 
-   * [網站範本](sites.md)
+   * [網站範例](sites.md)
    * [群組範本](tools-groups.md)
    * [社群功能](functions.md)
    * [儲存設定](srp-config.md)
@@ -77,12 +75,6 @@ AEM Communities的主要功能是透過登入的網站訪客（成員）產生�
 * [通知](notifications.md):可通知成員其所遵循的活動。
 * [訂閱](subscriptions.md):讓成員使用外部電子郵件與社群互動。
 * [傳訊](messaging.md):讓成員使用內部訊息與社群互動。
-
-### 啟用功能 {#enablement-features}
-
-* [配置啟用](enablement.md):正確設定啟用功能的必要資訊。
-* [Analytics設定](analytics.md):啟用Adobe Analytics for Communities功能的必要資訊。
-* [標籤啟用資源](tag-resources.md):建立啟用目錄的必要條件。
 
 ### 部署 {#deployment}
 

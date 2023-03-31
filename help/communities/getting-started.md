@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 4a2ac67b-d2c9-4703-a1cb-d454786f9e6b
 docset: aem65
 exl-id: 14ecaef7-d9fc-45ea-8feb-16ad8946508e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 1%
+source-wordcount: '90'
+ht-degree: 2%
 
 ---
 
@@ -23,8 +23,6 @@ ht-degree: 1%
 AEM Communities可讓公司從網站範本資料庫中建立專屬的品牌社群體驗。 論壇、群組、部落格、檔案共用、日曆、活動摘要和延伸使用者設定檔可整合至您的網站，以促進展望、客戶和公司之間的互動。
 
 以下是快速設定 [參與社群](/help/communities/overview.md#engagement-community) 以示範或開發。
-
-如需快速設定 [啟用社群](/help/communities/overview.md#enablement-community)，造訪 [AEM Communities啟用快速入門](/help/communities/getting-started-enablement.md).
 
 * [初始設定](/help/communities/setup.md)
 

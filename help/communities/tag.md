@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d355a3ee-c8a8-4a07-8d28-d1a99bda315c
 exl-id: 6e8af8cf-1239-46f9-b2fe-4aa80abc86ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '252'
 ht-degree: 2%
 
 ---
@@ -28,8 +28,6 @@ ht-degree: 2%
 * 請參閱 [為開發人員進行標籤](../../help/sites-developing/tags.md) 以取得 [標籤框架](../../help/sites-developing/framework.md) 以及在 [自訂應用程式](../../help/sites-developing/building.md).
 
 * 請參閱 [使用Social Tag Cloud](tagcloud.md) 供作者了解如何新增 `social tag cloud` 元件來反白標示在發佈環境中套用至UGC的標籤。
-
-* 請參閱 [標籤啟用資源](tag-resources.md) 以了解為目錄標籤資源的資訊。
 
 配置 [社群網站](sites-console.md#tagging) 或下列其中一項功能：
 
