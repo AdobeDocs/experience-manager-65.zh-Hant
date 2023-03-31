@@ -10,16 +10,17 @@ topic-tags: integrations
 discoiquuid: 8f776f30-ff93-4d19-94c6-c4bfe6f1fae2
 docset: aem65
 exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
-source-git-commit: ccbb6a33c2ee8029d2e82d9098c07de18af166ac
+source-git-commit: 294d12e7d1b5293f165a164ff1fcc624f7b2b648
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
 
 # 建立和管理最適化表單的A/B測試{#create-and-manage-a-b-test-for-adaptive-forms}
 
-|負|[!BADGE 已終止]{type=negative tooltip="此功能現已終止"}|
+[!BADGE 已終止]{type=negative tooltip="此功能現已終止"}
+
 <div class="preview"> 適用性表單功能的A/B測試已到期，不再支援。 </div>
 
 ## 概觀 {#overview-br}
