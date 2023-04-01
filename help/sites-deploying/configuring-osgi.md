@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 55f6aab3e41159735e332b2740e3a21c563c1157
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1950'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ OSGi &quot;*提供標準化基元，允許從小型、可重複使用和協作�
 
 * [存放庫中的content-nodes(sling:osgiConfig)](#osgi-configuration-in-the-repository)
 
-   * 這需要使用CRXDE Lite手動配置。
+   * 需要使用CRXDE Lite手動配置。
    * 由於 `sling:OsgiConfig` 節點，您可以將設定連結至特定 [運行模式](/help/sites-deploying/configure-runmodes.md). 您甚至可以在同一儲存庫中保存多個運行模式的配置。
    * 會立即套用任何適當的設定（取決於執行模式）。
 
@@ -58,7 +58,7 @@ OSGi &quot;*提供標準化基元，允許從小型、可重複使用和協作�
 * 確保複製或複製儲存庫內容會重新建立相同的配置。
 * 允許您將配置簽出到FileVault或Subversion;安全性或更新。
 * 可在設定其他執行個體時儲存在套件中以供使用。
-* 可讓您使用指令碼執行配置轉出，以傳播配置詳細資訊。
+* 可讓您使用指令碼執行設定轉出，以傳播設定詳細資訊。
 
 >[!NOTE]
 >
@@ -72,13 +72,13 @@ OSGi &quot;*提供標準化基元，允許從小型、可重複使用和協作�
 
 >[!NOTE]
 >
->在Web主控台中所做的變更會儲存在存放庫中，作為 [組態檔](#osgi-configuration-with-configuration-files). 這些內容可以包含在內容包中，以便在進一步安裝中重複使用。
+>在Web主控台中所做的變更會儲存在存放庫中，作為 [組態檔](#osgi-configuration-with-configuration-files). 這些檔案可以包含在內容包中，以便在進一步安裝中重複使用。
 
 >[!NOTE]
 >
 >在Web主控台上，任何提及預設設定的說明都與Sling預設值相關。
 >
->Adobe Experience Manager有其專屬的預設值，因此預設值集可能與主控台上記錄的不同。
+>Adobe Experience Manager有其專屬的預設值，因此設定的預設值可能與主控台記錄的預設值不同。
 
 要使用Web控制台更新配置，請執行以下操作：
 
@@ -91,20 +91,20 @@ OSGi &quot;*提供標準化基元，允許從小型、可重複使用和協作�
    * 直接URL;例如：
 
       `http://localhost:4502/system/console/configMgr`
-   將會顯示清單。
+   隨即顯示清單。
 
 1. 選擇要配置的包，方法為：
 
    * 按一下 **編輯** 圖示
    * 按一下 **名稱** 束
 
-1. 對話方塊將會開啟。 您可以在此視需要編輯；例如，設定 **記錄層級** to `INFO`:
+1. 對話框隨即開啟。 您可以在此視需要編輯。 例如，設定 **記錄層級** to `INFO`:
 
    ![chlimage_1-140](assets/chlimage_1-140.png)
 
    >[!NOTE]
    >
-   >更新會儲存在存放庫中，如 [組態檔](#osgi-configuration-with-configuration-files). 若要在之後找到這些識別碼，（例如納入內容套件以用於其他執行個體）您應記下永久身分( `PID`)。
+   >更新會儲存在存放庫中，如 [組態檔](#osgi-configuration-with-configuration-files). 若要在之後找出這些檔案以納入內容套件中，以便用於其他例項，例如，請記下永久身分( `PID`)。
 
 1. 按一下「**儲存**」。
 
@@ -112,7 +112,7 @@ OSGi &quot;*提供標準化基元，允許從小型、可重複使用和協作�
 
    >[!NOTE]
    >
-   >您現在可以找到 [配置檔案](#osgi-configuration-with-configuration-files);例如，納入內容套件中以用於其他例項。
+   >您現在可以找到 [組態檔](#osgi-configuration-with-configuration-files). 例如，納入內容套件以用於其他例項。
 
 ## OSGi配置配置配置檔案 {#osgi-configuration-with-configuration-files}
 
@@ -120,20 +120,20 @@ OSGi &quot;*提供標準化基元，允許從小型、可重複使用和協作�
 
 `/apps`
 
-這些內容可包含在內容套件中，並可在其他執行個體上重複使用。
+這些檔案可以包含在內容包中，並可在其他實例上重複使用。
 
 >[!NOTE]
 >
->組態檔的格式非常具體 — 請參閱 [Sling Apache檔案](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format) 以取得完整詳細資訊。
+>設定檔案的格式為特定 — 請參閱 [Sling Apache檔案](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format) 以取得完整詳細資訊。
 >
 >因此，建議您在Web主控台中進行實際變更，以建立和維護設定檔案。
 
-Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到變更：
+Web控制台不顯示儲存庫中已保存更改的位置，但可以輕鬆找到更改：
 
 1. 建立配置檔案的方法 [在web主控台中進行初始變更](#osgi-configuration-with-the-web-console).
 1. 開啟CRXDE Lite。
-1. 在 **工具** 功能表選取 **查詢……** .
-1. 提交的查詢 **類型** `SQL` 搜索已更新配置的PID。
+1. 在 **工具** 菜單，選擇 **查詢……** .
+1. 若要搜尋已更新之設定的PID，請提交的查詢 **類型** `SQL`.
 
    例如， **Apache Felix OSGi Management Console** 具有以下的永久標識(PID):
 
@@ -159,13 +159,13 @@ Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到
 
 ## 儲存庫中的OSGi配置 {#osgi-configuration-in-the-repository}
 
-除了使用Web控制台外，您還可以在儲存庫中定義配置詳細資訊。 這可讓您輕鬆設定不同的執行模式。
+除了使用Web控制台外，您還可以在儲存庫中定義配置詳細資訊。 這麼做可讓您輕鬆設定不同的執行模式。
 
-這些設定是透過建立 `sling:OsgiConfig` 儲存庫中的節點供系統參考。 這些節點會鏡射OSGi設定，並與其形成使用者介面。 要更新配置資料，請更新節點屬性。
+這些設定是透過建立 `sling:OsgiConfig` 儲存庫中的節點供系統參考。 這些節點反映OSGi配置，並形成用戶介面。 要更新配置資料，請更新節點屬性。
 
-如果修改儲存庫中的配置資料，則更改將立即應用到相關OSGi配置，就像使用Web控制台進行了更改一樣，並進行適當的驗證和一致性檢查。 這也適用於從複製設定的動作 `/libs/` to `/apps/`.
+如果修改儲存庫中的配置資料，更改將立即應用到相關的OSGi配置。 就像是使用Web控制台進行了更改，並進行了適當的驗證和一致性檢查。 此工作流程也適用於複製設定的動作 `/libs/` to `/apps/`.
 
-由於相同的配置參數可以位於多個位置，因此系統：
+由於相同的配置參數位於多個位置，因此系統：
 
 * 搜索所有類型的節點 `sling:OsgiConfig`
 * 根據服務名稱進行篩選
@@ -173,13 +173,13 @@ Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到
 
 >[!NOTE]
 >
->另請閱讀 [如何僅為特定實例定義基於儲存庫的配置](https://helpx.adobe.com/experience-manager/kb/RunModeDependentConfigAndInstall.html).
+>另請閱讀 [如何僅為特定實例定義基於儲存庫的配置](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html?lang=en).
 
 ### 將新配置添加到儲存庫 {#adding-a-new-configuration-to-the-repository}
 
 #### 需知 {#what-you-need-to-know}
 
-若要將新配置添加到儲存庫，您需要知道以下資訊：
+若要將配置添加到儲存庫，您必須知道以下資訊：
 
 1. 此 **永久身份** (PID)。
 
@@ -189,15 +189,15 @@ Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
-1. 特定 [運行模式](/help/sites-deploying/configure-runmodes.md) 為必要項目。 建立資料夾：
+1. 是特定 [運行模式](/help/sites-deploying/configure-runmodes.md) 必填？ 建立資料夾：
 
    * `config`  — 所有運行模式
    * `config.author`  — 適用於製作環境
    * `config.publish`  — 適用於發佈環境
    * `config.<run-mode>`  — 酌情
 
-1. 若 **設定** 或 **工廠配置** 是必要的。
-1. 要配置的單個參數；包括需要重新建立的任何現有參數定義。
+1. 是 **設定** 或 **工廠配置** 必要？
+1. 要設定的個別參數，包括必須重新建立的任何現有參數定義。
 
    在Web主控台中參考個別參數欄位。 每個參數的名稱會以方括弧顯示。
 
@@ -206,7 +206,7 @@ Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到
 
    ![chlimage_1-142](assets/chlimage_1-142.png)
 
-1. 中是否已存在配置 `/libs`? 若要列出執行個體中的所有設定，請使用 **查詢** 工具以提交以下SQL查詢：
+1. 中是否存在配置 `/libs`? 若要列出執行個體中的所有設定，請使用 **查詢** 工具以提交以下SQL查詢：
 
    `select * from sling:OsgiConfig`
 
@@ -220,12 +220,12 @@ Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到
 
    ` /apps/<yourProject>`
 
-1. 如果尚未存在，請建立 `config` 資料夾( `sling:Folder`):
+1. 如果不存在，請建立 `config` 資料夾( `sling:Folder`):
 
    * `config`  — 適用於所有運行模式
    * `config.<run-mode>`  — 特定於特定運行模式
 
-1. 在此資料夾下建立節點：
+1. 在此資料夾下，建立節點：
 
    * 類型: `sling:OsgiConfig`
    * 名稱：永久身份(PID);
@@ -247,15 +247,15 @@ Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到
    * 類型：視情況而定。
    * 值：視需要。
 
-   您只需為要設定的參數建立屬性，其他參數仍會採用AEM設定的預設值。
+   您只需為要設定的參數建立屬性，其他參數仍採用AEM設定的預設值。
 
 1. 儲存所有變更。
 
-   重新啟動服務（如同在Web主控台中所做的變更），以更新節點時，就會立即套用變更。
+   當透過重新啟動服務來更新節點時，會套用變更（如同在Web主控台中所做的變更）。
 
 >[!CAUTION]
 >
->您不得變更 `/libs` 路徑。
+>請勿變更 `/libs` 路徑。
 
 >[!CAUTION]
 >
@@ -273,27 +273,27 @@ Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到
 
 1. 任何 `.config` 檔案 `<*cq-installation-dir*>/crx-quickstart/launchpad/config/...`. 在本地檔案系統上。
 
-這表示中的一般設定 `/libs` 中的專案特定設定可以遮罩 `/apps`.
+中的一般設定 `/libs` 中的專案特定設定可以遮罩 `/apps`.
 
 ### 運行時的解析順序 {#resolution-order-at-runtime}
 
-在系統運行時所做的配置更改會觸發重新載入，並使用已修改的配置。
+在系統運行時所做的配置更改會使用修改的配置觸發重新載入。
 
 然後，應用以下優先順序：
 
-1. 在Web控制台中修改配置將立即生效，因為它在運行時優先。
-1. 在中修改配置 `/apps` 會立即生效。
-1. 在中修改配置 `/libs` 將立即生效，除非它被中的配置遮罩 `/apps`.
+1. 在Web控制台中修改配置會立即生效，因為它在運行時優先。
+1. 在中修改配置 `/apps` 立即生效。
+1. 在中修改配置 `/libs` 會立即生效，除非它被中的配置遮罩 `/apps`.
 
 ### 解析多運行模式 {#resolution-of-multiple-run-modes}
 
-對於特定的運行模式配置，可以組合多種運行模式。 例如，您可以使用以下樣式建立配置資料夾：
+對於特定於運行模式的配置，可以組合多種運行模式。 例如，您可以使用以下樣式建立配置資料夾：
 
 `/apps/*/config.<runmode1>.<runmode2>/`
 
-如果所有運行模式都與啟動時定義的運行模式匹配，則將應用這些資料夾中的配置。
+如果所有運行模式都與啟動時定義的運行模式匹配，則應用這些資料夾中的配置。
 
-例如，如果執行個體是以執行模式啟動 `author,dev,emea`，配置節點 `/apps/*/config.emea`, `/apps/*/config.author.dev/` 和 `/apps/*/config.author.emea.dev/` 會套用，而配置節點則位於 `/apps/*/config.author.asean/` 和 `/config/author.dev.emea.noldap/` 將不會套用。
+例如，如果執行個體是以執行模式啟動 `author,dev,emea`，配置節點 `/apps/*/config.emea`, `/apps/*/config.author.dev/`，和 `/apps/*/config.author.emea.dev/` 時， `/apps/*/config.author.asean/` 和 `/config/author.dev.emea.noldap/` 未套用。
 
 如果同一PID的多個配置適用，則應用匹配運行模式數目最多的配置。
 
@@ -302,7 +302,7 @@ Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到
 
 此規則的粒度為PID層級。
 您無法在 `/apps/*/config.author/` 更具體的 `/apps/*/config.emea.author/` PID相同。
-匹配運行模式數目最多的配置對整個PID有效。
+匹配運行模式數目最多的配置對整個PID都有效。
 
 ### 標準配置 {#standard-configurations}
 
@@ -352,9 +352,9 @@ Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到
       /crx-quickstart/launchpad/config
    ```
 
-   * 這是OSGi配置管理員的專用資料區域，並包含指定的所有配置詳細資訊 `admin`，無論使用者如何進入系統。
-   * 此為實作詳細資料，您絕不可直接編輯此目錄。
-   * 但是，了解這些配置檔案的位置是很有用的，這樣，備份和/或多個安裝就可以獲得副本：
+   * 此區域是OSGi配置管理員的專用資料，並包含指定的所有配置詳細資訊 `admin`，無論使用者如何進入系統。
+   * 此區域是實作詳細資料，您絕不可直接編輯此目錄。
+   * 但是，了解這些配置檔案的位置非常有用，這樣就可以為備份或多個安裝（或兩者）獲取副本：
 
       * Apache Felix OSGi Management Console
 
@@ -366,6 +366,6 @@ Web Console不會顯示儲存庫中已儲存變更的位置，但可輕鬆找到
 
 >[!CAUTION]
 >
->您必須 ***從不*** 編輯以下資料夾或檔案：
+>切勿編輯以下資料夾或檔案：
 >
 >`/crx-quickstart/launchpad/config`
