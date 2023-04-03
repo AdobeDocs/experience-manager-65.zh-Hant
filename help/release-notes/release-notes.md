@@ -2,9 +2,9 @@
 title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 676472125cf472d42b792fae87dffe263e499014
+source-git-commit: 72b3eaea279911569dbd6b9acf41527111e9e53c
 workflow-type: tm+mt
-source-wordcount: '2605'
+source-wordcount: '2665'
 ht-degree: 2%
 
 ---
@@ -271,6 +271,17 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 使用GraphQL的客戶需要此套件；這可讓使用者根據實際使用的功能，新增所需的索引定義。
 
 * 請更新您的GraphQL查詢（可能已使用內容模型的自訂API名稱），改為使用內容模型的預設名稱。
+
+* GraphQL查詢可使用 `damAssetLucene` 索引，而非 `fragments` 索引。 這可能會導致GraphQL查詢失敗，或需花很長時間才能執行。
+
+   為了糾正問題， `damAssetLucene` 必須設定為包含下列兩個屬性：
+
+   * `contentFragment`
+   * `model`
+
+   更改索引定義後，需要重新索引(`reindex` = `true`)。
+
+   執行這些步驟後，GraphQL查詢的執行速度應該會更快。
 
 * As [!DNL Microsoft®® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss®® EAP 7.1], [!DNL Microsoft®® Windows Server 2019] 不支援全包安裝 [!DNL AEM Forms 6.5.10.0].
 
