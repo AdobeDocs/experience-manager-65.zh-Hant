@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 78ec31362f3aceb5cfc9cc0735bccb88082b8e2d
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '1787'
 ht-degree: 1%
 
 ---
@@ -24,18 +24,22 @@ ContextHub是儲存、操控和呈現內容資料的架構。 如需ContextHub�
 
 ## 停用ContextHub {#disabling-contexthub}
 
-依預設，AEM安裝中會啟用ContextHub。 您可以停用ContextHub，以防止其載入js/css及初始化。 停用ContextHub有兩個選項：
+依預設，AEM安裝中會啟用ContextHub。 您可以停用ContextHub，以防止其載入js/css及初始化。
 
-* 編輯ContextHub的設定並核取選項 **停用ContextHub**
+<!--
+There are two options to disable ContextHub:
 
-   1. 在邊欄中按一下或點選 **工具>網站> ContextHub**
-   1. 按一下或點選預設值 **組態容器**
-   1. 選取 **ContextHub設定** 按一下或點選 **編輯所選元素**
-   1. 按一下或點選 **停用ContextHub** 按一下或點選 **儲存**
+* Edit the ContextHub's configuration and check the option **Disable ContextHub**
 
-或
+    1. In the rail click or tap **Tools &gt; Sites &gt; ContextHub**
+    1. Click or tap the appropriate **Configuration Container**
+    1. Select the **ContextHub Configuration** and click or tap **Edit Selected Element**
+    1. Click or tap **Disable ContextHub** and click or tap **Save**
 
-* 使用CRXDE Lite來設定屬性 `disabled` to **true** 在 `/libs/settings/cloudsettings`
+or
+-->
+
+* 使用CRXDE Lite來設定屬性 `disabled` to **true** 在 `/libs/settings/cloudsettings/legacy/contexthub`
 
 >[!NOTE]
 >
