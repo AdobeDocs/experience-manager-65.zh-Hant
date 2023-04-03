@@ -6,9 +6,9 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: cd7800546ec4ebc950c5ebca4d7c80779cb2632c
+source-git-commit: b10b7d957ef3a28b5eeb05383a7504c6516f7aa7
 workflow-type: tm+mt
-source-wordcount: '3877'
+source-wordcount: '3856'
 ht-degree: 17%
 
 ---
@@ -247,10 +247,6 @@ Experience Manager可讓您將遠端DAM部署連結為來源，以連接多個Ex
 [!DNL Sites] 作者可以在 [!DNL Sites] 部署，然後重新發佈變更，以便在 [!DNL Experience Manager] 發佈例項。
 
 [!DNL Experience Manager] 在中的資產上顯示過期的狀態視覺指示器 `Remote Assets Content Finder` 阻止網站作者在 [!DNL Sites] 頁面。 如果您在 [!DNL Sites] 頁面上，資產無法顯示在 [!DNL Experience Manager] 發佈例項。
-
->[!NOTE]
->
->遠端DAM中的資產更新可供 [!DNL Sites] 只有在遠端DAM和 [!DNL Sites] 部署在 [!DNL Experience Manager].
 
 ## 常見問答 {#frequently-asked-questions}
 
