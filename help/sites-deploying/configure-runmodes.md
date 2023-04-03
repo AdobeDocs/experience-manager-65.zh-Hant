@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7d91fbdaae7ade27e9d6bf42bbcd5b16d3f6e358
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 1%
@@ -122,10 +122,9 @@ nosamplecontent執行模式是針對生產安裝而設計。
 
 如果您已為多個執行模式定義了配置，則需要定義啟動時要使用的配置。 有幾種方法可指定要使用的執行模式；決議的順序是：
 
+1. [系統屬性(](#using-a-system-property-in-the-start-script)
 1. [ ](#using-the-sling-properties-file)
 1. [ ](#using-the-r-option)
-1. [系統屬性(](#using-a-system-property-in-the-start-script)
-
 1. [檔案名檢測](#filename-detection-renaming-the-jar-file)
 
 使用應用程式伺服器時，您也可以 [在web.xml中定義運行模式](#defining-the-run-mode-in-web-xml-with-application-server).
