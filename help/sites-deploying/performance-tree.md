@@ -9,9 +9,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1178'
 ht-degree: 7%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 7%
   <tr>
    <td><strong>步驟 0</strong></td>
    <td>分析請求流程</td>
-   <td><p>您可以在瀏覽器中使用標準HTTP請求分析來分析請求流程。 如需如何在Chrome上執行此分析的詳細資訊，請參閱：<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
+   <td><p>您可以在瀏覽器中使用標準HTTP請求分析來分析請求流程。 如需如何在Chrome上執行此分析的詳細資訊，請參閱：<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步驟 2</strong></td>
@@ -97,7 +97,7 @@ ht-degree: 7%
   <tr>
    <td><strong>步驟 8</strong></td>
    <td>慢速可透過本機執行個體重現嗎？</td>
-   <td><br /> <p>使用 <a href="/help/sites-developing/tough-day.md">艱難的一天</a> 從生產實例中複製「真實世界」條件。 如果此情境對您的開發空間不切合實際，請務必在不同網路內容中測試生產執行個體（或相同的預備執行個體）。<br /> </p> </td>
+   <td><br /> <p>使用 <a href="/help/sites-developing/tough-day.md">艱難的一天</a> 從生產實例中複製「真實」條件。 如果此情境對您的開發空間不切合實際，請務必在不同網路內容中測試生產執行個體（或相同的預備執行個體）。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步驟 9</strong></td>
@@ -212,7 +212,7 @@ ht-degree: 7%
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">Assets同步服務</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">多個DAM例項</a></li>
-     <li>效能調整提示文章 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此處</a> 和 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此處</a>.<br /> </li>
+     <li>效能調整提示文章 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此處</a>.<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -244,7 +244,7 @@ ht-degree: 7%
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache">設定Dispatcher快取</a></li>
     </ol> <p>如何提高快取率；讓請求可快取（Dispatcher最佳作法）</p> <p>此外，請考量下列設定，以最佳化快取設定<br /> </p>
     <ol>
-     <li>為非GET的HTTP要求設定無快取規則</li>
+     <li>為非GET的HTTP請求設定無快取規則</li>
      <li>將查詢字串設定為不可快取</li>
      <li>請勿快取副檔名遺失的URL</li>
      <li>快取驗證標題（自Dispatcher 4.1.10版起可能）</li>
@@ -277,7 +277,7 @@ ht-degree: 7%
   <tr>
    <td><strong>步驟 39</strong></td>
    <td>使用預連接以減少連接開銷</td>
-   <td>見上文的Gem會議。 此外，W3c上的其他檔案也會預先連線：<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
+   <td>見上文的Gem會議。 此外，W3c上的其他連接前文檔：<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
   </tr>
   <tr>
    <td><strong>步驟40和41</strong><br /> </td>

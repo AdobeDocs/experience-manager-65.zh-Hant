@@ -11,16 +11,16 @@ topic-tags: configuring
 discoiquuid: 9ccbc39e-aea7-455e-8639-9193abc1552f
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
-source-wordcount: '2976'
-ht-degree: 5%
+source-wordcount: '2913'
+ht-degree: 6%
 
 ---
 
 # 效能准則{#performance-guidelines}
 
-本頁提供如何最佳化AEM部署效能的一般准則。 如果您是初次使用AEM，請先瀏覽下列頁面，再開始閱讀效能准則：
+本頁提供如何最佳化AEM部署效能的一般准則。 如果您是初次使用AEM，請先檢閱下列頁面，再開始閱讀效能准則：
 
 * [AEM基本概念](/help/sites-deploying/deploy.md#basic-concepts)
 * [AEM中的儲存概觀](/help/sites-deploying/storage-elements-in-aem-6.md#overview-of-storage-in-aem)
@@ -43,7 +43,7 @@ ht-degree: 5%
    <td><p><strong>索引</strong></p> </td>
    <td><p><strong>網頁伺服器</strong></p> </td>
    <td><p><strong>瀏覽器</strong></p> </td>
-   <td><p><strong>Marketing Cloud</strong></p> </td>
+   <td><p><strong>Experience Cloud</strong></p> </td>
   </tr>
   <tr>
    <td><p>Sites</p> </td>
@@ -62,9 +62,9 @@ ht-degree: 5%
   <tr>
    <td><p>資產</p> </td>
    <td><p>Publish-HA</p> </td>
-   <td><p>Solaris</p> </td>
+   <td><p>Solaris™</p> </td>
    <td><p>WebLogic</p> </td>
-   <td><p>IBM</p> </td>
+   <td><p>IBM®</p> </td>
    <td><p>SAML</p> </td>
    <td><p>MongoDB</p> </td>
    <td><p>檔案</p> </td>
@@ -76,8 +76,8 @@ ht-degree: 5%
   <tr>
    <td><p>社群</p> </td>
    <td><p>Author-CS</p> </td>
-   <td><p>紅帽</p> </td>
-   <td><p>WebSphere</p> </td>
+   <td><p>紅帽®</p> </td>
+   <td><p>WebSphere®</p> </td>
    <td><p>HP</p> </td>
    <td><p>Oauth</p> </td>
    <td><p>RDB/Oracle</p> </td>
@@ -104,8 +104,8 @@ ht-degree: 5%
   <tr>
    <td><p>行動</p> </td>
    <td><p>作者叢集</p> </td>
-   <td><p>IBM AIX</p> </td>
-   <td><p>JBoss</p> </td>
+   <td><p>IBM® AIX®</p> </td>
+   <td><p>JBoss®</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p>RDB/MySQL</p> </td>
@@ -118,7 +118,7 @@ ht-degree: 5%
   <tr>
    <td><p>多網站</p> </td>
    <td><p>ASRP</p> </td>
-   <td><p>SUSE</p> </td>
+   <td><p>SUSE®</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
@@ -141,7 +141,7 @@ ht-degree: 5%
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
-   <td><p>啟動</p> </td>
+   <td><p>啟用</p> </td>
   </tr>
   <tr>
    <td><p>Dynamic Media</p> </td>
@@ -264,13 +264,13 @@ ht-degree: 5%
 
 ## 何時使用效能准則 {#when-to-use-the-performance-guidelines}
 
-您應在下列情況下使用效能准則：
+在下列情況下使用效能指南：
 
-* **首次部署**:規劃首次部署AEM Sites或資產時，請務必了解在配置微內核、節點儲存和資料儲存時可用的選項（與預設設定相比）。 例如，將TarMK的資料存放區預設設定變更為檔案資料存放區。
+* **首次部署**:規劃首次部署AEM Sites或Assets時，請務必了解可用的選項。 尤其是配置微內核、節點儲存和資料儲存時（與預設設定相比）。 例如，將TarMK的資料存放區預設設定變更為檔案資料存放區。
 * **升級至新版本**:升級至新版本時，請務必了解與執行中環境相較的效能差異。 例如，從AEM 6.1升級至6.2，或從AEM 6.0 CRX2升級至6.2 OAK。
-* **回應時間緩慢**:當選定的Nodestore體系結構不滿足您的要求時，必須了解與其他拓撲選項相比的效能差異。 例如，部署TarMK而非MongoMK，或使用檔案資料存放區而非Amazon S3或Microsoft Azure資料存放區。
-* **新增更多作者**:當建議的TarMK拓撲不符合效能需求，且上調製作節點已達到可用的最大容量時，請務必了解與搭配三個或更多製作節點使用MongoMK相比的效能差異。 例如，部署MongoMK而非TarMK。
-* **新增更多內容**:當建議的資料儲存體系結構不符合您的要求時，請務必了解與其他資料儲存選項相比的效能差異。 範例：使用Amazon S3或Microsoft Azure資料存放區，而非檔案資料存放區。
+* **回應時間緩慢**:當選定的Nodestore體系結構不滿足您的要求時，必須了解與其他拓撲選項相比的效能差異。 例如，部署TarMK而非MongoMK，或使用檔案資料存放區而非Amazon S3或Microsoft® Azure資料存放區。
+* **新增更多作者**:當建議的TarMK拓撲不符合效能要求，且將製作節點上調到可用的最大容量時，請了解效能差異。 與搭配使用MongoMK與三個或更多製作節點比較。 例如，部署MongoMK而非TarMK。
+* **新增更多內容**:當建議的資料儲存體系結構不符合您的要求時，請務必了解與其他資料儲存選項相比的效能差異。 範例：使用Amazon S3或Microsoft® Azure資料存放區，而非檔案資料存放區。
 
 ## 簡介 {#introduction}
 
@@ -306,37 +306,37 @@ AEM部署有三個重要的組成要素。 此 **製作例項** 內容作者、�
 
 >[!CAUTION]
 >
->關係資料庫微內核受限制支援。 連絡人 [Adobe客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html) 使用此類型的微內核之前。
+>關係資料庫微內核受限制支援。 連絡人 [Adobe客戶服務](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) 使用此類型的微內核之前。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
 ### 資料儲存 {#data-store}
 
-處理大量二進位檔時，建議使用外部資料存放區，而非預設節點存放區，以發揮最大效能。 例如，如果您的專案需要大量媒體資產，將其儲存在檔案或Azure/S3資料存放區下，將比直接儲存在MongoDB中更快地存取。
+處理大量二進位檔時，建議您使用外部資料存放區，而非預設節點存放區，以發揮最大效能。 例如，如果您的專案需要許多媒體資產，則將其儲存在檔案或Azure/S3資料存放區下，比直接儲存在MongoDB中，可讓存取這些資產的速度更快。
 
 如需可用設定選項的詳細資訊，請參閱 [配置節點和資料儲存](/help/sites-deploying/data-store-config.md).
 
 >[!NOTE]
 >
->Adobe建議選擇使用Adobe Managed Services在Azure或Amazon Web Services(AWS)上部署AEM的選項，讓具備在這些雲端運算環境中部署和操作AEM經驗與技能的團隊從中獲益。 請看我們的 [Adobe Managed Services的其他檔案](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t).
+>Adobe建議您選擇使用Adobe Managed Services在Azure或Amazon Web Services(AWS)上部署AEM的選項。 如果團隊具備在這些雲端運算環境中部署和操作AEM的經驗和技能，客戶便能從中獲益。 請參閱 [Adobe Managed Services的其他檔案](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
 >
->如需有關如何在Azure或AWS上部署AEM（位於Adobe Managed Services外）的建議，強烈建議您直接與雲端提供者或我們支援在您選擇的雲端環境中部署AEM的合作夥伴合作。 選定的雲提供商或合作夥伴負責規模規格、設計和實施他們將支援的體系結構，以滿足您的特定效能、負載、可擴充性和安全要求。
+>如需有關如何在Azure或AWS上部署AEM的建議，請在Adobe Managed Services外部，建議您直接與雲端提供者合作。 或者，與Adobe的其中一個合作夥伴合作，支援在您所選擇的雲端環境中部署AEM。 選定的雲提供商或合作夥伴負責規模規格、設計和實施他們支援的體系結構，以滿足您的特定效能、負載、可擴充性和安全要求。
+>另請參閱 [技術要求](/help/sites-deploying/technical-requirements.md#supported-platforms) 頁面。
 >
->如需其他詳細資訊，另請參閱 [技術要求](/help/sites-deploying/technical-requirements.md#supported-platforms) 頁面。
-
+>
+>
 ### 搜尋 {#search-features}
 
 本節中列出的是與AEM搭配使用的自訂索引提供者。 要了解有關索引的更多資訊，請參閱 [Oak查詢和索引](/help/sites-deploying/queries-and-indexing.md).
 
 >[!NOTE]
->
->對於大部分部署，Adobe建議使用Lucene索引。 您只應將Solr用於特殊和複雜部署中的可擴充性。
+對於大部分部署，Adobe建議使用Lucene索引。 僅在專門和複雜的部署中使用Solr進行可擴充性。
 
 ![chlimage_1-4](assets/chlimage_1-4a.png)
 
 ### 開發指導方針 {#development-guidelines}
 
-您應針對AEM開發 **效能和可擴充性**. 以下呈現您可遵循的一些最佳實務：
+針對AEM的開發 **效能和可擴充性**. 以下是您可以遵循的最佳實務：
 
 **DO**
 
@@ -345,7 +345,7 @@ AEM部署有三個重要的組成要素。 此 **製作例項** 內容作者、�
 * 根據實際內容進行開發
 * 優化快取性
 * 將保存次數最小化(例如：使用暫時性工作流程
-* 確定所有HTTP端點都為RESTful
+* 請確定所有HTTP端點均為RESTful
 * 限制JCR觀測範圍
 * 注意非同步線程
 
@@ -354,7 +354,7 @@ AEM部署有三個重要的組成要素。 此 **製作例項** 內容作者、�
 * 如果您可以，請勿直接使用JCR API
 * 請勿變更/libs，而是使用覆蓋
 * 盡可能不要使用查詢
-* 請勿使用Sling系結來取得Java程式碼中的OSGi服務，而應使用：
+* 請勿使用Sling系結來取得Java™程式碼中的OSGi服務，而應使用：
 
    * @Reference在DS元件中
    * @Inject在Sling模型中
@@ -368,8 +368,7 @@ AEM部署有三個重要的組成要素。 此 **製作例項** 內容作者、�
 ### 基準方案 {#benchmark-scenarios}
 
 >[!NOTE]
->
->此頁面上顯示的所有基準測試都已在實驗室設定中執行。
+此頁面上顯示的所有基準測試都已在實驗室設定中執行。
 
 以下詳述的測試案例會用於TarMK、MongoMk和TarMK與MongoMk章節的基準區段。 若要查看特定基準測試使用哪個藍本，請閱讀 [技術規格](/help/sites-deploying/performance-guidelines.md#tarmk-performance-benchmark) 表格。
 
@@ -392,7 +391,7 @@ AEM Sites +資產：
 
 媒體:
 
-* 閱讀文章頁面(27.4%)、閱讀頁面(10.9%)、建立工作階段(2.6%)、啟用內容頁面(1.7%)、建立內容頁面(0.4%)、建立段落(4.3%)、編輯段落(0.9%)、影像元件(0.9%)、瀏覽資產(20%)、讀取資產中繼資料(8.5%)、下載資產(4.2%)、搜尋資產(0.2%)、更新資產(2%)(2.4%)、上傳資產(1.2%)、瀏覽專案(4.9%)、讀取專案(6.6%)、專案新增資產(1.2%)、專案新增網站(1.2%)、建立專案(0.1%)、作者搜尋(0.4%)
+* `Read Article Page (27.4%), Read Page (10.9%), Create Session (2.6%), Activate Content Page (1.7%), Create Content Page (0.4%), Create Paragraph (4.3%), Edit Paragraph (0.9%), Image Component (0.9%), Browse Assets (20%), Read Asset Metadata (8.5%), Download Asset (4.2%), Search Asset (0.2%), Update Asset Metadata (2.4%), Upload Asset (1.2%), Browse Project (4.9%), Read Project (6.6%), Project Add Asset (1.2%), Project Add Site (1.2%), Create Project (0.1%), Author Search (0.4%)`
 * 執行模式：同時使用者，每位使用者的混合互動
 
 ## TarMK {#tarmk}
@@ -406,8 +405,7 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 ### TarMK最低架構指引 {#tarmk-minimum-architecture-guidelines}
 
 >[!NOTE]
->
->以下提供的最低架構指引適用於生產環境和高流量網站。 這些是 **not** the [最小規格](/help/sites-deploying/technical-requirements.md#prerequisites) 需要執行AEM。
+以下提供的最低架構指引適用於生產環境和高流量網站。 這些准則包括 **not** the [最小規格](/help/sites-deploying/technical-requirements.md#prerequisites) 執行AEM。
 
 若要在使用TarMK時建立良好的效能，您應從下列架構開始：
 
@@ -418,8 +416,7 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 下圖是AEM網站和AEM Assets的架構指引。
 
 >[!NOTE]
->
->應轉換無二進位複製 **開啟** 檔案資料存放區。
+應轉換無二進位複製 **開啟** 檔案資料存放區。
 
 **AEM Sites的Tar架構指引**
 
@@ -431,7 +428,7 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 
 ### TarMK設定指引 {#tarmk-settings-guideline}
 
-為獲得良好效能，您應遵循下列設定准則。 如需如何變更設定的指示， [請參閱本頁](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
+為獲得良好效能，您應遵循下列設定准則。 如需如何變更設定的指示， [請參閱本頁](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant).
 
 <table>
  <tbody>
@@ -457,7 +454,7 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
    <td>JVM參數</td>
    <td><p><code>Doak.queryLimitInMemory</code></p> <p><code>Doak.queryLimitReads</code></p> <p><code>Dupdate.limit</code></p> <p><code>Doak.fastQuerySize</code></p> </td>
    <td><p>500000</p> <p>100000</p> <p>250000</p> <p>True</p> </td>
-   <td>在AEM啟動指令碼中添加這些JVM參數，以防止擴展查詢超出系統負載。</td>
+   <td>要防止擴展查詢超出系統負載，請在AEM啟動指令碼中添加這些JVM參數。</td>
   </tr>
   <tr>
    <td>Lucene索引配置</td>
@@ -468,7 +465,7 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
   <tr>
    <td>資料存放區= S3資料存放區</td>
    <td><p><code>maxCachedBinarySize</code></p> <p><code>cacheSizeInMB</code></p> </td>
-   <td><p>1048576(1MB)或更小</p> <p>最大堆大小的2-10%</p> </td>
+   <td><p>1048576(1 MB)或更小</p> <p>最大堆大小的2-10%</p> </td>
    <td>另請參閱 <a href="/help/sites-deploying/data-store-config.md#data-store-configurations">資料儲存配置</a>.</td>
   </tr>
   <tr>
@@ -495,12 +492,12 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 |  | **製作節點** |
 |---|---|
 | 伺服器 | 裸機硬體(HP) |
-| 作業系統 | RedHat Linux |
+| 作業系統 | Red Hat® Linux® |
 | CPU/內核 | 英特爾(R)至強(R)CPU E5-2407 @2.40GHz,8核 |
-| RAM | 32GB |
+| RAM | 32 GB |
 | 磁碟 | 磁性 |
-| Java | OracleJRE第8版 |
-| JVM堆 | 16GB |
+| Java™ | OracleJRE第8版 |
+| JVM堆 | 16 GB |
 | 產品 | AEM 6.2 |
 | Nodestore | TarMK |
 | 資料存放區 | 檔案DS |
@@ -509,14 +506,13 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 #### 效能基準結果 {#performance-benchmark-results}
 
 >[!NOTE]
->
->以下數字已標準化為1作為基準，而不是實際吞吐量數字。
+以下數字已標準化為1作為基準，而不是實際吞吐量數字。
 
 ![chlimage_1-7](assets/chlimage_1-7a.png) ![chlimage_1-8](assets/chlimage_1-8a.png)
 
 ## MongoMK {#mongomk}
 
-選擇MongoMK永續性後端而不選擇TarMK的主要原因是橫向縮放執行個體。 這表示有兩個或多個活動的作者實例始終運行，並使用MongoDB作為持久性儲存系統。 執行多個製作執行個體的需求，一般是因為單一伺服器的CPU和記憶體容量（支援所有同時編寫活動）已無法持續。
+選擇MongoMK永續性後端而不選擇TarMK的主要原因是橫向縮放執行個體。 此功能意味著始終運行兩個或多個活動的作者實例，並使用MongoDB作為持久性儲存系統。 執行多個製作執行個體的需求，一般是因為單一伺服器的CPU和記憶體容量（支援所有同時編寫活動）已無法持續。
 
 如需TarMK的詳細資訊，請參閱 [部署方案](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) 和 [Mongo儲存](/help/sites-deploying/storage-elements-in-aem-6.md#mongo-storage).
 
@@ -530,18 +526,16 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 * 兩個Dispatcher
 
 >[!NOTE]
->
->在生產環境中， MongoDB將始終用作具有主節點和兩個輔助節點的複製副本集。 讀取和寫入會轉到主節點，而讀取會轉到輔助節點。 如果儲存不可用，則可以用仲裁程式替換其中一個輔助程式，但MongoDB副本集必須始終由奇數個實例組成。
+在生產環境中， MongoDB始終用作具有主節點和兩個輔助節點的複製副本集。 讀取和寫入會轉到主節點，而讀取會轉到輔助節點。 如果儲存不可用，則可以用仲裁程式替換其中一個輔助程式，但MongoDB副本集必須始終由奇數個實例組成。
 
 >[!NOTE]
->
->應轉換無二進位複製 **開啟** 檔案資料存放區。
+應轉換無二進位複製 **開啟** 檔案資料存放區。
 
 ![chlimage_1-9](assets/chlimage_1-9a.png)
 
 ### MongoMK設定准則 {#mongomk-settings-guidelines}
 
-為獲得良好效能，您應遵循下列設定准則。 如需如何變更設定的指示， [請參閱本頁](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
+為獲得良好效能，您應遵循下列設定准則。 如需如何變更設定的指示， [請參閱本頁](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant).
 
 <table>
  <tbody>
@@ -567,7 +561,7 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
    <td>JVM參數</td>
    <td><p><code>Doak.queryLimitInMemory</code></p> <p><code>Doak.queryLimitReads</code></p> <p><code>Dupdate.limit</code></p> <p><code>Doak.fastQuerySize</code></p> <p><code>Doak.mongo.maxQueryTimeMS</code></p> </td>
    <td><p>500000</p> <p>100000</p> <p>250000</p> <p>True</p> <p>60000</p> </td>
-   <td>在AEM啟動指令碼中添加這些JVM參數，以防止擴展查詢超出系統負載。</td>
+   <td>要防止擴展查詢超出系統負載，請在AEM啟動指令碼中添加這些JVM參數。</td>
   </tr>
   <tr>
    <td>Lucene索引配置</td>
@@ -578,7 +572,7 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
   <tr>
    <td>資料存放區= S3資料存放區</td>
    <td><p><code>maxCachedBinarySize</code></p> <p><code>cacheSizeInMB</code></p> </td>
-   <td><p>1048576(1MB)或更小</p> <p>最大堆大小的2-10%</p> </td>
+   <td><p>1048576(1 MB)或更小</p> <p>最大堆大小的2-10%</p> </td>
    <td>另請參閱 <a href="/help/sites-deploying/data-store-config.md#data-store-configurations">資料儲存配置</a>.</td>
   </tr>
   <tr>
@@ -605,12 +599,12 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 |  | **製作節點** | **MongoDB節點** |
 |---|---|---|
 | 伺服器 | 裸機硬體(HP) | 裸機硬體(HP) |
-| 作業系統 | RedHat Linux | RedHat Linux |
+| 作業系統 | Red Hat® Linux® | Red Hat® Linux® |
 | CPU/內核 | 英特爾(R)至強(R)CPU E5-2407 @2.40GHz,8核 | 英特爾(R)至強(R)CPU E5-2407 @2.40GHz,8核 |
-| RAM | 32GB | 32GB |
+| RAM | 32 GB | 32 GB |
 | 磁碟 | 磁性 — 超過1k IOPS | 磁性 — 超過1k IOPS |
-| Java | OracleJRE第8版 | N/A |
-| JVM堆 | 16GB | N/A |
+| Java™ | OracleJRE第8版 | N/A |
+| JVM堆 | 16 GB | N/A |
 | 產品 | AEM 6.2 | MongoDB 3.2 WiredTiger |
 | Nodestore | MongoMK | N/A |
 | 資料存放區 | 檔案DS | N/A |
@@ -619,16 +613,15 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 ### 效能基準結果 {#performance-benchmark-results-1}
 
 >[!NOTE]
->
->以下數字已標準化為1作為基準，而不是實際吞吐量數字。
+以下數字已標準化為1作為基準，而不是實際吞吐量數字。
 
 ![chlimage_1-10](assets/chlimage_1-10a.png) ![chlimage_1-11](assets/chlimage_1-11a.png)
 
 ## TarMK與MongoMK {#tarmk-vs-mongomk}
 
-在兩者之間進行選擇時，需要考慮的基本規則是TarMK是為效能而設計，而MongoMK是為了擴充性。 Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈例項）中使用的預設持續性技術。
+在兩者之間選擇時，考量的基本規則是TarMK是為效能而設計，而MongoMK是為可擴充性而設計。 Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈例項）中使用的預設持續性技術。
 
-選擇MongoMK永續性後端而不選擇TarMK的主要原因是橫向縮放執行個體。 這表示有兩個或多個活動的作者實例始終運行，並使用MongoDB作為持久性儲存系統。 需要執行多個製作執行個體通常是因為單一伺服器的CPU和記憶體容量（支援所有同時編寫活動）已無法持續。
+選擇MongoMK永續性後端而不選擇TarMK的主要原因是橫向縮放執行個體。 此功能表示有兩個或多個活動的製作實例始終運行，並使用MongoDB作為持久性儲存系統。 需要執行多個製作執行個體通常是因為單一伺服器的CPU和記憶體容量（支援所有同時編寫活動）已無法持續。
 
 如需TarMK與MongoMK的詳細資訊，請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md#microkernels-which-one-to-use).
 
@@ -653,8 +646,7 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 ### TarMK與MongoMK基準 {#tarmk-vs-mongomk-benchmarks}
 
 >[!NOTE]
->
->以下數字已標準化為1作為基準，而不是實際吞吐量數字。
+以下數字已標準化為1作為基準，而不是實際吞吐量數字。
 
 ### 方案1技術規範 {#scenario-technical-specifications}
 
@@ -674,8 +666,8 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
   </tr>
   <tr>
    <td>作業系統</td>
-   <td>RedHat Linux</td>
-   <td>RedHat Linux</td>
+   <td>Red Hat® Linux®</td>
+   <td>Red Hat® Linux®</td>
    <td> </td>
   </tr>
   <tr>
@@ -686,8 +678,8 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
   </tr>
   <tr>
    <td>RAM</td>
-   <td>32GB</td>
-   <td>32GB</td>
+   <td>32 GB</td>
+   <td>32 GB</td>
    <td> </td>
   </tr>
   <tr>
@@ -697,14 +689,14 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
    <td> </td>
   </tr>
   <tr>
-   <td>Java</td>
+   <td>Java™</td>
    <td>OracleJRE第8版</td>
    <td>N/A</td>
    <td> </td>
   </tr>
   <tr>
    <td>JVM堆16GB</td>
-   <td>16GB</td>
+   <td>16 GB</td>
    <td>N/A</td>
    <td> </td>
   </tr>
@@ -742,8 +734,7 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 ### 方案2技術規範 {#scenario-technical-specifications-1}
 
 >[!NOTE]
->
->若要啟用與使用一個TarMK系統時相同數量的MongoDB作者，您需要具有兩個AEM節點的叢集。 四個節點的MongoDB群集可處理1.8倍於一個TarMK實例的作者數。 八個節點的MongoDB群集可處理的作者數是一個TarMK實例的2.3倍。
+若要啟用與單一TarMK系統相同數量的MongoDB作者，您需要具有兩個AEM節點的叢集。 四個節點的MongoDB群集可處理1.8倍於一個TarMK實例的作者數。 八個節點的MongoDB群集可處理的作者數是一個TarMK實例的2.3倍。
 
 <table>
  <tbody>
@@ -761,9 +752,9 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
   </tr>
   <tr>
    <td>作業系統</td>
-   <td>RedHat Linux</td>
-   <td>RedHat Linux</td>
-   <td>RedHat Linux</td>
+   <td>Red Hat® Linux®</td>
+   <td>Red Hat® Linux®</td>
+   <td>Red Hat® Linux®</td>
   </tr>
   <tr>
    <td>CPU/內核</td>
@@ -773,9 +764,9 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
   </tr>
   <tr>
    <td>RAM</td>
-   <td>60GB</td>
-   <td>60GB</td>
-   <td>60GB</td>
+   <td>60 GB</td>
+   <td>60 GB</td>
+   <td>60 GB</td>
   </tr>
   <tr>
    <td>磁碟</td>
@@ -784,15 +775,15 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
    <td>固態硬碟 — 10k IOPS</td>
   </tr>
   <tr>
-   <td>Java</td>
+   <td>Java™</td>
    <td>OracleJRE第8版</td>
    <td><br /> OracleJRE第8版</td>
    <td>N/A</td>
   </tr>
   <tr>
    <td>JVM堆16GB</td>
-   <td>30GB</td>
-   <td>30GB</td>
+   <td>30 GB</td>
+   <td>30 GB</td>
    <td>N/A</td>
   </tr>
   <tr>
@@ -834,27 +825,27 @@ Adobe建議將TarMK設為客戶在所有部署案例（針對AEM製作和發佈�
 
 本頁所列准則概述如下：
 
-* **TarMK與檔案資料存放區** 是大多數客戶建議的架構：
+* **TarMK與檔案資料存放區**  — 適用於大部分客戶的建議架構：
 
    * 最小拓撲：一個製作例項、兩個發佈例項、兩個Dispatcher
    * 如果共用檔案資料儲存，則開啟無二進位複製
 
-* **MongoMK與檔案資料存放區** 是針對製作層級橫向可擴充性的建議架構：
+* **MongoMK與檔案資料存放區**  — 針對作者階層的橫向可擴充性建議的架構：
 
    * 最小拓撲：三個製作例項、三個MongoDB例項、兩個發佈例項、兩個Dispatcher
    * 如果共用檔案資料儲存，則開啟無二進位複製
 
-* **Nodestore** 應儲存在本地磁碟上，而不是網路連接儲存(NAS)上
+* **Nodestore**  — 儲存在本地磁碟上，而不是網路連接儲存(NAS)上
 * 使用時 **Amazon S3**:
 
    * Amazon S3資料存放區在製作和發佈層級之間共用
    * 必須開啟無二進位複製
    * 「資料存放區垃圾收集」需要先在所有「製作」和「發佈」節點上執行，然後在「製作」上執行第二次
 
-* **除了現成可用的索引外，還應建立自訂索引** 根據最常見的搜尋
+* **除了現成可用的索引外，還應建立自訂索引**  — 根據最常見的搜尋
 
    * Lucene索引應用於自訂索引
 
-* **定制工作流可以顯著提高效能**&#x200B;例如，移除「更新資產」工作流程中的視訊步驟、停用未使用的監聽器等。
+* **定制工作流可以顯著提高效能**  — 在「更新資產」工作流程中移除視訊步驟，停用未使用的接聽程式，以此類推。
 
 如需詳細資訊，請一併閱讀 [建議的部署](/help/sites-deploying/recommended-deploys.md) 頁面。
