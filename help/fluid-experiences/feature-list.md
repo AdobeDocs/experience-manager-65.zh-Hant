@@ -4,10 +4,10 @@ description: 流暢的體驗功能清單
 index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 7%
+source-wordcount: '346'
+ht-degree: 8%
 
 ---
 
@@ -49,7 +49,7 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 |---|
 | [HTTP API](/help/assets/mac-api-assets.md) |
 | [結構化內容模型](/help/assets/content-fragments/content-fragments.md) |
-| [內容服務](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) |
+| [內容服務](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=en) |
 | [體驗片段](/help/sites-authoring/experience-fragments.md) |
 | 結構化內容的HTTP API（讀取） |
 | 適用於結構化內容的HTTP API(CRUD) |
@@ -82,10 +82,9 @@ AEM Fluid Experiences區分了與傳統AEM的不同，只處理無頭式傳送�
 
 ## 了解更多 {#learn-more}
 
-* [無頭使用案例的流暢使用體驗](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
-* [AEM內容服務：什麼，為什麼，怎麼？](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
-* [使用內容服務](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
-* [開發行動應用程式](https://experienceleague.adobe.com/docs/experience-manager-64/mobile/developing/developing-content-services.html)
-* [協力廠商存取常見問題集](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
-* [無處不在的流暢體驗](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
-* [使用Sling API](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
+* [無頭使用案例的流暢使用體驗](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=en)
+* [AEM內容服務：什麼，為什麼，怎麼？](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
+* [使用內容服務](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
+* [開發行動應用程式](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
+* [協力廠商存取常見問題集](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=en)
+* [使用Sling API](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)

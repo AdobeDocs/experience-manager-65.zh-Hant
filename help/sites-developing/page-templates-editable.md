@@ -1,8 +1,6 @@
 ---
 title: 頁面範本 — 可編輯
-seo-title: Page Templates - Editable
-description: 引入可編輯的範本，允許非開發人員建立和編輯範本，提供可保留動態連線的範本，以及讓頁面元件更為通用的範本
-seo-description: Editable templates have been introduced to, allow non-developers to create and edit templates, provide templates that retain a dynamic connection to any pages created from them, and make the page component more generic
+description: 引入可編輯的範本，讓非開發人員可建立及編輯範本、提供可保留動態連線至任何從他們建立之頁面的範本，並讓頁面元件更為通用
 uuid: 61791960-fdef-4e49-878a-11fdf1d4f0ab
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +9,10 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: ae56ffafff38fe60530a8850732de58ba8c8f8f9
+source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
 workflow-type: tm+mt
-source-wordcount: '3252'
-ht-degree: 1%
+source-wordcount: '3224'
+ht-degree: 2%
 
 ---
 
@@ -27,10 +25,10 @@ ht-degree: 1%
    * 這種專業作者被稱為 **範本作者**
    * 範本作者必須是 `template-authors` 群組。
 
-* 提供可保留動態連線至任何從這些頁面建立之頁面的範本。 這可確保對範本所做的任何變更都反映在頁面本身中。
+* 提供可保留動態連線至任何從這些頁面建立之頁面的範本。 這麼做可確保對範本所做的任何變更都反映在頁面本身中。
 * 讓頁面元件更通用，以便無須自訂即可使用核心頁面元件。
 
-使用可編輯的範本，製作頁面的片段會獨立於元件中。 您可以在UI中設定必要的元件組合，因此不需要針對每個頁面變異開發新的頁面元件。
+使用可編輯的範本，製作頁面的片段會獨立於元件中。 您可以在UI中設定必要的元件組合，這樣就不需要針對每個頁面變異開發新的頁面元件。
 
 >[!NOTE]
 >
@@ -50,22 +48,22 @@ ht-degree: 1%
 >[!NOTE]
 >
 >在新專案中設定可編輯的頁面範本時，下列教學課程可能也很有興趣：
->[開始使用AEM Sites第2部分 — 建立基礎頁面和範本](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
+>[開始使用AEM Sites第2部分 — 建立基礎頁面和範本](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html?lang=en)
 
 ## 建立新範本 {#creating-a-new-template}
 
 建立可編輯的範本主要是使用 [範本主控台和範本編輯器](/help/sites-authoring/templates.md) 由範本作者撰寫。 本節提供此程式的概觀，並隨後說明在技術層級發生的情況。
 
-如需如何在AEM專案中使用可編輯範本的資訊，請參閱 [使用Lazybones建立AEM專案](https://helpx.adobe.com/experience-manager/using/aem_lazybones.html).
+如需如何在AEM專案中使用可編輯範本的資訊，請參閱 [使用Lazybones建立AEM專案](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478).
 
 建立新的可編輯範本時，您可以：
 
-1. 建立 [模板的資料夾](#template-folders). 這不是強制性的，而是建議的最佳實務。
-1. 選取 [範本類型](#template-type). 這會複製到建立 [範本定義](#template-definitions).
+1. 建立 [模板的資料夾](#template-folders). 此資料夾並非必要資料夾，但建議使用最佳實務。
+1. 選取 [範本類型](#template-type). 此類型會複製以建立 [範本定義](#template-definitions).
 
    >[!NOTE]
    >
-   >提供一系列範本類型的現成可用功能。 您也可以 [建立您自己的網站特定範本類型](/help/sites-developing/page-templates-editable.md#creating-template-types) （如果需要）。
+   >提供一系列範本類型的現成可用功能。 您也可以 [建立您自己的網站特定範本類型](/help/sites-developing/page-templates-editable.md#creating-template-types)，如有必要。
 
 1. 配置新模板的結構、內容策略、初始內容和佈局。
 
@@ -74,7 +72,7 @@ ht-degree: 1%
    * 結構可讓您定義範本的元件和內容。
    * 在範本結構中定義的元件無法在產生的頁面上移動，也無法從任何產生的頁面中刪除。
 
-      * 如果您在We.Retail範例內容以外的自訂資料夾中建立範本，可以選擇「基礎元件」或使用 [核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html).
+      * 如果您要在外部的自訂資料夾中建立範本， `We.Retail` 範例內容，您可以選擇Foundation元件或使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hant).
    * 如果您希望頁面作者能夠新增和移除元件，請在範本中新增段落系統。
    * 元件可以再次解除鎖定和鎖定，以便定義初始內容。
 
@@ -87,15 +85,15 @@ ht-degree: 1%
    * 內容策略定義元件的設計屬性。
 
       * 例如，可用元件或最小/最大尺寸。
-   * 這些規則適用於範本（以及使用範本建立的頁面）。
+   * 這些策略適用於模板（以及使用模板建立的頁面）。
 
    如需範本作者如何定義原則的詳細資訊，請參閱 [建立頁面範本](/help/sites-authoring/templates.md#editing-a-template-structure-template-author).
 
-   有關策略的技術詳細資訊，請參見 [內容原則](/help/sites-developing/page-templates-editable.md#content-policies) 在此文檔中。
+   如需政策的技術詳細資訊，請參閱 [內容原則](/help/sites-developing/page-templates-editable.md#content-policies) 在此文檔中。
 
    **初始內容**
 
-   * 「初始內容」會定義根據範本首次建立頁面時所將顯示的內容。
+   * 「初始內容」會定義根據範本首次建立頁面時顯示的內容。
    * 然後頁面作者就可以編輯初始內容。
 
    如需範本作者如何定義結構的詳細資訊，請參閱 [建立頁面範本](/help/sites-authoring/templates.md#editing-a-template-initial-content-author).
@@ -122,7 +120,7 @@ ht-degree: 1%
 
 1. 使用它建立內容頁面。
 
-   * 使用範本建立新頁面時，靜態和可編輯的範本之間沒有顯示差異，也沒有顯示任何指示。
+   * 使用範本建立頁面時，靜態和可編輯的範本之間沒有可見的差異，也沒有任何指示。
    * 對於頁面作者而言，程式是透明的。
 
    如需頁面作者如何使用範本建立頁面的詳細資訊，請參閱 [建立及組織頁面](/help/sites-authoring/managing-pages.md#templates).
@@ -131,7 +129,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->切勿輸入需要國際化到模板中的任何資訊。 為內部化目的， [核心元件的本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) 。
+>切勿輸入必須國際化到模板中的任何資訊。 為內部化目的， [核心元件的本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) 建議使用。
 
 >[!NOTE]
 >
@@ -141,7 +139,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->編輯器用戶端程式庫會假設 `cq.shared` 命名空間（若不存在JavaScript錯誤） `Uncaught TypeError: Cannot read property 'shared' of undefined` 會產生。
+>編輯器用戶端程式庫會假設 `cq.shared` 命名空間。 如果不存在，則會導致JavaScript錯誤 `Uncaught TypeError: Cannot read property 'shared' of undefined`.
 >
 >所有範例內容頁面都包含 `cq.shared`，因此任何以其為基礎的內容都會自動包含 `cq.shared`. 不過，如果您決定從草稿開始建立自己的內容頁面，而不以範例內容為基礎，則必須確定包含 `cq.shared` 命名空間。
 >
@@ -152,17 +150,17 @@ ht-degree: 1%
 若要組織範本，您可以使用下列資料夾：
 
 * **全域**
-* 特定網站您為組織範本而建立的特定網站資料夾，是以擁有管理員權限的帳戶所建立。
+* 特定站點您為組織模板而建立的特定站點資料夾是使用具有管理員權限的帳戶建立的。
 
 >[!NOTE]
 >
 >即使您可以巢狀內嵌資料夾，但當使用者在 **範本** 控制台顯示為平面結構。
 
-在標準AEM例項中， **全球** 模板控制台中已存在資料夾。 如果在當前資料夾中找不到策略和/或模板類型，則此選項將保留預設模板，並充當後援。 您可以將預設範本新增到此資料夾或建立新資料夾（建議）。
+在標準AEM例項中， **全球** 模板控制台中存在資料夾。 如果當前資料夾中找不到策略和/或模板類型，此資料夾將保留預設模板，並充當後援。 您可以將預設範本新增至此資料夾或建立資料夾（建議）。
 
 >[!NOTE]
 >
->最佳實務是建立新資料夾以存放自訂的範本，而不使用全域資料夾。
+>最佳實務是建立資料夾以存放自訂範本，而不使用全域資料夾。
 
 >[!CAUTION]
 >
@@ -171,14 +169,14 @@ ht-degree: 1%
 模板類型和策略根據以下優先順序繼承到所有資料夾：
 
 1. 當前資料夾。
-1. 當前資料夾的父資料夾。
+1. 當前資料夾的父資料夾或父資料夾。
 1. `/conf/global`
 1. `/apps`
 1. `/libs`
 
 將建立所有允許的條目的清單。 如果有任何設定重疊( `path`/ `label`)，則只會向使用者顯示最接近目前資料夾的例項。
 
-若要建立新資料夾，您可以執行下列任一操作：
+要建立資料夾，請執行以下操作：
 
 * 以程式設計方式或使用CRXDE Lite
 * 使用設定瀏覽器
@@ -208,9 +206,9 @@ ht-degree: 1%
 
    * 值：您要顯示在 **範本** 控制台。
 
-1. 在 *新增* 標準製作權限(例如 `content-authors`)您現在需要指派群組並定義必要的存取權限(ACL)，供作者在新資料夾中建立範本。
+1. 在 *新增* 標準製作權限(例如 `content-authors`)、指派群組並定義必要的存取權限(ACL)，供作者在新資料夾中建立範本。
 
-   此 `template-authors` 群組是需要指派的預設群組。 請參閱下節 [ACL和組](/help/sites-developing/page-templates-editable.md#acls-and-groups) 以取得詳細資訊。
+   此 `template-authors` 組是必須分配的預設組。 請參閱下節 [ACL和組](/help/sites-developing/page-templates-editable.md#acls-and-groups) 以取得詳細資訊。
 
    請參閱 [訪問權限管理](/help/sites-administering/user-group-ac-admin.md#access-right-management) 有關管理和分配訪問權限的完整詳細資訊。
 
@@ -221,16 +219,16 @@ ht-degree: 1%
    現有資料夾會列在左側，包括 **全球** 檔案夾。
 
 1. 按一下&#x200B;**建立**。
-1. 在 **建立配置** 對話方塊下列欄位需要設定：
+1. 在 **建立配置** 對話框，必須配置以下欄位：
 
    * **標題**:提供設定資料夾的標題
-   * **可編輯的範本**:勾選以允許此資料夾內有可編輯的範本
+   * **可編輯的範本**:選擇允許此資料夾中的可編輯模板
 
 1. 按一下 **建立**
 
 >[!NOTE]
 >
->在「設定瀏覽器」中，您可以編輯全域資料夾並啟動 **可編輯的範本** 選項，但建議不要使用此資料夾建立模板。
+>在「設定瀏覽器」中，您可以編輯全域資料夾並啟動 **可編輯的範本** 選項。 但是，這不是建議的最佳做法。
 >
 >請參閱 [配置瀏覽器](/help/sites-administering/configurations.md) 檔案以取得詳細資訊。
 
@@ -238,7 +236,7 @@ ht-degree: 1%
 
 建立範本資料夾後（透過CRXDE或使用設定瀏覽器），必須為範本資料夾的適當群組定義ACL，以確保適當的安全性。
 
-的範本資料夾 [We.Retail參考實作](/help/sites-developing/we-retail.md) 可做為範例。
+的範本資料夾 [`We.Retail` 參考實作](/help/sites-developing/we-retail.md) 可做為範例。
 
 #### 範本作者群組 {#the-template-authors-group}
 
@@ -246,9 +244,9 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->此 `template-authors` 群組 *僅限* 適用於必須能夠建立新範本的使用者。
+>此 `template-authors` 群組 *僅限* 供必須能建立範本的使用者使用。
 >
->編輯範本功能強大，若未正確編輯，現有範本可能會損毀。 因此，此角色應該重點突出，並僅包括合格的使用者。
+>編輯範本功能強大，如果無法正確執行，現有範本可能會中斷。 因此，此角色應該重點突出，並僅包括合格的用戶。
 
 下表詳細說明了進行範本編輯所需的權限。
 
@@ -264,7 +262,7 @@ ht-degree: 1%
    <td rowspan="3"><code>/conf/&lt;<i>your-folder</i>&gt;/settings/wcm/templates</code></td>
    <td>範本作者<br /> </td>
    <td>讀、寫、復寫</td>
-   <td>在特定站點中建立、讀取、更新、刪除和複製模板的模板作者 <code>/conf</code> 空間</td>
+   <td>在特定網站中建立、讀取、更新、刪除和複製範本的範本作者 <code>/conf</code> 空間</td>
   </tr>
   <tr>
    <td>匿名Web用戶</td>
@@ -274,13 +272,13 @@ ht-degree: 1%
   <tr>
    <td>內容作者</td>
    <td>複製</td>
-   <td>replicateContent作者在啟動頁面時需要啟動頁面的範本</td>
+   <td>replicateContent作者在啟動頁面時必須啟動頁面的範本</td>
   </tr>
   <tr>
    <td rowspan="3"><code>/conf/&lt;<i>your-folder</i>&gt;/settings/wcm/policies</code></td>
    <td><code>Template Author</code></td>
    <td>讀、寫、復寫</td>
-   <td>在特定站點中建立、讀取、更新、刪除和複製模板的模板作者 <code>/conf</code> 空間</td>
+   <td>在特定網站中建立、讀取、更新、刪除和複製範本的範本作者 <code>/conf</code> 空間</td>
   </tr>
   <tr>
    <td>匿名Web用戶</td>
@@ -290,13 +288,13 @@ ht-degree: 1%
   <tr>
    <td>內容作者</td>
    <td>複製</td>
-   <td>啟用頁面時，內容作者需要啟用頁面範本的原則</td>
+   <td>內容作者在啟動頁面時，必須啟用頁面範本的原則</td>
   </tr>
   <tr>
    <td rowspan="2"><code>/conf/&lt;site&gt;/settings/template-types</code></td>
    <td>範本作者</td>
    <td>讀取</td>
-   <td>範本作者會根據其中一種預先定義的範本類型，建立新範本。</td>
+   <td>範本作者會根據其中一種預先定義的範本類型來建立範本。</td>
   </tr>
   <tr>
    <td>匿名Web用戶</td>
@@ -306,11 +304,11 @@ ht-degree: 1%
  </tbody>
 </table>
 
-此預設值 `template-authors` 群組僅涵蓋專案設定，所有 `template-authors` 成員可以訪問和編寫所有模板。 若要進行更複雜的設定（需要多個範本作者群組來區隔範本的存取權），必須建立更多自訂範本作者群組。 不過，範本作者群組的權限仍會相同。
+此預設值 `template-authors` 群組僅涵蓋專案設定，所有 `template-authors` 成員可以訪問和編寫所有模板。 如需更複雜的設定（需要多個範本作者群組來區隔範本的存取權），必須建立更多自訂範本作者群組。 不過，範本作者群組的權限仍會相同。
 
 #### /conf/global下的舊版範本 {#legacy-templates-under-conf-global}
 
-範本不應再儲存於 `/conf/global`但是，對於某些舊版安裝，此位置可能仍有範本。 只有在這類舊情況下，才應： `/conf/global` 路徑可明確設定。
+請勿將範本儲存在 `/conf/global`. 不過，對於某些舊版安裝，此位置可能仍有範本。 *僅* 在這種舊情況下，應： `/conf/global` 路徑可明確設定。
 
 <table>
  <tbody>
@@ -334,7 +332,7 @@ ht-degree: 1%
   <tr>
    <td>內容作者</td>
    <td>複製</td>
-   <td>內容作者在啟動頁面時需要啟動頁面的範本</td>
+   <td>啟用頁面時，內容作者必須啟用頁面的範本</td>
   </tr>
   <tr>
    <td rowspan="3"><code>/conf/global/settings/wcm/policies</code></td>
@@ -350,13 +348,13 @@ ht-degree: 1%
   <tr>
    <td>內容作者</td>
    <td>複製</td>
-   <td>啟用頁面時，內容作者需要啟用頁面範本的原則</td>
+   <td>內容作者在啟動頁面時，必須啟用頁面範本的原則</td>
   </tr>
   <tr>
    <td rowspan="2"><code>/conf/global/settings/wcm/template-types</code></td>
    <td>範本作者</td>
    <td>讀取</td>
-   <td>範本作者會根據其中一種預先定義的範本類型，建立新範本</td>
+   <td>範本作者會根據其中一種預先定義的範本類型來建立範本</td>
   </tr>
   <tr>
    <td>匿名Web用戶</td>
@@ -368,9 +366,9 @@ ht-degree: 1%
 
 ## 範本類型 {#template-type}
 
-建立新範本時，您需要指定範本類型：
+建立範本時，請指定範本類型：
 
-* 模板類型有效地為模板提供模板。 建立新模板時，將使用所選模板類型的結構和初始內容建立新模板。
+* 模板類型有效地為模板提供模板。 建立模板時，使用所選模板類型的結構和初始內容來建立模板。
 
    * 模板類型被複製以建立模板。
    * 複製發生後，範本和範本類型之間的唯一連線就是靜態參考，以供參考。
@@ -379,11 +377,11 @@ ht-degree: 1%
 
    * 頁面元件的資源類型。
    * 根節點的策略，定義模板編輯器中允許的元件。
-   * 建議為回應式格線定義斷點，並在範本類型上設定行動模擬器。 這是選用的，因為也可在個別範本上定義設定(請參閱 [範本類型和行動裝置群組](/help/sites-developing/page-templates-editable.md#p-template-type-and-mobile-device-groups-br-p))。
+   * Adobe建議您為回應式格線定義斷點，並在範本類型上設定行動模擬器。 此步驟為選用，因為也可在個別範本上定義設定(請參閱 [範本類型和行動裝置群組](/help/sites-developing/page-templates-editable.md#p-template-type-and-mobile-device-groups-br-p))。
 
 * AEM提供一些現成的範本類型選項，例如「HTML5頁面」和「最適化表單頁面」。
 
-   * 其他範例則隨附於 [We.Retail](/help/sites-developing/we-retail.md) 範例內容。
+   * 其他範例則隨附於 [`We.Retail`](/help/sites-developing/we-retail.md) 範例內容。
 
 * 範本類型通常由開發人員定義。
 
@@ -393,7 +391,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->您不得變更 `/libs` 路徑。 這是因為 `/libs` 會在您下次升級執行個體時覆寫（當您套用Hotfix或Feature Pack時，則會覆寫）。
+>請勿變更 `/libs` 路徑。 原因在於 `/libs` 會在您下次升級執行個體時覆寫（當您套用Hotfix或Feature Pack時，則會覆寫）。
 
 您的網站特定範本類型應儲存在以下可比位置：
 
@@ -407,7 +405,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->範本類型必須遵循正確的資料夾結構(即 `/settings/wcm/...`)，否則將找不到範本類型。
+>模板類型必須遵守正確的資料夾結構(即 `/settings/wcm/...`)，否則找不到範本類型。
 
 ### 範本類型和行動裝置群組 {#template-type-and-mobile-device-groups-br}
 
@@ -432,7 +430,7 @@ ht-degree: 1%
 
 如果已建立可作為其他模板基礎的模板，則可以將此模板作為模板類型複製。
 
-1. 建立範本，如同處理任何可編輯的範本 [這裡記載的](/help/sites-authoring/templates.md#creating-a-new-template-template-author)，這將作為範本類型的基礎。
+1. 建立範本，如同處理任何可編輯的範本 [這裡記載的](/help/sites-authoring/templates.md#creating-a-new-template-template-author)，可作為範本類型的基礎。
 1. 使用CRXDE Lite，從 `templates` 節點 `template-types` 節點 [範本資料夾](/help/sites-developing/page-templates-editable.md#template-folders).
 1. 從 `templates` 節點 [範本資料夾](/help/sites-developing/page-templates-editable.md#template-folders).
 1. 在位於 `template-types` 節點，全部刪除 `cq:template` 和 `cq:templateType` 全部屬性 `jcr:content` 節點。
@@ -444,7 +442,7 @@ GITHUB上的程式碼
 您可以在GitHub上找到此頁面的程式碼
 
 * [在GitHub上開啟aem-sites-example-custom-template-type專案](https://github.com/Adobe-Marketing-Cloud/aem-sites-example-custom-template-type)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-sites-example-custom-template-type/archive/master.zip)
+* 將專案下載為 [ZIP檔案](https://codeload.github.com/Adobe-Marketing-Cloud/aem-sites-example-custom-template-type/zip/refs/heads/master)
 
 ## 範本定義 {#template-definitions}
 
@@ -506,40 +504,40 @@ GITHUB上的程式碼
 
    * **類型**: `String`
 
-   * **值**: `draft`, `enabled` 或 `disabled`
+   * **值**: `draft`, `enabled`，或 `disabled`
 
 ### 結構 {#structure}
 
 定義結果頁面的結構：
 
 * 已與初始內容合併( `/initial`)。
-* 對結構所做的變更將反映在使用範本建立的任何頁面中。
+* 對結構所做的變更會反映在使用範本建立的任何頁面中。
 * 此 `root` ( `structure/jcr:content/root`)節點會定義產生頁面中可用的元件清單。
 
    * 在模板結構中定義的元件不能在任何結果頁面上移動或從中刪除。
    * 元件解除鎖定後， `editable` 屬性設為 `true`.
 
-   * 一旦解除鎖定已包含內容的元件，此內容將移至 `initial` 分支。
+   * 解除鎖定已包含內容的元件後，此內容會移至 `initial` 分支。
 
 * 此 `cq:responsive` 節點保留回應式配置的定義。
 
 ### 初始內容 {#initial-content}
 
-定義新頁面建立時將擁有的初始內容：
+定義新頁面建立時的初始內容：
 
 * 包含 `jcr:content` 會複製到任何新頁面的節點。
 * 與結構合併( `/structure`)。
-* 如果初始內容在建立後變更，則任何現有頁面都不會更新。
+* 如果初始內容在建立後變更，則會更新任何現有頁面。
 * 此 `root` 節點包含元件清單，以定義產生頁面中可用的項目。
-* 如果在結構模式中將內容添加到元件，並且該元件隨後被解鎖（反之亦然），則此內容用作初始內容。
+* 如果以結構模式將內容添加到元件中，並且該元件稍後被解鎖（或相反），則此內容將用作初始內容。
 
 ### 配置 {#layout}
 
-當 [編輯可定義佈局的模板](/help/sites-authoring/templates.md)，此用途 [標準回應式版面](/help/sites-authoring/responsive-layout.md) 也可以 [已配置](/help/sites-administering/configuring-responsive-layout.md).
+當 [編輯範本時，您可以定義版面](/help/sites-authoring/templates.md)，此實務使用 [標準回應式版面](/help/sites-authoring/responsive-layout.md) 也可以 [已配置](/help/sites-administering/configuring-responsive-layout.md).
 
 ### 內容原則 {#content-policies}
 
-內容（或設計）策略定義元件的設計屬性，如元件的可用性或最小/最大維。 這些規則適用於範本（以及使用範本建立的頁面）。 可在範本編輯器中建立並選取內容原則。
+內容（或設計）原則定義元件的設計屬性，例如元件的可用性或最小/最大維度。 這些策略適用於模板（以及使用模板建立的頁面）。 可在範本編輯器中建立並選取內容原則。
 
 * 屬性 `cq:policy`，在 `root` 節點
    `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
@@ -552,7 +550,7 @@ GITHUB上的程式碼
 
 >[!NOTE]
 >
->策略定義的路徑取決於元件的路徑。 `cq:policy` 保留對配置本身的相對引用。
+>策略定義的路徑取決於元件的路徑。 此 `cq:policy` 保留對配置本身的相對引用。
 
 >[!NOTE]
 >
@@ -572,7 +570,7 @@ GITHUB上的程式碼
 
 1. **啟用範本**
 
-   必須先啟用範本，才能使用範本：
+   必須先啟用範本，才能使用：
 
    * [啟用範本](/help/sites-authoring/templates.md#enablingatemplateauthor) 從 **範本** 控制台。
 
@@ -589,7 +587,7 @@ GITHUB上的程式碼
 
 1. **允許的範本**
 
-   * [在 **頁面屬性**](/help/sites-authoring/templates.md#allowing-a-template-author) 的相應頁或根頁。
+   * [在 **頁面屬性**](/help/sites-authoring/templates.md#allowing-a-template-author) 子分支的適當頁面或根頁面。
    * 設定屬性：
       `cq:allowedTemplates`
 在 
@@ -604,7 +602,7 @@ GITHUB上的程式碼
 
 * 建立時使用合併自的子樹 `structure` 和 `initial` 在範本中
 
-* 在模板和模板類型中保留對資訊的引用。 這是透過 `jcr:content` 節點（具有屬性）:
+* 在模板和模板類型中保留對資訊的引用。 您可以透過 `jcr:content` 節點（具有屬性）:
 
    * `cq:template`
 提供對實際模板的動態參考；可讓範本的變更反映在實際頁面上。
@@ -617,7 +615,7 @@ GITHUB上的程式碼
 上圖顯示範本、內容和元件之間的關聯：
 
 * 控制器 —  `/content/<my-site>/<my-page>`
-參照模板的生成頁面。 內容可控制整個程式。 根據定義，它訪問相應的模板和元件。
+參照模板的生成頁面。 內容可控制整個程式。 根據定義，它存取適當的範本和元件。
 
 * 配置 —  `/conf/<my-folder>/settings/wcm/templates/<my-template>`
 此 [範本和相關內容原則](#template-definitions) 定義頁面設定。
@@ -629,17 +627,17 @@ GITHUB上的程式碼
 
 呈現頁面時：
 
-* **範本**:
+* **範例**:
 
    * 此 `cq:template` 其屬性 `jcr:content` 會參考節點來存取與該頁面對應的範本。
 
 * **元件**:
 
-   * 頁面元件將合併 `structure/jcr:content` 模板的樹 `jcr:content` 頁面樹狀結構。
+   * 頁面元件會合併 `structure/jcr:content` 模板的樹 `jcr:content` 頁面樹狀結構。
 
-   * 頁面元件將僅允許作者編輯已標示為可編輯的範本結構節點（以及任何子項）。
-   * 在頁面上呈現元件時，該元件的相對路徑將取自 `jcr:content` 節點；在 `policies/jcr:content` 然後會搜尋範本的節點。
+   * 頁面元件僅允許作者編輯已標示為可編輯的範本結構節點（以及任何子項）。
+   * 在頁面上呈現元件時，該元件的相對路徑會取自 `jcr:content` 節點；在 `policies/jcr:content` 然後搜索模板的節點。
 
-      * 此 `cq:policy` 此節點的屬性指向實際內容策略（即它包含該元件的設計配置）。
+      * 此 `cq:policy` 此節點的屬性指向實際內容策略（即保留該元件的設計配置）。
 
-      * 這允許您有多個模板重複使用相同的內容策略配置。
+      * 此功能可讓您擁有多個模板，可重複使用相同的內容策略配置。

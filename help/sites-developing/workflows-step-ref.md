@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e3afffd0-d90c-4bd0-b814-f7aeac6ceb6d
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
 workflow-type: tm+mt
-source-wordcount: '3284'
+source-wordcount: '3246'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 >
 >本節介紹標準工作流程步驟。
 >
->有關模組的特定步驟，另請參閱：
+>如需模組專屬步驟，請參閱下列內容：
 >
 >* [AEM Forms工作流程步驟參考資料](/help/forms/using/aem-forms-workflow-step-reference.md)
 >* [使用媒體處理常式和工作流程處理資產](/help/assets/media-handlers.md)
@@ -53,13 +53,12 @@ ht-degree: 2%
 
 * **逾時**
 
-   此步驟之後將「逾時」的時段。
+   步驟「逾時」的期間。
 您可以選取： **關閉**, **立即**, **1小時**, **6小時**, **12小時**, **24小時**.
 
 * **逾時處理常式**
 
-   步驟逾時時控制工作流程的處理常式；例如：
-   `Auto Advancer`
+   在步驟逾時時控制工作流程的處理常式。 例如 `Auto Advancer`
 
 * **處理常式前進**
 
@@ -71,19 +70,19 @@ ht-degree: 2%
 
 * **通過電子郵件通知用戶**
 
-   * 您可以在工作流到達步驟時向參與者發送電子郵件，以通知他們。
-   * 如果已啟用，系統會傳送電子郵件給屬性所定義的使用者 **使用者/群組** 或群組中每個成員（若已定義群組）。
+   * 當工作流程達到此步驟時，您可以傳送電子郵件通知參與者。
+   * 如果已啟用，則會傳送電子郵件給屬性定義的使用者 **使用者/群組**，或群組的每個成員（若已定義群組）。
 
 * **使用者/群組**
 
-   * 下拉式選取方塊可讓您導覽並選取使用者或群組。
-   * 如果您將步驟指派給特定使用者，則只有此使用者可以對步驟採取動作。
+   * 下拉式選取方塊可讓您導覽至並選取使用者或群組。
+   * 如果您將步驟指派給特定使用者，則只有此使用者可以對步驟採取行動。
    * 如果您將步驟指派給整個群組，則當工作流程達到此步驟時，此群組中的所有使用者都會在其中執行動作 **工作流程收件匣**.
    * 請參閱 [參與工作流程](/help/sites-authoring/workflows-participating.md) 以取得更多資訊。
 
 ## AND 拆分 {#and-split}
 
-此 **和分割** 在工作流程中建立分割，之後兩個分支都會生效。 您可以視需要將工作流程步驟新增至每個分支。 此步驟可讓您將多個處理路徑引入工作流程中。 例如，您可以允許同時執行某些審核步驟，以節省時間。
+此 **和分割** 在工作流程中建立分割，之後兩個分支都處於作用中狀態。 您可以視需要將工作流程步驟新增至每個分支。 此步驟可讓您將多個處理路徑引入工作流程中。 例如，您可以允許同時執行某些審核步驟，節省時間。
 
 ![wf-26](assets/wf-26.png)
 
@@ -142,12 +141,12 @@ ht-degree: 2%
 
 #### 模擬循環 {#simulating-a-for-loop}
 
-模擬for循環需要保持已發生循環迭代次數的計數：
+模擬「for loop」需要您保持已發生循環迭代次數的計數：
 
 * 計數通常代表在工作流程中處理之項目的索引。
 * 計數會評估為回圈的退出准則。
 
-例如，若要實作在數個JCR節點上執行動作的工作流程，您可以使用循環計數器作為節點的索引。 若要保留計數，請儲存 `integer` 值。 使用 **轉至步驟** 增加計數，並比較計數與退出條件。
+例如，若要實作在數個JCR節點上執行動作的工作流程，您可以使用循環計數器作為節點的索引。 若要保留計數，請儲存 `integer` 值。 若要增加計數並比較計數與退出條件，請使用 **轉至步驟**.
 
 ```
 function check(){
@@ -183,15 +182,15 @@ function check(){
 
 ![模擬for循環的條件](assets/variable_use_case_count1_new.png)
 
-此 **設定變數** 重複執行步驟以增加 **計數** 變數設為1，直到值達到5。
+此 **設定變數** 步驟會重複執行，遞增 **計數** 變數設為1，直到值達到5。
 
 ## OR 拆分 {#or-split}
 
-此 **或分割** 在工作流程中建立分割，之後只會有一個分支處於作用中狀態。 此步驟可讓您將條件式處理路徑引入工作流程中。 您可以視需要將工作流程步驟新增至每個分支。
+此 **或分割** 在工作流程中建立分割，之後只有一個分支處於作用中狀態。 此步驟可讓您將條件式處理路徑引入工作流程中。 您可以視需要將工作流程步驟新增至每個分支。
 
 >[!NOTE]
 >
->有關建立OR分割的詳細資訊，請參閱： [https://helpx.adobe.com/experience-manager/using/aem64_workflow_servlet.html](https://helpx.adobe.com/experience-manager/using/aem64_workflow_servlet.html)
+>請參閱 [或分割步驟](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html?lang=en#use-a-variable)
 
 ![使用OR分割進行分支](assets/variables_orsplit_new.png)
 
@@ -207,11 +206,11 @@ function check(){
    * **分支(*x)***
 
       * **添加分支：** 新增更多分支至步驟。
-      * **選擇路由表達式**:選擇要評估活動分支的路由表達式。 可能的值包括：規則定義、外部指令碼和ECMA指令碼。
+      * **選擇路由表達式**:要評估活動分支，請選擇路由表達式。 可能的值包括：規則定義、外部指令碼和ECMA指令碼。
       * **按一下以新增運算式**:添加表達式以計算活動分支（如果選擇） **規則定義** 作為路由表達式。
       * **指令碼路徑**:包含指令碼的檔案路徑，用於評估活動分支（如果您選擇） **外部指令碼** 作為路由表達式。
       * **指令碼**:在方塊中新增指令碼，以評估您選取的作用中分支 **ECMA指令碼** 作為路由表達式。
-      * **預設路由**:若有多個分支，則會遵循預設分支。 您只能指定一個分支作為預設值。
+      * **預設路由**:如果有多個分支，則會依循預設分支。 您只能指定一個分支作為預設值。
 
    >[!NOTE]
    >
@@ -231,7 +230,7 @@ function check(){
 
 ### 參與者步驟 {#participant-step}
 
-A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用者手動確認步驟時，工作流程才會繼續。 當您希望某人對工作流程採取動作時，就會使用此功能；例如，檢閱步驟。
+A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用者已手動確認步驟時，工作流程才會進行。 當您希望某人對工作流程採取行動時，會使用此工作流程。 例如，檢閱步驟。
 
 雖然與用戶授權不直接相關，但在分配操作時必須考慮用戶授權；使用者必須擁有工作流程裝載之頁面的存取權。
 
@@ -253,7 +252,7 @@ A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用
 
 >[!NOTE]
 >
->您需要設定某些屬性，才能啟用電子郵件通知。 您也可以自訂電子郵件範本，或為新語言新增電子郵件範本。 請參閱 [設定電子郵件通知](/help/sites-administering/notification.md#configuringemailnotification) 在AEM中設定電子郵件通知。
+>必須設定某些屬性才能啟用電子郵件通知。 您也可以自訂電子郵件範本，或為新語言新增電子郵件範本。 若要在AEM中設定電子郵件通知，請參閱 [設定電子郵件通知](/help/sites-administering/notification.md#configuringemailnotification).
 
 ### 對話方塊參與者步驟 {#dialog-participant-step}
 
@@ -275,10 +274,10 @@ A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用
 
 #### 對話參與者步驟 — 建立對話 {#dialog-participant-step-creating-a-dialog}
 
-要建立對話框，需要建立對話框：
+要建立對話框，必須建立對話框：
 
-* 決定產生的資料將在何處 [儲存在有效負載中](#dialog-participant-step-storing-data-in-the-payload).
-* [定義對話方塊；這包括定義用於收集（和儲存）資料的欄位](#dialog-participant-step-dialog-definition).
+* 決定產生的資料位置 [儲存在有效負載中](#dialog-participant-step-storing-data-in-the-payload).
+* [定義對話方塊；包括定義用於收集和儲存資料的欄位](#dialog-participant-step-dialog-definition).
 
 #### 對話參與者步驟 — 在裝載中儲存資料 {#dialog-participant-step-storing-data-in-the-payload}
 
@@ -290,14 +289,14 @@ A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用
       `./jcr:content/nodename`
 
    * 資料會儲存在 `nodename` 裝載節點的屬性。 如果節點不包含該屬性，則會建立屬性。
-   * 與裝載一併儲存時，具有相同裝載之對話方塊的後續使用會覆寫屬性的值。
+   * 與裝載一併儲存時，後續使用具有相同裝載的對話方塊會覆寫屬性的值。
 
 * **將資料與工作項一起儲存**
 
    * 要將Widget資料儲存為工作項元資料的屬性，請對name屬性的值使用以下格式：
       `nodename`
 
-   * 資料會儲存在 `nodename` 工作項的屬性 `metadata`. 如果對話方塊後續與相同裝載搭配使用，則會保留資料。
+   * 資料會儲存在 `nodename` 工作項的屬性 `metadata`. 如果對話方塊稍後會搭配相同的裝載使用，則會保留資料。
 
 #### 對話參與者步驟 — 對話定義 {#dialog-participant-step-dialog-definition}
 
@@ -324,7 +323,7 @@ A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用
 
    >[!NOTE]
    >
-   >如需詳細資訊，請參閱 [建立和設定對話方塊](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog).
+   >請參閱 [建立和設定對話方塊](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog).
 
 1. **對話框路徑屬性**
 
@@ -334,7 +333,7 @@ A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用
 
    `/apps/myapp/workflows/dialogs`
 
-   對於觸控式UI，會將下列值用於 **對話方塊路徑** 屬性：
+   對於觸控式UI，會使用下列值 **對話方塊路徑** 屬性：
 
    `/apps/myapp/workflow/dialogs/EmailWatch/cq:dialog`
 
@@ -342,7 +341,7 @@ A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用
 
 1. **示例對話框定義**
 
-   以下XML代碼片段代表一個對話框，用於儲存 `String` 值 `watchEmail` 裝載內容的節點。 標題節點代表 [TextField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/textfield/index.html) 元件：
+   以下XML代碼片段代表一個對話框，用於儲存 `String` 值 `watchEmail` 裝載內容的節點。 標題節點代表 [TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/textfield/index.html) 元件：
 
    ```xml
    jcr:primaryType="nt:unstructured"
@@ -370,7 +369,7 @@ A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用
    </cq:dialog>
    ```
 
-   此範例在觸控式UI的案例中，會產生下列對話方塊：
+   在觸控式UI中，此範例會產生下列對話方塊：
 
    ![chlimage_1-70](assets/chlimage_1-70.png)
 
@@ -411,10 +410,10 @@ A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用
 
    >[!CAUTION]
    >
-   >您 ***必須*** 不會變更 `/libs` 路徑。
+   >請勿變更 `/libs` 路徑。
    >
    >
-   >這是因為 `/libs` 會在您下次升級執行個體時覆寫（當您套用Hotfix或Feature Pack時，則會覆寫）。
+   >原因在於 `/libs` 會在您下次升級執行個體時覆寫（當您套用Hotfix或Feature Pack時，則會覆寫）。
 
    此指令碼選擇工作流啟動器作為參與者：
 
@@ -430,19 +429,19 @@ A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用
 
 * **OSGi服務**
 
-   服務必須實作 [com.day.cq.workflow.exec.ParticipantStepChooser](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html) 介面。 介面定義以下成員：
+   服務必須實作 [com.day.cq.workflow.exec.ParticipantStepChooser](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html) 介面。 介面定義以下成員：
 
    * `SERVICE_PROPERTY_LABEL` 欄位：使用此欄位指定參與者選擇器的名稱。 該名稱將出現在 **動態參與者步驟** 屬性。
 
    * `getParticipant` 方法：以 `String` 值。
    >[!CAUTION]
    >
-   >此 `getParticipant` 方法會傳回動態解析的主體id。 這可以是群組id或使用者id。
+   >此 `getParticipant` 方法會傳回動態解析的主體id。 此id可以是群組id或使用者id。
    >
    >
-   >不過，群組ID只能用於 **參與者步驟**，則返回參與者清單。 若 **動態參與者步驟** 系統會傳回空白清單，且無法用於委派。
+   >不過，群組ID只能用於 **參與者步驟**，則返回參與者清單。 若 **動態參與者步驟**，則會傳回空白清單，且無法用於委派。
 
-   讓實施可供使用 **動態參與者步驟** 元件，將您的Java類添加到導出服務的OSGi捆綁包中，並將捆綁包部署到AEM伺服器。
+   讓實施可供使用 **動態參與者步驟** 元件，將您的Java™類添加到導出服務的OSGi捆綁包中，然後將捆綁包部署到AEM伺服器。
 
    >[!NOTE]
    >
@@ -450,7 +449,7 @@ A **參與者步驟** 可讓您為特定動作指派所有權。 只有當使用
 
 #### 動態參與者步驟 — 參與者選擇器服務示例 {#dynamic-participant-step-example-participant-chooser-service}
 
-以下Java類實現 `ParticipantStepChooser` 介面。 類返回啟動工作流的參與者的名稱。 程式碼使用與範例指令碼(`initiator-participant-chooser.ecma`)使用。
+以下Java™類實現 `ParticipantStepChooser` 介面。 類返回啟動工作流的參與者的名稱。 程式碼使用與範例指令碼(`initiator-participant-chooser.ecma`)使用。
 
 此 `@Property` 注釋設定 `SERVICE_PROPERTY_LABEL` 欄位至 `Workflow Initiator Participant Chooser`.
 
@@ -583,14 +582,14 @@ A **處理步驟** 執行ECMAScript或呼叫OSGi服務以執行自動處理。
 
       * 標準ECMAScript和OSGi服務，請參見 [用於流程步驟的內置流程](/help/sites-developing/workflows-process-ref.md).
       * 為流程步驟建立ECMAScript，請參閱 [使用ECMAScript實作處理步驟](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).
-      * 建立「處理」步驟的OSGi服務，請參閱 [使用Java類實施處理步驟](/help/sites-developing/workflows-customizing-extending.md#implementing-a-process-step-with-a-java-class).
+      * 建立「處理」步驟的OSGi服務，請參閱 [使用Java™類實施處理步驟](/help/sites-developing/workflows-customizing-extending.md#implementing-a-process-step-with-a-java-class).
    * **處理常式進階**:選取此選項，即可在執行後自動將工作流程推進至下一個步驟。 如果未選取，實施指令碼必須處理工作流程進階。
    * **引數**:要傳遞至此進程的參數。
 
 
 ## 設定變數 {#set-variable}
 
-「設定變數」步驟可讓您設定變數的值，並定義值的設定順序。 變數的設定順序為變數對應在「設定變數」步驟中列出的順序。
+「設定變數」步驟可讓您設定變數的值，並定義值的設定順序。 變數的設定順序為「設定變數」步驟中列出變數對應的順序。
 
 ![新增對應以設定變數](assets/set_variable_addmappingnew.png)
 
@@ -602,7 +601,7 @@ A **處理步驟** 執行ECMAScript或呼叫OSGi服務以執行自動處理。
 * **映射**
 
    * **選取變數：** 使用此選項可選取變數以設定其值。
-   * **選擇映射模式：** 選取對應模式以設定變數的值。 根據變數的資料類型，您可以使用下列選項來設定變數的值：
+   * **選擇映射模式：**  若要設定變數的值，請選取對應模式。 根據變數的資料類型，您可以使用下列選項來設定變數的值：
 
       * **常值：** 當您知道要指定的確切值時，請使用選項。
       * **運算式：** 根據運算式計算要使用的值時，請使用選項。 運算式是在提供的運算式編輯器中建立。
@@ -610,5 +609,5 @@ A **處理步驟** 執行ECMAScript或呼叫OSGi服務以執行自動處理。
       * **XPATH:** 使用選項可從XML類型變數中檢索值。
       * **相對於裝載：** 當要儲存至變數的值在與裝載相關的路徑上可用時，請使用選項。
       * **絕對路徑：** 當要儲存至變數的值在絕對路徑上可用時，請使用選項。
-   * **指定值：** 指定要對應至變數的值。 您在此欄位中指定的值取決於對應模式。
+   * **指定值：** 若要對應至變數，請指定值。 您在此欄位中指定的值取決於對應模式。
    * **添加映射：** 使用此選項可新增更多對應以設定變數的值。
