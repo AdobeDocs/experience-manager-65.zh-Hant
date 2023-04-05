@@ -1,8 +1,6 @@
 ---
-title: 範本
-seo-title: Templates
-description: 建立將用作新頁面基礎的頁面時，會使用範本
-seo-description: Templates are used when creating a page which will be used as the base for the new page
+title: 範例
+description: 建立用作新頁面基礎的頁面時，會使用範本。
 uuid: 6fa3dafc-dfa1-42d8-b296-d4be57449411
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,20 +9,20 @@ content-type: reference
 discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 95638b6dd9527c567b38d8cd9da14633bd4142b5
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '931'
 ht-degree: 1%
 
 ---
 
-# 範本{#templates}
+# 範例{#templates}
 
 範本會用於AEM中的各個時間點：
 
-* 當 [建立需要選擇模板的頁面](#templates-pages);這將用作新頁面的基礎。 範本會定義產生的頁面、任何初始內容和 [元件](/help/sites-authoring/default-components.md) 可使用（設計屬性）。
+* [建立頁面時，您會選取範本](#templates-pages). 此範本是新頁面的基礎。 範本會定義頁面、任何初始內容，以及 [元件](/help/sites-authoring/default-components.md) 可使用（設計屬性）。
 
-* 當 [建立內容片段，您也需要選取範本](#templates-content-fragments). 此範本會定義結構、初始元素和變異。
+* [建立內容片段時，您也會選取範本](#templates-content-fragments). 此範本會定義結構、初始元素和變異。
 
 以下範本將詳細說明：
 
@@ -39,7 +37,7 @@ AEM現在提供兩種建立頁面的基本範本類型：
 
 >[!NOTE]
 >
->將範本用於 [建立新頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page) 沒有可見的差異（對頁面作者而言），也沒有使用範本類型的指示。
+>將範本用於 [建立頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page)，則不會有顯示差異（對頁面作者而言），也不會顯示使用的範本類型。
 
 ### 可編輯的範本 {#editable-templates}
 
@@ -55,23 +53,23 @@ AEM現在提供兩種建立頁面的基本範本類型：
    * 初始內容
    * 內容原則
 
-* 建立新頁面後，頁面與範本之間會維持動態連線；這表示使用該範本建立的任何頁面上都會反映對範本結構的變更（不會反映初始內容的變更）。
+* 建立新頁面後，頁面與範本之間會維持動態連線。 此連線表示使用該範本建立的任何頁面都會反映對範本結構的變更；不會反映初始內容的變更。
 * 使用內容原則（從範本編輯器編輯）來保留設計屬性（不在頁面編輯器內使用設計模式）。
 * 儲存於 `/conf`
 * 請參閱 [可編輯的範本](/help/sites-developing/page-templates-editable.md) 以取得更多資訊。
 
 >[!NOTE]
 >
->AEM社群文章可供參考，說明如何使用可編輯的範本開發Experience Manager網站，請參閱 [使用可編輯的範本建立Adobe Experience Manager 6.5網站](https://helpx.adobe.com/experience-manager/using/first_aem64_website.html).
+>請參閱 [使用可編輯的頁面範本來開發Experience Manager網站](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en).
 
 ### 靜態範本 {#static-templates}
 
 靜態範本:
 
 * 必須由開發人員定義和設定。
-* 這是AEM的原始範本系統，可用於許多版本。
+* AEM的原始範本系統，適用於許多版本。
 * 靜態範本是節點的階層，其結構與要建立的頁面相同，但沒有任何實際內容。
-* 系統會複製以建立新頁面，之後不會有動態連線。
+* 系統會複製以建立頁面，之後不會有動態連線。
 * 使用 [設計模式](/help/sites-authoring/default-components-designmode.md) 保留設計屬性。
 * 儲存於 `/apps`
 * 請參閱 [靜態範本](/help/sites-developing/page-templates-static.md) 以取得更多資訊。
@@ -86,7 +84,7 @@ AEM現在提供兩種建立頁面的基本範本類型：
 
 >[!CAUTION]
 >
->AEM提供多個屬性，以控制 **網站**. 但是，結合這些規則可能會產生非常複雜的規則，且難以追蹤和管理。
+>AEM提供多個屬性，以控制 **網站**. 但是，結合這些規則可能會導致難以追蹤和管理的複雜規則。
 >
 >因此，Adobe建議您透過定義：
 >
@@ -98,11 +96,11 @@ AEM現在提供兩種建立頁面的基本範本類型：
 >
 >屬性 `allowedPaths`, `allowedParents`，和 `allowedChildren` 也可以放在範本上，以定義更複雜的規則。 但是，如果可能， *mod* 更簡單地定義 `cq:allowedTemplates` 屬性（如果需要進一步限制允許的範本）。
 >
->另一個優點是 `cq:allowedTemplates` 屬性可由作者在 **進階** 的 **頁面屬性**. 無法使用（標準）UI更新其他範本屬性，因此需要開發人員來維護每次變更的規則和程式碼部署。
+>另一個優勢是 `cq:allowedTemplates` 屬性可由作者在 **進階** 的 **頁面屬性**. 無法使用（標準）UI更新其他範本屬性，因此需要開發人員來維護每次變更的規則和程式碼部署。
 
-在網站管理員介面中建立新頁面時，可用範本清單會根據新頁面的位置，以及每個範本中指定的位置限制而定。
+在網站管理員介面中建立頁面時，可用範本清單取決於新頁面的位置，以及每個範本中指定的位置限制。
 
-下列屬性決定範本是否為 `T` 可用於將新頁面放置為頁面子項 `P`. 這些屬性中的每個都是多值字串，包含零個或多個用於與路徑比對的規則運算式：
+下列屬性決定範本是否為 `T` 用於將新頁面放置為頁面子項 `P`. 這些屬性中的每個都是多值字串，包含零個或多個用於與路徑比對的規則運算式：
 
 * 此 `cq:allowedTemplates` 屬性 `jcr:content` 子節點 `P` 或祖先 `P`.
 
@@ -120,7 +118,7 @@ AEM現在提供兩種建立頁面的基本範本類型：
 
 * 如果上述兩個屬性均為空或不存在， `T` 拒絕，除非它屬於與 `P`. `T` 屬於與 `P` 如果且唯若路徑的第二層名稱 `T` 與路徑的第二層的名稱相同 `P`. 例如，範本 `/apps/geometrixx/templates/foo` 屬於與頁面相同的應用程式 `/content/geometrixx`.
 
-* 若 `T` 具有非空白 `allowedParents` 屬性，但沒有任何值符合 `P`, `T` 被拒絕。
+* 若 `T` 非空白 `allowedParents` 屬性，但沒有任何值符合 `P`, `T` 被拒絕。
 
 * 若範本為 `P` 非空白 `allowedChildren` 屬性，但沒有任何值符合 `T`, `T` 被拒絕。
 
@@ -136,8 +134,8 @@ AEM現在提供兩種建立頁面的基本範本類型：
 
 您可以使用 `cq:allowedTemplates` 範本的屬性  `jcr:content` 節點，將此配置應用於使用此模板的所有新建立的頁面。
 
-如果您想要新增更多限制（例如關於範本階層），可使用 `allowedParents/allowedChildren` 屬性。 然後，您可以明確指定從範本T建立的頁面必須是從範本T建立的頁面的父/子頁面。
+如果您想要新增更多限制（例如，關於範本階層），您可以使用 `allowedParents/allowedChildren` 屬性。 然後，您可以明確指定從範本T建立的頁面必須是從範本T建立的頁面的父/子頁面。
 
 ## 範本 — 內容片段 {#templates-content-fragments}
 
-請參閱 [內容片段範本](/help/sites-developing/content-fragment-templates.md) 以取得完整資訊。
+請參閱 [內容片段範本](/help/sites-developing/content-fragment-templates.md).

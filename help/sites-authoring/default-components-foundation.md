@@ -13,9 +13,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 95638b6dd9527c567b38d8cd9da14633bd4142b5
 workflow-type: tm+mt
-source-wordcount: '7272'
+source-wordcount: '7200'
 ht-degree: 8%
 
 ---
@@ -26,13 +26,13 @@ ht-degree: 8%
 >
 >AEM 6.5現已棄用大部分的基礎元件。請參閱 [發行說明](/help/release-notes/deprecated-removed-features.md) 以取得更多資訊。
 >
->Adobe建議運用更現代且可擴充的 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 在AEM專案中。 這些是 [We.Retail範例內容](/help/sites-developing/we-retail.md) 也可以 [獨立安裝，用於開發](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html) 由您的管理員進行。
+>Adobe建議使用更現代且可擴充的 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 在AEM專案中。 這些元件是 [We.Retail範例內容](/help/sites-developing/we-retail.md) 也可以 [獨立安裝，用於開發](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html) 由您的管理員進行。
 >
 >您可以使用 [AEM現代化工具套裝](https://opensource.adobe.com/aem-modernize-tools/) 以重構您的基礎元件網站，以使用核心元件。
 
 基礎元件是專為在標準網頁編寫內容時使用而設計。 它們構成標準AEM安裝可用的元件子集。
 
-有些可透過元件瀏覽器立即使用，其他則可使用 [設計模式](/help/sites-authoring/default-components-designmode.md) （如果頁面是根據靜態範本）或依據 [編輯範本](/help/sites-authoring/templates.md) （如果頁面是以可編輯的範本為基礎）。
+有些功能可透過元件瀏覽器立即使用。 您也可使用 [設計模式](/help/sites-authoring/default-components-designmode.md) （如果頁面是根據靜態範本）或依據 [編輯範本](/help/sites-authoring/templates.md) （如果頁面是以可編輯的範本為基礎）。
 
 我們支援使用基礎元件，但大部分已淘汰，並由核心元件取代，因而更具擴充性和彈性。
 
@@ -40,7 +40,7 @@ ht-degree: 8%
 >
 >本節僅探討標準AEM安裝中可立即使用的元件。
 >
->您可能已根據您的執行個體明確開發自訂元件，以符合您的需求。 這些元件甚至可能與此處討論的某些元件具有相同的名稱。
+>您可能已根據您的執行個體明確開發自訂元件，以符合您的需求。 這些自訂元件甚至可能與此處討論的某些元件具有相同名稱。
 
 元件可在 **元件** 頁面編輯器的側面板標籤 [編輯頁面](/help/sites-authoring/editing-content.md).
 
@@ -55,7 +55,7 @@ ht-degree: 8%
 
 * [一般](#general):包括基本元件，包括文本、影像、表和圖表。
 * [欄](#columns):包括組織內容佈局所需的元件。
-* [表單](#formgroup):包含建立表單所需的所有元件。
+* [表單](#formgroup):包括建立表單所需的所有元件。
 
 ## 一般 {#general}
 
@@ -75,7 +75,7 @@ ht-degree: 8%
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html) 。
 
 適用性影像基礎元件會產生大小適合開啟網頁之視窗的影像。 若要使用元件，您可從檔案系統或DAM提供影像資源。 當開啟網頁時，網頁瀏覽器會下載已調整大小的影像副本，以適合目前視窗。
 
@@ -84,7 +84,7 @@ ht-degree: 8%
 * 設備螢幕：行動裝置通常會顯示網頁，使其在整個畫面中延伸。
 * Web瀏覽器窗口大小：筆記型電腦和台式電腦的用戶可以調整Web瀏覽器窗口的大小。
 
-例如，當在手機上開啟網頁時，元件會產生小型影像，而當在平板電腦上開啟中型影像時，元件會產生中型影像。 在筆記型電腦上，當在最大化的Web瀏覽器中開啟頁面時，元件會建立並傳遞大型影像。 當調整Web瀏覽器的大小以適合螢幕的一部分時，元件會透過傳送較小的影像並重新整理檢視來適應。
+例如，當在手機上開啟網頁時，元件會產生小型影像，而當在平板電腦上開啟中型影像時，元件會產生中型影像。 在筆記型電腦上，當頁面在最大化的網頁瀏覽器中開啟時，元件會建立並傳遞大型影像。 當調整Web瀏覽器的大小以適合螢幕的一部分時，元件會透過傳送較小的影像並重新整理檢視來適應。
 
 #### 支援的影像格式 {#supported-image-formats}
 
@@ -128,7 +128,7 @@ ht-degree: 8%
 從內容尋找器拖曳影像，或按一下以開啟瀏覽視窗，讓您在其中載入影像。 載入影像後，您可以裁切影像、旋轉影像或將其刪除。 要放大或縮小影像，請使用影像下方的幻燈片條（在「確定」和「取消」按鈕上）
 
    * **裁切**
-裁切影像。 拖曳邊框以裁切影像。
+剪輯影像的一部分。 拖曳邊框以裁切影像。
 
    * **旋轉**
 重複按一下「旋轉」，直到影像按所需旋轉。
@@ -158,7 +158,7 @@ ht-degree: 8%
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [轉盤核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [轉盤核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html) 。
 
 轉盤元件可讓您顯示與個別頁面相關聯的影像：
 
@@ -167,17 +167,17 @@ ht-degree: 8%
 * 按您指定的順序
 * 具有您指定之
 
-可點按控制項也可讓使用者隨選即時循環瀏覽顯示的頁面。 按一下目前可見的頁面影像，即會前往該頁面。 換句話說，輪播就是導覽控制項。
+可點按控制項也可讓使用者隨選即時循環瀏覽顯示的頁面。 選取目前可見的頁面影像，即會前往該頁面。 換句話說，輪播就是導覽控制項。
 
 #### 屬性 {#properties-1}
 
-這兩個標籤提供：
+這些屬性可在兩個索引標籤中使用：
 
 * **輪播**
 您可在此指定輪播的運作方式：
 
    * 播放速度顯示下一張幻燈片之前的時間（毫秒）。
-   * 轉換時間兩張幻燈片之間轉換的時間（毫秒）。
+   * 轉變時間兩張幻燈片之間轉變的時間（以毫秒為單位）。
    * 控制樣式從下拉菜單中提供各種選項；例如， Prev / Next按鈕，右上角的開關。
 
 * **清單**
@@ -186,8 +186,8 @@ ht-degree: 8%
 
    * **使用**
 建立頁面清單有數種方式 — 子頁面、固定清單、搜尋或進階搜尋（以下皆說明）。
-請注意，無論您選擇哪種方法，清單中包含的頁面若已有與頁面相關聯的影像，則會顯示在輪播中的影像。 如果該頁面的「頁面屬性」下沒有指定頁面的影像，您應該在開始前將影像與頁面建立關聯，否則輪播會顯示空白（或大部分為空白）頁面。 請參閱 [編輯頁面屬性](/help/sites-authoring/editing-page-properties.md).
-將根據您選擇的新面板的項目顯示：
+無論您選擇哪種方法，您在清單中加入的頁面，皆應已有與頁面相關聯的影像。 這是輪播中顯示的影像。 如果該頁面的「頁面屬性」下沒有指定頁面的影像，您應該在開始前先將影像與頁面建立關聯。 如果沒有，轉盤通常會顯示空白頁面。 請參閱 [編輯頁面屬性](/help/sites-authoring/editing-page-properties.md).
+系統會根據您選擇的項目顯示新面板：
 
       * **子頁面的選項**
 
@@ -215,7 +215,7 @@ ht-degree: 8%
 `jcr:title`, `jcr:created`, `cq:lastModified`，或 `cq:template` 從下拉式功能表。
 
    * **限制**
-您要在轉盤中使用的項目數上限；此為選填。
+選填。 您要在轉盤中使用的項目數上限。
 
 
 
@@ -223,7 +223,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->您可以為Adobe Experience Manager建立自訂輪播元件，以顯示位於AEM DAM中的數位資產。 如需詳細資訊，請參閱 [建立適用於Adobe Experience Manager的自訂轉盤元件](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html).
+>您可以為Adobe Experience Manager建立自訂輪播元件，在AEM DAM中顯示數位資產。 請參閱 [建立適用於Adobe Experience Manager的自訂轉盤元件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en).
 
 ### 圖表 {#chart}
 
@@ -244,7 +244,7 @@ ht-degree: 8%
 從餅圖、折線圖和條形圖中選擇。
 
    * **替代文字**
-顯示的替代文字而非圖表。
+顯示替代文字而非圖表。
 
    * **寬度**
 圖表的寬度（像素）。
@@ -258,13 +258,13 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->您可以建立自訂AEM圖表控制項，以顯示位於AEM JCR中的資料。 如需詳細資訊，請參閱 [在圖表中顯示Adobe Experience Manager資料](https://helpx.adobe.com/experience-manager/using/displaying-experience-manager-data-chart.html).
+>您可以建立自訂AEM圖表控制項，以在AEM JCR中顯示資料。 如需詳細資訊，請參閱 [在圖表中顯示Adobe Experience Manager資料](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en).
 
 ### 內容片段 {#content-fragment}
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) 。
 
 [內容片段](/help/sites-authoring/content-fragments.md) 會建立並管理為不受頁面影響的資產。 然後，您可以在編寫內容頁面時使用這些片段及其變體。
 
@@ -274,7 +274,7 @@ ht-degree: 8%
 >
 >此基礎元件已淘汰。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 。
 
-這可讓您上傳包含設計套件的zip檔案。
+此元件可讓您上傳包含設計套件的zip檔案。
 
 ### 下載 {#download}
 
@@ -290,7 +290,7 @@ ht-degree: 8%
 下載連結所顯示的簡短說明。
 
    * **檔案**
-可在產生的網頁上下載檔案。 從內容尋找器拖曳資產，或按一下區域以上傳可供下載的檔案。
+可在產生的網頁上下載的檔案。 從內容尋找器拖曳資產或選取區域，以便上傳要供下載的檔案。
 
 下列範例顯示中的下載元件Geometrixx:
 
@@ -324,7 +324,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->例如，根據您的使用案例，其他選項可用於整合外部應用程式。 the [整合Portlet](/help/sites-administering/aem-as-portal.md).
+>根據您的使用案例，其他選項可用於整合外部應用程式，例如 [整合Portlet](/help/sites-administering/aem-as-portal.md).
 
 ### 閃光燈 {#flash}
 
@@ -378,7 +378,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [影像核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html) 。
 
 影像元件會根據指定的參數顯示影像和隨附的文字。
 
@@ -388,7 +388,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 ![chlimage_1-91](assets/chlimage_1-91.png)
 
-上傳影像後（而非之前），您可以使用 [置入編輯](/help/sites-authoring/editing-content.md#edit-content) 要根據需要裁切/旋轉影像：
+上傳影像後（而不是之前），您可以使用 [置入編輯](/help/sites-authoring/editing-content.md#edit-content) 要根據需要裁切/旋轉影像：
 
 ![](do-not-localize/chlimage_1-15.png)
 
@@ -396,7 +396,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 >
 >就地編輯器在編輯時使用影像的原始大小和外觀比例。 您也可以指定高度和寬度屬性。 儲存編輯變更時，屬性中定義的任何大小和外觀比例限制都會套用。
 >
->根據您的例項，您也可能對 [頁面設計](/help/sites-developing/designer.md);這些項目是在項目實施期間開發的。
+>根據您的例項，您也可能對 [頁面設計](/help/sites-developing/designer.md). 這些限制是在項目實施期間制定的。
 
 全螢幕編輯模式提供其他幾個選項；例如，對應和縮放：
 
@@ -406,7 +406,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 >
 >無法使用Internet Explorer監控上傳進度。
 >
->Internet Explorer使用者需上傳影像，然後按一下 **確定** 然後重新開啟影像，在預覽中查看已上傳的檔案，並能夠執行修改（即裁切）。
+>Internet Explorer用戶必須上載影像並按一下 **確定**，然後重新開啟影像，以在預覽中查看已上傳的檔案，並能夠執行修改（即裁切）。
 >
 >請參閱 [認證平台](/help/release-notes/release-notes.md#certifiedplatforms) 區段，以取得AEM所使用HTML5功能的詳細資訊。
 
@@ -418,7 +418,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 * **裁切**
 
-   選取「裁切」以裁切影像。 使用滑鼠來裁切影像。
+   要剪除影像的一部分，請選擇「裁切」。 使用滑鼠來裁切影像。
 
 * **旋轉**
 
@@ -458,7 +458,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 ### 配置容器 {#layout-container}
 
-此元件提供網格段落系統，允許您在 [回應式格線](/help/sites-authoring/responsive-layout.md). 這可讓您根據目標裝置的寬度（包括一系列手機、平板電腦和桌上型電腦）定義不同的內容配置。
+此元件提供網格段落系統，可讓您在 [回應式格線](/help/sites-authoring/responsive-layout.md). 您可以根據目標裝置的寬度（包括手機、平板電腦和桌上型電腦）定義不同的內容配置。
 
 ![chlimage_1-93](assets/chlimage_1-93.png)
 
@@ -470,7 +470,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [清單核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [清單核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html) 。
 
 「清單」元件可讓您設定顯示清單的搜尋條件：
 
@@ -478,9 +478,9 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
    * **使用以下方式產生清單**
 
-      您可以在此處指定清單將擷取其內容的位置。 有數種方法：
+      您可以在此處指定清單擷取其內容的位置。 有數種方法：
 
-   * 將根據您選擇的新面板的項目顯示：
+   * 系統會根據您選擇的項目顯示新面板：
 
       * **子頁面的選項**
 
@@ -510,7 +510,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
             請參閱 [QueryBuilder API](/help/sites-developing/querybuilder-api.md) 以完整討論查詢運算式和其他範例。
       * **標記**
 
-         指定 **上層頁面**, **標籤/關鍵字** 和您所需的符合條件。
+         指定 **上層頁面**, **標籤/關鍵字**，以及您所需的符合條件。
    * **顯示為**
 
       您希望項目的列出方式；包括連結、預告和新聞。
@@ -529,14 +529,14 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
    * **每頁顯示項目數**
 
-      您可以在此處指定一次顯示的清單項目數。 項目數超過指定的清單會使用分頁功能，以數個部分顯示清單。
+      您可以在此處指定一次顯示的清單項目數。 項目數超過指定的清單會使用分頁來在多個部分顯示清單。
 
 
 
 
 
 
-下列範例顯示 **清單** 元件顯示子頁面清單的方式（設計由網站設計的自訂CSS定義控制）。
+下列範例顯示 **清單** 元件，可顯示子頁面清單的方式（設計由網站設計的自訂CSS定義控制）。
 
 ![dc_list_use](assets/dc_list_use.png)
 
@@ -550,7 +550,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 >
 >若不進行廣泛的專案層級自訂，此元件將不再可立即運作。
 
-這些欄位提供「使用者名稱」和「密碼」欄位。
+提供「用戶名」和「密碼」欄位。
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
 
@@ -610,9 +610,9 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [內容片段核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) 。
 
-此 **參考** 元件可讓您參照AEM網站其他頁面（在目前例項內）的文字。 然後，所引用段落的內容就會顯示為位於當前頁面上。 當來源段落變更時，內容將會更新（可能需要重新整理頁面）。
+此 **參考** 元件可讓您參照AEM網站其他頁面（在目前例項內）的文字。 然後，所引用段落的內容就會顯示為位於當前頁面上。 來源段落變更時，內容會更新（可能需要重新整理頁面）。
 
 * **段落引用**
 
@@ -620,7 +620,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
       指定您要參考的頁面和段落（包括內容）的路徑。
 
-要指定段落的路徑，您需要在路徑（到頁面）的尾碼上加上：
+若要指定段落的路徑，您必須在路徑（到頁面）的尾碼加上：
 
 `.../jcr:content/par/<paragraph-ID>`
 
@@ -628,7 +628,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 `/content/geometrixx-outdoors/en/equipment/biking/cajamara/jcr:content/par/similar-products`
 
-除了引用特定段落外，還可以修改路徑以指定整個段落系統。 您可以在路徑尾碼加上：
+除了參考特定段落外，還可以修改路徑以指定整個par-system。 您可以借由在路徑尾碼加上下列項目來執行此參考：
 
 `/jcr:content/par`
 
@@ -644,7 +644,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [快速搜尋核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/quick-search.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [快速搜尋核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/quick-search.html) 。
 
 搜尋元件會將搜尋功能新增至您的頁面。
 
@@ -675,11 +675,11 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
    * **拼寫檢查文字**
 
       如果某人輸入了類似的詞語，則此文字會顯示在詞語之前。
-例如，如果您輸入geometrixxe，系統會顯示「您是說？」 geometrixx」。
+例如，如果您輸入 `Geometrixxe`，系統會顯示「您是說？ Geometrixx&quot;.
 
    * **類似頁面文字**
 
-      類似頁面的結果旁顯示的文字。 按一下此連結可查看具有類似內容的頁面。
+      類似頁面的結果旁顯示的文字。 若要查看具有類似內容的頁面，請按一下此連結。
 
    * **相關搜索文本**
 
@@ -701,7 +701,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
       顯示在後續搜尋頁面連結上的名稱。
 
-下列範例顯示搜尋字詞後的搜尋元件 *geometrixx* 從標準安裝的根目錄。 這也說明結果的分頁：
+下列範例顯示搜尋字詞後的搜尋元件 *`geometrixx`* 從標準安裝的根目錄。 它也說明結果的分頁：
 
 ![dc_search_use](assets/dc_search_use.png)
 
@@ -713,13 +713,13 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [導覽](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html), [語言導覽](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/language-navigation.html)，和 [階層連結核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/breadcrumb.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [導覽](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html), [語言導覽](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/language-navigation.html)，和 [階層連結核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/breadcrumb.html) 。
 
 自動Sitemap清單（具有預設設定）會列出目前網站中的所有頁面（作為作用中連結）。 例如，擷取會顯示：
 
 ![dc_sitemap_use](assets/dc_sitemap_use.png)
 
-如有需要，您可以設定：
+如有必要，您可以設定下列項目：
 
 * **Sitemap**
 
@@ -731,13 +731,13 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [轉盤核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [轉盤核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html) 。
 
 >[!CAUTION]
 >
 >若不進行廣泛的專案層級自訂，此元件將不再可立即運作。
 
-此元件允許您載入一系列要以幻燈片形式顯示在頁面上的影像。您可以添加或刪除影像，並為每個影像分配標題。 在「高級」(Advanced)下，還可以指定顯示區域的大小。
+此元件可讓您載入一系列影像，以顯示為頁面上的投影片。 您可以新增或移除影像，並為每個影像指派標題。 在「高級」(Advanced)下，還可以指定顯示區域的大小。
 
 您可以設定：
 
@@ -749,7 +749,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
    * **標題**
 
-      視需要指定標題。 這個覆蓋在適當的幻燈片上。
+      視需要指定標題。 標題覆蓋在適當的幻燈片上。
 
 * **進階**
 
@@ -757,7 +757,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
       以像素指定寬度和高度。
 
-然後，幻燈片放映元件會在一段較短的時間內重複顯示每個元件，然後淡出到下一張幻燈片：
+然後，投影片放映元件會在一段短暫時間內，重複顯示每個元件，然後淡出至下一張投影片：
 
 ![dc_slideshow_use](assets/dc_slideshow_use.png)
 
@@ -765,7 +765,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html) 。
 
 >[!NOTE]
 >
@@ -774,7 +774,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 此 **表格** 元件已預先設定，可讓您建構、填入表格並設定表格格式。 使用對話框，可以通過以下任一方法配置表並建立內容：
 
 * 從頭開始
-* 從外部編輯器（如Excel、OpenOffice、Notepad等）複製並貼上試算表或表格。
+* 從外部編輯器（如Excel、OpenOffice和記事本）複製並貼上試算表或表格。
 
 您可以使用內嵌編輯器對內容進行基本變更：
 
@@ -814,7 +814,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html) 。
 
 >[!NOTE]
 >
@@ -829,7 +829,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並搭配 [RTF編�
 * **空格字元**
 * **文字樣式**
 
-格式化的文字隨即顯示在頁面上；實際設計將取決於網站CSS:
+格式化文字會顯示在頁面上。 實際設計取決於網站CSS:
 
 ![dc_text_use](assets/dc_text_use.png)
 
@@ -843,7 +843,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並搭配 [RTF編�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 和 [文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [影像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html) 和 [文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html) 。
 
 文字和影像元件會新增文字區塊和影像。 您也可以個別新增和編輯文字和影像。 請參閱 [文字](#text) 和 [影像](#image) 元件以取得詳細資訊。
 
@@ -865,11 +865,11 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並搭配 [RTF編�
 
    * **標題**
 
-      區塊的標題；將以mouseover顯示。
+      區塊的標題，由Mouseover顯示。
 
    * **替代文字**
 
-      當無法顯示影像時要顯示的替代文字。 如果保留為空白，則會使用標題。
+      當無法顯示影像時要顯示的替代文字。 如果保留為空白，則使用標題。
 
    * **連結到**
 
@@ -891,12 +891,12 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並搭配 [RTF編�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [標題核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html?lang=en) 。
+>此基礎元件已淘汰。 Adobe建議使用 [標題核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=en) 。
 
 標題元件可以：
 
-* 顯示目前頁面的名稱；將「標題」欄位留空即可完成此作業
-* 顯示在「標題」欄位中指定的文字。
+* 將「標題」欄位留空，以顯示目前頁面的名稱。
+* 顯示在「標題」欄位中指定的文本。
 
 您可以設定：
 
@@ -920,7 +920,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並搭配 [RTF編�
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [核心元件內嵌元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [核心元件內嵌元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html) 。
 
 >[!CAUTION]
 >
@@ -930,7 +930,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並搭配 [RTF編�
 
 另請參閱 [設定您的視訊設定檔](/help/sites-administering/config-video.md#configuringvideoprofiles) 用於HTML5元素。
 
-將元件的例項放在頁面上後，您可以設定：
+將元件的例項放在頁面上後，您可以設定下列項目：
 
 * 影片
 
@@ -940,7 +940,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並搭配 [RTF編�
 
    * **大小**
 
-      視訊的原生大小(寬x高（以像素為單位）會出現在「大小」旁的方塊中（請參閱上方）。 如果您想要覆寫視訊的原生維度，請在此手動輸入寬度和高度維度。 按一下 **確定** 關閉對話。
+      視訊的原生大小(寬度x高度（像素）)會出現在「大小」旁的方塊中（請參閱上方）。 如果您想要覆寫視訊的原生維度，請在此手動輸入寬度和高度維度。 選取 **確定** 會關閉對話方塊。
 
 >[!NOTE]
 >
@@ -953,19 +953,19 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並搭配 [RTF編�
 
 ## 欄 {#columns}
 
-欄是控制AEM中內容版面的機制。 在用於建立兩列和/或三列的標準安裝元件中提供。
+欄是控制AEM中內容版面的機制。 在標準安裝中，提供了用於建立兩列或三列的元件。
 
-下列範例顯示使用中的2欄元件。 您可以為新元件使用預留位置：
+下列範例顯示使用中的兩個欄元件。 您可以為新元件使用預留位置：
 
 ![dc_columncontroluse](assets/dc_columncontroluse.png)
 
 ### 2 欄 {#columns-1}
 
-預設值為2個等於列的列控制元件。
+預設為兩列相等的列控制元件。
 
 ### 3 欄 {#columns-2}
 
-預設值為3個等於列的列控制元件。
+預設值為三列相等的列控制元件。
 
 ### 欄控制項 {#column-control}
 
@@ -981,7 +981,7 @@ Text元件可讓您使用WYSIWYG編輯器輸入文字區塊，並搭配 [RTF編�
 
 >[!CAUTION]
 >
->來自元件的基礎元件已淘汰。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 。
+>已棄用基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 。
 
 表單元件可用來建立供訪客提交輸入的表單。 Forms和表單元件可用來收集包括用戶反饋（例如，客戶滿意度調查表）和用戶資訊（例如，用戶註冊）在內的資訊。
 
@@ -993,11 +993,11 @@ Forms是由數個不同元件所建置：
 
 * **表單**
 
-   表單元件會定義頁面上新表單的開頭和結尾。 接著，其他元件便可放在這些元素之間，例如表格、下載等。
+   表單元件會定義頁面上新表單的開頭和結尾。 接著，其他元件便可放在這些元素之間，例如表格和下載。
 
 * **表單欄位和元素**
 
-   表單欄位和元素可以包含文字方塊、選項按鈕、影像等。 使用者通常會在表單欄位中完成動作，例如輸入文字。 如需詳細資訊，請參閱個別表單元素。
+   表單欄位和元素可以包含文字方塊、選項按鈕和影像。 使用者通常會在表單欄位中完成動作，例如輸入文字。 如需詳細資訊，請參閱個別表單元素。
 
 * **設定檔元件**
 
@@ -1009,17 +1009,17 @@ Forms是由數個不同元件所建置：
 
 >[!NOTE]
 >
->有關進一步開發和自訂表單的資訊，請參閱 [開發Forms頁面](/help/sites-developing/developing-forms.md). 這包括新增動作、限制、預先載入欄位，以及使用指令碼來呼叫服務以採取動作等。
+>有關開發和自訂表單的資訊，請參閱 [開發Forms頁面](/help/sites-developing/developing-forms.md). 此功能包括新增動作、限制、預先載入欄位，以及使用指令碼來呼叫動作服務等。
 
 ### 表單元件的常見設定（多個） {#settings-common-to-many-form-components}
 
 雖然每個表單元件的用途不同，但許多元件都包含類似的選項和參數。
 
-配置任何表單元件時，對話框中都提供以下頁簽：
+設定任何表單元件時，對話方塊中都提供下列索引標籤：
 
 * **標題和文字**
 
-   您需要在此處指定基本資訊，例如表單的標題和任何隨附的文字。 如果適用，它還允許您定義其他關鍵資訊，例如欄位是否為多個可選欄位，以及可供選擇的項目。
+   您必須在此處指定基本資訊，例如表單的標題和任何隨附的文字。 如果適用，它還允許您定義其他關鍵資訊，例如欄位是否為多個可選欄位，以及可供選擇的項目。
 
 * **初始值**
 
@@ -1027,7 +1027,7 @@ Forms是由數個不同元件所建置：
 
 * **限制**
 
-   您可以在此處指定欄位是否為必要欄位，並將限制放在該欄位上（例如，必須是數值，以此類推）。
+   您可以在此處指定欄位是否為必要欄位，並對該欄位放置限制（例如，必須為數值）。
 
 * **樣式**
 
@@ -1037,14 +1037,14 @@ Forms是由數個不同元件所建置：
 >
 >您看到的欄位會依個別元件而大不相同。
 
-這些標籤提供您必要的參數；這取決於個別元件類型，但可能包括：
+這些標籤提供您必要的參數。 索引標籤視個別元件類型而定，但可包含下列項目：
 
 * **標題和文字**
 
    * **元素名稱**
 
-      表單元素的名稱。 這表示資料儲存在存放庫中的位置。
-這是必填欄位，應僅包含下列字元：
+      表單元素的名稱。 它會指出資料儲存在存放庫中的位置。
+此欄位為必填欄位，應僅包含下列字元：
 
       * 英數字元
       * `_ . / : -`
@@ -1054,7 +1054,7 @@ Forms是由數個不同元件所建置：
 
    * **說明**
 
-      可讓您視需要為使用者提供其他資訊。 在表單中，欄位下方會以比標題小的字型顯示。
+      可讓您視需要為使用者提供其他資訊。 在表單中，它以比標題小的字型顯示在欄位下方。
 
    * **顯示/隱藏**
 
@@ -1065,17 +1065,17 @@ Forms是由數個不同元件所建置：
 
    * **預設值**
 
-      表單開啟時顯示在欄位中的值；即使用者進行任何輸入之前。
+      開啟表單時顯示在欄位中的值。 也就是說，在使用者進行任何輸入之前。
 
 * **限制**
 
    * **必要**
 
-      這取決於表單元件類型，但提供一個或多個按一下框，以指明此欄位或此欄位的某些部分是/是必需的。
+      限制視表單元件類型而定，但提供一或多個點按方塊以指出此欄位為必要欄位，或此欄位的某些部分為必要欄位。
 
    * **必要訊息**
 
-      通知使用者此欄位為必填的訊息；必填欄位也會標籤為和星號。
+      通知使用者此欄位為必填的訊息。 必填欄位也會標示星號。
 
    * **限制**
 
@@ -1101,9 +1101,9 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單容器核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-container.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單容器核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html) 。
 
-表單元件會使用 **表單開始** 和 **表單結尾** 元素。 這些一律會配對，以確保表單已正確定義。
+表單元件會使用 **表單開始** 和 **表單結尾** 元素。 開始和結束一律成對，以確保表單已正確定義。
 
 ![dc_form-1](assets/dc_form-1.png)
 
@@ -1111,11 +1111,11 @@ Forms是由數個不同元件所建置：
 
 >[!NOTE]
 >
->基礎元件表單元件僅支援使用其他基礎元件表單元件（按鈕、文字、隱藏等）。 使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 不支援基礎元件表單中的表單元件（反之亦然）。
+>基礎元件表單元件僅支援使用其他基礎元件表單元件（按鈕、文字、隱藏等）。 使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 不支援基礎元件表單中的表單元件（反之則不支援）。
 
 #### 表單開始 {#start-of-form}
 
-需要此元件來定義頁面上新表單的開頭。 您可以設定：
+此元件定義頁面上新表單的開頭。 您可以設定：
 
 * **表單**
 
@@ -1143,7 +1143,7 @@ Forms是由數個不同元件所建置：
       * **電子郵件服務: 將使用者從清單中取消訂閱**
       * **編輯社群**
       * **編輯資源**
-      * **編輯工作流程控制的資源**
+      * **編輯工作流控制的資源**
       * **郵件**
       * **已下單的訂單詳細資訊**
       * **設定檔更新**
@@ -1151,7 +1151,7 @@ Forms是由數個不同元件所建置：
       * **設定密碼**
       * **存放區內容**
 
-         這是預設動作類型。
+         預設動作類型。
 
       * **透過上傳儲存內容**
       * **提交訂單**
@@ -1165,13 +1165,13 @@ Forms是由數個不同元件所建置：
 
       用於將預定義值載入到表單欄位中的節點屬性路徑。
 
-      這是一個可選欄位，它指定儲存庫中節點的路徑。 如果此節點的屬性與欄位名稱匹配，則表單上的相應欄位將預載這些屬性的值。 如果不存在匹配項，則欄位包含預設值。
+      一個可選欄位，它指定儲存庫中節點的路徑。 如果此節點的屬性與欄位名稱匹配，則表單上的相應欄位將預載這些屬性的值。 如果不存在匹配項，則欄位包含預設值。
 
       使用 **載入路徑** 您可以預先載入必填欄位中的值。 請參閱 [預先載入表單值](/help/sites-developing/developing-forms.md#preloading-form-values).
 
    * **用戶端驗證**
 
-      指示此表單是否需要客戶端驗證（伺服器驗證） *always* 發生。) 這可與 **Forms驗證碼** 元件。
+      指示此表單是否需要客戶端驗證（伺服器驗證） *always* 發生)。 用戶端驗證可透過 **Forms驗證碼** 元件。
 
    * **驗證資源類型**
 
@@ -1186,13 +1186,13 @@ Forms是由數個不同元件所建置：
          `/apps/<*myApp*>/form/<*myValidation*>/formservervalidation.jsp`
    * **動作設定**
 
-      中可用的選項 **動作設定** 取決於 **動作類型** 已選取：
+      中可用的選項 **動作設定** 取決於選取的 **動作類型**:
 
       * **帳戶請求**
 
          * **建立帳戶頁面**
 
-            建立新帳戶時使用的頁面。
+            建立帳戶時使用的頁面。
       * **建立內容**
 
          * 內容路徑
@@ -1215,12 +1215,12 @@ Forms是由數個不同元件所建置：
 
          * **資源類型**
 
-            若已設定，這會新增至每個註解，如 `sling:resourceType`
+            若已設定，則會將其新增至每個註解，如 `sling:resourceType`
 
          * **檢視選擇器**
       * **建立銷售機會**
 
-         * **銷售機會將新增到此清單中**
+         * **銷售機會已添加到此清單**
 
             指定所需的銷售機會清單。
       * **建立和更新帳戶**
@@ -1239,7 +1239,7 @@ Forms是由數個不同元件所建置：
 
          * **檢視資料...**
 
-            按一下此按鈕可在批量編輯器中訪問有關表單結果的資訊。 從這裡，您可以將資訊匯出至 `.tsv` （以Tab分隔）檔案（例如，在Excel試算表中使用）。
+            選取此按鈕可存取大量編輯器中表單結果的相關資訊。 從這裡，您可以將資訊匯出至 `.tsv` （以Tab分隔）檔案（例如，在Excel試算表中使用）。
       * **郵件**
 
          * **從**
@@ -1248,15 +1248,15 @@ Forms是由數個不同元件所建置：
 
          * **Mailto**
 
-            輸入表單要傳送的電子郵件地址。
+            輸入表單要發送到的一個或多個電子郵件地址。
 
          * **CC**
 
-            輸入CC電子郵件地址。
+            輸入一個或多個CC電子郵件地址。
 
          * **BCC**
 
-            輸入密件副本電子郵件地址。
+            輸入一個或多個密件副本電子郵件地址。
 
          * **主旨**
 
@@ -1275,14 +1275,14 @@ Forms是由數個不同元件所建置：
 
          * **檢視資料...**
 
-            按一下此按鈕可在批量編輯器中訪問有關表單結果的資訊。 從這裡，您可以將資訊匯出為.tsv（以Tab分隔）檔案（例如，在Excel試算表中使用）。
+            按一下此按鈕，以便在批量編輯器中訪問有關表單結果的資訊。 從這裡，您可以將資訊匯出為.tsv（以Tab分隔）檔案（例如用於Excel試算表）。
       * **透過上傳存放內容**
 
-         此選項與 **儲存內容**.
+         與 **儲存內容**.
 
       * **取消訂閱者的訂閱**
 
-         * **銷售機會將從此清單中刪除**
+         * **銷售機會已從此清單中刪除**
 
             指定所需的銷售機會清單。
 
@@ -1297,7 +1297,7 @@ Forms是由數個不同元件所建置：
 
 #### 表單結尾 {#end-of-form}
 
-這表示表單的結尾。 您可以設定：
+標示表單的結尾。 您可以設定下列項目：
 
 * **表單結尾**
 
@@ -1315,7 +1315,7 @@ Forms是由數個不同元件所建置：
 
    * **顯示重設按鈕**
 
-      選中複選框以使「重置」按鈕可見。
+      選取核取方塊會顯示「重設」按鈕。
 
    * **重設標題**
 
@@ -1329,9 +1329,9 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-text.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html) 。
 
-這可讓使用者輸入帳戶名稱：
+讓使用者輸入帳戶名稱：
 
 ![dc_form_accountname](assets/dc_form_accountname.png)
 
@@ -1339,13 +1339,13 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-text.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html) 。
 
-這可讓您新增具有下列格式的國際地址欄位：
+可讓您新增具有下列格式的國際位址欄位：
 
 ![dc_form_addressfield](assets/dc_form_addressfield.png)
 
-元件已設定為立即使用，但您可以視需要變更設定。 例如，可以為地址的個別元素新增限制。 將欄位保留為空白將使用預設設定。
+元件已設定為立即使用，但您可以視需要變更設定。 例如，可以為地址的個別元素新增限制。 將欄位保留為空白表示使用預設設定。
 
 ### Captcha {#captcha}
 
@@ -1367,7 +1367,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-options.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html) 。
 
 核取方塊可讓您建立多個核取方塊之一的清單，其中數個可同時選取。
 
@@ -1387,7 +1387,7 @@ Forms是由數個不同元件所建置：
 >
 >此基礎元件已淘汰。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 。
 
-這可讓您提供輸入信用卡詳細資訊所需的欄位。 您可以設定它，以指定接受的卡片類型和所需資訊（例如安全代碼）。
+可讓您提供輸入信用卡詳細資訊所需的欄位。 您可以設定它，以指定接受的卡片類型和所需資訊（例如安全代碼）。
 
 ![chlimage_1-100](assets/chlimage_1-100.png)
 
@@ -1395,7 +1395,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-options.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html) 。
 
 下拉式清單可經過設定，以提供您的使用範圍供您選取的值：
 
@@ -1421,15 +1421,15 @@ Forms是由數個不同元件所建置：
 
 >[!NOTE]
 >
->您可以建立自訂上傳元件，將檔案上傳至Sling Servlet。 如需詳細資訊，請參閱 [上傳檔案至Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/uploading-files-aem1.html).
+>您可以建立自訂上傳元件，將檔案上傳至Sling Servlet。 如需詳細資訊，請參閱 [上傳檔案至Adobe Experience Manager](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276).
 
 ### 隱藏欄位 {#hidden-field}
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單隱藏核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-hidden.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單隱藏核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-hidden.html) 。
 
-此元件可讓您建立隱藏欄位。 這些功能可用於各種用途；例如，提交表單後需要執行動作，或後續處理需要隱藏資料時。
+可讓您建立隱藏欄位。 這些隱藏欄位可用於各種用途。 例如，提交表單後必須執行動作，或後續處理需要隱藏資料時。
 
 ![dc_form_hiddenfield](assets/dc_form_hiddenfield.png)
 
@@ -1443,7 +1443,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-button.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html) 。
 
 影像按鈕可讓您使用自己的影像和文字建立按鈕：
 
@@ -1477,7 +1477,7 @@ Forms是由數個不同元件所建置：
 >
 >此基礎元件已淘汰。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 。
 
-這可讓使用者輸入其密碼：
+允許用戶輸入其密碼：
 
 ![dc_form_password](assets/dc_form_password.png)
 
@@ -1492,7 +1492,7 @@ Forms是由數個不同元件所建置：
 * 密碼的輸入
 * 重複輸入密碼以檢查輸入是否正確。
 
-使用預設設定時，元件將顯示為：
+使用預設設定時，元件會如下所示：
 
 ![dc_password_reset](assets/dc_password_reset.png)
 
@@ -1500,11 +1500,11 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-options.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單選項核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html) 。
 
 無線電組為您提供了多個無線電複選框之一的清單，其中只有一個可以在任何特定時間選擇。
 
-您可以指定元素名稱以及標題和說明使用+和 — 按鈕，您可以新增或移除項目、使用向上和向下箭頭定位項目，並視需要指定預設值：
+您可以指定元素名稱以及標題和說明。 使用+和 — 按鈕，您可以添加或刪除項目、使用向上和向下箭頭定位項目，並指定預設值（如有必要）:
 
 ![dc_form_radiogroupuse](assets/dc_form_radiogroupuse.png)
 
@@ -1518,7 +1518,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-button.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html) 。
 
 此元件可讓您建立提交按鈕，其中包含預設文字：
 
@@ -1538,7 +1538,7 @@ Forms是由數個不同元件所建置：
 
 ![dc_form_tags_use](assets/dc_form_tags_use.png)
 
-您可以指定各種參數，包括可使用專用索引標籤使用的命名空間：
+您可以使用專用索引標籤來指定各種參數，包括可使用的命名空間：
 
 * **標記欄位**
 
@@ -1559,9 +1559,9 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-text.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單文字核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html) 。
 
-標準文字欄位可設定為您所需的大小，且訊息中會有您自己的提示：
+標準文字欄位可設定為您所需的大小，且訊息中會有您自己的銷售機會：
 
 ![dc_form_text](assets/dc_form_text.png)
 
@@ -1569,8 +1569,8 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->此基礎元件已淘汰。 Adobe建議使用 [表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-button.html) 。
+>此基礎元件已淘汰。 Adobe建議使用 [表單按鈕核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html) 。
 
-這可讓您建立「提交」按鈕，以用於工作流程。
+可讓您建立「提交」按鈕以用於工作流程。
 
 ![chlimage_1-101](assets/chlimage_1-101.png)
