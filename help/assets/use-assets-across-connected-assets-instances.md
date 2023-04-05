@@ -6,9 +6,9 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: b10b7d957ef3a28b5eeb05383a7504c6516f7aa7
+source-git-commit: 8d4ff8bcb7df4770bc1ed7e7c2cad27befe3d175
 workflow-type: tm+mt
-source-wordcount: '3856'
+source-wordcount: '3909'
 ht-degree: 17%
 
 ---
@@ -364,5 +364,5 @@ Experience Manager可讓您將遠端DAM部署連結為來源，以連接多個Ex
 
    ![無法擷取資產遠端參考](assets/reference-report-failure.png)
 
-
+* 如果Cookie未從Sites伺服器傳送至Google Chrome中的Assets伺服器，這是因為Assets連線未透過HTTPS。 若您未在Assets例項上使用HTTPS，則 `SameSite=None` 向Assets伺服器驗證後，無法將標題新增至回應。
 
