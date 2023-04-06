@@ -3,9 +3,9 @@ title: 與內容片段搭配使用的 AEM GraphQL API
 description: 了解如何搭配AEM GraphQL API使用Adobe Experience Manager(AEM)中的內容片段進行無頭式內容傳送。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: ea90bd913b437a564fb50e01af7719510fa22e74
+source-git-commit: cee709161100db6597bdb18ca03b3130d9e242f1
 workflow-type: tm+mt
-source-wordcount: '3224'
+source-wordcount: '3225'
 ht-degree: 81%
 
 ---
@@ -22,12 +22,6 @@ ht-degree: 81%
 * 確保傳遞限於特定要求，
 * 允許大量傳遞需要呈現的內容做為對單一 API 查詢的回應。
 
->[!CAUTION]
->
->使用GraphQL的客戶應安裝包含GraphQL索引套件1.0.5的AEM內容片段。
->
->請參閱 [發行說明](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 以取得詳細資訊。
-
 >[!NOTE]
 >
 >GraphQL目前用於Adobe Experience Manager(AEM)的兩種（個別）情況：
@@ -35,6 +29,10 @@ ht-degree: 81%
 >* [AEM Commerce 透過 GraphQL 取用來自 Commerce 平台的資料](/help/commerce/cif/integrating/magento.md)。
 >* AEM 內容片段與 AEM GraphQL API (基於標準 GraphQL 的自訂實作) 搭配運作，以傳遞結構化內容以供您的應用程式使用。
 
+
+## 必備條件 {#prerequisites}
+
+使用GraphQL的客戶應安裝包含GraphQL索引套件1.0.5的AEM內容片段。請參閱 [發行說明](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 以取得詳細資訊。
 
 ## GraphQL API {#graphql-api}
 
