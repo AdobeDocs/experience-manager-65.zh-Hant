@@ -1,24 +1,22 @@
 ---
-title: Web 主控台
-seo-title: Web Console
+title: AEM中的Web主控台
 description: 了解如何在AEM中使用Web主控台。
-seo-description: Learn how to use the web console in AEM.
 uuid: 047274ff-4d7d-4c7d-95be-06f363beae2e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 discoiquuid: f934eb02-1f84-44f2-9f14-3f17250c9a90
 exl-id: bdfeaf85-e832-40c1-8769-7d027cdb021e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '724'
 ht-degree: 2%
 
 ---
 
 # Web 主控台{#web-console}
 
-AEM中的Web主控台以 [Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社群的努力成果，目的是實作OSGi R4服務平台，其中包含OSGi架構和標準服務。
+AEM(Adobe Experience Manager)中的Web主控台以 [Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社群的努力成果，目的是實作OSGi R4服務平台，其中包含OSGi架構和標準服務。
 
 >[!NOTE]
 >
