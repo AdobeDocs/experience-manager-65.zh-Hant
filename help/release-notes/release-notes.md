@@ -2,9 +2,9 @@
 title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
+source-git-commit: a2fa4eacf1b39f185fdf46581ca7c5dcc8083969
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2967'
 ht-degree: 2%
 
 ---
@@ -88,7 +88,7 @@ Dynamic Media的主要改善如下：
 
 ### [!DNL Forms] 修正 {#forms-fixes-6516}
 
-* 使用「指派任務」**步驟來傳送指派任務的通知時，會傳送兩封電子郵件，而非一封給指派的個人。 (NPR-40078)
+* 使用 **分配任務** 為指派的任務傳送通知的步驟是傳送兩封電子郵件，而非一封給指派的個人。 (NPR-40078)
 * 當使用者隱藏表格標題時，會取消設定先前設定的欄寬，而所有欄會保留相同的寬度。 (NPR-40063)
 * 如果您將管理員使用者的預設密碼從 `admin`，同時執行 `Prepare Adobe Experience Manager Server For DSC deployment` 檢查AEM Forms JEE service pack失敗。 (NPR-40062)、(NPR-39387)
 * OutputService和AssemblerService API無法將PDF表單轉換為PDF/A。(NPR-39990)
@@ -102,6 +102,18 @@ Dynamic Media的主要改善如下：
 * 使用者升級至AEM 6.5.15.0 Service Pack後，PostScript轉Pdf轉換無法運作。 (NPR-39765)、(NPR-39764)
 * 當使用者在開啟適用性表單後嘗試開啟導覽畫面時，畫面會因NullPointer例外狀況而失敗：`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:"` (NPR-39654)
 * 在Windows中，當使用者啟用高對比黑色設定時，當HTML5 Forms內容在瀏覽器中以HTML預覽呈現時變得不清楚。 (NPR-39018)
+* 當使用者嘗試新增中繼資料時，「儲存」按鈕對草稿和提交元件都變得無法運作。(CQ-4349601)
+* 升級至AEM 6.5.15.0 Service Pack後，相對URL的重新導向在可視化編輯器中不再有效。 (NPR-39947)
+* 當使用者升級至AEM 6.5.15.0 Service Pack時，重新導向會停止使用Internet Explorer。 (CQ-4351745)
+* 使用者升級至AEM 6.5.15.0 Service Pack後，無法辨識HTML標題標籤。 標題標籤的HTML代碼在HTML表單中顯示為文字。 (NPR-39915)
+* 當使用者嘗試提交適用性表單時，會發生類型錯誤： `ERROR [10.207.64.167 [1668589530607] POST /app/LS4/content/forms/af/revalidate/jcr:content/guideContainer.af.submit.jsp HTTP/1.1]`(NPR-39809)
+* 當用戶使用 **傳送電子郵件** 提交動作，則無法正確顯示。 郵件模板嵌入到記錄文檔的預覽中。 (CQ-4352155)
+* 使用者以IE相容模式在Microsoft Edge瀏覽器上預覽適用性表單為HTML時，無法正確顯示。(CQ-4352216)
+* 字典必須包含含特殊字元（如底線或連字型大小）的新地區設定，才能進行翻譯。 (NPR-40088)
+
+安裝AEM 6.5.16.0 Forms附加元件Service Pack後，客戶面臨下列問題。 因此，已發行AEM 6.5.16.0 Forms附加元件Service Pack的更新版本：
+* 當使用者嘗試在表單使用者群組中與使用者建立適用性表單時，不會出現選取任何範本的選項，且會發生類似下列的錯誤：內部伺服器錯誤：java.lang.NullPointerException at com.adobe.aem.formsndocuments.servlet.ThemeClientLibraryDataSourceServlet.lambda$getThemeClientLibCategoryList$3(ThemeClientLibraryDataSourceServlet.java:76)at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePile.java:176)ator.base/java.util.Javator.r（每個剩餘的Java3：）(FORMS-7629)
+* 程式碼編輯器規則中所做的變更無法儲存。(FORMS-7532)
 
 ## 整合 {#integrations-6516}
 
@@ -264,7 +276,7 @@ UberJar [!DNL Experience Manager] 6.5.16.0可在 [Maven Central存放庫](https:
 
 以下是標示為過時的功能清單 [!DNL Experience Manager] 6.5.7.0。功能在日後的版本中已被標示為過時，且在稍後的版本中已移除。 提供替代選項。
 
-查看您是否在部署中使用了功能。 此外，計畫變更實作，以使用替代選項。
+查看您是否在部署中使用了功能。 此外，計畫變更實作以使用替代選項。
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
