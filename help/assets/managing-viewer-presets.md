@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
+source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
 workflow-type: tm+mt
-source-wordcount: '4522'
+source-wordcount: '4523'
 ht-degree: 8%
 
 ---
@@ -463,7 +463,7 @@ Experience Manager從 **[!UICONTROL 詳細資料檢視]** > **[!UICONTROL 檢視
 
    * **[!UICONTROL 破折號]**  — 視訊僅以破折號形式串流。 不過，在Safari/iOS裝置上，您必須選取 **[!UICONTROL hls]** 作為類型。
    * **[!UICONTROL hls]**  — 視訊資料流僅限hls。
-   * **[!UICONTROL 自動]**  — 最佳實務。 DASH和HLS資料流的建立已經過儲存優化。 因此，Adobe建議您一律選取 **[!UICONTROL 自動]** 作為播放類型。 視訊以破折號、hls或漸進式方式串流，如下所示：
+   * **[!UICONTROL 自動]**  — 最佳實務。 DASH和HLS資料流的建立已經過儲存優化。 因此，Adobe建議您一律選取 **[!UICONTROL 自動]** 作為播放類型。 視訊以破折號、hls或漸進式方式串流，如下列播放順序：
       * 如果瀏覽器支援DASH，則首先使用DASH串流。
       * 如果瀏覽器不支援DASH，則使用HLS串流，第二。
       * 如果瀏覽器不支援DASH或HLS，則最後會使用漸進式播放。
@@ -492,7 +492,7 @@ Experience Manager從 **[!UICONTROL 詳細資料檢視]** > **[!UICONTROL 檢視
 
    >[!IMPORTANT]
    >
-   >對於使用最適化位元速率串流設定檔的舊視訊，URL會繼續照常播放（與HLS串流一樣），直到您 [重新處理視訊資產](/help/assets/processing-profiles.md#reprocessing-assets). 重新處理後，相同的URL仍可繼續運作，但現在可搭配 *both* 已啟用DASH和HLS串流。
+   >對於使用最適化位元速率串流設定檔的舊視訊，URL會繼續照常播放（與HLS串流一樣），直到您 [重新處理視訊資產](/help/assets/processing-profiles.md#reprocessing-assets). 重新處理後，相同的URL仍可繼續運作，但現在起於 *both* 已啟用DASH和HLS串流。
 
 ### 建立互動式檢視器預設集的特殊考量事項 {#special-considerations-for-creating-an-interactive-viewer-preset}
 

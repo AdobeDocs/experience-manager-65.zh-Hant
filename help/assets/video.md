@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 5ac1b0a343c3742f27fecbfb0de577d65c2607d0
+source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
 workflow-type: tm+mt
-source-wordcount: '8091'
+source-wordcount: '8098'
 ht-degree: 3%
 
 ---
@@ -278,7 +278,7 @@ DASH是國際標準，HLS是Apple標準。 兩者皆用於最適化視訊串流�
 
 >[!IMPORTANT]
 >
->*若要使用視訊的DASH，必須先由您的帳戶上的Adobe技術支援啟用。 請參閱 [在您的帳戶上啟用DASH](#enable-dash).)
+>*若要使用視訊的DASH，必須先由您的帳戶上的Adobe技術支援啟用。 請參閱 [在您的帳戶上啟用DASH](#enable-dash).
 
 ## Dynamic Media視訊解決方案架構 {#architecture-of-dynamic-media-video-solution}
 
@@ -445,7 +445,7 @@ DASH(Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，在�
 
    >[!IMPORTANT]
    >
-   >目前，您的帳戶僅在北美提供啟用DASH。
+   >目前僅亞太地區和北美提供您帳戶的啟用DASH;即將在歐洲 — 中東 — 非洲推出。
 
 在您的帳戶上啟用DASH需要兩個步驟：
 
@@ -476,7 +476,7 @@ DASH(Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，在�
 >
 >只有在執行Dynamic Media — 混合模式時，才可使用視訊報表。
 
-「視訊報表」會顯示指定時間內的數個匯總量度，協助您監控*已發佈*個別和匯總視訊是否如預期般執行。 系統會針對整個網站上所有發佈的視訊匯總下列排名在前的量度資料：
+視訊報表會在指定時間內顯示數個匯總量度，以協助您監控 *已發佈* 個別和匯總影片如預期般執行。 系統會針對整個網站上所有發佈的視訊匯總下列排名在前的量度資料：
 
 * 視訊開始
 * 完成率
