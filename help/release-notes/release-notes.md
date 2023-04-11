@@ -2,9 +2,9 @@
 title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: a2fa4eacf1b39f185fdf46581ca7c5dcc8083969
+source-git-commit: f53dbe7d51ff976f8d79702a86527f984aa00997
 workflow-type: tm+mt
-source-wordcount: '2967'
+source-wordcount: '2983'
 ht-degree: 2%
 
 ---
@@ -111,7 +111,7 @@ Dynamic Media的主要改善如下：
 * 使用者以IE相容模式在Microsoft Edge瀏覽器上預覽適用性表單為HTML時，無法正確顯示。(CQ-4352216)
 * 字典必須包含含特殊字元（如底線或連字型大小）的新地區設定，才能進行翻譯。 (NPR-40088)
 
-安裝AEM 6.5.16.0 Forms附加元件Service Pack後，客戶面臨下列問題。 因此，已發行AEM 6.5.16.0 Forms附加元件Service Pack的更新版本：
+安裝AEM 6.5.16.0 Forms附加元件Service Pack後，客戶面臨下列問題。 因此， [AEM 6.5.16.0 Forms附加元件Service Pack - 6.0.914](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 已發行。 Adobe建議使用更新的Service Pack:
 * 當使用者嘗試在表單使用者群組中與使用者建立適用性表單時，不會出現選取任何範本的選項，且會發生類似下列的錯誤：內部伺服器錯誤：java.lang.NullPointerException at com.adobe.aem.formsndocuments.servlet.ThemeClientLibraryDataSourceServlet.lambda$getThemeClientLibCategoryList$3(ThemeClientLibraryDataSourceServlet.java:76)at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePile.java:176)ator.base/java.util.Javator.r（每個剩餘的Java3：）(FORMS-7629)
 * 程式碼編輯器規則中所做的變更無法儲存。(FORMS-7532)
 
