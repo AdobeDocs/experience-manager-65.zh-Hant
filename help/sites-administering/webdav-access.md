@@ -10,9 +10,9 @@ topic-tags: content
 content-type: reference
 discoiquuid: 1eaf7afe-a181-45df-8766-bd564b1ad22a
 exl-id: 891ee66c-e49c-4561-8fef-e6e448a8aa1c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1097'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 要通過WebDAV與KDE連接到AEM，請執行以下操作：
 
-AEM提供WebDAV支援，讓您顯示及編輯存放庫內容。 通過WebDAV連接，您可以通過案頭直接訪問內容儲存庫。 通過WebDAV連接添加到儲存庫的文本和PDF檔案會自動建立全文索引，並可使用標準搜索介面和標準Java API進行搜索。
+AEM提供WebDAV支援，讓您顯示及編輯存放庫內容。 通過WebDAV連接，您可以通過案頭直接訪問內容儲存庫。 通過WebDAV連接添加到儲存庫的文本和PDF檔案會自動建立全文索引，並可使用標準搜索介面和標準Java™ API進行搜索。
 
 ## 一般 {#general}
 
@@ -98,7 +98,7 @@ http://localhost:4502/crx/repository/staging
 
 ## 通過WebDAV連接 {#connecting-via-webdav}
 
-[如上所述](/help/sites-administering/webdav-access.md#general)，若要使用WebDAV協定連接到儲存庫，請將WebDAV客戶端指向您的儲存庫位置。 但是，根據您的作業系統，連接客戶端所涉及的步驟不同，可能需要配置作業系統。
+[如上所述](/help/sites-administering/webdav-access.md#general)，若要使用WebDAV協定連接到儲存庫，請將WebDAV客戶端指向您的儲存庫位置。 但是，根據您的作業系統，連接客戶端所涉的步驟不同，可能需要配置作業系統。
 
 提供了如何連接以下作業系統的說明：
 
@@ -108,7 +108,7 @@ http://localhost:4502/crx/repository/staging
 
 ### Windows {#windows}
 
-若要成功將Microsoft Windows 7（及更新版本）系統連接至未透過SSL保護的AEM執行個體，必須在Windows中明確啟用在不安全網路上建立基本驗證的選項。 這需要在WebClient的Windows註冊表中進行更改。
+若要成功將Microsoft® Windows 7（及更新版本）系統連接至未透過SSL保護的AEM執行個體，必須在Windows中明確啟用在不安全網路上建立基本驗證的選項。 此功能要求在WebClient的Windows註冊表中進行更改。
 
 更新登錄表後，AEM執行個體即可對應為磁碟。
 
@@ -126,11 +126,7 @@ http://localhost:4502/crx/repository/staging
 
    如果不存在，請新增子金鑰。
 
-1. 必須重新啟動系統，註冊表更改才能生效。
-
-請參閱 [Microsoft支援KB 841215](https://support.microsoft.com/default.aspx/kb/841215) 有關此註冊表更改的詳細資訊。
-
-請參閱 [Microsoft支援KB 2445570](https://support.microsoft.com/kb/2445570) ，了解有關在Windows下提高WebDav客戶端的響應性的資訊。
+1. 重新啟動系統，使註冊表更改生效。
 
 >[!NOTE]
 >
@@ -138,11 +134,11 @@ http://localhost:4502/crx/repository/staging
 
 #### Windows 8配置 {#windows-configuration}
 
-對於Windows 8，您還需要更改註冊表項 [如Windows 7及更高版本所述](/help/sites-administering/webdav-access.md#windows-and-greater-configuration). 但是，您必須先啟用案頭體驗，才能查看登錄項。
+對於Windows 8，更改註冊表項 [如Windows 7及更高版本所述](/help/sites-administering/webdav-access.md#windows-and-greater-configuration). 但是，在執行此任務之前，必須啟用案頭體驗才能查看註冊表項。
 
 若要啟用案頭體驗，請開啟 **伺服器管理員**，然後 **功能**，然後 **新增功能**，然後 **案頭體驗**.
 
-重新啟動Windows 7及更高版本描述的註冊表項後，可用。 按照Windows 7及更高版本的說明修改它。
+重新啟動後，Windows 7及更高版本描述的註冊表項可用。 按照Windows 7及更高版本的說明修改它。
 
 #### 在Windows中連接 {#connecting-in-windows}
 
@@ -152,7 +148,7 @@ http://localhost:4502/crx/repository/staging
 
    ![chlimage_1-112](assets/chlimage_1-112a.png)
 
-1. 按一下 **映射網路驅動器** 啟動嚮導。
+1. 若要啟動精靈，請按一下 **映射網路驅動器**.
 1. 輸入映射詳細資訊：
 
    * **驅動器**:選擇任何可用的信函
@@ -165,7 +161,7 @@ http://localhost:4502/crx/repository/staging
 
    >[!NOTE]
    >
-   >如果AEM位於其他埠，請使用該埠號，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請取代 `localhost` 或IP位址。
+   >如果AEM位於其他埠上，請使用該埠號，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請取代 `localhost` 或IP位址。
 
 1. 輸入使用者名稱 `admin` 和密碼 `admin`. Adobe建議您使用預先設定的管理員帳戶進行測試。
 
@@ -179,7 +175,7 @@ Windows現在已經通過WebDAV將AEM映射為驅動器，您可以將其用作�
 
 ### macOS {#macos}
 
-在macOS上透過WebDAV連線不需要設定步驟。 您只需連接到WebDAV伺服器。
+在macOS上透過WebDAV連線不需要設定步驟。 您可以連接到WebDAV伺服器。
 
 1. 導覽至任何 **搜尋器** 按一下 **開始** 和 **連接到伺服器**&#x200B;或按下 **Command+k**.
 1. 在 **連接到伺服器** 窗口，輸入AEM位置：
@@ -187,15 +183,15 @@ Windows現在已經通過WebDAV將AEM映射為驅動器，您可以將其用作�
    * `http://localhost:4502`
    >[!NOTE]
    >
-   >如果AEM位於其他埠，請使用該埠號，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請取代 `localhost` 或IP位址。
+   >如果AEM位於其他埠上，請使用該埠號，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請取代 `localhost` 或IP位址。
 
 1. 提示您進行身份驗證時，請輸入用戶名 `admin` 和密碼 `admin`. Adobe建議您使用預先設定的管理員帳戶進行測試。
 
 macOS現在已透過WebDAV連線至AEM，而且您可以將其當成Mac上的任何其他資料夾使用。
 
-### Linux {#linux}
+### Linux® {#linux}
 
-在Linux上通過WebDAV進行連接不需要任何配置，但需要執行一些步驟來建立連接，這些步驟會根據您的案頭環境而有所不同。
+在Linux®上通過WebDAV進行連接不需要任何配置，但需要執行一些步驟來建立連接，這些步驟會根據您的案頭環境而有所不同。
 
 #### 格諾梅 {#gnome}
 
@@ -208,7 +204,7 @@ macOS現在已透過WebDAV連線至AEM，而且您可以將其當成Mac上的任
 
    >[!NOTE]
    >
-   >如果AEM位於其他埠，請使用該埠號，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請取代 `localhost` 或IP位址。
+   >如果AEM位於其他埠上，請使用該埠號，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請取代 `localhost` 或IP位址。
 
 1. 在 **資料夾**，輸入 `/dav`
 1. 輸入使用者名稱 `admin`. Adobe建議您使用預先設定的管理員帳戶進行測試。
@@ -228,7 +224,7 @@ GNOME現在已將AEM裝入為卷，您可以像其他卷一樣使用它。
 
    >[!NOTE]
    >
-   >如果AEM位於其他埠，請使用該埠號，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請取代 `localhost` 具有相應的伺服器名或IP地址
+   >如果AEM位於其他埠上，請使用該埠號，而不是4502。 此外，如果您未在本機電腦上執行內容存放庫，請取代 `localhost` 具有相應的伺服器名或IP地址
 
 1. 在 **資料夾**，輸入 `dav`
 

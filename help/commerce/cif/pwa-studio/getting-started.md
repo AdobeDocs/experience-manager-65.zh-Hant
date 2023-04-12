@@ -5,9 +5,9 @@ topics: Commerce
 feature: Commerce Integration Framework
 thumbnail: 37843.jpg
 exl-id: de7b8f05-b6b7-4105-84a5-940c16ebf2b4
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 PWA Studio可立即透過GraphQL與Adobe Commerce緊密整合，提供無限選項，協助您建立創新且吸引人的店面和其他數位體驗。
 
-內容片段是具有預先定義結構的內容片段，可讓片段以無頭方式使用GraphQL作為不同格式（例如JSON、Markdown）的API，並獨立轉譯。 內容片段包含GraphQL所需的所有資料類型和欄位，以確保您的應用程式只要求可用項目並接收預期項目。 它們在結構上提供的彈性，使其非常適合用於多個位置和多個管道。
+內容片段是內容片段，具有預先定義的結構，可讓片段以無頭方式使用GraphQL作為不同格式（例如JSON、Markdown）的API，並獨立轉譯。 內容片段包含GraphQL所需的所有資料類型和欄位，以確保您的應用程式只要求可用項目並接收預期項目。 它們在結構上提供的彈性，使其非常適合用於多個位置和多個管道。
 
-使用Adobe Experience Manager中的內容片段模型編輯器，輕鬆設計您需要的結構。 將Adobe Experience Manager內容片段（或任何其他資料）與您的PWA Studio應用程式整合的主要難題是從多個GraphQL端點擷取資料。 這是因為立即可用，PWA Studio可搭配單一Adobe Commerce GraphQL端點運作。
+使用Adobe Experience Manager中的內容片段模型編輯器，輕鬆設計您需要的結構。 將Adobe Experience Manager內容片段（或任何其他資料）與您的PWA Studio應用程式整合的主要難題是從多個GraphQL端點擷取資料。 原因在於，PWA Studio可直接與單一Adobe Commerce GraphQL端點搭配使用。
 
 ## 架構 {#architecture}
 
@@ -26,7 +26,7 @@ PWA Studio可立即透過GraphQL與Adobe Commerce緊密整合，提供無限選�
 
 ## 設定PWA Studio {#setup-pwa}
 
-關注Adobe Commerce [PWA Studio檔案](https://developer.adobe.com/commerce/pwa-studio/tutorials/) 來設定您的PWA Studio應用程式。
+若要設定您的PWA Studio應用程式，請遵循Adobe Commerce [PWA Studio檔案](https://developer.adobe.com/commerce/pwa-studio/tutorials/).
 
 若要將PWA Studio連線至AEM的GraphQL端點，您可以使用 [AEM擴充功能for PWA Studio](https://github.com/adobe/aem-pwa-studio-extensions).
 
@@ -62,7 +62,7 @@ PWA Studio可立即透過GraphQL與Adobe Commerce緊密整合，提供無限選�
 
    如需自訂導覽元件的詳細資訊，請參閱 [addBlogToNavigation.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/addBlogToNavigation.js) 和 [可擴充性框架](https://developer.adobe.com/commerce/pwa-studio/guides/general-concepts/extensibility/) PWA Studio檔案。
 
-1. Apollo客戶預期AEM GraphQL端點位於 <https://pwa-studio/endpoint.js>. 若要將端點對應至此位置，您需要自訂PWA Studio應用程式的向上設定：a.將AEM_CFM_GRAPHQL變數新增至pwa-root/.env，並將其調整為指向您的AEM內容片段GraphQL端點。
+1. Apollo客戶預期AEM GraphQL端點位於 `<https://pwa-studio/endpoint.js>`. 若要將端點對應至此位置，請自訂PWA Studio應用程式的UPPRAD設定：a.結束日期 `pwa-root/.env`，新增AEM_CFM_GRAPHQL變數，並加以調整以指向您的AEM內容片段GraphQL端點。
 
    範例：AEM_CFM_GRAPHQL=<http://localhost:4503/content/graphql/global>
 
@@ -89,13 +89,13 @@ PWA Studio可立即透過GraphQL與Adobe Commerce緊密整合，提供無限選�
 
 ## 設定AEM {#setup-aem}
 
-請依照AEM內容片段檔案，為AEM專案設定GraphQL端點。 此外，在您的AEM專案中，新增下列設定，讓您的PWA Studio應用程式存取GraphQL端點：
+請依照AEM內容片段檔案中的說明，為AEM專案設定GraphQL端點。 此外，在您的AEM專案中，新增下列設定，讓您的PWA Studio應用程式可存取GraphQL端點：
 
 * AdobeGranite跨原始資源共用原則(com.adobe.granite.cors.impl.CORSPolicyImpl)
 
-   將allowedorigin屬性設定為PWA應用程式的完整主機名。
+   設定 `allowedorigin` 屬性至PWA應用程式的完整主機名稱。
 
-   範例:  <https://pwa-studio-test-vflyn.local.pwadev:9366>
+   範例:  `<https://pwa-studio-test-vflyn.local.pwadev:9366>`
 
 * Apache Sling Referrer Filter(org.apache.sling.security.impl.ReferrerFilter.cfg.json)
 
@@ -105,7 +105,7 @@ PWA Studio可立即透過GraphQL與Adobe Commerce緊密整合，提供無限選�
 
 您可以在這裡找到這兩種設定的完整範例： <https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension/aem/config/src/main/content/jcr_root/apps/blog-demo/config>.
 
-為了展示GraphQL端點，我們透過內容套件準備了一些範例內容片段模型和資料。 這些功能可與PWA Studio擴充功能隨附的React元件搭配使用。
+為了展示GraphQL端點，Adobe已透過內容套件準備了一些範例內容片段模型和資料。 這些片段可與隨PWA Studio擴充功能提供的React元件搭配使用。
 
 ## 使用方式 {#how-to-use}
 
@@ -116,8 +116,8 @@ PWA Studio可立即透過GraphQL與Adobe Commerce緊密整合，提供無限選�
 生產設定可能有多方面差異。
 
 * 您可以有結合AEM和Adobe Commerce GraphQL資料的單一Federated GraphQL端點，而非自訂Apollo用戶端。
-* 您的PWA Studio應用程式可以直接使用AEM GraphQL端點URL，不需要具有UPPRASH的代理。 也可以將代理移至不同層（例如CDN）。
-* 哪種方法最適合您，還取決於您如何將PWA Studio應用程式提供給最終用戶。
+* 您的PWA Studio應用程式可以直接使用AEM GraphQL端點URL，不需要具有UPPRASH的代理。 也可以將代理移至不同的層（例如CDN）。
+* 此方法最適合您，而且還取決於您如何將PWA Studio應用程式提供給最終用戶。
 
 此擴充功能提供兩個範例。
 
@@ -127,4 +127,4 @@ PWA Studio可立即透過GraphQL與Adobe Commerce緊密整合，提供無限選�
 
 ### PDP擴充 {#pdp-enrichment}
 
-讓行銷人員能透過管理為內容片段的其他內容，輕鬆豐富PDP內容。  請參閱 [GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cif-product-page-extension) 以取得更多詳細資訊。
+讓行銷人員能透過管理為內容片段的其他內容，輕鬆豐富PDP內容。 請參閱 [GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cif-product-page-extension) 以取得更多詳細資訊。
