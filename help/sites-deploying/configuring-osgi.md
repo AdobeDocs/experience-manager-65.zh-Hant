@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 55f6aab3e41159735e332b2740e3a21c563c1157
+source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1949'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 OSGi &quot;*提供標準化基元，允許從小型、可重複使用和協作的元件構建應用程式。 這些元件可組成應用程式並部署*」。
 
-這樣可以輕鬆管理捆綁包，因為它們可以單獨停止、安裝和啟動。 會自動處理互依性。 每個OSGi元件(請參閱 [OSGi規範](https://www.osgi.org/Specifications/HomePage))包含在其中一個不同套件組合中。
+這樣可以輕鬆管理捆綁包，因為它們可以單獨停止、安裝和啟動。 會自動處理互依性。 每個OSGi元件(請參閱 [OSGi規範](https://docs.osgi.org/specification/))包含在其中一個不同套件組合中。
 
 您可以透過以下任一方式管理此類套件組合的組態設定：
 
@@ -194,7 +194,7 @@ Web控制台不顯示儲存庫中已保存更改的位置，但可以輕鬆找�
    * `config`  — 所有運行模式
    * `config.author`  — 適用於製作環境
    * `config.publish`  — 適用於發佈環境
-   * `config.<run-mode>`  — 酌情
+   * `config.<run-mode>` - 依需要
 
 1. 是 **設定** 或 **工廠配置** 必要？
 1. 要設定的個別參數，包括必須重新建立的任何現有參數定義。

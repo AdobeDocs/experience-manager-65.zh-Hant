@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: e0d6478a-4420-46a6-96fe-082a30ee82f0
 exl-id: 50b70e47-a801-4f0a-be92-4427c4b2cad1
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 10%
+source-wordcount: '252'
+ht-degree: 6%
 
 ---
 
@@ -26,12 +26,12 @@ ht-degree: 10%
 * ExactTarget — 電子郵件行銷
 * Facebook Connect — 社交網路
 * 一般Analytics程式碼片段 — analytics
-* Microsoft翻譯工具或其他機器翻譯提供者
+* Microsoft®翻譯工具或其他機器翻譯提供者
 * Pushwoosh連線 — 應用程式 — 推播通知
 * Salesforce — 銷售和CRM軟體
-* Silverpop參與 — 行銷自動化、電子郵件、行動裝置和社交
 * Twitter — 社交網路
 * YouTube — 影片分享
+<!-- * Silverpop Engage - marketing automation, email, mobile, and social NO LONGER EXISTS; ITS REPLACEMENT IS UNKNOWN -->
 
 此外，您可以將AEM與 [Adobe Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
@@ -41,19 +41,20 @@ Salesforce.com 是領導朝向社交企業轉變的企業雲端運算公司。
 
 如需整合AEM網站和Salesforce的相關資訊，請參閱 [與Salesforce整合](/help/sites-administering/salesforce.md).
 
-## 與Silverpop Engage整合 {#integrating-with-silverpop-engage}
+<!-- THE INFORMATION BELOW APPEARS OBSOLETE; first URL is a 404. I could not find a suitable replacement for it.
+## Integrating with Silverpop Engage {#integrating-with-silverpop-engage}
 
 >[!NOTE]
 >
->Silverpop Engage整合無法立即使用。 若要整合AEM與Silverpop Engage, [下載套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content) 從包共用。
+>Silverpop Engage integration is not available out of the box. To integrate AEM with Silverpop Engage, [download the package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content) from Package Share.
 
-Silverpop Engage提供行銷自動化、電子郵件、行動裝置和社交功能。
+Silverpop Engage provides marketing automation, email, mobile, and social.
 
-如需整合AEM網站和ExactTarget的詳細資訊，請參閱 [與Silverpop Engage整合](/help/sites-administering/silverpop.md).
+For information about integrating your AEM site and ExactTarget, see [Integrating with Silverpop Engage](/help/sites-administering/silverpop.md). -->
 
 ## 與ExactTarget整合 {#integrating-with-exacttarget}
 
-任何大小規模的組織都可透過 ExactTarget 的電子郵件行銷解決方案，來設計與提供可正確鎖定目標、關鍵性業務，及完全整合的電子郵件促銷活動。
+ExactTarget的電子郵件行銷解決方案讓各種規模的組織能夠設計和提供目標明確、任務關鍵且完全整合的電子郵件行銷活動。
 
 如需整合AEM網站和ExactTarget的詳細資訊，請參閱 [設定ExactTarget](/help/sites-administering/exacttarget.md).
 

@@ -12,16 +12,16 @@ discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
 exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
 feature: Security
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
 
 # AEM 6.5中的自訂使用者群組對應 {#custom-user-group-mapping-in-aem}
 
-## CUG中JCR含量的比較 {#comparison-of-jcr-content-related-to-cug}
+## 與CUG（自訂使用者群組）相關的JCR內容比較 {#comparison-of-jcr-content-related-to-cug}
 
 <table>
  <tbody>
@@ -33,12 +33,12 @@ ht-degree: 1%
   <tr>
    <td><p>屬性：cq:cugEnabled</p> <p>聲明節點類型：不適用，剩餘財產</p> </td>
    <td><p>授權:</p> <p>節點：rep:cugPolicy的節點類型rep:CugPolicy</p> <p>聲明節點類型：rep:CugMixin</p> <p> </p> <p> </p> <p> </p> 驗證:</p> <p>Mixin類型：granite:AuthenticationRequired</p> </td>
-   <td><p>為了限制讀訪問，將專用的CUG策略應用到目標節點。</p> <p>注意：只能在配置的支援路徑上應用策略。</p> <p>名稱為rep:cugPolicy和rep:CugPolicy的節點受保護，無法使用常規JCR API調用寫入；請改用JCR存取控制管理。</p> <p>請參閱 <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">本頁</a> 以取得詳細資訊。</p> <p>為了對節點強制執行驗證要求，只需新增mixin類型granite:AuthenticationRequired即可。</p> <p>注意：僅在已設定的支援路徑之下接受。</p> </td>
+   <td><p>為了限制讀訪問，將專用的CUG策略應用到目標節點。</p> <p>注意：只能在配置的支援路徑上應用策略。</p> <p>名稱為rep:cugPolicy和rep:CugPolicy的節點受保護，無法使用常規JCR API調用寫入；請改用JCR存取控制管理。</p> <p>請參閱 <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">本頁</a> 以取得詳細資訊。</p> <p>若要對節點強制執行驗證需求，只需新增mixin類型granite:AuthenticationRequired即可。</p> <p>注意：僅在已設定的支援路徑之下接受。</p> </td>
   </tr>
   <tr>
    <td><p>屬性：cq:cugPrincipals</p> <p>聲明節點類型：NA，剩餘財產</p> </td>
    <td><p>屬性：rep:principalNames</p> <p>聲明節點類型：rep:CugPolicy</p> </td>
-   <td><p>包含允許讀取受限CUG下方內容的主體名稱的屬性受保護，無法使用常規JCR API調用寫入；請改用JCR存取控制管理。</p> <p>請參閱 <a href="https://svn.apache.org/repos/asf/jackrabbit/trunk/jackrabbitapi/src/main/java/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.java">本頁</a> 以取得實作的詳細資訊。</p> </td>
+   <td><p>包含允許讀取受限CUG下方內容的主體名稱的屬性受保護，無法使用常規JCR API調用寫入；請改用JCR存取控制管理。</p> <p>請參閱 <a href="https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.html">本頁</a> 以取得實作的詳細資訊。</p> </td>
   </tr>
   <tr>
    <td><p>屬性：cq:cugLoginPage</p> <p>聲明節點類型：NA，剩餘財產</p> </td>
@@ -89,16 +89,16 @@ ht-degree: 1%
 
    >[!NOTE]
    > 
-   >若 `CugExcludeImpl` 未設定， `CugConfiguration` 會回到預設值。
+   >若 `CugExcludeImpl` 未設定， `CugConfiguration` 回到預設值。
 
    如有特殊需求，可插入自訂CugExclude實作。
 
 * OSGi元件實作LoginPathProvider ，此元件會向LoginSelectorHandler顯示相符的登入路徑。 它具有對RequirementHandler的強制引用，該RequirementHandler用於通過granite:AuthenticationRequired mixin類型註冊偵聽儲存在內容中的更改的驗證要求的觀察器。
 * OSGi元件實作RequirementHandler，此元件會通知SlingAuthenticator有關對authremendations的變更。
 
-   由於此元件的配置策略為「需要」，因此只有在指定了一組受支援的路徑時才激活它。
+   由於此元件的配置策略為「必需」，因此只有在指定了一組受支援的路徑時，才會激活該策略。
 
-   啟用服務將啟動RequirementService。
+   啟用服務會啟動RequirementService。
 
 <!-- nested tables not supported - text above is the table>
 <table>
