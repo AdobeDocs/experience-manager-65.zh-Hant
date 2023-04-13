@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: f23adcf200b625e2ab2a766460c41fd7e38fae83
+source-git-commit: 41752e40f2bceae98d4a9ff8bf130476339fe324
 workflow-type: tm+mt
-source-wordcount: '2986'
+source-wordcount: '3025'
 ht-degree: 1%
 
 ---
@@ -396,7 +396,17 @@ Sling是 *以內容為中心*. 處理會著重於內容，因為每個(HTTP)請�
 
 與所有存放庫資料一樣，這些屬性也是由Oak授權堆疊所介導。 應根據最少特權原則限制訪問這些權利。
 
-為了支援此功能，Adobe提供權限強化套件，作為客戶建置的基礎。 它的作用是在儲存庫根目錄安裝「拒絕」訪問控制項，限制對常用系統屬性的匿名訪問。 套件可供下載 [此處](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) 和可安裝在所有支援的AEM版本上。 如需詳細資訊，請參閱發行說明。
+為了支援此功能，Adobe提供權限強化套件，作為客戶建置的基礎。 它的作用是在儲存庫根目錄安裝「拒絕」訪問控制項，限制對常用系統屬性的匿名訪問。 套件可供下載 [此處](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) 和可安裝在所有支援的AEM版本上。
+
+為了說明這些更改，我們可以比較在安裝包之前可以匿名查看的節點屬性：
+
+![安裝套件之前](/help/sites-administering/assets/before_resized.png)
+
+使用安裝套件後可檢視的項目，其中 `jcr:createdBy` 和 `jcr:lastModifiedBy` 不可見：
+
+![安裝套件後](/help/sites-administering/assets/after_resized.png)
+
+如需詳細資訊，請參閱套件發行說明。
 
 ### 避免點擊劫持 {#prevent-clickjacking}
 
