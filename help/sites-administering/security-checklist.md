@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 70c2d7c910f61169869aab9fdcbff4c4564ea9bd
+source-git-commit: e44480535ea7058dc41fc747351446b670d03b7f
 workflow-type: tm+mt
-source-wordcount: '2818'
+source-wordcount: '2986'
 ht-degree: 1%
 
 ---
@@ -389,6 +389,14 @@ Sling是 *以內容為中心*. 處理會著重於內容，因為每個(HTTP)請�
 >[!NOTE]
 >
 >如需詳細資訊，請參閱Oak檔案，位於 [可授權節點名稱生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
+
+**匿名權限強化套件**
+
+依預設，AEM會儲存系統中繼資料，例如 `jcr:createdBy` 或 `jcr:lastModifiedBy` 儲存庫中一般內容旁的節點屬性。 視設定和存取控制設定而定，在某些情況下，這可能會導致暴露個人識別資訊(PII)，例如當這些節點轉譯為原始JSON或XML時。
+
+與所有存放庫資料一樣，這些屬性也是由Oak授權堆疊所介導。 應根據最少特權原則限制訪問這些權利。
+
+為了支援此功能，Adobe提供權限強化套件，作為客戶建置的基礎。 它的作用是在儲存庫根目錄安裝「拒絕」訪問控制項，限制對常用系統屬性的匿名訪問。 套件可供下載 [此處](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) 和可安裝在所有支援的AEM版本上。 如需詳細資訊，請參閱發行說明。
 
 ### 避免點擊劫持 {#prevent-clickjacking}
 
