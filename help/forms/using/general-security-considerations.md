@@ -11,9 +11,9 @@ discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1060'
 ht-degree: 1%
 
 ---
@@ -49,18 +49,18 @@ ht-degree: 1%
  <tbody>
   <tr>
    <td><p>IBM® AIX® 7.2</p> </td>
-   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM AIX安全優勢</a></p> </td>
+   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM® AIX®安全優勢</a></p> </td>
   </tr>
   <tr>
-   <td><p>Microsoft Windows Server® 2016 </p> </td>
+   <td><p>Microsoft® Windows Server® 2016 </p> </td>
    <td><p><a href="https://cloudblogs.microsoft.com/windowsserver/2017/08/22/now-available-windows-server-2016-security-guide/">Windows Server 2016安全指南</a></p> </td>
   </tr>
   <tr>
    <td><p>Red Hat® Linux® AP或ES</p> </td>
-   <td><p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/security_guide/Red_Hat_Enterprise_Linux-7-Security_Guide-en-US.pdf" target="_blank">《 Red Hat Enterprise Linux安全指南》</a></p> </td>
+   <td><p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/security_guide/Red_Hat_Enterprise_Linux-7-Security_Guide-en-US.pdf" target="_blank">《 Red Hat® Enterprise Linux®安全指南》</a></p> </td>
   </tr>
   <tr>
-   <td><p>Sun Solaris 11</p> </td>
+   <td><p>Sun Solaris™ 11</p> </td>
    <td><p><a href="https://docs.oracle.com/cd/E53394_01/html/E54807/index.html" target="_blank">安全性與強化准則</a></p> </td>
   </tr>
   <tr>
@@ -98,15 +98,15 @@ ht-degree: 1%
  <tbody>
   <tr>
    <td><p>OracleWebLogic®</p> </td>
-   <td><p>在以下位置搜索了解WebLogic安全 <a href="https://download.oracle.com/docs/">https://download.oracle.com/docs/</a>.</p> </td>
+   <td><p>在以下位置搜索了解WebLogic安全 <a href="https://docs.oracle.com/">https://docs.oracle.com/</a>.</p> </td>
   </tr>
   <tr>
-   <td><p>IBM WebSphere®</p> </td>
+   <td><p>IBM® WebSphere®</p> </td>
    <td><p><a href="https://www.ibm.com/developerworks/websphere/zones/was/security/" target="_blank">保護應用程式及其環境</a></p> </td>
   </tr>
   <tr>
    <td><p>Red Hat® JBoss®</p> </td>
-   <td><p><a href="https://docs.jboss.org/author/display/AS7/Security+subsystem+configuration">安全子系統配置</a></p> </td>
+   <td><p><a href="https://docs.jboss.org/author/display/AS7/Security%20subsystem%20configuration.html">安全子系統配置</a></p> </td>
   </tr>
  </tbody>
 </table>
@@ -131,11 +131,11 @@ ht-degree: 1%
  </thead>
  <tbody>
   <tr>
-   <td><p>IBM DB2® 11.1</p> </td>
-   <td><p><a href="https://www-01.ibm.com/software/data/db2/library/">DB2產品系列庫</a></p> </td>
+   <td><p>IBM® DB2® 11.1</p> </td>
+   <td><p><a href="https://www-01.ibm.com/software/data/db2/library/">DB2®產品系列庫</a></p> </td>
   </tr>
   <tr>
-   <td><p>Microsoft SQL Server 2016</p> </td>
+   <td><p>Microsoft® SQL Server 2016</p> </td>
    <td>在Web上搜索「SQL Server 2016:安全性」</td>
   </tr>
   <tr>
@@ -160,7 +160,7 @@ ht-degree: 1%
  </thead>
  <tbody>
   <tr>
-   <td><p>JBoss</p> </td>
+   <td><p>JBoss®</p> </td>
    <td><p>8080</p> </td>
   </tr>
   <tr>
@@ -172,7 +172,7 @@ ht-degree: 1%
    <td><p>配置期間由管理員設定</p> </td>
   </tr>
   <tr>
-   <td>&gt;<p>WebSphere</p> </td>
+   <td>&gt;<p>WebSphere®</p> </td>
    <td><p>9060，如果啟用了「全局安全性」，則預設SSL埠值為9043。</p> <p>9080</p> </td>
   </tr>
   <tr>
@@ -192,7 +192,7 @@ ht-degree: 1%
    <td><p>1521</p> </td>
   </tr>
   <tr>
-   <td>&gt;<p>DB2</p> </td>
+   <td>&gt;<p>DB2®</p> </td>
    <td><p>50000</p> </td>
   </tr>
   <tr>
@@ -206,22 +206,22 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 將JBoss設定為使用非預設HTTP埠 {#configuring-jboss-to-use-a-non-default-http-port}
+### 將JBoss®配置為使用非預設HTTP埠 {#configuring-jboss-to-use-a-non-default-http-port}
 
-JBoss Application Server使用8080作為預設HTTP埠。 JBoss也具有預先配置的埠8180、8280和8380，這些埠在jboss-service.xml檔案中注釋。 如果您的電腦上有已使用此埠的應用程式，請依照下列步驟變更AEM Forms在JEE上使用的埠：
+JBoss® Application Server使用8080作為預設HTTP埠。 JBoss®還具有預先配置的埠8180、8280和8380，這些埠在jboss-service.xml檔案中注釋。 如果您的電腦上有已使用此埠的應用程式，請依照下列步驟變更AEM Forms在JEE上使用的埠：
 
 1. 開啟下列檔案進行編輯：
 
-   單伺服器安裝： [JBoss根]/standalone/configuration/standalone.xml
+   單伺服器安裝： [JBoss®根]/standalone/configuration/standalone.xml
 
-   群集安裝： [JBoss根]/domain/configuration/domain.xml
+   群集安裝： [JBoss®根]/domain/configuration/domain.xml
 
 1. 變更 **埠** 屬性 **&lt;socket-binding>** 標籤為自訂連接埠號。 例如，下列程式使用埠8090:
 
    &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot;/>
 
 1. 儲存並關閉檔案。
-1. 重新啟動JBoss應用程式伺服器。
+1. 重新啟動JBoss®應用程式伺服器。
 
 ## AEM Forms JEE安全性考量事項 {#aem-forms-on-jee-security-considerations}
 
@@ -243,9 +243,9 @@ lc_[資料庫].xml檔案不應包含明文格式的密碼。 請向應用程式�
 
 >[!NOTE]
 >
->JEE JBoss上的AEM Forms統包安裝程式會加密資料庫密碼。
+>JEE JBoss®統包安裝程式上的AEM Forms會加密資料庫密碼。
 
-IBM WebSphere應用程式伺服器和OracleWebLogic伺服器預設會加密資料源密碼。 不過，請向應用程式伺服器檔案確認，以確保發生此情況。
+IBM® WebSphere®應用程式伺服器和OracleWebLogic伺服器預設會加密資料源密碼。 不過，請向應用程式伺服器檔案確認，以確保發生此情況。
 
 ### 保護儲存在信任儲存中的私鑰 {#protecting-the-private-key-stored-in-trust-store}
 

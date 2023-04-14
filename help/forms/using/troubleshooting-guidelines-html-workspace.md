@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 exl-id: a054b60a-5e89-4c98-87bc-35669988d160
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '734'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 安裝套件時，如果您遇到錯誤 `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`，請執行下列步驟：
 
-1. 登入CRX DE lite。 預設URL為 `https://[localhost]:'port'/lc/crx/de/index.jsp`
+1. 登入CRXDE Lite。 預設URL為 `https://[localhost]:'port'/lc/crx/de/index.jsp`
 1. 刪除以下節點：
 
    `/home/groups/P/PERM_WORKSPACE_USER`
@@ -155,9 +155,9 @@ ht-degree: 0%
 
 指令碼和樣式可在不同的瀏覽器中除錯。
 
-* **在IE中除錯**:若要在IE中偵錯AEM Forms工作區，請參閱： [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
+* **在IE中除錯**:若要在IE中偵錯AEM Forms工作區，請參閱： [https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie).
 
-* **Chrome中的除錯**:若要在Chrome中開啟偵錯工具，請使用快速鍵：Ctrl+Shift+I。如需詳細資訊，請參閱： [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
+* **Chrome中的除錯**:若要在Chrome中開啟偵錯工具，請使用快速鍵：Ctrl+Shift+I。如需詳細資訊，請參閱： [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/).
 
 * **在Firefox中除錯**:Firefox中有數個附加元件可用來偵錯指令碼和樣式。 例如，Firebug是這類偵錯公用程式([https://getfirebug.com](https://getfirebug.com))。
 
