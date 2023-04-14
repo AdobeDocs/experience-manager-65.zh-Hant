@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 3d0eb55eb35fcf5da1212b8be7c0aeee11307bb6
+source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
 workflow-type: tm+mt
 source-wordcount: '2208'
 ht-degree: 0%
@@ -25,9 +25,11 @@ ht-degree: 0%
 
 * [建立變數](../../forms/using/variable-in-aem-workflows.md#create-a-variable) 資料類型，根據您要儲存的資訊類型。
 * [設定變數的值](../../forms/using/variable-in-aem-workflows.md#set-a-variable) 使用「設定變數」工作流程步驟。
-* [使用變數](../../forms/using/variable-in-aem-workflows.md#use-a-variable) 在所有AEM Forms工作流步驟中擷取儲存的值，在「或」(Or)「分割」(Split)和「轉至」(Goto)步驟中定義路由運算式。
+* [使用變數](../../forms/using/variable-in-aem-workflows.md#use-a-variable) 在所有「AEM Forms工作流」步驟中檢索儲存值，在「或」(Or)「分割」(Split)和「轉至」(Goto)步驟中定義路由表達式。
 
 下列影片示範如何在AEM工作流程模型中建立、設定和使用變數：
+
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_introduction_1_1.mp4)
 
@@ -115,6 +117,8 @@ ht-degree: 0%
 
 在此範例中，使用運算式編輯器來定義運算式，以計算 **資產成本** 和 **餘額** 變數並將結果儲存在 **totalvalue** 變數。
 
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
+
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
 
 ## 使用運算式編輯器 {#use-expression-editor}
@@ -162,6 +166,8 @@ ht-degree: 0%
 
 在此示例中，在定義路由表達式之前，請使用 [範例2](../../forms/using/variable-in-aem-workflows.md#example2) 若要設定 **totalvalue** 變數。 如果 **totalvalue** 變數大於50000。 同樣地，您可以定義規則，讓Branch 2在 **totalvalue** 變數小於50000。
 
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
+
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
 同樣，選擇外部指令碼路徑或指定ECMA指令碼，以便路由表達式來評估活動分支。 點選 **[!UICONTROL 更名分支]** 指定分支的替代名稱。
@@ -199,7 +205,7 @@ ht-degree: 0%
 | 基元（長、雙、布林、日期和字串） | workItem.getWorkflowData()。getMetaDataMap()。get(variableName, type) |
 | 文件 | Packages.com.adobe.aemfd.docmanager.Document doc = workItem.getWorkflowData()。getMetaDataMap()。get(&quot;docVar&quot;, Packages.com.adobe.aemfd.docmanager.Document.class); |
 | XML | Packages.org.w3c.dom.Document xmlObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName, Packages.org.w3c.dom.Document.class); |
-| 表單資料模型 | Packages.com.adobe.aem.dermis.api.FormDataModelInstanceObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName, Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class); |
+| 表單資料模式 | Packages.com.adobe.aem.dermis.api.FormDataModelInstanceObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName, Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class); |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName, Packages.com.google.gson.JsonObject.class); |
 
 您需要 [AEM Forms附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （適用於文檔和表單資料模型變數資料類型）。
@@ -271,7 +277,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 ### 使用工作流程變數在JCR外儲存敏感使用者資料 {#jcr-independent-persistance}
 
-使用表單工作流程處理的資料可包含敏感使用者資料，例如個人識別資訊和敏感個人資訊。 企業可以選擇將經過各種工作流程步驟（並使用工作流程變數傳遞）處理的資料，從JCR儲儲存儲存存到由他們擁有和管理的外部資料儲存中。 若要進一步了解在外部儲存中持續保存的工作流程資料，請參閱 [為客戶擁有的資料存放區使用工作流程變數](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
+使用Forms Workflow處理的資料可包含敏感的使用者資料，例如個人識別資訊和敏感個人資訊。 企業可以選擇將經過各種工作流程步驟（並使用工作流程變數傳遞）處理的資料，從JCR儲儲存儲存存到由他們擁有和管理的外部資料儲存中。 若要進一步了解在外部儲存中持續保存的工作流程資料，請參閱 [為客戶擁有的資料存放區使用工作流程變數](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
 [!DNL Adobe Experience Manager] 提供工作流程API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer) 將工作流程變數儲存在外部Azure blob儲存區中。 如需使用API的詳細資訊，請參閱 [使用工作流程變數來參數化敏感資料並儲存在外部資料存放區](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables).
 
 ## 編輯變數 {#edit-a-variable}
