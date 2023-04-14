@@ -1,8 +1,6 @@
 ---
 title: 如何使用IntelliJ IDEA開發AEM專案
-seo-title: How to Develop AEM Projects using IntelliJ IDEA
 description: 使用IntelliJ IDEA開發AEM專案
-seo-description: Using IntelliJ IDEA to develop AEM projects
 uuid: 382b5008-2aed-4e08-95be-03c48f2b549e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
-source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
+source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -23,7 +21,7 @@ ht-degree: 1%
 
 若要開始使用IntelliJ上的AEM開發，需執行下列步驟。
 
-在本作法的其餘部分中，會更詳細地說明每個選項。
+本主題的其餘部分將詳細說明每個步驟。
 
 * 安裝IntelliJ
 * 根據Maven設定AEM專案
@@ -36,7 +34,7 @@ ht-degree: 1%
 
 ### 安裝IntelliJ IDEA {#install-intellij-idea}
 
-從下載IntelliJ IDEA [JetBrains的下載頁面](https://www.jetbrains.com/idea/download/index.html).
+從下載IntelliJ IDEA [JetBrains的下載頁面](https://www.jetbrains.com/idea/download/).
 
 接著，請依照該頁面上的安裝指示操作。
 
@@ -48,7 +46,7 @@ ht-degree: 1%
 
 ### 準備IntelliJ IDEA的JSP支援 {#prepare-jsp-support-for-intellij-idea}
 
-IntelliJ IDEA也可提供使用JSP的支援，例如
+IntelliJ IDEA也可提供使用JSP的支援，例如：
 
 * 自動完成標籤庫
 * 對由 `<cq:defineObjects />` 和 `<sling:defineObjects />`
@@ -86,12 +84,12 @@ IntelliJ IDEA也可提供使用JSP的支援，例如
 
 #### 在專案中設定Web面向 {#set-up-a-web-facet-in-the-project}
 
-IntelliJ IDEA需要了解在何處查找用於調試的JSP。 由於IDEA無法解譯 `content-package-maven-plugin` 設定，則需要手動設定。
+IntelliJ IDEA必須了解在何處查找用於調試的JSP。 因為IDEA無法解譯 `content-package-maven-plugin` 設定，則必須手動設定。
 
 1. 前往 **檔案 — >項目結構**
 1. 選取 **內容** 模組
 1. 按一下 **+** 在模組清單上，然後選取 **Web**
-1. 作為Web資源目錄，請選擇 `content/src/main/content/jcr_root subdirectory` 如下方螢幕擷取畫面所示。
+1. 作為Web資源目錄，請選擇 `content/src/main/content/jcr_root subdirectory` 螢幕擷取中顯示。
 
 ![chlimage_1-48](assets/chlimage_1-48a.png)
 
@@ -120,7 +118,7 @@ IntelliJ IDEA需要了解在何處查找用於調試的JSP。 由於IDEA無法�
 
 最後一個步驟是使用IntelliJ IDEA提議的JVM選項啟動AEM。
 
-您可以直接啟動AEM jar檔案並新增這些選項（例如使用下列命令列）來執行此操作：
+直接啟動AEM jar檔案並新增這些選項，例如使用下列命令列：
 
 `java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -jar cq-quickstart-6.5.0.jar`
 
@@ -151,4 +149,4 @@ CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,su
 
 ### 使用IntelliJ IDEA除錯套件組合 {#debugging-bundles-with-intellij-idea}
 
-可以使用標準通用遠程調試連接調試套件中的代碼。 您可以遵循 [遠程調試的Jetbrain文檔](https://www.jetbrains.com/idea/webhelp/run-debug-configuration-remote.html).
+可以使用標準通用遠程調試連接調試套件中的代碼。 您可以遵循 [遠程調試的Jetbrain文檔](https://www.jetbrains.com/help/idea/remote-debugging-with-product.html#remote-interpreter).

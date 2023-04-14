@@ -2,7 +2,7 @@
 title: AEM Forms適用於AEM Forms的修補程式安裝指示
 description: AEM Forms Service Pack安裝OSGi和JEE環境的指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: b15581701aaff72db2fc0030b0062d2f12150d8f
+source-git-commit: 01bf12ec46966ab2c78e2e825840230ea1bd3395
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 8%
@@ -22,7 +22,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->查看最新 [AEM Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant) 以取得已修正問題的完整清單。
+>查看最新 [AEM Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html) 以取得已修正問題的完整清單。
 
 ## Experience Manager Forms 6.5包含的內容
 
@@ -53,7 +53,7 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 +++2.下載所需軟體：
 
 * [AEM Forms on JEE Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
-* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
+* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 * [Forms 附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 * [片段Servlet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
 
@@ -153,16 +153,15 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 * 使用 [來自套件管理器的HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html). 使用  `cmd=install&recursive=true` 以便安裝嵌套包。
 
    >[!NOTE]
-   >
-   >Experience Manager服務包不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
+   Experience Manager服務包不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
-**驗證安裝**
+   **驗證安裝**
 
-若要了解經認證可與此版本搭配使用的平台，請參閱 [技術要求](/help/sites-deploying/technical-requirements.md).
+   若要了解經認證可與此版本搭配使用的平台，請參閱 [技術要求](/help/sites-deploying/technical-requirements.md).
 
-1. 產品資訊頁面(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (spversion)` 在 [!UICONTROL 已安裝的產品].<!-- UPDATE FOR EACH NEW RELEASE -->
-1. 所有OSGi套件組合 **[!UICONTROL 活動]** 或 **[!UICONTROL 片段]** 在OSGi控制台中(使用Web控制台： `/system/console/bundles`)。
-1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.14版或更新版本(使用WebConsole: `/system/console/     bundles`)。
+   1. 產品資訊頁面(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (spversion)` 在 [!UICONTROL 已安裝的產品].<!-- UPDATE FOR EACH NEW RELEASE -->
+   1. 所有OSGi套件組合 **[!UICONTROL 活動]** 或 **[!UICONTROL 片段]** 在OSGi控制台中(使用Web控制台： `/system/console/bundles`)。
+   1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.14版或更新版本(使用WebConsole: `/system/console/     bundles`)。
 
 +++
 
@@ -185,14 +184,13 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 1. 備份 [CRX儲存庫和資料庫架構](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
 
 >[!NOTE]
->
-> 如果安裝關係資料庫的AEM Forms Service Pack，則必須備份DB_schema。
+如果安裝關係資料庫的AEM Forms Service Pack，則必須備份DB_schema。
 
 +++
 
 +++2.下載所需軟體：
 
-* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
+* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 * [Forms 附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
 +++
@@ -213,18 +211,17 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升級的功能，
 * 使用 [來自套件管理器的HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html). 使用 `cmd=install&recursive=true` 以便安裝嵌套包。
 
    >[!NOTE]
-   >
-   >Experience Manager服務包不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
+   Experience Manager服務包不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
-**驗證安裝**
+   **驗證安裝**
 
-若要了解經認證可與此版本搭配使用的平台，請參閱 [技術要求](/help/sites-deploying/technical-requirements.md).
+   若要了解經認證可與此版本搭配使用的平台，請參閱 [技術要求](/help/sites-deploying/technical-requirements.md).
 
-1. 產品資訊頁面(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (spversion)` 在 [!UICONTROL 已安裝的產品]. <!-- UPDATE FOR EACH NEW RELEASE -->
+   1. 產品資訊頁面(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (spversion)` 在 [!UICONTROL 已安裝的產品]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
-1. 所有OSGi套件組合 **[!UICONTROL 活動]** 或 **[!UICONTROL 片段]** 在OSGi控制台中(使用Web控制台： `/system/console/bundles`)。
+   1. 所有OSGi套件組合 **[!UICONTROL 活動]** 或 **[!UICONTROL 片段]** 在OSGi控制台中(使用Web控制台： `/system/console/bundles`)。
 
-   1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.14版或更新版本(使用Web控制台： `/system/console/bundles`)。
+      1. OSGi捆綁 `org.apache.jackrabbit.oak-core` 為1.22.14版或更新版本(使用Web控制台： `/system/console/bundles`)。
 
 +++
 
