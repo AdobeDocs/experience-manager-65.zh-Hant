@@ -1,8 +1,6 @@
 ---
 title: 程式報告快速入門
-seo-title: Getting Started with Process Reporting
-description: 開始使用JEE程式報告的AEM Forms時，您需要遵循的步驟
-seo-description: The steps you need to follow to get started with AEM Forms on JEE Process Reporting
+description: 在JEE程式報表上開始使用AEM Forms的步驟
 uuid: 685cad39-da2c-411d-a0b0-201917438bcf
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +8,9 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
@@ -29,13 +27,13 @@ ht-degree: 0%
 
 如果您目前使用Forms Workflow,AEM Forms資料庫可能會包含大量資料
 
-Process Reporting發佈服務將發佈資料庫中當前可用的所有AEM Forms資料。 這表示，如果資料庫包含您不想對其執行報告和查詢的舊資料，則所有該資料也將發佈到儲存庫，即使報告不需要它。 建議您在執行將資料發佈到流程報告儲存庫的服務之前清除此資料。 這將改善發佈者服務和查詢資料以進行報告的服務的效能。
+Process Reporting發佈服務會發佈資料庫中目前可用的所有AEM Forms資料。 這意味著，如果資料庫包含您不想對其運行報告和查詢的舊資料，則所有這些資料也將發佈到儲存庫，即使不需要報告。 建議您在執行將資料發佈到流程報告儲存庫的服務之前清除此資料。 這麼做可改善發佈者服務和查詢資料以進行報告之服務的效能。
 
-如需清除AEM Forms程式資料的詳細資訊，請參閱 [清除進程資料](https://help.adobe.com/en_US/livecycle/11.0/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7cb2.2.html).
+如需清除AEM Forms程式資料的詳細資訊，請參閱 [清除進程資料](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en).
 
 >[!NOTE]
 >
->如需清除公用程式的秘訣和技巧，請參閱Adobe Developer Connection文章，位於 [清除程式和作業](https://www.adobe.com/content/dam/Adobe/en/devnet/livecycle/pdfs/purging_processes_jobs.pdf).
+>如需清除公用程式的秘訣和技巧，請參閱Adobe Developer Connection文章，位於 [清除程式和作業](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en).
 
 ## 配置進程報告服務 {#configuring-process-reporting-services}
 
@@ -47,7 +45,7 @@ Process Reporting服務按計畫將資料從AEM Forms資料庫發佈到Process R
 
 依預設，資料發佈排程在每天凌晨2:00執行。
 
-執行下列步驟以變更發佈排程：
+若要變更發佈排程，請執行下列步驟：
 
 >[!NOTE]
 >
@@ -57,11 +55,11 @@ Process Reporting服務按計畫將資料從AEM Forms資料庫發佈到Process R
 1. &#x200B;
 
    * （適用於Windows）開啟 `[JBoss root]/bin/run.conf.bat` 檔案。
-   * （Linux、AIX和Solaris） `[JBoss root]/bin/run.conf.sh` 檔案。
+   * (Linux®、AIX®和Solaris™) `[JBoss root]/bin/run.conf.sh` 檔案。
 
 1. 添加JVM參數 `-Dreporting.publisher.cron = <expression>.`
 
-   範例：以下cron運算式會使「處理報表」每5小時將AEM Forms資料發佈至「處理報表」存放庫：
+   範例：以下cron運算式會使「處理報表」每五小時將AEM Forms資料發佈至「處理報表」存放庫：
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
@@ -70,15 +68,15 @@ Process Reporting服務按計畫將資料從AEM Forms資料庫發佈到Process R
 1. 重新啟動AEM Forms伺服器執行個體。
 
 1. 停止AEM Forms伺服器執行個體。
-1. 登入WebSphere管理控制台。 在導覽樹中，按一下 **伺服器** > **應用程式伺服器** 然後，在右窗格中，按一下伺服器名稱。
+1. 登入WebSphere®管理控制台。 在導覽樹中，按一下 **伺服器** > **應用程式伺服器** 然後，在右窗格中，按一下伺服器名稱。
 
-1. 在「伺服器基礎架構」下，按一下 **Java和進程管理** > **進程定義**.
+1. 在「伺服器基礎架構」下，按一下 **Java™和進程管理** > **進程定義**.
 
-1. 在「其他屬性」下，按一下 **Java虛擬機**.
+1. 在「其他屬性」下，按一下 **Java™虛擬機**.
 
    在「通用JVM參數」框中，添加參數 `-Dreporting.publisher.cron = <expression>.`
 
-   **範例**:以下cron運算式會使「處理報表」每5小時將AEM Forms資料發佈至「處理報表」存放庫：
+   **範例**:以下cron運算式會使「處理報表」每五小時將AEM Forms資料發佈至「處理報表」存放庫：
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
@@ -91,7 +89,7 @@ Process Reporting服務按計畫將資料從AEM Forms資料庫發佈到Process R
 1. 在下一個畫面中，按一下 **設定** 標籤> **伺服器啟動** 標籤。
 1. 在「參數」框中，添加JVM參數 `-Dreporting.publisher.cron = <expression>`.
 
-   **範例**:以下cron運算式會使「處理報表」每5小時將AEM Forms資料發佈至「處理報表」存放庫：
+   **範例**:以下cron運算式會使「處理報表」每五小時將AEM Forms資料發佈至「處理報表」存放庫：
 
    `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
@@ -139,7 +137,7 @@ Process Reporting使用ReportConfiguration服務來配置Process Reporting查詢
 1. 開啟 **報表設定** 服務。
 1. **記錄數**
 
-   在存放庫上執行查詢時，結果可能會包含大量記錄。 如果結果集很大，則查詢執行可能會佔用伺服器資源。
+   在存放庫上執行查詢時，結果可能會包含許多記錄。 如果結果集很大，則查詢執行可能會佔用伺服器資源。
 
    若要處理大型結果集，ReportConfiguration服務會將查詢處理分割為多個記錄批次。 這樣會降低系統負載。
 
@@ -153,10 +151,10 @@ Process Reporting使用ReportConfiguration服務來配置Process Reporting查詢
 
    >[!NOTE]
    >
-   >這與ProcessDataStorage配置選項中指定的位置相同 **根資料夾**.
+   >此位置與ProcessDataStorage配置選項中指定的位置相同 **根資料夾**.
    >
    >
-   >如果更新ProcessDataStorage配置中的根資料夾選項，則需要更新ReportConfiguration服務中的CRX儲存路徑位置。
+   >如果更新ProcessDataStorage配置中的根資料夾選項，則必須更新ReportConfiguration服務中的CRX儲存路徑位置。
 
 1. 按一下 **儲存** 關閉 **CQ Configuration Manager**.
 
@@ -186,9 +184,7 @@ ProcessDataPublisher服務從AEM Forms資料庫導入進程資料，並將資料
 
 **批時間間隔（秒）**
 
-每次ProcessDataPublisher服務運行時，服務首先將自上次運行服務以來的時間按批時間間隔進行拆分。 然後，服務會個別處理AEM Forms資料的每個間隔。
-
-這有助於控制發佈程式處理在一個週期內每次執行（批次）時端到端的資料大小。
+每次ProcessDataPublisher服務運行時，服務首先將自上次運行服務以來的時間按批時間間隔進行拆分。 然後，服務會分別處理AEM Forms資料的每個間隔，以協助控制發佈商在一個週期內每次執行（批次）期間端對端處理的資料大小。
 
 例如，如果發佈者每天執行，則依預設，會將處理分為24個批次，每個批次1小時，而非在單一執行中處理一天的整個資料。
 
@@ -230,7 +226,7 @@ AEM Forms環境包含環境設定時的資料。
 
 導覽至「程式報表」URL時(https://)&lt;server>:&lt;port>/lc/pr)，則顯示登錄螢幕。
 
-指定要登入「程式報告」模組的憑證。
+若要登入「程式報表」模組，請指定您的憑證。
 
 >[!NOTE]
 >

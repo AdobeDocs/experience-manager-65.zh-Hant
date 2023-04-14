@@ -11,9 +11,9 @@ discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1059'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>OracleLinux® 7更新3</td>
-   <td><a href="https://docs.oracle.com/cd/E52668_01/E54670/E54670.pdf" target="_blank">第7版安全性指南</a><br /> </td>
+   <td><a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/security/" target="_blank">第7版安全性指南</a><br /> </td>
   </tr>
   <tr>
    <td>CentOS 7<sup> </sup></td>
@@ -245,8 +245,8 @@ lc_[資料庫].xml檔案不應包含明文格式的密碼。 請向應用程式�
 >
 >JEE JBoss®統包安裝程式上的AEM Forms會加密資料庫密碼。
 
-IBM® WebSphere®應用程式伺服器和OracleWebLogic伺服器預設會加密資料源密碼。 不過，請向應用程式伺服器檔案確認，以確保發生此情況。
+IBM® WebSphere®應用程式伺服器和OracleWebLogic伺服器預設會加密資料源密碼。 不過，您應該向應用程式伺服器檔案確認，以確保檔案確實發生。
 
 ### 保護儲存在信任儲存中的私鑰 {#protecting-the-private-key-stored-in-trust-store}
 
-匯入信任存放區的私密金鑰或憑證會儲存在JEE資料庫的AEM Forms中。 採取適當的預防措施來保護資料庫並限制僅對指定管理員的訪問。
+匯入信任存放區的私密金鑰或憑證會儲存在JEE資料庫的AEM Forms中。 要保護資料庫並僅限指定管理員訪問，請採取適當的預防措施。

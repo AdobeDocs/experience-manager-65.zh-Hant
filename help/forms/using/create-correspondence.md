@@ -10,9 +10,9 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 1a6881b29024799c44b2068ea82750c983a012e5
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '3867'
+source-wordcount: '3855'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如需在信函預覽的HTML或PDF轉譯模式之間切換的詳細資訊，請參閱 [更改信函的轉譯模式](#changerenditionmode). 如需通信管理和AEM中PDF支援的詳細資訊，請參閱 [中止NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) 和 [PDF forms至HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html).
+   >如需在信函預覽的HTML或PDF轉譯模式之間切換的詳細資訊，請參閱 [更改信函的轉譯模式](#changerenditionmode). 如需通信管理和AEM中PDF支援的詳細資訊，請參閱 [中止NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html). <!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
 
 ### 輸入資料 {#enterdata}
 
@@ -379,7 +379,7 @@ AEM Forms通信管理會在「建立通信UI」中將信函顯示為HTML。 不�
 
 依預設，「建立通信UI」會使用HTML或行動表單來轉譯信函預覽。 行動表單預覽在任何瀏覽器中皆無問題，因為使用瀏覽器的原生外掛程式，且不需要其他外掛程式。 您可以將信函預覽模式變更為PDF。 不過，瀏覽器限制可能會針對信函互動式PDF預覽的不同功能產生問題。
 
-如需瀏覽器與信函預覽相容性的詳細資訊，請參閱 [中止NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
+如需瀏覽器與信函預覽相容性的詳細資訊，請參閱 [中止NPAPI瀏覽器外掛程式及其影響](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html).
 
 要更改信函的預覽模式，請完成以下步驟：
 

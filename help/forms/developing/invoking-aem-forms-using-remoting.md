@@ -11,9 +11,9 @@ topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '4628'
+source-wordcount: '4599'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 [使用HTTP Token建立執行SSO驗證的Flash Builder應用程式](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)
 
-如需如何在Flex圖表控制項中顯示處理資料的資訊，請參閱 [在AEM Forms圖表中顯示Flex處理資料](https://www.adobe.com/devnet/livecycle/articles/populating_flexcontrols.html).
+<!-- For information on how to display process data in a Flex graph control, see [Displaying AEM Forms process data in Flex graphs](https://www.adobe.com/devnet/livecycle/articles/populating_flexcontrols.html). This URL is 404. No suitable replacement URL was found after a search. Do not make this link live if it is dead! -->
 
 >[!NOTE]
 >
@@ -98,9 +98,9 @@ ht-degree: 0%
 
 ## 使用遠程處理文檔 {#handling-documents-with-remoting}
 
-AEM Forms中使用的最重要非原始Java類型之一，是 `com.adobe.idp.Document` 類別。 調用AEM Forms操作通常需要文檔。 它主要是PDF文檔，但可以包含其他文檔類型，如SWF、HTML、XML或DOC檔案。 (請參閱 [使用Java API將資料傳遞至AEM Forms服務](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
+AEM Forms中使用的最重要非原始Java™類型之一是 `com.adobe.idp.Document` 類別。 調用AEM Forms操作通常需要文檔。 它主要是PDF文檔，但可以包含其他文檔類型，如SWF、HTML、XML或DOC檔案。 (請參閱 [使用Java API將資料傳遞至AEM Forms服務](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
 
-以Flex建置的用戶端應用程式無法直接要求檔案。 例如，您無法啟動Adobe Reader來要求產生PDF檔案的URL。 檔案類型(例如PDF和Microsoft Word檔案)的請求會傳回URL的結果。 用戶端有責任顯示URL的內容。 文檔管理服務有助於生成URL和內容類型資訊。 對XML文檔的請求將返回結果中的完整XML文檔。
+以Flex建置的用戶端應用程式無法直接要求檔案。 例如，您無法啟動Adobe Reader來要求產生PDF檔案的URL。 對文檔類型(如PDF和Microsoft® Word文檔)的請求將返回一個URL。 用戶端有責任顯示URL的內容。 文檔管理服務有助於生成URL和內容類型資訊。 對XML文檔的請求將返回結果中的完整XML文檔。
 
 ### 將文檔作為輸入參數傳遞 {#passing-a-document-as-an-input-parameter}
 
@@ -127,7 +127,7 @@ docRef.url = "https://companyserver:8080/DocumentManager/116/7855"; ...
 ```java
 ... var docRef: DocumentReference = new DocumentReference(); 
 docRef.referenceType = DocumentReference.REF_TYPE_INLINE; 
-docRef.text = "Text for my document";  // Optionally, you can override the server’s default character set  // if necessary:  // docRef.charsetName=CharacterSetName  ...
+docRef.text = "Text for my document";  // Optionally, you can override the server's default character set  // if necessary:  // docRef.charsetName=CharacterSetName  ...
 ```
 
 * 當檔案不在伺服器上時，請使用「遠端上傳servlet」將檔案上傳至AEM Forms。 AEM Forms的新功能是上傳安全檔案。 上傳安全檔案時，您必須使用具有 *文檔上載應用程式用戶* 角色。 沒有此角色，用戶無法上載安全文檔。 建議您使用單一登入來上傳安全檔案。 (請參閱 [使用遠程功能傳遞安全文檔以調用進程](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).)
@@ -732,7 +732,7 @@ AEM Forms支援名為 `getFileUploadToken` 會傳回傳遞至上傳servlet的Tok
       // Called once the file is completely uploaded.
       private function completeHandler(event:DataEvent):void {
  
-        // Set the docRef’s url and referenceType parameters
+        // Set the docRef's url and referenceType parameters
         docRef.url = event.data as String;
         docRef.referenceType=DocumentReference.REF_TYPE_URL;
         executeInvokeProcess();
@@ -977,7 +977,7 @@ ActionScript類的欄位與屬於AEM Forms複雜類型的欄位匹配。 客戶A
 
 ### 快速入門：使用遠程調用客戶自定義服務 {#quick-start-invoking-the-customer-custom-service-using-remoting}
 
-以下代碼示例調用客戶服務並建立新客戶。 執行此程式碼範例時，請務必填寫所有文字方塊。 同時，請確定您建立對應至的Customer.as檔案 `com.adobe.livecycle.sample.customer.Customer`.
+以下代碼示例調用客戶服務並建立客戶。 執行此程式碼範例時，請務必填寫所有文字方塊。 同時，請確定您建立對應至的Customer.as檔案 `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
 在執行此快速啟動之前，您必須建立並部署銀行自定義元件。
