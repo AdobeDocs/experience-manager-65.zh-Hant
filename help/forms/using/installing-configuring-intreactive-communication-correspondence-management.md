@@ -9,9 +9,9 @@ discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1382'
 ht-degree: 6%
 
 ---
@@ -52,7 +52,7 @@ AEM Forms互動式通訊會在AEM Forms的Author例項上執行管理、製作�
 
 * 滿足記憶體要求。 AEM Forms附加元件套件需要：
 
-   * 15 GB的暫存空間，適用於Microsoft Windows安裝。
+   * 15 GB的暫存空間，適用於Microsoft® Windows安裝。
    * 6 GB的臨時空間，用於基於UNIX的安裝。
 
 * 基於UNIX的系統的額外要求：如果使用基於UNIX的作業系統，請從相應作業系統的安裝介質安裝以下軟體包。
@@ -99,7 +99,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
 1. 選取套件，然後按一下 **[!UICONTROL 安裝]**.
 
-   您也可以透過 [AEM Forms版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
+   您也可以透過 [AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) 文章。
 
 1. 安裝套件後，系統會提示您重新啟動AEM執行個體。 **不要立即重新啟動伺服器。** 停止AEM Forms伺服器之前，請等到ServiceEvent REGISTERED和ServiceEvent UNECROVERD訊息停止出現在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log檔案和日誌穩定。
 1. 在所有「製作」和「發佈」例項上重複步驟1至7。
@@ -117,7 +117,7 @@ AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCast
 1. 停止基礎AEM例項。
 1. 開啟 [AEM安裝目錄]\crx-quickstart\conf\sling.properties檔案進行編輯。
 
-   若您使用 [AEM安裝目錄]\crx-quickstart\bin\start.bat以啟動AEM，然後編輯位於的sling.properties [AEM_root]\crx-quickstart\。
+   若您使用 [AEM安裝目錄]\crx-quickstart\bin\start.bat以啟動AEM，然後在編輯sling.properties [AEM_root]\crx-quickstart\。
 
 1. 將下列屬性新增至sling.properties檔案：
 
@@ -141,7 +141,7 @@ AEM Forms提供一些強制和選用設定。 強制設定包括設定BouncyCast
 
 #### 安裝相容性包 {#install-compatibility-package}
 
-互動式通訊是在AEM 6.5 Forms中建立客戶通訊的預設且建議方法。 如果您已從舊版升級或移轉，並計畫繼續使用信函（通信管理），請安裝 [AEMFD相容性套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT).
+互動式通訊是在AEM 6.5 Forms中建立客戶通訊的預設且建議方法。 如果您已從舊版升級或移轉，並計畫繼續使用信函（通信管理），請安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en).
 
 AEMFD相容性套件可讓您在AEM 6.5 Forms上使用來自AEM 6.4 Forms、AEM 6.3 Forms和AEM 6.2 Forms的下列資產：
 
@@ -152,7 +152,7 @@ AEMFD相容性套件可讓您在AEM 6.5 Forms上使用來自AEM 6.4 Forms、AEM 
 
 #### 設定 Dispatcher {#configure-dispatcher}
 
-Dispatcher 是 Adobe Experience Manager 的快取及/或負載平衡工具，可搭配企業級網頁伺服器使用。如果您使用 [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)，然後對AEM Forms執行下列設定：
+Dispatcher 是 Adobe Experience Manager 的快取及負載平衡工具，搭配企業級網頁伺服器使用。如果您使用 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)，然後對AEM Forms執行下列設定：
 
 1. 設定AEM Forms的存取權：
 
@@ -160,21 +160,21 @@ Dispatcher 是 Adobe Experience Manager 的快取及/或負載平衡工具，可
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   儲存並關閉檔案。 如需篩選器的詳細資訊，請參閱 [Dispatcher檔案](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html).
+   儲存並關閉檔案。 如需篩選器的詳細資訊，請參閱 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant).
 
 1. 設定反向連結篩選服務：
 
-   以管理員身分登入Apache Felix設定管理器。 配置管理器的預設URL為https://&#39;server&#39;:[port_number]/system/console/configMgr。 在 **配置** ，選擇 **Apache Sling反向連結篩選器** 選項。 在「允許主機」欄位中，輸入Dispatcher的主機名稱，以允許它作為反向連結，然後按一下 **儲存**. 條目格式為https://&#39;[伺服器]:[埠]&#39;。
+   以管理員身分登入Apache Felix設定管理器。 配置管理器的預設URL為https://&#39;server&#39;:[port_number]/system/console/configMgr。 在 **配置** ，選擇 **Apache Sling反向連結篩選器** 選項。 在「允許主機」欄位中，輸入Dispatcher的主機名稱，以允許它做為反向連結，然後按一下 **儲存**. 條目格式為https://&#39;[伺服器]:[埠]&#39;。
 
 #### 整合Adobe Target {#integrate-adobe-target}
 
-如果您的客戶提供的體驗不吸引人，就可能會放棄互動式通訊。 雖然讓客戶感到沮喪，但它還可以提高貴組織的支援量和成本。 識別並提供適當的客戶體驗以提高轉換率，既重要又具挑戰性。 AEM表單是此問題的關鍵。
+如果您的客戶提供的體驗不吸引人，就可能會放棄互動式通訊。 雖然這讓客戶感到沮喪，但也會提高貴組織的支援數量和成本。 識別並提供適當的客戶體驗以提高轉換率，既重要又具挑戰性。 AEM表單是此問題的關鍵。
 
-AEM forms與Adobe Marketing Cloud解決方案Adobe Target整合，可跨多個數位頻道提供個人化且吸引人的客戶體驗。 若要使用Adobe Target來個人化互動式通訊， [整合Adobe Target與AEM Forms](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
+AEM forms與Adobe Experience Cloud解決方案Adobe Target整合，可跨多個數位頻道提供個人化且吸引人的客戶體驗。 若要使用Adobe Target來個人化互動式通訊， [整合Adobe Target與AEM Forms](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
 
 #### 為表單資料模型配置SSL通訊  {#configure-ssl-communcation-for-form-data-model}
 
-您可以為表單資料模型啟用SSL通訊。 若要為表單資料模型啟用SSL通訊，請在啟動任何AEM Forms例項前，將憑證新增至所有例項的Java信任存放區。 您可以執行以下命令來新增憑證：
+您可以為表單資料模型啟用SSL通訊。 若要為表單資料模型啟用SSL通訊，請在啟動任何AEM Forms例項前，將憑證新增至所有例項的Java™信任存放區。 您可以執行以下命令來新增憑證：
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 

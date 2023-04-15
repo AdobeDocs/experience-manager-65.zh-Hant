@@ -10,9 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
 feature: Mobile Forms
 exl-id: 07d20c2f-7d13-48ac-8d58-b367eb194558
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
@@ -25,12 +25,12 @@ HTML5表單使用標準HTML結構，可讓HTML搭配這些表單使用一般協�
 
 ## 無障礙標準 {#accessibility-standards}
 
-HTML5表單符合第508節中已知例外的協助工具規範。 請參閱 [HTML5表單的VPAT](https://wwwimages.adobe.com/content/dam/acom/en/accessibility/compliance/pdfs/livecycle-mobile-forms-es4-section-508-vpat.pdf) 以取得詳細資訊。
+HTML5表單符合第508節中已知例外的協助工具規範。 請參閱 [HTML5表單的VPAT](https://www.adobe.com/content/dam/cc1/en/accessibility/compliance/pdfs/adobe-livecycle-es4-section-508-vpat-portfolio.pdf) 以取得詳細資訊。
 
 ## HTML5表單的認證螢幕閱讀器 {#certified-screen-readers-for-html-forms}
 
-* Microsoft Windows上的JAWS 14.0
-* Mac OS X和iPad上的VoiceOver
+* Microsoft® Windows上的JAWS 14.0
+* macOS X和iPad的VoiceOver
 
 ### 下頜 {#jaws}
 
@@ -38,11 +38,11 @@ HTML5表單符合第508節中已知例外的協助工具規範。 請參閱 [HTM
 
 ### VoiceOver {#voiceover}
 
-HTML5表單支援Voice over的所有預設擊鍵和手勢。 有關設定和使用VoiceOver的詳細資訊，請參閱 [https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/).
+HTML5表單支援Voice over的所有預設擊鍵和手勢。 有關設定和使用VoiceOver的詳細資訊，請參閱 [https://www.apple.com/accessibility/vision/](https://www.apple.com/accessibility/vision/).
 
 ## 已知問題 {#known-issues}
 
-* **（僅內部Explorer 9）** 在HTML5表單中，頁面會依需求（動態）載入。 隨需頁面載入會造成螢幕助讀程式運作問題。 當螢幕助讀程式的焦點位於頁面的最後一個欄位，且使用者按下索引標籤時，螢幕助讀程式不會將焦點設定在下一頁的第一個欄位上，而會將焦點返回表單第一頁的第一個欄位。
+* **（僅內部Explorer 9）** 在HTML5表單中，頁面會依需求（動態）載入。 隨需頁面載入會造成螢幕助讀程式運作問題。 當螢幕助讀程式的焦點位於頁面的最後一個欄位，且使用者按下索引標籤時，螢幕助讀程式會將焦點返回表單上第一個頁面的第一個欄位。
 * **（僅內部Explorer 9）** HTML5表單中的「日期選擇器」控制項無法透過鍵盤完全存取。 在「日期選擇器」控制項中，如果多次按上/下鍵，「日期選擇器」控制項將關閉，焦點將移到下一個/最後一個欄位。
 
 * VoiceOver在iPad safari上無法偵測日期Widget上的方向鍵。
