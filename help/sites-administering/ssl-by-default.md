@@ -1,6 +1,6 @@
 ---
-title: 預設為SSL
-seo-title: SSL By Default
+title: 預設為SSL/TLS
+seo-title: SSL/TLS By Default
 description: 了解如何在AEM中依預設使用SSL。
 seo-description: Learn how to use SSL by Default in AEM.
 uuid: 2fbfd020-1d33-4b22-b963-c698e62f5bf6
@@ -11,20 +11,20 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 252924afb70dd311a27d04278fbe363db15e9519
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '850'
 ht-degree: 0%
 
 ---
 
-# 預設為SSL{#ssl-by-default}
+# 預設為SSL/TLS{#ssl-tls-by-default}
 
 為了持續改善AEM的安全性，Adobe已推出SSL預設功能。 其目的是鼓勵使用HTTPS連線至AEM例項。
 
-## 預設啟用SSL {#enabling-ssl-by-default}
+## 預設啟用SSL/TLS {#enabling-ssl-tls-by-default}
 
-您可以按一下AEM主畫面中的相關收件匣訊息，以開始依預設設定SSL。 要進入收件箱，請按螢幕右上角的鈴聲表徵圖。 然後，按一下 **查看全部**. 這會顯示清單檢視中排序的所有警報清單。
+您可以按一下AEM主畫面中的相關收件匣訊息，以開始依預設設定SSL/TLS。 要進入收件箱，請按螢幕右上角的鈴聲表徵圖。 然後，按一下 **查看全部**. 這會顯示清單檢視中排序的所有警報清單。
 
 在清單中，選取並開啟 **配置HTTPS** 警報：
 
@@ -52,9 +52,9 @@ ht-degree: 0%
 
    ![screen_shot_2018-07-25at31658pm](assets/screen_shot_2018-07-25at31658pm.png)
 
-## 預設自動化SSL {#automating-ssl-by-default}
+## 預設自動化SSL/TLS {#automating-ssl-tls-by-default}
 
-預設情況下，有三種方式可自動執行SSL。
+預設會自動化SSL/TLS有三種方式。
 
 ### 透過HTTPPOST {#via-http-post}
 
@@ -159,7 +159,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 ### 產生要與精靈搭配使用的私密金鑰/憑證組 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
-以下是以DER格式建立自簽名證書的範例，SSL嚮導可使用此格式。 根據作業系統安裝OpenSSL，開啟OpenSSL命令提示符，並將目錄更改為要生成私鑰/證書的資料夾。
+以下是以DER格式建立自簽名憑證的範例，SSL/TLS精靈可使用此格式。 根據作業系統安裝OpenSSL，開啟OpenSSL命令提示符，並將目錄更改為要生成私鑰/證書的資料夾。
 
 >[!NOTE]
 >
@@ -190,15 +190,15 @@ it for any subsequent updating of the private key or certificate.</dd>
 openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
 ```
 
-最後，上傳 **localhostprivate.der** 作為私密金鑰和 **localhost.crt** 作為圖形SSL精靈的步驟2中的SSL憑證，如本頁面開頭所述。
+最後，上傳 **localhostprivate.der** 作為私密金鑰和 **localhost.crt** 做為本頁開頭所述之圖形SSL/TLS精靈步驟2中的SSL/TLS憑證。
 
-### 透過cURL更新SSL設定 {#updating-the-ssl-configuration-via-curl}
+### 透過cURL更新SSL/TLS設定 {#updating-the-ssl-tls-configuration-via-curl}
 
 >[!NOTE]
 >
 >請參閱 [搭配使用cURL與AEM](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html) 以取得AEM中實用cURL命令的集中清單。
 
-您也可以使用cURL工具來自動化SSL設定。 您可以將設定參數發佈至此URL來執行此動作：
+您也可以使用cURL工具來自動化SSL/TLS設定。 您可以將設定參數發佈至此URL來執行此動作：
 
 *https://&lt;serveraddress>:&lt;serverport>/libs/granite/security/post/sslSetup.html*
 
@@ -221,7 +221,7 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out loca
 
 >[!NOTE]
 >
->要自動執行SSL配置，運行cURL的最快方式是從DER和CRT檔案所在的資料夾中。 或者，您也可以在 `privatekeyFile` 和certificateFile引數。
+>自動執行SSL/TLS設定的最快cURL執行方式，是從DER和CRT檔案所在的資料夾。 或者，您也可以在 `privatekeyFile` 和certificateFile引數。
 >
 >您也需要通過驗證才能執行更新，因此請務必將cURL命令附加至 `-u user:passeword` 參數。
 >
@@ -239,3 +239,15 @@ curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm
 
 執行命令後，請驗證所有憑證是否已將其存入金鑰存放區。 從以下位置檢查金鑰存放區：
 [http://localhost:4502/libs/granite/security/content/userEditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/userEditor.html/home/users/system/security/ssl-service)
+
+### 啟用TLS 1.3連線 {#enabling-tls-connection}
+
+1. 前往Web主控台
+1. 接著，導覽至 **OSGi** - **設定** - **AdobeGranite SSL連接器工廠**
+1. 前往 **包含的密碼套件** 欄位並新增下列項目。 您可以按「**+**「 」按鈕，在中新增每個欄位後，顯示在欄位左側：
+
+   * `TLS_AES_256_GCM_SHA384`
+   * `TLS_AES_128_GCM_SHA256`
+   * `TLS_CHACHA20_POLY1305_SHA256`
+   * `TLS_AES_128_CCM_SHA256`
+   * `TLS_AES_128_CCM_8_SHA256`
