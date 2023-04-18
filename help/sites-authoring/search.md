@@ -1,8 +1,6 @@
 ---
-title: 搜尋
-seo-title: Search
-description: 通過全面的搜索更快地查找內容
-seo-description: Find your content faster with comprehensive search
+title: 全面搜索
+description: 透過全面的搜尋，更快找到您的內容。
 uuid: 21605b96-b467-4d01-9a64-9d0648d539f1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +9,10 @@ content-type: reference
 discoiquuid: 4ec15013-f7ab-44d6-8053-ed28b14f95e2
 docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 7%
+source-wordcount: '504'
+ht-degree: 6%
 
 ---
 
@@ -42,7 +40,7 @@ AEM的製作環境提供多種搜尋內容的機制，視資源類型而定。
 >
 >也可使用快捷鍵叫用搜尋 `/` （正斜線）。
 
-## 搜尋與篩選 {#search-and-filter}
+## 搜尋和篩選 {#search-and-filter}
 
 若要搜尋及篩選資源：
 

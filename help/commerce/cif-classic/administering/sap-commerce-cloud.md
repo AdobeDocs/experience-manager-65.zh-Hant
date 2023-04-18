@@ -1,16 +1,14 @@
 ---
-title: SAPCommerce Cloud
-seo-title: SAP Commerce Cloud
+title: 將AEM與SAPCommerce Cloud
 description: 了解如何將AEM與SAPCommerce Cloud搭配使用。
-seo-description: Learn how to use AEM with SAP Commerce Cloud.
 uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
-source-git-commit: 61691c300322edcdee33b121ca400e4c89256e45
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1717'
 ht-degree: 2%
 
 ---

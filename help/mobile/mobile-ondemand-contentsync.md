@@ -1,8 +1,6 @@
 ---
 title: 具有內容同步的行動裝置
-seo-title: Mobile with Content Sync
 description: 請詳閱本頁面，了解內容同步。 在AEM中撰寫的頁面可作為應用程式內容，即使裝置離線亦然。 此外，由於AEM頁面是以網頁標準為基礎，因此可跨平台運作，讓您將其內嵌於任何原生包裝函式中。 此策略可降低開發工作量，並讓您輕鬆更新應用程式內容。
-seo-description: Follow this page to learn about Content Sync. Pages that are authored in AEM can be used as app content, even when the device is offline. Furthermore, because AEM pages are based on web standards, they work cross-platform enabling you to embed them in any native wrapper. This strategy reduces develoment effort and enables you to easily update app content.
 uuid: 11f74cc5-99a5-4186-9b60-b19351305432
 contentOwner: User
 content-type: reference
@@ -10,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: 8fb70ca4-86fc-477d-9773-35b84d5e85a8
 exl-id: a6e59334-09e2-4bb8-b445-1868035da556
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
 source-wordcount: '2993'
 ht-degree: 0%
@@ -21,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 使用「內容同步」來封裝內容，以便用於原生行動應用程式。 在AEM中撰寫的頁面可作為應用程式內容，即使裝置離線亦然。 此外，由於AEM頁面是以網頁標準為基礎，因此可跨平台運作，讓您將其內嵌於任何原生包裝函式中。 此策略可降低開發工作量，並讓您輕鬆更新應用程式內容。
 

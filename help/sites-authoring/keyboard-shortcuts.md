@@ -1,8 +1,6 @@
 ---
-title: 控制台的鍵盤快速鍵
-seo-title: Keyboard Shortcuts for Consoles
-description: 使用這些鍵盤快速鍵進行編寫時節省時間
-seo-description: Save time when authoring by using these keyboard shortcuts
+title: AEM中控制台的鍵盤快速鍵
+description: 使用這些鍵盤快速鍵進行編寫時節省時間。
 uuid: 3b90570f-e187-4f09-9ccf-838e5657de2f
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
-source-git-commit: ad8f98d22c2f2095ee92741331170be996103d95
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '380'
 ht-degree: 4%
 
 ---

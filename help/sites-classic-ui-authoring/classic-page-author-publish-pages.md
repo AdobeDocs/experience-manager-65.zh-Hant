@@ -1,8 +1,6 @@
 ---
 title: 發佈頁面
-seo-title: Publishing Pages
-description: 一旦您在製作環境中建立並檢閱內容後，其目標就是將其發佈在您的公開網站上。
-seo-description: Once you have created and reviewed your content on the author environment, the goal is to make it available on your public website.
+description: 在作者環境中建立並檢閱內容後，請在您的公開網站上提供該內容。
 uuid: ab5ffc59-1c41-46fe-904e-9fc67d7ead04
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,16 +9,16 @@ content-type: reference
 discoiquuid: 46d6bde0-8645-4cff-b79c-8e1615ba4ed4
 docset: aem65
 exl-id: 3f6aa06e-b5fd-4ab0-9ecc-14250cb3f55e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
 
 # 發佈頁面{#publishing-pages}
 
-在製作環境中建立並檢閱內容後，目標就是讓它可在您的公開網站（您的發佈環境）上使用。
+在作者環境中建立並檢閱內容後，請在您的公開網站（您的發佈環境）上提供內容。
 
 這稱為發佈頁面。 如果您想從發佈環境中移除頁面，即為取消發佈。 發佈和取消發佈頁面時，製作環境仍可供進一步變更，直到您刪除為止。
 

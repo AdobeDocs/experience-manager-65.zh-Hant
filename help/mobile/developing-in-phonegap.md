@@ -1,15 +1,13 @@
 ---
 title: PhoneGap
-seo-title: Authoring Content for Adobe PhoneGap Enterprise
 description: 本頁面是使用PhoneGap Enterprise搭配AEM來開發應用程式的起點。 AEM與PhoneGap整合，讓您能使用AEM頁面輕鬆建立應用程式。 PhoneGap可讓使用者建立公用程式應用程式，讓使用者使用內容。
-seo-description: This page serves as starting point for developing apps using PhoneGap Enterprise with AEM. AEM integrates with PhoneGap so that you can easily create apps using AEM pages. PhoneGap allows the user to create utility apps that lets user to work with the content.
 uuid: c6ac02fa-d41c-4b57-95d8-171a96540dd6
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 exl-id: 9a97e11b-a683-490a-ab7b-158de32984ef
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 2%
@@ -20,7 +18,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 AEM與PhoneGap整合，讓您能使用AEM頁面輕鬆建立應用程式。 PhoneGap可讓使用者建立公用程式應用程式，讓使用者使用內容。 「內容同步」可讓您建立頁面的版本控制封存檔，以便與應用程式捆綁。
 
@@ -32,7 +30,7 @@ AEM與PhoneGap整合，讓您能使用AEM頁面輕鬆建立應用程式。 Phone
 
 * [在AEM中開發行動應用程式](/help/mobile/developing-mobile-applications.md)
 * [具有內容同步的行動裝置](/help/mobile/phonegap-contentsync.md)
-* [頁面範本](/help/mobile/phonegap-apps-arch-page-templates.md)
+* [頁面範例](/help/mobile/phonegap-apps-arch-page-templates.md)
 
 * [AEM Mobile內容服務：概述](/help/mobile/develop-content-as-a-service.md)
 

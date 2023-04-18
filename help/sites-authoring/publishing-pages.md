@@ -1,8 +1,6 @@
 ---
-title: 發佈頁面
-seo-title: Publishing Pages
-description: 發佈頁面
-seo-description: null
+title: 發佈內容頁面
+description: 了解如何發佈內容頁面。
 uuid: 57795e4a-e528-4e74-ad9c-e13f868daebb
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,16 +9,16 @@ content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1662'
 ht-degree: 7%
 
 ---
 
 # 發佈頁面 {#publishing-pages}
 
-在製作環境中建立並檢閱內容後，目標是 [在你的公共網站上公佈](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) （您的發佈環境）。
+在您建立並檢閱了製作環境中的內容後， [在你的公共網站上公佈](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) （您的發佈環境）。
 
 這稱為發佈頁面。 如果您想從發佈環境中移除頁面，即為取消發佈。 發佈和取消發佈頁面時，製作環境仍可供進一步變更，直到您刪除為止。
 

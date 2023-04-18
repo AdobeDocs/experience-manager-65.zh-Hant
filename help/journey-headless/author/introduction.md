@@ -1,11 +1,11 @@
 ---
-title: AEM Headless 內容作者歷程
+title: 使用Adobe Experience Manager編寫無頭版
 description: 介紹Adobe Experience Manager強大、彈性、無頭的功能，以及如何為專案製作內容。
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 91%
+source-wordcount: '632'
+ht-degree: 90%
 
 ---
 

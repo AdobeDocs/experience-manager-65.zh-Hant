@@ -1,8 +1,6 @@
 ---
-title: 作者的第一步
-seo-title: First Steps for Authors
-description: 概述開始使用AEM製作內容時，您將使用的主要工作
-seo-description: An overview of the main tasks that you will be using when starting to author content with AEM
+title: 在AEM中建立內容時，作者的前幾個步驟
+description: 概述您使用Adobe Experience Manager(AEM)編寫內容時所使用的主要工作。
 uuid: 1a09da22-faa4-4a7a-a2c5-97a255a6a2ae
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 85ebc05d-ce45-4bbb-b9cc-b21810d0d877
 docset: aem65
 exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '407'
 ht-degree: 1%
 
 ---

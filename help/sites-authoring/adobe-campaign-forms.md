@@ -1,8 +1,6 @@
 ---
-title: 在AEM中建立Adobe Campaign Forms
-seo-title: Creating Adobe Campaign Forms in AEM
-description: AEM可讓您建立和使用網站上與Adobe Campaign互動的表單
-seo-description: AEM lets you create and use forms that interact with Adobe Campaign on your website
+title: 在Adobe Experience Manager中建立Adobe Campaign Forms
+description: Adobe Experience Manager可讓您建立和使用網站上與Adobe Campaign互動的表單
 uuid: 61778ea7-c4d7-43ee-905f-f3ecb752aae2
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: d53ef3e2-14ca-4444-b563-be67be15c040
 exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1289'
 ht-degree: 0%
 
 ---

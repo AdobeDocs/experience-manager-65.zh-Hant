@@ -1,8 +1,6 @@
 ---
-title: 了解分段
-seo-title: Understanding Segmentation
-description: 建立促銷活動時，區段是考量的重要因素
-seo-description: Segmentation is a key consideration when creating a campaign
+title: 了解建立行銷活動時的細分
+description: 區段是建立促銷活動時的主要考量。
 uuid: 900da068-5dda-4b6b-8be3-4b7ad614126d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 36c87684-e62a-4983-b123-87f56dbf7bc5
 exl-id: 61a5875f-ad09-4971-a886-b0d88e0c9967
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '554'
 ht-degree: 1%
 
 ---

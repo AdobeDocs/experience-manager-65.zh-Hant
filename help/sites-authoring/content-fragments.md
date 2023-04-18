@@ -1,8 +1,6 @@
 ---
-title: 使用內容片段進行頁面編寫
-seo-title: Page Authoring with Content Fragments
-description: AEM內容片段可讓您設計、建立、組織及使用不受頁面影響的內容
-seo-description: AEM Content Fragments allow you to design, create, curate, and use page-independent content
+title: 使用內容片段製作內容頁面
+description: AEM內容片段可讓您設計、建立、組織及使用不受頁面影響的內容。
 uuid: 987de428-8354-4b23-a552-3ea415122184
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +9,7 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 7%
@@ -71,7 +69,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 1. 新增 **內容片段** 元件；從 **元件** 瀏覽器或 **插入新元件**.
 
-1. 您可以:
+1. 您可以執行下列兩個動作中的一個:
 
    * 開啟 **資產** 瀏覽器和篩選器 **內容片段** （預設為影像）。 然後將所需片段拖曳至元件例項。
 

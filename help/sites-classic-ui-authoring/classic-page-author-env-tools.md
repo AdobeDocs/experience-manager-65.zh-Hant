@@ -1,8 +1,6 @@
 ---
 title: 製作 — 環境和工具
-seo-title: Authoring - the Environment and Tools
 description: 網站主控台可讓您管理和導覽您的網站。 使用兩個窗格，即可展開網站的結構並對所需元素採取動作。
-seo-description: The Websites console allows you to manage and navigate your website. Using two panes, the structure of your website can be expanded and actions taken on the required elements.
 uuid: 0a9ce725-042a-4697-81fe-ac86cbab0398
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---

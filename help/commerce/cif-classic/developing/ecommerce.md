@@ -1,8 +1,6 @@
 ---
-title: 電子商務
-seo-title: eCommerce
-description: 整合架構包含具有API的整合層
-seo-description: The integration framework includes an integration layer with an API
+title: 具有API的電子商務整合層
+description: 整合架構包含具有API的整合層。
 uuid: 48e01bbb-8f9e-489c-bbe4-24563e84ff35
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ content-type: reference
 topic-tags: platform
 docset: aem65
 exl-id: da63c576-34cd-40ce-81de-d7391a331364
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 1%
+source-wordcount: '145'
+ht-degree: 0%
 
 ---
 

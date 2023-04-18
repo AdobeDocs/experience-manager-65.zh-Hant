@@ -1,8 +1,6 @@
 ---
 title: 了解分段
-seo-title: Understanding Segmentation
 description: 區段是建立促銷活動時的主要考量。 在大多數情況下，您在開始行銷活動之前必須先定義區段。
-seo-description: Segmentation is a key consideration when creating a campaign. In most cases, you will need to have segments already defined before starting your campaign.
 uuid: 609d83b3-df0e-44ad-8e27-90b676d2666b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,7 +8,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: bb75f4ab-d983-45f6-98a3-da8bd9b63751
 exl-id: 9092977b-b558-42a3-8092-4615fbc0a08e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 1%

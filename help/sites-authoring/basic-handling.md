@@ -1,8 +1,6 @@
 ---
-title: 基本處理
-seo-title: Basic Handling
+title: 使用AEM製作環境時的基本處理
 description: 熟悉如何導覽AEM及其基本用途
-seo-description: Get comfortable with navigating AEM and its basic usage
 uuid: c78ef9da-e0bd-47be-a410-9cf2ae71749a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +9,10 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '2967'
-ht-degree: 5%
+source-wordcount: '2973'
+ht-degree: 6%
 
 ---
 
@@ -141,7 +139,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
 
 ## 標頭 {#the-header}
 
-標題一律顯示在畫面頂端。 雖然無論您位於系統中的哪個位置，標題中的大多數選項都保持不變，但有些選項是內容專屬的。
+ 標頭會始終顯示在畫面頂端。雖然無論您位於系統中的哪個位置，標題中的大多數選項都保持不變，但有些選項是內容專屬的。
 
 ![bh-03](assets/bh-03.png)
 
@@ -169,7 +167,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
 
    ![](do-not-localize/screen_shot_2018-03-23at103558.png)
 
-   此圖示將與目前指派的未完成通知數目加上標籤。
+   此圖示將標有目前已分配的未完成通知數目。
 
    >[!NOTE]
    >

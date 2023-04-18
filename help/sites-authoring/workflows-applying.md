@@ -1,8 +1,6 @@
 ---
-title: 將工作流程套用至頁面
-seo-title: Applying Workflows to Pages
-description: 編寫時，您可以叫用工作流程以在頁面上執行動作；也可以套用多個工作流程。
-seo-description: When authoring, you can invoke workflows to take action on your pages; it is also possible to apply more than one workflow..
+title: 將工作流程套用至內容頁面
+description: 編寫時，您可以叫用工作流程以在頁面上執行動作；您也可以套用多個工作流程。
 uuid: 652d9a23-907d-43ad-9eef-7ab1d07918cd
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +9,10 @@ topic-tags: site-features
 discoiquuid: 6472dc94-96e0-4286-8f86-d85726cc843c
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 15%
+source-wordcount: '649'
+ht-degree: 14%
 
 ---
 

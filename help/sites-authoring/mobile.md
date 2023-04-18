@@ -1,8 +1,6 @@
 ---
-title: 為行動裝置製作頁面
-seo-title: Authoring a Page for Mobile Devices
-description: 為行動裝置製作內容時，您可以在多個模擬器之間切換，以查看一般使用者所看到的內容
-seo-description: When authoring for mobile, you can switch between several emulators to see what the end-user sees
+title: 為行動裝置製作內容頁面
+description: 為行動裝置製作內容時，您可以在多個模擬器之間切換，以查看一般使用者所看到的內容。
 uuid: a7a1ba68-d608-4819-88d1-0dab5955d3f4
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 9554cdb3-b604-4d50-9760-89b9e7a7755f
 exl-id: 9c6c6386-5ffd-4fa6-9aa1-f5b0e31d1046
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---

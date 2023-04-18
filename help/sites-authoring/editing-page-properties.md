@@ -1,8 +1,6 @@
 ---
-title: 編輯頁面屬性
-seo-title: Editing Page Properties
-description: 定義頁面的必要屬性
-seo-description: Define the required properties for a page
+title: 編輯內容頁面屬性
+description: 定義頁面的必要屬性。
 uuid: d3a2183b-8082-4cfc-aeed-26facbf3f3e6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '1884'
+source-wordcount: '1885'
 ht-degree: 8%
 
 ---

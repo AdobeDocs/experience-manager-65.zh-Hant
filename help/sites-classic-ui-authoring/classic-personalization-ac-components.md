@@ -1,8 +1,6 @@
 ---
 title: Adobe Campaign元件
-seo-title: Adobe Campaign Components
 description: 當您與Adobe Campaign整合時，使用電子報和使用表單時，可使用元件。
-seo-description: When you integrate with Adobe Campaign, you have components available for when working with newsletters and with forms.
 uuid: cc9417c9-4cc1-4554-858e-2ecd682dc92f
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +9,7 @@ content-type: reference
 discoiquuid: 5afe864d-5794-4ffa-99e7-a3233f982aff
 docset: aem65
 exl-id: eeff89c1-41b3-403d-b4bf-c79b09b24d4a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
 source-wordcount: '2534'
 ht-degree: 5%

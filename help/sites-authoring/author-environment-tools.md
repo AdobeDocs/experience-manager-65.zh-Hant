@@ -1,8 +1,6 @@
 ---
-title: 製作 — 環境和工具
-seo-title: Authoring - the Environment and Tools
-description: AEM的製作環境提供多種機制，可組織及編輯您的內容
-seo-description: The authoring environment of AEM provides various mechanisms for organizing and editing your content
+title: 製作 — AEM中的環境與工具
+description: AEM的製作環境提供多種組織及編輯內容的機制。
 uuid: 23a8aa93-b3d2-423b-b402-9e5f3f273d9a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '2220'
+source-wordcount: '2222'
 ht-degree: 10%
 
 ---

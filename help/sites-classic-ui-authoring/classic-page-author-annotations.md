@@ -1,8 +1,6 @@
 ---
 title: 編輯頁面時的註解
-seo-title: Annotations when Editing a Page
 description: 將內容新增至網站的頁面通常要經過實際發佈前的討論。 為此，許多與內容直接相關的元件允許您添加註釋。
-seo-description: Adding content to the pages of your website is often subject to discussions prior to it actually being published. To aid this, many components directly related to content allow you to add an annotation.
 page-status-flag: de-activated
 uuid: d8d6ba76-f2aa-4044-98bf-5d506742d90d
 contentOwner: Chris Bohnert
@@ -11,7 +9,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9bee0197-f275-49cc-922d-62cba826c4e5
 exl-id: d60e9601-d15b-4378-a33e-e90961f63195
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%

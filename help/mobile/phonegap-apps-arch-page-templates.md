@@ -1,8 +1,6 @@
 ---
-title: 行動應用程式的頁面範本
-seo-title: Page Templates for Mobile Apps
+title: 行動應用程式的內容頁面範本
 description: 請詳閱本頁面，了解行動應用程式的頁面範本。
-seo-description: Follow this page to learn about page templates for mobile apps.
 uuid: ef469796-10f5-44f4-a5c7-25025ca192b0
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: f45d8a9b-14d6-468f-a44c-3933e962922c
 exl-id: 7f00d426-4d28-41ee-8c54-636349e48669
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
-source-wordcount: '2649'
+source-wordcount: '2650'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 ## 行動應用程式的頁面範本 {#page-templates-for-mobile-apps-1}
 

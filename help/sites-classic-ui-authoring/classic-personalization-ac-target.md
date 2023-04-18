@@ -1,8 +1,6 @@
 ---
 title: 定位您的Adobe Campaign
-seo-title: Targeting your Adobe Campaign
 description: 設定細分包括建立區段、品牌、行銷活動和體驗。
-seo-description: Setting up segmentation includes creating segments, a brand, campaign, and experiences.
 uuid: 520cd006-0aa8-43f3-b754-efb7397bb92f
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,7 +8,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: bbc2aac9-ccf1-40c3-be4f-d59c2d0d8a6c
 exl-id: e56986b2-397e-4802-992b-05a9ea7b2e36
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%

@@ -1,8 +1,6 @@
 ---
 title: 為行動裝置製作頁面
-seo-title: Authoring a Page for Mobile Devices
 description: 製作行動頁面時，頁面的顯示方式會模擬行動裝置。 編寫頁面時，您可以在多個模擬器之間切換，以查看使用者在存取頁面時所看到的內容。
-seo-description: When authoring a mobile page, the page is displayed in a way that emulates the mobile device. When authoring the page, you can switch between several emulators to see what the end-user sees when accessing the page.
 uuid: ca16979d-6e5f-444d-b959-ae92542039b2
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,7 +8,7 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 430a27b5-f344-404f-8bf8-0d91b49b605e
 exl-id: d5372474-d8aa-4e64-919d-0bd29ba99d99
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%

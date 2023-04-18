@@ -1,8 +1,6 @@
 ---
-title: 定位您的Adobe Campaign
-seo-title: Targeting your Adobe Campaign
-description: 您可以在設定細分後，為Adobe Campaign建立目標體驗
-seo-description: You can create targeted experiences for Adobe Campaign after setting up segmentation
+title: 鎖定您的Adobe Campaign
+description: 您可以在設定細分後，為Adobe Campaign建立鎖定的體驗。
 uuid: 8fcc9210-d8c5-44e3-8aa8-6c6db810c98e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,7 +8,7 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f1cb5e98-ccd1-4b2c-acca-2b3cc1b7ac5f
 exl-id: fc6fccba-41c5-4c13-aac0-b4ef67767abe
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%

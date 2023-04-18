@@ -1,8 +1,6 @@
 ---
-title: 選取您的UI
-seo-title: Selecting your UI
-description: 設定您要在AEM中使用的介面
-seo-description: Configure which interface you will use to work in AEM
+title: 在AEM中選取您的使用者介面
+description: 設定您要在AEM中使用的介面。
 uuid: ab127f2f-2f8a-4398-90dd-c5d48eed9e53
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: e418d330-f234-411d-8cad-3fd9906dcbee
 docset: aem65
 exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '745'
 ht-degree: 1%
 
 ---

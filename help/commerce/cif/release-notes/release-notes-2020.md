@@ -1,11 +1,11 @@
 ---
-title: AEM內容與商務發行說明2021年
-description: AEM內容與商務發行說明2021年
+title: AEM內容與商務發行說明2020年
+description: AEM內容與商務發行說明2020年
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '1328'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 

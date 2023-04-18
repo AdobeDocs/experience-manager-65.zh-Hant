@@ -1,8 +1,6 @@
 ---
-title: 使用標記
-seo-title: Using Tags
+title: 使用標籤
 description: 標籤是快速且簡單的網站內容分類方法。 標籤可以被視為可附加至頁面、資產或其他內容的關鍵字或標籤，以使搜索能夠找到該內容和相關內容。
-seo-description: Tags are a quick and easy method of classifying content within a website. Tags may be thought of as keywords or labels that can be attached to a page, an asset, or other content to enable searches to find that content and related content.
 uuid: 9799131f-4043-4022-a401-af8be93a1bf6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: c117b9d1-e4ae-403f-8619-6e48d424a761
 exl-id: 4b6c273c-560e-4330-b886-a02825d5aaa1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '712'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 

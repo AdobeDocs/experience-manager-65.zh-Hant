@@ -1,8 +1,6 @@
 ---
-title: 製作時疑難排解AEM
-seo-title: Troubleshooting AEM when Authoring
-description: 使用AEM時可能會遇到的一些問題
-seo-description: Some issues that you might encounter when using AEM
+title: 在AEM中編寫時進行疑難排解
+description: 使用AEM時可能會遇到的一些問題。
 uuid: 99af51ea-8628-4811-83f2-ab3f88f0279e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
 exl-id: 05586b17-35d4-496e-8f0e-293c755eb066
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '295'
 ht-degree: 8%
 
 ---

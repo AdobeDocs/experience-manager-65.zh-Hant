@@ -1,8 +1,6 @@
 ---
-title: 回應式版面
-seo-title: Responsive Layout
-description: AEM可讓您為頁面實現回應式版面
-seo-description: AEM allows you to realize a responsive layout for your pages
+title: 內容頁面的回應式版面
+description: Adobe Experience Manager可讓您實現頁面的回應式版面。
 uuid: 4db45d78-9fca-4251-b504-ae3481fd9a8b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1787'
 ht-degree: 7%
 
 ---

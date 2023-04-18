@@ -1,8 +1,6 @@
 ---
 title: 元件
-seo-title: Components
 description: AEM隨附各種現成可用的元件，可為網站作者提供完整的功能。
-seo-description: AEM comes with a variety of out-of-the-box components that provide comprehensive functionality for website authors.
 page-status-flag: de-activated
 uuid: 02720edd-853c-4893-bf28-0e7b018029ea
 contentOwner: Chris Bohnert
@@ -11,7 +9,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9ed820de-c108-416e-aaf7-b63a64ab4f80
 exl-id: 9e0a01da-7940-47aa-8604-788d74e5daa0
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 1%

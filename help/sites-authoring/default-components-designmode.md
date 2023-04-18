@@ -1,8 +1,6 @@
 ---
-title: 在設計模式中配置元件
-seo-title: Configuring Components in Design Mode
+title: 在設計模式中配置預設元件
 description: 在設計模式中配置元件
-seo-description: null
 uuid: b9c9792d-4398-446d-8767-44d4e7ce9a2e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +8,14 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '907'
 ht-degree: 1%
 
 ---
 
-# 在設計模式中配置元件{#configuring-components-in-design-mode}
+# 在設計模式中配置預設元件{#configuring-components-in-design-mode}
 
 當AEM執行個體安裝為現成可用時，元件瀏覽器即可立即提供一系列元件。
 

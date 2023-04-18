@@ -1,8 +1,6 @@
 ---
-title: 建立 Launch
-seo-title: Creating Launches
+title: 建立啟動
 description: 您可以建立啟動，以啟用更新新版本的現有網頁，以供日後啟用。
-seo-description: You can create a launch to enable the updating of a new version of existing web pages for future activation.
 uuid: c1a32710-8189-4a2e-bf2f-428ab30d48c8
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +9,14 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 17%
 
 ---
 
-# 建立 Launch{#creating-launches}
+# 建立啟動{#creating-launches}
 
 建立啟動，以啟用更新新版本的現有網頁，以供日後啟用。 建立Launch時，需指定標題和來源頁面：
 
@@ -43,7 +41,7 @@ ht-degree: 17%
    * **Launch**:
 
       1. 選擇 **建立Launch** ，開啟精靈。
-   * **網站**:
+   * **Sites**:
 
       1. 選擇 **建立** ，開啟選取方塊。
       1. 從此選擇 **建立Launch** 來開啟嚮導。

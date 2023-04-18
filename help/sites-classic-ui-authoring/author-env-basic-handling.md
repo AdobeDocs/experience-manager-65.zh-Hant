@@ -1,8 +1,6 @@
 ---
 title: 基本處理
-seo-title: Basic Handling
 description: 概略說明使用AEM製作環境時的基本處理方式。 它會以Sites主控台為基礎。
-seo-description: An overview of basic handling when using the AEM author environment. It uses the Sites console as a basis.
 uuid: ab488d7c-7b7f-4a23-a80c-99d37ac84246
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,7 +8,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 4%
@@ -140,7 +138,7 @@ ht-degree: 4%
 >或是全球性的主題：
 >設定值：
 >`TREE_AUTOEXPAND_MAX`
->在:
+>中的:
 >`/apps/cq/ui/widgets/themes/default/widgets/wcm/SiteAdmin.js`
 >
 >請參閱 [CQ Widget API中的網站管理員](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.SiteAdmin) 以取得更多詳細資訊。

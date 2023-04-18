@@ -1,8 +1,6 @@
 ---
-title: Launch
-seo-title: Launches
-description: Launches 可讓您有效率地開發未來版本的內容。可讓您完成變更以供未來發佈，同時維護目前的頁面
-seo-description: Launches enable you to efficiently develop content for a future release. They allow you to make changes ready for future publication, while maintaining your current pages
+title: 使用啟動來開發未來版本的內容
+description: 啟動可讓您有效開發未來版本的內容。 它們可讓您進行變更，以備日後發佈，同時維護您目前的頁面。
 uuid: 4bbd9865-735d-4232-b69c-b64193ac5d83
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +9,10 @@ topic-tags: site-features
 discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-source-git-commit: 47870c05d231bacc424cfbf308f78bc1eaeb907b
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 90%
+source-wordcount: '833'
+ht-degree: 86%
 
 ---
 
