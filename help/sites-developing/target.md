@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: bff078cd-c390-4870-ad1d-192807c67ca4
 docset: aem65
 exl-id: 92b62532-4f79-410d-903e-d2bca6d0fd1c
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -235,7 +235,7 @@ JSP會將所需的analytics javascript物件和參考新增至用戶端javascrip
 >
 >若您未使用DTM，請將訂單確認傳送至Adobe Target。
 
-若要追蹤網站效能，請從訂單確認頁面傳送購買資訊至Adobe Target。 (請參閱 [建立orderConfirmPage mbox](https://experienceleague.adobe.com/docs/dtm/implementing/target/configure-target/mboxes/order-confirmation-mbox.html) (在Adobe Target檔案中)。 當您的MBox名稱為 `orderConfirmPage` 並使用下列特定參數名稱：
+若要追蹤網站效能，請從訂單確認頁面傳送購買資訊至Adobe Target。 (請參閱 [建立orderConfirmPage mbox](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=en) 和 [訂購確認Mbox — 新增自訂參數。](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779))當您的MBox名稱為，Adobe Target會將mbox資料辨識為訂單確認資料 `orderConfirmPage` 並使用下列特定參數名稱：
 
 * productPurchasedId:識別已購買產品的ID清單。
 * orderId:訂單ID。

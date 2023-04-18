@@ -10,9 +10,9 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 exl-id: 30720061-d0e5-453b-a334-6a3aa9ca4c87
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '973'
 ht-degree: 8%
 
 ---
@@ -632,7 +632,7 @@ response.setCharacterEncoding("utf-8");
 
 ## 將報表UI整合至現有的程式報表UI  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-建立個別UI以顯示結果的先決條件為 [Sling基本介紹](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [建立CRX節點](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) 提供適當 [訪問權限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
+建立個別UI以顯示結果的先決條件為 [Sling基本介紹](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [建立CRX節點](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html?lang=en#creating-a-node) 提供適當 [訪問權限](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html?lang=en#access-control).
 
 1. 建立個別的UI。
 1. 建立子項 `nt:unstructured` 節點 `/content/process-reporting-runtime/custom-reports` 每個可插拔報告的節點。

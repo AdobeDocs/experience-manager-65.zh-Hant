@@ -3,9 +3,9 @@ title: 設定RTF編輯器以在Adobe Experience Manager中製作內容。
 description: 了解如何設定Adobe Experience Manager RTF編輯器以在Adobe Experience Manager中編寫內容。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
 workflow-type: tm+mt
-source-wordcount: '3020'
+source-wordcount: '3021'
 ht-degree: 0%
 
 ---
@@ -259,7 +259,7 @@ RTE中的可用選項從用戶介面配置流向內容策略。
 * 如果RTE的用戶介面配置已刪除或未啟用項目，則內容策略無法配置它。
 * 作者只能存取使用者介面設定和內容原則所提供的功能。
 
-例如，您可以看到 [文字核心元件檔案](https://docs.adobe.com/help/en/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor).
+例如，您可以看到 [文字核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=en#the-text-component-and-the-rich-text-editor).
 
 ## 自定義工具欄表徵圖和命令之間的映射 {#iconstoolbar}
 
@@ -327,7 +327,7 @@ RTE中的可用選項從用戶介面配置流向內容策略。
 
 尤其要查看可用的外掛程式和相關選項：
 
-* 此 [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) 元件提供用於編輯已設定樣式的文本資訊(RTF)的表單欄位。 若要了解RTF表單可用的所有參數，請參閱設定選項。
+* 此 [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) 元件提供用於編輯已設定樣式的文本資訊(rtf)的表單欄位。 若要了解RTF表單可用的所有參數，請參閱設定選項。
 * RtfText元件使用下列外掛程式，提供多種功能： [CQ.form.rte.plugins.Plugin](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin). 對於每個外掛程式：
 
    * 如需可啟用（或停用）功能的詳細資訊，請參閱功能
