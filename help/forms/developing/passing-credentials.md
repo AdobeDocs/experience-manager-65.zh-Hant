@@ -1,10 +1,10 @@
 ---
-title: 如何使用WS-security標頭傳遞憑據？
+title: 使用WS — 安全標頭傳遞憑據
 description: 了解如何使用WS-security標頭傳遞憑證
 exl-id: 519d57ad-81ab-4caf-ae25-4390ae2eee13
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---

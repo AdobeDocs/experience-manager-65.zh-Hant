@@ -1,10 +1,10 @@
 ---
-title: 如何使用WS-security標頭傳遞憑據？
-description: 了解如何使用WS-security標頭傳遞憑證
+title: 在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案
+description: 了解如何使用JEE Custom DSC上的AEM Forms來壓縮和解壓縮檔案
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---

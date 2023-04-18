@@ -1,11 +1,11 @@
 ---
-title: AEM Headless 內容架構師歷程
+title: Adobe Experience Manager無頭式內容架構師歷程
 description: 介紹Adobe Experience Manager強大、靈活、無頭的功能，以及如何為專案建立內容模型。
 exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 89%
+source-wordcount: '704'
+ht-degree: 88%
 
 ---
 

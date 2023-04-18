@@ -1,8 +1,6 @@
 ---
-title: 最佳做法
-seo-title: Best Practices
-description: Adobe工程與諮詢團隊已為AEM開發人員開發了一套完整的最佳實務
-seo-description: Adobe Engineering and Consulting teams have developed a comprehensive set of best practices for AEM developers
+title: AEM開發人員最佳實務
+description: Adobe 工程和顧問團隊已經為 AEM 開發人員發展出一組完整的最佳做法。
 uuid: f962c31f-8140-482f-b189-16376e23bfed
 contentOwner: Justin Edelson
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 8%
+source-wordcount: '466'
+ht-degree: 13%
 
 ---
 

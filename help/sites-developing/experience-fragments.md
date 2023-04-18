@@ -1,8 +1,6 @@
 ---
-title: 體驗片段
-seo-title: Experience Fragments
+title: AEM Sites開發中的體驗片段
 description: 了解自訂體驗片段。
-seo-description: Learn about customizing Experience Fragments.
 uuid: fc9f7e59-bd7c-437a-8c63-de8559b5768d
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: 6e54073a0c1d67218283b096db3f2e5597f10376
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '1784'
+source-wordcount: '1787'
 ht-degree: 0%
 
 ---
@@ -92,7 +90,7 @@ HTML轉譯是使用Sling Rewriter管道產生。 管道定義於 `/libs/experien
 
    * `text`
 
-未使用本公約的部分將不予考慮。
+未使用本公約的元件不予考慮。
 
 ## 體驗片段的範本 {#templates-for-experience-fragments}
 
@@ -220,7 +218,7 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 此服務將用於外掛至Target轉存的體驗片段，以便存取各種連結。
 
-例如, `ComponentService`:
+例如， `ComponentService`:
 
 ```java
 import com.adobe.cq.xf.ExperienceFragmentLinkRewriterProvider;

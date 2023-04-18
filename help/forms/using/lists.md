@@ -1,8 +1,6 @@
 ---
-title: 文件片段
-seo-title: Document Fragments
+title: AEM中的檔案片段
 description: 通信管理中的檔案片段（例如文字、清單、條件和版面片段）可讓您形成客戶通信的靜態、動態和可重複的元件。
-seo-description: Document Fragments, such as Text, lists, conditions, and layout fragments, in Correspondence Management let you form the static, dynamic, and repeatable components of customer correspondence.
 uuid: 4273323d-14f5-4b3b-8fed-80beef641efe
 topic-tags: correspondence-management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +8,9 @@ discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '6906'
+source-wordcount: '6908'
 ht-degree: 0%
 
 ---
@@ -298,9 +296,12 @@ ht-degree: 0%
 
 條件編輯器隨附 [運算式產生器](/help/forms/using/expression-builder.md) 支援使用多個預留位置和資料字典元素建立運算式的使用者介面。 您可以在這類運算式中使用通用運算元和本機/全域函式。 每個運算式都可與某些內容相關聯，如果沒有任何運算式評估為true，則可能會有預設區段。 所有運算式都會依其定義的順序進行評估，並選取傳回true的第一個運算式，且該條件模組會傳回其相關內容。
 
-例如，如果信函中的詞語和條件文字會依客戶所處的狀態而有所不同，且資料字典包含稱為「state」的元素，則您可以依下列方式新增條件：·州別=紐約，選擇T&amp;C_NY文本段落·州別= NC，選擇T&amp;C_NC文本段落
+例如，如果信函中的詞語和條件文字會依客戶所處的狀態而有所不同，且資料字典包含稱為「state」的元素，則您可以依下列方式新增條件：
+* state = NY，選擇T&amp;C_NY文本段落
+* 狀態= NC，選擇T&amp;C_NC文本段落
 
-條件編輯器可讓您指定預設條件。 如果控制變數的值不符合任何條件，則會使用與預設條件相關聯的內容。 依照上一個範例，您可以新增此條件列：·預設，選擇T&amp;C_Rest
+條件編輯器可讓您指定預設條件。 如果控制變數的值不符合任何條件，則會使用與預設條件相關聯的內容。 依照上一個範例，您可以新增此條件列：
+* 預設，選擇T&amp;C_Rest
 
 ### 建立條件 {#create-a-condition}
 

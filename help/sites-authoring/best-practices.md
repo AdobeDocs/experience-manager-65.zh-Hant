@@ -1,8 +1,6 @@
 ---
-title: 最佳做法
-seo-title: Best Practices
-description: 如何以最有效率、最有效的方式使用AEM
-seo-description: How to use AEM in the most efficient and most effective way possible
+title: 使用AEM Authoring的最佳作法
+description: 如何以最有效率、最有效的方式使用AEM。
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 5%
+source-wordcount: '291'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +21,7 @@ ht-degree: 5%
 
 以下幾方面提供有關最佳做法的檔案：
 
-* [資產](#assets)
+* [Assets](#assets)
 * [Sites](#sites)
 * [Forms](#forms)
 
@@ -35,7 +33,7 @@ ht-degree: 5%
 
 下面的表中描述了特定文檔並連結到這些文檔。
 
-## 資產 {#assets}
+## Assets {#assets}
 
 以下主題說明有關Assets的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合：
 

@@ -1,8 +1,6 @@
 ---
-title: 最佳做法
-seo-title: Best Practices
+title: 協助管理員快速上手及執行的最佳實務
 description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助管理員快速上手並執行。
-seo-description: Find best practices compiled by Adobe engineering and consulting teams to help administrators get up and running.
 uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '531'
 ht-degree: 7%
 
 ---
@@ -23,7 +21,7 @@ ht-degree: 7%
 
 以下幾方面提供有關最佳做法的檔案：
 
-* [資產](#assets)
+* [Assets](#assets)
 * [Sites](#sites)
 
 如需製作、部署和維護或開發的最佳實務，請參閱下列其中一項：
@@ -34,7 +32,7 @@ ht-degree: 7%
 
 下面的表中描述了特定文檔並連結到這些文檔。
 
-## 資產 {#assets}
+## Assets {#assets}
 
 以下主題說明有關Assets的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合：
 

@@ -1,8 +1,6 @@
 ---
-title: 疑難排解
-seo-title: Troubleshooting
+title: 疑難排解AEM的安裝問題
 description: 本文涵蓋您在使用AEM時可能會遇到的部分安裝問題。
-seo-description: This article covers some of the installation issues you might encounter with AEM.
 uuid: 2ca898c3-b074-4ccd-a383-b92f226e6c14
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +8,14 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
 
-# 疑難排解{#troubleshooting}
+# 疑難排解AEM的安裝問題{#troubleshooting}
 
 本節包含可協助您進行疑難排解之記錄的詳細資訊，也包含您可能遇到AEM部分問題的相關資訊。
 

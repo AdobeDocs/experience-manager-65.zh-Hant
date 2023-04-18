@@ -1,8 +1,6 @@
 ---
-title: AEM 的移難排解
-seo-title: Troubleshooting AEM
+title: 疑難排解Adobe Experience Manager
 description: 了解疑難排解AEM的問題。
-seo-description: Learn about troubleshooting issues with AEM.
 uuid: 72379531-915c-45d0-ba70-42b212665272
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,16 +9,16 @@ content-type: reference
 discoiquuid: 6346cd93-1ca3-4510-9c31-a74c41017ddb
 docset: aem65
 exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 3%
+source-wordcount: '545'
+ht-degree: 2%
 
 ---
 
-# AEM 的移難排解 {#troubleshooting-aem}
+# 疑難排解Adobe Experience Manager {#troubleshooting-aem}
 
-以下章節說明使用AEM時可能會遇到的一些問題，以及如何疑難排解的建議。
+以下章節說明使用AEM(Adobe Experience Manager)時可能會遇到的一些問題，以及如何疑難排解的建議。
 
 >[!NOTE]
 >

@@ -1,5 +1,5 @@
 ---
-title: 查看頁面分析資料
+title: 檢視頁面分析資料，以評估頁面內容的有效性
 seo-title: Seeing Page Analytics Data
 description: 使用頁面分析資料來評估其頁面內容的有效性
 seo-description: Use page analytics data to gauge the effectiveness of their page content
@@ -12,9 +12,9 @@ discoiquuid: 5d192a48-c86f-4803-bb0d-0411ac7470f5
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '445'
 ht-degree: 11%
 
 ---
