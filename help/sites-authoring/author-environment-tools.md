@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: bc1f0bd20804bbae78c7ea9a5209e183d6bbaaf3
 workflow-type: tm+mt
-source-wordcount: '2222'
-ht-degree: 10%
+source-wordcount: '2230'
+ht-degree: 9%
 
 ---
 
@@ -264,7 +264,7 @@ AEM的製作環境提供多種組織及編輯內容的機制。 提供的工具�
 
 ## 頁面資訊 {#page-information}
 
-「頁面資訊 (均衡器圖示) 」會開啟一個功能表，其中也提供上次編輯和上次發佈的詳細資訊。視頁面、其網站和您的例項的特性而定，可能有更多或更少的選項可用：
+「頁面資訊」按鈕（均衡器圖示）會開啟一個功能表，其中也提供上次編輯和上次發佈的詳細資訊。 視頁面、其網站和您的例項的特性而定，可能有更多或更少的選項可用：
 
 ![ateat-17](assets/ateat-17.png)
 
@@ -277,7 +277,7 @@ AEM的製作環境提供多種組織及編輯內容的機制。 提供的工具�
 * [編輯範本](/help/sites-authoring/templates.md);頁面以 [可編輯的範本](/help/sites-authoring/templates.md#editable-and-static-templates)
 
 * [以已發佈狀態檢視](/help/sites-authoring/editing-content.md#view-as-published)
-* [在 Admin 中檢視](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+* 在管理中檢視；在 [sites console](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
 * [說明](/help/sites-authoring/basic-handling.md#accessing-help)
 
 例如，在適當時， **頁面資訊** 還有選項：
