@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: ea5abbbe8f928a63b7d3d6f96f3007a3c82706e0
+source-git-commit: e803fde42cfb7b7c9d3fb6483ca661ce386d6464
 workflow-type: tm+mt
 source-wordcount: '2116'
 ht-degree: 12%
@@ -464,6 +464,6 @@ AEM提供OAuth2的整合式Mailer服務支援，讓組織能夠遵守安全的�
 最後，請依下列方式確認設定：
 
 1. 前往Publish例項的位址，並以管理員身分登入。
-1. 在瀏覽器中開啟新標籤，然後前往 `http://serveraddress:serverport/services/mailer/oauth2/authorize`. 這會將您重新導向至SMTP提供者的頁面，在此例中為Gmail。
+1. 在瀏覽器中開啟新標籤，然後前往 `http://serveraddress:serverport/services/mailer/oauth2/authorize`. 這會將您重新導向至SMTP提供程式的頁面，在此例中為Outlook。
 1. 登入並同意授予必要的權限
 1. 同意後，Token會儲存在存放庫中。 您可以在 `accessToken` 直接在您的發佈執行個體上存取此URL: `http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
