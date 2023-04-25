@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: b60278940f48731ee9085635c0d4a3d7da24ebc8
+source-git-commit: d8ae63edd71c7d27fe93d24b30fb00a29332658d
 workflow-type: tm+mt
-source-wordcount: '4664'
+source-wordcount: '4663'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Lucene註冊JMX Bean，該JMX Bean將提供有關索引內容的詳細資訊，�
 
 對於查詢統計資訊，請查看名為的MBean **Oak查詢統計資料**.
 
-如果您想使用類似的工具來挖掘索引 [盧克](https://code.google.com/p/luke/)，您需使用Oak主控台，從 `NodeStore` 到檔案系統目錄。 有關如何執行此操作的說明，請閱讀 [Lucene檔案](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
+如果您想使用類似的工具來挖掘索引 [盧克](https://code.google.com/archive/p/luke/)，您必須使用Oak主控台，從 `NodeStore` 到檔案系統目錄。 有關如何執行此操作的說明，請閱讀 [Lucene檔案](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
 您也可以以JSON格式擷取系統中的索引。 若要這麼做，您必須存取 `https://server:port/oak:index.tidy.-1.json`
 
