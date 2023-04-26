@@ -3,10 +3,10 @@ title: 與內容片段搭配使用的 AEM GraphQL API
 description: 了解如何搭配AEM GraphQL API使用Adobe Experience Manager(AEM)中的內容片段進行無頭式內容傳送。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: cee709161100db6597bdb18ca03b3130d9e242f1
+source-git-commit: cf78742614fd2d35f59905895dfacb83190140cd
 workflow-type: tm+mt
-source-wordcount: '3225'
-ht-degree: 81%
+source-wordcount: '3250'
+ht-degree: 80%
 
 ---
 
@@ -176,7 +176,7 @@ GraphQL 是強式類型 API，這表示資料必須結構明確並按類型組�
 
 GraphQL 規格提供了一系列指南，說明如何建立健全的 API 來查詢特定執行個體上的資料。為此，用戶端需要擷取[結構描述](#schema-generation)，其中包含查詢所需的所有類型。
 
-對於內容片段，GraphQL 結構描述 (結構和類型) 是以&#x200B;**啟用的**[內容片段模型](/help/assets/content-fragments/content-fragments-models.md) 及其資料類型為基礎。
+對於內容片段，GraphQL 結構描述 (結構和類型) 是以&#x200B;**啟用的**[內容片段模型](/help/assets/content-fragments/content-fragments-models.md)及其資料類型為基礎。
 
 >[!CAUTION]
 >
@@ -197,7 +197,7 @@ GraphQL 規格提供了一系列指南，說明如何建立健全的 API 來查�
 
    * 其中三個已由使用者控制：`author`、`main` 和 `referencearticle`。
 
-   * 其他欄位是由AEM自動新增的，是提供特定內容片段相關資訊的實用方法；在本例中， `_path`, `_metadata`, `_variations`. 這些 [Helper 欄位](#helper-fields) 前面加上 `_` 以區分是使用者定義的還是自動產生的。
+   * 其他欄位是由AEM自動新增的，是提供特定內容片段相關資訊的實用方法；在本例中， `_path`, `_metadata`, `_variations`. 這些 [Helper 欄位](#helper-fields)前面加上 `_` 以區分是使用者定義的還是自動產生的。
 
 1. 使用者根據文章模型建立內容片段後，就可以透過 GraphQL 對其進行查詢。例如，請參閱[範例查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#graphql-sample-queries) (根據[與 GraphQL 搭配使用的範例內容片段結構](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql))。
 
@@ -239,7 +239,7 @@ Sites GraphQL 服務偵聽 (在背景) 對內容片段模型所做的任何修�
 
 * 產生的欄位。
 
-   選取 [欄位類型](#field-types) 可用來根據您如何設定內容片段模型來建立欄位。 欄位名稱取自 **屬性名稱** 欄位 **資料類型**.
+   一系列[資料類型](#data-types)用於根據內容片段模型的設定方式建立欄位。欄位名稱取自 **屬性名稱** 欄位 **資料類型**.
 
    * 還有 **呈現為** 屬性，因為使用者可以設定某些資料類型；例如，作為單行文字或多欄位。
 
@@ -247,21 +247,23 @@ Sites GraphQL 服務偵聽 (在背景) 對內容片段模型所做的任何修�
 
    這些用於識別內容片段，或用於取得有關內容片段的詳細資訊。
 
-### 欄位類型 {#field-types}
+### 資料類型 {#data-types}
 
 GraphQL for AEM 支援類型清單。表示所有支援的內容片段模型資料類型和對應的 GraphQL 類型：
 
 | 內容片段模型 - 資料類型 | GraphQL 類型 | 說明 |
 |--- |--- |--- |
-| 單行文字 | 字串，[字串] |  用於簡單字串，例如作者名稱、位置名稱等。 |
-| 多行文字 | 字串 |  用於輸出文字，例如文章正文 |
-| 數字 |  浮動，[浮動] | 用於顯示浮點數和正規數 |
-| 布林值 |  布林值 |  用於顯示核取方塊 → 簡單的 true/false 陳述式 |
-| 日期和時間 | 日曆 |  用於以ISO 8086格式顯示日期和時間。 視所選類型而定，AEM GraphQL 中可使用三種風格：`onlyDate`、`onlyTime`、`dateTime` |
-| 列舉 |  字串 |  用於顯示模型建立時定義之選項清單中的選項 |
-|  標記 |  [字串] |  用於顯示字串清單，字串代表 AEM 中使用的標記 |
-| 內容參考 |  字串 |  用於顯示 AEM 中另一個資產的路徑 |
-| 片段參考 |  *模型類型* |  用於參考特定模型類型的另一個內容片段，在建立模型時定義 |
+| 單行文字 | `String`, `[String]` |  用於簡單字串，例如作者名稱、位置名稱等。 |
+| 多行文字 | `String` |  用於輸出文字，例如文章正文 |
+| 數字 |  `Float`, `[Float]` | 用於顯示浮點數和正規數 |
+| 布林值 |  `Boolean` |  用於顯示核取方塊 → 簡單的 true/false 陳述式 |
+| 日期和時間 | `Calendar` |  用於以ISO 8086格式顯示日期和時間。 視所選類型而定，AEM GraphQL 中可使用三種風格：`onlyDate`、`onlyTime`、`dateTime` |
+| 列舉 |  `String` |  用於顯示模型建立時定義之選項清單中的選項 |
+|  標記 |  `[String]` |  用於顯示字串清單，字串代表 AEM 中使用的標記 |
+| 內容參考 |  `String` |  用於顯示 AEM 中另一個資產的路徑 |
+| 片段參考 |  *模型類型* <br><br>單一欄位： `Model`  — 模型類型，直接引用 <br><br>多欄位，其中一個參考型別： `[Model]`  — 類型陣列 `Model`，直接從陣列參照 <br><br>多欄位，包含多個參考類型： `[AllFragmentModels]`  — 所有模型類型的陣列，從具有聯合類型的陣列引用 |  用於參照建立模型時定義的特定模型類型的一或多個內容片段 |
+
+{style="table-layout:auto"}
 
 ### Helper 欄位 {#helper-fields}
 
@@ -380,7 +382,7 @@ GraphQL for AEM 支援類型清單。表示所有支援的內容片段模型資�
 
 ## GraphQL 變數 {#graphql-variables}
 
-GraphQL 允許在查詢中放置變數。有關詳細資訊，您可以參閱 [用於變數的 GraphQL 文件](https://graphql.org/learn/queries/#variables)。
+GraphQL 允許在查詢中放置變數。有關詳細資訊，您可以參閱[用於變數的 GraphQL 文件](https://graphql.org/learn/queries/#variables)。
 
 例如，若要取得類型的所有內容片段 `Article` 具有特定變數時，您可以指定變數 `variation` 在GraphiQL中。
 
