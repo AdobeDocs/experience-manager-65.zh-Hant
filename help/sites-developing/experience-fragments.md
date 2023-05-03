@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1781'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ HTML轉譯是使用Sling Rewriter管道產生。 管道定義於 `/libs/experien
    * 要在最終轉譯中允許的HTML標籤清單。
    * 依預設，允許下列標籤（不需要設定）:html, head，標題， body, img, p, span, ul, li, a, b, i, em, strong, h1, h2, h3, h5, h6, br, noscript, div, link和script
 
-建議使用覆蓋來設定重寫器。 請參閱 [AEMas a Cloud Service中的覆蓋](/help/sites-developing/overlays.md)
+建議使用覆蓋來設定重寫器。 請參閱 [覆蓋](/help/sites-developing/overlays.md)
 
 ## 社交變數 {#social-variations}
 
