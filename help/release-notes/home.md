@@ -4,8 +4,8 @@ description: AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括�
 exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
 source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 41%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 41%
 
 AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。
 
-* [最新版本注意事項](/help/release-notes/release-notes.md)
+* [最新發行說明](/help/release-notes/release-notes.md)
 
 ## 重要AEM文章
 
