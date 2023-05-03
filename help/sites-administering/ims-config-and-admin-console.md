@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-source-git-commit: 778987e69a23f81584f7a86db2fe24df64035919
+source-git-commit: 11db7c44853f95380fa5200efaf5691ad08b3729
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1677'
 ht-degree: 10%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 10%
 
 AEM 6.4.3.0導入 [!DNL Admin Console] 支援AEM例項和Adobe IMS(Identity Management系統)驗證，適用於 **AEM Managed Services** 客戶。
 
-AEM入門 [!DNL Admin Console] 將可讓AEM Managed Services客戶在一個主控台中管理所有Experience Cloud使用者。 可將使用者和群組指派給與AEM例項相關聯的產品設定檔，讓他們登入特定例項。
+AEM入門 [!DNL Admin Console] 將可讓AEM Managed Services客戶在一個主控台中管理所有Experience Cloud使用者。 可將使用者指派給與AEM例項相關聯的產品設定檔，讓他們可登入特定例項。
 
 ## 重要焦點 {#key-highlights}
 
@@ -158,11 +158,11 @@ AEM Managed Services客戶應該已布建組織，而在IMS布建過程中，客
 
 ![screen_shot_2018-09-17at105601pm](assets/screen_shot_2018-09-17at105601pm.png)
 
-在每個「產品內容」例項下，都會有相關聯的產品設定檔。 此產品設定檔用於指派存取權給使用者和群組。
+在每個「產品內容」例項下，都會有相關聯的「產品設定檔」。 此產品設定檔用於指派存取權給使用者。
 
 ![image2018-9-18_7-48-50](assets/image2018-9-18_7-48-50.png)
 
-在此產品設定檔中新增的任何使用者和群組都可以登入該執行個體，如下列範例所示：
+在此產品設定檔中新增的任何使用者都能登入該執行個體，如下列範例所示：
 
 ![screen_shot_2018-09-17at105623pm](assets/screen_shot_2018-09-17at105623pm.png)
 
