@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: bbb64f44c80e96bafcd53277f6d753d84acf5189
+source-git-commit: bb0658ef33736587fbc191738d57cf586e5cba9d
 workflow-type: tm+mt
-source-wordcount: '3047'
+source-wordcount: '3045'
 ht-degree: 6%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 6%
 <!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
 * Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
 
-您有兩個影像裁切選項可供選擇。 您也可以選擇自動建立顏色和影像色票，或保留目標解析度間的裁切內容。
+您有兩個影像裁切選項可供選擇：像素裁切或智慧型裁切。 您也可以選擇自動建立顏色和影像色票。
 
 >[!IMPORTANT]
 ·Adobe建議您檢閱任何產生的裁切和色票，以確保這些裁切和色票適當且與您的品牌和值相關。
