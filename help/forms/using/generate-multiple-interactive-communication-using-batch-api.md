@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2207'
 ht-degree: 1%
 
 ---
@@ -79,10 +79,10 @@ ht-degree: 1%
 
 若要從JSON檔案中儲存的記錄建立互動式通訊：
 
-1. 建立 [監看資料夾](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) 並加以設定以使用批次API:
+1. 建立 [監看資料夾](/help/forms/using/creating-configure-watched-folder.md) 並加以設定以使用批次API:
    1. 登入AEM Forms製作例項。
    1. 導覽至 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置監視資料夾]**. 點選 **[!UICONTROL 新增]**.
-   1. 指定 **[!UICONTROL 名稱]** 物理 **[!UICONTROL 路徑]** 的下限。 例如, `c:\batchprocessing`.
+   1. 指定 **[!UICONTROL 名稱]** 物理 **[!UICONTROL 路徑]** 的下限。 例如， `c:\batchprocessing`.
    1. 選取 **[!UICONTROL 服務]** 選項 **[!UICONTROL 處理檔案使用]** 欄位。
    1. 選取 **[!UICONTROL com.adobe.fd.ccm.m多頻道.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** 服務 **[!UICONTROL 服務名稱]** 欄位。
    1. 指定 **[!UICONTROL 輸出檔案模式]**. 例如，%F/ [圖樣](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) 指定「監看資料夾」可在「監看資料夾」的子資料夾\input資料夾中找到輸入檔案。
@@ -109,7 +109,7 @@ ht-degree: 1%
 
 #### 使用儲存在外部資料源中、通過表單資料模型訪問的輸入資料來產生互動式通信 {#use-fdm-as-data-source}
 
-將保存在外部資料源中的資料（記錄）與交互通信模板組合，以生成交互通信。 建立互動式通訊時，可透過表單資料模型(FDM)將其連線至外部資料來源，以存取資料。 您可以設定「監看資料夾」批次處理服務，以使用相同的表單資料模型從外部資料來源擷取資料。 結束日期 [從儲存在外部資料來源中的記錄建立互動式通訊](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/work-with-form-data-model.html):
+將保存在外部資料源中的資料（記錄）與交互通信模板組合，以生成交互通信。 建立互動式通訊時，可透過表單資料模型(FDM)將其連線至外部資料來源，以存取資料。 您可以設定「監看資料夾」批次處理服務，以使用相同的表單資料模型從外部資料來源擷取資料。 結束日期 [從儲存在外部資料來源中的記錄建立互動式通訊](/help/forms/using/work-with-form-data-model.md):
 
 1. 設定範本的表單資料模型：
    1. 開啟與互動式通訊範本相關聯的「表單資料模型」。
@@ -141,10 +141,10 @@ ht-degree: 1%
 
    1. 儲存並關閉檔案。
 
-1. 建立 [監看資料夾](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) 並加以設定，以使用批次API服務：
+1. 建立 [監看資料夾](/help/forms/using/creating-configure-watched-folder.md) 並加以設定，以使用批次API服務：
    1. 登入AEM Forms製作例項。
    1. 導覽至 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置監視資料夾]**. 點選 **[!UICONTROL 新增]**.
-   1. 指定 **[!UICONTROL 名稱]** 物理 **[!UICONTROL 路徑]** 的下限。 例如, `c:\batchprocessing`.
+   1. 指定 **[!UICONTROL 名稱]** 物理 **[!UICONTROL 路徑]** 的下限。 例如， `c:\batchprocessing`.
    1. 選取 **[!UICONTROL 服務]** 選項 **[!UICONTROL 處理檔案使用]** 欄位。
    1. 選取 **[!UICONTROL com.adobe.fd.ccm.m多頻道.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** 服務 **[!UICONTROL 服務名稱]** 欄位。
    1. 指定 **[!UICONTROL 輸出檔案模式]**. 例如，%F/ [圖樣](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) 指定「監看資料夾」可在「監看資料夾」的子資料夾\input資料夾中找到輸入檔案。

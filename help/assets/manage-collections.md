@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User
 feature: Collections,Asset Management
 exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
-source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '2215'
+source-wordcount: '2203'
 ht-degree: 14%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 14%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-collections.html?lang=en) |
 | AEM 6.5 | 本文 |
-| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/managing/managing-collections-touch-ui.html?lang=en) |
 
 集合是 [!DNL Adobe Experience Manager Assets]. 使用收藏集在使用者之間共用資產。此集可以是靜態集合或以搜尋結果為基礎的動態集合。
 
@@ -233,7 +232,7 @@ ht-degree: 14%
    >
    >依預設，會選取最近更新的集合，位於 **[!UICONTROL 新增至集合]** 頁面。
 
-1. 按一下&#x200B;**[!UICONTROL 「新增」]**。訊息會確認集合已新增至 **[!UICONTROL 選擇目標]** 頁面。 關閉訊息以完成程式。
+1. 按一下 **[!UICONTROL 新增]**. 訊息會確認集合已新增至 **[!UICONTROL 選擇目標]** 頁面。 關閉訊息以完成程式。
 
 >[!NOTE]
 >

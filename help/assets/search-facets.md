@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
-source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '2429'
+source-wordcount: '2417'
 ht-degree: 17%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 17%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en) |
 | AEM 6.5 | 本文 |
-| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/search-facets.html?lang=en) |
 
 整個企業範圍的部署 [!DNL Adobe Experience Manager Assets] 能儲存許多資產。 有時候，如果您只使用的一般搜尋功能，尋找合適的資產可能既困難又耗時 [!DNL Experience Manager].
 

@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: 83e9ab570fac686fd53c9c2594cbfb2c05a89a0c
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '2262'
+source-wordcount: '2245'
 ht-degree: 24%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 24%
 
    **[!UICONTROL 服務 URL]**: `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
 
-   例如, `https://smartcontent.adobe.io/apac`. 您可以指定 `na`, `emea`，或 `apac` 作為托管Experience Manager製作例項的地區。
+   例如， `https://smartcontent.adobe.io/apac`. 您可以指定 `na`, `emea`，或 `apac` 作為托管Experience Manager製作例項的地區。
 
    >[!NOTE]
    >
@@ -293,7 +293,7 @@ ht-degree: 24%
 
    * 無法識別影像中的細微差異。 例如，纖薄與普通襯衫。
    * 無法根據影像的微小模式/部分識別標籤。 例如T恤上的標誌。
-   * 在 [!DNL Experience Manager] 支援。 如需語言清單，請參閱 [智慧內容服務發行說明](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html).
+   * 在 [!DNL Experience Manager] 支援。
 
 * 若要搜尋具有智慧標籤的資產（一般或增強），請使用 [!DNL Assets] Omnisearch（全文搜尋）。 智慧標籤沒有單獨的搜尋述詞。
 

@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User, Admin, Architect
 feature: Asset Management,Multi Site Manager
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
-source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '3401'
+source-wordcount: '3389'
 ht-degree: 10%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 10%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/reuse-assets-using-msm.html?lang=en) |
 | AEM 6.5 | 本文 |
-| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/using/reuse-assets-using-msm.html?lang=en) |
 
 中的Multi Site Manager(MSM)功能 [!DNL Adobe Experience Manager] 可讓使用者重複使用一次撰寫的內容，並在多個Web位置間重複使用。 數位資產與MSM之數位資產相同 [!DNL Assets] 功能。 將MSM用於 [!DNL Assets]，您可以：
 

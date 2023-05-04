@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '2753'
+source-wordcount: '2746'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 以下是您可在發現效能問題並修正其後，再對使用者造成影響的關鍵重點區域。
 
-## 平台 {#platform}
+## Platform {#platform}
 
 雖然Experience Manager在多種平台上受支援，但Adobe在Linux和Windows上對本機工具的支援最強，這有助於實現最佳效能和易於實施。 理想情況下，您應部署64位作業系統，以滿足 [!DNL Experience Manager Assets] 部署。 如同任何Experience Manager部署，您應盡可能實作TarMK。 雖然TarMK無法擴展至單一製作例項以外，但其執行效能比MongoMK好。 您可以新增TarMK卸載例項，以提升您的工作流程處理能力 [!DNL Experience Manager Assets] 部署。
 
@@ -222,7 +222,7 @@ XMP回寫會在中修改中繼資料時更新原始資產 [!DNL Experience Manag
 * 資產的版本已建立
 * [!UICONTROL DAM更新資產] 針對資產執行
 
-所列結果消耗了大量資源。 因此，Adobe建議在不需要時停用XMP回寫。 如需詳細資訊，請參閱 [XMP回寫](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/xmp-writeback.html).
+所列結果消耗了大量資源。 因此，Adobe建議在不需要時停用XMP回寫。 如需詳細資訊，請參閱 [XMP回寫](/help/assets/xmp-writeback.md).
 
 如果已勾選執行工作流程標幟，匯入大量中繼資料可能會導致耗用大量資源的XMP回寫活動。 在精益伺服器使用期間規劃此類匯入，以免其他使用者的效能受到影響。
 

@@ -5,9 +5,9 @@ contentOwner: AG
 role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1746'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 1%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html?lang=en) |
 | AEM 6.5 | 本文 |
-| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/extending/mac-api-assets.html?lang=en) |
 
 ## 概觀 {#overview}
 
@@ -70,7 +69,7 @@ A [內容片段](/help/assets/content-fragments/content-fragments.md) 是資產�
 * `parent`:連結至父資料夾。
 * `thumbnail`:（選用）連結至資料夾縮圖影像。
 
-### 資產 {#assets}
+### Assets {#assets}
 
 在Experience Manager中，資產包含下列元素：
 

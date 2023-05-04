@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: DRM,Asset Management
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
-source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1421'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 7%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/drm.html?lang=en) |
 | AEM 6.5 | 本文 |
-| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/drm.html?lang=en) |
 
 數位資產通常與指定使用條款和持續時間的授權相關聯。 因為 [!DNL Adobe Experience Manager Assets] 與 [!DNL Experience Manager] 平台，您就可以有效管理資產到期資訊和資產狀態。 您也可以將授權資訊與資產建立關聯。
 

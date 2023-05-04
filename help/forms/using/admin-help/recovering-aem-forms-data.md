@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -57,10 +57,10 @@ AEM表單應可從下列故障中可靠地復原：
 1. (WebSphere®應用程式伺服器)如果要恢復到WebSphere®應用程式伺服器的新實例，請運行restoreConfig.bat/sh命令。
 1. 首先使用資料庫備份檔案運行資料庫還原操作，然後將事務重做日誌應用到恢復的資料庫，以恢復AEM表單資料庫。 (請參閱 [AEM forms資料庫](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).) 如需詳細資訊，請參閱以下其中一篇知識庫文章：
 
-   * [AEM表單的DB2®備份和恢復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#db2)
-   * [OracleAEM表單的備份和恢復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#oracle)
-   * [Microsoft® SQL Server針對AEM表單的備份和恢復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#sql-server)
-   * [AEM表單的MySQL備份和恢復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#mysql)
+   * [DB2](/help/forms/using/admin-help/files-back-recover.md#db2)
+   * [OracleAEM表單的備份和恢復](/help/forms/using/admin-help/files-back-recover.md#oracle)
+   * [Microsoft](/help/forms/using/admin-help/files-back-recover.md#sql-server)
+   * [AEM表單的MySQL備份和恢復](/help/forms/using/admin-help/files-back-recover.md#mysql)
 
 1. 通過先在AEM表單的現有安裝上刪除GDS目錄的內容，然後從備份的GDS中複製GDS目錄的內容，恢復GDS目錄。 如果更改了GDS目錄位置，請參閱 [在恢復期間更改GDS位置](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).
 1. 更名要還原的GDS備份目錄，如以下示例所示：

@@ -5,9 +5,9 @@ contentOwner: AG
 role: User
 feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
-source-git-commit: aa45839c53cb2c0715c9163847351aa2391309e0
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1031'
 ht-degree: 6%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 6%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/share-assets.html?lang=en) |
 | AEM 6.5 | 本文 |
-| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/link-sharing.html?lang=en) |
 
 [!DNL Adobe Experience Manager Assets] 可讓您與組織成員和外部實體（包括合作夥伴和廠商）以URL的形式共用資產、資料夾和集合。 透過連結共用資產是讓外部使用者無須先登入即可取得資源的便利方式 [!DNL Assets].
 
@@ -59,7 +58,7 @@ ht-degree: 6%
 
 1. 若要讓使用者下載原始資產，請選取 **[!UICONTROL 允許下載原始檔案]**. 若要讓使用者僅下載共用資產的轉譯，請選取 **[!UICONTROL 允許下載檔案的轉譯]**.
 
-1. 按一下&#x200B;**[!UICONTROL 「共用」]**。訊息會確認連結已透過電子郵件與使用者共用。
+1. 按一下 **[!UICONTROL 共用]**. 訊息會確認連結已透過電子郵件與使用者共用。
 
 1. 若要檢視共用資產，請按一下傳送給使用者之電子郵件中的連結。 若要產生資產的預覽，請按一下共用資產。 若要關閉預覽，請按一下 **[!UICONTROL 返回]**. 如果您已共用資料夾，請按一下 **[!UICONTROL 父資料夾]** 返回父資料夾。
 

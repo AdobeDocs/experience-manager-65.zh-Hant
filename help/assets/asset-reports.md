@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Reports,Asset Management
 exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
-source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1162'
 ht-degree: 8%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 8%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/asset-reports.html?lang=en) |
 | AEM 6.5 | 本文 |
-| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/asset-reports.html?lang=en) |
 
 資產報表可讓您評估 [!DNL Adobe Experience Manager Assets] 部署。 使用 [!DNL Assets]，您可以為數位資產產生各種報表。 這些報表提供您系統使用情形、使用者與資產互動方式，以及下載和共用哪些資產的實用資訊。
 

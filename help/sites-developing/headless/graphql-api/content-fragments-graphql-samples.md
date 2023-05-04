@@ -3,7 +3,7 @@ title: 了解搭配使用 GraphQL 與 AEM - 範例內容和查詢
 description: 透過探索範例內容和查詢，了解如何搭配使用 GraphQL 與 AEM 以提供無周邊內容。
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: e773990c6bd32df65c7f62060f7eca5547b7b614
+source-git-commit: 85f8da2a30e1bb5b78cbb36cd9b79939dd913251
 workflow-type: tm+mt
 source-wordcount: '1586'
 ht-degree: 89%
@@ -1328,7 +1328,7 @@ query {
 此查詢會質詢：
 
 * 多個類型為 `bookmark` 的內容片段
-   * 具有特定模型類型的其他片段的片段參考 `article`
+   * 具有特定模型類型的其他片段的片段參考 `Article`
 
 >[!NOTE]
 >

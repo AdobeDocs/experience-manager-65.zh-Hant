@@ -5,9 +5,9 @@ contentOwner: AG
 role: Developer
 feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 0db95c4e7fc1ca20ce4f2d352c1276aa546dc7c3
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '825'
 ht-degree: 19%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 19%
 
 >[!CAUTION]
 >
->截止日期 [!DNL Experience Manager] 6.4，已棄用傳統UI。 如需公告，請參閱 [過時和移除的功能](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html?lang=zh-Hant). Adobe建議使用觸控式UI。 如需自訂，請參閱 [搜尋面向](/help/assets/search-facets.md).
+>截止日期 [!DNL Experience Manager] 6.4，已棄用傳統UI。 Adobe建議使用觸控式UI。 如需自訂，請參閱 [搜尋面向](/help/assets/search-facets.md).
 
 ## 覆蓋 {#overlaying}
 

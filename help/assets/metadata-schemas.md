@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User,Admin
 feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '3630'
+source-wordcount: '3618'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 8%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=en) |
 | AEM 6.5 | 本文 |
-| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/metadata-schemas.html?lang=en) |
 
 組織提出了元資料模型，可增強資產探索、使用、互操作性等。 正確的中繼資料應用程式是維護中繼資料導向的工作流程和程式的神聖不可侵犯。 若要遵循整個組織的中繼資料策略和標準，您可以使用中繼資料結構，協助DAM使用者協調。 [!DNL Adobe Experience Manager] 可讓您以簡單而有彈性的方法建立、維護和套用中繼資料結構。
 
@@ -155,7 +154,7 @@ ht-degree: 8%
 
 #### 在架構表單中新增或刪除索引標籤 {#adding-deleting-a-tab-in-the-schema-form}
 
-架構編輯器可讓您新增或刪除標籤。預設架構表單包含 **[!UICONTROL 基本]**, **[!UICONTROL 進階]** , **[!UICONTROL IPTC]**，和 **[!UICONTROL IPTC擴展]** 頁簽。
+架構編輯器可讓您新增或刪除標籤。預設架構表單包含 **[!UICONTROL 基本]**, **[!UICONTROL 進階]** , **[!UICONTROL IPTC]**，和 **[!UICONTROL IPTC擴展]** 標籤。
 
 按一下 `+` 在架構表單上添加頁簽。 依預設，新索引標籤的名稱為 `Unnamed-1`. 您可以從 **[!UICONTROL 設定]** 標籤。 按一下 `X` 刪除頁簽。
 

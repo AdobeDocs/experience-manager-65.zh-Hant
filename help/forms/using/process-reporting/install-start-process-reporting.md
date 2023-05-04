@@ -8,9 +8,9 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,11 @@ ht-degree: 0%
 
 Process Reporting發佈服務會發佈資料庫中目前可用的所有AEM Forms資料。 這意味著，如果資料庫包含您不想對其運行報告和查詢的舊資料，則所有這些資料也將發佈到儲存庫，即使不需要報告。 建議您在執行將資料發佈到流程報告儲存庫的服務之前清除此資料。 這麼做可改善發佈者服務和查詢資料以進行報告之服務的效能。
 
-如需清除AEM Forms程式資料的詳細資訊，請參閱 [清除進程資料](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en).
+如需清除AEM Forms程式資料的詳細資訊，請參閱 [清除進程資料](/help/forms/using/admin-help/purging-process-data.md).
 
 >[!NOTE]
 >
->如需清除公用程式的秘訣和技巧，請參閱Adobe Developer Connection文章，位於 [清除程式和作業](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en).
+>如需清除公用程式的秘訣和技巧，請參閱Adobe Developer Connection文章，位於 [清除程式和作業](/help/forms/using/admin-help/purging-process-data.md).
 
 ## 配置進程報告服務 {#configuring-process-reporting-services}
 

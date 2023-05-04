@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Search, Adobe Stock
 role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
-source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '2493'
+source-wordcount: '2481'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 7%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/aem-assets-adobe-stock.html?lang=en) |
 | AEM 6.5 | 本文 |
-| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/using/aem-assets-adobe-stock.html?lang=en) |
 
 <!-- old content
 
@@ -260,7 +259,7 @@ IMS 設定包括兩個步驟：
    * 權限: `jcr:read`
    * 權限類型: `Allow`
 
-   按一下&#x200B;**[!UICONTROL 「新增」]**。
+   按一下 **[!UICONTROL 新增]**.
 
    ![使用者權限](assets/aem-stock-user-permissions.png)
 

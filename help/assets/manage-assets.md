@@ -6,10 +6,10 @@ role: User
 feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: eb60913e125d89c7494c21cfd6432b659695670a
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '9982'
-ht-degree: 4%
+source-wordcount: '9970'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,6 @@ ht-degree: 4%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-digital-assets.html?lang=en) |
 | AEM 6.5 | 本文 |
-| AEM 6.4 | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-64/assets/managing/managing-assets-touch-ui.html?lang=en) |
 
 在 [!DNL Adobe Experience Manager Assets]，您可以做的不只是儲存及管理資產。 [!DNL Experience Manager] 提供企業級資產管理功能。 您可以編輯和共用資產、執行進階搜尋，以及建立數十種支援檔案格式的多種轉譯。 您也可以管理版本和數位權限、自動處理資產、管理和管理中繼資料、使用註解進行協作等。
 
@@ -97,7 +96,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!CAUTION]
 >
->預設值為500 MB且區塊大小為50 MB時，就會觸發區塊上傳。 如果您編輯 [Apache Jackrabbit Oak TokenConfiguration](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16464.html?lang=zh-Hant) 並設定 `timeout configuration` 若時間少於資產上傳所需的時間，當資產上傳進行中時，您會遇到工作階段逾時情況。 因此，請變更 `chunkUploadMinFileSize` 和 `chunksize` 以便每個區塊要求都會重新整理工作階段。
+>預設值為500 MB且區塊大小為50 MB時，就會觸發區塊上傳。 如果您編輯 [Apache Jackrabbit Oak TokenConfiguration](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16464.html) 並設定 `timeout configuration` 若時間少於資產上傳所需的時間，當資產上傳進行中時，您會遇到工作階段逾時情況。 因此，請變更 `chunkUploadMinFileSize` 和 `chunksize` 以便每個區塊要求都會重新整理工作階段。
 >
 >在憑證過期逾時、延遲、頻寬和預期的同時上傳的情況下，最高值可讓您確保已挑選下列項目：
 >
@@ -572,7 +571,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    * 如果資產沒有參考，則會刪除資產。
 
-   * 如果資產有參考，則會出現錯誤訊息通知您 **參考一或多個資產**. 您可以選取&#x200B;**[!UICONTROL 強制刪除]**&#x200B;或&#x200B;**[!UICONTROL 取消]**。
+   * 如果資產有參考，則會出現錯誤訊息通知您 **參考一或多個資產**. 您可以選取 **[!UICONTROL 強制刪除]** 或 **[!UICONTROL 取消]**.
    >[!NOTE]
    >
    >* 若要解析或移除其他頁面中傳入的參照，請先更新相關的參照，再刪除資產。 此外，使用覆蓋來停用強制刪除選項，以禁止使用者刪除參考的資產並留下中斷的連結。
@@ -608,7 +607,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 1. 發佈時，如果資產參考其他資產，其參考會列在精靈中。 系統只會顯示自上次發佈後取消發佈或修改的參照。 選擇要發佈的參照。
 
-1. 取消發佈時，如果資產參考其他資產，請選擇您要取消發佈的參考。 按一下 **[!UICONTROL 取消發佈]**. 在確認對話方塊中，按一下 **[!UICONTROL 取消]** 若要停止動作，或按一下 **[!UICONTROL 取消發佈]** 確認在指定日期取消發佈資產。
+1. 取消發佈時，如果資產參考其他資產，請選擇您要取消發佈的參考。 點擊&#x200B;**[!UICONTROL 取消發佈]**。在確認對話方塊中，按一下 **[!UICONTROL 取消]** 若要停止動作，或按一下 **[!UICONTROL 取消發佈]** 確認在指定日期取消發佈資產。
 
 了解發佈或取消發佈資產或資料夾的相關下列限制和秘訣：
 
@@ -647,7 +646,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 ## 快速動作 {#quick-actions}
 
-一次只有一個資產的快速動作圖示可用。視您的裝置而定，執行下列動作以顯示快速動作圖示：
+一次只有一個資產可使用快速動作圖示。 視您的裝置而定，執行下列動作以顯示快速動作圖示：
 
 * 觸摸設備：觸摸並按住。 例如，在iPad上，您可以點選並按住資產，以顯示快速動作。
 * 非接觸裝置：暫留指針。 例如，在案頭裝置上，如果將指標暫留在資產縮圖上，則會顯示快速動作列。
@@ -869,7 +868,7 @@ CUG是限制存取資產的額外方式。 您也可以為資料夾設定登入�
 
 ## 建立、管理、預覽和回復資產版本 {#asset-versioning}
 
-版本設定會建立數位資產在特定時間點的快照。版本設定有助於稍後將資產還原為先前狀態。 例如，如果您想要還原對資產所做的變更，請還原未編輯的資產版本。 在 [!DNL Experience Manager]，您可以建立版本、檢視目前修訂版本、檢視兩個影像版本之間並排的差異，以及將資產還原為其舊版。
+版本設定會在特定時間點建立數位資產的快照。 版本設定有助於稍後將資產還原為先前狀態。 例如，如果您想要還原對資產所做的變更，請還原未編輯的資產版本。 在 [!DNL Experience Manager]，您可以建立版本、檢視目前修訂版本、檢視兩個影像版本之間並排的差異，以及將資產還原為其舊版。
 
 您可以在 [!DNL Experience Manager] 在下列情況下：
 

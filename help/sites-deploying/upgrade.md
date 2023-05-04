@@ -10,10 +10,10 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
-source-git-commit: 02fc145d5ec1458d1f71a2f353b56b944a267f3e
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 1%
+source-wordcount: '681'
+ht-degree: 0%
 
 ---
 
@@ -70,7 +70,6 @@ AEM最近推出 [圖樣偵測器](/help/sites-deploying/pattern-detector.md) 在
 
 如需最新AEM版本中其他變更項目的詳細資訊，請參閱完整發行說明：
 
-* [Adobe Experience Manager 6.4的一般發行說明](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/release-notes.html?lang=zh-Hant)
 * [Adobe Experience Manager 6.5最新Service Pack發行說明](/help/release-notes/release-notes.md)
 
 ## 升級概述 {#upgrade-overview}
