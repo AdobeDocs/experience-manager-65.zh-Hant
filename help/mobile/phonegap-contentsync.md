@@ -9,9 +9,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 923fc031-1a06-4a9d-94da-a2a4e82c54ee
 docset: aem65
 exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '2975'
+source-wordcount: '2977'
 ht-degree: 0%
 
 ---
@@ -263,7 +263,7 @@ AEM 5.5新增了此功能。
 * `com.day.cq.contentsync.handler.ContentUpdateHandler`  — 所有更新處理程式都需要實作的介面
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler`  — 使用Sling簡化資源轉譯的抽象類別
 
-將類註冊為OSGi元件工廠，並將其部署在OSGi容器中，並成套。 您可以使用 [Maven SCR插件](https://felix.apache.org/site/apache-felix-maven-scr-plugin.html) 使用JavaDoc標籤或注釋。 以下範例顯示JavaDoc版本：
+將類註冊為OSGi元件工廠，並將其部署在OSGi容器中，並成套。 您可以使用 [Maven SCR插件](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html) 使用JavaDoc標籤或注釋。 以下範例顯示JavaDoc版本：
 
 ```java
 /*

@@ -1,12 +1,10 @@
 ---
-title: 新AEM使用者的資源
-seo-title: Resources for New AEM Users
-description: 剛接觸AEM的使用者的問題、解答和資源
-seo-description: Questions, answers, and resources for users new to AEM
+title: 新Adobe Experience Manager使用者的資源
+description: 新使用者的問題、解答和資源Adobe Experience Manager
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '300'
 ht-degree: 7%
 
 ---
@@ -30,7 +28,7 @@ Adobe Experience Manager(AEM)是以網頁為基礎的用戶端 — 伺服器系�
 
 ## 如何取得AEM的官方支援？ {#official-support}
 
-身為授權客戶，您可以透過 [客戶服務團隊](https://experienceleague.adobe.com/?support-solution=General#support). 您也可以在 [AEM社群](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) 或 [@AdobeExpCare](https://twitter.com/adobeexpcare) Twitter手柄。
+身為授權客戶，您可以透過 [客戶服務團隊](https://experienceleague.adobe.com/?support-solution=General#support). 您也可以在 [AEM社群](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) 或在AdobeExpCare Twitter控制代碼上( `https://twitter.com/adobeexpcare`.
 
 ## 其他版本AEM的檔案在何處？ {#versions}
 
@@ -45,4 +43,4 @@ Adobe也提供舊版Adobe Experience Manager的檔案。 你可以看看 [舊版
 * [AEM 6.5發行說明](/help/release-notes/home.md)
 * [AEM 6.5中已移除和已棄用的功能清單](/help/release-notes/deprecated-removed-features.md)
 
-如有疑問，請洽詢 [AEM社群團隊](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) 或問Twitter [@AdobeExpCare](https://twitter.com/adobeexpcare).
+如有疑問，請洽詢 [AEM社群團隊](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) 或在下列位置詢問AdobeExpCare Twitter控制代碼： `https://twitter.com/adobeexpcare`.

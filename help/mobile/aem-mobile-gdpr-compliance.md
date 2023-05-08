@@ -1,15 +1,13 @@
 ---
-title: AEM Mobile - GDPR整備
-seo-title: AEM Mobile - GDPR Readiness
-description: 「AEM Mobile - GDPR整備」
-seo-description: null
+title: Adobe Experience Manager Mobile - GDPR整備
+description: Adobe Experience Manager Mobile - GDPR整備
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '691'
 ht-degree: 1%
 
 ---
@@ -22,9 +20,9 @@ ht-degree: 1%
 
 ## AEM Mobile GDPR支援 {#aem-mobile-gdpr-support}
 
-AEM Mobile已準備好協助客戶履行其GDPR法規遵循義務。 不會將個人資料儲存在AEM Mobile中。 如果您已布建，則可使用Adobe ID登入Adobe Experience Mobile。
+AEM Mobile已準備好協助客戶履行其GDPR法規遵循義務。 不會將個人資料儲存在AEM Mobile中。 如果您已布建，則可使用您的Adobe ID登入Adobe Experience Mobile。
 
-[https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html)
+<!-- [https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html) -->
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
@@ -32,7 +30,7 @@ Adobe的數位發佈產品(在AEM Mobile之前)支援Adobe的GDPR整備計畫。
 
 若要確保不會將AEM Mobile與舊版Digital Publishing Suite產品混淆，您可以在此處登入Digital Publishing Suite產品：
 
-[https://digitalpublishing.acrobat.com/welcome.html](https://digitalpublishing.acrobat.com/welcome.html)
+[https://acrobat.adobe.com/us/en/](https://acrobat.adobe.com/us/en/)
 
 ### 起始GDPR請求 {#initiating-a-gdpr-request}
 

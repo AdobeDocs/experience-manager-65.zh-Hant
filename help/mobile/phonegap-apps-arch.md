@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 55667e62-a61b-4794-b292-8d54929c41ac
 exl-id: ab4f1c61-be83-420e-a339-02cf1f33efed
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2691'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 ## 行動應用程式的頁面範本 {#page-templates-for-mobile-apps}
 
@@ -309,7 +309,7 @@ www/
 
 #### .cordova/hooks/ {#cordova-hooks}
 
-此目錄包含 [CLI掛接](https://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/). 鈎點目錄中的資料夾包含在建立期間精確點執行的node.js指令碼。
+此目錄包含 [CLI掛接](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/). 鈎點目錄中的資料夾包含在建立期間精確點執行的node.js指令碼。
 
 #### .cordova/hooks/after-platform_add/ {#cordova-hooks-after-platform-add}
 

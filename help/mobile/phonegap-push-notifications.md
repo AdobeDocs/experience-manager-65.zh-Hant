@@ -1,8 +1,6 @@
 ---
 title: 推播通知
-seo-title: Push Notifications
-description: 請詳閱本頁面，了解如何在AEM Mobile應用程式中使用推播通知。
-seo-description: Follow this page to learn about how to use push notifications in an AEM Mobile app.
+description: 請詳閱本頁面，了解如何在Adobe Experience Manager Mobile應用程式中使用推播通知。
 uuid: 0ed8b183-ef81-487f-8f35-934d74ec82af
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: ed8c51d2-5aac-4fe8-89e8-c175d4ea1374
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '3273'
+source-wordcount: '3293'
 ht-degree: 1%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 若能立即以重要通知提醒您的AEM Mobile應用程式使用者，對行動應用程式及其行銷活動的價值至關重要。 在此，我們將說明需要採取哪些步驟來讓您的應用程式接收推播通知，以及如何設定並將來自AEM Mobile的推播傳送至手機上安裝的應用程式。 此外，本節說明如何設定 [深層連結](#deeplinking) 功能。
 
@@ -44,14 +42,14 @@ ht-degree: 1%
 
 若要在AEM Mobile應用程式中使用推播通知，必須執行下列高階步驟。
 
-通常，AEM開發人員會：
+通常，Experience Manager開發人員會執行下列動作：
 
 1. 向Apple和Google傳訊服務註冊
 1. 向推送訊息服務註冊並進行配置
 1. 新增推送支援至應用程式
 1. 準備電話進行測試
 
-而AEM管理員會：
+而Experience Manager管理員會執行下列動作：
 
 1. 在AEM應用程式上設定推送
 1. 建置和部署應用程式
@@ -62,9 +60,9 @@ ht-degree: 1%
 
 #### 使用Apple推播通知服務(APNS) {#using-the-apple-push-notification-service-apns}
 
-前往Apple頁面 [此處](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html) 以熟悉Apple推播通知服務。
+前往Apple頁面 [此處](https://developer.apple.com/documentation/usernotifications#//apple_ref/doc/uid/TP40008194-CH8-SW1) 以熟悉Apple推播通知服務。
 
-若要使用APNS，您需要 **憑證** 檔案（.cer檔案）、推送 **私密金鑰** （a.p12檔案）和 **私密金鑰密碼** 從Apple。 如何進行此操作的說明 [此處](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html).
+要使用APN，您需要 **憑證** 檔案（.cer檔案）、推送 **私密金鑰** （a .p12檔案）和 **私密金鑰密碼** 從Apple。 如何進行此操作的說明 [此處](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/).
 
 #### 使用Google雲端通訊(GCM)服務 {#using-the-google-cloud-messaging-gcm-service}
 
@@ -217,7 +215,7 @@ AEM設定為使用下列三種服務其中之一來傳送推播通知：
 * /content/`<your app>`/shell/jcr:content/pge-app/app-config/notificationsConfig
 
 使用下列屬性（.content.xml檔案）:
-&lt;jcr:root xmlns:jcr=&quot; &lt;span id=&quot; translate=&quot;no&quot; />https://www.jcp.org/jcr/1.0](https://www.jcp.org/jcr/1.0)&quot; xmlns:nt=&quot; [https://www.jcp.org/jcr/nt/1.0](https://www.jcp.org/jcr/nt/1.0)&quot; jcr:primaryType=&quot;nt:unstructured&quot; excludeProperties=&quot;[appAPIAccessToken]&quot; path=&quot;。./../../../....
+&lt;jcr:root xmlns:jcr=&quot; &lt;span id=&quot; translate=&quot;no&quot; />https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html)&quot; xmlns:nt=&quot; [https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html)&quot; jcr:primaryType=&quot;nt:unstructured&quot; excludeProperties=&quot;[appAPIAccessToken]&quot; path=&quot;。./../../../....
 [targetRootDirectory=&quot;www&quot; type=&quot;notificationsconfig&quot;/>
 
 >[!NOTE]

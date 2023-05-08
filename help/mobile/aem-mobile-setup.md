@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 discoiquuid: 393cf504-917e-4bf6-9a8b-b7a5bd862c65
 exl-id: 0ead982d-2315-4947-b762-596aa2aa42a1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '928'
 ht-degree: 1%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 >[!CAUTION]
 >
->從AEM 6.2或6.3移轉至AEM 6.5的現有AEM Mobile應用程式客戶，可以借由下載 [來自PackageShare的包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-mobile-package). 不過，全新安裝的AEM 6.5將不支援AEM Mobile應用程式功能。
+>從AEM 6.2或6.3移轉至AEM 6.5的現有AEM Mobile應用程式客戶，可從PackageShare下載套件，以繼續使用AEM Mobile應用程式。 不過，全新安裝的AEM 6.5將不支援AEM Mobile應用程式功能。
 
 若要使用AEM為AEM Mobile應用程式產生內容，您必須將AEM例項與雲端型AEM Mobile On-demand Services帳戶和專案整合。
 
@@ -35,9 +35,9 @@ ht-degree: 1%
 
 若要開始設定AEM Mobile，您必須：
 
-* **要求API金鑰**:若要存取On-Demand Services API，您需要要求API金鑰。 若要要求API金鑰，請完成 [PDF表單](https://helpx.adobe.com/digital-publishing-solution/help/integrating-dps.html). 將填妥的表單傳送至Adobe Developer支援： [wwds@adobe.com](mailto:wwds@adobe.com)
+* **要求API金鑰**:若要存取On-Demand Services API，您需要要求API金鑰。 若要要求API金鑰，請完成 [PDF表單](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html). 將填妥的表單傳送至Adobe Developer支援： [wwds@adobe.com](mailto:wwds@adobe.com)
 
-* **產生裝置ID和裝置代號**:收到API金鑰後，即可產生裝置ID和裝置Token。 前往 [https://aex.aemmobile.adobe.com](https://aex.aemmobile.adobe.com/) 並執行下列動作：
+* **產生裝置ID和裝置代號**:收到API金鑰後，即可產生裝置ID和裝置Token。 前往 `https://aex.aemmobile.adobe.com` 並執行下列動作：
 
    * 提供API金鑰
    * 使用您已新增至AEM Mobile專案的Adobe ID登入，並具備下列權限（請參閱以下建立專案的步驟）
@@ -49,7 +49,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->需要的Adobe ID應獲得AEM Mobile專案的存取權。 請參閱 [帳戶管理AEM Mobile](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) 中。
+>需要的Adobe ID應獲得AEM Mobile專案的存取權。 請參閱 [帳戶管理AEM Mobile](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) 中。
 
 ## 建立AEM Mobile專案 {#creating-projects-for-aem-mobile}
 

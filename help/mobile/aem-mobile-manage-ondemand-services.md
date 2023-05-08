@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
 exl-id: 5d2b9743-9601-46e6-9d73-3bf734e04a30
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '259'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 以下操作將對整個應用程式執行。
 
@@ -45,9 +45,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->AEM Preflight應用程式可用於預覽內容和瀏覽頁面。 若要深入了解Preflight應用程式，請按一下 [此處](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html).
->
->AEM Preflight應用程式可在 [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play商店](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en)，和 [Windows應用商店](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
+>AEM Preflight應用程式可用於預覽內容和瀏覽頁面。 若要深入了解Preflight應用程式，請按一下 [此處](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html).
 
 ### 搶先 {#getting-ahead}
 

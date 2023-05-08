@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 想要為您的行動應用程式使用者建立吸引人且相關的體驗嗎？ 如果您沒有使用AdobeMobile Services SDK來監視和測量應用程式的生命週期和使用情形，則您的決策依據為何？ 您最忠誠的客戶在哪裡？ 如何確保保持相關性並最佳化轉換？
 
@@ -67,7 +67,7 @@ AEM Mobile需要Adobe Analytics帳戶，才能收集應用程式中的追蹤資�
 
 如果使用PhoneGap CLI建置，則可使用cordova建置掛接指令碼完成。 這可在Geometrixx Outdoors應用程式中查看：*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js。*
 
-若為iOS，則需要將檔案複製到 **資源** 目錄(例如 &quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;)。 如果應用程式鎖定Android目標，則複製至的路徑為「platforms/android/assets/ADBMobileConfig.json」。 有關在PhoneGap CLI構建期間使用掛接的詳細資訊，請參閱 [三個鈎點：Cordova/PhoneGap專案需求](https://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/).
+若為iOS，則需要將檔案複製到 **資源** 目錄(例如 &quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;)。 如果應用程式鎖定Android目標，則複製至的路徑為「platforms/android/assets/ADBMobileConfig.json」。 有關在PhoneGap CLI構建期間使用掛接的詳細資訊，請參閱 [三個鈎點：Cordova/PhoneGap專案需求](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
 
 ```xml
 ///////////////////////////

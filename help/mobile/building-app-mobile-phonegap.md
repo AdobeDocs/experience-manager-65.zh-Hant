@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1036'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 建置應用程式以安裝至裝置或模擬器，以進行測試或發佈至應用程式商店。 您可以使用PhoneGap命令行介面在本地構建應用程式，或使用PhoneGap Build在雲中構建應用程式。
 
@@ -164,7 +164,7 @@ AEM提供兩種將大量內容移動至發佈例項的方法：
 
 1. 在「成功」對話方塊中，按一下「PhoneGap Build」以開啟Adobe PhoneGap Build頁面，位置為 [https://build.phonegap.com/apps](https://build.phonegap.com/apps). 如果您正在等待應用程式出現，可以檢查 [PhoneGap Build狀態](https://status.build.phonegap.com/) 頁面。
 
-   如需安裝組建的相關資訊，請參閱 [PhoneGap Build檔案](https://docs.build.phonegap.com/en_US/3.1.0/#googtrans%28en%29).
+   如需安裝組建的相關資訊，請參閱 [PhoneGap Build檔案](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
 
    >[!NOTE]
    >
