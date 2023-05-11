@@ -2,9 +2,9 @@
 title: 使用IMS與Adobe Target整合
 description: 了解如何使用IMS整合AEM與Adobe Target
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 5c3de9c272030b3e258aea95899a58553c3b33db
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1503'
 ht-degree: 1%
 
 ---
@@ -167,7 +167,7 @@ AEM透過Target Standard API與Adobe Target整合時，需要使用Adobe Develop
    * **用戶端密碼**:在 [概述](#details-stored-for-the-ims-integration-project) 節，並複製
    * **裝載**:從 [產生JWT](#details-stored-for-the-ims-integration-project) 節
 
-   ![](assets/integrate-target-io-10.png)
+   ![技術帳戶設定](assets/integrate-target-io-10.png)
 
 1. 使用&#x200B;**建立**&#x200B;確認。
 
