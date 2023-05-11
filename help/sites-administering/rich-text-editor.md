@@ -3,9 +3,9 @@ title: 設定RTF編輯器以在Adobe Experience Manager中製作內容。
 description: 了解如何設定Adobe Experience Manager RTF編輯器以在Adobe Experience Manager中編寫內容。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
+source-git-commit: 53a18ec48331f1c25c15e8f7a59bd57e95639895
 workflow-type: tm+mt
-source-wordcount: '3021'
+source-wordcount: '2924'
 ht-degree: 0%
 
 ---
@@ -109,14 +109,14 @@ RTE的基本功能會由 `features` 屬性。
 | 外掛程式ID | 功能 | 說明 |
 |--- |--- |--- |
 | 編輯 | 剪下複製貼上 — 預設貼上 — plaintext paste-wordhtml | [剪下、複製和三種貼上模式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
-| [芬德雷普萊斯](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin) | 查找替換 | 查找和替換。 |
-| [格式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | 粗體斜體下划線 | [基本文字格式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
-| [影像](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | 影像 | 基本影像支援（從內容或內容尋找器拖曳）。 根據瀏覽器，支援對作者有不同的行為 |
-| [鍵](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) |  | 若要定義此值，請參閱 [標籤大小](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
-| [證明](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | justifleft justifycenter justifyright | 段落對齊。 |
-| [連結](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | 修改連結取消連結錨點 | [超連結和錨點](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
-| [清單](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ListPlugin) | 已訂購的縮進 | 此外掛程式可同時控制 [縮排和清單](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin);包括巢狀清單。 |
-| [miscools](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.MiscToolsPlugin) | specialchars sourceedit | 其他工具可讓作者輸入 [特殊字元](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar) 或編輯HTML來源。 此外，您也可以新增整個 [特殊字元範圍](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar) 如果您想定義自己的清單。 |
+| 芬德雷普萊斯 | 查找替換 | 查找和替換。 |
+| 格式 | 粗體斜體下划線 | [基本文字格式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
+| 影像 | 影像 | 基本影像支援（從內容或內容尋找器拖曳）。 根據瀏覽器，支援對作者有不同的行為 |
+| 鍵 |  | 若要定義此值，請參閱 [標籤大小](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
+| 證明 | justifleft justifycenter justifyright | 段落對齊。 |
+| 連結 | 修改連結取消連結錨點 | [超連結和錨點](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
+| 清單 | 已訂購的縮進 | 此外掛程式可同時控制 [縮排和清單](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin);包括巢狀清單。 |
+| miscools | specialchars sourceedit | 其他工具可讓作者輸入 [特殊字元](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar) 或編輯HTML來源。 此外，您也可以新增整個 [特殊字元範圍](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar) 如果您想定義自己的清單。 |
 | Paraformat | paraformat | 預設段落格式為段落、標題1、標題2和標題3(`<p>`, `<h1>`, `<h2>`，和 `<h3>`)。 您可以 [添加更多段落格式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#paraformats) 或擴充清單。 |
 | 拼字檢查 | 核取文字 | [語言感知拼寫檢查程式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#adddict). |
 | 樣式 | 樣式 | 支援使用CSS類別的樣式。 [新增文字樣式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles) 如果您想要新增（或擴充）您自己的樣式範圍以搭配文字使用。 |
@@ -323,12 +323,12 @@ RTE中的可用選項從用戶介面配置流向內容策略。
 
 ## 更多資訊 {#further-information}
 
-如需設定RTE的詳細資訊，請參閱 [AEM Widget API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.RichText) 參考。
+如需設定RTE的詳細資訊，請參閱 [AEM Widget API](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText) 參考。
 
 尤其要查看可用的外掛程式和相關選項：
 
-* 此 [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) 元件提供用於編輯已設定樣式的文本資訊(rtf)的表單欄位。 若要了解RTF表單可用的所有參數，請參閱設定選項。
-* RtfText元件使用下列外掛程式，提供多種功能： [CQ.form.rte.plugins.Plugin](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin). 對於每個外掛程式：
+* 此 [CQ.form.RichText](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText) 元件提供用於編輯已設定樣式的文本資訊(rtf)的表單欄位。 若要了解RTF表單可用的所有參數，請參閱設定選項。
+* RtfText元件使用下列外掛程式，提供多種功能： [CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin). 對於每個外掛程式：
 
    * 如需可啟用（或停用）功能的詳細資訊，請參閱功能
    * 如需適當外掛程式的詳細設定，請參閱設定選項以取得所有可用參數
