@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: e803fde42cfb7b7c9d3fb6483ca661ce386d6464
+source-git-commit: 144fbe2d0efe20d848e9556f8d652a403d1835b2
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2019'
 ht-degree: 12%
 
 ---
@@ -150,57 +150,6 @@ This is an automatically generated message. Please do not reply.
 
    PageModified => /content/geometrixx/en/products
 
-### 論壇通知的電子郵件範本 {#email-templates-for-forum-notification}
-
-論壇通知的電子郵件範本位於：
-
-`/etc/notification/email/default/com.day.cq.collab.forum`
-
-預設英文範本( `en.txt`)的定義如下：
-
-```xml
-subject=[CQ Forum Notification]
-
-header=-------------------------------------------------------------------------------------\n \
-Time: Time: ${time}\n \
-Forum Page Path: ${forum.path}\n \
--------------------------------------------------------------------------------------\n\n
-
-message=Page: ${host.prefix}${forum.path}.html\n
-
-footer=\n \
--------------------------------------------------------------------------------------\n \
-This is an automatically generated message. Please do not reply.
-```
-
-#### 為論壇通知自訂電子郵件範本 {#customizing-email-templates-for-forum-notification}
-
-若要自訂論壇通知的英文電子郵件範本：
-
-1. 在CRXDE中，開啟檔案：
-
-   `/etc/notification/email/default/com.day.cq.collab.forum/en.txt`
-
-1. 根據您的需求修改檔案。
-1. 儲存變更。
-
-範本必須具備下列格式：
-
-```
- subject=<text_1>
- header=<text_2>
- message=<text_3>
- footer=<text_4>
-```
-
-其中 `<text_x>` 可以是靜態文字和動態字串變數的混合。
-
-下列變數可在電子郵件範本中用於論壇通知：
-
-* `${time}`，事件日期和時間。
-
-* `${forum.path}`，即論壇頁面的路徑。
-
 ### 工作流通知的電子郵件範本 {#email-templates-for-workflow-notification}
 
 工作流程通知的電子郵件範本（英文）位於：
@@ -293,7 +242,6 @@ subject=<text_1>
 1. 在CRXDE中，新增檔案 `<language-code>.txt` 如下：
 
    * `/libs/settings/notification-templates/com.day.cq.wcm.core.page` :頁面通知
-   * `/etc/notification/email/default/com.day.cq.collab.forum` :論壇通知
    * `/libs/settings/workflow/notification/email/default` :工作流通知
 
 1. 使檔案適應語言。

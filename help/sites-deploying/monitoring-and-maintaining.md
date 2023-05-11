@@ -10,7 +10,7 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: bb27c7dfedd5a16728674f7584b0c462a92646e6
 workflow-type: tm+mt
 source-wordcount: '5934'
 ht-degree: 0%
@@ -247,9 +247,9 @@ AEM WCM記錄詳細記錄。 開啟快速入門程式後，您可以在中找到
 提供從 
 `com.day.compat.codeupgrade` 和 `com.adobe.cq.upgradesexecutor` 套件。
 
-* `<cq-installation-dir>/crx-quickstart/repository`
+* `<cq-installation-dir>/crx-quickstart/repository/segmentstore`
 
-   * `revision.log`
+   * `journal.log`
 修訂日誌資訊。
 
 >[!NOTE]
