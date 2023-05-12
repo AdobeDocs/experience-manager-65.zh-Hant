@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 1b57fca352457e973bd7395e060e3d0495a9d920
+source-git-commit: 25f7218355b7715949273c84eb72ddde3d6a0a65
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 0%
+source-wordcount: '994'
+ht-degree: 1%
 
 ---
 
@@ -41,26 +41,27 @@ ht-degree: 0%
 
    ![wf-96](assets/wf-96.png)
 
+<!--
+## Search Workflow Instances {#search-workflow-instances}
 
-## 搜尋工作流程例項 {#search-workflow-instances}
-
-1. 使用導覽選取 **工具**，然後 **工作流程**.
-1. 選擇 **例項** 顯示當前正在進行的工作流實例清單。 在頂端邊欄的左角，選取 **篩選器**. 或者，您可以使用鍵擊alt+1。 將顯示以下對話框：
+1. Using Navigation select **Tools**, then **Workflow**.
+1. Select **Instances** to display the list of workflow instances currently in progress. On the top rail, in the left corner, select **Filters**. Alternatively, you can use the keystrokes alt+1. The following dialog is displayed:
 
    ![wf-99-1](assets/wf-99-1.png)
 
-1. 在「篩選」對話方塊中，選取工作流程搜尋條件。 您可以根據以下輸入進行搜尋：
+1. In the Filter dialog, select the workflow search criteria. You can search based on these inputs:
 
-   * 裝載路徑：選取特定路徑
-   * 工作流模型：選擇工作流模型
-   * 受託人：選擇工作流受託人
-   * 類型：任務、工作流項或工作流失敗
-   * 任務狀態：活動、完成或終止
-   * 我的位置：OWNER AND Assignee，僅限Owner，僅受託人
-   * 開始日期：指定日期之前或之後的開始日期
-   * 結束日期：指定日期之前或之後的結束日期
-   * 到期日：指定日期之前或之後的到期日
-   * 更新日期：在指定日期之前或之後更新日期
+   * Payload path: Select a specific path
+   * Workflow model: Select a workflow model
+   * Assignee: Select a workflow Assignee
+   * Type: Task, Workflow item, or Workflow Failure
+   * Task Status: Active, Complete, or Terminated
+   * Where I Am: Owner AND Assignee, Owner only, Assignee only
+   * Start Date: Start date before or after a specified date
+   * End Date: End date before or after a specified date
+   * Due Date: Due date before or after a specified date
+   * Updated Date: Updated date before or after a specified date
+-->
 
 ## 暫停、繼續和終止工作流實例 {#suspending-resuming-and-terminating-a-workflow-instance}
 
