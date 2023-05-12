@@ -3,10 +3,11 @@ title: Adobe Experience Manager資產HTTP API中的內容片段支援
 description: 了解在AEM無頭傳送功能的重要一環Assets HTTP API中支援內容片段。
 feature: Content Fragments,Assets HTTP API
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
-source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
 workflow-type: tm+mt
 source-wordcount: '1957'
-ht-degree: 23%
+ht-degree: 24%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 23%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html?lang=en) |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html?lang=zh-Hant) |
 | AEM 6.5 | 本文 |
 
 
@@ -210,7 +211,7 @@ GETREST API支援透過URL參數進行分頁（適用於資產要求）:
 >
 >根據子資產和資料夾的資產類型，子實體清單可能已經包含定義各子實體的完整屬性集。 或者，在該子實體清單中，只可針對實體公開縮減的屬性集。
 
-### 資產 {#assets}
+### Assets {#assets}
 
 如果要求資產，回應會傳回其中繼資料；例如標題、名稱和由個別資產架構定義的其他資訊。
 

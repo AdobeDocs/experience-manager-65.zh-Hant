@@ -6,14 +6,15 @@ mini-toc-levels: 1
 role: User,Admin
 feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
 workflow-type: tm+mt
 source-wordcount: '3618'
 ht-degree: 8%
 
 ---
 
-# 中繼資料結構 {#metadata-schemas}
+# 中繼資料結構描述 {#metadata-schemas}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
@@ -154,7 +155,7 @@ ht-degree: 8%
 
 #### 在架構表單中新增或刪除索引標籤 {#adding-deleting-a-tab-in-the-schema-form}
 
-架構編輯器可讓您新增或刪除標籤。預設架構表單包含 **[!UICONTROL 基本]**, **[!UICONTROL 進階]** , **[!UICONTROL IPTC]**，和 **[!UICONTROL IPTC擴展]** 標籤。
+架構編輯器可讓您新增或刪除標籤。預設架構表單包含 **[!UICONTROL 基本]**, **[!UICONTROL 進階]** , **[!UICONTROL IPTC]**，和 **[!UICONTROL IPTC擴展]** 頁簽。
 
 按一下 `+` 在架構表單上添加頁簽。 依預設，新索引標籤的名稱為 `Unnamed-1`. 您可以從 **[!UICONTROL 設定]** 標籤。 按一下 `X` 刪除頁簽。
 
