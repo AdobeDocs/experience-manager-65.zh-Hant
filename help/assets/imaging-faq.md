@@ -9,9 +9,9 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: bb42b5990993b0f8cea95cf1f6c033aed2713c1c
+source-git-commit: 164b3745c5bddf6ec77f9ac2ada19cfa10c6d266
 workflow-type: tm+mt
-source-wordcount: '3519'
+source-wordcount: '3624'
 ht-degree: 1%
 
 ---
@@ -28,6 +28,17 @@ ht-degree: 1%
 >
 >智慧型影像處理需要您使用隨附於Adobe Experience Manager - Dynamic Media的現成可用CDN（內容傳遞網路）。 此功能不支援任何其他自訂CDN。
 
+>[!TIP]
+>
+>請試用並探索Dynamic Media影像修飾元和智慧影像處理的優點，使用Dynamic Media [_快照_](https://snapshot.scene7.com/).
+>
+> Snapshot是視覺化的示範工具，旨在說明Dynamic Media在最佳化和動態影像傳送方面的強大功能。 試用測試影像或Dynamic Media URL，以視覺化方式觀察各種Dynamic Media影像修飾元的輸出，並針對下列項目最佳化智慧型影像：
+>* 檔案大小（使用WebP和AVIF傳送）
+>* 網路頻寬
+>* DPR（裝置像素比率）
+>
+>要了解使用快照有多簡單，請播放 [快照培訓視頻](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html?lang=en) （3分17秒）。
+
 與Adobe同級最佳的CDN（內容傳遞網路）服務充分整合，可提升效能，讓智慧型影像處理受益匪淺。 此服務可在伺服器、網路和互連點之間找到最佳的Internet路由。 它找到的路由延遲最低，丟包率最低，而不是使用網際網路上的預設路由。
 
 下列影像資產範例將說明新增的智慧型影像處理最佳化：
@@ -43,7 +54,7 @@ ht-degree: 1%
 
 比較WebP和AVIF與PNG,WebP和AVIF的大小可減少84%,AVIF可減少87%。 此外，由於WebP和AVIF格式都支援透明和多個影像動畫，因此非常適合替換透明的PNG和GIF檔案。
 
-另請參閱 [使用新一代影像格式（WebP和AVIF）進行影像優化](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
+另請參閱 [使用新一代影像格式（WebP和AVIF）進行影像優化](https://blog.developer.adobe.com/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
 
 <!-- HIDDEN ON MAY 19, 2022 BASED ON CQDOC-19280 On the mobile web, the challenges are compounded by two factors:
 
@@ -66,7 +77,7 @@ In terms of images, the goal is to serve the best quality images as efficiently 
 
 ### 關於瀏覽器格式轉換(bfc) {#bfc}
 
-透過附加 `bfc=on` 至影像URL會自動將JPEG和PNG轉換為有損AVIF、有損WebP、有損JPEGXR、有損JPEG2000（針對不同瀏覽器）。 對於不支援這些格式的瀏覽器，智慧型影像處理會繼續提供JPEG或PNG。 新格式的品質會由智慧型影像處理重新計算。
+透過附加 `bfc=on` 至影像URL會自動將JPEG和PNG轉換為有損AVIF、有損WebP、有損JPEGXR、有損JPEG2000（針對不同瀏覽器）。 對於不支援這些格式的瀏覽器，智慧型影像處理會繼續提供JPEG或PNG。 與格式一起，新格式的品質會由智慧型影像重新計算。
 
 智慧型影像也可以透過附加 `bfc=off` 至影像的URL。
 
@@ -76,7 +87,7 @@ In terms of images, the goal is to serve the best quality images as efficiently 
 
 裝置像素比率(DPR)（也稱為CSS像素比率）是裝置的物理像素與邏輯像素之間的關係。 特別是隨著視網膜螢幕的出現，現代移動設備的像素解析度正以快速的速度增長。
 
-啟用「裝置像素比率」最佳化可讓影像以螢幕的原生解析度呈現，使其看起來清晰。
+啟用「裝置像素比率」最佳化會以螢幕的原生解析度呈現影像，使其銳利化。
 
 目前，顯示器的像素密度來自Akamai CDN標頭值。
 
@@ -134,7 +145,7 @@ DPR和網路頻寬值以所偵測到的套裝CDN用戶端值為基礎。 這些�
 * 如果瀏覽器支援格式，則自動轉換為AVIF
 * 如果AVIF轉換不利或瀏覽器不支援AVIF，則自動轉換為WebP
 * 如果Safari不支援WebP，則自動轉換為JPEG2000
-* 自動轉換為IE 9+版JPEGXR，或Edge不支援WebP版\
+* 自動轉換為IE 9+版JPEGXR，或如果Edge不支援WebP\
    |影像格式 |受支援的瀏覽器 | |—|—| | AVIF | [https://caniuse.com/avif](https://caniuse.com/avif) | | WebP | [https://caniuse.com/webp](https://caniuse.com/webp) | |JPEG2000 | [https://caniuse.com/jpeg2000](https://caniuse.com/jpeg2000) | | JPEGXR | [https://caniuse.com/jpegxr](https://caniuse.com/jpegxr) |
 * 若瀏覽器不支援這些格式，則會提供原始要求的影像格式。
 
@@ -147,7 +158,7 @@ DPR和網路頻寬值以所偵測到的套裝CDN用戶端值為基礎。 這些�
 * JPEG
 * PNG
 
-對於JPEG影像檔案格式，智慧影像處理會重新計算新格式的品質。
+對於JPEG影像檔案格式，智慧影像會重新計算新格式的品質。
 
 對於支援PNG等透明度的影像檔案格式，您可以配置智慧影像處理來傳送有損的AVIF和WebP。 對於有損格式轉換，智慧影像會使用影像URL中提及的品質，或使用Dynamic Media公司帳戶中設定的品質。
 
@@ -155,7 +166,7 @@ DPR和網路頻寬值以所偵測到的套裝CDN用戶端值為基礎。 這些�
 
 智慧型影像處理可與您現有的影像預設集搭配使用，並觀察您的所有影像設定。 變更的是影像格式、品質設定或兩者。 對於格式轉換，智慧影像處理會根據影像預設集設定所定義的完整視覺逼真度，但檔案大小較小。
 
-例如，假設已使用JPEG格式定義影像預設集，大小為500 x 500，品質=85，遮色片=0.1,1,5。 當智慧型影像處理偵測到使用者位於Chrome瀏覽器上時，影像會轉換為WebP格式，大小為500 x 500，而在WebP品質下，遮色片為0.1,1,5，遮色片會盡可能接近符合85的JPEG品質。 會比較該WebP轉換的佔用空間與JPEG，並傳回兩者中較小者。
+例如，假設已使用JPEG格式定義影像預設集，大小為500 x 500，品質=85，遮色片=0.1,1,5。 當智慧型影像處理偵測到使用者位於Chrome瀏覽器時，影像會轉換為大小為500 x 500的WebP格式。 而且，銳利化遮色片=0.1,1,5是以盡可能接近85的JPEG品質符合的WebP品質。 會比較該WebP轉換的佔用空間與JPEG，並傳回兩者中較小者。
 
 ## 是否必須變更任何URL、影像預設集，或在我的網站上部署任何智慧型影像處理的新程式碼？ {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
