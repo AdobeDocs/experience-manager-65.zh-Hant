@@ -11,16 +11,16 @@ docset: aem65
 role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
-source-git-commit: d947bd98b3a0f6fd79cde5b5b2fca23487077da3
+source-git-commit: 5dcea82acdc33c5c2b9e32af412554acd2571281
 workflow-type: tm+mt
-source-wordcount: '3258'
-ht-degree: 6%
+source-wordcount: '3262'
+ht-degree: 5%
 
 ---
 
 # 將 Dynamic Media 資產新增至頁面{#adding-dynamic-media-assets-to-pages}
 
-若要將動態媒體功能新增至您在網站上使用的資產，您可以直接在頁面上新增 **Dynamic Media**、 **Interactive Media**、 **Media**&#x200B;或 **** Video 360全景媒體元件。您可以進入「版面」模式並啟用Dynamic Media元件，以新增元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。動態媒體元件是智慧型的——他們知道您是新增影像還是視訊，而可用的設定選項也會隨之變更。
+若要將Dynamic Media功能新增至您在網站上使用的資產，您可以新增 **Dynamic Media**, **互動式媒體**, **全景媒體**，或 **影片360媒體** 元件。 您可以進入「版面」模式並啟用Dynamic Media元件，以新增元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。動態媒體元件是智慧型的——他們知道您是新增影像還是視訊，而可用的設定選項也會隨之變更。
 
 如果您使用Dynamic Media做為WCM，請直接將Adobe Experience Manager資產新增至頁面。 如果您使用協力廠商來處理WCM, [連結](/help/assets/linking-urls-to-yourwebapplication.md) 或 [內嵌](/help/assets/embed-code.md) 您的資產。 如需多方互動網站，請參閱將最佳化 [的影像傳送至多方互動網站](/help/assets/responsive-site.md)。
 
@@ -99,7 +99,7 @@ ht-degree: 6%
 
    >[!NOTE]
    >
-   >請注意，並非所有語言皆可在 **[!UICONTROL 語言]** 功能表目前已指派代號。
+   >並非所有語言皆可在 **[!UICONTROL 語言]** 功能表目前已指派代號。
 
 ## Dynamic Media元件 {#dynamic-media-components}
 
@@ -214,8 +214,8 @@ Dynamic Media元件可讓您新增動態影像，包括影像集、回轉集和�
 
    例如，使用檢視器修飾元，您可以執行下列操作：
 
-   * 將字幕檔案與視頻關聯： [字幕][https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
-   * 將導覽檔案與視訊建立關聯： [導覽][https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
+   * 將字幕檔案與視頻關聯： [字幕](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
+   * 將導覽檔案與視訊建立關聯： [導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
       您可以選取 **[!UICONTROL 編輯]** 在元件中。
 
@@ -360,10 +360,10 @@ HTTP/2是全新、更新的Web通訊協定，可改善瀏覽器和伺服器的�
 
 >[!MORELIKETHIS]
 >
->* [在Experience ManagerDynamic Media中使用視訊播放器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-video-player-feature-video-use.html)
->* [使用互動式影片與Experience ManagerDynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-interactive-video-feature-video-use.html)
->* [透過Experience ManagerDynamic Media了解資產檢視器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-feature-video-understand.html)
->* [使用自訂影片縮圖與Experience ManagerDynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-video-thumbnails-feature-video-use.html)
->* [透過Experience ManagerDynamic Media了解色彩管理](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-color-management-technical-video-setup.html)
->* [使用影像銳利化搭配Experience ManagerDynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-image-sharpening-feature-video-use.html)
+>* [在Experience ManagerDynamic Media中使用視訊播放器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-player-feature-video-use.html)
+>* [使用互動式影片與Experience ManagerDynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-interactive-video-feature-video-use.html)
+>* [透過Experience ManagerDynamic Media了解資產檢視器](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/viewers/dynamic-media-viewer-feature-video-understand.html)
+>* [使用自訂影片縮圖與Experience ManagerDynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-thumbnails-feature-video-use.html)
+>* [透過Experience ManagerDynamic Media了解色彩管理](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-color-management-technical-video-setup.html)
+>* [使用影像銳利化搭配Experience ManagerDynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use.html)
 
