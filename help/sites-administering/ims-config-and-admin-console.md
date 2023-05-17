@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-source-git-commit: 11db7c44853f95380fa5200efaf5691ad08b3729
+source-git-commit: fff35031eaf55b185870da56a0b66f9145b1ec41
 workflow-type: tm+mt
-source-wordcount: '1677'
+source-wordcount: '1676'
 ht-degree: 10%
 
 ---
@@ -133,10 +133,10 @@ AEM Managed Services客戶應該已布建組織，而在IMS布建過程中，客
 >
 >使用者同步工具必須依照所述程式，註冊為Adobe I/O用戶端UMAPI [此處](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 >
->您可以找到Adobe I/O主控台檔案 [此處](https://www.adobe.io/apis/cloudplatform/console.html).
+>您可以找到Adobe I/O主控台檔案 [此處](https://developer.adobe.com/developer-console/docs/guides/).
 >
 >
->此 [!DNL User Management] 本文將說明使用者同步工具所使用的API [位置](https://www.adobe.io/apis/cloudplatform/umapi-new.html).
+>此 [!DNL User Management] 本文將說明使用者同步工具所使用的API [位置](https://adobe-apiplatform.github.io/umapi-documentation/en/).
 
 >[!NOTE]
 >
