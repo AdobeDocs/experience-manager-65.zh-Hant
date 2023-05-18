@@ -2,10 +2,11 @@
 title: 的發行說明 [!DNL Adobe Experience Manager] 6.5
 description: 查找發行資訊、新功能、安裝操作說明，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+exl-id: fc7d3727-7cd4-47a4-8e75-840f9f9c0e62
+source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
 workflow-type: tm+mt
-source-wordcount: '2986'
-ht-degree: 2%
+source-wordcount: '2972'
+ht-degree: 3%
 
 ---
 
@@ -34,9 +35,9 @@ Dynamic Media的主要改善如下：
 
 推出全新通訊協定DASH(Dynamic Adaptive Streaming over HTTP)支援，以在Dynamic Media視訊傳送中適用性位元速率串流（含CMAF） [常見媒體應用程式格式] 已啟用)。
 
-* 最適化串流(DASH/HLS)可確保提供更佳的視訊使用者檢視體驗。
-* DASH是自適應視頻流的國際標準協定，在業界得到廣泛的應用。
-* 現在在亞太和北美提供（通過支援票證啟用）;即將在歐洲 — 中東 — 非洲推出。
+* 自適應串流 (DASH/HLS) 可確保更好的一般使用者觀看影片體驗.
+* DASH 是自適應影片串流的國際標準通訊協定，在業界被廣泛採用.
+* 現在可提交支援票證。
 
 請參閱 [在您的帳戶上啟用DASH](/help/assets/video.md#enable-dash).
 

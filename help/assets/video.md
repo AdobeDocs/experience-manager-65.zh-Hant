@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: c704397f08e163a58ee6ac1dbaefc3171298864e
+source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
 workflow-type: tm+mt
-source-wordcount: '8086'
+source-wordcount: '8066'
 ht-degree: 3%
 
 ---
@@ -89,7 +89,7 @@ ht-degree: 3%
          [編輯視訊屬性](manage-assets.md#editing-properties)
 
       * [管理數位資產的中繼資料](metadata.md)
-      * [中繼資料結構](metadata-schemas.md)
+      * [中繼資料結構描述](metadata-schemas.md)
    * 檢閱、核准及註解影片，並維護完整版本控制
 
       * [為影片加上注釋](managing-video-assets.md#annotate-video-assets) 或 [為資產加上注釋](manage-assets.md#annotating)
@@ -155,8 +155,6 @@ Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品�
 Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在以下位置找到支援此視頻格式的BlackBerry®設備： [BlackBerry®上支援的視頻格式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
 您可以在以下位置找到支援此視頻格式的Windows設備： [Windows Phone 8支援的媒體轉碼器](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)
-
-
 
 * 使用Dynamic Media視訊檢視器預設集播放視訊，包括下列內容：
 
@@ -442,10 +440,6 @@ DASH(Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，在�
 * 有助於讓客戶更容易存取視訊傳送。
 * 也可透過API取得串流URL。
 
-   >[!IMPORTANT]
-   >
-   >目前僅亞太地區和北美提供您帳戶的啟用DASH;即將在歐洲 — 中東 — 非洲推出。
-
 在您的帳戶上啟用DASH需要兩個步驟：
 
 * 將Dynamic Media設為使用DASH，讓您輕鬆自在。
@@ -455,10 +449,10 @@ DASH(Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，在�
 
 1. **設定Dynamic Media**  — 在Dynamic Media的Experience Manager6.5中，導覽至 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 1. 搜尋 **AEM Assets Dynamic Media視訊進階串流** 功能標幟。
-1. 選中複選框以啟用（開啟）破折號。
+1. 要啟用（開啟）破折號，請選中複選框。
 1. 選取&#x200B;**[!UICONTROL 儲存]**。
 1. **配置Experience Manager6.5** - [使用Admin Console開始建立新的支援案例](https://helpx.adobe.com/tw/enterprise/using/support-for-experience-cloud.html).
-1. 請依照指示建立支援案例，同時確保您提供下列資訊：
+1. 若要建立支援案例，請依照指示操作，同時確保您提供下列資訊：
 
    * 主要聯繫人姓名、電子郵件、電話。
    * 您的Dynamic Media帳戶名稱。
@@ -720,7 +714,7 @@ Cost-efficient access to rapidly evolving technology.
 
 ## 關於Dynamic Media - Scene7模式中的影片縮圖 {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
-視訊縮圖是視訊影格的縮小版本，或代表視訊給客戶的影像資產。 縮圖可鼓勵客戶點按影片。
+視訊縮圖是視訊影格的縮小版本，或代表視訊給客戶的影像資產。 縮圖可鼓勵客戶選取影片。
 
 Experience Manager中的所有視訊都必須有相關聯的縮圖；不替換縮圖，就不能刪除縮圖。 依預設，當您上傳視訊至Experience Manager時，會使用第一個影格作為縮圖。 不過，您也可以自訂縮圖以用於品牌推廣或視覺搜尋。 當您自訂視訊縮圖時，可以播放視訊並暫停您要使用的影格。 或者，您可以選取已上傳且 *已發佈* 在您的數位資產管理員。
 
