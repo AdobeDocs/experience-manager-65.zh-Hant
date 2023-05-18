@@ -6,7 +6,8 @@ mini-toc-levels: 1
 role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+hide: true
+source-git-commit: c1878d6aadba9c795168459dbd5f09abfe0fc327
 workflow-type: tm+mt
 source-wordcount: '1751'
 ht-degree: 9%
@@ -40,7 +41,7 @@ ht-degree: 9%
 | PGM | ✓ | ✓ | − | − | − | − | ✓ |
 | PBM | ✓ | ✓ | − | − | − | − | ✓ |
 | PPM | ✓ | ✓ | − | − | − | − | ✓ |
-| PSD協定 | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
+| PSD ‡ | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | − | ✓ | − |
 | PICT | − | − | − | − | − | − | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ | − | − | − |
@@ -279,7 +280,7 @@ Adobe影像轉碼程式庫是執行核心影像處理功能（例如編碼、轉
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md), [混合媒體](/help/assets/mixed-media-sets.md)，和 [回轉](/help/assets/spin-sets.md) |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md), [混合媒體](/help/assets/mixed-media-sets.md)，和 [回轉](/help/assets/spin-sets.md) |
 | BMP | ✓ | − | − | − | − | [影像](/help/assets/image-sets.md), [混合媒體](/help/assets/mixed-media-sets.md)，和 [回轉](/help/assets/spin-sets.md) |
-| PSD協定 | ✓ | − | − | − | − | − |
+| PSD ‡ | ✓ | − | − | − | − | − |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | PICT | ✓ | − | − | − | − | − |
 
