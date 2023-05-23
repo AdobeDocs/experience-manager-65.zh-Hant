@@ -1,7 +1,7 @@
 ---
-title: 移轉至Touch UI
+title: 遷移到Touch UI
 seo-title: Migration to the Touch UI
-description: 移轉至Touch UI
+description: 遷移到Touch UI
 seo-description: Migration to the Touch UI
 uuid: 47c43b56-532b-4ada-8503-04d66bab3564
 contentOwner: AEM Docs
@@ -18,29 +18,29 @@ ht-degree: 4%
 
 ---
 
-# 移轉至Touch UI{#migration-to-the-touch-ui}
+# 遷移到Touch UI{#migration-to-the-touch-ui}
 
-從6.0版開始，Adobe Experience Manager(AEM)推出新的使用者介面，稱為 *觸控式UI* (也簡稱為 *觸控式UI*)。 它符合Adobe Marketing Cloud和整體Adobe使用者介面准則。 這已成為AEM中的標準UI，其舊版案頭導向介面稱為 *傳統UI*.
+從6.0版開始，Adobe Experience Manager(AEM)引入了稱為 *啟用觸摸的UI* (也稱為 *觸摸UI*)。 它與Adobe Marketing Cloud和整個Adobe用戶介面指南相一致。 這已成為標準UI,AEM其中的傳統、面向案頭的介面稱為 *經典UI*。
 
-如果您一直將AEM與傳統UI搭配使用，則需採取動作來移轉執行個體。 本頁面旨在提供個別資源的連結，以作為跳板。
+如果您一直在AEM使用經典UI，則需要採取措施遷移實例。 本頁旨在通過提供到單個資源的連結充當跳板。
 
 >[!NOTE]
 >
->這類移轉專案可能會對您的執行個體造成重大影響。 請參閱 [管理專案 — 最佳實務](/help/managing/best-practices.md) 供建議的指引使用。
+>此類遷移項目可能會對您的實例產生重大影響。 請參閱 [管理項目 — 最佳做法](/help/managing/best-practices.md) 建議的准則。
 
-## 基本概念 {#the-basics}
+## 基礎 {#the-basics}
 
-移轉時，請注意傳統和觸控式UI之間的下列（主要）差異：
+遷移時，您應注意到經典介面和觸摸介面之間的以下（主要）區別：
 
 <table>
  <tbody>
   <tr>
    <td>傳統 UI</td>
-   <td>觸控式UI</td>
+   <td>啟用觸摸的UI</td>
   </tr>
   <tr>
-   <td>在JCR存放庫中以節點結構形式說明。 代表UI元素的每個節點都稱為 <em>ExtJS Widget</em> 並在用戶端上呈現 <code>ExtJS</code>.</td>
-   <td>在JCR存放庫中也以節點結構的形式說明。 不過，在此案例中，每個節點都會參照Sling資源類型（Sling元件），負責其轉譯。 因此UI（基本上）是在伺服器端轉譯。</td>
+   <td>在JCR儲存庫中將其描述為節點結構。 表示UI元素的每個節點都稱為 <em>ExtJS小部件</em> 在客戶端上呈現 <code>ExtJS</code>。</td>
+   <td>在JCR儲存庫中也將其描述為節點結構。 但是，在這種情況下，每個節點都指Sling資源類型（Sling元件），負責其渲染。 所以UI（基本上）是呈現的伺服器端。</td>
   </tr>
   <tr>
    <td><p><code>sling:resourceType</code></p>
@@ -68,93 +68,93 @@ ht-degree: 4%
   <tr>
    <td><p>Javascript位置：</p>
     <ul>
-     <li>必要部件是使用偵聽器直接嵌入的，或在clientlibs中進行管理。</li>
+     <li>使用監聽器直接嵌入命令部件或在客戶端中管理。</li>
     </ul> </td>
    <td><p>Javascript位置：</p>
     <ul>
-     <li>必要部件不能嵌入對話定義中；責任分離。</li>
+     <li>必需部件不能嵌入對話定義；責任分離。</li>
     </ul> </td>
   </tr>
   <tr>
    <td><p>事件處理：</p>
     <ul>
-     <li>對話方塊小工具會直接參考Javascript程式碼。</li>
+     <li>對話框小部件直接引用Javascript代碼。</li>
     </ul> </td>
    <td><p>事件處理：</p>
     <ul>
-     <li>Javascript會觀察對話事件。</li>
+     <li>Javascript觀察對話事件。</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>由用戶端完成的呈現：
+   <td>客戶端完成的呈現：
     <ul>
-     <li>用戶端會動態建立UI元件。</li>
-     <li>從伺服器取得用戶端要求（提取）元件定義（如JSON）。</li>
+     <li>客戶端動態建立UI元件。</li>
+     <li>從伺服器發出的客戶端請求（拉）元件定義(JSON)。</li>
     </ul> </td>
-   <td>伺服器完成的呈現：
+   <td>由伺服器完成的呈現：
     <ul>
-     <li>用戶端會連同相關UI一起要求頁面。</li>
-     <li>伺服器傳送（推送）UI作為HTML檔案；使用Coral UI元件。<br /> </li>
+     <li>客戶端請求頁面以及相關的UI。</li>
+     <li>伺服器將UI作為HTML文檔發送（推送）;使用Coral UI元件。<br /> </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-換句話說，將UI的區段從傳統UI移轉至觸控式UI，表示會移植 *ExtJS Widget* 到 *Sling元件*. 為方便使用，觸控式UI以Granite UI架構為基礎，此架構已為UI提供一些Sling元件（稱為Granite UI元件）。
+換句話說，將UI的一部分從經典UI遷移到觸摸UI意味著 *ExtJS小部件* 到 *吊具元件*。 為了緩解這一問題，觸摸UI基於Granite UI框架，該框架已經為UI提供了一些Sling元件（稱為Granite UI元件）。
 
-開始之前，請檢查狀態和相關建議：
+在開始之前，請檢查狀態和相關建議：
 
-* [觸控式UI功能狀態](/help/release-notes/touch-ui-features-status.md)
-* [適用於客戶的使用者介面Recommendations](/help/sites-deploying/ui-recommendations.md)
+* [觸摸UI功能狀態](/help/release-notes/touch-ui-features-status.md)
+* [面向客戶的用戶介面Recommendations](/help/sites-deploying/ui-recommendations.md)
 
-開發觸控式UI的基本基礎將提供堅實的基礎：
+開發觸摸UI的基礎將提供堅實的基礎：
 
-* [AEM觸控式UI的概念](/help/sites-developing/touch-ui-concepts.md)
-* [AEM觸控式UI的結構](/help/sites-developing/touch-ui-structure.md)
+* [啟用觸摸AEM的UI的概念](/help/sites-developing/touch-ui-concepts.md)
+* [啟用觸摸AEM的UI的結構](/help/sites-developing/touch-ui-structure.md)
 
-## 移轉頁面編寫 {#migrating-page-authoring}
+## 遷移頁面創作 {#migrating-page-authoring}
 
-對話方塊是移轉元件時的主要因素：
+對話框是遷移元件時的主要因素：
 
-* [開發AEM元件](/help/sites-developing/developing-components.md) （使用觸控式UI）
-* [從傳統元件移轉](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
-* [AEM現代化工具](/help/sites-developing/modernization-tools.md)  — 協助您將傳統UI元件的對話方塊轉換為觸控式UI
+* [開發組AEM件](/help/sites-developing/developing-components.md) （使用啟用觸摸的UI）
+* [從經典元件遷移](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
+* [現代化AEM工具](/help/sites-developing/modernization-tools.md)  — 幫助您將傳統UI元件的對話框轉換為觸摸UI
 
-   * 觸控式UI中有相容層，可在「觸控式UI包裝函式」中開啟傳統UI對話方塊，但此功能有限，長期而言不建議使用。
+   * 在「觸摸UI包裝器」中，有一個相容層用於開啟標準UI對話框，但功能有限，因此長期不建議使用。
 
-* [在觸控式UI中自訂對話方塊欄位](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
-* [建立新的Granite UI欄位元件](/help/sites-developing/granite-ui-component.md)
-* [自訂頁面編寫](/help/sites-developing/customizing-page-authoring-touch.md) （使用觸控式UI）
+* [自定義Touch UI中的對話框欄位](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
+* [建立新花崗岩UI欄位元件](/help/sites-developing/granite-ui-component.md)
+* [自定義頁面創作](/help/sites-developing/customizing-page-authoring-touch.md) （使用啟用觸摸的UI）
 
-## 移轉主控台 {#migrating-consoles}
+## 遷移控制台 {#migrating-consoles}
 
-您也可以自訂主控台：
+您還可以定制控制台：
 
-* [自訂主控台](/help/sites-developing/customizing-consoles-touch.md) （適用於觸控式UI）
+* [自定義控制台](/help/sites-developing/customizing-consoles-touch.md) （用於啟用觸摸的UI）
 
-## 相關考量事項 {#related-considerations}
+## 相關注意事項 {#related-considerations}
 
-雖然與移轉至觸控式UI並非直接相關，但有相關問題需同時考慮，因為也是建議的作法：
+雖然與遷移到觸摸UI不直接相關，但有一些相關問題值得同時考慮，因為它們也是建議的做法：
 
-* [範本](/help/sites-developing/templates.md) - [可編輯的範本](/help/sites-developing/page-templates-editable.md)
+* [模板](/help/sites-developing/templates.md) - [可編輯模板](/help/sites-developing/page-templates-editable.md)
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 >[!NOTE]
 >
->另請參閱 [開發 — 最佳實務](/help/sites-developing/best-practices.md).
+>另請參閱 [開發 — 最佳做法](/help/sites-developing/best-practices.md)。
 
 ## 更多資源 {#further-resources}
 
-如需開發AEM的完整資訊，請參閱下列資源收集：
+有關發展的全AEM部資訊，請參閱：
 
 * [開發使用手冊](/help/sites-developing/home.md)
-* [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
-* [AEM 6.5 SitesTutorials和影片](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
+* [花崗岩UI文檔](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+* [6AEM.5站點Tutorials和視頻](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 * [開發 AEM Sites 快速入門 - WKND 教學課程](/help/sites-developing/getting-started.md)
-* [AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
+* [寶石AEM](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
 * [AEM 現代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]
 >
->AEM現代化工具是社群的努力成果，不受Adobe支援或保固。
+>現AEM代化工具是社區工作，不受Adobe支援或授權。

@@ -1,7 +1,7 @@
 ---
-title: 將自訂動作新增至資產清單檢視
+title: 將自定義操作添加到「資產清單」視圖
 seo-title: Add custom action to the Asset Listing view
-description: 本文說明如何將自訂動作新增至資產清單檢視
+description: 本文教授如何將自定義操作添加到「資產清單」視圖
 seo-description: This article teaches how to add custom action to the Asset Listing view
 uuid: 45f25cfb-f08f-42c6-99c5-01900dd8cdee
 content-type: reference
@@ -18,67 +18,67 @@ ht-degree: 3%
 
 ---
 
-# 將自訂動作新增至資產清單檢視{#add-custom-action-to-the-asset-listing-view}
+# 將自定義操作添加到「資產清單」視圖{#add-custom-action-to-the-asset-listing-view}
 
 ## 概觀 {#overview}
 
-通信管理解決方案可讓您將自訂動作新增至「管理資產」使用者介面。
+Tergement Management解決方案允許您將自定義操作添加到Manage Assets用戶介面。
 
-您可以為下列項目，將自訂動作新增至「資產清單」檢視：
+您可以將自定義操作添加到「資產清單」視圖中，用於：
 
-* 一或多個資產類型或信函
-* 在選取單一、多個資產/信函或未選取時執行（動作/命令變為作用中）
+* 一個或多個資產類型或字母
+* 在選擇單個、多個資產/字母或不選擇時執行（操作/命令變為活動）
 
-此自訂方式以新增「下載一般PDF」命令至「信函」的「資產清單」檢視的案例來示範。 此自訂案例可讓您的使用者下載單一所選信函的一般PDF。
+此自定義通過向字母的「資產清單」視圖添加命令「下載平面PDF」的方案來演示。 此自定義方案允許用戶下載單個選定字母的平面PDF。
 
 ### 必備條件 {#prerequisites}
 
-若要完成下列案例或類似案例，您需要了解：
+要完成以下或類似的方案，您需要瞭解：
 
 * CRX
 * JavaScript
 * Java™
 
-## 案例：向字母清單用戶介面添加命令以下載普通PDF版本的字母 {#addcommandtoletters}
+## 方案：向字母清單用戶介面添加命令以下載字母的平面PDF版本 {#addcommandtoletters}
 
-下列步驟將「下載一般PDF」命令新增至「信函」的「資產清單」檢視，並允許使用者下載所選信函的一般PDF。 搭配適當的程式碼和參數使用這些步驟，您可以為不同資產新增一些其他功能，例如資料字典或文字。
+以下步驟將命令「下載平面PDF」添加到字母的「資產清單」視圖中，並允許用戶下載所選字母的平面PDF。 使用這些步驟和相應的代碼和參數，您可以為不同的資產添加一些其他功能，如資料字典或文本。
 
-若要自訂通信管理，讓您的使用者下載一般PDF的信函，請完成下列步驟：
+要自定義「通信管理」以允許用戶下載扁平的PDF信函，請完成以下步驟：
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
+1. 轉到 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身份登錄。
 
-1. 在「應用程式」資料夾中，使用下列步驟建立名為「項目」的資料夾，其路徑/結構類似於位於選取資料夾中的項目資料夾：
+1. 在apps資料夾中，使用以下步驟建立一個名為items的資料夾，其路徑/結構與所選資料夾中的items資料夾類似：
 
-   1. 以滑鼠右鍵按一下 **項目** 資料夾（位於以下路徑），然後選取 **覆蓋節點**:
+   1. 按一下右鍵 **項目** 資料夾，然後選擇 **覆蓋節點**:
 
       `/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items`
 
       >[!NOTE]
       >
-      >此路徑專用於建立可搭配選取多個資產/信函之一使用的動作。 如果您想要建立可在未選取的情況下運作的動作，請改為為下列路徑建立覆蓋節點，並據此完成其餘步驟：
+      >此路徑專用於建立與選擇多個資產/字母之一相配合的操作。 如果要建立不進行選擇而起作用的操作，請為以下路徑建立覆蓋節點，並相應完成其餘步驟：
       >
       >
       >`/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/default/items`
 
       ![建立節點](assets/1_itemscreatenode.png)
 
-   1. 確定「覆蓋節點」對話方塊有下列值：
+   1. 確保「覆蓋節點」對話框具有以下值：
 
-      **路徑：** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
+      **路徑：** /libs/fd/cm/ma/gui/content/cmassets/jcr：內容/正文/內容/標題/項目/選擇/項目
 
       **位置：** /apps/
 
-      **匹配節點類型：** 已選取
+      **匹配節點類型：** 已選擇
 
       ![覆蓋節點](assets/2_createnodedownloadflatpdf.png)
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在應用程式資料夾中建立。
+   1. 按一下&#x200B;**「確定」**。資料夾結構是在apps資料夾中建立的。
 
-      按一下 **全部儲存**.
+      按一下 **全部保存**。
 
-1. 在新建立的項目資料夾下，為特定資產中的自訂按鈕/動作新增節點(範例：downloadFlatPDF)，使用下列步驟：
+1. 在新建立的項目資料夾下，為特定資產中的自定義按鈕/操作添加一個節點(示例：downloadFlatPDF)，執行以下步驟：
 
-   1. 以滑鼠右鍵按一下 **項目** 資料夾和選取 **建立** > **建立節點**.
+   1. 按一下右鍵 **項目** 資料夾和 **建立** > **建立節點**。
 
    1. 確保「建立節點」對話框具有以下值，然後按一下 **確定**:
 
@@ -86,31 +86,31 @@ ht-degree: 3%
 
       **類型：** nt：非結構化
 
-   1. 按一下您建立的新節點（此處為downloadFlatPDF）。 CRX顯示節點的屬性。
+   1. 按一下您建立的新節點（此處下載FlatPDF）。 CRX顯示節點的屬性。
 
-   1. 將下列屬性新增至節點（此處為downloadFlatPDF），然後按一下 **全部儲存**:
+   1. 將以下屬性添加到節點（此處為downloadFlatPDF），然後按一下 **全部保存**:
 
       <table>
         <tbody>
         <tr>
         <td><strong>名稱</strong></td>
         <td><strong>類型</strong></td>
-        <td><strong>值和說明</strong></td>
+        <td><strong>值 和說明</strong></td>
         </tr>
         <tr>
         <td>類別</td>
         <td>字串</td>
-        <td>foundation-collection-action</td>
+        <td>基礎收集 — 操作</td>
         </tr>
         <tr>
-        <td>foundation-collection-action</td>
+        <td>基礎收集 — 操作</td>
         <td>字串</td>
-        <td><p>{"target":"。cq-manageasset-admin-childpages", "activeSelectionCount":"single","type":"LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> 可為單一或多個，以允許選取要執行自訂動作的單一或多個資產。</p> <p><strong>type</strong> 可以是下列項目的一或多個（逗號分隔多個項目）:字母、文字、清單、條件、字典</p> </td>
+        <td><p>{「目標」："。cq-manageasset-admin-childpages", "activeSelectionCount":"single","type":"字母"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> 可以是單個或多個，以允許選擇執行自定義操作的單個或多個資產。</p> <p><strong>類型</strong> 可以是下列項中的一個或多個（逗號分隔多個項）:字母、文本、清單、條件、自動詞</p> </td>
         </tr>
         <tr>
         <td>圖示</td>
         <td>字串</td>
-        <td>圖示下載<br /> <br /> 「通信管理」(Correspondence Management)表徵圖顯示在命令/菜單的左側。 如需不同的可用圖示和設定，請參閱 <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html" target="_blank">CoralUI圖示檔案</a>.<br /> </td>
+        <td>表徵圖下載<br /> <br /> 「通信管理」(Tergement Management)在命令/菜單的左側顯示的表徵圖。 有關可用的不同表徵圖和設定，請參見 <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html" target="_blank">CoralUI表徵圖文檔</a>。<br /> </td>
         </tr>
         <tr>
         <td>jcr:primaryType</td>
@@ -118,58 +118,58 @@ ht-degree: 3%
         <td>nt:unstructured</td>
         </tr>
         <tr>
-        <td>rel</td>
+        <td>裸</td>
         <td>字串</td>
-        <td>download-flat-pdf-button</td>
+        <td>下載 — 平面 — pdf — 按鈕</td>
         </tr>
         <tr>
         <td>sling:resourceType</td>
         <td>字串</td>
-        <td>granite/ui/components/endor/actionbar/button</td>
+        <td>花崗岩/ui/元件/端或/操作欄/按鈕</td>
         </tr>
         <tr>
         <td>text</td>
         <td>字串</td>
-        <td>下載普通PDF（或任何其他標籤）<br /> <br /> 顯示在「資產清單」介面中的命令</td>
+        <td>下載平面PDF（或任何其他標籤）<br /> <br /> 顯示在「資產清單」介面中的命令</td>
         </tr>
         <tr>
         <td>標題</td>
         <td>字串</td>
-        <td>下載所選信函的平面PDF（或任何其他標籤/替代文字）<br /> <br /> 標題是當使用者將游標暫留在自訂命令上時， 「通信管理」所顯示的替代文字。</td>
+        <td>下載所選字母的平PDF（或任何其他標籤/Alt文本）<br /> <br /> 標題是當用戶在自定義命令上移動時Tergement Management顯示的備用文本。</td>
         </tr>
         </tbody>
        </table>
 
-1. 在應用程式資料夾中，使用下列步驟建立名為js的資料夾，其路徑/結構類似於位於管理資料夾中的項目資料夾：
+1. 在apps資料夾中，使用以下步驟建立一個名為js的資料夾，其路徑/結構類似於管理資料夾中的items資料夾：
 
-   1. 以滑鼠右鍵按一下 **js** 資料夾（位於以下路徑），然後選取 **覆蓋節點**:
+   1. 按一下右鍵 **j** 資料夾，然後選擇 **覆蓋節點**:
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
-   1. 確定「覆蓋節點」對話方塊有下列值：
+   1. 確保「覆蓋節點」對話框具有以下值：
 
       **路徑：** /libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
 
       **位置：** /apps/
 
-      **匹配節點類型：** 已選取
+      **匹配節點類型：** 已選擇
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在應用程式資料夾中建立。 按一下 **全部儲存**.
+   1. 按一下&#x200B;**「確定」**。資料夾結構是在apps資料夾中建立的。 按一下 **全部保存**。
 
-1. 在js資料夾中，使用按鈕的動作處理程式碼，建立名為formaction.js的檔案，步驟如下：
+1. 在js資料夾中，使用以下步驟建立名為formaction.js的檔案，該檔案包含用於按鈕操作處理的代碼：
 
-   1. 以滑鼠右鍵按一下 **js** 資料夾（位於以下路徑），然後選取 **建立>建立檔案**:
+   1. 按一下右鍵 **j** 資料夾，然後選擇 **建立>建立檔案**:
 
       `/apps/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
       將檔案命名為formaction.js。
 
    1. 按兩下檔案以在CRX中開啟它。
-   1. 在formaction.js檔案中（在/apps分支下），從formaction.js檔案復製程式碼，位置如下：
+   1. 在formaction.js檔案（在/apps分支下）中，將代碼從formaction.js檔案複製到以下位置：
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js/formaction.js`
 
-      然後在formaction.js檔案（在/apps分支底下）的結尾附加下列程式碼，然後按一下 **全部儲存**:
+      然後，在formaction.js檔案（在/apps分支下）的末尾添加以下代碼，然後按一下 **全部保存**:
 
       ```javascript
       /* Action url for xml file to be added.*/
@@ -226,62 +226,62 @@ ht-degree: 3%
       '</div>';
       ```
 
-      您在此步驟中新增的程式碼會覆寫libs資料夾下的程式碼，因此請將先前的程式碼複製到/apps分支中的formaction.js檔案。 將程式碼從/libs分支複製到/apps分支，可確保先前的功能也能運作。
+      在此步驟中添加的代碼將覆蓋libs資料夾下的代碼，因此將上一個代碼複製到/apps分支中的formaction.js檔案。 將代碼從/libs分支複製到/apps分支可確保以前的功能也能正常工作。
 
-      上述代碼用於處理在此過程中建立的命令的字母特定操作。 若要處理其他資產的動作，請修改JavaScript程式碼。
+      上述代碼用於對在此過程中建立的命令執行字母特定的操作處理。 要處理其他資產的操作，請修改JavaScript代碼。
 
-1. 在應用程式資料夾中，使用下列步驟建立名為items的資料夾，其路徑/結構類似於位於actionhandlers資料夾中的items資料夾：
+1. 在apps資料夾中，使用以下步驟建立名為items的資料夾，其路徑/結構與actionhandlers資料夾中的items資料夾類似：
 
-   1. 以滑鼠右鍵按一下 **項目** 資料夾（位於以下路徑），然後選取 **覆蓋節點**:
+   1. 按一下右鍵 **項目** 資料夾，然後選擇 **覆蓋節點**:
 
       `/libs/fd/cm/ma/gui/content/commons/actionhandlers/items/`
 
-   1. 確定「覆蓋節點」對話方塊有下列值：
+   1. 確保「覆蓋節點」對話框具有以下值：
 
-      **路徑：** /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
+      **路徑：** /libs/fd/cm/ma/gui/content/commons/actionhlers/items/
 
       **位置：** /apps/
 
-      **匹配節點類型：** 已選取
+      **匹配節點類型：** 已選擇
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在應用程式資料夾中建立。
+   1. 按一下&#x200B;**「確定」**。資料夾結構是在apps資料夾中建立的。
 
-   1. 按一下 **全部儲存**.
+   1. 按一下 **全部保存**。
 
-1. 在新建立的項目節點下，為特定資產中的自訂按鈕/動作新增節點(範例：letterpdfdownloader)，使用下列步驟：
+1. 在新建立的項節點下，為特定資產中的自定義按鈕/操作添加一個節點(示例：letterpdfdownloader)，執行以下步驟：
 
-   1. 按一下右鍵項目資料夾並選擇 **建立>建立節點**.
+   1. 按一下右鍵項目資料夾並選擇 **「建立」>「建立節點」**。
 
    1. 確保「建立節點」對話框具有以下值，然後按一下 **確定**:
 
-      **名稱：** letterpdfdownloader（或您要為此屬性指定的名稱）必須是唯一的。 若您在此處使用不同名稱，請在formaction.js檔案的ACTION_URL變數中指定相同的名稱。)
+      **名稱：** letterpdfdownloader（或要為此屬性指定的名稱）必須唯一。 如果在此處使用不同的名稱，也可在formaction.js檔案的ACTION_URL變數中指定相同的名稱。)
 
       **類型：** nt：非結構化
 
-   1. 按一下您建立的新節點（此處為downloadFlatPDF）。 CRX顯示節點的屬性。
+   1. 按一下您建立的新節點（此處下載FlatPDF）。 CRX顯示節點的屬性。
 
-   1. 將下列屬性新增至節點（此處為letterpdfdownloader），然後按一下 **全部儲存**:
+   1. 將以下屬性添加到節點（此處為letterpdfdownloader），然後按一下 **全部保存**:
 
       | **名稱** | **類型** | **值** |
       |---|---|---|
-      | sling:resourceType | 字串 | fd/cm/ma/gui/components/admin/clientlibs/admin |
+      | sling:resourceType | 字串 | fd/cm/ma/gui/元件/admin/clientlibs/admin |
 
-1. 在以下位置建立名為POST.jsp的檔案，該檔案具有用於操作處理命令的代碼：
+1. 建立名為POST.jsp的檔案，該檔案的代碼用於在以下位置處理命令：
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-   1. 以滑鼠右鍵按一下 **管理員** 資料夾（位於以下路徑），然後選取 **建立>建立檔案**:
+   1. 按一下右鍵 **管理員** 資料夾，然後選擇 **建立>建立檔案**:
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-      將檔案命名為POST.jsp。 (檔案名稱只需POST.jsp。)
+      將檔案命名為POST.jsp。 (檔案名只需要為POST.jsp。)
 
-   1. 按兩下 **POST.jsp** 檔案以在CRX中開啟。
-   1. 將以下代碼添加到POST.jsp檔案中，然後按一下 **全部儲存**:
+   1. 按兩下 **POST.jsp** 的子菜單。
+   1. 將以下代碼添加到POST.jsp檔案中，然後按一下 **全部保存**:
 
-      此代碼是信函轉譯服務專屬的代碼。 對於任何其他資產，將該資產的Java™程式庫新增至此程式碼。 如需AEM Forms API的詳細資訊，請參閱 [AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).
+      此代碼特定於字母呈現服務。 對於任何其他資產，將該資產的Java™庫添加到此代碼中。 有關AEM FormsAPI的詳細資訊，請參見 [AEM FormsAPI](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。
 
-      如需AEM程式庫的詳細資訊，請參閱AEM [元件](/help/sites-developing/components.md).
+      有關庫的詳細信AEM息，請參AEM閱 [元件](/help/sites-developing/components.md)。
 
       ```xml
       /*Import libraries. Here we are downloading letter flat pdf with input xml data so we require letterRender Api. For any other Module functionality we need to first import that library. */
@@ -348,26 +348,26 @@ ht-degree: 3%
       %>
       ```
 
-## 使用自訂功能下載一般PDF的信函 {#download-flat-pdf-of-a-letter-using-the-custom-functionality}
+## 使用自定義功能下載字母的平面PDF {#download-flat-pdf-of-a-letter-using-the-custom-functionality}
 
-新增自訂功能以下載一般PDF的信函後，您可以使用下列步驟來下載所選信函的一般PDF版本：
+添加自定義功能以下載字母的平面PDF後，您可以使用以下步驟下載所選字母的平面PDF版本：
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/projects.html` 並登入。
+1. 轉到 `https://'[server]:[port]'/[ContextPath]/projects.html` 登錄。
 
-1. 選擇 **Forms >字母**. 通信管理列出系統中可用的信函。
-1. 按一下 **選擇** 然後按一下字母加以選取。
-1. 選擇 **更多** > **&lt;download flat=&quot;&quot; pdf=&quot;&quot;>** （依照本文指示建立的自訂功能）。 「Download Letter as Tage(下載PDF)」對話框出現。
+1. 選擇 **Forms>字母**。 Tergement Management列出系統中可用的信函。
+1. 按一下 **選擇** 然後按一下一個字母來選擇它。
+1. 選擇 **更多** > **&lt;download flat=&quot;&quot; pdf=&quot;&quot;>** （使用本文說明建立的自定義功能）。 將顯示「以PDF形式下載信函」對話框。
 
-   功能表項目名稱、功能和alt-text是根據 [案例：向字母清單用戶介面添加命令以下載普通PDF版本的字母。](#addcommandtoletters)
+   菜單項名稱、功能和Alt-text根據在 [方案：向字母清單用戶介面添加命令以下載字母的平面PDF版本。](#addcommandtoletters)
 
-   ![自訂功能：下載普通PDF](assets/5_downloadflatpdf.png)
+   ![自定義功能：下載平面PDF](assets/5_downloadflatpdf.png)
 
-1. 在「以PDF方式下載信函」對話方塊中，選取您要在PDF中填入資料的相關XML。
+1. 在「作為PDF的下載信函」對話框中，選擇要從中填充PDF中資料的相關XML。
 
    >[!NOTE]
    >
-   >在將信函下載為一般PDF之前，您可以使用 **建立報表** 選項。
+   >在將字母下載為平面PDF之前，可以使用 **建立報告** 的雙曲餘切值。
 
-   ![下載信函作為PDF](assets/6_downloadflatpdf.png)
+   ![下載信件作為PDF](assets/6_downloadflatpdf.png)
 
-   該信作為普通PDF下載到您的電腦。
+   這封信作為平面PDF下載到你的電腦。

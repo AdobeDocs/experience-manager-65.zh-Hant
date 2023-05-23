@@ -1,7 +1,7 @@
 ---
 title: 內容服務的 JSON 匯出工具
 seo-title: JSON Exporter for Content Services
-description: AEM Content Services的設計目的，是為了將AEM中/來自的內容的說明和傳送，歸納為網頁上的重點以外。 它們使用可供任何用戶端使用的標準化方法，將內容傳遞至非傳統AEM網頁的頻道。
+description: Content Services旨在AEM將內容的描述和交付範圍從關注網AEM頁的範圍延伸出來。 它們使用可供任何客戶使用的標準化方法，將內AEM容交付到非傳統網頁的渠道。
 seo-description: AEM Content Services are designed to generalize the description and delivery of content in/from AEM beyond a focus on web pages. They provide the delivery of content to channels that are not traditional AEM web pages, using standardized methods that can be consumed by any client.
 uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
@@ -19,63 +19,63 @@ ht-degree: 11%
 
 # 內容服務的 JSON 匯出工具{#json-exporter-for-content-services}
 
-AEM Content Services的設計目的，是為了將AEM中/來自的內容的說明和傳送，歸納為網頁上的重點以外。
+Content Services旨在AEM將內容的描述和交付範圍從關注網AEM頁的範圍延伸出來。
 
-它們使用可供任何用戶端使用的標準化方法，將內容傳遞至非傳統AEM網頁的頻道。 這些管道可包括：
+它們使用可供任何客戶使用的標準化方法，將內AEM容交付到非傳統網頁的渠道。 這些渠道可以包括：
 
 * [單頁應用程式](spa-walkthrough.md)
-* 原生行動應用程式
-* AEM外部的其他通道和接觸點
+* 本機移動應用程式
+* 外部的其它通道和觸AEM點
 
-透過使用結構化內容的內容片段，您可以使用JSON匯出工具以JSON資料模型格式傳送任何AEM頁面的內容，以提供內容服務。 然後，您自己的應用程式就可以使用此方法。
+使用使用結構化內容的內容片段，您可以通過使用JSON導出器以JSON資料模型格式傳遞任AEM何頁的內容來提供內容服務。 然後，您自己的應用程式可以使用此方法。
 
 >[!NOTE]
 >
->此處描述的功能適用於所有核心元件， [核心元件1.1.0版](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant).
+>此處描述的功能適用於所有核心元件，因為 [1.1.0版核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)。
 
-## 包含內容片段核心元件的JSON匯出工具 {#json-exporter-with-content-fragment-core-components}
+## 包含內容片段核心元件的JSON導出器 {#json-exporter-with-content-fragment-core-components}
 
-使用AEM JSON匯出工具，您可以以JSON資料模型格式傳送任何AEM頁面的內容。 然後，您自己的應用程式就可以使用此方法。
+使用AEMJSON導出器，可以以JSON資料模型格式AEM傳遞任何頁的內容。 然後，您自己的應用程式可以使用此方法。
 
-在AEM中，是使用選取器來達成傳送 `model` 和 `.json` 擴充功能。
+在中AEM，使用選擇器實現遞送 `model` 和 `.json` 擴展。
 
 `.model.json`
 
-1. 例如，URL，例如：
+1. 例如，URL，如：
 
    ```shell
    http://localhost:4502/content/we-retail/language-masters/en.model.json
    ```
 
-1. 提供內容，例如：
+1. 提供內容，如：
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-或者，您可以明確鎖定結構化內容片段，以傳送其內容。
+或者，可以通過將結構化內容片段的內容指定為特定目標來傳遞該內容。
 
-使用片段的整個路徑(透過 `jcr:content`);例如，尾碼為，例如。
+使用片段的整個路徑(通過 `jcr:content`);例如，帶有尾碼，如。
 
 `.../jcr:content/root/responsivegrid/contentfragment.model.json`
 
-您的頁面可以包含單一內容片段或多種類型的元件。 您也可以使用清單元件等機制來自動搜尋相關內容。
+您的頁面可以包含單個內容片段或多種類型的多個元件。 也可以使用清單元件等機制自動搜索相關內容。
 
-* 例如，URL，例如：
+* 例如，URL，如：
 
    ```shell
    http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
    ```
 
-* 提供內容，例如：
+* 提供內容，如：
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
    >[!NOTE]
    >
-   >您可以 [調整您自己的元件](/help/sites-developing/json-exporter-components.md) 來存取和使用此資料。
+   >你可以 [調整自己的元件](/help/sites-developing/json-exporter-components.md) 訪問和使用此資料。
 
    >[!NOTE]
    >
-   >雖然不是標準實作， [支援多個選取器，](json-exporter-components.md#multiple-selectors) 但 `model` 必須是第一個。
+   >雖然不是標準實施， [支援多個選擇器，](json-exporter-components.md#multiple-selectors) 但 `model` 肯定是第一個。
 
 ### 更多資訊 {#further-information}
 
@@ -87,20 +87,20 @@ AEM Content Services的設計目的，是為了將AEM中/來自的內容的說�
 
 * Sling 模型:
 
-   * [Sling模型 — 將模型類與自130年以來的資源類型關聯](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
+   * [Sling Models — 將模型類與自130以來的資源類型關聯](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
 
-* AEM與JSON:
+* AEMJSON:
 
-   * [取得JSON格式的頁面資訊](/help/sites-developing/pageinfo.md)
+   * [獲取JSON格式的頁資訊](/help/sites-developing/pageinfo.md)
 
-## 相關檔案 {#related-documentation}
+## 相關文檔 {#related-documentation}
 
-如需詳細資訊，請參閱：
+有關詳細資訊，請參閱：
 
-* 此 [資產使用手冊中的內容片段主題](/help/assets/content-fragments/content-fragments.md)
+* 的 [資產使用手冊中的內容片段主題](/help/assets/content-fragments/content-fragments.md)
 
 * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
-* [使用內容片段製作](/help/sites-authoring/content-fragments.md)
+* [使用內容片段創作](/help/sites-authoring/content-fragments.md)
 * [為元件啟用 JSON 匯出](/help/sites-developing/json-exporter-components.md)
 
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [內容片段元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=en)

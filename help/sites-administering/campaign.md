@@ -1,7 +1,7 @@
 ---
 title: 與 Adobe Campaign 整合
 seo-title: Integrating with Adobe Campaign
-description: 了解如何整合AEM與Adobe Campaign。
+description: 學習如何與AEMAdobe Campaign融合。
 seo-description: Learn how to integrate AEM with Adobe Campaign.
 uuid: 6113279e-d1f5-46c3-ac94-50270fa55060
 contentOwner: Guillaume Carlino
@@ -19,20 +19,20 @@ ht-degree: 5%
 
 # 與 Adobe Campaign 整合{#integrating-with-adobe-campaign}
 
-Adobe Campaign是一組解決方案，可讓您個人化所有線上和離線管道，並傳送行銷活動。
+Adobe Campaign是一組解決方案，讓您能夠個性化並在所有線上和離線渠道中提供市場活動。
 
-您可以將此版本的AEM與下列其中一個Adobe Campaign版本整合：
+您可以將此版本AEM與以下版本之一的Adobe Campaign整合：
 
-* Adobe Campaign 6.1，此為內部部署解決方案。
-* Adobe Campaign Standard，此訂閱型解決方案。
+* Adobe Campaign6.1，這是內部解決方案。
+* Adobe Campaign Standard，是基於訂閱的解決方案。
 
-本檔案說明如何將AEM與Adobe Campaign整合。 視您是使用訂閱式或內部部署解決方案而定，整合步驟會稍有不同。
+本文檔介紹如何與AEMAdobe Campaign整合。 根據您是使用基於訂閱的解決方案還是內部解決方案，整合步驟將略有不同。
 
-* [與Adobe Campaign 6.1整合](/help/sites-administering/campaignonpremise.md)
+* [與Adobe Campaign6.1整合](/help/sites-administering/campaignonpremise.md)
 * [與Adobe Campaign Standard整合](/help/sites-administering/campaignstandard.md)
-* [電子郵件範本最佳作法](/help/sites-administering/best-practices-for-email-templates.md)
-* [疑難排解Adobe Campaign整合](/help/sites-administering/troubleshooting-campaignintegration.md)
+* [電子郵件模板的最佳做法](/help/sites-administering/best-practices-for-email-templates.md)
+* [排除您的Adobe Campaign整合故障](/help/sites-administering/troubleshooting-campaignintegration.md)
 
 >[!NOTE]
 >
->若要檢閱相關AEM社群文章，請參閱： [整合Adobe Experience Manager和Adobe Campaign Standard以建立Newleters](https://helpx.adobe.com/experience-manager/using/aem_campaign.html).
+>要複查相關的社區AEM文章，請參閱： [整合Adobe Experience Manager和Adobe Campaign Standard打造Newletter](https://helpx.adobe.com/experience-manager/using/aem_campaign.html)。

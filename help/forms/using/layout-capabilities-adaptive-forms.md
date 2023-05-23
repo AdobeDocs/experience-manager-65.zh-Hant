@@ -1,7 +1,7 @@
 ---
-title: 最適化表單的版面功能
+title: 自適應表單的佈局功能
 seo-title: Layout capabilities of adaptive forms
-description: 各種裝置上最適化表單的版面和外觀由版面設定控制。 了解各種版面及如何套用。
+description: 各種設備上自適應表單的佈局和外觀受佈局設定控制。 瞭解各種佈局以及如何應用它們。
 seo-description: Layout and appearances of adaptive forms on various devices are governed by the layout settings. Understand the various layouts and how to apply them.
 uuid: 79022ac2-1aa3-47c5-b094-cbe83334ea62
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,27 +17,27 @@ ht-degree: 0%
 
 ---
 
-# 最適化表單的版面功能{#layout-capabilities-of-adaptive-forms}
+# 自適應表單的佈局功能{#layout-capabilities-of-adaptive-forms}
 
-Adobe Experience Manager(AEM)可讓您建立簡單易用的最適化表單，為使用者提供動態體驗。 表單版面會控制項目或元件在最適化表單中的顯示方式。
+Adobe Experience Manager(AEM)允許您建立易於使用的自適應表單，為最終用戶提供動態體驗。 窗體佈局控制在自適應窗體中顯示項目或元件的方式。
 
-## 必備知識 {#prerequisite-knowledge}
+## 先決知識 {#prerequisite-knowledge}
 
-了解最適化表單的不同版面功能之前，請先閱讀下列文章，深入了解最適化表單。
+在瞭解自適應表單的不同佈局功能之前，請閱讀以下文章以瞭解有關自適應表單的更多資訊。
 
 [AEM Forms簡介](../../forms/using/introduction-aem-forms.md)
 
-[製作表單簡介](../../forms/using/introduction-forms-authoring.md)
+[創作表單簡介](../../forms/using/introduction-forms-authoring.md)
 
-## 版面類型 {#types-of-layouts}
+## 佈局類型 {#types-of-layouts}
 
-適用性表單提供下列類型的配置：
+自適應表單提供了以下類型的佈局：
 
-**面板版面** 控制面板內的項目或元件在裝置上的顯示方式。
+**面板佈局** 控制面板內的項目或元件在設備上的顯示方式。
 
-**行動版面** 控制行動裝置上表單的導覽。 如果裝置寬度為768像素或以上，則版面會視為行動版面，並針對行動裝置最佳化。
+**移動佈局** 控制移動設備上表單的導航。 如果設備寬度為768像素或更多，則該佈局被視為移動佈局並針對移動設備進行優化。
 
-**工具列版面** 控制窗體中工具欄或面板工具欄中的操作按鈕的放置。
+**工具欄佈局** 控制窗體中工具欄或面板工具欄中「操作」按鈕的位置。
 
 所有這些面板佈局都在以下位置定義：
 
@@ -45,136 +45,136 @@ Adobe Experience Manager(AEM)可讓您建立簡單易用的最適化表單，為
 
 >[!NOTE]
 >
->若要變更最適化表單的版面，請使用AEM中的「製作模式」。
+>要更改自適應表單的佈局，請使用中的「創作模式」AEM。
 
-![CRX儲存庫中的佈局位置](assets/layouts_location_in_crx.png)
+![CRX儲存庫中佈局的位置](assets/layouts_location_in_crx.png)
 
 ## 面板版面配置 {#panel-layout}
 
-表單作者可將版面配置與適用性表單的每個面板（包括根面板）建立關聯。
+表單作者可以將佈局與包括根面板的自適應表單的每個面板相關聯。
 
-面板佈局位於 `/libs/fd/af/layouts/panel` 位置。
+「面板」佈局可在 `/libs/fd/af/layouts/panel` 位置。
 
-![最適化表單的根面板面板配置清單](assets/layouts.png)
+![用於自適應表單的根面板的面板佈局清單](assets/layouts.png)
 
-適用性表單中的面板配置清單
+自適應表單中的面板佈局清單
 
-### 回應式 — 單一頁面上的所有項目，無需導覽 {#responsive-everything-on-one-page-without-navigation-br}
+### 響應 — 無需導航即可將所有內容放在一頁上 {#responsive-everything-on-one-page-without-navigation-br}
 
-使用此面板配置建立回應式配置，可根據裝置的螢幕大小進行調整，而不需進行特殊導覽。
+使用此面板佈局可建立響應佈局，該佈局可根據設備的螢幕大小進行調整，而無需進行任何專用導航。
 
-使用此版面，您可以放置多個 **[!UICONTROL 面板最適化表單]** 元件在面板內逐一顯示。
+使用此佈局，可以放置多個 **[!UICONTROL 面板自適應窗體]** 在面板中一個接一個的元件。
 
-![使用回應式版面的表單，如小螢幕上所示](assets/responsive_layout_seen_on_small_screen.png)
+![使用小螢幕上顯示的響應佈局的表單](assets/responsive_layout_seen_on_small_screen.png)
 
-使用回應式版面的表單，如小螢幕上所示
+使用小螢幕上顯示的響應佈局的表單
 
-![使用回應式版面的表單，如同在大螢幕上看到的](assets/responsive_layout_seen_on_large_screen.png)
+![使用大螢幕上顯示的響應佈局的表單](assets/responsive_layout_seen_on_large_screen.png)
 
-使用回應式版面的表單，如同在大螢幕上看到的
+使用大螢幕上顯示的響應佈局的表單
 
-### 精靈 — 多步驟表單，一次顯示一個步驟 {#wizard-a-multi-step-form-showing-one-step-at-a-time}
+### 嚮導 — 一次顯示一步的多步驟窗體 {#wizard-a-multi-step-form-showing-one-step-at-a-time}
 
-使用此面板佈局在表單內提供引導式導航。 例如，當您想要在表單中擷取必填資訊，同時逐步引導使用者時，可使用此版面。
+使用此面板佈局可在窗體中提供引導導航。 例如，當要在逐步引導用戶的同時捕獲表單中的必需資訊時，請使用此佈局。
 
-使用 `Panel adaptive form` 元件，在面板內提供逐步導覽。 使用此版面時，使用者只有在目前步驟完成後才會移至下一個步驟
+使用 `Panel adaptive form` 元件，用於在面板內提供分步導航。 使用此佈局時，用戶僅在當前步驟完成後才移動到下一步
 
 ```javascript
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
 ```
 
-![嚮導佈局中多步驟表單的步驟完成表達式](assets/layout-sidebar.png)
+![多步驟窗體的嚮導佈局中的步驟完成表達式](assets/layout-sidebar.png)
 
-嚮導佈局中多步驟表單的步驟完成表達式
+多步驟窗體的嚮導佈局中的步驟完成表達式
 
-![使用精靈版面的表單](assets/wizard-layout.png)
+![使用嚮導佈局的表單](assets/wizard-layout.png)
 
-使用精靈的表單
+使用嚮導的窗體
 
-### 折疊式面板設計的版面配置 {#layout-for-accordion-design}
+### 手風琴設計佈局 {#layout-for-accordion-design}
 
-使用此版面，您可以將 `Panel adaptive form` 元件（在具有折疊式面板樣式導覽的面板中）。 使用此配置，您也可以建立可重複的面板。 可重複的面板可讓您視需要動態新增或移除面板。 您可以定義面板重複的次數下限和上限。 此外，基於在面板項中提供的資訊，可動態地確定面板的標題。
+使用此佈局，可以 `Panel adaptive form` 元件。 使用此佈局，還可以建立可重複面板。 可重複面板使您能夠根據需要動態添加或刪除面板。 您可以定義面板重複的最小次數和最大次數。 此外，可以根據在面板項目中提供的資訊動態地確定面板的標題。
 
-摘要運算式可用來顯示使用者在最小化面板的標題中提供的值。
+摘要表達式可用於在最小化面板的標題中顯示最終用戶提供的值。
 
-![在最適化表單中使用折疊式功能表配置的可重複面板](assets/repeatable_panels_using_accordion_layout.png)
+![在自適應形式中使用折疊式佈局的可重複面板](assets/repeatable_panels_using_accordion_layout.png)
 
-使用折疊式功能表配置建立的可重複面板
+使用折疊式佈局建立的可重複面板
 
-### 頁簽式佈局 — 頁簽顯示在左側 {#tabbed-layout-tabs-appear-on-the-left}
+### 頁籤式佈局 — 頁籤顯示在左側 {#tabbed-layout-tabs-appear-on-the-left}
 
-使用此版面，您可以將 `Panel adaptive form` 元件（位於面板中），並搭配Tab導覽。 標籤會放置在面板內容的左側。
+使用此佈局，可以 `Panel adaptive form` 元件。 這些頁籤放置在面板內容的左側。
 
-![在「頁簽式佈局」中，頁簽顯示在左側](assets/tabbed_layout_left.png)
+![在頁籤式佈局中，頁籤顯示在左側](assets/tabbed_layout_left.png)
 
-顯示在面板左側的標籤
+顯示在面板左側的頁籤
 
-### 頁簽式佈局 — 頁簽顯示在頂部 {#tabbed-layout-tabs-appear-on-the-top}
+### 頁籤式佈局 — 頁籤顯示在頂部 {#tabbed-layout-tabs-appear-on-the-top}
 
-使用此版面，您可以將 `Panel adaptive form` 面板中的元件，帶有定位導航。 標籤會放置在面板內容上方。
+使用此佈局，可以 `Panel adaptive form` 帶制表符導航的面板中的元件。 這些頁籤放置在面板內容的頂部。
 
-![適用性表單中的標籤式版面，頂端有標籤](assets/tabbed_layout_top.png)
+![自適應表單中的頁籤式佈局，頂部帶有頁籤](assets/tabbed_layout_top.png)
 
-顯示在面板頂端的標籤
+顯示在面板頂部的制表符
 
-## 行動版面 {#mobile-layouts}
+## 移動佈局 {#mobile-layouts}
 
-行動配置可讓使用者在螢幕相對較小的行動裝置上輕鬆導覽。 行動版面使用標籤樣式或嚮導樣式進行表單導航。 套用行動版面可提供整個表單的單一版面。
+移動佈局允許在螢幕相對較小的移動設備上進行用戶友好的導航。 移動佈局使用頁籤式樣式或嚮導式樣進行表單導航。 應用移動佈局為整個表單提供單個佈局。
 
-此版面會使用導覽列和導覽功能表來控制導覽。 導覽列隨即顯示 **&lt;** 和 **>** 圖示表示 **next** 和 **上一個** 導覽表單中的步驟。
+此佈局使用導航欄和導航菜單控制導航。 導航欄顯示 **&lt;** 和 **>** 表徵圖 **下** 和 **上** 中選擇相應的選項。
 
-行動版面位於 `/libs/fd/af/layouts/mobile/` 位置。 依預設，適用性表單中提供下列行動配置。
+Mobile Layouts可在 `/libs/fd/af/layouts/mobile/` 位置。 預設情況下，以下移動佈局在自適應表單中可用。
 
-![最適化表單中的行動配置清單](assets/mobile-navigation.png)
+![自適應表單中的移動佈局清單](assets/mobile-navigation.png)
 
-最適化表單中的行動配置清單
+自適應表單中的移動佈局清單
 
-使用行動版面時，若要存取各種表單面板，點選即可使用表單功能表 ![aem6forms_form_menu](assets/aem6forms_form_menu.png) 表徵圖。
+當使用移動佈局時，通過點擊表格菜單可訪問各種表格面板 ![aem6forms_form_menu](assets/aem6forms_form_menu.png) 表徵圖
 
-### 表單標題中具有面板標題的版面 {#layout-with-panel-titles-in-the-form-header}
+### 在表單標題中包含面板標題的佈局 {#layout-with-panel-titles-in-the-form-header}
 
-如名稱所示，此版面會顯示面板標題以及導覽功能表和導覽列。 此版面也提供「下一步」和「上一步」導覽圖示。
+如名稱所示，此佈局顯示面板標題以及導航菜單和導航欄。 此佈局還提供了「下一步」和「上一步」表徵圖以用於導航。
 
-![在表單標題中含有面板標題的行動版面](assets/mobile_layout_with.png)
+![具有表單標題中的面板標題的移動佈局](assets/mobile_layout_with.png)
 
-在表單標題中含有面板標題的行動版面
+具有表單標題中的面板標題的移動佈局
 
-### 表單標題中不包含面板標題的佈局 {#layout-without-panel-titles-in-the-form-header}
+### 窗體標題中沒有面板標題的佈局 {#layout-without-panel-titles-in-the-form-header}
 
-如名稱所示，此版面只會顯示導覽功能表和導覽列，而不顯示面板標題。 此版面也提供「下一步」和「上一步」導覽圖示。
+如名稱所示，此佈局僅顯示沒有面板標題的導航菜單和導航欄。 此佈局還提供了「下一步」和「上一步」表徵圖以用於導航。
 
-![表單標題中沒有面板標題的行動版面](assets/mobile_layout_without.png)
+![表單標題中沒有面板標題的移動佈局](assets/mobile_layout_without.png)
 
-表單標題中沒有面板標題的行動版面
+表單標題中沒有面板標題的移動佈局
 
 ## 工具欄佈局 {#toolbar-layouts}
 
-工具列版面控制您新增至最適化表單的任何動作按鈕的定位和顯示。 可在表單層級或面板層級新增版面。
+工具欄佈局控制添加到自適應表單中的任何操作按鈕的定位和顯示。 佈局可以在表單級或面板級添加。
 
-![控制按鈕佈局的最適化表單中的工具欄佈局清單](assets/toolbar-layouts.png)
+![用於控制按鈕佈局的自適應表單中的工具欄佈局清單](assets/toolbar-layouts.png)
 
-適用性表單中的工具列配置清單
+自適應表單中的工具欄佈局清單
 
-工具欄佈局位於 `/libs/fd/af/layouts/toolbar` 位置。 適用性表單預設提供下列工具列配置。
+工具欄佈局可在 `/libs/fd/af/layouts/toolbar` 位置。 預設情況下，自適應表單提供以下工具欄佈局。
 
-### 工具列的預設版面 {#default-layout-for-toolbar}
+### 工具欄的預設佈局 {#default-layout-for-toolbar}
 
-在最適化表單中新增任何動作按鈕時，系統會選取此版面作為預設版面。 選取此版面會針對桌上型電腦和行動裝置顯示相同的版面。
+在自適應表單中添加任何操作按鈕時，此佈局被選作預設佈局。 選擇此佈局將顯示台式機和移動設備的相同佈局。
 
-此外，還可以添加包含使用此佈局配置的操作按鈕的多個工具欄。 動作按鈕與表單控制項相關聯。 您可以將工具列設定為面板之前或之後。
+此外，還可以添加包含使用此佈局配置的操作按鈕的多個工具欄。 操作按鈕與表單控制項關聯。 可以將工具欄配置為在面板之前或之後。
 
-![工具列的預設檢視](assets/toolbar_layout_default.png)
+![工具欄的預設視圖](assets/toolbar_layout_default.png)
 
-工具列的預設檢視
+工具欄的預設視圖
 
-### 工具列的行動版面固定 {#mobile-fixed-layout-for-toolbar}
+### 工具欄的移動固定佈局 {#mobile-fixed-layout-for-toolbar}
 
-選取此版面以提供案頭和行動裝置的替代版面。
+選擇此佈局可為台式機和移動設備提供備用佈局。
 
-對於案頭版面，可以使用某些特定標籤添加操作按鈕。 只能使用此配置配置一個工具欄。 如果使用此版面配置了多個工具列，行動裝置會有重疊，且只會顯示一個工具列。 例如，您可以在表單底部或頂端擁有工具列，或在表單中的面板後面或前面。
+對於案頭佈局，可以使用某些特定標籤添加「操作」按鈕。 只能使用此佈局配置一個工具欄。 如果為此佈局配置了多個工具欄，則移動設備存在重疊，並且只有一個工具欄可見。 例如，可以在表單的底部或頂部或表單中的面板後或前面設定工具欄。
 
-對於行動版面，您可以使用圖示來新增動作按鈕。
+對於移動佈局，可以使用表徵圖添加操作按鈕。
 
-![工具列的行動版面固定](assets/toolbar_layout_mobile_fixed.png)
+![工具欄的移動固定佈局](assets/toolbar_layout_mobile_fixed.png)
 
-工具列的行動版面固定
+工具欄的移動固定佈局

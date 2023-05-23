@@ -1,7 +1,7 @@
 ---
 title: 品牌自訂
 seo-title: Branding Customization
-description: 自訂應用程式圖示、應用程式名稱、啟動影像和登入頁面，為AEM Forms應用程式提供獨特的組織專屬外觀和風格。
+description: 自定義應用程式表徵圖、應用程式名稱、啟動映像和登錄頁，為AEM Forms應用程式提供獨特的組織特定外觀。
 seo-description: Customize the application icon, application name, launch images, and login page to provide a distinct organization-specific look and feel to AEM Forms app.
 uuid: fece0fa8-c417-45eb-93f1-a91b49835fa0
 contentOwner: robhagat
@@ -19,47 +19,47 @@ ht-degree: 2%
 
 # 品牌自訂 {#branding-customization}
 
-您可以自訂應用程式圖示、應用程式名稱、啟動影像和登入頁面，為AEM Forms應用程式提供組織專屬的不同外觀。 例如，您可以變更影像以使用貴組織的標誌。 AEM Forms應用程式支援下列自訂：
+您可以自定義應用程式表徵圖、應用程式名稱、啟動映像和登錄頁，以便為AEM Forms應用程式提供特定於組織的獨特外觀。 例如，您可以更改影像以使用組織中的徽標。 AEM Forms應用支援以下自定義：
 
-* 自訂應用程式圖示和啟動影像
-* 自訂應用程式名稱
-* 在登入頁面上自訂影像
-* 自訂應用程式選單中的標誌
+* 自定義應用程式表徵圖和啟動映像
+* 自定義應用名稱
+* 在登錄頁上自定義影像
+* 在應用菜單中自定義徽標
 
-## 自訂圖示和啟動影像 {#customizing-icon-and-launch-images}
+## 自定義表徵圖並啟動影像 {#customizing-icon-and-launch-images}
 
-執行下列步驟來自訂AEM Forms應用程式的預設應用程式圖示和啟動影像：
+執行以下步驟來自定義預設應用表徵圖和AEM Forms應用的啟動映像：
 
 >[!NOTE]
 >
->對於所有表徵圖和影像，請使用非隔行掃描的PNG格式。
+>對於所有表徵圖和影像，使用隔行掃描PNG格式。
 
-### 若要自訂圖示和啟動影像 {#to-customize-icon-and-launch-images}
+### 自定義表徵圖並啟動映像 {#to-customize-icon-and-launch-images}
 
-#### 針對iOS {#for-ios}
+#### 為iOS {#for-ios}
 
-1. 開啟 `Capture.xcodeproj` 專案。
-1. (***自訂圖示***)在捕獲的導航器視圖中，導航到 **[!UICONTROL 「捕獲」>「捕獲」>「支援檔案」>「捕獲 — info.plist」]**. 按一下圖示檔案旁的下拉式清單。 指定圖示檔案的名稱(.png)，並在上傳檔案 **[!UICONTROL 捕獲>捕獲>資源>表徵圖]**. 目前支援的維度為：29x29、50x50、58x58、72x72、100x100和144x144。
-1. (***自訂啟動影像***)確認影像的檔案名稱為：
+1. 開啟 `Capture.xcodeproj` Xcode中的項目。
+1. (***用於自定義表徵圖***)在「捕獲」的導航器視圖中，導航到 **[!UICONTROL 「捕獲」>「捕獲」>「支援檔案」>「捕獲 — info.plist」]**。 按一下「Icon files（表徵圖檔案）」旁邊的下拉框。 指定表徵圖檔案(.png)的名稱，並在 **[!UICONTROL 捕獲>捕獲>資源>表徵圖]**。 當前支援的維包括：29x29、50x50、58x58、72x72、100x100和144x144。
+1. (***用於自定義啟動映像***)確保映像的檔案名為：
 
-   * 縱向： `Default-Portrait~ipad.png` 和 `Default-Portrait@2x~ipad.png`
-   * 橫向： `Default-Landscape~ipad.png` 和 `Default-Landscape@2x~ipad.png`
+   * 對於縱向： `Default-Portrait~ipad.png` 和 `Default-Portrait@2x~ipad.png`
+   * 對於橫向： `Default-Landscape~ipad.png` 和 `Default-Landscape@2x~ipad.png`
 
-   將它們上傳到捕獲項目以替換項目中的現有檔案。
+   將它們上載到「捕獲」項目以替換項目中的現有檔案。
 
    >[!NOTE]
    >
-   >確定影像的名稱和解析度符合您在專案中取代的影像。
+   >確保映像的名稱和解析度與您在項目中替換的映像匹配。
 
-1. 在iOS裝置或iOS模擬器上建立及執行AEM Forms應用程式。
+1. 在iOS設備或iOS模擬器上構建和運行AEM Forms應用。
 
-#### 適用於Android {#for-android}
+#### 對於Android {#for-android}
 
 1. 將應用程式表徵圖檔案命名為：
 
    `ic_launcher.png`
 
-1. 將對應的表徵圖檔案放置在以下目錄中：
+1. 將相應的表徵圖檔案放在以下目錄中：
 
    * `[User_Home]/Projects/[your-project]/src/android/res/drawable-hdpi`
    * `[User_Home]/Projects/[your-project]/src/android/res/drawable-mdpi`
@@ -69,68 +69,68 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >確定影像的名稱和解析度符合您在專案中取代的影像。
+   >確保映像的名稱和解析度與您在項目中替換的映像匹配。
 
-1. 重建AEM Forms應用程式。
+1. 重建AEM Forms應用。
 
-### Windows版 {#for-windows}
+### 對於Windows {#for-windows}
 
-1. 取代路徑中的圖示：
+1. 替換路徑中的表徵圖：
 
    `%HOMEPATH%\adobe-lc-mobileworkspace-src-<version>\src\windows\MWSWindows\res\icons\windows`
 
-1. 替換路徑中的啟動器映像：
+1. 替換路徑中的啟動程式映像：
 
    `%HOMEPATH%\adobe-lc-mobileworkspace-src-<version>\src\windows\MWSWindows\res\screens\windows`
 
    >[!NOTE]
    >
-   >確定影像的名稱和解析度符合您在專案中取代的影像。
+   >確保映像的名稱和解析度與您在項目中替換的映像匹配。
 
-1. 重建AEM Forms應用程式。
+1. 重建AEM Forms應用。
 
-## 自訂應用程式名稱 {#customize-the-app-name}
+## 自定義應用名稱 {#customize-the-app-name}
 
-### 針對iOS {#for-ios-1}
+### 為iOS {#for-ios-1}
 
-1. 開啟 `Capture.xcodeproj` 專案。
-1. 在捕獲的導航視圖中，導航到 **[!UICONTROL 「捕獲」>「捕獲」>「支援檔案」>「InfoPlist.strings」]**.
+1. 開啟 `Capture.xcodeproj` Xcode中的項目。
+1. 在「捕獲」的導航器視圖中，導航到 **[!UICONTROL 「捕獲」>「捕獲」>「支援檔案」>「InfoPlist.strings」]**。
 
-   更新 `CFBundleDisplayName` 屬性，以顯示您要為應用程式顯示的名稱。
+   更新 `CFBundleDisplayName` 屬性。
 
-1. 在iOS裝置或iOS模擬器上建立及執行AEM Forms應用程式。
+1. 在iOS設備或iOS模擬器上構建和運行AEM Forms應用。
 
-   如需建立iOS應用程式的詳細資訊，請參閱 [設定Xcode專案並建置iOS應用程式](/help/forms/using/setup-xcode-project-build-installer.md).
+   有關為iOS構建應用程式的詳細資訊，請參閱 [設定Xcode項目並生成iOS應用](/help/forms/using/setup-xcode-project-build-installer.md)。
 
-### 適用於Android {#for-android-1}
+### 對於Android {#for-android-1}
 
 1. 在任何文本或Xml編輯器中開啟以下Xml:
 
    `[User_Home]/Projects/[your-project]/src/android/res/values/strings.xml and android/res/values-en/strings.xml`
 
-1. 更新索引鍵的值 `app_name`.
-1. 重建AEM Forms應用程式。
+1. 更新鍵的值 `app_name`。
+1. 重建AEM Forms應用。
 
-   如需建立Android適用應用程式的詳細資訊，請參閱 [設定Eclipse專案並建置Android應用程式](/help/forms/using/setup-eclipse-project-build-installer.md).
+   有關構建Android應用程式的詳細資訊，請參閱 [設定Eclipse項目並構建Android應用](/help/forms/using/setup-eclipse-project-build-installer.md)。
 
-### Windows版 {#for-windows-1}
+### 對於Windows {#for-windows-1}
 
-1. 在任何文字編輯器中開啟下列Xml:
+1. 在任何文本編輯器中開啟以下Xml:
 
    `%HOMEPATH%\adobe-lc-mobileworkspace-src-<version>\src\windows\MWSWindows\config.xml`
 
-1. 更新 `<name>...</name>` 標籤。
-1. 重建AEM Forms應用程式。
+1. 更新中的值 `<name>...</name>` 標籤。
+1. 重建AEM Forms應用。
 
-   有關構建Windows應用程式的詳細資訊，請參閱 [設定Visual Studio項目並構建Windows應用程式](/help/forms/using/setup-visual-studio-project-build-installer.md).
+   有關構建Windows應用程式的詳細資訊，請參閱 [設定Visual Studio項目並生成Windows應用](/help/forms/using/setup-visual-studio-project-build-installer.md)。
 
-## 在登入頁面上自訂影像 {#customizing-images-on-the-login-page}
+## 在登錄頁上自定義影像 {#customizing-images-on-the-login-page}
 
-AEM Forms應用程式的登入頁面有標誌和背景影像。 徽標位於登錄對話框的上方，而背景影像位於登錄對話框的下方。 執行下列步驟來自訂登入頁面上的預設影像：
+AEM Forms應用的登錄頁面包含徽標和背景影像。 徽標位於登錄對話框的上方，背景影像位於登錄對話框的下方。 執行以下步驟以在登錄頁上自定義預設映像：
 
 **開始之前**
 
-請確定您有下列影像：
+確保您有以下映像：
 
 <table>
  <tbody>
@@ -152,40 +152,40 @@ AEM Forms應用程式的登入頁面有標誌和背景影像。 徽標位於登�
  </tbody>
 </table>
 
-**使用Xcode自訂登入頁面上的影像**
+**使用Xcode在登錄頁上自定義影像**
 
-1. 開啟 `Capture.xcodeproj` 專案。
+1. 開啟 `Capture.xcodeproj` Xcode中的項目。
 
-1. 導覽至 `www/wsmobile/images`檔案夾。
-1. 要更改徽標，請替換預設 `LC-logo.png` 檔案(含自訂 `LC-logo.png` 檔案。
-1. 若要變更背景，請取代預設值 `Landing_bg.jpeg` 檔案(含自訂 `Landing_bg.jpeg`檔案。
-1. 在iOS裝置或iOS模擬器上建立及執行AEM Forms應用程式。
+1. 導航到 `www/wsmobile/images`的子菜單。
+1. 要更改徽標，請替換預設 `LC-logo.png` 檔案 `LC-logo.png` 的子菜單。
+1. 要更改背景，請替換預設 `Landing_bg.jpeg` 檔案 `Landing_bg.jpeg`的子菜單。
+1. 在iOS設備或iOS模擬器上構建和運行AEM Forms應用。
 
-### 使用Eclipse自訂登入頁面上的影像 {#to-customize-images-on-the-login-pages-using-eclipse}
+### 使用Eclipse在登錄頁上自定義映像 {#to-customize-images-on-the-login-pages-using-eclipse}
 
-1. 在Eclipse中開啟Android專案。
+1. 在Eclipse中開啟Android項目。
 
-1. 導覽至 `assets/www/wsmobile/images`檔案夾。
-1. 要更改徽標，請替換預設 `LC-logo.png` 檔案(含自訂 `LC-logo.png` 檔案。
-1. 若要變更背景，請取代預設值 `Landing_bg.jpeg` 檔案(含自訂 `Landing_bg.jpeg`檔案。
-1. 在Android裝置上建立及執行AEM Forms應用程式。
+1. 導航到 `assets/www/wsmobile/images`的子菜單。
+1. 要更改徽標，請替換預設 `LC-logo.png` 檔案 `LC-logo.png` 的子菜單。
+1. 要更改背景，請替換預設 `Landing_bg.jpeg` 檔案 `Landing_bg.jpeg`的子菜單。
+1. 在Android設備上構建並運行AEM Forms應用。
 
 ### 使用Visual Studio自定義登錄頁上的影像 {#to-customize-images-on-the-login-pages-using-visual-studio}
 
-1. 開啟 `MWSWindows.sln` 專案。
+1. 開啟 `MWSWindows.sln` Visual Studio中的項目。
 
-1. 導覽至 `MWSWindows\www\wsmobile\images`檔案夾。
-1. 要更改徽標，請替換預設 `LC-logo.png` 檔案(含自訂 `LC-logo.png` 檔案。
-1. 若要變更背景，請取代預設值 `Landing_bg.jpeg` 檔案(含自訂 `Landing_bg.jpeg`檔案。
-1. 在Windows裝置上建立及執行AEM Forms應用程式。
+1. 導航到 `MWSWindows\www\wsmobile\images`的子菜單。
+1. 要更改徽標，請替換預設 `LC-logo.png` 檔案 `LC-logo.png` 的子菜單。
+1. 要更改背景，請替換預設 `Landing_bg.jpeg` 檔案 `Landing_bg.jpeg`的子菜單。
+1. 在Windows設備上生成並運行AEM Forms應用。
 
-## 自訂應用程式選單中的標誌 {#customizing_images_on_the_login_page-1}
+## 在應用菜單中自定義徽標 {#customizing_images_on_the_login_page-1}
 
-登入AEM Forms應用程式並點選功能表按鈕後，您會在功能表上方看到標誌。 執行下列步驟來自訂預設標誌：
+登錄AEM Forms應用並點擊菜單按鈕後，您可以在菜單上方看到徽標。 執行以下步驟以自定義預設徽標：
 
 **開始之前**
 
-確定您有下列影像：
+確保您有以下映像：
 
 <table>
  <tbody>
@@ -202,26 +202,26 @@ AEM Forms應用程式的登入頁面有標誌和背景影像。 徽標位於登�
  </tbody>
 </table>
 
-**使用Xcode自訂登入頁面上的影像**
+**使用Xcode在登錄頁上自定義影像**
 
-1. 開啟 `Capture.xcodeproj` 專案。
+1. 開啟 `Capture.xcodeproj` Xcode中的項目。
 
-1. 導覽至 `www/wsmobile/images`檔案夾。
-1. 若要變更標誌，請取代預設 `aem_icon.png` 檔案(含自訂 `aem_icon.png` 檔案。
-1. 在iOS裝置或iOS模擬器上建立及執行AEM Forms應用程式。
+1. 導航到 `www/wsmobile/images`的子菜單。
+1. 要更改徽標，請替換預設 `aem_icon.png` 檔案 `aem_icon.png` 的子菜單。
+1. 在iOS設備或iOS模擬器上構建和運行AEM Forms應用。
 
-### 使用Eclipse自訂登入頁面上的影像 {#to-customize-images-on-the-login-pages-using-eclipse-1}
+### 使用Eclipse在登錄頁上自定義映像 {#to-customize-images-on-the-login-pages-using-eclipse-1}
 
-1. 在Eclipse中開啟Android專案。
+1. 在Eclipse中開啟Android項目。
 
-1. 導覽至 `assets/www/wsmobile/images`檔案夾。
-1. 若要變更標誌，請取代預設 `aem_icon.png` 檔案(含自訂 `aem_icon.png` 檔案。
-1. 在Android裝置上建立及執行AEM Forms應用程式。
+1. 導航到 `assets/www/wsmobile/images`的子菜單。
+1. 要更改徽標，請替換預設 `aem_icon.png` 檔案 `aem_icon.png` 的子菜單。
+1. 在Android設備上構建並運行AEM Forms應用。
 
 ### 使用Visual Studio自定義登錄頁上的影像 {#to-customize-images-on-the-login-pages-using-visual-studio-1}
 
-1. 開啟 `MWSWindows.sln` 專案。
+1. 開啟 `MWSWindows.sln` Visual Studio中的項目。
 
-1. 導覽至 `MWSWindows\www\wsmobile\images`檔案夾。
-1. 若要變更標誌，請取代預設 `aem_icon.png` 檔案(含自訂 `aem_icon.png` 檔案。
-1. 在Windows裝置上建立及執行AEM Forms應用程式。
+1. 導航到 `MWSWindows\www\wsmobile\images`的子菜單。
+1. 要更改徽標，請替換預設 `aem_icon.png` 檔案 `aem_icon.png` 的子菜單。
+1. 在Windows設備上生成並運行AEM Forms應用。

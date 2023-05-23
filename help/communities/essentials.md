@@ -1,7 +1,7 @@
 ---
-title: 元件、功能和功能要點
+title: 元件、功能和功能要素
 seo-title: Component, Function and Feature Essentials
-description: 社群網站、範本和群組如何運作
+description: 社區站點、模板和組的功能
 seo-description: How community sites, templates, and groups function
 uuid: 6edfca2d-fe5b-4261-b033-51dc2f9dbfd7
 contentOwner: msm-service
@@ -17,13 +17,13 @@ ht-degree: 17%
 
 ---
 
-# 元件、功能和功能要點  {#component-function-and-feature-essentials}
+# 元件、功能和功能要素  {#component-function-and-feature-essentials}
 
-AEM Communities功能要求網站訪客成為成員並登入 [社群網站](overview.md#communitiessites) 之後才能發佈內容。 因此， [社群網站範本](sites.md)，來源為社群網站 [已建立](sites-console.md)，設計上包含登入功能，以及使用者設定檔、傳訊、搜尋、協調和翻譯。
+AEM Communities功能要求站點訪問者成為成員並登錄到 [社區站點](overview.md#communitiessites) 才能發佈內容。 因此， [社區網站模板](sites.md)，社區站點從中 [建立](sites-console.md)，旨在包括登錄功能以及用戶配置檔案、消息、搜索、審核和翻譯。
 
-社群網站可支援成員在 [社區組功能](functions.md#groups-function) 包含在選定的社區站點模板中。
+社區站點將支援成員在 [社區組功能](functions.md#groups-function) 包含在所選社區網站模板中。
 
-以下是Communities元件、功能和功能的基本資訊連結。
+以下是社區元件、功能和功能的基本資訊連結。
 
 ## 基本元件 {#base-components}
 
@@ -34,7 +34,7 @@ AEM Communities功能要求網站訪客成為成員並登入 [社群網站](over
    * [連結](essentials-liking.md)
    * [評等](rating-basics.md)
    * [投票](essentials-voting.md)
-   * *民調問答（不再提供）*
+   * *輪詢（不再可用）*
 
 ## 具有函式的元件 {#components-with-functions}
 
@@ -55,29 +55,29 @@ AEM Communities功能要求網站訪客成為成員並登入 [社群網站](over
 * [用戶端資料庫](clientlibs.md)
 * [社群網站](sites-for-developers.md)
 * [元件OSGi事件](events.md)
-* [元件側載](sideloading.md)
+* [元件旁載入](sideloading.md)
 * [傳送訊息](essentials-messaging.md)
 * [RTF 編輯器](rte.md)
-* [計分和徽章](configure-scoring.md)
+* [評分和徽章](configure-scoring.md)
 * [搜尋](search-implementation.md)
 * [社交圖](essentials-socialgraph.md)
 * [儲存資源提供程式](srp-and-ugc.md) `(SRP)`
 
 * [標記](tag.md)
 
-## Javadocs {#javadocs}
+## 賈瓦多克 {#javadocs}
 
-此 [線上javadoc](../../help/sites-developing/reference-materials.md) 反映AEM 6.3版中可用的API。
-Communities API位於 `com.adobe.cq.social.*` 套件。
+的 [線上javadoc](../../help/sites-developing/reference-materials.md) 反映6.3版中AEM的API。
+社區API位於 `com.adobe.cq.social.*` 包。
 
-針對每個 [功能包](deploy-communities.md#latestfeaturepack)，將可使用javadoc jar。 如需詳細資訊，請造訪 [使用Maven for Communities](maven.md#javadocs).
+每個 [特徵包](deploy-communities.md#latestfeaturepack)，將提供javadoc jar。 有關詳細資訊，請訪問 [將Maven用於社區](maven.md#javadocs)。
 
 ## 其他資訊 {#additional-information}
 
 * [社會構成框架](scf.md)
 
-   * [用戶端自訂](client-customize.md)
-   * [伺服器端自訂](server-customize.md)
+   * [客戶端自定義](client-customize.md)
+   * [伺服器端自定義](server-customize.md)
    * [儲存資源提供程式概述](srp.md)
 
 * [編碼准則](code-guide.md)

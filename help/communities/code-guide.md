@@ -1,7 +1,7 @@
 ---
 title: 編碼准則
 seo-title: Coding Guidelines
-description: Communities開發人員准則、提示和秘訣
+description: 社區開發人員指南、提示和技巧
 seo-description: Communities developer guidelines, tips, and tricks
 uuid: 311ef4f7-7f2c-44c3-bcf2-f68713752623
 contentOwner: msm-service
@@ -19,26 +19,26 @@ ht-degree: 0%
 
 # 編碼准則 {#coding-guidelines}
 
-## 准則、提示與秘訣 {#guidelines-tips-and-tricks}
+## 指南、提示和技巧 {#guidelines-tips-and-tricks}
 
-使用AEM Communities已從嚴重依賴Java伺服器頁面，變成在選擇範本指令碼語言時具有彈性，其中業務邏輯、樣式和頁面內容彼此不同。
+與AEM Communities合作已從高度依賴Java Server Pages發展為靈活選擇模板指令碼語言，其中業務邏輯、樣式和頁面內容彼此不同。
 
-使用使用者產生的內容(UGC)時，有更大的彈性是透過SocialResourceProvider API，如此便不需要感知， [SRP](srp.md) 已為部署選擇選項。
+使用用戶生成的內容(UGC)時的更大靈活性是通過SocialResourceProvider API實現的，這消除了對其的認識的需要 [SRP](srp.md) 選項。
 
-以下為AEM Communities開發人員適用的各種編碼准則和最佳實務：
+以下是AEM Communities開發商的各種編碼准則和最佳做法：
 
-### 程式碼 {#code}
+### 代碼 {#code}
 
-* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 如何避免寫入僅當UGC儲存在JCR(JSRP)中時才有效的應用程式。
-* [SocialUtils重構](socialutils.md)  — 用於SRP取代SocialUtils的公用程式方法。
-* [命名慣例](naming-conventions.md)  — 自訂Java類的命名慣例。
+* [使用SRP訪問UGC](accessing-ugc-with-srp.md)  — 如何避免編寫僅當UGC儲存在JCR(JSRP)中時才能使用的應用程式。
+* [SocialUtils重構](socialutils.md)  — 替換SocialUtils的SRP的實用方法。
+* [命名約定](naming-conventions.md)  — 為自定義Java類命名約定。
 
 ### 指令碼 {#scripts}
 
-* [側載Communities元件](sideloading.md)  — 如何在頁面載入後動態新增元件。
-* [RTF編輯器要點](rte.md)  — 如何自訂為發佈內容而提供給成員的RTF UI。
+* [旁載入社區元件](sideloading.md)  — 如何在載入頁面後動態添加元件。
+* [富格文本編輯器軟體包](rte.md)  — 如何自定義為發佈內容提供給成員的富文本UI。
 
 ### IDE {#ide}
 
-* [使用Maven for Communities](maven.md)  — 如何包含Communities API Jar。
-* [SocialUtils重構](socialutils.md)  — 用於SRP取代SocialUtils的公用程式方法。
+* [將Maven用於社區](maven.md)  — 如何包括社區APIjar。
+* [SocialUtils重構](socialutils.md)  — 替換SocialUtils的SRP的實用方法。

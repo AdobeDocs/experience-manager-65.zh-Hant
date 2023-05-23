@@ -1,7 +1,7 @@
 ---
-title: 建立自訂工具列版面
+title: 建立自定義工具欄佈局
 seo-title: Creating custom toolbar layout
-description: 您可以指定表單的工具列版面。 工具欄佈局定義命令和窗體上工具欄的佈局。
+description: 可以為表單指定工具欄佈局。 工具欄佈局定義窗體上工具欄的命令和佈局。
 seo-description: You can specify a toolbar layout for the form. The toolbar layout defines the commands and the layout of the toolbar on the form.
 uuid: 389a715a-4c91-4a63-895d-bb2d0f1054eb
 content-type: reference
@@ -17,64 +17,64 @@ ht-degree: 0%
 
 ---
 
-# 建立自訂工具列版面{#creating-custom-toolbar-layout}
+# 建立自定義工具欄佈局{#creating-custom-toolbar-layout}
 
 ## 工具欄佈局 {#layout}
 
-建立最適化表單時，您可以指定表單的工具列版面。 工具欄佈局定義命令和窗體上工具欄的佈局。
+建立自適應表單時，可以為表單指定工具欄佈局。 工具欄佈局定義窗體上工具欄的命令和佈局。
 
-工具列配置使用時，主要依賴由複雜JavaScript和CSS程式碼驅動的用戶端處理。 組織並最佳化此程式碼的服務可能是個複雜的問題。 為協助處理此問題，AEM提供用戶端程式庫資料夾，可讓您將用戶端程式碼儲存在存放庫中、將其組織為類別，以及定義將各類別的程式碼提供給用戶端的時間和方式。 然後，用戶端資料庫系統會負責在您的最終網頁中產生正確的連結，以載入正確的程式碼。 如需詳細資訊，請參閱 [用戶端程式庫在AEM中的運作方式。](/help/sites-developing/clientlibs.md)
+工具欄佈局使用嚴重依賴由複雜JavaScript和CSS代碼驅動的客戶端處理。 組織和優化此代碼的服務可能是一個複雜的問題。 為幫助解決此問題，AEM提供了客戶端庫資料夾，允許您將客戶端代碼儲存在儲存庫中，將其組織成類別，並定義將每類代碼提供給客戶端的時間和方式。 然後，客戶端庫系統會注意在最終網頁中生成正確的連結以載入正確的代碼。 有關詳細資訊，請參見 [客戶端庫在中的工作方AEM式。](/help/sites-developing/clientlibs.md)
 
-![工具列的範例版面](assets/default_toolbar_layout.png)
+![工具欄的示例佈局](assets/default_toolbar_layout.png)
 
-工具列的範例版面
+工具欄的示例佈局
 
-適用性表單提供一組現成的配置：
+自適應表單提供一組現成佈局：
 
-![可用的工具列配置 ](assets/toolbar1.png)
+![工具欄佈局可用 ](assets/toolbar1.png)
 
-可用的工具列配置
+工具欄佈局可用
 
-此外，您還可以建立自訂工具列版面。
+此外，還可以建立自定義工具欄佈局。
 
-以下過程詳細說明了建立自定義工具欄的步驟，該工具欄在工具欄中顯示三個操作，在工具欄的下拉清單中顯示其他操作。
+以下過程詳細介紹了建立自定義工具欄的步驟，該工具欄在工具欄中顯示三個操作，在工具欄的下拉清單中顯示其他操作。
 
-附加的內容套件包含下列說明的整個程式碼。 安裝內容套件後，請開啟 `/content/forms/af/CustomLayoutDemo.html` 檢視自訂工具列版面示範。
+附加的內容包包含下面描述的整個代碼。 安裝內容包後，開啟 `/content/forms/af/CustomLayoutDemo.html` 來查看自定義工具欄佈局演示。
 
 CustomToolbarLayoutDemo.zip
 
-[取得檔案](assets/customtoolbarlayoutdemo.zip)
+[獲取檔案](assets/customtoolbarlayoutdemo.zip)
 演示自定義工具欄佈局
 
-## 建立自訂工具列版面 {#layout-1}
+## 建立自定義工具欄佈局 {#layout-1}
 
-1. 建立資料夾以維護自訂工具列配置。 例如：
+1. 建立資料夾以維護自定義工具欄佈局。 例如：
 
    `/apps/customlayout/toolbar`。
 
-   若要建立自訂版面，您可以使用（和自訂）下列資料夾中可用的其中一個現成工具列版面：
+   要建立自定義佈局，可以使用（和自定義）以下資料夾中提供的一個預置工具欄佈局：
 
    `/libs/fd/af/layouts/toolbar`
 
-   例如，複製 `mobileFixedToolbarLayout` 節點 `/libs/fd/af/layouts/toolbar` 檔案夾 `/apps/customlayout/toolbar` 檔案夾。
+   例如，複製 `mobileFixedToolbarLayout` 節點 `/libs/fd/af/layouts/toolbar` 資料夾 `/apps/customlayout/toolbar` 的子菜單。
 
-   同時，將工具欄Common.jsp複製到 `/apps/customlayout/toolbar` 檔案夾。
+   另外，將工具欄Common.jsp複製到 `/apps/customlayout/toolbar` 的子菜單。
 
    >[!NOTE]
    >
-   >您建立用來維護自訂配置的資料夾，很多資料都是使用 `apps` 檔案夾。
+   >為維護自定義佈局而建立的資料夾 `apps` 的子菜單。
 
-1. 更名複製的節點， `mobileFixedToolbarLayout`，到 `customToolbarLayout.`
+1. 更名複製的節點， `mobileFixedToolbarLayout`。 `customToolbarLayout.`
 
-   此外，請提供節點的相關說明。 例如，將節點的jcr:description變更為 **工具列的自訂版面**.
+   另外，請提供節點的相關說明。 例如，將節點的jcr:description更改為 **工具欄的自定義佈局**。
 
-   此 `guideComponentType` 節點的屬性決定佈局類型。 在這種情況下，版面類型是工具欄，因此它會顯示在工具欄版面選擇下拉清單中。
+   的 `guideComponentType` 節點的屬性決定佈局類型。 在這種情況下，佈局類型為工具欄，因此它會顯示在工具欄佈局選擇下拉清單中。
 
-   ![具有相關說明的節點](assets/toolbar3.png)
+   ![具有相關描述的節點](assets/toolbar3.png)
 
-   具有相關說明的節點
+   具有相關描述的節點
 
-   新的自訂工具列版面會顯示在 **適用性表單工具列** 對話框配置。
+   新的自定義工具欄佈局顯示在 **自適應表單工具欄** 對話框配置。
 
    ![可用工具欄佈局清單](assets/toolbar4.png)
 
@@ -82,11 +82,11 @@ CustomToolbarLayoutDemo.zip
 
    >[!NOTE]
    >
-   >在上一步驟中更新的說明會顯示在「配置」下拉式清單中。
+   >在上一步中更新的說明將顯示在「佈局」(Layout)下拉清單中。
 
-1. 選取此自訂工具列版面，然後按一下「確定」。
+1. 選擇此自定義工具欄佈局，然後按一下「確定」。
 
-   在 `/etc/customlayout` 節點，並在 `customToolbarLayout.jsp`.
+   在 `/etc/customlayout` 並在 `customToolbarLayout.jsp`。
 
    ![customToolbarLayout.css檔案的路徑](assets/toolbar_3.png)
 
@@ -108,7 +108,7 @@ CustomToolbarLayoutDemo.zip
 
    >[!NOTE]
    >
-   >為版面添加指導工具欄類。 工具列的現成樣式是針對引導工具列類別而定義的。
+   >為佈局添加指導工具欄類。 工具欄的出廠設定樣式是針對導向工具欄類定義的。
 
    範例 `toolBarCommon.jsp`:
 
@@ -167,7 +167,7 @@ CustomToolbarLayoutDemo.zip
    </c:forEach>
    ```
 
-   clientlib節點內部存在的CSS:
+   客戶端庫節點記憶體在的CSS:
 
    ```css
    .mobilecustomToolbar .dropdown {
@@ -229,7 +229,7 @@ CustomToolbarLayoutDemo.zip
 
 >[!NOTE]
 >
->在上一步驟中更新的說明會顯示在「配置」下拉式清單中。
+>在上一步中更新的說明將顯示在「佈局」(Layout)下拉清單中。
 
 ![自定義佈局工具欄的案頭視圖](assets/toolbar_1.png)
 

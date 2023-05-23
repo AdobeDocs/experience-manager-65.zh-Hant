@@ -1,6 +1,6 @@
 ---
-title: AEM CIF Classic
-description: AEM CIF Classic自助資源與檔案連結
+title: CIFAEM經典
+description: AEM CIF經典自助資源和文檔連結
 exl-id: ae0823b3-d847-42b6-ba92-e4e949da1799
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
@@ -9,20 +9,20 @@ ht-degree: 5%
 
 ---
 
-# AEM CIF Classic {#commerce-guide}
+# CIFAEM經典 {#commerce-guide}
 
-本頁提供AEM CIF Classic的相關自助資源。
+此頁列出了有關CIF經典版的自AEM助資源。
 
 >[!NOTE]
 >
 >CIF Classic處於維護模式。
 >
->* 新專案應使用 [AEM CIF](/help/commerce/home.md).
->* 現有CIF Classic應 [移轉至AEM CIF](/help/commerce/cif/migration.md).
+>* 新項目應使用 [CIFAEM](/help/commerce/home.md)。
+>* 現有CIF經典應 [遷移到AEMCIF](/help/commerce/cif/migration.md)。
 >
 
 
-## CIF傳統重要文章 {#key-articles}
+## 關鍵CIF經典條目 {#key-articles}
 
 * [概念](administering/concepts.md)
 * [管理](administering/generic.md)

@@ -1,7 +1,7 @@
 ---
 title: 連接到SQL資料庫
 seo-title: Connecting to SQL Databases
-description: 存取外部SQL資料庫，以便您的AEM應用程式與資料互動
+description: 訪問外部SQL資料庫，以便您的AEM應用程式可以與資料交互
 seo-description: Access an external SQL database to so that your AEM applications can interact with the data
 uuid: 0af0ed08-9487-4c37-87ce-049c9b4c1ea2
 contentOwner: Guillaume Carlino
@@ -19,26 +19,26 @@ ht-degree: 0%
 
 # 連接到SQL資料庫{#connecting-to-sql-databases}
 
-存取外部SQL資料庫，以便您的CQ應用程式可與資料互動：
+訪問外部SQL資料庫，以便您的CQ應用程式可以與資料交互：
 
-1. [建立或獲取導出JDBC驅動程式包的OSGi包](#bundling-the-jdbc-database-driver).
-1. [配置JDBC資料源池提供程式](#configuring-the-jdbc-connection-pool-service).
-1. [取得資料來源物件並在程式碼中建立連線](#connecting-to-the-database).
+1. [建立或獲取導出JDBC驅動程式包的OSGi捆綁包](#bundling-the-jdbc-database-driver)。
+1. [配置JDBC資料源池提供程式](#configuring-the-jdbc-connection-pool-service)。
+1. [獲取資料源對象並在代碼中建立連接](#connecting-to-the-database)。
 
-## 綁定JDBC資料庫驅動程式 {#bundling-the-jdbc-database-driver}
+## 捆綁JDBC資料庫驅動程式 {#bundling-the-jdbc-database-driver}
 
-某些資料庫供應商在OSGi捆綁包中提供JDBC驅動程式，例如 [MySQL](https://dev.mysql.com/downloads/connector/j/). 如果資料庫的JDBC驅動程式不能作為OSGi包，請獲取驅動程式JAR，並將其包裝在OSGi包中。 該套件必須導出與資料庫伺服器交互所需的包。 套件組合也必須匯入其參照的套件。
+一些資料庫供應商在OSGi捆綁包中提供JDBC驅動程式，例如 [MySQL](https://dev.mysql.com/downloads/connector/j/)。 如果資料庫的JDBC驅動程式不能作為OSGi包使用，請獲取驅動程式JAR並將其包裝在OSGi包中。 該捆綁包必須導出與資料庫伺服器交互所需的包。 束還必須導入它引用的包。
 
-下列範例使用 [適用於Maven的套件組合外掛程式](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html) 將HSQLDB驅動程式包裝在OSGi捆綁包中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb包都導出。
+以下示例使用 [用於Maven的捆綁插件](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html) 將HSQLDB驅動程式包裝到OSGi包中。 POM指示插件嵌入標識為依賴項的hsqldb.jar檔案。 所有org.hsqldb包都將導出。
 
-外掛程式會自動判斷要匯入的套件，並將其列在套件組合的MANIFEST.MF檔案中。 如果CQ伺服器上沒有任何套件，套件組合就不會在安裝時啟動。 兩種可能的解決方案如下：
+插件自動確定要導入的包，並將它們列在包的MANIFEST.MF檔案中。 如果CQ伺服器上沒有任何軟體包，則該軟體包不會在安裝時啟動。 兩種可能的解決方案如下：
 
-* 在POM中指出這些套件為選用。 當JDBC連接實際上不需要包成員時，請使用此解決方案。 使用Import-Package元素來指示可選包，如以下示例所示：
+* 在POM中指明包是可選的。 當JDBC連接實際上不需要包成員時，請使用此解決方案。 使用Import-Package元素指示可選包，如以下示例所示：
 
    `<Import-Package>org.jboss.*;resolution:=optional,*</Import-Package>`
-* 包裝JAR檔案，這些檔案包含匯出套件的OSGi套件組合中的套件，然後部署套件組合。 當程式碼執行期間需要套件成員時，請使用此解決方案。
+* 將包含在導出包的OSGi捆綁包中的包的JAR檔案包裝，並部署該捆綁包。 在代碼執行過程中需要包成員時，請使用此解決方案。
 
-您對原始碼的了解可讓您決定要使用哪個解決方案。 您也可以嘗試任一解決方案並執行測試以驗證解決方案。
+通過瞭解原始碼，您可以決定使用哪個解決方案。 您還可以嘗試任一解決方案並執行測試以驗證該解決方案。
 
 ### 捆綁hsqldb.jar的POM {#pom-that-bundles-hsqldb-jar}
 
@@ -84,7 +84,7 @@ ht-degree: 0%
 </project>
 ```
 
-下列連結會開啟某些熱門資料庫產品的下載頁面：
+以下連結開啟某些常用資料庫產品的下載頁：
 
 * [Microsoft® SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=11774)
 * [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
@@ -92,44 +92,44 @@ ht-degree: 0%
 
 ### 配置JDBC連接池服務 {#configuring-the-jdbc-connection-pool-service}
 
-為使用JDBC驅動程式建立資料源對象的JDBC連接池服務添加配置。 您的應用程式代碼使用此服務來獲取對象並連接到資料庫。
+為JDBC連接池服務添加配置，該服務使用JDBC驅動程式建立資料源對象。 應用程式碼使用此服務獲取對象並連接到資料庫。
 
-JDBC連接池( `com.day.commons.datasource.jdbcpool.JdbcPoolService`)是工廠服務。 如果您需要使用不同屬性（例如只讀或讀/寫訪問）的連接，請建立多個配置。
+JDBC連接池( `com.day.commons.datasource.jdbcpool.JdbcPoolService`)是出廠服務。 如果需要使用不同屬性的連接，例如只讀或讀/寫訪問，請建立多個配置。
 
-使用CQ時，有數種方法可管理這類服務的組態設定；請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。
+使用CQ時，有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的雙曲餘切值。
 
-以下屬性可用於配置池連接服務。 屬性名稱會如Web控制台中的顯示一樣列出。 的對應名稱 `sling:OsgiConfig` 節點以括弧顯示。 顯示了HSQLDB伺服器和具有別名的資料庫的示例值 `mydb`:
+以下屬性可用於配置池連接服務。 屬性名稱在Web控制台中顯示時列出。 對應的名稱 `sling:OsgiConfig` 節點出現在括弧中。 HSQLDB伺服器和別名為 `mydb`:
 
-* JDBC驅動程式類( `jdbc.driver.class`):用於實現java.sql.Driver介面的Java™類，例如 `org.hsqldb.jdbc.JDBCDriver`. 資料類型為 `String`.
+* JDBC驅動程式類( `jdbc.driver.class`):用於實現java.sql.Driver介面的Java™類，例如 `org.hsqldb.jdbc.JDBCDriver`。 資料類型為 `String`。
 
-* JDBC連接URI( `jdbc.connection.uri`):用於建立連接的資料庫的URL，例如 `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL的格式必須有效，才能與java.sql.DriverManager類的getConnection方法一起使用。 資料類型為 `String`.
+* JDBC連接URI( `jdbc.connection.uri`):用於建立連接的資料庫的URL，例如 `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`。 URL的格式必須有效，才能與java.sql.DriverManager類的getConnection方法一起使用。 資料類型為 `String`。
 
-* 使用者名稱( `jdbc.username`):用於與資料庫伺服器進行身份驗證的用戶名。 資料類型為 `String`.
+* 用戶名( `jdbc.username`):用於向資料庫伺服器進行身份驗證的用戶名。 資料類型為 `String`。
 
-* 密碼( `jdbc.password`):用於驗證用戶的密碼。 資料類型為 `String`.
+* 密碼( `jdbc.password`):用於用戶身份驗證的密碼。 資料類型為 `String`。
 
-* 驗證查詢( `jdbc.validation.query`):用於驗證連接是否成功的SQL陳述式，例如 `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. 資料類型為 `String`.
+* 驗證查詢( `jdbc.validation.query`):用於驗證連接是否成功的SQL陳述式，例如 `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`。 資料類型為 `String`。
 
-* 預設為Readonly(default.readonly):當希望連接提供只讀訪問時，選擇此選項。 資料類型為 `Boolean`.
-* 預設情況下自動提交( `default.autocommit`):選擇此選項可為發送到資料庫的每個SQL命令建立單獨的事務，並自動提交每個事務。 在代碼中顯式提交事務時，請勿選擇此選項。 資料類型為 `Boolean`.
+* 預設情況下只讀(default.readonly):當希望連接提供只讀訪問時，選擇此選項。 資料類型為 `Boolean`。
+* 預設情況下自動提交( `default.autocommit`):選擇此選項可為發送到資料庫的每個SQL命令建立單獨的事務，並自動提交每個事務。 在代碼中顯式提交事務時，不要選擇此選項。 資料類型為 `Boolean`。
 
-* 池大小( `pool.size`):要提供給資料庫的同時連接的數量。 資料類型為 `Long`.
+* 池大小( `pool.size`):要為資料庫提供的同時連接數。 資料類型為 `Long`。
 
-* 池等待( `pool.max.wait.msec`):連線請求逾時前的時間。 資料類型為 `Long`.
+* 池等待( `pool.max.wait.msec`):連接請求超時之前的時間。 資料類型為 `Long`。
 
-* 資料源名稱( `datasource.name`):此資料源的名稱。 資料類型為 `String`.
+* 資料源名稱( `datasource.name`):此資料源的名稱。 資料類型為 `String`。
 
-* 其他服務屬性( `datasource.svc.properties`):您要附加至連線URL的一組名稱/值組。 資料類型為 `String[]`.
+* 其他服務屬性( `datasource.svc.properties`):要附加到連接URL的一組名稱/值對。 資料類型為 `String[]`。
 
-JDBC連接池服務是工廠。 因此，若您使用 `sling:OsgiConfig` 要配置連接服務的節點，節點的名稱必須包括工廠服務PID，後面跟 *`-alias`*. 您使用的別名對於該PID的所有配置節點都必須是唯一的。 節點名稱的範例為 `com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool`.
+JDBC連接池服務是工廠。 因此，如果您使用 `sling:OsgiConfig` 要配置連接服務的節點，節點的名稱必須包括出廠服務PID ，然後是 *`-alias`*。 對於該PID的所有配置節點，您使用的別名必須唯一。 示例節點名稱為 `com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool`。
 
 ![chlimage_1-7](assets/chlimage_1-7a.png)
 
 ### 連接到資料庫 {#connecting-to-the-database}
 
-在Java™代碼中，使用DataSourcePool服務來獲取 `javax.sql.DataSource` 物件。 DataSourcePool服務提供 `getDataSource` 傳回 `DataSource` 給定資料源名稱的對象。 作為方法參數，請使用資料源名稱的值(或 `datasource.name`)為JDBC連接池配置指定的屬性。
+在Java™代碼中，使用DataSourcePool服務獲取 `javax.sql.DataSource` 對象。 DataSourcePool服務提供 `getDataSource` 方法返回 `DataSource` 給定資料源名稱的對象。 作為方法參數，使用資料源名稱(或 `datasource.name`)屬性。
 
-以下示例JSP代碼獲取hsqldbds資料源的實例，執行簡單的SQL查詢，並顯示返回的結果數。
+下面的示例JSP代碼獲取hsqldbds資料源的實例，執行簡單的SQL查詢，並顯示返回的結果數。
 
 #### 執行資料庫查找的JSP {#jsp-that-performs-a-database-lookup}
 
@@ -169,7 +169,7 @@ JDBC連接池服務是工廠。 因此，若您使用 `sling:OsgiConfig` 要配�
 
 >[!NOTE]
 >
->如果getDataSource方法由於找不到資料源而擲回例外，請確保連接池服務配置正確。 驗證屬性名稱、值和資料類型。
+>如果getDataSource方法由於找不到資料源而引發異常，請確保連接池服務配置正確。 驗證屬性名稱、值和資料類型。
 
 <!-- Link below redirects to the "Get started with AEM Sites - WKND tutorial"
 >[!NOTE]

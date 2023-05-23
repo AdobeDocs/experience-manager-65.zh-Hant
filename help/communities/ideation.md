@@ -1,7 +1,7 @@
 ---
-title: 構想要點
+title: Ideation Essentials
 seo-title: Ideation Essentials
-description: 構思功能概觀
+description: 標識功能概述
 seo-description: Ideation feature overview
 uuid: abaf03ee-8bf4-4241-96c3-474c95a30a88
 contentOwner: msm-service
@@ -17,28 +17,28 @@ ht-degree: 3%
 
 ---
 
-# 構想要點 {#ideation-essentials}
+# Ideation Essentials {#ideation-essentials}
 
-本頁面提供使用構思功能的基本資訊，這類功能類似於論壇，但能儲存為草稿，且提供更協作的風格。
+此頁提供了使用創意功能的基本資訊，該功能與論壇類似，但能夠另存為草稿和更協作的感覺。
 
-## 用戶端的要點 {#essentials-for-client-side}
+## 客戶端基本知識 {#essentials-for-client-side}
 
 <table>
  <tbody>
   <tr>
-   <td> <strong>resourceType</strong></td>
-   <td>社交/構思/元件/hbs/構思</td>
+   <td> <strong>資源類型</strong></td>
+   <td>社交/意識/元件/hbs/意識</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包括</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
-   <td>cq.social.hbs.voting<br /> cq.social.hbs.like<br /> cq.social.hbs.ideation</td>
+   <td> <a href="clientlibs.md"><strong>客戶端</strong></a></td>
+   <td>cq.social.hbs投票<br /> cq.social.hbs喜歡<br /> cq.social.hbs.</td>
   </tr>
   <tr>
-   <td> <strong>範本</strong></td>
+   <td> <strong>模板</strong></td>
    <td> /libs/social/ideation/components/hbs/ideation/ideation.hbs<br /> /libs/social/ideation/components/hbs/ideation/ideationlists.hbs<br /> /libs/social/ideation/components/hbs/ideation/composer.hbs</td>
   </tr>
   <tr>
@@ -47,13 +47,13 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱 <a href="ideation-feature.md">構思功能</a></td>
+   <td>請參閱 <a href="ideation-feature.md">標識特徵</a></td>
   </tr>
  </tbody>
 </table>
 
-* [用戶端自訂](client-customize.md)
+* [客戶端自定義](client-customize.md)
 
 ### 創意力功能 {#ideation-function}
 
-包含 [標識函式](functions.md#ideation-function)，包含已設定的 `ideation` 元件。
+包含該社區站點結構的 [標識函式](functions.md#ideation-function)，包括已配置 `ideation` 元件。

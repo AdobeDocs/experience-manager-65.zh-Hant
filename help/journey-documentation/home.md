@@ -87,7 +87,7 @@ AEM 文件歷程的主要目標是透過敘述的方式幫助 AEM 入門讀者�
 |---|---|
 | [Headless 開發人員歷程](/help/journey-headless/developer/overview.md) | 從這裡開始，了解 AEM 如何支援 Headless 開發模型，以及如何開始您的專案，從規劃到實施，再到上線。 |
 | [Headless 編寫歷程](/help/journey-headless/author/overview.md) | 從這裡開始，逐步引導您了解 AEM 強大且有彈性的 Headless 功能、其功能，以及如何在您的第一個 Headless 專案中建立內容的模型。 |
-| [Headless 架構者歷程](/help/journey-headless/architect/overview.md)  | 從這裡開始，介紹Adobe Experience Manager強大、靈活、無頭的功能，以及如何為專案建立內容模型。 |
+| [Headless 架構者歷程](/help/journey-headless/architect/overview.md)  | 從此處開始，介紹Adobe Experience Manager強大、靈活、無頭的功能，以及如何為您的項目建模內容。 |
 | [Headless 翻譯歷程](/help/journey-headless/translation/overview.md) | 從這裡開始，了解如何在 AEM 中設定和管理您的 Headless 翻譯專案。 |
 
 <!--

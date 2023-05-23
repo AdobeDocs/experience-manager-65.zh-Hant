@@ -123,7 +123,7 @@ ht-degree: 98%
 
 
 * 快速入門指南
-   * [建立資產資料夾無頭快速入門手冊](/help/sites-developing/headless/getting-started/create-assets-folder.md)
+   * [《建立資產資料夾無頭快速入門手冊》](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
 * [AEM Headless 內容架構師歷程](/help/journey-headless/architect/overview.md)
 

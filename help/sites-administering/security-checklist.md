@@ -1,7 +1,7 @@
 ---
-title: 安全性檢查清單
+title: 安全核對表
 seo-title: Security Checklist
-description: 了解設定和部署AEM時的各種安全性考量事項。
+description: 瞭解配置和部署時的各種安全注意事項AEM。
 seo-description: Learn about the various security considerations when configuring and deploying AEM.
 uuid: 8e293316-4177-4271-87c6-9dc1a2e85a07
 contentOwner: msm-service
@@ -19,458 +19,458 @@ ht-degree: 1%
 
 ---
 
-# 安全性檢查清單 {#security-checklist}
+# 安全核對表 {#security-checklist}
 
-本節說明您應採取的各種步驟，以確保部署時AEM安裝安全無虞。 核對表應從上到下應用。
-
->[!NOTE]
->
->此外，還提供了關於以下方面的最危險安全威脅的進一步資訊： [開放Web應用程式安全項目(OWASP)](https://owasp.org/www-project-top-ten/).
+本節介紹您應採取的各種步驟，以確保在部署時AEM安全安裝。 清單應從上到下應用。
 
 >[!NOTE]
 >
->還有其他的 [安全考量](/help/sites-developing/dev-guidelines-bestpractices.md#security-considerations) 之任何定義。
+>此外，還提供了有關發佈的最危險安全威脅的詳細資訊 [開啟Web應用程式安全項目(OWASP)](https://owasp.org/www-project-top-ten/)。
+
+>[!NOTE]
+>
+>還有一些 [安全考慮](/help/sites-developing/dev-guidelines-bestpractices.md#security-considerations) 之金額。
 
 ## 主要安全措施 {#main-security-measures}
 
-### 在生產就緒模式下運行AEM {#run-aem-in-production-ready-mode}
+### 在生AEM產就緒模式下運行 {#run-aem-in-production-ready-mode}
 
-如需詳細資訊，請參閱 [以生產就緒模式執行AEM](/help/sites-administering/production-ready.md).
+有關詳細資訊，請參見 [在生AEM產就緒模式下運行](/help/sites-administering/production-ready.md)。
 
 ### 啟用 HTTPS 以提供傳輸層安全性 {#enable-https-for-transport-layer-security}
 
-若要有安全例項，必須在製作和發佈例項上啟用HTTPS傳輸層。
+在作者實例和發佈實例上啟用HTTPS傳輸層對於具有安全實例是必需的。
 
 >[!NOTE]
 >
->請參閱 [透過SSL啟用HTTP](/help/sites-administering/ssl-by-default.md) 一節以取得詳細資訊。
+>查看 [啟用HTTP Over SSL](/help/sites-administering/ssl-by-default.md) 的子菜單。
 
-### 安裝安全Hotfix {#install-security-hotfixes}
+### 安裝安全修補程式 {#install-security-hotfixes}
 
-請確定您已安裝最新的 [由Adobe提供的安全性Hotfix](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant).
+確保已安裝最新 [安全修補程式由Adobe提供](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant)。
 
-### 變更AEM和OSGi Console管理帳戶的預設密碼 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
+### 更改和OSGi控制台管AEM理帳戶的預設密碼 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
-Adobe建議您在安裝後，變更有權限之 [**AEM** `admin` 帳戶](#changing-the-aem-admin-password) （在所有例項上）。
+Adobe建議在安裝後更改特權的密碼 [**AEM** `admin` 帳戶](#changing-the-aem-admin-password) （在所有實例上）。
 
 這些帳戶包括：
 
 * AEM `admin` 帳戶
 
-   變更AEM管理員帳戶的密碼後，請在存取CRX時使用新密碼。
+   更改管理員帳戶的密AEM碼後，在訪問CRX時使用新密碼。
 
-* 此 `admin` OSGi Web控制台的密碼
+* 的 `admin` OSGi Web控制台的密碼
 
-   此變更也會套用至用於存取Web主控台的管理員帳戶，因此在存取該主控台時請使用相同的密碼。
+   此更改還應用於用於訪問Web控制台的管理員帳戶，因此在訪問該帳戶時使用相同的密碼。
 
-這兩個帳戶使用不同的憑證，且每個帳戶都有不同的強式密碼，這對於安全部署至關重要。
+這兩個帳戶使用單獨的憑據，並且每個帳戶都使用不同的強密碼對安全部署至關重要。
 
-#### 變更AEM管理員密碼 {#changing-the-aem-admin-password}
+#### 更改管AEM理員密碼 {#changing-the-aem-admin-password}
 
-AEM管理員帳戶的密碼可透過 [Granite操作 — 使用者](/help/sites-administering/granite-user-group-admin.md) 控制台。
+管理員帳AEM戶的密碼可通過 [花崗岩操作 — 用戶](/help/sites-administering/granite-user-group-admin.md) 控制台。
 
-您可以在此編輯 `admin` 帳戶與 [更改密碼](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user).
+在此可編輯 `admin` 帳戶和 [更改密碼](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user)。
 
 >[!NOTE]
 >
->變更管理員帳戶也會變更OSGi Web主控台帳戶。 變更管理員帳戶後，您應將OSGi帳戶變更為其他不同帳戶。
+>更改管理員帳戶還會更改OSGi Web控制台帳戶。 更改管理員帳戶後，應將OSGi帳戶更改為其他帳戶。
 
 #### 更改OSGi Web控制台密碼的重要性 {#importance-of-changing-the-osgi-web-console-password}
 
-除了AEM `admin` 帳戶，若未能變更OSGi Web主控台密碼的預設密碼，可能會導致：
+除了AEM `admin` 帳戶，如果更改OSGi web控制台密碼的預設密碼失敗，則可能導致：
 
-* 在啟動和關閉期間使用預設密碼暴露伺服器（對於大型伺服器可能需要幾分鐘時間）;
-* 儲存庫關閉/重新啟動套件組合時，且OSGI執行時，出現伺服器。
+* 伺服器在啟動和關閉期間使用預設密碼（對於大型伺服器而言可能需要幾分鐘）的暴露；
+* 當儲存庫關閉/重新啟動捆綁包 — 並且OSGI正在運行時，伺服器的暴露。
 
-有關更改Web控制台密碼的詳細資訊，請參見 [變更OSGi Web主控台管理密碼](/help/sites-administering/security-checklist.md#changing-the-osgi-web-console-admin-password) 下方。
+有關更改Web控制台密碼的詳細資訊，請參見 [更改OSGi Web控制台管理員密碼](/help/sites-administering/security-checklist.md#changing-the-osgi-web-console-admin-password) 下。
 
-#### 變更OSGi Web主控台管理密碼 {#changing-the-osgi-web-console-admin-password}
+#### 更改OSGi Web控制台管理員密碼 {#changing-the-osgi-web-console-admin-password}
 
-更改用於訪問Web控制台的密碼。 使用 [OSGI設定](/help/sites-deploying/configuring-osgi.md) 要更新以下屬性，請 **Apache Felix OSGi Management Console**:
+更改用於訪問Web控制台的密碼。 使用 [OSGI配置](/help/sites-deploying/configuring-osgi.md) 更新以下屬性 **Apache Felix OSGi管理控制台**:
 
-* **使用者名稱** 和 **密碼**，此為存取Apache Felix Web Management Console本身的憑證。
-必須更改密碼 *after* 初始安裝，以確保執行個體的安全性。
+* **用戶名** 和 **密碼**，用於訪問Apache Felix Web管理控制台本身的憑據。
+必須更改密碼 *後* 初始安裝以確保實例的安全。
 
 >[!NOTE]
 >
->請參閱 [OSGI設定](/help/sites-deploying/configuring-osgi.md) 以取得設定OSGi設定的完整詳細資訊。
+>請參閱 [OSGI配置](/help/sites-deploying/configuring-osgi.md) 以獲取配置OSGi設定的完整詳細資訊。
 
-**更改OSGi Web控制台管理密碼**:
+**更改OSGi Web控制台管理員密碼**:
 
-1. 使用 **工具**, **操作** 菜單，開啟 **Web主控台** 並導覽至 **設定** 區段。
-例如，在 `<server>:<port>/system/console/configMgr`.
-1. 導覽至，然後開啟 **Apache Felix OSGi Management Console**.
-1. 變更 **使用者名稱** 和 **密碼**.
+1. 使用 **工具**。 **操作** 菜單開啟它 **Web控制台** 導航到 **配置** 的子菜單。
+例如，在 `<server>:<port>/system/console/configMgr`。
+1. 導航到並開啟 **Apache Felix OSGi管理控制台**。
+1. 更改 **用戶名** 和 **密碼**。
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
 1. 選取&#x200B;**儲存**。
 
-### 實作自訂錯誤處理常式 {#implement-custom-error-handler}
+### 實現自定義錯誤處理程式 {#implement-custom-error-handler}
 
-Adobe建議定義自訂錯誤處理程式頁面，尤其是404和500 HTTP回應代碼，以防止資訊洩漏。
+Adobe建議定義自定義錯誤處理程式頁，尤其是404和500 HTTP響應代碼，以防止資訊洩漏。
 
 >[!NOTE]
 >
->請參閱 [如何建立自訂指令碼或錯誤處理常式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html?lang=en) 以取得更多詳細資訊。
+>請參閱 [如何建立自定義指令碼或錯誤處理程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html?lang=en) 的子菜單。
 
-### 完成Dispatcher安全性檢查清單 {#complete-dispatcher-security-checklist}
+### 完成Dispatcher安全檢查表 {#complete-dispatcher-security-checklist}
 
-AEM Dispatcher是您基礎架構的重要一環。 Adobe建議您完成 [Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en).
+AEM Dispatcher是您基礎架構的關鍵部分。 Adobe建議您完成 [調度程式安全核對表](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)。
 
 >[!CAUTION]
 >
->使用Dispatcher時，您必須停用「.form」選取器。
+>使用Dispatcher，必須禁用「.form」選擇器。
 
 ## 驗證步驟 {#verification-steps}
 
 ### 配置複製和傳輸用戶 {#configure-replication-and-transport-users}
 
-AEM的標準安裝會指定 `admin` 預設情況下作為傳輸憑據的用戶 [複製代理](/help/sites-deploying/replication.md). 此外，管理員使用者也可用來在製作系統上來源復寫。
+指定的標準安AEM裝 `admin` 作為預設傳輸憑據的用戶 [複製代理](/help/sites-deploying/replication.md)。 此外，管理員用戶還用於在作者系統上源化複製。
 
-出於安全考慮，應更改兩者以反映當前的特定使用案例，同時考慮以下兩個方面：
+出於安全考慮，應更改這兩項，以反映手頭的特定使用情形，同時考慮以下兩個方面：
 
-* 此 **傳輸使用者** 不得是管理員使用者。 相反地，在發佈系統上設定只具有對發佈系統相關部分的訪問權限的用戶，並使用該用戶的憑據進行傳輸。
+* 的 **傳輸用戶** 不得是admin用戶。 相反，在發佈系統上設定只對發佈系統相關部分具有訪問權限的用戶，並使用該用戶的憑據進行傳輸。
 
-   您可以從捆綁的複製接收者用戶開始，並配置此用戶的訪問權限以匹配您的情況
+   您可以從捆綁的複製接收方用戶開始，並配置此用戶的訪問權限以匹配您的情況
 
-* 此 **復寫使用者** 或 **代理用戶Id** 也不得是管理員使用者，而是只能查看已復寫內容的使用者。 復寫使用者用來收集要在製作系統上複製的內容，再傳送給發佈者。
+* 的 **複製用戶** 或 **代理用戶ID** 也不得是admin用戶，而是只能查看已複製內容的用戶。 複製用戶用於收集要在作者系統上複製的內容，然後再將其發送到發佈者。
 
-### 檢查Operations Dashboard Security Health Checks {#check-the-operations-dashboard-security-health-checks}
+### 檢查操作儀表板安全運行狀況檢查 {#check-the-operations-dashboard-security-health-checks}
 
-AEM 6推出新的Operations Dashboard，旨在協助系統運算子疑難排解問題，並監控執行個體的健全狀態。
+6AEM介紹了新的操作儀表板，旨在幫助系統操作員解決問題並監控實例的運行狀況。
 
-控制面板也隨附安全性狀況檢查的集合。 建議您先檢查所有安全性健康狀況檢查的狀態，再與生產執行個體一起上線。 如需詳細資訊，請參閱 [Operations Dashboard檔案](/help/sites-administering/operations-dashboard.md).
+儀表板還附帶了安全運行狀況檢查的集合。 建議您先檢查所有安全運行狀況檢查的狀態，然後再與生產實例一起使用。 有關詳細資訊，請參閱 [操作儀表板文檔](/help/sites-administering/operations-dashboard.md)。
 
-### 檢查範例內容是否存在 {#check-if-example-content-is-present}
+### 檢查示例內容是否存在 {#check-if-example-content-is-present}
 
-所有示例內容和用戶(例如，Geometrixx項目及其元件)應在生產系統上完全卸載和刪除，然後才能公開訪問。
+所有示例內容和用戶(例如，Geometrixx項目及其元件)都應在生產系統上完全卸載和刪除，然後才能公開訪問。
 
 >[!NOTE]
 >
->範例 `We.Retail` 如果此執行個體在中執行，應用程式會遭到移除 [生產就緒模式](/help/sites-administering/production-ready.md). 如果情況不同，您可以前往「套件管理器」，然後搜尋和解除安裝，全部 `We.Retail` 套件。
+>示例 `We.Retail` 如果此實例正在運行，則應用程式將被刪除 [生產就緒模式](/help/sites-administering/production-ready.md)。 如果此情況不是這樣，則可以通過轉到「包管理器」，然後搜索和卸載所有示例內容來卸載示例內容 `We.Retail` 包。
 
-請參閱 [使用套件](package-manager.md).
+請參閱 [使用包](package-manager.md)。
 
-### 檢查CRX開發套件組合是否存在 {#check-if-the-crx-development-bundles-are-present}
+### 檢查CRX開發包是否存在 {#check-if-the-crx-development-bundles-are-present}
 
-應先在製作和發佈生產系統上卸載這些開發OSGi套件組合，才能使其可訪問。
+應先卸載這些開發OSGi捆綁包，然後發佈生產系統，然後才能訪問。
 
-* AdobeCRXDE支援(com.adobe.granite.crxde-support)
-* AdobeGranite CRX Explorer(com.adobe.granite.crx-explorer)
-* AdobeGraniteCRXDE Lite(com.adobe.granite.crxde-lite)
+* AdobeCRXDE支援（com.adobe.granite.crxde支援）
+* Adobe花崗岩CRX瀏覽器(com.adobe.granite.crx-explorer)
+* Adobe花崗岩CRXDE Lite(com.adobe.granite.crxde-lite)
 
-### 檢查Sling開發套件組合是否存在 {#check-if-the-sling-development-bundle-is-present}
+### 檢查Sling開發包是否存在 {#check-if-the-sling-development-bundle-is-present}
 
-此 [AEM開發人員工具](/help/sites-developing/aem-eclipse.md) 部署Apache Sling Tooling支援安裝(org.apache.sling.tooling.support.install)。
+的 [開發AEM人員工具](/help/sites-developing/aem-eclipse.md) 部署Apache Sling工具支援安裝(org.apache.sling.tooling.support.install)。
 
-應先在製作和發佈生產系統上卸載此OSGi套件，然後才能使其可訪問。
+應先卸載此OSGi捆綁包，然後才能發佈生產系統，然後才能訪問它們。
 
-### Protect反對跨網站請求偽造 {#protect-against-cross-site-request-forgery}
+### Protect反跨站點請求偽造 {#protect-against-cross-site-request-forgery}
 
 #### CSRF保護框架 {#the-csrf-protection-framework}
 
-AEM 6.1隨附有助於防止跨網站請求偽造攻擊的機制，稱為 **CSRF保護框架**. 如需如何使用的詳細資訊，請參閱 [檔案](/help/sites-developing/csrf-protection.md).
+AEM6.1船隻，其機制有助於防止跨站點請求偽造攻擊，稱為 **CSRF保護框架**。 有關如何使用它的詳細資訊，請參閱 [文檔](/help/sites-developing/csrf-protection.md)。
 
-#### Sling反向連結篩選器 {#the-sling-referrer-filter}
+#### 吊具參考過濾器 {#the-sling-referrer-filter}
 
-若要解決CRX WebDAV和Apache Sling中跨網站請求偽造(CSRF)的已知安全性問題，請新增設定給反向連結篩選器以使用。
+要解決CRX WebDAV和Apache Sling中跨站點請求偽造(CSRF)的已知安全問題，請為引用過濾器添加配置以使用它。
 
-反向連結篩選服務是OSGi服務，可讓您設定下列項目：
+引用篩選器服務是OSGi服務，用於配置以下內容：
 
-* 應篩選哪些http方法
-* 是否允許空的反向連結標題
+* 應過濾哪些http方法
+* 是否允許空的引用器標頭
 * 以及除伺服器主機外允許的伺服器清單。
 
-   預設情況下，該伺服器綁定到的本地主機和當前主機名的所有變數都在清單中。
+   預設情況下，localhost和伺服器綁定到的當前主機名的所有變體都在清單中。
 
-若要設定反向連結篩選服務：
+要配置引用程式篩選器服務，請執行以下操作：
 
-1. 開啟Apache Felix主控台(**配置**):
+1. 開啟Apache Felix控制台(**配置**):
 
    `https://<server>:<port_number>/system/console/configMgr`
 
-1. 登入方式 `admin`.
-1. 在 **配置** 菜單，選擇
+1. 登錄身份 `admin`。
+1. 在 **配置** ，選擇
 
    `Apache Sling Referrer Filter`
 
-1. 在 `Allow Hosts` 欄位中，輸入允許作為反向連結的所有主機。 每個條目都必須是
+1. 在 `Allow Hosts` 欄位，輸入允許作為引用者的所有主機。 每個條目必須為
 
    &lt;protocol>://&lt;server>:&lt;port>
 
    例如：
 
-   * `https://allowed.server:80` 允許來自此伺服器的所有請求和給定埠。
-   * 如果您也想允許https要求，則必須輸入第二行。
-   * 如果允許來自該伺服器的所有埠，則可以使用 `0` 作為埠號。
+   * `https://allowed.server:80` 允許來自此伺服器的所有請求以及給定埠。
+   * 如果還要允許https請求，則必須輸入第二行。
+   * 如果允許該伺服器的所有埠，則可以 `0` 作為埠號。
 
-1. 檢查 `Allow Empty` 欄位，以允許空白/遺失反向連結標題。
+1. 檢查 `Allow Empty` 欄位。
 
    >[!CAUTION]
    >
-   >Adobe建議您使用命令列工具(例如 `cURL` 而不允許空值，因為它可能會讓您的系統受到CSRF攻擊。
+   >Adobe建議在使用命令行工具(如 `cURL` 而不是允許空值，因為它可能會使您的系統遭受CSRF攻擊。
 
-1. 使用 `Filter Methods` 欄位。
+1. 編輯此篩選器用於檢查的方法 `Filter Methods` 的子菜單。
 
-1. 按一下 **儲存** 來儲存變更。
+1. 按一下 **保存** 的子菜單。
 
 ### OSGI設定 {#osgi-settings}
 
-某些OSGI設定預設為允許更輕鬆地對應用程式進行除錯。 在您的發佈和製作生產執行個體上變更這類設定，以避免內部資訊洩露給公眾。
+預設情況下，某些OSGI設定會設定為允許更輕鬆地調試應用程式。 更改發佈和建立生產性實例上的此類設定，以避免內部資訊洩露給公眾。
 
 >[!NOTE]
 >
->下列所有設定， **Day CQ WCM除錯篩選器**，會自動由 [生產就緒模式](/help/sites-administering/production-ready.md). 因此，Adobe建議您先檢閱所有設定，再將執行個體部署至生產環境。
+>下面的所有設定，除 **第CQ WCM日調試篩選器**，由 [生產就緒模式](/help/sites-administering/production-ready.md)。 因此，Adobe建議您在生產環境中部署實例之前先檢查所有設定。
 
-必須對下列每項服務變更指定的設定：
+對於以下每種服務，必須更改指定的設定：
 
-* [AdobeGraniteHTML程式庫管理員](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager):
+* [Adobe花崗岩HTML庫經理](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager):
 
-   * 啟用 **Minify** （移除CRLF和空格字元）。
-   * 啟用 **Gzip** （允許使用一個請求對檔案進行gzippe和訪問）。
-   * disable **除錯**
-   * disable **計時**
+   * 啟用 **微型** （刪除CRLF和空格字元）。
+   * 啟用 **吉普** （允許使用一個請求對檔案進行壓縮和訪問）。
+   * 禁用 **調試**
+   * 禁用 **計時**
 
-* [Day CQ WCM除錯篩選器](/help/sites-deploying/osgi-configuration-settings.md#day-cq-wcm-debug-filter):
+* [第CQ WCM日調試篩選器](/help/sites-deploying/osgi-configuration-settings.md#day-cq-wcm-debug-filter):
 
-   * 取消勾選 **啟用**
+   * 取消 **啟用**
 
-* [Day CQ WCM篩選器](/help/sites-deploying/osgi-configuration-settings.md):
+* [第CQ WCM篩選器](/help/sites-deploying/osgi-configuration-settings.md):
 
-   * 僅在發佈時設定 **WCM模式** 設為「已停用」
+   * 僅發佈，設定 **WCM模式** &quot;已禁用&quot;
 
-* [Apache Sling JavaScript處理常式](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-javascript-handler):
+* [Apache Sling JavaScript處理程式](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-javascript-handler):
 
-   * disable **產生除錯資訊**
+   * 禁用 **生成調試資訊**
 
-* [Apache Sling JSP指令碼處理常式](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-jsp-script-handler):
+* [Apache Sling JSP指令碼處理程式](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-jsp-script-handler):
 
-   * disable **產生除錯資訊**
-   * disable **對應內容**
+   * 禁用 **生成調試資訊**
+   * 禁用 **映射內容**
 
-請參閱 [OSGi組態設定](/help/sites-deploying/osgi-configuration-settings.md).
+請參閱 [OSGi配置設定](/help/sites-deploying/osgi-configuration-settings.md)。
 
-使用AEM時，有數種方法可管理這類服務的組態設定；請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議的實務。
+使用時，AEM有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的子菜單。
 
-## 進一步讀數 {#further-readings}
+## 進一步閱讀 {#further-readings}
 
 ### 緩解拒絕服務(DoS)攻擊 {#mitigate-denial-of-service-dos-attacks}
 
-阻斷服務 (DoS) 攻擊指的是嘗試讓電腦資源無法提供給其目標使用者使用。這種攻擊往往通過超載資源來完成；例如：
+阻斷服務 (DoS) 攻擊指的是嘗試讓電腦資源無法提供給其目標使用者使用。此攻擊通常通過超載資源來完成；例如：
 
-* 來自外部來源的大量請求。
-* 請求比系統可以成功傳送的更多資訊。
+* 來自外部源的大量請求。
+* 請求的資訊超過系統可以成功傳遞的資訊。
 
-   例如，整個存放庫的JSON表示法。
+   例如，整個儲存庫的JSON表示法。
 
-* 借由請求含有不限數量URL的內容頁面，URL可以包含控點、某些選取器、擴充功能和尾碼 — 任何可修改的尾碼。
+* 通過請求具有無限數量URL的內容頁面，URL可以包括句柄、某些選擇器、擴展和尾碼 — 其中任何一個都可以修改。
 
-   例如， `.../en.html` 也可請求為：
+   比如說， `.../en.html` 也可以請求為：
 
    * `.../en.ExtensionDosAttack`
    * `.../en.SelectorDosAttack.html`
    * `.../en.html/SuffixDosAttack`
 
-   所有有效變數(例如，傳回 `200` 回應（且已設定為快取）會由Dispatcher快取，最終導致完整的檔案系統，且沒有服務可供進一步請求使用。
+   所有有效變體(例如，返回 `200` 響應並配置為快取)由Dispatcher進行快取，最終導致完整檔案系統，並且沒有服務用於進一步的請求。
 
-有許多配置點可以阻止此類攻擊，但此處僅討論與AEM相關的點。
+在防止此類攻擊時有許多配置點，但此處僅討論與這些AEM相關的點。
 
-**設定Sling以防止DoS**
+**配置Sling以防止DoS**
 
-Sling是 *以內容為中心*. 處理會著重於內容，因為每個(HTTP)請求都會以JCR資源（存放庫節點）的形式對應至內容：
+吊帶 *以內容為中心*。 當每個(HTTP)請求以JCR資源（儲存庫節點）的形式映射到內容時，處理將集中於內容：
 
 * 第一個目標是保存內容的資源（JCR節點）。
-* 其次，轉譯器（或指令碼）位於請求中某些部分（例如選取器和/或擴充功能）的資源屬性中。
+* 其次，呈現器或指令碼從資源屬性中與請求的某些部分（例如，選擇器和/或擴展）一起定位。
 
-請參閱 [Sling要求處理](/help/sites-developing/the-basics.md#sling-request-processing) 以取得更多資訊。
+請參閱 [Sling請求處理](/help/sites-developing/the-basics.md#sling-request-processing) 的子菜單。
 
-此方法讓Sling功能強大且靈活，但必須謹慎管理的彈性一如既往。
+這種方法使吊具功能強大且靈活，但與往常一樣，必須謹慎管理靈活性。
 
-為幫助防止DoS被濫用，您可以執行以下操作：
+為幫助防止DoS誤用，您可以執行以下操作：
 
-1. 在應用程式層級合併控制項。 由於可能的變數數，預設設定不可行。
+1. 在應用程式級別合併控制項。 由於可能的變體數，預設配置不可行。
 
    在您的應用程式中，您應：
 
-   * 控制應用程式中的選取器，以便您 *僅限* 提供所需的明確選取器並傳回 `404` 對其他人。
-   * 防止輸出不限數量的內容節點。
+   * 控制應用程式中的選擇器，以便 *僅* 提供所需的顯式選擇器並返回 `404` 為其他人服務。
+   * 防止輸出無限數量的內容節點。
 
-1. 檢查預設轉譯器的配置，這可能是問題區域。
+1. 檢查預設投遞器的配置，這可能是問題區域。
 
-   * 尤其是，JSON轉譯器會在多個層級上轉換樹狀結構。
+   * 特別是，JSON呈現器跨多個級別跨樹結構。
 
       例如，請求：
 
       `http://localhost:4502/.json`
 
-      可能會將整個存放庫傾印為JSON表示法，而可能導致重大伺服器問題。 因此，Sling會設定最大結果數量限制。 若要限制JSON轉譯的深度，請設定下列項目的值：
+      可以將整個儲存庫轉儲到JSON表示法中，這可能導致伺服器出現嚴重問題。 因此，Sling對最大結果數設定了限制。 要限制JSON呈現的深度，請設定以下值：
 
       **JSON最大結果** ( `json.maximumresults`)
 
-      在 [Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet). 超過此限制時，呈現會收合。 AEM內Sling的預設值為 `1000`.
+      的 [Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)。 超過此限制時，呈現將折疊。 Sling中的預設值AEM為 `1000`。
 
-   * 作為預防措施，您應禁用其他預設呈現器(HTML、純文字檔案、XML)。 同樣地，借由設定 [Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet).
+   * 作為預防措施，您應禁用其它預設投遞程式(HTML、純文字檔案、XML)。 同樣，通過配置 [Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)。
    >[!CAUTION]
    >
-   >請勿停用JSON轉譯器，因為這是正常操作AEM所需的。
+   >請勿禁用JSON呈現器，因為它是JSON的正常操作所必需AEM的。
 
-1. 使用防火牆來篩選對您執行個體的存取。
+1. 使用防火牆篩選對實例的訪問。
 
-   * 必須使用作業系統級別防火牆來過濾對實例的點的訪問，如果執行個體未受保護，則可能導致拒絕服務攻擊。
+   * 必須使用作業系統級防火牆來過濾對實例中可能導致拒絕服務攻擊的點的訪問，如果這些點處於未保護狀態。
 
-**避免因使用表單選取器而造成的問題**
+**緩解使用表單選擇器導致的DO**
 
 >[!NOTE]
 >
->此緩解措施只應在未使用Forms的AEM環境上執行。
+>此緩解應僅在未使AEM用Forms的環境中執行。
 
-因為AEM不提供 `FormChooserServlet`，在查詢中使用表單選取器可能會觸發代價高昂的存放庫周遊，通常會使AEM例項無法執行。 表單選取器可由 **&amp;ast;.form。&amp;ast;** 查詢中的字串。
+因AEM為沒有為 `FormChooserServlet`，在查詢中使用表單選擇器可觸發代價高昂的儲存庫遍歷，通AEM常會使實例陷入停頓。 表單選擇器可通過 **&amp;ast;.form。&amp;ast;** 字串。
 
-若要緩解此問題，您可以執行下列步驟：
+要緩解此問題，可以執行以下步驟：
 
-1. 前往Web主控台，將瀏覽器指向 *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
+1. 通過將瀏覽器指向 *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
 
-1. 搜尋 **Day CQ WCM表單選擇器Servlet**
-1. 按一下項目後，停用 **高級搜索需要** 中。
+1. 搜索 **第CQ WCM表單選擇器Servlet**
+1. 按一下條目後，禁用 **高級搜索要求** 的上界。
 
 1. 按一下「**儲存**」。
 
-**減少資產下載Servlet所造成的DoS影響**
+**緩解由資產下載Servlet引起的DO**
 
-預設的資產下載servlet可讓已驗證的使用者發出任意大型、同時執行的下載請求，以建立資產的ZIP檔案。 建立大型ZIP封存檔可能會使伺服器和網路過載。 為降低由此行為導致的潛在拒絕服務(DoS)風險， `AssetDownloadServlet` OSGi元件預設在 [!DNL Experience Manager] 發佈例項。 已啟用 [!DNL Experience Manager] 依預設為製作例項。
+預設資產下載servlet允許經過驗證的用戶發出任意大的併發下載請求以建立資產的ZIP檔案。 建立大型ZIP存檔會使伺服器和網路過載。 要降低此行為可能導致的拒絕服務(DoS)風險， `AssetDownloadServlet` OSGi元件在上預設禁用 [!DNL Experience Manager] 發佈實例。 已啟用 [!DNL Experience Manager] 預設情況下，作者實例。
 
-如果您不需要下載功能，請停用製作和發佈部署上的servlet。 如果您的設定需要啟用資產下載功能，請參閱 [這篇文章](/help/assets/download-assets-from-aem.md) 以取得更多資訊。 此外，您也可以定義部署可支援的下載上限。
+如果不需要下載功能，請在作者和發佈部署上禁用servlet。 如果安裝程式要求啟用資產下載功能，請參閱 [這篇文章](/help/assets/download-assets-from-aem.md) 的子菜單。 此外，您可以定義部署可支援的最大下載限制。
 
 ### 禁用WebDAV {#disable-webdav}
 
-停止適當的OSGi套件組合，即可在製作和發佈環境上停用WebDAV。
+通過停止適當的OSGi捆綁包，在作者和發佈環境上禁用WebDAV。
 
-1. 連線至 **Felix Management Console** 執行時間：
+1. 連接到 **Felix管理控制台** 運行於：
 
    `https://<*host*>:<*port*>/system/console`
 
-   例如， `http://localhost:4503/system/console/bundles`.
+   比如說， `http://localhost:4503/system/console/bundles`。
 
-1. 在套件組合清單中，找到名為的套件組合：
+1. 在束清單中，查找名為：
 
    `Apache Sling Simple WebDAV Access to repositories (org.apache.sling.jcr.webdav)`
 
-1. 若要停止此套件組合，請在「動作」欄中按一下「停止」按鈕。
+1. 要停止此捆綁包，請在「操作」(Actions)列中按一下「停止」(Stop)按鈕。
 
-1. 同樣，在套件組合清單中，找到名為：
+1. 同樣，在包清單中，查找名為：
 
    `Apache Sling DavEx Access to repositories (org.apache.sling.jcr.davex)`
 
-1. 要停止此捆綁，請按一下停止按鈕。
+1. 要停止此捆綁包，請按一下「停止」按鈕。
 
    >[!NOTE]
    >
-   >不需要重新啟動AEM。
+   >不需要AEM重新啟動。
 
-### 確認您未在使用者首頁路徑中披露個人識別資訊 {#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path}
+### 驗證您沒有在用戶主路徑中透露個人身份資訊 {#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path}
 
-請務必確保您不會在存放庫使用者首頁路徑中公開任何個人識別資訊，以保護您的使用者。
+通過確保不洩露儲存庫用戶主路徑中的任何個人身份資訊，保護您的用戶非常重要。
 
-自AEM 6.1起，使用者（亦稱為可授權）ID節點名稱的儲存方式，會隨著 `AuthorizableNodeName` 介面。 新介面不再會公開節點名稱中的使用者ID，而會產生隨機名稱。
+自AEM6.1以來，用戶（也稱為可授權）ID節點名稱的儲存方式隨著新的實現而改變 `AuthorizableNodeName` 。 新介面不再公開節點名稱中的用戶ID，而是生成隨機名稱。
 
-您不必執行任何設定來啟用，因為這現在是在AEM中產生可授權ID的預設方式。
+不必執行任何配置來啟用它，因為它現在是在中生成可授權ID的預設方AEM式。
 
-雖然不建議使用，但您可以停用它，以備您需要舊實作時，以便與現有應用程式回溯相容。 若要這麼做，您必須執行下列動作：
+雖然不建議使用，但您可以禁用它，以備需要舊實現時，與現有應用程式向後相容。 要執行此操作，必須執行以下操作：
 
-1. 前往Web主控台，並從屬性中移除** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**項目 **requiredServicePids** in **Apache Jackrabbit Oak SecurityProvider**.
+1. 轉到Web控制台，從屬性中刪除** org.apache.jackrabbit.oak.security.user.RandomAuthorizedNodeName**條目 **requiredServicePid** 在 **Apache Jackrabbit Oak安全提供程式**。
 
-   您也可以尋找 **org.apache.jackrabbit.oak.security.internal.SecurityProviderRegistration** OSGi設定中的PID。
+   您還可以通過查找 **org.apache.jackrabbit.oak.security.internal.SecurityProviderRegistration** OSGi配置中的PID。
 
-1. 刪除 **Apache Jackrabbit Oak隨機可授權節點名稱** 從Web控制台進行OSGi配置。
+1. 刪除 **Apache Jackrabbit Oak隨機可授權節點名** 從Web控制台配置OSGi。
 
-   為了便於查閱，此設定的PID為 **org.apache.jackrabbit.oak.security.user.RandomAuthorizabledNodeName**.
+   為便於查找，此配置的PID為 **org.apache.jackrabbit.oak.security.user.RandomAuthorizedNodeName**。
 
 >[!NOTE]
 >
->如需詳細資訊，請參閱Oak檔案，位於 [可授權節點名稱生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
+>有關詳細資訊，請參閱 [可授權的節點名稱生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html)。
 
-### 匿名權限強化套件 {#anonymous-permission-hardening-package}
+### 匿名權限強化包 {#anonymous-permission-hardening-package}
 
-依預設，AEM會儲存系統中繼資料，例如 `jcr:createdBy` 或 `jcr:lastModifiedBy` 儲存庫中一般內容旁的節點屬性。 視設定和存取控制設定而定，在某些情況下，這可能會導致暴露個人識別資訊(PII)，例如當這些節點轉譯為原始JSON或XML時。
+預設情況下，AEM儲存系統元資料，如 `jcr:createdBy` 或 `jcr:lastModifiedBy` 作為節點屬性，在儲存庫中常規內容旁邊。 根據配置和訪問控制設定，在某些情況下，這可能導致暴露個人識別資訊(PII)，例如，當此類節點呈現為原始JSON或XML時。
 
-與所有存放庫資料一樣，這些屬性也是由Oak授權堆疊所介導。 應根據最少特權原則限制訪問這些權利。
+與所有儲存庫資料一樣，這些屬性由Oak授權棧介導。 應根據最少特權原則限制對其的訪問。
 
-為了支援此功能，Adobe提供權限強化套件，作為客戶建置的基礎。 它的作用是在儲存庫根目錄安裝「拒絕」訪問控制項，限制對常用系統屬性的匿名訪問。 套件可供下載 [此處](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) 和可安裝在所有支援的AEM版本上。
+為了支援此功能，Adobe提供了一個權限強化包，作為客戶構建的基礎。 它通過在儲存庫根目錄安裝「拒絕」訪問控制項來工作，限制對常用系統屬性的匿名訪問。 包可供下載 [這裡](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) 並且可以安裝在所有支援的版本AEM上。
 
-為了說明這些更改，我們可以比較在安裝包之前可以匿名查看的節點屬性：
+為了說明更改，我們可以比較在安裝軟體包之前可以匿名查看的節點屬性：
 
-![安裝套件之前](/help/sites-administering/assets/before_resized.png)
+![安裝軟體包之前](/help/sites-administering/assets/before_resized.png)
 
-使用安裝套件後可檢視的項目，其中 `jcr:createdBy` 和 `jcr:lastModifiedBy` 不可見：
+與安裝軟體包後可查看的軟體， `jcr:createdBy` 和 `jcr:lastModifiedBy` 不可見：
 
-![安裝套件後](/help/sites-administering/assets/after_resized.png)
+![安裝包後](/help/sites-administering/assets/after_resized.png)
 
-如需詳細資訊，請參閱套件發行說明。
+有關詳細資訊，請參閱軟體包發行說明。
 
 ### 避免點擊劫持 {#prevent-clickjacking}
 
-為防止點按劫持，Adobe建議您將網站伺服器設定為提供 `X-FRAME-OPTIONS` HTTP標題設為 `SAMEORIGIN`.
+為防止點擊劫持，Adobe建議您配置Web伺服器以 `X-FRAME-OPTIONS` HTTP標頭設定為 `SAMEORIGIN`。
 
-如需點按頂升的詳細資訊，請參閱 [OWASP站點](https://www.owasp.org/index.php/Clickjacking).
+有關點擊劫持的詳細資訊，請參閱 [OWASP網站](https://www.owasp.org/index.php/Clickjacking)。
 
 ### 確保在需要時正確複製加密密鑰 {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
-某些AEM功能和驗證配置要求您在所有AEM執行個體間複製加密金鑰。
+某些AEM功能和身份驗證方案要求您跨所有實例複製加密AEM密鑰。
 
-在執行此操作之前，不同版本之間的密鑰複製操作不同，因為6.3和較舊版本之間的密鑰儲存方式不同。
+在執行此操作之前，密鑰複製在不同版本之間的操作方式不同，因為6.3版和舊版本之間的密鑰儲存方式不同。
 
-如需詳細資訊，請參閱下方。
+有關詳細資訊，請參閱下文。
 
-#### 復寫AEM 6.3的金鑰 {#replicating-keys-for-aem}
+#### 複製6AEM.3的密鑰 {#replicating-keys-for-aem}
 
-而在舊版中，復寫密鑰儲存在儲存庫中，從AEM 6.3開始，它們儲存在檔案系統中。
+而在較舊版本中，複製密鑰儲存在儲存庫中，從AEM6.3開始，它們儲存在檔案系統中。
 
 因此，要跨實例複製密鑰，請將它們從源實例複製到檔案系統上目標實例的位置。
 
-具體來說，您必須執行下列動作：
+具體來說，您必須執行以下操作：
 
-1. 存取包含要複製之關鍵資料的AEM例項（通常為製作例項）;
-1. 在本機檔案系統中找到com.adobe.granite.crypto.file套件組合。 例如，在此路徑下：
+1. 訪問包AEM含要複製的關鍵材料的實例（通常為作者實例）;
+1. 在本地檔案系統中找到com.adobe.granite.crypto.file包。 例如，在此路徑下：
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
 
-   此 `bundle.info` 每個資料夾內的檔案標識包名。
+   的 `bundle.info` 每個資料夾中的檔案標識包名稱。
 
-1. 導覽至資料夾。 例如：
+1. 導航到資料資料夾。 例如：
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. 複製HMAC和主檔案。
-1. 接著，前往您要複製HMAC金鑰的目標執行個體，並導覽至資料夾。 例如：
+1. 然後，轉到要將HMAC密鑰複製到的目標實例，然後導航到資料資料夾。 例如：
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-1. 貼上您先前複製的兩個檔案。
-1. [刷新加密包](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) 如果目標實例已在運行。
+1. 貼上以前複製的兩個檔案。
+1. [刷新加密包](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) 目標實例已在運行。
 1. 對要將密鑰複製到的所有實例重複上述步驟。
 
 >[!NOTE]
 >
->首次安裝AEM時，您可以新增下列參數，回復到6.3之前儲存金鑰的方法：
+>在首次安裝時添加以下參數，可以恢復到6.3之前的儲存密鑰方AEM法：
 >
 >`-Dcom.adobe.granite.crypto.file.disable=true`
 
-#### 復寫AEM 6.2及舊版的金鑰 {#replicating-keys-for-aem-and-older-versions}
+#### 複製6.AEM2和舊版本的密鑰 {#replicating-keys-for-aem-and-older-versions}
 
-在AEM 6.2及舊版中，金鑰會儲存在 `/etc/key` 節點。
+在AEM6.2和更舊版本中，密鑰儲存在 `/etc/key` 的下界。
 
-安全地在您的實例中複製密鑰的建議方法是僅複製此節點。 您可以透過CRXDE Lite選擇性地複製節點：
+建議在實例中安全地複製密鑰的方法是僅複製此節點。 您可以通過CRXDE Lite有選擇地複製節點：
 
-1. 開啟CRXDE Lite，前往 *`https://&lt;serveraddress&gt;:4502/crx/de/index.jsp`*
-1. 選取 `/etc/key` 節點。
-1. 前往 **復寫** 標籤。
-1. 按下 **復寫** 按鈕。
+1. 通過轉到開啟CRXDE Lite *`https://&lt;serveraddress&gt;:4502/crx/de/index.jsp`*
+1. 選擇 `/etc/key` 的下界。
+1. 轉到 **複製** 頁籤。
+1. 按 **複製** 按鈕
 
 ### 執行滲透測試 {#perform-a-penetration-test}
 
-Adobe建議您在開始生產前，先對AEM基礎架構執行滲透測試。
+Adobe建議您在開始生產之前AEM對基礎架構執行滲透test。
 
-### 開發最佳實務 {#development-best-practices}
+### 開發最佳做法 {#development-best-practices}
 
-新發展必須遵循 [安全性最佳實務](/help/sites-developing/security.md) 以確保AEM環境安全無虞。
+新的發展必須遵循 [安全最佳做法](/help/sites-developing/security.md) 確保您的AEM環境安全。

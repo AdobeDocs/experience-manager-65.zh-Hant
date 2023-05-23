@@ -1,7 +1,7 @@
 ---
-title: HTML5表單的螢幕助讀程式
+title: HTML5窗體的螢幕閱讀器
 seo-title: Screen readers for HTML5 forms
-description: 列出HTML5表單支援的螢幕助讀程式。
+description: 列出HTML5窗體支援的螢幕閱讀器。
 seo-description: Lists the screen readers supported with HTML5 forms.
 uuid: 035354e2-957f-4eb6-bc16-4ca96ec7ac74
 content-type: reference
@@ -17,32 +17,32 @@ ht-degree: 0%
 
 ---
 
-# HTML5表單的螢幕助讀程式 {#screen-readers-for-html-forms}
+# HTML5窗體的螢幕閱讀器 {#screen-readers-for-html-forms}
 
-HTML5表單元件會將XFA表單範本轉譯為HTML5格式。 所有支援HTML5的標準瀏覽器都可轉譯這些表單。 為了支援PDF和HTML5表單的類似資料擷取體驗，PDF forms的版面會保留在HTML5表單中。
+HTML5表單元件將XFA表單模板呈現為HTML5格式。 所有支援HTML5的標準瀏覽器都可以呈現這些表單。 為支援跨PDF和HTML5表單的類似資料捕獲體驗，PDF forms的佈局將保留在HTML5表單中。
 
-HTML5表單使用標準HTML結構，可讓HTML搭配這些表單使用一般協助工具。 如果表單是根據無障礙表單的最佳實務設計，則可搭配任何支援的螢幕助讀程式使用。 此外，還啟用了鍵盤導航。
+HTML5表單使用標準HTML結構，允許與這些表單一起使用常規的HTML輔助工具。 如果表單是按照可訪問表單的最佳做法設計的，則它可與任何受支援的螢幕閱讀器配合使用。 此外，還為鍵盤導航啟用了這種表單。
 
 ## 無障礙標準 {#accessibility-standards}
 
-HTML5表單符合第508節中已知例外的協助工具規範。 請參閱 [HTML5表單的VPAT](https://www.adobe.com/content/dam/cc1/en/accessibility/compliance/pdfs/adobe-livecycle-es4-section-508-vpat-portfolio.pdf) 以取得詳細資訊。
+HTML5表單符合第508節中已知例外的輔助功能。 請參閱 [用於HTML5表單的VPAT](https://www.adobe.com/content/dam/cc1/en/accessibility/compliance/pdfs/adobe-livecycle-es4-section-508-vpat-portfolio.pdf) 的雙曲餘切值。
 
-## HTML5表單的認證螢幕閱讀器 {#certified-screen-readers-for-html-forms}
+## 經認證的HTML5窗體螢幕閱讀器 {#certified-screen-readers-for-html-forms}
 
 * Microsoft® Windows上的JAWS 14.0
-* macOS X和iPad的VoiceOver
+* macOSX和iPad
 
-### 下頜 {#jaws}
+### 大白鯊 {#jaws}
 
-所有預設鍵擊和快捷方式都適用於HTML5表單。 有關使用JAWS的詳細資訊，請訪問 [https://www.freedomscientific.com/jaws-hq.asp](https://www.freedomscientific.com/jaws-hq.asp).
+所有預設擊鍵和快捷方式都適用於HTML5表單。 有關使用JAWS的詳細資訊，請訪問 [https://www.freedomscientific.com/jaws-hq.asp](https://www.freedomscientific.com/jaws-hq.asp)。
 
-### VoiceOver {#voiceover}
+### 語音轉換 {#voiceover}
 
-HTML5表單支援Voice over的所有預設擊鍵和手勢。 有關設定和使用VoiceOver的詳細資訊，請參閱 [https://www.apple.com/accessibility/vision/](https://www.apple.com/accessibility/vision/).
+HTML5表單支援Voice over的所有預設擊鍵和手勢。 有關設定和使用VoiceOver的詳細資訊，請參見 [https://www.apple.com/accessibility/vision/](https://www.apple.com/accessibility/vision/)。
 
 ## 已知問題 {#known-issues}
 
-* **（僅內部Explorer 9）** 在HTML5表單中，頁面會依需求（動態）載入。 隨需頁面載入會造成螢幕助讀程式運作問題。 當螢幕助讀程式的焦點位於頁面的最後一個欄位，且使用者按下索引標籤時，螢幕助讀程式會將焦點返回表單上第一個頁面的第一個欄位。
-* **（僅內部Explorer 9）** HTML5表單中的「日期選擇器」控制項無法透過鍵盤完全存取。 在「日期選擇器」控制項中，如果多次按上/下鍵，「日期選擇器」控制項將關閉，焦點將移到下一個/最後一個欄位。
+* **（僅限內部資源管理器9）** 在HTML5窗體中，頁面按需（動態）載入。 按需頁面載入導致螢幕閱讀器功能出現問題。 當螢幕閱讀器的焦點位於頁面的最後一個欄位上並且用戶按下頁籤時，螢幕閱讀器將焦點返回到表單上第一頁的第一個欄位。
+* **（僅限內部資源管理器9）** HTML5窗體中的「日期選取器」控制項無法通過鍵盤完全訪問。 在「日期選取器」(Date Picker)控制項中，如果多次按上/下鍵，則「日期選取器」(Date Picker)控制項將關閉，焦點將移至下一個/最後一個欄位。
 
-* VoiceOver在iPad safari上無法偵測日期Widget上的方向鍵。
+* VoiceOver在iPad野生動物園旅行中無法檢測日期小部件上的箭頭鍵。

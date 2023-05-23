@@ -1,7 +1,7 @@
 ---
-title: 裝配PDF文檔
+title: 組裝PDF文檔
 seo-title: Assembling PDF Documents
-description: 使用組合器服務將多個PDF文檔組合為一個PDF文檔，或將一個PDF文檔分解為多個PDF文檔。
+description: 使用匯編器服務將多個PDF文檔匯編為一個PDF文檔，或將一個PDF文檔分解為多個PDF文檔。
 seo-description: Use the Assembler service to assemble multiple PDF documents into one PDF document or disassemble one PDF document into multiple PDF documents.
 uuid: 0789feea-1bbc-4acd-9ad7-ddf4d05e1c68
 contentOwner: admin
@@ -19,16 +19,16 @@ ht-degree: 0%
 
 ---
 
-# 裝配PDF文檔 {#assembling-pdf-documents}
+# 組裝PDF文檔 {#assembling-pdf-documents}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文檔中的示例和示例僅針對AEM Forms的JEE環境。**
 
-**關於組合器服務**
+**關於匯編器服務**
 
-組合器服務可將多個PDF文檔組合為一個PDF文檔，或將一個PDF文檔分解為多個PDF文檔。 組合器服務可以通過多種方式來操作文檔，如更改頁面大小和旋轉內容。 它可以插入其他內容，如頁首、頁尾和目錄，並可以保留、導入或導出現有內容，如注釋、檔案附件和書籤。
+匯編器服務可以將多個PDF文檔匯編成一個PDF文檔，或將一個PDF文檔分解成多個PDF文檔。 匯編器服務可以以多種方式處理文檔，如更改頁面大小和旋轉內容。 它可以插入其他內容，如頁眉、頁腳和目錄，並可以保留、導入或導出現有內容，如注釋、檔案附件和書籤。
 
-從LiveCycleES 8.0和更新版本開始，組合器服務提供對PDF包的支援。
+從LiveCycleES 8.0及更高版本開始，PDF程式包支援在匯編器服務中提供。
 
 >[!NOTE]
 >
->有關組合器服務的詳細資訊，請參見 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>有關匯編器服務的詳細資訊，請參見 [《AEM Forms服務參考》](https://www.adobe.com/go/learn_aemforms_services_63)。

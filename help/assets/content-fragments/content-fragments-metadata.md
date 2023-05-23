@@ -1,6 +1,6 @@
 ---
 title: 中繼資料 - 片段屬性
-description: 了解如何檢視和編輯AEM中內容片段的中繼資料屬性，以調整無頭內容。
+description: 瞭解如何查看和編輯中內容片段的元資料屬性AEM以調整無頭內容。
 feature: Content Fragments
 role: User
 exl-id: 6316ef72-7647-4e85-b8cf-152557b26540
@@ -13,31 +13,31 @@ ht-degree: 5%
 
 # 中繼資料 - 片段屬性 {#metadata-fragment-properties}
 
-了解如何檢視和編輯AEM中內容片段的中繼資料屬性，以調整無頭內容。
+瞭解如何查看和編輯中內容片段的元資料屬性AEM以調整無頭內容。
 
-## 編輯屬性/中繼資料 {#editing-properties-meta-data}
+## 編輯屬性/元資料 {#editing-properties-meta-data}
 
-您可以檢視及編輯內容片段的中繼資料（屬性）:
+您可以查看和編輯內容片段的元資料（屬性）:
 
-1. 在 **資產** 主控台導覽至內容片段的位置。
-2. 其中之一：
+1. 在 **資產** 控制台導航到內容片段的位置。
+2. 可以：
 
-   * 選擇 [**檢視屬性** 開啟對話框](/help/assets/manage-assets.md#editing-properties). 開啟以供檢視後，您也可以編輯。
-   * 開啟內容片段以進行編輯，然後選取 **中繼資料** 從側面板。
+   * 選擇 [**查看屬性** 開啟對話框](/help/assets/manage-assets.md#editing-properties)。 開啟以查看後，您也可以編輯。
+   * 開啟內容片段進行編輯，然後選擇 **元資料** 從側面板上。
    ![中繼資料](assets/cfm-metadata-01.png)
 
-3. 此 **基本** 索引標籤提供您可檢視或編輯的選項：
+3. 的 **基本** 頁籤提供可查看或編輯的選項：
 
-   * 縮圖，您可以 **上傳影像**
+   * 縮略圖，您可以 **上載映像**
    * **內容片段模型** 指示用於建立當前片段的模型
    * **標題**
    * **說明**
    * **標記**
-      * [標籤](/help/sites-authoring/tags.md) 在組織片段時，效能尤其強大，因為片段可用於內容分類和分類。 標籤可用來尋找內容（依標籤）並套用大量作業。
-例如，您可以將相關片段標籤為「聖誕節啟動」，以允許僅以子集形式瀏覽這些片段，或複製這些片段，以便與新資料夾中其他未來啟動搭配使用。
+      * [標籤](/help/sites-authoring/tags.md) 在組織碎片時尤其強大，因為它們可用於內容分類和分類。 標籤可用於查找內容（按標籤）和應用批量操作。
+例如，可以將相關片段標籤為「聖誕節啟動」，以便僅允許將這些片段作為子集進行瀏覽，或將它們複製以供將來在新資料夾中的另一個啟動時使用。
       >[!NOTE]
       >
-      >**標籤** 也可在 [編寫變異內容](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) 和 [建立變數](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation).
+      >**標籤** 也可在 [創作變體內容](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) 當 [建立變體](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation)。
 
    * **已建立** （僅顯示）
    例如：

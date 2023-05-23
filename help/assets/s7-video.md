@@ -1,6 +1,6 @@
 ---
 title: 影片
-description: 了解集中式視訊資產管理Adobe Experience Manager Assets，您可在其中上傳視訊以自動編碼至Dynamic Media Classic，並直接從Experience Manager Assets存取Dynamic Media Classic視訊。 Dynamic Media Classic視訊整合將最佳化視訊的觸角延伸至所有畫面。
+description: 瞭解集中式視頻資產管理Adobe Experience Manager資產，您可以在其中將視頻上傳到Dynamic Media Classic進行自動編碼，並直接從Experience Manager Assets訪問Dynamic Media Classic視頻。 Dynamic Media Classic視頻整合將優化視頻的覆蓋範圍擴展到所有螢幕。
 uuid: 8b3423f1-d96b-44d9-bdb7-e3b77875b25d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -20,172 +20,172 @@ ht-degree: 2%
 
 # 影片 {#video}
 
-Adobe Experience Manager Assets提供集中的視訊資產管理功能，您可以直接將視訊上傳至Assets，以自動編碼至Dynamic Media Classic，並直接從Assets存取Dynamic Media Classic視訊，以進行頁面編寫。
+Adobe Experience Manager資產提供集中的視頻資產管理，您可以將視頻直接上傳到資產中，以便自動編碼到Dynamic Media Classic，並直接從資產中訪問Dynamic Media Classic視頻以進行頁面創作。
 
-Dynamic Media Classic視訊整合將最佳化視訊的觸角延伸至所有畫面（自動裝置和頻寬偵測）。
+Dynamic Media Classic視頻整合將優化視頻的覆蓋範圍擴展到所有螢幕（自動設備和頻寬檢測）。
 
-* 此 **[!UICONTROL Scene7影片]** 元件會自動執行裝置和頻寬偵測，以在桌上型電腦、平板電腦和行動裝置上播放適當的格式和適當品質的視訊。
-* 資產 — 您可以包含最適化視訊集，而非僅包含單一視訊資產。 最適化視訊集包含在多個畫面間順暢播放視訊所需的所有視訊轉譯。 適用性視訊集將以不同位速率和格式（如400 kbps、800 kbps和1000 kbps）編碼的相同視訊的版本分組。 您可使用最適化視訊集以及S7視訊元件，在多個畫面(包括桌上型電腦、iOS、Android™、BlackBerry®和Windows行動裝置)間進行最適化視訊串流。
+* 的 **[!UICONTROL Scene7視頻]** 元件自動執行設備和頻寬檢測，以在案頭、平板電腦和移動設備上播放正確的格式和質量的視頻。
+* 資產 — 您可以包括自適應視頻集，而不是僅包括單個視頻資產。 自適應視頻集包含在多個螢幕上無縫播放視頻所需的所有視頻格式副本。 自適應視頻集將以不同比特率和格式（如400 kbps、800 kbps和1000 kbps）編碼的同一視頻的版本分組。 您可以使用自適應視頻集和S7視頻元件，在多個螢幕(包括案頭、iOS、Android™、BlackBerry®和Windows移動設備)上進行自適應視頻流傳輸。
 <!-- See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html). -->
 
 ## 關於FFMPEG和Dynamic Media Classic {#about-ffmpeg-and-scene}
 
-預設的視訊編碼程式是使用以FFMPEG為基礎的與視訊設定檔的整合為基礎。 因此，現成的DAM擷取工作流程包含以下兩個以ffmpeg為基礎的工作流程步驟：
+預設視頻編碼過程基於使用基於FFMPEG的與視頻簡檔的整合。 因此，現成的DAM接收工作流包含以下兩個基於ffmpeg的工作流步驟：
 
-* FFMPEG縮圖
+* FFMPEG縮略圖
 * FFMPEG編碼
 
-啟用和設定Dynamic Media Classic整合不會從現成可用的DAM擷取工作流程中自動移除或停用這兩個工作流程步驟。 如果您已在Adobe Experience Manager中使用FFMPEG型視訊編碼，則您的製作環境很可能已安裝FFMPEG。 在此情況下，使用DAM擷取的新視訊會編碼兩次：一次來自FFMPEG編碼器，一次來自Dynamic Media Classic整合。
+啟用和配置Dynamic Media Classic整合不會自動從現成的DAM接收工作流中刪除或停用這兩個工作流步驟。 如果您已在Adobe Experience Manager使用基於FFMPEG的視頻編碼，則您很可能在創作環境中安裝了FFMPEG。 在這種情況下，使用DAM接收的新視頻將被編碼兩次：一次來自FFMPEG編碼器，一次來自Dynamic Media Classic。
 
-如果您已在Experience Manager中設定FFMPEG型視訊編碼並安裝FFMPEG，則Adobe建議您從DAM擷取工作流程中移除兩個FFMPEG工作流程。
+如果在Experience Manager中配置了基於FFMPEG的視頻編碼並安裝了FFMPEG,Adobe建議您從DAM接收工作流中刪除兩個FFMPEG工作流。
 
 ## 支援的格式 {#supported-formats}
 
-Scene7視訊元件支援下列格式：
+Scene7視頻元件支援以下格式：
 
 * F4V H.264
 * MP4 H.264
 
-## 決定要將視訊上傳到何處 {#deciding-where-to-upload-your-video}
+## 決定上傳視頻的位置 {#deciding-where-to-upload-your-video}
 
-決定要將視訊資產上傳至何處取決於下列項目：
+確定在何處上載視頻資產取決於以下內容：
 
-* 您是否需要視訊資產的工作流程？
-* 您是否需要視訊資產的版本控制？
+* 是否需要視頻資產的工作流？
+* 是否需要視頻資產的版本控制？
 
-如果這兩個問題的答案皆為「是」，請直接將影片上傳至AdobeDAM。 如果兩個問題的答案都是「否」，請直接將影片上傳至Dynamic Media Classic。 以下章節將說明每個案例的工作流程。
+如果對其中一個或兩個問題回答「是」，則將視頻直接上傳到AdobeDAM。 如果兩個問題的答案都是「否」，則直接將視頻上傳到Dynamic Media Classic。 以下部分介紹了每個方案的工作流。
 
-### 如果您要直接上傳影片至AdobeDAM {#if-you-are-uploading-your-video-directly-to-adobe-dam}
+### 如果您直接將視頻上傳到AdobeDAM {#if-you-are-uploading-your-video-directly-to-adobe-dam}
 
-如果您的資產需要工作流程或版本設定，請先上傳至AdobeDAM。 建議的工作流程如下：
+如果您需要資產的工作流或版本化，請先上載到AdobeDAM。 以下是推薦的工作流：
 
-1. 上傳視訊資產以AdobeDAM，並自動編碼並發佈至Dynamic Media Classic。
-1. 在Experience Manager中，在 **[!UICONTROL 電影]** 標籤。
-1. 使用 **[!UICONTROL Scene7影片]** 或 **[!UICONTROL Foundation影片]** 元件。
+1. 將視頻資產上傳到AdobeDAM，並自動編碼和發佈到Dynamic Media Classic。
+1. 在Experience Manager中，訪問WCM中的視頻資產 **[!UICONTROL 電影]** 的子菜單。
+1. 作者 **[!UICONTROL Scene7視頻]** 或 **[!UICONTROL 基礎視頻]** 元件。
 
-### 如果您要上傳影片至Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
+### 如果你正在將視頻上傳到Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
 
-如果您的資產不需要工作流程或版本設定，請將資產上傳至Scene7。 建議的工作流程如下：
+如果您不需要資產的工作流或版本化，請將資產上載到Scene7。 以下是推薦的工作流：
 
-1. 在Dynamic Media Classic, [設定排程的FTP上傳和編碼至Scene7（系統自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
-1. 在Experience Manager中，在 **[!UICONTROL Scene7]** 標籤。
-1. 使用 **[!UICONTROL Scene7影片]** 元件。
+1. 在Dynamic Media Classic, [設定定時FTP上傳和編碼到Scene7（系統自動）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)。
+1. 在Experience Manager中，訪問WCM中的視頻資產 **[!UICONTROL Scene7]** 的子菜單。
+1. 作者 **[!UICONTROL Scene7視頻]** 元件。
 
-## 設定與Scene7影片的整合 {#configuring-integration-with-scene-video}
+## 配置與Scene7視頻的整合 {#configuring-integration-with-scene-video}
 
-1. 在 **[!UICONTROL Cloud Services]**，導覽至 **[!UICONTROL Scene7]** 設定和選取 **[!UICONTROL 編輯]**.
-1. 選取 **[!UICONTROL 影片]** 標籤。
+1. 在 **[!UICONTROL Cloud Services]**，導航至 **[!UICONTROL Scene7]** 配置和選擇 **[!UICONTROL 編輯]**。
+1. 選擇 **[!UICONTROL 視頻]** 頁籤。
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
 
    >[!NOTE]
    >
-   >此 **[!UICONTROL 影片]** 如果頁面沒有雲端設定，則不會顯示索引標籤。
+   >的 **[!UICONTROL 視頻]** 如果頁面沒有雲配置，則不顯示頁籤。
 
-1. 選取最適化視訊編碼設定檔、現成可用的單一視訊編碼設定檔，或自訂視訊編碼設定檔。
+1. 選擇自適應視頻編碼配置檔案、現成的單個視頻編碼配置檔案或自定義視頻編碼配置檔案。
 
    >[!NOTE]
    >
-   >如需視訊預設集含義的詳細資訊，請參閱 [Dynamic Media Classic檔案](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files).
+   >有關視頻預設含義的詳細資訊，請參閱 [Dynamic Media Classic文檔](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)。
    >
-   >Adobe建議您在設定通用預設集時同時選取兩個最適化視訊集，或選取 **[!UICONTROL 最適化視訊編碼]** 選項。
+   >Adobe建議在配置通用預設時同時選擇兩個自適應視頻集，或選擇 **[!UICONTROL 自適應視頻編碼]** 的雙曲餘切值。
 
-1. 選取的編碼設定檔會自動套用至您為此Scene7雲端設定所設定的CQ DAM目標資料夾中所上傳的所有視訊。 您可以使用不同的目標資料夾來設定多個Scene7雲端設定，以視需要套用不同的編碼設定檔。
+1. 所選編碼配置檔案將自動應用於上載到您為此Scene7雲配置設定的CQ DAM目標資料夾的所有視頻。 您可以設定多個具有不同目標資料夾的Scene7雲配置，以根據需要應用不同的編碼配置檔案。
 
 ## 更新檢視器和編碼預設集 {#updating-viewer-and-encoding-presets}
 
-若要更新視訊的檢視器和編碼預設集，因為預設集已在Scene7中更新，請導覽至「雲端設定」中的Scene7設定，然後選取 **[!UICONTROL 更新檢視器和編碼預設集]**.
+若要更新視頻的查看器和編碼預設，因為預設已在Scene7更新，請導航至「雲配置」中的「Scene7配置」並選擇 **[!UICONTROL 更新查看器和編碼預設]**。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
-## 從AdobeDAM上傳主要來源視訊至Scene7 {#uploading-your-master-video}
+## 從AdobeDAM將主源視頻上載到Scene7 {#uploading-your-master-video}
 
-1. 導覽至CQ DAM Target資料夾，您已在該資料夾中使用Scene7編碼設定檔設定雲端設定。
-1. 選擇 **[!UICONTROL 上傳]** 上傳主要來源影片。 視訊上傳和編碼在 [!UICONTROL DAM更新資產] 工作流程已完成， **[!UICONTROL 發佈至Scene7]** 已勾選。
+1. 導航至CQ DAM目標資料夾，在該資料夾中您已使用Scene7編碼配置檔案設定雲配置。
+1. 選擇 **[!UICONTROL 上載]** 上載主源視頻。 視頻上載和編碼在 [!UICONTROL DAM更新資產] 工作流已完成， **[!UICONTROL 發佈到Scene7]** 有複選標籤。
 
    >[!NOTE]
    >
-   >產生視訊縮圖所花的時間。
+   >生成視頻縮略圖需要時間。
 
-   將DAM主要來源視訊拖曳至視訊元件存取上 *all* Scene7編碼的代理轉譯以供傳送。
+   將DAM主源視頻拖到視頻元件訪問 *全部* Scene7編碼了代理格式副本以供遞送。
 
-## Foundation視訊元件與Scene7視訊元件 {#foundation-video-component-versus-scene-video-component}
+## 基礎視頻元件與Scene7視頻元件 {#foundation-video-component-versus-scene-video-component}
 
-使用Experience Manager時，您可以同時存取Sites中可用的視訊元件和Scene7視訊元件。 這些元件不可互換。
+使用Experience Manager時，您可以訪問「站點」中可用的視頻元件和Scene7視頻元件。 這些元件不能互換。
 
-Scene7視訊元件只適用於Scene7視訊。 基礎元件可處理從Experience Manager（使用ffmpeg）和Scene7影片儲存的影片。
+Scene7視頻元件只適用於Scene7視頻。 該基礎元件使用從Experience Manager（使用ffmpeg）和Scene7視頻儲存的視頻。
 
-下列矩陣說明何時應使用哪個元件：
+以下矩陣說明了何時使用哪個元件：
 
 ![chlimage_1-365](assets/chlimage_1-365.png)
 
 >[!NOTE]
 >
->S7視訊元件現成可使用通用視訊設定檔。 不過，您可以取得以HTML5為基礎的視訊播放器，以供Experience Manager使用。 在Scene7中，複製現成可用的HTML5視訊播放器的內嵌程式碼，並將其放入您的Experience Manager頁面中。
+>S7視頻元件現成使用通用視頻配置檔案。 但是，您可以獲得基於HTML5的視頻播放器，供Experience Manager使用。 在Scene7，複製現成HTML5視頻播放器的嵌入代碼，並將其放入Experience Manager頁面。
 
-## Experience Manager視訊元件 {#aem-video-component}
+## Experience Manager視頻元件 {#aem-video-component}
 
-即使建議使用Scene7視訊元件來檢視Scene7視訊，為了完整起見，本節說明如何將Scene7視訊與Foundation視訊元件搭配Experience Manager使用。
+即使建議使用Scene7視頻元件來觀看Scene7視頻，但為了完整起見，本節將介紹為了使用Scene7視頻與Experience Manager中的基金會視頻元件一起使用視頻。
 
-### Experience Manager影片和Scene7影片比較 {#aem-video-and-scene-video-comparison}
+### Experience Manager視頻與Scene7視頻比較 {#aem-video-and-scene-video-comparison}
 
-下表提供Experience ManagerFoundation視訊元件和Scene7視訊元件之間所支援功能的高階比較：
+下表提供了Experience Manager基金會視頻元件和Scene7視頻元件之間支援的功能的高級比較：
 
-|  | Experience ManagerFoundation影片 | Scene7影片 |
+|  | Experience Manager基金會視頻 | Scene7視頻 |
 |---|---|---|
-| 方法 | HTML5第一種方法。 Flash僅用於非HTML5後援。 | Flash在大多數案頭上。 HTML5用於行動裝置和平板電腦。 |
-| 傳送 | 漸進式 | 最適化串流 |
-| 追蹤 | 是 | 是 |
-| 擴充性 | 是 | 否 |
+| 方法 | HTML5第一步。 Flash僅用於非HTML5回退。 | Flash在大多數台式機上。 HTML5用於移動和平板電腦。 |
+| 傳送 | 累進 | 自適應流 |
+| 跟蹤 | 是 | 是 |
+| 擴展性 | 是 | 否 |
 | 行動視訊 | 是 | 是 |
 
 ### 設定 {#setting-up}
 
-#### 建立視訊設定檔 {#creating-video-profiles}
+#### 建立視頻配置檔案 {#creating-video-profiles}
 
-系統會根據S7雲端設定中選取的S7編碼預設集來建立各種視訊編碼。 為了讓基礎視訊元件使用，必須為選取的每個S7編碼預設集建立視訊設定檔。 此方法可讓視訊元件據以選取DAM轉譯。
+根據S7雲配置中選擇的S7編碼預設來建立各種視頻編碼。 要使用基礎視頻元件，必須為每個選定的S7編碼預設建立視頻配置檔案。 此方法允許視頻元件相應地選擇DAM格式副本。
 
 >[!NOTE]
 >
->必須啟動新視訊設定檔及其變更才能發佈。
+>必須激活新視頻配置檔案及對它們所做的更改才能發佈。
 
-1. 在Experience Manager中，選取 **[!UICONTROL 工具]** > **[!UICONTROL 配置控制台]**.
-1. 在 **[!UICONTROL 配置控制台]**，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL DAM]** > **[!UICONTROL 視訊設定檔]** 在導航樹中。
-1. 建立S7視訊設定檔。 在 **[!UICONTROL 新增]**. 菜單，選擇 **[!UICONTROL 建立頁面]** 然後選取「Scene7視訊描述檔」範本。 為新視訊描述檔頁面命名並選取 **[!UICONTROL 建立]**.
+1. 在Experience Manager中，選擇 **[!UICONTROL 工具]** > **[!UICONTROL 配置控制台]**。
+1. 在 **[!UICONTROL 配置控制台]**，導航 **[!UICONTROL 工具]** > **[!UICONTROL 水壩]** > **[!UICONTROL 視頻配置檔案]** 的子菜單。
+1. 建立S7視頻配置檔案。 在 **[!UICONTROL 新建]**。 菜單，選擇 **[!UICONTROL 建立頁]** 然後選擇「Scene7視頻配置檔案」模板。 為新視頻配置檔案頁面指定名稱並選擇 **[!UICONTROL 建立]**。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
-1. 編輯新的視訊設定檔。 先選取雲端設定。 然後選取與雲端設定中選取的編碼預設集相同。
+1. 編輯新視頻配置檔案。 首先選擇雲配置。 然後選擇與雲配置中選擇的編碼預設相同。
 
    ![chlimage_1-367](assets/chlimage_1-367.png)
 
    | 屬性 | 說明 |
    |---|---|
-   | Scene7 雲端設定 | 用於編碼預設集的雲端設定。 |
-   | Scene7 編碼預設集 | 用來對應此視訊設定檔的編碼預設集。 |
-   | HTML5 視訊類型 | 此屬性可讓您設定HTML5視訊來源元素的type屬性值。 S7編碼預設集未提供此資訊，但使用S75視訊元素正確轉譯視訊時需要此資訊。HTML5視訊元素 提供了常用格式的清單，但可以覆蓋其他格式。 |
+   | Scene7 雲端設定 | 用於編碼預設的雲配置。 |
+   | Scene7 編碼預設集 | 用於映射此視頻配置檔案的編碼預設。 |
+   | HTML5 視訊類型 | 此屬性用於設定HTML5視頻源元素的type屬性的值。 S7編碼預設不提供此資訊，但是使用HTML5視頻元素正確呈現視頻時需要此資訊。 提供了通用格式的清單，但可以覆蓋其它格式。 |
 
-   對您要在視訊元件中使用的雲端設定中選取的所有編碼預設集，重複此步驟。
+   對要在視頻元件中使用的雲配置中選擇的所有編碼預設重複此步驟。
 
 #### 配置設計 {#configuring-design}
 
-此 **[!UICONTROL Foundation影片]** 元件必須知道要使用哪些視訊設定檔，才能建立視訊來源清單。 開啟視訊元件設計對話方塊，並設定使用新視訊設定檔的元件設計。
+的 **[!UICONTROL 基礎視頻]** 元件必須知道要構建視頻源清單要使用哪些視頻配置檔案。 開啟視頻元件設計對話框並配置元件設計以使用新視頻配置檔案。
 
 >[!NOTE]
 >
->如果您使用 **[!UICONTROL Foundation影片]** 元件，在行動頁面的設計上重複這些步驟。
+>如果使用 **[!UICONTROL 基礎視頻]** 元件，在移動頁面的設計中重複這些步驟。
 
 >[!NOTE]
 >
->對設計所做的變更需要啟動設計，才能對發佈生效。
+>對設計所做的更改需要激活設計以便對發佈生效。
 
-1. 開啟 **[!UICONTROL Foundation影片]** 元件的設計對話框，並更改為 **[!UICONTROL 設定檔]** 標籤。 然後刪除現成可用的設定檔，並新增新的S7視訊設定檔。 設計對話方塊中描述檔清單的順序會定義轉譯時視訊來源元素的順序。
-1. 針對不支援HTML5的瀏覽器，視訊元件可讓您設定Flash後援。 開啟視訊元件設計對話方塊，並變更為 **[!UICONTROL Flash]** 標籤。 配置Flash播放器設定，並為Flash播放器指派後援設定檔。
+1. 開啟 **[!UICONTROL 基礎視頻]** 元件的「設計」對話框，並更改為 **[!UICONTROL 配置檔案]** 頁籤。 然後刪除現成配置檔案，並添加新的S7視頻配置檔案。 「設計」對話框中配置檔案清單的順序定義渲染時視頻源元素的順序。
+1. 對於不支援HTML5的瀏覽器，視頻元件允許您配置Flash回退。 開啟視頻元件設計對話框，並更改到 **[!UICONTROL Flash]** 頁籤。 配置Flash播放器設定並為Flash播放器分配備用配置檔案。
 
-#### 檢查清單 {#checklist}
+#### 核對表 {#checklist}
 
-1. 建立S7雲端設定。 請確定已設定視訊編碼預設集，且匯入工具正在執行。
-1. 為雲端設定中選取的每個視訊編碼預設集建立S7視訊設定檔。
-1. 必須啟動視訊設定檔。
-1. 設定 **[!UICONTROL Foundation影片]** 元件。
-1. 完成設計變更後，啟動設計。
+1. 建立S7雲配置。 確保已設定視頻編碼預設且導入程式正在運行。
+1. 為雲配置中選擇的每個視頻編碼預設建立S7視頻配置檔案。
+1. 必須激活視頻配置檔案。
+1. 配置 **[!UICONTROL 基礎視頻]** 元件。
+1. 完成設計更改後激活設計。

@@ -1,6 +1,6 @@
 ---
 title: 預設元件
-description: Adobe Experience Manager隨附各種現成可用的元件，可為網站作者提供全方位的功能。
+description: Adobe Experience Manager提供了各種現成元件，為網站作者提供全面的功能。
 uuid: 55caeec3-add7-4d05-a620-07e33901adb7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,53 +17,53 @@ ht-degree: 1%
 
 # 元件{#components}
 
-Adobe Experience Manager(AEM)隨附各種現成可用的元件，可為網站作者提供完整的功能。 可於 [編輯頁面](/help/sites-authoring/editing-content.md) 和會依主要功能區域（稱為元件群組）分組，以輔助篩選。
+Adobe Experience ManagerAEM()附帶了各種現成元件，可為網站作者提供全面的功能。 當 [編輯頁面](/help/sites-authoring/editing-content.md) 按主功能區（稱為元件組）分組，以幫助過濾。
 
-元件可在 [編輯頁面](/help/sites-authoring/editing-content.md). 為了輔助過濾，按主功能區（即元件組）對元件進行分組。
+元件在 [編輯頁面](/help/sites-authoring/editing-content.md)。 為了幫助過濾，按主要功能區（即元件組）對元件進行分組。
 
 >[!NOTE]
 >
->本節僅探討標準AEM安裝中可立即使用的元件。
+>本節僅討論標準安裝中現成的元件AEM。
 >
->您可能已根據您的執行個體明確開發自訂元件，以符合您的需求。 這些元件甚至可能與此處討論的某些元件具有相同的名稱。
+>根據您的實例，您可能已根據您的要求明確開發了自定義元件。 這些元件甚至可能與此處討論的某些元件具有相同的名稱。
 
-## 一般用途 {#general-usage}
+## 常規用法 {#general-usage}
 
-元件可在 **元件** 頁面編輯器的側面板標籤 [編輯頁面](/help/sites-authoring/editing-content.md).
+元件在 **元件** 的子菜單。 [編輯頁面](/help/sites-authoring/editing-content.md)。
 
-您可以選取元件，並將其拖曳至頁面上的必要位置。 然後，您可以使用：
+您可以選擇元件並將其拖到頁面上的所需位置。 然後，可以使用：
 
 * [配置屬性](/help/sites-authoring/editing-page-properties.md)
 * [編輯內容](/help/sites-authoring/editing-content.md)
 
-* [編輯內容 — 全螢幕模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
+* [編輯內容 — 全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
-如需將元件新增至頁面的詳細資訊，請參閱文章 [編輯頁面內容](/help/sites-authoring/editing-content.md).
-元件會根據稱為元件群組的不同類別排序。 此類元件組的示例包括：
+有關將元件添加到頁面的詳細資訊，請參閱文章 [編輯頁面內容](/help/sites-authoring/editing-content.md)。
+元件按稱為元件組的不同類別排序。 此類元件組的示例包括：
 
-* **We.Retail**:包含為搭配使用而代理的核心元件 [We.Retail參考實作](/help/sites-developing/we-retail.md).
+* **We.Retail**:包括代為與 [We.零售參考實施](/help/sites-developing/we-retail.md)。
 
-* **We.Retail Commerce**:包括商務元件，如購物車和產品網格
+* **We.Retail Commerce**:包括商業元件，如購物車和產品網格
 
-* **一般**:包含版面容器和體驗片段
+* **常規**:包括佈局容器和體驗片段
 
-## 所有元件概觀 {#overview-of-all-components}
+## 所有元件概覽 {#overview-of-all-components}
 
-此 [元件主控台](/help/sites-authoring/default-components-console.md) 提供由AEM安裝提供的元件群組和元件概觀。 您可以檢視個別元件及其使用方式的重要資訊。
+的 [元件控制台](/help/sites-authoring/default-components-console.md) 概述了安裝提供的元件組和組AEM件。 您可以查看有關各個元件及其使用情況的關鍵資訊。
 
-## 元件 — 主要領域 {#components-major-areas}
+## 元件 — 主要區域 {#components-major-areas}
 
-以下頁面提供有關元件的其他重要資訊的連結：
+以下頁面提供了指向某些其他重要元件資訊的連結：
 
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)  — 核心元件提供彈性且功能豐富的製作功能，提供建立頁面所需的基本內容類型。
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)  — 核心元件提供靈活且功能豐富的創作功能，這些功能提供建立頁面所需的基本內容類型。
 
-* [社群](/help/communities/author-communities.md)  — 元件為網站提供互動式功能，如論壇和評論。 其中許多元件會包含在 [社群網站](/help/communities/overview.md) 中所有規則的URL區段。
+* [社區](/help/communities/author-communities.md)  — 元件為網站提供交互功能，如論壇和評論。 其中的許多元件在 [社區網站](/help/communities/overview.md) 的子菜單。
 
-* [電子商務](/help/commerce/cif-classic/administering/ecommerce.md) - AEM中的電子商務功能也包含一系列元件。 實際使用取決於使用的商務引擎。
+* [電子商務](/help/commerce/cif-classic/administering/ecommerce.md)  — 其中的電子商務功AEM能還包括一系列元件。 實際使用取決於所使用的商業引擎。
 
 ### 配置元件 {#configuring-components}
 
-除了可供作者在標準安裝中存取的元件外，您也可使用各種其他元件。
+除了作者可以在標準安裝中訪問的元件外，還提供了各種其他元件。
 
-* 如果您的頁面是以建議、現代、可編輯的範本為基礎，您可以 [編輯範本](/help/sites-authoring/templates.md) 啟用/停用這些功能，並編輯特定元件的參數。
-* 如果您的頁面是以靜態範本為基礎，您可以使用 [設計模式](/help/sites-authoring/default-components-designmode.md#enable-disable-components) 啟用/停用這些功能，並編輯特定元件的參數。
+* 如果您的頁面基於推薦的、現代的、可編輯的模板，則您可以 [編輯模板](/help/sites-authoring/templates.md) 啟用/禁用這些參數並編輯特定元件的參數。
+* 如果您的頁面基於靜態模板，則可以使用 [設計模式](/help/sites-authoring/default-components-designmode.md#enable-disable-components) 啟用/禁用這些參數並編輯特定元件的參數。

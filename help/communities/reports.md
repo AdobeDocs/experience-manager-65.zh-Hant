@@ -1,7 +1,7 @@
 ---
-title: 報表主控台
+title: 報告控制台
 seo-title: Reports Console
-description: 了解如何存取報表
+description: 瞭解如何訪問報告
 seo-description: Learn how to access reports
 uuid: 7bb15a15-077b-4bfb-aaf4-50fddc67f237
 contentOwner: Janice Kendall
@@ -19,31 +19,31 @@ ht-degree: 9%
 
 ---
 
-# 報表主控台 {#reports-console}
+# 報告控制台 {#reports-console}
 
 ## 概觀 {#overview}
 
-針對AEM Communities，有多種報表可從製作環境以數種方式存取。
+對於AEM Communities，有各種報告可以從作者環境以多種方式查閱。
 
-一般而言，各種報告包括：
+總的來說，各種報告是：
 
 * [檢視報表](#views-report)
 
-   提供任何社群網站的社群成員和網站訪客的內容檢視圖表。
+   為任何社區站點提供按社區成員和站點訪問者列出的內容視圖圖表。
 
 * [貼文報表](#posts-report)
 
-   提供依社群成員到任何社群網站的各種貼文類型的圖表。
+   按社區成員向任何社區站點提供各種類型帖子的圖表。
 
-表格報表可匯出為.csv格式，以供後續處理。
+表格式報告可以以.csv格式導出，以供後續處理。
 
-## 報表主控台 {#reporting-consoles}
+## 報告控制台 {#reporting-consoles}
 
-### 社群網站報表 {#reports-for-community-sites}
+### 社區站點報告 {#reports-for-community-sites}
 
-* 從全局導航： **[!UICONTROL 導覽]** > **[!UICONTROL 社群]** >  **[!UICONTROL 報表]**
+* 從全局導航： **[!UICONTROL 導航]** > **[!UICONTROL 社區]** >  **[!UICONTROL 報告]**
 
-* 選擇：
+* 從以下選項中選擇：
 
    * **[!UICONTROL 指定任務報表]**
 
@@ -53,7 +53,7 @@ ht-degree: 9%
       * 為所選社區站點、內容類型和時段生成報告。
    * **[!UICONTROL 檢視報表]**
 
-      * 為選定的社區站點、內容類型和時段生成報告。
+      * 為所選社區站點、內容類型和時段生成報告。
 
 
 
@@ -61,11 +61,11 @@ ht-degree: 9%
 
 ## 檢視報表 {#views-report}
 
-「檢視」主控台可讓您在指定時段內，依社群功能在頁面檢視時產生報表。
+「視圖」控制台允許在給定時間段內按社區功能在頁面視圖上生成報告。
 
-![檢視報表](assets/view-report.png)
+![查看報表](assets/view-report.png)
 
-選取報表的條件：
+選擇報表的條件：
 
 * **[!UICONTROL 網站]**
 
@@ -75,7 +75,7 @@ ht-degree: 9%
 
    可以選擇「全部內容」或選擇站點上存在的功能之一。
 
-* **[!UICONTROL 時間範圍]**
+* **[!UICONTROL 時間框]**
 
    選擇以下選項之一：
 
@@ -84,17 +84,17 @@ ht-degree: 9%
    * 過去 90 天
    * 去年
 
-選擇 **[!UICONTROL 產生]** 來建立報表。
+選擇 **[!UICONTROL 生成]** 的子菜單。
 
-![generate-views](assets/generate-views.png)
+![生成視圖](assets/generate-views.png)
 
 ## 貼文報表 {#posts-report}
 
-「貼文」主控台可針對特定時段內社群功能的貼文數產生報表。
+「帖子」控制台允許在給定時間段內生成針對社區功能帖子數的報告。
 
-![貼文 — 報表](assets/posts-report.png)
+![員額報告](assets/posts-report.png)
 
-選取報表的條件：
+選擇報表的條件：
 
 * **[!UICONTROL 網站]**
 
@@ -104,7 +104,7 @@ ht-degree: 9%
 
    可以選擇「全部內容」或選擇站點上存在的功能之一。
 
-* **[!UICONTROL 時間範圍]**
+* **[!UICONTROL 時間框]**
 
    選擇以下選項之一：
 
@@ -113,18 +113,18 @@ ht-degree: 9%
    * 過去 90 天
    * 去年
 
-選擇 **[!UICONTROL 產生]** 來建立報表。
+選擇 **[!UICONTROL 生成]** 的子菜單。
 
-![generate-report](assets/generate-posts-report.png)
+![生成報告](assets/generate-posts-report.png)
 
 ## 疑難排解 {#troubleshooting}
 
 ### 未列出社區站點 {#no-community-sites-listed}
 
-如果未列出社群網站，請確定已為網站啟用Adobe Analytics。 如果選擇分配的報表，請確保分配函式位於社區站點的結構中。
+如果未列出社區站點，請確保已為站點啟用Adobe Analytics。 如果選擇分配的報告，請確保分配功能位於社區站點的結構中。
 
-### 報表未顯示在AEM製作例項中 {#reports-do-not-show-in-aem-author-instance}
+### 報告不在AEM作者實例中顯示 {#reports-do-not-show-in-aem-author-instance}
 
-如果報表未顯示在AEM製作例項中，請檢查是否有自訂項目，例如「發佈」例項上的URL對應。 如果僅在社群網站的AEM Publish例項上完成URL對應，請確定已在中的AEM Author例項中設定相同的URL對應 **網站趨勢報表社交元件工廠** 設定。
+如果報告未在AEM作者實例中顯示，請檢查自定義項，如發佈實例上的URL映射。 如果僅在社區站點的AEM發佈實例上完成URL映射，請確保在中的AEM Author實例中配置了該映射 **地點趨勢報表社會元件工廠** 配置。
 
-![AEM作者上的URL對應](assets/sitetrend.png)
+![AEM作者上的URL映射](assets/sitetrend.png)

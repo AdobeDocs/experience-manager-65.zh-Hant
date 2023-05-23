@@ -1,7 +1,7 @@
 ---
-title: 設定您的AdobeMobile ServicesCloud Service
+title: 配置Adobe移動服務Cloud Service
 seo-title: Configure your Adobe Mobile Services Cloud Service
-description: 請依照本頁面設定您的AdobeMobile ServicesCloud Service。
+description: 按照此頁配置Adobe移動服務Cloud Service。
 seo-description: Follow this page to configure your Adobe Mobile Services Cloud Service.
 uuid: 21fe5b24-dc4d-4ee4-9e7f-ed4783baf276
 contentOwner: User
@@ -18,63 +18,63 @@ ht-degree: 2%
 
 ---
 
-# 設定您的AdobeMobile ServicesCloud Service {#configure-your-adobe-mobile-services-cloud-service}
+# 配置Adobe移動服務Cloud Service {#configure-your-adobe-mobile-services-cloud-service}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-此 **行動量度圖磚** 在命令中心，為您的行動應用程式提供即時分析。
+的 **移動度量平鋪** 命令中心為移動應用程式提供即時分析。
 
-此 [AdobeMobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK可透過PhoneGap外掛程式使用。 系統會在裝置上收集和快取量度，直到裝置連線為止，此時資料會推送至AdobeMobile Services Cloud以供報告和分析。
+的 [Adobe移動分析](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK通過PhoneGap插件提供。 度量被收集並快取在設備上，直到設備被連接，此時資料被推送到Adobe移動服務雲以用於報告和分析。
 
-AdobeMobile Analytics SDK提供下列功能：
+AdobeMobile Analytics SDK提供以下功能：
 
-1. **行動頻道的資料收集**  — 收集所有主要作業系統上行動網站和應用程式的完整資料。
-1. **行動參與分析**  — 了解您行動應用程式、網站或影片中的使用者參與度，包括消費者啟動管道的頻率、是否透過該管道購買等。
-1. **行動應用程式控制面板和報表**  — 取得使用狀況報表，其中包含應用程式和應用程式商店量度的生命週期量度 — 請參閱使用者、啟動、平均工作階段長度、保留長度和當機趨勢。
-1. **行動促銷活動分析**  — 量化行動專屬行銷活動（例如簡訊、行動搜尋廣告、行動顯示廣告和QR碼）的成效。
-1. **地理位置分析**  — 根據GPS位置或地標，尋找應用程式使用者啟動並與行動體驗互動的位置。
-1. **路徑分析**  — 了解使用者如何導覽您的應用程式，以判斷哪些畫面和UI元素吸引使用者，哪些元素會導致使用者流失。
+1. **用於移動通道的資料收集**  — 收集所有主要作業系統上的移動網站和應用程式的全面資料。
+1. **移動接洽分析**  — 瞭解您的移動應用、網站或視頻中的用戶參與，包括消費者啟動該渠道的頻率、他們是否從該渠道進行購買等。
+1. **移動應用儀表板和報告**  — 獲取包含應用程式和應用商店度量的生命週期度量的使用情況報告 — 請參閱用戶趨勢、啟動、平均會話長度、保留長度和崩潰。
+1. **移動活動分析**  — 量化特定移動活動（如簡訊、移動搜索廣告、移動顯示廣告和二維碼）的效果。
+1. **地理位置分析**  — 查找應用程式用戶在何處啟動，並通過GPS位置或興趣點與您的移動體驗進行交互。
+1. **路徑分析**  — 查看用戶如何在您的應用程式中導航，以確定哪些螢幕和UI元素正在吸引用戶，哪些會導致用戶退出。
 
 >[!CAUTION]
 >
->此 **分析量度** 圖磚會顯示在控制面板中，唯有在您已設定雲端服務時。
+>的 **分析度量** 磁貼僅在配置了雲服務後才顯示在儀表板中。
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
-AEM Command Center量度圖磚
+命AEM令中心度量平鋪
 
-## 設定Cloud Service {#configuring-the-cloud-service}
+## 配置Cloud Service {#configuring-the-cloud-service}
 
-若要利用Mobile Services AnalyticsAdobe，您必須使用您的Adobe Analytics帳戶資訊來設定AEM Mobile Analytics Cloud服務。
+為了利用Adobe移動服務分析，您需要使用您的Adobe Analytics帳戶資訊配置AEM MobileAnalytics Cloud服務。
 
-1. 按一下右上角的圖示，即可新增或編輯Cloud Services **管理Cloud Services** 圖磚。
+1. 按一下右上角的表徵圖可添加或編輯Cloud Services **管理Cloud Services** 從應用儀表板中平鋪。
 
    ![chlimage_1-23](assets/chlimage_1-23.png)
 
-1. 此 **新增或編輯Cloud Services** 畫面隨即顯示。 選擇 **AdobeMobile Services** 按一下 **下一個**.
+1. 的 **添加或編輯Cloud Services** 螢幕。 選擇 **Adobe移動服務** 按一下 **下一個**。
 
    ![chlimage_1-24](assets/chlimage_1-24.png)
 
-1. 從 **Mobile Services** 或選擇 **建立配置** 來建立新的。
+1. 從 **移動服務** 或 **建立配置** 的雙曲餘切值。
 
-   若為新設定，請輸入 **Mobile Services屬性**&#x200B;按一下&#x200B;**驗證。**
+   對於新配置，請輸入 **移動服務屬性**&#x200B;按一下&#x200B;**驗證。**
 
    ![chlimage_1-25](assets/chlimage_1-25.png)
 
-   如果驗證了憑據，則 **驗證** 按鈕變更為 **已驗證**. 您可以選擇行動服務應用程式，從 **選取行動應用程式服務**.
+   如果驗證憑據， **驗證** 按鈕更改 **已驗證**。 可以從中選擇移動服務應用 **選擇移動應用服務**。
 
-   按一下 **提交** 來設定您的設定。
+   按一下 **提交** 設定配置。
 
    ![chlimage_1-26](assets/chlimage_1-26.png)
 
-1. 設定雲端設定後，您就可以在控制面板中檢視相同的設定。
+1. 設定雲配置後，您可以在儀表板中查看相同的配置。
 
    ![chlimage_1-27](assets/chlimage_1-27.png)
 
    >[!NOTE]
    >
-   >設定雲端設定後，即可檢視 **分析量度** 在應用程式控制面板中平鋪。
+   >設定雲配置後，您可以查看 **分析度量** 在應用儀表板中平鋪。
 
    ![chlimage_1-28](assets/chlimage_1-28.png)

@@ -1,6 +1,6 @@
 ---
 title: 具有API的電子商務整合層
-description: 整合架構包含具有API的整合層。
+description: 該整合框架包括具有API的整合層。
 uuid: 48e01bbb-8f9e-489c-bbe4-24563e84ff35
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,30 +17,30 @@ ht-degree: 0%
 
 # 電子商務{#ecommerce}
 
-整合架構包含具有API的整合層。 這可讓您：
+該整合框架包括具有API的整合層。 這允許您：
 
-* 插入電子商務系統，並將產品資料提取至AEM
-* 針對商務功能建立AEM元件，不受特定電子商務引擎影響
+* 插入電子商務系統並將產品資料拉入AEM
+* 構建AEM獨立於特定電子商務引擎的商務功能元件
 
-如需詳細資訊，請參閱：
+有關詳細資訊，請參閱：
 
-* [開發（一般）](/help/commerce/cif-classic/developing/generic.md)
-* [使用SAP開發Commerce Cloud](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
-
->[!NOTE]
->
->由於電子商務架構可與任何電子商務解決方案搭配使用，請參閱 [開發（一般）](/help/commerce/cif-classic/developing/generic.md) 以了解更多有關開發可能性的資訊。
+* [開發（通用）](/help/commerce/cif-classic/developing/generic.md)
+* [使用SAPCommerce Cloud開發](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
 
 >[!NOTE]
 >
->若要與外部電子商務提供者使用整合架構，您必須先安裝所需的套件。 如需詳細資訊，請參閱 [部署eCommerce](/help/commerce/cif-classic/deploying/ecommerce.md).
+>由於電子商務框架可以與任何電子商務解決方案一起使用，請參見 [開發（通用）](/help/commerce/cif-classic/developing/generic.md) 的子菜單。
+
+>[!NOTE]
 >
->如需有關概念和管理電子商務實作的資訊，請參閱 [管理電子商務](/help/commerce/cif-classic/administering/ecommerce.md).
+>要將整合框架與外部電子商務提供程式一起使用，您首先需要安裝所需的軟體包。 有關詳細資訊，請參見 [部署電子商務](/help/commerce/cif-classic/deploying/ecommerce.md)。
+>
+>有關概念和管理電子商務實施的資訊，請參見 [管理電子商務](/help/commerce/cif-classic/administering/ecommerce.md)。
 
-## API檔案 {#api-documentation}
+## API文檔 {#api-documentation}
 
-電子商務API由套件提供：
+電子商務API由以下程式包提供：
 
 `com.adobe.cq.commerce.*`
 
-請參閱 [API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) 以取得更多資訊。
+查看 [API文檔](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) 的上界。

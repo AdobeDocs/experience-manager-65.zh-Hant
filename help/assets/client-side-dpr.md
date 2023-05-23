@@ -1,6 +1,6 @@
 ---
-title: 使用具有用戶端裝置像素比的智慧型影像
-description: 了解如何搭配Dynamic Media在Adobe Experience Manager as a Cloud Service中使用用戶端裝置像素比率與智慧型影像。
+title: 使用具有客戶端設備像素比的智慧映像
+description: 瞭解如何將客戶端設備像素比率與Adobe Experience Manager as a Cloud Service的智慧映像結合使用Dynamic Media。
 role: Admin,User
 exl-id: e38f522a-242a-4ea9-a866-d8d129950831
 source-git-commit: c8682118f15132063073df5cdc2b576b6e62a0c8
@@ -10,27 +10,27 @@ ht-degree: 0%
 
 ---
 
-# 關於使用用戶端裝置像素比率(DPR)的智慧型影像 {#client-side-dpr}
+# 關於具有客戶端設備像素比(DPR)的智慧成像 {#client-side-dpr}
 
-目前的智慧型影像處理解決方案使用使用者代理字串，來判斷所使用的裝置類型（桌上型電腦、平板電腦、行動裝置等）。
+當前的智慧映像解決方案使用用戶代理字串來確定正在使用的設備類型（案頭、平板電腦、移動設備等）。
 
-裝置偵測功能（根據使用者代理字串的DPR）通常不準確，尤其是Apple裝置。 此外，每當新裝置啟動時，都必須驗證它。
+設備檢測功能 — 基於用戶代理字串的DPR — 往往不準確，特別是對於Apple設備。 此外，只要新設備啟動，就必須對其進行驗證。
 
-用戶端DPR可提供100%的精確值，且適用於任何裝置，無論是Apple或任何其他已啟動的新裝置皆然。
+客戶端DPR為您提供100%的準確值，適用於任何設備，無論是Apple設備還是任何其他已啟動的新設備。
 
-## 使用用戶端DPR程式碼
+## 使用客戶端DPR代碼
 
-**伺服器端轉譯的應用程式**
+**伺服器端呈現的應用**
 
-1. 載入服務工作器初始化(`srvinit.js`)，並在HTML頁面的標題區段中加入下列指令碼：
+1. 載入服務工作器初始化(`srvinit.js`)，在HTML頁的標題部分包含以下指令碼：
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
    ```
 
-   Adobe建議您載入此指令碼 _befor_ 任何其他指令碼，以便服務工作人員立即開始初始化。
+   Adobe建議您載入此指令碼 _先_ 任何其他指令碼，以便服務工作人員立即開始初始化。
 
-1. 在HTML頁面內文區段頂端加入下列DPR影像標籤程式碼：
+1. 在HTML頁的正文部分頂部包括以下DPR影像標籤代碼：
 
    ```html
    <img src="aem_dm_dpr_1x.jpg" style="width:1px;height:1px;display:none"
@@ -41,11 +41,11 @@ ht-degree: 0%
        aem_dm_dpr_5x.jpg 5x">
    ```
 
-   您必須加入此DPR影像標籤程式碼 _befor_ HTML頁面中的所有靜態影像。
+   必須包括此DPR影像標籤代碼 _先_ HTML頁中的所有靜態映像。
 
-**用戶端轉譯的應用程式**
+**客戶端呈現的應用**
 
-1. 在HTML頁面的標題區段中加入下列DPR指令碼：
+1. 在HTML頁的標題部分包括以下DPR指令碼：
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
@@ -54,12 +54,12 @@ ht-degree: 0%
 
    您可以將兩個DPR指令碼合併為一個，以避免多個網路請求。
 
-   Adobe建議您載入這些指令碼 _befor_ 「HTML」頁面中的任何其他指令碼。
-Adobe也建議您以diffHTML標籤（而非內文元素）Bootstrap應用程式。 原因是 `dprImageInjection.js` 在「HTML」頁面的內文區段頂端動態插入影像標籤。
+   Adobe建議您載入這些指令碼 _先_ 「HTML」頁中的任何其他指令碼。
+Adobe還建議您在diffHTML標籤而不是body元素下Bootstrap應用。 原因是 `dprImageInjection.js` 動態地在HTML頁的body部分頂部彈出影像標籤。
 
 ## JavaScript檔案下載 {#client-side-dpr-script}
 
-下載中的下列JavaScript檔案僅供您參考。 如果您想在HTML頁面中使用這些檔案，請務必編輯每個檔案的程式碼，以符合您自己的需求。
+下載中的以下JavaScript檔案僅作為示例引用提供給您。 如果要在HTML頁中使用這些檔案，請確保編輯每個檔案的代碼以符合您自己的要求。
 
 * `dprImageInjection.js`
 * `srvinit.js`

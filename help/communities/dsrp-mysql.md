@@ -1,5 +1,5 @@
 ---
-title: DSRP的MySQL配置
+title: 用於DSRP的MySQL配置
 seo-title: MySQL Configuration for DSRP
 description: 如何連接到MySQL伺服器並建立UGC資料庫
 seo-description: How to connect to the MySQL server and establish the UGC database
@@ -18,78 +18,78 @@ ht-degree: 0%
 
 ---
 
-# DSRP的MySQL配置 {#mysql-configuration-for-dsrp}
+# 用於DSRP的MySQL配置 {#mysql-configuration-for-dsrp}
 
-MySQL是關係資料庫，可用於儲存用戶生成的內容(UGC)。
+MySQL是一個關係資料庫，可用於儲存用戶生成的內容(UGC)。
 
-這些說明說明如何連接到MySQL Server並建立UGC資料庫。
+這些說明描述了如何連接到MySQL伺服器和建立UGC資料庫。
 
 ## 要求 {#requirements}
 
-* [最新Communities功能套件](deploy-communities.md#latestfeaturepack)
+* [最新社區功能包](deploy-communities.md#latestfeaturepack)
 * [MySQL的JDBC驅動程式](deploy-communities.md#jdbc-driver-for-mysql)
 * 關係資料庫：
 
-   * [MySQL Server](https://dev.mysql.com/downloads/mysql/) Community Server 5.6版或更新版本
+   * [MySQL伺服器](https://dev.mysql.com/downloads/mysql/) 社區伺服器5.6版或更高版本
 
-      * 可在與AEM相同的主機上運行或遠程運行
-   * [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)
+      * 可以在與同一主機上運行，也AEM可以遠程運行
+   * [MySQL工作台](https://dev.mysql.com/downloads/tools/workbench/)
 
 
 ## 安裝MySQL {#installing-mysql}
 
-[MySQL](https://dev.mysql.com/downloads/mysql/) 應按照目標作業系統的指示下載並安裝。
+[MySQL](https://dev.mysql.com/downloads/mysql/) 應按照目標作業系統的說明下載並安裝。
 
 ### 小寫表名 {#lower-case-table-names}
 
-由於SQL不區分大小寫，因此對於區分大小寫的作業系統，必須包含一個設定來將所有表名都小寫。
+由於SQL不區分大小寫，因此對於區分大小寫的作業系統，必須包含一個設定，以便將所有表名都小寫。
 
 例如，要指定Linux OS上所有小寫表名：
 
 * 編輯檔案 `/etc/my.cnf`
-* 在 `[mysqld]` 區段，新增下列行：
+* 在 `[mysqld]` ，添加以下行：
 
    `lower_case_table_names = 1`
 
 ### UTF8字元集 {#utf-character-set}
 
-若要提供更好的多語言支援，必須使用UTF8字元集。
+要提供更好的多語言支援，必須使用UTF8字元集。
 
-將MySQL更改為以UTF8作為其字元集：
+將MySQL更改為將UTF8作為其字元集：
 
-* mysql >設定名稱&#39;utf8&#39;;
+* mysql > SET NAMES &#39;utf8&#39;;
 
 將MySQL資料庫更改為預設UTF8:
 
 * 編輯檔案 `/etc/my.cnf`
-* 在 `[client]` 區段，新增下列行：
+* 在 `[client]` ，添加以下行：
 
    `default-character-set=utf8`
 
-* 在 `[mysqld]` 區段，新增下列行：
+* 在 `[mysqld]` ，添加以下行：
 
    `character-set-server=utf8`
 
 ## 安裝MySQL Workbench {#installing-mysql-workbench}
 
-MySQL Workbench提供了用於執行SQL指令碼的UI，這些指令碼安裝架構和初始資料。
+MySQL Workbench提供了用於執行安裝架構和初始資料的SQL指令碼的UI。
 
-MySQL Workbench應按照目標作業系統的說明下載並安裝。
+MySQL Workbench應按照目標OS的說明下載和安裝。
 
-## Communities Connection {#communities-connection}
+## 社區連接 {#communities-connection}
 
-MySQL Workbench首次啟動時（除非已用於其他用途），它將不會顯示任何連線：
+當MySQL Workbench首次啟動時，除非已用於其他目的，否則它尚不顯示任何連接：
 
 ![mysqlconnection](assets/mysqlconnection.png)
 
-### 新連接設定 {#new-connection-settings}
+### 新建連接設定 {#new-connection-settings}
 
-1. 選取 `+` 表徵圖 `MySQL Connections`.
-1. 在對話方塊中 `Setup New Connection`，輸入適合您平台的值
+1. 選擇 `+` 表徵圖 `MySQL Connections`。
+1. 在對話框中 `Setup New Connection`，輸入適合您的平台的值
 
-   為了示範，將製作AEM例項和MySQL放在相同的伺服器上：
+   為了進行演示，將作者實AEM例和MySQL放在同一伺服器上：
 
-   * 連接名： `Communities`
+   * 連接名稱： `Communities`
    * 連接方法： `Standard (TCP/IP)`
    * 主機名： `127.0.0.1`
    * 使用者名稱: `root`
@@ -103,54 +103,54 @@ MySQL Workbench首次啟動時（除非已用於其他用途），它將不會�
 * 預設埠為 `3306`
 * 選擇的連接名稱將作為資料源名稱輸入 [JDBC OSGi配置](#configurejdbcconnections)
 
-#### 新建Communities連接 {#new-communities-connection}
+#### 新建社區連接 {#new-communities-connection}
 
-![社群連線](assets/community-connection.png)
+![社區連接](assets/community-connection.png)
 
 ## 資料庫設定 {#database-setup}
 
-開啟Communities連接以安裝資料庫。
+開啟社區連接以安裝資料庫。
 
-![install-database](assets/install-database.png)
+![安裝資料庫](assets/install-database.png)
 
 ### 獲取SQL指令碼 {#obtain-the-sql-script}
 
-從AEM儲存庫獲取SQL指令碼：
+SQL指令碼是從儲存庫獲取AEM的：
 
-1. 瀏覽至CRXDE Lite
+1. 瀏覽到CRXDE Lite
 
-   * 例如， [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
+   * 比如說， [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
-1. 選取/libs/social/config/datastore/dsrp/schema資料夾
+1. 選擇/libs/social/config/datastore/dsrp/schema資料夾
 1. 下載 `init-schema.sql`
 
-   ![database-schema-crxde](assets/database-schema-crxde.png)
+   ![資料庫模式 — crxde](assets/database-schema-crxde.png)
 
-下載架構的方法之一是：
+下載架構的一種方法是：
 
-* 選取 `jcr:content` sql檔案的節點
-* 請注意 `jcr:data` 屬性是檢視連結
+* 選擇 `jcr:content` sql檔案的節點
+* 注意 `jcr:data` 屬性是視圖連結
 
-* 選取檢視連結，將資料儲存至本機檔案
+* 選擇視圖連結以將資料保存到本地檔案
 
 ### 建立DSRP資料庫 {#create-the-dsrp-database}
 
-請依照下列步驟安裝資料庫。 資料庫的預設名稱為 `communities`.
+按照以下步驟安裝資料庫。 資料庫的預設名稱為 `communities`。
 
-如果指令碼中的資料庫名稱已更改，請確保在 [JDBC配置](#configurejdbcconnections).
+如果在指令碼中更改了資料庫名稱，請確保在 [JDBC配置](#configurejdbcconnections)。
 
 #### 步驟1:開啟SQL檔案 {#step-open-sql-file}
 
-在MySQL Workbench中
+在MySQL工作台中
 
-* 從「檔案」下拉式選單中，選取 **[!UICONTROL 開啟SQL指令碼]** 選項
-* 選取已下載的 `init_schema.sql` 指令碼
+* 從「檔案」下拉菜單中，選擇 **[!UICONTROL 開啟SQL指令碼]** 選項
+* 選擇下載的 `init_schema.sql` 指令碼
 
 ![select-sql-script](assets/select-sql-script.png)
 
 #### 步驟2:執行SQL指令碼 {#step-execute-sql-script}
 
-在「工作台」視窗中，針對在步驟1中開啟的檔案選取 `lightening (flash) icon` 來執行指令碼。
+在步驟1中開啟的檔案的「工作台」窗口中，選擇 `lightening (flash) icon` 執行指令碼。
 
 在下圖中， `init_schema.sql` 檔案已準備好執行：
 
@@ -158,46 +158,46 @@ MySQL Workbench首次啟動時（除非已用於其他用途），它將不會�
 
 #### 重新整理 {#refresh}
 
-執行指令碼後，就必須重新整理 `SCHEMAS` 區段 `Navigator` 以查看新資料庫。 使用「結構」右側的刷新表徵圖：
+執行指令碼後，必須刷新 `SCHEMAS` 的下界 `Navigator` 來查看新資料庫。 使用「SCHEMAS」右側的刷新表徵圖：
 
-![刷新架構](assets/refresh-schema.png)
+![刷新模式](assets/refresh-schema.png)
 
 ## 配置JDBC連接 {#configure-jdbc-connection}
 
-針對 **Day Commons JDBC連接池** 配置MySQL JDBC驅動程式。
+OSGi配置 **日公共JDBC連接池** 配置MySQL JDBC驅動程式。
 
-所有發佈和製作AEM例項都應指向相同的MySQL伺服器。
+所有發佈和作AEM者實例都應指向同一MySQL伺服器。
 
-當MySQL在與AEM不同的伺服器上運行時，必須指定伺服器主機名來取代JDBC連接器中的「localhost」。
+當MySQL在與之不同的伺服器上運行AEM時，必須指定伺服器主機名，而不是JDBC連接器中的「localhost」。
 
-* 在每個製作和發佈AEM例項上。
+* 每個作者和發佈AEM實例。
 * 以管理員權限登錄。
-* 存取 [Web主控台](../../help/sites-deploying/configuring-osgi.md).
+* 訪問 [Web控制台](../../help/sites-deploying/configuring-osgi.md)。
 
-   * 例如， [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
+   * 比如說， [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 
-* 找出 `Day Commons JDBC Connections Pool`
-* 選取 `+` 表徵圖建立新連接配置。
+* 查找 `Day Commons JDBC Connections Pool`
+* 選擇 `+` 表徵圖以建立新連接配置。
 
-   ![configure-jdbc-connection](assets/configure-jdbc-connection.png)
+   ![配置 — jdbc — 連接](assets/configure-jdbc-connection.png)
 
-* 輸入下列值：
+* 輸入以下值：
 
    * **[!UICONTROL JDBC驅動程式類]**: `com.mysql.jdbc.Driver`
    * **[!UICONTROL JDBC連接URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
 
-      如果MySQL伺服器與&#39;this&#39; AEM伺服器不同，請指定伺服器來取代localhost *社群* 是預設資料庫（架構）名稱。
+      如果MySQL伺服器與「this」伺服器不相同，則指定伺服器代替localhost AEM *社區* 是預設資料庫（架構）名稱。
 
-   * **[!UICONTROL 使用者名稱]**: `root`
+   * **[!UICONTROL 用戶名]**: `root`
 
-      或者，輸入MySQL伺服器的配置用戶名（如果不是「root」）。
+      或者輸入MySQL伺服器的配置用戶名（如果不是「root」）。
 
    * **[!UICONTROL 密碼]**:
 
-      如果未為MySQL設定密碼，請清除此欄位，
+      如果沒有為MySQL設定密碼，請清除此欄位
 
-      否則，請輸入MySQL用戶名的配置密碼。
+      否則，輸入MySQL用戶名的配置密碼。
 
-   * **[!UICONTROL 資料源名稱]**:為輸入的名稱 [MySQL連接](#new-connection-settings)，例如「communities」。
+   * **[!UICONTROL 資料源名稱]**:輸入的名稱 [MySQL連接](#new-connection-settings)，例如「communities」。
 
-* 選擇 **[!UICONTROL 儲存]**
+* 選擇 **[!UICONTROL 保存]**

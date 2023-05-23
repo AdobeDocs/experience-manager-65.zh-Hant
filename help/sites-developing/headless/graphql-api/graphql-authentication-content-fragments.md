@@ -12,13 +12,13 @@ ht-degree: 61%
 
 # 針對內容片段之遠端 AEM GraphQL 查詢的驗證 {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
 
-主要使用案例 [Adobe Experience Manager(AEM)GraphQL API內容片段傳送](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 接受來自第三方應用程式或服務的遠程查詢。 這些遠端查詢可能需要經驗證的 API 存取權，以確保無周邊內容傳遞的安全。
+C.S.的主要使用案例 [Adobe Experience Manager(AEM)GraphQL內容片段交付API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 接受來自第三方應用程式或服務的遠程查詢。 這些遠端查詢可能需要經驗證的 API 存取權，以確保無周邊內容傳遞的安全。
 
 >[!NOTE]
 >
 >對於測試和開發，您還可以使用 [GraphiQL 介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)直接存取 AEM GraphQL API。
 
-為了驗證，協力廠商服務需要使用AEM帳戶使用者名稱和密碼進行驗證。
+要進行身份驗證，第三方服務需要使用帳戶用戶名和密碼AEM進行身份驗證。
 
 <!-- 6.5.10.0 - does this content/page need to be migrated? -->
 

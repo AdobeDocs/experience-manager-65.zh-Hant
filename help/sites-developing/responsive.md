@@ -1,7 +1,7 @@
 ---
-title: 網頁的回應式設計
+title: 網頁響應性設計
 seo-title: Responsive design for web pages
-description: 透過回應式設計，相同的頁面可以多個方向有效地顯示在多個裝置上
+description: 通過響應性設計，可以在多個設備上以多個方向有效地顯示相同的頁面
 seo-description: With responsive design, the same pages can be effectively displayed on multiple devices in multiple orientations
 uuid: 3d324557-e7ff-4c82-920f-9b5a906925e8
 contentOwner: Guillaume Carlino
@@ -18,76 +18,76 @@ ht-degree: 0%
 
 ---
 
-# 網頁的回應式設計{#responsive-design-for-web-pages}
+# 網頁響應性設計{#responsive-design-for-web-pages}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯的專案使用SPA編輯器(例如 _React_)。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對SPA需要基於單頁應用程式框架的客戶端呈現的項目使用編輯器(如 _反應_)。 [深入了解](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
->各種範例以Geometrixx範例內容為基礎，這些內容已由We.Retail取代，而不再隨AEM(Adobe Experience Manager)提供。 請參閱檔案 [We.Retail參考實作](/help/sites-developing/we-retail.md#we-retail-geometrixx) 以了解如何下載和安裝Geometrixx。
+>各種示例都基於Geometrixx樣本內容，該內容不再隨(AEMAdobe Experience Manager)一起提供，而We.Retail已取而代之。 查看文檔 [We.Retail Reference實施](/help/sites-developing/we-retail.md#we-retail-geometrixx) 下載和安裝Geometrixx。
 
-設計您的網頁，使其與顯示其的用戶端檢視區相適應。 透過回應式設計，相同的頁面可以兩種方向有效地顯示在多個裝置上。 下列影像示範頁面可以透過哪些方式回應檢視區大小的變更：
+設計網頁，使其適應顯示網頁的客戶端視圖。 通過響應設計，在兩個方向上的多個設備上可以有效地顯示相同的頁面。 下圖演示了頁面響應視區大小變化的一些方法：
 
-* 配置：對較小的視區使用單列佈局，對較大的視區使用多列佈局。
-* 文本大小：在較大的檢視區中使用較大的文字大小（如適當，例如標題）。
-* 內容：在較小的裝置上顯示時，僅包含最重要的內容。
-* 導覽：提供裝置專用工具，供存取其他頁面。
-* 影像：提供適合用戶端檢視區的影像轉譯。 根據窗口尺寸。
+* 佈局：對較小的視區使用單列佈局，對較大的視區使用多列佈局。
+* 文本大小：在較大的視區中使用較大的文本大小（如適當時，如標題）。
+* 內容：在較小的設備上顯示時，僅包括最重要的內容。
+* 導航：提供了用於訪問其它頁面的設備特定工具。
+* 影像：正在提供適合客戶端視區的影像格式副本。 根據窗口尺寸。
 
 ![chlimage_1-4](assets/chlimage_1-4a.png)
 
-開發Adobe Experience Manager(AEM)應用程式，產生可適應多種視窗大小和方向的HTML5頁。 例如，下列檢視區寬度範圍對應於各種裝置類型和方向
+開發Adobe Experience Manager(AEM)應用程式，生成適應多個窗口大小和方向的HTML5頁。 例如，以下視區寬度範圍對應於各種設備類型和方向
 
-* 最大寬度為480像素（手機、縱向）
-* 最大寬度為767像素（手機、橫向）
-* 寬度介於768像素和979像素（平板電腦、縱向）之間
-* 寬度介於980像素和1199像素（平板電腦、橫向）之間
-* 寬度為1200像素或更高（台式機）
+* 最大寬度為480像素（電話、縱向）
+* 最大寬度為767像素（電話、橫向）
+* 768像素和979像素之間的寬度（平板、縱向）
+* 寬度介於980像素和1199像素之間（平板、橫向）
+* 寬度為1200像素或更大（台式機）
 
-如需實作回應式設計行為的相關資訊，請參閱下列主題：
+有關實施響應性設計行為的資訊，請參閱以下主題：
 
 * [媒體查詢](/help/sites-developing/responsive.md#using-media-queries)
 * [流體網格](/help/sites-developing/responsive.md#developing-a-fluid-grid)
-* [最適化影像](/help/sites-developing/responsive.md#using-adaptive-images)
+* [自適應影像](/help/sites-developing/responsive.md#using-adaptive-images)
 
-在您設計時，請使用 **[!UICONTROL Sidekick]** 來預覽不同螢幕大小的頁面。
+在設計時，使用 **[!UICONTROL 側腳]** 預覽不同螢幕大小的頁面。
 
-## 開發之前 {#before-you-develop}
+## 在你發展之前 {#before-you-develop}
 
-在開發支援您網頁的AEM應用程式之前，應先做出幾項設計決策。 例如，您必須具備下列資訊：
+在開發支AEM持網頁的應用程式之前，應作出若干設計決定。 例如，您必須具有以下資訊：
 
-* 您正在定位的裝置。
-* 目標檢視區大小。
-* 每個目標檢視區大小的頁面配置。
+* 您所針對的設備。
+* 目標視區大小。
+* 每個目標視區大小的頁面佈局。
 
 ### 應用程式結構 {#application-structure}
 
-典型的AEM應用程式結構支援所有回應式設計實施：
+典型的應AEM用程式結構支援所有響應性設計實現：
 
-* 頁面元件位於/apps/下&#x200B;*application_name*/components
-* 範本位於/apps/下方&#x200B;*application_name*/templates
-* 設計位於/etc/designs下方
+* 頁面元件位於/apps/下&#x200B;*應用程式名*/元件
+* 模板位於/apps/下&#x200B;*應用程式名*/模板
+* 設計位於/etc/designs下
 
 ## 使用媒體查詢 {#using-media-queries}
 
-媒體查詢可讓您選擇性使用CSS樣式來呈現頁面。 AEM開發工具和功能可讓您有效且有效地在應用程式中實施媒體查詢。
+媒體查詢允許選擇性使用CSS樣式進行頁面呈現。 開發工AEM具和功能使您能夠高效地在應用程式中實施介質查詢。
 
-W3C群組提供 [媒體查詢](https://www.w3.org/TR/mediaqueries-3/) 說明此CSS3功能和語法的建議。
+W3C組提供 [媒體查詢](https://www.w3.org/TR/mediaqueries-3/) 描述此CSS3功能和語法的建議。
 
 ### 建立CSS檔案 {#creating-the-css-file}
 
-在您的CSS檔案中，根據您所定位裝置的屬性定義媒體查詢。 下列實施策略對於管理每個媒體查詢的樣式是有效的：
+在CSS檔案中，根據所針對設備的屬性定義媒體查詢。 以下實施策略對於管理每個媒體查詢的樣式是有效的：
 
-* 使用ClientLibraryFolder定義呈現頁面時組合的CSS。
-* 在個別CSS檔案中定義每個媒體查詢及相關的樣式。 使用代表媒體查詢之裝置功能的檔案名稱會很實用。
-* 定義個別CSS檔案中所有裝置通用的樣式。
-* 在ClientLibraryFolder的css.txt檔案中，按照組合的CSS檔案中的需要對清單CSS檔案進行排序。
+* 使用ClientLibraryFolder定義呈現頁面時組裝的CSS。
+* 在單獨的CSS檔案中定義每個媒體查詢和關聯樣式。 使用表示媒體查詢的設備功能的檔案名非常有用。
+* 在單獨的CSS檔案中定義所有設備通用的樣式。
+* 在ClientLibraryFolder的css.txt檔案中，按照組裝的CSS檔案中的要求對清單CSS檔案進行排序。
 
-此 `We.Retail` 媒體範例使用此策略來定義網站設計中的樣式。 使用的CSS檔案 `We.Retail` 為 `*/apps/weretail/clientlibs/clientlib-site/less/grid.less`.
+的 `We.Retail` 媒體示例使用此策略在網站設計中定義樣式。 使用的CSS檔案 `We.Retail` 在 `*/apps/weretail/clientlibs/clientlib-site/less/grid.less`。
 
-下表列出css子資料夾中的檔案。
+下表列出了css子資料夾中的檔案。
 
 <table>
  <tbody>
@@ -98,43 +98,43 @@ W3C群組提供 [媒體查詢](https://www.w3.org/TR/mediaqueries-3/) 說明此C
   </tr>
   <tr>
    <td>style.css</td>
-   <td>常見樣式。</td>
+   <td>常用樣式。</td>
    <td>N/A</td>
   </tr>
   <tr>
    <td>bootstrap.css</td>
-   <td>通用樣式，由TwitterBootstrap定義。</td>
+   <td>常用樣式，由TwitterBootstrap定義。</td>
    <td>N/A</td>
   </tr>
   <tr>
    <td>responsive-1200px.css</td>
-   <td>1200像素寬或寬的所有介質的樣式。</td>
-   <td><p>@media(最小寬度：1200 px){<br /> ...<br /> }</p> </td>
+   <td>寬或寬為1200像素的所有介質的樣式。</td>
+   <td><p>@media(最小寬度：1200像素){<br /> ...<br /> }</p> </td>
   </tr>
   <tr>
    <td>responsive-980px-1199px.css</td>
    <td>介質的樣式，介於980像素和1199像素之間。</td>
-   <td><p>@media(最小寬度：980 px)和(最大寬度：1199 px){<br /> ...<br /> }</p> </td>
+   <td><p>@media(最小寬度：980像素)和(最大寬度：1199像素){<br /> ...<br /> }</p> </td>
   </tr>
   <tr>
    <td>responsive-768px-979px.css</td>
    <td>介質的樣式，介於768像素和979像素之間。 </td>
-   <td><p>@media(最小寬度：768 px)和(最大寬度：979 px){<br /> ...<br /> }</p> </td>
+   <td><p>@media(最小寬度：768像素)和(最大寬度：979像素){<br /> ...<br /> }</p> </td>
   </tr>
   <tr>
    <td>responsive-767px-max.css</td>
-   <td>寬小於768像素的所有媒體的樣式。</td>
-   <td><p>@media(最大寬度：767 px){<br /> ...<br /> }</p> </td>
+   <td>寬度小於768像素的所有媒體的樣式。</td>
+   <td><p>@media(最大寬度：767像素){<br /> ...<br /> }</p> </td>
   </tr>
   <tr>
    <td>responsive-480px.css</td>
-   <td>寬小於481像素的所有媒體的樣式。</td>
-   <td>@media(最大寬度：480 px){<br /> ...<br /> }</td>
+   <td>寬度小於481像素的所有媒體的樣式。</td>
+   <td>@media(最大寬度：480像素){<br /> ...<br /> }</td>
   </tr>
  </tbody>
 </table>
 
-中的css.txt檔案 `/etc/designs/weretail/clientlibs` 資料夾會列出用戶端程式庫資料夾所包含的CSS檔案。 檔案的順序實現樣式優先。 隨著裝置大小減小，樣式會更具體。
+中的css.txt檔案 `/etc/designs/weretail/clientlibs` 資料夾列出了客戶端庫資料夾包含的CSS檔案。 檔案的順序實現樣式優先。 隨著設備大小的減小，樣式會更加具體。
 
 `#base=css`
 
@@ -151,11 +151,11 @@ responsive-1200px.css
  responsive-480px.css
 ```
 
-**筆尖**:描述性檔案名稱可讓您輕鬆識別目標檢視區大小。
+**提示**:描述性檔案名使您可以輕鬆確定目標視區大小。
 
-### 搭配AEM頁面使用媒體查詢 {#using-media-queries-with-aem-pages}
+### 將媒體查詢與頁AEM面一起使用 {#using-media-queries-with-aem-pages}
 
-在頁面元件的JSP指令碼中包含客戶端庫資料夾。 這麼做有助於產生包含媒體查詢的CSS檔案，並參考檔案。
+在頁面元件的JSP指令碼中包括客戶端庫資料夾。 這樣做有助於生成包含媒體查詢的CSS檔案並引用該檔案。
 
 ```xml
 <ui:includeClientLib categories="apps.weretail.all"/>
@@ -163,53 +163,53 @@ responsive-1200px.css
 
 >[!NOTE]
 >
->此 `apps.weretail.all` 用戶端程式庫資料夾內嵌clientlibs程式庫。
+>的 `apps.weretail.all` 客戶端庫資料夾嵌入客戶端庫。
 
-JSP指令碼會生成以下引用樣式表的HTML代碼：
+JSP指令碼生成引用樣式表的以下HTML代碼：
 
 ```xml
 <link rel="stylesheet" href="/etc/designs/weretail/clientlibs-all.css" type="text/css">
 <link href="/etc/designs/weretail.css" rel="stylesheet" type="text/css">
 ```
 
-## 預覽特定裝置 {#previewing-for-specific-devices}
+## 預覽特定設備 {#previewing-for-specific-devices}
 
-以不同檢視區大小查看頁面的預覽，以便測試回應式設計的行為。 在 **[!UICONTROL 預覽]** 模式， **[!UICONTROL Sidekick]** 包括 **[!UICONTROL 裝置]** 用於選擇設備的下拉菜單。 選取裝置時，頁面會隨著檢視區大小而變更。
+以不同視區大小查看頁面的預覽，以便可以test響應設計的行為。 在 **[!UICONTROL 預覽]** 模式， **[!UICONTROL 側腳]** 包括 **[!UICONTROL 設備]** 用於選擇設備的下拉菜單。 選擇設備時，頁面會更改以適應視區大小。
 
 ![chlimage_1-5](assets/chlimage_1-5a.png)
 
-若要在中啟用裝置預覽 **[!UICONTROL Sidekick]**，您必須設定頁面和 **[!UICONTROL MobileEmulatorProvider]** 服務。 另一個頁面設定會控制顯示在 **[!UICONTROL 裝置]** 清單。
+在中啟用設備預覽 **[!UICONTROL 側腳]**，必須配置頁面和 **[!UICONTROL MobileEmulator提供程式]** 服務。 另一個頁面配置控制顯示在 **[!UICONTROL 設備]** 清單框。
 
 ### 添加設備清單 {#adding-the-devices-list}
 
-此 **[!UICONTROL 裝置]** 清單顯示於 **[!UICONTROL Sidekick]** 當頁面包含轉譯JSP指令碼時 **[!UICONTROL 裝置]** 清單。 若要新增 **[!UICONTROL 裝置]** 清單 **[!UICONTROL Sidekick]**，包括 `/libs/wcm/mobile/components/simulator/simulator.jsp` 指令碼 `head` 區段。
+的 **[!UICONTROL 設備]** 清單 **[!UICONTROL 側腳]** 當您的頁面包含呈現 **[!UICONTROL 設備]** 清單框。 添加 **[!UICONTROL 設備]** 清單 **[!UICONTROL 側腳]**，包括 `/libs/wcm/mobile/components/simulator/simulator.jsp` 指令碼 `head` 的子菜單。
 
-在JSP中包括以下代碼，該代碼定義 `head` 小節：
+在JSP中包括以下代碼，該代碼定義 `head` 部分：
 
 `<cq:include script="/libs/wcm/mobile/components/simulator/simulator.jsp"/>`
 
-若要查看範例，請開啟 `/apps/weretail/components/page/head.jsp` 檔案CRXDE Lite。
+要查看示例，請開啟 `/apps/weretail/components/page/head.jsp` 的子菜單。
 
 ### 註冊頁面元件以進行模擬 {#registering-page-components-for-simulation}
 
-若要啟用裝置模擬器以支援您的頁面，請使用MobileEmulatorProvider工廠服務註冊您的頁面元件，並定義 `mobile.resourceTypes` 屬性。
+要啟用設備模擬器以支援您的頁面，請使用MobileEmulatorProvider工廠服務註冊您的頁面元件並定義 `mobile.resourceTypes` 屬性。
 
-使用AEM時，有數種方法可管理這類服務的組態設定；請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。
+使用時，AEM有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的雙曲餘切值。
 
-例如，若要建立 ` [sling:OsgiConfig](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)` 節點：
+例如，要建立 ` [sling:OsgiConfig](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)` 在應用程式中的節點：
 
 * 父資料夾： `/apps/application_name/config`
 * 名稱: `com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider-*alias*`
 
-   此。 `*alias*` 尾碼為必要值，因為MobileEmulatorProvider服務是工廠服務。 使用此工廠唯一的任何別名。
+   - `*alias*` 需要尾碼，因為MobileEmulatorProvider服務是出廠服務。 使用此工廠唯一的別名。
 
 * jcr:primaryType: `sling:OsgiConfig`
 
-新增下列節點屬性：
+添加以下節點屬性：
 
 * 名稱: `mobile.resourceTypes`
 * 類型: `String[]`
-* 值：呈現網頁之頁面元件的路徑。 例如，geometrixx-media應用程式使用下列值：
+* 值：呈現網頁的頁面元件的路徑。 例如，geometrixx-media應用使用以下值：
 
    ```
    geometrixx-media/components/page
@@ -220,51 +220,51 @@ JSP指令碼會生成以下引用樣式表的HTML代碼：
 
 ### 指定設備組 {#specifying-the-device-groups}
 
-要指定顯示在「設備」清單中的設備組，請添加 `cq:deviceGroups` 屬性 `jcr:content` 網站根頁面的節點。 屬性的值是指向設備組節點的路徑陣列。
+要指定「設備」清單中顯示的設備組，請添加 `cq:deviceGroups` 屬性 `jcr:content` 的子目錄。 屬性值是到設備組節點的路徑陣列。
 
-設備組節點位於 `/etc/mobile/groups` 檔案夾。
+設備組節點位於 `/etc/mobile/groups` 的子菜單。
 
-例如，Geometrixx Media網站的根頁面為 `/content/geometrixx-media`. 此 `/content/geometrixx-media/jcr:content` node包含下列屬性：
+例如，Geometrixx Media站點的根頁面是 `/content/geometrixx-media`。 的 `/content/geometrixx-media/jcr:content` node包含以下屬性：
 
 * 名稱: `cq:deviceGroups`
 * 類型: `String[]`
 * 值: `/etc/mobile/groups/responsive`
 
-使用工具控制台 [建立和編輯設備組](/help/sites-developing/groupfilters.md).
+使用「工具」控制台 [建立和編輯設備組](/help/sites-developing/groupfilters.md)。
 
 >[!NOTE]
 >
->對於用於響應式設計的設備組，編輯設備組，並在「常規」頁簽上選擇「禁用模擬器」。 此選項可防止模擬器輪播出現，這與回應式設計無關。
+>對於用於響應設計的設備組，請編輯設備組，並在「常規」頁籤上選擇「禁用模擬器」。 此選項可防止模擬器旋轉盤出現，這與響應設計無關。
 
-## 使用最適化影像 {#using-adaptive-images}
+## 使用自適應影像 {#using-adaptive-images}
 
-您可以使用媒體查詢來選取要顯示在頁面中的影像資源。 但是，每個使用媒體查詢來條件化其使用的資源都會下載到用戶端。 媒體查詢只會判斷是否顯示下載的資源。
+可以使用媒體查詢來選擇要在頁面中顯示的影像資源。 但是，使用媒體查詢條件化其使用的每個資源都會下載到客戶端。 媒體查詢僅確定是否顯示下載的資源。
 
-對於影像等大型資源，下載所有資源並非有效使用用戶端的資料管道。 若要選擇性下載資源，請在媒體查詢執行選取後，使用JavaScript起始資源要求。
+對於大型資源（如映像），下載所有資源並不是對客戶端資料管道的有效使用。 要有選擇地下載資源，請在媒體查詢執行選擇後使用JavaScript啟動資源請求。
 
-以下策略載入使用媒體查詢選擇的單一資源：
+以下策略載入使用媒體查詢選擇的單個資源：
 
-1. 為每個資源版本新增DIV元素。 將資源的URI作為屬性值。 瀏覽器不會將屬性解譯為資源。
-1. 將媒體查詢新增至適合資源的每個DIV元素。
-1. 當檔案載入或調整視窗大小時，JavaScript程式碼會測試每個DIV元素的媒體查詢。
-1. 根據查詢的結果，確定要包括的資源。
-1. 在參考資源的DOM中插入HTML元素。
+1. 為資源的每個版本添加DIV元素。 將資源的URI作為屬性值包含。 瀏覽器不會將屬性解釋為資源。
+1. 將媒體查詢添加到每個適合該資源的DIV元素。
+1. 當載入文檔或調整窗口大小時，JavaScript代碼test每個DIV元素的媒體查詢。
+1. 根據查詢結果，確定要包括的資源。
+1. 在引用資源的DOM中插入HTML元素。
 
 ### 使用JavaScript評估媒體查詢 {#evaluating-media-queries-using-javascript}
 
-實作 [MediaQueryList介面](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface) W3C定義的欄位，可讓您使用JavaScript評估媒體查詢。 您可以將邏輯套用至媒體查詢結果，並執行針對目前視窗的指令碼：
+Oracle的 [MediaQueryList介面](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface) W3C定義的媒體查詢。 您可以將邏輯應用到媒體查詢結果並執行針對當前窗口的指令碼：
 
-* 實作MediaQueryList介面的瀏覽器支援 `window.matchMedia()` 函式。 此函式會針對指定字串測試媒體查詢。 函式會傳回 `MediaQueryList` 提供查詢結果存取權的物件。
+* 實現MediaQueryList介面的瀏覽器支援 `window.matchMedia()` 的子菜單。 此函式test給定字串的媒體查詢。 函式返回 `MediaQueryList` 提供對查詢結果訪問的對象。
 
-* 若為未實作介面的瀏覽器，您可以使用 `matchMedia()` 填充，如 [matchMedia.js](https://github.com/paulirish/matchMedia.js)，此元件為可免費使用的JavaScript程式庫。
+* 對於不實現該介面的瀏覽器，可以使用 `matchMedia()` 聚合填充，如 [matchMedia.js](https://github.com/paulirish/matchMedia.js)，可自由使用的JavaScript庫。
 
-#### 選取媒體特定資源 {#selecting-media-specific-resources}
+#### 選擇媒體特定資源 {#selecting-media-specific-resources}
 
-W3C [圖片元素](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element) 使用媒體查詢來判斷要用於影像元素的來源。 圖片元素使用元素屬性來將媒體查詢與影像路徑關聯。
+W3C [畫素](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element) 使用媒體查詢確定用於影像元素的源。 圖片元素使用元素屬性將媒體查詢與影像路徑相關聯。
 
-可免費使用 [picturefill.js資料庫](https://github.com/scottjehl/picturefill) 提供與建議的類似功能 `picture` 元素，並使用類似的策略。 picturefill.js程式庫呼叫 `window.matchMedia` 評估為 `div` 元素。 每個 `div` 元素也指定影像源。 來源用於 `div` 元素傳回 `true`.
+免費 [picturefild.js庫](https://github.com/scottjehl/picturefill) 提供與建議的類似功能 `picture` 元素，並使用類似的策略。 picturemild.js庫調用 `window.matchMedia` 評估為一組 `div` 元素。 每個 `div` 元素還指定影像源。 源在媒體查詢 `div` 元素返回 `true`。
 
-此 `picturefill.js` 程式庫需要類似下列範例的HTML程式碼：
+的 `picturefill.js` 庫需要與以下示例類似的HTML代碼：
 
 ```xml
 <div data-picture>
@@ -275,7 +275,7 @@ W3C [圖片元素](https://html.spec.whatwg.org/multipage/embedded-content.html#
 </div>
 ```
 
-轉譯頁面時，picturefull.js插入 `img` 元素，作為的最後一個子項 `<div data-picture>` 元素：
+在呈現頁面時， picturefull.js插入 `img` 元素作為 `<div data-picture>` 元素：
 
 ```xml
 <div data-picture>
@@ -287,28 +287,28 @@ W3C [圖片元素](https://html.spec.whatwg.org/multipage/embedded-content.html#
 </div>
 ```
 
-在AEM頁面中， `data-src` 屬性是存放庫中資源的路徑。
+在頁AEM面中， `data-src` attribute是儲存庫中資源的路徑。
 
-### 在AEM中實作最適化影像 {#implementing-adaptive-images-in-aem}
+### 在中實現自適應圖AEM像 {#implementing-adaptive-images-in-aem}
 
-若要在AEM應用程式中實作最適化影像，您必須新增必要的JavaScript程式庫，並在頁面中納入必要的HTML標籤。
+要在應用程式中實AEM現自適應影像，必須添加所需的JavaScript庫，並在頁面中包括所需的HTML標籤。
 
 **資料庫**
 
-取得下列JavaScript程式庫，並將其納入用戶端程式庫資料夾中：
+獲取以下JavaScript庫並將其包含在客戶端庫資料夾中：
 
-* [matchMedia.js](https://github.com/paulirish/matchMedia.js) （適用於不實作MediaQueryList介面的瀏覽器）
-* [picturefill.js](https://github.com/scottjehl/picturefill)
-* jquery.js(透過 `/etc/clientlibs/granite/jquery` 用戶端程式庫資料夾(category = jquery)
-* [jquery.debouncedresize.js](https://github.com/louisremi/jquery-smartresize) （一個jquery事件，在調整窗口大小後發生一次）
+* [matchMedia.js](https://github.com/paulirish/matchMedia.js) （對於不實現MediaQueryList介面的瀏覽器）
+* [picturefild.js](https://github.com/scottjehl/picturefill)
+* jquery.js(通過 `/etc/clientlibs/granite/jquery` 客戶端庫資料夾（類別= jquery）
+* [jquery.debouncedresize.js](https://github.com/louisremi/jquery-smartresize) （在調整窗口大小後發生一次的jquery事件）
 
-**提示：** 您可以依照 [內嵌](/help/sites-developing/clientlibs.md#embedding-code-from-other-libraries).
+**提示：** 可以通過 [嵌入](/help/sites-developing/clientlibs.md#embedding-code-from-other-libraries)。
 
 **HTML**
 
-建立元件，以產生picturefill.js程式碼預期的必要div元素。 在AEM頁面中， data-src屬性的值是存放庫中資源的路徑。 例如，頁面元件可以在DAM中為影像轉譯硬式編碼媒體查詢和相關路徑。 或者，建立自訂影像元件，讓作者選取影像轉譯或指定執行階段轉譯選項。
+建立生成picturemild.js代碼所需的div元素的元件。 在頁AEM中， data-src屬性的值是儲存庫中資源的路徑。 例如，頁面元件可以硬編碼媒體查詢和DAM中影像格式副本的相關路徑。 或者，建立一個自定義影像元件，使作者能夠選擇影像格式副本或指定運行時呈現選項。
 
-下列範例HTML會從相同影像的兩個DAM轉譯中選取。
+下面的示例HTML從同一影像的兩個DAM格式副本中選擇。
 
 ```xml
 <div data-picture>
@@ -320,76 +320,76 @@ W3C [圖片元素](https://html.spec.whatwg.org/multipage/embedded-content.html#
 
 >[!NOTE]
 >
->自適應影像基礎元件會實施自適應影像：
+>自適應影像基礎元件實現自適應影像：
 >
 >* 客戶端庫資料夾： `/libs/foundation/components/adaptiveimage/clientlibs`
 >* 生成HTML的指令碼： `/libs/foundation/components/adaptiveimage/adaptiveimage.jsp`
 >
->後續章節提供此元件的詳細資訊。
+>後續部分提供了有關此元件的詳細資訊。
 
-### 了解AEM中的影像轉譯 {#understanding-image-rendering-in-aem}
+### 瞭解影像呈AEM現 {#understanding-image-rendering-in-aem}
 
-若要自訂影像轉譯，您應了解預設的AEM靜態影像轉譯實施。 AEM提供影像元件和影像轉譯servlet，可搭配使用來轉譯網頁的影像。 當頁面的段落系統中包含影像元件時，會發生下列事件順序：
+要自定義影像呈現，您應瞭解預設的靜態AEM影像呈現實現。 提AEM供Image元件和影像呈現Servlet，它們可一起為網頁呈現影像。 當Image元件包含在頁面的段落系統中時，將發生以下事件序列：
 
-1. 編寫：作者可編輯影像元件，以指定要包含在HTML頁面中的影像檔案。 檔案路徑儲存為影像元件節點的屬性值。
-1. 頁面請求：頁面元件的JSP會產生HTML代碼。 Image元件的JSP將生成一個img元素並添加到頁面中。
-1. 影像要求：Web瀏覽器載入頁面，並根據img元素的src屬性要求影像。
-1. 影像呈現：影像呈現servlet會將影像傳回至Web瀏覽器。
+1. 創作：作者編輯影像元件以指定要包括在HTML頁中的影像檔案。 檔案路徑儲存為Image元件節點的屬性值。
+1. 頁面請求：頁面元件的JSP生成HTML代碼。 「影像」元件的JSP將生成一個img元素並將其添加到頁面。
+1. 映像請求：Web瀏覽器載入頁面，並根據img元素的src屬性請求影像。
+1. 影像呈現：影像呈現Servlet將影像返回到Web瀏覽器。
 
 ![chlimage_1-6](assets/chlimage_1-6a.png)
 
-例如，影像元件的JSP將生成以下HTML元素：
+例如，Image元件的JSP將生成以下HTML元素：
 
 `<img title="My Image" alt="My Image" class="cq-dd-image" src="/content/mywebsite/en/_jcr_content/par/image_0.img.jpg/1358372073597.jpg">`
 
-瀏覽器載入頁面時，會使用src屬性的值作為URL來要求影像。 Sling會解壓縮URL:
+當瀏覽器載入頁面時，它會使用src屬性的值作為URL來請求影像。 Sling分解URL:
 
 * 資源: `/content/mywebsite/en/_jcr_content/par/image_0`
-* 檔案名副檔名： `.jpg`
+* 檔案副檔名： `.jpg`
 * 選擇器: `img`
 * 字尾: `1358372073597.jpg`
 
-此 `image_0` 節點具有 `jcr:resourceType` 值 `foundation/components/image`，其中 `sling:resourceSuperType` 值 `foundation/components/parbase`. parbase元件包含img.GET.java指令碼，該指令碼與請求URL的選擇器和檔案名副檔名匹配。 CQ使用此指令碼(servlet)來轉譯影像。
+的 `image_0` 節點具有 `jcr:resourceType` 值 `foundation/components/image`，其中 `sling:resourceSuperType` 值 `foundation/components/parbase`。 parbase元件包括img.GET.java指令碼，該指令碼與選擇器和請求URL的檔案副檔名相匹配。 CQ使用此指令碼(servlet)來呈現影像。
 
-若要查看指令碼的原始碼，請使用CRXDE Lite開啟 `/libs/foundation/components/parbase/img.GET.java`
-檔案。
+要查看指令碼的原始碼，請使用CRXDE Lite開啟 `/libs/foundation/components/parbase/img.GET.java`
+的子菜單。
 
-## 根據當前視區大小縮放影像 {#scaling-images-for-the-current-viewport-size}
+## 縮放當前視區大小的影像 {#scaling-images-for-the-current-viewport-size}
 
-根據客戶端視區的特性在運行時縮放影像，以提供符合響應式設計原則的影像。 使用與靜態影像呈現相同的設計模式，使用servlet和製作元件。
+根據客戶端視區的特性在運行時縮放影像以提供符合響應設計原則的影像。 使用與靜態影像呈現相同的設計模式，使用servlet和創作元件。
 
-元件必須執行下列工作：
+元件必須執行以下任務：
 
-* 將影像資源的路徑和所需維度儲存為屬性值。
-* 產生 `div` 包含要轉譯影像之媒體選取器和服務呼叫的元素。
+* 將映像資源的路徑和所需維度儲存為屬性值。
+* 生成 `div` 包含用於呈現影像的媒體選擇器和服務調用的元素。
 
 >[!NOTE]
 >
->Web用戶端使用matchMedia和Picturefill JavaScript程式庫（或類似的程式庫）來評估媒體選取器。
+>Web客戶端使用matchMedia和Picturefill JavaScript庫（或類似的庫）來評估媒體選擇器。
 
-處理影像請求的Servlet必須執行下列任務：
+處理映像請求的Servlet必須執行以下任務：
 
 * 從元件屬性中檢索影像的路徑和尺寸。
-* 根據屬性縮放影像並傳回影像。
+* 根據屬性縮放影像並返回影像。
 
-**可用的解決方案**
+**可用解決方案**
 
-AEM會安裝下列您可使用或擴充的實作。
+安AEM裝以下可使用或擴展的實現。
 
-* 可產生媒體查詢的適用性影像基礎元件，以及可縮放影像的適用性影像元件Servlet的HTTP要求。
-* Geometrixx共用套件會安裝影像參考修改Servlet範例servlet，這些servlet會改變影像解析度。
+* 生成媒體查詢的Adaptive Image Foundation元件，以及對縮放影像的Adaptive Image Component Servlet的HTTP請求。
+* Commons軟體包安裝改變影像解析度的Image Reference Modification Servlet示例Servlet。
 
-### 了解自適應影像元件 {#understanding-the-adaptive-image-component}
+### 瞭解自適應影像元件 {#understanding-the-adaptive-image-component}
 
-自適應影像元件產生對自適應影像元件Servlet的調用，以呈現根據設備螢幕大小的影像。 元件包含下列資源：
+自適應影像元件生成對自適應影像元件Servlet的調用，以呈現根據設備螢幕調整大小的影像。 該元件包括以下資源：
 
-* JSP:新增div元素，將媒體查詢與對適用性影像元件Servlet的呼叫建立關聯。
-* 客戶端庫：clientlibs資料夾是 `cq:ClientLibraryFolder` 會組合matchMedia polyfill JavaScript程式庫和修改的Picturefill JavaScript程式庫。
-* 編輯對話框：此 `cq:editConfig` 節點會覆寫CQ基礎影像元件，以便放置目標建立自適應影像元件而非基礎影像元件。
+* JSP:添加將媒體查詢與對Adaptive Image Component Servlet的調用關聯的div元素。
+* 客戶端庫：客戶端資料夾是 `cq:ClientLibraryFolder` 組合matchMedia聚合填充JavaScript庫和修改的Picturelink JavaScript庫的。
+* 編輯對話框：的 `cq:editConfig` 節點覆蓋CQ基礎影像元件，以便刪除目標建立自適應影像元件而不是基礎影像元件。
 
-#### 新增DIV元素 {#adding-the-div-elements}
+#### 添加DIV元素 {#adding-the-div-elements}
 
-adaptive-image.jsp指令碼包含下列程式碼，用於產生div元素和媒體查詢：
+adaptive-image.jsp指令碼包含以下代碼，用於生成div元素和媒體查詢：
 
 ```
 <div data-picture data-alt='<%= alt %>'>
@@ -407,13 +407,13 @@ adaptive-image.jsp指令碼包含下列程式碼，用於產生div元素和媒�
 </div>
 ```
 
-此 `path` 變數包含目前資源的路徑（自適應影像元件節點）。 程式碼會產生一系列 `div` 元素，具有下列結構：
+的 `path` 變數包含當前資源（自適應映像元件節點）的路徑。 代碼生成一系列 `div` 具有以下結構的元素：
 
 `<div data-scr = "*path-to-parent-node*.adaptive-image.adapt.*width*.*quality*.jpg" data-media="*media query*"></div>`
 
-的值 `data-scr` 屬性是Sling解析至可轉譯影像的適用性影像元件Servlet的URL。 data-media屬性包含根據用戶端屬性評估的媒體查詢。
+的值 `data-scr` attribute是一個URL,Sling解析為呈現影像的自適應影像元件Servlet。 資料 — 媒體屬性包含根據客戶端屬性計算的媒體查詢。
 
-下列HTML程式碼是 `div` JSP生成的元素：
+以下HTML代碼是 `div` JSP生成的元素：
 
 ```xml
 <div data-src='/content/geometrixx-media/en/events/the-lineup-you-ve-been-waiting-for/jcr:content/article-content-par/adaptive_image.adapt.320.low.jpg'></div>
@@ -426,33 +426,33 @@ adaptive-image.jsp指令碼包含下列程式碼，用於產生div元素和媒�
 
 #### 更改影像大小選擇器 {#changing-the-image-size-selectors}
 
-如果您自訂適用性影像元件並變更寬度選取器，您也必須設定適用性影像元件Servlet以支援寬度。
+如果自定義自適應影像元件並更改寬度選擇器，則還必須配置自適應影像元件Servlet以支援寬度。
 
-### 了解最適化影像元件Servlet {#understanding-the-adaptive-image-component-servlet}
+### 瞭解自適應映像元件Servlet {#understanding-the-adaptive-image-component-servlet}
 
-自適應影像元件Servlet根據指定的寬度調整JPEG影像的大小，並設定JPEG品質。
+自適應影像元件Servlet根據指定的寬度調整JPEG影像的大小，並設定JPEG質量。
 
 #### 自適應影像元件Servlet的介面 {#the-interface-of-the-adaptive-image-component-servlet}
 
-適用性影像元件Servlet系結至預設的Sling Servlet，並支援.jpg、.jpeg、.gif和.png副檔名。 Servlet選擇器為img。
+自適應影像元件Servlet綁定到預設的Sling Servlet，並支援.jpg、.jpeg、.gif和.png檔案副檔名。 servlet選擇器為img。
 
 >[!CAUTION]
 >
->AEM不支援動畫.gif檔案進行最適化轉譯。
+>對於自適應格式副本，不支AEM持動畫.gif檔案。
 
-因此，Sling會將下列格式的HTTP要求URL解析為此servlet:
+因此，Sling將以下格式的HTTP請求URL解析為此servlet:
 
 `*path-to-node*.img.*extension*`
 
-例如，Sling會轉送含有URL的HTTP要求 `http://localhost:4502/content/geometrixx/adaptiveImage.img.jpg` 至適用性影像元件Servlet。
+例如，Sling使用URL轉發HTTP請求 `http://localhost:4502/content/geometrixx/adaptiveImage.img.jpg` 到自適應映像元件Servlet。
 
-另外兩個選取器會指定要求的影像寬度和JPEG品質。 下列範例要求寬度480像素且中等品質的影像：
+另外兩個選擇器指定請求的影像寬度和JPEG質量。 下面的示例請求寬度為480像素且中等質量的影像：
 
 `http://localhost:4502/content/geometrixx/adaptiveImage.adapt.480.MEDIUM.jpg`
 
-**支援的影像屬性**
+**支援的映像屬性**
 
-Servlet接受有限數量的影像寬度和質量。 預設支援以下寬度（以像素為單位）:
+Servlet接受有限數量的影像寬度和質量。 預設情況下支援以下寬度（以像素為單位）:
 
 * 完整
 * 320
@@ -460,9 +460,9 @@ Servlet接受有限數量的影像寬度和質量。 預設支援以下寬度（
 * 476
 * 620
 
-完整值表示沒有縮放。
+全值表示無縮放。
 
-支援下列JPEG品質值：
+支援以下JPEG質量值：
 
 * 低
 * 中
@@ -470,45 +470,45 @@ Servlet接受有限數量的影像寬度和質量。 預設支援以下寬度（
 
 數值分別為0.4、0.82和1.0。
 
-**更改預設支援寬度**
+**更改預設支援的寬度**
 
-使用Web控制台([http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))或sling:OsgiConfig節點，以設定Adobe CQ適用性影像元件Servlet支援的寬度。
+使用Web控制台([http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))或sling:OsgiConfig節點，以配置Adobe CQ自適應映像元件Servlet的支援寬度。
 
-如需如何設定AEM服務的詳細資訊，請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md).
+有關如何配置服務的AEM資訊，請參見 [配置OSGi](/help/sites-deploying/configuring-osgi.md)。
 
 <table>
  <tbody>
   <tr>
    <th> </th>
-   <th>Web主控台</th>
+   <th>Web控制台</th>
    <th>sling:OsgiConfig</th>
   </tr>
   <tr>
    <th>服務或節點名稱</th>
-   <td>「設定」標籤上的服務名稱為Adobe CQ適用性影像元件Servlet</td>
-   <td>com.day.cq.wcm.foundation.impl. AdaptiveImageComponentServlet</td>
+   <td>「配置」頁籤上的服務名是「Adobe CQ自適應映像元件Servlet」</td>
+   <td>com.day.cq.wcm.foundation.impl。 AdaptiveImageComponentServlet</td>
   </tr>
   <tr>
    <th>屬性</th>
    <td><p>支援的寬度</p>
     <ul>
-     <li>若要新增支援的寬度，請按一下+按鈕並輸入正整數。</li>
-     <li>若要移除支援的寬度，請按一下相關的 — 按鈕。</li>
+     <li>要添加支援的寬度，請按一下+按鈕並輸入正整數。</li>
+     <li>要刪除支援的寬度，請按一下關聯的 — 按鈕。</li>
      <li>要修改支援的寬度，請編輯欄位值。</li>
     </ul> </td>
    <td><p>adapt.supported.widths</p>
     <ul>
-     <li>屬性是多值字串值。</li>
+     <li>該屬性是多值字串值。</li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-#### 實作詳細資料 {#implementation-details}
+#### 實施詳細資訊 {#implementation-details}
 
-此 `com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet` 類擴展 [AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) 類別。 AdaptiveImageComponentServlet原始碼位於 `/libs/foundation/src/impl/src/com/day/cq/wcm/foundation/impl` 檔案夾。
+的 `com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet` 類擴展 [摘要ImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) 類。 AdaptiveImageComponentServlet原始碼位於 `/libs/foundation/src/impl/src/com/day/cq/wcm/foundation/impl` 的子菜單。
 
-類使用Felix SCR注釋來配置servlet關聯的資源類型和副檔名以及第一個選擇器的名稱。
+類使用Felix SCR注釋來配置Servlet所關聯的資源類型和檔案副檔名以及第一個選擇器的名稱。
 
 ```java
 @Component(metatype = true, label = "Adobe CQ Adaptive Image Component Servlet",
@@ -539,37 +539,37 @@ Servlet使用屬性SCR注釋來設定預設支援的影像質量和尺寸。
             description = "List of widths this component is permitted to generate.")
 ```
 
-此 `AbstractImageServlet` 類別提供 `doGet` 處理HTTP要求的方法。 此方法會判斷與請求相關聯的資源，從存放庫中擷取資源屬性，並在 [ImageContext](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) 物件。
+的 `AbstractImageServlet` 類提供 `doGet` 處理HTTP請求的方法。 此方法確定與請求關聯的資源，從儲存庫中檢索資源屬性，並在 [影像上下文](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) 的雙曲餘切值。
 
 >[!NOTE]
 >
->此 [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) 類別提供 `getFileReference method`，會擷取資源的值 `fileReference` 屬性。
+>的 [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) 類提供 `getFileReference method`，檢索資源的 `fileReference` 屬性。
 
-此 `AdaptiveImageComponentServlet` 類覆蓋 `createLayer` 方法。 該方法從影像資源的路徑和請求的影像寬度 `ImageContext` 物件。 接著，會呼叫 `info.geometrixx.commons.impl.AdaptiveImageHelper` 類，執行實際影像縮放。
+的 `AdaptiveImageComponentServlet` 類覆蓋 `createLayer` 的雙曲餘切值。 該方法從影像資源獲取路徑和請求的影像寬度 `ImageContext` 的雙曲餘切值。 然後，它調用 `info.geometrixx.commons.impl.AdaptiveImageHelper` 類，執行實際影像縮放。
 
-AdaptiveImageComponentServlet類還覆蓋writeLayer方法。 此方法會將JPEG品質套用至影像。
+AdaptiveImageComponentServlet類也會覆蓋writeLayer方法。 該方法將JPEG質量應用於影像。
 
-### 影像參考修改Servlet(Geometrixx公用) {#image-reference-modification-servlet-geometrixx-common}
+### 影像引用修改Servlet(常用Geometrixx) {#image-reference-modification-servlet-geometrixx-common}
 
-示例Image Reference Modification Servlet為img元素生成大小屬性，以在網頁上縮放影像。
+示例「影像參照修改Servlet」為img元素生成尺寸屬性，以在網頁上縮放影像。
 
-#### 呼叫Servlet {#calling-the-servlet}
+#### 調用Servlet {#calling-the-servlet}
 
-Servlet已綁定到 `cq:page` 資源，並支援.jpg檔案副檔名。 Servlet選擇器為 `image`. 因此，Sling會將下列格式的HTTP要求URL解析為此servlet:
+Servlet已綁定到 `cq:page` 支援.jpg檔案副檔名。 Servlet選擇器為 `image`。 因此，Sling將以下格式的HTTP請求URL解析為此servlet:
 
 `path-to-page-node.image.jpg`
 
-例如，Sling會轉送含有URL的HTTP要求 `http://localhost:4502/content/geometrixx/en.image.jpg` 到影像引用修改Servlet。
+例如，Sling使用URL轉發HTTP請求 `http://localhost:4502/content/geometrixx/en.image.jpg` 到映像引用修改Servlet。
 
-另外三個選取器會指定要求的影像寬度、高度和（選擇性）品質。 下列範例要求寬度770像素、高度360像素和中等品質的影像。
+另外三個選擇器指定所請求的影像寬度、高度和（可選）質量。 下面的示例請求寬度為770像素、高度為360像素和中等質量的影像。
 
 `http://localhost:4502/content/geometrixx/en.image.770.360.MEDIUM.jpg`
 
-**支援的影像屬性**
+**支援的映像屬性**
 
 Servlet接受有限數量的影像尺寸和質量值。
 
-預設支援下列值(widthheight):
+預設情況下支援以下值(widthxheight):
 
 * 256x192
 * 370x150
@@ -586,34 +586,34 @@ Servlet接受有限數量的影像尺寸和質量值。
 * 770x300
 * 480x190
 
-支援下列影像品質值：
+支援以下影像質量值：
 
 * 低
 * 中
 * 高
 
-使用AEM時，有數種方法可管理這類服務的組態設定；請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。
+使用時，AEM有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的雙曲餘切值。
 
-#### 指定影像資源 {#specifying-the-image-resource}
+#### 指定映像資源 {#specifying-the-image-resource}
 
-影像路徑、維度和質量值必須儲存為儲存庫中節點的屬性：
+映像路徑、維度和質量值必須儲存為儲存庫中節點的屬性：
 
-* 節點名稱為 `image`.
+* 節點名稱為 `image`。
 * 父節點是 `jcr:content` 節點 `cq:page` 資源。
 
-* 影像路徑會儲存為 `fileReference`.
+* 影像路徑儲存為名為 `fileReference`。
 
-編寫頁面時，請使用 **Sidekick** 指定影像並新增 `image` 節點到頁面屬性：
+創作頁面時，使用 **側腳** 指定影像並添加 `image` 節點到頁面屬性：
 
-1. 在 **Sidekick**，按一下 **頁面** ，然後按一下 **頁面屬性**.
-1. 按一下 **影像** 頁簽，並指定影像。
+1. 在 **側腳**，按一下 **頁面** ，然後按一下 **頁面屬性**。
+1. 按一下 **影像** 的子菜單。
 1. 按一下&#x200B;**「確定」**。
 
-#### 實作詳細資料 {#implementation-details-1}
+#### 實施詳細資訊 {#implementation-details-1}
 
-info.geometrixx.commons.impl.servlets.ImageReferenceModificationServlet類別延伸 [AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) 類別。 如果您已安裝cq-geometrixx-commons-pkg套件，則ImageReferenceModificationServlet原始碼位於 `/apps/geometrixx-commons/src/core/src/main/java/info/geometrixx/commons/impl/servlets` 檔案夾。
+info.geometrixx.commons.impl.servlet.ImageReferenceModificationServlet類擴展了 [摘要ImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) 類。 如果安裝了cq-geometrixx-commons-pkg軟體包，則ImageReferenceModificationServlet原始碼位於 `/apps/geometrixx-commons/src/core/src/main/java/info/geometrixx/commons/impl/servlets` 的子菜單。
 
-類使用Felix SCR注釋來配置servlet關聯的資源類型和副檔名以及第一個選擇器的名稱。
+類使用Felix SCR注釋來配置Servlet所關聯的資源類型和檔案副檔名以及第一個選擇器的名稱。
 
 ```java
 @Component(metatype = true, label = "Adobe CQ Image Reference Modification Servlet",
@@ -651,31 +651,31 @@ Servlet使用屬性SCR注釋來設定預設支援的影像質量和尺寸。
             description = "List of resolutions this component is permitted to generate.")
 ```
 
-此 `AbstractImageServlet` 類別提供 `doGet` 處理HTTP要求的方法。 此方法會判斷與呼叫相關聯的資源、從存放庫中擷取資源屬性，並將其儲存在 [ImageContext](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) 物件。
+的 `AbstractImageServlet` 類提供 `doGet` 處理HTTP請求的方法。 此方法確定與調用關聯的資源，從儲存庫中檢索資源屬性，並將它們保存在 [影像上下文](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) 的雙曲餘切值。
 
-此 `ImageReferenceModificationServlet` 類覆蓋 `createLayer` 方法及實現邏輯，該邏輯決定要呈現的影像資源。 方法會擷取頁面的子節點 `jcr:content` 節點已命名 `image`. 安 [影像](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/foundation/Image.html) 物件是從此 `image` 節點，和 `getFileReference` 方法會從 `fileReference` 影像節點的屬性。
+的 `ImageReferenceModificationServlet` 類覆蓋 `createLayer` 實現確定要呈現的影像資源的邏輯。 該方法檢索頁的子節點 `jcr:content` 節點命名 `image`。 安 [影像](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/foundation/Image.html) 從此建立對象 `image` 節點和 `getFileReference` 方法從 `fileReference` 影像節點的屬性。
 
 >[!NOTE]
->此 [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) 類提供getFileReference方法。
+>的 [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) 類提供getFileReference方法。
 
-## 開發流體網格 {#developing-a-fluid-grid}
+## 開發流體格柵 {#developing-a-fluid-grid}
 
-AEM可讓您有效實作流體格線。 本頁面說明如何整合流體格線或現有格線實施(例如 [Bootstrap](https://github.com/topics/twitter-bootstrap?l=css))放入您的AEM應用程式中。
+使您AEM能夠高效地實施流體網格。 本頁介紹如何整合流體網格或現有網格實現(如 [Bootstrap](https://github.com/topics/twitter-bootstrap?l=css))AEM。
 
-如果您不熟悉流體格線，請參閱 [流體網格簡介](/help/sites-developing/responsive.md#developing-a-fluid-grid) 區段。 本文概述了流體網格的概述，並為流體網格的設計提供了指導。
+如果您不熟悉流體網格，請參閱 [流體網格簡介](/help/sites-developing/responsive.md#developing-a-fluid-grid) 的子菜單。 本文對流體網格的設計作了概述和指導。
 
 ### 使用頁面元件定義網格 {#defining-the-grid-using-a-page-component}
 
-使用頁面元件來產生定義頁面內容區塊的HTML元素。 頁面所參考的ClientLibraryFolder提供控制內容區塊配置的CSS:
+使用頁面元件生成定義頁面內容塊的HTML元素。 頁面引用的ClientLibraryFolder提供控制內容塊佈局的CSS:
 
-* 頁面元件：新增代表內容區塊列的div元素。 代表內容區塊的div元素包含「parsys」元件，供作者新增內容。
-* 客戶端庫資料夾：提供CSS檔案，其中包含div元素的媒體查詢和樣式。
+* 頁面元件：添加表示內容塊行的div元素。 表示內容塊的div元素包括作者添加內容的parsys元件。
+* 客戶端庫資料夾：提供包含div元素的媒體查詢和樣式的CSS檔案。
 
-例如，範例geometrixx-media應用程式包含media-home元件。 此頁面元件插入兩個指令碼，並產生兩個 `div` 類元素 `row-fluid`:
+例如，示例geometrixx-media應用程式套件含media-home元件。 此頁元件插入兩個指令碼，生成兩個 `div` 類元素 `row-fluid`:
 
-* 第一列包含 `div` 類別元素 `span12` （內容涵蓋12欄）。 此 `div` 元素包含parsys元件。
+* 第一行包含 `div` 類元素 `span12` （內容跨12列）。 的 `div` 元素包含parsys元件。
 
-* 第二列包含兩個 `div` 元素，類之一 `span8` 和其他同類 `span4`. 每個 `div` 元素包含parsys元件。
+* 第二行包含兩個 `div` 元素，類之一 `span8` 和班上的其他人 `span4`。 每個 `div` 元素包括parsys元件。
 
 ```xml
 <div class="page-content">
@@ -697,21 +697,21 @@ AEM可讓您有效實作流體格線。 本頁面說明如何整合流體格線�
 
 >[!NOTE]
 >
->當元件包含多個 `cq:include` 參照parsys元件的元素，每個元素 `path` 屬性必須有不同的值。
+>當元件包含多個 `cq:include` 參照parsys元件的元素，每個元素 `path` 屬性必須具有其他值。
 
-#### 縮放頁面元件格線 {#scaling-the-page-component-grid}
+#### 縮放頁面元件網格 {#scaling-the-page-component-grid}
 
-與geometrixx-media頁面元件(`/etc/designs/geometrixx-media`)包含 `clientlibs` ClientLibraryFolder。 此ClientLibraryFolder定義 `row-fluid` 類別， `span*` 類別和 `span*` 屬於 `row-fluid` 類別。 媒體查詢可根據不同的檢視區大小重新定義樣式。
+與geometrix-media頁元件(`/etc/designs/geometrixx-media`)包含 `clientlibs` ClientLibraryFolder。 此ClientLibraryFolder為 `row-fluid` 類， `span*` 類和 `span*` 類是 `row-fluid` 類。 介質查詢可根據不同的視區大小重新定義樣式。
 
-以下範例CSS是這些樣式的子集。 此子集著重於 `span12`, `span8`，和 `span4` 類別和媒體查詢。 請注意CSS的下列特性：
+以下示例CSS是這些樣式的子集。 此子集側重於 `span12`。 `span8`, `span4` 類和介質查詢，以獲取兩個視區大小。 請注意CSS的以下特性：
 
-* 此 `.span` 樣式使用絕對數字定義元素寬度。
-* 此 `.row-fluid .span*` 樣式會以父項的百分比定義元素寬度。 百分比是從絕對寬度計算。
-* 較大檢視區的媒體查詢會指派較大的絕對寬度。
+* 的 `.span` 樣式使用絕對數字定義元素寬度。
+* 的 `.row-fluid .span*` 樣式將元素寬度定義為父項的百分比。 百分比從絕對寬度計算。
+* 對較大視區的媒體查詢會指定較大的絕對寬度。
 
 >[!NOTE]
 >
->Geometrixx Media範例整合 [Bootstrap](https://getbootstrap.com/2.0.2/) JavaScript架構整合至其流暢的格線實作。 Bootstrap框架提供bootstrap.css檔案。
+>Geometrixx Media示例整合 [Bootstrap](https://getbootstrap.com/2.0.2/) JavaScript框架中流體網格的實現。 Bootstrap框架提供bootstrap.css檔案。
 
 ```xml
 /* default styles (no media queries) */
@@ -741,13 +741,13 @@ AEM可讓您有效實作流體格線。 本頁面說明如何整合流體格線�
 }
 ```
 
-#### 重新定位頁面元件格線中的內容 {#repositioning-content-in-the-page-component-grid}
+#### 重新定位頁面元件網格中的內容 {#repositioning-content-in-the-page-component-grid}
 
-範例Geometrixx Media應用程式的頁面在寬檢視區中水準分佈內容區塊列。 在較小的檢視區中，相同的區塊會垂直分佈。 下列範例CSS顯示為媒體首頁元件產生的HTML程式碼實作此行為的樣式：
+示例Geometrixx Media應用程式的頁面在寬視區中水準分佈內容塊行。 在較小的視區中，相同的塊垂直分佈。 下面的示例CSS顯示了為媒體首頁元件生成的HTML代碼實現此行為的樣式：
 
-* media-welcome頁面的預設CSS會指派 `float:left` 樣式 `span*` 內的類 `row-fluid` 類別。
+* 「歡迎使用媒體」頁的預設CSS將 `float:left` 樣式 `span*` 內部類 `row-fluid` 類。
 
-* 較小檢視區的媒體查詢會指派 `float:none` 樣式。
+* 對較小視區的介質查詢分配 `float:none` 樣式。
 
 ```xml
 /* default styles (no media queries) */
@@ -764,42 +764,42 @@ AEM可讓您有效實作流體格線。 本頁面說明如何整合流體格線�
 }
 ```
 
-#### 將頁面元件模組化 {#tip-modularize-your-page-components}
+#### 模組化頁面元件 {#tip-modularize-your-page-components}
 
-將元件模組化，以有效使用程式碼。 您的網站可能會使用數種不同類型的頁面，例如歡迎頁面、文章頁面或產品頁面。 每種類型的頁面包含不同的內容類型，且可能使用不同的版面。 不過，當每個版面的某些元素在多個頁面間共用時，您可以重複使用實作該版面部分的程式碼。
+將元件模組化，以便有效地使用代碼。 您的站點可能使用幾種不同類型的頁面，如歡迎頁、文章頁或產品頁。 每種類型的頁面都包含不同類型的內容，並且可能使用不同的佈局。 但是，當每個佈局的某些元素在多個頁面上是公用的時，您可以重新使用實現該佈局部分的代碼。
 
 **使用頁面元件覆蓋**
 
-建立主要頁面元件，提供用於產生頁面各個部分的指令碼，例如 `head` 和 `body` 區段和 `header`, `content`，和 `footer` 內的部分。
+建立首頁元件，該元件提供用於生成頁面各部分的指令碼，如 `head` 和 `body` 部分和 `header`。 `content`, `footer` 在身體內。
 
-建立使用首頁面元件作為 `cq:resourceSuperType`. 這些元件包含可視需要覆寫主要頁面指令碼的指令碼。
+建立使用首頁元件作為 `cq:resourceSuperType`。 這些元件包括可根據需要覆蓋首頁指令碼的指令碼。
 
-例如，gemetrixx-media應用程式包含頁面元件( `sling:resourceSuperType` 是基礎頁面元件)。 有數個子元件（例如文章、類別和媒體首頁）使用此頁面元件作為 `sling:resourceSuperType`. 每個子元件都包含一個content.jsp檔案，該檔案將覆蓋頁元件的content.jsp檔案。
+例如，goemetrix-media應用程式套件括頁面元件( `sling:resourceSuperType` 是基礎頁元件)。 幾個子元件（如文章、類別和媒體首頁）使用此頁面元件作為 `sling:resourceSuperType`。 每個子元件都包括一個content.jsp檔案，該檔案將覆蓋頁元件的content.jsp檔案。
 
-**重複使用指令碼**
+**重用指令碼**
 
-建立多個JSP指令碼，這些指令碼生成多個頁面元件通用的行和列組合。 例如， `content.jsp` 文章的指令碼和media-home元件都會參考 `8x4col.jsp` 指令碼。
+建立多個JSP指令碼，這些指令碼生成多個頁面元件通用的行和列組合。 例如， `content.jsp` 文章的指令碼和media-home元件都引用 `8x4col.jsp` 的下界。
 
-**依目標檢視區大小組織CSS樣式**
+**按目標視區大小組織CSS樣式**
 
-在個別檔案中包含不同檢視區大小的CSS樣式和媒體查詢。 使用用戶端程式庫資料夾來串連。
+在單獨的檔案中包括不同視區大小的CSS樣式和媒體查詢。 使用客戶端庫資料夾來連接它們。
 
-### 在頁面格線中插入元件 {#inserting-components-into-the-page-grid}
+### 將元件插入頁面網格 {#inserting-components-into-the-page-grid}
 
-元件產生單一內容區塊時，通常頁面元件所建立的格線會控制內容的放置位置。
+當元件生成單個內容塊時，通常頁面元件建立的網格控制內容的放置。
 
-作為作者，內容區塊可以以各種大小和相對位置呈現。 內容文字不應使用相對方向來參照其他內容區塊。
+作為作者，內容塊可以以各種大小和相對位置呈現。 內容文本不應使用相對方向來引用其他內容塊。
 
-如有必要，元件應提供其產生之HTML程式碼所需的任何CSS或JavaScript程式庫。 在元件內使用用戶端程式庫資料夾，以便產生CSS和JS檔案。 為了公開檔案， [建立相依性或內嵌程式庫](/help/sites-developing/clientlibs.md#creating-client-library-folders) 位於/etc資料夾下方的另一個客戶端庫資料夾中。
+如有必要，元件應提供其生成的HTML代碼所需的任何CSS或JavaScript庫。 使用元件內的客戶端庫資料夾，以便生成CSS和JS檔案。 要公開檔案， [建立依賴關係或嵌入庫](/help/sites-developing/clientlibs.md#creating-client-library-folders) 位於/etc資料夾下的另一個客戶端庫資料夾中。
 
 **子網格**
 
-如果元件包含多個內容區塊，請在列內新增內容區塊，以在頁面上建立子格線：
+如果元件包含多個內容塊，則在行內添加內容塊以在頁面上建立子網格：
 
-* 使用與容納頁面元件相同的類別名稱，以便將div元素表示為行和內容區塊。
-* 若要覆寫頁面設計的CSS實作的行為，請為列div元素使用第二個類別名稱，並在用戶端程式庫資料夾中提供相關聯的CSS。
+* 使用與包含頁元件相同的類名，以便可以將div元素表示為行和內容塊。
+* 要覆蓋頁面設計的CSS實現的行為，請為行div元素使用第二個類名，並在客戶端庫資料夾中提供關聯的CSS。
 
-例如， `/apps/geometrixx-media/components/2-col-article-summary` 元件會產生兩欄內容。 其產生的HTML具有下列結構：
+例如， `/apps/geometrixx-media/components/2-col-article-summary` 元件生成兩列內容。 它生成的HTML具有以下結構：
 
 ```xml
 <div class="row-fluid mutli-col-article-summary">
@@ -814,12 +814,12 @@ AEM可讓您有效實作流體格線。 本頁面說明如何整合流體格線�
 </div>
 ```
 
-此 `.row-fluid .span6` 頁面CSS的選取器會套用至 `div` 此HTML中相同類和結構的元素。 不過，元件也包含/apps/geometrixx-media/components/2-col-article-summary/clientlibs用戶端程式庫資料夾：
+的 `.row-fluid .span6` 頁面的CSS的選擇器應用於 `div` 此HTML中相同類和結構的元素。 但是，該元件還包括/apps/geometrixx-media/components/2-col-article-summary/clientlibs客戶端庫資料夾：
 
-* CSS使用與頁面元件相同的媒體查詢，以建立相同離散頁面寬度的版面配置變更。
-* 選取器使用 `multi-col-article-summary` 行的類 `div` 元素來覆寫頁面的行為 `row-fluid` 類別。
+* CSS使用與頁面元件相同的媒體查詢，以在相同的離散頁面寬度上建立佈局更改。
+* 選擇器使用 `multi-col-article-summary` 行的類 `div` 要覆蓋頁面行為的元素 `row-fluid` 類。
 
-例如， `/apps/geometrixx-media/components/2-col-article-summary/clientlibs/css/responsive-480px.css` 檔案：
+例如，以下樣式包含在 `/apps/geometrixx-media/components/2-col-article-summary/clientlibs/css/responsive-480px.css` 檔案：
 
 ```xml
 @media (max-width: 480px) {
@@ -844,66 +844,66 @@ AEM可讓您有效實作流體格線。 本頁面說明如何整合流體格線�
 
 ## 流體網格簡介 {#introduction-to-fluid-grids}
 
-流暢的格線可讓頁面配置與用戶端檢視區的尺寸相適應。 網格由邏輯欄和列組成，這些列會在頁面上放置內容區塊。
+流體網格使頁面佈局能夠適應客戶端視區的尺寸。 網格由邏輯列和行組成，這些列和行將內容塊定位在頁面上。
 
-* 欄決定內容區塊的水準位置和寬度。
-* 列決定內容區塊的相對垂直位置。
+* 列確定內容塊的水準位置和寬度。
+* 行確定內容塊的相對垂直位置。
 
-使用HTML5技術，您可以實作格線並操控它，以調整頁面配置以適應不同的檢視區大小：
+使用HTML5技術，您可以實施網格並操縱網格以適應不同視區大小的頁面佈局：
 
-* HTML `div` 元素包含橫跨某些欄的內容區塊。
-* 這些div元素中的一或多個在共用共同父div元素時包含一列。
+* HTML `div` 元素包含跨某些列的內容塊。
+* 當這些div元素中的一個或多個元素共用公共父div元素時，它們包含一行。
 
 ### 使用離散寬度 {#using-discrete-widths}
 
-對於您要定位的每個檢視區寬度範圍，請使用靜態頁面寬度和內容區塊（以恆定寬度表示）。 手動調整瀏覽器視窗大小時，內容大小的變更會發生在離散的視窗寬度（也稱為中斷點）。 因此，頁面設計得更緊密地黏合在一起，使使用者體驗最大化。
+對於要瞄準的每個視區寬度範圍，使用靜態頁寬和內容塊等寬。 手動調整瀏覽器窗口大小時，對內容大小的更改會在離散窗口寬度（也稱為斷點）處發生。 因此，頁面設計被更緊密地粘合，從而最大化用戶體驗。
 
 #### 縮放網格 {#scaling-the-grid}
 
-使用格線來縮放內容區塊，以適應不同的檢視區大小。 內容區塊會跨越特定數量的欄。 隨著欄寬的增加或減小以適合不同的視區尺寸，內容塊的寬度相應地增加或減小。 縮放可支援大型和中型檢視區，其寬度足以容納並排放置內容區塊。
+使用網格縮放內容塊以適應不同的視區大小。 內容塊跨過特定數目的列。 隨著列寬的增加或減小以適合不同的視口尺寸，內容塊的寬度相應地增加或減少。 縮放可支援大型和中型視區，這些視區的寬度足以容納內容塊的並排放置。
 
 ![](do-not-localize/chlimage_1-1a.png)
 
 #### 重新定位網格中的內容 {#repositioning-content-in-the-grid}
 
-內容區塊的大小可以受到最小寬度的限制，超過此寬度便不再有效縮放。 對於較小的檢視區，格線可用來垂直分佈內容區塊，而非水準分佈。
+內容塊的大小可以受最小寬度的限制，超過此寬度的縮放不再有效。 對於較小的視區，網格可用於垂直分佈內容塊，而不是水準分佈。
 
 ![](do-not-localize/chlimage_1-2a.png)
 
 ### 設計網格 {#designing-the-grid}
 
-決定您必須在頁面上放置內容區塊的欄和列。 您的頁面配置決定跨網格的欄和列數。
+確定必須將內容塊放置在頁面上的列和行。 頁面佈局決定了跨網格的列和行數。
 
-**欄數**
+**列數**
 
-包括足夠的列，以水準放置所有佈局中的內容塊（所有視區大小）。 使用的欄數多於目前所需的欄數，以便您能適應未來的頁面設計。
+包括足夠的列，以便對所有視區大小水準放置所有佈局中的內容塊。 使用的列數超過當前需要的列數，因此您可以適應將來的頁面設計。
 
-**列內容**
+**行內容**
 
-使用列來控制內容區塊的垂直定位。 決定共用相同列的內容區塊：
+使用行控制內容塊的垂直定位。 確定共用同一行的內容塊：
 
-* 任何版面中水準排列彼此相鄰的內容區塊都位於同一列。
-* 水準（較寬的檢視區）和垂直（較小的檢視區）相鄰的內容區塊位於同一列。
+* 任何佈局中水準地彼此相鄰的內容塊位於同一行中。
+* 水準（寬視區）和垂直（小視區）相鄰的內容塊位於同一行。
 
 ### 網格實現 {#grid-implementations}
 
-建立CSS類別和樣式，以便控制頁面上內容區塊的版面。 頁面設計通常以檢視區內內容區塊的相對大小和位置為基礎。 檢視區會決定內容區塊的實際大小。 CSS必須考慮相對大小和絕對大小。 您可以使用三種CSS類別來實作流動格線：
+建立CSS類和樣式，以便控制頁面上內容塊的佈局。 頁面設計通常基於視區內內容塊的相對大小和位置。 視區確定內容塊的實際大小。 CSS必須考慮相對大小和絕對大小。 可以使用三種類型的CSS類實現流體網格：
 
-* 的類別 `div` 元素，此元素是所有列的容器。 此類設定網格的絕對寬度。
-* 的類別 `div` 代表列的元素。 此類控制其包含的內容塊的水準或垂直位置。
-* 的類 `div` 代表不同寬度內容區塊的元素。 寬度以父項（列）的百分比表示。
+* 類 `div` 是所有行的容器的元素。 此類設定網格的絕對寬度。
+* 類 `div` 表示行的元素。 此類控制其包含的內容塊的水準或垂直定位。
+* 類 `div` 表示不同寬度的內容塊的元素。 寬度以父級（行）的百分比表示。
 
-目標檢視區寬度（及其相關的媒體查詢）會標定用於頁面配置的離散寬度。
+目標視區寬度（及其關聯的媒體查詢）標定了用於頁面佈局的離散寬度。
 
-#### 內容區塊寬度 {#widths-of-content-blocks}
+#### 內容塊的寬度 {#widths-of-content-blocks}
 
-一般而言， `width` 內容塊類的樣式基於頁面和網格的以下特性：
+通常， `width` 內容塊類的樣式基於頁面和網格的以下特徵：
 
-* 用於每個目標檢視區大小的絕對頁面寬度。 已知值。
-* 每個頁面寬度的網格列的絕對寬度。 這些值由您決定。
-* 每欄的相對寬度佔總頁面寬度的百分比。 您可以計算這些值。
+* 用於每個目標視區大小的絕對頁寬。 已知值。
+* 每個頁寬的網格列的絕對寬度。 確定這些值。
+* 每列的相對寬度佔總頁寬的百分比。 計算這些值。
 
-CSS包含一系列使用下列結構的媒體查詢：
+CSS包括使用以下結構的一系列媒體查詢：
 
 ```xml
 @media(query_for_targeted_viewport){
@@ -923,39 +923,39 @@ CSS包含一系列使用下列結構的媒體查詢：
 }
 ```
 
-使用下列演算法作為開發頁面的元素類別和CSS樣式的起點。
+使用以下算法作為開發頁面的元素類和CSS樣式的起點。
 
-1. 為包含所有列的div元素定義類別名稱，例如 `content.`
-1. 為代表列的div元素定義CSS類別，例如 `row-fluid`.
-1. 定義內容區塊元素的類別名稱。 所有可能的寬度（以列範圍計）都需要一個類。 例如，使用 `span3` 類別 `div` 跨三欄的元素，請使用 `span4` 四欄範圍的類別。 定義網格中列數。
+1. 為包含所有行的div元素定義類名，例如 `content.`
+1. 為表示行的div元素定義CSS類，如 `row-fluid`。
+1. 定義內容塊元素的類名。 所有可能的寬度（以列跨度計算）都需要類。 例如，使用 `span3` 類 `div` 跨三列的元素，使用 `span4` 四個列的跨度的類。 定義網格中列的類數。
 
-1. 針對您要定位的每個檢視區大小，將對應的媒體查詢新增至您的CSS檔案。 在每個媒體查詢中新增下列項目：
+1. 對於您所瞄準的每個視區大小，將相應的媒體查詢添加到CSS檔案。 在每個介質查詢中添加以下項：
 
-   * 的選取器 `content` 類，例如 `.content{}`.
-   * 例如，每個跨類的選取器 `.span3{ }`.
-   * 的選取器 `row-fluid` 類，例如 `.row-fluid{ }`
-   * 例如，行 — 流體類內跨類的選擇器 `.row-fluid span3 { }`.
+   * 選擇器 `content` 類，例如 `.content{}`。
+   * 每個跨類的選擇器，例如 `.span3{ }`。
+   * 選擇器 `row-fluid` 類，例如 `.row-fluid{ }`
+   * 跨類的選擇器，例如，行流類內的類 `.row-fluid span3 { }`。
 
-1. 為每個選取器新增寬度樣式：
+1. 為每個選擇器添加寬度樣式：
 
-   1. 設定 `content` 選取器來調整頁面的絕對大小，例如 `width:480px`.
-   1. 將所有列流體選取器的寬度設為100%。
-   1. 將所有跨度選取器的寬度設定為內容區塊的絕對寬度。 普通網格使用相同寬度的均勻分佈列： `(absolute width of page)/(number of columns)`.
-   1. 設定 `.row-fluid .span` 選取器（佔總寬度的百分比）。 使用 `(absolute span width)/(absolute page width)*100` 公式。
+   1. 設定寬度 `content` 選擇器到頁面的絕對大小，例如 `width:480px`。
+   1. 將所有行流體選擇器的寬度設定為100%。
+   1. 將所有範圍選擇器的寬度設定為內容塊的絕對寬度。 普通網格使用相同寬度的均勻分佈列： `(absolute width of page)/(number of columns)`。
+   1. 設定 `.row-fluid .span` 選擇器佔總寬度的百分比。 使用 `(absolute span width)/(absolute page width)*100` 公式。
 
-#### 在行中定位內容塊 {#positioning-content-blocks-in-rows}
+#### 定位行中的內容塊 {#positioning-content-blocks-in-rows}
 
-使用 `.row-fluid` 類別，以控制行中的內容塊是水準排列還是垂直排列。
+使用 `.row-fluid` 類，因此您可以控制行中的內容塊是水準排列還是垂直排列。
 
-* 此 `float:left` 或 `float:right` 樣式會造成子元素（內容區塊）的水準分佈。
+* 的 `float:left` 或 `float:right` 樣式導致子元素（內容塊）的水準分佈。
 
-* 此 `float:none` 樣式會造成子元素的垂直分佈。
+* 的 `float:none` 樣式導致子元素的垂直分佈。
 
-將樣式新增至 `.row-fluid` 每個媒體查詢內的選取器。 根據您要用於該媒體查詢的頁面配置設定值。 例如，下圖說明的列會水準分配內容供寬檢視區使用，而垂直分配供窄檢視區使用。
+將樣式添加到 `.row-fluid` 選擇器。 根據您用於該媒體查詢的頁面佈局設定值。 例如，下圖說明了一行，該行在寬視區中水準分佈內容，在窄視區中垂直分佈內容。
 
 ![](do-not-localize/chlimage_1-3a.png)
 
-下列CSS可實作此行為：
+以下CSS可以實現此行為：
 
 ```xml
 @media (min-width: 768px) and (max-width: 979px) {
@@ -973,8 +973,8 @@ CSS包含一系列使用下列結構的媒體查詢：
 }
 ```
 
-#### 為內容塊指派類 {#assigning-classes-to-content-blocks}
+#### 為內容塊分配類 {#assigning-classes-to-content-blocks}
 
-針對您要定位的每個檢視區大小的頁面版面，決定每個內容區塊涵蓋的欄數。 然後，決定要用於這些內容區塊的div元素的類別。
+對於要定位的每個視區大小的頁面佈局，確定每個內容塊所跨越的列數。 然後，確定用於這些內容塊的div元素的類。
 
-建立div類後，可以使用AEM應用程式實施網格。
+建立div類後，可以使用應用程式實AEM現網格。

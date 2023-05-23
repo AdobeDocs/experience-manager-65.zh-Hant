@@ -1,7 +1,7 @@
 ---
-title: 設定AEM表單以預先擷取網域資訊
+title: 配置AEM表單以預取域資訊
 seo-title: Configure AEM forms to prefetchdomain information
-description: 如果您因深巢狀群組或您是許多群組的成員而遇到回應時間較慢，請設定AEM表單以預先擷取網域資訊。
+description: 配置AEM表單以預回遷域資訊（如果由於嵌套較深的組而響應時間較慢），或者您是許多組的成員。
 seo-description: Configure AEM forms to prefetch domain information if you experience a slower response time due to deeply nested groups or if you are a member of many groups.
 uuid: 53c8995e-3f9d-42e8-9f75-cee7debe6ce1
 contentOwner: admin
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 ---
 
-# 設定AEM表單以預先擷取網域資訊 {#configure-aem-forms-to-prefetchdomain-information}
+# 配置AEM表單以預取域資訊 {#configure-aem-forms-to-prefetchdomain-information}
 
-如果使用者屬於許多群組（例如500或更多），或者群組深度巢狀化（例如30個層級），則可能會遇到較慢的回應時間。 如果您遇到此問題，可以設定AEM表單以從特定網域預先擷取資訊。
+如果用戶屬於多個組（例如，500或更多組），或者這些組深度嵌套（例如，30個級別），則可能會經歷較慢的響應時間。 如果遇到此問題，可以配置表AEM單從某些域預取資訊。
 
-1. 在管理控制台中，按一下 **[!UICONTROL 設定>使用者管理>設定>匯入和匯出設定檔]**.
-1. 要將當前配置設定導出到檔案，請按一下 **[!UICONTROL 匯出]** 並將配置檔案保存到其他位置。
-1. 新增下列節點（以粗體標示）:
+1. 在管理控制台中，按一下 **[!UICONTROL 設定>用戶管理>配置>導入和導出配置檔案]**。
+1. 要將當前配置設定導出到檔案，請按一下 **[!UICONTROL 導出]** 並將配置檔案保存到其他位置。
+1. 添加以下節點（以粗體標籤）:
 
    ```xml
     <node name="UM">
@@ -40,7 +40,7 @@ ht-degree: 0%
     <node name="APSAuditService">
    ```
 
-   在此範例中，會設定多個網域以進行預先擷取。 網域名稱以「/」分隔。 這如上例所示，搭配 *域名1*, *域名2*，和 *域名3*.
+   在本示例中，為預取配置了多個域。 域名用「/」分隔。 上面的示例中顯示了 *域名1*。 *域名2*, *域名3*。
 
-1. 若要匯入更新的檔案，請在「使用者管理」中，按一下 **[!UICONTROL 配置>導入和導出配置檔案]**.
-1. 按一下 **[!UICONTROL 瀏覽]** 要查找檔案，請按一下「導入」，然後按一下 **[!UICONTROL 確定]**.
+1. 要導入更新的檔案，請在用戶管理中按一下 **[!UICONTROL 配置>導入和導出配置檔案]**。
+1. 按一下 **[!UICONTROL 瀏覽]** 要查找檔案，請按一下「導入」，然後按一下 **[!UICONTROL 確定]**。

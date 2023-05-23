@@ -144,8 +144,8 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 >
 >* [建立及組織頁面](/help/sites-authoring/managing-pages.md)
 >* [建立和同步 Live Copy](/help/sites-administering/msm-livecopy.md)
->* [在Experience Manager中配置電子郵件](/help/sites-administering/notification.md).
->* [匯入資產中繼資料](/help/assets/metadata.md#import-metadata).
->* [匯出資產中繼資料](/help/assets/metadata.md#export-metadata).
+>* [在Experience Manager中配置電子郵件](/help/sites-administering/notification.md)。
+>* [導入資產元資料](/help/assets/metadata.md#import-metadata)。
+>* [導出資產元資料](/help/assets/metadata.md#export-metadata)。
 >* [透過連線資產共用遠端部署的 DAM 資產](/help/assets/use-assets-across-connected-assets-instances.md)。
 

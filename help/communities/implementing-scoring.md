@@ -1,7 +1,7 @@
 ---
-title: 社群計分和徽章
+title: 社區評分和徽章
 seo-title: Communities Scoring and Badges
-description: AEM Communities分數和徽章可讓您識別和獎勵社群成員
+description: AEM Communities的評分和徽章讓你識別和獎勵社區成員
 seo-description: AEM Communities scoring and badges lets you identify and reward community members
 uuid: d73683df-a413-4b3c-869c-67568bfdfcf6
 contentOwner: Janice Kendall
@@ -20,55 +20,55 @@ ht-degree: 2%
 
 ---
 
-# 社群計分和徽章 {#communities-scoring-and-badges}
+# 社區評分和徽章 {#communities-scoring-and-badges}
 
 ## 概觀 {#overview}
 
-AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力。
+AEM Communities評分和徽章功能提供識別和獎勵社區成員的能力。
 
-評分和徽章的主要方面是：
+評分和徽章主要有：
 
-* [指派徽章](#assign-and-revoke-badges) 確定成員在社區中的作用。
+* [分配徽章](#assign-and-revoke-badges) 確定成員在社區中的角色。
 
 * [基本獎章](#enable-scoring) 鼓勵成員參與（建立的內容數量）。
 
-* [高級徽章獎勵](/help/communities/advanced.md) 將成員識別為專家（建立的內容質量）。
+* [高級獎章](/help/communities/advanced.md) 將成員標識為專家（建立的內容質量）。
 
-**附註** 頒發徽章 [預設為未啟用](/help/communities/implementing-scoring.md#main-pars-text-237875536).
+**注釋** 授予徽章 [預設情況下未啟用](/help/communities/implementing-scoring.md#main-pars-text-237875536)。
 
 >[!CAUTION]
 >
->當UI可用時，CRXDE Lite中可見的實作結構可能會變更。
+>在CRXDE Lite中可見的實現結構在UI變為可用後可能會發生更改。
 
 ## 徽章 {#badges}
 
-徽章會放置在成員的名下，以指出其角色或在社群中的地位。 徽章可以顯示為影像或名稱。 顯示為影像時，名稱會包含為協助工具的替代文字。
+徽章放在成員名下，以指示其在社區中的角色或地位。 徽章可以顯示為影像或名稱。 當顯示為影像時，該名稱將作為輔助功能的替代文本包含。
 
-預設情況下，徽章位於存放庫的
+預設情況下，徽章位於
 
 * `/libs/settings/community/badging/images`
 
-如果儲存在不同的位置，則每個人都應該可以讀取這些內容。
+如果儲存在不同的位置，則每個人都應能夠訪問這些位置。
 
-徽章在UGC中區別於是指定的徽章，還是根據規則掙得的徽章。 當前，已分配的徽章以文本形式顯示，而已獲得的徽章以影像形式顯示。
+在UGC中，對徽章的分配和掙得，按規則加以區分。 當前，指定的徽章顯示為文本，而掙得的徽章顯示為影像。
 
 ### 徽章管理UI {#badge-management-ui}
 
-社群 [徽章主控台](/help/communities/badges.md) 提供添加自定義徽章的功能，該徽章可在獲得（授予）成員或成員在社區中承擔特定角色（已分配）時為成員顯示。
+社區 [徽章控制台](/help/communities/badges.md) 提供了添加自定義徽章的能力，這些徽章可在獲得（授予）成員或成員在社區中承擔特定角色（已分配）時顯示。
 
-### 指派的徽章 {#assigned-badges}
+### 分配的徽章 {#assigned-badges}
 
-管理員會根據社群中的角色，將角色型徽章指派給社群成員。
+管理員根據社區成員在社區中的角色將基於角色的徽章分配給社區成員。
 
-已分配（和已喚醒）的徽章儲存在選定的 [SRP](/help/communities/srp.md) 和無法直接存取。 在GUI可用之前，指派角色型徽章的唯一方法是使用程式碼或cURL來指派。 如需cURL指示，請參閱 [指派和撤銷徽章](#assign-and-revoke-badges).
+已分配（和已喚醒）的徽章儲存在選定的 [SRP](/help/communities/srp.md) 無法直接訪問。 在GUI可用之前，分配基於角色的徽章的唯一方法是使用代碼或cURL進行分配。 有關cURL說明，請參閱標題為 [分配和撤消徽章](#assign-and-revoke-badges)。
 
-此發行包含三個角色型徽章：
+發佈中包括三枚基於角色的徽章：
 
-* **版主**
+* **主持人**
 
    `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
 
-* **群組管理員**
+* **組管理器**
 
    `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
 
@@ -76,20 +76,20 @@ AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力�
 
    `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
-   ![指派徽章](assets/assigned-badges.png)
+   ![指配徽章](assets/assigned-badges.png)
 
 ### 獎章 {#awarded-badges}
 
-評分服務會根據套用至社群中活動的規則，將基於獎勵的徽章授予社群成員。
+評分服務根據社區成員在社區中活動所適用的規則，向社區成員頒發獎勵徽章。
 
-為了讓徽章顯示為活動的獎勵，必須執行下列兩項操作：
+為了讓徽章成為活動的獎勵，必須做兩件事：
 
-* 簽名必須是 [已啟用](#enableforcomponent) （特徵元件）。
-* 計分和加號規則必須 [已套用](#applytopage) 至元件所在的頁面（或上階）。
+* 簽名必須為 [啟用](#enableforcomponent) 的子菜單。
+* 評分和標籤規則必須 [應用](#applytopage) 到元件所在的頁面（或祖先）。
 
-發行包含三個獎勵型徽章：
+發行中包括三枚獎勵徽章：
 
-* **黃金**
+* **金**
 
    `/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
@@ -105,133 +105,133 @@ AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力�
 
 >[!NOTE]
 >
->可以配置評分規則，為標示為不適當的貼文指派負分，因此影響分數值。 不過，一旦獲得徽章，就不會因為分數減少或分數規則變更而自動移除徽章。
+>評分規則可配置為為標籤為不適當的帖子分配負分，從而影響得分值。 但是，一旦獲得徽章，將不會因記分點減少或記分規則更改而自動刪除它。
 >
->吊銷獎勵徽章的方式與吊銷指定徽章相同。 請參閱 [指派和撤銷徽章](#assign-and-revoke-badges) 區段。 未來的改善將包括管理成員徽章的UI。
+>獎章的吊銷，可以與被授予的徽章一樣。 查看 [分配和撤消徽章](#assign-and-revoke-badges) 的子菜單。 今後的改進將包括一個管理成員徽章的用戶介面。
 
-### 自訂徽章 {#custom-badges}
+### 自定義徽章 {#custom-badges}
 
-可使用 [徽章主控台](/help/communities/badges.md) 和在標籤規則中指定或指定的。
+可以使用 [徽章控制台](/help/communities/badges.md) 或在標籤規則中指定。
 
-從徽章控制台安裝時，自訂徽章會自動複製到發佈環境。
+當從Bagds控制台安裝時，自定義徽標將自動複製到發佈環境。
 
 ## 啟用計分 {#enable-scoring}
 
-預設未啟用計分。 設定及啟用徽章評分與獎勵的基本步驟為：
+預設情況下未啟用計分。 徽章的設定和授予評分和授予的基本步驟是：
 
-* 識別收入點的規則([計分規則](#scoring-rules))。
-* 針對每個分數規則累積的點數，指派 [徽章](#badges) ([亂碼規則](#badging-rules))。
+* 確定收入點的規則([評分規則](#scoring-rules))。
+* 對於每個計分規則累計的積分，分配 [徽章](#badges) ([標籤規則](#badging-rules))。
 
-* [將分數和徽章規則套用至社群網站](#apply-rules-to-content).
-* [啟用社區功能的簽名](#enable-badges-for-component).
+* [將評分和標籤規則應用於社區站點](#apply-rules-to-content)。
+* [啟用社區功能的標籤](#enable-badges-for-component)。
 
-請參閱 [快速測試](#quick-test) 區段，使用論壇和留言的預設計分和徽章規則來啟用社群網站的計分。
+查看 [快速Test](#quick-test) 部分，以使用論壇和評論的預設評分和標籤規則為社區站點啟用評分。
 
-### 將規則套用至內容 {#apply-rules-to-content}
+### 將規則應用於內容 {#apply-rules-to-content}
 
-要啟用計分和徽章，請添加屬性 `scoringRules` 和 `badgingRules` 至網站內容樹中的任何節點。
+要啟用計分和徽章，請添加屬性 `scoringRules` 和 `badgingRules` 到站點內容樹中的任何節點。
 
-如果網站已發佈，在套用所有規則並啟用元件後，請重新發佈網站。
+如果站點已發佈，則在應用所有規則並啟用元件後，重新發佈站點。
 
-適用於啟用徽章的元件的規則是當前節點或其上階的規則。
+適用於啟用標籤的元件的規則是當前節點或其祖先的規則。
 
-如果節點為類型 `cq:Page` （建議），然後使用CRXDE|Lite將屬性新增至其中 `jcr:content` 節點。
+如果節點的類型 `cq:Page` （推薦），然後使用CRXDE|Lite將屬性添加到 `jcr:content` 的下界。
 
 | **屬性** | **類型** | **說明** |
 |---|---|---|
-| 簽章規則 | 字串 | 陣列清單 [亂碼規則](#badging-rules) |
-| scoringRules | 字串 | 陣列清單 [計分規則](#scoring-rules) |
+| 標籤規則 | 字串 | 陣列清單 [標籤規則](#badging-rules) |
+| 計分規則 | 字串 | 陣列清單 [評分規則](#scoring-rules) |
 
 >[!NOTE]
 >
->如果評分規則似乎對獎勵徽章沒有影響，請確保評分規則未被評分規則的scorinRules屬性阻止。 請參閱 [簽章規則](#badging-rules).
+>如果評分規則似乎對評分徽章沒有影響，請確保評分規則未被評分規則的scoringRules屬性阻止。 請參閱標題為 [簽名規則](#badging-rules)。
 
 ### 為元件啟用徽章 {#enable-badges-for-component}
 
-計分和徽章規則僅適用於已透過編輯元件組態以啟用徽章的元件例項 [製作模式](/help/communities/author-communities.md).
+評分和標籤規則僅對通過在中編輯元件配置而啟用標籤的元件實例有效 [創作模式](/help/communities/author-communities.md)。
 
-布林屬性， `allowBadges`，會啟用/停用元件例項的徽章顯示。 可在 [元件編輯對話方塊](/help/communities/author-communities.md) 針對論壇、QnA和通過標籤為 **顯示徽章**.
+布爾屬性， `allowBadges`，啟用/禁用元件實例的徽標顯示。 可在 [元件編輯對話框](/help/communities/author-communities.md) 對於論壇、QnA和注釋元件，通過標有 **顯示徽章**。
 
-#### 範例：論壇元件例項的allowBadges {#example-allowbadges-for-forum-component-instance}
+#### 示例：論壇元件實例的allowBagds {#example-allowbadges-for-forum-component-instance}
 
-![enable-bagges-component](assets/enable-badges-component.png)
+![啟用徽章元件](assets/enable-badges-component.png)
 
 >[!NOTE]
 >
->任何元件都可重疊，以顯示徽章，例如，可使用論壇、QnA和注釋中找到的HBS代碼。
+>可以覆蓋任何元件以顯示徽章，例如，使用論壇、QnA和注釋中找到的HBS代碼。
 
-## 計分規則 {#scoring-rules}
+## 評分規則 {#scoring-rules}
 
-評分規則是評分的基礎，用於授予徽章。
+評分規則是評分標誌的基礎。
 
-很簡單，每個分數規則都是一或多個子規則的清單。 計分規則會套用至社群網站內容，以識別在啟用徽章時要套用的規則。
+很簡單，每個評分規則都是一個或多個子規則的清單。 評分規則將應用於社區網站內容，以標識啟用徽章時應用的規則。
 
-分數規則是繼承的，但不是加性的。 例如：
+評分規則是繼承的，但不是加性的。 例如：
 
-* 如果page2包含計分規則2，其上階page1包含計分規則1。
-* page2元件上的動作會同時叫用rule1和rule2。
-* 如果這兩個規則包含相同的適用子規則 `topic/verb`:
+* 如果page2包含計分規則2，其祖先page1包含計分規則1。
+* 對page2元件執行操作將同時調用rule1和rule2。
+* 如果兩個規則都包含相同的子規則 `topic/verb`:
 
    * 只有規則2的子規則會影響分數。
-   * 兩個子規則的分數不會加在一起。
+   * 兩個子規則的分數不相加。
 
-當有多個計分規則時，會針對每個規則分別維護分數。
+當存在多個計分規則時，對每個規則分別保持分數。
 
 計分規則是類型的節點 `cq:Page` 具有屬性 `jcr:content` 指定定義子規則清單的節點。
 
-分數會儲存在SRP中。
+分數儲存在SRP中。
 
 >[!NOTE]
 >
->最佳實務：為每個計分規則命名唯一名稱。
+>最佳實踐：為每個計分規則指定唯一名稱。
 >
->計分規則名稱應為全域唯一；它們的結尾不應該是同一個名稱。
+>評分規則名稱應具有全局唯一性；他們不應該以同名結尾。
 >
->以下範例 *not* 要執行：
+>一個 *不* 執行：
 >
->/libs/settings/community/scoring/rules/site1/forums計分
->/libs/settings/community/scoring/rules/site2/forums計分
+>/libs/settings/community/scoring/rules/site1/forums評分
+>/libs/settings/community/scoring/rules/site2/forums評分
 
 ### 計分子規則 {#scoring-sub-rules}
 
-分數子規則包含詳細說明參與社群之值的屬性。
+評分子規則包含詳細描述參與社區的值的屬性。
 
-每個計分子規則識別：
+每個計分子規則標識：
 
-* 要追蹤哪些活動？
+* 正在跟蹤哪些活動？
 * 涉及哪些特定的社區功能？
-* 分多少分？
+* 分多少？
 
-預設情況下，除非子規則將內容的所有者指定為接收點( `forOwner`)。
+預設情況下，除非子規則指定內容所有者接收點( `forOwner`)。
 
-每個子規則可以包含在一個或多個計分規則中。
+每個子規則可以包括在一個或多個評分規則中。
 
-子規則的名稱通常遵循使用 *主旨* , *物件* 和 *動詞*. 例如：
+子規則的名稱通常遵循使用 *主題* 。 *對象* 和 *動詞*。 例如：
 
-* member-comment-create
-* 成員接受表決
+* 成員注釋建立
+* 成員接受投票
 
-子規則是類型的節點 `cq:Page` 具有屬性 `jcr:content`指定節點 [動詞和主題](#topics-and-verbs) .
+子規則是類型的節點 `cq:Page` 具有屬性 `jcr:content`指定 [動詞和主題](#topics-and-verbs) 。
 
 <table>
  <tbody>
   <tr>
    <th>屬性</th>
    <th>類型</th>
-   <th> 值說明</th>
+   <th> 值 說明</th>
   </tr>
   <tr>
    <td><i><code>VERB</code></i></td>
    <td>長整數</td>
    <td>
     <ul>
-     <li>必要；動詞與事件動作相對應</li>
-     <li>必須至少有一個動詞屬性</li>
-     <li>動詞必須輸入全大寫</li>
+     <li>要求；動詞與事件動作相對應</li>
+     <li>至少有一個動詞屬性</li>
+     <li>謂詞必須輸入全大寫</li>
      <li>可以有多個動詞屬性，但沒有重複項</li>
-     <li>值是要套用至此事件的分數</li>
-     <li>值可為正值或負值</li>
-     <li>版本支援的動詞清單位於 <a href="#topics-and-verbs">主題和動詞</a> 節</li>
+     <li>值是應用於此事件的分數</li>
+     <li>值可以是正數或負數</li>
+     <li>版本中支援的動詞清單位於 <a href="#topics-and-verbs">主題和動詞</a> 節</li>
     </ul> </td>
   </tr>
   <tr>
@@ -239,10 +239,10 @@ AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力�
    <td>字串</td>
    <td>
     <ul>
-     <li>可選；將子規則限制為以事件主題識別的社群元件</li>
-     <li>若指定：值是事件主題的多值字串</li>
-     <li>發行中的主題清單位於 <a href="#topics-and-verbs">主題和動詞</a> 節</li>
-     <li>預設值是應用於與動詞相關聯的所有主題</li>
+     <li>可選；將子規則限制為由事件主題標識的社區元件</li>
+     <li>如果指定：值是事件主題的多值字串</li>
+     <li>發行版中的主題清單位於 <a href="#topics-and-verbs">主題和動詞</a> 節</li>
+     <li>預設值是應用於與謂詞關聯的所有主題</li>
     </ul> </td>
   </tr>
   <tr>
@@ -250,9 +250,9 @@ AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力�
    <td>布林值</td>
    <td>
     <ul>
-     <li>可選；當成員根據自己擁有的內容採取行動時不相關</li>
-     <li>若為true，則將分數套用至所執行內容的擁有者</li>
-     <li>如果為false，則將分數應用於成員採取的操作</li>
+     <li>可選；當成員根據自己擁有的內容執行操作時不相關</li>
+     <li>如果為true，則將分數應用於所處理內容的所有者</li>
+     <li>如果為false，則將分數應用於執行操作的成員</li>
      <li>預設為false</li>
     </ul> </td>
   </tr>
@@ -261,14 +261,14 @@ AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力�
    <td>字串</td>
    <td>
     <ul>
-     <li>可選；識別計分引擎</li>
-     <li>如果為「basic」，則根據數量指定計分引擎
+     <li>可選；標識計分引擎</li>
+     <li>如果為"basic"，則根據數量指定評分引擎
       <ul>
-       <li>包含在發行中</li>
+       <li>包含在發行版中</li>
       </ul> </li>
-     <li>如果為「進階」，則根據質量和數量指定評分引擎
+     <li>如果為「advanced」，則根據質量和數量指定評分引擎
       <ul>
-       <li>要求 <a href="/help/communities/advanced.md">其他套件</a></li>
+       <li>需要 <a href="/help/communities/advanced.md">附加包</a></li>
       </ul> </li>
      <li>預設為"basic"</li>
     </ul> </td>
@@ -276,99 +276,99 @@ AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力�
  </tbody>
 </table>
 
-### 包含計分規則和子規則 {#included-scoring-rules-and-sub-rules}
+### 包括計分規則和子規則 {#included-scoring-rules-and-sub-rules}
 
-此發行包含的兩個計分規則 [論壇功能](/help/communities/functions.md#forum-function) （論壇功能的「論壇」和「評論」元件各一個）:
+發行版中包含兩個評分規則 [論壇功能](/help/communities/functions.md#forum-function) （論壇功能的論壇和評論部分各一個）:
 
-1. /libs/settings/community/scorning/rules/comments計分
+1. /libs/settings/community/scoring/rules/comments計分
 
-   * subRules[] = /libs/settings/community/scoring/rules/subrules/member-comment-create /libs/settings/community/scoring/rules/sub-rules/member-receive-vote /libs/settings/community/scoring/rules/subrules/subrules/member-give-vote /libs/settings/community/scoring/rules/sub-rules/mer-is-dered
+   * 子規則[] = /libs/settings/community/scoring/rules/member-comment-create /libs/settings/community/scoring/rules/subrules/member-receive-vote /libs/settings/community/scoring/rules/mber-is-meber-merers-mer-mer-mer-mer-mer-s-der-dered
 
-1. /libs/settings/community/scoring/rules/forums計分
+1. /libs/settings/community/scoring/rules/forums評分
 
-   * subRules[] = /libs/settings/community/scoring/rules/subrules/member-forum-create /libs/settings/community/scoring/rules/sub-rules/member-receive-vote /libs/settings/community/scoring/rules/subrules/member-give-vote /libs/settings/community/scorning/s/rules/sub-rules/mer-is-ded
+   * 子規則[] = /libs/settings/community/scoring/rules/subrules/member-forum-create /libs/settings/community/scoring/rules/subrules/member-receive-vote /libs/settings/community/scoring/rules/sub-rules/mememeres-meres-mber-merers-d-merered-mer-s-s-dered-med-merered-mb-der-mb-thered
 
 **附註:**
 
-* 兩者 `rules` 和 `sub-rules` 節點類型為cq:Page。
+* 兩者 `rules` 和 `sub-rules` 節點的類型為cq:Page。
 
-* `subRules` 是字串類型的屬性[] 規則 `jcr:content` 節點。
+* `subRules` 是字串類型的屬性[] 規則 `jcr:content` 的下界。
 
-* `sub-rules` 可在各種計分規則之間共用。
-* `rules` 應位於具有每個人讀取權限的存放庫位置。
+* `sub-rules` 可以在各種評分規則之間共用。
+* `rules` 應位於儲存庫位置中，並具有每個人的讀取權限。
 
-   * 無論位置為何，規則名稱都必須是唯一的。
+   * 規則名稱必須唯一，而不管位置如何。
 
-### 啟用自訂計分規則 {#activating-custom-scoring-rules}
+### 激活自定義計分規則 {#activating-custom-scoring-rules}
 
-必須在發佈時安裝在製作環境中對計分規則或子規則所做的任何變更或新增。
+在作者環境中對評分規則或子規則所做的任何更改或添加都需要在發佈上安裝。
 
-## 簽章規則 {#badging-rules}
+## 簽名規則 {#badging-rules}
 
-簽名規則通過指定以下內容將計分規則連結到徽章：
+標籤規則通過指定以下內容將記分規則連結到標籤：
 
-* 計分規則
-* 喚醒特定徽章所需的分數
+* 評分規則
+* 獲取特定徽章所需的分數
 
-簽名規則是類型的節點 `cq:Page` 具有屬性 `jcr:content` 將計分規則與分數和徽章關聯的節點。
+標籤規則是類型的節點 `cq:Page` 具有屬性 `jcr:content` 將評分規則與分數和徽章關聯的節點。
 
-簽章規則是強制性的 `thresholds` 屬性，此屬性是對應至徽章之分數的有序清單。 必須以增加的值排序分數。 例如：
+簽名規則包括強制性 `thresholds` 屬性，是映射到徽章的分數的有序清單。 分數必須按增加值排序。 例如：
 
 * `1|/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
-   * 獲得1分時獲得銅牌。
+   * 一枚銅牌以1分的成績獲獎。
 
 * `60|/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
-   * 當積分達60分時，授予銀牌。
+   * 積分60分時，授予銀牌。
 
 * `80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
-   * 累積80分時，會發出金徽章。
+   * 金徽80分就亮了。
 
-徽章規則與分數規則搭配，可決定積分的累積方式。 請參閱 [將規則套用至內容](#apply-rules-to-content).
+標籤規則與評分規則相配，這決定了積分的積累方式。 請參閱標題為 [將規則應用於內容](#apply-rules-to-content)。
 
-此 `scoringRules` 徽章規則上的屬性只會限制哪些分數規則可以與該特定徽章規則配對。
+的 `scoringRules` 標籤規則上的屬性只限制哪些評分規則可以與該特定標籤規則配對。
 
 >[!NOTE]
 >
->最佳實務：建立每個AEM網站特有的徽章影像。
+>最佳做法：建立每個站點唯一的徽AEM章影像。
 
-![badging-rule-configuration](assets/badging-rule-configuration.png)
+![標籤規則配置](assets/badging-rule-configuration.png)
 
 <table>
  <tbody>
   <tr>
    <th>屬性</th>
    <th>類型</th>
-   <th>值說明</th>
+   <th>值 說明</th>
   </tr>
   <tr>
    <td>閾值</td>
    <td>字串</td>
-   <td><em>（必要）</em> 「number|path」形式的多值字串
+   <td><em>（必需）</em> 「number|path」形式的多值字串
     <ul>
      <li>數字=分數</li>
-     <li>| =垂直線字元(U+007C)</li>
-     <li>path =徽章影像資源的完整路徑</li>
-    </ul> 必須排序字串，使數字在值中增加，數字和路徑之間不應出現空白字元。<br /> 範例項目：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
+     <li>| =竪線字元(U+007C)</li>
+     <li>path =標籤映像資源的完整路徑</li>
+    </ul> 必須對字串進行排序，以使數字值增加，並且數字和路徑之間不應出現空白。<br /> 示例項：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
   </tr>
   <tr>
-   <td>badgingType</td>
+   <td>標籤類型</td>
    <td>字串</td>
-   <td><em>（可選）</em> 將計分引擎識別為「基本」或「進階」。 如果需要進階計分引擎，請參閱 <a href="/help/communities/advanced.md">進階計分和徽章</a>. 預設為「基本」。</td>
+   <td><em>（可選）</em> 將評分引擎標識為「basic」或「advanced」。 如果需要高級計分引擎，請參閱 <a href="/help/communities/advanced.md">高級評分和徽章</a>。 預設值為「basic」。</td>
   </tr>
   <tr>
-   <td>scoringRules</td>
+   <td>計分規則</td>
    <td>字串</td>
-   <td>(<em>可選</em>)多值字串，將徽章規則限制為根據分數規則識別的分數事件</td>
+   <td>(<em>可選</em>)多值字串，用於將標籤規則限制為由計分規則標識的計分事件</td>
   </tr>
  </tbody>
 </table>
 
-### 包含徽章規則 {#included-badging-rules}
+### 包括標籤規則 {#included-badging-rules}
 
-此發行包含與 [論壇和評論評分規則](#includedscoringrules).
+發行版中包括與 [論壇和評論評分規則](#includedscoringrules)。
 
 * `/libs/settings/community/badging/rules/comments-badging`
 
@@ -376,52 +376,52 @@ AEM Communities計分和徽章功能提供識別和獎勵社群成員的能力�
 
 **附註:**
 
-* `rules` 節點類型為cq:Page。
-* `rules` 應位於具有每個人讀取權限的存放庫位置。
+* `rules` 節點的類型為cq:Page。
+* `rules` 應位於儲存庫位置中，並具有每個人的讀取權限。
 
-   * 規則名稱必須是唯一的，無論位置為何。
+   * 規則名稱必須唯一，不管位置如何。
 
-### 啟用自訂徽章規則 {#activating-custom-badging-rules}
+### 激活自定義標籤規則 {#activating-custom-badging-rules}
 
-在製作環境中對標籤規則或影像所做的任何變更或新增，都必須安裝在發佈上。
+在作者環境中對標籤規則或映像所做的任何更改或添加都需要在發佈上安裝。
 
-## 指派和撤銷徽章 {#assign-and-revoke-badges}
+## 分配和撤消徽章 {#assign-and-revoke-badges}
 
-徽章可以使用 [成員控制台](/help/communities/members.md#badges-tab) 或以程式設計方式使用cURL命令。
+可以使用 [成員控制台](/help/communities/members.md#badges-tab) 或使用cURL命令以寫程式方式進行。
 
-下列cURL命令顯示指派和撤銷徽章的HTTP要求所需的項目。 基本格式為：
+以下cURL命令顯示分配和撤消徽章的HTTP請求所需的內容。 基本格式為：
 
-cURL -i -XPOST-H *標題* -u *簽入* -F *操作* -F *徽章* *member-profile-url*
+cURL -i -XPOST-H *標題* -u *簽名* -F *操作* -F *徽章* *成員配置檔案URL*
 
-*標題* = &quot;Accept:application/json&quot;要傳遞至伺服器的自訂標頭（必要）
+*標題* = &quot;Accept:application/json&quot;自定義標頭要傳遞到伺服器（必需）
 
-*簽入* = administrator-id:password，例如：admin:admin
+*簽名* = administrator-id:password，例如：管理員：管理員
 
-*操作* = &quot;:operation=social:assignBadge&quot; OR &quot;:operation=social:deleteBadge&quot;
+*操作* = &quot;:operation=social:assignBadge&quot;或&quot;:operation=social:deleteBadge&quot;
 
-*徽章* = &quot;badgeContentPath=*徽章 — 影像檔案*&quot;
+*徽章* = &quot;badgeContentPath=*標籤影像檔案*&quot;
 
-*徽章 — 影像檔案* =徽章影像檔案在存放庫中的位置，例如：/libs/settings/community/badging/images/daldorator/jcr/content/moderator.png
+*標籤影像檔案* =標籤影像檔案在儲存庫中的位置，例如：/libs/settings/community/badging/images/jovadator/jcr/content/moderator.png
 
-*member-profile-url* =例如，在發佈時成員設定檔的端點：https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
+*成員配置檔案URL* =發佈時成員配置檔案的終結點，例如：https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
->此 *member-profile-url*:
+>的 *成員配置檔案URL*:
 >
->* 若 [通道服務](/help/communities/users.md#tunnel-service) 啟用。
->* 可能是個模糊的隨機名稱 — 請參閱 [安全性檢查清單](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) 關於可授權的ID。
+>* 如果 [隧道服務](/help/communities/users.md#tunnel-service) 的子菜單。
+>* 可能是一個模糊的隨機名稱 — 請參閱 [安全核對表](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) 關於可授權ID。
 
 
 ### 範例： {#examples}
 
-#### 指派協調者徽章 {#assign-a-moderator-badge}
+#### 分配版主徽章 {#assign-a-moderator-badge}
 
 ```shell
 curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
 ```
 
-#### 撤銷指派的銀徽章 {#revoke-an-assigned-silver-badge}
+#### 撤消分配的銀徽 {#revoke-an-assigned-silver-badge}
 
 ```shell
 curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:deleteBadge" -F "badgeContentPath=/libs/settings/community/badging/images/silver/jcr:content/silver.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
@@ -429,220 +429,220 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 >[!NOTE]
 >
->使用cURL來指派和撤銷徽章適用於任何徽章影像，但當指派而非掙得徽章時，這些徽章會標示為已指派的徽章並據此處理。
+>使用cURL來分配和撤消徽章適用於任何徽章影像，但是當分配徽章而不是獲得徽章時，它們被標籤為已分配徽章並相應地處理。
 
-## 自訂元件的計分和徽章 {#scoring-and-badges-for-custom-components}
+## 定制元件的評分和徽章 {#scoring-and-badges-for-custom-components}
 
-可為自訂元件建立計分和徽章規則，方法是將為元件建立的事件主題與動詞相關聯。
+可通過將為元件建立的事件主題與謂詞相關聯為自定義元件建立評分和標籤規則。
 
 ## 主題和動詞 {#topics-and-verbs}
 
 當成員與社區功能交互時，會發送可觸發非同步偵聽器的事件，如通知和計分。
 
-元件的SocialEvent例項會將事件記錄為 `actions` 在 `topic`. SocialEvent包含傳回 `verb` 與動作相關聯。 有 *n-1* 關係 `actions` 和 `verbs`.
+元件的SocialEvent實例將事件記錄為 `actions` 發生在 `topic`。 SocialEvent包括返回 `verb` 與操作關聯。 有 *n-1* 關係 `actions` 和 `verbs`。
 
-對於傳遞的社群元件，下表說明 `verbs` 為每個 `topic` 供使用 [計分子規則](#scoring-sub-rules).
+對於交付的社區元件，下表描述了 `verbs` 定義 `topic` 可用於 [計分子規則](#scoring-sub-rules)。
 
 >[!NOTE]
 >
->新的布林屬性， `allowBadges`，會啟用/停用元件例項的徽章顯示。 可在更新後設定 [元件編輯對話方塊](/help/communities/author-communities.md) 核取方塊，標籤為 **顯示徽章**.
+>一個新的布爾屬性， `allowBadges`，啟用/禁用元件實例的徽標顯示。 可在更新中配置 [元件編輯對話框](/help/communities/author-communities.md) 通過標有 **顯示徽章**。
 
 **[日曆元件](/help/communities/calendar.md)**
-SocialEvent `topic`= com/adobe/cq/social/calendar
+社交事件 `topic`= com/adobe/cq/social/calendar
 
 | **動詞** | **說明** |
 |---|---|
 | POST | 成員建立日曆事件 |
 | 新增 | 日曆事件上的成員注釋 |
-| 更新 | 編輯成員的日曆事件或注釋 |
-| 刪除 | 會刪除成員的日曆事件或注釋 |
+| 更新 | 已編輯成員的日曆事件或注釋 |
+| 刪除 | 已刪除成員的日曆事件或注釋 |
 
 **[注釋元件](/help/communities/comments.md)**
-SocialEvent `topic`= com/adobe/cq/social/comment
+社交事件 `topic`= com/adobe/cq/social/comment
 
 | **動詞** | **說明** |
 |---|---|
 | POST | 成員建立注釋 |
-| 新增 | 成員對評論的答復 |
+| 新增 | 成員回複評論 |
 | 更新 | 已編輯成員的注釋 |
-| 刪除 | 刪除成員的注釋 |
+| 刪除 | 成員注釋已刪除 |
 
 **[檔案庫元件](/help/communities/file-library.md)**
-SocialEvent `topic`= com/adobe/cq/social/fileLibrary
+社交事件 `topic`= com/adobe/cq/social/fileLibrary
 
 | **動詞** | **說明** |
 |---|---|
 | POST | 成員建立資料夾 |
-| 附加 | 成員上傳檔案 |
+| 附加 | 成員上載檔案 |
 | 更新 | 成員更新資料夾或檔案 |
 | 刪除 | 成員刪除資料夾或檔案 |
 
 **[論壇元件](/help/communities/forum.md)**
-SocialEvent `topic`= com/adobe/cq/social/forum
+社交事件 `topic`= com/adobe/cq/social/forum
 
 | **動詞** | **說明** |
 |---|---|
 | POST | 成員建立論壇主題 |
 | 新增 | 成員對論壇主題的答復 |
-| 更新 | 編輯成員的論壇主題或回復 |
-| 刪除 | 會刪除成員的論壇主題或回復 |
+| 更新 | 已編輯成員的論壇主題或回復 |
+| 刪除 | 成員的論壇主題或答復已被刪除 |
 
 **[日記帳元件](/help/communities/blog-feature.md)**
-SocialEvent `topic`= com/adobe/cq/social/journal
+社交事件 `topic`= com/adobe/cq/social/journal
 
 | **動詞** | **說明** |
 |---|---|
-| POST | 成員建立部落格文章 |
-| 新增 | 部落格文章中的成員評論 |
-| 更新 | 編輯會員的部落格文章或評論 |
-| 刪除 | 會員的部落格文章或評論被刪除 |
+| POST | 成員建立部落格 |
+| 新增 | 對部落格的成員評論 |
+| 更新 | 編輯成員的部落格或評論 |
+| 刪除 | 已刪除成員的部落格或評論 |
 
 **[QnA元件](/help/communities/working-with-qna.md)**
-SocialEvent `topic` = com/adobe/cq/social/qna
+社交事件 `topic` = com/adobe/cq/social/qna
 
 | **動詞** | **說明** |
 |---|---|
 | POST | 成員建立QnA問題 |
 | 新增 | 成員建立QnA答案 |
-| 更新 | 成員的QnA問題或答案已編輯 |
+| 更新 | 編輯成員的QnA問題或答案 |
 | 選擇 | 已選擇成員的答案 |
 | 取消選擇 | 已取消選擇成員的答案 |
-| 刪除 | 成員的QnA問題或答案將被刪除 |
+| 刪除 | 成員的QnA問題或答案已刪除 |
 
-**[查看元件](/help/communities/reviews.md)**
-SocialEvent `topic`= com/adobe/cq/social/review
-
-| **動詞** | **說明** |
-|---|---|
-| POST | 成員建立審核 |
-| 更新 | 已編輯成員的審核 |
-| 刪除 | 會刪除成員的審核 |
-
-**[評等元件](/help/communities/rating.md)**
-SocialEvent `topic`= com/adobe/cq/social/tally/rating
+**[審閱元件](/help/communities/reviews.md)**
+社交事件 `topic`= com/adobe/cq/social/review
 
 | **動詞** | **說明** |
 |---|---|
-| 新增評等 | 會員的內容已被評級 |
-| 移除評等 | 會員的內容已降級 |
+| POST | 成員建立審閱 |
+| 更新 | 已編輯成員審閱 |
+| 刪除 | 成員審閱已刪除 |
+
+**[評級元件](/help/communities/rating.md)**
+社交事件 `topic`= com/adobe/cq/social/tally/rating
+
+| **動詞** | **說明** |
+|---|---|
+| 添加評級 | 已對成員的內容進行分級 |
+| 刪除評級 | 成員的內容已降級 |
 
 **[投票元件](/help/communities/voting.md)**
-SocialEvent `topic`= com/adobe/cq/social/tally/voting
+社交事件 `topic`= com/adobe/cq/social/tally/投票
 
 | **動詞** | **說明** |
 |---|---|
-| 添加投票 | 會員的內容被投票 |
-| 刪除投票 | 會員的內容被否決 |
+| 添加投票 | 成員的內容已被表決 |
+| 刪除投票 | 成員的內容已被否決 |
 
-**已啟用協調的元件**
-SocialEvent `topic`= com/adobe/cq/social/moderation
+**啟用裁決的元件**
+社交事件 `topic`= com/adobe/cq/social/moderation
 
 | **動詞** | **說明** |
 |---|---|
 | 拒絕 | 拒絕成員的內容 |
-| 標示為不適當 | 會標籤成員的內容 |
-| 取消標幟為不適當 | 會取消標籤成員的內容 |
-| 接受 | 會員的內容由版主批准 |
-| 關閉 | 成員關閉編輯和回覆的注釋 |
+| 標誌不恰當 | 已標籤成員的內容 |
+| 取消標籤為不適當 | 成員的內容已取消標籤 |
+| 接受 | 成員的內容由版主批准 |
+| 關閉 | 成員關閉編輯和回復注釋 |
 | 開啟 | 成員重新開啟注釋 |
 
-### 自訂元件事件 {#custom-component-events}
+### 自定義元件事件 {#custom-component-events}
 
-對於自訂元件，SocialEvent會實例化，以將元件的事件記錄為 `actions` 在 `topic`.
+對於自定義元件，實例化SocialEvent以將元件的事件記錄為 `actions` 發生在 `topic`。
 
-若要支援計分，SocialEvent必須覆寫方法 `getVerb()` 這樣才合適 `verb` 會針對每個 `action`. 此 `verb` 針對動作傳回的可能是常用的(例如 `POST`)或專用於元件(例如 `ADD RATING`)。 有 *n-1* 關係 `actions` 和 `verbs`.
+要支援評分，SocialEvent需要覆蓋該方法 `getVerb()` 以便 `verb` 返回 `action`。 的 `verb` 返回的操作可能是常用的(例如 `POST`)或專用於元件(例如 `ADD RATING`)。 有 *n-1* 關係 `actions` 和 `verbs`。
 
 ## 疑難排解 {#troubleshooting}
 
-### 徽章未顯示 {#badges-are-not-appearing}
+### 徽章未出現 {#badges-are-not-appearing}
 
-如果已將分數和徽章規則套用至網站的內容，但未察覺任何活動的徽章，請確定已為該元件的例項啟用徽章。
+如果已將評分和標籤規則應用到網站的內容，但沒有為任何活動提醒徽章，請確保已為該元件的實例啟用徽章。
 
-請參閱 [為元件啟用徽章](#enable-badges-for-component).
+請參閱 [為元件啟用徽章](#enable-badges-for-component)。
 
 ### 計分規則無效 {#scoring-rule-has-no-effect}
 
-如果已對網站的內容應用了計分和徽章規則，並且為某些操作（但不為其他操作）授予徽章，請檢查徽章規則是否未限制其應用的計分規則。
+如果已對網站內容應用了評分和標籤規則，並且某些操作（而非其他操作）將授予徽章，請檢查標籤規則是否未限制它所應用的評分規則。
 
-請參閱 `scoringRules` 屬性 [簽章規則](#badging-rules).
+查看 `scoringRules` 物業 [簽名規則](#badging-rules)。
 
 ### 區分大小寫類型 {#case-sensitive-typo}
 
-大部分的屬性和值（尤其是動詞）都區分大小寫。 在計分子規則中使用動詞時，必須全部大寫。
+大多數屬性和值（尤其是動詞）都區分大小寫。 在計分子規則中使用動詞時，必須全部為大寫。
 
-如果功能未如預期運作，請確定資料已正確輸入。
+如果功能未按預期工作，請確保資料輸入正確。
 
-## 快速測試 {#quick-test}
+## 快速Test {#quick-test}
 
-您可以快速嘗試使用 [快速入門教學課程](/help/communities/getting-started.md) （參與網站）:
+可以使用 [入門教程](/help/communities/getting-started.md) （參與）站點：
 
-* 存取作者CRXDE Lite。
+* 訪問作者CRXDE Lite。
 * 瀏覽到基頁：
 
-   * /content/sites/engage/en/jcr:content
+   * /content/sites/engage/en/jcr：內容
 
-* 新增badgingRules屬性：
+* 添加badgingRules屬性：
 
    * **名稱**: `badgingRules`
    * **類型**: `String`
    * 選擇 **多**
-   * 選擇 **新增**
+   * 選擇 **添加**
    * 輸入 `/libs/settings/community/badging/rules/forums-badging`
    * 選取 **+**
    * 輸入 `/libs/settings/community/badging/rules/comments-badging`
    * 選擇 **確定**
 
-* 添加scorinRules屬性：
+* 添加scoringRules屬性：
 
    * **名稱**: `scoringRules`
    * **類型**: `String`
    * 選擇 **多**
-   * 選擇 **新增**
+   * 選擇 **添加**
    * 輸入 `/libs/settings/community/scoring/rules/forums-scoring`
    * 選取 **+**
    * 輸入 `/libs/settings/community/scoring/rules/comments-scoring`
    * 選擇 **確定**
 
-* 選擇 **全部儲存**.
+* 選擇 **全部保存**。
 
-![測試評分 — 簽名](assets/test-scoring-badging.png)
+![test記分](assets/test-scoring-badging.png)
 
-接下來，請確定論壇和注釋元件允許顯示徽章：
+接下來，確保論壇和注釋元件允許顯示徽章：
 
 * 再次使用CRXDE Lite。
-* 瀏覽至論壇元件
+* 瀏覽到論壇元件
 
    * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 
-* 如有必要，請新增allowBadges布林屬性，並確認為true。
+* 如有必要，請添加allowBagds布爾屬性，並確保其為true。
 
    * **名稱**: `allowBadges`
    * **類型**: `Boolean`
    * **值**: `true`
 
-![test-forum-component](assets/test-forum-component.png)
+![test — 論壇 — 構成部分](assets/test-forum-component.png)
 
-下一個， [重新發佈](/help/communities/sites-console.md#publishing-the-site) 社群網站。
+下一個， [重新發佈](/help/communities/sites-console.md#publishing-the-site) 社區網站。
 
-最後，
+終於，
 
-* 瀏覽至發佈執行個體上的元件。
-* 以社群成員身分登入(例如：weston.mccall@dodgit.com /密碼)。
-* 張貼新論壇主題。
-* 必須重新整理頁面才會顯示徽章。
+* 瀏覽到發佈實例上的元件。
+* 以社區成員身份登錄(例如：weston.mccall@dodgit.com / password)。
+* 發佈新論壇主題。
+* 必須刷新頁面才能顯示徽章。
 
-   * 登出並以不同社群成員身分登入(例如：aaron.mcdonald@mailinator.com/password)。
+   * 註銷並作為其他社區成員登錄(例如：aaron.mcdonald@mailinator.com/password)。
 
 * 選擇論壇。
 
-這應該能為社群成員爭取到銅牌，因為第一個論壇徽章規則的第一個臨界值是1分，可在論壇貼文上看到。
+這應該為社區成員贏得一個銅牌徽章，可在其論壇帖子中看到，因為第一個論壇簽名規則的第一個閾值是1分。
 
-![勃朗徽章](assets/bronzebadge.png)
+![鑄幣](assets/bronzebadge.png)
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [計分和徽章要點](/help/communities/configure-scoring.md) 頁面。
+有關 [評分和徽章要點](/help/communities/configure-scoring.md) 頁面。
 
-有關高級計分引擎的資訊，請參閱 [進階計分和徽章](/help/communities/advanced.md).
+有關高級計分引擎的資訊，請參閱 [高級評分和徽章](/help/communities/advanced.md)。
 
-可配置的排行榜 [元件](/help/communities/enabling-leaderboard.md) 和 [函式](/help/communities/functions.md#leaderboard-function) 可簡化成員及其分數在社群網站上的顯示。
+可配置的排行榜 [元件](/help/communities/enabling-leaderboard.md) 和 [函式](/help/communities/functions.md#leaderboard-function) 簡化了成員在社區站點上的顯示及其分數。

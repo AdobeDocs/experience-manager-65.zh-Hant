@@ -1,7 +1,7 @@
 ---
 title: 建立節點
 seo-title: Create Nodes
-description: 覆蓋評論系統
+description: 覆蓋注釋系統
 seo-description: Overlay the comments system
 uuid: 802ae28b-9989-4c2c-b466-ab76a724efd3
 contentOwner: User
@@ -19,22 +19,22 @@ ht-degree: 7%
 
 # 建立節點 {#create-nodes}
 
-複製注釋系統所需的最少檔案數，使用自訂版本覆蓋注釋系統 `/libs` into `/apps` 在 `/apps`.
+將注釋系統與自定義版本重疊，方法是複製注釋系統中所需的最少檔案數 `/libs` 入 `/apps` 修改 `/apps`。
 
 >[!CAUTION]
 >
->不會編輯/libs資料夾的內容，因為任何重新安裝或升級都可以刪除或替換/libs資料夾，而/apps資料夾的內容不會更改。
+>/libs資料夾的內容從不編輯，因為任何重新安裝或升級都可能刪除或替換/libs資料夾，而/apps資料夾的內容保持不變。
 
-使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) 在製作例項上，首先在/apps資料夾中建立路徑，該路徑與/libs資料夾中重疊元件的路徑相同。
+使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) 在作者實例上，首先在/apps資料夾中建立路徑，該路徑與/libs資料夾中重疊元件的路徑相同。
 
-重複的路徑為：
+要複製的路徑是：
 
 * `/libs/social/commons/components/hbs/comments/comment`
 
 路徑中的某些節點是資料夾，有些是元件。
 
-1. 瀏覽至 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
-1. 建立 `/apps/social` （如果尚未存在）
+1. 瀏覽到 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
+1. 建立 `/apps/social` （如果尚不存在）
    * 選擇 `/apps` 節點
    * **[!UICONTROL 建立>資料夾……]**
       * 輸入名稱: `social`
@@ -45,7 +45,7 @@ ht-degree: 7%
    * **[!UICONTROL 建立>資料夾……]**
       * 輸入名稱: `components`
 1. 選擇 `components` 節點
-   * **[!UICONTROL 建立>資料夾……]**.
+   * **[!UICONTROL 建立>資料夾……]**。
       * 輸入名稱: `hbs`
 1. 選擇 `hbs` 節點
    * **[!UICONTROL 建立]** > **[!UICONTROL 建立元件……]**
@@ -65,33 +65,33 @@ ht-degree: 7%
       * 超級類型: `social/commons/components/comments/comment`
       * 輸入組： `.hidden`
       * 按一下 **[!UICONTROL 下一個]** 直到 **[!UICONTROL 確定]**
-   * 選擇 **[!UICONTROL 全部儲存]**
-1. 刪除預設值 `comments.jsp`
+   * 選擇 **[!UICONTROL 全部保存]**
+1. 刪除預設 `comments.jsp`
    * 選擇節點 `/apps/social/commons/components/hbs/comments/comments.jsp`
    * 選擇 **[!UICONTROL 刪除]**
-1. 刪除預設注釋.jsp
+1. 刪除預設的comment.jsp
    * 選擇節點 `/apps/social/commons/components/hbs/comments/comment/comment.jsp`
    * 選擇 **[!UICONTROL 刪除]**
-   * 選擇 **[!UICONTROL 全部儲存]**
+   * 選擇 **[!UICONTROL 全部保存]**
 
 >[!NOTE]
 >
->為了保留繼承鏈， `Super Type` （屬性） `sling:resourceSuperType`)，則覆蓋元件的值會設為與 `Super Type` 重疊的元件，在此例中：
+>為保留繼承鏈， `Super Type` （屬性） `sling:resourceSuperType`)的值與 `Super Type` 在本例中：
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
 
 
-覆蓋圖本身 `Type`（屬性） `sling:resourceType`)必須是相對的自我參考，這樣在/apps中找不到的任何內容，就會在/libs中尋找。
+覆蓋本身 `Type`（屬性） `sling:resourceType`)必須是相對的自引用，以便在/apps中找不到的任何內容，然後在/libs中查找。
 * 名稱: `sling:resourceType`
 * 類型: `String`
 * 值: `social/commons/components/hbs/comments`
 
-1. 選取綠色 `[+] Add`
+1. 選擇綠色 `[+] Add`
    * 名稱: `sling:resourceType`
    * 類型: `String`
    * 值: `social/commons/components/hbs/comments/comment`
-1. 選取綠色 `[+] Add`
-   * 選擇 **[!UICONTROL 全部儲存]**
+1. 選擇綠色 `[+] Add`
+   * 選擇 **[!UICONTROL 全部保存]**
 
 ![建立節點](assets/create-nodes.png)

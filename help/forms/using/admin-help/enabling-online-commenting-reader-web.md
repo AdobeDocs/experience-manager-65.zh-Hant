@@ -1,7 +1,7 @@
 ---
-title: 啟用Adobe Reader網頁瀏覽器外掛程式的線上註解
+title: 為Adobe ReaderWeb瀏覽器插件啟用聯機注釋
 seo-title: Enabling online commenting for Adobe Reader web browser plug-in
-description: 了解如何為Adobe Reader網頁瀏覽器外掛程式啟用線上註解。
+description: 瞭解如何啟用Adobe ReaderWeb瀏覽器插件的聯機注釋。
 seo-description: Learn how to enable online commenting for Adobe Reader web browser plug-in.
 uuid: 3ac5270f-2b8a-47b1-b0ca-a5607476923f
 contentOwner: admin
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 啟用Adobe Reader網頁瀏覽器外掛程式的線上註解 {#enabling-online-commenting-for-adobe-reader-web-browser-plug-in}
+# 為Adobe ReaderWeb瀏覽器插件啟用聯機注釋 {#enabling-online-commenting-for-adobe-reader-web-browser-plug-in}
 
-要在使用Adobe Reader Web瀏覽器插件查看的PDF檔案中啟用「注釋和標籤」工具欄，必須有協作後端，例如審閱伺服器。 如果協作後端不可用，則必須將PDF檔案保存到電腦，在Adobe Reader中查看並標籤該檔案，然後將其發回創作者。
+要在使用Adobe ReaderWeb瀏覽器插件查看的PDF檔案中啟用「注釋和標籤」工具欄，協作後端必須就位，如審閱伺服器。 如果協作後端不可用，則必須將PDF檔案保存到電腦，在Adobe Reader查看並標籤該檔案，然後將其發送回發起方。
 
-如果在非協作環境中需要聯機注釋，請聯繫Adobe支援以了解詳細資訊。
+如果在非協作環境中需要聯機注釋，請聯繫Adobe支援以獲取詳細資訊。

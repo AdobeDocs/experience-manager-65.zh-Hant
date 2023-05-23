@@ -1,5 +1,5 @@
 ---
-title: AEM 6.5其他資源
+title: AEM6.5其他資源
 seo-title: AEM 6.5 Additional Resources
 description: AEM 6.5發行說明、認證和其他資源
 seo-description: AEM 6.5 release notes, certifications, and additional resources
@@ -11,25 +11,25 @@ ht-degree: 6%
 
 ---
 
-# AEM 6.5其他資源 {#aem-64-additional-resources}
+# AEM6.5其他資源 {#aem-64-additional-resources}
 
-## AEM 6.5發行說明 {#aem-64-release-notes}
+## AEM6.5發行說明 {#aem-64-release-notes}
 
-[在發行說明中了解AEM 6.5的最新新功能。](/help/release-notes/home.md)
+[瞭解發行說明中AEM6.5中的最新新功能。](/help/release-notes/home.md)
 
-## AEM 6.5教學課程影片 {#aem-64-tutorial-videos}
+## 6AEM.5教程視頻 {#aem-64-tutorial-videos}
 
-* [AEM 6.5訓練影片](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [6AEM.5培訓視頻](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
 * [AEM 教學課程](https://helpx.adobe.com/experience-manager/tutorials.html)
 
-## 類別與認證 {#classes-and-certification}
+## 類和證書 {#classes-and-certification}
 
-[通過面對面和虛擬課堂服務擴展您的學習。](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
+[通過面授和虛擬課堂產品擴展您的學習。](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
 
 ## GDPR 整備 {#gdpr-readiness}
 
-[遵守GDPR隱私權標準。](/help/managing/data-protection-and-privacy.md)
+[遵守GDPR隱私標準。](/help/managing/data-protection-and-privacy.md)
 
 ## Experience League {#experience-leauge}
 
-[在Experience League中檢視AEM的學習資源。](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#dashboard)
+[查看Experience League中AEM的學習資源。](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#dashboard)

@@ -1,7 +1,7 @@
 ---
-title: 使用記錄檔
+title: 使用日誌
 seo-title: Working with Logs
-description: 了解如何使用記錄檔來疑難排解AEM。
+description: 通過使用日誌AEM瞭解如何排除故障。
 seo-description: Learn how to troubleshoot AEM by working with logs.
 uuid: af8b7f50-c8d4-4760-9f00-3feb0b79ee4c
 contentOwner: Guillaume Carlino
@@ -18,46 +18,46 @@ ht-degree: 3%
 
 ---
 
-# 使用記錄檔{#working-with-logs}
+# 使用日誌{#working-with-logs}
 
-本節包含可協助您進行疑難排解之記錄的詳細資訊。
+本部分包括有關可幫助您排除故障的日誌的詳細資訊。
 
-CRX記錄詳細記錄。 開啟快速入門程式後，您可以在以下位置找到日誌：
+CRX記錄詳細日誌。 開啟包裝並啟動Quickstart後，可以在以下位置找到日誌：
 
-* crx-quickstart/launchpad/logs
-* crx-quickstart/server/logs
-* crx-quickstart/logs
+* crx quickstart/launchpad/logs
+* crx quickstart/server/logs
+* crx快速啟動/日誌
 
-## 啟用偵錯記錄層級 {#activating-the-debug-log-level}
+## 激活DEBUG日誌級別 {#activating-the-debug-log-level}
 
-預設日誌級別為INFO，即未記錄DEBUG消息。
+預設日誌級別為INFO，即DEBUG消息未記錄。
 
-若要啟用DEBUG記錄層級，請使用CRX總管來設定
+要激活DEBUG日誌級別，請使用CRX瀏覽器設定
 
 ```xml
 /libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level
 ```
 
-要除錯的屬性。 請勿將記錄檔保留在DEBUG記錄層級，因為它會產生許多記錄檔。
+要調試的屬性。 不要將日誌保留在DEBUG日誌級別，因為它會生成大量日誌。
 
-除錯檔案中的一行通常以DEBUG開頭，然後提供記錄層級、安裝程式動作和記錄訊息。 例如：
+調試檔案中的一行通常以DEBUG開頭，然後提供日誌級別、安裝程式操作和日誌消息。 例如：
 
 ```xml
 DEBUG 3 WebApp Panel: WebApp successfully deployed
 ```
 
-記錄層級如下：
+日誌級別如下：
 
 | 0 | 錯誤 | 操作失敗，安裝程式無法繼續。 |
 |---|---|---|
-| 1 | 錯誤 | 操作失敗。 安裝繼續，但CRX的一部分未正確安裝，因此無法正常工作。 |
-| 2 | 警告 | 操作已成功，但遇到問題。 CRX可能或無法正常運作。 |
-| 3 | 資訊 | 操作成功。 |
+| 1 | 錯誤 | 操作失敗。 安裝將繼續，但CRX的一部分安裝不正確，無法正常工作。 |
+| 2 | 警告 | 操作已成功，但遇到問題。 CRX可能正確工作，也可能不正確。 |
+| 3 | 資訊 | 操作已成功。 |
 
 ## 用於故障排除的詳細選項 {#verbose-option-used-for-troubleshooting}
 
-啟動CRX時，可以將 — v(verbose)選項添加到命令行，如下所示：
+啟動CRX時，可將 — v(verbose)選項添加到命令行中，如中所示：
 
 ` java -jar crx-<*version*>-<*edition*>.jar -v`
 
-使用詳細選項進行故障排除，因為此選項在控制台上顯示一些快速啟動日誌輸出。
+使用詳細選項進行故障排除，因為此選項顯示控制台上的一些快速啟動日誌輸出。

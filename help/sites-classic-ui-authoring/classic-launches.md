@@ -1,6 +1,6 @@
 ---
 title: Launch
-description: 建立啟動，以啟用更新新版本的現有網頁，以供日後啟用。 建立Launch時，需指定標題和來源頁面。
+description: 建立啟動以啟用更新現有網頁的新版本以供將來激活。 建立「啟動」時，指定標題和源頁。
 uuid: b1952b6c-fc44-4e39-80ba-9380a6c66b8c
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -23,12 +23,12 @@ Launches 可讓您有效率地開發未來版本的內容。
 
 >[!NOTE]
 >
->在此基礎上，詳細描述了發射背後的理論 [啟動](/help/sites-authoring/launches.md) 在標準製作檔案中。
+>本文詳細描述了發射原理，並對發射原理進行了介紹。 [啟動](/help/sites-authoring/launches.md) 在標準創作文檔中。
 >
->如需在傳統UI中使用啟動的特定資訊，請參閱下列檔案及 [建立啟動](/help/sites-classic-ui-authoring/classic-launches-creating.md), [編輯啟動](/help/sites-classic-ui-authoring/classic-launches-editing.md)，和 [提升啟動](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
+>在以下文檔中可找到特定於在經典UI中使用啟動的資訊，以及 [建立啟動](/help/sites-classic-ui-authoring/classic-launches-creating.md)。 [編輯啟動](/help/sites-classic-ui-authoring/classic-launches-editing.md), [正在升級啟動](/help/sites-classic-ui-authoring/classic-launches-promoting.md)。
 
 >[!CAUTION]
 >
->傳統UI中無法為啟動提供多個來源分支。
+>在標準UI中，不能為啟動提供多個源分支。
 
-您可以透過 [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)
+可以直接使用 [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)

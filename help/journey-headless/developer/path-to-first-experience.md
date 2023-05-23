@@ -44,7 +44,7 @@ ht-degree: 97%
 
 若要開始您的第一個 AEM 無周邊專案，需要確保您有一個內容模型，可支援您想要跨所有管道進行的個人化和更新。
 
-與AEM分開，如果您要建置用戶端應用程式，以便根據對AEM的API呼叫測試用戶端，也請確定您已設定正確的開發環境。
+另AEM外，您還希望確保在構建客戶端應用程式時設定了適當的開發環境，以便您能夠針對對的API調用test客戶端AEM。
 
 ### 定義內容模型和 API {#defining-models}
 
@@ -147,7 +147,7 @@ AEM 有三種類型的環境：開發、預備和生產。
 * [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 利用這些實作教學課程來探索如何運用各種不同方式使用 AEM 將內容傳遞到無周邊端點，並選擇適合您的方式。
 * [使用 GraphQL API 進行 Headless 內容管理](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;Launch=ExperienceManager-D-1-2020.1.headless#courses) - 按照本課程說明對 AEM 中實作的 GraphQL API 有概略的了解。必須透過 AdobeID 進行驗證。
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - 此 GitHub 專案包含以 AEM GraphQL API 為重點的範例應用程式。
-* [無頭入門手冊](/help/sites-developing/headless/introduction.md#getting-started)  — 為熟悉AEM的使用者快速介紹AEM無頭功能。
+* [無頭入門指南](/help/sites-developing/headless/introduction.md#getting-started)  — 快速介紹AEM已熟悉的無頭功能AEM。
 * [建立內容片段模型](/help/assets/content-fragments/content-fragments-models.md) - 內容片段模型的技術文件
 * [建立內容片段](/help/assets/content-fragments/content-fragments.md) - 內容片段的技術文件
 * [使用 GraphQL 查詢內容](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - GraphQL API 的技術文件

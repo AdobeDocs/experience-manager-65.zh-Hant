@@ -1,7 +1,7 @@
 ---
 title: 頁面差異
 seo-title: Page Diff
-description: 頁面差異功能可方便地並排比較兩個頁面，並強調顯示其差異。
+description: 頁面差異功能允許在突出顯示兩頁差異的情況下方便地進行並排比較。
 seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.
 uuid: 5af8b466-5922-4fe6-9eae-7bad99be23e0
 contentOwner: User
@@ -22,84 +22,84 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-內容建立是一個迭代過程。 以效率製作需要能夠查看從一個迭代到另一個迭代的更改。 檢視一個頁面版本，而另一個頁面版本則效率低下且容易出錯。 作者想要輕鬆並排比較目前的頁面與其他版本。
+內容建立是一個迭代過程。 創作時需要能夠看到從一個迭代到另一個迭代的更改。 查看一個頁面版本，然後查看另一個頁面版本效率低下且容易出錯。 作者希望能夠輕鬆地將當前頁面與另一個版本並排進行比較。
 
-頁面差異功能可方便地並排比較兩個頁面，並強調顯示其差異。
+頁面差異功能允許在突出顯示兩頁差異的情況下方便地進行並排比較。
 
 >[!TIP]
 >
->請參閱 [開發與頁面差異](/help/sites-developing/pagediff.md#operation-details) 如需此功能的詳細技術資訊。
+>請參閱 [開發和頁面差異](/help/sites-developing/pagediff.md#operation-details) 有關此功能的更多技術詳細資訊。
 
 ## 使用 {#use}
 
-並排差異可以比較：
+並排比較可以比較：
 
-* [版本](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page)  — 具有其當前狀態的頁面的早期版本
-* [Live Copies](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) - Live Copy及其Blueprint
-* [啟動](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page)  — 透過其來源啟動
-* [語言副本](/help/sites-administering/tc-manage.md#comparing-language-copies)  — 翻譯前後的頁面（重新）
+* [版本](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page)  — 當前狀態的頁面的早期版本
+* [即時拷貝](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page)  — 即時複製及其藍圖
+* [啟動](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page)  — 使用其源啟動
+* [語言副本](/help/sites-administering/tc-manage.md#comparing-language-copies)  — 翻譯前後的頁面
 
-請參閱有關如何在這些內容中啟動差異的各個主題。
+請參閱有關如何在這些上下文中啟動差異的各主題。
 
 ### 差異的表示 {#presentation-of-differences}
 
-無論比較的內容為何，差異的呈現方式都保持不變。
+無論比較的內容如何，差異的呈現方式都保持不變。
 
 * 啟動差異時選擇的內容顯示在左側（差異入口點）。
-* 比較內容會顯示在右側（比較所選內容的對象）。
+* 比較內容顯示在右側（與所選內容進行比較）。
 
-例如，如果比較版本，則當前版本顯示在左側，而上一版本顯示在右側。
+例如，如果比較版本，則當前版本顯示在左側，先前版本顯示在右側。
 
-兩個頁面的來源會清楚顯示在瀏覽器視窗頂端的標題列中。
+兩個頁面的源都清楚地顯示在瀏覽器窗口頂部的標題欄中。
 
 ![chlimage_1-109](assets/chlimage_1-109.png)
 
-差異會在元件和HTML層級偵測變更。 已變更的項目會以不同顏色強調顯示。
+差異在元件和HTML級別檢測更改。 已更改的項會用不同顏色加亮。
 
-**元件變更**
+**元件更改**
 
-* 淺綠色 — 新增元件
+* 淺綠色 — 已添加元件
 * 粉紅色 — 元件已移除
 
-**HTML變更**
+**HTML更改**
 
-* 深綠色 — 新增HTML
-* 紅色 — 已移除HTML
+* 深綠色 — 已添加HTML
+* 紅色 — HTML已刪除
 
 >[!NOTE]
 >
->比較語言副本時，會停用醒目提示，因為在翻譯中，所有變更和醒目提示都沒有好處。
+>在比較語言副本時，會取消突出顯示，因為在翻譯中，所有更改和突出顯示都無益。
 
-### 全螢幕和退出 {#fullscreen-and-exiting}
+### 全屏和退出 {#fullscreen-and-exiting}
 
-若要著重於特定內容，您可以按一下並排差異的任一「側」全螢幕圖示，將其放大至完整瀏覽器視窗。
+為了關注特定內容，您可以按一下「並排」差異的任一「並排」全屏表徵圖，將其放大到全面瀏覽器窗口。
 
 ![](do-not-localize/chlimage_1-18.png)
 
-選取的一側會填入整個視窗，但長條會保留在頂端，讓您在兩頁之間切換。
+選定的側面將填充整個窗口，但欄將保持在頂部，允許您在兩個頁面之間切換。
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
-您也可以按一下退出全螢幕圖示，以選擇關閉全螢幕檢視。
+也可以通過按一下退出全屏表徵圖來選擇關閉全屏視圖。
 
 ![](do-not-localize/chlimage_1-19.png)
 
-您可以隨時按一下標題中的「關閉」按鈕，以退出並排差異。
+通過按一下標題中的「關閉」按鈕，可以隨時退出並排差異。
 
 ## 限制 {#limitations}
 
-在某些情況下，頁面差異可能無法如預期般偵測到差異。
+在某些情況下，頁面差異可能無法檢測到預期的差異。
 
-* 差異版本和啟動時，差異不會考慮階層連結、功能表、產品清單或標誌等動態元件（依賴網站結構呈現其內容的元件）。
-* 對於版本，差異不會重新建立訪問控制策略和即時副本關係。
-* 如果移動了頁面，則無法再對移動前進行的任何版本執行差異。
+* 當差異版本和啟動時，差異不會考慮動態元件，如麵包屑、菜單、產品清單或徽標（依賴站點結構呈現其內容的元件）。
+* 對於版本，差異不會重新建立訪問控制策略和即時複製關係。
+* 如果移動了頁面，則無法再對移動前建立的任何版本執行差異。
 
-   * 如果您遇到差異問題，請檢查 [時間表](/help/sites-authoring/basic-handling.md#timeline) ，查看頁面是否已移動。
-
->[!NOTE]
->
->無法相互比較版本。 只能比較目前版本的頁面。 目前版本一律為醒目提示並變更的版本。
+   * 如果遇到差異問題，請檢查 [時間軸](/help/sites-authoring/basic-handling.md#timeline) ，查看是否已移動頁面。
 
 >[!NOTE]
 >
->有關頁面差異機制操作以及可能影響頁面差異的限制的詳細資訊，請參見 [開發人員檔案](/help/sites-developing/pagediff.md) 功能。
+>版本無法相互比較。 只能將當前版本與頁面的其他版本進行比較。 當前版本始終是用更改突出顯示的版本。
+
+>[!NOTE]
+>
+>有關頁面差異機制操作以及可能影響頁面差異的限制的詳細資訊，請參閱 [開發者文檔](/help/sites-developing/pagediff.md) 功能。

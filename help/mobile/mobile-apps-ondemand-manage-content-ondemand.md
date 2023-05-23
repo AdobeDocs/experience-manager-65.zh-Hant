@@ -1,7 +1,7 @@
 ---
 title: 管理內容
 seo-title: Managing Content
-description: 「內容管理」動作是協助建立及管理應用程式內內容的基礎要素。 請詳閱本頁以了解更多。
+description: 內容管理操作是幫助建立和管理應用程式內內容的構造塊。 請按照此頁瞭解詳細資訊。
 seo-description: Content Management actions are the building blocks that help to create and manage content within an application. Follow this page to learn more.
 uuid: ab680836-133b-45b9-913c-e721b7e9fc04
 contentOwner: User
@@ -21,41 +21,41 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-「內容管理」動作是協助建立及管理應用程式內內容的基礎要素。 會對應用程式內的內容執行下列動作。
+內容管理操作是幫助建立和管理應用程式內內容的構造塊。 對應用程式內的內容執行以下操作。
 
 ## 內容概述 {#content-overview}
 
-如果您想到線上雜誌，主要內容包括文章、廣告和封面。 可在AEM內建立三種主要的行動隨選內容類型：
+想到網上雜誌，主要內容包括文章，廣告，封面。 可以在以下幾種類型中建立移動按需內容AEM:
 
-* **文章**:基於文本和藝術傳達資訊
+* **條目**:基於文本和藝術傳達資訊
 * **橫幅：** 通常是圖形促銷連結
-* **集合：** 代表定義明確 *貯體* 滿是符合封面主題的文章或橫幅之類的內容
+* **集合：** 代表定義得當 *桶* 滿是符合封面主題的文章或橫幅等內容
 
-* **共用資源：** 允許在文章之間重複使用或共用通用片段
+* **共用資源：** 允許在文章間重複使用或共用公共條目
 
 >[!NOTE]
 >
->若要進一步了解AEM Mobile應用程式的設計考量事項，請參閱 [AEM Mobile應用程式的設計考量事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) 中。
+>要瞭解有關AEM Mobile應用的設計注意事項的詳細資訊，請參閱 [AEM Mobile應用的設計注意事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) 中。
 
 ## 建立和管理內容 {#creating-and-managing-content}
 
-以下主題說明內容的建立和管理，即文章、橫幅和集合。 了解如何建立和管理內容後，您就會看到其他主題，例如上傳共用資源、發佈/取消發佈內容，以及使用Preflight預覽。
+以下主題介紹內容的建立和管理，即文章、橫幅和收藏。 學習如何建立和管理內容後，您可以看到其他主題，如上載共用資源、發佈/取消發佈內容以及使用印前檢查進行預覽。
 
 * [管理文章](/help/mobile/mobile-on-demand-managing-articles.md)
 * [管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)
 * [管理集合](/help/mobile/mobile-on-demand-managing-collections.md)
-* [上傳共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
+* [正在上載共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
 * [發佈取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
 
 >[!NOTE]
 >
->一般而言，您應在發佈內容之前進行預檢。 請參閱 [使用預檢預覽](/help/mobile/aem-mobile-manage-ondemand-services.md) 以取得更多詳細資訊。
+>通常，在發佈內容之前，您應先進行預檢。 請參閱 [使用印前檢查預覽](/help/mobile/aem-mobile-manage-ondemand-services.md) 的子菜單。
 
 ### 其他資源 {#additional-resources}
 
-若要了解管理員和開發人員的角色和責任，請參閱下列資源：
+要瞭解管理員和開發人員的角色和職責，請參閱以下資源：
 
-* [為AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [開發AEMAEM Mobile On-demand Services內容](/help/mobile/aem-mobile-on-demand.md)
 * [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)

@@ -1,7 +1,7 @@
 ---
-title: 為卸載建立並佔用作業
+title: 建立和使用卸載作業
 seo-title: Creating and Consuming Jobs for Offloading
-description: Apache Sling Discovery功能提供Java API，可讓您建立使用JobManager作業和JobConsumer服務
+description: Apache Sling Discovery功能提供了Java API，使您能夠建立使用JobManager作業和JobConsumer服務
 seo-description: The Apache Sling Discovery feature provides a Java API that enables you to create JobManager jobs and JobConsumer services that consume them
 uuid: d6a5beb0-0618-4b61-9b52-570862eac920
 contentOwner: Guillaume Carlino
@@ -17,35 +17,35 @@ ht-degree: 0%
 
 ---
 
-# 為卸載建立並佔用作業{#creating-and-consuming-jobs-for-offloading}
+# 建立和使用卸載作業{#creating-and-consuming-jobs-for-offloading}
 
-Apache Sling Discovery功能提供Java API，可讓您建立使用JobManager作業和JobConsumer服務。
+Apache Sling Discovery功能提供了Java API，使您能夠建立使用JobManager作業和JobConsumer服務。
 
-如需建立卸載拓撲和配置主題消耗的相關資訊，請參閱 [卸載作業](/help/sites-deploying/offloading.md).
+有關建立卸載拓撲和配置主題消耗的資訊，請參見 [卸載作業](/help/sites-deploying/offloading.md)。
 
 ## 處理作業負載 {#handling-job-payloads}
 
-卸載框架定義了用於標識作業裝載的兩個作業屬性。 卸載複製代理使用這些屬性來標識要複製到拓撲中實例的資源：
+卸載框架定義了兩個用於標識作業負載的作業屬性。 卸載複製代理使用這些屬性標識要複製到拓撲中實例的資源：
 
-* `offloading.job.input.payload`:以逗號分隔的內容路徑清單。 內容會複製到執行作業的執行個體。
-* `offloading.job.output.payload`:以逗號分隔的內容路徑清單。 作業執行完成後，作業裝載將複製到建立作業的執行個體上的這些路徑。
+* `offloading.job.input.payload`:以逗號分隔的內容路徑清單。 內容被複製到執行作業的實例。
+* `offloading.job.output.payload`:以逗號分隔的內容路徑清單。 作業執行完成後，作業負載將複製到建立作業的實例上的這些路徑。
 
-使用 `OffloadingJobProperties` 枚舉以引用屬性名稱：
+使用 `OffloadingJobProperties` 引用屬性名稱的枚舉：
 
 * `OffloadingJobProperties.INPUT_PAYLOAD.propertyName()`
 * `OffloadingJobProperties.OUTPUT_PAYLOAD.propetyName()`
 
-作業不需要裝載。 但是，如果作業需要操作資源，並且作業被卸載到未建立該作業的電腦上，則需要裝載。
+作業不需要負載。 但是，如果作業需要操作資源，並且作業被卸載到未建立作業的電腦，則必須執行負載。
 
 ## 建立卸載作業 {#creating-jobs-for-offloading}
 
-建立調用JobManager.addJob方法的客戶端，以建立自動選擇的JobConsumer執行的作業。 提供以下資訊以建立作業：
+建立調用JobManager.addJob方法以建立自動選擇的JobConsumer執行的作業的客戶端。 提供以下資訊以建立作業：
 
-* 主題：工作主題。
+* 主題：作業主題。
 * 名稱：（可選）
-* 屬性映射：A `Map<String, Object>` 包含任何數量屬性的物件，例如輸入裝載路徑和輸出裝載路徑。 此映射對象可用於執行該作業的JobConsumer對象。
+* 屬性映射：A `Map<String, Object>` 包含任意數量屬性的對象，如輸入負載路徑和輸出負載路徑。 此映射對象可用於執行該作業的JobConsumer對象。
 
-下列範例服務會為指定主題和輸入裝載路徑建立工作。
+以下示例服務為給定主題和輸入負載路徑建立作業。
 
 ```java
 package com.adobe.example.offloading;
@@ -93,7 +93,7 @@ public class JobGeneratorImpl implements JobGenerator  {
 }
 ```
 
-為 `com/adobe/example/offloading` 主題和 `/content/geometrixx/de/services` 裝載：
+為調用JobGeneratorImpl.createJob時，日誌包含以下消息 `com/adobe/example/offloading` 主題和 `/content/geometrixx/de/services` 負載：
 
 ```shell
 10.06.2013 15:43:33.868 *INFO* [JobHandler: /etc/workflow/instances/2013-06-10/model_1554418768647484:/content/geometrixx/en/company] com.adobe.example.offloading.JobGeneratorImpl Received request to make job for topic com/adobe/example/offloading and payload /content/geometrixx/de/services
@@ -101,9 +101,9 @@ public class JobGeneratorImpl implements JobGenerator  {
 
 ## 發展就業消費者 {#developing-a-job-consumer}
 
-若要使用工作，請開發實施 `org.apache.sling.event.jobs.consumer.JobConsumer` 介面。 識別要使用的主題，使用 `JobConsumer.PROPERTY_TOPICS` 屬性。
+要消耗作業，請開發一個OSGi服務 `org.apache.sling.event.jobs.consumer.JobConsumer` 。 使用 `JobConsumer.PROPERTY_TOPICS` 屬性。
 
-下列範例JobConsumer實作註冊至 `com/adobe/example/offloading` 主題。 使用者只會將裝載內容節點的「已使用」屬性設為true。
+以下示例JobConsumer實現在 `com/adobe/example/offloading` 主題。 使用者只需將負載內容節點的Cunsed屬性設定為true。
 
 ```java
 package com.adobe.example.offloading;
@@ -168,7 +168,7 @@ public class MyJobConsumer implements JobConsumer {
 }
 ```
 
-MyJobConsumer類別會為/content/geometrixx/de/services的輸入裝載產生下列記錄訊息：
+MyJobConsumer類為/content/geometrixx/de/services的輸入負載生成以下日誌消息：
 
 ```shell
 10.06.2013 16:02:40.803 *INFO* [pool-7-thread-17-<main queue>(com/adobe/example/offloading)] com.adobe.example.offloading.MyJobConsumer Consuming job of topic: com/adobe/example/offloading
@@ -176,13 +176,13 @@ MyJobConsumer類別會為/content/geometrixx/de/services的輸入裝載產生下
 10.06.2013 16:02:40.884 *INFO* [pool-7-thread-17-<main queue>(com/adobe/example/offloading)] com.adobe.example.offloading.MyJobConsumer Job OK for payload /content/geometrixx/de/services
 ```
 
-可使用CRXDE Lite來觀察已使用屬性：
+可以使用CRXDE Lite來觀察「已使用」屬性：
 
 ![chlimage_1-25](assets/chlimage_1-25a.png)
 
-## Maven相依性 {#maven-dependencies}
+## 馬文依賴項 {#maven-dependencies}
 
-將下列相依性防禦項目新增至您的pom.xml檔案，讓Maven可解析卸載相關類別。
+將以下依賴關係保護添加到pom.xml檔案，以便Maven可以解析與卸載相關的類。
 
 ```xml
 <dependency>
@@ -199,7 +199,7 @@ MyJobConsumer類別會為/content/geometrixx/de/services的輸入裝載產生下
 </dependency>
 ```
 
-前面的示例還需要以下依賴項定義：
+以上示例還需要以下依賴關係定義：
 
 ```xml
 <dependency>

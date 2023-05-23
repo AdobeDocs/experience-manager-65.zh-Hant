@@ -23,9 +23,9 @@ ht-degree: 1%
 
 ## 「注釋」頁 {#comments-page}
 
-此 [社群元件指南](components-guide.md) 提供輕鬆體驗覆蓋註解元件的功能。
+的 [社區元件指南](components-guide.md) 提供了輕鬆體驗覆蓋注釋元件的能力。
 
-在製作例項上檢視頁面：
+查看作者實例上的頁面：
 
 * [http://localhost:4502/editor.html/content/community-components/en/comments.html](http://localhost:4502/editor.html/content/community-components/en/comments.html)
 

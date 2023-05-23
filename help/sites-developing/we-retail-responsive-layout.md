@@ -1,7 +1,7 @@
 ---
-title: 在We.Retail中嘗試回應式版面
+title: 在We.Retail中嘗試響應式佈局
 seo-title: Trying out Responsive Layout in We.Retail
-description: 在We.Retail中嘗試回應式版面
+description: 在We.Retail中嘗試響應式佈局
 seo-description: null
 uuid: d9613655-f54e-458f-9175-d07bb868f58b
 contentOwner: User
@@ -17,34 +17,34 @@ ht-degree: 2%
 
 ---
 
-# 在We.Retail中嘗試回應式版面{#trying-out-responsive-layout-in-we-retail}
+# 在We.Retail中嘗試響應式佈局{#trying-out-responsive-layout-in-we-retail}
 
-所有We.Retail頁面都使用「版面容器」元件來實作回應式設計。 版面容器提供段落系統，可讓您將元件置於回應式格線內。 此網格可根據設備/窗口大小和格式重新排列佈局。 該元件與 **版面** 模式，可讓您根據裝置建立和編輯回應式版面。
+所有We.Retail頁面都使用佈局容器元件來實現響應性設計。 佈局容器提供了段落系統，允許您在響應網格中定位元件。 此網格可根據設備/窗口大小和格式重新排列佈局。 該元件與 **佈局** 的子菜單。
 
-## 試試 {#trying-it-out}
+## 嘗試 {#trying-it-out}
 
-1. 在語言主分支的「體驗」部分編輯「北極衝浪」頁。
+1. 編輯語言主分支「體驗」部分的「北極衝浪」頁面。
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html
 
-1. 切換至 **預覽** 來查看對網站訪客呈現的頁面樣式。 向下捲動至文章內容 *挪威北部的阿羅哈神*.
+1. 切換到 **預覽** 查看該頁面將呈現給網站訪問者。 向下滾動到文章的內容 *挪威北部的阿羅哈神靈*。
 
    ![chlimage_1-178](assets/chlimage_1-178.png)
 
-1. 調整瀏覽器視窗的大小，並隨著版面隨調整大小而動態調整。
+1. 調整瀏覽器窗口的大小，並在佈局動態適應調整大小時觀看。
 
    ![chlimage_1-179](assets/chlimage_1-179.png)
 
-1. 切換至「配置」模式。 模擬器工具列會自動顯示，讓您可依目標裝置來規劃版面。
+1. 切換到佈局模式。 模擬器工具欄會自動顯示，允許您按目標設備規劃佈局。
 
-   選取元件會在編輯選單中顯示浮動和隱藏選項，以及調整元件的控點大小。
+   選擇元件將在編輯菜單中顯示浮動和隱藏選項以及元件的大小調整手柄。
 
    ![chlimage_1-180](assets/chlimage_1-180.png)
 
-1. 抓取並拖曳元件的大小調整控制滑塊會自動顯示版面網格，以協助您調整大小。
+1. 抓取並拖動元件的大小調整控制滑塊會自動顯示佈局網格，以幫助您調整大小。
 
    ![chlimage_1-181](assets/chlimage_1-181.png)
 
 ## 更多資訊 {#further-information}
 
-有關詳細資訊，請參閱創作文檔 [回應式版面](/help/sites-authoring/responsive-layout.md) 或管理員文檔 [配置佈局容器和佈局模式](/help/sites-administering/configuring-responsive-layout.md) 以取得完整的技術詳細資訊。
+有關詳細資訊，請參閱創作文檔 [響應佈局](/help/sites-authoring/responsive-layout.md) 或管理員文檔 [配置佈局容器和佈局模式](/help/sites-administering/configuring-responsive-layout.md) 詳細技術資訊。

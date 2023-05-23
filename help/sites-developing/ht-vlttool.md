@@ -1,7 +1,7 @@
 ---
 title: 如何使用VLT工具
 seo-title: How to use the VLT Tool
-description: Jackrabbit FileVault工具(VLT)由Apache Foundation開發，可將Jackrabbit/AEM例項的內容對應至您的檔案系統
+description: Jackrabbit FileVault工具(VLT)由Apache Foundation開發，用於將Jackrabbit/實例的內容AEM映射到檔案系統
 seo-description: The Jackrabbit FileVault tool (VLT) is developed by The Apache Foundation that maps the content of a Jackrabbit/AEM instance to your file system
 uuid: 579e7785-8b50-4366-b562-8e79b6451464
 contentOwner: Guillaume Carlino
@@ -19,38 +19,38 @@ ht-degree: 1%
 
 # 如何使用VLT工具 {#how-to-use-the-vlt-tool}
 
-Jackrabbit FileVault工具(VLT)是由 [Apache Foundation](https://www.apache.org/) 將Jackrabbit/AEM例項的內容對應至您的檔案系統。 VLT工具具有與原始碼控制系統客戶端(如Subversion(SVN)客戶端)類似的功能，提供正常的簽入、簽出和管理操作，以及用於靈活表示項目內容的配置選項。
+Jackrabbit FileVault工具(VLT)是由 [阿帕奇基金會](https://www.apache.org/) 將Jackrabbit/實例的內AEM容映射到檔案系統。 VLT工具具有與原始碼控制系統客戶端(如Subversion(SVN)客戶端)類似的功能，提供正常的簽入、簽出和管理操作，以及用於靈活表示項目內容的配置選項。
 
-從命令行運行VLT工具。 本檔案說明如何使用工具，包括如何開始使用及取得說明，以及列出所有 [命令](#vlt-commands) 可用 [選項](#vlt-global-options).
+從命令行運行VLT工具。 本文檔介紹如何使用該工具，包括如何開始和獲取幫助，以及所有工具的清單 [命令](#vlt-commands) 可用 [選項](#vlt-global-options)。
 
-## 概念與架構 {#concepts-and-architecture}
+## 概念和體系結構 {#concepts-and-architecture}
 
-請參閱 [Filevault概述](https://jackrabbit.apache.org/filevault/overview.html) 和 [保管庫FS](https://jackrabbit.apache.org/filevault/vaultfs.html) 來自官方 [Apache Jackrabbit Filevault檔案](https://jackrabbit.apache.org/filevault/index.html) 以全面了解Filevault工具的概念和結構。
+查看 [Filevault概述](https://jackrabbit.apache.org/filevault/overview.html) 和 [保管庫FS](https://jackrabbit.apache.org/filevault/vaultfs.html) 官員的頁面 [Apache Jackrabbit檔案](https://jackrabbit.apache.org/filevault/index.html) 瞭解Filevault工具的概念和結構。
 
-## VLT快速入門 {#getting-started-with-vlt}
+## VLT入門 {#getting-started-with-vlt}
 
-若要開始使用VLT，您必須執行下列操作：
+要開始使用VLT，需要執行以下操作：
 
-1. 安裝VLT、更新環境變數和更新全局忽略的Subversion檔案。
-1. 設定AEM存放庫（如果尚未這麼做）。
-1. 查看AEM存放庫。
+1. 安裝VLT、更新環境變數和更新全局忽略的subversion檔案。
+1. 設定存AEM儲庫（如果尚未設定）。
+1. 簽出存AEM儲庫。
 1. 與儲存庫同步。
-1. 測試同步是否有效。
+1. Test同步是否工作。
 
 ### 安裝VLT工具 {#installing-the-vlt-tool}
 
-若要使用VLT工具，您必須先安裝它。 預設不會安裝它，因為它是其他工具。 此外，您還需要設定系統的環境變數。
+要使用VLT工具，首先需要安裝它。 預設情況下未安裝它，因為它是一個附加工具。 此外，還需要設定系統的環境變數。
 
-1. 從 [Maven工件儲存庫。](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/)
+1. 從 [Maven項目儲存庫。](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/)
    >[!NOTE]
    >
-   >VLT工具的來源是 [可在GitHub上使用。](https://github.com/apache/jackrabbit-filevault)
-1. 解壓縮封存。
-1. 新增 `<archive-dir>/vault-cli-<version>/bin` 環境 `PATH` 這樣命令檔案 `vlt` 或 `vlt.bat` 可視情況存取。 例如：
+   >VLT工具的來源是 [在GitHub上可用。](https://github.com/apache/jackrabbit-filevault)
+1. 解壓縮存檔。
+1. 添加 `<archive-dir>/vault-cli-<version>/bin` 到您的環境 `PATH` 這樣命令檔案 `vlt` 或 `vlt.bat` 訪問。 例如：
 
    `<aem-installation-dir>/crx-quickstart/opt/helpers/vault-cli-3.1.16/bin>`
 
-1. 開啟命令行shell並執行 `vlt --help`. 請確定輸出類似下列說明畫面：
+1. 開啟命令行shell並執行 `vlt --help`。 確保輸出與以下幫助螢幕類似：
 
    ```shell
    vlt --help
@@ -75,7 +75,7 @@ Jackrabbit FileVault工具(VLT)是由 [Apache Foundation](https://www.apache.org
      -h (--help) <command>    print this help
    ```
 
-安裝後，需要更新全局忽略的Subversion檔案。 編輯svn設定並新增下列內容：
+安裝後，需要更新全局忽略的subversion檔案。 編輯svn設定並添加以下內容：
 
 ```xml
 [miscellany]
@@ -85,15 +85,15 @@ Jackrabbit FileVault工具(VLT)是由 [Apache Foundation](https://www.apache.org
 global-ignores = .vlt
 ```
 
-### 設定行字元的結尾 {#configuring-the-end-of-line-character}
+### 配置行尾字元 {#configuring-the-end-of-line-character}
 
 VLT根據以下規則自動處理行尾(EOF):
 
-* 在Windows端簽出的檔案行 `CRLF`
-* 在Linux/Unix端上以 `LF`
-* 儲存庫的檔案行以 `LF`
+* 在Windows結尾上簽出的檔案行 `CRLF`
+* 在Linux/Unix上簽出的檔案行 `LF`
+* 提交到儲存庫的檔案行以 `LF`
 
-為保證VLT和SVN配置匹配，應設定 `svn:eol-style` 屬性 `native` 用於儲存在儲存庫中的檔案的擴展。 編輯svn設定並新增下列內容：
+為確保VLT和SVN配置匹配，應設定 `svn:eol-style` 屬性 `native` 檔案的副檔名。 編輯svn設定並添加以下內容：
 
 ```xml
 [auto-props]
@@ -112,7 +112,7 @@ VLT根據以下規則自動處理行尾(EOF):
 
 ### 簽出儲存庫 {#checking-out-the-repository}
 
-使用原始碼控制系統檢查儲存庫。 例如，在svn中，鍵入以下內容（用儲存庫替換URI和路徑）:
+使用原始碼管理系統簽出儲存庫。 例如，在svn中，鍵入以下內容（用儲存庫替換URI和路徑）:
 
 ```shell
 svn co https://svn.server.com/repos/myproject
@@ -122,8 +122,8 @@ svn co https://svn.server.com/repos/myproject
 
 您需要將檔案與儲存庫同步。 要執行此操作：
 
-1. 在命令列中，導覽至 `content/jcr_root`.
-1. 鍵入以下內容(將埠號替換為 **4502** 和管理員密碼):
+1. 在命令行中，導航到 `content/jcr_root`。
+1. 通過鍵入以下內容(用埠號替換 **4502** 和管理員密碼):
 
    ```shell
    vlt --credentials admin:admin co --force http://localhost:4502/crx
@@ -131,24 +131,24 @@ svn co https://svn.server.com/repos/myproject
 
    >[!NOTE]
    >
-   >在您進行初始結帳時，只需指定一次憑證。 然後，這些檔案會儲存在您的主目錄中 `.vault/auth.xml`.
+   >在初始簽出時，只能指定一次憑據。 然後，它們將儲存在您的主目錄中 `.vault/auth.xml`。
 
 ### 測試同步是否有效 {#testing-whether-the-synchronization-worked}
 
-簽出儲存庫並同步後，您應進行測試，以確保所有功能都正常運行。 編輯 **.jsp** ，並查看是否在提交變更後反映變更。
+簽出儲存庫並同步後，應test確保所有功能都正常。 執行此操作的簡單方法是編輯 **.jsp** ，並查看提交更改後是否反映您所做的更改。
 
-要測試同步，請執行以下操作：
+test同步：
 
 1. 導覽至 `.../jcr_content/libs/foundation/components/text`。
-1. 編輯 `text.jsp`.
-1. 通過鍵入 `vlt st`
-1. 輸入 `vlt diff text.jsp`
-1. 提交更改： `vlt ci test.jsp`.
-1. 重新載入包含文字元件的頁面，並查看您的變更是否存在。
+1. 編輯 `text.jsp`。
+1. 通過鍵入來查看修改的檔案 `vlt st`
+1. 通過鍵入來查看更改 `vlt diff text.jsp`
+1. 提交更改： `vlt ci test.jsp`。
+1. 重新載入包含文本元件的頁面，並查看是否存在您所做的更改。
 
-## 取得VLT工具的協助 {#getting-help-with-the-vlt-tool}
+## 獲取VLT工具的幫助 {#getting-help-with-the-vlt-tool}
 
-安裝VLT工具後，您可以從命令行訪問其幫助檔案：
+安裝VLT工具後，可以從命令行訪問其幫助檔案：
 
 ```shell
 vlt --help
@@ -192,7 +192,7 @@ Commands:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
-有關特定命令的幫助，請鍵入help命令，後跟命令的名稱。 例如：
+有關特定命令的幫助資訊，請鍵入help命令後跟該命令的名稱。 例如：
 
 ```shell
 vlt --help export
@@ -213,29 +213,29 @@ Options:
   <local-path>            the local path
 ```
 
-## VLT中執行的常見任務 {#common-tasks-performed-in-vlt}
+## 在VLT中執行的常見任務 {#common-tasks-performed-in-vlt}
 
-以下是在VLT中執行的一些常見任務。 有關每個命令的詳細資訊，請參見 [命令](#vlt-commands).
+以下是在VLT中執行的一些常見任務。 有關每個命令的詳細資訊，請參閱 [命令](#vlt-commands)。
 
 ### 簽出子樹 {#checking-out-a-subtree}
 
-例如，如果您只想簽出儲存庫的子樹狀結構， `/apps/geometrixx`，您可以輸入下列項目來執行此操作：
+例如，如果只想簽出儲存庫的子樹， `/apps/geometrixx`，可通過鍵入以下內容來執行此操作：
 
 ```shell
 vlt co http://localhost:4502/crx/-/jcr:root/apps/geometrixx geo
 ```
 
-這樣會建立新的匯出根 `geo` 帶 `META-INF` 和 `jcr_root` 目錄，並將所有檔案放在 `/apps/geometrixx` in `geo/jcr_root`.
+這樣做會建立新的導出根 `geo` 帶 `META-INF` 和 `jcr_root` 目錄，將所有檔案放在 `/apps/geometrixx` 在 `geo/jcr_root`。
 
-### 執行篩選的結帳 {#performing-a-filtered-checkout}
+### 執行篩選的簽出 {#performing-a-filtered-checkout}
 
-如果您有現有的工作區篩選條件，且想將其用於結帳，您可以先建立 `META-INF/vault` 將篩選器置於此處，或在命令列上指定，如下所示：
+如果您有現有的工作區篩選器，並且要將其用於簽出，則可以先建立 `META-INF/vault` 並將篩選器放在其中，或按如下方式在命令行中指定它：
 
 ```shell
 $ vlt co --filter filter.xml http://localhost:4502/crx/-/jcr:root geo
 ```
 
-範例篩選器：
+示例篩選器：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -245,13 +245,13 @@ $ vlt co --filter filter.xml http://localhost:4502/crx/-/jcr:root geo
 </workspaceFilter>
 ```
 
-### 使用匯入/匯出，而非.vlt控制項 {#using-import-export-instead-of-vlt-control}
+### 使用導入/導出而不是.vlt控制項 {#using-import-export-instead-of-vlt-control}
 
-您可以在JCR存放庫和本機檔案系統之間匯入和匯出內容，而不需使用控制檔案。
+您可以在JCR儲存庫和本地檔案系統之間導入和導出內容，而無需使用控制檔案。
 
-若要匯入和匯出內容，不要使用 `.vlt` 控制：
+導入和導出內容而不使用 `.vlt` 控制項：
 
-1. 最初設定儲存庫：
+1. 初始設定儲存庫：
 
    ```shell
    $ cd /projects
@@ -283,23 +283,23 @@ $ vlt co --filter filter.xml http://localhost:4502/crx/-/jcr:root geo
 
 ## 使用VLT {#using-vlt}
 
-要在VLT中發出命令，請在命令行中鍵入以下命令：
+要在VLT中發出命令，請在命令行鍵入以下命令：
 
 ```shell
 vlt [options] <command> [arg1 [arg2 [arg3] ..]]  
 ```
 
-以下各節將詳細說明選項和命令。
+以下各節將詳細介紹選項和命令。
 
 ## VLT全局選項 {#vlt-global-options}
 
-以下是VLT選項清單，所有命令均可用。 有關其他可用選項的資訊，請參見各個命令。
+以下是VLT選項清單，可用於所有命令。 有關其他可用選項的資訊，請參見各個命令。
 
 |  |  |
 |--- |--- |
 | 選項 | 說明 |
 | `-Xjcrlog <arg>` | 擴展JcrLog選項 |
-| `-Xdavex <arg>` | 擴展的JCR遠程選項 |
+| `-Xdavex <arg>` | 擴展JCR遠程處理選項 |
 | `--credentials <arg>` | 要使用的預設憑據 |
 | `--config <arg>` | 要使用的JcrFs配置 |
 | `-v (--verbose)` | 詳細輸出 |
@@ -310,34 +310,34 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 
 ## VLT命令 {#vlt-commands}
 
-下表介紹了所有可用的VLT命令。 有關語法、可用選項和示例的詳細資訊，請參閱各個命令。
+下表說明了所有可用的VLT命令。 有關語法、可用選項和示例的詳細資訊，請參見各個命令。
 
 |  |  |  |
 |--- |--- |--- |
 | 命令 | 縮寫命令 | 說明 |
-| `export` |  | 從JCR儲存庫（保管庫檔案系統）導出到本地檔案系統，而不使用控制檔案。 |
+| `export` |  | 從JCR儲存庫（Vault檔案系統）導出到本地檔案系統，而不使用控制檔案。 |
 | `import` |  | 將本地檔案系統導入到JCR儲存庫（保管庫檔案系統）。 |
-| `checkout` | `co` | 檢出Vault檔案系統。 將此檔案用於本地檔案系統的初始JCR儲存庫。 (注意：您必須先簽出Subversion中的儲存庫。) |
+| `checkout` | `co` | 簽出Vault檔案系統。 將此內容用於本地檔案系統的初始JCR儲存庫。 (注：必須先在subversion中籤出儲存庫。) |
 | `analyze` |  | 分析包。 |
 | `status` | `st` | 打印工作副本檔案和目錄的狀態。 |
 | `update` | `up` | 將更改從儲存庫導入工作副本。 |
 | `info` |  | 顯示有關本地檔案的資訊。 |
 | `commit` | `ci` | 將更改從工作副本發送到儲存庫。 |
-| `revert` | `rev` | 將工作副本檔案還原為原始狀態，並取消大部分的本機編輯。 |
-| `resolved` | `res` | 刪除工作副本檔案或目錄上的衝突狀態。 |
+| `revert` | `rev` | 將工作副本檔案恢復到其原始狀態並取消大多數本地編輯。 |
+| `resolved` | `res` | 刪除工作副本檔案或目錄的衝突狀態。 |
 | `propget` | `pg` | 在檔案或目錄上打印屬性的值。 |
 | `proplist` | `pl` | 在檔案或目錄上打印屬性。 |
-| `propset` | `ps` | 在檔案或目錄上設定屬性的值。 |
+| `propset` | `ps` | 設定檔案或目錄上屬性的值。 |
 | `add` |  | 將檔案和目錄置於版本控制之下。 |
 | `delete` | `del` 或 `rm` | 從版本控制中刪除檔案和目錄。 |
 | `diff` | `di` | 顯示兩個路徑之間的差異。 |
-| `console` |  | 執行互動式主控台。 |
-| `rcp` |  | 將節點樹從一個遠程儲存庫複製到另一個。 |
+| `console` |  | 運行互動式控制台。 |
+| `rcp` |  | 將節點樹從一個遠程儲存庫複製到另一個遠程儲存庫。 |
 | `sync` |  | 允許控制保管庫同步服務。 |
 
 ### 匯出 {#export}
 
-導出裝載在的Vault檔案系統 &lt;uri> 到本地檔案系統(位於 &lt;local-path>. 可選 &lt;jcr-path> 可以指定，以便僅導出子樹。
+導出裝載於 &lt;uri> 到位於的本地檔案系統 &lt;local-path>。 可選 &lt;jcr-path> 可以指定，以便僅導出子樹。
 
 #### 語法 {#syntax}
 
@@ -350,9 +350,9 @@ export -v|-t <arg>|-p <uri> <jcr-path> <local-path>
 |  |  |
 |--- |--- |
 | `-v (--verbose)` | 詳細輸出 |
-| `-t (--type) <arg>` | 指定導出類型，可以是platform或jar。 |
+| `-t (--type) <arg>` | 指定導出類型，即平台或jar。 |
 | `-p (--prune-missing)` | 指定是否應刪除缺少的本地檔案 |
-| `<uri>` | mountpoint uri |
+| `<uri>` | 掛點URI |
 | `<jcrPath>` | JCR路徑 |
 | `<localPath>` | 本地路徑 |
 
@@ -364,7 +364,7 @@ vlt export http://localhost:4502/crx /apps/geometrixx myproject
 
 ### 匯入 {#import}
 
-導入本地檔案系統(從 `<local-path>` 在 `<uri>`. 您可以指定 `<jcr-path>` 作為導入根。 若 `--sync` 指定時，導入的檔案將自動置於保管庫控制下。
+導入本地檔案系統(從 `<local-path>` 儲存庫檔案系統 `<uri>`。 可以指定 `<jcr-path>` 作為導入根。 如果 `--sync` 指定時，導入的檔案將自動置於保管庫控制下。
 
 #### 語法 {#syntax-1}
 
@@ -377,8 +377,8 @@ import -v|-s <uri> <local-path> <jcr-path>
 |  |  |
 |--- |--- |
 | `-v (--verbose)` | 詳細輸出 |
-| `-s (-- sync)` | 將本地檔案置於保險庫控制下 |
-| `<uri>` | mountpoint uri |
+| `-s (-- sync)` | 將本地檔案置於保管庫控制下 |
+| `<uri>` | 掛點URI |
 | `<jcrPath>` | JCR路徑 |
 | `<localPath>` | 本地路徑 |
 
@@ -388,9 +388,9 @@ import -v|-s <uri> <local-path> <jcr-path>
 vlt import http://localhost:4502/crx . /
 ```
 
-### 結帳(co) {#checkout-co}
+### 簽出(co) {#checkout-co}
 
-從JCR儲存庫到本地檔案系統執行初始檢出，從 &lt;uri> 到本地檔案系統(位於 &lt;local-path>. 您也可以新增 &lt;jcrpath> 用於簽出遠程樹的子目錄的參數。 可以指定將複製到META-INF目錄的工作區篩選器。
+執行從JCR儲存庫到本地檔案系統的初始簽出 &lt;uri> 到位於的本地檔案系統 &lt;local-path>。 也可以添加 &lt;jcrpath> 用於簽出遠程樹的子目錄的參數。 可以指定將複製到META-INF目錄的工作區篩選器。
 
 #### 語法 {#syntax-2}
 
@@ -404,9 +404,9 @@ checkout --force|-v|-q|-f <file> <uri> <jcrPath> <localPath>
 |--- |--- |
 | `--force` | 強制簽出，如果本地檔案已存在，則覆蓋 |
 | `-v (--verbose)` | 詳細輸出 |
-| `-q (--quiet)` | 打印盡可能少 |
-| `-f (--filter) <file>` | 如果未定義，則指定自動篩選 |
-| `<uri>` | mountpoint uri |
+| `-q (--quiet)` | 盡可能少地打印 |
+| `-f (--filter) <file>` | 如果未定義任何過濾器，則指定自動過濾器 |
+| `<uri>` | 掛點URI |
 | `<jcrPath>` | （可選）遠程路徑 |
 | `<localPath>` | （可選）本地路徑 |
 
@@ -424,7 +424,7 @@ vlt --credentials admin:admin co http://localhost:8080/crx/server/crx.default/jc
 vlt --credentials admin:admin co http://localhost:8080/crx/server/-/jcr_root/
 ```
 
-如果URI不完整，則將展開：
+如果URI不完整，則將展開它：
 
 ```shell
 vlt --credentials admin:admin co http://localhost:8080/crx
@@ -444,16 +444,16 @@ analyze -l <format>|-v|-q <localPaths1> [<localPaths2> ...]
 
 |  |  |
 |--- |--- |
-| `-l (--linkFormat) <format>` | hotfix連結（例如名稱、id）的printf格式 `[CQ520_HF_%s|%s]` |
+| `-l (--linkFormat) <format>` | 修補程式連結（名稱、id）的printf格式，例如 `[CQ520_HF_%s|%s]` |
 | `-v (--verbose)` | 詳細輸出 |
-| `-q (--quiet)` | 打印盡可能少 |
+| `-q (--quiet)` | 盡可能少地打印 |
 | `<localPaths> [<localPaths> ...]` | 本地路徑 |
 
 ### 狀態 {#status}
 
 打印工作副本檔案和目錄的狀態。
 
-若 `--show-update` 已指定，則會根據遠程版本檢查每個檔案。 然後，第二字母指定更新操作將執行哪些操作。
+如果 `--show-update` 指定，則根據遠程版本檢查每個檔案。 然後，第二字母指定更新操作將執行什麼操作。
 
 #### 語法 {#syntax-4}
 
@@ -466,9 +466,9 @@ status -v|-q|-u|-N <file1> [<file2> ...]
 |  |  |
 |--- |--- |
 | `-v (--verbose)` | 詳細輸出 |
-| `-q (--quiet)` | 打印盡可能少 |
+| `-q (--quiet)` | 盡可能少地打印 |
 | `-u (--show-update)` | 顯示更新資訊 |
-| `-N (--non-recursive)` | 在單個目錄上運行 |
+| `-N (--non-recursive)` | 在單個目錄上操作 |
 | `<file> [<file> ...]` | 顯示狀態的檔案或目錄 |
 
 ### 更新 {#update}
@@ -486,9 +486,9 @@ update -v|-q|--force|-N <file1> [<file2> ...]
 |  |  |
 |--- |--- |
 | `-v (--verbose)` | 詳細輸出 |
-| `-q (--quiet)` | 打印盡可能少 |
+| `-q (--quiet)` | 盡可能少地打印 |
 | `--force` | 強制覆蓋本地檔案 |
-| `-N (--non-recursive)` | 在單個目錄上運行 |
+| `-N (--non-recursive)` | 在單個目錄上操作 |
 | `<file> [<file> ...]` | 要更新的檔案或目錄 |
 
 ### 資訊 {#info}
@@ -506,8 +506,8 @@ info -v|-q|-R <file1> [<file2> ...]
 |  |  |
 |--- |--- |
 | `-v (--verbose)` | 詳細輸出 |
-| `-q (--quiet)` | 打印盡可能少 |
-| `-R (--recursive)` | 遞歸 |
+| `-q (--quiet)` | 盡可能少地打印 |
+| `-R (--recursive)` | 操作遞歸 |
 | `<file> [<file> ...]` | 顯示資訊的檔案或目錄 |
 
 ### 提交 {#commit}
@@ -525,14 +525,14 @@ commit -v|-q|--force|-N <file1> [<file2> ...]
 |  |  |
 |--- |--- |
 | `-v (--verbose)` | 詳細輸出 |
-| `-q (--quiet)` | 打印盡可能少 |
+| `-q (--quiet)` | 盡可能少地打印 |
 | `--force` | 即使修改了遠程副本，也強制提交 |
-| `-N (--non-recursive)` | 在單個目錄上運行 |
+| `-N (--non-recursive)` | 在單個目錄上操作 |
 | `<file> [<file> ...]` | 提交檔案或目錄 |
 
 ### 回復 {#revert}
 
-將工作副本檔案還原為原始狀態，並取消大部分的本機編輯作業。
+將工作複製檔案恢復為原始狀態並取消大多數本地編輯。
 
 #### 語法 {#syntax-8}
 
@@ -544,17 +544,17 @@ revert -q|-R <file1> [<file2> ...]
 
 |  |  |
 |--- |--- |
-| `-q (--quiet)` | 打印盡可能少 |
+| `-q (--quiet)` | 盡可能少地打印 |
 | `-R (--recursive)` | 遞歸 |
 | `<file> [<file> ...]` | 提交檔案或目錄 |
 
 ### 已解決 {#resolved}
 
-移除 **衝突** 工作副本檔案或目錄的狀態。
+刪除 **衝突** 工作副本檔案或目錄的狀態。
 
 >[!NOTE]
 >
->此命令在語義上不解決衝突或刪除衝突標籤；它僅僅刪除與衝突相關的對象檔案，並允許重新提交PATH。
+>此命令不會在語義上解決衝突或刪除衝突標籤；它只是刪除與衝突相關的項目檔案，並允許再次提交PATH。
 
 #### 語法 {#syntax-9}
 
@@ -566,12 +566,12 @@ resolved -q|-R|--force <file1> [<file2> ...]
 
 |  |  |
 |--- |--- |
-| `-q (--quiet)` | 打印盡可能少 |
+| `-q (--quiet)` | 盡可能少地打印 |
 | `-R (--recursive)` | 遞歸 |
 | `--force` | 解析，即使存在衝突標籤 |
-| `<file> [<file> ...]` | 要解析的檔案或目錄 |
+| `<file> [<file> ...]` | 檔案或目錄 |
 
-### 普羅佩特 {#propget}
+### 普羅普蓋 {#propget}
 
 在檔案或目錄上打印屬性的值。
 
@@ -585,12 +585,12 @@ propget -q|-R <propname> <file1> [<file2> ...]
 
 |  |  |
 |--- |--- |
-| `-q (--quiet)` | 打印盡可能少 |
+| `-q (--quiet)` | 盡可能少地打印 |
 | `-R (--recursive)` | 遞歸 |
 | `<propname>` | 屬性名稱 |
-| `<file> [<file> ...]` | 從中獲取屬性的檔案或目錄 |
+| `<file> [<file> ...]` | 要從中獲取屬性的檔案或目錄 |
 
-### Proplist {#proplist}
+### 程式主義者 {#proplist}
 
 在檔案或目錄上打印屬性。
 
@@ -604,21 +604,21 @@ proplist -q|-R <file1> [<file2> ...]
 
 |  |  |
 |--- |--- |
-| `-q (--quiet)` | 打印盡可能少 |
+| `-q (--quiet)` | 盡可能少地打印 |
 | `-R (--recursive)` | 遞歸 |
 | `<file> [<file> ...]` | 要列出屬性的檔案或目錄 |
 
-### Propset {#propset}
+### 普羅普塞 {#propset}
 
-在檔案或目錄上設定屬性的值。
+設定檔案或目錄上屬性的值。
 
 >[!NOTE]
 >
->VLT可識別以下特殊版本控制屬性：
+>VLT可識別以下特殊版本化屬性：
 >
 >`vlt:mime-type`
 >
->檔案的mimetype。 用於判斷是否要合併檔案。 以「text/」開頭的mimetype（或缺少的mimetype）被視為文本。 其他任何項目則視為二進位。
+>檔案的mimetype。 用於確定是否合併檔案。 以「text/」（或缺少的mimetype）開頭的mimetype被視為文本。 其它任何內容都被視為二進位。
 
 #### 語法 {#syntax-12}
 
@@ -630,15 +630,15 @@ propset -q|-R <propname> <propval> <file1> [<file2> ...]
 
 |  |  |
 |--- |--- |
-| `-q (--quiet)` | 打印盡可能少 |
+| `-q (--quiet)` | 盡可能少地打印 |
 | `-R (--recursive)` | 遞歸 |
 | `<propname>` | 屬性名稱 |
 | `<propval>` | 屬性值 |
-| `<file> [<file> ...]` | 將屬性設定為的檔案或目錄 |
+| `<file> [<file> ...]` | 要將屬性設定為的檔案或目錄 |
 
 ### 新增 {#add}
 
-將檔案和目錄置於版本控制之下，將其排程以添加到儲存庫。 將在下次提交時添加它們。
+將檔案和目錄置於版本控制之下，安排它們添加到儲存庫。 將在下次提交時添加它們。
 
 #### 語法 {#syntax-13}
 
@@ -651,9 +651,9 @@ add -v|-q|-N|--force <file1> [<file2> ...]
 |  |  |
 |--- |--- |
 | `-v (--verbose)` | 詳細輸出 |
-| `-q (--quiet)` | 打印盡可能少 |
-| `-N (--non-recursive)` | 在單個目錄上運行 |
-| `--force` | 迫使行動進行 |
+| `-q (--quiet)` | 盡可能少地打印 |
+| `-N (--non-recursive)` | 在單個目錄上操作 |
+| `--force` | 迫使行動 |
 | `<file> [<file> ...]` | 添加本地檔案或目錄 |
 
 ### 刪除 {#delete}
@@ -671,8 +671,8 @@ delete -v|-q|--force <file1> [<file2> ...]
 |  |  |
 |--- |--- |
 | `-v (--verbose)` | 詳細輸出 |
-| `-q (--quiet)` | 打印盡可能少 |
-| `--force` | 迫使行動進行 |
+| `-q (--quiet)` | 盡可能少地打印 |
+| `--force` | 迫使行動 |
 | `<file> [<file> ...]` | 刪除本地檔案或目錄 |
 
 ### 差異 {#diff}
@@ -689,12 +689,12 @@ diff -N <file1> [<file2> ...]
 
 |  |  |
 |--- |--- |
-| `-N (--non-recursive)` | 在單個目錄上運行 |
-| `<file> [<file> ...]` | 檔案或目錄，以顯示 |
+| `-N (--non-recursive)` | 在單個目錄上操作 |
+| `<file> [<file> ...]` | 顯示與 |
 
 ### 主控台 {#console}
 
-執行互動式主控台。
+運行互動式控制台。
 
 #### 語法 {#syntax-16}
 
@@ -708,9 +708,9 @@ console -F <file>
 |--- |--- |
 | `-F (--console-settings) <file>` | 指定控制台設定檔案。 預設檔案為console.properties。 |
 
-### Rcp {#rcp}
+### RCP {#rcp}
 
-將節點樹從一個遠程儲存庫複製到另一個。 `<src>` 指向源節點和 `<dst>` 指定必須存在父節點的目標路徑。 Rcp會透過串流資料來處理節點。
+將節點樹從一個遠程儲存庫複製到另一個遠程儲存庫。 `<src>` 指向源節點和 `<dst>` 指定父節點必須存在的目標路徑。 Rcp通過流式傳輸資料來處理節點。
 
 #### 語法 {#syntax-17}
 
@@ -722,12 +722,12 @@ rcp -q|-r|-b <size>|-t <seconds>|-u|-n|-e <arg1> [<arg2> ...] <src> <dst>
 
 |  |  |
 |--- |--- |
-| `-q (--quiet)` | 盡可能少打印。 |
-| `-r (--recursive)` | 遞歸下降。 |
-| `-b (--batchSize) <size>` | 中間儲存之前要處理的節點數。 |
-| `-t (--throttle) <seconds>` | 中間儲存後要等待的秒數。 |
-| `-u (--update)` | 覆寫/刪除現有節點。 |
-| `-n (--newer)` | 請遵照lastModified屬性進行更新。 |
+| `-q (--quiet)` | 盡可能少地打印。 |
+| `-r (--recursive)` | 遞歸降。 |
+| `-b (--batchSize) <size>` | 中間保存前要處理的節點數。 |
+| `-t (--throttle) <seconds>` | 中間保存後等待的秒數。 |
+| `-u (--update)` | 覆蓋/刪除現有節點。 |
+| `-n (--newer)` | 請尊重lastModified屬性以進行更新。 |
 | `-e (--exclude) <arg> [<arg> ...]` | 排除的源路徑的Regexp。 |
 | `<src>` | 源樹的儲存庫地址。 |
 | `<dst>` | 目標節點的儲存庫地址。 |
@@ -740,13 +740,13 @@ vlt rcp http://localhost:4502/crx/-/jcr:root/content  https://admin:admin@localh
 
 >[!NOTE]
 >
->此 `--exclude` 選項後面接著另一個選項 `<src>` 和 `<dst>` 引數。 例如：
+>的 `--exclude` 選項後面需要有另一個選項 `<src>` 和 `<dst>` 參數。 例如：
 >
 >`vlt rcp -e ".*\.txt" -r`
 
 ### 同步 {#sync}
 
-允許控制保管庫同步服務。 在沒有任何參數的情況下，此命令將嘗試將當前工作目錄置於同步控制下。 如果在vlt結帳中執行，則會使用個別的篩選器和主機來設定同步。 如果在vlt簽出外執行，則只有當目錄為空時，它才註冊當前資料夾以進行同步。
+允許控制保管庫同步服務。 如果沒有任何參數，此命令將嘗試將當前工作目錄置於同步控制下。 如果在vlt簽出中執行，則使用相應的篩選器和主機來配置同步。 如果在vlt簽出外執行，則僅當目錄為空時，它才註冊當前資料夾以進行同步。
 
 #### 語法 {#syntax-18}
 
@@ -769,31 +769,31 @@ sync -v|--force|-u <uri> <command> <localPath>
 VLT使用的狀態代碼為：
 
 * 「 」沒有修改
-* 新增「A」
-* &#39;C&#39;衝突
-* 已刪除&#39;D&#39;
-* 「I」忽略
-* 已修改&#39;M&#39;
-* 已替換&#39;R&#39;
-* &#39;?&#39; 項目不在版本控制下
-* &#39;!&#39; 項缺失（由非svn命令刪除）或不完整
-* 「~」版本化項目被不同類型的項目阻塞
+* 「A」已添加
+* 「C」衝突
+* 已刪除「D」
+* 「I」被忽略
+* 「M」已修改
+* 已替換「R」
+* &#39;? 項不受版本控制
+* &#39;!&#39; 項丟失（由非svn命令刪除）或不完整
+* 「~」版本化項目被某種類型的項目阻礙
 
 ## 設定FileVault同步 {#setting-up-filevault-sync}
 
-保管庫同步服務用於將儲存庫內容與本地檔案系統表示同步，反之亦然。 這是通過安裝OSGi服務來實現的，該服務將監聽儲存庫更改並定期掃描檔案系統內容。 它使用與儲存庫相同的序列化格式將儲存庫內容映射到磁碟。
+保管庫同步服務用於將儲存庫內容與本地檔案系統表示同步，反之亦然。 這是通過安裝OSGi服務來實現的，該服務將偵聽儲存庫更改並將定期掃描檔案系統內容。 它使用與儲存庫相同的序列化格式將儲存庫內容映射到磁碟。
 
 >[!NOTE]
 >
->保管庫同步服務是一種開發工具，不建議在生產系統上使用它。 另請注意，服務只能與本地檔案系統同步，不能用於遠程開發。
+>保險儲存同步服務是一種開發工具，因此極不鼓勵在生產系統上使用它。 另請注意，該服務只能與本地檔案系統同步，不能用於遠程開發。
 
 ### 使用vlt安裝服務 {#installing-the-service-using-vlt}
 
-此 `vlt sync install` 命令可用於自動安裝保管庫同步服務包和配置。
+的 `vlt sync install` 命令可用於自動安裝保管庫同步服務包和配置。
 
-套件組合安裝於下方 `/libs/crx/vault/install` 和設定節點建立於 `/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`. 服務最初是啟用的，但未配置同步根。
+捆綁包安裝在下面 `/libs/crx/vault/install` 並在 `/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`。 最初啟用服務，但未配置任何同步根。
 
-以下範例將同步服務安裝至指定uri可存取的CRX執行個體。
+以下示例將同步服務安裝到給定URI可訪問的CRX實例。
 
 ```shell
 $ vlt --credentials admin:admin sync --uri http://localhost:4502/crx install
@@ -801,7 +801,7 @@ $ vlt --credentials admin:admin sync --uri http://localhost:4502/crx install
 
 ### 顯示服務狀態 {#displaying-the-service-status}
 
-此 `status` 命令可用於顯示有關正在運行的同步服務的資訊。&quot;
+的 `status` 命令可用於顯示有關正在運行的同步服務的資訊。&quot;
 
 ```shell
 $ vlt sync status --uri http://localhost:4502/crx
@@ -813,11 +813,11 @@ Listing sync status for http://localhost:4502/crx/server/-/jcr:root
 
 >[!NOTE]
 >
->此 `status` 命令不會從服務擷取任何即時資料，而會讀取設定，位於 `/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`.
+>的 `status` 命令不會從服務中讀取任何即時資料，而是在 `/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`。
 
 ### 添加同步資料夾 {#adding-a-sync-folder}
 
-此 `register` 命令用於添加要與配置同步的資料夾。
+的 `register` 命令用於添加要與配置同步的資料夾。
 
 ```shell
 $ vlt sync register
@@ -827,11 +827,11 @@ Added new sync directory: /tmp/workspace/vltsync/jcr_root
 
 >[!NOTE]
 >
->此 `register` 在配置 `sync-once` 設定。
+>的 `register` 命令在配置 `sync-once` 配置。
 
 ### 刪除同步資料夾 {#removing-a-sync-folder}
 
-此 `unregister` 命令用於從配置中刪除要同步的資料夾。
+的 `unregister` 命令用於從配置中刪除要同步的資料夾。
 
 ```shell
 $  vlt sync unregister
@@ -841,50 +841,50 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
 >[!NOTE]
 >
->必須先註銷同步資料夾，然後才能刪除資料夾本身。
+>必須先註銷同步資料夾，然後才能刪除該資料夾本身。
 
 ### 配置同步 {#configuring-synchronization}
 
 #### 服務配置 {#service-configuration}
 
-服務執行後，可使用下列參數進行設定：
+服務運行後，可以使用以下參數配置它：
 
 * `vault.sync.syncroots`:定義同步根的一個或多個本地檔案系統路徑。
 
-* `vault.sync.fscheckinterval`:應掃描檔案系統以進行更改的頻率（以秒為單位）。 預設為5秒。
-* `vault.sync.enabled`:啟用/停用服務的一般標幟。
+* `vault.sync.fscheckinterval`:掃描檔案系統的頻率（以秒為單位），以便進行更改。 預設值為5秒。
+* `vault.sync.enabled`:啟用/禁用服務的常規標誌。
 
 >[!NOTE]
 >
->服務可以使用Web控制台或 `sling:OsgiConfig` 節點(具有名稱 `com.day.jcr.sync.impl.VaultSyncServiceImpl`)。
+>可以使用Web控制台或 `sling:OsgiConfig` 節點（具有名稱） `com.day.jcr.sync.impl.VaultSyncServiceImpl`)。
 >
->使用AEM時，有數種方法可管理這類服務的組態設定；請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。
+>使用時，AEM有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的雙曲餘切值。
 
 #### 同步資料夾配置 {#sync-folder-configuration}
 
-每個同步資料夾都將配置和狀態儲存在三個檔案中：
+每個同步資料夾將配置和狀態儲存在三個檔案中：
 
-* `.vlt-sync-config.properties`:設定檔。
+* `.vlt-sync-config.properties`:配置檔案。
 
-* `.vlt-sync.log`:包含同步期間所執行操作相關資訊的記錄檔。
-* `.vlt-sync-filter.xml`:定義要同步的儲存庫部分的篩選器。 此檔案的格式由 [執行篩選的結帳](#performing-a-filtered-checkout) 區段。
+* `.vlt-sync.log`:包含有關同步期間執行的操作的資訊的日誌檔案。
+* `.vlt-sync-filter.xml`:用於定義同步儲存庫的哪些部分的篩選器。 此檔案的格式由 [執行篩選的簽出](#performing-a-filtered-checkout) 的子菜單。
 
-此 `.vlt-sync-config.properties` 檔案可讓您設定下列屬性：
+的 `.vlt-sync-config.properties` 檔案允許您配置以下屬性：
 
-**停用** 開啟或關閉同步。 預設情況下，此參數設為false以允許同步。
+**禁用** 開啟或關閉同步。 預設情況下，此參數設定為false以允許同步。
 
-**同步一次** 如果非空白，則下次掃描會沿指定方向同步資料夾，則會清除參數。 支援兩個值：
+**同步一次** 如果非空，下次掃描將按給定方向同步資料夾，則將清除該參數。 支援兩個值：
 
-* `JCR2FS`:將JCR儲存庫中的所有內容匯出並寫入本機磁碟。
-* `FS2JCR`:將所有內容從磁碟匯入JCR存放庫。
+* `JCR2FS`:導出JCR儲存庫中的所有內容，並寫入本地磁碟。
+* `FS2JCR`:將所有內容從磁碟導入JCR儲存庫。
 
-**sync-log** 定義日誌檔案名。 預設情況下，值為.vlt-sync.log
+**同步日誌** 定義日誌檔案名。 預設情況下，值為.vlt-sync.log
 
 ### 使用VLT同步進行開發 {#using-vlt-sync-for-development}
 
-若要根據同步資料夾來設定開發環境，請依照下列步驟進行：
+要基於同步資料夾設定開發環境，請按如下步驟進行：
 
-1. 使用vlt命令列簽出儲存庫：
+1. 使用vlt命令行簽出儲存庫：
 
    ```shell
    $ vlt --credentials admin:admin co --force http://localhost:4502/crx dev
@@ -892,15 +892,15 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
    >[!NOTE]
    >
-   >您可以使用篩選條件來僅結帳適當的路徑。 請參閱 [執行篩選的結帳](#performing-a-filtered-checkout) 一節。
+   >可以使用過濾器僅檢出相應的路徑。 查看 [執行篩選的簽出](#performing-a-filtered-checkout) 的子菜單。
 
-1. 前往工作副本的根資料夾：
+1. 轉到工作副本的根資料夾：
 
    ```shell
    $ cd dev/jcr_root/
    ```
 
-1. 將同步服務安裝到儲存庫：
+1. 將同步服務安裝到您的儲存庫：
 
    ```xml
    $ vlt sync install
@@ -931,7 +931,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
    >[!NOTE]
    >
-   >此步驟會根據您的篩選設定下載整個存放庫。
+   >此步驟根據您的篩選器配置下載整個儲存庫。
 
 1. 檢查日誌檔案 `.vlt-sync.log` 查看進度：
 
@@ -944,8 +944,8 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
    ***
    ```
 
-您的本機資料夾現在已與存放庫同步。 同步是雙向的，因此從儲存庫進行的修改將應用於本地同步資料夾，反之亦然。
+您的本地資料夾現在與儲存庫同步。 同步是雙向的，因此從儲存庫進行的修改將應用到本地同步資料夾，反之亦然。
 
 >[!NOTE]
 >
->「VLT同步」功能僅支援簡單檔案和資料夾，但檢測到特殊保管庫序列化檔案（.content.xml、dialog.xml等），並靜默忽略它們。 因此，可以在預設vlt結帳時使用保管庫同步。
+>VLT同步功能僅支援簡單的檔案和資料夾，但檢測特殊的電子倉庫序列化檔案（.content.xml、dialog.xml等），並以靜默方式忽略它們。 因此，可以在預設vlt簽出時使用保管庫同步。

@@ -1,7 +1,7 @@
 ---
-title: 以程式設計方式使用AEM檔案服務
+title: 以寫程式AEM方式使用Document Services
 seo-title: Using AEM Document Services Programmatically
-description: 了解如何使用檔案服務API進行數位簽署、加密及產生PDF檔案。
+description: 瞭解如何使用Document Services API對PDF文檔進行數字簽名、加密和生成。
 seo-description: Learn how to use Document Services APIs to Digitally sign, encrypt, and generate PDF documents.
 uuid: bf5ee197-4daf-4a64-8b6d-2c0d1f232b1c
 content-type: reference
@@ -16,23 +16,23 @@ ht-degree: 1%
 
 ---
 
-# 以程式設計方式使用AEM檔案服務  {#using-aem-document-services-programmatically}
+# 以寫程式AEM方式使用Document Services  {#using-aem-document-services-programmatically}
 
-本檔案的範例和範例可協助您了解及使用OSGi環境上的AEM Forms上的AEM檔案服務。 如需JEE環境上AEM Forms的範例和範例，請參閱
+本文檔中的示例和示例可幫助您瞭解和AEM使用OSGi環境中AEM Forms上的Document Services。 有關AEM FormsJEE環境的示例和示例，請參見
 
-* [簽名服務Java API快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?#programming-aem-forms-jee)
+* [簽名服務Java API快速啟動](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?#programming-aem-forms-jee)
 
-* [加密服務Java API快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?#developer-reference)
+* [加密服務Java API快速啟動](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?#developer-reference)
 
-* [Acrobat Reader擴充功能服務Java API快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?#developer-reference)
+* [Acrobat Reader擴展服務Java API快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?#developer-reference)
 
 ## 必備條件 {#prerequisite}
 
-* 使用DocAssurance服務API之前， [配置DocAssurance服務](/help/forms/using/install-configure-document-services.md).
+* 在使用DocAssurance服務API之前， [配置DocAssurance服務](/help/forms/using/install-configure-document-services.md)。
 
-* 下載和配置 [AEM Forms用戶端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 與您的AEM maven專案搭配。 使用AEM Document Services建立Maven專案所需的用戶端類別，可在 [AEM Forms用戶端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
+* 下載和配置 [AEM Forms客戶端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 和你的馬AEM文計畫。 使用Document Services生成Maven項目所需AEM的客戶端類可在 [AEM Forms客戶端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
 
-* 學習 [如何使用Maven建立AEM專案](/help/sites-developing/ht-projects-maven.md)
+* 學習 [如何使用MavenAEM構建項目](/help/sites-developing/ht-projects-maven.md)
 
 ## DocAssurance服務 {#docassurance-service}
 
@@ -40,16 +40,16 @@ DocAssurance服務包括以下服務：
 
 * 簽名服務
 * 加密服務
-* Reader擴充功能服務
+* Reader分機服務
 
 您可以使用DocAssurance服務執行以下操作：
 
-* [添加不可見的簽名](/help/forms/using/aem-document-services-programmatically.md#p-adding-an-invisible-signature-field-p)
+* [添加不可見簽名](/help/forms/using/aem-document-services-programmatically.md#p-adding-an-invisible-signature-field-p)
 
 * [添加簽名欄位](/help/forms/using/aem-document-services-programmatically.md#p-adding-a-signature-field-nbsp-p)
 * [套用文件時間戳記](/help/forms/using/aem-document-services-programmatically.md#apply-document-timestamp)
 
-* [取得簽名](/help/forms/using/aem-document-services-programmatically.md#p-getting-signature-p)
+* [獲取簽名](/help/forms/using/aem-document-services-programmatically.md#p-getting-signature-p)
 * [獲取簽名欄位清單](/help/forms/using/aem-document-services-programmatically.md#p-getting-signature-field-list-nbsp-p)
 * [修改簽名欄位](/help/forms/using/aem-document-services-programmatically.md#p-modifying-signature-fields-nbsp-p)
 
@@ -57,14 +57,14 @@ DocAssurance服務包括以下服務：
 
 * [獲取憑據使用權限](/help/forms/using/aem-document-services-programmatically.md#p-getting-credential-usage-rights-p)
 
-* [取得檔案使用權限](/help/forms/using/aem-document-services-programmatically.md#p-getting-document-usage-rights-p)
+* [獲取文檔使用權限](/help/forms/using/aem-document-services-programmatically.md#p-getting-document-usage-rights-p)
 
-* [移除使用權限](/help/forms/using/aem-document-services-programmatically.md#p-removing-usage-rights-p)
+* [刪除使用權限](/help/forms/using/aem-document-services-programmatically.md#p-removing-usage-rights-p)
 * [驗證數字簽名](/help/forms/using/aem-document-services-programmatically.md#p-verifying-digital-signatures-p)
 * [驗證多個數字簽名](/help/forms/using/aem-document-services-programmatically.md#p-verifying-multiple-digital-signatures-p)
-* [移除數位簽名](/help/forms/using/aem-document-services-programmatically.md#p-removing-digital-signatures-p)
+* [刪除數字簽名](/help/forms/using/aem-document-services-programmatically.md#p-removing-digital-signatures-p)
 
-* [獲取認證簽名欄位](/help/forms/using/aem-document-services-programmatically.md#p-getting-certifying-signature-field-p)
+* [獲取驗證簽名欄位](/help/forms/using/aem-document-services-programmatically.md#p-getting-certifying-signature-field-p)
 * [獲取PDF加密類型](/help/forms/using/aem-document-services-programmatically.md#p-getting-pdf-encryption-type-p)
 * [刪除密碼加密](/help/forms/using/aem-document-services-programmatically.md#p-removing-password-encryption-from-pdf-p)
 
@@ -74,9 +74,9 @@ DocAssurance服務包括以下服務：
 >
 >所有這些服務都使用Document對象作為輸入參數，在URL中可找到Javadoc [https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html)
 
-### 添加不可見的簽名欄位 {#adding-an-invisible-signature-field}
+### 添加不可見簽名欄位 {#adding-an-invisible-signature-field}
 
-數字簽名出現在簽名欄位中，簽名欄位是包含簽名的圖形表示的表單欄位。 簽名欄位可以是可見的或不可見的。 簽署者可以使用預先存在的簽名欄位，或以程式設計方式新增簽名欄位。 無論是哪種情況，簽名欄位都必須存在，才能簽名PDF文檔。 您可以使用簽名服務Java API或簽名Web服務API，以寫程式方式添加簽名欄位。 您可以向PDF文檔添加多個簽名欄位。 但是，每個簽名欄位名稱必須是唯一的。
+數字簽名顯示在簽名欄位中，這些欄位是包含簽名的圖形表示形式的欄位。 簽名欄位可以是可見的或不可見的。 簽名者可以使用預先存在的簽名欄位，或者可以以寫程式方式添加簽名欄位。 在兩種情況下，簽名欄位都必須存在，才能簽名PDF文檔。 可以使用簽名服務Java API或簽名Web服務API以寫程式方式添加簽名欄位。 您可以向PDF文檔添加多個簽名欄位。 但是，每個簽名欄位名稱必須唯一。
 
 **語法**: `addInvisibleSignatureField(Document inDoc, String signatureFieldName, FieldMDPOptionSpec fieldMDPOptionsSpec, PDFSeedValueOptionSpec seedValueOptionsSpec, UnlockOptions unlockOptions)`
 
@@ -94,15 +94,15 @@ DocAssurance服務包括以下服務：
   </tr>
   <tr>
    <td><code>signatureFieldName</code> </td>
-   <td>簽名欄位的名稱。 此參數為必填值，不能以Null作為值。<br /> </td>
+   <td>簽名欄位的名稱。 此參數是必需的，不能將null作為值。<br /> </td>
   </tr>
   <tr>
    <td><code>fieldMDPOptionsSpec</code></td>
-   <td>A <code>FieldMDPOptionSpec</code> 指定簽名欄位後鎖定的PDF文檔欄位的對象。 此參數為可選參數，可接受null值。</td>
+   <td>A <code>FieldMDPOptionSpec</code> 對象，指定簽名後鎖定的PDF文檔欄位。 此參數是可選的，可接受空值。</td>
   </tr>
   <tr>
    <td><code>seedValueOptionsSpec</code></td>
-   <td>A <code>SeedValueOptions</code> 為欄位指定各種種子值的對象。 T此參數為可選參數，可接受null值。<span class="acrolinxCursorMarker"></span></td>
+   <td>A <code>SeedValueOptions</code> 指定欄位的各種種子值的對象。 T此參數是可選的，可接受空值。<span class="acrolinxCursorMarker"></span></td>
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
@@ -111,7 +111,7 @@ DocAssurance服務包括以下服務：
  </tbody>
 </table>
 
-以下是範例Java程式碼，可將不可見的簽名欄位新增至PDF檔案。
+下面是一個示例Java代碼，它將不可見的簽名欄位添加到PDF文檔。
 
 ```java
 /*************************************************************************
@@ -238,7 +238,7 @@ public class AddInvisibleSignatureField {
 }
 ```
 
-您也可以使用 [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)文檔簽名規範。 使用下列范常式式碼，將簽署格式設定為 [CAdES。](https://en.wikipedia.org/wiki/CAdES_%28computing%29)
+您還可以使用 [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)文檔簽名規範。 使用以下示例代碼將簽名格式設定為 [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)
 
 ```java
 SigningFormat signingFormat = SigningFormat.CAdES;
@@ -248,7 +248,7 @@ signOptions.setSigAppearence(sigAppearence);
 
 ### 添加簽名欄位  {#adding-a-signature-field-nbsp}
 
-您可以使用簽名服務Java API或簽名Web服務API，以寫程式方式添加簽名欄位。 您可以向PDF文檔添加多個簽名欄位。 但是，每個簽名欄位名稱必須是唯一的。
+可以使用簽名服務Java API或簽名Web服務API以寫程式方式添加簽名欄位。 您可以向PDF文檔添加多個簽名欄位。 但是，每個簽名欄位名稱必須唯一。
 
 **語法**:
 
@@ -275,32 +275,32 @@ public Document addSignatureField(Document inDoc,
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>簽名欄位的名稱。 此參數為強制值，無法接受null值。</td>
+   <td>簽名欄位的名稱。 此參數是必需的，不能接受空值。</td>
   </tr>
   <tr>
    <td><code>pageNumber</code></td>
-   <td>添加簽名欄位的頁碼。 有效值是文檔中包含的頁數的1。 此參數為強制值，無法接受null值。<br /> </td>
+   <td>添加簽名欄位的頁碼。 有效值是文檔中包含的頁數的1。 此參數是必需的，不能接受空值。<br /> </td>
   </tr>
   <tr>
    <td><code>positionRectangle</code></td>
-   <td>A <code>PositionRectangle object</code> 指定簽名欄位的位置。 此參數為強制值，無法接受null值。 如果指定的矩形不至少部分位於指定頁面的裁切方塊上，則 <code>InvalidArgumentException</code> 被擲回。 此外，指定矩形的高度或寬度不能為0或負。 左下X或左下Y座標可以是0或更大，但不是負的，並且相對於頁面的裁切框。</td>
+   <td>A <code>PositionRectangle object</code> 指定簽名欄位的位置。 此參數是必需的，不能接受空值。 如果指定的矩形在指定頁面的裁剪框上不至少部分位於 <code>InvalidArgumentException</code> 。 此外，指定矩形的高度或寬度不能為0或負。 左下X或左下Y坐標可以為0或更大，但不為負，並且相對於頁面的裁剪框。</td>
   </tr>
   <tr>
    <td><code>fieldMDPOptionsSpec</code></td>
-   <td>A <code>FieldMDPOptionSpec</code> 指定簽名欄位後鎖定的PDF文檔欄位的對象。 此為選用參數，可為null。</td>
+   <td>A <code>FieldMDPOptionSpec</code> 對象，指定簽名後鎖定的PDF文檔欄位。 這是可選參數，可為Null。</td>
   </tr>
   <tr>
    <td><code>seedValueOptionsSpec</code></td>
-   <td>A <code>SeedValueOptions</code> 為欄位指定各種種子值的對象。 此為選用參數，可為null。</td>
+   <td>A <code>SeedValueOptions</code> 指定欄位的各種種子值的對象。 這是可選參數，可為Null。</td>
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>包括解鎖加密檔案所需的參數。 只有加密的檔案才需要此參數。</td>
+   <td>包括解鎖加密檔案所需的參數。 此參數僅對加密的檔案是必需的。</td>
   </tr>
  </tbody>
 </table>
 
-以下是將簽名欄位新增至PDF檔案的範例Java程式碼。
+下面是一個示例Java代碼，它將簽名欄位添加到PDF文檔。
 
 ```java
 /*************************************************************************
@@ -428,7 +428,7 @@ public class AddSignatureField {
 
 ### 套用文件時間戳記 {#apply-document-timestamp}
 
-您可以以程式設計方式為檔案加上時間戳記，如 [PAdES 4](https://en.wikipedia.org/wiki/PAdES) 規格。 您也可以使用 [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29) 交易相關單據的規格。
+可以按順序以寫程式方式對文檔進行時間戳 [PAdES 4](https://en.wikipedia.org/wiki/PAdES) 規範。 您還可以使用 [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29) 事務處理相關單據的規格。
 
 **語法**: `applyDocumentTimeStamp(Document doc, VerificationTime verificationTime, ValidationPreferences dssPrefs, ResourceResolver resourceResolver, UnlockOptions unlockOptions)`
 
@@ -454,16 +454,16 @@ public class AddSignatureField {
   </tr>
   <tr>
    <td><code>ResourceResolver</code></td>
-   <td>Granite信任存放區的資源解析器。</td>
+   <td>到花崗岩信任儲存的資源解析器。</td>
   </tr>
   <tr>
    <td><code>UnlockOptions</code></td>
-   <td>包括解鎖加密檔案所需的參數。 只有在檔案已加密時，才需要此選項。</td>
+   <td>包括解鎖加密檔案所需的參數。 僅當檔案已加密時，才需要此選項。</td>
   </tr>
  </tbody>
 </table>
 
-下列程式碼範例將時間戳記新增至檔案，如 [PAdES 4](https://en.wikipedia.org/wiki/PAdES).
+以下代碼示例將時間戳添加到文檔中 [PAdES 4](https://en.wikipedia.org/wiki/PAdES)。
 
 ```java
 package com.adobe.signatures.test;
@@ -635,7 +635,7 @@ import com.adobe.fd.signatures.pki.client.types.prefs.TSPPreferencesImpl;
 
 ### 獲取簽名 {#getting-signature}
 
-您可以檢索位於要簽名或認證的PDF文檔中的所有簽名欄位的名稱。 如果您不確定PDF文檔中的簽名欄位名稱或驗證名稱，則以寫程式方式檢索這些名稱。 簽名服務返回簽名欄位的完全限定名稱，例如 `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+您可以檢索位於要簽名或認證的PDF文檔中的所有簽名欄位的名稱。 如果您不確定PDF文檔中的簽名欄位名稱或驗證名稱，請以寫程式方式檢索這些名稱。 簽名服務返回簽名欄位的完全限定名稱，如 `form1[0].grantApplication[0].page1[0].SignatureField1[0]`。
 
 **語法**: `getSignature(Document doc, String signatureFieldName, UnlockOptions unlockOptions)`
 
@@ -653,16 +653,16 @@ import com.adobe.fd.signatures.pki.client.types.prefs.TSPPreferencesImpl;
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>包含簽名的簽名欄位的名稱。 指定簽名欄位的完全限定名稱。 使用基於XFA表單的PDF文檔時，可以使用簽名欄位的部分名稱。 例如， <code>form1[0].#subform[1].SignatureField3[3]</code> 可指定為 <code>SignatureField3[3]</code>.</td>
+   <td>包含簽名的簽名欄位的名稱。 指定簽名欄位的完全限定名稱。 使用基於XFA表單的PDF文檔時，可以使用簽名欄位的部分名稱。 比如說， <code>form1[0].#subform[1].SignatureField3[3]</code> 可指定為 <code>SignatureField3[3]</code>。</td>
   </tr>
   <tr>
    <td><code>UnlockOptions</code></td>
-   <td>包括解鎖加密檔案所需的參數。 只有在檔案已加密時，才需要此選項。</td>
+   <td>包括解鎖加密檔案所需的參數。 僅當檔案已加密時，才需要此選項。</td>
   </tr>
  </tbody>
 </table>
 
-以下Java代碼示例檢索位於PDF文檔中的給定簽名欄位的簽名資訊。
+下面的Java代碼示例檢索位於PDF文檔中的給定簽名欄位的簽名資訊。
 
 ```java
 /*************************************************************************
@@ -759,7 +759,7 @@ public class GetSignature {
 
 ### 獲取簽名欄位清單  {#getting-signature-field-list-nbsp}
 
-您可以檢索位於要簽名或認證的PDF文檔中的所有簽名欄位的名稱。 如果您不確定PDF文檔中的簽名欄位名稱，可以用寫程式方式檢索和驗證它們。 簽名服務返回簽名欄位的完全限定名稱，例如 `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+您可以檢索位於要簽名或認證的PDF文檔中的所有簽名欄位的名稱。 如果不確定PDF文檔中的簽名欄位名稱，可以以寫程式方式檢索和驗證它們。 簽名服務返回簽名欄位的完全限定名稱，如 `form1[0].grantApplication[0].page1[0].SignatureField1[0]`。
 
 **語法**: `public List <PDFSignatureField> getSignatureFieldList (Document inDoc, UnlockOptions unlockOptions)`
 
@@ -768,9 +768,9 @@ public class GetSignature {
 | 參數 | 說明 |
 |---|---|
 | `inDoc` | 包含PDF的文檔對象 |
-| `unlockOptions` | 包括解鎖加密檔案所需的參數。 只有在檔案已加密時，才需要此選項。 |
+| `unlockOptions` | 包括解鎖加密檔案所需的參數。 僅當檔案已加密時，才需要此選項。 |
 
-以下Java代碼示例檢索位於PDF文檔中的簽名欄位的名稱。
+下面的Java代碼示例檢索位於PDF文檔中的簽名欄位的名稱。
 
 ```java
 /*************************************************************************
@@ -874,9 +874,9 @@ public class GetSignatureFields {
 
 ### 修改簽名欄位  {#modifying-signature-fields-nbsp}
 
-您可以修改PDF文檔中的簽名欄位。 修改簽名欄位涉及操作其簽名欄位鎖定字典值或種子值字典值。
+您可以修改位於PDF文檔中的簽名欄位。 修改簽名欄位涉及操作其簽名欄位鎖定字典值或種子值字典值。
 
-欄位鎖定字典指定簽名欄位時鎖定的欄位清單。 鎖定的欄位會阻止使用者編輯欄位。 種子值字典包含在應用簽名時使用的約束資訊。 例如，您可以變更權限，以控制可能發生的動作，而不使簽名失效。
+欄位鎖定字典指定簽名欄位時鎖定的欄位清單。 鎖定的欄位禁止用戶編輯該欄位。 種子值字典包含在應用簽名時使用的約束資訊。 例如，您可以更改權限，以控制在不使簽名無效的情況下可能發生的操作。
 
 通過修改現有簽名欄位，您可以編輯PDF文檔以反映不斷變化的業務需求。 例如，新業務要求要求在文檔簽名後鎖定所有文檔欄位。
 
@@ -896,7 +896,7 @@ public class GetSignatureFields {
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>簽名欄位的名稱。 此參數為強制值，無法接受null值。<br /> </td>
+   <td>簽名欄位的名稱。 此參數是必需的，不能接受空值。<br /> </td>
   </tr>
   <tr>
    <td><code>pdfSignatureFieldProperties</code></td>
@@ -904,12 +904,12 @@ public class GetSignatureFields {
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>包括解鎖加密檔案所需的參數。 只有在檔案已加密時，才需要此選項。</td>
+   <td>包括解鎖加密檔案所需的參數。 僅當檔案已加密時，才需要此選項。</td>
   </tr>
  </tbody>
 </table>
 
-以下Java代碼示例通過在簽名被應用到簽名欄位時鎖定窗體中的所有欄位來修改簽名欄位。
+以下Java代碼示例通過在簽名應用於簽名欄位時鎖定表單中的所有欄位來修改簽名欄位。
 
 ```java
 /*************************************************************************
@@ -1039,13 +1039,13 @@ public class ModifySignatureField {
 }
 ```
 
-### 認證PDF檔案  {#certifying-pdf-documents-nbsp}
+### 驗證PDF文檔  {#certifying-pdf-documents-nbsp}
 
-您可以使用一種稱為認證簽名的特定簽名類型對PDF文檔進行認證，從而保護文檔安全。 經認證的簽名與數字簽名在以下方面有區別：
+您可以通過使用稱為認證簽名的特定類型的簽名來驗證PDF文檔，從而保護文檔的安全。 通過以下方式將經認證的簽名與數字簽名區別：
 
-* 它必須是應用於PDF文檔的第一個簽名。 換言之，在應用經認證的簽名時，文檔中的其他簽名欄位必須未簽名。 在PDF文檔中僅允許一個經認證的簽名。 要簽名和認證PDF文檔，請在簽名前對其進行認證。 認證PDF檔案後，您可以數位簽署其他簽名欄位。
-* 文檔的作者或創作者可以指定文檔可以以某些方式修改，而不使經認證的簽名失效。 例如，該文檔可允許填寫表單或注釋。 如果作者指定不允許進行特定修改，Acrobat會限制使用者以此方式修改檔案。 如果進行了此類修改，則認證的簽名無效。 此外，Acrobat會在使用者開啟檔案時發出警告。 （使用未經認證的簽名時，不會阻止修改，且正常的編輯操作不會使原始簽名無效。）
-* 在簽名時，將掃描文檔以查找可能使文檔內容模糊或具有誤導性的特定內容類型。 例如，注釋可能會遮蔽頁面上對於了解正在認證的內容非常重要的文字。 可以提供關於此類內容的說明（法律證明）。
+* 它必須是應用於PDF文檔的第一個簽名。 換句話說，當應用經認證的簽名時，文檔中的其他簽名欄位必須未簽名。 在PDF文檔中只允許一個經認證的簽名。 要簽名和認證PDF文檔，請在簽名前對其進行認證。 驗證PDF文檔後，可以對其他簽名欄位進行數字簽名。
+* 文檔的作者或發起者可以指定文檔可以以某些方式進行修改，而不會使經認證的簽名失效。 例如，文檔可允許填寫表單或注釋。 如果作者指定不允許某種修改，Acrobat將限制用戶以這種方式修改文檔。 如果進行了此類修改，則認證簽名無效。 此外，當用戶開啟文檔時，Acrobat會發出警告。 （使用未經認證的簽名，不會阻止修改，並且正常的編輯操作不會使原始簽名無效。）
+* 在簽名時，將掃描文檔中特定類型的內容，這些內容可能使文檔的內容模糊或具有誤導性。 例如，批注可能會使頁面上的某些文本模糊，這些文本對於瞭解正在認證的內容非常重要。 可以提供關於此類內容的解釋（法律證明）。
 
 **語法**:
 
@@ -1072,7 +1072,7 @@ secureDocument(Document inDoc, EncryptionOptions encryptionOptions,
   </tr>
   <tr>
    <td><code>signatureOptions</code></td>
-   <td>包括簽署/認證PDF檔案所需的選項</td>
+   <td>包括簽名/驗證PDF文檔所需的選項</td>
   </tr>
   <tr>
    <td><code>readerExtensionOptions</code></td>
@@ -1080,12 +1080,12 @@ secureDocument(Document inDoc, EncryptionOptions encryptionOptions,
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>包括解鎖加密檔案所需的參數，只有在加密檔案時才需要。<br /> </td>
+   <td>包括解鎖加密檔案所需的參數。僅當檔案已加密時，才需要此參數。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-下列程式碼範例會驗證以PDF檔案為基礎的PDF檔案。
+以下代碼示例驗證基於PDF檔案的PDF文檔。
 
 ```java
 /*************************************************************************
@@ -1344,82 +1344,82 @@ public class Certify {
 }
 ```
 
-### 保護文檔 {#securing-documents}
+### 保護文檔安全 {#securing-documents}
 
-secureDocument可讓您以單獨或按特定順序的任何組合來加密、簽名/認證和讀取PDF文檔。 若要存取任何此功能，請傳遞對應的引數。 如果為null，則假定不需要特定處理。
+secureDocument使您能夠單獨或按特定順序以任何組合對PDF文檔進行加密、簽名/認證和閱讀器擴展。 要訪問任何此功能，請傳遞相應的參數。 如果為空，則假定不需要特定處理。
 
 **使用密碼加密PDF文檔**
 
-使用密碼加密PDF文檔時，用戶必須指定密碼以在Adobe Reader或Acrobat中開啟PDF文檔。 此外，在其他AEM Forms文檔服務操作使用該文檔之前，必須解除對密碼加密的PDF文檔的鎖定。
+使用密碼加密PDF文檔時，用戶必須指定密碼才能在Adobe Reader或Acrobat開啟PDF文檔。 此外，在AEM Forms文檔服務的另一個操作使用該文檔之前，必須解鎖密碼加密的PDF文檔。
 
-**使用憑證加密PDF檔案**
+**用證書加密PDF文檔**
 
-憑證式加密可讓您使用公開金鑰技術為特定收件者加密檔案。
+基於證書的加密允許您使用公鑰技術為特定收件人加密文檔。
 
-可以為文檔授予不同的收件者權限。 公鑰技術使加密的許多方面成為可能。
+可以為文檔授予不同的權限。 公鑰技術使加密的許多方面成為可能。
 
-演算法可產生兩個大數字，稱為具有下列屬性的鍵值：
+算法用於生成兩個大數，即具有以下屬性的鍵：
 
-* 一個密鑰用於加密一組資料。 之後，只能使用其他密鑰解密資料。
-* 一個鍵和另一個鍵是無法區分的。
-* 其中一個金鑰作為使用者的私密金鑰。 只有使用者才能存取此金鑰，這一點很重要。
-* 另一個密鑰是使用者的公開密鑰，可與其他人共用。
+* 一個密鑰用於加密一組資料。 以後，只能使用其他密鑰解密資料。
+* 一把鑰匙和另一把鑰匙是無法區分的。
+* 其中一個密鑰用作用戶的私鑰。 只有用戶才能訪問此密鑰，這一點非常重要。
+* 另一個密鑰是用戶的公鑰，可以與他人共用。
 
-公鑰證書包含用戶的公鑰和標識資訊。 X.509格式用於儲存憑證。 證書通常由證書頒發機構(CA)頒發並數字簽名，該機構是一個公認的實體，提供對證書有效性的信心度量。 憑證有到期日，之後即無效。
+公鑰證書包含用戶的公鑰和標識資訊。 X.509格式用於儲存證書。 證書通常由證書頒發機構(CA)頒發和數字簽名，該機構是一個被認可的實體，提供對證書有效性的信任度。 證書的到期日期已過，在此日期之後，證書不再有效。
 
-此外，證書吊銷清單(CRL)還提供有關在證書到期日之前被吊銷的證書的資訊。 證書頒發機構定期發佈CRL。 通過網路的線上證書狀態協定(OCSP)也可以檢索證書的吊銷狀態。
-
->[!NOTE]
->
->您必須先將憑證新增至AEM信任存放區，才能使用憑證加密PDF檔案。
-
-**將使用權應用於PDF文檔**
-
-您可以使用Reader擴充功能Java Client API和Web服務，將使用權套用至PDF檔案。 使用權限屬於Acrobat預設提供但Adobe Reader未提供的功能，例如可向表單新增註解，或填寫表單欄位並儲存表單。 應用了使用權限的PDF文檔稱為啟用權限的文檔。 在Adobe Reader中開啟啟用權限的檔案的使用者可以執行針對該特定檔案啟用的操作。
-
-Reader使用憑證擴充PDF檔案之前，請務必將憑證新增至AEM金鑰存放區。
-
-**數位簽署PDF檔案**
-
-數字簽名可以應用於PDF文檔，以提供一定的安全級別。 數字簽名（如手寫簽名）提供了一種手段，使簽名者能夠識別自己，並對文檔進行聲明。
-
-用於數字簽名文檔的技術有助於確保簽名者和接收者都清楚簽名的內容，並確信文檔自簽名後沒有更改。
-
-PDF檔案採用公鑰技術簽署。 簽名者有兩個密鑰：公鑰和私鑰。 私密金鑰儲存在使用者的憑證中，且在簽署時必須可用。
-
-公開金鑰儲存在使用者的憑證中，收件者必須能使用該憑證來驗證簽名。 有關已撤銷證書的資訊可在由證書頒發機構(CA)分發的證書吊銷清單(CRL)和線上證書狀態協定(OCSP)響應中找到。 簽名時間可從稱為時間戳頒發機構的可信源獲得。
+此外，證書吊銷清單(CRL)提供了在證書過期之前已吊銷的證書的資訊。 CRL由證書頒發機構定期發佈。 還可以通過網路通過線上證書狀態協定(OCSP)檢索證書的吊銷狀態。
 
 >[!NOTE]
 >
->您必須先在AEM金鑰存放區中新增憑證，才能數位簽署PDF檔案。 憑據是用於簽名的私鑰。
+>在使用證書加密PDF文檔之前，必須確保將證書添加到信AEM任儲存。
+
+**對PDF文檔應用使用權限**
+
+可以使用PDF擴展Java客戶端API和Web服務對Reader文檔應用使用權限。 使用權限與預設在Acrobat但在Adobe Reader不可用的功能有關，例如向表單添加註釋或填寫表單域並保存表單的功能。 對其應用了使用權限的PDF文檔稱為啟用權限的文檔。 在Adobe Reader開啟啟用權限的文檔的用戶可以執行為該特定文檔啟用的操作。
+
+在Reader使用證書擴展PDF文檔之前，必須確保將證書添加到密鑰AEM庫。
+
+**數字簽名PDF文檔**
+
+數字簽名可以應用於PDF文檔以提供安全級別。 數字簽名與手寫簽名一樣，提供了一種手段，使簽名者能夠識別自己並就文檔發表聲明。
+
+用於對文檔進行數字簽名的技術有助於確保簽名者和收件人都清楚簽名的內容，並確信文檔自簽名後沒有更改。
+
+PDF檔案採用公鑰技術簽署。 簽名者有兩個密鑰：公鑰和私鑰。 私鑰儲存在用戶憑據中，簽名時必須可用。
+
+公鑰儲存在用戶的證書中，收件人必須可以使用該證書來驗證簽名。 有關已吊銷證書的資訊可在由證書頒發機構(CA)分發的證書吊銷清單(CRL)和線上證書狀態協定(OCSP)響應中找到。 簽名時間可以從稱為時間戳頒發機構的可信源獲得。
 
 >[!NOTE]
 >
->AEM Forms也支援 *[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)* 數字簽名PDF文檔的規範。
-
-**認證PDF檔案**
-
-您可以使用一種稱為認證簽名的特定簽名類型對PDF文檔進行認證，從而保護文檔安全。 經認證的簽名與數字簽名在以下方面有區別：
-
-它必須是應用於PDF文檔的第一個簽名；也就是說，在應用經認證的簽名時，文檔中的任何其他簽名欄位必須未簽名。
-
-在PDF文檔中僅允許一個經認證的簽名。 如果要簽名和認證PDF文檔，則必須在簽名前對其進行認證。
-
-認證PDF檔案後，您可以數位簽署其他簽名欄位。
-
-文檔的作者或創作者可以指定文檔可以以某些方式修改，而不使經認證的簽名失效。
-
-例如，該文檔可允許填寫表單或注釋。 如果作者指定不允許進行某些修改，
-
-Acrobat會限制使用者以此方式修改檔案。 如果進行了此類修改（例如使用其他應用程式），則經認證的簽名無效，並且Acrobat在用戶開啟文檔時發出警告。 （使用未經認證的簽名時，不會阻止修改，且正常的編輯操作不會使原始簽名無效。）
-
-在簽名時，將掃描文檔以查找可能使文檔內容模糊或具有誤導性的特定內容類型。
-
-例如，注釋可能會遮蔽頁面上對於了解正在認證的內容非常重要的文字。 可以提供關於此類內容的說明（法律證明）。
+>在對PDF文檔進行數字簽名之前，必須確保在密鑰庫中添加AEM憑據。 憑據是用於簽名的私鑰。
 
 >[!NOTE]
 >
->您必須先在AEM金鑰存放區中新增憑證，才能數位簽署PDF檔案。 憑據是用於簽名的私鑰。
+>AEM Forms也支援 *[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)* 用於數字簽名PDF文檔的規範。
+
+**驗證PDF文檔**
+
+您可以通過使用稱為認證簽名的特定類型的簽名來驗證PDF文檔，從而保護文檔的安全。 通過以下方式將經認證的簽名與數字簽名區別：
+
+它必須是應用於PDF檔案的第一個簽名；即，在應用經認證的簽名時，文檔中的任何其他簽名欄位都必須未簽名。
+
+在PDF文檔中只允許一個經認證的簽名。 如果要簽名和認證PDF文檔，則必須在簽名前對其進行認證。
+
+驗證PDF文檔後，可以對其他簽名欄位進行數字簽名。
+
+文檔的作者或發起者可以指定文檔可以以某些方式進行修改，而不會使經認證的簽名失效。
+
+例如，文檔可允許填寫表單或注釋。 如果作者指定不允許進行某種修改，
+
+Acrobat限制用戶以這種方式修改文檔。 如果進行此類修改，例如使用其他應用程式，則經認證的簽名無效，並且當用戶開啟文檔時，Acrobat發出警告。 （使用未經認證的簽名，不會阻止修改，並且正常的編輯操作不會使原始簽名無效。）
+
+在簽名時，將掃描文檔中特定類型的內容，這些內容可能使文檔的內容模糊或具有誤導性。
+
+例如，批注可能會使頁面上的某些文本模糊，這些文本對於瞭解正在認證的內容非常重要。 可以提供關於此類內容的解釋（法律證明）。
+
+>[!NOTE]
+>
+>在對PDF文檔進行數字簽名之前，必須確保在密鑰庫中添加AEM憑據。 憑據是用於簽名的私鑰。
 
 **語法**:
 
@@ -1449,7 +1449,7 @@ secureDocument(Document inDoc,
   </tr>
   <tr>
    <td><code>signatureOptions</code></td>
-   <td>包括簽署/認證PDF文檔所需的選項</td>
+   <td>包括簽名/驗證PDF文檔所需的選項</td>
   </tr>
   <tr>
    <td><code>readerExtensionOptions</code></td>
@@ -1457,12 +1457,12 @@ secureDocument(Document inDoc,
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>包括解鎖加密檔案所需的參數，只有在加密檔案時才需要。<br /> </td>
+   <td>包括解鎖加密檔案所需的參數。僅當檔案已加密時，才需要此參數。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-**範例1**:此示例用於執行密碼加密、認證簽名欄位和Reader擴展PDF文檔。
+**示例1**:此示例用於執行密碼加密、驗證簽名欄位和Reader擴展PDF文檔。
 
 ```java
 /*************************************************************************
@@ -1764,7 +1764,7 @@ public class PassEncryptCertifyExtend {
 }
 ```
 
-**範例2**:此示例用於執行PKI加密、簽名欄位和Reader擴展PDF文檔。
+**示例2**:此示例用於執行PKI加密、簽名域和Reader擴展PDF文檔。
 
 ```java
 /*************************************************************************
@@ -2093,20 +2093,20 @@ public class PassEncryptSignExtend {
 org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.ThreadDeath: null at com.adobe.internal.pdftoolkit.services.javascript.GibsonContextFactory.observeInstructionCount(GibsonContextFactory.java:138)
 ```
 
-這表示Reader擴充功能服務無法在定義的逾時間隔內執行檔案中使用的JavaScript。
+它表示Reader擴展服務無法在定義的超時間隔內執行文檔中使用的JavaScript。
 
-使用：
+使用以下方式管理PDF文檔中為JavaScripts定義的超時間隔：
 
 ```javascript
 ReaderExtensionsOptionSpec optionSpec = new ReaderExtensionsOptionSpec(usageRights, message);
 optionSpec.setJsScriptExecutionTimeoutInterval(100);
 ```
 
-其中100代表為執行JavaScripts而定義的逾時間隔（以秒為單位）。 為逾時間隔設定適當的值。
+其中100指為執行JavaScripts而定義的超時間隔（秒）。 為超時間隔設定適當的值。
 
 ### 獲取憑據使用權限 {#getting-credential-usage-rights}
 
-要獲取給定的 `credentialAlias`，請從 `SecureDocument` API。
+獲取給定指定憑據的使用權限資訊 `credentialAlias`，從 `SecureDocument` API。
 
 **語法**: `getCredentialUsageRights(String credentialAlias, ResourceResolver resourceResolver)`
 
@@ -2120,16 +2120,16 @@ optionSpec.setJsScriptExecutionTimeoutInterval(100);
   </tr>
   <tr>
    <td><code>credentialAlias</code> </td>
-   <td>此 <code>credentialAlias</code> 指定憑據。<br /> </td>
+   <td>的 <code>credentialAlias</code> 指定憑據。<br /> </td>
   </tr>
   <tr>
    <td><code>credentialPassword</code> </td>
-   <td>如果憑據已加密，則憑據的口令為空，如果憑據未加密，則需要使用空。<br /> </td>
+   <td>如果憑據已加密，則憑據的密碼；如果憑據未加密，則需要使用空值。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下示例將獲取指定憑據的使用權限資訊。
+以下示例讀取指定憑據的使用權限資訊。
 
 ```java
 /*************************************************************************
@@ -2197,7 +2197,7 @@ public void getCredentialUsageRights() {
 
 ### 獲取文檔使用權限 {#getting-document-usage-rights}
 
-若要擷取指定檔案的使用權限資訊，請從 `docAssuranceService`API。
+要獲取給定文檔的使用權限資訊，請從 `docAssuranceService`API。
 
 **語法**: `getDocumentUsageRights(Document inDocument, UnlockOptions unlockOptions)`
 
@@ -2216,7 +2216,7 @@ public void getCredentialUsageRights() {
  </tbody>
 </table>
 
-以下示例代碼返回文檔的使用權限資訊。
+下面的示例代碼返回文檔的使用權限資訊。
 
 ```java
 /*************************************************************************
@@ -2315,9 +2315,9 @@ public void getDocumentUsageRights() {
 }
 ```
 
-### 移除使用權限 {#removing-usage-rights}
+### 刪除使用權限 {#removing-usage-rights}
 
-您可以借由呼叫 `removeUsageRights`從 `docAssuranceService`API。
+通過調用 `removeUsageRights`API來自 `docAssuranceService`API。
 
 **輸入參數**
 
@@ -2333,12 +2333,12 @@ public void getDocumentUsageRights() {
   </tr>
   <tr>
    <td><code>unlockOptions</code> </td>
-   <td>包括解鎖加密檔案所需的參數。 只有在檔案已加密時，才需要此選項。<br /> </td>
+   <td>包括解鎖加密檔案所需的參數。 僅當檔案已加密時，才需要此選項。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下示例刪除了給定文檔的使用權限。
+下面的示例刪除給定文檔的使用權限。
 
 ```java
 /*************************************************************************
@@ -2442,7 +2442,7 @@ public void removeDocumentUsageRights() {
 
 #### 驗證數字簽名 {#verifying-digital-signatures}
 
-數字簽名可以被驗證以確保簽名的PDF文檔未被修改，並且數字簽名有效。 驗證數字簽名時，您可以檢查簽名的狀態和簽名的屬性，如簽名者的身份。 信任數字簽名之前，建議您驗證它。 驗證數字簽名時，請參考包含數字簽名的PDF文檔。
+可以驗證數字簽名，以確保簽名的PDF文檔未被修改，並且數字簽名有效。 驗證數字簽名時，可以檢查簽名的狀態和簽名的屬性，如簽名者的身份。 在信任數字簽名之前，建議您驗證它。 驗證數字簽名時，請參考包含數字簽名的PDF文檔。
 
 **語法**: `verify( inDoc, signatureFieldName, revocationCheckStyle, verificationTime, dssPrefs, ResourceResolver resourceResolver)`
 
@@ -2465,7 +2465,7 @@ public void removeDocumentUsageRights() {
   </tr>
   <tr>
    <td><code>revocationCheckStyle</code></td>
-   <td>用於管理驗證期間遇到的證書的吊銷檢查的選項</td>
+   <td>控制驗證期間遇到的證書的吊銷檢查的選項</td>
   </tr>
   <tr>
    <td><code>verificationTime</code></td>
@@ -2473,16 +2473,16 @@ public void removeDocumentUsageRights() {
   </tr>
   <tr>
    <td><code>dssPrefs</code></td>
-   <td>控制各種驗證配置的首選項。 對於加密的文檔，請使用 <code>setUnlockOptions()</code></td>
+   <td>控制各種驗證配置的首選項。 對於加密文檔，使用 <code>setUnlockOptions()</code></td>
   </tr>
   <tr>
    <td><code>resourceResolver</code></td>
-   <td>Granite信任存放區的資源解析器</td>
+   <td>到花崗岩信任儲存的資源解析器</td>
   </tr>
  </tbody>
 </table>
 
-此范常式式碼使用 `DocAssuranceService` 驗證加密PDF文檔中的簽名欄位。
+此示例代碼使用 `DocAssuranceService` 驗證加密的PDF文檔中的簽名欄位。
 
 ```java
 /*************************************************************************
@@ -2760,7 +2760,7 @@ public class VerifyFieldEncryptedPDF {
 
 ### 驗證多個數字簽名 {#verifying-multiple-digital-signatures}
 
-AEM可讓您驗證PDF檔案中的數位簽名。 如果PDF文檔經受需要多個簽名者簽名的業務流程，則該文檔可以包含多個數字簽名。 例如，金融交易需要貸款主管和經理的簽名。 您可以使用簽名服務API來驗證PDF文檔中的所有簽名。 驗證多個數字簽名時，您可以檢查每個簽名的狀態和屬性。 在您信任數字簽名之前，Adobe建議您驗證數字簽名。
+用AEM於驗證PDF文檔中的數字簽名。 如果PDF文檔受到業務流程的影響，需要多個簽名者的簽名，則該文檔可以包含多個數字簽名。 例如，財務交易要求貸款幹事和經理簽字。 您可以使用簽名服務API驗證PDF文檔中的所有簽名。 驗證多個數字簽名時，可以檢查每個簽名的狀態和屬性。 在信任數字簽名之前，Adobe建議您驗證它。
 
 **語法**: `verifyDocument(Document doc, RevocationCheckStyle revocationCheckStyle, VerificationTime verificationTime, ValidationPreferences prefStore, ResourceResolver resourceResolver)`
 
@@ -2778,7 +2778,7 @@ AEM可讓您驗證PDF檔案中的數位簽名。 如果PDF文檔經受需要多�
   </tr>
   <tr>
    <td><code>revocationCheckStyle</code></td>
-   <td>用於管理驗證期間遇到的證書的吊銷檢查的選項</td>
+   <td>控制驗證期間遇到的證書的吊銷檢查的選項</td>
   </tr>
   <tr>
    <td><code>verificationTime</code></td>
@@ -2786,11 +2786,11 @@ AEM可讓您驗證PDF檔案中的數位簽名。 如果PDF文檔經受需要多�
   </tr>
   <tr>
    <td><code>dssPrefs</code></td>
-   <td>控制各種驗證配置的首選項。 對於加密的文檔，請使用 <code>setUnlockOptions()</code></td>
+   <td>控制各種驗證配置的首選項。 對於加密文檔，使用 <code>setUnlockOptions()</code></td>
   </tr>
   <tr>
    <td><code>resourceResolver</code></td>
-   <td>Granite信任存放區的資源解析器</td>
+   <td>到花崗岩信任儲存的資源解析器</td>
   </tr>
  </tbody>
 </table>
@@ -3056,9 +3056,9 @@ public class VerifyEncryptedPDFDoc {
 }
 ```
 
-### 移除數位簽名 {#removing-digital-signatures}
+### 刪除數字簽名 {#removing-digital-signatures}
 
-只有在刪除以前的數字簽名後，才能將新的數字簽名應用到簽名欄位。 您不能覆蓋數字簽名。 如果嘗試將數字簽名應用到已包含簽名的簽名欄位，則會發生異常。
+只有在刪除以前的數字簽名後，才能將新的數字簽名應用於簽名欄位。 無法覆蓋數字簽名。 如果嘗試將數字簽名應用於已包含簽名的簽名欄位，則會發生異常。
 
 **語法**: `clearSignatureField(Document inDoc, String signatureFieldName, UnlockOptions unlockOptions)`
 
@@ -3080,12 +3080,12 @@ public class VerifyEncryptedPDFDoc {
   </tr>
   <tr>
    <td><code>unlockOptions</code> </td>
-   <td>包括解鎖加密檔案所需的參數，只有加密檔案時才需要<br /> </td>
+   <td>包括解鎖加密檔案所需的參數，僅當檔案已加密時才需要此參數<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下Java代碼示例從簽名欄位中刪除了數字簽名。
+以下Java代碼示例從簽名欄位中刪除數字簽名。
 
 ```java
 /*************************************************************************
@@ -3177,9 +3177,9 @@ public class ClearSignatureField {
 }
 ```
 
-### 獲取認證簽名欄位 {#getting-certifying-signature-field}
+### 正在獲取驗證簽名欄位 {#getting-certifying-signature-field}
 
-您可以檢索位於要簽名或認證的PDF文檔中的所有簽名欄位的名稱。 如果您不確定位於PDF文檔中的簽名欄位名稱，或要驗證名稱，可以用寫程式方式檢索它們。 簽名服務返回簽名欄位的完全限定名稱，例如 `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+您可以檢索位於要簽名或認證的PDF文檔中的所有簽名欄位的名稱。 如果您不確定位於PDF文檔中的簽名欄位名稱或要驗證這些名稱，可以以寫程式方式檢索它們。 簽名服務返回簽名欄位的完全限定名稱，如 `form1[0].grantApplication[0].page1[0].SignatureField1[0]`。
 
 **語法**: `getCertifyingSignatureField(Document inDoc, UnlockOptions unlockOptions)`
 
@@ -3197,12 +3197,12 @@ public class ClearSignatureField {
   </tr>
   <tr>
    <td><code>UnlockOptions</code></td>
-   <td>UnlockOptions包括解鎖加密檔案所需的參數。 只有在檔案已加密時，才需要此選項。</td>
+   <td>UnlockOptions包括解鎖加密檔案所需的參數。 僅當檔案已加密時，才需要此選項。</td>
   </tr>
  </tbody>
 </table>
 
-以下Java代碼示例將檢索用於驗證文檔的簽名欄位。
+下面的Java代碼示例檢索用於驗證文檔的簽名欄位。
 
 ```java
 /*************************************************************************
@@ -3298,7 +3298,7 @@ public class GetCertifyingSignatureField {
 
 ### 獲取PDF加密類型 {#getting-pdf-encryption-type}
 
-您可以檢索位於要簽名或認證的PDF文檔中的所有簽名欄位的名稱。 如果您不確定位於PDF文檔中的簽名欄位名稱，或要驗證名稱，可以用寫程式方式檢索它們。 簽名服務返回簽名欄位的完全限定名稱，例如 `asform1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+您可以檢索位於要簽名或認證的PDF文檔中的所有簽名欄位的名稱。 如果您不確定位於PDF文檔中的簽名欄位名稱或要驗證這些名稱，可以以寫程式方式檢索它們。 簽名服務返回簽名欄位的完全限定名稱，如 `asform1[0].grantApplication[0].page1[0].SignatureField1[0]`。
 
 **語法**: `void getPDFEncryption(Document inDoc)`
 
@@ -3317,7 +3317,7 @@ public class GetCertifyingSignatureField {
  </tbody>
 </table>
 
-以下Java代碼示例檢索位於PDF文檔中的給定簽名欄位的簽名資訊。
+下面的Java代碼示例檢索位於PDF文檔中的給定簽名欄位的簽名資訊。
 
 ```java
 /*************************************************************************
@@ -3412,9 +3412,9 @@ public class GetPDFEncryption {
 }
 ```
 
-### 從PDF中刪除密碼加密 {#removing-password-encryption-from-pdf}
+### 正在從PDF中刪除密碼加密 {#removing-password-encryption-from-pdf}
 
-從PDF檔案中移除以密碼為基礎的加密，讓使用者無需指定密碼即可開啟Adobe Reader或Acrobat中的PDF檔案。 從PDF文檔中刪除基於密碼的加密後，該文檔將不再安全。
+從PDF文檔中刪除基於密碼的加密，以便用戶在Adobe Reader或Acrobat開啟PDF文檔，而無需指定密碼。 從PDF文檔中刪除基於密碼的加密後，文檔不再安全。
 
 **語法**: `Document removePDFPasswordSecurity (Document inDoc,String password)`
 
@@ -3432,12 +3432,12 @@ public class GetPDFEncryption {
   </tr>
   <tr>
    <td><code>password</code> </td>
-   <td>要用於從文檔中刪除安全性的文檔開啟或權限密碼。<br /> </td>
+   <td>開啟的文檔或用於從文檔中刪除安全性的權限密碼。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下代碼示例從PDF文檔中刪除基於密碼的加密。
+下面的代碼示例從PDF文檔中刪除基於密碼的加密。
 
 ```java
     package com.adobe.docassurance.samples;
@@ -3511,9 +3511,9 @@ public class GetPDFEncryption {
     }
 ```
 
-### 刪除證書加密 {#removing-certificate-encryption}
+### 正在刪除證書加密 {#removing-certificate-encryption}
 
-您可以從PDF檔案中移除憑證式加密，讓使用者能在Adobe Reader或Acrobat中開啟PDF檔案。 要從使用證書加密的PDF文檔中刪除加密，請引用私鑰。 從PDF文檔中刪除加密後，加密將不再安全。
+您可以從PDF文檔中刪除基於證書的加密，以便用戶可以在Adobe Reader或Acrobat開啟PDF文檔。 要從使用證書加密的PDF文檔中刪除加密，請引用私鑰。 從PDF文檔中刪除加密後，加密不再安全。
 
 **語法**: `removePDFCertificateSecurity(Document inDoc, String alias, ResourceResolver resourceResolver)`
 
@@ -3531,11 +3531,11 @@ public class GetPDFEncryption {
   </tr>
   <tr>
    <td><code>alias</code> </td>
-   <td>與Granite信任存放區中用於從PDF檔案移除憑證式加密之金鑰相對應的別名。<br /> </td>
+   <td>與用於從PDF文檔中刪除基於證書的加密的Granite Trust Store中的密鑰相對應的別名。<br /> </td>
   </tr>
   <tr>
    <td><code>ResourceResolver</code></td>
-   <td>ResourceResolver存取特定使用者的金鑰存放區以擷取憑證。</td>
+   <td>ResourceResolver訪問特定用戶的密鑰儲存以獲取憑據。</td>
   </tr>
  </tbody>
 </table>
@@ -3635,19 +3635,19 @@ public class GetPDFEncryption {
 
 ## 輸出服務 {#output-service}
 
-輸出服務提供API,以.pdf、.pcl、.zpl及.ps格式轉譯XDP檔案。 服務支援下列API:
+輸出服務提供API以.pdf、.pcl、.zpl和.ps格式呈現XDP檔案。 該服務支援以下API:
 
-* **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p):** 通過將表單設計與儲存在網路位置、本地檔案系統或HTTP位置上的資料合併為常值來生成PDF文檔。
+* **[生成PDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p):** 通過將表單設計與儲存在網路位置、本地檔案系統或HTTP位置上的資料合併為文本值，生成PDF文檔。
 
-* **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p):** 通過將表單設計與儲存在應用程式中的資料合併來生成PDF文檔。
-* **[generatePDFOutputBatch](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutputbatch-p):** 將表單設計與資料合併，以建立PDF檔案。 或者，為每個記錄生成元資料檔案，或者將輸出保存到PDF檔案。
-* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):** 從儲存在網路位置、本地檔案系統或HTTP位置上的表單設計和資料檔案生成PCL、PostScript或ZPL輸出，作為常值。
+* **[生成PDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p):** 通過將表單設計與儲存在應用程式中的資料合併來生成PDF文檔。
+* **[generatePDFOutputBatch](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutputbatch-p):** 將表單設計與資料合併以建立PDF文檔。 可選地，為每個記錄生成元資料檔案或將輸出保存到PDF檔案。
+* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):** 從儲存在網路位置、本地檔案系統或HTTP位置上的表單設計和資料檔案生成PCL、PostScript或ZPL輸出作為文本值。
 
 * **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):** 從儲存在應用程式中的表單設計和資料檔案生成PCL、PostScript和ZPL輸出。
 
-### generatePDFOutput {#generatepdfoutput}
+### 生成PDFOutput {#generatepdfoutput}
 
-generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 或者，為每個記錄生成元資料檔案，或者將輸出保存到PDF檔案。 對儲存在網路位置、本地檔案系統或HTTP位置上的表單設計或資料，使用generatePDFOutput API作為常值。 如果表單設計和XML資料儲存在應用程式中，請使用 [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API。
+generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 可選地，為每個記錄生成元資料檔案或將輸出保存到PDF檔案。 將generatePDFOutput API用於儲存在網路位置、本地檔案系統或HTTP位置上的表單設計或資料作為文字值。 如果表單設計和XML資料儲存在應用程式中，請使用 [生成PDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API。
 
 **語法：** `Document generatePDFOutput(String uriOrFileName, Document data, PDFOutputOptions options);`
 
@@ -3660,8 +3660,8 @@ generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 �
    <th>說明</th>
   </tr>
   <tr>
-   <td>uriOrFileName</td>
-   <td>指定輸入檔案的路徑和名稱。 檔案可為PDF或XDP類型。 如果僅指定檔案名，則會與選項中指定的contentRoot相對讀取檔案。</td>
+   <td>uri或檔案名</td>
+   <td>指定輸入檔案的路徑和名稱。 檔案可以是PDF或XDP類型。 如果僅指定檔案名，則讀取該檔案時將與選項中指定的contentRoot相關。</td>
   </tr>
   <tr>
    <td>資料</td>
@@ -3669,12 +3669,12 @@ generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 �
   </tr>
   <tr>
    <td>選項</td>
-   <td>指定contentRoot、locale、AcrobatVersion、linearizedPDF和taggedPDF變數的值。 options參數接受PDFOutputOptions類型的對象。 <br /> </td>
+   <td>指定contentRoot、locale、AcrobatVersion、linearizedPDF和taggedPDF變數的值。 選項參數接受PDFOutputOptions類型的對象。 <br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下Java代碼示例通過將表單設計與儲存在XML檔案中的資料合併來生成PDF文檔。
+以下Java代碼示例通過將表單設計與儲存在XML檔案中的資料合併而生成PDF文檔。
 
 ```java
     @Reference private OutputService outputService;
@@ -3752,9 +3752,9 @@ generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 �
     }
 ```
 
-### generatePDFOutput {#generatepdfoutput-1}
+### 生成PDFOutput {#generatepdfoutput-1}
 
-generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 或者，為每個記錄生成元資料檔案，或將輸出保存到PDF檔案。 對儲存在應用程式中的表單設計或資料使用generatePrintedOutput API。 如果表單設計和XML資料儲存在網路位置、本地或HTTP位置中作為常值，請使用 [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API。
+generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 或者，為每個記錄生成元資料檔案或將輸出保存到PDF檔案。 將generatePrintedOutput API用於儲存在應用程式中的表單設計或資料。 如果表單設計和XML資料儲存在網路位置、本地或HTTP位置作為文本值，請使用 [生成PDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API。
 
 **語法：** `Document generatePDFOutput(Document inputdocument, Document data, PDFOutputOptions options)`
 
@@ -3768,7 +3768,7 @@ generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 �
   </tr>
   <tr>
    <td>輸入文檔<br /> </td>
-   <td>指定輸入檔案的路徑和名稱。 檔案可為PDF或XDP類型。 如果僅指定檔案名，則會與選項中指定的contentRoot相對讀取檔案。 <br /> </td>
+   <td>指定輸入檔案的路徑和名稱。 檔案可以是PDF或XDP類型。 如果僅指定檔案名，則讀取該檔案時將與選項中指定的contentRoot相關。 <br /> </td>
   </tr>
   <tr>
    <td>資料</td>
@@ -3776,12 +3776,12 @@ generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 �
   </tr>
   <tr>
    <td>選項</td>
-   <td>指定contentRoot、locale、AcrobatVersion、linearizedPDF和taggedPDF變數的值。 options參數接受PDFOutputOptions類型的對象。</td>
+   <td>指定contentRoot、locale、AcrobatVersion、linearizedPDF和taggedPDF變數的值。 選項參數接受PDFOutputOptions類型的對象。</td>
   </tr>
  </tbody>
 </table>
 
-以下Java代碼示例通過將表單設計與儲存在XML檔案中的資料合併來生成PDF文檔。
+以下Java代碼示例通過將表單設計與儲存在XML檔案中的資料合併而生成PDF文檔。
 
 ```java
     @Reference private OutputService outputService;
@@ -3864,7 +3864,7 @@ generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 �
 
 ### generatePDFOutputBatch {#generatepdfoutputbatch}
 
-將表單設計與資料合併，以建立PDF檔案。 或者，為每個記錄生成元資料檔案，或者將輸出保存到PDF檔案。 使用generatePDFOutputBatch API，將儲存在網路位置、本地檔案系統或HTTP位置上的表單設計或資料用作常值。
+將表單設計與資料合併以建立PDF文檔。 可選地，為每個記錄生成元資料檔案或將輸出保存到PDF檔案。 使用generatePDFOutputBatch API將儲存在網路位置、本地檔案系統或HTTP位置上的表單設計或資料用作文字值。
 
 **語法：** `BatchResult generatePDFOutputBatch(Map templates, Map data, PDFOutputOptions options, BatchOptions batchOptions);`
 
@@ -3877,20 +3877,20 @@ generatePDFOutput API通過將表單設計與資料合併來生成PDF文檔。 �
    <th>說明</th>
   </tr>
   <tr>
-   <td>範本<br /> </td>
-   <td>指定索引鍵和範本檔案名稱的對應。<br /> </td>
+   <td>模板<br /> </td>
+   <td>指定密鑰和模板檔案名的映射。<br /> </td>
   </tr>
   <tr>
    <td>資料</td>
-   <td>指定鍵和資料文檔的映射。 如果鍵不是空值，則資料文檔將使用模板映射中指定的相應鍵的模板進行呈現。 </td>
+   <td>指定鍵和資料文檔的映射。 如果鍵不為null，則使用模板映射中指定的相應鍵的模板來呈現資料文檔。 </td>
   </tr>
   <tr>
    <td>選項</td>
-   <td>指定contentRoot、locale、AcrobatVersion、linearizedPDF和taggedPDF變數的值。 options參數接受PDFOutputOptions類型的對象。</td>
+   <td>指定contentRoot、locale、AcrobatVersion、linearizedPDF和taggedPDF變數的值。 選項參數接受PDFOutputOptions類型的對象。</td>
   </tr>
   <tr>
    <td>batchOptions</td>
-   <td>指定變數的值 <code>generateManyFiles</code>. 設定generateManyFiles標幟以產生多個檔案。 選項參數接受BatchOptions類型的對象。</td>
+   <td>指定變數的值 <code>generateManyFiles</code>。 設定generateManyFiles標誌以生成多個檔案。 選項參數接受BatchOptions類型的對象。</td>
   </tr>
  </tbody>
 </table>
@@ -3981,7 +3981,7 @@ String outputFolder="C:/Output";
 
 ### generatePrintedOutput {#generateprintedoutput}
 
-從表單設計和資料檔案生成PCL、PostScript和ZPL輸出。 資料檔案與表單設計合併，並格式化以便打印。 您可以直接將輸出傳送至打印機或另存為檔案。 對儲存在應用程式中的表單設計或資料使用generatePrintedOutput API。
+從表單設計和資料檔案生成PCL、PostScript和ZPL輸出。 資料檔案與表單設計合併並格式化以打印。 您可以將輸出直接發送到打印機或另存為檔案。 將generatePrintedOutput API用於儲存在應用程式中的表單設計或資料。
 
 **語法：** `Document generatePrintedOutput(String uriOrFileName, Document data, PrintedOutputOptions);`
 
@@ -3994,8 +3994,8 @@ String outputFolder="C:/Output";
    <th>說明</th>
   </tr>
   <tr>
-   <td>uriOrFileName<br /> </td>
-   <td>指定輸入檔案的路徑和名稱。 如果僅指定檔案名，則會與選項中指定的contentRoot相對讀取檔案。 檔案可為PDF或XDP類型。<br /> </td>
+   <td>uri或檔案名<br /> </td>
+   <td>指定輸入檔案的路徑和名稱。 如果僅指定檔案名，則讀取該檔案時將與選項中指定的contentRoot相關。 檔案可以是PDF或XDP類型。<br /> </td>
   </tr>
   <tr>
    <td>資料</td>
@@ -4008,7 +4008,7 @@ String outputFolder="C:/Output";
  </tbody>
 </table>
 
-以下Java代碼示例從表單設計和資料生成PCL、PostScript和ZPL輸出。 輸出類型取決於傳遞至 `printConfig`參數。
+以下Java代碼示例從表單設計和資料生成PCL、PostScript和ZPL輸出。 輸出類型取決於傳遞給 `printConfig`的下界。
 
 ```java
 @Reference private OutputService outputService;
@@ -4072,7 +4072,7 @@ Document doc=null;
 
 ### generatePrintedOutput {#generateprintedoutput-1}
 
-根據表單設計和資料檔案生成PCL、PostScript和ZPL輸出。 資料檔案與表單設計合併，並格式化以便打印。 輸出可以直接發送到打印機或另存為檔案。 對儲存在應用程式中的表單設計或資料使用generatePrintedOutput API。
+生成給定表單設計和資料檔案的PCL、PostScript和ZPL輸出。 資料檔案與表單設計合併並格式化以打印。 輸出可直接發送到打印機或另存為檔案。 將generatePrintedOutput API用於應用程式中儲存的表單設計或資料。
 
 **語法：** `Document generatePrintedOutput(Document inputdocument, Document data, PrintedOutputOptions);`
 
@@ -4086,7 +4086,7 @@ Document doc=null;
   </tr>
   <tr>
    <td>輸入文檔<br /> </td>
-   <td>指定輸入檔案的路徑和名稱。 如果僅指定檔案名，則會與選項中指定的contentRoot相對讀取檔案。 檔案的類型可為XDP。 </td>
+   <td>指定輸入檔案的路徑和名稱。 如果僅指定檔案名，則讀取該檔案時將與選項中指定的contentRoot相關。 檔案可以是XDP類型。 </td>
   </tr>
   <tr>
    <td>資料</td>
@@ -4094,12 +4094,12 @@ Document doc=null;
   </tr>
   <tr>
    <td>選項</td>
-   <td>此對象用於設定contentRoot、locale、printConfig、copy和paginationOverride的值。 選項參數接受PrintedOutputOptions類型的對象。<br /> </td>
+   <td>此對象用於設定contentRoot、locale、printConfig、copys和paginationOverride的值。 選項參數接受PrintedOutputOptions類型的對象。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下Java代碼示例從表單設計和資料生成PCL、PostScript和ZPL輸出。 輸出類型取決於傳遞至 `printConfig`參數。
+以下Java代碼示例從表單設計和資料生成PCL、PostScript和ZPL輸出。 輸出類型取決於傳遞給 `printConfig`的下界。
 
 ```java
 @Reference private OutputService outputService;
@@ -4157,7 +4157,7 @@ Document doc=null;
 
 ### generatePrintedOutputBatch {#generateprintedoutputbatch}
 
-通過將表單設計與資料合併來生成PS、PCL和ZPL格式的文檔。 或者，為每個記錄生成元資料檔案，或將輸出保存到PDF檔案。 對儲存在網路位置、本地檔案系統或HTTP位置上的表單設計或資料使用generatePrintedOutputBatch API作為常值。
+通過將表單設計與資料合併，生成PS、PCL和ZPL格式的文檔。 或者，為每個記錄生成元資料檔案或將輸出保存到PDF檔案。 將generatePrintedOutputBatch API用於儲存在網路位置、本地檔案系統或HTTP位置上的表單設計或資料作為文本值。
 
 **語法`:`** `BatchResult generatePrintedOutputBatch(Map templates, Map data, PrintedOutputOptions options, BatchOptions batchOptions);`
 
@@ -4170,25 +4170,25 @@ Document doc=null;
    <th>說明</th>
   </tr>
   <tr>
-   <td>範本<br /> </td>
-   <td>指定索引鍵和範本檔案名稱的對應。<br /> </td>
+   <td>模板<br /> </td>
+   <td>指定密鑰和模板檔案名的映射。<br /> </td>
   </tr>
   <tr>
    <td>資料</td>
-   <td>指定鍵和資料文檔的映射。 如果鍵不是空值，則資料文檔在模板映射中使用相應鍵的模板進行呈現。<br /> </td>
+   <td>指定鍵和資料文檔的映射。 如果鍵不為null，則使用模板映射中相應鍵的模板來呈現資料文檔。<br /> </td>
   </tr>
   <tr>
    <td>選項</td>
-   <td>指定PrintedOutputOptions類型的對象。 此對象用於設定contentRoot、locale、printConfig、copys、paginationOverride的值。<br /> </td>
+   <td>指定PrintedOutputOptions類型的對象。 此對象用於設定contentRoot、locale、printConfig、copys、pagenitationOverride的值。<br /> </td>
   </tr>
   <tr>
    <td>batchOptions</td>
-   <td>指定變數generateManyFiles的值。 設定generateManyFiles標幟以產生多個檔案。 選項參數接受BatchOptions類型的對象。<br /> </td>
+   <td>指定變數generateManyFiles的值。 設定generateManyFiles標誌以生成多個檔案。 選項參數接受BatchOptions類型的對象。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下Java代碼示例從多個表單設計模板和資料檔案批處理生成PCL、PostScript和ZPL輸出。 輸出類型取決於傳遞至 `printConfig`參數。
+以下Java代碼示例從多個表單設計模板和資料檔案中批量生成PCL、PostScript和ZPL輸出。 輸出類型取決於傳遞給 `printConfig`的下界。
 
 ```java
 @Reference private OutputService outputService;
@@ -4294,14 +4294,14 @@ String outputFolder="C:/Output";
 
 ## Forms 服務 {#forms-service}
 
-Forms服務提供API，可匯入資料至互動式PDF表單，以及從資料匯出。 互動式PDF表單是PDF文檔，包含一個或多個欄位，用於顯示和收集用戶的資訊。 服務支援下列API:
+Forms服務提供API，以向互動式PDF表單導入和從互動式報表導出資料。 互動式PDF表單是PDF文檔，包含一個或多個用於顯示和收集用戶資訊的欄位。 該服務支援以下API:
 
-* **[exportData](/help/forms/using/aem-document-services-programmatically.md#p-exportdata-p):** 從PDF表單匯出資料。
-* **[importData](/help/forms/using/aem-document-services-programmatically.md#p-importdata-p):** 將資料匯入互動式PDF表單。
+* **[導出資料](/help/forms/using/aem-document-services-programmatically.md#p-exportdata-p):** 從PDF窗體導出資料。
+* **[導入資料](/help/forms/using/aem-document-services-programmatically.md#p-importdata-p):** 將資料導入到互動式PDF窗體。
 
-### exportData {#exportdata}
+### 導出資料 {#exportdata}
 
-以XML和XDP格式從互動式PDF表單匯出表單資料。
+以XML和XDP格式從互動式PDF表單中導出表單資料。
 
 **語法：** `Document exportData(Document xdpOrPdf, DataFormat dataFormat)`
 
@@ -4318,13 +4318,13 @@ Forms服務提供API，可匯入資料至互動式PDF表單，以及從資料匯
    <td>指定包含XDP或PDF檔案的文檔對象。 </td>
   </tr>
   <tr>
-   <td>dataFormat<br /> </td>
-   <td>指定資料匯出的格式。 它接受類型列舉（XDP、XmlData、自動）的變數。<br /> </td>
+   <td>資料格式<br /> </td>
+   <td>指定導出資料的格式。 它接受類型enum(XDP、XmlData、Auto)的變數。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下Java程式碼範例會以XML和XDP格式，從互動式PDF表單匯出表單資料。
+以下Java代碼示例以XML和XDP格式從互動式PDF表單中導出表單資料。
 
 #### 範例 {#sample}
 
@@ -4383,9 +4383,9 @@ try {
  }
 ```
 
-### importData {#importdata}
+### 導入資料 {#importdata}
 
-將表單資料匯入互動式PDF表單。
+將表單資料導入到互動式PDF表單。
 
 **語法：** `Document importData(Document PDF, Document data)`
 
@@ -4403,12 +4403,12 @@ try {
   </tr>
   <tr>
    <td>資料<br /> </td>
-   <td>包含XML格式資料的XML檔案。</td>
+   <td>包含XML格式的資料的XML檔案。</td>
   </tr>
  </tbody>
 </table>
 
-下列Java程式碼範例會將表單資料匯入互動式PDF表單。
+以下Java代碼示例將表單資料導入到互動式PDF表單中。
 
 #### 範例 {#sample-1}
 
@@ -4458,35 +4458,35 @@ private File importData(File inDoc, File inXML)
 }
 ```
 
-## PDF產生器服務 {#pdfgeneratorservice}
+## PDF生成器服務 {#pdfgeneratorservice}
 
-PDF產生器服務提供API，可將原生檔案格式轉換為PDF。 它還將PDF轉換為其他檔案格式，並優化PDF文檔的大小。
+PDF生成器服務提供API以將本機檔案格式轉換為PDF。 它還將PDF轉換為其他檔案格式，並優化PDF文檔的大小。
 
-### 生成PDFService {#generatepdfservice}
+### 生成PDF服務 {#generatepdfservice}
 
-GeneratePDFService提供API，可將各種檔案格式(例如.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、（已廢止）。swf、.jpg、.bmp、.tif、.png、.html及許多其他檔案格式)轉換為PDF。 此外也提供API，可將PDF匯出為各種檔案格式，並最佳化PDF。 服務支援下列API:
+GeneratePDFService提供API將各種檔案格式(如.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、（棄用）。swf、.jpg、.bmp、.tif、.png、.html和許多其他檔案格式)轉換為PDF。 它還提供API將PDF導出為各種檔案格式並優化PDF。 該服務支援以下API:
 
-* **createPDF**:將支援的檔案類型轉換為PDF文檔。 它支援Microsoft Word、Microsoft PowerPoint、Microsoft Excel和Microsoft專案等檔案格式。 除了這些應用程式外，產生應用程式類型的任何第三方通用PDF也可插入API中。
-* **exportPDF**:將PDF文檔轉換為支援的檔案類型。 方法接受PDF作為輸入，並以指定的檔案類型格式導出PDF的內容。 您可以匯出封裝PostScript(eps)、HTML3.2(htm, html)、HTML4.01(含CSS 1.0(htm, jpg)、JPEG(jpeg, jpe)、JPEG2000(jpf, jpx, j2k, j2c, jpc)、Microsoft Word Document(doc,)Microsoft Xlsx()、Microsoft PowerPoint Presentation(ptx)、PNG(Post)（Rct富文本格式，Post）rtf)、文本（可訪問）(txt)、文本（純）(txt)TIFF(tif, tiff)、XML 1.0(xml)、PDF/A-1a(sRGB)、PDF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)格式。 您也可以指定 [自訂預檢設定檔](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html) (針對PDF輸出)。
+* **建立PDF**:將支援的檔案類型轉換為PDF文檔。 它支援檔案格式，如MicrosoftWord、MicrosoftPowerPoint、MicrosoftExcel和Microsoft項目。 除了這些應用程式外，任何第三方通用PDF生成應用程式類型也可插入到API中。
+* **導出PDF**:將PDF文檔轉換為支援的檔案類型。 該方法接受PDF作為輸入，並以指定檔案類型格式導出PDF的內容。 可以在Encapsulated PostScript(eps)、HTML3.2(htm,html)、HTML4.01(帶CSS 1.0(htm,html)、JPEG(jpg,jpeg,jpe)、JPEG2000(jpf,jpx,jp2,j2k,j2c,jpc)、MicrosoftWord文檔()中導出PDF文檔doc, docx)MicrosoftExcel工作簿(xlsx)、MicrosoftPowerPoint演示文稿(pptx)、PNG(png)、PostScript(ps)、RTF格式、Text(Accessible)(txt)、Text(Plain)(txt)TIFF(tif, tiff)、XML 1.0(xml)、PDF/A-1a(sRGB)、PDF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)格式。 也可以指定 [自定義印前檢查配置檔案](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html) PDF輸出。
 
-* **optimizePDF**:優化PDF文檔，並將PDF文檔從一種類型轉換為另一種類型。 該方法接受PDF文檔作為輸入。
-* **htmlToPdf2**:將HTML頁轉換為PDF文檔。 它接受HTML頁面的URL作為輸入。
+* **優化PDF**:優化PDF文檔，還將PDF文檔從一種類型轉換為另一種類型。 該方法接受PDF文檔作為輸入。
+* **htmlToPdf2**:將HTML頁轉換為PDF文檔。 它接受HTML頁的URL作為輸入。
 
 >[!NOTE]
 >
->在AIX作業系統上執行的AEM Forms伺服器不建議使用HTMLtoPDF API。
+>HTMLtoPDF API不建議用於在AIX作業系統上運行的AEM Forms伺服器。
 
-#### PDF產生器API可在Microsoft Windows和Linux上使用 {#pdf-generator-api-available-on-microsoft-windows-and-linux}
+#### PDF生成器API在MicrosoftWindows和Linux上提供 {#pdf-generator-api-available-on-microsoft-windows-and-linux}
 
 <table>
  <tbody>
   <tr>
    <td><strong>API</strong></td>
-   <td><p><strong>Microsoft Windows </strong></p> </td>
+   <td><p><strong>Microsoft窗 </strong></p> </td>
    <td><strong>Linux </strong></td>
   </tr>
   <tr>
-   <td>createPDF</td>
+   <td>建立PDF</td>
    <td><strong>✓</strong></td>
    <td><strong>✓</strong></td>
   </tr>
@@ -4495,12 +4495,12 @@ GeneratePDFService提供API，可將各種檔案格式(例如.doc、.docx、.ppt
    <td><strong>✓</strong></td>
    <td><strong>✓</strong></td>
   </tr>
-   <td>optimizePDF</td>
+   <td>優化PDF</td>
    <td><strong>✓</strong></td>
    <td>✖</td>
   </tr>
   <tr>
-   <td>exportPDF</td>
+   <td>導出PDF</td>
    <td><strong>✓</strong></td>
    <td>✖</td>
   </tr>
@@ -4512,20 +4512,20 @@ GeneratePDFService提供API，可將各種檔案格式(例如.doc、.docx、.ppt
  </tbody>
 </table>
 
-#### createPDF {#createpdf}
+#### 建立PDF {#createpdf}
 
-createPDF API將支援的檔案類型轉換為PDF文檔。 它支援各種檔案格式，例如Microsoft Word、Microsoft PowerPoint、Microsoft Excel和Microsoft專案。 除了這些應用程式外，產生應用程式類型的任何第三方通用PDF也可插入API中。
+createPDF API將支援的檔案類型轉換為PDF文檔。 它支援各種檔案格式，如MicrosoftWord、MicrosoftPowerPoint、MicrosoftExcel和Microsoft項目。 除了這些應用程式外，任何第三方通用PDF生成應用程式類型也可插入到API中。
 
-對於轉換，只有幾個參數是強制性的。 輸入文檔是強制參數。 您可以稍後將安全權限、PDF輸出設定和元資料資訊應用到輸出PDF文檔。
+對於轉換，只有幾個參數是必需的。 輸入文檔是必需參數。 您以後可以將安全權限、PDF輸出設定和元資料資訊應用到輸出PDF文檔。
 
-createPDF服務返回帶結果的java.util.Map。 地圖的鍵值為：
+createPDF服務返回帶結果的java.util.Map。 映射的鍵為：
 
-* ConvertedDoc:它包含新建立的PDF文檔。
-* LogDoc:它包含記錄檔。
+* 轉換文檔：它包含新建立的PDF文檔。
+* 日誌文檔：它包含日誌檔案。
 
-createPDF服務會擲回下列例外狀況：
+createPDF服務引發以下異常：
 
-* ConversionException
+* 轉換異常
 * InvalidParameterException
 * FileFormatNotSupportedException
 
@@ -4540,52 +4540,52 @@ createPDF服務會擲回下列例外狀況：
    <th>說明</th>
   </tr>
   <tr>
-   <td>inputDoc<br /> </td>
-   <td>指定文檔對象。 文檔對象包含輸入檔案。 在輸入檔案上建立com.adobe.aemfd.docmanager.Document物件。 此為必要參數。</td>
+   <td>輸入文檔<br /> </td>
+   <td>指定文檔對象。 文檔對象包含輸入檔案。 在輸入文檔上建立com.adobe.aemfd.docmanager.Document對象。 它是強制參數。</td>
   </tr>
   <tr>
-   <td>inputFileName<br /> </td>
-   <td>輸入檔案的名稱以及副檔名。 此為必要參數。<br /> </td>
+   <td>輸入檔案名<br /> </td>
+   <td>輸入檔案的名稱以及副檔名。 它是強制參數。<br /> </td>
   </tr>
   <tr>
    <td>fileTypeSettings</td>
-   <td>此為選用參數。</td>
+   <td>它是可選參數。</td>
   </tr>
   <tr>
-   <td>pdfSettings</td>
-   <td><p>PDF轉換文檔的輸出。 您只能套用下列設定：</p>
+   <td>pdf設定</td>
+   <td><p>PDF轉換文檔的輸出。 您只能應用以下設定：</p>
     <ul>
-     <li>High_Quality_Print<br /> </li>
+     <li>高質量打印<br /> </li>
      <li>PDFA1b_2005_RGB<br /> </li>
      <li>PDFA1b_2005_CMYK<br /> </li>
      <li>PDFX1a_2001<br /> </li>
      <li>PDFX3_2002<br /> </li>
-     <li>Press_Quality<br /> </li>
+     <li>按質量<br /> </li>
      <li>最小檔案大小</li>
-    </ul> <p>此為選用參數。<br /> </p> </td>
+    </ul> <p>它是可選參數。<br /> </p> </td>
   </tr>
   <tr>
-   <td>securitySettings</td>
-   <td><p>已轉換文檔的安全設定。 您可以套用下列設定：</p>
+   <td>安全設定</td>
+   <td><p>已轉換文檔的安全設定。 可以應用以下設定：</p>
     <ul>
      <li>無安全性</li>
      <li>密碼安全<br /> </li>
-     <li>憑證安全性<br /> </li>
+     <li>證書安全<br /> </li>
      <li>Adobe策略伺服器</li>
-    </ul> <p>此為選用參數。</p> </td>
+    </ul> <p>它是可選參數。</p> </td>
   </tr>
   <tr>
-   <td>settingsDoc</td>
-   <td>檔案包含在生成PDF文檔時應用的設定(例如，為Web視圖優化PDF文檔)，以及在建立PDF文檔後應用的設定（例如，初始視圖和安全性）。 此為選用參數。<br /> </td>
+   <td>設定文檔</td>
+   <td>該檔案包含在生成PDF文檔時應用的設定(例如，為Web視圖優化PDF文檔)和在建立PDF文檔後應用的設定（例如，初始視圖和安全性）。 它是可選參數。<br /> </td>
   </tr>
   <tr>
    <td>xmpDoc </td>
-   <td>該檔案包含應用於生成的PDF文檔的元資料資訊。 此參數為選用。<br /> </td>
+   <td>該檔案包含應用於生成的PDF文檔的元資料資訊。 此參數是可選的。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下Java代碼將支援的檔案類型的文檔轉換為PDF文檔。
+以下Java代碼將支援檔案類型的文檔轉換為PDF文檔。
 
 ```java
 @Reference GeneratePDFService generatePdfService;
@@ -4647,17 +4647,17 @@ File createPDF(File inputFile, String inputFilename, String fileTypeSettings, St
 }
 ```
 
-#### exportPDF {#exportpdf}
+#### 導出PDF {#exportpdf}
 
-將PDF文檔轉換為支援的檔案類型。 方法接受PDF作為輸入，並以指定的檔案類型格式導出PDF的內容。
+將PDF文檔轉換為支援的檔案類型。 該方法接受PDF作為輸入，並以指定檔案類型格式導出PDF的內容。
 
-createPDF服務返回帶結果的java.util.Map。 地圖的鍵值為：
+createPDF服務返回帶結果的java.util.Map。 映射的鍵為：
 
-* ConvertedDoc:它包含輸出檔案。
+* 轉換文檔：它包含輸出文檔。
 
-createPDF服務會擲回下列例外狀況：
+createPDF服務引發以下異常：
 
-* ConversionException
+* 轉換異常
 * InvalidParameterException
 * FileFormatNotSupportedException
 
@@ -4676,20 +4676,20 @@ Map exportPDF(Document inputDoc, String inputFileName, String formatType, Docume
    <th>說明</th>
   </tr>
   <tr>
-   <td>inputDoc<br /> </td>
+   <td>輸入文檔<br /> </td>
    <td>指定要轉換的文檔。 </td>
   </tr>
   <tr>
-   <td>inputFileName<br /> </td>
+   <td>輸入檔案名<br /> </td>
    <td>檔案的名稱以及副檔名。<br /> </td>
   </tr>
   <tr>
-   <td>formatType</td>
-   <td>exportPDF API的輸出檔案格式。<br /> </td>
+   <td>格式類型</td>
+   <td>導出PDF API的輸出檔案格式。<br /> </td>
   </tr>
   <tr>
-   <td>settingsDoc </td>
-   <td>檔案包含在生成輸出文檔時要應用的配置。 通常是XML檔案。</td>
+   <td>設定文檔 </td>
+   <td>該檔案包含在生成輸出文檔時要應用的配置。 通常是XML檔案。</td>
   </tr>
  </tbody>
 </table>
@@ -4744,13 +4744,13 @@ finally {
 }
 ```
 
-#### optimizePDF {#optimizepdf}
+#### 優化PDF {#optimizepdf}
 
-OptimizePDF API可縮小PDF檔案的大小，以最佳化檔案。 此轉換的結果是PDF檔案可能小於其原始版本。 此操作還會將PDF文檔轉換為優化參數中指定的PDF版本。 它會傳回包含最佳化PDF的OptimizePDFResult物件。
+OptimizePDF API通過減小PDF檔案的大小來優化壓縮檔案。 此轉換的結果是PDF檔案可能小於其原始版本。 此操作還將PDF文檔轉換為優化參數中指定的PDF版本。 它返回包含優化PDF的OptimizePDFResult對象。
 
-createPDF服務會擲回下列例外狀況：
+createPDF服務引發以下異常：
 
-* ConversionException
+* 轉換異常
 * InvalidParameterException
 * FileFormatNotSupportedException
 
@@ -4769,21 +4769,21 @@ OptimizePDFResult optimizePDF(Document inputDoc, String fileTypeSettings, Docume
    <th>說明</th>
   </tr>
   <tr>
-   <td>inputDoc<br /> </td>
-   <td>指定輸入文檔。 此為必要參數。</td>
+   <td>輸入文檔<br /> </td>
+   <td>指定輸入文檔。 它是強制參數。</td>
   </tr>
   <tr>
    <td>fileTypeSettings<br /> </td>
-   <td>此為選用參數。<br /> </td>
+   <td>它是可選參數。<br /> </td>
   </tr>
   <tr>
-   <td>settingsDoc </td>
-   <td>檔案包含在生成PDF文檔時應用的設定(例如，為Web視圖優化PDF文檔)，以及在建立PDF文檔後應用的設定（例如，初始視圖和安全性）。 此為選用參數。<br /> </td>
+   <td>設定文檔 </td>
+   <td>該檔案包含在生成PDF文檔時應用的設定(例如，為Web視圖優化PDF文檔)和在建立PDF文檔後應用的設定（例如，初始視圖和安全性）。 它是可選參數。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-下列Java程式碼範例會透過縮小檔案大小來最佳化輸入PDF檔案。
+以下Java代碼示例通過減小輸入PDF檔案的大小來優化其大小。
 
 ```java
 @Reference GeneratePDFService generatePdfService;
@@ -4834,13 +4834,13 @@ File optimizePDF(File inputFile, String fileTypeSettings, File settingsFile) thr
 
 #### htmlToPdf2 {#htmltopdf}
 
-將HTML頁轉換為PDF文檔。 它接受HTML頁面的URL作為輸入。
+將HTML頁轉換為PDF文檔。 它接受HTML頁的URL作為輸入。
 
-htmlToPdf2服務會傳回HtmlToPdfResult物件。 您可以透過result.getConvertedDocument()取得轉換的PDF。
+htmlToPdf2服務返回HtmlToPdfResult對象。 可以通過result.getConvertedDocument()獲取轉換的PDF。
 
-htmlToPdf2服務會擲回下列例外狀況：
+htmlToPdf2服務引發以下異常：
 
-* ConversionException
+* 轉換異常
 * InvalidParameterException
 * FileFormatNotSupportedException
 
@@ -4859,16 +4859,16 @@ HtmlToPdfResult htmlToPdf2(String inputUrl, String fileTypeSettingsName, String 
    <th>說明</th>
   </tr>
   <tr>
-   <td>inputDoc<br /> </td>
-   <td>指定輸入文檔。 此為必要參數。</td>
+   <td>輸入文檔<br /> </td>
+   <td>指定輸入文檔。 它是強制參數。</td>
   </tr>
   <tr>
    <td>fileTypeSettings<br /> </td>
-   <td>此為選用參數。<br /> </td>
+   <td>它是可選參數。<br /> </td>
   </tr>
   <tr>
-   <td>settingsDoc </td>
-   <td>檔案包含在生成PDF文檔時應用的設定(例如，為Web視圖優化PDF文檔)，以及在建立PDF文檔後應用的設定（例如，初始視圖和安全性）。 此為選用參數。<br /> </td>
+   <td>設定文檔 </td>
+   <td>該檔案包含在生成PDF文檔時應用的設定(例如，為Web視圖優化PDF文檔)和在建立PDF文檔後應用的設定（例如，初始視圖和安全性）。 它是可選參數。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -4923,24 +4923,24 @@ File htmlToPdf(String inputUrl, String fileTypeSettingsName, String securitySett
 }
 ```
 
-### DistillerService {#distillerservice}
+### Distiller服務 {#distillerservice}
 
-Distiller服務將PostScript、Encapsuled PostScript(EPS)和打印機文本檔案(PRN)轉換為PDF檔案。 Distiller服務經常用於將大量印刷檔案轉換為電子檔案，如發票和報表。 將文檔轉換為PDF還允許企業向其客戶發送文檔的紙面版本和電子版本。 支援的檔案格式為.ps、.eps和.prn。 服務支援下列API:
+Distiller服務將PostScript、封裝的PostScript(EPS)和打印機文本檔案(PRN)轉換為PDF檔案。 Distiller服務經常用於將大量打印檔案轉換成電子檔案，如發票和報表。 將文檔轉換為PDF還允許企業向其客戶發送文檔的紙面版本和電子版本。 支援的檔案格式為.ps 、 .eps和.prn。 該服務支援以下API:
 
-createPDF服務返回帶結果的java.util.Map。 地圖的鍵值為：
+createPDF服務返回帶結果的java.util.Map。 映射的鍵為：
 
 * ConvertedDoc :它包含新建立的PDF文檔。
-* LogDoc :它包含記錄檔。
+* 日誌文檔：它包含日誌檔案。
 
-createPDF服務會擲回下列例外狀況：
+createPDF服務引發以下異常：
 
-* ConversionException
+* 轉換異常
 * InvalidParameterException
 * FileFormatNotSupportedException
 
-#### createPDF {#createpdf-1}
+#### 建立PDF {#createpdf-1}
 
-將支援的格式轉換為PDF文檔。 該方法接受格式為.ps、.eps和.prn的檔案作為輸入。 您可以將特定的安全權限、輸出設定和元資料資訊應用到輸出PDF文檔。
+將支援的格式轉換為PDF文檔。 該方法將檔案格式.ps、.eps和.prn作為輸入。 您可以將特定的安全權限、輸出設定和元資料資訊應用到輸出PDF文檔。
 
 **語法：**
 
@@ -4957,48 +4957,48 @@ Map createPDF(Document inputDoc, String inputFileName, String pdfSettings, Strin
    <th>說明</th>
   </tr>
   <tr>
-   <td>inputDoc<br /> </td>
-   <td>指定輸入文檔。 此為必要參數。</td>
+   <td>輸入文檔<br /> </td>
+   <td>指定輸入文檔。 它是強制參數。</td>
   </tr>
   <tr>
-   <td>inputFileName</td>
-   <td>指定輸入檔案的完整名稱以及檔案的副檔名。 此為必要參數。</td>
+   <td>輸入檔案名</td>
+   <td>指定輸入檔案的完整名稱以及檔案的副檔名。 它是強制參數。</td>
   </tr>
   <tr>
-   <td>pdfSettings</td>
-   <td><p>PDF轉換文檔的輸出設定。 您只能套用下列設定：</p>
+   <td>pdf設定</td>
+   <td><p>PDF轉換文檔的輸出設定。 您只能應用以下設定：</p>
     <ul>
-     <li>High_Quality_Print<br /> </li>
+     <li>高質量打印<br /> </li>
      <li>PDFA1b_2005_RGB<br /> </li>
      <li>PDFA1b_2005_CMYK<br /> </li>
      <li>PDFX1a_2001<br /> </li>
      <li>PDFX3_2002<br /> </li>
-     <li>Press_Quality<br /> </li>
+     <li>按質量<br /> </li>
      <li>最小檔案大小</li>
-    </ul> <p>此為選用參數。</p> </td>
+    </ul> <p>它是可選參數。</p> </td>
   </tr>
   <tr>
-   <td>securitySettings</td>
-   <td><p>已轉換文檔的安全設定。 您可以套用下列設定：</p>
+   <td>安全設定</td>
+   <td><p>已轉換文檔的安全設定。 可以應用以下設定：</p>
     <ul>
      <li>無安全性</li>
      <li>密碼安全<br /> </li>
-     <li>憑證安全性<br /> </li>
+     <li>證書安全<br /> </li>
      <li>Adobe策略伺服器</li>
-    </ul> <p>此為選用參數。</p> </td>
+    </ul> <p>它是可選參數。</p> </td>
   </tr>
   <tr>
-   <td>settingsDoc </td>
-   <td>檔案包含在生成PDF文檔時應用的設定(例如，為Web視圖優化PDF文檔)，以及在建立PDF文檔後應用的設定（例如，初始視圖和安全性）。 此為選用參數。<br /> </td>
+   <td>設定文檔 </td>
+   <td>該檔案包含在生成PDF文檔時應用的設定(例如，為Web視圖優化PDF文檔)和在建立PDF文檔後應用的設定（例如，初始視圖和安全性）。 它是可選參數。<br /> </td>
   </tr>
   <tr>
    <td>xmpDoc </td>
-   <td>該檔案包含生成的PDF文檔的元資料資訊。 此為選用參數。</td>
+   <td>該檔案包含生成的PDF文檔的元資料資訊。 它是可選參數。</td>
   </tr>
  </tbody>
 </table>
 
-以下Java代碼示例將PostScript(PS)、 Encapsed PostScript(EPS)和打印機文本檔案(PRN)的輸入檔案轉換為PDF檔案。
+以下Java代碼示例將PostScript(PS)、Encapsulated PostScript(EPS)和打印機文本檔案(PRN)類型的輸入檔案轉換為PDF檔案。
 
 ```java
 @Reference DistillerService distillerService;

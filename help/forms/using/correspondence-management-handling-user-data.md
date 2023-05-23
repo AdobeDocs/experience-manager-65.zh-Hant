@@ -17,19 +17,19 @@ ht-degree: 0%
 
 # 通信管理 |處理用戶資料 {#correspondence-management-handling-user-data}
 
-AEM Forms通信管理可讓您建立、管理及簡化安全且個人化的客戶通訊。 它提供直覺式的使用者介面，供商務使用者使用預先核准的內容區塊和媒體元素來建立對應。 如需建立通信的詳細資訊，請參閱 [建立通信](/help/forms/using/create-correspondence.md).
+AEM Forms通信管理使您能夠建立、管理和簡化安全和個性化的客戶通信。 它為商業用戶提供了一個直觀的用戶介面，使用預先批准的內容塊和媒體元素建立對應。 有關建立對應的詳細資訊，請參見 [建立對應](/help/forms/using/create-correspondence.md)。
 
-當業務使用者或代理將信函儲存為草稿或提交時，信函例項會儲存在AEM存放庫中。 信函例項包含通信資料和中繼資料。
+當業務用戶或代理將信件保存為草稿或提交時，信件實例將保存在儲存AEM庫中。 該信件實例包括通信資料和元資料。
 
 >[!NOTE]
 >
->在AEM 6.5 Forms中，無法立即使用通信管理。 如果您從舊版AEM Forms升級，請安裝相容性套件並移轉通信管理資產，以繼續在AEM 6.5 Forms中使用。 如需詳細資訊，請參閱 [相容性套件](/help/forms/using/compatibility-package.md).
+>在AEMForms6.5中，沒有現成的通信管理。 如果您正在從以前的AEM Forms版本升級，請安裝相容性軟體包並遷移您的通信管理資產，以繼續在AEM6.5Forms使用這些資產。 有關詳細資訊，請參見 [相容性包](/help/forms/using/compatibility-package.md)。
 
-## 使用者資料和資料儲存 {#data}
+## 用戶資料和資料儲存 {#data}
 
-只有在將發佈例項設定為管理信函例項時，通信管理才會將草稿和已提交信函的資料儲存在AEM存放庫中。 如需設定的詳細資訊，請參閱 [通信管理配置屬性](/help/forms/using/cm-configuration-properties.md).
+僅當將發佈實例配置為管理信函實例時，AEM通信管理才會在儲存庫中儲存草稿和已提交信函的資料。 有關配置的詳細資訊，請參見 [通信管理配置屬性](/help/forms/using/cm-configuration-properties.md)。
 
-根據為AEM部署設定的資料儲存持續性，草稿和已提交的通信資料會儲存在下列位置。
+根據為您的部署配置的資料儲存持久性AEM，草稿和提交的通信資料儲存在以下位置。
 
 <table>
  <tbody>
@@ -40,47 +40,47 @@ AEM Forms通信管理可讓您建立、管理及簡化安全且個人化的客�
   </tr>
   <tr>
    <td><p>預設</p> </td>
-   <td><p>反向復寫設定中指定的AEM發佈例項和製作例項存放庫</p> </td>
+   <td><p>反向AEM複製配置中指定的發佈實例和作者實例儲存庫</p> </td>
    <td><p><code>/content/apps/cm/letterInstances/[yyyy]/[mm]/[dd]/[node-id]/[letter-instance-name]/</code> </p> </td>
   </tr>
   <tr>
    <td><p>遠端</p> </td>
-   <td><p>AEM遠端處理製作例項的存放庫</p> </td>
+   <td><p>遠程AEM處理作者實例的儲存庫</p> </td>
    <td><p><code>/content/apps/cm/letterInstances/[yyyy]/[mm]/[dd]/[node-id]/[letter-instance-name]/</code></p> </td>
   </tr>
  </tbody>
 </table>
 
-在上述指定的AEM存放庫位置：
+在上述指定的存AEM儲庫位置：
 
-* `[yyyy]/[mm]/[dd]` 是根據信函例項建立日期的節點結構
-* `[node-id]` 是指派給包含信函之資料夾的ID
-* `[letter-instance-name]` 是儲存或提交信函時指定的名稱
+* `[yyyy]/[mm]/[dd]` 是基於建立字母實例的日期的節點結構
+* `[node-id]` 是分配給包含信件的資料夾的ID
+* `[letter-instance-name]` 是保存或提交信件時指定的名稱
 
-在 [letter-instance-name] 節點，則會建立下列節點結構，並將每個信函例項的資料儲存在AEM存放庫中：
+在 [字母實例名稱] 節點，將建立以下節點結構，並將每個字母實例的資料儲存在儲存AEM庫中：
 
 | 節點 | 說明 |
 |---|---|
-| `extendedProperties` | 儲存信函例項的中繼資料屬性。 |
-| `dataXML` | 以二進位格式儲存包含通信資料的可下載dataXML檔案。 |
-| `processedXDP` | 包含用於建立已提交信函的XDP範本詳細資訊。 此節點僅針對提交的通信而建立。 |
-| `submittedLetter` | 以可下載的二進位格式儲存已提交的信函資料。 此節點僅針對提交的通信而建立。 |
+| `extendedProperties` | 儲存字母實例的元資料屬性。 |
+| `dataXML` | 以二進位格式儲存包含對應資料的可下載資料XML檔案。 |
+| `processedXDP` | 包括用於建立已提交信函的XDP模板的詳細資訊。 此節點僅為已提交的對應建立。 |
+| `submittedLetter` | 以可下載的二進位格式儲存提交的信函資料。 此節點僅為已提交的對應建立。 |
 
-## 存取和刪除使用者資料 {#access-and-delete-user-data}
+## 訪問和刪除用戶資料 {#access-and-delete-user-data}
 
-您可以在設定的資料存放區中存取草稿和已提交的通信資料，並視需要將其刪除。
+您可以訪問已配置資料儲存中的草稿和已提交的通信資料，並在必要時刪除它。
 
-### 存取使用者資料 {#access-user-data}
+### 訪問用戶資料 {#access-user-data}
 
-通信管理提供API，您可用來尋找及存取草稿和已提交信函例項。 您可以使用API，使用信函例項ID或儲存或提交信函的使用者來尋找和開啟信函例項。 如需詳細資訊，請參閱 [存取信函例項的API](/help/forms/using/cm-apis-to-access-letter-instances.md).
+通信管理提供了API，您可以使用這些API查找和訪問草稿和已提交的信函實例。 使用API，您可以使用信件實例ID或保存或提交信件的用戶查找和開啟信件實例。 有關詳細資訊，請參見 [訪問字母實例的API](/help/forms/using/cm-apis-to-access-letter-instances.md)。
 
-或者，您也可以使用CRX DELite導覽至AEM存放庫中的信函例項。 請參閱 [使用者資料和資料儲存](/help/forms/using/correspondence-management-handling-user-data.md#data) ，了解儲存的資料和儲存庫位置。
+或者，可以使用CRX DELite導航到AEM儲存庫中的字母實例。 請參閱 [用戶資料和資料儲存](/help/forms/using/correspondence-management-handling-user-data.md#data) 的子菜單。
 
-### 刪除使用者資料 {#delete-user-data}
+### 刪除用戶資料 {#delete-user-data}
 
-若要尋找包含特定使用者資料的信函例項，您可以：
+要查找包含特定用戶資料的字母實例，您可以：
 
-* 如果信函例項名稱或已儲存草稿或已提交信函的使用者已知，請使用通信管理API
-* 使用AEM存放庫搜尋功能，使用個人識別資訊（例如電子郵件ID或名稱），尋找儲存資訊的節點
+* 如果信件實例名稱或保存草稿或提交信件的用戶已知，則使用信件管理API
+* 使用AEM個人身份資訊（如電子郵件ID或名稱）進行儲存庫搜索，以查找儲存資訊的節點
 
-若要從AEM系統完全刪除草稿和已提交對應中的使用者資料，您必須從所有適用的AEM例項中手動刪除信函例項節點。
+要從系統中完全刪除草稿和提交的對AEM應中的用戶資料，必須從所有適用實例中手動刪除字母實例AEM節點。

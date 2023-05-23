@@ -1,7 +1,7 @@
 ---
-title: 應用程式管理器服務JavaAPI快速入門(SOAP)
+title: Application Manager服務JavaAPI快速啟動(SOAP)
 seo-title: Application Manager Service JavaAPI Quick Start(SOAP)
-description: 應用程式管理器服務JavaAPI快速入門(SOAP)
+description: Application Manager服務JavaAPI快速啟動(SOAP)
 uuid: 01a9bce3-868b-495b-bdee-bc60f029129e
 contentOwner: admin
 content-type: reference
@@ -17,27 +17,27 @@ ht-degree: 0%
 
 ---
 
-# 應用程式管理器服務JavaAPI快速入門(SOAP) {#application-manager-service-javaapi-quick-start-soap}
+# Application Manager服務JavaAPI快速啟動(SOAP) {#application-manager-service-javaapi-quick-start-soap}
 
-Java API快速入門(SOAP)適用於應用程式管理器服務。
+Java API快速啟動(SOAP)可用於應用程式管理器服務。
 
-[快速入門：使用Java API(SOAP)部署應用程式](application-manager-service-java-api.md#quick-start-soap-mode-deploying-applications-using-the-java-api)
+[快速啟動：使用Java API(SOAP)部署應用程式](application-manager-service-java-api.md#quick-start-soap-mode-deploying-applications-using-the-java-api)
 
-[快速入門：使用Java API(SOAP)移除應用程式](application-manager-service-java-api.md#quick-start-soap-mode-removing-an-application-using-the-java-api)
-
->[!NOTE]
->
->應用程式管理員API僅支援AEM Forms LCA檔案。 不支援LiveCycleES2和ES4的LCA檔案。
-
-AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應設為SOAP。
+[快速啟動：使用Java API(SOAP)刪除應用程式](application-manager-service-java-api.md#quick-start-soap-mode-removing-an-application-using-the-java-api)
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計中的Java API(SOAP)快速入門是以Forms為基礎，如果您使用其他作業系統（例如Unix），請以適用作業系統支援的路徑取代windows特定路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>應用程式管理器API僅支援AEM FormsLCA檔案。 它不支援LiveCycleES2和ES4的LCA檔案。
 
-## 快速入門（SOAP模式）:使用Java API部署應用程式 {#quick-start-soap-mode-deploying-applications-using-the-java-api}
+AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
 
-以下Java代碼示例根據名為的現有LCA檔案導入應用程式 *EncryptDocument.lca*.
+>[!NOTE]
+>
+>Java API(SOAP)Quick Start（快速啟動）位於使用表單寫程式AEM中，如果您使用的是其他作業系統（如Unix），則使用適用的作業系統支援的路徑替換Windows特定路徑，則該快速啟動基於Forms。 同樣，如果您使用的是另一個J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+
+## 快速啟動（SOAP模式）:使用Java API部署應用程式 {#quick-start-soap-mode-deploying-applications-using-the-java-api}
+
+以下Java代碼示例基於名為的現有LCA檔案導入應用程式 *EncryptDocument.lca*。
 
 ```java
  /*
@@ -137,9 +137,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API移除應用程式 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
+## 快速啟動（SOAP模式）:使用Java API刪除應用程式 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
 
-以下Java代碼示例刪除了名為 *EncryptDocument*.
+下面的Java代碼示例刪除名為 *加密文檔*。
 
 ```java
  /*

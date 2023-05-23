@@ -19,118 +19,118 @@ ht-degree: 1%
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-configure.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-具有管理員存取權的使用者 [!DNL Adobe Experience Manager] 在安裝後配置enhanced connector。 如需安裝指示，請參閱 [安裝連接器](/help/assets/workfront-integrations.md).
+具有管理員訪問權限的用戶 [!DNL Adobe Experience Manager] 在安裝增強的連接器後配置它。 有關安裝的說明，請參見 [安裝連接器](/help/assets/workfront-integrations.md)。
 
 >[!IMPORTANT]
 >
->* Adobe需要部署，並配置 [!DNL Adobe Workfront for Experience Manager enhanced connector] 僅透過認證合作夥伴或 [!DNL Adobe Professional Services]. 如果部署和配置時沒有經過認證的合作夥伴或 [!DNL Adobe Professional Services],Adobe不支援。
+>* Adobe需要部署和配置 [!DNL Adobe Workfront for Experience Manager enhanced connector] 僅通過認證合作夥伴或 [!DNL Adobe Professional Services]。 如果部署和配置時沒有經過認證的合作夥伴或 [!DNL Adobe Professional Services]，它不受Adobe支援。
 >
->* Adobe可發行 [!DNL Adobe Workfront] 和 [!DNL Adobe Experience Manager] 使此連接器冗餘；如果發生此情況，客戶可能需要從使用此連接器進行轉變。
+>* Adobe可以發佈更新 [!DNL Adobe Workfront] 和 [!DNL Adobe Experience Manager] 使這個連接器冗餘；如果發生這種情況，可能需要客戶從使用此連接器進行過渡。
 >
->* Adobe支援增強的連接器1.7.4版及更新版本。 不支援舊版和自訂版本。 若要檢查增強連接器版本，請導覽至 `digital.hoodoo` 群組(位於 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant).
+>* Adobe支援增強的連接器1.7.4版和更高版本。 不支援以前的預發行版和自定義版本。 要檢查增強的連接器版本，請導航至 `digital.hoodoo` 組在的左窗格中可用 [包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant)。
 >
->* 請參閱 [Workfront for Experience Manager Assets enhanced connector的合作夥伴認證考試](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). 有關考試的資訊，請參見 [考試指南](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
+>* 請參閱 [Workfront的Experience Manager Assets增強型連接器合作夥伴認證考試](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html)。 有關考試的資訊，請參見 [考試指南](https://express.adobe.com/page/Tc7Mq6zLbPFy8/)。
 
 
-## 設定事件訂閱 {#event-subscriptions}
+## 配置事件訂閱 {#event-subscriptions}
 
-事件訂閱可用來通知AEM發生的事件 [!DNL Adobe Workfront]. 有三個 [!DNL Workfront for Experience Manager enhanced connector] 需要事件訂閱才能運作的功能包括：
+事件預訂用於通AEM知發生在 [!DNL Adobe Workfront]。 有三個 [!DNL Workfront for Experience Manager enhanced connector] 需要事件預訂才能工作的功能包括：
 
 * 自動建立項目連結資料夾。
-* 同步將Workfront檔案自訂表單值變更為AEM資產中繼資料。
-* 專案完成時自動將資產發佈至Brand Portal。
+* 將Workfront文檔自定義表單值中的更改同AEM步到資產元資料。
+* 在項目完成後自動向Brand Portal公佈資產。
 
-若要使用這些功能，請啟用事件訂閱。
+要使用這些功能，請啟用事件訂閱。
 
-* 編輯 [!UICONTROL Workfront工具] Cloud Services您在步驟5中建立的設定，並選取 [!UICONTROL 事件訂閱] 標籤。
-* 選取 [!UICONTROL Workfront自訂整合] 您在第6節中建立。
-* 按一下 [!UICONTROL 啟用Workfront事件訂閱].
+* 編輯 [!UICONTROL Workfront工具] Cloud Services在步驟5中建立的配置，並選擇 [!UICONTROL 事件訂閱] 頁籤。
+* 選擇 [!UICONTROL Workfront定制整合] 在第6節中建立。
+* 按一下 [!UICONTROL 啟用Workfront事件訂閱]。
 
    ![事件訂閱](/help/assets/assets/event-subs.png)
 
-## 配置連結的資料夾 {#linked-folders}
+## 配置連結資料夾 {#linked-folders}
 
-若要訂閱事件，請依照下列步驟操作：
+要訂閱事件，請執行以下步驟：
 
-1. 導覽至 **[!UICONTROL 事件訂閱]** 標籤。
-1. 選取中建立的自訂整合 [!DNL Workfront].
-1. 按一下 **[!UICONTROL 啟用Workfront事件訂閱]**.
+1. 導航到 **[!UICONTROL 事件訂閱]** 頁籤。
+1. 選擇在中建立的自定義整合 [!DNL Workfront]。
+1. 按一下 **[!UICONTROL 啟用Workfront事件訂閱]**。
 
-### 連結的資料夾結構配置 {#linked-folder-structure}
+### 連結資料夾結構配置 {#linked-folder-structure}
 
-1. 前往雲端服務中的「專案連結資料夾」標籤。
-1. 連結的資料夾父路徑：在DAM中選取您要建立連結資料夾的資料夾。 如果保留為空白，則預設為/content/dam。 請確定Workfront工具中繼資料結構和Workfront連結資料夾中繼資料結構已套用至選取的資料夾。
-1. 連結的資料夾結構：輸入逗號分隔值。 每個值應為 `DE:<some-project-custom-form-field>`、Portfolio、方案、年、名稱或某些「常值字串值」（最後一個帶有引號）。 它當前設定為Portfolio、方案、年、DE：項目類型、名稱。
-1. 如果Workfront中資料夾的標題應包含結構中的所有資料夾，則應勾選使用資料夾結構名稱在Workfront中建立連結資料夾標題核取方塊。 否則，會是最後一個資料夾的標題。
-1. 子資料夾多欄位可讓您指定應建立為連結資料夾之子資料夾的資料夾清單。
-1. 項目狀態：選擇項目必須設定為的狀態以建立連結的資料夾。
-1. 在具有產品組合的專案中建立連結資料夾：項目必須屬於的Portfolio清單，才能建立連結的資料夾。 將此清單保留為空白，以便為所有項目組合建立連結的資料夾。
-1. 使用自訂表單欄位在專案中建立連結的資料夾：自訂表單欄位及其對應值，專案必須具備才能建立連結的資料夾。 如果保留為空，則會忽略此配置。 選擇 `CUSTOM FORMS: Create DAM Linked Folder` 欄位和輸入 `Yes` （值）。
-1. 按一下「啟用自動建立連結的資料夾」。 如果您返回「事件訂閱」標籤，您會看到現在有一個建立事件。
+1. 轉到雲服務中的「項目連結資料夾」頁籤。
+1. 連結的資料夾父路徑：在DAM中選擇要建立連結資料夾的資料夾。 如果為空，則預設為/content/dam。 確保已將Workfront工具元資料架構和Workfront連結資料夾元資料架構應用到所選資料夾。
+1. 連結資料夾結構：輸入逗號分隔的值。 每個值應為 `DE:<some-project-custom-form-field>`、Portfolio、程式、年份、名稱或某些「文字字串值」（最後一個帶有引號）。 它當前設定為Portfolio、程式、年、DE：項目類型、名稱。
+1. 如果Workfront中資料夾的標題應包含結構中的所有資料夾，則應選中使用資料夾結構名稱在Workfront中生成連結資料夾標題複選框。 否則，它將是最後一個資料夾的標題。
+1. 子資料夾多欄位允許您指定應作為連結資料夾的子資料夾建立的資料夾清單。
+1. 項目狀態：選擇項目必須設定為以建立連結資料夾的狀態。
+1. 在項目中建立連結的資料夾，包括：項目必須屬於以建立連結資料夾的Portfolio清單。 將此清單留空，以為所有項目組合建立連結資料夾。
+1. 在具有自定義表單域的項目中建立連結資料夾：為建立連結資料夾，項目必須具有的自定義表單域及其相應值。 如果此配置為空，則將忽略此配置。 選擇 `CUSTOM FORMS: Create DAM Linked Folder` 欄位和輸入 `Yes` 值。
+1. 按一下「Enable automatic creation of linked folders（啟用自動建立連結資料夾）」。 如果返回「事件訂閱」頁籤，您將看到現在有一個建立事件。
 
-![連結的資料夾組態](/help/assets/assets/wf-linked-folder-config.png)
+![連結資料夾配置](/help/assets/assets/wf-linked-folder-config.png)
 
-## 中繼資料結構對應 {#metadata-schema-mapping}
+## 元資料架構映射 {#metadata-schema-mapping}
 
 ### 配置資料夾元資料映射 {#folder-metadata-mapping}
 
-Workfront專案和AEM資料夾之間的中繼資料對應是在AEM資料夾中繼資料結構中定義。 您應照常在AEM中建立和設定資料夾中繼資料結構。 Workfront工具會將自動完成下拉式清單新增至每個資料夾中繼資料結構表單欄位的「設定設定」設定標籤。 此自動完成下拉式功能表可讓您指定每個AEM資料夾屬性應對應至哪個Workfront欄位。
+Workfront項目和資料夾之間的元AEM資料映射是在資料夾元資料AEM架構中定義的。 資料夾元資料架構應按照中的常規建立和配AEM置。 Workfront工具將自動完成下拉清單添加到每個資料夾元資料架構表單域的「設定」配置頁籤。 此自動完成下拉菜單將允許您指定每個資料夾屬AEM性應映射到的Workfront欄位。
 
-若要設定對應，請遵循下列步驟：
+要配置映射，請執行以下步驟：
 
-1. 導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 資料夾中繼資料結構]**.
-1. 選擇要編輯的資料夾元資料架構表單，然後按一下「編輯」。
-1. 選取您要編輯的資料夾中繼資料結構表單欄位，然後在右側面板上選取「設定」標籤。
-1. 在 [!UICONTROL 從Workfront欄位對應] 欄位，選取您要對應至所選AEM資料夾屬性的Workfront欄位名稱。 可用選項包括：
+1. 導航到 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 資料夾元資料架構]**。
+1. 選擇要編輯的資料夾元資料架構表單，然後按一下編輯。
+1. 選擇要編輯的資料夾元資料架構表單域，然後在右面板上選擇「設定」頁籤。
+1. 在 [!UICONTROL 從Workfront欄位映射] 欄位，選擇要映射到選定資料夾屬性的Workfront字AEM段的名稱。 可用選項包括：
 
-   * 專案自訂表單欄位
-   * 項目概覽欄位(ID、名稱、說明、參考編號、計畫完成日期、項目責任人、項目贊助商、Portfolio或方案)
+   * 項目自定義表單域
+   * 項目概覽欄位(ID、名稱、說明、參考編號、計畫完成日期、項目責任人、項目發起人、Portfolio或項目群)
 
-![中繼資料對應設定](/help/assets/assets/wf-metadata-mapping-config2.png)
+![元資料映射配置](/help/assets/assets/wf-metadata-mapping-config2.png)
 
 ### 設定資產中繼資料對應 {#asset-metadata-mapping}
 
-Adobe Workfront檔案與資產之間的中繼資料對應是在AEM中繼資料結構中定義。 中繼資料結構應照常在AEM中建立和設定。 Workfront工具會將設定選項新增至每個中繼資料結構表單欄位的「設定」設定標籤。 這些選項可讓您指定每個AEM屬性應對應至哪個Workfront欄位。
+Adobe Workfront文檔和資產之間的元資料映射是在元資料架構AEM中定義的。 元資料架構應按照中的常規建立和配AEM置。 Workfront工具將配置選項添加到每個元資料架構表單域的「設定」配置頁籤。 這些選項將允許您指定每個屬性應映射到AEM哪個Workfront欄位。
 
-若要設定對應，請遵循下列步驟：
+要配置映射，請執行以下步驟：
 
-1. 導覽至 **工具** > **資產** > **中繼資料結構**.
-1. 選取您要編輯的中繼資料結構表單，然後按一下 **編輯** 或從頭建立新的中繼資料結構。
-1. 選擇要編輯的元資料架構表單欄位並選擇 **設定** 標籤。
-1. 在 [!DNL Workfront] 自訂表單欄位選取 [!DNL Workfront] 欄位來對應至選取的AEM屬性。 可用選項包括：
+1. 導航到 **工具** > **資產** > **元資料架構**。
+1. 選擇要編輯的元資料架構表單，然後按一下 **編輯** 或從頭建立新的元資料架構。
+1. 選擇要編輯的元資料架構表單域並選擇 **設定** 頁籤。
+1. 在 [!DNL Workfront] 自定義表單域選擇 [!DNL Workfront] 要映射到選定屬性的字AEM段。 可用選項包括：
 
-   * 文檔自定義表單欄位
-   * 專案自訂表單欄位
-   * 發佈自訂表單欄位
-   * 任務自定義表單欄位
-   * 專案概述欄位（ID、名稱、說明或參考編號）
+   * 文檔自定義表單域
+   * 項目自定義表單域
+   * 發佈自定義表單域
+   * 任務自定義表單域
+   * 項目概覽欄位（ID、名稱、說明或參考編號）
 
-1. 若 [!DNL Workfront] 在 [!UICONTROL Workfront自訂表單欄位] 是「Workfront使用者」預先輸入欄位，您必須指定您要對應的「Workfront使用者」欄位。 若要這麼做，請核取從Workfront參考的物件欄位取得值，然後指定 [!UICONTROL Workfront使用者自訂表單欄位] 從中擷取要映射的值。
+1. 如果 [!DNL Workfront] 選定的欄位 [!UICONTROL Workfront自定義窗體欄位] 是「Workfront用戶預先類型」欄位，需要指定要映射的「Workfront用戶」欄位。 為此，請選中「從Workfront引用的對象欄位獲取值」，然後指定 [!UICONTROL Workfront用戶自定義表單域] 從中檢索要映射的值。
 
-   ![中繼資料對應設定](/help/assets/assets/wf-metadata-mapping-config1.png)
+   ![元資料映射配置](/help/assets/assets/wf-metadata-mapping-config1.png)
 
 ## 映射屬性 {#map-property}
 
-此工作流程步驟可讓使用者將屬性對應至 [!DNL Workfront] 項目、任務、問題或文檔上的自定義表單。 此 [!DNL Workfront] 對象此步驟影響使用來自有效負載的相對路徑查找。 要映射的屬性是從步驟對話框配置中控制的。
+此工作流步驟允許用戶將屬性映射到 [!DNL Workfront] 項目、任務、問題或文檔上的自定義窗體。 的 [!DNL Workfront] 此步驟影響的項目是使用有效負載的相對路徑查找的。 要映射的屬性在步驟對話框配置中進行控制。
 
-**類型**:此欄位可讓您選取屬性應對應的Workfront物件類型。
+**類型**:此欄位允許您選擇屬性應映射到的Workfront對象類型。
 
-**ID屬性**:此欄位可讓您指定屬性應對應的Workfront物件ID的路徑。 此欄位中指定的路徑應相對於工作流程裝載。
+**ID屬性**:此欄位用於指定屬性應映射到的Workfront對象ID的路徑。 此欄位中指定的路徑應與工作流負載相關。
 
-**屬性分配**:此多欄位可讓您指定AEM屬性與Workfront欄位之間的對應。 多欄位中的每個項目將指定一個對應。 每個對應都應有格式 `<workfront-field>=<aem-mapped-property>`.
+**屬性分配**:此多欄位允許您指定屬性和AEMWorkfront欄位之間的映射。 多欄位中的每個項都將指定一個映射。 每個映射應具有格式 `<workfront-field>=<aem-mapped-property>`。
 
-* 此 `workfront-field` 可以
+* 的 `workfront-field` 可以
 
-   * 由首碼識別的自訂表單欄位 `DE:`.
-   * 由其名稱標識的可編輯欄位。 欄位名稱位於 [[!DNL Workfront] API總管](https://experience.workfront.com/s/api-explorer).
+   * 由前置詞標識的自定義表單域 `DE:`。
+   * 由名稱標識的可編輯欄位。 欄位名稱在 [[!DNL Workfront] API資源管理器](https://experience.workfront.com/s/api-explorer)。
 
-* 此 `aem-mapped-property` 可以是：
+* 的 `aem-mapped-property` 可以：
 
-   * 常值。 這些字元應以引號括住。
-   * AEM屬性。 此參考應相對於工作流程裝載。
-   * 已命名的值。 這些應由方括弧包住。
-   * 上述3個項目的串連。 使用指定 `{+}`.
-   * 對以上3項的修改，請以 `{replace(<value>,"old-char","new-char")}`.
+   * 文本值。 這些應用引號括起來。
+   * 一個AEM財產。 此引用應與工作流負載相關。
+   * 命名值。 這些應用括弧括起來。
+   * 以上3項的串聯。 使用 `{+}`。
+   * 以上三項的修改 `{replace(<value>,"old-char","new-char")}`。
 
 * 例如：
 
@@ -139,68 +139,68 @@ Adobe Workfront檔案與資產之間的中繼資料對應是在AEM中繼資料�
    * `DE:Path={path}`
    * `URL="https://my-aem-author/assets.html"{+}{path}`
 
-![映射屬性的配置](/help/assets/assets/wf-map-property-config.png)
+![要映射的配置屬性](/help/assets/assets/wf-map-property-config.png)
 
 ## 設定狀態 {#set-status}
 
-在工作流程編輯器中，編輯 **[!UICONTROL Workfront — 設定狀態]** 在 **[!UICONTROL 引數]** 標籤。
+在工作流編輯器中，編輯 **[!UICONTROL Workfront — 設定狀態]** 的 **[!UICONTROL 參數]** 頁籤。
 
 ![編輯工作流以設定狀態](/help/assets/assets/wf-set-status.png)
 
 ## 注釋同步 {#comments-sync}
 
-1. 在 [!DNL Experience Manager]，存取 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Workfront工具設定]**，選取設定，然後選取 **[!UICONTROL 屬性]**.
+1. 在 [!DNL Experience Manager]訪問 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Workfront工具配置]**，選擇配置，然後選擇 **[!UICONTROL 屬性]**。
 
-   ![註解同步](/help/assets/assets/comments-sync1.png)
+   ![注釋同步](/help/assets/assets/comments-sync1.png)
 
-1. 選擇 **[!UICONTROL 事件訂閱]** 按一下 **[!UICONTROL 啟用注釋同步]** on **[!UICONTROL 將在Workfront中發表的意見傳送至AEM]** 選項。
+1. 選擇 **[!UICONTROL 事件訂閱]** 按鈕 **[!UICONTROL 啟用注釋同步]** 上 **[!UICONTROL 將在Workfront發表的評AEM論]** 的雙曲餘切值。
 
    ![已啟用同步](/help/assets/assets/wf-comment-sync-enabled.png)
 
-若要測試從Workfront到AEM的註解同步化，請執行下列步驟：
+要test從Workfront到的注釋的同步，請執AEM行以下步驟：
 
-1. 導覽至Workfront中的連結檔案，並在「更新」索引標籤中新增註解。
+1. 導航到Workfront中的連結文檔，並在「更新」頁籤中添加註釋。
 
-   ![在Workfront留言](/help/assets/assets/comments-sync2.png)
+   ![在Workfront發表評論](/help/assets/assets/comments-sync2.png)
 
-1. 在AEM中導覽至相同的連結檔案，選取檔案並開啟 [!UICONTROL 時間表] 選項，然後選取 [!UICONTROL 註解]. 左側邊欄顯示已同步的注釋 [!DNL Workfront].
+1. 導航到中的同一連結AEM文檔，選擇文檔並開啟 [!UICONTROL 時間軸] 選項，然後選擇 [!UICONTROL 注釋]。 左側提要欄顯示與 [!DNL Workfront]。
 
 ## 資產版本 {#asset-versions}
 
-若要在AEM中維護資產的版本記錄，請在AEM中設定資產版本設定。
+要維護中的資產版本歷史記AEM錄，請在中配置資產版AEM本。
 
-1. 在Experience Manager中，存取 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Workfront工具設定]**，然後開啟 **[!UICONTROL 進階]** 標籤。
+1. 在Experience Manager中，訪問 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Workfront工具配置]**，然後開啟 **[!UICONTROL 高級]** 頁籤。
 
-1. 選擇選項 **[!UICONTROL 儲存與現有資產版本同名的資產]**. 若勾選此選項，可將以相同名稱上傳的資產儲存至與現有資產版本相同的位置。 如果未勾選，則會以不同名稱建立新資產(例如 `asset-name.pdf` 和 `asset-name-1.pdf`)。
+1. 選擇選項 **[!UICONTROL 儲存與現有資產版本同名的資產]**。 選中此選項後，可將上載的資產與現有資產的版本以相同名稱和相同位置儲存。 如果未選中，則將使用其他名稱建立新資產(例如， `asset-name.pdf` 和 `asset-name-1.pdf`)。
 
-1. 選擇選項 **[!UICONTROL 建立新版本時更新資產中繼資料]**. 若勾選此選項，每當建立新版本的資產時，此選項就會更新資產中繼資料。 如果取消勾選，資產會保留建立新版本之前的中繼資料。
+1. 選擇選項 **[!UICONTROL 建立新版本時更新資產元資料]**。 選中後，此選項將在建立新版本的資產時更新資產元資料。 如果未選中，資產將保留在建立新版本之前的元資料。
 
-![設定資產版本設定](/help/assets/assets/wf-config-versioning.png)
+![配置資產版本](/help/assets/assets/wf-config-versioning.png)
 
 >[!NOTE]
 >
->連結的資料夾不支援版本設定。 建立 [!DNL Workfront] 使用連結資料夾內的檔案進行校樣，會移除舊版資產上的註解和註解。
+>連結資料夾不支援版本控制。 建立 [!DNL Workfront] 在連結資料夾中使用文檔進行證明時，將刪除有關資產早期版本的注釋和注釋。
 
-## 附加自訂表單 {#attach-custom-forms}
+## 附加自定義表單 {#attach-custom-forms}
 
-此工作流程步驟可讓使用者將自訂表單附加至 [!DNL Workfront] 藏物。 此工作流程步驟可新增至任何工作流程模型。 此 [!DNL Workfront] 將使用來自有效負載的相對路徑查找此步驟影響的對象。
+此工作流步驟允許用戶將自定義表單附加到 [!DNL Workfront] 藏物。 此工作流步驟可添加到任何工作流模型。 的 [!DNL Workfront] 此步驟影響的項目將使用有效負載的相對路徑查找。
 
-在Experience Manager的工作流程編輯器中，編輯 [!UICONTROL Workfront — 附加自訂表單] 工作流程步驟。
+在Experience Manager的工作流編輯器中，編輯 [!UICONTROL Workfront — 附加自定義窗體] 工作流步驟。
 
-![自訂表單](/help/assets/assets/wf-custom-forms.png).
+![自定義表單](/help/assets/assets/wf-custom-forms.png)。
 
 ## 自動發佈資產 {#auto-publish-assets}
 
-1. 在Experience Manager中，存取 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Workfront工具設定]**，然後開啟 **[!UICONTROL 進階]** 標籤。
+1. 在Experience Manager中，訪問 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Workfront工具配置]**，然後開啟 **[!UICONTROL 高級]** 頁籤。
 
-1. 選擇 **[!UICONTROL 從Workfront傳送時自動發佈資產]**. 此選項可在資產從Workfront傳送至AEM時啟用自動發佈。 您可以指定Workfront自訂表單欄位，並將其設為值，以有條件地啟用此功能。 每當檔案傳送至AEM時，如果檔案滿足條件，資產就會自動發佈。
+1. 選擇 **[!UICONTROL 從Workfront發送時自動發佈資產]**。 此選項允許在資產從Workfront發送到時自動發AEM布。 通過指定Workfront自定義表單域及其應設定為的值，可以有條件地啟用此功能。 只要文檔發送到AEM，如果滿足條件，則資產將自動發佈。
 
-1. 選擇 **[!UICONTROL 專案完成時將所有專案資產發佈至Brand Portal]**. 此選項可讓資產自動發佈至 [!DNL Brand Portal] 當其所屬Workfront專案的狀態變更為 `Complete`.
+1. 選擇 **[!UICONTROL 在項目完成後將所有項目資產發佈到Brand Portal]**。 此選項允許自動將資產發佈到 [!DNL Brand Portal] 當他們所屬的Workfront項目的狀態更改為 `Complete`。
 
-![設定自動發佈](/help/assets/assets/wf-auto-publish-config.png)
+![配置自動發佈](/help/assets/assets/wf-auto-publish-config.png)
 
-## Workfront檔案自訂表單更新 {#subscribe-workfront-doc-custom-form-updates}
+## Workfront文檔自定義表單更新 {#subscribe-workfront-doc-custom-form-updates}
 
-若要訂閱 [!DNL Workfront] 自訂表單，請選取 **[!UICONTROL 進階]** 標籤。 當您訂閱這些更新時，會更新您對應的 [!DNL Experience Manager] 中對應欄位時的中繼資料欄位 [!DNL Workfront] 文檔自定義表單已更改。
+訂閱中的更改 [!DNL Workfront] 文檔自定義窗體，選擇 **[!UICONTROL 高級]** 頁籤。 當您訂閱這些更新時，它會更新您映射的 [!DNL Experience Manager] 元資料欄位 [!DNL Workfront] 文檔自定義窗體已更改。
 
-![Workfront檔案自訂表單更新設定 [!DNL Experience Manager]](/help/assets/assets/wf-custom-form-update.png)
+![Workfront文檔自定義表單更新配置 [!DNL Experience Manager]](/help/assets/assets/wf-custom-form-update.png)

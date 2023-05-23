@@ -1,6 +1,6 @@
 ---
-title: AEM Mobile On-demand Services最佳作法
-description: 了解最佳實務和准則，協助有經驗的網站AEM開發人員建立行動應用程式範本和元件。
+title: AEM Mobile On-demand Services最佳做法
+description: 瞭解幫助希望構建移動應用模板和組AEM件的有經驗的站點開發人員的最佳實踐和指導原則。
 uuid: 7733c8b1-a88c-455c-8080-f7add4205b92
 contentOwner: User
 content-type: reference
@@ -19,73 +19,73 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-建置AEM Mobile On-demand Services應用程式與直接在Cordova（或PhoneGap）殼層中執行的應用程式不同。 開發人員應熟悉：
+構建AEM Mobile On-demand Services應用與直接在Cordova（或PhoneGap）外殼中運行的應用不同。 開發人員應熟悉：
 
-* 立即支援的外掛程式，以及AEM Mobile專用外掛程式。
-
->[!NOTE]
->
->若要深入了解外掛程式，請參閱下列資源：
->
->* [在AEM Mobile中使用Cordova外掛程式](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
->* [使用AEM Mobile專用的Cordova外掛程式](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
->
-
-
-* 使用外掛程式功能的範本，應以在瀏覽器中仍可授權的方式撰寫，而不應存在外掛程式橋接器。
-
-   * 例如，請務必等候 *deviceready* 函式，再嘗試存取外掛程式的API。
-
-## AEM開發人員准則 {#guidelines-for-aem-developers}
-
-下列指引將協助經驗豐富的網站AEM開發人員，協助他們建立行動應用程式範本和元件：
-
-**建構AEM網站範本，以鼓勵重複使用和擴充**
-
-* 與單個整體式指令碼檔案相比，首選多個元件指令碼檔案
-
-   * 提供許多空的延伸點，例如 *customheaderlibs.html* 和 *customfooterlibs.html*，可讓開發人員變更頁面範本，同時盡可能複製最少的核心程式碼
-   * 接著，您就可以透過Sling擴充和自訂範本 *sling:resourceSuperType* 機構
-
-* 使用Sightly/HTL而非JSP作為範本語言
-
-   * 使用此功能可促進程式碼與標籤、內建XSS保護的選件分離，且有更熟悉的語法
-
-**針對設備效能進行優化**
-
-* 應使用dps-article contentsync模板將特定文章指令碼和樣式表包含在文章裝載中
-* 應透過dps-HTMLResources contentsync範本，將多篇文章共用的指令碼和樣式表納入共用資源中
-* 請勿參考任何呈現封鎖的外部指令碼
+* 出廠時支援的插件以及AEM Mobile特定的插件。
 
 >[!NOTE]
 >
->您可以深入了解關於呈現封鎖外部指令碼的詳細資訊 [此處](https://developers.google.com/speed/docs/insights/BlockingJS).
+>要詳細瞭解插件，請參閱以下資源：
+>
+>* [在AEM Mobile使用Cordova插件](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
+>* [使用AEM Mobile特定的啟用Cordova的插件](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
+>
 
-**偏好使用應用程式專屬的用戶端JS和CSS程式庫，而非網頁專用**
 
-* 避免jQuery Mobile等程式庫的額外負荷，以處理大量裝置和瀏覽器
-* 當範本在應用程式的網頁檢視中執行時，您可以控制應用程式將要支援的平台和版本，以及了解將會有JavaScript支援。 例如，偏好Ionic（可能只是CSS）而非jQuery Mobile，偏好Onsen UI，而非Bootstrap。
+* 使用插件功能的模板應以在瀏覽器中仍可授權的方式編寫，而不應存在插件橋。
+
+   * 例如，確保等待 *設備就緒* 函式，然後嘗試訪問插件的API。
+
+## 開發人員指AEM南 {#guidelines-for-aem-developers}
+
+以下指南將幫助有經AEM驗的網站開發人員，他們希望構建移動應用模板和元件：
+
+**結構AEM站點模板以鼓勵重用和擴展**
+
+* 比單個單片指令碼檔案更喜歡多個元件指令碼檔案
+
+   * 提供了多個空的擴展點，例如 *customheadlibs.html* 和 *customfootlibs.html*，它允許開發人員在盡可能少地複製核心代碼的同時更改頁面模板
+   * 然後，可通過Sling擴展模板並自定義模板 *sling:resourceSuperType* 機構
+
+* 將JSP作為模板化語言，優先使用Sitley/HTL
+
+   * 使用此功能可鼓勵將代碼與標籤分離，提供內置於XSS保護中的功能，並具有更熟悉的語法
+
+**優化設備上效能**
+
+* 項目特定指令碼和樣式表應使用dps-article contentsync模板包括在項目負載中
+* 多個項目共用的指令碼和樣式表應通過dps-HTMLResources contentsync模板包括在共用資源中
+* 不引用任何呈現阻塞的外部指令碼
 
 >[!NOTE]
 >
->若要深入了解jQuery行動裝置，請按一下 [此處](https://jquerymobile.com/browser-support/1.4/).
+>您可以詳細瞭解關於渲染阻止外部指令碼的資訊 [這裡](https://developers.google.com/speed/docs/insights/BlockingJS)。
 
-**偏好微程式庫，而非完整堆疊**
+**與特定於Web的JS和CSS庫相比，首選特定於應用的客戶端**
 
-* 將內容放到裝置玻璃上所花的時間，會因您文章所依賴的每個程式庫而減少。 使用新的網頁檢視來轉譯每篇文章時，速度會更加緩慢，因此每個程式庫必須從頭再次初始化
-* 如果您的文章未建置為SPA（單頁應用程式），則您可能不需要包含完整堆疊程式庫，如Angular
-* 偏好較小的單一用途程式庫，以協助您新增頁面所需的互動功能，例如 [快速點按](https://github.com/ftlabs/fastclick) 或 [Velocity.js](https://velocityjs.org)
+* 避免在jQuery Mobile等庫中產生開銷，以處理大量設備和瀏覽器
+* 當模板在應用的webview中運行時，您可以控制應用將支援的平台和版本，以及JavaScript支援將會存在的知識。 例如，與jQuery Mobile和Onsen UI相比，更喜歡Ionic（可能只是CSS），而不是Bootstrap。
 
-**將文章有效負載的大小減到最小**
+>[!NOTE]
+>
+>要瞭解有關jQuery mobile的更多詳細資訊，請按一下 [這裡](https://jquerymobile.com/browser-support/1.4/)。
 
-* 使用盡可能小的資產，以合理的解析度有效覆蓋您要支援的最大檢視區
-* 使用類似的工具 *ImageOptim* 移除任何多餘的中繼資料
+**比全堆棧更喜歡微庫**
 
-## 搶先 {#getting-ahead}
+* 將內容放到設備玻璃上所花的時間會因文章所依賴的每個庫而減少。 如果使用新的webview來呈現每篇文章，則會加劇這種減速，因此必須從頭開始重新初始化每個庫
+* 如果您的文章未作為SPA（單頁應用）構建，則可能不需要包括像Angular這樣的完整堆棧庫
+* 選擇較小的單用途庫，以幫助添加您的頁面所需的交互性，如 [快速按一下](https://github.com/ftlabs/fastclick) 或 [Velocity.js](https://velocityjs.org)
 
-若要深入了解其他兩個角色和責任，請參閱下列資源：
+**最小化物品有效負載的大小**
+
+* 以合理的解析度使用盡可能小的資產，以有效覆蓋您將支援的最大視區
+* 使用類似的工具 *影像選項* 刪除映像上的多餘元資料
+
+## 前進 {#getting-ahead}
+
+要瞭解其他兩個角色和職責的詳細資訊，請參閱以下資源：
 
 * [管理員](/help/mobile/aem-mobile.md)
 * [作者](/help/mobile/aem-mobile-on-demand.md)

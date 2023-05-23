@@ -1,6 +1,6 @@
 ---
-title: 延伸 [!DNL Adobe Experience Manager] 6.5使用Adobe Developer App Builder。
-description: 延伸 [!DNL Adobe Experience Manager] 6.5使用Adobe Developer App Builder。
+title: 擴展 [!DNL Adobe Experience Manager] 6.5使用Adobe Developer應用程式生成器。
+description: 擴展 [!DNL Adobe Experience Manager] 6.5使用Adobe Developer應用程式生成器。
 exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
 source-git-commit: cc1b86a15eb7ef45616bc9ea4f8aab4a28e74add
 workflow-type: tm+mt
@@ -9,57 +9,57 @@ ht-degree: 0%
 
 ---
 
-# 延伸 [!DNL Adobe Experience Manager] 使用Adobe Developer App Builder {#extend-using-app-builder}
+# 擴展 [!DNL Adobe Experience Manager] 使用Adobe Developer應用程式生成器 {#extend-using-app-builder}
 
-## 什麼是AEM的App Builder {#project-appbuilder}
+## 什麼是App Builder AEM {#project-appbuilder}
 
-全新Adobe Developer App Builder為開發人員提供可擴充的架構，以輕鬆擴充AEM功能。
+新的Adobe Developer應用程式構建器為開發人員提供了一個擴展框架，以便輕鬆擴展AEM功能。
 
-App Builder提供統一的協力廠商擴充性架構，可整合及建立可擴充Adobe Experience Manager的自訂體驗。 有了這一基於Adobe基礎架構的完整可擴充性框架，開發人員可以跨Adobe解決方案和IT堆棧的其餘部分構建自定義微服務、擴展和整合Adobe Experience Manager。
+App Builder提供了統一的第三方擴展框架，用於整合和建立擴展Adobe Experience Manager的自定義體驗。 借助這一基於Adobe基礎架構的完整擴展框架，開發人員可以構建定製的微服務，跨Adobe解決方案和IT堆棧的其他部分擴展和整合Adobe Experience Manager。
 
-App Builder可讓客戶在各種使用案例中輕鬆擴充Adobe Experience Manager:
+App Builder為客戶提供了一種在各種使用情形中輕鬆擴展Adobe Experience Manager的方法：
 
-* 中間件的可擴充性 — 將外部系統與Adobe應用程式連接，以建立自訂連接器，或利用一套預先建立的整合。
-* 核心服務的擴充性 — 透過自訂功能和業務邏輯擴充預設行為，以擴充核心應用程式功能。
-* 使用者體驗的擴充性 — 延伸核心體驗，以支援業務需求，或建立客戶專屬的數位屬性、店面和後台應用程式。
+* 中間件可擴充性 — 將外部系統與Adobe應用程式連接，構建定制連接器或利用一套預構建的整合。
+* 核心服務可擴充性 — 通過使用自定義功能和業務邏輯擴展預設行為來擴展核心應用程式功能。
+* 用戶體驗可擴充性 — 擴展核心體驗以支援業務需求或構建特定於客戶的數字屬性、店面和後台應用。
 
-自2020年夏季起，企業客戶和合作夥伴都可透過開發人員預覽功能取得App Builder。 App Builder的正式發行(GA)預計於2021年12月推出。 歡迎開發人員透過我們的 [試用計畫](https://adobe.ly/appbuilder-trial).
+自2020年夏季以來，App Builder已通過我們的Developer Preview提供給企業客戶和合作夥伴。 App Builder的正式上市定於2021年12月開始。 我們歡迎開發人員通過我們的 [試用計畫](https://adobe.ly/appbuilder-trial)。
 
 >[!NOTE]
 >
->若為想運用App Builder的AEMas a Cloud Service客戶，請前往 [使用Adobe Developer App Builder擴充Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html).
+>對於AEM希望利用App Builder的as a Cloud Service客戶，請轉至 [使用Adobe Developer應用程式生成器擴展Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html)。
 
 ## 架構 {#architecture}
 
-Adobe Developer App Builder不提供現成可用的解決方案，而是提供通用、一致的標準化開發平台，可擴充Adobe雲端解決方案，例如AEM，包括：
+Adobe DeveloperApp Builder不是現成解決方案，而是提供了一個通用、一致、標準化的開發平台，用於擴展Adobe雲解決方案，AEM例如：
 
-* Adobe Developer Console — 適用於自訂微服務和擴充功能開發，讓開發人員可建置和管理專案，同時存取建立外掛程式和整合所需的所有工具和API。
-* 開發人員工具 — 開放原始碼工具、SDK和程式庫，讓開發人員可輕鬆建立自訂擴充功能和整合。 使用React Spectrum(Adobe的UI工具套件)來擁有適用於所有Adobe應用程式的通用UI。
-* 服務 — 用於在無伺服器平台上托管基礎架構的I/O運行時，以及用於事件型整合的I/O事件。 我們也提供儲存資料和檔案的現成可用支援。
-* Adobe Experience Cloud — 開發人員可提交擴充功能和整合，以發佈在其Experience Cloud組織中。然後，系統管理員就可以檢閱、管理及核准這些擴充功能。 發佈後，您的自訂App Builder擴充功能和工具便可與其他Adobe Experience Cloud應用程式一併取得。
+* Adobe Developer控制台 — 用於定制微服務和擴展開發，讓開發人員在訪問建立插件和整合所需的所有工具和API時構建和管理項目。
+* 開發人員工具 — 開源工具、SDK和庫，使開發人員能夠輕鬆構建自定義擴展和整合。 使用React Spectrum(Adobe的UI工具包)為所有Adobe應用提供一個通用UI。
+* 服務 — 用於在無伺服器平台上托管基礎架構的I/O運行時，以及用於基於事件的整合的I/O事件。 我們還為儲存和檔案提供現成支援。
+* Adobe Experience Cloud — 開發人員可以提交擴展和整合，以在其Experience Cloud組織中發佈。然後，系統管理員可以審閱、管理和批准這些擴展。 發佈後，您的自定義App Builder擴展和工具可以與其他Adobe Experience Cloud應用一起找到。
 
-下圖說明以App Builder建置的標準應用程式如何運用下列功能：
+下圖說明了在App Builder上構建的標準應用程式如何利用這些功能：
 
 ![架構](assets/appbuilder-architecture.jpg)
 
-如需App Builder架構的詳細資訊，請參閱 [架構概述](https://www.adobe.io/app-builder/docs/guides/).
+有關App Builder體系結構的詳細資訊，請查看 [體系結構概述](https://www.adobe.io/app-builder/docs/guides/)。
 
 ## 開始使用App Builder {#additional-resources}
 
-為協助您開始使用App Builder，我們建立了一系列檔案來協助您開始：
+為幫助您開始使用App Builder，我們建立了一系列文檔來幫助您開始：
 
-* [App Builder快速入門](https://www.adobe.io/app-builder/docs/getting_started/)
+* [應用程式生成器入門](https://www.adobe.io/app-builder/docs/getting_started/)
 
-## 繼續學習說明檔案 {#appbuilder-documentation}
+## 繼續學習文檔 {#appbuilder-documentation}
 
-App Builder提供開發人員的影片和檔案，包括指南和參考檔案，協助您開始開發自己的自訂應用程式：
+App Builder為開發人員提供視頻和文檔，包括指南和參考文檔，幫助您開始開發自己的自定義應用程式：
 
-* [App Builder檔案](https://www.adobe.io/app-builder/docs/overview/)
-* [App Builder影片](https://www.youtube.com/playlist?list=PLcVEYUqU7VRfDij-Jbjyw8S8EzW073F_o)
+* [App Builder文檔](https://www.adobe.io/app-builder/docs/overview/)
+* [App Builder視頻](https://www.youtube.com/playlist?list=PLcVEYUqU7VRfDij-Jbjyw8S8EzW073F_o)
 
-## 請試用其中一個示例應用程式 {#appbuilder-codesamples}
+## 試用一個示例應用程式 {#appbuilder-codesamples}
 
-準備好開發了嗎？ 我們提供許多樣本應用程式，幫助您快速前進：
+準備開始發展了嗎？ 我們提供了大量示例應用程式，幫助您快速前進：
 
-* [Adobe Developer網站上的應用程式建立工具程式碼實驗室](https://www.adobe.io/app-builder/docs/resources/)
+* [Adobe Developer網站上的App Builder代碼實驗室](https://www.adobe.io/app-builder/docs/resources/)
 

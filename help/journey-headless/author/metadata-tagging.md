@@ -32,7 +32,7 @@ ht-degree: 91%
 
    ![建立內容片段 - 提供名稱](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
-* 此 **變異** 內容片段編輯器的索引標籤可讓您新增預先定義的 **標籤** 從您的專案：
+* 的 **變體** 「內容片段」編輯器的頁籤允許您添加預定義 **標籤** 從項目中：
 
    ![內容片段編輯器 - Alaska Spirits](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 

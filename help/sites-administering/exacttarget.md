@@ -1,7 +1,7 @@
 ---
 title: 與ExactTarget整合
 seo-title: Integrating with ExactTarget
-description: 了解如何將AEM與ExactTarget整合。
+description: 瞭解如何與ExactTargetAEM整合。
 seo-description: Learn how to integrate AEM with ExactTarget.
 uuid: a53bbdaa-98f7-4035-b842-aa7ea63712ca
 contentOwner: Guillaume Carlino
@@ -20,63 +20,63 @@ ht-degree: 1%
 
 # 與ExactTarget整合{#integrating-with-exacttarget}
 
-將AEM與Exact Target整合可讓您透過Exact Target管理並傳送在AEM中建立的電子郵件。 它也可讓您透過AEM頁面上的AEM表單，使用Exact Target的銷售機會管理功能。
+與Exact Target集AEM成允許您管理和發送通過Exact Target建立的AEM電子郵件。 它還允許您通過頁面上的表單使用Exact TargetAEM的銷售線AEM索管理功能。
 
-整合提供下列功能：
+該整合提供了以下功能：
 
-* 可在AEM中建立電子郵件，並發佈至Exact Target進行分送。
-* 設定AEM表單動作以建立「精確目標」訂閱者的功能。
+* 在中建立電子郵件並將其發AEM布到「精確目標」以進行分發的能力。
+* 設定表單操作以創AEM建精確目標訂戶的能力。
 
-設定ExactTarget後，您就可以將電子報或電子郵件發佈至ExactTarget。 請參閱 [將電子報發佈至電子郵件服務](/help/sites-authoring/personalization.md).
+配置ExactTarget後，您可以將新聞稿或電子郵件發佈到ExactTarget。 請參閱 [將新聞稿發佈到電子郵件服務](/help/sites-authoring/personalization.md)。
 
-## 建立ExactTarget設定 {#creating-an-exacttarget-configuration}
+## 建立ExactTarget配置 {#creating-an-exacttarget-configuration}
 
-ExactTarget設定可透過雲端服務或工具新增。 本節將說明兩種方法。
+ExactTarget配置可通過CloudServices或Tools添加。 這兩種方法都在本節中介紹。
 
-### 透過雲端服務設定ExactTarget {#configuring-exacttarget-via-cloudservices}
+### 通過CloudServices配置ExactTarget {#configuring-exacttarget-via-cloudservices}
 
-若要在Cloud Services中建立ExactTarget設定：
+要在Cloud Services中建立ExactTarget配置：
 
-1. 在歡迎頁面上，按一下 **Cloud Services**. (或直接存取 `https://<hostname>:<port>/etc/cloudservices.html`.)
-1. 按一下 **ExactTarget** 然後 **設定**. 「ExactTarget」設定視窗隨即開啟。
+1. 在歡迎頁面上，按一下 **Cloud Services**。 (或直接訪問 `https://<hostname>:<port>/etc/cloudservices.html`。)
+1. 按一下 **精確目標** 然後 **配置**。 「ExactTarget配置」（ExactTarget配置）窗口開啟。
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
-1. 輸入標題，（可選）輸入名稱，然後按一下 **建立**. 此 **ExactTarget設定** 設定視窗隨即開啟。
+1. 輸入標題，或者輸入名稱，然後按一下 **建立**。 的 **ExactTarget設定** 「配置」(configuration)窗口開啟。
 
    ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. 輸入使用者名稱、密碼並選取API端點(例如 **https://webservice.exacttarget.com/Service.asmx**)。
-1. 按一下 **連線至ExactTarget。** 成功連線後，您會看到成功對話方塊。 按一下 **確定** 以退出視窗。
+1. 輸入用戶名、密碼並選擇API終結點(例如， **https://webservice.exacttarget.com/Service.asmx**)。
+1. 按一下 **連接到ExactTarget。** 成功連接後，將看到一個成功對話框。 按一下 **確定** 按鈕。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-1. 選擇帳戶（如果可用）。 帳戶適用於Enterprise 2.0客戶。 按一下&#x200B;**「確定」**。
+1. 選擇帳戶（如果可用）。 該帳戶是用於Enterprise 2.0客戶的。 按一下&#x200B;**「確定」**。
 
-   ExactTarget已設定。 您可以按一下「 」，編輯設定 **編輯**. 您可以按一下 **前往ExactTarget**.
+   已配置ExactTarget。 可通過按一下 **編輯**。 通過按一下 **轉到ExactTarget**。
 
-1. AEM現在提供資料擴充功能。 您可以匯入ExactTarget資料擴充功能欄。 除了成功建立ExactTarget設定外，按一下出現的「+」符號即可進行設定。 您可以從下拉式清單中選取任何現有的資料擴充功能。 如需如何設定資料擴充功能的詳細資訊，請參閱 [ExactTarget檔案](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_relationships_classic.htm&amp;type=5).
+1. 現AEM在提供資料擴展功能。 可以導入ExactTarget資料擴展列。 除成功建立ExactTarget配置外，按一下出現的「+」符號可以配置。 可以從下拉清單中選擇任何現有資料擴展。 有關如何配置資料擴展的詳細資訊，請參見 [ExactTarget文檔](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_relationships_classic.htm&amp;type=5)。
 
-   匯入的資料擴充功能欄稍後可透過 **文字和個人化** 元件。
+   導入的資料擴展列稍後可通過 **文本和個性化** 元件。
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-### 透過工具設定ExactTarget {#configuring-exacttarget-via-tools}
+### 通過工具配置ExactTarget {#configuring-exacttarget-via-tools}
 
-若要在工具中建立ExactTarget設定：
+要在工具中建立ExactTarget配置：
 
-1. 在歡迎頁面上，按一下 **工具**. 或直接導覽至 `https://<hostname>:<port>/misadmin#/etc`.
-1. 選擇 **工具**，然後 **Cloud Services配置、** then **ExactTarget**.
-1. 按一下 **新增** 以開啟**建立頁面**視窗。
+1. 在歡迎頁面上，按一下 **工具**。 或者直接通過 `https://<hostname>:<port>/misadmin#/etc`。
+1. 選擇 **工具**，則 **Cloud Services配置，** 然後 **精確目標**。
+1. 按一下 **新建** 開啟**「建立頁面」**窗口。
 
    ![chlimage_1-34](assets/chlimage_1-3.jpeg)
 
-1. 輸入 **標題** 和（可選） **名稱**，然後按一下 **建立**.
-1. 按上一步步驟4所述輸入配置資訊。 請依照該程式完成ExactTarget的設定。
+1. 輸入 **標題** （可選） **名稱**，然後按一下 **建立**。
+1. 輸入上一步驟4中概述的配置資訊。 按照此過程完成ExactTarget的配置。
 
-### 新增多個設定 {#adding-multiple-configurations}
+### 添加多個配置 {#adding-multiple-configurations}
 
-若要新增多個設定：
+要添加多個配置：
 
-1. 在歡迎頁面上，按一下 **Cloud Services** 按一下 **ExactTarget**. 按一下 **顯示配置** 按鈕，此按鈕會在有一或多個ExactTarget設定可用時顯示。 列出所有可用的配置。
-1. 按一下 **+** 在「可用配置」旁邊簽名。 這會開啟 **建立配置** 窗口。 請依照先前的配置過程建立新配置。
+1. 在歡迎頁面上，按一下 **Cloud Services** 按一下 **精確目標**。 按一下 **顯示配置** 按鈕。 列出所有可用配置。
+1. 按一下 **+** 在「Available configurations（可用配置）」旁邊登錄。 開啟 **建立配置** 的子菜單。 按照上一配置過程建立新配置。

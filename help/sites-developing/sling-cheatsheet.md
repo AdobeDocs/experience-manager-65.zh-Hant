@@ -1,7 +1,7 @@
 ---
 title: Sling 速查表
 seo-title: Sling Cheatsheet
-description: 簡單的Sling參考
+description: 簡單的吊索參照
 seo-description: An easy Sling reference
 uuid: 8e5e90da-2e97-45a4-be06-91e5e07e5bed
 contentOwner: Guillaume Carlino
@@ -19,6 +19,6 @@ ht-degree: 13%
 
 # Sling 速查表{#sling-cheatsheet}
 
-![了解Apache Sling指令碼解析度。](assets/sling-cheatsheet-01.png)
+![瞭解Apache Sling指令碼解析。](assets/sling-cheatsheet-01.png)
 
-![使用SlingPostServlet — 這是POST要求的預設處理常式；它幾乎可以做任何事。](assets/sling-cheatsheet-02.png)
+![使用SlingPostServlet — 這是您的POST請求的預設處理程式；它幾乎可以做任何事。](assets/sling-cheatsheet-02.png)

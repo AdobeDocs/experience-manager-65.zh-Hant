@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Experience Manager編寫無頭版
-description: 介紹Adobe Experience Manager強大、彈性、無頭的功能，以及如何為專案製作內容。
+title: 創作無頭與Adobe Experience Manager
+description: 介紹Adobe Experience Manager強大、靈活、無頭的功能，以及如何為您的項目編寫內容。
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
 source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 90%
 
 # 使用 AEM 編寫 Headless - 簡介 {#author-headless-introduction}
 
-在 [AEM無頭內容製作歷程](overview.md)，您可以了解透過Adobe Experience Manager(AEM)了解製作無頭式內容所需內容的必要（基本）概念和術語。
+在 [無AEM頭內容作者之旅](overview.md)，您可以瞭解使用Adobe Experience Manager()進行無頭內容交付時所需的（基本）概念和術AEM語。
 
 ## 目標 {#objective}
 

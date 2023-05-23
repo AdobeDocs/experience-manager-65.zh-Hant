@@ -1,7 +1,7 @@
 ---
-title: 設定AEM Forms應用程式的環境
+title: 為AEM Forms應用設定環境
 seo-title: Set up environment for AEM Forms app
-description: 建置和部署AEM Forms應用程式的硬體、軟體和授權。
+description: 構建和部署AEM Forms應用的硬體、軟體和許可證。
 seo-description: Hardware, software, and licenses to build and deploy the AEM Forms app.
 uuid: 4123a6b7-5766-476c-9afb-f57029b148ad
 contentOwner: robhagat
@@ -18,31 +18,31 @@ ht-degree: 0%
 
 ---
 
-# 設定AEM Forms應用程式的環境{#set-up-environment-for-aem-forms-app}
+# 為AEM Forms應用設定環境{#set-up-environment-for-aem-forms-app}
 
-您需要下列硬體、軟體和授權才能建置和部署AEM Forms應用程式：
+您需要以下硬體、軟體和許可證來構建和部署AEM Forms應用：
 
-## Windows裝置 {#for-windows-devices}
+## 對於Windows設備 {#for-windows-devices}
 
-* Microsoft Windows 10
-* Microsoft Visual Studio 2015
-* Microsoft Visual Studio Tools for Apache Cordova
+* MicrosoftWindows 10
+* MicrosoftVisual Studio 2015
+* MicrosoftApache Cordova的Visual Studio工具
 
-## 適用於iOS裝置 {#for-ios-devices}
+## 對於iOS設備 {#for-ios-devices}
 
-* 運行Mac OS X 10.9.5或更高版本的基於英特爾的Apple Mac
-* iOS SDK 8.4或更新版本
-* Xcode版本：適用於OS X或更新版本的Xcode 6.4
-* iOS開發人員企業計畫成員
-* 用於發佈內部iOS應用程式的企業憑證
-* Apple iPad搭配iOS 8.4或更新版本
+* 基於英特爾的AppleMac運行MacOS X 10.9.5或更高版本
+* iOSSDK 8.4或更高版本
+* Xcode版本：OS X或更高版本的Xcode 6.4
+* iOS開發商企業方案成員
+* 用於分發內部iOS應用的企業證書
+* AppleiPad與iOS8.4或更高版本
 
-## Android裝置 {#for-android-devices}
+## 對於Android設備 {#for-android-devices}
 
-* Android開發工具套件（ADT套件組合），可從 [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)
-* 如果環境是在MAC系統上設定，ADT應安裝在Applications資料夾中。
-* 如果ADT安裝在MAC上的任何其他位置，或環境是在Windows系統上設定，則ADT SDK路徑必須在 `local.properties` 檔案 `src\android` 資料夾（在已提取的源存檔中） `mobileworkspace-src.zip`. 在此檔案中，指向 `sdk.dir` 變數至案頭上的ADT SDK位置。
+* Android開發工具包（ADT捆綁包），可從 [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)
+* 如果在MAC系統上設定環境，則ADT應安裝在「應用程式」資料夾中。
+* 如果ADT安裝在MAC的任何其他位置，或者環境設定在Windows系統上，則需要在中更新ADT SDK路徑 `local.properties` 中可用的檔案 `src\android` 已提取的源存檔中的資料夾 `mobileworkspace-src.zip`。 在此檔案中，指出 `sdk.dir` 變數到案頭上的ADT SDK位置。
 
 >[!NOTE]
 >
->adobe-lc-mobileworkspace-src.zip包含PhoneGap SDK 5.0。請確定未預先安裝PhoneGap SDK。
+>adobe-lc-mobileworkspace-src.zip包含PhoneGap SDK 5.0。確保未預安裝PhoneGap SDK。

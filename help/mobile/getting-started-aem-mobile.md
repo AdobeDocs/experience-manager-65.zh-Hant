@@ -1,7 +1,7 @@
 ---
-title: 開始使用AEM Mobile
+title: AEM Mobile入門
 seo-title: Getting Started with AEM Mobile
-description: 此頁面是AEM Mobile的登陸頁面。 請參照本頁面，了解建立應用程式的三種不同方式。
+description: 本頁是AEM Mobile的登錄頁。 以此頁面為起點，瞭解建立應用的三種不同方法。
 seo-description: This page serves as a landing page for AEM Mobile. Follow this page as a starting point to learn about the three different ways for creating apps.
 uuid: a5398216-f9bb-4009-a9f8-a4f0135db67c
 contentOwner: User
@@ -17,24 +17,24 @@ ht-degree: 1%
 
 ---
 
-# 開始使用AEM Mobile{#getting-started-with-aem-mobile}
+# AEM Mobile入門{#getting-started-with-aem-mobile}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 >[!CAUTION]
 >
->從AEM 6.2或6.3移轉至AEM 6.5的現有AEM Mobile應用程式客戶，可從PackageShare下載套件，以繼續使用AEM Mobile應用程式。 不過，新安裝的AEM 6.5不支援AEM Mobile應用程式功能。
+>現有的AEM Mobile應用從AEM6.2或6.3遷移到AEM6.5的客戶可以通過從PackageShare下載包繼續使用AEM Mobile應用。 但是，新安裝的6AEM.5不支援AEM Mobile應用程式功能。
 
-Adobe Experience Manager(AEM)Mobile是Adobe Experience Manager多通道數位平台的一部分，也可運用AEM Assets、Sites、Screens、Workflow、User Manager、Commerce和Forms。 AEM Mobile提供驚人的部署彈性，讓企業能使用各種內容來源。
+Adobe Experience Manager(AEMMobile)是Adobe Experience Manager多渠道數字平台的一部分，該平台還利用AEM Assets、網站、螢幕、工作流、用戶經理、商業和Forms。 AEM Mobile提供了卓越的部署靈活性，使企業能夠使用各種內容源。
 
-AEM Mobile提供多種建立應用程式的方法。 建立應用程式的三種不同方式為：
+AEM Mobile提供了多種建立應用的方法。 您可以建立應用的三種不同方式是：
 
-* **[搭配AEM使用On-Demand Services](/help/mobile/getting-started-aem-mobile-on-demand.md)**
-* **[不使用AEM](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
-* **[搭配AEM使用Adobe PhoneGap Enterprise](/help/mobile/getting-started-aem-mobile-phonegap.md)**
+* **[將按需服務與](/help/mobile/getting-started-aem-mobile-on-demand.md)**
+* **[使用無需的按需服AEM務](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
+* **[將Adobe PhoneGap企業與](/help/mobile/getting-started-aem-mobile-phonegap.md)**
 
 >[!NOTE]
 >
->如果您是Adobe Experience Manager的新手，可能要 [AEM快速入門](/help/sites-deploying/deploy.md).
+>如果你剛到Adobe Experience Manager，你可能想 [入AEM門](/help/sites-deploying/deploy.md)。

@@ -1,6 +1,6 @@
 ---
 title: Flash 檢視器生命週期結束注意事項
-description: 自2017年1月31日起，AdobeDynamic Media Clasic正式終止支援Flash檢視器平台。
+description: 自2017年1月31日起，Dynamic MediaAdobe正式終止對Flash觀看平台的支援。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
@@ -15,7 +15,7 @@ ht-degree: 21%
 
 # Flash 檢視器生命週期結束注意事項{#flash-viewers-end-of-life-notice}
 
-*自2017年1月31日起，Adobe Dynamic Media Classic(前稱Scene7)正式終止支援Flash檢視器平台。*
+*自2017年1月31日起，Adobe Dynamic Media Classic(前Scene7)正式終止對Flash觀看平台的支援。*
 
 <!-- *For more information about this important change, see the following FAQ website:*
 

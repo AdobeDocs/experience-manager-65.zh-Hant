@@ -1,7 +1,7 @@
 ---
-title: 活動資料流功能
+title: 活動流功能
 seo-title: Activity Streams Feature
-description: 已登錄社區成員的活動
+description: 已簽署社區成員的活動
 seo-description: Activities of a signed-in community member
 uuid: decd2d6c-4d4b-4698-a92c-2b5b441458cf
 contentOwner: User
@@ -18,42 +18,42 @@ ht-degree: 4%
 
 ---
 
-# 活動資料流功能 {#activity-streams-feature}
+# 活動流功能 {#activity-streams-feature}
 
 ## 簡介 {#introduction}
 
 已登錄社區成員的活動，例如發佈到論壇或部落格，被收集到流中，該流可以通過配置以各種方式被過濾和顯示 `Activity Streams` 元件。
 
-當社群成員關注感興趣的帖子或關注其他社區成員的活動時，跟隨的能力將添加另一個活動視圖。
+當社區成員跟蹤感興趣的帖子或跟蹤其他社區成員的活動時，跟蹤功能會添加另一個活動視圖。
 
 文檔描述：
 
-* 新增活動資料流元件至AEM網站
-* 活動資料流元件的組態設定
+* 將活動流元件添加到站AEM點
+* 活動流元件的配置設定
 
-### 新增活動資料流至頁面 {#adding-activity-streams-to-a-page}
+### 將活動流添加到頁 {#adding-activity-streams-to-a-page}
 
-如果需要新增 `Activity Streams` 在製作模式中，使用元件瀏覽器來尋找
+如果希望添加 `Activity Streams` 在作者模式下對頁面的元件，使用元件瀏覽器查找
 
 * `Communities / Activity Streams`
 
-並將其拖曳至應該顯示活動資料流的頁面上。
+並將其拖到活動流應出現的頁面上。
 
-如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
+如需必要資訊，請訪問 [社區元件基礎](/help/communities/basics.md)。
 
-當 [必要的用戶端程式庫](/help/communities/essentials-activities.md#essentials-for-client-side) 包含在內，以下為方式 `Activity Streams` 元件隨即顯示：
+當 [所需的客戶端庫](/help/communities/essentials-activities.md#essentials-for-client-side) 包括，這是 `Activity Streams` 元件將出現：
 
-![活動資料流](assets/activity-component.png)
+![活動流](assets/activity-component.png)
 
-### 設定活動資料流 {#configuring-activity-streams}
+### 配置活動流 {#configuring-activity-streams}
 
-選取已放置的 `Activity Streams` 要存取的元件並選取 `Configure` 表徵圖，開啟「編輯」對話框。
+選取已放置的 `Activity Streams` 要訪問和選擇的元件 `Configure` 表徵圖。
 
-![設定](assets/configure-new.png)
+![配置](assets/configure-new.png)
 
-在 **使用者活動** 索引標籤，指定要顯示的活動：
+在 **用戶活動** 頁籤，指定要顯示的活動：
 
-![使用者活動](assets/user-activities.png)
+![用戶活動](assets/user-activities.png)
 
 * **活動最大數量**
 
@@ -61,41 +61,41 @@ ht-degree: 4%
 
 * **資料流資源路徑**
 
-   保留為空白，以預設為社群網站或社群群組。 資料流資源路徑標識活動源。 預設為空白。
+   留空以預設到社區站點或社區組。 流資源路徑標識活動源。 預設值為空。
 
 * **顯示使用者活動視圖**
 
-   如果勾選此選項，活動頁面將包含一個索引標籤，該索引標籤會根據目前成員在社群內產生的活動來篩選活動。 已勾選預設值。
+   如果選中，則活動頁面將包含一個頁籤，該頁籤根據當前成員在社區中生成的活動篩選活動。 選中預設值。
 
 * **顯示所有活動視圖**
 
-   如果勾選此選項，活動頁面將包含索引標籤，該索引標籤包含在目前成員有權存取的社群內產生的所有活動。 已勾選預設值。
+   如果選中，則活動頁面將包含一個頁籤，其中包含當前成員有權訪問的社區中生成的所有活動。 選中預設值。
 
 * **顯示以下檢視**
 
-   如果選中，則活動頁將包含一個頁簽，該頁簽將根據當前成員正在跟蹤的活動來篩選活動。 已勾選預設值。
+   如果選中，則活動頁面將包含一個頁籤，該頁籤根據當前成員正在跟蹤的活動篩選活動。 選中預設值。
 
-### 後續檢視 {#following-view}
+### 以下視圖 {#following-view}
 
-必須配置元件以啟用以下功能。 允許下列項目的功能 [部落格](/help/communities/blog-feature.md), [論壇](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [日曆](/help/communities/calendar.md), [檔案庫](/help/communities/file-library.md)，和 [評論](/help/communities/comments.md).
+必須配置元件以啟用以下功能。 允許以下功能包括 [部落格](/help/communities/blog-feature.md)。 [論壇](/help/communities/forum.md)。 [QnA](/help/communities/working-with-qna.md)。 [日曆](/help/communities/calendar.md)。 [檔案庫](/help/communities/file-library.md), [評論](/help/communities/comments.md)。
 
-![後視](assets/following-activities.png)
+![後視圖](assets/following-activities.png)
 
-此 **追隨** 按鈕提供將條目作為活動跟蹤的方法， [通知](/help/communities/notifications.md)，或 [訂閱](/help/communities/subscriptions.md). 每次 **追隨** 按鈕，則可以開啟或關閉選取項。 此 `Email Subscriptions` 只有在配置後才會顯示選擇。
+的 **關注** 按鈕可以將條目作為活動跟蹤， [通知](/help/communities/notifications.md)或 [訂閱](/help/communities/subscriptions.md)。 每次 **關注** 按鈕，可以開啟或關閉選定內容。 的 `Email Subscriptions` 僅當配置時才存在選擇。
 
-如果選取下列任何方法，按鈕的文字會變更為 **追隨**. 為方便起見，您可以選擇 `Unfollow All` 切換所有方法。
+如果選擇了以下任何方法，則按鈕的文本將更改為 **跟蹤**。 為方便起見，可以選擇 `Unfollow All` 關閉所有方法。
 
-此 **追隨** 按鈕隨即出現：
+的 **關注** 按鈕：
 
 * 查看其他成員的配置檔案時。
 * 在主功能頁面上，如論壇、QnA和部落格。
 
-   * 遵循該一般功能的所有活動。
+   * 遵循該常規功能的所有活動。
 
-* 用於特定條目，如論壇主題、QnA問題或部落格文章。
+* 有關特定條目，如論壇主題、QnA問題或部落格。
 
-   * 遵循該特定項目的所有活動。
+   * 跟蹤該特定條目的所有活動。
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [活動資料流基本資訊](/help/communities/essentials-activities.md) 頁面。
+有關 [活動流軟體包](/help/communities/essentials-activities.md) 頁面。

@@ -1,7 +1,7 @@
 ---
-title: 使用Social Tag Cloud
+title: 使用社交標籤雲
 seo-title: Using Social Tag Cloud
-description: 將Social Tag Cloud元件新增至頁面
+description: 將社交標籤雲元件添加到頁面
 seo-description: Adding a Social Tag Cloud component to a page
 uuid: 8c400030-976c-457a-bb5f-e473909647a9
 contentOwner: Guillaume Carlino
@@ -17,110 +17,110 @@ ht-degree: 5%
 
 ---
 
-# 使用Social Tag Cloud {#using-social-tag-cloud}
+# 使用社交標籤雲 {#using-social-tag-cloud}
 
 ## 簡介 {#introduction}
 
-此 `Social Tag Cloud` 元件會強調顯示發佈內容時社群成員套用的標籤。 這是一種識別趨勢主題，並允許網站訪客快速找到已標籤內容的方法。
+的 `Social Tag Cloud` 元件突出顯示發佈內容時由社區成員應用的標籤。 它是一種識別趨勢主題並允許站點訪問者快速查找標籤內容的方法。
 
-若要尋找其他可識別目前趨勢的方法，請造訪 [活動趨勢](trends.md).
+要確定當前趨勢的另一種方法，請訪問 [活動趨勢](trends.md)。
 
-本頁記錄 `Social Tag Cloud` 元件對話方塊設定並說明使用者體驗。
+此頁面記錄 `Social Tag Cloud` 元件對話框設定並描述用戶體驗。
 
-如需開發人員的詳細資訊，請參閱 [標籤要點](tag.md).
+有關開發人員的詳細資訊，請參閱 [標籤軟體包](tag.md)。
 
-請參閱 [管理標籤](../../help/sites-administering/tags.md) ，以取得建立和管理標籤以及套用內容標籤的相關資訊。
+請參閱 [管理標籤](../../help/sites-administering/tags.md) 有關建立和管理標籤的資訊，以及已應用了哪些內容標籤。
 
-## 新增社交標籤雲端 {#adding-a-social-tag-cloud}
+## 添加社交標籤雲 {#adding-a-social-tag-cloud}
 
-新增 `Social Tag Cloud` 在製作模式中，使用元件瀏覽器來尋找 `Communities / Social Tag Cloud` 並將其拖曳至應顯示標籤雲端的頁面上。
+添加 `Social Tag Cloud` 在作者模式下對頁面的元件，使用元件瀏覽器查找 `Communities / Social Tag Cloud` 並將其拖到應顯示標籤雲的頁面上。
 
-如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
+如需必要資訊，請訪問 [社區元件基礎](basics.md)。
 
-當 [必要的用戶端程式庫](tag.md#essentials-for-client-side) 包含在內，以下為方式 `Social Tag Cloud` 元件隨即出現：
+當 [所需的客戶端庫](tag.md#essentials-for-client-side) 包括，這是 `Social Tag Cloud` 元件將出現：
 
 ![社交標籤](assets/social-tag.png)
 
-## 設定Social標籤雲 {#configuring-social-tag-cloud}
+## 配置社交標籤雲 {#configuring-social-tag-cloud}
 
-選取已放置的 `Social Tag Cloud` 要存取的元件並選取 `Configure` 表徵圖，開啟「編輯」對話框。
+選取已放置的 `Social Tag Cloud` 要訪問和選擇的元件 `Configure` 表徵圖。
 
-![設定](assets/configure-new.png)
+![配置](assets/configure-new.png)
 
-在 **[!UICONTROL 社交標籤雲]** 頁簽，指定要顯示的標籤，如果標籤是活動連結，則指定搜索結果的頁面位置：
+在 **[!UICONTROL 社交標籤雲]** 頁籤，指定要顯示的標籤，如果標籤是活動連結，則指定搜索結果頁面的位置：
 
-![social-tag-cloud](assets/social-tag-cloud.png)
+![社會標籤雲](assets/social-tag-cloud.png)
 
 * **[!UICONTROL 要顯示的社交標籤]**
-識別要顯示的UGC標籤。 下拉式選項為：
+確定要顯示的UGC標籤。 下拉選項包括：
 
    * `From page and child pages`
    * `All tags`
 
-   預設為 `From page and child pages`，其中「page」是指 **頁面** 設定。
+   預設值為 `From page and child pages`，其中「page」是指 **頁面** 的下界。
 
 * **[!UICONTROL Page]**
 
-   （若非如此，則為必要） `All tags)` 頁面的UGC路徑。 若保留為空白，則預設為目前頁面。
+   (如果不需要，則為必需 `All tags)` 頁面的UGC路徑。 如果留空，則預設為當前頁。
 
 * **[!UICONTROL 標記上無連結]**
 
-   若勾選此選項，標籤會以純文字顯示於標籤雲中。 如果取消勾選，標籤會顯示為作用中連結，可搜尋套用該標籤的所有內容。 預設為未勾選，且需要 **[!UICONTROL 搜索結果路徑]** 設定。
+   如果選中，則標籤將以純文字檔案形式顯示在標籤雲中。 如果未選中，則標籤將顯示為活動連結，這些連結將搜索應用該標籤的所有內容。 預設值未選中，並要求 **[!UICONTROL 搜索結果路徑]** 來設定。
 
 * **[!UICONTROL 搜索結果路徑]**
 
-   頁面的路徑，其中 `Search Result` 元件已放置，並設定為參照UGC，該UGC包括由 **頁面** 設定。
+   頁面的路徑 `Search Result` 元件已放置，配置為引用UGC，該UGC包括由 **頁面** 的子菜單。
 
-## 變更Social標籤雲的顯示 {#change-display-of-social-tag-cloud}
+## 更改社交標籤雲的顯示 {#change-display-of-social-tag-cloud}
 
-若要編輯 **社交標籤雲**，輸入 [設計模式](../../help/sites-authoring/default-components-designmode.md) 並按兩下放置的 `Social Tag Cloud` 元件，以開啟具有其他索引標籤的對話方塊。
+編輯 **社交標籤雲**&#x200B;輸入 [設計模式](../../help/sites-authoring/default-components-designmode.md) 並按兩下放置的 `Social Tag Cloud` 的子菜單。
 
-使用 **[!UICONTROL Social Tag Cloud（設計）]** ，指定標籤的顯示方式。 標籤可以是簡單標籤、預設命名空間中的單一字或分層分類法：
+使用 **[!UICONTROL 社交標籤雲（設計）]** 頁籤，指定標籤的顯示方式。 標籤可以是簡單標籤、預設命名空間中的單個單詞或分層分類：
 
-![social-tag-cloud-design](assets/social-tag-cloud-design.png)
+![社會標籤雲設計](assets/social-tag-cloud-design.png)
 
 * **[!UICONTROL 顯示完整的標題路徑]**
 
-   若勾選此選項，會顯示父標籤的標題和每個套用標籤的命名空間。
+   如果選中，則顯示每個應用標籤的父標籤和命名空間的標題。
 
    例如：
 
    * 已核取: `Geometrixx Media: Gadgets / Cars`
    * 未核取: `Cars`
 
-   簡單標籤沒有差異。
+   簡單的標籤沒有區別。
 
-   預設為未勾選。
+   未選中預設值。
 
 * **[!UICONTROL 僅顯示葉標記]**
 
-   若勾選此選項，則只會顯示不含其他標籤的已套用標籤。
+   如果選中，則僅顯示不包含其他標籤的已應用標籤。
 
-   例如，假設TagID為：
+   例如，給定的TagID為：
 
    `Geometrixx Media: Gadgets / Cars`
 
-   可套用3個標籤：
+   可以應用3個標籤：
 
    `Geometrixx Media (the namespace)`, `Gadgets`, 和 `Cars`
 
-   * 已勾選：僅 `Cars` 若已套用，則會顯示。
-   * 未勾選： `Geometrixx Media` 和 `Gadgets`和 `Cars` 若已套用，則會顯示。
+   * 已選中：僅 `Cars` 將顯示。
+   * 未選中： `Geometrixx Media` 和 `Gadgets`以及 `Cars` 將顯示。
 
    簡單的標籤是葉標籤。
 
-   預設為未勾選。
+   未選中預設值。
 
 * **[!UICONTROL 連結範本]**
 
-   透過元件編輯對話方塊啟用連結時，用來在Tag Cloud中顯示連結的範本（預設值除外）。
+   當通過元件編輯對話框啟用連結時，用於在標籤雲中顯示連結的模板（預設模板除外）。
 
 * **[!UICONTROL 所有標記相同尺寸]**
 
-   若勾選此選項，標籤雲端中的所有字詞都會設定相同的樣式。 如果未勾選，字詞的樣式會根據其使用方式而有所不同。 預設為未勾選。
+   如果選中，則標籤雲中的所有字樣都相同。 如果未選中，則根據詞的用法將不同樣式。 未選中預設值。
 
 ## 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [標籤要點](tag.md) 頁面。
+有關 [標籤軟體包](tag.md) 頁面。
 
-請參閱 [標籤使用者產生的內容](tag-ugc.md) (UGC)，以取得建立和管理標籤的相關資訊。
+請參閱 [標籤用戶生成的內容](tag-ugc.md) (UGC)，以獲取有關建立和管理標籤的資訊。

@@ -1,7 +1,7 @@
 ---
-title: 電子郵件行銷
+title: 電子郵件營銷
 seo-title: E-mail Marketing
-description: 電子郵件行銷（例如，電子報）是任何行銷活動的重要部分，因為您使用這些行銷活動將內容推送至銷售機會。 在AEM中，您可以從現有的AEM內容建立電子報，並新增電子報專屬的新內容。
+description: 電子郵件營銷（例如，新聞稿）是任何營銷活動的重要部分，因為您使用它們將內容推送到您的銷售線索。 在AEM中，您可以根據現有內容創AEM建新聞稿，並添加特定於新聞稿的新內容。
 seo-description: E-mail marketing (for example, newsletters) are an important part of any marketing campaign as you use them to push content to your leads. In AEM, you can create newsletters from existing AEM content as well as add new content, specific to the newsletters.
 uuid: 565943bf-fe37-4d5c-98c3-7c629c4ba264
 contentOwner: User
@@ -18,286 +18,286 @@ ht-degree: 1%
 
 ---
 
-# 電子郵件行銷{#e-mail-marketing}
+# 電子郵件營銷{#e-mail-marketing}
 
 >[!NOTE]
 >
->Adobe不打算進一步加強AEM SMTP服務所傳送之開啟/退信（無法傳送）的電子郵件追蹤。
->建議為 [運用Adobe Campaign及與AEM的整合](/help/sites-administering/campaign.md).
+>Adobe不打算進一步增強SMTP服務發送的開啟/退貨（無法交付）的電子郵件AEM跟蹤功能。
+>建議是 [利用Adobe Campaign和AEM](/help/sites-administering/campaign.md)。
 
-電子郵件行銷（例如，電子報）是任何行銷活動的重要部分，因為您使用這些行銷活動將內容推送至銷售機會。 在AEM中，您可以從現有的AEM內容建立電子報，並新增電子報專屬的新內容。
+電子郵件營銷（例如，新聞稿）是任何營銷活動的重要部分，因為您使用它們將內容推送到您的銷售線索。 在AEM中，您可以根據現有內容創AEM建新聞稿，並添加特定於新聞稿的新內容。
 
-建立後，您可以立即或在其他排程時間（透過使用工作流程）將電子報傳送給特定使用者群組。 此外，使用者可以選擇的格式訂閱電子報。
+建立後，您可以立即或在其他預定時間（通過使用工作流）將新聞通訊發送給特定的用戶組。 此外，用戶可以按自己選擇的格式訂閱新聞稿。
 
-此外，AEM還讓您管理電子報功能，包括維護主題、封存電子報和檢視電子報統計資料。
+此外，還AEM允許您管理新聞稿功能，包括維護主題、歸檔新聞稿和查看新聞稿統計資訊。
 
 >[!NOTE]
 >
->在Geometrixx中，電子報範本會自動開啟電子郵件編輯器。 您可以在其他要傳送電子郵件的範本（例如，邀請）中使用電子郵件編輯器。 每當頁面繼承自 **mcm/components/電子報/page**.
+>在Geometrixx中，新聞稿模板會自動開啟電子郵件編輯器。 您可以將電子郵件編輯器用於其他要在其中發送電子郵件的模板，例如邀請。 每當從繼承頁面時，電子郵件編輯器都會顯示 **mcm/元件/新聞稿/頁**。
 
-本檔案說明在AEM中建立電子報的基本知識。 有關如何使用電子郵件行銷的更多詳細資訊，請參閱以下文檔：
+本文檔介紹了在中建立新聞稿的基AEM礎。 有關如何處理電子郵件營銷的更詳細資訊，請參閱以下文檔：
 
-* [建立有效的電子報登陸頁面](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-landingpage.md)
+* [建立有效的新聞簡報登錄頁](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-landingpage.md)
 * [管理訂閱](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-subscriptions.md)
-* [向電子郵件服務提供者發佈電子郵件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-newsletters.md)
-* [追蹤跳出的電子郵件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-tracking-bounces.md)
+* [向電子郵件服務提供商發佈電子郵件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-newsletters.md)
+* [跟蹤已跳轉的電子郵件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-tracking-bounces.md)
 
 >[!NOTE]
 >
->如果您更新電子郵件提供者、進行飛行測試或傳送電子報，如果電子報未先發佈至「發佈」執行個體，或者「發佈」執行個體無法使用，則這些操作會失敗。 請務必發佈電子報，並確認Publish執行個體已開啟並執行。
+>如果您更新電子郵件提供商、執行航班test或發送新聞稿，則如果新聞稿未首先發佈到「發佈」實例或「發佈」實例不可用，則這些操作將失敗。 請確保發佈新聞簡報，並確保「發佈」實例已啟動並正在運行。
 
-## 建立電子報體驗 {#creating-a-newsletter-experience}
+## 建立新聞稿體驗 {#creating-a-newsletter-experience}
 
 >[!NOTE]
 >
->電子郵件通知需透過osgi設定來設定。 請參閱 [設定電子郵件通知。](/help/sites-administering/notification.md)
+>電子郵件通知需要通過osgi配置進行配置。 請參閱 [配置電子郵件通知。](/help/sites-administering/notification.md)
 
-1. 在左窗格中選取新促銷活動，或在右窗格中按兩下它。
+1. 在左窗格中選擇新市場活動，或在右窗格中按兩下它。
 
-1. 使用圖示選取清單檢視：
+1. 使用表徵圖選擇清單視圖：
 
    ![](do-not-localize/mcm_icon_listview-1.png)
 
-1. 按一下 **新……**
+1. 按一下 **新建……**
 
-   您可以指定 **標題**, **名稱** 和要建立的體驗類型；在此情況下，請參閱電子報。
+   可以指定 **標題**。 **名稱** 創造的經驗類型，在這種情況下，新聞簡訊。
 
-   ![mcm_createnewsletter](assets/mcm_createnewsletter.png)
+   ![mcm_createselleter](assets/mcm_createnewsletter.png)
 
 1. 按一下&#x200B;**建立**。
 
-1. 新對話方塊將立即開啟。 您可以在此輸入電子報的屬性。
+1. 新對話框將立即開啟。 您可以在此處輸入新聞稿的屬性。
 
-   此 **預設收件者清單** 是必填欄位，因為這會形成電子報的接觸點(請參閱 [使用清單](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists) 以取得清單的詳細資訊)。
+   的 **預設收件人清單** 是必填欄位，因為它構成了新聞稿的觸點(請參閱 [使用清單](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists) )的正平方根。
 
-   ![mcm_newnewsletterdialog](assets/mcm_newnewsletterdialog.png)
+   ![mcm_newellesterdialog](assets/mcm_newnewsletterdialog.png)
 
    * **從名稱**
-應顯示為電子報寄件者的名稱。
+應作為新聞稿發件人出現的名稱。
 
-   * **寄件者地址**
-應顯示為電子報寄件者的郵件地址。
+   * **發件人地址**
+應作為新聞稿發件人顯示的郵件地址。
 
-   * **主旨**
-電子報的主題。
+   * **主題**
+通訊的主題。
 
-   * **回覆**
-應處理已傳送電子報回覆的郵件地址。
+   * **答復**
+應為已發送的新聞簡報提供答復的郵件地址。
 
    * **說明**
-電子報說明。
+新聞稿的說明。
 
    * **準時**
-傳送電子報的準時。
+按時發送新聞稿。
 
-   * **預設收件者清單**
-應接收電子報的預設清單。
-   稍後可從 **屬性……** 對話框。
+   * **預設收件人清單**
+應接收新聞稿的預設清單。
+   可以在以後從 **屬性……** 對話框。
 
-1. 按一下 **確定** 儲存。
+1. 按一下 **確定** 來保存。
 
-## 將內容新增至電子報 {#adding-content-to-newsletters}
+## 將內容添加到新聞稿 {#adding-content-to-newsletters}
 
-您可以像在任何AEM元件中一樣，將內容（包括動態內容）新增至電子報。 在Geometrixx中，電子報範本有某些元件可用來新增和修改電子報中的內容。
+您可以像在任何元件中一樣將內容（包括動態內容）添加到新聞AEM稿中。 在Geometrixx中，新聞簡報模板具有某些元件，可用於添加和修改新聞簡報中的內容。
 
-1. 在MCM中，按一下 **行銷活動** 標籤，然後按兩下您要新增內容至或編輯的電子報。 電子報開啟。
+1. 在MCM中，按一下 **市場活動** 頁籤，並按兩下要添加內容或編輯的新聞稿。 新聞稿開始。
 
-1. 如果元件不可見，請前往「設計」檢視，並在您開始編輯前啟用必要的元件（例如電子報元件）。
-1. 視情況輸入任何新文字、影像或其他元件。 在Geometrixx範例中，有4個元件可供使用：文字、影像、標題和2欄。 根據您的設定方式，電子報的元件可能會多或少。
+1. 如果元件不可見，請轉至「設計」視圖，然後在開始編輯之前啟用必要的元件（例如新聞簡訊元件）。
+1. 根據需要輸入任何新文本、影像或其他元件。 在Geometrixx示例中，有4個元件可用：文本、影像、標題和2列。 根據您的設定方式，您的新聞稿可能包含的元件或多或少。
 
    >[!NOTE]
    >
-   >您使用變數來個人化電子報。 在Geometrixx電子報中，變數可在文字元件中使用。 變數的值繼承自使用者設定檔中的資訊。
+   >使用變數對新聞稿進行個性化設定。 在Geometrixx新聞簡報中，變數可在文本元件中找到。 變數的值從用戶配置檔案中的資訊中繼承。
 
-   ![mcm_newsletter_content](assets/mcm_newsletter_content.png)
+   ![mcm_seltrey_content](assets/mcm_newsletter_content.png)
 
-1. 若要插入變數，請從清單中選取變數，然後按一下 **插入**. 變數會從設定檔填入。
+1. 要插入變數，請從清單中選擇變數，然後按一下 **插入**。 變數從「配置檔案」填充。
 
-## 個人化電子報 {#personalizing-newsletters}
+## 個性化新聞稿 {#personalizing-newsletters}
 
-您可以在電子報的Text元件中插入預先定義的變數，以個人化電子報Geometrixx。 變數的值繼承自使用者設定檔中的資訊。
+通過在新聞稿的「文本」元件中插入預定義變數，您可以個性化新聞稿。 變數的值從用戶配置檔案中的資訊中繼承。
 
-您也可以使用用戶端內容並載入設定檔，模擬電子報的個人化方式。
+您還可以通過使用客戶上下文並載入配置檔案來模擬新聞簡報的個性化方式。
 
-若要個人化電子報並模擬其外觀：
+要個性化新聞稿並模擬其外觀：
 
-1. 從MCM開啟要自定義設定的電子報。
+1. 在MCM中，開啟要自定義設定的新聞稿。
 
-1. 開啟您要個人化的文字元件。
+1. 開啟要個性化的文本元件。
 
-1. 將游標置於您希望變數顯示的位置，然後從下拉式清單中選取變數，然後按一下 **插入**. 視需要對變數執行此動作，然後按一下 **確定**.
+1. 將游標置於要顯示變數的位置，然後從下拉清單中選擇變數，然後按一下 **插入**。 根據需要對任意多個變數執行此操作，然後按一下 **確定**。
 
-   ![mcm_newsletter_variables](assets/mcm_newsletter_variables.png)
+   ![mcm_seltrey_variables](assets/mcm_newsletter_variables.png)
 
-1. 若要模擬變數在傳送時的外觀，請按CTRL+ALT+c以開啟用戶端內容並選取 **載入**. 從您要載入其設定檔的清單中選取使用者，然後按一下 **確定**.
+1. 要模擬變數在發送時的外觀，請按CTRL+ALT+c開啟客戶端上下文並選擇 **載入**。 從要載入其配置檔案的清單中選擇用戶，然後按一下 **確定**。
 
-   您載入之設定檔的資訊已填入變數。
+   您載入的配置檔案中的資訊已填充了變數。
 
-   ![mc_newsletter_testvariables](assets/mc_newsletter_testvariables.png)
+   ![mc_seltrest_testvariables](assets/mc_newsletter_testvariables.png)
 
-## 在不同的電子郵件客戶端中測試電子報 {#testing-newsletters-in-different-e-mail-clients}
+## 在不同的電子郵件客戶端中測試新聞稿 {#testing-newsletters-in-different-e-mail-clients}
 
 >[!NOTE]
 >
->傳送電子報之前，請先檢查Day CQ Link Externalizer的OSGi設定() `https://localhost:4502/system/console/configMgr`.
+>在發送新聞稿之前，請在以下位置檢查第一天CQ連結外部化程式的OSGi配置 `https://localhost:4502/system/console/configMgr`。
 >
->依預設，參數的值為 `localhost:4502` 如果已更改運行實例的埠，則無法完成和操作。
+>預設情況下，參數的值為 `localhost:4502` 如果運行實例的埠已更改，則操作無法完成。
 
-在常用的電子郵件用戶端之間切換，可查看銷售機會端所看到的 Newsletter 外觀。依預設，您的電子報會開啟，且未選取任何電子郵件用戶端。
+在常用的電子郵件用戶端之間切換，可查看銷售機會端所看到的 Newsletter 外觀。預設情況下，您的新聞稿在未選擇任何電子郵件客戶端的情況下開啟。
 
-目前，您可以在以下電子郵件客戶端中查看電子報：
+目前，您可以在以下電子郵件客戶端中查看新聞稿：
 
-* Yahoo郵件
+* 雅虎郵件
 * Gmail
 * Hotmail
 * Thunderbird
 * Microsoft2007展望
-* Apple Mail
+* Apple郵報
 
-若要在用戶端之間切換，請按一下對應的圖示，以檢視該電子郵件用戶端中的電子報：
+要在客戶端之間切換，請按一下相應表徵圖查看該電子郵件客戶端中的新聞稿：
 
-1. 從MCM開啟要自定義設定的電子報。
+1. 在MCM中，開啟要自定義設定的新聞稿。
 
-1. 按一下頂端列中的電子郵件用戶端，查看該用戶端中的電子報外觀。
+1. 按一下頂欄中的電子郵件客戶端，查看該客戶端中的新聞稿。
 
    ![chlimage_1-119](assets/chlimage_1-119.png)
 
-1. 對您要查看的任何其他電子郵件客戶端重複此步驟。
+1. 對要查看的任何其他電子郵件客戶端重複此步驟。
 
    ![chlimage_1-120](assets/chlimage_1-120.png)
 
-## 自訂電子報設定 {#customizing-newsletter-settings}
+## 自定義新聞稿設定 {#customizing-newsletter-settings}
 
-雖然只有授權的使用者可以傳送電子報，但您應自訂下列內容：
+儘管只有授權用戶才能發送新聞稿，但您應自定義以下內容：
 
-* 主旨行，讓使用者可以開啟您的電子郵件，同時確保電子報最後不會標示為垃圾訊息。
-* 寄件者地址，例如noreply@geometrixx.com，讓使用者從指定的位址接收電子郵件。
+* 主題行，以便用戶希望開啟您的電子郵件，同時確保您的新聞稿不會最終被標籤為垃圾郵件。
+* 「發件人」地址(例如noreply@geometrixx.com)，以便用戶從指定的地址接收電子郵件。
 
-若要自訂電子報設定：
+要自定義新聞稿設定，請執行以下操作：
 
-1. 從MCM開啟要自定義設定的電子報。
+1. 在MCM中，開啟要自定義設定的新聞稿。
 
-   ![mcm_newsletter_open](assets/mcm_newsletter_open.png)
+   ![mcm_selletter_open](assets/mcm_newsletter_open.png)
 
-1. 在電子報頂端，按一下 **設定**.
+1. 在新聞稿的頂部，按一下 **設定**。
 
-   ![mcm_newsletter_settings](assets/mcm_newsletter_settings.png)
+   ![mcm_seltrey_settings](assets/mcm_newsletter_settings.png)
 1. 輸入 **從** 電子郵件地址
 
-1. 修改 **主旨** （如有必要）。
+1. 修改 **主題** 必要時。
 
-1. 選取 **預設收件者清單** 從下拉式清單中。
+1. 選擇 **預設收件人清單** 清單中。
 
 1. 按一下&#x200B;**「確定」**。
 
-   當您測試或傳送電子報時，收件者會收到包含指定電子郵件地址和主旨的電子郵件。
+   當您test或發送新聞稿時，收件人將收到具有指定電子郵件地址和主題的電子郵件。
 
-## 飛行測試快訊 {#flight-testing-newsletters}
+## 飛行測試通訊 {#flight-testing-newsletters}
 
-雖然飛行測試並非強制性，但在您發送電子報之前，您可能想要加以測試，以確保它以您想要的方式顯示。
+雖然飛行測試不是強制性的，但在您發送新聞稿之前，您可能需要test它以確保它看起來是您希望的。
 
-飛行測試可讓您執行下列操作：
+飛行測試允許您執行以下操作：
 
-* 查看以下位置的電子報： [所有預期客戶](#testing-newsletters-in-different-e-mail-clients).
-* 驗證郵件伺服器設定正確。
-* 判斷您的電子郵件是否被標示為垃圾訊息。 （請務必將自己納入收件者清單中。）
-
->[!NOTE]
->
->如果您更新電子郵件提供者、進行飛行測試或傳送電子報，如果電子報未先發佈至「發佈」執行個體，或者「發佈」執行個體無法使用，則這些操作會失敗。 請務必發佈電子報，並確認Publish執行個體已開啟並執行。
-
-要飛行測試快訊：
-
-1. 在MCM中，開啟您要測試並傳送的電子報。
-
-1. 在電子報頂端，按一下 **測試** 以在傳送前進行測試。
-
-   ![mcm_newsletter_testsettings](assets/mcm_newsletter_testsettings.png)
-
-1. 輸入要發送電子報的測試郵件地址，然後按一下 **傳送**. 如果要變更設定檔，請在用戶端內容中載入另一個設定檔。 要執行此操作，請按CTRL+ALT+c並選取「載入」並載入設定檔。
-
-## 傳送電子報 {#sending-newsletters}
+* 查看中的新聞稿 [所有目標客戶](#testing-newsletters-in-different-e-mail-clients)。
+* 驗證郵件伺服器設定是否正確。
+* 確定電子郵件是否被標籤為垃圾郵件。 （確保將您自己包括在收件人清單中。）
 
 >[!NOTE]
 >
->Adobe不打算進一步加強AEM SMTP服務所傳送之開啟/退信（無法傳送）的電子郵件追蹤。
->建議為 [運用Adobe Campaign及與AEM的整合](/help/sites-administering/campaign.md).
+>如果您更新電子郵件提供商、執行航班test或發送新聞稿，則如果新聞稿未首先發佈到「發佈」實例或「發佈」實例不可用，則這些操作將失敗。 請確保發佈新聞簡報，並確保「發佈」實例已啟動並正在運行。
 
-您可以從電子報或清單中傳送電子報。 描述了兩個過程。
+航班test通訊：
+
+1. 從MCM開啟要test和發送的通訊。
+
+1. 在新聞稿的頂部，按一下 **Test** 在發送前test。
+
+   ![mcm_seltrey_testsettings](assets/mcm_newsletter_testsettings.png)
+
+1. 輸入要發送新聞稿的test郵件地址，然後按一下 **發送**。 如果要更改配置檔案，請在客戶端上下文中載入另一個配置檔案。 通過按CTRL+ALT+c並選取「載入」(Load)和載入輪廓，可以執行此操作。
+
+## 正在發送新聞稿 {#sending-newsletters}
 
 >[!NOTE]
 >
->傳送電子報之前，請先檢查Day CQ Link Externalizer的OSGi設定() `https://localhost:4502/system/console/configMgr`.
->
->依預設，參數的值為 `localhost:4502` 如果已更改運行實例的埠，則無法完成和操作。
+>Adobe不打算進一步增強SMTP服務發送的開啟/退貨（無法交付）的電子郵件AEM跟蹤功能。
+>建議是 [利用Adobe Campaign和AEM](/help/sites-administering/campaign.md)。
+
+您可以從新聞稿或清單中發送新聞稿。 描述了兩個過程。
 
 >[!NOTE]
 >
->如果您更新電子郵件提供者、進行飛行測試或傳送電子報，如果電子報未先發佈至「發佈」執行個體，或者「發佈」執行個體無法使用，則這些操作會失敗。 請務必發佈電子報，並確認Publish執行個體已開啟並執行。
+>在發送新聞稿之前，請在以下位置檢查第一天CQ連結外部化程式的OSGi配置 `https://localhost:4502/system/console/configMgr`。
+>
+>預設情況下，參數的值為 `localhost:4502` 如果運行實例的埠已更改，則操作無法完成。
 
-### 從行銷活動傳送電子報 {#sending-newsletters-from-a-campaign}
+>[!NOTE]
+>
+>如果您更新電子郵件提供商、執行航班test或發送新聞稿，則如果新聞稿未首先發佈到「發佈」實例或「發佈」實例不可用，則這些操作將失敗。 請確保發佈新聞簡報，並確保「發佈」實例已啟動並正在運行。
 
-若要從行銷活動內傳送電子報：
+### 從市場活動發送新聞稿 {#sending-newsletters-from-a-campaign}
 
-1. 在MCM中，開啟您要發送的電子報。
+要從市場活動中發送新聞稿，請執行以下操作：
+
+1. 從MCM開啟要發送的通訊。
 
    >[!NOTE]
    >
-   >在傳出之前，請確定您已自訂電子報的主旨，以及寄出的電子郵件地址(依 [自訂其設定](#customizing-newsletter-settings).
+   >在發送之前，請確保您已按以下方式自定義了新聞稿的主題和來源電子郵件地址 [自定義其設定](#customizing-newsletter-settings)。
    >
    >
-   >[飛行測試](#flight-testing-newsletters) 建議您先閱讀電子報再傳送。
+   >[試飛](#flight-testing-newsletters) 建議在發送前先發送新聞稿。
 
-1. 在電子報頂端，按一下 **傳送**. 電子報精靈隨即開啟。
+1. 在新聞稿的頂部，按一下 **發送**。 將開啟新聞簡報嚮導。
 
-1. 在收件者清單中，選取您要接收電子報的清單，然後按一下 **下一個**.
+1. 在收件人清單中，選擇要接收新聞稿的清單，然後按一下 **下一個**。
 
-   ![mcm_newslettersend](assets/mcm_newslettersend.png)
+   ![mcm_ellestersend](assets/mcm_newslettersend.png)
 
-1. 已確認安裝完成。 按一下 **傳送** 寄電子報。
+1. 已確認安裝完成。 按一下 **發送** 才能真正發通訊。
 
-   ![mcm_newslettersendconfirm](assets/mcm_newslettersendconfirm.png)
+   ![mcm_extlestrysendconfirm](assets/mcm_newslettersendconfirm.png)
 
    >[!NOTE]
    >
-   >請確定您是其中一位收件者，以確保收到電子報。
+   >確保您是收件人之一，以確保收到新聞稿。
 
-### 從清單傳送電子報 {#sending-newsletters-from-a-list}
+### 從清單發送新聞稿 {#sending-newsletters-from-a-list}
 
-若要從清單傳送電子報：
+要從清單中發送新聞稿，請執行以下操作：
 
-1. 在MCM中，按一下 **清單** 在左側窗格中。
+1. 在MCM中，按一下 **清單** 的下界。
 
    >[!NOTE]
    >
-   >在傳出之前，請確定您已自訂電子報的主旨，以及寄出的電子郵件地址(依 [自訂其設定](#customizing-newsletter-settings). 如果您從清單中傳送電子報，則無法測試電子報；您可以 [飛行試驗](#flight-testing-newsletters) 如果您從電子報傳送。
+   >在發送之前，請確保您已按以下方式自定義了新聞稿的主題和來源電子郵件地址 [自定義其設定](#customizing-newsletter-settings)。 如果您從清單中發送新聞稿，則無法test;你 [飛行test](#flight-testing-newsletters) 如果你從新聞稿上寄來。
 
-1. 選取您要傳送電子報的銷售機會清單旁的核取方塊。
+1. 選中要向其發送新聞稿的銷售線索清單旁邊的複選框。
 
-1. 在 **工具** 菜單，選擇 **傳送電子報**. 此 **傳送電子報** 窗口。
+1. 在 **工具** 菜單，選擇 **發送新聞稿**。 的 **發送新聞稿** 的下界。
 
-   ![mcm_newslettersendfromlist](assets/mcm_newslettersendfromlist.png)
+   ![mcm_ellesttersendfromlist](assets/mcm_newslettersendfromlist.png)
 
-1. 在 **電子報** 欄位中，選取您要傳送的電子報，然後按一下 **下一個**.
+1. 在 **新聞稿** 欄位，選擇要發送的新聞稿，然後按一下 **下一個**。
 
-   ![mcm_newslettersenddialog](assets/mcm_newslettersenddialog.png)
+   ![mcm_ellestersenddialog](assets/mcm_newslettersenddialog.png)
 
-1. 已確認安裝完成。 按一下 **傳送** 將所選電子報發送到指定的銷售機會清單。
+1. 已確認安裝完成。 按一下 **發送** 將選定的新聞稿發送到指定的銷售線索清單。
 
-   ![mcm_newslettersenddialog_confirmation](assets/mcm_newslettersenddialog_confirmation.png)
+   ![mcm_esslettersenddialog_confirmation](assets/mcm_newslettersenddialog_confirmation.png)
 
-   您的電子報會傳送給選取的收件者。
+   您的新聞稿將發送給選定的收件人。
 
-## 訂閱電子報 {#subscribing-to-a-newsletter}
+## 訂閱新聞簡報 {#subscribing-to-a-newsletter}
 
-本節說明如何訂閱電子報。
+本節介紹如何訂閱新聞簡報。
 
-### 訂閱電子報 {#subscribing-to-a-newsletter-1}
+### 訂閱新聞簡報 {#subscribing-to-a-newsletter-1}
 
-若要訂閱電子報(以Geometrixx網站為例):
+要訂閱新聞簡報(以Geometrixx網站為例):
 
-1. 按一下 **網站** 並導覽至Geometrixx **工具列** 然後開啟它。
+1. 按一下 **網站** 導航到Geometrixx **工具欄** 開啟它。
 
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
-1. 在Geometrixx電子報中 **註冊** 欄位，輸入您的電子郵件地址，然後按一下 **註冊**. 您現在已訂閱電子報。
+1. 在Geometrixx通訊中 **註冊** 欄位，然後按一下 **註冊**。 您現在訂閱了新聞稿。

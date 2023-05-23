@@ -1,7 +1,7 @@
 ---
 title: 添加附件
 seo-title: Adding attachments
-description: 在AEM Forms應用程式中，將像片和手寫筆記新增為工作的註解
+description: 在AEM Forms應用中將照片和筆記添加為任務的注釋
 seo-description: Add photographs and scribble notes as annotations to your task in the AEM Forms app
 uuid: 3d2738b4-fd43-44ec-8eaf-a2ad4b7e5af5
 content-type: reference
@@ -19,73 +19,73 @@ ht-degree: 0%
 
 # 添加附件{#adding-attachments}
 
-## 在與AEM Forms工作流程伺服器(JEE上的AEM Forms)同步的表單中新增附件 {#adding-annotations}
+## 在與AEM Forms工作流伺服器同步的表單中添加附件(JEE上的AEM Forms) {#adding-annotations}
 
-AEM Forms應用程式可讓您將影像、草稿附註及文字附註附加至與AEM Forms JEE伺服器同步的表單。 如果您的表單是從AEM Forms工作流程伺服器載入，您的附件會新增至表單。 您可以點選附件按鈕 ![附件 — 應用程式](assets/attachments-app.png) 一起查看表單中的所有附件。 紅色通知指定表單中的附件數。 如果表單中沒有附件，則看不到紅色通知按鈕。 如果表單中沒有附件，當您點選「附件」按鈕時 ![atch](assets/attch.png)，您可以選擇附加照片或手寫。
+AEM Forms應用允許您將影像、潦草筆記和文本筆記附加到與AEM FormsJEE伺服器同步的窗體中。 如果從AEM Forms工作流伺服器載入表單，則會將附件添加到表單中。 您可以點擊附件按鈕 ![附件 — 應用](assets/attachments-app.png) 查看窗體中的所有附件。 紅色通知指定表單中的附件數。 如果表單中沒有附件，則看不到紅色通知按鈕。 如果表單中沒有附件，則按一下「附件」按鈕 ![攻擊](assets/attch.png)，您可以選擇附加照片或手寫。
 
-您的選項為：
+您的選項包括：
 
-* **圖庫**:可讓您從儲存在裝置上的圖片新增圖片。
+* **庫**:允許您從設備上保存的圖片中添加圖片。
 
-* **相機**:讓您拍照並將其新增至表單。
+* **相機**:允許您拍攝圖片並將其添加到窗體中。
 
-* **附註**:可讓您新增手寫或文字附註。 使用 ![手寫](assets/scribble.png) 添加手繪， ![鍵盤](assets/keyboard.png) 添加文本注釋。
+* **注釋**:用於添加文字框或文本注釋。 使用 ![潦草](assets/scribble.png) 添加畫框， ![鍵盤](assets/keyboard.png) 的子菜單。
 
 >[!NOTE]
 >
->其他AEM Forms應用程式使用者可看到由一個使用者新增的附件。 其他用戶無法刪除用戶添加的附件。
+>一個用戶添加的附件對其他AEM Forms應用用戶可見。 其他用戶無法刪除用戶添加的附件。
 
 ### 「附件」螢幕 {#the-attachments-screen}
 
-要查看某個位置中的所有附件，請點選 ![附件 — 應用程式](assets/attachments-app.png). 您可以在此處添加、更名和刪除附件。
+要查看某個位置中的所有附件，請點擊 ![附件 — 應用](assets/attachments-app.png)。 您可以在此處添加、更名和刪除附件。
 
-![一個位置中的所有附件](assets/attachments-screen.png)
+![某個位置中的所有附件](assets/attachments-screen.png)
 
-您可以使用 **+** 按鈕，以附加另一圖片、手寫或文本。
+您可以使用 **+** 按鈕以附加另一個圖片、文字或文字。
 
 ### 添加照片 {#adding-a-photograph}
 
-您可以使用行動裝置的相機或裝置中儲存的圖片，附加表單中的圖片。
+您可以使用移動設備的攝像頭或設備中保存的圖片來附加表單中的圖片。
 
-1. 點選附件按鈕 ![atch](assets/attch.png) 在窗底。
-1. 點選 **圖庫** 或 **相機** 顯示的快顯視窗中。
-1. 根據您選取的選項，執行下列動作：
+1. 點擊附件按鈕 ![攻擊](assets/attch.png) 在窗口底部。
+1. 點擊 **庫** 或 **相機** 在彈出窗口中。
+1. 根據您選擇的選項，執行以下操作：
 
-   1. 如果您選取 **相機**.
+   1. 如果選擇 **相機**。
 
-      拍照。 然後點選 **使用** ![use-pic](assets/use-pic.png) 按鈕。
+      拍張照片。 然後點擊 **使用** ![使用 — pic](assets/use-pic.png) 按鈕
 
-      或點選 **重奪** ![重複](assets/retake.png) 按鈕重拍照片。
+      或點擊 **重取** ![重](assets/retake.png) 按鈕以重拍照片。
 
-   1. 如果您選取 **圖庫**.
+   1. 如果選擇 **庫**。
 
-      裝置的影像瀏覽器彈出。 在裝置的圖片瀏覽器中，點選您要附加的圖片。
+      設備的影像瀏覽器彈出。 在設備的圖片瀏覽器中，點擊要附加的圖片。
 
-### 新增附註 {#adding-a-note}
+### 添加附註 {#adding-a-note}
 
-此 **附註** 選項可讓您在表單中新增手繪手寫體和文字附件。
+的 **注釋** 選項，您可以在窗體中添加手繪指令碼和文本附件。
 
-1. 點選附件按鈕 ![atch](assets/attch.png) 在窗底。
-1. 點選 **附註** 顯示的快顯視窗中。
-1. 在啟動的「附註」使用者介面中，擷取手繪文字。
+1. 點擊附件按鈕 ![攻擊](assets/attch.png) 在窗口底部。
+1. 點擊 **注釋** 在彈出窗口中。
+1. 在啟動的Notes用戶介面中，捕獲手繪圖。
 
-   ![手寫介面](assets/scribble-ui.png)
+   ![Scribble介面](assets/scribble-ui.png)
 
-   手寫
+   斯克里布爾
 
-   您可以在手寫介面中使用下列選項：
+   可以在Scribble介面中使用以下選項：
 
    * **清除**:清除螢幕。
-   * **完成按鈕**:加上當前的手寫筆。
-   * **取消按鈕**:放棄當前手寫體並退出手寫體用戶介面。
-   * ![鍵盤](assets/keyboard.png):清除手寫字元，並讓您新增文字附註。
+   * **「完成」按鈕**:附加當前的塗抹。
+   * **「取消」按鈕**:放棄當前指令碼並退出Scribble用戶介面。
+   * ![鍵盤](assets/keyboard.png):清除塗鴉，並允許您添加文本注釋。
 
-   ![AEM Forms應用程式鍵盤手寫](assets/keyboard-inapp.png)
+   ![AEM Forms應用程式Scribble中的鍵盤](assets/keyboard-inapp.png)
 
-## 不使用AEM Forms工作流程(OSGi上的AEM Forms)與AEM Forms伺服器同步的表單附件 {#attachments-in-forms-synced-with-the-aem-forms-servers-without-aem-forms-workflow-aem-forms-on-osgi}
+## 與AEM Forms伺服器同步的表單中的附件，但不帶AEM Forms工作流(OSGi上的AEM Forms) {#attachments-in-forms-synced-with-the-aem-forms-servers-without-aem-forms-workflow-aem-forms-on-osgi}
 
-與AEM Forms OSGi伺服器同步的行動表單附件的運作方式與AEM Forms JEE伺服器類似。
+與AEM FormsOSGi伺服器同步的移動表單的附件與AEM FormsJEE伺服器類似。
 
-從AEM Forms OSGi伺服器載入應用程式中的適用性表單不支援表單層級附件。 若要附加影像或文字附註，請在您編寫表單時啟用欄位層級附件。 從欄位上的元件瀏覽器拖放檔案附件元件。
+從AEM FormsOSGi伺服器載入到應用程式中的自適應表單不支援表單級別附件。 要附加影像或文本注釋，請在建立表單時啟用欄位級附件。 將檔案附件元件從欄位上的元件瀏覽器中拖放。
 
-在最適化表單中，您可以在記錄檔案(DoR)中檢視附加的檔案。 看， [為非XFA適用性表單產生記錄檔案](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+在自適應表單中，可以查看記錄文檔(DoR)中的附加檔案。 看， [為非XFA自適應表單生成記錄文檔](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)。

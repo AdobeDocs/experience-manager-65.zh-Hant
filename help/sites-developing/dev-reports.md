@@ -1,7 +1,7 @@
 ---
-title: 開發報表
+title: 開發報告
 seo-title: Developing Reports
-description: AEM提供以報表架構為基礎的標準報表選項
+description: 提AEM供基於報告框架的標準報告選擇
 seo-description: AEM provides a selection of standard reports based on a reporting framework
 uuid: 1b406d15-bd77-4531-84c0-377dbff5cab2
 contentOwner: Guillaume Carlino
@@ -18,46 +18,46 @@ ht-degree: 0%
 ---
 
 
-# 開發報表 {#developing-reports}
+# 開發報告 {#developing-reports}
 
-AEM提供 [標準報表](/help/sites-administering/reporting.md) 其中大部分以報告架構為基礎。
+AEM提供 [標準報表](/help/sites-administering/reporting.md) 其中大部分基於報告框架。
 
-使用架構，您可以擴充這些標準報表，或開發您自己的全新報表。 報表架構與現有CQ5概念和原則緊密整合，讓開發人員可以將其現有的CQ5知識作為開發報表的跳板。
+使用該框架，您可以擴展這些標準報告，也可以開發自己的全新報告。 報告框架與現有的CQ5概念和原則緊密整合，以便開發人員可以將他們對CQ5的現有知識用作開發報告的跳板。
 
-對於隨AEM傳送的標準報表：
+對於與以下項交付的標準報AEM告：
 
-* 這些報表是在報表架構上建置：
+* 這些報告是基於報告框架構建的：
 
    * [元件報表](/help/sites-administering/reporting.md#component-report)
    * [頁面活動報表](/help/sites-administering/reporting.md#page-activity-report)
    * [使用者報表](/help/sites-administering/reporting.md#user-report)
    * [工作流程例項報表](/help/sites-administering/reporting.md#workflow-instance-report)
 
-* 下列報告以個別原則為基礎，因此無法延伸：
+* 下列報告基於個別原則，因此不能擴展：
 
    * [磁碟使用情況](/help/sites-administering/reporting.md#disk-usage)
    * [運行狀況檢查](/help/sites-administering/reporting.md#health-check)
-   * [工作流程報表](/help/sites-administering/reporting.md#workflow-report)
+   * [工作流報告](/help/sites-administering/reporting.md#workflow-report)
 
 >[!NOTE]
 >
->教學課程 [建立您自己的報表 — 範例](#creating-your-own-report-an-example) 也說明可使用下列原則的數量。
+>教程 [建立您自己的報告 — 示例](#creating-your-own-report-an-example) 還顯示了可以使用的原則。
 >
->您也可以參考標準報表，以查看其他實作範例。
+>您還可以參考標準報告，以查看其他實施示例。
 
 >[!NOTE]
 >
->在下列範例和定義中，會使用下列標籤法：
+>在下面的示例和定義中使用了以下符號：
 >
 >* 每行定義一個節點或一個屬性，其中：
-   >  `N:<name> [<nodeType>]` :說明名稱為 `<*name*>` 和節點類型 `<*nodeType*>`*.*
-   >  `P:<name> [<propertyType]` :說明名稱為 `<*name*>` 和屬性類型 `<*propertyType*>`.
-   >  `P:<name> = <value>` :說明屬性 `<name>` 的值 `<value>`.
+   >  `N:<name> [<nodeType>]` :描述名稱為 `<*name*>` 和節點類型 `<*nodeType*>`*。*
+   >  `P:<name> [<propertyType]` :描述名稱為 `<*name*>` 和屬性類型 `<*propertyType*>`。
+   >  `P:<name> = <value>` :描述屬性 `<name>` 必須設定為 `<value>`。
 >
->* 縮進顯示節點之間的分層依賴關係。
->* 以分隔的項目 |表示可能的項目清單；例如，類型或名稱；例如 `String|String[]` 表示屬性可以是字串或字串[].
+>* 縮排顯示節點之間的層次相關性。
+>* 分隔為 |表示可能項的清單；例如，類型或名稱；例如 `String|String[]` 表示屬性可以是String或String[]。
 >
->* `[]` 描述陣列；例如字串[] 或節點陣列，如 [查詢定義](#query-definition).
+>* `[]` 描述陣列；例如字串[] 或節點陣列，如 [查詢定義](#query-definition)。
 >
 >除非另有說明，否則預設類型為：
 >
@@ -65,144 +65,144 @@ AEM提供 [標準報表](/help/sites-administering/reporting.md) 其中大部分
 >* 屬性 - `String`
 
 
-## 報告架構 {#reporting-framework}
+## 報告框架 {#reporting-framework}
 
-報告框架遵循下列原則：
+報告框架遵循以下原則：
 
-* 它完全以CQ5 QueryBuilder執行的查詢所傳回的結果集為基礎。
-* 結果集定義報表中顯示的資料。 結果集中的每一列都對應於報表表格檢視中的一列。
-* 可在結果集上執行的操作類似於RDBMS概念；主要 *分組* 和 *聚合*.
+* 它完全基於由CQ5 QueryBuilder執行的查詢返回的結果集。
+* 結果集定義報表中顯示的資料。 結果集中的每一行都對應於報表的表格視圖中的一行。
+* 可在結果集上執行的操作類似於RDBMS概念；主要 *分組* 和 *聚合*。
 
-* 大多數資料檢索和處理都是在伺服器端完成的。
-* 用戶端需自行負責顯示預先處理的資料。 只有次要的處理工作（例如在儲存格內容中建立連結）會在用戶端執行。
+* 大多數的資料檢索和處理都是在伺服器端完成的。
+* 客戶端僅負責顯示預處理的資料。 客戶端只執行次要處理任務（例如，在單元格內容中建立連結）。
 
-報表架構（由標準報表的結構圖示）使用下列建置區塊，由處理佇列饋送：
+報告框架（通過標準報告的結構說明）使用以下由處理隊列饋送的構造塊：
 
 ![chlimage_1-248](assets/chlimage_1-248.png)
 
-### 報表頁面 {#report-page}
+### 報告頁 {#report-page}
 
-報表頁面：
+報告頁：
 
-* 是標準CQ5頁面。
-* 以 [為報表設定的標準CQ5範本](#report-template).
+* 是標準CQ5頁。
+* 基於 [標準CQ5模板，為報表配置](#report-template)。
 
 ### 報表庫 {#report-base}
 
-此 [ `reportbase` 元件](#report-base-component) 構成任何報表的基礎：
+的 [ `reportbase` 元件](#report-base-component) 構成任何報告之基礎：
 
 * 保留 [查詢](#the-query-and-data-retrieval) 提供資料的基礎結果集。
 
-* 是經過調整的段落系統，將包含所有欄( `columnbase`)新增至報表。
-* 定義可用的圖表類型和當前活動的圖表類型。
-* 定義編輯對話方塊，讓使用者設定報表的某些方面。
+* 是包含所有列( `columnbase`)。
+* 定義哪些圖表類型可用以及哪些當前處於活動狀態。
+* 定義「編輯」對話框，該對話框允許用戶配置報告的某些方面。
 
 ### 列基 {#column-base}
 
-每欄都是 [ `columnbase` 元件](#column-base-component) 即：
+每列都是 [ `columnbase` 元件](#column-base-component) :
 
-* 是段落，由parsys使用( `reportbase`)。
-* 定義連結至 [基礎結果集](#the-query-and-data-retrieval);即定義此結果集中引用的特定資料及其處理方式。
-* 保留其他定義；例如可用的匯總和篩選，以及任何預設值。
+* 是段落，由parsys( `reportbase`)。
+* 定義到 [基礎結果集](#the-query-and-data-retrieval);即定義此結果集中引用的特定資料及其處理方式。
+* 包含其他定義；例如可用的聚合和篩選器以及任何預設值。
 
 ### 查詢與資料檢索 {#the-query-and-data-retrieval}
 
 查詢：
 
 * 定義為 [ `reportbase`](#report-base) 元件。
-* 是根據 [CQ QueryBuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html).
-* 擷取用作報表基礎的資料。 結果集（表）的每一行都與查詢返回的節點綁定。 的特定資訊 [個別欄](#column-base-component) 然後會從此資料集中擷取。
+* 基於 [CQ查詢生成器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)。
+* 檢索用作報表基礎的資料。 結果集（表）的每一行都與查詢返回的節點相關聯。 特定資訊 [單個列](#column-base-component) 從此資料集中提取。
 
-* 通常包含：
+* 通常包括：
 
    * 根路徑。
 
-      這會指定要搜索的儲存庫的子樹。
+      這指定要搜索的儲存庫的子樹。
 
-      為了有助於將效能影響降至最低，建議（嘗試）將查詢限制在儲存庫的特定子樹。 根路徑可在 [報表範本](#report-template) 或由 [配置（編輯）對話框](#configuration-dialog).
+      為幫助最小化效能影響，建議（嘗試）將查詢限制在儲存庫的特定子樹中。 根路徑可以在 [報表模板](#report-template) 或由 [「配置（編輯）」對話框](#configuration-dialog)。
 
-   * [一或多個條件](#query-definition).
+   * [一個或多個條件](#query-definition)。
 
-      這些規定是為了產生（初始）結果集；例如，節點類型限制或屬性限制。
+      這些結果被強加以產生（初始）結果集；它們包括節點類型限制或屬性約束。
 
-**這裡的關鍵點是，查詢結果集中返回的每個單一節點都用於在報表上產生單一列（因此為1:1關係）。**
+**這裡的關鍵點是，查詢結果集中返回的每個單個節點都用於在報表上生成一行（因此為1:1關係）。**
 
-開發人員必須確保為報表定義的查詢會傳回適用於該報表的節點集。 但是，節點本身並不需要保留所有所需資訊，這也可以從父節點和/或子節點派生。 例如，用於 [使用者報表](/help/sites-administering/reporting.md#user-report) 根據節點類型選擇節點(在本例中為 `rep:user`)。 但是，此報表中的大部分欄不會直接從這些節點取得資料，而是從子節點取得資料 `profile`.
+開發人員必須確保為報表定義的查詢返回適合該報表的節點集。 但是，節點本身不需要保存所有所需資訊，這也可以從父節點和/或子節點派生。 例如，用於 [用戶報告](/help/sites-administering/reporting.md#user-report) 根據節點類型選擇節點（在本例中） `rep:user`)。 但是，此報表中的大多數列不會直接從這些節點獲取其資料，而是從子節點獲取資料 `profile`。
 
-### 處理佇列 {#processing-queue}
+### 處理隊列 {#processing-queue}
 
-此 [查詢](#the-query-and-data-retrieval) 傳回要在報表上顯示為列的資料集。 結果集中的每一列都會經過處理（伺服器端），位於 [幾個階段](#phases-of-the-processing-queue)，則會傳送至用戶端以顯示在報表上。
+的 [查詢](#the-query-and-data-retrieval) 返回要作為行顯示在報表上的資料的結果集。 處理結果集中的每一行（伺服器端），在 [幾個階段](#phases-of-the-processing-queue)，然後轉到客戶端以在報告中顯示。
 
 這允許：
 
-* 從基礎結果集中提取和導出值。
+* 從基礎結果集提取和導出值。
 
-   例如，它可讓您透過計算兩個屬性值之間的差異，將兩個屬性值視為單一值處理。
+   例如，它允許您通過計算兩個屬性值之間的差值，將兩個屬性值作為單個值處理。
 
-* 解析提取的值；這可以以多種方式完成。
+* 解析提取的值；這可以通過多種方式實現。
 
-   例如，路徑可對應至標題（如各自較人類看得懂的內容中） *jcr:title* 屬性)。
+   例如，路徑可以映射到標題（如在各自的更易人讀的內容中） *jcr：標題* 屬性)。
 
-* 在不同點套用篩選。
-* 視需要建立複合值。
+* 在不同點上應用濾鏡。
+* 如有必要，建立複合值。
 
-   例如，由顯示給使用者的文字、要用於排序的值，以及用於建立連結的其他URL組成（在用戶端上）。
+   例如，由顯示給用戶的文本、用於排序的值和用於建立連結的附加URL組成。
 
-#### 處理佇列的工作流程 {#workflow-of-the-processing-queue}
+#### 處理隊列的工作流 {#workflow-of-the-processing-queue}
 
-下列工作流程代表處理佇列：
+以下工作流表示處理隊列：
 
 ![chlimage_1-249](assets/chlimage_1-249.png)
 
-#### 處理佇列的階段 {#phases-of-the-processing-queue}
+#### 處理隊列的階段 {#phases-of-the-processing-queue}
 
 其中詳細步驟和元素包括：
 
-1. 轉換由 [初始查詢(reportbase)](#query-definition) 值提取器輸入基本結果集。
+1. 轉換由 [初始查詢(reportbase)](#query-definition) 使用值提取器輸入基本結果集。
 
-   根據 [欄類型](#column-specific-definitions). 它們用於從基礎JCR查詢中讀取值，並從中建立結果集；之後，可以應用進一步處理。 例如，對於 `diff` 類型，值提取器讀取兩個屬性，計算單個值，然後將其添加到結果集中。 無法配置值提取器。
+   根據 [列類型](#column-specific-definitions)。 它們用於從基礎JCR查詢中讀取值並從中建立結果集；之後，可應用進一步處理。 例如， `diff` 類型，值提取器讀取兩個屬性，計算單個值，然後將其添加到結果集。 無法配置值提取器。
 
-1. 對於包含原始資料的初始結果集， [初始濾波](#column-specific-definitions) (*原始* 階段)。
+1. 對於包含原始資料的初始結果集， [初始濾波](#column-specific-definitions) (*生* )。
 
-1. 值為 [preprocessed](#processing-queue);定義為 *套用* 階段。
+1. 值為 [預處理](#processing-queue);定義 *應用* 。
 
-1. [篩選](#column-specific-definitions) (指派給 *preprocessed* 階段)，則會對預先處理的值執行。
+1. [篩選](#column-specific-definitions) (分配給 *預處理* 階段)。
 
-1. 值會解析；根據 [定義解析器](#processing-queue).
-1. [篩選](#column-specific-definitions) (指派給 *已解析* 階段)，則會對解析的值執行。
+1. 值被解析；根據 [定義的解析器](#processing-queue)。
+1. [篩選](#column-specific-definitions) (分配給 *已解決* 階段)。
 
-1. 資料是 [分組和匯總](#column-specific-definitions).
-1. 將陣列資料轉換為（字串型）清單，即可加以解析。
+1. 資料是 [分組和聚合](#column-specific-definitions)。
+1. 通過將陣列資料轉換為（基於字串）清單來解析陣列資料。
 
-   這是將多值結果轉換為可顯示的清單的隱式步驟；根據多值JCR屬性的儲存格值需要此變數。
+   這是一個將多值結果轉換為可顯示的清單的隱式步驟；基於多值JCR屬性的（未聚合）單元格值是必需的。
 
-1. 值再次 [preprocessed](#processing-queue);定義為 *afterApply* 階段。
+1. 值再次 [預處理](#processing-queue);定義 *應用後* 。
 
 1. 資料已排序。
-1. 處理的資料被傳輸到客戶機。
+1. 處理的資料被傳送到客戶機。
 
 >[!NOTE]
 >
->傳回基礎資料結果集的初始查詢會在 `reportbase` 元件。
+>返回基本資料結果集的初始查詢是在 `reportbase` 元件。
 >
->處理佇列的其他元素會定義於 `columnbase` 元件。
+>處理隊列的其他元素在 `columnbase` 元件。
 
-## 報告建構與設定 {#report-construction-and-configuration}
+## 報告構造和配置 {#report-construction-and-configuration}
 
-建立和設定報表需要下列項目：
+構建和配置報告時需要以下內容：
 
-* a [報表元件定義的位置](#location-of-report-components)
+* a [報告元件定義的位置](#location-of-report-components)
 * a [ `reportbase` 元件](#report-base-component)
-* 一個或多個， [ `columnbase` 元件](#column-base-component)
+* 一個或更多， [ `columnbase` 元件](#column-base-component)
 * a [頁面元件](#page-component)
-* a [報告設計](#report-design)
-* a [報表範本](#report-template)
+* a [報表設計](#report-design)
+* a [報表模板](#report-template)
 
 ### 報表元件的位置 {#location-of-report-components}
 
-預設報告部分持有於 `/libs/cq/reporting/components`.
+預設報告元件保存於 `/libs/cq/reporting/components`。
 
-不過，強烈建議您不要更新這些節點，而是在下方建立您自己的元件節點 `/apps/cq/reporting/components` 若更合適 `/apps/<yourProject>/reports/components`.
+但是，強烈建議您不要更新這些節點，而是在以下位置建立自己的元件節點 `/apps/cq/reporting/components` 或者如果合適 `/apps/<yourProject>/reports/components`。
 
 其中（例如）:
 
@@ -213,7 +213,7 @@ N:apps
             N:components [sling:Folder]
 ```
 
-在此下，您可建立報表的根，在此下，報表基元件和欄基元件：
+在此下，您為報表建立根，在此下，報表基元件和列基元件：
 
 ```
 N:apps
@@ -227,19 +227,19 @@ N:apps
 
 ### 頁面元件 {#page-component}
 
-報表頁面必須使用 `sling:resourceType` of `/libs/cq/reporting/components/reportpage`.
+報告頁必須使用 `sling:resourceType` 共 `/libs/cq/reporting/components/reportpage`。
 
-自訂的頁面元件在大部分情況下不應是必要的。
+定製的頁面元件不應是必需的（在大多數情況下）。
 
-## 報表基礎元件 {#report-base-component}
+## 報表基元件 {#report-base-component}
 
-每個報表類型都需要從衍生的容器元件 `/libs/cq/reporting/components/reportbase`.
+每個報告類型都需要從中派生的容器元件 `/libs/cq/reporting/components/reportbase`。
 
-此元件可作為整個報表的容器，並提供下列資訊：
+此元件作為整個報表的容器，並提供以下資訊：
 
-* 此 [查詢定義](#query-definition).
-* 安 [（可選）對話框](#configuration-dialog) 來設定報表。
-* 任何 [圖表](#chart-definitions) 已整合至報表。
+* 的 [查詢定義](#query-definition)。
+* 安 [（可選）對話框](#configuration-dialog) 中。
+* 任意 [圖表](#chart-definitions) 併入報告。
 
 ```
 N:<reportname> [cq:Component]
@@ -266,7 +266,7 @@ N:queryBuilder
 
 * `propertyConstraints`
 
-   可用於將結果集限制為具有特定屬性和特定值的節點。 如果指定了多個約束，則節點必須滿足所有約束（AND操作）。
+   可用於將結果集限制到具有特定屬性且具有特定值的節點。 如果指定了多個約束，則節點必須滿足所有約束（AND操作）。
 
    例如：
 
@@ -282,7 +282,7 @@ N:queryBuilder
     ]
    ```
 
-   會全部傳回 `textimage` 上次由修改的元件 `admin` 使用者。
+   將返回所有 `textimage` 上次由 `admin` 。
 
 * `nodeTypes`
 
@@ -290,9 +290,9 @@ N:queryBuilder
 
 * `mandatoryProperties`
 
-   可用於將結果集限制為具有 *all* 指定屬性的。 屬性的值不會納入考量。
+   可用於將結果集限制到具有 *全部* 的子菜單。 屬性的值未被考慮在內。
 
-所有項目皆為選用項目，且可視需要加以組合，但您至少必須定義其中一個項目。
+所有項都是可選的，可根據需要組合，但必須至少定義其中一項。
 
 ### 圖表定義 {#chart-definitions}
 
@@ -315,21 +315,21 @@ N:charting
 
 * `settings`
 
-   保留活動圖表的定義。
+   保存活動圖表的定義。
 
    * `active`
 
-      由於可定義多個設定，因此您可以使用此設定來定義目前使用中的設定。 這些節點由一系列節點定義(這些節點沒有強制命名慣例，但標準報告通常使用 `0`, `1`... `x`)，每個都有下列屬性：
+      由於可以定義多個設定，因此可以使用此設定定義當前處於活動狀態的設定。 這些由節點陣列定義(這些節點沒有強制命名約定，但標準報告通常使用 `0`。 `1`.. `x`)，每個具有以下屬性：
 
       * `id`
 
-         活動圖表的標識。 這必須符合圖表其中一個的id `definitions`.
+         活動圖表的標識。 這必須與圖表之一的ID匹配 `definitions`。
 
 * `definitions`
 
-   定義報表可能可用的圖表類型。 此 `definitions` 將由指定 `active` 設定。
+   定義可能可用於報表的圖表類型。 的 `definitions` 將由 `active` 的子菜單。
 
-   定義是使用節點陣列來指定(通常稱為 `0`, `1`... `x`)，且每個都具有下列屬性：
+   定義使用節點陣列指定(通常也稱為 `0`。 `1`.. `x`)，每個都具有以下屬性：
 
    * `id`
 
@@ -337,55 +337,55 @@ N:charting
 
    * `type`
 
-      可用圖表的類型。 選擇：
+      可用的圖表類型。 從以下位置選擇：
 
       * `pie`
-圓形圖。 僅從目前資料產生。
+餅圖。 僅從當前資料生成。
 
       * `lineseries`
-一系列線（代表實際快照的連結點）。 僅從歷史資料產生。
-   * 其他屬性可用，取決於圖表類型：
+一系列線（代表實際快照的連接點）。 僅從歷史資料生成。
+   * 其他屬性可用，具體取決於圖表類型：
 
       * 圖表類型 `pie`:
 
          * `maxRadius` ( `Double/Long`)
 
-            餅圖允許的最大半徑；因此，圖表允許的最大大小（無圖例）。 若 `fixedRadius` 已定義。
+            餅圖允許的最大半徑；因此圖表允許的最大大小（無圖例）。 如果忽略 `fixedRadius` 。
 
          * `minRadius` ( `Double/Long`)
 
-            餅圖允許的最小半徑。 若 `fixedRadius` 已定義。
+            餅圖允許的最小半徑。 如果忽略 `fixedRadius` 。
 
-         * `fixedRadius` ( `Double/Long`)定義圓形圖的固定半徑。
+         * `fixedRadius` ( `Double/Long`)定義餅圖的固定半徑。
       * 圖表類型 [`lineseries`](/help/sites-administering/reporting.md#display-limits):
 
          * `totals` ( `Boolean`)
 
-            若另有一行顯示 **總計** 應顯示。
+            如果顯示的附加行為 **合計** 應顯示。
 預設: `false`
 
          * `series` ( `Long`)
 
             要顯示的行/系列數。
-預設值： `9` （這也是允許的上限）
+預設： `9` （這也是允許的最大值）
 
          * `hoverLimit` ( `Long`)
 
-            要為其顯示彈出窗口的聚合快照的最大數量（顯示在每條水準線上的點，表示不同值），即當用戶將滑鼠移到圖表圖例中的不同值或相應標籤上時。
+            要為其顯示彈出窗口的聚合快照（每個水準線上顯示的點，表示不同值）的最大數量，即當用戶在圖表圖例中的不同值或相應標籤上滑鼠懸停時。
 
-            預設值： `35` （亦即，如果目前圖表設定適用超過35個不同值，則完全不會顯示快顯視窗）。
+            預設： `35` （即，如果當前圖表設定適用的不同值超過35個，則根本不顯示彈出窗口）。
 
-            另外有10個快顯視窗的限制，可同時顯示（當將滑鼠移到圖例文字上時，可顯示多個快顯視窗）。
+            可以並行顯示的彈出窗口數量還限制為10個（當在圖例文本上進行滑鼠懸停時，可顯示多個彈出窗口）。
 
 
 
-### 配置對話框 {#configuration-dialog}
+### 「配置」對話框 {#configuration-dialog}
 
-每個報表都可以有設定對話方塊，讓使用者可為報表指定各種參數。 您可以透過 **編輯** 按鈕。
+每個報告都可以有一個配置對話框，允許用戶為報告指定各種參數。 此對話框可通過 **編輯** 按鈕。
 
-此對話方塊是標準CQ [對話](/help/sites-developing/components-basics.md#dialogs) 並可依此設定(請參閱 [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog) 以取得詳細資訊)。
+此對話框是標準CQ [對話](/help/sites-developing/components-basics.md#dialogs) 可以這樣配置(請參見 [CQ對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog) )的正平方根。
 
-範例對話方塊如下所示：
+示例對話框如下所示：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -424,25 +424,25 @@ N:charting
 </jcr:root>
 ```
 
-提供數個預先設定的元件；可在對話方塊中參考，使用 `xtype` 值為的屬性 `cqinclude`:
+提供了幾個預配置的元件；可以在對話框中引用， `xtype` 值為 `cqinclude`:
 
 * **`title`**
 
    `/libs/cq/reporting/components/commons/title`
 
-   定義報表標題的文字欄位。
+   定義報表標題的文本欄位。
 
 * **`description`**
 
    `/libs/cq/reporting/components/commons/description`
 
-   文字區域以定義報表說明。
+   Textarea以定義報表說明。
 
 * **`processing`**
 
    `/libs/cq/reporting/components/commons/processing`
 
-   報表處理模式的選取器（手動/自動載入資料）。
+   報表處理模式的選擇器（手動/自動載入資料）。
 
 * **`scheduling`**
 
@@ -452,34 +452,34 @@ N:charting
 
 >[!NOTE]
 >
->所參考的元件必須包含在 `.infinity.json` 尾碼（請參閱上例）。
+>必須使用 `.infinity.json` 尾碼（請參閱上例）。
 
 ### 根路徑 {#root-path}
 
-此外，還可為報表定義根路徑：
+此外，還可以為報告定義根路徑：
 
 * **`rootPath`**
 
-   這會將報表限制在存放庫的特定區段（樹狀或子樹狀），這是效能最佳化建議的報表。 根路徑由 `rootPath` 屬性 `report` 節點（建立頁面時從範本取用）。
+   這會將報告限制在儲存庫的某個部分（樹或子樹），這是效能優化的建議。 根路徑由 `rootPath` 屬性 `report` 每個報表頁的節點（建立頁時從模板獲取）。
 
-   可由下列項目指定：
+   可以通過以下方式指定：
 
-   * the [報表範本](#report-template) （作為固定值或作為配置對話框的預設值）。
-   * 使用者（使用此參數）
+   * 這樣 [報表模板](#report-template) （作為固定值或作為配置對話框的預設值）。
+   * 用戶（使用此參數）
 
 ## 列基元件 {#column-base-component}
 
-每個欄類型都需要衍生自的元件 `/libs/cq/reporting/components/columnbase`.
+每個列類型都需要從 `/libs/cq/reporting/components/columnbase`。
 
-欄元件定義下列組合：
+列元件定義以下組合：
 
-* 此 [列特定查詢](#column-specific-query) 設定。
-* 此 [解析器和預處理](#resolvers-and-preprocessing).
-* 此 [欄特定定義](#column-specific-definitions) (例如篩選器和匯總； `definitions` 子節點)。
-* [欄預設值](#column-default-values).
-* 此 [用戶端篩選](#client-filter) 從伺服器返回的資料中提取要顯示的資訊。
-* 此外，列元件必須提供 `cq:editConfig`. 來定義 [事件和動作](#events-and-actions) 必填。
-* 的設定 [一般欄](#generic-columns).
+* 的 [列特定查詢](#column-specific-query) 配置。
+* 的 [解析器和預處理](#resolvers-and-preprocessing)。
+* 的 [列特定定義](#column-specific-definitions) (如過濾器和聚合； `definitions` 子節點)。
+* [列預設值](#column-default-values)。
+* 的 [客戶端篩選器](#client-filter) 從伺服器返回的資料中提取要顯示的資訊。
+* 此外，列元件必須提供適合的 `cq:editConfig`。 定義 [事件和操作](#events-and-actions) 。
+* 的配置 [通用列](#generic-columns)。
 
 ```
 N:<columnname> [cq:Component]
@@ -505,11 +505,11 @@ N:<columnname> [cq:Component]
       N:aggregates [cq:WidgetCollection] // Column Specific Definitions
 ```
 
-另請參閱 [定義新報表](#defining-your-new-report).
+另請參閱 [定義新報表](#defining-your-new-report)。
 
 ### 列特定查詢 {#column-specific-query}
 
-這會定義特定資料擷取(從 [報表資料結果集](#the-query-and-data-retrieval))，以用於個別欄。
+這定義了特定資料提取(從 [報表資料結果集](#the-query-and-data-retrieval))，用於單列。
 
 ```xml
 N:definitions
@@ -522,42 +522,42 @@ N:definitions
 
 * `property`
 
-   定義用於計算實際儲存格值的屬性。
+   定義用於計算實際單元格值的屬性。
 
-   如果屬性定義為字串[] 會掃描多個屬性（依序）以尋找實際值。
+   如果屬性定義為字串[] 掃描多個屬性（按順序）以查找實際值。
 
-   例如，在下列案例中：
+   例如，在以下情況下：
 
    `property = [ "jcr:lastModified", "jcr:created" ]`
 
-   對應的值提取器（此處控制）將：
+   相應的值提取器（此處控制）將：
 
-   * 檢查是否有jcr:lastModified屬性可用，如果有，請使用它。
+   * 檢查是否存在jcr:lastModified屬性，如果可用，則使用它。
    * 如果沒有jcr:lastModified屬性可用，則將改用jcr:created的內容。
 
 * `subPath`
 
-   如果結果未位於查詢返回的節點上， `subPath` 會定義屬性的實際位置。
+   如果結果不在查詢返回的節點上， `subPath` 定義屬性的實際位置。
 
 * `secondaryProperty`
 
-   定義第二個屬性，該屬性也必須用於計算實際儲存格值；這將僅用於某些列類型（diff和sortable）。
+   定義另一個屬性，該屬性還必須用於計算實際單元格值；這將僅用於某些列類型（diff和sortable）。
 
-   例如，在「工作流實例報告」中，指定的屬性用於儲存開始時間和結束時間之間時間差的實際值（以毫秒為單位）。
+   例如，在「工作流實例報表」中，指定的屬性用於儲存開始時間和結束時間之間時間差的實際值（以毫秒為單位）。
 
 * `secondarySubPath`
 
-   類似於subPath，當 `secondaryProperty` 中所有規則的URL區段。
+   與subPath類似，當 `secondaryProperty` 的子菜單。
 
-在大多數情況下，僅 `property` 中指定的規則。
+在大多數情況下， `property` 的下界。
 
-### 用戶端篩選 {#client-filter}
+### 客戶端篩選器 {#client-filter}
 
-客戶端篩選器從伺服器返回的資料中提取要顯示的資訊。
+客戶機過濾器從伺服器返回的資料中提取要顯示的資訊。
 
 >[!NOTE]
 >
->此篩選器會在套用完整個伺服器端處理後，在clientside執行。
+>在應用整個伺服器端處理之後，將執行此篩選器。
 
 ```xml
 N:definitions
@@ -565,12 +565,12 @@ N:definitions
         P:clientFilter [String]
 ```
 
-`clientFilter` 定義為JavaScript函式，其可：
+`clientFilter` 定義為JavaScript函式，該函式：
 
-* 作為輸入，接收一個參數；從伺服器傳回的資料（因此已完全預先處理）
-* 作為輸出，返回篩選（已處理）值；從輸入資訊中提取或導出的資料
+* 作為輸入，接收一個參數；從伺服器返回的資料（因此已完全預處理）
+* 作為輸出，返回篩選（處理）的值；從輸入資訊中提取或導出的資料
 
-下列範例會從元件路徑中擷取對應的頁面路徑：
+下面的示例從元件路徑中提取相應的頁路徑：
 
 ```
 function(v) {
@@ -584,7 +584,7 @@ function(v) {
 
 ### 解析器和預處理 {#resolvers-and-preprocessing}
 
-此 [處理佇列](#processing-queue) 定義各種解析器並配置預處理：
+的 [處理隊列](#processing-queue) 定義各種解析器並配置預處理：
 
 ```xml
 N:definitions
@@ -598,91 +598,91 @@ N:definitions
 
 * `resolver`
 
-   定義要使用的解析器。 可使用下列解析器：
+   定義要使用的解析器。 以下解析器可用：
 
    * `const`
 
-      將值映射至其他值；例如，這可用來解析常數，例如 `en` 值 `English`.
+      將值映射到其他值；例如，它用於解析常數，如 `en` 其等價值 `English`。
 
    * `default`
 
-      預設解析器。 這是一個虛擬解析器，它實際上不解析任何內容。
+      預設解析程式。 這是一個虛擬的解析器，它實際上不解決任何問題。
 
    * `page`
 
-      將路徑值解析為適當頁面的路徑；更準確地說，是 `jcr:content` 節點。 例如， `/content/.../page/jcr:content/par/xyz` 解析為 `/content/.../page/jcr:content`.
+      將路徑值解析為相應頁的路徑；更準確地說，是 `jcr:content` 的下界。 比如說， `/content/.../page/jcr:content/par/xyz` 已決定 `/content/.../page/jcr:content`。
 
    * `path`
 
-      選擇性地附加子路徑並從節點的屬性中取出實際值(定義方式為 `resolverConfig`)。 例如， `path` of `/content/.../page/jcr:content` 可解析為 `jcr:title` 屬性，這表示頁面路徑會解析為頁面標題。
+      通過可選地附加子路徑並從節點的屬性中取實際值(如由 `resolverConfig`)。 例如， `path` 共 `/content/.../page/jcr:content` 可以解析為 `jcr:title` 屬性，這表示頁面路徑解析為頁面標題。
 
    * `pathextension`
 
-      通過預定路徑並從已解析路徑上的節點的屬性中獲取實際值來解析值。 例如，值 `de` 可能會由下列路徑加上前置詞： `/libs/wcm/core/resources/languages`，會從屬性取用值 `language`，以解析國家/地區代碼 `de` 語言說明 `German`.
+      通過預掛起路徑並從解析路徑上的節點屬性中獲取實際值來解析值。 例如， `de` 可能由如 `/libs/wcm/core/resources/languages`，從屬性中取值 `language`，以解析國家/地區代碼 `de` 到語言說明 `German`。
 
 * `resolverConfig`
 
-   提供解析程式的定義；可用的選項取決於 `resolver` 已選取：
+   提供解析程式的定義；可用選項取決於 `resolver` 選定：
 
    * `const`
 
-      使用屬性來指定要解析的常數。 屬性的名稱會定義要解析的常數；屬性的值會定義解析的值。
+      使用屬性指定要解析的常數。 屬性名稱定義要解析的常數；屬性值定義解析的值。
 
-      例如，屬性具有 **名稱**= `1` 和 **值** `=One` 將解析為1對1。
+      例如，具有 **名稱**= `1` 和 **值** `=One` 1比1。
 
    * `default`
 
-      無可用配置。
+      沒有可用的配置。
 
    * `page`
 
       * `propertyName` (可選)
 
-         定義應用於解析值的屬性名稱。 若未指定，預設值為 *jcr:title* （頁面標題）;針對 `page` 解析器，這表示首先會將路徑解析為頁面路徑，然後再進一步解析為頁面標題。
+         定義應用於解析值的屬性的名稱。 如果未指定，則預設值為 *jcr：標題* （頁面標題）;為 `page` 解析器，這意味著首先將路徑解析為頁面路徑，然後進一步解析為頁面標題。
    * `path`
 
       * `propertyName` (可選)
 
-         指定應用於解析值的屬性名稱。 若未指定，預設值為 `jcr:title` 中所有規則的URL區段。
+         指定應用於解析值的屬性的名稱。 如果未指定，則預設值為 `jcr:title` 的子菜單。
 
       * `subPath` (可選)
 
-         此屬性可用來指定要在解析值之前附加至路徑的尾碼。
+         此屬性可用於指定在解析值之前附加到路徑的尾碼。
    * `pathextension`
 
       * `path` （強制）
 
-         定義要前置的路徑。
+         定義要優先的路徑。
 
       * `propertyName` （強制）
 
-         定義實際值所在的解析路徑上的屬性。
+         定義實際值所在的已解析路徑上的屬性。
 
-      * `i18n` （可選）類型布林值)
+      * `i18n` （可選）類型布爾值)
 
-         決定解析的值是否應 *國際化* (即使用 [CQ5的國際化服務](/help/sites-administering/tc-manage.md))。
+         確定是否應將解析的值 *國際化* (即使用 [CQ5的國際化服務](/help/sites-administering/tc-manage.md))。
 
 
 
 * `preprocessing`
 
-   預處理為選用，可以（個別）系結至處理階段 *套用* 或 *applyAfter*:
+   預處理是可選的，可以（單獨）綁定到處理階段 *應用* 或 *應用後*:
 
    * `apply`
 
-      初始預處理階段([表示處理佇列的步驟3](#processing-queue))。
+      初始預處理階段([步驟3表示處理隊列](#processing-queue))。
 
    * `applyAfter`
 
-      預處理後套用([表示處理佇列的步驟9](#processing-queue))。
+      預處理後應用([步驟9表示處理隊列](#processing-queue))。
 
 #### 解析器 {#resolvers}
 
-解析器用於提取所需資訊。 各種解析器的範例包括：
+解析器用於提取所需資訊。 各種解決方案的示例有：
 
-**康斯特**
+**孔斯特**
 
-下列項目將解析 `VersionCreated` 至字串 `New version created`.
+以下將解析的常數值 `VersionCreated` 到字串 `New version created`。
 
 請參閱 `/libs/cq/reporting/components/auditreport/typecol/definitions/data`.
 
@@ -695,7 +695,7 @@ N:data
 
 **Page**
 
-解析對應頁面之jcr:content(child)節點上jcr:description屬性的路徑值。
+將路徑值解析為相應頁的jcr:content(child)節點上的jcr:description屬性。
 
 請參閱 `/libs/cq/reporting/components/compreport/pagecol/definitions/data`.
 
@@ -708,7 +708,7 @@ N:data
 
 **路徑**
 
-以下程式碼會解析 `/content/.../page` 至 `jcr:title` 屬性，這表示頁面路徑會解析為頁面標題。
+下面將解析 `/content/.../page` 內容 `jcr:title` 屬性，這表示頁面路徑解析為頁面標題。
 
 請參閱 `/libs/cq/reporting/components/auditreport/pagecol/definitions/data`.
 
@@ -720,9 +720,9 @@ N:data
         P:subPath="/jcr:content"
 ```
 
-**路徑擴充功能**
+**路徑擴展**
 
-下列項目會前置值 `de` 具有路徑擴展 `/libs/wcm/core/resources/languages`，然後從屬性中取用值 `language`，以解析國家/地區代碼 `de` 語言說明 `German`.
+以下項會預留一個值 `de` 路徑擴展 `/libs/wcm/core/resources/languages`，然後從屬性中獲取值 `language`，以解析國家/地區代碼 `de` 到語言說明 `German`。
 
 請參閱 `/libs/cq/reporting/components/userreport/languagecol/definitions/data`.
 
@@ -736,26 +736,26 @@ N:data
 
 #### 預處理 {#preprocessing}
 
-此 `preprocessing` 定義可套用至：
+的 `preprocessing` 定義可應用於以下任一項：
 
 * 原始值：
 
-   原始值的預處理定義在上指定 `apply` 和/或 `applyAfter` 直接。
+   原始值的預處理定義在 `apply` 和/或 `applyAfter` 直接輸入。
 
-* 值（在其匯總狀態中）:
+* 值：
 
-   如有必要，可為每個匯總提供個別定義。
+   如有必要，可為每個聚合提供單獨的定義。
 
-   若要指定匯總值的明確預處理，預處理定義必須位於個別 `aggregated` 子節點( `apply/aggregated`, `applyAfter/aggregated`)。 如果需要對不同聚合進行顯式預處理，則預處理定義位於具有相應聚合名稱的子節點上(例如 `apply/aggregated/min/max` 或其他匯總)。
+   要指定聚合值的顯式預處理，預處理定義必須駐留在相應的上 `aggregated` 子節點( `apply/aggregated`。 `applyAfter/aggregated`)。 如果需要對不同聚合進行顯式預處理，則預處理定義位於具有相應聚合名稱的子節點上(例如 `apply/aggregated/min/max` 或其他聚合)。
 
-您可以指定下列其中一項，以在預處理期間使用：
+您可以指定預處理期間使用的以下任一項：
 
 * [查找和替換模式](#preprocessing-find-and-replace-patterns)
-找到時，指定的模式（定義為規則運算式）會被另一個模式取代；例如，這可用來擷取原始字串的子字串。
+當找到時，指定的模式（定義為規則運算式）將被另一個模式替換；例如，可以使用它提取原文的子字串。
 
 * [資料類型格式化程式](#preprocessing-data-type-formatters)
 
-   將數值轉換為相對字串；例如，代表1小時時差的值「」會解析為字串，例如 `1:24PM (1 hour ago)`.
+   將數字值轉換為相對字串；例如，表示1小時時差的值「」將解析為字串，如 `1:24PM (1 hour ago)`。
 
 例如：
 
@@ -772,45 +772,45 @@ N:definitions
 
 #### 預處理 — 查找和替換模式 {#preprocessing-find-and-replace-patterns}
 
-對於預處理，您可以指定 `pattern` (定義為 [規則運算式](https://en.wikipedia.org/wiki/Regular_expression) 或regex)，則會定位並取代 `replace` 模式：
+對於預處理，可以指定 `pattern` (定義為 [規則運算式](https://en.wikipedia.org/wiki/Regular_expression) 或regex)的 `replace` 模式：
 
 * `pattern`
 
-   用來尋找子字串的規則運算式。
+   用於定位子字串的規則運算式。
 
 * `replace`
 
-   將用作原始字串的替換字串或字串的表示。 這通常代表規則運算式所定位之字串的子字串 `pattern`.
+   將用作原始字串的替換項的字串或字串的表示形式。 這通常表示規則運算式所定位的字串的子字串 `pattern`。
 
-取代範例可劃分為：
+示例替換可分為：
 
-* 對於節點 `definitions/data/preprocessing/apply` ，且包含下列兩個屬性：
+* 對於節點 `definitions/data/preprocessing/apply` 具有以下兩個屬性：
 
    * `pattern`: `(.*)(/jcr:content)(/|$)(.*)`
    * `replace`: `$1`
 
-* 字串的送達方式為：
+* 字串到達時為：
 
    * `/content/geometrixx/en/services/jcr:content/par/text`
 
-* 將分為四節：
+* 將分為四部分：
 
    * `$1` - `(.*)` - `/content/geometrixx/en/services`
    * `$2` - `(/jcr:content)` - `/jcr:content`
    * `$3` - `(/|$)` - `/`
    * `$4` - `(.*)` - `par/text`
 
-* 並取代為 `$1`:
+* 並替換為由 `$1`:
 
    * `/content/geometrixx/en/services`
 
-#### 前置處理 — 資料類型格式化程式 {#preprocessing-data-type-formatters}
+#### 預處理 — 資料類型格式化程式 {#preprocessing-data-type-formatters}
 
-這些格式化程式會將數值轉換為相對字串。
+這些格式化程式將數值轉換為相對字串。
 
-例如，這可用於允許 `min`, `avg` 和 `max` 匯總。 As `min`/ `avg`/ `max` 匯總會顯示為 *時差* (例如 `10 days ago`)，則需要資料格式化程式。 對於此，a `datedelta` formatter被應用到 `min`/ `avg`/ `max` 匯總值。 若 `count` 匯總也可用，因此不需要格式化程式，原始值也不需要。
+例如，此選項可用於允許 `min`。 `avg` 和 `max` 聚合。 作為 `min`/ `avg`/ `max` 聚合顯示為 *時差* (例如 `10 days ago`)，它們需要資料格式化程式。 為此， `datedelta` 格式化程式應用於 `min`/ `avg`/ `max` 聚合值。 如果 `count` 聚合也可用，因此它不需要格式化程式，原始值也不需要。
 
-目前可用的資料類型格式化程式包括：
+當前可用的資料類型格式化程式有：
 
 * `format`
 
@@ -818,17 +818,17 @@ N:definitions
 
    * `duration`
 
-      持續時間是兩個定義日期之間的時間範圍。 例如，工作流程動作的開始和結束(從2/13/11 11:23h開始，一小時後在2/13/11 12:23h結束)花了1小時。
+      持續時間是兩個定義日期之間的時間跨度。 例如，工作流操作的開始和結束時間為1小時，從2/13/11 11:23h開始，到1小時後2/13/11 12:23h結束。
 
-      它會將數值（解譯為毫秒）轉換為持續時間字串；例如， `30000` 格式為* `30s`.*
+      它將數值（解釋為毫秒）轉換為持續時間字串；比如說， `30000` 格式為* `30s`.*
 
    * `datedelta`
 
-      Datadelta是過去某個日期到「現在」的時間範圍（因此，如果稍後時間檢視報表，結果會不同）。
+      Datadelta是過去某個日期到「現在」之間的時間跨度（因此，如果在稍後的時間點查看報告，則會產生不同的結果）。
 
-      它會將數值（以天為單位解譯為時間差）轉換為相對日期字串。 例如，1的格式為1天前。
+      它將數字值（解釋為以天為單位的時差）轉換為相對日期字串。 例如，1的格式是1天前。
 
-以下範例定義 `datedelta` 格式 `min` 和 `max` 匯總：
+以下示例定義 `datedelta` 格式 `min` 和 `max` 聚合：
 
 ```xml
 N:definitions
@@ -842,9 +842,9 @@ N:definitions
                         P:format = "datedelta"
 ```
 
-### 欄特定定義 {#column-specific-definitions}
+### 列特定定義 {#column-specific-definitions}
 
-欄的特定定義會定義該欄可用的篩選器和匯總。
+特定於列的定義定義可用於該列的篩選器和聚合。
 
 ```xml
 N:definitions
@@ -876,18 +876,18 @@ N:definitions
    * `diff`
    * `timeslot`
 
-      用於擷取匯總所需的部分日期（例如，依年分組，以取得每年匯總的資料）。
+      用於提取聚合所需日期的部分（例如，按年分組以獲取每年的聚合資料）。
 
    * `sortable`
 
-      用於使用不同值（如來自不同屬性）來排序和顯示的值。
-   此外， 以上任何項目皆可定義為多值；例如， `string[]` 定義字串的陣列。
+      用於使用不同值（如從不同屬性中取得）進行排序和顯示的值。
+   另外， 以上任何一項都可以定義為多值；比如說， `string[]` 定義字串陣列。
 
-   值提取器由列類型選擇。 如果某個值提取器可用於列類型，則使用此提取器。 否則，會使用預設值提取器。
+   值提取器由列類型選擇。 如果值提取器可用於列類型，則使用此提取器。 否則，使用預設值提取器。
 
-   類型可（可選）取參數。 例如， `timeslot:year` 從日期欄位擷取年份。 類型及其參數：
+   類型可（可選）採用參數。 比如說， `timeslot:year` 從日期欄位提取年份。 類型及其參數：
 
-   * `timeslot`  — 這些值可與 `java.utils.Calendar`.
+   * `timeslot`  — 該值可與Contern Contrants `java.utils.Calendar`。
 
       * `timeslot:year` - `Calendar.YEAR`
       * `timeslot:month-of-year` - `Calendar.MONTH`
@@ -901,22 +901,22 @@ N:definitions
 
 * `groupable`
 
-   定義報表是否可依此欄分組。
+   定義是否可以按此列對報表進行分組。
 
 * `filters`
 
-   篩選定義。
+   篩選器定義。
 
    * `filterType`
 
-      可用的篩選器包括：
+      可用篩選器包括：
 
       * `string`
 
-         字串型篩選。
+         基於字串的篩選器。
    * `id`
 
-      篩選器識別碼。
+      篩選器標識符。
 
    * `phase`
 
@@ -924,36 +924,36 @@ N:definitions
 
       * `raw`
 
-         篩選器會套用至原始資料。
+         篩選器應用於原始資料。
 
       * `preprocessed`
 
-         篩選器會套用至預先處理的資料。
+         對預處理的資料應用篩選器。
 
       * `resolved`
 
-         篩選器會套用至解析的資料。
+         篩選器應用於已解析的資料。
 
 
 * `aggregates`
 
-   匯總定義。
+   聚合定義。
 
    * `text`
 
-      匯總的文字名稱。 若 `text` 未指定，則會使用匯總的預設說明；例如， `minimum` 將用於 `min` 匯總。
+      聚合的文本名稱。 如果 `text` 未指定，則將採用聚合的預設描述；比如說， `minimum` 將用於 `min` 集合。
 
    * `type`
 
-      匯總類型。 可用的匯總包括：
+      聚合類型。 可用聚合包括：
 
       * `count`
 
-         計算列數。
+         計算行數。
 
       * `count-nonempty`
 
-         計算非空行的數量。
+         計算非空行數。
 
       * `min`
 
@@ -973,15 +973,15 @@ N:definitions
 
       * `median`
 
-         提供中位數值。
+         提供中值。
 
       * `percentile95`
 
-         採用所有值的第95個百分位數。
+         取所有值的第95百分位。
 
-### 欄預設值 {#column-default-values}
+### 列預設值 {#column-default-values}
 
-這可用來定義欄的預設值：
+這用於定義列的預設值：
 
 ```xml
 N:defaults
@@ -990,13 +990,13 @@ N:defaults
 
 * `aggregate`
 
-   有效 `aggregate` 值與的值相同 `type` 在 `aggregates` (請參閱 [欄特定定義（定義 — 篩選器/匯總）](#column-specific-definitions) )。
+   有效 `aggregate` 值與 `type` 在 `aggregates` （請參見） [列特定定義（定義 — 篩選器/聚合）](#column-specific-definitions) )。
 
-### 事件和動作 {#events-and-actions}
+### 事件和操作 {#events-and-actions}
 
-「編輯配置」定義偵聽器偵測的必要事件，以及這些事件發生後要套用的動作。 請參閱 [元件開發簡介](/help/sites-developing/components.md) 以了解背景資訊。
+「編輯配置」定義監聽程式檢測的必要事件以及這些事件發生後要應用的操作。 查看 [元件開發簡介](/help/sites-developing/components.md) 的子菜單。
 
-必須定義下列值，以確保滿足所有必要動作：
+必須定義以下值，以確保滿足所有所需操作：
 
 ```xml
 N:cq:editConfig [cq:EditConfig]
@@ -1012,77 +1012,77 @@ N:cq:editConfig [cq:EditConfig]
         P:afterremove = "REFRESH_SELF"
 ```
 
-### 一般欄 {#generic-columns}
+### 一般列 {#generic-columns}
 
-一般欄是擴充功能，其中（大部分）欄定義儲存在欄節點（而非元件節點）的例項上。
+泛型列是擴展，其中（大多數）列定義儲存在列節點的實例（而不是元件節點）上。
 
-它們會針對個別一般元件使用您自訂的（標準）對話方塊。 此對話方塊可讓報表使用者定義報表頁面上一般欄的欄屬性（使用功能表選項） **列屬性……**)。
+它們使用（標準）對話框，您可以為單個類屬元件定制該對話框。 此對話框允許報表用戶在報表頁上定義泛型列的列屬性（使用菜單選項） **列屬性……**)。
 
-例如 **一般** 欄 **使用者報表**;請參閱 `/libs/cq/reporting/components/userreport/genericcol`.
+例如 **泛型** 列 **用戶報告**;見 `/libs/cq/reporting/components/userreport/genericcol`。
 
-要使列成為泛型：
+要使列為泛型：
 
-* 設定 `type` 欄的屬性 `definition` 節點到 `generic`.
+* 設定 `type` 列的屬性 `definition` 節點到 `generic`。
 
    請參閱 `/libs/cq/reporting/components/userreport/genericcol/definitions`
 
-* 在欄的 `definition` 節點。
+* 在列的 `definition` 的下界。
 
    請參閱 `/libs/cq/reporting/components/userreport/genericcol/definitions/dialog`
 
-   * 對話方塊的欄位必須參照與對應元件屬性（包括其路徑）相同的名稱。
+   * 對話框的欄位必須引用與相應元件屬性（包括其路徑）相同的名稱。
 
-      例如，如果要使通用對話框配置通用列的類型，請使用名稱為的欄位 `./definitions/type`.
+      例如，如果要通過對話框使泛型列的類型可配置，請使用名稱為 `./definitions/type`。
 
-   * 使用UI/對話方塊定義的屬性優先於 `columnbase` 元件。
+   * 使用UI/對話框定義的屬性優先於在 `columnbase` 元件。
 
 * 定義編輯配置。
 
    請參閱 `/libs/cq/reporting/components/userreport/genericcol/cq:editConfig`
 
-* 使用標準AEM方法來定義（其他）欄屬性。
+* 使用標AEM準方法定義（附加）列屬性。
 
-   請注意，對於在元件實例和列實例上定義的屬性，列實例上的值優先。
+   請注意，對於在元件實例和列實例上都定義的屬性，列實例上的值優先。
 
-   通用列的可用屬性包括：
+   泛型列可用的屬性包括：
 
-   * `jcr:title`  — 列名
-   * `definitions/aggregates`  — 匯總
+   * `jcr:title`  — 列名稱
+   * `definitions/aggregates`  — 聚合
    * `definitions/filters`  — 篩選器
-   * `definitions/type` — 欄的類型（必須在對話方塊中定義，使用選取器/組合方塊或隱藏欄位）
-   * `definitions/data/resolver` 和 `definitions/data/resolverConfig` (但不包括 `definitions/data/preprocessing` 或 `.../clientFilter`) — 解析程式和設定
-   * `definitions/queryBuilder`  — 查詢產生器設定
-   * `defaults/aggregate`  — 預設匯總
+   * `definitions/type` — 列的類型（必須在對話框中定義，使用選擇器/組合框或隱藏欄位）
+   * `definitions/data/resolver` 和 `definitions/data/resolverConfig` （但不） `definitions/data/preprocessing` 或 `.../clientFilter`) — 解析程式和配置
+   * `definitions/queryBuilder`  — 查詢生成器配置
+   * `defaults/aggregate`  — 預設聚合
 
-   若為上通用欄的新例項 **使用者報表** 使用對話方塊定義的屬性會保存在下：
+   在上的泛型列的新實例中 **用戶報告** 使用對話框定義的屬性保留在以下位置：
 
    `/etc/reports/userreport/jcr:content/report/columns/genericcol/settings/generic`
 
 ## 報表設計 {#report-design}
 
-設計會定義哪些欄類型可用於建立報表。 它還定義了添加列的段落系統。
+設計定義了哪些列類型可用於建立報告。 它還定義了添加列的段落系統。
 
-強烈建議您為每個報表建立個別設計。 這可確保完全的彈性。 另請參閱 [定義新報表](#defining-your-new-report).
+強烈建議您為每個報告建立單個設計。 這確保了完全的靈活性。 另請參閱 [定義新報表](#defining-your-new-report)。
 
-預設報告部分持有於 `/etc/designs/reports`.
+預設報告元件保存於 `/etc/designs/reports`。
 
-報表的位置取決於元件的位置：
+報告的位置可取決於元件所在的位置：
 
-* `/etc/designs/reports/<yourReport>` 如果報表位於 `/apps/cq/reporting`
+* `/etc/designs/reports/<yourReport>` 如果報告位置偏離 `/apps/cq/reporting`
 
-* `/etc/designs/<yourProject>/reports/<*yourReport*>` 對於使用 `/apps/<yourProject>/reports` 圖樣
+* `/etc/designs/<yourProject>/reports/<*yourReport*>` 對於使用 `/apps/<yourProject>/reports` 圖案
 
-所需設計屬性註冊於 `jcr:content/reportpage/report/columns` (例如， `/etc/designs/reports/<reportName>/jcr:content/reportpage/report/columns`):
+在上註冊所需的設計屬性 `jcr:content/reportpage/report/columns` (例如， `/etc/designs/reports/<reportName>/jcr:content/reportpage/report/columns`):
 
 * `components`
 
-   報表上允許的任何元件和/或元件群組。
+   報告中允許的任何元件和/或元件組。
 
 * `sling:resourceType`
 
-   具有值的屬性 `cq/reporting/components/repparsys`.
+   具有值的屬性 `cq/reporting/components/repparsys`。
 
-範例設計程式碼片段（取自元件報表的設計）為：
+示例設計代碼段（取自元件報告的設計）為：
 
 ```xml
 <!-- ... -->
@@ -1102,30 +1102,30 @@ N:cq:editConfig [cq:EditConfig]
 <!-- ... -->
 ```
 
-不需要指定個別欄的設計。 可在設計模式中定義可用列。
+不需要為各個列指定設計。 可在設計模式下定義可用列。
 
 >[!NOTE]
 >
->建議您不要對標準報表設計進行任何變更。 這是為了確保您不會在升級或安裝Hotfix時遺失任何變更。
+>建議不要對標準報告設計進行任何更改。 這是為了確保在升級或安裝修補程式時不會丟失任何更改。
 >
->如果您想自訂標準報表，請複製報表及其設計。
+>如果要自定義標準報表，請複製報表及其設計。
 
 >[!NOTE]
 >
->建立報表時，可自動建立預設欄。 這些在範本中指定。
+>在建立報表時，可以自動建立預設列。 這些是在模板中指定的。
 
-## 報表範本 {#report-template}
+## 報表模板 {#report-template}
 
-每種報表類型都必須提供範本。 這些是標準的 [CQ範本](/help/sites-developing/templates.md) 可依此設定。
+每個報告類型都必須提供模板。 這些是標準 [CQ模板](/help/sites-developing/templates.md) 可以這樣配置。
 
-範本必須：
+模板必須：
 
-* 設定 `sling:resourceType` to `cq/reporting/components/reportpage`
+* 設定 `sling:resourceType` 至 `cq/reporting/components/reportpage`
 
-* 指明要使用的設計
+* 指示要使用的設計
 * 建立 `report` 引用容器的子節點( `reportbase`)元件 `sling:resourceType` 屬性
 
-範本片段範例（取自元件報表範本）為：
+示例模板段（取自元件報告模板）為：
 
 ```xml
 <!-- ... -->
@@ -1140,7 +1140,7 @@ N:cq:editConfig [cq:EditConfig]
 <!-- .. -->
 ```
 
-範本片段範例顯示根路徑的定義（取自使用者報表範本）為：
+顯示根路徑（取自用戶報告模板）定義的示例模板片段是：
 
 ```xml
 <!-- ... -->
@@ -1156,11 +1156,11 @@ N:cq:editConfig [cq:EditConfig]
 <!-- .. -->
 ```
 
-預設報表範本保留於 `/libs/cq/reporting/templates`.
+預設報告模板保存在 `/libs/cq/reporting/templates`。
 
-不過，強烈建議您不要更新這些節點，而是在下方建立您自己的元件節點 `/apps/cq/reporting/templates` 若更合適 `/apps/<yourProject>/reports/templates`.
+但是，強烈建議您不要更新這些節點，而是在以下位置建立自己的元件節點 `/apps/cq/reporting/templates` 或者如果合適 `/apps/<yourProject>/reports/templates`。
 
-其中，作為範例(另請參閱 [報表元件的位置](#location-of-report-components)):
+其中，作為示例(另請參見 [報表元件的位置](#location-of-report-components)):
 
 ```xml
 N:apps
@@ -1169,7 +1169,7 @@ N:apps
             N:templates [sling:Folder]
 ```
 
-在此底下，您可建立範本的根：
+在此下，您為模板建立根：
 
 ```xml
 N:apps
@@ -1179,28 +1179,28 @@ N:apps
                 N:<reportname> [sling:Folder]
 ```
 
-## 建立您自己的報表 — 範例 {#creating-your-own-report-an-example}
+## 建立您自己的報告 — 示例 {#creating-your-own-report-an-example}
 
 ### 定義新報表 {#defining-your-new-report}
 
-若要定義新報表，您必須建立並設定：
+要定義新報告，必須建立和配置：
 
 1. 報表元件的根。
-1. 報表庫元件。
+1. 報表基元件。
 1. 一個或多個列基元件。
-1. 報表設計。
-1. 報表範本的根。
-1. 報表範本。
+1. 報告設計。
+1. 報表模板的根。
+1. 報表模板。
 
-為了說明這些步驟，以下範例定義了一份報告，其中列出儲存庫內的所有OSGi設定；即， `sling:OsgiConfig` 節點。
+為了說明這些步驟，以下示例定義了一個報告，其中列出了儲存庫中的所有OSGi配置；即所有 `sling:OsgiConfig` 的下界。
 
 >[!NOTE]
 >
->複製現有報表，然後自訂新版本是另一種方法。
+>複製現有報告，然後自定義新版本是一種替代方法。
 
 1. 為新報表建立根節點。
 
-   例如，在 `/apps/cq/reporting/components/osgireport`.
+   例如，在 `/apps/cq/reporting/components/osgireport`。
 
    ```xml
    N:cq [nt:folder]
@@ -1209,7 +1209,7 @@ N:apps
                N:osgireport [sling:Folder]
    ```
 
-1. 定義報表庫。 例如 `osgireport[cq:Component]` 在 `/apps/cq/reporting/components/osgireport`.
+1. 定義報表庫。 例如 `osgireport[cq:Component]` 在 `/apps/cq/reporting/components/osgireport`。
 
    ```xml
    N:osgireport [sling:Folder]
@@ -1255,13 +1255,13 @@ N:apps
                P:nodeTypes [String[]] = "sling:OsgiConfig"
    ```
 
-   這會定義報表基礎元件，其功能包括：
+   這定義了一個報表基元件，它：
 
    * 搜索所有類型的節點 `sling:OsgiConfig`
-   * 同時顯示 `pie` 和 `lineseries` 圖表
-   * 提供對話方塊供使用者設定報表
+   * 顯示 `pie` 和 `lineseries` 圖表
+   * 為用戶提供了配置報告的對話框
 
-1. 定義第一列（列基）元件。 例如 `bundlecol[cq:Component]` 在 `/apps/cq/reporting/components/osgireport`.
+1. 定義第一列（列基）元件。 例如 `bundlecol[cq:Component]` 在 `/apps/cq/reporting/components/osgireport`。
 
    ```xml
    N:osgireport [sling:Folder]
@@ -1289,18 +1289,18 @@ N:apps
                    P:property [String] = "jcr:path"
    ```
 
-   這會定義一個列基元件，該元件包括：
+   這定義了列基元件，該元件：
 
-   * 搜尋並傳回從伺服器收到的值；在此案例中，屬性 `jcr:path` 每 `sling:OsgiConfig` 節點
-   * 提供 `count` 匯總
-   * 無法分組
-   * 有標題 `Bundle` （表格內的欄標題）
-   * 是sidekick組 `OSGi Report`
-   * 在指定事件中刷新
+   * 搜索並返回從伺服器接收的值；在這種情況下，該屬性 `jcr:path` 每 `sling:OsgiConfig` 節點
+   * 提供 `count` 集合
+   * 不可分組
+   * 有標題 `Bundle` （表中的列標題）
+   * 在旁邊隊 `OSGi Report`
+   * 刷新指定的事件
 
    >[!NOTE]
    >
-   >在此範例中， `N:data` 和 `P:clientFilter`. 這是因為從伺服器收到的值是以1:1為基礎傳回的 — 這是預設行為。
+   >在本示例中，沒有 `N:data` 和 `P:clientFilter`。 這是因為從伺服器收到的值是按1:1返回的 — 這是預設行為。
    >
    >這與定義相同：
    >
@@ -1310,9 +1310,9 @@ N:apps
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
    >
-   >其中，函式只會傳回其收到的值。
+   >其中，函式只返回其接收的值。
 
-1. 定義報表設計。 例如 `osgireport[cq:Page]` 在 `/etc/designs/reports`.
+1. 定義報表設計。 例如 `osgireport[cq:Page]` 在 `/etc/designs/reports`。
 
    ```xml
    N:osgireport [cq:Page]
@@ -1326,9 +1326,9 @@ N:apps
                        P:sling:resourceType [String] = "cq/reporting/components/repparsys"
    ```
 
-1. 為新報表範本建立根節點。
+1. 為新報表模板建立根節點。
 
-   例如，在 `/apps/cq/reporting/templates/osgireport`.
+   例如，在 `/apps/cq/reporting/templates/osgireport`。
 
    ```xml
    N:cq [nt:folder]
@@ -1337,7 +1337,7 @@ N:apps
                N:osgireport [cq:Template]
    ```
 
-1. 定義報表範本。 例如 `osgireport[cq:Template]` 在 `/apps/cq/reporting/templates`.
+1. 定義報表模板。 例如 `osgireport[cq:Template]` 在 `/apps/cq/reporting/templates`。
 
    ```xml
    N:osgireport [cq:Template]
@@ -1355,26 +1355,26 @@ N:apps
        N:thumbnail.png [nt:file]
    ```
 
-   這會定義一個範本，其中：
+   這定義了一個模板：
 
-   * 定義 `allowedPaths` 對於產生的報表 — 在上述案例中， `/etc/reports`
-   * 提供範本的標題和說明
-   * 提供範本清單中要使用的縮圖影像（上方未列出此節點的完整定義 — 最簡單的方式是從現有報表複製thumbnail.png例項）。
+   * 定義 `allowedPaths` 對於結果報告 — 在上例中，位於 `/etc/reports`
+   * 提供模板的標題和說明
+   * 提供在模板清單中使用的縮略圖（上面未列出此節點的完整定義 — 最容易從現有報告中複製thumbnail.png實例）。
 
-### 建立新報表的例項 {#creating-an-instance-of-your-new-report}
+### 建立新報表的實例 {#creating-an-instance-of-your-new-report}
 
-現在可以建立新報表的例項：
+現在可以建立新報告的實例：
 
 1. 開啟 **工具** 控制台。
 
-1. 選擇 **報表** 在左窗格中。
-1. 然後 **新……** 的上界。 定義 **標題** 和 **名稱**，請選取新的報表類型( **OSGi報表範本**)，然後按一下 **建立**.
-1. 您的新報表例項會出現在清單中。 按兩下以開啟。
-1. 拖曳元件(在此範例中， **捆綁** 在 **OSGi報表** group)建立第一欄和 [啟動報表定義](/help/sites-administering/reporting.md#the-basics-of-report-customization).
+1. 選擇 **報告** 的下界。
+1. 然後 **新建……** 的子菜單。 定義 **標題** 和 **名稱**，選擇新報告類型( **OSGi報表模板**)，然後按一下 **建立**。
+1. 您的新報告實例將出現在清單中。 按兩下此按鈕以開啟。
+1. 拖動元件(對於此示例， **捆綁** 的 **OSGi報告** 組)以建立第一列和 [啟動報表定義](/help/sites-administering/reporting.md#the-basics-of-report-customization)。
 
    >[!NOTE]
    >
-   >由於此示例沒有任何可分組的列，因此圖表將不可用。 要查看圖表，請設定 `groupable` to `true`:
+   >由於此示例沒有任何可分組的列，因此圖表將不可用。 要查看圖表，請設定 `groupable` 至 `true`:
    >
    >
    ```
@@ -1384,47 +1384,47 @@ N:apps
    > P:groupable [Boolean] = true
    >```
 
-## 設定報表架構服務 {#configuring-the-report-framework-services}
+## 配置Report Framework服務 {#configuring-the-report-framework-services}
 
-本節說明實作報表架構之OSGi服務的進階設定選項。
+本節介紹用於實現報告框架的OSGi服務的高級配置選項。
 
-您可以使用Web主控台的「設定」功能表來檢視這些項目(例如 `http://localhost:4502/system/console/configMgr`)。 使用AEM時，有數種方法可管理這類服務的組態設定；請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議的實務。
+可使用Web控制台的「配置」菜單查看這些內容(例如， `http://localhost:4502/system/console/configMgr`)。 使用時，AEM有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的子菜單。
 
-### 基本服務(Day CQ Reporting Configuration) {#basic-service-day-cq-reporting-configuration}
+### 基本服務（第CQ天報告配置） {#basic-service-day-cq-reporting-configuration}
 
-* **時區** 定義為建立的時區歷史資料。 這是為了確保歷史圖表為全球每位使用者顯示相同的資料。
-* **地區** 定義要與 **時區** 的URL。 區域設定用於確定某些特定於區域設定的日曆設定（例如，一週的第一天是星期日還是星期一）。
+* **時區** 定義為建立的時區歷史資料。 這是為了確保歷史圖表顯示全球每個用戶的相同資料。
+* **區域設定** 定義要與 **時區** 歷史資料。 區域設定用於確定某些特定於區域設定的日曆設定（例如，一週的第一天是星期日還是星期一）。
 
 * **快照路徑** 定義儲存歷史圖表快照的根路徑。
-* **報表路徑** 定義報表所在的路徑。 快照服務將使用此功能來確定要為其實際拍攝快照的報表。
-* **每日快照** 定義每日快照拍攝時的每天小時。 指定的小時位於伺服器的本地時區。
-* **每小時快照** 定義每小時快照拍攝時的每小時分鐘。
-* **列數（最大值）** 定義了每個快照所儲存的最大行數。 應合理選擇此值；如果太高，則會影響儲存庫的大小，如果太低，資料可能不準確，因為歷史資料的處理方式。
-* **假資料**，若已啟用，則可使用 `fakedata` 選取器；如果已停用，請使用 `fakedata` 選取器會擲回例外狀況。
+* **報告路徑** 定義報告所在的路徑。 快照服務使用此功能來確定要實際為其拍攝快照的報告。
+* **每日快照** 定義每天拍攝快照的小時數。 指定的小時在伺服器的本地時區。
+* **每小時快照** 定義拍攝每小時快照時的分鐘數。
+* **行（最大）** 定義為每個快照儲存的最大行數。 應合理選擇該值；如果太高，則會影響儲存庫的大小，如果太低，則資料可能不準確，因為歷史資料的處理方式。
+* **假資料**，如果啟用，則可以使用 `fakedata` 選擇器；如果禁用，則使用 `fakedata` 選擇器將引發異常。
 
-   由於資料是假的，它必須 *僅限* 用於測試和偵錯。
+   因為資料是假的，所以 *僅* 用於測試和調試。
 
-   使用 `fakedata` 選取器會以隱含方式完成報表，因此所有現有資料都會遺失；資料可以手動還原，但這可能會是個耗時的程式。
+   使用 `fakedata` selector將隱式完成報告，因此所有現有資料都將丟失；資料可以手動恢復，但這可能是一個耗時的過程。
 
 * **快照用戶** 定義可用於拍攝快照的可選用戶。
 
-   基本上，快照是為已完成報告的用戶拍攝的。 在某些情況下（例如，在發佈系統上，此使用者不存在，因為其帳戶尚未復寫），您會想要指定一個使用的後援使用者。
+   基本上，為完成報告的用戶拍攝快照。 可能存在您希望指定備用用戶的情況（例如，在發佈系統上，此用戶不存在，因為其帳戶尚未複製）。
 
-   此外，指定使用者可能會帶來安全風險。
+   此外，指定用戶可能會帶來安全風險。
 
-* **強制快照用戶**，如果啟用，則所有快照都將使用 *快照用戶*. 如果處理不正確，可能會對安全性造成嚴重影響。
+* **強制快照用戶**，如果啟用，則所有快照都將使用在下指定的用戶拍攝 *快照用戶*。 如果處理不正確，可能會對安全造成嚴重影響。
 
-### 快取設定(Day CQ Reporting Cache) {#cache-settings-day-cq-reporting-cache}
+### 快取設定（第CQ天報告快取） {#cache-settings-day-cq-reporting-cache}
 
-* **啟用** 可讓您啟用或停用報表資料的快取。 啟用報表快取，會在數個請求期間將報表資料保留在記憶體中。 這可能會提高效能，但會導致記憶體消耗增加，在極端情況下，可能會導致記憶體不足。
-* **TTL** 會定義快取報表資料的時間（以秒為單位）。 數字越高，效能越好，但若資料在某個時段內變更，則可能也會傳回不正確的資料。
-* **登入次數上限** 定義任何時候要快取的報表數上限。
+* **啟用** 允許您啟用或禁用報表資料的快取。 啟用報告快取將在多個請求期間將報告資料保留在記憶體中。 這可能會提高效能，但會導致記憶體消耗增加，在極端情況下可能導致記憶體不足。
+* **TTL** 定義快取報告資料的時間（秒）。 數量越高，效能越好，但如果資料在時間段內發生更改，也可能返回不準確的資料。
+* **最大條目數** 定義每次要快取的報告的最大數量。
 
 >[!NOTE]
 >
->每個使用者和語言的報表資料可能不同。 因此，系統會根據報表、使用者和語言快取報表資料。 這表示 **登入次數上限** 值 `2` 實際上快取資料，
+>每個用戶和語言的報告資料可能不同。 因此，按報告、用戶和語言快取報告資料。 這意味著 **最大條目數** 值 `2` 實際快取資料：
 >
->* 使用不同語言設定的兩個使用者，一個報表
->* 一個使用者和兩個報表
+>* 兩個具有不同語言設定的用戶的一個報告
+>* 一個用戶和兩個報告
 >
 

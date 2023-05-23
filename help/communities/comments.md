@@ -1,7 +1,7 @@
 ---
 title: 使用注釋
 seo-title: Using Comments
-description: 「注釋」功能可讓登入的網站訪客分享其意見和知識
+description: 評論功能允許登錄站點訪問者共用他們的觀點和知識
 seo-description: Comments feature lets signed-in site visitors share their opinions and knowledge
 uuid: 40acd962-846c-483c-b789-aab3a7d2b31b
 contentOwner: msm-service
@@ -22,188 +22,188 @@ ht-degree: 4%
 
 ## 簡介 {#introduction}
 
-評論功能可讓登入的網站訪客（成員）分享其對網站內容的意見和知識。 此功能通常已存在於其他功能中，但可新增至任何網站。
+評論功能用於允許登錄站點訪問者（成員）共用他們對站點上的內容的意見和知識。 此功能通常已在其他功能中出現，但可以添加到任何網站。
 
 文檔描述：
 
-* 新增 `Comments` 到頁面。
-* 的組態設定 `Comments` 元件。
+* 添加 `Comments` 到頁面。
+* 的配置設定 `Comments` 元件。
 
 >[!NOTE]
 >
->不支援匿名發佈評論。 網站訪客必須註冊（成為會員）並登入以參與。
+>不支援匿名發佈注釋。 站點訪問者必須註冊（成為成員）並登錄以參與。
 
-### 新增註解至頁面 {#adding-comments-to-a-page}
+### 向頁面添加註釋 {#adding-comments-to-a-page}
 
-新增 `Comments` 在製作模式中，使用元件瀏覽器來尋找
+添加 `Comments` 在作者模式下對頁面的元件，使用元件瀏覽器查找
 
 * `Communities / Comments`
 
-並將其拖曳至頁面上的位置，例如與功能相對的位置，供使用者註解，或只是拖曳至頁面底部。
+並將其拖到頁面上，例如相對於功能的位置供用戶注釋，或僅在頁面底部。
 
-如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
+如需必要資訊，請訪問 [社區元件基礎](/help/communities/basics.md)。
 
-當 [必要的用戶端程式庫](/help/communities/essentials-comments.md#essentials-for-client-side) 包含在內，以下為方式 `Comments` 元件隨即出現。
+當 [所需的客戶端庫](/help/communities/essentials-comments.md#essentials-for-client-side) 包括，這是 `Comments` 的下界。
 
-![comments-component](assets/comments-component.png)
+![注釋元件](assets/comments-component.png)
 
 >[!NOTE]
 >
->只有一個 `Comments` 元件可能存在於頁面上。 請注意，幾個Communities功能已包括注釋，如部落格、日曆、論壇、QnA和評論。
+>只有一個 `Comments` 元件可能存在於頁面中。 請注意，幾個社區功能已包括注釋，如部落格、日曆、論壇、QnA和評論。
 
 ### 配置注釋 {#configuring-comments}
 
-選取已放置的 `Comments` 要存取的元件並選取 `Configure` 表徵圖，開啟「編輯」對話框。
+選取已放置的 `Comments` 要訪問和選擇的元件 `Configure` 表徵圖。
 
 ![配置表徵圖](assets/configure.png)
 
 ![注釋設定](assets/commentssettings.png)
 
-#### 「注釋」頁簽 {#comments-tab}
+#### 「注釋」頁籤 {#comments-tab}
 
-在 **註解** 頁簽，指定訪客如何輸入留言。
+在 **注釋** 頁籤，指定訪問者如何輸入注釋。
 
 * **允許回覆**
 
-   如果選中，則允許成員答復現有評論。 已取消選取預設值。
+   如果選中，則允許成員回復現有注釋。 取消選擇預設值。
 
 * **每頁的評論數**
 
-   限制每頁顯示的留言數和顯示的回覆數。 預設為10。
+   限制每頁顯示的注釋數和顯示的回複數。 預設值為10。
 
 * **允許檔案上傳**
 
-   如果勾選此選項，上傳檔案的選項會顯示文字輸入方塊。 已取消選取預設值。
+   如果選中，則會在文本輸入框中顯示上載檔案的選項。 取消選擇預設值。
 
 * **最大檔案大小**
 
-   僅在勾選「允許檔案上傳」時相關。 此值會限制上傳的檔案大小。 預設限制為10 MB。
+   僅當選中「允許檔案上載」時相關。 此值限制上載的檔案大小。 預設限制為10 MB。
 
 * **訊息長度上限**
 
-   可輸入文本框的字元數上限。 預設為4096個字元。
+   可輸入到文本框中的最大字元數。 預設為4096個字元。
 
 * **允許的檔案類型**
 
-   僅在勾選「允許檔案上傳」時相關。 以逗號分隔的副檔名清單，並帶有&quot;dot&quot;分隔符。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   僅當選中「允許檔案上載」時相關。 以逗號分隔的帶有&quot;dot&quot;分隔符的檔案名副檔名清單。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
 
 * **RTF 編輯器**
 
-   如果選中，則輸入帶有標注的注釋。 已取消選取預設值。
+   如果選中，則輸入注釋並帶有標籤。 取消選擇預設值。
 
 * **允許投票**
 
-   如果選中，則會顯示「上下投票」選項和文本輸入框。 已取消選取預設值。
+   如果選中，則將顯示「上投」或「下投」選項，並顯示文本輸入框。 取消選擇預設值。
 
 * **允許關注**
 
-   如果選中，則允許成員遵循注釋。 已取消選取預設值。
+   如果選中，則允許成員跟蹤注釋。 取消選擇預設值。
 
 * **顯示徽章**
 
-   如果選中，則允許顯示已獲得和已獲得徽章。 已取消選取預設值。
+   如果選中，則允許顯示已獲得和已授予的徽章。 取消選擇預設值。
 
-#### 使用者協調標籤 {#user-moderation-tab}
+#### 「用戶審核」頁籤 {#user-moderation-tab}
 
-在 **使用者協調** 頁簽，指定如何管理已發佈的留言。 如需詳細資訊，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md).
+在 **用戶審核** 頁籤，指定如何管理已發佈的注釋。 有關詳細資訊，請參見 [調節用戶生成的內容](/help/communities/moderate-ugc.md)。
 
 * **事先審核**
 
-   如果勾選此選項，留言必須先經過核准，才會顯示在發佈網站上。 已取消選取預設值。
+   如果選中，則必須在注釋出現在發佈站點之前批准它們。 取消選擇預設值。
 
 * **刪除注釋**
 
-   如果選中，則發佈評論的成員將能夠刪除評論。 已取消選取預設值。
+   如果選中，則發佈注釋的成員將能夠刪除注釋。 取消選擇預設值。
 
-* **拒絕評論**
+* **拒絕注釋**
 
-   如果勾選此選項，允許協調者拒絕留言。 已取消選取預設值。
+   如果選中，則允許審閱人拒絕評論。 取消選擇預設值。
 
 * **關閉/重新開啟注釋**
 
-   如果勾選此選項，則允許協調者關閉和重新開啟留言。 已取消選取預設值。
+   如果選中，允許審閱人關閉並重新開啟注釋。 取消選擇預設值。
 
-* **標幟留言**
+* **標籤注釋**
 
-   如果選中，允許成員將注釋標籤為不適當。 已取消選取預設值。
+   如果選中，允許成員將注釋標籤為不適當。 取消選擇預設值。
 
 * **標誌原因清單**
 
-   如果選中，則允許成員從下拉清單中選擇其標籤注釋為不適當的原因。 已取消選取預設值。
+   如果選中，則允許成員從下拉清單中選擇其標籤注釋為不恰當的原因。 取消選擇預設值。
 
-* **自訂標幟原因**
+* **自定義標誌原因**
 
-   如果選中，則允許成員輸入自己的理由，以將評論標籤為不適當。 已取消選取預設值。
+   如果選中，允許成員輸入將注釋標籤為不適當的自己原因。 取消選擇預設值。
 
-* **協調臨界值**
+* **審核閾值**
 
-   輸入通知協調者前，成員必須標籤評論的次數。 預設為一次(1)。
+   輸入成員在通知審閱人之前必須標籤注釋的次數。 預設值為一次(1)。
 
-* **標幟限制**
+* **標籤限制**
 
-   輸入在從公共視圖中隱藏評論之前必須標籤該評論的次數。 此數字必須大於或等於 **協調臨界值**. 預設為5。
+   輸入注釋在公共視圖中隱藏之前必須標籤的次數。 此數字必須大於或等於 **審核閾值**。 預設值為5。
 
-#### 排序設定標籤 {#sort-settings-tab}
+#### 「排序設定」頁籤 {#sort-settings-tab}
 
-在 **排序設定** 頁簽，指定在顯示張貼的留言時排序的方式。
+在 **排序設定** 頁籤，指定在顯示已過帳注釋時如何排序。
 
 * **排序欄位**
 
-   下拉式清單以選取其中一個 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`，或 `Most Liked`.
+   下拉以選擇其中一個 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`或 `Most Liked`。
 
 * **排序順序**
 
-   下拉式清單以選取其中一個 `Ascending` 或 `Descending`.
+   下拉以選擇其中一個 `Ascending` 或 `Descending`。
 
 ### 更改為自定義注釋類型 {#changing-to-a-custom-comment-type}
 
-通過更改「注釋資源類型」，注釋系統不再使用預設值生成注釋實例，而是由開發人員自定義（擴展）的實例。
+通過更改注釋資源類型，注釋系統不再使用預設值生成注釋實例，而是使用開發人員自定義（擴展）的注釋實例。
 
-知道自訂資源類型後，請輸入 [設計模式](/help/sites-authoring/default-components-designmode.md) 並按兩下已放置 `Comments` 元件，以開啟含有額外索引標籤的對話方塊。
+在已知自定義資源類型後，輸入 [設計模式](/help/sites-authoring/default-components-designmode.md) 並按兩下放置的 `Comments` 的子菜單。
 
-在 **資源類型** 頁簽中，指定新實例的自定義資源類型 `Comments or Voting` 元件：
+在 **資源類型** 頁籤，為 `Comments or Voting` 元件：
 
 ![資源類型](assets/resource-type.png)
 
 * **評論資源類型**
 
-   導覽至延伸功能的resourceType `comment` /apps中的元件（單條注釋）。 例如, `/apps/social/commons/components/hbs/comments/comment`
+   導航到擴展的resourceType `comment` /apps中的元件（單個注釋）。 例如 `/apps/social/commons/components/hbs/comments/comment`
 
-   此資源可識別訪客發佈留言時所建立之UGC的resourceType。
+   此資源標識訪問者發佈注釋時建立的UGC的resourceType。
 
 * **投票資源類型**
 
-   導覽至延伸功能的resourceType `voting` 元件。 例如, `/apps/social/components/hbs/voting`
+   導航到擴展的resourceType `voting` /apps中的元件。 例如 `/apps/social/components/hbs/voting`
 
-   此資源可識別訪客張貼投票時所建立之UGC的資源類型。
+   此資源標識訪問者投票時建立的UGC的資源類型。
 
 * **注釋系統資源類型**
 
-   導覽至延伸功能的resourceType `comments`/apps中的元件（注釋系統）。 除非頁面範本，否則保留空白 [動態包含](/help/communities/scf.md#add-or-include-a-communities-component) 基礎指令碼中的「註解系統」，而非以資源（註解節點）的形式新增至頁面。 閱讀 [{{include}} 協助者](/help/communities/handlebars-helpers.md#include).
+   導航到擴展的resourceType `comments`/apps中的元件（注釋系統）。 除非頁面模板，否則保留為空 [動態包](/help/communities/scf.md#add-or-include-a-communities-component) 在基礎指令碼中添加註釋系統，而不是作為資源（注釋節點）添加到頁面。 通過閱讀 [{{include}} 幫助](/help/communities/handlebars-helpers.md#include)。
 
-### 網站訪客體驗 {#site-visitor-experience}
+### 站點訪問者體驗 {#site-visitor-experience}
 
-#### 協調者與管理員 {#moderators-and-administrators}
+#### 審閱人和管理員 {#moderators-and-administrators}
 
-當登入的使用者擁有版主或管理員權限時，無論是誰編寫評論，他們都能執行元件組態所允許的協調工作。
+當登錄用戶具有版主或管理員權限時，他們能夠執行元件配置允許的審核任務，而不管是誰建立了注釋。
 
 #### 成員 {#members}
 
-網站訪客登入時（視設定而定），可能會
+站點訪問者登錄時，根據配置的不同，他們可能
 
-* 張貼新留言
-* 編輯自己的注釋
-* 刪除自己的評論
-* 標幟其他人的留言
+* 發佈新評論
+* 編輯自己的評論
+* 刪除其自己的注釋
+* 標籤其他評論
 
 #### 匿名 {#anonymous}
 
-未登入的網站訪客只能閱讀已張貼的留言、翻譯留言（如有支援），但不得新增留言，也不得標籤其他人的留言。
+未登錄的網站訪問者只能閱讀已發佈的評論，如果支援，可翻譯這些評論，但不能添加評論或標籤其他評論。
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [注釋要點](/help/communities/essentials-comments.md) 頁面。
+有關 [注釋要點](/help/communities/essentials-comments.md) 頁面。
 
-如需已張貼留言的協調，請參閱 [協調使用者產生的內容](/help/communities/moderate-ugc.md).
+有關審核已發佈的注釋，請參閱 [調節用戶生成的內容](/help/communities/moderate-ugc.md)。
 
-如需已張貼留言的翻譯，請參閱 [轉譯使用者產生的內容](/help/communities/translate-ugc.md).
+有關已發佈注釋的翻譯，請參閱 [翻譯用戶生成的內容](/help/communities/translate-ugc.md)。

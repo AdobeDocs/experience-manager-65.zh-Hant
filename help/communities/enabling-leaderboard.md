@@ -1,7 +1,7 @@
 ---
 title: 排行榜功能
 seo-title: Leaderboard Feature
-description: 將排行榜元件新增至頁面
+description: 將排行榜元件添加到頁面
 seo-description: Adding a Leaderboard component to a page
 uuid: c4633919-75d3-4bc7-830c-ef9c28cc1cba
 contentOwner: msm-service
@@ -22,97 +22,97 @@ ht-degree: 10%
 
 ## 簡介 {#introduction}
 
-此 `Leaderboard` 元件可讓您根據獲得的分數（基本分數）或其專業知識（進階分數）對成員進行排名，以了解成員在社群中的互動方式。
+的 `Leaderboard` 元件提供了通過根據所得分數（基本評分）或其專業知識（高級評分）對成員進行排名來瞭解成員在社區內如何交互的能力。
 
-在頁面上加入排行榜元件之前，必須先設定 [社群計分和徽章](/help/communities/implementing-scoring.md).
+在將排行榜元件包含在頁面之前，必須配置 [社區評分和徽章](/help/communities/implementing-scoring.md)。
 
-本檔案的本節說明：
+文檔的本節介紹：
 
-* 新增 `Leaderboard` 元件 [社群網站](/help/communities/overview.md#community-sites).
-* 的組態設定 `Leaderboard` 元件。
+* 添加 `Leaderboard` 元件 [社區站點](/help/communities/overview.md#community-sites)。
+* 的配置設定 `Leaderboard` 元件。
 
-### 向頁面新增排行榜 {#adding-a-leaderboard-to-a-page}
+### 將排行榜添加到頁面 {#adding-a-leaderboard-to-a-page}
 
-新增 `Leaderboard` 在製作模式中，找到元件至頁面
+添加 `Leaderboard` 在作者模式下將元件定位到頁面
 
 * `Communities / Leaderboard`
 
-並將其拖曳到頁面上。
+然後拖到頁面上。
 
-如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
+如需必要資訊，請訪問 [社區元件基礎](/help/communities/basics.md)。
 
-首次放置在社群網站的頁面時，元件的顯示方式如下：
+首次放置在社區站點的頁面上時，元件的顯示方式如下：
 
 ![領導](assets/leaderboard.png)
 
 ### 配置排行榜 {#configuring-leaderboard}
 
-選取已放置的 `Leaderboard` 要存取的元件並選取 `Configure` 表徵圖，開啟「編輯」對話框。
+選取已放置的 `Leaderboard` 要訪問和選擇的元件 `Configure` 表徵圖。
 
-![configure-new](assets/configure-new.png)
+![配置 — 新建](assets/configure-new.png)
 
-![配置排行榜](assets/configure-leaderboard.png)
+![配置領導板](assets/configure-leaderboard.png)
 
-#### 設定標籤 {#settings-tab}
+#### 「設定」頁籤 {#settings-tab}
 
-在 **[!UICONTROL 設定]** 頁簽，指定顯示與成員相關的資訊：
+在 **[!UICONTROL 設定]** 頁籤，指定顯示與成員相關的資訊：
 
 * **顯示名稱**
 
-   要為展示板顯示的描述性名稱，反映為顯示徽章和分數而選取的規則。
-預設為 `Leaderboard`，如果未輸入任何內容。
+   用於顯示主板的描述性名稱，反映為顯示徽章和分數而選擇的規則。
+預設值為 `Leaderboard`，則不輸入。
 
 * **徽章**
 
-   如果勾選此選項，排行榜中會包含徽章圖示的欄。
-預設為未勾選。
+   如果選中，則標籤表徵圖的列將包括在排行榜中。
+未選中預設值。
 
 * **徽章名稱**
 
-   如果選中，則排行榜中將包含徽章名稱的列。
-預設為未勾選。
+   如果選中，則標籤名稱的列將包括在排行榜中。
+未選中預設值。
 
-* **使用頭像**
+* **使用虛擬形象**
 
-   如果選中，成員的頭像影像將包含在排行榜中，位於其成員配置檔案的名稱連結旁。
-預設為未勾選。
+   如果選中，成員的虛擬形象影像將包含在排行榜中，位於其成員配置檔案的名稱連結旁邊。
+未選中預設值。
 
-#### 規則標籤 {#rules-tab}
+#### 「規則」頁籤 {#rules-tab}
 
-在 **規則** 頁簽、社區站點及其評分和標籤規則
+在 **規則** 頁籤、社區網站及其評分和標籤規則
 
 * **規則位置**
 
-   （必要）設定計分/徽章規則的位置。
+   （必需）配置「評分/簽名」規則的位置。
 
 * **得分規則**
 
-   （必要）產生要顯示的分數的特定規則。
+   （必需）生成要顯示的分數的特定規則。
 
 * **徽章規則**
 
-   （必要）產生徽章以顯示的特定規則。
+   （必需）生成要顯示的徽章的特定規則。
 
 * **顯示限制**
 
-   每頁要顯示的成員數。預設為10。
+   每頁要顯示的成員數。預設值為10。
 
-### 範例：參加者領導委員會 {#example-participants-leaderboard}
+### 示例：參加者領導委員會 {#example-participants-leaderboard}
 
-此排行榜會報告應用基本評分規則的結果。
+此排行榜報告應用基本評分規則的結果。
 
 排行榜元件配置：
 
-* 設定標籤：
+* 設定頁籤：
 
    * 顯示名稱 = `Participation Board`
    * `checked`:
 
       * 徽章
       * 徽章名稱
-      * 使用頭像
+      * 使用虛擬形象
 
-* 規則標籤：
+* 規則頁籤：
 
    * 規則位置 = `/content/sites/<site name>/jcr:content`
    * 得分規則 = `/libs/settings/community/scoring/rules/forums-scoring`
@@ -121,31 +121,31 @@ ht-degree: 10%
 
 ![參與者領導委員會](assets/participants-leaderboard.png)
 
-### 範例：專家領導委員會 {#example-experts-leaderboard}
+### 示例：專家領導委員會 {#example-experts-leaderboard}
 
-此排行榜會報告應用高級評分規則的結果。
+此排行榜會報告應用高級評分規則後的結果。
 
 排行榜元件配置：
 
-* 設定標籤：
+* 設定頁籤：
 
    * 顯示名稱 = `Expertise Board`
    * `checked`:
 
       * 徽章
-      * 使用頭像
+      * 使用虛擬形象
 
-* 規則標籤：
+* 規則頁籤：
 
    * 規則位置 = `/content/sites/<site name>/jcr:content`
    * 得分規則 = `/libs/settings/community/scoring/rules/adv-forums-scoring`
    * 徽章規則 = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 顯示限制 = `10`
 
-![專家組](assets/experts-leaderboard.png)
+![專家領導委員會](assets/experts-leaderboard.png)
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [排行榜要點](/help/communities/leaderboard.md) 頁面。
+有關 [排行榜要點](/help/communities/leaderboard.md) 頁面。
 
-有關建立規則的指示，請參閱 [社群計分和徽章](/help/communities/implementing-scoring.md) 頁面。
+有關建立規則的說明，請參見 [社區評分和徽章](/help/communities/implementing-scoring.md) 頁面。

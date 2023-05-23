@@ -1,7 +1,7 @@
 ---
-title: 將兩個AEM Forms工作區執行個體托管在一部伺服器上
+title: 在一台伺服器上托管兩個AEM Forms工作區實例
 seo-title: Hosting two AEM Forms workspace instances on one server
-description: LC管理員如何自訂HTMLWS以在可透過不同URL存取的單一伺服器上托管兩個執行個體。
+description: LC管理員如何自定義HTMLWS，以在可通過不同URL訪問的單個伺服器上承載兩個實例。
 seo-description: How LC administrators can customize HTML WS to host two instances on a single server accessible via different URLs.
 uuid: 0584f512-6b92-4418-b71c-93605cfa1927
 content-type: reference
@@ -16,20 +16,20 @@ ht-degree: 0%
 
 ---
 
-# 將兩個AEM Forms工作區執行個體托管在一部伺服器上 {#hosting-two-aem-forms-workspace-instances-on-one-server}
+# 在一台伺服器上托管兩個AEM Forms工作區實例 {#hosting-two-aem-forms-workspace-instances-on-one-server}
 
-AEM Forms的預設安裝與設定只允許在伺服器上使用一個AEM Forms工作區。 不過，您可能需要在單一AEM Forms伺服器上托管兩個不同的AEM Forms工作區例項。 這兩個例項可由不同URL存取。
+AEM Forms的預設安裝和設定只允許在伺服器上使用一個AEM Forms工作區。 但是，您可能需要在單個AEM Forms伺服器上托管兩個不同的AEM Forms工作區實例。 兩個實例可通過不同的URL訪問。
 
-AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩個工作區可在同一伺服器上使用。 在此自訂文章中，我們假設兩個工作區可在 `https://'[server]:[port]'/lc/ws` 和 `https://'[server]:[port]':/lc/ws2`.
+AEM Forms管理員自定義工作區，以建立兩個不同的URL，並使兩個工作區在同一伺服器上可用。 在本定制文章中，我們假定兩個工作區可以訪問 `https://'[server]:[port]'/lc/ws` 和 `https://'[server]:[port]':/lc/ws2`。
 
-請依照下列步驟來設定AEM Forms工作區。
+按照以下步驟配置AEM Forms工作區。
 
-1. 在伺服器上安裝AEM Forms工作區的開發套件。 請參閱 [開發套件](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)，以取得建立此範本的指示。
-1. 以管理員身分登入CRXDE Lite，方法是存取 `https://'[server]:[port]'/lc/crx/de/index.jsp`.
-1. 複製節點在/content，然後貼到/content。 將節點更名為ws2。 按一下 **[!UICONTROL 全部儲存]**. 在此節點的屬性中，更改 `sling:resourceType` 到ws2。 按一下 **[!UICONTROL 全部儲存]**.
+1. 在伺服器上安裝AEM Forms工作區的dev包。 請參閱 [dev程式包](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)，以獲取建立它的說明。
+1. 以管理員身份登錄CRXDE Lite，訪問 `https://'[server]:[port]'/lc/crx/de/index.jsp`。
+1. 複製節點位於/content ，貼上於/content。 將節點更名為ws2。 按一下 **[!UICONTROL 全部保存]**。 在此節點的屬性中，更改 `sling:resourceType` 到ws2。 按一下 **[!UICONTROL 全部保存]**。
 
-1. 從/libs複製資料夾並貼到/apps。 將資料夾更名為ws2。 按一下 **[!UICONTROL 全部儲存]**.
-1. 在 `GET.jsp` at `/apps/ws2`，請變更下列程式碼。 取代下列項目
+1. 從/libs複製資料夾，然後貼上到/apps。 將資料夾更名為ws2。 按一下 **[!UICONTROL 全部保存]**。
+1. 在 `GET.jsp` 在 `/apps/ws2`，進行以下代碼更改。 替換以下
 
    ```html
    <html lang="en">
@@ -43,7 +43,7 @@ AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩�
        <meta http-equiv="refresh" content="0;URL='/lc/libs/ws/index.html'" />
    ```
 
-   及下列程式碼
+   具有以下代碼
 
    ```html
    <html lang="en">
@@ -53,7 +53,7 @@ AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩�
        <meta http-equiv="refresh" content="0;URL='/lc/apps/ws2/index.html'" />
    ```
 
-1. 在 `registry.js` at `/apps/ws2/js`，請變更範本路徑，以參考範本(位於 `/apps/ws2/js/runtime/templates`. 取代下列程式碼
+1. 在 `registry.js` 在 `/apps/ws2/js`，更改模板路徑以參考模板 `/apps/ws2/js/runtime/templates`。 替換以下代碼
 
    ```css
    "tasklist" : {
@@ -67,7 +67,7 @@ AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩�
    }
    ```
 
-   及下列程式碼
+   具有以下代碼
 
    ```css
    "tasklist" : {
@@ -81,16 +81,16 @@ AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩�
    }
    ```
 
-1. 在 `userinfo.js` at `/apps/ws2/js/runtime/models` 和 `/apps/ws2/js/runtime/views`，變更字串 `/lc/content/ws` to `lc/content/ws2`.
+1. 在 `userinfo.js` 在 `/apps/ws2/js/runtime/models` 和 `/apps/ws2/js/runtime/views`，更改字串 `/lc/content/ws` 至 `lc/content/ws2`。
 
-1. 在 `/apps/ws2/js/runtime/services/service.js`，請變更 `getLocalizationData` 函式指向 `/lc/apps/ws2/Locale.html`.
+1. 在 `/apps/ws2/js/runtime/services/service.js`，在中更改路徑 `getLocalizationData` 函式指向 `/lc/apps/ws2/Locale.html`。
 
-1. 若要參閱 `pdf.html` ，請變更 `pdf.html` in `/apps/ws2/js/runtime/views/forms/pdftaskform.js`.
+1. 請參閱 `pdf.html` 中，更改 `pdf.html` 在 `/apps/ws2/js/runtime/views/forms/pdftaskform.js`。
 
-1. 若要參閱 `pdf.html` ，變更 `pdf.html` 和 `WsNextAdapter.swf` in `startprocess.html`, `taskdetails.html`，和 `processinstancehistory.html` at `/apps/ws2/js/runtime/templates`.
+1. 請參閱 `pdf.html` 中，更改 `pdf.html` 和 `WsNextAdapter.swf` 在 `startprocess.html`。 `taskdetails.html`, `processinstancehistory.html` 在 `/apps/ws2/js/runtime/templates`。
 
-1. 複製 `/etc/map/ws` 資料夾和貼上位置 `/etc/map`. 將新資料夾更名為ws2。 按一下「全部儲存」 。
+1. 複製 `/etc/map/ws` 資料夾和貼上位置 `/etc/map`。 將新資料夾更名為ws2。 按一下「全部保存」。
 
-1. 在的屬性中 `ws2`，變更值 `sling:redirect` to `content/ws2`.
+1. 在屬性中 `ws2`，更改值 `sling:redirect` 至 `content/ws2`。
 
-1. 變更值 `sling:match` to `^[^/\||]/[^/\||]/ws2$`.
+1. 更改值 `sling:match` 至 `^[^/\||]/[^/\||]/ws2$`。

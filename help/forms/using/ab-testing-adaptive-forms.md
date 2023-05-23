@@ -1,7 +1,7 @@
 ---
-title: 建立和管理最適化表單的A/B測試
+title: 建立和管理自適應表單的A/Btest
 seo-title: Create and manage A/B test for adaptive forms
-description: AEM Forms與Adobe Target整合，可執行最適化表單的A/B測試，以增強客戶體驗並改善轉換率。
+description: AEM Forms公司與Adobe Target公司整合，允許運行A/Btest，以適應形式，以增強客戶體驗和提高轉換率。
 seo-description: AEM Forms integrates with Adobe Target that allows running A/B tests for adaptive forms to enhance customer experience and improve conversion rates.
 uuid: e258805c-4da8-4c5d-ae91-7bea78a6a71b
 content-type: reference
@@ -17,146 +17,146 @@ ht-degree: 0%
 
 ---
 
-# 建立和管理最適化表單的A/B測試{#create-and-manage-a-b-test-for-adaptive-forms}
+# 建立和管理自適應表單的A/Btest{#create-and-manage-a-b-test-for-adaptive-forms}
 
-[!BADGE 已終止]{type=negative tooltip="此功能現已終止"}
+[!BADGE 已終止]{type=negative tooltip="此功能現在已過期"}
 
-<div class="preview"> 適用性表單功能的A/B測試已到期，不再支援。 </div>
+<div class="preview"> 自適應表單功能的A/B測試已到期，不再受支援。 </div>
 
 ## 概觀 {#overview-br}
 
-如果您的客戶提供的體驗不吸引人，他們可能會放棄表單。 雖然讓客戶感到沮喪，但它還可以提高貴組織的支援量和成本。 識別並提供適當的客戶體驗以提高轉換率既重要又具挑戰性。 Adobe Experience Manager Forms是這個問題的關鍵。
+如果您的客戶提供的體驗不吸引人，他們可能會放棄表單。 雖然這讓客戶感到沮喪，但也會增加您組織的支援量和成本。 確定並提供適當的客戶體驗，提高轉換率，這既是關鍵，也是挑戰。 Adobe Experience Manager Forms是這個問題的關鍵。
 
-AEM Forms與Adobe Marketing Cloud解決方案Adobe Target整合，可跨多個數位頻道提供個人化且吸引人的客戶體驗。 Target的其中一項主要功能是A/B測試，可讓您快速設定同時進行的A/B測試、向目標使用者呈現相關內容，以及識別可帶來更高轉換率的體驗。
+AEM Forms公司與Adobe Marketing Cloud解決方案Adobe Target公司整合，在多個數字渠道提供個性化和引人入勝的客戶體驗。 目標的關鍵功能之一是A/B測試，它允許您快速設定併發的A/Btest，向目標用戶顯示相關內容，並確定能夠提高轉換率的體驗。
 
-透過AEM Forms，您可以即時在適用性表單上設定和執行A/B測試。 此外，它還提供現成可用且可自訂的報表功能，以視覺化您的表單體驗的即時效能，並找出可將使用者互動和轉換最大化的體驗。
+使用AEM Forms，您可以即時設定和運行自適應表單上的A/Btest。 它還提供了現成的和可定製的報告功能，以可視化您的表單體驗的即時效能，並確定能夠最大限度地提高用戶參與和轉換的效能。
 
-## 在AEM Forms中設定和整合Target {#set-up-and-integrate-target-in-aem-forms}
+## 在AEM Forms建立和整合目標 {#set-up-and-integrate-target-in-aem-forms}
 
-開始建立和分析最適化表單的A/B測試之前，您需要設定Target伺服器，並將其整合至AEM Forms。
+在開始建立和分析A/Btest以適應性表單之前，您需要設定目標伺服器並將其整合到AEM Forms。
 
-### 設定Target {#set-up-target}
+### 設定目標 {#set-up-target}
 
-若要將AEM與Target整合，請確定您擁有有效的Adobe Target帳戶。 向Adobe Target註冊時，您會收到用戶端代碼。 您需要用戶端代碼、與Target帳戶相關聯的電子郵件，以及密碼，才能將AEM與Target連線。
+要與目AEM標整合，請確保您有有效的Adobe Target帳戶。 在Adobe Target註冊時，您會收到客戶代碼。 您需要客戶端代碼、與目標帳戶關聯的電子郵件和密碼才能與AEM目標連接。
 
-用戶端代碼可識別Adobe Target客戶帳戶，並在呼叫Adobe Target伺服器時作為URL中的子網域使用。 繼續操作之前，登錄到 [https://experience.adobe.com/](https://experience.adobe.com/) 如果您有存取權，請檢視 [!DNL Adobe Target] 選項 [!UICONTROL 快速存取] 區段。
+客戶端代碼標識Adobe Target客戶帳戶，並在調用Adobe Target伺服器時用作URL中的子域。 繼續之前，請登錄到 [https://experience.adobe.com/](https://experience.adobe.com/) 如果您有權訪問，請查看 [!DNL Adobe Target] 的上界 [!UICONTROL 快速訪問] 的子菜單。
 
-### 在AEM Forms中整合Target {#integrate-target-in-aem-forms}
+### 整合目標在AEM Forms {#integrate-target-in-aem-forms}
 
-執行下列步驟來整合執行中的Target伺服器與AEM Forms:
+執行以下步驟將正在運行的目標伺服器與AEM Forms整合：
 
-1. 在AEM伺服器上，前往https://&lt;*主機名*>:&lt;*埠*>/libs/cq/core/content/tools/cloudservices.html。
+1. 在服AEM務器上，轉到https://&lt;*主機名*>:&lt;*埠*>/libs/cq/core/content/tools/cloudservices.html。
 
-1. 在 **Adobe Target** ，按一下 **顯示配置** 然後 **+** 圖示以新增設定。
-如果您是第一次設定目標，請按一下 **立即配置。**
+1. 在 **Adobe Target** ，按一下 **顯示配置** 然後 **+** 表徵圖以添加新配置。
+如果是首次配置目標，請按一下 **立即配置。**
 
-1. 在「建立設定」對話方塊中，指定 **標題** 和 **名稱** ，以取得設定。
+1. 在「建立配置」對話框中，指定 **標題** （可選） **名稱** 的子菜單。
 
-1. 按一下&#x200B;**建立**。「編輯元件」(Edit component)對話框開啟。
-1. 指定您的Target帳戶詳細資訊，例如用戶端代碼、電子郵件和密碼。
-1. 選擇 **Rest** 從「API類型」下拉式清單中。
+1. 按一下&#x200B;**建立**。「編輯」(Edit)元件對話框開啟。
+1. 指定目標帳戶詳細資訊，如客戶端代碼、電子郵件和密碼。
+1. 選擇 **休息** 從「API類型」下拉清單中。
 
-1. 按一下 **連線至Adobe Target** 初始化與Target的連線。 如果連接成功，則顯示「Connection successful（連接成功）」消息。 按一下 **確定** 在消息上，然後 **確定** 對話框。 已設定Target帳戶。
+1. 按一下 **連接到Adobe Target** 初始化與目標的連接。 如果連接成功，則顯示「連接成功」消息。 按一下 **確定** 在留言上，然後 **確定** 對話框。 已配置目標帳戶。
 
-1. 建立Target架構，如 [添加框架](/help/sites-administering/target.md).
+1. 建立目標框架（如所述） [添加框架](/help/sites-administering/target.md)。
 
-1. 轉到https://&lt;*主機名*>:&lt;*埠*>/system/console/configMgr。
+1. 請訪問https://&lt;*主機名*>:&lt;*埠*>/system/console/configMgr。
 
-1. 按一下 **AEM Forms Target設定**.
-1. 選取 **Target架構**.
-1. 在 **目標URL** 欄位中，指定將執行A/B測試的所有URL。 例如， https://&lt;*主機名*>:&lt;*埠*>/(OSGi或https://上的AEM Forms伺服器)&lt;*主機名*>:&lt;*埠*>/lc/(JEE上的AEM Forms伺服器)。
-請考慮您要為發佈執行個體設定Target URL，而您的客戶可以使用主機名稱或IP位址存取，您需要將兩者設為Target URL — 使用主機名稱及IP位址。 如果您只設定其中一個URL，則不會對來自其他URL的客戶執行A/B測試。 按一下 **+** 來指定多個URL。
+1. 按一下 **AEM Forms目標配置**。
+1. 選擇 **目標框架**。
+1. 在 **目標URL** 欄位中，指定將運行A/Btest的所有URL。 例如，https://&lt;*主機名*>:&lt;*埠*>/用於OSGi或https://上的AEM Forms伺服器&lt;*主機名*>:&lt;*埠*>/lc/，用於JEE上的AEM Forms伺服器。
+請考慮您要為發佈實例配置目標URL，並且您的客戶可以使用主機名或IP地址訪問該URL，您需要將兩者都配置為目標URL — 使用主機名和IP地址。 如果只配置其中一個URL，則A/Btest將不會為來自另一個URL的客戶運行。 按一下 **+** 指定多個URL。
 
 1. 按一下「**儲存**」。
 
-您的Target伺服器已與AEM Forms整合。 如果您擁有使用Adobe Target的完整授權，現在可以啟用A/B測試。
+您的目標伺服器已與AEM Forms整合。 如果您擁有使用Adobe Target的完整許可證，則現在可以啟用A/B測試。
 
-如果您有使用Adobe Target的完整授權，請在將Target與AEM Forms整合後，使用下列參數啟動伺服器：
+如果您擁有使用Adobe Target的完整許可證，請在將Target與AEM Forms整合後使用以下參數啟動伺服器：
 
 `parameter -Dabtesting.enabled=true java -Xmx2048m -XX:MaxPermSize=512M -jar -Dabtesting.enabled=true`
 
-如果AEM例項在JBoss上執行，請從統包服務開始，位於 `jboss\bin\standalone.conf.bat` 檔案中，在以下項中添加 — Dabtesting.enabled=true參數：
+如果實AEM例在JBoss上運行，則作為從交鑰匙開始的服務在 `jboss\bin\standalone.conf.bat` 檔案，在以下條目中添加 — dabtesting.enabled=true參數：
 
 `set "JAVA_OPTS=%JAVA_OPTS% -Dadobeidp.serverName=server1 -Dfile.encoding=utf8 -Djava.net.preferIPv4Stack=true -Dabtesting.enabled=true"`
 
-除了jboss伺服器之外，您還可以在任何應用程式伺服器的伺服器啟動指令碼中添加 — Dabtesting.enabled=true jvm參數。 現在您可以建立並執行最適化表單的A/B測試。
+除了jboss伺服器外，您還可以在任何應用程式伺服器的伺服器啟動指令碼中添加 — Dabtesting.enabled=true jvm參數。 現在，您可以建立並運行適應表單的A/Btest。
 
 >[!NOTE]
 >
->如果您稍後更新已設定的Target URL，請務必更新任何執行中的A/B測試，使其指向目前的URL。 如需更新A/B測試的相關資訊，請參閱 [更新A/B測試](/help/forms/using/ab-testing-adaptive-forms.md#p-update-a-b-test-p).
+>如果稍後更新已配置的目標URL，請確保更新任何正在運行的A/Btest，以便它們指向當前URL。 有關更新A/Btest的資訊，請參見 [更新A/Btest](/help/forms/using/ab-testing-adaptive-forms.md#p-update-a-b-test-p)。
 
-## 在AEM中建立對象 {#create-audiences-within-aem}
+## 在內部建立受眾AEM {#create-audiences-within-aem}
 
-AEM可讓您建立對象，並用於A/B測試。 您在AEM中建立的對象可在AEM Forms中使用。 執行下列步驟以在AEM中建立對象：
+用AEM於建立受眾，並將其用於A/Btest。 您在其中建立的AEM受眾在AEM Forms。 執行以下步驟以在中建立受眾AEM:
 
-1. 在製作執行個體中，點選 **Adobe Experience Manager** > **個人化** > **對象**.
+1. 在創作實例中，點擊 **Adobe Experience Manager** > **個性化** > **觀眾**。
 
-1. 在「對象」頁面中，點選 **建立受眾>建立目標受眾**.
-1. 在「 Adobe Target設定」對話方塊中，選取Target設定，然後按一下 **確定**.
-1. 在建立新受眾頁面中，建立規則。 規則可讓您將對象分類。 例如，您想要根據作業系統來分類對象。 您的對象A來自Windows，而對象B來自Linux。
+1. 在「受眾」頁中，按一下 **建立受眾>建立目標受眾**。
+1. 在「Adobe Target配置」對話框中，選擇目標配置，然後按一下 **確定**。
+1. 在「建立新受眾」頁中，建立規則。 規則允許您對受眾進行分類。 例如，您要根據作業系統對受眾進行分類。 您的觀眾A來自Windows，而觀眾B來自Linux。
 
-   1. 若要根據Windows來分類對象，請在規則#1中選取 **作業系統** 屬性類型。 從「時間」下拉式清單中，選取 **視窗。**
+   1. 要根據Windows對受眾進行分類，請在規則#1中選擇 **作業系統** 屬性類型。 從「時間」(When)下拉清單中，選擇 **窗口。**
 
-   1. 若要根據Linux對受眾分類，請在規則#2中選取 **作業系統** 屬性類型。 從 **當** 下拉式清單，選取 **Linux**，然後按一下 **下一個**.
+   1. 要根據Linux對受眾進行分類，請在規則#2中選擇 **作業系統** 屬性類型。 從 **當** 下拉，選擇 **Linux**，然後按一下 **下一個**。
 
-1. 指定已建立對象的名稱，然後按一下 **儲存**.
+1. 指定建立的受眾的名稱，然後按一下 **保存**。
 
-您可以在為表單設定A/B測試時選取對象，如下所示。
+在為表單配置A/B測試時，可以選擇受眾，如下所示。
 
-## 建立A/B測試 {#create-a-b-test}
+## 建立A/Btest {#create-a-b-test}
 
-執行下列步驟以建立最適化表單的A/B測試。
+執行以下步驟為自適應表單建立A/Btest。
 
-1. 前往 **Forms與檔案** https://&lt;*主機名*>:&lt;*埠*>/aem/forms.html/content/dam/formsanddocuments.
+1. 轉到 **Forms和文檔** https://&lt;*主機名*>:&lt;*埠*>/aem/forms.html/content/dam/formsanddocuments。
 
-1. 導覽至包含最適化表單的資料夾。
-1. 按一下 **選擇** 工具，然後選取最適化表單。
-1. 按一下 **更多** 在工具欄中，選擇 **設定A/B測試**. 「設定A/B」測試頁面隨即開啟。
+1. 導航到包含自適應表單的資料夾。
+1. 按一下 **選擇** 的子菜單。
+1. 按一下 **更多** 中，選擇 **配置A/B測試**。 將開啟「配置A/B測試」頁。
 
 [ ](assets/ab-test-configure-1.png)
 
-1. 指定 **活動名稱** A/B測試。
+1. 指定 **活動名稱** A/Btest。
 
-1. 從「對象」下拉式清單中，選取您要為其提供不同表單體驗的對象。 例如， **使用Chrome的訪客**. 對象清單會從設定的Target伺服器填入。
+1. 從「受眾」下拉清單中，選擇要為其提供窗體不同體驗的受眾。 比如說， **使用Chrome的訪問者**。 從配置的目標伺服器填充訪問群體清單。
 
-1. 在 **Experience Distribution** 體驗A和B的欄位，以百分比形式指定分佈，以決定體驗在總受眾中的分佈。 例如，如果您分別為體驗A和B指定40、60，體驗A將提供給40%的對象，其餘60%將看到體驗B。
-1. 按一下 **設定**. 出現對話方塊，確認A/B測試的建立。
-1. 按一下 **編輯體驗B** 以在編輯模式中開啟最適化表單。 修改表單以建立與預設體驗A不同的體驗。體驗B中允許的可能變數為：
+1. 在 **經驗分配** A和B的欄位中，指定以百分比表示的分佈，以確定在總受眾中的經驗分佈。 例如，如果您分別為經驗A和B指定40、60，則經驗A將提供給40%的受眾，其餘60%將看到經驗B。
+1. 按一下 **配置**。 將出現一個對話框，確認A/Btest的建立。
+1. 按一下 **編輯體驗B** 的子菜單。 修改表單以建立與預設體驗A不同的體驗。經驗B中允許的可能變化為：
 
    * CSS或樣式
-   * 不同面板或相同面板中的欄位順序
+   * 不同面板或同一面板中的欄位順序
    * 面板版面配置
    * 面板標題
-   * 欄位的說明、標籤和說明文字
-   * 不影響或中斷提交流程的指令碼
+   * 欄位的說明、標籤和幫助文本
+   * 不影響或中斷提交流的指令碼
    * 驗證（客戶端和伺服器端）
-   * 體驗B的主題。（您可以為體驗B選取替代主題）
+   * 經驗B的主題。（您可以選擇經驗B的備選主題）
 
-1. 前往Forms和檔案UI，選取最適化表單，按一下 **更多**，然後選取 **開始A/B測試**.
+1. 轉至「Forms和文檔」UI，選擇自適應表單，按一下 **更多**，然後選擇 **開始A/B測試**。
 
-您的A/B測試現在正在執行，系統會根據指定的分送，隨機提供指定的對象。
+您的A/Btest現在正在運行，指定的受眾將根據指定的分佈隨機獲得體驗。
 
-## 更新A/B測試 {#update-a-b-test}
+## 更新A/Btest {#update-a-b-test}
 
-您可以更新執行中A/B測試的對象和體驗分配。 若要這麼做：
+您可以更新運行的A/Btest的受眾和體驗分佈。 為此：
 
-1. 在Forms與檔案UI中，導覽至包含執行A/B測試的最適化表單的資料夾。
-1. 選取最適化表單。
-1. 按一下 **更多** 然後選取 **編輯A/B測試**. 「更新A/B」測試頁面隨即開啟。
+1. 在「Forms和文檔」UI中，導航到包含A/Btest正在運行的自適應表單的資料夾。
+1. 選擇自適應窗體。
+1. 按一下 **更多** ，然後選擇 **編輯A/B測試**。 將開啟「更新A/B」測試頁。
 
-1. 視需要更新對象和體驗分送。
+1. 根據需要更新受眾和體驗分發。
 1. 按一下&#x200B;**更新**。
 
-## 檢視和分析A/B測試報表 {#view-and-analyze-a-b-test-report}
+## 查看和分析A/Btest報表 {#view-and-analyze-a-b-test-report}
 
-在您允許A/B測試在所需期間執行後，您就可以產生報表，並檢查哪個體驗已導致更好的轉換。 您可以宣告效能較佳的體驗為獲勝者，或選擇執行其他A/B測試。 要執行此操作，請執行以下步驟：
+一旦您允許A/Btest在所需期間運行，您就可以生成報告並檢查哪些經驗導致了更好的轉換。 您可以宣佈獲獎者獲得效能更好的體驗，或選擇運行另一個A/Btest。 為此，請執行以下步驟：
 
-1. 選取最適化表單，按一下 **更多**，然後按一下 **A/B測試報表**. 報表隨即顯示。
+1. 選擇自適應窗體，按一下 **更多**，然後按一下 **A/B測試報告**。 顯示報告。
 
 [ ](assets/ab-test-report-3.png)
 
-1. 分析報表，查看您是否有足夠的資料點將其中一個表現較佳的體驗宣告為獲勝者。 您可以選擇繼續執行相同的A/B測試更久，或宣告獲勝者並結束A/B測試。
-1. 若要宣告獲勝者並結束A/B測試，請按一下 **結束A/B測試** 按鈕。 對話方塊會提示您將兩個體驗其中之一宣告為獲勝者。 選擇獲勝者並確認以結束A/B測試。
-或者，您也可以按一下 **宣佈獲勝者** 按鈕。 提示您確認獲勝者。 按一下 **是** 結束A/B測試。
+1. 分析報告並查看是否有足夠的資料點，以便將效能更好的體驗之一宣佈為贏家。 您可以選擇繼續使用同一A/Btest更長時間，或者聲明贏家並結束A/Btest。
+1. 要聲明贏家並結束A/Btest，請按一下 **結束A/Btest** 按鈕。 對話框將提示您聲明兩種體驗中的一種是贏家。 選擇獲勝者並確認結束A/Btest。
+或者，您可以通過按一下 **聲明贏家** 按鈕 提示您確認獲勝者。 按一下 **是** 結束A/Btest。
 
-如果您挑選體驗A作為獲勝者，A/B測試將會結束，並且隨後，只會向所有對象提供體驗A。
+如果你選擇經驗A作為贏家，A/Btest將結束，而且向前，只有經驗A將提供給所有觀眾。

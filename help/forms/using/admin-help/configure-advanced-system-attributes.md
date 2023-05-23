@@ -19,33 +19,33 @@ ht-degree: 1%
 
 # 配置高級系統屬性 {#configure-advanced-system-attributes}
 
-使用「配置高級系統屬性」頁可以修改配置檔案中的某些設定，而無需導出、編輯和導入檔案。 (請參閱 [匯入和匯出設定檔](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).)
+使用「配置高級系統屬性」頁可以修改配置檔案中的某些設定，而無需導出、編輯和導入檔案。 (請參閱 [導入和導出配置檔案](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)。)
 
-1. 在管理控制台中，按一下 **[!UICONTROL 「設定」>「用戶管理」>「配置」>「配置高級系統屬性」]**.
-1. （選用）變更下列任一工作階段屬性：
+1. 在管理控制台中，按一下 **[!UICONTROL 設定>用戶管理>配置>配置高級系統屬性]**。
+1. （可選）更改以下任一會話屬性：
 
-   **工作階段逾時限制（分鐘）:** 使用者自動登出系統之前的時間長度（以分鐘為單位）。 依預設，無論活動或閒置，AEM表單元件（例如Workbench）都會在兩小時後逾時，且使用者必須重新登入。 有效值為 `1` to `1440`. 預設值為 `120` （2小時）。 此設定會更新 `SAML/Producer/assertionValidityInMinutes` 設定檔案中的項目金鑰。
+   **會話超時限制（分鐘）:** 用戶自動從系統註銷之前的時間（以分鐘為單位）。 預設情況下，AEM表單元件（如Workbench）在兩小時後超時，而不管活動或不活動狀態如何，用戶必須重新登錄。 有效值為 `1` 至 `1440`。 預設值為 `120` （2小時）。 此設定將更新 `SAML/Producer/assertionValidityInMinutes` 的子菜單。
 
    >[!NOTE]
    >
-   >您不應將工作階段逾時限制設定在10分鐘以下，因為系統可能無法正確運作。 建議值為10-120（分鐘）。
+   >您不應將會話超時限制設定在10分鐘以下，因為系統可能不能正常運行。 建議的值為10-120（分鐘）。
 
-   **斷言閾值（秒）:** 用於抵消因群集中AEM表單應用程式伺服器之間的系統時間差異而導致的延遲的緩衝時間。 AEM Forms會依此屬性中指定的時間量（以秒為單位）來回溯使用者的登入時間。 有效值為 `0` to `3600`. 預設值為 `60`。此設定會更新 `SAML/Producer/assertionThresholdInSeconds` 設定檔案中的項目金鑰。
+   **斷言閾值（秒）:** 用於補償由於群集中表單應用程式伺服器之間的系統時AEM間差而引起的延遲的緩衝時間。 表AEM單按此屬性中指定的時間（秒）將用戶的登錄時間進行回溯。 有效值為 `0` 至 `3600`。 預設值為 `60`。此設定將更新 `SAML/Producer/assertionThresholdInSeconds` 的子菜單。
 
-   **允許的聲明的最大更新：** 無須登入即可透明地續約使用者工作階段的次數上限。 有效值為 `0` to `9999`. 值 `0` 表示聲明不會續訂。 預設值為 10。此設定會更新 `SAML/Producer/maxAssertionRenewalCount` 設定檔案中的項目金鑰。
+   **斷言的允許最大續訂數：** 無需登錄即可透明地續訂用戶會話的最大次數。 有效值為 `0` 至 `9999`。 值 `0` 意味著不會更新斷言。 預設值為 10。此設定將更新 `SAML/Producer/maxAssertionRenewalCount` 的子菜單。
 
-1. （可選）更改以下任一目錄同步屬性：
+1. （可選）更改下列任一目錄同步屬性：
 
-   **同步統計記錄：** 指定用戶管理是否在同步過程中記錄詳細統計資訊。 (請參閱 [在同步期間啟用或禁用詳細記錄](/help/forms/using/admin-help/synchronizing-directories.md#enable-or-disable-detailed-logging-during-synchronization).)
+   **同步統計記錄：** 指定用戶管理是否在同步過程中記錄詳細統計資訊。 (請參閱 [在同步期間啟用或禁用詳細記錄](/help/forms/using/admin-help/synchronizing-directories.md#enable-or-disable-detailed-logging-during-synchronization)。)
 
-   **同步分頁裝訂器Cron表達式：** 用戶管理重試失敗同步的間隔。 (請參閱 [配置目錄同步重試選項](/help/forms/using/admin-help/synchronizing-directories.md#configure-the-directory-synchronization-retry-option).)
+   **同步分頁裝訂器Cron表達式：** 用戶管理重試失敗同步的間隔。 (請參閱 [配置目錄同步重試選項](/help/forms/using/admin-help/synchronizing-directories.md#configure-the-directory-synchronization-retry-option)。)
 
-   **群集作業鎖定超時（以分鐘為單位）:** 用於群集環境。 如果某個節點上的同步失敗且未釋放群集鎖，此值將指定另一個節點在強制獲取鎖定之前等待的分鐘數。 預設值為 `15` 分鐘。 有效值為 `1` to `1440` 分鐘。
+   **群集作業鎖定超時（分鐘）:** 用於群集環境。 如果一個節點上的同步失敗且未釋放群集鎖，則此值指定另一個節點在強制獲取鎖之前等待的分鐘數。 預設值為 `15` 分鐘。 有效值為 `1` 至 `1440` 分鐘。
 
-1. （選用）變更下列屬性，然後按一下 **[!UICONTROL 確定]**:
+1. （可選）更改以下屬性，然後按一下 **[!UICONTROL 確定]**:
 
-   **用戶管理器事件審核：** 選擇此選項可啟用對目錄同步事件和身份驗證事件（如成功、失敗和鎖定）的審核。 預設情況下，除非您安裝了需要審核的元件(如Rights Management)，否則不會選擇此選項。 此設定會更新 `APSAuditService` 設定檔案中的項目金鑰。
+   **用戶管理器事件審核：** 選擇此選項可啟用對目錄同步事件和驗證事件（如成功、失敗和鎖定）的審核。 預設情況下，除非您安裝了需要審核的元件(如Rights Management)，否則不會選擇此選項。 此設定將更新 `APSAuditService` 的子菜單。
 
-   **自動建立動態群組：** 啟用根據電子郵件網域自動建立動態群組。 (請參閱 [建立動態群組](/help/forms/using/admin-help/creating-configuring-groups.md#create-a-dynamic-group).)
+   **自動建立動態組：** 啟用基於電子郵件域的動態組的自動建立。 (請參閱 [建立動態組](/help/forms/using/admin-help/creating-configuring-groups.md#create-a-dynamic-group)。)
 
-您也可以按一下「重新載入」，回復到原始的「使用者管理」設定。
+也可以通過按一下「重新載入」(Reload)恢復到原始的「用戶管理」(User Management)設定。

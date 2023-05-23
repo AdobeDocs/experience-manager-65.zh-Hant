@@ -1,7 +1,7 @@
 ---
-title: 在表單清單項目上新增自訂動作
+title: 添加窗體線程表項的自定義操作
 seo-title: Adding custom action on form lister items
-description: 表單開發人員可在表單入口網站頁面上的表單清單中新增更多動作。 依預設，表單清單可讓您存取表單、填寫表單並提交。
+description: 表單開發人員可以在表單門戶頁面上的表單清單中添加更多操作。 預設情況下，表單清單允許您訪問表單、填寫表單並提交它。
 seo-description: Form developers can add more actions to the listing of forms on the forms portal page. By default, the form listing allows you to access the form, fill it, and submit it.
 uuid: 5703ba27-7fb8-482e-b933-a060574165dc
 content-type: reference
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 ---
 
-# 在表單清單項目上新增自訂動作{#adding-custom-action-on-form-lister-items}
+# 添加窗體線程表項的自定義操作{#adding-custom-action-on-form-lister-items}
 
-在AEM Forms中，您可以建立列出可用表單的入口網站頁面。 依預設，您可以在入口網頁上搜尋和列出表單。 您可以開啟表單以填寫並提交資訊。 入口網站頁面上所列的表單僅可立即使用呈現動作。 若要深入了解入口網站頁面上的可用動作，請參閱 [建立表單入口網站頁面](../../forms/using/creating-form-portal-page.md).
+在AEM Forms，您可以建立一個門戶頁面，列出可用表單。 預設情況下，可以搜索和列出門戶頁面上的表單。 您可以開啟表單以填寫和提交資訊。 在門戶頁面上列出的表單的框外僅提供呈現操作。 要瞭解有關門戶頁面上可用操作的詳細資訊，請參閱 [建立表單門戶頁](../../forms/using/creating-form-portal-page.md)。
 
-您可以將其他選項新增至入口網頁。 您可以自訂表單入口網站的範本，以自訂這些選項或動作。
+您可以向門戶頁面添加其他選項。 可通過自定義表單門戶模板來自定義這些選項或操作。
 
-本文將示範如何直接從表單入口網站頁面建立按鈕，以傳送表單的連結。 此自訂需要更新Search &amp; Lister元件的範本。
+本文介紹如何建立按鈕以直接從表單門戶頁面發送表單連結。 此自定義要求更新Search &amp; Lister元件的模板。
 
-以下提供將動作新增至範本所需的程式碼。 此 `onclick` 程式碼片段中的屬性有指令碼，可透過電子郵件傳送表單連結。
+下面提供了將操作添加到模板所需的代碼。 的 `onclick` 代碼段中的屬性包含通過電子郵件發送表單連結的指令碼。
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -46,8 +46,8 @@ ht-degree: 0%
 </div>
 ```
 
-您可以在自訂範本中新增類似動作。 若要定義JavaScript函式，請在頁面層級指令碼上新增函式，並將其與必要的HTML元素連結。 在上述範例中， `onclick` 運算式是連結的函式。
+可以在自定義模板中添加類似操作。 要定義JavaScript函式，請在頁面級指令碼上添加該函式，並將其與必需的HTML元素連結。 在上例中， `onclick` 表達式是連結函式。
 
-對範本進行編輯後，範例入口網頁會包含一個按鈕，可透過電子郵件傳送表單連結，如下所示。
+在對模板進行編輯後，示例門戶頁面包含一個按鈕，用於通過電子郵件發送表單連結，如下所示。
 
 ![email](assets/email.png)

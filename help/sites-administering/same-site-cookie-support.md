@@ -1,6 +1,6 @@
 ---
-title: AEM 6.5的相同網站Cookie支援
-description: AEM 6.5的相同網站Cookie支援
+title: 6.5版的同AEM一站點Cookie支援
+description: 6.5版的同AEM一站點Cookie支援
 topic-tags: security
 exl-id: e1616385-0855-4f70-b787-b01701929bbc
 source-git-commit: f7a4907ca6ce8ecaff9ef1fdf99ec0951ff497e0
@@ -10,13 +10,13 @@ ht-degree: 74%
 
 ---
 
-# AEM 6.5的相同網站Cookie支援 {#same-site-cookie-support-for-aem-65}
+# 6.5版的同AEM一站點Cookie支援 {#same-site-cookie-support-for-aem-65}
 
-從 80 版本開始，Chrome 和之後的 Safari 引入了一種新的 cookie 安全性模型。 此模式的設計目的，是透過以下的設定，對協力廠商網站Cookie的可用性引入安全控制： `SameSite`. 如需詳細資訊，請參閱本[文章](https://web.dev/samesite-cookies-explained/)。
+從 80 版本開始，Chrome 和之後的 Safari 引入了一種新的 cookie 安全性模型。 此模式旨在通過名為 `SameSite`。 如需詳細資訊，請參閱本[文章](https://web.dev/samesite-cookies-explained/)。
 
 此設定的預設值 (`SameSite=Lax`) 可能會導致 AEM 執行個體或服務之間的驗證無法運作。這是因為這些服務的網域或 URL 結構可能不受此 cookie 原則的約束。
 
-為了避免此問題，您必須設定 `SameSite` cookie屬性至 `None` 登入Token。
+為了繞過這個，你需要設定 `SameSite` cookie屬性 `None` 的下界。
 
 >[!CAUTION]
 >

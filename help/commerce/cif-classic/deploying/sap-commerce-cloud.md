@@ -1,6 +1,6 @@
 ---
-title: 使用SAP部署eCommerceCommerce Cloud
-description: 了解如何使用SAPCommerce Cloud部署eCommerce。
+title: 使用SAPCommerce Cloud部署電子商務
+description: 瞭解如何使用SAPCommerce Cloud部署電子商務。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->此頁面包含Hybris網站的連結。 對於某些頁面，您需要帳戶才能登入。
+>此頁包含到Hybris網站的連結。 對於某些頁面，您需要一個帳戶才能登錄。
 
-## 使用SAP部署eCommerceCommerce Cloud {#deploying-ecommerce-with-sap-commerce-cloud}
+## 使用SAPCommerce Cloud部署電子商務 {#deploying-ecommerce-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -26,98 +26,98 @@ ht-degree: 2%
 >
 >`Geometrixx Outdoors Site English (US)`
 
-部署 [必要的電子商務套件](#packages-needed-for-ecommerce-with-hybris) 將提供電子商務架構的完整功能，以及隨同hybris實作（包括示範目錄）提供的電子商務功能的參考實作
+部署 [必要的電子商務包](#packages-needed-for-ecommerce-with-hybris) 將提供電子商務框架的全部功能，並參考實現電子商務功能，同時提供一個hybris實現（包括一個示範目錄）
 
-這可在英文（美國）分支( `/content/geometrixx-outdoors/en_US`):
+這可在英語（美國）分支( `/content/geometrixx-outdoors/en_US`):
 
-* [產品資訊](#productinformationwithcolorvariants) （適當時包含顏色變體）
+* [產品資訊](#productinformationwithcolorvariants) （適用時帶有顏色變型）
 
-* [購物車內容概觀](#shoppingcartcontentoverview)
-* [客戶註冊](#customersignup) 和 [客戶登入](#customersignin)
+* [購物車內容概述](#shoppingcartcontentoverview)
+* [客戶註冊](#customersignup) 和 [客戶登錄](#customersignin)
 
-* [存取Hybris管理主控台](#accesstothehybrismanagementconsole)
+* [訪問Hybris管理控制台](#accesstothehybrismanagementconsole)
 
-### 技術需求 — hybris伺服器 {#technical-requirements-hybris-server}
+### 技術要求 — Hybris Server {#technical-requirements-hybris-server}
 
-已更新電子商務整合架構的Hybris擴充功能，以支援Hybris 5（預設為），同時維持與的向後相容性 [Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris).
+電子商務整合框架的分支擴展已更新，以支援Hybris 5（預設），同時保持與 [Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris)。
 
 >[!NOTE]
 >
->* 支援18.11版及更新版本。
->* 您需要Java 7才能執行 [hybris 5伺服器。](https://www.hybris.com/en/architecture-technology)
->* hybris附加元件， [電信加速器](https://www.hybris.com/en/products/telecommunication),AEM擴充功能不支援。
+>* 支援18.11及更高版本。
+>* 您需要Java 7來運行 [hybris 5伺服器。](https://www.hybris.com/en/architecture-technology)
+>* 木屑附加物， [電信加速器](https://www.hybris.com/en/products/telecommunication)，擴展不支援AEM。
 >
 
 
-### 使用hybris的電子商務所需的套件 {#packages-needed-for-ecommerce-with-hybris}
+### 利用Hybris進行電子商務所需的包 {#packages-needed-for-ecommerce-with-hybris}
 
-若要安裝電子商務功能，您需要：
+要安裝電子商務功能，您需要：
 
-* 您的hybris伺服器
-* AEM eCommerce架構：
+* 您的Hybris伺服器
+* AEM電子商務框架：
 
-   * 這是標準AEM安裝的一部分
+   * 這是標準安裝的一AEM部分
 
-* AEMGeometrixx全套件：
+* AEMGeometrixx包：
 
    * `cq-geometrixx-all-pkg`
 
-* AEM hybris內容套件：
+* AEMhybris內容包：
 
    * `cq-hybris-content-6.3.2`
-   * 混合專用API實作
+   * Hybris特定API實現
    * `cq-geometrixx-hybris-content-6.3.2`
-   * 參考實作，以說明hybris的使用( `geometrixx-outdoors/en_US`)
+   * 說明hybris的使用的參考實現 `geometrixx-outdoors/en_US`)
 
-### 使用Hybris安裝電子商務 {#installation-of-ecommerce-with-hybris}
+### 安裝具有Hybris的電子商務 {#installation-of-ecommerce-with-hybris}
 
-若要安裝完整的設定(使用展示目錄、Geometrixx Outdoors)，基本步驟為：
+要安裝完整的配置(使用演示目錄、Geometrixx Outdoors)，基本步驟如下：
 
-1. [安裝AEM](/help/sites-deploying/deploy.md).
+1. [安AEM裝](/help/sites-deploying/deploy.md)。
 1. 安裝Geometrixx — 全部包
 
    1. ` [cq-geometrixx-all-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq60/product/cq-geometrixx-all-pkg)`
 
-1. 使用安裝演示內容包 [封裝管理員](/help/sites-administering/package-manager.md):
+1. 使用 [軟體包管理器](/help/sites-administering/package-manager.md):
 
    1. ` [cq-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-hybris-content)`
    1. ` [cq-geometrixx-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-geometrixx-hybris-content)`
 
-1. [下載並建置您的Hybris伺服器](#download-and-build-your-hybris-server).
-1. 在電子商務引擎中建立目錄：
+1. [下載並構建您的Hybris Server](#download-and-build-your-hybris-server)。
+1. 在電子商務引擎中構建目錄：
 
-   1. [設定Geometrixx戶外商店](#setup-the-geometrixx-outdoors-store).
+   1. [設定Geometrixx戶外商店](#setup-the-geometrixx-outdoors-store)。
 
-1. [作者](/help/sites-authoring/qg-page-authoring.md) 您在AEM中需要的任何補充頁面。
-
->[!CAUTION]
->
->使用hybris伺服器需要個別的hybris授權。
-
->[!NOTE]
->
->適用於開發人員 [API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下載。
-
-### 下載並建置您的Hybris伺服器 {#download-and-build-your-hybris-server}
-
-此程式中的步驟將下載並建置hybris伺服器。 它也會讓hybris和cq之間的連線需要初始設定。 接著，擴充功能便可搭配預設設定使用。
+1. [作者](/help/sites-authoring/qg-page-authoring.md) 需要的任何補充頁AEM。
 
 >[!CAUTION]
 >
->不支援5.5.1之前的Hybris版本。
+>使用hybris伺服器需要單獨的hybris許可證。
 
 >[!NOTE]
 >
->若要完成此操作，您需要 [赫羅維](https://groovy-lang.org/) 安裝在您的系統上。
+>為開發人員 [API文檔](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下載。
 
-1. 下載 **hybris Commerce Suite** 從hybris下載網站發佈。
+### 下載並構建您的Hybris Server {#download-and-build-your-hybris-server}
+
+此過程中的步驟將下載並構建hybris伺服器。 它還將進行hybris和cq之間連接所需的初始配置。 然後，該擴展將可用於預設設定。
+
+>[!CAUTION]
+>
+>不支援早於5.5.1的Hybris版本。
+
+>[!NOTE]
+>
+>要完成此操作，您需要 [Groovy](https://groovy-lang.org/) 安裝在系統上。
+
+1. 下載 **赫布里斯商務套房酒店** 從hybris下載網站發行。
 
    >[!CAUTION]
    >
-   >您需要帳戶（來自hybris）才能存取此權限。
+   >你需要一個帳戶（來自hybris）才能訪問這個。
 
-1. 將分送檔案解壓縮至所需位置(以 &lt;hybris-root-directory>)。
-1. 從命令列執行下列動作：
+1. 將分發檔案解壓縮到所需位置(稱為 &lt;hybris-root-directory>)。
+1. 在命令行中，執行以下操作：
 
    ```shell
    cd <hybris-root-directory>/bin/platform
@@ -132,9 +132,9 @@ ht-degree: 2%
    >
    >`ant clean all`
    >
-   >Press `Return` （必要）。
+   >按 `Return` 的下界。
 
-1. 將下列檔案下載至已擷取hybris散布的根資料夾，
+1. 將下列檔案下載到您提取的碎片分佈的根資料夾，
 
    ```
        <hybris-root-directory>
@@ -145,15 +145,15 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >對於hybris 5.6.0和更新版本，請使用以下setup.groovy。
+   >對於hybris 5.6.0和更高版本，請使用以下setup.groovy。
 
-   5.6.0和更新版本
+   5.6.0和更高版本
 
 [取得檔案](/help/sites-deploying/assets/setup-1.groovy)
 
-1. 從命令列，執行下列動作：
+1. 在命令行中，執行以下操作：
 
-   * 更新hybris伺服器的設定（根據擴充功能的要求）
+   * 更新hybris伺服器的配置（根據擴展要求）
    * 使用修改的配置重建hybris伺服器
    * 啟動伺服器
 
@@ -166,75 +166,75 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >根據您的系統，這些步驟中的幾個可能需要幾分鐘才能完成。
+   >取決於您的系統，其中幾個步驟可能需要幾分鐘才能完成。
 
-1. 在您的瀏覽器中，導覽至 **hybris管理主控台** at:
+1. 在瀏覽器中，導航到 **hybris管理控制台** 地址：
 
    [http://localhost:9002](http://localhost:9002)
 
-1. 按一下 **初始化** 然後確認初始化動作（因為這會刪除現有資料）。
+1. 按一下 **初始化** 然後確認初始化操作（因為它將刪除現有資料）。
 
-   進度會顯示在主控台上，包含 `FINISHED` 表示已完成。
+   進度將顯示在控制台上， `FINISHED` 表示完成。
 
    >[!NOTE]
    >
-   >視您的系統而定，完成此作業可能需要幾分鐘的時間。
+   >取決於您的系統，這可能需要幾分鐘才能完成。
 
 ### 設定Geometrixx Outdoors商店 {#setup-the-geometrixx-outdoors-store}
 
-此過程將上載並配置演示儲存 — 線上Geometrixx。
+此過程將上載和配置演示儲存 — 線上Geometrixx。
 
-1. 啟動您的hybris例項。 從命令列執行下列動作：
+1. 開始你的骨碎病例。 在命令行中，執行以下操作：
 
    ```shell
    cd <hybris-root-directory>/bin/platform
    sh hybrisserver.sh
    ```
 
-1. 在您的瀏覽器中，導覽至 **hybris management console** at:
+1. 在瀏覽器中，導航到 **hybris管理控制台** 地址：
 
    [https://localhost:9002/backoffice](https://localhost:9002/backoffice)
 
-   使用以下憑據：
+   使用這些憑據：
    * 用戶名：管理員
-   * 密碼：nimda
+   * 密碼：尼姆達
 
-1. 從側欄導覽中，展開 **系統** 和 **工具**. 然後選取 **匯入** 開啟 **嚮導：CSV匯入** 窗口。
-1. 在 **設定** 標籤 **上傳** 以下 **匯入檔案**:
+1. 從提要欄導航，展開 **系統** 和 **工具**。 然後選擇 **導入** 開啟 **嚮導：CSV導入** 的子菜單。
+1. 在 **配置** 頁籤 **上載** 以下 **導入檔案**:
 
 [取得檔案](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
 
-1. 設定 **地區設定** 至：
+1. 設定 **區域設定** 至：
 
    `en_US - English (United States)`
 
-1. 開啟 **資源** 標籤。
-1. **上傳** 以下 **Media-Zip**:
+1. 開啟 **資源** 頁籤。
+1. **上載** 以下 **介質壓縮**:
 
 [取得檔案](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
 
-1. 按一下 **開始** 導入指定檔案。 此 **結果** 索引標籤會顯示任何記錄項目。
+1. 按一下 **開始** 導入指定的檔案。 的 **結果** 頁籤將顯示所有日誌條目。
 
-1. 按一下 **完成** 以關閉匯入視窗。
+1. 按一下 **完成** 來修改標籤元素的屬性。
 
-1. 從側欄中，選取 **系統**，然後 **工具**，然後 **匯入**.
+1. 從提要欄中，選擇 **系統**，則 **工具**，則 **導入**。
 
-1. **上傳** 以下 **匯入檔案**:
+1. **上載** 以下 **導入檔案**:
 
 [取得檔案](/help/sites-deploying/assets/base-store.csv)
 
-   對於hybris 5.7，請使用下列內容：
+   對於hybris 5.7，請使用以下命令：
 
 [取得檔案](/help/sites-deploying/assets/base-store-5_7.csv)
 
-1. 設定 **地區設定** 至：
+1. 設定 **區域設定** 至：
 
    `en_US - English (United States)`
 
-1. 按一下 **開始** 導入指定檔案。 此 **結果** 索引標籤會顯示任何記錄項目。
+1. 按一下 **開始** 導入指定的檔案。 的 **結果** 頁籤將顯示所有日誌條目。
 
-1. 按一下 **完成** 以關閉匯入視窗。
+1. 按一下 **完成** 來修改標籤元素的屬性。
 
-1. 您現在可以使用產品座艙來檢視匯入的目錄和產品：
+1. 現在，您可以使用產品駕駛艙查看導入的目錄和產品：
 
    [http://localhost:9002/productcockpit](http://localhost:9002/productcockpit)

@@ -1,7 +1,7 @@
 ---
-title: 設定當天的訊息
+title: 設定當天的消息
 seo-title: Setting the message of the day
-description: 當天的訊息可讓您設定要顯示在工作區使用者介面的歡迎頁面上的訊息。
+description: 當天的消息允許您設定要顯示在工作區用戶介面的歡迎頁面上的消息。
 seo-description: The message of the day let you set a message to be displayed on the Welcome page in the Workspace user interface.
 uuid: 9c664438-6fc0-498e-bb3f-4c6bcb9414a7
 contentOwner: admin
@@ -17,32 +17,32 @@ ht-degree: 1%
 
 ---
 
-# 設定當天的訊息 {#setting-the-message-of-the-day}
+# 設定當天的消息 {#setting-the-message-of-the-day}
 
-您可以設定要顯示在工作區使用者介面的歡迎頁面上的訊息。
+可以設定要顯示在「工作區」用戶介面的「歡迎」(Welcome)頁面上的消息。
 
-如有需要，您可以使用AdobeFlash®播放器支援的HTML標籤來設定文字外觀的格式：
+如果需要，可以使用AdobeFlash®播放器支援的HTML標籤來格式化文本外觀：
 
-* &lt;a> 錨點標籤
+* &lt;a> 錨記標籤
 * &lt;b> 粗體標籤
 * &lt;br> 中斷標籤
 * &lt;font> 字型標籤
 * &lt;img> 影像標籤
 * &lt;i> 斜體標籤
-* &lt;li> 清單項目標籤
+* &lt;li> 清單項標籤
 * &lt;p> 段落標籤
-* &lt;span> 跨度標籤
-* &lt;textformat> 文字格式標籤
-* &lt;u> 底線標籤
+* &lt;span> Span標籤
+* &lt;textformat> 文本格式標籤
+* &lt;u> 下划線標籤
 
-如需支援標籤的詳細資訊，請參閱 `htmlText` 屬性 [Flex語言參考](https://flex.apache.org/).
+有關支援的標籤的詳細資訊，請參閱 `htmlText` 中TextField類的屬性 [Flex語言參考](https://flex.apache.org/)。
 
-## 設定當天的訊息 {#set-the-message-of-the-day}
+## 設定當天的消息 {#set-the-message-of-the-day}
 
-1. 在管理控制台中，按一下「服務>工作區>當天訊息」。
-1. 在「日」方塊的訊息中，提供要顯示在歡迎畫面上的文字。
+1. 在管理控制台中，按一下「服務」>「工作區」>「當天消息」。
+1. 在「Message of the Day（當天的消息）」框中，提供要在歡迎螢幕上顯示的文本。
 1. 按一下「儲存」。
 
 >[!NOTE]
 >
->AEM Forms版本已不再使用Flex Workspace。
+>不建議使用Flex工作AEM區來發佈表單。

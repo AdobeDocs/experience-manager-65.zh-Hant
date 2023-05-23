@@ -1,6 +1,6 @@
 ---
-title: 集合、片段和程式碼片段範本的多租用戶
-description: 了解多租用戶功能如何讓您根據客戶組織來分隔CRX存放庫中的內容，以防止未經授權的存取。
+title: 集合、代碼段和代碼段模板的多租賃
+description: 瞭解多租賃功能如何讓您能夠根據客戶組織將CRX儲存庫中的內容隔離，以防止未經授權的訪問。
 contentOwner: AG
 role: Architect, Admin, Leader
 feature: Collections
@@ -12,23 +12,23 @@ ht-degree: 0%
 
 ---
 
-# 集合、片段和程式碼片段範本的多租用戶 {#multi-tenancy-for-collections-snippets-and-snippet-templates}
+# 集合、代碼段和代碼段模板的多租賃 {#multi-tenancy-for-collections-snippets-and-snippet-templates}
 
-多租用戶功能可讓您根據組織首碼和組織ID來分隔CRX中的內容，以保護內容不會受到其他組織的使用者未經授權的存取。
+多租賃功能允許您根據組織前置詞和組織ID在CRX中隔離內容，以保護內容不受其他組織用戶未經授權的訪問。
 
-[!DNL Adobe Experience Manager Assets] 將每個組織的資料儲存在不同的路徑中。 每個組織特定路徑都由組織首碼和組織ID識別，這些ID包含在傳統位置中，不同類型的資產會儲存在CRX中。
+[!DNL Adobe Experience Manager Assets] 將每個組織的資料儲存在不同的路徑中。 每個特定於組織的路徑都由組織前置詞和組織ID標識，這些ID包括在傳統位置中，在該位置，不同類型的資產儲存在CRX中。
 
-例如，若您建立的資料夾名稱為 `Demo`, [!DNL Experience Manager] 資產通常會在 `../content/dam/Demo`. 啟用多租用戶後，您現在可以將資料儲存在 `../content/dam/<organization prefix>/<organization id>Demo`
+例如，如果建立名為 `Demo`。 [!DNL Experience Manager] 資產通常將資料夾儲存在 `../content/dam/Demo`。 啟用多租賃後，您現在可以在 `../content/dam/<organization prefix>/<organization id>Demo`
 
-例如，若 [!DNL Adobe Marketing Cloud] 使用者 [!DNL Assets] （隨選） `aodpremium` 組織，您可以使用多租用戶功能來設定 `../content/dam/<mac>/<aodpremium>Demo` 分隔其內容的路徑。 在此範例中， `mac` 是組織首碼和 `aodpremium` 是組織ID。
+例如，如果 [!DNL Adobe Marketing Cloud] 用戶 [!DNL Assets] （按要求） `aodpremium` 組織，您可以使用多租賃功能來配置 `../content/dam/<mac>/<aodpremium>Demo` 分離其內容的路徑。 在本例中， `mac` 是組織前置詞 `aodpremium` 是組織ID。
 
-根據使用者的組織和ID，此合格路徑會顯示在 [!DNL Assets] 介面和各種嚮導，包括用於強制隔離的「移動」和「代碼段」建立嚮導。
+根據用戶的組織和ID，此限定路徑顯示在 [!DNL Assets] 介面和各種嚮導，包括用於強制隔離的「移動」和「代碼段建立」嚮導。
 
-多租用戶功能可讓您分隔下列資產和元件類型：
+「多租賃」功能允許您隔離以下類型的資產和元件：
 
 * 集合
-* 公用集合
+* 公共集合
 * 目錄（包括「添加/選擇頁面」嚮導）
 * 範本
-* 程式碼片段範本
-* Lightbox
+* 代碼段模板
+* 燈箱

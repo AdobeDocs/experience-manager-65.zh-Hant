@@ -20,21 +20,21 @@ ht-degree: 0%
 
 # 更改外觀(HBS) {#alter-the-appearance-hbs}
 
-現在，應用程式目錄(/apps)中的自訂註解系統元件已就緒，resourceSuperType參考預設註解系統和已註冊的自訂模型/檢視，便可修改實施。
+現在應用程式目錄(/apps)中自定義注釋系統的元件已就位，並且resourceSuperType引用了預設注釋系統和已註冊的自定義模型/視圖，因此可以修改實現。
 
-對於簡單的示範，會移除張貼評論之已登入使用者的顯示頭像視覺功能。
+為了簡單演示，刪除發佈評論的登錄用戶所顯示的視覺功能。
 
 >[!NOTE]
 >
->若要使用擴充功能，要受影響(/content)的網站之留言系統的例項必須將其resourceType設為自訂留言系統。
+>要使用副檔名，要受影響的網站(/content)中注釋系統的實例必須將其resourceType設定為自定義注釋系統。
 
 ## 修改HBS指令碼 {#modify-the-hbs-scripts}
 
 使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
-* 開啟 [/apps/custom/components/comments/comments/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* 開啟 [/apps/custom/components/comments/comments/comments///////////////////////////////////////////////////////////////////**注釋.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
-   * 對標籤加上註解貼文（~第21行）的顯示圖片進行註解：
+   * 注釋掉包括注釋帖子（~行21）的化身的標籤：
 
       ```
         <!--
@@ -42,9 +42,9 @@ ht-degree: 0%
          -->
       ```
 
-* 開啟 [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+* 開啟 [/apps/custom/components/comments/comments/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////**注釋.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
-   * 註解標籤，其中包含下一個註解項目的頭像（~第44行）:
+   * 注釋掉包含下一個注釋條目（~行44）的虛擬形象的標籤：
 
       ```
         <!--
@@ -52,30 +52,30 @@ ht-degree: 0%
          -->
       ```
 
-* 選擇 **全部儲存**
+* 選擇 **全部保存**
 
-### 復寫自訂應用程式 {#replicate-custom-app}
+### 複製自定義應用 {#replicate-custom-app}
 
-修改應用程式後，必須重新複製自訂元件。
+在應用程式被修改後，必須重新複製自定義元件。
 
-一種方法是：
+一個方法是：
 
-* 從主功能表
+* 從主菜單
 
-   * 選擇 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 復寫]**.
-   * 選擇 **[!UICONTROL 激活樹]**.
-   * 設定 `Start Path` to `/apps/custom`.
-   * 取消選擇 **[!UICONTROL 僅已修改]**.
-   * 選擇 **[!UICONTROL 啟動]** 按鈕。
+   * 選擇 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 複製]**。
+   * 選擇 **[!UICONTROL 激活樹]**。
+   * 設定 `Start Path` 至 `/apps/custom`。
+   * 取消選擇 **[!UICONTROL 僅修改]**。
+   * 選擇 **[!UICONTROL 激活]** 按鈕
 
-### 在發佈的範例頁面上檢視修改的註解 {#view-modified-comment-on-published-sample-page}
+### 查看已發佈示例頁上的已修改注釋 {#view-modified-comment-on-published-sample-page}
 
-[繼續體驗](/help/communities/extend-sample-page.md#publish-sample-page) 在發佈執行個體上（仍以相同使用者身分登入），現在可以重新整理發布環境中的頁面，以檢視要移除頭像的修改：
+[繼續體驗](/help/communities/extend-sample-page.md#publish-sample-page) 在仍以同一用戶身份登錄的發佈實例上，現在可以刷新發佈環境中的頁面，以查看修改以刪除虛擬形象：
 
-![view-modified-content](assets/view-modified-content.png)
+![視圖修改內容](assets/view-modified-content.png)
 
-### 範例注釋擴充功能套件 {#sample-comment-extension-package}
+### 注釋擴展包示例 {#sample-comment-extension-package}
 
-附加是在本教學課程中建立的自訂註解應用程式套件。
+附加是本教程中建立的自定義注釋應用程式的包。
 
 [取得檔案](assets/sample-comment-extension-6-1-fp3.zip)

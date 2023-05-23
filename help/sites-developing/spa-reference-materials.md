@@ -1,7 +1,7 @@
 ---
-title: SPA參考資料
+title: 參SPA考材料
 seo-title: SPA Reference Materials
-description: 概略說明單頁應用程式API參考資料和原始碼存放庫
+description: 單頁應用程式API引用和原始碼儲存庫的概述
 seo-description: An overview of the single page application API references and source code repositories
 uuid: 503a1bec-da8b-4f5e-adcc-fe65c3c96034
 contentOwner: bohnert
@@ -17,27 +17,27 @@ ht-degree: 0%
 
 ---
 
-# SPA參考資料 {#spa-reference-materials}
+# 參SPA考材料 {#spa-reference-materials}
 
-## SPA Javascript API參考資料{#spa-javascript-api-references}
+## SPAJavascript API引用{#spa-javascript-api-references}
 
-以下是AEM SPA Editor SDK架構之NPM模組的可用JavaScript API參考。
+以下是Editor SDK框架的NPM模組的可用JavaScript APIAEM引SPA用。
 
 >[!NOTE]
 >
->若專案需要SPA架構的用戶端轉譯(例如React或Angular),SPA Editor是建議的解決方案。
+>編輯SPA器是需要基於框架的SPA客戶端呈現(例如，反應或Angular)的項目的推薦解決方案。
 
-* [元件對應](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
-* [頁面模型管理員](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
-* [React可編輯的元件](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-* [Angular可編輯的元件](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
+* [元件映射](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
+* [頁面模型管理器](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
+* [反應可編輯元件](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+* [Angular可編輯元件](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
-## 開放原始碼GitHub存放庫 {#github-repositories}
+## 開源GitHub儲存庫 {#github-repositories}
 
-以下是SPA程式庫GitHub上的開放原始碼存放庫。
+以下是庫的GitHub上的開源存SPA儲庫。
 
-* [元件對應](https://github.com/adobe/aem-spa-component-mapping)
-* [頁面模型管理員](https://github.com/adobe/aem-spa-page-model-manager)
-* [React可編輯的元件](https://github.com/adobe/aem-react-editable-components)
-* [Angular可編輯的元件](https://github.com/adobe/aem-angular-editable-components)
-* [SPA專案核心](https://github.com/adobe/aem-spa-project-core)
+* [元件映射](https://github.com/adobe/aem-spa-component-mapping)
+* [頁面模型管理器](https://github.com/adobe/aem-spa-page-model-manager)
+* [反應可編輯元件](https://github.com/adobe/aem-react-editable-components)
+* [Angular可編輯元件](https://github.com/adobe/aem-angular-editable-components)
+* [項SPA目核心](https://github.com/adobe/aem-spa-project-core)

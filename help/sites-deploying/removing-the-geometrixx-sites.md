@@ -1,7 +1,7 @@
 ---
-title: 移除Geometrixx網站
+title: 刪除Geometrixx站點
 seo-title: Removing the Geometrixx Sites
-description: 了解如何移除範例Geometrixx內容。
+description: 瞭解如何刪除示例Geometrixx內容。
 seo-description: Learn how to remove the sample Geometrixx content.
 uuid: 07d20837-3375-4e64-bb07-3e4d10452335
 contentOwner: User
@@ -16,11 +16,11 @@ ht-degree: 0%
 ---
 
 
-# 移除Geometrixx網站{#removing-the-geometrixx-sites}
+# 刪除Geometrixx站點{#removing-the-geometrixx-sites}
 
-AEM隨附一組範例Geometrixx網站。 您可以透過 **封裝管理員**.
+附AEM帶一組樣本Geometrixx網站。 您可以通過 **包管理器**。
 
-個別geometrixx相關套件包括：
+與幾何相關的單個包包括：
 
 * `cq-geometrixx-outdoors-ugc-pkg-<version>.zip`
 * `cq-geometrixx-pkg-<version>.zip`
@@ -32,17 +32,17 @@ AEM隨附一組範例Geometrixx網站。 您可以透過 **封裝管理員**.
 * `cq-geometrixx-commons-pkg-<version>.zip`
 * `cq-geometrixx-media-pkg-<version>.zip`
 
-若要移除個別套件，請按一下「 」即可 **解除安裝** 包上。
+要刪除單個包，請按一下 **卸載** 包上的。
 
-此外還有一個超級包：
+還有一個超級包：
 
 * `cq-geometrixx-all-pkg-5.6.12.zip`
 
-此套件包含上述所有個別套件。 若要一次移除所有與geometrixx相關的內容，請按一下 **解除安裝** 在這個包裹上。 超級包將進入卸載狀態，所有單個包將從包管理器視圖中消失。
+此包包含上述所有單個包。 要同時刪除與幾何相關的所有內容，請按一下 **卸載** 在這包里。 超級軟體包將進入卸載狀態，所有單個軟體包都將從軟體包管理器視圖中消失。
 
-您現在有「空白」AEM例項，沒有任何示範網站。
+您現在有一個「空」實AEM例，沒有任何演示站點。
 
 >[!NOTE]
 >
->升級時，會自動重新安裝geometrixx sites。 如果您不想要這些範例，則升級後可能需要移除geometrixx網站。
+>升級時，將自動重新安裝geometrix站點。 如果不需要這些示例，則升級後可能需要刪除geometrixx網站。
 

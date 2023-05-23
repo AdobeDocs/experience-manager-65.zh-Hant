@@ -20,42 +20,42 @@ ht-degree: 3%
 
 # 儲存設定 {#storage-configuration}
 
-儲存配置是標識為社區內容選擇的儲存的方法，也稱為用戶生成內容(UGC)。
+儲存配置是標識為社區內容選擇的儲存的方法，也稱為用戶生成的內容(UGC)。
 
-此設定會通知AEM Communities程式碼，在存取UGC時將使用哪個儲存資源提供者(SRP)實作，且必須反映部署AEM時建立的拓撲。
+此設定通知AEM Communities代碼，在訪問UGC時將使用儲存資源提供程式(SRP)的實現，並且必須反映部署時建立AEM的拓撲。
 
 有關儲存選項和部署拓撲的討論，請訪問：
 
-* [社群內容商店](working-with-srp.md)
-* [建議的拓撲](topologies.md)
+* [社區內容儲存](working-with-srp.md)
+* [推薦的拓撲](topologies.md)
 
 ## 儲存配置控制台 {#storage-configuration-console}
 
-![jsrp-configuration](assets/jsrp-configuration.png)
+![jsrp配置](assets/jsrp-configuration.png)
 
-在製作環境中，存取儲存設定主控台。
+在作者環境中，訪問儲存配置控制台。
 
-* 在全局導航中，選擇 **[!UICONTROL 工具]** > **[!UICONTROL 社群]** > **[!UICONTROL 儲存配置]**
+* 從全局導航中，選擇 **[!UICONTROL 工具]** > **[!UICONTROL 社區]** > **[!UICONTROL 儲存配置]**
 
 要選擇預設JCR以外的儲存選項：
 
 * 選擇選項
 * 適當配置
 
-   * 請參閱 [選擇MSRP](msrp.md#select-msrp)
-   * 請參閱 [選擇DSRP](dsrp.md#select-dsrp)
-   * 請參閱 [選擇ASRP](asrp.md#select-asrp)
+   * 查看詳細資訊 [選擇MSRP](msrp.md#select-msrp)
+   * 查看詳細資訊 [選擇DSRP](dsrp.md#select-dsrp)
+   * 查看詳細資訊 [選擇ASRP](asrp.md#select-asrp)
 
-* 選擇 **[!UICONTROL 提交]**.
+* 選擇 **[!UICONTROL 提交]**。
 
 ### 關於JCR儲存 {#about-jcr-storage}
 
-請注意，如果未選取，預設為AEM存放庫JCR。
+請注意，如果未進行任何選擇，則預設為AEM儲存庫JCR。
 
-JCR為 *not* 製作和發佈環境共用的公用存放區。 社群內容只會從建立該內容的製作或發佈環境中顯示。
+JCR為 *不* 由作者和發佈環境共用的公用儲存。 社區內容將僅從建立社區內容的作者或發佈環境中可見。
 
-瀏覽 [JCR商店](jsrp.md) 以取得其他資訊。
+訪問 [JCR儲存](jsrp.md) 的雙曲餘切值。
 
 >[!NOTE]
 >
->節點不存在 `srpc` 在 `/etc/socialconfig` 表示預設值 [JCR商店](jsrp.md).
+>節點的缺失 `srpc` 在 `/etc/socialconfig` 指示預設值 [JCR儲存](jsrp.md)。

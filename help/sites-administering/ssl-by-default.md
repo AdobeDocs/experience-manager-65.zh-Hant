@@ -1,7 +1,7 @@
 ---
-title: 預設為SSL/TLS
+title: 預設情況下為SSL/TLS
 seo-title: SSL/TLS By Default
-description: 了解如何在AEM中依預設使用SSL。
+description: 瞭解如何在中預設使用SSLAEM。
 seo-description: Learn how to use SSL by Default in AEM.
 uuid: 2fbfd020-1d33-4b22-b963-c698e62f5bf6
 contentOwner: User
@@ -18,53 +18,53 @@ ht-degree: 0%
 
 ---
 
-# 預設為SSL/TLS{#ssl-tls-by-default}
+# 預設情況下為SSL/TLS{#ssl-tls-by-default}
 
-為了持續改善AEM的安全性，Adobe已推出SSL預設功能。 其目的是鼓勵使用HTTPS連線至AEM例項。
+為了不斷提高安全性，Adobe已AEM經引入了一種預設情況下稱為SSL的功能。 目的是鼓勵使用HTTPS連接到實AEM例。
 
-## 預設啟用SSL/TLS {#enabling-ssl-tls-by-default}
+## 預設情況下啟用SSL/TLS {#enabling-ssl-tls-by-default}
 
-您可以按一下AEM主畫面中的相關收件匣訊息，以開始依預設設定SSL/TLS。 要進入收件箱，請按螢幕右上角的鈴聲表徵圖。 然後，按一下 **查看全部**. 這會顯示清單檢視中排序的所有警報清單。
+預設情況下，您可以通過按一下主螢幕中的相關收件箱消息開始配置SSL/AEMTLS。 要訪問收件箱，請按螢幕右上角的鈴表徵圖。 然後，按一下 **全部查看**。 這將顯示清單視圖中排序的所有警報的清單。
 
-在清單中，選取並開啟 **配置HTTPS** 警報：
+在清單中，選擇並開啟 **配置HTTPS** 警報：
 
 ![chlimage_1-103](assets/chlimage_1-103.png)
 
 >[!NOTE]
 >
->若 **配置HTTPS** 警報不在收件匣中，您可以前往直接導覽至HTTPS精靈 *<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*
+>如果 **配置HTTPS** 「收件箱」中不存在警報，您可以通過轉到「HTTPS嚮導」直接導航到 *<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*
 
-名為的服務用戶 **ssl-service** 已為此功能建立。 開啟警報後，系統會引導您執行下列設定精靈：
+名為的服務用戶 **ssl服務** 已為此功能建立。 開啟警報後，將引導您執行以下配置嚮導：
 
-1. 首先，設定「儲存憑證」。 這些是 **ssl-service** 包含HTTPS偵聽器的私鑰和信任儲存的系統用戶密鑰儲存。
+1. 首先，設定「儲存憑據」。 這些是 **ssl服務** 將包含HTTPS偵聽器的私鑰和信任儲存的系統用戶密鑰儲存。
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
-1. 輸入憑據後，按一下 **下一個** 在頁面的右上角。 然後，上傳SSL/TLS連線的相關私密金鑰和憑證。
+1. 輸入憑據後，按一下 **下一個** 的子菜單。 然後，上載SSL/TLS連接的相關私鑰和證書。
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
    >[!NOTE]
    >
-   >如需如何產生私密金鑰和憑證以與精靈搭配使用的詳細資訊，請參閱 [本程式](/help/sites-administering/ssl-by-default.md#generating-a-private-key-certificate-pair-to-use-with-the-wizard) 下方。
+   >有關如何生成私鑰和證書以便與嚮導一起使用的資訊，請參見 [本程式](/help/sites-administering/ssl-by-default.md#generating-a-private-key-certificate-pair-to-use-with-the-wizard) 下。
 
 1. 最後，為HTTPS偵聽器指定HTTPS主機名和TCP埠。
 
    ![screen_shot_2018-07-25at31658pm](assets/screen_shot_2018-07-25at31658pm.png)
 
-## 預設自動化SSL/TLS {#automating-ssl-tls-by-default}
+## 預設情況下自動執行SSL/TLS {#automating-ssl-tls-by-default}
 
-預設會自動化SSL/TLS有三種方式。
+預設情況下，有三種自動執行SSL/TLS的方法。
 
-### 透過HTTPPOST {#via-http-post}
+### 通過HTTPPOST {#via-http-post}
 
-第一種方法涉及發佈到配置嚮導正在使用的SSLSetup伺服器：
+第一種方法涉及過帳到配置嚮導正在使用的SSLSetup伺服器：
 
 ```shell
 POST /libs/granite/security/post/sslSetup.html
 ```
 
-您可以在POST中使用下列裝載來自動設定：
+您可以在POST中使用以下負載來自動配置：
 
 ```xml
 ------WebKitFormBoundaryyBO4ArmGlcfdGDbs
@@ -93,11 +93,11 @@ Content-Disposition: form-data; name="httpsPort"
 8443
 ```
 
-Servlet和任何SlingPOSTServlet一樣，會以200 OK或錯誤HTTP狀態代碼回應。 您可以在回應的HTML內文中找到狀態的詳細資訊。
+Servlet與任何slingPOSTServlet一樣，將響應200 OK（正常）或錯誤HTTP狀態代碼。 您可以在響應的HTML正文中查找有關狀態的詳細資訊。
 
-以下是成功回應和錯誤的範例。
+下面是成功響應和錯誤的示例。
 
-**成功範例** （狀態= 200）:
+**成功示例** （狀態= 200）:
 
 ```xml
 <!DOCTYPE html>
@@ -128,7 +128,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 </html>
 ```
 
-**錯誤範例** （狀態= 500）:
+**錯誤示例** （狀態= 500）:
 
 ```xml
 <!DOCTYPE html>
@@ -150,67 +150,67 @@ it for any subsequent updating of the private key or certificate.</dd>
 </html>
 ```
 
-### 透過套件 {#via-package}
+### 通過包 {#via-package}
 
-或者，您也可以上傳已包含下列必要項目的套件，以自動化SSL/TLS設定：
+或者，可以通過上載已包含以下必需項的包來自動執行SSL/TLS設定：
 
-* ssl服務使用者的金鑰存放區。 此位置在 */home/users/system/security/ssl/service/keystore* 儲存庫中。
-* 此 `GraniteSslConnectorFactory` 配置
+* ssl服務用戶的密鑰庫。 位於 */home/users/system/security/ssl/service/keystore* 的下界。
+* 的 `GraniteSslConnectorFactory` 配置
 
-### 產生要與精靈搭配使用的私密金鑰/憑證組 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
+### 生成要與嚮導一起使用的私鑰/證書對 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
-以下是以DER格式建立自簽名憑證的範例，SSL/TLS精靈可使用此格式。 根據作業系統安裝OpenSSL，開啟OpenSSL命令提示符，並將目錄更改為要生成私鑰/證書的資料夾。
+在下面，您將找到一個示例，用於建立SSL/TLS嚮導可以使用的DER格式的自簽名證書。 根據作業系統安裝OpenSSL，開啟OpenSSL命令提示符，並將目錄更改為要生成私鑰/證書的資料夾。
 
 >[!NOTE]
 >
->自簽名證書的使用僅用於實例，不應用於生產。
+>例如，使用自簽名證書只是出於目的，不應在生產中使用。
 
-1. 首先，建立私密金鑰：
+1. 首先，建立私鑰：
 
    ```shell
    openssl genrsa -aes256 -out localhostprivate.key 4096
    openssl rsa -in localhostprivate.key -out localhostprivate.key
    ```
 
-1. 然後，使用私密金鑰產生憑證簽署要求(CSR):
+1. 然後，使用私鑰生成證書籤名請求(CSR):
 
    ```shell
    openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj "/CN=localhost"
    ```
 
-1. 產生SSL/TLS憑證並使用私密金鑰簽署。 在此範例中，將於一年後到期：
+1. 生成SSL/TLS證書並使用私鑰對其進行簽名。 在本示例中，將從現在起過期一年：
 
    ```shell
    openssl x509 -req -days 365 -in localhost.csr -signkey localhostprivate.key -out localhost.crt
    ```
 
-將私密金鑰轉換為DER格式。 這是因為SSL精靈要求金鑰為DER格式：
+將私鑰轉換為DER格式。 這是因為SSL嚮導要求密鑰採用DER格式：
 
 ```shell
 openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
 ```
 
-最後，上傳 **localhostprivate.der** 作為私密金鑰和 **localhost.crt** 做為本頁開頭所述之圖形SSL/TLS精靈步驟2中的SSL/TLS憑證。
+最後，上載 **localhostprivate.der** 和 **localhost.crt** 作為本頁開頭所述的圖形SSL/TLS嚮導步驟2中的SSL/TLS證書。
 
-### 透過cURL更新SSL/TLS設定 {#updating-the-ssl-tls-configuration-via-curl}
+### 通過cURL更新SSL/TLS配置 {#updating-the-ssl-tls-configuration-via-curl}
 
 >[!NOTE]
 >
->請參閱 [搭配使用cURL與AEM](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html) 以取得AEM中實用cURL命令的集中清單。
+>請參閱 [將cURL與](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html) 中集中列出的有用cURL命令AEM。
 
-您也可以使用cURL工具來自動化SSL/TLS設定。 您可以將設定參數發佈至此URL來執行此動作：
+您還可以使用cURL工具自動執行SSL/TLS配置。 可以通過將配置參數發佈到此URL來執行此操作：
 
 *https://&lt;serveraddress>:&lt;serverport>/libs/granite/security/post/sslSetup.html*
 
-以下是您可用來變更設定精靈中各種設定的參數：
+以下是可用於更改配置嚮導中各種設定的參數：
 
-* `-F "keystorePassword=password"`  — 金鑰存放區密碼；
+* `-F "keystorePassword=password"`  — 密鑰庫密碼；
 
-* `-F "keystorePasswordConfirm=password"`  — 確認金鑰存放區密碼；
+* `-F "keystorePasswordConfirm=password"`  — 確認密鑰庫密碼；
 
 * `-F "truststorePassword=password"`  — 信任儲存密碼；
 
-* `-F "truststorePasswordConfirm=password"`  — 確認信任儲存密碼；
+* `-F "truststorePasswordConfirm=password"`  — 確認信任商店密碼；
 
 * `-F "privatekeyFile=@localhostprivate.der"`  — 指定私鑰；
 
@@ -221,30 +221,30 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out loca
 
 >[!NOTE]
 >
->自動執行SSL/TLS設定的最快cURL執行方式，是從DER和CRT檔案所在的資料夾。 或者，您也可以在 `privatekeyFile` 和certificateFile引數。
+>運行cURL以自動執行SSL/TLS配置的最快方式來自DER和CRT檔案所在的資料夾。 或者，可以在 `privatekeyFile` 和certificateFile參數。
 >
->您也需要通過驗證才能執行更新，因此請務必將cURL命令附加至 `-u user:passeword` 參數。
+>您還需要經過身份驗證才能執行更新，因此請確保在 `-u user:passeword` 的下界。
 >
->正確的cURL post命令應如下所示：
+>正確的cURL帖子命令應如下所示：
 
 ```shell
 curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm=password" -F "truststorePassword=password" -F "truststorePasswordConfirm=password" -F "privatekeyFile=@localhostprivate.der" -F "certificateFile=@localhost.crt" -F "httpsHostname=host.example.com" -F "httpsPort=8443" https://host:port/libs/granite/security/post/sslSetup.html
 ```
 
-#### 使用cURL的多個憑證 {#multiple-certificates-using-curl}
+#### 使用cURL的多個證書 {#multiple-certificates-using-curl}
 
-您可以重複certificateFile參數，將憑證鏈傳送給servlet，如下所示：
+通過重複certificateFile參數，可以向servlet發送一串證書，如下所示：
 
 `-F "certificateFile=@root.crt" -F "certificateFile=@localhost.crt"..`
 
-執行命令後，請驗證所有憑證是否已將其存入金鑰存放區。 從以下位置檢查金鑰存放區：
+執行該命令後，請驗證所有證書是否都已將其保存到密鑰庫。 從以下位置檢查密鑰庫：
 [http://localhost:4502/libs/granite/security/content/userEditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/userEditor.html/home/users/system/security/ssl-service)
 
-### 啟用TLS 1.3連線 {#enabling-tls-connection}
+### 啟用TLS 1.3連接 {#enabling-tls-connection}
 
-1. 前往Web主控台
-1. 接著，導覽至 **OSGi** - **設定** - **AdobeGranite SSL連接器工廠**
-1. 前往 **包含的密碼套件** 欄位並新增下列項目。 您可以按「**+**「 」按鈕，在中新增每個欄位後，顯示在欄位左側：
+1. 轉到Web控制台
+1. 然後，導航到 **OSGi** - **配置** - **Adobe花崗岩SSL連接器工廠**
+1. 轉到 **包括的密碼套件** 欄位，然後添加以下條目。 通過按「 」，可確認每個添加項&#x200B;**+**「 」按鈕，添加後：
 
    * `TLS_AES_256_GCM_SHA384`
    * `TLS_AES_128_GCM_SHA256`

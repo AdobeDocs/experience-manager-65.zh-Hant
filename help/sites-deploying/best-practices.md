@@ -1,7 +1,7 @@
 ---
-title: 部署最佳實務
+title: 部署最佳做法
 seo-title: Deploying Best Practices
-description: 部署和維護最佳實務。
+description: 部署和維護最佳做法。
 seo-description: Deploying and maintaining best practices.
 uuid: 4546ed2c-43d5-40f3-874f-567b324e78c2
 contentOwner: Guillaume Carlino
@@ -17,85 +17,85 @@ ht-degree: 9%
 
 ---
 
-# 部署最佳實務{#deploying-best-practices}
+# 部署最佳做法{#deploying-best-practices}
 
-部署最佳實務說明如何以盡可能最有效率和最有效的方式部署或維護AEM。 這份不斷增加的主題清單包含AEM中的多個領域。
+部署最佳做法介紹如何以盡可能最AEM高效和最有效的方式部署或維護。 這個不斷增加的主題清單包括了多個AEM領域。
 
-以下幾方面提供部署及維護最佳實務與建議的相關檔案：
+以下領域提供了有關部署和維護最佳做法和建議的文檔：
 
-* [OAK](#oak)
+* [橡樹](#oak)
 * [社群](#communities)
 * [UI](#ui)
 * [效能](#performance)
 
-如需管理、開發或編寫的最佳實務，請參閱下列其中一項：
+有關管理、開發或創作的最佳做法，請參閱以下內容之一：
 
-* [管理最佳實務](/help/sites-administering/administer-best-practices.md)
+* [管理最佳做法](/help/sites-administering/administer-best-practices.md)
 * [制定最佳做法](/help/sites-developing/best-practices.md)
-* [製作最佳實務](/help/sites-authoring/best-practices.md)
+* [編寫最佳做法](/help/sites-authoring/best-practices.md)
 
-下面的表中描述了特定文檔並連結到這些文檔。
+具體文檔將在隨後的表中進行描述和連結。
 
-## OAK {#oak}
+## 橡樹 {#oak}
 
-[Oak](/help/sites-deploying/platform.md) 是可擴充且高效能的階層式內容存放庫，是AEM的基礎。
+[橡樹](/help/sites-deploying/platform.md) 是可擴展且效能高的分層內容儲存庫，是其基礎AEM。
 
 <table>
  <tbody>
   <tr>
    <td><p>可擴充性、效能和災難恢復</p> </td>
    <td><a href="/help/sites-deploying/performance.md">效能和可擴充性</a></td>
-   <td>提供了一份白皮書，討論技術靈活性、高效能和健全的災難恢復功能</td>
+   <td>提供白皮書，討論技術靈活性、高效能和可靠的災難恢復功能</td>
   </tr>
   <tr>
    <td>建議的OAK部署</td>
    <td><a href="/help/sites-deploying/recommended-deploys.md">建議的部署</a></td>
-   <td>說明部署方案</td>
+   <td>描述部署方案</td>
   </tr>
   <tr>
-   <td>蒙戈拓撲</td>
+   <td>Mongo拓撲</td>
    <td><a href="/help/sites-deploying/recommended-deploys.md">Mongo拓撲最佳實踐</a></td>
    <td>描述mongo拓撲 — 何時使用哪種拓撲。</td>
   </tr>
   <tr>
-   <td>資料存放區選項</td>
+   <td>資料儲存選項</td>
    <td><a href="/help/sites-deploying/data-store-config.md">配置節點和資料儲存</a></td>
-   <td>本檔案說明儲存二進位資料和內容節點的最佳實務。 包含使用Amazon S3資料存放區的相關資訊。</td>
+   <td>本文檔介紹有關儲存二進位資料和內容節點的最佳做法。 包括有關使用AmazonS3資料儲存的資訊。</td>
   </tr>
   <tr>
-   <td>在OAK中搜尋</td>
-   <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">查詢和建立索引的最佳實務</a><br /> </td>
-   <td>說明如何為內容建立索引的最佳實務。</td>
+   <td>在OAK中搜索</td>
+   <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">查詢和索引的最佳做法</a><br /> </td>
+   <td>介紹如何索引內容的最佳做法。</td>
   </tr>
  </tbody>
 </table>
 
 ## 社群 {#communities}
 
-AEM Communities可簡化內部部署社群的建立和管理作業。 以下說明AEM Communities的最佳實務：
+AEM Communities簡化了內部社區的建立和管理。 下面介紹了AEM Communities的最佳做法：
 
-[社群內容商店](/help/communities/working-with-srp.md)  — 討論用戶生成的內容(UGC)的新共用儲存功能，以及選擇基礎內容的注意事項 [拓撲](/help/communities/topologies.md).
+[社區內容儲存](/help/communities/working-with-srp.md)  — 討論用戶生成內容(UGC)的新共用儲存功能以及選擇底層內容的注意事項 [拓撲](/help/communities/topologies.md)。
 
-[針對社群的建議部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 說明Communities的建議部署。 |
+[建議的社區部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 介紹建議的社區部署。 |
 
 ## UI {#ui}
 
-以下說明使用者介面的相關最佳實務：
+下面介紹了用戶介面的最佳實踐：
 
-[適用於客戶的使用者介面Recommendations](/help/sites-deploying/ui-recommendations.md)
+[面向客戶的用戶介面Recommendations](/help/sites-deploying/ui-recommendations.md)
 
-AEM目前有兩個UI:在相同版本中使用傳統和觸控最佳化UI。 因此，客戶必須決定在專案實施期間要使用哪個項目。 本檔案旨在協助您找到正確的選擇。
+當AEM前有兩個UI:在同一版本中提供經典和觸控優化用戶介面。 因此，客戶必須在項目實施期間決定使用哪個。 本文檔旨在幫助找到正確的選擇。
 
 ## 效能 {#performance}
 
-以下列出效能相關最佳實務：
+下面列出了有關效能的最佳做法：
 
 <table>
  <tbody>
   <tr>
-   <td>品質保證最佳實務</td>
-   <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">品質保證最佳實務</a></td>
-   <td>針對您的 <em>發佈</em> 環境。 這主要是QA工程師、項目經理和系統管理員感興趣的。</td>
+   <td>質量保證的最佳做法</td>
+   <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">質量保證的最佳做法</a></td>
+   <td>對與為您的Testtest而專門定義「概念」相關問題的標準化概述 <em>發佈</em> 環境。 QA工程師、項目經理和系統管理員對此非常感興趣。</td>
   </tr>
   <tr>
    <td>搭配 CDN 使用 Dispatcher</td>
@@ -103,14 +103,14 @@ AEM目前有兩個UI:在相同版本中使用傳統和觸控最佳化UI。 因�
    <td>內容傳遞網路 (CDN) (例如 Akamai Edge Delivery 或 Amazon Cloud Front) 會從接近使用者的位置傳遞內容。</td>
   </tr>
   <tr>
-   <td>效能最佳化</td>
-   <td><a href="/help/sites-deploying/configuring-performance.md">效能最佳化</a></td>
-   <td>一個主要問題是您的網站回應訪客請求所花的時間。</td>
+   <td>效能優化</td>
+   <td><a href="/help/sites-deploying/configuring-performance.md">效能優化</a></td>
+   <td>一個關鍵問題是您的網站響應訪問者請求所花費的時間。</td>
   </tr>
   <tr>
    <td>效能測試</td>
-   <td><a href="/help/sites-deploying/best-practices-for-performance-testing.md">效能測試最佳實務</a></td>
-   <td>說明在AEM部署上執行效能測試的最佳作法。<br /> </td>
+   <td><a href="/help/sites-deploying/best-practices-for-performance-testing.md">效能測試的最佳做法</a></td>
+   <td>介紹在部署上運行效能test的最AEM佳做法。<br /> </td>
   </tr>
  </tbody>
 </table>

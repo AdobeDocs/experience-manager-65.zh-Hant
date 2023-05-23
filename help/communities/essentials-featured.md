@@ -1,5 +1,5 @@
 ---
-title: 精選內容要點
+title: 特色內容基礎
 seo-title: Featured Content Essentials
 description: 使用功能內容
 seo-description: Working with feature content
@@ -17,31 +17,31 @@ ht-degree: 5%
 
 ---
 
-# 精選內容要點  {#featured-content-essentials}
+# 特色內容基礎  {#featured-content-essentials}
 
-本頁面提供使用精選內容的基本資訊。
+此頁面提供了使用特色內容的基本資訊。
 
-與將貼文釘到論壇頂端不同，此功能可讓社群網站內任何地方醒目提示內容。
+與將帖子固定在論壇頂部不同，此功能允許在社區站點內的任何位置突出顯示內容。
 
 
-## 用戶端的要點 {#essentials-for-client-side}
+## 客戶端基本知識 {#essentials-for-client-side}
 
 <table>
  <tbody>
   <tr>
-   <td> <strong>resourceType</strong></td>
-   <td>social/commons/components/hbs/featuredcontent</td>
+   <td> <strong>資源類型</strong></td>
+   <td>社會/公共/元件/hbs/功能內容</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包括</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>客戶端</strong></a></td>
    <td> <i>預設</i></td>
   </tr>
   <tr>
-   <td> <strong>範本</strong></td>
+   <td> <strong>模板</strong></td>
    <td> /libs/social/commons/components/hbs/featuredcontent/featuredcontent.hbs<br /> /libs/social/commons/components/hbs/featuredtopic/featuredtopic.hbs</td>
   </tr>
   <tr>
@@ -50,13 +50,13 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱 <a href="featured.md">精選內容</a></td>
+   <td>請參閱 <a href="featured.md">特色內容</a></td>
   </tr>
  </tbody>
 </table>
 
-* [用戶端自訂](client-customize.md)
+* [客戶端自定義](client-customize.md)
 
 ### 檔案庫功能 {#file-library-function}
 
-包含 [精選內容功能](functions.md#featured-content-function)，包含已設定的 `featured content` 元件。
+包含該社區站點結構的 [特色內容功能](functions.md#featured-content-function)，包括已配置 `featured content` 元件。

@@ -1,7 +1,7 @@
 ---
 title: 將注釋添加到示例頁
 seo-title: Add Comment to Sample Page
-description: 將自訂備注新增至頁面
+description: 將自定義注釋添加到頁面
 seo-description: Add Custom Comments to a page
 uuid: ab258960-6de2-4943-80a7-e72904c0fd8e
 contentOwner: User
@@ -20,54 +20,54 @@ ht-degree: 0%
 
 # 將注釋添加到示例頁  {#add-comment-to-sample-page}
 
-現在，自訂註解系統的元件已置於應用程式目錄(/apps)中，因此可以使用擴充元件。 要受影響的網站中評論系統的例項必須將其resourceType設定為自訂評論系統，並包含所有必要的用戶端程式庫。
+現在，自定義注釋系統的元件已位於應用程式目錄(/apps)中，可以使用擴展元件。 要受影響的網站中注釋系統的實例必須將其resourceType設定為自定義注釋系統，並包括所有必要的客戶端庫。
 
-## 識別所需的Clientlib {#identify-required-clientlibs}
+## 確定所需的客戶端 {#identify-required-clientlibs}
 
-對於擴展注釋，也需要預設注釋的樣式和功能所需的客戶端庫。
+對於擴展注釋，也需要預設注釋的樣式和功能所必需的客戶端庫。
 
-此 [社群元件指南](/help/communities/components-guide.md) 標識所需的客戶端庫。 瀏覽至「元件指南」並檢視「註解」元件，例如：
+的 [社區元件指南](/help/communities/components-guide.md) 標識所需的客戶端庫。 瀏覽到「元件指南」並查看「注釋」元件，例如：
 
 [https://localhost:4502/content/community-components/en/comments.html](https://localhost:4502/content/community-components/en/comments.html)
 
-請注意，注釋必須有三個用戶端程式庫才能正常呈現和運作。 在參考擴充注釋時，需要包含這些注釋，以及 [擴展注釋的客戶端庫](/help/communities/extend-create-components.md#create-a-client-library-folder) ( `apps.custom.comments`)。
+請注意「注釋」要正常呈現和運行所需的三個客戶端庫。 需要在引用擴展注釋時包括這些注釋， [擴展注釋的客戶端庫](/help/communities/extend-create-components.md#create-a-client-library-folder) ( `apps.custom.comments`)。
 
 ![comments-component1](assets/comments-component1.png)
 
-### 將自訂備注新增至頁面 {#add-custom-comments-to-a-page}
+### 將自定義注釋添加到頁面 {#add-custom-comments-to-a-page}
 
-由於每頁只能有一個「注釋」系統，因此建立範例頁面較簡單，如 [建立範例頁面](/help/communities/create-sample-page.md) 教學課程。
+由於每頁只能有一個注釋系統，因此建立示例頁更簡單，如簡短中所述 [建立示例頁](/help/communities/create-sample-page.md) 教程。
 
-建立後，進入「設計」模式，並使「自訂」元件群組可供使用 `Alt Comments` 要新增至頁面的元件。
+建立後，進入「設計」模式並使「自定義」元件組可用，以允許 `Alt Comments` 要添加到頁面的元件。
 
-為了讓注釋顯示並正常運作，必須將注釋的客戶端庫添加到頁的clientlibslist(請參見 [Communities元件的Clientlibs](/help/communities/clientlibs.md))。
+為了使注釋正確顯示和運行，必須將注釋的客戶端庫添加到頁面的客戶端libslist（請參見） [社區元件的客戶端](/help/communities/clientlibs.md))。
 
-#### 範例頁面上的Comments Clientlibs {#comments-clientlibs-on-sample-page}
+#### 示例頁上的注釋客戶端 {#comments-clientlibs-on-sample-page}
 
-![comments-clientlibs-crxde](assets/comments-clientlibs-crxde.png)
+![注釋clientlibs-crxde](assets/comments-clientlibs-crxde.png)
 
-#### 作者：範例頁面上的替代註解 {#author-alt-comment-on-sample-page}
+#### 作者：示例頁上的Alt注釋 {#author-alt-comment-on-sample-page}
 
-![alt-comment](assets/alt-comment.png)
+![Alt注釋](assets/alt-comment.png)
 
-#### 作者：範例頁面註解節點 {#author-sample-page-comments-node}
+#### 作者：示例頁注釋節點 {#author-sample-page-comments-node}
 
-您可以檢視範例頁面之註解節點的屬性，以驗證CRXDE中的resourceType `/content/sites/sample/en/jcr:content/content/primary/comments`.
+通過查看示例頁的注釋節點的屬性，可以驗證CRXDE中的resourceType `/content/sites/sample/en/jcr:content/content/primary/comments`。
 
-![verify-comment-crxde](assets/verify-comment-crxde.png)
+![驗證注釋 — crxde](assets/verify-comment-crxde.png)
 
-#### 發佈範例頁面 {#publish-sample-page}
+#### 發佈示例頁 {#publish-sample-page}
 
-將自訂元件新增至頁面後，也必須(re) [發佈頁面](/help/communities/sites-console.md#publishing-the-site).
+將自定義元件添加到頁面後，還需要(re) [發佈頁面](/help/communities/sites-console.md#publishing-the-site)。
 
-#### 發佈：範例頁面上的替代註解 {#publish-alt-comment-on-sample-page}
+#### 發佈：示例頁上的Alt注釋 {#publish-alt-comment-on-sample-page}
 
-發佈自訂應用程式和範例頁面後，即可輸入註解。 登入時，使用 [示範使用者](/help/communities/tutorials.md#demo-users) 或是管理員，您可以張貼意見。
+在發佈自定義應用程式和示例頁面後，可以輸入注釋。 登錄時，使用 [演示用戶](/help/communities/tutorials.md#demo-users) 或admin，可以發表評論。
 
-以下是aaron.mcdonald@mailinator.com發佈評論：
+以下是aaron.mcdonald@mailinator.com，其中發佈一條評論：
 
-![publish-alt-comment](assets/publish-alt-comment.png)
+![發佈alt注釋](assets/publish-alt-comment.png)
 
 ![publish-alt-comment1](assets/publish-alt-comment1.png)
 
-現在，擴展元件在預設外觀中工作正常，是時候修改外觀了。
+現在，擴展元件在使用預設外觀時似乎工作正常，是時候修改外觀了。

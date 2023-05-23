@@ -1,6 +1,6 @@
 ---
-title: 使用Adobe Campaign
-description: Adobe Campaign是一組解決方案，可讓您個人化所有線上和離線管道，並傳送行銷活動。
+title: 與Adobe Campaign合作
+description: Adobe Campaign是一組解決方案，讓您能夠個性化並在所有線上和離線渠道中提供市場活動。
 uuid: 1f7b48e2-9ec2-4ee8-b017-78c9d2cac48e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,25 +15,25 @@ ht-degree: 2%
 
 ---
 
-# 使用Adobe Campaign{#working-with-adobe-campaign}
+# 與Adobe Campaign合作{#working-with-adobe-campaign}
 
-Adobe Campaign是一組解決方案，可讓您個人化所有線上和離線管道，並傳送行銷活動。
+Adobe Campaign是一組解決方案，讓您能夠個性化並在所有線上和離線渠道中提供市場活動。
 
-本檔案說明如何使用Adobe Campaign:
+本文檔介紹如何與Adobe Campaign合作：
 
 * Adobe Campaign Classic
-* Adobe Campaign Standard，此訂閱型解決方案。
+* Adobe Campaign Standard，是基於訂閱的解決方案。
 
 請參閱下列內容：
 
-* [協作使用Adobe Campaign Classic和Adobe Campaign Standard](/help/sites-authoring/campaign.md)
+* [與Adobe Campaign Classic和Adobe Campaign Standard合作](/help/sites-authoring/campaign.md)
 * [Adobe Campaign元件](/help/sites-authoring/adobe-campaign-components.md)
-* [在AEM中建立Adobe Campaign Forms](/help/sites-authoring/adobe-campaign-forms.md)
-* [定位您的Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)
+* [建立Adobe CampaignForms AEM](/help/sites-authoring/adobe-campaign-forms.md)
+* [瞄準你的Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)
 
-您之前必須 [整合AEM與Adobe Campaign](/help/sites-administering/campaign.md).
+你以前一定有 [與AEMAdobe Campaign](/help/sites-administering/campaign.md)。
 
-此外，如果您想要自訂整合，請參閱下列主題：
+此外，如果要自定義整合，請參閱以下主題：
 
-* [建立自訂擴充功能](/help/sites-developing/extending-campaign-extensions.md)
-* [建立自訂表單對應](/help/sites-developing/extending-campaign-form-mapping.md)
+* [建立自定義擴展](/help/sites-developing/extending-campaign-extensions.md)
+* [建立自定義表單映射](/help/sites-developing/extending-campaign-form-mapping.md)

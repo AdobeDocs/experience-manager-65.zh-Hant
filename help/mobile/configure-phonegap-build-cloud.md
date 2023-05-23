@@ -1,7 +1,7 @@
 ---
-title: 設定您的Adobe PhoneGap BuildCloud Service
+title: 配置您的Adobe PhoneGap BuildCloud Service
 seo-title: Configure your Adobe PhoneGap Build Cloud Service
-description: 請依照本頁所述，配置雲服務並使用PhoneGap組建構建應用程式。
+description: 按照本頁配置雲服務並使用PhoneGap生成構建應用程式。
 seo-description: Follow this page for configuring the cloud services and building your application with PhoneGap build.
 uuid: 59aa99c3-1425-4cc5-9839-a57a6a545d45
 contentOwner: User
@@ -17,78 +17,78 @@ ht-degree: 1%
 
 ---
 
-# 設定您的Adobe PhoneGap BuildCloud Service {#configure-your-adobe-phonegap-build-cloud-service}
+# 配置您的Adobe PhoneGap BuildCloud Service {#configure-your-adobe-phonegap-build-cloud-service}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-此 **PhoneGap Build圖磚** 在應用程式控制面板上，可透過Adobe PhoneGap Build服務建置和發佈您的PhoneGap行動應用程式。
+的 **PhoneGap Build磁貼** 在應用程式控制板上，您可以通過Adobe PhoneGap Build服務構建和分發您的PhoneGap移動應用程式。
 
-在 **管理應用程式** 使用推送遠端組建時，會使用PhoneGap Build建置圖磚 **PhoneGap Build** 平鋪。
+在 **管理應用** 磁貼在推動遠程構建時將使用PhoneGap Build構建 **PhoneGap Build** 磁貼。
 
-您可以推送遠端組建至 [https://build.phonegap.com](https://build.phonegap.com) 或下載來源以在本機建置 [PhoneGap CLI](https://docs.phonegap.com/references/phonegap-cli/).
+您可以將遠程生成推送到 [https://build.phonegap.com](https://build.phonegap.com) 或下載源以本地生成 [PhoneGap CLI](https://docs.phonegap.com/references/phonegap-cli/)。
 
-![PhoneGap Build圖磚](assets/chlimage_1-60.png)
+![PhoneGap Build磁貼](assets/chlimage_1-60.png)
 
-## 設定Cloud Service {#configuring-the-cloud-service}
+## 配置Cloud Service {#configuring-the-cloud-service}
 
-若要善用PhoneGap Build，您必須使用您的PhoneGap Build帳戶資訊設定AEMPhoneGap BuildCloud Service。
+為了利用PhoneGap Build，您需要使用您的帳AEM戶資訊配置PhoneGap BuildCloud Service。
 
-如果您目前沒有帳戶，請導覽至 [https://build.phonegap.com](https://build.phonegap.com) 註冊！ 如果您有Adobe Creative Cloud會籍，則最多可支援25個私人應用程式（非開放原始碼應用程式）。
+如果您當前沒有帳戶，請導航到 [https://build.phonegap.com](https://build.phonegap.com) 註冊！ 如果您擁有Adobe Creative Cloud會員資格，則最多可支援25個私人應用（非開源應用）。
 
-在您驗證PhoneGap Build帳戶是否有效後，請導覽至您的AEM Cloud Management Console，尤其是 [PhoneGap BuildCloud Service](http://localhost:4502/etc/cloudservices/phonegap-build.html) (http://localhost:4502/etc/cloudservices/phonegap-build.html)。
+驗證您的PhoneGap Build帳戶是否處於活動狀態後，請導航AEM至雲管理控制台，尤其是 [PhoneGap BuildCloud Service](http://localhost:4502/etc/cloudservices/phonegap-build.html) (http://localhost:4502/etc/cloudservices/phonegap-build.html)。
 
-使用 **管理Cloud Services** 並排以設定新的雲端服務設定。
+使用 **管理Cloud Services** 磁貼以配置新的雲服務配置。
 
-### 使用「管理Cloud Services」圖磚 {#using-manage-cloud-services-tile}
+### 使用管理Cloud Services磁貼 {#using-manage-cloud-services-tile}
 
-開始使用建立應用程式之前 **PhoneGap Build** 圖磚，您必須使用 **管理Cloud Services** 圖磚。
+開始使用 **PhoneGap Build** 磁貼，您必須配置雲服務， **管理Cloud Services** AEM Mobile儀錶盤上的磁貼。
 
-若要為您的應用程式設定雲端服務，請遵循下列步驟：
+要為應用配置雲服務，請執行以下步驟：
 
-1. 按一下 **管理Cloud Services** 方塊。
+1. 按一下 **管理Cloud Services** 平鋪。
 
    ![chlimage_1-61](assets/chlimage_1-61.png)
 
-1. 選擇 **PhoneGap Build** 選項 **新增或編輯Cloud Service** 螢幕。
+1. 選擇 **PhoneGap Build** 的 **添加或編輯Cloud Service** 的上界。
 
    按一下&#x200B;**下一步**。
 
    ![chlimage_1-62](assets/chlimage_1-62.png)
 
-1. 輸入您的憑證以建立新的雲配置。
+1. 輸入憑據以建立新的雲配置。
 
-   驗證後，按一下 **提交**. 此已設定的雲端設定現在會顯示在 **管理Cloud Services** 方塊。
+   驗證後，按一下 **提交**。 此配置的雲配置現在顯示在 **管理Cloud Services** 平鋪。
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
 ### 使用PhoneGap Build構建應用程式 {#building-your-application-with-phonegap-build}
 
-設定雲端服務後，您就可以使用 **PhoneGap Build** 方塊。 按一下右上角以從 **建立遠端** 或 **下載來源** 選項。
+配置雲服務後，您可以使用 **PhoneGap Build** 平鋪。 按一下右上角，從 **生成遠程** 或 **下載源** 頁籤
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-若要使用Adobe PhoneGap Build叫用遠端組建，請按一下 **建立遠端**.
+要使用Adobe PhoneGap Build調用遠程生成，請按一下 **生成遠程**。
 
 >[!NOTE]
 >
->如果建置因任何原因而失敗(下方的紅色iOS圖示表示平台失敗)，您可以將游標暫留在圖示上方，即可取得錯誤訊息。 或者，您也可以按一下三點，「……」 位於圖磚底部，可直接導覽至https://build.phonegap.com（您必須驗證），並直接觀看及管理您的組建。
+>如果生成因任何原因而失敗(下面的紅色iOS表徵圖表示平台失敗)，您可以將滑鼠懸停在表徵圖上以獲取錯誤消息。 或者，可按一下三點，「……」 在磁貼底部直接導航到https://build.phonegap.com（您必須進行身份驗證），並直接查看和管理生成。
 
 ### 使用PhoneGap CLI構建應用程式 {#building-your-application-with-phonegap-cli}
 
-PhoneGap提供命令列介面，可在本機建置您的應用程式。
+PhoneGap提供命令行介面以在本地構建應用程式。
 
-使用PhoneGap命令行介面(CLI)在您的電腦上編譯PhoneGap應用程式。 若要將AEM內容納入您的應用程式，AEM會建立ZIP檔案，其中包含您行動應用程式的內容、內容同步設定及其他必要資產。 下載ZIP檔案，並將其納入您的組建中。
+使用PhoneGap命令行介面(CLI)在電腦上編譯PhoneGap應用程式。 要將內AEM容包括到應AEM用程式中，請建立包含移動應用程式內容、內容同步配置和其他必需資產的ZIP檔案。 下載ZIP檔案並將其包含在您的生成中。
 
 為了利用PhoneGap的命令行介面，您需要設定本地環境以包括：
 
-1. Platform SDK(iOS、Android、WindowsPhone、...)和，
+1. 平台SDK(iOS、Android、WindowsPhone...)和，
 1. PhoneGap CLI
 
-您可以閱讀更多資訊 [此處](https://docs.phonegap.com/references/phonegap-cli/).
+你可以閱讀更多 [這裡](https://docs.phonegap.com/references/phonegap-cli/)。
 
-安裝先決條件後，請建立簡單應用程式，然後透過終端機嘗試讓其在模擬器中執行，或在裝置上執行更佳，借此進行簡單測試：
+安裝完必備項後，通過建立一個簡單應用並通過終端嘗試使其在模擬器中運行或在設備上運行更好，為它提供簡單test:
 
 ```xml
 phonegap create myApp
@@ -98,16 +98,16 @@ phonegap run ios (or android, ...)
 
 >[!NOTE]
 >
->添加 — 如果不想在連接的設備上運行，則在此行末尾模擬。
+>add — 如果不想在連接的設備上運行，則在此行末尾進行模擬。
 
-一旦您確認上述功能有效後，請使用 **PhoneGap Build** 平鋪至 **下載來源**. 將檔案儲存並解壓縮至本機系統。 完成後：
+驗證上述功能後，使用 **PhoneGap Build** 平鋪到 **下載源**。 將檔案保存並解壓縮到本地系統。 一旦完成：
 
-* 導覽至該儲存的檔案（資料夾）
-* 執行&#39;phonegap run ios&#39;（或android等）
+* 導航到該保存的檔案（資料夾）
+* 運行「phonegap run ios」（或android等）
 
 ### 其他資源 {#additional-resources}
 
-若要了解作者和開發人員的角色和責任，請參閱下列資源：
+要瞭解作者和開發人員的角色和職責，請參閱以下資源：
 
-* [使用AEM為Adobe PhoneGap企業開發](/help/mobile/developing-in-phonegap.md)
-* [在AEM中為Adobe PhoneGap Enterprise編寫](/help/mobile/phonegap.md)
+* [Adobe PhoneGap企業AEM發展](/help/mobile/developing-in-phonegap.md)
+* [為Adobe PhoneGap企業創AEM作](/help/mobile/phonegap.md)

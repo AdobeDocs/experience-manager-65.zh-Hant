@@ -1,7 +1,7 @@
 ---
-title: 適用性表單的標準驗證錯誤訊息
+title: 自適應表單的標準驗證錯誤消息
 seo-title: Standard validation error messages for adaptive forms
-description: 使用自訂錯誤處理常式，將適用性表單的驗證錯誤訊息轉換為標準格式
+description: 使用自定義錯誤處理程式將自適應表單的驗證錯誤消息轉換為標準格式
 seo-description: Transform the validation error messages for adaptive forms into standard format using custom error handlers
 uuid: 0d1f9835-3e28-41d3-a3b1-e36d95384328
 contentOwner: anujkapo
@@ -17,24 +17,24 @@ ht-degree: 0%
 
 ---
 
-# 適用性表單的標準驗證錯誤訊息 {#standard-validation-error-messages}
+# 自適應表單的標準驗證錯誤消息 {#standard-validation-error-messages}
 
-適用性表單會根據預先設定的驗證標準，驗證您在欄位中提供的輸入。 驗證條件會參考最適化表單中欄位可接受的輸入值。 您可以根據與最適化表單搭配使用的資料來源來設定驗證條件。 例如，如果您使用RESTful Web服務作為資料源，則可以在Swagger定義檔案中定義驗證標準。
+自適應表單基於預設定的驗證標準驗證您在欄位中提供的輸入。 驗證標準參考自適應表單中欄位的可接受輸入值。 您可以根據與自適應表單一起使用的資料源設定驗證標準。 例如，如果使用REST風格的Web服務作為資料源，則可以在Swagger定義檔案中定義驗證條件。
 
-如果輸入值符合驗證標準，則值會提交至資料來源。 否則，適用性表單會顯示錯誤訊息。
+如果輸入值滿足驗證標準，則將這些值提交到資料源。 否則，自適應表單將顯示錯誤消息。
 
-與此方法類似，適用性表單現在可與自訂服務整合，以執行資料驗證。 如果輸入值不符合驗證標準，且伺服器返回的驗證錯誤消息為標準消息格式，則錯誤消息在表單的欄位級別顯示。
+與此方法類似，自適應表單現在可以與自定義服務整合以執行資料驗證。 如果輸入值不滿足驗證條件，並且伺服器返回的驗證錯誤消息為標準消息格式，則錯誤消息將以表單的欄位級別顯示。
 
-如果輸入值不符合驗證標準，並且伺服器驗證錯誤消息不是標準消息格式，則適用性表單提供將驗證錯誤消息轉換為標準格式的機制，以便它們在表單的欄位級顯示。 您可以使用下列兩種方法之一，將錯誤訊息轉換為標準格式：
+如果輸入值不滿足驗證標準並且伺服器驗證錯誤消息不是標準消息格式，則自適應表單提供將驗證錯誤消息轉換為標準格式的機制，以便它們在表單的欄位級別顯示。 可以使用以下兩種方法中的任意一種將錯誤消息轉換為標準格式：
 
-* 在最適化表單提交上新增自訂錯誤處理常式
-* 使用規則編輯器將自訂處理常式新增至叫用服務動作
+* 在自適應表單提交中添加自定義錯誤處理程式
+* 使用規則編輯器將自定義處理程式添加到調用服務操作
 
-本文說明驗證錯誤訊息的標準格式，以及將錯誤訊息從自訂格式轉換為標準格式的指示。
+本文介紹了驗證錯誤消息的標準格式以及將錯誤消息從自定義格式轉換為標準格式的說明。
 
 ## 標準驗證錯誤消息格式 {#standard-validation-message-format}
 
-如果伺服器驗證錯誤訊息採用下列標準格式，適用性表單會在欄位層級顯示錯誤：
+如果伺服器驗證錯誤消息採用以下標準格式，則自適應表單將在欄位級別顯示錯誤：
 
 ```javascript
    {
@@ -53,43 +53,43 @@ ht-degree: 0%
 
 其中：
 
-* `errorCausedBy` 說明失敗的原因
-* `errors` 提及未通過驗證標準的欄位的SOM表達式以及驗證錯誤消息
-* `originCode` 包含外部服務傳回的錯誤代碼
-* `originMessage` 包含外部服務傳回的原始錯誤資料
+* `errorCausedBy` 描述了失敗的原因
+* `errors` 提及驗證條件失敗的欄位的SOM表達式以及驗證錯誤消息
+* `originCode` 包含外部服務返回的錯誤代碼
+* `originMessage` 包含外部服務返回的原始錯誤資料
 
-## 設定最適化表單提交以新增自訂處理常式 {#configure-adaptive-form-submission}
+## 配置自適應表單提交以添加自定義處理程式 {#configure-adaptive-form-submission}
 
-如果伺服器驗證錯誤訊息未以標準格式顯示，您可以啟用非同步提交，並在適用性表單提交時新增自訂錯誤處理常式，將訊息轉換為標準格式。
+如果伺服器驗證錯誤消息未以標準格式顯示，則可以啟用非同步提交並在自適應表單提交中添加自定義錯誤處理程式，以將消息轉換為標準格式。
 
-### 設定非同步最適化表單提交 {#configure-asynchronous-adaptive-form-submission}
+### 配置非同步自適應表單提交 {#configure-asynchronous-adaptive-form-submission}
 
-新增自訂處理常式之前，您必須設定非同步提交的最適化表單。 執行下列步驟：
+在添加自定義處理程式之前，必須配置非同步提交的自適應表單。 執行以下步驟：
 
-1. 在最適化表單製作模式中，選取「表單容器」物件並點選 ![適用性表單屬性](assets/configure_icon.png) 來開啟其屬性。
-1. 在 **[!UICONTROL 提交]** 屬性部分，啟用 **[!UICONTROL 使用非同步提交]**.
+1. 在自適應表單創作模式中，選擇「表單容器」對象並點擊 ![自適應表單屬性](assets/configure_icon.png) 開啟其屬性。
+1. 在 **[!UICONTROL 提交]** 屬性部分，啟用 **[!UICONTROL 使用非同步提交]**。
 1. 選擇 **[!UICONTROL 在伺服器上重新驗證]** 在提交之前驗證伺服器上的輸入欄位值。
 1. 選擇提交操作：
 
-   * 選擇 **[!UICONTROL 使用表單資料模型提交]** 並選擇適當的資料模型（如果使用基於RESTful Web服務） [表單資料模型](work-with-form-data-model.md) 作為資料來源。
-   * 選擇 **[!UICONTROL 提交到REST端點]** 和指定 **[!UICONTROL 重新導向URL/路徑]**，以使用RESTful網站服務作為資料來源。
+   * 選擇 **[!UICONTROL 使用表單資料模型提交]** 並選擇相應的資料模型（如果使用基於REST風格的Web服務） [表單資料模型](work-with-form-data-model.md) 作為資料源。
+   * 選擇 **[!UICONTROL 提交到REST終結點]** 並指定 **[!UICONTROL 重定向URL/路徑]**，如果使用REST風格的Web服務作為資料源。
 
-   ![適用性表單提交屬性](assets/af_submission_properties.png)
+   ![自適應表單提交屬性](assets/af_submission_properties.png)
 
-1. 點選 ![儲存](assets/save_icon.png) 以儲存屬性。
+1. 點擊 ![保存](assets/save_icon.png) 的子菜單。
 
-### 在最適化表單提交上新增自訂錯誤處理常式 {#add-custom-error-handler-af-submission}
+### 在自適應表單提交中添加自定義錯誤處理程式 {#add-custom-error-handler-af-submission}
 
-AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 處理常式是根據伺服器回應執行的用戶端函式。 提交表單時，將資料發送到伺服器進行驗證，伺服器會向客戶端返回一個響應，其中包含有關提交成功或錯誤事件的資訊。 資訊會以參數形式傳遞至相關處理常式，以執行函式。
+AEM Forms為表單提交提供開箱即用的成功和錯誤處理程式。 處理程式是基於伺服器響應執行的客戶端函式。 當提交表單時，資料被傳輸到伺服器以進行驗證，伺服器返回對客戶端的響應，其中包含有關提交的成功或錯誤事件的資訊。 資訊作為參數傳遞給相關處理程式以執行該函式。
 
-執行下列步驟，在適用性表單提交上新增自訂錯誤處理常式：
+執行以下步驟，在自適應表單提交中添加自定義錯誤處理程式：
 
-1. 在製作模式中開啟最適化表單、選取任何表單物件，然後點選 <!--![Rule Editor](assets/af_edit_rules.png)--> 來開啟規則編輯器。
-1. 選擇 **[!UICONTROL 表單]** 在「表單對象」樹中，並點選 **[!UICONTROL 建立]**.
-1. 選擇 **[!UICONTROL 提交錯誤]** 從「事件」下拉式清單中。
-1. 編寫規則以將自定義錯誤結構轉換為標準錯誤結構並點選 **[!UICONTROL 完成]** 來儲存規則。
+1. 在創作模式下開啟自適應表單，選擇任何表單對象，然後點擊 <!--![Rule Editor](assets/af_edit_rules.png)--> 開啟規則編輯器。
+1. 選擇 **[!UICONTROL 窗體]** 在「表單對象」樹中按一下 **[!UICONTROL 建立]**。
+1. 選擇 **[!UICONTROL 提交時出錯]** 從事件下拉清單中。
+1. 編寫規則以將自定義錯誤結構轉換為標準錯誤結構並點擊 **[!UICONTROL 完成]** 來保存規則。
 
-以下是將自訂錯誤結構轉換為標準錯誤結構的范常式式碼：
+以下是將自定義錯誤結構轉換為標準錯誤結構的示例代碼：
 
 ```javascript
 var data = $event.data;
@@ -129,32 +129,32 @@ if (data) {
 }
 ```
 
-此 `var som_map` 列出要轉換為標準格式的最適化表單欄位的SOM表達式。 您可以點選欄位並選取，以在最適化表單中檢視任何欄位的SOM運算式 **[!UICONTROL 查看SOM表達式]**.
+的 `var som_map` 列出要轉換為標準格式的自適應表單域的SOM表達式。 通過按一下欄位並選擇，可以以自適應形式查看任意欄位的SOM表達式 **[!UICONTROL 查看SOM表達式]**。
 
-此自訂錯誤處理常式會轉換 `var som_map` 格式。 因此，驗證錯誤訊息會以最適化表單的欄位層級顯示。
+使用此自定義錯誤處理程式，自適應表單將轉換中列出的欄位 `var som_map` 格式。 結果，驗證錯誤消息以自適應形式在欄位級顯示。
 
 ## 使用Invoke Service操作添加自定義處理程式
 
-執行下列步驟來新增錯誤處理常式，以使用將自訂錯誤結構轉換為標準錯誤結構 [規則編輯器的](rule-editor.md) 調用服務操作：
+執行以下步驟，添加錯誤處理程式，以使用 [規則編輯器](rule-editor.md) 調用服務操作：
 
-1. 在製作模式中開啟最適化表單、選取任何表單物件，然後點選 ![規則編輯器](assets/rule_editor_icon.png) 來開啟規則編輯器。
-1. 點選 **[!UICONTROL 建立]**.
-1. 在 **[!UICONTROL 當]** 區段。 例如，當[欄位名稱] 已變更。 選擇 **[!UICONTROL 已變更]** 從 **[!UICONTROL 選擇狀態]** 下拉式清單來達成此條件。
-1. 在 **[!UICONTROL 然後]** 部分，選擇 **[!UICONTROL 調用服務]** 從 **[!UICONTROL 選擇操作]** 下拉式清單。
-1. 從 **[!UICONTROL 輸入]** 區段。 例如，如果您要驗證 **名稱**, **ID**，和 **狀態** 欄位，選取貼文服務(pet)，然後選取pet.name、pet.id和pet.status(位於 **[!UICONTROL 輸入]** 區段。
+1. 在創作模式下開啟自適應表單，選擇任何表單對象，然後點擊 ![規則編輯器](assets/rule_editor_icon.png) 開啟規則編輯器。
+1. 點擊 **[!UICONTROL 建立]**。
+1. 在 **[!UICONTROL 當]** 的子菜單。 例如，When[欄位名稱] 的子菜單。 選擇 **[!UICONTROL 已更改]** 從 **[!UICONTROL 選擇狀態]** 下拉清單以達到此條件。
+1. 在 **[!UICONTROL 然後]** 選擇 **[!UICONTROL 調用服務]** 從 **[!UICONTROL 選擇操作]** 的子菜單。
+1. 從中選擇Post服務及其相應的資料綁定 **[!UICONTROL 輸入]** 的子菜單。 例如，如果要驗證 **名稱**。 **ID**, **狀態** 欄位，選擇Post service(pet)，然後在 **[!UICONTROL 輸入]** 的子菜單。
 
-因為此規則，您為輸入的值 **名稱**, **ID**，和 **狀態** 當步驟2中定義的欄位變更，且您從表單中的欄位中取出索引標籤時，欄位即會經過驗證。
+由於此規則，您為其輸入的值 **名稱**。 **ID**, **狀態** 在第2步中定義的欄位被更改後，您即會從窗體中的欄位中選出標籤，欄位即會被驗證。
 
-1. 選擇 **[!UICONTROL 代碼編輯器]** 從「模式選擇」下拉清單中。
-1. 點選 **[!UICONTROL 編輯代碼]**.
-1. 從現有程式碼中刪除下列行：
+1. 選擇 **[!UICONTROL 代碼編輯器]** 的子菜單。
+1. 點擊 **[!UICONTROL 編輯代碼]**。
+1. 從現有代碼中刪除以下行：
 
    ```javascript
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
    ```
 
-1. 編寫規則以將自定義錯誤結構轉換為標準錯誤結構並點選 **[!UICONTROL 完成]** 來儲存規則。
-例如，在結尾處新增下列范常式式碼，以將自訂錯誤結構轉換為標準錯誤結構：
+1. 編寫規則以將自定義錯誤結構轉換為標準錯誤結構並點擊 **[!UICONTROL 完成]** 來保存規則。
+例如，在末尾添加以下示例代碼，以將自定義錯誤結構轉換為標準錯誤結構：
 
    ```javascript
    var errorHandler = function(jqXHR, data) {
@@ -198,14 +198,14 @@ if (data) {
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, null, errorHandler);
    ```
 
-   此 `var som_map` 列出要轉換為標準格式的最適化表單欄位的SOM表達式。 您可以點選欄位並選取，以在最適化表單中檢視任何欄位的SOM運算式 **[!UICONTROL 查看SOM表達式]** 從 **[!UICONTROL 更多選項]** (...)功能表。
+   的 `var som_map` 列出要轉換為標準格式的自適應表單域的SOM表達式。 通過按一下欄位並選擇，可以以自適應形式查看任意欄位的SOM表達式 **[!UICONTROL 查看SOM表達式]** 從 **[!UICONTROL 更多選項]** (..)。
 
-   請確定您將下列程式碼範例行複製到自訂錯誤處理常式：
+   確保將示例代碼的以下行複製到自定義錯誤處理程式：
 
    ```javascript
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, null, errorHandler);
    ```
 
-   executeOperation API包含 `null` 和 `errorHandler` 參數（以新的自訂錯誤處理常式為基礎）。
+   executeOperation API包括 `null` 和 `errorHandler` 參數基於新的自定義錯誤處理程式。
 
-   此自訂錯誤處理常式會轉換 `var som_map` 格式。 因此，驗證錯誤訊息會以最適化表單的欄位層級顯示。
+   使用此自定義錯誤處理程式，自適應表單將轉換中列出的欄位 `var som_map` 格式。 結果，驗證錯誤消息以自適應形式在欄位級顯示。

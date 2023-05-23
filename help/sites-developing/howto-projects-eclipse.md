@@ -1,7 +1,7 @@
 ---
-title: 如何使用Eclipse開發AEM專案
+title: 如何利用EclipseAEM開發項目
 seo-title: How to Develop AEM Projects Using Eclipse
-description: 本指南說明如何使用Eclipse來開發AEM型專案
+description: 本指南介紹如何使用Eclipse開發基AEM於的項目
 seo-description: This guide describes how to use Eclipse for developing AEM based projects
 uuid: 79fee76f-6bcc-498f-af46-530816b41bbe
 contentOwner: msm-service
@@ -17,54 +17,54 @@ ht-degree: 0%
 
 ---
 
-# 如何使用Eclipse開發AEM專案{#how-to-develop-aem-projects-using-eclipse}
+# 如何利用EclipseAEM開發項目{#how-to-develop-aem-projects-using-eclipse}
 
-本指南說明如何使用Eclipse來開發AEM型專案。
+本指南介紹如何使用Eclipse開發基AEM於的項目。
 
 >[!NOTE]
 >
->Adobe現在提供 [AEM Development Tools for Eclipse](/help/sites-developing/aem-eclipse.md) 可協助您使用Eclipse開發AEM解決方案。
+>Adobe現在提供 [EclipseAEM開發工具](/help/sites-developing/aem-eclipse.md) 幫助您開發AEMEclipse解決方案。
 
 ## 概觀 {#overview}
 
-若要開始使用AEM on Eclipse開發，需執行下列步驟。
+要開始在AEMEclipse上開發，需要以下步驟。
 
-在本操作說明的其餘部分中，將更詳細地說明每個操作。
+在本How-To的其餘部分中，對每個How-To進行了更詳細的說明。
 
 * 安裝Eclipse 4.3(Kepler)
-* 根據Maven設定AEM專案
+* 基於Maven設AEM置項目
 * 在Maven POM中為Eclipse準備JSP支援
-* 將Maven專案匯入Eclipse
+* 將Maven項目導入Eclipse
 
 >[!NOTE]
 >
->本指南以Eclipse 4.3(Kepler)和AEM 5.6.1為基礎。
+>本指南基於Eclipse 4.3(Kepler)和AEM5.6.1。
 
 ## 安裝Eclipse {#install-eclipse}
 
-從以下網址下載「Eclipse IDE for Java EE Developers」： [Eclipse下載頁面](https://www.eclipse.org/downloads/).
+從 [Eclipse下載頁](https://www.eclipse.org/downloads/)。
 
-在 [安裝指示](https://wiki.eclipse.org/Eclipse/Installation).
+在 [安裝說明](https://wiki.eclipse.org/Eclipse/Installation)。
 
-## 根據Maven設定AEM專案 {#set-up-your-aem-project-based-on-maven}
+## 基於Maven設AEM置項目 {#set-up-your-aem-project-based-on-maven}
 
-接下來，使用Maven設定專案，如 [如何使用Apache Maven建立AEM專案](/help/sites-developing/ht-projects-maven.md).
+接下來，使用Maven設定項目，如中所述 [使用Apache Maven構建AEM項目的方法](/help/sites-developing/ht-projects-maven.md)。
 
-## 準備Eclipse的JSP支援 {#prepare-jsp-support-for-eclipse}
+## 為Eclipse準備JSP支援 {#prepare-jsp-support-for-eclipse}
 
-Eclipse也可提供使用JSP的支援，例如
+Eclipse還可以在使用JSP時提供支援，例如
 
 * 自動完成標籤庫
-* 由定義之物件的Eclipse感知 &lt;cq:defineobjects /> 和 &lt;sling:defineobjects />
+* 由定義的對象的Eclipse感知 &lt;cq:defineobjects /> 和 &lt;sling:defineobjects />
 
-讓其發揮作用：
+為了讓這一點奏效：
 
-1. 遵循 [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) in [如何使用Apache Maven建立AEM專案](/help/sites-developing/ht-projects-maven.md).
-1. 將下列項目新增至 &lt;build /> 區段。
+1. 按照 [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) 在 [使用Apache Maven構建AEM項目的方法](/help/sites-developing/ht-projects-maven.md)。
+1. 將以下內容添加到 &lt;build /> 的子菜單。
 
-   Eclipse的Maven支援外掛程式m2e不提供對maven-jspc-plugin的支援，此配置指示m2e忽略外掛程式以及清理臨時編譯結果的相關任務。
+   Eclipse的Maven支援插件m2e不支援maven-jspc插件，此配置指示m2e忽略插件和清理臨時編譯結果的相關任務。
 
-   這不是問題：如 [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)，此設定中的maven-jspc-plugin僅用於驗證JSP是否在建置過程中編譯。 Eclipse已報告JSP中的任何問題，並且不依賴此Maven插件才能執行此操作。
+   這不是問題：如所述 [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)，此設定中的maven-jspc-plugin僅用於驗證JSP是否作為生成過程的一部分進行編譯。 Eclipse已報告JSP中的任何問題，並且不依賴此Maven插件來執行。
 
    **myproject/content/pom.xml**
 
@@ -116,21 +116,21 @@ Eclipse也可提供使用JSP的支援，例如
    </build>
    ```
 
-### 將Maven專案匯入Eclipse {#import-the-maven-project-into-eclipse}
+### 將Maven項目導入Eclipse {#import-the-maven-project-into-eclipse}
 
-1. 在Eclipse中，選擇檔案>導入……
-1. 在「匯入」對話方塊中，選擇「Maven >現有Maven專案」，然後按一下「下一步」。
+1. 在Eclipse中，選擇「檔案」>「導入……」
+1. 在「導入」對話框中，選擇「Maven」>「現有Maven項目」，然後按一下「下一步」。
 
    ![chlimage_1-41](assets/chlimage_1-41a.png)
 
-1. 輸入項目頂級資料夾的路徑，然後按一下「全部選擇」和「完成」。
+1. 輸入項目頂級資料夾的路徑，然後按一下「全選」和「完成」。
 
    ![chlimage_1-42](assets/chlimage_1-42a.png)
 
-1. 您現在都可以使用Eclipse來開發AEM專案，包括JSP自動完成。
+1. 現在，您已準備好使用Eclipse開發項目，AEM包括JSP自動完成。
 
    ![chlimage_1-43](assets/chlimage_1-43a.png)
 
    >[!NOTE]
    >
-   >如果您包括 `/libs/foundation/global.jsp` 或 `/libs`，您需要將其複製至您的專案，讓Eclipse能夠解決包含問題。 同時，您必須確定Maven未將其整合至您的內容套件中。 如何達成此目標，請參閱 [如何使用Apache Maven建立AEM專案](/help/sites-developing/ht-projects-maven.md).
+   >如果包括 `/libs/foundation/global.jsp` 或其他JSP `/libs`，您需要將其複製到您的項目中，以便Eclipse能夠解決包含問題。 同時，您需要確保Maven未將其捆綁到您的內容包中。 如中所述，如何實現此目標 [如何使用Apache AEM Maven生成項目](/help/sites-developing/ht-projects-maven.md)。

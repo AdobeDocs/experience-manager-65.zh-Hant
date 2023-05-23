@@ -1,7 +1,7 @@
 ---
 title: AEM 現代化工具
 seo-title: AEM Modernization Tools
-description: AEM 現代化工具 可協助您將舊版AEM功能轉換為最新技術
+description: AEM 現代化工具 幫助您將舊式功AEM能轉換為最新技術
 seo-description: AEM Modernization Tools help you easily convert your legacy AEM features to the latest technology
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -22,7 +22,7 @@ ht-degree: 73%
 * [](/help/sites-authoring/default-components-foundation.md)從基礎元件轉換為核心元件[](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
 * [](website.md)從傳統 UI 轉換為觸控式 UI[](touch-ui-concepts.md)
 
-如需這些工具之使用的詳細資訊， [查看其檔案](https://opensource.adobe.com/aem-modernize-tools/).
+有關這些工具的使用情況的詳細資訊， [查看文檔](https://opensource.adobe.com/aem-modernize-tools/)。
 
 >[!NOTE]
 >

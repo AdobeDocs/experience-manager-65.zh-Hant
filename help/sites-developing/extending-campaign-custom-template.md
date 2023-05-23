@@ -1,7 +1,7 @@
 ---
-title: 使用Adobe Campaign表單元件建立自訂AEM頁面範本
+title: 使用Adobe CampaignAEM表單元件建立自定義頁面模板
 seo-title: Creating Custom AEM Page Template with Adobe Campaign Form Components
-description: 建立使用Adobe Campaign表單元件的自訂頁面範本
+description: 生成使用Adobe Campaign表單元件的自定義頁面模板
 seo-description: Build a custom page template that uses Adobe Campaign Form components
 uuid: 8162ace2-b661-4c39-b0fb-288e1c035b9c
 contentOwner: User
@@ -17,21 +17,21 @@ ht-degree: 1%
 
 ---
 
-# 使用Adobe Campaign表單元件建立自訂AEM頁面範本{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
+# 使用Adobe CampaignAEM表單元件建立自定義頁面模板{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-本頁面說明如何建立使用 [Adobe Campaign表單](/help/sites-authoring/adobe-campaign-components.md) 元件，方法是檢查Geometrixx — 戶外範本( `/apps/geometrixx-outdoors/components/page_campaign_profile`)，並指出建立自己的自訂範本時可能需要的重要資訊。
+此頁說明如何生成使用 [Adobe Campaign窗體](/help/sites-authoring/adobe-campaign-components.md) 元件：檢查Geometrixx — 室外模板( `/apps/geometrixx-outdoors/components/page_campaign_profile`)，並指出建立您自己的自定義模板時可能需要的重要資訊。
 
 >[!NOTE]
 >
->[電子郵件和表單範例僅可在Geometrixx中取得](/help/sites-developing/we-retail.md). 請從「封裝共用」下載Geometrixx內容範例。
+>[電子郵件和表單示例僅在Geometrixx中提供](/help/sites-developing/we-retail.md)。 請從包共用下載示例Geometrixx內容。
 
-若要使用Adobe Campaign表單元件建立自訂AEM頁面範本，請確定您有下列項目：
+要使用Adobe CampaignAEM表單元件建立自定義頁面模板，請確保具有以下功能：
 
-1. **正確的resourceSuperType**
+1. **正確的資源SuperType**
 
-   確認page-component繼承自 `mcm/campaign/components/profile`.
+   確保頁面元件繼承自 `mcm/campaign/components/profile`。
 
-   這是servlet取得和儲存資訊的必要條件
+   這是Servlet獲取和保存資訊所必需的
 
    * `com.day.cq.mcm.campaign.servlets.TemplateListServlet`
    * `com.day.cq.mcm.campaign.servlets.SaveProfileServlet`
@@ -40,16 +40,16 @@ ht-degree: 1%
 
 1. **ClientContext設定**
 
-   當您查看clientcontext設定時( `/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`)您會看到下列設定：
+   查看客戶端上下文設定時( `/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`)您會看到以下設定：
 
-   * ClientContext `/etc/clientcontext/campaign`
-   * 此外，酒店還提供 *設定* 節點。
+   * ClientContext指向 `/etc/clientcontext/campaign`
+   * 還有一個額外的 *配置* 的下界。
 
    ![chlimage_1-202](assets/chlimage_1-202.png)
 
 1. **head.jsp(/apps/geometrixx-outdoors/components/page_campaign_profile/head.jsp)**
 
-   在 **head.jsp**，您會看到下列使用 **clientcontext-config** 和 **cloudservice-hook**:
+   在 **head.jsp**，您將看到以下使用 **客戶端上下文 — 配置** 和 **雲服務掛接**:
 
    ```
    <cq:include path="config" resourceType="cq/personalization/components/clientcontext_optimized/config"/>
@@ -59,25 +59,25 @@ ht-degree: 1%
 
 1. **body.jsp(/apps/geometrixx-outdoors/components/page_campaign_profile/body.jsp)**
 
-   在 **body.jsp**，雲端服務會載入頁面底部：
+   在 **body.jsp**，雲服務載入到頁面底部：
 
    ```
    <cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
    ```
 
-1. **促銷活動頁面屬性**
+1. **市場活動頁面屬性**
 
-   若要選取Adobe Campaign範本，頁面屬性會以 **行銷活動** 標籤：
+   要能夠選擇Adobe Campaign模板，使用 **活動** 頁籤：
 
    `/apps/geometrixx-outdoors/components/page_campaign_profile/dialog/items/tabs/items/campaign`
 
    ![chlimage_1-203](assets/chlimage_1-203.png)
 
-1. **範本設定**.
+1. **模板設定**。
 
-   在範本中( `/apps/geometrixx-outdoors/templates/campaign_profile/jcr:content`)，您會看到下列預設值：
+   在模板中( `/apps/geometrixx-outdoors/templates/campaign_profile/jcr:content`)會看到以下預設值：
 
-   | **acMapping** | mapRecipient(適用於Adobe Campaign 6.1)、設定檔(適用於Adobe Campaign Standard) |
+   | **acMapping** | mapRecipient(Adobe Campaign6.1)，簡介(Adobe Campaign Standard) |
    |---|---|
    | **acTemplateId** | 郵件 |
 

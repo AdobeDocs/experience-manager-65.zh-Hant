@@ -1,7 +1,7 @@
 ---
-title: 升級程式
+title: 升級過程
 seo-title: Upgrade Procedure
-description: 了解升級AEM所需遵循的程式。
+description: 瞭解升級所需遵循的步驟AEM。
 seo-description: Learn about the procedure you need to follow in order to upgrade AEM.
 uuid: 81126a70-c082-4f01-a1ad-7152182da88b
 contentOwner: sarchiz
@@ -20,13 +20,13 @@ ht-degree: 0%
 
 ---
 
-# 升級程式 {#upgrade-procedure}
+# 升級過程 {#upgrade-procedure}
 
 >[!NOTE]
 >
->由於大部分AEM升級都是就地執行，因此升級需要製作層級的停機時間。 遵循這些最佳實務，可將發佈層級停機時間最小化或消除。
+>由於大多數升級都是就地執行的，因此升級將AEM需要「作者」層停機。 通過遵循這些最佳做法，可以最小化或消除發佈層停機時間。
 
-升級AEM環境時，您需要考慮升級製作環境或發佈環境之間的方法差異，以將作者和使用者的停機時間減至最少。 本頁概述升級當前在AEM 6.x版上運行的AEM拓撲的高級過程。由於製作和發佈層級，以及Mongo和TarMK部署之間的程式不同，因此每個層級和微內核已列在個別區段中。 執行部署時，建議您先升級製作環境、判斷是否成功，然後繼續前往發佈環境。
+在升級AEM環境時，您需要考慮升級作者環境或發佈環境之間在方法上的差異，以便最大限度地減少您的作者和最終用戶的停機時間。 本頁概述了升級當前在6.AEMx版上運行的拓撲的AEM高級過程。由於作者層和發佈層以及基於Mongo和TarMK的部署之間的進程不同，因此每個層和微內核已在單獨的部分中列出。 執行部署時，我們建議先升級您的作者環境，確定成功與否，然後繼續到發佈環境。
 
 <!--
 >[!IMPORTANT]
@@ -34,122 +34,122 @@ ht-degree: 0%
 >The downtime during the upgrade can be significally reduced by indexing the repository before performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)
 -->
 
-## TarMK作者階層 {#tarmk-author-tier}
+## TarMK作者層 {#tarmk-author-tier}
 
 ### 啟動拓撲 {#starting-topology}
 
-此部分假定的拓撲由運行在TarMK上且具有冷備用的製作伺服器組成。 從製作伺服器復寫至TarMK發佈伺服器場。 雖然此處未說明，但此方法也可用於使用卸載的部署。 在Author例項上停用復寫代理後，以及重新啟用復寫代理之前，請務必升級或重建新版本上的卸載例項。
+此部分假定的拓撲由運行在TarMK上且具有冷備用的Author伺服器組成。 從作者伺服器到TarMK發佈場進行複製。 雖然此處未說明，但此方法也可用於使用卸載的部署。 在Author實例上禁用複製代理後，在重新啟用它們之前，確保在新版本上升級或重新生成卸載實例。
 
 ![tarmk_starting_topology](assets/tarmk_starting_topology.jpg)
 
 ### 升級準備 {#upgrade-preparation}
 
-![upgrade-preparation-author](assets/upgrade-preparation-author.png)
+![升級準備作者](assets/upgrade-preparation-author.png)
 
-1. 停止內容編寫
+1. 停止內容創作
 
 1. 停止備用實例
 
-1. 停用作者上的復寫代理
+1. 禁用作者上的複製代理
 
-1. 執行 [預升級維護任務](/help/sites-deploying/pre-upgrade-maintenance-tasks.md).
+1. 運行 [預升級維護任務](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。
 
 ### 升級執行 {#upgrade-execution}
 
-![execute_upgrade](assets/execute_upgrade.jpg)
+![執行升級](assets/execute_upgrade.jpg)
 
-1. 執行 [就地升級](/help/sites-deploying/in-place-upgrade.md)
-1. 更新Dispatcher模組 *若有需要*
+1. 運行 [就地升級](/help/sites-deploying/in-place-upgrade.md)
+1. 更新調度程式模組 *如果需要*
 
 1. QA驗證升級
 
-1. 關閉製作例項。
+1. 關閉作者實例。
 
 ### 如果成功 {#if-successful}
 
-![if_successful](assets/if_successful.jpg)
+![如果成功](assets/if_successful.jpg)
 
-1. 複製升級實例以建立新的冷備用
+1. 複製已升級實例以建立新的冷備用實例
 
-1. 啟動Author例項
+1. 啟動Author實例
 
 1. 啟動備用實例。
 
 ### 如果失敗（回滾） {#if-unsuccessful-rollback}
 
-![回滾](assets/rollback.jpg)
+![回退](assets/rollback.jpg)
 
-1. 將冷備用實例啟動為新主實例
+1. 將冷備用實例作為新主實例啟動
 
-1. 從冷待機重建製作環境。
+1. 從「冷備用」重建「作者」環境。
 
-## MongoMK製作叢集 {#mongomk-author-cluster}
+## MongoMK作者群集 {#mongomk-author-cluster}
 
 ### 啟動拓撲 {#starting-topology-1}
 
-此區段的假設拓撲包含MongoMK製作叢集，其中至少包含兩個AEM製作執行個體，且至少有兩個MongoMK資料庫作為後備。 所有製作執行個體都共用資料存放區。 這些步驟應同時套用至S3和檔案資料存放區。 從製作伺服器復寫至TarMK發佈伺服器陣列。
+本節假定的拓撲由MongoMK Author群集組成，該群集至少包含兩個AEM Author實例，並且至少支援兩個MongoMK資料庫。 所有作者實例共用一個資料儲存。 這些步驟應同時適用於S3和檔案資料儲存。 從作者伺服器到TarMK發佈場進行複製。
 
-![mongo拓撲](assets/mongo-topology.jpg)
+![蒙戈拓撲](assets/mongo-topology.jpg)
 
 ### 升級準備 {#upgrade-preparation-1}
 
-![mongo-upgrade_prep](assets/mongo-upgrade_prep.jpg)
+![mongo upgrade_prep](assets/mongo-upgrade_prep.jpg)
 
-1. 停止內容編寫
+1. 停止內容創作
 1. 克隆資料儲存以進行備份
-1. 除了一個AEM Author例項（您的主要作者）以外，請停止所有
-1. 從副本集（即主Mongo實例）中刪除除一個MongoDB節點之外的所有節點
-1. 更新 `DocumentNodeStoreService.cfg` 主作者上的檔案，以反映您的單一成員副本集
-1. 重新啟動主作者，確保其重新正常啟動
-1. 停用主要作者上的復寫代理
-1. 執行 [預升級維護任務](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) 在主要製作例項上
-1. 如有必要，請使用WiredTiger將主Mongo實例上的MongoDB升級到3.2版
+1. 停止除一個AEM作者實例外的所有實例，即您的主要作者
+1. 從複製副本集（主Mongo實例）中刪除除一個MongoDB節點外的所有MongoDB節點
+1. 更新 `DocumentNodeStoreService.cfg` 主作者上的檔案，以反映您的單個成員複製副本集
+1. 重新啟動主作者，以確保其正確重新啟動
+1. 禁用主作者上的複製代理
+1. 運行 [預升級維護任務](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) 主作者實例
+1. 如有必要，使用WiredTiger將主Mongo實例上的MongoDB升級到3.2版
 
 ### 升級執行 {#Upgrade-execution-1}
 
-![mongo-execution](assets/mongo-execution.jpg)
+![執行](assets/mongo-execution.jpg)
 
-1. 執行 [就地升級](/help/sites-deploying/in-place-upgrade.md) 在主要作者上
-1. 更新Dispatcher或Web模組 *若有需要*
+1. 運行 [就地升級](/help/sites-deploying/in-place-upgrade.md) 主作者
+1. 更新Dispatcher或Web模組 *如果需要*
 1. QA驗證升級
 
 ### 如果成功 {#if-successful-1}
 
-![mongo-secondaries](assets/mongo-secondaries.jpg)
+![蒙戈次界](assets/mongo-secondaries.jpg)
 
-1. 建立新的6.5製作執行個體，並連線至升級的Mongo執行個體
+1. 建立新的6.5作者實例，連接到升級的Mongo實例
 
-1. 重建已從群集中刪除的MongoDB節點
+1. 重建從群集中刪除的MongoDB節點
 
 1. 更新 `DocumentNodeStoreService.cfg` 要反映完整副本集的檔案
 
-1. 重新啟動Author例項，一次一個
+1. 重新啟動Author實例，一次一個
 
-1. 移除複製的資料存放區。
+1. 刪除克隆的資料儲存。
 
 ### 如果失敗（回滾）  {#if-unsuccessful-rollback-2}
 
-![mongo-rollback](assets/mongo-rollback.jpg)
+![mongo回滾](assets/mongo-rollback.jpg)
 
-1. 重新設定次要製作執行個體以連線至複製的資料存放區
+1. 重新配置輔助作者實例以連接到克隆的資料儲存
 
-1. 關閉升級的Author主執行個體
+1. 關閉已升級的作者主實例
 
-1. 關閉升級的Mongo主實例。
+1. 關閉已升級的Mongo主實例。
 
-1. 啟動次Mongo實例，其中一個實例作為新主實例
+1. 啟動輔助Mongo實例，其中一個實例作為新的主實例
 
-1. 設定 `DocumentNodeStoreService.cfg` 次Author實例上的檔案，以指向尚未升級的Mongo實例的複製副本集
+1. 配置 `DocumentNodeStoreService.cfg` 輔助Author實例上的檔案，指向尚未升級的Mongo實例的複製副本集
 
-1. 啟動次要製作例項
+1. 啟動輔助Author實例
 
-1. 清除升級的製作例項、Mongo節點和資料存放區。
+1. 清除已升級的作者實例、Mongo節點和資料儲存。
 
-## TarMK發佈伺服器陣列 {#tarmk-publish-farm}
+## TarMK發佈場 {#tarmk-publish-farm}
 
-### TarMK發佈伺服器陣列 {#tarmk-publish-farm-1}
+### TarMK發佈場 {#tarmk-publish-farm-1}
 
-此區段的假設拓撲包含兩個TarMK發佈執行個體，前端為Dispatcher，後端為負載平衡器。 從製作伺服器復寫至TarMK發佈伺服器陣列。
+此部分假定的拓撲由兩個TarMK發佈實例組成，前面是調度程式，後面是負載平衡器。 從作者伺服器到TarMK發佈場進行複製。
 
 ![tarmk-pub-farmv5](assets/tarmk-pub-farmv5.png)
 
@@ -157,46 +157,46 @@ ht-degree: 0%
 
 ![upgrade-publish2](assets/upgrade-publish2.png)
 
-1. 在負載平衡器上停止發佈2例項的流量
-1. 執行 [升級前維護](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) 在第2版
-1. 執行 [就地升級](/help/sites-deploying/in-place-upgrade.md) 在第2版
-1. 更新Dispatcher或Web模組 *若有需要*
-1. 排清Dispatcher快取
-1. QA會透過防火牆後的Dispatcher驗證Publish 2
+1. 在負載平衡器上停止到Publish 2實例的通信
+1. 運行 [升級前維護](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) 發佈2
+1. 運行 [就地升級](/help/sites-deploying/in-place-upgrade.md) 發佈2
+1. 更新Dispatcher或Web模組 *如果需要*
+1. 刷新Dispatcher快取
+1. QA通過防火牆後的Dispatcher驗證Publish 2
 1. 關閉發佈2
-1. 複製Publish 2例項
+1. 複製發佈2實例
 1. 開始發佈2
 
 ### 如果成功 {#if-successful-2}
 
 ![upgrade-publish1](assets/upgrade-publish1.png)
 
-1. 啟用流量以發佈2
-1. 停止流量以發佈1
-1. 停止Publish 1例項
-1. 將Publish 1例項取代為Publish 2
-1. 更新Dispatcher或Web模組 *若有需要*
-1. 排清發佈1的Dispatcher快取
+1. 啟用通信以發佈2
+1. 停止發佈1的通信
+1. 停止發佈1實例
+1. 將Publish 1實例替換為Publish 2的副本
+1. 更新Dispatcher或Web模組 *如果需要*
+1. 刷新發佈1的Dispatcher快取
 1. 開始發佈1
-1. QA會透過防火牆後的Dispatcher驗證Publish 1
+1. QA通過防火牆後的Dispatcher驗證Publish 1
 
 ### 如果失敗（回滾） {#if-unsuccessful-rollback-1}
 
 ![pub_rollback](assets/pub_rollback.jpg)
 
 1. 建立發佈1的副本
-1. 將Publish 2例項取代為Publish 1復本
-1. 排清發佈2的Dispatcher快取
+1. 將Publish 2實例替換為Publish 1的副本
+1. 刷新發佈2的Dispatcher快取
 1. 開始發佈2
-1. QA會透過防火牆後的Dispatcher驗證Publish 2
-1. 啟用流量以發佈2
+1. QA通過防火牆後的Dispatcher驗證Publish 2
+1. 啟用通信以發佈2
 
 ## 最終升級步驟 {#final-upgrade-steps}
 
-1. 啟用流量以發佈1
-1. QA會從公用URL執行最終驗證
-1. 從製作環境啟用復寫代理
-1. 繼續內容製作
-1. 執行 [升級後檢查](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md).
+1. 啟用通信以發佈1
+1. QA從公共URL執行最終驗證
+1. 從作者環境啟用複製代理
+1. 恢復內容創作
+1. 執行 [升級後檢查](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)。
 
-![fal](assets/final.jpg)
+![最後](assets/final.jpg)

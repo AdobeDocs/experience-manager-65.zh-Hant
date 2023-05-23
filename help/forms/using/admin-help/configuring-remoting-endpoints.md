@@ -1,7 +1,7 @@
 ---
-title: 配置遠程處理端點
+title: 配置遠程處理終結點
 seo-title: Configuring Remoting endpoints
-description: 了解如何配置遠程端點。
+description: 瞭解如何配置遠程處理終結點。
 seo-description: Learn how to configure remoting endpoints.
 uuid: 4d4f9274-dcae-4b9f-975a-575376c2f89c
 contentOwner: admin
@@ -17,10 +17,10 @@ ht-degree: 0%
 
 ---
 
-# 配置遠程處理端點 {#configuring-remoting-endpoints}
+# 配置遠程處理終結點 {#configuring-remoting-endpoints}
 
-遠端端點可讓使用Flex建置的應用程式，使用(AEM forms遭取代)AEM forms Remoting叫用服務。 系統會自動為每個已激活的服務建立遠程端點。 建立與端點同名的Flex目的地，Flex用戶端可建立指向此目的地的遠端物件，以叫用相關服務上的作業。
+遠程處理終結點使用Flex構建的應用程式能夠使用（表單棄用）AEM表單遠AEM程處理調用服務。 為每個激活的服務自動建立遠程處理終結點。 建立與終結點同名的Flex目標，Flex客戶端可以建立指向此目標以調用相關服務上的操作的遠程對象。
 
-## 遠程處理端點設定 {#remoting-endpoint-settings}
+## 遠程處理終結點設定 {#remoting-endpoint-settings}
 
-**Flex用戶端驗證方法：** 確定當調用的服務啟用安全性時，伺服器向客戶端發送的響應類型，調用的操作不支援匿名調用，並且客戶端傳入的憑據不是或無效。
+**Flex客戶端認證方法：** 確定在啟用調用的服務安全性、調用的操作不支援匿名調用以及客戶端以無憑據或無效憑據傳遞時，伺服器發回給客戶端的響應類型。

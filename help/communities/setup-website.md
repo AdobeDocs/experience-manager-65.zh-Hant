@@ -19,102 +19,102 @@ ht-degree: 1%
 
 # 設定網站結構 {#setup-website-structure}
 
-若要設定您的網站，下列指示會說明要在下列位置建立的資料夾：
+要設定網站，以下說明將介紹要在以下位置建立的資料夾：
 
 * `/apps/an-scf-sandbox`
 
-   這是自訂應用程式和範本所在的位置。
+   這是自定義應用程式和模板所在的位置。
 
 * `/etc/designs/an-scf-sandbox`
 
-   可下載的設計元素位於此處。
+   這是可下載設計元素所在的位置。
 
 * `/content/an-scf-sandbox`
 
-   這是可下載網頁的所在位置。
+   這是可下載網頁所在的位置。
 
-本教學課程中的程式碼將仰賴應用程式、設計和內容的主要資料夾名稱相同。 如果您為網站選擇其他名稱，請一律取代 `an-scf-sandbox` 以您選擇的名稱。
+本教程中的代碼將依賴於應用程式、設計和內容的主資料夾名稱相同。 如果為網站選擇其他名稱，則始終替換 `an-scf-sandbox` 你選的名字。
 
 >[!NOTE]
 >
 >關於名稱：
 >
->* CRXDE中顯示的名稱是構成可定址內容路徑的節點名稱。
->* 節點名稱可能包含空格，但在URI中使用時，該空格必須編碼為「%20」或「+」。
->* 節點名稱可能包含連字型大小和底線，但在Java檔案中以封裝名稱參考時，必須對連字型大小和底線進行編碼。 連字型大小和底線都會以底線逸出，後面接著其unicode值：
+>* CRXDE中看到的名稱是構成可定址內容路徑的節點名稱。
+>* 節點名稱可能包含空格，但在URI中使用時，必須將空格編碼為「%20」或「+」。
+>* 節點名稱可能包含連字元和下划線，但當作為Java檔案中的包名引用時，必須對它們進行編碼。 連字元和下划線都用下划線和其unicode值進行轉義：
    >
-   >   * 連字型大小變成「_002d」
+   >   * 連字元變為「_002d」
    >   * 下划線變為「_005f」
 
 
 ## 設定應用程式目錄(/apps) {#setup-the-application-directory-apps}
 
-存放庫中的/apps目錄包含的程式碼會實施從/content目錄提供的頁面的行為和轉譯。
+儲存庫中的/apps目錄包含用於實現從/content目錄提供的頁面的行為和呈現的代碼。
 
-/apps目錄受保護，不能公開訪問，/content和/etc/designs目錄亦然。
+/apps目錄受保護，並且不能像/content和/etc/designs目錄那樣公開訪問。
 
-1. 建立 `/apps/an-scf-sandbox` 檔案夾。
+1. 建立 `/apps/an-scf-sandbox` 的子菜單。
 
    使用 **[!UICONTROL CRXDE Lite]**，在瀏覽器窗格中
 
-   1. 選取 `/apps` 檔案夾。
-   1. 按一下右鍵 **[!UICONTROL 建立]**...或下拉 **[!UICONTROL 建立……]** 功能表。
-   1. 選擇 **[!UICONTROL 建立資料夾……]**.
-   1. 在 **[!UICONTROL 建立資料夾]** 對話框，輸入 `an-scf-sandbox`.
+   1. 選擇 `/apps` 的子菜單。
+   1. 按一下右鍵 **[!UICONTROL 建立]**...或者下拉 **[!UICONTROL 建立……]** 的子菜單。
+   1. 選擇 **[!UICONTROL 建立資料夾……]**。
+   1. 在 **[!UICONTROL 建立資料夾]** 對話框，輸入 `an-scf-sandbox`。
    1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
 1. 建立 **[!UICONTROL 元件]** 子資料夾。
 
-   1. 選取 `/apps/an-scf-sandbox` 檔案夾。
-   1. 按一下 **[!UICONTROL 建立>建立資料夾]**.
-   1. 在 **[!UICONTROL 建立資料夾]** 對話框，輸入 **[!UICONTROL 元件]**.
+   1. 選擇 `/apps/an-scf-sandbox` 的子菜單。
+   1. 按一下 **[!UICONTROL 「建立」>「建立資料夾」]**。
+   1. 在 **[!UICONTROL 建立資料夾]** 對話框，輸入 **[!UICONTROL 元件]**。
    1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
-1. 建立 **[!UICONTROL 範本]** 子資料夾。
+1. 建立 **[!UICONTROL 模板]** 子資料夾。
 
-   1. 選取 `/apps/an-scf-sandbox` 檔案夾。
-   1. 按一下 **[!UICONTROL 建立>建立資料夾]**.
-   1. 在 **[!UICONTROL 建立資料夾]** 對話框，輸入 **[!UICONTROL 範本]**.
+   1. 選擇 `/apps/an-scf-sandbox` 的子菜單。
+   1. 按一下 **[!UICONTROL 「建立」>「建立資料夾」]**。
+   1. 在 **[!UICONTROL 建立資料夾]** 對話框，輸入 **[!UICONTROL 模板]**。
    1. 按一下&#x200B;**[!UICONTROL 「確定」]**。
-   1. 重新選取 `/apps/an-scf-sandbox`.
-   1. 選擇 **[!UICONTROL 全部儲存]**.
+   1. 重新選擇 `/apps/an-scf-sandbox`。
+   1. 選擇 **[!UICONTROL 全部保存]**。
 
-   和任何編輯程式一樣，經常儲存。 如果您在輸入資料時遇到問題，可能是因為您的登入逾時，或您需要儲存先前的編輯內容。
+   與任何編輯過程一樣，經常保存。 如果您在輸入資料時遇到問題，可能是因為登錄已超時，或者您需要保存以前的編輯。
 
-1. CRXDE Lite的瀏覽器窗格中的結構現在應該如下所示：
+1. 現在，CRXDE Lite的瀏覽器窗格中的結構應如下所示：
 
-   ![crxde-template](assets/crxde-template.png)
+   ![crxde模板](assets/crxde-template.png)
 
 ## 設定設計目錄(/etc/designs) {#setup-the-design-directory-etc-designs}
 
-/etc/designs目錄包含要隨頁面內容一起下載的影像、指令碼和樣式表。
+/etc/designs目錄包含要與頁面內容一起下載的影像、指令碼和樣式表。
 
-1. 若要在傳統UI中使用設計工具，請瀏覽至 [https://&lt;server>:&lt;port>/miscadmin](http://localhost:4502/miscadmin).
+1. 要在經典用戶介面中使用設計器工具，請瀏覽至 [https://&lt;server>:&lt;port>/miscadmin](http://localhost:4502/miscadmin)。
 
-   注意：如果您使用CRXDE Lite建立類型的節點 `cq:Page`，則「存取控制」和「復寫」不會設為頁面的預設設定。
+   注：如果使用CRXDE Lite建立類型的節點 `cq:Page`，「訪問控制」和「複製」不會設定為頁面的預設設定。
 
-1. 在瀏覽器窗格中，選取 **[!UICONTROL 設計]** ，然後按一下 **[!UICONTROL 新增]** > **[!UICONTROL 新頁面]**.
+1. 在瀏覽器窗格中，選擇 **[!UICONTROL 設計]** 資料夾，然後按一下 **[!UICONTROL 新建]** > **[!UICONTROL 新建頁面]**。
 
    輸入：
 
-   * 標題： **[!UICONTROL SCF沙箱]**
-   * 名稱： **[!UICONTROL an-scf — 沙箱]**
-   * 選擇 **[!UICONTROL 設計頁面範本]**
+   * 標題： **[!UICONTROL SCF沙盒]**
+   * 名稱： **[!UICONTROL 一個SCF沙盒]**
+   * 選擇 **[!UICONTROL 設計頁模板]**
 
    按一下&#x200B;**[!UICONTROL 建立]**。
 
-   ![設計範本](assets/design-template.png)
+   ![設計模板](assets/design-template.png)
 
-1. 如果未顯示「SCF沙箱」資料夾，請刷新瀏覽器窗格。
+1. 如果未顯示「SCF沙盒」資料夾，請刷新瀏覽器窗格。
 
-1. 返回CRXDE Lite(http://localhost:4502/crx/de)，然後展開/etc/designs以查看名為「an-scf-sandbox」的節點。
+1. 返回CRXDE Lite(http:// localhost:4502/crx/de)，然後展開/etc/designs，查看名為&quot;an-scf-sandbox&quot;的節點。
 
-   在CRXDE的右下窗格中，您可以查看「屬性」頁簽、「訪問控制」頁簽和「複製」頁簽，以查看使用「設計頁模板」定義的內容。
+   在CRXDE的右下窗格中，可以查看「屬性」頁籤、「訪問控制」頁籤和「複製」頁籤，以查看使用「設計頁模板」定義的內容。
 
    ![crxde-configure-template](assets/crxde-configure-template.png)
 
 ## 設定內容目錄(/content) {#setup-the-content-directory-content}
 
-儲存庫中的/content目錄是網站內容所在的位置。 /content下的路徑包含瀏覽器要求的URL路徑。
+儲存庫中的/content目錄是網站內容所在的位置。 /content下的路徑包括瀏覽器請求的URL路徑。
 
-*之後* the [頁面範本](initial-app.md#createthepagetemplate) 是作為初始應用程式的一部分建立的，可以根據模板建立初始頁面內容……. [**⇒**](initial-app.md)
+*之後* 這樣 [頁面模板](initial-app.md#createthepagetemplate) 作為初始應用程式的一部分建立，可基於模板建立初始頁面內容……。 [**⇒**](initial-app.md)

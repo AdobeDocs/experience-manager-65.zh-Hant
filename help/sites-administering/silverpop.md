@@ -1,7 +1,7 @@
 ---
 title: 與Silverpop Engage整合
 seo-title: Integrating with Silverpop Engage
-description: 了解如何整合AEM與Silverpop Engage
+description: 瞭解如何與Silverpop AEM Engage整合
 seo-description: Learn how to integrate AEM with Silverpop Engage
 uuid: e17deeb6-5339-4ead-9086-cbe2167cdec6
 contentOwner: Guillaume Carlino
@@ -25,84 +25,84 @@ ht-degree: 1%
 >
 >Silverpop integration is **not** available out of the box. You must download the Silverpop integration package `https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content` from Package Share and install it on your instance. After you have installed the package, you can configure it as described in this document. -->
 
-將AEM與Silverpop Engage整合可讓您透過Silverpop管理並傳送在AEM中建立的電子郵件。 也可讓您透過AEM頁面上的AEM表單，使用Silverpop的銷售機會管理功能。
+與Silverpop AEM Engage整合後，您可以管理和發送通過Silverpop建立的AEM電子郵件。 它還允許您通過頁面上的表單使用Silverpop的AEM線索管AEM理功能。
 
-整合提供下列功能：
+該整合提供了以下功能：
 
-* 可在AEM中建立電子郵件，並發佈至Silverpop以供分發。
-* 設定AEM表單動作以建立Silverpop訂閱者的功能。
+* 在中建立電子郵件並AEM將其發佈到Silverpop以供分發。
+* 設定表單操作以創AEM建Silverpop訂戶的能力。
 
-設定Silverpop Engage後，您就可以將電子報或電子郵件發佈至Silverpop Engage。
+配置Silverpop Engage後，您可以將新聞稿或電子郵件發佈到Silverpop Engage。
 
-## 建立Silverpop設定 {#creating-a-silverpop-configuration}
+## 建立Silverpop配置 {#creating-a-silverpop-configuration}
 
-您可以透過 **Cloud Services**, **工具**，或 **API端點**. 本節將說明所有方法。
+Silverpop配置可通過 **Cloud Services**。 **工具**&#x200B;或 **API端點**。 本節介紹了所有方法。
 
-### 透過Cloud Services設定Silverpop {#configuring-silverpop-via-cloudservices}
+### 通過Cloud Services配置Silverpop {#configuring-silverpop-via-cloudservices}
 
-若要在Cloud Services中建立Silverpop設定：
+要在Cloud Services中建立Silverpop配置：
 
-1. 在AEM中，點選或按一下 **工具** > **部署** > **Cloud Services**. (或直接存取 `https://<hostname>:<port>/etc/cloudservices.html`.)
-1. 在協力廠商服務下，按一下 **Silverop Engage** 然後 **設定**. 「Silverpop設定」視窗隨即開啟。
+1. 在AEM中，點擊或按一下 **工具** > **部署** > **Cloud Services**。 (或直接訪問 `https://<hostname>:<port>/etc/cloudservices.html`。)
+1. 在第三方服務下，按一下 **《銀翼戰士》** 然後 **配置**。 將開啟Silverpop配置窗口。
 
    >[!NOTE]
    >
-   >除非您從Package Share下載套件，否則無法在協力廠商服務底下使用Silverpop Engage。
+   >除非您從包共用下載包，否則第三方服務下的Silverpop Engage不可用。
 
-1. 輸入標題，（可選）輸入名稱，然後按一下 **建立**. ** Silverpop設定**設定視窗隨即開啟。
-1. 輸入使用者名稱、密碼，然後從下拉式清單中選取API端點。
-1. 按一下 **連線至Silverpop。** 成功連線後，您會看到成功對話方塊。 按一下 **確定** 所以你要離開窗戶。 按一下 **前往Silverpop Engage**.
-1. 已設定Silverpop。 您可以按一下「 」，編輯設定 **編輯**.
-1. 此外，您也可以提供標題和名稱（選用），針對個人化動作設定Silverpop Engage架構。 按一下「成功建立」 ，即可為已設定的Silverpop連線建立架構。
+1. 輸入標題，或者輸入名稱，然後按一下 **建立**。 ** Silverpop Settings**配置窗口開啟。
+1. 輸入用戶名、密碼，然後從下拉清單中選擇API終結點。
+1. 按一下 **連接到Silverpop。** 成功連接後，將看到「成功」對話框。 按一下 **確定** 所以你就離開窗戶。 通過按一下 **轉到Silverpop Engage**。
+1. 已配置Silverpop。 可通過按一下 **編輯**。
+1. 此外，還可通過提供標題和名稱（可選）為個性化操作配置Silverpop Engage框架。 按一下建立成功為已配置的Silverpop連接建立框架。
 
-   匯入的資料擴充功能欄稍後可透過AEM元件使用 —  **文字和個人化**.
+   導入的資料擴展列稍後可通過元件AEM使用 —  **文本和個性化**。
 
-### 透過工具設定Silverpop {#configuring-silverpop-via-tools}
+### 通過工具配置Silverpop {#configuring-silverpop-via-tools}
 
-若要在工具中建立Silverpop設定：
+要在工具中建立Silverpop配置：
 
-1. 在AEM中，點選或按一下 **工具** > **部署** > **Cloud Services**. 或直接導覽至 `https://<hostname>:<port>/misadmin#/etc`.
-1. 選擇 **工具**，然後 **Cloud Services配置、** then **Silverpop Engage**.
-1. 按一下 **新增**.
+1. 在AEM中，點擊或按一下 **工具** > **部署** > **Cloud Services**。 或者直接通過 `https://<hostname>:<port>/misadmin#/etc`。
+1. 選擇 **工具**，則 **Cloud Services配置，** 然後 **《銀色遊戲》**。
+1. 按一下 **新建**。
 
    ![chlimage_1-6](assets/chlimage_1-6.jpeg)
 
-1. 在 **建立頁面** ，輸入 **標題** 和（可選） **名稱**，然後按一下 **建立**.
-1. 按上一步步驟4所述輸入配置資訊。 請依照該程式操作，即可完成Silverpop的設定。
+1. 在 **建立頁** ，輸入 **標題** （可選） **名稱**，然後按一下 **建立**。
+1. 輸入上一步驟4中概述的配置資訊。 按照此過程完成Silverpop的配置。
 
-### 新增多個設定 {#adding-multiple-configurations}
+### 添加多個配置 {#adding-multiple-configurations}
 
-若要新增多個設定：
+要添加多個配置：
 
-1. 在歡迎頁面上，按一下 **Cloud Services** 按一下 **Silverpop Engage**. 按一下 **顯示配置** 按鈕（若有一或多個Silverpop設定可用）。 列出所有可用的配置。
-1. 按一下 **+** 在「可用配置」旁邊簽名。 它會開啟 **建立配置** 窗口。 請依照先前的設定程式，以建立設定。
+1. 在歡迎頁面上，按一下 **Cloud Services** 按一下 **《銀色遊戲》**。 按一下 **顯示配置** 按鈕。 列出所有可用配置。
+1. 按一下 **+** 在「Available configurations（可用配置）」旁邊登錄。 開啟 **建立配置** 的子菜單。 按照上一配置過程建立配置。
 
-### 設定API端點以連線至Silverpop {#configuring-api-end-points-for-connecting-to-silverpop}
+### 配置API端點以連接到Silverpop {#configuring-api-end-points-for-connecting-to-silverpop}
 
-目前，AEM有6個不安全的端點（參與1 - 6）。 Silverpop現在提供兩個新端點，並變更現有端點的連接端點。
+目前，AEM有6個無擔保的端點(1 - 6)。 Silverpop現在提供兩個新端點，並為現有端點更改了連接端點。
 
-若要設定API端點：
+配置API端點：
 
-1. 前往 `/libs/mcm/silverpop/components/silverpoppage/dialog/items/general/items/apiendpoint/options node` on `https://<hostname>:<port>/crxde.`
-1. 按一下滑鼠右鍵並選取 **建立**，然後 **建立節點**.
-1. 輸入 **名稱** as `sp-e0` 選擇 **類型** as `cq:Widget`.
-1. 將兩個屬性新增至新新增的節點：
+1. 轉到 `/libs/mcm/silverpop/components/silverpoppage/dialog/items/general/items/apiendpoint/options node` 上 `https://<hostname>:<port>/crxde.`
+1. 按一下右鍵並選擇 **建立**，則 **建立節點**。
+1. 輸入 **名稱** 如 `sp-e0` 選擇 **類型** 如 `cq:Widget`。
+1. 向新添加的節點添加兩個屬性：
 
-   1. **名稱**: `text`, **類型**: `String`, **值**: `Engage 0`
-   1. **名稱**: `value`, **類型**: `String`, **值**: `https://api0.silverpop.com`
+   1. **名稱**: `text`。 **類型**: `String`。 **值**: `Engage 0`
+   1. **名稱**: `value`。 **類型**: `String`。 **值**: `https://api0.silverpop.com`
 
    ![chlimage_1-42](assets/chlimage_1-42.png)
 
-   按一下「全部儲存」。
+   按一下「全部保存」。
 
-1. 使用建立另一個節點 **名稱** as `sp-e7` 和 **類型** as `cq:Widget`.
+1. 使用 **名稱** 如 `sp-e7` 和 **類型** 如 `cq:Widget`。
 
-   將兩個屬性新增至新新增的節點：
+   向新添加的節點添加兩個屬性：
 
-   1. **名稱**: `text`, **類型**: `String`, **值**: `Pilot`
-   1. **名稱**: `value`, **類型**: `String`, **值**: `https://apipilot.silverpop.com/XMLAPI`
+   1. **名稱**: `text`。 **類型**: `String`。 **值**: `Pilot`
+   1. **名稱**: `value`。 **類型**: `String`。 **值**: `https://apipilot.silverpop.com/XMLAPI`
 
-1. 若要變更現有的API端點（參與1 - 6），請逐一按一下每個端點，並依下列方式取代值：
+1. 要更改現有API端點(Engage 1 - 6)，請逐個按一下每個端點並按如下方式替換這些值：
 
    | **節點名稱** | **現有端點值** | **新端點值** |
    |---|---|---|
@@ -113,6 +113,6 @@ ht-degree: 1%
    | sp-e5 | `https://api.engage5.silverpop.com/XMLAPI` | `https://api5.silverpop.com` |
    | sp-e6 | `https://api.pilot.silverpop.com/XMLAPI` | `https://api6.silverpop.com` |
 
-1. 按一下 **全部儲存**. AEM現在已準備好透過安全端點連線至Silverpop。
+1. 按一下 **全部保存**。 現在AEM已準備好通過安全端點連接到Silverpop。
 
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)

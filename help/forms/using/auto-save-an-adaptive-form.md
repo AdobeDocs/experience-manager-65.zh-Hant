@@ -1,7 +1,7 @@
 ---
-title: 自動儲存最適化表單
+title: 自動保存自適應表單
 seo-title: Auto-save an adaptive form
-description: 您可以設定最適化表單，以根據事件或預先定義的時間間隔自動開始儲存內容
+description: 您可以配置自適應表單以基於事件或預定義時間間隔自動開始保存內容
 seo-description: You can configure an adaptive form to automatically start saving the content based on an event or a pre-defined time-interval
 uuid: 0fe9a389-269b-438a-9489-d9d1d09558a1
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -16,57 +16,57 @@ ht-degree: 0%
 
 ---
 
-# 自動儲存最適化表單 {#auto-save-an-adaptive-form}
+# 自動保存自適應表單 {#auto-save-an-adaptive-form}
 
-您可以設定最適化表單，以根據事件或預先定義的時間間隔自動開始儲存內容。 依預設，適用性表單的內容會儲存在使用者動作上，例如按下「儲存」按鈕時。 自動儲存選項在下列項目中很實用：
+您可以配置一個自適應表單，以便根據事件或預定義的時間間隔自動開始保存內容。 預設情況下，自適應表單的內容會保存在用戶操作上，如按「保存」按鈕。 自動保存選項在以下方面非常有用：
 
-* 自動為匿名和登入的使用者儲存內容
-* 不用或最少的用戶干預保存表單的內容
-* 開始根據使用者事件儲存表單的內容
-* 在指定的時間間隔後重複保存表單的內容
+* 自動為匿名用戶和登錄用戶保存內容
+* 保存表單的內容而無需或用戶干預最少
+* 開始基於用戶事件保存表單的內容
+* 在指定時間間隔後重複保存表單的內容
 
-## 啟用最適化表單的自動儲存 {#enable-autosave-for-an-adaptive-form}
+## 為自適應表單啟用自動保存 {#enable-autosave-for-an-adaptive-form}
 
-對於適用性表單，自動儲存選項不會立即啟用。 您可以從 **自動儲存** 區段（適用性表單的屬性）。 此 **自動儲存** 一節也提供其他數個設定選項。 執行下列步驟來啟用和設定最適化表單的自動儲存選項：
+對於自適應表單，不會在框外啟用自動保存選項。 可以從 **自動保存** 的子菜單。 的 **自動保存** 部分還提供了其他幾個配置選項。 執行以下步驟以啟用和配置自適應表單的自動保存選項：
 
-1. 若要存取屬性中的自動儲存區段，請選取元件，然後點選 ![欄位層級](assets/field-level.png) > **[!UICONTROL 適用性表單容器]**，然後點選 ![cppr](assets/cmppr.png).
-1. 在 **[!UICONTROL 自動儲存]** 部分， **[!UICONTROL 啟用]** 自動儲存選項。
-1. 在 **[!UICONTROL 適用性表單事件]** 框中，指定1或TRUE以在瀏覽器中載入表單時自動開始保存表單。 您也可以為事件指定條件式運算式，當觸發並傳回true時，就會開始儲存表單的內容。
-1. 指定觸發器。 會根據您的設定觸發自動儲存。 您的選項為：
+1. 要訪問屬性中的自動保存部分，請選擇一個元件，然後點擊 ![欄位級](assets/field-level.png) > **[!UICONTROL 自適應窗體容器]**，然後按一下 ![招商](assets/cmppr.png)。
+1. 在 **[!UICONTROL 自動保存]** 的 **[!UICONTROL 啟用]** 自動保存。
+1. 在 **[!UICONTROL 自適應窗體事件]** 框中，指定1或TRUE以在表單載入到瀏覽器中時自動開始保存表單。 您還可以為事件指定條件表達式，當觸發並返回true時，該表達式將開始保存表單的內容。
+1. 指定觸發器。 根據您的配置觸發自動保存。 您的選項包括：
 
-   * **[!UICONTROL 時間型：]** 選取根據特定時間間隔開始儲存內容的選項。
-   * **[!UICONTROL 事件型：]** 選取要在觸發事件時開始儲存內容的選項。
+   * **[!UICONTROL 基於時間：]** 選擇選項以根據特定時間間隔開始保存內容。
+   * **[!UICONTROL 基於事件：]** 選擇選項以在觸發事件時開始保存內容。
 
-   選取觸發器時，會啟用「策略配置」框。 「策略配置」框允許您：
+   選擇觸發器時，將啟用「策略配置」框。 「策略配置」框允許您：
 
-   * 如果您選取 **[!UICONTROL 時間型]** 觸發。
-   * 如果您選取「 」，請指定事件名稱 **[!UICONTROL 事件型]** 觸發。
+   * 如果選擇，則指定時間間隔 **[!UICONTROL 基於時間]** 觸發器。
+   * 如果選擇，請指定事件名稱 **[!UICONTROL 基於事件]** 觸發器。
 
-   您也可以建立自訂策略，並新增至清單。 如需詳細資訊，請參閱 [實作自訂策略以自動儲存表單](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p).
+   您還可以建立自定義策略並將其添加到清單中。 有關詳細資訊，請參閱 [實施自定義策略以自動保存表單](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p)。
 
-1. （僅限基於時間的自動保存）執行以下步驟來配置基於時間的自動保存的選項。
+1. （僅限基於時間的自動保存）執行以下步驟來配置基於時間的自動保存選項。
 
-   1. 在 **[!UICONTROL 在此間隔自動儲存]** 框中，以秒為單位指定時間間隔。 在間隔框中指定的秒數過後，將重複保存該表單。
+   1. 在 **[!UICONTROL 在此間隔自動保存]** 框中，以秒為單位指定時間間隔。 在間隔框中指定的秒數過後，會重複保存表單。
 
-1. （僅限事件型自動儲存）執行下列步驟來設定事件型自動儲存的選項。
+1. （僅基於事件的自動保存）執行以下步驟來配置基於事件的自動保存選項。
 
-   1. 在 **在此事件後自動儲存** 框，指定 [GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) 事件。 每次運算式評估為TRUE時，都會儲存表單。
+   1. 在 **此事件後自動保存** 框，指定 [導橋](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) 的子菜單。 每次表達式計算為TRUE時，都會保存表單。
 
-1. （可選）若要自動儲存匿名使用者的內容，請選取 **為匿名用戶啟用自動保存** ，然後按一下 **[!UICONTROL 確定]**.
+1. （可選）要自動為匿名用戶保存內容，請選擇 **為匿名用戶啟用自動保存** ，然後按一下 **[!UICONTROL 確定]**。
 
    >[!NOTE]
    >
-   >若要讓自動儲存選項可供匿名使用者使用，請確定您已設定Forms通用設定服務，讓所有使用者都能預覽、驗證和簽署表單。
+   >要使匿名用戶使用自動保存選項，請確保將Forms通用配置服務配置為允許所有用戶預覽、驗證和簽名表單。
    >
-   >若要設定服務，請前往AEM Web Console設定： `https://server:port/system/console/configMgr` 和編輯 **[!UICONTROL Forms Common Configuration Service]** 來選擇 **[!UICONTROL 所有使用者]** 選項 **[!UICONTROL 允許]** 欄位，並儲存設定。
+   >要配置服務，請轉AEM到Web控制台配置 `https://server:port/system/console/configMgr` 編輯 **[!UICONTROL Forms通用配置服務]** 的子菜單。 **[!UICONTROL 所有用戶]** 的上界 **[!UICONTROL 允許]** ，並保存配置。
 
-## 實作自訂策略，以啟用最適化表單的自動儲存 {#implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms}
+## 實施自定義策略以啟用自動保存以適應表單 {#implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms}
 
-您可以實作自訂事件以觸發自動儲存功能。 執行下列步驟以建立和實作自訂事件：
+您可以實現自定義事件以觸發自動保存功能。 執行以下步驟建立並實施自定義事件：
 
-1. 建立客戶端庫和客戶端庫資料夾。 如需詳細步驟，請參閱 [使用用戶端程式庫檔案](/help/sites-developing/clientlibs.md).
+1. 建立客戶端庫和客戶端庫資料夾。 有關詳細步驟，請參見 [使用客戶端庫文檔](/help/sites-developing/clientlibs.md)。
 
-   例如，下列指令碼使用自訂 `emailFocusChange`觸發自動儲存功能的事件：
+   例如，以下指令碼使用自定義 `emailFocusChange`觸發自動保存功能的事件：
 
    ```javascript
    window.addEventListener("bridgeInitializeStart", function (){
@@ -81,10 +81,10 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >建立客戶端庫資料夾時定義了類別屬性。 讓指派給類別屬性的值保持實用。
+   >在建立客戶端庫資料夾時定義類別屬性。 使分配給類別屬性的值保持方便。
 
-1. 在製作模式中開啟最適化表單。
+1. 在作者模式下開啟自適應窗體。
 
-1. 在編輯模式中，選取元件，然後點選 ![欄位層級](assets/field-level.png) > **[!UICONTROL 適用性表單容器]**，然後點選 ![cppr](assets/cmppr.png).
-1. 在屬性中，開啟 **[!UICONTROL 基本]** 區段。 在 **[!UICONTROL 客戶端庫類別]** 框中，輸入建立客戶端庫資料夾時定義的類別屬性的值。
-1. 開啟「自動儲存」區段。 在 **[!UICONTROL 在此事件後自動儲存]** 框中，指定已在客戶端庫中定義的自定義事件。 按一下&#x200B;**[!UICONTROL 「確定」]**。
+1. 在編輯模式下，選擇一個元件，然後點擊 ![欄位級](assets/field-level.png) > **[!UICONTROL 自適應窗體容器]**，然後按一下 ![招商](assets/cmppr.png)。
+1. 在屬性中，開啟 **[!UICONTROL 基本]** 的子菜單。 在 **[!UICONTROL 客戶端庫類別]** 框中，輸入在建立客戶端庫資料夾時定義的類別屬性的值。
+1. 開啟「自動保存」部分。 在 **[!UICONTROL 此事件後自動保存]** 框中，指定客戶端庫中已定義的自定義事件。 按一下&#x200B;**[!UICONTROL 「確定」]**。

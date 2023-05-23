@@ -1,6 +1,6 @@
 ---
-title: 使用啟動來開發未來版本的內容
-description: 啟動可讓您有效開發未來版本的內容。 它們可讓您進行變更，以備日後發佈，同時維護您目前的頁面。
+title: 使用啟動為將來的版本開發內容
+description: 啟動使您能夠高效地為未來版本開發內容。 它們允許您為將來的發佈做好更改準備，同時保留當前頁面。
 uuid: 4bbd9865-735d-4232-b69c-b64193ac5d83
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -34,7 +34,7 @@ Launches 也可以：
 * 為多個根分支建立。雖然您可以為整個網站建立 Launch (並在其中進行變更)，但這可能是不切實際的，因為需要複製整個網站。當涉及數百甚至數千頁時，複製動作和之後提升工作所需的比較作業，會影響系統要求和效能。
 * 巢狀 (Launch 中有 Launch) 可讓您在現有 Launch 中建立 Launch，如此作者可以利用已完成的變更，而不用對每個 Launch 重複進行相同的變更。
 
-本節說明如何建立、編輯和促銷（如有需要，還有） [刪除](/help/sites-authoring/launches-creating.md#deleting-a-launch))從Sites Console中啟動頁面，或 [啟動主控台](#the-launches-console):
+本節介紹如何建立、編輯和升級（以及如有必要） [刪除](/help/sites-authoring/launches-creating.md#deleting-a-launch))從站點控制台或 [啟動控制台](#the-launches-console):
 
 * [建立 Launch](/help/sites-authoring/launches-creating.md)
 * [編輯 Launch](/help/sites-authoring/launches-editing.md)
@@ -102,9 +102,9 @@ Launches 可讓您：
 
 >[!CAUTION]
 >
->不支援在Launch頁面上重新排序元件。
+>不支援在「啟動」頁上重新排序元件。
 >
->頁面升級時，會反映任何內容變更，但元件位置不會變更。
+>升級頁面時，將反映任何內容更改，但元件位置不會更改。
 
 
 ### Launches 主控台 {#the-launches-console}
@@ -113,13 +113,13 @@ Launches 主控台可提供您 Launch 的概觀，並允許您對列出的 Launc
 
 * **工具**&#x200B;主控台：**工具**、**Sites**、**Launches**。
 
-* 或直接搭配 [https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
+* 或直接使用 [https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
 ## Launches 在參考內 (Sites 主控台) {#launches-in-references-sites-console}
 
 1. 在 **Sites** 主控台中，導覽至 Launch 來源。
 1. 開啟&#x200B;**參考**&#x200B;邊欄並選取來源頁面。
-1. 選擇 **啟動**，則會列出現有的launch:
+1. 選擇 **啟動**，將列出現有的產品發佈：
 
    ![screen-shot_2019-03-05at121901-1](assets/screen-shot_2019-03-05at121901-1.png)
 

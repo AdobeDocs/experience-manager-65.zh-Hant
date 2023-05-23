@@ -1,7 +1,7 @@
 ---
-title: 現成應用程式處理常式
+title: 開箱應用處理程式
 seo-title: Out of the Box App Handlers
-description: 請參照本頁面，了解使用AEM的Adobe PhoneGap Enterprise的現成可用處理常式。
+description: 有關Adobe PhoneGap企業的開箱處理程式，請訪問此頁AEM。
 seo-description: Follow this page to learn about the out-of-the-box handlers for Adobe PhoneGap Enterprise with AEM.
 uuid: 436038cb-fb76-4bb5-ae79-5d4043b81dd9
 contentOwner: User
@@ -17,57 +17,57 @@ ht-degree: 0%
 
 ---
 
-# 現成應用程式處理常式{#out-of-the-box-app-handlers}
+# 開箱應用處理程式{#out-of-the-box-app-handlers}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-請參閱以下開發內容同步處理常式的准則：
+有關開發內容同步處理程式，請參閱以下准則：
 
-* 處理常式必須實作 *com.day.cq.contentsync.handler.ContentUpdateHandler* （直接或延伸執行此操作的類）
-* 處理常式可擴充 *com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
-* 只有在處理常式更新ContentSync快取時，它們才必須報告true。 錯誤回報true會允許AEM建立更新。
-* 只有在內容實際變更時，處理常式才應更新快取。 如果不需要白色，請勿寫入快取，並避免建立不必要的更新。
+* 處理程式必須實現 *com.day.cq.contentsync.handler.ContentUpdateHandler* （直接或擴展該類）
+* 處理程式可以擴展 *com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
+* 只有更新了ContentSync快取時，處理程式才能報告為true。 錯誤報告true將允AEM許建立更新。
+* 僅當內容實際發生更改時，處理程式才應更新快取。 如果不需要白色，請不要寫入快取，並避免不必要的更新建立。
 
-## 現成處理常式 {#out-of-the-box-handlers}
+## 開箱處理程式 {#out-of-the-box-handlers}
 
-下列為現成可用的應用程式處理常式：
+以下列出了現成的應用程式處理程式：
 
-**mobileappages** 轉譯應用程式頁面。
+**移動設備** 呈現應用頁。
 
-* ***類型 — 字串*** - mobileappages
+* ***類型 — 字串***  — 移動設備
 * ***路徑 — 字串***  — 頁面路徑
-* ***擴充功能 — 字串***  — 請求中應使用的擴充功能。 對於頁面，這幾乎總是 *html*&#x200B;但其他仍有可能。
+* ***擴展 — 字串***  — 請求中應使用的擴展。 對於頁面，這幾乎總是 *html*&#x200B;但其他方面仍有可能。
 
-* ***選取器 — 字串***  — 以點分隔的可選選取器。 常見範例包括 *觸控* 用於呈現頁面的行動版本。
+* ***選擇器 — 字串***  — 可選選擇器以點分隔。 常見示例有 *觸摸* 用於呈現頁面的移動版本。
 
-* ***deep — 布林值***  — 可選布林屬性確定是否應包括子頁。 預設值為 *true。*
+* ***deep — 布爾型***  — 可選布爾屬性，確定是否還應包括子頁。 預設值為 *是的。*
 
-* ***includeImages — 布林值***  — 選用布林屬性，決定是否應包含影像。 預設值為 *true*.
+* ***includeImages — 布爾型***  — 確定是否應包括影像的可選布爾屬性。 預設值為 *真*。
 
-   * 預設情況下，僅考慮包含資源類型為foundation/components/image的影像元件。
+   * 預設情況下，只考慮包含資源類型為foundation/components/image的映像元件。
 
-* ***includeVideos — 布林值***  — 選用布林值屬性決定是否應包含視訊。 預設值為 *true*.
+* ***includeVideos — 布爾型***  — 可選布爾屬性確定是否應包括視頻。 預設值為 *真*。
 
-* ***includeModifiedPagesOnly — 布林值***  — 若為false或省略，則呈現所有頁面並檢查呈現中的更新。 如果為true，則根據對lastModified頁面的更改進行更改。
+* ***includeModifiedPagesOnly — 布爾型***  — 如果為false或省略，則呈現所有頁面並檢查呈現中的更新。 如果為true，則基於對lastModified頁面的更改進行差異。
 * ***+重寫（節點）***
    ***- relativeParentPath — 字串***  — 寫入相對於的所有其他路徑的路徑。
 
 >[!NOTE]
 >
->受此處理常式影響的影像和視訊元件的資源類型，會透過設定 *com.adobe.cq.mobile.platform.impl.contentsync.handler*.*MobilePagesUpdateHandler OSGi服務*.
+>通過配置以下屬性來設定受此處理程式影響的影像和視頻元件的資源類型 *com.adobe.cq.mobile.platform.impl.contentsync.handler*。*MobilePagesUpdateHandler OSGi服務*。
 
-**mobilepageassets** 收集應用程式頁面資產。
+**移動資產** 收集應用頁面資產。
 
-**mobilecontenlisting** 列出ContentSync壓縮的內容。 裝置上的用戶端js會使用此ID執行AEM應用程式所需的初始檔案復本。
+**移動連接清單** 列出ContentSynczip的內容。 設備上的客戶端js使用此功能執行應用程式所需的初始文AEM件副本。
 
-此處理常式應新增至任何AEM應用程式ContentSync設定。
+應將此處理程式添加到任何AEMApps ContentSync配置中。
 
-* ***type - String - mobilecontenlisting***
-* ***路徑***  — 字串 — 保留空白，必須顯示為有效的處理常式，但路徑推斷為目前的ContentSync快取。 此值會被忽略。
-* ***targetRootDirectory* -**字串 — 要新增至路徑的前置詞，作為此處理常式內容更新的目標根。
-* ***訂購 — 長* -**ContentSync執行此處理常式的順序。 此數字應設定得比所有其他處理常式（如100）都高。 它應在傳統內容處理常式之後執行。
+* ***類型 — 字串 — 移動連接清單***
+* ***路徑***  — 字串 — 保持空，必須存在才能被視為有效的處理程式，但路徑被推斷為當前ContentSync快取。 此值被忽略。
+* ***目標根目錄* -**String — 作為此處理程式內容更新的目標根添加到路徑的前置詞。
+* ***訂單 — 長* -**ContentSync執行此處理程式的順序。 此數字應設定為高於所有其他處理程式（如100）。 它應該在傳統內容處理程式之後運行。
 
 ```xml
 {
@@ -87,18 +87,18 @@ ht-degree: 0%
 }
 ```
 
-**mobilecontentpackagelisting** 列出指定應用程式中的AEM內容套件，以及要向其提出更新請求的serverURL。 這是用於裝置上的用戶端js，以要求內容更新
+**移動連接包清單** 列出AEM給定應用中的內容包以及向其發出更新請求的serverURL。 這是使用設備上的客戶端j請求內容更新
 
-處理常式應用於AEM App Shell ContentSync設定（含pge-type=app-instance的節點）
+處理程式應用於AEMApp Shell ContentSync配置（具有pge-type=app-instance的節點）
 
-* ***type - String - mobilecontentpackageslisting***
-* ***路徑&#x200B;**-**字串***  — 應用程式殼層的路徑（含pge-type=app-instance的節點）。
-* ***targetRootDirectory — 字串***  — 用於作為此處理常式內容更新的目標根添加到路徑的前置詞。
-* ***訂購 — 長* -**ContentSync執行此處理程式的順序。 此數字應設定得比所有其他處理常式（如100）都高。 它應在傳統內容處理常式之後執行。
+* ***類型 — 字串 — mobilecontentpackageslisting***
+* ***路徑&#x200B;**-**字串***  — 應用shell（pge-type=app-instance的節點）的路徑。
+* ***targetRootDirectory — 字串***  — 要作為此處理程式的內容更新的目標根添加到路徑的前置詞。
+* ***訂單 — 長* -**ContentSync執行此處理程式的順序。 此數字應設定為高於所有其他處理程式（如100）。 它應該在傳統內容處理程式之後運行。
 
 >[!NOTE]
 >
->下列程式碼區塊並非確切的實作，應作為參考範例使用：
+>以下代碼塊不是精確的實現，應用作參考示例：
 
 ```xml
 {
@@ -122,95 +122,95 @@ ht-degree: 0%
 }
 ```
 
-**widgetconfig** 包含更新的config.xml，它合併通過命令中心所做的任何編輯以及提供的config.xml。 如果此處理常式未包含任何透過管理介面變更的應用程式詳細資料，則快取中不會包含這些詳細資料。
+**widgetconfig** 包括已更新的config.xml，它將通過命令中心所做的任何編輯與提供的config.xml合併。 如果未包括此處理程式，則通過管理介面更改的任何應用程式詳細資訊都將不包括在快取中。
 
-此處理常式應用於AEM App Shell ContentSync設定（具有pge-type=的節點）[app-instance])。
+此處理程式應用於AEMApp Shell ContentSync配置（pge-type=的節點）[應用實例])。
 
 * ***類型 — 字串* - **widgetconfig
-* ***路徑&#x200B;**-**字串***  — 任何應用程式殼層子節點的路徑（具有pge-type=的節點）[app-instance])。
-* ***targetRootDirectory — 字串***  — 用於作為此處理常式內容更新的目標根添加到路徑的前置詞。
-* ***targetIconDirectory — 字串***  — 放置應用程式圖示的目錄
+* ***路徑&#x200B;**-**字串***  — 任何應用程式shell子節點（具有pge-type=的節點）的路徑[應用實例])。
+* ***targetRootDirectory — 字串***  — 要作為此處理程式的內容更新的目標根添加到路徑的前置詞。
+* ***targetIconDirectory — 字串***  — 用於放置應用程式表徵圖的目錄
 
-**mobileADBMobileConfigJSON** 如果已設定AMS雲端服務，請加入ADBMobileConfig.JSON檔案。
+**mobileADBMobileConfigJSON** 如果配置了AMS雲服務，則包括ADBMobileConfig.JSON檔案。
 
-這用於編譯時配置AMS插件以獲得分析支援。
+在編譯時使用此功能來配置AMS插件以用於分析支援。
 
-處理常式應用於AEM App Shell ContentSync設定（含pge-type=app-instance的節點）
+處理程式應用於AEMApp Shell ContentSync配置（具有pge-type=app-instance的節點）
 
 * ***類型 — 字串*** - mobileADBMobileConfigJSON
-* ***路徑 — 字串***  — 應用程式殼層的路徑（含pge-type=app-instance的節點，或延伸/libs/mobileapps/core/components/instance的RT）
-* ***targetRootDirectory — 字串***  — 用於添加到路徑的前置詞，作為此處理程式內容更新的目標根
+* ***路徑 — 字串***  — 應用shell的路徑（具有pge-type=app-instance的節點或擴展/libs/mobileapps/core/components/instance的RT）
+* ***targetRootDirectory — 字串***  — 要作為此處理程式的內容更新的目標根添加到路徑的前置詞
 
-**notificationsconfig** 提取設備上所需的通知配置。 屬性會從與應用程式相關聯的個別推送服務雲端服務設定中擷取。
+**通知配置** 提取設備上所需的通知配置。 從與應用相關聯的相應推送服務雲服務配置中提取屬性。
 
-會擷取雲端服務jcr:content節點中的非AEM屬性，並新增至 **pge-notifications-config.json** JSON檔案，以包含在應用程式內容的www根中。
+將提AEM取雲服務的jcr:content節點中的非屬性並添加到 **pge-notifications-config-json** 要包含在應用內容的www根目錄中的JSON檔案。
 
-AEM屬性是使用「cq」、「sling」或「jcr」建立命名空間的屬性。 其他屬性可使用內容同步設定節點上的「excludeProperties」屬性來排除。
+屬AEM性是與「cq」、「sling」或「jcr」隔開的名稱。 其他屬性可以使用內容同步配置節點上的「excludeProperties」屬性排除。
 
-* ***類型 — 字串*** - notificationsconfig
+* ***類型 — 字串***  — 通知配置
 * ***excludeProperties — 字串[]***  — 要排除的屬性
 
-**contentsyncconfigcontent** 從現有的ContentSync配置收集內容。
+**內容syncconfigcontent** 從現有ContentSync配置收集內容。
 
-* ***類型 — 字串*** - contentsyncconfigcontent
-* ***路徑 — 字串***  — 指向以下任一路徑的路徑：
+* ***類型 — 字串***  — 內容syncconfigcontent
+* ***路徑 — 字串***  — 指向以下之一的路徑：
 
    * 另一個ContentSync配置
-   * 內容套件（將使用其phonegap-exportTemplate屬性來尋找其ContentSync設定）
-   * 至行動資源（在該資源下會找到app-content的，而如果這些內容套件具有pge-includeInBuild屬性為true，則phonegap-exportTemplate將用於尋找其ContentSync設定）
+   * 內容包（將使用其phonegap-exportTemplate屬性查找其ContentSync配置）
+   * 到移動資源(應用內容將在該資源下找到，如果這些內容包具有pge-includeInBuild屬性（為true），則phonegap-exportTemplate將用於查找其ContentSync配置)
 
-* ***autoCreateFirstUpdateBeforeImport — 布林值***  — 如果為true，請建立初始值 **更新** （若不存在，則匯入之前）
+* ***autoCreateFirstUpdateBeforeImport — 布爾型***  — 如果為true，則建立初始 **更新** 在導入之前，目標配置中的
 
-* ***autoFillBeforeImport — 布林值***  — 如果為true，請在匯入前更新/填入target設定
-* ***configSuffix — 字串***  — 一個字串，可附加至app-content的「phonegap-exportTemplate」屬性上指出的路徑。 這可用來區分不同的匯出範本。 例如，此屬性可設為 **&quot;-dev&quot;** 以表示 *&quot;/../../../appconfig-dev* 應使用( *&quot;/../.././appconfig*)。
+* ***autoFillBeforeImport — 布爾型***  — 如果為true，則在導入之前更新/填充目標配置
+* ***configSuffix — 字串***  — 要附加到app-content的「phonegap-exportTemplate」屬性上指示的路徑的字串。 這可用於區分不同的導出模板。 例如，此屬性可設定為 **&quot;-dev&quot;** 表示 *&quot;/../../../appconfig-dev&quot;* 應使用(而不是 *&quot;/.././../appconfig&quot;*)。
 
-**app-assets** 包含與應用程式例項相關聯的所有資產。 此處理常式將包含指定路徑下找到的任何資產，以及應用程式執行個體的appAssetPath屬性所參考的任何資產。
+**app資產** 包括與應用實例關聯的所有資產。 此處理程式將包括在指定路徑下找到的任何資產以及應用程式實例的appAssetPath屬性引用的任何資產。
 
-* ***類型 — 字串*** - app-assets
+* ***類型 — 字串***  — 應用程式資產
 
-* ***路徑&#x200B;**-**字串***  — 應用程式例項下儲存應用程式資產的位置路徑
+* ***路徑&#x200B;**-**字串***  — 應用程式實例下儲存應用程式資產的位置的路徑
 
-**mobileappoffers** 已為個人化使用案例導入新的內容同步處理常式，以呈現目標內容。 「mobileappoffers」處理常式知道如何呈現由內容作者建立的相關目標選件。 Mobileappoffers處理常式會延伸抽象頁面更新處理常式，因此許多屬性相似。 Mobileappoffers處理常式的詳細資訊具有下列屬性。
+**移動助理** 已為個性化用例引入新的內容同步處理程式來呈現目標內容。 「mobileapporfers」處理程式知道如何呈現由內容作者建立的關聯目標提供。 mobileapporfers處理程式擴展了抽象頁更新處理程式，因此許多屬性相似。 mobileapporfers處理程式的詳細資訊具有以下屬性。
 
-mobileappsoffers處理常式會擴充mobileappspages處理常式，並新增下列屬性：
+mobileappsoffers處理程式擴展mobileappspages處理程式並添加以下屬性：
 
-* ***locationRoot — 字串***  — 指定行動應用程式的位置
-* ***includePageTypes — 字串***  — 預設支援cq/personalization/components/teaserpage和cq/personalization/components/offerproxy
-* ***選取器 — 字串***  — 應設為tandt
-* ***路徑 — 字串*** — 行銷活動品牌的路徑
+* ***locationRoot — 字串***  — 指定移動應用程式的位置
+* ***includePageTypes — 字串***  — 預設支援cq/個性化/元件/續簽頁和cq/個性化/元件/服務代理
+* ***選擇器 — 字串***  — 應設定為tandt
+* ***路徑 — 字串*** — 通向該活動品牌的途徑
 
-**mobileappconfig** mobileappconfig內容同步處理常式提供將JSON資料插入MobileAppsConfig.json的方式。 要註冊提供程式類，開發人員將將其MobileAppsInfoProvider類添加到提供程式清單中。 處理常式會反覆查看MobileAppsInfoProviders清單，並允許提供者將資料插入產生的json檔案。 此處理程式支援的屬性清單為：
+**移動appconfig** mobileappconfig內容同步處理程式提供了一種將JSON資料注入MobileAppsConfig.json的方法。 要註冊提供程式類開發者，會將其MobileAppsInfoProvider類添加到提供程式清單中。 處理程式將循環訪問MobileAppsInfoProviders的清單，並允許提供程式將資料注入結果的json檔案。 此處理程式支援的屬性清單包括：
 
-* ***路徑&#x200B;**-**字串***  — 具有pge-type=app-instance的應用程式執行個體節點的路徑，或延伸/libs/mobileapps/core/components/instance的RT
-* ***提供者 — 字串*** `[]`  — 完全合格的MobileAppsInfoProviders清單
+* ***路徑&#x200B;**-**字串***  — 使用pge-type=app-instance的應用程式實例節點或擴展/libs/mobileapps/core/components/instance的RT的路徑
+* ***提供程式 — 字串*** `[]`  — 完全限定的MobileAppsInfoProviders清單
 * ***targetRootDirectory — 字串***  — 將MobileAppsConfig.json檔案寫入的目錄。
-* **fileName — 字串**  — 要寫入JSON的檔案選用名稱，預設為MobileAppsConfig.json
+* **fileName — 字串**  — 要將JSON寫入的檔案的可選名稱，預設為MobileAppsConfig.json
 
-可以有多個mobileappconfig處理常式，分別以寫入不同JSON檔案的一組唯一提供者來設定。
+可以配置多個mobileappconfig處理程式，每個處理程式都配置了一組唯一的提供程式，這些提供程式寫入到不同的JSON檔案。
 
-### 測試內容同步處理常式 {#testing-content-sync-handlers}
+### 測試內容同步處理程式 {#testing-content-sync-handlers}
 
 **檢查完整性的步驟** 清除快取
 
 * 清除快取
-* 執行處理常式（已更新快取）
+* 運行處理程式（已更新快取）
 * 再次運行處理程式（不應更新快取）
 
-**除錯步驟**
+**調試步驟**
 
-* 執行您的設定
-* 匯出設定或在裝置上檢閱
-* 如果呈現失敗檢查是否缺少 *樣式/資產/lib* 或檢查 *樣式/資產/lib*
+* 運行配置
+* 導出設備配置或查看
+* 如果呈現失敗，請檢查是否缺少 *樣式/資產/lib* 或檢查到的錯誤路徑 *樣式/資產/lib*
 
-**記錄** 在套件上透過OSGI記錄器設定啟用ContentSync除錯記錄 `com.day.cq.contentsync` 這可讓您追蹤哪些處理常式已執行，以及它們是否已更新快取和回報已更新快取。
+**記錄** 通過包上的OSGI記錄器配置啟用ContentSync調試日誌記錄 `com.day.cq.contentsync` 這將允許您跟蹤運行的處理程式以及它們是否更新了快取和報告了更新快取。
 
 ## 其他資源 {#additional-resources}
 
-若要了解管理員和開發人員的角色和責任，請參閱下列資源：
+要瞭解管理員和開發人員的角色和職責，請參閱以下資源：
 
-* [使用AEM編寫Adobe PhoneGap Enterprise](/help/mobile/phonegap.md)
-* [使用AEM管理Adobe PhoneGap Enterprise的內容](/help/mobile/administer-phonegap.md)
+* [為Adobe PhoneGap企業創AEM作](/help/mobile/phonegap.md)
+* [為Adobe PhoneGap企業管理內AEM容](/help/mobile/administer-phonegap.md)
 
 >[!NOTE]
 >
->若要開始使用AEM Mobile應用程式開發，請按一下 [此處](/help/mobile/getting-started-aem-mobile.md).
+>若要開始使用AEM Mobile應用程式開發，請按一下 [這裡](/help/mobile/getting-started-aem-mobile.md)。

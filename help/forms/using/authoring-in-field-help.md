@@ -1,7 +1,7 @@
 ---
-title: 為表單欄位編寫內容說明
+title: 為表單域創作上下文幫助
 seo-title: Authoring in-context help for form fields
-description: AEM Forms可讓您將內容內說明新增至最適化表單欄位和面板，如文字或多媒體，包括影片。
+description: AEM Forms允許您將上下文幫助添加到自適應表單域和面板中，如文本或富媒體，包括視頻。
 seo-description: AEM Forms allows you to add in-context help to adaptive form fields and panels, as text or rich media, including videos.
 uuid: 1865bf7b-66fc-4f89-bd98-904daa409320
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,55 +17,55 @@ ht-degree: 0%
 
 ---
 
-# 為表單欄位編寫內容說明{#authoring-in-context-help-for-form-fields}
+# 為表單域創作上下文幫助{#authoring-in-context-help-for-form-fields}
 
 ## 簡介 {#introduction}
 
-有時，一般使用者填寫表單時不確定如何填寫特定表單欄位的詳細資料。 為了解決這些問題，適用性表單支援將文字或豐富內容說明新增至表單欄位。 有助於改善表單填寫體驗，並避免使用者產生任何模糊情形。
+有些情況下，填寫表單的最終用戶不確定如何在特定表單欄位中填寫詳細資訊。 要解決這些問題，自適應表單支援將文本或富上下文幫助添加到表單域。 它有助於改善表單填充體驗，避免最終用戶的歧義。
 
-本文探討表單作者在編寫適用性Forms時如何新增內容說明。
+本文討論表單作者在創作Adaptive Forms時如何添加上下文幫助。
 
-## 添加上下文內幫助 {#add-in-context-help}
+## 添加上下文幫助 {#add-in-context-help}
 
-您可以使用側邊欄中屬性標籤的「說明內容」區段中的下列選項來指定內容內說明。
+可以使用提要欄中「屬性」頁籤的「幫助內容」部分中的以下選項指定上下文中的幫助。
 
-* [簡短說明](../../forms/using/authoring-in-field-help.md#p-short-description-p)
-* [詳細說明](../../forms/using/authoring-in-field-help.md#p-long-description-p)
+* [簡短描述](../../forms/using/authoring-in-field-help.md#p-short-description-p)
+* [長描述](../../forms/using/authoring-in-field-help.md#p-long-description-p)
 
-![表單欄位的內容內容說明](assets/descriptions.png)
-
->[!NOTE]
->
->長說明會覆寫短說明。 如果您已同時指定兩者，則只會顯示「長說明」。
-
-### 簡短說明 {#short-description}
-
-「簡短說明」欄位是提供有關填寫表單欄位的快速簡短提示。 在「簡短說明」欄位中指定的文字，在將滑鼠游標暫留在欄位上時會顯示為工具提示。
-
-![為表單欄位新增內容內說明的簡短說明](assets/tooltip.png)
+![表單域的上下文幫助](assets/descriptions.png)
 
 >[!NOTE]
 >
->選擇 **一律顯示簡短說明** ，在欄位下永久顯示幫助文本。
+>長說明會覆蓋短說明。 如果已同時指定這兩個，則只顯示「長說明」。
 
-![欄位下的永久短內容幫助](assets/short1.png)
+### 簡短描述 {#short-description}
 
-### 詳細說明 {#long-description}
+「簡短說明」(Short description)欄位用於提供有關填寫表單域的快速和簡短提示。 在「簡短說明」(Short description)欄位中指定的文本將作為懸停在該欄位上的滑鼠工具提示顯示。
 
-您可以使用「長說明」欄位，將長文字或內嵌多媒體內容（包括視訊）指定為內容內容說明。 例如，下圖顯示如何以內容內說明的形式內嵌視訊。
+![為表單域添加上下文幫助的簡短說明](assets/tooltip.png)
 
-![將多媒體新增為表單欄位的內容內容說明](assets/long-descriptions.png)
+>[!NOTE]
+>
+>選擇 **始終顯示簡短說明** 來永久顯示該欄位下的幫助文本。
 
-新增長說明會顯示 **?** 圖示。 按一下圖示即可顯示詳細說明區段中新增的內容。
+![域下的永久簡短上下文幫助](assets/short1.png)
 
-![多媒體內容內容說明範例](assets/photoshop.png)
+### 長描述 {#long-description}
 
-### 面板層級說明 {#panel-level-help}
+您可以使用「長說明」欄位指定長文本或嵌入富媒體內容（包括視頻），作為上下文幫助。 例如，下圖顯示了如何將視頻嵌入為上下文幫助。
 
-除了表單欄位的上下文幫助外，您還可以在面板編輯對話框的「幫助內容」頁簽中的面板級別指定幫助。
+![將富媒體添加為表單域的上下文幫助](assets/long-descriptions.png)
 
-![為表單面板新增內容內容說明](assets/panel-level-help.png)
+添加長說明顯示 **?** 表徵圖。 按一下該表徵圖將顯示在長說明部分中添加的內容。
 
-新增面板的說明會顯示 **?** 圖示。 按一下圖示即可顯示面板編輯對話方塊的「說明內容」區段中新增的內容。
+![富媒體上下文幫助示例](assets/photoshop.png)
 
-![表單面板層級的內容內文說明範例](assets/photoshop-1.png)
+### 面板級幫助 {#panel-level-help}
+
+除了表單域的上下文幫助外，還可以在面板編輯對話框的「幫助內容」頁籤的面板級別指定幫助。
+
+![為表單面板添加上下文幫助](assets/panel-level-help.png)
+
+為面板添加幫助顯示 **?** 表徵圖。 按一下該表徵圖將顯示在面板編輯對話框的「幫助內容」部分中添加的內容。
+
+![窗體面板級上下文幫助示例](assets/photoshop-1.png)

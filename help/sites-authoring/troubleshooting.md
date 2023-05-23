@@ -1,6 +1,6 @@
 ---
-title: 在AEM中編寫時進行疑難排解
-description: 使用AEM時可能會遇到的一些問題。
+title: 在中創作時排除故AEM障
+description: 使用時可能遇到的一些問AEM題。
 uuid: 99af51ea-8628-4811-83f2-ab3f88f0279e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,50 +15,50 @@ ht-degree: 8%
 
 ---
 
-# 製作時疑難排解AEM{#troubleshooting-aem-when-authoring}
+# 創作時AEM故障排除{#troubleshooting-aem-when-authoring}
 
-以下章節說明使用AEM時可能會遇到的一些問題，以及如何疑難排解的建議。
-
->[!NOTE]
->
->遇到問題時，也值得檢查 [已知問題](/help/release-notes/release-notes.md) 適用於您的執行個體（發行和服務套件）。
+以下部分介紹在使用時可能遇到的一些問題AEM，以及有關如何解決這些問題的建議。
 
 >[!NOTE]
 >
->擁有管理員權限且想要疑難排解AEM問題的使用者，可使用 [疑難排解AEM（適用於管理員）](/help/sites-administering/troubleshoot.md). 如果您沒有足夠的權限，請向系統管理員洽詢疑難排解AEM。
+>當遇到問題時，也值得檢查 [已知問題](/help/release-notes/release-notes.md) 例如（發行版和服務包）。
 
-## 舊頁面版本仍在已發佈的網站上 {#old-page-version-still-on-published-site}
+>[!NOTE]
+>
+>具有管理員權限和想要解決問題的用戶AEM可以使用中介紹的故障排除方法 [故障排除AEM（適用於管理員）](/help/sites-administering/troubleshoot.md)。 如果您沒有足夠的權限，請與系統管理員聯繫以瞭解故障排AEM除。
+
+## 舊頁面版本仍位於已發佈站點上 {#old-page-version-still-on-published-site}
 
 * **問題**:
 
-   * 您已對頁面進行變更，並將頁面複製到發佈網站，但 *舊* 頁面的版本仍顯示在發佈網站上。
+   * 您已對頁面進行了更改並將頁面複製到發佈站點，但 *老* 該頁面的版本仍顯示在發佈網站上。
 
 * **原因**:
 
-   * 這可能有數個原因，通常是快取（您的本機瀏覽器或Dispatcher），但有時可能是復寫佇列的問題。
+   * 這可能有幾種原因，最常是快取（本地瀏覽器或Dispatcher），但有時可能是複製隊列的問題。
 
 * **解決方案**:
 
-   * 這裡有各種可能性：
-   * 確認頁面已正確復寫。 檢查頁面狀態，並在必要時檢查復寫佇列的狀態。
-   * 清除本機瀏覽器中的快取，並再次存取您的頁面。
-   * 新增 `?` 到頁面URL的結尾。 例如：
+   * 這裡有各種可能：
+   * 確認已正確複製該頁。 檢查頁狀態以及複製隊列的狀態（如有必要）。
+   * 清除本地瀏覽器中的快取，然後再次訪問頁面。
+   * 添加 `?` 到 例如：
 
       * `http://localhost:4502/sites.html/content?`
-      * 這會直接向AEM要求頁面，並略過Dispatcher。 如果您收到更新的頁面，表示您應清除Dispatcher快取。
-   * 如果複製隊列出現問題，請與系統管理員聯繫。
+      * 這將直接從Dispatcher請求AEM該頁並繞過該Dispatcher。 如果您收到更新的頁面，表示您應清除Dispatcher快取。
+   * 如果複製隊列有問題，請與系統管理員聯繫。
 
 
-## 工具列上看不到元件動作 {#component-actions-not-visible-on-toolbar}
+## 工具欄上不可見的元件操作 {#component-actions-not-visible-on-toolbar}
 
 * **問題**:
 
-   * 在製作環境上編輯內容頁面時，不會顯示完整的適用元件動作。
+   * 在作者環境上編輯內容頁面時，所有適用的元件操作都不可見。
 
 * **原因**:
 
-   * 在少數情況下，先前的動作可能會影響工具列。
+   * 在少數情況下，先前的操作可能會影響工具欄。
 
 * **解決方案**:
 
-   * 重新整理頁面。
+   * 刷新頁面。

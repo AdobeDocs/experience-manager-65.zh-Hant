@@ -1,7 +1,7 @@
 ---
 title: 移轉 AEM Forms 資產和文件
 seo-title: Migrate AEM Forms assets and documents
-description: 移轉公用程式可讓您將AEM Forms資產和檔案從AEM 6.3 Forms或舊版移轉至AEM 6.4 Forms。
+description: 遷移實用程式允許您將AEM Forms資產和文檔從AEM6.3Forms或早期版本遷AEM移到6.4Forms。
 seo-description: The Migration utility allows you to Migrate AEM Forms assets and documents from AEM 6.3 Forms or prior versions to AEM 6.4 Forms.
 uuid: a3fdf940-7fc2-441c-91c8-ad66ba47e5f2
 content-type: reference
@@ -22,107 +22,107 @@ ht-degree: 1%
 
 # 移轉 AEM Forms 資產和文件{#migrate-aem-forms-assets-and-documents}
 
-移轉公用程式會轉換 [適用性Forms資產](../../forms/using/introduction-forms-authoring.md), [雲配置](/help/sites-developing/extending-cloud-config.md)，和 [通信管理資產](/help/forms/using/cm-overview.md) 從舊版中使用的格式轉換為AEM 6.5 Forms中使用的格式。 當您執行移轉公用程式時，會移轉下列項目：
+遷移實用程式將 [自適應Forms資產](../../forms/using/introduction-forms-authoring.md)。 [雲配置](/help/sites-developing/extending-cloud-config.md), [通信管理資產](/help/forms/using/cm-overview.md) 從早期版本中使用的格式到6.AEM5Forms中使用的格式。 運行遷移實用程式時，將遷移以下內容：
 
-* 最適化表單的自訂元件
-* 適用性表單和通信管理範本
+* 自適應表單的自定義元件
+* 適應性表單和通信管理模板
 * 雲配置
-* 通信管理和最適化表單資產
+* 信件管理和適應性表格資產
 
 >[!NOTE]
 >
->如果升級不當，若是通信管理資產，您可以在每次匯入資產時執行移轉。 若是通信管理移轉，您必須安裝Forms相容性套件。
+>如果升級不到位，對於Tergement Management資產，您可以在每次導入資產時運行遷移。 對於通信管理遷移，您需要安裝Forms相容性包。
 
-## 遷移方法 {#approach-to-migration}
+## 移民方法 {#approach-to-migration}
 
-您可以 [升級](../../forms/using/upgrade.md) 從AEM Forms 6.4、6.3或6.2升級至AEM Forms 6.5的最新版本，或執行全新安裝。 根據您是升級了以前的安裝還是執行了最新安裝，您需要執行以下操作之一：
+你可以 [升級](../../forms/using/upgrade.md) 從AEM Forms6.4、6.3或6.2的最新版本到AEM Forms6.5，或執行全新安裝。 根據您是升級了以前的安裝還是執行了新安裝，您需要執行以下操作之一：
 
-**就地升級**
+**在就地升級時**
 
-如果您執行就地升級，升級的執行個體已擁有資產和檔案。 不過，您必須先安裝資產和檔案，才能使用 [AEMFD相容性套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （包括通信管理相容性包）
+如果執行就地升級，則升級實例已具有資產和文檔。 但是，在使用資產和文檔之前，您需要安裝 [AEMFD相容性包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （包括Tergement Management相容性包）
 
-接著，您需要更新資產和檔案，依 [運行遷移實用程式](#runningmigrationutility).
+然後，您需要更新資產和文檔 [運行遷移實用程式](#runningmigrationutility)。
 
-**如果安裝不到位**
+**在安裝不到位時**
 
-如果安裝過程不當（最新），則您必須先安裝，才能使用資產和檔案 [AEMFD相容性套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （包括通信管理相容性套件）。
+如果安裝過程（新鮮），則在您可以使用資產和文檔之前，您需要安裝 [AEMFD相容性包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) （包括「通信管理相容性」包）。
 
-然後，您需要在新的設定上匯入資產套件（zip或cmp），然後依以下方式更新資產和檔案： [運行遷移實用程式](#runningmigrationutility). Adobe建議僅在執行移轉公用程式後，才在新設定上建立新資產。
+然後，您需要在新設定中導入資產包（zip或cmp），然後通過 [運行遷移實用程式](#runningmigrationutility)。 Adobe建議僅在運行遷移實用程式後才在新設定上建立新資產。
 
-因 [向後相容性相關](/help/sites-deploying/backward-compatibility.md) 變更，crx-repository中一些資料夾的位置會變更。 手動從先前的設定將相依性（自訂程式庫和資產）匯出並匯入至全新環境。
+原因 [向後相容性相關](/help/sites-deploying/backward-compatibility.md) 更改，crx-repository中幾個資料夾的位置將更改。 手動將先前設定中的依賴項（自定義庫和資產）導出並導入到新環境。
 
-## 請先閱讀，再繼續移轉 {#prerequisites}
+## 在繼續遷移之前閱讀 {#prerequisites}
 
-對於通信管理資產：
+對於Tergement Management資產：
 
-* 針對從上一個平台匯入的資產，會新增屬性： **fd:version=1.0**.
-* 自AEM 6.1 Forms起，無法立即使用註解。 先前新增的註解可在資產中使用，但不會自動顯示在介面上。 您需要自訂AEM Forms使用者介面中的extendedProperties屬性，才能顯示註解。
-* 在部分舊版(例如LiveCycleES4)中，文字是使用Flex RichTextEditor編輯，但自AEM 6.1 Forms起，使用HTML編輯器。 由於字型的呈現和外觀，字型大小和字型邊距可能與「作者」使用者介面中的舊版不同。 不過，轉譯後的字母看起來一樣。
-* 文字模組中的清單已有所改善，現在呈現的方式也有所不同。 可能有視覺上的差異。 建議您呈現並查看文字模組中使用清單的信函。
-* 由於影像內容模組會轉換為DAM資產，且配置和片段會在移轉期間新增至表單，因此這些模組的「更新者」屬性會變更為管理員。
-* 資產的版本記錄不會移轉，且在移轉後無法使用。 移轉後會維護後續的版本記錄。
-* 自AEM 6.1 Forms以來，「準備發佈」狀態已遭取代，因此「準備發佈」狀態中的所有資產都會變更為「已修改」狀態。
-* 由於使用者介面已在AEM Forms 6.3中更新，因此執行自訂的步驟也不同。 如果您要從6.3之前的版本移轉，則需要重做自訂。
-* 版面片段從/content/apps/cm/layouts/fragmentlayouts/1001移至/content/apps/cm/modules/fragmentlayouts。 資產中的資料字典參考會顯示資料字典的路徑，而非其名稱。
-* 需要重新調整文本模組中用於對齊的任何tab空格。 如需詳細資訊，請參閱 [通信管理 — 使用頁簽間距排列文本](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html).
-* 資產撰寫器設定對通信管理設定的變更。
-* 資產會移至資料夾下，且名稱如「現有文字」和「現有清單」。
+* 對於從上一個平台導入的資產，將添加一個屬性： **fd：版本=1.0**。
+* 自AEMForms6.1以來，沒有現成的注釋。 以前添加的注釋在資產中可用，但在介面上不會自動顯示。 您需要在AEM Forms用戶介面中自定義extendedProperties屬性，以使注釋可見。
+* 在LiveCycleES4等早期版本中，文本是使用FlexRichTextEditor編輯的，但自AEM6.1Forms以來，HTML編輯器就被使用。 由於此渲染和字型外觀，字型大小和字型邊距可能與「作者」用戶介面中的早期版本不同。 但是，在呈現字母時，字母看起來是相同的。
+* 文本模組中的清單得到改進，現在呈現方式也有所不同。 可能有視覺差異。 我們建議您渲染並查看文本模組中使用清單的字母。
+* 由於映像內容模組已轉換為DAM資產，並且佈局和片段在遷移期間添加到表單中，因此這些模組的「更新者」屬性將更改為admin。
+* 資產的版本歷史記錄不會遷移，在遷移後不可用。 維護遷移後的後續版本歷史記錄。
+* 自Forms6.1以來，「準備發佈」AEM狀態已棄用，因此「準備發佈」狀態中的所有資產都更改為「已修改」狀態。
+* 由於用戶介面在AEM Forms6.3中更新，因此執行自定義的步驟也不同。 如果要從6.3之前的版本遷移，則需要重做自定義。
+* 佈局片段從/content/apps/cm/layouts/fragmentlayouts/1001移動到/content/apps/cm/modules/fragmentlayouts。 資產中的資料字典引用顯示資料字典的路徑，而不是其名稱。
+* 需要調整文本模組中用於對齊的任何制表符空格。 有關詳細資訊，請參見 [對應管理 — 使用制表符間距排列文本](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html)。
+* 資產合成器配置對通信管理配置的更改。
+* 資產將移到具有「現有文本」和「現有清單」等名稱的資料夾下。
 
-## 使用移轉公用程式 {#using-the-migration-utility}
+## 使用遷移實用程式 {#using-the-migration-utility}
 
 ### 運行遷移實用程式 {#runningmigrationutility}
 
-在對資產進行任何變更或建立資產之前，請執行移轉公用程式。 建議您在進行任何變更或建立資產後，不要執行公用程式。 請確定在移轉程式執行期間，通信管理或適用性Forms Assets使用者介面未開啟。
+在對資產進行任何更改或建立資產之前，請運行遷移實用程式。 建議您在進行任何更改或建立資產後不要運行該實用程式。 確保在遷移進程運行期間未開啟「通信管理」或「自適應Forms資產」用戶介面。
 
-當您首次運行遷移實用程式時，將使用以下路徑和名稱建立日誌： `\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log`. 此記錄會持續更新通信管理和適用性Forms移轉資訊，例如資產移動。
+首次運行遷移實用程式時，將使用以下路徑和名稱建立日誌： `\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log`。 此日誌不斷使用Tergement Management和Adaptive Forms遷移資訊（如移動資產）進行更新。
 
 >[!NOTE]
 >
->執行移轉公用程式之前，請確定您已備份crx存放庫。
+>在運行遷移實用程式之前，請確保已備份了crx儲存庫。
 
-1. 在瀏覽器工作階段中，以管理員身分登入AEM製作例項。
+1. 在瀏覽器會話中，以管理員身AEM份登錄到作者實例。
 
-1. 在瀏覽器中開啟下列URL:
+1. 在瀏覽器中開啟以下URL:
 
-   https://[*主機名*]:[*埠*]/[*context_path*]/libs/fd/foundation/gui/content/migration.html
+   https://[*主機名*]:[*埠*]/[*上下文路徑*]/libs/fd/foundation/gui/content/migration.html
 
    瀏覽器顯示四個選項：
 
    * AEM Forms 資產移轉
-   * 適用性Forms自訂元件移轉
-   * 適用性Forms範本移轉
+   * 自適應Forms自定義元件遷移
+   * 自適應Forms模板遷移
    * AEM 表單雲端組態移轉
 
-1. 執行下列操作以執行遷移：
+1. 執行以下操作以執行遷移：
 
-   * 移轉 **資產**，點選「 AEM Forms Assets Migration 」，然後在下一個畫面中點選 **開始移轉**. 下列項目會移轉：
+   * 遷移 **資產**，按一下「AEM Forms資產遷移」，然後在下一螢幕中按一下 **開始遷移**。 遷移以下內容：
 
       * 調適型表單
-      * 檔案片段
+      * 文檔片段
       * 主題
       * 字母
       * 資料字典
 
    >[!NOTE]
    >
-   >在資產移轉期間，您可能會發現警告訊息，例如「為……找到衝突」。 這些訊息表示無法移轉適用性表單中某些元件的規則。 例如，如果元件的事件同時具有規則和指令碼，如果規則發生在任何指令碼之後，則不會遷移元件的任何規則。 您可以 [開啟規則編輯器以移轉此類規則](#migrate-rules) 最適化表單製作。
+   >在資產遷移期間，您可能會發現警告消息，如「為……找到衝突」。 這些消息表示無法遷移自適應表單中某些元件的規則。 例如，如果元件有一個同時具有規則和指令碼的事件，則如果規則在任何指令碼之後發生，則不會遷移該元件的任何規則。 你可以 [通過開啟規則編輯器來遷移此類規則](#migrate-rules) 在自適應窗體創作中。
 
-   * 若要移轉最適化表單自訂元件，請點選 **適用性Forms自訂元件移轉** 和在「自訂元件移轉」頁面中，點選 **開始移轉**. 下列項目會移轉：
+   * 要遷移自適應表單自定義元件，請點擊 **自適應Forms自定義元件遷移** 在「自定義元件遷移」頁中，按一下 **開始遷移**。 遷移以下內容：
 
-      * 為適用性Forms撰寫的自訂元件
-      * 元件覆蓋（如果有）。
-   * 若要移轉最適化表單範本，請點選 **適用性Forms範本移轉** 和在「自訂元件移轉」頁面中，點選 **開始移轉**. 下列項目會移轉：
+      * 為Adaptive Forms編寫的自定義元件
+      * 元件重疊（如果有）。
+   * 要遷移自適應表單模板，請點擊 **自適應Forms模板遷移** 在「自定義元件遷移」頁中，按一下 **開始遷移**。 遷移以下內容：
 
-      * 在下建立的最適化表單範本 `/apps` 或 `/conf` 使用AEM範本編輯器。
-   * 移轉AEM Forms雲端設定服務，以運用新的內容感知雲端服務範例，包括觸控式啟用的UI(位於 `/conf`)。 移轉AEM Forms雲端設定服務時，雲端服務位於 `/etc` 已移至 `/conf`. 如果您沒有任何依賴舊版路徑的雲端服務自訂項目(`/etc`)，建議您在升級至6.5後立即執行移轉公用程式，並使用雲端設定觸控式UI進行任何後續工作。 如果您有任何現有雲端服務自訂項目，請在升級的設定中繼續使用傳統UI，直到自訂項目更新為與已移轉的路徑一致(`/conf`)，然後執行移轉公用程式。
+      * 在下建立的自適應表單模板 `/apps` 或 `/conf` 使用模AEM板編輯器。
+   * 遷移AEM Forms雲配置服務以利用新的上下文感知雲服務模式，該模式包括啟用觸摸的UI(在 `/conf`)。 遷移AEM Forms雲配置服務時， `/etc` 已移至 `/conf`。 如果您沒有任何依賴於舊路徑的雲服務定制(`/etc`)，建議在升級到6.5後立即運行遷移實用程式，並使用雲配置Touch UI進行任何進一步的工作。 如果您有任何現有的雲服務自定義項，請在升級的安裝程式上繼續使用經典UI，直到更新自定義項以與遷移的路徑(`/conf`)，然後運行遷移實用程式。
 
-   移轉 **AEM Forms雲端服務**，請點選「 AEM Forms雲端設定移轉」（雲端設定移轉獨立於AEMFD相容性套件）、點選「 AEM Forms雲端設定移轉」，然後在「設定移轉」頁面上，點選 **開始移轉**:
+   遷移 **AEM Forms雲服務**&#x200B;點擊「AEM Forms雲配置遷移」（雲配置遷移獨立於AEMFD相容性包），點擊「AEM Forms雲配置遷移」，然後在「配置遷移」頁上，點擊 **開始遷移**:
 
-   * 表單資料模型雲端服務
+   * 表單資料模型雲服務
 
       * 源路徑： `/etc/cloudservices/fdm`
       * 目標路徑： `/conf/global/settings/cloudconfigs/fdm`
-   * Recaptcha
+   * 重新捕獲
 
       * 源路徑： `/etc/cloudservices/recaptcha`
       * 目標路徑： `/conf/global/settings/cloudconfigs/recaptcha`
@@ -130,22 +130,20 @@ ht-degree: 1%
 
       * 源路徑： `/etc/cloudservices/echosign`
       * 目標路徑： `/conf/global/settings/cloudconfigs/echosign`
-   * Typekit雲端服務
+   * Typekit雲服務
 
       * 源路徑： `/etc/cloudservices/typekit`
       * 目標路徑： `/conf/global/settings/cloudconfigs/typekit`
 
-   移轉程式進行時，瀏覽器視窗會顯示下列項目：
+   在遷移過程進行時，瀏覽器窗口將顯示以下內容：
 
-   * 更新資產時：已成功更新資產。
-   * 移轉完成後：已完成資產的移轉。
+   * 更新資產時：資產已成功更新。
+   * 遷移完成後：已完成資產遷移。
 
-   執行時，移轉公用程式會執行下列動作：
+   執行時，遷移實用程式將執行以下操作：
 
-   * **將標籤新增至資產**:新增「通信管理：移轉資產」/「適用性Forms :移轉的資產」。 移轉的資產，讓使用者能識別移轉的資產。 當您執行移轉公用程式時，系統中的所有現有資產都會標示為已移轉。
-   * **產生標籤**:先前系統中顯示的類別和子類別會建立為標籤，然後這些標籤會與AEM中的相關通信管理資產建立關聯。 例如，信函模板的「類別」（「索賠」）和「子類別」（「索賠」）將生成為標籤。
-
-
+   * **將標籤添加到資產**:添加標籤「Tergement Management :遷移資產」/「自適應Forms:遷移資產」。 對遷移的資產進行識別，使用戶能夠識別遷移的資產。 運行遷移實用程式時，系統中的所有現有資產都標籤為已遷移。
+   * **生成標籤**:先前系統中存在的類別和子類別將建立為標籤，然後這些標籤與中的相關Tergement Management資產相關聯AEM。 例如，字母模板的類別（索賠）和子類別（索賠）將生成為標籤。
 
 
 
@@ -154,35 +152,37 @@ ht-degree: 1%
 
 
 
-1. 移轉公用程式完成執行後，請繼續執行 [家務處理任務](#housekeepingtasks).
 
-#### 使用規則編輯器移轉規則 {#migrate-rules}
 
-這些元件可在適用性Forms編輯器的規則編輯器中開啟，以便移轉。
+1. 遷移實用程式運行完畢後，繼續執行 [家政任務](#housekeepingtasks)。
 
-* 若要在自訂元件中移轉規則和指令碼（若從6.3升級則非必要），請點選「適用性Forms自訂元件移轉」，在下一個畫面中，點選「開始移轉」。 下列項目會移轉：
+#### 使用規則編輯器遷移規則 {#migrate-rules}
 
-   * 使用規則編輯器（6.1 FP1和更新版本）建立的規則和指令碼
+通過在自適應Forms編輯器的規則編輯器中開啟這些元件，可以遷移這些元件。
 
-   * 在6.1及舊版UI中使用「指令碼」索引標籤建立的指令碼
+* 要遷移自定義元件中的規則和指令碼（從6.3升級時不需要），請點擊自適應Forms自定義元件遷移，然後在下一螢幕中點擊開始遷移。 遷移以下內容：
 
-* 若要移轉範本（若從6.3和6.4升級則不需要），請點選「適用性Forms範本移轉」，然後在下一個畫面中點選「開始移轉」。 下列項目會移轉：
+   * 使用規則編輯器（6.1 FP1及更高版本）建立的規則和指令碼
 
-   * 舊範本 — 使用AEM 6.1 Forms或更舊版本，在/apps下建立的最適化表單範本。 這包括範本元件中定義的指令碼。
+   * 使用6.1及更低版本UI中的「指令碼」頁籤建立的指令碼
 
-   * 新範本 — 使用/conf底下的範本編輯器建立的最適化表單範本。 這包括移轉使用規則編輯器建立的規則和指令碼。
+* 要遷移模板（從6.3和6.4升級時不需要），請點擊「自適應Forms模板遷移」，然後在下一螢幕中點擊「開始遷移」。 遷移以下內容：
 
-### 運行遷移實用程式後的內部管理任務 {#housekeepingtasks}
+   * 舊模板 — 在/apps下使用6.1Forms或更早版本AEM建立的自適應表單模板。 這包括在模板元件中定義的指令碼。
 
-運行遷移實用程式後，請處理以下內部管理任務：
+   * 新模板 — 使用/conf下的模板編輯器建立的自適應表單模板。 這包括遷移使用規則編輯器建立的規則和指令碼。
 
-1. 請確定XFA版本的配置和片段配置是3.3或更新版本。 如果您使用舊版的版面和片段版面，則轉譯信函時可能會發生問題。 若要將舊版XFA更新至最新版本，請完成下列步驟：
+### 運行遷移實用程式後的管理任務 {#housekeepingtasks}
 
-   1. [將XFA下載為zip檔案](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) 從Forms使用者介面。
-   1. 解壓縮檔案。
-   1. 在最新的Designer中開啟XFA檔案並儲存。 XFA的版本會更新為最新版本。
-   1. 在Forms使用者介面中上傳XFA。
+運行遷移實用程式後，請處理以下內部處理任務：
 
-1. 移轉前先發佈於先前系統的所有資產。 移轉公用程式只會更新製作執行個體上的資產，以及更新發佈執行個體上需要發佈資產的資產。
+1. 確保XFA版本的佈局和片段佈局為3.3或更高版本。 如果使用舊版本的佈局和片段佈局，則在呈現字母時可能會出現問題。 要將舊XFA的版本更新為最新版本，請完成以下步驟：
 
-1. 在AEM Forms 6.4和6.5中，表單使用者群組的某些權限已變更。 如果您希望任何使用者能夠上傳包含指令碼的XDP和適用性Forms，或使用程式碼編輯器，則需將其新增至表單功能使用者群組。 同樣地，範本作者無法再使用規則編輯器中的程式碼編輯器。 為使用者能夠使用程式碼編輯器，請將其新增至af-template-script-writers群組。 有關向組添加用戶的說明，請參閱 [管理使用者和使用者群組](/help/communities/users.md).
+   1. [將XFA下載為zip檔案](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) 從Forms用戶介面。
+   1. 解壓檔案。
+   1. 在最新的設計器中開啟XFA檔案並保存它。 XFA的版本將更新為最新版本。
+   1. 在Forms用戶介面中上載XFA。
+
+1. 發佈遷移前在上一個系統中發佈的所有資產。 遷移實用程式只更新作者實例上的資產，並更新發佈實例上需要發佈資產的資產。
+
+1. 在AEM Forms6.4和6.5中，表單用戶組的某些權利被更改。 如果希望任何用戶能夠上載包含指令碼或使用代碼編輯器的XDP和AdaptiveForms，則需要將它們添加到表單超級用戶組。 同樣，模板作者無法再使用規則編輯器中的代碼編輯器。 為使用戶能夠使用代碼編輯器，請將它們添加到af-template-script-writers組。 有關向組添加用戶的說明，請參見 [管理用戶和用戶組](/help/communities/users.md)。

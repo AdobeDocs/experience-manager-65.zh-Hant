@@ -1,7 +1,7 @@
 ---
 title: 使用作者環境
 seo-title: Working with the Author Environment
-description: 製作環境可讓您執行與製作（包括頁面製作和管理資產）相關的工作，以及產生和維護網站上的內容時所需的管理工作。
+description: 作者環境允許您執行與創作（包括頁面創作和管理資產）和管理網站上生成和維護內容時需要的任務相關的任務。
 seo-description: The author environment allows you to perform tasks related to authoring (including page authoring and managing assets) and administering tasks you need when generating and maintaining the content on your website.
 uuid: ebeaa2c3-05b0-4108-8e84-69b9ba48cfbe
 contentOwner: Chris Bohnert
@@ -21,34 +21,34 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->下列檔案著重於傳統UI。 如需在現代化觸控式UI中編寫的相關資訊，請參閱 [標準製作檔案](/help/assets/assets.md).
+>以下文檔重點介紹經典UI。 有關在現代化、可觸摸的用戶介面中創作的資訊，請參閱 [標準創作文檔](/help/assets/assets.md)。
 
-製作環境可讓您執行與下列項目相關的工作：
+作者環境允許您執行與以下相關的任務：
 
-* [製作](/help/sites-authoring/author.md) (包括 [頁面編寫](/help/sites-authoring/qg-page-authoring.md) 和 [管理資產](/help/assets/assets.md))
+* [創作](/help/sites-authoring/author.md) (包括 [頁面創作](/help/sites-authoring/qg-page-authoring.md) 和 [管理資產](/help/assets/assets.md))
 
-* [管理](/help/sites-administering/administer-best-practices.md) 產生和維護網站上的內容時所需的任務
+* [管理](/help/sites-administering/administer-best-practices.md) 生成和維護網站上的內容時需要的任務
 
-提供兩個圖形用戶介面來實現此目的，這些介面可通過任何現代瀏覽器訪問：
+提供了兩個圖形用戶介面來實現這一點，這些介面可通過任何現代瀏覽器訪問：
 
 1. 傳統 UI
 
-   * AEM多年來一直提供此UI。
-   * 主要是綠色。
-   * 專為在桌上型電腦上使用而設計。
-   * 不再維護。
-   * 以下檔案著重於此傳統UI。 如需在現代化觸控式UI中編寫的相關資訊，請參閱 [標準製作檔案](/help/sites-authoring/author.md).
+   * 此UI在多年內AEM始終可用。
+   * 它主要是綠色的。
+   * 它設計用於台式設備。
+   * 它不再被維護。
+   * 以下文檔重點介紹此經典UI。 有關在基於觸摸的現代用戶介面中創作的資訊，請參見 [標準創作文檔](/help/sites-authoring/author.md)。
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
-1. 觸控式UI
+1. 啟用觸摸的UI
 
-   * 這是現代的標準AEM UI。
-   * 它主要呈灰色，介面乾淨平整。
-   * 專為在觸控和桌上型裝置上使用（針對觸控最佳化）而設計。 不過，所有裝置的外觀和感覺都一樣 [檢視和選取資源](/help/sites-authoring/basic-handling.md) 略有不同（點選與點按）。
-   * 請參閱 [標準製作檔案](/help/sites-authoring/author.md) 如需進一步了解如何使用觸控式UI製作。 下列檔案著重於傳統UI。
+   * 這是現代標準的AEMUI。
+   * 它以灰色為主，介面乾淨平整。
+   * 它設計用於觸摸和台式機設備（針對觸摸而優化）。 不過，所有設備的外觀和感覺都是一樣的 [查看和選擇資源](/help/sites-authoring/basic-handling.md) 略有不同（點擊與點擊）。
+   * 查看 [標準創作文檔](/help/sites-authoring/author.md) 有關如何使用基於觸摸的UI創作的詳細資訊。 以下文檔重點介紹經典UI。
 
    * 桌面:
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
-   * 平板電腦（或寬度小於1024像素的台式機）:
+   * 平板電腦設備（或台式機寬度小於1024像素）:
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)

@@ -1,7 +1,7 @@
 ---
-title: 任務管理器服務Java API快速啟動(SOAP)
+title: 任務管理器服務Java API QuickStart(SOAP)
 seo-title: Task Manager Service Java API QuickStart(SOAP)
-description: 使用任務管理器服務來分配任務、鎖定任務、檢索分配給用戶的任務、從任務中檢索表單資料、修改表單資料、檢索檔案附件和檢索任務資訊。
+description: 使用Task Manager服務可以分配任務、鎖定任務、檢索分配給用戶的任務、從任務中檢索表單資料、修改表單資料、檢索檔案附件和檢索任務資訊。
 seo-description: Use the Task Manager service to assign tasks, lock tasks, retrieve tasks assigned to users, retrieve form data from tasks, modify form data, retrieve file attachments, and retrieve task information.
 uuid: fd6fceb1-865e-47a7-83fc-a63dcc2c21de
 contentOwner: admin
@@ -18,35 +18,35 @@ ht-degree: 0%
 
 ---
 
-# 任務管理器服務Java API快速入門(SOAP) {#task-manager-service-java-api-quickstart-soap}
+# 任務管理器服務Java API快速啟動(SOAP) {#task-manager-service-java-api-quickstart-soap}
 
-「任務管理器」服務提供以下快速啟動。
+Task Manager服務提供以下快速啟動。
 
-[快速入門（SOAP模式）:使用Java API指派任務](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API分配任務](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API鎖定任務](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API鎖定任務](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API擷取指派給使用者的工作](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API檢索分配給用戶的任務](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API從任務中擷取表單資料](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API從任務中檢索表單資料](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API修改表單資料](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API修改表單資料](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API從任務中檢索檔案附件](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API從任務中檢索檔案附件](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API檢索任務資訊](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API檢索任務資訊](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
 
-AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應設為SOAP。
-
->[!NOTE]
->
->您無法使用網站服務API來搜尋指派給使用者的工作。 原因在於您無法叫用 `taskList` 方法，這是執行此任務的必要方法調用。
+AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
 
 >[!NOTE]
 >
->使用AEM Forms進行程式設計中的快速入門是以Forms伺服器作業系統為基礎。 但是，如果您使用其他作業系統（如UNIX），請用適用作業系統支援的路徑取代Windows專用路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>不能使用Web服務API搜索分配給用戶的任務。 原因是您無法調用 `taskList` 方法，這是執行此任務所必需的方法調用。
 
-## 快速入門（SOAP模式）:使用Java API指派任務 {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
+>[!NOTE]
+>
+>「Quick Start（快速入門）」位於「Programming withAEM Forms」(與Forms一起寫程式)」中，它基於伺服器作業系統。 但是，如果您使用的是其他作業系統，如UNIX，則用適用作業系統支援的路徑替換Windows特定路徑。 同樣，如果您使用的是另一個J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+
+## 快速啟動（SOAP模式）:使用Java API分配任務 {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
 以下Java代碼示例將任務分配給名為Tony Blue的用戶。
 
@@ -179,7 +179,7 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API鎖定任務 {#quick-start-soap-mode-locking-tasks-using-the-java-api}
+## 快速啟動（SOAP模式）:使用Java API鎖定任務 {#quick-start-soap-mode-locking-tasks-using-the-java-api}
 
 以下Java代碼示例鎖定與任務標識符值2對應的任務。
 
@@ -268,9 +268,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API擷取指派給使用者的工作 {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
+## 快速啟動（SOAP模式）:使用Java API檢索分配給用戶的任務 {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
-以下Java代碼示例將檢索分配給名為 *托尼藍*. 請注意，此用戶已在連接屬性中指定。 將顯示有關返回任務的資訊，如其標識符值和說明。
+以下Java代碼示例檢索分配給名為的用戶的所有任務 *托尼藍*。 請注意，此用戶是在連接屬性中指定的。 將顯示有關返回任務的資訊，如其標識符值和說明。
 
 ```java
  /*
@@ -394,9 +394,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  }
 ```
 
-## 快速入門（SOAP模式）:使用Java API從任務中擷取表單資料 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
+## 快速啟動（SOAP模式）:使用Java API從任務中檢索表單資料 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
 
-以下Java代碼示例從標識符值為304的任務中檢索表單資料。 表單資料寫入名為的XML檔案 *FormData.xml* 位於C:\Adobe。
+以下Java代碼示例從標識符值為304的任務中檢索表單資料。 表單資料被寫入名為 *FormData.xml* C:\Adobe。
 
 ```java
  /*
@@ -500,9 +500,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API修改表單資料 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
+## 快速啟動（SOAP模式）:使用Java API修改表單資料 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
-下列Java程式碼範例會使用位於 *FormData.xml* 檔案。
+以下Java代碼示例使用位於 *FormData.xml* 的子菜單。
 
 ```java
  /*
@@ -610,7 +610,7 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API從任務中檢索檔案附件 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
+## 快速啟動（SOAP模式）:使用Java API從任務中檢索檔案附件 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
 
 以下Java代碼示例檢索檔案附件。 每個檔案附件都另存為TXT檔案。
 
@@ -714,9 +714,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  
 ```
 
-## 快速入門（SOAP模式）:使用Java API檢索任務資訊 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
+## 快速啟動（SOAP模式）:使用Java API檢索任務資訊 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
 
-以下Java代碼示例將檢索基於以下進程的所有任務： *抵押貸款 — 預建*. 系統會檢查每個傳回任務的狀態，以確保該任務已完成。 檢索並顯示完成任務的用戶名和完成任務的日期等資訊。
+以下Java代碼示例檢索基於名為的進程的所有任務 *抵押貸款 — 預建*。 檢查每個返回任務的狀態，以確保它是已完成的任務。 將檢索並顯示完成任務的用戶的名稱和任務完成日期等資訊。
 
 ```java
  /*

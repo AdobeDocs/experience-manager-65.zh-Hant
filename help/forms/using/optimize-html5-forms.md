@@ -1,7 +1,7 @@
 ---
-title: 最佳化HTML5表單
+title: 優化HTML5窗體
 seo-title: Optimizing HTML5 forms
-description: 您可以最佳化HTML5表單的輸出大小。
+description: 可以優化HTML5窗體的輸出大小。
 seo-description: You can optimize the output size of the HTML5 forms.
 uuid: 959f0b6a-9e4d-478a-afa8-4c39011fdf7a
 content-type: reference
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 ---
 
-# 最佳化HTML5表單 {#optimizing-html-forms}
+# 優化HTML5窗體 {#optimizing-html-forms}
 
-HTML5表單會以HTML5格式轉譯表單。 結果的輸出可能會很大，具體取決於表單大小和表單中的影像等因素。 若要最佳化資料傳輸，建議的方法是使用要求提供來源的Web伺服器來壓縮HTML回應。 此方法可減少回應大小、網路流量，以及在伺服器與用戶端電腦之間串流資料所需的時間。
+HTML5窗體以HTML5格式呈現窗體。 結果輸出可能會很大，具體取決於窗體大小和窗體中的影像等因素。 為了優化資料傳輸，建議的方法是使用從中提供請求的Web伺服器壓縮HTML響應。 此方法可減少響應大小、網路流量，以及在伺服器和客戶機之間傳輸資料所需的時間。
 
-本文說明使用JBoss為Apache Web Server 2.0 32位元啟用壓縮所需的步驟。
+本文介紹使用JBoss為Apache Web Server 2.0 32位啟用壓縮所需的步驟。
 
 >[!NOTE]
 >
->下列說明不適用於Apache Web Server 2.0 32位以外的伺服器。
+>以下說明不適用於除Apache Web Server 2.0 32位以外的伺服器。
 
 獲取適用於您的作業系統的Apache Web伺服器軟體：
 
-* 對於Windows，請從Apache HTTP Server Project站點下載Apache Web伺服器。
+* 對於Windows，從Apache HTTP Server項目站點下載Apache Web伺服器。
 * 對於Solaris 64位，請從Sunfreeware for Solaris網站下載Apache Web伺服器。
 * 對於Linux,Apache Web伺服器預安裝在Linux系統上。
 
-Apache可以使用HTTP或AJP通訊協定與JBoss通訊。
+Apache可以使用HTTP或AJP協定與JBoss通信。
 
-1. 取消註解下列模組設定： *APACHE_HOME/conf/httpd.conf* 檔案。
+1. 取消注釋中的以下模組配置 *APACHE_HOME/conf/httpd.conf* 的子菜單。
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -49,7 +49,7 @@ Apache可以使用HTTP或AJP通訊協定與JBoss通訊。
 
 1. 在JBoss的埠8080上配置代理。
 
-   將下列設定新增至 *APACHE_HOME/conf/httpd.conf* 設定檔。
+   將以下配置添加到 *APACHE_HOME/conf/httpd.conf* 配置檔案。
 
    ```java
    ProxyPass / https://<server_Name>:8080/
@@ -58,16 +58,16 @@ Apache可以使用HTTP或AJP通訊協定與JBoss通訊。
 
    >[!NOTE]
    >
-   >使用Proxy時，需要進行下列設定變更：
+   >使用代理時，需要更改以下配置：
    >
    >* 訪問： *https://&lt;server>:&lt;port>/system/console/configMgr*
-   * 編輯Apache Sling反向連結篩選器的設定
-   * 在「允許主機」中，添加代理伺服器的條目
+   * 編輯Apache Sling引用過濾器的配置
+   * 在允許主機中，添加代理伺服器的項
 
 
 1. 啟用壓縮。
 
-   將下列設定新增至 *APACHE_HOME/conf/httpd.conf* 設定檔。
+   將以下配置添加到 *APACHE_HOME/conf/httpd.conf* 配置檔案。
 
    ```xml
    <Location /content/xfaforms>
@@ -85,4 +85,4 @@ Apache可以使用HTTP或AJP通訊協定與JBoss通訊。
    </Location>
    ```
 
-1. 若要存取AEM伺服器，請使用https://[Apache_server]:80。
+1. 要訪問服AEM務器，請使用https://[Apache伺服器]:80。

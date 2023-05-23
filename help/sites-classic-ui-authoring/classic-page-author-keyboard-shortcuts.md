@@ -1,6 +1,6 @@
 ---
-title: 編輯頁面時的鍵盤快速鍵
-description: AEM提供各種鍵盤快速鍵。 有些在編輯頁面時適用，有些則適用於控制台的使用。
+title: 編輯頁面時的鍵盤快捷鍵
+description: 您可以使用各種鍵盤快捷鍵AEM。 有些在編輯頁面時應用，有些則應用於控制台的使用。
 uuid: a1753e0b-5701-426c-b974-2e8b8d81a30d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,30 +15,30 @@ ht-degree: 4%
 
 ---
 
-# 編輯頁面時的鍵盤快速鍵{#keyboard-shortcuts-when-editing-pages}
+# 編輯頁面時的鍵盤快捷鍵{#keyboard-shortcuts-when-editing-pages}
 
-AEM提供各種鍵盤快速鍵。 有些可套用於編輯頁面，有些則套用至 [控制台的使用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+您可以使用各種鍵盤快捷鍵AEM。 有些在編輯頁面時應用，有些則應用於 [控制台的使用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)。
 
 >[!NOTE]
 >
->在下表中，針對 **快速鍵** 欄，Ctrl和Command鍵都適用於macOS。
+>在下表中，對於 **快捷方式** 列，Ctrl鍵和Command鍵在macOS工作。
 
 >[!NOTE]
 >
 >案頭設備上的多選：
 >
 >* 窗口：按住Ctrl鍵並按一下所需元件。
->* Mac:按住Cmd鍵並按一下所需的元件。
+>* Mac:按住Cmd並按一下所需元件。
 >
 
 
-## 編輯鍵盤快速鍵 {#editing-keyboard-shortcuts}
+## 編輯鍵盤快捷鍵 {#editing-keyboard-shortcuts}
 
 <table>
  <tbody>
   <tr>
    <th>位置</th>
-   <th>快速鍵</th>
+   <th>快捷方式</th>
    <th>說明</th>
   </tr>
   <tr>
@@ -49,7 +49,7 @@ AEM提供各種鍵盤快速鍵。 有些可套用於編輯頁面，有些則套�
   <tr>
    <td> </td>
    <td><code>Ctrl-y</code></td>
-   <td>取消上次更改。</td>
+   <td>重做上次更改。</td>
   </tr>
   <tr>
    <td> </td>
@@ -69,7 +69,7 @@ AEM提供各種鍵盤快速鍵。 有些可套用於編輯頁面，有些則套�
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-X</code></strong></td>
-   <td>剪切所選段落。<strong><br /> 注意：</strong> 剪切段落將貼上到新位置之前不會消失。</td>
+   <td>剪切選定段落。<strong><br /> 注：</strong> 剪切段落在貼上到新位置之前不會消失。</td>
   </tr>
   <tr>
    <td> </td>
@@ -79,7 +79,7 @@ AEM提供各種鍵盤快速鍵。 有些可套用於編輯頁面，有些則套�
   <tr>
    <td> </td>
    <td><strong><code>Alt-Ctrl-V</code></strong></td>
-   <td>貼上為參考。</td>
+   <td>貼上為引用。</td>
   </tr>
   <tr>
    <td> </td>
@@ -94,12 +94,12 @@ AEM提供各種鍵盤快速鍵。 有些可套用於編輯頁面，有些則套�
   <tr>
    <td> </td>
    <td><strong><code>Alt-right-click</code></strong></td>
-   <td>強制預設（瀏覽器）上下文菜單。<br /> <strong>注意：</strong> AEM內容功能表只會出現在傳統UI中。</td>
+   <td>強制預設（瀏覽器）上下文菜單。<br /> <strong>注：</strong> 上下AEM文菜單僅在經典UI中出現。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-Alt-c</code></strong></td>
-   <td>顯示 <a href="/help/sites-administering/client-context.md">用戶上下文</a>.</td>
+   <td>顯示 <a href="/help/sites-administering/client-context.md">客戶端上下文</a>。</td>
   </tr>
   <tr>
    <td>RTF 編輯器<br /> </td>
@@ -117,23 +117,23 @@ AEM提供各種鍵盤快速鍵。 有些可套用於編輯頁面，有些則套�
    <td>底線</td>
   </tr>
   <tr>
-   <td>內容尋找器 — 搜尋方塊</td>
+   <td>Content Finder — 搜索框</td>
    <td><strong><code>down-arrow</code></strong></td>
-   <td>觸發建議清單。 輸入的字元過少時需要自動觸發清單（當輸入了2個或更多字元時就會發生）。</td>
+   <td>觸發建議清單。 當輸入的字元太少以自動觸發清單時需要（當輸入了2個或更多字元時會發生這種情況）。</td>
   </tr>
   <tr>
    <td> </td>
-   <td><strong><code>right-arrow</code></strong><br /> （依建議路徑）</td>
-   <td>選擇項目並觸發所選路徑的建議。</td>
+   <td><strong><code>right-arrow</code></strong><br /> （在建議的路徑上）</td>
+   <td>為所選路徑選擇項並觸發建議。</td>
   </tr>
   <tr>
    <td> </td>
-   <td><strong><code>left-arrow</code></strong><br /> （依建議路徑）</td>
-   <td>選取項目並觸發其祖先的建議（如父項的同層項目）。</td>
+   <td><strong><code>left-arrow</code></strong><br /> （在建議的路徑上）</td>
+   <td>為其祖先選擇項並觸發建議（如父代的同級）。</td>
   </tr>
   <tr>
    <td> </td>
-   <td><strong><code>Enter</code></strong><br /> （依建議路徑）</td>
+   <td><strong><code>Enter</code></strong><br /> （在建議的路徑上）</td>
    <td>選擇項並觸發搜索。</td>
   </tr>
   <tr>
@@ -142,30 +142,30 @@ AEM提供各種鍵盤快速鍵。 有些可套用於編輯頁面，有些則套�
    <td>關閉建議層。</td>
   </tr>
   <tr>
-   <td>內容尋找器<br /> </td>
+   <td>內容查找器<br /> </td>
    <td><strong><code>Alt+drag</code></strong></td>
-   <td><p>拖曳資產，放置目的地。</p> <p>刪除操作會產生新段落；而不是替換目標中的資產。</p> </td>
+   <td><p>拖動資產，放在目標上。</p> <p>刪除操作會生成新段落；而不是替換目標中的資產。</p> </td>
   </tr>
  </tbody>
 </table>
 
-使用 [主控台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+使用 [控制台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)。
 
-## 開發的鍵盤快速鍵 {#keyboard-shortcuts-for-development}
+## 開發的鍵盤快捷鍵 {#keyboard-shortcuts-for-development}
 
-使用頁面編輯器時，案頭開發人員可使用其他鍵盤快速鍵。
+使用頁面編輯器時，案頭開發人員可使用其他鍵盤快捷鍵。
 
 <table>
  <tbody>
   <tr>
    <th>位置</th>
-   <th>快速鍵</th>
+   <th>快捷方式</th>
    <th>說明</th>
   </tr>
   <tr>
    <td>編輯模式</td>
-   <td>在URL中設定下列尾碼：<br /> <code>?debugClientLibs=true</code><br /> 然後使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
-   <td>查看頁面載入的計時統計資料。</td>
+   <td>在URL中設定以下尾碼：<br /> <code>?debugClientLibs=true</code><br /> 然後使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
+   <td>查看頁面載入的計時統計資訊。</td>
   </tr>
  </tbody>
 </table>

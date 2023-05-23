@@ -1,7 +1,7 @@
 ---
 title: 初始設定
 seo-title: Initial Setup
-description: 設定社群
+description: 設定社區
 seo-description: Setting up Communities
 uuid: c53d280c-c5ae-47cf-8038-f0dea68e15ff
 contentOwner: Janice Kendall
@@ -19,78 +19,78 @@ ht-degree: 2%
 
 # 初始設定 {#initial-setup}
 
-## 啟動製作和發佈例項 {#start-author-and-publish-instances}
+## 啟動作者和發佈實例 {#start-author-and-publish-instances}
 
-為了開發和展示用途，必須執行一個製作和一個發佈例項。
+為了開發和演示，需要運行一個作者和一個發佈實例。
 
-若要這麼做，請遵循基本AEM [快速入門](../../help/sites-deploying/deploy.md#getting-started) 說明會導致：
+為此，請遵循基AEM本 [入門](../../help/sites-deploying/deploy.md#getting-started) 說明，將導致：
 
-* 製作環境 [localhost:4502](http://localhost:4502/)
-* 發佈環境於 [localhost:4503](http://localhost:4503/)
+* 作者環境 [localhost:4502](http://localhost:4502/)
+* 在上發佈環境 [localhost:4503](http://localhost:4503/)
 
 對於AEM Communities,
 
-* 製作環境適用於：
+* 作者環境用於：
 
-   * 開發網站、範本和元件。
+   * 開發網站、模板和元件。
    * 管理和配置任務。
 
-* 發佈環境適用於：
+* 發佈環境用於：
 
-   * 張貼和協調內容的社群體驗。
+   * 發佈和調節內容的社區體驗。
    * 建立社區組、成員和成員組。
 
 >[!NOTE]
 >
->如果不熟悉AEM，請在 [基本處理](../../help/sites-authoring/basic-handling.md) 和 [製作頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md).
+>如果不熟悉AEM，請查看 [基本處理](../../help/sites-authoring/basic-handling.md) 和 [創作頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md)。
 
-## 安裝最新的Communities版本 {#install-latest-communities-release}
+## 安裝最新社區版本 {#install-latest-communities-release}
 
-本教學課程會建立 [參與社群網站](overview.md#engagement-community) 和是以AEM Communities 6.2 feature pack 1.10版為基礎。
+本教程將建立 [項目社區站點](overview.md#engagement-community) 基於AEM Communities6.2功能包版本1.10。
 
-若要確認已安裝最新的Feature Pack，請造訪：
+要確保安裝了最新的功能包，請訪問：
 
-* [最新發行](deploy-communities.md#latest-releases)
+* [最新版本](deploy-communities.md#latest-releases)
 
 ## 設定 Analytics {#configure-analytics}
 
-當 [Adobe Analytics已針對社群網站進行設定](analytics.md)，您可以取得社群活動的相關資訊，以增強社群成員的體驗，並為網站的管理員提供意見回饋。
+當 [Adobe Analytics為社區站點配置](analytics.md)，提供有關社區活動的資訊，以增強社區成員的體驗，並向站點管理員提供反饋。
 
-與Adobe Analytics整合為選用。
+與Adobe Analytics的融合是可選的。
 
-## 設定通知的電子郵件 {#configure-email-for-notifications}
+## 為通知配置電子郵件 {#configure-email-for-notifications}
 
-通知功能，預設適用於使用 `Communities Sites` console提供電子郵件通道以接收通知。
+通知功能，預設情況下可用於使用 `Communities Sites` 控制台，提供通知的電子郵件通道。
 
-必須為網站正確設定電子郵件。
+需要為站點正確配置電子郵件。
 
-請參閱 [設定電子郵件](email.md).
+請參閱 [配置電子郵件](email.md)。
 
-## 啟用通道服務 {#enable-the-tunnel-service}
+## 啟用隧道服務 {#enable-the-tunnel-service}
 
-在製作環境中建立社群網站時，通道服務可將角色指派給在發佈環境中註冊的受信任社群成員。 通道服務也允許從 [成員和組控制台](members.md) 在製作環境中。
+當在作者環境中建立社區站點時，隧道服務使得能夠將角色分配給在發佈環境中註冊的受信任社區成員。 隧道服務還允許從 [成員和組控制台](members.md) 在作者環境中。
 
-公約適用於在發佈環境中建立的成員和成員組 *not* 在製作環境中重新建立。 如需詳細資訊，請參閱 [管理使用者和使用者群組](users.md).
+公約適用於在發佈環境中建立的成員和成員組 *不* 在作者環境中重新建立。 有關詳細資訊，請參閱 [管理用戶和用戶組](users.md)。
 
-有關在 **作者** 例項，請參閱 [通道服務](deploy-communities.md#tunnel-service-on-author).
+有關在上啟用隧道服務的簡單說明 **作者** 實例，請參閱 [隧道服務](deploy-communities.md#tunnel-service-on-author)。
 
 ## 社區管理員角色 {#community-administrator-role}
 
-社區管理員組的成員可以建立社區站點、管理站點、管理成員（他們可以禁止社區中的成員），以及審核內容。
+「社區管理員」組的成員可以建立社區站點、管理站點、管理成員（他們可以禁止社區成員），以及中等內容。
 
 ### 建立使用者 {#create-user}
 
-在 *作者*，此角色被分配給社區管理員：
+在上建立用戶 *作者*，分配了「社區管理員」角色的用戶：
 
-* 在製作例項上
+* 論作者案
 
-   * 例如， [http://localhost:4502/](http://localhost:4503/)
+   * 比如說， [http://localhost:4502/](http://localhost:4503/)
 
-* 以管理員權限登入
+* 使用管理員權限登錄
 
-   * 例如，使用者名稱&#39;admin&#39; /密碼&#39;admin&#39;
+   * 例如，用戶名「admin」/密碼「admin」
 
-* 從主控台導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 安全性]** > **[!UICONTROL 使用者]**.
+* 從主控制台導航到 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 安全]** > **[!UICONTROL 用戶]**。
 * 從 **編輯** 菜單，選擇 **[!UICONTROL 添加用戶]**
 
 * 在 `Create New User` 對話框輸入：
@@ -99,38 +99,38 @@ ht-degree: 2%
    * **[!UICONTROL 電子郵件地址]**:sirius.nilson@mailinator.com
    * **[!UICONTROL 密碼]**:密碼
    * **[!UICONTROL 確認密碼(&amp;A);]**:密碼
-   * **[!UICONTROL 名字]**:西里烏
+   * **[!UICONTROL 名字]**:天狼星
    * **[!UICONTROL 姓氏]**:尼爾森
 
 ### 將Sirius分配給社區管理員組 {#assign-sirius-to-community-administrators-group}
 
-向下捲動至 `Add User to Groups`:
+向下滾動到 `Add User to Groups`:
 
-* 輸入&#39;C&#39;以搜索
+* 輸入「C」以搜索
 
    * 選取 `Community Administrators`
    * 選取 `Community Enablement Managers`
 
 * 選取&#x200B;**[!UICONTROL 儲存]**。
 
-![create-user](assets/create-user.png)
+![建立用戶](assets/create-user.png)
 
-## 啟用社交登入 {#enable-social-login}
+## 啟用社交登錄 {#enable-social-login}
 
-在使用Facebook和Twitter的社交登入示範版本之前，您必須
+在使用Facebook和Twitter社會登錄演示版之前，必須
 
-1. 安裝修正套件或 [最新功能套件](deploy-communities.md#latestfeaturepack) (2017年3月Facebook API變更)。
-1. [啟用OAuth提供者](social-login.md#adobe-granite-oauth-authentication-handler) 在發佈環境中。
+1. 安裝修復程式包或 [最新功能包](deploy-communities.md#latestfeaturepack) (2017年3月FacebookAPI更改)。
+1. [啟用OAuth提供程式](social-login.md#adobe-granite-oauth-authentication-handler) 的子菜單。
 
-對於生產伺服器，必須建立提供社交登入所需的雲端服務。
+對於生產伺服器，需要建立提供社交登錄所需的雲服務。
 
-請參閱 [使用Facebook和Twitter進行社交登入](social-login.md).
+請參閱 [與Facebook和Twitter社會登錄](social-login.md)。
 
-## 建立教學課程標籤 {#create-tutorial-tags}
+## 建立教程標籤 {#create-tutorial-tags}
 
-使用的標籤命名空間，建立要用於參與教學課程的標籤 `Tutorial`.
+使用的標籤命名空間建立用於項目教程的標籤 `Tutorial`。
 
-使用 [標籤主控台](../../help/sites-administering/tags.md#tagging-console) 若要建立下列標籤：
+使用 [標籤控制台](../../help/sites-administering/tags.md#tagging-console) 建立以下標籤：
 
 * `Tutorial: Sports / Baseball`
 * `Tutorial: Sports / Gymnastics`
@@ -139,21 +139,21 @@ ht-degree: 2%
 * `Tutorial: Arts / Auditory`
 * `Tutorial: Arts / History`
 
-![教學課程 — 標籤](assets/tutorial-tags.png)
+![教程標籤](assets/tutorial-tags.png)
 
-然後，請依照以下指示操作：
+然後按照說明執行以下操作：
 
-1. [設定標籤權限](../../help/sites-administering/tags.md#setting-tag-permissions).
-1. [發佈標籤](../../help/sites-administering/tags.md#publishing-tags).
+1. [設定標籤權限](../../help/sites-administering/tags.md#setting-tag-permissions)。
+1. [發佈標籤](../../help/sites-administering/tags.md#publishing-tags)。
 
-為AEM Communities快速入門Tutorials建立的標籤範例套件
+為AEM Communities入門Tutorials建立的標籤包示例
 
 [取得檔案](assets/tutorial_tags-v63.zip)
 
-## 用於UGC公共儲存的MongoDB {#mongodb-for-ugc-common-store}
+## 用於UGC公用儲存的MongoDB {#mongodb-for-ugc-common-store}
 
-建議您設定，但可選 [MSRP](msrp.md) (MongoDB)作為 [公用商店](working-with-srp.md) 以體驗從發佈和/或作者環境調節所有UGC的彈性。
+建議設定（但可選） [MSRP](msrp.md) (MongoDB) [普通商店](working-with-srp.md) 體驗從發佈和/或作者環境調節所有UGC的靈活性。
 
-如需指示，請造訪 [如何設定示範的MongoDB](demo-mongo.md).
+有關說明，請訪問 [如何設定MongoDB以進行演示](demo-mongo.md)。
 
-依預設，安裝製作和發佈AEM例項會導致將使用者產生的內容(UGC)儲存在 [JCR Tar儲存](../../help/sites-deploying/platform.md) 使用 [JSRP](jsrp.md). JSRP不是常見商店，這表示UGC只會顯示在輸入的執行個體上。 通常，UGC是在發佈例項上輸入，且不會顯示在製作環境中，導致所有協調工作都需要使用發佈例項。
+預設情況下，安裝作者和發佈實例AEM將導致將用戶生成的內容(UGC)儲存在 [JCR Tar儲存](../../help/sites-deploying/platform.md) 使用 [JSRP](jsrp.md)。 JSRP不是公用儲存，這意味著UGC僅在輸入它的實例上可見。 通常，UGC是在發佈實例上輸入的，在作者環境中不可見，從而導致需要使用發佈實例的所有審核任務。

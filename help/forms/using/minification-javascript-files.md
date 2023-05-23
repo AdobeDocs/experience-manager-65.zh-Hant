@@ -1,7 +1,7 @@
 ---
-title: JavaScript檔案的縮制
+title: JavaScript檔案的精簡
 seo-title: Minification of the JavaScript files
-description: 在AEM Forms工作區自訂後產生縮製程式碼的指示，以最佳化網頁的JS檔案。
+description: 在AEM Forms工作區自定義後生成簡化代碼以優化Web的JS檔案的說明。
 seo-description: Instructions to generate minified code after AEM Forms workspace customizations to optimize the JS files for the web.
 uuid: ad91e380-a988-4740-9534-e09657e0322a
 contentOwner: robhagat
@@ -17,19 +17,19 @@ ht-degree: 1%
 
 ---
 
-# JavaScript檔案的縮制 {#minification-of-the-javascript-files}
+# JavaScript檔案的精簡 {#minification-of-the-javascript-files}
 
-縮制會從原始碼中移除多餘的字元，例如空白字元、新行和註解。 這可以縮小程式碼的大小，進而改善效能。 縮制不會影響功能，但會降低程式碼的可讀性。
+精簡會從原始碼中刪除冗餘字元，如空白、新行和注釋。 這通過減小代碼的大小來改善效能。 雖然精簡不會影響功能，但會降低代碼的可讀性。
 
-要生成語義更改的縮制代碼，請執行以下步驟。
+要生成用於語義更改的簡化代碼，請執行以下步驟。
 
-1. 複製 `client-html/src/main/webapp/js` 從檔案系統上的src-package。
+1. 複製 `client-html/src/main/webapp/js` 檔案系統上的src-package。
 
    >[!NOTE]
    >
-   >請參閱 [自訂AEM Forms工作區簡介](/help/forms/using/introduction-customizing-html-workspace.md) 以取得套件的詳細資訊。
+   >請參閱 [自定義AEM Forms工作區簡介](/help/forms/using/introduction-customizing-html-workspace.md) 的子菜單。
 
-1. 更新 `main.js` 位於client-html/src/main/webapp/js下，以取得已新增/更新的模型/檢視。
+1. 更新中的路徑 `main.js` 位於client-html/src/main/webapp/js下，用於添加/更新的模型/視圖。
 
    例如，添加新的Sharequeue模型（如mySharequeue），請更改：
 
@@ -43,7 +43,7 @@ ht-degree: 1%
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
-1. 更新 `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` 若 `main.js`.
+1. 更新 `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` 以防更改/添加別名 `main.js`。
 
    例如，添加新的Sharequeue模型（如mySharequeue），請更改：
 
@@ -69,12 +69,12 @@ ht-degree: 1%
    mvn clean install
    ```
 
-   它會在client-html/src/main/webapp/js下產生一個資料夾縮制檔案，其中包含縮制的main.js和registry.js。
+   它在client-html/src/main/webapp/js下生成帶有minified main.js和registry.js的資料夾minified-files。
 
 >[!NOTE]
 >
->縮制只能在64位元JVM上運作。
+>精簡僅在64位JVM上工作。
 
 >[!NOTE]
 >
->如果您縮制，升級會受到影響。
+>如果進行微型化，則升級會受到影響。

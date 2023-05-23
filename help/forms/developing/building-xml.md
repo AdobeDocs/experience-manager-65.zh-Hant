@@ -1,6 +1,6 @@
 ---
-title: 如何使用JEE Workbench上AEM Forms中的執行指令碼服務來建立XML資料？
-description: 在JEE Workbench上使用AEM Forms中的執行指令碼服務來建立XML資料
+title: 如何使用JEE Workbench上AEM Forms的執行指令碼服務來生成XML資料？
+description: 在JEE Workbench上使用AEM Forms中的執行指令碼服務生成XML資料
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
@@ -9,45 +9,45 @@ ht-degree: 0%
 
 ---
 
-# 在JEE Workbench上使用AEM Forms中的執行指令碼服務來建立XML資料 {#using-execute-script-service-forms-jee-workbench}
+# 在JEE Workbench上使用AEM Forms中的執行指令碼服務生成XML資料 {#using-execute-script-service-forms-jee-workbench}
 
-在JEE流程管理工作流程中，AEM Forms涉及許多XML，例如：XML資訊可以在程式中建置，並傳送至JEE工作區上AEM Forms的Flex應用程式，用於系統設定，或傳遞資訊至表單或從表單傳遞。 在許多情況下，JEE上的AEM Forms開發人員都需要管理XML，而許多時候這都需要透過JEE上的AEM Forms程式來管理XML。
+在JEE流程管理工作流中，AEM Forms涉及大量XML，例如：XML資訊可以在流程中構建，併發送到AEM Forms的FlexJEE Workspace應用程式，用於系統設定，或將資訊傳遞到表單和表單。 有許多實例是JEE上的AEM Forms開發人員需要管理XML，而且很多情況下，這要求XML通過AEM Forms的JEE進程進行管理。
 
-處理簡單XML設定時，可使用 `Set Value` 服務，此為JEE服務上的預設AEM Forms。 此服務設定流程資料模型中一個或多個資料項的值。 對於非常簡單的條件式邏輯「如果這樣，那麼就是那樣」的情況，此服務可以符合其目的。
+處理簡單XML設定時，可使用 `Set Value` 服務，這是JEE服務的預設AEM Forms。 此服務設定流程資料模型中一個或多個資料項的值。 對於非常簡單的條件邏輯「如果這樣，那麼」情形，此服務可以符合目的。
 
-但是，在更複雜的情況下，「設定值」服務並不有效。 在這些情況下，人們需要依賴一組更強健的寫程式命令，例如由Java等寫程式語言提供的命令。 使用Java構建複雜的XML比在「設定值」服務中從簡單文本構建XML文檔更簡單、更清晰。 此外，在Java中加入條件式程式設計比在設定值服務中更容易。
+但是，在更複雜的情況下，「設定值」服務沒有那麼有效。 在這些情況下，需要依靠一組更強健的寫程式命令，例如由Java等寫程式語言提供的那些命令。 使用Java生成複雜XML比在「設定值」服務中從簡單文本生成XML文檔簡單得多，也更清晰。 此外，在Java中包含條件寫程式比在Set Value服務中更容易。
 
 ## 在進程中使用執行指令碼服務 {#using-execute-script-service-in-process}
 
-在AEM Forms on JEE Workbench中提供的標準AEM Forms on JEE服務中， `Execute Script` 服務。 此服務可讓您在程式中執行指令碼，並提供 `executeScript` 操作。
+在AEM FormsJEE Workbench上提供的關於JEE服務的標準AEM Forms的集合中， `Execute Script` 服務。 此服務允許您在進程中執行指令碼，並提供 `executeScript` 操作。
 
-### 使用定義為活動的「執行指令碼」服務建立應用程式和進程 {#create-an-application}
+### 建立「執行指令碼」服務定義為活動的應用程式和進程 {#create-an-application}
 
-本教程不允許建立總體應用程式和進程，但為了本說明，我們已建立了一個名為「DemoApplication02」的應用程式。 假設已建立應用程式，我們需要在此應用程式中建立一個進程，以調用executeScript服務。 將進程添加到包括 `Execute Script` 服務：
+在本教程中，總體應用程式和過程建立超出了範圍，但為了本說明的目的，我們建立了一個名為「DemoApplication02」的應用程式。 假定已建立應用程式，則需要在此應用程式中建立進程以調用executeScript服務。 將進程添加到包括 `Execute Script` 服務：
 
-1. 以滑鼠右鍵按一下您的應用程式，然後選取 [!UICONTROL 新增]. 在 [!UICONTROL 新增] 滑出菜單，選擇 [!UICONTROL 程式]. 請據以命名您的程式，視需要新增說明，並選取您要代表此程式的圖示。 為了完成本教學課程，我們已建立程式，並將其命名為  `executeScriptDemoProcess`.
-1. 定義您的起始點，或簡單選擇稍後新增您的起始點。
-1. 程式現在已建立，且應會在 [!UICONTROL 流程設計] 窗口。 在此窗口中，按一下「流程設計」窗口頂部的「活動選擇器」表徵圖，然後將新活動拖動到游泳道上。 此時， [!UICONTROL 定義活動窗口] （請參閱下圖）。
+1. 按一下右鍵應用程式並選擇 [!UICONTROL 新建]。 在 [!UICONTROL 新建] 滑出菜單，選擇 [!UICONTROL 進程]。 相應地命名您的流程，如有必要，添加說明，然後選擇要表示此流程的表徵圖。 在本教程中，我們建立了一個進程，並將其命名為  `executeScriptDemoProcess`。
+1. 定義起點，或簡單選擇稍後添加起點。
+1. 該進程現在已建立，應在 [!UICONTROL 流程設計] 的子菜單。 在此窗口中，按一下「流程設計」窗口頂部的「活動選取器」表徵圖，並將新活動拖到游泳道上。 此時， [!UICONTROL 定義活動窗口] （請參閱下圖）。
    ![定義活動](assets/define-activity.jpg)
-1. 可在 `Foundation` 服務集。 服務名稱將對象列為 `Execute Script – 1.0` 具有操作名稱 `executeScript`. 按一下以選取此項目。
-1. 現在應建立此程式，並依預設 [!UICONTROL 進程屬性] 窗口應出現在左側的窗格中。
+1. 可在以下位置找到executeScript服務： `Foundation` 服務集。 服務名稱將對象列為 `Execute Script – 1.0` 具有操作名稱 `executeScript`。 按一下以選擇此項目。
+1. 現在應建立此進程，預設情況下， [!UICONTROL 進程屬性] 窗口。
 
 #### 使用「執行指令碼」服務向進程添加指令碼 {#add-script-to-process-with-execute-script}
 
-在定義了「執行指令碼」服務活動後，您就可以向此進程添加指令碼。 要向此過程添加指令碼，請執行以下操作：
+在定義了「執行指令碼」服務活動的情況下建立進程後，您就可以向該進程添加指令碼。 向此進程添加指令碼：
 
-1. 導覽至 [!UICONTROL 進程屬性] 浮動視窗。 在此浮動視窗中，展開 [!UICONTROL 輸入] 區段，然後按一下「……」圖示。
+1. 導航到 [!UICONTROL 進程屬性] 調色板。 在此調色板中，展開 [!UICONTROL 輸入] ，然後按一下「……」表徵圖。
 
-1. 在顯示的文字方塊中，寫入您的指令碼。 已寫入指令碼時，按「OK（確定）」（請參見下圖）。
+1. 在出現的文本框中編寫指令碼。 編寫指令碼後，按「OK（確定）」（請參閱下圖）。
    ![執行指令碼](assets/execute-script.jpg)
 
 ## 使用執行指令碼服務建立XML {#create-xml-execute-script-service}
 
-在建立了包含執行指令碼服務的進程後，就可以使用此指令碼建立XML。 您可以使用 `Execute Script` 服務區段。
+建立包含執行指令碼服務的進程後，就可以使用此指令碼建立XML。 您可以使用 `Execute Script` 上面的服務部分。
 
-**關於執行指令碼服務的技術**
+**關於Execute Script Service的技術**
 
-為了了解執行指令碼服務的功能和限制，您必須了解服務的技術基礎。 AEM Forms on JEE使用Apache Xerces檔案物件模型(DOM)剖析器，在處理中建立和儲存XML變數。 Xerces是W3C文檔對象模型規範的Java實現；定義 [此處](https://dom.spec.whatwg.org/). DOM規格是自1998年以來一直採用的XML處理標準方式。 Xerces、Xerces-J的Java實現支援DOM Level 2 1.0版。
+要瞭解執行指令碼服務的能力和局限性，必須瞭解服務的技術基礎。 AEM FormsJEE使用Apache Xerces文檔對象模型(DOM)分析器在進程內建立和儲存XML變數。 Xerces是W3C文檔對象模型規範的Java實現；定義 [這裡](https://dom.spec.whatwg.org/)。 DOM規範是自1998年以來一直採用的XML操作標準。 Xerces的Java實現Xerces-J支援DOM Level 2 1.0版。
 
 用於儲存XML變數的Java類包括：
 
@@ -55,11 +55,11 @@ ht-degree: 0%
 
 * org.apache.xerces.dom.DocumentImpl
 
-DocumentImpl是NodeImpl的子類，因此可以假定任何XML進程變數都是NodeImpl派生。 您可以找到NodeImpl的文檔 [此處](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html).
+DocumentImpl是NodeImpl的子類，因此可以假定任何XML進程變數都是NodeImpl派生。 您可以找到NodeImpl的文檔 [這裡](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html)。
 
-**使用Execute Script服務建立XML的示例**
+**使用Execute Script服務建立XML示例**
 
-以下是在Execute Script服務中建立XML的示例。 該進程具有XML類型的變數節點。 此活動的最終結果將是XML文檔。 本教學課程不涵蓋該檔案的功用，或其如何套用至整體程式；最終，這取決於XML在整個應用程式中需要做什麼。 如本簡介所述，XML可在AEM Forms的JEE表單和程式中用於許多用途，這只是如何編寫執行指令碼活動的程式碼以輸出簡單XML檔案的說明。
+下面是在Execute Script服務中建立XML的示例。 進程具有XML類型的變數節點。 此活動的最終結果將是XML文檔。 該文檔的功能，或它如何應用於整個過程，在本教程中是超出範圍的；最終要歸結到XML在整個應用程式中所需要做的。 如導言中所述，XML可用於AEM FormsJEE表單和進程中的許多用途，這只是有關如何對執行指令碼活動進行代碼以輸出簡單XML文檔的說明。
 
 輸出XML的簡單Java指令碼如下所示：
 
@@ -91,7 +91,7 @@ patExecContext.setProcessDataValue("/process_data/node", document);
 
 >[!NOTE]
 >
->上述DOM物件必須匯入至指令碼中。
+>必須將上述DOM對象導入到指令碼中。
 
 此簡單指令碼的結果是新的XML文檔，其變數節點設定為：
 
@@ -105,7 +105,7 @@ patExecContext.setProcessDataValue("/process_data/node", document);
 
 **使用迭代循環向XML添加節點**
 
-節點也可以添加到進程內的現有XML變數中。 變數節點包含我們剛建立的XML對象。
+節點也可以添加到進程內的現有XML變數。 變數節點包含我們剛建立的XML對象。
 
 ```xml
 Document document = patExecContext.getProcessDataValue("/process_data/node");

@@ -1,7 +1,7 @@
 ---
-title: RTF編輯器要點
+title: 富格文本編輯器軟體包
 seo-title: Rich Text Editor Essentials
-description: RTF編輯器功能概觀
+description: 富格文本編輯器功能概述
 seo-description: Rich text Editor feature overview
 uuid: f96015cc-114b-431a-a5ba-dc195c2a0b83
 contentOwner: msm-service
@@ -17,52 +17,52 @@ ht-degree: 3%
 
 ---
 
-# RTF編輯器要點 {#rich-text-editor-essentials}
+# 富格文本編輯器軟體包 {#rich-text-editor-essentials}
 
 ## 概觀 {#overview}
 
-RTF編輯器(RTE)提供使用標籤輸入文本的功能。
+富格文本編輯器(RTE)提供了輸入帶有標注的文本的功能。
 
-對於Communities元件，與 [製作環境中的RTF編輯器](../../help/sites-authoring/rich-text-editor.md)，則會影響在發佈環境中輸入的文字。
+對於社區元件，與 [作者環境中的富文本編輯器](../../help/sites-authoring/rich-text-editor.md)，它影響在發佈環境中輸入的文本。
 
-![RTF編輯器](assets/rich-text-editor.png)
+![富文本編輯器](assets/rich-text-editor.png)
 
 ## 啟用RTF編輯器 {#enabling-rich-text-editor}
 
-允許使用者產生內容(UGC)的社群元件可啟用以允許RTE。 視元件已新增至頁面或包含在 [函式](functions.md),RTE預設為啟用或不啟用。
+允許用戶生成內容(UGC)的社區元件可以啟用RTE。 根據元件是添加到頁面還是包含在 [函式](functions.md)，預設情況下，RTE可能啟用或不啟用。
 
-如果未啟用，只需輸入 [作者編輯模式](sites-console.md#authoring-site-content)，選取要編輯的元件，然後選取 `Rich Text Editor` 核取方塊。
+如果未啟用，只需輸入 [作者編輯模式](sites-console.md#authoring-site-content)，選擇要編輯的元件，然後選擇 `Rich Text Editor` 複選框。
 
-RTE適用於下列Communities元件：
+RTE可用於以下社區元件：
 
 * [部落格](blog-feature.md)
 * [日曆](calendar.md)
 * [評論](comments.md)
-* [菲萊布里](file-library.md)
+* [菲利布里](file-library.md)
 * [論壇](forum.md)
 * [傳送訊息](configure-messaging.md)
 * [QnA](working-with-qna.md)
 * [評論](reviews.md)
 
-## 自訂 {#customization}
+## 自定義 {#customization}
 
-RTF編輯器可自訂，因為實作是根據 [CKEditor](https://www.ckeditor.com/).
+由於實現基於以下內容，因此可定製富文本編輯器 [CKEditor](https://www.ckeditor.com/)。
 
-Communities元件的目前設定位於 `cq.social.  scf   clientlib`，位於
+社區元件的當前配置位於 `cq.social.  scf   clientlib`，位於
 
 `/libs/clientlibs/social/commons/scf/ckrte.js`
 
-不建議修改cq.social.scf clientlib，因為日後的升級可能會覆寫任何編輯。
+建議不要修改cq.social.scf客戶端庫，因為以後的升級可能會覆蓋任何編輯。
 
-### 自訂範例：內嵌連結 {#example-customization-inline-links}
+### 自定義示例：內聯連結 {#example-customization-inline-links}
 
-基於安全性考慮，預設情況下，向成員呈現的富文本表徵圖集中不包含超連結選項。 在UGC中允許href時，其雜訊能力較強。
+出於安全考慮，預設情況下，超連結選項不包括在呈現給成員的富文本表徵圖集中。 在UGC中，當允許參照時，故障的發生能力很大。
 
-要將超連結選項添加到工具欄，請執行以下操作：
+要將超連結選項添加到工具欄：
 
-* 添加名為「 `links`&quot;
+* 添加名為「」的工具欄 `links`&quot;
    * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
-* 選擇 **[!UICONTROL 全部儲存]**
+* 選擇 **[!UICONTROL 全部保存]**
 
 #### /libs/clientlibs/social/commons/scf/ckrte.js {#libs-clientlibs-social-commons-scf-ckrte-js}
 

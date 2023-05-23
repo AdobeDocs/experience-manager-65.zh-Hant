@@ -1,7 +1,7 @@
 ---
-title: 如何在AEM中稽核使用者管理作業
+title: 如何審核用戶管理操AEM作
 seo-title: How to Audit User Management Operations in AEM
-description: 了解如何在AEM中稽核使用者管理作業。
+description: 瞭解如何在中審核用戶管理操AEM作。
 seo-description: Learn how to audit User Management Operations in AEM.
 uuid: 9d177afb-172c-4858-a678-254c97cfa472
 contentOwner: User
@@ -19,38 +19,38 @@ ht-degree: 1%
 
 ---
 
-# 如何在AEM中稽核使用者管理作業{#how-to-audit-user-management-operations-in-aem}
+# 如何審核用戶管理操AEM作{#how-to-audit-user-management-operations-in-aem}
 
 ## 簡介 {#introduction}
 
-AEM已導入記錄權限變更的功能，以便稍後進行稽核。
+已AEM引入了記錄權限更改的功能，以便以後可以審核這些更改。
 
-此增強功能允許對用戶的權限和組分配執行審核CRUD（建立、讀取、更新、刪除）操作。 更具體來說，它將記錄：
+該增強允許對用戶的權限和組分配執行審計CRUD（建立、讀取、更新、刪除）操作。 更具體地說，它將記錄：
 
-* 建立新使用者
-* 要新增至群組的使用者
+* 正在建立新用戶
+* 正在添加到組中的用戶
 * 現有用戶或組的權限更改
 
-依預設，這些項目會寫入 `error.log` 檔案。 為了更方便進行監控，建議將其重新導向至單獨的日誌檔案。 有關如何執行此操作的更多資訊，請參閱以下段落。
+預設情況下，這些條目將寫入 `error.log` 的子菜單。 為了使監控更輕鬆，建議將它們重定向到單獨的日誌檔案。 有關如何執行此操作的詳細資訊，請參見下段。
 
 ## 將輸出重定向到單獨的日誌檔案 {#redirecting-the-output-to-a-separate-log-file}
 
-若要將記錄輸出重新導向至個別的記錄檔，您將需要建立新 **Apache Sling Logging Logger** 設定。 我們會用 `useraudit.log` 做為下列範例中個別檔案的名稱。
+為了將日誌輸出重定向到單獨的日誌檔案，您需要建立新的日誌 **Apache Sling日誌記錄程式** 配置。 我們用 `useraudit.log` 作為下例中單獨檔案的名稱。
 
-1. 瀏覽至 *https://serveraddress:serverport/system/console/configMgr*
-1. 搜尋 **Apache Sling Logging Logger Configuration**. 然後，按條目右側的「+」以建立新的工廠配置。
-1. 建立下列設定：
+1. 通過瀏覽到 *https://serveraddress:serverport/system/console/configMgr*
+1. 搜索 **Apache Sling日誌記錄器配置**。 然後，按條目右側的「+」以建立新的工廠配置。
+1. 建立以下配置：
 
-   * **記錄層級：** 資訊
+   * **日誌級別：** 資訊
    * **日誌檔案：** logs/useraudit.log
-   * **消息模式：** 級別預設值
-   * **記錄器：** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizabledServlet
+   * **消息模式：** 級別預設
+   * **記錄器：** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlet.可授權的Servlet
 
-   若要將兩個記錄器輸入 **記錄器** 欄位，您需要輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱，以建立另一個欄位。
+   為了將兩個伐木工同時輸入 **記錄器** 欄位，您需要輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱來建立另一個欄位。
 
-## 範例輸出 {#example-output}
+## 示例輸出 {#example-output}
 
-如果已正確設定，輸出應如下所示：
+如果配置正確，輸出應如下所示：
 
 ```xml
 19.05.2017 15:15:08.933 *INFO* [0:0:0:0:0:0:0:1 [1495196108932] POST /libs/granite/security/post/authorizables.html HTTP/1.1] com.adobe.granite.security.user.internal.servlets.AuthorizableServlet Create Group 'group1' operation initiated by User 'admin' (administrator)
@@ -84,7 +84,7 @@ AEM已導入記錄權限變更的功能，以便稍後進行稽核。
 
 ## 傳統 UI {#classic-ui}
 
-在傳統UI中，稽核記錄中記錄的與新增和刪除使用者相關的CRUD作業資訊，僅限於受影響使用者的ID，以及變更發生的時間。
+在經典UI中，與添加和刪除用戶有關的審計日誌中記錄的有關CRUD操作的資訊僅限於受影響用戶的ID以及更改發生的時間。
 
 例如：
 

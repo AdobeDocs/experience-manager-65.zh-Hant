@@ -1,7 +1,7 @@
 ---
-title: 轉譯和傳送
+title: 呈現和交付
 seo-title: Rendering and Delivery
-description: 轉譯和傳送
+description: 呈現和交付
 seo-description: null
 uuid: 1253b6a5-6bf3-42b1-be3a-efa23b6ddb51
 contentOwner: User
@@ -16,27 +16,27 @@ ht-degree: 7%
 
 ---
 
-# 轉譯和傳送{#rendering-and-delivery}
+# 呈現和交付{#rendering-and-delivery}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-AEM內容可透過 [Sling預設Servlet](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) 呈現 [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) 和其他格式。
+可AEM以通過 [Sling預設Servlet](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) 呈現 [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) 等格式。
 
-這些現成可用的轉譯功能通常會依原樣執行存放庫並傳回內容。
+這些現成的呈現方式通常沿著儲存庫移動並按原樣返回內容。
 
-AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉譯的結構和內容。
+通AEM過Sling，還支援開發和部署自定義Sling投標器以完全控制呈現的模式和內容。
 
-「內容服務預設轉譯器」可填補現成可用的Sling預設值與「自訂開發」之間的間隙，允許自訂和控制轉譯內容的許多方面，而不需開發。
+Content Services預設呈現器填補了現成Sling Defaults和Custom Development之間的空白，允許定制和控制呈現內容的許多方面而不進行開發。
 
-下圖顯示內容服務的呈現。
+下圖顯示了內容服務的呈現。
 
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
 ## 請求JSON {#requesting-json}
 
-使用 **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** 來要求JSON。]
+使用 **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />。[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />。][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** 請求JSON。]
 
 <table>
  <tbody>
@@ -45,27 +45,27 @@ AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉�
    <td>/content/entities下的實體資源<br /> 或 <br /> /content下的內容資源</td>
   </tr>
   <tr>
-   <td>EXPORT-CONFIG</td>
-   <td><p><strong>可選</strong><br /> </p> <p>在/apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG下找到的匯出設定<br /> <br /> 如果省略，則會套用預設匯出設定 </p> </td>
+   <td>導出配置</td>
+   <td><p><strong>可選</strong><br /> </p> <p>在/apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG下找到的導出配置<br /> <br /> 如果省略，將應用預設導出配置 </p> </td>
   </tr>
   <tr>
-   <td>DEPTH-INT</td>
-   <td><strong>可選</strong><br /> <br /> Sling演算中使用的子項演算深度遞回</td>
+   <td>深度 — 整型</td>
+   <td><strong>可選</strong><br /> <br /> 用於繪製子項的深度遞歸</td>
   </tr>
  </tbody>
 </table>
 
-## 建立匯出設定 {#creating-export-configs}
+## 建立導出配置 {#creating-export-configs}
 
-可建立匯出設定以自訂JSON轉譯。
+可以建立導出配置以自定義JSON呈現。
 
-您可以在 */apps/mobileapps/caas/exportConfigs。*
+可以在下面建立配置節點 */apps/mobileapps/caas/exportConfigs。*
 
 | 節點名稱 | 配置的名稱（用於呈現選擇器） |
 |---|---|
 | jcr:primaryType | nt:unstructured |
 
-下表顯示「匯出設定」的屬性：
+下表顯示了導出配置的屬性：
 
 <table>
  <tbody>
@@ -77,59 +77,59 @@ AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉�
    <td><strong>說明</strong></td>
   </tr>
   <tr>
-   <td>includeComponents</td>
+   <td>includeComponents（包括元件）</td>
    <td>字串[]</td>
-   <td>包含所有內容</td>
+   <td>包括所有</td>
    <td>sling:resourceType</td>
-   <td>從JSON匯出中排除具有指定sling:resourceType之節點的詳細資料</td>
+   <td>從JSON導出中排除具有指定sling:resourceType的節點的詳細資訊</td>
   </tr>
   <tr>
-   <td>excludeComponents</td>
+   <td>排除元件</td>
    <td>字串[]</td>
-   <td>排除無</td>
+   <td>排除</td>
    <td>sling:resourceType</td>
-   <td>僅包含指定sling:resourceType（來自JSON匯出）之節點的詳細資料</td>
+   <td>僅包含指定sling:resourceType的節點的詳細資訊（來自JSON導出）</td>
   </tr>
   <tr>
    <td>excludePropertyPrefixes</td>
    <td>字串[]</td>
-   <td>排除無</td>
+   <td>排除</td>
    <td>屬性前置詞</td>
-   <td>從JSON匯出中排除以指定前置詞開頭的屬性</td>
+   <td>排除從JSON導出中以指定前置詞開頭的屬性</td>
   </tr>
   <tr>
-   <td>excludeProperties</td>
+   <td>排除屬性</td>
    <td>字串[]</td>
-   <td>排除無</td>
+   <td>排除</td>
    <td>屬性名稱</td>
-   <td>從JSON匯出中排除指定的屬性</td>
+   <td>從JSON導出中排除指定的屬性</td>
   </tr>
   <tr>
    <td>includeProperties</td>
    <td>字串[]</td>
-   <td>包含所有內容</td>
+   <td>包括所有</td>
    <td>屬性名稱</td>
-   <td><p>if excludePropertyPrefixesset<br /> 這包括指定的屬性，儘管與所排除的前置詞匹配，</p> <p>else（忽略排除屬性）僅包含這些屬性</p> </td>
+   <td><p>if excludePropertyPrefixesset<br /> 這包括指定的屬性，儘管與被排除的前置詞匹配，</p> <p>else(忽略的排除屬性僅包括這些屬性</p> </td>
   </tr>
   <tr>
-   <td>includeChildren</td>
+   <td>包括子項</td>
    <td>字串[]</td>
-   <td>包含所有內容</td>
+   <td>包括所有</td>
    <td>子名稱</td>
-   <td>從JSON匯出中排除指定的子項</td>
+   <td>從JSON導出中排除指定的子項</td>
   </tr>
   <tr>
-   <td>excludeChildren</td>
+   <td>排除子項</td>
    <td>字串[]<br /> <br /> </td>
-   <td>排除無</td>
+   <td>排除</td>
    <td>子名稱</td>
-   <td>僅包含來自JSON匯出的指定子項，排除其他</td>
+   <td>僅包括JSON導出中指定的子項，排除其他</td>
   </tr>
   <tr>
-   <td>renameProperties</td>
+   <td>更名屬性</td>
    <td>字串[]<br /> <br /> </td>
-   <td>不重新命名</td>
-   <td>&lt;actual_property_name&gt;,&lt;replacement_property_name&gt;</td>
+   <td>更名</td>
+   <td>&lt;actual_property_name&gt;。&lt;replacement_property_name&gt;</td>
    <td>使用替換項更名屬性</td>
   </tr>
  </tbody>
@@ -137,13 +137,13 @@ AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉�
 
 ### 資源類型導出覆蓋 {#resource-type-export-overrides}
 
-在 */apps/mobileapps/caas/exportConfigs。*
+在下面建立配置節點 */apps/mobileapps/caas/exportConfigs。*
 
 | 名稱 | resourceTypeOverrides |
 |---|---|
 | jcr:primaryType | nt:unstructured |
 
-下表顯示屬性：
+下表顯示了屬性：
 
 <table>
  <tbody>
@@ -159,23 +159,23 @@ AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉�
    <td>字串[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>對於下列Sling資源類型，請勿傳回預設的CaaS json匯出。<br /> 將資源轉譯為，以傳回客戶json匯出；<br /> &lt;resource&gt;.&lt;selector_to_inc&gt;.json </td>
+   <td>對於以下sling資源類型，不要返回預設的CaaSjson導出。<br /> 通過將資源呈現為，返回客戶json導出；<br /> &lt;resource&gt;。&lt;selector_to_inc&gt;.json </td>
   </tr>
  </tbody>
 </table>
 
-### 現有內容服務匯出設定 {#existing-content-services-export-configs}
+### 現有Content Services導出配置 {#existing-content-services-export-configs}
 
-「內容服務」包括兩種匯出設定：
+Content Services包括兩種導出配置：
 
-* 預設值（未指定配置）
-* 頁面（轉譯網站頁面）
+* 預設（未指定配置）
+* 頁（用於呈現網站頁）
 
-#### 預設匯出設定 {#default-export-configuration}
+#### 預設導出配置 {#default-export-configuration}
 
-如果在請求的URI中指定了配置，則將應用內容服務預設導出配置。
+如果在請求的URI中指定了配置，則將應用Content Services預設導出配置。
 
-&lt;resource>.caas[.&lt;depth-int>].json
+&lt;resource>.caa[。&lt;depth-int>].json
 
 <table>
  <tbody>
@@ -184,7 +184,7 @@ AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉�
    <td><strong>值</strong></td>
   </tr>
   <tr>
-   <td>excludeProperties</td>
+   <td>排除屬性</td>
    <td> </td>
   </tr>
   <tr>
@@ -193,41 +193,41 @@ AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉�
   </tr>
   <tr>
    <td>includeProperties</td>
-   <td>jcr:text,text<br /> jcr:title,title<br /> jcr:description,description<br /> jcr:lastModified,lastModified<br /> cq:tags,tags<br /> cq:lastModified,lastModified</td>
+   <td>jcr：文本，文本<br /> jcr：標題，標題<br /> jcr：說明，說明<br /> jcr:lastModified,lastModified<br /> cq：標籤，標籤<br /> cq:lastModified,lastModified</td>
   </tr>
   <tr>
-   <td>includeComponents</td>
+   <td>includeComponents（包括元件）</td>
    <td> </td>
   </tr>
   <tr>
-   <td>excludeComponents</td>
+   <td>排除元件</td>
    <td> </td>
   </tr>
   <tr>
-   <td>includeChildren</td>
+   <td>包括子項</td>
    <td> </td>
   </tr>
   <tr>
-   <td>excludeChildren</td>
+   <td>排除子項</td>
    <td> </td>
   </tr>
   <tr>
-   <td>Sling JSON覆寫</td>
-   <td>foundation/components/image<br /> wcm/foundation/components/image<br /> mobileapps/caas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
+   <td>Sling JSON覆蓋</td>
+   <td>基礎/元件/影像<br /> wcm/foundation/元件/影像<br /> mobileapps/caas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
   </tr>
  </tbody>
 </table>
 
-#### 頁面匯出設定 {#page-export-configuration}
+#### 頁面導出配置 {#page-export-configuration}
 
-此配置擴展了預設值，將子節點下的子節點分組。
+此配置擴展了預設值，以包括子節點下的子節點分組。
 
-&lt;site_page>.caas.page[.&lt;depth-int>].json
+&lt;site_page>.caas.page[。&lt;depth-int>].json
 
 ### 其他資源 {#additional-resources}
 
-請參閱下列資源，了解「內容服務」中的其他主題：
+請參閱以下資源，瞭解Content Services中的其他主題：
 
-* [開發模型](/help/mobile/administer-mobile-apps.md)
-* [製作內容服務](/help/mobile/develop-content-as-a-service.md)
-* [管理內容服務](/help/mobile/developing-content-services.md)
+* [開發模式](/help/mobile/administer-mobile-apps.md)
+* [創作內容服務](/help/mobile/develop-content-as-a-service.md)
+* [管理Content Services](/help/mobile/developing-content-services.md)

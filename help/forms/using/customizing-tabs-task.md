@@ -1,7 +1,7 @@
 ---
-title: 自定義任務的頁簽
+title: 自定義任務的頁籤
 seo-title: Customizing tabs for a task
-description: 在LiveCycleAEM Forms工作區中，自訂工作之索引標籤的名稱。
+description: How-to在LiveCycleAEM Forms工作區中自定義任務的頁籤名稱。
 seo-description: How-to customize the names of the tabs for your tasks, in LiveCycle AEM Forms workspace.
 uuid: 77eabb63-f8ea-4ec0-8a41-b51c65cdecc0
 content-type: reference
@@ -16,16 +16,16 @@ ht-degree: 0%
 
 ---
 
-# 自定義任務的頁簽 {#customizing-tabs-for-a-task}
+# 自定義任務的頁籤 {#customizing-tabs-for-a-task}
 
-您可以自訂 `Start Process` 元件(位於 `Start Process` Uber視圖和 `Task Details` 元件(位於 `ToDo` Uber的觀點。
+可以自定義 `Start Process` 元件 `Start Process` Uber的觀點 `Task Details` 元件 `ToDo` Uber的觀點。
 
-1. 關注 [AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md).
-1. 變更 `tabname`在 `translation.json` 檔案。
+1. 關注 [AEM Forms工作區定製的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md)。
+1. 更改 `tabname`的 `translation.json` 的子菜單。
 
-   例如，變更 `/apps/ws/locales/en-US/translation.json` 對下列內容進行修改。
+   例如，更改 `/apps/ws/locales/en-US/translation.json` 中輸入。
 
-   * 對於在啟動過程中啟動的任務，請使用 `"startprocess" : {}` 封鎖。
+   * 對於在啟動過程中啟動的任務，請使用 `"startprocess" : {}` 框。
 
    ```json
    "tabname" : {
@@ -36,7 +36,7 @@ ht-degree: 0%
            }
    ```
 
-   * 若為待辦事項中的工作，請從 `"todo" : {}` 封鎖。
+   * 對於To-do中的任務，請使用 `"todo" : {}` 框。
 
    ```json
    "tabname" : {
@@ -51,4 +51,4 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >為所有支援的語言新增對應的索引鍵值組。
+   >為所有支援的語言添加相應的鍵值對。

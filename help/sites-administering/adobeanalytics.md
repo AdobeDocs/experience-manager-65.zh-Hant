@@ -1,7 +1,7 @@
 ---
 title: 整合 Adobe Analytics
 seo-title: Integrating with Adobe Analytics
-description: 了解如何整合AEM與Adobe Analytics。
+description: 學習如何與AEMAdobe Analytics融合。
 seo-description: Learn how to integrate AEM with Adobe Analytics.
 uuid: d8548263-6ac5-45fb-8c70-52ecd4161bbb
 contentOwner: Guillaume Carlino
@@ -20,47 +20,47 @@ ht-degree: 21%
 
 # 整合 Adobe Analytics{#integrating-with-adobe-analytics}
 
-整合Adobe Analytics和AEM可讓您追蹤網頁活動：
+整合Adobe AnalyticsAEM並允許您跟蹤網頁活動：
 
-* Adobe Analytics設定可讓AEM使用Adobe Analytics驗證。
-* 架構可識別傳送至Adobe Analytics報表套裝的資料。
+* Adobe Analytics配置可AEM以向Adobe Analytics驗證。
+* 框架標識發送到您的Adobe Analytics報告套件的資料。
 
 資料包括頁面和用戶資料；例如：
 
-* AEM元件收集的資料
-* 連結點按
-* 視訊使用資訊
-* 來自Adobe Analytics的頁面瀏覽次數
+* 元件收AEM集的資料
+* 連結按一下
+* 視頻使用資訊
+* Adobe Analytics的頁面訪問次數
 
-下列頁面可協助您設定整合：
+以下頁可幫助您配置整合：
 
-* [連接Adobe Analytics和建立框架](/help/sites-administering/adobeanalytics-connect.md)
-* [設定Adobe Analytics的連結追蹤](/help/sites-administering/adobeanalytics-link.md)
-* [將元件資料與Adobe Analytics屬性對應](/help/sites-administering/adobeanalytics-mapping.md)
-* [設定Adobe Analytics的視訊追蹤](/help/sites-administering/adobeanalytics-video.md)
+* [連接到Adobe Analytics並建立框架](/help/sites-administering/adobeanalytics-connect.md)
+* [為Adobe Analytics配置鏈路跟蹤](/help/sites-administering/adobeanalytics-link.md)
+* [使用Adobe Analytics屬性映射元件資料](/help/sites-administering/adobeanalytics-mapping.md)
+* [為Adobe Analytics配置視頻跟蹤](/help/sites-administering/adobeanalytics-video.md)
 * [Adobe分類](/help/sites-administering/adobeanalytics-classifications.md)
 
-您也可以使用 [選擇加入精靈](/help/sites-administering/opt-in.md) 輕鬆執行整合。
+您還可以使用 [選擇加入嚮導](/help/sites-administering/opt-in.md) 輕鬆執行整合。
 
 >[!NOTE]
 >
->另請參閱作法文章： [使用DTM整合AEM與Adobe Target和Adobe Analytics](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
+>另請參見「how-to」文章： [使用AEMDTM與Adobe Target和Adobe Analytics整合](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html)。
 
 ## 更多資訊 {#further-information}
 
 請參閱：
 
-* [擴充Adobe Analytics整合](/help/sites-developing/extending-analytics.md) 以取得開發元件以收集使用者資料和自訂Adobe Analytics架構的相關資訊。
-* 知識庫文章， [Adobe Analytics整合 — 疑難排解問題](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html)，取得疑難排解Adobe Analytics整合的相關資訊。
+* [擴大Adobe Analytics一體化](/help/sites-developing/extending-analytics.md) 有關開發收集用戶資料和自定義Adobe Analytics框架的元件的資訊。
+* 知識庫文章， [Adobe Analytics整合 — 故障排除](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html)，以獲取有關診斷您的Adobe Analytics整合的資訊。
 
 >[!NOTE]
 >
 >如果您使用Adobe Analytics搭配自訂的代理設定，則需要 [設定](/help/sites-deploying/configuring-osgi.md) Apache HTTP Client **** Proxy設定所需的兩個OSGi組合 (例如，搭配Web主控台)。由於AEM的某些功能使用3.x API，而其他功能則使用4.x API，因此這兩者皆為必要。設定:
 >
->* **Day Commons HTTP Client 3.1** 設定3.x API;
-   >  例如， [https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
+>* **Day Commons HTTP Client 3.1** 配置3.x API;
+   >  比如說， [https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
 >
->* **Apache HTTP元件代理配置** 設定4.x API;
-   >  例如， [https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+>* **Apache HTTP元件代理配置** 配置4.x API;
+   >  比如說， [https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 >
 

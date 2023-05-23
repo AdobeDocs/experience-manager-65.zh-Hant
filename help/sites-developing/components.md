@@ -13,7 +13,7 @@ exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 51%
+ht-degree: 52%
 
 ---
 
@@ -28,11 +28,11 @@ ht-degree: 51%
 * 在存放庫的一個資料夾中開發為獨立單元。
 * 沒有隱藏的設定檔案。
 * 可以包含其他元件。
-* 可在任何AEM系統內的任何位置執行。 也可以限制在特定元件下執行。
+* 可以在任何系統內的任AEM何位置運行。 它們也可以限制在特定元件下運行。
 * 具有標準化的使用者介面。
 * 具有可以設定的編輯行為。
-* 使用根據Granite UI元件使用子元素建立的對話方塊
-* 使用 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) （建議）或JSP。
+* 使用基於Granite UI元件使用子元素構建的對話框
+* 使用 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) （推薦）或JSP。
 * 可以開發以建立擴充預設功能的自訂元件。
 
 因為元件是模組化的，所以您可以：
@@ -40,42 +40,42 @@ ht-degree: 51%
 * 在您的本機執行個體上開發新元件。
 * 將其部署到測試環境。
 * 將其部署到即時編寫環境，作者和/或管理員可以在其中新增和設定內容。
-* 將其部署到即時發佈環境，它們用於為您網站訪客呈現內容。某些元件（例如Communities）也接受使用者的輸入。
+* 將其部署到即時發佈環境，它們用於為您網站訪客呈現內容。某些元件（例如社區）也接受用戶的輸入。
 
 每個 AEM 元件：
 
 * 是資源類型。
 * 是完整實現特定功能的指令碼集合。
-* 可在中運作 *隔離*，即AEM或入口網站內。
+* 可以在 *隔離*，意思是在AEM門戶或門戶中。
 
-## AEM內的現成元件 {#out-of-the-box-components-within-aem}
+## 內的出廠設定組AEM件 {#out-of-the-box-components-within-aem}
 
-AEM隨附各種 [現成可用的元件](/help/sites-authoring/default-components.md) 提供全面功能，包括：
+AEM有多種 [現成元件](/help/sites-authoring/default-components.md) 提供全面功能，包括：
 
 * 段落系統 ( `parsys`)
-* 頁面( `responsivegrid`  — 僅支援觸控式UI)
+* 頁( `responsivegrid`  — 僅支援觸摸的UI)
 * 文字
-* 影像，附帶的文字
+* 影像，附帶文本
 * 工具列
 
-提供的元件及其在 [範例We.Retail網站](/help/sites-developing/we-retail.md) 提供了如何實作和使用元件的說明。 這些元件隨附所有原始程式碼，可以按原狀使用，也可以做為修改或擴充元件的起點。
+所提供的元件及其在 [We.Retail網站示例](/help/sites-developing/we-retail.md) 提供了如何實現和使用元件的說明。 這些元件隨附所有原始程式碼，可以按原狀使用，也可以做為修改或擴充元件的起點。
 
-### 核心元件與基礎元件 {#core-components-and-foundation-components}
+### 核心元件和基礎元件 {#core-components-and-foundation-components}
 
-提供兩組Adobe提供的AEM元件：
+有兩組Adobe提供AEM的元件：
 
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [基礎元件](/help/sites-authoring/default-components-foundation.md)
 
-**核心元件** AEM 6.3已推出，提供彈性且功能豐富的製作功能。 此 [We.Retail參考網站](/help/sites-developing/we-retail.md) 說明如何使用核心元件，並代表元件開發的目前最佳實務。
+**核心元件** 6.AEM3推出，提供靈活且功能豐富的創作功能。 的 [We.Retail參考網站](/help/sites-developing/we-retail.md) 說明了如何使用核心元件並表示元件開發的當前最佳做法。
 
-**基礎元件** 適用於許多版本，且可在標準AEM安裝中立即使用。 雖然仍受支援，但大部分已遭取代、不再增強，且以舊版技術為基礎。
+**基礎元件** 已在許AEM多版本中提供，並且在標準安裝中提供現AEM成。 儘管仍受支援，但大多數已棄用，不再增強，並基於舊式技術。
 
 >[!NOTE]
 >
->[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 代表元件設計和開發的目前最佳實務，並可作為參考實作。
+>[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 代表元件設計和開發的當前最佳做法，並作為參考實施。
 >
->[AEM現代化工具](modernization-tools.md) 有助於移轉至核心元件。
+>[現代化AEM工具](modernization-tools.md) 可幫助遷移至核心元件。
 
 ### 檢視可用元件 {#viewing-available-components}
 
@@ -95,22 +95,22 @@ AEM隨附各種 [現成可用的元件](/help/sites-authoring/default-components
 
 ## 其他資源 {#further-reading}
 
-以下頁面提供有關開發這些元件和其他元件的更詳細資訊：
+以下頁提供了有關開發這些元件和其它元件的詳細資訊：
 
-* [AEM元件 — 基本概念](/help/sites-developing/components-basics.md)
-* [開發AEM元件](/help/sites-developing/developing-components.md)
-* [開發AEM元件 — 程式碼範例](/help/sites-developing/developing-components-samples.md)
+* [組AEM件 — 基礎](/help/sites-developing/components-basics.md)
+* [開發組AEM件](/help/sites-developing/developing-components.md)
+* [開發AEM元件 — 代碼示例](/help/sites-developing/developing-components-samples.md)
 * [配置多個就地編輯器](/help/sites-developing/multiple-inplace-editors.md)
 * [開發人員模式](/help/sites-developing/developer-mode.md)
 * [測試您的UI](/help/sites-developing/hobbes.md)
 * [內容片段的元件](/help/sites-developing/components-content-fragments.md)
-* [取得JSON格式的頁面資訊](/help/sites-developing/pageinfo.md)
+* [獲取JSON格式的頁資訊](/help/sites-developing/pageinfo.md)
 * [國際化元件](/help/sites-developing/i18n.md)
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [使用隱藏條件](/help/sites-developing/hide-conditions.md)
 * 傳統 UI
 
-   * [AEM元件（傳統UI）](/help/sites-developing/developing-components-classic.md)
-   * [使用和擴充Widget（傳統UI）](/help/sites-developing/widgets.md)
-   * [使用xtype（傳統UI）](/help/sites-developing/xtypes.md)
-   * [開發Forms（傳統UI）](/help/sites-developing/developing-forms.md)
+   * [組AEM件（經典UI）](/help/sites-developing/developing-components-classic.md)
+   * [使用和擴展小部件（經典UI）](/help/sites-developing/widgets.md)
+   * [使用xtypes（經典UI）](/help/sites-developing/xtypes.md)
+   * [開發Forms（經典UI）](/help/sites-developing/developing-forms.md)

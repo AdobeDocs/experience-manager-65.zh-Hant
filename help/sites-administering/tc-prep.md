@@ -1,7 +1,7 @@
 ---
 title: 準備翻譯內容
 seo-title: Preparing Content for Translation
-description: 了解如何準備翻譯內容。
+description: 瞭解如何準備翻譯內容。
 seo-description: Learn how to prepare content for translation.
 uuid: 369630a8-2ed7-48db-973e-bd8213231d49
 contentOwner: Guillaume Carlino
@@ -20,9 +20,9 @@ ht-degree: 1%
 
 # 準備翻譯內容{#preparing-content-for-translation}
 
-多語言網站通常提供多種語言的內容。 網站以一種語言編寫，然後翻譯成其他語言。 一般而言，多語言網站是由頁面的分支所組成，每個分支都包含不同語言的網站頁面。
+多語言網站通常以多種語言提供一定數量的內容。 網站以一種語言編寫，然後翻譯成其他語言。 通常，多語言站點由頁面的分支組成，其中每個分支包含以不同語言表示的站點頁面。
 
-範例Geometrixx示範網站包含數種語言分支，並使用下列結構：
+示例Geometrixx演示站點包括幾個語言分支，並使用以下結構：
 
 ```xml
 /content
@@ -36,58 +36,58 @@ ht-degree: 1%
              |- zh
 ```
 
-網站的每個語言分支都稱為語言副本。 語言副本的根頁面（稱為語言根）可識別語言副本中內容的語言。 例如， `/content/geometrixx/fr` 是法文語言副本的語言根。 語言副本必須使用 [正確配置的語言根](/help/sites-administering/tc-prep.md#creating-a-language-root) 以便在執行源站點的翻譯時定位正確的語言。
+站點的每個語言分支都稱為語言副本。 語言副本的根頁（稱為語言根）標識語言副本中內容的語言。 比如說， `/content/geometrixx/fr` 是法文語言副本的語言根。 語言副本必須使用 [正確配置的語言根](/help/sites-administering/tc-prep.md#creating-a-language-root) 這樣，當執行源站點的翻譯時，就會針對正確的語言。
 
-您最初製作網站內容的語言副本是語言主版。 語言主版是翻譯成其他語言的源。
+您最初為其創作網站內容的語言副本是語言母版。 語言母版是翻譯成其他語言的源。
 
-使用下列步驟準備您的網站以進行翻譯：
+使用以下步驟準備您的站點進行翻譯：
 
-1. 建立語言主版的語言根。 例如，英文Geometrixx示範網站的語言根目錄為/content/geometrixx/en。 請根據 [建立語言根](/help/sites-administering/tc-prep.md#creating-a-language-root).
-1. 編寫您的語言主版的內容。
-1. 為網站建立每個語言副本的語言根目錄。 例如，Geometrixx範例網站的法文語言副本為/content/geometrixx/fr。
+1. 建立語言母版的語言根。 例如，英語Geometrixx演示站點的語言根為/content/geometrixx/en。 確保根據中的資訊正確配置語言根 [建立語言根](/help/sites-administering/tc-prep.md#creating-a-language-root)。
+1. 編寫您的語言母版的內容。
+1. 為站點建立每種語言副本的語言根。 例如，Geometrixx示例站點的法語語言副本是/content/geometrixx/fr。
 
-在準備翻譯內容後，您可以自動在語言副本和相關翻譯專案中建立遺漏的頁面。 (請參閱 [建立翻譯專案](/help/sites-administering/tc-manage.md).) 如需AEM中內容翻譯程式的概觀，請參閱 [轉譯多語言網站的內容](/help/sites-administering/translation.md).
+在準備翻譯內容後，您可以在語言副本和相關翻譯項目中自動建立丟失的頁面。 (請參閱 [建立翻譯項目](/help/sites-administering/tc-manage.md)。) 有關中的內容翻譯過程的概AEM述，請參見 [翻譯多語言網站的內容](/help/sites-administering/translation.md)。
 
 ## 建立語言根 {#creating-a-language-root}
 
-建立語言根作為標識內容語言的語言副本的根頁。 建立語言根後，您可以建立包含語言副本的翻譯專案。
+建立語言根作為標識內容語言的語言副本的根頁。 建立語言根後，可以建立包含語言副本的翻譯項目。
 
-要建立語言根，請建立一個頁，並使用ISO語言代碼作為Name屬性的值。 語言代碼必須為以下格式之一：
+要建立語言根，請建立一個頁面，並使用ISO語言代碼作為「名稱」屬性的值。 語言代碼必須採用以下格式之一：
 
-* `<language-code>`支援的語言代碼是由ISO-639-1定義的雙字母代碼，例如 `en`.
+* `<language-code>`支援的語言代碼是ISO-639-1定義的雙字母代碼，例如 `en`。
 
-* `<language-code>_<country-code>` 或 `<language-code>-<country-code>`支援的國家/地區代碼是ISO 3166定義的小寫或大寫雙字母代碼，例如 `en_US`, `en_us`, `en_GB`, `en-gb`.
+* `<language-code>_<country-code>` 或 `<language-code>-<country-code>`支援的國家代碼是ISO 3166定義的小寫或大寫雙字母代碼，例如 `en_US`。 `en_us`。 `en_GB`。 `en-gb`。
 
-您可以根據您為全域網站選擇的結構，使用任一格式。  例如，Geometrixx網站的法文語言副本的根頁面具有 `fr` 作為Name屬性。 請注意，Name屬性是作為儲存庫中頁面節點的名稱，因此會決定頁面的路徑。 (http://localhost:4502/content/geometrixx/fr.html)
+您可以根據為全局站點選擇的結構使用兩種格式。  例如，Geometrixx站點的法語語言副本的根頁具有 `fr` 名稱屬性。 請注意，「名稱」屬性用作儲存庫中頁面節點的名稱，因此確定了頁面的路徑。 (http://localhost:4502/content/geometrixx/fr.html)
 
-下列程式使用觸控最佳化UI來建立網站的語言副本。 如需使用傳統UI的指示，請參閱 [使用傳統UI建立語言根](/help/sites-administering/tc-lroot-classic.md).
+以下過程使用觸控優化的UI建立網站的語言副本。 有關使用Classic UI的說明，請參見 [使用標準用戶介面建立語言根](/help/sites-administering/tc-lroot-classic.md)。
 
-1. 導覽至網站。
-1. 按一下或點選您要建立語言副本的網站。
+1. 導航到站點。
+1. 按一下或點擊要為其建立語言副本的站點。
 
-   例如，若要建立Geometrixx Outdoors網站的語言副本，您可以按一下或點選「Geometrixx Outdoors網站」。
+   例如，要建立Geometrixx Outdoors站點的語言副本，可按一下或點擊Geometrixx Outdoors站點。
 
-1. 按一下或點選「建立」，然後按一下或點選「建立頁面」。
+1. 按一下或點擊「建立」，然後按一下或點擊「建立頁面」。
 
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
-1. 選取頁面範本，然後按一下或點選「下一步」。
-1. 在「名稱」欄位中，以 `<language-code>` 或 `<language-code>_<country-code>`，例如 `en`, `en_US`, `en_us`, `en_GB`, `en_gb`. 輸入頁面標題。
+1. 選擇頁面模板，然後按一下或點擊「下一步」。
+1. 在「名稱」欄位中，鍵入國家/地區代碼，格式為 `<language-code>` 或 `<language-code>_<country-code>`，例如 `en`。 `en_US`。 `en_us`。 `en_GB`。 `en_gb`。 鍵入頁面標題。
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
-1. 按一下或點選「建立」。 在確認對話方塊中，按一下或點選任一 **完成** 返回Sites控制台，或 **開啟** 以開啟語言副本。
+1. 按一下或點擊「建立」。 在確認對話框中，按一下或點擊 **完成** 返回到站點控制台，或 **開啟** 開啟語言副本。
 
-## 看語言根的狀態 {#seeing-the-status-of-language-roots}
+## 語言根的地位 {#seeing-the-status-of-language-roots}
 
-觸控最佳化UI提供「參考」面板，顯示已建立的語言根清單。
+觸控優化的UI提供「參考」面板，該面板顯示已建立的語言根的清單。
 
 ![chlimage_1-23](assets/chlimage_1-23a.png)
 
-下列程式使用觸控最佳化UI來開啟頁面的「參考」面板。
+以下過程使用觸控優化的UI開啟頁面的「引用」面板。
 
-1. 在Sites主控台中，選取網站的頁面，然後按一下或點選 **參考**.
+1. 在「站點」控制台上，選擇站點的頁面，然後按一下或點擊 **引用**。
 
    ![chlimage_1-24](assets/chlimage_1-24a.png)
 
-1. 在「參考」面板中，按一下或點選 **語言副本**. 「語言副本」面板會顯示網站的語言副本。
+1. 在「參照」(references)面板中，按一下或點擊 **語言副本**。 「語言副本」面板顯示網站的語言副本。

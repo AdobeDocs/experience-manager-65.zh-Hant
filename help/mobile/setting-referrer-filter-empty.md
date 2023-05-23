@@ -1,7 +1,7 @@
 ---
-title: 將您的反向連結篩選器設為允許空白
+title: 將引用者篩選器設定為允許空
 seo-title: Setting Your Referrer Filter to Allow Empty
-description: 請詳閱本頁面，了解反向連結篩選。 若要允許AEM Mobile應用程式檢視器檢視您的Author例項上的應用程式，您必須將HTML反向連結篩選器設為「允許空白」。
+description: 按照此頁瞭解「引用過濾器」。 為了允許AEM Mobile應用程式查看器查看您的「作者」實例上的應用，您需要將HTML引用篩選器設定為「允許空」。
 seo-description: Follow this page to learn about Referrer Filter. In order to allow the AEM Mobile Application Viewer to view apps on your Author instance, you'll need to set your HTML referrer filter to 'allow empty'.
 uuid: 4fb0f95c-ac8f-4a14-8c46-6616d9d4f380
 contentOwner: User
@@ -17,16 +17,16 @@ ht-degree: 1%
 
 ---
 
-# 將您的反向連結篩選器設為允許空白{#setting-your-referrer-filter-to-allow-empty}
+# 將引用者篩選器設定為允許空{#setting-your-referrer-filter-to-allow-empty}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-若要允許AEM Mobile應用程式檢視器檢視您的Author例項上的應用程式，您必須將HTML反向連結篩選器設為「允許空白」。
+為了允許AEM Mobile應用程式查看器查看您的「作者」實例上的應用，您需要將HTML引用篩選器設定為「允許空」。
 
-如果您不想使用「應用程式檢視器」來檢閱開發和測試狀態中的應用程式，則不需要變更反向連結篩選器的預設設定。
+如果您不打算使用應用程式查看器來查看處於開發和轉移狀態的應用程式，則無需更改引用過濾器的預設設定。
 
-在您執行中的AEM Author例項中，導覽至： [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) 和搜尋「Apache Sling Referrer Filter」。 按一下以編輯反向連結篩選器並勾選「允許空白」核取方塊（請參閱下圖）。 下一步按「儲存」按鈕並關閉瀏覽器頁面。
+在您運行的「作者」實AEM例中，導航到： [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) 並搜索「Apache Sling引用過濾器」。 按一下以編輯引用過濾器並選中「允許空」複選框（請參閱下圖）。 然後按一下「保存」按鈕並關閉瀏覽器頁面。
 
-![反向連結篩選設定](assets/chlimage_1-106.png)
+![引用者篩選器設定](assets/chlimage_1-106.png)

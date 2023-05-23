@@ -1,6 +1,6 @@
 ---
 title: 持續性 GraphQL 查詢
-description: 了解如何在Adobe Experience Manager中保留GraphQL查詢以最佳化效能。 用戶端應用程式可使用HTTPGET方法來請求持續查詢，且可在Dispatcher和CDN層快取回應，最終改善用戶端應用程式的效能。
+description: 瞭解如何在Adobe Experience Manager保留GraphQL查詢以優化效能。 永續查詢可由客戶端應用程式使用HTTPGET方法來請求，並且響應可以在Dispatcher和CDN層快取，最終提高客戶端應用程式的效能。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
 source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 90%
 
 # 持續性 GraphQL 查詢 {#persisted-queries-caching}
 
-持續查詢是在Adobe Experience Manager(AEM)伺服器上建立並儲存的GraphQL查詢。 用戶端應用程式可以透過 GET 要求來要求它們。在Dispatcher與內容傳遞網路(CDN)層可快取GET要求的回應，最終改善請求用戶端應用程式的效能。 這與標準的 GraphQL 查詢不同，後者使用 POST 要求執行，其回應無法輕鬆快取。
+永續查詢是在Adobe Experience Manager(AEM)伺服器上建立和儲存的GraphQL查詢。 用戶端應用程式可以透過 GET 要求來要求它們。在調度器和內容分發網路(CDN)層可快取GET請求的響應，最終改善請求客戶端應用程式的效能。 這與標準的 GraphQL 查詢不同，後者使用 POST 要求執行，其回應無法輕鬆快取。
 
 <!--
 >[!NOTE]
@@ -286,8 +286,8 @@ query getAdventuresByActivity($activity: String!) {
 
 這些：
 
-* 無法以OSGi設定覆寫
-* 可由使用cURL定義HTTP標題設定的請求覆寫；應包含適當的設定 `cache-control` 和/或 `surrogate-control`;如需範例，請參閱 [在持續查詢層級管理快取](#cache-persisted-query-level)
+* 無法用OSGi配置覆蓋
+* 可被使用cURL定義HTTP頭設定的請求覆蓋；它應包括適當的設定 `cache-control` 和/或 `surrogate-control`;有關示例，請參見 [在永續查詢級別管理快取](#cache-persisted-query-level)
 
 <!-- CQDOC-20186 -->
 <!-- following entry is only when the GraphiQL IDE is ready; add cross-reference too -->
@@ -350,7 +350,7 @@ curl -u admin:admin -X POST \
 
 ### 使用 OSGi 設定管理快取 {#cache-osgi-configration}
 
-若要全域管理快取，您可以為[持續性查詢服務設定](/help/sites-deploying/configuring-osgi.md)**進行 OSGi 設定**。否則，此OSGi設定會使用 [發佈例項的預設值](#publish-instances).
+若要全域管理快取，您可以為[持續性查詢服務設定](/help/sites-deploying/configuring-osgi.md)**進行 OSGi 設定**。否則，此OSGi配置使用 [發佈實例的預設值](#publish-instances)。
 
 >[!NOTE]
 >

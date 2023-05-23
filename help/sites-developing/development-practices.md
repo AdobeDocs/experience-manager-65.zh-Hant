@@ -1,7 +1,7 @@
 ---
-title: 開發實務
+title: 開發實踐
 seo-title: Development Practices
-description: 在AEM上開發的最佳作法
+description: 開發的最佳做AEM法
 seo-description: Best practices for developing on AEM
 uuid: 27a75f7f-6e2c-4113-9e9f-c5013a4594c2
 contentOwner: User
@@ -17,55 +17,55 @@ ht-degree: 0%
 
 ---
 
-# 開發實務{#development-practices}
+# 開發實踐{#development-practices}
 
-## 根據完成的定義工作 {#work-according-to-a-definition-of-done}
+## 根據完成的定義進行工作 {#work-according-to-a-definition-of-done}
 
-每個團隊對「完成」的含義有不同的定義，但有一個定義並確保故事在被接受之前符合定義的標準非常重要。
+每個團隊對「完成」的含義有不同的定義，但重要的是要有一個，並確保一個故事在被接受之前符合定義的標準。
 
-團隊通常會指定的某些條件包括：
+團隊通常指定的一些標準包括：
 
-* 已審核格式的代碼
+* 已檢查格式的代碼
 * 添加了注釋/Javadoc
-* 滿足要求的測試覆蓋級別
-* 通過單位和整合測試
+* 滿足所需的test覆蓋級別
+* 刀路單元和整合test
 * 在QA環境中驗證
-* 已實作本地化
+* 本地化已實現
 
-如果沒有定義明確的DoD，很容易在這樣一種情況下結束：許多事情都做到了一半，但什麼也沒有真正完成。
+如果沒有一個定義明確的DoD，很容易最終出現這樣的局面：許多事情都半途而廢，而且沒有真正的完成。
 
-### 定義並遵守編碼和格式慣例 {#define-and-adhere-to-coding-and-formatting-conventions}
+### 定義並遵守編碼和格式約定 {#define-and-adhere-to-coding-and-formatting-conventions}
 
-縮排層級和空白字元之類的內容似乎並不重要，但適當格式化的程式碼有助於提高可讀性和可維護性。 應以團隊身份討論並同意各項公約，然後在規則中加以遵循。
+縮進級別和空白空間等內容似乎並不重要，但正確格式化的代碼大大提高了可讀性和可維護性。 公約應作為一個小組討論並商定，然後在規則中加以遵守。
 
-### 針對高測試覆蓋  {#aim-for-high-test-coverage}
+### 高test覆蓋率  {#aim-for-high-test-coverage}
 
-隨著專案實作的規模增加，測試所需的時間也會增加。 如果測試覆蓋率不高，測試團隊將無法擴展，開發人員最終將陷入錯誤之中。
+隨著項目實施規模的增長，test它所需的時間也會增長。 如果沒有良好的test覆蓋，測試團隊將無法擴展，開發人員最終將陷入蟲洞。
 
-開發人員應該練習TDD，在生產代碼滿足其要求之前編寫失敗的單元測試。 QA應建立一組自動的接受測試，以確保系統從高層級正常運作。
+開發人員應該實行TDD，在滿足他們要求的生產代碼之前寫下失敗的單位test。 QA應建立一套自動驗收test，以確保系統從高級別按預期工作。
 
-有自訂架構可供使用，例如Jackalope和Prosper，讓對JCR API的嘲弄更簡單，以確保開發人員在編寫單元測試時能有效率。
+現有的定製框架（如Jackalope和Prosper）可簡化對JCR API的嘲弄，以確保開發人員的工作效率，同時編寫單元test。
 
-### 保持演示就緒 {#stay-demo-ready}
+### 準備演示 {#stay-demo-ready}
 
-系統應可在每次迭代結束時向企業演示。 將系統保持在可演示的狀態，團隊將始終處於可生產就緒的迭代過程中，並且技術負債可保持在可維護的級別。
+系統應在每次迭代結束時提供給業務演示。 通過使系統保持為演示就緒狀態，團隊將始終處於生產就緒的迭代內，而技術負債可保持在可維護的水準。
 
-### 實作持續整合環境並加以使用 {#implement-a-continuous-integration-environment-and-use-it}
+### 實施連續整合環境並使用它 {#implement-a-continuous-integration-environment-and-use-it}
 
-實施連續整合環境可讓您輕鬆、重複地執行單元測試和整合測試。 它還將部署與開發團隊脫鈎，使團隊的其他部分更高效，並使部署更穩定、更可預測。
+實施連續整合環境將使您能夠輕鬆、可重複地運行設備test和整合test。 它還將部署與開發團隊脫鈎，使團隊的其他部分更高效，並使部署更穩定、更可預測。
 
-### 通過保持建置時間低來快速保持開發週期 {#keep-the-development-cycle-fast-by-keeping-build-times-low}
+### 通過保持低建設時間而快速保持開發週期 {#keep-the-development-cycle-fast-by-keeping-build-times-low}
 
-如果單元測試需要很長的時間才能執行，開發人員將避免執行，而且會失去其價值。 如果建立和部署程式碼需要很長時間，人們的執行頻率就會降低。 將縮短構建時間作為優先事項，可確保我們投入測試覆蓋和CI基礎架構的時間將繼續使團隊更高效。
+如果單位test需要很長時間才能運行，開發商將避免運行這些設備，而它們將失去價值。 如果構建和部署代碼需要很長時間，人們就不會那麼頻繁地這樣做。 將縮短構建時間作為優先事項，可確保我們在test覆蓋和CI基礎架構方面投入的時間將繼續提高團隊的工作效率。
 
-### 微調聲納和其他靜態代碼分析工具，並對其報告採取行動 {#fine-tune-sonar-and-other-static-code-analysis-tools-and-act-on-their-reports}
+### 精調聲納和其他靜態代碼分析工具並對其報告採取行動 {#fine-tune-sonar-and-other-static-code-analysis-tools-and-act-on-their-reports}
 
-程式碼分析工具可能很有價值，但唯有在其報表導致開發團隊採取動作時，才能如此。 若不微調這些工具所提供的分析，它們產生的建議將不相關，而會失去其價值。
+代碼分析工具可能很有價值，但前提是其報告導致開發團隊採取行動。 如果不對這些工具提供的分析進行微調，這些工具產生的建議將不相關，並將失去其價值。
 
 ### 遵循男孩Scout規則 {#follow-the-boy-scout-rule}
 
-男孩Scout有一個規則：「留下比你找到的好。」 只要開發團隊的所有成員都遵守這項規則，在遇到麻煩時收拾東西，程式碼就會不斷改進。
+男孩Scout有一條規則：&quot;留得比你找到的好。&quot; 只要開發團隊的所有成員都遵守這一規則，在遇到混亂時收拾東西，代碼就會不斷改進。
 
-### 避免實作YAGNI功能 {#avoid-implementing-yagni-features}
+### 避免實施YAGNI功能 {#avoid-implementing-yagni-features}
 
-YAGNI（或You&#39;t Not Need It）功能是當我們預期未來需要某些東西時（即使我們現在不需要它）實施的。 理想情況下，我們應該實施當今最簡單的工作，並使用連續重構來確保系統的體系結構隨著時間的需求而不斷演化。 這可讓我們專注於重要事項，並防止程式碼膨脹和功能蠕變。
+YAGNI（或者您不需要它）功能是當我們期望將來需要某種東西時實施的，即使我們現在不需要它。 理想情況下，我們應該實施目前最簡單的操作，並使用連續重構來確保系統的體系結構隨著需求的發展而發展。 這將使我們能夠專注於重要事項，並防止代碼漏洞和特徵蠕變。

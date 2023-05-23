@@ -1,7 +1,7 @@
 ---
-title: 單一登入
+title: 單一登錄
 seo-title: Single Sign On
-description: 了解如何為AEM例項設定單一登入(SSO)。
+description: 瞭解如何為實例配置單一登錄(SSO)AEM。
 seo-description: Learn how to configure Single Sign On (SSO) for an AEM instance.
 uuid: b8dcb28e-4604-4da5-b8dd-4e1e2cbdda18
 contentOwner: User
@@ -18,100 +18,100 @@ ht-degree: 0%
 
 ---
 
-# 單一登入 {#single-sign-on}
+# 單一登錄 {#single-sign-on}
 
-單一登入(SSO)允許用戶在提供一次身份驗證憑據（如用戶名和密碼）後訪問多個系統。 單獨的系統（稱為可信驗證器）執行該驗證，並提供具有用戶憑據的Experience Manager。 Experience Manager會檢查並強制使用者的存取權限（即決定允許使用者存取的資源）。
+單一登錄(SSO)允許用戶在提供一次身份驗證憑據（如用戶名和密碼）後訪問多個系統。 單獨的系統（稱為受信任驗證器）執行該驗證並提供與用戶憑據的Experience Manager。 Experience Manager檢查並強制用戶的訪問權限（即確定允許用戶訪問哪些資源）。
 
-SSO驗證處理程式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)會處理受信任驗證器提供的驗證結果。 SSO身份驗證處理程式按以下順序在以下位置中搜索ssid（SSO標識符）作為特殊屬性的值：
+SSO身份驗證處理程式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)處理受信任驗證器提供的驗證結果。 SSO驗證處理程式將ssid（SSO標識符）作為以下位置中特殊屬性的值按順序搜索：
 
 1. 請求標題
 1. Cookie
-1. 要求參數
+1. 請求參數
 
-找到值後，搜尋即完成，並使用此值。
+找到值後，將完成搜索並使用此值。
 
 配置以下兩個服務以識別儲存ssid的屬性的名稱：
 
-* 登入模組。
-* SSO驗證服務。
+* 登錄模組。
+* SSO身份驗證服務。
 
-您必須為兩個服務指定相同的屬性名稱。 屬性包含在 `SimpleCredentials` 提供給 `Repository.login`. 屬性的值不相關且被忽略，僅存在它是重要的，是經過驗證的。
+必須為兩個服務指定相同的屬性名。 該屬性包含在 `SimpleCredentials` 提供給 `Repository.login`。 屬性的值是無關的和忽略的，僅存在屬性是重要的和經過驗證的。
 
 ## 配置SSO {#configuring-sso}
 
-若要為AEM例項設定SSO，您必須設定 [SSO驗證處理程式](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
+要為實例配AEM置SSO，您需要 [SSO身份驗證處理程式](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
 
-1. 使用AEM時，有數種方法可管理這類服務的組態設定；請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議的實務。
+1. 使用時，AEM有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的子菜單。
 
    例如，對於NTLM集：
 
-   * **路徑：** 視需要；例如， `/`
+   * **路徑：** 按要求；比如說， `/`
    * **標題名稱**: `LOGON_USER`
    * **ID格式**: `^<DOMAIN>\\(.+)$`
 
-      其中 `<*DOMAIN*>` 會由您自己的網域名稱取代。
-   CoSign:
+      位置 `<*DOMAIN*>` 替換為您自己的域名。
+   對於CoSign:
 
-   * **路徑：** 視需要；例如， `/`
-   * **標題名稱**:remote_user
+   * **路徑：** 按要求；比如說， `/`
+   * **標題名稱**:遠程用戶
    * **ID格式：** 原樣
 
    對於SiteMinder:
 
-   * **路徑：** 視需要；例如， `/`
-   * **標題名稱：** SM_USER
+   * **路徑：** 按要求；比如說， `/`
+   * **標題名稱：** SM用戶
    * **ID格式**:原樣
 
 
 
-1. 確認單一登入可視需要運作；包括授權。
+1. 確認單點登錄是否按要求工作；包括授權。
 
 >[!CAUTION]
 >
->請確定若已設定SSO，使用者無法直接存取AEM。
+>確保在配置SSO時AEM用戶無法直接訪問。
 >
->通過要求用戶通過運行SSO系統代理的Web伺服器，可確保任何用戶都不能直接發送標頭、Cookie或參數，以使用戶受到AEM信任，因為如果從外部發送，代理將過濾這些資訊。
+>通過要求用戶通過運行SSO系統代理的Web伺服器，可確保任何用戶都不能直接發送會使用戶受信任的頭、cookie或參數AEM，因為如果從外部發送，代理將過濾此類資訊。
 >
->任何使用者只要知道名稱，只要能直接存取您的AEM例項而不需瀏覽Web伺服器，就能透過傳送標題、Cookie或參數來擔任任何使用者。
+>如果知道名稱，AEM則任何可以直接訪問實例而無需通過Web伺服器的用戶都可以通過發送標頭、cookie或參數來充當任何用戶。
 >
->另請確定標頭、Cookie和請求參數名稱，您只需設定SSO設定所需的名稱。
+>另外，確保頭、cookie和請求參數名稱的名稱，您只配置SSO設定所需的名稱。
 
 >[!NOTE]
 >
->單一登入通常與 [LDAP](/help/sites-administering/ldap-config.md).
+>單一登錄通常與 [LDAP](/help/sites-administering/ldap-config.md)。
 
 >[!NOTE]
 >
->如果您也使用 [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 使用Microsoft Internet Information Server(IIS)時，以下項目將需要其他配置：
+>如果您還使用 [調度程式](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 使用MicrosoftInternet Information Server(IIS)，則需要在以下位置進行其他配置：
 >
 >* `disp_iis.ini`
 >* IIS
 >
 >在 `disp_iis.ini` 設定：
->(請參閱 [使用Microsoft Internet Information Server安裝Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server) 如需完整詳細資訊)
+>（請參見） [使用MicrosoftInternet Information Server安裝Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server) 有關完整詳細資訊)
 >
 >* `servervariables=1` （將IIS伺服器變數作為請求標頭轉發到遠程實例）
->* `replaceauthorization=1` （以「基本」等值項取代「授權」以外的任何標題）
+>* `replaceauthorization=1` （用「Basic」等效的標題替換「Basic」以外的任何名為「Authorization」的標題）
 >
 >在IIS中：
 >
->* disable **匿名訪問**
+>* 禁用 **匿名訪問**
 >
 >* 啟用 **整合Windows驗證**
 >
 
 
-您可以使用 **驗證器** Felix Console的選項；例如：
+通過使用 **驗證器** Felix Console的選項；例如：
 
 `http://localhost:4502/system/console/slingauth`
 
-系統會先查詢最符合路徑的處理常式。 例如，如果您為路徑配置處理常式 — A `/` 和處理程式 — B `/content`，則 `/content/mypage.html` 會先查詢處理常式B。
+首先查詢與路徑最匹配的處理程式。 例如，如果為路徑配置handler-A `/` 路徑和handler-B `/content`，然後請求 `/content/mypage.html` 將首先查詢handler-B。
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
 ### 範例 {#example}
 
-Cookie請求(使用URL `http://localhost:4502/libs/wcm/content/siteadmin.html`):
+對於Cookie請求（使用URL） `http://localhost:4502/libs/wcm/content/siteadmin.html`):
 
 ```xml
 GET /libs/cq/core/content/welcome.html HTTP/1.1
@@ -119,7 +119,7 @@ Host: localhost:4502
 Cookie: TestCookie=admin
 ```
 
-使用下列設定：
+使用以下配置：
 
 * **路徑**: `/`
 
@@ -131,7 +131,7 @@ Cookie: TestCookie=admin
 
 * **ID格式**: `AsIs`
 
-回應會是：
+回應是：
 
 ```xml
 HTTP/1.1 200 OK
@@ -149,32 +149,32 @@ Transfer-Encoding: chunked
 ....
 ```
 
-如果您要求：
+如果您請求：
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-或者，您可以使用下列curl命令傳送 `TestHeader` 標題至 `admin:`
+或者，可以使用以下curl命令發送 `TestHeader` 標題 `admin:`
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
 >
->在瀏覽器中使用請求參數時，您只會看到部分HTML — 沒有CSS。 這是因為來自HTML的所有請求都是在沒有請求參數的情況下提出。
+>在瀏覽器中使用請求參數時，您只能看到某些HTML — 沒有CSS。 這是因為來自HTML的所有請求都是在沒有request參數的情況下發出的。
 
-## 移除AEM登出連結 {#removing-aem-sign-out-links}
+## 刪除AEM註銷連結 {#removing-aem-sign-out-links}
 
-使用SSO時，系統會從外部處理登入和登出，因此AEM.自己的登出連結不再適用，應移除。
+使用SSO時，外部會處理登錄和註銷，AEM這樣。自己的註銷連結不再適用，應刪除。
 
-可使用下列步驟移除歡迎畫面上的登出連結。
+可使用以下步驟刪除歡迎螢幕上的註銷連結。
 
-1. 覆蓋 `/libs/cq/core/components/welcome/welcome.jsp` to `/apps/cq/core/components/welcome/welcome.jsp`
+1. 覆蓋 `/libs/cq/core/components/welcome/welcome.jsp` 至 `/apps/cq/core/components/welcome/welcome.jsp`
 1. 從jsp中刪除以下部件。
 
    `<a href="#" onclick="signout('<%= request.getContextPath() %>');" class="signout"><%= i18n.get("sign out", "welcome screen") %>`
 
-若要移除右上角使用者個人功能表中可用的登出連結，請執行下列步驟：
+要刪除右上角用戶個人菜單中可用的註銷連結，請執行以下步驟：
 
-1. 覆蓋 `/libs/cq/ui/widgets/source/widgets/UserInfo.js` to `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
+1. 覆蓋 `/libs/cq/ui/widgets/source/widgets/UserInfo.js` 至 `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
 
-1. 從檔案中刪除以下部分：
+1. 從檔案中刪除以下部件：
 
    ```
    menu.addMenuItem({

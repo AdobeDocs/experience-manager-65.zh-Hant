@@ -20,7 +20,7 @@ ht-degree: 14%
 
 ## 概觀 {#overview}
 
-在AEM Forms中，您可以使用SendToPrinter服務將文檔發送到打印機。 SendToPrinter服務支援以下打印訪問機制：
+在AEM Forms，可以使用SendToPrinter服務將文檔發送到打印機。 SendToPrinter服務支援以下打印訪問機制：
 
 * **可直接訪問的打印機** `: A printer that is installed on the same computer is called a direct accessible printer, and the computer is named printer host. This type of printer can be a local printer that is connected to the computer directly.`
 
@@ -29,9 +29,9 @@ ht-degree: 14%
    將文檔發送到打印機時，請指定以下打印協定之一：
 
    * **杯** `: A printing protocol named common UNIX printing system. This protocol is used for UNIX operating systems and enables a computer to function as a print server. The print server accepts print requests from client applications, processes them, and sends them to configured printers. On the IBM AIX® operating system, usage of CUPS is not recommended.`
-   * &quot;**DirectIP** `: A standard protocol for remote printing and managing print jobs. This protocol can be used locally or remotely. Print queues are not required.`
+   * &quot;**直接IP** `: A standard protocol for remote printing and managing print jobs. This protocol can be used locally or remotely. Print queues are not required.`
    * &quot;**LPD** `: A printing protocol named Line Printer Daemon protocol or Line Printer Remote (LPR) protocol. This protocol provides network print server functionality for UNIX-based systems.`
-   * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
+   * **共用打印機** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
    * **CIFS**:輸出服務支援通用Internet檔案系統(CIFS)打印協定。
 
 ## 使用SendToPrinter服務 {#using-sendtoprinter-service}
@@ -43,30 +43,30 @@ ht-degree: 14%
 
 | 協定（訪問機制） | 打印伺服器URI(PrinterSpec.printServer) | 打印機的名稱(PrinterSpec.printerName) | 結果 |
 |--- |--- |--- |--- |
-| SharedPrinter | 任何 | 空白 | 例外：必要參數sPrinterName不能為空。 |
-| SharedPrinter | 任何 | 無效 | 異常表示找不到打印機。 |
+| SharedPrinter | 任何 | 空白 | 異常：必需參數sPrinterName不能為空。 |
+| SharedPrinter | 任何 | 無效 | 出現異常，表示找不到打印機。 |
 | SharedPrinter | 任何 | 有效 | 打印作業成功。 |
-| LPD | 空白 | 任何 | 表示必要參數sPrintServerUri不能為空的異常。 |
-| LPD | 無效 | 空白 | 表示必要參數sPrinterName不能為空的異常。 |
-| LPD | 無效 | 非空白 | 未找到sPrintServerUri的異常。 |
+| LPD | 空白 | 任何 | 表示所需參數sPrintServerUri不能為空的異常。 |
+| LPD | 無效 | 空白 | 表示所需參數sPrinterName不能為空的異常。 |
+| LPD | 無效 | 非空 | 未找到sPrintServerUri的異常。 |
 | LPD | 有效 | 無效 | 表示找不到打印機的異常。 |
-| LPD | 有效 | 有效 | 成功打印作業。 |
-| CUPS | 空白 | 任何 | 表示必要參數sPrintServerUri不能為空的異常。 |
+| LPD | 有效 | 有效 | 打印作業成功。 |
+| CUPS | 空白 | 任何 | 表示所需參數sPrintServerUri不能為空的異常。 |
 | CUPS | 無效 | 任何 | 表示找不到打印機的異常。 |
 | CUPS | 有效 | 任何 | 打印作業成功。 |
-| DirectIP | 空白 | 任何 | 表示必要參數sPrintServerUri不能為空的異常。 |
+| DirectIP | 空白 | 任何 | 表示所需參數sPrintServerUri不能為空的異常。 |
 | DirectIP | 無效 | 任何 | 表示找不到打印機的異常。 |
 | DirectIP | 有效 | 任何 | 打印作業成功。 |
 | CIFS | 有效 | 空白 | 打印作業成功。 |
 | CIFS | 無效 | 任何 | 使用CIFS打印時出現未知錯誤。 |
-| CIFS | 空白 | 任何 | 表示必要參數sPrintServerUri不能為空的異常。 |
+| CIFS | 空白 | 任何 | 表示所需參數sPrintServerUri不能為空的異常。 |
 
-## 驗證支援 {#authentication-support}
+## 身份驗證支援 {#authentication-support}
 
-只有CIFS打印才支援身份驗證。 要驗證，請在PrinterSpec中提供用戶名/密碼/域。 您可以透過執行下列步驟，使用AEM Granite CyprotoSupport Service加密密碼：
+僅CIFS打印支援身份驗證。 要進行身份驗證，請在PrinterSpec中提供用戶名/密碼/域。 通過執行以下步驟，您AEM可以使用Granite CyprotoSupport Service加密密碼：
 
-1. 前往https://&lt;server>:&lt;port>/system/console。
+1. 請訪問https://&lt;server>:&lt;port>/system/console。
 
-1. 前往 **[!UICONTROL 主要]** > **[!UICONTROL 加密支援]**.
+1. 轉到 **[!UICONTROL 主]** > **[!UICONTROL 加密支援]**。
 
-1. 輸入一些純文字，然後按一下 **[!UICONTROL Protect]**.
+1. 輸入一些純文字檔案，然後按一下 **[!UICONTROL Protect]**。

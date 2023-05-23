@@ -1,7 +1,7 @@
 ---
-title: 目標選件
+title: 目標產品
 seo-title: Target offers
-description: 建立目標選件
+description: 建立目標產品
 seo-description: Create target offers
 uuid: 88206181-9708-454a-a22a-05e3fc0247c2
 contentOwner: User
@@ -17,17 +17,17 @@ ht-degree: 7%
 
 ---
 
-# 目標選件{#target-offers}
+# 目標產品{#target-offers}
 
-## 建立Test&amp;Target選件體驗 {#creating-a-test-target-offer-experience}
+## 建立Test和目標服務體驗 {#creating-a-test-target-offer-experience}
 
-1. 在左窗格中選取新促銷活動，或在右窗格中按兩下它。
-1. 使用圖示選取清單檢視：
+1. 在左窗格中選擇新市場活動，或在右窗格中按兩下它。
+1. 使用表徵圖選擇清單視圖：
 
    ![](do-not-localize/chlimage_1-11.png)
 
-1. 按一下 **新增……**
-1. 您可以指定 **標題**, **名稱** 和要建立的體驗類型；在此情況下，即Test&amp;Target選件。
+1. 按一下 **新建……**
+1. 可以指定 **標題**。 **名稱** 創造的經驗類型，在這種情況下，Test和目標優惠。
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -35,8 +35,8 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   >Test&amp;Target體驗目前未列於MCM中。 您可從 **網站** 控制台（在「促銷活動」下）。
+   >Test和目標體驗當前未在MCM中列出。 可以從 **網站** 控制台，在「市場活動」下。
 
 ## 整合 Adobe Target {#integrating-with-adobe-target}
 
-請參閱 [與Adobe整合](/help/sites-administering/target.md) [目標](/help/sites-administering/target.md) 以取得完整詳細資訊。
+請參閱 [與Adobe整合](/help/sites-administering/target.md) [目標](/help/sites-administering/target.md) 的雙曲餘切值。

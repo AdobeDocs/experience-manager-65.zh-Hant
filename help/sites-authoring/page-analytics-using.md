@@ -1,5 +1,5 @@
 ---
-title: 檢視頁面分析資料，以評估頁面內容的有效性
+title: 查看頁面分析資料以評估頁面內容的有效性
 seo-title: Seeing Page Analytics Data
 description: 使用頁面分析資料來評估其頁面內容的有效性
 seo-description: Use page analytics data to gauge the effectiveness of their page content
@@ -23,72 +23,72 @@ ht-degree: 11%
 
 使用頁面分析資料來評估頁面內容的有效性。
 
-## 從主控台顯示的分析 {#analytics-visible-from-the-console}
+## 從控制台可見的分析 {#analytics-visible-from-the-console}
 
 ![spad-01](assets/spad-01.png)
 
-頁面分析資料顯示於 [清單檢視](/help/sites-authoring/basic-handling.md#list-view) 的下一頁。 當頁面以清單格式顯示時，預設會提供下列欄：
+頁面分析資料顯示在 [清單視圖](/help/sites-authoring/basic-handling.md#list-view) 的子菜單。 當頁面以清單格式顯示時，預設情況下以下列可用：
 
 * 頁面檢視
 * 不重複訪客
 * 頁面逗留時間
 
-每欄會顯示目前報告期間的值，也指出值自上一個報告期間以來是否增加或減少。 您看到的資料會每12小時更新一次。
+每列都顯示當前報告期的值，並指示值自上一個報告期以來是增加還是減少。 您看到的資料每12小時更新一次。
 
 >[!NOTE]
 >
->要更改更新期間， [設定匯入間隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
+>要更改更新期間， [配置導入間隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)。
 
-1. 開啟 **網站** 主控台；例如 [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
-1. 在工具列的最右側（右上角），按一下或點選圖示以選取 **清單檢視** (所顯示的圖示取決於 [目前檢視](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
+1. 開啟 **站點** 控制台；例如 [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
+1. 在工具欄的最右側（右上角），按一下或點擊表徵圖以選擇 **清單視圖** (所顯示的表徵圖將取決於 [當前視圖](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
 
-1. 同樣地，在工具列的最右側（右上角），按一下或點選圖示，然後選取 **檢視設定**. 此 **配置列** 對話框將開啟。 進行任何必要的變更，並使用確認 **更新**.
+1. 同樣，在工具欄的最右側（右上角），按一下或點擊表徵圖，然後選擇 **查看設定**。 的 **配置列** 對話框。 進行任何必需的更改並確認 **更新**。
 
    ![spad-02](assets/spad-02.png)
 
 ### 選擇報告期 {#selecting-the-reporting-period}
 
-選取Analytics資料會出現在Sites Console的報表時段：
+選擇在「站點」控制台上顯示分析資料的報告期：
 
 * 最近 30 天的資料
 * 最近 90 天的資料
 * 今年的資料
 
-目前的報告時段會顯示在Sites Console的工具列上（頂端工具列的右側）。 使用下拉式清單來選取所需的報告期間。
+當前報告期出現在「站點」控制台的工具欄（頂部工具欄的右側）上。 使用下拉框選擇所需的報告期間。
 
 ![aa-05](assets/aa-05.png)
 
 ### 配置可用資料列 {#configuring-available-data-columns}
 
-分析管理員使用者群組的成員可以設定Sites Console，讓作者看到額外的Analytics欄。
+analytics-administrators用戶組的成員可以配置「站點」控制台，使作者能夠查看額外的「分析」列。
 
 >[!NOTE]
 >
->當頁面樹狀結構包含與不同Adobe Analytics雲端設定相關聯的子項時，您無法為頁面設定可用的資料欄。
+>如果頁面樹包含與不同的Adobe Analytics雲配置關聯的子級，則無法配置頁面的可用資料列。
 
-1. 在「清單視圖」中，使用視圖選擇器（工具欄右側），選擇 **檢視設定** 然後 **新增自訂Analytics資料**.
+1. 在「清單視圖」中，使用視圖選擇器（工具欄右側），選擇 **查看設定** 然後 **添加自定義分析資料**。
 
    ![spad-03](assets/spad-03.png)
 
-1. 在Sites控制台中選取要公開給作者的量度，然後按一下 **新增**.
+1. 選擇要在站點控制台中向作者公開的度量，然後按一下 **添加**。
 
-   顯示的欄會從Adobe Analytics中擷取。
+   顯示的列從Adobe Analytics檢索。
 
    ![aa-16](assets/aa-16.png)
 
-### 從網站開啟內容分析 {#opening-content-insights-from-sites}
+### 從站點開啟內容透視 {#opening-content-insights-from-sites}
 
-開啟 [內容分析](/help/sites-authoring/content-insights.md) 從Sites主控台進一步調查頁面有效性。
+開啟 [內容透視](/help/sites-authoring/content-insights.md) 從「站點」控制台進一步調查頁面有效性。
 
-1. 在Sites Console中，選取您要查看「內容分析」的頁面。
-1. 在工具列上，按一下Analytics和Recommendations圖示。
+1. 在「站點」控制台中，選擇要查看其內容透視的頁面。
+1. 在工具欄上，按一下「分析」和「Recommendations」表徵圖。
 
    ![](do-not-localize/chlimage_1-14.png)
 
-## 頁面編輯器中可見的分析(Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
+## 從頁面編輯器中可見的分析(Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!CAUTION]
 >
 >由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。
 >
->此 [ActivityMap外掛程式由Adobe Analytics提供](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。
+>的 [由Adobe Analytics提供的ActivityMap插件](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 應該被使用。

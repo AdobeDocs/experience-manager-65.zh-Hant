@@ -1,7 +1,7 @@
 ---
-title: 管理使用者
+title: 管理用戶
 seo-title: Managing Users
-description: 使用用戶管理API建立可管理角色、權限和承擔者（可以是用戶或組）以及驗證用戶的用戶端應用程式。
+description: 使用用戶管理API建立可管理角色、權限和承擔者（可以是用戶或組）以及驗證用戶的客戶端應用程式。
 seo-description: Use the User Management API to create client applications that can manage roles, permissions, and principals (which can be users or groups), as well as authenticate users.
 uuid: 68d8a0bc-6e3d-4286-ba5c-534dcf58cb84
 contentOwner: admin
@@ -18,39 +18,39 @@ ht-degree: 0%
 
 ---
 
-# 管理使用者 {#managing-users}
+# 管理用戶 {#managing-users}
 
-**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms。**
+**本文檔中的示例和示例僅針對AEM Forms的JEE環境。**
 
-**關於使用者管理**
+**關於用戶管理**
 
-您可以使用使用者管理API來建立可管理角色、權限和承擔者（可以是使用者或群組），以及驗證使用者的用戶端應用程式。 使用者管理API包含下列AEM Forms API:
+您可以使用用戶管理API建立客戶端應用程式，這些應用程式可以管理角色、權限和承擔者（可以是用戶或組），並驗證用戶。 用戶管理API由以下AEM FormsAPI組成：
 
 * 目錄管理器服務API
-* Authentication Manager服務API
+* 驗證管理器服務API
 * 授權管理器服務API
 
-使用者管理可讓您指派、移除和決定角色和權限。 它也可讓您指派、移除和查詢網域、使用者和群組。 最後，您可以使用「使用者管理」來驗證使用者。
+用戶管理使您能夠分配、刪除和確定角色和權限。 它還允許您分配、刪除和查詢域、用戶和組。 最後，您可以使用用戶管理來驗證用戶。
 
-在 [新增使用者](users.md#adding-users) 您將了解如何以程式設計方式新增使用者。 本節使用目錄管理器服務API。
+在 [添加用戶](users.md#adding-users) 您將瞭解如何以寫程式方式添加用戶。 本節使用目錄管理器服務API。
 
-在 [刪除用戶](users.md#deleting-users) 您將了解如何以程式設計方式刪除使用者。 本節使用目錄管理器服務API。
+在 [刪除用戶](users.md#deleting-users) 您將瞭解如何以寫程式方式刪除用戶。 本節使用目錄管理器服務API。
 
-在 [管理使用者和群組](users.md#managing-users-and-groups) 您將了解本機使用者和目錄使用者之間的差異，並參閱範例，了解如何使用Java和網站服務API，以程式設計方式管理使用者和群組。 本節使用目錄管理器服務API。
+在 [管理用戶和組](users.md#managing-users-and-groups) 您將瞭解本地用戶和目錄用戶之間的區別，並查看如何使用Java和Web服務API以寫程式方式管理用戶和組的示例。 本節使用目錄管理器服務API。
 
-在 [管理角色和權限](users.md#managing-roles-and-permissions) 您將了解系統角色和權限，以及您可以以程式設計方式來增強這些角色和權限，並參閱如何使用Java和網站服務API以程式設計方式管理角色和權限的範例。 本節同時使用目錄管理器服務API和授權管理器服務API。
+在 [管理角色和權限](users.md#managing-roles-and-permissions) 您將瞭解系統角色和權限，以及可以通過寫程式方式來補充這些角色和權限的方法，並查看如何使用Java和Web服務API以寫程式方式管理角色和權限的示例。 本節同時使用目錄管理器服務API和授權管理器服務API。
 
-在 [驗證使用者](users.md#authenticating-users) 您將看到如何使用Java和網站服務API，以程式設計方式驗證使用者的範例。 本節使用授權管理器服務API。
+在 [驗證用戶](users.md#authenticating-users) 您將看到如何使用Java和Web服務API以寫程式方式驗證用戶的示例。 本節使用授權管理器服務API。
 
-**了解驗證程式**
+**瞭解身份驗證過程**
 
-「使用者管理」提供內建的驗證功能，也可讓您將其與自己的驗證提供者連線。 當「使用者管理」收到驗證請求時（例如，使用者嘗試登入），會將使用者資訊傳遞給驗證提供者以進行驗證。 用戶管理在驗證用戶後從驗證提供程式接收結果。
+用戶管理提供了內置的身份驗證功能，還讓您能夠將其與自己的身份驗證提供程式連接。 當用戶管理收到驗證請求（例如，用戶嘗試登錄）時，它會將用戶資訊傳遞給驗證提供方進行驗證。 用戶管理在驗證用戶後從驗證提供程式接收結果。
 
-下圖顯示嘗試登入的一般使用者、使用者管理和驗證提供者之間的互動。
+下圖顯示了嘗試登錄的最終用戶、用戶管理和身份驗證提供程式之間的交互。
 
-![mu_mu_umauth_process](assets/mu_mu_umauth_process.png)
+![mu_mu_umauth進程](assets/mu_mu_umauth_process.png)
 
-下表說明了身份驗證過程的每個步驟。
+下表說明了驗證過程的每個步驟。
 
 <table>
  <thead>
@@ -62,15 +62,15 @@ ht-degree: 0%
  <tbody>
   <tr>
    <td><p>1</p></td>
-   <td><p>用戶嘗試登錄調用「用戶管理」的服務。 用戶指定用戶名和密碼。 </p></td>
+   <td><p>用戶嘗試登錄到調用用戶管理的服務。 用戶指定用戶名和密碼。 </p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>User Management會將使用者名稱和密碼以及設定資訊傳送至驗證提供者。</p></td>
+   <td><p>用戶管理將用戶名和密碼以及配置資訊發送到驗證提供程式。</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
-   <td><p>驗證提供者連接到用戶儲存並驗證用戶。</p></td>
+   <td><p>驗證提供器連接到用戶儲存並驗證用戶。</p></td>
   </tr>
   <tr>
    <td><p>4</p></td>
@@ -78,337 +78,337 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>5</p></td>
-   <td><p>使用者管理可讓使用者登入或拒絕產品的存取權。</p></td>
+   <td><p>用戶管理允許用戶登錄或拒絕對產品的訪問。</p></td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->如果伺服器時區與客戶端時區不同，當在WebSphere應用程式伺服器群集上使用.NET客戶端在本機SOAP堆棧上使用AEM Forms生成PDF服務的WSDL時，可能會發生以下用戶管理驗證錯誤：
+>如果伺服器時區與客戶端時區不同，當在WebSphere應用程式伺服器群集上使用.NET客戶端在本機SOAP堆棧上使用AEM Forms生成PDF服務的WSDL時，可能會出現以下用戶管理驗證錯誤：
 
 `[com.adobe.idp.um.webservices.WSSecurityHandler] errorCode:12803 errorCodeHEX:0x3203 message:WSSecurityHandler: UM authenticate returns exception : An error was discovered processing the <wsse:Security> header. (WSSecurityEngine: Invalid timestamp The security semantics of message have expired).`
 
-**了解目錄管理**
+**瞭解目錄管理**
 
-用戶管理與支援到LDAP目錄的連接的目錄服務提供程式(DirectoryManagerService)一起打包。 如果貴組織使用非LDAP儲存庫來儲存用戶記錄，則可以建立與儲存庫一起使用的您自己的目錄服務提供程式。
+用戶管理與支援到LDAP目錄的連接的目錄服務提供程式(DirectoryManagerService)打包在一起。 如果您的組織使用非LDAP儲存庫儲存用戶記錄，則可以建立與儲存庫一起使用的您自己的目錄服務提供程式。
 
-目錄服務提供程式應用戶管理的請求從用戶儲存中檢索記錄。 「用戶管理」定期在資料庫中快取用戶和組記錄，以提高效能。
+目錄服務提供方應用戶管理的請求從用戶儲存中檢索記錄。 用戶管理會定期在資料庫中快取用戶和組記錄以提高效能。
 
-目錄服務提供程式可用於將用戶管理資料庫與用戶儲存同步。 此步驟可確保所有使用者目錄資訊以及所有使用者和群組記錄都為最新狀態。
+目錄服務提供程式可用於將用戶管理資料庫與用戶儲存同步。 此步驟確保所有用戶目錄資訊以及所有用戶和組記錄都是最新的。
 
-此外， DirectoryManagerService還允許您建立和管理域。 網域會定義不同的使用者基礎。 網域的界限通常會根據組織的結構方式或使用者存放區的設定方式來定義。 用戶管理域提供身份驗證提供程式和目錄服務提供程式使用的配置設定。
+此外， DirectoryManagerService還使您能夠建立和管理域。 域定義不同的用戶基。 域的邊界通常根據組織的結構方式或用戶儲存的設定來定義。 用戶管理域提供身份驗證提供程式和目錄服務提供程式使用的配置設定。
 
-在「用戶管理」導出的配置XML中，具有屬性值的根節點 `Domains` 包含為「用戶管理」定義的每個域的XML元素。 這些元素中的每個都包含其他元素，這些元素定義與特定服務提供商關聯的域的各個方面。
+在用戶管理導出的配置XML中，屬性值為 `Domains` 包含為用戶管理定義的每個域的XML元素。 這些元素中的每一個都包含定義與特定服務提供商相關聯的域的各個方面的其他元素。
 
-**了解objectSID值**
+**瞭解objectSID值**
 
-使用Active Directory時，請務必了解 `objectSID` 值不是跨多個網域的唯一屬性。 此值儲存對象的安全標識符。 在多個網域環境中（例如，網域樹狀結構）, `objectSID` 值可以不同。
+使用Active Directory時，必須瞭解 `objectSID` 值不是跨多個域的唯一屬性。 此值儲存對象的安全標識符。 在多域環境中（例如，域樹）, `objectSID` 值可以不同。
 
-安 `objectSID` 如果對象從一個Active Directory域移動到另一個域，則值將更改。 某些物件具有相同 `objectSID` 值。 例如，BUILDIN\Administrators、BUILDIN\Power Users等組具有相同的 `objectSID` 值（無論網域為何）。 這些 `objectSID` 值是眾所周知的。
+安 `objectSID` 如果將對象從一個Active Directory域移動到另一個域，則值將更改。 某些對象具有相同 `objectSID` 域中任何位置的值。 例如，BUILTIN\Administrators、BUILTIN\Power Users等組將具有相同的 `objectSID` 無論域如何。 這些 `objectSID` 值是眾所周知的。
 
-## 新增使用者 {#adding-users}
+## 添加用戶 {#adding-users}
 
-您可以使用目錄管理器服務API（Java和Web服務），以寫程式方式將用戶添加到AEM Forms。 新增使用者後，當執行需要使用者的服務作業時，即可使用該使用者。 例如，您可以將任務指派給新使用者。
+可以使用目錄管理器服務API（Java和Web服務）以寫程式方式將用戶添加到AEM Forms。 添加用戶後，在執行需要用戶的服務操作時可以使用該用戶。 例如，您可以將任務分配給新用戶。
 
 ### 步驟摘要 {#summary-of-steps}
 
 要添加用戶，請執行以下步驟：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 1. 建立DirectoryManagerService客戶端。
-1. 定義使用者資訊。
-1. 新增使用者至AEM Forms。
-1. 確認已新增使用者。
+1. 定義用戶資訊。
+1. 將用戶添加到AEM Forms。
+1. 驗證是否已添加用戶。
 
-**包含項目檔案**
+**包括項目檔案**
 
-在您的開發專案中加入必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用Web服務，請包含代理檔案。
+在開發項目中包括必要的檔案。 如果使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果使用Web服務，請包括代理檔案。
 
 **建立DirectoryManagerService客戶端**
 
 在以寫程式方式執行目錄管理器服務操作之前，請建立目錄管理器服務API客戶端。
 
-**定義使用者資訊**
+**定義用戶資訊**
 
-使用目錄管理器服務API添加新用戶時，請為該用戶定義資訊。 通常，新增使用者時，您會定義下列值：
+使用目錄管理器服務API添加新用戶時，請定義該用戶的資訊。 通常，在添加新用戶時，您會定義以下值：
 
-* **域名**:使用者所屬的網域(例如 `DefaultDom`)。
-* **使用者識別碼值**:使用者的識別碼值(例如 `wblue`)。
-* **主體類型**:使用者的類型(例如，您可以指定 `USER)`.
-* **指定名稱**:使用者的指定名稱(例如 `Wendy`)。
-* **姓**:用戶的家族名稱(例如 `Blue)`.
-* **地區**:用戶的地區資訊。
+* **域名**:用戶所屬的域(例如， `DefaultDom`)。
+* **用戶標識符值**:用戶的標識符值(例如， `wblue`)。
+* **主體類型**:用戶類型(例如，可以指定 `USER)`。
+* **給定名稱**:用戶的指定名稱(例如， `Wendy`)。
+* **姓氏**:用戶的族名(例如， `Blue)`。
+* **區域設定**:用戶的區域設定資訊。
 
-**新增使用者至AEM Forms**
+**將用戶添加到AEM Forms**
 
-定義使用者資訊後，即可將使用者新增至AEM Forms。 若要新增使用者，請叫用 `DirectoryManagerServiceClient` 物件 `createLocalUser` 方法。
+定義用戶資訊後，可將用戶添加到AEM Forms。 要添加用戶，請調用 `DirectoryManagerServiceClient` 對象 `createLocalUser` 的雙曲餘切值。
 
-**確認已新增使用者**
+**驗證是否已添加用戶**
 
-您可以確認已新增使用者，以確保未發生任何問題。 使用使用者識別碼值來找出新使用者。
+您可以驗證是否添加了用戶以確保未出現任何問題。 使用用戶標識符值查找新用戶。
 
 **另請參閱**
 
-[使用Java API新增使用者](users.md#add-users-using-the-java-api)
+[使用Java API添加用戶](users.md#add-users-using-the-java-api)
 
-[使用網站服務API新增使用者](users.md#add-users-using-the-web-service-api)
+[使用Web服務API添加用戶](users.md#add-users-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 [刪除用戶](users.md#deleting-users)
 
-### 使用Java API新增使用者 {#add-users-using-the-java-api}
+### 使用Java API添加用戶 {#add-users-using-the-java-api}
 
 使用目錄管理器服務API(Java)添加用戶：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-usermanager-client.jar。
+   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-usermanager-client.jar。
 
 1. 建立DirectoryManagerServices客戶端。
 
-   建立 `DirectoryManagerServiceClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 包含連接屬性的對象。
+   建立 `DirectoryManagerServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 包含連接屬性的對象。
 
-1. 定義使用者資訊。
+1. 定義用戶資訊。
 
-   * 建立 `UserImpl` 物件，使用其建構子。
-   * 叫用 `UserImpl` 物件 `setDomainName` 方法。 傳遞指定網域名稱的字串值。
-   * 通過調用 `UserImpl` 物件 `setPrincipalType` 方法。 傳遞指定使用者類型的字串值。 例如，您可以指定 `USER`.
-   * 叫用 `UserImpl` 物件 `setUserid` 方法。 傳遞指定使用者識別碼值的字串值。 例如，您可以指定 `wblue`.
-   * 叫用 `UserImpl` 物件 `setCanonicalName` 方法。 傳遞指定使用者標準名稱的字串值。 例如，您可以指定 `wblue`.
-   * 叫用 `UserImpl` 物件 `setGivenName` 方法。 傳遞指定使用者指定名稱的字串值。 例如，您可以指定 `Wendy`.
-   * 通過調用 `UserImpl` 物件 `setFamilyName` 方法。 傳遞一個字串值，該字串值指定用戶的姓。 例如，您可以指定 `Blue`.
+   * 建立 `UserImpl` 對象。
+   * 通過調用 `UserImpl` 對象 `setDomainName` 的雙曲餘切值。 傳遞指定域名的字串值。
+   * 通過調用 `UserImpl` 對象 `setPrincipalType` 的雙曲餘切值。 傳遞指定用戶類型的字串值。 例如，可以指定 `USER`。
+   * 通過調用 `UserImpl` 對象 `setUserid` 的雙曲餘切值。 傳遞指定用戶標識符值的字串值。 例如，可以指定 `wblue`。
+   * 通過調用 `UserImpl` 對象 `setCanonicalName` 的雙曲餘切值。 傳遞一個指定用戶規範名稱的字串值。 例如，可以指定 `wblue`。
+   * 通過調用 `UserImpl` 對象 `setGivenName` 的雙曲餘切值。 傳遞一個字串值，該值指定用戶的指定名稱。 例如，可以指定 `Wendy`。
+   * 通過調用 `UserImpl` 對象 `setFamilyName` 的雙曲餘切值。 傳遞一個指定用戶族名的字串值。 例如，可以指定 `Blue`。
 
    >[!NOTE]
    >
-   >調用屬於 `UserImpl` 物件來設定其他值。 例如，可以通過調用 `UserImpl` 物件 `setLocale` 方法。
+   >調用屬於 `UserImpl` 對象以設定其他值。 例如，可以通過調用 `UserImpl` 對象 `setLocale` 的雙曲餘切值。
 
-1. 新增使用者至AEM Forms。
+1. 將用戶添加到AEM Forms。
 
-   叫用 `DirectoryManagerServiceClient` 物件 `createLocalUser` 方法，並傳遞下列值：
+   調用 `DirectoryManagerServiceClient` 對象 `createLocalUser` 方法並傳遞以下值：
 
-   * 此 `UserImpl` 代表新使用者的物件
-   * 代表使用者密碼的字串值
+   * 的 `UserImpl` 表示新用戶的對象
+   * 表示用戶密碼的字串值
 
-   此 `createLocalUser` 方法返回指定本地用戶標識符值的字串值。
+   的 `createLocalUser` 方法返回指定本地用戶標識符值的字串值。
 
-1. 確認已新增使用者。
+1. 驗證是否已添加用戶。
 
-   * 建立 `PrincipalSearchFilter` 物件，使用其建構子。
-   * 叫用 `PrincipalSearchFilter` 物件 `setUserId` 方法。 傳遞代表使用者識別碼值的字串值。
-   * 叫用 `DirectoryManagerServiceClient` 物件 `findPrincipals` 方法並傳遞 `PrincipalSearchFilter` 物件。 此方法會傳回 `java.util.List` 例項，其中每個元素都 `User` 物件。 重複 `java.util.List` 例項來尋找使用者。
+   * 建立 `PrincipalSearchFilter` 對象。
+   * 通過調用 `PrincipalSearchFilter` 對象 `setUserId` 的雙曲餘切值。 傳遞表示用戶標識符值的字串值。
+   * 調用 `DirectoryManagerServiceClient` 對象 `findPrincipals` 方法和通過 `PrincipalSearchFilter` 的雙曲餘切值。 此方法返回 `java.util.List` 實例，其中每個元素都是 `User` 的雙曲餘切值。 迭代 `java.util.List` 實例以查找用戶。
 
 **另請參閱**
 
 [步驟摘要](users.md#summary-of-steps)
 
-[快速入門（SOAP模式）:使用Java API新增使用者](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API添加用戶](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用網站服務API新增使用者 {#add-users-using-the-web-service-api}
+### 使用Web服務API添加用戶 {#add-users-using-the-web-service-api}
 
 使用目錄管理器服務API（Web服務）添加用戶：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 請確保為服務引用使用以下WSDL定義： `http://localhost:8080/soap/services/DirectoryManagerService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft.NET項目。 確保將以下WSDL定義用於服務引用： `http://localhost:8080/soap/services/DirectoryManagerService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >取代 `localhost` 和托管AEM Forms之伺服器的IP位址。
+   >替換 `localhost` IP地址為AEM Forms。
 
 1. 建立DirectoryManagerService客戶端。
 
-   * 建立 `DirectoryManagerServiceClient` 物件，使用其預設建構函式。
-   * 建立 `DirectoryManagerServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`)。 您不需要使用 `lc_version` 屬性。 建立服務參考時，會使用此屬性。 請確定您指定 `?blob=mtom`.
-   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `DirectoryManagerServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
-   * 設定 `System.ServiceModel.BasicHttpBinding` 物件 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
-   * 通過執行以下任務來啟用基本HTTP身份驗證：
+   * 建立 `DirectoryManagerServiceClient` 對象。
+   * 建立 `DirectoryManagerServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務(例如， `http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`)。 你不需要 `lc_version` 屬性。 建立服務引用時使用此屬性。 確保指定 `?blob=mtom`。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `DirectoryManagerServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
+   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
+   * 通過執行以下任務啟用基本HTTP身份驗證：
 
-      * 將AEM表單使用者名稱指派給欄位 `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`.
-      * 為欄位分配相應的密碼值 `DirectoryManagerServiceClient.ClientCredentials.UserName.Password`.
-      * 指派常數值 `HttpClientCredentialType.Basic` 欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 欄位 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將表AEM單用戶名分配給欄位 `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的密碼值分配給欄位 `DirectoryManagerServiceClient.ClientCredentials.UserName.Password`。
+      * 分配常數值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+      * 分配常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 到 `BasicHttpBindingSecurity.Security.Mode`。
 
-1. 定義使用者資訊。
+1. 定義用戶資訊。
 
-   * 建立 `UserImpl` 物件，使用其建構子。
-   * 將字串值指派給 `UserImpl` 物件 `domainName` 欄位。
-   * 通過為 `UserImpl` 物件 `principalType` 欄位。 例如，您可以指定 `USER`.
-   * 將字串值指派給 `UserImpl` 物件 `userid` 欄位。
-   * 將字串值指派給 `UserImpl` 物件 `canonicalName` 欄位。
-   * 將字串值指派給 `UserImpl` 物件 `givenName` 欄位。
-   * 通過為 `UserImpl` 物件 `familyName` 欄位。
+   * 建立 `UserImpl` 對象。
+   * 通過將字串值分配給 `UserImpl` 對象 `domainName` 的子菜單。
+   * 通過將字串值分配給 `UserImpl` 對象 `principalType` 的子菜單。 例如，可以指定 `USER`。
+   * 通過將字串值分配給 `UserImpl` 對象 `userid` 的子菜單。
+   * 通過將字串值分配給 `UserImpl` 對象 `canonicalName` 的子菜單。
+   * 通過將字串值分配給 `UserImpl` 對象 `givenName` 的子菜單。
+   * 通過為 `UserImpl` 對象 `familyName` 的子菜單。
 
-1. 新增使用者至AEM Forms。
+1. 將用戶添加到AEM Forms。
 
-   叫用 `DirectoryManagerServiceClient` 物件 `createLocalUser` 方法，並傳遞下列值：
+   調用 `DirectoryManagerServiceClient` 對象 `createLocalUser` 方法並傳遞以下值：
 
-   * 此 `UserImpl` 代表新使用者的物件
-   * 代表使用者密碼的字串值
+   * 的 `UserImpl` 表示新用戶的對象
+   * 表示用戶密碼的字串值
 
-   此 `createLocalUser` 方法返回指定本地用戶標識符值的字串值。
+   的 `createLocalUser` 方法返回指定本地用戶標識符值的字串值。
 
-1. 確認已新增使用者。
+1. 驗證是否已添加用戶。
 
-   * 建立 `PrincipalSearchFilter` 物件，使用其建構子。
-   * 為 `PrincipalSearchFilter` 物件 `userId` 欄位。
-   * 叫用 `DirectoryManagerServiceClient` 物件 `findPrincipals` 方法並傳遞 `PrincipalSearchFilter` 物件。 此方法會傳回 `MyArrayOfUser` 集合物件，其中每個元素都是 `User` 物件。 重複 `MyArrayOfUser` 集合，以找出使用者。
+   * 建立 `PrincipalSearchFilter` 對象。
+   * 通過將表示用戶標識符值的字串值分配給 `PrincipalSearchFilter` 對象 `userId` 的子菜單。
+   * 調用 `DirectoryManagerServiceClient` 對象 `findPrincipals` 方法和通過 `PrincipalSearchFilter` 的雙曲餘切值。 此方法返回 `MyArrayOfUser` 集合對象，其中每個元素都是 `User` 的雙曲餘切值。 迭代 `MyArrayOfUser` 以查找用戶。
 
 **另請參閱**
 
 [步驟摘要](users.md#summary-of-steps)
 
-[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 刪除用戶 {#deleting-users}
 
-您可以使用目錄管理器服務API（Java和Web服務），以程式設計方式從AEM Forms中刪除用戶。 刪除用戶後，無法再使用該用戶執行需要用戶的服務操作。 例如，您不能將任務分配給已刪除的用戶。
+可以使用目錄管理器服務API（Java和Web服務）以寫程式方式從AEM Forms刪除用戶。 刪除用戶後，用戶將不能再用於執行需要用戶的服務操作。 例如，不能將任務分配給已刪除的用戶。
 
 ### 步驟摘要 {#summary_of_steps-1}
 
 要刪除用戶，請執行以下步驟：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 1. 建立DirectoryManagerService客戶端。
-1. 指定要刪除的使用者。
-1. 從AEM Forms刪除使用者。
+1. 指定要刪除的用戶。
+1. 從AEM Forms刪除用戶。
 
-**包含項目檔案**
+**包括項目檔案**
 
-在您的開發專案中加入必要的檔案。 如果您是使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用Web服務，請包含代理檔案。
+在開發項目中包括必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果使用Web服務，請包括代理檔案。
 
 **建立DirectoryManagerService客戶端**
 
 在以寫程式方式執行目錄管理器服務API操作之前，請建立目錄管理器服務客戶端。
 
-**指定要刪除的使用者**
+**指定要刪除的用戶**
 
-您可以使用使用者的識別碼值來指定要刪除的使用者。
+可以使用用戶的標識符值指定要刪除的用戶。
 
-**從AEM Forms刪除使用者**
+**從AEM Forms刪除用戶**
 
-若要刪除使用者，請叫用 `DirectoryManagerServiceClient` 物件 `deleteLocalUser` 方法。
+要刪除用戶，請調用 `DirectoryManagerServiceClient` 對象 `deleteLocalUser` 的雙曲餘切值。
 
 **另請參閱**
 
-[使用Java API刪除使用者](users.md#delete-users-using-the-java-api)
+[使用Java API刪除用戶](users.md#delete-users-using-the-java-api)
 
-[使用網站服務API刪除使用者](users.md#delete-users-using-the-web-service-api)
+[使用Web服務API刪除用戶](users.md#delete-users-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[新增使用者](users.md#adding-users)
+[添加用戶](users.md#adding-users)
 
-### 使用Java API刪除使用者 {#delete-users-using-the-java-api}
+### 使用Java API刪除用戶 {#delete-users-using-the-java-api}
 
 使用目錄管理器服務API(Java)刪除用戶：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-usermanager-client.jar。
+   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-usermanager-client.jar。
 
 1. 建立DirectoryManagerService客戶端。
 
-   建立 `DirectoryManagerServiceClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 包含連接屬性的對象。
+   建立 `DirectoryManagerServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 包含連接屬性的對象。
 
-1. 指定要刪除的使用者。
+1. 指定要刪除的用戶。
 
-   * 建立 `PrincipalSearchFilter` 物件，使用其建構子。
-   * 叫用 `PrincipalSearchFilter` 物件 `setUserId` 方法。 傳遞代表使用者識別碼值的字串值。
-   * 叫用 `DirectoryManagerServiceClient` 物件 `findPrincipals` 方法並傳遞 `PrincipalSearchFilter` 物件。 此方法會傳回 `java.util.List` 例項，其中每個元素都 `User` 物件。 重複 `java.util.List` 例項來尋找要刪除的使用者。
+   * 建立 `PrincipalSearchFilter` 對象。
+   * 通過調用 `PrincipalSearchFilter` 對象 `setUserId` 的雙曲餘切值。 傳遞表示用戶標識符值的字串值。
+   * 調用 `DirectoryManagerServiceClient` 對象 `findPrincipals` 方法和通過 `PrincipalSearchFilter` 的雙曲餘切值。 此方法返回 `java.util.List` 實例，其中每個元素都是 `User` 的雙曲餘切值。 迭代 `java.util.List` 實例以查找要刪除的用戶。
 
-1. 從AEM Forms刪除使用者。
+1. 從AEM Forms刪除用戶。
 
-   叫用 `DirectoryManagerServiceClient` 物件 `deleteLocalUser` 方法，並傳遞 `User` 物件 `oid` 欄位。 叫用 `User` 物件 `getOid` 方法。 使用 `User` 從 `java.util.List` 例項。
+   調用 `DirectoryManagerServiceClient` 對象 `deleteLocalUser` 方法並傳遞 `User` 對象 `oid` 的子菜單。 調用 `User` 對象 `getOid` 的雙曲餘切值。 使用 `User` 從 `java.util.List` 實例。
 
 **另請參閱**
 
 [步驟摘要](users.md#summary-of-steps)
 
-[快速入門（EJB模式）:使用Java API刪除使用者](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
+[快速啟動（EJB模式）:使用Java API刪除用戶](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API刪除使用者](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API刪除用戶](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用網站服務API刪除使用者 {#delete-users-using-the-web-service-api}
+### 使用Web服務API刪除用戶 {#delete-users-using-the-web-service-api}
 
 使用目錄管理器服務API（Web服務）刪除用戶：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-usermanager-client.jar。
+   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-usermanager-client.jar。
 
 1. 建立DirectoryManagerService客戶端。
 
-   * 建立 `DirectoryManagerServiceClient` 物件，使用其預設建構函式。
-   * 建立 `DirectoryManagerServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`)。 您不需要使用 `lc_version` 屬性。 建立服務參考時，會使用此屬性。 請確定您指定 `blob=mtom.`
-   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `DirectoryManagerServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
-   * 設定 `System.ServiceModel.BasicHttpBinding` 物件 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
-   * 通過執行以下任務來啟用基本HTTP身份驗證：
+   * 建立 `DirectoryManagerServiceClient` 對象。
+   * 建立 `DirectoryManagerServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務(例如， `http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`)。 你不需要 `lc_version` 屬性。 建立服務引用時使用此屬性。 確保指定 `blob=mtom.`
+   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `DirectoryManagerServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
+   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
+   * 通過執行以下任務啟用基本HTTP身份驗證：
 
-      * 將AEM表單使用者名稱指派給欄位 `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`.
-      * 為欄位分配相應的密碼值 `DirectoryManagerServiceClient.ClientCredentials.UserName.Password`.
-      * 指派常數值 `HttpClientCredentialType.Basic` 欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 欄位 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將表AEM單用戶名分配給欄位 `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的密碼值分配給欄位 `DirectoryManagerServiceClient.ClientCredentials.UserName.Password`。
+      * 分配常數值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+      * 分配常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 到 `BasicHttpBindingSecurity.Security.Mode`。
 
-1. 指定要刪除的使用者。
+1. 指定要刪除的用戶。
 
-   * 建立 `PrincipalSearchFilter` 物件，使用其建構子。
-   * 將字串值指派給 `PrincipalSearchFilter` 物件 `userId` 欄位。
-   * 叫用 `DirectoryManagerServiceClient` 物件 `findPrincipals` 方法並傳遞 `PrincipalSearchFilter` 物件。 此方法會傳回 `MyArrayOfUser` 集合物件，其中每個元素都是 `User` 物件。 重複 `MyArrayOfUser` 集合，以找出使用者。 此 `User` 從 `MyArrayOfUser` 集合物件可用來刪除使用者。
+   * 建立 `PrincipalSearchFilter` 對象。
+   * 通過將字串值分配給 `PrincipalSearchFilter` 對象 `userId` 的子菜單。
+   * 調用 `DirectoryManagerServiceClient` 對象 `findPrincipals` 方法和通過 `PrincipalSearchFilter` 的雙曲餘切值。 此方法返回 `MyArrayOfUser` 集合對象，其中每個元素都是 `User` 的雙曲餘切值。 迭代 `MyArrayOfUser` 以查找用戶。 的 `User` 從 `MyArrayOfUser` 集合對象用於刪除用戶。
 
-1. 從AEM Forms刪除使用者。
+1. 從AEM Forms刪除用戶。
 
-   將 `User` 物件 `oid` 欄位值 `DirectoryManagerServiceClient` 物件 `deleteLocalUser` 方法。
+   通過傳遞 `User` 對象 `oid` 欄位值 `DirectoryManagerServiceClient` 對象 `deleteLocalUser` 的雙曲餘切值。
 
 **另請參閱**
 
 [步驟摘要](users.md#summary-of-steps)
 
-[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 建立群組 {#creating-groups}
+## 建立組 {#creating-groups}
 
-您可以使用目錄管理器服務API（Java和Web服務）以寫程式方式建立AEM Forms組。 建立群組後，您可以使用該群組執行需要群組的服務操作。 例如，您可以指派使用者至新群組。 (請參閱 [管理使用者和群組](users.md#managing-users-and-groups).)
+可以使用目錄管理器服務API（Java和Web服務）以寫程式方式建立AEM Forms組。 建立組後，可使用該組執行需要組的服務操作。 例如，可以將用戶分配給新組。 (請參閱 [管理用戶和組](users.md#managing-users-and-groups)。)
 
 ### 步驟摘要 {#summary_of_steps-2}
 
 要建立組，請執行以下步驟：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 1. 建立DirectoryManagerService客戶端。
 1. 確定組不存在。
-1. 建立群組。
+1. 建立組。
 1. 對組執行操作。
 
-**包含項目檔案**
+**包括項目檔案**
 
-在您的開發專案中加入必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。
+在開發項目中包括必要的檔案。 如果使用Java建立客戶端應用程式，請包括必要的JAR檔案。
 
 必須將以下JAR檔案添加到項目的類路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(若AEM Forms部署在JBoss上則為必要)
-* jbossall-client.jar(若AEM Forms部署在JBoss上則為必要)
+* adobe-utilities.jar(在JBoss上部署AEM Forms時為必需)
+* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
 
-有關這些JAR檔案的位置的資訊，請參見 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+有關這些JAR檔案的位置的資訊，請參見 [包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **建立DirectoryManagerService客戶端**
 
@@ -416,326 +416,326 @@ ht-degree: 0%
 
 **確定組是否存在**
 
-建立群組時，請確定群組不存在於相同的網域中。 也就是說，兩個群組在相同網域內不能有相同的名稱。 要執行此任務，請執行搜索並根據兩個值篩選搜索結果。 將主體類型設定為 `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP` 以確保只傳回群組。 同時，請務必指定網域名稱。
+建立組時，請確保組不存在於同一域中。 也就是說，兩個組不能在同一域中具有相同的名稱。 要執行此任務，請執行搜索並根據兩個值篩選搜索結果。 將承擔者類型設定為 `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP` 確保僅返回組。 另外，請確保指定域名。
 
-**建立群組**
+**建立組**
 
-在您確定該組不存在於域中後，請建立該組並指定以下屬性：
+確定域中不存在組後，請建立組並指定以下屬性：
 
-* **CommonName**:群組的名稱。
-* **網域**:新增群組的網域。
-* **說明**:群組的說明。
+* **公用名**:組的名稱。
+* **域**:添加組的域。
+* **說明**:組的說明。
 
 **對組執行操作**
 
-建立群組後，您可以使用群組執行動作。 例如，您可以新增使用者至群組。 若要將使用者新增至群組，請擷取該使用者和群組的唯一識別碼值。 將這些值傳遞至 `addPrincipalToLocalGroup` 方法。
+建立組後，可以使用該組執行操作。 例如，可以向組中添加用戶。 要向組添加用戶，請檢索用戶和組的唯一標識符值。 將這些值傳遞給 `addPrincipalToLocalGroup` 的雙曲餘切值。
 
 **另請參閱**
 
-[使用Java API建立群組](users.md#create-groups-using-the-java-api)
+[使用Java API建立組](users.md#create-groups-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[新增使用者](users.md#adding-users)
+[添加用戶](users.md#adding-users)
 
 [刪除用戶](users.md#deleting-users)
 
-### 使用Java API建立群組 {#create-groups-using-the-java-api}
+### 使用Java API建立組 {#create-groups-using-the-java-api}
 
 使用目錄管理器服務API(Java)建立組：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-usermanager-client.jar。
+   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-usermanager-client.jar。
 
 1. 建立DirectoryManagerService客戶端。
 
-   建立 `DirectoryManagerServiceClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 包含連接屬性的對象。
+   建立 `DirectoryManagerServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 包含連接屬性的對象。
 
 1. 確定組是否存在。
 
-   * 建立 `PrincipalSearchFilter` 物件，使用其建構子。
-   * 通過調用 `PrincipalSearchFilter` 物件 `setPrincipalType` 物件。 傳遞值 `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP`.
-   * 叫用 `PrincipalSearchFilter` 物件 `setSpecificDomainName` 物件。 傳遞指定網域名稱的字串值。
-   * 要查找組，請調用 `DirectoryManagerServiceClient` 物件 `findPrincipals` 方法（主體可以是組）。 傳遞 `PrincipalSearchFilter` 指定主體類型和域名的對象。 此方法會傳回 `java.util.List` 例項，其中每個元素都是 `Group` 例項。 每個群組例項都符合使用 `PrincipalSearchFilter` 物件。
-   * 重複 `java.util.List` 例項。 對於每個元素，擷取群組名稱。 確保組名不等於新組名。
+   * 建立 `PrincipalSearchFilter` 對象。
+   * 通過調用 `PrincipalSearchFilter` 對象 `setPrincipalType` 的雙曲餘切值。 傳遞值 `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP`。
+   * 通過調用 `PrincipalSearchFilter` 對象 `setSpecificDomainName` 的雙曲餘切值。 傳遞指定域名的字串值。
+   * 要查找組，請調用 `DirectoryManagerServiceClient` 對象 `findPrincipals` 方法（主體可以是組）。 通過 `PrincipalSearchFilter` 指定主體類型和域名的對象。 此方法返回 `java.util.List` 實例，其中每個元素都是 `Group` 實例。 每個組實例都符合使用 `PrincipalSearchFilter` 的雙曲餘切值。
+   * 迭代 `java.util.List` 實例。 對於每個元素，檢索組名稱。 確保組名不等於新組名。
 
-1. 建立群組。
+1. 建立組。
 
-   * 如果群組不存在，請叫用 `Group` 物件 `setCommonName` 方法，並傳遞指定群組名稱的字串值。
-   * 叫用 `Group` 物件 `setDescription` 方法，並傳遞指定群組說明的字串值。
-   * 叫用 `Group` 物件 `setDomainName` 方法，並傳遞指定網域名稱的字串值。
-   * 叫用 `DirectoryManagerServiceClient` 物件 `createLocalGroup` 方法並傳遞 `Group` 例項。
+   * 如果組不存在，請調用 `Group` 對象 `setCommonName` 方法並傳遞一個指定組名的字串值。
+   * 調用 `Group` 對象 `setDescription` 方法，並傳遞一個指定組說明的字串值。
+   * 調用 `Group` 對象 `setDomainName` 方法並傳遞一個指定域名的字串值。
+   * 調用 `DirectoryManagerServiceClient` 對象 `createLocalGroup` 方法和通過 `Group` 實例。
 
-   此 `createLocalUser` 方法返回指定本地用戶標識符值的字串值。
+   的 `createLocalUser` 方法返回指定本地用戶標識符值的字串值。
 
 1. 對組執行操作。
 
-   * 建立 `PrincipalSearchFilter` 物件，使用其建構子。
-   * 叫用 `PrincipalSearchFilter` 物件 `setUserId` 方法。 傳遞代表使用者識別碼值的字串值。
-   * 叫用 `DirectoryManagerServiceClient` 物件 `findPrincipals` 方法並傳遞 `PrincipalSearchFilter` 物件。 此方法會傳回 `java.util.List` 例項，其中每個元素都 `User` 物件。 重複 `java.util.List` 例項來尋找使用者。
-   * 叫用 `DirectoryManagerServiceClient` 物件 `addPrincipalToLocalGroup` 方法。 傳遞的傳回值 `User` 物件 `getOid` 方法。 傳遞的傳回值 `Group` 對象 `getOid` 方法(使用 `Group` 代表新群組的例項)。
+   * 建立 `PrincipalSearchFilter` 對象。
+   * 通過調用 `PrincipalSearchFilter` 對象 `setUserId` 的雙曲餘切值。 傳遞表示用戶標識符值的字串值。
+   * 調用 `DirectoryManagerServiceClient` 對象 `findPrincipals` 方法和通過 `PrincipalSearchFilter` 的雙曲餘切值。 此方法返回 `java.util.List` 實例，其中每個元素都是 `User` 的雙曲餘切值。 迭代 `java.util.List` 實例以查找用戶。
+   * 通過調用 `DirectoryManagerServiceClient` 對象 `addPrincipalToLocalGroup` 的雙曲餘切值。 傳遞的返回值 `User` 對象 `getOid` 的雙曲餘切值。 傳遞的返回值 `Group` 對象 `getOid` 方法(使用 `Group` 表示新組的實例)。
 
 **另請參閱**
 
 [步驟摘要](users.md#summary-of-steps)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 管理使用者和群組 {#managing-users-and-groups}
+## 管理用戶和組 {#managing-users-and-groups}
 
-本主題說明如何使用(Java)以程式設計方式指派、移除和查詢網域、使用者和群組。
-
->[!NOTE]
->
->設定網域時，您必須為群組和使用者設定唯一識別碼。 所選屬性不僅在LDAP環境中是唯一的，而且也必須是不可變的，並且在目錄中不會更改。 此屬性也必須是簡單的字串資料類型(Active Directory 2000/2003當前允許的唯一例外是 `"objectsid"`，此為二進位值)。 Novell eDirectory屬性 `"GUID"`，例如不是簡單的字串資料類型，因此無法運作。
-
-* 對於Active Directory，請使用 `"objectsid"`.
-* 對於SunOne，請使用 `"nsuniqueid"`.
+本主題介紹如何使用(Java)以寫程式方式分配、刪除和查詢域、用戶和組。
 
 >[!NOTE]
 >
->不支援在LDAP目錄同步正在進行時建立多個本地用戶和組。 嘗試此程式可能會導致錯誤。
+>配置域時，必須為組和用戶設定唯一標識符。 所選屬性不僅必須在LDAP環境中是唯一的，而且必須是不可變的，不會在目錄中更改。 此屬性還必須是簡單的字串資料類型(Active Directory 2000/2003當前允許的唯一例外是 `"objectsid"`，即二進位值)。 Novell eDirectory屬性 `"GUID"`例如，不是簡單的字串資料類型，因此無法工作。
+
+* 對於Active Directory，使用 `"objectsid"`。
+* 對於SunOne，使用 `"nsuniqueid"`。
+
+>[!NOTE]
+>
+>不支援在LDAP目錄同步進行時建立多個本地用戶和組。 嘗試此進程可能會導致錯誤。
 
 ### 步驟摘要 {#summary_of_steps-3}
 
 要管理用戶和組，請執行以下步驟：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 1. 建立DirectoryManagerService客戶端。
 1. 調用相應的用戶或組操作。
 
-**包含項目檔案**
+**包括項目檔案**
 
-在您的開發專案中加入必要的檔案。 如果您使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
+在開發項目中包括必要的檔案。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
 
 **建立DirectoryManagerService客戶端**
 
-在以寫程式方式執行目錄管理器服務操作之前，必須建立目錄管理器服務客戶端。 使用Java API，您可借由建立 `DirectoryManagerServiceClient` 物件。 有了Web服務API，您可以建立 `DirectoryManagerServiceService` 物件。
+在以寫程式方式執行目錄管理器服務操作之前，必須建立目錄管理器服務客戶端。 使用Java API，可通過建立 `DirectoryManagerServiceClient` 的雙曲餘切值。 使用Web服務API，可通過建立 `DirectoryManagerServiceService` 的雙曲餘切值。
 
 **調用相應的用戶或組操作**
 
-建立服務客戶端後，您就可以調用用戶或組管理操作。 服務客戶端允許您分配、刪除和查詢域、用戶和組。 請注意，可以將目錄主體或本地主體添加到本地組，但無法將本地主體添加到目錄組。
+建立服務客戶端後，可以調用用戶或組管理操作。 服務客戶端允許您分配、刪除和查詢域、用戶和組。 請注意，可以將目錄主體或本地主體添加到本地組，但無法將本地主體添加到目錄組。
 
 **另請參閱**
 
-[使用Java API管理使用者和群組](users.md#managing-users-and-groups-using-the-java-api)
+[使用Java API管理用戶和組](users.md#managing-users-and-groups-using-the-java-api)
 
-[使用網站服務API管理使用者和群組](users.md#managing-users-and-groups-using-the-web-service-api)
+[使用Web服務API管理用戶和組](users.md#managing-users-and-groups-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[使用者管理員API快速入門](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
+[用戶管理器API快速啟動](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
 
-### 使用Java API管理使用者和群組 {#managing-users-and-groups-using-the-java-api}
+### 使用Java API管理用戶和組 {#managing-users-and-groups-using-the-java-api}
 
 要使用(Java)以寫程式方式管理用戶、組和域，請執行以下任務：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-usermanager-client.jar。 如需這些檔案的位置資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-usermanager-client.jar。 有關這些檔案位置的資訊，請參見 [包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 1. 建立DirectoryManagerService客戶端。
 
-   建立 `DirectoryManagerServiceClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 包含連接屬性的對象。 如需詳細資訊，請參閱 [設定連接屬性&#x200B;](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)*.*
+   建立 `DirectoryManagerServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 包含連接屬性的對象。 有關資訊，請參見 [設定連接屬性&#x200B;](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)*。*
 
 1. 調用相應的用戶或組操作。
 
-   要查找用戶或組，請調用 `DirectoryManagerServiceClient` 對象查找主體的方法（因為主體可以是用戶或組）。 在以下範例中， `findPrincipals` 方法(使用搜尋篩選器 `PrincipalSearchFilter` 物件)。
+   要查找用戶或組，請調用 `DirectoryManagerServiceClient` 對象查找承擔者的方法（因為承擔者可以是用戶或組）。 在下面的示例中， `findPrincipals` 使用搜索篩選器調用方法( `PrincipalSearchFilter` 對象)。
 
-   由於在此情況下，傳回值是 `java.util.List` 包含 `Principal` 對象，迭代查看結果並轉換 `Principal` 對象 `User` 或 `Group` 對象。
+   由於此情況下的返回值是 `java.util.List` 含 `Principal` 對象，迭代結果並強制轉換 `Principal` 對象 `User` 或 `Group` 對象。
 
-   使用結果 `User` 或 `Group` 對象(兩者均繼承自 `Principal` 介面)，擷取您在工作流程中需要的資訊。 例如，域名和規範名稱值組合在一起，可唯一標識主體。 這些會透過叫用 `Principal` 物件 `getDomainName` 和 `getCanonicalName` 方法。
+   使用結果 `User` 或 `Group` 對象(兩者均繼承自 `Principal` 介面)，檢索工作流中需要的資訊。 例如，域名和規範名稱值組合起來，可唯一地標識主體。 通過調用 `Principal` 對象 `getDomainName` 和 `getCanonicalName` 方法。
 
-   若要刪除本機使用者，請叫用 `DirectoryManagerServiceClient` 物件 `deleteLocalUser` 方法，並傳遞使用者的識別碼。
+   要刪除本地用戶，請調用 `DirectoryManagerServiceClient` 對象 `deleteLocalUser` 方法並傳遞用戶的標識符。
 
-   若要刪除本機群組，請叫用 `DirectoryManagerServiceClient` 物件 `deleteLocalGroup` 方法，並傳遞群組的識別碼。
+   要刪除本地組，請調用 `DirectoryManagerServiceClient` 對象 `deleteLocalGroup` 方法並傳遞組的標識符。
 
 **另請參閱**
 
 [步驟摘要](users.md#summary-of-steps)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用網站服務API管理使用者和群組 {#managing-users-and-groups-using-the-web-service-api}
+### 使用Web服務API管理用戶和組 {#managing-users-and-groups-using-the-web-service-api}
 
 要使用目錄管理器服務API（Web服務）以寫程式方式管理用戶、組和域，請執行以下任務：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   * 建立一個使用目錄管理器WSDL的Microsoft .NET客戶端程式集。 (請參閱 [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
-   * 參考Microsoft .NET客戶端程式集。 (請參閱 [建立使用Base64編碼的.NET客戶端程式集](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding).)
+   * 建立一個使用目錄管理器WSDL的Microsoft.NET客戶端程式集。 (請參閱 [使用Base64編碼調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
+   * 引用Microsoft.NET客戶端程式集。 (請參閱 [建立使用Base64編碼的.NET客戶端程式集](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)。)
 
 1. 建立DirectoryManagerService客戶端。
 
-   建立 `DirectoryManagerServiceService` 對象，使用代理類的建構子。
+   建立 `DirectoryManagerServiceService` 對象。
 
 1. 調用相應的用戶或組操作。
 
-   要查找用戶或組，請調用 `DirectoryManagerServiceService` 對象查找主體的方法（因為主體可以是用戶或組）。 在以下範例中， `findPrincipalsWithFilter` 方法(使用搜尋篩選器 `PrincipalSearchFilter` 物件)。 使用 `PrincipalSearchFilter` 對象，只有在 `isLocal` 屬性設為 `true`. 此行為與Java API的發生方式不同。
+   要查找用戶或組，請調用 `DirectoryManagerServiceService` 對象查找承擔者的方法（因為承擔者可以是用戶或組）。 在下面的示例中， `findPrincipalsWithFilter` 使用搜索篩選器調用方法( `PrincipalSearchFilter` 對象)。 使用 `PrincipalSearchFilter` 對象，僅當 `isLocal` 屬性設定為 `true`。 此行為與Java API的行為不同。
 
    >[!NOTE]
    >
-   >如果未在搜尋篩選器中指定結果的最大數量(透過 `PrincipalSearchFilter.resultsMax` 欄位)，最多將傳回1000個結果。 這與使用Java API時的行為不同，Java API的預設上限為10個結果。 此外，搜尋方法如 `findGroupMembers` 除非在搜尋篩選器中指定結果的最大數量(例如，透過 `GroupMembershipSearchFilter.resultsMax` 欄位)。 這會套用至繼承自 `GenericSearchFilter` 類別。 如需詳細資訊，請參閱 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   >如果未在搜索篩選器中指定最大結果數(通過 `PrincipalSearchFilter.resultsMax` 欄位)，最多將返回1000個結果。 這與使用Java API時的行為不同，在Java API中，預設最大值為10個結果。 另外，搜索方法如 `findGroupMembers` 除非在搜索篩選器中指定最大結果數(例如，通過 `GroupMembershipSearchFilter.resultsMax` )。 這適用於從 `GenericSearchFilter` 類。 有關詳細資訊，請參見 [AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
-   由於在此情況下，傳回值是 `object[]` 包含 `Principal` 對象，迭代查看結果並轉換 `Principal` 對象 `User` 或 `Group` 對象。
+   由於此情況下的返回值是 `object[]` 含 `Principal` 對象，迭代結果並強制轉換 `Principal` 對象 `User` 或 `Group` 對象。
 
-   使用結果 `User` 或 `Group` 對象(兩者均繼承自 `Principal` 介面)，擷取您在工作流程中需要的資訊。 例如，域名和規範名稱值組合在一起，可唯一標識主體。 這些會透過叫用 `Principal` 物件 `domainName` 和 `canonicalName` 欄位。
+   使用結果 `User` 或 `Group` 對象(兩者均繼承自 `Principal` 介面)，檢索工作流中需要的資訊。 例如，域名和規範名稱值組合起來，可唯一地標識主體。 通過調用 `Principal` 對象 `domainName` 和 `canonicalName` 的下界。
 
-   若要刪除本機使用者，請叫用 `DirectoryManagerServiceService` 物件 `deleteLocalUser` 方法，並傳遞使用者的識別碼。
+   要刪除本地用戶，請調用 `DirectoryManagerServiceService` 對象 `deleteLocalUser` 方法並傳遞用戶的標識符。
 
-   若要刪除本機群組，請叫用 `DirectoryManagerServiceService` 物件 `deleteLocalGroup` 方法，並傳遞群組的識別碼。
+   要刪除本地組，請調用 `DirectoryManagerServiceService` 對象 `deleteLocalGroup` 方法並傳遞組的標識符。
 
 **另請參閱**
 
 [步驟摘要](users.md#summary-of-steps)
 
-[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
 ## 管理角色和權限 {#managing-roles-and-permissions}
 
-本主題說明如何使用授權管理器服務API(Java)，以程式設計方式指派、移除及決定角色和權限。
+本主題介紹如何使用授權管理器服務API(Java)以寫程式方式分配、刪除和確定角色和權限。
 
-在AEM Forms, *角色* 是一組存取一或多個系統層級資源的權限。 這些權限是透過「使用者管理」建立，並由服務元件強制執行。 例如，管理員可以將「策略集作者」的角色分配給一組用戶。 然後，Rights Management將允許具有該角色的組的用戶通過管理控制台建立策略集。
+在AEM Forms, *角色* 是一組訪問一個或多個系統級資源的權限。 這些權限是通過用戶管理建立的，並由服務元件強制執行。 例如，管理員可以將「策略集作者」角色分配給一組用戶。 然後，Rights Management將允許具有該角色的組的用戶通過管理控制台建立策略集。
 
-角色有兩種類型： *預設角色* 和 *自訂角色*. 預設角色(*系統角色)* 已經住在AEM Forms了。 假定管理員不能刪除或修改預設角色，因此不可變。 因此，管理員建立的自定義角色可變，管理員隨後可修改或刪除這些角色。
+有兩種角色： *預設角色* 和 *自定義角色*。 預設角色(*系統角色* 已經住在AEM Forms。 假定預設角色不能由管理員刪除或修改，因此不可變。 因此，管理員建立的自定義角色可變。
 
-角色可讓您更輕鬆管理權限。 當角色被分配給承擔者時，一組權限被自動分配給該承擔者，並且承擔者的所有與訪問相關的特定決策都基於該整體分配的權限集。
+角色使管理權限更容易。 當角色被分配給承擔者時，一組權限被自動分配給該承擔者，並且承擔者的所有特定訪問相關決策都基於該總組分配的權限。
 
 ### 步驟摘要 {#summary_of_steps-4}
 
 要管理角色和權限，請執行以下步驟：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 1. 建立AuthorizationManagerService客戶端。
 1. 調用相應的角色或權限操作。
 
-**包含項目檔案**
+**包括項目檔案**
 
-在您的開發專案中加入必要的檔案。 如果您使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
+在開發項目中包括必要的檔案。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
 
 **建立AuthorizationManagerService客戶端**
 
-在以寫程式方式執行用戶管理授權管理器服務操作之前，必須建立授權管理器服務客戶端。 使用Java API，您可以建立 `AuthorizationManagerServiceClient` 物件。
+在以寫程式方式執行User Management AuthorizationManagerService操作之前，必須建立AuthorizationManagerService客戶端。 使用Java API，可通過建立 `AuthorizationManagerServiceClient` 的雙曲餘切值。
 
 **調用適當的角色或權限操作**
 
-建立服務客戶端後，您就可以調用角色或權限操作。 服務客戶端允許您分配、刪除和確定角色和權限。
+建立服務客戶端後，可以調用角色或權限操作。 服務客戶端允許您分配、刪除和確定角色和權限。
 
 **另請參閱**
 
 [使用Java API管理角色和權限](users.md#managing-roles-and-permissions-using-the-java-api)
 
-[使用網站服務API管理角色和權限](users.md#managing-roles-and-permissions-using-the-web-service-api)
+[使用Web服務API管理角色和權限](users.md#managing-roles-and-permissions-using-the-web-service-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[使用者管理員API快速入門](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
+[用戶管理器API快速啟動](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
 
 ### 使用Java API管理角色和權限 {#managing-roles-and-permissions-using-the-java-api}
 
 要使用授權管理器服務API(Java)管理角色和權限，請執行以下任務：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-usermanager-client.jar。
+   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-usermanager-client.jar。
 
 1. 建立AuthorizationManagerService客戶端。
 
-   建立 `AuthorizationManagerServiceClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 包含連接屬性的對象。
+   建立 `AuthorizationManagerServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 包含連接屬性的對象。
 
 1. 調用相應的角色或權限操作。
 
-   要將角色分配給承擔者，請調用 `AuthorizationManagerServiceClient` 物件 `assignRole` 方法，並傳遞下列值：
+   要將角色分配給承擔者，請調用 `AuthorizationManagerServiceClient` 對象 `assignRole` 方法並傳遞以下值：
 
    * A `java.lang.String` 包含角色標識符的對象
-   * 陣列 `java.lang.String` 包含主標識符的對象。
+   * 一組 `java.lang.String` 包含主體標識符的對象。
 
-   要從主體中刪除角色，請調用 `AuthorizationManagerServiceClient` 物件 `unassignRole` 方法，並傳遞下列值：
+   要從承擔者中刪除角色，請調用 `AuthorizationManagerServiceClient` 對象 `unassignRole` 方法並傳遞以下值：
 
    * A `java.lang.String` 包含角色標識符的對象。
-   * 陣列 `java.lang.String` 包含主標識符的對象。
+   * 一組 `java.lang.String` 包含主體標識符的對象。
 
 
 **另請參閱**
 
 [步驟摘要](users.md#summary-of-steps)
 
-[快速入門（SOAP模式）:使用Java API管理角色和權限](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API管理角色和權限](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用網站服務API管理角色和權限 {#managing-roles-and-permissions-using-the-web-service-api}
+### 使用Web服務API管理角色和權限 {#managing-roles-and-permissions-using-the-web-service-api}
 
 使用授權管理器服務API（Web服務）管理角色和權限：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   建立使用MTOM的Microsoft .NET專案。 確保使用以下WSDL定義： `http://localhost:8080/soap/services/AuthorizationManagerService?WSDL&lc_version=9.0.1`.
+   建立使用MTOM的Microsoft.NET項目。 確保使用以下WSDL定義： `http://localhost:8080/soap/services/AuthorizationManagerService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >取代 `localhost` 和托管AEM Forms之伺服器的IP位址。
+   >替換 `localhost` IP地址為AEM Forms。
 
 1. 建立AuthorizationManagerService客戶端。
 
-   * 建立 `AuthorizationManagerServiceClient` 物件，使用其預設建構函式。
-   * 建立 `AuthorizationManagerServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞至AEM Forms服務(例如 `http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`.) 您不需要使用 `lc_version` 屬性。 建立服務參考時，會使用此屬性。
-   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `AuthorizationManagerServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
-   * 設定 `System.ServiceModel.BasicHttpBinding` 物件 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
-   * 通過執行以下任務來啟用基本HTTP身份驗證：
+   * 建立 `AuthorizationManagerServiceClient` 對象。
+   * 建立 `AuthorizationManagerServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務(例如， `http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`。) 你不需要 `lc_version` 屬性。 建立服務引用時使用此屬性。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `AuthorizationManagerServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
+   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
+   * 通過執行以下任務啟用基本HTTP身份驗證：
 
-      * 將AEM表單使用者名稱指派給欄位 `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName`.
-      * 為欄位分配相應的密碼值 `AuthorizationManagerServiceClient.ClientCredentials.UserName.Password`.
-      * 指派常數值 `HttpClientCredentialType.Basic` 欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 欄位 `BasicHttpBindingSecurity.Security.Mode`.
+      * 將表AEM單用戶名分配給欄位 `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName`。
+      * 將相應的密碼值分配給欄位 `AuthorizationManagerServiceClient.ClientCredentials.UserName.Password`。
+      * 分配常數值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+      * 分配常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 到 `BasicHttpBindingSecurity.Security.Mode`。
 
 1. 調用相應的角色或權限操作。
 
-   要將角色分配給承擔者，請調用 `AuthorizationManagerServiceClient` 物件 `assignRole` 方法，並傳遞下列值：
+   要將角色分配給承擔者，請調用 `AuthorizationManagerServiceClient` 對象 `assignRole` 方法並傳遞以下值：
 
    * A `string` 包含角色標識符的對象
-   * A `MyArrayOf_xsd_string` 包含主標識符的對象。
+   * A `MyArrayOf_xsd_string` 包含主體標識符的對象。
 
-   要從主體中刪除角色，請調用 `AuthorizationManagerServiceService` 物件 `unassignRole` 方法，並傳遞下列值：
+   要從承擔者中刪除角色，請調用 `AuthorizationManagerServiceService` 對象 `unassignRole` 方法並傳遞以下值：
 
    * A `string` 包含角色標識符的對象。
-   * 陣列 `string` 包含主標識符的對象。
+   * 一組 `string` 包含主體標識符的對象。
 
 
 **另請參閱**
 
 [步驟摘要](users.md#summary-of-steps)
 
-[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## 驗證使用者 {#authenticating-users}
+## 驗證用戶 {#authenticating-users}
 
-本主題說明如何使用Authentication Manager服務API(Java)，讓用戶端應用程式以程式設計方式驗證使用者。
+本主題介紹如何使用Authentication Manager服務API(Java)來使客戶端應用程式能夠以寫程式方式驗證用戶。
 
-與儲存安全資料的企業資料庫或其他企業儲存庫交互可能需要用戶身份驗證。
+可能需要用戶身份驗證才能與儲存安全資料的企業資料庫或其他企業儲存庫交互。
 
-例如，假設使用者在網頁中輸入使用者名稱和密碼，並將值提交至托管Forms的J2EE應用程式伺服器。 Forms自訂應用程式可使用Authentication Manager服務驗證使用者。
+例如，假設用戶在網頁中輸入用戶名和密碼並將這些值提交到托管Forms的J2EE應用伺服器。 Forms自定義應用程式可以使用身份驗證管理器服務對用戶進行身份驗證。
 
-如果驗證成功，則應用程式訪問安全企業資料庫。 否則，會傳送訊息給使用者，指出該使用者不是授權使用者。
+如果驗證成功，則應用程式訪問安全的企業資料庫。 否則，向用戶發送消息，指出該用戶不是授權用戶。
 
-下圖顯示應用程式的邏輯流程。
+下圖顯示了應用程式的邏輯流。
 
-![au_au_umauth_process](assets/au_au_umauth_process.png)
+![au_au_umauth進程](assets/au_au_umauth_process.png)
 
-下表說明此圖中的步驟
+下表介紹了此圖中的步驟
 
 <table>
  <thead>
@@ -747,19 +747,19 @@ ht-degree: 0%
  <tbody>
   <tr>
    <td><p>1</p></td>
-   <td><p>用戶訪問網站並指定用戶名和密碼。 此資訊會提交至托管AEM Forms的J2EE應用程式伺服器。</p></td>
+   <td><p>用戶訪問網站並指定用戶名和密碼。 此資訊將提交到托管AEM Forms的J2EE應用伺服器。</p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>使用者憑證會透過Authentication Manager服務進行驗證。 如果用戶憑據有效，工作流將繼續到步驟3。 否則，會傳送訊息給使用者，指出該使用者不是授權使用者。</p></td>
+   <td><p>用戶憑據通過Authentication Manager服務進行身份驗證。 如果用戶憑據有效，則工作流將繼續執行步驟3。 否則，向用戶發送消息，指出該用戶不是授權用戶。</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
-   <td><p>從安全企業資料庫中檢索用戶資訊和表單設計。 </p></td>
+   <td><p>從安全的企業資料庫檢索用戶資訊和表單設計。 </p></td>
   </tr>
   <tr>
    <td><p>4</p></td>
-   <td><p>使用者資訊與表單設計合併，表單轉譯給使用者。 </p></td>
+   <td><p>將用戶資訊與表單設計合併，並將表單呈現給用戶。 </p></td>
   </tr>
  </tbody>
 </table>
@@ -768,100 +768,100 @@ ht-degree: 0%
 
 要以寫程式方式驗證用戶，請執行以下步驟：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 1. 建立AuthenticationManagerService客戶端。
 1. 調用驗證操作。
-1. 如有必要，請擷取內容，讓用戶端應用程式可將其轉送至其他AEM Forms服務進行驗證。
+1. 如有必要，請檢索上下文，以便客戶端應用程式可以將其轉發到另一個AEM Forms服務進行身份驗證。
 
-**包含項目檔案**
+**包括項目檔案**
 
-在您的開發專案中加入必要的檔案。 如果您使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
+在開發項目中包括必要的檔案。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
 
 **建立AuthenticationManagerService客戶端**
 
-在以寫程式方式對用戶進行身份驗證之前，必須建立AuthenticationManagerService客戶端。 使用Java API時，請建立 `AuthenticationManagerServiceClient` 物件。
+在以寫程式方式驗證用戶之前，必須先建立AuthenticationManagerService客戶端。 使用Java API時，建立 `AuthenticationManagerServiceClient` 的雙曲餘切值。
 
 **調用驗證操作**
 
-建立服務客戶端後，您就可以調用驗證操作。 此操作將需要有關用戶的資訊，如用戶名和密碼。 如果用戶未進行身份驗證，則會引發異常。
+建立服務客戶端後，可以調用驗證操作。 此操作需要有關用戶的資訊，如用戶的名稱和密碼。 如果用戶未進行身份驗證，則會引發異常。
 
-**擷取驗證內容**
+**檢索驗證上下文**
 
-一旦您驗證了使用者，您就可以根據已驗證的使用者建立內容。 然後，您可以使用內容叫用其他AEM Forms服務。 例如，您可以使用內容來建立 `EncryptionServiceClient` 使用密碼加密PDF文檔。 確保已驗證的使用者具有 `Services User` 叫用AEM Forms服務時所需的URL。
+在對用戶進行身份驗證後，可以在經過身份驗證的用戶中建立上下文。 然後，您可以使用內容調用其他AEM Forms服務。 例如，可以使用上下文建立 `EncryptionServiceClient` 用密碼加密PDF文檔。 確保已驗證的用戶具有名為 `Services User` 需要調用AEM Forms服務。
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[使用者管理員API快速入門](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
+[用戶管理器API快速啟動](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
 
 [使用密碼加密PDF文檔](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
 
-### 使用Java API驗證使用者 {#authenticate-a-user-using-the-java-api}
+### 使用Java API驗證用戶 {#authenticate-a-user-using-the-java-api}
 
 使用Authentication Manager服務API(Java)驗證用戶：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   在Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-usermanager-client.jar。
+   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-usermanager-client.jar。
 
 1. 建立AuthenticationManagerServices客戶端。
 
-   建立 `AuthenticationManagerServiceClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 包含連接屬性的對象。
+   建立 `AuthenticationManagerServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 包含連接屬性的對象。
 
 1. 調用驗證操作。
 
-   叫用 `AuthenticationManagerServiceClient` 物件 `authenticate` 方法，並傳遞下列值：
+   調用 `AuthenticationManagerServiceClient` 對象 `authenticate` 方法並傳遞以下值：
 
-   * A `java.lang.String` 包含使用者名稱的物件。
-   * 位元組陣列(a `byte[]` 物件)，包含使用者的密碼。 您可以取得 `byte[]` 對象，方法是調用 `java.lang.String` 物件 `getBytes` 方法。
+   * A `java.lang.String` 包含用戶名的對象。
+   * 位元組陣列(a `byte[]` 對象)。 您可以 `byte[]` 通過調用 `java.lang.String` 對象 `getBytes` 的雙曲餘切值。
 
-   驗證方法會傳回 `AuthResult` 物件，包含已驗證使用者的相關資訊。
+   authenticate方法返回 `AuthResult` 對象，其中包含有關已驗證用戶的資訊。
 
-1. 擷取驗證內容。
+1. 檢索驗證上下文。
 
-   叫用 `ServiceClientFactory` 物件 `getContext` 方法，將返回 `Context` 物件。
+   調用 `ServiceClientFactory` 對象 `getContext` 方法，它將返回 `Context` 的雙曲餘切值。
 
-   然後叫用 `Context` 物件 `initPrincipal` 方法並傳遞 `AuthResult`.
+   然後調用 `Context` 對象 `initPrincipal` 方法和通過 `AuthResult`。
 
-### 使用網站服務API驗證使用者 {#authenticate-a-user-using-the-web-service-api}
+### 使用Web服務API驗證用戶 {#authenticate-a-user-using-the-web-service-api}
 
 使用Authentication Manager服務API（Web服務）驗證用戶：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   * 建立會使用驗證管理器WSDL的Microsoft .NET客戶端程式集。 (請參閱 [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
-   * 參考Microsoft .NET客戶端程式集。 (請參閱 [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+   * 建立使用驗證管理器WSDL的Microsoft.NET客戶端程式集。 (請參閱 [使用Base64編碼調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
+   * 引用Microsoft.NET客戶端程式集。 (請參閱中的「引用.NET客戶端程式集」 [使用Base64編碼調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
 
 1. 建立AuthenticationManagerService客戶端。
 
-   建立 `AuthenticationManagerServiceService` 對象，使用代理類的建構子。
+   建立 `AuthenticationManagerServiceService` 對象。
 
 1. 調用驗證操作。
 
-   叫用 `AuthenticationManagerServiceClient` 物件 `authenticate` 方法，並傳遞下列值：
+   調用 `AuthenticationManagerServiceClient` 對象 `authenticate` 方法並傳遞以下值：
 
    * A `string` 包含用戶名的對象
-   * 位元組陣列(a `byte[]` 物件)，包含使用者的密碼。 您可以取得 `byte[]` 透過轉換 `string` 包含密碼的對象 `byte[]` 陣列，使用下列範例中的邏輯。
-   * 傳回的值將是 `AuthResult` 物件，可用來擷取使用者的相關資訊。 在以下範例中，使用者的資訊是先取得 `AuthResult` 物件 `authenticatedUser` 欄位，並隨後獲得結果 `User` 物件 `canonicalName` 和 `domainName` 欄位。
+   * 位元組陣列(a `byte[]` 對象)。 您可以 `byte[]` 通過轉換對象 `string` 包含對 `byte[]` 陣列。
+   * 返回的值將為 `AuthResult` 對象，可用於檢索有關用戶的資訊。 在下面的示例中，通過首先獲取 `AuthResult` 對象 `authenticatedUser` 欄位，然後獲取結果 `User` 對象 `canonicalName` 和 `domainName` 的子菜單。
 
 **另請參閱**
 
-[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 以程式設計方式同步使用者 {#programmatically-synchronizing-users}
+## 以寫程式方式同步用戶 {#programmatically-synchronizing-users}
 
-您可以使用使用者管理API，以程式設計方式同步使用者。 同步使用者時，您會將AEM Forms與位於使用者存放庫中的使用者資料更新。 例如，假設您將新使用者新增至您的使用者存放庫。 執行同步操作後，新的使用者會變成AEM表單使用者。 此外，您的使用者存放庫中不再有的使用者，也會從AEM Forms中移除。
+可以使用用戶管理API以寫程式方式同步用戶。 同步用戶時，您正在使用用戶儲存庫中的用戶資料更新AEM Forms。 例如，假定您向用戶儲存庫添加新用戶。 執行同步操作後，新用戶將成為表AEM單用戶。 此外，不再在用戶儲存庫中的用戶也將從AEM Forms刪除。
 
-下圖顯示AEM Forms與使用者存放庫同步。
+下圖顯示了AEM Forms與用戶儲存庫同步。
 
-![ps_ps_umauth_sync](assets/ps_ps_umauth_sync.png)
+![ps_ps_umauth同步](assets/ps_ps_umauth_sync.png)
 
-下表說明此圖中的步驟
+下表介紹了此圖中的步驟
 
 <table>
  <thead>
@@ -873,7 +873,7 @@ ht-degree: 0%
  <tbody>
   <tr>
    <td><p>1</p></td>
-   <td><p>用戶端應用程式要求AEM Forms執行同步作業。</p></td>
+   <td><p>客戶端應用程式請求AEM Forms執行同步操作。</p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
@@ -881,11 +881,11 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>3</p></td>
-   <td><p>更新使用者資訊。</p></td>
+   <td><p>用戶資訊已更新。</p></td>
   </tr>
   <tr>
    <td><p>4</p></td>
-   <td><p>使用者可檢視更新的使用者資訊。 </p></td>
+   <td><p>用戶能夠查看更新的用戶資訊。 </p></td>
   </tr>
  </tbody>
 </table>
@@ -894,27 +894,27 @@ ht-degree: 0%
 
 要以寫程式方式同步用戶，請執行以下步驟：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 1. 建立UserManagerUtilServiceClient客戶端。
-1. 指定企業網域。
+1. 指定企業域。
 1. 調用驗證操作。
 1. 確定同步操作是否完成
 
-**包含項目檔案**
+**包括項目檔案**
 
-在您的開發專案中加入必要的檔案。 如果您使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
+在開發項目中包括必要的檔案。 如果使用Java建立客戶端應用程式，則包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
 
-**建立UserManagerUtilServiceClientclient**
+**建立UserManagerUtilServiceClientClient客戶端**
 
-您必須先建立 `UserManagerUtilServiceClient` 物件。
+在以寫程式方式同步用戶之前，必須建立 `UserManagerUtilServiceClient` 的雙曲餘切值。
 
-**指定企業網域**
+**指定企業域**
 
-在使用用戶管理API執行同步操作之前，請指定用戶所屬的企業域。 您可以指定一或多個企業網域。 在以寫程式方式執行同步操作之前，必須使用管理控制台來設定企業域。 (請參閱 [管理說明](https://www.adobe.com/go/learn_aemforms_admin_63).)
+在使用用戶管理API執行同步操作之前，請指定用戶所屬的企業域。 可以指定一個或多個企業域。 在以寫程式方式執行同步操作之前，必須使用管理控制台設定企業域。 (請參閱 [管理幫助](https://www.adobe.com/go/learn_aemforms_admin_63)。)
 
 **調用同步操作**
 
-指定一個或多個企業域後，可以執行同步操作。 執行此操作所花的時間取決於位於用戶儲存庫中的用戶記錄數。
+指定一個或多個企業域後，可以執行同步操作。 執行此操作所花的時間取決於用戶儲存庫中的用戶記錄數。
 
 **確定同步操作是否完成**
 
@@ -922,42 +922,42 @@ ht-degree: 0%
 
 **另請參閱**
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[使用者管理員API快速入門](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
+[用戶管理器API快速啟動](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
 
 [使用密碼加密PDF文檔](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
 
-### 使用Java API以程式設計方式同步使用者 {#programmatically-synchronizing-users-using-the-java-api}
+### 使用Java API以寫程式方式同步用戶 {#programmatically-synchronizing-users-using-the-java-api}
 
-使用「使用者管理API」(Java)同步使用者：
+使用用戶管理API(Java)同步用戶：
 
-1. 包含專案檔案。
+1. 包括項目檔案。
 
-   在您Java專案的類別路徑中包含用戶端JAR檔案，例如adobe-usermanager-client.jar和adobe-usermanager-util-client.jar。
+   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-usermanager-client.jar和adobe-usermanager-util-client.jar。
 
 1. 建立UserManagerUtilServiceClient客戶端。
 
-   建立 `UserManagerUtilServiceClient` 對象，使用其建構子並傳遞 `ServiceClientFactory` 包含連接屬性的對象。
+   建立 `UserManagerUtilServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 包含連接屬性的對象。
 
-1. 指定企業網域。
+1. 指定企業域。
 
-   * 叫用 `UserManagerUtilServiceClient` 物件 `scheduleSynchronization` 啟動用戶同步操作的方法。
-   * 建立 `java.util.Set` 例項，使用 `HashSet` 建構子。 請確定您指定 `String` 作為資料類型。 此 `Java.util.Set` 實例儲存同步操作要應用的域名。
-   * 對於要添加的每個域名，調用 `java.util.Set` 物件的add方法，並傳遞網域名稱。
+   * 調用 `UserManagerUtilServiceClient` 對象 `scheduleSynchronization` 方法啟動用戶同步操作。
+   * 建立 `java.util.Set` 實例 `HashSet` 建構子。 確保指定 `String` 類型。 此 `Java.util.Set` 實例儲存同步操作所應用的域名。
+   * 對於要添加的每個域名，調用 `java.util.Set` 對象的add方法並傳遞域名。
 
 1. 調用同步操作。
 
-   叫用 `ServiceClientFactory` 物件 `getContext` 方法，將返回 `Context` 物件。
+   調用 `ServiceClientFactory` 對象 `getContext` 方法，它將返回 `Context` 的雙曲餘切值。
 
-   然後叫用 `Context` 物件 `initPrincipal` 方法並傳遞 `AuthResult`.
+   然後調用 `Context` 對象 `initPrincipal` 方法和通過 `AuthResult`。
 
 **另請參閱**
 
-[以程式設計方式同步使用者](users.md#programmatically-synchronizing-users)
+[以寫程式方式同步用戶](users.md#programmatically-synchronizing-users)
 
-[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)

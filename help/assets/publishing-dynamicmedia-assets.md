@@ -1,5 +1,5 @@
 ---
-title: 發佈Dynamic Media Assets
+title: 出版Dynamic Media資產
 description: 如何發佈Dynamic Media資產
 uuid: b1bee905-86cf-4284-8d4e-067e11557899
 contentOwner: Rick Brough
@@ -19,34 +19,34 @@ ht-degree: 4%
 
 # 發佈 Dynamic Media 資產 {#publishing-dynamic-media-assets}
 
-您可以選取已上傳的資產並點選，以發佈Dynamic Media資產 **[!UICONTROL 發佈]** 或 **[!UICONTROL 快速發佈]**. 發佈Dynamic Media資產後，您就可以透過URL或將程式碼嵌入頁面，將其加入網頁。
+通過選擇已上傳的資產並點擊，您可以發佈您的Dynamic Media資產 **[!UICONTROL 發佈]** 或 **[!UICONTROL 快速發佈]**。 在您的Dynamic Media資產發佈後，您可以通過URL或將代碼嵌入到網頁中，以便將這些資產包括在網頁中。
 
-您也可以立即發佈上傳的資產，不需任何使用者干預。 請參閱 [設定Dynamic Media - Scene7模式](config-dms7.md).
-或者，您可以選擇性地將資產發佈至Dynamic Media或Adobe Experience Manager，彼此互斥，使用 **[!UICONTROL 選擇性發佈]** 在資料夾層級。 請參閱 [在Dynamic Media中使用選擇性發佈](/help/assets/selective-publishing.md).
+您還可以立即發佈上傳的資產 — 無需任何用戶干預。 請參閱 [配置Dynamic Media-Scene7模式](config-dms7.md)。
+或者，你可以有選擇地向Dynamic Media或Adobe Experience Manager公佈資產，相互排斥，使用 **[!UICONTROL 選擇性發佈]** 在資料夾級別。 請參閱 [與選擇性出版合作在Dynamic Media](/help/assets/selective-publishing.md)。
 
-在 **[!UICONTROL 卡片檢視]**，資產名稱正下方以及日期與時間左側會顯示一個小型全球圖示，以指出資產已發佈。 在「清 **[!UICONTROL 單檢視]**」中，「已發佈」 **** 欄會指出已發佈或未發佈的資產。
-
->[!NOTE]
->
->如果資產已發佈，請使用Experience Manager將資產移至其他資料夾，然後從其新位置重新發佈。 仍可使用原始發佈的資產位置，以及新重新發佈的資產。 但原始已發佈的資產「遺失」至Experience Manager，無法取消發佈。 因此，最佳作法是先取消發佈資產，再將其移至其他資料夾。
-
-如果您想在對視訊資產進行編碼後立即發佈，請確定已完成編碼。 在對視訊進行編碼時，系統可讓您知道視訊處理工作流程正在進行中。 完成視訊編碼時，您可以預覽視訊轉譯。 此時，您就可以安全地發佈視訊，而不會發生任何發佈錯誤。
-
-另請參閱 [將URL連結至您的Web應用程式](linking-urls-to-yourwebapplication.md).
-
-另請參閱 [將Dynamic Media視訊或影像檢視器內嵌在網頁上](embed-code.md)
+在 **[!UICONTROL 卡視圖]**，一個小型全球表徵圖將出現在資產名稱的正下方，並顯示在日期和時間的左側，以指示已發佈該資產。 在「清 **[!UICONTROL 單檢視]**」中，「已發佈」 **** 欄會指出已發佈或未發佈的資產。
 
 >[!NOTE]
 >
->* 必須發佈資產才能使用URL。 如果資產未發佈，則複製URL及將其貼入網頁瀏覽器無法運作。
->* 必須啟用並發佈影像預設集和檢視器預設集，才能即時傳送。
+>如果資產已發佈，請使用「Experience Manager」將資產移動到另一個資料夾，並從其新位置重新發佈。 原始發佈的資產位置以及新重新發佈的資產仍然可用。 但是，原始已發佈的資產被Experience Manager&quot;丟失&quot;，無法取消發佈。 因此，作為最佳做法，在將資產移動到其他資料夾之前，請先取消發佈資產。
+
+如果要在對視頻資源進行編碼後立即發佈它們，請確保編碼已完成。 在對視頻進行編碼時，系統會讓您知道視頻處理工作流正在進行中。 完成視頻編碼後，可以預覽視頻格式副本。 此時，您可以安全地發佈視頻，而不會發生任何發佈錯誤。
+
+另請參閱 [將URL連結到Web應用程式](linking-urls-to-yourwebapplication.md)。
+
+另請參閱 [將Dynamic Media視頻或影像查看器嵌入網頁](embed-code.md)
+
+>[!NOTE]
+>
+>* 必須發佈資產才能使用URL。 如果資產未發佈，則複製URL並將其貼上到Web瀏覽器將不起作用。
+>* 必須激活和發佈影像預設和查看器預設以便即時交付。
 >
 
 
-如需發佈集或資產的詳細資訊，請參閱 [發佈資產](manage-assets.md).
+有關發佈集或資產的詳細資訊，請參閱 [發佈資產](manage-assets.md)。
 
-## HTTP/2傳送Dynamic Media資產 {#http-delivery-of-dynamic-media-assets}
+## HTTP/2交付Dynamic Media資產 {#http-delivery-of-dynamic-media-assets}
 
-Experience Manager現在支援透過HTTP/2傳送所有Dynamic Media內容（影像和影片）。 也就是說，影像或視訊的已發佈URL或內嵌程式碼可與接受託管資產的任何應用程式整合。 然後會透過HTTP/2通訊協定來傳送已發佈的資產。 此傳遞方法可改善瀏覽器和伺服器通訊的方式，讓所有Dynamic Media資產的回應和載入時間都更佳。
+Experience Manager現在支援通過HTTP/2傳遞所有Dynamic Media內容（影像和視頻）。 即，可將影像或視頻的已發佈URL或嵌入代碼與接受託管資產的任何應用程式整合。 然後，該已發佈資產將通過HTTP/2協定交付。 這種傳送方法改進了瀏覽器和伺服器之間的通信方式，使您的所有Dynamic Media資產都能得到更好的響應和載入時間。
 
-若要進一步了解，請參閱 [HTTP/2傳送內容常見問題](/help/sites-administering/scene7-http2faq.md).
+要瞭解更多資訊，請參閱 [HTTP/2傳遞內容常見問題](/help/sites-administering/scene7-http2faq.md)。

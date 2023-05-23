@@ -1,7 +1,7 @@
 ---
-title: 動態選取以AEM Forms為中心的工作流程步驟的使用者或群組
+title: 為以AEM Forms為中心的工作流步驟動態選擇用戶或組
 seo-title: Dynamically select a user or group for AEM Forms-centric workflow steps
-description: 了解如何在執行階段為AEM Forms工作流程選取使用者或群組。
+description: 瞭解如何在運行時為AEM Forms工作流選擇用戶或組。
 seo-description: Learn how to select a user or group for an AEM Forms workflow at the runtime.
 uuid: 19dcbda4-61af-40b3-b10b-68a341373410
 content-type: troubleshooting
@@ -15,45 +15,45 @@ ht-degree: 0%
 
 ---
 
-# 動態選取以AEM Forms為中心的工作流程步驟的使用者或群組 {#dynamically-select-a-user-or-group-for-aem-forms-centric-workflow-steps}
+# 為以AEM Forms為中心的工作流步驟動態選擇用戶或組 {#dynamically-select-a-user-or-group-for-aem-forms-centric-workflow-steps}
 
-了解如何在執行階段為AEM Forms工作流程選取使用者或群組。
+瞭解如何在運行時為AEM Forms工作流選擇用戶或組。
 
-在大型組織中，需要動態選取流程的使用者。 例如，根據座席與客戶的接近程度選擇要為客戶服務的現場座席。 在這種情況下，動態選擇代理。
+在大型組織中，需要動態選擇流程的用戶。 例如，根據代理與客戶的接近程度選擇現場代理來為客戶服務。 在這種情況下，動態選擇代理。
 
-指派任務和Adobe Sign步驟 [Forms OSGi工作流程](/help/forms/using/aem-forms-workflow.md) 提供動態選取使用者的選項。 您可以使用ECMAScript或OSGi套件組合，以動態方式為「指派任務」步驟選擇受託人，或為「簽署檔案」步驟選擇簽署人。
+分配任務和Adobe Sign步驟 [以Forms為中心的OSGi工作流](/help/forms/using/aem-forms-workflow.md) 提供選項以動態選擇用戶。 可以使用ECMAScript或OSGi捆綁包來動態地為「分配任務」步驟選擇工作負責人，或為「簽名文檔」步驟選擇簽名人。
 
 ## 使用ECMAScript動態選擇用戶或組 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
-ECMAScript是一種指令碼語言。 用於用戶端指令碼和伺服器應用程式。 執行下列步驟以使用ECMAScript動態選取使用者或群組：
+ECMAScript是一種指令碼語言。 它用於客戶端指令碼和伺服器應用程式。 執行以下步驟，使用ECMAScript動態選擇用戶或組：
 
 1. 開啟CRXDE Lite。 URL為 `https://'[server]:[port]'/crx/de/index.jsp`
-1. 在下列路徑建立副檔名為.ecma的檔案。 如果路徑（節點結構）不存在，請建立它：
+1. 在以下路徑上建立副檔名為.ecma的檔案。 如果路徑（節點結構）不存在，請建立它：
 
    * （分配任務步驟的路徑） `/apps/fd/dashboard/scripts/participantChooser`
    * （簽名步驟的路徑） `/apps/fd/workflow/scripts/adobesign`
 
-1. 將具有動態選取使用者邏輯的ECMAScript新增至.ecma檔案。 按一下 **[!UICONTROL 全部儲存]**.
+1. 將具有動態選擇用戶的邏輯的ECMAScript添加到.ecma檔案。 按一下 **[!UICONTROL 全部保存]**。
 
-   如需範例指令碼，請參閱 [動態選取使用者或群組的ECMAScript範例](/help/forms/using/dynamically-select-a-user-or-group-for-aem-workflow.md#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group).
+   有關示例指令碼，請參見 [用於動態選擇用戶或組的ECMAScript示例](/help/forms/using/dynamically-select-a-user-or-group-for-aem-workflow.md#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group)。
 
-1. 新增指令碼的顯示名稱。 此名稱會顯示在工作流程步驟中。 要指定名稱：
+1. 添加指令碼的顯示名稱。 此名稱顯示在工作流步驟中。 要指定名稱：
 
-   1. 展開指令碼節點，按一下右鍵 **[!UICONTROL jcr:content]** 節點，然後按一下 **[!UICONTROL Mixins]**.
-   1. 新增 `mix:title` 在「編輯Mixin」對話方塊中，按一下「 」屬性 **確定**.
-   1. 將下列屬性新增至指令碼的jcr:content節點：
+   1. 展開指令碼節點，按一下右鍵 **[!UICONTROL jcr：內容]** ，然後按一下 **[!UICONTROL 米辛]**。
+   1. 添加 `mix:title` 「編輯混合」對話框中的屬性，然後按一下 **確定**。
+   1. 將以下屬性添加到指令碼的jcr:content節點：
 
       | 名稱 | 類型 | 值 |
       |--- |--- |--- |
-      | jcr:title | 字串 | 指定指令碼的名稱。 例如，選擇最接近的欄位代理。 此名稱顯示在「分配任務」和「簽署文檔」步驟中。 |
+      | jcr:title | 字串 | 指定指令碼的名稱。 例如，選擇最接近的欄位代理。 此名稱顯示在分配任務和簽名文檔步驟中。 |
 
-   1. 按一下 **全部儲存**. 指令碼可供AEM Workflow的元件中選取。
+   1. 按一下 **全部保存**。 該指令碼可供在工作流元件中AEM選擇。
 
       ![指令碼](assets/script.png)
 
-### 動態選擇用戶或組的ECMAScript示例 {#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group}
+### 示例ECMAScript以動態選擇用戶或組 {#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group}
 
-以下示例ECMAScript動態選擇「分配任務」步驟的受託人。 在此指令碼中，會根據裝載的路徑選取使用者。 使用此指令碼之前，請確定指令碼中提及的所有使用者都存在於AEM中。 如果指令碼中提及的使用者不存在於AEM中，則相關程式可能會失敗。
+以下示例ECMAScript動態地為「分配任務」步驟選擇一個工作負責人。 在此指令碼中，根據負載的路徑選擇用戶。 使用此指令碼之前，請確保指令碼中提到的所有用戶都存在於AEM中。 如果指令碼中提到的用戶不存在，則AEM相關進程可能會失敗。
 
 ```javascript
 function getParticipant() {
@@ -73,11 +73,11 @@ var path = workflowData.getPayload().toString();
 }
 ```
 
-以下範例ECMAScript會動態選取Adobe Sign步驟的受託人。 使用以下指令碼之前，請確保指令碼中提及的用戶資訊（電子郵件地址和電話號碼）正確。 如果指令碼中提及的使用者資訊不正確，則相關程式可能會失敗。
+以下示例ECMAScript動態選擇Adobe Sign步驟的受分配者。 使用以下指令碼之前，請確保指令碼中提到的用戶資訊（電子郵件地址和電話號碼）正確。 如果指令碼中提到的用戶資訊不正確，則相關進程可能會失敗。
 
 >[!NOTE]
 >
->使用ECMAScript for Adobe Sign時，指令碼必須位於crx-repository（位於/apps/fd/workflow/scripts/adobesign/），且應具有名為getAdobeSignRecipients的函式，才能傳回使用者清單。
+>使用ECMAScript forAdobe Sign時，指令碼必須位於crx-repository中/apps/fd/workflow/scripts/adobesign/，並且應具有名為getAdobeSignRecipients的函式以返回用戶清單。
 
 ```javascript
 function getAdobeSignRecipients() {
@@ -116,14 +116,14 @@ function getAdobeSignRecipients() {
 
 ## 使用Java介面動態選擇用戶或組 {#use-java-interface-to-dynamically-choose-a-user-or-group}
 
-您可以使用 [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面，動態選擇用於Adobe Sign的用戶或組並分配任務步驟。 您可以建立使用的OSGi套件組合 [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面並部署至AEM Forms伺服器。 它可讓選項在AEM Workflow的「指派任務」和Adobe Sign元件中供選取。
+您可以使用 [收件人資訊說明符](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面，用於動態選擇用戶或組以執行「Adobe Sign」和「分配任務」步驟。 可以建立使用 [收件人資訊說明符](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面並將其部署到AEM Forms伺服器。 它使該選項可供在「工作流」的「分配任務」和「Adobe Sign」元件中AEM選擇。
 
-您需要 [AEM Forms用戶端SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 罐子 [花崗岩](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) 檔案來編譯下列程式碼範例。 將這些jar檔案作為外部依賴項添加到OSGi捆綁項目。 您可以使用任何Java IDE來建立OSGi套件組合。 下列程式提供使用Eclipse建立OSGi套件組合的步驟：
+您需要 [AEM Forms客戶端SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 罐子 [花崗岩](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) 檔案以編譯下面列出的代碼示例。 將這些jar檔案作為外部依賴項添加到OSGi捆綁項目。 可以使用任何Java IDE建立OSGi包。 以下過程提供了使用Eclipse建立OSGi捆綁包的步驟：
 
-1. 開啟Eclipse IDE。 導覽至 **[!UICONTROL 檔案]**> **[!UICONTROL 新增專案]**.
-1. 在選取精靈畫面上，選取 **[!UICONTROL 馬文專案]**，然後按一下 **[!UICONTROL 下一個]**.
-1. 在New Maven專案中，保留預設值，然後按一下 **[!UICONTROL 下一個]**. 選取原型並按一下 **[!UICONTROL 下一個]**. 例如， maven-archetype-quickstart。 指定 **[!UICONTROL 群組Id]**, **[!UICONTROL 工件ID]**, **[!UICONTROL 版本]**，和 **[!UICONTROL 套件]** ，然後按一下 **[!UICONTROL 完成]**. 專案隨即建立。
-1. 開啟pom.xml檔案以進行編輯，並以下列項目取代檔案的所有內容：
+1. 開啟Eclipse IDE。 導航到 **[!UICONTROL 檔案]**> **[!UICONTROL 新建項目]**。
+1. 在選擇嚮導螢幕上，選擇 **[!UICONTROL 馬文項目]**，然後按一下 **[!UICONTROL 下一個]**。
+1. 在New Maven項目中，保留預設值，然後按一下 **[!UICONTROL 下一個]**。 選擇原型並按一下 **[!UICONTROL 下一個]**。 例如， maven-archetype-quickstart。 指定 **[!UICONTROL 組ID]**。 **[!UICONTROL 項目ID]**。 **[!UICONTROL 版本]**, **[!UICONTROL 包]** ，然後按一下 **[!UICONTROL 完成]**。 將建立項目。
+1. 開啟pom.xml檔案進行編輯，並用下列內容替換該檔案的所有內容：
 
    ```xml
    <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
@@ -225,18 +225,18 @@ function getAdobeSignRecipients() {
    </project>
    ```
 
-1. 新增使用的原始碼 [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面，動態選擇「分配」任務步驟的用戶或組。 如需程式碼範例，請參閱 [使用Java介面動態選擇使用者或群組的範例](#-sample-scripts-for).
-1. 開啟命令提示字元，並導覽至包含OSGi套件專案的目錄。 使用以下命令建立OSGi捆綁包：
+1. 添加使用 [收件人資訊說明符](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java介面，用於動態選擇「分配」任務步驟的用戶或組。 有關示例代碼，請參見 [使用Java介面動態選擇用戶或組的示例](#-sample-scripts-for)。
+1. 開啟命令提示符並導航到包含OSGi捆綁項目的目錄。 使用以下命令建立OSGi捆綁包：
 
    `mvn clean install`
 
-1. 將套件組合上傳至AEM Forms伺服器。 您可以使用AEM Package Manager將套件組合匯入AEM Forms伺服器。
+1. 將捆綁包上載到AEM Forms伺服器。 可以使用包管AEM理器將包導入到AEM Forms伺服器。
 
-匯入套件組合後，可在Adobe Sign和「指派任務」步驟中使用選擇Java介面以動態選取使用者或群組的選項。
+導入捆綁包後，在「Adobe Sign」和「分配任務」步驟中，可以選擇用於動態選擇用戶或組的Java介面選項。
 
-### 動態選擇使用者或群組的Java程式碼範例 {#sample-java-code-to-dynamically-choose-a-user-or-a-group}
+### 動態選擇用戶或組的示例Java代碼 {#sample-java-code-to-dynamically-choose-a-user-or-a-group}
 
-下列范常式式碼會動態選擇Adobe Sign步驟的受託人。 您在OSGi套件中使用程式碼。 使用下列程式碼之前，請確定程式碼中提及的使用者資訊（電子郵件地址和電話號碼）正確無誤。 如果程式碼中提及的使用者資訊不正確，相關程式可能會失敗。
+以下示例代碼動態地選擇Adobe Sign步驟的受分配者。 在OSGi捆綁包中使用代碼。 使用下面列出的代碼之前，請確保代碼中提到的用戶資訊（電子郵件地址和電話號碼）正確。 如果代碼中提到的用戶資訊不正確，則相關進程可能會失敗。
 
 ```java
 /*************************************************************************

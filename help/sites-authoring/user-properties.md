@@ -1,7 +1,7 @@
 ---
-title: 設定帳戶環境
+title: 配置帳戶環境
 seo-title: Configuring Your Account Environment
-description: AEM可讓您設定帳戶，以及製作環境的某些方面
+description: 為AEM您提供了配置帳戶和作者環境某些方面的能力
 seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment
 uuid: ef31be29-5c18-4dc9-ad51-fb001588b31e
 contentOwner: Chris Bohnert
@@ -18,53 +18,53 @@ ht-degree: 10%
 
 ---
 
-# 設定帳戶環境{#configuring-your-account-environment}
+# 配置帳戶環境{#configuring-your-account-environment}
 
-AEM可讓您設定帳戶，以及製作環境的某些方面。
+為您AEM提供了配置帳戶和作者環境某些方面的功能。
 
 使用頁 [首和相關「我的首選項](/help/sites-authoring/user-properties.md#user-settings) 」對話框中的「用戶」選項 [](/help/sites-authoring/basic-handling.md#the-header)[](#userpreferences) ，可以修改用戶選項，例如。
 
-首先，存取 [使用者](/help/sites-authoring/user-properties.md#user-settings) 選項。
+首先訪問 [用戶](/help/sites-authoring/user-properties.md#user-settings) 的子菜單。
 
 ## 使用者設定 {#user-settings}
 
-此 **使用者** 「設定」對話方塊可讓您存取：
+的 **用戶** 設定對話框允許您訪問：
 
 * 模擬為
 
-   * 使用 [模擬為](/help/sites-administering/security.md#impersonating-another-user) 功能使用者可以代表其他使用者運作。
+   * 使用 [模擬為](/help/sites-administering/security.md#impersonating-another-user) 功能用戶可以代表其他用戶工作。
 
 * 設定檔
 
-   * 提供您 [使用者設定](/help/sites-administering/security.md))
+   * 提供指向您的 [用戶設定](/help/sites-administering/security.md))
 
 * [我的喜好設定](/help/sites-authoring/user-properties.md#my-preferences)
 
-   * 指定您的使用者專屬的各種偏好設定
+   * 指定用戶唯一的各種首選項設定
 
 ![screen_shot_2018-03-20at103808](assets/screen_shot_2018-03-20at103808.png)
 
 ### 我的喜好設定 {#my-preferences}
 
-此 **我的偏好設定** 對話方塊是透過 [使用者](/help/sites-authoring/user-properties.md#user-settings) 選項。
+的 **我的首選項** 對話框通過 [用戶](/help/sites-authoring/user-properties.md#user-settings) 的子菜單。
 
-每個使用者都可為自己設定特定屬性。
+每個用戶都可以為自己設定某些屬性。
 
-![screen-shot_2019-03-05at100322](assets/screen-shot_2019-03-05at100322.png)
+![螢幕抓拍_2019-03-05at100322](assets/screen-shot_2019-03-05at100322.png)
 
 * **語言**
 
-   這會定義用於製作環境UI的語言。 從可用清單中選取所需語言。
+   這定義了用於創作環境的UI的語言。 從可用清單中選擇所需的語言。
 
-   傳統UI也會使用此設定。
+   此配置也用於經典UI。
 
 * **視窗管理**
 
-   這會定義行為或開啟視窗。 選擇以下任一項：
+   這定義了行為或開啟窗口。 選擇以下任一項：
 
-   * **多個視窗** （預設）
+   * **多個窗口** （預設）
 
-      * 頁面將在新視窗中開啟。
+      * 將在新窗口中開啟頁面。
    * **單一視窗**
 
       * 將在當前窗口中開啟頁面。
@@ -72,49 +72,49 @@ AEM可讓您設定帳戶，以及製作環境的某些方面。
 
 * **顯示資產桌面動態**
 
-   此選項需要AEM案頭應用程式才能使用。
+   此選項需AEM要案頭應用。
 
 * **附註顏色**
 
-   這會定義進行註解時使用的預設顏色。
+   這定義了在進行注釋時使用的預設顏色。
 
-   * 按一下顏色塊以開啟色板選擇器以選取顏色。
+   * 按一下顏色塊以開啟色板選擇器以選擇顏色。
    * 或者，在欄位中輸入所需顏色的十六進位代碼。
 
 * **相對日期顯示**
 
-   為了改善可讀性，AEM會將過去七天內的日期轉譯為相對日期（例如三天前），並將舊日期轉譯為確切日期（例如2017年3月20日）。
+   為了提高可讀性AEM，將過去七天內的日期作為相對日期（如三天前）和較早的日期作為確切日期（如2017年3月20日）進行渲染。
 
-   此選項會定義系統中日期的顯示方式。 可使用下列選項：
+   此選項定義系統中日期的顯示方式。 以下選項可用：
 
-   * **一律顯示確切日期**:一律會顯示確切日期（從不會顯示相對日期）。
-   * **1天**:相對日期會顯示在一天內，否則會顯示確切日期。
+   * **始終顯示確切日期**:始終顯示確切日期（從不顯示相對日期）。
+   * **1天**:在一天內顯示日期的相對日期，否則顯示確切的日期。
 
-   * **7天（預設）**:相對日期會在七天內顯示，否則會顯示確切日期。
+   * **7天（預設）**:在七天內顯示日期的相對日期，否則顯示確切日期。
 
-   * **1個月**:相對日期會顯示在一個月內，否則會顯示確切日期。
+   * **1個月**:在一個月內顯示日期的相對日期，否則顯示確切日期。
 
-   * **1年**:相對日期會顯示為一年內的日期，否則會顯示確切的日期。
+   * **1年**:顯示一年內日期的相對日期，否則顯示確切日期。
 
-   * **一律顯示相對日期**:系統不會顯示確切日期，只會顯示相對日期。
+   * **始終顯示相對日期**:從不顯示確切日期，只顯示相對日期。
 
 * **啟用快捷方式**
 
-   AEM支援許多鍵盤快速鍵，讓編寫更有效率。
+   支AEM持許多使創作更高效的鍵盤快捷鍵。
 
-   * [編輯頁面的鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-   * [控制台的鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)
+   * [用於編輯頁面的鍵盤快捷鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
+   * [控制台的鍵盤快捷鍵](/help/sites-authoring/keyboard-shortcuts.md)
 
-   此選項啟用鍵盤快速鍵。 預設會啟用，但例如若使用者有特定的協助工具需求，則可停用。
+   此選項啟用鍵盤快捷鍵。 預設情況下，它們處於啟用狀態，但可以禁用，例如，如果用戶有某些輔助功能要求，則可以禁用它們。
 
 * **使用傳統製作體驗**
 
-   此選項啟用 [傳統UI](/help/sites-classic-ui-authoring/home.md)頁面編寫。 預設會使用標準UI。
+   此選項啟用 [經典UI](/help/sites-classic-ui-authoring/home.md)基於頁面的創作。 預設情況下，使用標準UI。
 
 * **啟用資產首頁**
 
-   只有在系統管理員已為整個組織啟用資產首頁體驗時，才可使用此選項。
+   僅當系統管理員為整個組織啟用了資產首頁體驗時，此選項才可用。
 
 * **Stock 設定**
 
-   此選項可指定慣用的Adobe Stock配置，且僅在系統管理員已啟用時才可用 [Adobe Stock整合](/help/assets/aem-assets-adobe-stock.md).
+   此選項允許指定首選的Adobe Stock配置，並且僅當系統管理員已啟用時才可用 [Adobe Stock整合](/help/assets/aem-assets-adobe-stock.md)。

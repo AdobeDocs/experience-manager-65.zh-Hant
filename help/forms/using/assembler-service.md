@@ -1,7 +1,7 @@
 ---
-title: 使用組合器服務
+title: 使用匯編程式服務
 seo-title: Using Assembler Service
-description: 組合器服務允許您組合、重新排列和擴展PDF和XDP文檔，並獲取有關PDF文檔的資訊。
+description: 「匯編器」服務允許您組合、重新排列和增加PDF和XDP文檔，並獲取有關PDF文檔的資訊。
 seo-description: The Assembler service lets you combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents.
 uuid: 1efce50b-2d98-408e-aa43-ac4999de41a8
 content-type: reference
@@ -17,25 +17,25 @@ ht-degree: 6%
 
 ---
 
-# 使用組合器服務{#using-assembler-service}
+# 使用匯編程式服務{#using-assembler-service}
 
-組合器服務允許您組合、重新排列和擴展PDF和XDP文檔，並獲取有關PDF文檔的資訊。 提交到組合器服務的每個作業都包括文檔描述XML(DDX)文檔、源文檔和外部資源（字串和圖形）。 有關組合器服務的詳細資訊，請參見 [組合器服務概述](../../forms/using/overview-aem-document-services.md#p-assembler-service-p).
+「匯編器」服務允許您組合、重新排列和增加PDF和XDP文檔，並獲取有關PDF文檔的資訊。 提交到匯編器服務的每個作業都包括文檔說明XML(DDX)文檔、源文檔和外部資源（字串和圖形）。 有關匯編程式服務的詳細資訊，請參見 [匯編程式服務概述](../../forms/using/overview-aem-document-services.md#p-assembler-service-p)。
 
-您可以對以下操作使用裝配服務：
+可將裝配服務用於以下操作：
 
 ## 組合 PDF 文件 {#assemble-pdf-documents}
 
-您可以使用組合器服務將兩個或多個PDF文檔組合成單個PDF文檔或PDFPortfolio。 您也可以將功能套用至PDF檔案，以輔助導覽或增強安全性。 以下是一些組合 PDF 文件的方法：
+您可以使用匯編器服務將兩個或多個PDF文檔匯編為單個PDF文檔或PDFPortfolio。 您還可以將功能應用於PDF文檔，以幫助導航或增強安全性。 以下是一些組合 PDF 文件的方法：
 
 ### 組合一個簡單 PDF 文件 {#assemble-a-simple-pdf-document}
 
-下圖顯示三個源文檔被合併到單個合成文檔中。
+下圖顯示了三個源文檔正在合併到單個合成文檔中。
 
-![從多個PDF文檔組裝簡單的PDF文檔](assets/as_document_assembly.png)
+![從多個PDF文檔中組裝簡單PDF文檔](assets/as_document_assembly.png)
 
-從多個PDF文檔組裝簡單的PDF文檔
+從多個PDF文檔中組裝簡單PDF文檔
 
-以下示例是用於組合文檔的簡單DDX文檔。 它指定用於生成結果文檔的源文檔的名稱以及結果文檔的名稱：
+以下示例是用於裝配文檔的簡單DDX文檔。 它指定用於生成結果文檔的源文檔的名稱以及結果文檔的名稱：
 
 ```xml
 <PDF result="Doc4">
@@ -45,19 +45,19 @@ ht-degree: 6%
 </PDF>
 ```
 
-文檔元件將生成包含以下內容和\
+文檔程式集生成包含以下內容和\
 特徵：
 
 * 每個源文檔的全部或部分
-* 來自每個源文檔的所有或部分書籤，為組合的結果文檔進行標準化
-* 從基本文檔(Doc1)採用的其他特性，包括元資料、頁標籤和頁大小
-* 可選地，生成的文檔包括從源文檔中的書籤構建的目錄
+* 每個源文檔的所有或部分書籤，為已裝配的合成文檔進行規範化
+* 基本文檔(Doc1)中採用的其他特徵，包括元資料、頁標籤和頁面大小
+* 可選地，合成文檔包括從源文檔中的書籤構建的目錄
 
 ### 建立 PDF 組合 {#create-a-pdf-portfolio}
 
-組合器服務可以建立包含文檔集合和自包含用戶介面的PDFPortfolio。 該介面稱為「PDFPortfolio佈局」或「PDFPortfolio導航器」（導航器）。 PDFPortfolio新增導覽器、資料夾和歡迎頁面，以擴充PDF套件的功能。 此介面可善用本地化的文字字串、自訂色彩配置和圖形資源，以增強使用者體驗。 PDFPortfolio還可以包含資料夾，用於組織產品組合中的檔案。
+匯編器服務可以建立PDFPortfolio，這些包含文檔集合和自包含的用戶介面。 該介面稱為PDFPortfolio佈局或PDFPortfolio導航器（導航器）。 PDFPortfolio通過添加導航器、資料夾和歡迎頁擴展了PDF包的功能。 該介面可以利用本地化的文本字串、自定義顏色方案和圖形資源來增強用戶體驗。 PDFPortfolio還可以包括資料夾，用於組織包中的檔案。
 
-當組合器服務解釋以下DDX文檔時，它將組合一個PDFPortfolio，該PDF包括Portfolio導航器和兩個檔案的包。 服務從myNavigator源指定的位置獲取導航器。 它將導航器的預設顏色配置更改為pinkScheme顏色配置。
+當匯編器服務解釋以下DDX文檔時，它會匯編PDFPortfolio，該PDFPortfolio包括導航器和兩個檔案的包。 該服務從myNavigator源指定的位置獲取導航器。 它將導航器的預設顏色方案更改為pinkScheme顏色方案。
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -76,47 +76,47 @@ ht-degree: 6%
 
 ### 組合加密的文件 {#assemble-encrypted-documents}
 
-在組合文檔時，還可以使用密碼加密PDF文檔。 使用密碼加密PDF檔案後，使用者必須指定密碼才能檢視Adobe Reader或Acrobat中的PDF檔案。 要使用密碼加密PDF文檔，DDX文檔必須包含加密PDF文檔所需的加密元素值。
+在匯編文檔時，還可以使用密碼對PDF文檔進行加密。 使用密碼加密PDF文檔後，用戶必須指定密碼才能查看Adobe Reader或Acrobat的PDF文檔。 要使用密碼加密PDF文檔，DDX文檔必須包含加密PDF文檔所需的加密元素值。
 
-加密服務不必是LiveCycle安裝的一部分，即可使用密碼加密PDF文檔。
+加密服務不必是LiveCycle安裝的一部分，就可以使用密碼加密PDF文檔。
 
-如果對一個或多個輸入文檔進行加密，則提供密碼以作為DDX的一部分開啟文檔。
+如果一個或多個輸入文檔被加密，則提供密碼以作為DDX的一部分開啟文檔。
 
 ### 使用貝茨編號 (Bates numbering) 組合文件 {#assemble-documents-using-bates-numbering}
 
-在組合文檔時，可以使用Bates編號將唯一的頁標識符應用到每個頁。 使用Bates編號時，文檔（或文檔集）中的每個頁面都會分配一個唯一標識該頁面的編號。 例如，包含物料清單資訊且與元件生產相關聯的製造文檔可以包含標識符。 Bates數字包含循序遞增的數值以及選用的前置詞和尾碼。 前置詞+數值+尾碼稱為Bates模式。
+在匯編文檔時，可以使用Bates編號將唯一的頁面標識符應用於每個頁面。 使用Bates編號時，文檔（或文檔集）中的每個頁面都會分配一個唯一標識頁面的編號。 例如，包含物料清單資訊並與元件生產相關聯的製造文檔可以包含標識符。 Bates數字包含一個按順序遞增的數字值以及一個可選前置詞和尾碼。 前置詞+數字值+尾碼稱為bates模式。
 
-下圖顯示的PDF文檔包含位於文檔標題中的唯一標識符。
+下圖顯示一個PDF文檔，該文檔包含位於文檔標題中的唯一標識符。
 
-![PDF文檔，包含位於文檔標題中的唯一標識符](do-not-localize/as_batesnumber.png)
+![包含位於文檔標題中的唯一標識符的PDF文檔](do-not-localize/as_batesnumber.png)
 
-PDF文檔，包含位於文檔標題中的唯一標識符
+包含位於文檔標題中的唯一標識符的PDF文檔
 
 ### 扁平化及組合文件 {#flatten-and-assemble-documents}
 
-您可以使用組合器服務將交互PDF文檔（例如，表單）轉換為非交互PDF文檔。 互動式PDF檔案可讓使用者輸入或修改位於PDF檔案欄位中的資料。 將互動式PDF文檔轉換為非互動式PDF文檔的過程稱為拼合。 平面化PDF文檔時，表單欄位將保留其圖形外觀，但不再具有交互性。 平面化PDF檔案的一個原因是為了確保資料無法修改。 此外，與欄位相關聯的指令碼將無法繼續運作。
+您可以使用匯編器服務將互動式PDF文檔（例如，表單）轉換為非互動式PDF文檔。 互動式PDF文檔允許用戶輸入或修改位於PDF文檔欄位中的資料。 將互動式PDF文檔轉換為非互動式PDF文檔的過程稱為拼合。 當PDF文檔展平時，表單域將保留其圖形外觀，但不再交互。 展平PDF文檔的一個原因是確保資料無法修改。 此外，與欄位關聯的指令碼不再起作用。
 
-當您建立從互動式PDF文檔組合的PDF文檔時，組合器服務會先拼合這些表單，然後再將它們組合到生成的文檔中。
+當您建立從互動式PDF文檔裝配的PDF文檔時，「匯編器」服務會先拼合這些表單，然後再將它們裝配到合成文檔中。
 
 >[!NOTE]
 >
->組合器服務使用輸出服務來平面化動態XFA表單。 如果組合器服務處理要求其平面化XFA動態表單的DDX，並且輸出服務不可用，則會引發異常。 組合器服務可以平面化Acrobat表單或靜態XFA表單，而不使用輸出服務。
+>匯編器服務使用輸出服務來拼合動態XFA表單。 如果匯編器服務處理要求它平整XFA動態表單的DDX，並且輸出服務不可用，則會引發異常。 匯編器服務可以拼合Acrobat表單或靜態XFA表單，而不使用輸出服務。
 
 ## 匯編XDP文檔 {#assemble-xdp-documents}
 
-您可以使用組合器服務將多個XDP文檔組合為單個XDP文檔或PDF文檔。 對於包含插入點的源XDP檔案，可以指定要插入的片段。
+您可以使用匯編器服務將多個XDP文檔匯編為單個XDP文檔或PDF文檔。 對於包含插入點的源XDP檔案，可以指定要插入的片段。
 
-以下是組合XDP檔案的一些方式：
+以下是匯編XDP文檔的一些方法：
 
-### 組合簡單的XDP檔案 {#assemble-a-simple-xdp-document}
+### 匯編簡單的XDP文檔 {#assemble-a-simple-xdp-document}
 
-下圖顯示了將三個源XDP文檔組合為單個生成的XDP文檔。 生成的XDP文檔包含三個源XDP文檔，包括其關聯資料。 生成的文檔從作為第一源XDP文檔的基礎文檔中獲取基本屬性。
+下圖顯示三個源XDP文檔被裝配到單個合成XDP文檔中。 生成的XDP文檔包含三個源XDP文檔，包括它們的關聯資料。 結果文檔從基礎文檔（即第一源XDP文檔）獲取基本屬性。
 
-![從多個XDP檔案組裝簡單的XDP檔案](assets/as_assembler_xdpassembly.png)
+![從多個XDP文檔組裝簡單的XDP文檔](assets/as_assembler_xdpassembly.png)
 
-從多個XDP檔案組裝簡單的XDP檔案
+從多個XDP文檔組裝簡單的XDP文檔
 
-以下是產生上圖結果的DDX文檔。
+這是一個DDX文檔，它生成上面所示的結果。
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -130,9 +130,9 @@ PDF文檔，包含位於文檔標題中的唯一標識符
 
 ### 在元件期間解析參照 {#resolving-references-during-assembly}
 
-通常，XDP文檔可以包含通過絕對參照或相對參照引用的影像。 預設情況下，組合器服務會在生成的XDP文檔中保留對影像的引用。
+通常，XDP文檔可以包含通過絕對或相對引用引用的影像。 預設情況下，匯編器服務會保留對結果XDP文檔中影像的引用。
 
-可以指定組合器服務在組裝時如何通過XDP檔案中的絕對或相對引用處理源XDP文檔中引用的影像。 您可以選擇將所有影像嵌入到結果中，使其不包含相對或絕對參照。 您可以設定resolveAssets標籤的值來定義此值，該標籤可採用下列任一選項。 預設情況下，結果文檔中不解析任何引用。
+可以指定匯編器服務在匯編時如何處理源XDP文檔中引用的影像，這些影像是通過XDP檔案中的絕對或相對引用進行的。 您可以選擇將所有影像嵌入到結果中，以使其不包含相對或絕對參照。 可通過設定resolveAssets標籤的值來定義此項，該標籤可以採用以下任何選項。 預設情況下，結果文檔中不解析任何引用。
 
 <table>
  <tbody> 
@@ -150,21 +150,21 @@ PDF文檔，包含位於文檔標題中的唯一標識符
   </tr> 
   <tr> 
    <td>相對值</td> 
-   <td>在源XDP中嵌入通過相對引用引用引用的所有影像<br /> 檔案。</td> 
+   <td>嵌入源XDP中通過相對引用引用引用的所有影像<br /> 的子菜單。</td> 
   </tr> 
   <tr> 
    <td>絕對值</td> 
-   <td>在源XDP中嵌入通過絕對參照引用的所有影像<br /> 檔案。</td> 
+   <td>在源XDP中嵌入通過絕對引用引用引用的所有影像<br /> 的子菜單。</td> 
   </tr> 
  </tbody> 
 </table>
 
-您可以在XDP來源標籤或父XDP結果標籤中指定resolveAssets屬性的值。 如果將屬性指定給XDP結果標籤，則屬性將由所有XDP源元素繼承，這些元素是XDP結果的子項。 但是，顯式指定源元素的屬性將覆蓋該源文檔的結果元素的設定。
+可以在XDP源標籤或父XDP結果標籤中指定resolveAssets屬性的值。 如果將屬性指定到XDP結果標籤，則所有XDP源元素（XDP結果的子元素）將繼承該屬性。 但是，顯式指定源元素的屬性將覆蓋僅針對該源文檔的結果元素的設定。
 
 #### 解析XDP文檔中的所有源引用 {#resolve-all-source-references-in-an-xdp-document}
 
 要解析源XDP文檔中的所有引用，請為\
-生成文檔全部，如下例所示：
+結果文檔到所有，如下例所示：
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -176,7 +176,7 @@ PDF文檔，包含位於文檔標題中的唯一標識符
 </DDX
 ```
 
-您也可以獨立指定所有來源XDP檔案的屬性，以取得相同的屬性\
+您還可以單獨為所有源XDP文檔指定屬性，以獲得相同的屬性\
 個結果.
 
 ```xml
@@ -191,7 +191,7 @@ PDF文檔，包含位於文檔標題中的唯一標識符
 
 #### 解析XDP文檔中選定的源引用 {#resolve-selected-source-references-in-an-xdp-document}
 
-通過為源引用指定resolveAssets屬性，可以選擇性地指定要解析的源引用。 單個源文檔的屬性將覆蓋生成的XDP文檔的設定。 在此範例中，也會解析包含的片段。
+通過為源引用指定resolveAssets屬性，可以有選擇地指定要解析的源引用。 單個源文檔的屬性會覆蓋生成的XDP文檔的設定。 在本例中，還解析了包括的片段。
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -205,9 +205,9 @@ fragment="myFragment"/>
 </DDX>
 ```
 
-#### 選擇性地解析絕對參照或相對參照 {#selectively-resolve-absolute-or-relative-references}
+#### 有選擇地解析絕對或相對參照 {#selectively-resolve-absolute-or-relative-references}
 
-您可以選擇性地解析所有或部分源文檔中的絕對參照或相對參照，如下例所示：
+可有選擇地解析所有或部分源文檔中的絕對或相對參照，如下例所示：
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -218,21 +218,21 @@ fragment="myFragment"/>
 </DDX
 ```
 
-### 動態將表單片段插入XFA表單 {#dynamically-insert-form-fragments-into-an-xfa-form}
+### 動態地將表單片段插入XFA表單 {#dynamically-insert-form-fragments-into-an-xfa-form}
 
-您可以使用組合器服務來建立從插入片段的其他XFA表單建立的XFA表單。 使用此功能，您可以使用片段來建立多個表單。
+可以使用匯編器服務建立XFA表單，該表單是從插入片段的另一個XFA表單建立的。 使用此功能，可以使用片段建立多個表單。
 
-支援動態插入表單片段，支援單一來源控制。 您會維護一個常用元件的來源。 例如，您可以為公司橫幅建立片段。 如果橫幅變更，您只需修改片段即可。 包含片段的其他表單未變更。
+支援表單片段的動態插入支援單源控制。 維護常用元件的單個源。 例如，您可以為公司橫幅建立片段。 如果標題更改，則只需修改片段。 包含片段的其它表單保持不變。
 
-表單設計人員使用LiveCycle設計工具來建立表單片段。 這些片段在XFA表單中是唯一命名的子表單。 表單設計人員也使用設計工具來建立具有唯一命名插入點的XFA表單。 您（程式設計師）編寫DDX文檔，以指定如何將片段插入XFA表單中。
+表單設計器使用LiveCycle設計器建立表單片段。 這些片段在XFA窗體中是唯一命名的子窗體。 表單設計器還使用設計器建立具有唯一命名插入點的XFA表單。 您（程式設計師）編寫DDX文檔，指定如何將片段插入XFA表單。
 
-下圖顯示兩個XML表單（XFA範本）。 左側的表單包含一個名為myInsertionPoint的插入點。 右側的表單包含名為myFragment的片段。
+下圖顯示了兩個XML表單（XFA模板）。 左側的表單包含一個名為myInsertionPoint的插入點。 右側的表單包含名為myFragment的片段。
 
 ![將表單片段插入XFA表單](assets/as_assembler_fragment_assy_assembled.png)
 
 將表單片段插入XFA表單
 
-組合器服務解釋下列DDX文檔時，它將建立包含另一個XML表單的XML表單。 myFragmentSource文檔中的myFragment子表單將插入到myFormSource文檔中的myInsertionPoint。
+匯編器服務在解釋以下DDX文檔時，會建立包含另一個XML表單的XML表單。 myFragmentSource文檔的myFragment子窗體將插入myFormSource文檔的myInsertionPoint中。
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -245,9 +245,9 @@ source="myFragmentSource"/>
 </DDX
 ```
 
-### 將XDP檔案封裝為PDF {#package-an-xdp-document-as-pdf}
+### 將XDP文檔打包為PDF {#package-an-xdp-document-as-pdf}
 
-您可以使用組合器服務將XDP文檔打包為PDF文檔，如本DDX文檔所示。
+您可以使用匯編器服務將XDP文檔打包為PDF文檔，如此DDX文檔中所示。
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -262,15 +262,15 @@ source="myFragmentSource"/>
 
 ## 分解 PDF 文件 {#disassemble-pdf-documents}
 
-您可以使用組合器服務來拆解PDF文檔。 服務可從源文檔中提取頁面，或基於書籤分割源文檔。 通常，如果 PDF 文件最初是從許多個別的文件 (例如報表集合) 建立的，則此作業很有幫助。
+可以使用匯編程式服務來拆解PDF文檔。 該服務可以從源文檔中提取頁面或基於書籤劃分源文檔。 通常，如果 PDF 文件最初是從許多個別的文件 (例如報表集合) 建立的，則此作業很有幫助。
 
 ### 從來源文件擷取頁面 {#extract-pages-from-a-source-document}
 
-在下圖中，從源文檔中提取頁1-3，並將其放在新生成的文檔中。
+在下圖中，從源文檔中提取第1-3頁，並將其放在新合成文檔中。
 
-![從源文檔中提取特定頁](assets/as_intro_page_extraction.png)
+![從源文檔中提取特定頁面](assets/as_intro_page_extraction.png)
 
-從源文檔中提取特定頁
+從源文檔中提取特定頁面
 
 以下示例是用於拆卸文檔的DDX文檔。
 
@@ -282,13 +282,13 @@ source="myFragmentSource"/>
 
 ### 根據書籤分隔來源文件 {#divide-a-source-document-based-on-bookmarks}
 
-在下圖中，DocA被分為多個生成的文檔。 頁面上的第一級書籤標識新生成文檔的開始。
+在下圖中，DocA分為多個結果文檔。 頁面上的第一級書籤標識新合成文檔的開始。
 
 ![將基於書籤的源文檔劃分為多個文檔](assets/as_intro_pdfsfrombookmarks.png)
 
 將基於書籤的源文檔劃分為多個文檔
 
-以下示例是使用書籤拆解源文檔的DDX文檔。
+以下示例是使用書籤來拆卸源文檔的DDX文檔。
 
 ```xml
 <PDFsFromBookmarks prefix="A">
@@ -298,40 +298,40 @@ source="myFragmentSource"/>
 
 ## 確定文檔是否符合PDF/A {#determine-whether-documents-are-pdf-a-compliant}
 
-可以使用組合器服務來確定PDF文檔是否PDF/A相容。 PDF/A 是一種用於長期保存文件內容的封存格式。字體內嵌在文件中，檔案未壓縮。因此，PDF/A 文件通常比標準 PDF 文件大。此外，PDF/A 文件不包含音訊和視訊內容。
+您可以使用匯編器服務來確定PDF文檔是否與PDF/A相容。 PDF/A 是一種用於長期保存文件內容的封存格式。字體內嵌在文件中，檔案未壓縮。因此，PDF/A 文件通常比標準 PDF 文件大。此外，PDF/A 文件不包含音訊和視訊內容。
 
 ## 獲取有關PDF文檔的資訊 {#obtain-information-about-a-pdf-document}
 
-可以使用組合器服務獲取有關PDF文檔的以下資訊：
+您可以使用匯編器服務獲取有關PDF文檔的以下資訊：
 
-* 文字資訊。
+* 文本資訊。
 
-   * 文檔的每個頁面上的單詞
-   * 文檔每個頁面上每個單詞的位置
-   * 文檔每頁的每個段落中的句子
+   * 文檔每頁上的詞
+   * 文檔每頁上每個單詞的位置
+   * 文檔每頁各段中的句子
 
-* 書籤，包括頁碼、標題、目的地和外觀。 您可以匯出此\
-   從PDF檔案中匯入資料，並匯入PDF檔案。
+* 書籤，包括頁碼、標題、目標和外觀。 您可以導出此\
+   從PDF文檔中導入資料，並將其導入PDF文檔。
 
-* 檔案附件，包括檔案資訊。 對於頁面層級的附件，也包含\
-   檔案附件注釋的位置。 您可以從PDF檔案匯出此資料，並\
-   將其匯入PDF檔案。
+* 檔案附件，包括檔案資訊。 對於頁面級附件，它還包括\
+   檔案附件注釋的位置。 可以從PDF文檔導出此資料，\
+   將其導入PDF文檔。
 
-* 包檔案，包括檔案資訊、資料夾、包、架構和欄位資料。 您可以從PDF文檔導出此資料，並將其導入PDF文檔。
+* 包檔案，包括檔案資訊、資料夾、包、架構和欄位資料。 您可以從PDF文檔導出此資料，然後將其導入PDF文檔。
 
 ## 驗證DDX文檔 {#validate-ddx-documents}
 
-可以使用組合器服務來確定DDX文檔是否有效。 例如，如果您從舊版LiveCycle升級，驗證可確保DDX文檔有效。
+您可以使用匯編器服務來確定DDX文檔是否有效。 例如，如果從以前的LiveCycle版本升級，驗證將確保DDX文檔有效。
 
 ## 呼叫其他服務 {#call-other-services}
 
-您可以使用DDX檔案，使組合器服務呼叫下列LiveCycle服務。 組合器服務只能調用那些與LiveCycle一起安裝的服務。
+可以使用DDX文檔，這些文檔使匯編程式服務調用以下LiveC循環服務。 匯編程式服務只能調用那些安裝有LiveCycle的服務。
 
-**Reader擴充功能服務**:可讓Adobe Reader使用者以數位方式簽署產生的PDF檔案。
+**Reader擴展服務**:使Adobe Reader用戶能夠對生成的PDF文檔進行數字簽名。
 
-**Forms服務**:合併XDP檔案和XML資料檔案，以生成包含已填充的交互表單的PDF文檔。
+**Forms**:合併XDP檔案和XML資料檔案，以生成包含填充的互動式表單的PDF文檔。
 
-**輸出服務**:將動態XML表單轉換為包含非互動式表單的PDF文檔（拼合表單）。 組合器服務會拼合靜態的XML表單和Acrobat表單，而不調用輸出服務。
+**輸出服務**:將動態XML表單轉換為包含非交互表單（拼合表單）的PDF文檔。 匯編器服務將拼合靜態XML表單和Acrobat表單，而不調用輸出服務。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -346,4 +346,4 @@ digitalSignatures="true"/>
 </DDX>
 ```
 
-使用DDX和組合器服務調用其他LiveC週期服務可以簡化您的流程圖。 它甚至可以減少您自訂工作流程所花費的精力。 (另請參閱
+使用DDX和匯編程式服務調用其他LiveC循環服務可簡化流程圖。 它甚至可以減少您定制工作流所花費的工作量。 (另請參閱

@@ -1,5 +1,5 @@
 ---
-title: 開發沙箱應用程式
+title: 開發沙盒應用程式
 seo-title: Develop Sandbox Application
 description: 使用基礎指令碼開發應用程式
 seo-description: Develop application using foundation scripts
@@ -17,22 +17,22 @@ ht-degree: 4%
 
 ---
 
-# 開發沙箱應用程式  {#develop-sandbox-application}
+# 開發沙盒應用程式  {#develop-sandbox-application}
 
-在本節中，範本已設定於 [初始應用](initial-app.md) 區段，以及 [初始內容](initial-content.md) 部分，可使用foundation指令碼開發應用程式，包括啟用Communities元件編寫的功能。 本節結束時，網站將可正常運作。
+在本節中，模板已在 [初始應用](initial-app.md) ，以及 [初始內容](initial-content.md) 部分，可以使用基礎指令碼開發應用程式，包括啟用使用社區元件進行創作的能力。 本節結束時，網站將正常運行。
 
-## 使用Foundation頁面指令碼 {#using-foundation-page-scripts}
+## 使用Foundation頁指令碼 {#using-foundation-page-scripts}
 
-新增呈現播放頁面範本的元件時建立的預設指令碼，會修改為包含基礎頁面的head.jsp和本機body.jsp。
+在添加呈現播放頁模板的元件時建立的預設指令碼將被修改，以包括基礎頁的head.jsp和本地body.jsp。
 
 ### 超級資源類型 {#super-resource-type}
 
-第一步是將資源超類型屬性添加到 `/apps/an-scf-sandbox/components/playpage` 節點，以便它繼承超類型的指令碼和屬性。
+第一步是向 `/apps/an-scf-sandbox/components/playpage` 節點，以便繼承超類型的指令碼和屬性。
 
 使用 CRXDE Lite:
 
-1. 選擇節點 `/apps/an-scf-sandbox/components/playpage`.
-1. 在「屬性」頁簽中，輸入新屬性，其值如下：
+1. 選擇節點 `/apps/an-scf-sandbox/components/playpage`。
+1. 在「屬性」頁籤中，輸入具有以下值的新屬性：
 
    名稱: `sling:resourceSuperType`
 
@@ -40,14 +40,14 @@ ht-degree: 4%
 
    值: `foundation/components/page`
 
-1. 按一下綠色 **[!UICONTROL +添加]** 按鈕。
-1. 按一下 **[!UICONTROL 全部儲存]**.
+1. 按一下綠色 **[!UICONTROL +添加]** 按鈕
+1. 按一下 **[!UICONTROL 全部保存]**。
 
-   ![page-script](assets/page-script.png)
+   ![頁面指令碼](assets/page-script.png)
 
 ### 頭部和身體指令碼 {#head-and-body-scripts}
 
-1. 在 **CRXDE Lite** 瀏覽器窗格，導航至 `/apps/an-scf-sandbox/components/playpage` 並按兩下檔案 `playpage.jsp` 以在編輯窗格中開啟它。
+1. 在 **CRXDE Lite** 瀏覽器窗格，導航至 `/apps/an-scf-sandbox/components/playpage` 並按兩下檔案 `playpage.jsp` 開啟它。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -66,9 +66,9 @@ ht-degree: 4%
    %>
    ```
 
-1. 請注意開啟/關閉指令碼標籤，請取代&quot; // TODO ...&quot; 包含用於的頭部和主體部分的指令碼 &lt;html>.
+1. 要瞭解open/close指令碼標籤，請替換&quot; // TODO ...&quot; 包含用於 &lt;html>。
 
-   超類型 `foundation/components/page`，此相同資料夾中未定義的任何指令碼將解析為 `/apps/foundation/components/page` 資料夾（如果存在），則與 `/libs/foundation/components/page` 檔案夾。
+   具有超類型 `foundation/components/page`，此資料夾中未定義的任何指令碼都將解析為中的指令碼 `/apps/foundation/components/page` 資料夾（如果存在），則指向 `/libs/foundation/components/page` 的子菜單。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -88,18 +88,18 @@ ht-degree: 4%
    </html>
    ```
 
-1. 基礎指令碼 `head.jsp` 不需要重疊，但基礎劇本 `body.jsp` 空白。
+1. 基礎指令碼 `head.jsp` 不需要重疊，但是基本指令碼 `body.jsp` 為空。
 
-   若要設定製作，請覆蓋 `body.jsp` 包含本機指令碼，並在內文中包含段落系統(parsys):
+   要設定創作，請覆蓋 `body.jsp` 帶有本地指令碼，並在正文中包含段落系統(parsys):
 
    1. 導覽至 `/apps/an-scf-sandbox/components`。
-   1. 選取 `playpage` 節點。
-   1. 按一下滑鼠右鍵並選取 `Create > Create File...`
+   1. 選擇 `playpage` 的下界。
+   1. 按一下右鍵並選擇 `Create > Create File...`
 
       * 名稱： **body.jsp**
-   1. 按一下 **[!UICONTROL 全部儲存]**.
+   1. 按一下 **[!UICONTROL 全部保存]**。
 
-   開啟 `/apps/an-scf-sandbox/components/playpage/body.jsp` 並貼入下列文字：
+   開啟 `/apps/an-scf-sandbox/components/playpage/body.jsp` 並貼上到以下文本中：
 
    ```xml
    <%--
@@ -117,31 +117,31 @@ ht-degree: 4%
    </body>
    ```
 
-1. 按一下 **[!UICONTROL 全部儲存]**.
+1. 按一下 **[!UICONTROL 全部保存]**。
 
-**在編輯模式下，在瀏覽器中檢視頁面：**
+**以編輯模式在瀏覽器中查看頁面：**
 
 * 標準 UI: `http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html`
 
-您不應只看到標題 **社群播放**，也是編輯頁面內容的UI。
+你不應該只看到標題 **社區遊戲**，還有用於編輯頁面內容的UI。
 
-切換側面板時，會顯示「資產/元件」側面板，且視窗足夠寬，可同時顯示側邊內容和頁面內容。
+當兩個側面板都被切換開啟，並且窗口足夠寬，可同時顯示側面內容和頁面內容時，將顯示「資產/元件」側面板。
 
-![檢視頁面](assets/view-page.png)
+![視圖頁](assets/view-page.png)
 
 * 傳統 UI: `http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html`
 
-以下是傳統UI中播放頁面的顯示方式，包括搭配內容尋找器(cf):
+以下是播放頁在經典UI中的顯示方式，包括內容查找器(cf):
 
-![play-page-view](assets/play-page-view.png)
+![播放頁面視圖](assets/play-page-view.png)
 
-## Communities元件 {#communities-components}
+## 社區元件 {#communities-components}
 
-要啟用Communities元件進行創作，請按照以下說明開始：
+要啟用社區元件進行創作，請按照以下說明開始：
 
-* [訪問Communities元件](basics.md#accessing-communities-components)
+* [訪問社區元件](basics.md#accessing-communities-components)
 
-為了方便此沙箱，請從以下 **社群** 元件（勾選方塊即可啟用）:
+為此沙盒的目的，請從以下內容開始 **社區** 元件（通過選中框啟用）:
 
 * 評論
 * 論壇
@@ -150,36 +150,36 @@ ht-degree: 4%
 * 審核摘要 (顯示)
 * 投票
 
-此外，選擇 **[!UICONTROL 一般]** 元件，例如
+另外，選擇 **[!UICONTROL 常規]** 元件，如
 
 * 影像
 * 表格
 * 文字
-* 標題(Foundation)
+* 標題（基礎）
 
 >[!NOTE]
 >
->為頁面分段啟用的元件會儲存在存放庫中，作為 `components` 屬性
+>為頁面部分啟用的元件作為 `components` 屬性
 >
->`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` 節點。
+>`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` 的下界。
 
 ## 登陸頁面 {#landing-page}
 
-在多語言環境中，根頁面會包含指令碼，該指令碼會剖析來自用戶端的請求以判斷偏好的語言。
+在多語言環境中，根頁面將包括指令碼，該指令碼將分析來自客戶端的請求以確定首選語言。
 
-在這個簡單範例中，根頁面會靜態設定，以重新導向至英文頁面，日後可能開發為具有播放頁面連結的主要登陸頁面。
+在此簡單示例中，根頁被靜態設定為重定向到英文頁，該英文頁將來可能會開發為帶有到播放頁的連結的主登錄頁。
 
-將瀏覽器URL變更為根頁面： `http://localhost:4502/editor.html/content/an-scf-sandbox.html`
+將瀏覽器URL更改為根頁： `http://localhost:4502/editor.html/content/an-scf-sandbox.html`
 
-* 選取頁面資訊圖示
+* 選擇「頁面資訊」表徵圖
 * 選擇 **[!UICONTROL 開啟屬性]**
-* 在「進階」標籤上
+* 在「高級」(ADVANCED)頁籤上
 
-   * 對於重新導向項目，瀏覽至 **[!UICONTROL 網站]** > **[!UICONTROL SCF沙箱站點]** > **[!UICONTROL SCF沙箱]**
+   * 對於重定向條目，瀏覽至 **[!UICONTROL 網站]** > **[!UICONTROL SCF沙盒站點]** > **[!UICONTROL SCF沙盒]**
    * 按一下 **[!UICONTROL 確定]**
 
 * 按一下 **[!UICONTROL 確定]**
 
-發佈網站後，瀏覽至發佈執行個體上的根頁面會重新導向至英文頁面。
+網站發佈後，瀏覽到發佈實例上的根頁面將重定向到英文頁面。
 
-播放社區SCF元件之前的最後一個步驟是添加客戶端庫資料夾(clientlibs)。... [添加Clienlibs](add-clientlibs.md)
+使用社區SCF元件前的最後一步是添加客戶端庫資料夾（客戶端庫）。..。 [添加客戶端](add-clientlibs.md)

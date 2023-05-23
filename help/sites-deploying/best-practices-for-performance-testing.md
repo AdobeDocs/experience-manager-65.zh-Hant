@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: 18f843ed3ffb719d168b67826baaffd926ffd2dd
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
 source-wordcount: '1831'
 ht-degree: 1%
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 * **載入運行器** 是企業級負載測試產品。 提供免費評估版本。 有關詳細資訊，請參閱 [https://www.microfocus.com/en-us/portfolio/performance-engineering/overview](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
 
-* 網站負載測試工具，如 [韋爾卡拉](https://vercara.com/website-performance-management) 也可用。
+* 網站負載測試工具，如 [新星](https://neustarsecurityservices.com/web-performance-management) 也可用。
 * 在測試移動網站或響應網站時，必須使用一組單獨的工具。 它們通過限制網路頻寬、模擬速度較慢的移動連接（如3G或EDGE）來工作。 在使用範圍更廣的工具中包括：
 
    * **[網路鏈路調節器](https://nshipster.com/network-link-conditioner/)**  — 它提供易於使用的UI，在網路堆棧上工作的級別相當低。 它包括OS X和iOS版；

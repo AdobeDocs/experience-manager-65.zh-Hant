@@ -1,7 +1,7 @@
 ---
 title: SPA 頁面元件
 seo-title: SPA Page Component
-description: 在SPA中，頁面元件不提供其子元件的HTML元素，而是將此元素委派至SPA架構。 本檔案說明如何讓SPA的頁面元件獨一無二。
+description: 在頁SPA面元件中，不提供其子元件的HTML元素，而是將其委託到框架SPA中。 此文檔說明如何使頁面元件SPA唯一。
 seo-description: In an SPA the page component doesn't provide the HTML elements of its child components, but instead delegates this to the SPA framework. This document explains how this makes the page component of an SPA unique.
 uuid: d444527a-e883-4873-a55b-c2bc140d8d7f
 contentOwner: bohnert
@@ -20,30 +20,30 @@ ht-degree: 9%
 
 # SPA 頁面元件{#spa-page-component}
 
-在SPA中，頁面元件不提供其子元件的HTML元素，而是將此元素委派至SPA架構。 本檔案說明如何讓SPA的頁面元件獨一無二。
+在頁SPA面元件中，不提供其子元件的HTML元素，而是將其委託到框架SPA中。 此文檔說明如何使頁面元件SPA唯一。
 
 >[!NOTE]
 >
->若專案需要SPA架構的用戶端轉譯(例如React或Angular),SPA Editor是建議的解決方案。
+>編輯SPA器是需要基於框架的SPA客戶端呈現(例如，反應或Angular)的項目的推薦解決方案。
 
 ## 簡介 {#introduction}
 
-SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件的HTML元素。 此操作委託給 SPA 框架。子元件的表示方式會以JSON資料結構（即模型）擷取。 接著會根據提供的JSON模型，將SPA元件新增至頁面。 因此，頁面元件初始主體組成與其預先呈現的HTML對應不同。
+的頁元件不SPA會通過JSP或HTL檔案和資源對象提供其子元件的HTML元素。 此操作委託給 SPA 框架。子元件的表示被提取為JSON資料結構（即模型）。 然SPA後，根據提供的JSON模型將元件添加到頁面。 因此，頁面元件初始主體組合不同於其預呈現的HTML對應體。
 
 ## 頁面模型管理 {#page-model-management}
 
-頁面模型的解析度及管理已委派給提供 [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) 模組。 SPA必須與 `PageModelManager` 模組，當它初始化以擷取初始頁面模型並註冊模型更新時，大多會在作者透過頁面編輯器編輯頁面時產生。 此 `PageModelManager` 可由SPA專案以npm套件形式存取。 作為AEM和SPA的翻譯， `PageModelManager` 是伴隨SPA。
+頁面模型之解決方案及管理已委託 [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) 中。 必SPA須與 `PageModelManager` 初始化模組以獲取初始頁面模型並註冊模型更新時生成的模組 — 主要是在作者通過頁面編輯器編輯頁面時生成的。 的 `PageModelManager` 可由項SPA目作為npm包訪問。 當一AEM個SPA翻譯 `PageModelManager` 是為了陪伴SPA。
 
-若要允許製作頁面，用戶端程式庫名為 `cq.authoring.pagemodel.messaging` 必須新增，才能提供SPA和頁面編輯器之間的通訊通道。 如果SPA頁面元件繼承自頁面wcm/核心元件，則有下列選項可讓 `cq.authoring.pagemodel.messaging` 客戶端庫類別可用：
+要允許建立頁面，請使用名為 `cq.authoring.pagemodel.messaging` 必須添加以提供頁面編輯器SPA和頁面編輯器之間的通信通道。 如果頁SPA面元件從頁面wcm/core元件繼承，則有以下選項可使 `cq.authoring.pagemodel.messaging` 客戶端庫類別可用：
 
 * 如果模板是可編輯的，請將客戶端庫類別添加到頁面策略中。
-* 使用 `customfooterlibs.html` 頁面元件。
+* 使用 `customfooterlibs.html` 的子菜單。
 
-別忘了限制 `cq.authoring.pagemodel.messaging` 類別來識別頁面編輯器的內容。
+別忘了限制 `cq.authoring.pagemodel.messaging` 的上下文。
 
 ## 通訊資料類型 {#communication-data-type}
 
-通訊資料類型是使用在AEM Page元件內設定HTML元素， `data-cq-datatype` 屬性。 當通訊資料類型設為JSON時，GET要求會點擊元件的Sling模型端點。 在頁面編輯器中完成更新後，已更新元件的 JSON 表示將傳送到頁面模型庫。然後頁面模型程式庫會警告SPA有更新。
+通信資料類型是使用Page元件內AEM的HTML元素 `data-cq-datatype` 屬性。 當通信資料類型設定為JSON時，GET請求會命中元件的Sling Model終結點。 在頁面編輯器中完成更新後，已更新元件的 JSON 表示將傳送到頁面模型庫。然後，頁面模型庫會警告SPA更新。
 
 **SPA 頁面元件 -`body.html`**
 
@@ -51,7 +51,7 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 <div id="page"></div>
 ```
 
-除了非是避免延遲DOM產生的良好作法，SPA架構還需要在內文結尾新增指令碼。
+除了不延遲DOM生成的良好做法外，該SPA框架還要求在主體末尾添加指令碼。
 
 **SPA 頁面元件 -`customfooterlibs.html`**
 
@@ -62,7 +62,7 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 <sly data-sly-call="${clientLib.js @ categories='we-retail-journal-react'}"></sly>
 ```
 
-描述SPA內容的元資源屬性：
+描述內容的元資源屬SPA性：
 
 **SPA 頁面元件 -`customheaderlibs.html`**
 
@@ -78,32 +78,32 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 
 >[!NOTE]
 >
->請求元件的「Sling模型」表示時，會靜態設定預設模型選取器。
+>當請求元件的「吊帶模型」表示時，將靜態設定預設模型選取器。
 
 ## 中繼屬性 {#meta-properties}
 
-* `cq:wcmmode`:編輯器的WCM模式（例如頁面、範本）
-* `cq:pagemodel_root_url`:應用程式的根模型URL。 直接存取子頁面時非常重要，因為子頁面模型是應用程式根模型的片段。 此 ` [PageModelManager](/help/sites-developing/spa-page-component.md)` 然後系統地將應用程式初始模型重新組合為從其根入口點進入應用程式。
+* `cq:wcmmode`:編輯器的WCM模式（例如頁面、模板）
+* `cq:pagemodel_root_url`:應用的根模型的URL。 直接訪問子頁時至關重要，因為子頁模型是應用根模型的片段。 的 ` [PageModelManager](/help/sites-developing/spa-page-component.md)` 然後系統地將應用程式初始模型重構為從其根入口點進入應用程式。
 
-* `cq:pagemodel_router`:啟用或停用 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 的 `PageModelManager` 資料庫
+* `cq:pagemodel_router`:啟用或禁用 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 的 `PageModelManager` 庫
 
-* `cq:pagemodel_route_filters`:以逗號分隔的清單或規則運算式，以提供路由 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 必須忽略。
+* `cq:pagemodel_route_filters`:用逗號分隔的清單或規則運算式來提供路由 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 必須忽略。
 
 >[!CAUTION]
 >
->本檔案僅將We.Retail Journal應用程式用於示範用途。 它不應用於任何專案。
+>此文檔僅用於演示目的。We.Retail Journal應用。 它不應用於任何專案。
 >
->任何AEM專案皆應運用 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，可支援使用React或Angular的SPA專案，並運用SPA SDK。AEM上的所有SPA專案都應以SPA Starter Kit的Maven原型為基礎。
+>任何AEM項目都應利用 [項AEM目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，它支SPA持使用React或Angular的項目，SPA並利用SDK。SPA上的所有項目都應AEM基於Maven Archetype for SPAStarter Kit。
 
 ## 頁面編輯器覆蓋同步 {#page-editor-overlay-synchronization}
 
-覆蓋的同步由 `cq.authoring.page` 類別。
+覆蓋的同步由MS提供的同一變異觀測器保證 `cq.authoring.page` 的子菜單。
 
-## Sling模型JSON匯出結構設定 {#sling-model-json-exported-structure-configuration}
+## Sling模型JSON導出結構配置 {#sling-model-json-exported-structure-configuration}
 
-啟用路由功能後，假設SPA的JSON匯出包含應用程式的不同路由，這要歸功於AEM導覽元件的JSON匯出。 AEM導覽元件的JSON輸出可透過下列兩個屬性，在SPA根頁面內容原則中設定：
+啟用路由功能後，假設JSON導出包含SPA應用程式的不同路由，這要歸功於導航元件的JSONAEM導出。 導航元件的JSONAEM輸出可通過以下兩SPA個屬性在根頁內容策略中配置：
 
-* `structureDepth`:與導出的樹的深度相對應的數字
-* `structurePatterns`:與要匯出的頁面對應之規則陣列的規則運算式
+* `structureDepth`:與導出的樹的深度對應的編號
+* `structurePatterns`:與要導出的頁面對應的區域陣列的規則運算式
 
-這可顯示在以下的SPA範例內容中： `/conf/we-retail-journal/react/settings/wcm/policies/we-retail-journal/react/components/structure/page/root`.
+這可在中的示例SPA內容中顯示 `/conf/we-retail-journal/react/settings/wcm/policies/we-retail-journal/react/components/structure/page/root`。

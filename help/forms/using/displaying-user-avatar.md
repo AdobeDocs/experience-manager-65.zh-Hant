@@ -1,7 +1,7 @@
 ---
-title: 顯示使用者頭像
+title: 顯示用戶虛擬形象
 seo-title: Displaying the user avatar
-description: 如何自訂AEM Forms工作區以顯示登入使用者的影像。
+description: 如何自定義AEM Forms工作區以顯示登錄用戶的影像。
 seo-description: How to customize the AEM Forms workspace to display the image of a logged-in user.
 uuid: 2961dc93-f0d0-4842-80f1-3c239a20e348
 contentOwner: robhagat
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ---
 
-# 顯示使用者頭像 {#displaying-the-user-avatar}
+# 顯示用戶虛擬形象 {#displaying-the-user-avatar}
 
-登入使用者的頭像會顯示在AEM Forms工作區的右上角。 此外，組織階層中直接報表的變數會顯示在「管理員檢視」中。 您可以配置AEM Forms工作區，從資料庫（如LDAP伺服器）中挑選用戶映像。
+登錄用戶的虛擬形象顯示在AEM Forms工作區的右上角。 此外，組織層次結構中直接報告的化身也顯示在「經理視圖」中。 您可以配置AEM Forms工作區，從資料庫（如LDAP伺服器）中選擇用戶映像。
 
 >[!NOTE]
 >
->支援的使用者影像長寬比為1:1。
+>用戶影像的支援長寬比為1:1。
 
-1. 使用下一步驟提及的詳細資訊建立DSC。 如需詳細資訊，請參閱以下主題中的「開發AEM Forms的元件」主題： [使用AEM Forms進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_63) 指南。
-1. 在DSC中，定義新的SPI，此SPI會公開getCurrentUserImageUrl和getUserImageUrl方法，以取得AEM Forms使用者的影像URL。 以下是範例Java™程式碼片段：
+1. 使用下一步中提到的詳細資訊建立DSC。 有關詳細資訊，請參閱中的「開發AEM表單的元件」主題 [與AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) 的子菜單。
+1. 在DSC中，定義一個新的SPI，該SPI公開getCurrentUserImageUrl和getUserImageUrl方法，以獲取AEM Forms用戶的影像URL。 以下是示例Java™代碼段：
 
    ```java
    public class DemoUserImageURLProviderService {
@@ -41,9 +41,9 @@ ht-degree: 0%
    }
    ```
 
-1. 建立元件.xml檔案。 請確定規格ID如下列程式碼片段所示。
+1. 建立component.xml檔案。 確保spec-id如下面的代碼段所示。
 
-   下列程式碼片段為範例。 自訂以符合您的特定需求。
+   以下代碼段是示例。 根據您的特定要求定制它。
 
    ```java
    <component xmlns="https://adobe.com/idp/dsc/component/document">
@@ -83,5 +83,5 @@ ht-degree: 0%
    </component>
    ```
 
-1. 透過Workbench部署DSC。 重新啟動 `ProcessManagementClientSessionService` 服務。
-1. 您可能需要重新整理瀏覽器，或重新登出/登入使用者。
+1. 通過Workbench部署DSC。 重新啟動 `ProcessManagementClientSessionService` 服務。
+1. 您可能必須刷新瀏覽器或再次與用戶註銷/登錄。

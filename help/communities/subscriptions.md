@@ -1,7 +1,7 @@
 ---
 title: Communities 訂閱
 seo-title: Communities Subscriptions
-description: 社群成員透過電子郵件與其他成員互動
+description: 社區成員通過電子郵件與其他成員交互
 seo-description: Community members interact with other members through email
 uuid: a4b98769-c219-4e18-8e80-9a806ab979ff
 contentOwner: Janice Kendall
@@ -22,50 +22,50 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-As of Communities [FP1](deploy-communities.md#latestfeaturepack)，社群成員可能會使用稱為訂閱的功能，透過電子郵件與社群互動。
+截至社區 [FP1](deploy-communities.md#latestfeaturepack)，社區成員可以使用稱為訂閱的功能通過電子郵件與社區進行交互。
 
-訂閱類似於 [通知](notifications.md) 在關注部落格文章、論壇主題或QnA問題時，可以訂閱。
+訂閱與 [通知](notifications.md) 成員在關注部落格、論壇主題或QnA問題時可以訂閱。
 
-訂閱與通知的區別在於：
+將訂閱與通知區分的是：
 
-* 成員在以下成員時不能訂閱。
-* 成員只需選擇 `Email Subscriptions` 後。
-* 設定電子郵件回覆時，成員只要回覆收到的電子郵件，即可有效張貼內容。
+* 成員在跟蹤其他成員時不能訂閱。
+* 成員唯一要執行的操作是選擇 `Email Subscriptions` 下。
+* 當配置電子郵件回復時，成員可以通過簡單地回復接收的電子郵件來有效地發佈內容。
 
 ### 要求 {#requirements}
 
-**設定電子郵件**
+**配置電子郵件**
 
-必須設定電子郵件，訂閱才能正常運作，成員才能透過電子郵件回覆。
+必須配置電子郵件，使訂閱功能正常，並使成員通過電子郵件進行回復。
 
-如需設定電子郵件的指示，請參閱 [設定電子郵件](email.md).
+有關設定電子郵件的說明，請參見 [配置電子郵件](email.md)。
 
-**啟用訂閱與追蹤**
+**啟用訂閱並遵循**
 
-必須配置元件以啟用訂閱 *和* 下。 允許訂閱的功能為 [部落格](blog-feature.md), [論壇](forum.md) 和 [QnA](working-with-qna.md).
+必須配置元件以啟用訂閱 *和* 。 允許訂閱的功能是 [部落格](blog-feature.md)。 [論壇](forum.md) 和 [QnA](working-with-qna.md)。
 
-## 來自下列項目的訂閱 {#subscriptions-from-following}
+## 以下訂閱 {#subscriptions-from-following}
 
-![subscription-following](assets/subscription-following.png)
+![訂閱跟蹤](assets/subscription-following.png)
 
-此 **追隨** 按鈕提供可在活動、訂閱和/或通知後跟隨項目的方法。 每次 **追隨** 按鈕，則可以開啟或關閉選取項。
+的 **關注** 按鈕提供了將條目作為活動、訂閱和/或通知跟蹤的方法。 每次 **關注** 按鈕，可以開啟或關閉選定內容。
 
-如果選取下列任何方法，按鈕的文字會變更為 **追隨**. 為方便起見，您可以選擇 `Unfollow All` 切換所有方法。
+如果選擇了以下任何方法，則按鈕的文本將更改為 **跟蹤**。 為方便起見，可以選擇 `Unfollow All` 關閉所有方法。
 
-此 **追隨** 按鈕將包含 `Email Subscriptions` 選項（僅當將論壇、QnA或部落格配置為啟用電子郵件訂閱時）。 此按鈕隨即出現：
+的 **關注** 按鈕將包括 `Email Subscriptions` 選項，僅在將論壇、QnA或部落格配置為啟用電子郵件訂閱時。 此按鈕將出現：
 
-* 在已啟用論壇的主功能頁面上，QnA或部落格將為該功能下的所有活動發送電子郵件。
+* 在啟用的論壇的主功能頁面上，QnA或部落格將針對該功能下的所有活動發送電子郵件。
 
-* 對於特定條目（如論壇主題、QnA問題或部落格文章），當有特定條目的活動時將發送電子郵件。
+* 對於特定條目，如論壇主題、QnA問題或部落格，當該特定條目有活動時將發送電子郵件。
 
-## 透過電子郵件回覆 {#reply-by-email}
+## 通過電子郵件答復 {#reply-by-email}
 
-電子郵件為 [已設定為以電子郵件回覆](email.md#configure-polling-importer)，訂閱的成員將會收到一封包含已張貼內容的電子郵件，以及線上內容的連結。
+當電子郵件 [已配置為通過電子郵件回復](email.md#configure-polling-importer)，訂閱的成員將收到一封包含已發佈內容和指向線上內容的連結的電子郵件。
 
-如果他們回覆電子郵件，他們在回覆中輸入的內容將顯示為線上內容。
+如果他們回復電子郵件，他們在回復中輸入的內容將作為內容線上顯示。
 
-![電子郵件回覆](assets/email-reply.png)
+![電子郵件回復](assets/email-reply.png)
 
-張貼回覆所花的時間，由 [輪詢匯入工具的更新間隔](email.md#configure-polling-importer).
+回復發佈所花費的時間由 [輪詢導入程式的更新間隔](email.md#configure-polling-importer)。
 
 ![QA](assets/qa.png)

@@ -1,6 +1,6 @@
 ---
 title: 如何將 Headless 應用程式上線
-description: 在AEM無頭式開發人員歷程的這部分，了解如何即時部署無頭式應用程式。
+description: 在「無頭開發AEM者之旅」的這一部分，瞭解如何即時部署無頭應用程式。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
 source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 50%
 
 # 如何將 Headless 應用程式上線 {#go-live}
 
-在 [AEM Headless Developer Journey](overview.md)，了解如何即時部署無頭應用程式。
+在 [無AEM頭開發者之旅](overview.md)，瞭解如何即時部署無頭應用程式。
 
 ## 到目前為止 {#story-so-far}
 
@@ -25,24 +25,24 @@ ht-degree: 50%
 
 本文件可協助在將您的應用程式上線之前，應該注意的 AEM 無周邊發佈管道和效能考量事項。
 
-* 了解AEM SDK及所需的開發工具
-* 設定本機開發執行階段，以在上線前模擬您的內容
-* 了解AEM內容復寫和快取基本知識
+* 瞭解所需AEM的SDK和開發工具
+* 設定本地開發運行時以在開始運行之前模擬內容
+* 瞭解內AEM容複製和快取基礎知識
 * 在應用程式推出前加以保護和擴展
 * 監控效能和偵錯問題
 
 ## AEM SDK {#the-aem-sdk}
 
-AEM SDK 用於建置和部署自訂程式碼。這是您必須開發和測試無頭應用程式的主要工具，才能上線。 它都包含下列成品：
+AEM SDK 用於建置和部署自訂程式碼。它是您在投入使用之前必須開發和test無頭應用程式的主要工具。 它都包含下列成品：
 
 * Quickstart jar - 這是可執行的 jar 檔案，可用於設定作者和發佈執行個體
-* Dispatcher工具 — 適用於Windows和UNIX系統的Dispatcher模組及其相依性
+* Dispatcher工具 — Dispatcher模組及其對基於Windows和UNIX的系統的依賴項
 * Java™ API Jar - Java™ Jar/Maven 相依性公開了所有允許的 Java™ API，其可用於針對 AEM 進行開發
 * Javadoc jar - Java™ API jar 的 javadoc
 
 ## 其他開發工具 {#additional-development-tools}
 
-除了AEM SDK，您還需要其他工具來協助您在本機開發及測試程式碼和內容：
+除了SDK，您還AEM需要其他工具來方便本地開發和測試代碼和內容：
 
 * Java™
 * Git
@@ -50,31 +50,31 @@ AEM SDK 用於建置和部署自訂程式碼。這是您必須開發和測試無
 * Node.js 程式庫
 * 您選擇的 IDE
 
-由於AEM是Java™應用程式，您必須安裝Java™和Java™ SDK，才能支援AEMas a Cloud Service的開發。
+因AEM為是Java™應用程式，必須安裝Java™和Java™ SDK以支援as a Cloud Service的開AEM發。
 
 Git 是您用來管理原始檔控制系統和簽入對 Cloud Manager 的變更，然後將它們部署到生產執行個體的工具。
 
 AEM 使用 Apache Maven 建置從 AEM Maven 專案原型產生的專案。所有主要的 IDE 都提供對 Maven 的整合支援。
 
-Node.js是JavaScript執行階段環境，用於搭配AEM專案的前端資產使用 `ui.frontend` 子專案。 Node.js與npm一起分發，npm是事實上的Node.js套件管理器，用於管理JavaScript相依性。
+Node.js是JavaScript運行時環境，用於處理項目的AEM前端資產 `ui.frontend` 子項目。 Node.js與npm一起分發，npm是事實上的Node.js包管理器，用於管理JavaScript依賴關係。
 
 ## AEM 系統元件一覽 {#components-of-an-aem-system-at-a-glance}
 
 接下來，讓我們看看 AEM 環境的組成部分。
 
-完整的 AEM 環境由作者、發佈和 Dispatcher 組成。這些相同的元件會在本機開發執行階段中提供，讓您在上線前更輕鬆地預覽程式碼和內容。
+完整的 AEM 環境由作者、發佈和 Dispatcher 組成。這些相同的元件在本地開發運行時可用，以便您更輕鬆地預覽代碼和內容，然後才能投入使用。
 
 * **作者服務**&#x200B;是內部使用者建立、管理和預覽內容的地方。
 
-* **發佈服務** 會視為「即時」環境，且通常是使用者與之互動的環境。 內容在Author服務上經過編輯和核准後，會分發（複製）至Publish服務。 AEM 無周邊應用程式最常見的部署模式是讓應用程式的生產版本連接到 AEM Publish 服務。
+* **發佈服務** 被認為是「即時」環境，通常是最終用戶與之交互的內容。 在作者服務上編輯和批准內容後，內容將分發（複製）到發佈服務。 AEM 無周邊應用程式最常見的部署模式是讓應用程式的生產版本連接到 AEM Publish 服務。
 
 * **Dispatcher** 是靜態 Web 伺服器，增加了 AEM Dispatcher 模組。它快取發佈執行個體產生的網頁以提升效能。
 
 ## 本機開發工作流程 {#the-local-development-workflow}
 
-本機開發專案以 Apache Maven 為基礎建置，並使用 Git 進行原始檔控制。若要更新專案，開發人員可使用其偏好的整合開發環境，例如Eclipse、Visual Studio Code或IntelliJ等。
+本機開發專案以 Apache Maven 為基礎建置，並使用 Git 進行原始檔控制。要更新項目，開發人員可以使用其首選的整合開發環境，如Eclipse、Visual Studio代碼或IntelliJ等。
 
-若要測試無頭應用程式所擷取的程式碼或內容更新，請將更新部署至本機AEM執行階段。 這些包括AEM製作和發佈服務的本機例項。
+要test由無頭應用程式接收的代碼或內容更新，請將更新部署到本地運AEM行時。 這些實例包括作者的本AEM地實例和發佈服務。
 
 請務必注意本機 AEM 執行階段每個元件之間的區別，因為在與您的更新最有關係的地方測試它，這一點非常重要。例如，在作者執行個體測試內容更新或在發佈執行個體測試新程式碼。
 
@@ -82,72 +82,72 @@ Node.js是JavaScript執行階段環境，用於搭配AEM專案的前端資產使
 
 ## 使用本機開發環境在本機預覽程式碼和內容 {#previewing-your-code-and-content-locally-with-the-local-development-environment}
 
-若要準備AEM無頭專案以供啟動，請確定專案的所有組成部分皆正常運作。
+要準備AEM啟動無頭項目，請確保項目的所有組成部分都運行良好。
 
-要做到這一點，你必須把所有事情放在一起：程式碼、內容和設定，並在本機開發環境中測試，以備上線準備。
+要做到這一點，你必須把所有東西都放在一起：代碼、內容和配置，並將其test到本地開發環境中，以便進行即時準備。
 
-地方發展環境由三個主要領域組成：
+地方發展環境主要由三個方面組成：
 
-1. AEM專案 — 包含AEM開發人員將要使用的所有自訂程式碼、設定和內容
+1. 項AEM目 — 包含開發人員將要處理的所AEM有自定義代碼、配置和內容
 1. 本機 AEM 執行階段 - AEM 作者和發佈服務本機版本，用於從 AEM 專案部署程式碼
 1. 本機 Dispatcher 執行階段 - 包含 Dispatcher 模型的 Apache htttpd 網頁伺服器本機版本
 
-設定本機開發環境後，您可以在本機部署靜態節點伺服器，以模擬提供給React應用程式的內容。
+設定本地開發環境後，您可以通過本地部署靜態節點伺服器來模擬向React應用提供的內容服務。
 
-若要深入了解如何設定本機開發環境以及內容預覽所需的所有相依性，請參閱 [生產部署檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html?lang=en).
+要更深入地瞭解設定本地開發環境以及內容預覽所需的所有相關性，請參見 [生產部署文檔](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html?lang=en)。
 
-## 準備AEM Headless應用程式上線 {#prepare-your-aem-headless-application-for-golive}
+## 準AEM備無頭應用程式投入使用 {#prepare-your-aem-headless-application-for-golive}
 
 <!-- Start of CDN Review -->
 
-現在，您可以遵循以下概述的最佳實務，為您的AEM無頭應用程式做好啟動準備。
+現在，是時候按照下面介紹的AEM最佳做法，讓您的無頭應用程式準備啟動了。
 
-### 啟動前保護無頭應用程式 {#secure-and-scale-before-launch}
+### 啟動前保護您的無頭應用程式 {#secure-and-scale-before-launch}
 
-1. 準備 [驗證](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md) 針對GraphQL請求
+1. 準備 [驗證](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md) 你的GraphQL請求
 
 ### 模型結構與 GraphQL 輸出 {#structure-vs-output}
 
-* 請避免建立輸出超過15 KB JSON的查詢（gzip壓縮）。 長 JSON 檔案是資源密集型檔案，用戶端應用程式需要解析。
+* 避免建立輸出超過15 KB的JSON（gzip壓縮）的查詢。 長 JSON 檔案是資源密集型檔案，用戶端應用程式需要解析。
 * 避免片段階層有超過五個巢狀層。增加層數會使內容作者難以考量變更帶來的影響。
-* 使用多物件查詢，而不是在模型中使用相依性階層建立查詢模型。如此一來，您就能擁有更長遠的彈性，不必變更許多內容，即可重新建構JSON輸出。
+* 使用多物件查詢，而不是在模型中使用相依性階層建立查詢模型。這樣做可以增加JSON輸出的長期靈活性，而無需進行許多內容更改。
 
 ### 最大化 CDN 快取命中比例 {#maximize-cdn}
 
 * 不要使用直接 GraphQL 查詢，除非您從表面要求即時內容。
    * 盡可能使用持續性查詢。
-   * 提供超過600秒的CDN TTL，讓CDN可加以快取。
+   * 提供600秒以上的CDN TTL，以便CDN可以快取它們。
    * AEM 可以計算模型變更對現有查詢的影響。
-* 在低和高內容變更率之間分割JSON檔案/GraphQL查詢，以減少CDN的用戶端流量並指派較高的TTL。 如此一來，CDN可將原始伺服器重新驗證JSON的程度降至最低。
-* 若要主動使CDN的內容無效，請使用「軟清除」。 這麼做可讓CDN重新下載內容，而不會造成快取遺失。
+* 將JSON檔案/GraphQL查詢在低和高內容更改率之間拆分，以減少客戶端到CDN的流量並分配更高的TTL。 這樣，CDN將使JSON與源伺服器重新驗證最小化。
+* 要主動使CDN中的內容無效，請使用軟清除。 這樣，CDN可以重新下載內容，而不會導致快取丟失。
 
 >[!NOTE]
 >
->請參閱 [其他資源](#additional-resources) 以取得CDN和快取的詳細資訊。
+>請參閱 [其他資源](#additional-resources) 的子菜單。
 
 ### 縮短下載 Headless 內容的時間 {#improve-download-time}
 
 * 確保 HTTP 用戶端使用 HTTP/2。
 * 確保 HTTP 用戶端接受標頭要求 gzip。
 * 盡量減少用於裝載 JSON 和參考成品的網域數量。
-* 使用 `Last-modified-since` 重新整理資源。
+* 使用 `Last-modified-since` 來刷新資源。
 * 使用 JSON 檔案中的 `_reference` 輸出開始下載資產，而無需解析完整的 JSON 檔案。
 
 <!-- End of CDN Review -->
 
 ## 部署至生產環境 {#deploy-to-production}
 
-部署至生產環境取決於您是否有 *傳統* 使用Maven進行部署，或位於Adobe Managed Services(AMS)上，因此使用Cloud Manager的AEM例項。
+部署到生產可能取決於您是否 *傳統* 使AEM用Maven部署或位於Adobe Managed Services(AMS)上，因此使用Cloud Manager的實例。
 
-## 使用Maven部署至生產環境 {#deploy-to-production-maven}
+## 使用Maven部署到生產 {#deploy-to-production-maven}
 
-若 *傳統* 使用Maven進行部署（非AMS），請參閱 [WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=en#build) 以取得概述。
+對於 *傳統* 部署（非AMS），請參閱 [WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=en#build) 的雙曲餘切值。
 
-## 使用Cloud Manager部署至生產環境 {#deploy-to-production-cloud-manager}
+## 使用雲管理器部署到生產 {#deploy-to-production-cloud-manager}
 
-如果您是使用Cloud Manager的AMS客戶，在確定所有項目皆已測試並正常運作後，即可將程式碼更新推送至 [Cloud Manager中的集中式Git存放庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html).
+如果您是使用雲管理器的AMS客戶，在確保所有內容都經過測試並正常工作後，您可以將代碼更新推送到 [Cloud Manager中的集中式Git儲存庫](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html)。
 
-將更新上傳至Cloud Manager後，請使用 [Cloud Manager的CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html).
+將更新上載到雲管理器後，將其部署AEM到 [Cloud Manager的CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html)。
 
 <!-- Can't find a parallel link -->
 <!--
@@ -164,8 +164,8 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
    * 傳遞效能
       * 原始伺服器 - 呼叫次數、錯誤率、CPU 負載、負載流量
    * 作者效能
-      * 檢查使用者、請求和載入的數量
-* 訪問特定於應用程式和空間的效能報告
+      * 檢查用戶、請求和載入的數量
+* 訪問特定於應用和空間的效能報告
    * 伺服器啟動後，檢查一般量度是否為綠色/橘色/紅色，然後識別特定的應用程式問題
    * 開啟上面篩選到應用程式或空間 (例如 Photoshop 桌面、付費牆) 的相同報告
    * 使用 Splunk log API 存取服務和應用程式效能
@@ -180,12 +180,12 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 * 使用應用程式的預覽版本驗證功能和效能
 * 使用應用程式的生產版本驗證功能和效能
 * 使用內容片段編輯器的 JSON 預覽進行驗證
-* 若要檢查是否有用戶端應用程式或傳送問題，請檢查用戶端應用程式中的JSON
-* 若要檢查是否有與快取內容或AEM相關的問題，請使用GraphQL檢查JSON
+* 要檢查是否存在客戶端應用程式或傳遞問題，請檢查客戶端應用程式中的JSON
+* 要檢查是否存在與快取內容相關的問題，或AEM者使用GraphQL檢查JSON
 
 ### 向支援團隊記錄錯誤 {#logging-a-bug-with-support}
 
-若要透過「支援」有效記錄錯誤，若您需要進一步協助，請完成下列步驟：
+要通過支援高效地記錄錯誤，在需要進一步幫助時，請完成以下步驟：
 
 * 如有必要，將問題進行螢幕截圖
 * 記錄重現問題的方法
@@ -202,26 +202,26 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 * 如何在 AEM 建立無周邊內容。
 * 如何在 AEM 擷取和更新無周邊內容。
 * 如何使 AEM Headless 專案上線。
-* 上線完成後該做什麼。
+* 上線完成後，該怎麼辦。
 
-您已啟動第一個AEM Headless專案，或現在已具備所有相關知識。 做得好！
+您已經啟動了第AEM一個Headless項目，或者現在已掌握了全部相關知識。 做得好！
 
 ### 探索單頁應用程式 {#explore-spa}
 
-不過，不需要停止AEM的無頭店。 在 [快速入門歷程部分](getting-started.md#integration-levels)，本文探討AEM不僅如何支援無頭式傳送和傳統的完整堆疊模型，也支援結合兩者優點的混合模型。
+不過，不必停下無頭店AEM了。 在 [入門](getting-started.md#integration-levels)討論了AEM如何支援無頭遞送和傳統的全棧模型，以及如何支援結合兩者優點的混合模型。
 
-如果您的專案需要這種彈性，請繼續前往選用的其他歷程部分， [如何使用AEM建立單頁應用程式(SPA)。](create-spa.md)
+如果這種靈活性是您項目需要的，請繼續進行可選的附加部分， [如何使用建立單頁應用SPA程式(AEM)。](create-spa.md)
 
 ## 其他資源 {#additional-resources}
 
-* [AEM Developing指南](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html?lang=en)
+* [開AEM發指南](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html?lang=en)
 
-* [WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en)
+* [WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en)
 
-* [適用於AEM的Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hant)
+* [雲管理AEM器](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hant)
 
 * CDN快取
 
    * [控制CDN快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#controlling-a-cdn-cache)
 
-   * 設定 [CDN重寫器](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*搜尋CDN重寫器*)
+   * 配置 [CDN重寫器](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*搜索CDN重寫器*)

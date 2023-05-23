@@ -1,7 +1,7 @@
 ---
 title: 輸出服務概述
 seo-title: Overview of output service
-description: Output允許您將XML表單資料與在Designer中建立的表單設計合併，以建立各種格式的文檔輸出流。
+description: 「輸出」(Output)允許您將XML表單資料與在設計器中建立的表單設計合併，以建立各種格式的文檔輸出流。
 seo-description: Output lets you merge XML form data with a form design created in Designer to create a document output stream in various formats.
 uuid: 7890b0a6-bae5-4ad5-ae41-503b988ba3da
 contentOwner: admin
@@ -19,20 +19,20 @@ ht-degree: 0%
 
 # 輸出服務概述 {#overview-of-output-service}
 
-Output允許您將XML表單資料與在Designer中建立的表單設計合併，以建立各種格式的文檔輸出流。 輸出流可被發送到網路打印機、本地打印機或磁碟檔案
+「輸出」(Output)允許您將XML表單資料與在設計器中建立的表單設計合併，以建立各種格式的文檔輸出流。 輸出流可以發送到網路打印機、本地打印機或磁碟檔案
 
-您可以使用管理控制台中的「輸出」頁面來管理輸出服務。 未透過AEM Forms API指定對等設定時，會在執行時使用您設定的設定。 透過AEM Forms SDK完成的設定會覆寫使用管理控制台所設定的設定。
+可以使用管理控制台中的「輸出」頁管理「輸出」服務。 未通過表單API指定對等設定時，將在運行時使用您配置AEM的設定。 通過表單SDKAEM完成的配置將覆蓋使用管理控制台配置的設定。
 
-有關輸出服務的其他資訊，請參見 [服務參考](https://www.adobe.com/go/learn_aemforms_services_61).
+有關輸出服務的其他資訊，請參見 [服務參考](https://www.adobe.com/go/learn_aemforms_services_61)。
 
-在管理控制台的「輸出」頁上，您可以執行數個任務：
+在管理控制台的「輸出」頁上，可以執行以下幾項任務：
 
-* 指定國際化的字元集。 (請參閱 [更改字元集](/help/forms/using/admin-help/change-character-set.md#change-the-character-set).)
-* 指定URL、URI、XCI和檔案位置的絕對路徑和相對路徑。 (請參閱 [指定輸出的檔案位置](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output).)
-* 配置快取大小和策略。 (請參閱 [指定快取模式](/help/forms/using/admin-help/configuring-caching-output.md#specifying-the-cache-mode) 和 [配置快取設定](/help/forms/using/admin-help/configuring-caching-output.md#configuring-cache-settings).)
-* 讓字型在應用程式伺服器上可用。 (請參閱 [使字型可用](/help/forms/using/admin-help/make-fonts-available.md#make-fonts-available).)
-* 指定要嵌入的字型。 (請參閱 [指定要嵌入的字型](/help/forms/using/admin-help/specify-fonts-embed.md#specify-fonts-to-embed).)
-* 指定XCI設定選項。 (請參閱 [指定XCI配置選項](/help/forms/using/admin-help/specify-xci-configuration-options.md#specify-xci-configuration-options).)
-* 指定安全設定。 (請參閱 [指定安全設定](/help/forms/using/admin-help/specify-security-settings.md#specify-security-settings).)
+* 指定用於國際化的字元集。 (請參閱 [更改字元集](/help/forms/using/admin-help/change-character-set.md#change-the-character-set)。)
+* 為URL、URI、XCI和檔案位置指定絕對路徑和相對路徑。 (請參閱 [為輸出指定檔案位置](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output)。)
+* 配置快取大小和策略。 (請參閱 [指定快取模式](/help/forms/using/admin-help/configuring-caching-output.md#specifying-the-cache-mode) 和 [配置快取設定](/help/forms/using/admin-help/configuring-caching-output.md#configuring-cache-settings)。)
+* 使字型在應用伺服器上可用。 (請參閱 [使字型可用](/help/forms/using/admin-help/make-fonts-available.md#make-fonts-available)。)
+* 指定要嵌入的字型。 (請參閱 [指定要嵌入的字型](/help/forms/using/admin-help/specify-fonts-embed.md#specify-fonts-to-embed)。)
+* 指定XCI配置選項。 (請參閱 [指定XCI配置選項](/help/forms/using/admin-help/specify-xci-configuration-options.md#specify-xci-configuration-options)。)
+* 指定安全設定。 (請參閱 [指定安全設定](/help/forms/using/admin-help/specify-security-settings.md#specify-security-settings)。)
 
-變更設定後，按一下「儲存」 ，將其套用至「輸出」。 您不需要重新啟動伺服器，變更才會生效，但在設定快取設定時，您可能需要重新啟動輸出服務。
+更改設定後，按一下「保存」(Save)將其應用於「輸出」(Output)。 您不需要重新啟動伺服器以使更改生效，但在配置快取設定時可能需要重新啟動輸出服務。

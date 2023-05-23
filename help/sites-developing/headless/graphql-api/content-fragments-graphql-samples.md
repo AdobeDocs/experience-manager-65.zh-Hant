@@ -6,7 +6,7 @@ exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 source-git-commit: 85f8da2a30e1bb5b78cbb36cd9b79939dd913251
 workflow-type: tm+mt
 source-wordcount: '1586'
-ht-degree: 89%
+ht-degree: 92%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 89%
 
 * [範例內容片段結構](#content-fragment-structure-graphql)
 
-* 有些 [範例GraphQL查詢](#graphql-sample-queries)，以範例內容片段結構（內容片段模型和相關內容片段）為基礎。
+* 還有 [示例GraphQL查詢](#graphql-sample-queries)，基於樣本內容片段結構（內容片段模型和相關內容片段）。
 
 
 ## GraphQL - 使用範例內容片段結構的範例查詢 {#graphql-sample-queries-sample-content-fragment-structure}
@@ -356,14 +356,14 @@ query {
 }
 ```
 
-### 範例查詢 - 所有城市的名稱 被標籤為城市分行 {#sample-names-all-cities-tagged-city-breaks}
+### 範例查詢 - 所有城市的名稱 標籤為城市分隔符 {#sample-names-all-cities-tagged-city-breaks}
 
 如果您：
 
-* 建立各種標籤，命名為 `Tourism` : `Business`, `City Break`, `Holiday`
-* 並將這些指派給 `City` 例項
+* 建立各種標籤，命名 `Tourism` : `Business`。 `City Break`。 `Holiday`
+* 並將其賦給 `City` 實例
 
-然後，您可以使用查詢來傳回 `name` 和 `tags`在 `city`綱要。
+然後，您可以使用查詢返回 `name` 和 `tags`標籤為「城市分隔」的所有條目 `city`架構。
 
 **範例查詢**
 
@@ -1323,16 +1323,16 @@ query {
 
 ### 巢狀內容片段的範例查詢 - 多個模型類型{#sample-wknd-nested-fragment-multiple-model}
 
-#### 單參考模型類型
+#### 單一參考的模型類型
 
 此查詢會質詢：
 
 * 多個類型為 `bookmark` 的內容片段
-   * 具有特定模型類型的其他片段的片段參考 `Article`
+   * 具有片段參考，其會參考特定模型類型 `Article` 的其他片段。
 
 >[!NOTE]
 >
->欄位 `fragments` 具有資料類型 `fragment-reference`，與模型 `Article` 已選取。 查詢傳送 `fragments` 作為 `[Article]`.
+>`fragments` 欄位的資料類型為 `fragment-reference`，且已選取 `Article` 模型。查詢將 `fragments` 以 `[Article]` 陣列形式傳遞.
 
 ```graphql
 {
@@ -1347,7 +1347,7 @@ query {
 }
 ```
 
-#### 多個引用模型類型
+#### 多個參考的模型類型
 
 此查詢會質詢：
 
@@ -1356,7 +1356,7 @@ query {
 
 >[!NOTE]
 >
->`fragments` 欄位的資料類型為 `fragment-reference`，並選擇了模型 `Article`、`Adventure`。查詢傳送 `fragments` 作為 `[AllFragmentModels]`，會以聯合類型取消參照。
+>`fragments` 欄位的資料類型為 `fragment-reference`，且已選取 `Article`、`Adventure` 模型。查詢將 `fragments` 以 `[AllFragmentModels]` 陣列形式傳遞，其使用聯合類型取消參考。
 
 ```graphql
 {
@@ -1561,11 +1561,11 @@ query {
 }
 ```
 
-### 指定模型的多個內容片段及其變異的範例查詢 {#sample-wknd-multiple-fragment-variations-given-model}
+### 給定模型的多個內容片段及其變體的示例查詢 {#sample-wknd-multiple-fragment-variations-given-model}
 
 此查詢會質詢：
 
-* 適用於類型的內容片段 `article` 所有變數
+* 用於類型的內容片段 `article` 所有變體
 
 **範例查詢**
 
@@ -1588,11 +1588,11 @@ query {
 }
 ```
 
-### 附加特定標籤之指定模型的內容片段變異查詢範例{#sample-wknd-fragment-variations-given-model-specific-tag}
+### 附加了特定標籤的給定模型的內容片段變體的示例查詢{#sample-wknd-fragment-variations-given-model-specific-tag}
 
 此查詢會質詢：
 
-* 適用於類型的內容片段 `article` 包含一或多個標籤的變數 `WKND : Activity / Hiking`
+* 用於類型的內容片段 `article` 帶有標籤的變體 `WKND : Activity / Hiking`
 
 **範例查詢**
 

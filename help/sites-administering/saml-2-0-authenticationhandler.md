@@ -117,11 +117,11 @@ SAML 聲明已經過簽署，並可選擇進行加密。為了使其運作，您
 >
 >只有在處理常式應該能簽署或解密訊息時，才需要執行下方的步驟。
 
-1. 建立AEM的憑證/鑰匙組。 透過openssl產生此變數的命令應類似以下範例：
+1. 為建立證書/密鑰AEM對。 通過openssl生成該命令的命令應與以下示例類似：
 
    `openssl req -newkey rsa:2048 -new -x509 -days 3652 -nodes -out certificate.crt -keyout key.pem`
 
-1. 使用DER編碼將密鑰轉換為PKCS#8格式。 這是AEM金鑰存放區所需的格式。
+1. 將密鑰轉換為PKCS#8格式，並使用DER編碼。 這是密鑰庫所需的AEM格式。
 
    `openssl pkcs8 -topk8 -inform PEM -outform DER -in key.pem -out key.der -nocrypt`
 

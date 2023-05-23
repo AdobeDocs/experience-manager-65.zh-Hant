@@ -1,7 +1,7 @@
 ---
-title: 使用xtype（傳統UI）
+title: 使用xtypes（經典UI）
 seo-title: Using xtypes (Classic UI)
-description: 了解AEM提供的所有xtype
+description: 瞭解所有可用的xtype AEM
 seo-description: Learn about all the xtypes that are available with AEM
 uuid: 6497caa4-2f9b-4f21-9023-88d485fd1d78
 contentOwner: Guillaume Carlino
@@ -17,99 +17,99 @@ ht-degree: 0%
 
 ---
 
-# 使用xtype（傳統UI）{#using-xtypes-classic-ui}
+# 使用xtypes（經典UI）{#using-xtypes-classic-ui}
 
-本頁說明Adobe Experience Manager(AEM)提供的所有xtype。
+本頁介紹了Adobe Experience Manager()提供的所AEM有類型。
 
-在ExtJS語言中，xtype是給類的符號名稱。 您可以閱讀 [ExtJS 2概觀](https://www.sencha.com/learn/overview-of-extjs-2) 以取得xtype的詳細說明，以及其使用方式。
+在ExtJS語言中， xtype是給類的符號名稱。 您可以閱讀 [ExtJS 2概述](https://www.sencha.com/learn/overview-of-extjs-2) 的子菜單。
 
-如需AEM中所有可用小工具的完整資訊，請參閱 [介面工具集API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html).
+有關所有可用小部件的完整信AEM息，請參閱 [構件API文檔](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)。
 
-若要了解指定xtype在AEM中使用的元件，您可以在CRXDE中使用下列Xpath查詢，方法是將「核取方塊」取代為您感興趣的xtype:
+要查找給定xtype在中使用的元件AEM，可以在CRXDE中使用以下Xpath查詢，方法是將「checkbox」替換為您感興趣的xtype:
 
 `//element(*, cq:Widget)[@xtype='checkbox']`
 
 >[!NOTE]
 >
->本頁說明傳統UI中ExtJS xtype的使用方式。
+>本頁介紹經典UI中ExtJS xtypes的用法。
 >
->Adobe建議您運用標準、現代、 [觸控式UI](/help/sites-developing/touch-ui-concepts.md) 根據 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
+>Adobe建議你利用標準，現代， [啟用觸摸的UI](/help/sites-developing/touch-ui-concepts.md) 基於 [珊瑚UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [花崗岩UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components)。
 
-## xtypes {#xtypes}
+## x類型 {#xtypes}
 
-請在下方找到Adobe Experience Manager中可用的xtype清單：
+請在下面查找Adobe Experience Manager的可用類型清單：
 
-* 註解
+* 注釋
 
    [CQ.wcm.Annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Annotation)
 
-   「對話框」(Dialog)是一種特殊類型的窗口，其內部具有窗體，頁尾處具有按鈕組。 它通常用於編輯內容，但也只能顯示資訊。
+   「對話框」(Dialog)是一種特殊類型的窗口，其主體中包含表單，頁腳中包含按鈕組。 它通常用於編輯內容，但也只能顯示資訊。
 
-* 陣列商店
+* 陣列
 
    [CQ.Ext.data.ArrayStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.ArrayStore)
 
-   先前稱為「SimpleStore」。
+   以前稱為「SimpleStore」。
 
-   要建立的小幫手 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)從陣列資料更輕鬆。 ArrayStore將自動配置為 [CQ.Ext.data.ArrayReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.ArrayReader).
+   要建立的小幫助程式類 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)更輕鬆地從陣列資料中獲取。 ArrayStore將自動配置為 [CQ.Ext.data.ArrayReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.ArrayReader)。
 
-* assetditor
+* 組合
 
    [CQ.dam.AssetEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.dam.AssetEditor)
 
-   DAM Admin中使用的資產編輯器。
+   DAM管理中使用的資產編輯器。
 
-* astreferencesearchdialog
+* 裝配
 
    [CQ.wcm.AssetReferenceSearchDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.AssetReferenceSearchDialog)
 
-   AssetReferenceSearchDialog是一個對話方塊，會在頁面參照資產或標籤時彈出。
+   AssetReferenceSearchDialog是一個對話框，在頁面引用資產或標籤時會彈出該對話框。
 
-* blueprintconfig
+* 藍印配置
 
-   [CQ.wcm.msm.BlueprintConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig)
+   [CQ.wcm.msm.BlueprientConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig)
 
-   BlueprintConfig提供一個面板，用於查看Blueprint的Live Copies並編輯此Blueprint屬性（同步觸發器和同步操作）。
+   BlueprientConfig提供了一個面板，用於查看藍圖的即時副本並編輯此藍圖屬性（同步觸發器和同步操作）。
 
-* blueprintstatus
+* 藍印狀態
 
-   [CQ.wcm.msm.BlueprintStatus](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus)
+   [CQ.wcm.msm.BlueprientStatus](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus)
 
-   BlueprintStatus提供一個面板，用於查看和編輯Blueprint及其Live Copy關係。 瀏覽是透過 [CQ.wcm.msm.BlueprintStatus.Tree](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus.Tree)，透過 [CQ.wcm.msm.BlueprintConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig) 和 [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties).
+   BlueprientStatus提供一個面板，用於查看和編輯藍圖及其即時副本關係。 瀏覽通過 [CQ.wcm.msm.BlueprientStatus.Tree](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus.Tree)，通過 [CQ.wcm.msm.BlueprientConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig) 和 [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties)。
 
-* box
+* 框
 
-   [CQ.Ext.BoxComponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.BoxComponent)
+   [CQ.Ext.Box元件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.BoxComponent)
 
-   任何的基類 [元件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component) 即使用寬度和高度作為框的大小。
+   任意基類 [元件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component) 即用寬度和高度將其尺寸調整為框。
 
-   BoxComponent提供用於調整大小和定位的盒模型自動調整，在元件渲染模型中可以正常工作。
+   BoxComponent提供自動的框模型調整，用於調整大小和定位，並將在「元件」渲染模型中正確工作。
 
-* browsedialog
+* 瀏覽對話框
 
-   [CQ.BrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.BrowseDialog)
+   [CQ.瀏覽對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.BrowseDialog)
 
-   BrowseDialog允許用戶瀏覽儲存庫以選擇路徑。 它通常透過 [BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField).
+   「瀏覽」對話框允許用戶瀏覽儲存庫以選擇路徑。 通常通過 [瀏覽欄位](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField)。
 
-* browsefield
+* 瀏覽欄位
 
    [CQ.form.BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField)
 
-   **已棄用：使用 [CQ.form.PathField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) inde**
+   **已棄用：使用 [CQ.form.PathField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) 改**
 
-* bulkeditor
+* 牛鞭草
 
    [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)
 
-   BulkEditor提供了一個搜索引擎和一個網格，用於編輯搜索結果。
+   BulkEditor提供一個搜索引擎和一個網格來編輯搜索結果。
 
-   BulkEditor必須插入HTML表單（匯入功能所需）。 這和 [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog).
+   必須將BulkEditor插入HTML表單（導入功能需要）。 這與 [CQ對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)。
 
-* 牛鞭形
+* 膨脹形
 
    [CQ.wcm.BulkEditorForm](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditorForm)
 
-   BulkEditorForm提供 [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor) 由HTML表單包圍。 這是 [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)，匯入按鈕需要HTML表單。
+   BulkEditorForm提供 [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor) 被HTML形狀包圍。 這是 [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)，「導入」按鈕需要HTML窗體。
 
 * 按鈕
 
@@ -127,259 +127,259 @@ ht-degree: 0%
 
    [CQ.Ext.chart.Chart](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart)
 
-   CQ.Ext.chart套件提供透過Flash圖表將資料視覺化的功能。 每個圖表都直接系結至CQ.Ext.data.Store ，以自動更新圖表。 若要變更圖表的外觀和風格，請參閱 [chartStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) 和 [extraStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) 設定選項。
+   CQ.Ext.chart軟體包提供了使用基於快閃記憶體的圖表來可視化資料的功能。 每個圖表直接綁定到CQ.Ext.data.Store，以便自動更新圖表。 要更改圖表的外觀，請參閱 [圖表樣式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) 和 [額外樣式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) 配置選項。
 
 * 核取方塊
 
    [CQ.Ext.form.Checkbox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Checkbox)
 
-   單一核取方塊欄位。 可用來直接取代傳統核取方塊欄位。
+   單個複選框欄位。 可以直接替換傳統複選框欄位。
 
-* checkboxgroup
+* 檢查框組
 
    [CQ.Ext.form.CheckboxGroup](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.CheckboxGroup)
 
    用於 [CQ.Ext.form.Checkbox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Checkbox) 控制項。
 
-* clearcombo
+* 清單組合
 
    [CQ.form.ClerableComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ClearableComboBox)
 
-   ClerableComboBox是不可編輯的組合框，具有用於清除其值的觸發器。
+   ClerableComboBox是一個不可編輯的組合框，帶有用於清除其值的觸發器。
 
-* colorfield
+* 色場
 
    [CQ.form.ColorField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ColorField)
 
-   ColorField可讓使用者直接或使用 [CQ.Ext.ColorMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ColorMenu).
+   ColorField允許用戶直接或使用 [CQ.Ext.Color菜單](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ColorMenu)。
 
-* colorlist
+* 彩色清單
 
    [CQ.form.ColorList](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ColorList)
 
-   ColorList可讓使用者從可編輯的清單中選擇顏色。
+   「顏色清單」(ColorList)允許用戶從可編輯清單中選擇顏色。
 
-* colormenu
+* 顏色菜單
 
    [CQ.Ext.menu.ColorMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.ColorMenu)
 
-   包含 [CQ.Ext.ColorPalette](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ColorPalette) 元件。
+   包含 [CQ.Ext.調色板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ColorPalette) 元件。
 
-* 色盤
+* 調色板
 
-   [CQ.Ext.ColorPalette](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ColorPalette)
+   [CQ.Ext.調色板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ColorPalette)
 
-   用於選擇顏色的簡單調色盤類。 浮動視窗可轉譯至任何容器。
+   用於選擇顏色的簡單調色板類。 調色板可呈現給任何容器。
 
 * 組合
 
    [CQ.Ext.form.ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)
 
-   支援自動完成、遠程載入、分頁和許多其他功能的組合盒控制項。
+   一種支援自動完成、遠程載入、分頁和許多其他功能的組合框控制項。
 
-   ComboBox的工作方式與傳統HTML類似 &lt;select> 欄位。 差異在於 [valueField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)，您必須指定 [hiddenName](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox) 來建立隱藏輸入。
+   ComboBox的工作方式與傳統HTML類似 &lt;select> 的子菜單。 區別在於 [值欄位](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)，必須指定 [隱藏名稱](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox) 的子菜單。
 
 * 元件
 
-   [CQ.Ext.Component](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component)
+   [CQ.Ext.元件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component)
 
-   所有Ext元件的基類。 元件的所有子類都可參與由 [容器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 類別。 元件可透過 [項目](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 設定選項（在建立容器時）。
+   所有Ext元件的基類。 元件的所有子類都可以參與由元件提供的建立、渲染和銷毀的自動Ext元件生命週期 [容器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 類。 元件可通過 [項目](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 配置選項。
 
-* 元件牽引器
+* 元件帶線器
 
    [CQ.wcm.ComponentExtractor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ComponentExtractor)
 
-   元件提取器可讓使用者從網站/頁面擷取元件。
+   ComponentExtractor允許用戶從網站/頁面中提取元件。
 
-* 元件選取器
+* 元件選擇器
 
    [CQ.form.ComponentSelector](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ComponentSelector)
 
    可用元件的分組、有序選擇。
 
-* componentstyles
+* 元件樣式
 
    [CQ.form.ComponentStyles](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ComponentStyles)
 
-* 複合欄位
+* 複合場
 
-   [CQ.form.CompositeField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.CompositeField)
+   [CQ.form.複合欄位](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.CompositeField)
 
-   面板型複雜表單欄位的基類，包括一個表單欄位或一組表單欄位。
+   基類，用於基於面板的複雜表單域，其中包含一個表單域或一組表單域。
 
 * 容器
 
    [CQ.Ext.Container](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container)
 
-   任何的基類 [CQ.Ext.BoxComponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.BoxComponent) 可能包含其他元件。 容器處理容納項的基本行為，即添加、插入和刪除項。
+   任意基類 [CQ.Ext.Box元件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.BoxComponent) 可能包含其他元件。 容器處理包含項的基本行為，即添加、插入和刪除項。
 
-   最常用的容器類為 [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel), [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) 和 [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel).
+   最常用的容器類是 [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel)。 [CQ.Ext.窗口](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) 和 [CQ.Ext.Tab面板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel)。
 
-* contentfinder
+* 內容查找器
 
    [CQ.wcm.ContentFinder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder)
 
-   ContentFinder是專用的兩欄 [檢視區](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) 左側包含實際的「內容尋找器」，右側包含「內容框架」。
+   ContentFinder是一個專用的兩列 [視區](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) 它包含左側的實際內容查找器和右側的內容框架。
 
 * contentfindertab
 
    [CQ.wcm.ContentFinderTab](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinderTab)
 
-   ContentFinderTab是專門的面板，提供用於 [CQ.wcm.ContentFinder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder). 它通常具有搜尋表單（查詢方塊）和顯示搜尋的資料檢視。
+   ContentFinderTab是一個專用面板，提供了在 [CQ.wcm.ContentFinder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder)。 通常，它具有一個搜索表單（查詢框）和一個顯示搜索的資料視圖。
 
 * cq.workflow.model.combo
 
    [CQ.wcm.WorkflowModelCombo](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.WorkflowModelCombo)
 
-   WorkflowModelCombo是自定義的 [CQ.Ext.form.ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox) 顯示可用工作流模型清單。
+   WorkflowModelCombo是自定義的 [CQ.Ext.form.ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox) 顯示可用工作流模型的清單。
 
 * cq.workflow.model.selector
 
    [CQ.wcm.WorkflowModelSelector](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.WorkflowModelSelector)
 
-   WorkflowModelSelector將WorkflowModelCombo與工作流的縮圖影像以及用於建立和編輯工作流模型的按鈕組合在一起。
+   WorkflowModelSelector將WorkflowModelCombo與工作流的縮覽圖影像以及用於建立和編輯工作流模型的按鈕組合在一起。
 
-* createsitewizard
+* 建立站點嚮導
 
    [CQ.wcm.CreateSiteWizard](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.CreateSiteWizard)
 
-   CreateSiteWizard是建立(MSM)網站的逐步精靈。
+   CreateSiteWizard是用於建立(MSM)站點的逐步嚮導。
 
-* createversiondialog
+* 建立版本對話框
 
    [CQ.wcm.CreateVersionDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.CreateVersionDialog)
 
-   CreateVersionDialog是一個對話框，用於建立新的頁面版本。
+   CreateVersionDialog是允許建立頁面新版本的對話框。
 
-* customcontentpanel
+* 自定義內容面板
 
-   [CQ.CustomContentPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.CustomContentPanel)
+   [CQ.自定義內容面板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.CustomContentPanel)
 
-   CustomContentPanel是一種特殊類型的面板，用於 [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog):其內容會從中擷取，並提交至對話方塊中其他欄位以外的不同URL。
+   CustomContentPanel是用於 [CQ對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog):其內容將從對話框中的其他欄位檢索並提交到不同的URL。
 
 * 循環
 
    [CQ.Ext.CycleButton](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.CycleButton)
 
-   專用的SplitButton，包含 [CQ.Ext.menu.CheckItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.CheckItem) 元素。 按一下時按鈕會自動在每個功能表項目中循環，提高按鈕的 [變更](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.CycleButton) 事件(或呼叫按鈕的 [changeHandler](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.CycleButton) 函式（如果已提供）。
+   包含菜單的專用SplitButton [CQ.Ext.menu.CheckItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.CheckItem) 元素。 按鈕在按一下時自動循環瀏覽每個菜單項，從而提高按鈕的 [更改](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.CycleButton) 事件(或調用按鈕 [changeHandler](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.CycleButton) 的子菜單。
 
-* dataview
+* 資料視圖
 
    [CQ.Ext.DataView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DataView)
 
-   使用自訂版面範本和格式顯示資料的機制。 DataView使用 [CQ.Ext.XTemplate](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.XTemplate) 作為內部模板機制，並與 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store) 這樣當儲存區中的資料變更時，檢視就會自動更新以反映變更。
+   一種使用自定義佈局模板和格式顯示資料的機制。 DataView使用 [CQ.Ext.XT模板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.XTemplate) 作為內部模板機制，與 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store) 這樣，當儲存中的資料發生更改時，視圖將自動更新以反映更改。
 
-* datefield
+* datefield（日期欄位）
 
    [CQ.Ext.form.DateField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.DateField)
 
-   提供日期輸入欄位，並搭配 [CQ.Ext.DatePicker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DatePicker) 下拉式清單和自動日期驗證。
+   提供帶有 [CQ.Ext.DatePicker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DatePicker) 下拉和自動日期驗證。
 
-* datemenu
+* 日期菜單
 
    [CQ.Ext.menu.DateMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.DateMenu)
 
    包含 [CQ.Ext.DatePicker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DatePicker) 元件。
 
-* datepicker
+* 日期選擇器
 
    [CQ.Ext.DatePicker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DatePicker)
 
-   彈出式日期選擇器。 此類由 [日期欄位](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.DateField) 類別，以允許瀏覽並選取有效日期。
+   彈出式日期選取器。 此類由 [日期欄位](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.DateField) 允許瀏覽和選擇有效日期的類。
 
-* 日期時間
+* 日期
 
    [CQ.form.DateTime](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.DateTime)
 
-   DateTime可讓使用者透過結合 [CQ.Ext.form.DateField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.DateField) 和 [CQ.Ext.form.TimeField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TimeField).
+   DateTime允許用戶通過組合輸入日期和時間 [CQ.Ext.form.DateField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.DateField) 和 [CQ.Ext.form.TimeField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TimeField)。
 
 * 對話方塊
 
-   [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)
+   [CQ對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)
 
-   「對話框」(Dialog)是一種特殊類型的窗口，其內部具有窗體，頁尾處具有按鈕組。 它通常用於編輯內容，但也只能顯示資訊。
+   「對話框」(Dialog)是一種特殊類型的窗口，其主體中包含表單，頁腳中包含按鈕組。 它通常用於編輯內容，但也只能顯示資訊。
 
-* dialofieldset
+* 對話框欄位集
 
    [CQ.form.DialogFieldSet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.DialogFieldSet)
 
-   DialogFieldSet是 [欄位集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FieldSet) 用於 [對話方塊](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog).
+   DialogFieldSet是 [欄位集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FieldSet) 用於 [對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)。
 
-* directstore
+* 直銷
 
    [CQ.Ext.data.DirectStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.DirectStore)
 
-   要建立的小幫助類 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store) 配置 [CQ.Ext.data.DirectProxy](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.DirectProxy) 和 [CQ.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader) 與 [CQ.Ext.Direct](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Direct) 伺服器端 [提供者](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.direct.Provider) 更簡單。
+   用於建立 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store) 配置為 [CQ.Ext.data.DirectProxy](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.DirectProxy) 和 [CQ.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader) 與 [CQ.Ext.Direct](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Direct) 伺服器端 [提供程式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.direct.Provider) 更簡單。
 
-* displayfield
+* 顯示欄位
 
    [CQ.Ext.form.DisplayField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.DisplayField)
 
-   未驗證和未提交的僅顯示文本欄位。
+   未驗證且未提交的僅顯示文本欄位。
 
 * 編輯欄
 
    [CQ.wcm.EditBar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar)
 
-   編輯欄可讓使用者使用欄上的按鈕來編輯內容。
+   編輯欄允許用戶使用欄上的按鈕編輯內容。
 
-   雖然未在此處列出，但EditBar具有 [CQ.wcm.EditBase](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBase).
+   雖然未在此列出，但EditBar具有 [CQ.wcm.EditBase](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBase)。
 
 * 編輯器
 
    [CQ.Ext.Editor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Editor)
 
-   一個基礎編輯器欄位，可隨需處理顯示/隱藏，並具有一些內建的大小調整和事件處理邏輯。
+   處理按需顯示/隱藏的基本編輯器欄位，具有一些內置的調整大小和事件處理邏輯。
 
-* 編輯者
+* 編輯
 
    [CQ.Ext.grid.EditorGridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.EditorGridPanel)
 
-   此類別會將 [網格面板類](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) 要提供所選單元格的編輯 [欄](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.Column). 可編輯的欄可借由提供 [編輯者](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.ColumnModel) 在 [欄組態](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.Column).
+   此類擴展 [GridPanel類](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) 提供所選單元格編輯 [列](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.Column)。 通過提供 [編輯器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.ColumnModel) 的 [列配置](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.Column)。
 
-* 編輯滾動
+* 編輯
 
-   [CQ.wcm.EditRolver](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover)
+   [CQ.wcm.EditRoulder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover)
 
-   「編輯變換」(EditRovell)允許用戶通過按兩下來編輯內容，並通過上下文菜單提供更多編輯操作。 當滑鼠滾動到內容上時，可編輯區域會以框架指示。
+   「編輯」(Edit)「滾動」(Roupler)允許用戶通過按兩下來編輯內容，並通過上下文菜單提供更多編輯操作。 當滑鼠滾動到內容上時，可編輯區域以框架表示。
 
-* feedimporter
+* feediporter
 
    [CQ.wcm.FeedImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.FeedImporter)
 
-   FeedImporter可讓使用者匯入RSS或Atom摘要，並為每個摘要項目建立頁面。
+   FeedImporter允許用戶導入RSS或Atom源並為每個源項建立頁面。
 
 * 欄位
 
    [CQ.Ext.form.Field](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Field)
 
-   表單欄位的基類，提供預設事件處理、大小調整、值處理和其他功能。
+   提供預設事件處理、調整大小、值處理和其他功能的表單域的基類。
 
 * 欄位集
 
    [CQ.Ext.form.FieldSet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FieldSet)
 
-   用於對 [表單](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FormPanel)....
+   用於在 [表格](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FormPanel)。...
 
-* fileuploaddialobutton
+* 檔案加密按鈕
 
    [CQ.form.FileUploadDialogButton](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.FileUploadDialogButton)
 
-   FileUploadDialogButton會建立一個按鈕，用於開啟一個新的對話框，用於通過FileUploadField上載檔案。 可在編輯對話方塊內使用，而上傳必須以個別形式進行。
+   FileUploadDialogButton會建立一個按鈕，該按鈕會開啟一個新對話框，用於通過FileUploadField上載檔案。 可以在編輯對話框內使用，其中上載必須以單獨的形式進行。
 
-* fileuploadfield
+* 檔案上載欄位
 
    [CQ.form.FileUploadField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.FileUploadField)
 
    FileUploadField允許用戶選擇要上載的單個檔案。
 
-* findreplace對話框
+* 定義對話框
 
    [CQ.wcm.FindReplaceDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.FindReplaceDialog)
 
-   FindReplaceDialog是用於查找和替換頁面及其子頁中的令牌的對話框。
+   FindReplaceDialog是一個對話框，用於查找和替換頁面及其子頁面中的標籤。
 
-* flash
+* 閃
 
    [CQ.Ext.FlashComponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.FlashComponent)
 
@@ -387,63 +387,63 @@ ht-degree: 0%
 
    [CQ.Ext.grid.GridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)
 
-   此類表示基於元件的網格控制的主要介面，以行和列的表格格式表示資料。
+   此類表示基於元件的網格控制項的主要介面，以行和列的表格格式表示資料。
 
-* 群組儲存
+* 組儲存
 
    [CQ.Ext.data.GroupingStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.GroupingStore)
 
-   專門的儲存實施，它提供按可用欄位之一對記錄進行分組。 這通常與 [CQ.Ext.grid.GroupingView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GroupingView) 來證明分組網格面板的資料模型。
+   提供按可用欄位之一分組記錄的專用儲存實現。 通常與 [CQ.Ext.grid.GroupingView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GroupingView) 以證明分組GridPanel的資料模型。
 
 * 重彈
 
    [CQ.wcm.HeavyMoveDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.HeavyMoveDialog)
 
-   HeavyMoveDialog是用於移動頁面及其子頁面的對話方塊，同時考慮重新啟動先前啟動的頁面(&#39;heavy&#39; move)。
+   HeavyMoveDialog是一個用於移動頁面及其子頁面的對話框，還考慮重新激活以前激活的頁面（「heavy」移動）。
 
 * 隱藏
 
    [CQ.Ext.form.Hidden](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Hidden)
 
-   一個基本隱藏欄位，用於儲存需要在表單提交中傳遞的表單中的隱藏值。
+   一個基本隱藏欄位，用於儲存表單中需要傳遞的隱藏值。
 
-* 歷史按鈕
+* 歷史記錄按鈕
 
-   [CQ.HistoryButton](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.HistoryButton)
+   [CQ.歷史記錄按鈕](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.HistoryButton)
 
-   HistoryButton是一個小幫助類，可輕鬆提供後向和前向按鈕。 通常需要兩個相關例項：轉發按鈕實例是連結到處理歷史記錄的上一步按鈕實例的簡單按鈕。
+   HistoryButton是一個小幫助類，可輕鬆提供後向和前向按鈕。 通常需要兩個相關實例：正向按鈕實例是連結到處理歷史記錄的後向按鈕實例的簡單按鈕。
 
-* htleditor
+* 海德
 
    [CQ.Ext.form.HtmlEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor)
 
-   提供輕量型HTML編輯器元件。 Safari不支援某些工具列功能，並會視需要自動隱藏。 這些項目會在適當的設定選項中注明。
+   提供輕量級HTML編輯器元件。 Safari不支援某些工具欄功能，並將在需要時自動隱藏。 在配置選項中（如適用）註明了這些內容。
 
-   編輯器的工具列按鈕在 [buttonTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor) 屬性。
+   編輯器的工具欄按鈕在 [按鈕提示](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor) 屬性。
 
-* iframedialog
+* 伊斯蘭國
 
-   [CQ.IframeDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.IframeDialog)
+   [CQ.Iframe對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.IframeDialog)
 
-   顯示iframe內容並允許iframe中的表單的純對話方塊。
+   一個純對話框，顯示iframe的內容並允許在iframe中使用表單。
 
-* iframepanel
+* 菲拉美
 
-   [CQ.IframePanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.IframePanel)
+   [CQ.Iframe面板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.IframePanel)
 
-   包含iframe的面板。 可輕鬆建立iframe、iframe載入事件，並輕鬆存取iframe的內容。
+   包含iframe的面板。 提供iframe的輕鬆建立、iframe載入事件和對iframe內容的輕鬆訪問。
 
 * inlinetextfield
 
    [CQ.form.InlineTextField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.InlineTextField)
 
-   InlineField是文本欄位，不在焦點時顯示為標籤。
+   InlineField是一個文本欄位，在不處於焦點時顯示為標籤。
 
-* jsonstore
+* 松斯托
 
    [CQ.Ext.data.JsonStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonStore)
 
-   要建立的小幫手 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)從JSON資料更輕鬆。 JsonStore會自動以 [CQ.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader).
+   要建立的小幫助程式類 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)Json資料中的s更簡單。 JsonStore將自動配置為 [CQ.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader)。
 
 * 標籤
 
@@ -451,121 +451,121 @@ ht-degree: 0%
 
    基本標籤欄位。
 
-* 語言科佩對話
+* 語言
 
    [CQ.wcm.LanguageCopyDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.LanguageCopyDialog)
 
    LanguageCopyDialog是用於複製語言樹的對話框。
 
-* linkchecker
+* 連結檢查器
 
    [CQ.wcm.LinkChecker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.LinkChecker)
 
-   LinkChecker是檢查網站中外部連結的工具。
+   LinkChecker是檢查站點中外部連結的工具。
 
-* listview
+* 清單視圖
 
    [CQ.Ext.list.ListView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.ListView)
 
-   CQ.Ext.list.ListView是快速且輕量的 [格線](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) 如視圖。
+   CQ.Ext.list.ListView是快速且輕量化的 [網格](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) 就像風景。
 
-* livecopypropertys
+* 逆性
 
    [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties)
 
-   LiveCopyProperties提供一個面板，用於檢視和編輯Live Copy屬性（關係繼承、同步觸發和同步動作）。
+   LiveCopyProperties提供了一個面板，用於查看和編輯Live Copy屬性（關係繼承、同步觸發器和同步操作）。
 
-* 呂波列
+* 縱列
 
    [CQ.Ext.list.BooleanColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.BooleanColumn)
 
-   一個列定義類，它呈現布爾資料欄位。 請參閱 [xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) 配置選項 [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) 以取得更多詳細資訊。
+   呈現布爾資料欄位的列定義類。 查看 [x類型](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) config選項 [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) 的子菜單。
 
-* lvcolumn
+* lvc列
 
    [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column)
 
-   此類封裝要用於初始化的列配置資料 [ListView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.ListView).
+   此類封裝要用於初始化的列配置資料 [清單視圖](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.ListView)。
 
-* lvdatecolumn
+* lvdate列
 
    [CQ.Ext.list.DateColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.DateColumn)
 
-   列定義類，它根據預設區域設定或配置來呈現傳遞日期 [格式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.DateColumn). 請參閱 [xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) 配置選項 [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) 以取得更多詳細資訊。
+   根據預設區域設定呈現傳遞日期的列定義類，或配置 [格式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.DateColumn)。 查看 [x類型](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) config選項 [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) 的子菜單。
 
-* lvnumbercolumn
+* lvnumber列
 
    [CQ.Ext.list.NumberColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.NumberColumn)
 
-   列定義類，根據 [格式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.NumberColumn) 字串。 請參閱 [xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) 配置選項 [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) 以取得更多詳細資訊。
+   Column定義類，它根據 [格式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.NumberColumn) 的下界。 查看 [x類型](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) config選項 [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) 的子菜單。
 
-* mediabrowsedialog
+* 媒體對話
 
-   [CQ.MediaBrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.MediaBrowseDialog)
+   [CQ.媒體瀏覽對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.MediaBrowseDialog)
 
-   **已棄用：使用 [內容尋找器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder) 來瀏覽媒體。**
+   **已棄用：使用 [內容查找器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder) 瀏覽媒體。**
 
-   MediaBrowseDialog是用於瀏覽媒體庫的對話方塊。
+   MediaBrowseDialog是用於瀏覽媒體庫的對話框。
 
-* 功能表
+* 菜單
 
    [CQ.Ext.menu.Menu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Menu)
 
-   菜單對象。 這是您可新增功能表項目的容器。 當您想要以其他元件為基礎的專用功能表時(例如 [CQ.Ext.menu.DateMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.DateMenu) 例如)。
+   菜單對象。 這是可以向其中添加菜單項的容器。 當您想要基於另一個元件的專用菜單時，菜單也可以用作基類(如 [CQ.Ext.menu.DateMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.DateMenu) 例如)。
 
-   功能表可包含 [功能表項目](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Item)或一般 [元件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component)s.
+   菜單可包含 [菜單項](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Item)或常規 [元件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component)s
 
-* 梅納巴塞特姆
+* 門巴塞特姆
 
    [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem)
 
-   呈現到菜單中的所有項的基類。 BaseItem提供預設呈現、激活狀態管理和所有菜單元件共用的基本配置選項。
+   呈現到菜單中的所有項的基類。 BaseItem提供預設呈現、激活的狀態管理和所有菜單元件共用的基本配置選項。
 
-* 門
+* 門切基特
 
    [CQ.Ext.menu.CheckItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.CheckItem)
 
-   新增預設包含核取方塊的功能表項目，但也可以是選項群組的一部分。
+   預設情況下，添加包含複選框但也可以是無線電組的一部分的菜單項。
 
 * 門項
 
    [CQ.Ext.menu.Item](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Item)
 
-   需要與菜單相關功能（如子菜單）且不是靜態顯示項的所有菜單項的基類。 項目擴展了 [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem) 新增功能表特定啟動，然後按一下處理。
+   需要與菜單相關功能（如子菜單）且不是靜態顯示項的所有菜單項的基類。 項擴展了 [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem) 添加菜單特定激活，然後按一下處理。
 
-* 門塞帕羅特
+* 使用者
 
-   [CQ.Ext.menu.Separator](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Separator)
+   [CQ.Ext.menu.分隔符](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Separator)
 
-   將分隔符號列新增至功能表，用於劃分功能表項目的邏輯群組。 一般而言，您會在呼叫add()或項目設定中使用「 — 」，而非直接建立，借此新增其中一個項目。
+   將分隔符條添加到菜單，用於劃分菜單項的邏輯組。 通常，在調用add()或項目配置中使用「 — 」來添加其中一個，而不是直接建立。
 
-* 門特斯蒂特姆
+* 門特斯提特姆
 
    [CQ.Ext.menu.TextItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.TextItem)
 
-   將靜態文字字串新增至功能表，通常作為標題或群組分隔符號使用。
+   將靜態文本字串添加到菜單，通常用作標題或組分隔符。
 
 * 中繼資料
 
-   [CQ.dam.form.Metadata](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.dam.form.Metadata)
+   [CQ.dam.form.元資料](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.dam.form.Metadata)
 
-   中繼資料提供一組欄位，用以判斷中繼資料欄位（例如在資產編輯器頁面上）所需的資訊。
+   元資料提供一組欄位以確定元資料欄位所需的資訊（例如在資產編輯器頁上）。
 
-   它提供下列欄位：
+   它提供以下欄位：
 
 * 多場
 
    [CQ.form.MultiField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.MultiField)
 
-   MultiField是可編輯的表單欄位清單，用於編輯多值屬性。
+   「多欄位」是可編輯的表單域清單，用於編輯多值屬性。
 
 * mvt
 
    [CQ.form.MVT](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.MVT)
 
-   多變數測試元件可用來定義和編輯以交替橫幅呈現的一組影像。 系統會根據每個橫幅收集點進率統計資料。
+   多變數測試元件可用於定義和編輯一組影像，這些影像以交替橫幅顯示。 按一下按標題收集速率統計資訊。
 
-* 通知收件匣
+* 通知收件箱
 
    [CQ.wcm.NotificationInbox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.NotificationInbox)
 
@@ -575,75 +575,75 @@ ht-degree: 0%
 
    [CQ.Ext.form.NumberField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.NumberField)
 
-   提供自動擊鍵篩選和數值驗證的數字文本欄位。
+   提供自動擊鍵過濾和數字驗證的數字文本欄位。
 
-* offlineimporter
+* 離線進口商
 
    [CQ.wcm.OfflineImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.OfflineImporter)
 
-   OfflineImporter是匯入Microsoft Word檔案並轉換為AEM頁面的工具。 此功能允許使用字處理器離線編輯內容。
+   OfflineImporter是一種工具，可將MicrosoftWord文檔導入和轉換AEM為頁面。 此功能允許使用文字處理器離線編輯內容。
 
 * 所有權
 
    [CQ.form.OwnerDraw](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.OwnerDraw)
 
-   OwnerDraw可包含自訂HTML代碼（直接輸入或從URL中擷取）。
+   OwnerDraw可包含自定義HTML代碼（直接輸入或從URL檢索）。
 
-* 分頁
+* 尋呼
 
-   [CQ.Ext.PagingToolbar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.PagingToolbar)
+   [CQ.Ext.Paging工具欄](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.PagingToolbar)
 
-   隨著記錄數量增加，瀏覽器呈現記錄所需的時間也會增加。 分頁用於減少與客戶機交換的資料量。
+   隨著記錄數量的增加，瀏覽器呈現這些記錄所需的時間也會增加。 使用尋呼來減少與客戶端交換的資料量。
 
 * 面板
 
    [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel)
 
-   面板是一個容器，具有特定的功能和結構元件，使它成為面向應用程式的用戶介面的完美構建塊。
+   面板是具有特定功能和結構元件的容器，使其成為面向應用程式的用戶介面的完美構建基塊。
 
-   這些面板，由於它們繼承了 [CQ.Ext.Container](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container).
+   由於小組繼承了 [CQ.Ext.Container](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container)。
 
-* 段落參考
+* 段落引用
 
-   [CQ.form.ParaghReference](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ParagraphReference)
+   [CQ.form.ParagraphReference](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ParagraphReference)
 
-   段落引用欄位允許瀏覽頁面並選擇其中一個段落。 它包含一個觸發欄位和一個關聯的段落瀏覽對話框。
+   段落引用欄位允許瀏覽頁面並選擇其中一個段落。 它由觸發器欄位和關聯的段落瀏覽對話框組成。
 
 * 密碼
 
    [CQ.form.Password](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Password)
 
-   密碼就像 [CQ.Ext.form.TextField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TextField) 但會將其值保持為私密，讓使用者能夠輸入敏感資料。
+   密碼類似於 [CQ.Ext.form.TextField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TextField) 但保持其值為私有，允許用戶輸入敏感資料。
 
-* pathcompletion
+* 路徑完成
 
    [CQ.form.PathCompletion](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathCompletion)
 
-   **已棄用：使用 [CQ.form.PathField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) inde**
+   **已棄用：使用 [CQ.form.PathField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) 改**
 
-* pathfield
+* 路徑
 
    [CQ.form.PathField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField)
 
-   PathField是一個輸入欄位，專為具有路徑完成的路徑設計，還有一個按鈕，用於開啟 [CQ.BrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.BrowseDialog) 瀏覽伺服器儲存庫。 它也可以瀏覽頁面段落以產生進階連結。
+   PathField是為路徑完成路徑設計的輸入欄位和用於開啟 [CQ.瀏覽對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.BrowseDialog) 瀏覽伺服器儲存庫。 它還可以瀏覽頁面段落以生成高級連結。
 
 * 進度
 
    [CQ.Ext.ProgressBar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ProgressBar)
 
-   可更新的進度欄元件。 進度列支援兩種不同模式：手動和自動。
+   可更新的進度條元件。 進度條支援兩種不同模式：手動和自動。
 
-   在手動模式中，您負責顯示、更新(透過 [updateProgress](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ProgressBar))，並視需要從您自己的程式碼中清除進度列。 如果您想要顯示進度，此方法最合適。
+   在手動模式下，您負責顯示、更新(通過 [更新進度](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ProgressBar))並根據需要從您自己的代碼中清除進度條。 當要顯示進度時，此方法最合適。
 
 * 屬性網格
 
    [CQ.Ext.grid.PropertyGrid](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.PropertyGrid)
 
-   一種專門的網格實現，旨在模擬開發IDE中通常出現的傳統屬性網格。 格線中的每一列代表某些物件的屬性，且資料會儲存為中的一組名稱/值組 [CQ.Ext.grid.PropertyRecord](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.PropertyRecord)s.
+   專門的網格實現旨在模仿開發IDE中通常看到的傳統屬性網格。 網格中的每一行表示某個對象的屬性，資料以一組名稱/值對的形式儲存在 [CQ.Ext.grid.PropertyRecord](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.PropertyRecord)s
 
-* propgrid
+* 丙格網
 
-   [CQ.PropertyGrid](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.PropertyGrid)
+   [CQ.屬性網格](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.PropertyGrid)
 
    PropertyGrid是用於顯示和編輯對象屬性的通用網格。
 
@@ -651,13 +651,13 @@ ht-degree: 0%
 
    [CQ.Ext.QuickTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTip)
 
-   @xtype快速提示(Quicktip)為工具提示提供專門的工具提示類，可在標籤中指定，並由全局自動管理 [CQ.Ext.QuickTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTips) 例項。 有關其他使用詳細資訊和示例，請參閱快速提示類標題。
+   @xtype quicktip（快速提示）工具提示的專用工具提示類，可在標籤中指定並由全局自動管理 [CQ.Ext.QuickTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTips) 實例。 有關其他使用情況詳細資訊和示例，請參閱快速提示類標題。
 
-* 廣播
+* 無線電
 
    [CQ.Ext.form.Radio](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Radio)
 
-   單個無線電欄位。 與核取方塊相同，但提供方便您自動設定輸入類型。 如果您將群組中的每個選項指定相同名稱，則瀏覽器會自動處理選項分組。
+   單個無線電場。 與複選框相同，但為自動設定輸入類型提供了方便。 如果給組中的每個無線電指定相同的名稱，則瀏覽器會自動處理無線電分組。
 
 * 放射組
 
@@ -665,175 +665,175 @@ ht-degree: 0%
 
    用於 [CQ.Ext.form.Radio](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Radio) 控制項。
 
-* 引用對話框
+* 參照對話框
 
-   [CQ.wcm.ReferencesDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ReferencesDialog)
+   [CQ.wcm.References對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ReferencesDialog)
 
    「參照」(References)「對話框」(Dialog)是用於在頁面上顯示參照的對話框。
 
-* restoretreedi對話
+* 重排樹
 
-   [CQ.wcm.RestoreTreeDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.RestoreTreeDialog)
+   [CQ.wcm.RestoreTree對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.RestoreTreeDialog)
 
-   RestoreTreeDialog是用於恢復樹的以前版本的對話框。
+   RestoreTreeDialog是用於恢復樹的早期版本的對話框。
 
-* restoreversiondialog
+* 重排版本對話框
 
    [CQ.wcm.RestoreVersionDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.RestoreVersionDialog)
 
-   RestoreVersionDialog是用於還原頁面的以前版本的對話框。
+   RestoreVersionDialog是用於恢復頁面早期版本的對話框。
 
-* RTF
+* RichText
 
    [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.RichText)
 
-   Rtf提供用於編輯已設定樣式的文本資訊(RTF)的表單欄位。
+   RichText提供了一個表單域，用於編輯樣式文本資訊(RTF)。
 
-   Rtf元件目前提供下列功能：
+   RichText元件當前提供了以下功能：
 
-* 統計計畫
+* 推出計畫
 
-   [CQ.wcm.msm.RolloutPlan](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.RolloutPlan)
+   [CQ.wcm.msm.SolvultPlan](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.RolloutPlan)
 
-   RolloutPlan提供對話方塊，可監視頁面轉出進度。 轉出計畫由 [CQ.wcm.msm.RolloutWizard](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.RolloutWizard).
+   OllovatePlan提供一個對話框來監視頁面的展開進度。 OlvoltPlan由 [CQ.wcm.msm.OllovateWizard](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.RolloutWizard)。
 
-* 滾花
+* 滾向
 
-   [CQ.wcm.msm.RolloutWizard](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.RolloutWizard)
+   [CQ.wcm.msm.OllovateWizard](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.RolloutWizard)
 
-   轉出精靈提供精靈，可轉出頁面。 轉出精靈啟動 [CQ.wcm.msm.RolloutPlan](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.RolloutPlan).
+   OllovateWizard提供了用於滾出頁面的嚮導。 OutloctWizard啟動 [CQ.wcm.msm.SolvultPlan](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.RolloutPlan)。
 
-* searchfield
+* 搜索欄位
 
    [CQ.form.SearchField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SearchField)
 
-   SearchField提供一個搜索欄位，該搜索欄位在下拉清單中提供結果，該下拉清單可用於搜索儲存庫。
+   SearchField提供搜索欄位，該欄位在下拉清單中提供結果，該下拉清單可用於搜索儲存庫。
 
-* 選取
+* 選擇
 
-   [CQ.form.Selection](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Selection)
+   [CQ.form.選擇](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Selection)
 
-   「選取」可讓使用者在數個選項之間進行選擇。 選項可為設定的一部分，或從JSON回應載入。 「選擇」可呈現為下拉式清單（選擇）或組合框（選擇加自由文本條目）。
+   「選擇」(Selection)允許用戶在多個選項之間進行選擇。 這些選項可以是配置的一部分，也可以從JSON響應中載入。 「選擇」可以呈現為下拉清單（選擇）或組合框（選擇加自由文本條目）。
 
-* sidekick
+* 側衛
 
    [CQ.wcm.Sidekick](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Sidekick)
 
-   Sidekick是浮動式協助程式，提供使用者頁面編輯的常用工具。
+   Sidekick是一個浮動幫助程式，為用戶提供用於頁面編輯的通用工具。
 
-* siteadmin
+* 站點管理
 
    [CQ.wcm.SiteAdmin](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.SiteAdmin)
 
-   SiteAdmin是提供WCM管理功能的主控台。
+   SiteAdmin是提供WCM管理功能的控制台。
 
-* siteimporter
+* 站點導入程式
 
    [CQ.wcm.SiteImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.SiteImporter)
 
-   SiteImporter可讓使用者匯入完整的網站並建立初始專案。
+   SiteImporter允許用戶導入完整網站並建立初始項目。
 
-* sizefield
+* sizefile（大小欄位）
 
    [CQ.form.SizeField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SizeField)
 
-   SizeField可讓用戶輸入寬度和高度（例如影像）。
+   SizeField允許用戶輸入寬度和高度（例如，影像）。
 
 * 滑桿
 
    [CQ.Ext.Slider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Slider)
 
-   支援垂直或水準方向、鍵盤調整、可配置貼緊、軸點擊和動畫的滑塊。 可以新增為項目至任何容器。 使用範例：...
+   支援垂直或水準方向、鍵盤調整、可配置貼緊、軸按一下和動畫的滑塊。 可以將項目添加到任何容器。 示例用法：...
 
-* 幻燈片放映
+* 幻燈片
 
-   [CQ.form.Slideshow](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Slideshow)
+   [CQ.form.幻燈片](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Slideshow)
 
-   投影片放映提供一個元件，可用來定義和編輯一組可視為投影片放映的影像和影像標題。
+   幻燈片放映提供了一個元件，可用於定義和編輯一組影像和影像標題，這些影像和影像標題可以作為幻燈片放映來查看。
 
-   投影片放映元件以 [CQ.form.SmartImage](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SmartImage) 元件。
+   「幻燈片放映」元件基於 [CQ.form.SmartImage](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SmartImage) 元件。
 
 * smartfile
 
    [CQ.form.SmartFile](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SmartFile)
 
-   SmartFile是智慧型檔案上傳程式。
+   SmartFile是智慧檔案上載程式。
 
-   如果安裝了Flash插件（版本>= 9），則使用SWFupload庫執行上載，該庫提供了一種方便的處理上載的方法。
+   如果安裝了Flash插件（版本>= 9），則使用SWFupload庫執行上載，該庫提供了一種處理上載的便捷方法。
 
-* smartimage
+* 智慧
 
    [CQ.form.SmartImage](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SmartImage)
 
-   SmartImage是智慧型影像上傳程式。 它提供處理上傳影像的工具，例如定義影像地圖和影像切割工具。
+   SmartImage是一種智慧映像上載器。 它提供了處理上載影像的工具，例如定義影像映射和影像剪切器的工具。
 
-   請注意，元件主要設計用於個別對話方塊標籤。
+   請注意，該元件主要設計用於單獨的對話框頁籤上。
 
-* 間隔物
+* 間隔
 
    [CQ.Ext.Spacer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Spacer)
 
-   用來在版面中提供大型空間。
+   用於在佈局中提供較大的空間。
 
 * 旋轉器
 
    [CQ.form.Spinner](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Spinner)
 
-   Spinner是數值、日期或時間值的觸發欄位。 通過使用提供的上下觸發器、滾輪或鍵，可以增加和減少值。
+   Spinner是數值、日期或時間值的觸發器欄位。 通過使用所提供的上下觸發器、滾輪或鍵，可以增加和減小該值。
 
 * 拆分按鈕
 
    [CQ.Ext.SplitButton](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.SplitButton)
 
-   分割按鈕，提供內建的下拉式箭頭，該箭頭可與按鈕的預設點擊事件分開引發事件。 這通常會用來顯示下拉式功能表，為主要按鈕動作提供其他選項，但任何自訂處理常式都可提供Arrowclick實作。
+   一個拆分按鈕，它提供一個內置的下拉箭頭，該箭頭可以與按鈕的預設按一下事件分開觸發事件。 通常，這用於顯示一個下拉菜單，該下拉菜單為主按鈕操作提供了其他選項，但任何自定義處理程式都可提供arrowclick實現。
 
 * 靜態
 
-   [CQ.Static](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Static)
+   [CQ.靜態](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Static)
 
-   靜態可用於顯示任意文本或HTML。
+   「靜態」(Static)可用於顯示任意文本或HTML。
 
 * statistics
 
-   [CQ.wcm.Statistics](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Statistics)
+   [CQ.wcm.統計](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Statistics)
 
-   統計資料會以圖表顯示頁面曝光次數。 介面工具集可選取期間，應顯示統計資料。
+   統計資訊將頁印象顯示為圖表。 該小部件允許選擇期間，應顯示其統計資訊。
 
 * 商店
 
    [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)
 
-   Store類封裝了 [記錄](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Record) 為元件(如 [網格面板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel), [組合框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)，或 [資料檢視](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DataView).
+   Store類封裝客戶端快取 [記錄](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Record) 為元件(如 [網格面板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)，也請參見Wiki頁。 [組合框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)，或 [資料視圖](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DataView)。
 
-* 建議欄位
+* 暗示場
 
-   [CQ.form.SougkedField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SuggestField)
+   [CQ.form.SuggestField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SuggestField)
 
-   建議欄位會根據使用者的項目，為使用者提供建議。
+   SeggestField根據用戶的條目向用戶提供建議。
 
-* 切換器
+* 切換
 
-   [CQ.Switcher](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Switcher)
+   [CQ.切換器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Switcher)
 
-   切換器提供主控台中標題列的按鈕群組，以在網站、數位資產、工具、工作流程和安全性之間切換。
+   Switcher為控制台中的標題欄提供一個按鈕組，以在網站、數字資產、工具、工作流和安全性之間切換。
 
-* 表編輯
+* 表格編輯
 
    [CQ.form.TableEdit](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit)
 
-   **已棄用：使用 [CQ.form.TableEdit2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2) 。**
+   **已棄用：使用 [CQ.form.TableEdit2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2) 的雙曲餘切值。**
 
 * tableedit2
 
    [CQ.form.TableEdit2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2)
 
-   TableEdit2提供了用於建立表的介面工具集。
+   TableEdit2提供了用於建立表的構件。
 
-* 表格面板
+* table面板
 
-   [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel)
+   [CQ.Ext.Tab面板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel)
 
-   基本索引標籤容器。 TabPanels的使用方式與標準 [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel) 針對版面用途，但也對包含子元件([`items`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container))。
+   基本頁籤容器。 TabPanels可以完全像標準 [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel) 用於佈局目的，但還支援包含子元件([`items`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container))。
 
 * 標記
 
@@ -843,110 +843,110 @@ ht-degree: 0%
    CQ.tagging.TagInputField
    ```
 
-   是用於輸入標籤的表單小工具。 它有一個彈出式功能表，可從現有標籤中選取，包括自動完成功能和許多其他功能。
+   是用於輸入標籤的表單小部件。 它有一個彈出菜單，用於從現有標籤中進行選擇，包括自動完成和許多其他功能。
 
-* textarea
+* 毛蕊
 
    [CQ.Ext.form.TextArea](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TextArea)
 
-   多行文本欄位。 可用來直接取代傳統文字區域欄位，並新增對自動調整大小的支援。
+   多行文本欄位。 可以直接替代傳統的文本區域欄位，並增加對自動調整大小的支援。
 
-* textbutton
+* 文本按鈕
 
-   [CQ.TextButton](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.TextButton)
+   [CQ.文本按鈕](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.TextButton)
 
-   TextButton提供具有 [CQ.Ext.Button](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Button).
+   TextButton提供具有 [CQ.Ext.Button](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Button)。
 
-* textfield
+* 文本欄位
 
    [CQ.Ext.form.TextField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TextField)
 
-   基本文本欄位。 可作為傳統文字輸入的直接取代，或作為更精密輸入控制的基礎類別(例如 [CQ.Ext.form.TextArea](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TextArea) 和 [CQ.Ext.form.ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox))。
+   基本文本欄位。 可用作傳統文本輸入的直接替換，或用作更複雜輸入控制項的基類(如 [CQ.Ext.form.TextArea](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TextArea) 和 [CQ.Ext.form.ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox))。
 
-* 縮圖
+* 縮略圖
 
-   [CQ.form.Thumbnail](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Thumbnail)
+   [CQ.form.縮略圖](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Thumbnail)
 
-* 時間欄位
+* 時域
 
    [CQ.Ext.form.TimeField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TimeField)
 
-   提供時間輸入欄位，其中包含時間下拉式清單和自動時間驗證。 使用範例：...
+   提供帶時間下拉清單和自動時間驗證的時間輸入欄位。 示例用法：...
 
 * 尖端
 
-   [CQ.Ext.Tip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tip)
+   [CQ.Ext.提示](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tip)
 
-   @xtype提示：這是 [CQ.Ext.QuickTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTip) 和 [CQ.Ext.Tooltip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tooltip) 提供所有基於提示的類所需的基本佈局和定位。 此類可直接用於簡單、靜態定位的提示。
+   @xtype提示這是 [CQ.Ext.QuickTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTip) 和 [CQ.Ext.工具提示](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tooltip) 提供所有基於提示的類所需的基本佈局和定位。 此類可直接用於簡單靜態定位的提示。
 
-* 標題剖析器
+* 角色角
 
    [CQ.menu.TitleSeparator](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.menu.TitleSeparator)
 
-   將分隔符號列新增至功能表，用於劃分功能表項目的邏輯群組。 分隔符號可附加標題。
+   將分隔符條添加到菜單，用於劃分菜單項的邏輯組。 分隔器可附加地承載標題。
 
-* 工具列
+* 工具欄
 
-   [CQ.Ext.Toolbar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Toolbar)
+   [CQ.Ext.工具欄](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Toolbar)
 
-   基本工具欄類。 雖然 [`defaultType`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 工具列的 [`button`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Button)，工具列元素（工具列容器的子項目）幾乎可以是任何類型的元件。 可通過其建構子顯式建立工具欄元素。
+   基本工具欄類。 儘管 [`defaultType`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 工具欄 [`button`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Button)，工具欄元素（工具欄容器的子項）實際上可以是任何類型的元件。 可以通過其建構子顯式建立工具欄元素。
 
-* 工具提示
+* 提示
 
-   [CQ.Ext.ToolTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ToolTip)
+   [CQ.Ext.工具提示](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ToolTip)
 
-   標準工具提示實作，用於將游標暫留在目標元素上時提供其他資訊。 @xtype工具提示。
+   一種標準工具提示實現，用於在懸停於目標元素上時提供附加資訊。 @xtype工具提示。
 
 * 樹狀網格
 
    [CQ.tree.TreeGrid](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.tree.TreeGrid)
 
-   @xtype樹網
+   @xtype樹網格
 
-* 樹狀面板
+* 樹面
 
    [CQ.Ext.tree.TreePanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreePanel)
 
-   樹面板提供樹狀結構資料的樹狀結構UI表示。
+   TreePanel提供樹結構化資料的樹結構化UI表示。
 
-   [TreeNode](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreeNode)添加到樹面板的每個元資料都可能包含應用程式在其中使用的元資料 [屬性](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreeNode) 屬性。
+   [樹節點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreeNode)添加到TreePanel的每個元件都可能包含應用程式在其中使用的元資料 [屬性](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreeNode) 屬性。
 
 * 觸發
 
    [CQ.Ext.form.TriggerField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TriggerField)
 
-   為新增可點按觸發按鈕的TextFields提供便利的包裝函式（預設情況下看起來類似組合框）。 觸發器沒有預設動作，因此您必須指派函式以透過覆寫來實作觸發器點擊處理常式 [onTriggerClick](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TriggerField). 您可以直接建立TriggerField，因為它呈現的完全像一個組合框。
+   為添加可按一下的觸發按鈕的TextField提供方便的包裝（預設情況下，該按鈕看起來像組合框）。 觸發器沒有預設操作，因此您必須通過覆蓋來指定函式來實現觸發器按一下處理程式 [onTriggerClick](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TriggerField)。 可以直接建立TriggerField，因為它呈現得與組合框完全一樣。
 
-* upaddialog
+* 升級
 
-   [CQ.UploadDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.UploadDialog)
+   [CQ.上載對話框](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.UploadDialog)
 
-   UploadDialog可讓使用者將檔案上傳至存放庫，並建立新的UploadDialog。
+   UploadDialog允許用戶將檔案上載到儲存庫建立新的UploadDialog。
 
-* userinfo
+* 用戶資訊
 
-   [CQ.UserInfo](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.UserInfo)
+   [CQ.用戶資訊](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.UserInfo)
 
-   工具欄項，用於顯示當前用戶名並允許用戶操作，如編輯用戶屬性和模擬。
+   工具欄項，用於顯示當前用戶名並允許用戶執行編輯用戶屬性和模擬等操作。
 
-* 檢視區
+* 視區
 
    [CQ.Ext.Viewport](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport)
 
-   代表可檢視應用程式區域（瀏覽器檢視區）的專用容器。
+   表示可視應用程式區域（瀏覽器視區）的專用容器。
 
-   「視區」(Viewport)會自行呈現到文檔主體，並自動將其大小調整為瀏覽器視區的大小，並管理窗口大小調整。 只能建立一個檢視區。
+   「視區」(Viewport)將自身呈現到文檔主體中，並自動將自身大小調整到瀏覽器視區的大小，並管理窗口大小調整。 只能建立一個視區。
 
 * 視窗
 
-   [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)
+   [CQ.Ext.窗口](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)
 
-   專用面板，用作應用程式窗口。 窗戶被浮了， [可調整](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)，和 [拖曳](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) 依預設。 Windows可以是 [最大化](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) 填入檢視區，並還原為其先前的大小，且 [最小化](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)d.
+   專用面板，用作應用程式窗口。 窗子浮了， [可調整](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window), [拖放](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) 預設值。 Windows可以是 [最大化](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) 填充視區，恢復到其原有大小，並且 [最小化](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)d.
 
 * xmlstore
 
    [CQ.Ext.data.XmlStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlStore)
 
-   要建立的小幫手 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)更輕鬆地從XML資料中刪除。 XmlStore將自動配置為 [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader).
+   要建立的小幫助程式類 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)從XML資料中更輕鬆。 XmlStore將自動配置為 [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader)。
 
-   **cqinclude** 偽xtype，包括儲存庫中不同路徑的Widget定義。 它最常用於頁面對話方塊中。 此xtype沒有實際的JavaScript介面工具集類別。 由CQ.Util類的formatData()函式處理。 如需詳細資訊，請參閱本知識庫文章。
+   **cqincu** 偽xtype，包括儲存庫中不同路徑中的小部件定義。 它最常用於頁面對話框。 此類型沒有實際的JavaScript小部件類。 它由CQ.Util類的formatData()函式處理。 有關詳細資訊，請參閱此知識庫文章。

@@ -1,7 +1,7 @@
 ---
 title: Reader使用Portable Protection Library擴展受策略保護的PDF文檔
 seo-title: Reader extending policy-protected PDF documents using Portable Protection Library
-description: Reader擴充功能可透過Acrobat Reader，在Adobe PDF檔案中啟用互動式功能。 您可以使用可移植保護庫(PPL)來擴展受DRM保護的PDF文檔。
+description: Reader擴展通過Acrobat Reader在Adobe PDF檔案中提供互動功能。 可以使用攜帶型保護庫(PPL)來讀取器擴展受DRM保護的PDF文檔。
 seo-description: Reader extensions enable interactive features in Adobe PDF documents through Acrobat Reader. You can use the Portable Protection Library (PPL) to reader extend the DRM protected PDF documents.
 uuid: 0da17641-d24c-43c2-b918-8b5abe1e5473
 contentOwner: khsingh
@@ -20,33 +20,33 @@ ht-degree: 0%
 
 # Reader使用Portable Protection Library擴展受策略保護的PDF文檔 {#reader-extending-policy-protected-pdf-documents-using-portable-protection-library}
 
-您必須熟悉文檔安全性、讀者擴展和Java寫程式語言等概念，才能對文檔安全策略保護的PDF文檔進行讀者擴展。
+您必須熟悉文檔安全性、讀取器擴展和Java寫程式語言等概念，以便讀取器擴展文檔安全策略保護的PDF文檔。
 
-您可以使用文檔安全性來限制僅對授權用戶訪問特定PDF文檔。 您也可以確定收件者如何使用受保護的檔案。 例如，您可以指定收件者是否可以打印、複製或編輯受文檔安全策略保護的文檔的文本。 若要深入了解檔案安全性，請參閱 [關於檔案安全性](/help/forms/using/admin-help/document-security.md).
+您可以使用文檔安全性將特定PDF文檔的訪問權限限制為僅限授權用戶。 您還可以確定收件人如何使用受保護的文檔。 例如，您可以指定收件人是否可以打印、複製或編輯受文檔安全策略保護的文檔的文本。 要瞭解有關文檔安全性的詳細資訊，請參閱 [關於文檔安全性](/help/forms/using/admin-help/document-security.md)。
 
-您可以使用Reader延伸模組，透過Acrobat Reader啟用Adobe PDF檔案中的互動式功能。 這些互動式功能通常只能透過Adobe Acrobat Professional和Standard提供。 若要了解Reader擴充功能可啟用的互動式功能，請參閱 [Adobe Experience Manager Forms DocAssurance服務&#x200B;](/help/forms/using/overview-aem-document-services.md)**.**
+您可以使用閱讀器擴展功能通過Acrobat Reader在Adobe PDF文檔中啟用交互功能。 這些交互功能通常僅通過Adobe Acrobat專業和標準提供。 要瞭解讀者擴展可啟用的交互功能，請參見 [Adobe Experience Manager FormsDocAssurance服務&#x200B;](/help/forms/using/overview-aem-document-services.md)**。**
 
-您可以使用攜帶型保護庫在文檔上應用策略，而無需通過網路傳輸文檔。 只有安全憑據和保護策略詳細資訊才能通過網路傳輸。 實際文檔從不離開客戶端，保護策略將在客戶端上本地應用。
+您可以使用攜帶型保護庫對文檔應用策略，而無需通過網路傳輸文檔。 只有安全憑據和保護策略詳細資訊才能通過網路傳輸。 實際文檔從不離開客戶機，保護策略在客戶機上本地應用。
 
 ## Reader擴展文檔安全策略保護的PDF文檔 {#reader-extending-document-security-policy-protected-pdf-documents}
 
-受策略保護的文檔是加密的文檔。 不能使用標準讀者擴展API來應用、刪除和檢索受策略保護的PDF文檔的使用權限。 只有「可移植保護庫」的「Reader擴展」服務提供API，以應用、刪除和檢索文檔安全策略保護的PDF文檔的使用權限。
+受策略保護的文檔是加密的文檔。 不能使用標準讀取器擴展API來應用、刪除和檢索受策略保護的PDF文檔的使用權限。 只有攜帶型保護庫的Reader擴展服務才提供API來應用、刪除和檢索文檔安全策略保護的PDF文檔的使用權限。
 
-### Reader擴充功能服務 {#reader-extensions-service}
+### Reader擴展服務 {#reader-extensions-service}
 
-讀者擴展服務將使用權添加到受策略保護的PDF文檔，激活在使用Adobe Acrobat Reader開啟PDF文檔時不正常可用的功能。 它還具有API，用於刪除和檢索受策略保護文檔的使用權限。
+讀取器擴展服務將使用權限添加到受策略保護的PDF文檔，激活當使用Adobe Acrobat Reader開啟PDF文檔時不正常可用的特徵。 它還具有API，用於刪除和檢索受策略保護的文檔的使用權限。
 
-Reader擴充功能服務完全支援以PDF標準1.6和更新版本為基礎的PDF檔案。 除了Acrobat Reader，第三方用戶不需要任何其他軟體或插件來使用受策略保護的PDF文檔。
+Reader擴展服務完全支援基於PDF標準1.6及更高版本的PDF文檔。 除Acrobat Reader外，第三方用戶不需要任何額外的軟體或插件來使用受策略保護的PDF文檔。
 
-您可以使用Reader擴充功能服務來完成下列工作：
+可以使用Reader擴展服務完成以下任務：
 
-* 將使用權應用於受策略保護的PDF文檔。
+* 將使用權限應用於受策略保護的PDF文檔。
 * 刪除受策略保護的PDF文檔的使用權限。
 * 檢索應用於受策略保護的PDF文檔的使用權限。
 
-### 將使用權應用於文檔安全策略保護的PDF文檔 {#apply-usage-rights-to-a-document-security-policy-protected-pdf-document}
+### 將使用權限應用於文檔安全策略保護的PDF文檔 {#apply-usage-rights-to-a-document-security-policy-protected-pdf-document}
 
-您可以使用 `applyUsageRights`Java API，用於將使用權限應用於受策略保護的PDF文檔。 使用權限屬於Acrobat預設提供但Adobe Reader未提供的功能，例如可向表單新增註解，或填寫表單欄位並儲存表單。 應用了使用權限的PDF文檔稱為啟用權限的文檔。 在Adobe Reader中開啟啟用權限的檔案的使用者可以執行針對該特定檔案啟用的操作。
+您可以使用 `applyUsageRights`Java API，用於將使用權限應用於受策略保護的PDF文檔。 使用權限與預設在Acrobat但在Adobe Reader不可用的功能有關，例如向表單添加註釋或填寫表單域並保存表單的功能。 對其應用了使用權限的PDF文檔稱為啟用權限的文檔。 在Adobe Reader開啟啟用權限的文檔的用戶可以執行為該特定文檔啟用的操作。
 
 **語法：** `InputStream applyUsageRights(InputStream inputFile, File certFile, String credentialPassword, UsageRights usageRights)`
 
@@ -57,27 +57,27 @@ Reader擴充功能服務完全支援以PDF標準1.6和更新版本為基礎的PD
    <td><p><strong>說明</strong></p> </td>
   </tr>
   <tr>
-   <td><p>inputFile</p> </td>
-   <td><p>指定表示要應用使用權限的PDF文檔的InputStream。 您可以使用LiveCycleRights Management或AEM Forms檔案安全性保護檔案。</p> </td>
+   <td><p>輸入檔案</p> </td>
+   <td><p>指定表示要應用使用權的PDF文檔的InputStream。 您可以使用LiveCycleRights Management或AEM Forms文檔安全保護文檔。</p> </td>
   </tr>
   <tr>
    <td><p>certFile</p> </td>
-   <td><p>指定表示.jks檔案的檔案對象。 .jks檔案是密鑰庫檔案。 它指向授予使用權的憑證。</p> </td>
+   <td><p>指定表示.jks檔案的檔案對象。 .jks檔案是密鑰庫檔案。 它指向授予使用權的證書。</p> </td>
   </tr>
   <tr>
-   <td><p>credentialPassword</p> </td>
-   <td><p>指定金鑰存放區的密碼。 </p> </td>
+   <td><p>憑據密碼</p> </td>
+   <td><p>指定密鑰庫的口令。 </p> </td>
   </tr>
   <tr>
-   <td><p>usageRights</p> </td>
-   <td><p>指定類型的對象 <a href="https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">使用權限</a>. usageRights對象表示可應用於受策略保護的PDF文檔的個別權限。</p> </td>
+   <td><p>使用權限</p> </td>
+   <td><p>指定類型的對象 <a href="https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">使用權限</a>。 usageRights對象表示可應用於受策略保護的PDF文檔的個人權限。</p> </td>
   </tr>
  </tbody>
 </table>
 
 ### 檢索應用於受策略保護的PDF文檔的使用權限。   {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
 
-您可以使用 `getDocumentUsageRights`Java API用於檢索應用於受策略保護的PDF文檔的讀取器擴展使用權限。 通過檢索有關使用權限的資訊，您可以了解受策略保護的PDF文檔中啟用了閱讀器擴展的功能。
+您可以使用 `getDocumentUsageRights`Java API，用於檢索應用於受策略保護的PDF文檔的讀取器擴展使用權限。 通過檢索有關使用權限的資訊，您可以瞭解已為受策略保護的PDF文檔啟用的功能讀取器擴展。
 
 **語法：** `public GetUsageRightsResult getDocumentUsageRights(InputStream inDoc)`
 
@@ -88,13 +88,13 @@ Reader擴充功能服務完全支援以PDF標準1.6和更新版本為基礎的PD
    <td><p><strong>說明</strong></p> </td>
   </tr>
   <tr>
-   <td><p>inDoc</p> </td>
-   <td><p>指定表示要從中檢索使用權的PDF文檔的InputStream。 您可以使用LiveCycleRights Management或AEM Forms檔案安全性保護檔案。</p> </td>
+   <td><p>在文檔中</p> </td>
+   <td><p>指定表示要從中檢索使用權的PDF文檔的InputStream。 您可以使用LiveCycleRights Management或AEM Forms文檔安全保護文檔。</p> </td>
   </tr>
  </tbody>
 </table>
 
-#### 程式碼範例 {#code-sample}
+#### 代碼示例 {#code-sample}
 
 ```java
 //Create a ServiceClientFactory instance
@@ -142,7 +142,7 @@ System.out.println("RE rights for the file are :\n"+right1);
 
 ### 刪除受策略保護的PDF文檔的使用權限 {#remove-usage-rights-of-a-policy-protected-pdf-document}
 
-您可以使用 `removeUsageRights`從受策略保護的文檔中刪除使用權限的Java API。 從受策略保護的PDF文檔中刪除使用權限是對文檔執行其他AEM Forms操作所必需的。 例如，您必須先以數位方式簽署（或認證）PDF檔案，才能設定使用權限。 因此，如果要對受策略保護的文檔執行操作，則必須從PDF文檔中刪除使用權限，執行其他操作，例如對文檔進行數字簽名，然後重新將使用權限應用於文檔。
+您可以使用 `removeUsageRights`從受策略保護的文檔中刪除使用權限的Java API。 從受策略保護的PDF文檔中刪除使用權限是對文檔執行其他AEM Forms操作所必需的。 例如，在設定使用權限之前，必須對PDF文檔進行數字簽名（或認證）。 因此，如果要對受策略保護的文檔執行操作，必須從PDF文檔中刪除使用權限，執行其他操作，例如對文檔進行數字簽名，然後對文檔重新應用使用權限。
 
 **語法：** `InputStream removeUsageRights(InputStream inputFile)`
 
@@ -153,13 +153,13 @@ System.out.println("RE rights for the file are :\n"+right1);
    <td><p><strong>說明</strong></p> </td>
   </tr>
   <tr>
-   <td><p> </p> <p>inputFile</p> </td>
-   <td>指定表示使用PDF文檔的InputStream<br /> 權限將被移除。 您可以使用LiveCycleRights Management或AEM Forms檔案安全性保護檔案。</td>
+   <td><p> </p> <p>輸入檔案</p> </td>
+   <td>指定表示使用情況的PDF文檔的InputStream<br /> 將刪除權限。 您可以使用LiveCycleRights Management或AEM Forms文檔安全保護文檔。</td>
   </tr>
  </tbody>
 </table>
 
-#### 程式碼範例 {#code-sample-1}
+#### 代碼示例 {#code-sample-1}
 
 ```java
 //Create a ServiceClientFactory instance

@@ -1,7 +1,7 @@
 ---
-title: 程式碼陷阱
+title: 代碼陷阱
 seo-title: Code pitfalls
-description: 為AEM開發時應避免的常見編碼陷阱
+description: 開發時要避免的常見編碼陷AEM阱
 seo-description: Common coding pitfalls to avoid when developing for AEM
 uuid: e7413bdc-4889-45ff-bdcb-b0893d33a3b7
 contentOwner: User
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ---
 
-# 程式碼陷阱{#code-pitfalls}
+# 代碼陷阱{#code-pitfalls}
 
-## 避免Java程式碼中的Sling系結 {#avoid-sling-bindings-in-java-code}
+## 避免Java代碼中的Sling綁定 {#avoid-sling-bindings-in-java-code}
 
-在90%的情況下，Sling系結是存取服務的不適當方式。 反之，您應使用 *@Reference* 或 *@Inject* 註解。
+在90%的情況下，Sling綁定是訪問服務的不恰當方式。 相反，您應使用 *@Reference* 或 *@Inject* 注釋。
 
 ## 避免Java代碼中的Thread.interrupt {#avoid-thread-interrupt-in-java-code}
 
-*線程。中斷* 是危險的，因為當在錯誤的時間呼叫時，它可能會關閉檔案，包括Lucene檔案和永久快取檔案。
+*線程。中斷* 是危險的，因為當在錯誤時間調用時，它可能會關閉檔案，包括Lucene檔案和永久快取檔案。
 
 ## 避免將Java同步與ReadWriteLocks混合 {#avoid-mixing-java-synchronization-with-readwritelocks}
 
-這可能會導致競爭條件，其中程式碼最終會死鎖。
+這可能導致代碼最終會死鎖的競賽條件。

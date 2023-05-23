@@ -1,7 +1,7 @@
 ---
 title: 編輯者
 seo-title: Editor
-description: 了解如何切換回傳統UI編輯器。
+description: 瞭解如何切換回經典UI編輯器。
 seo-description: Learn how to switch back to the Classic UI Editor.
 uuid: ca8b07e7-014f-428e-82bd-87f3aae12f6e
 contentOwner: Chris Bohnert
@@ -20,9 +20,9 @@ ht-degree: 6%
 
 # 編輯者{#editor}
 
-依預設，已停用從編輯器切換至傳統UI的功能。
+預設情況下，已禁用從編輯器切換到經典UI的功能。
 
-重新啟用選項 **在傳統UI中開啟** 在 **頁面資訊** 功能表，請依照下列步驟操作。
+重新啟用選項 **在傳統用戶介面中開啟** 的 **頁面資訊** 菜單中的命令。
 
 1. 使用CRXDE Lite，查找以下節點：
 
@@ -36,12 +36,12 @@ ht-degree: 6%
 
    * **路徑**: `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
    * **重疊位置**: `/apps/`
-   * **匹配節點類型**:活動（選取核取方塊）
+   * **匹配節點類型**:活動（選中複選框）
 
-1. 將下列多值文字屬性新增至覆蓋節點：
+1. 將以下多值文本屬性添加到重疊節點：
 
    `sling:hideProperties = ["granite:hidden"]`
 
-1. 此 **在傳統UI中開啟** 選項 **頁面資訊** 的雙曲正切值。
+1. 的 **在傳統用戶介面中開啟** 中 **頁面資訊** 按鈕。
 
    ![](assets/syui-03-2019-02-27-15-19-48.png)

@@ -1,7 +1,8 @@
 ---
 title: 在 AEM 中使用 GraphiQL IDE
 description: 了解如何在 Adobe Experience Manager 中使用 GraphiQL IDE。
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
+source-git-commit: b8c9e5cd3192b51954091b677d700c51617c9460
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 94%
@@ -10,7 +11,7 @@ ht-degree: 94%
 
 # 使用 GraphiQL IDE {#graphiql-ide}
 
-標準的實施 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE可與Adobe Experience Manager的GraphQL API(AEM)搭配使用。
+標準的實施 [圖形QL](https://graphql.org/learn/serving-over-http/#graphiql) IDE可與Adobe Experience Manager的GraphQLAPI(AEM)一起使用。
 
 >[!NOTE]
 >
@@ -131,7 +132,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## 發佈持續性查詢 {#publishing-persisted-queries}
 
-選取您的 [持續查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md) 從清單（左側面板），您可以使用 **發佈** 和 **取消發佈** 動作。 這會將其啟動到發佈環境 (例如，`dev-publish`)，以便應用程式在測試時輕鬆存取。
+一旦選擇了 [永續查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md) 從清單（左面板）中，您可以 **發佈** 和 **取消發佈** 操作。 這會將其啟動到發佈環境 (例如，`dev-publish`)，以便應用程式在測試時輕鬆存取。
 
 >[!NOTE]
 >

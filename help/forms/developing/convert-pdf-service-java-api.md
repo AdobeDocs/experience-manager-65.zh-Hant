@@ -1,7 +1,7 @@
 ---
-title: 轉換PDF服務Java API快速入門(SOAP)
+title: 轉換PDF服務Java API QuickStart(SOAP)
 seo-title: Convert PDF Service Java API QuickStart(SOAP)
-description: 轉換PDF服務Java API快速入門(SOAP)
+description: 轉換PDF服務Java API QuickStart(SOAP)
 uuid: 97253ac7-f0c1-4766-a7bd-c19af52adf51
 contentOwner: admin
 content-type: reference
@@ -17,23 +17,23 @@ ht-degree: 0%
 
 ---
 
-# 轉換PDF服務Java API快速入門(SOAP) {#convert-pdf-service-java-api-quickstart-soap}
+# 轉換PDF服務Java API快速啟動(SOAP) {#convert-pdf-service-java-api-quickstart-soap}
 
-轉換PDF服務API提供下列快速入門。
+以下快速啟動可用於轉換PDF服務API。
 
-[快速入門（SOAP模式）:使用Java API將PDF檔案轉換為PostScript](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API將PDF文檔轉換為PostScript](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
 
-[快速入門（SOAP模式）:使用Java API將PDF檔案轉換為JPEG檔案](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
+[快速啟動（SOAP模式）:使用Java API將PDF文檔轉換為JPEG檔案](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
-AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應設為SOAP。
+AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計中的快速入門是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server為基礎。 但是，如果您使用其他作業系統（如UNIX），請用適用作業系統支援的路徑取代Windows專用路徑。 同樣，如果您正在使用其他J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+>「使用表單寫程式」中的「快AEM速啟動」基於部署在JBoss Application Server和MicrosoftWindows作業系統上的Forms伺服器。 但是，如果您使用的是其他作業系統，如UNIX，則用適用作業系統支援的路徑替換Windows特定路徑。 同樣，如果您使用的是另一個J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 快速入門（SOAP模式）:使用Java API將PDF檔案轉換為PostScript {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
+## 快速啟動（SOAP模式）:使用Java API將PDF文檔轉換為PostScript {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
 
-以下代碼示例轉換了名為的PDF文檔 *Loan.pdf* 填入名為 *Loan.ps*. (請參閱 [將PDF文檔轉換為PostScript](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript).)
+以下代碼示例轉換名為 *Loan.pdf* 到名為 *貸款.ps*。 (請參閱 [將PDF文檔轉換為PostScript](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript)。)
 
 ```java
  /*
@@ -146,9 +146,9 @@ AEM Forms操作可使用AEM Forms強制類型API來執行，且連線模式應�
  }
 ```
 
-## 快速入門（SOAP模式）:使用Java API將PDF檔案轉換為JPEG檔案 {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
+## 快速啟動（SOAP模式）:使用Java API將PDF文檔轉換為JPEG檔案 {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
 
-以下Java代碼示例將轉換名為的PDF文檔 *Loan.pdf* 儲存到一組JPEG檔案，並將其儲存在C:\Adobe directory中。 每個檔案的名稱都是 `tempFile[index].jpg`，其中會命名第一個影像檔案 *tempFile0.jpg*. (請參閱 [將PDF文檔轉換為影像格式](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats).)
+以下Java代碼示例轉換名為 *Loan.pdf* 到一組JPEG檔案，並將其儲存在C:\Adobe directory目錄中。 每個檔案都命名 `tempFile[index].jpg`，其中第一個影像檔案的名稱 *tempFile0.jpg*。 (請參閱 [將PDF文檔轉換為影像格式](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats)。)
 
 ```java
  /*

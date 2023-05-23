@@ -1,7 +1,7 @@
 ---
-title: 在AEM中開發行動應用程式
+title: 開發移動應用程AEM序
 seo-title: Developing Mobile Applications in AEM
-description: 請依照本頁面操作，開始使用Adobe PhoneGap Enterprise在AEM中開發行動應用程式。
+description: 按照本頁開始使用Adobe PhoneGap企業開AEM發移動應用程式。
 seo-description: Follow this page to start developing mobile application in AEM using Adobe PhoneGap Enterprise.
 uuid: d8442447-ee04-4bb2-a0d7-17dcc8979dba
 contentOwner: User
@@ -17,49 +17,49 @@ ht-degree: 1%
 
 ---
 
-# 在AEM中開發行動應用程式 {#developing-mobile-applications-in-aem}
+# 開發移動應用程AEM序 {#developing-mobile-applications-in-aem}
 
 >[!NOTE]
 >
->Adobe建議針對需要單頁應用程式架構用戶端轉譯（例如React）的專案使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-AEM運用Adobe PhoneGap和Adobe發佈解決方案，讓您建立和管理內容豐富且以公用程式為基礎的跨平台行動應用程式：
+利AEM用Adobe PhoneGap和Adobe發佈解決方案，使您能夠建立和管理內容豐富和基於實用工具的跨平台移動應用程式：
 
-* 在一個位置管理所有公司的行動應用程式。
-* 無需複雜的布建設定檔，且需額外努力來建立和上傳您的應用程式以供共用，即可檢閱開發和測試環境中的應用程式。
-* 使用AEM製作環境來建立和管理您應用程式的豐富內容。
-* 使用HTML5搭配Adobe PhoneGap，以使用裝置原生功能建立豐富的體驗。
-* 將HTML5 Webviews引入新的或預先存在的 **原生** 應用程式。
-* 在所有傳送通道（包括網頁、行動網路、行動應用程式和列印）建立、組織和共用豐富多媒體內容。
+* 在一個位置管理您公司的所有移動應用。
+* 在開發和暫存環境中查看應用程式，而不需要複雜的設定配置檔案，也無需額外努力構建和上載應用程式以進行共用。
+* 使用創AEM作環境為您的應用建立和管理豐富內容。
+* 使用與Adobe PhoneGap的HTML5，通過設備本機功能建立豐富的體驗。
+* 將HTML5 Web視圖引入新的或預先存在的 **本地** 應用程式。
+* 跨所有交付渠道（包括Web、Mobile-Web、Mobile-App和打印）建立、建立和共用豐富的多媒體內容。
 
-AEM與Adobe整合 **[PhoneGap Build服務](https://build.phonegap.com/)** 以簡化應用程式的構建和部署過程。
+與AEMAdobe整合 **[PhoneGap Build服務](https://build.phonegap.com/)** 簡化應用程式構建和部署過程。
 
-**AdobeContentSync** 可讓使用者輕鬆將頁面和內容更新透過空中(OTA)下載至其裝置，而無須重新安裝應用程式，或從appStore、Google Play或其他應用程式來源下載。
+**Adobe內容同步** 使用戶能夠輕鬆地將頁面和內容更新Over-the-Air(OTA)下載到其設備，而無需重新安裝應用程式或從appStore、Google Play或其他應用程式源下載。
 
-**Adobe Analytics** 已完全整合至AEM應用程式，並可詳細追蹤發佈、地理位置、作業系統、裝置、點按資料流、iBeacon追蹤等。
+**Adobe Analytics** 完全整合到應AEM用中，允許詳細跟蹤分佈、地理位置、作業系統、設備、按一下流、iBeacon跟蹤等。
 
-## 建立應用程式 {#creating-apps}
+## 建立應用 {#creating-apps}
 
-開發人員可使用 [AEM PhoneGap入門套件](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit) 以及 [https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps) 使用PhoneGap引導AEM應用程式，包括執行Cordova Webviews的參考原生應用程式。
+開發人員可以 [AEMPhoneGap入門套件](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit) 以及在 [https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps) 使用PhoneGap啟動應AEM用，包括運行Cordova Webviews的參考本機應用。
 
-入門套件Git存放庫的自述檔案包含使用入門套件的教學課程：
+Starter Kit Git儲存庫的自述檔案包括使用Starter Kit的教程：
 
-* 自訂品牌
-* Maven建置和部署目標範例
-* 原始碼控制庫配置
-* 安裝並部署至本機或遠端AEM執行個體
-* 從AEM解除安裝
+* 自定義品牌
+* 生成和部署目標示例
+* 原始碼管理儲存庫配置
+* 安裝並部署到本地或遠程實AEM例
+* 卸載AEM自
 
 >[!NOTE]
 >
->您可在GitHub找到其他參考實作來源，包括labs [此處](https://github.com/adobe-marketing-cloud-apps) 還有「廚房水槽」 [此處](https://github.com/blefebvre/aem-phonegap-kitchen-sink).
+>可在GitHub上找到其他參考實現源，包括實驗 [這裡](https://github.com/adobe-marketing-cloud-apps) 還有&quot;廚房水池&quot; [這裡](https://github.com/blefebvre/aem-phonegap-kitchen-sink)。
 
-## 針對IOS 9和HTTP主機開發 {#developing-for-ios-and-http-hosts}
+## 為IOS9和HTTP主機開發 {#developing-for-ios-and-http-hosts}
 
-iOS開發人員應注意iOS 9上執行之Cordova應用程式的開啟問題。 此問題會防止向不安全的主機(例如 *http://localhost:4502*)。 此問題將透過即將發行的cordova-ios版本（由Cordova CLI使用）解決，但同時提供兩種解決方法：
+iOS開發者應該知道，iOS9上運行的Cordova應用程式存在一個開放問題。 此問題防止向不安全主機發出請求(如 *http://localhost:4502*)。 此問題將通過即將發佈的cordova-ios（由Cordova CLI使用）來解決，但與此同時，有兩種解決方法：
 
-1. 您仍可以直接使用iOS 8模擬器，不需任何問題。
-1. 如果您必須使用iOS 9，則您的應用程式 — Info.plist（在執行後找到） `cordova platform add ios` 在&lt;app root=&quot;&quot;>/platforms/ios/&lt;app name=&quot;&quot;>/&lt;app name=&quot;&quot;>-Info.plist&quot;)檔案可手動編輯，以包含下列屬性：
+1. 作為一種立即的解決方法，您仍然可以無問題地使用任何iOS8模擬器。
+1. 如果必須使用iOS9，則您的應用 — Info.plist（在運行後找到） `cordova platform add ios` 在&quot;&lt;app root=&quot;&quot;>/platforms/ios/&lt;app name=&quot;&quot;>/&lt;app name=&quot;&quot;>-Info.plist&quot;)檔案可以手動編輯，以包括以下屬性：
 
 ```
 <key>NSAppTransportSecurity</key>
@@ -73,27 +73,27 @@ iOS開發人員應注意iOS 9上執行之Cordova應用程式的開啟問題。 �
 
 >[!NOTE]
 >
->如需「App Transport Security」的詳細資訊，請參閱 [Apple的iOS9發行前檔案](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14) 和這個 [堆棧溢出討論](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/).
+>有關「應用傳輸安全性」的詳細資訊，請參閱 [AppleiOS9預發佈文檔](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14) 和 [堆棧溢出討論](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/)。
 
-## 在AEM中開發行動應用程式 {#developing-mobile-applications-in-aem-1}
+## 開發移動應用程AEM序 {#developing-mobile-applications-in-aem-1}
 
-* [啟動AEM PhoneGap](/help/mobile/starting-aem-phonegap-app.md)
-* [建立行動應用程式](/help/mobile/building-app-mobile-phonegap.md)
-* [建構應用程式](/help/mobile/phonegap-structure-an-app.md)
-* [使用Apps Console建立和編輯應用程式](/help/mobile/phonegap-apps-console.md)
+* [啟動AEMPhoneGap](/help/mobile/starting-aem-phonegap-app.md)
+* [構建移動應用程式](/help/mobile/building-app-mobile-phonegap.md)
+* [構造應用](/help/mobile/phonegap-structure-an-app.md)
+* [使用應用控制台建立和編輯應用](/help/mobile/phonegap-apps-console.md)
 * [單頁應用程式](/help/mobile/phonegap-single-page-applications.md)
-* [使用PhoneGap CLI開發應用程式](/help/mobile/phonegap-apps-pg-cli.md)
+* [使用PhoneGap CLI開發應用](/help/mobile/phonegap-apps-pg-cli.md)
 * [訪問設備功能](/help/mobile/phonegap-access-device-features.md)
-* [使用Adobe行動分析追蹤應用程式效能](/help/mobile/phonegap-intro-to-app-analytics.md)
-* [將Adobe Analytics新增至行動應用程式](/help/mobile/phonegap-add-analytics-to-apps.md)
+* [使用AdobeMobile分析跟蹤應用效能](/help/mobile/phonegap-intro-to-app-analytics.md)
+* [將Adobe Analytics添加到您的移動應用程式](/help/mobile/phonegap-add-analytics-to-apps.md)
 * [推播通知](/help/mobile/phonegap-push-notifications.md)
-* [AEM Mobile內容個人化](/help/mobile/phonegap-aem-mobile-content-personalization.md)
-* [應用程式的解剖](/help/mobile/phonegap-apps-arch.md)
-* [您的混合應用程式已準備好迎接AEM Mobile嗎？](/help/mobile/phonegap-adding-content-to-imported-app.md)
+* [AEM Mobile內容個性化](/help/mobile/phonegap-aem-mobile-content-personalization.md)
+* [應用剖析](/help/mobile/phonegap-apps-arch.md)
+* [你的混合應用準備好迎接AEM Mobile了嗎？](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
 ### 其他資源 {#additional-resources}
 
-若要了解管理員和開發人員的角色和責任，請參閱下列資源：
+要瞭解管理員和開發人員的角色和職責，請參閱以下資源：
 
-* [使用AEM編寫Adobe PhoneGap Enterprise](/help/mobile/phonegap.md)
-* [使用AEM管理Adobe PhoneGap Enterprise的內容](/help/mobile/administer-phonegap.md)
+* [為Adobe PhoneGap企業創AEM作](/help/mobile/phonegap.md)
+* [為Adobe PhoneGap企業管理內AEM容](/help/mobile/administer-phonegap.md)

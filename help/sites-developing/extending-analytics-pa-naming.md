@@ -1,7 +1,7 @@
 ---
-title: 為Analytics實作伺服器端頁面命名
+title: 為分析實現伺服器端頁面命名
 seo-title: Implementing Server-Side Page Naming for Analytics
-description: Adobe Analytics使用s.pageName屬性來唯一識別頁面，並為頁面收集的資料建立關聯
+description: Adobe Analytics使用s.pageName屬性唯一標識頁面並關聯為頁面收集的資料
 seo-description: Adobe Analytics uses the s.pageName property to uniquely identify pages and to associate the data that is collected for the pages
 uuid: 37b92099-0cce-4b2d-b55c-928f636dbd7e
 contentOwner: User
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 ---
 
-# 為Analytics實作伺服器端頁面命名{#implementing-server-side-page-naming-for-analytics}
+# 為分析實現伺服器端頁面命名{#implementing-server-side-page-naming-for-analytics}
 
-Adobe Analytics使用 `s.pageName` 屬性來唯一識別頁面，以及為頁面收集的資料建立關聯。 通常，您會在AEM中執行下列工作，將值指派給AEM傳送至Analytics的此屬性：
+Adobe Analytics使用 `s.pageName` 屬性，以唯一標識頁並關聯為頁收集的資料。 通常，在中執行以下任AEM務，以將值分配給發送到分AEM析的此屬性：
 
-* 使用Analytics雲端服務架構將CQ變數對應至Analytics `s.pageName` 屬性。 (請參閱 [將元件資料與Adobe Analytics屬性對應](/help/sites-administering/adobeanalytics-mapping.md).)
+* 使用Analytics雲服務框架將CQ變數映射到Analytics `s.pageName` 屬性。 (請參閱 [使用Adobe Analytics屬性映射元件資料](/help/sites-administering/adobeanalytics-mapping.md)。)
 
-* 設計頁面元件，使其包含您對應至的CQ變數 `s.pageName` 屬性。 (請參閱 [為自訂元件實作Adobe Analytics追蹤](/help/sites-developing/extending-analytics-components.md).)
+* 設計頁面元件，使其包括映射到的CQ變數 `s.pageName` 屬性。 (請參閱 [實施Adobe Analytics定制元件跟蹤](/help/sites-developing/extending-analytics-components.md)。)
 
-若要在Sites主控台和Content Insight中公開Analytics報表資料，AEM需要 `s.pageName` 屬性。 AEM Analytics Java API定義 `AnalyticsPageNameProvider` 實作的介面，以便Sites Console和Content Insights能夠使用 `s.pageName` 屬性。 您的 `AnaltyicsPageNameProvider` 服務會解析伺服器上的pageName屬性以用於報告用途，因為可使用用戶端上的Javascript以動態方式設定，以用於追蹤用途。
+要在站點控制台和Content Insight中公開分析報告資料，AEM需要 `s.pageName` 屬性。 Analytics AEM Java API定義 `AnalyticsPageNameProvider` 您實施的介面，以向Sites控制台和Content Insights提供 `s.pageName` 屬性。 您 `AnaltyicsPageNameProvider` 服務解析伺服器上的pageName屬性以用於報告目的，因為可以在客戶端上使用Javascript動態設定該屬性以用於跟蹤目的。
 
-## 預設Analytics頁面名稱提供者服務 {#the-default-analytics-page-name-provider-service}
+## 「預設分析」頁名稱提供程式服務 {#the-default-analytics-page-name-provider-service}
 
-此 `DefaultPageNameProvider` 服務是決定 `s.pageName` 屬性，用於擷取頁面的Analytics資料。 此服務可與AEM基礎頁面元件( `/libs/foundation/components/page`)。 此頁面元件會定義下列CQ變數，這些變數應對應至 `s.pageName` 屬性：
+的 `DefaultPageNameProvider` 服務是確定 `s.pageName` 用於檢索頁面的Analytics資料的屬性。 服務與基礎頁元件AEM( `/libs/foundation/components/page`)。 此頁元件定義以下要映射到的CQ變數 `s.pageName` 屬性：
 
-* `pagedata.path`:值會設為頁面路徑。
-* `pagedata.title`:值會設為頁面標題。
-* `pagedata.navTitle`:值會設為頁面導覽標題。
+* `pagedata.path`:該值將設定為頁面路徑。
+* `pagedata.title`:該值設定為頁面標題。
+* `pagedata.navTitle`:該值將設定為頁面導航標題。
 
-此 `DefaultPageNameProvider` 服務會決定將哪些CQ變數對應至 `s.pageName` 屬性。 接著，服務會決定要用於擷取分析報表資料的適當頁面屬性：
+的 `DefaultPageNameProvider` 服務確定這些CQ變數中哪個被映射到 `s.pageName` Analytics雲服務框架中的屬性。 然後，該服務確定用於檢索分析報告資料的相應頁屬性：
 
 * `pagedata.path`:服務使用 `page.getPath()`
 
@@ -43,66 +43,66 @@ Adobe Analytics使用 `s.pageName` 屬性來唯一識別頁面，以及為頁面
 
 * `pagedata.navTitle`:服務使用 `page.getNavigationTitle()`
 
-此 `page` 物件是 [ `com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) 頁面的Java物件。
+的 `page` 對象是 [ `com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) 頁的Java對象。
 
-若您未將CQ變數對應至 `s.pageName` 框架中的屬性， `s.pageName` 會從頁面路徑產生。 例如，具有路徑的頁面 `/content/geometrixx/en` 使用值 `content:geometrixx:en` for `s.pageName`.
+如果不將CQ變數映射到 `s.pageName` 框架中的屬性， `s.pageName` 從頁面路徑生成。 例如，具有路徑的頁面 `/content/geometrixx/en` 使用值 `content:geometrixx:en` 為 `s.pageName`。
 
 >[!NOTE]
 >
->DefaultPageNameProvider服務使用100的服務排名。
+>DefaultPageNameProvider服務使用100的服務等級。
 
-## 維護Analytics報表的連續性 {#maintaining-continuity-in-analytics-reporting}
+## 在分析報告中維護連續性 {#maintaining-continuity-in-analytics-reporting}
 
-維護頁面分析資料的完整歷史記錄需要用於頁面的s.pageName屬性的值不會變更。 不過，基礎頁面元件定義的分析屬性可輕鬆變更。 例如，移動頁面會變更 `pagedata.path` 並中斷報表歷史記錄的連續性：
+維護頁面分析資料的完整歷史記錄要求用於頁面的s.pageName屬性的值永不更改。 但是，可以輕鬆地更改基礎頁元件定義的分析屬性。 例如，移動頁面會更改 `pagedata.path` 並中斷報告歷史記錄的連續性：
 
-* 針對上一路徑收集的資料不再與頁面相關聯。
-* 如果不同頁面使用另一個頁面曾經使用的路徑，則不同頁面會繼承該路徑的資料。
+* 為上一路徑收集的資料不再與頁面關聯。
+* 如果不同頁使用另一頁曾經使用的路徑，則不同頁將繼承該路徑的資料。
 
-為確保報告的連續性， `s.pageName` 應具有下列特性：
+為確保報告的連續性， `s.pageName` 應具有以下特點：
 
 * 唯一.
 * 穩定。
-* 人類看得懂。
+* 可讀。
 
-例如，自訂頁面元件可包含頁面屬性，供作者用來為頁面指定唯一ID，作為 `s.pageProperties` 屬性：
+例如，自定義頁面元件可以包括頁面屬性，作者使用該屬性為用作頁面值的頁面指定唯一ID `s.pageProperties` 屬性：
 
-* 頁面包含的分析變數，會設為儲存在頁面屬性中之唯一ID的值。
-* 分析變數會對應至 `s.pageProperties` 屬性。
-* 您實施的AnalyticsPageNameProvider介面會擷取頁面屬性的值，以用於查詢頁面Analytics資料。
+* 該頁包括一個分析變數，該變數被設定為儲存在page屬性中的唯一ID的值。
+* 分析變數映射到 `s.pageProperties` 分析框架中的屬性。
+* AnalyticsPageNameProvider介面的實現將檢索用於查詢頁分析資料的頁屬性的值。
 
 >[!NOTE]
 >
->請洽詢您的Analytics顧問，以取得協助，為您的 `s.pageName` 值。
+>請咨詢您的分析顧問，以獲得幫助，為您制定有效的策略 `s.pageName` 值。
 
-### 實作Analytics頁面名稱提供者服務 {#implementing-an-analytics-page-name-provider-service}
+### 實施分析頁名提供程式服務 {#implementing-an-analytics-page-name-provider-service}
 
-實作 `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameProvider` 介面作為OSGi服務，以自訂擷取 `s.pageName` 屬性值。 「網站頁面分析」和「內容分析」使用服務從Analytics擷取報表資料。
+實施 `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameProvider` 作為OSGi服務的介面，以自定義 `s.pageName` 屬性值。 「站點」頁分析和內容透視使用服務從分析檢索報表資料。
 
-AnalyticsPageNameProvider介面定義您必須實作的兩種方法：
+AnalyticsPageNameProvider介面定義了必須實現的兩種方法：
 
-* `getPageName`:傳回 `String` 代表要用作 `s.pageName` 屬性。
+* `getPageName`:返回 `String` 表示用作 `s.pageName` 屬性。
 
-* `getResource`:傳回 `org.apache.sling.api.resource.Resource` 代表與 `s.pageName` 屬性。
+* `getResource`:返回 `org.apache.sling.api.resource.Resource` 表示與 `s.pageName` 屬性。
 
-這兩種方法會採用 `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameContext` 物件作為參數。 此 `AnalyticsPageNameContext` 類別提供analytics呼叫內容的相關資訊：
+兩種方法都 `com.day.cq.analytics.sitecatalyst.AnalyticsPageNameContext` 對象。 的 `AnalyticsPageNameContext` 類提供了有關分析調用的上下文的資訊：
 
-* 頁面資源的基本路徑。
-* 此 `Framework` Analytics雲端服務設定的物件。
-* 此 `Resource` 物件。
-* 此 `ResourceResolver` 物件。
+* 頁資源的基本路徑。
+* 的 `Framework` Analytics雲服務配置的對象。
+* 的 `Resource` 頁面的對象。
+* 的 `ResourceResolver` 頁面的對象。
 
 類還為頁名提供setter。
 
-### 範例AnalyticsPageNameProvider實作 {#example-analyticspagenameprovider-implementation}
+### 示例AnalyticsPageNameProvider實現 {#example-analyticspagenameprovider-implementation}
 
-下列範例 `AnalyticsPageNameProvider` 實作支援自訂頁面元件：
+以下示例 `AnalyticsPageNameProvider` 實現支援自定義頁面元件：
 
-* 元件會擴充基礎頁面元件。
-* 對話方塊包含作者用來指定 `s.pageName` 屬性。
-* 屬性值儲存在 `jcr:content`頁面例項的節點。
-* 儲存的Analytics屬性 `s.pageName` 屬性被呼叫 `pagedata.pagename`. 此屬性已對應至 `s.pageName` 屬性。
+* 該元件擴展了基礎頁元件。
+* 該對話框包含一個欄位，作者使用該欄位指定 `s.pageName` 屬性。
+* 屬性值儲存在 `jcr:content`頁實例的節點。
+* 儲存的分析屬性 `s.pageName` 調用屬性 `pagedata.pagename`。 此屬性映射到 `s.pageName` 分析框架中的屬性。
 
-以下是 `getPageName` 如果框架映射配置正確，則方法返回pageName節點屬性的值：
+以下實施 `getPageName` 如果框架映射配置正確，則方法返回pageName節點屬性的值：
 
 ```java
 public String getPageName(AnalyticsPageNameContext context) {
@@ -122,7 +122,7 @@ public String getPageName(AnalyticsPageNameContext context) {
     }
 ```
 
-getResource方法的下列實施會傳回頁面的Resource物件：
+getResource方法的以下實現將返回該頁的Resource對象：
 
 ```java
      public Resource getResource(AnalyticsPageNameContext context) {
@@ -154,7 +154,7 @@ getResource方法的下列實施會傳回頁面的Resource物件：
     }
 ```
 
-以下代碼表示整個類，包括配置服務的SCR注釋。 請注意，服務排名為200，會覆寫預設服務。
+以下代碼表示整個類，包括配置服務的SCR注釋。 請注意，服務等級為200，它覆蓋預設服務。
 
 ```java
 /*************************************************************************

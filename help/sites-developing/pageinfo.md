@@ -1,7 +1,7 @@
 ---
-title: 取得JSON格式的頁面資訊
+title: 獲取JSON格式的頁資訊
 seo-title: Obtaining Page Information in JSON Format
-description: 若要取得頁面資訊，請傳送要求給PageInfo servlet，以取得JSON格式的頁面中繼資料
+description: 要獲取頁面資訊，請向PageInfo servlet發送請求，以獲取JSON格式的頁面元資料
 seo-description: To obtain the page information, send a request to the PageInfo servlet to obtain the page metadata in JSON format
 uuid: fb4f56b9-55e2-4622-a0d1-a86d6f2cce86
 contentOwner: Guillaume Carlino
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 ---
 
-# 取得JSON格式的頁面資訊{#obtaining-page-information-in-json-format}
+# 獲取JSON格式的頁資訊{#obtaining-page-information-in-json-format}
 
-若要取得頁面資訊，請傳送要求給PageInfo servlet，以取得JSON格式的頁面中繼資料。
+要獲取頁面資訊，請向PageInfo servlet發送請求，以獲取JSON格式的頁面元資料。
 
-PageInfo servlet會傳回關於存放庫中資源的資訊。 Servlet已綁定到URL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json` 和使用 `path` 參數來識別資源。 下列範例URL會傳回 `/content/we-retail/us/en` 節點：
+PageInfo Servlet返回有關儲存庫中資源的資訊。 Servlet綁定到URL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json` 使用 `path` 參數來標識資源。 以下示例URL返回有關 `/content/we-retail/us/en` 節點：
 
 ```shell
 http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retail/us/en
@@ -29,42 +29,42 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 >[!NOTE]
 >
->如果您需要JSON格式的頁面資訊，才能將內容傳送至非傳統AEM網頁的頻道，例如：
+>如果您需要JSON格式的頁面資訊來向非傳統網頁的通道提供內AEM容，例如：
 >
 >* 單頁應用程式
->* 原生行動應用程式
->* AEM外部的其他管道和接觸點
+>* 本機移動應用程式
+>* 外部的其他通道和觸AEM點
 >
->請參閱檔案 [內容服務的JSON匯出工具](/help/sites-developing/json-exporter.md).
+>查看文檔 [Content Services的JSON導出器](/help/sites-developing/json-exporter.md)。
 
-## 頁面資訊提供者 {#page-information-providers}
+## 頁面資訊提供程式 {#page-information-providers}
 
-頁面元件可以與一或多個 `com.day.cq.wcm.api.PageInfoProvider` 產生頁面中繼資料的服務。 PageInfo servlet會呼叫每個PageInfoProvider服務並匯總中繼資料：
+頁面元件可以與一個或多個關聯 `com.day.cq.wcm.api.PageInfoProvider` 生成頁元資料的服務。 PageInfo Servlet調用每個PageInfoProvider服務並聚合元資料：
 
-1. HTTP用戶端會傳送要求至PageInfo servlet，其中包含頁面的URL。
-1. PageInfo servlet會探索哪個元件會轉譯頁面。
-1. PageInfo servlet會呼叫與元件相關聯的每個PageInfoProvider。
-1. Servlet會匯總每個PageInfoProvider傳回的中繼資料，並將中繼資料新增至JSON物件的HTTP回應。
+1. HTTP客戶端向PageInfo Servlet發送請求，該PageInfo Servlet包括該頁的URL。
+1. PageInfo Servlet可發現呈現頁面的元件。
+1. PageInfo Servlet調用與元件關聯的每個PageInfoProvider。
+1. Servlet聚合每個PageInfoProvider返回的元資料，並將元資料添加到JSON對象中的HTTP響應。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
 >[!NOTE]
 >
->與PageInfoProviders類似，使用ListInfoProviders以JSON格式更新資訊清單。 (請參閱 [自訂網站管理控制台](/help/sites-developing/customizing-siteadmin.md).)
+>與PageInfoProviders類似，使用ListInfoProviders以JSON格式更新資訊清單。 (請參閱 [自定義網站管理控制台](/help/sites-developing/customizing-siteadmin.md)。)
 
-## 預設頁面資訊提供者 {#default-page-information-providers}
+## 預設頁面資訊提供程式 {#default-page-information-providers}
 
-此 `/libs/foundation/components/page` 元件與以下PageInfoProvider服務關聯：
+的 `/libs/foundation/components/page` 元件與以下PageInfoProvider服務關聯：
 
-* **預設頁面狀態提供程式：** 關於頁面狀態的資訊，例如是否已鎖定、頁面是否為作用中工作流程的裝載，以及頁面可使用哪些工作流程。
-* **即時關係資訊提供程式：** 有關多網站管理(MSM)的資訊，例如頁面是否為藍色列印的一部分，以及是否為即時副本。
-* **內容語言Servlet:** 目前頁面的語言，以及頁面可用之每種語言的相關資訊。
-* **工作流狀態提供程式：** 以頁面作為裝載之執行中工作流程的狀態資訊。
-* **工作流包資訊提供程式：** 有關儲存在儲存庫中的每個工作流程包，以及每個包是否包含當前資源的資訊。
-* **模擬器資訊提供程式：** 此資源可用的行動裝置模擬器相關資訊。 如果頁面元件未呈現行動頁面，則沒有可用的模擬器。
-* **注釋資訊提供程式：** 頁面上附註的相關資訊。
+* **預設頁面狀態提供程式：** 有關頁面狀態的資訊，如是否已鎖定、頁面是否是活動工作流的負載以及頁面可用的工作流。
+* **即時關係資訊提供程式：** 有關多站點管理(MSM)的資訊，如頁面是否是藍色打印的一部分，以及它是否是即時拷貝。
+* **內容語言Servlet:** 當前頁面的語言，以及有關頁面可用的每種語言的資訊。
+* **工作流狀態提供程式：** 有關將頁面作為負載的正在運行的工作流的狀態資訊。
+* **工作流包資訊提供程式：** 有關儲存在儲存庫中的每個工作流包的資訊，以及每個包是否包含當前資源。
+* **模擬器資訊提供程式：** 有關可用於此資源的移動設備模擬器的資訊。 如果頁面元件未呈現移動頁面，則沒有模擬器可用。
+* **注釋資訊提供程式：** 有關頁面上注釋的資訊。
 
-例如，PageInfo servlet會為 `/content/we-retail/us/en` 節點：
+例如，PageInfo servlet為 `/content/we-retail/us/en` 節點：
 
 ```
 {
@@ -469,23 +469,23 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 }
 ```
 
-## 篩選工作流程套件資訊 {#filtering-workflow-package-information}
+## 篩選工作流包資訊 {#filtering-workflow-package-information}
 
-設定Day CQ WCM工作流程套件資訊提供者服務，使其只傳回您想要之工作流程套件的相關資訊。 預設情況下，工作流包資訊提供程式服務返回有關儲存庫中每個工作流包的資訊。 迭代處理工作流程套件的子集時使用的伺服器資源較少。
+配置「第一天CQ WCM工作流包資訊提供程式」服務，以便它僅返回有關您感興趣的工作流包的資訊。 預設情況下，工作流包資訊提供程式服務返回有關儲存庫中每個工作流包的資訊。 對工作流包的子集進行迭代使用較少的伺服器資源。
 
 >[!NOTE]
 >
->Sidekick的Workflow頁簽使用PageInfo servlet來獲取工作流包的清單。 從清單中，您可以選取要新增目前頁面的套件。 您建立的篩選器會影響此清單。
+>Sidekick的「工作流」頁籤使用PageInfo servlet獲取工作流包的清單。 從清單中，可以選擇要向其添加當前頁面的包。 您建立的篩選器會影響此清單。
 
-服務的ID為 `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`. 若要建立篩選，請指定 `workflowpackageinfoprovider.filter` 屬性。
+服務的ID為 `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`。 要建立篩選器，請為 `workflowpackageinfoprovider.filter` 屬性。
 
-屬性值的前置詞為+或 — 字元，後面接著封裝路徑：
+屬性值的前置詞為+或 — 字元，後跟包路徑：
 
 * 路徑是工作流包的根節點的路徑。 路徑使用FileVault語法。
-* 若要包含套件，請使用+首碼。
-* 若要排除套件，請使用 — 首碼。
+* 要包括包，請使用+前置詞。
+* 要排除包，請使用 — 前置詞。
 
-此服務會套用所有篩選器的累積結果。 例如，下列篩選值會排除除Editions資料夾中的外的所有工作流程套件：
+該服務應用所有篩選器的累積結果。 例如，以下篩選器值排除了除Editions資料夾中的工作流包以外的所有工作流包：
 
 ```
 -/etc/workflow/packages(/.*)?
@@ -494,31 +494,31 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 >[!NOTE]
 >
->使用AEM時，有數種方法可管理這類服務的組態設定。 請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。
+>使用時，AEM有多種方法管理此類服務的配置設定。 請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的雙曲餘切值。
 
-例如，若要使用CRXDE Lite設定服務：
+例如，要使用CRXDE Lite配置服務：
 
 1. 開啟CRXDE Lite([http://localhost:4502/crx/de](http://localhost:4502/crx/de))。
-1. 在應用程式的設定資料夾中，建立節點：
+1. 在應用程式的config資料夾中，建立一個節點：
 
    * 名稱: `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`
    * 類型: `sling:OsgiConfig`
 
-1. 選取節點並新增屬性：
+1. 選擇節點並添加屬性：
 
    * 名稱: `workflowpackageinfoprovider.filter`
    * 類型: `String[]`
-   * 值：使用正確格式的工作流程套件路徑。
+   * 值：使用正確格式的工作流包路徑。
 
-1. 按一下「全部儲存」 。
+1. 按一下「全部保存」。
 
-若要在專案來源中設定服務：
+要在項目源中配置服務，請執行以下操作：
 
-1. 在專案來源中找出或建立AEM應用程式的設定資料夾。
+1. 在項目源中查找或創AEM建應用程式的配置資料夾。
 
-   例如，如果您使用內容套件Maven外掛程式的多模組原型來建立專案，則資料夾路徑為 `<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`.
-1. 在設定資料夾中，建立名為com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider.xml的文字檔
-1. 將下列文字複製到檔案：
+   例如，如果使用內容包Maven插件的多模組原型建立項目，則資料夾路徑為 `<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`。
+1. 在配置資料夾中，建立一個名為com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider.xml的文本檔案
+1. 將以下文本複製到檔案：
 
    ```
    <?xml version="1.0" encoding="UTF-8"?>
@@ -528,33 +528,33 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
     workflowpackageinfoprovider.filter="[]"/>
    ```
 
-1. 括弧內(`[]`) `workflowpackageinfoprovider.filter` 屬性，輸入以逗號分隔的篩選值清單，類似下列範例：
+1. 括弧內(`[]`) `workflowpackageinfoprovider.filter` 屬性，鍵入與以下示例類似的以逗號分隔的篩選器值清單：
 
    `workflowpackageinfoprovider.filter="[-/etc/workflow/packages(/.*)?,+/etc/workflow/packages/Editions(/.*)?]"/>`
 
 1. 儲存檔案。
 
-## 建立頁面資訊提供者 {#creating-a-page-information-provider}
+## 建立頁面資訊提供程式 {#creating-a-page-information-provider}
 
-建立自訂頁面資訊提供者服務，以新增您的應用程式可輕鬆取得的頁面中繼資料。
+建立自定義頁面資訊提供程式服務，以添加應用程式可以輕鬆獲取的頁面元資料。
 
 1. 實作 `com.day.cq.wcm.api.PageInfoProvider` 介面。 
-1. 將類別捆綁並部署為OSGi服務。
-1. 在您的應用程式中建立頁面元件。 使用 `foundation/components/page` 作為 `sling:resourceSuperType` 屬性。
+1. 將類捆綁並部署為OSGi服務。
+1. 在應用程式中建立頁面元件。 使用 `foundation/components/page` 值 `sling:resourceSuperType` 屬性。
 
-1. 在元件節點下新增節點，名為 `cq:infoProviders`.
-1. 在 `cq:infoProviders` 節點，為您的PageInfoProvider服務新增節點。 您可以指定節點的任何名稱。
-1. 將下列屬性新增至您的PageInfoProvider節點：
+1. 在名為的元件節點下添加節點 `cq:infoProviders`。
+1. 在 `cq:infoProviders` 節點，為PageInfoProvider服務添加節點。 可以為節點指定任何名稱。
+1. 將以下屬性添加到PageInfoProvider節點：
 
-   * 名稱：className
+   * 名稱：類名
    * 類型：字串
    * 值：PageInfoProvider服務的PID。
 
-針對使用應用程式頁面元件作為 `sling:resourceType`, PageInfo servlet除了預設的PageInfoProvider中繼資料外，還會傳回自訂PageInfoProvider中繼資料。
+對於將應用程式頁元件用作 `sling:resourceType`,PageInfo servlet除了預設的PageInfoProvider元資料外，還返回自定義PageInfoProvider元資料。
 
-### 範例PageInfoProvider實作 {#example-pageinfoprovider-implementation}
+### 示例PageInfoProvider實現 {#example-pageinfoprovider-implementation}
 
-以下Java類實現 [PageInfoProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) 和會傳回目前頁面資源的已發佈URL。
+以下Java類實現 [PageInfoProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) 並返回當前頁資源的已發佈URL。
 
 ```java
 package com.adobe.example;
@@ -601,11 +601,11 @@ public class PageUrlInfoProvider implements PageInfoProvider {
 }
 ```
 
-以下示例(在CRXDE Lite中)顯示配置為使用PageUrlInfoProvider服務的頁面元件：
+下面的示例在CRXDE Lite中顯示了配置為使用PageUrlInfoProvider服務的頁元件：
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
-PageUrlInfoProvider服務會傳回 `/content/we-retail/us/en` 節點：
+PageUrlInfoProvider服務返回以下資料 `/content/we-retail/us/en` 節點：
 
 ```xml
 "URLs": {

@@ -1,7 +1,7 @@
 ---
-title: 範例ContextHub存放區候選項
+title: 示例ContextHub儲存候選
 seo-title: Sample ContextHub Store Candidates
-description: ContextHub提供數個範例存放區候選項，供您在解決方案中使用
+description: ContextHub提供了幾個示例儲存候選，您可以在解決方案中使用
 seo-description: ContextHub provides several sample store candidates that you can use in your solutions
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,33 +15,33 @@ ht-degree: 1%
 
 ---
 
-# 範例ContextHub存放區候選項{#sample-contexthub-store-candidates}
+# 示例ContextHub儲存候選{#sample-contexthub-store-candidates}
 
-ContextHub提供數個範例存放區候選項，供您在解決方案中使用。 每個範例提供下列資訊：
+ContextHub提供了幾個示例儲存候選，您可以在解決方案中使用。 為每個示例提供以下資訊：
 
-* 在何處查找原始碼，以便您可以開啟它以學習。
-* 如何設定您從商店候選建立的商店。
-* 儲存資料的結構化方式，以便您能夠存取。
+* 在何處查找原始碼，以便您可以開啟它以用於學習目的。
+* 如何配置從候選儲存庫建立的儲存庫。
+* 儲存資料的結構，以便您能夠訪問它。
 
 >[!WARNING]
 >
->範例存放區候選項會作為參考設定提供，協助您為專案建立專屬設定，因此不應直接使用。
+>示例儲存候選作為參考配置提供，以幫助您為項目構建自己的專用配置，因此不應直接使用。
 
-## aem.segmentation範例商店候選項 {#aem-segmentation-sample-store-candidate}
+## aem.分段樣本儲存候選 {#aem-segmentation-sample-store-candidate}
 
-儲存已解析和未解析的ContextHub區段。 自動從ContextHub SegmentManager中擷取區段。
+儲存已解析和未解析的ContextHub段。 自動從ContextHub SegmentManager中檢索段。
 
 ### 源位置 {#source-location-segmentation}
 
 `/libs/settings/cloudsettings/legacy/contexthub/segmentation`
 
-### 基本實作 {#base-implementation-segmentation}
+### 基本實施 {#base-implementation-segmentation}
 
-aem.segmentation存放區候選項已延伸 [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
+aem.segmentation儲存候選擴展 [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)。
 
 ### 設定 {#configuration-segmentation}
 
-建立aem.segmentation存放區時，您不需要提供詳細的設定。 預設配置指定ContextHub段定義的位置。
+建立aem.segmentation儲存時，無需提供詳細配置。 預設配置指定ContextHub段定義的位置。
 
 ```xml
 {
@@ -53,21 +53,21 @@ aem.segmentation存放區候選項已延伸 [`ContextHub.Store.PersistedJSONPSto
 }
 ```
 
-## contexthub.geolocation範例存放區候選項 {#contexthub-geolocation-sample-store-candidate}
+## contexthub.geolocation示例儲存候選 {#contexthub-geolocation-sample-store-candidate}
 
-contexthub.geolocation範例存放區候選項目使用Google地圖來取得和儲存用戶端位置的相關資訊。
+contexthub.geolocation示例儲存候選項使用Google地圖來獲取和儲存有關客戶端位置的資訊。
 
 ### 源位置 {#source-location-geolocation}
 
 `/libs/settings/cloudsettings/legacy/contexthub/geolocation`
 
-### 基本實作 {#base-implementation-geolocation}
+### 基本實施 {#base-implementation-geolocation}
 
-contexthub.geolocation存放區候選項延伸 [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
+contexthub.geolocation儲存候選擴展 [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)。
 
 ### 設定 {#configuration-geolocation}
 
-預設設定會指定Google服務的相關資訊，以及初始經緯度座標。
+預設配置指定有關Google服務以及初始經緯度坐標的資訊。
 
 ```xml
 {
@@ -96,9 +96,9 @@ contexthub.geolocation存放區候選項延伸 [`ContextHub.Store.PersistedJSONP
     }
 ```
 
-### 資料項目 {#data-items-geolocation}
+### 資料項 {#data-items-geolocation}
 
-儲存區使用與以下範例類似的資料樹：
+儲存使用與以下示例類似的資料樹：
 
 ```xml
 {
@@ -109,9 +109,9 @@ contexthub.geolocation存放區候選項延伸 [`ContextHub.Store.PersistedJSONP
 
 >[!NOTE]
 >
->Chrome 50.x中推出的安全性原則要求所有地理位置相關的呼叫都須透過安全連線進行。 因此，如果AEM也透過https執行，AEM會強制將https用於地理位置API呼叫。 否則，會使用http來遵守相同來源的政策。 請參閱 [此Google部落格文章](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) 以取得Chrome中變更的詳細資訊。
+>Chrome 50.x中引入的安全策略要求所有與地理位置相關的呼叫都通過安全連接進行。 因此，AEM如果在https上運行，則強AEM制對地理位置API調用使用https。 否則，使用http來符合同一源的策略。 請參閱 [Google部落格](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) 的子菜單。
 
-## contexthub.surferinfo範例存放區候選 {#contexthub-surferinfo-sample-store-candidate}
+## contexthub.surferinfo示例儲存候選 {#contexthub-surferinfo-sample-store-candidate}
 
 儲存有關當前客戶端環境的資訊，如設備、窗口、瀏覽器、日期和時間。
 
@@ -119,17 +119,17 @@ contexthub.geolocation存放區候選項延伸 [`ContextHub.Store.PersistedJSONP
 
 `/libs/settings/cloudsettings/legacy/contexthub/surferinfo`
 
-### 基本實作 {#base-implementation-surferinfo}
+### 基本實施 {#base-implementation-surferinfo}
 
-contexthub.datetime儲存候選項延伸 [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore).
+contexthub.datetime儲存候選擴展 [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)。
 
 ### 設定 {#configuration-surferinfo}
 
-預設配置繼承自 `ContextHub.Store.PersistedStore`.
+預設配置繼承自 `ContextHub.Store.PersistedStore`。
 
-### 資料項目 {#data-items-surferinfo}
+### 資料項 {#data-items-surferinfo}
 
-使用此儲存候選項的儲存具有類似以下示例的資料樹：
+使用此儲存候選的儲存具有與以下示例類似的資料樹：
 
 ```xml
 {
@@ -178,21 +178,21 @@ contexthub.datetime儲存候選項延伸 [`ContextHub.Store.PersistedStore`](/he
 }
 ```
 
-## granite.emulators樣本儲存候選項 {#granite-emulators-sample-store-candidate}
+## granite.emulators樣本儲存候選 {#granite-emulators-sample-store-candidate}
 
-granite.emulators示例儲存候選儲存有關客戶端設備的資訊。
+granite.emulators示例儲存候選儲存關於客戶端設備的資訊。
 
 ### 源位置 {#source-location-emulators}
 
 `/libs/settings/cloudsettings/legacy/contexthub/emulators`
 
-### 基本實作 {#base-implementation-emulators}
+### 基本實施 {#base-implementation-emulators}
 
-contexthub.geolocation存放區候選項延伸 [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore).
+contexthub.geolocation儲存候選擴展 [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)。
 
 ### 設定 {#configuration-emulators}
 
-預設配置包含名為 `defaultEmulators` 包含不同裝置的相關資訊。 建立商店時，請視需要使用下列範例所示的格式，在「詳細設定」屬性中提供不同的裝置設定檔：
+預設配置包括名為 `defaultEmulators` 包含有關不同設備的資訊。 建立儲存時，請根據需要在「詳細配置」屬性中提供不同的設備配置檔案，格式如下例所示：
 
 ```xml
 {
@@ -237,7 +237,7 @@ contexthub.geolocation存放區候選項延伸 [`ContextHub.Store.PersistedStore
 }
 ```
 
-### 資料項目 {#data-items-emulators}
+### 資料項 {#data-items-emulators}
 
 儲存資料樹與以下示例類似：
 
@@ -311,21 +311,21 @@ contexthub.geolocation存放區候選項延伸 [`ContextHub.Store.PersistedStore
 }
 ```
 
-## granite.profile範例存放區候選項 {#granite-profile-sample-store-candidate}
+## granite.profile樣例儲存候選 {#granite-profile-sample-store-candidate}
 
-儲存目前使用者的相關資訊。
+儲存有關當前用戶的資訊。
 
 ### 源位置 {#source-location-profile}
 
 `/libs/settings/cloudsettings/legacy/contexthub/profile`
 
-### 基本實作 {#base-implementation-profile}
+### 基本實施 {#base-implementation-profile}
 
-contexthub.datetime儲存候選項延伸 [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
+contexthub.datetime儲存候選擴展 [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)。
 
 ### 設定 {#configuration-profile}
 
-使用下列預設設定。 您不應變更此設定。
+使用以下預設配置。 您不應更改此配置。
 
 ```xml
 {
@@ -338,9 +338,9 @@ contexthub.datetime儲存候選項延伸 [`ContextHub.Store.PersistedJSONPStore`
 }
 ```
 
-### 資料項目 {#data-items-profile}
+### 資料項 {#data-items-profile}
 
-使用此儲存候選項的儲存具有類似以下示例的資料樹：
+使用此儲存候選的儲存具有與以下示例類似的資料樹：
 
 ```xml
 {

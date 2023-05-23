@@ -1,7 +1,7 @@
 ---
-title: We.Retail參考實作
+title: We.Retail Reference實施
 seo-title: We.Retail Reference Implementation
-description: We.Retail是參考實作的技術預覽，說明使用AEM設定線上存在的建議方式
+description: We.Retail是參考實施的技術預覽，它展示了通過We.Retail
 seo-description: We.Retail is a technology preview of a reference implementation that illustrates the recommended way of setting up an online presence with AEM
 uuid: d8833192-b592-4812-bf9b-bd882e8ee7f0
 contentOwner: User
@@ -17,105 +17,105 @@ ht-degree: 8%
 
 ---
 
-# We.Retail參考實作{#we-retail-reference-implementation}
+# We.Retail Reference實施{#we-retail-reference-implementation}
 
 ## 簡介 {#introduction}
 
-We.Retail是參考實作和範例內容，說明使用Adobe Experience Manager設定線上存在的建議方式。
+We.Retail是一個參考實施和示例內容，它展示了與Adobe Experience Manager建立線上聯繫的推薦方式。
 
-We.Retail運用最新的AEM技術，例如HTL、回應式配置、可編輯的範本、核心元件等。
+We.Retail利用最新技術，AEM如HTL、響應式佈局、可編輯模板、核心元件等。
 
-雖然它說明的是零售垂直，但網站的設定方式可套用至任何垂直，而只有產品目錄和購物車功能是零售專用的。
+雖然它說明了零售垂直，但站點的設定方式可以應用於任何垂直，並且只有產品目錄和購物車功能是特定於零售的。
 
 ## 功能 {#features}
 
-We.Retail以AEM標準參考實作形式展示AEM的一些最強大功能。
+作AEM為標準參考實施，We.Retail展示了一些最強大的功AEM能。
 
 | **功能** | **說明** | **有興趣嗎？** |
 |---|---|---|
-| [全球化網站結構](/help/sites-administering/tc-bp.md) | We.Retail包含語言主版，這些語言主版會即時複製至特定國家/地區的網站。 | [試試！](/help/sites-developing/we-retail-globalized-site-structure.md) |
-| [回應式版面](/help/sites-authoring/responsive-layout.md) | 所有頁面都具備回應式版面，可動態調整以適應螢幕和裝置大小。 | [試試！](/help/sites-developing/we-retail-responsive-layout.md) |
-| [可編輯的範本](/help/sites-developing/page-templates-editable.md) | 所有頁面都以可編輯的範本為基礎，讓非開發人員可調整和自訂範本。 | [試試！](/help/sites-developing/we-retail-editable-templates.md) |
-| [HTML 範本語言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 所有元件皆以HTL為基礎 |  |
-| [電子商務功能](/help/commerce/cif-classic/developing/ecommerce.md) | 功能產品目錄 |  |
-| [社群網站](/help/communities/overview.md) | 允許訪客加入社群討論、閱讀部落格等 |  |
-| [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | 所有元件都以新的核心元件為基礎，且更可用且可供使用者立即設定 | [試試！](/help/sites-developing/we-retail-core-components.md) |
-| [內容片段](/help/assets/content-fragments/content-fragments.md) | 「We.Retail體驗」區段展示透過內容片段重複使用內容的強大功能。 | [試試！](/help/sites-developing/we-retail-content-fragments.md) |
-| [體驗片段](/help/sites-authoring/experience-fragments.md) | 體驗片段是一或多個元件的群組，包括可在頁面中參照的內容和版面。 | [試試！](/help/sites-developing/we-retail-experience-fragments.md) |
+| [全球化網站結構](/help/sites-administering/tc-bp.md) | We.Retail包括即時複製到特定國家/地區站點的語言母版。 | [試試！](/help/sites-developing/we-retail-globalized-site-structure.md) |
+| [響應式佈局](/help/sites-authoring/responsive-layout.md) | 所有頁面都具有響應佈局以動態適應螢幕和設備大小。 | [試試！](/help/sites-developing/we-retail-responsive-layout.md) |
+| [可編輯模板](/help/sites-developing/page-templates-editable.md) | 所有頁面都基於可編輯的模板，允許非開發人員調整和自定義模板。 | [試試！](/help/sites-developing/we-retail-editable-templates.md) |
+| [HTML 範本語言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 所有元件均基於HTL |  |
+| [電子商務能力](/help/commerce/cif-classic/developing/ecommerce.md) | 功能產品目錄 |  |
+| [社區站點](/help/communities/overview.md) | 允許訪問者加入社區討論、閱讀部落格等 |  |
+| [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | 所有元件都基於新的核心元件，而且更可用，用戶可配置的開箱即用 | [試試！](/help/sites-developing/we-retail-core-components.md) |
+| [內容片段](/help/assets/content-fragments/content-fragments.md) | 「We.Retail Experiences」部分展示了通過內容片段重新使用內容的威力。 | [試試！](/help/sites-developing/we-retail-content-fragments.md) |
+| [體驗片段](/help/sites-authoring/experience-fragments.md) | 體驗片段是由一個或多個元件組成的組，這些元件包括可在頁面中引用的內容和佈局。 | [試試！](/help/sites-developing/we-retail-experience-fragments.md) |
 
 ## 快速入門 {#getting-started}
 
-We.Retail以AEM範例內容的形式提供。 為了使用 [啟動AEM](/help/sites-deploying/deploy.md#getting-started)，確保未停用範例內容。
+We.Retail作為樣AEM本內容提供。 為了使用 [像AEM你平常一樣](/help/sites-deploying/deploy.md#getting-started)，確保未禁用示例內容。
 
 >[!CAUTION]
 >
->We.Retail不應安裝在生產執行個體上。 生產執行個體應在中啟動 `nosamplecontent` [runmode](/help/sites-deploying/configure-runmodes.md).
+>生產實例上不應安裝We.Retail。 應在中啟動生產實例 `nosamplecontent` [運行模式](/help/sites-deploying/configure-runmodes.md)。
 
 >[!CAUTION]
 >
->We.Retail以最新的AEM技術為基礎，因此不支援 [傳統UI編寫](/help/sites-classic-ui-authoring/home.md).
+>We.Retail基於最新技AEM術，因此不支援 [經典UI創作](/help/sites-classic-ui-authoring/home.md)。
 
 ### 最新版本 {#latest-version}
 
-雖然We.Retail是隨AEM版本而發行，但內容及其功能可能會在發行後更新。 因此， [從GitHub下載最新版本](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) 然後 [上傳](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) 和 [安裝](/help/sites-administering/package-manager.md#installing-packages) 作為AEM例項上的套件。
+儘管We.Retail隨發行版一起AEM發佈，但內容及其功能的更新可能會在發佈後進行。 因此， [從GitHub下載最新版本](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) 然後 [上載](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) 和 [安裝](/help/sites-administering/package-manager.md#installing-packages) 作為實例上的AEM包。
 
 ### 第一步 {#first-steps}
 
-1. AEM啟動後（和/或安裝We.Retail），網站 **We.Retail** 在 [sites console](/help/sites-authoring/basic-handling.md#global-navigation).
-1. 例如，下列頁面可以開啟，其外觀應如 [附錄](#appendix) 如下：
+1. 啟AEM動（和/或安裝We.Retail）後，站點 **We.Retail** 在 [站點控制台](/help/sites-authoring/basic-handling.md#global-navigation)。
+1. 例如，可以開啟以下頁面，它應顯示為 [附錄](#appendix) 以下：
 
    `https://<server name>:<port number>/editor.html/content/we-retail/language-masters/en.html`
 
-## We.Retail與Geometrixx {#we-retail-geometrixx}
+## We.零售和Geometrixx {#we-retail-geometrixx}
 
-Geometrixx及其許多化身，都是舊版AEM的範例內容。 自6.3版起，We.Retail便成為透過AEM提供的範例內容，可作為新的標準參考實作。
+Geometrixx及其許多化身在早期版本中充當樣AEM本。 自6.3版以來，We.Retail一直是隨附的示例內容，AEM並作為新的標準參考實施。
 
-We.Retail在技術上更穩健，利用最新的AEM技術來提高靈活性和可擴充性，同時也展示產品的最新功能。
+We.Retail在技術上更強大，利用最AEM新技術更靈活、更可擴展，同時還展示了產品的最新功能。
 
-### 功能比較 {#feature-comparison}
+### 特徵比較 {#feature-comparison}
 
-下表提供We.Retail與Geometrixx相比之主要功能的概觀。
+下表概述了We.Retail與Geometrixx相比的主要功能。
 
-* **可用** 表示在範例內容中找到功能的範例。
-* **不可用** 表示範例內容中沒有此功能的範例，但並不表示此功能本身不可用。
+* **可用** 表示在示例內容中找到該功能的示例。
+* **不可用** 表示該功能的示例在示例內容中不可用，但並不表示該功能本身不可用。
 
 | **功能** | **We.Retail** | **Geometrixx** |
 |---|---|---|
-| 全球化網站結構 | 語言主版即時複製至特定國家/地區的網站 | 不可用 |
+| 全球化網站結構 | 將語言大師即時複製到特定國家的站點 | 不可用 |
 | 內容片段 | 可用 | 不可用 |
 | 體驗片段 | 可用 | 不可用 |
-| 回應式版面 | 適用於所有頁面 | 僅Geometrixx Media |
-| 可編輯的範本 | 適用於所有頁面 | 不可用 |
+| 回應式版面 | 所有頁面 | 僅Geometrixx Media |
+| 可編輯的範本 | 所有頁面 | 不可用 |
 | HTL | 所有元件 | 有限 |
-| 定位 | 適用於所有頁面 | 僅Geometrixx Outdoors |
-| 畫面 | 可用 | 不可用 |
+| 定位 | 所有頁面 | 僅Geometrixx Outdoors |
+| Screens | 可用 | 不可用 |
 | 行動 | 不可用 | 可用 |
 | 手稿 | 不可用 | 可用 |
-| 輪播，下載，圖表元件 | 不可用 | 可用 |
-| 欄控制項 | 由版面容器取代 | 可用 |
+| 旋轉木馬，下載，圖表元件 | 不可用 | 可用 |
+| 列控制項 | 替換為佈局容器 | 可用 |
 | Forms | 不可用 | 可用 |
-| 行銷活動 | 沒有電子郵件範例 | 可用 |
+| 行銷活動 | 沒有電子郵件示例 | 可用 |
 
 >[!NOTE]
 >
 >這份清單力求完整，但不應被視為詳盡無遺。
 
-## Contribute {#contribute}
+## 貢獻 {#contribute}
 
-We.Retail已發佈為開放原始碼專案，且最新版原始碼可從GitHub下載。
+We.Retail已作為開放原始碼項目發佈，最新版本的原始碼可從GitHub下載。
 
-GITHUB上的程式碼
+GITHUB代碼
 
-您可以在GitHub上找到此頁面的程式碼
+可以在GitHub上找到此頁的代碼
 
-* [在GitHub上開啟aem-sample-we-retail專案](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/archive/master.zip)
+* [在GitHub上開啟aem-sample-we-retail項目](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
+* 將項目下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/archive/master.zip)
 
-最新版本也可以 [直接下載](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest) 作為可安裝的套件。
+最新版本也可以 [直接下載](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest) 作為可安裝的包。
 
-如果遇到問題，請提交檔案 [GitHub問題](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
+如遇問題，請提交 [GitHub問題](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues)。
 
-您可以自行取用或貢獻內容 [提取請求](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls).
+您可以隨意支付或與 [拉式請求](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls)。
 
 ## 預覽 {#preview}
 

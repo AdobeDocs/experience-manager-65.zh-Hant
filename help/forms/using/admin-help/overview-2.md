@@ -1,7 +1,7 @@
 ---
-title: 管理憑證和憑證的基本知識
+title: 管理證書和憑據的基礎知識
 seo-title: Basics of managing certificates and credentials
-description: 了解管理憑證和憑證的基本知識。
+description: 瞭解管理證書和憑據的基本知識。
 seo-description: Learn about the basics of managing certificates and credentials.
 uuid: f421e206-e7b5-416c-b9fb-974094f10a66
 contentOwner: admin
@@ -17,19 +17,19 @@ ht-degree: 0%
 
 ---
 
-# 管理憑證和憑證的基本知識 {#basics-of-managing-certificates-and-credentials}
+# 管理證書和憑據的基礎知識 {#basics-of-managing-certificates-and-credentials}
 
-A *憑據* 包含簽署或識別檔案所需的私密金鑰資訊。 A *憑證* 是您為信任設定的公開金鑰資訊。 AEM forms使用憑證和憑證有數種用途：
+A *憑據* 包含簽名或標識文檔所需的私鑰資訊。 A *證書* 是您為信任配置的公鑰資訊。 AEM表單使用證書和憑據用於以下幾種用途：
 
-* Acrobat Reader DC擴充功能會使用憑證，啟用PDF檔案中的Adobe Reader使用權限。 (請參閱 [設定憑證以與Acrobat Reader DC擴充功能搭配使用](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).)
-* 您可以設定Rights Management以顯示憑證，僅供信任發行者在Acrobat中使用。 (請參閱 [配置Rights Management顯示設定](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings).) 證書中必須包含通用名稱(CN)。
-* 簽名服務訪問證書和憑據。 有關簽名服務的詳細資訊，請參見 [服務參考](https://www.adobe.com/go/learn_aemforms_services_65).
+* Acrobat Reader DC擴展使用憑據在PDF文檔中啟用Adobe Reader使用權。 (請參閱 [配置用於Acrobat Reader DC擴展的憑據](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions)。)
+* 您可以配置Rights Management，以顯示僅由受信任的發行方在Acrobat使用的憑據。 (請參閱 [配置Rights Management顯示設定](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings)。) 證書中必須存在公用名(CN)。
+* 簽名服務訪問證書和憑據。 有關簽名服務的詳細資訊，請參見 [服務參考](https://www.adobe.com/go/learn_aemforms_services_65)。
 
-**產生配對金鑰**
+**生成對密鑰**
 
-AEM表單使用其信任儲存來儲存和管理憑證、憑證和憑證撤銷清單(CRL)。 此外，您可以使用獨立的硬體安全模組(HSM)設備來儲存私鑰。
+表AEM單使用其信任儲存來儲存和管理證書、憑據和證書吊銷清單(CRL)。 此外，您還可以使用獨立的硬體安全模組(HSM)設備來儲存私鑰。
 
-AEM Forms不提供產生金鑰組的任何選項。 不過，您可以使用工具（例如Java鍵值工具）產生它，然後將其匯入AEM Forms信任存放區。 如需Java鍵工具的詳細資訊，請參閱下列內容：
+表AEM單不提供任何生成密鑰對的選項。 但是，您可以使用Java鍵工具等工具生成它，然後在Trust Store窗體中AEM導入它。 有關Java鍵工具的詳細資訊，請參見以下內容：
 
 [https://docs.oracle.com/javase/tutorial/security/toolsign/step3.html](https://docs.oracle.com/javase/tutorial/security/toolsign/step3.html)
 
@@ -37,7 +37,7 @@ AEM Forms不提供產生金鑰組的任何選項。 不過，您可以使用工�
 
 [https://helpcenter.gsx.com/hc/en-us/articles/115015960428-How-to-Generate-a-Self-Signed-Certificate-and-Private-Key-using-OpenSSL](https://helpcenter.gsx.com/hc/en-us/articles/115015960428-How-to-Generate-a-Self-Signed-Certificate-and-Private-Key-using-OpenSSL)
 
-支援下列簽名類型，並可以在AEM表單中匯入：
+支援以下簽名類型，並可以以表單形式導AEM入：
 
 * XML簽名
 * XMLTimeStampToken
@@ -48,8 +48,8 @@ AEM Forms不提供產生金鑰組的任何選項。 不過，您可以使用工�
 
 **處理丟失或損壞的密鑰**
 
-如果您懷疑密鑰丟失或已被洩露，請採取以下操作：
+如果您懷疑您的密鑰丟失或已被洩露，請執行以下操作：
 
-1. 通知認證機構，使其在證書撤銷清單上添加被破壞的密鑰以撤銷密鑰。
-1. 向認證機構獲取新密鑰及其證書。
-1. 使用新密鑰再次使用已損壞的密鑰簽名的文檔。
+1. 通知認證機構，以便他們在證書吊銷清單中添加被洩露的密鑰以吊銷密鑰。
+1. 從認證機構獲取新密鑰及其證書。
+1. 再次使用新密鑰對使用被洩露的密鑰簽名的文檔進行簽名。

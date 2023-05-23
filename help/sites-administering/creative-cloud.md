@@ -1,7 +1,7 @@
 ---
 title: 與Adobe Creative Cloud共用資料夾
 seo-title: Folder sharing with Adobe Creative Cloud
-description: 了解如何與Adobe Creative Cloud共用資料夾
+description: 瞭解與Adobe Creative Cloud共用資料夾
 seo-description: Learn about sharing folder with Adobe Creative Cloud
 uuid: 4d93df7d-36da-43bb-a069-42993c607b2b
 contentOwner: asgupta
@@ -22,7 +22,7 @@ ht-degree: 15%
 
 >[!CAUTION]
 >
->不建議使用AEM到Creative Cloud資料夾共用功能。 強烈建議客戶使用較新的功能，例如 [Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) 或 [AEM案頭應用程式](https://helpx.adobe.com/tw/experience-manager/desktop-app/aem-desktop-app.html). 深入了解 [AEM與Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md).
+>不建AEM議使用「Creative Cloud資料夾共用」功能。 強烈建議客戶使用較新的功能，如 [Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) 或 [AEM案頭應用](https://helpx.adobe.com/tw/experience-manager/desktop-app/aem-desktop-app.html)。 瞭解詳情 [和AEMCreative Cloud整合最佳做法](/help/assets/aem-cc-integration-best-practices.md)。
 
 <!-- TBD: This article is removed from TOC and is not published. The functionality does not exist.
 

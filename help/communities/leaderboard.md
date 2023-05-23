@@ -19,30 +19,30 @@ ht-degree: 5%
 
 # 排行榜要點 {#leaderboard-essentials}
 
-本頁提供使用排行榜功能的基本資訊。
+此頁提供了使用排行榜功能的基本資訊。
 
-在頁面上加入排行榜元件之前，必須先設定 [社群計分和徽章](implementing-scoring.md).
+在將排行榜元件包含在頁面之前，必須配置 [社區評分和徽章](implementing-scoring.md)。
 
-請參閱 [計分和徽章要點](configure-scoring.md).
+請參閱 [評分和徽章要點](configure-scoring.md)。
 
-## 用戶端的要點 {#essentials-for-client-side}
+## 客戶端基本知識 {#essentials-for-client-side}
 
 <table>
  <tbody>
   <tr>
-   <td> <strong>resourceType</strong></td>
-   <td>社交/遊戲化/元件/hbs/排行榜</td>
+   <td> <strong>資源類型</strong></td>
+   <td>社交/遊戲/構成部分/hbs/排行榜</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包括</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>客戶端</strong></a></td>
    <td>cq.social.gamification.hbs.leaderboard</td>
   </tr>
   <tr>
-   <td> <strong>範本</strong></td>
+   <td> <strong>模板</strong></td>
    <td> /libs/social/gamification/components/hbs/leaderboard/leaderboard.hbs<br /> </td>
   </tr>
   <tr>
@@ -56,8 +56,8 @@ ht-degree: 5%
  </tbody>
 </table>
 
-* [用戶端自訂](client-customize.md)
+* [客戶端自定義](client-customize.md)
 
 ### 檔案庫功能 {#file-library-function}
 
-包含 [排行榜功能](functions.md#leaderboard-function)，包含已設定的 `leaderboard` 元件。
+包含該社區站點結構的 [排行榜功能](functions.md#leaderboard-function)，包括已配置 `leaderboard` 元件。

@@ -1,7 +1,7 @@
 ---
 title: API指南
 seo-title: API Guides
-description: AEM為開發應用程式而提供之API的檔案
+description: 為開發應用程式AEM提供的API文檔
 seo-description: Documentation for the APIs that AEM provides for developing applications
 uuid: d998b23c-5b0a-462f-a733-02cf979de2d0
 contentOwner: Guillaume Carlino
@@ -21,37 +21,37 @@ ht-degree: 3%
 
 # API指南 {#api-guides}
 
-Adobe Experience Manager(AEM)提供數個API，用於開發應用程式和擴充AEM。 下列清單提供AEM支援API的檔案：
+Adobe Experience Manager(AEM)為開發應用和擴展提供了若干APIAEM。 以下清單提供了支援的API的文檔AEM:
 
 * [Adobe AEM 6.5.0 API](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/index.html)
-* [Granite UI（觸控式）API檔案](https://www.adobe.io/experience-manager/reference-materials/6-5/granite-ui/api/index.html)
+* [Granite UI（啟用觸摸）API文檔](https://www.adobe.io/experience-manager/reference-materials/6-5/granite-ui/api/index.html)
 * [Coral UI指南](https://www.adobe.io/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
-* [Widget API（傳統UI）檔案](https://www.adobe.io/experience-manager/reference-materials/6-5/widgets-api/index.html)
-* [UI測試架構JavaScript API參考](https://www.adobe.io/experience-manager/reference-materials/6-5/test-api/index.html)
+* [小部件API(Classic UI)文檔](https://www.adobe.io/experience-manager/reference-materials/6-5/widgets-api/index.html)
+* [UItest框架JavaScript API參考](https://www.adobe.io/experience-manager/reference-materials/6-5/test-api/index.html)
 * [編輯器核心JavaScript API參考](https://www.adobe.io/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html)
 
-AEM單頁應用程式(SPA)Editor SDK架構JavaScript API參考：
+AEM單頁應用程式(SPA)Editor SDK框架JavaScript API引用：
 
-* [元件對應](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
-* [頁面模型管理員](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
-* [React可編輯的元件](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-* [Angular可編輯的元件](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
+* [元件映射](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
+* [頁面模型管理器](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
+* [反應可編輯元件](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+* [Angular可編輯元件](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
-AEM傳送與內容管理API:
+交AEM付和內容管理API:
 
 * 核心元件(JSON)
 
-   * [JSON匯出工具](/help/sites-developing/json-exporter.md)
+   * [JSON導出器](/help/sites-developing/json-exporter.md)
    * [為元件啟用 JSON 匯出](/help/sites-developing/json-exporter-components.md)
-   * 請參閱 [開發使用手冊中的元件區段](/help/sites-developing/home.md) 詳細資訊
+   * 查看 [《Developing User Guide》（開發使用手冊）中的「Components」部分](/help/sites-developing/home.md) 的
 
-* **資產**:Assets HTTP API允許對Assets執行建立 — 讀取 — 更新 — 刪除(CRUD)操作，包括二進位、中繼資料、轉譯和註解。 請參閱 [AEM Assets HTTP API](/help/assets/mac-api-assets.md)
+* **資產**:資產HTTP API允許對資產執行建立 — 讀取 — 更新 — 刪除(CRUD)操作，包括二進位、元資料、格式副本和注釋。 請參閱 [AEM AssetsHTTP API](/help/assets/mac-api-assets.md)
 
-* **內容片段** (CF): [Assets HTTP API中的CF支援](/help/assets/assets-api-content-fragments.md) 和 [AEM Assets API — 內容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
+* **內容片段** (CF): [資產HTTP API中的CF支援](/help/assets/assets-api-content-fragments.md) 和 [AEM AssetsAPI — 內容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 
-下列外部資源僅供參考：
+以下外部資源僅供參考：
 
 * [Apache Sling 11 API](https://sling.apache.org/apidocs/sling11/)
-* [Jackrabbit Oak API](https://jackrabbit.apache.org/oak/docs/oak_api/overview.html)
-* [Java內容存放庫API](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)
+* [長兔橡樹API](https://jackrabbit.apache.org/oak/docs/oak_api/overview.html)
+* [Java內容儲存庫API](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)
 * [Apache Jackrabbit API](https://jackrabbit.apache.org/api)

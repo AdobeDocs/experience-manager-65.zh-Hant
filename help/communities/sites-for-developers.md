@@ -1,7 +1,7 @@
 ---
-title: 社群網站要點
+title: 社區網站要點
 seo-title: Community Site Essentials
-description: 導出和刪除社區站點以及建立自定義站點模板
+description: 導出和刪除社區網站並建立自定義網站模板
 seo-description: Exporting and deleting community sites and creating custom site templates
 uuid: f0ec0e71-64e9-415a-b14a-939a9b1611c1
 contentOwner: msm-service
@@ -17,32 +17,32 @@ ht-degree: 1%
 
 ---
 
-# 社群網站要點 {#community-site-essentials}
+# 社區網站要點 {#community-site-essentials}
 
-## 自訂網站範本 {#custom-site-template}
+## 自定義網站模板 {#custom-site-template}
 
-可以為社區站點的每個語言副本分別指定自定義站點模板。
+可以為社區站點的每個語言副本單獨指定自定義站點模板。
 
-若要這麼做：
+為此：
 
-* 建立自訂範本。
-* 覆蓋預設網站範本路徑。
-* 將自訂範本新增至覆蓋路徑。
-* 新增 `page-template` 屬性 `configuration` 節點。
+* 建立自定義模板。
+* 覆蓋預設站點模板路徑。
+* 將自定義模板添加到覆蓋路徑。
+* 通過添加 `page-template` 屬性 `configuration` 的下界。
 
-**預設範本**:
+**預設模板**:
 
 `/libs/social/console/components/hbs/sitepage/sitepage.hbs`
 
-**覆蓋路徑中的自訂範本**:
+**覆蓋路徑中的自定義模板**:
 
 `/apps/social/console/components/hbs/sitepage/template-name.hbs`
 
-**屬性**:頁面範本
+**屬性**:頁面模板
 
 **類型**:字串
 
-**值**: `template-name` （無擴充功能）
+**值**: `template-name` （無擴展）
 
 **配置節點**:
 
@@ -52,84 +52,84 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->重疊路徑中的所有節點只需屬於類型 `Folder`.
+>重疊路徑中的所有節點只需為類型 `Folder`。
 
 >[!CAUTION]
 >
->如果為自訂範本指定名稱 *sitepage.hbs*，則會自訂所有社群網站。
+>如果為自定義模板指定名稱 *站點頁面.hbs*，則將自定義所有社區站點。
 
-### 自訂網站範本範例 {#custom-site-template-example}
+### 自定義網站模板示例 {#custom-site-template-example}
 
-例如， `vertical-sitepage.hbs` 是網站範本，可導致將功能表連結垂直放在頁面左側，而非水準放在橫幅下方。
+例如， `vertical-sitepage.hbs` 是一個站點模板，它導致菜單連結在頁面左側垂直放置，而不是橫幅下方水準放置。
 
-[取得檔案](assets/vertical-sitepage.hbs)
-將自訂網站範本放置在覆蓋資料夾中：
+[獲取檔案](assets/vertical-sitepage.hbs)
+將自定義站點模板置於覆蓋資料夾中：
 
 `/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
 
-借由新增 `page-template` 屬性到配置節點：
+通過添加 `page-template` 配置節點的屬性：
 
 `/content/sites/sample/en/configuration`
 
-![crxde-siteconfiguration](assets/crxde-siteconfiguration.png)
+![crxde站點配置](assets/crxde-siteconfiguration.png)
 
-一定要 **全部儲存** 和將自訂程式碼複製到所有AEM例項（從主控台發佈社群網站內容時不包含自訂程式碼）。
+一定要 **全部保存** 並將自定義代碼複製AEM到所有實例（當從控制台發佈社區站點內容時，不包括自定義代碼）。
 
-複製自訂程式碼的建議作法為 [建立套件](../../help/sites-administering/package-manager.md#creating-a-new-package) 並部署在所有執行個體上。
+複製自定義代碼的建議做法是 [建立包](../../help/sites-administering/package-manager.md#creating-a-new-package) 並在所有實例上部署。
 
 ## 導出社區站點 {#exporting-a-community-site}
 
-建立社群網站後，即可將網站匯出為儲存在套件管理器中且可供下載和上傳的AEM套件。
+建立社區站點後，可以將該站點導出為儲存在包管理器AEM中且可供下載和上載的包。
 
-這可從 [Communities Sites主控台](sites-console.md#exporting-the-site).
+可從 [社區站點控制台](sites-console.md#exporting-the-site)。
 
-請注意，社群網站套件中未包含UGC和自訂程式碼。
+請注意，社區網站包中不包含UGC和自定義代碼。
 
-要導出UGC，請使用 [AEM Communities UGC移轉工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)，此為GitHub上提供的開放原始碼移轉工具。
+要導出UGC，請使用 [AEM CommunitiesUGC遷移工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration),GitHub上提供的開源遷移工具。
 
-## 刪除社群網站 {#deleting-a-community-site}
+## 刪除社區站點 {#deleting-a-community-site}
 
-自AEM Communities 6.3 Service Pack 1起，「刪除網站」圖示會顯示在將游標暫留在社群網站上的 **[!UICONTROL 社群]** > **[!UICONTROL 網站]** 控制台。 在開發期間，如果需要刪除社群網站並重新開始，您可以使用此功能。 刪除社群網站時，會移除與該網站相關聯的下列項目：
+從AEM Communities6.3 Service Pack 1開始，「刪除站點」表徵圖將出現在社區站點上方 **[!UICONTROL 社區]** > **[!UICONTROL 站點]** 控制台。 在開發過程中，如果希望刪除社區站點並開始刷新，則可以使用此功能。 刪除社區站點，刪除與該站點關聯的以下項目：
 
 * [UGC](#user-generated-content)
 * [使用者群組](#community-user-groups)
 * [資料庫記錄](#database-records)
 
-### 社群不重複網站ID {#community-unique-site-id}
+### 社區唯一站點ID {#community-unique-site-id}
 
-若要識別與社群網站相關聯的唯一網站ID，請使用CRXDE:
+要使用CRXDE標識與社區站點關聯的唯一站點ID，請執行以下操作：
 
-* 導覽至網站的語言根目錄，例如 `/content/sites/*<site name>*/en/rep:policy`.
+* 導航到站點的語言根，如 `/content/sites/*<site name>*/en/rep:policy`。
 
-* 尋找 `allow<#>` 節點 `rep:principalName` 在 `rep:principalName = *community-enable-nrh9h-members*`.
+* 查找 `allow<#>` 節點 `rep:principalName` 的 `rep:principalName = *community-enable-nrh9h-members*`。
 
-* 網站ID是 `rep:principalName`
+* 站點ID是 `rep:principalName`
 
-   例如，若 `rep:principalName = community-enable-nrh9h-members`
+   例如，如果 `rep:principalName = community-enable-nrh9h-members`
 
-   * **網站名稱** = *啟用*
-   * **網站ID** = *nrh9h*
-   * **唯一網站識別碼** = *enable-nrh9h*
+   * **站點名稱** = *啟用*
+   * **站點ID** = *nh*
+   * **唯一站點ID** = *啟用nrh9h*
 
 ### 使用者產生的內容 {#user-generated-content}
 
-從Github取得communities-srp-tools專案：
+從Github獲取社區 — srp-tools項目：
 
 * [https://github.com/Adobe-Marketing-Cloud/communities-srp-tools](https://github.com/Adobe-Marketing-Cloud/communities-srp-tools)
 
-這包含一個Servlet，可從任何SRP中刪除所有UGC。
+這包含一個Servlet，用於從任何SRP中刪除所有UGC。
 
-所有UGC都可移除，或針對特定網站移除，例如：
+可以刪除所有UGC或特定站點，例如：
 
 * `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
-這只會移除使用者產生的內容（在發佈時輸入），以及非製作內容（在作者時輸入）。 因此， [陰影節點](srp.md#shadownodes) 不受影響。
+這只會刪除用戶生成的內容（在發佈時輸入）和未創作的內容（在作者時輸入）。 所以， [陰影節點](srp.md#shadownodes) 不受影響。
 
-### 社群使用者群組 {#community-user-groups}
+### 社區用戶組 {#community-user-groups}
 
-在所有製作和發佈例項上，從 [安全控制台](../../help/sites-administering/security.md)，找到並移除 [使用者群組](users.md) 即：
+在所有作者和發佈實例上，從 [安全控制台](../../help/sites-administering/security.md)，查找並刪除 [用戶組](users.md) 即：
 
 * 前置詞為 `community`
-* 後跟 [唯一網站id](#community-unique-site-id)
+* 後跟 [唯一站點id](#community-unique-site-id)
 
-例如， `community-engage-x0e11-members`.
+比如說， `community-engage-x0e11-members`。
