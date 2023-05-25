@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: f8af806bbb78623d5ba12379fc547a2cffc03841
+source-git-commit: 0bce05571590bc09e2b65f6bd6c1f387c71fba3a
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2620'
 ht-degree: 2%
 
 ---
@@ -70,6 +70,7 @@ ht-degree: 2%
 * 無法為使用搜尋篩選條件找到的多個選定資產觸發工作流程。 (ASSETS-7689)
 * 當您從搜尋結果中選取資產（或多個資產）時，「建立關係」或「取消關係」選項不可見。 但此選項可供使用，否則會失敗。 (ASSETS-7679)
 * 搜尋篩選器面板在登入後只會開啟一次，如果您退出搜尋頁面並重新執行搜尋，則不會開啟。 (ASSETS-7671)
+* 共用連結時，電子郵件下拉式方塊未顯示適當的對比率。 (ASSETS-17349)
 
 <!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST 
 * When you select any file in a Collection and click `Download`, and then navigate to the email checkbox and expand it, regular text and email link is not recognizable due to background color. (ASSETS-17349) 
