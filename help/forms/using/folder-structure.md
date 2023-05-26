@@ -1,7 +1,7 @@
 ---
 title: 瞭解資料夾結構
 seo-title: Understanding the folder structure
-description: 如何理解AEM Forms工作區原始碼的資料夾結構進行自定義。
+description: 如何瞭解AEM Forms工作區原始碼的資料夾結構以自訂。
 seo-description: How to understand the folder structure of AEM Forms workspace source code to customize.
 uuid: ee844f89-887e-4f07-9db3-389859baa374
 contentOwner: robhagat
@@ -19,22 +19,22 @@ ht-degree: 0%
 
 # 瞭解資料夾結構 {#understanding-the-folder-structure}
 
-AEM Forms工作區元件是使用Backbone在MVC架構上設計的。 每個元件都有一個檔案，用於：
+AEM Forms工作區元件是以MVC架構設計，使用骨幹。 每個元件都有一個檔案，用於：
 
 * 模型，包含商業邏輯。
-* 模板，即包含介面控制項的HTML檔案。
-* 視圖，它充當模板的控制器類。
+* 範本，即包含介面控制項的HTML檔案。
+* 檢視，充當範本的Controller類別。
 
-所有元件的資產都放置在下面描述的資料夾結構中。 要訪問資產，請登錄到CRXDE Lite並瀏覽到 `/libs/ws/js/runtime/`。
+所有元件的資產都會放置在如下所述的資料夾結構中。 若要存取資產，請登入CRXDE Lite並瀏覽至 `/libs/ws/js/runtime/`.
 
-**模型** 包含主幹模型。
+**模型** 包含骨幹模型。
 
-**視圖** 包含主幹視圖。
+**檢視** 包含主幹檢視。
 
-**模板** 僅包含元件的HTML模板。
+**範本** 僅包含元件的HTML範本。
 
-**路由** 包含通用路由。 路由中的模板資料夾包含HTML代碼和對元件的引用。
+**路由** 包含通用路由。 路由內的Templates資料夾包含HTML程式碼和元件的參照。
 
-**服務** 包含在REST終結點上調用Adobe Experience Manager伺服器API的服務介面。
+**服務** 包含在REST端點上呼叫Adobe Experience Manager伺服器API的服務介面。
 
-**實用** 包含可由多個元件使用的通用實用程式。
+**使用率** 包含可供多個元件使用的一般公用程式。

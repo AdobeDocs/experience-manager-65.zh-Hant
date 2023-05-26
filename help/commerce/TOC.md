@@ -14,13 +14,13 @@ ht-degree: 69%
 # 商務 {#commerce}
 
 + [AEM Content and Commerce](/help/commerce/home.md)
-+ [內容和商AEM業的顯著變化](cif/changes.md)
++ [AEM Content and Commerce重大變更](cif/changes.md)
 + [簡介和概觀](cif/introduction.md)
 + 整合 {#integrations}
    + [Adobe Commerce](cif/integrating/magento.md)
    + [第三方 Commerce 解決方案](cif/integrating/third-party.md)
 + AEM 店面{#storefront}
-   + [入門](cif/getting-started.md)
+   + [快速入門](cif/getting-started.md)
    + 編寫 {#authoring}
       + [Commerce 體驗](cif/authoring/authoring-commerce-experiences.md)
       + [產品駕駛艙](cif/authoring/product-cockpit.md)
@@ -33,10 +33,10 @@ ht-degree: 69%
       + [快取選項](cif/configuring/caching.md)
       + [自訂 HTTP 標頭](/help/commerce/cif/configuring/custom-http-headers.md)
    + 開發 {#developing}
-      + [使用開AEM發](cif/develop.md)
+      + [使用AEM開發](cif/develop.md)
       + [設定 CIF 元件樣式](cif/customizing/style-cif-component.md)
       + [自訂 CIF 元件](cif/customizing/customize-cif-components.md)
-      + [使用CIF目錄選取器](cif/customizing/use-cif-pickers.md)
+      + [使用CIF目錄選擇器](cif/customizing/use-cif-pickers.md)
 + [Adobe Commerce PWA Studio](cif/pwa-studio/getting-started.md)
 + [移轉](cif/migration.md)
 + 發行說明 {#release-notes}
@@ -45,17 +45,17 @@ ht-degree: 69%
    + [2020](cif/release-notes/release-notes-2020.md)
    + [2019](cif/release-notes/release-notes-2019.md)
 + [常見問題集](cif/faq.md)
-+ CIFAEM經典 {#classic}
++ AEM CIF Classic {#classic}
    + [概觀](/help/commerce/cif-classic/home.md)
    + 部署 {#deploying}
-      + [電子商務概述](/help/commerce/cif-classic/deploying/ecommerce.md)
-      + [SAPCommerce Cloud](/help/commerce/cif-classic/deploying/sap-commerce-cloud.md)
+      + [電子商務概觀](/help/commerce/cif-classic/deploying/ecommerce.md)
+      + [SAPCOMMERCE CLOUD](/help/commerce/cif-classic/deploying/sap-commerce-cloud.md)
    + 管理 {#administering}
       + [電子商務](/help/commerce/cif-classic/administering/ecommerce.md)
       + [概念](/help/commerce/cif-classic/administering/concepts.md)
-      + [管理通用電子商務](/help/commerce/cif-classic/administering/generic.md)
-      + [SAPCommerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
+      + [管理一般電子商務](/help/commerce/cif-classic/administering/generic.md)
+      + [SAPCOMMERCE CLOUD](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
    + 開發 {#developing}
       + [電子商務](/help/commerce/cif-classic/developing/ecommerce.md)
-      + [開發（通用）](/help/commerce/cif-classic/developing/generic.md)
-      + [使用SAPCommerce Cloud開發](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
+      + [開發（一般）](/help/commerce/cif-classic/developing/generic.md)
+      + [使用SAPCommerce Cloud進行開發](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)

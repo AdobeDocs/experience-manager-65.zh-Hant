@@ -1,7 +1,7 @@
 ---
-title: AEM Forms工作區故障排除指南
+title: AEM Forms工作區的疑難排解准則
 seo-title: Troubleshooting guidelines for AEM Forms workspace
-description: 啟用日誌並在瀏覽器中使用調試器來排除AEM Forms工作區故障。
+description: 啟用記錄並在瀏覽器中使用偵錯工具，針對AEM Forms工作區進行疑難排解。
 seo-description: Enable logs and use debugger in browser to troubleshoot AEM Forms workspace.
 uuid: 07b8c8ed-f1ff-4be5-8005-251ff7b2ac85
 contentOwner: robhagat
@@ -17,180 +17,180 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms工作區故障排除指南 {#troubleshooting-guidelines-for-aem-forms-workspace}
+# AEM Forms工作區的疑難排解准則 {#troubleshooting-guidelines-for-aem-forms-workspace}
 
-本文討論如何通過啟用日誌記錄和在瀏覽器中使用調試器來調試AEM Forms工作區。 它還解釋了使用AEM Forms工作區時可能遇到的一些常見問題及其解決方法。
+本文討論如何透過啟用記錄功能和使用瀏覽器中的偵錯工具來偵錯AEM Forms工作區。 本檔案也會說明您在使用AEM Forms工作區時可能會遇到的一些常見問題及其因應措施。
 
-## 無法安裝AEM Forms工作區包 {#unable-to-install-aem-forms-workspace-package}
+## 無法安裝AEM Forms工作區套件 {#unable-to-install-aem-forms-workspace-package}
 
-安裝修補程式後，開啟AEM Forms工作區。 如果遇到「找不到資源」錯誤，請開啟CRX包管理器並重新安裝 `adobe-lc-workspace-pkg-<version>.zip` 檔案。
+安裝修補程式後，請開啟AEM Forms工作區。 如果您遇到「找不到資源」錯誤，請開啟CRX封裝管理員，然後重新安裝 `adobe-lc-workspace-pkg-<version>.zip` 封裝。
 
-安裝包時，如果遇到錯誤 `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`，請執行以下步驟：
+安裝套件時，如果您遇到錯誤 `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`，請執行下列步驟：
 
-1. 登錄到CRXDE Lite。 預設URL為 `https://[localhost]:'port'/lc/crx/de/index.jsp`
-1. 刪除以下節點：
+1. 登入CRXDE Lite。 預設URL為 `https://[localhost]:'port'/lc/crx/de/index.jsp`
+1. 刪除下列節點：
 
    `/home/groups/P/PERM_WORKSPACE_USER`
 
-1. 轉到包管理器。 預設URL為 `https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
-1. 搜索並安裝 `adobe-lc-workspace-pkg-[version].zip` 檔案。
+1. 前往「封裝管理員」。 預設URL為 `https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
+1. 搜尋並安裝 `adobe-lc-workspace-pkg-[version].zip` 封裝。
 1. 重新啟動應用程式伺服器。
 
-## AEM Forms工作區日誌 {#aem-forms-workspace-nbsp-logging}
+## AEM Forms工作區記錄 {#aem-forms-workspace-nbsp-logging}
 
-您可以在不同級別生成日誌，以便對錯誤進行最佳故障排除。 例如，在複雜的應用程式中，在元件級別登錄有助於調試和排除特定元件的故障。
+您可以產生不同層級的記錄，以最佳化錯誤疑難排解。 例如，在複雜應用程式中，在元件層級記錄有助於對特定元件進行偵錯和疑難排解。
 
 在AEM Forms工作區中：
 
-* 要獲取有關特定元件檔案的日誌記錄資訊，請追加 `/log/<ComponentFile>/<LogLevel>` ，然後按 `Enter`。 在控制台上打印指定日誌級別的元件檔案的所有日誌資訊。
+* 若要取得特定元件檔案的記錄資訊，請附加 `/log/<ComponentFile>/<LogLevel>` URL中，然後按下 `Enter`. 指定記錄層級上元件檔案的所有記錄資訊都會列印在主控台上。
 
-* 要獲取所有元件檔案的日誌記錄資訊，請追加 `/log/all/trace` ，然後按 `Enter`。
+* 若要取得所有元件檔案的記錄資訊，請附加 `/log/all/trace` URL中，然後按下 `Enter`.
 
-* 日誌格式： `<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
+* 記錄格式： `<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
 
 >[!NOTE]
 >
->預設情況下，所有元件的日誌級別都設定為INFO。
+>依預設，所有元件的記錄層級都設為INFO。
 
-* 用戶設定的日誌級別僅用於該瀏覽器會話。 當用戶刷新頁面時，日誌級別將設定為所有元件的初始值。
+* 只有該瀏覽器工作階段會維護使用者設定的記錄層級。 當使用者重新整理頁面時，所有元件的記錄層級都會設定為其初始值。
 
 ### AEM Forms工作區中的元件檔案清單 {#list-of-component-files-in-nbsp-aem-forms-workspace}
 
 <table>
  <tbody>
   <tr>
-   <td><p>allcategory模型</p> </td>
+   <td><p>allcategorymodel</p> </td>
    <td><p>processinstanceModel</p> </td>
-   <td><p>任務清單模型</p> </td>
+   <td><p>工作清單模型</p> </td>
   </tr>
   <tr>
-   <td><p>appnavigation模型</p> </td>
+   <td><p>appnavigationModel</p> </td>
    <td><p>processInstanceView</p> </td>
-   <td><p>任務清單視圖</p> </td>
+   <td><p>tasklistView</p> </td>
   </tr>
   <tr>
    <td><p>appnavigationView</p> </td>
-   <td><p>進程名清單模型</p> </td>
+   <td><p>processnamelistModel</p> </td>
    <td><p>任務模型</p> </td>
   </tr>
   <tr>
-   <td><p>類別清單模型</p> </td>
-   <td><p>進程名清單視圖</p> </td>
-   <td><p>任務視圖</p> </td>
+   <td><p>categorylistModel</p> </td>
+   <td><p>processnamelistView</p> </td>
+   <td><p>任務檢視</p> </td>
   </tr>
   <tr>
-   <td><p>類別清單視圖</p> </td>
-   <td><p>processname模型</p> </td>
+   <td><p>categorylistView</p> </td>
+   <td><p>processnameModel</p> </td>
    <td><p>teamqueuesView</p> </td>
   </tr>
   <tr>
-   <td><p>類別模型</p> </td>
-   <td><p>進程名稱視圖</p> </td>
-   <td><p>todo視圖</p> </td>
+   <td><p>categorymodel</p> </td>
+   <td><p>processnameView</p> </td>
+   <td><p>todoView</p> </td>
   </tr>
   <tr>
-   <td><p>類別視圖</p> </td>
+   <td><p>categoryView</p> </td>
    <td><p>searchtemplatedetailsView</p> </td>
-   <td><p>跟蹤視圖</p> </td>
+   <td><p>trackingView</p> </td>
   </tr>
   <tr>
-   <td><p>收藏夾類別模型</p> </td>
-   <td><p>共用隊列模型</p> </td>
-   <td><p>uisetings模型</p> </td>
+   <td><p>favoritecategoryModel</p> </td>
+   <td><p>sharequueModel</p> </td>
+   <td><p>uissettingsModel</p> </td>
   </tr>
   <tr>
-   <td><p>過濾器清單視圖</p> </td>
-   <td><p>共用隊列視圖</p> </td>
-   <td><p>統計視圖</p> </td>
+   <td><p>filterlistView</p> </td>
+   <td><p>共用檢視</p> </td>
+   <td><p>uissettingsView</p> </td>
   </tr>
   <tr>
-   <td><p>篩選器視圖</p> </td>
-   <td><p>起始點清單模型</p> </td>
-   <td><p>用戶資訊模型</p> </td>
+   <td><p>filterView</p> </td>
+   <td><p>startpointlistModel</p> </td>
+   <td><p>使用者資訊模型</p> </td>
   </tr>
   <tr>
-   <td><p>烏托福菲斯模型</p> </td>
-   <td><p>起始點清單視圖</p> </td>
-   <td><p>用戶資訊視圖</p> </td>
+   <td><p>outofficeModel</p> </td>
+   <td><p>startpointlistView</p> </td>
+   <td><p>userinfoView</p> </td>
   </tr>
   <tr>
-   <td><p>烏托福菲切視圖</p> </td>
-   <td><p>起始點模型</p> </td>
-   <td><p>用戶搜索模型</p> </td>
+   <td><p>outofficeView</p> </td>
+   <td><p>起點模型</p> </td>
+   <td><p>usersearchModel</p> </td>
   </tr>
   <tr>
-   <td><p>首選項視圖</p> </td>
-   <td><p>起始點視圖</p> </td>
-   <td><p>用戶搜索視圖</p> </td>
+   <td><p>偏好設定檢視</p> </td>
+   <td><p>起始點檢視</p> </td>
+   <td><p>usersearchView</p> </td>
   </tr>
   <tr>
-   <td><p>進程實例歷史記錄視圖</p> </td>
+   <td><p>processinstancehistoryView</p> </td>
    <td><p>startProcessView</p> </td>
-   <td><p>wserror模型</p> </td>
+   <td><p>伺服器模型</p> </td>
   </tr>
   <tr>
    <td><p>processinstancelistModel</p> </td>
    <td><p>startprocessView</p> </td>
-   <td><p>wserror視圖</p> </td>
+   <td><p>伺服器檢視</p> </td>
   </tr>
   <tr>
    <td><p>processinstancelistView</p> </td>
-   <td><p>taskdetails查看</p> </td>
+   <td><p>任務詳細資料檢視</p> </td>
    <td><p>wsmessageView</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 可在AEM Forms工作區中使用的日誌級別 {#log-levels-available-in-nbsp-aem-forms-workspace}
+### AEM Forms工作區中可用的記錄層級 {#log-levels-available-in-nbsp-aem-forms-workspace}
 
 * 致命
 * 錯誤
 * 警告
 * 資訊
-* 調試
+* 偵錯
 * TRACE
 * 關閉
 
-## 瀏覽器的調試資訊 {#debugging-information-for-browsers}
+## 瀏覽器的偵錯資訊 {#debugging-information-for-browsers}
 
-指令碼和樣式可以在不同的瀏覽器中調試。
+指令碼和樣式可以在不同的瀏覽器中偵錯。
 
-* **在IE中調試**:要在IE中調試AEM Forms工作區，請參閱： [https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie)。
+* **在IE中進行偵錯**：若要在IE中偵錯AEM Forms工作區，請參閱： [https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie).
 
-* **在Chrome中調試**:要在Chrome中開啟調試器，請使用快捷方式：按Ctrl+Shift+I。有關詳細資訊，請參閱： [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/)。
+* **在Chrome中偵錯**：若要在Chrome中開啟Debugger，請使用捷徑：Ctrl+Shift+I。如需詳細資訊，請參閱： [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/).
 
-* **在Firefox中調試**:幾個載入項可用於調試Firefox中的指令碼和樣式。 例如，Firebug是此類調試實用程式([https://getfirebug.com](https://getfirebug.com))。
+* **在Firefox中進行偵錯**：數個附加元件可用於在Firefox中偵錯指令碼和樣式。 例如，Firebug就是這類偵錯公用程式([https://getfirebug.com](https://getfirebug.com))。
 
 ## 常見問題 {#faqs}
 
-1. PDF表單未在GoogleChrome中呈現或提交。
+1. PDF表單未在Google Chrome中轉譯或提交。
 
-   1. 安裝Adobe®Reader®插件。
-   1. 在Chrome中，開啟chrome://plugins以查看可用插件。
-   1. 禁用ChromePDF查看器插件並啟用Adobe Reader插件。
+   1. 安裝Adobe®Reader®外掛程式。
+   1. 在Chrome中開啟chrome://plugins ，檢視可用的外掛程式。
+   1. 停用ChromePDF檢視器外掛程式，並啟用Adobe Reader外掛程式。
 
-1. SWF表單或指南未在GoogleChrome中呈現。
+1. Google Chrome中未轉譯SWF表單或指南。
 
-   1. 在Chrome中，開啟chrome://plugins以查看可用插件。
-   1. 有關AdobeFlash®播放器插件的詳細資訊。
-   1. 在AdobeFlash Player插件下禁用PepperFlash。
+   1. 在Chrome中開啟chrome://plugins ，檢視可用的外掛程式。
+   1. 如需AdobeFlash®播放器外掛程式的詳細資訊，請參閱。
+   1. 停用AdobeFlash Player外掛程式下的PepperFlash。
 
-1. 我已自定義了AEM Forms工作區，但無法看到更改。
+1. 我已經自訂AEM Forms工作區，但看不到變更。
 
-   清除瀏覽器的快取，然後訪問AEM Forms工作區。
+   清除瀏覽器的快取，然後存取AEM Forms工作區。
 
-1. 當在案頭中開啟表單時，用戶需要執行什麼操作才能以HTML方式呈現表單？
+1. 使用者在案頭開啟表單時，需要執行哪些動作才能以HTML呈現表單？
 
-   在使用Workbench時，在分配任務步驟中為預設配置檔案選擇HTML單選按鈕。
+   使用Workbench時，在指派作業步驟中選取預設設定檔的「HTML」選項按鈕。
 
-1. 按一下時未顯示附件。
+1. 按一下時附件未顯示。
 
-   要查看附件，請在瀏覽器中啟用彈出窗口。
+   若要檢視附件，請在瀏覽器中啟用快顯視窗。
 
-1. 用戶已登錄到表單應用程式。 如果用戶嘗試登錄到工作區，則如果用戶沒有工作區權限，則可能不會載入。
+1. 使用者已登入表單應用程式。 如果使用者嘗試登入工作區，則可能無法載入（如果使用者沒有工作區許可權）。
 
-   從其他表單應用程式註銷，然後登錄到工作區。
+   從其他表單應用程式登出，然後登入工作區。
 
-1. HTML表單，在其設計中使用「流程屬性」，在AEM Forms工作區中呈現時，在表單內顯示「提交」按鈕。
+1. HTML表單，在其設計中使用流程屬性，在AEM Forms工作區中呈現時，在表單內顯示提交按鈕。
 
-   設計表單時，使用「流程屬性」時，它會在表單內添加「提交」按鈕。 在AEM Forms工作區中呈現為PDF時，最終用戶不能看到「提交」按鈕。 但是，在AEM Forms工作區中呈現為HTML表單時，最終用戶可以看到「提交」按鈕。 在表單內按一下此「提交」按鈕不會啟動任何操作。 按一下AEM Forms工作區底部表單外的「提交」按鈕可完成任務。
+   設計表單時，當您使用流程屬性時，它會在表單內新增提交按鈕。 在AEM Forms工作區中呈現為PDF時，一般使用者看不到提交按鈕。 不過，在AEM Forms工作區中以HTML表單形式呈現時，一般使用者可看到「提交」按鈕。 按一下表單內的此「提交」按鈕不會起始任何動作。 按一下AEM Forms工作區底部的「提交」按鈕（在表單外）即可完成工作。

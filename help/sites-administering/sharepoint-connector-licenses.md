@@ -1,7 +1,7 @@
 ---
-title: SharePoint連接器許可證、版權聲明和免責聲明
+title: SharePoint Connector授權、版權注意事項和免責宣告
 seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
-description: 瞭解SharePoint連接器許可證、版權聲明和免責聲明。
+description: 瞭解SharePoint聯結器授權、版權注意事項和免責宣告。
 seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
 uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
 contentOwner: User
@@ -18,54 +18,54 @@ ht-degree: 19%
 
 ---
 
-# SharePoint連接器許可證、版權聲明和免責聲明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
+# SharePoint Connector授權、版權注意事項和免責宣告{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-本節列出所有必須與MSSharePoint的Day JCR Connector明確說明的許可證、版權聲明和免責聲明。
+本節列出與MS SharePoint適用的Day JCR Connector相關的所有授權、版權注意事項和免責宣告。
 
-## 連接器第三方庫概述 {#overview-of-connector-rd-party-libraries}
+## Connector第三方程式庫概觀 {#overview-of-connector-rd-party-libraries}
 
-下表列出了SharePoint連接器核心庫內使用的第三方庫，以及涵蓋的許可證、版權聲明或免責聲明：
+下表列出SharePoint Connector核心程式庫內使用的第三方程式庫，以及涵蓋這些程式庫的授權、版權宣告或免責宣告：
 
 | 資料庫 | 授權類型 |
 |---|---|
-| 安諾 | [Apache](#apache) |
-| 公理api | [Apache](#apache) |
-| 公理 | [Apache](#apache) |
-| 公理 | [Apache](#apache) |
-| 軸2 | [Apache](#apache) |
-| 軸2核 | [Apache](#apache) |
-| Backport-util-concurrent | 公共域 |
-| 公共編解碼器 | [Apache](#apache) |
-| 公共集合 | [Apache](#apache) |
-| 公共檔案上載 | [Apache](#apache) |
-| commons httpclient | [Apache](#apache) |
-| 公域 | [Apache](#apache) |
-| 公共朗 | [Apache](#apache) |
-| 併發 | [併發](#concurrent) （公共域） |
-| geronimo激活_1.1_spec | [Apache](#apache) |
-| geronimo-stax-api_1.0spec | [Apache](#apache) |
+| annogen | [Apache](#apache) |
+| axiom-api | [Apache](#apache) |
+| axiom-dom | [Apache](#apache) |
+| axiom-impl | [Apache](#apache) |
+| axis2-adb | [Apache](#apache) |
+| axis2-kernel | [Apache](#apache) |
+| Backport-util-concurrent | 公用網域 |
+| commons-codec | [Apache](#apache) |
+| commons-collections | [Apache](#apache) |
+| commons-fileupload | [Apache](#apache) |
+| commons-httpclient | [Apache](#apache) |
+| commons-io | [Apache](#apache) |
+| commons-lang | [Apache](#apache) |
+| concurrent | [同時](#concurrent) （公用網域） |
+| geronimo-activation_1.1_spec | [Apache](#apache) |
+| geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
 | jackrabbit-jcr2spi | [Apache](#apache) |
-| 《野兔JCR公域》 | [Apache](#apache) |
-| 野兔 | [Apache](#apache) |
-| 野兔 | [Apache](#apache) |
-| 雅克森 | BSD |
+| jackrabbit-jcr-commons | [Apache](#apache) |
+| jackrabbit-spi-commons | [Apache](#apache) |
+| jackrabbit-spi | [Apache](#apache) |
+| jaxen | BSD |
 | log4j | [Apache](#apache) |
-| 苜蓿核 | [Apache](#apache) |
-| 尼絲 | [Apache](#apache) |
+| lucene-core | [Apache](#apache) |
+| neethi | [Apache](#apache) |
 | slf4j-api | [SLF4J.ORG](#slf-j-org) |
 | slf4j-jdk14 | [SLF4J.ORG](#slf-j-org) |
 | stax-api | [Apache](#apache) |
 | wsdl4j | [Apache](#apache) |
 | wstx-asl | [Apache](#apache) |
-| 沙蘭 | [Apache](#apache) |
+| xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-apis | [阿帕奇](#apache) （包含公共域和W3C軟體許可證所涵蓋的部分） |
-| Xml架構 | [Apache](#apache) |
+| xml-api | [Apache](#apache) （包含公共網域和W3C軟體授權所涵蓋的部分） |
+| XmlSchema | [Apache](#apache) |
 
-## CRX第三方圖書館概述 {#overview-of-crx-rd-party-libraries}
+## CRX第三方程式庫概觀 {#overview-of-crx-rd-party-libraries}
 
-下表列出了CRX中使用的第三方庫，以及涵蓋的許可證、版權聲明或免責聲明：
+下表列出CRX內使用的協力廠商程式庫，以及涵蓋這些程式庫的授權、著作權宣告或免責宣告：
 
 <table>
  <colgroup>
@@ -89,7 +89,7 @@ ht-degree: 19%
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
-   <td>commons httpclient-3.0.jar</td>
+   <td>commons-httpclient-3.0.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
@@ -97,19 +97,19 @@ ht-degree: 19%
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
-   <td>併發1.3.4.jar</td>
-   <td><a href="#concurrent">併發</a></td>
+   <td>concurrent-1.3.4.jar</td>
+   <td><a href="#concurrent">同時</a></td>
   </tr>
   <tr>
-   <td>derby 10.1.2.1.jar</td>
+   <td>derby-10.1.2.1.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
    <td>hsqldb-1.8.0.4.jar</td>
-   <td><a href="#hypersonic-sql-group">高超聲速SQL組</a></td>
+   <td><a href="#hypersonic-sql-group">高超音速SQL群組</a></td>
   </tr>
   <tr>
-   <td>jaxen-1.1β-6.jar</td>
+   <td>jaxen-1.1-beta-6.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
@@ -155,9 +155,9 @@ ht-degree: 19%
  </tbody>
 </table>
 
-## CQSE第三方圖書館概述 {#overview-of-cqse-rd-party-libraries}
+## CQSE第三方程式庫概觀 {#overview-of-cqse-rd-party-libraries}
 
-下表列出了Amponute Servlet引擎中使用的第三方庫，以及它們所涵蓋的許可證、版權聲明或免責聲明：
+下表列出Communication Servlet Engine中使用的第三方程式庫，以及涵蓋這些程式庫的授權、著作權宣告或免責宣告：
 
 <table>
  <colgroup>
@@ -178,11 +178,11 @@ ht-degree: 19%
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
-   <td>jasper編譯器4.1.30-cqse.jar</td>
+   <td>jasper-compiler-4.1.30-cqse.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
-   <td>jasper runtime-4.1.30-cqse.jar</td>
+   <td>jasper-runtime-4.1.30-cqse.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
@@ -211,7 +211,7 @@ ht-degree: 19%
   </tr>
   <tr>
    <td><br /> </td>
-   <td><a href="#w-c-document">W3C文檔</a></td>
+   <td><a href="#w-c-document">W3C檔案</a></td>
   </tr>
   <tr>
    <td><br /> </td>
@@ -426,7 +426,7 @@ ht-degree: 19%
      limitations under the License.
 ```
 
-## 併發 {#concurrent}
+## 同時 {#concurrent}
 
 ```xml
      All classes are released to the public domain and may be used for any
@@ -567,7 +567,7 @@ ht-degree: 19%
      implementations, and test suites thereof.
 ```
 
-## 高超聲速SQL組 {#hypersonic-sql-group}
+## 高超音速SQL群組 {#hypersonic-sql-group}
 
 ```xml
      COPYRIGHTS AND LICENSES
@@ -1094,7 +1094,7 @@ ht-degree: 19%
      (LFI#95810/Form ID#011801)
 ```
 
-## W3C文檔 {#w-c-document}
+## W3C檔案 {#w-c-document}
 
 ```xml
      This license came from: https://www.w3.org/Consortium/Legal/

@@ -1,6 +1,6 @@
 ---
-title: 使用和擴展小部件（經典UI）
-description: Adobe Experience Manager的基於Web的介面使AJAX用和其他現代瀏覽器技術，使WYSIWYG能夠編輯和格式化網頁上的作者的內容
+title: 使用和擴充Widget （傳統UI）
+description: Adobe Experience Manager的網頁型介面使用AJAX和其他現代化瀏覽器技術，讓作者能在網頁上以WYSIWYG格式編輯內容
 uuid: eb3da415-cbef-4766-a28e-837e238a4156
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,58 +16,58 @@ ht-degree: 0%
 
 ---
 
-# 使用和擴展小部件（經典UI）{#using-and-extending-widgets-classic-ui}
+# 使用和擴充Widget （傳統UI）{#using-and-extending-widgets-classic-ui}
 
 >[!NOTE]
 >
->本頁介紹了標準UI中小部件的使用情況，該UI在AEM6.4中已棄用。
+>本頁說明傳統UI中Widget的使用方式，AEM 6.4已棄用它。
 >
->Adobe建議你用現代， [啟用觸摸的UI](/help/sites-developing/touch-ui-concepts.md) 基於 [珊瑚UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [花崗岩UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components)。
+>Adobe建議您使用 [觸控式UI](/help/sites-developing/touch-ui-concepts.md) 根據 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
 
-Adobe Experience Manager(AEMWeb)的介面使AJAX用和其他現代瀏覽器技術，使WYSIWYG能夠編輯和格式化網頁上的作者的內容。
+Adobe Experience Manager (AEM)的網頁型介面使用AJAX和其他現代化瀏覽器技術，讓作者能在網頁上以WYSIWYG編輯和格式化內容。
 
-使AEM用 [ExtJS](https://www.sencha.com/) widgets庫，它提供高度精良的用戶介面元素，這些元素可在所有最重要的瀏覽器中工作，並允許建立案頭級UI體驗。
+AEM使用 [ExtJS](https://www.sencha.com/) widget程式庫，提供拋光度極佳的使用者介面元素，可在所有最重要的瀏覽器上運作，並可建立案頭級的UI體驗。
 
-這些小部件包AEM括在內，並且除了供自AEM身使用外，還可供使用的任何網站使AEM用。
+這些Widget包含在AEM中，除了供AEM本身使用外，也可供使用AEM建立的任何網站使用。
 
-有關中所有可用小部件的完整引用AEM，請參閱 [構件API文檔](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html) 或 [現有xtype清單](/help/sites-developing/xtypes.md)。 此外，還提供了許多示例，說明如何使用ExtJS框架 [森沙](https://examples.sencha.com/extjs/7.6.0/) 站點，框架的所有者。
+如需AEM中所有可用Widget的完整參考，請參閱 [Widget API檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html) 或 [現有xtype的清單](/help/sites-developing/xtypes.md). 此外，許多說明如何使用ExtJS架構的範例可在以下網址取得： [森查](https://examples.sencha.com/extjs/7.6.0/) 網站，此架構的擁有者。
 
-本頁提供了一些有關如何使用和擴展小部件的見解。 它首先描述了如何 [在頁面中包含客戶端代碼](#including-the-client-sided-code-in-a-page)。 然後，它描述了為說明一些基本用途和擴展而建立的一些示例元件。 這些元件在 **使用ExtJS小部件** 包 **包共用**。
+本頁提供如何使用及擴充Widget的一些深入分析。 首先說明如何 [在頁面中包含使用者端代碼](#including-the-client-sided-code-in-a-page). 然後它會說明已建立的一些範例元件，以說明一些基本用途和擴充功能。 這些元件位於 **使用ExtJS Widget** 封裝於 **封裝共用**.
 
-該包包括以下示例：
+此套件包含下列範例：
 
-* [基本對話框](#basic-dialogs) 用現成的小部件製造。
-* [動態對話框](#dynamic-dialogs) 使用現成小部件和自定義的JavaScript邏輯構建。
-* 基於 [自定義小部件](#custom-widgets)。
-* A [樹面板](#tree-overview) 在給定路徑下顯示JCR樹。
-* A [網格面板](#grid-overview) 以表格格式顯示資料。
+* [基本對話方塊](#basic-dialogs) 使用現成可用的Widget建置。
+* [動態對話方塊](#dynamic-dialogs) 使用現成可用的Widget和自訂JavaScript邏輯建置。
+* 對話方塊依據 [自訂Widget](#custom-widgets).
+* A [樹面板](#tree-overview) 在指定路徑下方顯示JCR樹狀結構。
+* A [格點面板](#grid-overview) 以表格格式顯示資料。
 
 >[!NOTE]
 >
->經典的Adobe Experience ManagerUI [ExtJS 3.4.0](https://extjs.cachefly.net/ext-3.4.0/docs/)。
+>Adobe Experience Manager的傳統UI是建置在 [ExtJS 3.4.0](https://extjs.cachefly.net/ext-3.4.0/docs/).
 
-## 在頁面中包括客戶端代碼 {#including-the-client-sided-code-in-a-page}
+## 在頁面中包含使用者端程式碼 {#including-the-client-sided-code-in-a-page}
 
-客戶端JavaScript和樣式表代碼應放置在客戶端庫中。
+使用者端的JavaScript和樣式表程式碼應放置在使用者端程式庫中。
 
-要建立客戶端庫：
+若要建立使用者端資源庫：
 
-1. 在下面建立節點 `/apps/<project>` 具有以下屬性：
+1. 在下方建立節點 `/apps/<project>` 具有以下屬性：
 
    * name=&quot;clientlib&quot;
-   * jcr:mixinTypes=&quot;[混合：可鎖定]&quot;
-   * jcr:primaryType=&quot;cq:ClientLibraryFolder&quot;
-   * sling:resourceType=&quot;widgets/clientlib&quot;
-   * 類別=&quot;[&lt;category-name>]&quot;
-   * 依賴項=[cq.widgets]&quot;
+   * jcr：mixinTypes=&quot;[mix：lockable]&quot;
+   * jcr：primaryType=&quot;cq：ClientLibraryFolder&quot;
+   * sling：resourceType=&quot;widgets/clientlib&quot;
+   * 類別=」[&lt;category-name>]&quot;
+   * dependencies=」[cq.widget]&quot;
 
    `Note: <category-name> is the name of the custom library (e.g. "cq.extjstraining") and is used to include the library on the page.`
 
-1. 下 `clientlib` 建立 `css` 和 `js` 資料夾(nt:folder)。
+1. 以下 `clientlib` 建立 `css` 和 `js` 資料夾(nt：folder)。
 
-1. 下 `clientlib` 建立 `css.txt` 和 `js.txt` 檔案(nt:files)。 這些.txt檔案列出了庫中包含的檔案。
+1. 以下 `clientlib` 建立 `css.txt` 和 `js.txt` 檔案(nt：files)。 這些.txt檔案會列出資料庫中包含的檔案。
 
-1. 編輯 `js.txt`:必須以&#39;開頭 `#base=js`&#39;後跟CQ客戶端庫服務聚合的檔案清單，例如：
+1. 編輯 `js.txt`：開頭必須是&#39; `#base=js`&#39;後面接著CQ使用者端程式庫服務彙總的檔案清單，例如：
 
    ```
    #base=js
@@ -78,34 +78,34 @@ Adobe Experience Manager(AEMWeb)的介面使AJAX用和其他現代瀏覽器技�
     InsertTextPlugin.js
    ```
 
-1. 編輯 `css.txt`:必須以&#39;開頭 `#base=css`&#39;後跟CQ客戶端庫服務聚合的檔案清單，例如：
+1. 編輯 `css.txt`：開頭必須是&#39; `#base=css`&#39;後面接著CQ使用者端程式庫服務彙總的檔案清單，例如：
 
    ```
    #base=css
     components.css
    ```
 
-1. 在 `js` 資料夾，放置屬於庫的JavaScript檔案。
+1. 在 `js` 資料夾中，放置屬於資料庫的JavaScript檔案。
 
-1. 在 `css` 資料夾，放置 `.css` 檔案和css檔案使用的資源(例如， `my_icon.png`)。
+1. 在 `css` 資料夾，放置 `.css` css檔案使用的檔案和資源(例如， `my_icon.png`)。
 
 >[!NOTE]
 >
->前面描述的樣式表處理是可選的。
+>之前說明的樣式表處理方式是選擇性的。
 
-要在頁面元件jsp中包含客戶端庫，請執行以下操作：
+若要在頁面元件jsp中包含使用者端程式庫：
 
-* 要同時包括JavaScript代碼和樣式表：
+* 若要同時包含JavaScript程式碼和樣式表：
    `<ui:includeClientLib categories="<category-name1>, <category-name2>, ..."/>`
-何處 
-`<category-nameX>` 是客戶端庫的名稱。
+位置 
+`<category-nameX>` 是使用者端程式庫的名稱。
 
-* 只包括JavaScript代碼：
+* 若要僅包含JavaScript程式碼：
    `<ui:includeClientLib js="<category-name>"/>`
 
-有關詳細資訊，請參閱 [&lt;ui:includeclientlib>](/help/sites-developing/taglib.md#lt-ui-includeclientlib) 標籤。
+如需更多詳細資訊，請參閱 [&lt;ui:includeclientlib>](/help/sites-developing/taglib.md#lt-ui-includeclientlib) 標籤之間。
 
-有時，客戶端庫應僅在作者模式下可用，並應在發佈模式下排除。 具體實現如下：
+有時，使用者端程式庫應僅在作者模式下可用，並應排除在發佈模式之外。 可透過下列方式達成：
 
 ```xml
     if (WCMMode.fromRequest(request) != WCMMode.DISABLED) {
@@ -113,303 +113,303 @@ Adobe Experience Manager(AEMWeb)的介面使AJAX用和其他現代瀏覽器技�
     }
 ```
 
-### 示例入門 {#getting-started-with-the-samples}
+### 範例快速入門 {#getting-started-with-the-samples}
 
-要遵循本頁上的教程，請安裝軟體包 **使用ExtJS小部件** 在本地AEM實例中建立包含元件的示例頁。 為此，請執行以下操作：
+若要遵循本頁面的教學課程，請安裝套件 **使用ExtJS Widget** 在本機AEM執行個體中，建立包含元件的範例頁面。 若要這麼做，請執行下列動作：
 
-1. 在您的AEM實例中，下載名為 **使用ExtJS小部件(v01)** 從包共用中安裝包。 它建立項目 `extjstraining` 下 `/apps` 的下界。
-1. 將包含指令碼(js)和樣式表(css)的客戶端庫包括在Geometrixx頁jsp的head標籤中。 您將將示例元件包含在 **Geometrixx** 分支：在 **CRXDE Lite** 開啟檔案 `/apps/geometrixx/components/page/headlibs.jsp` 並添加 `cq.extjstraining` 類別 `<ui:includeClientLib>` 標籤如下：
+1. 在您的AEM執行個體中，下載名為的套件 **使用ExtJS Widget (v01)** 從「封裝共用」並安裝封裝。 它會建立專案 `extjstraining` 以下 `/apps` 存放庫中。
+1. 將包含指令碼(js)和樣式表(css)的使用者端資料庫包含在Geometrixx頁面jsp的head標籤中。 您即將包含的範例元件新頁面 **Geometrixx** 分支：在 **CRXDE Lite** 開啟檔案 `/apps/geometrixx/components/page/headlibs.jsp` 並新增 `cq.extjstraining` 類別至現有 `<ui:includeClientLib>` 標籤如下所示：
    `%><ui:includeClientLib categories="apps.geometrixx-main, cq.extjstraining"/><%`
-1. 在 **Geometrixx** 下 `/content/geometrixx/en/products` 然後 **使用ExtJS小部件**。
-1. 進入設計模式並添加組的所有元件 **使用ExtJS小部件** 到設計Geometrixx
-1. 返回編輯模式：組的元件 **使用ExtJS小部件** 在Sidekick里。
+1. 在中建立頁面 **Geometrixx** 下方分支 `/content/geometrixx/en/products` 並呼叫它 **使用ExtJS Widget**.
+1. 進入設計模式並新增群組的所有元件，群組名為 **使用ExtJS Widget** 到Geometrixx的設計
+1. 返回編輯模式：群組的元件 **使用ExtJS Widget** 可在Sidekick中使用。
 
 >[!NOTE]
 >
->本頁上的示例基於We.Retail已取代的不再隨附AEM的Geometrixx樣本內容。 查看 [We.Retail Reference實施](/help/sites-developing/we-retail.md#we-retail-geometrixx) 下載和安裝Geometrixx。
+>本頁上的範例是根據AEM不再隨附的Geometrixx範例內容，已被We.Retail取代。 請參閱 [We.Retail參考實作](/help/sites-developing/we-retail.md#we-retail-geometrixx) 瞭解如何下載和安裝Geometrixx。
 
-### 基本對話框 {#basic-dialogs}
+### 基本對話方塊 {#basic-dialogs}
 
-對話框通常用於編輯內容，但也可以顯示資訊。 查看完整對話框的一種簡單方法是訪問其json格式的表示形式。 為此，請將瀏覽器指向：
+對話方塊通常用於編輯內容，但也可以顯示資訊。 檢視完整對話方塊的簡單方法是以JSON格式存取其表示法。 若要這麼做，請將瀏覽器指向：
 
 `https://localhost:4502/<path-to-dialog>.-1.json`
 
-第一個元件 **使用ExtJS小部件** Sidekick中的組稱為 **1。 對話框基礎** 包括四個基本對話框，這些對話框是使用現成的小部件構建的，而不使用自定義的JavaScript邏輯。 對話框儲存在下面 `/apps/extjstraining/components/dialogbasics`。 基本對話框包括：
+的第一個元件 **使用ExtJS Widget** Sidekick中的群組稱為 **1. 對話方塊基本知識** 和包含四個基本對話方塊，這些對話方塊是使用現成可用的Widget建置，且不含自訂JavaScript邏輯。 對話方塊儲存在下方 `/apps/extjstraining/components/dialogbasics`. 基本對話方塊包括：
 
-* 完整對話框( `full` 節點):它顯示一個包含三個制表符的窗口，每個制表符包含兩個文本欄位。
-* 「單面板」對話框( `singlepanel` 節點):它顯示一個窗口，其中有一個頁籤，該頁籤有兩個文本欄位。
-* 「多面板」對話框( `multipanel` 節點):其顯示與「完全」對話框相同，但其構建方式不同。
-* 設計對話框( `design` 節點):它顯示一個帶有兩個頁籤的窗口。 第一個頁籤具有文本欄位、下拉菜單和可折疊文本區域。 第二個頁籤具有一個欄位集，其中包含四個文本欄位，以及一個可折疊欄位集，其中包含兩個文本欄位。
+* 完整對話方塊( `full` 節點)：它會顯示一個視窗，其中包含三個索引標籤，每個索引標籤都有兩個文字欄位。
+* 單一面板對話方塊( `singlepanel` 節點)：它會顯示一個視窗，其中包含兩個文字欄位的索引標籤。
+* 多面板對話方塊( `multipanel` 節點)：其顯示與「完整」對話方塊相同，但建置方式不同。
+* 設計對話方塊( `design` 節點)：它會顯示一個視窗，內含兩個標籤。 第一個索引標籤具有文字欄位、下拉式功能表和可摺疊的文字區域。 第二個索引標籤有一個包含四個文字欄位的欄位集，以及一個包含兩個文字欄位的可摺疊欄位集。
 
-包括 **1。 對話框基礎** 示例頁中的元件：
+包含 **1. 對話方塊基本知識** 範例頁面中的元件：
 
-1. 添加 **1。 對話框基礎** 元件到示例頁 **使用ExtJS小部件** 的 **側腳**。
-1. 元件顯示標題、某些文本和 **屬性** 的子菜單。 選擇連結將顯示儲存在儲存庫中的段落的屬性。 再次選擇連結以隱藏屬性。
+1. 新增 **1. 對話方塊基本知識** 元件至範例頁面 **使用ExtJS Widget** 索引標籤中的 **Sidekick**.
+1. 元件會顯示標題、部分文字和 **屬性** 連結。 選取連結會顯示儲存在存放庫中的段落屬性。 再次選取連結以隱藏屬性。
 
 元件顯示如下：
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
-#### 示例1:完整對話框 {#example-full-dialog}
+#### 範例1：完整對話方塊 {#example-full-dialog}
 
-的 **滿** 對話框顯示一個包含三個頁籤的窗口，每個頁籤都包含兩個文本欄位。 它是 **對話框基礎** 元件。 其特點是：
+此 **完整** 對話方塊會顯示一個視窗，其中包含三個索引標籤，每個索引標籤都有兩個文字欄位。 這是的預設對話方塊 **對話方塊基本知識** 元件。 其特性包括：
 
-* 由節點定義：節點類型= `cq:Dialog`, xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`。
-* 顯示三個頁籤(節點類型= `cq:Panel`)。
-* 每個頁籤有兩個文本欄位(節點類型= `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)。
+* 由節點定義：節點型別= `cq:Dialog`， xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`.
+* 顯示三個標籤(節點型別= `cq:Panel`)。
+* 每個索引標籤都有兩個文字欄位(節點型別= `cq:Widget`， xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)。
 * 由節點定義：
    `/apps/extjstraining/components/dialogbasics/full`
-* 通過請求以JSON格式呈現：
+* 透過要求以JSON格式轉譯：
    `https://localhost:4502/apps/extjstraining/components/dialogbasics/full.-1.json`
 
-對話框顯示如下：
+對話方塊顯示如下：
 
 ![screen_shot_2012-01-31at45411pm](assets/screen_shot_2012-01-31at45411pm.png)
 
-#### 示例2:單面板對話框 {#example-single-panel-dialog}
+#### 範例2：單一面板對話方塊 {#example-single-panel-dialog}
 
-的 **單面板** 對話框顯示一個窗口，其中一個頁籤具有兩個文本欄位。 其特點是：
+此 **單一面板** 對話方塊會顯示一個視窗，其中有一個索引標籤有兩個文字欄位。 其特性包括：
 
-* 顯示一個頁籤(節點類型= `cq:Dialog`, xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`)
-* 該頁籤有兩個文本欄位(節點類型= `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)
+* 顯示一個標籤(節點型別= `cq:Dialog`， xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`)
+* 索引標籤有兩個文字欄位(節點型別= `cq:Widget`， xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)
 * 由節點定義：
    `/apps/extjstraining/components/dialogbasics/singlepanel`
-* 通過請求以json格式呈現：
+* 透過請求以JSON格式呈現：
    `https://localhost:4502/apps/extjstraining/components/dialogbasics/singlepanel.-1.json`
-* 一個優勢 **完整對話框** 就是需要較少的配置。
-* 建議使用：對話框。
+* 勝過下列優點之一： **完整對話方塊** 減少所需的設定。
+* 建議使用：用於顯示資訊或只有幾個欄位的簡單對話方塊。
 
-要使用「單面板」對話框，請執行以下操作：
+若要使用「單一面板」對話方塊：
 
-1. 替換 **對話框基礎** 元件 **單面板** 對話框：
+1. 取代對話方塊 **對話方塊基本知識** 具有的元件 **單一面板** 對話方塊：
    1. 在 **CRXDE Lite**，刪除節點： `/apps/extjstraining/components/dialogbasics/dialog`
-   1. 按一下 **全部保存** 的子菜單。
+   1. 按一下 **全部儲存** 以儲存變更。
    1. 複製節點： `/apps/extjstraining/components/dialogbasics/singlepanel`
-   1. 將複製的節點貼上到下面： `/apps/extjstraining/components/dialogbasics`
-   1. 選擇節點： `/apps/extjstraining/components/dialogbasics/Copy of singlepanel`更名 `dialog`。
-1. 編輯元件：對話框顯示如下：
+   1. 在下方貼上複製的節點： `/apps/extjstraining/components/dialogbasics`
+   1. 選取節點： `/apps/extjstraining/components/dialogbasics/Copy of singlepanel`並重新命名 `dialog`.
+1. 編輯元件：對話方塊顯示如下：
 
 ![screen_shot_2012-01-31at45952pm](assets/screen_shot_2012-01-31at45952pm.png)
 
-#### 示例3:多面板對話框 {#example-multi-panel-dialog}
+#### 範例3：多面板對話方塊 {#example-multi-panel-dialog}
 
-的 **多面板** 對話框的顯示與 **滿** 但對話是以不同的方式構建的。 其特點是：
+此 **多面板** 對話方塊的顯示方式與 **完整** 對話方塊，但其建置方式不同。 其特性包括：
 
-* 由節點定義(節點類型= `cq:Dialog`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`)。
-* 顯示三個頁籤(節點類型= `cq:Panel`)。
-* 每個頁籤有兩個文本欄位(節點類型= `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)。
+* 由節點定義(節點型別= `cq:Dialog`， xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`)。
+* 顯示三個標籤(節點型別= `cq:Panel`)。
+* 每個索引標籤都有兩個文字欄位(節點型別= `cq:Widget`， xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)。
 * 由節點定義：
    `/apps/extjstraining/components/dialogbasics/multipanel`
-* 通過請求以json格式呈現：
+* 透過請求以JSON格式呈現：
    `https://localhost:4502/apps/extjstraining/components/dialogbasics/multipanel.-1.json`
-* 一個優勢 **完整對話框** 就是它有一個簡化的結構。
-* 建議使用：對話框。
+* 勝過下列優點之一： **完整對話方塊** 其結構已簡化。
+* 建議使用：用於多索引標籤對話方塊。
 
-要使用「多面板」對話框，請執行以下操作：
+若要使用「多面板」對話方塊：
 
-1. 替換 **對話框基礎** 元件 **多面板** 對話框：按照 [示例2:單面板對話框](#example-single-panel-dialog)
-1. 編輯元件：對話框顯示如下：
+1. 取代對話方塊 **對話方塊基本知識** 具有的元件 **多面板** 對話方塊：請遵循以下說明的步驟： [範例2：單一面板對話方塊](#example-single-panel-dialog)
+1. 編輯元件：對話方塊顯示如下：
 
 ![screen_shot_2012-01-31at50119pm](assets/screen_shot_2012-01-31at50119pm.png)
 
-#### 示例4:富對話框 {#example-rich-dialog}
+#### 範例4：豐富型對話方塊 {#example-rich-dialog}
 
-的 **里奇** 對話框顯示一個包含兩個頁籤的窗口。 第一個頁籤具有文本欄位、下拉菜單和可折疊文本區域。 第二個頁籤具有一個欄位集，其中包含四個文本欄位，以及一個可折疊欄位集，其中包含兩個文本欄位。 其特點是：
+此 **豐富** 對話方塊會顯示一個視窗，其中包含兩個標籤。 第一個索引標籤具有文字欄位、下拉式功能表和可摺疊的文字區域。 第二個索引標籤有一個包含四個文字欄位的欄位集，以及一個包含兩個文字欄位的可摺疊欄位集。 其特性包括：
 
-* 由節點定義(節點類型= `cq:Dialog`, xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
-* 顯示兩個頁籤(節點類型= `cq:Panel`)。
-* 第一個頁籤具有 ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)` 小部件 ` [textfield](/help/sites-developing/xtypes.md#textfield)` 和 ` [selection](/help/sites-developing/xtypes.md#selection)` 具有三個選項的小部件和可折疊 ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)` 帶 ` [textarea](/help/sites-developing/xtypes.md#textarea)` 小部件。
-* 第二個頁籤 ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)` 四個小部件 ` [textfield](/help/sites-developing/xtypes.md#textfield)` 小部件和可折疊 `dialogfieldset` 兩 ` [textfield](/help/sites-developing/xtypes.md#textfield)` 小部件。
+* 由節點定義(節點型別= `cq:Dialog`， xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
+* 顯示兩個標籤(節點型別= `cq:Panel`)。
+* 第一個索引標籤有 ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)` 具有a的Widget ` [textfield](/help/sites-developing/xtypes.md#textfield)` 和 ` [selection](/help/sites-developing/xtypes.md#selection)` 具有三個選項和可摺疊的Widget ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)` 搭配 ` [textarea](/help/sites-developing/xtypes.md#textarea)` Widget.
+* 第二個索引標籤有 ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)` 具有四個的Widget ` [textfield](/help/sites-developing/xtypes.md#textfield)` Widget和可收合的 `dialogfieldset` 具有兩個 ` [textfield](/help/sites-developing/xtypes.md#textfield)` Widget.
 * 由節點定義：
    `/apps/extjstraining/components/dialogbasics/rich`
-* 通過請求以json格式呈現：
+* 透過請求以JSON格式呈現：
    `https://localhost:4502/apps/extjstraining/components/dialogbasics/rich.-1.json`
 
-使用 **里奇** 對話框：
+若要使用 **豐富** 對話方塊：
 
-1. 替換 **對話框基礎** 元件 **里奇** 對話框：按照 [示例2:單面板對話框](#example-single-panel-dialog)
-1. 編輯元件：對話框顯示如下：
+1. 取代對話方塊 **對話方塊基本知識** 具有的元件 **豐富** 對話方塊：請遵循以下說明的步驟： [範例2：單一面板對話方塊](#example-single-panel-dialog)
+1. 編輯元件：對話方塊顯示如下：
 
 ![screen_shot_2012-01-31at50429pm](assets/screen_shot_2012-01-31at50429pm.png) ![screen_shot_2012-01-31at50519pm](assets/screen_shot_2012-01-31at50519pm.png)
 
-### 動態對話框 {#dynamic-dialogs}
+### 動態對話方塊 {#dynamic-dialogs}
 
-第二個元件 **使用ExtJS小部件** Sidekick中的組稱為 **2. 動態對話框** 包括三個動態對話框，這些對話框是使用現成的小部件和 **使用自定義的JavaScript邏輯**。 對話框儲存在下面 `/apps/extjstraining/components/dynamicdialogs`。 動態對話框包括：
+的第二個元件 **使用ExtJS Widget** Sidekick中的群組稱為 **2. 動態對話方塊** 和包含三個動態對話方塊，都是使用現成可用的Widget和 **使用自訂的JavaScript邏輯**. 對話方塊儲存在下方 `/apps/extjstraining/components/dynamicdialogs`. 動態對話方塊包括：
 
-* 切換頁籤對話框( `switchtabs` 節點):它顯示一個帶有兩個頁籤的窗口。 第一個頁籤有一個無線電選項，其中有三個選項：選中某個選項時，將顯示與該選項相關的頁籤。 第二個頁籤有兩個文本欄位。
-* 任意對話框( `arbitrary` 節點):它顯示一個帶有一個頁籤的窗口。 該頁籤具有一個用於拖放或上載資產的欄位，以及一個顯示有關包含頁面和資產（如果引用）的某些資訊的欄位。
-* 切換欄位對話框( `togglefield` 節點):它顯示一個帶有一個頁籤的窗口。 該頁籤具有複選框：選中時，將顯示一個包含兩個文本欄位的欄位集。
+* 切換標籤對話方塊( `switchtabs` 節點)：它會顯示一個視窗，內含兩個標籤。 第一個標籤具有包含三個選項的選項選擇：選取某個選項時，會顯示與該選項相關的標籤。 第二個索引標籤有兩個文字欄位。
+* 任意對話方塊( `arbitrary` 節點)：它會顯示一個視窗，內含一個索引標籤。 索引標籤含有要拖放或上傳資產的欄位，以及顯示容納頁面和資產相關資訊（若有參考頁面）的欄位。
+* 切換欄位對話方塊( `togglefield` 節點)：它會顯示一個視窗，內含一個索引標籤。 索引標籤具有核取方塊：核取時，會顯示具有兩個文字欄位的欄位集。
 
-要包括 **2. 動態對話框** 示例頁上的元件：
+若要包含 **2. 動態對話方塊** 範例頁面上的元件：
 
-1. 添加 **2. 動態對話框** 元件到示例頁 **使用ExtJS小部件** 的 **側腳**。
-1. 元件顯示標題、某些文本和 **屬性** 的子菜單。 選擇連結將顯示儲存在儲存庫中的段落的屬性。 再次選擇連結以隱藏屬性。
+1. 新增 **2. 動態對話方塊** 元件至範例頁面 **使用ExtJS Widget** 索引標籤中的 **Sidekick**.
+1. 元件會顯示標題、部分文字和 **屬性** 連結。 選取連結會顯示儲存在存放庫中的段落屬性。 再次選取連結以隱藏屬性。
 
 元件顯示如下：
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
-#### 示例1:「切換頁籤」對話框 {#example-switch-tabs-dialog}
+#### 範例1：切換索引標籤對話方塊 {#example-switch-tabs-dialog}
 
-的 **切換頁籤** 對話框顯示一個包含兩個頁籤的窗口。 第一個頁籤有一個無線電選項，其中有三個選項：選中某個選項時，將顯示與該選項相關的頁籤。 第二個頁籤有兩個文本欄位。
+此 **切換標籤** 對話方塊會顯示一個視窗，其中包含兩個標籤。 第一個標籤具有包含三個選項的選項選擇：選取某個選項時，會顯示與該選項相關的標籤。 第二個索引標籤有兩個文字欄位。
 
-其主要特點是：
+其主要特性包括：
 
-* 由節點定義(節點類型= `cq:Dialog`, xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
-* 顯示兩個頁籤(節點類型= `cq:Panel`):一個選擇頁籤，第二個頁籤取決於第一個頁籤中的選擇（三個選項）。
-* 有三個可選頁籤(節點類型= `cq:Panel`)，每個欄位有兩個文本欄位(節點類型= `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)。 一次只顯示一個可選頁籤。
-* 由 `switchtabs` 節點位於：
+* 由節點定義(節點型別= `cq:Dialog`， xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
+* 顯示兩個標籤(節點型別= `cq:Panel`)：一個選項標籤，第二個標籤取決於第一個標籤中的選項（三個選項）。
+* 有三個選用的標籤(節點型別= `cq:Panel`)，則每個節點都有兩個文字欄位(節點型別= `cq:Widget`， xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)。 一次只顯示一個可選索引標籤。
+* 由以下定義 `switchtabs` 節點位置：
    `/apps/extjstraining/components/dynamicdialogs/switchtabs`
-* 通過請求以json格式呈現：
+* 透過請求以JSON格式呈現：
    `https://localhost:4502/apps/extjstraining/components/dynamicdialogs/switchtabs.-1.json`
 
-邏輯通過事件偵聽器和JavaScript代碼實現，如下所示：
+此邏輯會透過事件接聽程式和JavaScript程式碼實作，如下所示：
 
-* 對話框節點具有「」 `beforeshow`&quot;監聽器，它在顯示對話框之前隱藏所有可選頁籤：
+* 對話方塊節點有「 `beforeshow`」接聽程式，會在顯示對話方塊之前隱藏所有選用的索引標籤：
    `beforeshow="function(dialog){Ejst.x2.manageTabs(dialog.items.get(0));}"`
 
-   `dialog.items.get(0)` 獲取 `tabpanel` 框（包含選擇面板和三個可選面板）。
-* 的 `Ejst.x2` 對象在 `exercises.js` 檔案位於：
+   `dialog.items.get(0)` 取得 `tabpanel` 包含選取範圍面板和三個選用面板。
+* 此 `Ejst.x2` 物件定義於 `exercises.js` 檔案位於：
    `/apps/extjstraining/clientlib/js/exercises.js`
-* 在 `Ejst.x2.manageTabs()` 方法，作為 `index` 為–1，所有可選頁籤都隱藏（i從1到3）。
-* 「選擇」頁籤有兩個監聽器：其中一個在載入對話框時顯示選定頁籤(&quot; `loadcontent`&quot;事件)和在更改選擇時顯示選定頁籤的選項(&quot; `selectionchanged`「事件):
+* 在 `Ejst.x2.manageTabs()` 方法，作為 `index` 為–1，所有選用的標籤都會隱藏（i會從1到3）。
+* 選取索引標籤有兩個接聽程式：其中一個會在載入對話方塊時顯示選取的索引標籤(&quot; `loadcontent`「 event」（事件），以及在選取範圍變更時顯示選取之索引標籤的索引標籤(&quot; `selectionchanged`「事件」)：
    `loadcontent="function(field,rec,path){Ejst.x2.showTab(field);}"`
 
    `selectionchanged="function(field,value){Ejst.x2.showTab(field);}"`
-* 對於 `Ejst.x2.showTab()` 方法
-   `field.findParentByType('tabpanel')` 獲取 `tabpanel` 包含所有頁籤( `field` 表示選擇構件)
-   `field.getValue()` 獲取所選內容的值，例如，tab2
-   `Ejst.x2.manageTabs()` 顯示選定頁籤。
-* 每個可選頁籤都有一個監聽器，它隱藏「」上的頁籤 `render`「事件：
+* 對於 `Ejst.x2.showTab()` 方法，
+   `field.findParentByType('tabpanel')` 取得 `tabpanel` 包含所有標籤( `field` 代表選取widget)
+   `field.getValue()` 取得選取範圍的值，例如tab2
+   `Ejst.x2.manageTabs()` 顯示選取的標籤。
+* 每個選用的索引標籤都有一個監聽器，會隱藏「 」上的索引標籤 `render`「事件：
    `render="function(tab){Ejst.x2.hideTab(tab);}"`
-* 對於 `Ejst.x2.hideTab()` 方法
-   `tabPanel` 是 `tabpanel` 包含所有頁籤
-   `index` 是可選頁籤的索引
-   `tabPanel.hideTabStripItem(index)` 隱藏頁籤
+* 對於 `Ejst.x2.hideTab()` 方法，
+   `tabPanel` 是 `tabpanel` 包含所有標籤
+   `index` 是選擇性頁簽的索引
+   `tabPanel.hideTabStripItem(index)` 隱藏索引標籤
 
 它顯示如下：
 
 ![screen_shot_2012-02-01at114745am](assets/screen_shot_2012-02-01at114745am.png)
 
-#### 示例2:任意對話框 {#example-arbitrary-dialog}
+#### 範例2：任意對話方塊 {#example-arbitrary-dialog}
 
-通常，對話框會顯示基礎元件中的內容。 此處描述的對話框稱為 **任意** 對話框，從其他元件中提取內容。
+通常會有一個對話方塊顯示基礎元件的內容。 此處說明的對話方塊，稱為 **任意** 對話方塊，從不同元件提取內容。
 
-的 **任意** 對話框顯示一個帶有一個頁籤的窗口。 該頁籤包含兩個欄位：一個用於刪除或上載資產，一個用於顯示有關包含頁和資產（如果已引用）的某些資訊。
+此 **任意** 對話方塊會顯示一個視窗，內含一個索引標籤。 索引標籤有兩個欄位：一個可放置或上傳資產，另一個可顯示容納頁面的一些相關資訊，而如果有人參照，則會顯示資產的一些相關資訊。
 
-其主要特點是：
+其主要特性包括：
 
-* 由節點定義(節點類型= `cq:Dialog`, xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
-* 顯示一個 `tabpanel` 構件（節點類型） `cq:Widget`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`)，帶一個面板(節點類型= `cq:Panel`)
-* 面板具有smartfile構件(節點類型= `cq:Widget`, xtype = ` [smartfile](/help/sites-developing/xtypes.md#smartfile)`)和所有者繪圖構件(節點類型= `cq:Widget`, xtype = ` [ownerdraw](/help/sites-developing/xtypes.md#ownerdraw)`)
-* 由 `arbitrary` 節點位於：
+* 由節點定義(節點型別= `cq:Dialog`， xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
+* 顯示一個 `tabpanel` Widget (節點型別= `cq:Widget`， xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`)包含一個面板(節點型別= `cq:Panel`)
+* 面板具有smartfile widget (節點型別= `cq:Widget`， xtype = ` [smartfile](/help/sites-developing/xtypes.md#smartfile)`)和一個ownerdraw widget (節點型別= `cq:Widget`， xtype = ` [ownerdraw](/help/sites-developing/xtypes.md#ownerdraw)`)
+* 由以下定義 `arbitrary` 節點位置：
    `/apps/extjstraining/components/dynamicdialogs/arbitrary`
-* 通過請求以json格式呈現：
+* 透過請求以JSON格式呈現：
    `https://localhost:4502/apps/extjstraining/components/dynamicdialogs/arbitrary.-1.json`
 
-邏輯通過事件偵聽器和JavaScript代碼實現，如下所示：
+此邏輯會透過事件接聽程式和JavaScript程式碼實作，如下所示：
 
-* 的 `ownerdraw` 小部件具有「 `loadcontent`&quot;監聽器，它顯示有關包含該元件的頁的資訊。 即，載入內容時智慧檔案構件引用的資產：
+* 此 `ownerdraw` Widget具有&quot; `loadcontent`&quot;監聽器，顯示包含元件之頁面的相關資訊。 也就是說，載入內容時smartfile Widget所參考的資產：
    `loadcontent="function(field,rec,path){Ejst.x2.showInfo(field,rec,path);}"`
 
-   `field` 設定為 `ownerdraw` 對象
-   `path` 與元件的內容路徑一起設定(例如， `/content/geometrixx/en/products/triangle/ui-tutorial/jcr:content/par/dynamicdialogs`)
-* 的 `Ejst.x2` 對象在 `exercises.js` 檔案位於：
+   `field` 已設定為 `ownerdraw` 物件
+   `path` 以元件的內容路徑設定(例如， `/content/geometrixx/en/products/triangle/ui-tutorial/jcr:content/par/dynamicdialogs`)
+* 此 `Ejst.x2` 物件定義於 `exercises.js` 檔案位於：
    `/apps/extjstraining/clientlib/js/exercises.js`
-* 對於 `Ejst.x2.showInfo()` 方法
-   `pagePath` 是包含元件的頁面路徑；
-   `pageInfo` 表示json格式的頁面屬性；
-   `reference` 是引用資產的路徑；
-   `metadata` 以json格式表示資產的元資料；
-   `ownerdraw.getEl().update(html);` 在對話框中顯示已建立的html
+* 對於 `Ejst.x2.showInfo()` 方法，
+   `pagePath` 是包含元件的頁面的路徑；
+   `pageInfo` 代表json格式的頁面屬性；
+   `reference` 是參照資產的路徑；
+   `metadata` 以json格式表示資產的中繼資料；
+   `ownerdraw.getEl().update(html);` 在對話方塊中顯示已建立的html
 
-使用 **任意** 對話框：
+若要使用 **任意** 對話方塊：
 
-1. 替換 **動態對話框** 元件 **任意** 對話框：按照 [示例2:單面板對話框](#example-single-panel-dialog)
+1. 取代對話方塊 **動態對話方塊** 具有的元件 **任意** 對話方塊：請遵循以下說明的步驟： [範例2：單一面板對話方塊](#example-single-panel-dialog)
 1. Edit the component: the dialog displays as follows:
 
 ![](assets/screen_shot_2012-02-01at115300am.png)
 
 #### Example 3: Toggle Fields Dialog {#example-toggle-fields-dialog}
 
-的 **切換欄位** 對話框顯示一個帶有一個頁籤的窗口。 該頁籤具有複選框：選中時，將顯示一個包含兩個文本欄位的欄位集。
+此 **切換欄位** 對話方塊會顯示一個視窗，內含一個索引標籤。 索引標籤具有核取方塊：核取時，會顯示具有兩個文字欄位的欄位集。
 
-其主要特點是：
+其主要特性包括：
 
-* 由節點定義(節點類型= `cq:Dialog`, xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
-* 顯示一個 `tabpanel` 構件（節點類型） `cq:Widget`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#textpanel)`)，帶一個面板(節點類型= `cq:Panel`)。
-* 面板具有選擇/複選框構件(節點類型= `cq:Widget`, xtype = ` [selection](/help/sites-developing/xtypes.md#selection)`，類型= ` [checkbox](/help/sites-developing/xtypes.md#checkbox)`)和可折疊的對話框欄位集構件(節點類型= `cq:Widget`, xtype = ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)`)，預設情況下隱藏，包含兩個文本域小部件(節點類型= `cq:Widget`, xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)。
-* 由 `togglefields` 節點位於：
+* 由節點定義(節點型別= `cq:Dialog`， xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
+* 顯示一個 `tabpanel` Widget (節點型別= `cq:Widget`， xtype = ` [tabpanel](/help/sites-developing/xtypes.md#textpanel)`)包含一個面板(節點型別= `cq:Panel`)。
+* 面板具有選取/核取方塊Widget (節點型別= `cq:Widget`， xtype = ` [selection](/help/sites-developing/xtypes.md#selection)`，型別= ` [checkbox](/help/sites-developing/xtypes.md#checkbox)`)和可摺疊的對話方塊集Widget (節點型別= `cq:Widget`， xtype = ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)`)預設為隱藏，具有兩個文字欄位widget (節點型別= `cq:Widget`， xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)。
+* 由以下定義 `togglefields` 節點位置：
    `/apps/extjstraining/components/dynamicdialogs/togglefields`
-* 通過請求以json格式呈現：
+* 透過請求以JSON格式呈現：
    `https://localhost:4502/apps/extjstraining/components/dynamicdialogs/togglefields.-1.json`
 
-邏輯通過事件偵聽器和JavaScript代碼實現，如下所示：
+此邏輯會透過事件接聽程式和JavaScript程式碼實作，如下所示：
 
-* 「選擇」頁籤有兩個監聽器：其中一個顯示載入內容時的對話框欄位集(&quot; `loadcontent`&quot;事件)和顯示更改選擇時對話框欄位集的對話框欄位集(&quot; `selectionchanged`「事件):
+* 選取範圍標籤有兩個接聽程式：其中一個會在內容載入時顯示dialogfieldset (&quot; `loadcontent`「 event」)，且會在選取範圍變更時顯示dialogfieldset的事件(「 `selectionchanged`「事件」)：
    `loadcontent="function(field,rec,path){Ejst.x2.toggleFieldSet(field);}"`
 
    `selectionchanged="function(field,value){Ejst.x2.toggleFieldSet(field);}"`
-* 的 `Ejst.x2` 對象在 `exercises.js` 檔案位於：
+* 此 `Ejst.x2` 物件定義於 `exercises.js` 檔案位於：
    `/apps/extjstraining/clientlib/js/exercises.js`
-* 對於 `Ejst.x2.toggleFieldSet()` 方法
-   `box` 是選擇對象；
-   `panel` 是包含所選內容和對話框欄位集小部件的面板；
-   `fieldSet` 是dialogfieldset對象；
-   `show` 是選擇的值（真或假）;基於&#39; `show`&#39;對話框欄位集是否顯示
+* 對於 `Ejst.x2.toggleFieldSet()` 方法，
+   `box` 是選取範圍物件；
+   `panel` 是包含選取範圍和dialogfieldset Widget的面板；
+   `fieldSet` 是dialogfieldset物件；
+   `show` 是選取範圍的值（true或false）；根據&#39; `show`&#39;是否顯示dialogfieldset
 
-使用 **切換欄位** 對話框，執行以下操作：
+若要使用 **切換欄位** 對話方塊中，執行下列動作：
 
-1. 替換 **動態對話框** 元件 **切換欄位** 對話框：按照 [示例2:單面板對話框](#example-single-panel-dialog)
-1. 編輯元件：對話框顯示如下：
+1. 取代對話方塊 **動態對話方塊** 具有的元件 **切換欄位** 對話方塊：請遵循以下說明的步驟： [範例2：單一面板對話方塊](#example-single-panel-dialog)
+1. 編輯元件：對話方塊顯示如下：
 
 ![screen_shot_2012-02-01at115518am](assets/screen_shot_2012-02-01at115518am.png)
 
-### 自定義小部件 {#custom-widgets}
+### 自訂Widget {#custom-widgets}
 
-隨附的現成小部件應包括大AEM多數使用案例。 但是，有時可能需要建立一個自定義小部件來滿足特定於項目的要求。 可通過擴展現有小部件來建立自定義小部件。 為幫助您開始進行此類自定義， **`Using ExtJS Widgets`** 包包括三個使用三個不同自定義小部件的對話框：
+AEM隨附的現成可用Widget應涵蓋大部分使用案例。 不過，有時可能需要建立自訂Widget來涵蓋專案的特定需求。 自訂Widget可藉由擴充現有元件來建立。 為協助您開始進行這類自訂， **`Using ExtJS Widgets`** 套件包含三個對話方塊，使用三個不同的自訂Widget：
 
-* 「多欄位」對話框( `multifield` 節點)顯示一個帶有一個頁籤的窗口。 該頁籤具有一個自定義的多域小部件，該小部件有兩個欄位：一個包含兩個選項的下拉菜單和一個文本欄位。 因為它基於現成的 `multifield` 小部件（僅包含文本欄位），它具有 `multifield` 小部件。
-* 樹瀏覽對話框( `treebrowse` 節點)顯示一個包含路徑瀏覽構件的頁籤的窗口：按一下箭頭時，將開啟一個窗口，您可以在其中瀏覽層次結構並選擇項目。 然後，項目的路徑將添加到路徑欄位，並在對話框關閉時保留。
-* 基於RTEXT編輯器插件的對話框( `rteplugin` 節點)，在RT編輯器中添加自定義按鈕，以將一些自定義文本插入主文本。 它由 `richtext` 構件(RTE)和通過RTE插件機制添加的自定義功能。
+* 多欄位對話方塊( `multifield` 節點)會顯示一個視窗，內含一個索引標籤。 索引標籤具有自訂的多欄位Widget，其中包含兩個欄位：包含兩個選項的下拉式選單和一個文字欄位。 因為是以現成可用的為基礎 `multifield` Widget （只有文字欄位），它擁有 `multifield` Widget.
+* 樹狀結構瀏覽對話方塊( `treebrowse` 節點)會顯示一個視窗，內含一個包含路徑瀏覽Widget的標籤：當您按一下箭頭時，會開啟一個視窗，您可以在其中瀏覽階層並選取專案。 然後，專案的路徑會新增至路徑欄位，並在對話方塊關閉時持續存在。
+* 以RTF編輯器外掛程式為基礎的對話方塊( `rteplugin` 節點)，可將自訂按鈕新增至RTF編輯器，以將某些自訂文字插入主文字。 它包含 `richtext` Widget (RTE)以及透過RTE外掛程式機制新增的自訂功能。
 
-自定義小部件和插件包含在名為 **3. 自定義小部件** 的 **使用ExtJS小部件** 檔案。 要將此元件包含到示例頁中：
+自訂Widget和外掛程式包含在名為的元件中 **3. 自訂Widget** 的 **使用ExtJS Widget** 封裝。 若要將此元件加入範例頁面：
 
-1. 添加 **3. 自定義小部件** 元件到示例頁 **使用ExtJS小部件** 的 **側腳**。
-1. 元件顯示標題、某些文本，並在按一下 **屬性** 連結，儲存在儲存庫中的段落的屬性。 再次按一下將隱藏屬性。
+1. 新增 **3. 自訂Widget** 元件至範例頁面 **使用ExtJS Widget** 索引標籤中的 **Sidekick**.
+1. 元件會顯示標題、部分文字，且按一下 **屬性** 連結，儲存於存放庫中的段落屬性。 再按一下可隱藏屬性。
 元件顯示如下：
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
 
-#### 示例1:自定義多域小部件 {#example-custom-multifield-widget}
+#### 範例1：自訂多欄位Widget {#example-custom-multifield-widget}
 
-的 **自定義多欄位** 基於構件的對話框顯示一個帶有一個頁籤的窗口。 該頁籤具有自定義的多域小部件，該小部件與具有一個欄位的標準小部件不同，具有兩個欄位：一個包含兩個選項的下拉菜單和一個文本欄位。
+此 **自訂多欄位** 以Widget為基礎的對話方塊會顯示有一個索引標籤的視窗。 索引標籤具有自訂的多欄位Widget，不像標準版有一個欄位，它有兩個欄位：包含兩個選項的下拉式選單和一個文字欄位。
 
-的 **自定義多欄位** 基於構件的對話框：
+此 **自訂多欄位** 以Widget為基礎的對話方塊：
 
-* 由節點定義(節點類型= `cq:Dialog`, xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
-* 顯示一個 `tabpanel` 構件（節點類型） `cq:Widget`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`)包含面板(節點類型= `cq:Widget`, xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`)。
-* 面板具有 `multifield` 構件（節點類型） `cq:Widget`, xtype = ` [multifield](/help/sites-developing/xtypes.md#multifield)`)。
-* 的 `multifield` 小部件具有欄位配置(節點類型= `nt:unstructured`, xtype = `ejstcustom`，選項提供程式= `Ejst.x3.provideOptions`)，它基於自定義xtype &#39; `ejstcustom`「：
-   * &quot; `fieldconfig`&#39;是 ` [CQ.form.MultiField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.MultiField)` 的雙曲餘切值。
-   * &quot; `optionsProvider`&#39;是 `ejstcustom` 小部件。 它與 `Ejst.x3.provideOptions` 定義的方法 `exercises.js` 地址：
+* 由節點定義(節點型別= `cq:Dialog`， xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
+* 顯示一個 `tabpanel` Widget (節點型別= `cq:Widget`， xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`)包含面板(節點型別= `cq:Widget`， xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`)。
+* 面板具有 `multifield` Widget (節點型別= `cq:Widget`， xtype = ` [multifield](/help/sites-developing/xtypes.md#multifield)`)。
+* 此 `multifield` Widget有fieldconfig (節點型別= `nt:unstructured`， xtype = `ejstcustom`，optionsProvider = `Ejst.x3.provideOptions`)，根據自訂xtype ` `ejstcustom`&#39;：
+   * &#39; `fieldconfig`&#39;是 ` [CQ.form.MultiField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.MultiField)` 物件。
+   * &#39; `optionsProvider`&#39;是 `ejstcustom` Widget. 它設定為 `Ejst.x3.provideOptions` 在中定義的方法 `exercises.js` 於：
       `/apps/extjstraining/clientlib/js/exercises.js`
-並返回兩個選項。
-* 由 `multifield` 節點位於：
+和會傳回兩個選項。
+* 由以下定義 `multifield` 節點位置：
    `/apps/extjstraining/components/customwidgets/multifield`
-* 通過請求以json格式呈現：
+* 透過請求以JSON格式呈現：
    `https://localhost:4502/apps/extjstraining/components/customwidgets/multifield.-1.json`
 
-自定義 `multifield` 構件(xtype =) `ejstcustom`):
+自訂 `multifield` Widget (xtype = `ejstcustom`)：
 
-* 是JavaScript對象調用 `Ejst.CustomWidget`
-* 定義於 `CustomWidget.js` JavaScript檔案位於：
+* JavaScript物件稱為 `Ejst.CustomWidget`
+* 在中定義 `CustomWidget.js` JavaScript檔案位於：
    `/apps/extjstraining/clientlib/js/CustomWidget.js`
-* 擴展 ` [CQ.form.CompositeField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.CompositeField)` 小部件。
-* 有三個欄位： `hiddenField` （文本欄位）, `allowField` （組合框）和 `otherField` （文本欄位）
-* 覆蓋 `CQ.Ext.Component#initComponent` 添加三個欄位：
-   * `allowField` 是 [CQ.form.選擇](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.Selection) 「select」類型的對象。 optionsProvider是Selection對象的配置，該對象使用對話框中定義的CustomWidget的optionsProvider配置進行實例化
-   * `otherField` 是 [CQ.Ext.form.TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TextField) 對象
+* 擴充 ` [CQ.form.CompositeField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.CompositeField)` Widget.
+* 有三個欄位： `hiddenField` （文字欄位）， `allowField` (ComboBox)，和 `otherField` （文字欄位）
+* 覆寫 `CQ.Ext.Component#initComponent` 新增三個欄位：
+   * `allowField` 是 [CQ.form.Selection](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.Selection) 「選取」型別的物件。 optionsProvider是Selection物件的設定，此設定是以對話方塊中定義的CustomWidget的optionsProvider設定具現化
+   * `otherField` 是 [CQ.Ext.form.TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TextField) 物件
 * `setValue``getValue``getRawValue`[](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.CompositeField)
    `<allowField value>/<otherField value>, for example: 'Bla1/hello'`。
 * `ejstcustom`
@@ -419,83 +419,83 @@ Adobe Experience Manager(AEMWeb)的介面使AJAX用和其他現代瀏覽器技�
 
 ![screen_shot_2012-02-01at115840am](assets/screen_shot_2012-02-01at115840am.png)
 
-#### 示例2:自定義 `Treebrowse` 小部件 {#example-custom-treebrowse-widget}
+#### 範例2：自訂 `Treebrowse` Widget {#example-custom-treebrowse-widget}
 
-自定義 **`Treebrowse`** 基於構件的對話框顯示一個窗口，其中有一個頁籤包含自定義路徑瀏覽構件。 選擇箭頭時，將開啟一個窗口，在該窗口中可以瀏覽層次結構並選擇項目。 然後，項目的路徑將添加到路徑欄位，並在對話框關閉時保留。
+自訂 **`Treebrowse`** 以Widget為基礎的對話方塊會顯示一個視窗，其中有一個索引標籤包含自訂路徑瀏覽Widget。 當您選取箭頭時，會開啟一個視窗，您可以在其中瀏覽階層並選取專案。 然後，專案的路徑會新增至路徑欄位，並在對話方塊關閉時持續存在。
 
-自定義 `treebrowse` 對話框：
+自訂 `treebrowse` 對話方塊：
 
-* 由節點定義(節點類型= `cq:Dialog`, xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
-* 顯示一個 `tabpanel` 構件（節點類型） `cq:Widget`, xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`)包含面板(節點類型= `cq:Widget`, xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`)。
-* 面板具有自定義構件(節點類型= `cq:Widget`, xtype = `ejstbrowse`)
-* 由 `treebrowse` 節點位於：
+* 由節點定義(節點型別= `cq:Dialog`， xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`)。
+* 顯示一個 `tabpanel` Widget (節點型別= `cq:Widget`， xtype = ` [tabpanel](/help/sites-developing/xtypes.md#tabpanel)`)包含面板(節點型別= `cq:Widget`， xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`)。
+* 面板有自訂Widget (節點型別= `cq:Widget`， xtype = `ejstbrowse`)
+* 由以下定義 `treebrowse` 節點位置：
    `/apps/extjstraining/components/customwidgets/treebrowse`
-* 通過請求以json格式呈現：
+* 透過請求以JSON格式呈現：
    `https://localhost:4502/apps/extjstraining/components/customwidgets/treebrowse.-1.json`
 
-自定義樹瀏覽構件(xtype = `ejstbrowse`):
+自訂樹狀瀏覽Widget (xtype = `ejstbrowse`)：
 
-* 是JavaScript對象調用 `Ejst.CustomWidget`
-* 定義於 `CustomBrowseField.js` JavaScript檔案位於：
+* JavaScript物件稱為 `Ejst.CustomWidget`
+* 在中定義 `CustomBrowseField.js` JavaScript檔案位於：
    `/apps/extjstraining/clientlib/js/CustomBrowseField.js`
-* 擴展 ` [CQ.Ext.form.TriggerField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TriggerField)`。
-* 定義名為的瀏覽窗口 `browseWindow`。
-* 覆蓋 ` [CQ.Ext.form.TriggerField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TriggerField)#onTriggerClick` 按鈕。
-* 定義 [CQ.Ext.tree.TreePanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.tree.TreePanel) 對象：
-   * 它通過調用註冊於的Servlet獲取其資料 `/bin/wcm/siteadmin/tree.json`。
-   * 其根為&quot; `apps/extjstraining`。
-* 定義 `window` 對象(O) ` [CQ.Ext.Window](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.Window)`):
-   * 基於預定義面板。
-   * 具有 **確定** 按鈕，可設定選定路徑的值並隱藏面板。
-* 窗戶在 **路徑** 的子菜單。
-* 所選路徑將從瀏覽欄位傳遞到 `show` 的子菜單。
-* 註冊為「」 `ejstbrowse`&#39; xtype:
+* 延伸 ` [CQ.Ext.form.TriggerField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TriggerField)`.
+* 定義瀏覽視窗，稱為 `browseWindow`.
+* 覆寫 ` [CQ.Ext.form.TriggerField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TriggerField)#onTriggerClick` 在按一下箭頭時顯示瀏覽視窗。
+* 定義 [CQ.Ext.tree.TreePanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.tree.TreePanel) 物件：
+   * 它會透過呼叫註冊於以下位置的servlet來取得其資料 `/bin/wcm/siteadmin/tree.json`.
+   * 其根目錄為&quot; `apps/extjstraining`「。
+* 定義 `window` 物件( ` [CQ.Ext.Window](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.Window)`)：
+   * 根據預先定義的面板。
+   * 具有 **確定** 按鈕，用來設定所選路徑的值並隱藏面板。
+* 視窗錨定在 **路徑** 欄位。
+* 選取的路徑會從瀏覽欄位傳遞至上的視窗 `show` 事件。
+* 將自身註冊為「 `ejstbrowse`&#39; xtype：
    `CQ.Ext.reg('ejstbrowse', Ejst.CustomBrowseField);`
 
-使用 **自定義樹瀏覽** 基於構件的對話框：
+若要使用 **自訂樹狀瀏覽** 以Widget為基礎的對話方塊：
 
-1. 替換 **自定義小部件** 元件 **自定義樹瀏覽** 對話框：按照 [示例2:單面板對話框](#example-single-panel-dialog)
-1. 編輯元件：對話框顯示如下：
+1. 取代對話方塊 **自訂Widget** 具有的元件 **自訂樹狀瀏覽** 對話方塊：請遵循以下說明的步驟： [範例2：單一面板對話方塊](#example-single-panel-dialog)
+1. 編輯元件：對話方塊顯示如下：
 
 ![screen_shot_2012-02-01at120104pm](assets/screen_shot_2012-02-01at120104pm.png)
 
-#### 示例3:富格文本編輯器(RTE)插件 {#example-rich-text-editor-rte-plug-in}
+#### 範例3：RTF編輯器(RTE)外掛程式 {#example-rich-text-editor-rte-plug-in}
 
-的 **富格文本編輯器(RTE)插件** based對話框是基於富格文本編輯器的對話框，該對話框具有用於在方括弧內插入某些自定義文本的自定義按鈕。 自定義文本可以由某些伺服器端邏輯分析（在本示例中未實現），例如添加在給定路徑上定義的某些文本：
+此 **RTF編輯器(RTE)外掛程式** 「基礎」對話方塊是以RTF編輯器為基礎的對話方塊，其中包含自訂按鈕，可在方括弧內插入一些自訂文字。 自訂文字可以使用某些伺服器端邏輯（此範例中未實作）來剖析，例如新增在給定路徑中定義的一些文字：
 
-的 **RTE插件** 基於對話框：
+此 **rte外掛程式** 對話方塊：
 
-* 由以下位置的retplugin節點定義：
+* 由以下位置的rteplugin節點定義：
    `/apps/extjstraining/components/customwidgets/rteplugin`
-* 通過請求以json格式呈現：
+* 透過請求以JSON格式呈現：
    `https://localhost:4502/apps/extjstraining/components/customwidgets/rteplugin.-1.json`
-* 的 `rtePlugins` 節點具有子節點 `inserttext` (節點類型= `nt:unstructured`)。 它有一個 `features` 定義RTE可用的插件功能。
+* 此 `rtePlugins` 節點具有子節點 `inserttext` (節點型別= `nt:unstructured`)的檔案名稱。 它有一個屬性，稱為 `features` 定義RTE可使用哪些外掛程式功能。
 
-RTE插件：
+RTE外掛程式：
 
-* 是JavaScript對象調用 `Ejst.InsertTextPlugin`
-* 定義於 `InsertTextPlugin.js` JavaScript檔案位於：
+* JavaScript物件稱為 `Ejst.InsertTextPlugin`
+* 在中定義 `InsertTextPlugin.js` JavaScript檔案位於：
    `/apps/extjstraining/clientlib/js/InsertTextPlugin.js`
-* 擴展 ` [CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)` 的雙曲餘切值。
-* 以下方法定義 ` [CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)` 對象，並在實現插件中被覆蓋：
-   * `getFeatures()` 返回插件所提供的所有功能的陣列。
-   * `initializeUI()` 將新按鈕添加到RTE工具欄。
-   * `notifyPluginConfig()` 在懸停按鈕時顯示標題和文本。
-   * `execute()` 按一下按鈕並執行插件操作時調用：它顯示一個窗口，用於定義要包括的文本。
-* `insertText()` 使用相應對話框對象插入文本 `Ejst.InsertTextPlugin.Dialog` （見以後）。
-* `executeInsertText()` 由 `apply()` 對話框的方法，在 **確定** 按鈕
-* 註冊為「」 `inserttext`&#39;插件：
+* 擴充 ` [CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)` 物件。
+* 下列方法可定義 ` [CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)` 物件和會在實作外掛程式中覆寫：
+   * `getFeatures()` 傳回外掛程式使其可用的所有功能陣列。
+   * `initializeUI()` 將新按鈕新增至RTE工具列。
+   * `notifyPluginConfig()` 當按鈕懸停時顯示標題和文字。
+   * `execute()` 當按一下按鈕並執行外掛程式動作時，就會呼叫：它會顯示一個視窗，用來定義要包含的文字。
+* `insertText()` 使用對應的對話方塊物件插入文字 `Ejst.InsertTextPlugin.Dialog` （請參閱後續內容）。
+* `executeInsertText()` 是由 `apply()` 對話方塊的方法，此動作是在 **確定** 已按一下按鈕。
+* 將自身註冊為「 `inserttext`&#39;外掛程式：
    `CQ.form.rte.plugins.PluginRegistry.register("inserttext", Ejst.InsertTextPlugin);`
-* 這樣 `Ejst.InsertTextPlugin.Dialog` 對象定義按一下插件按鈕時開啟的對話框。 該對話框由面板、窗體、文本欄位和兩個按鈕(**確定** 和 **取消**)。
+* 此 `Ejst.InsertTextPlugin.Dialog` 物件會定義按一下外掛程式按鈕時開啟的對話方塊。 此對話方塊包含面板、表單、文字欄位和兩個按鈕(**確定** 和 **取消**)。
 
-使用 **富格文本編輯器(RTE)插件** 基於對話框：
+若要使用 **RTF編輯器(RTE)外掛程式** 對話方塊：
 
-1. 替換 **自定義小部件** 元件 **富格文本編輯器(RTE)插件** 基於對話框：按照 [示例2:單面板對話框](#example-single-panel-dialog)
+1. 取代對話方塊 **自訂Widget** 具有的元件 **RTF編輯器(RTE)外掛程式** 以對話方塊為基礎：請遵循以下說明的步驟： [範例2：單一面板對話方塊](#example-single-panel-dialog)
 1. 編輯元件。
-1. 按一下右側的最後一個表徵圖（帶四個箭頭的表徵圖）。 輸入路徑並按一下 **確定**:路徑顯示在方括弧內([ ])。
-1. 按一下 **確定** 關閉富格文本編輯器。
+1. 按一下右側的最後一個圖示（四個箭頭的圖示）。 輸入路徑並按一下 **確定**：路徑會顯示在方括弧內([ ])。
+1. 按一下 **確定** 因此請關閉RTF編輯器。
 
-的 **富格文本編輯器(RTE)插件** 基於對話框顯示如下：
+此 **RTF編輯器(RTE)外掛程式** 對話方塊顯示如下：
 
 ![screen_shot_2012-02-01at120254pm](assets/screen_shot_2012-02-01at120254pm.png)
 
@@ -505,171 +505,171 @@ RTE插件：
 
 ### Tree Overview {#tree-overview}
 
-開箱即用 ` [CQ.Ext.tree.TreePanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.tree.TreePanel)` 對象提供樹形結構資料的樹形UI表示。 包含在 **使用ExtJS小部件** 包顯示如何使用 `TreePanel` 對象，在給定路徑下顯示JCR樹。 窗口本身可以停靠/取消停靠。 在本示例中，窗口邏輯嵌入到元件jsp中 &lt;script>&lt;/script> 標籤。
+現成可用 ` [CQ.Ext.tree.TreePanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.tree.TreePanel)` 物件提供樹狀結構資料的樹狀結構UI表示法。 樹狀結構概述元件包含在 **使用ExtJS Widget** 套件會顯示如何使用 `TreePanel` 物件，以在指定路徑下顯示JCR樹狀結構。 視窗本身可以停靠/取消停靠。 在此範例中，視窗邏輯內嵌在元件jsp中，介於 &lt;script>&lt;/script> 標籤之間。
 
-要包括 **樹概述** 元件到示例頁：
+若要包含 **樹狀結構概觀** 元件至範例頁面：
 
-1. 添加 **4. 樹概述** 元件到示例頁 **使用ExtJS小部件** 的 **側腳**。
-1. 元件將顯示：
-   * 標題，帶一些文字
-   * a **屬性** 連結：按一下以顯示儲存在儲存庫中的段落的屬性。 再次按一下以隱藏屬性。
-   * 一個浮動窗口，其中樹表示可展開的儲存庫。
+1. 新增 **4. 樹狀結構概觀** 元件至範例頁面 **使用ExtJS Widget** 索引標籤中的 **Sidekick**.
+1. 元件隨即顯示：
+   * 標題，包含一些文字
+   * a **屬性** 連結：按一下以顯示儲存在存放庫中的段落屬性。 再按一下可隱藏屬性。
+   * 一個浮動視窗，其中包含可展開之存放庫的樹狀結構表示。
 
 元件顯示如下：
 
 ![screen_shot_2012-02-01at120639pm](assets/screen_shot_2012-02-01at120639pm.png)
 
-樹概述元件：
+樹狀結構概觀元件：
 
 * 定義於：
    `/apps/extjstraining/components/treeoverview`
 
-* 該對話框允許您設定窗口的大小以及停靠或取消停靠窗口（請參閱下面的詳細資訊）。
+* 此對話方塊可讓您設定視窗大小，並停駐或取消停駐視窗（請參閱下列詳細資訊）。
 
-元件jsp:
+元件jsp：
 
-* 從儲存庫中檢索寬度、高度和停靠屬性。
-* 顯示有關樹概述資料格式的一些文本。
-* 將窗口邏輯嵌入到JavaScript標籤之間的元件jsp中。
+* 從存放庫中擷取寬度、高度和停駐屬性。
+* 顯示樹狀結構概觀資料格式的部分文字。
+* 在JavaScript標籤之間將視窗邏輯嵌入到元件jsp中。
 * 定義於：
    `apps/extjstraining/components/treeoverview/content.jsp`
 
-元件jsp中嵌入的JavaScript代碼：
+內嵌在元件jsp中的JavaScript程式碼：
 
-* 定義 `tree` 通過嘗試從頁面檢索樹窗口對象。
-* 如果顯示樹的窗口不存在， `treePanel` ([CQ.Ext.tree.TreePanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.tree.TreePanel))已建立：
-   * `treePanel` 包含用於建立窗口的資料。
-   * 通過調用在以下位置註冊的servlet來檢索資料：
+* 定義 `tree` 物件，嘗試從頁面擷取樹狀結構視窗。
+* 如果顯示樹狀結構的視窗不存在， `treePanel` ([CQ.Ext.tree.TreePanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.tree.TreePanel))已建立：
+   * `treePanel` 包含用來建立視窗的資料。
+   * 透過呼叫註冊於以下位置的servlet來擷取資料：
       `/bin/wcm/siteadmin/tree.json`
-* 的 `beforeload` 偵聽器確保已載入所選節點。
-* 的 `root` 對象設定路徑 `apps/extjstraining` 作為樹根。
-* `tree` ( ` [CQ.Ext.Window](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.Window)`)是基於預定義 `treePanel`，並顯示為：
+* 此 `beforeload` 監聽器會確定已載入選取的節點。
+* 此 `root` 物件設定路徑 `apps/extjstraining` 作為樹狀根目錄。
+* `tree` ( ` [CQ.Ext.Window](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.Window)`)是根據預先定義的 `treePanel`，和的顯示方式：
    `tree.show();`
-* 如果窗口存在，則根據從儲存庫檢索到的寬度、高度和停靠屬性顯示該窗口。
+* 如果視窗存在，則會根據從存放庫擷取的寬度、高度和停駐屬性來顯示視窗。
 
-元件對話框：
+元件對話方塊：
 
-* 顯示一個頁籤，其中包含兩個欄位以設定樹概覽窗口的大小（寬度和高度），以及一個欄位以停靠/取消停靠窗口
-* 由節點定義(節點類型= `cq:Dialog`, xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`)。
-* 面板具有大小域構件(節點類型= `cq:Widget`, xtype = ` [sizefield](/help/sites-developing/xtypes.md#sizefield)`)和選擇小部件(節點類型= `cq:Widget`, xtype = ` [selection](/help/sites-developing/xtypes.md#selection)`，類型= `radio`)，其中包含兩個選項(true/false)
-* 由對話框節點在以下位置定義：
+* 顯示一個標籤，內含兩個欄位以設定樹狀結構概觀視窗的大小（寬度和高度），以及一個欄位以固定/取消固定視窗
+* 由節點定義(節點型別= `cq:Dialog`， xtype = ` [panel](/help/sites-developing/xtypes.md#panel)`)。
+* 面板具有sizefield widget (節點型別= `cq:Widget`， xtype = ` [sizefield](/help/sites-developing/xtypes.md#sizefield)`)和選取Widget (節點型別= `cq:Widget`， xtype = ` [selection](/help/sites-developing/xtypes.md#selection)`，型別= `radio`)有兩個選項(true/false)
+* 由對話方塊節點定義於：
    `/apps/extjstraining/components/treeoverview/dialog`
-* 通過請求以json格式呈現：
+* 透過請求以JSON格式呈現：
    `https://localhost:4502/apps/extjstraining/components/treeoverview/dialog.-1.json`
 * 顯示如下：
 
 ![screen_shot_2012-02-01at120745pm](assets/screen_shot_2012-02-01at120745pm.png)
 
-### 網格概述 {#grid-overview}
+### 格點概觀 {#grid-overview}
 
-網格面板以行和列的表格格式表示資料。 它由以下幾部分組成：
+格點面板以表格格式的列和欄表示資料。 它由下列專案組成：
 
-* 儲存：保存資料記錄（行）的模型。
-* 列模型：柱子的構成。
-* 視圖：封裝用戶介面。
-* 選擇模型：選擇行為。
+* 儲存：儲存資料記錄（列）的模型。
+* 欄模型：欄組成。
+* 檢視：封裝使用者介面。
+* 選取範圍模型：選取範圍行為。
 
-包含在 **使用ExtJS小部件** 包顯示了如何以表格格式顯示資料：
+包含在「 」中的「網格概述」元件 **使用ExtJS Widget** 封裝會顯示如何以表格格式顯示資料：
 
-* 示例1使用靜態資料。
-* 示例2使用從儲存庫檢索到的資料。
+* 範例1使用靜態資料。
+* 範例2使用從存放庫擷取的資料。
 
-要將「網格概覽」元件包括到示例頁中，請執行以下操作：
+將「網格概述」元件加入範例頁面：
 
-1. 添加 **5. 網格概述** 元件到示例頁 **使用ExtJS小部件** 的 **側腳**。
-1. 元件將顯示：
-   * 帶有文本的標題
-   * a **屬性** 連結：按一下以顯示儲存在儲存庫中的段落的屬性。 再次按一下以隱藏屬性。
-   * 包含表格格式的資料的浮動窗口。
+1. 新增 **5. 格點概觀** 元件至範例頁面 **使用ExtJS Widget** 索引標籤中的 **Sidekick**.
+1. 元件隨即顯示：
+   * 包含一些文字的標題
+   * a **屬性** 連結：按一下以顯示儲存在存放庫中的段落屬性。 再按一下可隱藏屬性。
+   * 包含表格格式資料的浮動視窗。
 
 元件顯示如下：
 
 ![screen_shot_2012-02-01at121109pm](assets/screen_shot_2012-02-01at121109pm.png)
 
-#### 示例1:預設網格 {#example-default-grid}
+#### 範例1：預設格線 {#example-default-grid}
 
-在現成版本中， **網格概述** 元件以表格格式顯示包含靜態資料的窗口。 在本示例中，邏輯以兩種方式嵌入到元件jsp中：
+在開箱即用版本中， **格點概觀** 元件會以表格格式顯示含有靜態資料的視窗。 在此範例中，邏輯以兩種方式內嵌在元件jsp中：
 
-* 泛型邏輯在 &lt;script>&lt;/script> 標籤
+* 泛型邏輯定義於 &lt;script>&lt;/script> 標籤
 * the specific logic is available in a separate .js file and is linked to in the jsp. This setup lets you switch between the two logic (static/dynamic) by commenting the desired &lt;script> tags.
 
-網格概述元件：
+「網格概述」元件：
 
 * 定義於：
    `/apps/extjstraining/components/gridoverview`
-* 該對話框允許您設定窗口的大小，以及停靠或取消停靠窗口。
+* 對話方塊可讓您設定視窗大小，並停駐或取消停駐視窗。
 
-元件jsp:
+元件jsp：
 
-* 從儲存庫中檢索寬度、高度和停靠屬性。
-* 顯示一些文本作為網格概述資料格式的簡介。
-* 引用定義GridPanel對象的JavaScript代碼：
+* 從存放庫中擷取寬度、高度和停駐屬性。
+* 顯示一些文字作為網格概述資料格式的簡介。
+* 參考定義GridPanel物件的JavaScript程式碼：
    `<script type="text/javascript" src="/apps/extjstraining/components/gridoverview/defaultgrid.js"></script>`
 
-   `defaultgrid.js` 將某些靜態資料定義為GridPanel對象的基。
-* 在JavaScript標籤之間嵌入JavaScript代碼，該標籤定義使用GridPanel對象的Window對象。
+   `defaultgrid.js` 將某些靜態資料定義為GridPanel物件的基底。
+* 在定義使用GridPanel物件的Window物件的JavaScript標籤之間嵌入JavaScript程式碼。
 * 定義於：
    `apps/extjstraining/components/gridoverview/content.jsp`
 
-元件jsp中嵌入的JavaScript代碼：
+內嵌在元件jsp中的JavaScript程式碼：
 
-* 定義 `grid` 通過嘗試從頁面中檢索窗口元件：
+* 定義 `grid` 物件，嘗試從頁面擷取視窗元件：
    `var grid = CQ.Ext.getCmp("<%= node.getName() %>-grid");`
-* 如果 `grid` 不存在，a [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) 對象(O) `gridPanel`)通過調用 `getGridPanel()` 方法（請參閱下文）。 此方法在中定義 `defaultgrid.js`。
-* `grid` 是 ` [CQ.Ext.Window](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.Window)` 對象，基於預定義的GridPanel，並顯示： `grid.show();`
-* 如果 `grid` 存在，它根據從儲存庫檢索到的寬度、高度和停靠屬性顯示。
+* 若 `grid` 不存在， [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) 物件( `gridPanel`)的定義方式為呼叫 `getGridPanel()` 方法（請參閱下文）。 此方法定義於 `defaultgrid.js`.
+* `grid` 是 ` [CQ.Ext.Window](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.Window)` 物件，根據預先定義的GridPanel顯示： `grid.show();`
+* 若 `grid` 存在，會根據從存放庫擷取的寬度、高度和停駐屬性來顯示。
 
-JavaScript檔案( `defaultgrid.js`)在元件jsp中引用，定義 `getGridPanel()` 由嵌入在JSP中的指令碼調用並返回 ` [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)` 對象，基於靜態資料。 邏輯如下：
+JavaScript檔案( `defaultgrid.js`)元件jsp中參照的)定義 `getGridPanel()` 方法，該方法會由內嵌在JSP中的指令碼呼叫，並傳回 ` [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)` 物件，根據靜態資料。 其邏輯如下：
 
-* `myData` 是一個靜態資料陣列，格式為五列四行的表。
-* `store` 是 `CQ.Ext.data.Store` 使用的對象 `myData`。
-* `store` 載入到記憶體中：
+* `myData` 是一系列靜態資料，格式為五欄四列的表格。
+* `store` 是 `CQ.Ext.data.Store` 使用中的物件 `myData`.
+* `store` 載入記憶體中：
    `store.load();`
-* `gridPanel` 是 ` [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)` 使用的對象 `store`:
-   * 列寬始終會重新比例：
+* `gridPanel` 是 ` [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)` 使用中的物件 `store`：
+   * 欄寬一律會按比例分配：
       `forceFit: true`
-   * 一次只能選擇一行：
+   * 一次只能選取一列：
       `singleSelect:true`
 
-#### 示例2:引用搜索網格 {#example-reference-search-grid}
+#### 範例2：參照搜尋格線 {#example-reference-search-grid}
 
-安裝軟體包時， `content.jsp` 的 **網格概述** 元件顯示基於靜態資料的網格。 可以修改元件以顯示具有以下特徵的網格：
+安裝套件時， `content.jsp` 的 **格點概觀** 元件會顯示以靜態資料為基礎的格線。 可以修改元件，以顯示具有以下特性的格點：
 
-* 有三列。
-* 基於通過調用Servlet從儲存庫檢索到的資料。
-* 可以編輯最後一列的單元格。 值保留在 `test` 由第一列中顯示的路徑定義的節點下的屬性。
+* 有三欄。
+* 是以呼叫servlet從存放庫擷取的資料為基礎。
+* 可以編輯最後一欄的儲存格。 值會儲存在 `test` 屬性，該屬性位於由第一欄中顯示的路徑所定義的節點下方。
 
-如前一節中所述，窗口對象將獲取其 ` [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)` 通過調用 `getGridPanel()` 方法 `defaultgrid.js` 檔案 `/apps/extjstraining/components/gridoverview/defaultgrid.js`。 **網格概述**元件為 `getGridPanel()` 方法，在中定義 `referencesearch.js` 檔案 `/apps/extjstraining/components/gridoverview/referencesearch.js`。 通過切換元件jsp中引用的.js檔案，網格基於從儲存庫檢索到的資料。
+如先前一節中所述，視窗物件會取得其 ` [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)` 物件，方法是呼叫 `getGridPanel()` 在中定義的方法 `defaultgrid.js` 檔案位於 `/apps/extjstraining/components/gridoverview/defaultgrid.js`. **Grid Overview**元件為以下專案提供不同的實作： `getGridPanel()` 方法，定義於 `referencesearch.js` 檔案位於 `/apps/extjstraining/components/gridoverview/referencesearch.js`. 透過切換在元件jsp中參照的.js檔案，網格會以從儲存庫中擷取的資料為基礎。
 
-切換元件jsp中引用的.js檔案：
+切換在元件jsp中參照的.js檔案：
 
-1. 在 **CRXDE Lite**，也請參見Wiki頁。 `content.jsp` 檔案，注釋包含 `defaultgrid.js` 檔案，因此如下所示：
+1. 在 **CRXDE Lite**，在 `content.jsp` 檔案中，註釋包含 `defaultgrid.js` 檔案，因此其外觀如下：
    `<!-- script type="text/javascript" src="/apps/extjstraining/components/gridoverview/defaultgrid.js"></script-->`
-1. 從包含注釋的行中刪除注釋 `referencesearch.js` 檔案，因此如下所示：
+1. 從包含 `referencesearch.js` 檔案，因此其外觀如下：
    `<script type="text/javascript" src="/apps/extjstraining/components/gridoverview/referencesearch.js"></script>`
 1. 儲存變更。
-1. 刷新示例頁。
+1. 重新整理範例頁面。
 
 元件顯示如下：
 
 ![screen_shot_2012-02-01at121429pm](assets/screen_shot_2012-02-01at121429pm.png)
 
-元件jsp中引用的JavaScript代碼( `referencesearch.js`)定義 `getGridPanel()` 從元件jsp調用的方法並返回 ` [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)` 對象，基於從儲存庫動態檢索的資料。 中的邏輯 `referencesearch.js` 將某些動態資料定義為GridPanel的基：
+元件jsp中參考的JavaScript程式碼( `referencesearch.js`)定義 `getGridPanel()` 從元件jsp呼叫方法並傳回 ` [CQ.Ext.grid.GridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)` 物件，根據從存放庫動態擷取的資料。 中的邏輯 `referencesearch.js` 將某些動態資料定義為GridPanel的基礎：
 
-* `reader` 是 ` [CQ.Ext.data.JsonReader](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.data.JsonReader)`以json格式讀取三列的servlet響應的對象。
-* `cm` 是 ` [CQ.Ext.grid.ColumnModel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.ColumnModel)` 對象。
-「Test」列單元格可以編輯，因為它們是使用編輯器定義的：
+* `reader` 是 ` [CQ.Ext.data.JsonReader](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.data.JsonReader)`物件，讀取三欄的json格式的servlet回應。
+* `cm` 是 ` [CQ.Ext.grid.ColumnModel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.ColumnModel)` 物件，共三欄。
+「測試」欄儲存格可以編輯，因為它們是使用編輯器定義的：
    `editor: new [CQ.Ext.form.TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TextField)({})`
-* 列是可排序的：
+* 欄可排序：
    `cm.defaultSortable = true;`
-* `store` 是 ` [CQ.Ext.data.GroupingStore](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.data.GroupingStore)` 對象：
-   * 它通過調用在「 」註冊的servlet獲取其資料 `/bin/querybuilder.json`&quot;，其中有幾個用於篩選查詢的參數
-   * 基於 `reader`預先定義
-   * 表按「 」排序&#x200B;**jcr：路徑**「列，按升序排列
-* `gridPanel` 是 ` [CQ.Ext.grid.EditorGridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.EditorGridPanel)` 可編輯的對象：
-   * 它基於預定義 `store` 在柱模型上 `cm`
-   * 一次只能選擇一行：
+* `store` 是 ` [CQ.Ext.data.GroupingStore](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.data.GroupingStore)` 物件：
+   * 它會透過呼叫在「」註冊的servlet來取得其資料 `/bin/querybuilder.json`&quot;，以及一些用於篩選查詢的引數
+   * 它基於 `reader`，預先定義
+   * 表格是根據&#39;**jcr：path**&#39;欄的遞增順序
+* `gridPanel` 是 ` [CQ.Ext.grid.EditorGridPanel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.EditorGridPanel)` 可編輯的物件：
+   * 其基礎為預先定義的 `store` 在欄模型上 `cm`
+   * 一次只能選取一列：
       `sm: new [CQ.Ext.grid.RowSelectionModel](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.grid.RowSelectionModel)({singleSelect:true})`
-   * 這樣 `afteredit` 偵聽器確保在「」中的單元格後&#x200B;**Test**&quot;列已編輯：
-      * 屬性&#39; `test`「 」所定義的路徑上的節點的&#x200B;**jcr：路徑**「 」列在儲存庫中設定，其值為
-      * 如果POST成功，則值將添加到 `store` 對象，否則被拒絕
+   * 此 `afteredit` 接聽程式會確保在「」中的儲存格之後&#x200B;**測試**「 」欄已編輯：
+      * 屬性&#39; `test`「 」所定義路徑下節點的「 」**jcr：path**「 」欄是使用儲存格的值設定在存放庫中
+      * 如果POST成功，則會將該值新增至 `store` 物件，否則會遭到拒絕

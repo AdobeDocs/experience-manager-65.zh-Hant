@@ -11,18 +11,18 @@ ht-degree: 10%
 
 # AEM 的移難排解 {#troubleshooting-aem}
 
-## 對作者實例效能進行故障排除 {#performance}
+## 疑難排解作者執行個體效能 {#performance}
 
-[請參閱本指南和有關對作者實例進行AEM故障排除的提示。](/help/sites-authoring/troubleshooting.md)
+[請參閱本指南和疑難排解AEM作者執行個體的提示。](/help/sites-authoring/troubleshooting.md)
 
-## 管理問題疑難解答 {#administering}
+## 疑難排解管理問題 {#administering}
 
-[請參閱本指南和中有關管理問題故障排除的AEM提示。](/help/sites-administering/troubleshoot.md)
+[請參閱本指南和提示，以疑難排解AEM中的管理問題。](/help/sites-administering/troubleshoot.md)
 
-## 日誌故AEM障排除 {#logs}
+## 疑難排解AEM記錄檔 {#logs}
 
-[請參閱本指南和日誌故障排除AEM提示。](/help/sites-administering/troubleshooting.md)
+[請參閱本指南和疑難排解AEM記錄的提示。](/help/sites-administering/troubleshooting.md)
 
-## 排除複製故障 {#replication}
+## 疑難排解復寫 {#replication}
 
-[請參閱本指南和中有關排除複製故障的提AEM示。](/help/sites-deploying/troubleshoot-rep.md)
+[請參閱本指南和提示，以針對AEM中的復寫進行疑難排解。](/help/sites-deploying/troubleshoot-rep.md)

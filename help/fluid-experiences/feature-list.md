@@ -1,6 +1,6 @@
 ---
-title: 流AEM體體驗特徵清單
-description: 流體體驗功能清單
+title: AEM Fluid Experience功能清單
+description: 流動體驗功能清單
 index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
@@ -11,39 +11,39 @@ ht-degree: 8%
 
 ---
 
-# 流AEM體體驗特徵清單{#aem-fluid-experiences-feature-list}
+# AEM Fluid Experience功能清單{#aem-fluid-experiences-feature-list}
 
-Adobe Experience ManagerFluid Experiences利用AEM Sites,Dynamic Media和AEM Assets的強大功能集AEM，為無頭內容交付提供強大的解決方案。
+Adobe Experience Manager Fluid Experiences運用AEM Sites、AEM Dynamic Media和AEM Assets的強大功能集，為Headless內容傳送提供強大的解決方案。
 
-Fluid ExperiencesAEM將自身與經典的AEM區別在於，只處理無頭遞送使用案例。 通過以下產品，可AEM以獲得主題內容創作和交付以及對混合使用案例的強大支援 [AEM Sites、資產和Dynamic Media解決方案。](https://experienceleague.adobe.com/docs/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences與傳統AEM的區別在於，它只處理Headless傳送使用案例。 Headful內容製作和交付，以及對混合使用案例的AEM強大支援，都隨附於 [完整的AEM Sites、Assets和Dynamic Media解決方案。](https://experienceleague.adobe.com/docs/experience-manager-65/user-guide/home.html)
 
-下表定義了Fluid Experiences的功AEM能，並連結到相關支援文檔。
+下表定義AEM Fluid Experiences的功能，並連結至相關支援檔案。
 
 * [存放庫](#repository-features)
-* [訪問、 API和交付](#access-api-and-delivery-features)
-* [管理和整合](#admin-and-integration-features)
-* [分析和個性化](#analytics-and-personalization)
+* [存取、API和傳送](#access-api-and-delivery-features)
+* [管理與整合](#admin-and-integration-features)
+* [Analytics和個人化](#analytics-and-personalization)
 
 >[!NOTE]
 >
->Fluid ExperiencesAEM是功能的子AEM集。 這些表中連結的功能可能包括包含在Fluid Experience中AEM但不包含在AEMFluid Experience中的附加功能。
+>AEM Fluid Experiences是AEM功能的子集。 這些表格中連結的功能可能包括AEM中包含的其他功能，但不包括AEM Fluid Experiences中的其他功能。
 
-## 儲存庫功能 {#repository-features}
+## 存放庫功能 {#repository-features}
 
 |  |
 |---|
-| [內容儲存庫](/help/assets/manage-assets.md) |
-| [資產類型](/help/assets/assets-formats.md) |
-| [影像格式副本](/help/assets/image-presets.md) |
-| [元資料和標籤管理](/help/assets/metadata.md) |
+| [內容存放庫](/help/assets/manage-assets.md) |
+| [資產型別](/help/assets/assets-formats.md) |
+| [影像轉譯](/help/assets/image-presets.md) |
+| [中繼資料和標籤管理](/help/assets/metadata.md) |
 | [搜尋](/help/assets/manage-assets.md) |
-| [集合](/help/assets/manage-assets.md) 和 [複選框](/help/assets/light-box.md) |
+| [集合](/help/assets/manage-assets.md) 和 [Lightbox](/help/assets/light-box.md) |
 | [設定檔](/help/assets/processing-profiles.md) |
-| [版本控制項](/help/assets/manage-assets.md) |
-| [重複檢測](/help/assets/duplicate-detection.md) |
+| [版本控制](/help/assets/manage-assets.md) |
+| [重複資料偵測](/help/assets/duplicate-detection.md) |
 | [智慧標記](/help/assets/enhanced-smart-tags.md) |
 
-## 訪問、 API和交付功能 {#access-api-and-delivery-features}
+## 存取、API和傳送功能 {#access-api-and-delivery-features}
 
 |  |
 |---|
@@ -51,8 +51,8 @@ Fluid ExperiencesAEM將自身與經典的AEM區別在於，只處理無頭遞送
 | [結構化內容模型](/help/assets/content-fragments/content-fragments.md) |
 | [內容服務](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=en) |
 | [體驗片段](/help/sites-authoring/experience-fragments.md) |
-| 結構化內容的HTTP API（讀取） |
-| 結構化內容的HTTP API(CRUD) |
+| 結構化內容的HTTP API （讀取） |
+| 適用於結構化內容(CRUD)的HTTP API |
 | [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) |
 | [Dynamic Media](/help/assets/dynamic-media.md) |
 
@@ -66,25 +66,25 @@ Fluid ExperiencesAEM將自身與經典的AEM區別在於，只處理無頭遞送
 | [內容翻譯](/help/sites-administering/translation.md) |
 | [監控](/help/sites-deploying/monitoring-and-maintaining.md) |
 | [備份](/help/sites-administering/backup-and-restore.md) |
-| [雲管理器](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) |
+| [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) |
 | [PIM整合](/help/sites-authoring/managing-product-information.md) |
-| [項目和任務](/help/sites-authoring/projects.md) |
+| [專案與任務](/help/sites-authoring/projects.md) |
 | [工作流程](/help/sites-administering/workflows-starting.md) |
-| 連接（雲服務） |
+| 連線能力（雲端服務） |
 
-## 分析和個性化 {#analytics-and-personalization}
+## Analytics和個人化 {#analytics-and-personalization}
 
 |  |
 |---|
 | [資產報告](/help/assets/asset-reports.md) |
-| 增強的見解，由Adobe Analytics支援 |
-| 增強的見解，由Adobe Target支援 |
+| Adobe Analytics支援的增強型深入分析 |
+| Adobe Target支援的增強型深入分析 |
 
 ## 了解更多 {#learn-more}
 
-* [無頭使用箱的流體體驗](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=en)
-* [內AEM容服務：怎麼，怎麼，怎麼？](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
-* [使用Content Services](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
-* [開發移動應用](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
-* [第三方訪問常見問題](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=en)
+* [無領導者使用案例的流暢體驗](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=en)
+* [AEM Content Service：什麼、為什麼和如何進行？](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
+* [使用內容服務](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
+* [開發行動應用程式](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
+* [第三方存取常見問題集](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=en)
 * [使用Sling API](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)

@@ -1,7 +1,7 @@
 ---
-title: 括弧AEM擴展
+title: AEM Brackets擴充功能
 seo-title: AEM Brackets Extension
-description: 括弧AEM擴展
+description: AEM Brackets擴充功能
 seo-description: null
 uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
@@ -17,148 +17,148 @@ ht-degree: 2%
 
 ---
 
-# 括弧AEM擴展{#aem-brackets-extension}
+# AEM Brackets擴充功能{#aem-brackets-extension}
 
 ## 概觀 {#overview}
 
-方括AEM號擴展提供了一個平滑的工作流AEM程來編輯元件和客戶端庫，並利用 [括弧](https://brackets.io/) 代碼編輯器，它允許從代碼編輯器內訪問Photoshop檔案和層。 擴展提供的輕鬆同步（不需要Maven或File Vault）提高了開發人員效率，還幫助知識有限的前AEM端開發人員參與項目。 此擴展還為 [HTML模板語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)這就消除了JSP的複雜性，使元件開發更容易、更安全。
+AEM Brackets擴充功能提供流暢的工作流程，讓您輕鬆編輯AEM元件和使用者端程式庫，並運用 [括弧](https://brackets.io/) 程式碼編輯器，可讓您從程式碼編輯器存取Photoshop檔案和圖層。 擴充功能提供的輕鬆同步處理（不需要Maven或File Vault）可提高開發人員效率，也有助於具備AEM有限知識的前端開發人員參與專案。 此擴充功能也提供以下專案的一些支援： [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，可降低JSP的複雜性，讓元件開發更容易、更安全。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
 ### 功能 {#features}
 
-「括弧」(Crakets)「延伸AEM」(Extension)的主要功能是：
+AEM Brackets擴充功能的主要功能包括：
 
-* 將更改的檔案自動同步到AEM開發實例。
-* 檔案和資料夾的手動雙向同步。
-* 項目的完整內容包同步。
-* 用於表達式和 `data-sly-*` 塊語句。
+* 將變更的檔案自動同步至AEM開發執行個體。
+* 手動雙向同步檔案和資料夾。
+* 專案的完整內容套件同步。
+* 運算式和的HTL程式碼完成 `data-sly-*` 區塊陳述式。
 
-此外，方括弧還為字型端開發AEM人員提供了許多有用功能：
+此外，Brackets還為AEM前端開發人員提供許多有用的功能：
 
-* Photoshop檔案支援從PSD檔案中提取資訊，如圖層、測量、顏色、字型、文本等。
-* PSD中的代碼提示，以便輕鬆地在代碼中重用提取的資訊。
-* CSS預處理器支援，如LESS和SCSS。
-* 還有數以百計的擴展，涵蓋更具體的需求。
+* Photoshop檔案支援從PSD檔案擷取資訊，例如圖層、測量、顏色、字型、文字等。
+* 來自PSD的程式碼提示，可輕鬆在程式碼中重複使用此擷取的資訊。
+* CSS前置處理器支援，例如LESS和SCSS。
+* 以及數百種其他擴充功能，可滿足更特殊的需求。
 
 ## 安裝 {#installation}
 
 ### 括弧 {#brackets}
 
-括弧延AEM伸支援1.0或更高版本的括弧。
+AEM Brackets擴充功能支援Brackets 1.0版或更新版本。
 
-從下載最新的括弧版本 [括弧.io](https://brackets.io/)。
+從下載最新的Brackets版本 [brackets.io](https://brackets.io/).
 
-### 擴展 {#the-extension}
+### 擴充功能 {#the-extension}
 
-要安裝擴展，請按如下方式繼續：
+若要安裝擴充功能，請依照下列步驟進行：
 
-1. 開啟括弧。 在菜單中 **檔案**&#x200B;選中 **Extension Manager...**
-1. 輸入 **AEM** 在搜索欄中查找 **括弧AEM擴展**。
+1. 開啟括弧。 在功能表中 **檔案**，選取 **Extension Manager...**
+1. 輸入 **AEM** 在搜尋列中尋找 **AEM Brackets擴充功能**.
 
    ![chlimage_1-54](assets/chlimage_1-54a.png)
 
-1. 按一下 **安裝**。
-1. 安裝完成後關閉對話框和Extension Manager。
+1. 按一下 **安裝**.
+1. 關閉對話方塊，並在安裝完成後進行Extension Manager。
 
 ## 快速入門 {#getting-started}
 
-### 內容包項目 {#the-content-package-project}
+### Content-Package專案 {#the-content-package-project}
 
-安裝擴展後，可以通過從檔案系統AEM中開啟帶有方括弧的內容包資料夾來開始開發元件。
+安裝擴充功能後，您可以從帶有Brackets的檔案系統開啟content-package資料夾，以開始開發AEM元件。
 
-項目必須至少包含：
+專案必須至少包含：
 
 1. a `jcr_root` 資料夾(例如 `myproject/jcr_root`)
 
-1. a `filter.xml` 檔案(例如 `myproject/META-INF/vault/filter.xml`);的 `filter.xml` 檔案請參閱 [工作區篩選器定義](https://jackrabbit.apache.org/filevault/filter.html)。
+1. a `filter.xml` 檔案(例如： `myproject/META-INF/vault/filter.xml`)；以取得有關架構的詳細資訊 `filter.xml` 檔案請參閱 [工作區篩選器定義](https://jackrabbit.apache.org/filevault/filter.html).
 
-括弧中 **檔案** 菜單，選擇 **開啟資料夾……** 然後選擇 `jcr_root` 資料夾或父項目資料夾。
+在方括弧中&#39; **檔案** 功能表，選擇 **開啟資料夾……** 並選取 `jcr_root` 資料夾或父專案資料夾。
 
 >[!NOTE]
 >
->如果您沒有包含內容包的項目，可以嘗試 [HTL TodoMVC示例](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)。 在GitHub上，按一下 **下載ZIP**，在本地解壓檔案，並按上面的說明開啟 `jcr_root` 方括弧中的。 然後按照以下步驟設定 **項目設定**，並通過執行以下操作將整個AEM包上載到開發實例 **導出內容包** 按照「完整內容包同步」部分的進一步說明。
+>如果您沒有自己的專案與內容封裝，您可以嘗試 [HTL TodoMVC範例](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc). 在GitHub上，按一下 **下載ZIP**，將檔案解壓縮到本機，然後依照上述指示，開啟 `jcr_root` 方括弧內的資料夾。 然後依照下列步驟設定 **專案設定**，最後將整個套件上傳至您的AEM開發執行個體。 **匯出內容封裝** 如完整內容套件同步化一節中進一步指示。
 >
->完成這些步驟後，您應能夠訪問 `/content/todo.html` 開發實AEM例上的URL，您可以開始對方括弧中的代碼進行修改，並查看在Web瀏覽器進行刷新後如何立即將更改同步到服AEM務器。
+>執行這些步驟後，您應該就能存取 `/content/todo.html` AEM開發執行個體上的URL，您可以開始在Brackets中修改程式碼，並瞭解在網頁瀏覽器中重新整理後，變更如何立即同步至AEM伺服器。
 
-### 項目設定 {#project-settings}
+### 專案設定 {#project-settings}
 
-為了將內容與開發實例同步，AEM需要定義項目設定。 通過 **AEM** 菜單和選擇 **項目設定……**
+為了將您的內容同步到AEM開發執行個體以及從中同步內容，您需要定義您的專案設定。 您可以前往 **AEM** 功能表並選取 **專案設定……**
 
 ![chlimage_1-55](assets/chlimage_1-55a.png)
 
-項目設定允許定義：
+專案設定允許定義：
 
-1. 伺服器URL(例如 `http://localhost:4502`)
-1. 是否容忍沒有有效HTTPS證書的伺服器（未選中，除非需要）
-1. 用於同步內容的用戶名(例如 `admin`)
-1. 用戶的密碼(例如 `admin`)
+1. 伺服器URL (例如 `http://localhost:4502`)
+1. 是否容忍沒有有效HTTPS憑證的伺服器（除非必要，否則請保持未勾選狀態）
+1. 用於同步內容的使用者名稱(例如 `admin`)
+1. 使用者的密碼(例如 `admin`)
 
 ## 同步內容 {#synchronizing-content}
 
-方括弧AEM擴展為檔案和資料夾提供了下列類型的內容同步，這些檔案和資料夾由中定義的篩選規則所允許 `filter.xml`:
+AEM Brackets擴充功能針對中定義的篩選規則所允許的檔案和資料夾，提供下列型別的內容同步 `filter.xml`：
 
-### 已更改檔案的自動同步 {#automated-synchronization-of-changed-files}
+### 自動同步已變更的檔案 {#automated-synchronization-of-changed-files}
 
-這將僅同步從方括弧到實例的AEM更改，但永遠不會同步。
+這只會同步從Brackets到AEM例項的變更，反之則不會。
 
 ### 手動雙向同步 {#manual-bidirectional-synchronization}
 
-在「項目瀏覽器」中，按一下右鍵任何檔案或資料夾，開啟上下文菜單， **導出到伺服器** 或 **從伺服器導入** 選項。
+在「專案總管」中，以滑鼠右鍵按一下任何檔案或資料夾，然後開啟 **匯出至伺服器** 或 **從伺服器匯入** 選項可供存取。
 
 ![chlimage_1-56](assets/chlimage_1-56a.png)
 
 >[!NOTE]
 >
->如果所選條目位於 `jcr_root` 資料夾 **導出到伺服器** 和 **從伺服器導入** 上下文菜單條目被禁用。
+>如果選取的專案在 `jcr_root` 資料夾， **匯出至伺服器** 和 **從伺服器匯入** 內容功能表專案已停用。
 
-### 完整內容包同步 {#full-content-package-synchronization}
+### 完整內容套件同步 {#full-content-package-synchronization}
 
-在 **AEM** 的子菜單。 **導出內容包** 或 **導入內容包** 選項允許將整個項目與伺服器同步。
+在 **AEM** 功能表， **匯出內容封裝** 或 **匯入內容封裝** 選項可讓整個專案與伺服器同步。
 
 ![chlimage_1-57](assets/chlimage_1-57a.png)
 
 ### 同步狀態 {#synchronization-status}
 
-「方AEM括弧擴展」在「方括弧」窗口右側的工具欄中顯示一個通知表徵圖，該表徵圖指示上次同步的狀態：
+AEM Brackets擴充功能在Brackets視窗右側的工具列中有一個通知圖示，可指出上次同步處理的狀態：
 
-* 綠色 — 所有檔案都已成功同步
-* 藍色 — 同步操作正在進行
-* 黃色 — 某些檔案未同步
-* 紅色 — 未同步任何檔案
+* 綠色 — 所有檔案已成功同步
+* 藍色 — 同步處理作業正在進行中
+* 黃色 — 部分檔案未同步
+* 紅色 — 未同步處理任何檔案
 
-按一下通知表徵圖將開啟「同步狀態」報告對話框，其中列出了每個已同步檔案的所有狀態。
+按一下通知圖示會開啟[同步化狀態]報告對話方塊，其中列出每個已同步檔案的所有狀態。
 
 ![chlimage_1-58](assets/chlimage_1-58a.png)
 
 >[!NOTE]
 >
->只有篩選規則中標籤為包含的內容 `filter.xml` 將同步，而不管使用的同步方法。
+>僅限被下列專案的篩選規則標籤為包含的內容： `filter.xml` 將會進行同步，無論使用何種同步方法。
 >
->此外， `.vltignore` 支援將內容從同步到儲存庫和從儲存庫中排除。
+>此外， `.vltignore` 支援檔案來排除與存放庫同步和從存放庫同步的內容。
 
-## 編輯HTL代碼 {#editing-htl-code}
+## 編輯HTL程式碼 {#editing-htl-code}
 
-方括弧AEM擴展還具有一些自動完成功能，可簡化HTL屬性和表達式的編寫。
+AEM Brackets擴充功能也提供一些自動完成功能，以便寫入HTL屬性和運算式。
 
 ### 屬性自動完成 {#attribute-auto-completion}
 
-1. 在HTML屬性中，鍵入 `sly`。 屬性自動完成為 `data-sly-`。
-1. 在下拉清單中選擇HTL屬性。
+1. 在HTML屬性中，輸入 `sly`. 屬性會自動完成至 `data-sly-`.
+1. 在下拉式清單中選取HTL屬性。
 
-### 表達式自動完成 {#expression-auto-completion}
+### 運算式自動完成 {#expression-auto-completion}
 
-在表達式內 `${}`，公共變數名稱自動完成。
+在運算式內 `${}`，則會自動完成常用變數名稱。
 
 ## 更多資訊 {#more-information}
 
-括弧AEM擴展是一個開源項目，由 [Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) 組織，在Apache許可證2.0版下：
+AEM Brackets擴充功能是開放原始碼專案，由 [Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) organization （根據Apache授權，版本2.0）：
 
-* 代碼儲存庫： [https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension](https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension)
-* Apache許可證，版本2.0: [https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
+* 程式碼存放庫： [https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension](https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension)
+* Apache授權2.0版： [https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-括弧代碼編輯器也是一個開源項目，由 [Adobe Systems Incorporated](https://github.com/adobe) 組織：
+Brackets程式碼編輯器也是開放原始碼專案，由 [Adobe Systems Incorporated](https://github.com/adobe) 組織：
 
-* 代碼儲存庫： [https://github.com/adobe/brackets](https://github.com/adobe/brackets)
+* 程式碼存放庫： [https://github.com/adobe/brackets](https://github.com/adobe/brackets)
 
-請隨便貢獻！
+盡情投稿！

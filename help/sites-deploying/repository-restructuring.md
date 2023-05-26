@@ -1,7 +1,7 @@
 ---
-title: 6.5中的AEM儲存庫重組
+title: AEM 6.5中的存放庫重組
 seo-title: Repository Restructuring in AEM 6.5
-description: 瞭解6.5中儲存庫重組的基礎知識AEM和推理
+description: 瞭解AEM 6.5中存放庫重組的基礎知識和推理
 seo-description: Learn about the basics and reasoning behind the repository restructuring in AEM 6.5
 uuid: e9cd3e88-e352-44a8-9b97-69488d3267cb
 contentOwner: chaikels
@@ -18,38 +18,38 @@ ht-degree: 0%
 
 ---
 
-# 6.5中的AEM儲存庫重組{#repository-restructuring-in-aem}
+# AEM 6.5中的存放庫重組{#repository-restructuring-in-aem}
 
 ## 簡介 {#introduction}
 
-在6.AEM4之前，客戶代碼部署在JCR的不可預知的區域，這些區域在升級時可能會發生更改。 因此，正式版本通常會覆AEM蓋自定義代碼、配置或內容。 此外，客戶更改有時會改寫AEM產品代碼或內容，從而破壞產品功能。
+在AEM 6.4之前，客戶程式碼部署在JCR不可預測的區域，這些區域在升級時可能會變更。 因此，正式AEM發行版本通常會覆寫自訂程式碼、設定或內容。 此外，客戶變更有時會覆寫AEM產品程式碼或內容，破壞產品功能。
 
-通過明確定義產品代AEM碼和客戶代碼的層次結構，可以避免這些衝突。
+透過清楚界定AEM產品程式碼和客戶程式碼的階層，可以避免這些衝突。
 
-為此，從AEM6.4開始，並在以後的版本中繼續，內容將從/etc重構到儲存庫中的其他資料夾，以及關於內容放在哪裡的指導原則，遵守以下高級規則：
+為此，從AEM 6.4開始，並在未來版本中繼續，內容正在從/etc重新構建到存放庫中的其他資料夾，以及關於內容去向的准則，遵守以下高級規則：
 
-* 產AEM品代碼將始終放在/lib中，該代碼不能被自定義代碼覆蓋
-* 自定義代碼應放在/apps、/content和/conf中
+* AEM產品程式碼一律會放在/libs中，自訂程式碼不可加以覆寫
+* 自訂程式碼應放在/apps、/content和/conf中
 
 ## 對6.5升級的影響 {#impact-on-upgrades}
 
-升級到AEM6.5時，/etc下的大部分內容將在儲存庫中的其他資料夾中複製。 這些新位置是引用內容的首選位置。 但是，每次嘗試將AEM6.5升級向後相容/etc資料夾中的先前位置，因此在大多數情況下，舊位置將繼續被代碼引用，直到客戶應用程式中主動進行更改（在很多情況下是手動進行更改）。 從時間軸透視來看，有兩種更改類別：
+升級至AEM 6.5時，/etc底下內容的大量子集將會在存放庫的其他資料夾中重複。 這些新位置是參照內容的偏好位置。 不過，為了能夠回溯相容於/etc資料夾中先前的位置，AEM 6.5升級的所有嘗試都已進行，因此在大多數情況下，AEM程式碼將繼續參考舊位置，直到在客戶的應用程式中主動變更（且多數情況下是手動變更）為止。 從時間軸的角度來看，變更分為兩類：
 
-* 使用6.5升級 — 少量/etc重組更改不向後相容，因此應在6.5升級中規劃並實施AEM修改。
-* 在將來升級之前 — 大多數/etc重組更改都可以推遲到將來升級後的某個時間。 如前所述， AEM 6.5代碼將繼續引用舊位置，直到這些修改作為客戶版本的一部分實施。 雖然沒有強制時間表應進行更改，但建議在將來升級之前進行更改，因為將來的功能可能依賴於引用的新位置。 此外，根據慣例，給定功能的文檔會參考新位置，因此，如果仍在使用舊位置，則可能會令人困惑。
+* 升級至6.5 — 少數/etc重組變更無法回溯相容，因此應規劃修改，並在AEM 6.5升級中實作。
+* 在未來的升級之前 — 大部分/etc重組變更可以延遲到未來的升級後的一段時間。 如先前所述，AEM 6.5程式碼將繼續參考舊位置，直到修改在客戶版本中實作為止。 雖然沒有應進行變更的強制時間表，但建議在將來的升級之前進行這些變更，因為未來的功能可能會依賴所參考的新位置。 此外，根據慣例，指定功能的檔案將參照新位置，因此，如果仍在使用舊位置，可能會造成混淆。
 
-### 重組指導 {#restructuring-guidance}
+### 重組指南 {#restructuring-guidance}
 
-在計畫升級到AEM6.5時，應參考以下每個解決方案頁，以評估工作量：
+在規劃升級至AEM 6.5時，應參考以下每個解決方案的頁面，以評估工作量：
 
-* [所有解決方案通用的儲存AEM庫重組](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md)
-* [AEM Sites資料庫重組](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md)
-* [AEM Assets資料庫重組](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md)
-* [AEM AssetsDynamic Media資料庫重組](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md)
-* [AEM Forms資料庫重組](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)
-* [AEM Communities資料庫重組](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md)
-* [商AEM務庫重組](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-5.md)
+* [所有AEM解決方案通用的存放庫重組](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md)
+* [AEM Sites存放庫重組](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md)
+* [AEM Assets存放庫重組](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md)
+* [AEM Assets Dynamic Media存放庫重組](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md)
+* [AEM Forms存放庫重組](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)
+* [AEM Communities存放庫重組](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md)
+* [AEM Commerce存放庫重組](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-5.md)
 
-每頁包含兩個與必要更改的緊急程度相對應的部分。 「With 6.5 Upgrade」（帶6.5升級）部分下的任何內容都應作為6.5升級項AEM目的一部分處理。 「Pror to Future Upgrade（將來升級前）」下的任何內容都可以選擇延遲到升級後。
+每個頁面都包含兩個區段，分別對應於必要變更的緊急程度。 「含6.5升級」區段下的任何專案都應在AEM 6.5升級專案中處理。 「未來升級之前」下的任何專案都可選擇延遲到升級後。
 
-該頁上的每個條目都包括「重組指導」欄位，該欄位詳細說明了建議的技術策略，以便與新的6.5儲存庫模型保持一致，以便新位置被引用到以前位於/etc資料夾下的內容。 附加的「注釋」欄位提供了任何附加的有用上下文。
+頁面上的每個專案都包含「重組指引」欄位，該欄位詳細說明了建議的技術策略，以便與新的6.5存放庫模型保持一致，從而為先前位於/etc資料夾下的內容引用新位置。 額外的「附註」欄位可提供任何其他有用的內容。

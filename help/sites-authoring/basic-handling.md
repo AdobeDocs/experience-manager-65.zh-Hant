@@ -1,6 +1,6 @@
 ---
-title: 使用作者環境時的AEM基本處理
-description: 熟悉導航及AEM其基本用途
+title: 使用AEM作者環境時的基本處理
+description: 熟悉如何導覽AEM及其基本用法
 uuid: c78ef9da-e0bd-47be-a410-9cf2ae71749a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -20,71 +20,71 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->* 此頁面旨在概述使用作者環境時的基AEM本處理。 它使用 **站點** 控制台。
+>* 此頁面旨在概述使用AEM製作環境時的基本處理方式。 它會使用 **網站** 以主控台為基礎。
 >
->* 某些功能並非在所有控制台中都可用，而其他功能可能在某些控制台中可用。 有關各個控制台及其相關功能的具體資訊將在其他頁面中詳細介紹。
->* 鍵盤快捷鍵在整個區域都AEM可用。 特別是 [使用控制台](/help/sites-authoring/keyboard-shortcuts.md) 和 [編輯頁](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)。
+>* 部分功能並未在所有主控台中提供，而其他功能可能也在某些主控台中提供。 有關個別主控台及其相關功能的特定資訊，將在其他頁面上詳細說明。
+>* 在整個AEM環境中都可以使用鍵盤快速鍵。 尤其是當 [使用主控台](/help/sites-authoring/keyboard-shortcuts.md) 和 [編輯頁面](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
 >
 
 
 ## 快速入門 {#getting-started}
 
-### 啟用觸摸的UI {#a-touch-enabled-ui}
+### 觸控式UI {#a-touch-enabled-ui}
 
-已啟AEM用用戶介面進行觸摸。 啟用觸摸的介面允許您使用觸摸通過點擊、觸摸和握持等手勢與軟體交互。 這與傳統案頭介面使用滑鼠操作（如按一下、按兩下、按一下右鍵和滑鼠移動）的操作方式不同。
+AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控功能，透過點選、觸控並按住及撥動等手勢與軟體互動。 這與傳統案頭介面使用滑鼠動作（例如按一下、連按兩下、按一下滑鼠右鍵和滑鼠懸停滑鼠）的操作方式相反。
 
-由於AEMUI是觸摸式的，因此您可以在觸摸設備（例如移動或平板）上使用觸摸手勢，在傳統案頭設備上使用滑鼠操作。
+由於AEM UI支援觸控功能，因此您可以在觸控裝置（例如行動裝置或平板電腦）上使用觸控手勢，並在傳統桌上型裝置上使用滑鼠動作。
 
-### 第一步 {#first-steps}
+### 首要步驟 {#first-steps}
 
-登錄後，您立即到達 [導航面板](#navigation-panel)。 選擇其中一個選項將開啟相應的控制台。
+登入後立即到達 [導覽面板](#navigation-panel). 選取其中一個選項會開啟相應的主控台。
 
 ![bh-01](assets/bh-01.png)
 
 >[!NOTE]
 >
->為了更好地瞭解基本的使用，AEM本文檔基於 **站點** 控制台。
+>為了更清楚瞭解AEM的基本用法，本檔案以 **網站** 主控台。
 >
->按一下或點擊 **站點** 的子例行程式。
+>按一下或點選 **網站** 以開始使用。
 
 ### 產品導覽 {#product-navigation}
 
-每當用戶首次訪問控制台時，都會啟動產品導航教程。 按一下或點擊一下，只需一分鐘，即可獲得對基本處理的完美概AEM述。
+每當使用者首次存取主控台時，就會啟動產品導覽教學課程。 請花一分鐘時間按一下或點選，以取得AEM基本處理的良好概觀。
 
 ![bh-02](assets/bh-02.png)
 
-按一下或點擊 **下一個** 以進入概述的下一頁。 按一下或點擊 **關閉** 或按一下或在「概述」(overview)對話框外點擊以關閉。
+按一下或點選 **下一個** 以進入概覽的下一頁。 按一下或點選 **關閉** 或按一下或點選「概述」對話方塊外部以關閉。
 
-除非您查看所有幻燈片或選中該選項，否則下次訪問控制台時，概述將重新啟動 **不再顯示此內容**。
+除非您檢視所有投影片或核取選項，否則概觀會在您下次存取主控台時重新啟動 **不要再顯示**.
 
-## 全局導航 {#global-navigation}
+## 全域導覽 {#global-navigation}
 
-可以使用全局導航面板在控制台之間導航。 當您按一下或點擊螢幕左上角的Adobe Experience Manager連結時，此按鈕將觸發為全屏下拉。
+您可以使用全域導覽面板在主控台之間導覽。 當您按一下或點選畫面左上方的Adobe Experience Manager連結時，就會以全熒幕下拉式清單的形式觸發此動作。
 
-通過按一下或點擊，可關閉全局導航面板 **關閉** 返回您以前的位置。
+您可以按一下或點選以關閉全域導覽面板 **關閉** 以返回您先前所在的位置。
 
 ![bh-03](assets/bh-03.png)
 
 >[!NOTE]
 >
->首次登錄時，將 **導航** 的子菜單。
+>第一次登入時，您會看到 **導覽** 面板。
 
-全局導航有兩個面板，由螢幕左邊緣的表徵圖表示：
+全域導覽有兩個面板，由畫面左邊緣的圖示表示：
 
-* **[導航](/help/sites-authoring/basic-handling.md#navigation-panel)**  — 用羅盤表示
-* **[工具](/help/sites-authoring/basic-handling.md#tools-panel)**  — 用錘子代表
+* **[導覽](/help/sites-authoring/basic-handling.md#navigation-panel)**  — 以指南針表示
+* **[工具](/help/sites-authoring/basic-handling.md#tools-panel)**  — 以槌子表示
 
-下面介紹了這些面板上可用的選項。
+這些面板上可用的選項說明如下。
 
 ### 導覽面板 {#navigation-panel}
 
-「導航」面板提供對控制台的AEM訪問：
+「導覽」面板可讓您存取AEM主控台：
 
 ![bh-01](assets/bh-01.png)
 
-瀏覽器頁籤的標題將更新，以反映您在控制台和內容中導航時的位置。
+當您瀏覽控制檯和內容時，瀏覽器索引標籤的標題將會更新以反映您的位置。
 
-在導航中，可用的控制台包括：
+在「導覽」中，可用的主控台有：
 
 <table>
  <tbody>
@@ -94,58 +94,58 @@ ht-degree: 6%
   </tr>
   <tr>
    <td>資產<br /> </td>
-   <td>這些控制台允許您導入和 <a href="/help/assets/home.md">管理數字資產</a> 如影像、視頻、文檔和音頻檔案。 然後，在同一實例上運行的任何網站都可以使用這些AEM資產。 </td>
+   <td>這些主控台可讓您匯入和 <a href="/help/assets/home.md">管理數位資產</a> 例如影像、影片、檔案和音訊檔案。 然後這些資產便可由同一AEM執行個體上執行的任何網站使用。 </td>
   </tr>
   <tr>
    <td>社群</td>
-   <td>此控制台允許您建立和管理 <a href="/help/communities/sites-console.md">社區站點</a> 為 <a href="/help/communities/overview.md#engagement-community">參與</a> 和 <a href="/help/communities/overview.md#enablement-community">啟用</a>。</td>
+   <td>此主控台可讓您建立和管理 <a href="/help/communities/sites-console.md">社群網站</a> 的 <a href="/help/communities/overview.md#engagement-community">參與</a> 和 <a href="/help/communities/overview.md#enablement-community">啟用</a>.</td>
   </tr>
   <tr>
    <td>商務</td>
-   <td>這允許您管理與您的 <a href="/help/commerce/cif-classic/administering/ecommerce.md">商業</a> 站點。</td>
+   <td>這可讓您管理與您的相關產品、產品目錄和訂單 <a href="/help/commerce/cif-classic/administering/ecommerce.md">商務</a> 網站。</td>
   </tr>
   <tr>
    <td>體驗片段</td>
-   <td>安 <a href="/help/sites-authoring/experience-fragments.md">體驗片段</a> 是一種獨立體驗，可跨渠道重複使用，並且有各種變化，避免了反複複製和貼上體驗或部分體驗的麻煩。</td>
+   <td>一個 <a href="/help/sites-authoring/experience-fragments.md">體驗片段</a> 是獨立的體驗，可以跨管道重複使用，也可以有變數，省去重複複製和貼上體驗或體驗片段的麻煩。</td>
   </tr>
   <tr>
    <td>Forms</td>
-   <td>此控制台允許您建立、管理和處理 <a href="/help/forms/home.md">表格和文檔</a>。</td>
+   <td>此主控台可讓您建立、管理及處理 <a href="/help/forms/home.md">表單和檔案</a>.</td>
   </tr>
   <tr>
    <td>個人化</td>
-   <td>此控制台提供 <a href="/help/sites-authoring/personalization.md">用於創作目標內容和呈現個性化體驗的工具框架</a>。</td>
+   <td>此主控台提供 <a href="/help/sites-authoring/personalization.md">用於編寫目標內容和呈現個人化體驗的工具架構</a>.</td>
   </tr>
   <tr>
    <td>專案</td>
-   <td>的 <a href="/help/sites-authoring/touch-ui-managing-projects.md">項目控制台可讓您直接訪問項目</a>。 項目是虛擬儀表板。 它們可用於構建團隊，然後讓該團隊訪問資源、工作流和任務，從而允許人們按照共同的目標工作。 <br /> </td>
+   <td>此 <a href="/help/sites-authoring/touch-ui-managing-projects.md">專案主控台可讓您直接存取專案</a>. 專案是虛擬儀表板。 它們可用於建立團隊，然後授予該團隊存取資源、工作流程和任務的許可權，允許人員致力於共同目標。 <br /> </td>
   </tr>
   <tr>
    <td>Screens</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">螢幕</a> 將允許您管理所有面向客戶的螢幕，任何大小和位置。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a> 可讓您管理所有對外畫面，不管是任何大小、在任何位置。</td>
   </tr>
   <tr>
    <td>Sites</td>
-   <td>Sites控制台允許您 <a href="/help/sites-authoring/page-authoring.md">建立、查看和管理網站</a> 運行AEM。 通過這些控制台，您可以建立、編輯、複製、移動和刪除網站頁面、啟動工作流和發佈頁面。<br /> </td>
+   <td>Sites主控台可讓您 <a href="/help/sites-authoring/page-authoring.md">建立、檢視及管理網站</a> 在您的AEM執行個體上執行。 透過這些主控台，您可以建立、編輯、複製、移動和刪除網站頁面、開始工作流程以及發佈頁面。<br /> </td>
   </tr>
  </tbody>
 </table>
 
 ### 工具面板 {#tools-panel}
 
-在「工具」面板中，側面板中的每個選項都包含一系列子菜單。 的 [工具控制台](/help/sites-administering/tools-consoles.md) 此處提供了對多種專用工具和控制台的訪問，這些工具和控制台可幫助您管理網站、數字資產和內容儲存庫的其他方面。
+在「工具」面板中，側面板中的每個選項都包含一系列子選單。 此 [工具主控台](/help/sites-administering/tools-consoles.md) 您可以在此處存取許多專用工具和控制檯，協助您管理網站、數位資產和內容存放庫的其他方面。
 
 ![bh-04](assets/bh-04.png)
 
 ## 標頭 {#the-header}
 
- 標頭會始終顯示在畫面頂端。雖然無論您在系統中的哪個位置，頁眉中的大多數選項都保持不變，但有些選項是特定於上下文的。
+ 標頭會始終顯示在畫面頂端。雖然無論您在系統中的何處，標頭中的大部分選項都保持不變，但有些選項是上下文特定的。
 
 ![bh-03](assets/bh-03.png)
 
-* [全局導航](#navigatingconsolesandtools)
+* [全域導覽](#navigatingconsolesandtools)
 
-   選擇 **Adobe Experience Manager** 連結以在控制台之間導航。
+   選取 **Adobe Experience Manager** 連結可在主控台之間導覽。
 
    ![screen_shot_2018-03-23at103615](assets/screen_shot_2018-03-23at103615.png)
 
@@ -153,7 +153,7 @@ ht-degree: 6%
 
    ![](do-not-localize/screen_shot_2018-03-23at103542.png)
 
-   您還可以使用 [快捷鍵](/help/sites-authoring/keyboard-shortcuts.md) `/` （正斜線）從任何控制台調用搜索。
+   您也可以使用 [快速鍵](/help/sites-authoring/keyboard-shortcuts.md) `/` （正斜線）以從任何主控台叫用搜尋。
 
 * [解決方案](https://www.adobe.com/experience-cloud.html)
 
@@ -171,17 +171,17 @@ ht-degree: 6%
 
    >[!NOTE]
    >
-   >現成版本預裝AEM有分配給管理員用戶組的管理任務。 請參閱 [收件箱 — 開箱管理任務](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks) 的雙曲餘切值。
+   >現成可用的AEM會預先載入指派給管理員使用者群組的管理任務。 另請參閱 [您的收件匣 — 立即可用的管理工作](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks) 以取得詳細資訊。
 
 * [使用者屬性](/help/sites-authoring/user-properties.md)
 
    ![](do-not-localize/screen_shot_2018-03-23at103603.png)
 
-* [軌道選擇器](/help/sites-authoring/basic-handling.md#rail-selector)
+* [邊欄選擇器](/help/sites-authoring/basic-handling.md#rail-selector)
 
    ![](do-not-localize/screen_shot_2018-03-23at103943.png)
 
-   提供的選項取決於當前控制台。 例如，在 **站點** 您只能選擇內容（預設）、時間軸、引用或篩選器側面板。
+   顯示的選項取決於您目前的主控台。 例如，在 **網站** 您可以選取「僅限內容」（預設值）、「時間軸」、「參照」或「篩選器」側面板。
 
    ![screen_shot_2018-03-23at104029](assets/screen_shot_2018-03-23at104029.png)
 
@@ -189,118 +189,118 @@ ht-degree: 6%
 
    ![bh-05](assets/bh-05.png)
 
-   位於滑軌的中間，並始終顯示當前選定項的說明，該麵包屑允許您在特定控制台中導航。 在「站點」控制台中，您可以瀏覽網站的級別。
+   階層連結位於邊欄中間，且一律顯示目前所選專案的說明，可讓您在特定主控台內導覽。 在Sites主控台中，您可以瀏覽網站的各個層級。
 
-   只需按一下breadcrumb文本即可顯示一個下拉清單，列出當前選定項的層次結構級別。 按一下一個條目可跳轉到該位置。
+   只要按一下階層連結文字，即可顯示下拉式清單，列出目前所選專案的階層層次。 按一下專案以跳至該位置。
 
    ![bh-06](assets/bh-06.png)
 
-* 分析時段選擇
+* Analytics時段選擇
 
    ![screen_shot_2018-03-23at104126](assets/screen_shot_2018-03-23at104126.png)
 
-   這僅在清單視圖中可用。 請參閱 [清單視圖](#list-view) 的子菜單。
+   這僅在清單檢視中可用。 另請參閱 [清單檢視](#list-view) 以取得詳細資訊。
 
 * **建立** 按鈕
 
    ![screen_shot_2018-03-23at104301](assets/screen_shot_2018-03-23at104301.png)
 
-   按一下後，顯示的選項將適用於控制台/上下文。
+   按一下後，顯示的選項即適用於主控台/前後關聯。
 
 * [檢視](/help/sites-authoring/basic-handling.md#viewingandselectingyourresourcescardlistcolumn)
 
-   視圖表徵圖位於工具欄的最AEM右側。 由於它還指示當前視圖，因此它會更改。 例如，在預設視圖中， **列視圖** 它顯示：
+   檢檢視示位於AEM工具列的最右側。 由於它也會指出目前檢視，因此會變更。 例如，在預設檢視中， **欄檢視** 它顯示：
 
    ![bh-07](assets/bh-07.png)
 
-   可以在列視圖、卡視圖和清單視圖之間切換；在清單視圖中，它還顯示視圖設定。
+   您可以在欄檢視、卡片檢視和清單檢視之間切換；在清單檢視中，它也會顯示檢視設定。
 
    ![bh-09](assets/bh-09.png)
 
-* 鍵盤導航
+* 鍵盤導覽
 
-   您只能使用鍵盤導航網站。 它使用的標準瀏覽器功能 **頁籤** 鍵 **選項+頁籤**)在頁面上的元素之間移動 *聚焦*。
+   您僅能使用鍵盤導覽網站。 這會使用的標準瀏覽器功能 **標籤** 金鑰(或 **OPT+TAB**)，將您移動至頁面上 *可聚焦*.
 
-   在 **站點** 控制台中有添加的選項  **跳至主內容**。 當您 *頁籤* 通過標題選項，並通過允許您跳過（產品）工具欄中的標準元素並直接將您帶到主要內容來加快導航速度。
+   在 **網站** 主控台新增選項至  **跳至主要內容**. 當您看到時，它就會變得可見 *標籤* 透過「 」標頭選項，可讓您略過（產品）工具列中的標準元素，並直接前往主要內容，以加速導覽。
 
    ![bh-30](assets/bh-30.png)
 
-## 訪問幫助 {#accessing-help}
+## 存取說明 {#accessing-help}
 
-有各種幫助資源可用：
+有多種可用的說明資源：
 
-* **控制台工具欄**
+* **主控台工具列**
 
-   根據您的位置 **幫助** 表徵圖將開啟相應的資源：
+   根據您的位置 **說明** 圖示會開啟適當的資源：
 
    ![bh-10](assets/bh-10.png)
 
 * **導覽**
 
-   你第一次在系統裡導航時， [一系列幻燈片介紹導AEM航](/help/sites-authoring/basic-handling.md#product-navigation)。
+   第一次瀏覽系統時， [一系列投影片介紹AEM導覽](/help/sites-authoring/basic-handling.md#product-navigation).
 
 * **頁面編輯器**
 
-   首次編輯頁面時，您會使用一系列幻燈片介紹頁面編輯器。
+   第一次編輯頁面時，系統會以一系列投影片來介紹頁面編輯器。
 
    ![bh-11](assets/bh-11.png)
 
-   像瀏覽 [產品導航概述](/help/sites-authoring/basic-handling.md#product-navigation) 首次訪問任何控制台時。
+   依照您的指示瀏覽此概觀 [產品導覽概觀](/help/sites-authoring/basic-handling.md#product-navigation) 第一次存取任何主控台時。
 
-   從 [**頁面資訊** 菜單 **幫助**](/help/sites-authoring/author-environment-tools.md#accessing-help) 隨時再次顯示。
+   從 [**頁面資訊** 您可選取的功能表 **說明**](/help/sites-authoring/author-environment-tools.md#accessing-help) 以隨時再次顯示。
 
-* **工具控制台**
+* **工具主控台**
 
-   從 **工具** 也可以訪問外部 **資源**:
+   從 **工具** 主控台您也可以存取外部 **資源**：
 
-   * **文檔**
-查看Web體驗管理文檔
+   * **檔案**
+檢視網站體驗管理檔案
 
    * **開發人員資源**
 開發人員資源和下載
    >[!NOTE]
    >
-   >您可以隨時使用熱鍵訪問可用快捷鍵的概述 `?` （問號）。
+   >您可以隨時使用快速鍵來存取可用快速鍵的概觀 `?` （問號）在主控台中。
    >
-   >有關所有鍵盤快捷鍵的概述，請參閱以下文檔：
+   >如需所有鍵盤快速鍵的概觀，請參閱下列檔案：
    >
-   >    * [用於編輯頁面的鍵盤快捷鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-   >    * [控制台的鍵盤快捷鍵](/help/sites-authoring/keyboard-shortcuts.md)
+   >    * [用於編輯頁面的鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
+   >    * [主控台的鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)
 
 
-## 操作工具欄 {#actions-toolbar}
+## 動作工具列 {#actions-toolbar}
 
-每當選擇資源（例如頁面或資產）時，各種操作都由工具欄中帶有解釋性文本的表徵圖來指示。 這些操作取決於：
+每當選取資源（例如頁面或資產）時，工具列中都會有附有說明文字的圖示來指示各種動作。 這些動作相依於：
 
-* 當前控制台。
-* 當前上下文。
-* 無論您是否在 [選擇模式](#navigatingandselectionmode)。
+* 目前的主控台。
+* 目前內容。
+* 無論您是否在 [選擇模式](#navigatingandselectionmode).
 
-工具欄中可用的操作將發生更改，以反映您可以對選定的特定項目執行的操作。
+工具列中的可用動作會變更，以反映您可對所選特定專案執行的動作。
 
-你好 [選擇資源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) 取決於視圖。
+您如何進行 [選取資源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) 視檢視而定。
 
 由於某些視窗的空間限制，工具列可能會很快變得比可用的空間長。發生此情況時，會出現其他選項。按一下或點選省略號(三個點或…… ****)會開啟一個下拉式選取器，其中包含所有剩餘的動作。例如，在Sites主控台中選取頁面 **後** :
 
-![操作工具欄](assets/bh-12.png)
+![動作工具列](assets/bh-12.png)
 
 >[!NOTE]
 >
->可用的單個表徵圖與相應的控制台/功能/場景相關。
+>可用的個別圖示會記錄為與適當的主控台/功能/情境相關。
 
 ## 快速動作 {#quick-actions}
 
-在 [卡視圖](#cardviewquickactions) 某些操作既可作為快速操作表徵圖，也可位於工具欄上。 快速操作表徵圖可一次用於單個項目，無需預選。
+在 [卡片檢視](#cardviewquickactions) 某些動作會以快速動作圖示的形式呈現，同時也會出現在工具列上。 快速動作圖示一次只適用於一個專案，您不需要預先選取。
 
-在安裝資源卡（案頭設備）時，可以看到快速操作。 可用的快速操作可能取決於控制台和上下文。 例如，以下是中某頁的快速操作 **站點** 控制台：
+當您將滑鼠懸停在資源卡上（案頭裝置）時，可以看到快速動作。 可用的快速動作取決於主控台和內容。 例如，以下為中頁面的快速動作 **網站** 主控台：
 
 ![bh-13](assets/bh-13.png)
 
 ## 檢視和選擇資源 {#viewing-and-selecting-resources}
 
-查看、導航和選擇在所有視圖上在概念上都相同，但處理上的變化很小，取決於您使用的視圖。
+檢視、導覽和選取在概念上所有檢視都相同，但根據您使用的檢視，處理方式略有不同。
 
-您可以使用任何可用視圖查看、瀏覽和選擇資源（以便進一步執行操作），其中每個視圖都可由右上角的表徵圖選擇：
+您可以使用任何可用檢視來檢視、導覽及選取（以採取進一步動作）您的資源，您可以透過右上角的圖示來選取每個檢視：
 
 * [欄檢視](#column-view)
 * [卡片檢視](#card-view)
@@ -309,11 +309,11 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->預設情況下，AEM Assets不會將用戶介面中資產的原始格式副本作為任何視圖中的縮略圖顯示。 如果您是管理員，則可以使用疊加來配置AEM Assets以將原始格式副本顯示為縮略圖。
+>依預設，AEM Assets不會在任何檢視中將資產的原始轉譯顯示為縮圖。 如果您是管理員，則可以使用覆蓋圖來設定AEM Assets，以將原始轉譯顯示為縮圖。
 
-### 選擇資源 {#selecting-resources}
+### 選取資源 {#selecting-resources}
 
-選擇特定資源取決於視圖和設備的組合：
+選取特定資源取決於檢視和裝置的組合：
 
 <table>
  <tbody>
@@ -326,39 +326,39 @@ ht-degree: 6%
    <td>欄檢視<br /> </td>
    <td>
     <ul>
-     <li>案頭：<br /> 按一下縮略圖</li>
-     <li>移動設備：<br /> 點擊縮略圖</li>
+     <li>案頭：<br /> 按一下縮圖</li>
+     <li>行動裝置：<br /> 點選縮圖</li>
     </ul> </td>
    <td>
     <ul>
-     <li>案頭：<br /> 按一下縮略圖</li>
-     <li>移動設備：<br /> 點擊縮略圖</li>
+     <li>案頭：<br /> 按一下縮圖</li>
+     <li>行動裝置：<br /> 點選縮圖</li>
     </ul> </td>
   </tr>
   <tr>
    <td>卡片檢視<br /> </td>
    <td>
     <ul>
-     <li>案頭：<br /> 滑鼠，然後使用複選標籤快速操作</li>
-     <li>移動設備：<br /> 點擊並握住卡</li>
+     <li>案頭：<br /> 滑鼠懸停，然後使用核取記號快速動作</li>
+     <li>行動裝置：<br /> 點選並按住卡片</li>
     </ul> </td>
    <td>
     <ul>
-     <li>案頭：<br /> 按一下卡</li>
-     <li>移動設備：<br /> 點擊卡</li>
+     <li>案頭：<br /> 按一下卡片</li>
+     <li>行動裝置：<br /> 點選卡片</li>
     </ul> </td>
   </tr>
   <tr>
    <td>清單檢視</td>
    <td>
     <ul>
-     <li>案頭：<br /> 按一下縮略圖</li>
-     <li>移動設備：<br /> 點擊縮略圖</li>
+     <li>案頭：<br /> 按一下縮圖</li>
+     <li>行動裝置：<br /> 點選縮圖</li>
     </ul> </td>
    <td>
     <ul>
-     <li>案頭：<br /> 按一下縮略圖</li>
-     <li>移動設備：<br /> 點擊縮略圖</li>
+     <li>案頭：<br /> 按一下縮圖</li>
+     <li>行動裝置：<br /> 點選縮圖</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -366,185 +366,185 @@ ht-degree: 6%
 
 #### 全選 {#select-all}
 
-通過按一下 **全選** 的上界。
+您可以按一下「 」，選取任何檢視中的所有專案 **全選** 選項。
 
-* 在 **卡視圖** 已選擇所有卡。
-* 在 **清單視圖** 選擇清單中的所有項。
-* 在 **列視圖** 將選擇最左側列中的所有項。
+* 在 **卡片檢視** 已選取所有卡片。
+* 在 **清單檢視** 選取清單中的所有專案。
+* 在 **欄檢視** 會選取最左側欄中的所有專案。
 
 ![screen-shot_2019-03-05at094659](assets/screen-shot_2019-03-05at094659.png)
 
 #### 取消全選 {#deselecting-all}
 
-在所有情況下，在選擇項目時，所選項目的計數都顯示在工具欄的右上角。
+在任何情況下，當您選取專案時，選取專案的計數都會顯示在工具列的右上方。
 
-您可以通過以下任一方式取消選擇所有項目並退出選擇模式：
+您可以透過以下任一方式取消選取所有專案並退出選取模式：
 
-* 按一下或輕擊 **X** 在伯爵旁邊，
+* 按一下或點選 **X** 在計數旁邊，
 
-* 或 **逃脫**。
+* 或使用 **逸出**.
 
 ![bh-14](assets/bh-14.png)
 
-在所有視圖中，如果您使用的是案頭設備，則可通過點擊鍵盤上的escape來指定所有項目。
+在所有檢視中，如果您使用案頭裝置，只要點選鍵盤上的Esc鍵，即可選取所有專案。
 
-#### 選擇示例 {#selecting-example}
+#### 選取範例 {#selecting-example}
 
-1. 例如，在卡視圖中：
+1. 例如在卡片檢視中：
 
    ![bh-15](assets/bh-15.png)
 
-1. 選擇資源後，頂部標題將由 [動作工具欄](#actionstoolbar) 提供對當前適用於選定資源的操作的訪問權限。
+1. 選取資源後，頂端標題會由 [動作工具列](#actionstoolbar) 提供目前適用於所選資源的動作的存取權。
 
-   要退出選擇模式，請選擇 **X** 右上角，或使用 **逃脫**。
+   若要結束選取模式，請選取 **X** 右上方，或使用 **逸出**.
 
 ### 欄檢視 {#column-view}
 
 ![bh-16](assets/bh-16.png)
 
-列視圖允許通過一系列級聯列對內容樹進行可視導航。 此視圖允許您可視化和遍歷網站的樹結構。
+欄檢視允許透過一系列階層式欄對內容樹進行視覺導覽。 此檢視可讓您視覺化並周遊網站的樹狀結構。
 
-在最左側的列中選擇資源將在右側的列中顯示子資源。 選擇右列中的資源後，將在右側的另一列中顯示子資源，依此類推。
+在最左邊的欄中選取資源，會在右邊的欄中顯示子資源。 在右側欄中選取資源後，會在右側的其他欄中顯示子資源，依此類推。
 
-* 通過點擊或按一下資源名稱或資源名稱右側的字形，可以在樹中上下導航。
+* 您可以點選或按一下資源名稱或資源名稱右側的>形箭號，在樹狀結構中向上和向下導覽。
 
-   * 點擊或按一下時，資源名稱和字元將加亮顯示。
+   * 點選或按一下時，資源名稱和V形符號會反白顯示。
 
    ![bh-17](assets/bh-17.png)
 
-   * 已按一下/已抽取資源的子項顯示在已按一下/已抽取資源右側的列中。
-   * 如果點擊或按一下沒有子項的資源名稱，其詳細資訊將顯示在最終列中。
+   * 已點按/已點按資源的子項會顯示在已點按/已點按資源右側的欄中。
+   * 如果您點選或按一下沒有子系的資源名稱，其詳細資訊將顯示在最後一欄。
 
 
-* 點擊或按一下縮略圖可選擇資源。
+* 點選或按一下縮圖可選取資源。
 
-   * 選中後，複選標籤將覆蓋在縮略圖上，並且資源名稱也將加亮。
-   * 所選資源的詳細資訊將顯示在最終列中。
-   * 操作工具欄將變為可用。
+   * 選取時，縮圖上將會覆蓋核取記號，並且資源名稱也會反白顯示。
+   * 所選資源的詳細資訊將顯示在最後一欄。
+   * 動作工具列將變為可用。
 
    ![bh-18](assets/bh-18.png)
 
-   在列視圖中選擇頁面時，所選頁面將與以下詳細資訊一起顯示在最終列中：
+   在欄檢視中選取頁面時，選取的頁面會連同下列詳細資訊顯示在最終欄中：
 
    * 頁面標題
    * 頁面名稱（頁面URL的一部分）
-   * 該頁面基於的模板
-   * 修改詳細資訊
+   * 頁面所依據的範本
+   * 修改詳細資料
    * 頁面語言
-   * 發佈詳細資訊
+   * 出版物詳細資料
 
 
 ### 卡片檢視 {#card-view}
 
 ![bh-15-1](assets/bh-15-1.png)
 
-* 「卡」視圖顯示當前層每個物料的資訊卡。 這些資訊提供了以下資訊：
+* 卡片檢視會顯示目前層級中每個專案的資訊卡片。 這些會提供下列資訊：
 
-   * 頁面內容的可視表示。
+   * 頁面內容的視覺化表示法。
    * 頁面標題。
-   * 重要日期（如上次編輯、上次發佈）。
-   * 如果頁面已鎖定、隱藏或是livecopy的一部分。
-   * 如果適用，當需要您作為工作流的一部分採取操作時。
+   * 重要日期（例如上次編輯、上次發佈）。
+   * 如果頁面已鎖定、隱藏或是LiveCopy的一部分。
+   * 適當時，您何時需要在工作流程中採取動作。
 
-      * 指示所需操作的標籤可能與您的 [收件箱](/help/sites-authoring/inbox.md)。
+      * 指出所需動作的標籤，可能與 [收件匣](/help/sites-authoring/inbox.md).
 
-* [快速操作](#quick-actions) 此視圖中也提供了選項和編輯等常見操作。
+* [快速動作](#quick-actions) 也可以在此檢視中使用，例如選取和常見動作，例如編輯。
 
    ![bh-13-1](assets/bh-13-1.png)
 
-* 您可以點擊/按一下卡（注意避免快速操作），或使用 [標題中的麵包屑](/help/sites-authoring/basic-handling.md#the-header)。
+* 您可以點選/按一下卡片來向下瀏覽樹狀結構（注意避免快速動作），或使用 [標題中的階層連結](/help/sites-authoring/basic-handling.md#the-header).
 
 ### 清單檢視 {#list-view}
 
 ![bh-19](assets/bh-19.png)
 
-* 清單視圖列出當前級別上每個資源的資訊。
-* 通過點擊/按一下資源名稱，可以在樹中向下導航，然後使用 [標題中的麵包屑](/help/sites-authoring/basic-handling.md#the-header)。
+* 清單檢視會列出目前層級中每個資源的資訊。
+* 您可以點選/按一下資源名稱，在樹狀結構中向下導覽，然後使用 [標題中的階層連結](/help/sites-authoring/basic-handling.md#the-header).
 
-* 要輕鬆選擇清單中的所有項目，請使用清單左上角的複選框。
+* 若要輕鬆選取清單中的所有專案，請使用清單左上方的核取方塊。
 
    ![bh-20](assets/bh-20.png)
 
-   * 選中清單中的所有項目後，此複選框將出現選中狀態。
+   * 選取清單中的所有專案時，此核取方塊會顯示為已核取。
 
-      * 按一下或點擊複選框以取消選擇全部。
-   * 只選擇某些項目時，它會顯示減號。
+      * 按一下或點選核取方塊以取消選取全部。
+   * 僅選取部分專案時，會出現減號。
 
-      * 按一下或點擊複選框以選擇全部。
-      * 再次按一下或點擊複選框以取消選擇全部。
+      * 按一下或點選核取方塊以選取全部。
+      * 再次按一下或點選核取方塊以取消全選。
 
 
-* 選擇要使用 **查看設定** 按鈕。 以下列可供顯示：
+* 使用以下專案選取要顯示的欄 **檢視設定** 選項位於「檢視」按鈕下。 下列欄可供顯示：
 
-   * **名稱**  — 頁面名稱，該名稱在多語言創作環境中非常有用，因為它是頁面URL的一部分，不會更改，而不管語言
-   * **已修改**  — 用戶上次修改日期和上次修改日期
+   * **名稱**  — 頁面名稱，在多語言撰寫環境中相當實用，因為它是頁面URL的一部分，無論使用何種語言，都不會變更
+   * **修改時間**  — 上次修改日期和上次修改者
    * **已發佈**  — 發佈狀態
-   * **模板**  — 頁面所基於的模板
-   * **工作流**  — 當前應用於頁面的工作流。 當您滑鼠移開或開啟時間軸時，將提供詳細資訊。
+   * **範本**  — 頁面所依據的範本
+   * **工作流程**  — 目前套用至頁面的工作流程。 當您滑鼠懸停或開啟時間軸時，會提供詳細資訊。
 
    * **頁面分析**
-   * **獨特訪問者**
-   * **頁上時間**
+   * **不重複訪客**
+   * **頁面逗留時間**
 
    ![bh-21](assets/bh-21.png)
 
-   預設情況下， **名稱** 列，該列是頁面URL的一部分。 在某些情況下，作者可能需要訪問使用不同語言的頁面，如果作者不知道該頁面的語言，查看該頁面的名稱（通常不變）將會有很大幫助。
+   根據預設 **名稱** 欄隨即顯示，它構成了頁面URL的一部分。 在某些情況下，作者可能需要存取不同語言的頁面，如果作者不知道頁面的語言，檢視頁面名稱（通常不會變更）會很有幫助。
 
-* 使用清單中每個項目最右側的虛線垂直條更改項目順序。
+* 使用清單中每個專案最右側的點狀垂直列，變更專案的順序。
 
    >[!NOTE]
    >
-   >更改訂單僅在具有 `jcr:primaryType` 值 `sling:OrderedFolder`。
+   >變更順序僅適用於具有下列條件的已排序資料夾： `jcr:primaryType` value as `sling:OrderedFolder`.
 
    ![bh-22](assets/bh-22.png)
 
-   按一下或點擊垂直選擇欄，將項目拖動到清單中的新位置。
+   在垂直選取列上按一下或點選，然後將專案拖曳至清單中的新位置。
 
    ![bh-23](assets/bh-23.png)
 
-* 通過使用 **查看設定** 對話框。
+* 您可以使用「 」顯示適當的欄，以顯示Analytics資料。 **檢視設定** 對話方塊。
 
-   您可以使用標題右側的篩選器選項篩選過去30、90或365天的分析資料。
+   您可以使用標頭右側的篩選選項來篩選過去30、90或365天的Analytics資料。
 
    ![bh-24](assets/bh-24.png)
 
 ## 邊欄選擇器 {#rail-selector}
 
-的 **軌道選擇器** 在窗口的左上角可用，並根據當前控制台顯示選項。
+此 **邊欄選擇器** 可在視窗左上角取得，並根據您目前的主控台顯示選項。
 
 ![bh-25](assets/bh-25.png)
 
-例如，在「站點」中，您只能選擇內容（預設）、內容樹、時間軸、引用或篩選器側面板。
+例如，在Sites中，您可以選取「僅限內容」（預設）、「內容樹」、「時間軸」、「參照」或「篩選器」側面板。
 
-如果僅選擇內容，則只顯示滑軌表徵圖。 選中任何其它選項後，選項名稱將出現在滑軌表徵圖旁邊。
+如果選取「僅限內容」，則只會出現邊欄圖示。 選取任何其他選項時，選項名稱會出現在邊欄圖示旁邊。
 
 >[!NOTE]
 >
->[鍵盤快捷鍵](/help/sites-authoring/keyboard-shortcuts.md) 可快速切換軌道顯示選項。
+>[鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md) 可用來快速切換邊欄顯示選項。
 
 ### 內容樹 {#content-tree}
 
-內容樹可用於快速導航側面板中的站點層次結構並查看有關當前資料夾中頁面的許多資訊。
+內容樹狀結構可用來快速導覽側面板中的網站階層，以及檢視目前資料夾中頁面的許多相關資訊。
 
-使用內容樹側面板與清單視圖或卡片視圖結合使用，用戶可以容易地看到項目的分層結構，並使用內容樹側面板輕鬆地在內容結構中導航，以及在清單視圖中查看詳細的頁面資訊。
+使用內容樹側面板搭配清單檢視或卡片檢視，使用者可以輕鬆檢視專案的階層結構，並使用內容樹側面板輕鬆瀏覽內容結構，以及在清單檢視中檢視詳細的頁面資訊。
 
 ![bh-26](assets/bh-26.png)
 
 >[!NOTE]
 >
->一旦選擇了層次視圖中的條目，可以使用箭頭鍵快速導航層次。
+>選取階層檢視中的專案後，可使用方向鍵來快速瀏覽階層。
 >
->請參閱 [鍵盤快捷鍵](/help/sites-authoring/keyboard-shortcuts.md) 的子菜單。
+>請參閱 [鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md) 以取得詳細資訊。
 
 ### 時間軸 {#timeline}
 
-時間線可用於查看和/或啟動在所選資源上發生的事件。 要開啟時間軸列，請使用滑軌選擇器：
+時間軸可用於檢視和/或啟動所選資源上已發生的事件。 若要開啟時間軸欄，請使用邊欄選取器：
 
-時間軸列允許您：
+時間軸欄可讓您：
 
-* [查看各種事件](#timelineviewevents) 與所選項目相關。
+* [檢視各種事件](#timelineviewevents) 與選取專案相關。
 
-   * 可以從下拉清單中選擇事件類型：
+   * 您可以從下拉式清單中選取事件型別：
 
       * [評論](#timelineaddingandviewingcomments)
       * 註解
@@ -553,37 +553,37 @@ ht-degree: 6%
       * [版本](/help/sites-authoring/working-with-page-versions.md)
       * [工作流程](/help/sites-authoring/workflows-applying.md)
 
-         * 除非 [瞬態工作流](/help/sites-developing/workflows.md#transient-workflows) 因為沒有為這些檔案保存歷史資訊
-      * 顯示全部
+         * 但以下各項除外 [暫時性工作流程](/help/sites-developing/workflows.md#transient-workflows) 因為沒有儲存這些專案的歷史記錄資訊
+      * 和全部顯示
 
 
 * [新增/檢視有關所選項目的註解。](#timelineaddingandviewingcomments)「注 **釋** 」方塊會顯示在事件清單的底部。鍵入注釋後跟Return將註冊注釋。當選取「注 **釋** 」或「 **全部顯示** 」時顯示。
 
-* 特定控制台具有其他功能。 例如，在「站點」控制台中，您可以：
+* 特定的主控台具有其他功能。 例如，在Sites主控台中，您可以：
 
-   * [保存版本](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui)。
+   * [儲存版本](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui).
    * [啟動工作流程](/help/sites-authoring/workflows-applying.md#startingaworkflowfromtherail).
 
-這些選項可通過位於 **注釋** 的子菜單。
+這些選項可透過 **註解** 欄位。
 
 ![bh-27](assets/bh-27.png)
 
 ### 引用 {#references}
 
-**引用** 顯示與選定資源的任何連接。 例如，在 **站點** 控制台 [參照](/help/sites-authoring/author-environment-tools.md#showingpagereferences) 對於頁面，顯示：
+**引用** 顯示所選資源的任何連線。 例如，在 **網站** 主控台 [引用](/help/sites-authoring/author-environment-tools.md#showingpagereferences) 若為頁面，則顯示：
 
 * [Launch](/help/sites-authoring/launches.md#launches-in-references-sites-console)
-* [即時拷貝](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)
+* [即時副本](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)
 * [語言副本](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
-* 內容引用：
+* 內容參考：
 
-   * 從其他頁面連結到所選頁面
-   * 從「參考」元件借入和/或借出到選定頁面的內容
+   * 從其他頁面連結至所選頁面的連結
+   * 參考元件在所選頁面中借用的內容和/或借出的內容
 
 ![bh-28](assets/bh-28.png)
 
 ### 篩選 {#filter}
 
-這將開啟一個類似於 [搜索](/help/sites-authoring/search.md) 已設定適當的位置篩選器，允許您進一步篩選要查看的內容。
+這將會開啟一個面板，類似於 [搜尋](/help/sites-authoring/search.md) 已設定適當的位置篩選器，可讓您進一步篩選您要檢視的內容。
 
 ![bh-29](assets/bh-29.png)

@@ -1,5 +1,5 @@
 ---
-title: 發佈已翻譯的內容
+title: 發佈翻譯的內容
 description: 了解如何發佈翻譯的內容，並在內容更新時更新翻譯。
 exl-id: 32c387fe-fa1b-499b-861f-b4822f5e139e
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
@@ -9,7 +9,7 @@ ht-degree: 97%
 
 ---
 
-# 發佈已翻譯的內容 {#publish-content}
+# 發佈翻譯的內容 {#publish-content}
 
 了解如何發佈翻譯的內容，並在內容更新時更新翻譯。
 
@@ -71,7 +71,7 @@ ht-degree: 97%
    ![管理發佈選項](assets/manage-publication-options.png)
 1. 在下一個 **管理發佈**&#x200B;視窗中，確認正確的路徑已選取。點選或按一下「**發佈**」。
    ![管理發佈範圍](assets/manage-publication-scope.png)
-1. 在AEM螢幕頂部使用彈出消息確認發佈操作。
+1. AEM會在熒幕上方顯示快顯訊息，確認發佈動作。
    ![資源已發佈橫幅](assets/resources-published-message.png)
 
 您翻譯的無周邊內容現已發佈！現在您的無周邊服務可以存取和使用。
@@ -110,7 +110,7 @@ ht-degree: 97%
 1. 點選或按一下剛更新的專案。
 1. 點選或按一下語言或其中一個您更新的語言。
 
-您會看到，新的工作卡會根據需要添加到項目中。
+您會看到新工作卡片已適當地新增至專案。
 
 <!--
 You see that a new job card was added to the project. In this example, another Spanish translation was added.

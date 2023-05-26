@@ -1,7 +1,7 @@
 ---
-title: 內容體系結構
+title: 內容架構
 seo-title: Content Architecture
-description: 設計內容的提示（提示 — 所有內容都是內容）
+description: 架構內容的秘訣（提示 — 一切都是內容）
 seo-description: Tips for architecting your content in Adobe Experience Manager (AEM). (hint - everything is content)
 uuid: fef2bf0f-70ec-4621-8479-a62b7e1fbc07
 contentOwner: User
@@ -17,52 +17,52 @@ ht-degree: 0%
 
 ---
 
-# 內容體系結構{#content-architecture}
+# 內容架構{#content-architecture}
 
-## 關注大衛的模式 {#follow-david-s-model}
+## 遵循David的模式 {#follow-david-s-model}
 
-大衛的模型是大衛·紐切勒幾年前寫的，但是今天的觀點是成立的。 David&#39;s Model的主要原則如下：
+David&#39;s Model是由David Nuescheler在多年前所撰寫，但現今的想法仍然成立。 David模型的主要原則如下：
 
-* 資料先，結構後。 也許吧。
-* 驅動內容層次結構，不要讓它發生。
-* 工作區 `clone()`。 `merge()`, `update()`。
-* 注意同名兄弟姐妹。
-* 參考被認為有害。
-* 檔案是檔案。
-* 身份證是邪惡的。
+* 資料為先，結構為後。 可能會。
+* 推動內容階層，不要讓它發生。
+* 工作區用於 `clone()`， `merge()`、和 `update()`.
+* 注意同名的同層級。
+* 參照會被視為有害。
+* 檔案就是檔案。
+* ID是邪惡的。
 
-David&#39;s Model可在Jackrabbit維客上找到 [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel)。
+David的模型可在Jackrabbit維基百科上找到，網址為 [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
 
 ### 一切都是內容 {#everything-is-content}
 
-所有內容都應儲存在儲存庫中，而不是依賴於單獨的第三方資料源。 這適用於創作內容、二進位資料（如影像、代碼、配置等）。 這允許我們使用一組API來管理所有內容，並通過複製管理此內容的升級。 我們還獲得了備份、日誌記錄等單一來源。
+所有資料都應儲存在存放庫中，而不是依賴獨立的第三方資料來源，例如資料庫。 這適用於編寫的內容、二進位資料，例如影像、程式碼、設定等。 這可讓我們使用一組API來管理所有內容，並透過復寫管理此內容的促銷活動。 此外，我們還可以獲得備份、記錄等單一來源。
 
-### 運用&quot;內容模型優先&quot;設計原則 {#use-the-content-model-first-design-principle}
+### 使用「內容模型優先」設計原則 {#use-the-content-model-first-design-principle}
 
-構建新功能時，請始終先設計JCR內容結構，然後使用預設的Sling Servlet查看內容的讀寫。 這樣，您就可以確保實現在開箱即用的訪問控制機制下運行良好，並避免生成不必要的CRUD樣式的Servlet。
+建立新功能時，請一律先設計JCR內容結構，然後考慮使用預設的Sling servlet閱讀和寫入內容。 這可讓您確保實作可搭配現成可用的存取控制機制運作，並讓您避免產生不必要的CRUD樣式servlet。
 
-### 為REST風格 {#be-restful}
+### Be RESTful {#be-restful}
 
-Servlet應基於resourceTypes而不是路徑進行定義。 這使得可以使用JCR訪問控制，遵守REST原則，以及使用請求中提供給我們的資源和資源解析器。 這還允許我們更改在伺服器端呈現URL的指令碼，而無需更改客戶端的任何URL，同時隱藏客戶端實現詳細資訊以增加安全性。
+Servlet應根據resourceTypes而不是路徑來定義。 這可讓您使用JCR存取控制、遵守REST原則，並使用在請求中提供給我們的資源和資源解析器。 這也允許我們變更在伺服器端轉譯URL的指令碼，而不需要變更使用者端的URL，同時隱藏使用者端的伺服器端實作詳細資料，以提升安全性。
 
-### 避免定義新節點類型 {#avoid-defining-new-node-types}
+### 避免定義新節點型別 {#avoid-defining-new-node-types}
 
-節點類型在基礎結構層處於較低級別，通過使用分配給nt:atroblected、oak:Antrography、sling:Folder或cq:Page節點類型的sling:resourceType可滿足大多數要求。 節點類型等於儲存庫中的模式，而更改節點類型在將來可能會非常昂貴。
+節點型別在基礎結構層中的作用較低，大多數需求都可以通過使用指派給nt：unstructured、oak：Unstructured、sling：Folder或cq：Page節點型別的sling：resourceType來滿足。 節點型別等同於存放庫中的結構描述，之後變更節點型別可能會非常昂貴。
 
-### 遵守JCR中的命名約定 {#adhere-to-naming-conventions-in-the-jcr}
+### 遵守JCR中的命名慣例 {#adhere-to-naming-conventions-in-the-jcr}
 
-遵守命名約定將增加代碼庫的一致性，降低缺陷發生率並提高開發人員在系統中工作的速度。 Adobe在制定方案時使用了以下公AEM約：
+遵循命名慣例可增加程式碼庫的一致性，降低缺陷的發生率，並提升開發人員在系統中工作的速度。 Adobe在開發AEM時會使用下列慣例：
 
 * 節點名稱
 
    * 全部小寫
-   * 使用連字元的單詞分隔
+   * 使用連字型大小分隔文字
 
 * 屬性名稱
 
-   * 駝峰，以小寫字母開頭
+   * 駝峰式大小寫，以小寫字母開頭
 
 * 元件(JSP/HTML)
 
    * 全部小寫
-   * 使用連字元的單詞分隔
+   * 使用連字型大小分隔文字

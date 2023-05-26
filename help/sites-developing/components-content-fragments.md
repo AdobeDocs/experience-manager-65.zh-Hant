@@ -1,7 +1,7 @@
 ---
 title: 內容片段的元件
 seo-title: Components for Content Fragments
-description: 將內AEM容片段建立並管理為與頁面無關的資產
+description: AEM內容片段會建立並管理為與頁面無關的資產
 seo-description: AEM content fragments are created and managed as page-independent assets
 uuid: 81a9e0fe-ed45-4880-b36c-4f49e2598389
 contentOwner: AEM Docs
@@ -21,116 +21,116 @@ ht-degree: 1%
 
 # 內容片段的元件{#components-for-content-fragments}
 
-## 片段創作元件 {#components-for-fragment-authoring}
+## 用於片段編寫的元件 {#components-for-fragment-authoring}
 
 >[!CAUTION]
 >
->建議不要擴展或更改片段編輯器中使用的實際元件，因為這些元件仍可能更改。
+>不建議擴充或變更片段編輯器中使用的實際元件，因為它們仍可能會變更。
 
-查看 [內容片段管理API — 客戶端](/help/sites-developing/customizing-content-fragments.md#the-content-fragment-management-api-client-side)。
+請參閱 [內容片段管理API — 使用者端](/help/sites-developing/customizing-content-fragments.md#the-content-fragment-management-api-client-side).
 
-## 頁面創作元件 {#components-for-page-authoring}
+## 用於頁面編寫的元件 {#components-for-page-authoring}
 
 >[!CAUTION]
 >
->的 [內容片段核心元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) 現在推薦。 請參閱 [開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 的子菜單。
+>此 [內容片段核心元件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) 現在建議使用。 另請參閱 [開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以取得更多詳細資料。
 >
->本節詳細介紹為與內容片段一起使用而提供的原始元件(**內容片段** 的 **常規** 組)。
+>本節詳細說明用於內容片段的原始元件(**內容片段** 在 **一般** 群組)。
 
 >[!NOTE]
 >
->另請參閱 [內容片段配置用於呈現的元件](/help/sites-developing/content-fragments-config-components-rendering.md) 的上界。
+>另請參閱 [轉譯專用內容片段設定元件](/help/sites-developing/content-fragments-config-components-rendering.md) 以取得進一步資訊。
 
-Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md)。它們允許您建立通道中性內容以及（可能特定於通道）變體。 [然後，在創作內容頁面時，可以使用這些片段及其變體](/help/sites-authoring/content-fragments.md)。 您還可以通過 [將其從資產瀏覽器拖到頁面](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) （對於其他基於資產的元件，如基礎元件映像）。 現成內容片段元件只顯示一個 [元素](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 的下界。 使用元件對話框可以定義 [片段段落的元素、變化和範圍](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 顯示在頁面上。
-
->[!NOTE]
->
->此內容片段元件在6.2AEM中作為增強版Article元件引入，但已棄用。
+Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md)。它們可讓您建立管道中性內容，以及（可能特定於管道的）變數。 [然後，您可以在編寫內容頁面時使用這些片段及其變數](/help/sites-authoring/content-fragments.md). 您也可以透過以下方式使用現有的內容片段資產： [將其從資產瀏覽器拖曳至頁面](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) （如同其他以資產為基礎的元件，例如基礎元件影像）。 現成可用的內容片段元件只會顯示一個 [元素](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 引用內容片段的ID。 您可以使用元件對話方塊來定義 [元素、變數和片段段落範圍](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 要顯示在頁面上的資訊。
 
 >[!NOTE]
 >
->經典UI中不支援內容片段。
+>此內容片段元件在AEM 6.2中作為文章元件的增強版本引入，但已過時。
+
+>[!NOTE]
+>
+>傳統UI中不支援內容片段。
 
 ### 定義 {#definition}
 
-的 **內容片段** 元件用於保存對內容片段資產（有效增強的文本資產）的引用。 內容片段的資源類型為：
+此 **內容片段** 元件用於儲存內容片段資產的參考（有效增強文字資產）。 內容片段的資源型別為：
 
 `dam/cfm/components/contentfragment/contentfragment`
 
-引用在屬性中定義：
+參照是在屬性中定義：
 
 `fileReference`
 
-只有啟用觸摸的UI的編輯器完全支援內容片段元件，其中包括客戶端庫：
+只有觸控式UI的編輯器完全支援內容片段元件，其中包括使用者端程式庫：
 
 `cq.authoring.editor.plugin.cfm`
 
-此庫將特定於內容片段的功能添加到編輯器中。 例如，支援在頁面上添加和配置內容片段、在資產瀏覽器中搜索內容片段資產以及在側面板中搜索相關內容的能力。
+此程式庫會將內容片段的特定功能新增至編輯器。 例如，支援在頁面上新增和設定內容片段的功能、在資產瀏覽器中搜尋內容片段資產的功能，以及在側面板中搜尋關聯內容的功能。
 
-### 內部內容 {#in-between-content}
+### 中間內容 {#in-between-content}
 
-的 **內容碎片** t元件允許您在顯示的不同段落之間放置附加元件 [元素](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)。 基本上，所顯示的元素由不同的段落組成（每段都標有回車符）。 在每個段落之間，可以使用其他元件插入內容。
+此 **內容片段** t元件可讓您在顯示的不同段落之間放置其他元件 [元素](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment). 基本上，顯示的元素是由不同的段落所組成（每個段落都標有歸位字元）。 在每個段落之間，您可以使用其他元件插入內容。
 
-從技術角度看，所顯示元素* *的每個段落都位於其自己的parsys中，並且您在段落之間添加的每個元件都將（在框下）插入parsys中。
+從技術角度來看，顯示的元素* *的每個段落都存在於自己的parsys中，您在段落之間新增的每個元件都將（在標題下）插入parsys中。
 
-換句話說，如果內容片段元件的實例由三個段落組成，則該元件在儲存庫中將有三個不同的參數。 添加到內容片段的所有中間內容實際上將位於這些參數內。
+換言之，如果內容片段元件的例項由三個段落組成，則元件在存放庫中會有三個不同的parsys。 所有新增至內容片段的中間內容實際上將位於這些parsys內。
 
-在儲存庫中，中間內容相對於其在整體段落結構中的位置被儲存，即它不附加到實際段落內容。
+在存放庫中，中間內容會相對於其在整個段落結構中的位置儲存，也就是說，它不會附加至實際的段落內容。
 
-為了說明這一點，我們考慮：
+為了說明這一點，讓我們考慮我們有：
 
-* 由三段組成的內容片段的實例
-* 第二段之後已經插入了一些內容
+* 由三個段落組成的內容片段例項
+* 而且某些內容已插入第二段之後
 
-   * 這意味著內容將儲存在第二個參數中。
+   * 這表示內容會儲存在第二個parsys中。
 
-基本上，如果此實例的段落結構發生更改（通過更改所顯示的段落的變化、元素或範圍），則當內容片段內容時，它可能會影響所顯示的內容：
+基本上，如果此例項的段落結構變更（透過變更顯示的變數、元素或段落範圍），可能會影響內容片段內容時顯示的中間內容：
 
-* 編輯後，在第二段前增加一段：
+* 已編輯，並在第二個段落之前新增另一個段落：
 
-   * 中間內容將顯示在新建立的段落之後（第二個參數現在保存新建立的段落）。
+   * 中間內容將顯示在新建立的段落之後（第二個parsys現在包含新建立的段落）。
 
-* 已編輯並刪除第二段：
+* 已編輯並移除第二段：
 
-   * 中間內容將顯示在先前是第三段的段後（第二個段現在包含前第三段）。
+   * 中間內容將顯示在先前為第三個的段落之後（現在第二個parsys包含先前的第三個段落）。
 
-* 配置為僅顯示第一個段落：
+* 設定為只顯示第一段：
 
-   * 將不顯示中間內容（由於新配置，第二個參數不再呈現）。
+   * 將不會顯示中間內容（由於新設定，第二個parsys不再呈現）。
 
-### 自定義內容片段元件 {#customizing-the-content-fragment-component}
+### 自訂內容片段元件 {#customizing-the-content-fragment-component}
 
-要將現成內容片段元件用作擴展藍圖，您應遵守以下合同：
+若要使用現成的內容片段元件作為擴充的藍圖，您應遵守下列合約：
 
-* 重用HTL呈現指令碼及其關聯的POJO，查看如何實現內容功能。
-* 重用內容片段節點： `cq:editConfig`
+* 重複使用HTL演算指令碼及其關聯的POJO，檢視中間內容功能的實作方式。
+* 重複使用內容片段節點： `cq:editConfig`
 
-   * 的 `afterinsert`/ `afteredit`/ `afterdelete` 偵聽器用於觸發JS事件。 這些事件將在 `cq.authoring.editor.plugin.cfm` 客戶端庫，以在側面板中顯示關聯內容。
-   * 的 `cq:dropTargets` 配置為支援拖動內容片段資產。
-   * `cq:inplaceEditing` 配置為支援在頁面編輯器中創作內容片段。 片段就地編輯器在 `cq.authoring.editor.plugin.cfm` 客戶端庫，並允許快速連結開啟當前 [元素/變化](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 的 [片段編輯器](/help/assets/content-fragments/content-fragments-variations.md)。
+   * 此 `afterinsert`/ `afteredit`/ `afterdelete` 監聽器可用來觸發JS事件。 這些事件將在以下位置處理： `cq.authoring.editor.plugin.cfm` 使用者端資源庫，以在側面板中顯示關聯內容。
+   * 此 `cq:dropTargets` 設定為支援拖曳內容片段資產。
+   * `cq:inplaceEditing` 設定為支援在頁面編輯器中製作內容片段。 片段就地編輯器是在 `cq.authoring.editor.plugin.cfm` 使用者端程式庫，並允許快速連結以開啟目前的 [元素/變數](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 在 [片段編輯器](/help/assets/content-fragments/content-fragments-variations.md).
 
-### 在呈現前重寫資產 {#asset-rewriting-before-rendering}
+### 資產在轉譯前重新寫入 {#asset-rewriting-before-rendering}
 
-內容片段管理使用內部呈現過程為頁面生成最終HTML輸出。 這由內容片段元件在內部使用，也由更新引用頁上引用的片段的後台進程使用。
+內容片段管理使用內部呈現程式來產生頁面的最終HTML輸出。 這供內容片段元件內部使用，也供在參考頁面上更新參考片段的背景程式使用。
 
-在內部，Sling重寫器用於該渲染。 在以下位置找到相應的配置： `/libs/dam/config/rewriter/cfm` 如有需要可以調整。 查看 [阿帕奇Sling重寫器](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) 的子菜單。
+在內部，Sling重寫程式用於該轉譯。 個別設定可在下列位置找到： `/libs/dam/config/rewriter/cfm` 如有需要，可調整和。 請參閱 [Apache Sling重寫程式](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) 以取得詳細資訊。
 
 >[!CAUTION]
 >
->如果確實調整/覆蓋重寫器的配置：
+>如果您確實調整/覆蓋重寫程式的設定：
 >
 >* `/libs/dam/config/rewriter/cfm`
 >
->然後 `serializerType` **必須** 更新為：
+>然後 `serializerType` **必須** 更新至：
 >
 >* `serializerType="html5-serializer"`
 
 
-出廠配置使用以下變壓器：
+現成可用的設定會使用下列轉換器：
 
-* `transformer-cfm-payloadfilter`  — 用於檢索 `body` 部件(P) `<body>...</body>`)的HTML
+* `transformer-cfm-payloadfilter`  — 用於擷取 `body` 部分( `<body>...</body>`)僅片段HTML的
 
-* `transformer-cfm-parfilter`  — 如果指定了段落範圍，則過濾掉不需要的段落（如使用「內容片段」元件所做）
-* `transformer-cfm-assetprocessor`  — 用於在內部檢索嵌入到片段中的資產清單
+* `transformer-cfm-parfilter`  — 如果指定了段落範圍，則篩選掉不需要的段落（可以使用內容片段元件完成）
+* `transformer-cfm-assetprocessor`  — 內部用於擷取片段中內嵌的資產清單
 
-呈現過程通過 [`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html) 並且可以根據需要由自定義元件來利用（例如）。
+演算程式透過以下方式公開： [`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html) 如有需要，自訂元件可運用和（例如）。

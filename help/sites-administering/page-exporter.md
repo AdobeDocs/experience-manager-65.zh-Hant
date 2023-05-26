@@ -1,6 +1,6 @@
 ---
-title: 頁面導出器
-description: 瞭解如何使用頁面導AEM出器。
+title: 頁面匯出工具
+description: 瞭解如何使用AEM頁面匯出工具。
 exl-id: 15d08758-cf75-43c0-9818-98a579d64183
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
@@ -9,158 +9,158 @@ ht-degree: 0%
 
 ---
 
-# 頁面導出器{#the-page-exporter}
+# 頁面匯出工具{#the-page-exporter}
 
-允AEM許將頁面導出為包括影像的完整網頁， `.js` 和 `.css` 的子菜單。
+AEM可讓您將頁面匯出為完整的網頁，包含影像， `.js` 和 `.css` 檔案。
 
-配置後，您會通過替換 `html` 與 `export.zip` 的子菜單。 這將生成一個存檔(zip)檔案，其中包含以html格式呈現的頁面以及引用的資產。 重寫頁中的所有路徑（例如，到映像的路徑），以指向存檔中包含的檔案或指向伺服器上的資源。 然後，可以從瀏覽器下載存檔(zip)檔案。
+設定後，您透過取代 `html` 替換為 `export.zip` 在URL中。 這會產生封存(zip)檔案，其中包含以html格式呈現的頁面以及參照的資產。 頁面中的所有路徑（例如，影像的路徑）會重新寫入，以指向封存中包含的檔案，或伺服器上的資源。 接著，您就可以從瀏覽器下載封存(zip)檔案。
 
 >[!NOTE]
 >
 >根據您的瀏覽器和設定，下載內容將為：
->* 存檔檔案(`<page-name>.export.zip`)
->* 資料夾(`<page-name>`);有效地擴展了存檔檔案
+>* 封存檔案(`<page-name>.export.zip`)
+>* 資料夾(`<page-name>`)；有效地封存檔案已展開
 
 
-## 導出頁面 {#exporting-a-page}
+## 匯出頁面 {#exporting-a-page}
 
-以下步驟說明如何導出頁面，並假定站點存在導出模板。 導出模板定義了導出頁面的方式並特定於您的站點。 要建立導出模板，請參閱 [為站點建立頁面導出器配置](#creating-a-page-exporter-configuration-for-your-site) 的子菜單。
+下列步驟說明如何匯出頁面，並假設您的網站存在匯出範本。 匯出範本會定義頁面的匯出方式，且是您網站專屬的。 若要建立匯出範本，請參閱 [為您的網站建立頁面匯出程式設定](#creating-a-page-exporter-configuration-for-your-site) 區段。
 
-要導出頁面：
+若要匯出頁面：
 
-1. 導航至 **站點** 控制台。
+1. 導覽至中的必要頁面。 **網站** 主控台。
 
-1. 選擇頁面，然後開啟 **屬性** 對話框。
+1. 選取頁面，然後開啟 **屬性** 對話方塊。
 
-1. 選擇 **高級** 頁籤。
+1. 選取 **進階** 標籤。
 
-1. 展開 **導出** 的子菜單。
-選擇站點所需的模板，然後使用 **確定**。
+1. 展開 **匯出** 欄位以選取匯出範本。
+為您的網站選取所需的範本，然後確認： **確定**.
 
-1. 選擇 **保存並關閉** 按鈕。
+1. 選取 **儲存並關閉** 以關閉頁面屬性對話方塊。
 
-1. 請求要導出的頁面，替換尾碼 `html` 與 `export.zip` 的子菜單。
+1. 要求匯出頁面，取代尾碼 `html` 替換為 `export.zip` 在URL中。
 
    例如：
-   * 本地主機：4502/content/we-retail/language-masters/en.html
+   * localhost：4502/content/we-retail/language-masters/en.html
 
-   通過以下方式訪問：
-   * 本地主機：4502/content/we-retail/language-masters/en.export.zip
-
-
-1. 將存檔檔案下載到檔案系統。
-
-1. 在檔案系統中，如有必要，解壓檔案。 展開後，將存在與所選頁面同名的資料夾。 此資料夾包含：
-
-   * 子資料夾 `content`，是反映儲存庫中頁面路徑的一系列子資料夾的根
-
-      * 在此結構中，有選定頁面的html檔案(`<page-name>.html`)
-   * 其他資源(`.js` 檔案， `.css` 檔案、影像等) 根據導出模板中的設定進行定位
+   存取：
+   * localhost：4502/content/we-retail/language-masters/en.export.zip
 
 
-1. 開啟頁面html檔案(`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`)以檢查呈現。
+1. 將封存檔案下載至您的檔案系統。
 
-## 為站點建立頁面導出器配置 {#creating-a-page-exporter-configuration-for-your-site}
+1. 如有必要，請在您的檔案系統中解壓縮檔案。 展開後，將會有一個資料夾與所選頁面同名。 此資料夾包含：
 
-頁面導出器基於 [內容同步框架](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html)。 中可用的配置 **頁面屬性** 對話框是導出模板，用於定義頁面所需的依賴項。
+   * 子資料夾 `content`，代表一系列子資料夾的根目錄，這些子資料夾反映存放庫中頁面的路徑
 
-觸發頁面導出時，將引用導出模板，並動態應用頁面路徑和設計路徑。 然後，使用標準內容同步功能建立zip檔案。
+      * 在此結構中，有所選頁面的html檔案(`<page-name>.html`)
+   * 其他資源(`.js` 檔案， `.css` 檔案、影像等) 會根據匯出範本中的設定來定位
 
-現成安裝包AEM括預設模板 `/etc/contentsync/templates/default`。
 
-* 在資料庫中找不到導出模板時，此模板是回退模板。
+1. 開啟頁面html檔案(`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`)，以檢查轉譯。
 
-* 的 `default` 該模板顯示如何配置頁面導出，因此可以作為新導出模板的基礎。
+## 為您的網站建立頁面匯出程式設定 {#creating-a-page-exporter-configuration-for-your-site}
 
-* 要以JSON格式查看瀏覽器中模板的節點結構，請請求以下URL:
+頁面匯出工具是根據 [內容同步架構](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html). 中可用的設定 **頁面屬性** 對話方塊是定義頁面所需相依性的匯出範本。
+
+觸發頁面匯出時，會參考匯出範本，並動態套用頁面路徑和設計路徑。 然後使用標準Content Sync功能建立zip檔案。
+
+現成可用的AEM安裝包含 `/etc/contentsync/templates/default`.
+
+* 此範本是在存放庫中找不到匯出範本時的後援範本。
+
+* 此 `default` 範本會說明如何設定頁面匯出，以便作為新匯出範本的基礎。
+
+* 若要在瀏覽器中以JSON格式檢視範本的節點結構，請要求下列URL：
    `http://localhost:4502/etc/contentsync/templates/default.json`
 
-建立新頁面導出器模板的最簡單方法是：
+建立新頁面匯出工具範本最簡單的方法是：
 
-* 複製 `default` 模板，
+* 複製 `default` 範本，
 
-* 指定與您的站點相適應的新名稱，
+* 指派適合您網站的新名稱，
 
-* 然後進行所需的更新。
+* 然後進行必要的更新。
 
-要建立全新模板：
+若要建立全新的範本：
 
-1. 在 **CRXDE Lite**，在下面建立節點 `/etc/contentsync/templates`:
+1. 在 **CRXDE Lite**，在下方建立節點 `/etc/contentsync/templates`：
 
-   * `Name`:與您的網站相稱的名稱；比如說， `<mysite>`。 選擇頁面導出器模板時，該名稱將出現在頁面屬性對話框中。
+   * `Name`：適合您網站的名稱；例如， `<mysite>`. 選擇頁面匯出程式範本時，名稱會顯示在頁面屬性對話方塊中。
 
-   * `Type`: `nt:unstructured`
+   * `Type`： `nt:unstructured`
 
-2. 在模板節點下，在此調用 `mysite`，使用下面所述的配置節點建立節點結構。
+2. 在範本節點底下，呼叫這裡 `mysite`，使用下述設定節點建立節點結構。
 
-## 為頁面激活頁面導出器模板 {#activating-a-page-exporter-configuration-for-your-pages}
+## 啟用頁面的頁面匯出工具範本 {#activating-a-page-exporter-configuration-for-your-pages}
 
-配置模板後，您需要使其可用：
+設定範本後，您需要讓它可供使用：
 
-1. 在CRXDE中，導航到 `/content` 分支。 這可以是單個頁面，也可以是子樹的根頁面。
+1. 在CRXDE中導覽至 `/content` 分支。 這可以是個別頁面，或是子樹狀結構的根頁面。
 
-1. 在 `jcr:content` 該頁的節點建立屬性：
+1. 於 `jcr:content` 建立屬性的頁面節點：
    * `Name`: `cq:exportTemplate`
    * `Type`: `String`
-   * `Value`:模板路徑；例如： `/etc/contentsync/templates/mysite`
+   * `Value`：範本的路徑；例如： `/etc/contentsync/templates/mysite`
 
-### 頁面導出器配置節點 {#page-exporter-configuration-nodes}
+### 頁面匯出工具組態節點 {#page-exporter-configuration-nodes}
 
-模板由節點結構組成，因為它使用 [內容同步框架](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html)。  每個節點具有 `type` 屬性，該屬性定義在建立zip檔案過程中的特定操作。
+範本由節點結構組成，因為它使用 [內容同步架構](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html).  每個節點都有 `type` 屬性，定義zip檔案建立程式中的特定動作。
 
 <!-- For more details about the type property, refer to the Overview of configuration types section in the Content Sync framework page.
 -->
 
-以下節點可用於生成導出模板：
+下列節點可用來建置匯出範本：
 
 * `page`
-頁面節點用於將頁面html複製到zip檔案。 它具有以下特點：
+頁面節點用於將頁面html複製到zip檔案。 它具有下列特性：
 
-   * 是必需節點。
-   * 位於下面 `/etc/contentsync/templates/<mysite>`。
-   * 是使用屬性定義的 `Name`設定為 `page`。
-   * 節點類型為 `nt:unstructured`
+   * 是必要節點。
+   * 位於下方 `/etc/contentsync/templates/<mysite>`.
+   * 使用屬性定義 `Name`設定為 `page`.
+   * 節點型別為 `nt:unstructured`
 
-   的 `page` 節點具有以下屬性：
+   此 `page` 節點具有下列屬性：
 
-   * A `type` 屬性集 `pages`。
+   * A `type` 使用值設定的屬性 `pages`.
 
-   * 它沒有 `path` 屬性，因為當前頁路徑將動態複製到配置。
+   * 它沒有 `path` 屬性，因為目前的頁面路徑會動態複製到設定。
 
    <!--
   * The other properties are described in the Overview of configuration types section of the Content Sync framework.
   -->
 
 * `rewrite`
-重寫節點定義如何在導出的頁面中重寫連結。 重寫的連結可以指向zip檔案中包含的檔案或指向伺服器上的資源。
+rewrite節點會定義如何在匯出的頁面中重新寫入連結。 重寫的連結可以指向zip檔案中包含的檔案，也可以指向伺服器上的資源。
    <!-- Please refer to the Content Sync page for a complete description of the `rewrite` node. -->
 
 * `design`
-設計節點用於複製用於導出頁面的設計。 它具有以下特點：
+設計節點用於複製用於匯出頁面的設計。 它具有下列特性：
 
-   * 是可選的。
-   * 位於下面 `/etc/contentsync/templates/<mysite>`。
-   * 是使用屬性定義的 `Name` 設定為 `design`。
-   * 節點類型為 `nt:unstructured`。
+   * 為選用。
+   * 位於下方 `/etc/contentsync/templates/<mysite>`.
+   * 使用屬性定義 `Name` 設定為 `design`.
+   * 節點型別為 `nt:unstructured`.
 
-   的 `design` 節點具有以下屬性：
+   此 `design` 節點具有下列屬性：
 
-   * A `type` 屬性設定為值 `copy`。
+   * A `type` 屬性已設定為值 `copy`.
 
-   * 它沒有 `path` 屬性，因為當前頁路徑將動態複製到配置。
+   * 它沒有 `path` 屬性，因為目前的頁面路徑會動態複製到設定。
 
 
 * `generic`
-通用節點用於複製資源（如客戶端） 
-`.js` 或 `.css` 檔案到zip檔案。 它具有以下特點：
+通用節點用於複製clientlibs等資源 
+`.js` 或 `.css` 檔案放入zip檔案中。 它具有下列特性：
 
-   * 是可選的。
-   * 位於下面 `/etc/contentsync/templates/<mysite>`。
-   * 沒有特定的名稱。
-   * 節點類型為 `nt:unstructured`。
-   * 具有 `type` 物業及 `type` 相關屬性。 <!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
+   * 為選用。
+   * 位於下方 `/etc/contentsync/templates/<mysite>`.
+   * 沒有特定名稱。
+   * 節點型別為 `nt:unstructured`.
+   * 具有 `type` 屬性和 `type` 相關屬性。 <!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
-   例如，以下配置節點將複製 `mysite.clientlibs.js` 檔案到zip檔案：
+   例如，以下設定節點會複製 `mysite.clientlibs.js` 檔案放入zip檔案：
 
    ```xml
    "mysite.clientlibs.js": {
@@ -171,28 +171,28 @@ ht-degree: 0%
    }
    ```
 
-**實施自定義配置**
+**實作自訂設定**
 
-也可以進行自定義配置。
+也可以使用自訂設定。
 
 <!--
 As you may have noticed in the node structure, the **Geometrixx** page export template has a `logo` node with a `type` property set to `image`. This is a special configuration type that has been created to copy the image logo to the zip file. 
 -->
 
-為滿足某些特定要求，您可能需要實施 [自定義更新處理程式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/handler/package-summary.html)。
+若要符合某些特定需求，您可能需要實作 [自訂更新處理常式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/handler/package-summary.html).
 
 <!-- To meet some specific requirements, you may need to implement a custom `type` property: to do so, refer to the Implementing a custom update handler section in the Content Sync page.
 -->
 
-## 以寫程式方式導出頁面 {#programmatically-exporting-a-page}
+## 以程式匯出頁面 {#programmatically-exporting-a-page}
 
-要以寫程式方式導出頁面，可使用 [頁面導出器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/contentsync/PageExporter.html) OSGI服務。 此服務允許您：
+若要以程式設計方式匯出頁面，您可以使用 [頁面匯出工具](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/contentsync/PageExporter.html) OSGI服務。 此服務可讓您：
 
-* 導出頁面並寫入HTTP Servlet響應。
-* 導出頁面並在特定位置保存zip檔案。
+* 匯出頁面並寫入HTTP servlet回應。
+* 匯出頁面並將壓縮檔儲存在特定位置。
 
-綁定到的Servlet `export` 選擇器和 `zip` 擴展使用PageExporter服務。
+繫結至 `export` 選擇器和 `zip` 擴充功能會使用PageExporter服務。
 
 ## 疑難排解 {#troubleshooting}
 
-如果您在下載zip檔案時遇到問題，可以刪除 `/var/contentsync` 的子節點，然後再次發送導出請求。
+如果您在下載zip檔案時遇到問題，可以刪除 `/var/contentsync` 存放庫中的節點，然後再次傳送匯出請求。

@@ -1,7 +1,7 @@
 ---
 title: 設定 Live Copy 同步
 seo-title: Configuring Live Copy Synchronization
-description: 瞭解配置即時複製同步。
+description: 瞭解如何設定即時副本同步。
 seo-description: Learn about configuring Live Copy Synchronization.
 uuid: a5db0bee-a761-4cff-81dc-31b374525f47
 contentOwner: msm-service
@@ -21,38 +21,38 @@ ht-degree: 4%
 
 # 設定 Live Copy 同步{#configuring-live-copy-synchronization}
 
-執行以下任務來控制即時拷貝與其源內容同步的方式和時間。
+執行下列工作，控制即時副本與其來源內容同步化的方式與時間。
 
-* 決定現有的推廣配置是否滿足您的要求，或者您是否需要建立一個或多個。
-* 指定要用於即時副本的推廣配置。
+* 決定現有轉出設定是否符合您的需求，或您是否需要建立一個或多個轉出設定。
+* 指定用於即時副本的轉出設定。
 
-## 已安裝和自定義部署配置 {#installed-and-custom-rollout-configurations}
+## 已安裝及自訂轉出設定 {#installed-and-custom-rollout-configurations}
 
-本節提供有關已安裝的部署配置及其使用的同步操作的資訊，以及如何根據需要建立自定義配置。
+本節提供有關已安裝轉出設定及其使用的同步化動作，以及如何視需要建立自訂設定的資訊。
 
 >[!CAUTION]
 >
->更新或更改現成（已安裝）的部署配置 **不** 推薦。 如果需要自定義即時操作，則應在自定義部署配置中添加該操作。
+>更新或變更立即可用（已安裝）轉出設定為 **not** 建議使用。 如果需要自訂即時動作，則應將其新增到自訂轉出設定中。
 
-### 推廣觸發器 {#rollout-triggers}
+### 轉出觸發器 {#rollout-triggers}
 
-每個推廣配置都使用一種引發推廣的觸發器。 推廣配置可以使用以下觸發器之一：
+每個轉出設定都會使用轉出觸發器，導致轉出發生。 轉出設定可以使用下列其中一個觸發程式：
 
-* **推出時**:的 **推廣** 命令用於藍色打印頁面，或 **同步** 命令用於即時複製頁面。
+* **轉出時**：此 **轉出** 命令用於blue print頁面，或 **同步** 命令用於「即時副本」頁面。
 
-* **論修改**:源頁面已修改。
+* **修改**：來源頁面已修改。
 
-* **激活時**:源頁面已激活。
+* **啟動時**：來源頁面已啟動。
 
-* **停用時**:源頁面已停用。
+* **停用**：來源頁面已停用。
 
 >[!NOTE]
 >
->使用「修改時」觸發器會影響效能。 請參閱 [MSM最佳做法](/help/sites-administering/msm-best-practices.md#onmodify) 的子菜單。
+>使用「修改」觸發程式可能會影響效能。 另請參閱 [MSM最佳作法](/help/sites-administering/msm-best-practices.md#onmodify) 以取得詳細資訊。
 
-### 已安裝的部署配置 {#installed-rollout-configurations}
+### 已安裝的轉出設定 {#installed-rollout-configurations}
 
-下表列出了隨之安裝的部署配AEM置。 該表包括每個轉出配置的觸發器和同步操作。 如果安裝的推廣配置操作不符合您的要求，您可以 [建立新的部署配置](#creating-a-rollout-configuration)。
+下表列出與AEM一起安裝的轉出設定。 此表格包含每個轉出設定的觸發器和同步化動作。 如果安裝的轉出設定動作不符合您的需求，您可以 [建立新的轉出設定](#creating-a-rollout-configuration).
 
 <table>
  <tbody>
@@ -60,365 +60,365 @@ ht-degree: 4%
    <th>名稱</th>
    <th>說明</th>
    <th>觸發器</th>
-   <th>同步操作<br /> <br /> 參見 <a href="#installed-synchronization-actions">已安裝的同步操作</a></th>
+   <th>同步化動作<br /> <br /> 另請參閱 <a href="#installed-synchronization-actions">已安裝的同步化動作</a></th>
   </tr>
   <tr>
    <td>標準轉出設定</td>
    <td>標準轉出設定，允許於轉出觸發時開始轉出程序，並執行下列動作: 建立、更新、刪除內容以及排序子節點。</td>
    <td>於轉出</td>
-   <td>內容更新<br /> 內容複製<br /> 內容刪除<br /> 引用更新<br /> 產品更新<br /> 訂單子項</td>
+   <td>contentupdate<br /> contentcopy<br /> contentDelete<br /> referencesupdate<br /> 產品更新<br /> orderchildren</td>
   </tr>
   <tr>
    <td>在 Blueprint 啟動時啟動</td>
-   <td>發佈源時發佈即時副本。</td>
+   <td>發佈來源時發佈即時副本。</td>
    <td>啟動時</td>
-   <td>目標激活</td>
+   <td>targetActivate</td>
   </tr>
   <tr>
    <td>在 Blueprint 停用時停用</td>
-   <td>在禁用源時停用即時副本。</td>
+   <td>停用來源時停用即時副本。</td>
    <td>停用</td>
-   <td>目標停用<br /> </td>
+   <td>targetDeactivate<br /> </td>
   </tr>
   <tr>
    <td>在發生修改時推送</td>
-   <td><p>修改源時將內容推送到即時副本。</p> <p>在使用「修改時」觸發器時，請節省使用此部署配置。</p> </td>
+   <td><p>修改來源時將內容推送至即時副本。</p> <p>謹慎使用此轉出設定，因為它使用「修改」觸發器。</p> </td>
    <td>於修改</td>
-   <td>內容更新<br /> 內容複製<br /> 內容刪除<br /> 引用更新<br /> 訂單子項<br /> </td>
+   <td>contentupdate<br /> contentcopy<br /> contentDelete<br /> referencesupdate<br /> orderchildren<br /> </td>
   </tr>
   <tr>
    <td>在發生修改時推送 (淺層)</td>
-   <td><p>在修改藍圖頁面時將內容推送到即時副本，而不更新引用（例如，對於淺拷貝）。</p> <p>在使用「修改時」觸發器時，請節省使用此部署配置。</p> </td>
+   <td><p>修改Blueprint頁面時將內容推送至即時副本，而不更新引用（例如淺層副本）。</p> <p>謹慎使用此轉出設定，因為它使用「修改」觸發器。</p> </td>
    <td>於修改</td>
-   <td>內容更新<br /> 內容複製<br /> 內容刪除<br /> 訂單子項</td>
+   <td>contentupdate<br /> contentcopy<br /> contentDelete<br /> orderchildren</td>
   </tr>
   <tr>
    <td>提升啟動</td>
    <td>提升啟動頁面的標準轉出設定。</td>
    <td>於轉出</td>
-   <td>內容更新<br /> 內容複製<br /> 內容刪除<br /> 引用更新<br /> 訂單子項<br /> markLiveRelationship</td>
+   <td>contentupdate<br /> contentcopy<br /> contentDelete<br /> referencesupdate<br /> orderchildren<br /> markLiveRelationship</td>
   </tr>
   <tr>
-   <td>目錄頁內容部署配置</td>
+   <td>目錄頁面內容轉出設定</td>
    <td>從目錄 Blueprint 套用頁面範本。</td>
    <td>於轉出</td>
-   <td>內容更新<br /> 內容複製<br /> 內容刪除<br /> 引用更新<br /> productCreateUpdate<br /> 訂單子項</td>
+   <td>contentupdate<br /> contentcopy<br /> contentDelete<br /> referencesupdate<br /> productCreateUpdate<br /> orderchildren</td>
   </tr>
   <tr>
    <td>目錄頁面更新轉出設定</td>
-   <td>應用目錄藍圖中的目標屬性。 必須在目錄頁內容部署配置後運行。</td>
+   <td>從目錄Blueprint套用目標屬性。 必須在目錄頁面內容轉出設定之後執行。</td>
    <td>於轉出</td>
-   <td>catalogOullotHooks</td>
+   <td>catalogRolloutHooks</td>
   </tr>
   <tr>
    <td>DPS 發佈轉出設定</td>
-   <td>DPS發佈展出配置，允許在展出觸發器上啟動展出過程，同時在初始展出時排除FolioProducer綁定屬性</td>
+   <td>DPS發佈轉出設定，允許在初始轉出排除FolioProducer繫結屬性時，在轉出觸發器中開始轉出程式</td>
    <td>於轉出</td>
-   <td>內容更新<br /> 內容複製<br /> 內容刪除<br /> 引用更新<br /> 訂單子項<br /> dps元資料篩選器</td>
+   <td>contentupdate<br /> contentcopy<br /> contentDelete<br /> referencesupdate<br /> orderchildren<br /> dpsMetadataFilter</td>
   </tr>
   <tr>
-   <td>舊版(5.6.0)目錄部署配置</td>
+   <td>舊版(5.6.0)目錄轉出設定</td>
    <td>已棄用。轉出目錄時不使用 MSM，並改用 Catalog Generator。</td>
    <td>於轉出</td>
-   <td>編輯屬性</td>
+   <td>editProperties</td>
   </tr>
  </tbody>
 </table>
 
-### 已安裝的同步操作 {#installed-synchronization-actions}
+### 已安裝的同步化動作 {#installed-synchronization-actions}
 
-下表列出了隨安裝的同步操AEM作。 如果安裝的操作不符合您的要求，您可以 [建立新同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)。
+下表列出與AEM一起安裝的同步化動作。 如果安裝的動作不符合您的需求，您可以 [建立新的同步化動作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action).
 
 <table>
  <tbody>
   <tr>
-   <th>操作名稱</th>
+   <th>動作名稱</th>
    <th>說明</th>
    <th>屬性<br /> </th>
   </tr>
   <tr>
-   <td>內容複製</td>
-   <td>如果源的節點在即時拷貝上不存在，則將節點複製到即時拷貝。 <a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM內容複製操作服務</a> 指定要排除的節點類型、段落項和頁面屬性。 <br /> </td>
+   <td>contentcopy</td>
+   <td>當即時副本上不存在來源的節點時，會將節點複製到即時副本。 <a href="#excluding-properties-and-node-types-from-synchronization">設定CQ MSM內容複製動作服務</a> 以指定要排除的節點型別、段落專案和頁面屬性。 <br /> </td>
    <td> </td>
   </tr>
   <tr>
-   <td>內容刪除</td>
-   <td><p>刪除源上不存在的活動副本的節點。 <a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM內容刪除操作服務</a> 指定要排除的節點類型、段落項和頁面屬性。 </p> </td>
+   <td>contentDelete</td>
+   <td><p>刪除不在來源上的即時副本節點。 <a href="#excluding-properties-and-node-types-from-synchronization">設定CQ MSM內容刪除動作服務</a> 以指定要排除的節點型別、段落專案和頁面屬性。 </p> </td>
    <td> </td>
   </tr>
   <tr>
-   <td>內容更新</td>
-   <td>使用源中的更改更新即時拷貝內容。 <a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM內容更新操作服務</a> 指定要排除的節點類型、段落項和頁面屬性。 <br /> </td>
+   <td>contentupdate</td>
+   <td>使用來源的變更來更新即時副本內容。 <a href="#excluding-properties-and-node-types-from-synchronization">設定CQ MSM內容更新動作服務</a> 以指定要排除的節點型別、段落專案和頁面屬性。 <br /> </td>
    <td> </td>
   </tr>
   <tr>
-   <td>編輯屬性</td>
-   <td><p>編輯即時副本的屬性。 editMap屬性確定要編輯的屬性及其值。 editMap屬性的值必須使用以下格式：</p> <p><code>[property_name_1]#[current_value]#</code>[new_value],<br /> <code>[property_name_2]#[current_value]#</code>[new_value],<br /> ...。<br /> <code>[property_name_n]#[current_value]#</code>[new_value]</p> <p>的 <code>current_value</code> 和 <code>new_value</code> 項是規則運算式。 <br /> </p> <p>例如，請考慮editMap的以下值：</p> <p><code>sling:resourceType#/</code>（內容頁|首頁）#/<br /> 移動網頁，<br /> cq:template#/contenpage#/mobilecontentpage</p> <p>此值編輯即時複製節點的屬性，如下所示：</p>
+   <td>editProperties</td>
+   <td><p>編輯即時副本的屬性。 editMap屬性決定要編輯哪些屬性及其值。 editMap屬性的值必須使用下列格式：</p> <p><code>[property_name_1]#[current_value]#</code>[new_value]，<br /> <code>[property_name_2]#[current_value]#</code>[new_value]，<br /> ... ，<br /> <code>[property_name_n]#[current_value]#</code>[new_value]</p> <p>此 <code>current_value</code> 和 <code>new_value</code> 專案是規則運算式。 <br /> </p> <p>例如，請考慮editMap的下列值：</p> <p><code>sling:resourceType#/</code>(contentpage|homepage)#/<br /> mobilecontentpage，<br /> cq：template#/contentpage#/mobilecontentpage</p> <p>此值會編輯即時副本節點的屬性，如下所示：</p>
     <ul>
-     <li>的 <code>sling:resourceType</code> 屬性設定為 <code>contentpage</code> 或 <code>homepage</code> 設定為 <code>mobilecontentpage.</code></li>
-     <li>的 <code>cq:template</code> 設定為的屬性 <code>contentpage</code> 設定為 <code>mobilecontentpage.</code></li>
+     <li>此 <code>sling:resourceType</code> 屬性已設定為 <code>contentpage</code> 或 <code>homepage</code> 設為 <code>mobilecontentpage.</code></li>
+     <li>此 <code>cq:template</code> 屬性已設定為 <code>contentpage</code> 設為 <code>mobilecontentpage.</code></li>
     </ul> </td>
-   <td><p> </p> <p>編輯映射：（字串）標識屬性、當前值和新值。 有關資訊，請參閱說明。<br /> </p> </td>
+   <td><p> </p> <p>editMap： （字串）識別屬性、目前值和新值。 如需詳細資訊，請參閱說明。<br /> </p> </td>
   </tr>
   <tr>
-   <td>通知</td>
-   <td>發送已滾出頁面的頁面事件。 要得到通知，首先需要訂閱推廣活動。</td>
+   <td>notify</td>
+   <td>傳送已轉出頁面的頁面事件。 若要接收通知，必須先訂閱轉出事件。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>訂單子項</td>
-   <td>在即時拷貝中，它根據藍圖上的順序對子（節點）進行排序<br /> </td>
+   <td>orderchildren</td>
+   <td>在即時副本上，它會根據Blueprint上的順序來排序子項（節點）<br /> </td>
    <td> </td>
   </tr>
   <tr>
-   <td>引用更新</td>
-   <td><p>在即時拷貝上，此同步操作會更新引用，如連結。<br /> 它在即時複製頁中搜索指向藍圖中資源的路徑。 找到後，它會更新路徑以指向即時副本（而不是藍圖）中的相關資源。 在藍圖之外具有目標的參照不會更改。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM引用更新操作服務</a> 指定要排除的節點類型、段落項和頁面屬性。 </p> </td>
+   <td>referencesupdate</td>
+   <td><p>在即時副本上，此同步動作會更新參照，例如連結。<br /> 它會搜尋即時副本頁面中指向Blueprint內資源的路徑。 找到後，它會更新路徑以指向即時副本內的相關資源（而不是Blueprint）。 具有Blueprint外部目標的參考不會變更。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">設定CQ MSM參考更新動作服務</a> 以指定要排除的節點型別、段落專案和頁面屬性。 </p> </td>
    <td> </td>
   </tr>
   <tr>
-   <td>目標版本</td>
-   <td><p>建立即時副本的版本。</p> <p>此操作必須是部署配置中包含的唯一同步操作。</p> </td>
+   <td>targetVersion</td>
+   <td><p>建立即時副本的版本。</p> <p>此動作必須是轉出設定中包含的唯一同步化動作。</p> </td>
    <td> </td>
   </tr>
   <tr>
-   <td>目標激活</td>
-   <td><p>激活即時副本。</p> <p>此操作必須是部署配置中包含的唯一同步操作。</p> </td>
+   <td>targetActivate</td>
+   <td><p>啟動即時副本。</p> <p>此動作必須是轉出設定中包含的唯一同步化動作。</p> </td>
    <td> </td>
   </tr>
   <tr>
-   <td>目標停用</td>
-   <td><p>停用即時副本。</p> <p>此操作必須是部署配置中包含的唯一同步操作。</p> </td>
+   <td>targetDeactivate</td>
+   <td><p>停用即時副本。</p> <p>此動作必須是轉出設定中包含的唯一同步化動作。</p> </td>
    <td> </td>
   </tr>
   <tr>
    <td>工作流程</td>
-   <td><p>啟動由目標屬性定義的工作流（僅適用於頁面），並將即時副本作為負載。</p> <p>目標路徑是模型節點的路徑。</p> </td>
-   <td>目標：（字串）工作流模型的路徑。<br /> </td>
+   <td><p>啟動目標屬性定義的工作流程（僅適用於頁面），並將即時副本視為裝載。</p> <p>目標路徑是模型節點的路徑。</p> </td>
+   <td>target： （字串）工作流程模型的路徑。<br /> </td>
   </tr>
   <tr>
    <td>強制</td>
-   <td><p>將即時複製頁上多個ACL的權限設定為特定用戶組的只讀權限。 配置了以下ACL:</p>
+   <td><p>將即時副本頁面上若干ACL的許可權，設為特定使用者群組的唯讀。 已設定下列ACL：</p>
     <ul>
      <li>ActionSet.ACTION_NAME_REMOVE</li>
      <li>ActionSet.ACTION_NAME_SET_PROPERTY</li>
      <li>ActionSet.ACTION_NAME_ACL_MODIFY</li>
-    </ul> <p>僅對頁面使用此操作。</p> </td>
-   <td>目標：（字串）要為其設定權限的組的ID。 <br /> </td>
+    </ul> <p>僅對頁面使用此動作。</p> </td>
+   <td>target： （字串）您為其設定許可權的群組識別碼。 <br /> </td>
   </tr>
   <tr>
-   <td>強制內容</td>
-   <td><p>將即時複製頁上多個ACL的權限設定為特定用戶組的只讀權限。 配置了以下ACL:</p>
+   <td>mandatoryContent</td>
+   <td><p>將即時副本頁面上若干ACL的許可權，設為特定使用者群組的唯讀。 已設定下列ACL：</p>
     <ul>
      <li>ActionSet.ACTION_NAME_SET_PROPERTY</li>
      <li>ActionSet.ACTION_NAME_ACL_MODIFY</li>
-    </ul> <p>僅對頁面使用此操作。</p> </td>
-   <td>目標：（字串）要為其設定權限的組的ID。 </td>
+    </ul> <p>僅對頁面使用此動作。</p> </td>
+   <td>target： （字串）您為其設定許可權的群組識別碼。 </td>
   </tr>
   <tr>
-   <td>強制結構</td>
-   <td>將ActionSet.ACTION_NAME_REMOVE ACL在即時複製頁上的權限設定為特定用戶組的只讀。 僅對頁面使用此操作。</td>
-   <td>目標：（字串）要為其設定權限的組的ID。 </td>
+   <td>mandatoryStructure</td>
+   <td>針對特定使用者群組，將即時副本頁面上ActionSet.ACTION_NAME_REMOVE ACL的許可權設為唯讀。 僅對頁面使用此動作。</td>
+   <td>target： （字串）您為其設定許可權的群組識別碼。 </td>
   </tr>
   <tr>
-   <td>版本複製操作</td>
-   <td>如果藍圖/源頁面至少已發佈一次，則使用已發佈的版本建立即時副本頁面。 注：此操作僅可用於基於已發佈的源頁面建立即時拷貝頁面，而不可用於更新現有即時拷貝頁面。 </td>
+   <td>VersionCopyaction</td>
+   <td>如果Blueprint/來源頁面已發佈至少一次，會使用發佈的版本建立即時副本頁面。 注意：此動作僅適用於根據已發佈的來源頁面建立即時副本頁面，不適用於更新現有的即時副本頁面。 </td>
    <td> </td>
   </tr>
   <tr>
-   <td>頁移動操作</td>
-   <td><p>在藍圖中移動頁面時，PageMoveAction將應用。</p> <p>操作將複製（相關）LiveCopy頁面，而不是將其從移動之前的位置移動到之後的位置。</p> <p>PageMoveAction不會更改移動前位置的LiveCopy頁面。 因此，對於連續的SollutConfigurations，它的狀態為LiveRelationhip（無Bluepint）。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM頁移動操作服務</a> 指定要排除的節點類型、段落項和頁面屬性。 </p> <p>此操作必須是部署配置中包含的唯一同步操作。</p> </td>
-   <td><p>prop_referenceUpdate:（布爾值）設定為true以更新引用。 預設值為true。</p> <p> </p> </td>
+   <td>PageMoveAction</td>
+   <td><p>頁面在Blueprint中移動時會套用PageMoveAction 。</p> <p>動作會將（相關的） LiveCopy頁面從移動前的位置複製到移動後的位置，而不是移動頁面。</p> <p>PageMoveAction不會變更位於移動前位置的LiveCopy頁面。 因此，對於連續RolloutConfigurations，它具有不含Blueprint的LiveRelationship狀態。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">設定CQ MSM頁面移動動作服務</a> 以指定要排除的節點型別、段落專案和頁面屬性。 </p> <p>此動作必須是轉出設定中包含的唯一同步化動作。</p> </td>
+   <td><p>prop_referenceUpdate： （布林值）設為true可更新參照。 預設值為true。</p> <p> </p> </td>
   </tr>
   <tr>
    <td>productCreateUpdate</td>
-   <td>在目錄中建立或更新產品資源。 此操作應用於以下情況之一：
+   <td>建立或更新目錄中的產品資源。 此動作旨在用於下列其中一種情況：
     <ul>
-     <li>生成或滾出目錄（或目錄部分）</li>
-     <li>用戶恢復產品元件的同步繼承。</li>
+     <li>產生或轉出目錄（或目錄區段）</li>
+     <li>使用者恢復產品元件的同步繼承。</li>
     </ul> </td>
    <td> </td>
   </tr>
   <tr>
    <td>markLiveRelationship</td>
-   <td>表示啟動建立的內容存在即時關係。</td>
+   <td>表示啟動項建立的內容存在即時關係。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>catalogOullotHooks</td>
-   <td>執行特定於目錄生成的轉出掛接。 調用CatalogGenerator的executePageSolutHooks和executeProductSoultHooks方法。<br /> 請參見Javadocs中的com.adobe.cq.commerce.pim.api.CatalogGeneratorAEM。</td>
+   <td>catalogRolloutHooks</td>
+   <td>執行目錄產生特定的轉出掛接。 呼叫CatalogGenerator的executePageRolloutHooks和executeProductRolloutHooks方法。<br /> 請參閱AEM Javadocs中的com.adobe.cq.commerce.pim.api.CatalogGenerator 。</td>
    <td> </td>
   </tr>
   <tr>
    <td>產品更新</td>
-   <td>在產品目錄的即時副本中更新產品頁面</td>
+   <td>更新產品目錄即時副本中的產品頁面</td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-### 建立部署配置 {#creating-a-rollout-configuration}
+### 建立轉出設定 {#creating-a-rollout-configuration}
 
-你可以 [建立部署配置](/help/sites-developing/extending-msm.md#creating-a-new-rollout-configuration) 當安裝的部署配置不滿足您的應用程式要求時：
+您可以 [建立轉出設定](/help/sites-developing/extending-msm.md#creating-a-new-rollout-configuration) 當安裝的轉出設定不符合您的應用程式需求時：
 
-* [建立部署配置](/help/sites-developing/extending-msm.md#create-the-rollout-configuration)。
-* [將同步操作添加到展示配置](/help/sites-developing/extending-msm.md#add-synchronization-actions-to-the-rollout-configuration)。
+* [建立轉出設定](/help/sites-developing/extending-msm.md#create-the-rollout-configuration).
+* [將同步化動作新增至轉出設定](/help/sites-developing/extending-msm.md#add-synchronization-actions-to-the-rollout-configuration).
 
-然後，在藍圖或即時複製頁上設定部署配置時，您可以使用新的部署配置。
+然後，當您在Blueprint或即時副本頁面上設定轉出設定時，即可使用新的轉出設定。
 
-### 從同步中排除屬性和節點類型 {#excluding-properties-and-node-types-from-synchronization}
+### 從同步中排除屬性和節點型別 {#excluding-properties-and-node-types-from-synchronization}
 
-您可以配置幾個支援相應同步操作的OSGi服務，以便它們不會影響特定的節點類型和屬性。 例如，與內部功能相關的許多屬性和子節AEM點不應包含在即時副本中。 只應複製與頁面用戶相關的內容。
+您可以設定支援對應同步化動作的數個OSGi服務，使其不會影響特定節點型別和屬性。 例如，與AEM內部功能相關的許多屬性和子節點不應包含在即時副本中。 僅應複製與頁面使用者相關的內容。
 
-使用時，AEM有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的子菜單。
+使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
 
-下表列出了可以指定要排除的節點的同步操作。 該表提供了使用Web控制台進行配置的服務的名稱和使用儲存庫節點進行配置的PID。
+下表列出您可以指定要排除的節點的同步化動作。 此表格提供要使用「Web主控台」設定的服務名稱，以及使用存放庫節點進行設定的PID。
 
-| 同步操作 | Web控制台中的服務名稱 | 服務PID |
+| 同步化動作 | Web主控台中的服務名稱 | 服務PID |
 |---|---|---|
-| 內容複製 | CQ MSM內容複製操作 | com.day.cq.wcm.msm.impl.actions.ContentCopyActionFactory |
-| 內容刪除 | CQ MSM內容刪除操作 | com.day.cq.wcm.msm.impl.actions.ContentDeleteActionFactory |
-| 內容更新 | CQ MSM內容更新操作 | com.day.cq.wcm.msm.impl.actions.ContentUpdateActionFactory |
-| 頁移動操作 | CQ MSM頁移動操作 | com.day.cq.wcm.msm.impl.actions.PageMoveActionFactory |
-| 引用更新 | CQ MSM引用更新操作 | com.day.cq.wcm.msm.impl.actions.ReferencesUpdateActionFactory |
+| contentcopy | CQ MSM內容複製動作 | com.day.cq.wcm.msm.impl.actions.ContentCopyActionFactory |
+| contentDelete | CQ MSM內容刪除動作 | com.day.cq.wcm.msm.impl.actions.ContentDeleteActionFactory |
+| contentupdate | CQ MSM內容更新動作 | com.day.cq.wcm.msm.impl.actions.ContentUpdateActionFactory |
+| PageMoveAction | CQ MSM頁面移動動作 | com.day.cq.wcm.msm.impl.actions.PageMoveActionFactory |
+| referencesupdate | CQ MSM參考更新動作 | com.day.cq.wcm.msm.impl.actions.ReferencesUpdateActionFactory |
 
-下表介紹了可以配置的屬性：
+下表說明您可以設定的特性：
 
 <table>
  <tbody>
   <tr>
-   <th>Web控制台屬性/OSGi屬性</th>
+   <th>Web主控台屬性/ OSGi屬性</th>
    <th>說明</th>
   </tr>
   <tr>
-   <td><p>排除的節點類型</p> <p>cq.wcm.msm.action.excludednodetypes</p> </td>
-   <td>與要從同步操作中排除的節點類型匹配的規則運算式。</td>
+   <td><p>排除的節點型別</p> <p>cq.wcm.msm.action.excludednodetypes</p> </td>
+   <td>符合要從同步化動作中排除的節點型別的規則運算式。</td>
   </tr>
   <tr>
-   <td><p>排除的段落項</p> <p>cq.wcm.msm.action.excludedparagraphitems</p> </td>
-   <td>與要從同步操作中排除的段落項匹配的規則運算式。</td>
+   <td><p>排除的段落專案</p> <p>cq.wcm.msm.action.excludedparagraphitems</p> </td>
+   <td>符合要從同步化動作中排除的段落專案的規則運算式。</td>
   </tr>
   <tr>
    <td><p>排除的頁面屬性</p> <p>cq.wcm.msm.action.excludedprops</p> </td>
-   <td>與要從同步操作中排除的頁面屬性相匹配的規則運算式。</td>
+   <td>符合要從同步化動作中排除之頁面屬性的規則運算式。</td>
   </tr>
   <tr>
-   <td><p>忽略的混合節點類型</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td>
-   <td>僅適用於CQ MSM內容更新操作。 與要從同步操作中排除的混合節點類型的名稱相匹配的規則運算式。</td>
+   <td><p>忽略的Mixin節點型別</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td>
+   <td>僅適用於CQ MSM內容更新動作。 符合要從同步化動作中排除的mixin節點型別名稱的規則運算式。</td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->在「經典」UI中，LiveCopy頁的「頁屬性」對話框中顯示的鎖定表徵圖不反映「排除的頁屬性」屬性的配置。 即使對於從同步操作中排除的屬性，也會顯示鎖定表徵圖。
+>在Classic UI中，LiveCopy頁面的「頁面屬性」對話方塊中顯示的鎖定圖示不反映「排除的頁面屬性」屬性的設定。 鎖定圖示甚至會針對從同步化動作中排除的屬性而顯示。
 
 >[!NOTE]
 >
->在觸控優化的UI中，另請參閱 [在頁面屬性上配置MSM鎖（觸控優化UI）](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-pagep-roperties-touch-optimized-ui)。
+>在觸控最佳化的UI中，另請參閱 [在頁面屬性上設定MSM鎖定（觸控最佳化UI）](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-pagep-roperties-touch-optimized-ui).
 
-#### CQ MSM內容更新操作 — 排除 {#cq-msm-content-update-action-exclusions}
+#### CQ MSM內容更新動作 — 排除 {#cq-msm-content-update-action-exclusions}
 
-預設情況下，會排除一些屬性和節點類型，這些屬性和節點類型在OSGi配置中定義 **CQ MSM內容更新操作**&#x200B;下 **排除的頁面屬性**。
+預設會排除數個屬性和節點型別，這些屬性和節點型別會在的OSGi設定中定義 **CQ MSM內容更新動作**，下 **排除的頁面屬性**.
 
-預設情況下，與以下規則運算式匹配的屬性在部署時被排除（即未更新）:
+依預設，轉出時排除符合下列規則運算式的屬性（即未更新）：
 
 ![chlimage_1](assets/chlimage_1.png)
 
-您可以根據需要更改定義排除清單的表達式。
+您可以視需要變更定義排除清單的運算式。
 
-例如，如果您希望 **標題** 要包括在考慮部署的更改中，請刪除 `jcr:title` 排除項。 例如，使用regex:
+例如，如果您想要頁面 **標題** 若要包含在要轉出的變更中，請移除 `jcr:title` 從排除專案。 例如，使用規則運算式：
 
 `jcr:(?!(title)$).*`
 
-### 配置同步以更新引用 {#configuring-synchronization-for-updating-references}
+### 設定同步以更新參照 {#configuring-synchronization-for-updating-references}
 
-您可以配置多個OSGi服務，這些服務支援與更新引用相關的相應同步操作。
+您可以設定多個OSGi服務，以支援與更新參考相關的對應同步化動作。
 
-使用時，AEM有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的子菜單。
+使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
 
-下表列出了可為其指定引用更新的同步操作。 該表提供了使用Web控制台進行配置的服務的名稱和使用儲存庫節點進行配置的PID。
+下表列出您可以為其指定參照更新的同步化動作。 此表格提供要使用「Web主控台」設定的服務名稱，以及使用存放庫節點進行設定的PID。
 
 <table>
  <tbody>
   <tr>
-   <th>Web控制台屬性/OSGi屬性</th>
+   <th>Web主控台屬性/ OSGi屬性</th>
    <th>說明</th>
   </tr>
   <tr>
-   <td><p>跨嵌套LiveCopys更新引用</p> <p>cq.wcm.msm.impl.action.referencesupdate.prop_updateNested</p> </td>
-   <td>僅可用於CQ MSM引用更新操作。 選擇此選項（Web控制台）或將此布爾屬性設定為true（儲存庫配置），以替換針對位於最頂層LiveCopy分支中的任何資源的引用。</td>
+   <td><p>更新巢狀即時副本間的引用</p> <p>cq.wcm.msm.impl.action.referencesupdate.prop_updateNested</p> </td>
+   <td>僅適用於CQ MSM參考更新動作。 選取此選項（Web主控台）或將此布林值屬性設為true （存放庫設定）可取代以位於最頂端LiveCopy分支內之任何資源為目標的參照。</td>
   </tr>
   <tr>
-   <td><p>更新引用頁</p> <p>cq.wcm.msm.impl.actions.pagemove.prop_referenceUpdate</p> </td>
-   <td>僅可用於CQ MSM頁面移動操作。 選擇此選項（Web控制台）或將此布爾屬性設定為 <code>true</code> （儲存庫配置），以更新任何引用，以使用原始頁引用LiveCopy頁。</td>
+   <td><p>更新引用頁面</p> <p>cq.wcm.msm.impl.actions.pagemove.prop_referenceUpdate</p> </td>
+   <td>僅適用於CQ MSM頁面移動動作。 選取此選項（Web主控台）或將此布林值屬性設為 <code>true</code> （存放庫設定）更新任何參照，以使用原始頁面來參照LiveCopy頁面。</td>
   </tr>
  </tbody>
 </table>
 
-## 指定要使用的展示配置 {#specifying-the-rollout-configurations-to-use}
+## 指定要使用的轉出設定 {#specifying-the-rollout-configurations-to-use}
 
-MSM使您能夠指定一些通常使用的推廣配置集，並且如果需要，可以覆蓋特定即時副本的這些配置集。 MSM提供了多個位置，用於指定要使用的推廣配置。 該位置確定配置是否適用於特定即時副本。
+MSM可讓您指定一般使用的轉出設定集，並視需要覆寫特定即時副本的轉出設定。 MSM提供數個位置來指定要使用的轉出設定。 位置會決定設定是否套用至特定的即時副本。
 
-以下位置清單可指定要使用的部署配置，說明MSM如何確定用於即時拷貝的部署配置：
+以下是可指定要使用的轉出設定的位置清單，說明MSM如何決定要將哪些轉出設定用於即時副本：
 
-* **[即時複製頁屬性](/help/sites-administering/msm-sync.md#setting-the-rollout-configurations-for-a-live-copy-page):** 將即時拷貝頁面配置為使用一個或多個部署配置時，MSM使用這些部署配置。
-* **[藍圖頁屬性](/help/sites-administering/msm-sync.md#setting-the-rollout-configuration-for-a-blueprint-page):** 當即時拷貝基於藍圖，且即時拷貝頁面未配置有部署配置時，將使用與藍圖源頁面關聯的部署配置。
-* **即時複製父頁屬性：** 如果未使用部署配置配置即時拷貝頁和藍圖源頁，則使用應用於即時拷貝頁的父頁的部署配置。
-* **[系統預設值](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration):** 當無法確定即時副本的父頁的部署配置時，將使用系統預設的部署配置。
+* **[即時副本頁面屬性](/help/sites-administering/msm-sync.md#setting-the-rollout-configurations-for-a-live-copy-page)：** 當即時副本頁面設定為使用一個或多個轉出設定時，MSM會使用這些轉出設定。
+* **[Blueprint頁面屬性](/help/sites-administering/msm-sync.md#setting-the-rollout-configuration-for-a-blueprint-page)：** 當即時副本以Blueprint為基礎，且即時副本頁面未設定轉出設定時，將使用與Blueprint來源頁面關聯的轉出設定。
+* **即時副本父頁面屬性：** 當即時副本頁面和Blueprint來源頁面均未設定轉出設定時，將使用套用至即時副本頁面父頁面的轉出設定。
+* **[系統預設值](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration)：** 當無法確定即時副本父頁面的轉出設定時，將使用系統預設轉出設定。
 
-例如，藍圖使用We.Retail參考站點作為源內容。 根據藍圖建立站點。 以下清單中的每個項目都描述了有關部署配置使用的不同方案：
+例如，藍圖使用We.Retail參考網站作為來源內容。 從Blueprint建立網站。 下列清單中的每個專案都說明關於轉出設定的使用不同情境：
 
-* 未將藍圖頁面或即時拷貝頁面配置為使用部署配置。 MSM對所有即時拷貝頁使用系統預設部署配置。
-* We.Retail參考站點的根頁配置了幾個部署配置。 MSM將這些部署配置用於所有即時拷貝頁面。
-* We.Retail Reference網站的根頁配置了多個推廣配置，而即時拷貝網站的根頁配置了一組不同的推廣配置。 MSM使用在即時拷貝站點的根頁面上配置的部署配置。
+* 所有Blueprint頁面或即時副本頁面均未設定為使用轉出設定。 MSM會對所有即時副本頁面使用系統預設轉出設定。
+* We.Retail參考網站的根頁面已設定好數個轉出設定。 MSM會對所有即時副本頁面使用這些轉出設定。
+* We.Retail參考網站的根頁面已設定好數個轉出設定，而即時副本網站的根頁面已設定好不同的轉出設定。 MSM會使用在即時副本網站的根頁面上設定的轉出設定。
 
-### 設定即時複製頁的部署配置 {#setting-the-rollout-configurations-for-a-live-copy-page}
+### 設定即時副本頁面的轉出設定 {#setting-the-rollout-configurations-for-a-live-copy-page}
 
-使用展開配置配置配置動態複製頁，以便在展開源頁時使用。 預設情況下，子頁繼承配置。 將部署配置配置為使用時，將覆蓋即時複製頁從其父級繼承的配置。
+使用轉出設定來設定即時副本頁面，以便在來源頁面轉出時使用。 子頁面預設會繼承設定。 當您設定要使用的轉出設定時，將會覆寫即時副本頁面從其父頁面繼承的設定。
 
-您還可以配置即時拷貝頁面的部署配置 [建立即時拷貝](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)。
+您也可以在以下情況下為即時副本頁面設定轉出設定： [建立即時副本](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page).
 
-1. 使用 **站點** 控制台，以選擇即時複製頁。
-1. 選擇 **屬性** 的子菜單。
-1. 開啟 **即時拷貝** 頁籤。
+1. 使用 **網站** 控制檯以選取即時副本頁面。
+1. 選取 **屬性** （從工具列）。
+1. 開啟 **即時副本** 標籤。
 
-   的 **配置** 部分顯示頁面繼承的展開配置。
+   此 **設定** 區段會顯示頁面繼承的轉出設定。
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
-1. 如果需要，請調整 **即時複製繼承** 。 如果選中，則即時複製配置對所有子項都有效。
+1. 如有需要，請調整 **即時副本繼承** 標幟。 如果勾選，即時副本設定將在所有子項上都有效。
 
-1. 清除 **從父代繼承展示配置** 屬性，然後從清單中選擇一個或多個部署配置。
+1. 清除 **從父項繼承轉出設定** 屬性，然後從清單中選取一或多個轉出設定。
 
-   選定的部署配置顯示在下拉清單下方。
+   選取的轉出設定會顯示在下拉式清單下方。
 
    ![chlimage_1-2](assets/chlimage_1-2.png)
 
-1. 按一下或點擊 **保存**。
+1. 按一下或點選 **儲存**.
 
-### 設定藍圖頁的部署配置 {#setting-the-rollout-configuration-for-a-blueprint-page}
+### 設定Blueprint頁面的轉出設定 {#setting-the-rollout-configuration-for-a-blueprint-page}
 
-使用展開配置配置配置藍圖頁，以在展開藍圖頁時使用。
+使用轉出設定來設定Blueprint頁面，以便在轉出Blueprint頁面時使用。
 
-請注意，藍圖頁的子頁繼承配置。 配置要使用的展示配置時，可以覆蓋頁面從其父級繼承的配置。
+請注意，Blueprint頁面的子頁面會繼承設定。 當您設定要使用的轉出設定時，可能會覆寫頁面從其父項繼承的設定。
 
-1. 使用 **站點** 控制台，以選擇藍圖的根頁。
-1. 選擇 **屬性** 的子菜單。
-1. 開啟 **藍圖** 頁籤。
-1. 選擇一個或多個 **推廣配置** 使用下拉選擇器。
-1. 保留更新 **保存**。
+1. 使用 **網站** 控制檯以選取Blueprint的根頁面。
+1. 選取 **屬性** （從工具列）。
+1. 開啟 **Blueprint** 標籤。
+1. 選取一或多個 **轉出設定** 使用下拉式選擇器。
+1. 儲存您的更新，透過 **儲存**.
 
-### 設定系統預設部署配置 {#setting-the-system-default-rollout-configuration}
+### 設定系統預設轉出設定 {#setting-the-system-default-rollout-configuration}
 
-指定要用作系統預設值的轉出配置。 要指定預設值，請配置OSGi服務：
+指定要作為系統預設值的轉出組態。 若要指定預設值，請設定OSGi服務：
 
-* **第CQ WCM Live關係管理器**
+* **Day CQ WCM即時關係管理員**
 服務PID為 
 `com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
 
-使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [儲存庫節點](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)。
+使用下列任一專案設定服務： [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [存放庫節點](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository).
 
-* 在Web控制台中，要配置的屬性的名稱為預設的部署配置。
-* 使用儲存庫節點，要配置的屬性的名稱為 `liverelationshipmgr.relationsconfig.default`。
+* 在Web主控台中，要設定的屬性名稱為Default rollout config。
+* 使用存放庫節點，要設定的屬性名稱是 `liverelationshipmgr.relationsconfig.default`.
 
-將此屬性值設定為要用作系統預設值的推廣配置路徑。 預設值為 `/libs/msm/wcm/rolloutconfigs/default`，即 **標準部署配置**。
+將此屬性值設定為轉出設定的路徑，以作為系統預設值。 預設值為 `/libs/msm/wcm/rolloutconfigs/default`，也就是 **標準轉出設定**.

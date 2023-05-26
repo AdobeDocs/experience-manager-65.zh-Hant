@@ -1,6 +1,6 @@
 ---
-title: 故障排除Adobe Experience Manager
-description: 瞭解與有關的故障排除AEM問題。
+title: 疑難排解Adobe Experience Manager
+description: 瞭解AEM的疑難排解問題。
 uuid: 72379531-915c-45d0-ba70-42b212665272
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,21 +16,21 @@ ht-degree: 2%
 
 ---
 
-# 故障排除Adobe Experience Manager {#troubleshooting-aem}
+# 疑難排解Adobe Experience Manager {#troubleshooting-aem}
 
-以下部分介紹在使用(Adobe Experience Manager)時可能遇到的AEM一些問題，以及有關如何解決這些問題的建議。
-
->[!NOTE]
->
->如果要排除中的創作問題，請AEM參閱 [作者故障排除。](/help/sites-authoring/troubleshooting.md)
+以下章節涵蓋您在使用AEM (Adobe Experience Manager)時可能會遇到的一些問題，以及有關如何疑難排解這些問題的建議。
 
 >[!NOTE]
 >
->當遇到問題時，也值得檢查 [已知問題](/help/release-notes/release-notes.md) 例如（發行版和服務包）。
+>如果您正在疑難排解AEM中的撰寫問題，請參閱 [作者的疑難排解。](/help/sites-authoring/troubleshooting.md)
 
-## 為管理員排除故障方案 {#troubleshooting-scenarios-for-administrators}
+>[!NOTE]
+>
+>如果發生問題，也值得檢查清單 [已知問題](/help/release-notes/release-notes.md) （發行版本和Service Pack）。
 
-下表概述了管理員可以解決的問題：
+## 針對管理員的疑難排解案例 {#troubleshooting-scenarios-for-administrators}
+
+下表提供管理員可疑難排解之問題的概觀：
 
 <table>
  <tbody>
@@ -40,87 +40,87 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>系統管理員</td>
-   <td><p>按兩下Quickstart jar無效，或使用其他程式（例如，存檔管理器）開啟jar檔案</p> </td>
+   <td><p>連按兩下Quickstart jar沒有任何效果，或使用其他程式（例如archive manager）開啟jar檔案</p> </td>
   </tr>
   <tr>
    <td><p>系統管理員</p> </td>
-   <td><p>我在CRX上運行的應用程式引發記憶體不足錯誤</p> </td>
+   <td><p>在CRX上執行的應用程式擲回記憶體不足錯誤</p> </td>
   </tr>
   <tr>
    <td><p>系統管理員</p> </td>
-   <td><p>按兩下AEMCM Quickstart後，瀏覽器中不顯示歡迎AEM螢幕</p> </td>
+   <td><p>連按兩下AEM CM Quickstart後，瀏覽器中不會顯示AEM歡迎畫面</p> </td>
   </tr>
   <tr>
-   <td><p>系統管理員</p> <p>管理員用戶</p> </td>
-   <td><p>建立線程轉儲</p> </td>
+   <td><p>系統管理員</p> <p>管理員使用者</p> </td>
+   <td><p>建立執行緒傾印</p> </td>
   </tr>
   <tr>
-   <td><p>系統管理員</p> <p>管理員用戶</p> </td>
-   <td><p>檢查未關閉的JCR會話</p> </td>
+   <td><p>系統管理員</p> <p>管理員使用者</p> </td>
+   <td><p>檢查未關閉的JCR工作階段</p> </td>
   </tr>
  </tbody>
 </table>
 
 ## 安裝問題 {#installation-issues}
 
-請參閱 [常見安裝問題](/help/sites-deploying/troubleshooting.md#common-installation-issues) 有關以下故障排除方案的資訊：
+另請參閱 [常見安裝問題](/help/sites-deploying/troubleshooting.md#common-installation-issues) 有關下列疑難排解情況的資訊：
 
-* 按兩下Quickstart jar無效，或使用其他程式（如存檔管理器）的JAR檔案。
-* 在CRX上運行的應用程式會出現記憶體不足錯誤。
-* 按兩下AEM「Quickstart（快速啟動）」後，「Welcome（歡迎）」螢幕不會顯示AEM在瀏覽器中。
+* 連按兩下Quickstart jar或其他程式（例如archive manager）的JAR檔案沒有任何效果。
+* 在CRX上執行的應用程式會擲回記憶體不足錯誤。
+* 連按兩下AEM Quickstart後，瀏覽器中不會顯示AEM歡迎畫面。
 
-## 故障排除分析的方法 {#methods-for-troubleshooting-analysis}
+## 疑難排解分析的方法 {#methods-for-troubleshooting-analysis}
 
-### 建立線程轉儲 {#making-a-thread-dump}
+### 建立執行緒傾印 {#making-a-thread-dump}
 
-線程轉儲是當前處於活動狀態的所有Java™線程的清單。 如AEM果響應不正確，線程轉儲可幫助您識別死鎖或其他問題。
+對話串傾印是目前作用中的所有Java™對話串的清單。 如果AEM沒有正確回應，執行緒傾印可以幫助您識別死鎖或其他問題。
 
-### 使用吊索螺紋卸荷器 {#using-sling-thread-dumper}
+### 使用Sling對話串傾印器 {#using-sling-thread-dumper}
 
-1. 開啟 **Web控AEM制台**;例如，在 `https://localhost:4502/system/console/`。
-1. 選擇 **線程**&#x200B;在&#x200B;**狀態** 頁籤。
+1. 開啟 **AEM Web Console**；例如， `https://localhost:4502/system/console/`.
+1. 選取 **執行緒**&#x200B;在&#x200B;**狀態** 標籤。
 
 ![screen_shot_2012-02-13at43925pm](assets/screen_shot_2012-02-13at43925pm.png)
 
-### 使用jstack（命令行） {#using-jstack-command-line}
+### 使用jstack （命令列） {#using-jstack-command-line}
 
-1. 查找Java™實例的AEMPID（進程ID）。
+1. 尋找AEM Java™例項的PID （處理序ID）。
 
-   例如，您可以 `ps -ef` 或 `jps`。
+   例如，您可以使用 `ps -ef` 或 `jps`.
 
 1. 執行:
 
    `jstack <pid>`
 
-1. 顯示線程轉儲。
+1. 顯示執行緒傾印。
 
 >[!NOTE]
 >
->可以使用 `>>` 輸出重定向：
+>您可以使用將對話串傾印附加至記錄檔案 `>>` 輸出重新導向：
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-查看 [如何從JVM獲取線程轉儲](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=en) 文檔，以獲取詳細資訊
+請參閱 [如何從JVM進行對話串傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=en) 說明檔案以取得詳細資訊
 
-### 檢查未關閉的JCR會話 {#checking-for-unclosed-jcr-sessions}
+### 檢查未關閉的JCR工作階段 {#checking-for-unclosed-jcr-sessions}
 
-為WCM開發功能時AEM，可以開啟JCR會話（與開啟資料庫連接類似）。 如果開啟的會話從未關閉，則您的系統可能會出現以下症狀：
+開發AEM WCM的功能時，可能會開啟JCR工作階段（相當於開啟資料庫連線）。 如果開啟的工作階段從未關閉，您的系統可能會遇到以下症狀：
 
 * 系統變慢。
-* 您可以看到CacheManager的很多內容：調整日誌檔案中的所有條目；以下數字(大小=&lt;x>)顯示快取數，每個會話開啟多個快取。
-* 系統不時記憶體不足（幾小時、幾天或幾週後，具體取決於嚴重性）。
+* 您可以看到許多CacheManager： resizeAll entries in the log file；下列數字(size=&lt;x>)顯示快取數目，每個工作階段會開啟數個快取。
+* 系統時常會用盡記憶體（在數小時、數天或數週後，視嚴重程度而定）。
 
-要分析未關閉的會話並找出哪些代碼未關閉會話，請參閱知識庫文章 [分析未關閉的會話](https://helpx.adobe.com/experience-manager/kb/AnalyzeUnclosedSessions.html)。
+若要分析未關閉的工作階段並找出哪個程式碼未關閉工作階段，請參閱知識庫文章 [分析未關閉的工作階段](https://helpx.adobe.com/experience-manager/kb/AnalyzeUnclosedSessions.html).
 
-### 使用Adobe Experience ManagerWeb控制台 {#using-the-adobe-experience-manager-web-console}
+### 使用Adobe Experience Manager Web Console {#using-the-adobe-experience-manager-web-console}
 
-OSGi捆綁包的狀態還可以提前指示可能的問題。
+OSGi套件組合的狀態也能及早指出可能的問題。
 
-1. 開啟 **Web控AEM制台**;例如，在 `https://localhost:4502/system/console/`。
-1. 選擇 **捆綁** 在 **奧斯吉** 頁籤。
+1. 開啟 **AEM Web Console**；例如， `https://localhost:4502/system/console/`.
+1. 選取 **套裝** 在 **OSGI** 標籤。
 1. 檢查:
 
-   * 束的狀態。 如果有「非活動」或「未滿足」，請嘗試停止並重新啟動捆綁包。 如果問題仍然存在，請使用其他方法進行進一步調查。
-   * 是否有任何束缺少依賴項。 通過按一下單個捆綁包名稱（即連結）可以看到這些詳細資訊（以下示例沒有任何問題）:
+   * 套件組合的狀態。 如果有任何「非使用中」或「不滿意」，請嘗試停止並重新啟動該套件。 如果問題仍然存在，請使用其他方法進一步調查。
+   * 是否有任何套件組合缺少相依性。 按一下個別套件名稱（這是一個連結，以下範例沒有任何問題）即可檢視此類詳細資料：
 
 ![screen_shot_2012-02-13at44706pm](assets/screen_shot_2012-02-13at44706pm.png)

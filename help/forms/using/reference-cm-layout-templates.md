@@ -1,7 +1,7 @@
 ---
-title: 參考信函模板
+title: 參考字母範本
 seo-title: Reference letter templates
-description: AEM Forms提供了信件管理佈局模板，您可以使用這些模板快速建立信件。
+description: AEM Forms提供「通訊管理」信函版面配置範本，供您快速建立信函。
 seo-description: AEM Forms provides Correspondence Management letter layout templates that you can use to create letters quickly.
 uuid: 3b2312d9-daa0-435b-976f-4969b54c5056
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -16,87 +16,87 @@ ht-degree: 2%
 
 ---
 
-# 參考信函模板 {#reference-letter-templates}
+# 參考字母範本 {#reference-letter-templates}
 
-在Oracle Tergement中，信件模板包含典型的表單域、頁眉和頁腳等佈局功能以及用於內容放置的空「目標區域」。
+在Correspondence Management中，信函範本包含典型的表單欄位、版面功能（例如頁首和頁尾）以及用於放置內容的空白「目標區域」。
 
-Oracle Tergement在 [AEM Forms附加包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant)。 您可以根據品牌和業務需求在設計器中自定義模板。 該包包括以下模板：
+Correspondence Management提供信函範本於 [AEM Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant). 您可以根據品牌和業務需求在Designer中自訂範本。 此套件包含下列範本：
 
-* 經典
-* 經典簡單
-* 平衡左
-* 平衡右
-* 左視
-* 視覺頂部
-* 視覺頂部 — 經典
+* Classic
+* Classic簡單
+* 向左平衡
+* 向右平衡
+* 視覺化左側
+* Visual Top
+* Visual Top — 傳統
 
-安裝軟體包後，佈局模板(XDP)將列在templates-folder中的以下位置：
+安裝套件後，版面配置範本(XDP)會列在範本 — 資料夾的以下位置：
 
 `https://'[server]:[port]'/[context-root]/aem/forms.html/content/dam/formsanddocuments/templates-folder`
 
-以下是此包中所有模板中的常用欄位：
+以下是此套件中所有範本的共同欄位：
 
 * 日期
 * 致敬
-* 關閉文本
-* 簽名文本
+* 關閉文字
+* 簽章文字
 
-![列出所有CM字母模板](assets/templatescorrespondence.png)
+![列出所有CM字母範本](assets/templatescorrespondence.png)
 
-安裝AEM-FORMS.-6.3-REFERENCE-LAYOUT-TEMPLATES包後，模板將列在templates-folder中
+安裝AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES套件後，範本會列在templates-folder中
 
-## 經典 {#classic}
+## Classic {#classic}
 
-Classic模板頂部有標識，適合寫一封簡單的專業信件。
+Classic範本的頂端有標誌，適合使用純專業的字母。
 
-![經典](assets/classic.png)
+![classic](assets/classic.png)
 
-PDF預覽使用「傳統型」模板建立的信件
+使用Classic範本建立的字母的PDF預覽
 
-## 經典簡單 {#classic-simple}
+## Classic簡單 {#classic-simple}
 
-包括用於捕獲電話號碼和電子郵件地址的欄位。 「標準簡單」模板與「標準簡單」模板類似，只是它沒有可以輸入收件人地址的欄位。
+包含擷取電話號碼和電子郵件地址的欄位。 Classic Simple範本類似於Classic範本，但前者沒有可輸入收件者地址的欄位。
 
-![聯繫資訊片段](assets/classicsimple.png)
+![聯絡資訊片段](assets/classicsimple.png)
 
-PDF預覽使用「傳統型簡單」模板建立的字母
+使用Classic Simple範本建立的字母的PDF預覽
 
-## 平衡左 {#balanced-left}
+## 向左平衡 {#balanced-left}
 
-「平衡左」模板包含字母左側的徽標。
+「平衡左側」範本包含信函左側的標誌。
 
-![平衡左](assets/balancedleft.png)
+![balancedleft](assets/balancedleft.png)
 
-PDF預覽使用「平衡左」模板建立的信件
+使用「左側平衡」範本建立的信件的PDF預覽
 
-## 平衡右 {#balanced-right}
+## 向右平衡 {#balanced-right}
 
-「平衡右」模板左側有公司徽標，並為在信件本身上輸入收件人地址提供了空間。 「平衡右側」模板還包含一個頁腳，當字母具有多個頁面時，該頁腳會重新流動。
+Balanced Right範本左側有公司標誌，並提供在信函本身輸入收件者地址的空間。 Balanced Right範本也包含頁尾，當您的信件有多個頁面時便會重新整理。
 
-![平衡](assets/balancedright.png)
+![balancedright](assets/balancedright.png)
 
-PDF預覽使用「平衡右側」模板建立的信件
+使用「向右平衡」範本建立的字母的PDF預覽
 
-## 左視 {#visual-left}
+## 視覺化左側 {#visual-left}
 
-「可視左側」模板在頁面左側有一個側頭，在側頭上放置了公司徽標。 可視左模板具有主題欄位，但沒有頁腳。
+Visual Left範本在頁面左側有一個側標題，並將公司標誌放在側標題上方。 「視覺化左側」範本有主旨欄位，但沒有頁尾。
 
-![可視化左](assets/visualleft.png)
+![visualleft](assets/visualleft.png)
 
-PDF預覽使用可視左模板建立的字母
+使用「視覺化左側」範本建立的字母的PDF預覽
 
-## 視覺頂部 {#visual-top}
+## Visual Top {#visual-top}
 
-「可視頂部」模板頂部有可視邊距。 「可視頂部」模板包含一個欄位，用於在頁面本身上輸入收件人地址。 「可視頂部」模板具有主題欄位和頁腳，該頁腳會為延伸到多頁的字母重排。
+「視覺效果頂端」範本的頂端有視覺邊界。 Visual Top範本有一個欄位，可用於在頁面本身輸入收件者的地址。 Visual Top範本有「主旨」欄位和一個頁尾，可針對延伸至多個頁面的字母重新整理。
 
-![視覺頂部](assets/visualtop.png)
+![visualtop](assets/visualtop.png)
 
-PDF使用「可視頂部」模板建立的信件預覽
+使用Visual Top範本建立的字母的PDF預覽
 
-## 視覺頂部 — 經典 {#visual-top-classic}
+## Visual Top — 傳統 {#visual-top-classic}
 
-Visual Top - Classic模板的頁面頂部有一個帶有公司徽標的標題。 Visual Top - Classic模板有一個欄位可輸入主題，但沒有頁腳。
+Visual Top - Classic範本的頁面頂端有一個標頭，上面有公司標誌。 Visual Top - Classic範本有一個欄位可輸入主旨，但沒有頁尾。
 
-![視覺經典](assets/visualtopclassic.png)
+![visualtopclassic](assets/visualtopclassic.png)
 
-PDF預覽使用「可視頂部 — 經典」模板建立的字母
+使用Visual Top - Classic範本建立的字母的PDF預覽

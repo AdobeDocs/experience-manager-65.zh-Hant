@@ -1,7 +1,7 @@
 ---
-title: 擴展注釋元件
+title: 延伸註解元件
 seo-title: Extend Comments Component
-description: 擴展「注釋」元件以更改其外觀或行為以用於特定用途
+description: 擴充Comments元件以改變其外觀或特定用途的行為
 seo-description: Extend the Comments component to alter its appearance or behavior for specific uses
 uuid: 6f439097-b1d0-4e7d-afcf-01d8f43aa866
 contentOwner: Guillaume Carlino
@@ -17,26 +17,26 @@ ht-degree: 0%
 
 ---
 
-# 擴展注釋元件  {#extend-comments-component}
+# 延伸註解元件  {#extend-comments-component}
 
-意圖 [延伸](client-customize.md#extensions) 預設元件用於改變特定用途的元件的外觀或行為。
+的意圖 [延伸](client-customize.md#extensions) 預設元件是針對特定用途變更元件的外觀或行為。
 
-該元件的路徑是唯一的，並將預設元件作為超級資源類型引用。 與元件覆蓋的全局範圍相比，該範圍有限，因此風險較小。
+元件的路徑是唯一的，會將預設元件參照為超級資源型別。 與元件覆蓋的整個範圍相比，範圍是有限的，因此風險較低。
 
 >[!NOTE]
 >
->擴展 [覆蓋](client-customize.md#overlays) 不支援元件。
+>擴充 [重疊](client-customize.md#overlays) 不支援元件。
 
 ## 範例 {#example}
 
-假設注釋元件的標題必須在實例的一個站點上以替代外觀顯示AEM，而在另一個站點上以預設顯示顯示。 與其覆蓋預設注釋（更改所有實例的注釋元件），更好的解決方案是確保有多個注釋元件可供在不同站點上使用。
+假設註解元件的標題必須以替代外觀顯示在AEM例項的一個網站上，而以預設顯示出現在另一個網站上。 取代覆蓋預設註解（會變更所有例項的註解元件）的更好的解決方案是確保有多個註解元件可用於各種網站。
 
-要實現此解決方案，請建立一個新元件，該元件將擴展（覆蓋）現有元件並修改Handlebars指令碼。 使用新注釋的站點區域可以使用擴展注釋，而使用預設外觀的站點不受影響。
+若要實作此解決方案，請建立延伸（覆寫）現有元件的新元件，並修改Handlebars指令碼。 使用新註解的網站區域可使用延伸區域，而使用預設外觀的網站則不受影響。
 
-注釋元件實際上是構成注釋系統的兩個元件之一。 因此，有兩個要擴展的元件： *評論* 和 *注釋*。 要編輯的指令碼位於 *注釋* 元件 `header.hbs` 檔案，而父級 *評論* 元件（注釋系統）是作者實際添加到頁面的內容。
+註解元件實際上是構成註解系統的兩個元件之一。 因此，有兩個元件需要擴充： *評論* 和 *評論*. 要編輯的指令碼位於 *評論* 元件的 `header.hbs` 檔案，而父系 *評論* 元件（註解系統）是作者實際新增至頁面的專案。
 
-要擴展注釋，您需要：
+若要擴充註解，您必須：
 
 1. [建立元件](extend-create-components.md)
-1. [將注釋添加到示例頁](extend-sample-page.md)
-1. [更改外觀](extend-alter-appearance.md)
+1. [新增註解至範例頁面](extend-sample-page.md)
+1. [變更外觀](extend-alter-appearance.md)

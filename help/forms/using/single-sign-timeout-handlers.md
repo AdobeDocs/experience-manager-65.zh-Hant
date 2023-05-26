@@ -1,7 +1,7 @@
 ---
-title: 單一登錄和超時處理程式
+title: 單一登入和逾時處理常式
 seo-title: Single Sign On and timeout handlers
-description: How-to為AEM Forms工作區設定會話超時值。
+description: 如何設定AEM Forms工作區的工作階段逾時值。
 seo-description: How-to set the session timeout value for AEM Forms workspace.
 uuid: 17583fd5-6453-41d3-bb63-a639983fbea9
 contentOwner: robhagat
@@ -17,26 +17,26 @@ ht-degree: 0%
 
 ---
 
-# 單一登錄和超時處理程式 {#single-sign-on-and-timeout-handlers}
+# 單一登入和逾時處理常式 {#single-sign-on-and-timeout-handlers}
 
-AEM Forms工作區已啟用SSO。 如果用戶已登錄到AEM Forms應用程式(如Forms管理器或PDF生成器用戶介面)，並在同一瀏覽器會話中訪問AEM Forms工作區，則用戶將登錄到AEM Forms工作區，反之亦然。
+AEM Forms工作區已啟用SSO。 如果使用者已登入AEM Forms應用程式(如Forms管理員或PDF產生器使用者介面)並在相同的瀏覽器工作階段中存取AEM Forms工作區，則使用者會登入AEM Forms工作區，反之亦然。
 
-## 在AEM Forms工作區中處理伺服器超時 {#handling-server-timeout-in-nbsp-aem-forms-workspace}
+## 在AEM Forms工作區中處理伺服器逾時 {#handling-server-timeout-in-nbsp-aem-forms-workspace}
 
-可以在管理控制台中配置用戶的會話超時。
+您可以在管理控制檯中設定使用者的工作階段逾時。
 
-要設定超時，請登錄到 `https://'[server]:[port]'/adminui`，導航 **設定>用戶管理>配置>配置高級系統屬性**，並進行所需設定。
+若要設定逾時，請登入 `https://'[server]:[port]'/adminui`，導覽至 **設定>使用者管理>設定>設定進階系統屬性**，並進行所需的設定。
 
-在AEM Forms工作區中，超時處理為：
+在AEM Forms中，工作區逾時的處理方式為：
 
-* 用戶的會話持續時間可用於響應 `initialize` 初始化用戶會話的調用。
-* 彈出對話框將通知用戶會話即將過期，在會話到期前15秒。
+* 使用者的工作階段期間可用於回應 `initialize` 會初始化使用者工作階段的呼叫。
+* 快顯對話方塊會通知使用者工作階段即將到期，在工作階段到期前15秒。
 
-在此彈出對話框中：
+在此快顯對話方塊上：
 
-* 按一下「確定」結束用戶會話。
-* 按一下取消重新初始化用戶會話。
+* 按一下「確定」結束使用者作業階段。
+* 按一下[取消]重新初始化使用者工作階段。
 
 >[!NOTE]
 >
->如果未採取任何操作，則在會話到期前三秒鐘，用戶將自動從AEM Forms工作區註銷。
+>如果未採取任何動作，系統會在工作階段到期前三秒自動將使用者登出AEM Forms工作區。

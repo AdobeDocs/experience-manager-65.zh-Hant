@@ -1,7 +1,7 @@
 ---
-title: OWASP前10
+title: OWASP前10名
 seo-title: OWASP Top 10
-description: 瞭解如AEM何處理前10大OWASP安全風險。
+description: 瞭解AEM如何處理前10大OWASP安全性風險。
 seo-description: Learn how AEM deals with the top 10 OWASP security risks.
 uuid: a5a7e130-e15b-47ae-ba21-448f9ac76074
 contentOwner: Guillaume Carlino
@@ -18,58 +18,58 @@ ht-degree: 0%
 
 ---
 
-# OWASP前10{#owasp-top}
+# OWASP前10名{#owasp-top}
 
-的 [開啟Web應用程式安全項目](https://www.owasp.org) (OWASP)保存他們認為 [前10大Web應用程式安全風險](https://www.owasp.org/index.php/OWASP_Top_Ten_Project)。
+此 [開啟Web應用程式安全性專案](https://www.owasp.org) (OWASP)會維護一份清單，列明他們所認為的 [前10大Web應用程式安全性風險](https://www.owasp.org/index.php/OWASP_Top_Ten_Project).
 
-下面列出了這些資訊，並解釋了CRX如何處理這些資訊。
+以下列出，連同CRX如何處理這些專案的說明。
 
-## 1。注射 {#injection}
+## 1.注入 {#injection}
 
-* SQL — 設計阻止：預設儲存庫設定既不包括也不需要傳統資料庫，所有資料都儲存在內容儲存庫中。 所有訪問都限於經過驗證的用戶，並且只能通過JCR API執行。 僅搜索查詢(SELECT)支援SQL。 此外，SQL還提供了值綁定支援。
-* LDAP - LDAP注入是不可能的，因為驗證模組會過濾輸入並使用綁定方法執行用戶導入。
-* OS — 應用程式內沒有執行Shell執行。
+* SQL — 設計避免：預設存放庫設定既不包含也不需要傳統資料庫，所有資料都儲存在內容存放庫中。 所有存取權僅限於已驗證的使用者，且只能透過JCR API執行。 僅搜尋查詢支援SQL (SELECT)。 此外，SQL還提供值繫結支援。
+* LDAP — 無法插入LDAP，因為驗證模組會篩選輸入並使用繫結方法執行使用者匯入。
+* OS — 應用程式內沒有執行殼層。
 
-## 2.跨站點指令碼(XSS) {#cross-site-scripting-xss}
+## 2.跨網站指令碼(XSS) {#cross-site-scripting-xss}
 
-一般的緩解做法是使用基於的伺服器端XSS保護庫對用戶生成內容的所有輸出進行編碼 [OWASP編碼器](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project) 和 [安蒂薩米](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project)。
+一般緩解做法是使用伺服器端XSS保護程式庫，根據以下專案來編碼使用者產生內容的所有輸出 [OWASP Encoder](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project) 和 [AntiSamy](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project).
 
-XSS在測試和開發過程中都是頭等大事，發現的任何問題（通常）都會立即解決。
+XSS在測試和開發期間是首要任務，發現的任何問題通常都會立即解決。
 
-## 3.中斷的身份驗證和會話管理 {#broken-authentication-and-session-management}
+## 3.中斷的驗證和工作階段管理 {#broken-authentication-and-session-management}
 
-使AEM用聲音和經驗證的身份驗證技術， [阿帕奇·傑克拉比特](https://jackrabbit.apache.org/) 和 [阿帕奇斯林](https://sling.apache.org/)。 未在中使用瀏覽器/HTTP會AEM話。
+AEM使用健全且經過實證的驗證技術，依賴於 [Apache Jackrabbit](https://jackrabbit.apache.org/) 和 [Apache Sling](https://sling.apache.org/). AEM中未使用瀏覽器/HTTP工作階段。
 
-## 4.不安全的直接對象引用 {#insecure-direct-object-references}
+## 4.不安全的直接物件參考 {#insecure-direct-object-references}
 
-對資料對象的所有訪問都由儲存庫進行中介，因此受基於角色的訪問控制的限制。
+對資料物件的所有存取權都是由存放庫調解，因此受到角色型存取控制的限制。
 
-## 5.跨站點請求偽造(CSRF) {#cross-site-request-forgery-csrf}
+## 5.跨網站請求偽造(CSRF) {#cross-site-request-forgery-csrf}
 
-跨站點請求偽造(CSRF)通過自動將加密令牌注入所有表單和請求AJAX，並在伺服器上為每個POST驗證此令牌而得到緩解。
+跨網站請求偽造(CSRF)可藉由自動將密碼編譯權杖插入所有表單和AJAX請求，並在伺服器上驗證每個POST的此權杖來緩解。
 
-此外，還附AEM帶了基於參考報頭的過濾器，該過濾器可配置為 *僅* 允許來自特定主機的POST請求（在清單中定義）。
+此外，AEM隨附以反向連結標題為基礎的篩選器，可設定為 *僅限* 允許來自特定主機的POST請求（在清單中定義）。
 
-## 6。安全配置錯誤 {#security-misconfiguration}
+## 6.安全性設定錯誤 {#security-misconfiguration}
 
-無法保證所有軟體始終正確配置。 但是，我們努力提供盡可能多的指導，使配置盡可能簡單。 此外，AEM船隻 [整合的安全運行狀況檢查](/help/sites-administering/operations-dashboard.md) 幫助您一目瞭然地監視安全配置。
+無法保證所有軟體皆已正確設定。 不過，我們努力提供儘可能多的指引，並儘可能簡化設定。 此外，AEM也隨附於 [整合式安全性健康情況檢查](/help/sites-administering/operations-dashboard.md) 協助您一目瞭然地監控安全性組態。
 
-請查看 [安全核對表](/help/sites-administering/security-checklist.md) 獲取更多資訊，這些資訊為您提供逐步強化指令。
+請檢閱 [安全性檢查清單](/help/sites-administering/security-checklist.md) 以取得詳細資訊，為您提供逐步強化指示。
 
-## 7。不安全的加密儲存 {#insecure-cryptographic-storage}
+## 7.不安全的密碼編譯儲存 {#insecure-cryptographic-storage}
 
-口令作為加密散列儲存在用戶節點中；預設情況下，此類節點僅由管理員和用戶自己讀取。
+密碼會以密碼編譯雜湊的形式儲存在使用者節點中；依預設，這類節點只有管理員和使用者自己才能讀取。
 
-敏感資料（如第三方憑據）使用FIPS 140-2認證的加密庫以加密形式儲存。
+機密資料（例如協力廠商憑證）會使用FIPS 140-2認證的密碼編譯程式庫以加密形式儲存。
 
-## 8.限制URL訪問失敗 {#failure-to-restrict-url-access}
+## 8.無法限制URL存取 {#failure-to-restrict-url-access}
 
-儲存庫允許 [細粒度權限（由JCR指定）](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html) 通過訪問控制項，針對任何給定路徑上的任何給定用戶或組。 儲存庫強制實施訪問限制。
+存放庫允許設定 [精細的許可權（由JCR指定）](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html) 對於任何指定路徑的任何指定使用者或群組，透過存取控制專案。 存取限制由存放庫強制執行。
 
-## 9。傳輸層保護不足 {#insufficient-transport-layer-protection}
+## 9.傳輸層保護不足 {#insufficient-transport-layer-protection}
 
-通過伺服器配置減輕（例如，僅使用HTTPS）。
+透過伺服器設定緩解（例如僅使用HTTPS）。
 
-## 10.未驗證重定向和轉發 {#unvalidated-redirects-and-forwards}
+## 10.未驗證的重新導向與轉送 {#unvalidated-redirects-and-forwards}
 
-通過將所有重定向限制到用戶提供的目的地到內部位置而減輕。
+限制所有重新導向至使用者提供的目的地內部位置，即可緩解此問題。

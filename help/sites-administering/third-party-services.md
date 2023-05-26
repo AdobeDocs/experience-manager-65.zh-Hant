@@ -1,7 +1,7 @@
 ---
-title: 與第三方服務整合
+title: 與協力廠商服務整合
 seo-title: Integrating with Third-Party Services
-description: 瞭解如何與第AEM三方服務整合。
+description: 瞭解如何將AEM與協力廠商服務整合。
 seo-description: Learn how to integrate AEM with third party services.
 uuid: bfafd00b-46bc-4af2-b3e8-874afb1ed697
 contentOwner: Guillaume Carlino
@@ -17,29 +17,29 @@ ht-degree: 6%
 
 ---
 
-# 與第三方服務整合{#integrating-with-third-party-services}
+# 與協力廠商服務整合{#integrating-with-third-party-services}
 
-使用AEM時，您可以將以下非Adobe產品從開箱中整合：
+透過AEM，您可以直接與下列非Adobe產品整合：
 
-* AmazonSNS連接 — AmazonWeb服務
-* BrightEdge內容優化程式 — 針對搜索而優化的內容
-* ExactTarget — 電子郵件營銷
-* Facebook連接 — 社交網路
-* 一般分析代碼段 — 分析
-* Microsoft®翻譯器或其他機器翻譯提供程式
-* Pushwoosh連接 — 應用 — 推送通知
-* Salesforce — 銷售和CRM軟體
-* Twitter — 社交網路
-* YouTube — 視頻共用
+* Amazon SNS連線 — Amazon網路服務
+* BrightEdge Content Optimizer — 針對搜尋最佳化的內容
+* ExactTarget — 電子郵件行銷
+* facebook Connect — 社交網路
+* 通用Analytics程式碼片段 — analytics
+* Microsoft®翻譯人員或其他機器翻譯提供者
+* Pushwoosh連線 — 應用程式 — 推播通知
+* Salesforce — 銷售與CRM軟體
+* twitter — 社交網路
+* YouTube — 視訊共用
 <!-- * Silverpop Engage - marketing automation, email, mobile, and social NO LONGER EXISTS; ITS REPLACEMENT IS UNKNOWN -->
 
-此外，您還可以AEM與 [Adobe Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)。
+此外，您也可以將AEM與 [Adobe Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
 ## 與Salesforce整合 {#integrating-with-salesforce}
 
 Salesforce.com 是領導朝向社交企業轉變的企業雲端運算公司。
 
-有關整合站點和AEMSalesforce的資訊，請參見 [與Salesforce整合](/help/sites-administering/salesforce.md)。
+如需整合您的AEM網站與Salesforce的相關資訊，請參閱 [與Salesforce整合](/help/sites-administering/salesforce.md).
 
 <!-- THE INFORMATION BELOW APPEARS OBSOLETE; first URL is a 404. I could not find a suitable replacement for it.
 ## Integrating with Silverpop Engage {#integrating-with-silverpop-engage}
@@ -54,16 +54,16 @@ For information about integrating your AEM site and ExactTarget, see [Integratin
 
 ## 與ExactTarget整合 {#integrating-with-exacttarget}
 
-ExactTarget的電子郵件營銷解決方案使各種規模的公司能夠設計和提供高度針對性、任務關鍵型和完全整合的電子郵件活動。
+ExactTarget的電子郵件行銷解決方案可讓各種規模的組織設計和提供目標明確、任務關鍵且完全整合的電子郵件行銷活動。
 
-有關整合站點和ExactTargetAEM的資訊，請參見 [配置ExactTarget](/help/sites-administering/exacttarget.md)。
+如需整合AEM網站與ExactTarget的相關資訊，請參閱 [設定ExactTarget](/help/sites-administering/exacttarget.md).
 
-## 與Facebook和Twitter {#integrating-with-facebook-and-twitter}
+## 整合Facebook和Twitter {#integrating-with-facebook-and-twitter}
 
-Facebook和Twitter是熱門的社交網路服務。 與AEMFacebook和Twitter的整合使組織能夠提供Facebook或Twitter對自有數字財產的登錄選項，然後根據配置檔案資訊對用戶體驗進行個性化。 營銷人員還可以將配置檔案資訊與來自其它來源的資料組合，以建立客戶的統一視圖。
+facebook和Twitter是熱門的社交網路服務。 AEM與Facebook和Twitter的整合可讓組織針對擁有的數位屬性提供Facebook或Twitter登入選項，然後根據設定檔資訊個人化使用者體驗。 行銷人員也可以結合設定檔資訊與其他來源（例如客戶關係管理系統或網站設定檔）的資料，以建立客戶的統一檢視。
 
-請參閱 [社交登錄](/help/communities/social-login.md) 的子菜單。
+另請參閱 [社交登入](/help/communities/social-login.md) 以取得詳細資訊。
 
-## 與其他提供程式整合 {#integrating-with-other-providers}
+## 與其他提供者整合 {#integrating-with-other-providers}
 
-用AEM於通過 [一般分析代碼段。](/help/sites-administering/external-providers.md)
+AEM可讓您透過連線至其他外部提供者 [通用Analytics程式碼片段。](/help/sites-administering/external-providers.md)

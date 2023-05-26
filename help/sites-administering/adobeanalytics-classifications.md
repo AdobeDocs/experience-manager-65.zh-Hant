@@ -19,88 +19,88 @@ ht-degree: 5%
 
 # Adobe分類{#adobe-classifications}
 
-Adobe分類將分類資料導出到 [Adobe Analytics](/help/sites-administering/adobeanalytics.md) 按計畫進行。 出口商是 **com.adobe.cq.scheduled.exporter.Exporter**。
+Adobe分類會將分類資料匯出至 [Adobe Analytics](/help/sites-administering/adobeanalytics.md) 以排程方式進行。 匯出程式是 **com.adobe.cq.scheduled.exporter.Exporter**.
 
-要配置此項，請執行以下操作：
+若要設定此專案：
 
-1. 使用 **導航**&#x200B;選中 **工具**。 **Cloud Services**，則 **舊Cloud Services**。
-1. 滾動到 **Adobe Analytics** 選擇 **顯示配置**。
-1. 按一下 **[+]** 連結到您的Adobe Analytics配置。
+1. 使用 **導覽**，選取 **工具**， **Cloud Services**，則 **舊版Cloud Services**.
+1. 捲動至 **Adobe Analytics** 並選取 **顯示設定**.
+1. 按一下 **[+]** Adobe Analytics設定旁的連結。
 
-1. 在 **建立框架** 對話框：
+1. 在 **建立框架** 對話方塊：
 
-   * 指定 **標題**。
-   * （可選）您可以指定 **名稱**，用於將框架詳細資訊儲存在儲存庫中的節點。
-   * 選擇 **Adobe Analytics分類**
+   * 指定 **標題**.
+   * 您可選擇指定 **名稱**，適用於將架構詳細資料儲存在存放庫中的節點。
+   * 選取 **Adobe Analytics分類**
 
-   然後按一下 **建立**。
+   然後按一下 **建立**.
 
-   ![「建立框架」對話框](assets/aa-25.png)
+   ![建立框架對話方塊](assets/aa-25.png)
 
-1. 的 **分類設定** 對話框開啟以進行編輯。
+1. 此 **分類設定** 對話方塊會開啟以進行編輯。
 
-   ![「分類設定」對話框](assets/aa-classifications-settings.png)
+   ![分類設定對話方塊](assets/aa-classifications-settings.png)
 
-   屬性包括：
+   屬性包括下列各項：
 
    | **欄位** | **說明** |
    |---|---|
-   | 已啟用 | 選擇 **是** 啟用Adobe分類設定。 |
-   | 發生衝突時覆寫 | 選擇 **是** 覆蓋任何資料衝突。 預設情況下，此值設定為 **否**。 |
-   | 刪除已處理的項目 | 如果設定為 **是**，在導出處理的節點後刪除它們。 預設值為 **假**。 |
-   | 匯出工作說明 | 輸入Adobe分類作業的說明。 |
+   | 已啟用 | 選取 **是** 以啟用「Adobe分類」設定。 |
+   | 發生衝突時覆寫 | 選取 **是** 覆寫任何資料衝突。 根據預設，此設定為 **否**. |
+   | 刪除已處理的項目 | 若設為 **是**，會在匯出處理後刪除節點。 預設值為 **False**. |
+   | 匯出工作說明 | 輸入「Adobe分類」工作的說明。 |
    | 通知電子郵件 | 輸入Adobe分類通知的電子郵件地址。 |
-   | 報表套裝 | 輸入要為其運行導入作業的報表套件。 |
-   | 資料集 | 輸入要為其運行導入作業的資料集關係ID。 |
-   | 轉換程式 | 從下拉菜單中，選擇變壓器實現。 |
-   | 資料來源 | 導航到資料容器的路徑。 |
-   | 匯出排程 | 選擇導出的計畫。 預設值是每30分鐘一次。 |
+   | 報表套裝 | 輸入要執行匯入工作的報表套裝。 |
+   | 資料集 | 輸入要執行匯入作業的資料集關係ID。 |
+   | 轉換程式 | 從下拉式功能表中，選取轉換器實作。 |
+   | 資料來源 | 導覽至資料容器的路徑。 |
+   | 匯出排程 | 選取匯出的排程。 預設為每30分鐘。 |
 
-1. 按一下 **確定** 的子菜單。
+1. 按一下 **確定** 以儲存您的設定。
 
 ## 修改頁面大小 {#modifying-page-size}
 
-記錄在頁中處理。 預設情況下，Adobe分類會建立頁面大小為1000的頁面。
+系統會在頁面中處理記錄。 根據預設，「Adobe分類」會建立頁面大小為1000的頁面。
 
-「Adobe分類」中的每個定義，頁面最大可以是25000頁，並可從Felix控制台修改。 在導出過程中，「Adobe分類」會鎖定源節點以防止併發修改。 導出後、出錯時或會話關閉時，節點將解鎖。
+根據Adobe分類中的定義，頁面大小上限可25000，並可從Felix主控台修改。 在匯出期間，「Adobe分類」會鎖定來源節點，以防止同時進行修改。 節點會在匯出後、發生錯誤時或工作階段關閉時解除鎖定。
 
-要更改頁面大小：
+若要變更頁面大小：
 
-1. 導航至OSGI控制台，位於 **https://&lt;host>:&lt;port>/system/console/configMgr** 選擇 **AdobeAEM分類導出器**。
+1. 瀏覽至OSGI主控台，網址為 **https://&lt;host>：&lt;port>/system/console/configMgr** 並選取 **AdobeAEM分類匯出程式**.
 
    ![aa-26](assets/aa-26.png)
 
-1. 更新 **導出頁面大小** 根據需要，按一下 **保存**。
+1. 更新 **匯出頁面大小** 視需要，然後按一下 **儲存**.
 
 ## SAINTDefaultTransformer {#saintdefaulttransformer}
 
 >[!NOTE]
 >
->Adobe分類以前稱為SAINT出口商。
+>「Adobe分類」先前稱為「SAINT匯出工具」。
 
-導出器可以使用轉換器將導出資料轉換為特定格式。 對於Adobe分類，子介面 `SAINTTransformer<String[]>` 實現了變壓器介面。 此介面用於將資料類型限制為 `String[]` SAINTAPI使用的，並具有標籤器介面來查找此類服務以供選擇。
+匯出工具可使用轉換器將匯出資料轉換為特定格式。 對於「Adobe分類」，為子介面 `SAINTTransformer<String[]>` 已提供實作轉換器介面。 此介面用於將資料型別限製為 `String[]` 供SAINTAPI使用，並具有標籤介面來尋找可供選取的此類服務。
 
-在預設實現SAINTDefaultTransformer中，導出器源的子資源被視為記錄，屬性名稱作為鍵，屬性值作為值。 的 **鍵** 列作為第一列自動添加 — 其值將是節點名稱。 命名空間屬性(包含 `:`)。
+在預設實作SAINTDefaultTransformer中，匯出程式來源的子資源會被視為記錄，而屬性名稱會被視為索引鍵，而屬性值則會被視為值。 此 **金鑰** 欄會自動新增為第一欄 — 其值將是節點名稱。 名稱空間屬性(包含 `:`)會被忽略。
 
 *節點結構：*
 
-* ID分類 `nt:unstructured`
+* id-classification `nt:unstructured`
 
    * 1 `nt:unstructured`
 
       * 產品=我的產品名稱（字串）
-      * 價格= 120.90（字串）
-      * 大小= M（字串）
+      * 價格= 120.90 （字串）
+      * 大小= M （字串）
       * 顏色=黑色（字串）
-      * 顏色^代碼= 101（字串）
+      * Color^Code = 101 （字串）
 
-**SAINT題頭和記錄：**
+**SAINT標題和記錄：**
 
-| **金鑰** | **產品** | **價格** | **大小** | **彩色** | **顏色^代碼** |
+| **金鑰** | **產品** | **價格** | **大小** | **彩色** | **Color^Code** |
 |---|---|---|---|---|---|
 | 1 | 我的產品名稱 | 120.90 | M | black | 101 |
 
-屬性包括：
+屬性包括下列各項：
 
 <table>
  <tbody>
@@ -109,40 +109,40 @@ Adobe分類將分類資料導出到 [Adobe Analytics](/help/sites-administering/
    <td><strong>說明</strong></td>
   </tr>
   <tr>
-   <td>變壓器</td>
-   <td>SAINTransferer實現的類名</td>
+   <td>轉換器</td>
+   <td>SAINTTransformer實作的類別名稱</td>
   </tr>
   <tr>
    <td>電子郵件</td>
    <td>通知電子郵件地址。</td>
   </tr>
   <tr>
-   <td>報告套房</td>
-   <td>要為其運行導入作業的報表套件ID。 </td>
+   <td>報告套裝</td>
+   <td>執行匯入作業的報表套裝ID。 </td>
   </tr>
   <tr>
    <td>資料集</td>
-   <td>要為其運行導入作業的資料集關係ID。 </td>
+   <td>執行匯入作業的資料集關係ID。 </td>
   </tr>
   <tr>
    <td>說明</td>
-   <td>作業描述。 <br /> </td>
+   <td>工作說明。 <br /> </td>
   </tr>
   <tr>
    <td>覆寫</td>
-   <td>覆蓋資料衝突的標誌。 預設值為 <strong>假</strong>。</td>
+   <td>標幟以覆寫資料衝突。 預設為 <strong>false</strong>.</td>
   </tr>
   <tr>
-   <td>校驗分區</td>
-   <td>用於檢查報告套件是否相容的標誌。 預設值為 <strong>真</strong>。</td>
+   <td>checkdivision</td>
+   <td>用於檢查報表套裝相容性的旗標。 預設為 <strong>true</strong>.</td>
   </tr>
   <tr>
-   <td>刪除已處理</td>
-   <td>標誌，用於在導出後刪除已處理的節點。 預設值為 <strong>假</strong>。</td>
+   <td>deleteprocessed</td>
+   <td>標幟以在匯出後刪除已處理的節點。 預設為 <strong>false</strong>.</td>
   </tr>
  </tbody>
 </table>
 
-## 自動Adobe分類導出 {#automating-adobe-classifications-export}
+## 自動化Adobe分類匯出 {#automating-adobe-classifications-export}
 
-您可以建立自己的工作流，以便任何新導入都啟動工作流以在中建立適當且結構正確的資料 **/var/export/** 以便將其導出到Adobe分類。
+您可以建立自己的工作流程，讓任何新的匯入都能啟動工作流程，以在中建立適當且結構正確的資料 **/var/export/** 以便將其匯出至「Adobe分類」。

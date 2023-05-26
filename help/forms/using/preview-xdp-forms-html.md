@@ -1,7 +1,7 @@
 ---
-title: 生成XDP表單的HTML5預覽
+title: 產生XDP表單的HTML5預覽
 seo-title: Generate HTML5 preview of an XDP form
-description: 「HTML設計器」中的「預覽LiveCycle」頁籤可用於在瀏覽器中顯示表單時預覽表單。
+description: LiveCycle設計工具中的「預覽HTML」索引標籤可用來預覽表單在瀏覽器中顯示的效果。
 seo-description: Preview HTML tab in LiveCycle Designer can be used to preview forms as they appear in a browser.
 uuid: cbee956f-bf2d-40c5-8e03-58fce0fa215b
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,109 +17,109 @@ ht-degree: 0%
 
 ---
 
-# 生成XDP表單的HTML5預覽{#generate-html-preview-of-an-xdp-form}
+# 產生XDP表單的HTML5預覽{#generate-html-preview-of-an-xdp-form}
 
-在AEM Forms設計器中設計表單時，除了預覽表單的PDF格式副本外，還可以預覽表單的HTML5格式副本。 您可以使用 **預覽HTML** 按鈕，將選定控制項在Tab鍵次序中上移一個位置。
+在AEM Forms Designer中設計表單時，除了預覽表單的PDF轉譯外，您還可以預覽表單的HTML5轉譯。 您可以使用 **預覽HTML** 定位以預覽顯示在瀏覽器中的表單。
 
-## 在設計器中為XDP表單啟用HTML預覽 {#html-preview-of-forms-in-forms-designer}
+## 在Designer中啟用XDP表單的HTML預覽 {#html-preview-of-forms-in-forms-designer}
 
-要使設計器能夠生成XDP表單的HTML預覽，請執行以下配置：
+若要讓Designer產生XDP表單的HTML預覽，請執行下列設定：
 
-* 配置Apache Sling身份驗證服務
-* 禁用保護模式
+* 設定Apache Sling驗證服務
+* 停用保護模式
 * 提供AEM Forms伺服器的詳細資訊
 
-### 配置Apache Sling身份驗證服務 {#configure-apache-sling-authentication-service}
+### 設定Apache Sling驗證服務 {#configure-apache-sling-authentication-service}
 
-1. 轉到 `https://'[server]:[port]'/system/console/configMgr` AEM Forms在OSGi或
-   `https://'[server]:[port]'/lc/system/console/configMgr` 在AEM Forms的JEE上。
-1. 查找並按一下 **Apache Sling身份驗證服務** 以編輯模式開啟它的配置。
+1. 前往 `https://'[server]:[port]'/system/console/configMgr` 在OSGi上執行的AEM Forms或
+   `https://'[server]:[port]'/lc/system/console/configMgr` 在JEE上執行的AEM Forms上。
+1. 找到並按一下 **Apache Sling驗證服務** 設定，以在編輯模式中開啟它。
 
-1. 根據您是在OSGi還是JEE上運行AEM Forms，在 **身份驗證要求** 欄位：
+1. 根據您是在OSGi或JEE上執行AEM Forms，在中新增以下內容 **驗證需求** 欄位：
 
-   * AEM FormsJEE
+   * JEE版AEM Forms
 
       * -/content/xfaforms
-      * -/etc/clientlib
-   * AEM Forms
+      * -/etc/clientlibs
+   * OSGi上的AEM Forms
 
       * -/content/xfaforms
       * -/etc/clientlibs/fd/xfaforms
 
    >[!NOTE]
    >
-   >請勿複製並貼上「驗證要求」欄位中的指定值，因為它可能會損壞值中的特殊字元。 而是在欄位中鍵入指定的值。
+   >請勿複製並貼上「驗證需求」欄位中的指定值，因為它可能會損壞值中的特殊字元。 請改為在欄位中輸入指定的值。
 
-1. 在中指定用戶名和密碼 **[!UICONTROL 匿名用戶名]** 和 **[!UICONTROL 匿名用戶密碼]** 的下界。 指定的憑據用於處理匿名身份驗證並允許匿名用戶訪問。
-1. 按一下 **保存** 的子菜單。
+1. 在中指定使用者名稱和密碼 **[!UICONTROL 匿名使用者名稱]** 和 **[!UICONTROL 匿名使用者密碼]** 欄位。 指定的認證用於處理匿名驗證，並允許匿名使用者的存取。
+1. 按一下 **儲存** 以儲存設定。
 
-### 禁用保護模式 {#disable-protected-mode}
+### 停用保護模式 {#disable-protected-mode}
 
-的 [保護模式](../../forms/using/get-xdp-pdf-documents-aem.md) 預設為開啟。 使其在生產環境中保持啟用狀態。 您可以在開發環境中禁用它，以在desinger中預覽HTML5Forms。 執行以下步驟以禁用它：
+此 [保護模式](../../forms/using/get-xdp-pdf-documents-aem.md) 預設為開啟。 在生產環境中保持啟用狀態。 您可以為開發環境停用該功能，以便在設計中預覽HTML5 Forms。 執行以下步驟來停用它：
 
-1. 以管理員身AEM份登錄到Web控制台。
+1. 以管理員身分登入AEM Web Console。
 
-   * OSGi上AEM Forms的URL為 `https://'[server]:[port]'/system/console/configMgr`
-   * JEE上AEM Forms的URL是 `https://'[server]:[port]'/lc/system/console/configMgr`
+   * OSGi上的AEM Forms URL是 `https://'[server]:[port]'/system/console/configMgr`
+   * JEE版AEM Forms的URL為 `https://'[server]:[port]'/lc/system/console/configMgr`
 
-1. 開啟 **[!UICONTROL 移動Forms配置]** 的子菜單。
-1. 取消選擇 **[!UICONTROL 保護模式]** 選項 **[!UICONTROL 保存]**。
+1. 開啟 **[!UICONTROL 行動Forms設定]** 進行編輯。
+1. 取消選取 **[!UICONTROL 受保護模式]** 選項並按一下 **[!UICONTROL 儲存]**.
 
 ### 提供AEM Forms伺服器的詳細資訊 {#provide-details-of-aem-forms-server}
 
-1. 在設計器中，轉到 **工具** > **選項**。
-1. 在「選項」窗口中，選擇 **伺服器選項** 頁，提供以下詳細資訊，然後按一下 **確定**。
+1. 在Designer中，前往 **工具** > **選項**.
+1. 在「選項」視窗中，選取 **伺服器選項** 頁面，提供下列詳細資料，然後按一下 **確定**.
 
-   * **伺服器URL**:AEM Forms伺服器URL。
+   * **伺服器URL**：AEM Forms伺服器URL。
 
-   * **HTTP埠號**:服AEM務器埠。 預設值為 4502。
-   * **HTML預覽上下文：** 用於呈現XFA表單的配置檔案的路徑。 以下預設配置檔案用於在設計器中預覽表單。 但是，您也可以指定自定義配置檔案的路徑。
+   * **HTTP連線埠號碼**：AEM伺服器連線埠。 預設值為 4502。
+   * **HTML預覽內容：** 用於呈現XFA表單的設定檔路徑。 下列預設設定檔用於在Designer中預覽表單。 不過，您也可以指定自訂設定檔的路徑。
 
-      * `/content/xfaforms/profiles/default.html` (AEM FormsOSGi)
+      * `/content/xfaforms/profiles/default.html` (OSGi上的AEM Forms)
 
-      * `/lc/content/xfaforms/profiles/default.html` (AEM FormsJEE)
-   * **Forms經理上下文：** 部署Forms管理器UI的上下文路徑。 預設值為：
+      * `/lc/content/xfaforms/profiles/default.html` (JEE版AEM Forms)
+   * **Forms Manager內容：** 部署Forms Manager UI的內容路徑。 預設值為：
 
-      * `/aem/forms` (AEM FormsOSGi)
-      * `/lc/forms` (AEM FormsJEE)
-
-   >[!NOTE]
-   >
-   >確保AEM Forms伺服器已啟動並正在運行。 HTML預覽連接到CRX伺服器 *生成* 的子菜單。
-
-   ![AEM Forms設計器選項 ](assets/server_options.png)
-
-   AEM Forms設計器選項
-
-1. 要以HTML預覽窗體，請按一下 **預覽HTML** 頁籤。
+      * `/aem/forms` (OSGi上的AEM Forms)
+      * `/lc/forms` (JEE版AEM Forms)
 
    >[!NOTE]
    >
+   >確定AEM Forms伺服器已啟動且執行中。 HTML預覽會連線至CRX伺服器，並 *產生* 預覽。
+
+   ![AEM Forms Designer選項 ](assets/server_options.png)
+
+   AEM Forms Designer選項
+
+1. 若要以HTML預覽表單，請按一下 **預覽HTML** 標籤。
+
+   >[!NOTE]
    >
    >
    >
-   >    * 如果HTML預覽頁籤已關閉，請按F4開啟預覽HTML頁籤。 也可以從「視圖」菜單中選擇「預覽HTML」以開啟「預覽HTML」頁籤。
-   >    * HTML預覽不支援PDF文檔，HTML預覽僅用於XDP文檔。
+   >
+   >    * 如果「HTML預覽」標籤關閉，請按F4開啟「預覽HTML」標籤。 您也可以從「檢視」選單中選取「預覽HTML」，以開啟「預覽HTML」標籤。
+   >    * HTML預覽不支援PDF檔案，HTML預覽僅適用於XDP檔案。
 
 
    >[!CAUTION]
    >
-   >要test真正的最終用戶體驗，請在外部瀏覽器(GoogleChrome、MicrosoftEdge、Mozilla Firefox等)中預覽您的表單。 每個瀏覽器都使用單獨的引擎來渲染HTML，因此在設計器和外部瀏覽器中預覽表單的方式可能存在一些差異。
+   >若要測試真正的一般使用者體驗，也可在外部瀏覽器(Google Chrome、Microsoft Edge、Mozilla Firefox等)中預覽您的表單。 每個瀏覽器使用不同的引擎來轉譯HTML，因此在Designer和外部瀏覽器中表單預覽的方式可能會有一些差異。
 
-## 使用示例資料預覽表單 {#to-preview-a-form-using-sample-data}
+## 若要使用範例資料預覽表單 {#to-preview-a-form-using-sample-data}
 
-設計器允許您使用示例XML資料預覽和test表單。 建議您經常將表單與示例資料test，以確保表單呈現正確。
+Designer可讓您使用範例XML資料來預覽和測試表單。 建議您經常使用範例資料測試表單，以確保表單正確呈現。
 
-如果沒有示例資料，Designer可以建立它，也可以自己建立它。 (請參閱 [自動生成示例資料以預覽表單](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2) 和 [建立示例資料以預覽窗體](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2)。)
+如果您沒有範例資料，Designer可以建立，或者您可以自行建立。 (請參閱 [若要自動產生範例資料以預覽您的表單](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2) 和 [建立範例資料以預覽表單的方式](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2).)
 
-使用示例資料源測試表單可確保資料和欄位被映射，並且重複的子表單會按預期重複。 您可以建立平衡的窗體佈局，為每個對象提供適當的空間來顯示合併的資料。
+使用範例資料來源測試表單，可確保資料和欄位對應，並且重複的子表單會如預期般重複。 您可以建立平衡的表單版面，為每個物件提供適當的空間，以顯示合併的資料。
 
-1. 選擇 **「檔案」>「窗體屬性」**。
+1. 選取 **檔案>表單屬性**.
 
-1. 按一下 **預覽** 頁籤，然後在「資料檔案」框中，鍵入test資料檔案的完整路徑。 您還可以使用「瀏覽」按鈕導航到檔案。
+1. 按一下 **預覽** 標籤，然後在「資料檔案」方塊中，輸入測試資料檔案的完整路徑。 您也可以使用「瀏覽」按鈕來瀏覽至檔案。
 
-1. 按一下&#x200B;**「確定」**。下次在 **預覽HTML** 頁籤中，示例XML檔案中的資料值將出現在相應對象中。
+1. 按一下&#x200B;**「確定」**。下次您預覽表單時 **預覽HTML** 標籤，範例XML檔案中的資料值會顯示在個別物件中。
 
-## 預覽位於儲存庫中的表單 {#html-preview-of-forms-in-forms-manager}
+## 預覽位於存放庫中的表單 {#html-preview-of-forms-in-forms-manager}
 
-在AEM Forms，可以在儲存庫中預覽表單和文檔。 預覽有助於確切瞭解表單的外觀和行為方式，如最終用戶所使用的。
+在AEM Forms中，您可以預覽存放庫中的表單和檔案。 預覽有助於瞭解表單在使用者使用時的外觀和行為。

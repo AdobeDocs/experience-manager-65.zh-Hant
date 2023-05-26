@@ -20,33 +20,33 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 >[!CAUTION]
 >
->Content Services功能僅用於預覽。
+>Content Services功能僅供預覽之用。
 >
->隨著6.3 GA Service Pack 1的發佈，它可能會發生更改。
+>此版本可能會隨著6.3 GA Service Pack 1的發行而有所變更。
 
-AEM Mobile內容服務是一種輕量級的功能，用於請求由管理的內AEM容。 這為所有應用程式開發人員提供了一種檢索內容的高效能方法，而不必對內容儲存庫(AEMJCR)和Web框架(Sling)有深入的瞭解。 它允許請求應用程式與內容儲存庫分離。
+AEM Mobile Content Services是輕量級的功能，可請求由AEM管理的內容。 這可讓所有應用程式開發人員以高效能的方式擷取內容，而不需要深入瞭解AEM內容存放庫(JCR)和網頁架構(Sling)。 這可讓請求的應用程式與內容存放庫分離。
 
-Content Services引入了幾種新構AEM造，使開發人員能夠訪問受管AEM理的內容，而不需要知道該內容的儲存庫結構。
+Content Services引進了數種新的AEM建構，可讓開發人員存取AEM管理的內容，而不需要瞭解該內容的存放庫結構。
 
-這些結構對於保持靈活性和通過在托管內容和使用內容的移動應用之間提供抽象層AEM來實現未來擴展是必不可少的。 這允AEM許Content Services在本機應用程式的內容要求和內容儲存庫之間作為抽AEM像層工作。
+這些建構對於在AEM管理的內容和使用內容的行動應用程式之間提供抽象層，以保持靈活性並啟用未來擴充是必要的。 這可讓AEM Content Services在原生應用程式的內容需求和AEM內容存放庫之間充當抽象層。
 
-Content Services可以將內容作為資產、打包HTML(HTML/CSS/JS)或渠道獨立內容提供。
+Content Services可將內容以資產、封裝HTML(HTML/CSS/JS)或頻道獨立內容的形式傳送。
 
 >[!CAUTION]
 >
 >**必備條件:**
 >
->在開始使用Content Services之前，請確保啟用Content Services標誌。 若要在應用中啟用模型的建立和管理，您需要在配置瀏覽器中啟用資料模型。
+>開始使用內容服務之前，請務必啟用「內容服務」標幟。 若要啟用在您的應用程式中建立和管理模型，您必須在設定瀏覽器中啟用資料模型。
 >
->請參閱 **[管理Content Services](/help/mobile/developing-content-services.md)** 和 [配置瀏覽器](/help/sites-administering/configurations.md) 的子菜單。
+>另請參閱 **[管理內容服務](/help/mobile/developing-content-services.md)** 和 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
-在配置瀏覽器中設定Content Services標誌並啟用資料模型後，請參閱以下資源以開始使用AEM MobileContent Services，瞭解Content Services概念，如模型管理、實體管理，然後是AEM MobileContent Services的內容交付/呈現。
+設定Content Services標幟並在Configuration Browser中啟用資料模型後，請參閱下列資源以開始使用AEM Mobile Content Services，熟悉AEM Mobile Content Services概念，例如模型管理、實體管理，然後為Content Services傳送內容/轉譯。
 
-* 儲存庫中的模型
-* 呈現和交付
+* 存放庫中的模型
+* 呈現和傳遞

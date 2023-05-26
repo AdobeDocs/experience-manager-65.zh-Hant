@@ -1,6 +1,6 @@
 ---
-title: 使用PDF柵格化器生成格式副本
-description: 使用Adobe PDFRasterizer庫生成高質量縮略圖和格式副本。
+title: 使用PDF模擬轉譯器產生轉譯
+description: 使用Adobe PDF模擬轉譯器資料庫產生高品質的縮圖和轉譯。
 contentOwner: AG
 role: Developer, Admin
 feature: Developer Tools,Renditions
@@ -12,99 +12,99 @@ ht-degree: 0%
 
 ---
 
-# 使用PDF光柵化器 {#using-pdf-rasterizer}
+# 使用PDF模擬轉譯器 {#using-pdf-rasterizer}
 
-將大型、內容密集型PDF或AI檔案上載到 [!DNL Adobe Experience Manager Assets]，預設庫可能無法生成準確的輸出。 Adobe的PDF光柵化器庫與預設庫的輸出相比，可以生成更可靠和更準確的輸出。 Adobe建議對以下情形使用PDF光柵化器庫：
+上傳大型內容密集型PDF或AI檔案至 [!DNL Adobe Experience Manager Assets]，預設程式庫可能不會產生準確的輸出。 與預設程式庫的輸出相比，Adobe的PDF模擬轉譯器程式庫可以產生更可靠和準確的輸出。 Adobe建議在下列情況下使用PDF模擬轉譯器資料庫：
 
-Adobe建議使用PDF光柵化器庫進行以下操作：
+Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
-* 內容密集型AI檔案或PDF檔案。
-* 預設情況下不生成縮略圖的AI檔案和PDF檔案。
-* AI檔案具有Pantone匹配系統(PMS)顏色。
+* 大量且需要大量內容的AI檔案或PDF檔案。
+* AI檔案和PDF檔案，其中包含預設不會產生的縮圖。
+* 具有Pantone Matching System (PMS)顏色的AI檔案。
 
-使用PDF光柵化器生成的縮略圖和預覽與出廠輸出相比質量更好，因此可跨設備提供一致的查看體驗。 Adobe PDF光柵化器庫不支援任何顏色空間轉換。 它始終輸出到RGB，而與源檔案的顏色空間無關。
+使用PDF模擬轉譯器產生的縮圖和預覽品質比現成可用的輸出更好，因此可提供跨裝置的一致檢視體驗。 Adobe PDF模擬轉譯器資料庫不支援任何色域轉換。 無論來源檔案的色域為何，一律會輸出為RGB。
 
-1. 將PDFRasterizer軟體包安裝到 [!DNL Adobe Experience Manager] 部署 [軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.4.zip)。
+1. 將PDF模擬轉譯器套件安裝在您的 [!DNL Adobe Experience Manager] 部署來源 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.4.zip).
 
    >[!NOTE]
    >
-   >PDFRasterizer庫僅適用於Windows和Linux。
+   >PDF模擬轉譯器程式庫僅適用於Windows和Linux。
 
-1. 訪問 [!DNL Assets] 工作流控制台 `https://[aem_server]:[port]/workflow`。 開啟 [!UICONTROL DAM更新資產] 工作流。
+1. 存取 [!DNL Assets] 工作流程控制檯位於 `https://[aem_server]:[port]/workflow`. 開啟 [!UICONTROL DAM更新資產] 工作流程。
 
-1. 要防止使用預設方法生成PDF檔案和AI檔案的縮略圖和Web格式副本，請執行以下步驟：
+1. 若要防止使用預設方法為PDF檔案和AI檔案產生縮圖和網頁轉譯，請遵循以下步驟：
 
-   * 開啟 **[!UICONTROL 處理縮略圖]** 步驟，然後添加 `application/pdf` 或 `application/postscript` 的 **[!UICONTROL 跳過MIME類型]** 欄位 **[!UICONTROL 縮略圖]** 按鈕。
+   * 開啟 **[!UICONTROL 程式縮圖]** 步驟，並新增 `application/pdf` 或 `application/postscript` 在 **[!UICONTROL 略過Mime型別]** 欄位位於 **[!UICONTROL 縮圖]** 標籤以視需要顯示。
 
    ![skip_mime_types-2](assets/skip_mime_types-2.png)
 
-   * 在 **[!UICONTROL 啟用Web的影像]** 頁籤，添加 `application/pdf` 或 `application/postscript` 在 **[!UICONTROL 跳過清單]** 取決於您的要求。
+   * 在 **[!UICONTROL 啟用Web的影像]** 標籤，新增 `application/pdf` 或 `application/postscript` 在 **[!UICONTROL 略過清單]** 視您的需求而定。
 
-   ![用於跳過影像格式的縮略圖處理的配置](assets/web_enabled_imageskiplist.png)
+   ![跳過影像格式縮圖處理的設定](assets/web_enabled_imageskiplist.png)
 
-1. 開啟 **[!UICONTROL 柵格化PDF/AI影像預覽格式副本]** 步驟，並刪除要跳過預設預覽影像格式副本生成的MIME類型。 例如，刪除MIME類型 `application/pdf`。 `application/postscript`或 `application/illustrator` 從 **[!UICONTROL MIME類型]** 清單框。
+1. 開啟 **[!UICONTROL 點陣化PDF/AI影像預覽轉譯]** 步驟，並移除您要略過預設產生預覽影像轉譯的MIME型別。 例如，移除MIME型別 `application/pdf`， `application/postscript`，或 `application/illustrator` 從 **[!UICONTROL MIME型別]** 清單。
 
    ![process_arguments](assets/process_arguments.png)
 
-1. 拖動 **[!UICONTROL PDF光柵化器處理程式]** 從側面板向下 **[!UICONTROL 處理縮略圖]** 的子菜單。
-1. 為 **[!UICONTROL PDF光柵化器處理程式]** 步驟：
+1. 拖曳 **[!UICONTROL PDF模擬轉譯器處理常式]** 從側面板逐步移至 **[!UICONTROL 程式縮圖]** 步驟。
+1. 設定以下引數 **[!UICONTROL PDF模擬轉譯器處理常式]** 步驟：
 
-   * MIME類型： `application/pdf` 或 `application/postscript`
+   * MIME型別： `application/pdf` 或 `application/postscript`
    * 命令: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
-   * 添加縮略圖大小：319:319, 140:100, 48:48。 如有必要，添加自定義縮略圖配置。
+   * 新增縮圖大小：319:319、140:100、48:48。 視需要新增自訂縮圖設定。
 
-   的命令行參數 `PDFRasterizer` 命令可包括以下內容：
+   的命令列引數 `PDFRasterizer` 命令可以包括下列內容：
 
-   * `-d`:用於使文本、向量圖稿和影像平滑呈現的標誌。 建立更優質的影像。 但是，包括此參數會導致命令運行緩慢並增大影像大小。
+   * `-d`：此旗標可讓您順暢地呈現文字、向量圖稿和影像。 建立品質更好的影像。 但是，包含此引數會導致命令執行速度緩慢並增加影像大小。
 
-   * `-s`:最大影像尺寸（高度或寬度）。 這將被轉換為每頁的DPI。 如果頁面大小不同，則每個頁面都可能按不同的量進行縮放。 預設值為實際頁面大小。
+   * `-s`：影像尺寸上限（高度或寬度）。 這會轉換為每一頁的DPI。 如果頁面大小不同，每個頁面可能會以不同的數量縮放。 預設值為實際頁面大小。
 
-   * `-t`:輸出影像類型。 有效類型為JPEG、PNG、GIF和BMP。 預設值為JPEG。
+   * `-t`：輸出影像型別。 有效型別為JPEG、PNG、GIF和BMP。 預設值為JPEG。
 
-   * `-i`:輸入PDF的路徑。 它是強制參數。
+   * `-i`：輸入PDF的路徑。 此為必要引數。
 
    * `-h`: 說明
 
 
-1. 要刪除中間格式副本，請選擇 **[!UICONTROL 刪除生成的格式副本]**。
-1. 要讓PDF柵格化器生成Web格式副本，請選擇 **[!UICONTROL 生成Web格式副本]**。
+1. 若要刪除中繼轉譯，請選取 **[!UICONTROL 刪除產生的轉譯]**.
+1. 若要讓PDF模擬轉譯器產生網頁轉譯，請選取 **[!UICONTROL 產生Web轉譯]**.
 
-   ![generate_web_grestibles1](assets/generate_web_renditions1.png)
+   ![generate_web_renditions1](assets/generate_web_renditions1.png)
 
-1. 指定 **[!UICONTROL 啟用Web的影像]** 頁籤。
+1. 指定中的設定 **[!UICONTROL 啟用Web的影像]** 標籤。
 
    ![web_enabled_image1](assets/web_enabled_image1.png)
 
-1. 保存工作流。
-1. 要啟用PDF光柵化器以使用PDF庫處理PDF頁，請開啟 **[!UICONTROL DAM進程子集]** 模型 [!UICONTROL 工作流] 控制台。
-1. 從側面板中，將PDF柵格化處理程式步驟拖到 **[!UICONTROL 建立啟用Web的影像格式副本]** 的子菜單。
-1. 為 **[!UICONTROL PDF光柵化器處理程式]** 步驟：
+1. 儲存工作流程。
+1. 若要啟用PDF模擬轉譯器以使用PDF資料庫處理PDF頁面，請開啟 **[!UICONTROL DAM程式子資產]** 模型來自 [!UICONTROL 工作流程] 主控台。
+1. 從側面板，將「PDF模擬轉譯器處理常式」步驟拖曳至 **[!UICONTROL 建立可支援Web的影像轉譯]** 步驟。
+1. 設定以下引數 **[!UICONTROL PDF模擬轉譯器處理常式]** 步驟：
 
-   * MIME類型： `application/pdf` 或 `application/postscript`
+   * MIME型別： `application/pdf` 或 `application/postscript`
    * 命令: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
-   * 添加縮略圖大小： `319:319`。 `140:100`。 `48:48`。 根據需要添加自定義縮略圖配置。
+   * 新增縮圖大小： `319:319`， `140:100`， `48:48`. 視需要新增自訂縮圖設定。
 
-   的命令行參數 `PDFRasterizer` 命令可包括以下內容：
+   的命令列引數 `PDFRasterizer` 命令可以包括下列內容：
 
-   * `-d`:用於使文本、向量圖稿和影像平滑呈現的標誌。 建立更優質的影像。 但是，包括此參數會導致命令運行緩慢並增大影像大小。
+   * `-d`：此旗標可讓您順暢地呈現文字、向量圖稿和影像。 建立品質更好的影像。 但是，包含此引數會導致命令執行速度緩慢並增加影像大小。
 
-   * `-s`:最大影像尺寸（高度或寬度）。 這將被轉換為每頁的DPI。 如果頁面大小不同，則每個頁面都可能按不同的量進行縮放。 預設值為實際頁面大小。
+   * `-s`：影像尺寸上限（高度或寬度）。 這會轉換為每一頁的DPI。 如果頁面大小不同，每個頁面可能會以不同的數量縮放。 預設值為實際頁面大小。
 
-   * `-t`:輸出影像類型。 有效類型為JPEG、PNG、GIF和BMP。 預設值為JPEG。
+   * `-t`：輸出影像型別。 有效型別為JPEG、PNG、GIF和BMP。 預設值為JPEG。
 
-   * `-i`:輸入PDF的路徑。 它是強制參數。
+   * `-i`：輸入PDF的路徑。 此為必要引數。
 
    * `-h`: 說明
 
 
-1. 要刪除中間格式副本，請選擇 **[!UICONTROL 刪除生成的格式副本]**。
-1. 要讓PDF柵格化器生成Web格式副本，請選擇 **[!UICONTROL 生成Web格式副本]**。
+1. 若要刪除中繼轉譯，請選取 **[!UICONTROL 刪除產生的轉譯]**.
+1. 若要讓PDF模擬轉譯器產生網頁轉譯，請選取 **[!UICONTROL 產生Web轉譯]**.
 
-   ![生成_web_greftis](assets/generate_web_renditions.png)
+   ![generate_web_renditions](assets/generate_web_renditions.png)
 
-1. 指定 **[!UICONTROL 啟用Web的影像]** 頁籤。
+1. 指定中的設定 **[!UICONTROL 啟用Web的影像]** 標籤。
 
    ![web_enabled_image-1](assets/web_enabled_image-1.png)
 
-1. 保存工作流。
-1. 將PDF檔案或AI檔案上載到 [!DNL Experience Manager Assets]。 PDF光柵化器為檔案生成縮略圖和Web格式副本。
+1. 儲存工作流程。
+1. 上傳PDF檔案或AI檔案至 [!DNL Experience Manager Assets]. PDF模擬轉譯器會產生檔案的縮圖和Web轉譯。

@@ -19,32 +19,32 @@ ht-degree: 1%
 
 # 工作流程處理序參考{#workflow-process-reference}
 
-提AEM供了幾個可用於建立工作流模型的流程步驟。 還可以為內置步驟未涵蓋的任務添加自定義流程步驟(請參閱 [建立工作流模型](/help/sites-developing/workflows-models.md))。
+AEM提供幾個可用於建立工作流程模型的流程步驟。 您也可以為內建步驟未涵蓋的任務新增自訂流程步驟(請參閱 [建立工作流程模型](/help/sites-developing/workflows-models.md))。
 
-## 流程特性 {#process-characteristics}
+## 程式特性 {#process-characteristics}
 
-對於每個過程步驟，描述了以下特徵。
+對於每個處理步驟，會說明下列特性。
 
-### Java類或ECMA路徑 {#java-class-or-ecma-path}
+### Java類別或ECMA路徑 {#java-class-or-ecma-path}
 
-進程步驟由Java類或ECMAScript定義。
+程式步驟由Java類別或ECMAScript定義。
 
-* 對於Java類進程，提供完全限定的類名。
-* 對於ECMAScript進程，將提供指向指令碼的路徑。
+* 對於Java類別處理序，會提供完整類別名稱。
+* 對於ECMAScript處理序，會提供指令碼的路徑。
 
 ### 裝載 {#payload}
 
-有效負載是工作流實例對其進行操作的實體。 負載由啟動工作流實例的上下文隱式選擇。
+有效負載是工作流程例項作用所在的實體。 裝載是由啟動工作流程執行個體的內容隱含選取。
 
-例如，如果將工作流應用於頁AEM面 *P* 然後 *P* 在工作流進行時逐步傳遞，每個步驟可選地在 *P* 以某種方式。
+例如，如果工作流程套用至AEM頁面 *P* 則 *P* 會隨著工作流程進行而逐個步驟傳遞，每個步驟會選擇性地對其執行動作 *P* 以某種方式進行。
 
-在最常見的情況下，負載是儲存庫中的JCR節點(例如，頁AEM或資產)。 JCR節點負載作為字串傳遞，該字串是JCR路徑或JCR標識符(UUID)。 在某些情況下，負載可以是JCR屬性（作為JCR路徑傳遞）、URL、二進位對象或泛型Java對象。 對負載起作用的單個進程步驟通常期望某種類型的負載，或根據負載類型採取不同的操作。 對於下面描述的每個過程，將說明預期的負載類型（如果有）。
+最常見的情況下，有效負載是存放庫中的JCR節點(例如AEM頁面或資產)。 JCR節點承載會以字串形式傳遞，該字串為JCR路徑或JCR識別碼(UUID)。 在某些情況下，承載可能是JCR屬性（作為JCR路徑傳遞）、URL、二進位物件或通用Java物件。 對裝載採取行動的個別程式步驟通常會預期某種型別的裝載，或根據裝載型別採取不同的行動。 對於下述的每個程式，都會說明預期的裝載型別（若有）。
 
 ### 引數 {#arguments}
 
-某些工作流進程接受管理員在設定工作流步驟時指定的參數。
+有些工作流程處理會接受管理員在設定工作流程步驟時指定的引數。
 
-參數作為單個字串在 **進程參數** 屬性 **屬性** 對話框。 對於下面描述的每個過程，參數字串的格式都以簡單的EBNF語法進行描述。 例如，以下指示參數字串由一個或多個以逗號分隔的對組成，其中每對都由名稱（即字串）和值組成，用雙冒號分隔：
+引數會以單一字串的形式輸入於 **程式引數** 中的屬性 **屬性** 工作流程編輯器的窗格。 對於下述的每個程式，引數字串的格式都以簡單的EBNF文法描述。 例如，下列表示引數字串包含一或多個以逗號分隔的引數對，其中每個引數對都包含名稱（即字串）和值（以雙冒號分隔）：
 
 ```
     args := name '::' value [',' name '::' value]*
@@ -55,11 +55,11 @@ ht-degree: 1%
 
 ### 逾時 {#timeout}
 
-在此超時期後，工作流步驟不再工作。 某些工作流進程會遵守超時，而另一些工作流進程則不適用並會忽略。
+在此逾時期間後，工作流程步驟不再運作。 有些工作流程處理程式會遵循逾時，有些則不會套用逾時，而會加以忽略。
 
 ### 權限 {#permissions}
 
-會話已傳遞到 `WorkflowProcess` 由工作流進程服務的服務用戶支援，該服務在儲存庫的根目錄下具有以下權限：
+傳遞至的工作階段 `WorkflowProcess` 由工作流程服務的服務使用者提供支援，該服務在存放庫的根目錄具有以下許可權：
 
 * `jcr:read`
 * `rep:write`
@@ -67,56 +67,56 @@ ht-degree: 1%
 * `jcr:lockManagement`
 * `crx:replicate`
 
-如果該權限集對您的 `WorkflowProcess` 實現，則它必須使用具有所需權限的會話。
+如果該許可權集對您的而言並不足夠， `WorkflowProcess` 實作，則必須使用具有必要許可權的工作階段。
 
-建議的方法是使用建立的具有所需權限子集的服務用戶。
+建議方法是使用以必要但最小許可權子集建立的服務使用者。
 
 >[!CAUTION]
 >
->如果從6.2之前的版AEM本升級，則可能需要更新實施。
+>如果您從AEM 6.2之前的版本升級，則可能需要更新實施。
 >
->在以前的版本中，管理會話已傳遞到 `WorkflowProcess` 實現，並可以完全訪問儲存庫，而無需定義特定ACL。
+>在舊版中，管理員工作階段會傳遞至 `WorkflowProcess` 實作後，和便可以擁有存放庫的完整存取權，而無須定義特定ACL。
 >
->權限現在定義為上述([權限](#permissions))。 同樣，也是更新實現的推薦方法。
+>這些許可權現在已定義如上([許可權](#permissions))。 更新實作的建議方法相同。
 >
->當代碼更改不可行時，短期解決方案也可用於向後相容：
+>當程式碼變更不可行時，短期解決方案也可用於回溯相容性：
 >
->* 使用Web控制台( `/system/console/configMgr` 查找 **Adobe花崗岩工作流配置服務**
+>* 使用Web主控台( `/system/console/configMgr` 找到 **AdobeGranite工作流程設定服務**
 >
->* 啟用 **工作流進程舊模式**
+>* 啟用 **工作流程處理舊模式**
 >
->這將恢復為向提供管理員會話的舊行為 `WorkflowProcess` 並再次提供對整個儲存庫的無限制訪問。
+>這將回覆為向提供管理工作階段的舊行為 `WorkflowProcess` 實作並提供對整個存放庫不受限制的存取。
 
-## 工作流控制進程 {#workflow-control-processes}
+## 工作流程控制程式 {#workflow-control-processes}
 
-以下進程不對內容執行任何操作。 它們用於控制工作流本身的行為。
+下列程式不會對內容執行任何動作。 它們用於控制工作流程本身的行為。
 
-### AbsoluteTimeAutoAdvancer(Absolute Time Auto Advancer) {#absolutetimeautoadvancer-absolute-time-auto-advancer}
+### 絕對時間自動提前器（絕對時間自動提前器） {#absolutetimeautoadvancer-absolute-time-auto-advancer}
 
-的 `AbsoluteTimeAutoAdvancer` （絕對時間自動高級）流程的行為與 **自動高級**，但是它在給定時間和日期而不是在給定時間長度之後超時。
+此 `AbsoluteTimeAutoAdvancer` （絕對時間自動提前器）程式的行為與 **AutoAdvancer**，唯一例外是在指定的時間和日期逾時，而不是在指定的時間長度之後。
 
-* **Java類**: `com.adobe.granite.workflow.console.timeout.autoadvance.AbsoluteTimeAutoAdvancer`
-* **負載**:沒有。
-* **參數**:沒有。
-* **超時**:達到設定的時間和日期時，處理超時。
+* **Java類別**： `com.adobe.granite.workflow.console.timeout.autoadvance.AbsoluteTimeAutoAdvancer`
+* **裝載**：無。
+* **引數**：無。
+* **逾時**：達到設定的時間和日期時，處理會逾時。
 
-### AutoAdvancer(Auto Advancer) {#autoadvancer-auto-advancer}
+### 自動提前器（自動提前器） {#autoadvancer-auto-advancer}
 
-的 `AutoAdvancer` 進程自動將工作流提前到下一步。 如果有多個可能的下一步（例如，有OR拆分），則此流程將沿 *預設路由*，否則將不高級工作流。
+此 `AutoAdvancer` 處理會自動前進工作流程到下一個步驟。 如果有多個可能的下一個步驟（例如，如果有OR分割），則此程式會沿著以下方向推進工作流程 *預設路由*，如果已指定，則不會進階工作流程。
 
-* **Java類**: `com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer`
+* **Java類別**： `com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer`
 
-* **負載**:沒有。
-* **參數**:沒有。
-* **超時**:在設定時間長度後處理超時。
+* **裝載**：無。
+* **引數**：無。
+* **逾時**：程式在設定時間長度後逾時。
 
-### ProcessAssembler(Process Assembler) {#processassembler-process-assembler}
+### ProcessAssembler （程式組合器） {#processassembler-process-assembler}
 
-的 `ProcessAssembler` 進程在一個工作流步驟中按順序執行多個子進程。 使用 `ProcessAssembler`，在工作流中建立此類型的單個步驟，並設定其參數以指示要執行的子進程的名稱和參數。
+此 `ProcessAssembler` process會在單一工作流程步驟中依序執行多個子流程。 若要使用 `ProcessAssembler`，請在工作流程中建立此型別的單一步驟，並設定其引數，以指出您要執行的子程式的名稱和引數。
 
-* **Java類**: `com.day.cq.workflow.impl.process.ProcessAssembler`
+* **Java類別**： `com.day.cq.workflow.impl.process.ProcessAssembler`
 
-* **負載**:DAM資產、頁AEM或無負載（取決於子進程的要求）。
+* **裝載**：DAM資產、AEM頁面或無裝載（取決於子流程的要求）。
 * **引數**:
 
 ```
@@ -130,13 +130,13 @@ ht-degree: 1%
         listitem := /* A string */
 ```
 
-* **超時**:尊重。
+* **逾時**：已尊重。
 
 例如：
 
-* 從資產中提取元資料。
-* 建立三個指定大小的縮略圖。
-* 從資產建立JPEG影像，假定資產最初既不是GIF也不是PNG(在這種情況下不建立JPEG)。
+* 從資產中擷取中繼資料。
+* 建立三種指定大小的縮圖。
+* 從資產建立JPEG影像，假設資產原本既不是GIF也不是PNG (在此情況下不會建立JPEG)。
 * 設定資產的上次修改日期。
 
 ```shell
@@ -146,96 +146,96 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
     com.day.cq.dam.core.process.AssetSetLastModifiedProcess
 ```
 
-## 基本流程 {#basic-processes}
+## 基本程式 {#basic-processes}
 
-以下進程執行簡單任務或作為示例。
+下列程式會執行簡單的工作或作為範例。
 
 >[!CAUTION]
 >
->你 ***必須*** 沒有改變 `/libs` 路徑。
+>您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
 >
->這是因為 `/libs` 在下次升級實例時被覆蓋（在應用修補程式或功能包時可能被覆蓋）。
+>這是因為 `/libs` 下次升級執行個體時會被覆寫（並在套用hotfix或feature pack時可能被覆寫）。
 
 ### 刪除 {#delete}
 
-將刪除給定路徑上的項。
+已刪除指定路徑的專案。
 
-* **ECMAScript路徑**: `/libs/workflow/scripts/delete.ecma`
+* **ECMAScript路徑**： `/libs/workflow/scripts/delete.ecma`
 
-* **負載**:JCR路徑
-* **參數**:無
-* **超時**:已忽略
+* **裝載**： JCR路徑
+* **引數**：無
+* **逾時**：已忽略
 
-### 諾普 {#noop}
+### noop {#noop}
 
-這是空進程。 它不執行任何操作，但記錄調試消息。
+這是null程式。 它不執行任何操作，但會記錄偵錯訊息。
 
-* **ECMAScript路徑**: `/libs/workflow/scripts/noop.ecma`
+* **ECMAScript路徑**： `/libs/workflow/scripts/noop.ecma`
 
-* **負載**:無
-* **參數**:無
-* **超時**:已忽略
+* **裝載**：無
+* **引數**：無
+* **逾時**：已忽略
 
-### 規則錯誤 {#rule-false}
+### rule-false {#rule-false}
 
-這是一個返回的空進程 `false` 的 `check()` 的雙曲餘切值。
+這是傳回的Null程式 `false` 於 `check()` 方法。
 
-* **ECMAScript路徑**: `/libs/workflow/scripts/rule-false.ecma`
+* **ECMAScript路徑**： `/libs/workflow/scripts/rule-false.ecma`
 
-* **負載**:無
-* **參數**:無
-* **超時**:已忽略
+* **裝載**：無
+* **引數**：無
+* **逾時**：已忽略
 
-### 樣本 {#sample}
+### 範例 {#sample}
 
-這是一個示例ECMAScript進程。
+這是ECMAScript程式的範例。
 
-* **ECMAScript路徑**: `/libs/workflow/scripts/sample.ecma`
+* **ECMAScript路徑**： `/libs/workflow/scripts/sample.ecma`
 
-* **負載**:無
-* **參數**:無
-* **超時**:已忽略
+* **裝載**：無
+* **引數**：無
+* **逾時**：已忽略
 
-### 鎖進程 {#lockprocess}
+### 鎖定程式 {#lockprocess}
 
-鎖定工作流的負載。
+鎖定工作流程的裝載。
 
-* **Java類：** `com.day.cq.workflow.impl.process.LockProcess`
+* **Java類別：** `com.day.cq.workflow.impl.process.LockProcess`
 
-* **負載：** JCR_PATH和JCR_UUID
-* **參數：** 無
-* **超時：** 已忽略
+* **裝載：** JCR_PATH和JCR_UUID
+* **引數：** 無
+* **逾時：** 已忽略
 
-在下列情況下，該步驟無效：
+此步驟在下列情況下不會生效：
 
-* 負載已鎖定
-* 負載節點不包含jcr:content子節點
+* 承載已鎖定
+* 裝載節點不包含jcr：content子節點
 
-### 解鎖進程 {#unlockprocess}
+### Unlockprocess {#unlockprocess}
 
-解除鎖定工作流的負載。
+解鎖工作流程的裝載。
 
-* **Java類：** `com.day.cq.workflow.impl.process.UnlockProcess`
+* **Java類別：** `com.day.cq.workflow.impl.process.UnlockProcess`
 
-* **負載：** JCR_PATH和JCR_UUID
-* **參數：** 無
-* **超時：** 已忽略
+* **裝載：** JCR_PATH和JCR_UUID
+* **引數：** 無
+* **逾時：** 已忽略
 
-在下列情況下，該步驟無效：
+此步驟在下列情況下不會生效：
 
-* 負載已解鎖
-* 負載節點不包含jcr:content子節點
+* 承載已解鎖
+* 裝載節點不包含jcr：content子節點
 
-## 版本控制進程 {#versioning-processes}
+## 版本設定流程 {#versioning-processes}
 
-以下進程執行與版本相關的任務。
+下列程式會執行版本相關工作。
 
-### 建立版本進程 {#createversionprocess}
+### CreateVersionProcess {#createversionprocess}
 
-建立工作流負載的新版本(AEM頁或DAM資產)。
+建立新版本的工作流程裝載(AEM頁面或DAM資產)。
 
-* **Java類**: `com.day.cq.wcm.workflow.process.CreateVersionProcess`
+* **Java類別**： `com.day.cq.wcm.workflow.process.CreateVersionProcess`
 
-* **負載**:引用頁或DAM資產的JCR路徑或UUID
-* **參數**:無
-* **超時**:受尊重
+* **裝載**：參照頁面或DAM資產的JCR路徑或UUID
+* **引數**：無
+* **逾時**：已尊重

@@ -1,6 +1,6 @@
 ---
 title: 建立啟動
-description: 您可以建立啟動以啟用更新現有網頁的新版本，以便將來激活。
+description: 您可以建立啟動，以更新現有網頁的新版本，以供日後啟用。
 uuid: c1a32710-8189-4a2e-bf2f-428ab30d48c8
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,153 +18,153 @@ ht-degree: 16%
 
 # 建立啟動{#creating-launches}
 
-建立啟動以啟用更新現有網頁的新版本以供將來激活。 建立「啟動」時，可指定標題和源頁：
+建立啟動項，以更新現有網頁的新版本，以供日後啟用。 建立Launch時，您可以指定標題和來源頁面：
 
-* 標題將出現在 [引用](/help/sites-authoring/author-environment-tools.md#references) 這裡是作者們可以接觸他們的地方。
-* 預設情況下，源頁面的子頁面將包括在啟動中。 如果需要，只能使用源頁。
-* 預設情況下， [即時拷貝](/help/sites-administering/msm.md) 在源頁更改時自動更新啟動頁。 可以指定建立靜態副本以防止自動更改。
+* 標題會顯示在 [引用](/help/sites-authoring/author-environment-tools.md#references) 邊欄，作者可從中存取這些專案，以對其進行處理。
+* 來源頁面的子頁面預設會包含在啟動中。 您可以視需要只使用來源頁面。
+* 依預設， [即時副本](/help/sites-administering/msm.md) 當來源頁面變更時，會自動更新啟動頁面。 您可以指定建立靜態副本以防止自動變更。
 
 (可選) 您可以指定 **啟動日期**  (和時間)，以定義啟動頁面要升級和啟動的時間。不過，「 **啟動日期** 」只會搭配「生產就緒 **」旗標運作(請** 參閱編輯啟動設定 [](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration));要讓動作實際自動發生，必須同時設定。
 
 ## 建立啟動 {#creating-a-launch}
 
-您可以從「站點」或「啟動」控制台建立啟動：
+您可以從「網站」或「啟動」主控台建立啟動：
 
-1. 開啟 **站點** 或 **啟動** 控制台。
+1. 開啟 **網站** 或 **啟動** 主控台。
 
    >[!NOTE]
    >
-   >使用 **站點** 控制台通常導航到源頁的位置，但這並非強制性，因為您可以在選擇 **啟動源** 的子菜單。
+   >使用時 **網站** console通常是導覽至來源頁面的位置，但這並非必要操作，因為您可以選取 **啟動來源** 在精靈中。
 
-1. 根據您使用的控制台：
+1. 根據您使用的主控台：
 
    * **Launch**:
 
-      1. 選擇 **建立啟動** 的上界。
+      1. 選取 **建立啟動項** 以開啟精靈。
    * **Sites**:
 
-      1. 選擇 **建立** 的子菜單。
-      1. 從此選擇 **建立啟動** 的子菜單。
+      1. 選取 **建立** 以開啟選取方塊。
+      1. 從此選取 **建立啟動項** 以開啟精靈。
 
    >[!NOTE]
    >
    >在Sites **** Console中，您也可以使用選 [擇模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) ，在選擇「建立」之前選擇 **頁面**。
    >
-   >這將使用所選頁面作為初始源頁面。
+   >這會使用選取的頁面作為初始來源頁面。
 
-1. 在 **選擇源** 走一步 **添加頁面**。 可以選擇多個頁，為每個頁指定路徑：
+1. 在 **選取來源** 您需要執行的步驟 **新增頁面**. 您可以選取多個頁面，並為每個頁面指定路徑：
 
-   * 導航到所需位置。
-   * 選擇源頁並確認（複選標籤）。
+   * 導覽至所需位置。
+   * 選取來源頁面並確認（核取記號）。
 
-   根據需要重複。
+   視需要重複。
 
    ![chlimage_1-225](assets/chlimage_1-225.png)
 
    >[!NOTE]
    >
-   >要將頁面和/或分支添加到發佈中，它們必須位於站點內；即位於普通頂級根下面。
+   >若要將頁面和/或分支新增至啟動項，這些頁面和/或分支必須位於網站內，即位於通用頂層根目錄下。
    >
-   >如果站點包含頂層以下的語言根，則啟動的頁面和分支必須位於公共語言根下。
+   >如果網站在頂層之下包含語言根，則啟動項的頁面和分支必須在共同語言根之下。
    >
-   >如果嘗試在源路徑中建立帶有父頁或子頁的啟動，則啟動將失敗並返回錯誤「目標已存在於：path到該頁」。
+   >如果您嘗試在來源路徑中使用父頁面或子頁面來建立啟動，則會失敗並傳回錯誤「目標已存在於：path中的頁面。」
 
-1. 對於每個條目，您可以指定是否：
+1. 對於每個專案，您可以指定是否：
 
    * **包含子頁面**:
 
-      * 指定是否建立包含子頁的啟動。  預設情況下，此子頁包括在內。
+      * 指定您是否要建立具有或不具有子頁面的啟動。  預設會包含此子頁面。
 
-   繼續 **下一個**。
+   繼續進行 **下一個**.
 
    ![chlimage_1-226](assets/chlimage_1-226.png)
 
-1. 在 **屬性** 指定的嚮導步驟：
+1. 在 **屬性** 您可以指定的精靈步驟：
 
-   * **啟動標題**:啟動的名稱。 該名稱對作者應有意義。
-   * **現有內容**:原始內容將用於建立啟動。
-   * **使用新模板替換頁面**:請參閱 [使用新模板建立啟動](#create-launch-with-new-template) 的子菜單。
-   * **繼承源頁即時資料**:選擇此選項可在源頁面更改時自動更新啟動頁面的內容。 此選項通過使發佈 [即時拷貝](/help/sites-administering/msm.md)。
+   * **啟動項標題**：啟動項的名稱。 此名稱對作者應有意義。
+   * **使用現有內容**：原始內容將用於建立啟動。
+   * **使用新範本取代頁面**：請參閱 [使用新範本建立啟動項](#create-launch-with-new-template) 以取得更多詳細資料。
+   * **繼承來源頁面即時資料**：選取此選項，可在來源頁面變更時自動更新啟動頁面的內容。 此選項可讓啟動成為 [即時副本](/help/sites-administering/msm.md).
 
-      預設情況下，此選項處於選中狀態。
+      依預設，會選取此選項。
 
-   * **啟動日期**:激活啟動副本的日期和時間(取決於 **生產就緒** 標誌；見 [啟動 — 事件順序](/help/sites-authoring/launches.md#launches-the-order-of-events))。
+   * **啟動日期**：啟動副本的啟用日期和時間(取決於 **生產就緒** 標幟；請參閱 [啟動 — 事件順序](/help/sites-authoring/launches.md#launches-the-order-of-events))。
 
    ![chlimage_1-227](assets/chlimage_1-227.png)
 
-1. 使用 **建立** 完成該流程並建立新的啟動。 確認對話框將詢問您是否要立即開啟啟動。
+1. 使用 **建立** 以完成程式並建立您的新啟動項。 確認對話方塊會詢問您是否要立即開啟啟動項。
 
-   如果返回控制台( **完成**)您可以從以下任一位置查看(並訪問您的啟動：
+   如果您傳回主控台(包含 **完成**)您可以透過以下任一方式檢視（和存取）您的啟動項：
 
-   * 這樣 [**啟動** 控制台](/help/sites-authoring/launches.md#the-launches-console)
-   * 這樣 [**引用** 的 **站點** 控制台](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+   * 此 [**啟動** 主控台](/help/sites-authoring/launches.md#the-launches-console)
+   * 此 [**引用** 在 **網站** 主控台](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 
-### 使用新模板建立啟動 {#create-launch-with-new-template}
+### 使用新範本建立啟動項 {#create-launch-with-new-template}
 
-當 [建立啟動](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) 您可以選擇是否使用新模板：
+時間 [建立啟動](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) 您可以選取是否使用新範本：
 
 **使用新範本來取代頁面**
 
 >[!CAUTION]
 >
->此選項僅在從建立啟動時可用 **站點** 控制台。 在從建立啟動時不可用 **啟動** 控制台。
+>此選項僅適用於從建立啟動項 **網站** 主控台。 從建立啟動時，無法使用 **啟動** 主控台。
 
 ![chlimage_1-228](assets/chlimage_1-228.png)
 
-選擇此項將：
+選取此選項將：
 
 * 更新其他可用選項，
-* 包括一個新步驟，您可以在其中選擇所需的模板。
+* 包括一個新步驟，您可在其中選取所需的範本。
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
 >[!CAUTION]
 >
->由於使用了其他模板，因此新頁面將為空。 由於頁面結構不同，不會複製任何內容。
+>當使用不同的範本時，新頁面將是空的。 由於頁面結構不同，將不會複製任何內容。
 >
->此機制可用於更改 [現有頁](/help/sites-authoring/managing-pages.md#creating-a-new-page)  — 但必須考慮內容的丟失。
+>此機制可用於變更 [現有頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page)  — 雖然必須考量內容遺失。
 
-### 建立嵌套啟動 {#creating-a-nested-launch}
+### 建立巢狀啟動 {#creating-a-nested-launch}
 
-建立嵌套啟動（在啟動中啟動）使您能夠從現有啟動建立啟動，以便作者可以利用已做的更改，而不必對每次啟動多次進行相同的更改。
+建立巢狀啟動（在啟動中啟動）可讓您從現有啟動建立啟動，讓作者能夠利用已進行的變更，而不必針對每個啟動多次進行相同的變更。
 
 >[!NOTE]
 >
->另請參閱 [升級嵌套啟動](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch)。
+>另請參閱 [提升巢狀啟動](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch).
 
-#### 建立嵌套啟動 — 啟動控制台 {#creating-a-nested-launch-launches-console}
+#### 建立巢狀啟動 — 啟動主控台 {#creating-a-nested-launch-launches-console}
 
-從 **啟動** 控制台基本上與建立任何其他形式的啟動相同，但您需要導航到啟動分支 `/content/launches`:
+從建立巢狀啟動 **啟動** console基本上與建立任何其他形式的啟動相同，唯一例外是您需要導覽至啟動分支 `/content/launches`：
 
-1. 在 **啟動** 控制台選擇 **建立**。
+1. 在 **啟動** 主控台選取 **建立**.
 1. 選取「 **新增頁面**」，然後在篩選條件中指定以導覽至啟 `/content/launches` 動分支。選擇所需的啟動並使用「選擇 **」確認**:
 
    ![chlimage_1-230](assets/chlimage_1-230.png)
 
-1. 繼續 **下一個** 完成 **屬性** 和其他發射一樣。
+1. 繼續進行 **下一個** 並完成 **屬性** 和任何其他啟動項一樣。
 
    ![chlimage_1-231](assets/chlimage_1-231.png)
 
-#### 建立嵌套啟動 — 站點控制台 {#creating-a-nested-launch-sites-console}
+#### 建立巢狀啟動 — Sites主控台 {#creating-a-nested-launch-sites-console}
 
-從 **站點** 控制台 — 基於現有的啟動：
+若要從建立巢狀啟動 **網站** 主控台 — 根據現有的啟動：
 
-1. 訪問 [從引用啟動（站點控制台）](/help/sites-authoring/launches.md#launches-in-references-sites-console) 按鈕。
+1. 存取 [從「引用」（Sites主控台）啟動](/help/sites-authoring/launches.md#launches-in-references-sites-console) 以顯示可用的動作。
 1. 選 **擇「建立啟動** 」以開啟嚮導(由於已選擇源，因此它將跳過 **** 選擇源步驟)。
 
-1. 輸入 **啟動標題** 以及任何其他所需細節（如正常發射）。
+1. 輸入 **啟動項標題** 以及任何其他必要的詳細資料（與一般啟動一樣）。
 
-1. 使用 **建立** 完成該流程並建立新的啟動。 確認對話框將詢問您是否要立即開啟啟動。
+1. 使用 **建立** 以完成程式並建立您的新啟動項。 確認對話方塊會詢問您是否要立即開啟啟動項。
 
    如果您選 **取「完成**」，則會返回至Sites ******** Console的「參考」邊欄，如果您選取適當的頁面，則會顯示您的新啟動。
 
-### 刪除啟動 {#deleting-a-launch}
+### 刪除啟動項 {#deleting-a-launch}
 
-可以從 [啟動控制台](/help/sites-authoring/launches.md#the-launches-console):
+您可以從以下位置刪除啟動： [啟動主控台](/help/sites-authoring/launches.md#the-launches-console)：
 
-* 按一下/按一下縮略圖，選擇啟動。
-* 將出現工具欄 — 選擇刪除。
-* 確認操作。
+* 點選/按一下縮圖，以選取啟動。
+* 工具列隨即顯示 — 選取「刪除」。
+* 確認動作。
 
 >[!CAUTION]
 >

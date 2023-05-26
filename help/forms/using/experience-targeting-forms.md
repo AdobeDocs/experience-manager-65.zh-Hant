@@ -1,7 +1,7 @@
 ---
-title: 在AEM Forms創造有針對性的體驗
+title: 在AEM Forms中建立鎖定目標的體驗
 seo-title: Create targeted experiences in AEM Forms
-description: 使用AEM Forms的Target為目標客戶建立定制體驗。
+description: 在AEM Forms中使用Target，為鎖定目標客戶建立自訂體驗。
 seo-description: Use Target in AEM Forms to create customized experiences for targeted customers.
 uuid: 174b6054-8fe3-4ab2-8afd-435e5dff9044
 content-type: reference
@@ -16,54 +16,54 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms創造有針對性的體驗 {#create-targeted-experiences-in-aem-forms}
+# 在AEM Forms中建立鎖定目標的體驗 {#create-targeted-experiences-in-aem-forms}
 
-## 整合Adobe Target與AEM Forms {#integrate-adobe-target-with-aem-forms}
+## 將Adobe Target與AEM Forms整合 {#integrate-adobe-target-with-aem-forms}
 
-Adobe Target與AEM整合，讓您為目標受眾建立定製的體驗。 使用Adobe Target，您可以建立A/Btest、測量用戶響應並為目標用戶生成自定義的Web內容。 您可以將Adobe Target與AEM Forms整合，以針對自適應形式和互動式通信的影像元件。
+Adobe Target與AEM整合，可讓您建立針對目標對象自訂的體驗。 透過Adobe Target，您可以建立A/B測試、測量使用者回應，並為目標使用者產生自訂的網頁內容。 您可以整合Adobe Target與AEM Forms，以針對最適化表單和互動式通訊的影像元件。
 
-將Adobe Target配AEM置為與自適應表單和互動式通信一起使用，請參見 [在中建立目標配AEM置](/help/sites-administering/target.md) 和 [添加框架](/help/sites-administering/target.md)。
+在AEM中設定Adobe Target以搭配最適化表單和互動式通訊使用，請參閱 [在AEM中建立Target設定](/help/sites-administering/target.md) 和 [新增框架](/help/sites-administering/target.md).
 
 >[!NOTE]
 >
->當使用主機名或IP地址呈現自適應表單或交互通信時，目標就會生效。 當使用localhost呈現自適應表單或互動式通信時，該命令將失敗。
+>使用主機名稱或IP位址呈現最適化表單或互動式通訊時，鎖定目標就會運作。 使用localhost轉譯最適化表單或互動式通訊時，它會失敗。
 
-## 建立目標活動 {#creating-a-target-activity}
+## 建立Target活動 {#creating-a-target-activity}
 
-1. 點擊 **Adobe Experience Manager>個性化>活動**。
+1. 點選 **Adobe Experience Manager >個人化>活動**.
 
    `https://<hostname>:<port>/libs/cq/personalization/touch-ui/content/v2/activities.html`
 
-1. 在「活動」頁中，按一下 **建立>建立品牌**。
-1. 系統會要求您選擇模板並輸入屬性。
+1. 在「活動」頁面中，點選 **建立>建立品牌**.
+1. 系統會要求您選擇範本並輸入屬性。
 
-   選擇模板，點擊 **下一個。** 在「屬性」部分輸入品牌標題，然後點擊 **建立。**
-您的品牌現在列在「活動」頁面中。
+   選取範本，點選 **下一個。** 在屬性區段中輸入品牌標題，然後點選 **建立。**
+您的品牌現在已列在活動頁面中。
 
-1. 在「活動」頁面中點擊您的品牌。
-1. 在品牌的主區域中，點擊 **建立** > **建立活動**。
+1. 在「活動」頁面中點選您的品牌。
+1. 在品牌的主區域點選 **建立** > **建立活動**.
 
-   建立活動時，可指定活動的詳細資訊、目標和設定。
+   建立活動時，您可以指定其詳細資訊、目標和設定。
 
-   「詳細資訊」部分包括名稱、目標引擎和目標。 選擇Adobe Target作為目標引擎時，將啟用目標雲配置選項。 選擇目標雲配置，選擇活動類型，提供活動目標，然後點擊 **下一個**。 互動式通信僅支援「體驗目標」活動類型。
+   「詳細資訊」區段包含名稱、目標定位引擎和目標。 當您選取Adobe Target作為定位引擎時，就會啟用Target雲端設定選項。 選擇您的Target雲端設定、選擇活動型別、提供活動目標，然後點選 **下一個**. 互動式通訊僅支援體驗鎖定目標活動型別。
 
-   「目標」部分允許您添加觀眾體驗並命名它。 按一下 **添加體驗** 啟用 **選擇受眾** 和 **名稱體驗** 頁籤 點擊 **選擇受眾** 查看觀眾及其來源的清單。 從「受眾名稱」清單中選擇受眾。 點擊 **添加體驗** 命名體驗，點擊 **下一個**。
+   Target區段可讓您新增對象體驗並將其命名。 按一下 **新增體驗** 以啟用 **選取對象** 和 **為體驗命名** 選項。 點選 **選取對象** 檢視對象及其來源的清單。 從「對象名稱」清單中選取對象。 點選 **新增體驗** 為體驗命名，然後點選 **下一個**.
 
-   「目標和設定」部分允許您安排活動並排定活動的優先順序。 設定活動的開始日期、結束日期和優先順序、目標度量、附加度量和點擊 **保存**。
+   「目標與設定」區段可讓您排程活動並排定其優先順序。 設定活動的開始日期、結束日期和優先順序、目標量度、其他量度和點選 **儲存**.
 
-   此活動現在列在您的品牌頁面中。
+   活動現在會列在您的品牌頁面中。
 
    >[!NOTE]
    >
-   >您可以忽略錯誤「您的活動已保存，但未與目標同步。 原因：如果在保存活動時遇到以下體驗沒有優惠」。
+   >您可以忽略錯誤「您的活動已儲存，但未同步至Target。 原因：如果在儲存活動時遇到以下體驗「沒有選件」。
 
-1. 要啟用目標，請編輯.jsp檔案，以包括您的自適應表單模板使用的客戶端庫。
+1. 若要啟用Target，請編輯.jsp檔案以包含您的最適化表單範本所使用的使用者端資料庫。
 
-   例如，在現成的實現中，按一下 **工具** >  **CRXDE Lite**。
+   例如，在現成可用的實作中，按一下 **工具** >  **CRXDE Lite**.
 
-   在CRXDE Lite地址欄中，鍵入/libs/fd/af/components/page/base/head.jsp以編輯head.jsp檔案。
+   在CRXDE Lite位址列中，輸入/libs/fd/af/components/page/base/head.jsp以編輯head.jsp檔案。
 
-   此實現使用simpleEnrollment模板。 在此實現中，修改head.jsp檔案以包括以下客戶端庫：
+   此實作使用simpleEnrollment範本。 在此實作中，修改head.jsp檔案以包含下列使用者端程式庫：
 
    `<cq:include script="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>`
 
@@ -71,49 +71,49 @@ Adobe Target與AEM整合，讓您為目標受眾建立定製的體驗。 使用A
 
    `<cq:include path="config" resourceType="cq/personalization/components/clientcontext_optimized/config"/>`
 
-1. 要為自適應表單啟用目標框架，請導航到您的表單或互動式通信，然後在編輯模式下開啟它。
+1. 若要啟用最適化表單的目標框架，請導覽至您的表單或互動式通訊，並以編輯模式開啟它。
 
-   要在編輯模式下開啟窗體或互動式通信，請點擊 **選擇** 然後點擊 **開啟**。
+   若要以編輯模式開啟表單或互動式通訊，請點選 **選取** 然後點選 **開啟**.
 
-   或者，當您將指針移動到表單或互動式通信表徵圖上而不選擇它時，將顯示四個按鈕。 可以點擊 **編輯** 的子菜單。
+   或者，將指標移到表單或互動式通訊圖示上而不選取時，會出現四個按鈕。 您可以點選 **編輯** 按鈕，以在編輯模式中開啟表單。
 
-1. 在頁面工具欄中，點擊 **頁面資訊** ![主題選項](assets/theme-options.png) > **開啟屬性**。
-1. 在「常規」頁籤中，為 **Adobe Target** 的子菜單。 點擊 **保存並關閉**。
+1. 在頁面工具列中點選 **頁面資訊** ![theme-options](assets/theme-options.png) > **開啟屬性**.
+1. 在「一般」標籤中，選擇 **Adobe Target** 欄位。 點選 **儲存並關閉**.
 
-## 將建立的活動應用於自適應表單影像或互動式通信影像 {#applying-created-activity-to-an-adaptive-form-image-or-an-interactive-communication-image}
+## 將建立的活動套用至最適化表單影像或互動式通訊影像 {#applying-created-activity-to-an-adaptive-form-image-or-an-interactive-communication-image}
 
-1. 開啟自適應窗體和互動式通信進行編輯。 如果要開啟互動式通信，請開啟Web通道。
+1. 開啟最適化表單和互動式通訊以進行編輯。 如果您要開啟互動式通訊，請開啟Web Channel。
 
-1. 在互動式通信或自適應表單的創作模式中，添加要目標的影像。
+1. 在互動式通訊或最適化表單的製作模式中，新增要鎖定的影像。
 
    >[!NOTE]
    >
-   >AEM Forms只支援將目標鎖定在影像元件上。 確保承載影像元件的面板不包含任何其他元件，並且面板的列數設定為1。
+   >AEM Forms僅支援定位影像元件。 確認裝載影像元件的面板未包含任何其他元件，且面板的欄數設為1。
 
-1. 切換自 **編輯** 至 **目標** 的子菜單。 切換模式的選項靠近右上角。
-1. 選擇 **品牌**&#x200B;選中 **活動**，然後點擊 **開始目標**。 的 **觀眾** 菜單開啟它。
+1. 切換來源 **編輯** 至 **目標定位** 模式。 切換模式的選項位於右上角附近。
+1. 選取 **品牌**，選取 **活動**，然後點選 **開始定位**. 此 **受眾** 功能表會出現在編輯器的右側。
 
-   ![目標菜單](assets/targeting-menu.png)
+   ![targeting-menu](assets/targeting-menu.png)
 
-1. 從 **觀眾** 菜單，然後點擊影像到目標。 出現菜單。 在菜單中，點擊 **目標**。 點擊影像並點擊 **配置**。 在「屬性」窗口中，選擇要為所選受眾顯示的影像。 對所有觀眾重複此步驟。 在互動式通信或自適應形式中為影像啟用體驗目標。
+1. 從中選擇對象 **受眾** 功能表，然後點選要定位的影像。 選單出現。 在功能表中，點選 **Target**. 點選影像並點選 **設定**. 在屬性視窗中，選取要針對所選對象顯示的影像。 對所有對象重複此步驟。 互動式通訊或最適化表單中的影像已啟用體驗鎖定目標。
 
-## 檢查建立的活動是否與目標伺服器同步 {#check-if-the-created-activity-syncs-with-the-target-server}
+## 檢查建立的活動是否與Target伺服器同步 {#check-if-the-created-activity-syncs-with-the-target-server}
 
-用於與目標伺服器進行同步的活動。 要檢查活動是否與目標伺服器同步，請在品牌頁面中檢查活動的狀態。
+用於鎖定目標與Target伺服器同步的活動。 若要檢查您的活動是否與目標伺服器同步，請在您的品牌頁面中檢查您的活動狀態。
 
 確保活動的狀態為「已同步」。
 
 ## 驗證目標行為 {#validate-target-behavior}
 
-要驗證目標行為，請執行以下操作：
+若要驗證Target行為：
 
-* 使用目標 `wcmmode preview` 在作者模式下
-* 使用目標 `wcmmode preview` 和 `wcmmode disabled` 在發佈模式下
+* 使用目標定位 `wcmmode preview` 在作者模式中
+* 使用目標定位 `wcmmode preview` 和 `wcmmode disabled` 在發佈模式中
 
-## 映像元件的監視器目標 {#monitor-targeting-for-the-image-component}
+## 監視影像元件的目標定位 {#monitor-targeting-for-the-image-component}
 
-要監視窗體上影像元件的目標，請發佈您的影像、活動和自適應窗體。
+若要監視表單上影像元件的目標定位，請發佈您的影像、活動和最適化表單。
 
 ## 未解決的問題 {#open-issues}
 
-可見性表達式，針對自適應表單上的目標影像設定焦點失敗。
+可見度運算式，針對最適化表單上的目標影像設定焦點失敗。

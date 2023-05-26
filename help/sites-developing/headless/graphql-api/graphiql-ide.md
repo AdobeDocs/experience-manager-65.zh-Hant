@@ -11,7 +11,7 @@ ht-degree: 94%
 
 # 使用 GraphiQL IDE {#graphiql-ide}
 
-標準的實施 [圖形QL](https://graphql.org/learn/serving-over-http/#graphiql) IDE可與Adobe Experience Manager的GraphQLAPI(AEM)一起使用。
+標準的實作 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE可與Adobe Experience Manager (AEM)的GraphQL API搭配使用。
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## 發佈持續性查詢 {#publishing-persisted-queries}
 
-一旦選擇了 [永續查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md) 從清單（左面板）中，您可以 **發佈** 和 **取消發佈** 操作。 這會將其啟動到發佈環境 (例如，`dev-publish`)，以便應用程式在測試時輕鬆存取。
+一旦您選取 [持久查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md) 從清單（左側面板），您可以使用 **發佈** 和 **取消發佈** 動作。 這會將其啟動到發佈環境 (例如，`dev-publish`)，以便應用程式在測試時輕鬆存取。
 
 >[!NOTE]
 >

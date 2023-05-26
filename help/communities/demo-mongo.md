@@ -1,7 +1,7 @@
 ---
-title: 如何設定MongoDB以進行演示
+title: 如何設定MongoDB以進行示範
 seo-title: How to Setup MongoDB for Demo
-description: 如何為一個作者實例和一個發佈實例設定MSRP
+description: 如何為一個製作執行個體和一個發佈執行個體設定MSRP
 seo-description: How to setup MSRP for one author instance and one publish instance
 uuid: d2035a9e-f05c-4f90-949d-7cdae9646750
 contentOwner: Janice Kendall
@@ -18,65 +18,65 @@ ht-degree: 0%
 
 ---
 
-# 如何設定MongoDB以進行演示 {#how-to-setup-mongodb-for-demo}
+# 如何設定MongoDB以進行示範 {#how-to-setup-mongodb-for-demo}
 
 ## 簡介 {#introduction}
 
-本教程介紹如何設定 [MSRP](msrp.md) 為 *一位作者* 實例和 *一篇* 實例。
+本教學課程說明如何設定 [MSRP](msrp.md) 的 *一位作者* 執行個體和 *一個發佈* 執行個體。
 
-通過此設定，可以從作者和發佈環境訪問社區內容，而無需向前或反向複製用戶生成的內容(UGC)。
+透過此設定，社群內容可從製作和發佈環境存取，而無需轉送或反向復寫使用者產生的內容(UGC)。
 
-此配置適用於 *非生產* 例如用於開發和/或演示的環境。
+此設定適用於 *非生產* 環境，例如開發和/或示範。
 
 **A *生產* 環境應：**
 
-* 使用複製副本集運行MongoDB
+* 使用復本集執行MongoDB
 * 使用SolrCloud
-* 包含多個發佈者實例
+* 包含多個發行者執行個體
 
-## 蒙戈DB {#mongodb}
+## MongoDB {#mongodb}
 
-### 安裝MongoDB {#install-mongodb}
+### 安裝MongoDb {#install-mongodb}
 
-* 從下載MongoDB [https://www.mongodb.org/](https://www.mongodb.org/)
+* 下載MongoDB，從 [https://www.mongodb.org/](https://www.mongodb.org/)
 
-   * 作業系統選擇：
+   * 選擇作業系統：
 
       * Linux
-      * Mac10.8
+      * Mac 10.8
       * Windows 7
    * 版本選擇：
 
       * 至少使用2.6版
 
 
-* 基本配置
+* 基本設定
 
-   * 按照MongoDB安裝說明操作。
-   * 為mongod配置：
+   * 遵循MongoDB安裝指示。
+   * 設定mongod：
 
-      * 不需要配置蒙古人或共用。
-   * 已安裝的MongoDB資料夾將稱為 &lt;mongo-install>。
-   * 定義的資料目錄路徑將稱為 &lt;mongo-dbpath>。
+      * 不需要設定蒙哥或分片。
+   * 安裝的MongoDB資料夾將稱為 &lt;mongo-install>.
+   * 定義的資料目錄路徑將參照為 &lt;mongo-dbpath>.
 
 
-* MongoDB可以在與主機相同的主機上運行AEM，也可以遠程運行。
+* MongoDB可在與AEM相同的主機上執行或遠端執行。
 
 ### 啟動MongoDB {#start-mongodb}
 
-* &lt;mongo-install>/bin/mongod -dbpath &lt;mongo-dbpath>
+* &lt;mongo-install>/bin/mongod —dbpath &lt;mongo-dbpath>
 
-這將使用預設埠27017啟動MongoDB伺服器。
+這將使用預設連線埠27017啟動MongoDB伺服器。
 
-* 對於Mac，使用開頭arg &#39;ulimit -n 2048&#39;增加ulimit
+* 對於Mac，請使用開頭為&#39;ulimit -n 2048&#39;的ulimit增加
 
 >[!NOTE]
 >
->如果MongoDB已啟動 *後* AEM **重新啟動** 全部 **AEM** 實例，以便它們正確連接到MongoDB。
+>如果MongoDB已啟動 *晚於* AEM， **重新啟動** 全部 **AEM** 執行個體，使其正確連線至MongoDB。
 
-### 演示製作選項：設定MongoDB複製副本集 {#demo-production-option-setup-mongodb-replica-set}
+### 示範生產選項：設定MongoDB復本集 {#demo-production-option-setup-mongodb-replica-set}
 
-以下命令是在localhost上設定具有3個節點的複製副本集的示例：
+下列指令是在localhost上以3個節點設定復本集的範例：
 
 * `bin/mongod --port 27017 --dbpath data --replSet rs0&`
 * `bin/mongo`
@@ -96,81 +96,81 @@ ht-degree: 0%
 
 ### 安裝Solr {#install-solr}
 
-* 從下載Solr [阿帕奇盧塞內](https://archive.apache.org/dist/lucene/solr/):
+* 下載Solr來源 [Apache Lucene](https://archive.apache.org/dist/lucene/solr/)：
 
    * 適用於任何作業系統。
    * Solr 7.0版。
    * Solr需要Java 1.7或更高版本。
 
-* 基本配置
+* 基本設定
 
-   * 按照「example」 Solr設定。
+   * 遵循&#39;example&#39; Solr設定。
    * 不需要服務。
-   * 安裝的Solr資料夾將稱為 &lt;solr-install>。
+   * 安裝的Solr資料夾將稱為 &lt;solr-install>.
 
-### 為AEM Communities配置解決方案 {#configure-solr-for-aem-communities}
+### 為AEM Communities設定Solr {#configure-solr-for-aem-communities}
 
-要為MSRP配置Solr集合以進行演示，需要做出兩個決定（選擇指向主要文檔的連結以瞭解詳細資訊）:
+若要設定MSRP的Solr集合以進行示範，有兩個決定需要做（請選取主要檔案的連結以取得詳細資訊）：
 
-1. 在獨立或 [SolrCloud模式](msrp.md#solrcloudmode)。
-1. 安裝 [標準](msrp.md#installingstandardmls) 或 [先進](msrp.md#installingadvancedmls) 多語言搜索(MLS)。
+1. 以獨立或獨立方式執行Solr [SolrCloud模式](msrp.md#solrcloudmode).
+1. 安裝 [標準](msrp.md#installingstandardmls) 或 [進階](msrp.md#installingadvancedmls) 多語言搜尋(MLS)。
 
 ### 獨立Solr {#standalone-solr}
 
-運行Solr的方法可能因安裝版本和方式而異。 的 [太陽參考指南](https://archive.apache.org/dist/lucene/solr/ref-guide/) 是權威文檔。
+執行Solr的方法可能會因安裝的版本和方式而異。 此 [Solr參考指南](https://archive.apache.org/dist/lucene/solr/ref-guide/) 是權威檔案。
 
-為簡單起見，以4.10版為例，在獨立模式下啟動Solr:
+為簡單起見，以4.10版為例，以獨立模式啟動Solr：
 
-* cd &lt;solrinstall>/示例
+* cd至 &lt;solrinstall>/example
 * java -jar start.jar
 
-這將使用預設埠8983啟動Solr HTTP伺服器。 您可以瀏覽至Solr控制台以獲取Solr控制台以進行測試。
+這會使用預設連線埠8983啟動Solr HTTP伺服器。 您可以瀏覽至Solr主控台，取得Solr主控台以進行測試。
 
-* 預設Solr控制台： [http://localhost:8983/solr/](http://localhost:8983/solr/)
+* 預設Solr主控台： [http://localhost:8983/solr/](http://localhost:8983/solr/)
 
 >[!NOTE]
 >
->如果Solr Console不可用，請檢查下面的日誌 &lt;solrinstall>/example/logs。 查看SOLR是否嘗試綁定到無法解析的特定主機名(如「user-macbook-pro」)。
-如果是，則使用此主機名(如127.0.0.1 user-macbook-pro)和Solr的新條目更新etc/hosts檔案。
+>如果Solr主控台無法使用，請檢查 &lt;solrinstall>/example/logs. 檢視SOLR是否嘗試繫結至無法解析的特定主機名稱（例如「user-macbook-pro」）。
+若是如此，請使用此主機名稱的新專案更新etc/hosts檔案（例如127.0.0.1 user-macbook-pro），Solr將正常啟動。
 
-### 索爾雲 {#solrcloud}
+### SolrCloud {#solrcloud}
 
-要運行非常基本（非生產）的solrCloud安裝，請從以下位置開始：
+若要執行非常基本的（非生產） solrCloud設定，請啟動solr並執行下列動作：
 
 * `java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar`
 
-## 將MongoDB標識為公用儲存 {#identify-mongodb-as-common-store}
+## 將MongoDB識別為通用存放區 {#identify-mongodb-as-common-store}
 
-如有必要，啟AEM動作者並發佈實例。
+視需要啟動作者和發佈AEM例項。
 
-如AEM果在啟動MongoDB之前運行，則AEM需要重新啟動實例。
+如果AEM在MongoDB啟動之前執行，則需要重新啟動AEM執行個體。
 
-按照主文檔頁上的說明操作： [MSRP - MongoDB公用儲存](msrp.md)
+請依照主要檔案頁面上的指示操作： [MSRP - MongoDB公用存放區](msrp.md)
 
 ## 測試 {#test}
 
-要test和驗證MongoDB公用儲存，請發佈發佈實例的注釋並查看作者實例，以及在MongoDB和Solr中查看UGC:
+若要測試和驗證MongoDB通用存放區，請在發佈執行個體上張貼註解並在製作執行個體上檢視它，以及在MongoDB和Solr中檢視UGC：
 
-1. 在發佈實例上，瀏覽到 [社區元件指南](http://localhost:4503/content/community-components/en/comments.html) 的子菜單。
-1. 登錄以發佈評論：
-1. 在注釋文本輸入框中輸入文本，然後按一下 **[!UICONTROL 帖子]**
+1. 在發佈執行個體上，瀏覽至 [社群元件指南](http://localhost:4503/content/community-components/en/comments.html) 頁面並選取「註解」元件。
+1. 登入以發表評論：
+1. 在註解文字輸入方塊中輸入文字，然後按一下 **[!UICONTROL Post]**
 
-   ![評論後](assets/post-comment.png)
+   ![post-comment](assets/post-comment.png)
 
-1. 只需查看對 [作者實例](http://localhost:4502/content/community-components/en/comments.html) （可能仍以admin/admin身份登錄）。
+1. 只要在 [作者執行個體](http://localhost:4502/content/community-components/en/comments.html) （可能仍以管理員/管理員身分登入）。
 
-   ![視圖注釋](assets/view-comment.png)
+   ![view-comment](assets/view-comment.png)
 
-   注：當在 *輔助路徑* 作者認為，這些是為常設委員會框架提供的。 實際的UGC不在JCR中，而在MongoDB中。
+   注意：雖然下有JCR節點， *asith* 在作者上，這些用於SCF框架。 實際的UGC不在JCR中，而是在MongoDB中。
 
-1. 查看蒙古語中的UGC **[!UICONTROL 社區]** > **[!UICONTROL 集合]** > **[!UICONTROL 內容]**
+1. 在mongodb中檢視UGC **[!UICONTROL Communities]** > **[!UICONTROL 集合]** > **[!UICONTROL 內容]**
 
-   ![ugc內容](assets/ugc-content.png)
+   ![ugc-content](assets/ugc-content.png)
 
-1. 在Solr中查看UGC:
+1. 在Solr中檢視UGC：
 
-   * 瀏覽到Solr儀表板： [http://localhost:8983/solr/](http://localhost:8983/solr/)。
-   * 用戶 `core selector` 選擇 `collection1`。
+   * 瀏覽至Solr儀表板： [http://localhost:8983/solr/](http://localhost:8983/solr/).
+   * 使用者 `core selector` 以選取 `collection1`.
    * 選取 `Query`.
    * 選取 `Execute Query`.
 
@@ -178,15 +178,15 @@ ht-degree: 0%
 
 ## 疑難排解 {#troubleshooting}
 
-### 未顯示UGC {#no-ugc-appears}
+### 未出現UGC {#no-ugc-appears}
 
-1. 確保MongoDB已安裝並正常運行。
+1. 請確定MongoDB已安裝且正常執行。
 
-1. 確保MSRP已配置為預設提供程式：
+1. 請確定MSRP已設定為預設提供者：
 
-   * 在所有作者和發佈AEM實例上，重訪 [儲存配置控制台](srp-config.md) 或檢查存AEM儲庫：
+   * 在所有作者和發佈AEM執行個體上，重新造訪 [儲存設定主控台](srp-config.md) 或檢查AEM存放庫：
 
-   * 在JCR中，如果 [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) 不包含 [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) 節點，表示儲存提供程式是JSRP。
-   * 如果srpc節點存在並包含節點 [預設配置](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，預設配置的屬性應將MSRP定義為預設提供程式。
+   * 在JCR中，如果 [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) 不包含 [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) 節點，這表示儲存提供者為JSRP。
+   * 如果srpc節點存在且包含節點 [default設定](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，defaultconfiguration的屬性應將MSRP定義為預設提供者。
 
-1. 確保在選AEM擇MSRP後重新啟動。
+1. 請確定在選取MSRP後重新啟動AEM。

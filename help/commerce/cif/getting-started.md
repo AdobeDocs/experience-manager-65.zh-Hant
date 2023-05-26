@@ -1,6 +1,6 @@
 ---
 title: AEM Content and Commerce 快速入門
-description: 瞭解如何部AEM署內容和商務項目。
+description: 瞭解如何部署AEM內容與商務專案。
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
@@ -13,86 +13,86 @@ ht-degree: 7%
 
 # AEM Content and Commerce 快速入門 {#start}
 
-要開始使AEM用Content and Commerce，您需要安AEM裝6.5版的Content and Commerce附加AEM程式。
+若要開始使用AEM Content and Commerce，您必須安裝適用於AEM 6.5的AEM Content and Commerce附加元件。
 
-## 最低軟體要求
+## 最低軟體需求
 
-[AEM 6.5 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 需要7或更高版本。
+[AEM 6.5 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 需要7或更新版本。
 
 ## 上線 {#onboarding}
 
-內容和商AEM務的登錄過程分為兩步：
+AEM Content and Commerce入門有兩個步驟：
 
-1. 安AEM裝6.5版的Content and Commerce附AEM加程式
+1. 安裝適用於AEM 6.5的AEM Content and Commerce附加元件
 
-2. 連AEM接您的商業解決方案
+2. 將AEM與您的商務解決方案連線
 
-### 安AEM裝6.5版的Content and Commerce附AEM加程式 {#install-add-on}
+### 安裝適用於AEM 6.5的AEM Content and Commerce附加元件 {#install-add-on}
 
-從下載AEM並安裝Commerce Add-On for AEM6.5 [軟體分發](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 門戶。
+從下載並安裝適用於AEM 6.5的AEM Commerce附加元件 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 入口網站。
 
-啟動並安裝AEM所需的6.5 Service Pack。 我們建議安裝上一個可用的Service Pack。
+啟動並安裝必要的AEM 6.5 Service Pack。 建議您安裝最後一個可用的Service Pack。
 
 >[!NOTE]
 >
->這將由CSE為托管服務客戶AEM完成。
+>CSE將針對AEM Managed Service客戶完成這項工作。
 
-### 連AEM接到您的Commerce System {#connect}
+### 將AEM連線至您的Commerce系統 {#connect}
 
-可以AEM連接到任何具有可訪問GraphQL終結點的商業系AEM統。 這些端點通常是公開可用的，或可通過專用VPN或本地連接進行連接，具體取決於各個項目設定。
+AEM可連線至任何具有AEM的可存取GraphQL端點的商務系統。 這些端點通常是公開可用的，或者可以根據個別專案設定透過私人VPN或本機連線來連線。
 
-可選地，可以提供驗證報頭以使用需要驗證的附加CIF功能。
+可選擇是否提供驗證標頭，以使用需要驗證的其他CIF功能。
 
-由 [項AEM目原型](https://github.com/adobe/aem-project-archetype)的 [韋尼AEM亞引用儲存](https://github.com/adobe/aem-cif-guides-venia) 已包含在 [預設配置](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json) 必須調整。
+產生的專案 [AEM專案原型](https://github.com/adobe/aem-project-archetype)，以及 [AEM Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia) 此專案已包含在 [預設設定](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json) 必須調整。
 
-替換 `url` 在 `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` 你商業系統的GraphQL終點。 此配置可以通過OSGI控制台或通過項目部署OSGI配置來完成。 使用不同的運行模式支援用於暫存和生產系統的AEM不同配置。
+取代 `url` 在 `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` 商務系統的GraphQL端點。 此設定可以透過OSGI主控台完成，或透過專案部署OSGI設定來完成。 使用不同的AEM執行模式支援中繼和生產系統的不同設定。
 
-內AEM容和商務附加元件和CIF核心元件AEM使用伺服器端和客戶端連接。 客戶端CIF核心元件和CIF附加創作工具預設連接到 `/api/graphql`。 如果需要，可通過CIFCloud Service配置來調整此值（見下文）。
+AEM Content and Commerce附加元件和CIF核心元件同時使用AEM伺服器端和使用者端連線。 使用者端CIF核心元件和CIF附加撰寫工具預設會連線至 `/api/graphql`. 如有需要，可透過CIFCloud Service設定調整此設定（請參閱下文）。
 
-CIF載入項提供位於以下位置的GraphQL代理Servlet `/api/graphql` 可選地用於 [地方發展](develop.md)。 對於生產部署，強烈建議通過Dispatcher或其他網路層（如CDN）AEM設定到商業GraphQL終結點的反向代理。
+CIF附加元件提供GraphQL Proxy servlet，位於 `/api/graphql` 可選擇用於 [本機開發](develop.md). 對於生產部署，強烈建議透過AEM Dispatcher或其他網路層（例如CDN）設定商務GraphQL端點的反向Proxy。
 
-## 配置儲存和目錄 {#catalog}
+## 設定存放區和目錄 {#catalog}
 
-載入項和 [CIF核心元件](https://github.com/adobe/aem-core-cif-components) 可用於連接到AEM不同商業商店（或商店視圖等）的多個站點結構。 預設情況下， CIF Add-On部署時使用連接到Adobe Commerce預設儲存和目錄的預設配置。
+附加元件和 [CIF Core Components](https://github.com/adobe/aem-core-cif-components) 可用於連線至不同商業商店（或商店檢視等）的多個AEM網站結構。 根據預設，CIF附加元件會以預設設定部署，並連線至Adobe Commerce的預設存放區和目錄。
 
-通過CIFCloud Service配置，可以根據項目調整此配置，步驟如下：
+您可以按照以下步驟，透過CIFCloud Service設定來針對專案調整此設定：
 
-1. 轉AEM至工具 — >Cloud Services-> CIF配置
+1. 在AEM中前往「工具 — >Cloud Services-> CIF設定」
 
-2. 選擇要更改的商業配置
+2. 選取您要變更的商務設定
 
-3. 通過操作欄開啟配置屬性
+3. 透過動作列開啟設定屬性
 
-![CIFCloud Services配置](/help/commerce/cif/assets/cif-cloud-service-config.png)
+![CIFCloud Services設定](/help/commerce/cif/assets/cif-cloud-service-config.png)
 
-可以配置以下屬性：
+可設定下列屬性：
 
-- GraphQL客戶端 — 選擇已配置的GraphQL客戶端以進行商業後端通信。 通常應保持預設狀態。
-- 儲存視圖 — 儲存視表徵圖識符。 如果為空，則使用預設儲存視圖。
-- GraphQL代理路徑 — 用於向商業後端GraphQL終AEM點代理請求的URL路徑GraphQL代理。
-
-   >[!NOTE]
-   >
-   >在大多數設定中，預設值 `/api/graphql` 不能更改。 只有不使用提供的GraphQL代理的高級設定才應更改此設定。
-
-- 啟用目錄UID支援 — 在商業後端GraphQL呼叫中啟用對UID的支援，而不是ID的支援。
+- GraphQL使用者端 — 選取已設定的GraphQL使用者端以進行商務後端通訊。 這通常應該保持在預設值。
+- 存放區檢視 — 存放區檢視識別碼。 如果為空，則使用預設存放區檢視。
+- GraphQL Proxy路徑 — AEM中的GraphQL Proxy用來將請求代理至商務後端GraphQL端點的URL路徑。
 
    >[!NOTE]
    >
-   >UID支援在Adobe Commerce2.4.2推出。僅當您的商業後端支援2.4.2版或更高版本的GraphQL架構時才啟用此功能。
+   >在大多數設定中，預設值 `/api/graphql` 不可變更。 只有不使用所提供的GraphQL Proxy的進階設定才應變更此設定。
 
-- 目錄根類別標識符 — 儲存目錄根的標識符（UID或ID）
+- 啟用目錄UID支援 — 在商務後端GraphQL呼叫中啟用UID而非ID支援。
+
+   >[!NOTE]
+   >
+   >Adobe Commerce 2.4.2匯入UID支援。只有在您的Commerce後端支援2.4.2版或更新版本的GraphQL結構描述時，才會啟用此功能。
+
+- 目錄根類別識別碼 — 商店目錄根的識別碼（UID或ID）
 
    >[!CAUTION]
    >
-   >從CIF核心元件2.0.0版開始，支援 `id` 已移除並替換為 `uid`。 如果項目使用CIF核心元件2.0.0版，則必須啟用目錄UID支援並使用有效的類別UID作為「目錄根類別標識符」。
+   >從CIF Core Components 2.0.0版開始，支援 `id` 已移除並取代為 `uid`. 如果您的專案使用CIF核心元件2.0.0版，您必須啟用目錄UID支援，並使用有效的類別UID作為「目錄根類別識別碼」。
 
-上面所示的配置可供參考。 項目應提供自己的配置。
+以上所示的設定僅供參考。 專案應提供自己的設定。
 
-有關使用多個站點結構並AEM結合不同商業目錄的更複雜的設定，請參閱 [Commerce多商店設定](configuring/multi-store-setup.md) 教程。
+如需使用多個AEM網站結構與不同商業目錄結合的更複雜設定，請參閱 [Commerce多商店設定](configuring/multi-store-setup.md) 教學課程。
 
 ## 其他資源 {#additional-resources}
 
 - [AEM 專案原型](https://github.com/adobe/aem-project-archetype)
-- [韋尼AEM亞引用儲存](https://github.com/adobe/aem-cif-guides-venia)
+- [AEM Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)
 - [Commerce多商店設定](configuring/multi-store-setup.md)

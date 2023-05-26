@@ -1,6 +1,6 @@
 ---
-title: 工作流參與
-description: 工作流通常包括要求人員在頁面或資產上執行活動的步驟。
+title: 工作流程參與率
+description: 工作流程通常包括需要人員在頁面或資產上執行活動的步驟。
 uuid: 15d56bcc-1e84-4cc0-8b71-7fb906cd7ff7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,269 +18,269 @@ ht-degree: 1%
 
 # 參與工作流程{#participating-in-workflows}
 
-工作流通常包括要求人員在頁面或資產上執行活動的步驟。 工作流選擇一個用戶或組以執行該活動，並為該人員或組分配一個工作項目。 用戶收到通知，然後可以採取相應的操作：
+工作流程通常包括需要人員在頁面或資產上執行活動的步驟。 工作流程會選取要執行活動的使用者或群組，並將工作專案指派給該人員或群組。 使用者會收到通知，然後可以採取適當的動作：
 
-* [查看通知](#notifications-of-available-workflow-actions)
+* [檢視通知](#notifications-of-available-workflow-actions)
 * [完成參與者步驟](#completing-a-participant-step)
 * [委派參與者步驟](#delegating-a-participant-step)
-* [對參與者步驟執行後退步驟](#performing-step-back-on-a-participant-step)
-* [開啟工作流項以查看詳細資訊（並採取操作）](#opening-a-workflow-item-to-view-details-and-take-actions)
-* [查看工作流負載（多個資源）](#viewing-the-workflow-payload-multiple-resources)
+* [對參與者步驟執行回退](#performing-step-back-on-a-participant-step)
+* [開啟工作流程專案以檢視詳細資訊（並執行動作）](#opening-a-workflow-item-to-view-details-and-take-actions)
+* [檢視工作流程裝載（多個資源）](#viewing-the-workflow-payload-multiple-resources)
 
-## 可用工作流操作的通知 {#notifications-of-available-workflow-actions}
+## 可用工作流程動作的通知 {#notifications-of-available-workflow-actions}
 
 當您被指派工作項目時(例如「核准內 **容**」)，會出現各種警報和/或通知：
 
-* 您 [通知](/help/sites-authoring/inbox.md) 指示符（工具欄）將遞增：
+* 您的 [通知](/help/sites-authoring/inbox.md) 指標（工具列）將遞增：
 
    ![](do-not-localize/wf-57.png)
 
-* 該項目將列在您的通知中 [收件箱](/help/sites-authoring/inbox.md):
+* 此專案將列在您的通知中 [收件匣](/help/sites-authoring/inbox.md)：
 
    ![wf-58](assets/wf-58.png)
 
-* 使用頁面編輯器時，狀態欄將顯示：
+* 使用頁面編輯器時，狀態列將顯示：
 
-   * 應用到頁面的工作流的名稱；例如請求激活。
-   * 當前用戶在工作流的當前步驟中可執行的操作；例如，「完成」(Complete)、「委託」(Delegate)、「查看詳細資訊」(View details)。
-   * 該頁面所受的工作流數。 您可以：
+   * 套用至頁面的工作流程名稱；例如「請求啟用」。
+   * 目前使用者在工作流程目前步驟中可用的任何動作；例如，完成、委派、檢視詳細資訊。
+   * 頁面須遵守的工作流程數量。 您可以：
 
-      * 使用左箭頭/右箭頭瀏覽各種工作流的狀態資訊。
-      * 按一下/點按實際數字開啟所有適用工作流的下拉清單，然後選擇要在狀態欄中顯示的工作流。
+      * 使用左/右箭頭，導覽各種工作流程的狀態資訊。
+      * 按一下/點選實際數字，以開啟所有適用工作流程的下拉式清單，然後選取您要顯示在狀態列中的工作流程。
 
    ![wf-59](assets/wf-59.png)
 
    >[!NOTE]
    >
-   >狀態欄僅對具有工作流權限的用戶可見；例如， `workflow-users` 組。
+   >狀態列僅對具有工作流程許可權的使用者可見；例如， `workflow-users` 群組。
    >
    >
-   >當當前用戶直接參與工作流的當前步驟時，將顯示操作。
+   >當目前使用者直接參與工作流程的目前步驟時，會顯示動作。
 
-* 當 **時間軸** 為資源開啟，將顯示工作流步驟。 按一下/點擊警報標語時，還會顯示可用操作：
+* 時間 **時間表** 已為資源開啟，將會顯示工作流程步驟。 當您按一下/點選警報橫幅時，也會顯示可用的動作：
 
-   ![螢幕抓拍_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
+   ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
 
 ### 完成參與者步驟 {#completing-a-participant-step}
 
-您可以完成項目，以允許工作流進入下一步。
+您可以完成專案以允許工作流程進行到下一個步驟。
 
-在此操作中，您可以指明：
+在此動作中，您可以指出：
 
-* **下一步**:下一步，可以從提供的清單中進行選擇
-* **注釋**:如果需要
+* **下一步**：下一個要採取的步驟；您可以從提供的清單中選取
+* **註解**：如有需要
 
-您可以從以下任一步驟完成參與者步驟：
+您可以透過下列任一方式完成參與者步驟：
 
-* [收件箱](#completing-a-participant-step-inbox)
+* [收件匣](#completing-a-participant-step-inbox)
 * [頁面編輯器](#completing-a-participant-step-page-editor)
 * [時間軸](#completing-a-participant-step-timeline)
-* 何時 [開啟工作流項以查看詳細資訊](#opening-a-workflow-item-to-view-details-and-take-actions)。
+* 時間 [開啟工作流程專案以檢視詳細資訊](#opening-a-workflow-item-to-view-details-and-take-actions).
 
-#### 完成參與者步驟 — 收件箱 {#completing-a-participant-step-inbox}
+#### 完成參與者步驟 — 收件匣 {#completing-a-participant-step-inbox}
 
-請按下列步驟完成工作項：
+使用以下程式完成工作專案：
 
-1. 開啟 **[收件箱AEM](/help/sites-authoring/inbox.md)**。
-1. 選擇要對其執行操作的工作流項（點擊/按一下縮略圖）。
-1. 選擇 **完成** 的子菜單。
-1. 的 **完成工作項** 對話框。 選擇 **下一步** 從下拉選擇器添加 **注釋** 的子菜單。
-1. 使用 **確定** 完成步驟(或 **取消** 中止操作)。
+1. 開啟 **[AEM收件匣](/help/sites-authoring/inbox.md)**.
+1. 選取您要對其執行動作的工作流程專案（點選/按一下縮圖）。
+1. 選取 **完成** （從工具列）。
+1. 此 **完成工作專案** 對話方塊將會開啟。 選取 **下一步** 從下拉式選擇器中新增 **註解** 如有需要。
+1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
 
 #### 完成參與者步驟 — 頁面編輯器 {#completing-a-participant-step-page-editor}
 
-請按下列步驟完成工作項：
+使用以下程式完成工作專案：
 
-1. 開啟 [編輯頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
-1. 選擇 **完成** 的下界。
-1. 的 **完成工作項** 對話框。 選擇 **下一步** 從下拉選擇器添加 **注釋** 的子菜單。
-1. 使用 **確定** 完成步驟(或 **取消** 中止操作)。
+1. 開啟 [要編輯的頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
+1. 選取 **完成** 從頂端的狀態列取得。
+1. 此 **完成工作專案** 對話方塊將會開啟。 選取 **下一步** 從下拉式選擇器中新增 **註解** 如有需要。
+1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
 
 #### 完成參與者步驟 — 時間表 {#completing-a-participant-step-timeline}
 
-您還可以使用時間線完成並推進步驟：
+您也可以使用時間表來完成並推進步驟：
 
-1. 選擇所需頁面並開啟 **時間軸** （開啟） **時間軸** 並選擇頁面):
+1. 選取所需頁面並開啟 **時間表** (或開啟 **時間表** 並選取頁面)：
 
-   ![螢幕抓拍_2019-03-05at120744](assets/screen-shot_2019-03-05at120744.png)
+   ![screen-shot_2019-03-05at120744](assets/screen-shot_2019-03-05at120744.png)
 
-1. 按一下/點擊警報標語以顯示可用操作。 選擇 **先進**:
+1. 按一下/點選警報橫幅以顯示可用動作。 選取 **前進**：
 
    ![screen-shot_2019-03-05at120453-1](assets/screen-shot_2019-03-05at120453-1.png)
 
-1. 根據工作流，您可以選擇下一步：
+1. 根據工作流程，您可以選取下一個步驟：
 
-   ![螢幕抓拍_2019-03-05at120905](assets/screen-shot_2019-03-05at120905.png)
+   ![screen-shot_2019-03-05at120905](assets/screen-shot_2019-03-05at120905.png)
 
-1. 選擇 **先進** 確認操作。
+1. 選取 **前進** 以確認動作。
 
 ### 委派參與者步驟 {#delegating-a-participant-step}
 
-如果已為您分配了步驟，但由於任何原因您無法採取操作，則您可以將該步驟委派給其他用戶或組。
+如果步驟已指派給您，但由於任何原因您無法採取行動，則您可以將該步驟委派給其他使用者或群組。
 
-可用於委派的用戶取決於為誰分配了工作項：
+可委派的使用者取決於工作專案的指派者：
 
-* 如果工作項已分配給組，則組成員可用。
-* 如果工作項已分配給組，然後委託給用戶，則組成員和組可用。
-* 如果工作項已分配給單個用戶，則無法委派該工作項。
+* 如果工作專案已指派給群組，則群組成員可供使用。
+* 如果將工作專案指派給群組，然後委派給使用者，則可以使用群組和群組。
+* 如果工作專案指派給單一使用者，則無法委派工作專案。
 
-在此操作中，您可以指明：
+在此動作中，您可以指出：
 
-* **用戶**:要委託給的用戶；可以從提供的清單中進行選擇
-* **注釋**:如果需要
+* **使用者**：您要委派給的使用者；您可以從提供的清單中選取
+* **註解**：如有需要
 
-您可以從以下任一位置委託參與者步驟：
+您可以從下列任一項中委派參與者步驟：
 
-* [收件箱](#delegating-a-participant-step-inbox)
+* [收件匣](#delegating-a-participant-step-inbox)
 * [頁面編輯器](#delegating-a-participant-step-page-editor)
 * [時間軸](#delegating-a-participant-step-timeline)
-* 何時 [開啟工作流項以查看詳細資訊](#opening-a-workflow-item-to-view-details-and-take-actions)。
+* 時間 [開啟工作流程專案以檢視詳細資訊](#opening-a-workflow-item-to-view-details-and-take-actions).
 
-#### 委派參與者步驟 — 收件箱 {#delegating-a-participant-step-inbox}
+#### 委派參與者步驟 — 收件匣 {#delegating-a-participant-step-inbox}
 
-請按下列步驟委派工作項：
+使用下列程式來委派工作專案：
 
-1. 開啟 **[收件箱AEM](/help/sites-authoring/inbox.md)**。
-1. 選擇要對其執行操作的工作流項（點擊/按一下縮略圖）。
-1. 選擇 **委託** 的子菜單。
-1. 對話框將開啟。 指定 **用戶** 從下拉選擇器（這也可以是組）中添加 **注釋** 的子菜單。
-1. 使用 **確定** 完成步驟(或 **取消** 中止操作)。
+1. 開啟 **[AEM收件匣](/help/sites-authoring/inbox.md)**.
+1. 選取您要對其執行動作的工作流程專案（點選/按一下縮圖）。
+1. 選取 **委派** （從工具列）。
+1. 對話方塊將會開啟。 指定 **使用者** 從下拉式選擇器（也可以是群組）中新增 **註解** 如有需要。
+1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
 
 #### 委派參與者步驟 — 頁面編輯器 {#delegating-a-participant-step-page-editor}
 
-請按下列步驟委派工作項：
+使用下列程式來委派工作專案：
 
-1. 開啟 [編輯頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
-1. 選擇 **委託** 的下界。
-1. 對話框將開啟。 指定 **用戶** 從下拉選擇器（這也可以是組）中添加 **注釋** 的子菜單。
-1. 使用 **確定** 完成步驟(或 **取消** 中止操作)。
+1. 開啟 [要編輯的頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
+1. 選取 **委派** 從頂端的狀態列取得。
+1. 對話方塊將會開啟。 指定 **使用者** 從下拉式選擇器（也可以是群組）中新增 **註解** 如有需要。
+1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
 
-#### 委託參與者步驟 — 時間表 {#delegating-a-participant-step-timeline}
+#### 委派參與者步驟 — 時間表 {#delegating-a-participant-step-timeline}
 
-您還可以使用時間線來委派和/或分配步驟：
+您也可以使用時間表來委派及/或指派步驟：
 
-1. 選擇所需頁面並開啟 **時間軸** （開啟） **時間軸** 並選擇頁面)。
-1. 按一下/點擊警報標語以顯示可用操作。 選擇 **更改受分配人**:
+1. 選取所需頁面並開啟 **時間表** (或開啟 **時間表** 並選取頁面)。
+1. 按一下/點選警報橫幅以顯示可用動作。 選取 **變更被指定者**：
 
    ![screen-shot_2019-03-05at120453-2](assets/screen-shot_2019-03-05at120453-2.png)
 
-1. 指定新的受分配人：
+1. 指定新的被指定者：
 
-   ![螢幕抓拍_2019-03-05at121025](assets/screen-shot_2019-03-05at121025.png)
+   ![screen-shot_2019-03-05at121025](assets/screen-shot_2019-03-05at121025.png)
 
-1. 選擇 **分配** 確認操作。
+1. 選取 **指派** 以確認動作。
 
-### 在參與者步驟上執行後退步驟 {#performing-step-back-on-a-participant-step}
+### 對參與者步驟執行後退 {#performing-step-back-on-a-participant-step}
 
-如果您發現需要重複某個步驟或一系列步驟，則可以退一步。 這允許您選擇在工作流中較早發生的步驟進行重新處理。 工作流將返回到您指定的步驟，然後從那裡繼續。
+如果您發現某個步驟或一系列步驟需要重複，您可以後退。 這可讓您選取工作流程中先前發生的步驟，以便重新處理。 工作流程會回到您指定的步驟，然後從那裡繼續進行。
 
-在此操作中，您可以指明：
+在此動作中，您可以指出：
 
-* **上一步**:返回的步驟；可以從提供的清單中進行選擇
-* **注釋**:如果需要
+* **上一步**：要傳回到的步驟；您可以從提供的清單中選取
+* **註解**：如有需要
 
-您可以從以下任一步驟對參與者步驟執行後退：
+您可以在參與者步驟上執行下列任一項步驟執行回退：
 
-* [收件箱](#performing-step-back-on-a-participant-step-inbox)
+* [收件匣](#performing-step-back-on-a-participant-step-inbox)
 * [頁面編輯器](#performing-step-back-on-a-participant-step-page-editor)
 * [時間軸](#performing-step-back-on-a-participant-step-timeline)
-* 何時 [開啟工作流項以查看詳細資訊](#opening-a-workflow-item-to-view-details-and-take-actions)。
+* 時間 [開啟工作流程專案以檢視詳細資訊](#opening-a-workflow-item-to-view-details-and-take-actions).
 
-#### 在參與者步驟上執行後退步驟 — 收件箱 {#performing-step-back-on-a-participant-step-inbox}
+#### 對參與者步驟執行後退 — 收件匣 {#performing-step-back-on-a-participant-step-inbox}
 
-請按下列步驟後退：
+請使用下列程式來後退：
 
-1. 開啟 **[收件箱AEM](/help/sites-authoring/inbox.md)**。
-1. 選擇要對其執行操作的工作流項（點擊/按一下縮略圖）。
-1. 選擇 **後退** 的子菜單。
+1. 開啟 **[AEM收件匣](/help/sites-authoring/inbox.md)**.
+1. 選取您要對其執行動作的工作流程專案（點選/按一下縮圖）。
+1. 選取 **後退** 以開啟對話方塊。
 
-1. 指定 **上一步** 並添加 **注釋** 的子菜單。
-1. 使用 **確定** 完成步驟(或 **取消** 中止操作)。
+1. 指定 **上一步** 並新增 **註解** 如有需要。
+1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
 
-#### 在參與者步驟 — 頁面編輯器上執行後退步驟 {#performing-step-back-on-a-participant-step-page-editor}
+#### 對參與者步驟執行回退 — 頁面編輯器 {#performing-step-back-on-a-participant-step-page-editor}
 
-請按下列步驟後退：
+請使用下列程式來後退：
 
-1. 開啟 [編輯頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
-1. 選擇 **後退** 的下界。
-1. 指定 **上一步** 並添加 **注釋** 的子菜單。
-1. 使用 **確定** 完成步驟(或 **取消** 中止操作)。
+1. 開啟 [要編輯的頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
+1. 選取 **後退** 從頂端的狀態列取得。
+1. 指定 **上一步** 並新增 **註解** 如有需要。
+1. 使用 **確定** 完成步驟(或 **取消** 以中止動作)。
 
-#### 對參與者步驟執行後退步驟 — 時間軸 {#performing-step-back-on-a-participant-step-timeline}
+#### 對參與者步驟執行後退 — 時間軸 {#performing-step-back-on-a-participant-step-timeline}
 
-還可以使用時間軸將（步驟）回滾到上一步：
+您也可以使用時間軸來回滾（回退）到上一步：
 
-1. 選擇所需頁面並開啟 **時間軸** （開啟） **時間軸** 並選擇頁面)。
-1. 按一下/點擊警報標語以顯示可用操作。 選擇 **回滾**:
+1. 選取所需頁面並開啟 **時間表** (或開啟 **時間表** 並選取頁面)。
+1. 按一下/點選警報橫幅以顯示可用動作。 選取 **回覆**：
 
    ![screen-shot_2019-03-05at121131](assets/screen-shot_2019-03-05at121131.png)
 
-1. 指定工作流應返回到的步驟：
+1. 指定工作流程應傳回到的步驟：
 
    ![screen-shot_2019-03-05at121158](assets/screen-shot_2019-03-05at121158.png)
 
-1. 選擇 **回滾** 確認操作。
+1. 選取 **回覆** 以確認動作。
 
-### 開啟工作流項以查看詳細資訊（並採取操作） {#opening-a-workflow-item-to-view-details-and-take-actions}
+### 開啟工作流程專案以檢視詳細資訊（並執行動作） {#opening-a-workflow-item-to-view-details-and-take-actions}
 
-查看工作流工作項的詳細資訊並採取相應的操作。
+檢視工作流程工作專案的詳細資訊，並採取適當的動作。
 
-工作流詳細資訊顯示在頁籤中，工具欄中提供了相應的操作：
+工作流程詳細資訊會顯示在標籤中，而工具列中會顯示適當的動作：
 
-* **工件** 頁籤：
+* **工作專案** 標籤：
 
    ![wf-72](assets/wf-72.png)
 
-* **工作流資訊** 頁籤：
+* **工作流程資訊** 標籤：
 
    ![wf-73](assets/wf-73.png)
 
-   如果 [工作流階段](/help/sites-developing/workflows.md#workflow-stages) 已為模型配置，您可以根據以下內容查看進度：
+   若 [工作流程階段](/help/sites-developing/workflows.md#workflow-stages) 已經為模型配置了，您可以根據以下內容檢視進度：
 
    ![wf-107](assets/wf-107.png)
 
-* **注釋** 頁籤：
+* **註解** 標籤：
 
    ![wf-75](assets/wf-75.png)
 
-您可以從以下任一位置開啟工作項詳細資訊：
+您可以透過下列任一方式開啟工作專案詳細資料：
 
-* [收件箱](#performing-step-back-on-a-participant-step-inbox)
+* [收件匣](#performing-step-back-on-a-participant-step-inbox)
 * [頁面編輯器](#performing-step-back-on-a-participant-step-page-editor)
 
-#### 開啟工作流詳細資訊 — 收件箱 {#opening-workflow-details-inbox}
+#### 開啟工作流程詳細資料 — 收件匣 {#opening-workflow-details-inbox}
 
-要開啟工作流項並查看詳細資訊，請執行以下操作：
+若要開啟工作流程專案並檢視明細，請執行下列步驟：
 
-1. 開啟 **[收件箱AEM](/help/sites-authoring/inbox.md)**。
-1. 選擇要對其執行操作的工作流項（點擊/按一下縮略圖）。
-1. 選擇 **開啟** 的子菜單。
+1. 開啟 **[AEM收件匣](/help/sites-authoring/inbox.md)**.
+1. 選取您要對其執行動作的工作流程專案（點選/按一下縮圖）。
+1. 選取 **開啟** 以開啟資訊標籤。
 
-1. 如果需要，請選擇相應的操作，提供任何詳細資訊並與 **確定** 或 **取消**)。
-1. 使用 **保存** 或 **取消** 按鈕。
+1. 如有需要，請選取適當的動作、提供任何詳細資訊，然後確認 **確定** (或 **取消**)。
+1. 使用 **儲存** 或 **取消** 以結束。
 
-#### 開啟工作流詳細資訊 — 頁面編輯器 {#opening-workflow-details-page-editor}
+#### 開啟工作流程詳細資料 — 頁面編輯器 {#opening-workflow-details-page-editor}
 
-要開啟工作流項並查看詳細資訊，請執行以下操作：
+若要開啟工作流程專案並檢視明細，請執行下列步驟：
 
-1. 開啟 [編輯頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
-1. 選擇 **查看詳細資訊** 的子菜單。
+1. 開啟 [要編輯的頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
+1. 選取 **檢視詳細資料** 以開啟資訊標籤。
 
-1. 如果需要，請選擇相應的操作，提供任何詳細資訊並與 **確定** 或 **取消**)。
-1. 使用 **保存** 或 **取消** 按鈕。
+1. 如有需要，請選取適當的動作、提供任何詳細資訊，然後確認 **確定** (或 **取消**)。
+1. 使用 **儲存** 或 **取消** 以結束。
 
-### 查看工作流負載（多個資源） {#viewing-the-workflow-payload-multiple-resources}
+### 檢視工作流程裝載（多個資源） {#viewing-the-workflow-payload-multiple-resources}
 
-您可以查看與工作流實例關聯的負載的詳細資訊。 最初顯示包中的資源，然後您可以細化以顯示各個頁面。
+您可以檢視與工作流程例項相關聯的裝載詳細資料。 一開始會顯示封裝中的資源，然後您可以向下展開以顯示個別頁面。
 
-要查看工作流實例的負載和資源，請執行以下操作：
+若要檢視工作流程例項的裝載和資源：
 
-1. 開啟 **[收件箱AEM](/help/sites-authoring/inbox.md)**。
-1. 選擇要對其執行操作的工作流項（點擊/按一下縮略圖）。
-1. 選擇 **查看負載** 對話框。
+1. 開啟 **[AEM收件匣](/help/sites-authoring/inbox.md)**.
+1. 選取您要對其執行動作的工作流程專案（點選/按一下縮圖）。
+1. 選取 **檢視裝載** 以開啟對話方塊。
 
-   由於工作流包只是指向儲存庫中路徑的指針的集合，因此您可以在此處添加/刪除/修改條目，以調整工作流包引用的內容。 使用 **資源定義** 元件以添加新條目。
+   由於Workflow封裝只是存放庫內路徑的指標集合，您可以在此處新增/移除/修改專案，以調整Workflow封裝參照的內容。 使用 **資源定義** 元件以新增專案。
 
    ![wf-78](assets/wf-78.png)
 
-1. 這些連結可用於開啟各個頁面。
+1. 這些連結可用來開啟個別頁面。

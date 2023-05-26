@@ -1,6 +1,6 @@
 ---
 title: 使用 Dynamic Media
-description: 瞭解如何使用Dynamic Media來在Web、移動和社交站點上為消費提供資產。
+description: 瞭解如何使用Dynamic Media傳送資產，以便在網路、行動裝置和社交網站上使用。
 uuid: 4dc0f436-d20e-4e8b-aeff-5515380fa44d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -19,19 +19,19 @@ ht-degree: 9%
 
 # 使用 Dynamic Media {#working-with-dynamic-media}
 
-[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 幫助按需提供豐富的視覺商品銷售和營銷資產，並自動擴展以在Web、移動和社交網站上消費。 使用一組主要源資產，Dynamic Media通過其全球、可擴展、效能優化的網路即時生成並提供多種豐富內容的變體。
+[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 協助提供豐富的視覺化銷售和行銷資產（隨選提供），可自動調整規模，以因應網路、行動裝置和社交網站的使用需求。 Dynamic Media使用一組主要來源資產，透過其全球性、可擴充、效能最佳化的網路，即時產生並傳送多種多樣的豐富內容。
 
-Dynamic Media提供互動式觀看體驗，包括縮放、360度旋轉和視頻。 Dynamic Media獨一無二地納入了Adobe Experience Manager數字資產管理（資產）解決方案的工作流程，以簡化和簡化數字市場活動管理流程。
+Dynamic Media提供互動式檢視體驗，包括縮放、360度旋轉和視訊。 Dynamic Media以獨特方式整合Adobe Experience Manager數位資產管理(Assets)解決方案的工作流程，以簡化及簡化數位行銷活動管理流程。
 
 <!-- >ARTICLE IS MISSING. GIVES 404 [!NOTE]
 >
 >A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
 
-## 用Dynamic Media做什麼 {#what-you-can-do-with-dynamic-media}
+## 您可以使用Dynamic Media做什麼 {#what-you-can-do-with-dynamic-media}
 
-Dynamic Media允許您在發佈資產之前管理資產。 如何處理一般資產，將在 [使用數字資產](manage-assets.md)。 一般主題包括上載，下載，編輯和發佈資產；查看和編輯屬性，以及搜索資產。
+Dynamic Media可讓您在發佈資產之前先管理資產。 中會詳細說明如何使用一般資產 [使用數位資產](manage-assets.md). 一般主題包括上傳、下載、編輯和發佈資產；檢視和編輯屬性，以及搜尋資產。
 
-僅Dynamic Media功能包括：
+僅限Dynamic Media的功能包括下列專案：
 
 * [輪播橫幅](carousel-banners.md)
 * [影像集](image-sets.md)
@@ -46,46 +46,46 @@ Dynamic Media允許您在發佈資產之前管理資產。 如何處理一般資
 * [管理資產](managing-assets.md)
 * [使用 Quickview 建立自訂快顯視窗](custom-pop-ups.md)
 
-另請參閱 [設定Dynamic Media](administering-dynamic-media.md)。
+另請參閱 [設定Dynamic Media](administering-dynamic-media.md).
 
 >[!NOTE]
 >
->要瞭解使用Dynamic Media與將Dynamic Media Classic與Adobe Experience Manager整合在一起的區別，請參見 [Dynamic Media Classic一體化與Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。
+>若要瞭解使用Dynamic Media與將Dynamic Media Classic與Adobe Experience Manager整合之間的差異，請參閱 [Dynamic Media Classic整合與Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media).
 
-## Dynamic Media啟用與Dynamic Media禁用 {#dynamic-media-on-versus-dynamic-media-off}
+## 啟用Dynamic Media與停用Dynamic Media {#dynamic-media-on-versus-dynamic-media-off}
 
-您可以通過以下特徵來判斷是否啟用（開啟）Dynamic Media:
+您可以透過下列特性來判斷是否已啟用（開啟） Dynamic Media：
 
-* 在下載或預覽資產時，動態格式副本可用。
-* 映像集、旋轉集、混合媒體集可用。
-* 建立PTIFF格式副本。
+* 下載或預覽資產時，可使用動態轉譯。
+* 影像集、迴轉集、混合媒體集可供使用。
+* 已建立PTIFF轉譯。
 
-選擇影像資產時，資產的視圖與Dynamic Media不同 [啟用](config-dynamic.md#enabling-dynamic-media)。 Dynamic Media用的是點播HTML5觀眾。
+當您選取影像資產時，資產的檢視會與Dynamic Media不同 [已啟用](config-dynamic.md#enabling-dynamic-media). Dynamic Media使用隨選HTML5檢視器。
 
-### 動態格式副本 {#dynamic-renditions}
+### 動態轉譯 {#dynamic-renditions}
 
-動態格式副本（如影像和查看器預設）（下） **[!UICONTROL 動態]**)時可用。
+動態轉譯，例如影像和檢視器預設集(在 **[!UICONTROL 動態]**)在啟用Dynamic Media時可供使用。
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
 ### 影像集、旋轉集、混合媒體集 {#image-sets-spins-sets-mixed-media-sets}
 
-如果啟用了Dynamic Media，則映像集、旋轉集和混合媒體集可用。
+如果啟用Dynamic Media，則可使用影像集、迴轉集和混合媒體集。
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
-### PTIFF格式副本 {#ptiff-renditions}
+### PTIFF轉譯 {#ptiff-renditions}
 
-Dynamic Media資產包括 `pyramid.tiffs`。
+Dynamic Media啟用的資產包括 `pyramid.tiffs`.
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
-### 資產視圖更改 {#asset-views-change}
+### 資產檢視變更 {#asset-views-change}
 
-啟用Dynamic Media後，可通過按一下 `+` 和 `-` 按鈕。 也可按一下/點擊以放大特定區域。 還原將使您進入原始版本，您可以通過按一下對角線箭頭使影像全屏。 Dynamic Media啟用如下：
+啟用Dynamic Media後，您可以按一下 `+` 和 `-` 按鈕。 您也可以按一下/點選以放大特定區域。 「回覆」會將您帶至原始版本，您可以按一下對角線箭頭，使影像變成全熒幕。 已啟用Dynamic Media看起來像這樣：
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 
-禁用Dynamic Media後，可放大和縮小並恢復為原始大小：
+停用Dynamic Media後，您可以放大和縮小並還原為原始大小：
 
 ![chlimage_1-362](assets/chlimage_1-362.png)

@@ -1,7 +1,7 @@
 ---
-title: 自定義草稿和提交資料服務
+title: 自訂草稿和提交資料服務
 seo-title: Customizing Draft and Submission data services
-description: AEM Forms預設情況下，在「發佈」實例的預設節點中儲存草稿和提交的自適應表單。 但是，您可以配置AEM Forms的草稿和提交資料服務，以自定義草稿和提交的自適應表單的儲存。
+description: AEM Forms預設會將草稿和提交的最適化表單儲存在發佈執行個體的預設節點中。 不過，您可以設定AEM Forms的草稿和提交資料服務，以自訂草稿和提交的最適化表單的儲存。
 seo-description: AEM Forms, by default, stores draft and submitted adaptive forms in a default node on the Publish instance. However, you can configure the draft and submission data services of AEM Forms to customize the storage of draft and submitted adaptive forms.
 uuid: c3ec1708-3b11-4142-93f0-1cffb6643f34
 content-type: reference
@@ -16,30 +16,30 @@ ht-degree: 0%
 
 ---
 
-# 自定義草稿和提交資料服務 {#customizing-draft-and-submission-data-services}
+# 自訂草稿和提交資料服務 {#customizing-draft-and-submission-data-services}
 
 ## 概觀 {#overview}
 
-AEM Forms允許用戶將自適應表單另存為草稿。 草稿功能為用戶提供了維護正在進行表單的選項。 用戶隨後可以從任何設備完成並隨時提交表格。
+AEM Forms可讓使用者將最適化表單儲存為草稿。 草稿功能為使用者提供了維護工作進行中表單的選項。 然後，使用者可以隨時從任何裝置完成並提交表單。
 
-預設情況下，AEM Forms將與草稿和提交關聯的用戶資料儲存在 `/content/forms/fp` 的下界。
+根據預設，AEM Forms會將與草稿和提交相關聯的使用者資料儲存在中的發佈執行個體上 `/content/forms/fp` 節點。
 
-但是，AEM Forms門戶元件提供資料服務，允許您定制為草稿和提交儲存用戶資料的實現。 例如，您可以將資料儲存在組織中當前實施的資料儲存中。
+不過，AEM Forms入口網站元件提供資料服務，可讓您自訂儲存草稿和提交之使用者資料的實作。 例如，您可以將資料儲存在目前實作於貴組織的資料存放區中。
 
-要自定義用戶資料的儲存，您需要 [草稿資料](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p) 和 [提交資料](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p) 服務。
+若要自訂使用者資料的儲存，您必須實作 [草稿資料](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p) 和 [提交資料](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p) 服務。
 
 ## 必備條件 {#prerequisites}
 
-* 啟用 [Forms門戶元件](/help/forms/using/enabling-forms-portal-components.md)
-* 建立 [表單門戶頁](/help/forms/using/creating-form-portal-page.md)
-* 啟用 [表單門戶的自適應表單](/help/forms/using/draft-submission-component.md)
-* 學習 [定制儲存的實施詳細資訊](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* 啟用 [Forms入口網站元件](/help/forms/using/enabling-forms-portal-components.md)
+* 建立 [forms portal頁面](/help/forms/using/creating-form-portal-page.md)
+* 啟用 [適用於forms portal的最適化表單](/help/forms/using/draft-submission-component.md)
+* 瞭解 [自訂儲存的實作詳細資料](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## 草稿資料服務 {#draft-data-service}
 
-要自定義用戶草稿資料的儲存，您需要為 `DraftAFDataService` 。
+若要自訂使用者草稿資料的儲存，您必須提供的所有方法的實作， `DraftAFDataService` 介面。
 
-在介面的以下代碼示例中提供了方法及其參數的說明：
+介面的下列程式碼範例提供方法及其引數的說明：
 
 ```java
 public interface DraftAFDataService {
@@ -84,9 +84,9 @@ public interface DraftAFDataService {
 
 ## 提交資料服務 {#submission-data-service}
 
-要自定義用戶提交資料的儲存，您需要提供對 `SubmittedAFDataService` 。
+若要自訂使用者提交資料的儲存，您必須提供的所有方法的實作， `SubmittedAFDataService` 介面。
 
-在介面的以下代碼示例中提供了方法及其參數的說明：
+介面的下列程式碼範例提供方法及其引數的說明：
 
 ```java
 public interface SubmittedAFDataService {

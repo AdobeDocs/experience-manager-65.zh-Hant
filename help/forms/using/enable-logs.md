@@ -1,7 +1,7 @@
 ---
-title: 啟用HTML5窗體的日誌記錄
+title: 啟用HTML5表單的記錄
 seo-title: Enable logging for HTML5 forms
-description: 記錄器實用程式啟用表單的日誌記錄並幫助您調試表單相關問題。
+description: 記錄器公用程式會啟用表單的記錄，並協助您偵錯表單相關問題。
 seo-description: The logger utility enables logging for a form and helps you debug form-related issues.
 uuid: 322306ba-8ad7-463d-8a9d-4cea5a0c4b55
 contentOwner: robhagat
@@ -19,69 +19,69 @@ ht-degree: 5%
 
 ---
 
-# 啟用HTML5窗體的日誌記錄{#enable-logging-for-html-forms}
+# 啟用HTML5表單的記錄{#enable-logging-for-html-forms}
 
-可以配置記錄器實用程式以開始為HTML5表單建立日誌。 記錄器實用程式具有各種級別，您可以根據要求設定一個級別。 HTML5表單包含伺服器和客戶端元件。 可以為這兩個元件配置日誌。
+您可以設定記錄器公用程式，以開始建立HTML5表單的記錄。 記錄器公用程式有各種等級，您可以根據需求設定等級。 HTML5表單具有伺服器和使用者端元件。 您可以設定這兩個元件的記錄。
 
-## 配置伺服器端日誌 {#configuring-server-side-logging}
+## 設定伺服器端記錄 {#configuring-server-side-logging}
 
-執行以下步驟來配置伺服器端日誌：
+執行以下步驟來設定伺服器端記錄檔：
 
-1. 前往 `https://'[server]:[port]'/system/console/configMgr`. 查找並開啟 *Paxe Sling日誌記錄記錄器配置* 的雙曲餘切值。 出現一個對話框：
+1. 前往 `https://'[server]:[port]'/system/console/configMgr`. 找到並開啟 *Apace Sling記錄記錄器設定* 選項。 對話方塊隨即出現：
 
-   ![ 「快速Sling日誌記錄器配置選項」對話框](assets/logconfig.png)
+   ![ Apace Sling記錄記錄器組態選項對話方塊](assets/logconfig.png)
 
-   Paxe Sling日誌記錄記錄器配置選項
+   Apace Sling記錄記錄器設定選項
 
-1. 更改 **日誌級別** 至 **調試**。
+1. 變更 **記錄層級** 至 **偵錯**.
 
-1. 指定的名稱和路徑 **日誌檔案**。
+1. 指定下列專案的名稱和路徑： **記錄檔**.
 
    >[!NOTE]
    >
-   >要在HTML5表單日誌目錄中生成日誌，請在檔案名前添加……/logs/。
+   >若要在HTML5表單記錄目錄中產生記錄，請在檔案名稱前新增……/logs/ 。
 
-1. 更改 **記錄器** 至 **HTMLFormsPerfLogger**。 按一下「**儲存**」。
+1. 變更 **Logger** 至 **HTMLFormsPerfLogger**. 按一下「**儲存**」。
 
-## 配置客戶端日誌 {#configuring-client-logging}
+## 設定使用者端記錄 {#configuring-client-logging}
 
-可以使用以下方法在HTML5窗體中啟用客戶端登錄：
+您可以使用下列方法在HTML5表單中啟用使用者端記錄：
 
-* 使用名為的請求參數 `log`
+* 使用名為的請求引數 `log`
 * 使用CQ Configuration Manager
 
-### 使用請求參數啟用日誌記錄 {#enabling-logging-using-request-parameter}
+### 使用請求引數啟用記錄 {#enabling-logging-using-request-parameter}
 
-使用此方法，可以為特定請求生成日誌。 請求參數的名稱為 `log`。 日誌URL如下所示：
+使用此方法，您可以產生特定請求的記錄。 請求引數的名稱為 `log`. 記錄URL如下：
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
-日誌配置由日誌級別和記錄器類別組成。
+記錄設定由記錄層級和記錄器類別組成。
 
-#### 日誌目標 {#log-destination}
+#### 記錄目的地 {#log-destination}
 
 <table>
  <tbody>
   <tr>
-   <th><strong>日誌目標</strong></th>
+   <th><strong>記錄目的地</strong></th>
    <th><strong>說明</strong></th>
   </tr>
   <tr>
    <td>1</td>
-   <td>日誌被定向到瀏覽器 <strong>控制台</strong></td>
+   <td>記錄檔會導向至瀏覽器 <strong>主控台</strong></td>
   </tr>
   <tr>
    <td>2</td>
-   <td>日誌在客戶端上的JavaScript對象中收集，可以發佈到 <strong>伺服器</strong> </td>
+   <td>記錄會收集到使用者端的JavaScript物件中，並可張貼至 <strong>伺服器</strong> </td>
   </tr>
   <tr>
    <td>3</td>
-   <td>上述兩項購股權<br /> </td>
+   <td>上述兩個選項<br /> </td>
   </tr>
  </tbody>
 </table>
 
-#### 日誌級別 {#log-levels}
+#### 記錄層級 {#log-levels}
 
 <table>
  <tbody>
@@ -111,7 +111,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td>5</td>
-   <td>調試<br type="_moz" /> </td>
+   <td>偵錯<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>6</td>
@@ -129,27 +129,27 @@ ht-degree: 5%
 <table>
  <tbody>
   <tr>
-   <th>日誌類別</th>
+   <th>記錄類別</th>
    <th>說明</th>
   </tr>
   <tr>
    <td>a</td>
-   <td>xfa（編寫與引擎相關的日誌指令碼）</td>
+   <td>xfa （Scripting Engine相關記錄）</td>
   </tr>
   <tr>
    <td>b</td>
-   <td>xfaView（佈局引擎相關日誌）<br type="_moz" /> </td>
+   <td>xfaView （版面引擎相關記錄）<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>c</td>
-   <td>xfaPerf（與效能相關的日誌）<br type="_moz" /> </td>
+   <td>xfaPerf （效能相關記錄）<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
 
-#### 日誌配置 {#log-configuration}
+#### 記錄設定 {#log-configuration}
 
-在日誌URL中，日誌配置查詢字串參數的定義如下：
+在記錄URL中，記錄組態查詢字串引數的定義如下：
 
 `{destination}-{a level}-{b level}-{c level}`
 
@@ -158,54 +158,54 @@ ht-degree: 5%
 <table>
  <tbody>
   <tr>
-   <th>日誌配置</th>
+   <th>記錄設定</th>
    <th>說明</th>
   </tr>
   <tr>
    <td>2-a4-b5-c6<br type="_moz" /> </td>
-   <td>目標：伺服器<br /> xfa級別：資訊<br /> xfaView級別：調試<br /> xfaPerf級別：TRACE</td>
+   <td>目的地：伺服器<br /> xfa層級： INFO<br /> xfaView層級： DEBUG<br /> xfaPerf層級：TRACE</td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->每個日誌類別a(xfa)、b(xfaView)和c(xfaPerf)的預設日誌級別為2(ERROR)。 因此，對於日誌配置：2-b6，不同類別的日誌級別為：
->a(xfa):2（預設級別錯誤）
->b(xfaView):6(用戶指定的TRACE)
->a(xfaPerf):2（預設級別錯誤）
+>每個記錄類別a (xfa)、b (xfaView)和c (xfaPerf)的預設記錄層級為2 （錯誤）。 因此，對於記錄組態：2-b6，不同類別的記錄層級為：
+>a (xfa)：2 （預設層次錯誤）
+>b (xfaView)： 6 (使用者指定的TRACE)
+>a (xfaPerf)：2 （預設層級錯誤）
 
-### 使用Configuration Manager啟用日誌記錄 {#enabling-logging-using-configuration-manager}
+### 使用Configuration Manager啟用記錄 {#enabling-logging-using-configuration-manager}
 
-如果使用Configuration Manager啟用日誌記錄，則會為每個呈現請求生成日誌，直到再次禁用日誌記錄。
+如果您使用Configuration Manager來啟用記錄，則會為每個轉譯器請求產生記錄，直到再次停用記錄為止。
 
-1. 登錄到CQ Configuration Manager(位於 `https://'[server]:[port]'/system/console/configMgr` 並使用管理員憑據登錄。
-1. 搜索並按一下 **移動Forms配置**。
-1. 在「調試選項」文本框中，按上一節中所述輸入日誌配置，例如， **2-a4-b5-c6**
+1. 登入CQ組態管理員，位於 `https://'[server]:[port]'/system/console/configMgr` 並使用管理員憑證登入。
+1. 搜尋並按一下 **行動Forms設定**.
+1. 在「偵錯選項」文字方塊中，依照上一節所述輸入記錄組態，例如， **2-a4-b5-c6**
 
    ![表單設定](assets/forms_configuration.png)
 
    表單設定
 
-## 正在上載日誌 {#uploading-logs}
+## 正在上傳記錄檔 {#uploading-logs}
 
-如果目標設定為1，則所有客戶端指令碼日誌消息都會定向到控制台。 如果管理員需要這些日誌以及伺服器日誌，請將目標級別設定為2。 在此級別，所有日誌都收集在客戶端的JS對象中，如果表單呈現時使用預設配置檔案，則 **發送日誌** 按鈕 **突出顯示現有欄位** 按鈕 當用戶按一下該連結時，所有收集的日誌都會發佈到伺服器上，並記錄到伺服器上配置的錯誤日誌檔案中。
+如果目的地設為1，所有使用者端指令碼記錄訊息都會導向至主控台。 如果管理員需要這些記錄以及伺服器記錄，請將目的地層級設定為2。 在此層級，所有記錄都會收集到使用者端的JS物件中，如果表單以預設設定檔呈現，則 **傳送記錄檔** 按鈕出現在的左側 **反白顯示現有欄位** 按鈕。 當使用者按一下連結時，所有收集的記錄都會發佈到伺服器，並記錄到伺服器上設定的錯誤記錄檔中。
 
-預設情況下，所有資訊都會添加到/crx-repository/logs/目錄的error.log檔案中。
+依預設，所有資訊都會新增至/crx-repository/logs/目錄的error.log檔案中。
 
-要更改日誌檔案的位置和名稱：
+變更記錄檔的位置和名稱：
 
-1. 以管理員身份登錄到Configuration Manager。 Configuration Manager的預設URL為 `https://'[server]:[port]'/system/console/configMgr`。
-1. 按一下 **Apache Sling日誌記錄器配置**。 對話方塊隨即顯示。
+1. 以管理員身分登入Configuration Manager。 Configuration Manager的預設URL為 `https://'[server]:[port]'/system/console/configMgr`.
+1. 按一下 **Apache Sling記錄記錄器設定**. 對話方塊隨即顯示。
 
    ![logconfig-1](assets/logconfig-1.png)
 
-1. 更改 **日誌級別** 調試。
+1. 變更 **記錄層級** 以偵錯。
 
-1. 指定路徑和名稱 **日誌檔案**。
+1. 指定路徑和名稱 **記錄檔**.
 
    >[!NOTE]
    >
-   >要在保存其他日誌檔案的同一目錄中建立日誌，請指定……/logs/&lt;filename> 中。
+   >若要在保留其他記錄檔的同一個目錄中建立記錄檔，請指定……/logs/&lt;filename> 「記錄檔」屬性中。
 
-1. 更改 **記錄器** 至 **HTMLFormsPerfLogger** 按一下 **保存**。
+1. 變更 **Logger** 至 **HTMLFormsPerfLogger** 並按一下 **儲存**.

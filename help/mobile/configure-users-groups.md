@@ -1,6 +1,6 @@
 ---
-title: 配置用戶和組
-description: 按照此頁瞭解用戶角色以及如何配置用戶和組以支援您的移動應用程式的創作和管理。
+title: 設定使用者和使用者群組
+description: 請詳閱本頁面，瞭解使用者角色，以及如何設定使用者和群組，以支援行動應用程式的撰寫和管理。
 uuid: 55cea2b3-d7e6-4174-92b3-ee97e46b59c4
 contentOwner: User
 content-type: reference
@@ -15,112 +15,112 @@ ht-degree: 0%
 
 ---
 
-# 配置用戶和用戶組 {#configure-your-users-and-user-groups}
+# 設定您的使用者和使用者群組 {#configure-your-users-and-user-groups}
 
 >[!NOTE]
 >
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-本章介紹用戶角色以及如何配置用戶和組以支援您的移動應用程式的創作和管理。
+本章說明使用者角色，以及如何設定使用者和群組，以支援行動應用程式的製作和管理。
 
-## AEM Mobile應用程式用戶和組管理 {#aem-mobile-application-users-and-group-administration}
+## AEM Mobile應用程式使用者和群組管理 {#aem-mobile-application-users-and-group-administration}
 
-要幫助組織和管理應用程式的權AEM限模型，可使用以下兩個組：
+若要協助組織和管理AEM應用程式的許可權模式，可使用下列兩個群組：
 
-* 應用管理員的應用管理員
-* 應用程式作者
+* 適用於應用程式管理員的應用程式管理員
+* 應用程式作者的應用程式作者
 
-### AEM Mobile應用程式內容作者（應用程式作者組） {#aem-mobile-application-content-authors-app-author-group}
+### AEM Mobile應用程式內容作者（app-author群組） {#aem-mobile-application-content-authors-app-author-group}
 
-應用程式作者組的成員負責編寫移動應AEM用程式內容，包括頁面、文本、影像和視頻。
+應用程式作者群組的成員負責編寫AEM行動應用程式內容，包括頁面、文字、影像和視訊。
 
-#### 組配置 — 應用程式作者 {#group-configuration-app-authors}
+#### 群組設定 — 應用程式作者 {#group-configuration-app-authors}
 
-1. 建立名為「app-authors」的新用戶組：
+1. 建立名為「app-authors」的新使用者群組：
 
-   定位至「用戶」Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   導覽至「使用者」Admin Console： [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
-   在用戶組控制台中，選擇「+」按鈕以建立組。
+   從使用者群組主控台中，選取「+」按鈕以建立群組。
 
-   將此組的ID設定為「app-authors」，以表示它是特定類型的作者用戶組，特定於在中創作移動應AEM用。
+   將此群組的ID設為「app-authors」，表示這是特定型別的作者使用者群組，專用於在AEM內編寫行動應用程式。
 
-1. 將成員添加到組：作者
+1. 新增成員至群組：作者
 
    ![chlimage_1-18](assets/chlimage_1-18.png)
 
-   將應用程式作者添加到作者組
+   將應用程式作者新增至「作者」群組
 
-1. 現在，您已建立了應用程式作者用戶組，您可以通過 [用戶管理控制台](http://localhost:4502/libs/granite/security/content/useradmin.md)。
+1. 現在您已建立應用程式 — 作者使用者群組，您可以透過以下方式將個別團隊成員新增至此新群組： [使用者Admin console](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
-   編輯用戶組
+   編輯使用者群組
 
-1. 導航到 [權限控制台](http://localhost:4502/useradmin) 添加管理cloudservices的權限
+1. 導覽至 [許可權主控台](http://localhost:4502/useradmin) 並新增許可權以管理cloudservices
 
-   * /etc/cloudservices上（已讀）
+   * /etc/cloudservices上的（讀取）
    >[!NOTE]
    >
-   >應用作者將預設的內容作者（作者）組從AEM中擴展，從而繼承了在/content/phonegap下建立內容的能力
+   >App Authors會延伸AEM的預設內容作者(Authors)群組，繼承/content/phonegap底下建立內容的能力
 
-### AEM Mobile應用程式管理員組（app-admins組） {#aem-mobile-application-administrators-group-app-admins-group}
+### AEM Mobile應用程式管理員群組（app-admins群組） {#aem-mobile-application-administrators-group-app-admins-group}
 
-app-admins組的成員可以使用應用程式作者附帶的相同權限來創作應用程式內容 **和** 此外，還負責：
+app-admins群組的成員可以使用與應用程式作者相同的許可權來創作應用程式內容 **和** 此外，還負責：
 
-* 在中配置PhoneGap Build和Adobe移動服務雲服AEM務
-* 暫存、發佈和清除應用程式內容同步OTA更新
+* 在AEM中設定PhoneGap Build和AdobeMobile Services雲端服務
+* 暫存、發佈和清除應用程式Content Sync OTA更新
 
 >[!NOTE]
 >
->權限決定應用命令中心中某些用戶AEM操作的可用性。
+>許可權會決定AEM App Command Center中某些使用者動作的可用性。
 >
->您會注意到，有些選項對應用程式作者不可用，而應用程式管理員則可用。
+>您會注意到，某些選項不適用於應用程式作者，而僅適用於應用程式管理員。
 
-#### 組配置 — 應用管理員 {#group-configuration-app-admins}
+#### 群組設定 — 應用程式管理員 {#group-configuration-app-admins}
 
-1. 建立名為app-admins的新組。
-1. 將以下組添加到新的app-admins組：
+1. 建立名為app-admins的新群組。
+1. 將下列群組新增至新的app-admins群組：
 
-   * 內容作者
-   * 工作流用戶
+   * content-author
+   * workflow-users
 
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
-1. 導航到 [權限控制台](http://localhost:4502/useradmin) 添加管理cloudservices的權限
+1. 導覽至 [許可權主控台](http://localhost:4502/useradmin) 並新增許可權以管理cloudservices
 
-   * （讀取、修改、建立、刪除、複製）/etc/cloudservices/mobilesservices
-   * （讀取、修改、建立、刪除、複製）/etc/cloudservices/phonegap-build
+   * （讀取、修改、建立、刪除、復寫） /etc/cloudservices/mobileservices
+   * （讀取、修改、建立、刪除、復寫） /etc/cloudservices/phonegap-build
 
-1. 在同一「權限」控制台上，將權限添加到舞台、發佈和清除應用程式內容更新
+1. 在相同的許可權控制檯上，新增許可權以暫存、發佈和清除應用程式內容更新
 
-   * （讀取、修改、建立、刪除、複製）/etc/packages/mobileapp
-   * /var/contentsync上（讀取）
+   * （讀取、修改、建立、刪除、復寫） /etc/packages/mobileapp
+   * （讀取） /var/contentsync
 
    >[!NOTE]
    >
-   >包複製用於將應用更新從作者實例發佈到發佈實例
+   >套件復寫用於將應用程式更新從製作執行個體發佈到發佈執行個體
 
    >[!CAUTION]
    >
-   >/var/contentsync訪問被拒絕OOTB。
+   >/var/contentsync存取遭拒(OOTB)。
    >
-   >忽略READ權限可能會導致生成和複製空的更新包。
+   >省略READ許可權可能會導致建置和復寫空白的更新套件。
 
-1. 根據需要將成員添加到此組
+1. 視需要新增成員到此群組
 
-## 儀表板磁貼權限 {#dashboard-tile-permissions}
+## 控制面板圖磚許可權 {#dashboard-tile-permissions}
 
-儀表板磁貼可以根據用戶擁有的權限顯示不同的操作。 下面介紹了每個磁貼可用的操作。
+控制面板圖磚可能會根據使用者擁有的許可權公開不同的動作。 以下說明每個圖磚可用的動作。
 
-除了這些權限外，還可以根據當前應用的配置方式顯示/隱藏操作。 例如，如果尚未將PhoneGap雲配置分配給應用，則顯示「遠程生成」操作沒有意義。 這些將列在下面的「 」**配置條件**&#39;節。
+除了這些許可權，動作也可以根據目前應用程式的設定方式顯示/隱藏。 例如，如果尚未將PhoneGap雲端設定指派給應用程式，則公開「遠端建置」動作就沒有意義。 這些專案將列於下方「**設定條件**&#39;區段。
 
-### 管理應用程式磁貼 {#manage-app-tile}
+### 管理應用程式動態磚 {#manage-app-tile}
 
-磁貼當前沒有需要權限的操作，但應用程式的詳細資訊頁面具有以下操作：
+圖磚目前沒有需要許可權的動作，但應用程式的詳細資訊頁面有下列動作：
 
-* *編輯* 對於app-author和app-admin（UI觸發器 — jcr:write - on /content/phonegap/{suffix}）
-* *下載* 用於app-author和app-admin（UI觸發器 — 在/content/phonegap/{suffix}上）
+* *編輯* 適用於app-author和app-admin （UI觸發器 — jcr：write - on /content/phonegap/{suffix}）
+* *下載* 適用於app-author和app-admin （UI觸發器 — /content/phonegap/{suffix}）
 
-下圖顯示了應用的「下載」和「編輯」選項：
+下圖顯示應用程式的「下載」和「編輯」選項：
 
 ![chlimage_1-21](assets/chlimage_1-21.png)

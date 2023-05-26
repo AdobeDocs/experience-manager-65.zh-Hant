@@ -1,7 +1,7 @@
 ---
-title: 在傳統用戶介面中創作
+title: 在傳統UI中編寫
 seo-title: Authoring in the Classic UI
-description: Classic UI是自CQ5以來提供的面向案頭的用戶介面。 以下有關創作的文檔重點介紹此UI。 基於觸摸的UI是新的標準用戶介面，AEM專用於觸摸和台式機設備。 有關詳細資訊，請參閱標準創作文檔。
+description: 傳統UI是自CQ5起提供的案頭導向使用者介面。 以下有關編寫的檔案著重於此UI。 觸控式UI是AEM的全新標準使用者介面，專為觸控和桌上型裝置而設計。 如需進一步資訊，請參閱標準撰寫檔案。
 seo-description: The Classic UI is the desktop-oriented user interface that as been available since CQ5. The following documentation on authoring is focused on this UI. The touch-based UI is the new standard user interface for AEM, designed for use on both touch and desktop devices. Please see the standard authoring documentation for further information.
 uuid: 4ad03293-f36c-40ae-b668-c78ce326cf0d
 contentOwner: Chris Bohnert
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ---
 
-# 在傳統用戶介面中創作{#authoring-in-the-classic-ui}
+# 在傳統UI中編寫{#authoring-in-the-classic-ui}
 
-## 經典UI和啟用觸摸的UI {#classic-ui-and-touch-enabled-ui}
+## 傳統UI和觸控式UI {#classic-ui-and-touch-enabled-ui}
 
-Classic UI是自CQ5（CQ5的前身）以來提供的面向案頭的用戶界AEM面。 以下有關創作的文檔重點介紹此UI。
+Classic UI是從CQ5 (AEM的前身)開始提供的案頭導向使用者介面。 以下有關編寫的檔案著重於此UI。
 
-啟用觸摸的UI是新的標準用戶介面，AEM專用於觸摸和台式機設備。 請參閱 [標準創作文檔](/help/sites-authoring/author.md) 的上界。
+觸控式UI是AEM的全新標準使用者介面，專為觸控和桌上型裝置而設計。 請參閱 [標準撰寫檔案](/help/sites-authoring/author.md) 以取得進一步資訊。
 
 >[!NOTE]
 >
->由於基於觸摸的UI是標準UI,AEM因此不再維護經典UI。 這意味著在經典UI中不提供某些功能。
+>由於觸控式UI是AEM的標準UI，因此將不再維護傳統UI。 這表示有些功能在傳統UI中無法使用。
 
-## 創作（和發佈）的概念 {#concept-of-authoring-and-publishing}
+## 製作（和發佈）的概念 {#concept-of-authoring-and-publishing}
 
-無論選擇何種UI，創作中都有一些共同的概念和想法，這些概念和想法都進行了詳細描述 [在標準創作文檔中](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)。
+無論您選擇哪種UI，製作都會有某些共同的概念和構想，這些概念和構想都經過了詳盡的說明 [標準撰寫檔案中的這裡](/help/sites-authoring/author.md#concept-of-authoring-and-publishing).

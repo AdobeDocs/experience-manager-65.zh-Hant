@@ -1,7 +1,7 @@
 ---
-title: 基本配置概念
+title: 基本設定概念
 seo-title: Basic Configuration Concepts
-description: 瞭解如何配AEM置。
+description: 瞭解如何設定AEM。
 seo-description: Learn how to configure AEM.
 uuid: edcdd4bd-5917-417e-8913-40d488383ea9
 contentOwner: msm-service
@@ -18,299 +18,299 @@ ht-degree: 1%
 
 ---
 
-# 基本配置概念{#basic-configuration-concepts}
+# 基本設定概念{#basic-configuration-concepts}
 
-Adobe Experience Manager(AEM)安裝時，所有參數的預設設定允許其「開箱即用」。 但是，您可以根據AEM自己的特定要求進行配置。
+Adobe Experience Manager (AEM)已安裝所有引數的預設設定，可讓其「開箱即用」。 不過，您可以根據自己的特定需求設定AEM。
 
-可以配置的AEM方面有很多：
+AEM有許多方面可以設定：
 
-* 有些 [通常為每個項目安裝配置](#primary-configuration-considerations) 並且必須進行審閱以確認它們是否適用於您的項目。
-* [其他配置](#further-configuration-considerations) 可能是常見的，但並非勢在必行；與功能或系統效能和穩定性有關。
-* 其他功能僅需要某些可選功AEM能（這些功能與相應功能一起記錄）。
+* 部分為 [通常為每個專案安裝設定](#primary-configuration-considerations) 而且必須經過稽核，確認其是否適用於您的專案。
+* [其他設定](#further-configuration-considerations) 可能是通用的，但不是強制性的；與功能或系統效能和穩定性相關。
+* 只有AEM的某些選用功能才需要其他功能（這些功能會與適當的功能一起記錄）。
 
-根據特定配置，可以使用以下任一方法進行這些更改：
+視特定設定而定，這些變更可使用以下任一項來進行：
 
-* **Adobe CQWeb控制台**
+* **Adobe CQ Web Console**
 
-   這是配置OSGi捆綁包和服務的標準位置。
+   這是設定OSGi套件組合和服務的標準位置。
 
-   請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 詳細資訊和建議的操作。
+   另請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得進一步詳細資訊和建議作法。
 
 * **存放庫**
 
-   OSGi配置的子集在儲存庫中可用。 這可確保複製或複製儲存庫內容重新建立相同的配置。 您還可以根據運行模式將自己的配置添加到儲存庫中。
+   存放庫中提供OSGi設定的子集。 這樣可確保複製或複製存放庫內容會重新建立相同的設定。 您也可以根據執行模式將自己的設定新增到存放庫。
 
-   請參閱 [儲存庫中的OSGi配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 特別是 [將新配置添加到儲存庫](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository) 的上界。
+   另請參閱 [存放庫中的OSGi設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 尤其是 [新增設定至存放庫](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository) 以取得更多詳細資料。
 
 * **檔案系統**
 
-   檔案系統中有幾個配置檔案。
+   檔案系統內有一些組態檔。
 
-* **AEMWCM**
+* **AEM WCM**
 
-   在WCM本身中可以配置AEM各種方面，許多方面使用 [工具](/help/sites-administering/tools-consoles.md) 控制台；例如，複製代理。
-
->[!NOTE]
->
->在與Adobe Experience Manager合作時，有幾種方法管理OSGi服務（控制台或儲存庫節點）的配置設定。
->
->請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的雙曲餘切值。
+   您可以在AEM WCM本身中設定各種面向，許多情況下都會使用 [工具](/help/sites-administering/tools-consoles.md) 主控台；例如，復寫代理。
 
 >[!NOTE]
 >
->配AEM置很簡單，但必須知道：
+>使用Adobe Experience Manager時，有數種方法可管理OSGi服務的組態設定（主控台或存放庫節點）。
 >
->某些更改可能會對應用程式產生重大影響。 因此，在開始配置之前，請確保您擁有必要的經驗和知識AEM，並只進行您知道需要的更改。 通過OSGi控制台所做的任何更改 **立即** 應用到正在運行的系統（不需要重新啟動）。
-
-## 主要配置注意事項 {#primary-configuration-considerations}
-
-此清單詳細列出了為每個新項目通常配置的主要區域。 並非所有項目都需要，但必須閱讀並審查清單，以查看哪些項目適用。
-
-該清單簡要概述了每個配置方面，以及指向提供完整詳細資訊的頁面的連結。
-
-### 安全核對表 {#security-checklist}
-
-中列出了幾個關鍵配置問題 [安全核對表](/help/sites-administering/security-checklist.md)。 請確保您閱讀此內容並採取安裝所需的任何操作。
-
-### 配置預設UI — 觸控優化或經典 {#configuring-the-default-ui-touch-optimized-or-classic}
-
-有兩個UI可供使用AEM:
-
-* 觸控優化的UI
-* 經典UI
-
-可以配置所需的UI [根映射](/help/sites-deploying/osgi-configuration-settings.md)。
+>另請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。
 
 >[!NOTE]
 >
->有關選擇UI的詳細資訊，請參閱 [選擇UI](/help/sites-authoring/select-ui.md)。
+>設定AEM很簡單，但您必須注意：
+>
+>某些變更可能會對應用程式產生重大影響。 因此，在開始設定AEM之前，請確定您具備必要的經驗和知識，並只進行您知道必要的變更。 透過OSGi主控台所做的任何變更包括 **立即** 套用至執行中的系統（不需要重新啟動）。
+
+## 主要設定考量事項 {#primary-configuration-considerations}
+
+此清單詳細說明每個新專案通常設定的主要區域。 並非所有專案都需要，但必須閱讀清單並加以檢閱，以瞭解哪些專案適用於您的專案。
+
+清單提供每個設定方面的簡短概觀，以及提供完整詳細資訊的頁面連結。
+
+### 安全性檢查清單 {#security-checklist}
+
+中列出了幾個主要設定問題 [安全性檢查清單](/help/sites-administering/security-checklist.md). 請確定您已閱讀本文，並採取安裝所需的任何動作。
+
+### 設定預設UI — 觸控最佳化或Classic {#configuring-the-default-ui-touch-optimized-or-classic}
+
+AEM中有兩個可供使用的UI：
+
+* 觸控最佳化的UI
+* 傳統UI
+
+您可以使用設定所需的UI [根對應](/help/sites-deploying/osgi-configuration-settings.md).
+
+>[!NOTE]
+>
+>如需有關選取UI的更多資訊，請參閱 [選取您的UI](/help/sites-authoring/select-ui.md).
 
 ### IPv4和IPv6 {#ipv-and-ipv}
 
-IPv4和IPv6網AEM絡中都可以安裝所有元素（如儲存庫、調度程式等）。
+AEM的所有元素（例如存放庫、Dispatcher等）都可以安裝在IPv4和IPv6網路中。
 
-操作是無縫的，因為不需要特殊配置，在需要時，您只需使用適合您網路類型的格式指定IP地址即可。
+操作是順暢的，因為不需要特殊設定，需要時您只需使用適合您網路型別的格式來指定IP位址。
 
-這意味著，當需要指定IP地址時，您可以從以下位置（根據需要）選擇：
+這表示當需要指定IP位址時，您可以（視需要）從以下選取：
 
-* IPv6地址
+* ipv6位址
 
    例如 `https://[ab12::34c5:6d7:8e90:1234]:4502`
 
-* IPv4地址
+* ipv4位址
 
    例如 `https://123.1.1.4:4502`
 
 * 伺服器名稱
 
-   比如說， `https://www.yourserver.com:4502`
+   例如， `https://www.yourserver.com:4502`
 
-* 預設大小寫 `localhost` 將解釋為IPv4和IPv6網路安裝
+* 預設大小寫為 `localhost` 將針對IPv4和IPv6網路安裝進行解譯
 
-   比如說， `http://localhost:4502`
+   例如， `http://localhost:4502`
 
 ### 版本清除 {#version-purging}
 
-在標準安AEM裝中，無論何時激活頁面（更新內容後），都會建立頁面或節點的新版本。您還可以使用 **版本控制** 擊中了。 所有這些版本都儲存在儲存庫中，如果需要，可以恢復。
+在標準安裝中，每當您啟動頁面時（更新內容後），AEM都會建立頁面或節點的新版本。您也可以使用根據請求建立其他版本 **版本設定** 索引標籤。 所有這些版本都儲存在存放庫中，並可在必要時還原。
 
-這些版本從不被清除，因此儲存庫大小會隨著時間的推移而增長，因此需要進行管理。
+這些版本永遠不會清除，因此存放庫大小會隨著時間增長，因此需要管理。
 
-請參閱 [版本清除](/help/sites-deploying/version-purging.md) 詳細資訊，尤其是 [版本管理器](/help/sites-deploying/version-purging.md#version-manager) 有關如何配置以AEM在建立新版本時清除舊版本的詳細資訊。
+另請參閱 [版本清除](/help/sites-deploying/version-purging.md) 以取得完整詳細資訊，特別是 [版本管理員](/help/sites-deploying/version-purging.md#version-manager) 瞭解如何設定AEM在建立新版本時清除舊版本的詳細資訊。
 
 ### 記錄 {#logging}
 
-提AEM供了配置：
+AEM可讓您設定：
 
-* 中央日誌記錄服務的全局參數
-* 請求資料記錄；請求資訊的專用日誌記錄配置
-* 具體設定；例如，日誌消息的單個日誌檔案和格式
+* 中央記錄服務的全域引數
+* 請求資料記錄；請求資訊的專用記錄設定
+* 個別服務的特定設定；例如，個別記錄檔和記錄訊息的格式
 
-請參閱 [記錄](/help/sites-deploying/configure-logging.md) 的雙曲餘切值。
+另請參閱 [記錄](/help/sites-deploying/configure-logging.md) 以取得完整詳細資訊。
 
 ### 執行模式 {#run-modes}
 
-運行模式允許您針對AEM特定目的調整實例；例如，作者或發佈、test、開發或內部網等。
+執行模式可讓您針對特定目的調整AEM執行個體；例如製作或發佈、測試、開發或內部網路等。
 
-這可以通過為每個運行模式定義配置參數的集合來完成。 所有運行模式都應用了一組基本的配置參數，然後您可以根據特定環境的目的調整其它設定。 然後根據需要應用這些。
+這是透過定義每個執行模式的設定引數集合來完成的。 所有執行模式都會套用一組基本組態引數，然後您就可以根據特定環境的目的調整其他組。 然後視需要套用這些引數。
 
-所有配置設定都儲存在一個儲存庫中，並通過設定 **運行模式**。
+所有組態設定都會儲存在單一存放庫中，並透過設定 **執行模式**.
 
-請參閱 [運行模式](/help/sites-deploying/configure-runmodes.md) 的雙曲餘切值。
+另請參閱 [執行模式](/help/sites-deploying/configure-runmodes.md) 以取得完整詳細資訊。
 
-### 單一登錄 {#single-sign-on}
+### 單一登入 {#single-sign-on}
 
-單一登錄(SSO)允許用戶在提供一次身份驗證憑據（如用戶名和密碼）後訪問多個系統。 單獨的系統（稱為受信任驗證器）執行該驗證並提供與用戶憑據的Experience Manager。 Experience Manager檢查並強制用戶的訪問權限（即確定允許用戶訪問哪些資源）。
+單一登入(SSO)可讓使用者在提供一次驗證認證（例如使用者名稱和密碼）之後存取多個系統。 獨立的系統（稱為受信任的驗證者）會執行驗證並提供Experience Manager使用者認證。 Experience Manager會檢查並強制使用者的存取許可權（即決定允許使用者存取哪些資源）。
 
-請參閱 [單一登錄](/help/sites-deploying/single-sign-on.md) 的上界。
+另請參閱 [單一登入](/help/sites-deploying/single-sign-on.md) 以取得更多詳細資料。
 
 ### 資源對應 {#resource-mapping}
 
-資源映射用於定義重定向、虛擬URL和虛擬主AEM機。
+資源對應可用來定義AEM的重新導向、虛名URL和虛擬主機。
 
-例如，可以使用這些映射：
+例如，您可以使用這些對應來：
 
-* 將所有請求前置詞為 `/content` 這樣內部結構就不會被訪問您網站的人看到。
-* 定義重定向，以便向 `/content/en/gateway` 將網站的頁面重定向到 `https://gbiv.com/`。
+* 所有請求的前置詞為 `/content` 以便對網站的訪客隱藏內部結構。
+* 定義重新導向，讓所有要求到 `/content/en/gateway` 您的網站頁面會重新導向至 `https://gbiv.com/`.
 
-請參閱 [資源映射](/help/sites-deploying/resource-mapping.md) 的上界。
+另請參閱 [資源對應](/help/sites-deploying/resource-mapping.md) 以取得更多詳細資料。
 
-### 複製、反向複製和複製代理 {#replication-reverse-replication-and-replication-agents}
+### 復寫、反向復寫和復寫代理程式 {#replication-reverse-replication-and-replication-agents}
 
-複製代理作為用AEM於以下操作的機制的中心：
+復寫代理程式是AEM的核心，因為可用來：
 
-* [發佈（激活）](/help/sites-authoring/publishing-pages.md) 從作者到發佈環境的內容。
-* 顯式刷新Dispatcher快取中的內容。
-* 將用戶輸入（例如，表單輸入）從發佈環境返回給作者環境（在作者環境的控制下）。
+* [發佈（啟動）](/help/sites-authoring/publishing-pages.md) 內容從作者環境移至發佈環境。
+* 明確地從Dispatcher快取排清內容。
+* 從發佈環境將使用者輸入（例如表單輸入）傳回至作者環境（在作者環境的控制下）。
 
-有關詳細資訊，請參閱 [複製](/help/sites-deploying/replication.md)。
+如需詳細資訊，請參閱 [復寫](/help/sites-deploying/replication.md).
 
-### OSGi配置設定 {#osgi-configuration-settings}
+### OSGi組態設定 {#osgi-configuration-settings}
 
-[OSGi](https://www.osgi.org/) 是技術層面的一個基本要AEM素。 它用於控制複合束及其AEM結構。
+[osgi](https://www.osgi.org/) 是AEM技術棧疊中的基本元素。 它可用來控制AEM的複合套件組合及其設定。
 
-請參閱 [OSGi配置設定](/help/sites-deploying/osgi-configuration-settings.md) 列出與項目實施相關的各種捆綁包（根據捆綁包列出）。 並非所有列出的設定都需要調整，有些設定可幫助您瞭解操作AEM方式。
+另請參閱 [OSGi組態設定](/help/sites-deploying/osgi-configuration-settings.md) 取得與專案實作相關的各種套件組合清單（根據套件組合列出）。 並非所有列出的設定都需要調整，有些是為了協助您瞭解AEM的運作方式。
 
-使用時，AEM有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的子菜單。
+使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
 
-### 配置LDAP {#configuring-ldap}
+### 設定LDAP {#configuring-ldap}
 
-對儲存在（中央）LDAP目錄（如Active Directory）中的用戶進行身份驗證需要LDAP身份驗證。 這有助於減少管理用戶帳戶所需的工作。
+需要進行LDAP驗證，才能驗證儲存在（中央） LDAP目錄（例如Active Directory）中的使用者。 這有助於減少管理使用者帳戶所需的工作。
 
-LDAP身份驗證在儲存庫級別進行，因此由儲存庫直接處理。 有關詳細資訊，請參閱 [使用配置LDAPAEM](/help/sites-administering/ldap-config.md)。
+LDAP驗證會發生在存放庫層級，因此直接由存放庫處理。 如需詳細資訊，請參閱 [使用AEM設定LDAP](/help/sites-administering/ldap-config.md).
 
-有關內的用戶管AEM理（包括訪問權限的分配），請參閱 [用戶管理和安全](/help/sites-administering/security.md)。
+如需AEM內的使用者管理（包括存取許可權的指派），請參閱 [使用者管理與安全性](/help/sites-administering/security.md).
 
-### 配置Dispatcher {#configuring-the-dispatcher}
+### 設定Dispatcher {#configuring-the-dispatcher}
 
 Dispatcher 是 Adobe Experience Manager 的快取及/或負載平衡工具，可搭配企業級網頁伺服器使用。
 
-請參閱 [調度程式](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 詳細資訊，尤其是 [配置Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) 的子菜單。
+另請參閱 [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 以取得完整詳細資訊，特別是 [設定Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) 以取得進一步的設定詳細資料。
 
-### 配置AEMLiveCycle連接器 {#configuring-aem-livecycle-connector}
+### 設定AEMLiveCycle聯結器 {#configuring-aem-livecycle-connector}
 
-隨著文檔服務和AEM文檔安全AEM性的發佈，我們現在能夠調用LiveCycle文檔服務來呈現XFA表單、將文檔轉換為PDF並策略保護文檔。 請閱讀 [AEMLiveCycle](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) 的子菜單。
+隨著AEM Doc Services和AEM Doc Security的發行，我們現在能夠叫用LiveCycle檔案服務來轉譯XFA表單、將檔案轉換為PDF以及原則保護檔案。 請閱讀 [AEMLiveCycle聯結器](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) 以取得更多詳細資料。
 
-### 作業卸載和拓撲管理 {#job-offloading-and-topology-administration}
+### 工作解除安裝與拓撲管理 {#job-offloading-and-topology-administration}
 
-[卸載](/help/sites-deploying/offloading.md) 在拓撲中分配處理任務量Experience Manager實例。 在卸載時，可以使用特定的Experience Manager實例來執行特定類型的處理。 專用處理使您能夠最大限度地利用可用的伺服器資源。
+[解除安裝](/help/sites-deploying/offloading.md) 將處理工作分散到拓撲中的Experience Manager執行個體。 透過解除安裝，您可以使用特定Experience Manager執行個體來執行特定型別的處理。 專業化的處理可讓您最大限度地使用可用的伺服器資源。
 
-拓撲是鬆散耦合的Experience Manager群集，參與卸載。 群集由一個或多個Experience Manager伺服器實例（單個實例被視為群集）組成。
+拓撲是參與解除安裝的鬆散耦合Experience Manager叢集。 叢集由一或多個Experience Manager伺服器執行處理（單一執行處理視為叢集）組成。
 
-有關如何查看或修改拓撲成員身份的詳細資訊，請參閱 [管理拓撲](/help/sites-deploying/offloading.md#administering-topologies) 的子菜單。
+如需如何檢視或修改拓撲成員資格的詳細資訊，請參閱 [管理拓撲](/help/sites-deploying/offloading.md#administering-topologies) 區段。
 
-### 配置歡迎控制台 {#configuring-the-welcome-console}
+### 設定歡迎主控台 {#configuring-the-welcome-console}
 
-經典UI的「歡迎」控制台提供指向中各種控制台和功能的鏈AEM接。
+傳統UI的「歡迎」主控台提供AEM內各種主控台和功能的連結清單。
 
-可以配置可見的連結，請參見 [配置歡迎控制台](/help/sites-developing/customizing-the-welcome-console.md) 的上界。
+您可以設定可見的連結，請參閱 [設定歡迎主控台](/help/sites-developing/customizing-the-welcome-console.md) 以取得更多詳細資料。
 
-### 配置效能 {#configuring-for-performance}
+### 設定效能 {#configuring-for-performance}
 
-[效能](/help/sites-deploying/configuring-performance.md) 是你項目的關鍵。 可以配置AEM（和/或基礎儲存庫）的某些方面以優化效能。
+[效能](/help/sites-deploying/configuring-performance.md) 是專案的關鍵。 AEM的某些方面（和/或基礎存放庫）可以設定為最佳化效能。
 
-請參閱 [配置效能](/help/sites-deploying/configuring-performance.md#configuring-for-performance) 的上界。
+另請參閱 [設定效能](/help/sites-deploying/configuring-performance.md#configuring-for-performance) 以取得更多詳細資料。
 
 <!--delete ### Scaling {#scaling}
 
 Scaling a CQ installation correctly depends greatly on the details of your particular use case. A detailed discussion of solution patterns for various situations can be found in [Scaling CQ](/help/sites-deploying/scaling.md).-->
 
-### 共用資料儲存 {#shared-data-store}
+### 共用資料存放區 {#shared-data-store}
 
-儲存庫資料儲存用於將大型二進位檔案的儲存從儲存庫卸載到適當的單獨區域，從而儲存庫樹內相同二進位檔案（例如影像）的多個實例只儲存一次。
+存放庫資料存放區可用來將大型二進位檔的儲存空間從適當的存放庫解除安裝至個別區域，因此存放庫樹狀結構中同一個二進位檔的多個執行個體（例如影像）只會儲存一次。
 
-此「儲存一次、引用多次」功能可擴展為不僅服務於單個儲存庫樹，而且服務於完全獨立的儲存庫，方法是將每個儲存庫的資料儲存配置為引用同一共用檔案系統位置。
+此「一次儲存、多次參照」功能可擴充為不僅提供單一存放庫樹狀結構，也提供完全不同的存放庫，方法是設定每個存放庫的資料存放區來參照相同的共用檔案系統位置。
 
-這樣的資料儲存可以在同一群集中的不同節點、同一安裝中的不同發佈和/或作者實例之間共用，甚至可以在不同安裝中完全獨立的實例之間共用。
+這類資料存放區可在相同叢集中的不同節點、相同安裝中的不同發佈和/或製作執行個體或甚至不同安裝中的完全不同執行個體之間共用。
 
-有關詳細資訊，請參見 [配置資料儲存和節點儲存](/help/sites-deploying/data-store-config.md)。
+如需詳細資訊，請參閱 [設定資料存放區和節點存放區](/help/sites-deploying/data-store-config.md).
 
-## 進一步配置注意事項 {#further-configuration-considerations}
+## 其他設定考量事項 {#further-configuration-considerations}
 
 ### 啟用HTTP over SSL {#enabling-http-over-ssl}
 
-您可以啟用HTTP over SSL，以使用更安全的連接連接到伺服器。
+您可以啟用透過SSL的HTTP，以使用與伺服器的更安全連線。
 
-請參閱 [啟用HTTP over SSL](/help/sites-administering/ssl-by-default.md) 的上界。
+另請參閱 [啟用HTTP over SSL](/help/sites-administering/ssl-by-default.md) 以取得更多詳細資料。
 
-### 門AEM戶和Portlet {#aem-portals-and-portlets}
+### AEM入口網站和Portlet {#aem-portals-and-portlets}
 
-門戶是一個Web應用程式，它提供個性化、單一登錄、來自不同來源的內容整合，並承載資訊系統的呈現層。 Portlet元件還允許您將Portlet嵌入到頁面中。 為了訪問CQ5 WCM提供的內容，門戶伺服器可以配置CQ5門戶Director門戶Portlet。 可以通過安裝、配置和將portlet添加到門戶頁面來完成此操作。
+入口網站是一種網站應用程式，可提供個人化、單一登入、不同來源的內容整合，並託管資訊系統的展示層。 Portlet元件也可讓您在頁面上內嵌Portlet。 若要存取CQ5 WCM提供的內容，入口網站伺服器可安裝CQ5入口網站Director Portlet。 您可以安裝、設定Portlet並將其新增至入口網站頁面，以執行此操作。
 
-請參閱 [門戶和Portlet](/help/sites-administering/aem-as-portal.md) 的上界。
+另請參閱 [入口網站和Portlet](/help/sites-administering/aem-as-portal.md) 以取得更多詳細資料。
 
-### 靜態對象的到期 {#expiration-of-static-objects}
+### 靜態物件的到期日 {#expiration-of-static-objects}
 
-靜態對象（例如，表徵圖）不會更改。 因此，應配置系統，使其不會過期（在合理的時間段內），從而減少不必要的通信量。
+靜態物件（例如圖示）不會變更。 因此，系統應設定為不會過期（在合理的時間段內），並減少不必要的流量。
 
-請參閱 [靜態對象的到期](/help/sites-deploying/expiration-static-objects.md) 的上界。
+另請參閱 [靜態物件的到期日](/help/sites-deploying/expiration-static-objects.md) 以取得更多詳細資料。
 
-### 在Java進程中開啟FIle {#open-files-in-the-java-process}
+### Java程式中的開啟檔案 {#open-files-in-the-java-process}
 
-每個java進程都可以訪問檔案 — 這需要系統資源。 因此，對允許每個進程同時訪問的檔案數定義了上限。 如果超出此範圍，則可能出現異常錯誤。
+每個Java程式都可以存取檔案 — 這需要系統資源。 因此，上限被定義為每個程式可同時存取多少檔案。 如果超過此限制，則可能會發生例外狀況錯誤。
 
-如果進AEM程超過此最大值，則消息&#39;&#39; `too many open files`將在 `error.log`。
+如果AEM處理序超過此上限，則訊息「 `too many open files`「」將顯示在 `error.log`.
 
-要避免此類例外，您需要：
+若要避免此類例外，您需要：
 
-1. 檢查進程正在使AEM用的開啟檔案數。
+1. 檢查您的AEM程式正在使用多少個開啟的檔案。
 
-   如何進行此檢查將取決於實例運行的平台。 可以使用lsof(Unix)或Process Explorer(Windows)等實用程式。
+   如何進行這項檢查將取決於執行個體所在的平台。 您可以使用lsof (Unix)或Process Explorer (Windows)等公用程式。
 
    在開發和測試期間應監控此值，以：
 
-   * 確認檔案正在根據需要關閉
-   * 確定所需的最大值（在各種情況下）
+   * 確認檔案已視需要關閉
+   * 以決定所需的最大值（在各種情況下）
 
 1. 設定允許的最大值。
 
-   新值應同時滿足當前需求和未來任何峰值，因此建議將當前需求增加一倍。
+   新值應同時符合目前的需求和任何未來的尖峰，因此建議將目前的需求加倍。
 
-   預設情況下， `serverctl` 配置 `CQ_MAX_OPEN_FILES` 至 `8192`;這應該足以應對大多數情況。
+   依預設， `serverctl` 設定 `CQ_MAX_OPEN_FILES` 至 `8192`；這應該足以滿足大多數情境。
 
-### 配置富格文本編輯器 {#configuring-the-rich-text-editor}
+### 設定RTF編輯器 {#configuring-the-rich-text-editor}
 
-的 **富格文本編輯器** (**RTE**)為作者提供了 [功能](/help/sites-authoring/rich-text-editor.md) 編輯文字內容；為他們提供表徵圖、選擇框和菜單，以獲得WYSIWYG體驗。
+此 **RTF編輯器** (**RTE**)為作者提供各式各樣的 [功能](/help/sites-authoring/rich-text-editor.md) 用於編輯其文字內容；為它們提供用於所見即所得體驗的圖示、選取方塊和選單。
 
-請參閱 [配置富格文本編輯器](/help/sites-administering/rich-text-editor.md) 的上界。
+另請參閱 [設定RTF編輯器](/help/sites-administering/rich-text-editor.md) 以取得更多詳細資料。
 
-### 為頁面編輯配置撤消 {#configuring-undo-for-page-editing}
+### 設定頁面編輯的復原 {#configuring-undo-for-page-editing}
 
-有幾個屬性可控制用於編輯頁面的撤消和重做命令的行為。 可以配置這些，請參見 [為頁面編輯配置撤消](/help/sites-administering/config-undo.md) 的上界。
+有數個屬性可控制編輯頁面的還原和重做命令的行為。 這些可設定，請參閱 [設定頁面編輯的復原](/help/sites-administering/config-undo.md) 以取得更多詳細資料。
 
-### 配置視頻元件 {#configuring-the-video-component}
+### 設定視訊元件 {#configuring-the-video-component}
 
-的 [視頻元件](/help/sites-authoring/default-components-foundation.md#video) 允許您將預定義的現成視頻元素放置在頁面上。
+此 [視訊元件](/help/sites-authoring/default-components-foundation.md#video) 可讓您在頁面上放置預先定義的現成視訊元素。
 
-要進行正確的轉碼，您的管理員必須 [安裝FFmpeg](/help/sites-administering/config-video.md#install-ffmpeg) 單獨進行。 他們也 [配置視頻配置檔案](/help/sites-administering/config-video.md#configure-video-profiles) 用於html5元素。
+為了進行適當的轉碼，您的管理員必須 [安裝FFmpeg](/help/sites-administering/config-video.md#install-ffmpeg) 另外提供。 他們也可以 [設定您的視訊設定檔](/help/sites-administering/config-video.md#configure-video-profiles) 與html5元素搭配使用。
 
-### 配置和自定義報告 {#configuring-and-customizing-reports}
+### 設定和自訂報表 {#configuring-and-customizing-reports}
 
-為幫助您監視和分析實例的狀態，CQ提供了選擇的預設報告，這些報告可根據您的個別要求進行配置：
+為協助您監控及分析執行個體的狀態，CQ提供一系列預設報表，您可依個別需求加以設定：
 
-查看 [報表自定義基礎](/help/sites-administering/reporting.md#the-basics-of-report-customization) 的上界。
+請參閱 [報表自訂基本概念](/help/sites-administering/reporting.md#the-basics-of-report-customization) 以取得更多詳細資料。
 
-### 配置電子郵件通知 {#configuring-email-notification}
+### 設定電子郵件通知 {#configuring-email-notification}
 
-CQ向以下用戶發送電子郵件通知：
+CQ傳送電子郵件通知給使用者，該使用者：
 
-* 已訂閱頁事件，例如修改或複製。
-* 已訂閱論壇活動。
-* 必須在工作流中執行步驟。
+* 已訂閱頁面事件，例如修改或復寫。
+* 已訂閱論壇事件。
+* 必須在工作流程中執行步驟。
 
-請參閱 [配置電子郵件通知](/help/sites-administering/notification.md) 的上界。
+另請參閱 [設定電子郵件通知](/help/sites-administering/notification.md) 以取得更多詳細資料。
 
 ### 啟用頁面印象 {#enabling-page-impressions}
 
-頁面印象顯示在 **印象** 經典UI siteadmin控制台的列。 要啟用頁面印象的捕獲，您需要配置：
+頁面印象會顯示在 **曝光次數** classic UI siteadmin console的欄。 若要啟用頁面印象的擷取，您需要設定：
 
-* 在發佈實例上：
+* 在發佈執行個體上：
 
-   * [第CQ WCM天頁統計資訊](/help/sites-deploying/osgi-configuration-settings.md)
+   * [Day CQ WCM頁面統計資料](/help/sites-deploying/osgi-configuration-settings.md)
 
-* 在作者案例中：
+* 在作者執行個體上：
 
-   * [Adobe頁面印象跟蹤](/help/sites-deploying/osgi-configuration-settings.md)
+   * [Adobe頁面曝光數追蹤](/help/sites-deploying/osgi-configuration-settings.md)
 
 >[!CAUTION]
 >
->在作者環境上配置Adobe頁印象跟蹤器將允許對跟蹤服務進行匿名請求。
+>作者環境上Adobe頁面曝光數追蹤器的設定將允許向追蹤服務提出匿名請求。

@@ -1,7 +1,7 @@
 ---
-title: AEM Forms工作區功能在Flex工作區中不可用
+title: Flex工作區中未提供AEM Forms工作區功能
 seo-title: Features of AEM Forms workspace not available in Flex workspace
-description: AEM Forms工作區在Flex工作區之外進行創新。 瞭解功能和功能方面的差異。
+description: AEM Forms工作區在Flex工作區之外進行創新。 閱讀特性和功能的差異。
 seo-description: AEM Forms workspace innovates beyond Flex-based Workspace. Read about differences in features and capabilities.
 uuid: 2c22ce35-8383-4258-b6e3-3d823a453b27
 contentOwner: robhagat
@@ -17,28 +17,28 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms工作區功能在Flex工作區中不可用 {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
+# Flex工作區中未提供AEM Forms工作區功能 {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
 
-AEM Forms工作區在基於Flex的工作區之外進行創新，提供有助於提高業務整合和用戶工作效率的功能和功能。
+AEM Forms工作區在Flex工作區之外進行創新，提供有助於改善業務整合和使用者生產力的功能。
 
-以下是這些功能的快速概述。 有關詳細資訊，請參閱本文末尾列出的相關文章。
+以下快速概述這些功能。 如需更多詳細資訊，請參閱本文結尾列出的相關文章。
 
-## 支援任務摘要窗格 {#support-for-a-summary-pane-for-tasks}
+## 支援任務的摘要窗格 {#support-for-a-summary-pane-for-tasks}
 
-開啟任務時，在開啟表單之前，窗格允許您使用外部URL顯示有關任務的資訊。 使用「任務摘要窗格」可以顯示任務的附加和相關資訊，以為AEM Forms工作區的最終用戶增加更多價值。 請參閱 [顯示摘要頁](/help/forms/using/displaying-information-task-summary-pane.md) 的上界。
+當您開啟任務時，在表單開啟之前，窗格可讓您使用外部URL顯示有關任務的資訊。 使用任務摘要窗格可顯示任務的其他相關資訊，為AEM Forms工作區的一般使用者新增更多值。 另請參閱 [顯示摘要頁面](/help/forms/using/displaying-information-task-summary-pane.md) 以瞭解實作詳細資料。
 
-## 支援Manager視圖 {#support-for-manager-view}
+## 支援管理員檢視 {#support-for-manager-view}
 
-此功能允許管理者訪問其報告的任務或對其執行任務。 經理還可以在組織層次結構中追溯至其間接報表的任務。 請參閱 [使用「經理視圖」管理組織層次結構中的任務](/help/forms/using/tasks-organizational-hierarchy-using-manager.md) 的子菜單。
+此功能可讓管理員存取或執行其報告的任務。 經理也可以在組織階層中向下追溯至其間接報表的工作。 另請參閱 [使用管理員檢視管理組織階層中的任務](/help/forms/using/tasks-organizational-hierarchy-using-manager.md) 以取得更多詳細資料。
 
-## 支援用戶頭像 {#support-for-user-avatars}
+## 支援使用者頭像 {#support-for-user-avatars}
 
-登錄用戶的影像或虛擬形象現在可以顯示在AEM Forms工作區的右上角。 此外，在「管理器視圖」中，還可顯示用戶頭像，以顯示管理器及其報告的影像。 請參閱 [顯示用戶虛擬形象](/help/forms/using/displaying-user-avatar.md) 的子菜單。
+登入使用者的影像或頭像現在會顯示在AEM Forms工作區的右上角。 此外，在「管理員檢視」中，也可以顯示使用者頭像，以顯示管理員及其報表的影像。 另請參閱 [顯示使用者頭像](/help/forms/using/displaying-user-avatar.md) 以取得更多詳細資料。
 
-## 支援整合第三方應用程式 {#support-for-integrating-third-party-applications}
+## 支援整合協力廠商應用程式 {#support-for-integrating-third-party-applications}
 
-與第三方應用程式整合的功能可用於將您的工作流完全帶到AEM Forms工作區。 例如，您可以在AEM Forms工作區窗口本身內將「通信管理」信函模板渲染為任務。 因此，您可以完成任務，而不離開AEM Forms工作區。 請參閱 [整合AEM Forms工作區的函電管理](/help/forms/using/integrating-correspondence-management-html-workspace.md) 的上界。
+使用與協力廠商應用程式整合的功能，可將您的工作流程完全帶入AEM Forms工作區。 例如，您可以在AEM Forms工作區視窗本身中，將「通訊管理」信函範本呈現為工作。 因此，您無需離開AEM Forms工作區即可完成工作。 另請參閱 [在AEM Forms工作區中整合通訊管理](/help/forms/using/integrating-correspondence-management-html-workspace.md) 以取得詳細指示。
 
-## 支援基於最終用戶設備的定製任務呈現 {#support-for-custom-task-rendering-based-on-end-user-s-device}
+## 根據一般使用者裝置支援自訂任務呈現 {#support-for-custom-task-rendering-based-on-end-user-s-device}
 
-AEM Forms工作區支援XDP表單的HTML格式副本。 當用於根據設備或用戶代理路由到XDP的不同格式副本的呈現過程時，此支援允許用戶將XDP表單視為移動設備上的HTML和案頭上的PDF。 這有助於為在不同設備上在不同環境中工作的用戶提供無縫的流程管理覆蓋。
+AEM Forms工作區支援XDP表單的HTML轉譯。 此支援用於根據裝置或使用者代理程式路由傳送到不同的XDP轉譯的轉譯程式時，可讓使用者將XDP表單檢視為行動裝置上的HTML和案頭上的PDF。 這有助於為在不同裝置上的不同環境中工作的使用者提供流程管理的無縫涵蓋範圍。

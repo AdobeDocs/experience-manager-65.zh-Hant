@@ -36,7 +36,7 @@ ht-degree: 96%
 
 您需要的是可以找出特定內容為目標的方法，選擇您需要的內容並將其傳回到您的應用程式以進一步處理。
 
-使用Adobe Experience ManagerAEM()，您可以使用AEMGraphQLAPI有選擇地訪問內容片段，以僅返回所需內容。 這表示您可以實現無周邊傳遞結構化的內容，以便在您的應用程式中使用。
+透過Adobe Experience Manager (AEM)，您可以使用AEM GraphQL API選擇性地存取您的內容片段，以僅傳回您需要的內容。 這表示您可以實現無周邊傳遞結構化的內容，以便在您的應用程式中使用。
 
 >[!NOTE]
 >
@@ -242,11 +242,11 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 在開始對您的內容進行查詢之前，您需要：
 
 * 啟用您的端點
-   * 使用工具 — >資產 — >GraphQL
+   * 使用工具 — >資產 — > GraphQL
    * [啟用 GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
-* 訪問GraphiQL（如果需要）
-   * [GraphiQLAEM介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
+* 存取GraphiQL （如有需要）
+   * [AEM GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### 範例結構 {#sample-structure}
 

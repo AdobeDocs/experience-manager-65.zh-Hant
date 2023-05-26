@@ -1,7 +1,7 @@
 ---
-title: 自定義HTML5表單的錯誤消息
+title: 自訂HTML5表單的錯誤訊息
 seo-title: Customizing error messages for HTML5 forms
-description: 瞭解如何自定義HTML5個表單的錯誤消息顯示，包括如何更改其位置和外觀。
+description: 瞭解如何自訂HTML5表單的錯誤訊息顯示，包括如何變更其位置和外觀。
 seo-description: Learn how to customize the display of error messages for HTML5 forms including how to change their position and appearance.
 uuid: 6f48b64e-858f-4323-ad50-88e25f3c2e3d
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -16,38 +16,38 @@ ht-degree: 0%
 
 ---
 
-# 自定義HTML5表單的錯誤消息 {#customizing-error-messages-for-html-forms}
+# 自訂HTML5表單的錯誤訊息 {#customizing-error-messages-for-html-forms}
 
-在HTML5窗體中，錯誤消息和警告具有固定的位置和外觀（字型和顏色），僅為選定欄位顯示錯誤，並且只顯示一個錯誤。
+在HTML5表單中，開箱即用的錯誤訊息和警告具有固定的位置和外觀（字型和顏色），錯誤僅針對選取的欄位顯示，並且只顯示一個錯誤。
 
-文章提供了將HTML5表單錯誤消息定制到、
+本文提供自訂HTML5表單錯誤訊息的步驟，
 
-* 更改錯誤消息的外觀和位置。 您可以在任何欄位的頂部、底部和右側顯示錯誤。
-* 在任何給定時刻顯示多個欄位的錯誤消息。
-* 顯示錯誤而不考慮是否選擇了某個欄位。
+* 變更錯誤訊息的外觀和位置。 您可以製作錯誤以顯示於任何欄位的頂端、底端和右端。
+* 隨時顯示多個欄位的錯誤訊息。
+* 無論欄位是否選取，皆會顯示錯誤。
 
-## 自定義錯誤消息  {#customizing-error-messages-nbsp}
+## 自訂錯誤訊息  {#customizing-error-messages-nbsp}
 
-在自定義錯誤消息之前，請下載並解壓附加的包(CustomErrorManager-1.0-SNAPSHOT.zip)。
+在自訂錯誤訊息之前，請下載並解壓縮附加的套件(CustomErrorManager-1.0-SNAPSHOT.zip)。
 
-解壓包後，開啟CustomErrorManager-1.0-SNAPSHOT資料夾。 它包含jcr_root和META-INF資料夾。 這些資料夾包含自定義錯誤消息所需的CSS和.JS檔案。
+解壓縮套件後，開啟CustomErrorManager-1.0-SNAPSHOT資料夾。 它包含jcr_root和META-INF資料夾。 這些資料夾包含自訂錯誤訊息所需的CSS和.JS檔案。
 
 [取得檔案](assets/customerrormanager-1.0-snapshot.zip)
 
-### 自定義錯誤消息的位置  {#customizing-the-position-of-error-messages-nbsp}
+### 自訂錯誤訊息的位置  {#customizing-the-position-of-error-messages-nbsp}
 
-要自定義錯誤消息的位置，請添加 &lt;div> 標籤每個錯誤和警告欄位，定位 &lt;div> 在左側或右側添加標籤，並在 &lt;div> 標籤。 有關詳細步驟，請參閱下面列出的步驟：
+若要自訂錯誤訊息的位置，請新增 &lt;div> 標籤每個錯誤和警告欄位，將 &lt;div> 標籤貼上，並將css樣式套用至 &lt;div> 標籤之間。 如需詳細步驟，請參閱下列程式：
 
-1. 導航到 `CustomErrorManager-1.0-SNAPSHOT`資料夾並開啟 `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` 的子菜單。
-1. 開啟 `customErrorManager.js` 檔案。 的 `markError` 檔案中的函式接受以下參數：
+1. 導覽至 `CustomErrorManager-1.0-SNAPSHOT`資料夾並開啟 `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` 資料夾。
+1. 開啟 `customErrorManager.js` 檔案進行編輯。 此 `markError` 函式接受下列引數：
 
    |  |  |
    |---|---|
-   | jqWidget | jqWidget是小部件的句柄。 |
-   | msg | 包含錯誤消息 |
-   | 類型 | 指示是錯誤還是警告 |
+   | jqWidget | jqWidget是Widget的控制代碼。 |
+   | msg | 包含錯誤訊息 |
+   | 類型 | 表示這是錯誤或警告 |
 
-1. 在開箱後的實現中，欄位右側出現錯誤消息。 要使錯誤消息顯示在頂部，請使用以下代碼。
+1. 在開箱即用的實作中，錯誤訊息會顯示在欄位的右側。 若要讓錯誤訊息顯示在頂端，請使用下列程式碼。
 
    ```javascript
    markError: function (jqWidget, msg, type) {
@@ -76,21 +76,21 @@ ht-degree: 0%
            },
    ```
 
-1. 保存並關閉檔案。
-1. 導航到 `CustomErrorManager-1.0-SNAPSHOT` 資料夾並建立jcr_root和META-INF資料夾的存檔。 將存檔檔案更名為CustomErrorManager-1.0-SNAPSHOT.zip。
-1. 使用包管理器上載和安裝包。
+1. 儲存並關閉檔案。
+1. 導覽至 `CustomErrorManager-1.0-SNAPSHOT` 資料夾並建立jcr_root和META-INF資料夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
+1. 使用套件管理器來上傳及安裝套件。
 
-## 顯示多個欄位的錯誤消息  {#display-error-messages-for-multiple-fields-nbsp}
+## 顯示多個欄位的錯誤訊息  {#display-error-messages-for-multiple-fields-nbsp}
 
-使用附加的包同時顯示所有欄位的錯誤消息。 要顯示單條錯誤消息，請使用預設配置檔案。
+使用附加的套件同時顯示所有欄位的錯誤訊息。 若要顯示單一錯誤訊息，請使用預設設定檔。
 
-### 自定義錯誤消息的外觀。  {#customizing-the-appearance-of-error-messages-nbsp}
+### 自訂錯誤訊息的外觀。  {#customizing-the-appearance-of-error-messages-nbsp}
 
-1. 導航到etc\clientlibs\mf-custom-error-manager\CustomErrorManager\css folder。
+1. 導覽至etc\clientlibs\mf-custom-error-manager\CustomErrorManager\css資料夾。
 
-1. 開啟檔案sample.css進行編輯。css檔案包含2個id- #customError和#customWarning。 可以使用這些ID更改各種屬性，如顏色、字型大小等。
+1. 開啟檔案sample.css進行編輯。css檔案包含2個ID：#customError、#customWarning。 您可以使用這些ID來變更各種屬性，例如顏色、字型大小等。
 
-   使用以下代碼更改錯誤/警告消息的字型大小和顏色。
+   使用下列程式碼來變更錯誤/警告訊息的字型大小和顏色。
 
    ```css
    #customError {
@@ -114,16 +114,16 @@ ht-degree: 0%
    Save the changes.
    ```
 
-1. 保存並關閉檔案。
-1. 導航到CustomErrorManager-1.0-SNAPSHOT資料夾，然後建立jcr_root和META-INF資料夾的存檔檔案。 將存檔檔案更名為CustomErrorManager-1.0-SNAPSHOT.zip。
-1. 使用包管理器上載和安裝包。
+1. 儲存並關閉檔案。
+1. 瀏覽至CustomErrorManager-1.0-SNAPSHOT資料夾，並建立jcr_root和META-INF資料夾的封存。 將封存重新命名為CustomErrorManager-1.0-SNAPSHOT.zip。
+1. 使用套件管理器來上傳及安裝套件。
 
-## 使用新配置檔案渲染窗體。  {#render-the-form-with-the-new-profile-nbsp}
+## 使用新設定檔轉譯表單。  {#render-the-form-with-the-new-profile-nbsp}
 
-現在，html5表單使用預設配置檔案：https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location=&quot;&quot;>&amp;模板=&lt;name of=&quot;&quot; the=&quot;&quot; xdp=&quot;&quot;>
+html5表單在開箱即用地使用預設設定檔：https://&lt;server>/content/xfaforms/profiles/default.html？contentRoot=&lt;xdp location=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; the=&quot;&quot; xdp=&quot;&quot;>
 
-要查看包含自定義錯誤消息的表單，請呈現包含錯誤配置檔案的表單：https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location=&quot;&quot;>&amp;模板=&lt;name of=&quot;&quot; the=&quot;&quot; xdp=&quot;&quot;>
+若要檢視含有自訂錯誤訊息的表單，請使用錯誤設定檔轉譯表單： https://&lt;server>/content/xfaforms/profiles/error.html？contentRoot=&lt;xdp location=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; the=&quot;&quot; xdp=&quot;&quot;>
 
 >[!NOTE]
 >
->附加的軟體包安裝錯誤配置檔案。
+>附加的套件會安裝錯誤設定檔。

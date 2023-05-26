@@ -1,6 +1,6 @@
 ---
-title: 準備資產以進行翻譯
-description: 建立語言根資料夾以準備翻譯資產以支援多語言資產。
+title: 準備要翻譯的資產
+description: 建立語言根資料夾以準備要翻譯的資產以支援多語言資產。
 contentOwner: AG
 role: User, Admin
 feature: Projects
@@ -12,15 +12,15 @@ ht-degree: 1%
 
 ---
 
-# 準備資產以進行翻譯 {#preparing-assets-for-translation}
+# 準備要翻譯的資產 {#preparing-assets-for-translation}
 
-多語言資產是指使用多種語言的二進位檔案、元資料和標籤的資產。 通常，資產的二進位檔案、元資料和標籤以一種語言存在，然後翻譯成其他語言以用於多語言項目。
+多語言資產是指具有多語言二進位檔案、中繼資料和標籤的資產。 通常，資產的二進位檔案、中繼資料和標籤會以一種語言存在，然後會翻譯成其他語言以用於多語言專案。
 
-在 [!DNL Adobe Experience Manager Assets]，多語言資產包含在資料夾中，其中每個資料夾包含不同語言的資產。
+在 [!DNL Adobe Experience Manager Assets]，多語言資產會包含在資料夾中，其中每個資料夾都包含不同語言的資產。
 
-每個語言資料夾都稱為語言副本。 語言副本的根資料夾（稱為語言根）標識語言副本中內容的語言。 比如說， */content/dam/it* 是義大利語副本的義大利語根。 語言副本必須使用 [正確配置的語言根](preparing-assets-for-translation.md#creating-a-language-root) 這樣，在執行源資產的翻譯時，就能找到正確的語言。
+每個語言資料夾都稱為語言副本。 語言副本的根資料夾（稱為語言根）可識別語言副本中內容的語言。 例如， */content/dam/it* 是義大利文語言副本的義大利文語言根。 語言副本必須使用 [已正確設定的語言根目錄](preparing-assets-for-translation.md#creating-a-language-root) 以便在翻譯來源資產時鎖定正確的語言。
 
-您最初為其添加資產的語言副本是語言主要。 主要語言是翻譯成其他語言的源。 一個示例資料夾層次結構包括多個語言根：
+您最初新增資產的語言副本為主要語言。 主要語言是翻譯成其他語言的來源。 範例資料夾階層包含數個語言根：
 
 ```shell
 /content
@@ -34,38 +34,38 @@ ht-degree: 1%
         |- zh
 ```
 
-執行以下步驟以準備資產以進行翻譯：
+執行以下步驟來準備要翻譯的資產：
 
-1. 建立語言主語的語言根。 例如，示例資料夾層次結構中英文副本的語言根為 `/content/dam/en`。 確保根據中的資訊正確配置語言根 [建立語言根](preparing-assets-for-translation.md#creating-a-language-root)。
+1. 建立主要語言的語言根。 例如，範例資料夾階層中英文副本的語言根為 `/content/dam/en`. 請確定已根據中的資訊正確設定語言根 [建立語言根](preparing-assets-for-translation.md#creating-a-language-root).
 
-1. 將資源添加到您的語言主語。
-1. 建立需要語言副本的每個目標語言的語言根。
+1. 將資產新增至您的主要語言。
+1. 建立您需要語言副本的每個目標語言的語言根。
 
 ## 建立語言根 {#creating-a-language-root}
 
-要建立語言根，請建立一個資料夾，並使用ISO語言代碼作為「名稱」屬性的值。 在建立語言根目錄後，可以在語言根目錄的任何級別建立語言副本。
+若要建立語言根，請建立資料夾，並使用ISO語言代碼作為Name屬性的值。 建立語言根後，您可以在語言根內的任何層級建立語言副本。
 
-例如，示例層次結構的義大利語語言副本的根頁具有 `it` 名稱屬性。 「名稱」屬性用作儲存庫中資產節點的名稱，因此確定資產的路徑。(`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
+例如，範例階層的義大利文語言副本的根頁面有 `it` 作為Name屬性。 Name屬性會用作存放庫中資產節點的名稱，從而決定資產的路徑。(`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
 
-1. 從 [!DNL Assets] 控制台，按一下 **[!UICONTROL 建立]** 選擇 **[!UICONTROL 資料夾]** 的子菜單。
+1. 從 [!DNL Assets] 主控台，按一下 **[!UICONTROL 建立]** 並選擇 **[!UICONTROL 資料夾]** 功能表中的。
 
    ![建立資料夾](assets/Create-folder.png)
 
-1. 在 **[!UICONTROL 名稱]** 欄位鍵入格式為 `<language-code>`。
+1. 在 **[!UICONTROL 名稱]** 欄位輸入國家/地區代碼，格式為 `<language-code>`.
 
-   ![在資料夾中添加語言代碼](assets/Add-language-code-in-folder.png)
+   ![在資料夾中新增語言代碼](assets/Add-language-code-in-folder.png)
 
-1. 按一下&#x200B;**[!UICONTROL 建立]**。語言根在 [!DNL Assets] 控制台。
+1. 按一下&#x200B;**[!UICONTROL 建立]**。語言根建立於 [!DNL Assets] 主控台。
 
-## 查看語言根 {#viewing-language-roots}
+## 檢視語言根 {#viewing-language-roots}
 
-[!DNL Experience Manager] 介面提供 **[!UICONTROL 引用]** 顯示在中建立的語言根清單的面板 [!DNL Assets]。
+[!DNL Experience Manager] 介面提供 **[!UICONTROL 引用]** 顯示已在其中建立的語言根目錄的面板 [!DNL Assets].
 
-1. 在 [!DNL Assets] 控制台，選擇要為其建立語言副本的語言主要版本。
-1. 從左滑軌中，選擇 **[!UICONTROL 引用]** 選項 [!UICONTROL 引用] 的子菜單。
+1. 在 [!DNL Assets] 控制檯中，選取您要建立語言副本的主要語言。
+1. 從左側邊欄中選取 **[!UICONTROL 引用]** 開啟 [!UICONTROL 參考資料] 窗格。
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
-1. 在「引用」窗格中，按一下 **[!UICONTROL 語言副本]**。 的 [!UICONTROL 語言副本] 面板顯示資產的語言副本。
+1. 在「參照」窗格中，按一下 **[!UICONTROL 語言副本]**. 此 [!UICONTROL 語言副本] 面板會顯示資產的語言副本。
 
    ![語言副本](assets/lang-copy2.png)

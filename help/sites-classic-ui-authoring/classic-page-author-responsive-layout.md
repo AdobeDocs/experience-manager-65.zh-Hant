@@ -1,6 +1,6 @@
 ---
-title: 響應式佈局
-description: 儘管佈局容器元件在標準UI中可用，但其全部功能僅在啟用觸摸的UI中可用且受支援。
+title: 回應式佈局
+description: 雖然「版面」容器元件可在傳統UI中使用，但其完整功能僅在觸控式UI中提供並支援。
 uuid: 203c7491-ce0e-49fc-ad81-1697325b3d8c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -19,4 +19,4 @@ ht-degree: 3%
 
 >[!CAUTION]
 >
->儘管佈局容器元件在標準UI中可用，但其全部功能僅在啟用觸摸的UI中可用且受支援。 請參閱 [響應佈局](/help/sites-authoring/responsive-layout.md) 中，瞭解更多詳細資訊。
+>雖然「版面」容器元件可在傳統UI中使用，但其完整功能僅在觸控式UI中提供並支援。 請參閱 [回應式佈局](/help/sites-authoring/responsive-layout.md) 如需進一步詳細資訊，請參閱標準撰寫檔案。

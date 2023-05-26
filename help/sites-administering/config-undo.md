@@ -1,7 +1,7 @@
 ---
-title: 為頁面編輯配置撤消
+title: 設定頁面編輯的復原
 seo-title: Configuring Undo for Page Editing
-description: 瞭解如何在中配置「撤消」頁面編輯支AEM持。
+description: 瞭解如何在AEM中設定頁面編輯的還原支援。
 seo-description: Learn how to configure Undo support for page editing in AEM.
 uuid: e5a49587-a2a6-41d5-b449-f7a8f7e4cee6
 contentOwner: Guillaume Carlino
@@ -17,142 +17,142 @@ ht-degree: 0%
 
 ---
 
-# 為頁面編輯配置撤消{#configuring-undo-for-page-editing}
+# 設定頁面編輯的復原{#configuring-undo-for-page-editing}
 
-的 [OSGi服務](/help/sites-deploying/configuring-osgi.md)  **第CQ WCM天撤消配置** ( `com.day.cq.wcm.undo.UndoConfigService`)顯示幾個控制編輯頁面的撤消和重做命令行為的屬性。
+此 [OSGi服務](/help/sites-deploying/configuring-osgi.md)  **Day CQ WCM還原設定** ( `com.day.cq.wcm.undo.UndoConfigService`)會顯示數個屬性，這些屬性控制編輯頁面的還原和重做命令的行為。
 
 ## 預設設定 {#default-configuration}
 
-在標準安裝中，預設設定定義為 `sling:OsgiConfig`節點：
+在標準安裝中，預設設定是在 `sling:OsgiConfig`節點：
 
 `/libs/wcm/core/config.author/com.day.cq.wcm.undo.UndoConfig`
 
-此節點包含 `cq.wcm.undo.whitelist` 和 `cq.wcm.undo.blacklist` 屬性，對於其它屬性，將採用預設值。
+此節點包含 `cq.wcm.undo.whitelist` 和 `cq.wcm.undo.blacklist` 屬性，對於其他屬性，會採用預設值。
 
 >[!CAUTION]
 >
->你 ***必須*** 沒有改變 `/libs` 路徑。
+>您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
 >
->這是因為 `/libs` 在下次升級實例時被覆蓋（在應用修補程式或功能包時很可能被覆蓋）。
+>這是因為 `/libs` 下次升級執行個體時會被覆寫（而您在套用hotfix或feature pack時很可能會被覆寫）。
 
-## 配置撤消和重做 {#configuring-undo-and-redo}
+## 設定還原和重做 {#configuring-undo-and-redo}
 
-您可以為自己的實例配置這些OSGi服務屬性。
+您可以為自己的執行個體設定這些OSGi服務屬性。
 
 >[!NOTE]
 >
->使用時，AEM有幾種方法管理此類服務的配置設定；見 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的子菜單。
+>使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
 
-以下列出Web控制台中顯示的屬性，後跟相應OSGi參數的名稱，以及說明和預設值（如適用）:
+以下列出Web主控台中顯示的屬性，後面接著相對應的OSGi引數名稱，以及說明和預設值（如適用）：
 
 * **啟用**
 ( 
 `cq.wcm.undo.enabled`)
 
-   * **說明**:確定頁面作者是否可以撤消和重做更改。
-   * **預設**: `Selected`
-   * **類型**: `Boolean`
+   * **說明**：決定頁面作者是否可以復原和重做變更。
+   * **預設**： `Selected`
+   * **型別**： `Boolean`
 
 * **路徑**
 ( 
 `cq.wcm.undo.path`)
 
-   * **說明**:保存二進位還原資料的儲存庫路徑。 當作者更改二進位資料（如影像）時，資料的原始版本將保留在此處。 當對二進位資料的更改被撤消時，此二進位撤消資料將恢復到頁面。
-   * **預設**: `/var/undo`
-   * **類型**: `String`
+   * **說明**：用來儲存二進位還原資料的存放庫路徑。 當作者變更二進位資料（例如影像）時，原始版本的資料會保留在這裡。 還原對二進位資料的變更時，此二進位還原資料會還原至頁面。
+   * **預設**： `/var/undo`
+   * **型別**： `String`
 
    >[!NOTE]
    >
-   >預設情況下，只有管理員才能訪問 `/var/undo` 的下界。 作者只有在獲得訪問二進位撤消資料的權限後才能對二進位內容執行撤消和重做操作。
+   >依預設，只有管理員才能存取 `/var/undo` 節點。 作者只有在獲得存取二進位還原資料的許可權後，才能對二進位內容執行還原和重做操作。
 
 * **最小值. 有效性**
 ( 
 `cq.wcm.undo.validity`)
 
-   * **說明**:二進位還原資料儲存的最小時間（以小時為單位）。 在此時間段之後，二進位資料可用於刪除，以節省磁碟空間。
-   * **預設**: `10`
-   * **類型**: `Integer`
+   * **說明**：二進位還原資料的儲存時間下限（小時）。 在此時段後，二進位資料即可刪除，以節省磁碟空間。
+   * **預設**： `10`
+   * **型別**： `Integer`
 
 * **步驟**
 ( 
 `cq.wcm.undo.steps`)
 
-   * **說明**:在撤消歷史記錄中儲存的最大頁操作數。
-   * **預設**: `20`
-   * **類型**: `Integer`
+   * **說明**：儲存在還原記錄中的頁面動作數上限。
+   * **預設**： `20`
+   * **型別**： `Integer`
 
-* **持久性**
+* **持續性**
 ( 
 `cq.wcm.undo.persistence`)
 
-   * **說明**:繼續撤消歷史記錄的類。 提供了兩個持久性類：
+   * **說明**：持續存在復原歷程記錄的類別。 提供兩種持續性類別：
 
-      * `CQ.undo.persistence.WindowNamePersistence`:使用window.name屬性保留歷史記錄。
-      * `CQ.undo.persistence.CookiePersistance`:使用Cookie保留歷史記錄。
-   * **預設**: `CQ.undo.persistence.WindowNamePersistence`
-   * **類型**: `String`
+      * `CQ.undo.persistence.WindowNamePersistence`：使用window.name屬性保留歷史記錄。
+      * `CQ.undo.persistence.CookiePersistance`：使用Cookie保留歷史記錄。
+   * **預設**： `CQ.undo.persistence.WindowNamePersistence`
+   * **型別**： `String`
 
 
-* **持久性模式**
+* **持續性模式**
 ( 
 `cq.wcm.undo.persistence.mode`)
 
-   * **說明**:確定何時保留撤消歷史記錄。 選擇此選項可在每頁編輯後保留撤消歷史記錄。 清除此選項僅在重新載入頁面（例如，用戶導航到其他頁面）時才會持續。
+   * **說明**：決定何時保留還原歷史記錄。 選取此選項可在每次編輯頁面後保留復原歷史記錄。 清除此選項後，只有在發生頁面重新載入時（例如，使用者導覽至其他頁面）才會持續存在。
 
-      保留撤消歷史記錄使用Web瀏覽器資源。 如果用戶的瀏覽器對頁面編輯反應緩慢，請嘗試在重新載入頁面時保留撤消歷史記錄。
+      保留復原歷史記錄會使用網頁瀏覽器資源。 如果您的使用者瀏覽器對頁面編輯的反應很慢，請嘗試在頁面重新載入時保留復原歷史記錄。
 
-   * **預設**: `Selected`
-   * **類型**: `Boolean`
+   * **預設**： `Selected`
+   * **型別**： `Boolean`
 
 * **標籤模式**
 ( 
 `cq.wcm.undo.markermode`)
 
-   * **說明**:指定在撤消或重做發生時用於指示哪些段落受到影響的可視提示。 以下值有效：
+   * **說明**：指定用於指示發生復原或重做時哪些段落受到影響的視覺提示。 下列值有效：
 
-      * 快閃記憶體：段落的選擇指示器暫時閃爍。
-      * 選擇：選擇段落。
-   * **預設**: `flash`
-   * **類型**: `String`
+      * flash：段落的選擇指示器會暫時閃爍。
+      * select：段落已選取。
+   * **預設**： `flash`
+   * **型別**： `String`
 
 
 * **良好的元件**
 ( 
 `cq.wcm.undo.whitelist`)
 
-   * **說明**:要受撤消和重做命令影響的元件清單。 當元件路徑與撤消/重做一起正常工作時，將其添加到此清單。 添加星號(&amp;ast;)以指定一組元件：
+   * **說明**：您希望受復原和重做命令影響的元件清單。 當元件路徑在復原/重做操作中正常運作時，將元件路徑新增至此清單。 附加星號(&amp;ast；)以指定一組元件：
 
-      * 以下值指定基礎文本元件：
+      * 下列值會指定基礎文字元件：
 
          `foundation/components/text`
 
-      * 以下值指定所有基礎元件：
+      * 下列值會指定所有基礎元件：
 
          `foundation/components/*`
-   * 當撤消或重做發出到不在此清單中的元件時，將顯示一條消息，指出該命令可能不可靠。
+   * 當對不在清單中的元件發出復原或重做命令時，會出現一則訊息，指出該命令可能不可靠。
 
-   * **預設**:該屬性填充了許多提供的AEM元件。
-   * **類型**: `String[]`
+   * **預設**：屬性會填入AEM提供的許多元件。
+   * **型別**： `String[]`
 
 
-* **壞元件**
+* **錯誤的元件**
 ( 
 `cq.wcm.undo.blacklist`)
 
-   * **說明**:不想受撤消命令影響的元件和/或元件操作的清單。 使用undo命令添加不能正常操作的元件和元件操作：
+   * **說明**：不想受到復原命令影響的元件及/或元件作業清單。 使用undo命令新增無法正常運作的元件和元件操作：
 
-      * 例如，當不希望元件的任何操作在撤消歷史記錄中時添加元件路徑 `collab/forum/components/post`
-      * 如果希望撤消歷史記錄中省略特定操作，請向路徑追加冒號(:)和操作（例如，其它操作正確運行） `collab/forum/components/post:insertParagraph.`
+      * 例如，當您想要復原歷史記錄中沒有元件的操作時，可以新增元件路徑 `collab/forum/components/post`
+      * 例如，當您想要從復原歷程記錄中省略特定作業時（其他作業可正常運作），請將冒號(：)和作業附加至路徑 `collab/forum/components/post:insertParagraph.`
 
    >[!NOTE]
    >
-   >當某個操作在此清單上時，它仍被添加到撤消歷史記錄中。 用戶無法撤消早於 **錯誤元件** 還原歷史記錄中的操作。
+   >當作業出現在此清單上時，仍會將其新增至復原歷史記錄。 使用者無法復原早於下列時間的操作： **錯誤的元件** 操作。
 
    * 典型操作名稱如下：
 
-      * `insertParagraph`:元件將添加到頁面。
-      * `removeParagraph`:元件將被刪除。
-      * `moveParagraph`:該段落將移到其他位置。
-      * `updateParagraph`:段落屬性已更改。
-   * **預設**:該屬性填充了多個元件操作。
-   * **類型**: `String[]`
+      * `insertParagraph`：元件會新增至頁面。
+      * `removeParagraph`：元件已刪除。
+      * `moveParagraph`：此段落已移至其他位置。
+      * `updateParagraph`：段落屬性已變更。
+   * **預設**：屬性會填入數個元件操作。
+   * **型別**： `String[]`

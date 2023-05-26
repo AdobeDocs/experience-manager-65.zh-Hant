@@ -1,6 +1,6 @@
 ---
 title: RTF 編輯器
-description: 富格文本編輯器是用於將文本內容輸入的基本構造塊AEM。
+description: RTF編輯器是將文字內容輸入至AEM的基本建置區塊。
 uuid: 4bcce45a-e14f-41b7-8c6f-89d1e1bb595c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # RTF 編輯器 {#rich-text-editor}
 
-富格文本編輯器是用於將文本內容輸入的基本構造塊AEM。 它構成了各個組成部分的基礎，包括：
+RTF編輯器是將文字內容輸入至AEM的基本建置區塊。 它構成各種元件的基礎，包括：
 
 * 文字
 * 文字影像
@@ -24,111 +24,111 @@ ht-degree: 1%
 
 ## RTF 編輯器 {#rich-text-editor-1}
 
-WYSIWYG編輯對話框提供了多種功能：
+所見即所得編輯對話方塊提供廣泛的功能：
 
 ![cq55_rte_basicchars](assets/cq55_rte_basicchars.png)
 
 >[!NOTE]
 >
->可用功能可針對單個項目進行配置，因此安裝時可能會有所不同。
+>可用的功能可針對個別專案進行設定，因此安裝時可能會有所不同。
 
 ## 就地編輯 {#in-place-editing}
 
-除了基於對話框的富格文本編輯模式AEM外，還提供了就地編輯模式，該模式允許在文本顯示在頁面佈局中時直接編輯文本。
+除了對話方塊式RTF編輯模式外，AEM還提供就地編輯模式，允許直接編輯顯示在頁面版面中的文字。
 
-在段落上按一下兩次（慢速按兩下）以進入就地編輯模式（元件邊框現在將變為橙色）。
+在段落上按兩下（緩慢連按兩下）以進入就地編輯模式（元件邊框現在將為橘色）。
 
-您將能夠直接編輯頁面上的文本，而不是在對話框窗口內。 只需進行更改，即可自動保存。
+您將能夠直接編輯頁面上的文字，而不是在對話方塊視窗內。 只需進行變更，系統就會自動儲存變更。
 
 ![cq55_rte_inlineediting](assets/cq55_rte_inlineediting.png)
 
 >[!NOTE]
 >
->如果開啟了內容查找器，則帶有RTE格式設定選項的工具欄將顯示在頁籤的頂部（如上所示）。
+>如果您已開啟內容尋找器，則含有RTE格式選項的工具列將顯示在索引標籤的頂端（如上所述）。
 >
->如果內容查找器未開啟，則不會顯示工具欄。
+>如果內容尋找器未開啟，則不會顯示工具列。
 
-當前，已為由 **文本** 和 **標題** 元件。
+目前，系統已為產生的頁面元素啟用就地編輯模式。 **文字** 和 **標題** 元件。
 
 >[!NOTE]
 >
->的 [!UICONTROL 標題] 元件設計為包含不帶換行符的短文本。 在「就地編輯」模式下編輯標題時，輸入換行符將開啟新標題 **文本** 下的元件。
+>此 [!UICONTROL 標題] 元件設計為包含不含分行符號的簡短文字。 在「就地編輯」模式下編輯標題時，輸入分行符號將會開啟新的 **文字** 標題下方的元件。
 
-## 富格文本編輯器的功能 {#features-of-the-rich-text-editor}
+## RTF編輯器的功能 {#features-of-the-rich-text-editor}
 
-富格文本編輯器提供了一系列功能，這些功能 [取決於配置](/help/sites-administering/rich-text-editor.md) 的下界。 這些功能可用於觸摸優化和經典用戶介面。
+RTF編輯器提供了一系列功能，包括 [視設定而定](/help/sites-administering/rich-text-editor.md) 個別元件的ID。 這些功能適用於觸控最佳化的UI和傳統UI。
 
 ### 基本字元格式 {#basic-character-formats}
 
 ![](do-not-localize/cq55_rte_basicchars.png)
 
-在此，您可以將格式設定應用於選定（突出顯示）的字元；一些選項還有短鍵：
+您可以在此處將格式套用至您選取（反白顯示）的字元；有些選項也有快捷鍵：
 
 * 粗體(Ctrl-B)
 * 斜體(Ctrl-I)
-* 下划線(Ctrl-U)
+* 底線(Ctrl-U)
 * 下標
 * 上標
 
 ![cq55_rte_basicchars_use](assets/cq55_rte_basicchars_use.png)
 
-所有操作都以切換方式進行，因此重新選擇將刪除格式。
+所有內容都會以切換方式運作，因此重新選取會移除格式。
 
-### 預定義樣式和格式 {#predefined-styles-and-formats}
+### 預先定義的樣式和格式 {#predefined-styles-and-formats}
 
-![cq55_rte_stylesparaph](assets/cq55_rte_stylesparagraph.png)
+![cq55_rte_stylesparagraph](assets/cq55_rte_stylesparagraph.png)
 
-您的安裝可包括預定義的樣式和格式。 這些可用於 **[!UICONTROL 樣式]** 和 **[!UICONTROL 格式]** 下拉清單，並可應用於您選擇的文本。
+您的安裝可包含預先定義的樣式和格式。 這些功能可搭配 **[!UICONTROL 樣式]** 和 **[!UICONTROL 格式]** 下拉式清單，並可套用至您已選取的文字。
 
-樣式可應用於特定字串（與CSS相關的樣式）:
+樣式可套用至特定字串（與CSS相關的樣式）：
 
 ![cq55_rte_styles_use](assets/cq55_rte_styles_use.png)
 
-雖然格式應用於整個文本段落(格式基於HTML):
+而格式會套用至整個文欄位落(格式是以HTML為基礎)：
 
 ![cq55_rte_paragraph_use](assets/cq55_rte_paragraph_use.png)
 
-只能更改特定格式(預設值為 **[!UICONTROL 段落]**)。
+特定格式只能變更(預設為 **[!UICONTROL 段落]**)。
 
-可以刪除樣式；將游標置於已應用樣式的文本中，然後按一下「刪除」表徵圖：
+可以移除樣式；將游標置於已套用樣式的文字內，然後按一下移除圖示：
 
 >[!CAUTION]
 >
->不要實際重新選擇已應用樣式或表徵圖將被停用的任何文本。
+>實際上不要重新選取已套用樣式的文字，否則圖示會停用。
 
-### 剪切、複製、貼上 {#cut-copy-paste}
+### 剪下、複製、貼上 {#cut-copy-paste}
 
 ![](do-not-localize/cq55_rte_cutcopypaste.png)
 
-標準函式 **[!UICONTROL 剪切]** 和 **[!UICONTROL 複製]** 的雙曲餘切值。 幾種 **[!UICONTROL 貼上]** 以迎合不同格式。
+的標準函式 **[!UICONTROL 剪下]** 和 **[!UICONTROL 複製]** 可用。 幾種口味 **[!UICONTROL 貼上]** 提供以滿足不同格式的需求。
 
-* 剪切(Ctrl-X)
+* 剪下(Ctrl-X)
 * 複製(Ctrl-C)
-* 貼上這是元件的預設貼上機制(Ctrl-V);當出廠時，此配置將 [!UICONTROL 從Word貼上]。
+* 貼上這是元件的預設貼上機制(Ctrl-V)；當現成安裝時，此機制會設定為 [!UICONTROL 從Word貼上].
 
-* 貼上為文本：刪除所有樣式和格式以僅貼上純文字檔案。
+* 貼上成文字：將所有的樣式和格式都刪除，只貼上純文字。
 
-* 從Word貼上：此操作將內容貼上為HTML（帶有一些必要的重新格式化）。
+* 從Word貼上：這樣會將內容貼上為HTML（包含一些必要的重新格式化）。
 
-### 撤消，重做 {#undo-redo}
+### 還原，重做 {#undo-redo}
 
 ![](do-not-localize/cq55_rte_undoredo.png)
 
-AEM按時間順序保存當前元件中最後50個操作的記錄。 如果需要，這些操作可以嚴格按順序撤消（然後重做）。
+AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有需要，這些動作可以嚴格順序復原（然後重做）。
 
 >[!CAUTION]
 >
->該歷史記錄僅保存為當前編輯會話。 每次開啟元件進行編輯時，都會重新啟動它。
+>歷史記錄僅會保留目前的編輯工作階段。 每次開啟元件進行編輯時，都會重新啟動它。
 
 >[!NOTE]
 >
->50是預設的任務數。 這可能與您的安裝不同。
+>預設任務數為50。 您的安裝可能會有所不同。
 
 ### 對齊方式 {#alignment}
 
 ![](do-not-localize/cq55_rte_alignment.png)
 
-文本可以左對齊、居中對齊或右對齊。
+文字可以靠左、置中或靠右對齊。
 
 ![cq55_rte_alignment_use](assets/cq55_rte_alignment_use.png)
 
@@ -136,7 +136,7 @@ AEM按時間順序保存當前元件中最後50個操作的記錄。 如果需�
 
 ![](do-not-localize/cq55_rte_indent.png)
 
-可以增加或減少段落的縮進。 選定段落將進行縮進，輸入的任何新文本將保留當前縮進級別。
+段落的縮排可以增加或減少。 所選段落將縮排，輸入的任何新文字將保留目前的縮排層級。
 
 ![cq55_rte_indent_use](assets/cq55_rte_indent_use.png)
 
@@ -144,11 +144,11 @@ AEM按時間順序保存當前元件中最後50個操作的記錄。 如果需�
 
 ![](do-not-localize/cq55_rte_lists.png)
 
-可以在文本中建立項目符號清單和編號清單。 選擇清單類型並開始鍵入或突出顯示要轉換的文本。 在這兩種情況下，行源都將啟動新清單項。
+專案符號和編號清單都可以在文字中建立。 選取清單型別並開始鍵入或反白要轉換的文字。 在這兩種情況下，換行字元都會開始新的清單專案。
 
-嵌套清單可通過縮進一個或多個清單項來實現。
+巢狀清單可以透過縮排一個或多個清單專案來達成。
 
-只需將游標定位在清單中，然後選擇其它樣式，即可更改清單的樣式。 子清單也可具有與包含清單不同的樣式。 建立子清單後（通過縮排）即可應用此選項。
+只需將游標置於清單內，然後選取其他樣式，即可變更清單的樣式。 子清單也可以有與包含清單不同的樣式。 一旦建立子清單後（透過縮排），即可套用此選項。
 
 ![cq55_rte_lists_use](assets/cq55_rte_lists_use.png)
 
@@ -156,27 +156,27 @@ AEM按時間順序保存當前元件中最後50個操作的記錄。 如果需�
 
 ![](do-not-localize/cq55_rte_links.png)
 
-通過突出顯示所需文本，然後按一下超連結表徵圖，可生成指向URL的連結（位於網站或外部位置）:
+反白必要文字，然後按一下超連結圖示，會產生指向URL的連結（位於您的網站內或外部位置）：
 
 ![](do-not-localize/chlimage_1-9.png)
 
-通過對話框可以指定目標URL;還有是否應該在新窗口中開啟。
+對話方塊可讓您指定目標URL，以及是否應在新視窗中開啟。
 
 ![cq55_rte_link_use](assets/cq55_rte_link_use.png)
 
 您可以：
 
-* 直接鍵入URI
-* 使用網站圖選擇網站內的頁面
-* 輸入URI，然後追加目標錨點；例如 `www.TargetUri.org#AnchorName`
-* 僅輸入錨點（以引用「當前頁」）;比如說， `#anchor`
-* 在內容查找器中搜索頁面，然後將頁面表徵圖拖放到「超連結」對話框中
+* 直接輸入URI
+* 使用網站地圖在您的網站內選取頁面
+* 輸入URI，然後附加目標錨點；例如。 `www.TargetUri.org#AnchorName`
+* 僅輸入錨點（參照「目前頁面」）；例如， `#anchor`
+* 在內容尋找器中搜尋頁面，然後將頁面圖示拖放至「超連結」對話方塊中
 
 >[!NOTE]
 >
->URI可以優先於為安裝配置的任何協定。 在標準安裝中， `https://`。 `ftp://`, `mailto:`。 未為安裝配置的協定將被拒絕，並標籤為無效。
+>URI可附加任何針對您的安裝所設定的通訊協定。 在標準安裝中，這些是 `https://`， `ftp://`、和 `mailto:`. 未針對您的安裝設定的通訊協定將被拒絕並標籤為無效。
 
-要斷開連結位置，請在連結文本中的任意位置按一下 [!UICONTROL 取消連結] 表徵圖：
+若要中斷連結位置，將游標置於連結文字中的任何位置，然後按一下 [!UICONTROL 取消連結] 圖示：
 
 ![](do-not-localize/chlimage_1-10.png)
 
@@ -184,215 +184,215 @@ AEM按時間順序保存當前元件中最後50個操作的記錄。 如果需�
 
 ![](do-not-localize/cq55_rte_anchor.png)
 
-通過定位游標或選擇某些文本，可以在文本中的任意位置建立錨點。 然後按一下 **錨點** 表徵圖開啟對話框。
+您可以透過定位游標或選取某些文字，在文字內的任何位置建立錨點。 然後按一下 **錨點** 圖示以開啟對話方塊。
 
-輸入錨點的名稱，然後按一下 **確定** 來保存。
+輸入錨點的名稱，然後按一下 **確定** 以儲存。
 
 ![cq55_rte_anchor_use](assets/cq55_rte_anchor_use.png)
 
-在編輯元件時顯示錨點，現在可在目標內用於連結。
+當編輯元件時會顯示錨點，且現在可以在連結的目標中使用。
 
 ![chlimage_1-104](assets/chlimage_1-104.png)
 
-### 查找和替換 {#find-and-replace}
+### 尋找和取代 {#find-and-replace}
 
 ![](do-not-localize/cq55_rte_findreplace.png)
 
-AEM提供 **查找** 和 **替換** （查找和替換）函式。
+AEM同時提供 **尋找** 和 **Replace** （尋找和取代）函式。
 
-都有 **查找下一個** 按鈕，將選定控制項在Tab鍵次序中下移一個位置。 還可以指定是否需要匹配大小寫（上/下）。
+兩者都有 **尋找下一個** 按鈕來搜尋所指定文字的開啟元件。 您也可以指定是否需要比對大小寫（大/小）。
 
-搜索將始終從文本中的當前游標位置開始。 當到達元件的結尾時，將顯示一條消息，通知您下一個搜索操作將從頂部開始。
+搜尋一律會從文字內目前的游標位置開始。 到達元件結尾時，會出現一則訊息，通知您下一個搜尋操作將從頂部開始。
 
 ![cq55_rte_find_use](assets/cq55_rte_find_use.png)
 
-的 **替換** 選項 **查找**，則 **替換** 具有指定文本的單個實例，或 **全部替換** 當前元件中的實例。
+此 **Replace** 選項可讓您 **尋找**，則 **Replace** 具有指定文字的個別執行個體，或 **全部取代** 目前元件中的例證。
 
 ![cq55_rte_findreplace_use](assets/cq55_rte_findreplace_use.png)
 
 ### 影像 {#images}
 
-可以從內容查找器中拖動影像，以將其添加到文本中。
+您可以從內容尋找器拖曳影像，以將影像新增至文字。
 
 ![cq55_rte_image_use](assets/cq55_rte_image_use.png)
 
 >[!NOTE]
 >
->還提AEM供專用元件，用於更詳細的映像配置。 例如 **影像** 和 **文本影像** 元件可用。
+>AEM也提供專門的元件，以提供更詳細的影像設定。 例如 **影像** 和 **文字影像** 元件可供使用。
 
-### 拼寫檢查 {#spelling-checker}
+### 拼字檢查 {#spelling-checker}
 
 ![](do-not-localize/cq55_rte_spellchecker.png)
 
-拼寫檢查器將檢查當前元件中的所有文本。
+拼字檢查程式會檢查目前元件中的所有文字。
 
-將突出顯示任何不正確的拼寫：
+任何錯誤的拼字都會反白顯示：
 
 ![cq55_rte_spellchecker_use](assets/cq55_rte_spellchecker_use.png)
 
 >[!NOTE]
 >
->拼寫檢查器將通過獲取子樹的語言屬性或從URL中提取語言來使用網站的語言。 例如 `en` 分支將被檢查， `de` 德語分店。
+>拼字檢查程式會使用子樹狀結構的language屬性或從URL擷取語言，以在網站的語言中運作。 例如 `en` 將檢查分支的英文和 `de` 德文分支。
 
-### 表 {#tables}
+### 表格 {#tables}
 
-兩個表均可用：
+表格可供兩種方式使用：
 
 * 作為 **表格** 元件
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
-* 從 **文本** 元件
+* 從 **文字** 元件
 
    ![](do-not-localize/chlimage_1-11.png)
 
    >[!NOTE]
    >
-   >儘管RTE中提供了表，但建議使用 **表格** 元件。
+   >雖然RTE中已有表格，但建議您使用 **表格** 建立表格時的元件。
 
-在 **文本** 和 **表格** 元件表功能可通過在表內按一下的上下文菜單（通常是滑鼠右鍵）獲得；例如：
+在 **文字** 和 **表格** 元件表格功能可透過在表格內按一下前後關聯選單（通常是按滑鼠右鍵）來使用；例如：
 
 ![cq55_rte_tablemenu](assets/cq55_rte_tablemenu.png)
 
 >[!NOTE]
 >
->在 **表格** 此外，還可使用專用工具欄，包括各種標準的富格文本編輯器函式，以及表特定函式的子集。
+>在 **表格** 元件外，也提供專門的工具列，包括各種標準RTF編輯器功能，以及表格特定功能的子集。
 
-表的特定函式包括：
+表格的特定功能包括：
 
-* [表屬性](#table-properties)
-* [單元格屬性](#cell-properties)
-* [添加或刪除行](#add-or-delete-rows)
-* [添加或刪除列](#add-or-delete-columns)
-* [選擇整行或列](#selecting-entire-rows-or-columns)
-* [合併單元格](#merge-cells)
+* [表格屬性](#table-properties)
+* [儲存格屬性](#cell-properties)
+* [新增或刪除列](#add-or-delete-rows)
+* [新增或刪除欄](#add-or-delete-columns)
+* [選取整列或整欄](#selecting-entire-rows-or-columns)
+* [合併儲存格](#merge-cells)
 * [分割儲存格](#split-cells)
-* [嵌套表](#creating-nested-tables)
-* [刪除表](#remove-table)
+* [巢狀表格](#creating-nested-tables)
+* [移除表格](#remove-table)
 
-#### 表屬性 {#table-properties}
+#### 表格屬性 {#table-properties}
 
 ![cq55_rte_tableproperties_icon](assets/cq55_rte_tableproperties_icon.png)
 
-在按一下 **確定** 保存：
+在按一下之前，可以設定表格的基本屬性 **確定** 若要儲存：
 
 ![cq55_rte_tableproperties_dialog](assets/cq55_rte_tableproperties_dialog.png)
 
-* **寬度**:表的總寬度。
+* **寬度**：表格的總寬度。
 
-* **高度**:表的總高度。
+* **高度**：表格的總高度。
 
-* **邊框**:表邊框的大小。
+* **邊框**：表格邊框的大小。
 
-* **單元格填充**:這將定義單元格內容與其邊框之間的空白。
+* **儲存格邊距**：這會定義儲存格內容與其邊界之間的空白字元。
 
-* **單元格間距**:這定義了單元格之間的距離。
+* **儲存格間距**：這會定義儲存格之間的距離。
 
 >[!NOTE]
 >
->「寬度」和「高度」等少數單元格屬性可定義為像素或百分比。
+>有些儲存格屬性（例如「寬度」和「高度」）可定義為畫素或百分比。
 
 >[!CAUTION]
 >
->Adobe建議您為表定義寬度。
+>Adobe建議您為表格定義寬度。
 
-#### 單元格屬性 {#cell-properties}
+#### 儲存格屬性 {#cell-properties}
 
 ![cq55_rte_cellproperties_icon](assets/cq55_rte_cellproperties_icon.png)
 
-可以配置特定單元格或一系列單元格的屬性：
+可以設定特定儲存格或一系列儲存格的屬性：
 
 ![cq55_rte_cellproperties_dialog](assets/cq55_rte_cellproperties_dialog.png)
 
 * **寬度**
 * **高度**
 * **水準對齊**  — 左、中或右
-* **垂直對齊**  — 上、中、下或基線
-* **單元格類型** — 資料或標題
-* **應用於：** 單個單元格，整行，整列
+* **垂直對齊**  — 頂端、中間、底部或基準線
+* **儲存格型別** — 資料或標題
+* **套用至：** 單一儲存格、整列、整欄
 
-#### 添加或刪除行 {#add-or-delete-rows}
+#### 新增或刪除列 {#add-or-delete-rows}
 
 ![cq55_rte_rows](assets/cq55_rte_rows.png)
 
-行可以在當前行的上方或下方添加。
+可在目前列上方或下方新增列。
 
-也可以刪除當前行。
+也可以刪除目前列。
 
-#### 添加或刪除列 {#add-or-delete-columns}
+#### 新增或刪除欄 {#add-or-delete-columns}
 
 ![cq55_rte_columns](assets/cq55_rte_columns.png)
 
-列可以添加到當前列的左側或右側。
+欄可以新增到目前欄的左側或右側。
 
-也可以刪除當前列。
+也可以刪除目前欄。
 
-#### 選擇整行或列 {#selecting-entire-rows-or-columns}
+#### 選取整列或整欄 {#selecting-entire-rows-or-columns}
 
 ![chlimage_1-106](assets/chlimage_1-106.png)
 
-選擇整個當前行或列。 然後可以使用特定操作（例如合併）。
+選取整個目前列或欄。 然後可以使用特定動作（例如合併）。
 
-#### 合併單元格 {#merge-cells}
+#### 合併儲存格 {#merge-cells}
 
 ![cq55_rte_cellmerge](assets/cq55_rte_cellmerge.png) ![cq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
 
-* 如果選擇了一組單元格，則可以將這些單元格合併為一個單元格。
-* 如果只選擇了一個單元格，則可以將其與單元格合併到右側或下方。
+* 如果您選取了儲存格群組，可以將這些儲存格合併為一個儲存格。
+* 如果您只選取了一個儲存格，則可以將它與右側或下方的儲存格合併。
 
 #### 分割儲存格 {#split-cells}
 
 ![cq55_rte_cellsplit](assets/cq55_rte_cellsplit.png)
 
-選擇單個單元格將其拆分：
+選取要分割的單一儲存格：
 
-* 水準拆分單元格將在當前列中生成當前單元格右側的新單元格。
-* 垂直拆分單元格將在當前單元格下面生成新單元格，但在當前行內。
+* 水準分割儲存格會在目前欄內產生目前儲存格右側的新儲存格。
+* 垂直分割儲存格會在目前儲存格下產生新儲存格，但會在目前列內產生。
 
-#### 建立嵌套表 {#creating-nested-tables}
+#### 建立巢狀表格 {#creating-nested-tables}
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-建立嵌套表將在當前單元格中建立新的自包含表。
+建立巢狀表格時，會在目前儲存格內建立新的獨立表格。
 
 >[!NOTE]
 >
->某些附加行為與瀏覽器相關：
+>某些其他行為取決於瀏覽器：
 >
->* Windows IE:使用Ctrl+主滑鼠按鈕按一下（通常向左）可選擇多個單元格。
->* Firefox:拖動指針以選擇單元格區域。
+>* Windows IE：使用Ctrl+按住滑鼠鍵（通常是左鍵）以選取多個儲存格。
+>* Firefox：拖曳指標以選取儲存格範圍。
 
 
-#### 刪除表 {#remove-table}
+#### 移除表格 {#remove-table}
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
 
-使用選項從 **[!UICONTROL 文本]** 元件。
+使用選項將表格從 **[!UICONTROL 文字]** 元件。
 
 ### 特殊字元 {#special-characters}
 
 ![](do-not-localize/cq55_rte_specialchars.png)
 
-您的富文本編輯器可以使用特殊字元；這些可能因安裝而異。
+RTF編輯器可使用特殊字元；這些字元可能會因您的安裝而異。
 
 ![cq55_rte_specialchars_use](assets/cq55_rte_specialchars_use.png)
 
-使用滑鼠可查看字元的放大版本，然後按一下滑鼠可將其包含在文本的當前位置。
+使用滑鼠懸停來檢視字元的放大版本，然後按一下以將其包含在文字中的目前位置。
 
-### 源編輯模式 {#source-editing-mode}
+### 來源編輯模式 {#source-editing-mode}
 
 ![](do-not-localize/cq55_rte_sourceedit.png)
 
-源編輯模式允許您查看和編輯元件的基礎HTML。
+來源編輯模式可讓您檢視及編輯元件的基礎HTML。
 
-因此，文字是：
+所以文字：
 
 ![cq55_rte_sourcemode_1](assets/cq55_rte_sourcemode_1.png)
 
-在源模式下，將如下所示（通常源較長，因此您必須滾動）:
+在來源模式中看起來會像這樣（來源通常更長，所以您必須捲動）：
 
 ![cq55_rte_sourcemode_2](assets/cq55_rte_sourcemode_2.png)
 
 >[!CAUTION]
 >
->離開源模式時，AEM會進行某些驗證檢查（例如，確保文本正確包含/嵌套在塊中）。 這可能導致對編輯內容進行更改。
+>離開來源模式時，AEM會進行某些驗證檢查（例如，確保文字正確包含/巢狀內嵌在區塊中）。 這可能會導致編輯內容變更。

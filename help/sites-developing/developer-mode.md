@@ -1,7 +1,7 @@
 ---
 title: 開發人員模式
 seo-title: Developer Mode
-description: 開發者模式開啟帶有多個頁籤的側面板，這些頁籤為開發者提供有關當前頁面的資訊
+description: 開發人員模式會開啟一個側面板，其中包含數個標籤，為開發人員提供有關目前頁面的資訊
 seo-description: Developer mode opens a side panel with several tabs that provide a developer with infomation about the current page
 uuid: 8301ab51-93d6-44f9-a813-ba7f03f54485
 contentOwner: Guillaume Carlino
@@ -20,127 +20,127 @@ ht-degree: 2%
 
 # 開發人員模式{#developer-mode}
 
-在中編輯頁AEM面時 [模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) 可用，包括開發人員模式。 這將開啟一個帶有多個頁籤的側面板，這些頁籤為開發人員提供了有關當前頁面的資訊。 這三個頁籤是：
+在AEM中編輯頁面時，有數個 [模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) 可用，包括開發人員模式。 這會開啟一個側面板，其中包含數個標籤，為開發人員提供有關目前頁面的資訊。 三個標籤為：
 
-* **[元件](#components)** 查看結構和效能資訊。
-* **[Test](#tests)** 運行test並分析結果。
-* **[錯誤](#errors)** 看到發生的任何問題。
+* **[元件](#components)** 以檢視結構和效能資訊。
+* **[測試](#tests)** 以執行測試和分析結果。
+* **[錯誤](#errors)** 檢視發生的任何問題。
 
-這些幫助開發人員：
+這些功能可協助開發人員：
 
-* 發現：由哪些頁面組成。
-* 調試：在何處何時發生什麼，這反過來又有助於解決問題。
-* Test:應用程式是否按預期運行。
+* 探索：組成頁面的專案。
+* 偵錯：隨時隨地發生的狀況，進而有助於解決問題。
+* 測試：應用程式的行為是否符合預期。
 
 >[!CAUTION]
 >
 >開發人員模式:
 >
->* 僅在啟用觸摸的UI（編輯頁面時）中可用。
->* 移動設備或案頭上的小窗口上不可用（由於空間限制）。
+>* 僅適用於觸控式UI （編輯頁面時）。
+>* 不適用於行動裝置或桌上型電腦上的小型視窗（因為空間限制）。
    >
-   >   * 當寬度小於1024px時出現此情況。
->* 僅適用於 `administrators` 組。
+   >   * 當寬度小於1024畫素時，就會發生這種情況。
+>* 僅適用於屬於以下群組的使用者： `administrators` 群組。
 
 
 >[!CAUTION]
 >
->開發者模式僅在不使用nosamplecontent運行模式的標準作者實例上可用。
+>開發人員模式僅適用於未使用nosamplecontent執行模式的標準制作執行個體。
 >
->如果需要，可將其配置為使用：
+>如有需要，可將其設定為使用：
 >
->* 關於使用nosamplecontent運行模式的作者實例
->* 發佈實例
+>* 在使用nosamplecontent執行模式的作者執行個體上
+>* 發佈執行個體
 >
->使用後應再次禁用。
+>使用後應再次停用。
 
 >[!NOTE]
 >
 >請參閱：
 >
->* 知識庫文章， [TouchUI問題AEM疑難解答](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以獲取更多提示和工具。
->* Gems會AEM話關於 [AEM 6.0開發模式](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=en)。
+>* 知識庫文章， [疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的提示和工具。
+>* AEM Gems課程關於 [AEM 6.0開發人員模式](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=en).
 >
 
 
 ## 開啟開發人員模式 {#opening-developer-mode}
 
-開發者模式被實現為頁面編輯器的側面板。 要開啟面板，請選擇 **開發人員** 從頁面編輯器工具欄中的模式選擇器：
+開發人員模式會實作為頁面編輯器的側面板。 若要開啟面板，請選取 **開發人員** 從頁面編輯器工具列中的模式選取器：
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
-該面板分為兩個頁籤：
+面板分為兩個標籤：
 
-* **[元件](/help/sites-developing/developer-mode.md#components)**  — 顯示與 [內容樹](/help/sites-authoring/author-environment-tools.md#content-tree) 作者
+* **[元件](/help/sites-developing/developer-mode.md#components)**  — 這個選項會顯示元件樹，類似於 [內容樹狀結構](/help/sites-authoring/author-environment-tools.md#content-tree) 作者
 
-* **[錯誤](/help/sites-developing/developer-mode.md#errors)**  — 出現問題時，將顯示每個元件的詳細資訊。
+* **[錯誤](/help/sites-developing/developer-mode.md#errors)**  — 發生問題時，會顯示每個元件的詳細資料。
 
 ### 元件 {#components}
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
-這顯示一個元件樹，它：
+這顯示一個元件樹狀結構，其中：
 
-* 概述在頁面上呈現的元件和模板鏈（SLY、JSP等）。 樹可以展開，以在層次中顯示上下文。
-* 顯示呈現元件所需的伺服器端計算時間。
-* 允許您展開樹並在樹中選取特定元件。 選擇提供對元件詳細資訊的訪問；例如：
+* 概述在頁面上呈現的元件和範本鏈（SLY、JSP等）。 可展開樹狀結構以顯示階層內的前後關聯。
+* 顯示轉譯元件所需的伺服器端運算時間。
+* 可讓您展開樹狀結構並選取樹狀結構中的特定元件。 選取範圍可讓您存取元件詳細資訊，例如：
 
-   * 儲存庫路徑
-   * 指向指令碼的連結(在CRXDE Lite中訪問)
+   * 存放庫路徑
+   * 指令碼連結(以CRXDE Lite存取)
 
-* 所選元件（在內容流中，用藍色邊框指示）將在內容樹中加亮（反之亦然）。
+* 選取的元件（在內容流程中，以藍色邊框表示）將在內容樹狀結構中反白顯示（反之亦然）。
 
 這有助於：
 
-* 確定並比較每個元件的渲染時間。
-* 查看並瞭解層次結構。
-* 通過查找慢速元件瞭解並改進頁面載入時間。
+* 決定並比較每個元件的演算時間。
+* 檢視並瞭解階層。
+* 找出緩慢的元件，瞭解並改善頁面載入時間。
 
-每個元件條目都可以顯示（例如）:
+每個元件專案可顯示（例如）：
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-* **查看詳細資訊**:指向清單的連結，其中顯示：
+* **檢視詳細資料**：清單的連結，其中顯示：
 
-   * 用於呈現該元件的所有元件指令碼。
-   * 此特定元件的儲存庫內容路徑。
+   * 用於呈現元件的所有元件指令碼。
+   * 此特定元件的存放庫內容路徑。
 
    ![chlimage_1-14](assets/chlimage_1-14.png)
 
-* **編輯指令碼**:連結：
+* **編輯指令碼**：連結：
 
-   * 在CRXDE Lite中開啟元件指令碼。
+   * 以CRXDE Lite開啟元件指令碼。
 
-* 展開元件條目（箭頭）還可顯示：
+* 展開元件專案（箭頭標頭）也可顯示：
 
-   * 所選元件中的層次。
-   * 獨立呈現選定元件的時間、嵌套在其中的任何單個元件以及組合總數。
+   * 所選元件內的階層。
+   * 所選元件的單獨呈現時間、任何巢狀在其中的個別元件以及合併總數。
 
    ![chlimage_1-15](assets/chlimage_1-15.png)
 
 >[!CAUTION]
 >
->某些連結指向以下指令碼 `/libs`。 但是，這些僅供參考，您 **不能** 編輯 `/libs`，因為您所做的任何更改都可能丟失。 這是由於以下事實：無論您何時升級或應用修補程式/功能包，此分支都可能發生更改。 您需要的任何更改都應在 `/apps`，請參閱 [覆蓋和覆蓋](/help/sites-developing/overlays.md)。
+>有些連結會指向下的指令碼 `/libs`. 不過，這些僅供參考，您 **不得** 編輯下的任何專案 `/libs`，因為您所做的任何變更都可能遺失。 這是因為每當您升級或套用Hotfix/Feature Pack時，此分支隨時可能變更。 您所需的任何變更都應該在 `/apps`，請參閱 [覆蓋和覆寫](/help/sites-developing/overlays.md).
 
 ### 錯誤 {#errors}
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-但願 **錯誤** 頁籤將始終為空（如上所示），但當出現問題時，將為每個元件顯示以下詳細資訊：
+希望 **錯誤** 索引標籤一律為空白（如上所述），但發生問題時，會顯示每個元件的下列詳細資料：
 
-* 如果元件將條目寫入錯誤日誌，以及錯誤的詳細資訊，並直接連結到CRXDE Lite中的相應代碼，則會出現警告。
-* 如果元件開啟管理會話，則出現警告。
+* 如果元件將專案寫入錯誤記錄檔，連同錯誤的詳細資訊以及指向CRXDE Lite內適當程式碼的直接連結，會出現警告。
+* 如果元件開啟管理員工作階段，會出現警告。
 
-例如，在調用未定義方法的情況下，將在 **錯誤** 頁籤：
+例如，在呼叫未定義的方法的情況下，產生的錯誤將顯示在 **錯誤** 標籤：
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
-出現錯誤時，「元件」頁籤樹中的元件條目也將用指示符標籤。
+發生錯誤時，「元件」標籤樹狀結構中的元件專案也會標示一個指示器。
 
 ### 測試 {#tests}
 
 >[!CAUTION]
 >
->在AEM6.2中，開發人員模式的測試功能作為獨立工具應用程式重新實施。
+>在AEM 6.2中，開發人員模式的測試功能已重新實作為獨立的工具應用程式。
 >
->有關完整詳細資訊，請參閱 [測試您的UI](/help/sites-developing/hobbes.md)。
+>如需完整詳細資訊，請參閱 [測試您的UI](/help/sites-developing/hobbes.md).

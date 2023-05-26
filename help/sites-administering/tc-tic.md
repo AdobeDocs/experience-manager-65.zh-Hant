@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: 3d1959a1a81293b51257d99d32c9576866c8a308
+source-git-commit: 6dea3a23c70fdb5f07bdf724547e799776002c61
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1553'
 ht-degree: 5%
 
 ---
@@ -107,10 +107,6 @@ Sites屬性可控制執行頁面內容翻譯的方式。
   <tr>
    <td>內容類別</td>
    <td>（僅限機器翻譯）說明您要翻譯之內容的類別。 翻譯內容時，類別可能會影響術語和措辭的選擇。</td>
-  </tr>
-  <tr>
-   <td>翻譯元件字串</td>
-   <td>選取此選項可翻譯與頁面相關聯之元件的元件字串。</td>
   </tr>
   <tr>
    <td>翻譯標記</td>

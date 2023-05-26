@@ -1,6 +1,6 @@
 ---
 title: HTTP2 傳送內容
-description: HTTP/2改進了瀏覽器和伺服器之間的通信方式，允許更快地傳輸資訊，同時降低所需的處理能力。
+description: HTTP/2改善了瀏覽器和伺服器的通訊方式，允許更快速地傳輸資訊，同時減少所需的處理能力。
 uuid: d9deb945-bdf5-4d6b-95c8-8bae4442e618
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -23,79 +23,79 @@ Adobe 很榮幸宣佈推出有助於提升整體效能的 HTTP/2 內容傳送。
 
 >[!NOTE]
 >
->此功能要求您使用與Adobe Experience ManagerDynamic Media捆綁的現成CDN。 此功能不支援任何其他自定義CDN。
+>此功能需要您使用Adobe Experience Manager Dynamic Media隨附的現成可用CDN。 此功能不支援任何其他自訂CDN。
 
-## 什麼是HTTP/2? {#what-is-http}
+## 什麼是HTTP/2？ {#what-is-http}
 
-HTTP/2改進了瀏覽器和伺服器之間的通信方式，允許更快地傳輸資訊，同時減少所需的處理能力。
+HTTP/2改善了瀏覽器和伺服器的通訊方式，允許更快速地傳輸資訊，同時減少所需的處理能力。
 
-以下網站簡單地介紹HTTP/2及其優點：
+以下網站以簡單明瞭的方式說明HTTP/2及其優點：
 
-[您必須瞭解HTTP/2](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
+[您必須瞭解的HTTP/2相關資訊](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
 
-## 轉到HTTP/2進行內容傳遞的主要好處是什麼？ {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
+## 轉移至HTTP/2進行內容傳送的主要優點為何？ {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
-效能改進可能有很大差異。 它基於許多因素，如網站代碼、使用Dynamic Media方式、消費者設備、螢幕和位置。
+效能提升可能大相逕庭。 此量度取決於許多因素，例如您的網站程式碼、您如何使用Dynamic Media、消費者的裝置、畫面和位置。
 
-Adobe自己的測試結果如下：
+Adobe自己的測試產生以下結果：
 
-* 對於影像，響應時間根據設備和瀏覽器而提高7%-28%。 最顯著的效能提升是iOS設備。
-* 對於觀看者，載入時間效能提高了15%。
+* 對於影像，回應時間改善7%至28%，視裝置和瀏覽器而定。 效能提升最顯著的是iOS裝置。
+* 對於檢視器而言，載入時間效能提升了15%。
 
-下面的演示說明了HTTP/1與HTTP/2載入的區別：
+下列示範說明HTTP/1與HTTP/2載入之間的差異：
 
 [https://http2.akamai.com/demo](https://http2.akamai.com/demo)
 
-## 我是否有資格切換到HTTP/2? {#am-i-eligible-to-switch-over-to-http}
+## 我是否符合切換至HTTP/2的資格？ {#am-i-eligible-to-switch-over-to-http}
 
-要使用HTTP/2，必須滿足以下要求：
+若要使用HTTP/2，您必須符合下列要求：
 
-* 對富媒體請求使用安全HTTPS。
-* 將Adobe捆綁的CDN（內容分發網路）用作Dynamic Media許可證的一部分。
-* 使用專用（非公司 — h.assetsadobe#.com）域。
+* 針對您的多媒體請求使用安全HTTPS。
+* 使用Adobe隨附的CDN （內容傳遞網路），作為Dynamic Media授權的一部分。
+* 使用專用（非公司h.assetsadobe#.com）網域。
 
-   如果您已經擁有專用域，則可以通過Adobe客戶支援選擇。
+   如果您已有專屬網域，則可透過Adobe客戶支援選擇加入。
 
-   如果您沒有專用域，Adobe計畫在2018年安排向HTTP/2的過渡。
+   如果您沒有專用網域，Adobe計畫在2018年安排您轉換至HTTP/2。
 
-## 為我的Dynamic Media帳戶啟用HTTP/2的過程是什麼？ {#what-is-the-process-for-enabling-http-for-my-dynamic-media-account}
+## 為我的Dynamic Media帳戶啟用HTTP/2的程式為何？ {#what-is-the-process-for-enabling-http-for-my-dynamic-media-account}
 
-啟動切換到HTTP/2的請求；它不會自動為你完成。
+您起始切換至HTTP/2的要求，但不會自動為您完成。
 
-1. 要切換到HTTP/2，請啟動Adobe客戶支援請求。 請參閱 [開啟支援票證](https://experienceleague.adobe.com/?support-solution=General&amp;lang=en&amp;support-tab=home#support)。
+1. 若要切換至HTTP/2，請啟動Adobe客戶支援請求。 另請參閱 [開啟支援票證](https://experienceleague.adobe.com/?support-solution=General&amp;lang=en&amp;support-tab=home#support).
 
-   1. 在支援請求中提供以下資訊：
+   1. 在您的支援請求中提供下列資訊：
 
-      1. 主要聯繫人姓名，電子郵件，電話。
-      1. 要轉換到HTTP/2的所有域。
-      1. 驗證是否對富媒體請求使用安全HTTPS。
-      1. 驗證您是否通過Adobe使用CDN，並且未通過直接關係進行管理。
-      1. 驗證您是否使用專用域。 如果你使用Dynamic Media，那麼你使用一個專用域。
-   1. 「客戶支援」會根據請求提交的順序將您添加到HTTP/2客戶等待清單。
-   1. 當Adobe準備好處理您的請求時，客戶支援會聯繫您以協調過渡並設定目標日期。
-   1. 完成後將通知您，並可以驗證是否成功轉換到HTTP2。
+      1. 主要連絡人姓名、電子郵件、電話。
+      1. 所有要轉換為HTTP/2的網域。
+      1. 確認您使用安全HTTPS處理多媒體請求。
+      1. 確認您透過Adobe使用CDN，且未透過直接關係進行管理。
+      1. 確認您使用專用網域。 如果您使用Dynamic Media，則請使用專用網域。
+   1. 客戶支援會根據提交請求的順序，將您新增至HTTP/2客戶輪候清單。
+   1. 當Adobe準備好處理您的請求時，客戶支援會聯絡您以協調轉變並設定目標日期。
+   1. 完成後您會收到通知，並可以驗證是否成功轉換到HTTP2。
 
-      由於瀏覽器沒有說明這一事實，因此需要下載擴展。
+      由於瀏覽器未說明此事實，因此必須下載擴充功能。
 
-      對於Firefox和Chrome，有一個名為「HTTP/2和SPDY指示器」的擴展。 瀏覽器僅安全地支援http/2，因此需要調用帶有https的URL來驗證。 如果支援http/2，則擴展以藍色Flash符號和標題「X-Firefox-Spdy」的形式表示：&quot;h2&quot;。
+      Firefox和Chrome有一個名為「HTTP/2和SPDY Indicator」的擴充功能。 瀏覽器僅安全地支援http/2，因此有必要呼叫具有https的URL以進行驗證。 如果支援http/2，擴充功能會以藍色Flash符號和標頭「X-Firefox-Spdy」的形式表示：「h2」。
 
 
-## 我何時可以過渡到HTTP/2? {#when-can-i-expect-to-be-transitioned-over-to-http}
+## 我何時可以轉換為HTTP/2？ {#when-can-i-expect-to-be-transitioned-over-to-http}
 
-請求按客戶支援接收的順序進行處理。
+請求會依客戶支援收到的順序進行處理。
 
 >[!NOTE]
 >
->由於向HTTP/2的過渡涉及清除快取，因此可能有較長的提前期。 因此，一次只能處理少數客戶過渡。
+>由於轉換至HTTP/2的過程涉及清除快取，因此可能會有很長的前置時間。 因此，一次只能處理幾個客戶轉換。
 
-## 轉到HTTP/2有何風險？ {#what-are-the-risks-with-moving-to-http}
+## 移至HTTP/2有何風險？ {#what-are-the-risks-with-moving-to-http}
 
-轉換到HTTP/2會清除CDN上的快取，因為它涉及到移動到新的CDN配置。
+轉換至HTTP/2會清除CDN上的快取，因為它牽涉到移至新的CDN設定。
 
-非快取內容直接命中Adobe的源伺服器，直到重新生成快取。 因此，Adobe計劃一次處理幾個客戶過渡，以便在從原點拉回請求時保持可接受的效能。
+非快取內容會直接點選Adobe的原始伺服器，直到再次重建快取為止。 因此，Adobe計劃一次處理一些客戶轉換，以便在從來源提取請求時維持可接受的效能。
 
-## 如何驗證是否使用HTTP/2激活了URL或網站？ {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
+## 如何驗證URL或網站是否以HTTP/2啟動？ {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-由於瀏覽器沒有說明這一事實，因此需要下載擴展。
+由於瀏覽器未說明此事實，因此必須下載擴充功能。
 
-對於Firefox和Chrome，有一個名為「HTTP/2和SPDY指示器」的擴展。 瀏覽器僅安全地支援http/2，因此需要調用帶有https的URL來驗證。 如果支援http/2，則擴展以藍色Flash符號和標題的形式表示 `X-Firefox-Spdy` : `h2`。
+Firefox和Chrome有一個名為「HTTP/2和SPDY Indicator」的擴充功能。 瀏覽器僅安全地支援http/2，因此有必要呼叫具有https的URL以進行驗證。 如果支援http/2，則會以藍色Flash符號和標頭的形式來表示擴充功能 `X-Firefox-Spdy` ： `h2`.

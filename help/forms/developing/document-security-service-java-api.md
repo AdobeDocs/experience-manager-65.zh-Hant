@@ -1,7 +1,7 @@
 ---
-title: 文檔安全服務JavaAPI快速啟動(SOAP)
+title: Document Security Service JavaAPI快速入門(SOAP)
 seo-title: Document Security Service JavaAPI Quick Start(SOAP)
-description: 文檔安全服務JavaAPI快速啟動(SOAP)
+description: Document Security Service JavaAPI快速入門(SOAP)
 uuid: f3823a95-c8c2-42c8-8edc-3ab8ab4311dc
 contentOwner: admin
 content-type: reference
@@ -17,43 +17,43 @@ ht-degree: 0%
 
 ---
 
-# 文檔安全服務Java API快速啟動(SOAP) {#document-security-service-javaapi-quick-start-soap}
+# Document Security Service Java API快速入門(SOAP) {#document-security-service-javaapi-quick-start-soap}
 
-Java API快速啟動(SOAP)可用於Rights Management服務：
+Java API快速入門(SOAP)適用於Rights Management服務：
 
-[快速啟動（SOAP模式）:使用Java API建立策略](document-security-service-java-api.md#quick-start-soap-mode-creating-a-policy-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API建立原則](document-security-service-java-api.md#quick-start-soap-mode-creating-a-policy-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API修改策略](#quick-start-soap-mode-modifying-a-policy-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API修改原則](#quick-start-soap-mode-modifying-a-policy-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API刪除策略](document-security-service-java-api.md#quick-start-soap-mode-deleting-a-policy-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API刪除原則](document-security-service-java-api.md#quick-start-soap-mode-deleting-a-policy-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API將策略應用於PDF文檔](#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API將原則套用至PDF檔案](#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API從PDF文檔中刪除策略](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API從PDF檔案中移除原則](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API撤消文檔](document-security-service-java-api.md#quick-start-soap-mode-revoking-a-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API撤銷檔案](document-security-service-java-api.md#quick-start-soap-mode-revoking-a-document-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API恢復對已撤消文檔的訪問](document-security-service-java-api.md#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API恢復對已撤銷檔案的存取](document-security-service-java-api.md#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API檢查受策略保護的PDF文檔](document-security-service-java-api.md#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API檢查受原則保護的PDF檔案](document-security-service-java-api.md#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API建立水印](document-security-service-java-api.md#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API建立浮水印](document-security-service-java-api.md#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API修改水印](document-security-service-java-api.md#quick-start-soap-mode-modifying-a-watermark-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API修改浮水印](document-security-service-java-api.md#quick-start-soap-mode-modifying-a-watermark-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API搜索事件](document-security-service-java-api.md#quick-start-soap-mode-searching-for-events-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API搜尋事件](document-security-service-java-api.md#quick-start-soap-mode-searching-for-events-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API從Word文檔中刪除策略](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API從Word檔案中移除原則](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
 
-AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
+AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
 >[!NOTE]
 >
->「Quick Start（快速入門）」位於「Programming withAEM Forms」(與Forms一起寫程式)」中，它基於伺服器作業系統。 但是，如果您使用的是其他作業系統，如UNIX，則用適用作業系統支援的路徑替換Windows特定路徑。 同樣，如果您使用的是另一個J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>「使用AEM Forms進行程式設計」中的「快速入門」是以Forms伺服器作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請以適用的作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速啟動（SOAP模式）:使用Java API建立策略 {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API建立原則 {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
-以下Java代碼示例建立名為 *允許複製*。 將為添加策略的策略集命名 *全局策略集*。 預設情況下，此策略集存在。 (請參閱 [建立策略](/help/forms/developing/protecting-documents-policies.md#creating-policies)。)
+以下Java程式碼範例會建立名為的新原則 *允許複製*. 將原則新增至的原則集已命名 *全域原則集*. 預設存在此原則集。 (請參閱 [建立原則](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
 
 ```java
  /*
@@ -180,9 +180,9 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
  
 ```
 
-## 快速啟動（SOAP模式）:使用Java API修改策略 {#quick-start-soap-mode-modifying-a-policy-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API修改原則 {#quick-start-soap-mode-modifying-a-policy-using-the-java-api}
 
-以下Java代碼示例修改名為 *允許複製* 將離線租用期設定為40天。 (請參閱 [修改策略](/help/forms/developing/protecting-documents-policies.md#modifying-policies)。)
+以下Java程式碼範例會修改名為的原則 *允許複製* 將離線租期設為40天。 (請參閱 [修改原則](/help/forms/developing/protecting-documents-policies.md#modifying-policies).)
 
 ```java
  /*
@@ -281,9 +281,9 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
  }
 ```
 
-## 快速啟動（SOAP模式）:使用Java API刪除策略 {#quick-start-soap-mode-deleting-a-policy-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API刪除原則 {#quick-start-soap-mode-deleting-a-policy-using-the-java-api}
 
-以下Java代碼示例刪除名為 *允許複製*。 (請參閱 [刪除策略](/help/forms/developing/protecting-documents-policies.md#deleting-policies)。)
+以下Java程式碼範例會刪除名為的原則 *允許複製*. (請參閱 [刪除原則](/help/forms/developing/protecting-documents-policies.md#deleting-policies).)
 
 ```java
  /*
@@ -373,9 +373,9 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
  
 ```
 
-## 快速啟動（SOAP模式）:使用Java API將策略應用於PDF文檔 {#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API將原則套用至PDF檔案 {#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api}
 
-以下Java代碼示例應用名為 *允許複製* 到名為 *Loan.pdf*。 將為添加策略的策略集命名 *全局策略集*。 受策略保護的文檔被保存為名為*PolicyProtectedLoanDoc.pdf的PDF檔案。 *(請參閱 [將策略應用於PDF文檔](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents)。)
+以下Java程式碼範例套用名為的原則 *允許複製* 至名為的PDF檔案 *Loan.pdf*. 將原則新增至的原則集已命名 *全域原則集*. 受原則保護的檔案會儲存為名為*PolicyProtectedLoanDoc.pdf的PDF檔案。 *(請參閱 [套用原則至PDF檔案](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
 
 ```java
  /*
@@ -479,9 +479,9 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
  }
 ```
 
-## 快速啟動（SOAP模式）:使用Java API從PDF文檔中刪除策略 {#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API從PDF檔案中移除原則 {#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api}
 
-下面的代碼示例從名為「C.S....」的PDF文檔中刪除策略 *PolicyProtectedLoanDoc.pdf*。 不安全PDF文檔另存為 *unProtectedLoan.pdf*。 (請參閱 [從PDF文檔中刪除策略](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-pdf-documents)。)
+以下程式碼範例會從名為的PDF檔案中移除原則 *PolicyProtectedLoanDoc.pdf*. 不安全的PDF檔案會儲存為 *unProtectedLoan.pdf*. (請參閱 [從PDF檔案中移除原則](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-pdf-documents).)
 
 ```java
  /*
@@ -586,9 +586,9 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
  
 ```
 
-## 快速啟動（SOAP模式）:使用Java API撤消文檔 {#quick-start-soap-mode-revoking-a-document-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API撤銷檔案 {#quick-start-soap-mode-revoking-a-document-using-the-java-api}
 
-以下Java代碼示例撤消名為 *PolicyProtectedLoanDoc.pdf*。 修訂的PDF文檔位於以下URL位置 `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`。 (請參閱 [撤消對文檔的訪問](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents)。)
+以下Java程式碼範例會撤銷名為的受原則保護檔案 *PolicyProtectedLoanDoc.pdf*. 修訂的PDF檔案位於下列URL位置 `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`. (請參閱 [撤銷對檔案的存取權](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents).)
 
 ```java
  /*
@@ -700,9 +700,9 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
  
 ```
 
-## 快速啟動（SOAP模式）:使用Java API檢查受策略保護的PDF文檔 {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API檢查受原則保護的PDF檔案 {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
 
-以下Java代碼示例檢查名為的受策略保護的PDF文檔 *PolicyProtectedLoanDoc.pd* f(請參閱 [檢查策略保護的PDF文檔](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)。)
+以下Java程式碼範例會檢查名為的受原則PDF檔案 *PolicyProtectedLoanDoc.pd* f. (請參閱 [檢查受原則保護的PDF檔案](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).)
 
 ```java
  /*
@@ -818,9 +818,9 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
  
 ```
 
-## 快速啟動（SOAP模式）:使用Java API恢復對已撤消文檔的訪問 {#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API恢復對已撤銷檔案的存取 {#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api}
 
-以下Java代碼示例重新對名為「Java」的已撤消PDF文檔的訪問 *PolicyProtectedLoanDoc.pdf*。 (請參閱 [恢復對已撤消文檔的訪問](/help/forms/developing/protecting-documents-policies.md#reinstating-access-to-revoked-documents)。)
+以下Java程式碼範例恢復對名為的已撤銷PDF檔案的存取 *PolicyProtectedLoanDoc.pdf*. (請參閱 [恢復對已撤銷檔案的存取](/help/forms/developing/protecting-documents-policies.md#reinstating-access-to-revoked-documents).)
 
 ```java
  /*
@@ -924,9 +924,9 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
  
 ```
 
-## 快速啟動（SOAP模式）:使用Java API建立PDF水印 {#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API建立PDF浮水印 {#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api}
 
-下面的Java代碼示例建立名為「示例PDF水印」的新PDF水印。 此水印包含單個元素(請參見 [建立水印](/help/forms/developing/protecting-documents-policies.md#creating-watermarks))。
+以下Java程式碼範例會建立名為「範例PDF浮水印」的新PDF浮水印。 此浮水印包含單一元素(請參閱 [建立浮水印](/help/forms/developing/protecting-documents-policies.md#creating-watermarks))。
 
 ```java
 /*
@@ -1057,9 +1057,9 @@ public class PDFWatermarksSOAPMode {
 }
 ```
 
-## 快速啟動（SOAP模式）:使用Java API建立文本水印 {#quick-start-soap-mode-creating-a-text-watermark-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API建立文字浮水印 {#quick-start-soap-mode-creating-a-text-watermark-using-the-java-api}
 
-以下Java代碼示例建立名為 *示例文本水印*。 此水印包含單個元素。
+以下Java程式碼範例會建立新的文字浮水印，命名為 *範例文字浮水印*. 此浮水印包含單一元素。
 
 ```java
 /*
@@ -1206,9 +1206,9 @@ public class TextWatermarks {
 }
 ```
 
-## 快速啟動（SOAP模式）:使用Java API修改文本水印 {#quick-start-soap-mode-modifying-a-text-watermark-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API修改文字浮水印 {#quick-start-soap-mode-modifying-a-text-watermark-using-the-java-api}
 
-以下Java代碼示例修改名為「示例文本水印」的水印，並將第一個元素的不透明度設定為100。
+以下Java程式碼範例會修改名為「範例文字浮水印」的浮水印，並將第一個元素的不透明度設為100。
 
 ```java
 /*
@@ -1318,9 +1318,9 @@ public class ModifyWatermarks {
 }
 ```
 
-## 快速啟動（SOAP模式）:使用Java API修改水印 {#quick-start-soap-mode-modifying-a-watermark-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API修改浮水印 {#quick-start-soap-mode-modifying-a-watermark-using-the-java-api}
 
-以下Java代碼示例修改名為 *機密* 修改 `opacity` 屬性為80。
+以下Java程式碼範例會修改名為的浮水印 *機密* 藉由修改 `opacity` 屬性為80。
 
 ```java
  /*
@@ -1416,9 +1416,9 @@ public class ModifyWatermarks {
  
 ```
 
-## 快速啟動（SOAP模式）:使用Java API搜索事件 {#quick-start-soap-mode-searching-for-events-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API搜尋事件 {#quick-start-soap-mode-searching-for-events-using-the-java-api}
 
-以下Java代碼示例搜索建立策略事件。
+以下Java程式碼範例會搜尋建立原則事件。
 
 ```java
  /*
@@ -1529,9 +1529,9 @@ public class ModifyWatermarks {
  
 ```
 
-## 快速啟動(SOAP):使用Java API將策略應用到Word文檔 {#quick-start-soap-applying-a-policy-to-a-word-document-using-the-java-api}
+## 快速入門(SOAP)：使用Java API將原則套用至Word檔案 {#quick-start-soap-applying-a-policy-to-a-word-document-using-the-java-api}
 
-以下Java代碼示例應用名為 *允許複製* 到名為 *Loan.doc*。 將為添加策略的策略集命名 *全局策略集*。 受策略保護的文檔被保存為名為*PolicyProtectedLoanDoc.doc的DOC檔案。 *(請參閱 [將策略應用於PDF文檔](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents)。)
+以下Java程式碼範例套用名為的原則 *允許複製* 至名為的Word檔案 *Loan.doc*. 將原則新增至的原則集已命名 *全域原則集*. 受原則保護的檔案會儲存為名為*PolicyProtectedLoanDoc.doc的DOC檔案。 *(請參閱 [套用原則至PDF檔案](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
 
 ```java
  /*
@@ -1644,9 +1644,9 @@ public class ModifyWatermarks {
  
 ```
 
-## 快速啟動（SOAP模式）:使用Java API從Word文檔中刪除策略 {#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API從Word檔案中移除原則 {#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api}
 
-下面的代碼示例從名為Word的文檔中刪除策略 *PolicyProtectedLoanDoc.doc*。 不安全的Word文檔另存為 *unProtectedLoan.doc*。 (請參閱 [從Word文檔中刪除策略](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-word-documents)。)
+下列程式碼範例會從名為的Word檔案中移除原則 *PolicyProtectedLoanDoc.doc*. 不安全的Word檔案儲存為 *unProtectedLoan.doc*. (請參閱 [從Word檔案移除原則](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-word-documents).)
 
 ```java
  /*
@@ -1752,9 +1752,9 @@ public class ModifyWatermarks {
  
 ```
 
-## 快速啟動（SOAP模式）:使用Java API建立抽象策略 {#quick-start-soap-mode-creating-an-abstract-policy-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API建立抽象原則 {#quick-start-soap-mode-creating-an-abstract-policy-using-the-java-api}
 
-以下Java代碼示例建立名為AllowCopy的新抽象策略。 添加策略的策略集名為「全局策略集」。 預設情況下，此策略集存在。 （請參閱建立策略。）
+以下Java程式碼範例會建立名為AllowCopy的新抽象原則。 將原則新增至的原則集命名為「全域原則集」。 預設存在此原則集。 （請參閱建立原則）。
 
 ```java
 /*
@@ -1869,9 +1869,9 @@ public class CreateAbstractPolicySoap {
 }
 ```
 
-## 快速啟動（SOAP模式）:使用Java API修改抽象策略 {#quick-start-soap-mode-modifying-an-abstract-policy-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API修改抽象原則 {#quick-start-soap-mode-modifying-an-abstract-policy-using-the-java-api}
 
-以下Java代碼示例修改名為AllowCopy的抽象策略。 在其中修改策略的策略集稱為全局策略集。 預設情況下，此策略集存在。 （請參閱建立策略。）
+以下Java程式碼範例會修改名為AllowCopy的抽象原則。 在其中修改原則的原則集被命名為全域原則集。 預設存在此原則集。 （請參閱建立原則）。
 
 ```java
 /*
@@ -1968,9 +1968,9 @@ public class ModifyingAbstractPolicySoap {
 }
 ```
 
-## 快速啟動（SOAP模式）:使用Java API刪除抽象策略 {#quick-start-soap-mode-deleting-an-abstract-policy-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API刪除抽象原則 {#quick-start-soap-mode-deleting-an-abstract-policy-using-the-java-api}
 
-以下Java代碼示例刪除名為AllowCopy的抽象策略。 從中刪除策略的策略集命名為「全局策略集」。 預設情況下，此策略集存在。 （請參閱建立策略。）
+下列Java程式碼範例會刪除名為AllowCopy的抽象原則。 從中刪除原則的原則集被命名為全域原則集。 預設存在此原則集。 （請參閱建立原則）。
 
 ```java
 /*
@@ -2055,9 +2055,9 @@ public class DeleteAbstractPolicySoap {
 }
 ```
 
-## 快速啟動（SOAP模式）:Protect：使用Java API為現有用戶建立語句工作流中的PDF {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API在陳述式工作流程中Protect現有使用者的PDF {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
 
-以下Java代碼示例演示了為現有用戶保護語句工作流中的文檔的方法。
+以下Java程式碼範例示範保護現有使用者陳述式工作流程中檔案的方法。
 
 ```java
 /*
@@ -2163,12 +2163,12 @@ public class protectStatementWorkFlowExistingUserSoap {
 }
 ```
 
-## 快速啟動（SOAP模式）:Protect語句工作流中的PDF，用於新用戶，使用Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API在新使用者的陳述式工作流程中ProtectPDF {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
 
-以下Java代碼示例演示了如何在語句工作流中保護文檔。 這是一個兩步走的過程：
+以下Java程式碼範例示範如何在陳述式工作流程中保護檔案。 此程式分為兩個步驟：
 
-* 將建立新的用戶、許可證和策略。
-* 用戶與許可證和策略關聯，文檔受保護。
+* 建立新的使用者、授權和原則。
+* 使用者與授權和原則相關聯，且檔案受到保護。
 
 ```java
 /*

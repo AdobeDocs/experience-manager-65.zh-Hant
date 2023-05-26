@@ -1,7 +1,7 @@
 ---
-title: 啟動AEMPhoneGap
+title: 啟動AEM PhoneGap
 seo-title: Starting AEM PhoneGap
-description: 請按照本頁瞭解開發人員的starterkit。
+description: 請詳閱本頁，瞭解開發人員適用的starterkit。
 seo-description: Follow this page to learn about the starterkit for developers.
 uuid: 952bf9f9-5c79-4212-91b7-1d3850ec2402
 contentOwner: User
@@ -17,47 +17,47 @@ ht-degree: 1%
 
 ---
 
-# 啟動AEMPhoneGap {#starting-aem-phonegap}
+# 啟動AEM PhoneGap {#starting-aem-phonegap}
 
 >[!NOTE]
 >
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-對開發商來說，最好的起點是看一看github的Adobe Experience Manager MobileStarterkit
+對於開發人員來說，最好的開始做法是檢視github中的Adobe Experience Manager Mobile Starterkit
 
 https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 
-Starterkit將幫助您快速前進，它將幫助您瞭解AEM Mobile開發的基本知識，從項目建立和治理開始，安裝必要的工具，定義Maven原型，構建、部署，然後建立您自己的體驗。
+Starterkit將帶您快速瞭解AEM Mobile開發的基本知識，從專案建立和治理、安裝必要工具、定義Maven原型、建置、部署，然後建立您自己的體驗。
 
-開發人員可以將此示例作為使用PhoneGap嘗試AEM Mobile應用程式的起點。 通過starterkit和參考應用程式運行，將能夠深入瞭解建立豐富移動應用程式的基礎知識。
+開發人員可使用此範例作為開始使用PhoneGap試用AEM Mobile應用程式。 透過starterkit和參考應用程式執行，將能讓您充分瞭解建立豐富行動應用程式的基本知識。
 
-* 使用 [AEMPhoneGap入門套件](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) 建立適合AEM Mobile目錄的應用。
-* A [參考應用](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 已建立完整原始碼，演示了AEM Mobile的許多新功能，無論您是將現有應用程式遷移到AEM Mobile還是重新啟動。
-* 所有樣本都可在github上找到： [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) 包括讓馬文啟動你的項目。
-* 大多數會談將利用 [廚房水槽教程](https://github.com/blefebvre/aem-phonegap-kitchen-sink)在Github中也可找到，重點是Apache Cordova本機擴展性的使用。
+* 使用 [AEM PhoneGap入門套件](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) 建立適用於AEM Mobile目錄的應用程式。
+* A [參考應用程式](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 「使用完整來源」功能已建立，可示範AEM Mobile中的許多新功能，不論您是將現有應用程式移轉至AEM Mobile還是全新開始。
+* 您可以在github上找到所有範例： [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) 並包括使用Maven啟動您的專案。
+* 大部分的會議談話都會利用 [廚房水槽教學課程](https://github.com/blefebvre/aem-phonegap-kitchen-sink)，您也可以在Github中找到，並著重於使用Apache Cordova原生擴充功能。
 
 >[!NOTE]
 >
->一旦你有機會熟悉星際棋，瞭解Adobe Experience Manager就很重要 *元件和模板。*
+>在您有機會熟悉starterkit後，請務必瞭解Adobe Experience Manager *元件和範本。*
 
-## 模板和元件 {#templates-and-components}
+## 範本和元件 {#templates-and-components}
 
-AEM *模板* 和 *元件* 使業務線所有者能夠建立自定義體驗。 *模板*和 *元件* 是現成的，也可由您自定義開發，開發人員可通過擴展現有元件或建立「新建」（高級）進行開發。 *模板* 和 *元件* 是讓AEM作者能夠拖放以創造引人入勝且相關體驗的原因。
+AEM *範本* 和 *元件* 讓業務線負責人建立自訂體驗。 兩者*範本*和 *元件* 現成可用，或由開發人員(透過擴展現有元件或建立greenfield （進階）)自行開發。 *範本* 和 *元件* 可讓AEM Author以拖放方式建立吸引人且相關的體驗。
 
 1. [建立元件](/help/sites-developing/components.md)
-1. [建立模板](/help/sites-developing/templates.md)
+1. [建立範本](/help/sites-developing/templates.md)
 
-一旦您對以上兩個步驟有了深入的瞭解，請跳入：
+在您充分瞭解上述兩個步驟後，請跳至：
 
-1. [AEM Mobile應用的結構](/help/mobile/phonegap-structure-an-app.md)
-1. [AEM Mobile應用的解剖結構](/help/mobile/phonegap-apps-arch.md)
-1. [你的現有應用已準備好迎接AEM Mobile嗎？](/help/mobile/phonegap-adding-content-to-imported-app.md)
+1. [AEM Mobile應用程式的結構](/help/mobile/phonegap-structure-an-app.md)
+1. [AEM Mobile應用程式的剖析](/help/mobile/phonegap-apps-arch.md)
+1. [您現有的應用程式是否已為AEM Mobile做好準備？](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
 ## 後續步驟 {#the-next-steps}
 
-1. [啟動我的AEM Mobile應用體驗](/help/mobile/starting-aem-phonegap-app.md)
-1. [管理我的應用的內容](/help/mobile/phonegap-manage-app-content.md)
-1. [構建我的應用程式](/help/mobile/building-app-mobile-phonegap.md)
-1. [使用AdobeMobile Analytics跟蹤我的應用的效能](/help/mobile/phonegap-intro-to-app-analytics.md)
-1. [通過Adobe Target提供個性化的應用體驗](/help/mobile/phonegap-aem-mobile-content-personalization.md)
-1. [向我的用戶發送重要消息](/help/mobile/phonegap-push-notifications.md)
+1. [開始我的AEM Mobile應用程式體驗](/help/mobile/starting-aem-phonegap-app.md)
+1. [管理我的應用程式內容](/help/mobile/phonegap-manage-app-content.md)
+1. [建置我的應用程式](/help/mobile/building-app-mobile-phonegap.md)
+1. [透過AdobeMobile Analytics追蹤我的應用程式效能](/help/mobile/phonegap-intro-to-app-analytics.md)
+1. [使用Adobe Target提供個人化的應用程式體驗](/help/mobile/phonegap-aem-mobile-content-personalization.md)
+1. [傳送重要訊息給我的使用者](/help/mobile/phonegap-push-notifications.md)

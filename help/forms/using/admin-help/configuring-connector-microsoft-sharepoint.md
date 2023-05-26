@@ -1,7 +1,7 @@
 ---
-title: 配置MicrosoftSharePoint的連接器
+title: 設定Microsoft SharePoint的聯結器
 seo-title: Configuring Connector for Microsoft SharePoint
-description: 為MicrosoftSharePoint配置連接器，以啟用表單AEM與MicrosoftSharePoint之間的通信。
+description: 設定Microsoft SharePoint的聯結器，以啟用AEM表單與Microsoft SharePoint之間的通訊。
 seo-description: Configure Connector for Microsoft SharePoint to enable communication between AEM forms and Microsoft SharePoint.
 uuid: f1561b41-da20-4220-b13a-e78472a9449f
 contentOwner: admin
@@ -17,32 +17,32 @@ ht-degree: 1%
 
 ---
 
-# 配置MicrosoftSharePoint的連接器 {#configuring-connector-for-microsoft-sharepoint}
+# 設定Microsoft SharePoint的聯結器 {#configuring-connector-for-microsoft-sharepoint}
 
-MicrosoftSharePoint的連接器使表AEM格與MicrosoftSharePoint通信。 有關其他背景資訊，請參閱中的「ECM連接器」 [服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+Microsoft SharePoint的聯結器可啟用AEM表單與Microsoft SharePoint之間的通訊。 如需其他背景資訊，請參閱以下的「Connectors for ECM」： [服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-1. 在管理控制台中，按一下「服務」>「MicrosoftSharePoint的連接器」。
-1. 為您的SharePoint伺服器指定以下設定：
+1. 在管理控制檯中，按一下「服務>Microsoft SharePoint的聯結器」 。
+1. 為您的SharePoint伺服器指定下列設定：
 
-   **SharePoint伺服器主機名：** SharePoint伺服器上Web應用程式的主機名埠號，格式為 `[hostname]:'port'`。
+   **SharePoint伺服器主機名稱：** SharePoint伺服器上Web應用程式的主機名稱連線埠號碼，格式為 `[hostname]:'port'`.
 
-   **用戶名：** 用於連接到SharePoint伺服器的用戶帳戶。
+   **使用者名稱：** 用來連線至SharePoint伺服器的使用者帳戶。
 
-   **密碼：** 用於連接到SharePoint伺服器的用戶帳戶的密碼
+   **密碼：** 用來連線至SharePoint伺服器的使用者帳戶密碼
 
-   **域名：** SharePoint伺服器所在的域。
+   **網域名稱：** SharePoint伺服器所在的網域。
 
 1. 按一下「儲存」。
 
-## MicrosoftSharePoint配置服務 {#microsoft-sharepoint-configuration-service}
+## Microsoft SharePoint設定服務 {#microsoft-sharepoint-configuration-service}
 
-MicrosoftSharePoint配置服務 `(MSSharePointConfigService)` 用於為具有模擬權限AEM的表單用戶指定憑據。 有關模擬權限的資訊，請參見 [配置MicrosoftSharePoint的連接器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)。 按照以下步驟指定 `MSSharePointConfigService`:
+Microsoft SharePoint設定服務 `(MSSharePointConfigService)` 可讓您為具有模擬許可權的AEM forms使用者指定認證。 如需模擬許可權的相關資訊，請參閱 [設定Microsoft SharePoint的聯結器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html). 請依照下列步驟指定 `MSSharePointConfigService`：
 
-1. 在管理控制台中，按一下「服務」>「應用程式和服務」>「服務管理」。
-1. 導航服務清單，然後按一下 `MSSharePointConfigService`。
-1. 在「配置」頁上指定以下設定：
+1. 在Administration Console中，按一下「服務>應用程式和服務>服務管理」。
+1. 瀏覽服務清單並按一下 `MSSharePointConfigService`.
+1. 在「組態」頁面中指定下列設定值：
 
-   * 具有模擬權限的用戶的用戶名
-   * 上述用戶的密碼
+   * 具有模擬許可權的使用者的使用者名稱
+   * 上述使用者的密碼
 
 1. 按一下「儲存」。

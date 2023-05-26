@@ -1,7 +1,7 @@
 ---
-title: 自定義跟蹤表
+title: 自訂追蹤表格
 seo-title: Customize tracking tables
-description: How-to自定義在AEM Forms工作區的跟蹤頁籤中顯示的任務表中顯示用戶進程詳細資訊。
+description: 如何在AEM Forms工作區的「追蹤」標籤中顯示的工作表格中，自訂使用者程式詳細資訊的顯示。
 seo-description: How-to customize the display of the details of user processes in the task table displayed in the tracking tab of AEM Forms workspace.
 uuid: 13d6ebf2-99d5-434f-85f9-b0cba5f5751a
 content-type: reference
@@ -16,9 +16,9 @@ ht-degree: 3%
 
 ---
 
-# 自定義跟蹤表{#customize-tracking-tables}
+# 自訂追蹤表格{#customize-tracking-tables}
 
-AEM Forms工作區中的跟蹤頁籤用於顯示與登錄用戶相關的進程實例的詳細資訊。 要查看跟蹤表，請首先在左窗格中選擇一個進程名稱，以在中間窗格中查看其實例清單。 選擇一個流程實例，查看右窗格中由此實例生成的任務表。 預設情況下，表列顯示以下任務屬性（任務模型中的相應屬性在括弧中給出）:
+AEM Forms工作區中的「追蹤」索引標籤可用來顯示登入使用者涉及之程式例項的詳細資訊。 若要檢視追蹤表格，請先在左側窗格中選取處理作業名稱，然後在中間窗格中檢視其執行個體清單。 選取程式執行處理，在右窗格中檢視此執行處理產生的任務表格。 預設情況下，表格欄會顯示下列任務屬性（任務模型中的對應屬性以括弧指定）：
 
 * ID ( `taskId`)
 * 名稱 ( `stepName`)
@@ -28,48 +28,48 @@ AEM Forms工作區中的跟蹤頁籤用於顯示與登錄用戶相關的進程�
 * 完成時間( `completeTime`)
 * 所有者 ( `currentAssignment.queueOwner`)
 
-任務模型中可用於在任務表中顯示的其餘屬性包括：
+任務模型中可顯示在任務表格中的其餘屬性包括：
 
 <table>
  <tbody>
   <tr>
    <td><p>actionInstanceId</p> </td>
-   <td><p>是OpenFullScreen</p> </td>
-   <td><p>提醒計數</p> </td>
+   <td><p>isOpenFullScreen</p> </td>
+   <td><p>remindentcount</p> </td>
   </tr>
   <tr>
-   <td><p>類任務</p> </td>
-   <td><p>是所有者</p> </td>
-   <td><p>路由清單</p> </td>
+   <td><p>classOfTask</p> </td>
+   <td><p>isOwner</p> </td>
+   <td><p>routeList</p> </td>
   </tr>
   <tr>
    <td><p>consultGroupId</p> </td>
-   <td><p>是RouteSelectionRequired</p> </td>
-   <td><p>已保存的FormCount</p> </td>
+   <td><p>isRouteSelectionRequired</p> </td>
+   <td><p>savedFormCount</p> </td>
   </tr>
   <tr>
-   <td><p>內容類型</p> </td>
-   <td><p>是ShowAttachments</p> </td>
-   <td><p>序列化ImageTicket</p> </td>
+   <td><p>內容型別</p> </td>
+   <td><p>isshowAttachments</p> </td>
+   <td><p>serializedImageTicket</p> </td>
   </tr>
   <tr>
-   <td><p>建立時間</p> </td>
-   <td><p>是StartTask</p> </td>
-   <td><p>服務名稱</p> </td>
+   <td><p>createTime</p> </td>
+   <td><p>isStartTask</p> </td>
+   <td><p>serviceName</p> </td>
   </tr>
   <tr>
-   <td><p>建立ID</p> </td>
-   <td><p>可見</p> </td>
-   <td><p>服務標題</p> </td>
+   <td><p>creationId</p> </td>
+   <td><p>isvisible</p> </td>
+   <td><p>serviceTitle</p> </td>
   </tr>
   <tr>
-   <td><p>當前分配</p> </td>
-   <td><p>下一提醒</p> </td>
-   <td><p>showACLAactions</p> </td>
+   <td><p>目前指定任務</p> </td>
+   <td><p>nextReminder</p> </td>
+   <td><p>showACLActions</p> </td>
   </tr>
   <tr>
-   <td><p>截止</p> </td>
-   <td><p>數字表單</p> </td>
+   <td><p>期限</p> </td>
+   <td><p>numForms</p> </td>
    <td><p>showDirectActions</p> </td>
   </tr>
   <tr>
@@ -79,47 +79,47 @@ AEM Forms工作區中的跟蹤頁籤用於顯示與登錄用戶相關的進程�
   </tr>
   <tr>
    <td><p>displayName</p> </td>
-   <td><p>outOfficeUserId</p> </td>
-   <td><p>摘要URL</p> </td>
+   <td><p>outOfOfficeUserId</p> </td>
+   <td><p>summaryUrl</p> </td>
   </tr>
   <tr>
    <td><p>forwardGroupId</p> </td>
-   <td><p>outOfOffice用戶名</p> </td>
-   <td><p>支援保存</p> </td>
+   <td><p>outOfOfficeUserName</p> </td>
+   <td><p>supportssave</p> </td>
   </tr>
   <tr>
-   <td><p>是ApprovalUI</p> </td>
+   <td><p>isApprovalUI</p> </td>
    <td><p>優先順序</p> </td>
-   <td><p>任務ACL</p> </td>
+   <td><p>taskACL</p> </td>
   </tr>
   <tr>
-   <td><p>是自定義UI</p> </td>
+   <td><p>isCustomUI</p> </td>
    <td><p>processInstanceId</p> </td>
    <td><p>taskFormType</p> </td>
   </tr>
   <tr>
-   <td><p>是DefaultImage</p> </td>
-   <td><p>processInstanceStatus</p> </td>
-   <td><p>taskUserInfo</p> </td>
+   <td><p>isDefaultImage</p> </td>
+   <td><p>processinstancestatus</p> </td>
+   <td><p>taskUserinfo</p> </td>
   </tr>
   <tr>
-   <td><p>已鎖定</p> </td>
+   <td><p>islocked</p> </td>
    <td><p>processVariables</p> </td>
    <td> </td>
   </tr>
   <tr>
-   <td><p>是MustOpenToComplete</p> </td>
+   <td><p>isMustOpenToComplete</p> </td>
    <td><p>readerSubmitOptions</p> </td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-對於任務表中的以下自定義項，需要在原始碼中進行語義更改。 請參閱 [自定義AEM Forms工作區簡介](/help/forms/using/introduction-customizing-html-workspace.md) 有關如何使用workspace SDK進行語義更改，以及如何從更改的源生成精簡包。
+對於任務表格中的下列自訂，您需要在原始程式碼中進行語意變更。 另請參閱 [自訂AEM Forms工作區簡介](/help/forms/using/introduction-customizing-html-workspace.md) 瞭解如何使用Workspace SDK進行語意變更，以及從變更的來源建立縮制的套件。
 
-## 更改表列及其順序 {#changing-table-columns-and-their-order}
+## 變更表格欄及其順序 {#changing-table-columns-and-their-order}
 
-1. 要修改表中顯示的任務屬性及其順序，請配置檔案/ws/js/runtime/templates/processinstancehistory.html :
+1. 若要修改表格中顯示的工作屬性及其順序，請設定檔案/ws/js/runtime/templates/processinstancehistory.html ：
 
    ```html
    <table>
@@ -153,11 +153,11 @@ AEM Forms工作區中的跟蹤頁籤用於顯示與登錄用戶相關的進程�
    </table>
    ```
 
-## 對跟蹤表排序 {#sorting-a-tracking-table}
+## 排序追蹤表格 {#sorting-a-tracking-table}
 
-要在按一下列標題時對任務清單表進行排序：
+若要在按一下欄標題時排序工作清單表格，請執行下列動作：
 
-1. 註冊按一下處理程式 `.fixedTaskTableHeader th` 檔案 `js/runtime/views/processinstancehistory.js`。
+1. 註冊點選處理常式 `.fixedTaskTableHeader th` 在檔案中 `js/runtime/views/processinstancehistory.js`.
 
    ```javascript
    events: {
@@ -167,7 +167,7 @@ AEM Forms工作區中的跟蹤頁籤用於顯示與登錄用戶相關的進程�
    }
    ```
 
-   在處理程式中，調用 `onTaskTableHeaderClick` 函式 `js/runtime/util/history.js`。
+   在處理常式中，呼叫 `onTaskTableHeaderClick` 函式 `js/runtime/util/history.js`.
 
    ```javascript
    onTaskTableHeaderClick: function (event) {
@@ -175,11 +175,11 @@ AEM Forms工作區中的跟蹤頁籤用於顯示與登錄用戶相關的進程�
    }
    ```
 
-1. 公開 `TaskTableHeaderClick` 方法 `js/runtime/util/history.js`。
+1. 公開 `TaskTableHeaderClick` 中的方法 `js/runtime/util/history.js`.
 
-   該方法從按一下事件中查找任務屬性，對該屬性上的任務清單進行排序，並使用排序的任務清單呈現任務表。
+   此方法會從點選事件尋找工作屬性、排序該屬性的工作清單，並呈現工作表格與已排序的工作清單。
 
-   通過提供比較器功能，使用任務清單集合上的Backbone排序函式進行排序。
+   藉由提供比較器函式，使用工作清單集合上的骨幹排序函式完成排序。
 
    ```javascript
        return {

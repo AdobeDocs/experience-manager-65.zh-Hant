@@ -1,7 +1,7 @@
 ---
-title: 使用印前檢查預覽
+title: 使用預檢預覽
 seo-title: Previewing with Preflight
-description: 此頁解釋了「使用印前檢查應用程式預覽」。
+description: 本頁說明使用預檢應用程式預覽。
 seo-description: With the Mobile On Demand Preflight app, you can view all projects to which you have access. Follow this page to learn more about this.
 uuid: bea83055-8172-4634-88ec-5d3f163ad8e0
 contentOwner: User
@@ -17,46 +17,46 @@ ht-degree: 1%
 
 ---
 
-# 使用印前檢查預覽 {#previewing-with-preflight}
+# 使用預檢預覽 {#previewing-with-preflight}
 
-此頁解釋了「使用印前檢查應用程式預覽」。
-
->[!NOTE]
->
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
-
-整個應用程式將執行以下操作。
-
-使用「移動按需預檢」應用，您可以查看您有權訪問的所有項目。 選擇項目後，您就可以預覽應用內容，包括瀏覽頁面和文章，以瞭解應用在各種設備上的外觀和運行方式。
+本頁說明使用預檢應用程式預覽。
 
 >[!NOTE]
 >
->印前檢查應用與PhoneGap Enterprise查看器在性質上相似。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-## 使用印前檢查預覽 {#previewing-with-preflight-1}
+以下動作會在整個應用程式上執行。
 
-1. 從Mobile中，從目錄中選擇您的Mobile On-Demand應用。
-1. 按一下中的省略號(...) **管理文章** （或橫幅/收藏）平鋪。
-1. 選擇 **印前檢查** 按鈕。
-1. 按一下 **激活印前檢查** 的雙曲餘切值。
-1. 您的應用程式現在將準備好在移動按需預檢應用程式上預覽。
+透過Mobile On Demand預檢應用程式，您可以檢視所有您可存取的專案。 選取專案後，您就可以預覽應用程式內容，包括瀏覽頁面和文章，以瞭解應用程式在各種裝置上的外觀和表現。
+
+>[!NOTE]
+>
+>預檢應用程式本質上類似於PhoneGap Enterprise檢視器。
+
+## 使用預檢預覽 {#previewing-with-preflight-1}
+
+1. 在Mobile中，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 按一下中的省略符號(...) **管理文章** （或橫幅/集合）圖磚。
+1. 選取 **預檢** 動作列中的。
+1. 按一下 **啟動預檢** 從對話方塊。
+1. 您的應用程式現在可以在Mobile On-Demand Preflight應用程式上預覽。
 
 ![chlimage_1-8](assets/chlimage_1-8.gif)
 
 >[!NOTE]
 >
->印AEM前檢查應用用於預覽內容和瀏覽頁面。 要瞭解有關印前檢查應用程式的詳細資訊，請按一下 [這裡](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。
+>AEM Preflight應用程式用於預覽內容和瀏覽頁面。 若要深入瞭解預檢應用程式，請按一下 [此處](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html).
 
-### 前進 {#getting-ahead}
+### 快速入門 {#getting-ahead}
 
-如果您仍需要有關創作內容的更多資訊，請參閱以下資源以建立和管理AEM Mobile應用程式中的內容：
+如果您仍需撰寫內容的詳細資訊，請參閱下列資源，以在AEM Mobile應用程式中建立和管理內容：
 
-* [AEM Mobile應用程式儀表板](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
+* [AEM Mobile應用程式控制面板](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [管理內容](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
 ## 其他資源 {#additional-resources}
 
-要詳細瞭解建立AEM Mobile On-demand Services應用程式的其他兩個角色和職責，請參閱以下資源：
+若要進一步瞭解建立AEM Mobile On-demand Services應用程式的其他兩個角色和責任，請參閱下列資源：
 
-* [開發AEMAEM Mobile On-demand Services內容](/help/mobile/aem-mobile-on-demand.md)
-* [AEM Mobile On-demand ServicesAEM應用的創作內容](/help/mobile/mobile-apps-ondemand.md)
+* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [為AEM Mobile On-demand Services應用程式編寫AEM內容](/help/mobile/mobile-apps-ondemand.md)

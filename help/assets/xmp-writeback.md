@@ -1,6 +1,6 @@
 ---
-title: XMP回寫到格式副本
-description: 瞭解寫回XMP功能如何將資產的元資料更改傳播到資產的所有或特定格式副本。
+title: XMP回寫至轉譯
+description: 瞭解XMP回寫功能如何將資產的中繼資料變更傳播到資產的所有或特定轉譯。
 contentOwner: AG
 role: User, Admin
 feature: Metadata
@@ -13,88 +13,88 @@ ht-degree: 5%
 
 ---
 
-# XMP回寫到格式副本 {#xmp-writeback-to-renditions}
+# XMP回寫至轉譯 {#xmp-writeback-to-renditions}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/xmp-metadata.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-中XMP的此寫回功能 [!DNL Adobe Experience Manager Assets] 將元資料更改複製到原始資產的格式副本。 當您從資產內更改資產的元資料或在上載資產時，這些更改最初儲存在資產層次結構中的元資料節點中。
+中的此XMP回寫功能 [!DNL Adobe Experience Manager Assets] 會將中繼資料變更複製到原始資產的轉譯。 當您從Assets內變更資產的中繼資料或上傳資產時，變更最初會儲存在資產階層中的中繼資料節點中。
 
-寫回XMP功能允許您將元資料更改傳播到資產的所有或特定格式副本。 該功能僅回寫那些使用 `jcr` 命名空間，即名為 `dc:title` 寫回，但名為 `mytitle` 不。
+XMP回寫功能可讓您將中繼資料變更傳播到資產的所有或特定轉譯。 功能只會回寫那些使用的中繼資料屬性 `jcr` 名稱空間，也就是名為的屬性 `dc:title` 會寫回，但有一個屬性命名為 `mytitle` 不是。
 
-考慮修改 [!UICONTROL 標題] 標題為 `Classic Leather` 至 `Nylon`。
+請考量您修改 [!UICONTROL 標題] 標題為的資產屬性 `Classic Leather` 至 `Nylon`.
 
 ![中繼資料](assets/metadata.png)
 
-在這個例子中， [!DNL Experience Manager Assets] 將更改保存到 **[!UICONTROL 標題]** 屬性 `dc:title` 資產層次結構中儲存的資產元資料的參數。
+在此案例中， [!DNL Experience Manager Assets] 將變更儲存至 **[!UICONTROL 標題]** 中的屬性 `dc:title` 資產階層中儲存的資產中繼資料引數。
 
-![元資料已儲存](assets/metadata_stored.png)
+![metadata_stored](assets/metadata_stored.png)
 
-但是， [!DNL Experience Manager Assets] 不會自動將任何元資料更改傳播到資產的格式副本。 請參閱 [如何啟XMP用寫回](#enable-xmp-writeback)。
+不過， [!DNL Experience Manager Assets] 不會自動將任何中繼資料變更傳播到資產的轉譯。 另請參閱 [如何啟用XMP回寫](#enable-xmp-writeback).
 
-## 啟用寫XMP回 {#enable-xmp-writeback}
+## 啟用XMP回寫 {#enable-xmp-writeback}
 
-要在上載資產時允許元資料更改傳播到資產的格式副本，請修改 **[!UICONTROL Adobe CQDAM Rendition Maker]** 配置。
+若要讓中繼資料變更在上傳時傳播至資產的轉譯，請修改 **[!UICONTROL Adobe CQ DAM Rendition Maker]** Configuration Manager中的設定。
 
-1. 要開啟Configuration Manager，請訪問 `https://[aem_server]:[port]/system/console/configMgr`。
-1. 開啟 **[!UICONTROL Adobe CQDAM Rendition Maker]** 配置。
-1. 選擇 **[!UICONTROL 傳播XMP]** ，然後保存更改。
+1. 若要開啟Configuration Manager，存取 `https://[aem_server]:[port]/system/console/configMgr`.
+1. 開啟 **[!UICONTROL Adobe CQ DAM Rendition Maker]** 設定。
+1. 選取 **[!UICONTROL 傳播XMP]** 選項，然後儲存變更。
 
    ![chlimage_1-135](assets/chlimage_1-346.png)
 
-## 為特定XMP格式副本啟用寫回 {#enabling-xmp-writeback-for-specific-renditions}
+## 啟用特定轉譯的XMP回寫 {#enabling-xmp-writeback-for-specific-renditions}
 
-要讓寫回功XMP能傳播元資料更改以選擇格式副本，請將這些格式副本指定XMP到的寫回流程工作流步驟 [!UICONTROL DAM元資料回寫] 工作流。 預設情況下，此步驟配置有原始格式副本。
+若要讓XMP回寫功能傳播中繼資料變更以選取轉譯，請將這些轉譯指定至XMP回寫程式工作流程步驟： [!UICONTROL DAM中繼資料回寫] 工作流程。 依預設，此步驟會使用原始轉譯進行設定。
 
-對於「寫XMP回」功能將元資料傳播到格式副本縮略圖140.100.png和319.319.png，請執行這些步驟。
+若要讓XMP回寫功能將中繼資料傳播至轉譯縮圖140.100.png和319.319.png，請執行下列步驟。
 
-1. 在Experience Manager介面中，導航到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
-1. 從「模型」頁面，開啟 **[!UICONTROL DAM元資料寫回]** 工作流模型。
+1. 在Experience Manager介面中，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**.
+1. 從「模型」頁面，開啟 **[!UICONTROL DAM中繼資料回寫]** 工作流程模型。
 1. 在「 **[!UICONTROL DAM中繼資料回寫]** 」屬性頁面中，開啟 **[!UICONTROL 「XMP回寫程式」步驟]** 。
-1. 在 [!UICONTROL 步驟屬性] 對話框，按一下 **[!UICONTROL 進程]** 頁籤。
-1. 在 **參數** 框，添加 `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`，然後按一下 **[!UICONTROL 確定]**。
+1. 在 [!UICONTROL 步驟屬性] 對話方塊中，按一下 **[!UICONTROL 程式]** 標籤。
+1. 在 **引數** 方塊，新增 `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`，然後按一下 **[!UICONTROL 確定]**.
 
-   ![步驟屬性](assets/step_properties.png)
+   ![step_properties](assets/step_properties.png)
 
 1. 儲存變更。
-1. 重新生成金字塔TIFF格式副本 [!DNL Dynamic Media] 影像，添加 **[!UICONTROL Dynamic Media處理映像資產]** 的 [!UICONTROL DAM元資料寫回] 工作流。
+1. 若要重新產生金字塔TIFF轉譯 [!DNL Dynamic Media] 使用新屬性的影像，新增 **[!UICONTROL Dynamic Media程式影像資產]** 步驟至 [!UICONTROL DAM中繼資料回寫] 工作流程。
 
    PTIFF轉譯只會在Dynamic Media Hybrid實作中建立並儲存在本機。
 
-1. 保存工作流。
+1. 儲存工作流程。
 
-元資料更改將傳播到資產的格式副本thumbnail.140.100.png和thumbnail.319.319.png，而不是其他格式副本。
-
->[!NOTE]
->
->有關XMP64位Linux中的寫回問題，請參見 [如何在XMP64位RedHat Linux上啟用回寫](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)。
->
->有關支援的平台，請參見 [元XMP資料回寫先決條件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back)。
-
-## 篩選元XMP資料 {#filtering-xmp-metadata}
-
-[!DNL Experience Manager Assets] 支援阻止清單和允許清單篩選從資產二進位檔案中讀取XMP的元資料的屬性/節點，並在接收資產時儲存在JCR中。
-
-使用阻止清單進行篩選可導入除為XMP排除而指定的屬性之外的所有元資料屬性。 但是，對於具有大量元資料(例如XMP1000個節點，有10,000個屬性)的資產類型（如INDD檔案），要篩選的節點名稱並不總是預先知道的。 如果使用阻止清單進行篩選允許導入大量具有大量元資料XMP的資產，則 [!DNL Experience Manager] 部署可能會遇到穩定性問題，例如阻塞的觀察隊列。
-
-通過允XMP許清單篩選元資料可通過定義要導入的XMP屬性來解決此問題。 這樣，將忽略任何其他或未XMP知屬性。 為了向後相容，可以將其中一些屬性添加到使用阻止清單的篩選器中。
+中繼資料變更會傳播至資產的轉譯專案thumbnail.140.100.png和thumbnail.319.319.png，而非其他專案。
 
 >[!NOTE]
 >
->篩選僅適用於資產二進位檔案中從XMP源派生的屬性。 對於從非源(如EXIF和IPTC格XMP式)派生的屬性，篩選不起作用。 例如，資產建立日期儲存在名為 `CreateDate` 的子菜單。 Experience Manager將此值儲存在名為 `exif:DateTimeOriginal`。 由於源是非源，XMP因此篩選對此屬性無效。
+>如需64位元Linux中的XMP回寫問題，請參閱 [如何在64位元RedHat Linux上啟用XMP回寫](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
+>
+>如需支援的平台，請參閱 [XMP中繼資料回寫先決條件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back).
 
-1. 要開啟Configuration Manager，請訪問 `https://[aem_server]:[port]/system/console/configMgr`。
-1. 開啟 **[!UICONTROL Adobe CQDAM XmpFilter]** 配置。
-1. 要通過允許的清單應用篩選，請選擇 **[!UICONTROL 將允許清單應用於屬XMP性]**，並指定要在 **[!UICONTROL 允許的XML名稱XMP篩選]** 框。
+## 篩選XMP中繼資料 {#filtering-xmp-metadata}
+
+[!DNL Experience Manager Assets] 對於從資產二進位檔讀取並在擷取資產時儲存在JCR中的XMP中繼資料，支援屬性/節點的封鎖清單和允許清單篩選。
+
+使用封鎖清單進行篩選可讓您匯入所有XMP中繼資料屬性，但指定要排除的屬性除外。 然而，對於具有大量XMP中繼資料（例如1000個具有10,000個屬性的節點）的資產型別（例如INDD檔案），要篩選的節點名稱並不總是事先知道的。 如果使用封鎖清單進行篩選，可以匯入大量含有許多XMP中繼資料的資產， [!DNL Experience Manager] 部署可能會遇到穩定性問題，例如阻塞的觀察佇列。
+
+透過允許清單篩選XMP中繼資料可讓您定義要匯入的XMP屬性，以解決此問題。 如此一來，任何其他或未知的XMP屬性都會被忽略。 為達到回溯相容性，您可以將其中一些屬性新增至使用封鎖清單的篩選器。
+
+>[!NOTE]
+>
+>篩選僅適用於從資產二進位檔中的XMP來源衍生的屬性。 對於衍生自非XMP來源（例如EXIF和IPTC格式）的屬性，篩選無法運作。 例如，資產建立日期會儲存在名為的屬性中 `CreateDate` 以EXIFTIFF顯示。 Experience Manager會將此值儲存在名為的中繼資料欄位中 `exif:DateTimeOriginal`. 由於來源是非XMP來源，因此篩選無法在此屬性上運作。
+
+1. 若要開啟Configuration Manager，存取 `https://[aem_server]:[port]/system/console/configMgr`.
+1. 開啟 **[!UICONTROL Adobe CQ DAM XmpFilter]** 設定。
+1. 若要透過允許清單套用篩選，請選取 **[!UICONTROL 將允許清單套用至XMP屬性]**，並指定要匯入到的屬性 **[!UICONTROL 允許用於XMP篩選的XML名稱]** 方塊。
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 
-1. 要在通過允許的列XMP表應用篩選後篩選出被阻止的屬性，請在 **[!UICONTROL 已阻止的XML名稱XMP進行篩選]** 框。
+1. 若要透過允許清單套用篩選後，篩選掉封鎖的XMP屬性，請在 **[!UICONTROL XMP篩選的封鎖XML名稱]** 方塊。
 
    >[!NOTE]
    >
-   >的 **[!UICONTROL 將塊清單應用於屬XMP性]** 選項。 換句話說，預設情況下啟用使用阻止清單的過濾。 要禁用此篩選，請取消選擇 **[!UICONTROL 將塊清單應用於屬XMP性]** 的雙曲餘切值。
+   >此 **[!UICONTROL 套用封鎖清單至XMP屬性]** 選項預設為選取。 換言之，使用封鎖清單的篩選功能預設為啟用。 若要停用此篩選，請取消選取 **[!UICONTROL 套用封鎖清單至XMP屬性]** 選項。
 
 1. 儲存變更。

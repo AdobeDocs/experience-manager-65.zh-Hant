@@ -1,7 +1,7 @@
 ---
-title: 計數基礎
+title: Tally Essentials
 seo-title: Tally Essentials
-description: 計數類概述
+description: 標籤類別概觀
 seo-description: Tally class overview
 uuid: c369c6a1-9ced-4b5c-af43-8c03236eaa52
 contentOwner: msm-service
@@ -17,46 +17,46 @@ ht-degree: 0%
 
 ---
 
-# 計數基礎 {#tally-essentials}
+# Tally Essentials {#tally-essentials}
 
-Tally是一個抽象類，提供一種標準方法，收整合員對特定產品和服務的價值的反饋。 不支援匿名反饋。 站點訪問者必須註冊並登錄以參與和登錄以更改其反饋。 登錄要求通過防止多個帖子來促進調節和提高反饋的價值。
+Tally是抽象類別，提供收整合員意見的標準方法，以說明他們如何評估特定產品和服務。 不支援匿名回饋。 網站訪客必須註冊並登入才能參與並登入以變更其意見。 登入要求可防止多個貼文，有助於稽核並提升意見回饋的價值。
 
-通過擴展抽象計數類可以建立自定義計數元件。
+可藉由擴充抽象tally類別來建立自訂標籤元件。
 
-[喜歡](essentials-liking.md) 是表達積極意見的簡單形式。
+[按讚](essentials-liking.md) 是計數的實作，是表達正面意見的簡單形式。
 
-[投票](essentials-voting.md) 是表達正面或負面意見的簡單形式的統計。
+[投票](essentials-voting.md) 是計數的實施，是表達正面或負面意見的簡單形式。
 
-[評級](rating-basics.md) 是用星系表達從正面到負面的各種觀點的統計。
+[評等](rating-basics.md) 是使用star系統來表示從正面到負面的一系列意見的tally實施。
 
-截至AEM6.1，輪詢元件不再可用。
+自AEM 6.1起，不再提供輪詢元件。
 
-[評論](reviews-basics.md) 是SCF元件，它是 [評論](essentials-comments.md) 和 [評級](rating-basics.md)。
+[評論](reviews-basics.md) 是SCF元件，混合於 [評論](essentials-comments.md) 和 [評等](rating-basics.md).
 
-## 客戶端基本知識 {#essentials-for-client-side}
+## 適用於使用者端的Essentials {#essentials-for-client-side}
 
-* [客戶端自定義](client-customize.md)
+* [使用者端自訂](client-customize.md)
 
-## 伺服器端軟體包 {#essentials-for-server-side}
+## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [計數API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [標籤API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [計數端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [計分端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
-* [伺服器端自定義](server-customize.md)
+* [伺服器端自訂](server-customize.md)
 
-### 訪問已發佈的記數(UGC) {#accessing-posted-tallies-ugc}
+### 存取已張貼的表格(UGC) {#accessing-posted-tallies-ugc}
 
-UGC應使用一種標準的審核方法來審核。
-請參閱 [調節用戶生成的內容](moderate-ugc.md)。
+UGC應使用其中一個標準仲裁方法來仲裁。
+另請參閱 [稽核使用者產生的內容](moderate-ugc.md).
 
-截至AEM6.1社區，使用 [普通商店](working-with-srp.md) UGC包括對UGC的寫程式訪問，而不考慮選擇的儲存選項（如ASRP、MSRP或JSRP）。
+自AEM 6.1 Communities起，使用 [公用存放區](working-with-srp.md) for UGC包含程式化存取UGC，無論選擇的儲存選項為何（例如ASRP、MSRP或JSRP）。
 
-**UGC在儲存庫中的位置和格式可能會發生更改，但不會發出警告**。
+**UGC在存放庫中的位置和格式可能會有所變更，恕不發出警告**.
 
 請參閱：
 
-* [儲存資源提供程式概述](srp.md)  — 簡介和儲存庫使用概述。
-* [SRP和UGC軟體包](srp-and-ugc.md) - SRP實用程式方法和示例。
-* [使用SRP訪問UGC](accessing-ugc-with-srp.md)  — 編碼准則。
-* [SocialUtils重構](socialutils.md)  — 將過時的實用程式方法映射到當前SRP實用程式方法。
+* [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
+* [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
+* [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。

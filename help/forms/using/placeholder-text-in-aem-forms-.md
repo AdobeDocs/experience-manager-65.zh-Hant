@@ -1,7 +1,7 @@
 ---
-title: AEM Forms中的佔位符文本
+title: AEM Forms中的預留位置文字
 seo-title: Placeholder text in AEM Forms
-description: 佔位符文本用於在控制項沒有值時幫助用戶輸入資料。 它可以是示例值或預期格式的簡短說明。
+description: 預留位置文字的目的是在控制項沒有值時協助使用者輸入資料。 可以是範例值，或是預期格式的簡短說明。
 seo-description: Placeholder text is intended to aid the user with data entry when the control has no value. It could be a sample value or a brief description of the expected format.
 uuid: 69f80722-93db-4932-9016-4b530e183d4e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,26 +17,26 @@ ht-degree: 0%
 
 ---
 
-# AEM Forms中的佔位符文本 {#placeholder-text-in-aem-forms}
+# AEM Forms中的預留位置文字 {#placeholder-text-in-aem-forms}
 
-佔位符文本表示一個詞或短詞。 當控制項沒有值時，它旨在幫助用戶輸入資料。 佔位符文本可以是示例值或預期格式的簡短說明。 佔位符文本在用戶輸入值之前顯示，當用戶輸入或選擇值時，佔位符文本將被刪除。
-
->[!NOTE]
->
->如果指定，佔位符文本必須具有不包含新行字元的值。
-
-![包含和不包含佔位符文本的日期元件](assets/dat-picker-place-holder-text.png)
-
-**答：** 包含佔位符文本的日期元件 **B** 沒有佔位符文本的日期元件
-
-AEM Forms支援「密碼」框、「日期選取器」、「數字」框和文本框欄位的佔位符文本。\
-本機HTML5日期小部件不支援佔位符文本。 要指定佔位符文本：
-
-1. 按一下右鍵支援佔位符文本的元件，然後按一下 **編輯**。 將出現「編輯元件」(Edit component)對話框。
-
-1. 開啟 **標題和文本** 頁籤。
-1. 在 **佔位符文本框**。 按一下&#x200B;**「確定」**。
+預留位置文字代表單字或短語。 其目的是協助使用者在控制項沒有值時輸入資料。 預留位置文字可以是範例值，或是預期格式的簡短說明。 預留位置文字會在使用者輸入值之前顯示，當使用者輸入或選取值時會移除預留位置文字。
 
 >[!NOTE]
 >
->MicrosoftInternet Explorer 9不支援佔位符文本。
+>預留位置文字（如果已指定）必須有一個不含新行字元的值。
+
+![包含和不包含預留位置文字的日期元件](assets/dat-picker-place-holder-text.png)
+
+**答：** 具有預留位置文字的日期元件 **B.** 沒有預留位置文字的日期元件
+
+AEM Forms支援密碼方塊、日期選擇器、數值方塊和文字方塊欄位的預留位置文字。\
+原生HTML5日期Widget不支援預留位置文字。 若要指定預留位置文字：
+
+1. 以滑鼠右鍵按一下支援預留位置文字的元件，然後按一下 **編輯**. 「編輯元件」對話方塊隨即出現。
+
+1. 開啟 **標題和文字** 標籤。
+1. 在「 」中指定字詞或簡短片語 **預留位置文字方塊**. 按一下&#x200B;**「確定」**。
+
+>[!NOTE]
+>
+>Microsoft Internet Explorer 9不支援預留位置文字。

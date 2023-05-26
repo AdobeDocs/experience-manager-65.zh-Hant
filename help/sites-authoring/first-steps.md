@@ -1,6 +1,6 @@
 ---
-title: 在中建立內容時為作者執行的第一步AEM
-description: 使用Adobe Experience Manager()創作內容時使用的主要任務的概AEM述。
+title: 作者在AEM中建立內容時的首要步驟
+description: 概述使用Adobe Experience Manager (AEM)編寫內容時使用的主要工作。
 uuid: 1a09da22-faa4-4a7a-a2c5-97a255a6a2ae
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,79 +16,79 @@ ht-degree: 1%
 
 ---
 
-# 作者的第一步{#first-steps-for-authors}
+# 作者的首要步驟{#first-steps-for-authors}
 
-本節概述了您在以下情況下將使用的主要任務： [開始創作內容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) Adobe Experience Manager(AEM)。
+本節提供您在以下情況下將使用的主要任務概觀： [開始編寫內容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) 使用Adobe Experience Manager (AEM)。
 
-它包括：
+內容涵蓋：
 
 * [快速入門](#getting-started)\
-   詳細列出建立和發佈第一頁所需的基本事件序列。
+   詳細說明建立及發佈第一頁所需的基本事件順序。
 
-* [進一步操作](#further-actions)\
-   繼續執行創作時可以使用的許多其他操作。
+* [進一步動作](#further-actions)\
+   接著進行許多您可在編寫時使用的其他動作。
 
 ## 快速入門 {#getting-started}
 
-這些詳細資訊是建立和發佈第一頁所需事件的基本序列。
+這些詳細說明建立和發佈第一頁所需的基本事件順序。
 
-### 導航到頁面位置 {#navigating-to-the-page-location}
+### 瀏覽至頁面位置 {#navigating-to-the-page-location}
 
-網站中的內容以樹形結構保存。 要建立或編輯需要 [導航至地點](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
+您網站中的內容以樹狀結構儲存。 若要建立或編輯頁面，您需要 [導覽至該位置](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 
 ### 建立新頁面 {#creating-a-new-page}
 
-編輯前，您需要 [建立新頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page)。
+編輯之前，您需要 [建立新頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page).
 
 ### 開啟頁面 {#opening-a-page}
 
-對於許多操作（如編輯），您需要 [開啟頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
+針對許多動作（例如編輯），您需要 [開啟頁面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
 
 ### 編輯頁面 {#editing-a-page}
 
-無論實例已有現有頁面，還是您剛剛自己建立了新頁面，您都可以 [編輯頁面](/help/sites-authoring/editing-content.md) 按：
+無論您的執行個體是否已有現有頁面，或您自己剛建立新頁面，您都可以 [編輯頁面](/help/sites-authoring/editing-content.md) 作者：
 
-* [插入元件（段）](/help/sites-authoring/editing-content.md#inserting-a-component)
-* [編輯/配置/複製/剪切/刪除/貼上](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 元件
+* [插入元件（段落）](/help/sites-authoring/editing-content.md#inserting-a-component)
+* [編輯/設定/複製/剪下/刪除/貼上](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 元件
 * [編輯（內容）](/help/sites-authoring/editing-content.md#edit-content)
-* [編輯（內容） — 全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
+* [編輯（內容） — 全熒幕模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
-* [撤消和重做頁面編輯](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits)
-* [使用預覽模式](/help/sites-authoring/editing-content.md#preview-mode) （查看它在發佈時的外觀）
+* [還原和重做頁面編輯](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits)
+* [使用預覽模式](/help/sites-authoring/editing-content.md#preview-mode) （檢視發佈時的外觀）
 * [鎖定頁面](/help/sites-authoring/editing-content.md#locking-a-page)
 
 ### 發佈頁面 {#publishing-a-page}
 
-編輯完頁面後，您將希望 [發佈（或激活頁面）](/help/sites-authoring/publishing-pages.md#main-pars-title-10) 以便訪問您網站的訪問者可以訪問。
+編輯完頁面後，您要 [發佈（或啟動）您的頁面](/help/sites-authoring/publishing-pages.md#main-pars-title-10) 以便您的網站訪客可以使用。
 
-## 進一步操作 {#further-actions}
+## 進一步動作 {#further-actions}
 
-在基本步驟之後，您可以在創作時使用許多其他操作。
+完成基本步驟後，您可在編寫時使用許多其他動作。
 
-### 複製頁 {#copying-a-page}
+### 複製頁面 {#copying-a-page}
 
-有時候更容易 [複製頁面](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page) 重新使用內容，而不是從頭開始創造一切。
+有時候會比較容易 [複製頁面](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page) 並重複使用內容，而非從頭開始再次建立所有內容。
 
-### 移動或更名頁面 {#moving-or-renaming-a-page}
+### 移動或重新命名頁面 {#moving-or-renaming-a-page}
 
-[移動和更名頁面](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page) 基本上都是用同樣的動作完成的。
+[移動和重新命名頁面](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page) 基本上會以相同的動作完成。
 
 ### 取消發佈頁面 {#unpublishing-a-page}
 
-要使以前發佈（或激活）的內容在您的公共網站上不可用，您 [取消發佈（或取消激活）頁面](/help/sites-authoring/publishing-pages.md#main-pars-title-5)。
+若要讓先前發佈（或啟動）的內容無法用於您的公開網站，請 [取消發佈（或停用）頁面](/help/sites-authoring/publishing-pages.md#main-pars-title-5).
 
 ### 刪除頁面 {#deleting-a-page}
 
-如果不再需要頁面，您可能希望 [刪除頁面](/help/sites-authoring/managing-pages.md#deleting-a-page)。
+如果不再需要某個頁面，您可能要 [刪除頁面](/help/sites-authoring/managing-pages.md#deleting-a-page).
 
 ### 設定頁面屬性 {#setting-the-page-properties}
 
-每 [頁面的屬性](/help/sites-authoring/editing-page-properties.md) 可定義以確定其操作的各個方面。 可以使用任一UI更新。
+每 [頁面有屬性](/help/sites-authoring/editing-page-properties.md) 您可以定義來決定其作業的各方面。 這些可透過其中一個UI更新。
 
 ### 建立頁面版本 {#creating-a-version-of-a-page}
 
-你可以 [建立版本](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version) 一頁，然後 [還原為版本](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version) 必要時。
+您可以 [建立版本](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version) ，然後 [還原為版本](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version) 如有需要。
 
 ## 更多資訊 {#more-information}
 
-有關創作的詳細資訊，請訪問 [頁面創作](/help/sites-authoring/page-authoring.md)。
+如需撰寫的詳細資訊，請前往 [頁面製作](/help/sites-authoring/page-authoring.md).

@@ -1,7 +1,7 @@
 ---
 title: 資料存放庫廢棄項目收集
 seo-title: Data Store Garbage Collection
-description: 瞭解如何配置資料儲存垃圾回收以釋放磁碟空間。
+description: 瞭解如何設定資料存放區垃圾收藏集以釋放磁碟空間。
 seo-description: Learn how to configure Data Store Garbage Collection to free up disk space.
 uuid: 49488a81-986a-4d1a-96c8-aeb6595fc094
 contentOwner: msm-service
@@ -20,176 +20,176 @@ ht-degree: 0%
 
 # 資料存放庫廢棄項目收集 {#data-store-garbage-collection}
 
-當移除常規WCM資產時，對基礎資料儲存記錄的引用可以從節點層次中移除，但資料儲存記錄本身仍然保持。 此未引用的資料儲存記錄隨後變為「垃圾」，無需保留。 在存在大量垃圾資產的情況下，有利於清除這些垃圾資產以保留空間，優化備份和檔案系統維護效能。
+移除傳統WCM資產時，可能會從節點階層中移除對基礎資料存放區記錄的參考，但資料存放區記錄本身會保留。 然後，這個未參考的資料存放區記錄會變成不需要保留的「垃圾」。 在有大量垃圾資產的情況下，移除這些資產以保留空間，並最佳化備份和檔案系統維護效能，會很有幫助。
 
-在大多數情況下，WCM應用程式往往收集資訊，但刪除資訊的頻率幾乎不是那麼高。 雖然新映像被添加，甚至會取代舊版本，但版本控制系統仍保留舊映像，並支援在需要時恢復到舊映像。 因此，我們認為添加到系統中的大部分內容被有效地永久儲存。 那麼，我們可能想要清理的儲存庫中「垃圾」的典型來源是什麼？
+在大多數情況下，WCM應用程式傾向於收集資訊，但刪除資訊的頻率幾乎沒有。 雖然已新增新影像，但即使取代舊版本，版本控制系統仍會保留舊影像，並支援視需要還原成舊影像。 因此，我們視為新增至系統的大部分內容都會有效永久儲存。 那麼存放庫中，我們可能想要清理的典型「垃圾」來源是什麼？
 
-AEM將儲存庫用作儲存，用於許多內部和內部管理活動：
+AEM使用存放庫作為許多內部和內部管理活動的存放區：
 
-* 生成和下載的包
-* 為發佈複製建立的臨時檔案
-* 工作流負載
-* 在DAM呈現期間臨時建立的資產
+* 建置和下載的套件
+* 為發佈復寫建立的暫存檔
+* 工作流程裝載
+* 在DAM呈現期間暫時建立的資產
 
-當這些臨時對象中的任何一個足夠大，需要在資料儲存中儲存，並且當對象最終被棄用時，資料儲存記錄本身將保持為「垃圾」。 在典型的WCM作者/發佈應用程式中，此類垃圾的最大來源通常是發佈激活過程。 將資料複製到「發佈」時，如果首先以名為「Durbo」的高效資料格式以集合形式收集並儲存在儲存庫中， `/var/replication/data`。 資料束通常大於資料儲存的臨界大小閾值，因此最後儲存為資料儲存記錄。 複製完成後， `/var/replication/data` 刪除，但資料儲存記錄仍為「垃圾」。
+當任何這些暫存物件夠大，需要儲存在資料存放區時，且當物件最終退出使用時，資料存放區記錄本身會保留為「垃圾」。 在典型的WCM製作/發佈應用程式中，此型別記憶體的最大來源通常是發佈啟動程式。 當資料被復寫到Publish時，如果是先以稱為「Durbo」的有效資料格式在集合中收集，並儲存在下的存放庫中， `/var/replication/data`. 資料組合通常大於資料存放區的關鍵大小臨界值，因此最終會儲存為資料存放區記錄。 復寫完成後，中的節點 `/var/replication/data` 已刪除，但資料存放區記錄仍維持為「垃圾」。
 
-另一個可恢復垃圾來源是包。 與其他所有內容一樣，包資料儲存在儲存庫中，因此儲存在資料儲存中的包大於4KB。 在開發項目過程中或在維護系統的過程中，可以多次構建和重建包，每次構建都會生成新的資料儲存記錄，同時保留以前構建的記錄。
+另一個可回收的廢棄物來源是封裝。 封裝資料（像其他所有資料一樣）儲存在存放庫中，因此大於4KB的封裝資料會儲存在資料存放區中。 在開發專案的過程中，或在維護系統的過程中，可能會多次建置和重建套件，每個組建都會產生新的資料存放區記錄，孤立先前的組建記錄。
 
-## 資料儲存垃圾收集是如何工作的？ {#how-does-data-store-garbage-collection-work}
+## 資料存放區垃圾收集如何運作？ {#how-does-data-store-garbage-collection-work}
 
-如果儲存庫已配置有外部資料儲存， [資料儲存垃圾收集將自動運行](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) 作為「每週維護」窗口的一部分。 系統管理員也 [手動運行資料儲存垃圾回收](#running-data-store-garbage-collection) 根據需要。 通常，建議定期執行資料儲存垃圾收集，但在規劃資料儲存垃圾收集時應考慮以下因素：
+如果存放庫已設定外部資料存放區， [資料存放區垃圾收集會自動執行](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) 作為「每週維護」視窗的一部分。 系統管理員也可以 [手動執行資料存放區垃圾收集](#running-data-store-garbage-collection) 視需要而定。 一般而言，建議定期執行資料存放區垃圾收集，但在規劃資料存放區垃圾收集時，應考量下列因素：
 
-* 資料儲存垃圾收集需要時間，並可能影響效能，因此應相應地進行規劃。
-* 刪除資料儲存垃圾記錄不會影響正常效能，因此這不是效能優化。
-* 如果不考慮儲存利用率和備份時間等相關因素，則資料儲存垃圾收集可能會被安全地延遲。
+* 資料存放區垃圾收集需要時間，而且可能影響效能，因此應據此規劃。
+* 移除資料存放區垃圾記錄不會影響一般效能，因此這並非效能最佳化。
+* 如果不必擔心儲存空間使用率以及備份時間等相關因素，資料存放區垃圾收集可能會安全地延遲。
 
-當進程開始時，資料儲存垃圾收集器首先記錄當前時間戳。 然後，使用多遍標籤/掃描模式算法執行該收集。
+當程式開始時，資料存放區記憶體回收行程會先記下目前的時間戳記。 然後使用多通道標籤/掃描模式演演算法來執行收集。
 
-在第一階段，資料儲存垃圾收集器執行對所有儲存庫內容的全面遍歷。 對於引用資料儲存記錄的每個內容對象，它都將檔案定位在檔案系統中，執行元資料更新 — 修改「上次修改」或MTIME屬性。 此時，此階段訪問的檔案將比初始基線時間戳更新。
+在第一階段，資料存放區記憶體回收行程會執行所有存放庫內容的完整周遊作業。 對於每個參考了資料存放區記錄的內容物件，它會定位檔案系統中的檔案，執行中繼資料更新 — 修改「上次修改」或MTIME屬性。 此時，此階段存取的檔案會比初始基準時間戳記更新。
 
-在第二階段，資料儲存垃圾收集器以與「查找」大致相同的方式遍歷資料儲存的物理目錄結構。 它檢查了檔案的「上次修改時間」或MTIME屬性，並作出以下確定：
+在第二階段，資料存放區垃圾收集器會以與「尋找」類似的方式周游資料存放區的實體目錄結構。 它會檢查檔案的「上次修改」或MTIME屬性，並進行以下判斷：
 
-* 如果MTIME比初始基線時間戳新，則在第一階段找到該檔案，或者是收集過程進行期間添加到儲存庫的全新檔案。 在其中一種情況下，記錄被視為活動，檔案不得刪除。
-* 如果MTIME早於初始基線時間戳，則檔案不是活動引用的檔案，它被視為可移除垃圾。
+* 如果MTIME比初始基準時間戳記還新，則可能是檔案是在第一個階段找到，或是收集程式進行期間新增到存放庫的全新檔案。 在這兩種情況下，記錄都會被視為作用中，且檔案不應被刪除。
+* 如果MTIME早於初始基準時間戳記，則檔案不是主動參照的檔案，且會視為可移除的廢棄專案。
 
-該方法適用於具有專用資料儲存的單個節點。 但是，資料儲存可能是共用的，如果是，則表示不會檢查其他儲存庫對資料儲存記錄的潛在活動即時引用，並且可能會錯誤地刪除活動引用的檔案。 在規劃任何垃圾收集之前，系統管理員必須瞭解資料儲存的共用性質，並且只有在知道資料儲存未共用時才使用簡單的內置資料儲存垃圾收集過程。
+此方法適用於具有私人資料存放區的單一節點。 不過，資料存放區可以共用，如果這表示系統不會檢查來自其他存放庫之資料存放區記錄的可能作用中即時參照，且可能會誤刪作用中參照的檔案。 系統管理員在計畫任何垃圾收集之前必須瞭解資料存放區的共用性質，並在已知資料存放區未共用時，僅使用簡單的內建資料存放區垃圾收集程式。
 
 >[!NOTE]
 >
->在群集或共用資料儲存設定（使用Mongo或Segment Tar）中執行垃圾收集時，日誌可能會顯示無法刪除某些Blob ID的警告。 這是因為先前垃圾收集中刪除的Blob ID被沒有ID刪除資訊的其他群集或共用節點錯誤地再次引用。 因此，當執行垃圾收集時，它會在嘗試刪除上次運行中已刪除的ID時記錄警告。 此行為不影響效能或功能。
+>在叢集或共用資料存放區設定（使用Mongo或Segment Tar）中執行垃圾收集時，記錄可能會顯示無法刪除某些blob ID的警告。 發生此情況是因為其他叢集或共用節點再次錯誤地參考了先前垃圾收藏集中刪除的blob ID，而其他叢集或共用節點沒有ID刪除的相關資訊。 因此，當執行垃圾收集時，它會嘗試刪除在上次執行中已刪除的ID時記錄警告。 此行為不會影響效能或功能。
 
-## 運行資料儲存垃圾收集 {#running-data-store-garbage-collection}
+## 正在執行資料存放區垃圾收集 {#running-data-store-garbage-collection}
 
-根據正在運行的資料儲存設定，有三種運行資料儲存垃圾收集AEM的方法：
+根據AEM執行所在的資料存放區設定，有三種方式可執行資料存放區垃圾收集：
 
-1. 通過 [修訂版清除](/help/sites-deploying/revision-cleanup.md)  — 通常用於節點儲存清理的垃圾回收機制。
+1. Via [修訂清除](/help/sites-deploying/revision-cleanup.md)  — 一種垃圾收集機制，通常用於節點存放區清理。
 
-1. 通過 [資料儲存垃圾收集](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-operations-dashboard)  — 特定於外部資料儲存的垃圾回收機制，可在「操作控制板」中使用。
-1. 通過 [JMX控制台](/help/sites-administering/jmx-console.md)。
+1. Via [資料存放區垃圾收集](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-operations-dashboard)  — 外部資料存放區專用的垃圾收集機制，可在操作控制面板上使用。
+1. 透過 [JMX主控台](/help/sites-administering/jmx-console.md).
 
-如果TarMK同時用作節點儲存和資料儲存，則版本清理可用於節點儲存和資料儲存的垃圾收集。 但是，如果將外部資料儲存配置為（如檔案系統資料儲存），則必須將資料儲存垃圾收集與修訂版清除分開顯式觸發。 資料儲存垃圾收集可以通過操作儀表板或JMX控制台觸發。
+如果TarMK同時作為節點存放區和資料存放區使用，則修訂清除可用於節點存放區和資料存放區的垃圾收集。 不過，如果設定了外部資料存放區（例如檔案系統資料存放區），則必須明確觸發資料存放區垃圾收藏集，且獨立於修訂版清理。 資料存放區垃圾收集可以透過操作儀表板或JMX主控台觸發。
 
-下表顯示了資料儲存垃圾收集類型，該類型需要用於6中所有受支援的資料儲存部署AEM:
+下表顯示AEM 6中所有支援的資料存放區部署所需使用的資料存放區垃圾收集型別：
 
 <table>
  <tbody>
   <tr>
    <td><strong>節點存放區</strong><br /> </td>
-   <td><strong>資料儲存</strong></td>
+   <td><strong>資料存放區</strong></td>
    <td><strong>垃圾收集機制</strong><br /> </td>
   </tr>
   <tr>
    <td>TarMK</td>
    <td>TarMK</td>
-   <td>修訂版清除（二進位檔案與段儲存內聯）</td>
+   <td>修訂清理（二進位檔與區段存放區內聯）</td>
   </tr>
   <tr>
    <td>TarMK</td>
    <td>外部檔案系統</td>
-   <td><p>通過操作面板執行資料儲存垃圾收集任務</p> <p>JMX控制台</p> </td>
+   <td><p>透過操作控制面板的資料存放區垃圾收集任務</p> <p>JMX主控台</p> </td>
   </tr>
   <tr>
-   <td>蒙戈DB</td>
-   <td>蒙戈DB</td>
-   <td><p>通過操作面板執行資料儲存垃圾收集任務</p> <p>JMX控制台</p> </td>
+   <td>MongoDB</td>
+   <td>MongoDB</td>
+   <td><p>透過操作控制面板的資料存放區垃圾收集任務</p> <p>JMX主控台</p> </td>
   </tr>
   <tr>
-   <td>蒙戈DB</td>
+   <td>MongoDB</td>
    <td>外部檔案系統</td>
-   <td><p>通過操作面板執行資料儲存垃圾收集任務</p> <p>JMX控制台</p> </td>
+   <td><p>透過操作控制面板的資料存放區垃圾收集任務</p> <p>JMX主控台</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 通過操作儀表板運行資料儲存垃圾收集 {#running-data-store-garbage-collection-via-the-operations-dashboard}
+### 透過操作儀表板執行資料存放區垃圾收集 {#running-data-store-garbage-collection-via-the-operations-dashboard}
 
-內置的每週維護窗口，可通過 [操作儀表板](/help/sites-administering/operations-dashboard.md)，包含一個內置任務，以在星期日的上午1點觸發資料儲存垃圾收集。
+內建的每週維護視窗，可透過 [操作控制面板](/help/sites-administering/operations-dashboard.md)，包含要在星期日凌晨1:00觸發資料存放區垃圾收集的內建工作。
 
-如果您需要在此時間之外運行資料儲存垃圾收集，則可以通過操作儀表板手動觸發。
+如果您需要在此時間以外執行資料存放區垃圾收集，可以透過操作儀表板手動觸發。
 
-在運行資料儲存垃圾收集之前，您應檢查當時是否沒有運行任何備份。
+在執行資料存放區垃圾收集之前，您應該檢查當時沒有執行任何備份。
 
-1. 開啟操作儀表板 **導航** -> **工具** -> **操作** -> **維護**。
-1. 按一下或點擊 **每週維護窗口**。
+1. 開啟「作業控制面板」的方法有： **導覽** -> **工具** -> **作業** -> **維護**.
+1. 按一下或點選 **每週維護期間**.
 
    ![chlimage_1-64](assets/chlimage_1-64.png)
 
-1. 選擇 **資料儲存垃圾收集** 任務，然後按一下或點擊 **運行** 表徵圖
+1. 選取 **資料存放區垃圾收集** 任務，然後按一下或點選 **執行** 圖示。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 資料儲存垃圾收集運行，其狀態顯示在儀表板中。
+1. 資料存放區垃圾收集執行，其狀態會顯示在儀表板中。
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
 >[!NOTE]
 >
->只有在配置了外部檔案資料儲存時，才可看到「資料儲存垃圾收集」任務。 請參閱 [在6中配置節點儲存和數AEM據儲存](/help/sites-deploying/data-store-config.md#file-data-store) 的子菜單。
+>只有在您已設定外部檔案資料存放區時，資料存放區垃圾收集工作才會顯示。 另請參閱 [在AEM 6中設定節點存放區和資料存放區](/help/sites-deploying/data-store-config.md#file-data-store) 有關如何設定檔案資料存放區的資訊。
 
-### 通過JMX控制台運行資料儲存垃圾收集 {#running-data-store-garbage-collection-via-the-jmx-console}
+### 透過JMX主控台執行資料存放區垃圾收集 {#running-data-store-garbage-collection-via-the-jmx-console}
 
-本節介紹通過JMX控制台手動運行資料儲存垃圾收集。 如果安裝時沒有外部資料儲存，則這不適用於安裝。 請參閱下面有關如何運行修訂版清除的說明 [維護儲存庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)。
+本節說明如何透過JMX主控台手動執行資料存放區垃圾收集。 如果您的安裝設定沒有外部資料存放區，則這不適用於您的安裝。 請改為參閱下方的如何執行修訂清除的指示 [維護存放庫](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
 
 >[!NOTE]
 >
->如果您正在使用外部資料儲存運行TarMK，則必須先運行修訂版清理，以便垃圾收集有效。
+>如果您使用外部資料存放區執行TarMK，必須先執行修訂清除，垃圾收集才會生效。
 
-要運行垃圾收集，請執行以下操作：
+若要執行垃圾收集：
 
-1. 在Apache Felix OSGi管理控制台中，選中 **主** 頁籤 **JMX** 的子菜單。
-1. 接下來，搜索並按一下 **儲存庫管理器** MBean(或轉到 `https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`)。
-1. 按一下 **startDataStoreGC（布爾markOnly）**。
-1. 輸入&quot;`true`的 `markOnly` 參數（如果需要）:
+1. 在Apache Felix OSGi Management Console中，反白顯示 **主要** 標籤並選取 **JMX** 從下列功能表。
+1. 接下來，搜尋並按一下 **存放庫管理員** MBean (或前往 `https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`)。
+1. 按一下 **startDataStoreGC（布林值markOnly）**.
+1. 輸入&quot;`true`的「」 `markOnly` 引數（若有需要）：
 
    | **選項** | **說明** |
    |---|---|
-   | 布爾標籤僅 | 設定為true時，僅標籤參照，在標籤和掃描操作中不掃描。 當基礎BlobStore在多個不同的儲存庫之間共用時，將使用此模式。 對於所有其它情況，將其設定為false以執行完全垃圾收集。 |
+   | 布林值markOnly | 設定為true可只標籤參照，而不會在標籤和掃描操作中掃描。 當基礎BlobStore在多個不同存放庫之間共用時，將使用此模式。 對於所有其他情況，將其設定為false以執行完整垃圾收集。 |
 
-1. 按一下 **調用**。 CRX運行垃圾收集，並指示它何時完成。
-
->[!NOTE]
->
->資料儲存垃圾收集不會收集過去24小時內已刪除的檔案。
+1. 按一下 **叫用**. CRX會執行垃圾收藏集並指示其完成時間。
 
 >[!NOTE]
 >
->只有配置了外部檔案資料儲存時，資料儲存垃圾收集任務才會啟動。 如果尚未配置外部檔案資料儲存，則任務將返回消息 `Cannot perform operation: no service of type BlobGCMBean found` 調用後。 請參閱 [在6中配置節點儲存和數AEM據儲存](/help/sites-deploying/data-store-config.md#file-data-store) 的子菜單。
-
-## 自動化資料儲存垃圾收集 {#automating-data-store-garbage-collection}
-
-如果可能，應在系統負載較小時運行資料儲存垃圾收集。
-
-內置的每週維護窗口，可通過 [操作儀表板](/help/sites-administering/operations-dashboard.md)，包含一個內置任務，以在星期日的上午1點觸發資料儲存垃圾收集。 您還應檢查此時是否未運行任何備份。 維護窗口的啟動可以根據需要通過儀表板進行自定義。
+>資料存放區垃圾收集不會收集過去24小時內已刪除的檔案。
 
 >[!NOTE]
 >
->不同時運行它的原因是，舊（和未使用的）資料儲存檔案也會備份，因此，如果需要回滾到舊修訂，二進位檔案仍在備份中。
+>只有在您已設定外部檔案資料存放區時，資料存放區垃圾收集工作才會啟動。 如果尚未設定外部檔案資料存放區，工作將傳回訊息 `Cannot perform operation: no service of type BlobGCMBean found` 叫用之後。 另請參閱 [在AEM 6中設定節點存放區和資料存放區](/help/sites-deploying/data-store-config.md#file-data-store) 有關如何設定檔案資料存放區的資訊。
 
-如果您不想在操作控制板的每週維護窗口中運行資料儲存垃圾收集，也可以使用wget或curl HTTP客戶端自動執行。 以下是如何使用curl自動備份的示例：
+## 自動化資料存放區垃圾收集 {#automating-data-store-garbage-collection}
+
+如果可能的話，資料存放區垃圾收集應在系統負載很少時執行，例如在早上。
+
+內建的每週維護視窗，可透過 [操作控制面板](/help/sites-administering/operations-dashboard.md)，包含要在星期日凌晨1:00觸發資料存放區垃圾收集的內建工作。 您也應該檢查目前沒有執行任何備份。 必要時，可透過控制面板自訂維護視窗的開始。
+
+>[!NOTE]
+>
+>不同時執行的原因是，舊的（和未使用的）資料存放區檔案也會進行備份，因此如果需要復原到舊的修訂版本，二進位檔案仍會保留在備份中。
+
+如果您不希望在作業儀表板中的每週維護視窗中執行資料存放區垃圾收集，也可以使用wget或curl HTTP使用者端將其自動化。 以下是如何使用curl自動化備份的範例：
 
 >[!CAUTION]
 >
->在以下示例中 `curl` 命令可能需要為實例配置各種參數；例如，主機名( `localhost`)，埠( `4502`)，管理密碼( `xyz`)和實際資料儲存垃圾收集的各種參數。
+>在以下範例中 `curl` 命令您可能需要為您的執行個體設定各種引數；例如，主機名稱( `localhost`)，連線埠( `4502`)，管理員密碼( `xyz`)和各種引數來進行實際的資料存放區垃圾收集。
 
-下面是通過命令行調用資料儲存垃圾收集的示例curl命令：
+以下是透過命令列叫用資料存放區垃圾收集的curl命令範例：
 
 ```shell
 curl -u admin:admin -X POST --data markOnly=true  https://localhost:4503/system/console/jmx/org.apache.jackrabbit.oak"%"3Aname"%"3Drepository+manager"%"2Ctype"%"3DRepositoryManagement/op/startDataStoreGC/boolean
 ```
 
-curl命令立即返回。
+curl命令會立即傳回。
 
-## 檢查資料儲存一致性 {#checking-data-store-consistency}
+## 檢查資料存放區一致性 {#checking-data-store-consistency}
 
-資料儲存一致性檢查將報告任何缺少但仍被引用的資料儲存二進位檔案。 要開始一致性檢查，請執行以下步驟：
+資料存放區一致性檢查會報告任何遺失但仍被參考的資料存放區二進位檔。 若要開始一致性檢查，請遵循下列步驟：
 
-1. 轉到JMX控制台。 有關如何使用JMX控制台的資訊，請參見 [這篇文章](/help/sites-administering/jmx-console.md#using-the-jmx-console)。
-1. 搜索 **BlobGarbageCollection** Mbean並按一下它。
-1. 按一下 `checkConsistency()` 的子菜單。
+1. 前往JMX主控台。 如需有關如何使用JMX主控台的資訊，請參閱 [本文](/help/sites-administering/jmx-console.md#using-the-jmx-console).
+1. 搜尋 **BlobGarbageCollection** Mbean並按一下它。
+1. 按一下 `checkConsistency()` 連結。
 
-一致性檢查完成後，將顯示報告為缺少的二進位檔案數。 如果數字大於0，請檢查 `error.log` 的子目錄。
+一致性檢查完成後，訊息會顯示回報為遺失的二進位檔數目。 如果數字大於0，請檢查 `error.log` 以取得有關遺失二進位檔的詳細資訊。
 
-在下面，您將找到一個示例，說明如何在日誌中報告缺少的二進位檔案：
+下方提供如何在記錄中報告遺失的二進位檔的範例：
 
 ```xml
 11:32:39.673 INFO [main] MarkSweepGarbageCollector.java:600 Consistency check found [1] missing blobs

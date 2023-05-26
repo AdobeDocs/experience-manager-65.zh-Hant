@@ -1,7 +1,7 @@
 ---
-title: 查看頁面分析資料
+title: 檢視頁面分析資料
 seo-title: Seeing Page Analytics Data
-description: 使用頁面分析資料來評估其頁面內容的有效性。
+description: 使用頁面分析資料來評估其頁面內容的成效。
 seo-description: Use page analytics data to gauge the effectiveness of their page content.
 uuid: a3d1e4d6-56af-44a5-832f-63167ea8af52
 contentOwner: Chris Bohnert
@@ -18,13 +18,13 @@ ht-degree: 8%
 ---
 
 
-# 查看頁面分析資料{#seeing-page-analytics-data}
+# 檢視頁面分析資料{#seeing-page-analytics-data}
 
-使用頁面分析資料來評估其頁面內容的有效性。
+使用頁面分析資料來評估其頁面內容的成效。
 
 ![chlimage_1-80](assets/chlimage_1-80.png)
 
-頁面分析資料顯示在站點控制台中。 當站點以清單格式顯示時，預設情況下以下列可用：
+頁面分析資料會顯示在Sites主控台中。 當網站以清單格式顯示時，預設可使用下列欄：
 
 * 頁面檢視
 * 不重複訪客
@@ -32,4 +32,4 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->僅在觸控優化的UI中才可直接在控制台中顯示站點分析資料。 請參閱 [查看頁面分析資料](/help/sites-authoring/page-analytics-using.md) 的子菜單。
+>在主控台中直接顯示網站分析資料只能在觸控最佳化UI中使用。 另請參閱 [檢視頁面分析資料](/help/sites-authoring/page-analytics-using.md) 如需詳細資訊，請參閱標準撰寫檔案。

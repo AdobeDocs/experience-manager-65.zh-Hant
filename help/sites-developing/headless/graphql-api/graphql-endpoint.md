@@ -1,6 +1,6 @@
 ---
 title: 在 AEM 中管理 GraphQL 端點
-description: 瞭解如何管理Adobe Experience Manager的GraphQL終端節點，以便提供無頭內容。
+description: 瞭解如何在Adobe Experience Manager中管理GraphQL端點，以進行Headless內容傳送。
 exl-id: a59a5e50-0787-4c1c-a83d-bb3eac1479a8
 source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
 workflow-type: tm+mt
@@ -59,7 +59,7 @@ AEM 全域端點的 GraphQL 存放庫路徑：
 
 若要啟用對應的端點：
 
-1. 導航到 **工具**。 **資產**，然後選擇 **GraphQL**。
+1. 導覽至 **工具**， **資產**，然後選取 **GraphQL**.
 1. 選擇 **建立**。
 1. **建立新的 GraphQL 端點**&#x200B;對話框隨即開啟。您可以在這裡指定：
    * **名稱**：端點名稱，您可以輸入任何文字。

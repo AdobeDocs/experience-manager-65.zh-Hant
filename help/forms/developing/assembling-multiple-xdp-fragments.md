@@ -1,7 +1,7 @@
 ---
-title: 組裝多個XDP片段
+title: 組合多個XDP片段
 seo-title: Assembling Multiple XDP Fragments
-description: 使用Java API和Web服務API將多個XDP片段裝配到單個XDP文檔中。
+description: 使用Java API和Web服務API將多個XDP片段組合成一個XDP檔案。
 seo-description: Assemble multiple XDP fragments into a single XDP document using the Java API and Web Service API.
 uuid: 0e35ff85-ff40-4878-ae31-aa8da75bd3ec
 contentOwner: admin
@@ -20,25 +20,25 @@ ht-degree: 0%
 
 ---
 
-# 組裝多個XDP片段{#assembling-multiple-xdp-fragments}
+# 組合多個XDP片段{#assembling-multiple-xdp-fragments}
 
-可將多個XDP片段裝配到單個XDP文檔中。 例如，請考慮XDP片段，其中每個XDP檔案包含一個或多個用於建立健康表單的子表單。 下圖顯示了大綱視圖(表示在中使用的tuc018_template_flud.xdp檔案 *組裝多個XDP片段* 快速啟動):
+您可以將多個XDP片段組合成一個XDP檔案。 例如，考慮XDP片段，其中每個XDP檔案都包含一個或多個用於建立健康情況表單的子表單。 下圖顯示輪廓檢視(代表tuc018_template_flowed.xdp檔案，用於 *組合多個XDP片段* 快速入門)：
 
 ![am_am_forma](assets/am_am_forma.png)
 
-下圖顯示了患者節(表示在 *組裝多個XDP片段* 快速啟動):
+下圖顯示病人區段(代表tuc018_contact.xdp檔案，用於 *組合多個XDP片段* 快速入門)：
 
 ![am_am_formb](assets/am_am_formb.png)
 
-下圖顯示了患者健康部分(表示中使用的tuc018_patient.xdp檔案 *組裝多個XDP片段* 快速啟動):
+下圖顯示病人健康部分(代表tuc018_patient.xdp檔案，用於 *組合多個XDP片段* 快速入門)：
 
 ![am_am_formc](assets/am_am_formc.png)
 
-此片段包含名為 *subPatientPhysical* 和 *子患者健康*。 這兩個子表單都在傳遞給匯編器服務的DDX文檔中引用。 使用匯編器服務，可以將所有這些XDP片段組合為單個XDP文檔，如下圖所示。
+此片段包含兩個名為的子表單 *subPatientPhysical* 和 *subPatientHealth*. 這兩個子表單都會在傳遞至組合器服務的DDX檔案中參考。 使用Assembler服務，您可以將所有這些XDP片段合併到單一XDP檔案中，如下圖所示。
 
 ![am_am_formd](assets/am_am_formd.png)
 
-以下DDX文檔將多個XDP片段組合到XDP文檔中。
+下列DDX檔案將多個XDP片段組合到XDP檔案中。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8"?>
@@ -53,7 +53,7 @@ ht-degree: 0%
  </DDX>
 ```
 
-DDX文檔包含XDP `result` 指定結果名稱的標籤。 在這種情況下，價值是 `tuc018result.xdp`。 在匯編程式服務返回結果後用於檢索XDP文檔的應用程式邏輯中引用此值。 例如，請考慮以下用於檢索已裝配的XDP文檔的Java應用程式邏輯（請注意，值是粗體）:
+DDX檔案包含XDP `result` 指定結果名稱的標籤。 在此情況下，值為 `tuc018result.xdp`. 在Assembler服務傳回結果後，此值會在用於擷取XDP檔案的應用程式邏輯中參考。 例如，考慮用於擷取已組裝XDP檔案的下列Java應用程式邏輯（請注意值為粗體）：
 
 ```java
  //Iterate through the map object to retrieve the result XDP document
@@ -74,150 +74,150 @@ DDX文檔包含XDP `result` 指定結果名稱的標籤。 在這種情況下，
  }
 ```
 
-的 `XDP source` tag指定表示完整XDP文檔的XDP檔案，該文檔可用作添加XDP片段的容器，或作為按順序追加在一起的多個文檔之一。 在這種情況下，XDP文檔僅用作容器（如中所示的第一個圖示） *組裝多個XDP片段*)。 即，其他XDP檔案被放在XDP容器中。
+此 `XDP source` tag指定代表完整XDP檔案的XDP檔案，該檔案可用作新增XDP片段的容器，或作為按順序附加在一起的多個檔案之一。 在此情況下，XDP檔案僅會作為容器使用(第一個圖例顯示於 *組合多個XDP片段*)。 也就是說，其他XDP檔案會放置在XDP容器中。
 
-對於每個子窗體，可以 `XDPContent` 元素（此元素是可選的）。 在上例中，請注意有三個子表單： `subPatientContact`。 `subPatientPhysical`, `subPatientHealth`。 都 `subPatientPhysical` 子窗體和 `subPatientHealth` 子窗體位於同一XDP檔案tuc018_patient.xdp中。 片段元素指定子窗體的名稱，如Designer中所定義。
-
->[!NOTE]
->
->有關匯編器服務的詳細資訊，請參見 [《AEM Forms服務參考》](https://www.adobe.com/go/learn_aemforms_services_63)。
+您可以為每個子表單新增 `XDPContent` 元素（此元素為選用）。 在上述範例中，請注意有三個子表單： `subPatientContact`， `subPatientPhysical`、和 `subPatientHealth`. 兩者皆有 `subPatientPhysical` 子表單和 `subPatientHealth` 子表單位於相同的XDP檔案tuc018_patient.xdp中。 片段元素會指定子表單的名稱，如Designer中所定義。
 
 >[!NOTE]
 >
->有關DDX文檔的詳細資訊，請參見 [匯編程式服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63)。
+>如需有關組合器服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+
+>[!NOTE]
+>
+>如需有關DDX檔案的詳細資訊，請參閱 [組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63).
 
 ## 步驟摘要 {#summary-of-steps}
 
-要裝配多個XDP片段，請執行以下任務：
+若要組合多個XDP片段，請執行下列工作：
 
-1. 包括項目檔案。
-1. 建立PDF匯編器客戶端。
-1. 引用現有DDX文檔。
-1. 引用XDP文檔。
-1. 設定運行時選項。
-1. 組合多個XDP文檔。
-1. 檢索已裝配的XDP文檔。
+1. 包含專案檔案。
+1. 建立PDF組合器使用者端。
+1. 參考現有的DDX檔案。
+1. 參考XDP檔案。
+1. 設定執行階段選項。
+1. 組合多個XDP檔案。
+1. 擷取組裝的XDP檔案。
 
-**包括項目檔案**
+**包含專案檔案**
 
-在開發項目中包括必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-必須將以下JAR檔案添加到項目的類路徑：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(在JBoss上部署AEM Forms時必需)
-* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-**建立PDF匯編器客戶端**
+**建立PDF組合器使用者端**
 
-在以寫程式方式執行匯編器操作之前，請建立匯編器服務客戶端。
+以程式設計方式執行Assembler作業之前，請先建立Assembler服務使用者端。
 
-**引用現有DDX文檔**
+**參考現有的DDX檔案**
 
-必須引用DDX文檔來匯編多個XDP文檔。 此DDX文檔必須包含 `XDP result`。 `XDP source`, `XDPContent` 元素。
+必須參考DDX檔案才能組合多個XDP檔案。 此DDX檔案必須包含 `XDP result`， `XDP source`、和 `XDPContent` 元素。
 
-**引用XDP文檔**
+**參考XDP檔案**
 
-要匯編多個XDP文檔，請參考用於匯編結果XDP文檔的所有XDP檔案。 確保XDP文檔中包含的由 `source` 屬性在 `fragment` 屬性。 子窗體在設計器中定義。 例如，請考慮以下XML。
+若要組裝多個XDP檔案，請參照用來組裝結果XDP檔案的所有XDP檔案。 請確定所參考的XDP檔案中包含的子表單名稱 `source` 屬性指定於 `fragment` 屬性。 子表單在Designer中定義。 例如，請考量下列XML。
 
 ```xml
  <XDPContent insertionPoint="ddx_fragment" source="tuc018_contact.xdp" fragment="subPatientContact" required="false"/>
 ```
 
-名為的子窗體 *subPatientContact* 必須位於名為 *tuc018_contact.xdp*。
+名為的子表單 *subPatientContact* 必須位於名為的XDP檔案中 *tuc018_contact.xdp*.
 
-**設定運行時選項**
+**設定執行階段選項**
 
-您可以設定運行時選項，這些選項在匯編程式服務執行作業時控制其行為。 例如，您可以設定一個選項，指示匯編程式服務在遇到錯誤時繼續處理作業。
+您可以設定執行階段選項，控制Assembler服務執行工作時的行為。 例如，您可以設定一個選項，在遇到錯誤時指示Assembler服務繼續處理工作。
 
-**匯編多個XDP文檔**
+**組合多個XDP檔案**
 
-要裝配多個XDP檔案，請調用 `invokeDDX` 的下界。 匯編器服務返回集合對象中已裝配的XDP文檔。
+若要組合多個XDP檔案，請呼叫 `invokeDDX` 作業。 Assembler服務會傳回集合物件中的已組裝XDP檔案。
 
-**檢索已裝配的XDP文檔**
+**擷取組裝的XDP檔案**
 
-集合對象內返回已裝配的XDP文檔。 循環訪問集合對象並將XDP文檔另存為XDP檔案。 您還可以將XDP文檔傳遞給其他AEM Forms服務，如輸出。
-
-**另請參閱**
-
-[使用Java API裝配多個XDP片段](assembling-multiple-xdp-fragments.md#assemble-multiple-xdp-fragments-using-the-java-api)
-
-[使用Web服務API裝配多個XDP片段](assembling-multiple-xdp-fragments.md#assemble-multiple-xdp-fragments-using-the-web-service-api)
-
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-
-[以寫程式方式裝配PDF文檔](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)
-
-[使用片段建立PDF文檔](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments)
-
-## 使用Java API裝配多個XDP片段 {#assemble-multiple-xdp-fragments-using-the-java-api}
-
-使用匯編器服務API(Java)匯編多個XDP片段：
-
-1. 包括項目檔案。
-
-   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-assembler-client.jar。
-
-1. 建立PDF匯編器客戶端。
-
-   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
-   * 建立 `AssemblerServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 的雙曲餘切值。
-
-1. 引用現有DDX文檔。
-
-   * 建立 `java.io.FileInputStream` 表示DDX文檔的對象，方法是使用其建構子並傳遞一個字串值，該字串值指定DDX檔案的位置。
-   * 建立 `com.adobe.idp.Document` 使用其建構子並傳遞對象 `java.io.FileInputStream` 的雙曲餘切值。
-
-1. 引用XDP文檔。
-
-   * 建立 `java.util.Map` 用於使用 `HashMap` 建構子。
-   * 建立 `com.adobe.idp.Document` 並傳遞 `java.io.FileInputStream` 包含輸入XDP檔案的對象（對每個XDP檔案重複此任務）。
-   * 向 `java.util.Map` 通過調用對象 `put` 方法並傳遞以下參數：
-
-      * 表示鍵名稱的字串值。 此值必須與 `source` 在DDX文檔中指定的元素值（對每個XDP檔案重複此任務）。
-      * A `com.adobe.idp.Document` 包含與 `source` 元素（對每個XDP檔案重複此任務）。
-
-1. 設定運行時選項。
-
-   * 建立 `AssemblerOptionSpec` 使用其建構子儲存運行時選項的對象。
-   * 通過調用屬於的方法來設定運行時選項以滿足業務需求 `AssemblerOptionSpec` 的雙曲餘切值。 例如，要指示匯編器服務在發生錯誤時繼續處理作業，請調用 `AssemblerOptionSpec` 對象 `setFailOnError` 方法 `false`。
-
-1. 組合多個XDP文檔。
-
-   調用 `AssemblerServiceClient` 對象 `invokeDDX` 方法並傳遞以下所需值：
-
-   * A `com.adobe.idp.Document` 表示要使用的DDX文檔的對象
-   * A `java.util.Map` 包含輸入XDP檔案的對象
-   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 指定運行時選項的對象，包括預設字型和作業日誌級別
-
-   的 `invokeDDX` 方法返回 `com.adobe.livecycle.assembler.client.AssemblerResult` 包含已裝配的XDP文檔的對象。
-
-1. 檢索已裝配的XDP文檔。
-
-   要獲取已裝配的XDP文檔，請執行以下操作：
-
-   * 調用 `AssemblerResult` 對象 `getDocuments` 的雙曲餘切值。 此方法返回 `java.util.Map` 的雙曲餘切值。
-   * 迭代 `java.util.Map` 直到找到結果 `com.adobe.idp.Document` 的雙曲餘切值。
-   * 調用 `com.adobe.idp.Document` 對象 `copyToFile` 提取XDP文檔的方法。
+已組裝的XDP檔案會在集合物件中傳回。 逐一檢視集合物件，並將XDP檔案儲存為XDP檔案。 您也可以將XDP檔案傳遞至其他AEM Forms服務，例如輸出。
 
 **另請參閱**
 
-[組裝多個XDP片段](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
-[快速啟動（SOAP模式）:使用Java API組裝多個XDP片段](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[使用Java API組合多個XDP片段](assembling-multiple-xdp-fragments.md#assemble-multiple-xdp-fragments-using-the-java-api)
 
-## 使用Web服務API裝配多個XDP片段 {#assemble-multiple-xdp-fragments-using-the-web-service-api}
+[使用網站服務API組合多個XDP片段](assembling-multiple-xdp-fragments.md#assemble-multiple-xdp-fragments-using-the-web-service-api)
 
-使用匯編器服務API（Web服務）匯編多個XDP片段：
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-1. 包括項目檔案。
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-   建立使用MTOM的Microsoft.NET項目。 請確保在設定服務引用時使用以下WSDL定義：
+[以程式設計方式組裝PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)
+
+[使用片段建立PDF檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments)
+
+## 使用Java API組合多個XDP片段 {#assemble-multiple-xdp-fragments-using-the-java-api}
+
+使用組合器服務API (Java)組合多個XDP片段：
+
+1. 包含專案檔案。
+
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-assembler-client.jar。
+
+1. 建立PDF組合器使用者端。
+
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `AssemblerServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
+
+1. 參考現有的DDX檔案。
+
+   * 建立 `java.io.FileInputStream` 物件，使用它的建構函式並傳遞字串值（指定DDX檔案的位置）來代表DDX檔案。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
+
+1. 參考XDP檔案。
+
+   * 建立 `java.util.Map` 用來儲存輸入XDP檔案的物件(使用 `HashMap` 建構函式。
+   * 建立 `com.adobe.idp.Document` 物件並傳遞 `java.io.FileInputStream` 包含輸入XDP檔案的物件（對每個XDP檔案重複此工作）。
+   * 將專案新增至 `java.util.Map` 物件(透過叫用其 `put` 方法並傳遞下列引數：
+
+      * 代表機碼名稱的字串值。 此值必須與 `source` DDX檔案中指定的元素值（對每個XDP檔案重複此工作）。
+      * A `com.adobe.idp.Document` 包含對應至物件的XDP檔案 `source` 元素（對每個XDP檔案重複此工作）。
+
+1. 設定執行階段選項。
+
+   * 建立 `AssemblerOptionSpec` 物件，使用其建構函式來儲存執行階段選項。
+   * 透過叫用屬於以下專案的方法，設定執行階段選項以滿足您的業務需求： `AssemblerOptionSpec` 物件。 例如，若要指示Assembler服務在發生錯誤時繼續處理工作，請叫用 `AssemblerOptionSpec` 物件的 `setFailOnError` 方法與傳遞 `false`.
+
+1. 組合多個XDP檔案。
+
+   叫用 `AssemblerServiceClient` 物件的 `invokeDDX` 方法並傳遞下列必要值：
+
+   * A `com.adobe.idp.Document` 代表要使用的DDX檔案的物件
+   * A `java.util.Map` 包含輸入XDP檔案的物件
+   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 指定執行階段選項的物件，包括預設字型和作業記錄層級
+
+   此 `invokeDDX` 方法傳回 `com.adobe.livecycle.assembler.client.AssemblerResult` 包含組合XDP檔案的物件。
+
+1. 擷取組裝的XDP檔案。
+
+   若要取得組裝的XDP檔案，請執行下列動作：
+
+   * 叫用 `AssemblerResult` 物件的 `getDocuments` 方法。 此方法會傳回 `java.util.Map` 物件。
+   * 循環瀏覽 `java.util.Map` 物件，直到您找到結果為止 `com.adobe.idp.Document` 物件。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 擷取組合XDP檔案的方法。
+
+**另請參閱**
+
+[組合多個XDP片段](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
+[快速入門（SOAP模式）：使用Java API組裝多個XDP片段](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+
+## 使用網站服務API組合多個XDP片段 {#assemble-multiple-xdp-fragments-using-the-web-service-api}
+
+使用組合器服務API （Web服務）組合多個XDP片段：
+
+1. 包含專案檔案。
+
+   建立使用MTOM的Microsoft .NET專案。 設定服務參考時，請務必使用下列WSDL定義：
 
    ```java
     https://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1.
@@ -225,66 +225,66 @@ DDX文檔包含XDP `result` 指定結果名稱的標籤。 在這種情況下，
 
    >[!NOTE]
    >
-   >替換 `localhost` IP地址為AEM Forms。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 建立PDF匯編器客戶端。
+1. 建立PDF組合器使用者端。
 
-   * 建立 `AssemblerServiceClient` 對象。
-   * 建立 `AssemblerServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務，如 `https://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 你不需要 `lc_version` 屬性。 建立服務引用時使用此屬性。
-   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `AssemblerServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
-   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
-   * 通過執行以下任務啟用基本HTTP身份驗證：
+   * 建立 `AssemblerServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `AssemblerServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務，例如 `https://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `AssemblerServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 將表AEM單用戶名分配給 `AssemblerServiceClient.ClientCredentials.UserName.UserName` 的子菜單。
-      * 將相應的密碼值分配給 `AssemblerServiceClient.ClientCredentials.UserName.Password`的子菜單。
-      * 分配 `HttpClientCredentialType.Basic` 常數值 `BasicHttpBindingSecurity.Transport.ClientCredentialType`的子菜單。
-      * 分配 `BasicHttpSecurityMode.TransportCredentialOnly` 常數值 `BasicHttpBindingSecurity.Security.Mode`的子菜單。
+      * 將AEM表單使用者名稱指派給 `AssemblerServiceClient.ClientCredentials.UserName.UserName` 欄位。
+      * 將對應的密碼值指派給 `AssemblerServiceClient.ClientCredentials.UserName.Password`欄位。
+      * 指派 `HttpClientCredentialType.Basic` 的常數值 `BasicHttpBindingSecurity.Transport.ClientCredentialType`欄位。
+      * 指派 `BasicHttpSecurityMode.TransportCredentialOnly` 的常數值 `BasicHttpBindingSecurity.Security.Mode`欄位。
 
-1. 引用現有DDX文檔。
+1. 參考現有的DDX檔案。
 
-   * 建立 `BLOB` 對象。 的 `BLOB` 對象用於儲存DDX文檔。
-   * 建立 `System.IO.FileStream` 調用其建構子並傳遞一個字串值，該字串值表示DDX文檔的檔案位置和開啟檔案的模式。
-   * 建立一個位元組陣列，用於儲存 `System.IO.FileStream` 的雙曲餘切值。 通過獲取 `System.IO.FileStream` 對象 `Length` 屬性。
-   * 通過調用 `System.IO.FileStream` 對象 `Read` 的雙曲餘切值。 傳遞位元組陣列、起始位置和流長度以進行讀取。
-   * 填充 `BLOB` 通過指定對象 `MTOM` 屬性。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存DDX檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表DDX檔案檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法。 傳遞位元組陣列、起始位置和串流長度以讀取。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 具有位元組陣列內容的屬性。
 
-1. 引用XDP文檔。
+1. 參考XDP檔案。
 
-   * 對於每個輸入XDP檔案，建立 `BLOB` 對象。 的 `BLOB` 對象用於儲存輸入檔案。
-   * 建立 `System.IO.FileStream` 對象，方法是調用其建構子並傳遞一個字串值，該字串值表示輸入檔案的檔案位置以及開啟檔案的模式。
-   * 建立一個位元組陣列，用於儲存 `System.IO.FileStream` 的雙曲餘切值。 通過獲取 `System.IO.FileStream` 對象 `Length` 屬性。
-   * 通過調用 `System.IO.FileStream` 對象 `Read` 的雙曲餘切值。 傳遞位元組陣列、起始位置和流長度以進行讀取。
-   * 填充 `BLOB` 通過指定對象 `MTOM` 欄位。
-   * 建立 `MyMapOf_xsd_string_To_xsd_anyType` 的雙曲餘切值。 此集合對象用於儲存建立已裝配的XDP文檔所需的輸入檔案。
-   * 對於每個輸入檔案，建立 `MyMapOf_xsd_string_To_xsd_anyType_Item` 的雙曲餘切值。
-   * 為指定表示鍵名的字串值 `MyMapOf_xsd_string_To_xsd_anyType_Item` 對象 `key` 的子菜單。 此值必須與DDX文檔中指定的元素的值匹配。 （對每個輸入XDP檔案執行此任務。）
-   * 分配 `BLOB` 將輸入檔案儲存到 `MyMapOf_xsd_string_To_xsd_anyType_Item` 對象 `value` 的子菜單。 （對每個輸入XDP檔案執行此任務。）
-   * 添加 `MyMapOf_xsd_string_To_xsd_anyType_Item` 對象 `MyMapOf_xsd_string_To_xsd_anyType` 的雙曲餘切值。 調用 `MyMapOf_xsd_string_To_xsd_anyType` 對象 `Add` 方法和通過 `MyMapOf_xsd_string_To_xsd_anyType` 的雙曲餘切值。 （對每個輸入的XDP文檔執行此任務。）
+   * 針對每個輸入XDP檔案，建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存輸入檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表輸入檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法。 傳遞位元組陣列、起始位置和串流長度以讀取。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 包含位元組陣列內容的欄位。
+   * 建立 `MyMapOf_xsd_string_To_xsd_anyType` 物件。 此集合物件用於儲存建立組合XDP檔案所需的輸入檔案。
+   * 針對每個輸入檔案，建立 `MyMapOf_xsd_string_To_xsd_anyType_Item` 物件。
+   * 將代表索引鍵名稱的字串值指派給 `MyMapOf_xsd_string_To_xsd_anyType_Item` 物件的 `key` 欄位。 此值必須與DDX檔案中指定的元素值相符。 （對每個輸入XDP檔案執行此工作。）
+   * 指派 `BLOB` 物件，將輸入檔案儲存至 `MyMapOf_xsd_string_To_xsd_anyType_Item` 物件的 `value` 欄位。 （對每個輸入XDP檔案執行此工作。）
+   * 新增 `MyMapOf_xsd_string_To_xsd_anyType_Item` 物件至 `MyMapOf_xsd_string_To_xsd_anyType` 物件。 叫用 `MyMapOf_xsd_string_To_xsd_anyType` 物件的 `Add` 方法並傳遞 `MyMapOf_xsd_string_To_xsd_anyType` 物件。 （針對每個輸入XDP檔案執行此工作。）
 
-1. 設定運行時選項。
+1. 設定執行階段選項。
 
-   * 建立 `AssemblerOptionSpec` 使用其建構子儲存運行時選項的對象。
-   * 通過將值分配給屬於的資料成員來設定運行時選項以滿足您的業務需求 `AssemblerOptionSpec` 的雙曲餘切值。 例如，要指示匯編程式服務在發生錯誤時繼續處理作業，請分配 `false` 到 `AssemblerOptionSpec` 對象 `failOnError` 資料成員。
+   * 建立 `AssemblerOptionSpec` 物件，使用其建構函式來儲存執行階段選項。
+   * 將值指派給屬於下列專案的資料成員，以設定執行階段選項，符合您的業務需求： `AssemblerOptionSpec` 物件。 例如，若要指示Assembler服務在發生錯誤時繼續處理工作，請指派 `false` 至 `AssemblerOptionSpec` 物件的 `failOnError` 資料成員。
 
-1. 組合多個XDP文檔。
+1. 組合多個XDP檔案。
 
-   調用 `AssemblerServiceClient` 對象 `invokeDDX` 方法並傳遞以下值：
+   叫用 `AssemblerServiceClient` 物件的 `invokeDDX` 方法並傳遞下列值：
 
-   * A `BLOB` 表示DDX文檔的對象
-   * 的 `MyMapOf_xsd_string_To_xsd_anyType` 包含所需檔案的對象
-   * 安 `AssemblerOptionSpec` 指定運行時選項的對象
+   * A `BLOB` 代表DDX檔案的物件
+   * 此 `MyMapOf_xsd_string_To_xsd_anyType` 包含必要檔案的物件
+   * 一個 `AssemblerOptionSpec` 指定執行階段選項的物件
 
-   的 `invokeDDX` 方法返回 `AssemblerResult` 包含作業結果和所發生的任何異常的對象。
+   此 `invokeDDX` 方法傳回 `AssemblerResult` 包含工作結果和發生之任何例外狀況的物件。
 
-1. 檢索已裝配的XDP文檔。
+1. 擷取組裝的XDP檔案。
 
-   要獲取新建立的XDP文檔，請執行以下操作：
+   若要取得新建立的XDP檔案，請執行下列動作：
 
-   * 訪問 `AssemblerResult` 對象 `documents` 欄位， `Map` 包含結果PDF文檔的對象。
-   * 迭代 `Map` 對象，以獲取每個結果文檔。 然後，將該陣列成員 `value` 到 `BLOB`。
-   * 通過訪問PDF文檔來提取表示該文檔的二進位資料 `BLOB` 對象 `MTOM` 屬性。 這將返回可以寫入XDP檔案的位元組陣列。
+   * 存取 `AssemblerResult` 物件的 `documents` 欄位，即 `Map` 包含結果PDF檔案的物件。
+   * 循環瀏覽 `Map` 物件以取得每個產生的檔案。 然後，轉換該陣列成員的 `value` 至 `BLOB`.
+   * 存取代表PDF檔案的二進位資料 `BLOB` 物件的 `MTOM` 屬性。 這會傳回您可以寫出至XDP檔案的位元組陣列。
 
 **另請參閱**
 
-[組裝多個XDP片段](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
-[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[組合多個XDP片段](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

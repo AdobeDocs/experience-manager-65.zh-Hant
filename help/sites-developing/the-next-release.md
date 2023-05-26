@@ -1,7 +1,7 @@
 ---
-title: 下一版……
+title: 下一個版本……
 seo-title: The next release...
-description: 隨後的發佈幾乎總是可以預見的，甚至可以在當前實施的最後階段開始
+description: 後續版本幾乎總是可以預見的，甚至可以在目前實施的最後階段開始
 seo-description: A subsequent release is nearly always foreseen, and can even start during the final stages of the current implementation
 uuid: 6ae213fb-1bd3-464c-bfd0-14ddceaee11e
 contentOwner: Guillaume Carlino
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ---
 
-# 下一版……{#the-next-release}
+# 下一個版本……{#the-next-release}
 
-項目的實施很少是整個過程的結束。 隨後的版本（幾乎）總是可以預見，甚至可以在當前實施的最後階段開始。
+實作專案很少是流程的結尾。 後續版本（幾乎）一律會預先設定，甚至可以在目前實施的最後階段開始。
 
-無論如何，通過以下方式為下一版本進行計畫都非常有用：
+無論如何，透過以下方式為下一個版本進行規劃會很有用：
 
-* 仔細記錄和儲存您的test案例，以便參考或希望重新使用。
-* 開發test，可用作下一版的回歸test。
-* 整理您或客戶通過測試過程獲得的任何資訊。
+* 仔細記錄和儲存您的測試案例，以便參考或希望重複使用。
+* 開發可作為下一個版本的回歸測試的測試。
+* 整理您或客戶透過測試程式體驗所獲得的任何資訊。
 
-   這可能有助於形成下一版本的要求；例如，由於客戶在測試期間對產品的體驗有所增加。
+   這可能有助於形成下一個版本的要求；例如，隨著客戶在測試期間對產品的體驗增加。
 
-由於下一版本很可能是遷移，因此與此相關的任何資訊都將被證明是有用的。
+由於下一個版本很可能是移轉，因此任何與此相關的資訊都將被證明是有用的。

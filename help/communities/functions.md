@@ -1,7 +1,7 @@
 ---
 title: 社群功能
 seo-title: Community Functions
-description: 瞭解如何訪問社區功能控制台
+description: 瞭解如何存取社群功能主控台
 seo-description: Learn how to access the Community Functions console
 uuid: d3d70134-f318-4709-a673-b01a3467d980
 contentOwner: Janice Kendall
@@ -21,86 +21,86 @@ ht-degree: 6%
 
 # 社群功能{#community-functions}
 
-社區體驗預期的功能類型眾所周知。 社區功能可作為社區功能提供。 實際上，它們是預先佈線的一個或多個頁面，以實現社區功能，該社區功能不僅要求以作者模式將元件添加到頁面。 它們是用於定義 [社區網站模板](/help/communities/sites.md) 從哪個社區站點 [建立](/help/communities/sites-console.md)。
+社群體驗中預期的功能型別眾所周知。 社群功能可作為社群功能使用。 基本上，這些頁面是預先編排的一或多個頁面，用於實作社群功能，而不僅是在作者模式下將元件新增至頁面。 它們是用來定義 [社群網站範本](/help/communities/sites.md) 社群網站所在位置 [已建立](/help/communities/sites-console.md).
 
-一旦建立了社區網站，就可以使用標準將內容添加到生成的頁面 [AEM創作模式](/help/sites-authoring/editing-content.md)。 社區功能控制台中顯示了各種社區功能。
+建立社群網站後，可以使用標準將內容新增到產生的頁面 [AEM製作模式](/help/sites-authoring/editing-content.md). 如社群功能主控台所示，可使用各種社群功能。
 
 >[!NOTE]
 >
->用於建立 [社區站點](/help/communities/sites-console.md)。 [社區網站模板](/help/communities/sites.md)。 [社區組模板](/help/communities/tools-groups.md), [社區功能](/help/communities/functions.md) 僅在作者環境中使用。
+>用於建立的控制檯 [社群網站](/help/communities/sites-console.md)， [社群網站範本](/help/communities/sites.md)， [社群群組範本](/help/communities/tools-groups.md)、和 [社群功能](/help/communities/functions.md) 僅供作者環境使用。
 
-## 社區功能控制台 {#community-functions-console}
+## 社群功能主控台 {#community-functions-console}
 
-要在作者環境中訪問社區功能控制台：
+若要存取作者環境中的社群功能主控台：
 
-* 導航到 **[!UICONTROL 工具]** > **[!UICONTROL 社區]** > **[!UICONTROL 社區功能]**。
+* 導覽至 **[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 社群功能]**.
 
-![社區功能](assets/community-functions.png)
+![社群功能](assets/community-functions.png)
 
-## 預構建的函式 {#pre-built-functions}
+## 預先建立的函式 {#pre-built-functions}
 
-以下是與AEM Communities共同履行的職能的簡要說明。 每個功能包括一個或多個AEM頁面，這些頁面包含匯集在一起的社區元件，這些元件容易地結合到 [社區網站模板](/help/communities/sites.md)。
+以下簡述AEM Communities所提供的功能。 每個函式都包含一或多個AEM頁面，這些頁面包含相互連線並構成功能的Communities元件，可輕鬆整合至 [社群網站範本](/help/communities/sites.md).
 
-社區站點模板提供社區站點的結構，包括登錄、用戶配置檔案、通知、消息、站點菜單、搜索、主題和品牌特徵。
+社群網站範本提供社群網站的結構，包括登入、使用者設定檔、通知、訊息、網站功能表、搜尋、主題設定和品牌功能。
 
 ### 標題和URL設定 {#title-and-url-settings}
 
-**標題** 和 **URL** 是所有社區函式的公用屬性。
+**標題** 和 **URL** 是所有社群功能通用的屬性。
 
-將社區功能添加到社區網站模板或在 [修改](/help/communities/sites-console.md#modifying-site-properties) 在社區站點的結構中，將開啟函式對話框，以便可以配置標題和URL。
+將社群功能新增至社群網站範本或新增至 [修改](/help/communities/sites-console.md#modifying-site-properties) 社群網站的結構中，會開啟函式的對話方塊，以便設定標題和URL。
 
 #### 設定功能詳細資料 {#configuration-function-details}
 
-![標題 — url — 詳細資訊](assets/title-url-details.png)
+![title-url-details](assets/title-url-details.png)
 
 * **標題**
 
-   (*必需*)站點功能菜單中顯示的文本
+   (*必填*)顯示在網站功能選單中的文字
 
 * **URL**
 
-   (*必需*)用於生成URI的名稱。 名稱必須符合 [命名約定](/help/sites-developing/naming-conventions.md) 和JCRAEM強加的。
+   (*必填*)用來產生URI的名稱。 名稱必須符合 [命名慣例](/help/sites-developing/naming-conventions.md) 由AEM和JCR所強制。
 
-例如，使用在 [入門](/help/communities/getting-started.md) 教程，如果
+例如，使用從以下專案建立的網站： [快速入門](/help/communities/getting-started.md) 教學課程，如果
 
 * 標題=網頁
-* URL =頁
+* URL =頁面
 
-然後，該頁的URL為https://localhost:4503/content/sites/engage/en/page.html
+接著，頁面的URL會是https://localhost:4503/content/sites/engage/en/page.html
 
-頁面的菜單連結顯示為：
+而頁面的功能表連結會顯示為：
 
-![「接觸」頁](assets/engage-page.png)
+![engage-page](assets/engage-page.png)
 
 ### 活動資料流功能 {#activity-stream-function}
 
-活動流函式是包含 [活動流元件](/help/communities/activities.md) 已選擇所有視圖（所有活動、用戶活動和以下內容）。 另請參閱 [活動流軟體包](/help/communities/essentials-activities.md) 為開發人員準備。
+活動資料流函式是具有 [活動資料流元件](/help/communities/activities.md) 已選取所有檢視（所有活動、使用者活動及以下專案）。 另請參閱 [Activity Stream Essentials](/help/communities/essentials-activities.md) 適用於開發人員。
 
-添加到模板時，將開啟以下對話框：
+新增至範本時，下列對話方塊隨即開啟：
 
 #### 設定功能詳細資料 {#configuration-function-details-1}
 
-![函式詳細資訊](assets/function-details.png)
+![function-details](assets/function-details.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
 * **顯示「我的活動」檢視**
 
-   如果選中，則「活動」頁將包含一個頁籤，該頁籤根據當前成員在社區中生成的活動篩選活動。 已選擇預設值。
+   如果選取，「活動」頁面會包含標籤，該標籤會根據目前成員在社群內產生的活動來篩選活動。 預設值已選取。
 
 * **顯示「所有活動」檢視**
 
-   如果選中，則「活動」頁將包含一個頁籤，其中包含在當前成員有權訪問的社區中生成的所有活動。 已選擇預設值。
+   如果選取，「活動」頁面會包含標籤，其中包含目前成員有權存取的社群內產生的所有活動。 預設值已選取。
 
 * **顯示「新聞資訊源」檢視**
 
-   如果選中，則「活動」頁包含一個頁籤，該頁籤根據當前成員正在跟蹤的活動篩選活動。 已選擇預設值。
+   如果選取，「活動」頁面會包含一個索引標籤，該索引標籤會根據目前成員所關注的活動進行篩選。 預設值已選取。
 
 ### 部落格功能 {#blog-function}
 
-部落格功能是包含 [部落格元件](/help/communities/blog-feature.md) 配置為標籤、檔案上載、後續、成員自編、投票和審核。 另請參閱 [部落格要點](/help/communities/blog-developer-basics.md) 為開發人員準備。
+部落格功能是具有 [部落格元件](/help/communities/blog-feature.md) 設定，用於標籤、檔案上傳、追蹤、成員自我編輯、投票及稽核。 另請參閱 [部落格要點](/help/communities/blog-developer-basics.md) 適用於開發人員。
 
-添加到模板時，將開啟以下對話框：
+新增至範本時，下列對話方塊隨即開啟：
 
 ![部落格元件](assets/blog-component.png)
 
@@ -108,69 +108,69 @@ ht-degree: 6%
 
 * **允許有特殊權限的成員**
 
-   如果選中，則部落格僅允許特權成員通過允許選擇 [特權成員組](/help/communities/users.md#privileged-members-group)。 如果未選中，則允許建立所有社區成員。 取消選擇預設值。
+   如果選取，則部落格僅允許擁有特殊許可權的成員透過選擇 [有特殊許可權的成員群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許建立所有社群成員。 「預設」已取消選取。
 
 * **允許檔案上傳**
 
-   如果選中，則部落格包括成員上載檔案的功能。 已選擇預設值。
+   如果選取，部落格會包含成員上傳檔案的功能。 預設值已選取。
 
 * **允許執行緒式回覆**
 
-   如果未選中，部落格允許對文章的回復（注釋），但不允許對評論的回復。 已選擇預設值。
+   如果未選取，部落格會允許文章的回覆（評論），但不允許評論的回覆。 預設值已選取。
 
 * **允許主要內容**
 
-   如果選中，則將部落格標識為 [特色內容](/help/communities/featured.md)。 已選擇預設值。
+   如果選取，會將部落格識別為 [精選內容](/help/communities/featured.md). 預設值已選取。
 
 ### 日曆功能 {#calendar-function}
 
-日曆函式是包含 [日曆元件](/help/communities/calendar.md) 配置為允許標籤。 另請參閱 [日曆要件](/help/communities/calendar-basics-for-developers.md) 為開發人員準備。
+行事曆功能是具有 [行事曆元件](/help/communities/calendar.md) 設定為允許標籤。 另請參閱 [行事曆要點](/help/communities/calendar-basics-for-developers.md) 適用於開發人員。
 
-添加到模板時，將開啟以下對話框：
+新增至範本時，下列對話方塊隨即開啟：
 
-![日曆詳細資訊](assets/calendar-details.png)
+![calendar-details](assets/calendar-details.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
 * **允許釘選**
 
-   如果選中，論壇允許將主題答復固定到注釋清單的開頭。 已選擇預設值。
+   如果選取，論壇允許將主題回覆釘選到評論清單的開頭。 預設值已選取。
 
 * **允許有特殊權限的成員**
 
-   如果選中，則部落格僅允許特權成員通過允許選擇 [特權成員組](/help/communities/users.md#privileged-members-group)。 如果未選中，則允許建立所有社區成員。 取消選擇預設值。
+   如果選取，則部落格僅允許擁有特殊許可權的成員透過選擇 [有特殊許可權的成員群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許建立所有社群成員。 「預設」已取消選取。
 
 * **允許檔案上傳**
 
-   如果選中，則部落格包括成員上載檔案的功能。 已選擇預設值。
+   如果選取，部落格會包含成員上傳檔案的功能。 預設值已選取。
 
 * **允許執行緒式回覆**
 
-   如果未選中，部落格允許對文章的回復（注釋），但不允許對評論的回復。 已選擇預設值。
+   如果未選取，部落格會允許文章的回覆（評論），但不允許評論的回覆。 預設值已選取。
 
 * **允許主要內容**
 
-   如果選中，則其內容被標識為 [特色內容](/help/communities/featured.md)。 已選擇預設值。
+   如果選取，則會將其內容識別為 [精選內容](/help/communities/featured.md). 預設值已選取。
 
-### 特色內容功能 {#featured-content-function}
+### 精選內容功能 {#featured-content-function}
 
-特色內容功能是包含 [特色內容元件](/help/communities/featured.md) 配置為允許添加和刪除注釋。
+精選內容功能是具有 [主要內容元件](/help/communities/featured.md) 已設定為允許新增和刪除註解。
 
-每個元件可能允許或不允許使用功能來提供內容(請參見 [部落格功能](#blog-function)。 [日曆函式](#calendar-function)。 [論壇功能](#forum-function)。 [標識函式](#ideation-function), [QnA函式](#qna-function))。
+每個元件可允許或不允許具備功能內容的能力(請參閱 [部落格功能](#blog-function)， [行事曆功能](#calendar-function)， [論壇功能](#forum-function)， [創意力功能](#ideation-function)、和 [QnA函式](#qna-function))。
 
-添加到模板時，唯一的配置是 [標題和URL設定](#title-and-url-settings)。
+新增至範本時，唯一的設定是 [標題和URL設定](#title-and-url-settings).
 
 ### 檔案庫功能 {#file-library-function}
 
-檔案庫函式是包含 [檔案庫元件](/help/communities/file-library.md) 配置為允許添加和刪除注釋。
+檔案庫函式是具有 [檔案庫元件](/help/communities/file-library.md) 已設定為允許新增和刪除註解。
 
-添加到模板時，唯一的配置是 [標題和URL設定](#title-and-url-settings)。
+新增至範本時，唯一的設定是 [標題和URL設定](#title-and-url-settings).
 
 ### 論壇功能 {#forum-function}
 
-論壇功能是包含 [論壇元件](/help/communities/forum.md) 配置為標籤、檔案上載、後續、成員自編、投票和審核。
+論壇功能是具有「 」的頁面 [論壇元件](/help/communities/forum.md) 設定，用於標籤、檔案上傳、追蹤、成員自我編輯、投票及稽核。
 
-添加到模板時，將開啟以下對話框：
+新增至範本時，下列對話方塊隨即開啟：
 
 #### 設定功能詳細資料 {#configuration-function-details-2}
 
@@ -180,159 +180,159 @@ ht-degree: 6%
 
 * **允許釘選**
 
-   如果選中，論壇允許將主題答復固定到注釋清單的開頭。 已選擇預設值。
+   如果選取，論壇允許將主題回覆釘選到評論清單的開頭。 預設值已選取。
 
 * **允許有特殊權限的成員**
 
-   如果選中，則論壇僅允許特權成員通過允許選擇 [特權成員組](/help/communities/users.md#privileged-members-group)。 如果未選擇，則允許所有社區成員發佈。 取消選擇預設值。
+   如果選取，論壇僅允許有特殊許可權的成員透過選擇 [有特殊許可權的成員群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許所有社群成員張貼。 「預設」已取消選取。
 
 * **允許檔案上傳**
 
-   如果選中，論壇將包括成員上載檔案的功能。 已選擇預設值。
+   如果選取，論壇會包含成員上傳檔案的功能。 預設值已選取。
 
 * **允許執行緒式回覆**
 
-   如果未選擇，論壇允許對主題進行評論，但不允許對這些評論進行答復。 已選擇預設值。
+   如果未選取，論壇會允許對主題發表評論，但不允許回覆這些評論。 預設值已選取。
 
 * **允許主要內容**
 
-   如果選中，則元件的內容將標識為 [特色內容](/help/communities/featured.md)。 已選擇預設值。
+   如果選取，則會將元件的內容識別為 [精選內容](/help/communities/featured.md). 預設值已選取。
 
-### 組函式 {#groups-function}
+### 群組功能 {#groups-function}
 
 >[!CAUTION]
 >
->組函式必須 *不* 是 *第一，也是唯一* 的子菜單。
+>群組函式必須 *not* 成為 *第一個或唯一* 在網站結構或社群網站範本中運作。
 >
->任何其他函式，如 [頁面函式](#page-function)，必須先包括並列出。
+>任何其他函式，例如 [頁面函式](#page-function)，必須先包含並列出。
 
-組功能使社區成員能夠在發佈環境中的社區站點內建立子社區。
+群組功能可讓社群成員在發佈環境中的社群網站內建立子社群。
 
-取決於 [設定](/help/communities/sites-console.md#groupmanagement) 當「組」函式包含在 [社區網站模板](/help/communities/sites.md)，這些組可以是公共的或私有的，並且一個或多個社區組模板可配置為在實際建立社區組時（例如從發佈環境）提供模板選擇。 A [社區組模板](/help/communities/tools-groups.md) 指定為組頁面（如論壇和日曆）建立的社區功能。
+依據 [設定](/help/communities/sites-console.md#groupmanagement) 當Groups功能包含在 [社群網站範本](/help/communities/sites.md)，群組可以是公開或私人，而一或多個社群群組範本可設定為在實際建立社群群組時（例如從發佈環境）提供範本選擇。 A [社群群組範本](/help/communities/tools-groups.md) 指定為群組頁面（例如論壇和行事曆）建立的Communities功能。
 
-建立社區組時，會為新組動態建立成員組，成員可以分配或加入到該組。 有關詳細資訊，請參見 [管理用戶和用戶組](/help/communities/users.md)。
+建立社群群組時，會為新群組動態建立成員群組，成員可指派或加入該群組。 如需詳細資訊，請參閱 [管理使用者和使用者群組](/help/communities/users.md).
 
-截至社區 [功能包1](/help/communities/deploy-communities.md#latestfeaturepack)，使用 [社區站點組控制台](/help/communities/groups.md)，並且在啟用後可以在發佈環境中建立。
+截至社群 [feature pack 1](/help/communities/deploy-communities.md#latestfeaturepack)，社群群組是在作者環境中使用 [社群網站的群組主控台](/help/communities/groups.md)、和，可在啟用時於發佈環境中建立。
 
-添加到模板時，將開啟以下對話框：
+新增至範本時，下列對話方塊隨即開啟：
 
-![組模板 — 配置](assets/group-template-config.png)
+![group-template-config](assets/group-template-config.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
 * **選取群組範本**
 
-   允許選擇一個或多個啟用的組模板的下拉清單，新社區組（在發佈環境中）的將來建立者可以從中選擇這些模板。
+   一個下拉式清單，可讓您選取一或多個啟用的群組範本，新社群群組的未來建立者（在發佈環境中）可從中進行選擇。
 
 * **允許有特殊權限的成員**
 
-   如果選中，則論壇僅允許特權成員通過允許選擇 [特權成員安全組](/help/communities/users.md#privileged-members-group)。 如果未選擇，則允許所有社區成員發佈。 取消選擇預設值。
+   如果選取，論壇僅允許有特殊許可權的成員透過選擇 [有特殊許可權的成員安全性群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許所有社群成員張貼。 「預設」已取消選取。
 
 * **允許發佈建立**
 
-   如果選中，則授權的社區成員可以在發佈環境中建立組。 如果取消選擇，則只能在作者環境中從「社區站點的組」控制台建立新組（子社區）。
-已選擇預設值。
+   如果選取，經授權的社群成員可在發佈環境中建立群組。 如果取消選取，則只能從Communities Sites的「群組」主控台在作者環境中建立新群組（子社群）。
+預設值已選取。
 
 ### 創意力功能 {#ideation-function}
 
-標識函式是包含 [識別元件](/help/communities/ideation-feature.md)。
+創意力功能是有一個頁面的頁面 [創意力元件](/help/communities/ideation-feature.md).
 
-添加到模板時，將開啟以下對話框，該對話框指定模板的預設標題和URL名稱以及預設顯示設定：
+新增至範本時，會開啟下列對話方塊，其中指定預設的「標題」和URL名稱，以及範本的預設顯示設定：
 
-![理想函式](assets/ideation-function.png)
+![創意力功能](assets/ideation-function.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
 * **允許有特殊權限的成員**
 
-   如果選中，則論壇僅允許特權成員通過允許選擇 [特權成員安全組](/help/communities/users.md#privileged-members-group)。 如果未選擇，則允許所有社區成員發佈。 取消選擇預設值。
+   如果選取，論壇僅允許有特殊許可權的成員透過選擇 [有特殊許可權的成員安全性群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許所有社群成員張貼。 「預設」已取消選取。
 
 * **允許檔案上傳**
 
-   如果選中，則該思想包括成員上載檔案的功能。 已選擇預設值。
+   如果選取，構思包括成員上傳檔案的能力。 預設值已選取。
 
 * **允許執行緒式回覆**
 
-   如果未選中，則該想法允許對主題的回復（注釋），但不允許對注釋的回復。 已選擇預設值。
+   如果未選取，此想法允許對主題進行回覆（評論），但不允許對評論進行回覆。 預設值已選取。
 
 * **允許主要內容**
 
-   如果選中，則其內容被標識為 [特色內容](/help/communities/featured.md)。 已選擇預設值。
+   如果選取，則會將其內容識別為 [精選內容](/help/communities/featured.md). 預設值已選取。
 
 ### 排行榜功能 {#leaderboard-function}
 
-排行榜功能是包含 [排行榜元件](/help/communities/enabling-leaderboard.md)。
+排行榜功能是一頁有排行榜 [排行榜元件](/help/communities/enabling-leaderboard.md).
 
-**注釋**:排行榜部分需要進一步配置 *後* 從包含排行榜功能的社區模板建立社區站點。 指定排行榜元件的 [規則](/help/communities/enabling-leaderboard.md#rules-tab)，這取決於配置 [得分和徽章](/help/communities/implementing-scoring.md) 社區網站。
+**注意**：排行榜元件需要進一步設定 *晚於* 社群網站是從包含排行榜功能的社群範本建立的。 指定排行榜元件的 [規則](/help/communities/enabling-leaderboard.md#rules-tab)，這取決於的設定 [評分和預算](/help/communities/implementing-scoring.md) 適用於社群網站。
 
-添加到模板時，將開啟以下對話框，該對話框指定模板的預設標題和URL名稱以及預設顯示設定：
+新增至範本時，會開啟下列對話方塊，其中指定預設的「標題」和URL名稱，以及範本的預設顯示設定：
 
-![排行榜對話](assets/leaderboard-dialog.png)
+![排行榜對話方塊](assets/leaderboard-dialog.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
 * **顯示徽章**
 
-   如果選中，則標籤表徵圖的列將包括在排行榜中。
-取消選擇預設值。
+   如果選取，則排行榜會包含徽章圖示欄。
+「預設」已取消選取。
 
 * **顯示徽章名稱**
 
-   如果選中，則標籤名稱的列將包括在排行榜中。
-取消選擇預設值。
+   如果選取，則排行榜會包含徽章名稱的欄。
+「預設」已取消選取。
 
 * **顯示頭像**
 
-   如果選中，成員的虛擬形象影像將包含在排行榜中，位於其成員配置檔案的名稱連結旁邊。
-取消選擇預設值。
+   如果選取，成員的頭像影像會包含在排行榜中，位於其名稱連結至成員設定檔的旁邊。
+「預設」已取消選取。
 
 ### 頁面功能 {#page-function}
 
-頁面功能將一個空白頁面添加到社區網站，該網站已連接到社區網站的功能：登錄、菜單、通知、消息、主題和品牌。 內容將使用 [標準AEM創作模式](/help/sites-authoring/editing-content.md)。
+頁面功能會將空白頁面新增至社群網站，並與其連線至社群網站的功能：登入、功能表、通知、傳訊、主題設定和品牌推廣。 使用將內容新增至頁面 [標準AEM編寫模式](/help/sites-authoring/editing-content.md).
 
-添加到模板時，唯一的配置是 [標題和URL設定](#title-and-url-settings)。
+新增至範本時，唯一的設定是 [標題和URL設定](#title-and-url-settings).
 
 ### QnA 功能 {#qna-function}
 
-QnA函式是包含 [QnA元件](/help/communities/working-with-qna.md) 配置為標籤、檔案上載、後續、成員自編、投票和審核。
+QnA函式是具有 [QnA元件](/help/communities/working-with-qna.md) 設定，用於標籤、檔案上傳、追蹤、成員自我編輯、投票及稽核。
 
-添加到模板時，配置允許對特權成員進行限制：
+新增至範本時，此設定允許限制擁有特殊許可權的成員：
 
-![QNA對話框](assets/qna-dialog.png)
+![qna-dialog](assets/qna-dialog.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
 * **允許釘選**
 
-   如果選中，論壇允許將主題答復固定到注釋清單的開頭。 已選擇預設值。
+   如果選取，論壇允許將主題回覆釘選到評論清單的開頭。 預設值已選取。
 
 * **允許有特殊權限的成員**
 
-   如果選中，則QnA論壇僅允許特權成員通過允許選擇 [特權成員組](/help/communities/users.md#privileged-members-group)。 如果未選擇，則允許所有社區成員發佈。 取消選擇預設值。
+   如果選取，則QnA論壇僅允許有特殊許可權的成員透過選擇 [有特殊許可權的成員群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許所有社群成員張貼。 「預設」已取消選取。
 
 * **允許檔案上傳**
 
-   如果選中，則QnA論壇包括成員上載檔案的功能。 已選擇預設值。
+   如果選取，QnA論壇則包含成員上傳檔案的功能。 預設值已選取。
 
 * **允許執行緒式回覆**
 
-   如果未選擇，則QnA論壇允許對已發佈的問題提供評論（答案），但不允許對答案進行答復。 已選擇預設值。
+   如果未選取，QnA論壇允許對已張貼的問題進行評論（回答），但不允許對回答進行回覆。 預設值已選取。
 
 * **允許主要內容**
 
-   如果選中，則其內容被標識為 [特色內容](/help/communities/featured.md)。 已選擇預設值。
+   如果選取，則會將其內容識別為 [精選內容](/help/communities/featured.md). 預設值已選取。
 
 ## 建立社群功能 {#create-community-function}
 
-通過選擇 `Create Community Function` 表徵圖，位於「社區功能」控制台的頂部。 可以建立基於相同藍AEM圖的多個函式，然後通過在作者編輯模式下開啟來唯一地定制。
+透過選擇 `Create Community Function` 圖示加以檢視，並加以標示。 您可以建立以相同AEM Blueprint為基礎的多個函式，然後透過在作者編輯模式中開啟來唯一自訂。
 
-![建立社區功能](assets/create-community-function.png)
+![create-community-function](assets/create-community-function.png)
 
 ### 社群功能名稱 {#community-function-name}
 
-![函式名](assets/function-name.png)
+![function-name](assets/function-name.png)
 
-在「社區函式名稱」面板上，配置了名稱、說明以及函式是啟用還是禁用：
+在「社群功能名稱」面板上，會設定名稱、說明，以及功能是啟用還是停用：
 
 * **社群功能名稱**
 
@@ -342,46 +342,46 @@ QnA函式是包含 [QnA元件](/help/communities/working-with-qna.md) 配置為�
 
    顯示的函式說明。
 
-* **已禁用/已啟用**
+* **已停用/已啟用**
 
-   控制函式是否可引用的切換開關。
+   控制函式是否可參照的切換開關。
 
 ### AEM 藍圖 {#aem-blueprint}
 
-![藍圖](assets/aem-blueprint.png)
+![aem-blueprint](assets/aem-blueprint.png)
 
-在 `AEM Blueprint` 面板中，可以選擇作為社區功能底層實現的藍圖。
+於 `AEM Blueprint` 面板中，可以選取Blueprint，這是社群功能的基礎實作。
 
-社區功能是一個微型站點，包括一個或多個頁面，預先連線以包括在社區站點中，包括登錄、用戶配置檔案、通知、消息、站點菜單、搜索、主題和品牌特徵。 建立函式後， [開啟函式](#open-community-function) 在作者編輯模式中，並自定義頁面或元件設定。
+社群功能是包含一或多個頁面的迷你網站，已預先連線納入社群網站，包括登入、使用者設定檔、通知、訊息、網站功能表、搜尋、主題設定和品牌功能。 建立函式後，您可以 [開啟函式](#open-community-function) 在作者編輯模式中並自訂頁面或元件設定。
 
-因為社區功能是 [即時拷貝](/help/sites-administering/msm.md#live-copies) 的 [藍圖](/help/sites-administering/msm-livecopy.md#creatingablueprint)，可以將對函式所做的更改推廣，該函式影響從 [社區網站模板](/help/communities/sites.md) 或 [社區組模板](/help/communities/tools-groups.md) 包括了功能。 也可以將頁面與其父藍圖取消關聯，以進行頁面級修改。
+由於社群功能是以 [即時副本](/help/sites-administering/msm.md#live-copies) 的 [Blueprint](/help/sites-administering/msm-livecopy.md#creatingablueprint)，即可轉出對函式所進行的變更，此函式會影響到所有從 [社群網站範本](/help/communities/sites.md) 或 [社群群組範本](/help/communities/tools-groups.md) 其中包含函式。 也可以解除頁面與其上層Blueprint的關聯，以進行頁面層級的修改。
 
-另請參閱 [多站點管理器](/help/sites-administering/msm.md)。
+另請參閱 [多網站管理員](/help/sites-administering/msm.md).
 
 ### 縮圖 {#thumbnail}
 
-![函式縮略圖](assets/funtion-thumbnail.png)
+![函式 — 縮圖](assets/funtion-thumbnail.png)
 
-在「縮略圖」面板上，可以上載影像以在 [社區功能控制台](#community-functions-console)。
+在「縮圖」面板上，可以上傳影像以顯示在 [社群功能主控台](#community-functions-console).
 
 ## 開啟社群功能 {#open-community-function}
 
-![開函式](assets/open-function.png)
+![開啟函式](assets/open-function.png)
 
-選擇 `Open Community Function` 表徵圖，進入創作頁面內容和修改功能元件配置的作者編輯模式。
+選取 `Open Community Function` 圖示可進入作者編輯模式，以創作頁面內容並修改功能元件的設定。
 
-### 配置元件 {#configuring-components}
+### 設定元件 {#configuring-components}
 
-社區功能作為藍圖的實AEM時副本實施，詳細資訊在 [多站點管理器](/help/sites-administering/msm.md)。
+社群功能會實作為AEM Blueprint的即時副本，其詳細資訊紀錄在 [多網站管理員](/help/sites-administering/msm.md).
 
-不僅可以建立頁面內容，還可以配置元件。
+您不僅可以編寫頁面內容，而且可以設定元件。
 
-如果在已建立的社區站點的頁面上配置元件，則可能需要取消 [繼承](/help/sites-administering/msm-livecopy.md#changing-live-copy-content) 的子菜單。 配置完成後，應重新建立繼承。
+如果在已建立的社群網站的頁面上設定元件，則可能需要取消 [繼承](/help/sites-administering/msm-livecopy.md#changing-live-copy-content) 以設定元件。 完成設定後，應重新建立繼承。
 
-有關配置詳細資訊，請訪問 [社區元件](/help/communities/author-communities.md) 作者。
+如需設定詳細資訊，請造訪 [Communities元件](/help/communities/author-communities.md) 適用於作者。
 
 ## 編輯社群功能 {#edit-community-function}
 
 ![編輯函式](assets/edit-function.png)
 
-選擇 `Edit Community Function` 表徵圖，使用與 [建立社區函式](#create-community-function)，包括啟用或禁用函式。
+選取 `Edit Community Function` 圖示來使用與相同的面板編輯函式的屬性 [建立社群功能](#create-community-function)，包括啟用或停用函式。

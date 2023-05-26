@@ -1,6 +1,6 @@
 ---
-title: 生成僅用於放置的Adobe InDesign格式副本
-description: 使用Experience Manager Assets工作流和ImageMagick生成新資產和現有資產的FPO格式副本。
+title: 為Adobe InDesign產生僅供放置的轉譯
+description: 使用Experience Manager Assets工作流程和ImageMagick產生新資產和現有資產的FPO轉譯。
 contentOwner: Vishabh Gupta
 role: Admin
 feature: Renditions
@@ -13,128 +13,128 @@ ht-degree: 1%
 
 ---
 
-# 生成僅用於放置的Adobe InDesign格式副本 {#fpo-renditions}
+# 為Adobe InDesign產生僅供放置的轉譯 {#fpo-renditions}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/configure-fpo-renditions.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-當將大規模資產從Experience Manager放入Adobe InDesign文檔時，創意專業人士必須等待一段相當長的時間 [放置資產](https://helpx.adobe.com/indesign/using/placing-graphics.html)。 同時，阻止用戶使用InDesign。 這會中斷創意流，並對用戶體驗造成負面影響。 Adobe允許臨時將小型格式副本放在InDesign文檔中以開始。 當需要最終輸出時，原始的全解析度資產將替換後台的臨時格式副本。 背景中的非同步更新加快了設計過程以提高生產效率，並且不會妨礙創造過程。
+將大型資產從Experience Manager放入Adobe InDesign檔案時，創意專業人士必須等待相當長的時間 [放置資產](https://helpx.adobe.com/indesign/using/placing-graphics.html). 同時，使用者會被封鎖而無法使用InDesign。 這會中斷創意流程，並對使用者體驗產生負面影響。 Adobe功能可讓您從InDesign檔案開始暫時放置小型轉譯。 當需要最終輸出時（例如對於列印和發佈工作流程），原始的全解析度資產會在背景中取代暫時轉譯。 這種背景的非同步更新可加快設計流程以提高生產力，且不會阻礙創作流程。
 
-Adobe Experience Manager(AEM)提供僅用於放置的格式副本(FPO)。 這些FPO格式副本的檔案大小較小，但長寬比相同。 如果FPO格式副本不可用於資產，Adobe InDesign將改用原始資產。 此回退機制確保創作工作流不中斷即可繼續。
+Adobe Experience Manager (AEM)提供僅用於放置的轉譯(FPO)。 這些FPO轉譯檔案大小雖小，但外觀比例相同。 如果資產無法使用FPO轉譯，Adobe InDesign會改用原始資產。 此遞補機制可確保創意工作流程順利進行，而不會出現任何中斷情形。
 
-## 生成FPO格式副本的方法 {#approach-to-generate-fpo-renditions}
+## 產生FPO轉譯的方法 {#approach-to-generate-fpo-renditions}
 
-Experience Manager允許許多方法處理可用於生成FPO格式副本的影像。 最常見的兩種方法是使用內置的Experience Manager工作流和使用ImageMagick。 使用這兩種方法，可以配置新上載的資產和Experience Manager中存在的資產的格式副本生成。
+Experience Manager可讓許多方法處理可用來產生FPO轉譯的影像。 兩個最常見的方法是使用內建Experience Manager工作流程和ImageMagick。 使用這兩種方法，您可以設定新上傳資產和Experience Manager中現有資產的轉譯產生。
 
-可以使用ImageMagick處理影像，包括生成FPO格式副本。 這樣的格式副本被下採樣，即，如果原始影像的PPI大於72，則格式副本的像素尺寸按比例減小。 請參閱 [安裝並配置ImageMagick以與Experience Manager Assets協作](best-practices-for-imagemagick.md)。
+您可以使用ImageMagick來處理影像，包括產生FPO轉譯。 這類轉譯會縮減取樣，也就是說，如果原始影像的PPI大於72，轉譯的畫素尺寸會按比例縮小。 另請參閱 [安裝並設定ImageMagick以搭配Experience Manager Assets使用](best-practices-for-imagemagick.md).
 
-|  | 使用Experience Manager的內置工作流 | 使用ImageMagick工作流 | 備注 |
+|  | 使用Experience Manager的內建工作流程 | 使用ImageMagick工作流程 | 備註 |
 |--- |--- |---|--- |
-| 對於新資產 | 啟用FPO格式副本([幫助](#generate-renditions-of-new-assets-using-aem-workflow)) | 在Experience Manager工作流中添加ImageMagick命令行([幫助](#generate-renditions-of-new-assets-using-imagemagick)) | Experience Manager為每次上載執行DAM更新資產工作流。 |
-| 對於現有資產 | 在新的專用Experience Manager工作流中啟用FPO格式副本([幫助](#generate-renditions-of-existing-assets-using-aem-workflow)) | 在新的專用Experience Manager工作流中添加ImageMagick命令行([幫助](#generate-renditions-of-existing-assets-using-imagemagick)) | 可以按需或批量建立現有資產的FPO格式副本。 |
+| 針對新資產 | 啟用FPO轉譯([說明](#generate-renditions-of-new-assets-using-aem-workflow)) | 在Experience Manager工作流程中新增ImageMagick命令列([說明](#generate-renditions-of-new-assets-using-imagemagick)) | Experience Manager會對每次上傳執行DAM更新資產工作流程。 |
+| 針對現有資產 | 在新的專用Experience Manager工作流程中啟用FPO轉譯([說明](#generate-renditions-of-existing-assets-using-aem-workflow)) | 在新的專用Experience Manager工作流程中新增ImageMagick命令列([說明](#generate-renditions-of-existing-assets-using-imagemagick)) | 現有資產的FPO轉譯可隨選或大量建立。 |
 
 >[!CAUTION]
 >
->通過修改預設工作流的副本建立工作流以生成格式副本。 它防止在Experience Manager更新時覆蓋您的更改，例如安裝新的Service Pack。
+>建立工作流程以透過修改預設工作流程的副本來產生轉譯。 這可防止在Experience Manager更新時覆寫您的變更，例如藉由安裝新的Service Pack。
 
-## 使用Experience Manager工作流生成新資產的格式副本 {#generate-renditions-of-new-assets-using-aem-workflow}
+## 使用Experience Manager工作流程產生新資產的轉譯 {#generate-renditions-of-new-assets-using-aem-workflow}
 
-以下是配置DAM更新資產工作流模型以啟用格式副本生成的步驟：
+以下是設定DAM更新資產工作流程模型以啟用產生轉譯的步驟：
 
-1. 按一下 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。 選擇 **[!UICONTROL DAM更新資產]** 模型，按一下 **[!UICONTROL 編輯]**。
+1. 按一下 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**. 選取 **[!UICONTROL DAM更新資產]** 模型並按一下 **[!UICONTROL 編輯]**.
 
-1. 選擇 **[!UICONTROL 處理縮略圖]** 按一下 **[!UICONTROL 配置]**。
+1. 選取 **[!UICONTROL 程式縮圖]** 步驟並按一下 **[!UICONTROL 設定]**.
 
-1. 按一下 **[!UICONTROL FPO格式副本]** 頁籤。 選擇 **[!UICONTROL 啟用FPO格式副本建立]**。
+1. 按一下 **[!UICONTROL FPO轉譯]** 標籤。 選取 **[!UICONTROL 啟用FPO轉譯建立]**.
 
    ![fpo_rendition_damupdateasset_model](assets/fpo_rendition_damupdateasset_model.png)
 
-1. 調整 **[!UICONTROL 質量]** 添加或修改 **[!UICONTROL 格式清單]** 值。 預設情況下，要生成FPO格式副本的MIME類型清單為pjpeg、jpeg、jpg、gif、png、x-png和tiff。 按一下 **[!UICONTROL 完成]**。
+1. 調整 **[!UICONTROL 品質]** 並新增或修改 **[!UICONTROL 格式清單]** 視需要提供值。 依預設，產生FPO轉譯的MIME型別清單為pjpeg、jpeg、jpg、gif、png、x-png和tiff。 按一下 **[!UICONTROL 完成]**.
 
    >[!NOTE]
    >
-   >檔案類型JPEG、GIF、PNG、TIFF、PSD和BMP支援格式副本生成。
+   >JPEG、GIF、PNG、TIFF、PSD和BMP等檔案型別支援產生轉譯。
 
-1. 要激活更改，請按一下 **[!UICONTROL 同步]**。
+1. 若要啟用變更，請按一下 **[!UICONTROL 同步]**.
 
 >[!NOTE]
 >
->一側大於1280像素的影像不會保留FPO格式副本中的像素尺寸。
+>單面大於1280畫素的影像不會保留FPO轉譯中的畫素尺寸。
 
-## 使用ImageMagick生成新資產的格式副本 {#generate-renditions-of-new-assets-using-imagemagick}
+## 使用ImageMagick產生新資產的轉譯 {#generate-renditions-of-new-assets-using-imagemagick}
 
-在Experience Manager中，在上載新資產時執行DAM更新資產工作流。 要使用ImageMagick處理新上載的資產的格式副本，請向工作流模型添加新命令。
+在Experience Manager中，DAM更新資產工作流程會在上傳新資產時執行。 若要使用ImageMagick處理新上傳資產的轉譯，請新增命令至工作流程模型。
 
-1. 按一下 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
+1. 按一下 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**.
 
-1. 選擇 **[!UICONTROL DAM更新資產]** 模型，按一下 **[!UICONTROL 編輯]**。
+1. 選取 **[!UICONTROL DAM更新資產]** 模型並按一下 **[!UICONTROL 編輯]**.
 
-1. 按一下 **[!UICONTROL 切換側面板]** 在左上角搜索命令行步驟。
+1. 按一下 **[!UICONTROL 切換側面板]** 並搜尋命令列步驟。
 
-1. 拖動 **[!UICONTROL 命令行]** 步驟並在 **[!UICONTROL 處理縮略圖]** 的子菜單。
+1. 拖曳 **[!UICONTROL 命令列]** 在之前逐步並新增 **[!UICONTROL 程式縮圖]** 步驟。
 
-1. 選擇 **[!UICONTROL 命令行]** 按一下 **[!UICONTROL 配置]**。
+1. 選取 **[!UICONTROL 命令列]** 步驟並按一下 **[!UICONTROL 設定]**.
 
-1. 將所需資訊添加為自定義 **[!UICONTROL 標題]** 和 **[!UICONTROL 說明]**。 例如，FPO格式副本（由ImageMagick提供）。
+1. 將所需的資訊新增為自訂 **[!UICONTROL 標題]** 和 **[!UICONTROL 說明]**. 例如，FPO轉譯（由ImageMagick提供技術支援）。
 
-1. 在 **[!UICONTROL 參數]** 頁籤，添加相關 **[!UICONTROL MIME類型]** 提供應用命令的檔案格式清單。
+1. 在 **[!UICONTROL 引數]** 索引標籤，新增相關 **[!UICONTROL Mime型別]** 提供命令套用的檔案格式清單。
 
-   ![imagemagick mimetype](assets/imagemagick-mimetype.png)
+   ![imagemagick-mimetype](assets/imagemagick-mimetype.png)
 
-1. 在 **[!UICONTROL 參數]** 的 **[!UICONTROL 命令]** 部分，添加相關的ImageMagick命令以生成FPO格式副本。
+1. 在 **[!UICONTROL 引數]** 標籤，在 **[!UICONTROL 命令]** 區段，新增相關的ImageMagick指令以產生FPO轉譯。
 
-   下面是一個示例命令，它以JPEG格式生成FPO格式副本，以10%的質量設定將其下採樣為72 PPI，並通過平整輸出來處理多層Adobe Photoshop檔案：
+   以下是一個命令範例，可產生JPEG格式的FPO轉譯、縮減取樣至72 PPI、10%品質設定，並透過平面化輸出來處理多層Adobe Photoshop檔案：
 
    `convert -quality 10% -units PixelsPerInch ${filename} -resample 72 -flatten cq5dam.fpo.jpeg`
 
-1. 要激活更改，請按一下 **[!UICONTROL 同步]**。
+1. 若要啟用變更，請按一下 **[!UICONTROL 同步]**.
 
-有關ImageMagick命令行功能的詳細資訊，請參見 [https://imagemagick.org](https://imagemagick.org)。
+如需ImageMagick命令列功能的詳細資訊，請參閱 [https://imagemagick.org](https://imagemagick.org).
 
-## 使用Experience Manager工作流生成現有資產的格式副本 {#generate-renditions-of-existing-assets-using-aem-workflow}
+## 使用Experience Manager工作流程產生現有資產的轉譯 {#generate-renditions-of-existing-assets-using-aem-workflow}
 
-要使用Experience Manager工作流生成現有資產的FPO格式副本，請建立一個使用內置FPO格式副本選項的專用工作流模型。
+若要使用Experience Manager工作流程產生現有資產的FPO轉譯，請建立使用內建FPO轉譯選項的專用工作流程模型。
 
-1. 按一下 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
+1. 按一下 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**.
 
-1. 要建立模型，請按一下 **[!UICONTROL 建立]** > **[!UICONTROL 建立模型]**。
+1. 若要建立模型，請按一下 **[!UICONTROL 建立]** > **[!UICONTROL 建立模型]**.
 
-1. 添加有意義的 **[!UICONTROL 標題]** 和 **[!UICONTROL 名稱]**。
+1. 新增有意義的內容 **[!UICONTROL 標題]** 和 **[!UICONTROL 名稱]**.
 
-1. 選取模型，然後按一下 **[!UICONTROL 編輯]**。 按一下 **[!UICONTROL 頁面資訊]** > **[!UICONTROL 開啟屬性]**，然後選擇 **[!UICONTROL 臨時工作流]**。 這提高了可擴充性和效能。
+1. 選取模型並按一下 **[!UICONTROL 編輯]**. 按一下 **[!UICONTROL 頁面資訊]** > **[!UICONTROL 開啟屬性]**，然後選取 **[!UICONTROL 暫時性工作流程]**. 這可改善擴充性和效能。
 
 1. 按一下&#x200B;******[!UICONTROL 儲存並關閉]**。
 
-1. 按一下 **[!UICONTROL 切換側面板]** 在左上角，並搜索進程縮略圖步驟。
+1. 按一下 **[!UICONTROL 切換側面板]** 「搜尋程式縮圖」步驟。
 
-1. 選擇 **[!UICONTROL 處理縮略圖]** 按一下 **[!UICONTROL 配置]**。 關注 [使用Experience Manager工作流生成新資產格式副本的配置](#generate-renditions-of-new-assets-using-aem-workflow)。
+1. 選取 **[!UICONTROL 程式縮圖]** 並按一下 **[!UICONTROL 設定]**. 請遵循 [使用Experience Manager工作流程產生新資產轉譯的設定](#generate-renditions-of-new-assets-using-aem-workflow).
 
-1. 要激活更改，請按一下 **[!UICONTROL 同步]**。
-
-
-## 使用ImageMagick生成現有資產的格式副本 {#generate-renditions-of-existing-assets-using-imagemagick}
-
-要使用ImageMagick處理功能生成現有資產的FPO格式副本，請建立使用ImageMagick命令行執行此操作的專用工作流模型。
-
-1. 按照步驟1到步驟3執行 [使用Experience Manager工作流生成現有資產格式副本的配置](#generate-renditions-of-existing-assets-using-aem-workflow) 的子菜單。
-
-1. 按照從第4步到第8步 [使用ImageMagick生成新資產格式副本的配置](#generate-renditions-of-new-assets-using-imagemagick) 的子菜單。
+1. 若要啟用變更，請按一下 **[!UICONTROL 同步]**.
 
 
-## 查看FPO格式副本 {#view-fpo-renditions}
+## 使用ImageMagick產生現有資產的轉譯 {#generate-renditions-of-existing-assets-using-imagemagick}
 
-在工作流完成後，您可以檢查生成的FPO格式副本。 在Experience Manager Assets用戶介面中，按一下資產以開啟大型預覽。 開啟左滑軌，然後選擇「格式副本」。 或者，使用鍵盤快捷鍵 `Alt + 3` 的子菜單。
+若要使用ImageMagick處理功能來產生現有資產的FPO轉譯，請建立專用工作流程模型，並使用ImageMagick命令列來執行此操作。
 
-按一下 **[!UICONTROL FPO格式副本]** 載入其預覽。 或者，可以按一下右鍵格式副本並將其保存到檔案系統。
+1. 從以下步驟執行步驟1到步驟3 [使用Experience Manager工作流程產生現有資產轉譯的設定](#generate-renditions-of-existing-assets-using-aem-workflow) 區段。
+
+1. 從以下步驟執行步驟4到步驟8： [使用ImageMagick產生新資產轉譯的設定](#generate-renditions-of-new-assets-using-imagemagick) 區段。
+
+
+## 檢視FPO轉譯 {#view-fpo-renditions}
+
+您可以在工作流程完成後檢查產生的FPO轉譯。 在Experience Manager Assets使用者介面中，按一下資產以開啟大型預覽。 開啟左側邊欄並選取轉譯。 或者，使用鍵盤快速鍵 `Alt + 3` 開啟預覽時。
+
+按一下 **[!UICONTROL FPO轉譯]** 以載入其預覽。 或者，您也可以用滑鼠右鍵按一下轉譯，並將其儲存至您的檔案系統。
 
 ![rendition_list](assets/rendition_list.png)
 
 
 ## 提示和限制 {#tips-limitations}
 
-* 要使用基於ImageMagick的配置，請將ImageMagick與Experience Manager安裝在同一台電腦上。
-* 要生成許多資產或整個儲存庫的FPO格式副本，請在低通信量持續時間內規劃和執行工作流。 為大量資產生成FPO格式副本是一項資源密集型活動，Experience Manager伺服器必須具有足夠的處理能力和可用記憶體。
-* 有關效能和可擴充性，請參見 [精調影像](performance-tuning-guidelines.md)。
-* 有關資產的一般命令行處理，請參見 [命令行處理程式處理資產](media-handlers.md)。
+* 若要使用ImageMagick型設定，請將ImageMagick安裝在Experience Manager所在的同一部電腦上。
+* 若要產生許多資產或整個存放庫的FPO轉譯，請在低流量期間規劃和執行工作流程。 為大量資產產生FPO轉譯是一項耗用大量資源的活動，且Experience Manager伺服器必須具備足夠的處理能力和可用記憶體。
+* 如需效能與擴充性的相關資訊，請參閱 [微調ImageMagick](performance-tuning-guidelines.md).
+* 如需資產的一般命令列處理，請參閱 [處理資產的命令列處理常式](media-handlers.md).

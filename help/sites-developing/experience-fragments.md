@@ -1,6 +1,6 @@
 ---
-title: AEM Sites發展的經驗片段
-description: 瞭解自定義體驗片段。
+title: AEM Sites開發中的體驗片段
+description: 瞭解如何自訂體驗片段。
 uuid: fc9f7e59-bd7c-437a-8c63-de8559b5768d
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,29 +18,29 @@ ht-degree: 0%
 
 # 體驗片段{#experience-fragments}
 
-## 基礎 {#the-basics}
+## 基本知識 {#the-basics}
 
-安 [體驗片段](/help/sites-authoring/experience-fragments.md) 是一個或多個元件的組，包括可在頁面中引用的內容和佈局。
+一個 [體驗片段](/help/sites-authoring/experience-fragments.md) 是一組一或多個元件，包括可在頁面中參考的內容和版面。
 
-經驗片段主和/或變型使用：
+體驗片段主要和/或變體使用：
 
-* `sling:resourceType` : `/libs/cq/experience-fragments/components/xfpage`
+* `sling:resourceType` ： `/libs/cq/experience-fragments/components/xfpage`
 
-因為沒有 `/libs/cq/experience-fragments/components/xfpage/xfpage.html` 它會恢復
+因為沒有 `/libs/cq/experience-fragments/components/xfpage/xfpage.html` 它還原為
 
 * `sling:resourceSuperType` : `wcm/foundation/components/page`
 
-## 純HTML格式副本 {#the-plain-html-rendition}
+## 純HTML轉譯 {#the-plain-html-rendition}
 
-使用 `.plain.` selector，您可以訪問純HTML格式副本。
+使用 `.plain.` 在URL的選擇器中，您可以存取純HTML轉譯。
 
-這可從瀏覽器獲得，但其主要用途是允許其他應用程式（例如，第三方Web應用程式、自定義移動實現）僅使用URL直接訪問體驗片段的內容。
+這可從瀏覽器取得，但其主要目的是讓其他應用程式（例如協力廠商網頁應用程式、自訂行動實作）僅使用URL直接存取體驗片段的內容。
 
-純HTML格式副本將協定、主機和上下文路徑添加到以下路徑：
+純HTML轉譯會將通訊協定、主機和內容路徑新增至以下路徑：
 
-* 類型： `src`。 `href`或 `action`
+* 型別： `src`， `href`，或 `action`
 
-* 或以： `-src`或 `-href`
+* 或結尾為： `-src`，或 `-href`
 
 例如：
 
@@ -48,71 +48,71 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->連結始終引用發佈實例。 這些連結旨在由第三方使用，因此連結將始終從發佈實例調用，而不是作者。
+>連結一律會參考發佈執行個體。 這些連結旨在由第三方使用，因此將一律從發佈執行個體而不是作者呼叫連結。
 
 ![xf-14](assets/xf-14.png)
 
-普通格式副本選擇器使用變壓器而不是附加指令碼；這樣 [斯林重寫器](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) 用作變壓器。 此配置在
+純轉譯選擇器使用轉換器，而非其他指令碼； [Sling重寫程式](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) 會作為轉換器使用。 此設定於
 
 * `/libs/experience-fragments/config/rewriter/experiencefragments`
 
-### 配置HTML格式副本生成 {#configuring-html-rendition-generation}
+### 設定HTML轉譯產生 {#configuring-html-rendition-generation}
 
-HTML格式副本使用Sling Rewriter管道生成。 管線在 `/libs/experience-fragments/config/rewriter/experiencefragments`。 HTML變壓器支援以下選項：
+HTML轉譯是使用Sling重寫程式管道產生的。 管道定義於 `/libs/experience-fragments/config/rewriter/experiencefragments`. HTML轉換器支援下列選項：
 
 * `allowedCssClasses`
-   * RegEx表達式，它與應保留在最終格式副本中的CSS類匹配。
-   * 如果客戶要刪除某些特定的CSS類，則此功能非常有用
+   * 符合應留在最終轉譯中的CSS類別的RegEx運算式。
+   * 如果客戶想要移除某些特定的CSS類別，這將很有用
 * `allowedTags`
-   * 要在最終格式副本中允許的HTML標籤清單。
-   * 預設情況下，允許使用以下標籤（不需要配置）:html, head, title, body, img, p, span, ul, li, a, b, i, em, strong, h1, h2, h3, h5, h6, br, noscript, div, link，指令碼
+   * 最終轉譯中允許的HTML標籤清單。
+   * 預設允許下列標籤（不需要設定）： html、head、title、body、img、p、span、ul、li、a、b、i、em、strong、h1、h2、h3、h4、h5、h6、br、noscript、div、link和script
 
-建議使用覆蓋配置重寫器。 請參閱 [覆蓋](/help/sites-developing/overlays.md)
+建議使用覆蓋來設定重寫程式。 另請參閱 [覆蓋](/help/sites-developing/overlays.md)
 
-## 社會變異 {#social-variations}
+## 社交變數 {#social-variations}
 
-社交變體可以在社交媒體（文本和影像）上發佈。 在這AEM些社交變體中，可以包含元件；例如，文本元件、影像元件。
+社交變體可發佈在社群媒體（文字和影像）上。 在AEM中，這些社交變體可包含元件；例如，文字元件、影像元件。
 
-社交帖子的影像和文本可以從任何深度級別（在構建塊或佈局容器中）的任何影像資源類型或文本資源類型中獲取。
+社交貼文的影像和文字可從任何深度層級的影像資源型別或文字資源型別取得（在建置區塊或版面配置容器中）。
 
-社會差異還允許在進行社會行動（在出版環境上）時考慮建構要素。
+社交變數也允許建置區塊，並在進行社交動作（在發佈環境中）時加以考慮。
 
-若要將正確的文本和影像發佈到社交媒體網路，如果您正在開發自己的定製元件，則需要遵守一些約定。
+若要將正確的文字和影像發佈到社群媒體網路，如果您正在開發自己的自訂元件，則需要遵守一些慣例。
 
 為此，必須使用以下屬性：
 
-* 用於提取影像
+* 用於擷取影像
 
    * `fileReference`
    * `fileName`
 
-* 用於提取文本
+* 用於擷取文字
 
    * `text`
 
-不使用本公約的部分不予考慮。
+未使用此慣例的元件不會納入考量。
 
-## 體驗片段模板 {#templates-for-experience-fragments}
+## 體驗片段的範本 {#templates-for-experience-fragments}
 
 >[!CAUTION]
 >
->***僅*** [可編輯模板](/help/sites-developing/page-templates-editable.md) 支援體驗片段。
+>***僅限*** [可編輯的範本](/help/sites-developing/page-templates-editable.md) 體驗片段支援。
 
-在為「體驗片段」開發新模板時，您可以遵循 [可編輯模板](/help/sites-developing/page-templates-editable.md)。
+為體驗片段開發新範本時，您可以遵循的標準做法 [可編輯的範本](/help/sites-developing/page-templates-editable.md).
 
-建立由 **建立體驗片段** 嚮導，您必須遵循以下規則集之一：
+若要建立由偵測到的體驗片段範本 **建立體驗片段** 精靈，您必須遵循下列其中一個規則集：
 
 1. 兩者:
 
-   1. 模板的資源類型（初始節點）必須從以下位置繼承：
+   1. 樣板的資源型別（初始節點）必須繼承自：
       `cq/experience-fragments/components/xfpage`
 
-   1. 模板名稱必須以下列內容開頭：
+   1. 範本名稱的開頭必須是：
       `experience-fragments`
-這允許用戶在/content/experience-fragments中建立體驗片段作為 
-`cq:allowedTemplates` 此資料夾的屬性包含名稱以開頭的所有模板 `experience-fragment`。 客戶可以更新此屬性以包括其自己的命名方案或模板位置。
+這可讓使用者在/content/experience-fragments中建立體驗片段，作為 
+`cq:allowedTemplates` 此資料夾的屬性包含名稱開頭為的所有範本 `experience-fragment`. 客戶可以更新此屬性，以包含自己的命名配置或範本位置。
 
-1. [允許的模板](/help/sites-authoring/experience-fragments.md#configure-allowed-templates-folder) 可以在「體驗片段」控制台中配置。
+1. [允許的範本](/help/sites-authoring/experience-fragments.md#configure-allowed-templates-folder) 可在體驗片段主控台中設定。
 
 <!--
 1. Add the template details manually in `cq:allowedTemplates` on the `/content/experience-fragment` node.
@@ -123,82 +123,82 @@ HTML格式副本使用Sling Rewriter管道生成。 管線在 `/libs/experience-
 >[Allowed templates](/help/sites-authoring/experience-fragments.md#configuring-allowed-templates) can be configured in the Experience Fragments console.
 -->
 
-## 經驗片段的元件 {#components-for-experience-fragments}
+## 體驗片段的元件 {#components-for-experience-fragments}
 
-[開發元件](/help/sites-developing/components.md) 與「經驗」(Experience)「片段」(Fragments)配合使用，遵循標準慣例。
+[開發元件](/help/sites-developing/components.md) 搭配/在體驗片段中使用時，請遵循標準實務。
 
-唯一的附加配置是確保 [允許在模板上，這是通過內容策略實現的](/help/sites-developing/page-templates-editable.md#content-policies)。
+唯一額外的設定是確保元件能夠 [在範本上允許，這是透過內容原則達成](/help/sites-developing/page-templates-editable.md#content-policies).
 
-## 體驗片段連結重寫器提供程式 — HTML {#the-experience-fragment-link-rewriter-provider-html}
+## 體驗片段連結重寫器提供者 — HTML {#the-experience-fragment-link-rewriter-provider-html}
 
-在AEM您可以建立體驗片段。 體驗片段：
+在AEM中，您可以建立體驗片段。 體驗片段：
 
-* 由一組元件和一個佈局組成，
-* 可以獨立於頁面存AEM在。
+* 由一組元件及配置圖組成，
+* 可以獨立於AEM頁面存在。
 
-此類組的一個使用案例是將內容嵌入第三方觸點，如Adobe Target。
+這類群組的使用案例之一，是將內容內嵌於第三方接觸點，例如Adobe Target。
 
 ### 預設連結重寫 {#default-link-rewriting}
 
-使用 [導出到目標](/help/sites-administering/experience-fragments-target.md) 功能，您可以：
+使用 [匯出至目標](/help/sites-administering/experience-fragments-target.md) 功能，您可以：
 
 * 建立體驗片段，
-* 添加元件，
-* 然後以HTML格式或JSON格式將其導出為Adobe Target優惠。
+* 新增元件，
+* 然後以HTML格式或JSON格式將其匯出為Adobe Target選件。
 
-此功能可以是 [在的作者實例上啟AEM用](/help/sites-administering/experience-fragments-target.md#Prerequisites)。 它需要有效的Adobe Target配置和連結外部化程式的配置。
+此功能可以 [已在AEM的作者執行個體上啟用](/help/sites-administering/experience-fragments-target.md#Prerequisites). 它需要有效的Adobe Target設定，以及Link Externalizer設定。
 
-連結外部化程式用於確定建立目標服務的HTML版本時所需的正確URL，該版本隨後將發送到Adobe Target。 這是必要的，因為Adobe Target要求可以公開訪問目標HTML服務內的所有連結；這意味著必須先發佈連結引用的任何資源以及體驗片段本身，然後才能使用這些資源。
+Link Externalizer可用來判斷建立Target選件的HTML版本時所需的正確URL，此版本隨後會傳送至Adobe Target。 這是必要的，因為Adobe Target要求可以公開存取TargetHTML選件內的所有連結；這表示連結參照的任何資源以及體驗片段本身，都必須先發佈，才能使用。
 
-預設情況下，在構建目標HTML提供時，會向中的自定義Sling選擇器發送請AEM求。 此選擇器被調用 `.nocloudconfigs.html`。 正如其名稱所暗示的，它建立體驗片段的純HTML渲染，但不包括雲配置（這將是多餘的資訊）。
+根據預設，當您建構TargetHTML選件時，要求會傳送至AEM中的自訂Sling選取器。 此選取器稱為 `.nocloudconfigs.html`. 顧名思義，它會建立體驗片段的純HTML轉譯，但不包括雲端設定（這會是多餘的資訊）。
 
-生成HTML頁後，Sling Rewriter管線將修改輸出：
+產生HTML頁面後，Sling重寫程式管線會修改輸出：
 
-1. 的 `html`。 `head`, `body` 元素替換為 `div` 元素。 的 `meta`。 `noscript` 和 `title` 元素被移除(它們是原始元素的子元素 `head` 元素，並且當替換為 `div` 元素)。
+1. 此 `html`， `head`、和 `body` 元素取代為 `div` 元素。 此 `meta`， `noscript` 和 `title` 元素會被移除（它們是原始元素的子元素） `head` 元素，當此元素被取代時，不會考慮和 `div` 元素)。
 
-   這樣做是為了確保HTML目標優惠可以包括在目標活動中。
+   這麼做是為了確保HTMLTarget選件可包含在Target活動中。
 
-1. 修AEM改HTML中存在的任何內部連結，以便它們指向已發佈的資源。
+1. AEM會修改HTML中出現的任何內部連結，使其指向已發佈的資源。
 
-   要確定要修改的連結，請AEM遵循以下HTML元素屬性模式：
+   若要決定要修改的連結，AEM會對HTML元素的屬性遵循此模式：
 
    1. `src` 屬性
    1. `href` 屬性
    1. `*-src` 屬性（如data-src、custom-src等）
-   1. `*-href` 屬性(如 `data-href`。 `custom-href`。 `img-href`等等
+   1. `*-href` 屬性(類似 `data-href`， `custom-href`， `img-href`、等)
 
    >[!NOTE]
    >
-   >在大多數情況下，HTML中的內部連結是相對連結，但在自定義元件在HTML中提供完整URL時，可能會出現這種情況。 預設情況下，AEM將忽略這些完整的URL，並且不進行任何修改。
+   >在大多數情況下，HTML中的內部連結是相對連結，但自訂元件在HTML中可能會提供完整URL的情況。 依預設，AEM會忽略這些完整的URL且不會進行任何修改。
 
-   這些屬性中的連結通過連結外部AEM化程式運行 `publishLink()` 以重新建立URL，就像它位於已發佈實例上一樣，可公開使用。
+   這些屬性中的連結會透過AEM Link Externalizer執行 `publishLink()` 以便將URL重新建立為在已發佈的例項上，而且是公開可用的。
 
-使用現成實施時，上述過程應足以從經驗片段生成目標優惠，然後將其導出到Adobe Target。 但是，有些使用案例在此過程中沒有說明；這些包括：
+使用現成可用的實作時，上述流程應足以從體驗片段產生Target選件，然後將其匯出至Adobe Target。 不過，此程式並未說明部分使用案例，其中包括：
 
-* 僅在發佈實例上提供Sling映射
-* 調度程式重定向
+* Sling對應僅在發佈執行個體上可用
+* Dispatcher重新導向
 
-對於這些使用AEM情形，提供「連結重寫器提供程式介面」。
+對於這些使用案例，AEM會提供連結重寫程式提供者介面。
 
-### 連結重寫器提供程式介面 {#link-rewriter-provider-interface}
-
->[!NOTE]
->
->此介面在 [AEM6.5 SP1(6.5.1.0)](/help/release-notes/previous/6.5.1.md)。
-
-對於更複雜的案例， [預設](#default-link-rewriting)，提供AEM連結重寫器提供程式介面。 這是 `ConsumerType` 作為服務在捆綁包中實現的介面。 它繞過從體驗AEM片段呈現的HTML要約的內部連結執行的修改。 此介面允許您自定義改寫內部HTML連結的過程，以符合您的業務需要。
-
-將此介面作為服務實現的使用案例包括：
-
-* 在發佈實例上啟用Sling映射，但在作者實例上未啟用
-* 調度程式或類似技術用於在內部重定向URL
-* 有 `sling:alias mechanisms` 已到位
+### 連結重寫程式提供者介面 {#link-rewriter-provider-interface}
 
 >[!NOTE]
 >
->此介面僅處理生成的目標優惠中的內部HTML連結。
+>此介面已在以下內容中介紹： [AEM 6.5 SP1 (6.5.1.0)](/help/release-notes/previous/6.5.1.md).
 
-連結重寫器提供程式介面( `ExperienceFragmentLinkRewriterProvider`)如下所示：
+對於較複雜的情況，不在 [預設](#default-link-rewriting)，AEM提供連結重寫程式提供者介面。 這是 `ConsumerType` 介面，可實作於套件組合中，作為服務。 它會繞過AEM對HTML選件的內部連結（從體驗片段轉譯）執行的修改。 此介面可讓您自訂重寫內部HTML連結的程式，以符合您的業務需求。
+
+實作此介面作為服務的使用案例範例包括：
+
+* Sling對應已在發佈執行個體上啟用，但在作者執行個體上未啟用
+* Dispatcher或類似技術可用來在內部重新導向URL
+* 有 `sling:alias mechanisms` 資源就位
+
+>[!NOTE]
+>
+>此介面只會處理來自所產生Target選件的內部HTML連結。
+
+連結重寫程式提供者介面( `ExperienceFragmentLinkRewriterProvider`)如下所示：
 
 ```java
 public interface ExperienceFragmentLinkRewriterProvider {
@@ -212,13 +212,13 @@ public interface ExperienceFragmentLinkRewriterProvider {
 }
 ```
 
-### 如何使用連結重寫器提供程式介面 {#how-to-use-the-link-rewriter-provider-interface}
+### 如何使用連結重寫程式提供者介面 {#how-to-use-the-link-rewriter-provider-interface}
 
-要使用介面，您首先需要建立一個包，其中包含實現連結重寫器提供程式介面的新服務元件。
+若要使用介面，您首先需要建立包含實作連結重寫程式提供者介面的新服務元件的組合。
 
-此服務將用於插入「將體驗片段導出到目標重寫」，以便能夠訪問各種連結。
+此服務將用於插入Experience Fragment Export to Target重新寫入，以便存取各種連結。
 
-比如說， `ComponentService`:
+例如， `ComponentService`：
 
 ```java
 import com.adobe.cq.xf.ExperienceFragmentLinkRewriterProvider;
@@ -248,7 +248,7 @@ public class GeneralLinkRewriter implements ExperienceFragmentLinkRewriterProvid
 }
 ```
 
-對於服務工作，現在需要在服務內部實現三種方法：
+為了讓服務發揮作用，現在需要在服務內實作三種方法：
 
 * ` [shouldRewrite](#shouldrewrite)`
 * ` [rewriteLink](#rewritelink)`
@@ -257,9 +257,9 @@ public class GeneralLinkRewriter implements ExperienceFragmentLinkRewriterProvid
 
 * ` [getPriority](#priorities-getpriority)`
 
-#### 應重寫 {#shouldrewrite}
+#### shouldRewrite {#shouldrewrite}
 
-您需要向系統指示，在對特定體驗片段變體的「導出到目標」發出調用時，系統是否需要重寫連結。 通過實現以下方法，可以執行此操作：
+您需要向系統指出在對特定體驗片段變數進行匯出到Target呼叫時，它是否需要重寫連結。 若要這麼做，請實作方法：
 
 `shouldRewrite(ExperienceFragmentVariation experienceFragment);`
 
@@ -272,55 +272,55 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 }
 ```
 
-該方法接收作為參數的導出到目標系統當前正在重寫的經驗片段變化。
+此方法會以引數的形式接收「匯出至目標」系統目前正在重寫的體驗片段變數。
 
-在上例中，我們要重寫：
+在上述範例中，我們想要重寫：
 
-* 存在的連結 `src`
+* 中的連結 `src`
 
-* `href` 僅屬性
+* `href` 僅限屬性
 
-* 特定體驗片段：
+* 針對特定體驗片段：
    `/content/experience-fragment/master`
 
-通過「導出到目標」系統的任何其他體驗片段將被忽略，並且不受此服務中實現的更改的影響。
+任何透過「匯出至目標」系統的其他體驗片段會遭忽略，且不會受到此服務中實作的變更影響。
 
-#### 重寫連結 {#rewritelink}
+#### rewriteLink {#rewritelink}
 
-對於受重寫過程影響的體驗片段變化，再由服務處理鏈路重寫。 每當在內部HTML中遇到連結時，都會調用以下方法：
+針對受重寫程式影響的體驗片段變數，它會繼續讓服務處理連結重寫。 每當內部HTML中出現連結時，就會叫用下列方法：
 
 `rewriteLink(String link, String tag, String attribute)`
 
-作為輸入，該方法接收參數：
+作為輸入，方法會接收引數：
 
 * `link`  
-`String` 當前正在處理的連結的表示形式。 這通常是指向作者實例上的資源的相對URL。
+`String` 表示目前處理中的連結。 這通常是指向作者執行個體上資源的相對URL。
 
 * `tag`
-當前正在處理的HTML元素的名稱。
+目前處理中的HTML元素名稱。
 
 * `attribute`
-確切的屬性名。
+確切的屬性名稱。
 
-例如，如果「導出到目標」系統當前正在處理此元素，則可以定義 `CSSInclude` 為：
+例如，如果「匯出至目標」系統目前正在處理此元素，您可以定義 `CSSInclude` 作為：
 
 ```java
 <link rel="stylesheet" href="/etc.clientlibs/foundation/clientlibs/main.css" type="text/css">
 ```
 
-呼叫 `rewriteLink()` 方法使用以下參數完成：
+對的呼叫 `rewriteLink()` 方法可使用下列引數完成：
 
 ```java
 rewriteLink(link="/etc.clientlibs/foundation/clientlibs/main.css", tag="link", attribute="href" )
 ```
 
-在建立服務時，您可以根據給定的輸入做出決策，然後相應地重寫連結。
+建立服務時，您可以根據指定的輸入進行決策，然後相應地重寫連結。
 
-例如，我們要刪除 `/etc.clientlibs` 添加相應的外部域。 為了保持簡單，我們將考慮我們有權訪問您的服務的資源解析程式，如 `rewriteLinkExample2`:
+舉例來說，我們想要移除 `/etc.clientlibs` URL的一部分並新增適當的外部網域。 為了簡單起見，我們將考慮我們有權存取您服務的資源解析器，例如 `rewriteLinkExample2`：
 
 >[!NOTE]
 >
->有關如何通過服務用戶獲取資源解析程式的詳細資訊，請參閱 [服務用AEM戶](/help/sites-administering/security-service-users.md)。
+>如需有關如何透過服務使用者取得資源解析器的詳細資訊，請參閱 [AEM中的服務使用者](/help/sites-administering/security-service-users.md).
 
 ```java
 private ResourceResolver resolver;
@@ -349,14 +349,14 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 >[!NOTE]
 >
->如果以上方法返回 `null`，則「導出到目標」系統將保留連結原樣，即資源的相對連結。
+>如果上述方法傳回 `null`，則「匯出至Target」系統將保持連結不變，即資源的相對連結。
 
 #### 優先順序 — getPriority {#priorities-getpriority}
 
-需要多種服務來滿足不同種類的體驗片段，甚至需要通用服務來處理所有體驗片段的外部化和映射，這種情況並不少見。 在這些情況下，可能會發生與要使用哪些服務有關的衝突，AEM因此可以定義 **優先順序** 不同服務。 使用以下方法指定優先順序：
+需要多個服務來迎合不同體驗片段的型別並不罕見，甚至需要有一個通用服務來處理所有體驗片段的外部化和對應。 在這些情況下，可能會發生與使用哪個服務相關的衝突，因此AEM提供了定義 **優先順序** 適用於不同服務。 使用下列方法指定優先順序：
 
 * `getPriority()`
 
-此方法允許使用多個服務， `shouldRewrite()` 方法對於同一經驗片段返回true。 返回其中最大數目的服務 `getPriority()`方法是處理體驗片段變化的服務。
+此方法允許使用多項服務，其中 `shouldRewrite()` 對於相同的體驗片段，方法會傳回true。 從中傳回最高數字的服務 `getPriority()`方法是處理體驗片段變數的服務。
 
-例如，您可以 `GenericLinkRewriterProvider` 處理所有體驗片段的基本映射，以及 `shouldRewrite()` 方法返回 `true` 所有體驗片段變體。 對於幾個特定的體驗片段，您可能需要特殊處理，因此在本例中，您可以提供 `SpecificLinkRewriterProvider` 對於 `shouldRewrite()` 方法僅對某些經驗片段變體返回true。 確保 `SpecificLinkRewriterProvider` 被選擇處理這些體驗片段變體，它必須返回 `getPriority()` 方法大於 `GenericLinkRewriterProvider.`
+例如，您可以建立 `GenericLinkRewriterProvider` 會處理所有體驗片段的基本對應，以及當 `shouldRewrite()` 方法傳回 `true` 適用於所有體驗片段變數。 針對數個特定體驗片段，您可能需要特殊處理，因此在此情況下，您可以提供 `SpecificLinkRewriterProvider` 對於 `shouldRewrite()` 方法只會傳回部分體驗片段變數的true。 若要確保 `SpecificLinkRewriterProvider` 被選擇用於處理這些體驗片段變數，它必須返回其 `getPriority()` 方法數字大於 `GenericLinkRewriterProvider.`

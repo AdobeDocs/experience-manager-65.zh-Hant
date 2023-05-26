@@ -1,7 +1,7 @@
 ---
-title: 設定超時值以用於Acrobat Reader DC擴展
+title: 設定與Acrobat Reader DC擴充功能搭配使用的逾時值
 seo-title: Setting timeout values for use with Acrobat Reader DC extensions
-description: 瞭解如何設定超時值以用於Acrobat Reader DC擴展。
+description: 瞭解如何設定逾時值以與Acrobat Reader DC擴充功能搭配使用。
 seo-description: Learn how to set timeout values for use with Acrobat Reader DC extensions.
 uuid: d6d072a0-0a30-417a-98b1-df8b4ff8f911
 contentOwner: admin
@@ -17,20 +17,20 @@ ht-degree: 0%
 
 ---
 
-# 設定超時值以用於Acrobat Reader DC擴展  {#setting-timeout-values-for-use-with-acrobat-reader-dc-extensions}
+# 設定與Acrobat Reader DC擴充功能搭配使用的逾時值  {#setting-timeout-values-for-use-with-acrobat-reader-dc-extensions}
 
-在處理Acrobat Reader DC擴展中的許多PDF檔案時，請確保正確設定以下超時值以防止作業超時和失敗：
+使用Acrobat Reader DC擴充功能中的許多PDF檔案時，請確定已適當設定下列逾時值，以防止工作逾時及失敗：
 
-**文檔處理超時**
+**檔案處置逾時**
 
-可以在管理控制台中設定此值。 按一下「設定」>「核心繫統設定」>「配置」，然後為「預設文檔處理超時」指定值。
+此值可在管理控制檯中設定。 按一下「設定」>「核心系統設定」>「設定」，並指定「預設檔案處置逾時」的值。
 
-**用戶管理AEM器表單超時：** 可以通過編輯config.xml檔案來設定此值。 在管理控制台中，按一下「設定」>「用戶管理」>「配置」>「導入和導出配置檔案」，然後按一下「導出」。 開啟導出的config.xml檔案並編輯以下行：
+**使用者管理員AEM表單逾時：** 您可以編輯config.xml檔案來設定此值。 在管理控制檯中，按一下「設定」>「使用者管理」>「組態」>「匯入和匯出組態檔」，然後按一下「匯出」。 開啟匯出的config.xml檔案並編輯下列行：
 
 &lt;entry key=&quot;assertionValidityInMinutes&quot; value=&quot;600&quot;/>
 
 &lt;entry key=&quot;SessionTimeout&quot; value=&quot;600&quot;/>
 
-保存並將config.xml檔案導入到管理控制台。
+儲存config.xml檔案，然後將其匯入回管理主控台。
 
-**應用程式伺服器會話超時：** 可以在應用程式伺服器上設定此值。 有關詳細資訊，請參閱應用程式伺服器附帶的文檔。
+**應用程式伺服器工作階段逾時：** 此值可在應用程式伺服器上設定。 如需詳細資訊，請參閱應用程式伺服器隨附的檔案。

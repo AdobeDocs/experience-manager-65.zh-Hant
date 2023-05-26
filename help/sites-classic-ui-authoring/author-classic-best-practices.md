@@ -1,7 +1,7 @@
 ---
 title: 最佳做法
 seo-title: Best Practices
-description: 編寫最佳做法介紹如何以AEM盡可能最高效和最有效的方式使用。 這個不斷增加的主題清單包括了多個AEM領域。
+description: 撰寫最佳實務說明如何以最有效率和最有效率的方式使用AEM。 這份不斷增加的主題清單包括AEM中的各種領域。
 seo-description: Authoring best practices describe how to use AEM in the most efficient and most effective way possible. This growing list of topics includes a variety of areas in AEM.
 uuid: d1f58335-0aa6-4b35-bdcd-cf6051bd1439
 contentOwner: Chris Bohnert
@@ -19,59 +19,59 @@ ht-degree: 3%
 
 # 最佳做法{#best-practices}
 
-編寫最佳做法介紹如何以AEM盡可能最高效和最有效的方式使用。 這個不斷增加的主題清單包括了多個AEM領域。
+撰寫最佳實務說明如何以最有效率和最有效率的方式使用AEM。 這份不斷增加的主題清單包括AEM中的各種領域。
 
-以下領域提供了有關最佳做法的文檔：
+下列區域已提供有關最佳實務的檔案：
 
 * [Assets](#assets)
 * [Sites](#sites)
 * [Forms](#forms)
 
-有關管理、部署和維護或開發的最佳做法，請參見以下內容之一：
+如需管理、部署和維護或開發的最佳實務，請參閱下列其中一項：
 
-* [管理最佳做法](/help/sites-administering/administer-best-practices.md)
-* [制定最佳做法](/help/sites-developing/best-practices.md)
-* [部署最佳做法](/help/sites-deploying/best-practices.md)
+* [管理最佳實務](/help/sites-administering/administer-best-practices.md)
+* [開發最佳實務](/help/sites-developing/best-practices.md)
+* [部署最佳實務](/help/sites-deploying/best-practices.md)
 
-具體文檔將在隨後的表中進行描述和連結。
+以下表格中會說明並連結特定檔案。
 
 ## Assets {#assets}
 
-以下主題介紹了圍繞資產的最佳做法，包括Dynamic Media能力和Dynamic Media Classic整合：
+有關資產的最佳實務，包括Dynamic Media功能和Dynamic Media Classic整合，請參閱下列主題：
 
 <table>
  <tbody>
   <tr>
    <td>檔案格式</td>
-   <td><a href="/help/assets/assets-file-format-best-practices.md">資產檔案格式最佳做法</a></td>
-   <td>介紹有關AEM Assets內檔案支援的最佳做法。</td>
+   <td><a href="/help/assets/assets-file-format-best-practices.md">Assets檔案格式最佳實務</a></td>
+   <td>說明AEM Assets中檔案支援的最佳實務。</td>
   </tr>
   <tr>
-   <td>視頻編碼</td>
-   <td><a href="/help/assets/video.md#best-practices-for-encoding-videos">編碼最佳做法</a></td>
-   <td>介紹有關編碼源視頻檔案的最佳做法提示。</td>
+   <td>視訊編碼</td>
+   <td><a href="/help/assets/video.md#best-practices-for-encoding-videos">編碼最佳實務</a></td>
+   <td>說明編碼來源視訊檔案的最佳作法秘訣。</td>
   </tr>
   <tr>
    <td>Dynamic Imaging</td>
-   <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging最佳做法</a></td>
-   <td><p>介紹如何銳化影像以獲得最佳效果，以及在您使用Dynamic Media功能或正在與Dynamic Media Classic整合時優化影像質量的最佳方法。 </p> </td>
+   <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging最佳實務</a></td>
+   <td><p>說明如何銳利化影像以獲得最佳效果，以及如果您使用Dynamic Media功能或正在與Dynamic Media Classic整合，最佳化影像品質的方法。 </p> </td>
   </tr>
   <tr>
-   <td>多語種資產</td>
-   <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">翻譯最佳做法</a></td>
-   <td>介紹有關高效轉換資產的AEM最佳做法。</td>
+   <td>多語言資產</td>
+   <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">翻譯最佳實務</a></td>
+   <td>說明如何有效率地翻譯AEM資產的最佳實務。</td>
   </tr>
  </tbody>
 </table>
 
 ## Sites {#sites}
 
-管理和創作網站內容有一些最佳做法概述如下：
+管理和編寫您的網站內容有一些最佳實務，概述如下：
 
-創作： [作者環境和工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md)  — 概述如何編寫頁面。
+製作： [製作環境和工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md)  — 提供如何編寫頁面的概觀。
 
 ## Forms {#forms}
 
-自適應表單： [使用自適應表單的最佳做法](/help/forms/using/adaptive-forms-best-practices.md)  — 介紹設定、創作和自定義自適應表單的最佳做法。
+調適型表單： [使用最適化表單的最佳作法](/help/forms/using/adaptive-forms-best-practices.md)  — 說明設定、編寫和自訂最適化表單的最佳作法。
 
-HTML5表單： [設計HTML5表單的最佳做法](/help/forms/using/best-practices-for-html5-forms.md)  — 介紹HTML5表單佈局和設計方面的最佳做法。
+HTML5表單： [設計HTML5表單的最佳實務](/help/forms/using/best-practices-for-html5-forms.md)  — 說明處理HTML5表單版面配置和設計的最佳實務。

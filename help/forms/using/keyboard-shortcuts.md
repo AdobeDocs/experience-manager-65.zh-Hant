@@ -1,7 +1,7 @@
 ---
-title: AEM Forms鍵盤快捷鍵
+title: AEM Forms鍵盤快速鍵
 seo-title: AEM Forms Keyboard Shortcuts
-description: 本文列出了可用於Adaptive Form Editor、主題編輯器、內容瀏覽器和Windows和Macintosh作業系統的函式管理的鍵盤快捷鍵。
+description: 本文列出可搭配Windows和Macintosh作業系統的最適化表單編輯器、主題編輯器、內容瀏覽器和通訊管理使用的鍵盤快速鍵。
 seo-description: This article lists the keyboard shortcuts that can be used with Adaptive Form Editor, Theme Editor, Content Browser, and Correspondence Management.
 uuid: 1a16c2e6-c0f1-42e0-9ab4-692f3e58eeaf
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -17,259 +17,259 @@ ht-degree: 1%
 
 ---
 
-# AEM Forms鍵盤快捷鍵 {#aem-forms-keyboard-shortcuts}
+# AEM Forms鍵盤快速鍵 {#aem-forms-keyboard-shortcuts}
 
-本文列出了可用於Adaptive Form Editor、主題編輯器、內容瀏覽器和Windows和Macintosh作業系統的函式管理的鍵盤快捷鍵。
+本文列出可搭配Windows和Macintosh作業系統的最適化表單編輯器、主題編輯器、內容瀏覽器和通訊管理使用的鍵盤快速鍵。
 
-## 自適應表單編輯器 {#adaptiveformeditor}
+## 最適化表單編輯器 {#adaptiveformeditor}
 
-| **動作** | **Windows上的快捷方式** | **MacOS的快捷方式** |
+| **動作** | **Windows上的捷徑** | **Mac作業系統上的捷徑** |
 |---|---|---|
-| 開啟所選自適應表單元件的「屬性」瀏覽器 | Alt+Enter鍵 | Alt+返回 |
-| 關閉所選自適應表單元件的「屬性」瀏覽器 | Ctrl+Alt+W | 命令+ Alt+W |
-| 在「屬性」瀏覽器中保存所選自適應表單元件的更改 | Ctrl+S | 命令+S |
-| 編輯所選自適應表單元件的規則 | Ctrl+Alt+Enter | Command + Alt + Return |
-| 在「預覽」(Preview)和當前選定模式(例如，「編輯」(Edit)、「腳手架」(Extabler)等)之間切換 | Ctrl+Shift+M | &amp;Ctrl+Shift+Mast; |
-| 撤消上次更改 | Ctrl+Z鍵 | &amp;Ctrl+Z; |
-| 重做上次更改 | Ctrl+Y | &amp;Ctrl+Y; |
-| 選擇多個元件 | 按住Shift鍵並按一下 | 按住Shift鍵並按一下 |
-| 複製所選元件 | Ctrl-C鍵 | &amp;Ctrl-Cast; |
-| 剪切所選元件。 剪切元件在貼上到新位置之前不會消失。 | Ctrl-X鍵 | &amp;Ctrl-Xast; |
-| 貼上元件 | Ctrl+V鍵 | Ctrl+V鍵 |
-| 刪除選定元件 | Ctrl+Del | &amp;Ctrl+Del/ast; |
-| 刪除選定元件 | Ctrl+Backspace鍵 | &amp;Ctrl+Backspace; |
-| 在預覽模式下使用RT元件時使文本加粗 | Ctrl+B | &amp;Ctrl+B; |
-| 在預覽模式下使用RTE元件時使文本斜體 | Ctrl+I | &amp;Ctrl+快速； |
-| 在預覽模式下使用RT元件時使文本加粗 | Ctrl+U鍵 | &amp;Ctrl+Uast; |
+| 開啟所選最適化表單元件的屬性瀏覽器 | Alt+Enter | Alt+Return |
+| 關閉所選最適化表單元件的屬性瀏覽器 | Ctrl+Alt+W | Command+Alt+W |
+| 在屬性瀏覽器中儲存所選最適化表單元件的變更 | Ctrl+S | Command+S |
+| 編輯所選最適化表單元件的規則 | Ctrl+Alt+Enter | Command+Alt+Return |
+| 在預覽和目前選取的模式（例如，編輯、支架等）之間切換 | Ctrl+Shift+M | Ctrl+Shift+M&amp;ast； |
+| 復原上次變更 | Ctrl+Z | Ctrl+Z&amp;ast； |
+| 重做最後一次變更 | Ctrl+Y | Ctrl+Y&amp;ast； |
+| 選取多個元件 | Shift+按一下 | Shift+按一下 |
+| 複製選取的元件 | Ctrl-C | Ctrl-C&amp;ast； |
+| 剪下所選的元件。 將切削元件貼到新位置後，切削元件才會消失。 | Ctrl-X | Ctrl-X&amp;ast； |
+| 貼上元件 | Ctrl+V | Ctrl+V |
+| 刪除選取的元件 | Ctrl+Del | Ctrl+Del&amp;ast； |
+| 刪除選取的元件 | Ctrl+退格鍵 | Ctrl+退格鍵&amp;ast； |
+| 在預覽模式下使用RTF編輯器元件時讓文字變為粗體 | Ctrl+B | Ctrl+B&amp;ast； |
+| 在預覽模式下使用RTF編輯器元件時使文字變為斜體 | Ctrl+I | Ctrl+完成(&amp;A)； |
+| 在預覽模式下使用RTF編輯器元件時讓文字變為粗體 | Ctrl+U | Ctrl+向上鍵(&amp;A)； |
 
 >[!NOTE]
 >
->標有「&amp;ast；」的快捷方式在MacOS上同時使用Ctrl和Command鍵。
+>標示為&#39;&amp;ast；&#39;的捷徑可與Mac OS上的Ctrl和Command鍵搭配使用。
 
 >[!NOTE]
 >
->案頭設備上的多選：
+>在桌上型電腦裝置上進行多選：
 >
->* 窗口：按住Ctrl鍵並按一下所需的元件。
->* Mac:按住Command鍵並按一下所需的元件。
+>* Windows：按住Ctrl鍵並按一下必要元件。
+>* Mac作業系統： Command+按一下必要元件。
 >
 
 
 ## 主題編輯器  {#themeeditor}
 
-| **動作** | **Windows上的快捷方式** | **MacOS的快捷方式** |
+| **動作** | **Windows上的捷徑** | **Mac作業系統上的捷徑** |
 |---|---|---|
-| 開啟主題中選定元件的屬性瀏覽器 | Alt+Enter鍵 | Alt+返回 |
-| 關閉主題中選定元件的屬性瀏覽器 | Ctrl+Alt+W | 命令+ Alt+W |
-| 撤消上次更改 | Ctrl+Z鍵 | &amp;Ctrl+Z; |
-| 重做上次更改 | Ctrl+Y | &amp;Ctrl+Y; |
-| 在「屬性」瀏覽器中保存主題中選定元件的更改 | Ctrl+S | &amp;Ctrl+Sast; |
+| 開啟主題中所選元件的屬性瀏覽器 | Alt+Enter | Alt+Return |
+| 關閉主題中所選元件的屬性瀏覽器 | Ctrl+Alt+W | Command+Alt+W |
+| 復原上次變更 | Ctrl+Z | Ctrl+Z&amp;ast； |
+| 重做最後一次變更 | Ctrl+Y | Ctrl+Y&amp;ast； |
+| 在「屬性」瀏覽器中，儲存主題中選定元件的變更 | Ctrl+S | Ctrl+S&amp;ast； |
 
 >[!NOTE]
 >
->標有「&amp;ast；」的快捷方式在MacOS上同時使用Ctrl和Command鍵。
+>標示為&#39;&amp;ast；&#39;的捷徑可與Mac OS上的Ctrl和Command鍵搭配使用。
 
 ## 內容瀏覽器  {#contentbrowser}
 
-| **動作** | **Windows上的快捷方式** | **MacOS的快捷方式** |
+| **動作** | **Windows上的捷徑** | **Mac作業系統上的捷徑** |
 |---|---|---|
-| 聚焦時展開內容瀏覽器的「表單對象」樹中的所有按鈕 | 按Ctrl+A鍵選擇所有按鈕，然後按右箭頭鍵展開 | 按Command+A鍵以選擇所有按鈕，然後按右箭頭展開 |
-| 聚焦時，折疊內容瀏覽器的「表單對象」樹中的所有收縮符 | 按Ctrl+A鍵選擇所有按鈕，然後按左箭頭鍵折疊 | 按Command+A鍵選擇所有按鈕，然後按左箭頭鍵折疊 |
-| 在「表單對象」樹中展開所選折疊面板 | 右箭頭 | 右箭頭 |
-| 在「表單對象」樹中折疊選定的折疊面板 | 左箭頭 | 左箭頭 |
-| 在「Forms對象」樹中選擇下一項 | 向下箭頭 | 向下箭頭 |
-| 在「Forms對象」樹中選擇上一個項 | 上箭頭 | 上箭頭 |
+| 觀看中時展開內容瀏覽器的「表單物件」樹狀結構中的所有摺疊式功能表 | 按Ctrl+A可選取所有摺疊式功能表，接著按向右鍵可展開 | Command+A可選取所有摺疊式功能表，接著按向右鍵可展開 |
+| 觀看中時，收合內容瀏覽器的「表單物件」樹狀結構中的所有摺疊式功能表 | 按Ctrl+A以選取所有摺疊式功能表，接著按向左鍵以摺疊 | Command+A可選取所有摺疊式功能表，接著向左鍵可收合 |
+| 展開「表單物件」樹狀結構中所選的摺疊式功能表 | 向右鍵 | 向右鍵 |
+| 摺疊表單物件樹狀結構中所選的摺疊式功能表 | 向左鍵 | 向左鍵 |
+| 在「Forms物件」樹狀結構中選取下一個專案 | 向下鍵 | 向下鍵 |
+| 選取Forms物件樹狀結構中的上一個專案 | 向上鍵 | 向上鍵 |
 
-[1] 將Ctrl +右箭頭替換為Windows ，將Command +右箭頭替換為MacOS。\
-[2] 將Ctrl +左箭頭替換為Windows ，將Command +左箭頭替換為MacOS。
+[1] 在Windows中取代Ctrl +向右鍵，在Mac作業系統中取代Command +向右鍵。\
+[2] 在Windows中取代Ctrl +向左鍵，在Mac作業系統中取代Command +向左鍵。
 
 ## 通信管理 {#correspondence-management}
 
-本部分列出了在「通信管理」文本編輯器中可以使用的各種鍵盤和輔助工具快捷方式。 您可以在以下情況下使用這些快捷方式：
+本節列出您可以在「通訊管理」文字編輯器中使用的各種鍵盤和協助工具快速鍵。 您可以在下列情況下使用這些捷徑：
 
-* 建立或編輯 [文本](texts-interactive-communications.md) 資產
-* 點擊相關的「編輯」表徵圖後編輯文本模組( ![編輯文本模組](assets/edittextmodule.png)) [建立對應](/help/forms/using/create-correspondence.md)。
+* 建立或編輯 [文字](texts-interactive-communications.md) 資產
+* 點選相關的「編輯」圖示後編輯文字模組( ![edittextmodule](assets/edittextmodule.png))條件 [建立通訊](/help/forms/using/create-correspondence.md).
 
-### 文本選擇和移動游標 {#text-selection-and-moving-the-cursor-around}
+### 文字選取範圍及移動游標在周圍 {#text-selection-and-moving-the-cursor-around}
 
 <table> 
  <tbody>
   <tr>
    <th><strong>操作</strong></th> 
-   <th><strong>Windows上的快捷方式</strong></th> 
-   <th><strong>MacOS的快捷方式</strong><br /> </th> 
+   <th><strong>Windows上的捷徑</strong></th> 
+   <th><strong>Mac作業系統上的捷徑</strong><br /> </th> 
   </tr>
   <tr>
-   <td><p>選擇當前字</p> </td> 
-   <td><p>Ctrl+Shift+右箭頭</p> </td> 
-   <td>Command + Shift +右箭頭</td> 
+   <td><p>選取目前單字</p> </td> 
+   <td><p>Ctrl+Shift+向右鍵</p> </td> 
+   <td>Command+Shift+向右鍵</td> 
   </tr>
   <tr>
-   <td><p>選擇上一個字</p> </td> 
+   <td><p>選取上一個單字</p> </td> 
    <td><p>Ctrl+Shift+向左鍵</p> </td> 
-   <td>Command + Shift +向左箭頭</td> 
+   <td>Command+Shift+向左鍵</td> 
   </tr>
   <tr>
-   <td><p>將所選內容擴展到段落的開頭</p> </td> 
-   <td><p>Ctrl+Shift+向上箭頭</p> </td> 
-   <td>Command + Shift +向上箭頭</td> 
+   <td><p>將選取範圍延伸至段落開頭</p> </td> 
+   <td><p>Ctrl+Shift+向上鍵</p> </td> 
+   <td>Command+Shift+向上鍵</td> 
   </tr>
   <tr>
-   <td><p>將所選內容擴展到段落末尾</p> </td> 
-   <td><p>Ctrl+Shift+向下箭頭</p> </td> 
-   <td>Command + Shift +向下箭頭</td> 
+   <td><p>將選取範圍延伸至段落結尾</p> </td> 
+   <td><p>Ctrl+Shift+向下鍵</p> </td> 
+   <td>Command+Shift+向下鍵</td> 
   </tr>
   <tr>
-   <td><p>選擇文本編輯器中的所有文本</p> </td> 
+   <td><p>選取文字編輯器中的所有文字</p> </td> 
    <td><p>Ctrl+A</p> </td> 
-   <td>命令+A</td> 
+   <td>Command+A</td> 
   </tr>
   <tr>
-   <td><p>將游標移到下一個單詞的開頭</p> </td> 
-   <td><p>Ctrl+右箭頭</p> </td> 
-   <td>Option +向右箭頭 <em><sup>[1]</sup></em></td> 
+   <td><p>將游標移到下一個字的開頭</p> </td> 
+   <td><p>Ctrl+向右鍵</p> </td> 
+   <td>Option+向右鍵 <em><sup>[1]</sup></em></td> 
   </tr>
   <tr>
-   <td><p>將游標移到上一個詞的開頭</p> </td> 
-   <td><p>Ctrl+左箭頭 </p> </td> 
-   <td>Option +向左箭頭</td> 
+   <td><p>將游標移到上一個字的開頭</p> </td> 
+   <td><p>Ctrl+向左鍵 </p> </td> 
+   <td>Option+向左鍵</td> 
   </tr>
   <tr>
-   <td><p>將游標移到下一段。</p> </td> 
-   <td><p>Ctrl+向下箭頭</p> </td> 
-   <td>Option +向下箭頭</td> 
+   <td><p>將游標移至下一個段落。</p> </td> 
+   <td><p>Ctrl+向下鍵</p> </td> 
+   <td>Option+向下鍵</td> 
   </tr>
   <tr>
-   <td><p>將游標移到上一段。</p> </td> 
-   <td><p>Ctrl+向上箭頭</p> </td> 
-   <td>Option +向上箭頭</td> 
+   <td><p>將游標移到上一個段落。</p> </td> 
+   <td><p>Ctrl+向上鍵</p> </td> 
+   <td>Option+向上鍵</td> 
   </tr>
   <tr>
-   <td><p>在後方逐個選擇文本</p> </td> 
-   <td><p>Shift+左箭頭</p> </td> 
-   <td>Shift+左箭頭</td> 
+   <td><p>往後方向依一個字元選取文字</p> </td> 
+   <td><p>Shift+向左鍵</p> </td> 
+   <td>Shift+向左鍵</td> 
   </tr>
   <tr>
-   <td><p>沿正向逐個選擇文本</p> </td> 
-   <td><p>Shift+右箭頭</p> </td> 
-   <td>Shift+右箭頭</td> 
+   <td><p>往前一個字元一個字元選取文字</p> </td> 
+   <td><p>Shift+向右鍵</p> </td> 
+   <td>Shift+向右鍵</td> 
   </tr>
   <tr>
-   <td><p>在後方逐個選擇文本</p> </td> 
-   <td><p>Shift+Up鍵</p> </td> 
-   <td>Shift+Up鍵</td> 
+   <td><p>在後方逐一選取文字</p> </td> 
+   <td><p>Shift+向上鍵</p> </td> 
+   <td>Shift+向上鍵</td> 
   </tr>
   <tr>
-   <td><p>沿前方逐個選擇文本</p> </td> 
-   <td><p>Shift+Down鍵</p> </td> 
-   <td>Shift+Down鍵</td> 
+   <td><p>在向前方向逐段選取文字</p> </td> 
+   <td><p>Shift+向下鍵</p> </td> 
+   <td>Shift+向下鍵</td> 
   </tr>
   <tr>
-   <td><p>選擇文本，直到從當前頁面位置開始</p> </td> 
-   <td><p>Shift+Page Up</p> </td> 
-   <td>Fn+Shift+向上箭頭</td> 
+   <td><p>選取文字，直到從頁面的目前位置開始</p> </td> 
+   <td><p>Shift+向上翻頁</p> </td> 
+   <td>Fn+Shift+向上鍵</td> 
   </tr>
   <tr>
-   <td><p>從頁面的結束位置選擇文本直到結束</p> </td> 
-   <td><p>Shift+Page向下</p> </td> 
-   <td>Fn+Shift+向下箭頭</td> 
+   <td><p>選取文字，直到從頁面結束位置結束</p> </td> 
+   <td><p>Shift+Page Down</p> </td> 
+   <td>Fn+Shift+向下鍵</td> 
   </tr>
   <tr>
-   <td><p>將游標移到頁尾</p> </td> 
-   <td><p>向下頁</p> </td> 
-   <td>Fn+下箭頭</td> 
+   <td><p>將游標移至頁面結尾</p> </td> 
+   <td><p>向下翻頁</p> </td> 
+   <td>Fn+向下鍵</td> 
   </tr>
   <tr>
-   <td><p>將游標移到頁面的開頭</p> </td> 
-   <td><p>上頁</p> </td> 
-   <td>Fn+上箭頭</td> 
+   <td><p>將游標移至頁面開頭</p> </td> 
+   <td><p>向上翻頁</p> </td> 
+   <td>Fn+向上鍵</td> 
   </tr>
   <tr>
-   <td><p>從當前位置選擇文本到結束（模組）</p> </td> 
-   <td><p>Shift+Ctrl+結束</p> </td> 
-   <td>Command + Shift +向下箭頭<br /> </td> 
+   <td><p>選取目前位置到（模組）結尾的文字</p> </td> 
+   <td><p>Shift+Ctrl+End</p> </td> 
+   <td>Command+Shift+向下鍵<br /> </td> 
   </tr>
   <tr>
-   <td><p>從當前位置選擇文本到開始（模組）</p> </td> 
-   <td><p>Shift+Ctrl+首頁</p> </td> 
-   <td>Command + Shift +向上箭頭</td> 
+   <td><p>從目前位置選取文字到（模組的）開頭</p> </td> 
+   <td><p>Shift+Ctrl+Home</p> </td> 
+   <td>Command+Shift+向上鍵</td> 
   </tr>
   <tr>
-   <td><p>將游標移動到起始位置</p> </td> 
-   <td><p>Ctrl+首頁</p> </td> 
-   <td>Command +向上箭頭</td> 
+   <td><p>將游標移至起始位置</p> </td> 
+   <td><p>Ctrl+Home</p> </td> 
+   <td>Command+向上鍵</td> 
   </tr>
   <tr>
-   <td><p>將游標移動到結束位置</p> </td> 
-   <td><p>Ctrl+結束</p> </td> 
-   <td>Command +向下箭頭</td> 
+   <td><p>將游標移至結束位置</p> </td> 
+   <td><p>Ctrl+End</p> </td> 
+   <td>Command+向下鍵</td> 
   </tr>
  </tbody>
 </table>
 
 
-### 文本對齊 {#text-alignment}
+### 文字對齊方式 {#text-alignment}
 
 <table> 
  <tbody>
   <tr>
    <th><p><strong>操作</strong></p> </th> 
-   <th><p><strong>Windows上的快捷方式<br /> </strong></p> </th> 
-   <th><strong>MacOS的快捷方式</strong></th> 
+   <th><p><strong>Windows上的捷徑<br /> </strong></p> </th> 
+   <th><strong>Mac作業系統上的捷徑</strong></th> 
   </tr>
   <tr>
-   <td><p>使段落中心對齊</p> </td> 
+   <td><p>將段落置中對齊</p> </td> 
    <td><p>Ctrl+E</p> </td> 
    <td>Ctrl+Command+E</td> 
   </tr>
   <tr>
-   <td><p>使段落左對齊</p> </td> 
+   <td><p>讓段落靠左對齊</p> </td> 
    <td><p>Ctrl+L</p> </td> 
    <td>Ctrl+Command+L</td> 
   </tr>
   <tr>
-   <td><p>使段落右對齊</p> </td> 
+   <td><p>將段落靠右對齊</p> </td> 
    <td><p>Ctrl+R</p> </td> 
    <td>Ctrl+Command+R</td> 
   </tr>
   <tr>
-   <td><p>使段落合理</p> </td> 
-   <td><p>Ctrl+J鍵</p> </td> 
+   <td><p>使段落左右對齊</p> </td> 
+   <td><p>Ctrl+J</p> </td> 
    <td>Ctrl+Command+J</td> 
   </tr>
  </tbody>
 </table>
 
-### 撤消和重做操作 {#undo-and-redo-actions}
+### 還原和重做動作 {#undo-and-redo-actions}
 
 <table> 
  <tbody>
   <tr>
    <th><strong>操作</strong></th> 
-   <th><strong>Windows上的快捷方式 </strong></th> 
-   <th><strong>MacOS的快捷方式</strong><br /> </th> 
+   <th><strong>Windows上的捷徑 </strong></th> 
+   <th><strong>Mac作業系統上的捷徑</strong><br /> </th> 
   </tr>
   <tr>
    <td><p>復原 </p> </td> 
-   <td><p>Ctrl+Z鍵</p> </td> 
-   <td>Command + Z / Ctrl + Command + Z</td> 
+   <td><p>Ctrl+Z</p> </td> 
+   <td>Command+Z / Ctrl+Command+Z</td> 
   </tr>
   <tr>
    <td><p>重做 </p> </td> 
    <td><p>Ctrl+Y</p> </td> 
-   <td>命令+Y</td> 
+   <td>Command+Y</td> 
   </tr>
  </tbody>
 </table>
 
-### 更改字型大小 {#changing-font-size}
+### 變更字型大小 {#changing-font-size}
 
 <table> 
  <tbody>
   <tr>
    <th><p><strong>操作</strong></p> </th> 
-   <th><p><strong>Windows上的快捷方式</strong></p> </th> 
-   <th><strong>MacOS的快捷方式</strong></th> 
+   <th><p><strong>Windows上的捷徑</strong></p> </th> 
+   <th><strong>Mac作業系統上的捷徑</strong></th> 
   </tr>
   <tr>
    <td><p>增加字型大小 </p> </td> 
@@ -277,58 +277,58 @@ ht-degree: 1%
    <td>Ctrl+Shift+&gt;</td> 
   </tr>
   <tr>
-   <td><p>減小字型大小 </p> </td> 
+   <td><p>縮小字型大小 </p> </td> 
    <td><p>Ctrl+Shift+&lt;</p> </td> 
    <td>Ctrl+Shift+&lt;</td> 
   </tr>
  </tbody>
 </table>
 
-### 刪除單詞 {#deleting-a-word}
+### 刪除單字 {#deleting-a-word}
 
 <table> 
  <tbody>
   <tr>
    <th><strong>操作</strong></th> 
-   <th><strong>Windows上的快捷方式</strong></th> 
-   <th><strong>MacOS的快捷方式</strong></th> 
+   <th><strong>Windows上的捷徑</strong></th> 
+   <th><strong>Mac作業系統上的捷徑</strong></th> 
   </tr>
   <tr>
-   <td><p>刪除游標左側的字</p> </td> 
-   <td><p>Ctrl+Backspace鍵</p> </td> 
-   <td>選項+刪除</td> 
+   <td><p>刪除游標左側的文字</p> </td> 
+   <td><p>Ctrl+退格鍵</p> </td> 
+   <td>Option+Delete</td> 
   </tr>
   <tr>
-   <td><p>刪除游標右側的字</p> </td> 
-   <td><p>Ctrl+刪除</p> </td> 
-   <td>Ctrl+刪除</td> 
+   <td><p>刪除游標右側的文字</p> </td> 
+   <td><p>Ctrl+Delete</p> </td> 
+   <td>Ctrl+Delete</td> 
   </tr>
  </tbody>
 </table>
 
-### 複製和貼上 {#copy-and-paste}
+### 複製並貼上 {#copy-and-paste}
 
 <table> 
  <tbody>
   <tr>
    <th><strong>操作</strong></th> 
-   <th><strong>Windows上的快捷方式<br /> </strong></th> 
-   <th><strong>MacOS的快捷方式</strong></th> 
+   <th><strong>Windows上的捷徑<br /> </strong></th> 
+   <th><strong>Mac作業系統上的捷徑</strong></th> 
   </tr>
   <tr>
-   <td><p>貼上文本 </p> </td> 
-   <td><p>Ctrl+V/Shift+插入</p> </td> 
-   <td>命令+V</td> 
+   <td><p>貼上文字 </p> </td> 
+   <td><p>Ctrl+V / Shift +插入</p> </td> 
+   <td>Command+V</td> 
   </tr>
   <tr>
-   <td><p>剪切所選文本</p> </td> 
+   <td><p>剪下選取的文字</p> </td> 
    <td><p>Ctrl+X</p> </td> 
-   <td>命令+X<br /> </td> 
+   <td>Command+X<br /> </td> 
   </tr>
   <tr>
-   <td><p>複製所選文本</p> </td> 
+   <td><p>複製選取的文字</p> </td> 
    <td><p>Ctrl+C</p> </td> 
-   <td>命令+C<br /> </td> 
+   <td>Command+C<br /> </td> 
   </tr>
  </tbody>
 </table>
@@ -339,23 +339,23 @@ ht-degree: 1%
  <tbody>
   <tr>
    <th><strong>操作</strong></th> 
-   <th><strong>Windows上的快捷方式</strong></th> 
-   <th><strong>MacOS的快捷方式</strong></th> 
+   <th><strong>Windows上的捷徑</strong></th> 
+   <th><strong>Mac作業系統上的捷徑</strong></th> 
   </tr>
   <tr>
-   <td><p>使字母加粗</p> </td> 
+   <td><p>將字母設為粗體</p> </td> 
    <td><p>Ctrl+Alt+B / Ctrl+B</p> </td> 
-   <td>命令+B</td> 
+   <td>Command+B</td> 
   </tr>
   <tr>
-   <td><p>使字母傾斜</p> </td> 
+   <td><p>將字母變為斜體</p> </td> 
    <td><p>Ctrl+Alt+I / Ctrl+I </p> </td> 
-   <td>命令+I</td> 
+   <td>Command+I</td> 
   </tr>
   <tr>
-   <td><p>下划線字母 </p> </td> 
+   <td><p>字母加底線 </p> </td> 
    <td><p>Ctrl+Alt+U / Ctrl+U</p> </td> 
-   <td>命令+U</td> 
+   <td>Command+U</td> 
   </tr>
  </tbody>
 </table>

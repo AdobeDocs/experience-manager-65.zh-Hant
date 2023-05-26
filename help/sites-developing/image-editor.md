@@ -1,6 +1,6 @@
 ---
 title: 影像編輯器
-description: 影像編輯器是其核心部AEM分，可供元件使用，以便於內容作者對影像的操作。
+description: 影像編輯器是AEM的一項核心功能，元件可使用它來協助內容作者操作影像。
 uuid: de6ac71b-380a-4b67-b697-ac34a79a9cc4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,21 +17,21 @@ ht-degree: 8%
 
 # 影像編輯器{#image-editor}
 
-影像編輯器是其核心部AEM分，可供元件使用，以便於內容作者對影像的操作。
+影像編輯器是AEM的一項核心功能，元件可使用它來協助內容作者操作影像。
 
 >[!CAUTION]
 >
->要使用本文中描述的影像編輯器的功能， [功能包24267](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/cq-6.4.0-featurepack-24267) 必須安裝。
+>若要使用本文所述影像編輯器的功能， [feature pack 24267](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/cq-6.4.0-featurepack-24267) 必須安裝。
 
-## 影像映射的相對單位 {#relative-units-for-image-map}
+## 影像地圖的相對單位 {#relative-units-for-image-map}
 
-影像編輯器將影像映射區域保留為絕對和相對單位。 當提供相對單元作為資料屬性用於在響應影像元件中動態調整客戶端上的影像映射（相對於影像大小）的大小時，相對單元是有用的。
+「影像編輯器」會將影像地圖區域以絕對和相對單位持續儲存。 當提供相對單位作為資料屬性以動態調整回應式影像元件中使用者端影像地圖（相對於影像大小）的大小時，相對單位會很有用。
 
 ### imageMap屬性 {#imagemap-property}
 
-將影像映射坐標保持為JCR `imageMap` 屬性。 它具有以下格式。
+影像地圖座標會持續儲存至JCR做為 `imageMap` 屬性。 其格式如下。
 
-該屬性按如下方式儲存地圖區域：
+屬性會將地圖區域儲存如下：
 
 `[area1][area2][...]`
 
@@ -44,23 +44,23 @@ ht-degree: 8%
 `[rect(0,0,10,10)"https://www.adobe.com"|"_self"|"alt"|(0,0,0.8,0.8)]`
 `[circle(10,10,10)"https://www.adobe.com"|"_self"|"alt"|(0.8,0.8,0.8)]`
 
-## 支援SVG映像 {#support-for-svg-images}
+## 支援SVG影像 {#support-for-svg-images}
 
 影像編輯器支援可縮放向量圖形(SVG)。
 
-* 支援從DAM拖放SVG資產和從本地檔案系統上載SVG檔案。
+* 支援從DAM拖放SVG資產以及從本機檔案系統上傳SVG檔案。
 
-## 按MIME類型啟用插件 {#enabling-plugins-by-mime-type}
+## 依MIME型別啟用外掛程式 {#enabling-plugins-by-mime-type}
 
-在某些情況下，由於在伺服器端處理中缺乏支援，某些MIME類型的創作操作必須受到限制。 例如，可能不允許編輯SVG影像。
+在某些情況下，由於伺服器端處理缺乏支援，因此必須限制特定MIME型別的編寫動作。 例如，可能不允許編輯SVG影像。
 
-通過設定MIME類型，可以有選擇地啟用影像編輯器中的插件 `supportedMimeTypes` 單個插件的配置節點上的屬性。
+MIME型別可以設定影像編輯器中的外掛程式，選擇性地啟用 `supportedMimeTypes` 屬性（在個別外掛程式的設定節點上）。
 
 ### 範例 {#example}
 
-例如，我們假設只應允許GIF、JPEG、PNG、WEBP和TIFF影像具有裁剪能力。
+例如，我們假設僅允許裁切功能用於GIF、JPEG、PNG、WEBP和TIFF影像。
 
-的 `supportedMimeTypes` 然後，必須將屬性設定為插件配置節點上允許的MIME類型的字串 `cq:editConfig` 影像元件的節點。
+此 `supportedMimeTypes` 然後，屬性必須設定為外掛程式之設定節點上允許的MIME型別字串， `cq:editConfig` 影像元件的節點。
 
 `/apps/core/wcm/components/image/v2/image/cq:editConfig`
 

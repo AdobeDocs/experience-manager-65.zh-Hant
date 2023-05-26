@@ -1,6 +1,6 @@
 ---
-title: 如何使用Apache AEM Maven生成項目
-description: 本文檔介紹如何基於AEMApache Maven設定項目
+title: 如何使用Apache Maven建置AEM專案
+description: 本檔案說明如何根據Apache Maven設定AEM專案
 exl-id: 451913bf-bb1e-4444-aee5-968ac30b5c9d
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
@@ -9,16 +9,16 @@ ht-degree: 10%
 
 ---
 
-# 如何使用Apache AEM Maven生成項目 {#how-to-build-aem-projects-using-apache-maven}
+# 如何使用Apache Maven建置AEM專案 {#how-to-build-aem-projects-using-apache-maven}
 
-AEM6.5遵循最新的包管理和項目結構最佳實踐，這AEM些實踐由最新的Project Archetype實施，適用於內部和AMS實施。
+AEM 6.5遵循套件管理和專案結構的最新最佳做法，這些最佳做法由適用於內部部署和AMS實施的最新AEM專案原型實施。
 
 >[!TIP]
 >
->有關詳細資訊，請參閱：
+>如需詳細資訊，請參閱：
 >
->* 的 [項AEM目結構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 在as a Cloud Service文AEM獻中介紹如何構建現代AEM項目。
->* 的 [項AEM目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant) 說明如何使用原型啟AEM動新項目。
->* 的 [Adobe內容包Maven插件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) 有關如何AEM部署應用程式的as a Cloud Service文AEM檔中。
+>* 此 [AEM專案結構](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) AEMas a Cloud Service檔案中的文章，說明如何建構新式AEM專案。
+>* 此 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant) 有關如何使用原型開始新AEM專案的檔案。
+>* 此 [Adobe內容套件Maven外掛程式](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) AEMas a Cloud Service檔案中的文章，說明如何部署AEM應用程式。
 >
->這三份檔案都適AEM用於6.5。
+>所有三份檔案皆適用於AEM 6.5。

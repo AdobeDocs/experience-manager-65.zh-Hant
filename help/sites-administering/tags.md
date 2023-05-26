@@ -1,7 +1,7 @@
 ---
 title: 管理標籤
 seo-title: Administering Tags
-description: 瞭解如何管理中的標AEM記。
+description: 瞭解如何在AEM中管理標籤。
 seo-description: Learn how to administer Tags in AEM.
 uuid: 77e1280a-feea-4edd-94b6-4fb825566c42
 contentOwner: Chiradeep Majumdar
@@ -19,89 +19,89 @@ ht-degree: 2%
 
 # 管理標籤 {#administering-tags}
 
-標籤是對網站內的內容進行分類的一種快速而簡便的方法。 它們可以被視為關鍵字或標籤（元資料），允許在搜索結果中更快地找到內容。
+標籤是分類網站內容的一種快速輕鬆的方法。 它們可視為關鍵字或標籤（中繼資料），以便在搜尋結果中更快速地找到內容。
 
-在Adobe Experience ManagerAEM()中，標籤可以是
+在Adobe Experience Manager (AEM)中，標籤可以是
 
-* 頁面的內容節點(請參見 [使用標籤](/help/sites-authoring/tags.md))
+* 頁面的內容節點(請參閱 [使用標籤](/help/sites-authoring/tags.md))
 
-* 資產的元資料節點(請參見 [管理數字資產的元資料](/help/assets/metadata.md))
+* 資產的中繼資料節點(請參閱 [管理數位資產的中繼資料](/help/assets/metadata.md))
 
-除頁面和資產外，標籤還用於AEM Communities功能
+除了頁面和資產之外，標籤也用於AEM Communities功能
 
-* 用戶生成的內容 [標籤UGC)](/help/communities/tag-ugc.md)
+* 使用者產生的內容(請參閱 [標籤UGC)](/help/communities/tag-ugc.md)
 
-* 支援資源(請參見 [標籤支援資源](/help/communities/functions.md#catalog-function))
+* 啟用資源(請參閱 [標籤啟用資源](/help/communities/functions.md#catalog-function))
 
 ## 標籤功能 {#tag-features}
 
-標籤的某些功能AEM包括：
+AEM中的部分標籤功能包括：
 
-* 標籤可以分為不同的命名空間。 這樣的層次結構允許構建分類。 這些分類學是全球性的AEM。
-* 新建立標籤的主要限制是它們在特定命名空間中必須唯一。
-* 標籤的標題不應包括標籤路徑分隔字元（如果存在，也不會顯示這些字元）
+* 標籤可以分組到不同的名稱空間中。 此類階層允許建立分類。 這些分類在整個AEM都是全域的。
+* 新建立標籤的主要限制是在特定名稱空間中必須是唯一的。
+* 標籤的標題不應包含標籤路徑分隔字元（如果有的話，也不會顯示）
 
-   * 冒號 `:`  — 限定命名空間標籤
-   * 正斜線 `/`  — 限制子標籤
+   * 冒號 `:`  — 分隔名稱空間標籤
+   * 正斜線 `/`  — 分隔子標籤
 
-* 標籤可由作者和站點訪問者應用。 無論其建立者是誰，所有形式的標籤都可供選擇，無論是在分配給頁面時還是在搜索時。
-* 「標籤 — 管理員」組的成員和具有修改權限的成員可以建立標籤並修改其分類 `/content/cq:tags`。
+* 作者和網站訪客可套用標籤。 無論其建立者為何，在指派至頁面或搜尋時，所有形式的標籤都可供選取。
+* 「tag-administrators」群組的成員和擁有修改許可權的成員可以建立標籤並修改其分類。 `/content/cq:tags`.
 
    * 包含子標籤的標籤稱為容器標籤
-   * 不是容器標籤的標籤稱為葉標籤
-   * 標籤命名空間是葉標籤或容器標籤
+   * 非容器標籤的標籤稱為葉標籤
+   * 標籤名稱空間是葉標籤或容器標籤
 
-* 標籤由 [搜索元件](https://helpx.adobe.com/experience-manager/core-components/using/quick-search.html) 以便查找內容。
-* 標籤由 [預偏器元件](https://helpx.adobe.com/experience-manager/core-components/using/teaser.html)，它監視用戶的標籤雲以提供目標內容。
-* 如果標籤是內容的一個重要方面
+* 標籤由 [搜尋元件](https://helpx.adobe.com/experience-manager/core-components/using/quick-search.html) 以方便尋找內容。
+* 標籤由 [Teaser元件](https://helpx.adobe.com/experience-manager/core-components/using/teaser.html)，可監控使用者的標籤雲以提供目標內容。
+* 如果標籤是內容的重要方面
 
-   * 確保將標籤與使用它們的頁面打包
-   * 確保 [標籤權限](#setting-tag-permissions) 啟用讀取訪問
+   * 請務必將標籤與使用這些標籤的頁面一起封裝
+   * 確定 [標籤許可權](#setting-tag-permissions) 啟用讀取存取權
 
-## 標籤控制台 {#tagging-console}
+## 標籤主控台 {#tagging-console}
 
-「標籤」控制台用於建立和管理標籤及其分類。 一個目標是避免與基本相同的事物有許多類似的標籤：例如，頁面和頁面，鞋和鞋。
+「標籤」主控台可用來建立和管理標籤及其分類。 一個目標是避免有許多與基本相同物件相關的類似標籤：例如，頁面和頁面，或鞋子和鞋子。
 
-通過將標籤分組到命名空間、在建立新標籤之前查看現有標籤的使用情況，以及在不斷開標籤與當前引用內容的連接的情況下重新組織來管理標籤。
+標籤可透過分組到名稱空間、在建立新標籤之前檢視現有標籤的使用情況，以及重新組織而不中斷標籤與目前參照內容的連線來管理。
 
-要訪問「標籤」控制台：
+若要存取「標籤」主控台：
 
-* 作者
-* 以管理權限登錄
-* 從全局導航
+* 於作者
+* 以管理許可權登入
+* 從全域導覽
 
-   * 選擇 **`Tools`**
-   * 選擇 **`General`**
-   * 選擇 **`Tagging`**
+   * 選取 **`Tools`**
+   * 選取 **`General`**
+   * 選取 **`Tagging`**
 
-![managing_tags_usingthetagasministrationconsole](assets/managing_tags_usingthetagasministrationconsolea.png)
+![managing_tags_usingthetagasministionconsole](assets/managing_tags_usingthetagasministrationconsolea.png)
 
-### 建立命名空間 {#creating-a-namespace}
+### 建立名稱空間 {#creating-a-namespace}
 
-要建立新命名空間，請選擇 **`Create Namespace`** 表徵圖
+若要建立新的名稱空間，請選取 **`Create Namespace`** 圖示。
 
-命名空間本身是標籤，不需要包含任何子標籤。 但是，要繼續建立分類， [建立子標籤](#creating-tags)，這又可以是葉標籤或容器標籤。
+名稱空間本身是標籤，不需要包含任何子標籤。 不過，若要繼續建立分類法， [建立子標籤](#creating-tags)，則可能是葉標籤或容器標籤。
 
-![chlimage_1-183](assets/chlimage_1-183a.png) ![建立_tags_andnamespaces](assets/creating_tags_andnamespacesa.png)
+![chlimage_1-183](assets/chlimage_1-183a.png) ![creating_tags_andnamespaces](assets/creating_tags_andnamespacesa.png)
 
 * **標題**
 
-   *（必需）* 命名空間的顯示標題。
+   *（必要）* 名稱空間的顯示標題。
 
 * **名稱**
-   *（可選）* 命名空間的名稱。 如果未指定，則從標題建立有效的節點名稱。 請參閱 [標籤ID](/help/sites-developing/framework.md#tagid)。
+   *（選擇性）* 名稱空間的名稱。 如果未指定，則會從「標題」建立有效的節點名稱。 另請參閱 [標籤ID](/help/sites-developing/framework.md#tagid).
 
 * **說明**
 
-   *（可選）* 命名空間的說明。
+   *（選擇性）* 名稱空間的說明。
 
-輸入所需資訊後
+輸入必要資訊後
 
-* 選擇 **建立**
+* 選取 **建立**
 
-### 標籤操作 {#operations-on-tags}
+### 標籤作業 {#operations-on-tags}
 
-選擇命名空間或其他標籤可使以下操作可用：
+選取名稱空間或其他標籤即可執行下列操作：
 
 * [檢視屬性](#viewing-tag-properties)
 * [引用](#showing-tag-references)
@@ -115,39 +115,39 @@ ht-degree: 2%
 
 ![chlimage_1-184](assets/chlimage_1-184.png)
 
-當瀏覽器窗口的寬度不足以顯示所有表徵圖時，最右邊的表徵圖將在 **`... More`** 表徵圖，當選中時將顯示隱藏操作表徵圖的下拉清單。
+當瀏覽器視窗不夠寬以顯示所有圖示時，最右側的圖示會分組在下 **`... More`** 圖示，選取時會顯示隱藏作業圖示的下拉式清單。
 
 ![chlimage_1-185](assets/chlimage_1-185.png)
 
-### 選擇命名空間標籤 {#selecting-a-namespace-tag}
+### 選取名稱空間標籤 {#selecting-a-namespace-tag}
 
-當首次選中時，如果命名空間不包含任何標籤，則將在右側顯示屬性，否則顯示子標籤。 選定的每個標籤將顯示其包含的標籤或其屬性（如果它沒有子標籤）。
+第一次選取時，如果名稱空間未包含任何標籤，則屬性會顯示在右側，否則會顯示子標籤。 選取的每個標籤都會顯示其所包含的標籤，如果沒有子標籤，則會顯示其屬性。
 
-要為操作選擇標籤，並要進行多選，請僅選擇標題旁的表徵圖。 選擇標題將僅顯示屬性或開啟標籤以顯示其內容。
+若要選取操作標籤，並選取多個專案，請僅選取標題旁的圖示。 選取標題只會顯示屬性或開啟標籤以顯示其內容。
 
 ![chlimage_1-186](assets/chlimage_1-186.png) ![chlimage_1-187](assets/chlimage_1-187.png)
 
-### 查看標籤屬性 {#viewing-tag-properties}
+### 檢視標籤屬性 {#viewing-tag-properties}
 
 ![chlimage_1-188](assets/chlimage_1-188.png)
 
-選擇命名空間或其他標籤時，選擇 **`View Properties`** 表徵圖將顯示與 `name`、上次編輯時間和引用數。 如果已發佈，則顯示上次發佈的時間和發佈者的ID。 此資訊將顯示在標籤列左側的列中。
+選取名稱空間或其他標籤時，選取 **`View Properties`** 圖示可顯示有關以下專案的資訊： `name`、上次編輯時間和參照數。 如果發佈，則會顯示上次發佈的時間以及發佈者的ID。 此資訊將顯示在標籤欄左側的欄中。
 
 ![chlimage_1-189](assets/chlimage_1-189.png)
 
-### 顯示標籤引用 {#showing-tag-references}
+### 顯示標籤參考 {#showing-tag-references}
 
 ![chlimage_1-190](assets/chlimage_1-190.png)
 
-選擇命名空間或其他標籤時，選擇 **引用** 表徵圖將標識已應用標籤的內容。
+選取名稱空間或其他標籤時，選取 **引用** 圖示可識別已套用標籤的內容。
 
-初始顯示是應用的標籤計數。
+初始顯示是套用的標籤計數。
 
 ![chlimage_1-191](assets/chlimage_1-191.png)
 
-通過選擇計數右側的箭頭，將列出參照名稱。
+透過選取計數右側的箭頭，會列出參照名稱。
 
-當懸停在參照上時，參照的路徑將顯示為工具尖。
+將滑鼠懸停在參照上時，參照的路徑會顯示為工具提示。
 
 ![chlimage_1-192](assets/chlimage_1-192.png)
 
@@ -155,32 +155,32 @@ ht-degree: 2%
 
 ![chlimage_1-193](assets/chlimage_1-193.png)
 
-當選擇命名空間或其他標籤時（通過選擇標題旁邊的表徵圖），可通過選擇 **`Create Tag`** 表徵圖
+選取名稱空間或其他標籤時（選取標題旁的圖示），可能會透過選取 **`Create Tag`** 圖示。
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
 * **標題**
-*（必需）*標籤的顯示標題。
+*（必要） *標籤的顯示標題。
 
 * **名稱**
-*（可選）*標籤的名稱。 如果未指定，則從標題建立有效的節點名稱。 請參閱 [標籤ID](/help/sites-developing/framework.md#tagid)。
+*（選用） *標籤的名稱。 如果未指定，則會從「標題」建立有效的節點名稱。 另請參閱 [標籤ID](/help/sites-developing/framework.md#tagid).
 
 * **說明**
-*（可選）*標籤說明。
+*（選用） *標籤的說明。
 
-輸入所需資訊後
+輸入必要資訊後
 
-* 選擇 **建立**
+* 選取 **建立**
 
 ### 編輯標籤 {#editing-tags}
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
-選擇命名空間或其他標籤時，可以通過選擇**來更改標題、說明，並提供標題的本地化`Edit`**表徵圖。
+選取名稱空間或其他標籤時，可以變更標題、說明，並透過選取標**提供標題的當地語系化`Edit`**icon.
 
-編輯後，選擇 **保存**。
+進行編輯後，選取 **儲存**.
 
-有關添加語言翻譯的詳細資訊，請參閱 [管理不同語言中的標籤](#managing-tags-in-different-languages)。
+如需新增語言翻譯的詳細資訊，請參閱以下章節： [管理不同語言的標籤](#managing-tags-in-different-languages).
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
@@ -188,133 +188,133 @@ ht-degree: 2%
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
-選擇命名空間或其他標籤時，選擇 **`Move`** 表徵圖將允許標籤管理員和開發人員通過將標籤移動到新位置或更名來清除分類。 當所選標籤是容器標籤時，移動標籤也會移動所有子標籤。
+選取名稱空間或其他標籤時，選取 **`Move`** 圖示可讓標籤管理員和開發人員將標籤移至新位置或重新命名，以清除分類法。 當選取的標籤為容器標籤時，移動標籤也會移動所有子標籤。
 
 >[!NOTE]
 >
->建議僅允許作者 [編輯](#editing-tags) 標籤 `title`，不移動或更名標籤。
+>建議作者只能 [編輯](#editing-tags) 標籤的 `title`，不移動或重新命名標籤。
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
 * **路徑**
 
-   *（只讀）* 選定標籤的當前路徑。
+   *（唯讀）* 所選標籤的目前路徑。
 
-* **移到**
-瀏覽到要移動標籤的新路徑。
+* **移至**
+瀏覽至移動標籤的新路徑。
 
-* **更名為**
-初始顯示當前 
-`name`標籤。 新 `name`的子菜單。
+* **重新命名為**
+最初顯示目前的 
+`name`標籤的。 新 `name`可以輸入。
 
-* 選擇 **保存**
+* 選取 **儲存**
 
 ### 合併標籤 {#merging-tags}
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 
-當分類具有重複項時，可以使用合併標籤。 當標籤A合併到標籤B中時，標籤A標籤的所有頁面都將用標籤B標籤，並且標籤A不再可供作者使用。
+分類法有重複專案時，可使用合併標籤。 標籤A合併至標籤B時，所有以標籤A標籤的頁面都會以標籤B標籤，而標籤A不再可供作者使用。
 
-選擇命名空間或其他標籤時，選擇 **合併** 表徵圖將開啟一個面板，其中可以選擇要合併到的路徑。
+選取名稱空間或其他標籤時，選取 **合併** 圖示會開啟一個面板，您可在其中選取要合併的路徑。
 
 ![chlimage_1-200](assets/chlimage_1-200.png)
 
 * **路徑**
 
-   *（只讀）* 選定要合併到另一個標籤的標籤的路徑。
+   *（唯讀）* 選取要合併至其他標籤的標籤路徑。
 
-* **合併到**
-瀏覽以選擇要合併到的標籤的路徑。
+* **合併至**
+瀏覽以選取要合併的標籤路徑。
 
 >[!NOTE]
 >
->合併後， **路徑** 最初選定的將（實際上）不再存在。
+>合併後， **路徑** 原本選取的將（實際上）不再存在。
 >
->當被引用的標籤被移動或合併時，該標籤不會物理地刪除，因此可以維護引用。
+>移動或合併參照的標籤時，並不會實際刪除標籤，因此可以保留參照。
 
 ### 發佈標籤 {#publishing-tags}
 
 ![chlimage_1-201](assets/chlimage_1-201.png)
 
-選擇命名空間或其他標籤時，選擇 **發佈** 表徵圖以在發佈環境中激活標籤。 與頁面內容類似，只發佈所選標籤，而不管它是否是容器標籤。
+選取名稱空間或其他標籤時，選取 **發佈** 圖示在發佈環境中啟動標籤。 與頁面內容類似，無論是否為容器標籤，都只會發佈選定的標籤。
 
-要發佈分類（命名空間和子標籤），最佳做法是建立 [包](/help/sites-administering/package-manager.md) 命名空間(請參見 [分類根節點](/help/sites-developing/framework.md#taxonomy-root-node))。 一定要 [應用權限](#setting-tag-permissions) 建立包之前，將其添加到命名空間。
+若要發佈分類法（名稱空間和子標籤），最佳做法是建立 [封裝](/help/sites-administering/package-manager.md) 名稱空間的(請參閱 [分類根節點](/help/sites-developing/framework.md#taxonomy-root-node))。 請確定 [套用許可權](#setting-tag-permissions) 至名稱空間後，才能建立套件。
 
 ### 取消發佈標籤 {#unpublishing-tags}
 
 ![chlimage_1-202](assets/chlimage_1-202.png)
 
-選擇命名空間或其他標籤時，選擇 **取消發佈** 表徵圖將停用作者環境中的標籤並從發佈環境中將其刪除。 與 `Delete`操作，如果所選標籤是容器標籤，則其所有子標籤將在作者環境中停用並從發佈環境中刪除。
+選取名稱空間或其他標籤時，選取 **取消發佈** 圖示會停用作者環境中的標籤，並將其從發佈環境中移除。 類似於 `Delete`作業，如果選取的標籤是容器標籤，則其所有子標籤將在作者環境中停用，並從發佈環境中移除。
 
 ### 刪除標籤 {#deleting-tags}
 
 ![chlimage_1-203](assets/chlimage_1-203.png)
 
-選擇命名空間或其他標籤時，選擇 **刪除** 表徵圖將從作者環境中永久刪除標籤。 如果已發佈標籤，則也會從發佈環境中刪除該標籤。 如果所選標籤是容器標籤，則其所有子標籤也將被刪除。
+選取名稱空間或其他標籤時，選取 **刪除** 圖示會從製作環境中永久移除標籤。 如果標籤已發佈，也會從發佈環境中將其移除。 如果選取的標籤是容器標籤，則會一併移除其所有子標籤。
 
-## 設定標籤權限 {#setting-tag-permissions}
+## 設定標籤許可權 {#setting-tag-permissions}
 
-標籤權限為 [&#39;安全（預設）&#39;](/help/sites-administering/production-ready.md);發佈環境的最佳做法，要求明確允許對標籤具有讀取權限。 基本上，在對作者設定權限後建立標籤命名空間的包，並在所有發佈實例上安裝該包即可完成此操作。
+標籤許可權為 [&#39;安全（預設）&#39;](/help/sites-administering/production-ready.md)；此最佳實務適用於需要明確允許標籤讀取許可權的發佈環境。 基本上，這是透過在作者上設定許可權後建立標籤名稱空間的套件，並在所有發佈執行個體上安裝套件來完成。
 
-* 關於作者實例
+* 在作者執行個體上
 
-   * 以管理權限登錄
-   * 訪問 [安全控制台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)。
+   * 以管理許可權登入
+   * 存取 [安全性主控台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)，
 
-      * 例如，瀏覽http://localhost:4502/useradmin
-   * 在左窗格中，選擇其 [讀取權限](/help/sites-administering/security.md#permissions) 是授予
-   * 在右窗格中，找到**Path **到標籤命名空間
+      * 例如，瀏覽至http://localhost:4502/useradmin
+   * 在左窗格中，選取群組（或使用者） [讀取許可權](/help/sites-administering/security.md#permissions) 即將授予
+   * 在右窗格中，找到**Path **to the Tag Namespace
 
-      * 比如說， `/content/cq:tags/mycommunity`
-   * 選擇 `checkbox`的 **閱讀** 列
-   * 選擇 **保存**
+      * 例如， `/content/cq:tags/mycommunity`
+   * 選取 `checkbox`在 **讀取** 欄
+   * 選取 **儲存**
 
 
 
 ![chlimage_1-204](assets/chlimage_1-204.png)
 
-* 確保所有發佈實例具有相同的權限
+* 確定所有發佈執行個體都具有相同的許可權
 
-   * 一種方法 [建立包](/help/sites-administering/package-manager.md#package-manager) 作者上命名空間的
+   * 方法之一是 [建立套件](/help/sites-administering/package-manager.md#package-manager) 作者上名稱空間的
 
-      * 上 `Advanced` 的 `AC Handling` 選擇 `Overwrite`
-   * 複製包
+      * 於 `Advanced` 標籤，用於 `AC Handling` 選取 `Overwrite`
+   * 復寫套件
 
-      * 選擇 `Replicate` 從包管理器
+      * 選擇 `Replicate` 來自封裝管理員
 
 
-## 管理不同語言中的標籤 {#managing-tags-in-different-languages}
+## 管理不同語言的標籤 {#managing-tags-in-different-languages}
 
-的 `title`標籤的屬性可以翻譯成多種語言。 翻譯後，相應的標籤 `title`可以根據用戶語言或頁面語言顯示。
+此 `title`標籤的屬性可翻譯成多種語言。 翻譯後，適當的標籤 `title`可根據使用者語言或頁面語言顯示。
 
-### 定義多語言標籤標題 {#defining-tag-titles-in-multiple-languages}
+### 定義多種語言的標籤標題 {#defining-tag-titles-in-multiple-languages}
 
-下面介紹如何轉換 `title`標籤 **動物** 從英語到德語和法語。
+以下說明如何翻譯 `title`標籤的 **動物** 從英文譯成德文和法文。
 
-從選擇 **股票攝影** 命名空間並選擇**`Edit`**表徵圖(請參閱 [編輯標籤](#editing-tags) )的正平方根。
+首先，選取「 」底下的「 」標籤 **Stock Photography** 名稱空間並選取**`Edit`**圖示(請參閱 [編輯標籤](#editing-tags) 區段)。
 
-「編輯標籤」面板提供了選擇標籤標題要本地化到的語言的功能。
+「編輯標籤」面板可讓您選擇要將標籤標題當地語系化的語言。
 
-在選擇每種語言時，將出現一個文本輸入框，可在其中輸入已翻譯的標題。
+選取每種語言時，會出現一個文字輸入方塊，可在其中輸入翻譯的標題。
 
-輸入所有翻譯後，選擇 **保存** 的子菜單。
+輸入所有翻譯後，選取 **儲存** 以結束編輯模式。
 
 ![chlimage_1-205](assets/chlimage_1-205.png)
 
-通常，為標籤選擇的語言是從頁面語言（如果可用）中提取的。 當 [ `tag` 構件](/help/sites-developing/building.md#tagging-on-the-client-side) 在其它情況下（例如在窗體中或對話中）使用，標籤語言取決於上下文。
+一般而言，為標籤選擇的語言會從頁面語言取得（如果可用）。 當 [ `tag` Widget](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情況下使用（例如在表單或對話方塊中），標籤語言取決於上下文。
 
-「標籤」控制台不使用頁面語言設定，而是使用用戶語言設定。 在「標籤」控制台中，對於「動物」標籤，在用戶屬性中將語言設定為法語的用戶將顯示「Animaux」。
+「標籤」控制檯並非使用頁面語言設定，而是使用使用者語言設定。 在「標籤」主控台中，若為「Animals」標籤，會針對在其使用者屬性中將語言設定為法文的使用者顯示「Animaux」。
 
-要向對話框添加新語言，請參見 [向「編輯標籤」對話框添加新語言](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog)。
+若要新增語言至對話方塊，請參閱 [新增語言至編輯標籤對話方塊](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog).
 
 >[!NOTE]
 >
->標籤雲和標準頁面元件中的元關鍵字使用本地化標籤 `titles`基於頁面語言（如果可用）。
+>標準頁面元件中的標籤雲和中繼關鍵字會使用當地語系化的標籤 `titles`根據頁面語言（如果可用）。
 
 ## 資源 {#resources}
 
-* [為開發人員添加標籤](/help/sites-developing/tags.md)
+* [為開發人員加上標籤](/help/sites-developing/tags.md)
 
-   有關標籤框架以及在自定義應用程式中擴展和包括標籤的資訊。
+   有關標籤架構以及延伸和包含自訂應用程式中的標籤的資訊。
 
-* [經典UI標籤控制台](/help/sites-administering/classic-console.md)
+* [傳統UI標籤控制檯](/help/sites-administering/classic-console.md)

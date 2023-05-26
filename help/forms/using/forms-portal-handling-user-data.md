@@ -1,7 +1,7 @@
 ---
-title: Forms門戶 |處理用戶資料
+title: Forms入口網站 |處理使用者資料
 seo-title: Forms Portal | Handling user data
-description: Forms門戶 |處理用戶資料
+description: Forms入口網站 |處理使用者資料
 uuid: 2ac2b2a9-b603-489a-86b8-a78b697f130d
 contentOwner: vishgupt
 topic-tags: grdp
@@ -16,107 +16,107 @@ ht-degree: 0%
 
 ---
 
-# Forms門戶 |處理用戶資料 {#forms-portal-handling-user-data}
+# Forms入口網站 |處理使用者資料 {#forms-portal-handling-user-data}
 
-[!DNL AEM Forms] 門戶提供了可用於列出自適應表單、HTML5表單和Forms其他資產的元件 [!DNL AEM Sites] 的子菜單。 此外，您還可以配置它，以顯示已登錄用戶的草稿和已提交的自適應表單以及HTML5表單。 有關表單門戶的詳細資訊，請參見 [門戶上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)。
+[!DNL AEM Forms] portal提供列出最適化表單、HTML5表單和其他Forms資產的元件 [!DNL AEM Sites] 頁面。 此外，您可以將其設定為顯示草稿以及已提交的最適化表單和HTML5表單，以供登入使用者使用。 如需表單入口網站的詳細資訊，請參閱 [在入口網站上發佈表單的簡介](/help/forms/using/introduction-publishing-forms.md).
 
-當登錄用戶將自適應表單保存為草稿或提交時，它們會顯示在表單門戶的「草稿」和「提交」頁籤中。 草稿或已提交表單的資料儲存在配置為部署的資料儲存AEM中。 匿名用戶的草稿和提交不顯示在表單門戶頁面上；但是，該資料被儲存在配置的資料儲存中。 有關詳細資訊，請參見 [為草稿和提交配置儲存服務](/help/forms/using/configuring-draft-submission-storage.md)。
+當登入的使用者將最適化表單儲存為草稿或提交時，他們會顯示在表單入口網站上的草稿和提交索引標籤中。 草稿或已提交表單的資料會儲存在為AEM部署設定的資料存放區中。 匿名使用者的草稿和提交內容不會顯示在表單入口網站頁面上，但資料會儲存在已設定的資料存放區中。 如需詳細資訊，請參閱 [設定草稿和提交的儲存服務](/help/forms/using/configuring-draft-submission-storage.md).
 
-## 用戶資料和資料儲存 {#user-data-and-data-stores}
+## 使用者資料和資料存放區 {#user-data-and-data-stores}
 
-Forms門戶網站將草稿和提交的表格資料儲存在以下情形中：
+Forms入口網站會在下列情況下儲存草稿和已提交表單的資料：
 
-* 在自適應表單中配置的提交操作是 **Forms門戶提交操作**。
-* 提交除 **Forms門戶提交操作**，也請參見Wiki頁。 **[!UICONTROL 在表單門戶中儲存資料]** 選項 **[!UICONTROL 提交]** 自適應窗體容器的屬性。
+* 在最適化表單中設定的提交動作是 **Forms入口網站提交動作**.
+* 對於提交動作，而不是 **Forms入口網站提交動作**，則 **[!UICONTROL 將資料儲存在表單入口網站中]** 選項已啟用於 **[!UICONTROL 提交]** 最適化表單容器的屬性。
 
-對於登錄用戶和匿名用戶的每個草稿和提交的表單，表單門戶儲存以下資料：
+針對登入和匿名使用者的每個草稿和提交的表單，表單入口網站都會儲存以下資料：
 
-* 表單元資料，如表單名稱、表單路徑、草稿或提交ID、附件路徑和用戶資料ID
-* 表單附件作為資料位元組
-* 以資料位元組形式表單資料
+* 表單中繼資料，例如表單名稱、表單路徑、草稿或提交ID、附件路徑和使用者資料ID
+* 以資料位元組形式呈現表單附件
+* 以資料位元組格式呈現表單資料
 
-根據配置的資料儲存持久性，草稿和提交的表單資料儲存在以下位置。
+根據設定的資料存放區持續性，草稿和提交的表單資料會儲存在以下位置。
 
 <table>
  <tbody>
   <tr>
-   <td><p><strong>持久性類型</strong></p> </td>
-   <td><p><strong>資料儲存</strong></p> </td>
+   <td><p><strong>持續性型別</strong></p> </td>
+   <td><p><strong>資料存放區</strong></p> </td>
    <td><p><strong>位置</strong></p> </td>
   </tr>
   <tr>
    <td><p>預設</p> </td>
-   <td><p>作AEM者和發佈實例儲存庫</p> </td>
+   <td><p>製作和發佈執行個體的AEM存放庫</p> </td>
    <td><p><code>/content/forms/fp/</code></p> </td>
   </tr>
   <tr>
    <td><p>遠端</p> </td>
-   <td><p>AEM作者和遠程實例庫AEM</p> </td>
+   <td><p>製作和遠端AEM例項的AEM存放庫</p> </td>
    <td><p><code>/content/forms/fp/</code></p> </td>
   </tr>
   <tr>
    <td><p>資料庫</p> </td>
-   <td><p>作者AEM實例和資料庫表的儲存庫</p> </td>
-   <td>資料庫表 <code>data</code>。 <code>metadata</code>, <code>additionalmetadata</code></td>
+   <td><p>製作執行個體和資料庫表格的AEM儲存庫</p> </td>
+   <td>資料庫表格 <code>data</code>， <code>metadata</code>、和 <code>additionalmetadata</code></td>
   </tr>
  </tbody>
 </table>
 
-## 訪問和刪除用戶資料 {#access-and-delete-user-data}
+## 存取和刪除使用者資料 {#access-and-delete-user-data}
 
-您可以訪問配置資料儲存中登錄用戶和匿名用戶的草稿和提交的表單資料，如果需要，可將其刪除。
+您可以在設定的資料存放區中存取已登入和匿名使用者的草稿和已提交表單資料，並視需要刪除它。
 
-### AEM實例 {#aem-instances}
+### AEM執行個體 {#aem-instances}
 
-已登錄和匿名用戶AEM的所有草稿和已提交表單資料（作者、發佈或遠程）都儲存在 `/content/forms/fp/` 的子AEM目錄。 每次登錄或匿名用戶保存草稿或提交表單時， `draft ID` 或 `submission ID`的 `user data ID`和隨機 `ID` 生成與各份草案或提交書關聯的附件（如果適用）。
+AEM例項（作者、發佈或遠端）中針對登入和匿名使用者的所有草稿和已提交表單資料都會儲存在 `/content/forms/fp/` 適用的AEM存放庫節點。 每次登入使用者或匿名使用者儲存草稿或提交表單時， `draft ID` 或 `submission ID`， a `user data ID`，和隨機 `ID` 會針對每個附件（如果適用）產生，並與個別草稿或提交專案相關聯。
 
-#### 訪問用戶資料 {#access-user-data}
+#### 存取使用者資料 {#access-user-data}
 
-當登錄用戶保存草稿或提交表單時，將使用其用戶ID建立子節點。 例如，為用戶ID為Sarah Rose草稿和提交資料 `srose` 儲存 `/content/forms/fp/srose/` 儲存庫中AEM的節點。 在用戶ID節點內，資料以分層結構組織。
+當登入的使用者儲存草稿或提交表單時，會使用她的使用者ID建立子節點。 例如，使用者ID為 `srose` 儲存在 `/content/forms/fp/srose/` AEM存放庫中的節點。 在使用者ID節點中，資料會以階層結構組織。
 
-下表說明了所有草稿的資料 `srose` 儲存在存AEM儲庫中。
+下表說明所有草稿的資料如何 `srose` 儲存在AEM存放庫中。
 
 >[!NOTE]
 >
->一個精確的結構 `drafts` 複製為 `srose` 下 `/content/forms/fp/srose/submit/` 的下界。
+>完全相同的結構，例如 `drafts` 已針對下列提交的表單進行復寫： `srose` 在 `/content/forms/fp/srose/submit/` 節點。
 >
->所有草稿和提交者 `anonymous` 用戶儲存在 `/content/forms/fp/anonymous/` 節點，該節點為以下所有匿名用戶組織草稿和提交 `draft` 和 `submit` 節點。
+>所有草稿與提交者： `anonymous` 使用者會儲存在 `/content/forms/fp/anonymous/` 節點，它會為下的所有匿名使用者組織草稿和提交內容 `draft` 和 `submit` 節點。
 
 | 節點 | 說明 |
 |---|---|
-| `/content/forms/fp/srose/drafts` | 用戶所有草稿的容器節點資料 |
-| `/content/forms/fp/srose/drafts/attachments/` | 根據草稿ID組織用戶的所有附件 |
-| `/content/forms/fp/srose/drafts/attachments/<ID>` | 包含二進位格式的所選ID的附件 |
-| `/content/forms/fp/srose/drafts/metadata/` | 根據草稿ID組織用戶的表單元資料 |
-| `/content/forms/fp/srose/drafts/metadata/<draft ID>` | 包含所選草稿ID的表單元資料 |
-| `/content/forms/fp/srose/drafts/data/` | 根據用戶資料ID為用戶組織表單資料 |
-| `/content/forms/fp/srose/drafts/data/<user data ID>` | 包含所選用戶資料ID的二進位格式的表單資料 |
+| `/content/forms/fp/srose/drafts` | 使用者所有草稿的容器節點資料 |
+| `/content/forms/fp/srose/drafts/attachments/` | 根據草稿識別碼組織使用者的所有附件 |
+| `/content/forms/fp/srose/drafts/attachments/<ID>` | 包含所選ID的二進位格式附件 |
+| `/content/forms/fp/srose/drafts/metadata/` | 根據草稿ID組織使用者的表單中繼資料 |
+| `/content/forms/fp/srose/drafts/metadata/<draft ID>` | 包含所選草稿ID的表單中繼資料 |
+| `/content/forms/fp/srose/drafts/data/` | 根據使用者資料ID組織使用者的表單資料 |
+| `/content/forms/fp/srose/drafts/data/<user data ID>` | 包含所選使用者資料ID的表單資料（二進位格式） |
 
-#### 刪除用戶資料 {#delete-user-data}
+#### 刪除使用者資料 {#delete-user-data}
 
-要從系統中刪除已登錄用戶的草稿和提交的AEM用戶資料，必須刪除 `user ID` 從作者節點中指定用戶的節點。 必須手動從所有適用實例中刪AEM除資料。
+若要從AEM系統的已登入使用者之草稿和提交內容中完全刪除使用者資料，您必須刪除 `user ID` 作者節點中特定使用者的節點。 您必須從所有適用的AEM執行個體手動刪除資料。
 
-所有匿名用戶的草稿和提交資料都儲存在公共 `drafts` 和 `submit` 節點 `/content/forms/fp/anonymous`。 除非已知某些可識別資訊，否則找不到特定匿名用戶的資料。 在這種情況下，您可以搜索在儲存庫中標識匿名用戶的資訊AEM，然後從所有適用實例中手動刪除包含該用戶的AEM節點，以從系統中AEM刪除資料。 但是，要刪除所有匿名用戶的資料，可以刪除 `anonymous` 節點，以刪除所有匿名用戶的草稿和提交資料。
+所有匿名使用者的草稿和提交資料都會儲存在通用的 `drafts` 和 `submit` 下的節點 `/content/forms/fp/anonymous`. 除非某些可識別的資訊是已知的，否則沒有方法可以尋找特定匿名使用者的資料。 在這種情況下，您可以搜尋可識別AEM存放庫中匿名使用者的資訊，並從所有適用的AEM執行個體中手動刪除包含該資訊的節點，以從AEM系統中移除資料。 不過，若要刪除所有匿名使用者的資料，您可以刪除 `anonymous` 節點，可移除所有匿名使用者的草稿和提交資料。
 
 ### 資料庫 {#database}
 
-當AEM配置為將資料儲存在資料庫中時，表單門戶草稿和提交資料將儲存在以下資料庫表中，供登錄用戶和匿名用戶使用：
+當AEM設定為將資料儲存在資料庫時，Forms Portal草稿和提交資料會儲存在下列資料庫表格中，以供登入和匿名使用者使用：
 
 * 資料
 * 中繼資料
-* 附加元資料
+* 其他中繼資料
 
-#### 訪問用戶資料 {#access-user-data-1}
+#### 存取使用者資料 {#access-user-data-1}
 
-要訪問資料庫表中登錄用戶和匿名用戶的草稿和提交資料，請運行以下資料庫命令。 在查詢中，替換 `logged-in user` 具有要訪問其資料的用戶ID或 `anonymous` 匿名用戶。
+若要存取資料庫表格中已登入和匿名使用者的草稿和提交資料，請執行以下資料庫命令。 在查詢中，取代 `logged-in user` ，並使用您要存取其資料的使用者ID或 `anonymous` 適用於匿名使用者。
 
 ```sql
 select * from metadata, data, additionalmetadatatable where metadata.owner = 'logged-in user' and metadata.id = additionalmetadatatable.id and metadata.userdataID = data.id
 ```
 
-#### 刪除用戶資料 {#delete-user-data-1}
+#### 刪除使用者資料 {#delete-user-data-1}
 
-要從資料庫表中刪除已登錄用戶的草稿和提交資料，請運行以下資料庫命令。 在查詢中，替換 `logged-in user` 具有要刪除其資料的用戶ID或 `anonymous` 匿名用戶。 請注意，要從資料庫中刪除特定匿名用戶的資料，您需要使用一些可識別資訊找到它，然後從包含該資訊的資料庫表中刪除它。
+若要從資料庫表格中刪除已登入使用者的草稿和提交資料，請執行以下資料庫命令。 在查詢中，取代 `logged-in user` ，並使用您要刪除其資料的使用者ID或 `anonymous` 適用於匿名使用者。 請注意，若要從資料庫中刪除特定匿名使用者的資料，您需要使用一些可識別的資訊找到該資料，並從包含該資訊的資料庫表格中刪除該資料。
 
 ```sql
 DELETE FROM metadata, data, additionalmetadatatable USING metadata INNER JOIN data ON metadata.userdataID = data.id INNER JOIN additionalmetadatatable ON metadata.id = additionalmetadatatable.id WHERE metadata.owner = 'logged-in user'

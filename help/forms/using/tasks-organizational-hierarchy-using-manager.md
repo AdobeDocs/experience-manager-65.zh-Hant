@@ -1,7 +1,7 @@
 ---
-title: 使用「經理視圖」管理組織層次結構中的任務
+title: 使用管理員檢視管理組織階層中的任務
 seo-title: Managing tasks in an organizational hierarchy using Manager View
-description: 管理員和組織主管如何訪問和處理其直接和間接報告的任務，在AEM Forms工作區的「待辦事項」頁籤中。
+description: 經理和組織負責人如何在AEM Forms工作區的「待辦事項」索引標籤中存取和處理其直接和間接報告的任務。
 seo-description: How managers and organization heads can access and work on the tasks of their direct and indirect reports in the To-do tab in AEM Forms workspace.
 uuid: c44c55e6-6cc1-417d-8e89-c8d5c32914c8
 contentOwner: robhagat
@@ -18,22 +18,22 @@ ht-degree: 0%
 
 ---
 
-# 使用「經理視圖」管理組織層次結構中的任務{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
+# 使用管理員檢視管理組織階層中的任務{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
 
-在AEM Forms工作區中，經理現在可以訪問分配給其層次結構中任何人的任務（直接或間接報告），並對其執行各種操作。 這些任務可在AEM Forms工作區的「待辦事項」(To-do)頁籤中找到。 在直接報告任務上支援的操作包括：
+在AEM Forms工作區中，管理員現在可以存取其階層中指派給任何人的任務（直接或間接報告），並對其執行各種動作。 這些任務可在AEM Forms工作區的「待辦事項」索引標籤中取得。 直接下屬任務支援的動作如下：
 
-**前進** 將任務從直接報告轉發給任何用戶。
+**前進** 將任務從直接報告轉送給任何使用者。
 
-**索賠** 申請直接報告的任務。
+**索賠** 宣告直接下屬的任務。
 
-**索賠和開啟** 聲明直接報告的任務，並在經理的待辦事項清單中自動將其開啟。
+**索賠與未結** 宣告直接下屬的任務，並自動在經理的待辦事項清單中開啟它。
 
-**拒絕** 拒絕某個其他用戶轉發到直接報告的任務。 此選項可用於其他用戶轉發到直接報告的任務。
+**拒絕** 拒絕由其他使用者轉送至直接下屬的任務。 此選項適用於由其他使用者轉送至直接下屬的任務。
 
-AEM Forms僅限制用戶對其具有訪問控制(ACL)的任務的訪問。 這樣的檢查確保用戶只能獲取用戶具有訪問權限的任務。 使用第三方Web服務和實現來定義層次結構，組織可以定制經理的定義並直接報告以滿足其需要。
+AEM Forms限制使用者只能存取使用者擁有存取控制(ACL)的任務。 這類檢查可確保使用者僅能擷取其擁有存取許可權的任務。 使用協力廠商Web服務和實作來定義階層，組織可以自訂經理和直接報告的定義以符合其需求。
 
-1. 建立DSC。 有關詳細資訊，請參閱中的「開發AEM表單的元件」主題 [與AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) 的子菜單。
-1. 在DSC中，定義層次管理的新SPI以定義AEM Forms用戶內的直接報告和層次。 以下是示例Java™代碼段。
+1. 建立DSC。 如需詳細資訊，請參閱以下主題中的「為AEM Forms開發元件」： [使用AEM Forms程式設計](https://www.adobe.com/go/learn_aemforms_programming_63) 指南。
+1. 在DSC中，為階層管理定義新的SPI，以在AEM Forms使用者中定義直接報告和階層。 以下是Java™程式碼片段的範例。
 
    ```java
    public class MyHierarchyMgmtService
@@ -68,7 +68,7 @@ AEM Forms僅限制用戶對其具有訪問控制(ACL)的任務的訪問。 這�
    }
    ```
 
-1. 建立component.xml檔案。 請確保spec-id必須與下面的代碼段中所示相同。 下面是可重新使用的示例代碼段。
+1. 建立component.xml檔案。 請確定spec-id必須與以下程式碼片段中所示的相同。 以下是您可以重新使用的程式碼片段範例。
 
    ```xml
    <component xmlns="https://adobe.com/idp/dsc/component/document">
@@ -112,11 +112,11 @@ AEM Forms僅限制用戶對其具有訪問控制(ACL)的任務的訪問。 這�
    </component>
    ```
 
-1. 通過Workbench部署DSC。 重新啟動 `ProcessManagementTeamTasksService` 服務。
-1. 您可能必須刷新瀏覽器或再次與用戶註銷/登錄。
+1. 透過Workbench部署DSC。 重新啟動 `ProcessManagementTeamTasksService` 服務。
+1. 您可能必須重新整理瀏覽器，或再次登出/登入使用者。
 
-下面的螢幕說明了如何訪問直接報告的任務和可用操作。
+以下畫面說明如何存取直接下屬的任務和可用的動作。
 
 ![cu_manager_view](assets/cu_manager_view.png)
 
-訪問直接報告的任務並處理任務
+存取直接下屬的任務並對任務採取行動

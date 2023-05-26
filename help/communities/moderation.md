@@ -1,7 +1,7 @@
 ---
-title: 審核控制台
+title: 稽核主控台
 seo-title: Moderation Console
-description: 如何訪問「審核」控制台
+description: 如何存取稽核主控台
 seo-description: How to access the Moderation console
 uuid: d3b8a160-85b2-43f4-9891-5fafa8c48c5f
 contentOwner: Janice Kendall
@@ -19,78 +19,78 @@ ht-degree: 4%
 
 ---
 
-# 審核控制台 {#moderation-console}
+# 稽核主控台 {#moderation-console}
 
-在AEM Communities, [社區內容的調節](/help/communities/moderate-ugc.md) 管理員和社區審閱人（被指派為審閱人的受信任社區成員）在作者和發佈環境中都可能提供。
+在AEM Communities中，大量 [社群內容的稽核](/help/communities/moderate-ugc.md) 管理員和社群版主（指派為版主的受信任社群成員）可以在作者和發佈環境中使用。
 
-管理員和社區管理員也可以執行 [上下文內節制](/help/communities/in-context.md) 的子菜單。
+管理員和社群版主也可執行 [內文中稽核](/help/communities/in-context.md) 在發佈環境中。
 
-所有功能 [社區站點](/help/communities/sites-console.md) 是 `Administration` 菜單項可供具有管理權限登錄的用戶使用。 的 `Administration` 連結提供對Moderation控制台的訪問。
+所有功能 [社群網站](/help/communities/sites-console.md) 是 `Administration` 以管理許可權登入的使用者可用的功能表專案。 此 `Administration` 連結可讓您存取稽核主控台。
 
-從「審核」控制台，管理員和社區審核人員將有權訪問他們有權對其進行審核的所有用戶生成內容(UGC)。 如果允許對多個站點進行中調，則可以查看所有站點的帖子或按所選社區站點進行篩選。
+在「稽核」控制檯中，管理員和社群版主將可存取其有權稽核的所有使用者產生內容(UGC)。 如果允許稽核多個網站，則可檢視所有網站的貼文，或依選取的社群網站進行篩選。
 
-有關詳細資訊，請訪問 [管理用戶和用戶組](/help/communities/users.md)。
+如需更多詳細資訊，請造訪 [管理使用者和使用者群組](/help/communities/users.md).
 
-「審核」控制台支援：
+「協調」主控台支援：
 
-* 批量執行審核任務。
-* 正在搜索UGC。
-* 查看UGC詳細資訊。
-* 查看UGC作者詳細資訊。
+* 正在大量執行稽核工作。
+* 正在搜尋UGC。
+* 檢視UGC詳細資料。
+* 檢視UGC作者詳細資訊。
 
-僅當以管理員或成員身份登錄時 ` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`，可以執行緩和任務。
+只有在以管理員身分登入，或成員具有 ` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`，可以執行稽核任務。
 
-## 發佈環境訪問 {#publish-environment-access}
+## 發佈環境存取權 {#publish-environment-access}
 
-從已發佈的社區站點訪問「審核」控制台是通過「管理」連結，該連結在社區版主登錄時顯示。
+若要從已發佈的社群網站存取版主主控台，需透過管理連結（當社群版主登入時便會顯示）進行。
 
-![出版零售](assets/publishweretail.png)
+![publishweretail](assets/publishweretail.png)
 
-通過選擇「管理」(Administration)連結，將顯示「審核」(Moderation)控制台：
+選取「管理」連結後，「協調」主控台隨即出現：
 
-![Moderation-Console-Publish](assets/moderation-console-publish.png)
+![moderation-console-publish](assets/moderation-console-publish.png)
 
-## 作者環境訪問 {#author-environment-access}
+## 作者環境存取權 {#author-environment-access}
 
-在作者環境中，要訪問Moderation控制台
+在製作環境中，前往「協調」主控台
 
-* 從全局導航中，選擇 **[!UICONTROL 社區]** > **[!UICONTROL 審核]**。
+* 在全域導覽中選取 **[!UICONTROL Communities]** > **[!UICONTROL 稽核]**.
 
-僅當以管理員或成員身份登錄時 [版權](/help/communities/in-context.md#identifyingtrustedmembers)，可以執行緩和任務。 顯示的唯一社區內容是允許登錄成員中間的內容。
+只有在以管理員身分登入，或以具有下列身分的成員身分登入 [版主許可權](/help/communities/in-context.md#identifyingtrustedmembers)，即可執行稽核任務。 顯示的唯一社群內容是允許登入成員稽核的內容。
 
 >[!NOTE]
 >
->只有在所選SRP實現公共儲存時，發佈環境中的UGC才對作者可見。 例如，預設情況下，儲存是JSRP，它不是作者和發佈的常用儲存。 請參閱 [社區內容儲存](/help/communities/working-with-srp.md)。
+>只有當所選的SRP實作通用存放區時，發佈環境的UGC才對作者可見。 例如，預設的儲存體為JSRP，這不是製作和發佈的常見儲存體。 另請參閱 [社群內容儲存](/help/communities/working-with-srp.md).
 
-![現代康索萊作者](assets/moderationconsoleauthor.png)
+![moderationconsoleauthor](assets/moderationconsoleauthor.png)
 
-## 審核控制台UI {#moderation-console-ui}
+## Moderation Console UI {#moderation-console-ui}
 
-除左導航欄（在作者上顯示，但在發佈上不顯示）外，審核UI有以下主要區域：
+將左側導覽邊欄放開（顯示在作者上，但不顯示在發佈上），稽核UI有下列主要區域：
 
-* **[頂部導航欄](#top-navigation-bar)**
+* **[頂端導覽列](#top-navigation-bar)**
 * **[工具列](#toolbar)**
 * **[內容區域](#content-area)**
 
-### 頂部導航欄 {#top-navigation-bar}
+### 頂端導覽列 {#top-navigation-bar}
 
-所有控制台的頂部導航欄都保持不變。 有關詳細資訊，請參見 [基本處理](/help/sites-authoring/basic-handling.md)。
+所有主控台的頂端導覽列都是固定的。 如需詳細資訊，請參閱 [基本處理](/help/sites-authoring/basic-handling.md).
 
 ### 工具列 {#toolbar}
 
-位於頂部導航欄下方的工具欄在左側提供以下切換開關：
+位於頂端導覽列下方的工具列在左側提供下列切換開關：
 
-* [濾軌](/help/communities/moderation.md#filterrail)
-開啟一個滑軌，該滑軌允許選擇用於過濾內容的屬性。
+* [篩選邊欄](/help/communities/moderation.md#filterrail)
+開啟邊欄，您可在邊欄上選取要篩選內容的屬性。
 
-位於頂部導航欄下方的工具欄在左側提供以下切換開關：
+位於頂端導覽列下方的工具列在左側提供下列切換開關：
 
-![扭動](assets/toggleswitch.png)
+![切換切換](assets/toggleswitch.png)
 
-[濾軌](/help/communities/moderation.md#filterrail)
-在選擇「搜索」時開啟一個導軌，該導軌允許選擇要過濾內容的屬性。
+[篩選邊欄](/help/communities/moderation.md#filterrail)
+在選取「搜尋」時開啟邊欄，可讓您選取要篩選內容的屬性。
 
-![過濾軌](assets/filterrail.png)
+![篩選邊欄](assets/filterrail.png)
 
 ### 內容區域 {#content-area}
 
@@ -98,65 +98,65 @@ ht-degree: 4%
 
 * UGC已發佈
 * 成員名稱
-* 成員虛擬形象
-* 帖子的位置。
-* 發佈時。
-* 對帖子的答複數。
-* [情緒](/help/communities/moderate-ugc.md#sentiment) 與帖子關聯
-* 如果批准，則顯示複選標籤。
-* 如果有附件，則顯示回形針。
+* 成員頭像
+* 貼文的位置。
+* 發佈時間。
+* 回覆貼文的次數。
+* [情緒](/help/communities/moderate-ugc.md#sentiment) 與貼文相關聯
+* 如果核准，會顯示核取記號。
+* 如果有附件，則會顯示回形針。
 
 >[!NOTE]
 > 
->內容區域具有 *無限滾動*，這意味著您可以繼續滾動，直到您到達內容的末尾。 即使在滾動時，工具欄仍位於內容區域上方的固定可見位置。
+>內容區域具有 *無限捲動*，這表示可讓您繼續捲動，直到內容結束為止。 即使捲動時，工具列仍會維持在內容區域上方的固定可見位置。
 
-### 過濾導軌 {#ootbfilters}
+### 篩選邊欄 {#ootbfilters}
 
-![開軌](assets/open-filterrail.png)
+![open-filterrail](assets/open-filterrail.png)
 
-側面板表徵圖開啟濾鏡導軌。 顯示在內容區域左側的過濾器導軌提供不同的過濾器，每個過濾器對出現在內容區域中的被引用的UGC具有直接影響。
+側面板圖示會開啟篩選邊欄。 篩選器邊欄會顯示在內容區域的左側，提供不同的篩選器，每個篩選器都會立即影響內容區域中顯示的參考UGC。
 
-每個類別中的篩選器 **或** d合在一起，不同類別的篩選器 **和**&#x200B;一起。
+每個類別中的篩選器包括 **或**&#39;d在一起，不同類別中的篩選器為 **和**&#39;d在一起。
 
-例如，如果同時檢查 **問題** 和 **答案**，您將看到 **問題** *或* 一個 **答案**。
+例如，如果您同時核取兩者 **問題** 和 **答案**，您會看到以下其中一種內容： **問題** *或* 一個 **答案**.
 
-但是，如果您 **問題** 和 **待定**，您只能看到 **問題** 和 **待定**。
+不過，如果您檢查 **問題** 和 **擱置中**，您只會看到 **問題** 和 **擱置中**.
 
 >[!NOTE]
 >
->社區審閱人可以將預定義的篩選器加入審核控制台UI的書籤。 當這些篩選器被附加到URL的末尾（作為查詢字串參數）時，審閱人可以稍後返回到已書籤的篩選器，並且還可以共用這些連結。
+>社群版主可將版主主控台UI上的預先定義篩選器加入書籤。 由於這些篩選器會附加到URL的結尾（作為查詢字串引數），版主稍後可以返回書籤化篩選器，也可以共用這些連結。
 
-![搜索表徵圖](assets/searchicon.png)
+![搜尋圖示](assets/searchicon.png)
 
-當濾鏡導軌開啟時，「搜索」表徵圖將切換側面板關閉。 但是，要關閉篩選器導軌並僅查看用戶生成的內容，請按一下「搜索」表徵圖並選擇「僅內容」選項。
+當篩選邊欄開啟時，「搜尋」圖示會切換關閉的側面板。 不過，若要關閉篩選邊欄並僅檢視使用者產生的內容，請按一下「搜尋」圖示並選取「僅限內容」選項。
 
 #### 內容路徑 {#content-path}
 
-內容路徑將顯示到指定內容儲存庫中的帖子的引用UGC限制。
+內容路徑將顯示的參考UGC限製為放置在指定內容存放庫中的帖子。
 
-![內容路徑](assets/content-path.png)
+![content-path](assets/content-path.png)
 
 #### 測試搜尋 {#text-search}
 
-文本搜索將所引用的UGC限制為包含輸入文本的帖子。
+文字搜尋會將參照的UGC顯示限製為包含輸入文字的貼文。
 
-![文本搜索](assets/text-search.png)
+![text-search](assets/text-search.png)
 
 #### 網站 {#site}
 
-站點將所引用的UGC限制為發佈到所選社區站點。 如果未選中任何站點，則顯示對UGC的所有引用。
+網站將參照的UGC顯示限製為所選社群網站的貼文。 如果未核取任何網站，則會顯示UGC的所有參考。
 
-![站點面板](assets/site-panel.png)
+![site-panel](assets/site-panel.png)
 
 >[!NOTE]
 >
->當管理員訪問批量審核控制台時，將顯示對UGC的所有引用，包括未使用 [站點建立嚮導](/help/communities/sites-console.md)，例如Geometrixx樣本。
+>管理員存取大量仲裁控制檯時，所有對UGC的參照皆會顯示，包括未使用建立的網站 [網站建立精靈](/help/communities/sites-console.md)，例如Geometrixx範例。
 >
->當受信任的社區成員在發佈時訪問批量審核控制台時，僅顯示對為該成員被授權進行中等處理的社區站點建立的UGC的引用，並且可以使用「站點」過濾器進行過濾。
+>當信任的社群成員在發佈時存取大量稽核主控台時，則只會顯示為該成員有權稽核的社群網站所建立的UGC參考，並且可以使用網站篩選條件進行篩選。
 
 #### 內容類型 {#content-type}
 
-內容類型將所引用的UGC限制為所選資源類型的帖子。 可以選擇以下一種或多種類型。 如果未選擇任何類型，則顯示所有類型。
+內容型別將引用的UGC顯示限製為所選資源型別的帖子。 可選取下列一或多個型別。 如果未選取任何型別，則會顯示所有型別。
 
 * **評論**
 * **論壇主題**
@@ -172,88 +172,88 @@ ht-degree: 4%
 * **創意**
 * **創意力評論**
 
-![內容類型](assets/content-types.png)
+![內容型別](assets/content-types.png)
 
-#### 其他內容類型 {#additional-content-types}
+#### 其他內容型別 {#additional-content-types}
 
-要添加要篩選的其他資源，請執行以下操作：
+若要新增其他要篩選的資源：
 
-* 以管理員身份登錄到作者實例。
-* 開啟 [Web控制台](https://localhost:4502/system/console/configMgr)。
-* 定位 `AEM Communities Moderation Dashboard Filters`。
-* 選擇要在編輯模式下開啟的配置。
-* 輸入要篩選的元件的ResourceType:
+* 以管理員身分登入您的作者執行個體。
+* 開啟 [網頁主控台](https://localhost:4502/system/console/configMgr).
+* 尋找 `AEM Communities Moderation Dashboard Filters`.
+* 選取要在編輯模式下開啟的設定。
+* 輸入要篩選之元件的ResourceType：
 
-   * 例如，要篩選包含的投票元件，請輸入：
+   * 例如，若要篩選包含的投票元件，請輸入：
 
       `Voting=social/tally/components/hbs/voting`
-   ![附加內容類型](assets/additional-contenttype.png)
+   ![additional-contenttype](assets/additional-contenttype.png)
 
 * 選取儲存。
-* 刷新「社區 — 審核」控制台。
+* 重新整理Communities - Moderation主控台。
 
-結果是用於 `Voting` 下 `Content Type` 篩選器組。
+結果會針對以下專案產生新的可選取篩選器 `Voting` 在 `Content Type` 篩選群組。
 
-選擇該篩選器後，儀表板的內容將顯示與輸入的任何ResourceTypes相匹配的UGC。
+選取該篩選器後，控制面板的內容會顯示符合輸入之任何ResourceTypes的UGC。
 
 #### 狀態 {#status}
 
-狀態將所引用的UGC限制為所選狀態的帖子，這些帖子可能是「待定」、「已批准」、「拒絕」或「已關閉」中的一個或多個，以及「部落格草稿」或「已計畫」，以及「QnA問題已答或未答」。 如果未選擇任何選項，則顯示所有選項。
+狀態會將參照的UGC限製為所選取狀態的貼文，這些狀態可能是「擱置中」、「已核准」、「已拒絕」或「已關閉」等其中一或多項，以及草稿或部落格排程，以及QnA問題的已回答或未回答。 如果未選取任何專案，則會顯示所有專案。
 
 >[!NOTE]
 >
->如果僅選擇「未應答」狀態，則版主將看到除已回答問題外的所有內容（適用於所有內容類型）。 這是因為在未回答問題和其他內容（如論壇主題、部落格或評論）的情況下，不存在負責回答問題的屬性。
+>如果只選取「未回答」狀態，版主將會看到所有內容（針對所有內容型別），但已回答的問題除外。 這是因為在未回答的問題和其他內容（例如論壇主題、部落格或評論）的情況下，負責已回答問題的屬性並不存在。
 
 ![狀態](assets/statuses.png)
 
 #### 標幟 {#flagging}
 
-標籤將所引用的UGC限制為標籤或隱藏的帖子。
+標幟會將參照的UGC顯示限製為已標幟或隱藏的貼文。
 
-一條內容被標籤後，它將保持標籤，直到您通過選擇 **標誌** 按鈕。 請注意，不存在標籤級別，如重要或後續。
+標籤內容後，該內容會一直保持已標籤狀態，直到您透過選取 **標幟** 按鈕一次。 請注意，沒有標幟層級，例如重要或後續追蹤。
 
-![衰](assets/flagging.png)
+![標幟](assets/flagging.png)
 
 #### 成員 {#members}
 
-成員將所引用的UGC顯示限制為由輸入的成員名稱過帳的UGC。
+成員限制所顯示參考UGC顯示到按輸入成員名稱張貼的UGC。
 
 ![成員](assets/members.png)
 
 #### 發佈於前一 {#posted-in-the-last}
 
-Posted In the Last（在最後一個中）將引用的UGC限制為在最後一小時、一天、周、月或年內發佈的帖子。
+公佈於上次將參照的UGC顯示限製為過去一小時、一天、周、月或年所做的公佈。
 
-![上次過帳](assets/posted-last.png)
+![最後張貼](assets/posted-last.png)
 
 #### 情緒 {#sentiment}
 
-[情緒](/help/communities/moderate-ugc.md#sentiment) 將引用的UGC顯示到情緒值為正、負或中性的帖子。
+[情緒](/help/communities/moderate-ugc.md#sentiment) 將參考的UGC顯示限制在具有正面、負面或中性情緒值的貼文中。
 
 ![情緒](assets/sentiment.png)
 
-## 自定義篩選器 {#custom-filters}
+## 自訂篩選器 {#custom-filters}
 
-除框外的濾鏡外， [過濾導軌](/help/communities/moderation.md#ootbfilters)，可以將元資料上的其他自定義篩選器添加到審核UI。 開發人員可以使用Github中的示例代碼來擴展現有的審核UI篩選器。
+除了中的現成可用篩選器 [篩選邊欄](/help/communities/moderation.md#ootbfilters)，可將中繼資料上的其他自訂篩選器新增至稽核UI。 開發人員可使用Github中的範常式式碼來擴充現有的稽核UI篩選器。
 
-![自定義標籤過濾器](assets/custom-tag-filter.png)
+![custom-tag-filter](assets/custom-tag-filter.png)
 
-的 [示例項目](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) 在Github上實現標籤過濾器，以根據特定標籤是否應用於用戶生成的內容來過濾UGC清單。 您可以遵循示例代碼，並為其他類似的UGC元資料欄位構建類似的篩選器。
+此 [範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) 在Github上實作標籤篩選，以根據特定標籤是否已套用至使用者產生的內容來篩選UGC清單。 您可以遵循範常式式碼，並為其他類似的UGC中繼資料欄位建立類似篩選器。
 
-要安裝「標籤」過濾器的示例：
+若要安裝「標籤」篩選器的範例：
 
-1. 在AEM作者上開啟包管理器(`https://[aem-author]:4502/crx/packmgr/index.jsp`)實例和AEM發佈(`https://[aem-publish]:4503/crx/packmgr/index.jsp`)實例。
-1. 生成包 `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` 從Github代碼中，安裝並啟用該代碼。
-1. 在AEM作者上開啟捆綁控制台( `https://[aem-author]:4502/system/console/bundles`)實例和AEM發佈( `https://[aem-publish]:4503/system/console/bundles`)實例。
-1. 生成包(`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`)，並安裝並啟用。
-1. 轉到 **/apps/social/moderation/facets** AEM作者上的節點(`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)和AEM發佈(`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)實例。
-1. 添加技術用戶 **社區效用讀取器** 與 `jcr:read` 權限。
+1. 在AEM Author上開啟套件管理器(`https://[aem-author]:4502/crx/packmgr/index.jsp`)例項和AEM發佈(`https://[aem-publish]:4503/crx/packmgr/index.jsp`)例項。
+1. 建置套件 `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` 從Github程式碼安裝，並安裝及啟用相同程式。
+1. 開啟AEM Author上的套件組合主控台( `https://[aem-author]:4502/system/console/bundles`)例項和AEM發佈( `https://[aem-publish]:4503/system/console/bundles`)例項。
+1. 建置套件(`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`)，並安裝及啟用相同專案。
+1. 前往 **/apps/social/moderation/facets** AEM作者上的節點(`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)和AEM Publish (`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)例項。
+1. 新增技術使用者 **communities-utility-reader** 替換為 `jcr:read` 許可權。
 
-要公開現有社區站點上的自定義篩選器：
+若要在現有社群網站上公開自訂篩選器：
 
-1. 編輯 `Clientlibs` 現有審核頁 `/content/we-retail/us/en/community/moderation/shell3/jcr:content/head/clientlibs.`
+1. 編輯 `Clientlibs` 現有的稽核頁面 `/content/we-retail/us/en/community/moderation/shell3/jcr:content/head/clientlibs.`
 
-   * 添加新類別 `cq.social.hbs.moderation.v2.`
+   * 新增類別 `cq.social.hbs.moderation.v2.`
 
 1. 前往 `/content/we-retail/us/en/community/moderation/shell3/jcr:content/rails/searchWell/items/filters.`
 
@@ -261,114 +261,114 @@ Posted In the Last（在最後一個中）將引用的UGC限制為在最後一�
 
 1. 前往 `/content/we-retail/us/en/community/moderation/shell3/jcr:content/views/content/items/modcontainer`.
 
-   * 設定為新元件 `sling:resourceType = social/moderation/v2/modcontainer`。
+   * 設定為新元件 `sling:resourceType = social/moderation/v2/modcontainer`.
 
-## 審核操作 {#moderation-actions}
+## 稽核動作 {#moderation-actions}
 
-[審核操作](/help/communities/moderate-ugc.md#moderation-actions) 可以在內容區域或查看內容詳細資訊時對一個或多個選項執行。
+[稽核動作](/help/communities/moderate-ugc.md#moderation-actions) 可以在內容區域或檢視內容詳細資料時，對一個或多個選取專案執行。
 
-要批量調整帖子，請在內容區域中按一下選擇(![選擇](assets/selecticon.png))表徵圖，該表徵圖顯示在滑鼠（案頭）懸停於其上，或按住手指（移動）。 通過此操作，您將進入多選模式，現在只需按一下這些帖子即可選擇要批量審核的後續帖子。 使用工具欄上顯示的按鈕對所選帖子執行審核操作。 所有操作都將提示確認。
+若要大量稽核貼文，請在內容區域中按一下選取(![選取](assets/selecticon.png))圖示，當滑鼠游標停留在張貼上（案頭）或按住手指並按住張貼（行動裝置）時，此圖示就會出現。 這樣，您就可以進入多選模式，現在只需按一下即可選取後續要大量稽核的貼文。 使用工具列上顯示的按鈕，對選取的貼文執行稽核動作。 所有動作都會提示進行確認。
 
-要調整內容區域中的單個帖子，請用滑鼠（案頭）將滑鼠懸停在該帖子上，或按住帖子（移動）上的手指，使按鈕顯示在帖子上。 在單個內容詳細資訊上操作時，只有刪除操作會提示確認。
+若要稽核內容區域中的單一貼文，請使用滑鼠（桌上型）將滑鼠游標停留在貼文上，或按住貼文（行動型）上的手指，讓按鈕顯示在貼文上。 對單一內容詳細資料執行操作時，只有刪除動作會提示您確認。
 
-### 調整多個帖子 {#moderating-multiple-posts}
+### 稽核多個貼文 {#moderating-multiple-posts}
 
-通過按一下 `Select` 表徵圖：
+按一下「 」，進入大量選取模式 `Select` 貼文圖示：
 
-![選擇表徵圖](assets/select-icon.png)
+![select-icon](assets/select-icon.png)
 
-要退出批量選擇模式，請選擇工具欄上的「取消」(x)表徵圖：
+若要結束大量選取模式，請選取工具列上的取消(x)圖示：
 
-可以對多個帖子執行的審核操作包括：
+可對多個貼文執行的稽核動作包括：
 
 * 拒絕
 * 刪除
-* 關閉/重新開啟帖子
+* 關閉/重新開啟貼文
 
-僅當選擇了多個帖子時，允許這些操作的表徵圖才會出現在工具欄上。
+只有在選取了多個貼文時，才會在工具列上顯示允許這些動作的圖示。
 
-![布爾溫和](assets/bulkmoderate.png)
+![bulkmoderate](assets/bulkmoderate.png)
 
-### 調整單個帖子 {#moderating-a-single-post}
+### 稽核單一貼文 {#moderating-a-single-post}
 
-在單選模式下，可以：
+在單一選取模式中，可以：
 
-* 通過選擇用戶名查看用戶詳細資訊。
-* 通過選擇帖子的連結查看帖子的上下文。
+* 選取使用者名稱以檢視使用者詳細資訊。
+* 選取貼文的連結，檢視內容中的貼文。
 * [回覆](#reply)
 * [允許](#allow)
 * [拒絕](#deny)
 * [刪除](#delete)
 * [關閉](#close)
-* 視圖 [審核歷史記錄](#moderation-history)
+* 檢視 [稽核歷史記錄](#moderation-history)
 * [檢視詳情](#viewdetails)
 
-在卡視圖上方顯示的審核操作表徵圖是帖子的文本，下面顯示的資料表示：
+「協調動作」圖示上方卡片檢視中顯示的是貼文的文字，下方則是表示下列內容的資料：
 
-* 如果它有答復，如果有，則在答複數之前。
-* 如果已標籤。
-* 如果已經批准。
-* UGC發佈時。
+* 如果有回覆，則會在回覆前加上回複數。
+* 如果已標幟。
+* 是否已核准。
+* 發佈UGC的時間。
 
-![單電模式](assets/singleselectmode.png)
+![singleselectmode](assets/singleselectmode.png)
 
 #### 回覆 {#reply}
 
-![回復](assets/reply.png)
+![回覆](assets/reply.png)
 
-使用單個帖子時，如果UGC類型支援回復並配置為允許回復，則將顯示「回復」表徵圖。
+處理單一貼文時，如果UGC型別支援回覆，且已設定為允許回覆，則會顯示回覆圖示。
 
 #### 允許 {#allow}
 
 ![允許](assets/allow.png)
 
-使用單個帖子時，當已標籤或拒絕該帖子時，將顯示「允許」表徵圖。 如果已標籤，則選擇「允許」將清除所有標誌。
+使用單一貼文時，當貼文被標幟或拒絕時，允許圖示就會出現。 如果已標幟，選取「允許」將清除所有標幟。
 
 #### 拒絕 {#deny}
 
 ![拒絕](assets/deny.png)
 
-的 **拒絕** 「審核」操作僅適用於已審核的內容，除非在多選模式下，否則不會顯示在未審核的內容上。
+此 **拒絕** 「調節」動作僅適用於已調節的內容，且不會出現在未調節的內容上（多選模式除外）。
 
-未審核的內容始終會被批准。
+未稽核的內容一律會獲得核准。
 
-已審核的內容最初進入「待處理」狀態，稍後可修改為批准或拒絕。
+稽核的內容最初會進入「擱置中」狀態，之後可以修改為核准或拒絕。
 
-離開掛起狀態的內容永遠不能返回到掛起狀態。 標籤為已批准或拒絕的內容可以隨時更改為其他狀態。
+離開擱置狀態的內容永遠無法回到擱置狀態。 標示為已核准或拒絕的內容可隨時變更為其他狀態。
 
 #### 刪除 {#delete}
 
 ![刪除](assets/delete.png)
 
-在單個選取或批量模式下，可以選取項目並將其刪除。 刪除操作將導致確認對話框。 刪除後，這些項目會立即從內容區域消失。 **刪除UGC後，它將從儲存庫中永久刪除，以後無法檢索**。
+在單一選取或大量模式中，您可以選取專案並將其刪除。 刪除動作會產生確認對話方塊。 刪除後，這些專案會立即從內容區域消失。 **刪除UGC後，就會從存放庫中永久移除該UGC，且之後無法擷取**.
 
 #### 關閉 {#close}
 
 ![關閉](assets/close.png)
 
-使用單個帖子時，如果UGC類型支援阻止該資源進一步發佈的功能，則會顯示「關閉」表徵圖。
+使用單一貼文時，如果UGC型別支援防止該資源出現更多貼文的功能，則會顯示關閉圖示。
 
 #### 審核歷史記錄 {#moderation-history}
 
-![緩和](assets/moderation.png)
+![稽核](assets/moderation.png)
 
-使用單個帖子時，懸停在其上方時將顯示「審核歷史記錄」表徵圖。 選擇該表徵圖將顯示一個窗格，其中包含對UGC帖子所執行操作的歷史記錄。
+處理單一貼文時，將滑鼠懸停在單一貼文上方時，會出現「稽核歷史記錄」圖示。 選取圖示會顯示一個窗格，其中包含針對UGC貼文採取的動作歷史記錄。
 
-要返回到多個UGC帖子的內容區顯示，請選擇視圖詳細資訊窗格右上角的X。
+若要返回多個UGC貼文的內容區域顯示，請選取檢視詳細資料窗格右上角的X。
 
 例如：
 
-![中庸歷史](assets/moderation-history.png)
+![moderation-history](assets/moderation-history.png)
 
 #### 檢視詳細資料 {#view-detail}
 
-![視圖](assets/view.png)
+![檢視](assets/view.png)
 
-使用單個帖子時，可以通過以詳細模式開啟UGC來查看更多詳細資訊。
+使用單一貼文時，您可以在詳細模式中開啟UGC，以檢視更多詳細資訊。
 
-為此，請將滑鼠懸停在帖子上以顯示 `View Detail` 表徵圖，然後選擇它以顯示包含帖子詳細資訊的面板。
+若要這麼做，請將滑鼠指標停留在貼文上以顯示 `View Detail` 圖示並選取，以顯示包含貼文詳細資訊的面板。
 
-要返回到多個UGC帖子的內容區顯示，請選擇視圖詳細資訊窗格右上角的X。
+若要返回多個UGC貼文的內容區域顯示，請選取檢視詳細資料窗格右上角的X。
 
 例如：
 

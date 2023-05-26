@@ -1,7 +1,7 @@
 ---
-title: 編輯應用元資料
+title: 編輯應用程式中繼資料
 seo-title: Editing App Metadata
-description: 應用程式元資料是將應用程式發佈到供應商商店所需的詳細資訊。 請按照此頁瞭解有關編輯應用資料的資訊。
+description: 將應用程式發佈到廠商的商店時，需要應用程式中繼資料細節。 請依照本頁面的說明了解如何編輯應用程式資料。
 seo-description: App metadata is required details for releasing an application to a vendor's store. Follow this page to learn about editing app data.
 uuid: c140be0f-8403-416e-af0f-29072a2ab942
 contentOwner: User
@@ -17,61 +17,61 @@ ht-degree: 3%
 
 ---
 
-# 編輯應用元資料 {#editing-app-metadata}
+# 編輯應用程式中繼資料 {#editing-app-metadata}
 
 >[!NOTE]
 >
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-的 **管理應用** 磁貼和「管理應用程式」頁提供了查看和編輯應用程式元資料的方法。 應用程式元資料是將應用程式發佈到供應商商店所需的詳細資訊。 這可能包括常用元資料、iOS元資料和螢幕截圖。 查看 [管理應用程式磁貼](/help/mobile/phonegap-app-details-tile.md) 有關常用元資料和iOS元資料的詳細資訊。
+此 **管理應用程式** 圖磚和「管理應用程式」頁面提供檢視和編輯應用程式中繼資料的方法。 將應用程式發佈到廠商的商店時，需要應用程式中繼資料細節。 這可能包括常見中繼資料、iOS中繼資料和熒幕擷取畫面。 請參閱 [管理應用程式動態磚](/help/mobile/phonegap-app-details-tile.md) 以進一步瞭解一般和iOS中繼資料。
 
 ## 編輯應用程式資料 {#editing-the-app-data}
 
-要編輯應用的元資料：
+若要編輯應用程式的中繼資料：
 
-1. 導航到應用的儀表板頁面。
+1. 導覽至應用程式的儀表板頁面。
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
-1. 通過按一下「……」查看或編輯詳細資訊 右下角 **管理應用** 平鋪。
+1. 若要檢視或編輯詳細資訊，請按一下 **管理應用程式** 圖磚。
 
-1. 輸入或查看下圖所示的五個可用頁籤中的任何一個頁籤的詳細資訊。
+1. 在下列五個標籤中輸入或檢視詳細資訊，如下圖所示。
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-## 編輯常用和IOS元資料 {#editing-common-and-ios-metadata}
+## 編輯一般和IOS中繼資料 {#editing-common-and-ios-metadata}
 
-您可以編輯公用元資料和IOS元資料：
+您可以編輯一般和IOS中繼資料：
 
-* 選擇 **高級** 頁籤。
-* 編輯或查看公用元資料和IOS元資料。 有關詳細資訊，請參閱下圖。
+* 選取 **進階** 標籤中顯示的頁面說明。
+* 編輯或檢視一般和IOS中繼資料。 如需更多詳細資訊，請參閱下圖。
 
 ![chlimage_1-31](assets/chlimage_1-31.png) ![chlimage_1-32](assets/chlimage_1-32.png)
 
-## 添加和刪除螢幕截圖 {#add-and-remove-screenshots}
+## 新增和移除熒幕擷取畫面 {#add-and-remove-screenshots}
 
-您可以將App螢幕截圖包含到元資料匯總中。 某些供應商在將任何應用提交到其應用商店時需要準確的螢幕截圖。 這些映像必須已存在於資產中。 請參閱 [資產選取器](../assets/search-assets.md#assetpicker) 上傳你的截屏。
+您可以將應用程式熒幕擷取畫面加入中繼資料彙總中。 有些廠商在將任何應用程式提交至其應用程式商店時，需要精確的熒幕擷取畫面。 這些影像必須已存在於資產中。 另請參閱 [資產選取器](../assets/search-assets.md#assetpicker) 上傳您的熒幕擷取畫面。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
-### 添加螢幕截圖 {#add-screenshots}
+### 新增熒幕擷取畫面 {#add-screenshots}
 
-要將資產添加為螢幕快照，請執行以下操作：
+若要將資產新增為熒幕擷圖：
 
-1. 處於 **管理應用** 的上界。
-1. 選擇資產並按一下 **選擇** 的子菜單。
+1. 當處於的編輯模式時 **管理應用程式** 頁面，按一下新增（加號圖示）。
+1. 選取資產並按一下 **選取** 以新增資產。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
-1. 選擇資產並按一下 **選擇** 的子菜單。
+1. 選取資產並按一下 **選取** 以新增資產。
 
 >[!NOTE]
 >
->螢幕截圖必須與目標設備的螢幕解析度匹配。
+>熒幕擷圖必須符合目標裝置的熒幕解析度。
 
-### 刪除螢幕截圖 {#delete-screenshots}
+### 刪除熒幕擷取畫面 {#delete-screenshots}
 
-要刪除螢幕截圖：
+若要移除熒幕擷圖：
 
 按一下資產上的刪除。
 
@@ -79,17 +79,17 @@ ht-degree: 3%
 
 ## 後續步驟 {#the-next-steps}
 
-請參閱以下資源以瞭解有關其他創作角色的詳細資訊：
+請參閱下列資源，深入瞭解其他撰寫角色：
 
-* [管理應用程式磁貼](/help/mobile/phonegap-app-details-tile.md)
-* [應用定義](/help/mobile/phonegap-app-definitions.md)
-* [使用「建立應用程式嚮導」建立新應用程式](/help/mobile/phonegap-create-new-app.md)
-* [導入現有混合應用](/help/mobile/phonegap-adding-content-to-imported-app.md)
+* [「管理應用程式」動態磚](/help/mobile/phonegap-app-details-tile.md)
+* [應用程式定義](/help/mobile/phonegap-app-definitions.md)
+* [使用建立應用程式精靈建立新應用程式](/help/mobile/phonegap-create-new-app.md)
+* [匯入現有的混合式應用程式](/help/mobile/phonegap-adding-content-to-imported-app.md)
 * [Content Services](/help/mobile/develop-content-as-a-service.md)
 
 ### 其他資源 {#additional-resources}
 
-要瞭解管理員和開發人員的角色和職責，請參閱以下資源：
+若要瞭解管理員和開發人員的角色和責任，請參閱以下資源：
 
-* [Adobe PhoneGap企業AEM發展](/help/mobile/developing-in-phonegap.md)
-* [為Adobe PhoneGap企業管理內AEM容](/help/mobile/administer-phonegap.md)
+* [使用AEM為Adobe PhoneGap Enterprise開發](/help/mobile/developing-in-phonegap.md)
+* [使用AEM管理Adobe PhoneGap Enterprise的內容](/help/mobile/administer-phonegap.md)

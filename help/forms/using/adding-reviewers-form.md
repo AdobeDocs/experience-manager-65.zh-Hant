@@ -1,7 +1,7 @@
 ---
-title: 將提交審核者與表單關聯
+title: 將提交稽核者與表單建立關聯
 seo-title: Associating submission reviewers with a form
-description: 瞭解如何將提交審核者與AEM Forms的表單關聯。 關聯的審閱者審閱通過表單門戶提交的表單。
+description: 瞭解如何將提交稽核者與AEM Forms中的表單建立關聯。 相關聯的稽核者會稽核透過表單入口網站提交的表單。
 seo-description: Learn how to associate submission reviewers with a form in AEM Forms. Associated reviewers review a form submitted via forms portal.
 uuid: 58c8c8fb-9262-4c37-b9b2-e46fe21b77d9
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,63 +17,63 @@ ht-degree: 0%
 
 ---
 
-# 將提交審核者與表單關聯 {#associating-submission-reviewers-with-a-form}
+# 將提交稽核者與表單建立關聯 {#associating-submission-reviewers-with-a-form}
 
-建立表單時，您可以指定通過表單門戶查看表單提交並提供反饋的用戶。 您的組織可以收集對已提交表單的反饋和返工。
+建立表單時，您可以指定透過表單入口網站稽核表單提交並提供意見回饋的使用者。 您的組織可以收集意見並對提交的表單進行重工。
 
-AEM Forms允許您將審閱者組與表單關聯。 添加到表單的審閱組的用戶可以查看此表單的提交並提供反饋。
+AEM Forms可讓您將稽核者群組與表單建立關聯。 新增至表單稽核群組的使用者可以檢視此表單的提交內容，並提供意見反應。
 
-分配給表單的審閱者組只能審閱指定表單的提交。
+指派給表單的稽核者群組只能稽核指定表單的提交。
 
 ## 必備條件 {#prerequisite}
 
-### 使用元資料架構編輯器為自適應表單啟用提交審閱者組屬性 {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
+### 使用中繼資料結構編輯器啟用最適化表單的提交稽核者群組屬性 {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
 
-要將審閱者組與表單關聯，請編輯自適應表單的元資料架構。 預設情況下，無法將審閱者組添加到已提交的表單中。
+若要將稽核者群組與表單建立關聯，請編輯最適化表單的中繼資料結構。 依預設，您無法將稽核者群組新增至提交的表單。
 
-要編輯元資料架構：
+若要編輯中繼資料結構：
 
-1. 在作者模式下，在Experience Manager下，按一下 **工具** > **資產** > **元資料架構**。
-1. 在「架構Forms」頁中，導航到 **Forms** > **FormsAEM。**
+1. 在作者模式中的「Experience Manager」下方，按一下 **工具** > **資產** > **中繼資料結構**.
+1. 在「結構Forms」頁面中，導覽至 **Forms** > **Forms在AEM中編寫。**
 
-   該頁的URL為：
+   頁面的URL為：
 
    ```html
    https://<hostname>:<port>/mnt/overlay/dam/gui/content/metadataschemaeditor/
     schemalist.html/forms/aem-authored
    ```
 
-1. 選擇 **自適應窗體** 按一下 **編輯**。
-1. 在「編輯表單」頁中，按一下 **高級**。
-1. 在「高級」頁籤中，拖放 **單行文本** 元件在「生成表單」下可用。
-1. 選擇添加的文本元件以查看其設定。
+1. 選取 **最適化表單** 並按一下 **編輯**.
+1. 在「編輯表單」頁面中，按一下 **進階**.
+1. 在「進階」標籤中，拖放 **單行文字** 「建置表單」下可用的元件。
+1. 選取新增的文字元件以檢視其設定。
 
-   在設定下，輸入 `./jcr:content/metadata/form-submission-reviewer-group` 在「映射到屬性」欄位中。
+   在設定下，輸入 `./jcr:content/metadata/form-submission-reviewer-group` （在對應至屬性欄位中）。
 
-   在自適應表單的「高級」屬性中，使用在「欄位標籤」下指定的名稱啟用提交審閱者組欄位。
+   您的最適化表單的「進階」屬性中的「提交稽核者群組」欄位會以您在「欄位標籤」下指定的名稱啟用。
 
-## 將提交審核者與表單關聯 {#associating-submission-reviewers-with-a-form-1}
+## 將提交稽核者與表單建立關聯 {#associating-submission-reviewers-with-a-form-1}
 
-要將提交審閱者與自適應表單關聯，請建立審閱者組並向其添加用戶。 在表單的高級屬性中的表單提交審閱者欄位下添加建立的審閱者組。
-用戶組允許您將不同的提交審核者集與不同的自適應表單相關聯。 此功能可防止未經授權的用戶進行提交審閱。
+若要將提交稽核者與最適化表單建立關聯，請建立稽核者群組並新增使用者。 在表單的進階屬性中，在表單提交稽核者欄位下新增建立的稽核者群組。
+使用者群組可讓您將不同的提交稽核者集與不同的調適型表單建立關聯。 此功能可防止未經授權的使用者進行提交稽核。
 
-在執行以下步驟之前，請參見 [先決條件](../../forms/using/adding-reviewers-form.md#prerequisite)。
+執行以下步驟之前，請參閱 [先決條件](../../forms/using/adding-reviewers-form.md#prerequisite).
 
-要建立組並向其添加成員，請導航至 **工具** > **操作** > **安全** > **組**。
-有關詳細資訊，請參見 [用戶管理和服務](/help/sites-administering/security.md)。
-確保添加作為出廠設定用戶組成員建立的組： **表單提交審核者**。 此用戶組隨AEM Forms一起提供，並確保將用戶添加為提交審閱者。
+若要建立群組並新增成員，請瀏覽至 **工具** > **作業** > **安全性** > **群組**.
+如需詳細資訊，請參閱 [使用者管理與服務](/help/sites-administering/security.md).
+確定您將建立的群組新增為現成可用使用者群組的成員： **forms-submission-reviewer**. 此使用者群組隨AEM Forms提供，可確保將使用者新增為提交稽核者。
 
-要將用戶組與自適應表單關聯：
+若要將使用者群組與最適化表單建立關聯：
 
-1. 在創作模式中，導航到 **Forms** > **Forms和文檔**。
-1. 使用**選擇**選項選擇自適應表單，然後按一下 **查看屬性**。
-1. 在窗體的「屬性」窗口中，按一下 **編輯**，然後按一下 **高級**。
-1. 在提交審閱者組欄位中輸入組，然後按一下 **完成**。
+1. 在撰寫模式中，導覽至 **Forms** > **Forms與檔案**.
+1. 使用**選取**選項來選取最適化表單，然後按一下 **檢視屬性**.
+1. 在表單的「屬性」視窗中，按一下 **編輯**，然後按一下 **進階**.
+1. 在提交稽核者群組欄位中輸入群組，然後按一下 **完成**.
 
-   此時將顯示提交審閱者組欄位，其名稱在已編輯的自適應表單元資料架構中指定。
+   提交稽核者群組欄位會以您在已編輯的最適化表單中繼資料結構描述中指定的名稱顯示。
 
 >[!NOTE]
 >
->複製用戶和表單，以確保在遠程實施AEM Forms時用戶和表單的可用性。
+>複製使用者和表單，以確保AEM Forms遠端實作中的使用者和表單可用性。
 >
->確保將所有用戶複製為遠程實施中查看用戶組成員。
+>確定所有使用者都復寫為檢閱遠端實作中的使用者群組成員。

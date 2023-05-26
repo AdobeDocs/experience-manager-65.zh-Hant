@@ -1,7 +1,7 @@
 ---
 title: 應用程式伺服器網站
 seo-title: Application server websites
-description: 本文檔包含指向所有受支援的應用程式伺服器的製造商網站的連結。
+description: 本檔案包含所有支援之應用程式伺服器的製造商網站連結。
 seo-description: This document contains links to the manufacturer websites for all supported application servers.
 uuid: a5db777e-646a-4f12-9705-6ca50d9339d4
 contentOwner: admin
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # 應用程式伺服器網站 {#application-server-websites}
 
-此清單包含指向所有受支援的應用程式伺服器的製造商網站的連結。
+此清單包含所有支援之應用程式伺服器的製造商網站連結。
 
-**JBoss:** https://www.jboss.com/products/platforms/application
+**JBoss：** https://www.jboss.com/products/platforms/application
 
-**OracleWebLogic:** www.oracle.com/us/products/middleware/application-server/index.html
+**oracleWebLogic：** www.oracle.com/us/products/middleware/application-server/index.html
 
-**IBM網球：** www-01.ibm.com/software/websphere/
+**IBM WebSphere：** www-01.ibm.com/software/websphere/

@@ -1,6 +1,6 @@
 ---
-title: 使用工作流
-description: Adobe Experience Manager的工作流允許您自動執行在頁面或資產上執行的一系列步驟。
+title: 使用工作流程
+description: Adobe Experience Manager中的工作流程可讓您自動化在頁面或資產上執行的一系列步驟。
 uuid: c4442d2a-c6b0-49d4-a1ce-384017c45bf0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,9 +15,9 @@ ht-degree: 74%
 
 ---
 
-# 使用工作流{#working-with-workflows}
+# 使用工作流程{#working-with-workflows}
 
-工AEM作流允許您自動執行在（一個或多個）頁面和/或資產上執行的一系列步驟。
+AEM工作流程可讓您自動化在（一或多個）頁面和/或資產上執行的一系列步驟。
 
 例如，在發佈時，編輯人員必須檢閱內容，網站管理員才能啟動頁面。自動進行此範例的工作流程會在各項工作必須執行時通知執行該工作的參與者：
 

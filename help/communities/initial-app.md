@@ -1,7 +1,7 @@
 ---
-title: 初始沙盒應用程式
+title: 初始沙箱應用程式
 seo-title: Initial Sandbox Application
-description: 建立模板、元件和指令碼
+description: 建立範本、元件和指令碼
 seo-description: Create template, component, and script
 uuid: b0d03376-d8bc-4e98-aea2-a01744c64ccd
 contentOwner: User
@@ -17,25 +17,25 @@ ht-degree: 2%
 
 ---
 
-# 初始沙盒應用程式 {#initial-sandbox-application}
+# 初始沙箱應用程式 {#initial-sandbox-application}
 
-在本節中，將建立以下內容：
+在本節中，您將建立下列專案：
 
-* 的 **[模板](#createthepagetemplate)** 將用於在示例網站中建立內容頁面。
-* 的 **[元件和指令碼](#create-the-template-s-rendering-component)** 將用於呈現網站頁面。
+* 此 **[範本](#createthepagetemplate)** 這些內容將用於建立範例網站中的內容頁面。
+* 此 **[元件和指令碼](#create-the-template-s-rendering-component)** 將用於轉譯網站頁面。
 
-## 建立內容模板 {#create-the-content-template}
+## 建立內容範本 {#create-the-content-template}
 
-模板定義新頁面的預設內容。 複雜網站可能使用多個模板在網站中建立不同類型的頁面。 此外，該模板集可以成為用於對伺服器群集進行部署的更改的藍圖。
+範本會定義新頁面的預設內容。 複雜的網站可能會使用數個範本來建立網站中不同型別的頁面。 此外，這組範本可能會成為用於將變更轉出到伺服器叢集的藍圖。
 
-在本練習中，所有頁面都基於一個簡單模板。
+在本練習中，所有頁面都以一個簡單範本為基礎。
 
 1. 在CRXDE Lite的瀏覽器窗格中：
 
    * 選取 `/apps/an-scf-sandbox/templates`
-   * **[!UICONTROL 建立]** > **[!UICONTROL 建立模板]**
+   * **[!UICONTROL 建立]** > **[!UICONTROL 建立範本]**
 
-1. 在「建立模板」對話框中，鍵入以下值，然後按一下 **[!UICONTROL 下一個]**:
+1. 在「建立範本」對話方塊中，輸入下列值，然後按一下 **[!UICONTROL 下一個]**：
 
    * 標籤: `playpage`
    * 標題: `An SCF Sandbox Play Template`
@@ -45,74 +45,74 @@ ht-degree: 2%
 
    「標籤」用於節點名稱。
 
-   「Resource Type（資源類型）」出現在 `playpage`s jcr:content節點作為屬性 `sling:resourceType`。 它標識當瀏覽器請求時呈現內容的元件（資源）。
+   「資源型別」會顯示在 `playpage`的jcr：content節點作為屬性 `sling:resourceType`. 它可識別在瀏覽器要求時呈現內容的元件（資源）。
 
-   在本例中，使用 `playpage` 模板由 `an-scf-sandbox/components/playpage` 元件。 按照慣例，到元件的路徑是相對的，允許Sling首先在 `/apps` 資料夾和（如果找不到） `/libs` 的子菜單。
+   在此案例中，所有使用建立的頁面 `playpage` 範本由 `an-scf-sandbox/components/playpage` 元件。 依照慣例，元件的路徑是相對路徑，允許Sling先在中搜尋資源 `/apps` 資料夾，如果找不到，則在 `/libs` 資料夾。
 
-   ![建立內容模板](assets/create-content-template-1.png)
+   ![create-content-template](assets/create-content-template-1.png)
 
-1. 如果使用複製/貼上，請確保「資源類型」值沒有前導空格或尾隨空格。
+1. 如果使用複製/貼上，請確定「資源型別」值沒有前置或後置空格。
 
    按一下&#x200B;**[!UICONTROL 下一步]**。
 
-1. 「允許的路徑」是指使用此模板的頁的路徑，以便為 **[!UICONTROL 新建頁面]** 對話框。
+1. 「允許的路徑」是指使用此範本的頁面的路徑，因此會為下列專案列出範本 **[!UICONTROL 新頁面]** 對話方塊。
 
-   要添加路徑，請按一下加號按鈕 `+` 和類型 `/content(/.&ast;)?` 的上界。 如果使用複製/貼上，請確保沒有前導空格或尾隨空格。
+   若要新增路徑，請按一下加號按鈕 `+` 和型別 `/content(/.&ast;)?` 在出現的文字方塊中。 如果使用複製/貼上，請確定沒有前置或後置空格。
 
-   注：允許的路徑屬性的值是 *規則運算式*。 具有與表達式匹配的路徑的內容頁可以使用模板。 在這種情況下，規則運算式與 **/內容** 資料夾及其所有子頁。
+   注意：允許的路徑屬性值是 *規則運算式*. 路徑符合運算式的內容頁面可以使用範本。 在此案例中，規則運算式會比對 **/content** 資料夾及其所有子頁面。
 
-   當作者在下面建立頁面時 `/content`，也請參見Wiki頁。 `playpage` 標題為「SCF沙盒頁面模板」的模板將出現在可用模板清單中。
+   當作者建立以下頁面時 `/content`，則 `playpage` 標題為「SCF沙箱頁面範本」的範本會出現在可用的範本清單中。
 
-   從模板建立根頁後，可以通過修改屬性將根路徑包括在規則運算式中，即，對模板的訪問限制到此網站。
+   從範本建立根頁面後，可以修改屬性，將根路徑納入規則運算式中，藉此限制此網站對範本的存取。
 
    `/content/an-scf-sandbox(/.&ast;)?`
 
-   ![配置模板路徑](assets/configure-template-path.png)
+   ![configure-template-path](assets/configure-template-path.png)
 
 1. 按一下&#x200B;**[!UICONTROL 下一步]**。
 
-   按一下 **[!UICONTROL 下一個]** 的 **[!UICONTROL 允許的父項]** 的子菜單。
+   按一下 **[!UICONTROL 下一個]** 在 **[!UICONTROL 允許的父項]** 面板。
 
-   按一下 **[!UICONTROL 下一個]** 的 **[!UICONTROL 允許的子項]** 的下界。
+   按一下 **[!UICONTROL 下一個]** 在 **[!UICONTROL 允許的子項]** 面板。
 
    按一下&#x200B;**[!UICONTROL 「確定」]**。
 
-1. 按一下「確定」(OK)並完成模板的建立後，您會注意到新模板的「屬性」(Properties)頁籤值拐角中顯示的紅色三角形 `playpage` 的下界。 這些紅色三角形表示尚未保存的編輯。
+1. 按一下「確定」並完成範本建立後，您會注意到新的「屬性」標籤值的角落顯示紅色三角形 `playpage` 範本。 這些紅色三角形表示尚未儲存的編輯。
 
-   按一下 **[!UICONTROL 全部保存]** 將新模板保存到儲存庫。
+   按一下 **[!UICONTROL 全部儲存]** 將新範本儲存至存放庫。
 
-   ![驗證內容模板](assets/verify-content-template.png)
+   ![verify-content-template](assets/verify-content-template.png)
 
-### 建立模板的渲染元件 {#create-the-template-s-rendering-component}
+### 建立範本的演算元件 {#create-the-template-s-rendering-component}
 
-建立 *元件* 定義內容並呈現基於 [playpage template（播放頁模板）](#createthepagetemplate)。
+建立 *元件* 會定義內容並轉譯根據 [播放頁面範本](#createthepagetemplate).
 
-1. 在CRXDE Lite中，按一下右鍵 **`/apps/an-scf-sandbox/components`** 按一下 **[!UICONTROL 建立>元件]**。
-1. 通過將節點的名稱（標籤）設定為 *播放頁*，到元件的路徑為
+1. 在CRXDE Lite中按一下滑鼠右鍵 **`/apps/an-scf-sandbox/components`** 並按一下 **[!UICONTROL 「建立」>「元件」]**.
+1. 將節點名稱（標籤）設定為 *playpage*，元件的路徑為
 
    `/apps/an-scf-sandbox/components/playpage`
 
-   與播放頁模板的「資源類型」(可選地減去初始 **`/apps/`** 部分路徑)。
+   與播放頁面範本的資源型別相對應（可選擇性地減去初始值） **`/apps/`** 路徑的一部分)。
 
-   在 **[!UICONTROL 建立元件]** 對話框，鍵入以下屬性值：
+   在 **[!UICONTROL 建立元件]** 對話方塊中，輸入下列屬性值：
 
-   * 標籤： **播放頁**
-   * 標題： **SCF沙盒播放元件**
-   * 描述： **這是為SCF沙盒頁呈現內容的元件。**
-   * 超級類型： *&lt;leave blank=&quot;&quot;>*
-   * 組： *&lt;leave blank=&quot;&quot;>*
+   * 標籤： **playpage**
+   * 標題： **SCF沙箱播放元件**
+   * 說明： **此元件會呈現SCF沙箱頁面的內容。**
+   * 超級型別： *&lt;leave blank=&quot;&quot;>*
+   * 群組： *&lt;leave blank=&quot;&quot;>*
 
-   ![建立模板元件](assets/create-template-component.png)
+   ![create-template-component](assets/create-template-component.png)
 
-1. 按一下 **[!UICONTROL 下一個]** 直到 **[!UICONTROL 允許的子項]** 對話框的面板：
+1. 按一下 **[!UICONTROL 下一個]** 直到 **[!UICONTROL 允許的子項]** 對話方塊的面板隨即顯示：
 
    * 按一下&#x200B;**[!UICONTROL 「確定」]**。
-   * 按一下 **[!UICONTROL 全部保存]**。
+   * 按一下 **[!UICONTROL 全部儲存]**.
 
-1. 驗證元件的路徑與模板的resourceType是否匹配。
+1. 確認元件的路徑與範本的resourceType相符。
 
    >[!CAUTION]
    >
-   >播放頁元件的路徑與播放頁模板的sling:resourceType屬性之間的對應關係對網站的正確運行至關重要。
+   >播放頁面元件的路徑與播放頁面範本的sling：resourceType屬性之間的對應關係是網站正常運作的關鍵。
 
-   ![驗證模板元件](assets/verify-template-component.png)
+   ![verify-template-component](assets/verify-template-component.png)

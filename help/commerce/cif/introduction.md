@@ -28,7 +28,7 @@ ht-degree: 92%
 
 ## 引入 AEM 商務整合框架 (CIF) {#cif-intro}
 
-因為這些專案必須處理整合商務解決方案的複雜性。商業解決方案可以是從Adobe Commerce等商業解決方案到一套定制商業服務的任何解決方案。 整合高度取決於使用案例和生態系統。它通常涉及各種不同地方並有許多不同型式：
+因為這些專案必須處理整合商務解決方案的複雜性。商務解決方案可以是任何商業解決方案，例如Adobe Commerce或一組自訂商務服務。 整合高度取決於使用案例和生態系統。它通常涉及各種不同地方並有許多不同型式：
 
 * 整合複雜且動態的生態系統 (範例產品目錄)
 * 企業需要以有效率和全管道的方式管理具有自己生命週期的產品內容
@@ -58,13 +58,13 @@ CIF 附加元件將產品情境帶入 Experience Manager 並提供編寫工具 (
 
 ### 實現價值時間 (TTV)
 
-加快項目開發 [核AEM心元件](https://www.aemcomponents.dev/)。 [韋尼AEM亞參考店面](https://github.com/adobe/aem-cif-guides-venia)。 [項AEM目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)以及PWA（無頭內容和商務）的整合模式。
+加速專案開發，使用 [AEM Core Components](https://www.aemcomponents.dev/)， [AEM Venia參考店面](https://github.com/adobe/aem-cif-guides-venia)， [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)和PWA（Headless內容和商務）的整合模式。
 
 CIF 旨在透過始終保持最新的附加元件不斷創新，使客戶能夠存取新的和改進的功能。
 
 ### 整合
 
-使用將您的生態系統（如商務解決方案）與Experience Cloud連接  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)、基於微服務的無伺服器PaaS，以及 [CIF的參考實施](https://github.com/adobe/commerce-cif-graphql-integration-reference)。
+使用以下專案將您的生態系統（例如商務解決方案）與Experience Cloud連線：  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)，一種基於微服務的無伺服器PaaS，以及 [CIF的參考實作](https://github.com/adobe/commerce-cif-graphql-integration-reference).
 
 ## 經驗證的模式和最佳做法
 

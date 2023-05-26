@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 16ea73e9e75ddee25d7d348d4220a0e0f96a9ae8
+source-git-commit: bb0658ef33736587fbc191738d57cf586e5cba9d
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3045'
 ht-degree: 6%
 
 ---
@@ -45,13 +45,23 @@ ht-degree: 6%
 **定義影像設定檔中智慧型裁切的准則**
 為了控制智慧型裁切的使用，並最佳化裁切的處理時間和儲存，Adobe建議下列准則和秘訣：
 
-* 將套用智慧型裁切的影像資產必須至少為50 x 50畫素或更大。
-* 理想情況下，每個影像可裁切10至15顆智慧型影像，以最佳化熒幕比例和處理時間。
+* 請避免建立具有相同寬度和高度值的重複智慧型裁切設定檔。
 * 根據裁切維度而非最終使用量，為智慧型裁切命名。 這麼做有助於最佳化在多個頁面上使用單一維度的重複專案。
 * 為特定資料夾和子資料夾建立頁面/資產型別的影像設定檔，而非套用至所有資料夾或所有資產的通用智慧型裁切設定檔。
 * 套用至子資料夾的影像設定檔會覆寫套用至資料夾的影像設定檔。
-* 不允許包含重複智慧型裁切維度的影像設定檔。
-* 不允許設定有智慧型裁切選項的重複已命名影像設定檔。
+* 為特定資料夾和子資料夾建立頁面/資產型別的影像設定檔，而非套用至所有資料夾或所有資產的通用智慧型裁切設定檔。
+* 套用至子資料夾的影像設定檔會覆寫套用至資料夾的影像設定檔。
+* 理想情況下，每個影像可裁切10至15顆智慧型影像，以最佳化熒幕比例和處理時間。
+
+<!--
+* Image assets that are going to have a smart crop applied to them must be a minimum of 50 x 50 pixels or larger. CQDOC-20087
+* An Image Profile that contains duplicate smart crop dimensions is not permitted. CQDOC-20087
+* Duplicate named Image Profiles that have smart crop options set are not permitted. CQDOC-20087
+* Create page-wise/asset type-wise Image Profiles for specific folders and subfolders instead of a common smart crop profile that is applied to all folders or all assets.
+* An Image Profile that you apply to subfolders overrides an Image Profile that is applied to the folder.
+* Ideally, have 10-15 smart crops per image to optimize for screen ratios and processing time. -->
+<!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
+* Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
 
 您有兩個影像裁切選項可供選擇：「畫素裁切」或「智慧型裁切」。 您也可以選擇自動建立顏色和影像色票。
 
@@ -78,7 +88,7 @@ ht-degree: 6%
 | --- | --- |
 | 數量 | 控制套用至邊緣畫素的對比量。 預設值為1.75。若是高解析度影像，最高可增加至5。 將「數量」視為濾鏡強度的量度。 範圍為0到5。 |
 | 半徑 | 決定邊緣像素周圍會影響銳利化的像素數量。若是高解析度影像，輸入介於 1 到 2 之間的值。低數值只會銳利化邊緣的像素；高數值會銳利化較寬的像素範圍。正確的值取決於影像大小。預設值為0.2。範圍為0到250。 |
-| 臨界值 | 決定套用遮色片銳利化調整濾鏡時要忽略的對比範圍。換言之，此選項會決定銳利化的畫素與周圍區域必須有多大的差異，才會被視為邊緣畫素並加以銳利化。 為避免引入雜訊，請嘗試使用0到255之間的值。 |
+| 臨界值 | 決定套用遮色片銳利化調整濾鏡時要忽略的對比範圍。換言之，此選項會決定銳利化的畫素與周圍區域必須有多大的差異，才會被視為邊緣畫素並予以銳利化。 為避免引入雜訊，請嘗試使用0到255之間的值。 |
 
 銳利化的說明請參閱 [銳利化影像](/help/assets/assets/sharpening_images.pdf).
 

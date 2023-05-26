@@ -1,7 +1,7 @@
 ---
-title: 推薦的社區拓撲
+title: 社群適用的建議拓撲
 seo-title: Recommended Topologies for Communities
-description: 如何處理用戶生成內容
+description: 如何處理使用者產生的內容(UGC)
 seo-description: How to approach the handling of user-generated content (UGC)
 uuid: 4bc1c423-0ba9-4f2e-b11c-4d6824f45641
 contentOwner: Guillaume Carlino
@@ -17,97 +17,97 @@ ht-degree: 1%
 
 ---
 
-# 推薦的社區拓撲 {#recommended-topologies-for-communities}
+# 社群適用的建議拓撲 {#recommended-topologies-for-communities}
 
-自AEM Communities6.1以來，已採用一種獨特的方法來處理網站訪問者（成員）從發佈環境提交的用戶生成內容。
+自AEM Communities 6.1起，已採用獨特方法來處理網站訪客（成員）從發佈環境提交的使用者產生內容(UGC)。
 
-此方法與平台處理通常從作AEM者環境管理的站點內容的方式有根本不同。
+此方法與AEM平台處理網站內容的方式截然不同，網站內容通常是由製作環境管理。
 
-該平AEM台使用節點儲存，將站點內容從作者複製到發佈，而AEM Communities則使用一個從未複製的UGC通用儲存。
+AEM平台使用節點存放區，將網站內容從製作者複製到發佈者，而AEM Communities則使用單一、通用存放區，用於永不複製的UGC。
 
-對於普通UGC儲存，必須選擇 [儲存資源提供程式(SRP)](working-with-srp.md)。 建議的選項包括：
+對於常見的UGC存放區，必須選擇 [儲存資源提供者(SRP)](working-with-srp.md). 建議的選項包括：
 
-* [DSRP — 關係資料庫儲存資源提供程式](dsrp.md)
-* [MSRP - MongoDB儲存資源提供程式](msrp.md)
-* [ASRP -Adobe儲存資源提供程式](asrp.md)
+* [DSRP — 關聯式資料庫儲存資源提供者](dsrp.md)
+* [MSRP - MongoDB儲存資源提供者](msrp.md)
+* [ASRP -Adobe儲存資源提供者](asrp.md)
 
-另一個SRP選項， [JSRP - JCR儲存資源提供程式](jsrp.md)，不支援作者的通用UGC儲存，也不支援對兩個訪問都發佈環境。
+一個其他SRP選項， [JSRP - JCR儲存資源提供者](jsrp.md)不支援作者和發佈環境共同的UGC存放區以存取。
 
-要求通用儲存將導致以下建議的拓撲。
-
->[!NOTE]
->
->對於AEM Communities, [UGC從未複製](working-with-srp.md#ugc-never-replicated)。
->
->當部署不包括 [普通商店](working-with-srp.md),UGC將僅在其輸入AEM的發佈或作者實例上可見。
+需要共用存放區會導致下列建議拓撲。
 
 >[!NOTE]
 >
->有關平台的詳細信AEM息，請參見 [建議的部署](../../help/sites-deploying/recommended-deploys.md) 和 [平台簡AEM介](../../help/sites-deploying/data-store-config.md)。
+>若為AEM Communities， [從未復寫UGC](working-with-srp.md#ugc-never-replicated).
+>
+>當部署不包含 [公用存放區](working-with-srp.md)，UGC只會顯示在輸入它的AEM發佈或作者執行個體上。
+
+>[!NOTE]
+>
+>如需AEM平台的詳細資訊，請參閱 [建議的部署](../../help/sites-deploying/recommended-deploys.md) 和 [AEM平台簡介](../../help/sites-deploying/data-store-config.md).
 
 ## 用於生產 {#for-production}
 
-為UGC建立公共儲存庫是必不可少的，因此基礎部署取決於其支援公共儲存庫的能力。
+為UGC建立共用存放區至關重要，因此基礎部署取決於其支援共用存放區的能力。
 
-兩個示例：
+兩個範例：
 
-1. 如果UGC的預期卷高且可能有本地MongoDB實例，則選擇 [MSRP](msrp.md)。
+1. 如果UGC的預期數量很高，而且可以建立本機MongoDB執行個體，則選項會是 [MSRP](msrp.md).
 
-1. 為了獲得最佳的頁面內容效能， [發佈場](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) 和 [ASRP](asrp.md) 通過相對簡單的操作提供UGC的最佳擴展。
+1. 為獲得頁面內容的最佳效能，請選擇 [發佈陣列](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) 和 [ASRP](asrp.md) 會以相對直接的操作，提供最佳的UGC規模調整。
 
-對於這兩種情況，部署可能基於任何OAK微內核。
+對於這兩者，部署可能基於任何OAK微核心。
 
-要選擇適當的公用商店，請仔細考慮 [特徵](working-with-srp.md#characteristics-of-srp-options) 每一個。
+若要選擇適當的通用存放區，請仔細考慮唯一的 [特性](working-with-srp.md#characteristics-of-srp-options) 每個。
 
-有關Oak微核的詳細資訊，請訪問 [建議的部署](../../help/sites-deploying/recommended-deploys.md)。
+如需Oak微核心的詳細資訊，請造訪 [建議的部署](../../help/sites-deploying/recommended-deploys.md).
 
-### TarMK發佈場 {#tarmk-publish-farm}
+### TarMK發佈陣列 {#tarmk-publish-farm}
 
-當拓撲為發佈場時，相關重要主題為：
+當拓撲為發佈伺服器陣列時，重要的相關主題為：
 
-* [用戶同步](sync.md)
-* [管理用戶和用戶組](users.md)
+* [使用者同步](sync.md)
+* [管理使用者和使用者群組](users.md)
 
 ### 建議：DSRP、MSRP或ASRP {#recommended-dsrp-msrp-or-asrp}
 
-| MicroKernel | 站點內容儲存庫 | 用戶生成的內容儲存庫 | 儲存資源提供程式 | 公用儲存 |
+| MicroKernel | 網站內容存放庫 | 使用者產生的CONTENTREPOSITORY | 儲存資源提供者 | 公用存放區 |
 |-------------|------------------------|----------------------------------|---------------------------|---------------|
 | 任何 | JCR | MySQL | DSRP | 是 |
-| 任何 | JCR | 蒙戈DB | MSRP | 是 |
-| 任何 | JCR | Adobe按需儲存 | ASRP | 是 |
+| 任何 | JCR | MongoDB | MSRP | 是 |
+| 任何 | JCR | Adobe隨需儲存空間 | ASRP | 是 |
 
 ### JSRP {#jsrp}
 
 
-| 部署 | 站點內容儲存庫 | 用戶生成的內容儲存庫 | 儲存資源提供程式 | 公用儲存 |
+| 部署 | 網站內容存放庫 | 使用者產生的CONTENTREPOSITORY | 儲存資源提供者 | 公用存放區 |
 |----------------------|------------------------|----------------------------------|---------------------------|---------------------------------|
-| TarMK場（預設） | JCR | JCR | JSRP | 否 |
-| 橡樹座 | JCR | JCR | JSRP | 僅用於發佈環境 |
+| TarMK陣列（預設） | JCR | JCR | JSRP | 否 |
+| Oak叢集 | JCR | JCR | JSRP | 僅用於發佈環境 |
 
-## 發展 {#for-development}
+## 適用於開發 {#for-development}
 
-對於非生產環境， [JSRP](jsrp.md) 為使用一個作者實例和一個發佈實例來設定開發環境提供了簡便性。
+對於非生產環境， [JSRP](jsrp.md) 提供簡易功能，讓您輕鬆設定具有一個製作執行個體和一個發佈執行個體的開發環境。
 
-如果選擇 [ASRP](asrp.md)。 [DSRP](dsrp.md) 或 [MSRP](msrp.md) 對於生產，還可以使用Adobe按需儲存或MongoDB來設定類似的開發環境。 有關示例，請參見 [如何設定MongoDB以進行演示](demo-mongo.md)。
+若選擇 [ASRP](asrp.md)， [DSRP](dsrp.md) 或 [MSRP](msrp.md) 對於生產環境，也可以使用Adobe隨選儲存或MongoDB來設定類似的開發環境。 如需範例，請參閱 [如何設定MongoDB以進行示範](demo-mongo.md).
 
 ## 引用 {#references}
 
-* [用戶同步](sync.md)
+* [使用者同步](sync.md)
 
-   討論發佈場實例之間用戶資料的同步。
+   討論發佈伺服器陣列執行個體之間的使用者資料同步化。
 
-* [管理用戶和用戶組](users.md)
+* [管理使用者和使用者群組](users.md)
 
-   討論用戶和用戶組在作者和發佈環境中的角色。
+   討論使用者和使用者群組在製作和發佈環境中的角色。
 
-* UGC [普通商店](working-with-srp.md)
+* UGC [公用存放區](working-with-srp.md)
 
-   描述獨立於站點內容的社區內容的儲存。
+   說明與網站內容分開的社群內容儲存。
 
-* [節點儲存和資料儲存](../../help/sites-deploying/data-store-config.md)
+* [節點存放區和資料存放區](../../help/sites-deploying/data-store-config.md)
 
-   基本上，站點內容被儲存在節點儲存中。 對於資產，可以將資料儲存配置為儲存二進位資料。 對於社區，必須配置公用儲存以選擇SRP。
+   網站內容基本上會儲存在節點存放區中。 對於資產，資料存放區可設定為儲存二進位資料。 對於Communities，必須設定通用存放區以選取SRP。
 
-* [儲存元素](../../help/sites-deploying/storage-elements-in-aem-6.md)
+* [儲存體元素](../../help/sites-deploying/storage-elements-in-aem-6.md)
 
-   介紹兩種節點儲存實現：Tar和MongoDB
+   說明兩個節點儲存實作：Tar和MongoDB。

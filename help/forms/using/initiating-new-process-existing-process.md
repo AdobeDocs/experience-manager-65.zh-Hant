@@ -1,7 +1,7 @@
 ---
-title: 利用AEM Forms工作區的現有流程資料啟動新流程
+title: 使用AEM Forms工作區中的現有程式資料啟動新程式
 seo-title: Initiating a new process with existing process data in AEM Forms workspace
-description: 瞭解如何使用AEM Forms工作區中的現有流程資料啟動新流程。
+description: 瞭解如何使用AEM Forms工作區中的現有程式資料啟動新程式。
 seo-description: See how you can initiate a new process with existing process data in AEM Forms workspace.
 uuid: 4cb96d7f-483b-4db4-bea1-57948931423d
 content-type: reference
@@ -17,20 +17,20 @@ ht-degree: 0%
 
 ---
 
-# 利用AEM Forms工作區的現有流程資料啟動新流程{#initiating-a-new-process-with-existing-process-data-in-aem-forms-workspace}
+# 使用AEM Forms工作區中的現有程式資料啟動新程式{#initiating-a-new-process-with-existing-process-data-in-aem-forms-workspace}
 
-可以使用現有流程資料的資料啟動新流程。 需要從現有流程資料中啟動新流程，因為我們必須經常使用同一表單，而且內容幾乎沒有更改，如帶薪時間的表單。 此功能可節省用戶的時間和工作量，尤其是當流程需要填寫的時間較長時。
+您可以使用現有流&#39;b5&#39;7b資料的資料來起始新流&#39;b5&#39;7b。 當我們不得不經常使用相同的表單，而幾乎沒有像付費休假表單那樣的內容變更時，就會產生從現有流程資料啟動新流程的需求。 此功能可節省使用者的時間和精力，尤其是當流程需要填寫很長時間時。
 
-以下是從現有流程資料啟動新流程的步驟：-
+以下是從現有流&#39;b5&#39;7b資料起始新流&#39;b5&#39;7b的步驟：-
 
-1. 執行以下操作之一：
+1. 執行下列其中一項動作：
 
-   * 在跟蹤中，按一下要使用其資料的進程實例。 在右窗格的「進程歷史記錄」視圖中，按一下與起始點對應的任務行。
-   * 在跟蹤中，選擇搜索模板以顯示進程實例清單。 選擇要使用其資料的實例。
-   * 在 **[!UICONTROL 待辦事項]** 頁籤。 按一下 **[!UICONTROL 歷史]** ，然後選擇啟動流程實例的任務。
+   * 在追蹤中，按一下您要使用其資料的程式例項。 從右窗格的「程式歷史記錄」檢視中，按一下與起始點對應的工作列。
+   * 在追蹤中，選取搜尋範本以顯示流程例項清單。 選取您要使用其資料的執行個體。
+   * 在 **[!UICONTROL 待辦事項]** 標籤中，選取工作。 按一下 **[!UICONTROL 歷史記錄]** 標籤，然後選取啟動流程例項的工作。
 
-   ![選擇任務](assets/start3_new.png) ![選擇任務](assets/start1_new.png)
+   ![選取任務](assets/start3_new.png) ![選取任務](assets/start1_new.png)
 
-1. 在「任務」操作工具欄中，按一下 **[!UICONTROL 開始]**。 新進程實例的自適應表單將顯示預填充資料。
+1. 在「工作」動作工具列中，按一下 **[!UICONTROL 開始]**. 新程式執行個體的適用性表單會以預先填入的資料顯示。
 
-1. 根據需要更新資料，然後按一下 **[!UICONTROL 完成]** 或表格上的相應按鈕。
+1. 視需要更新資料，然後按一下 **[!UICONTROL 完成]** 或表單上的適當按鈕。

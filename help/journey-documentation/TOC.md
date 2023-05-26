@@ -20,10 +20,10 @@ Please note that all links to other guides need to be absolute references with l
 -->
 
 + AEM 文件歷程 {#overview}
-   + [什麼是文檔旅程？](home.md)
+   + [什麼是檔案歷程？](home.md)
 
 + Headless 歷程 {#headless}
-   + [《無頭遊記》](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/home.html)
+   + [Headless歷程首頁](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/home.html)
    + Headless 開發人員歷程 {#developer}
       + [了解 AEM 中的 Headless](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
       + [了解 CMS Headless 開發](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)

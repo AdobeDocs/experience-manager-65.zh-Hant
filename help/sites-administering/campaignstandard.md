@@ -1,7 +1,7 @@
 ---
 title: 與Adobe Campaign Standard整合
 seo-title: Integrating with Adobe Campaign Standard
-description: 學習如何與AEMAdobe Campaign Standard融合。
+description: 瞭解如何將AEM與Adobe Campaign Standard整合。
 seo-description: Learn how to integrate AEM with Adobe Campaign Standard.
 uuid: ef31339e-d925-499c-b8fb-c00ad01e38ad
 contentOwner: User
@@ -20,64 +20,64 @@ ht-degree: 0%
 
 # 與Adobe Campaign Standard整合 {#integrating-with-adobe-campaign-standard}
 
-通過與AEMAdobe Campaign整合，您可以直接在中管理電子郵件傳遞、內容和表AEM單。 在Adobe Campaign Standard和都需AEM要配置步驟，以便實現解決方案之間的雙向通信。
+將AEM與Adobe Campaign整合後，您可以直接在AEM中管理電子郵件傳送、內容和表單。 需要同時執行Adobe Campaign Standard和AEM中的設定步驟，才能在解決方案之間啟用雙向通訊。
 
-這一整合AEM使Adobe Campaign Standard能夠獨立使用。 營銷人員可以在Adobe Campaign建立活動和使用目標，而內容建立者可以在中進行內容設AEM計。 通過整合，Adobe Campaign可以定向和提供在中創AEM建的活動的內容和設計。
+此整合可讓AEM和Adobe Campaign Standard獨立使用。 行銷人員可以在Adobe Campaign中建立行銷活動並使用目標定位，而內容建立者則可以同時在AEM中設計內容。 透過整合，Adobe Campaign可鎖定在AEM中建立之行銷活動的內容和設計，並加以傳遞。
 
 ## 整合步驟 {#integration-steps}
 
-配置與Adobe Campaign Standard之間AEM的整合需要在兩個解決方案中執行若干步驟。
+設定AEM與Adobe Campaign Standard之間的整合需要在這兩個解決方案中執行許多步驟。
 
-1. [配置 ](#aemserver-user)
+1. [設定 ](#aemserver-user)
 1. [驗證 ](#resource-type-filter)
-1. [在市場活AEM動中建立特定電子郵件傳遞模板](#aem-email-delivery-template)
-1. [在中配置市場活動集AEM成](#campaign-integration)
-1. [配置到AEM發佈實例的複製](#replication)
-1. [配置外部AEM化器](#externalizer)
-1. [配置 ](#campaign-remote-user)
-1. [在市場活AEM動中配置外部帳戶](#acc-external-user)
+1. [在Campaign中建立AEM專屬電子郵件傳遞範本](#aem-email-delivery-template)
+1. [在AEM中設定Campaign整合](#campaign-integration)
+1. [設定復寫至AEM發佈執行個體的設定](#replication)
+1. [設定AEM Externalizer](#externalizer)
+1. [設定 ](#campaign-remote-user)
+1. [在Campaign中設定AEM外部帳戶](#acc-external-user)
 
-本文檔將詳細引導您完成這些步驟中的每一個。
+本檔案將詳細引導您完成每個步驟。
 
 ## 必備條件 {#prerequisites}
 
-* 管理員對Adobe Campaign Standard的訪問
-   * 如果您需要有關如何設定和配置Adobe Campaign Standard的其他詳細資訊，請參閱 [Adobe Campaign Standard檔案。](https://experienceleague.adobe.com/docs/campaign-standard/using/campaign-standard-home.html)
-* 管理員訪問權AEM限
+* Adobe Campaign Standard的管理員存取權
+   * 如果您需要有關如何設定和配置Adobe Campaign Standard的更多詳細資訊，請參閱 [Adobe Campaign Standard檔案。](https://experienceleague.adobe.com/docs/campaign-standard/using/campaign-standard-home.html)
+* AEM的管理員存取權
 
-## 在市場活動中配置Aemserver用戶 {#aemserver-user}
+## 在Campaign中設定aemserver使用者 {#aemserver-user}
 
-Adobe Campaign Standard預設 `aemserver` 用於連AEM接到Adobe Campaign的用戶。 您必須為此用戶分配適當的安全組並設定其密碼。
+Adobe Campaign Standard預設會隨附 `aemserver` AEM用來連線至Adobe Campaign的使用者。 您必須為此使用者指派適當的安全群組，並設定其密碼。
 
-1. 以管理員身份登錄Adobe Campaign。
+1. 以管理員身分登入Adobe Campaign。
 
-1. 點擊或按一下菜單欄左上角的Adobe Campaign徽標以開啟全局導航，然後選擇 **管理** > **用戶和安全** > **用戶** 的子菜單。
+1. 點選或按一下功能表列左上方的Adobe Campaign標誌，以開啟全域導覽，然後選取 **管理** > **使用者與安全性** > **使用者** 導覽功能表中的。
 
-1. 點擊或按一下 `aemserver` 用戶。
+1. 點選或按一下 `aemserver` 使用者控制檯中的使用者。
 
-1. 確保 `aemserver` 用戶至少被分配給具有角色的安全組 `deliveryPrepare` 分配給它。 預設情況下，組 `Standard Users` 有這個角色。
+1. 確保 `aemserver` 至少會將使用者指派給具有角色的安全性群組 `deliveryPrepare` 指派給它。 依預設，群組 `Standard Users` 具有此角色。
 
-   ![Adobe Campaignaemserver用戶](assets/acs-aemserver-user.png)
+   ![Adobe Campaign中的aemserver使用者](assets/acs-aemserver-user.png)
 
-1. 點擊或按一下 **保存** 的子菜單。
+1. 點選或按一下 **儲存** 以儲存變更。
 
-您 `aemserver` 用戶現在具有必要的權限，AEM以便使用它與Adobe Campaign通信。
+您的 `aemserver` 使用者現在擁有必要的許可權，AEM才能使用它與Adobe Campaign通訊。
 
-但是，在AEM使用 `aemserver` 用戶，必須設定其密碼。 這不能通過Adobe Campaign。 必須由Adobe支援工程師執行。 [請向Adobe客戶服務部提交票證](https://experienceleague.adobe.com/?support-tab=home#support) 請求重置 `aemserver` 密碼。 一旦您獲得了Adobe客戶服務部的密碼，請將其保留在安全位置。
+不過，在AEM可以使用之前 `aemserver` 使用者，必須設定其密碼。 這無法透過Adobe Campaign完成。 必須由Adobe支援工程師執行。 [請向Adobe客戶服務提出票證](https://experienceleague.adobe.com/?support-tab=home#support) 請求重設 `aemserver` 密碼。 取得Adobe客戶服務的密碼後，請將其儲存在安全位置。
 
-## 驗證市場活動中的AEMResourceTypeFilter {#resource-type-filter}
+## 驗證Campaign中的AEMResourceTypeFilter {#resource-type-filter}
 
-的 `AEMResourceTypeFilter` 是Adobe Campaign的一個選項，用於過濾AEM可在Adobe Campaign使用的資源。 由AEM於包含大量內容，此選項充當過濾器，使Adobe Campaign只能檢索專AEM門設計用於Adobe Campaign的類型的內容。
+此 `AEMResourceTypeFilter` 是Adobe Campaign中的選項，用來篩選可以在Adobe Campaign中使用的AEM資源。 由於AEM包含許多內容，此選項可作為篩選器，允許Adobe Campaign僅擷取專為Adobe Campaign使用而設計的型別的AEM內容。
 
-此選項已預配置。 但是，如果您已自定義了的市場活動元件，則可能需要更新AEM它。 驗證 `AEMResourceTypeFilter` 選項已配置，請執行以下步驟。
+此選項已預先設定。 不過，如果您已自訂AEM的Campaign元件，則可能需要更新。 若要驗證 `AEMResourceTypeFilter` 選項時，請按照以下步驟操作。
 
-1. 以管理員身份登錄Adobe Campaign。
+1. 以管理員身分登入Adobe Campaign。
 
-1. 點擊或按一下菜單欄左上角的Adobe Campaign徽標以開啟全局導航，然後選擇 **管理** > **應用程式設定** > **選項** 的子菜單。
+1. 點選或按一下功能表列左上方的Adobe Campaign標誌，以開啟全域導覽，然後選取 **管理** > **應用程式設定** > **選項** 導覽功能表中的。
 
-1. 點擊或按一下 `AEMResourceTypeFilter` 的子菜單。
+1. 點選或按一下 `AEMResourceTypeFilter` （在選項主控台中）。
 
-1. 確認 `AEMResourceTypeFilter`。 路徑用逗號分隔，預設情況下包含：
+1. 確認 `AEMResourceTypeFilter`. 路徑會以逗號分隔，預設包含：
 
    * `mcm/campaign/components/newsletter`
    * `mcm/campaign/components/campaign_newsletterpage`
@@ -85,161 +85,161 @@ Adobe Campaign Standard預設 `aemserver` 用於連AEM接到Adobe Campaign的用
 
    ![AEMResourceTypeFilter](assets/acs-aem-resource-type-filter.png)
 
-1. 點擊或按一下 **保存** 的子菜單。
+1. 點選或按一下 **儲存** 以儲存變更。
 
-您 `AEMResourceTypeFilter` 現在已配置為從中檢索正確的內AEM容。
+您的 `AEMResourceTypeFilter` 現已設定為從AEM擷取正確內容。
 
-## 在市場活AEM動中建立特定電子郵件傳遞模板 {#aem-email-delivery-template}
+## 在Campaign中建立AEM專屬電子郵件傳遞範本 {#aem-email-delivery-template}
 
-預設情況下，AEM在Adobe Campaign的電子郵件模板中未啟用。 必須配置新的電子郵件傳遞模板，該模板可用於使用內容創AEM建電子郵件。 要建立特AEM定的電子郵件傳遞模板，請執行以下步驟。
+根據預設，AEM不會在Adobe Campaign的電子郵件範本中啟用。 您必須設定新的電子郵件傳遞範本，以使用AEM內容建立電子郵件。 若要建立AEM專屬的電子郵件傳遞範本，請按照下列步驟操作。
 
-1. 以管理員身份登錄Adobe Campaign。
+1. 以管理員身分登入Adobe Campaign。
 
-1. 點擊或按一下菜單欄左上角的Adobe Campaign徽標以開啟全局導航，然後選擇 **資源** > **模板** > **交貨模板** 的子菜單。
+1. 點選或按一下功能表列左上方的Adobe Campaign標誌，以開啟全域導覽，然後選取 **資源** > **範本** > **傳遞範本** 導覽功能表中的。
 
-1. 在傳遞模板控制台中，找到預設的電子郵件模板 **通過電子郵件（郵件）發送** 將滑鼠懸停在代表它的卡（或行）上，以顯示選項。 按一下 **重複元素**。
+1. 在傳遞範本控制檯中，找到預設的電子郵件範本 **透過電子郵件（郵件）傳送** 並將滑鼠停留在代表該資訊卡的卡片（或線條）上，以顯示選項。 按一下 **重複元素**.
 
    ![重複元素](assets/acs-copy-template.png)
 
-1. 在 **確認** 對話框，按一下 **確認** 複製模板。
+1. 在 **確認** 對話方塊，按一下 **確認** 以複製範本。
 
-   ![確認對話框](assets/acs-confirmation.png)
+   ![確認對話方塊](assets/acs-confirmation.png)
 
-1. 將開啟模板編輯器，其副本 **通過電子郵件（郵件）發送** 的下界。 按一下 **編輯屬性** 的上界。
+1. 範本編輯器隨即開啟，並顯示您的 **透過電子郵件（郵件）傳送** 範本。 按一下 **編輯屬性** 圖示加以檢視。
 
    ![範本編輯器](assets/acs-template-editor.png)
 
-1. 在「屬性」窗口中，更改 **標籤** 欄位，以描述新模AEM板。
+1. 在屬性視窗中，變更 **標籤** 描述新AEM範本的欄位。
 
-1. 按一下 **內容** 標題展開並選擇 **Adobe Experience Manager** 的 **內容源** 下拉。
+1. 按一下 **內容** 標題以展開並選取 **Adobe Experience Manager** 在 **內容來源** 下拉式清單。
 
-1. 這揭示了 **Adobe Experience Manager帳戶** 的子菜單。 使用下拉框選擇 **Adobe Experience Manager實例(aemInstance)** 。 這是整合的預設外部AEM用戶。
+1. 如此可顯示 **Adobe Experience Manager帳戶** 欄位。 使用下拉式清單來選取 **Adobe Experience Manager執行個體(aemInstance)** 使用者。 這是AEM整合的預設外部使用者。
 
-![配置模板屬性](assets/acs-template-properties.png)
+![設定範本屬性](assets/acs-template-properties.png)
 
-1. 按一下 **確認** 的子菜單。
+1. 按一下 **確認** 以儲存屬性的變更。
 
-1. 在模板編輯器中，按一下 **保存** 保存修改後的電子郵件模板副本，以便與一AEM起使用。
+1. 在範本編輯器中，按一下 **儲存** 儲存您修改過的電子郵件範本復本，以與AEM搭配使用。
 
-您現在擁有一個可使用內容的電子郵件AEM模板。
+您現在已擁有可使用AEM內容的電子郵件範本。
 
-## 在中配置市場活動集AEM成 {#campaign-integration}
+## 在AEM中設定Campaign整合 {#campaign-integration}
 
-與AEMAdobe Campaign通信時， `aemserver` 您在Adobe Campaign配置的用戶。 按照以下步驟配置此整合。
+AEM使用內建整合與Adobe Campaign通訊，並且 `aemserver` 您在Adobe Campaign中設定的使用者。 請依照下列步驟設定此整合。
 
-1. 以管理員身AEM份登錄到創作實例。
+1. 以管理員身分登入您的AEM編寫執行個體。
 
-1. 從全局導航側欄中，選擇 **工具** > **Cloud Services** > **舊Cloud Services** > **Adobe Campaign**，然後按一下 **立即配置**。
+1. 從全域導覽側邊欄中，選取 **工具** > **Cloud Services** > **舊版Cloud Services** > **Adobe Campaign**，然後按一下 **立即設定**.
 
-   ![配置Adobe Campaign](assets/configure-campaign-service.png)
+   ![設定Adobe Campaign](assets/configure-campaign-service.png)
 
-1. 在對話框中，通過輸入 **標題** 按一下 **建立**。
+1. 在對話方塊中，輸入「 」，建立Campaign服務設定 **標題** 並按一下 **建立**.
 
-   ![「配置市場活動」對話框](assets/configure-campaign-dialog.png)
+   ![設定Campaign對話方塊](assets/configure-campaign-dialog.png)
 
-1. 將開啟一個新窗口和對話框以編輯配置。 提供必要的資訊。
+1. 新視窗和對話方塊會開啟以編輯設定。 提供必要資訊。
 
-   * **用戶名**  — 這是 [這樣 `aemserver` 在上一步中配置的Adobe Campaign用戶。](#aemserver-user) 預設情況下， `aemserver`。
-   * **密碼**  — 這是 [這樣 `aemserver` 用戶，您在上一步中向「Adobe客戶服務」請求。](#aemserver-user)
-   * **API端點**  — 這是Adobe Campaign實例URL。
+   * **使用者名稱**  — 這是 [此 `aemserver` 您在上一步中設定的Adobe Campaign使用者。](#aemserver-user) 預設為 `aemserver`.
+   * **密碼**  — 這是的密碼 [此 `aemserver` 您在上一步中向Adobe客戶服務請求的使用Adobe Campaign。](#aemserver-user)
+   * **API端點**  — 這是Adobe Campaign執行個體URL。
 
-   ![配置Adobe CampaignAEM](assets/configure-campaign.png)
+   ![在AEM中設定Adobe Campaign](assets/configure-campaign.png)
 
-1. 選擇 **連接到Adobe Campaign** 驗證連接，然後按一下 **確定**。
+1. 選取 **連線至Adobe Campaign** 驗證連線，然後按一下 **確定**.
 
-現AEM在可以和Adobe Campaign通信。
-
->[!NOTE]
->
->確保通過Internet訪問您的Adobe Campaign伺服器。 無法AEM訪問專用網路。
-
-## 配置到AEM發佈實例的複製 {#replication}
-
-市場活動內容由創作實例上的內容作者AEM建立。 此實例通常僅在組織內部可用。 對於要讓活動的收件人能夠訪問的內容（如影像和資產），您需要發佈該內容。
-
-複製代理負責將您的內容從作者實AEM例發佈到發佈實例，必須設定該代理才能使整合正常工作。 此步驟對於將某些創作實例配置複製到發佈實例中也是必要的。
-
-要配置從作者實AEM例到發佈實例的複製：
-
-1. 以管理員身AEM份登錄到創作實例。
-
-1. 從全局導航側欄中，選擇 **工具** > **部署** > **複製** > **作者代理**，然後按一下 **預設代理（發佈）**。
-
-   ![配置複製代理](assets/acc-replication-config.png)
-
-1. 點擊或按一下 **編輯** 選擇 **運輸** 頁籤。
-
-1. 配置 **URI** 欄位 `localhost` 具有發佈實例的IP地AEM址的值。
-
-   ![「傳輸」頁籤](assets/acc-transport-tab.png)
-
-1. 點擊或按一下 **確定** 以保存對代理設定所做的更改。
-
-您已配置到發佈實例AEM的複製，以便您的市場活動收件人可以訪問您的內容。
+AEM現在可以與Adobe Campaign通訊。
 
 >[!NOTE]
 >
->如果不想使用複製URL，而是使用面向公共的URL，則可以通過OSGi在以下配置設定中設定公共URL
+>請確定您的Adobe Campaign伺服器可透過網際網路連線。 AEM無法存取私人網路。
+
+## 設定復寫至AEM發佈執行個體的設定 {#replication}
+
+Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項通常僅供貴組織內部使用。 為了讓行銷活動的收件者能夠存取影像和資產等內容，您需要發佈該內容。
+
+復寫代理程式負責將您的內容從AEM製作執行個體發佈到發佈執行個體，且必須設定復寫代理程式，整合才能正常運作。 此步驟也是將某些編寫執行個體設定復寫到發佈執行個體所必需的。
+
+若要設定從AEM編寫執行個體到發佈執行個體的復寫：
+
+1. 以管理員身分登入您的AEM編寫執行個體。
+
+1. 從全域導覽側邊欄中，選取 **工具** > **部署** > **復寫** > **作者上的代理**，然後點選或按一下 **預設代理程式（發佈）**.
+
+   ![設定復寫代理程式](assets/acc-replication-config.png)
+
+1. 點選或按一下 **編輯** 然後選取 **傳輸** 標籤。
+
+1. 設定 **URI** 欄位，取代預設值 `localhost` 值為AEM發佈執行個體的IP位址。
+
+   ![傳輸標籤](assets/acc-transport-tab.png)
+
+1. 點選或按一下 **確定** 以儲存代理程式設定的變更。
+
+您已設定復寫至AEM發佈執行個體，讓您的行銷活動收件者可以存取您的內容。
+
+>[!NOTE]
 >
->從全局導航側欄中，選擇 **工具** > **操作** > **Web控制台** > **OSGi配置** 並搜索 **市場活AEM動整合 — 配置**。 編輯配置並更改欄位 **公共URL** (`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`)。
+>如果您不想使用復寫URL，而是使用公開顯示的URL，您可以透過OSGi在下列組態設定中設定公開URL
+>
+>從全域導覽側邊欄中，選取 **工具** > **作業** > **網頁主控台** > **OSGi設定** 並搜尋 **AEM Campaign整合 — 設定**. 編輯設定並變更欄位 **公開URL** (`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`)。
 
-## 配置外部AEM化器 {#externalizer}
+## 設定AEM Externalizer {#externalizer}
 
-[外部化器](/help/sites-developing/externalizer.md) 是一種OSGi服務，AEM它將資源路徑轉換為外部和絕對URL，這是為市場活動可以使AEM用的內容提供服務所必需的。 您必須將其配置為「市場活動」整合才能正常工作。
+[外部化程式](/help/sites-developing/externalizer.md) 是AEM中的OSGi服務，可將資源路徑轉換為外部和絕對URL，這是AEM提供Campaign可使用的內容所必需的。 您必須加以設定，Campaign整合才能運作。
 
-1. 以管理員身AEM份登錄到創作實例。
-1. 從全局導航側欄中，選擇 **工具** > **操作** > **Web控制台** > **OSGi配置** 並搜索 **第CQ天連結外部化程式**。
-1. 預設情況下， **域** 欄位用於發佈實例。 更改預設URL `http://localhost:4503` 發佈實例。
+1. 以管理員身分登入AEM編寫執行個體。
+1. 從全域導覽側邊欄中，選取 **工具** > **作業** > **網頁主控台** > **OSGi設定** 並搜尋 **Day CQ連結外部化器**.
+1. 根據預設，最後一個專案位於 **網域** 欄位適用於發佈執行個體。 變更URL的預設值 `http://localhost:4503` 至公開可用的發佈執行個體。
 
-   ![配置外部化程式](assets/acc-externalizer-config.png)
+   ![設定外部化程式](assets/acc-externalizer-config.png)
 
 1. 點選或按一下&#x200B;**儲存**。
 
-您已配置外部化程式，Adobe Campaign現在可以訪問您的內容。
+您已設定Externalizer，Adobe Campaign現在可以存取您的內容。
 
 >[!NOTE]
-必須可以從Adobe Campaign伺服器訪問發佈實例。 如果它指向 `localhost:4503` 或者Adobe Campaign無法訪問的另一台伺服器，AEM來自Adobe Campaign的映像將不會顯示。
+發佈執行個體必須可以從Adobe Campaign伺服器連線。 如果它指向 `localhost:4503` 或Adobe Campaign無法存取的其他伺服器，來自AEM的影像將不會顯示在Adobe Campaign主控台中。
 
-## 在中配置市場活動遠程用AEM戶 {#campaign-remote-user}
+## 在AEM中設定行銷活動 — 遠端使用者 {#campaign-remote-user}
 
-正如您需要Adobe Campaign的用戶AEM可以與Adobe Campaign通信一樣，Adobe Campaign也需要用AEM戶與通AEM信。 預設情況下，市場活動整合將建立 `campaign-remote` 中AEM。 按照以下步驟配置此用戶。
+就像您需要可供AEM用來與Adobe Campaign通訊的Adobe Campaign使用者一樣，Adobe Campaign也需要AEM中的使用者才能與AEM通訊。 根據預設，Campaign整合會建立 `campaign-remote` AEM中的使用者。 請依照下列步驟設定此使用者。
 
-1. 以管理AEM員身份登錄。
-1. 在主導航控制台上，按一下 **工具** 左欄。
-1. 然後按一下 **安全** > **用戶** 開啟用戶管理控制台。
-1. 查找 `campaign-remote` 。
-1. 選擇 `campaign-remote` 按一下 **屬性** 編輯
-1. 在 **編輯用戶設定** 窗口，按一下 **更改密碼**。
-1. 為用戶提供新密碼，並在安全位置記錄該密碼以供將來使用。
-1. 按一下 **保存** 的子菜單。
-1. 按一下 **保存並關閉** 以保存對 `campaign-remote` 。
+1. 以管理員身分登入AEM。
+1. 在主要導覽主控台上，按一下 **工具** 在左側邊欄中。
+1. 然後按一下 **安全性** > **使用者** 以開啟使用者管理主控台。
+1. 找到 `campaign-remote` 使用者。
+1. 選取 `campaign-remote` 使用者和點按 **屬性** 以編輯使用者。
+1. 在 **編輯使用者設定** 視窗，按一下 **變更密碼**.
+1. 為使用者提供新密碼，並將密碼記在安全位置以供日後使用。
+1. 按一下 **儲存** 以儲存密碼變更。
+1. 按一下 **儲存並關閉** 將變更儲存至 `campaign-remote` 使用者。
 
-## 在市場活AEM動中配置外部帳戶 {#acc-external-user}
+## 在Campaign中設定AEM外部帳戶 {#acc-external-user}
 
-當你 [建立了AEM特定的電子郵件傳遞模板，](#aem-email-delivery-template) 指定模板應使用 `aemInstance` 與外部帳戶通AEM信。 為了在兩個解決方案之間實現雙向通信，您需要在Adobe Campaign配置此帳戶。
+當您 [已建立AEM專屬的電子郵件傳遞範本，](#aem-email-delivery-template) 您指定範本應使用 `aemInstance` 與AEM通訊的外部帳戶。 若要啟用兩個解決方案之間的雙向通訊，您需要在Adobe Campaign中設定此帳戶。
 
-1. 以管理員身份登錄Adobe Campaign。
+1. 以管理員身分登入Adobe Campaign。
 
-1. 點擊或按一下菜單欄左上角的Adobe Campaign徽標以開啟全局導航，然後選擇 **管理** > **應用程式設定** > **外部帳戶** 的子菜單。
+1. 點選或按一下功能表列左上方的Adobe Campaign標誌，以開啟全域導覽，然後選取 **管理** > **應用程式設定** > **外部帳戶** 導覽功能表中的。
 
-1. 點擊或按一下 **Adobe Experience Manager實例(aemInstance)** 用戶。
+1. 點選或按一下 **Adobe Experience Manager執行個體(aemInstance)** 使用者控制檯中的使用者。
 
-1. 確保用戶 **Adobe Experience Manager** 的 **類型**。
+1. 確保使用者具有 **Adobe Experience Manager** 作為 **型別**.
 
-1. 在 **連接** 中定義以下欄位：
+1. 在 **連線** 區段，定義下列欄位：
 
-   1. 伺服器：這是您的創作服AEM務器的URL。 這不應該以斜槓結尾。
-   1. 帳戶：這是 `campaign-remote` 用戶 [以前在中配AEM置。](#campaign-remote-user)
-   1. 密碼：這是 `campaign-remote`用戶 [以前在中配AEM置。](#campaign-remote-user)
+   1. 伺服器：這是您AEM編寫伺服器的URL。 此不應以斜線結尾。
+   1. 帳戶：這是 `campaign-remote` 使用您 [先前在AEM中設定。](#campaign-remote-user)
+   1. 密碼：這是的密碼 `campaign-remote`使用您 [先前在AEM中設定。](#campaign-remote-user)
 
-   ![編輯aemInstance用戶](assets/acs-external-acount-editor.png)
+   ![編輯aemInstance使用者](assets/acs-external-acount-editor.png)
 
-1. 確保 **已啟用** 複選框，然後按一下 **保存** 的子菜單。
+1. 確保 **已啟用** 核取方塊已選取，然後按一下 **儲存** 以儲存變更。
 
-恭喜！您已完成與Adobe Campaign StandardAEM的整合！
+恭喜！您已完成AEM與Adobe Campaign Standard之間的整合！
 
 ## 後續步驟 {#next-steps}
 
-通過Adobe Campaign Classic和配AEM置，整合現已完成。
+Adobe Campaign Classic和AEM都已設定完成，整合即可完成。
 
-您現在可以繼續學習如何在Adobe Experience Manager建立新聞簡報 [。](/help/sites-authoring/campaign.md)
+您現在可以繼續使用，瞭解如何在Adobe Experience Manager中建立電子報 [本檔案。](/help/sites-authoring/campaign.md)

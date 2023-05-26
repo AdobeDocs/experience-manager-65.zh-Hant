@@ -1,7 +1,7 @@
 ---
 title: 複製
 seo-title: Replication
-description: 瞭解如何在中配置和監視複製代AEM理。
+description: 瞭解如何在AEM中設定和監控復寫代理。
 seo-description: Learn how to configure and monitor replication agents in AEM.
 uuid: 6c0bc2fe-523a-401f-8d93-e5795f2e88b9
 contentOwner: User
@@ -21,568 +21,568 @@ ht-degree: 4%
 
 # 複製{#replication}
 
-複製代理是Adobe Experience Manager(AEM)的中心，它用於：
+復寫代理程式是Adobe Experience Manager (AEM)的核心，因為此機制可用於：
 
-* [發佈（激活）](/help/sites-authoring/publishing-pages.md#activatingcontent) 從作者到發佈環境的內容。
-* 顯式刷新Dispatcher快取中的內容。
-* 將用戶輸入（例如，表單輸入）從發佈環境返回給作者環境（在作者環境的控制下）。
+* [發佈（啟動）](/help/sites-authoring/publishing-pages.md#activatingcontent) 內容從作者環境移至發佈環境。
+* 明確地從Dispatcher快取排清內容。
+* 從發佈環境將使用者輸入（例如表單輸入）傳回至作者環境（在作者環境的控制下）。
 
-請求為 [排隊](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjobeventhandler) 到相應的代理進行處理。
+請求為 [已排入佇列](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjobeventhandler) 至適當的代理程式以進行處理。
 
 >[!NOTE]
 >
->用戶資料（用戶、用戶組和用戶配置檔案）不會在作者實例和發佈實例之間複製。
+>使用者資料（使用者、使用者群組和使用者設定檔）不會在製作和發佈執行個體之間復寫。
 >
->對於多個發佈實例，在 [用戶同步](/help/sites-administering/sync.md) 的子菜單。
+>對於多個發佈執行個體，使用者資料在以下情況下為Sling分發： [使用者同步](/help/sites-administering/sync.md) 已啟用。
 
-## 從作者複製到發佈 {#replicating-from-author-to-publish}
+## 從作者復寫至發佈 {#replicating-from-author-to-publish}
 
-複製到發佈實例或調度程式的過程分幾個步驟進行：
+復寫至發佈執行個體或Dispatcher的過程分為幾個步驟：
 
-* 作者要求發佈（激活）某些內容；可以通過手動請求或已預配置的自動觸發器啟動。
-* 請求將傳遞給相應的預設複製代理；一個環境可以具有多個預設代理，這些代理將始終為此類操作選擇。
-* 複製代理「打包」內容並將其置於複製隊列中。
-* 在「網站」頁籤中 [彩色狀態指示](/help/sites-authoring/publishing-pages.md#determiningpagepublicationstatus) 為各個頁面設定。
-* 內容從隊列中提取，使用配置的協定傳輸到發佈環境；通常是HTTP。
-* 發佈環境中的servlet接收請求並發佈接收的內容；預設servlet為 `https://localhost:4503/bin/receive`。
+* 作者要求發佈（啟動）特定內容；這可以由手動請求或預先設定的自動觸發器啟動。
+* 此請求會傳遞至適當的預設復寫代理程式；一個環境可以有多個預設代理程式，這些代理程式將一律被選取用於此類動作。
+* 復寫代理程式會將內容「封裝」並放置在復寫佇列中。
+* 在網站標籤中 [彩色狀態指示器](/help/sites-authoring/publishing-pages.md#determiningpagepublicationstatus) 已為個別頁面設定。
+* 內容會從佇列中提取，並使用設定的通訊協定傳輸至發佈環境；這通常是HTTP。
+* 發佈環境中的servlet會收到請求並發佈收到的內容；預設servlet為 `https://localhost:4503/bin/receive`.
 
-* 可以配置多個作者和發佈環境。
+* 可以設定多個作者和發佈環境。
 
 ![chlimage_1-21](assets/chlimage_1-21.png)
 
-### 從發佈複製到作者 {#replicating-from-publish-to-author}
+### 從發佈復寫至作者 {#replicating-from-publish-to-author}
 
-某些功能允許用戶在發佈實例上輸入資料。
+部分功能可讓使用者在發佈執行個體上輸入資料。
 
-在某些情況下，需要一種稱為反向複製的複製類型來將此資料返回到作者環境，從該環境中將資料重新分發到其他發佈環境。 出於安全考慮，必須嚴格控制從發佈到作者環境的任何通信。
+在某些情況下，需要稱為反向復寫的復寫型別，才能將此資料傳回製作環境，然後從該環境重新散發至其他發佈環境。 基於安全性考量，從發佈到作者環境的任何流量都必須受到嚴格控制。
 
-反向複製在發佈環境中使用引用作者環境的代理。 此代理將資料放入發件箱。 此發件箱與作者環境中的複製偵聽器匹配。 監聽器輪詢發件箱以收集輸入的任何資料，然後根據需要分發。 這可確保作者環境控制所有通信。
+反向復寫會在參考作者環境的發佈環境中使用代理程式。 此代理程式會將資料放入寄件匣。 此寄件匣與製作環境中的復寫接聽程式相符。 監聽器會輪詢寄件匣以收集輸入的任何資料，然後視需要加以分發。 這可確保製作環境可控制所有流量。
 
-在其他情況下，例如社區功能（例如，論壇、部落格、評論和評論），在發佈環境中輸入的用戶生成內容(UGC)的量很難在使用複製的實例之間有效同AEM步。
+在其他情況下，例如對於Communities功能（例如論壇、部落格、評論和評論），在發佈環境中輸入的使用者產生內容(UGC)量難以使用復寫在AEM執行個體之間有效同步。
 
-AEM [社區](/help/communities/overview.md) 從不對UGC使用複製。 相反，社區的部署需要UGC的公用儲存(請參見 [社區內容儲存](/help/communities/working-with-srp.md))。
+AEM [Communities](/help/communities/overview.md) 絕不會針對UGC使用復寫。 Communities的部署需要UGC的共同存放區(請參閱 [社群內容儲存](/help/communities/working-with-srp.md))。
 
-### 複製 — 開箱即用 {#replication-out-of-the-box}
+### 復寫 — 立即可用 {#replication-out-of-the-box}
 
-標準安裝中包含的we-retail網站可用AEM於說明複製。
+AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
-要遵循此示例並使用所需的預設複製代理 [安AEM裝](/help/sites-deploying/deploy.md) 與：
+若要遵循此範例並使用預設的復寫代理，您需要 [安裝AEM](/help/sites-deploying/deploy.md) 替換為：
 
-* 港口上的作者環境 `4502`
-* 埠上的發佈環境 `4503`
+* 連線埠上的作者環境 `4502`
+* 連線埠上的發佈環境 `4503`
 
 >[!NOTE]
 >
 >預設為啟用 :
 >
->* 作者代理：預設代理（發佈）
+>* 作者代理程式：預設代理程式（發佈）
 >
->預設情況下有效禁用(AEM截止6.1):
+>預設有效停用(自AEM 6.1起)：
 >
->* 作者代理：反向複製代理(publish_reverse)
->* 發佈時的代理：反向複製（發件箱）
+>* 作者代理程式：反向復寫代理程式(publish_reverse)
+>* 發佈代理程式：反向復寫（寄件匣）
 >
->要檢查代理或隊列的狀態，請使用 **工具** 控制台。
->請參閱 [監視複製代理](#monitoring-your-replication-agents)。
+>若要檢查代理程式或佇列的狀態，請使用 **工具** 主控台。
+>另請參閱 [監視復寫代理](#monitoring-your-replication-agents).
 
-#### 複製（要發佈的作者） {#replication-author-to-publish}
+#### 復寫（作者至發佈） {#replication-author-to-publish}
 
-1. 導航到作者環境上的支援頁。
+1. 導覽至作者環境上的支援頁面。
    **https://localhost:4502/content/we-retail/us/en/experience.html** `<pi>`
-1. 編輯頁面以添加新文本。
-1. **激活頁面** 按鈕。
-1. 開啟發佈環境上的支援頁面：
+1. 編輯頁面以新增一些文字。
+1. **啟動頁面** 以發佈變更。
+1. 在發佈環境中開啟支援頁面：
    **https://localhost:4503/content/we-retail/us/en/experience.html**
-1. 您現在可以看到在作者上輸入的更改。
+1. 您現在可以看到您在作者上輸入的變更。
 
-此複製由以下人員從作者環境中執行：
+系統會從製作環境執行此復寫：
 
-* **預設代理（發佈）**
-此代理將內容複製到預設發佈實例。
-有關此（配置和日誌）的詳細資訊，可從作者環境的「工具」控制台訪問；或：
+* **預設代理程式（發佈）**
+此代理程式會將內容復寫至預設發佈執行個體。
+可以從作者環境的「工具」控制檯存取此專案的詳細資訊（設定和記錄）；或：
 
    `https://localhost:4502/etc/replication/agents.author/publish.html`。
 
-#### 複製代理 — 開箱即用 {#replication-agents-out-of-the-box}
+#### 復寫代理 — 立即可用 {#replication-agents-out-of-the-box}
 
-標準安裝中提供以下代AEM理：
+下列代理程式適用於標準AEM安裝：
 
-* [預設代理](#replication-author-to-publish)
-用於從作者複製到發佈。
+* [預設代理程式](#replication-author-to-publish)
+用於從作者復寫至發佈。
 
-* Dispatcher Flush（Dispatcher刷新）此功能用於管理Dispatcher快取。 請參閱 [從創作環境中使Dispatcher快取無效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment) 和 [從發佈實例中使Dispatcher快取無效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance) 的子菜單。
+* Dispatcher排清這是用於管理Dispatcher快取。 另請參閱 [使編寫環境中的Dispatcher快取失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment) 和 [使發佈執行個體中的Dispatcher快取失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance) 以取得詳細資訊。
 
-* [反向複製](#reverse-replication-publish-to-author)
-用於從發佈複製到作者。 反向複製不用於社區功能，如論壇、部落格和評論。 由於未啟用發件箱，因此它被有效禁用。 使用反向複製需要自定義配置。
+* [反向復寫](#reverse-replication-publish-to-author)
+用於從發佈複製到作者。 反向復寫不適用於Communities功能，例如論壇、部落格和評論。 由於未啟用寄件匣，因此此功能實際上已停用。 使用反向復寫需要自訂設定。
 
-* 靜態代理這是「將節點的靜態表示形式儲存到檔案系統中的代理」。
-例如，使用預設設定時，內容頁面和資料庫資產將儲存在 `/tmp`，或作為HTML或相應的資產格式。 查看 `Settings` 和 `Rules` 頁籤。
-這是請求的，以便當直接從應用程式伺服器請求頁面時，可以看到內容。 這是一個專用代理，（可能）對於大多數實例都不需要。
+* 靜態代理程式這是一個「將節點的靜態表示儲存到檔案系統中的代理程式」。
+例如，若使用預設設定，內容頁面和DAM資產會儲存在 `/tmp`，以HTML或適當資產格式顯示。 請參閱 `Settings` 和 `Rules` 用於設定的標籤。
+已要求此專案，以便當直接從應用程式伺服器要求頁面時，可以看到內容。 這是專門的代理程式，（可能）在大多數執行個體中不是必要的。
 
-## 複製代理 — 配置參數 {#replication-agents-configuration-parameters}
+## 復寫代理程式 — 設定引數 {#replication-agents-configuration-parameters}
 
-從「工具」控制台配置複製代理時，對話框中有四個頁籤：
+從「工具」控制檯設定復寫代理程式時，對話方塊中有四個索引標籤可用：
 
 ### 設定 {#settings}
 
 * **名稱**
 
-   複製代理的唯一名稱。
+   復寫代理程式的唯一名稱。
 
 * **說明**
 
-   此複製代理將服務的目的的說明。
+   此復寫代理程式將服務的用途說明。
 
 * **已啟用**
 
-   指示當前是否啟用複製代理。
+   指出目前是否啟用復寫代理程式。
 
-   當代理為 **啟用** 隊列將顯示為：
+   當代理程式為 **已啟用** 佇列將顯示為：
 
-   * **活動** 處理項時。
-   * **空閒** 當隊列為空時。
-   * **已阻止** 當項目在隊列中但無法處理時；例如，當接收隊列被禁用時。
+   * **作用中** 處理專案時。
+   * **閒置** 當佇列為空時。
+   * **已封鎖** 當專案在佇列中，但無法處理時；例如，當接收佇列停用時。
 
 * **序列化類型**
 
-   序列化的類型：
+   序列化的型別：
 
-   * **預設**:設定是否自動選擇代理。
-   * **調度程式刷新**:如果代理將用於刷新調度程式快取，請選擇此選項。
+   * **預設**：設定是否要自動選取代理程式。
+   * **Dispatcher排清**：如果要使用代理程式來排清Dispatcher快取，請選取此選項。
 
 * **重試延遲**
 
-   如果遇到問題，則兩次重試之間的延遲(等待時間（毫秒）。
+   如果發生問題，兩次重試之間的延遲（等待時間，以毫秒為單位）。
 
    預設: `60000`
 
 * **代理使用者 ID**
 
-   根據環境的不同，代理將使用此用戶帳戶：
+   根據環境，代理程式將使用此使用者帳戶來：
 
-   * 從作者環境收集和打包內容
-   * 在發佈環境中建立和寫入內容
+   * 從製作環境收集內容並封裝
+   * 在發佈環境中建立並寫入內容
 
-   將此欄位留空以使用系統用戶帳戶(sling中定義的帳戶作為管理員用戶；預設情況下，此 `admin`)。
-
-   >[!CAUTION]
-   >
-   >對於作者環境中的代理，此帳戶 *必須* 具有對要複製的所有路徑的讀取訪問權限。
+   將此欄位留空將使用系統使用者帳戶(在sling中定義為管理員使用者的帳戶；預設為 `admin`)。
 
    >[!CAUTION]
    >
-   >對於發佈環境上的代理，此帳戶 *必須* 具有複製內容所需的建立/寫入權限。
+   >此帳戶適用於作者環境上的代理程式 *必須* 擁有您要復寫之所有路徑的讀取存取權。
+
+   >[!CAUTION]
+   >
+   >對於發佈環境上的代理程式，此帳戶 *必須* 具有復寫內容所需的建立/寫入許可權。
 
    >[!NOTE]
    >
-   >這可用作選擇特定內容進行複製的機制。
+   >這可作為選取特定內容進行復寫的一種機制。
 
 * **記錄層級**
 
-   指定用於日誌消息的詳細級別。
+   指定用於記錄訊息的詳細資訊等級。
 
-   * `Error`:只記錄錯誤
-   * `Info`:將記錄錯誤、警告和其他資訊性消息
-   * `Debug`:消息中將使用高級詳細資訊，主要用於調試目的
+   * `Error`：僅記錄錯誤
+   * `Info`：將記錄錯誤、警告和其他資訊訊息
+   * `Debug`：訊息將使用高層次的詳細資料，主要用於偵錯
 
    預設: `Info`
 
 * **用於反向複寫**
 
-   指示此代理是否用於反向複製；返回從發佈到作者環境的用戶輸入。
+   指出此代理程式是否將用於反向復寫；傳回從發佈環境到製作環境的使用者輸入。
 
 * **別名更新**
 
-   選擇此選項將啟用對Dispatcher的別名或虛擬路徑無效請求。 另請參見 [配置Dispatcher刷新代理](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent)。
+   選取此選項會啟用對Dispatcher的別名或虛名路徑失效請求。 另請參閱 [設定Dispatcher Flush代理程式](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent).
 
 #### 傳輸 {#transport}
 
 * **URI**
 
-   這指定目標位置的接收Servlet。 特別是，您可以在此處指定目標實例的主機名（或別名）和上下文路徑。
+   這會指定目標位置的接收servlet。 尤其是，您可以在此處指定目標執行個體的主機名稱（或別名）和內容路徑。
 
    例如：
 
-   * 預設代理可以複製到 `https://localhost:4503/bin/receive`
-   * Dispatcher Flush代理可以複製到 `https://localhost:8000/dispatcher/invalidate.cache`
+   * 預設代理程式可復寫至 `https://localhost:4503/bin/receive`
+   * Dispatcher Flush代理程式可以復寫到 `https://localhost:8000/dispatcher/invalidate.cache`
 
-   此處指定的協定（HTTP或HTTPS）將確定傳輸方法。
+   此處指定的通訊協定（HTTP或HTTPS）將決定傳輸方法。
 
-   對於Dispatcher Flush代理，僅當使用基於路徑的虛擬主機條目來區分場時，才使用URI屬性，而使用此欄位來將場目標定為無效。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 鎖定第一個陣列，並使用 `/path2/invalidate.cache` 鎖定第二個陣列。 
+   對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 鎖定第一個陣列，並使用 `/path2/invalidate.cache` 鎖定第二個陣列。 
 
 * **使用者**
 
-   用於訪問目標的帳戶的用戶名。
+   用於存取目標的帳戶使用者名稱。
 
 * **密碼**
 
-   用於訪問目標的帳戶的密碼。
+   用於存取目標的帳戶密碼。
 
 * **NTLM 網域**
 
-   用於NTML身份驗證的域。
+   NTML驗證的網域。
 
 * **NTLM 主機**
 
-   用於NTML身份驗證的主機。
+   NTML驗證的主機。
 
 * **啟用寬鬆 SSL**
 
-   如果希望接受自認證的SSL證書，則啟用。
+   若要接受自我認證的SSL憑證，請啟用。
 
 * **允許過期的憑證**
 
-   如果希望接受過期的SSL證書，則啟用。
+   若要接受過期的SSL憑證，請啟用。
 
 #### Proxy {#proxy}
 
-僅當需要代理時才需要以下設定：
+只有在需要Proxy時，才需要下列設定：
 
 * **Proxy 主機**
 
-   用於傳輸的代理的主機名。
+   用於傳輸的Proxy主機名稱。
 
 * **Proxy 連接埠**
 
-   代理的埠。
+   Proxy的連線埠。
 
 * **Proxy 使用者**
 
-   要使用的帳戶的用戶名。
+   要使用的帳戶使用者名稱。
 
 * **Proxy 密碼**
 
-   要使用的帳戶的密碼。
+   要使用的帳戶密碼。
 
 * **Proxy NTLM 網域**
 
-   代理NTLM域。
+   Proxy NTLM網域。
 
 * **Proxy NTLM 主機**
 
-   代理NTLM域。
+   Proxy NTLM網域。
 
 #### 延伸 {#extended}
 
 * **介面**
 
-   在此可以定義要綁定到的套接字介面。
+   您可以在此處定義要繫結的通訊端介面。
 
-   這將設定建立連接時使用的本地地址。 如果未設定，將使用預設地址。 這對於指定要在多宿主系統或群集系統上使用的介面非常有用。
+   這會設定建立連線時要使用的本機位址。 如果未設定，則使用預設地址。 這對於指定要在多主節點或叢集系統上使用的介面非常有用。
 
 * **HTTP 方法**
 
    要使用的HTTP方法。
 
-   對於Dispatcher Flush代理，這幾乎總是GET的，因此不應更改(POST可能是另一個可能的值)。
+   對於Dispatcher Flush代理程式，這幾乎總是GET且不應變更(POST可能是另一個可能的值)。
 
 * **HTTP 標頭**
 
-   這些用於Dispatcher Flush代理並指定必須刷新的元素。
+   這些用於Dispatcher Flush代理程式，並指定必須清除的元素。
 
-   對於Dispatcher Flush代理，三個標準項不應更改：
+   對於Dispatcher Flush代理程式，不需要變更三個標準專案：
 
    * `CQ-Action:{action}`
    * `CQ-Handle:{path}`
    * `CQ-Path:{path}`
 
-   這些選項（如適用）用於指示刷新句柄或路徑時要使用的操作。 子參數是動態的：
+   系統會視情況使用這些值，指出排清控制代碼或路徑時要使用的動作。 子引數是動態的：
 
-   * `{action}` 指示複製操作
+   * `{action}` 表示復寫動作
 
-   * `{path}` 指示路徑
+   * `{path}` 表示路徑
 
-   它們被與請求相關的路徑/操作所替代，因此不需要「硬編碼」：
+   這些變數會由與請求相關的路徑/動作取代，因此不需要「硬式編碼」：
 
    >[!NOTE]
    >
-   >如果安裝在AEM建議的預設上下文之外的上下文中，則需要在HTTP標頭中註冊該上下文。 例如：
+   >如果您在建議預設內容以外的內容中安裝AEM，則需要在HTTP標頭中註冊該內容。 例如：
    >`CQ-Handle:/<*yourContext*>{path}`
 
 * **關閉連線**
 
-   啟用以在每次請求後關閉連接。
+   啟用以在每次請求後關閉連線。
 
 * **連線逾時**
 
-   嘗試建立連接時應用的超時（毫秒）。
+   嘗試建立連線時要套用的逾時（毫秒）。
 
 * **通訊端逾時**
 
-   在建立連接後等待通信時應用的超時（毫秒）。
+   建立連線後等待流量時所套用的逾時（毫秒）。
 
 * **通訊協定版本**
 
-   協定版本；例如 `1.0` HTTP/1.0。
+   通訊協定版本；例如 `1.0` 適用於HTTP/1.0。
 
 #### 觸發器 {#triggers}
 
-這些設定用於定義自動複製的觸發器：
+這些設定用於定義自動復寫的觸發程式：
 
 * **忽略預設值**
 
-   如果選中，則代理將被排除在預設複製之外；這意味著如果內容作者發出複製操作，則不會使用它。
+   如果勾選，代理將從預設復寫中排除；這意味著如果內容作者發出復寫動作，將不使用該代理。
 
 * **於修改**
 
-   此處，修改頁面時將自動觸發此代理的複製。 這主要用於Dispatcher Flush代理，但也用於反向複製。
+   在此，修改頁面時，將自動觸發此代理程式的復寫。 這主要用於Dispatcher Flush代理程式，但也用於反向復寫。
 
 * **頁尾 (設計)**
 
-   如果選中，代理將在修改時自動複製標籤為分發的任何內容。
+   如果勾選，代理程式會在修改內容時自動復寫標示為要散佈的內容。
 
-* **已到達開/關時間**
+* **已達到開啟/關閉時間**
 
-   當為頁面定義的時間或時間發生時，這將觸發自動複製（以根據需要激活或停用頁面）。 這主要用於Dispatcher Flush代理。
+   這會在為頁面定義的準時或離線時間發生時，觸發自動復寫（以視需要啟用或停用頁面）。 這主要用於Dispatcher Flush代理程式。
 
 * **接收時**
 
-   如果選中，則代理將在接收複製事件時連結複製。
+   如果勾選，代理將在收到復寫事件時進行鏈結復寫。
 
 * **無狀態更新**
 
-   選中後，代理將不會強制更新複製狀態。
+   核取後，代理將不會強制復寫狀態更新。
 
 * **無版本設定**
 
-   選中後，代理將不強製版本化已激活的頁面。
+   勾選後，代理將不會強制對已啟用的頁面進行版本設定。
 
-## 配置複製代理 {#configuring-your-replication-agents}
+## 設定復寫代理 {#configuring-your-replication-agents}
 
-有關使用MSSL將複製代理連接到發佈實例的資訊，請參見 [使用互相SSL進行複製](/help/sites-deploying/mssl-replication.md)。
+如需有關使用MSSL將復寫代理程式連線至發佈執行個體的資訊，請參閱 [使用雙向SSL復寫](/help/sites-deploying/mssl-replication.md).
 
-### 從作者環境配置複製代理 {#configuring-your-replication-agents-from-the-author-environment}
+### 從製作環境設定復寫代理 {#configuring-your-replication-agents-from-the-author-environment}
 
-在作者環境的「工具」頁籤中，您可以配置駐留在作者環境中的複製代理(**作者代理**)或發佈環境(**發佈時的代理**)。 以下過程說明了作者環境的代理配置，但可用於兩者。
+在製作環境的Tools標籤中，您可以設定位於製作環境中的復寫代理(**作者上的代理**)或發佈環境(**發佈代理程式**)。 以下程式說明作者環境的代理程式設定，但可用於兩者。
 
 >[!NOTE]
 >
->當調度程式處理作者或發佈實例的HTTP請求時，來自複製代理的HTTP請求必須包括PATH標頭。 除了以下過程外，還必須將PATH標頭添加到客戶端標頭的調度程式清單中。 (請參閱 [/clientheaders（客戶端頭）](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)。
+>當Dispatcher處理作者或發佈執行個體的HTTP請求時，來自復寫代理程式的HTTP請求必須包含PATH標頭。 除了以下程式外，您還必須將PATH標頭新增到使用者端標頭的Dispatcher清單中。 (請參閱 [/clientheaders （使用者端標頭）](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders).
 
-1. 訪問 **工具** 的上界AEM。
-1. 按一下 **複製** （左窗格開啟資料夾）。
-1. 按兩下 **作者代理** （左窗格或右窗格）。
-1. 按一下相應的代理名稱（即連結）以顯示該代理的詳細資訊。
-1. 按一下 **編輯** 要開啟配置對話框，請執行以下操作：
+1. 存取 **工具** AEM索引標籤中的「 」。
+1. 按一下 **復寫** （左窗格以開啟資料夾）。
+1. 按兩下 **作者上的代理** （左側或右側窗格）。
+1. 按一下適當的代理程式名稱（連結）以顯示該代理程式的詳細資訊。
+1. 按一下 **編輯** 若要開啟設定對話方塊：
 
    ![chlimage_1-22](assets/chlimage_1-22.png)
 
-1. 提供的值應足以用於預設安裝。 如果進行更改，則按一下 **確定** 保存它們(請參閱 [複製代理 — 配置參數](#replication-agents-configuration-parameters) )的正平方根。
+1. 提供的值應足以進行預設安裝。 若您進行變更，請按一下 **確定** 以儲存它們(請參閱 [復寫代理程式 — 設定引數](#replication-agents-configuration-parameters) 以取得個別引數的詳細資訊)。
 
 >[!NOTE]
 >
->指定的標準安AEM裝 `admin` 作為預設複製代理中傳輸憑據的用戶。
+>AEM的標準安裝會指定 `admin` 在預設復寫代理程式中作為傳輸認證的使用者。
 >
->應將此帳戶更改為具有複製所需路徑權限的特定於站點的複製用戶帳戶。
+>這應該變更為具有複製所需路徑之許可權的站台特定複製使用者帳戶。
 
-### 配置反向複製 {#configuring-reverse-replication}
+### 設定反向復寫 {#configuring-reverse-replication}
 
-反向複製用於將發佈實例上生成的用戶內容返回到作者實例。 這通常用於調查和登記表等功能。
+反向復寫可用於將發佈執行個體上產生的使用者內容傳回作者執行個體。 這通常用於調查和登錄檔單等功能。
 
-出於安全原因，大多數網路拓撲不允許連接 *從* 「非軍事區」(將外部服務暴露給不受信任的網路（如Internet）的子網路)。
+基於安全理由，大多數網路拓撲都不允許連線 *從* 「非軍事區」(將外部服務公開至不受信任的網路（例如網際網路）的子網路)。
 
-由於發佈環境通常位於DMZ中，因此要將內容返回給作者環境，必須從作者實例啟動連接。 這是通過：
+由於發佈環境通常位於DMZ中，因此若要將內容取回製作環境，必須從製作執行個體啟動連線。 可透過以下方式完成：
 
-* 一個 *輸出* 在放置內容的發佈環境中。
-* 作者環境中的代理（發佈），它定期輪詢發件箱以查找新內容。
+* 一個 *寄件匣* 內容所在的發佈環境中。
+* 製作環境中的代理程式（發佈），會定期輪詢寄件匣以取得新內容。
 
 >[!NOTE]
 >
->對AEM於 [社區](/help/communities/overview.md)，複製不用於發佈實例上的用戶生成的內容。 請參閱 [社區內容儲存](/help/communities/working-with-srp.md)。
+>適用於AEM [Communities](/help/communities/overview.md)，復寫不適用於發佈執行個體上使用者產生的內容。 另請參閱 [社群內容儲存](/help/communities/working-with-srp.md).
 
-為此，您需要：
+若要這麼做，您需要：
 
-**作者環境中的反向複製代理** 它充當活動元件，用於從發佈環境中的發件箱收集資訊：
+**製作環境中的反向復寫代理程式** 這會作為使用中元件，從發佈環境中的寄件匣收集資訊：
 
-如果要使用反向複製，請確保激活此代理。
+如果您想使用反向復寫，請確定此代理程式已啟用。
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
-**發佈環境中的反向複製代理（發件箱）** 這是被動元素，因為它充當「發件箱」。 用戶輸入將放在此處，由作者環境中的代理從中收集。
+**發佈環境中的反向復寫代理程式（寄件匣）** 這是被動元素，因為它可當作「寄件匣」。 使用者輸入會放置在這裡，由作者環境中的代理程式從中收集。
 
 ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-### 為多個發佈實例配置複製 {#configuring-replication-for-multiple-publish-instances}
+### 為多個發佈執行個體設定復寫 {#configuring-replication-for-multiple-publish-instances}
 
 >[!NOTE]
 >
->僅複製內容 — 不複製用戶資料（用戶、用戶組和用戶配置檔案）。
+>僅複製內容 — 不複製使用者資料（使用者、使用者群組和使用者設定檔）。
 >
->要在多個發佈實例之間同步用戶資料，請啟用 [用戶同步](/help/sites-administering/sync.md)。
+>若要同步多個發佈執行個體的使用者資料，請啟用 [使用者同步](/help/sites-administering/sync.md).
 
-安裝後，已配置預設代理以將內容複製到本地主機的埠4503上運行的發佈實例。
+在安裝時，已設定預設代理程式，以便將內容復寫至在localhost的連線埠4503上執行的發佈執行個體。
 
-要配置其他發佈實例的內容複製，您需要建立並配置新的複製代理：
+若要為其他發佈執行個體設定內容復寫，您需要建立和設定新的復寫代理程式：
 
-1. 開啟 **工具** 的上界AEM。
-1. 選擇 **複製**，則 **作者代理** 的下界。
-1. 選擇 **新建……**。
-1. 設定 **標題** 和 **名稱**，然後選擇 **複製代理**。
-1. 按一下 **建立** 的子菜單。
-1. 按兩下新代理項以開啟配置面板。
-1. 按一下 **編輯** - **代理設定** 對話框開啟 —  **序列化類型** 已定義為「預設」，但必須保持此狀態。
+1. 開啟 **工具** AEM索引標籤中的「 」。
+1. 選取 **復寫**，則 **作者上的代理** 在左側面板中。
+1. 選取 **新增……**.
+1. 設定 **標題** 和 **名稱**，然後選取 **復寫代理**.
+1. 按一下 **建立** 以建立新的代理程式。
+1. 連按兩下新代理程式專案以開啟設定面板。
+1. 按一下 **編輯** - **代理程式設定** 對話方塊將會開啟 —  **序列化型別** 已定義為「預設」，此狀態必須維持不變。
 
-   * 在 **設定** 頁籤：
+   * 在 **設定** 標籤：
 
-      * 激活 **已啟用**。
-      * 輸入 **說明**。
-      * 設定 **重試延遲** 至 `60000`。
+      * 啟動 **已啟用**.
+      * 輸入 **說明**.
+      * 設定 **重試延遲** 至 `60000`.
 
-      * 離開 **序列化類型** 如 `Default`。
-   * 在 **運輸** 頁籤：
+      * 離開 **序列化型別** 作為 `Default`.
+   * 在 **傳輸** 標籤：
 
-      * 輸入新發佈實例所需的URI;比如說，
+      * 輸入新發佈執行個體的必要URI；例如，
          `https://localhost:4504/bin/receive`。
 
-      * 輸入用於複製的站點特定用戶帳戶。
-      * 您可以根據需要配置其他參數。
+      * 輸入用於復寫的特定於站台的使用者帳戶。
+      * 您可以視需要設定其他引數。
 
 
-1. 按一下 **確定** 按鈕。
+1. 按一下 **確定** 以儲存設定。
 
-然後，可以通過在作者環境中更新和發佈頁面來test操作。
+然後，您可以透過更新然後發佈作者環境中的頁面來測試操作。
 
-更新將顯示在上面配置的所有發佈實例上。
+更新將顯示在已如上配置的所有發佈執行個體上。
 
-如果遇到任何問題，可檢查作者實例上的日誌。 根據所需的詳細程度，您還可以設定 **日誌級別** 至 `Debug` 使用 **代理設定** 對話框。
+如果您遇到任何問題，可以檢查作者執行個體上的記錄。 視所需的詳細程度而定，您也可以設定 **記錄層級** 至 `Debug` 使用 **代理程式設定** 對話方塊。
 
 >[!NOTE]
 >
->這可以與 [代理用戶ID](#agentuserid) 選擇不同內容以複製到各個發佈環境。 對於每個發佈環境：
+>這可以結合使用 [代理使用者ID](#agentuserid) 以選取不同的內容來復寫至個別發佈環境。 對於每個發佈環境：
 >
->1. 配置複製代理以複製到該發佈環境。
->1. 配置用戶帳戶；具有讀取將複製到該特定發佈環境的內容所需的訪問權限。
->1. 將用戶帳戶分配為 **代理用戶ID** 的下界。
+>1. 設定復寫代理程式以復寫至該發佈環境。
+>1. 設定使用者帳戶；具有讀取將復寫至該特定發佈環境之內容所需的存取許可權。
+>1. 將使用者帳戶指派為 **代理使用者ID** 用於復寫代理程式。
 
 >
 
 
-### 配置Dispatcher Flush代理 {#configuring-a-dispatcher-flush-agent}
+### 設定Dispatcher Flush代理程式 {#configuring-a-dispatcher-flush-agent}
 
-安裝中包含預設代理。 但是，如果要定義新代理，則仍需要某些配置：
+預設代理程式會包含在安裝中。 不過，您仍需要某些設定，如果您定義新的代理程式，也同樣需要此設定：
 
-1. 開啟 **工具** 的上界AEM。
-1. 按一下 **部署**。
-1. 選擇 **複製** 然後 **發佈時的代理**。
-1. 按兩下 **調度程式刷新** 項以開啟概覽。
-1. 按一下 **編輯** - **代理設定** 對話框開啟：
+1. 開啟 **工具** AEM索引標籤中的「 」。
+1. 按一下 **部署**.
+1. 選取 **復寫** 然後 **發佈代理程式**.
+1. 連按兩下 **Dispatcher排清** 專案，以開啟「概述」。
+1. 按一下 **編輯** - **代理程式設定** 對話方塊將會開啟：
 
-   * 在 **設定** 頁籤：
+   * 在 **設定** 標籤：
 
-      * 激活 **已啟用**。
-      * 輸入 **說明**。
-      * 離開 **序列化類型** 如 `Dispatcher Flush`，或在建立新代理時將其設定為。
+      * 啟動 **已啟用**.
+      * 輸入 **說明**.
+      * 離開 **序列化型別** 作為 `Dispatcher Flush`，或若建立新代理程式，則將其設定為依此類推。
 
-      * （可選）選擇 **別名更新** 啟用對Dispatcher的別名或虛路徑無效請求。
-   * 在 **運輸** 頁籤：
+      * （選用）選取 **別名更新** 啟用對Dispatcher的別名或虛名路徑失效請求。
+   * 在 **傳輸** 標籤：
 
-      * 輸入新發佈實例所需的URI;比如說，
+      * 輸入新發佈執行個體的必要URI；例如，
          `https://localhost:80/dispatcher/invalidate.cache`。
 
-      * 輸入用於複製的站點特定用戶帳戶。
-      * 您可以根據需要配置其他參數。
+      * 輸入用於復寫的特定於站台的使用者帳戶。
+      * 您可以視需要設定其他引數。
 
-   對於Dispatcher Flush代理，僅當使用基於路徑的虛擬主機條目來區分場時，才使用URI屬性，而使用此欄位來將場目標定為無效。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 鎖定第一個陣列，並使用 `/path2/invalidate.cache` 鎖定第二個陣列。 
+   對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 鎖定第一個陣列，並使用 `/path2/invalidate.cache` 鎖定第二個陣列。 
 
    >[!NOTE]
    >
-   >如果安裝在AEM建議的預設上下文以外的上下文中，則需要配置 [HTTP標頭](#extended) 的 **擴展** 頁籤。
+   >如果您已在非建議預設內容中安裝AEM，則您需要設定 [HTTP標頭](#extended) 在 **延伸** 標籤。
 
-1. 按一下 **確定** 的子菜單。
-1. 返回到 **工具** 頁籤，您可以 **激活** 這樣 **調度程式刷新** 代理(**發佈時的代理**)。
+1. 按一下 **確定** 以儲存變更。
+1. 返回 **工具** 標籤，從這裡您可以 **啟動** 此 **Dispatcher排清** 代理(**發佈代理程式**)。
 
-的 **調度程式刷新** 複製代理在作者上未處於活動狀態。 可以使用等效URI訪問發佈環境中的同一頁；比如說， `https://localhost:4503/etc/replication/agents.publish/flush.html`。
+此 **Dispatcher排清** 復寫代理程式在作者上未啟用。 您可以使用對等的URI （例如），在發佈環境中存取相同的頁面。 `https://localhost:4503/etc/replication/agents.publish/flush.html`.
 
-### 控制對複製代理的訪問 {#controlling-access-to-replication-agents}
+### 控制對復寫代理程式的存取 {#controlling-access-to-replication-agents}
 
-對用於配置複製代理的頁面的訪問可以通過使用上的用戶和/或組頁面權限來控制 `etc/replication` 的下界。
-
->[!NOTE]
->
->設定此類權限不會影響複製內容的用戶（例如，從網站控制台或側腳選項）。 複製框架在複製頁時不使用當前用戶的「用戶會話」訪問複製代理。
-
-### 通過CRXDE Lite配置複製代理 {#configuring-your-replication-agents-from-crxde-lite}
+對用來設定復寫代理的頁面的存取權，可以透過上的使用者和/或群組頁面許可權來控制 `etc/replication` 節點。
 
 >[!NOTE]
 >
->僅支援在 `/etc/replication` 儲存庫位置。 為了正確處理關聯的ACL，需要這樣做。 在樹的另一位置建立複製代理可能會導致未經授權的訪問。
+>設定這類許可權不會影響使用者復寫內容（例如從網站主控台或Sidekick選項）。 復寫架構在復寫頁面時，不會使用目前使用者的「使用者工作階段」來存取復寫代理。
 
-可以使用CRXDE Lite配置複製代理的各種參數。
+### 從CRXDE Lite設定復寫代理 {#configuring-your-replication-agents-from-crxde-lite}
 
-如果導航到 `/etc/replication` 您可以看到以下三個節點：
+>[!NOTE]
+>
+>僅支援建立復寫代理程式 `/etc/replication` 存放庫位置。 為了正確處理關聯的ACL，需要此屬性。 在樹狀結構的其他位置建立復寫代理程式可能會導致未經授權的存取。
+
+您可以使用CRXDE Lite設定復寫代理的各種引數。
+
+如果您導覽至 `/etc/replication` 您可以看到下列三個節點：
 
 * `agents.author`
 * `agents.publish`
 * `treeactivation`
 
-兩個 `agents` 保存有關相應環境的配置資訊，並且僅當該環境正在運行時才處於活動狀態。 比如說， `agents.publish` 將僅用於發佈環境。 以下螢幕快照顯示了作者環境中的發佈代理(隨AEMWCM一起提供):
+兩個 `agents` 保留適當環境的設定資訊，且僅在該環境執行時有效。 例如， `agents.publish` 將僅用於發佈環境。 以下熒幕擷圖顯示製作環境中的發佈代理程式(隨AEM WCM提供)：
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
-## 監視複製代理 {#monitoring-your-replication-agents}
+## 監視復寫代理 {#monitoring-your-replication-agents}
 
-監視複製代理：
+監督復寫代理程式：
 
-1. 訪問 **工具** 的上界AEM。
-1. 按一下 **複製**。
-1. 按兩下相應環境（左窗格或右窗格）的代理連結；例如 **作者代理**。
+1. 存取 **工具** AEM索引標籤中的「 」。
+1. 按一下 **復寫**.
+1. 連按兩下適當環境的代理程式連結（左窗格或右窗格）；例如 **作者上的代理**.
 
-   生成的窗口顯示作者環境的所有複製代理的概述，包括其目標和狀態。
+   產生的視窗會顯示製作環境之所有復寫代理程式的概觀，包括其目標和狀態。
 
-1. 按一下相應的代理名稱（即連結）以顯示有關該代理的詳細資訊：
+1. 按一下適當的代理程式名稱（連結）以顯示該代理程式的詳細資訊：
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
    您可以在這裡：
 
-   * 查看是否啟用代理。
-   * 查看任何複製的目標。
-   * 查看複製隊列當前是否處於活動狀態（已啟用）。
-   * 查看隊列中是否有任何項。
-   * **刷新** 或 **清除** 更新隊列條目的顯示；這有助於您查看輸入和離開隊列的項目。
+   * 檢視代理程式是否已啟用。
+   * 檢視任何復寫的目標。
+   * 檢視復寫佇列目前是否啟用。
+   * 檢視佇列中是否有任何專案。
+   * **重新整理** 或 **清除** 更新佇列專案的顯示；這有助於您檢視進入和離開佇列的專案。
 
-   * **查看日誌** 訪問複製代理執行的任何操作的日誌。
-   * **Test連接** 到目標實例。
-   * **強制重試** 清單項。
+   * **檢視記錄** 存取復寫代理程式的任何動作記錄。
+   * **測試連線** 至目標執行個體。
+   * **強制重試** 在任何佇列專案上（如有需要）。
 
    >[!CAUTION]
    >
-   >請勿在發佈實例上使用「Test連接」連結的「反向複製」發件箱。
+   >請勿對發佈執行個體上的「反向復寫寄件匣」使用「測試連線」連結。
    >
    >
-   >如果對發件箱隊列執行複製test，則所有早於test複製的項都將通過每個反向複製進行重新處理。
+   >如果對Outbox佇列執行復寫測試，則任何早於測試復寫的專案都會透過每次反向復寫重新處理。
    >
    >
-   >如果此類項已在隊列中存在，則可以使用以下XPath JCR查詢找到它們，並應將其刪除。
+   >如果佇列中已有此類專案，可在下列XPath JCR查詢中找到並移除這些專案。
    >
    >
    >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
-## 批複製 {#batch-replication}
+## 批次復寫 {#batch-replication}
 
-批處理複製不會複製單個頁或資產，而是等待根據時間或大小觸發這兩個頁的第一個閾值。
+批次復寫不會復寫個別頁面或資產，但會根據時間或大小等待觸發兩者的第一個臨界值。
 
-然後，它將所有複製項打包到一個包中，然後將其作為單個檔案複製到發佈伺服器。
+然後它會將所有復寫專案封裝到一個封裝中，然後以單一檔案的形式復寫到發行者。
 
-發佈者將解包所有項目，保存並向作者報告。
+發佈者會解壓縮所有專案、儲存專案，並向作者回報。
 
-### 配置批複製 {#configuring-batch-replication}
+### 設定批次復寫 {#configuring-batch-replication}
 
 1. 前往 `http://serveraddress:serverport/siteadmin`
-1. 按 **[!UICONTROL 工具]** 表徵圖
-1. 從左側導航欄，轉到 **[!UICONTROL 複製 — 作者上的代理]** 按兩下 **[!UICONTROL 預設代理]**。
-   * 您也可以直接轉到 `http://serveraddress:serverport/etc/replication/agents.author/publish.html`
-1. 按 **[!UICONTROL 編輯]** 按鈕。
-1. 在以下窗口中，轉到 **[!UICONTROL 批]** 頁籤：
-   ![批處理複製](assets/batchreplication.png)
-1. 配置代理。
+1. 按下 **[!UICONTROL 工具]** 圖示上方顯示
+1. 從左側導覽邊欄，前往 **[!UICONTROL 復寫 — 作者上的代理]** 並按兩下 **[!UICONTROL 預設代理程式]**.
+   * 您也可以直接前往「 」，存取預設發佈復寫代理程式。 `http://serveraddress:serverport/etc/replication/agents.author/publish.html`
+1. 按下 **[!UICONTROL 編輯]** 按鈕進行複製。
+1. 在下列視窗中，前往 **[!UICONTROL 批次]** 標籤：
+   ![批次復寫](assets/batchreplication.png)
+1. 設定代理。
 
 ### 參數 {#parameters}
 
-* `[!UICONTROL Enable Batch Mode]`  — 啟用或禁用批複製模式
-* `[!UICONTROL Max Wait Time]`  — 啟動批處理請求前的最長等待時間（秒）。 預設值為2秒。
-* `[!UICONTROL Trigger Size]`  — 當此大小限制時啟動批處理複製
+* `[!UICONTROL Enable Batch Mode]`  — 啟用或停用批次複製模式
+* `[!UICONTROL Max Wait Time]`  — 批次要求啟動前的等待時間上限（以秒為單位）。 預設值為2秒。
+* `[!UICONTROL Trigger Size]`  — 在此大小限制時開始批次復寫
 
 ## 其他資源 {#additional-resources}
 
-有關故障排除的詳細資訊，請閱讀 [排除複製故障](/help/sites-deploying/troubleshoot-rep.md) 的子菜單。
+如需疑難排解的詳細資訊，請參閱 [疑難排解復寫](/help/sites-deploying/troubleshoot-rep.md) 頁面。

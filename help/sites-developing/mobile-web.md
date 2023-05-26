@@ -1,7 +1,7 @@
 ---
-title: 移動Web
+title: 行動網頁
 seo-title: Mobile Web
-description: AEM提供了多種工具，使您能夠為移動設備開發站點並將內容整合到移動應用程式中
+description: AEM提供數種工具，可讓您為行動裝置開發網站，並將您的內容整合到行動應用程式中
 seo-description: AEM provides several tools that enable you to develop sites for mobile devices and to integrate your content into mobile applications
 uuid: 283667fa-1891-4a93-b074-792a8e15efc1
 contentOwner: Guillaume Carlino
@@ -18,25 +18,25 @@ ht-degree: 1%
 
 ---
 
-# 移動Web{#mobile-web}
+# 行動網頁{#mobile-web}
 
 >[!NOTE]
 >
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-提AEM供了多種工具，使您能夠為移動設備開發站點並將內容整合到移動應用程式中。
+AEM提供數種工具，可讓您開發行動裝置的網站，以及將您的內容整合到行動應用程式中。
 
-此頁應與 [作者的移動頁面](/help/sites-authoring/mobile.md)。
+本頁應結合 [作者的行動裝置頁面](/help/sites-authoring/mobile.md).
 
-## 開發移動網站 {#developing-web-sites-for-mobile}
+## 為行動裝置開發網站 {#developing-web-sites-for-mobile}
 
-開發針對使用移動設備查看而優化的頁面模板和元件。 開發使用響應版式的頁面，該版式可調整為多個螢幕大小，或開發針對特定螢幕大小而優化的頁面。 使用為WSYWIG創作和預AEM覽提供或建立您自己的模擬器的設備模擬器：
+開發針對使用行動裝置檢視而最佳化的頁面範本和元件。 開發使用回應式版面來調整多個熒幕大小的頁面，或開發針對特定熒幕大小最佳化的頁面。 使用AEM提供的裝置模擬器或建立您自己的模擬器，以進行WSYWIG製作和預覽：
 
-* [建立設備組篩選器](/help/sites-developing/groupfilters.md)
-* [網頁響應性設計](/help/sites-developing/responsive.md)
-* [為移動設備建立站點](/help/sites-developing/mobile.md)
+* [建立裝置群組篩選器](/help/sites-developing/groupfilters.md)
+* [網頁的回應式設計](/help/sites-developing/responsive.md)
+* [建立行動裝置的網站](/help/sites-developing/mobile.md)
 * [模擬器](/help/sites-developing/emulators.md)
 
-## 開發移動應用 {#developing-mobile-apps}
+## 開發行動應用程式 {#developing-mobile-apps}
 
-開發使用頁面作為應AEM用程式介面的移動應用程式。 與AEMPhoneGap整合，以便您可以使用頁面輕鬆建立AEM應用。 「內容同步」使您能夠建立頁面版本控制存檔，以便與應用捆綁。 要瞭解有關內容同步的詳細資訊，請按一下 [這裡](/help/mobile/phonegap-contentsync.md)。
+開發使用AEM頁面作為應用程式介面的行動應用程式。 AEM與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 內容同步可讓您建立頁面的版本化封存，以便與應用程式整合。 若要進一步瞭解Content Sync，請按一下 [此處](/help/mobile/phonegap-contentsync.md).

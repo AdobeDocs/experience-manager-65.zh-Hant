@@ -1,7 +1,7 @@
 ---
-title: 自定義頁面屬性的視圖
+title: 自訂頁面屬性檢視
 seo-title: Customizing Views of Page Properties
-description: 每個頁面都有一組屬性，您可以根據需要編輯這些屬性
+description: 每個頁面都有一組您可以視需要編輯的屬性
 seo-description: Every page has a set of properties that you can edit as required
 uuid: cbfca6e6-cb9e-43b1-8889-09a7cc9f8a51
 contentOwner: User
@@ -17,33 +17,33 @@ ht-degree: 1%
 
 ---
 
-# 自定義頁面屬性的視圖{#customizing-views-of-page-properties}
+# 自訂頁面屬性檢視{#customizing-views-of-page-properties}
 
-每頁都有一組 [屬性](/help/sites-authoring/editing-page-properties.md) 用戶可查看和編輯；建立頁面（建立視圖）時需要一些，其他部分則可以在稍後的階段查看和編輯（編輯視圖）。 這些頁面屬性由對話框定義和提供( `cq:dialog`)。
+每個頁面都有一組 [屬性](/help/sites-authoring/editing-page-properties.md) 使用者可以檢視和編輯的專案；建立頁面（建立檢視）時需要某些專案，稍候可以檢視和編輯（編輯檢視）。 這些頁面屬性會透過對話方塊( `cq:dialog`)。
 
 >[!CAUTION]
 >
->自定義頁面屬性視圖在傳統UI中不可用。
+>傳統UI中不提供自訂頁面屬性檢視。
 
-每個頁屬性的預設狀態為：
+每個頁面屬性的預設狀態為：
 
-* 隱藏在建立視圖中(例如 **建立頁** 嚮導)
+* 在建立檢視中隱藏(例如 **建立頁面** 精靈)
 
-* 可在編輯視圖(例如 **查看屬性**)
+* 可在編輯檢視中使用(例如 **檢視屬性**)
 
-如果需要更改，必須特別配置欄位。 這是使用適當的節點屬性完成的：
+如果需要任何變更，則必須明確設定欄位。 這是使用適當的節點屬性來完成的：
 
-* 可在建立視圖中使用的頁面屬性(例如 **建立頁** ):
+* 建立檢視中可用的頁面屬性(例如 **建立頁面** 精靈)：
 
    * 名稱: `cq:showOnCreate`
    * 類型: `Boolean`
 
-* 可在編輯視圖中使用的頁面屬性(例如 **視圖**/**編輯**) **屬性** 選項):
+* 編輯檢視中可用的頁面屬性(例如 **檢視**/**編輯**) **屬性** option)：
 
    * 名稱: `cq:hideOnEdit`
    * 類型: `Boolean`
 
-例如，請參閱在 **更多標題和說明** 的 **基本** 頁籤。 這些在中可見 **建立頁** 嚮導 `cq:showOnCreate` 已設定為 `true`:
+例如，請參閱「 」下分組欄位的設定 **更多標題和說明** 於 **基本** Foundation Page元件的索引標籤。 這些專案會顯示在 **建立頁面** 精靈為 `cq:showOnCreate` 已設為 `true`：
 
 ```xml
 /libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/moretitles
@@ -51,16 +51,16 @@ ht-degree: 1%
 
 >[!TIP]
 >
->查看 [擴展頁面屬性教程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) 的子菜單。
+>請參閱 [擴充頁面屬性教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) 以取得自訂頁面屬性的指南。
 
-## 配置頁面屬性 {#configuring-your-page-properties}
+## 設定頁面屬性 {#configuring-your-page-properties}
 
-也可以通過配置頁面元件的對話框和應用相應節點屬性來配置可用欄位。
+您也可以設定頁面元件的對話方塊並套用適當的節點屬性，以設定可用的欄位。
 
-例如，預設情況下， [**建立頁** 嚮導](/help/sites-authoring/managing-pages.md#creating-a-new-page) 顯示在下面分組的欄位 **更多標題和說明**。 要隱藏您配置的這些內容：
+例如，根據預設， [**建立頁面** 精靈](/help/sites-authoring/managing-pages.md#creating-a-new-page) 顯示分組在下列位置的欄位： **更多標題和說明**. 若要隱藏這些專案，請設定：
 
-1. 在下面建立頁面元件 `/apps`。
-1. 建立覆蓋(使用 *對話框差異* 由 [Sling資源合併](/help/sites-developing/sling-resource-merger.md)) `basic` 頁面元件部分；例如：
+1. 在下建立您的頁面元件 `/apps`.
+1. 建立覆寫(使用 *對話方塊差異* 提供者： [Sling資源合併](/help/sites-developing/sling-resource-merger.md))，適用於 `basic` 頁面元件的區段；例如：
 
    ```xml
    <your-page-component>/cq:dialog/content/items/tabs/items/basic
@@ -68,45 +68,45 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >請參閱：
+   >如需參考，請參閱：
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
-   但是，你 ***必須*** 沒有改變 `/libs` 路徑。
-   這是因為 `/libs` 在下次升級實例時被覆蓋（在應用修補程式或功能包時很可能被覆蓋）。
-   建議的配置和其他更改方法是：
-   1. 重新建立所需項(如 `/libs`) `/apps`
-   1. 在 `/apps`
+   不過，您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
+   這是因為 `/libs` 下次升級執行個體時會被覆寫（而您在套用hotfix或feature pack時很可能會被覆寫）。
+   設定和其他變更的建議方法是：
+   1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
+   1. 進行任何變更 `/apps`
 
 
-1. 設定 `path` 屬性 `basic` 指向對基本頁籤的覆蓋（另請參見下一步）。 例如：
+1. 設定 `path` 屬性： `basic` 指向基本標籤的覆寫（另請參閱下一個步驟）。 例如：
 
    ```xml
    /apps/demos/components/page/tabs/basic
    ```
 
-1. 建立對 `basic` - `moretitles` 在相應路徑上分段；例如：
+1. 建立「 」的覆寫 `basic` - `moretitles` 對應路徑下的區段；例如：
 
    ```xml
    /apps/demos/components/page/tabs/basic/items/column/items/moretitles
    ```
 
-1. 應用相應的節點屬性：
+1. 套用適當的節點屬性：
 
    * **名稱**: `cq:showOnCreate`
-   * **類型**: `Boolean`
+   * **型別**： `Boolean`
    * **值**: `false`
 
-   的 **更多標題和說明** 部分將不再顯示在 **建立頁** 的子菜單。
+   此 **更多標題和說明** 區段將不再顯示於 **建立頁面** 精靈。
 
 >[!NOTE]
-配置用於即時副本的頁面屬性時，請參見 [在頁屬性上配置MSM鎖](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) 的子菜單。
+設定要與即時副本一起使用的頁面屬性時，請參閱 [在頁面屬性上設定MSM鎖定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) 以取得更多詳細資料。
 
-## 頁面屬性配置示例 {#sample-configuration-of-page-properties}
+## 頁面屬性的設定範例 {#sample-configuration-of-page-properties}
 
-此示例演示了 [Sling資源合併](/help/sites-developing/sling-resource-merger.md);包括使用 [`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties)。 它還說明了兩者的使用 `cq:showOnCreate` 和 `cq:hideOnEdit`。
+此範例示範 [Sling資源合併](/help/sites-developing/sling-resource-merger.md)；包括使用 [`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties). 它也會說明這兩種功能的使用 `cq:showOnCreate` 和 `cq:hideOnEdit`.
 
-GITHUB代碼
+GITHUB上的程式碼
 
-可以在GitHub上找到此頁的代碼
+您可以在GitHub上找到此頁面的程式碼
 
-* [在GitHub上開啟創作擴展頁對話框項目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-page-dialog)
+* [在GitHub上開啟aem-authoring-extension-page-dialog專案](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-page-dialog)

@@ -1,7 +1,7 @@
 ---
-title: 緩解中的序列化問AEM題
+title: 緩解AEM中的序列化問題
 seo-title: Mitigating serialization issues in AEM
-description: 瞭解如何緩解中的序列化問AEM題。
+description: 瞭解如何減少AEM中的序列化問題。
 seo-description: Learn how to mitigate serialization issues in AEM.
 uuid: c3989dc6-c728-40fd-bc47-f8427ed71a49
 contentOwner: Guillaume Carlino
@@ -17,122 +17,122 @@ ht-degree: 0%
 
 ---
 
-# 緩解中的序列化問AEM題{#mitigating-serialization-issues-in-aem}
+# 緩解AEM中的序列化問題{#mitigating-serialization-issues-in-aem}
 
 ## 概觀 {#overview}
 
-AdobeAEM團隊與開源項目密切合作 [非SoSerial](https://github.com/kantega/notsoserial) 幫助減輕中描述的漏洞 **CVE-2015-7501**。 NotSoSerial在 [Apache 2許可證](https://www.apache.org/licenses/LICENSE-2.0) 並包括根據其自身許可的ASM代碼 [類BSD許可證](https://asm.ow2.io/)。
+Adobe的AEM團隊與開放原始碼專案密切合作 [NotSoSerial](https://github.com/kantega/notsoserial) 以協助緩解中所述的弱點 **CVE-2015-7501**. NotSoSerial授權於 [Apache 2授權](https://www.apache.org/licenses/LICENSE-2.0) 並包含自行授權的ASM程式碼 [BSD授權](https://asm.ow2.io/).
 
-此包中包含的代理jar是Adobe修改的NotSoSerial分發。
+此封裝包含的代理程式jar是Adobe修改過的NotSoSerial發佈。
 
-NotSoSerial是Java™級別問題的Java™級別解決方案，不AEM特定。 它會向嘗試反序列化對象添加印前檢查。 此檢查將類名與防火牆樣式的允許清單或阻止清單或兩者test。 由於預設塊清單中的類數有限，因此此test不太可能對您的系統或代碼產生影響。
+NotSoSerial是Java™層級問題的Java™層級解決方案，不是AEM專屬的解決方案。 它會新增預檢檢查來嘗試還原序列化物件。 此檢查會針對防火牆樣式的允許清單、封鎖清單或兩者來測試類別名稱。 由於預設封鎖清單中的類別數量有限，此測試不太可能對您的系統或程式碼造成影響。
 
-預設情況下，代理會針對當前已知的易受攻擊類執行阻止清單檢查。 此阻止清單旨在保護您免受使用此類漏洞的當前漏洞清單的攻擊。
+依預設，代理程式會針對目前已知的易受攻擊類別執行封鎖清單檢查。 此封鎖清單旨在保護您免受目前使用這類漏洞的利用漏洞清單攻擊。
 
-可以按照 [配置代理](/help/sites-administering/mitigating-serialization-issues.md#configuring-the-agent) 文章。
+封鎖清單和允許清單可依照以下說明進行設定： [設定代理程式](/help/sites-administering/mitigating-serialization-issues.md#configuring-the-agent) 章節。
 
-代理旨在幫助緩解最新的已知易受攻擊類。 如果您的項目正在反序列化不受信任的資料，則它仍可能易受拒絕服務攻擊、記憶體不足攻擊和未知的未來反序列化漏洞攻擊。
+此代理程式旨在協助緩解最新已知的易受攻擊類別。 如果您的專案正在還原序列化不受信任的資料，它仍可能容易受到拒絕服務攻擊、記憶體不足攻擊和未知的未來還原序列化攻擊。
 
-Adobe正式支援Java™ 6、7和8。 但是，Adobe的理解是NotSoSerial也支援Java™ 5。
+Adobe正式支援Java™ 6、7和8。 不過，Adobe的理解是NotSoSerial也支援Java™ 5。
 
-## 安裝代理 {#installing-the-agent}
+## 安裝代理程式 {#installing-the-agent}
 
 >[!NOTE]
 >
->如果您以前安裝了6.1的序列化AEM修補程式，請從Java™運行行中刪除代理啟動命令。
+>如果您先前已安裝AEM 6.1的序列化Hotfix，請從Java™執行行移除代理程式啟動命令。
 
-1. 安裝 **com.adobe.cq.cq序列化測試器** 捆綁。
+1. 安裝 **com.adobe.cq.cq-serialization-tester** 套件組合。
 
-1. 轉至「捆綁Web控制台」，位於 `https://server:port/system/console/bundles`
-1. 查找序列化包並啟動它。 這樣做會動態自動載入NotSoSerial代理。
+1. 前往套件Web主控台： `https://server:port/system/console/bundles`
+1. 尋找序列化套件組合併加以啟動。 這樣做會動態自動載入NotSoSerial代理程式。
 
-## 在應用程式伺服器上安裝代理 {#installing-the-agent-on-application-servers}
+## 在應用程式伺服器上安裝代理程式 {#installing-the-agent-on-application-servers}
 
-NotSoSerial代理未包含在應用程式伺服器的標準AEM分發中。 但是，您可以從jar分發中提取它AEM，並將其與應用程式伺服器安裝程式一起使用：
+NotSoSerial代理程式不包含在應用程式伺服器的AEM標準散發中。 不過，您可以從AEM jar散發中擷取它，並將其用於應用程式伺服器設定：
 
-1. 首先，下載快AEM速啟動檔案並解壓它：
+1. 首先，下載AEM快速入門檔案並解壓縮：
 
    ```shell
    java -jar aem-quickstart-6.2.0.jar -unpack
    ```
 
-1. 轉到新解壓快AEM速啟動的位置， `crx-quickstart/opt/notsoserial/` 資料夾 `crx-quickstart` 應用程式伺服器安AEM裝的資料夾。
+1. 前往新解壓縮的AEM快速入門的位置，並複製 `crx-quickstart/opt/notsoserial/` 資料夾至 `crx-quickstart` AEM應用程式伺服器安裝的資料夾。
 
-1. 更改的所有權 `/opt` 運行伺服器的用戶：
+1. 變更以下專案的擁有權： `/opt` 對執行伺服器的使用者：
 
    ```shell
    chown -R opt <user running the server>
    ```
 
-1. 配置並檢查代理是否已正確激活，如本文以下各節所示。
+1. 設定並檢查代理程式是否已正確啟動，如本文以下各節所示。
 
-## 配置代理 {#configuring-the-agent}
+## 設定代理程式 {#configuring-the-agent}
 
-預設配置適用於大多數安裝。 此配置包括已知遠程運行易受攻擊類的阻止清單和信任資料反序列化安全的程式包允許清單。
+預設設定足以進行大部分的安裝。 此設定包含已知的遠端執行易受攻擊類別的封鎖清單，以及可安全還原序列化受信任資料的套件允許清單。
 
-防火牆配置是動態的，可以隨時通過以下方式進行更改：
+防火牆設定是動態的，可透過以下方式隨時變更：
 
-1. 轉到Web控制台 `https://server:port/system/console/configMgr`
-1. 搜索並按一下 **反序列化防火牆配置。**
+1. 前往網頁主控台： `https://server:port/system/console/configMgr`
+1. 搜尋並按一下 **還原序列化防火牆設定。**
 
    >[!NOTE]
-   也可以通過訪問以下URL直接訪問配置頁：
+   您也可以透過存取URL來直接存取設定頁面：
    * `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
 
 
-此配置包含允許清單、阻止清單和反序列化日誌記錄。
+此設定包含允許清單、封鎖清單和反序列化記錄。
 
 **允許清單**
 
-在「允許清單」部分，這些清單是允許反序列化的類或包前置詞。 如果正在反序列化自己的類，請將類或包添加到此允許清單。
+在允許清單區段中，這些清單是允許還原序列化的類別或套件首碼。 如果您要還原序列化自己的類別，請將類別或套件新增至此允許清單。
 
-**塊清單**
+**封鎖清單**
 
-在塊清單部分中是不允許反序列化的類。 這些類的初始集僅限於發現易受遠程執行攻擊的類。 在任何允許列出的條目之前應用阻止清單。
+在區塊清單區段中，為永遠不允許還原序列化的類別。 這些類別的初始集僅限於已發現易受遠端執行攻擊的類別。 封鎖清單會在任何允許清單專案之前套用。
 
-**診斷日誌記錄**
+**診斷記錄**
 
-在診斷日誌記錄部分中，可以選擇幾個選項以在反序列化進行時進行日誌。 這些選項僅在首次使用時登錄，在後續使用時不再登錄。
+在診斷記錄區段中，您可以選擇數個選項，以便在還原序列化進行時記錄。 這些選項僅會在第一次使用時記錄，而不會在後續使用時再次記錄。
 
-預設值 **僅類名** 通知您正在反序列化的類。
+的預設值 **class-name-only** 通知您正在還原序列化的類別。
 
-也可以設定 **全堆棧** 選項，該選項記錄第一次反序列化嘗試的Java™堆棧，以通知您反序列化的發生地。 此選項對於查找和從使用中刪除反序列化非常有用。
+您也可以設定 **完整棧疊** 此選項會記錄第一次還原序列化嘗試的Java™棧疊，以通知您還原序列化發生的位置。 此選項對於在使用中尋找和移除還原序列化相當實用。
 
-## 驗證代理的激活 {#verifying-the-agent-s-activation}
+## 驗證代理程式的啟用 {#verifying-the-agent-s-activation}
 
-通過瀏覽到以下URL，可以驗證反序列化代理的配置：
+您可以瀏覽至下列URL來驗證還原序列化代理程式的設定：
 
 * `https://server:port/system/console/healthcheck?tags=deserialization`
 
-訪問URL後，將顯示與代理相關的運行狀況檢查清單。 通過驗證運行狀況檢查是否正在通過，可以確定代理是否正確激活。 如果失敗，必須手動載入代理。
+存取URL後，會顯示與代理程式相關的健康情況檢查清單。 您可以透過驗證健康情況檢查是否通過來判斷代理程式是否已正確啟動。 如果失敗，您必須手動載入代理程式。
 
-有關解決代理程式問題的詳細資訊，請參閱 [處理動態代理載入時的錯誤](#handling-errors-with-dynamic-agent-loading) 下。
+如需有關疑難排解代理程式問題的詳細資訊，請參閱 [處理動態代理程式載入的錯誤](#handling-errors-with-dynamic-agent-loading) 下方的。
 
 >[!NOTE]
-如果添加 `org.apache.commons.collections.functors` 在allowlist中，運行狀況檢查始終失敗。
+如果您新增 `org.apache.commons.collections.functors` 對於允許清單，健康情況檢查總是會失敗。
 
-## 處理動態代理載入的錯誤 {#handling-errors-with-dynamic-agent-loading}
+## 處理動態代理程式載入的錯誤 {#handling-errors-with-dynamic-agent-loading}
 
-如果日誌中顯示了錯誤，或驗證步驟檢測到載入代理時出現問題，請手動載入代理。 如果使用JRE（Java™運行時環境）而不是JDK（Java™開發工具包），則還建議使用此工作流，因為用於動態載入的工具不可用。
+如果記錄中顯示錯誤，或驗證步驟偵測到載入代理程式的問題，請手動載入代理程式。 如果您使用JRE (Java™ Runtime Environment)而不是JDK (Java™ Development Toolkit)，也建議使用此工作流程，因為動態載入工具無法使用。
 
-要手動載入代理，請執行以下操作：
+若要手動載入代理程式，請執行下列動作：
 
-1. 編輯CQ jar的JVM啟動參數，添加以下選項：
+1. 編輯CQ jar的JVM啟動引數，新增以下選項：
 
    ```shell
    -javaagent:<aem-installation-folder>/crx-quickstart/opt/notsoserial/notsoserial.jar
    ```
 
    >[!NOTE]
-   要求您也使用 — nofork CQ/AEM選項以及相應的JVM記憶體設定，因為未在分類的JVM上啟用代理。
+   您也必須使用 — nofork CQ/AEM選項以及適當的JVM記憶體設定，因為代理程式並未在分支JVM上啟用。
 
    >[!NOTE]
-   NotSoSerial代理jar的Adobe分佈可在 `crx-quickstart/opt/notsoserial/` 資料夾AEM。
+   NotSoSerial代理程式jar的Adobe散發可在以下網址找到： `crx-quickstart/opt/notsoserial/` AEM安裝的資料夾。
 
-1. 停止並重新啟動JVM;
+1. 停止並重新啟動JVM；
 
-1. 按照中介紹的上述步驟再次驗證代理的激活 [驗證代理的激活](/help/sites-administering/mitigating-serialization-issues.md#verifying-the-agent-s-activation)。
+1. 請依照中所述步驟，再次驗證代理程式的啟用 [驗證代理程式的啟用](/help/sites-administering/mitigating-serialization-issues.md#verifying-the-agent-s-activation).
 
-## 其他注意事項 {#other-considerations}
+## 其他考量 {#other-considerations}
 
-如果您在IBM® JVM上運行，請查看有關Java™ Attach API支援的文檔，地址為 [此位置](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=documentation-java-attach-api)。
+如果您正在IBM® JVM上執行，請檢閱支援的Java™ Attach API檔案，網址為 [此位置](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=documentation-java-attach-api).

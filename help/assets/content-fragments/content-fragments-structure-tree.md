@@ -1,6 +1,6 @@
 ---
 title: 內容片段樹狀結構
-description: 使用中的內容片段編輯器的「結構樹」功AEM能，以更好地瞭解您的無頭內容。
+description: 使用AEM中內容片段編輯器的結構樹功能，更能瞭解您的Headless內容。
 feature: Content Fragments
 role: User
 exl-id: 1cf8d3a3-1d9a-42fc-9da0-a20c65f021e4
@@ -13,13 +13,13 @@ ht-degree: 35%
 
 # 內容片段樹狀結構 {#content-fragment-structure-tree}
 
-使用中的內容片段編輯器的「結構樹」功AEM能，以更好地瞭解您的無頭內容。
+使用AEM中內容片段編輯器的結構樹功能，更能瞭解您的Headless內容。
 
-在內容片段編輯器中，可以選擇「結構樹」表徵圖：
+在內容片段編輯器中，您可以選取「結構樹」圖示：
 
 ![內容片段樹狀結構](assets/cfm-structuretree-01.png)
 
-這將開啟左側窗格中片段結構的表示形式。 使用此選項，可以瀏覽和瀏覽引用的片段。 選取一個參考會開啟該片段供您編輯。
+這會在左側窗格中開啟片段結構的表示法。 您可以使用此功能導覽至參考的片段。 選取一個參考會開啟該片段供您編輯。
 
 >[!NOTE]
 >

@@ -1,7 +1,7 @@
 ---
-title: 指定安全設定
+title: 指定安全性設定
 seo-title: Specify security settings
-description: 瞭解如何指定安全設定。
+description: 瞭解如何指定安全性設定。
 seo-description: Learn how to specify security settings.
 uuid: c86ba195-010d-40d6-9f9d-4cb4c364d104
 contentOwner: admin
@@ -17,12 +17,12 @@ ht-degree: 2%
 
 ---
 
-# 指定安全設定 {#specify-security-settings}
+# 指定安全性設定 {#specify-security-settings}
 
-通過輸出，可以控制是否解析XML輸入中的外部實體。 預設情況下，它們將被解析，但您可以更改此行為以增加表單系統AEM的安全性。
+「輸出」可讓您控制是否解析XML輸入中的外部圖元。 依預設，這些問題會得到解決，但您可以變更此行為以提高AEM表單系統的安全性。
 
-**阻止處理包含對外部實體的引用的XML資料檔案**
+**防止處理包含外部實體參照的XML資料檔案**
 
-1. 在管理控制台中，按一下「服務」>「輸出」。
-1. 清除「解析外部圖元」(Resolve External Entities)複選框。
+1. 在Administration Console中，按一下「服務>輸出」。
+1. 清除「解析外部圖元」核取方塊。
 1. 按一下「儲存」。

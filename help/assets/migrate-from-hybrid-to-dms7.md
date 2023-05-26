@@ -1,6 +1,6 @@
 ---
-title: 從Dynamic Media遷移 — 混合模式到Dynamic Media- S7模式
-description: 瞭解如何將您的Dynamic Media實例遷移到Dynamic Media- S7模式
+title: 從Dynamic Media — 混合模式移轉至Dynamic Media - S7模式
+description: 瞭解如何將Dynamic Media — 混合模式執行個體移轉至Dynamic Media - S7模式
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -16,39 +16,39 @@ ht-degree: 2%
 
 ---
 
-# 從Dynamic Media — 混合型到Dynamic Media-Scene7 {#about-migrating}
+# 關於從Dynamic Media-Hybrid移至Dynamic Media-Scene7 {#about-migrating}
 
-Dynamic Media — 混合體是Dynamic Media與Adobe Experience Manager融合的舊版本。 混合版首次在Adobe Experience Manager6.1推出。雖然Adobe繼續支援混合模式，但它不是首選模式；Dynamic Media-Scene7是首選的使用模式。 混合模式也不支援Smart Crop和全景影像等新功能，而Dynamic Media-Scene7則支援這些功能。
+Dynamic Media-Hybrid是Dynamic Media與Adobe Experience Manager整合的舊版本。 混合式版本最初是在Adobe Experience Manager 6.1中引入。雖然Adobe持續支援混合模式，但不是首選模式；首選使用Dynamic Media-Scene7模式。 混合模式也不支援智慧型裁切和全景影像等新功能，而Dynamic Media-Scene7則支援。
 
-Dynamic Media — 混合動力和Dynamic Media-Scene7之間的其他主要差異包括：
+Dynamic Media-Hybrid和Dynamic Media-Scene7之間的其他主要差異包括：
 
-* URL的結構
-* 攝錄像。
-* 建立和儲存影像格式副本。
-* 雲配置和憑據（設定）。
+* URL的結構。
+* 影片擷取。
+* 影像轉譯的建立和儲存。
+* 雲端設定和認證（布建）。
 
-當您從Dynamic Media — 混合型轉向Dynamic Media-Scene7時，可以選擇兩種選擇。 第一種選擇是簡單地提供Dynamic Media-Scene7關於Experience Manager的新實例。 第二個選擇是將您現有的Dynamic Media — 混合型實例遷移到Dynamic Media-Scene7。 此選項在下表中概述了移動過程中需要執行的步驟和注意事項。
+從Dynamic Media-Hybrid移至Dynamic Media-Scene7時，有兩個選項可供使用。 第一個選項是直接在Experience Manager上布建新的Dynamic Media-Scene7執行個體。 第二個選項是將您現有的Dynamic Media-Hybrid執行個體移轉至Dynamic Media-Scene7。 此選項在下方以表格形式概述您在移動過程中要採取的步驟和考量事項。
 
 >[!IMPORTANT]
 >
->Adobe建議您不要在即時生產實例上將「Dynamic Media — 混合」實施遷移到Dynamic Media-Scene7。
+>Adobe建議您不要在即時生產執行個體上將Dynamic Media-Hybrid實作移轉至Dynamic Media-Scene7。
 
-## 備選案文1 — 規定Dynamic Media-Scene7關於Experience Manager的新實例 {#provision-new-dms7}
+## 選項1 — 在Experience Manager上布建新的Dynamic Media-Scene7執行個體 {#provision-new-dms7}
 
-只需從Adobe Experience Manager的Dynamic Media-Scene7新實例開始即可。 除了通過Dynamic MediaCloud Service接收和處理資產外，還強烈建議對資產使用情況、工作流程和元件進行Adobe審計。 通常，您可以使用較新的現成功能替換自定義元件和工作流。
+請考慮在Adobe Experience Manager上使用Dynamic Media-Scene7布建的全新例項，從頭開始。 除了透過Dynamic MediaCloud Service來擷取和處理資產外，強烈建議對資產使用情況、工作流程和元件進行Adobe稽核。 通常，您可以使用較新、現成可用的功能來取代自訂元件和工作流程。
 
-## 選項2 — 將您現有的Dynamic Media — 混合型實例遷移到Dynamic Media-Scene7 {#process-for-migrating}
+## 選項2 — 將您現有的Dynamic Media-Hybrid執行個體移轉至Dynamic Media-Scene7 {#process-for-migrating}
 
 | 步驟 | 任務 | 考量事項 |
 |---|---|---|
-| 1 | 克隆Dynamic Media — 混合作者實例。 | 維護您現有的Dynamic Media — 混合作者實例以備用，直到此遷移過程中的剩餘步驟成功完成。 |
-| 2 | 在Dynamic Media-Scene7模式下啟動克隆的作者實例。 |  |
-| 3 | 在Adobe Experience ManagerCloud Services中，使用Dynamic Media-Scene7證書配置Dynamic Media。 | Adobe必須批准Dynamic Media-Scene7設定。 因此，您有併發的Dynamic MediaM-Hybrid和Dynamic Media-Scene7環境，它們受Adobe支援，但時間有限。 |
-| 4 | 建立遷移捆綁包，以便您可以根據需要接收資產。<br>刪除在初始接收到Dynamic Media — 混合時建立的本地PTIFF。 | 如果所有資產當前在您的Dynamic Media — 混合實例中都可用，則其克隆中已包括所有資產。 因此，不需要捆綁。 |
-| 5 | 運行資產更新工作流，以便將資產同步到Dynamic MediaCloud Service。 | Adobe建議您分批執行更新工作流，以便進行壓縮。 |
-| 6 | 遷移查看器、影像和視頻預設。 |  |
-| 7 | 瀏覽每個Web內容管理引用的資產並更新其關聯的URL。 |  |
-| 8 | 遷移要支援新Dynamic Media-Scene7模式（手動更新）的任何自定義工作流。 |  |
-| 9 | 驗證Web內容管理上載和配置。 |  |
-| 10 | 驗證後，獲得禁用Dynamic Media — 混合作者的批准（保留為備用）。 |  |
-| 11 | 在Dynamic Media-Scene7成功使用約一個月後，刪除Dynamic Media — 混合作者實例。 |  |
+| 1 | 複製Dynamic Media — 混合式製作例項。 | 維護您現有的Dynamic Media-Hybrid Author例項以供遞補用途，直到此移轉程式中的其餘步驟成功完成為止。 |
+| 2 | 在Dynamic Media-Scene7模式中開始復製作者執行個體。 |  |
+| 3 | 在Adobe Experience ManagerCloud Services中，使用Dynamic Media-Scene7憑證設定Dynamic Media。 | Adobe必須核准Dynamic Media-Scene7布建。 因此，您同時擁有受Adobe支援的Dynamic MediaM-Hybrid和Dynamic Media-Scene7環境，但僅限於有限時間。 |
+| 4 | 建立移轉套裝，以便您視需要內嵌資產。<br>刪除初始擷取至Dynamic Media-Hybrid期間建立的本機PTIFF。 | 如果所有資產目前都可在Dynamic Media — 混合式執行個體中使用，則複製的已包含所有資產。 因此，不需要組合。 |
+| 5 | 執行資產更新工作流程，讓您可以將資產同步至Dynamic MediaCloud Service。 | Adobe建議您以批次方式執行更新工作流程，以允許壓縮。 |
+| 6 | 移轉檢視器、影像和視訊預設集。 |  |
+| 7 | 瀏覽每個網頁內容管理參考的資產，並更新其關聯的URL。 |  |
+| 8 | 移轉您要支援新Dynamic Media-Scene7模式的任何自訂工作流程（手動更新）。 |  |
+| 9 | 驗證您的Web內容管理上傳和設定。 |  |
+| 10 | 驗證後，取得停用Dynamic Media-Hybrid Author （以備援形式維護）的核准。 |  |
+| 11 | 在成功使用Dynamic Media-Scene7約一個月後，刪除Dynamic Media-Hybrid Author例項。 |  |

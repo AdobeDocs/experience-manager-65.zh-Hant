@@ -1,7 +1,7 @@
 ---
-title: 登錄到AEM Forms應用
+title: 登入AEM Forms應用程式
 seo-title: Logging in to AEM Forms app
-description: 登錄AEM Forms應用的步驟。
+description: 登入AEM Forms應用程式的步驟。
 seo-description: Steps to log into the AEM Forms app.
 uuid: da8cb0b2-6333-4ead-95f2-fb753149dc5e
 content-type: reference
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 ---
 
-# 登錄到AEM Forms應用{#logging-in-to-aem-forms-app}
+# 登入AEM Forms應用程式{#logging-in-to-aem-forms-app}
 
-啟動AEM Forms應用時，首先需要提供登錄憑據和AEM Forms伺服器URL。
+啟動AEM Forms應用程式時，您必須先提供登入憑證和AEM Forms伺服器URL。
 
-## 啟動應用程式 {#to-start-the-app}
+## 啟動應用程式的方式 {#to-start-the-app}
 
-1. 點擊移動設備上的AEM Forms應用表徵圖。
-1. 要登錄到應用，請輸入用戶名、密碼和AEM Forms伺服器URL。
+1. 在行動裝置上點選AEM Forms應用程式圖示。
+1. 若要登入應用程式，請輸入使用者名稱、密碼和AEM Forms伺服器URL。
 
    >[!NOTE]
    >
-   >移動應用，快取您輸入的所有AEM Forms伺服器URL。
+   >行動應用程式會快取您輸入的所有AEM Forms伺服器URL。
    >
-   >    * 要顯示伺服器URL的清單，請按一下「伺服器URL」文本框右角的清單箭頭。
-   >    * 您可以選擇要通過應用登錄的AEM Forms伺服器URL。
+   >    * 若要顯示伺服器URL清單，請按一下「伺服器URL」文字方塊右角的清單箭頭。
+   >    * 您可以選取要透過應用程式登入的AEM Forms伺服器URL。
 
 
-登錄到應用時，您將被定向到 [**首頁** 螢幕](../../forms/using/home-screen.md)。
+當您登入應用程式時，系統會將您導向至 [**首頁** 畫面](../../forms/using/home-screen.md).
 
 >[!NOTE]
 >
->在離線模式下，只有上次登錄的用戶才能登錄到應用。
+>在離線模式中，只有上次登入的使用者才能登入應用程式。

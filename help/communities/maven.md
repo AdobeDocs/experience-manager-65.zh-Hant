@@ -1,7 +1,7 @@
 ---
-title: 將Maven用於社區
+title: 使用適用於社群的Maven
 seo-title: Using Maven for Communities
-description: AEMUber API罐
+description: AEM Uber API jar
 seo-description: AEM Uber API jar
 uuid: ea37a89a-db6c-4018-8ab9-f5717e6c0421
 contentOwner: Janice Kendall
@@ -17,27 +17,27 @@ ht-degree: 0%
 
 ---
 
-# 將Maven用於社區 {#using-maven-for-communities}
+# 使用適用於社群的Maven {#using-maven-for-communities}
 
 ## 概觀 {#overview}
 
-AEM Communities檔案的這一部分還包括：
+此外，AEM Communities檔案的此章節還包含：
 
-* [使用AEMApache Maven生成項目](../../help/sites-developing/ht-projects-maven.md)。
+* [使用Apache Maven建置AEM專案](../../help/sites-developing/ht-projects-maven.md).
 
-只有一種「uber」藏物可以取代單個藏物：
+只有一個「uber」成品可取代個別成品：
 
-* AEM [Uber API罐](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
+* AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
 
 >[!NOTE]
 >
->從AEM6.4開始，社區API不會顯式發佈。 所有社區API現在都包含在Uber jar中。
+>自AEM 6.4起，Communities API不會明確發行。 所有Communities API現在包含在Uber jar本身中。
 >
->建議與最新的社區版本保持最新。
+>建議您隨時掌握最新的Communities版本。
 >
->請參閱 [最新版本](deploy-communities.md#latest-releases) 的子菜單。
+>另請參閱 [最新版本](deploy-communities.md#latest-releases) 區段來識別最新版本。
 
-## Maven依賴關係示例 {#maven-dependency-example}
+## Maven相依性範例 {#maven-dependency-example}
 
 ```xml
 <dependency>
@@ -50,7 +50,7 @@ AEM Communities檔案的這一部分還包括：
 
 >[!NOTE]
 >
->請參閱 [Uber AEMjar儲存庫](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) 識別最新的優步罐藏物。
+>另請參閱 [AEM Uber jar存放庫](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) 以識別最新的Uber jar成品。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:

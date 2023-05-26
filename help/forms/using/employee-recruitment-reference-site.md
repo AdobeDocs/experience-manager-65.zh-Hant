@@ -1,7 +1,7 @@
 ---
-title: 員工招聘參考站點巡查
+title: 員工招聘參考網站逐步說明
 seo-title: Employee recruitment
-description: AEM Forms參考網站展示了組織如何使用AEM Forms功能來實施員工招聘工作流。
+description: AEM Forms參考網站會展示組織如何使用AEM Forms功能來實作員工招募工作流程。
 seo-description: AEM Forms reference site showcases how organizations can use AEM Forms features to implement employee recruitment workflow.
 uuid: 27e456ba-3c08-4c43-ad54-1ba0070995ad
 topic-tags: introduction
@@ -15,231 +15,231 @@ ht-degree: 0%
 
 ---
 
-# 員工招聘參考站點巡查 {#employee-recruitment-reference-site-walkthrough}
+# 員工招聘參考網站逐步說明 {#employee-recruitment-reference-site-walkthrough}
 
 ## 概觀 {#overview}
 
-We.Finance是一個組織，允許候選人通過參考網站門戶申請就業。 該組織還使用門戶來管理候選人的面試安排、入圍和內部溝通。 該站點管理以下內容：
+We.Finance是可讓應徵者透過參考網站入口網站申請就業的組織。 組織也會使用入口網站來管理候選人的面試排程、短名單和內部溝通。 網站會管理下列專案：
 
-* 搜索和申請工作的候選人
-* 候選人的篩選和入圍
-* 面試流程
-* 候選人詳細資訊的集合
+* 搜尋和申請工作的適用者
+* 篩選及甄選候選人
+* 面試程式
+* 候選者詳細資訊的集合
 * 候選背景檢查
-* 向選定候選人推出聘用
+* 將優惠方案轉出給選取的候選者
 
 >[!NOTE]
 >
->We.Finance和We.Gov參考站點都提供員工招聘使用案例。 演示中使用的示例、影像和說明使用We.Finance參考站點。 但是，您也可以使用We.Gov運行這些使用案例並查看項目。 為此，請替換 **我們金融** 與 **韋戈夫** 的子菜單。
+>We.Finance和We.Gov參考網站都有員工招募使用案例。 逐步說明中使用的範例、影像和說明使用We.Finance參考網站。 不過，您也可以執行這些使用案例，並使用We.Gov檢閱成品。 若要這麼做，請取代 **we-finance** 替換為 **we-gov** 在提及的URL中。
 
-### 涉及的工作流模型 {#workflow-models-involved}
+### 涉及的工作流程模型 {#workflow-models-involved}
 
-員工招聘使用案例包括兩個工作流：
+員工招募使用案例涉及兩個工作流程：
 
-* 面試前 — 我們為員工招聘工作流融資
-* 面試後 — 我們為員工招聘後面試工作流提供資金
+* 面試前 — 我們財務員工招募工作流程
+* 面試後 — 我們財務員工招募面試後工作流程
 
-這些工作流是在中創AEM建的，可在以下位置找到：
+這些工作流程是在AEM中建立的，可在以下網址找到：
 
 `https://[authorHost]:[authorPort]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models/`
 
-#### 我們為員工招聘工作流提供融資 {#we-finance-employee-recruiting-workflow}
+#### 我們為員工招募工作流程提供資金 {#we-finance-employee-recruiting-workflow}
 
-以下是本文檔中遵循的「我們財務員工招聘」工作流模型。
+以下是本檔案遵循的「我們財務員工招聘」工作流程模型。
 
-![員工招聘工作流](assets/we-finance-employee-recruiting-workflow.png)
+![we-finance-employee-recruitment-workflow](assets/we-finance-employee-recruiting-workflow.png)
 
-#### 我們為員工招聘後面試工作流提供資金 {#we-finance-employee-recruiting-post-interview-workflow}
+#### 我們為員工招聘面試工作流程提供資金 {#we-finance-employee-recruiting-post-interview-workflow}
 
-以下是本文檔中遵循的「我們財務員工後面試招聘」工作流模型。
+以下是本檔案中遵循的「我們財務員工面試後招聘」工作流程模型。
 
-![我們財務 — 員工 — 招聘 — 面試 — 工作流](assets/we-finance-employee-recruiting-post-interview-workflow.png)
+![we-finance-employee-recruitment-post-interview-workflow](assets/we-finance-employee-recruiting-post-interview-workflow.png)
 
-### 人物 {#personas}
+### 角色 {#personas}
 
-該方案涉及以下角色：
+此情境涉及下列角色：
 
-* 莎拉·羅斯，該組織的應聘者
-* 招聘人員約翰·雅各布斯
-* 格洛麗亞·里奧斯，招聘經理
-* 無名氏，人力資源部
+* Sarah Rose，應徵者正在申請組織內的工作
+* 招聘人員John Jacobs
+* 招聘經理Gloria Rios
+* HR人員John Doe
 
-## 莎拉申請一份工作 {#sarah-applies-for-a-job}
+## Sarah申請工作 {#sarah-applies-for-a-job}
 
-莎拉·羅絲正在組織里尋找工作機會。 她訪問了他們的門戶網站，並瀏覽了「職業生涯」頁面上列出的職位空缺。 她找到了一份匹配的工作清單，並申請了。
+Sarah Rose正在組織中尋找工作機會。 她瀏覽他們的入口網站，並探索「職業」頁面上列出的職缺職位。 她找到相符的工作清單並申請。
 
-![首頁](assets/home-page.png)
+![home-page](assets/home-page.png)
 
 We.Finance首頁
 
-![職業版](assets/career-page.png)
+![career-page](assets/career-page.png)
 
-We.Finance職業頁
+We.Finance職涯頁面
 
-Sarah按一下Apply on a job posting（在職務發佈時應用）。 將開啟作業申請表。 她填寫申請中的所有詳細資訊並提交。
+Sarah在職缺公告上按一下「套用」 。 工作應用程式表單隨即開啟。 她填寫應用程式中的所有詳細資料並提交它。
 
-![作業申請表](assets/job-application-form.png)
+![job-application-form](assets/job-application-form.png)
 
-### 它的工作原理 {#how-it-works}
+### 運作方式 {#how-it-works}
 
-We.Finance首頁和職業版是AEM Sites頁。 職業生涯頁面嵌入了適應性表單，該表單使用可重複面板來使用服務獲取職位空缺並在頁面上列出這些職位空缺。 可以在以下位置查看自適應表單 `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/recruitment/jobs.html`。
+We.Finance首頁和職涯頁面為AEM Sites頁面。 職涯頁面內嵌最適化表單，此表單會使用可重複的面板，透過服務擷取職缺職位，並在頁面上列出。 您可以造訪以下網址檢視最適化表單： `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/recruitment/jobs.html`.
 
 ### 親眼看看 {#see-it-yourself}
 
-轉到 `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` 按一下 **[!UICONTROL 職業]**。 按一下 **[!UICONTROL 搜索]** 填充作業清單，然後按一下 **[!UICONTROL 應用]** 找份工作。 在表單中填寫詳細資訊並提交申請。
+前往 `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` 並按一下 **[!UICONTROL 職業]**. 按一下 **[!UICONTROL 搜尋]** 填入工作清單，然後按一下 **[!UICONTROL 套用]** 以取得工作。 填寫表單的詳細資料並提交申請。
 
-確保在應用程式中指定有效的電子郵件ID，因為通過此步驟的任何通信都將發送到指定的電子郵件ID。
+請務必在應用程式中指定有效的電子郵件ID，因為透過此逐步說明的任何通訊都會傳送至指定的電子郵件ID。
 
-## 約翰·雅各布斯入圍了莎拉·羅絲的招聘經理招聘簡介 {#john-jacobs-shortlists-sarah-rose-s-profile-for-the-hiring-manager-s-screening}
+## John Jacobs將Sarah Rose的設定檔列入篩選名單 {#john-jacobs-shortlists-sarah-rose-s-profile-for-the-hiring-manager-s-screening}
 
-組織接收Sarah提交的工作申請。 招聘人員約翰·雅各布斯被派去審核莎拉的檔案。 他在收件箱中查看任AEM務，查找與作業要求匹配的配置檔案，然後按一下「快捷方式清單」。 莎拉的檔案被轉給招聘經理格洛麗亞·里奧斯，由她審批。
+組織會收到Sarah提交的工作申請。 招聘人員John Jacobs被指派稽核Sarah設定檔的任務。 他檢閱其AEM收件匣中的任務，尋找符合工作需求的設定檔，然後按一下短清單。 Sarah的個人檔案會轉送給招聘經理Gloria Rios，等待她核准。
 
-![jjacobs收件箱–1](assets/jjacobs-inbox-1.png)
+![jjacobs-inbox-1](assets/jjacobs-inbox-1.png)
 
-約翰的收件箱AEM
+John的AEM收件匣
 
-![候選人候選名單](assets/candidate-shortlist.png)
+![candidate-shortlist](assets/candidate-shortlist.png)
 
-約翰·雅各布斯入圍了莎拉·羅絲的招聘經理招聘簡介
+John Jacobs將Sarah Rose的設定檔列入篩選名單
 
-**它的工作原理**
+**運作方式**
 
-「作業申請」表單中的提交操作會觸發一個工作流，該工作流在John Jacob收件箱中建立一個任務以篩選應用程式。 當John查看並列出應用程式的快捷方式時，工作流會在聘用經理Gloria的收件箱中建立一個任務。
+「工作申請」表單中的提交動作會觸發工作流程，在John Jacob收件匣中建立工作以篩選申請。 當John稽核並甄選申請時，工作流程會在僱用經理Gloria的收件匣中建立任務。
 
 ### 親眼看看 {#see-it-yourself-1}
 
-轉到 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`使用jjacobs/password作為John Jacobs的用戶名/密碼登錄。 開啟「候選人配置檔案複查」任務，並列出申請人。
+前往 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`和使用jjacobs/密碼登入，作為John Jacobs的使用者名稱/密碼。 開啟「應徵者設定檔複查」作業，並將應徵者加入候選清單。
 
-## 格洛麗亞審查申請並批准面試申請人 {#gloria-reviews-the-application-and-approves-the-applicant-for-an-interview}
+## Gloria會複查申請並核准應徵者進行面試 {#gloria-reviews-the-application-and-approves-the-applicant-for-an-interview}
 
-招聘經理Gloria在收件箱中將入圍的個人資料作為一項任AEM務接收。 她審核了，並批准了候選人莎拉·羅斯的面試。
+招聘經理Gloria會在其AEM收件匣中收到入圍的個人資料作為工作。 她稽核並核准候選人莎拉·羅斯接受面試。
 
-![榮耀收件箱](assets/gloriainbox.png)
+![gloriainbox](assets/gloriainbox.png)
 
-格洛麗亞的收AEM件箱
+Gloria的AEM收件匣
 
-![華麗的日程面談](assets/gloriaschedulesinterview.png)
+![gloriaschedulesinterview](assets/gloriaschedulesinterview.png)
 
-格洛麗亞批准莎拉·羅絲接受採訪
+Gloria同意Sarah Rose接受訪談
 
-**它的工作原理**
+**運作方式**
 
-當Gloria批准面試候選人時，工作流會在John Doe的收件箱中建立一個任務AEM,John Doe是We.Finance的招聘人員。
+當Gloria核准面試的候選人時，工作流程會在We.Finance的招聘人員John Doe的AEM收件匣中建立任務。
 
 ### 親眼看看 {#see-it-yourself-2}
 
-轉到 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` 使用jjacobs/password作為John Jacobs的用戶名/密碼登錄。 開啟「候選人配置檔案複查」任務，並列出申請人。
+前往 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` 和使用jjacobs/密碼登入，作為John Jacobs的使用者名稱/密碼。 開啟「應徵者設定檔複查」作業，並將應徵者加入候選清單。
 
-轉到 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` 並使用grios/password作為Gloria Rios的用戶名/密碼登錄。 開啟「候選人配置檔案複查」任務，然後按一下「計畫面試」。
+前往 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` 並使用grios/密碼作為Gloria Rios的使用者名稱/密碼登入。 開啟「應徵者設定檔複查」作業，然後按一下「排程面試」。
 
-## 無名氏安排一個 {#john-doe-schedules-an-interview}
+## John Doe安排面試 {#john-doe-schedules-an-interview}
 
-John Doe在收件箱中接收安排面試的任務。 John Doe選擇並開啟任務，並將面試日期、時間、地點以及負責面試的HR人員確定為John Jacob。 John Doe按一下「發送邀請電子郵件」。 向薩拉發送一封電子郵件，並為招聘經理格洛麗亞分配一項任務，以面試薩拉。
+John Doe會在收件匣中接收排程面試的任務。 John Doe會選取並開啟工作，並以John Jacob的身分修正面試日期與時間、地點以及負責面試的HR人員。 John Doe按一下「傳送邀請電子郵件」。 系統會傳送電子郵件給Sarah，並指派工作給僱用經理Gloria，以便與Sarah面談。
 
-![約翰·雅各布納](assets/johnjacobsaeminbox.png)
+![johnjacobsaeminbox](assets/johnjacobsaeminbox.png)
 
-無名氏收件箱AEM
+John Doe的AEM收件匣
 
-![約翰·杜斯切杜訪談](assets/johndoescheduleinterview.png)
+![johndoescheduleinterview](assets/johndoescheduleinterview.png)
 
-無名氏安排面試時間，把細節發給莎拉·羅絲
+John Doe安排面試，並將詳細資料傳送給Sarah Rose
 
-## 莎拉·羅絲收到一封帶面試時間表的電子郵件 {#sarah-rose-receives-the-email-with-interview-schedule}
+## Sarah Rose收到包含面試排程的電子郵件 {#sarah-rose-receives-the-email-with-interview-schedule}
 
-莎拉·羅絲收到這封電子郵件，內容包括面試時間表、地點和其他細節。 她按一下「接受」，表示她對面試日程和地點沒有問題。 根據確切的資訊，莎拉參加了面試。
+Sarah Rose會收到包含面試時間表、地點和其他詳細資訊的電子郵件。 她按一下「接受」，表示她同意面試排程和地點。 在精確資訊的指引下，Sarah接受了採訪。
 
-![沙羅斯受訪者郵件](assets/sarahroseinterviewemail.png)
+![sarahroseinterviewemail](assets/sarahroseinterviewemail.png)
 
-莎拉·羅絲收到面試日程
+Sarah Rose收到面試排程
 
-## 面試結束後，招聘經理候選人莎拉·羅斯 {#after-the-interviews-the-hiring-manager-shortlists-sarah-rose}
+## 面試結束後，「招聘經理」將Sarah Rose列入候選名單 {#after-the-interviews-the-hiring-manager-shortlists-sarah-rose}
 
-在Sarah Rose完成訪談並清除訪談後，招聘經理Gloria Rios會從收件箱中開啟「候選人選擇」任務，然後按一下「選擇」。 Gloria Rios的決定被轉交人力資源部人員John Doe，供進一步處理。
+在Sarah Rose完成面試並完成面試後，招聘經理Gloria Rios會從收件匣開啟「候選人選擇」工作，然後按一下「選擇」。 Gloria Rios的決定傳達給人力資源人員John Doe，以供進一步處理。
 
-![格洛里辛波克斯](assets/gloriariosinboxoffer.png)
+![gloriariosinboxoffer](assets/gloriariosinboxoffer.png)
 
-格洛麗亞的收AEM件箱
+Gloria的AEM收件匣
 
-![新選人](assets/gloriariosselectcandidate.png)
+![榮耀選取候選](assets/gloriariosselectcandidate.png)
 
-格洛麗亞·里奧斯在面試後選擇莎拉·羅斯
+Gloria Rios在面試後挑選Sarah Rose
 
-## John Doe請求更多資訊 {#john-doe-requests-more-information}
+## John Doe要求更多資訊 {#john-doe-requests-more-information}
 
-在要求候選人加入組織之前，需要檢查她的背景。 John Doe開啟並查看選定申請人的詳細資訊，發現她的一些就業和教育詳細資訊尚未填寫。 無名氏點擊需要更多資訊。
+要求候選人加入組織之前，必須先檢查其背景。 John Doe會開啟並檢閱選取的應徵者詳細資料，發現其部分就業與教育詳細資料尚未填寫。 John Doe點按需要更多資訊。
 
-![約翰·道因博](assets/johndoeinbox.png) ![約翰·尼德莫雷資訊](assets/johndoeneedmoreinformation.png)
+![Johndoeinbox](assets/johndoeinbox.png) ![johndoeneedmoreinformation](assets/johndoeneedmoreinformation.png)
 
-無名氏要求莎拉·羅絲提供更多關於她的教育和工作經驗的資訊
+John Doe向Sarah Rose索取更多教育與工作經驗的相關資訊
 
-## 莎拉·羅斯收到一封電子郵件，要求進一步 {#sarah-rose-receives-an-email-requesting-further-information}
+## Sarah Rose收到一封要求進一步資訊的電子郵件 {#sarah-rose-receives-an-email-requesting-further-information}
 
-Sarah Rose收到一封電子郵件，通知她處理她的就業申請需要進一步的資訊。 該電子郵件包括到表單的連結，用於填寫所需資訊。
+Sarah Rose收到一封電子郵件，通知她需要進一步的資訊才能處理她的就業申請。 電子郵件包含填寫所需資訊之表單的連結。
 
-![沙羅·史密莫勒細節](assets/sarahroseemailmoredetails.png)
+![sarahroseemailmoredetails](assets/sarahroseemailmoredetails.png)
 
-Sarah Rose收到一封電子郵件，通知需要進一步的資訊才能處理她的就業申請
+Sarah Rose收到一封電子郵件，通知她需要進一步的資訊才能處理其就業申請
 
-Sarah按一下電子郵件中的「提供詳細資訊」連結。 將出現一個窗體。 Sarah按John Doe的要求填寫所需的教育和雇傭詳細資訊，然後按一下「提交」。
+Sarah按一下電子郵件中的「提供詳細資訊」連結。 表單隨即出現。 Sarah會根據John Doe的要求填寫必要的教育和就業詳細資訊，然後按一下「提交」。
 
 ![additionalinformation1](assets/additionalinformation1.png)
 
-Sarah通過按一下電子郵件中的連結開啟附加資訊表單
+Sarah按一下電子郵件中的連結，開啟其他資訊表單
 
 ![additionalinformation2](assets/additionalinformation2.png)
 
-Sarah按John Doe的要求填寫其他資訊，然後按一下「提交」
+Sarah會根據John Doe的要求填寫其他資訊，然後按一下提交
 
-## John Doe查看所選候選人配置檔案，瞭解提供的其他資訊 {#john-doe-reviews-the-selected-candidate-profile-for-the-additional-information-provided}
+## John Doe會檢閱選取的候選人設定檔，以取得其他資訊 {#john-doe-reviews-the-selected-candidate-profile-for-the-additional-information-provided}
 
-John Doe選擇候選審閱請求並開啟它。 無名氏發現莎拉已經按要求填寫了所有資訊。 審閱應用程式後，John Doe按一下「批准」。 經無名氏批准，對莎拉·羅斯進行背景調查的請求被轉給約翰·雅各布斯。
+John Doe會選取候選稽核請求並開啟它。 John Doe發現Sarah已填妥所有必要資訊。 檢閱應用程式後，John Doe按一下「核准」。 經John Doe核准後，對Sarah Rose執行背景檢查的請求會轉寄給John Jacobs。
 
-![約翰多附加資訊收件箱](assets/johndoeadditionainformationinbox.png)
+![johndoeditionainformationinbox](assets/johndoeadditionainformationinbox.png)
 
-無名氏收件箱AEM
+John Doe的AEM收件匣
 
-![johndoeadditionalinformationreviewcopy（約翰多附加資訊審閱副本）](assets/johndoeadditionalinformationreview-copy.png)
+![johndoeditionalinformationreview-copy](assets/johndoeadditionalinformationreview-copy.png)
 
-John Doe查看Sarah提供的其他資訊並批准
+John Doe會檢閱Sarah提供的其他資訊並加以核准
 
-## 約翰·雅各布斯收到背景調查請求 {#john-jacobs-receives-a-background-check-request}
+## John Jacobs會收到背景檢查要求 {#john-jacobs-receives-a-background-check-request}
 
-約翰·雅各布斯在收件箱裡看到了背景檢查請求。 約翰·雅各布斯開啟了這項任務，並回顧了莎拉·羅絲提供的資訊。 在執行背景檢查後，John Jacobs按一下「Go Aew」（繼續）以表示背景檢查已成功。
+John Jacobs在收件匣中看到背景檢查要求。 John Jacobs開啟任務並檢閱Sarah Rose提供的資訊。 執行背景檢查後，John Jacobs按一下「繼續」表示背景檢查成功。
 
-![約翰·卡布斯背景棋](assets/johnjacobsbackgroundcheckinbox.png)
+![johnjacobsbackgroundcheckinbox](assets/johnjacobsbackgroundcheckinbox.png)
 
-約翰·雅各布斯的收AEM件箱
+John Jacobs的AEM收件匣
 
-![約翰·雅各布斯背後對決](assets/johnjacobsbackgroundcheckgoahead.png)
+![johnjacobsbackgroundcheckgoahead](assets/johnjacobsbackgroundcheckgoahead.png)
 
-在執行背景檢查後，John Jacobs按一下Go Aeak（繼續）
+執行背景檢查後，John Jacobs按一下「繼續」
 
-## 無名氏把加入信寄給莎拉·羅絲 {#john-doe-sends-out-the-joining-letter-to-sarah-rose}
+## John Doe將加入信寄給Sarah Rose {#john-doe-sends-out-the-joining-letter-to-sarah-rose}
 
-John Doe收到收件箱中AEM的發送加入信的請求。 John開啟請求並查看詳細資訊。 John Doe附加連接信函PDF，然後按一下「附加併發送連接信函」。
+John Doe會在其AEM收件匣中收到傳送加入信件的要求。 John開啟請求並檢視詳細資料。 John Doe附加加入信件PDF，然後按一下「附加並傳送加入信件」。
 
-![約翰松信箱](assets/johndoejoiningletterinbox.png)
+![johndoejoiningletterinbox](assets/johndoejoiningletterinbox.png)
 
-無名氏收件箱AEM
+John Doe的AEM收件匣
 
-![約翰德加入信函附件](assets/johndoejoiningletterattachandsend.png)
+![johndoejoiningletterattachandsend](assets/johndoejoiningletterattachandsend.png)
 
-無名氏將加入信寄出
+John Doe寄出加入信件以供簽署
 
-## 莎拉·羅斯收到並簽署加入信 {#sarah-rose-receives-and-signs-the-joining-letter}
+## Sarah Rose收到並簽署加入信件 {#sarah-rose-receives-and-signs-the-joining-letter}
 
-莎拉·羅斯收到簽名的加入信。 Sarah按一下這裡查看並簽署加入信。 連接字母PDF開啟，並帶有用於簽署文檔的欄位。
+Sarah Rose收到簽署加入信件。 Sarah按一下這裡以檢閱並簽署加入信件。 加入信件PDF會開啟，並附上欄位以簽署檔案。
 
-![沙拉氏連體信件](assets/sarahrosejoiningletteremail.png)
+![sarahrosejoiningletteremail](assets/sarahrosejoiningletteremail.png)
 
-莎拉·羅斯收到了加入信
+Sarah Rose收到簽署加入信件
 
-Sarah可以選擇輸入、使用繪圖進行手寫、插入簽名影像或使用手機的觸摸屏繪製簽名。 Sarah以她的名字鍵入，按一下「按一下以簽名」，然後下載加入信的簽名副本。
+Sarah可以選擇輸入、使用draw手寫、插入簽名影像，或使用她的行動觸控熒幕來繪製她的簽名。 Sarah輸入她的名字，按一下「按一下以簽署」，然後下載加入信函的已簽署復本。
 
-![莎拉羅斯連字元](assets/sarahrosejoininglettersign.png)
+![sarahrosejoininglettersign](assets/sarahrosejoininglettersign.png)
 
-薩拉在名字中鍵入來簽署加入信
+Sarah輸入她的名字以簽署加入信件
 
 ![sarahrosejoininglettersign2](assets/sarahrosejoininglettersign2.png)
 
-Sarah按一下「按一下以簽名」以完成對加入信的簽名
+Sarah按一下按一下即可完成簽署加入信

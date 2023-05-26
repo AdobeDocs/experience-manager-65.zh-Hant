@@ -1,7 +1,7 @@
 ---
-title: 自定義表單門戶元件的模板
+title: 自訂表單入口網站元件的範本
 seo-title: Customizing templates for forms portal components
-description: 在窗體清單中顯示自定義元資料
+description: 在表單清單中顯示自訂中繼資料
 seo-description: Display custom metadata in form listing
 uuid: 212109ca-85c8-4915-82e5-a18a0443be1b
 content-type: reference
@@ -18,50 +18,50 @@ ht-degree: 0%
 
 ---
 
-# 自定義表單門戶元件的模板{#customizing-templates-for-forms-portal-components}
+# 自訂表單入口網站元件的範本{#customizing-templates-for-forms-portal-components}
 
 ## 必備條件 {#prerequisites}
 
-[管理表單元資料](../../forms/using/manage-form-metadata.md)
+[管理表單中繼資料](../../forms/using/manage-form-metadata.md)
 
 HTML和CSS的工作知識
 
 ## 概觀 {#overview}
 
-AEM Forms用戶介面允許您向任何表單添加元資料。 自定義元資料可在列出和搜索組織表單時增強用戶體驗。
+AEM Forms使用者介面可讓您將中繼資料新增至任何表單。 自訂中繼資料可增強使用者在列出和搜尋組織表單時的體驗。
 
-Forms門戶允許您在表單清單中使用自定義元資料。 在為資產建立自定義模板時，可以修改其佈局並使用CSS樣式集的自定義元資料。
+Forms入口網站可讓您在表單清單中使用自訂中繼資料。 建立資產的自訂範本時，您可以修改其版面配置，並在CSS樣式集中使用自訂中繼資料。
 
-執行以下步驟，為各種Forms門戶元件建立自定義模板。
+執行以下步驟，為各種Forms Portal元件建立自訂範本。
 
-## 建立自定義模板 {#creating-a-nbsp-custom-template}
+## 建立自訂範本 {#creating-a-nbsp-custom-template}
 
-1. 在/apps下建立sling:Folder節點
+1. 在/apps下建立sling：Folder節點
 
-   添加&quot;fpContentType&quot;屬性。 根據要為其定義自定義模板的元件，為屬性指定相應的值。
+   新增「fpContentType」屬性。 根據您為其定義自訂範本的元件，指定適當的屬性值。
 
-   * Search &amp; Lister元件：&quot;/libs/fd/fp/formTemplate&quot;
+   * 搜尋和清單產生器元件：&quot;/libs/fd/fp/formTemplate&quot;
    * 草稿和提交元件：
 
-      * 草稿部分：/libs/fd/fp/drafts模板
-      * 提交部分：/libs/fd/fp/submissions模板
-   * 連結元件：/libs/fd/fp/linkTemplate
+      * 草稿區段： /libs/fd/fp/draftsTemplate
+      * 提交區段：/libs/fd/fp/submissionsTemplate
+   * 連結元件： /libs/fd/fp/linkTemplate
 
-   添加在選擇佈局模板時要顯示的標題。
+   新增您要在選取版面配置範本時顯示的標題。
 
    >[!NOTE]
    >
-   >標題可以不同於您建立的sling:Folder的節點名稱。
+   >標題可以不同於您建立的sling：Folder的節點名稱。
 
-   下圖描述了Search &amp; Lister元件的配置。
-   ![建立sling：資料夾](assets/1.png)
+   以下影像說明「搜尋和製表器」元件的設定。
+   ![建立sling：Folder](assets/1.png)
 
-1. 在此資料夾中建立檔案template.html作為自定義模板。
-1. 編寫自定義模板並使用自定義元資料，如下所述。
+1. 在此資料夾中建立檔案template.html作為自訂範本。
+1. 撰寫自訂範本並使用自訂中繼資料，如下所述。
 
-## 工作示例 {#working-example}
+## 工作範例 {#working-example}
 
-以下是自定義模板的示例實現，其中Forms門戶為Search &amp; Lister元件獲取了自定義GeometrixxGov卡佈局。
+以下為自訂範本的範例實作，其中Forms入口網站為「搜尋與清單程式」元件取得自訂Geometrixx政府卡配置。
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -81,108 +81,108 @@ Forms門戶允許您在表單清單中使用自定義元資料。 在為資產�
 </div>
 ```
 
-## 自定義模板的技術規範 {#technical-specifications-for-custom-templates}
+## 自訂範本的技術規格 {#technical-specifications-for-custom-templates}
 
-任何Forms門戶元件的自定義模板都包括可重複和非可重複的條目。 可重複項是要列出的基本實體。 可重複條目的示例包括Search &amp; Lister、Drafts &amp; Submissions和Link元件。
+任何Forms Portal元件的自訂範本包含可重複及不可重複的專案。 可重複專案是列出清單的基本實體。 可重複專案的範例包括「搜尋和製表人」、「草稿和提交」以及「連結」元件。
 
-Forms門戶為佔位符提供了顯示自定義/OOTB元資料的語法。 在顯示表單、草稿或提交結果後填充佔位符。
+Forms Portal提供預留位置語法，用於顯示自訂/OOTB中繼資料。 顯示表單、草稿或提交的結果之後，就會填入預留位置。
 
-要包括可重複項，請配置屬性的值 **資料可重複** 至 **真**。
+若要包含可重複的專案，請設定屬性的值 **data-repeatable** 至 **true**.
 
-*在所討論的示例中，自定義模板頂部有兩個Div元素。 第一個CSS類具有&quot;__FP_boxes-container&quot; CSS類，它用作列出的表單的容器元素。 第二個具有「__FP_boxes」 CSS類，是基本圖元的模板，在本例中為「表單」。 的&#x200B;**資料可重複**Div元素中存在的屬性具有&#x200B;**真**。*
+*在所討論的範例中，自訂範本的頂端存在兩個Div元素。 第一個具有「__FP_boxes-container」CSS類別，可作為所清單單的容器元素。 第二個是「__FP_boxes」CSS類別，是基本實體的範本，在此例中是表單。 此&#x200B;**data-repeatable**Div元素中存在的屬性具有值&#x200B;**true**.*
 
-每個佔位符都有一個排它的OOTB元資料集。 要在窗體上的特定位置顯示自定義元資料，請添加 **${metadata_prop屬性** 在那兒。
+每個預留位置都有一個專屬的OOTB中繼資料集。 若要在表單上的特定位置顯示自訂中繼資料，請新增 **${metadata_prop}屬性** 在原處。
 
-*在示例中，元資料屬性用於多個實例。 例如，它用於&#x200B;**描述**。**名稱**。**窗體URL**。**html樣式**。**pdf URL**。**pdf樣式**,**路徑**按規定的方式。*
+*在此範例中，中繼資料屬性用於多個執行個體。 例如，它被用於&#x200B;**說明**，**名稱**，**formUrl**，**htmlStyle**，**pdfUrl**，**pdfStyle**、和&#x200B;**路徑**以規定的方式進行。*
 
-## 現成的元資料 {#out-of-the-box-metadata}
+## 現成可用的中繼資料 {#out-of-the-box-metadata}
 
-各種Forms門戶元件提供可用於清單的OOTB元資料的獨有集。
+各種Forms Portal元件提供您可用於列出的專用OOTB中繼資料集。
 
-### Search &amp; Lister元件 {#search-amp-lister-component}
+### 搜尋和清單產生器元件 {#search-amp-lister-component}
 
-* **標題：** 窗體標題
-* **名稱**:表單的名稱（大多與標題相同）
-* **描述**:窗體的說明
-* **窗體URL**:將表單呈現為HTML的URL
-* **pdf URL**:將表單呈現為PDF的URL
-* **資產類型**:資產的類型。 有效值包括 **窗體**。**PDF窗體**。 **打印表單**, **自適應窗體**
+* **標題：** 表單標題
+* **名稱**：表單名稱（大多與標題相同）
+* **說明**：表單說明
+* **formUrl**：將表單轉譯為HTML的URL
+* **pdfUrl**：將表單轉譯為PDF的URL
+* **assetType**：資產型別。 有效值包括 **表單**，**PDF表單**， **列印表單**、和 **最適化表單**
 
-* **html樣式**&amp; **pdf樣式**:用於渲染的HTML和PDF表徵圖的顯示樣式。 有效值為&quot;**__FP_display_none**&#x200B;或為空。
+* **htmlStyle**&#x200B;和 **pdfStyle**：分別用於呈現的HTML和PDF圖示的顯示樣式。 有效值為&quot;**__FP_display_none**」或空白。
 
 >[!NOTE]
 >
->切記在自定義樣式表中使用__FP_display_none類。
+>請記得在自訂樣式表中使用__FP_display_none類別。
 
-* **下載URL**:下載資產的URL。
+* **downloadurl**：下載資產的URL。
 
-在用戶介面上支援本地化、排序和使用配置屬性（僅限搜索和Lister）:
+支援本地化、排序和使用使用者介面上的設定屬性（僅限搜尋和製表人）：
 
-1. **本地化支援**:要本地化任何靜態文本，請使用屬性 `${localize-YOUR_TEXT}` 並使本地化值可用（如果尚不存在）。
-   *在討論的示例中，屬性 `${localize-Apply}` 和 `${localize-Download}` 用於本地化「應用」和「下載」文本。*
+1. **本地化支援**：若要本地化任何靜態文字，請使用屬性 `${localize-YOUR_TEXT}` 並讓當地語系化的值可供使用（如果尚未存在）。
+   *在所討論的範例中，屬性 `${localize-Apply}` 和 `${localize-Download}` 用於本地化「套用」和「下載」文字。*
 
-1. **支援排序**:按一下HTML元素對搜索結果進行排序。 要在表佈局中實現排序，請在特定表標題上添加「data-sortKey」屬性。 此外，將其值添加為要排序的元資料。
-例如，對於網格視圖中的「Title」標題，「data-sortKey」標題的值為「title」。 按一下標題以對特定列中的值進行排序。
+1. **排序支援**：按一下HTML元素可對搜尋結果進行排序。 若要在表格版面配置中實作排序，請在特定表格標頭上新增「data-sortKey」屬性。 此外，將其值新增為要排序的中繼資料。
+例如，對於網格檢視中的「Title」標頭，「data-sortKey」標頭的值為「title」。 按一下標題可對特定欄中的值進行排序。
 
-1. **使用配置屬性**:Search &amp; Lister元件有幾種可在用戶介面上使用的配置。 例如，要顯示通過編輯對話框保存的HTML工具提示文本，請使用 `${config-htmlLinkText}` 屬性。 **同樣，對於PDF工具提示文本，使用** `${config-pdfLinkText}` 屬性。
+1. **使用設定屬性**：搜尋和清單元件有多個可在使用者介面上使用的設定。 例如，若要顯示透過編輯對話方塊儲存的HTML工具提示文字，請使用 `${config-htmlLinkText}` 屬性。 **同樣地，對於PDF工具提示文字，請使用** `${config-pdfLinkText}` 屬性。
 
 ### 連結元件 {#link-component}
 
-* **標題：** 窗體標題
-* **窗體URL**:將表單呈現為HTML的URL
-* **目標**:連結的目標屬性。 有效值為&quot;_blank&quot;和&quot;_self&quot;。
-* **連結文本**:連結標題
+* **標題：** 表單標題
+* **formUrl**：將表單轉譯為HTML的URL
+* **目標**：連結的目標屬性。 有效值為「_blank」和「_self」。
+* **linkText**：連結標題
 
 ### 草稿和提交元件 {#drafts-amp-submissions-component}
 
-* **路徑**:草稿/提交元資料節點的路徑。 將其與。HTML副檔名一起用作URL以開啟草稿或提交。
-* **上下文路徑**:實例的上下文路AEM徑
-* **首字母**:自適應表單標題的首字母（大寫），已保存為草稿或已提交。
-* **表單名稱**:自適應表單的標題，已保存為「草稿」或已提交。
-* **草稿ID**:列出的拔模的ID(僅在「拔模」(Draft)部分的模板中使用)。
-* **提交ID**:列出的提交的ID（僅在「提交」部分的模板中使用）。
-* **狀態**:已提交表單的狀態。 （僅在「提交」部分的模板中使用）。
-* **描述**:與草稿或提交關聯的自適應表單的說明。
-* **diffTime**:當前時間與草稿上次保存操作之間的差異。 或者，當前時間與上次提交操作之間的差異。
-* **表徵圖類**:用於顯示草稿/提交的第一個字母的CSS類。 Forms門戶包括以下各類，它們提供各種有色背景。
-* **所有者**:建立草稿/提交的用戶。
-* **今天**:以DD建立草稿或提交日期:MM:YYYY格式。
-* **時間立即**:以HH表示的草稿或提交的建立時間:MM:SS 24小時格式
+* **路徑**：草稿/提交中繼資料節點的路徑。 將其與。HTML副檔名搭配使用，作為URL以開啟草稿或提交。
+* **contextPath**：AEM執行個體的內容路徑
+* **第一個字母**：最適化表單標題的第一個字母（大寫），已儲存為草稿或已提交。
+* **formName**：最適化表單的標題，已儲存為草稿或已提交。
+* **草稿識別碼**：列出之草稿的ID （僅用於草稿區段的範本中）。
+* **submitID**：列出之提交的ID （僅用於「提交」區段的範本）。
+* **狀態**：已提交表單的狀態。 （僅用於「提交」區段的範本）。
+* **說明**：與草稿或提交內容相關的最適化表單說明。
+* **diffTime**：目前時間與草稿的上次儲存動作之間的差異。 或者，也可以選擇目前時間與提交的最後一次提交動作之間的差異。
+* **圖示類別**：用於顯示草稿/提交內容第一個字母的CSS類別。 Forms Portal包含下列類別，提供各種不同色彩的背景。
+* **所有者**：建立草稿/提交的使用者。
+* **今天**：在DD中建立草稿或提交的日期:MM:YYYY格式。
+* **TimeNow**：在HH中建立草稿或提交內容的時間:MM:SS 24小時格式
 
 *注意:*
 
-1. 對於「草稿和提交」元件下「草稿」部分的刪除選項，請將CSS類命名為「__FP_deleteDraft」。 此外，還包含屬性&quot;draftID&quot;和值 **${draftID}**，即相應拔模的拔模id。
+1. 針對「草稿和提交」元件下「草稿」區段中的刪除選項，將CSS類別命名為「__FP_deleteDraft」。 此外，將屬性「draftID」與值納入 **${draftID}**，即對應草稿的草稿識別碼。
 
-1. 在建立連結以開啟草稿和提交時，可以指定 **${path.html** 值 **href** 錨點標籤的屬性。
+1. 建立開啟草稿和提交專案的連結時，您可以指定 **${path}.html** 作為 **href** 錨點標籤的屬性。
 
-![「草稿和提交」節點](assets/raw-image-with-index.png)
+![草稿與提交節點](assets/raw-image-with-index.png)
 
-**A**. 容器元件
+**A**. 容器元素
 
-**B** 具有固定層次結構的「path」元資料，以獲取為每個表單儲存的縮略圖。
+**B.** 具有固定階層的「路徑」中繼資料，可取得針對每個表單儲存的縮圖。
 
-**C.** 用於每個表單的模板節的資料可重複屬性
+**C.** 用於每個表單的範本區段的資料可重複屬性
 
-**D** 本地化「應用」字串
+**D.** 將「套用」字串當地語系化
 
-**E.** 使用配置屬性pdfLinkText
+**E.** 使用設定屬性pdfLinkText
 
-**F.** 使用「pdfUrl」元資料
+**F.** 使用「pdfUrl」中繼資料
 
-## 提示、技巧和已知問題 {#tips-tricks-and-known-issues}
+## 秘訣、技巧和已知問題 {#tips-tricks-and-known-issues}
 
-1. 請勿在任何自定義模板中使用單引號(&#39;)。
-1. 對於自定義元資料，將此屬性儲存在 **jcr：內容/元資料** 僅節點。 如果將其儲存在其他位置，Forms門戶將無法顯示元資料。
-1. 確保任何自定義元資料或現有元資料的名稱不包含冒號(:)。 如果出現，則無法在用戶介面上顯示。
-1. **資料可重複** 對一個 **連結** 元件。 Adobe建議您避免在連結元件的模板中使用此屬性。
+1. 請勿在任何自訂範本中使用單引號(&#39;)。
+1. 對於自訂中繼資料，請將此屬性儲存在 **jcr：content/metadata** 僅限節點。 如果您將其儲存在任何其他位置，Forms Portal將無法顯示中繼資料。
+1. 確保任何自訂中繼資料或現有中繼資料的名稱不包含冒號( ： )。 如果出現提示，您無法在使用者介面中顯示。
+1. **data-repeatable** 對沒有任何意義 **連結** 元件。 Adobe建議您避免在連結元件的範本中使用此屬性。
 
 ## 相關文章
 
-* [啟用表單門戶元件](/help/forms/using/enabling-forms-portal-components.md)
-* [建立表單門戶頁](/help/forms/using/creating-form-portal-page.md)
-* [使用API在網頁上列出表單](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [啟用表單入口網站元件](/help/forms/using/enabling-forms-portal-components.md)
+* [建立表單入口網站頁面](/help/forms/using/creating-form-portal-page.md)
+* [使用API的網頁上列出表單](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [使用草稿和提交元件](/help/forms/using/draft-submission-component.md)
-* [自定義草稿和已提交表單的儲存](/help/forms/using/draft-submission-component.md)
-* [將草稿和提交元件與資料庫整合的示例](/help/forms/using/integrate-draft-submission-database.md)
-* [自定義表單門戶元件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [門戶上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)
+* [自訂草稿和已提交表單的儲存](/help/forms/using/draft-submission-component.md)
+* [將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)
+* [自訂表單入口網站元件的範本](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [在入口網站上發佈表單的簡介](/help/forms/using/introduction-publishing-forms.md)

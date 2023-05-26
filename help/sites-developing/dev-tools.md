@@ -1,7 +1,7 @@
 ---
 title: 開發工具
 seo-title: Development Tools
-description: 要開發JCR、Apache Sling或應用AEM程式，可使用許多工具集
+description: 若要開發您的JCR、Apache Sling或AEM應用程式，可使用許多工具集
 seo-description: To develop your JCR, Apache Sling or AEM applications, a number of tool sets are available
 uuid: 1bee3a52-5d76-4b0c-a222-a02e12ff3a43
 contentOwner: msm-service
@@ -19,44 +19,44 @@ ht-degree: 3%
 
 # 開發工具{#development-tools}
 
-要開發JCR、Apache Sling或應用AEM程式，可使用以下工具集：
+若要開發您的JCR、Apache Sling或AEM應用程式，可使用下列工具集：
 
-* 一組 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) 和WebDAV。 CRXDE Lite嵌入到CRX/AEM中，使您能夠在瀏覽器中執行標準開發任務。 使用CRXDE Lite，可以建立和編輯檔案(如.jsp和.java)、資料夾、模板、元件、對話框、節點、屬性和捆綁包，同時記錄和與SVN整合。
+* 一組包含 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) 和WebDAV。 CRXDE Lite內嵌於CRX/AEM中，可讓您在瀏覽器中執行標準開發工作。 透過CRXDE Lite，您可以在記錄並與SVN整合時建立和編輯檔案(如.jsp和.java)、資料夾、範本、元件、對話方塊、節點、屬性和組合。
 
-   當您沒有直接訪問CRX/AEM伺服器、通過擴展或修改現成元件和Java捆綁包開發應用程式或不需要專用調試器、代碼完成和語法突出顯示時，建議使用CRXDE Lite。
+   當您無法直接存取CRX/AEM伺服器、透過擴充或修改現成元件和Java套件組合來開發應用程式，或當您不需要專用的除錯程式、程式碼完成和語法醒目提示時，建議使用CRXDE Lite。
 
-* 一組由整合開發環境組成(例如： [日蝕](/help/sites-developing/howto-projects-eclipse.md) 或 [智慧J](/help/sites-developing/ht-intellij.md))，生成工具(例如： [阿帕奇·馬文](/help/sites-developing/ht-projects-maven.md))，通過Adobe開發的FileVault，將儲存庫映射到檔案系統，即版本控制系統(例如：Subversion)，錯誤跟蹤器系統(例如：Jira)，一個中央依賴關係管理系統(例如：Apache Archiva)和生成自動化系統(例如：Apache Continuum)。
+* 由整合式開發環境所組成的集合(例如： [Eclipse](/help/sites-developing/howto-projects-eclipse.md) 或 [IntelliJ](/help/sites-developing/ht-intellij.md))，建置工具(例如： [Apache Maven](/help/sites-developing/ht-projects-maven.md))、Adobe開發的將存放庫對應至檔案系統的FileVault、版本控制系統（例如：Subversion）、錯誤追蹤器系統（例如：Jira）、中央相依性管理系統（例如：Apache Archiva）和組建自動化系統（例如：Apache Continuum）。
 
-   此安裝程式允許您將應用程式（內容、代碼、配置）完全整合到任何開發環境和流程中。不同元素之間的連結是通過FileVault對儲存庫進行檔案系統表示，因為上述所有開發工具都可以使用檔案。
+   此設定可讓您將應用程式（內容、程式碼、組態）完全整合到任何開發環境和程式中。不同元素之間的連結是透過FileVault表示存放庫的檔案系統，因為上述所有開發工具都可以處理檔案。
 
-## 整合開發環境的擴展 {#extensions-for-integrated-development-environments}
+## 整合式開發環境的擴充功能 {#extensions-for-integrated-development-environments}
 
-Adobe發佈了以下擴展：
+Adobe發行了下列擴充功能：
 
-* [Eclipse擴AEM展](/help/sites-developing/aem-eclipse.md)
-* [括弧AEM擴展](/help/sites-developing/aem-brackets.md)
+* [AEM Eclipse擴充功能](/help/sites-developing/aem-eclipse.md)
+* [AEM Brackets擴充功能](/help/sites-developing/aem-brackets.md)
 
 ### 其他工具 {#other-tools}
 
-AEM與其他促進發展的工具一起：
+AEM隨附其他有助於開發的工具：
 
-* [對話框編輯器](/help/sites-developing/dialog-editor.md)
-* [使用翻譯器管理詞典](/help/sites-developing/i18n-translator.md)
-* [使用Maven管理包](/help/sites-developing/vlt-mavenplugin.md)
-* [如何利用EclipseAEM開發項目](/help/sites-developing/howto-projects-eclipse.md)
-* [如何使用Apache AEM Maven生成項目](/help/sites-developing/ht-projects-maven.md)
-* [如何利用IntelliJ IDEAAEM開發項目](/help/sites-developing/ht-intellij.md)
+* [對話方塊編輯器](/help/sites-developing/dialog-editor.md)
+* [使用翻譯工具管理字典](/help/sites-developing/i18n-translator.md)
+* [使用Maven管理套件](/help/sites-developing/vlt-mavenplugin.md)
+* [如何使用Eclipse開發AEM專案](/help/sites-developing/howto-projects-eclipse.md)
+* [如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md)
+* [如何使用IntelliJ IDEA開發AEM專案](/help/sites-developing/ht-intellij.md)
 * [如何使用VLT工具](/help/sites-developing/ht-vlttool.md)
-* [如何使用代理伺服器工具](/help/sites-developing/ht-proxy-server.md)
+* [如何使用Proxy伺服器工具](/help/sites-developing/ht-proxy-server.md)
 * [AEM 現代化工具](/help/sites-developing/modernization-tools.md)
 * [AEM Repo Tool](/help/sites-developing/aem-repo-tool.md)
 
-方便建立新項目的工具：
+有助於建立新專案的工具：
 
 * [AEM 專案原型](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)
-* [拉濟AEM骨模板](https://github.com/Adobe-Consulting-Services/lazybones-aem-templates)
+* [AEM Lazybones範本](https://github.com/Adobe-Consulting-Services/lazybones-aem-templates)
 
 >[!NOTE]
 >
->下面的教程可能對啟動新項目AEM有意義：
->[AEM Sites入門第1部分 — 項目設定](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)
+>下列教學課程可能會對開始新的AEM專案有所幫助：
+>[AEM Sites快速入門。第1部分 — 專案設定](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)

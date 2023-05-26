@@ -1,7 +1,7 @@
 ---
-title: 配置表單的基本資訊
+title: 設定表單的基本知識
 seo-title: Basics of configuring forms
-description: 瞭解幫助您建立互動式資料捕獲應用程式的各種表單服務。
+description: 瞭解各種可幫助您建立互動式資料擷取應用程式的表單服務。
 seo-description: Learn about the various forms services that help you create interactive data capture applications.
 uuid: f495c170-2d17-45b0-b09d-22cce101131e
 contentOwner: admin
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ---
 
-# 配置表單的基本資訊 {#basics-of-configuring-forms}
+# 設定表單的基本知識 {#basics-of-configuring-forms}
 
-Forms服務使您能夠建立互動式資料捕獲客戶端應用程式，這些應用程式驗證、處理、轉換和傳遞通常在設計器中建立的表單。 表格作者開發一種Forms服務以各種格式呈現的單一表格設計：
+Forms服務可讓您建立互動式資料擷取使用者端應用程式，以驗證、處理、轉換及傳遞通常在Designer中建立的表單。 表單作者會開發單一表單設計，Forms服務會以各種格式呈現：
 
-* 作為PDF在Adobe Reader或瀏覽器
-* HTML，包括相容的XHTML 1.0呈現
-* 在支援AdobeFlash Player的各種瀏覽器環境中作為表單指南。
+* 作為Adobe Reader或瀏覽器中的PDF
+* 在各種瀏覽器環境中（包括相容的XHTML 1.0轉譯）作為HTML
+* 在支援AdobeFlash Player的各種瀏覽器環境中，以表單形式提供指南。
 
-有關Forms服務的其他資訊，請參見 [服務參考](https://www.adobe.com/go/learn_aemforms_services_63)。
+如需Forms服務的詳細資訊，請參閱 [服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-使用管理控制台中的Forms頁，可以配置Forms服務的行為。 這些設定適用於服務的所有調用。 通過表單SDK發送AEM的任何參數都會覆蓋管理控制台中設定的設定；但是，它們只影響該特定調用。
+使用Administration Console中的Forms頁面，您可以設定Forms服務的行為。 這些設定會套用至服務的所有叫用。 透過AEM Forms SDK傳送的任何引數都會覆寫在管理主控台中設定的設定；但是，這些引數只會影響該特定叫用。
 
-在管理控制台中更改Forms設定後，按一下「保存」。 您不需要重新啟動伺服器，更改才能生效。 但是，在配置快取模式設定時，可能需要停止並重新啟動Forms服務。 (請參閱 [啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)。)
+在管理主控台中變更Forms設定後，按一下「儲存」 。 您不需要重新啟動伺服器即可讓變更生效。 不過，在設定快取模式設定時，您可能需要停止並重新啟動Forms服務。 (請參閱 [啟動和停止服務](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services).)

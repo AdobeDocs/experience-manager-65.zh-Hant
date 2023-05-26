@@ -1,6 +1,6 @@
 ---
-title: 配置Assets Insights以獲取分析。
-description: 在中配置Assets Insights [!DNL Adobe Experience Manager Assets]。
+title: 設定Assets Insights以取得分析。
+description: 在中設定資產分析 [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 role: Architect, Admin
 feature: Asset Insights,Asset Reports
@@ -12,36 +12,36 @@ ht-degree: 6%
 
 ---
 
-# 配置資產透視 {#configure-asset-insights}
+# 設定資產分析 {#configure-asset-insights}
 
-[!DNL Adobe Experience Manager Assets] 從第三方網站獲取有關數字資產的使用資料 [!DNL Adobe Analytics]。 要使Assets Insights能夠檢索此資料並生成見解，請首先配置該功能以與 [!DNL Adobe Analytics]。 要在內部安裝中使用此功能，請購買 [!DNL Adobe Analytics] 單獨許可。 客戶 [!DNL Managed Services] 接收 [!DNL Analytics] 與 [!DNL Experience Manager]。 請參閱 [Managed Services產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
+[!DNL Adobe Experience Manager Assets] 從擷取有關協力廠商網站使用的數位資產的使用資料 [!DNL Adobe Analytics]. 若要啟用Assets Insights以擷取此資料並產生深入分析，請先設定要與整合的功能 [!DNL Adobe Analytics]. 若要在內部部署安裝中使用此功能，請購買 [!DNL Adobe Analytics] 另外授權。 客戶於 [!DNL Managed Services] 接收 [!DNL Analytics] 隨附的授權 [!DNL Experience Manager]. 另請參閱 [Managed Services產品說明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html).
 
 >[!NOTE]
 >
->只支援和提供影像的見解。
+>僅支援並為影像提供深入分析。
 
-1. 在 [!DNL Experience Manager]按一下 **[!UICONTROL 工具]** > **[!UICONTROL 資產]**。
+1. 在 [!DNL Experience Manager]，按一下 **[!UICONTROL 工具]** > **[!UICONTROL 資產]**.
 
    ![chlimage_1-72](assets/chlimage_1-210.png)
 
 1. 按一下「 **[!UICONTROL 前瞻分析設定]** 」資訊卡。
-1. 在嚮導中，選擇資料中心並提供您的憑據，包括組織名稱、用戶名和共用密鑰。
+1. 在精靈中，選取資料中心並提供您的認證，包括您的組織名稱、使用者名稱和共用機密。
 
-   ![配置Adobe Analytics的Experience Manager中的Assets Insights](assets/insights_config2.png)
+   ![設定Adobe Analytics以在Experience Manager中分析資產](assets/insights_config2.png)
 
-   *圖：配置 [!DNL Adobe Analytics] 對於中的Assets Insights [!DNL Experience Manager]。*
+   *圖：設定 [!DNL Adobe Analytics] 中的「資產分析」 [!DNL Experience Manager].*
 
-1. 按一下 **[!UICONTROL 驗證]**。
-1. 之後 [!DNL Experience Manager] 驗證您的憑據，從 **[!UICONTROL 報表套件]** 清單，選擇 [!DNL Adobe Analytics] 從Assets Insights獲取資料的報告套件。 按一下 **[!UICONTROL 添加]**。
-1. 之後 [!DNL Experience Manager] 設定報告套件，按一下 **[!UICONTROL 完成]**。
+1. 按一下 **[!UICONTROL 驗證]**.
+1. 晚於 [!DNL Experience Manager] 驗證您的認證，從 **[!UICONTROL 報表套裝]** 清單，選擇 [!DNL Adobe Analytics] 您希望Assets Insights從中擷取資料的報表套裝。 按一下 **[!UICONTROL 新增]**.
+1. 晚於 [!DNL Experience Manager] 設定您的報表套裝，按一下 **[!UICONTROL 完成]**.
 
-## 頁面跟蹤器 {#page-tracker}
+## 頁面追蹤器 {#page-tracker}
 
-配置完 [!DNL Adobe Analytics] 帳戶，將為您生成頁跟蹤器代碼。 要啟用Assets Insights以跟蹤 [!DNL Experience Manager] 用於第三方網站的資產，包括網站代碼中的頁面跟蹤程式碼。 使用 [!UICONTROL 頁面跟蹤器] 實用程式 [!DNL Experience Manager Assets] 生成頁跟蹤器代碼。 有關如何在第三方網頁中包含頁面跟蹤器代碼的詳細資訊，請參閱 [使用頁面跟蹤器並在網頁中嵌入代碼](/help/assets/use-page-tracker.md)。
+在您設定您的 [!DNL Adobe Analytics] 帳戶時，系統就會為您產生「頁面追蹤器」代碼。 啟用「資產分析」以進行追蹤的方式 [!DNL Experience Manager] 用於第三方網站的資產，請在網站程式碼中包含頁面追蹤器程式碼。 使用 [!UICONTROL 頁面追蹤器] 中的公用程式 [!DNL Experience Manager Assets] 以產生頁面追蹤器程式碼。 如需如何在協力廠商網頁中加入頁面追蹤器程式碼的詳細資訊，請參閱 [在網頁中使用頁面追蹤器和內嵌程式碼](/help/assets/use-page-tracker.md).
 
-1. 在 [!DNL Experience Manager]按一下 **[!UICONTROL 工具]** > **[!UICONTROL 資產]**。
+1. 在 [!DNL Experience Manager]，按一下 **[!UICONTROL 工具]** > **[!UICONTROL 資產]**.
 
    ![chlimage_1-73](assets/chlimage_1-214.png)
 
 1. 在導覽頁 **[!UICONTROL 面中]** ，按一下 **** 前瞻分析頁面追蹤器卡片。
-1. 按一下 **[!UICONTROL 下載]** 下載頁面跟蹤器代碼。
+1. 按一下 **[!UICONTROL 下載]** 以下載頁面追蹤器程式碼。

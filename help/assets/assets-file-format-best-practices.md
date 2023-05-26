@@ -1,6 +1,6 @@
 ---
-title: 處理支援的檔案格式的最佳做法
-description: 處理各種受支援的檔案類型的最佳做法 [!DNL Experience Manager Assets]。
+title: 處理支援的檔案格式的最佳實務
+description: 使用處理各種支援檔案型別的最佳實務 [!DNL Experience Manager Assets].
 contentOwner: AG
 role: Admin
 feature: Asset Management,Developer Tools
@@ -12,67 +12,67 @@ ht-degree: 3%
 
 ---
 
-# 資產檔案格式最佳做法 {#assets-file-format-best-practices}
+# 資產檔案格式最佳實務 {#assets-file-format-best-practices}
 
-[!DNL Adobe Experience Manager Assets] 支援許多專有和第三方檔案格式庫，以滿足用戶的各種檔案支援需求。 支援的Adobe庫包括： [!DNL Adobe Camera Raw]、吉布森、Adobe PDF·拉斯特里澤 [!DNL Adobe InDesign Server]。 另外， [!DNL Experience Manager Assets] 支援第三方庫，包括 [!DNL ImageMagick]。 [!DNL TwelveMonkeys]等等。
+[!DNL Adobe Experience Manager Assets] 支援許多專屬和協力廠商檔案格式程式庫，以迎合使用者的不同檔案支援需求。 支援的Adobe庫包括： [!DNL Adobe Camera Raw]、Gibson、Adobe PDF模擬轉譯器和 [!DNL Adobe InDesign Server]. 此外， [!DNL Experience Manager Assets] 支援協力廠商程式庫，包括 [!DNL ImageMagick]， [!DNL TwelveMonkeys]、等等。
 
-有關支援的檔案格式，請參見 [資產支援的格式](/help/assets/assets-formats.md)。
+如需支援的檔案格式，請參閱 [資產支援的格式](/help/assets/assets-formats.md).
 
 >[!TIP]
 >
->如果您使用 [!DNL Experience Manager] 在Adobe托管服務(AMS)上，如果您計畫處理大量大型PSD或PSB檔案，請聯繫Adobe客戶支援。 與Adobe客戶支援代表合作，為您的AMS部署實施這些最佳做法，並為Adobe的專有格式選擇盡可能最佳的工具和型號。 [!DNL Experience Manager] 可能無法處理超過 30000 x 23000 像素的極高解析度 PSB 檔案。
+>如果您使用 [!DNL Experience Manager] 如果您打算處理大量大型PSD或PSB檔案，請在Adobe Managed Services (AMS)上聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，針對您的AMS部署實作這些最佳實務，並針對Adobe的專有格式選擇最佳工具與模型。 [!DNL Experience Manager] 可能無法處理超過 30000 x 23000 像素的極高解析度 PSB 檔案。
 
-## [!DNL Adobe Camera Raw] 庫 {#adobe-camera-raw-library}
+## [!DNL Adobe Camera Raw] 資料庫 {#adobe-camera-raw-library}
 
-為獲得最佳效能，Adobe建議使用 [!DNL Adobe Camera Raw] RAW和DNG檔案庫。
+為獲得最佳效能，Adobe建議使用 [!DNL Adobe Camera Raw] RAW和DNG檔案的資料庫。
 
-[!DNL Adobe Camera Raw] 庫支援CMYK顏色配置檔案作為輸入。 但是，它以RGB色空間生成輸出，並且僅支援JPEG格式的輸出。 它不會在縮略圖中保留源檔案的彩色空間（例如CMYK）。
+[!DNL Adobe Camera Raw] 資料庫支援CMYK色彩設定檔作為輸入。 不過，它會產生RGB色域的輸出，並僅支援JPEG格式的輸出。 它不會保留縮圖中的來源檔案色域（例如CMYK）。
 
-有關詳細資訊，請參見 [Camera Raw支援](/help/assets/camera-raw.md)。
+如需詳細資訊，請參閱 [Camera Raw支援](/help/assets/camera-raw.md).
 
-## Adobe PDF·拉斯特里澤圖書館 {#adobe-pdf-rasterizer-library}
+## Adobe PDF模擬轉譯器程式庫 {#adobe-pdf-rasterizer-library}
 
-為獲得最佳結果，Adobe建議將Adobe PDF光柵化器庫用於以下檔案：
+為達到最佳效果，Adobe建議針對下列檔案使用Adobe PDF模擬轉譯器資料庫：
 
-* 內容密集型重量PDF檔案
-* 未在框外生成縮略圖的AI檔案
-* 對於具有SPOT(PMS)顏色的AI檔案
+* 繁重、需要大量內容的PDF檔案
+* 未立即產生含縮圖的AI檔案
+* 針對具有特別色(PMS)顏色的AI檔案
 
-使用PDF光柵化器生成的縮略圖和預覽與出廠時的光柵輸出相比質量更好。 Adobe PDFRasterizer庫不支援任何色彩空間轉換。 無論源PDF檔案的顏色空間如何，Adobe PDF光柵化器僅生成RGB輸出。
+與現成可用的點陣化輸出相比，使用PDF點陣化程式產生的縮圖和預覽品質更好。 Adobe PDF模擬轉譯器資料庫不支援任何色域轉換。 無論來源PDF檔案的色彩空間為何，Adobe PDF模擬轉譯器只會產生RGB輸出。
 
 ## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
-Adobe建議您使用 [!DNL Adobe InDesign Server] 提取 [!DNL Adobe InDesign] — 特定格式副本，如IDML和HTML。 有關詳細資訊，請參見 [將Experience Manager資產添加為Adobe InDesign的參考](/help/assets/managing-linked-subassets.md#refai)。
+Adobe建議您使用 [!DNL Adobe InDesign Server] 要擷取 [!DNL Adobe InDesign] — 特定轉譯，例如IDML和HTML。 如需詳細資訊，請參閱 [在Adobe InDesign中新增Experience Manager資產作為參考](/help/assets/managing-linked-subassets.md#refai).
 
 ## [!DNL Dynamic Media] {#dynamic-media}
 
-[!DNL Dynamic Media] 通過其全球、可擴展且效能優化的網路即時生成和提供多種豐富內容的變體。 它提供互動式觀看體驗，並簡化數字營銷管理流程。 有關啟用的詳細資訊 [!DNL Dynamic Media]，請參閱 [配置Dynamic Media](/help/assets/config-dynamic.md)。
+[!DNL Dynamic Media] 透過其全域、可擴充且效能最佳化的網路，即時產生並傳送多種多樣的豐富內容。 它提供互動式檢視體驗，並簡化數位行銷活動管理程式。 如需有關啟用的詳細資訊 [!DNL Dynamic Media]，請參閱 [設定Dynamic Media](/help/assets/config-dynamic.md).
 
-目前， [!DNL Dynamic Media] 每個檔案最多可支援15 GB的內容。
+目前， [!DNL Dynamic Media] 每個檔案最多可支援15 GB的視訊。
 
-## ImageMagick庫 {#imagemagick-library}
+## ImageMagick資料庫 {#imagemagick-library}
 
-Adobe建議在以下情形中使用ImageMagick庫：
+Adobe建議在下列情況下使用ImageMagick資料庫：
 
-* 為EPS檔案生成縮略圖格式副本。
-* 保留影像配置檔案資訊。
-* 保持透明度。
+* 若要產生EPS檔案的縮圖轉譯。
+* 保留影像設定檔資訊。
+* 保留透明度。
 * 處理PSD和PSB檔案。
 
-知道如何設定 [!DNL ImageMagick] 庫 [!DNL Experience Manager]，請參閱 [使用ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick)。 有關最佳用途，請參見 [配置ImageMagick的最佳做法](/help/assets/best-practices-for-imagemagick.md)。
+若要瞭解如何設定 [!DNL ImageMagick] 中的資料庫 [!DNL Experience Manager]，請參閱 [使用ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick). 如需最佳使用方式，請參閱 [設定ImageMagick的最佳作法](/help/assets/best-practices-for-imagemagick.md).
 
-## 影像轉碼庫 {#image-transcoding-library}
+## 影像轉碼程式庫 {#image-transcoding-library}
 
-Adobe影像轉碼庫是執行核心影像處理功能的影像處理解決方案，包括影像編碼、轉碼、重新採樣、調整大小等。
+Adobe影像轉碼資料庫是影像處理解決方案，可執行核心影像處理功能，包括影像編碼、轉碼、重新取樣、調整大小等。
 
-映像轉碼庫支援以下MIME類型：
+影像轉碼程式庫支援下列MIME型別：
 
 * JPG/JPEG
-* PNG（8位和16位）
+* PNG （8位元和16位元）
 * GIF
 * BMP
-* TIFF/壓縮TIFF（除32位Tatix和PTiffs外）。
-* 伊科
+* TIFF/壓縮TIFF（32位元Tiff和PTiff除外）。
+* ICO
 * ICN
 
-有關詳細資訊，請參閱 [映像轉碼庫](/help/assets/imaging-transcoding-library.md)。
+如需詳細資訊，請參閱 [影像轉碼程式庫](/help/assets/imaging-transcoding-library.md).

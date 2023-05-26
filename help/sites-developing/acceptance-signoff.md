@@ -1,7 +1,7 @@
 ---
-title: 接受和簽收
+title: 接受與簽核
 seo-title: Acceptance and Sign-off
-description: 驗收Test是用於驗證項目是否滿足客戶要求以及客戶是否接受項目的特殊test類別
+description: 驗收測試是一種特殊的測試類別，用於驗證專案是否符合客戶的要求，以及客戶是否接受專案
 seo-description: Acceptance Tests are a special category of test used to verify that the project fulfils the customer's requirements and that the customer accepts the project
 uuid: 6bdd2a99-d141-43ef-9102-99e65aba02d3
 contentOwner: Guillaume Carlino
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ---
 
-# 接受和簽收{#acceptance-and-sign-off}
+# 接受與簽核{#acceptance-and-sign-off}
 
-如前所述， [接受Test](/help/sites-developing/planning.md) 是用於驗證以下內容的特殊test類別：
+如前所述， [驗收測試](/help/sites-developing/planning.md) 是用於驗證以下專案的特殊測試類別：
 
-* 項目滿足客戶的要求。
-* 客戶接受項目。
+* Project符合客戶的要求。
+* 客戶接受專案。
 
-它們應由客戶和項目經理定義。 它們具有特殊的意義，因為它們通常與最終發票有關。
+應由客戶和專案經理定義。 它們具有特別的意義，因為它們通常與最終發票有關。
 
 因此，它們必須：
 
-* 盡早定義。
-* 必要時更新。
-* 任何更改必須由雙方（合作夥伴和客戶）正式接受和簽署。
+* 儘早定義。
+* 必要時會更新。
+* 任何變更必須由雙方正式接受並簽署（合作夥伴和客戶）。

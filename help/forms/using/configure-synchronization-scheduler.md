@@ -1,7 +1,7 @@
 ---
-title: 配置同步調度程式
+title: 設定同步化排程器
 seo-title: Configuring the synchronization scheduler
-description: 瞭解如何遷移和同步資產、配置同步計畫程式以及使用資料夾來安排資產。
+description: 瞭解如何移轉和同步資產、設定同步排程器，以及使用資料夾來排列資產。
 seo-description: Learn how to migrate and sync assets, configure sync scheduler, and use folders to arrange assets.
 uuid: b2c89feb-2947-418a-b343-4c01e453602b
 content-type: reference
@@ -18,46 +18,46 @@ ht-degree: 0%
 
 ---
 
-# 配置同步調度程式 {#configuring-the-synchronization-scheduler}
+# 設定同步化排程器 {#configuring-the-synchronization-scheduler}
 
-預設情況下，同步計畫程式每3分鐘運行一次，以通過LiveCycleWorkbench 11同步儲存庫中修改和更新的所有資產。 一旦同步過程完成，包含表單和資源的應用程式在AEM Forms用戶介面中就可見。
+根據預設，同步排程器每3分鐘會執行一次，以同步化透過LiveCycleWorkbench 11在存放庫中修改和更新的所有資產。 同步程式完成後，AEM Forms使用者介面中會顯示包含表單和資源的應用程式。
 
-## 更改同步調度程式的間隔 {#change-interval-of-the-synchronization-scheduler}
+## 變更同步化排程器的間隔 {#change-interval-of-the-synchronization-scheduler}
 
-執行以下步驟以更改同步調度程式的間隔：
+執行以下步驟來變更同步化排程器的間隔：
 
-1. 登錄到AEMConfiguration Manager。 Configuration Manager的URL為 `https://'[server]:[port]'/lc/system/console/configMgr`
+1. 登入AEM組態管理員。 Configuration Manager的網址是 `https://'[server]:[port]'/lc/system/console/configMgr`
 
-1. 查找並開啟 **FormsManager配置** 捆綁。
+1. 找到並開啟 **FormsManagerConfiguration** 套件組合。
 
-1. 為 **同步調度程式頻率** 的雙曲餘切值。
+1. 為以下專案指定新值 **同步化排程器頻率** 選項。
 
-   頻率單位為分鐘。 例如，要將調度程式配置為每60分鐘運行一次，請指定60。
+   頻率單位為分鐘。 例如，若要設定排程器每60分鐘執行，請指定60。
 
 ## 同步資產 {#synchronizing-assets}
 
-您可以使用 **同步儲存庫中的資產** 選項來手動同步資產。 執行以下步驟以手動同步資產：
+您可以使用 **從存放庫同步資產** 手動同步資產的選項。 執行以下步驟以手動同步資產：
 
-1. 登錄AEM Forms。 預設URL為 `https://'[server]:[port]'/lc/aem/forms/`。
+1. 登入AEM Forms。 預設URL為 `https://'[server]:[port]'/lc/aem/forms/`.
 
-   ![AEM Forms用戶介面](assets/aem_forms_ui.png)
+   ![AEM Forms使用者介面](assets/aem_forms_ui.png)
 
-   **圖：** *AEM Forms用戶介面*
+   **圖：** *AEM Forms使用者介面*
 
-1. 按一下 ![aem6forms_sync](assets/aem6forms_sync.png) 的子菜單。 如果您在上次配置的路徑上沒有任何資產，則對話框如下所示。 按一下 **開始** 啟動同步。
+1. 按一下 ![aem6forms_sync](assets/aem6forms_sync.png) 圖示加以檢視。 如果您在最後設定的路徑沒有任何資產，則對話方塊如下所示。 按一下 **開始** 以啟動同步化。
 
-   ![「同步」對話框](assets/migrate-and-syncronize.png)
+   ![同步化對話方塊](assets/migrate-and-syncronize.png)
 
-   **圖：** *「同步」對話框*
+   **圖：** *同步化對話方塊*
 
-## 排除同步錯誤 {#troubleshooting-synchronization-error}
+## 疑難排解同步處理錯誤 {#troubleshooting-synchronization-error}
 
-您可以在工作流設計器(LiveCycle工作台)中建立新應用程式。
+您可以在工作流程設計工具(LiveCycle維護作業)中建立新的應用程式。
 
-如果新建立的應用程式和/content/dam/formsanddocuments上的資料夾具有相同的名稱，則出現錯誤&quot;*根級別已存在與此應用程式同名的資產。*&#x200B;已記錄。
+如果新建立的應用程式和位於/content/dam/formsanddocuments的資料夾具有相同的名稱，則會出現錯誤»*根層級已存在與此應用程式同名的資產。*「 」已記錄。
 
-要解決衝突，請更名應用程式並手動同步資產。
+若要解決衝突，請重新命名應用程式，然後手動同步資產。
 
-![資產同步對話框中的衝突](assets/sync-conflict.png)
+![資產同步化對話方塊中的衝突](assets/sync-conflict.png)
 
-**圖：** *資產同步對話框中的衝突*
+**圖：** *資產同步化對話方塊中的衝突*

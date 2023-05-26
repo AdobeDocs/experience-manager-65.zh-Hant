@@ -1,7 +1,7 @@
 ---
-title: 草稿和提交部分
+title: 草稿和提交元件
 seo-title: Drafts and submissions component
-description: 草稿和提交元件列出處於草稿狀態並已提交的表單。 可定製元件的外觀和樣式。
+description: 草稿和提交元件會列出處於草稿狀態且已提交的表單。 您可以自訂元件的外觀和樣式。
 seo-description: Drafts and submissions component lists forms that are in the draft state and are already submitted. You can customize appearance and style of the component.
 uuid: 42c205b5-3141-4b80-85d9-dad921e223a2
 content-type: reference
@@ -17,26 +17,26 @@ ht-degree: 0%
 
 ---
 
-# 草稿和提交部分{#drafts-and-submissions-component}
+# 草稿和提交元件{#drafts-and-submissions-component}
 
-「草稿和提交」元件列出處於草稿狀態的所有表單以及已提交的表單。 該元件具有用於草稿和已提交表單的單獨部分（頁籤）。 用戶只能查看其草稿和已提交的表單。
+草稿和提交元件會列出草稿狀態的所有表單和已提交的表單。 元件有草稿和已提交表單的獨立區段（標籤）。 使用者只能檢視其草稿和提交的表單。
 
-## 配置元件 {#configuring-the-component}
+## 設定元件 {#configuring-the-component}
 
-「草稿和提交」元件有兩個頁籤：草稿和提交。
+草稿和提交元件有兩個標籤：草稿和提交。
 
-要啟用在提交頁籤中顯示的自適應表單提交，請設定 **提交操作** 至 **[Forms門戶提交操作](../../forms/using/configuring-submit-actions.md)。 或者，** 啟用Forms門戶提交選項。 每當用戶提交表單時，表單即添加到提交頁籤。
+若要啟用最適化表單的提交功能，使其顯示在提交索引標籤中，請設定 **提交動作** 至 **[Forms入口網站提交動作](../../forms/using/configuring-submit-actions.md). 或者，** 啟用Forms入口網站提交選項。 每當使用者提交表單時，該表單就會新增到提交索引標籤。
 
-拔模功能在框外啟用。 當用戶按一下 **保存** 在自適應窗體中，窗體將添加到「草稿」頁籤。
+草稿功能已開箱即用。 當使用者點按 **儲存** 在最適化表單上，表單會新增到草稿索引標籤中。
 
-執行以下步驟來添加和配置草稿和提交元件：
+執行以下步驟以新增和設定草稿和提交元件：
 
-1. 拖放 **草稿和提交** 元件。
-1. 點擊元件，然後點擊 ![設定表徵圖](assets/settings_icon.png) 開啟元件的「編輯」(Edit)對話框。
+1. 拖放 **草稿和提交** 在頁面上元件瀏覽器中的Document Services類別下的元件。
+1. 點選元件，然後點選 ![settings_icon](assets/settings_icon.png) 以開啟元件的「編輯」對話方塊。
 
    ![草稿和提交元件](assets/drafts-submissions-edit.png)
 
-1. 在「編輯」對話框中，指定以下詳細資訊並點擊 **完成** 按鈕。
+1. 在「編輯」對話方塊中，指定下列詳細資料並點選 **完成** 以儲存設定。
 
 <table>
  <tbody>
@@ -47,69 +47,69 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>一般</td>
-   <td>總結果</td>
-   <td>指定要顯示的最大結果數。 如果結果計數增加「總結果」限制，則 <strong>更多 </strong>連結出現在元件底部。 按一下 <strong>更多 </strong>顯示所有窗體。 </td>
+   <td>結果總計</td>
+   <td>指定要顯示的最大結果數量。 如果結果計數增加「結果總計」限制，則 <strong>更多 </strong>連結會出現在元件底部。 按一下 <strong>更多 </strong>顯示所有表格。 </td>
   </tr>
   <tr>
    <td> </td>
-   <td>樣式類型</td>
-   <td>指定元件的樣式。 可以指定 <strong>無樣式</strong>。 <strong>預設樣式</strong>或 <strong>自定義樣式</strong> 清單。 對於「自定義樣式」選項，可以在 <strong>自定義樣式路徑 </strong>場<strong>。</strong></td>
+   <td>樣式型別</td>
+   <td>指定元件的樣式。 您可以指定 <strong>無樣式</strong>， <strong>預設樣式</strong>，或 <strong>自訂樣式</strong> 以列出表格。 對於「自訂樣式選項」，您可以在下列位置指定自訂CSS檔案的路徑： <strong>自訂樣式路徑 </strong>欄位<strong>.</strong></td>
   </tr>
   <tr>
    <td> </td>
-   <td>自定義樣式路徑</td>
-   <td>如果您選擇 <strong>自定義樣式</strong> 的上界 <strong>樣式類型</strong> 欄位，使用 <strong>自定義樣式路徑</strong> 欄位，以指定自定義CSS檔案的路徑。 </td>
+   <td>自訂樣式路徑</td>
+   <td>如果您選擇 <strong>自訂樣式</strong> 中的選項 <strong>樣式型別</strong> 欄位，使用 <strong>自訂樣式路徑</strong> 欄位來指定自訂CSS檔案的路徑。 </td>
   </tr>
   <tr>
    <td> </td>
    <td>顯示選項</td>
-   <td><p>指定要顯示的頁籤。 您可以選擇顯示草稿表單、已提交表單或兩者。 </p> <p><strong>注釋</strong>:<em> 對於 <strong>顯示選項</strong>，也請參見Wiki頁 <strong>兩者</strong>，也請參見Wiki頁。 <strong>預設頁籤</strong> 欄位選項。</em></p> </td>
+   <td><p>指定要顯示的標籤。 您可以選擇顯示草稿表單、已提交的表單或兩者。 </p> <p><strong>注意</strong>：<em> 對象 <strong>顯示選項</strong>，若您選取 <strong>兩者</strong>，則 <strong>預設標籤</strong> 未使用欄位選項。</em></p> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>預設頁籤</td>
-   <td>指定在載入表單門戶頁面時要顯示的頁籤。 您可以選擇 <strong>草稿Forms頁籤</strong> 和 <strong>已提交Forms頁籤</strong>。</td>
+   <td>預設標籤</td>
+   <td>指定表單入口網站頁面載入時顯示的標籤。 您可以選擇 <strong>草稿Forms索引標籤</strong> 和 <strong>已提交的Forms索引標籤</strong>.</td>
   </tr>
   <tr>
-   <td>草稿Forms頁籤配置</td>
-   <td>自定義標題</td>
-   <td>指定 <strong>草稿Forms</strong> 頁籤。 預設值為 <strong>起草Forms。</strong></td>
-  </tr>
-  <tr>
-   <td> </td>
-   <td>佈局模板</td>
-   <td>指定用於草稿Forms清單的佈局。</td>
-  </tr>
-  <tr>
-   <td>已提交Forms頁籤配置</td>
-   <td>自定義標題 </td>
-   <td>指定 <strong>已提交Forms </strong>頁籤。 預設值為 <strong>已提交Forms。</strong></td>
+   <td>草稿Forms索引標籤設定</td>
+   <td>自訂標題</td>
+   <td>指定標題 <strong>草稿Forms</strong> 標籤。 預設值為 <strong>草稿Forms。</strong></td>
   </tr>
   <tr>
    <td> </td>
-   <td>佈局模板</td>
-   <td>指定用於已提交的Forms的佈局<strong> </strong>清單框。 </td>
+   <td>版面配置範本</td>
+   <td>指定草稿Forms清單使用的版面。</td>
+  </tr>
+  <tr>
+   <td>已提交的Forms索引標籤設定</td>
+   <td>自訂標題 </td>
+   <td>指定標題 <strong>已提交Forms </strong>標籤。 預設值為 <strong>已提交Forms。</strong></td>
+  </tr>
+  <tr>
+   <td> </td>
+   <td>版面配置範本</td>
+   <td>指定用於已提交Forms的版面<strong> </strong>清單。 </td>
   </tr>
  </tbody>
 </table>
 
-## 自定義儲存 {#customizing-the-storage}
+## 自訂儲存 {#customizing-the-storage}
 
-當您使用Forms門戶提交操作或以自適應形式啟用「在表單門戶中儲存資料」選項時，表單資料將儲存在儲存AEM庫中。 在生產環境中，建議不要將草稿或提交的表單資料儲存在儲存AEM庫中。 相反，您必須將草稿和提交元件與安全儲存（如企業資料庫）整合，以儲存草稿和提交的表單資料。
+當您使用Forms Portal提交動作或啟用最適化表單中的將資料儲存在表單入口網站選項時，表單資料會儲存在AEM存放庫中。 在生產環境中，建議不要將草稿或已提交的表單資料儲存在AEM存放庫中。 相反地，您必須將草稿和提交元件與安全的儲存體（例如企業資料庫）整合，以儲存草稿和提交的表單資料。
 
-Forms門戶允許您將資料儲存AEM在本地存AEM儲庫、遠程儲存庫或資料庫中。 AEM Forms允許您自定義為草稿和提交儲存用戶資料的實現。 您可以覆蓋預設方法，以指定草稿和提交資料如何儲存在您選擇的儲存中。 例如，您可以將資料儲存在組織中當前實施的資料儲存中。
+Forms入口網站可讓您將資料儲存在本機AEM存放庫、遠端AEM存放庫或資料庫。 AEM Forms可讓您自訂儲存草稿和提交之使用者資料的實作。 您可以覆寫預設方法，以指定如何將草稿和提交資料儲存在您選擇的儲存體中。 例如，您可以將資料儲存在目前實作於貴組織的資料存放區中。
 
-Forms門戶提供開箱即用服務(API)，將資料儲存在本地和遠程AEM Forms發佈實例的crx儲存庫上。 可以替換預設實現，如中所述 [為草稿和提交配置儲存服務](/help/forms/using/configuring-draft-submission-storage.md) 項目，使用自定義實現替換預設功能。 有關自定義實現中在安全位置儲存內容所需方法的詳細資訊，請參見 [自定義草稿和提交資料服務](/help/forms/using/custom-draft-submission-data-services.md) 和 [草稿和提交元件的自定義儲存。](/help/forms/using/adding-custom-storage-provider-forms.md)
+Forms入口網站提供開箱即用的服務(API)，將資料儲存在本機與遠端AEM Forms發佈執行個體的crx存放庫上。 您可以取代預設實施，如所述 [設定草稿和提交的儲存服務](/help/forms/using/configuring-draft-submission-storage.md) 文章，以自訂實施取代預設功能。 如需自訂實作中所需方法的詳細資訊，以將內容儲存在安全位置，請參閱 [自訂草稿和提交資料服務](/help/forms/using/custom-draft-submission-data-services.md) 和 [草稿和提交元件的自訂儲存。](/help/forms/using/adding-custom-storage-provider-forms.md)
 
-AEM Forms文檔提供 [將草稿和提交元件與資料庫整合的示例](integrate-draft-submission-database.md)。 您可以使用示例實現來開發您自己的自定義實現。
+AEM Forms檔案提供 [將草稿和提交元件與資料庫整合的範例](integrate-draft-submission-database.md). 您可以使用範例實作來開發自己的自訂實作。
 
 ## 相關文章
 
-* [啟用表單門戶元件](/help/forms/using/enabling-forms-portal-components.md)
-* [建立表單門戶頁](/help/forms/using/creating-form-portal-page.md)
-* [使用API在網頁上列出表單](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [啟用表單入口網站元件](/help/forms/using/enabling-forms-portal-components.md)
+* [建立表單入口網站頁面](/help/forms/using/creating-form-portal-page.md)
+* [使用API的網頁上列出表單](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [使用草稿和提交元件](/help/forms/using/draft-submission-component.md)
-* [自定義草稿和已提交表單的儲存](/help/forms/using/draft-submission-component.md)
-* [將草稿和提交元件與資料庫整合的示例](/help/forms/using/integrate-draft-submission-database.md)
-* [自定義表單門戶元件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [門戶上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md)
+* [自訂草稿和已提交表單的儲存](/help/forms/using/draft-submission-component.md)
+* [將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md)
+* [自訂表單入口網站元件的範本](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [在入口網站上發佈表單的簡介](/help/forms/using/introduction-publishing-forms.md)

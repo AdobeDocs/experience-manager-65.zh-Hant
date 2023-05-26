@@ -1,7 +1,7 @@
 ---
-title: 訪問字母實例的API
+title: 存取信件例項的API
 seo-title: APIs to access letter instances
-description: 瞭解如何使用API訪問字母實例。
+description: 瞭解如何使用API來存取信件例項。
 seo-description: Learn how to use APIs to access letter instances.
 uuid: e7fb7798-f49d-458f-87f5-22df5f3e7d10
 content-type: reference
@@ -17,34 +17,34 @@ ht-degree: 1%
 
 ---
 
-# 訪問字母實例的API {#apis-to-access-letter-instances}
+# 存取信件例項的API {#apis-to-access-letter-instances}
 
 ## 概觀 {#overview}
 
-使用「建立信件管理」的「建立信件UI」，您可以保存正在處理的信件實例的草稿，並且會提交信件實例。
+使用「通訊管理」的「建立通訊UI」，您可以儲存正在處理的信件例項草稿，並且有已提交的信件例項。
 
-Oracle Terment Management提供了API，您可以使用這些API構建清單介面以處理已提交的信函實例或草稿。 API清單並開啟代理的已提交和草稿信函實例，以便代理可以繼續處理草稿或已提交的信函實例。
+「通訊管理」會提供API，您可以使用這些API來建立清單介面，以處理已提交的信件例項或草稿。 API會列出並開啟代理程式的已提交和草稿信件例項，讓代理程式可以繼續處理草稿或已提交的信件例項。
 
-## 正在提取字母實例 {#fetching-letter-instances}
+## 正在擷取字母例項 {#fetching-letter-instances}
 
-Tergement Management公開API以通過LetterInstanceService服務獲取信函實例。
+Correspondence Management會公開API，以透過LetterInstanceService服務擷取信件例項。
 
 | 方法 | 說明 |
 |--- |--- |
-| getAllLetterInstances | 根據輸入查詢參數提取字母實例。 要提取所有字母實例，請將查詢參數傳遞為null。 |
-| getLetterInstance | 根據字母實例ID讀取指定的字母實例。 |
-| letterInstanceExists | 檢查給定名稱是否存在LetterInstance。 |
+| getAllLetterInstances | 根據輸入查詢引數擷取信件例項。 若要擷取所有信件例項，請將查詢引數傳遞為null。 |
+| getLetterInstance | 根據信件例項ID擷取指定的信件例項。 |
+| letterInstanceExists | 檢查指定的名稱是否存在LetterInstance。 |
 
 >[!NOTE]
 >
->LetterInstanceService是OSGI服務，可以在Java中使用@Reference來檢索其實例
->Class或sling.getService(LetterInstanceService)。 類)。
+>LetterInstanceService是OSGI服務，可以在Java中使用@Reference來擷取其執行個體
+>類別或sling.getService(LetterInstanceService。 類別)。
 
 ### 使用getAllLetterInstances {#using-nbsp-getallletterinstances}
 
-以下API基於查詢對象（已提交和草稿）查找字母實例。 如果查詢對象為null，則返回所有字母實例。 此API返回清單 [LetterInstanceVO](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html) 對象，用於提取字母實例的附加資訊
+以下API會根據查詢物件（已提交和草稿）來尋找信件例項。 如果查詢物件為Null，則會傳回所有信件例項。 此API傳回以下清單： [LetterInstanceVO](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html) 物件，可用於擷取信件例項的其他資訊
 
-**語法**: `List getAllLetterInstances(Query query) throws ICCException;`
+**語法**： `List getAllLetterInstances(Query query) throws ICCException;`
 
 <table>
  <tbody>
@@ -54,14 +54,14 @@ Tergement Management公開API以通過LetterInstanceService服務獲取信函實
   </tr>
   <tr>
    <td>查詢</td>
-   <td>查詢參數用於查找/篩選Letter實例。 此處查詢僅支援對象的頂級屬性/屬性。 查詢由語句組成，Statement對象中使用的"attributeName"應是Letter實例對象中屬性的名稱。<br /> </td>
+   <td>查詢引數是用來尋找/篩選Letter例項。 在此查詢僅支援物件的頂層屬性/屬性。 查詢由陳述式組成，Statement物件中使用的「attributeName」應為Letter實體物件中屬性的名稱。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-#### 示例1:獲取所有類型為SUBMITTED的信函實例 {#example-fetch-all-the-letter-instances-of-type-submitted}
+#### 範例1：擷取SUBMITTED型別的所有字母例項 {#example-fetch-all-the-letter-instances-of-type-submitted}
 
-以下代碼返回已提交信函實例的清單。 要僅獲取草稿，請更改 `LetterInstanceType.COMPLETE.name()` 至 `LetterInstanceType.DRAFT.name().`
+下列程式碼會傳回已提交信件例項的清單。 若要僅取得草稿，請變更 `LetterInstanceType.COMPLETE.name()` 至 `LetterInstanceType.DRAFT.name().`
 
 ```java
 @Reference
@@ -78,9 +78,9 @@ query.addStatement(statementForInstanceType);
 submittedLetterInstances = letterInstanceService.getAllLetterInstances(query);
 ```
 
-#### 示例2：獲取用戶提交的所有字母實例，字母實例類型為DRAFT {#example-nbsp-fetch-all-the-letter-instances-submitted-by-a-user-and-letter-instance-type-is-draft}
+#### 範例2：擷取使用者提交的所有信件例項，信件例項型別為DRAFT {#example-nbsp-fetch-all-the-letter-instances-submitted-by-a-user-and-letter-instance-type-is-draft}
 
-以下代碼在同一查詢中具有多個語句，以根據用戶提交的字母實例（屬性提交者）等不同標準來過濾結果，並且letterInstanceType的類型為DRAFT。
+下列程式碼在相同查詢中有多個陳述式，可取得根據不同條件篩選的結果，例如使用者提交的信件例項（屬性提交者），以及letterInstanceType的型別為DRAFT。
 
 ```java
 @Reference
@@ -107,7 +107,7 @@ submittedLetterInstances = letterInstanceService.getAllLetterInstances(query);
 
 ### 使用getLetterInstance {#using-nbsp-getletterinstance}
 
-提取由給定字母實例id標識的字母實例。 如果實例ID不匹配，則返回「空」。
+擷取由指定的字母例項ID所識別的信件例項。 如果執行個體ID不相符，則會傳回「 null」。
 
 **語法：** `public LetterInstanceVO getLetterInstance(String letterInstanceId) throws ICCException;`
 
@@ -118,15 +118,15 @@ String letterInstanceId = "/content/apps/cm/letterInstances/1001/sampleLetterIns
 LetterInstanceVO letterInstance = letterInstanceService.getLetterInstance(letterInstanceId );
 ```
 
-### 驗證LetterInstance是否存在 {#verifying-if-letterinstance-exist}
+### 正在驗證LetterInstance是否存在 {#verifying-if-letterinstance-exist}
 
-檢查給定名稱是否存在字母實例
+檢查信件例項是否存在指定的名稱
 
-**語法**: `public Boolean letterInstanceExists(String letterInstanceName) throws ICCException;`
+**語法**： `public Boolean letterInstanceExists(String letterInstanceName) throws ICCException;`
 
 | **參數** | **說明** |
 |---|---|
-| letterInstanceName | 要檢查的字母實例的名稱是否存在。 |
+| letterInstanceName | 您要檢查其是否存在的信件例項名稱。 |
 
 ```java
 @Reference
@@ -135,25 +135,25 @@ String letterInstanceName = "sampleLetterInstance";
 Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName );
 ```
 
-## 期初字母實例 {#opening-letter-instances}
+## 開啟字母例項 {#opening-letter-instances}
 
-字母實例可以是「已提交」或「草稿」類型。 開啟這兩個字母實例類型顯示不同的行為：
+信件例項可以是已提交或草稿型別。 開啟兩種信件實體型別會顯示不同的行為：
 
-* 如果是「已提交的信函實例」，則開啟表示該信函實例的PDF。 在伺服器上保留的已提交信件實例還包含dataXML和已處理的XDP，它可用於完成和進一步自定義使用案例，如建立PDF/A。
-* 在「草稿」字母實例中，建立對應UI將重新載入到與建立草稿時相同的先前狀態
+* 如果是Submitted letter例項，則會開啟代表該例項的PDF。 伺服器上持續存在的已提交信件例項也包含dataXML和已處理的XDP，這可用於完成並進一步自訂使用案例，例如建立PDF/A。
+* 如果是「草稿信件」例項，則建立通訊UI會重新載入到與建立草稿時完全相同的先前狀態
 
-### 開啟草稿字母實例  {#opening-draft-letter-instance-nbsp}
+### 開啟草稿字母例項  {#opening-draft-letter-instance-nbsp}
 
-CCR UI支援cmLetterInstanceId參數，該參數可用於重新載入字母。
+CCR UI支援cmLetterInstanceId引數，該引數可用於重新載入字母。
 
 `https://[hostName]:[portNo]/[contextPath]//aem/forms/createcorrespondence.html?random=[randomNo]&cmLetterInstanceId=[letterInstanceId]`
 
 >[!NOTE]
 >
->重裝通信時，不必指定cmLetterId或cmLetterName/State/Version，因為已提交的資料已包含有關重新載入的通信的所有詳細資訊。 RandomNo用於避免瀏覽器快取問題，您可以將時間戳用作隨機數。
+>重新載入通訊時，您不必指定cmLetterId或cmLetterName/State/Version，因為提交的資料已包含重新載入通訊的所有詳細資訊。 RandomNo可用來避免瀏覽器快取問題，您可以將時間戳記當成隨機數字使用。
 
-### 正在開啟已提交的信函實例 {#opening-submitted-letter-instance}
+### 開啟提交的字母例項 {#opening-submitted-letter-instance}
 
-已提交PDF可以使用字母實例ID直接開啟：
+可使用字母例項ID直接開啟已提交的PDF：
 
 `https://[hostName]:[portNo]/[contextPath]/[letterInstanceId]`

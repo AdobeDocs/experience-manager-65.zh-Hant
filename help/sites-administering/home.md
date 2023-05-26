@@ -1,6 +1,6 @@
 ---
 title: AEM 6.5 管理使用指南
-description: 瞭解管理AEM6.5。這些指南涵蓋站點功能、部署操作、安全功能、個性化、整合等。
+description: 瞭解如何管理AEM 6.5。這些指南涵蓋網站功能、部署作業、安全性功能、個人化、整合等。
 exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
 source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
@@ -11,37 +11,37 @@ ht-degree: 30%
 
 # AEM 6.5 管理使用指南
 
-瞭解管理AEM6.5。這些指南涵蓋站點功能、部署操作、安全功能、個性化、整合等。
+瞭解如何管理AEM 6.5。這些指南涵蓋網站功能、部署作業、安全性功能、個人化、整合等。
 
 ## 重要  文章
 
-* [入AEM門](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
-* [AEM6.5發行說明](/help/release-notes/home.md)
+* [AEM快速入門](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
+* [AEM 6.5發行說明](/help/release-notes/home.md)
 * [近期文件更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
-* [安AEM全核對表](/help/sites-administering/security-checklist.md)
+* [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5使用手冊
 
 | 使用手冊 | 說明 |
 |--- |---|
-| [發行說明](/help/release-notes/home.md) | 提供有關最新版本的重要信AEM息，包括新增的、受支援的平台、不建議使用和刪除的功能以及已知問題。 |
-| [Assets 使用手冊](/help/assets/home.md) | 瞭解如何建立、管理、交付和優化數字資產。 |
-| [Forms使用手冊](/help/forms/home.md) | 本指南介紹如何建立、管理、發佈和更新數字表單。 |
-| [社區使用手冊](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
-| [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管AEM理 |
-| [Authoring 指南](/help/sites-authoring/home.md) | 本指南介紹了中的創作概AEM念。 |
-| [經典UI創作指南](/help/sites-classic-ui-authoring/home.md) | 本指南介紹了在經典用戶界AEM面中創作的概念。 |
-| [螢幕使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解數字標牌解決方案，以發佈動態和互動式數字型驗。 |
-| [部署使用手冊](/help/sites-deploying/home.md) | 本指南向您介紹的基本信AEM息。 |
-| [開發使用手冊](/help/sites-developing/home.md) | 瞭解如何構建實AEM例。 |
-| [管理使用手冊](/help/managing/home.md) | 本指南介紹如何成功管AEM理項目。 |
-| [Commerce 使用手冊](/help/commerce/home.md) | 瞭解有關的Commerce Integration FrameworkAEM。 |
-| [移動使用手冊](/help/mobile/home.md) | 本指南介紹如何為移動應用程式建立和管理內容。 |
+| [發行說明](/help/release-notes/home.md) | 提供有關最新版AEM的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。 |
+| [Assets 使用手冊](/help/assets/home.md) | 瞭解如何建立、管理、提供和最佳化數位資產。 |
+| [Forms使用手冊](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表格。 |
+| [Communities使用手冊](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
+| [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
+| [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
+| [Classic UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM中編寫的概念。 |
+| [Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解用於發佈動態和互動式數位體驗的數位看板解決方案。 |
+| [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南說明AEM的基本概念。 |
+| [開發使用手冊](/help/sites-developing/home.md) | 瞭解如何建置AEM執行個體。 |
+| [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
+| [Commerce 使用手冊](/help/commerce/home.md) | 瞭解AEM上的Commerce Integration Framework。 |
+| [Mobile使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
 
-## 關鍵資AEM源
+## 重要AEM資源
 
-* [教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [《 Dispatcher使用手冊》](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
+* [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
 * [HTL使用手冊](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)

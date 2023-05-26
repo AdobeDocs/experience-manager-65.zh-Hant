@@ -1,7 +1,7 @@
 ---
 title: 使用社交圖
 seo-title: Using Social Graph
-description: 將以下元件添加到頁面
+description: 將下列元件新增至頁面
 seo-description: Adding a Following component to a page
 uuid: 8be6334b-e6c9-40bc-90a8-750b98419470
 contentOwner: Guillaume Carlino
@@ -21,26 +21,26 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-社區成員遵循的能力 [活動](activities.md) 並通過兩個部分建立： `Follow` 和 `Following`。
+社群成員可遵循的功能 [活動](activities.md) 以及所遵循的規範是透過兩個元件建立的： `Follow` 和 `Following`.
 
-的 `Follow` 元件必須與其他資源關聯，並且此關聯已為社區成員和功能建立。
+此 `Follow` 元件必須與另一個資源相關聯，而且已為社群成員和功能建立此關聯。
 
-的 `Following` 元件只列出當前成員後面或當前成員後面的成員。 成員之間關係的此社會圖表包含在為 [社區站點](overview.md#communitiessites)。
+此 `Following` component只會列出目前成員之後或目前成員之後的成員。 此成員之間關係的社交圖表包含在為建立的使用者個人資料中 [社群網站](overview.md#communitiessites).
 
-## 向頁面添加以下內容 {#adding-following-to-a-page}
+## 新增關注專案至頁面 {#adding-following-to-a-page}
 
-如果希望添加 `Following` 在作者模式下將元件定位到頁面 `Communities / Following` 並將其拖到應顯示社交圖的頁面上。
+如果需要新增 `Following` 元件至作者模式下的頁面，找到元件 `Communities / Following` 並將其拖曳至社交圖表應出現的頁面上。
 
-如需必要資訊，請訪問 [社區元件基礎](basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
 
-當 [所需的客戶端庫](essentials-socialgraph.md#essentials-for-client-side) 包括，這是 `Following` 元件將出現：
+當 [必要的使用者端程式庫](essentials-socialgraph.md#essentials-for-client-side) 包含，這就是 `Following` 元件將會出現：
 
-![以下](assets/following.png)
+![關注](assets/following.png)
 
-## 配置以下內容 {#configuring-following}
+## 設定下列專案 {#configuring-following}
 
-當前，必須設定屬性以確定元件是否顯示 `follows` 關係，或 `following` 關係。
+目前，需要設定屬性以判斷元件是否顯示 `follows` 關聯性，或 `following` 關係。
 
 ## 其他資訊 {#additional-information}
 
-有關 [社會圖表要點](essentials-socialgraph.md) 頁面。
+如需詳細資訊，請參閱 [Social Graph Essential](essentials-socialgraph.md) 適用於開發人員的頁面。

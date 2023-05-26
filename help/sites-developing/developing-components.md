@@ -1,7 +1,7 @@
 ---
-title: 開發組AEM件
+title: 開發AEM元件
 seo-title: Developing AEM Components
-description: 組AEM件用於保存、格式化和呈現網頁上提供的內容。
+description: AEM元件可用來保留、格式化及轉譯可在您的網頁上使用的內容。
 seo-description: AEM components are used to hold, format, and render the content made available on your webpages.
 uuid: 1f39daa6-7277-45a2-adcc-74b58c93b8e4
 contentOwner: User
@@ -19,155 +19,155 @@ ht-degree: 1%
 
 ---
 
-# 開發組AEM件{#developing-aem-components}
+# 開發AEM元件{#developing-aem-components}
 
-組AEM件用於保存、格式化和呈現網頁上提供的內容。
+AEM元件可用來保留、格式化及轉譯可在您的網頁上使用的內容。
 
-* 當 [創作頁面](/help/sites-authoring/default-components.md)，這些元件允許作者編輯和配置內容。
+* 時間 [製作頁面](/help/sites-authoring/default-components.md)時，元件可讓作者編輯及設定內容。
 
-   * 構造 [商業](/help/commerce/cif-classic/administering/ecommerce.md) 站點元件可以收集和呈現目錄中的資訊。
-請參閱 [發展電子商務](/help/commerce/cif-classic/developing/ecommerce.md) 的子菜單。
+   * 建構時 [商務](/help/commerce/cif-classic/administering/ecommerce.md) 舉例來說，元件可在網站上收集及轉譯目錄中的資訊。
+另請參閱 [開發電子商務](/help/commerce/cif-classic/developing/ecommerce.md) 以取得詳細資訊。
 
-   * 構造 [社區](/help/communities/author-communities.md) 站點元件可向訪問者提供資訊並從訪問者收集資訊。
-請參閱 [發展中社區](/help/communities/communities.md) 的子菜單。
+   * 建構時 [Communities](/help/communities/author-communities.md) 網站元件可提供資訊給訪客，並從訪客收集資訊。
+另請參閱 [開發社群](/help/communities/communities.md) 以取得詳細資訊。
 
-* 在發佈實例上，這些元件將呈現您的內容，並按您要求向網站訪問者呈現。
+* 在發佈執行個體上，元件會轉譯您的內容，並視需要向網站訪客顯示。
 
 >[!NOTE]
 >
->此頁面是文檔的繼續 [組AEM件 — 基礎](/help/sites-developing/components-basics.md)。
+>本頁是檔案的延續 [AEM元件 — 基本知識](/help/sites-developing/components-basics.md).
 
 >[!CAUTION]
 >
->以下元件 `/libs/cq/gui/components/authoring/dialog` 僅用於編輯器（創作中的元件對話框）。 如果在其他位置（例如在嚮導對話框中）使用它們，則它們的行為可能不如預期。
+>下列元件 `/libs/cq/gui/components/authoring/dialog` 僅能在「編輯器」（Authoring中的元件對話方塊）中使用。 如果在其他地方（例如在精靈對話方塊中）使用，它們可能無法如預期般運作。
 
 ## 程式碼範例 {#code-samples}
 
-此頁提供開發新元件所需的參考文檔（或指向參考文檔的連結）AEM。 請參閱 [開發AEM元件 — 代碼示例](/help/sites-developing/developing-components-samples.md) 一些實例。
+本頁提供AEM開發新元件所需的參考檔案（或參考檔案連結）。 另請參閱 [開發AEM元件 — 程式碼範例](/help/sites-developing/developing-components-samples.md) 以取得一些實用的範例。
 
 ## 結構 {#structure}
 
-元件的基本結構在頁面上覆蓋 [組AEM件 — 基礎](/help/sites-developing/components-basics.md#structure)。 該文檔既包括啟用觸摸功能的用戶介面，也包括經典用戶介面。 即使您不需要在新元件中使用經典設定，在繼承現有元件時也可以瞭解它們。
+頁面上會說明元件的基本結構 [AEM元件 — 基本知識](/help/sites-developing/components-basics.md#structure). 該檔案同時涵蓋觸控式與傳統UI。 即使您不需要在新元件中使用傳統設定，在繼承現有元件時瞭解這些設定也會有所幫助。
 
-## 擴展現有元件和對話框 {#extending-existing-components-and-dialogs}
+## 延伸現有元件與對話方塊 {#extending-existing-components-and-dialogs}
 
-根據要實施的元件，可能會擴展或定制現有實例，而不是定義和開發整個實例 [結構](#structure) 從頭開始。
+根據您想要實作的元件，可能會擴充或自訂現有例項，而非定義及開發整個例項 [結構](#structure) 從頭開始。
 
-在擴展或定制現有元件或對話框時，可以在進行更改之前複製或複製對話框所需的整個結構或結構。
+當延伸或自訂現有元件或對話方塊時，您可以在進行變更之前複製或複製整個結構或對話方塊所需的結構。
 
-### 擴展現有元件 {#extending-an-existing-component}
+### 擴充現有元件 {#extending-an-existing-component}
 
-可以利用 [資源類型層次結構](/help/sites-developing/components-basics.md#component-hierarchy-and-inheritance) 以及相關的繼承機制。
-
->[!NOTE]
->
->也可以基於搜索路徑邏輯用覆蓋重定義元件。 然而，在此情況下， [Sling資源合併](/help/sites-developing/sling-resource-merger.md) 未觸發並 `/apps` 必須定義整個覆蓋。
+可透過以下方式延伸現有元件 [資源型別階層](/help/sites-developing/components-basics.md#component-hierarchy-and-inheritance) 以及相關的繼承機制。
 
 >[!NOTE]
 >
->的 [內容片段元件](/help/sites-developing/customizing-content-fragments.md) 也可以定制和擴展，但必須考慮與Assets的完整結構和關係。
-
-### 自定義現有元件對話框 {#customizing-a-existing-component-dialog}
-
-也可以覆蓋 *元件對話框* 使用 [Sling資源合併](/help/sites-developing/sling-resource-merger.md) 定義屬性 `sling:resourceSuperType`。
-
-這意味著您只需重定義所需的差異，而不需要重定義整個對話框(使用 `sling:resourceSuperType`)。 現在建議使用此方法來擴展元件對話框
-
-查看 [Sling資源合併](/help/sites-developing/sling-resource-merger.md) 的子菜單。
-
-## 定義標籤 {#defining-the-markup}
-
-將使用 [HTML](https://www.w3schools.com/htmL/html_intro.asp)。 您的元件需要定義獲取所需內容所需的HTML，然後根據需要在作者和發佈環境中呈現它。
-
-### 使用HTML模板語言 {#using-the-html-template-language}
-
-的 [HTML模板語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)在6.0中引AEM入的JSP(JavaServer Pages)代替了JSP(JavaServer Pages)作為首選和推薦的伺服器端模板系統進行HTML。 對於需要構建強健企業網站的Web開發人員，HTL有助於提高安全性和開發效率。
+>元件也可以根據搜尋路徑邏輯，以覆蓋重新定義。 然而，在此情況下， [Sling資源合併](/help/sites-developing/sling-resource-merger.md) 未觸發，並且 `/apps` 必須定義整個覆蓋。
 
 >[!NOTE]
 >
->雖然HTL和JSP都可用於元件的開發，但我們將在此頁上用HTL來說明開發，因為它是推薦的指令碼語言AEM。
+>此 [內容片段元件](/help/sites-developing/customizing-content-fragments.md) 也可以自訂和擴充，但必須考慮完整結構和與Assets的關係。
+
+### 自訂現有元件對話方塊 {#customizing-a-existing-component-dialog}
+
+也可以覆寫 *元件對話方塊* 使用 [Sling資源合併](/help/sites-developing/sling-resource-merger.md) 和定義屬性 `sling:resourceSuperType`.
+
+這表示您只需要重新定義所需的差異，而不必重新定義整個對話方塊(使用 `sling:resourceSuperType`)。 現在建議使用此方法來擴充元件對話方塊
+
+請參閱 [Sling資源合併](/help/sites-developing/sling-resource-merger.md) 以取得更多詳細資料。
+
+## 定義加成 {#defining-the-markup}
+
+您的元件將會呈現為 [HTML](https://www.w3schools.com/htmL/html_intro.asp). 您的元件需要定義取得所需內容所需的HTML，然後視需要在製作和發佈環境中轉譯。
+
+### 使用HTML範本語言 {#using-the-html-template-language}
+
+此 [HTML範本化語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)AEM 6.0引進的，取代JSP (JavaServer Pages)，成為首選和推薦的HTML伺服器端範本系統。 對於需要建立強大企業網站的網頁開發人員而言，HTL有助於提高安全性和開發效率。
+
+>[!NOTE]
+>
+>雖然HTL和JSP都可用於開發元件，但我們將在本頁說明HTL開發，因為它是建議的AEM指令碼語言。
 
 ## 開發內容邏輯 {#developing-the-content-logic}
 
-此可選邏輯選擇和/或計算要呈現的內容。 從HTL表達式中調用該函式，並使用適當的Use-API模式。
+此選擇性邏輯會選取和/或計算要呈現的內容。 它會以適當的Use-API模式從HTL運算式叫用。
 
-將邏輯與外觀分離的機制有助於澄清對給定視圖所調用的內容。 它還允許對同一資源的不同視圖使用不同的邏輯。
+從外觀分離邏輯的機制有助於釐清對指定檢視的叫用。 此外，對於同一資源的不同檢視，它也允許有不同的邏輯。
 
 ### 使用Java {#using-java}
 
-[HTL Java Use-API使HTL檔案能夠訪問自定義Java類中的幫助程式方法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=en)。 這樣，您就可以使用Java代碼來實現用於選擇和配置元件內容的邏輯。
+[HTL Java Use-API讓HTL檔案能夠存取自訂Java類別中的helper方法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=en). 這可讓您使用Java程式碼來實作用於選取和設定元件內容的邏輯。
 
 ### 使用JavaScript {#using-javascript}
 
-[HTL JavaScript Use-API使HTL檔案能夠訪問用JavaScript編寫的幫助程式碼](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=en)。 這允許您使用JavaScript代碼來實現用於選擇和配置元件內容的邏輯。
+[HTL JavaScript Use-API讓HTL檔案能夠存取以JavaScript撰寫的helper程式碼](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=en). 這可讓您使用JavaScript程式碼來實作選取和設定元件內容的邏輯。
 
-### 使用客戶端HTML庫 {#using-client-side-html-libraries}
+### 使用使用者端HTML程式庫 {#using-client-side-html-libraries}
 
-現代網站在複雜的JavaScript和CSS代碼驅動下，嚴重依賴客戶端處理。 組織和優化此代碼的服務可能是一個複雜的問題。
+現代網站非常依賴由複雜的JavaScript和CSS程式碼驅動的使用者端處理。 組織和最佳化此程式碼的伺服可能會是個複雜的問題。
 
-為幫助處理此問題，提供 **客戶端庫資料夾**，允許您將客戶端代碼儲存在儲存庫中，將其組織為類別，並定義將每類代碼提供給客戶端的時間和方式。 然後，客戶端庫系統會注意在最終網頁中生成正確的連結以載入正確的代碼。
+為協助處理此問題，AEM提供 **使用者端資料庫資料夾**，可將使用者端程式碼儲存在存放庫中，將其組織成類別，並定義每個類別程式碼何時及如何提供給使用者端。 然後，使用者端程式庫系統會負責在最終網頁中產生正確的連結，以載入正確的程式碼。
 
-閱讀 [使用客戶端HTML庫](/help/sites-developing/clientlibs.md) 的子菜單。
+讀取 [使用使用者端HTML程式庫](/help/sites-developing/clientlibs.md) 以取得詳細資訊。
 
-## 配置編輯行為 {#configuring-the-edit-behavior}
+## 設定編輯行為 {#configuring-the-edit-behavior}
 
-可以配置元件的編輯行為，包括元件可用的操作、就地編輯器的特性以及與元件上的事件相關的監聽器等屬性。 該配置對於啟用觸摸的UI和經典UI都是通用的，儘管有某些特定的差異。
+您可以設定元件的編輯行為，包括元件可用的動作、就地編輯器的特性，以及與元件上事件相關的接聽程式等屬性。 此設定對觸控式與傳統UI而言都是通用的，但會有某些特定差異。
 
-的 [已配置元件的編輯行為](/help/sites-developing/components-basics.md#edit-behavior) 通過添加 `cq:editConfig` 類型節點 `cq:EditConfig` 元件節點下(類型 `cq:Component`)和添加特定屬性和子節點。
+此 [元件的編輯行為已設定](/help/sites-developing/components-basics.md#edit-behavior) 藉由新增 `cq:editConfig` 型別的節點 `cq:EditConfig` 元件節點下方(型別 `cq:Component`)，並新增特定屬性和子節點。
 
-## 配置預覽行為 {#configuring-the-preview-behavior}
+## 設定預覽行為 {#configuring-the-preview-behavior}
 
-的 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 切換到 **預覽** 模式，即使不刷新頁面。
+此 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 切換至時設定Cookie **預覽** 模式（即使頁面未重新整理）。
 
-對於具有對WCM模式敏感的渲染的元件，需要定義這些元件以具體地刷新自身，然後依賴cookie的值。
+對於呈現時對WCM模式敏感的元件，需要將其定義為專門重新整理自身，然後依賴Cookie的值。
 
 >[!NOTE]
 >
->在啟用觸摸的UI中，僅值 `EDIT` 和 `PREVIEW` 用於 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 餅乾。
+>在啟用觸控的UI中，僅限 `EDIT` 和 `PREVIEW` 用於 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie。
 
-## 建立和配置對話框 {#creating-and-configuring-a-dialog}
+## 建立和設定對話方塊 {#creating-and-configuring-a-dialog}
 
-對話框用於允許作者與元件交互。 使用對話框允許作者和/或管理員編輯內容、配置元件或定義設計參數(使用 [設計對話框](#creating-and-configuring-a-design-dialog))
+對話方塊可用來允許作者與元件互動。 使用對話方塊可讓作者和/或管理員編輯內容、設定元件或定義設計引數(使用 [設計對話方塊](#creating-and-configuring-a-design-dialog))
 
-### 珊瑚界和花崗岩界 {#coral-ui-and-granite-ui}
+### Coral UI和Granite UI {#coral-ui-and-granite-ui}
 
-[珊瑚UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) 和 [花崗岩UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) 定義現代的外觀和感AEM覺。
+[Coral UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) 和 [Granite UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) 定義AEM的現代外觀與風格。
 
-[Granite UI提供了大量基本元件（小部件）](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) 在創作環境中建立對話框。 必要時，可以擴展此選區並 [建立自己的小部件](#creatinganewwidget)。
+[Granite UI提供多種基本元件(Widget)](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) 需要在編寫環境中建立您的對話方塊。 必要時，您可以擴充此選取範圍並 [建立您自己的Widget](#creatinganewwidget).
 
-有關完整詳細資訊，請參閱：
+如需完整詳細資訊，請參閱：
 
-* 珊瑚UI
+* Coral UI
 
-   * 跨所有雲解決方案提供一致的UI
-   * [啟用觸摸AEM的UI概念 — Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
+   * 在所有雲端解決方案中提供一致的UI
+   * [AEM觸控式UI的概念 — Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
    * [Coral UI 指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
 
-* 花崗岩UI
+* Granite UI
 
-   * 提供包裝到Sling元件中的Coral UI標籤，用於構建UI控制台和對話框
-   * [啟用觸摸AEM的UI概念 — 花崗岩UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [花崗岩UI文檔](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+   * 提供包在Sling元件中的Coral UI標籤，用於建置UI主控台和對話方塊
+   * [AEM觸控式UI的概念 — Granite UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
+   * [Granite UI檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 
 >[!NOTE]
 >
->由於Granite UI元件的性質（與ExtJS小部件的不同），元件與啟用觸摸的UI的交互方式與 [經典UI](/help/sites-developing/developing-components-classic.md)。
+>由於Granite UI元件的性質（以及ExtJS Widget的差異），元件與觸控式UI的互動方式與 [傳統UI](/help/sites-developing/developing-components-classic.md).
 
-### 建立新對話框 {#creating-a-new-dialog}
+### 建立新對話方塊 {#creating-a-new-dialog}
 
-啟用觸摸的UI的對話框：
+觸控式UI的對話方塊：
 
-* 命名 `cq:dialog`。
-* 定義為 `nt:unstructured` 節點 `sling:resourceType` 屬性集。
+* 已命名 `cq:dialog`.
+* 定義為 `nt:unstructured` 具有的節點 `sling:resourceType` 屬性集。
 
-* 位於 `cq:Component` 節點，並且位於其元件定義旁。
-* 在伺服器端（作為Sling元件）上根據其內容結構和 `sling:resourceType` 屬性。
-* 使用Granite UI框架。
-* 包含描述對話框中欄位的節點結構。
+* 位於其 `cq:Component` 節點及其元件定義旁邊。
+* 會根據其內容結構和 `sling:resourceType` 屬性。
+* 使用Granite UI架構。
+* 包含描述對話方塊內欄位的節點結構。
 
-   * 這些節點 `nt:unstructured` 需要 `sling:resourceType` 屬性。
+   * 這些節點為 `nt:unstructured` 具有必要的 `sling:resourceType` 屬性。
 
-節點結構的示例可能是：
+節點結構的範例可能是：
 
 ```xml
 newComponent (cq:Component)
@@ -181,74 +181,74 @@ newComponent (cq:Component)
             description
 ```
 
-定制對話框類似於開發元件，因為該對話框本身是元件（即由元件指令碼呈現的標籤與由客戶端庫提供的行為/樣式）。
+自訂對話方塊類似於開發元件，因為對話方塊本身是元件（即由元件指令碼連同使用者端程式庫提供的行為/樣式演算的標籤）。
 
-有關示例，請參見：
+如需範例，請參閱：
 
 * `/libs/foundation/components/text/cq:dialog`
 * `/libs/foundation/components/download/cq:dialog`
 
 >[!NOTE]
 >
->如果元件沒有為啟用觸摸的UI定義對話框，則標準UI對話框將用作相容層內的回退。 要自定義此對話框，需要自定義經典UI對話框。 請參閱 [傳AEM統UI的元件](/help/sites-developing/developing-components-classic.md)。
+>如果元件沒有為觸控式UI定義對話方塊，則會使用Classic UI對話方塊作為相容性層內的備援。 若要自訂此類對話方塊，您需要自訂傳統UI對話方塊。 另請參閱 [傳統UI的AEM元件](/help/sites-developing/developing-components-classic.md).
 
-### 自定義對話框欄位 {#customizing-dialog-fields}
+### 自訂對話方塊欄位 {#customizing-dialog-fields}
 
 >[!NOTE]
 >
 >請參閱：
 >
->* Gems會AEM議於 [自定義對話框欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en)。
->* 下文所涵蓋的相關樣本代碼 [代碼示例 — 如何自定義對話框欄位](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)。
+>* 的AEM Gems講座 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
+>* 下涵蓋的相關範常式式碼 [程式碼範例 — 如何自訂對話方塊欄位](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields).
 >
 
 
 #### 建立新欄位 {#creating-a-new-field}
 
-啟用觸摸的UI的小部件作為Granite UI元件實現。
+觸控式UI的Widget實作為Granite UI元件。
 
-要在啟用觸摸的UI的元件對話框中建立新小部件，需要 [建立新的花崗岩UI欄位元件](/help/sites-developing/granite-ui-component.md)。
+若要建立新Widget以用於觸控式UI的元件對話方塊，需要您 [建立新的Granite UI欄位元件](/help/sites-developing/granite-ui-component.md).
 
 >[!NOTE]
 >
->有關Granite UI的完整詳細資訊，請參閱 [花崗岩用戶介面文檔](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)。
+>如需Granite UI的完整詳細資訊，請參閱 [Granite UI檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
-如果您將對話框視為表單元素的簡單容器，則還可以將對話框內容的主要內容視為表單域。 建立新表單域需要建立資源類型；這相當於建立新元件。 為幫助您完成該任務，Granite UI提供了要繼承的通用欄位元件(使用 `sling:resourceSuperType`):
+如果您將對話方塊視為表單元素的簡單容器，則您也可以將對話方塊內容的主要內容視為表單欄位。 建立新表單欄位需要您建立資源型別；這等同於建立新元件。 為協助您完成該工作，Granite UI提供了一般欄位元件，可繼承自(使用 `sling:resourceSuperType`)：
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
-更具體地說，Granite UI提供了一系列適合在對話中使用的場元件(或更一般地，在 [表](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html))。
+更具體地說，Granite UI提供了一系列適合用於對話方塊的欄位元件(或更一般地說，用於 [表單](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html))。
 
 >[!NOTE]
 >
->這與經典UI不同，後者用 `cq:Widgets` 節點，每個節點具有 `xtype` 建立與其相應的ExtJS構件的關係。 從實現的角度看，這些小部件是通過ExtJS框架在客戶端上實現的。
+>這與傳統UI不同，在傳統UI中，Widget是由 `cq:Widgets` 節點，每個節點都有特定的 `xtype` 以建立與其對應ExtJS Widget的關係。 從實作觀點來看，這些Widget是在使用者端由ExtJS架構轉譯。
 
-建立資源類型後，可以通過在對話框中添加新節點，並使用屬性來實例化欄位 `sling:resourceType` 指您剛介紹的資源類型。
+建立資源型別後，您可以在對話方塊中新增節點（包含屬性），將欄位具現化 `sling:resourceType` 請參閱您剛才介紹的資源型別。
 
-#### 為樣式和行為建立客戶端庫 {#creating-a-client-library-for-style-and-behavior}
+#### 建立樣式和行為的使用者端程式庫 {#creating-a-client-library-for-style-and-behavior}
 
-如果要為元件定義樣式和行為，可建立專用 [客戶端庫](/help/sites-developing/clientlibs.md) 定義自定義CSS/LESS和JS。
+如果您想要定義元件的樣式和行為，可以建立專用的 [使用者端資源庫](/help/sites-developing/clientlibs.md) 會定義您的自訂CSS/LESS和JS。
 
-要僅為元件對話框載入客戶端庫（即不會為其他元件載入），需要設定屬性 `extraClientlibs`** **您剛建立的客戶端庫的類別名稱對話框。 如果客戶端庫很大，並且/或您的欄位特定於該對話框，並且在其他對話框中不需要，則建議這樣做。
+若要讓您的使用者端程式庫僅供元件對話方塊載入（即它不會供其他元件載入），您需要設定屬性 `extraClientlibs`將**對話方塊新**至您剛剛建立的使用者端資源庫的類別名稱。 如果您的使用者端程式庫相當大和/或您的欄位專屬於該對話方塊，且不需要在其他對話方塊中使用，建議您這麼做。
 
-要為所有對話框載入客戶端庫，請將客戶端庫的category屬性設定為 `cq.authoring.dialog`。 這是客戶端庫的類別名稱，預設情況下，在呈現所有對話框時包括它。 如果客戶端庫較小且/或您的欄位是泛型的，並且可以在其它對話框中重用，則您希望執行此操作。
+若要讓您的使用者端程式庫載入所有對話方塊，請將使用者端程式庫的類別屬性設定為 `cq.authoring.dialog`. 這是在轉譯所有對話方塊時預設包含的使用者端程式庫的類別名稱。 如果您使用者端程式庫很小且/或您的欄位是通用的，而且可以在其他對話方塊中重複使用，您就可以執行此動作。
 
-有關示例，請參見：
+如需範例，請參閱：
 
 * `cqgems/customizingfield/components/colorpicker/clientlibs`
 
-   * 由 [代碼示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
+   * 提供者： [程式碼範例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
 
-#### 擴展（繼承自）欄位 {#extending-inheriting-from-a-field}
+#### 延伸（繼承）欄位 {#extending-inheriting-from-a-field}
 
-根據您的要求，您可以：
+視您的需求而定，您可以：
 
-* 按元件繼承擴展給定的花崗岩UI欄位( `sling:resourceSuperType`)
-* 通過遵循構件庫API（JS/CSS繼承），從基礎構件庫擴展給定構件（在Granite UI中，此為Coral UI）
+* 透過元件繼承擴充指定的Granite UI欄位( `sling:resourceSuperType`)
+* 遵循Widget程式庫API （JS/CSS繼承），從基礎Widget程式庫（在Granite UI中為Coral UI）擴充指定Widget
 
-#### 訪問對話框欄位 {#access-to-dialog-fields}
+#### 對話方塊欄位的存取權 {#access-to-dialog-fields}
 
-也可以使用渲染條件( `rendercondition`)控制誰有權訪問對話框中的特定頁籤/欄位；例如：
+您也可以使用演算條件( `rendercondition`)來控制誰可以存取您的對話方塊中的特定索引標籤/欄位，例如：
 
 ```xml
 + mybutton
@@ -260,115 +260,115 @@ newComponent (cq:Component)
 
 ### 處理欄位事件 {#handling-field-events}
 
-處理對話框欄位中事件的方法現在已完成 [自定義客戶端庫中的偵聽器](#listeners-in-a-custom-client-library)。 這是與以前的方法 [內容結構中的監聽器](#listenersinthecontentstructureclassicui)。
+處理對話方塊欄位上的事件的方法現在已完成 [自訂使用者端資料庫中的接聽程式](#listeners-in-a-custom-client-library). 這是舊有方法的變更，舊有方法會 [內容結構中的監聽器](#listenersinthecontentstructureclassicui).
 
-#### 自定義客戶端庫中的偵聽器 {#listeners-in-a-custom-client-library}
+#### 自訂使用者端資料庫中的監聽器 {#listeners-in-a-custom-client-library}
 
-要將邏輯插入您的欄位，您應：
+若要將邏輯插入欄位，您應該：
 
-1. 使用給定的CSS類標籤您的欄位( *鈎*)。
-1. 在客戶端庫中，定義一個掛接到該CSS類名的JS偵聽器（這可確保您的自定義邏輯僅限於您的欄位，並且不會影響同一類型的其他欄位）。
+1. 讓您的欄位標示為指定的CSS類別( *鉤點*)。
+1. 在您的使用者端資料庫中定義連結至該CSS類別名稱的JS接聽程式（這可確保您的自訂邏輯範圍僅限定在您的欄位中，不會影響相同型別的其他欄位）。
 
-要實現此目標，您需要瞭解要與之交互的底層構件庫。 查看 [Coral UI文檔](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) 確定要對哪個事件做出反應。 這與您過去對ExtJS執行的過程非常相似：查找給定小部件的文檔頁面，然後檢查其事件API的詳細資訊。
+若要達成此目的，您必須瞭解您要與其互動的基礎Widget程式庫。 請參閱 [Coral UI檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) 以識別您要對哪個事件做出反應。 這非常類似於您過去必須使用ExtJS執行的程式：尋找指定Widget的檔案頁面，然後檢查其事件API的詳細資訊。
 
-有關示例，請參見：
+如需範例，請參閱：
 
 * `cqgems/customizingfield/components/clientlibs/customizingfield`
 
-   * 由 [代碼示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
+   * 提供者： [程式碼範例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
 
-#### 內容結構中的偵聽器 {#listeners-in-the-content-structure}
+#### 內容結構中的監聽器 {#listeners-in-the-content-structure}
 
-在帶有ExtJS的經典UI中，通常在內容結構中為給定小部件設定偵聽器。 在啟用觸摸的UI中實現相同的功能與在內容中不再定義JS偵聽器代碼（或任何代碼）時不同。
+在具有ExtJS的傳統UI中，通常內容結構中會有指定Widget的接聽程式。 在觸控式UI中達成相同目標，是因為內容中不再定義JS接聽程式程式碼（或根本不定義任何程式碼）而有所不同。
 
-內容結構描述語義結構；它不應（必須）暗示基礎小部件的性質。 通過在內容結構中不使用JS代碼，您可以更改實現詳細資訊，而無需更改內容結構。 換句話說，您可以更改小部件庫，而無需觸摸內容結構。
+內容結構可描述語意結構；它應該（必須）不代表基礎Widget的性質。 內容結構中沒有JS程式碼，即可變更實作詳細資料，而無需變更內容結構。 換言之，您可以變更Widget程式庫，而不需要接觸內容結構。
 
-#### 檢測對話框的可用性 {#dialog-ready}
+#### 偵測對話方塊的可用性 {#dialog-ready}
 
-如果您有一個自定義JavaScript，該自定義JavaScript只需在對話框可用且準備就緒時才需要執行，則您應該偵聽 `dialog-ready` 的子菜單。
+如果您有自訂JavaScript，則只有在對話方塊可用且準備就緒時才需要執行，則應接聽 `dialog-ready` 事件。
 
-只要對話框載入（或重新載入）並準備使用，即會觸發此事件，這意味著只要對話框的DOM中有更改（建立/更新）。
+每當對話方塊載入（或重新載入）並準備就緒可供使用時，即表示每當對話方塊的DOM中有變更（建立/更新）時，就會觸發此事件。
 
-`dialog-ready` 可用於掛接JavaScript自定義代碼，該代碼對對話框或類似任務中的欄位執行自定義。
+`dialog-ready` 可用於掛接JavaScript自訂程式碼，以在對話方塊或類似工作的欄位上執行自訂。
 
 ### 欄位驗證 {#field-validation}
 
-#### 必填欄位 {#mandatory-field}
+#### 必要欄位 {#mandatory-field}
 
-要將給定欄位標籤為必需，請在欄位的內容節點上設定以下屬性：
+若要將指定欄位標示為必填欄位，請在欄位的內容節點上設定下列屬性：
 
 * 名稱: `required`
 * 類型: `Boolean`
 
-有關示例，請參見：
+如需範例，請參閱：
 
 ```xml
 /libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title
 ```
 
-#### 現場驗證（花崗岩UI） {#field-validation-granite-ui}
+#### 欄位驗證(Granite UI) {#field-validation-granite-ui}
 
-使用 `foundation-validation` API。 [查看 `foundation-valdiation` 花崗岩文檔，瞭解詳細資訊。](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
+Granite UI和Granite UI元件（等同於Widget）中的欄位驗證是透過使用 `foundation-validation` API。 [請參閱 `foundation-valdiation` Granite檔案以瞭解詳細資訊。](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
 
-有關示例，請參見：
+如需範例，請參閱：
 
 * `cqgems/customizingfield/components/clientlibs/customizingfield/js/validations.js`
 
-   * 由 [代碼示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
+   * 提供者： [程式碼範例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
 
 * `/libs/cq/gui/components/authoring/dialog/clientlibs/dialog/js/validations.js`
 
-## 建立和配置設計對話框 {#creating-and-configuring-a-design-dialog}
+## 建立和設定設計對話方塊 {#creating-and-configuring-a-design-dialog}
 
-當元件具有可在中編輯的設計詳細資訊時，將提供「設計」對話框 [設計模式](/help/sites-authoring/default-components-designmode.md)。
+當元件具有可在其中編輯的設計詳細資訊時，會提供「設計」對話方塊 [設計模式](/help/sites-authoring/default-components-designmode.md).
 
-定義與 [用於編輯內容的對話框](#creating-a-new-dialog)，區別在於它定義為節點：
+定義非常類似於 [用於編輯內容的對話方塊](#creating-a-new-dialog)，不同之處在於定義為節點：
 
 * 節點名稱： `cq:design_dialog`
 * 類型: `nt:unstructured`
 
-## 建立和配置就地編輯器 {#creating-and-configuring-an-inplace-editor}
+## 建立和設定就地編輯器 {#creating-and-configuring-an-inplace-editor}
 
-原位編輯器允許用戶直接編輯段落流中的內容，而無需開啟對話框。 例如，標準文本和標題元件都具有一個就地編輯器。
+就地編輯器可讓使用者直接在段落流程中編輯內容，而不需要開啟對話方塊。 例如，標準「文字」和「標題」元件都有就地編輯器。
 
-對於每個元件類型，不需要/不需要就地編輯器。
+並非每個元件型別都需要/有意義的就地編輯器。
 
-請參閱 [擴展頁面創作 — 添加新的就地編輯器](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor) 的子菜單。
+另請參閱 [擴充頁面編寫 — 新增就地編輯器](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor) 以取得詳細資訊。
 
-## 自定義元件工具欄 {#customizing-the-component-toolbar}
+## 自訂元件工具列 {#customizing-the-component-toolbar}
 
-的 [元件工具欄](/help/sites-developing/touch-ui-structure.md#component-toolbar) 允許用戶訪問元件的一系列操作，如編輯、配置、複製和刪除。
+此 [元件工具列](/help/sites-developing/touch-ui-structure.md#component-toolbar) 可讓使用者存取元件的一系列動作，例如編輯、設定、複製和刪除。
 
-請參閱 [擴展頁面創作 — 將新操作添加到元件工具欄](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar) 的子菜單。
+另請參閱 [擴充頁面編寫 — 將新動作新增至元件工具列](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar) 以取得詳細資訊。
 
-## 為參照導軌配置元件（借入/借出） {#configuring-a-component-for-the-references-rail-borrowed-lent}
+## 設定參考邊欄的元件（借入/借出） {#configuring-a-component-for-the-references-rail-borrowed-lent}
 
-如果新元件引用來自其他頁面的內容，則可以考慮是否希望它影響 **借用內容** 和 **借出內容** 的 [**引用**](/help/sites-authoring/basic-handling.md#references) 鐵軌。
+如果您的新元件參考其他頁面的內容，那麼您可以考慮是否要使其影響 **借用的內容** 和 **借出內容** 的區段 [**引用**](/help/sites-authoring/basic-handling.md#references) 邊欄。
 
-現成僅檢AEM查「參照」(Reference)元件。 要添加元件，您需要配置OSGi捆綁包 **WCM創作內容參考配置**。
+現成可用的AEM只會檢查「參照」元件。 若要新增元件，您需要設定OSGi套件組合 **WCM製作內容參考設定**.
 
-在定義中建立新條目，指定元件以及要檢查的屬性。 例如：
+在定義中建立新專案，指定元件以及要檢查的屬性。 例如：
 
 `/apps/<*your-Project*>/components/reference@parentPath`
 
 >[!NOTE]
 >
->使用時，AEM有多種方法管理此類服務的配置設定。 請參閱 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 的子菜單。
+>使用AEM時，有數種方法可管理此類服務的組態設定。 另請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
 
-## 啟用元件並將其添加到段落系統 {#enabling-and-adding-your-component-to-the-paragraph-system}
+## 啟用元件並將其新增至段落系統 {#enabling-and-adding-your-component-to-the-paragraph-system}
 
-在開發該元件後，需要啟用該元件以在適當的段落系統中使用，以便可以在所需的頁面上使用。
+開發元件後，必須啟用該元件，才能在適當的段落系統中使用，以便在所需頁面上使用。
 
-這可以通過以下任一方式完成：
+您可以透過以下任一方式完成：
 
 * 使用 [設計模式](/help/sites-authoring/default-components-designmode.md) 編輯特定頁面時。
-* [定義 `components` 模板段落系統上的屬性](/help/sites-developing/components-basics.md#adding-your-component-to-the-paragraph-system)。
+* [定義 `components` 範本的段落系統上的屬性](/help/sites-developing/components-basics.md#adding-your-component-to-the-paragraph-system).
 
-## 配置段落系統，以便拖動資產建立元件實例 {#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance}
+## 設定段落系統以便拖曳資產建立元件例項 {#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance}
 
-提AEM供了在頁面上配置段落系統的可能性 [當用戶將一個（適當的）資產拖放到該頁的實例上時，將自動建立新元件的實例](/help/sites-authoring/editing-content.md#insertingacomponenttouchoptimizedui) （而不是總是將空元件拖到頁面中）。
+AEM可讓您在頁面上設定段落系統，以便 [當使用者將資產拖曳至該頁面的例項時，會自動建立新元件的例項](/help/sites-authoring/editing-content.md#insertingacomponenttouchoptimizedui) （不必一律將空白元件拖曳至頁面）。
 
-可以配置此行為以及所需的資產到元件關係：
+此行為以及所需的資產與元件關係皆可設定：
 
 1. 在頁面設計的段落定義下。 例如：
 
@@ -380,106 +380,106 @@ newComponent (cq:Component)
    * 類型: `nt:unstructured`
 
 
-1. 在此下，建立一個新節點以保存所有資產到元件映射：
+1. 在此底下建立新節點以儲存所有資產對元件對應：
 
    * 名稱: `assetToComponentMapping`
    * 類型: `nt:unstructured`
 
-1. 對於每個資產到元件映射，建立一個節點：
+1. 對於每個資產與元件對應，請建立節點：
 
-   * 名稱：文本；建議名稱指明資產及相關元件類型；例如，影像
+   * 名稱：文字；建議名稱指出資產和相關元件型別；例如image
    * 類型: `nt:unstructured`
 
-   每個都具有以下屬性：
+   每一個都具有下列屬性：
 
    * `assetGroup`:
 
       * 類型: `String`
-      * 值：相關資產所屬之組別；比如說， `media`
+      * 值：相關資產所屬的群組；例如， `media`
    * `assetMimetype`:
 
       * 類型: `String`
-      * 值：相關資產的mime類型；例如 `image/*`
+      * 值：相關資產的mime型別；例如 `image/*`
    * `droptarget`:
 
       * 類型: `String`
-      * 值：落靶；比如說， `image`
+      * 值：放置目標；例如， `image`
    * `resourceType`:
 
       * 類型: `String`
-      * 值：相關元件資源；比如說， `foundation/components/image`
+      * 值：相關元件資源；例如， `foundation/components/image`
    * `type`:
 
       * 類型: `String`
-      * 值：例如， `Images`
+      * 值：型別，例如， `Images`
 
 
 
 
 
 
-有關示例，請參見：
+如需範例，請參閱：
 
 * `/etc/designs/geometrixx/jcr:content/page/par/cq:authoring`
 * `/etc/designs/geometrixx-outdoors/jcr:content/page/par/cq:authoring`
 * `/etc/designs/geometrixx-media/jcr:content/article/article-content-par/cq:authoring`
 
-GITHUB代碼
+GITHUB上的程式碼
 
-可以在GitHub上找到此頁的代碼
+您可以在GitHub上找到此頁面的程式碼
 
-* [在GitHub上開啟項目原型項目](https://github.com/adobe/aem-project-archetype)
-* 將項目下載為 [ZIP檔案](https://github.com/adobe/aem-project-archetype/archive/master.zip)
-
->[!NOTE]
->
->使用時，現在可以在UI中輕鬆配置元件實例的自動建立 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和可編輯模板。 請參閱 [建立頁面模板](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 的子菜單。
-
-## 使用括弧AEM延伸 {#using-the-aem-brackets-extension}
-
-的 [括弧AEM擴展](/help/sites-developing/aem-brackets.md) 提供了一個平滑的工作流，可編AEM輯元件和客戶端庫。 它基於 [括弧](https://brackets.io/) 代碼編輯器。
-
-擴展：
-
-* 簡化同步（不需要Maven或File Vault），以幫助提高開發人員效率，並幫助知識有限的前AEM端開發人員參與項目。
-* 提供一些 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 支援，模板語言旨在簡化元件開發並提高安全性。
+* [在GitHub上開啟aem-project-archetype專案](https://github.com/adobe/aem-project-archetype)
+* 將專案下載為 [ZIP檔案](https://github.com/adobe/aem-project-archetype/archive/master.zip)
 
 >[!NOTE]
 >
->括弧是建立元件的推薦機制。 它替換了為經典UI設計的CRXDE Lite — 建立元件功能。
+>使用時，現在可在UI中輕鬆設定自動建立元件執行個體 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和可編輯的範本。 另請參閱 [建立頁面範本](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 以取得定義哪些元件會自動與指定媒體型別相關聯的詳細資訊。
 
-## 從經典元件遷移 {#migrating-from-a-classic-component}
+## 使用AEM Brackets擴充功能 {#using-the-aem-brackets-extension}
 
-將設計為與標準UI一起使用的元件遷移到可與啟用觸摸的UI一起使用的元件（單獨或聯合使用）時，應考慮以下問題：
+此 [AEM Brackets擴充功能](/help/sites-developing/aem-brackets.md) 提供流暢的工作流程來編輯AEM元件和使用者端程式庫。 其基礎為 [括弧](https://brackets.io/) 程式碼編輯器。
+
+擴充功能：
+
+* 簡化同步作業（不需要Maven或File Vault），協助提高開發人員效率，同時協助具備有限AEM知識的前端開發人員參與專案。
+* 提供一些 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 支援，此範本語言旨在簡化元件開發並提高安全性。
+
+>[!NOTE]
+>
+>建立元件的建議機製為括弧。 它取代了為傳統UI設計的「CRXDE Lite — 建立元件」功能。
+
+## 從傳統元件移轉 {#migrating-from-a-classic-component}
+
+將專為搭配傳統UI使用的元件移轉至可搭配觸控式UI使用的元件時（無論是單獨使用還是搭配使用），應考量下列問題：
 
 * HTL
 
-   * 使用 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 不是強制性的，但如果您的元件需要更新，則是考慮 [從JSP遷移到HTL](/help/sites-developing/components-basics.md#htl-vs-jsp)。
+   * 使用 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 不是強制性的，但如果您的元件需要更新，則最好考慮一下 [從JSP移轉至HTL](/help/sites-developing/components-basics.md#htl-vs-jsp).
 
 * 元件
 
-   * 遷移 [ `cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code) 使用經典UI特定函式的代碼
-   * RTE插件，有關詳細資訊，請參閱 [配置富格文本編輯器](/help/sites-administering/rich-text-editor.md)。
-   * [遷移 `cq:listener` 代碼](#migrating-cq-listener-code) 使用特定於傳統UI的函式
+   * 移轉 [ `cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code) 使用傳統UI特定功能的程式碼
+   * RTE外掛程式，如需進一步資訊，請參閱 [設定RTF編輯器](/help/sites-administering/rich-text-editor.md).
+   * [移轉 `cq:listener` 程式碼](#migrating-cq-listener-code) 使用傳統UI專屬的函式
 
 * 對話方塊
 
-   * 建立對話框以在啟用觸摸的用戶介面中使用。 但是，為了相容性目的，啟用觸摸的UI可以使用標準UI對話框的定義，但是尚未為啟用觸摸的UI定義對話框。
-   * 的 [現代化AEM工具](/help/sites-developing/modernization-tools.md) 可幫助您擴展現有元件。
-   * [將ExtJS映射到花崗岩UI元件](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components) 提供了ExtJS xtypes和節點類型及其等效花崗岩UI資源類型的方便概述。
-   * 自定義欄位，有關詳細資訊，請參AEM閱Gems會話 [自定義對話框欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en)。
-   * 從vtypes遷移到 [花崗岩UI驗證](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
-   * 使用JS偵聽器，有關詳細資訊，請參閱 [處理欄位事件](#handling-field-events) 和GemsAEM會議 [自定義對話框欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en)。
+   * 建立對話方塊以用於觸控式UI。 不過，為相容性目的，如果沒有為觸控式UI定義對話方塊，觸控式UI可以使用傳統UI對話方塊的定義。
+   * 此 [AEM現代化工具](/help/sites-developing/modernization-tools.md) 旨在協助您擴充現有元件。
+   * [將ExtJS對應至Granite UI元件](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components) 提供ExtJS xtypes和節點型別及其等效Granite UI資源型別的便利概述。
+   * 自訂欄位，如需詳細資訊，請參閱以下主題的AEM Gems工作階段： [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
+   * 從vtypes移轉至 [Granite UI驗證](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
+   * 使用JS監聽器，如需詳細資訊，請參閱 [處理欄位事件](#handling-field-events) 和AEM Gems講座 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
 
-### 遷移cq：偵聽程式碼 {#migrating-cq-listener-code}
+### 移轉cq：listener程式碼 {#migrating-cq-listener-code}
 
-如果要遷移為經典UI設計的項目，則 `cq:listener` 代碼（和與元件相關的客戶端）可能使用特定於經典UI的函式(如 `CQ.wcm.*`)。 對於遷移，必須使用啟用觸摸的UI中的等效對象/函式更新此類代碼。
+如果您要移轉專案是專為傳統UI所設計，則 `cq:listener` 程式碼（和元件相關的clientlibs）可能會使用傳統UI特有的函式(例如 `CQ.wcm.*`)。 若要進行移轉，您必須使用觸控式UI中的對等物件/函式來更新這類程式碼。
 
-如果項目完全遷移到啟用觸摸的UI，則需要替換此類代碼以使用與啟用觸摸的UI相關的對象和功能。
+如果您的專案正完全移轉至觸控式UI，您必須取代這類程式碼，才能使用與觸控式UI相關的物件和函式。
 
-但是，如果項目在遷移期間（通常情況）必須同時滿足標準UI和啟用觸摸的UI，則必須實現切換，以區分引用相應對象的單獨代碼。
+不過，如果您的專案在移轉期間（一般情況）必須同時符合傳統UI和觸控式UI，則必須實作交換器以區別參照適當物件的個別程式碼。
 
-此切換機制可實現為：
+此切換機制可實作為：
 
 ```
 if (Granite.author) {
@@ -489,20 +489,20 @@ if (Granite.author) {
 }
 ```
 
-## 記錄元件 {#documenting-your-component}
+## 記錄您的元件 {#documenting-your-component}
 
-作為開發人員，您希望輕鬆訪問元件文檔，以便您能夠快速瞭解：
+身為開發人員，您想要輕鬆存取元件檔案，以便快速瞭解：
 
 * 說明
 * 預期用途
 * 內容結構和屬性
-* 暴露的API和擴展點
+* 公開的API和擴充功能點
 * 等等
 
-因此，很容易將元件本身中現有的任何文檔標籤為可用。
+因此，您可以輕鬆地將任何現有的檔案Markdown提供給元件本身。
 
-放置a `README.md` 的子菜單。 此標籤顯示在 [元件控制台](/help/sites-authoring/default-components-console.md)。
+放置 `README.md` 檔案。 此Markdown會顯示在 [元件主控台](/help/sites-authoring/default-components-console.md).
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
-支援的標籤與 [內容片段](/help/assets/content-fragments/content-fragments-markdown.md)。
+支援的Markdown與 [內容片段](/help/assets/content-fragments/content-fragments-markdown.md).

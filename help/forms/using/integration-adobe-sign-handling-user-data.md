@@ -1,7 +1,7 @@
 ---
-title: 與Adobe Sign |處理用戶資料
+title: 與Adobe Sign整合 |處理使用者資料
 seo-title: Integration with Adobe Sign | Handling user data
-description: 與Adobe Sign |處理用戶資料
+description: 與Adobe Sign整合 |處理使用者資料
 uuid: cb3a455d-2e33-44c8-8f71-3a7ecd939cd8
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -16,22 +16,22 @@ ht-degree: 0%
 
 ---
 
-# 與Adobe Sign |處理用戶資料 {#integration-with-adobe-sign-handling-user-data}
+# 與Adobe Sign整合 |處理使用者資料 {#integration-with-adobe-sign-handling-user-data}
 
-[!DNL AEM Forms] 整合[!DNL  Adobe Sign] 使電子簽名工作流能夠以自適應形式處理法律、銷售、工資單、人力資源管理工作流的表單或協定。 它允許單個和多用戶簽名、順序和同時簽名工作流、以匿名用戶或登錄用戶身份對表單進行簽名，以及通過多種方法驗證用戶。
+[!DNL AEM Forms] 整合[!DNL  Adobe Sign] 啟用最適化表單中的電子簽章工作流程，以處理法律、銷售、薪資、人力資源管理工作流程的表單或協定。 它允許單一和多使用者簽署、連續和同時簽署工作流程、以匿名或登入使用者身分簽署表單，以及多種驗證使用者的方式。
 
-當簽名者或多個簽名者簽名並提交自適應表單時， [!DNL Adobe Sign] 生成包括關於簽名者的資訊的協定。
+當一名或多名簽署者簽署並提交最適化表單時， [!DNL Adobe Sign] 會產生包含簽名者相關資訊的合約。
 
-有關 [!DNL AEM Forms] 整合 [!DNL Adobe Sign]，請參閱 [以自適應形式使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md)。
+如需有關的詳細資訊 [!DNL AEM Forms] 與整合 [!DNL Adobe Sign]，請參閱 [在最適化表單中使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md).
 
-## 用戶資料和資料儲存 {#data}
+## 使用者資料和資料存放區 {#data}
 
-[!DNL Adobe Sign] 啟用的自適應表單包括關於簽名者的資訊，並且可以包括由自適應表單收集的其他用戶資料。 的 [!DNL Adobe Sign] 服務將用戶資料與協定中的簽名一起保存。 協定保存於 [!DNL Adobe Sign] 配置的伺服器 [!DNL AEM Forms] 雲服務。 此外，如果將自適應表單配置為使用Forms門戶提交操作，則協定資料將與表單資料一起保存在表單門戶資料儲存中。
+[!DNL Adobe Sign] 啟用的最適化表單包含簽名者的相關資訊，並可能包含最適化表單收集的其他使用者資料。 此 [!DNL Adobe Sign] 服務會儲存使用者資料，並在合約中簽名。 合約已儲存於 [!DNL Adobe Sign] 伺服器設定於 [!DNL AEM Forms] 雲端服務。 此外，如果最適化表單設定為使用Forms Portal提交動作，則協定資料會與表單資料一起儲存在Forms Portal資料存放區中。
 
-## 訪問和刪除用戶資料 {#access-and-delete-user-data}
+## 存取和刪除使用者資料 {#access-and-delete-user-data}
 
-用戶資料在協定內收集，但未保存在任何服務表中。 [!DNL Adobe Sign] 使管理員能夠在管理服務中控制的資料時做出自己的選擇。 上的隱私管理員 [!DNL Adobe Sign] 服務可以根據請求者的電子郵件地址列出或刪除協定。
+使用者資料會在合約中收集，但不會儲存在任何服務表格中。 [!DNL Adobe Sign] 可讓管理員自行選擇管理他們在服務中控制的資料。 隱私權管理員： [!DNL Adobe Sign] 服務可以根據請求者的電子郵件地址列出或移除協定。
 
-[!DNL Adobe Sign] 提供了一個Web應用程式，允許參與者搜索協定，並在需要時刪除協定。 有關詳細資訊，請參見 [Adobe Sign — 功能：刪除用戶資訊](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html)。
+[!DNL Adobe Sign] 提供Web應用程式，可依參與者搜尋協定，並視需要刪除協定。 如需詳細資訊，請參閱 [Adobe Sign — 功能：刪除使用者資訊](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html).
 
-配置為使用Forms門戶提交操作的自適應表單的協定資料也保存在表單門戶資料儲存中。 要訪問和刪除表單門戶資料儲存中的資料，請參見 [Forms門戶 |處理用戶資料](/help/forms/using/forms-portal-handling-user-data.md)。
+針對設定為使用Forms Portal提交動作的最適化表單而設定的協定資料也會儲存在Forms Portal資料存放區中。 若要存取和刪除表單入口網站資料存放區的資料，請參閱 [Forms入口網站 |處理使用者資料](/help/forms/using/forms-portal-handling-user-data.md).

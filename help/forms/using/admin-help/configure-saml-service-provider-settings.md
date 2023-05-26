@@ -1,7 +1,7 @@
 ---
-title: 配置SAML服務提供程式設定
+title: 設定SAML服務提供者設定
 seo-title: Configure SAML service provider settings
-description: 您可以配置SAML服務提供程式設定，以允許用戶通過指AEM定的第三方身份提供程式(IDP)登錄和驗證表單。
+description: 您可以設定SAML服務提供者設定，讓使用者透過指定的第三方身分提供者(IDP)登入並驗證AEM表單。
 seo-description: You can configure SAML service provider settings to allow users to login and authenticate to AEM forms via a specified third-party identity provider (IDP).
 uuid: 14c706ad-8b1c-4c03-9cd4-97424f2162bc
 contentOwner: admin
@@ -17,47 +17,47 @@ ht-degree: 0%
 
 ---
 
-# 配置SAML服務提供程式設定{#configure-saml-service-provider-settings}
+# 設定SAML服務提供者設定{#configure-saml-service-provider-settings}
 
-安全斷言標籤語言(SAML)是配置企業或混合域授權時可以選擇的選項之一。 SAML主要用於支援跨多個域的SSO。 將SAML配置為身份驗證提供程式時，用戶將通過指定的第AEM三方身份提供程式(IDP)登錄表單並對表單進行身份驗證。
+安全性宣告標籤語言(SAML)是您設定企業或混合網域授權時可以選取的選項之一。 SAML主要用於支援跨多個網域的SSO。 當SAML設定為您的驗證提供者時，使用者會透過指定的協力身分識別提供者(IDP)登入並驗證AEM Forms。
 
-有關SAML的說明，請參見 [安全斷言標籤語言(SAML)V2.0技術概述](https://www.oasis-open.org/committees/download.php/20645/sstc-saml-tech-overview-2%200-draft-10.pdf)。
+如需SAML的說明，請參閱 [安全性判斷提示標籤語言(SAML) V2.0技術概覽](https://www.oasis-open.org/committees/download.php/20645/sstc-saml-tech-overview-2%200-draft-10.pdf).
 
-1. 在管理控制台中，按一下「設定」>「用戶管理」>「配置」>「SAML服務提供程式設定」。
-1. 在「服務提供方實體ID」框中，鍵入一個唯一ID，以用作表單服務提供方實AEM現的標識符。 在配置IDP時，您還指定此唯一ID(例如， `um.lc.com`。) 您還可以使用用於訪問表單的URLAEM(例如， `https://AEMformsserver`)。
-1. 在「服務提供商基本URL」框中，鍵入表單伺服器的基本URL(例如， `https://AEMformsserver:8080`)。
-1. （可選）要啟用表AEM單向IDP發送簽名的身份驗證請求，請執行以下任務：
+1. 在管理控制檯中，按一下「設定>使用者管理>組態> SAML服務提供者設定」。
+1. 在「服務提供者實體ID」方塊中，輸入唯一ID以用作AEM Forms服務提供者實作的識別碼。 您也可以在設定IDP時指定此唯一ID (例如， `um.lc.com`.) 您也可以使用用來存取AEM表單的URL (例如， `https://AEMformsserver`)。
+1. 在「服務提供者基本URL」方塊中，輸入表單伺服器的基本URL (例如， `https://AEMformsserver:8080`)。
+1. （可選）若要讓AEM表單傳送已簽署的驗證要求給IDP，請執行下列工作：
 
-   * 使用信任管理器導入PKCS #12格式的憑據，並將文檔簽名憑據選作信任儲存類型。 (請參閱 [管理本地憑據](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials)。)
-   * 在服務提供程式憑據密鑰別名清單中，選擇您在信任儲存中分配給憑據的別名。
-   * 按一下「導出」將URL內容保存到檔案，然後將該檔案導入到IDP中。
+   * 使用信任管理員匯入PKCS #12格式的認證，並選取[檔案簽署認證]作為[信任存放區型別]。 (請參閱 [管理本機認證](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials).)
+   * 在「服務提供者認證金鑰別名」清單中，選取您在「信任存放區」中指派給認證的別名。
+   * 按一下「匯出」將URL內容儲存至檔案，然後將該檔案匯入您的IDP。
 
-1. （可選）在「服務提供程式名稱ID策略」清單中，選擇IDP用於在SAML斷言中標識用戶的名稱格式。 這些選項包括「未指定」、「電子郵件」和「Windows域限定名稱」。
+1. （選擇性）在「服務提供者名稱ID原則」清單中，選取IDP在SAML判斷提示中用來識別使用者的名稱格式。 選項包括「未指定」、「電子郵件」和「Windows網域限定名稱」。
 
    >[!NOTE]
    >
    >名稱格式不區分大小寫。
 
-1. （可選）選擇「為本地用戶啟用身份驗證提示」。 選擇此選項後，用戶將看到兩個連結：
+1. （選擇性）選取「啟用本機使用者的驗證提示」。 選取此選項時，使用者會看到兩個連結：
 
-   * 指向第三方SAML標識提供程式的登錄頁的連結，屬於企業域的用戶可以在此進行身份驗證。
-   * 到表單登錄頁AEM的連結，屬於本地域的用戶可以在此進行身份驗證。
+   * 第三方SAML識別提供者登入頁面的連結，屬於企業網域的使用者可在此進行驗證。
+   * AEM表單登入頁面的連結，屬於本機網域的使用者可在此進行驗證。
 
-   如果未選擇此選項，則用戶將直接進入第三方SAML標識提供程式的登錄頁，在該頁中，屬於企業域的用戶可以進行身份驗證。
+   未選取此選項時，系統會將使用者直接帶至第三方SAML身分提供者的登入頁面，屬於企業網域的使用者可在此進行驗證。
 
-1. （可選）選擇啟用對象綁定以啟用對象綁定支援。 預設情況下，POST綁定與SAML一起使用。 但是，如果已配置「對象綁定」，請選擇此選項。 選擇此選項後，實際用戶斷言不會通過瀏覽器請求傳遞。 相反，傳遞指向斷言的指針並使用後端Web服務調用檢索斷言。
-1. （可選）選擇啟用重新定向綁定以支援使用重定向的SAML綁定。
-1. （可選）在自定義屬性中，指定其他屬性。 附加屬性是由新行分隔的name=value對。
+1. （選用）選取「啟用成品繫結」以啟用成品繫結支援。 根據預設，POST繫結會與SAML搭配使用。 但如果您已設定成品繫結，請選取此選項。 選取此選項時，實際的使用者判斷提示不會透過瀏覽器請求傳遞。 相反地，會傳遞一個指向宣告的指標，並使用後端Web服務呼叫來擷取宣告。
+1. （選擇性）選取「啟用重新導向繫結」以支援使用重新導向的SAML繫結。
+1. （選用）在自訂屬性中，指定其他屬性。 其他屬性是以新行分隔的名稱=值組。
 
-   * 您可以AEM配置表單以在與第三方斷言的有效期相匹配的有效期內發出SAML斷言。 要遵守第三方SAML斷言超時，請在「自定義屬性」中添加以下行：
+   * 您可以設定AEM表單，針對符合協力廠商判斷提示的有效期間的有效期間發出SAML判斷提示。 若要遵守第三方SAML宣告逾時，請在自訂屬性中新增下列行：
 
       `saml.sp.honour.idp.assertion.expiry=true`
 
-   * 添加以下自定義屬性以使用RelayState來確定成功驗證後將重定向用戶的URL。
+   * 新增下列自訂屬性，以使用RelayState來判斷在成功驗證後要將使用者重新導向的URL。
 
       `saml.sp.use.relaystate=true`
 
-   * 添加以下自定義屬性以配置自定義Java伺服器頁(JSP)的URL，該URL將用於呈現已註冊的身份提供程式清單。 如果尚未部署自定義Web應用程式，它將使用預設的「用戶管理」頁來呈現清單。
+   * 新增下列自訂屬性，以設定自訂Java Server Pages (JSP)的URL，其將用於呈現已註冊的身分識別提供者清單。 如果您尚未部署自訂Web應用程式，它將使用預設的「使用者管理」頁面來呈現清單。
 
    `saml.sp.discovery.url=/custom/custom.jsp`
 

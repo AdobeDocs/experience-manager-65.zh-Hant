@@ -1,7 +1,7 @@
 ---
-title: 跟蹤結果並提供反饋
+title: 追蹤結果並提供意見回饋
 seo-title: Tracking results and providing feedback
-description: 您如何定義test案例以及結果的test計畫，由您自行決定
+description: 您定義測試案例的方式和位置，以及產生的測試計畫，由您自行決定
 seo-description: How and where you define the test cases, and the resulting test plan, is at your own discretion
 uuid: b4b811d4-4ca0-4477-a866-b262f9a698f4
 contentOwner: Guillaume Carlino
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ---
 
-# 跟蹤結果並提供反饋{#tracking-results-and-providing-feedback}
+# 追蹤結果並提供意見回饋{#tracking-results-and-providing-feedback}
 
-您如何定義test案例和在何處定義test計畫，由您自行決定；有許多工具可用。
+您定義測試案例的方式和位置，以及產生的測試計畫，由您自行決定；有許多可用的工具。
 
-但是，無論您選擇何種方法或工具，都會儲存以下資訊：
+不過，無論您選擇的方法或工具為何，都會儲存下列資訊：
 
 * 應為：
 
-   * 僅限於跟蹤test案例及其結果。 這可確保維護工作保持簡單明瞭，而且文檔可以清楚地概述測試進度。
-   * 作為單個副本維護，可供項目團隊的所有適當成員使用。
-   * 中性，限於test結果。 項目經理有責任就test結果所導致的任何行動作出決定。
+   * 僅限於追蹤測試案例及其結果。 這樣可確保維護作業保持簡單，而且檔案可提供測試進度的明確概覽。
+   * 維護為單一復本，可供專案團隊的所有適當成員使用。
+   * 中性並限於測試結果。 專案經理有責任對測試結果產生的任何動作做出決策。
 
-* 不應是：
+* 不應為：
 
-   * 擴展到包括跟蹤資訊 — 既不包括錯誤、新功能，也不包括後續操作。 此資訊應在其他地方維護，同樣有許多工具可用。
+   * 擴充以包含追蹤資訊 — 既無錯誤、新功能亦無後續動作。 這些資訊應在其他地方進行維護，同樣有許多可用的工具。

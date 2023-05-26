@@ -1,7 +1,7 @@
 ---
-title: 社區組要件
+title: 社群群組Essentials
 seo-title: Community Group Essentials
-description: 動態建立社區站點
+description: 動態建立社群網站
 seo-description: Creating community sites dynamically
 uuid: 168e7aeb-6e9a-468d-8ac4-274007cea252
 contentOwner: Guillaume Carlino
@@ -17,37 +17,37 @@ ht-degree: 1%
 
 ---
 
-# 社區組要件  {#community-group-essentials}
+# 社群群組Essentials  {#community-group-essentials}
 
-社區組功能是子社區在社區站點內由來自發佈和作者環境的授權用戶動態建立的能力。
+社群群組功能可讓發佈和作者環境中的授權使用者在社群網站中動態建立子社群。
 
-截至社區 [功能包1](deploy-communities.md#latestfeaturepack)，組可能嵌套在其他組中
+截至社群 [feature pack 1](deploy-communities.md#latestfeaturepack)，群組可巢狀內嵌於其他群組中
 
-## 客戶端基本知識 {#essentials-for-client-side}
+## 適用於使用者端的Essentials {#essentials-for-client-side}
 
-### 社區組成員清單 {#community-groups-member-list}
+### 社群群組成員清單 {#community-groups-member-list}
 
 <table>
  <tbody>
   <tr>
-   <td> <strong>資源類型</strong></td>
-   <td>社會/組/元件/hbs/社區組成員清單</td>
+   <td> <strong>resourceType</strong></td>
+   <td>social/group/components/hbs/communitygroupmemberlist</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>客戶端</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/group/components/hbs/communitygroupmemberlist/communitygroupmemberlist.hbs<br /> </td>
   </tr>
   <tr>
-   <td> <strong>cs</strong></td>
+   <td> <strong>css</strong></td>
    <td> /libs/social/group/components/hbs/communitygroupmemberlist/clientlibs/memberList.css</td>
   </tr>
   <tr>
    <td><strong>屬性</strong></td>
-   <td>請參閱 <a href="creating-groups.md">社區組</a></td>
+   <td>另請參閱 <a href="creating-groups.md">社群群組</a></td>
   </tr>
  </tbody>
 </table>
@@ -57,57 +57,57 @@ ht-degree: 1%
 <table>
  <tbody>
   <tr>
-   <td> <strong>資源類型</strong></td>
-   <td>社會/群體/構成部分/hbs/社區群體</td>
+   <td> <strong>resourceType</strong></td>
+   <td>social/group/components/hbs/communitygroups</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>客戶端</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/group/components/hbs/communitygroups/communitygroups.hbs<br /> </td>
   </tr>
   <tr>
-   <td> <strong>cs</strong></td>
+   <td> <strong>css</strong></td>
    <td> /libs/social/group/components/hbs/communitygroupmemberlist/clientlibs/communitygroups.css</td>
   </tr>
  </tbody>
 </table>
 
-* [客戶端自定義](client-customize.md)
+* [使用者端自訂](client-customize.md)
 
-## 伺服器端軟體包 {#essentials-for-server-side}
+## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [社區組API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
+* [社群群組API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
-* [社區組終結點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
+* [社群群組端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
 
-* [伺服器端自定義](server-customize.md)
+* [伺服器端自訂](server-customize.md)
 
-### 組函式 {#groups-function}
+### 群組功能 {#groups-function}
 
-包括一個 [組函式](functions.md#groups-function) 將支援建立 `community groups` 出版和作者環境。 建立的社區組將包括 `community groups member list` 列出組成員的元件。
+社群網站結構包含 [群組功能](functions.md#groups-function) 將支援建立新的 `community groups` 從發佈和作者環境。 建立的社群群組將包含 `community groups member list` 列出群組成員的元件。
 
-一個或多個 [社區組模板](tools-groups.md)當將該函式添加到 [社區網站模板](sites.md) 或嵌套在社區組模板中。
+一或多個 [社群群組範本](tools-groups.md)（提供社群群組頁面設計），可在將函式新增至時為「群組」函式進行設定 [社群網站範本](sites.md) 或巢狀內嵌在社群群組範本中。
 
-包含多個社區組模板導致在為社區站點建立新社區組時向授權用戶呈現一種設計選擇，如上一節所示 [社區組](creating-groups.md) 作者。
+納入多個社群群組範本後，授權使用者可選擇在為社群網站建立新社群群組時看到的設計，如以下章節所示： [社群群組](creating-groups.md) 適用於作者。
 
-### 嵌套組 {#nested-groups}
+### 巢狀群組 {#nested-groups}
 
-截至社區 [FP1](deploy-communities.md#latestfeaturepack)，組函式可能包含在組模板中，從而允許嵌套組（子社區）。
+截至社群 [FP1](deploy-communities.md#latestfeaturepack)，群組功能可包含在群組範本中，以便巢狀群組（子社群）。
 
-當社區站點或組模板包含「組」功能時，可以執行以下操作：
+當社群網站或群組範本包含「群組」功能時，可以：
 
-* 在作者環境中建立子社區。
+* 在作者環境中建立子社群。
 
-* 在配置為允許時，在發佈環境中建立組。
+* 設定為允許時，在發佈環境中建立群組。
 
-在作者環境中建立組時，需要先發佈社區網站，然後發佈組。 發佈社區網站將發佈組的頁面，而不會建立ACL設定到的子社區成員組。 因此，在明確發佈組之前，可以看到受限（秘密）組。
+在作者環境中建立群組時，必須先發佈社群網站，然後再發佈群組。 發佈社群網站將會發佈群組的頁面，而不會建立子社群的成員群組（ACL已設定至這些群組）。 因此，在群組明確發佈之前，受限制的（秘密）群組可能一直可見。
 
 ## 連結和相關資訊 {#links-and-related-information}
 
-* [管理用戶和用戶組](users.md)
-* [社區組控制台](groups.md)
-* [組函式](functions.md#groups-function)
+* [管理使用者和使用者群組](users.md)
+* [社群群組主控台](groups.md)
+* [群組功能](functions.md#groups-function)
 * [群組範本](tools-groups.md)

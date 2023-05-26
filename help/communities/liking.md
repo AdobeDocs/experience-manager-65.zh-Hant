@@ -1,7 +1,7 @@
 ---
-title: 使用喜歡
+title: 使用連結
 seo-title: Using Liking
-description: 添加和配置「喜歡」元件
+description: 新增和設定連結元件
 seo-description: Adding and configuring the Liking component
 uuid: 12103ab7-1a1c-49cd-8dad-6c7508b4550e
 contentOwner: msm-service
@@ -17,56 +17,56 @@ ht-degree: 5%
 
 ---
 
-# 使用喜歡 {#using-liking}
+# 使用連結 {#using-liking}
 
-的 `Liking` 元件是一種有用的工具，允許用戶對特定內容（如論壇內的評論）發表意見。 使用 `Liking` 的子菜單。
+此 `Liking` 元件是實用工具，可讓使用者對特定內容發表意見，例如論壇中的評論。 使用 `Liking` 元件時，成員會選取心形圖示來表示正面意見。
 
-## 將喜歡添加到頁面 {#adding-liking-to-a-page}
+## 新增連結至頁面 {#adding-liking-to-a-page}
 
-添加 `Liking` 在作者模式下對頁面的元件，使用元件瀏覽器查找
+若要新增 `Liking` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找
 
 * `Communities / Liking`
 
-並將其拖到頁面上，如用戶喜歡的相對於功能的位置。
+並將其拖曳至頁面上某個位置，例如使用者喜歡的相對於該功能的位置。
 
-如需必要資訊，請訪問 [社區元件基礎](basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
 
-當 [所需的客戶端庫](essentials-liking.md#essentials-for-client-side) 包括，這是 `Liking` 元件。
+當 [必要的使用者端程式庫](essentials-liking.md#essentials-for-client-side) 包含，這就是 `Liking` 元件隨即出現。
 
-![喜歡元件](assets/liking-component.png)
+![liking-component](assets/liking-component.png)
 
-## 配置喜歡 {#configuring-liking}
+## 設定連結 {#configuring-liking}
 
-選取已放置的 `Liking` 要訪問和選擇的元件 `Configure` 表徵圖。
+選取已放置的 `Liking` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
 
-![配置 — 新建](assets/configure-new.png)
+![configure-new](assets/configure-new.png)
 
-在 **[!UICONTROL 文本和標籤]** 頁籤，指定用於記錄贊的屬性。
+在 **[!UICONTROL 文字和標籤]** 索引標籤中，指定用來記錄「讚」的屬性。
 
-![配置喜好](assets/configure-liking.png)
+![configure-liking](assets/configure-liking.png)
 
 * **[!UICONTROL 正面回應標籤]**
 
-   (*必需*)正響應的屬性名稱。
+   (*必填*)正面回應的屬性名稱。
 
 * **[!UICONTROL 負面回應標籤]**
 
-   (*必需*)負響應的屬性名稱。
+   (*必填*)負面回應的屬性名稱。
 
 * **[!UICONTROL 記帳名稱]**
 
-   (*必需*)此投票元件實例的內部、可識別屬性名稱。
+   (*必填*)此投票元件例項的內部可識別屬性名稱。
 
-## 站點訪問者體驗 {#site-visitor-experience}
+## 網站訪客體驗 {#site-visitor-experience}
 
 ### 成員 {#members}
 
-成員可隨時更改其類型。
+成員可隨時變更其喜好。
 
 ### 匿名 {#anonymous}
 
-不支援匿名喜歡。 站點訪問者必須註冊（成為成員）並登錄以參與喜歡。
+不支援匿名連結。 網站訪客必須註冊（成為會員）並登入才能參與點讚。
 
 ## 其他資訊 {#additional-information}
 
-有關 [喜歡基本功能](essentials-liking.md) 頁面。
+如需詳細資訊，請參閱 [按一下Essentials](essentials-liking.md) 適用於開發人員的頁面。

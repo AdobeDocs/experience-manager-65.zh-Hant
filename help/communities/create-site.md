@@ -1,7 +1,7 @@
 ---
-title: 新建社區網站
+title: 撰寫新社群網站
 seo-title: Author a New Community Site
-description: 如何建立新的AEM Communities網站
+description: 如何撰寫新的AEM Communities網站
 seo-description: How to author a new AEM Communities site
 uuid: 4f609f5f-ef07-44fc-aeb3-1c616e120d46
 contentOwner: Janice Kendall
@@ -18,89 +18,89 @@ ht-degree: 2%
 
 ---
 
-# 新建社區網站{#author-a-new-community-site}
+# 撰寫新社群網站{#author-a-new-community-site}
 
-## 建立社區網站 {#create-a-community-site}
+## 建立社群網站 {#create-a-community-site}
 
-使用作者實例建立社區網站。 在AEM作者實例上：
+使用作者例項建立社群網站。 在AEM作者執行個體上：
 
-1. 使用管理員權限登錄。
-1. 從全局導航，轉到 **[!UICONTROL 社區]** > **[!UICONTROL 站點]**。
+1. 以管理員許可權登入。
+1. 從全域導覽，前往 **[!UICONTROL Communities]** > **[!UICONTROL 網站]**.
 
-「社區站點」控制台提供了嚮導，可指導用戶完成建立社區站點的步驟。 可以向 `Next` 步驟或 `Back` 在最後一步中提交站點之前，先執行上一步。
+Communities Sites主控台會提供精靈，引導使用者完成建立社群網站的步驟。 您可以前往 `Next` 步驟或 `Back` 到最後一個步驟中認可網站之前的上一個步驟。
 
-要開始建立新社區站點，請執行以下操作：
+若要開始建立新的社群網站：
 
-* 選擇 `Create` 按鈕
+* 選取 `Create` 按鈕。
 
-![建立社區站點](assets/createcommunitysite.png)
+![createcommunitysite](assets/createcommunitysite.png)
 
-### 步驟1:站點模板 {#step-site-template}
+### 步驟1：網站範本 {#step-site-template}
 
-![建立網站的模板](assets/create-site.png)
+![建立網站的範本](assets/create-site.png)
 
-在 [站點模板步驟](/help/communities/sites-console.md#step2013asitetemplate)，輸入標題、說明、URL名稱，然後選擇社區網站模板，例如：
+於 [網站範本步驟](/help/communities/sites-console.md#step2013asitetemplate)，輸入URL的標題、說明和名稱，然後選取社群網站範本，例如：
 
 * **社群網站標題**: `Getting Started Tutorial`
 * **社群網站說明**: `A site for engaging with the community.`
-* **社區站點根**:（留空）預設根 `/content/sites`)
-* **雲配置**:（如果未指定雲配置，請保留空白）提供指定雲配置的路徑。
-* **社區網站基語**:（對於單語言，保留原狀）英語)使用下拉清單選擇 *或* 基本語言 — 德語、義大利語、法語、日語、西班牙語、葡萄牙語（巴西）、中文（繁體）和簡體中文。 將為添加的每種語言建立一個社區站點，並且按照中介紹的最佳做法存在於同一站點資料夾中 [翻譯多語言站點的內容](/help/sites-administering/translation.md)。 每個站點的根頁將包含一個子頁，該子頁由所選語言之一的語言代碼命名，如英語的「en」或法語的「fr」。
+* **社群網站根目錄**：(預設根保留空白 `/content/sites`)
+* **雲端設定**：（若未指定雲端設定，則保留空白）提供指定雲端設定的路徑。
+* **社群網站基本語言**：（單一語言則保持原樣：英文）使用下拉式清單來選擇一種語言 *或更多* 可用語言提供的基礎語言 — 德文、義大利文、法文、日文、西班牙文、葡萄牙文（巴西）、中文（繁體）和中文（簡體）。 將會針對新增的每種語言建立一個社群網站，並會遵循中所述的最佳實務存在於相同的網站資料夾中 [翻譯多語言網站的內容](/help/sites-administering/translation.md). 每個網站的根頁面都會包含子頁面，其名稱為所選語言之一的語言代碼，例如「en」代表英文，「fr」代表法文。
 
-* **社區站點名稱**:參與
+* **社群網站名稱**：參與
 
-   * 在建立站點後，由於名稱不易更改，請按兩下該名稱
-   * 初始URL將顯示在社區網站名稱下
-   * 對於有效的URL，請附加基本語言代碼+ &quot;。html&quot;
-   * *例如* https://localhost:4502/content/sites/ `engage/en.html`
+   * 請仔細檢查名稱，因為網站建立後不易變更
+   * 初始URL將顯示在社群網站名稱下方
+   * 若要取得有效的URL，請附加基本語言代碼+ &quot;。html&quot;
+   * *例如*， https://localhost:4502/content/sites/ `engage/en.html`
 
-* **模板**:下拉選擇 `Reference Site`
+* **範本**：下拉以選擇 `Reference Site`
 
-* 選擇 **下一個**。
+* 選取 **下一個**.
 
-### 步驟2:設計 {#step-design}
+### 步驟2：設計 {#step-design}
 
-「設計」步驟分兩節介紹，用於選擇主題和品牌標題：
+「設計」步驟分為兩個區段，用於選取主題和品牌橫幅：
 
-#### 社區網站主題 {#community-site-theme}
+#### 社群網站主題 {#community-site-theme}
 
-選擇要應用於模板的所需樣式。 選中後，主題將用複選標籤重疊。
+選取要套用至範本的所需樣式。 選取時，主題將覆蓋一個勾號。
 
-#### 社區網站品牌 {#community-site-branding}
+#### 社群網站品牌化 {#community-site-branding}
 
-（可選）上載橫幅影像以在網站頁面中顯示。 標語被固定在瀏覽器的左邊緣，位於社區站點標題和導航連結之間。 橫幅高度裁切為120像素。 沒有調整橫幅大小以適合瀏覽器的寬度和120像素高度。
+（選用）上傳橫幅影像以顯示於各網站頁面。 橫幅會釘選至瀏覽器左邊緣、社群網站標題與導覽連結之間。 橫幅高度會裁剪為120畫素。 橫幅的大小不會調整為符合瀏覽器的寬度和120畫素高度。
 
-![社區站點品牌](assets/community-site-branding.png)
+![社群 — 網站 — 品牌](assets/community-site-branding.png)
 
-![上傳映像站點](assets/upload-image-site.png)
+![upload-image-site](assets/upload-image-site.png)
 
-選擇 **下一個**。
+選取 **下一個**.
 
-### 第3步：設定 {#step-settings}
+### 步驟3：設定 {#step-settings}
 
-在「設定」步驟中，選擇 `Next`請注意，有七個部分提供了對涉及用戶管理、標籤、審核、組管理、分析和翻譯的配置的訪問。
+在「設定」步驟中，選取 `Next`，請注意，共有七個區段提供對涉及使用者管理、標籤、協調、群組管理、分析和翻譯的設定的存取權。
 
 #### 使用者管理 {#user-management}
 
-選中所有複選框 [用戶管理](/help/communities/sites-console.md#user-management)
+勾選所有核取方塊 [User Management](/help/communities/sites-console.md#user-management)
 
-* 允許站點訪問者自註冊
-* 允許站點訪問者在不登錄的情況下查看站點
-* 允許成員從其他社區成員發送和接收消息
-* 允許登錄Facebook，而不是註冊和建立配置檔案
-* 允許登錄Twitter，而不是註冊和建立配置檔案
+* 允許網站訪客自行註冊
+* 允許網站訪客在不登入的情況下檢視網站
+* 允許成員傳送和接收來自其他社群成員的訊息
+* 允許使用Facebook登入，而不是註冊和建立設定檔
+* 允許使用Twitter登入，而不是註冊和建立設定檔
 
 >[!NOTE]
 >
->對於生產環境，必須建立定製的Facebook和Twitter應用程式。 請參閱 [與Facebook和Twitter社會登錄](/help/communities/social-login.md)。
+>對於生產環境，必須建立自訂Facebook和Twitter應用程式。 另請參閱 [使用Facebook和Twitter進行社交登入](/help/communities/social-login.md).
 
-![社區網站設定](assets/site-settings.png)
+![社群網站設定](assets/site-settings.png)
 
 #### 標籤 {#tagging}
 
-通過選擇先前通過以下方式定義的命名空間來控制可應AEM用於社區內容的標籤 [標籤控制台](/help/sites-administering/tags.md#tagging-console) (例如 [教程命名空間](/help/communities/setup.md#create-tutorial-tags))。
+可套用至社群內容的標籤可藉由選取先前透過定義的AEM名稱空間來控制 [標籤主控台](/help/sites-administering/tags.md#tagging-console) (例如 [教學課程名稱空間](/help/communities/setup.md#create-tutorial-tags))。
 
-使用「提前類型搜索」可輕鬆查找命名空間。 例如，
+使用預先輸入搜尋可輕鬆尋找名稱空間。 例如，
 
 * 類型 `tut`
 * 選取 `Tutorial`
@@ -109,217 +109,217 @@ ht-degree: 2%
 
 #### 角色 {#roles}
 
-[社區成員角色](/help/communities/users.md) 通過「角色」部分中的設定進行分配。
+[社群成員角色](/help/communities/users.md) 會透過「角色」區段中的設定指派。
 
-要讓社區成員（或成員組）作為社區經理體驗該站點，請使用「提前鍵入」搜索，然後從下拉清單中選擇成員或組名稱。
+若要讓社群成員（或成員群組）以社群管理員的身分體驗網站，請使用預先輸入搜尋，並從下拉式選單中的選項中選取成員或群組名稱。
 
 例如，
 
 * 類型 `q`
-* 選擇奎恩·哈珀
+* 選取Quinn Harper
 
 >[!NOTE]
 >
->[隧道服務](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) 允許選擇僅存在於發佈環境中的成員和組。
+>[通道服務](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) 允許選擇僅存在於發佈環境中的成員和群組。
 
-![新站點中的用戶角色](assets/site-admin-1.png)
+![新網站中的使用者角色](assets/site-admin-1.png)
 
-#### 審核 {#moderation}
+#### 稽核 {#moderation}
 
-接受的預設全局設定 [調節](/help/communities/sites-console.md#moderation) 用戶生成的內容(UGC)。
+接受預設全域設定 [稽核](/help/communities/sites-console.md#moderation) 使用者產生的內容(UGC)。
 
-![緩和](assets/moderation1.png)
+![稽核](assets/moderation1.png)
 
-#### 分析 {#analytics}
+#### ANALYTICS {#analytics}
 
-如果Adobe Analytics獲得許可，並且已配置了分析雲服務和框架，則可以啟用分析並選擇框架。
+如果Adobe Analytics已獲得授權，且已設定Analytics雲端服務和框架，則可啟用Analytics並選取框架。
 
-請參閱 [社區功能的分析配置](/help/communities/analytics.md)。
+另請參閱 [Communities功能的Analytics設定](/help/communities/analytics.md).
 
 ![分析](assets/analytics.png)
 
 #### 翻譯 {#translation}
 
-的 [翻譯設定](/help/communities/sites-console.md#translation) 指定站點的基本語言，以及UGC是否可以翻譯以及翻譯到哪種語言（如果可以）。
+此 [翻譯設定](/help/communities/sites-console.md#translation) 指定網站的基本語言，以及是否可將UGC翻譯成以及翻譯成何種語言（如果有的話）。
 
-* 檢查 **允許機器翻譯**
-* 保留預設機器翻譯服務為翻譯選擇的預設語言
-* 保留預設翻譯提供程式和配置
-* 由於沒有語言副本，因此不需要全局儲存
-* 選擇 **翻譯整頁**
-* 保留預設持久性選項
+* Check **允許機器翻譯**
+* 保留預設機器翻譯服務選取的預設翻譯語言
+* 保留預設翻譯提供者和設定
+* 由於沒有語言副本，因此不需要全域存放區
+* 選取 **翻譯整個頁面**
+* 保留預設持續性選項
 
-![翻譯設定](assets/translation-settings.png)
+![translation-settings](assets/translation-settings.png)
 
-### 第4步：建立社區站點 {#step-create-communities-site}
+### 步驟4：建立社群網站 {#step-create-communities-site}
 
-選擇 **建立。**
+選取 **建立。**
 
-![建立站點](assets/create-site2.png)
+![create-site](assets/create-site2.png)
 
-進程完成後，新站點的資料夾將顯示在「社區 — 站點」控制台中。
+程式完成時，新網站的資料夾會顯示在「社群 — 網站」主控台中。
 
-![通信控制台](assets/communitiessitesconsole.png)
+![communitiessitesconsole](assets/communitiessitesconsole.png)
 
-## 發佈社區網站 {#publish-the-community-site}
+## 發佈社群網站 {#publish-the-community-site}
 
-建立的站點應從「社區」 — 「站點」控制台進行管理，該控制台與建立新站點的控制台相同。
+建立的網站應從「社群 — 網站」主控台進行管理，該主控台與可能建立新網站的控制檯相同。
 
-選擇社區網站的資料夾以將其開啟後，將滑鼠懸停在網站表徵圖上，以便顯示四個操作表徵圖：
+選取社群網站的資料夾以開啟後，將滑鼠指標暫留在網站圖示上，四個動作圖示隨即出現：
 
-![站點操作表徵圖–1](assets/siteactionicons-1.png)
+![siteactionicons-1](assets/siteactionicons-1.png)
 
-在選擇第四個橢圓表徵圖（更多操作）時，將顯示「導出站點」和「刪除站點」選項。
+選取第四個橢圓圖示（「更多動作」）時，會顯示「匯出網站」和「刪除網站」選項。
 
-![站點新建–1](assets/siteactionsnew-1.png)
+![siteactionsnew-1](assets/siteactionsnew-1.png)
 
 從左到右分別是：
 
 * **開啟網站**
 
-   選擇鉛筆表徵圖以在作者編輯模式下開啟社區網站，添加和/或配置頁面元件
+   選取鉛筆圖示以在作者編輯模式下開啟社群網站，以新增及/或設定頁面元件
 
 * **編輯網站**
 
-   選擇屬性表徵圖以開啟社區網站以修改屬性，如標題或更改主題
+   選取屬性圖示以開啟社群網站以修改屬性，例如標題或變更主題
 
 * **發佈網站**
 
-   選擇「世界」表徵圖以發佈社區網站（例如，如果發佈伺服器在本地電腦上運行，則預設為localhost:4503）
+   選取世界圖示以發佈社群網站（例如，如果您的發佈伺服器在本機電腦上執行，則預設為localhost：4503）
 
 * **匯出網站**
 
-   選擇導出表徵圖以建立同時儲存在 [軟體包管理器](/help/sites-administering/package-manager.md) 下載。
-請注意，UGC不包括在站點包中。
+   選取匯出圖示以建立同時儲存在中的社群網站套件 [封裝管理員](/help/sites-administering/package-manager.md) 並下載。
+請注意，UGC未包含在網站套件中。
 
 * **刪除網站**
 
-   選擇刪除表徵圖以從中刪除社區站點 **[!UICONTROL 社區>站點控制台]**。 此操作將刪除與站點關聯的所有項，如UGC、用戶組、資產和資料庫記錄。
+   選取刪除圖示，從中刪除社群網站 **[!UICONTROL 社群>網站主控台]**. 此動作會移除與網站相關聯的所有專案，例如UGC、使用者群組、資產和資料庫記錄。
 
-![站點操作](assets/siteactions.png)
+![siteactions](assets/siteactions.png)
 
 >[!NOTE]
 >
->如果未使用發佈實例的預設埠4503，則編輯預設複製代理以將埠號設定為正確值。
+>如果未使用發佈執行個體的預設連線埠4503，請編輯預設復寫代理程式，以將連線埠號碼設定為正確的值。
 >
->在作者實例上，從主菜單：
+>在作者執行個體上，從主功能表：
 >
->1. 導航到 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 複製]** 的子菜單。
->1. 選擇 **[!UICONTROL 作者代理]**。
->1. 選擇 **[!UICONTROL 預設代理（發佈）]**。
->1. 旁邊 **[!UICONTROL 設定]**&#x200B;選中 **[!UICONTROL 編輯]**。
->1. 在代理設定的彈出對話框中，選擇 **[!UICONTROL 運輸]** 頁籤。
->1. 在URI中，將埠號4503更改為所需的埠號。 例如，要使用埠6103:https://localhost:6103/bin/receive?sling:authRequestLogin=1
->1. 選擇 **[!UICONTROL 確定]**。
->1. （可選）選擇 **[!UICONTROL 清除]** 或 **[!UICONTROL 強制重試]** 重置複製隊列。
+>1. 導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]** 功能表。
+>1. 選取 **[!UICONTROL 作者上的代理]**.
+>1. 選取 **[!UICONTROL 預設代理程式（發佈）]**.
+>1. 旁邊 **[!UICONTROL 設定]**，選取 **[!UICONTROL 編輯]**.
+>1. 在「代理程式設定」的彈出式對話方塊中，選取 **[!UICONTROL 傳輸]** 標籤。
+>1. 在URI中，將連線埠號碼4503變更為所需的連線埠號碼。 例如，使用連線埠6103： https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. 選取 **[!UICONTROL 確定]**.
+>1. （選用）選取 **[!UICONTROL 清除]** 或 **[!UICONTROL 強制重試]** 以重設復寫佇列。
 
 
-### 選擇發佈 {#select-publish}
+### 選取發佈 {#select-publish}
 
-確保發佈伺服器正在運行後，選擇「世界」表徵圖以發佈社區網站。
+確定發佈伺服器執行之後，請選取世界圖示以發佈社群網站。
 
-![發佈站點](assets/publish-site.png)
+![publish-site](assets/publish-site.png)
 
-成功發佈社區網站後，會短暫顯示一條消息「網站已發佈」。
+成功發佈社群網站後，會短暫出現訊息「網站已發佈」。
 
-### 新建社區用戶組 {#new-community-user-groups}
+### 新社群使用者群組 {#new-community-user-groups}
 
-與新社區站點一起，建立新用戶組，這些用戶組具有為各種管理功能設定的適當權限。 有關詳細資訊，請訪問 [社區站點的用戶組](/help/communities/users.md#usergroupsforcommunitysites)。
+隨著新的社群網站，新的使用者群組也會建立，這些群組擁有針對各種管理功能設定的適當許可權。 如需詳細資訊，請造訪 [社群網站的使用者群組](/help/communities/users.md#usergroupsforcommunitysites).
 
-對於此新社區站點，如果在步驟1中指定站點名稱「engage」，則可以從 [組控制台](/help/communities/members.md) （全局導航）社區、組):
+對於這個新的社群網站，在步驟1中指定網站名稱「engage」，您可能會從以下位置看到四個新的使用者群組： [群組主控台](/help/communities/members.md) （全域導覽：社群、群組）：
 
-* 社區參與社區經理
-* 社區參與組管理員
-* 社區參與成員
-* 社區參與審查者
-* 社區參與特權成員
-* 社區參與網站內容管理器
+* 社群參與社群管理員
+* Community Engage群組管理員
+* Community Engage會員
+* 社群參與版主
+* 社群參與有特殊許可權的成員
+* 社群參與網站內容管理員
 
-請注意 [亞倫·麥克唐納](/help/communities/tutorials.md#demo-users) 是
+請注意 [艾倫·麥當勞](/help/communities/tutorials.md#demo-users) 是以下專案的成員：
 
-* 社區參與社區經理
-* 社區參與審查者
-* 社區參與成員（間接作為審閱者組的成員）
+* 社群參與社群管理員
+* 社群參與版主
+* Community Engage成員（間接身為版主群組的成員）
 
-![用戶組](assets/user-group.png)
+![user-group](assets/user-group.png)
 
 #### https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}
 
 ![參與](assets/engage.png)
 
-## 配置身份驗證錯誤 {#configure-for-authentication-error}
+## 設定驗證錯誤 {#configure-for-authentication-error}
 
-一旦已配置並推送站點進行發佈， [配置登錄映射](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`)。 優點是，當未正確輸入登錄憑據時，驗證錯誤將重新顯示社區站點的登錄頁，並顯示錯誤消息。
+設定網站並推送至發佈後， [設定登入對應](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`)。 優點在於，如果未正確輸入登入認證，驗證錯誤將重新顯示社群網站的登入頁面，並顯示錯誤訊息。
 
-添加 `Login Page Mapping` 如
+新增 `Login Page Mapping` 作為
 
 * `/content/sites/engage/en/signin:/content/sites/engage/en`
 
-## 可選步驟 {#optional-steps}
+## 選擇性步驟 {#optional-steps}
 
-### 更改預設首頁 {#change-the-default-home-page}
+### 變更預設首頁 {#change-the-default-home-page}
 
-使用發佈網站進行演示時，將預設首頁更改為新網站可能會非常有用。
+使用發佈網站進行示範時，將預設首頁變更為新網站可能會有幫助。
 
-要執行此操作，需要使用 [克爾克斯德](https://localhost:4503/crx/de) 簡化以編輯 [資源映射](/help/sites-deploying/resource-mapping.md) 的子菜單。
+若要這麼做，需要使用 [CRXDE](https://localhost:4503/crx/de) 精簡以編輯 [resource-mapping](/help/sites-deploying/resource-mapping.md) 發佈時顯示的表格。
 
-開始：
+若要開始使用：
 
-1. 在發佈實例上，使用管理員權限登錄。
-1. 瀏覽到 [https://localhost:4503/crx/de](https://localhost:4503/crx/de)。
-1. 在項目瀏覽器中，展開 `/etc/map.`
-1. 選擇 `http` 節點：
+1. 在發佈執行個體上，使用管理員許可權登入。
+1. 瀏覽至 [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
+1. 在專案瀏覽器中，展開 `/etc/map.`
+1. 選取 `http` 節點：
 
-   * 選擇 **建立節點：**
+   * 選取 **建立節點：**
 
-      * **名稱** localhost.4503(do) *不* 使用「：」)
+      * **名稱** localhost.4503 (do *not* 使用&#39;：&#39;)
 
-      * **類型** [sling：映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+      * **型別** [sling：Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
-1. 使用新建立的 `localhost.4503` 選定的節點：
+1. 使用新建立的 `localhost.4503` 選取的節點：
 
    * 新增屬性:
 
-   * **名稱** 吊帶：匹配
-      * **類型** 字串
-      * **值** localhost.4503/$（必須以「$」字元結尾）
+   * **名稱** sling：match
+      * **型別** 字串
+      * **值** localhost.4503/$ （必須以「$」字元結尾）
    * 新增屬性:
 
-      * **名稱** sling:internal重定向
-      * **類型** 字串
+      * **名稱** sling：internalRedirect
+      * **型別** 字串
       * **值** /content/sites/engage/en.html
 
 
-1. 選擇 **全部保存。**
-1. （可選）刪除瀏覽歷史記錄。
-1. 瀏覽https://localhost:4503/。
+1. 選取 **全部儲存。**
+1. （選用）刪除瀏覽記錄。
+1. 瀏覽至https://localhost:4503/。
 
-   * 請訪問https://localhost:4503/content/sites/engage/en.html
-
->[!NOTE]
->
->要禁用，只需在 `sling:match` 帶「x」的屬性值 —  `xlocalhost.4503/$`  — 和 **全部保存**。
-
-![可選步驟](assets/optional-steps.png)
-
-#### 故障排除：保存映射時出錯 {#troubleshooting-error-saving-map}
-
-如果無法保存更改，請確保節點名稱為 `localhost.4503`，帶「dot」分隔符，但 `localhost:4503` 帶有「冒號」分隔符，如 `localhost`不是有效的命名空間前置詞。
-
-![錯誤消息](assets/error-message.png)
-
-#### 故障排除：無法重定向 {#troubleshooting-fail-to-redirect}
-
-&#39;**$**&#39;在規則運算式的末尾 `sling:match`弦很重要，所以 `https://localhost:4503/` 映射，否則重定向值將前置詞為URL中server:port之後可能存在的任何路徑。 因此，當AEM嘗試重定向到登錄頁時，失敗。
-
-### 修改站點 {#modify-the-site}
-
-站點最初建立後，作者可以使用 [「開啟網站」表徵圖](/help/communities/sites-console.md#authoring-site-content) 執行標準創AEM作活動。
-
-此外，管理員可使用 [「編輯網站」表徵圖](/help/communities/sites-console.md#modifying-site-properties) 修改網站的屬性，如標題。
-
-修改後，請記住 **保存** 和&#x200B;**發佈** 地址欄。
+   * 送達https://localhost:4503/content/sites/engage/en.html
 
 >[!NOTE]
 >
->如果不熟悉AEM，請查看 [基本處理](/help/sites-authoring/basic-handling.md) 和 [創作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
+>若要停用，只需在 `sling:match` 具有「x」的屬性值 —  `xlocalhost.4503/$`  — 和 **全部儲存**.
+
+![optional-steps](assets/optional-steps.png)
+
+#### 疑難排解：儲存地圖時發生錯誤 {#troubleshooting-error-saving-map}
+
+如果無法儲存變更，請確定節點名稱為 `localhost.4503`，帶有「點」分隔符號，而非 `localhost:4503` 以「冒號」分隔符號，如 `localhost`不是有效的名稱空間前置詞。
+
+![錯誤訊息](assets/error-message.png)
+
+#### 疑難排解：無法重新導向 {#troubleshooting-fail-to-redirect}
+
+「**$**&#39;在規則運算式結尾 `sling:match`字串至關重要，因此僅能精確 `https://localhost:4503/` 會對應，否則重新導向值會加上前置詞，成為URL中server：port之後可能存在的任何路徑。 因此，當AEM嘗試重新導向至登入頁面時，會失敗。
+
+### 修改網站 {#modify-the-site}
+
+網站初次建立後，作者可使用 [開啟網站圖示](/help/communities/sites-console.md#authoring-site-content) 執行標準AEM編寫活動。
+
+此外，管理員可使用 [編輯網站圖示](/help/communities/sites-console.md#modifying-site-properties) 修改網站屬性，例如標題。
+
+進行任何修改後，請記住 **儲存** 並重新&#x200B;**發佈** 網站。
+
+>[!NOTE]
+>
+>若不熟悉AEM，請檢視以下說明檔案： [基本處理](/help/sites-authoring/basic-handling.md) 和 [製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md).

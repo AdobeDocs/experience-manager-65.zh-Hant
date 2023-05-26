@@ -1,6 +1,6 @@
 ---
 title: 設定Dynamic Media
-description: 要設定Dynamic Media，必須配置Dynamic Media並管理影像和查看器預設。
+description: 若要設定Dynamic Media，您必須設定Dynamic Media並管理影像和檢視器預設集。
 uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -17,32 +17,32 @@ ht-degree: 1%
 
 # 設定 Dynamic Media {#setting-up-dynamic-media}
 
-[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 通過按需提供豐富的視覺商品銷售和市場營銷資產，幫助您管理資產，並自動擴展到Web、移動和社交網站上的消費。 使用一組主要源資產，Dynamic Media通過其全球、可擴展、效能優化的網路即時生成並提供多種豐富內容的變體。
+[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) 協助您管理資產，提供豐富的視覺化銷售和行銷資產（隨選提供），並自動調整規模，以因應網路、行動裝置和社交網站的使用量。 Dynamic Media使用一組主要來源資產，透過其全球性、可擴充、效能最佳化的網路，即時產生並傳送多種多樣的豐富內容。
 
 >[!NOTE]
 >
->本文檔描述了直接整合到Adobe Experience Manager的Dynamic Media功能。 如果將Dynamic Media Classic整合到Experience Manager，請參閱 [Dynamic Media Classic整合文檔](/help/sites-administering/scene7.md)。
+>本檔案說明Dynamic Media功能，這些功能已直接整合至Adobe Experience Manager。 如果您使用Dynamic Media Classic整合至Experience Manager，請參閱 [Dynamic Media Classic整合檔案](/help/sites-administering/scene7.md).
 >
->請參閱 [兩用方案](/help/sites-administering/scene7.md#dual-use-scenario) 有時你想和Dynamic Media Classic和Dynamic Media一起使用Experience Manager。
+>另請參閱 [雙重使用案例](/help/sites-administering/scene7.md#dual-use-scenario) 當您想要使用Experience Manager與Dynamic Media Classic以及Dynamic Media整合時。
 
-如果您管理Dynamic Media，則以下主題將受關注：
+如果您正在管理Dynamic Media，以下是您感興趣的主題：
 
-* [配置Dynamic Media-Scene7模式](config-dms7.md)  — 如果您是新的Dynamic Media客戶，請使用此配置。
-* [配置Dynamic Media — 混合模式](config-dynamic.md)  — 如果您是現有的Dynamic Media客戶升級Experience Manager，則使用此配置。
-* [管理影像預設](managing-image-presets.md)
-* [管理查看器預設](managing-viewer-presets.md)
-* [診斷Dynamic Media-Scene7模式](troubleshoot-dms7.md)
+* [設定Dynamic Media - Scene7模式](config-dms7.md)  — 如果您是Dynamic Media的新客戶，請使用此設定。
+* [設定Dynamic Media — 混合模式](config-dynamic.md)  — 如果您是現有Dynamic Media客戶升級Experience Manager，請使用此設定。
+* [管理影像預設集](managing-image-presets.md)
+* [管理檢視器預設集](managing-viewer-presets.md)
+* [疑難排解Dynamic Media - Scene7模式](troubleshoot-dms7.md)
 
-另請參閱以下主題：
+另請參閱下列主題：
 
-* [視頻編碼和視頻配置檔案](video-profiles.md)
-* [影像配置檔案](image-profiles.md)
+* [視訊編碼和視訊設定檔](video-profiles.md)
+* [影像設定檔](image-profiles.md)
 
 >[!NOTE]
 >
->**如果要升級：**
+>**如果您要升級：**
 >
->* Experience Manager啟動並運行後，您上載的任何資產都會自動啟用Dynamic Media（除非系統管理員明確禁用了它）。 如果您處於升級的Experience Manager實例中，並且是Dynamic Media的新用戶，則必須重新處理您的資產，使其啟用Dynamic Media。
+>* Experience Manager並執行後，您上傳的任何資產都會自動啟用Dynamic Media （除非系統管理員明確停用）。 如果您在升級的Experience Manager執行個體上且剛開始使用Dynamic Media，則必須重新處理您的資產，使其啟用Dynamic Media。
 
 
 

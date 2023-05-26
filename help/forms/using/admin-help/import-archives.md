@@ -1,7 +1,7 @@
 ---
-title: 導入和管理存檔
+title: 匯入和管理封存
 seo-title: Import and manage archives
-description: 瞭解如何導入和管理存檔。
+description: 瞭解如何匯入和管理封存。
 seo-description: Learn how to import and manage archives.
 uuid: aa1613dd-6350-49a7-9643-44365e2acdcc
 contentOwner: admin
@@ -17,152 +17,152 @@ ht-degree: 0%
 
 ---
 
-# 導入和管理存檔 {#import-and-manage-archives}
+# 匯入和管理封存 {#import-and-manage-archives}
 
-使用「存檔」標籤可導入和管理在工作台中建立的LCA。
+使用「封存」標籤來匯入和管理在Workbench中建立的LCA。
 
-## 導入存檔 {#import-an-archive}
+## 匯入封存 {#import-an-archive}
 
-1. 在管理控制台中，按一下「服務」>「應用程式和服務」>「應用程式管理」，然後按一下「存檔」頁籤。
-1. 按一下「導入」。
-1. 按一下「瀏覽」查找要導入的存檔，然後按一下「預覽」。
-1. 查看將隨存檔一起安裝的資源和對象的清單。 確保與現有資源、對象和服務配置沒有衝突，因為沒有可用的撤消功能。
+1. 在Administration Console中，按一下「服務>應用程式和服務>應用程式管理」，然後按一下「封存」標籤。
+1. 按一下「匯入」。
+1. 按一下「瀏覽」以找出要匯入的封存，然後按一下「預覽」。
+1. 檢閱將隨封存一起安裝的資源和物件清單。 確保與現有資源、物件和服務設定沒有衝突，因為沒有可用的還原功能。
 
-   如果選擇導入服務配置，AEM則表單將導入LCA中進程使用的所有進程配置檔案（端點、安全配置檔案和服務配置參數）。
+   如果您選取匯入服務組態，AEM表單會匯入LCA中處理程式使用的所有處理程式組態檔（端點、安全性設定檔及服務組態引數）。
 
-1. 按一下「導入」。
-1. 查看導入結果，然後按一下跳過配置以完成導入過程，或按一下配置以配置存檔。
+1. 按一下「匯入」。
+1. 檢閱匯入結果，然後按一下略過設定以完成匯入程式，或按一下設定來設定封存。
 
    >[!NOTE]
    >
-   >如果按一下「跳過配置」，則可以稍後配置存檔。
+   >如果按一下略過設定，您可以稍後再設定封存。
 
-1. 如果按一下配置，將顯示「配置端點」頁，在該頁中可以進行任何需要的更改：
+1. 如果按一下設定，便會顯示「設定端點」頁面，您可以在此頁面進行任何需要的變更：
 
-   * 要更名終結點或編輯其說明，請按一下它。
-   * 要添加任務管理器終結點，請按一下添加任務管理器。 有關「任務管理器」設定的詳細資訊，請參閱 [配置Task Manager終結點](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints)。
-   * 要添加「監視資料夾」終結點，請按一下「添加監視資料夾」。 有關「監視資料夾」設定的詳細資訊，請參閱 [已監視資料夾終結點設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings)。
-   * 要添加電子郵件終結點，請按一下「添加電子郵件」。 有關電子郵件設定的詳細資訊，請參閱 [電子郵件終結點設定](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings)。
-   * 要添加EJB終結點，請按一下「添加EJB」，然後指定終結點的名稱和說明。
-   * 要添加SOAP終結點，請按一下「添加SOAP」並指定終結點的名稱和說明。
-   * 要添加遠程處理終結點，請按一下添加遠程處理。 有關遠程處理設定的詳細資訊，請參閱 [遠程處理終結點設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)。
-   * 要添加REST端點，請按一下「添加REST」(Add REST)，並指定端點的名稱和說明。 請注意「添加REST端點」頁上顯示的REST調用URL。
-   * 要刪除端點，請選中端點旁邊的複選框，然後按一下「刪除」。
-
-1. 按一下下一步。
-1. 如果LCA中的進程或服務具有配置參數，則會顯示「配置參數」頁，在該頁中配置服務參數並按一下下一步。
-1. 在「配置安全性配置檔案」頁上，進行任何需要的更改：
-
-   * **要求呼叫者驗證：** 此設定指示是否可以使用或不使用憑據調用服務。
-
-      如果 *當前需要呼叫者進行身份驗證* 服務的調用方必須經過驗證，並且該調用方的用戶主體必須被授權調用該服務；否則，調用嘗試將被拒絕。 要刪除驗證的需要，請按一下允許未驗證的呼叫者。
-
-      如果 *不需要呼叫者進行身份驗證* 顯示，無需驗證服務的調用方。 由於沒有授權檢查，因此服務調用將始終成功。 要要求驗證，請按一下要求呼叫者驗證。
-
-   * **運行方式：** 指定在調用服務後由服務使用的運行時標識。 要更改此選項，請按一下「更改」。 從以下選項中選擇：
-
-      **未指定：** 使用預設行為。
-
-      **調用程式：** 使用與調用服務的用戶相同的標識。
-
-      **系統：** 以完全權限運行服務。 這是長期進程的預設設定。
-
-      **命名用戶：** 允許您以特定用戶身份運行服務。 這是短時間進程的預設設定。 選擇此選項後，按一下選擇用戶以顯示「選擇承擔者」頁，在該頁中可以搜索和選擇用戶。
-
-   * 要將承擔者添加到安全配置檔案，請按一下「添加承擔者」(Add Principal)，然後選擇要作為承擔者添加的用戶或組。 按一下「下一步」，然後選擇要分配給此承擔者的權限：
-
-      **INVOKE_PERM:** 調用服務上的所有操作：
-
-      **MODIFY_CONFIG_PERM:** 修改服務的配置
-
-      **SUPERVISOR_PERM:** 查看從進程建立的服務的進程實例資料
-
-      **START_STOP_PERM:** 啟動和停止服務
-
-      **ADD_REMOVE_ENDPOINTS_PERM:** 添加、刪除和修改服務的端點
-
-      **CREATE_VERSION_PERM:** 建立服務的新版本
-
-      **DELETE_版本_PERM:** 刪除服務版本
-
-      **MODIFY_VERSION_PERM:** 修改服務版本
-
-      **讀取(_P):** 查看服務
-
-      按一下「完成」(Finished)將承擔者添加到安全配置檔案。
-
-1. 按一下「完成」(Finished)完成配置。
-
-## 配置AEM作為存檔檔案一部分的表單 {#configure-the-aem-forms-that-are-part-of-an-archive-file}
-
-1. 在管理控制台中，按一下「服務」>「應用程式和服務」>「應用程式管理」，然後按一下「存檔」頁籤。
-1. 在「存檔管理」頁上，選擇要配置的存檔檔案。
-1. 在「查看存檔」頁上，選擇突出顯示的存檔資源。
-1. 配置導入的進程存檔檔案。
-
-## 使用配置嚮導配置AEM作為存檔檔案一部分的表單 {#use-the-configuration-wizard-to-configure-the-aem-forms-that-are-part-of-an-archive-file}
-
-1. 在管理控制台中，按一下「服務」>「應用程式和服務」>「應用程式管理」，然後按一下「存檔」頁籤。
-1. 按一下要配置的存檔檔案旁的「配置」。
-1. 此時將顯示「配置端點」頁，在該頁中可以進行任何需要的更改：
-
-   * 要更名終結點或編輯其說明，請按一下它。
-   * 要添加任務管理器終結點，請按一下添加任務管理器。 有關「任務管理器」設定的詳細資訊，請參閱 [配置Task Manager終結點](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints)。
-   * 要添加「監視資料夾」終結點，請按一下「添加監視資料夾」。 有關「監視資料夾」設定的詳細資訊，請參閱 [已監視資料夾終結點設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings)。
-   * 要添加電子郵件終結點，請按一下「添加電子郵件」。 有關電子郵件設定的詳細資訊，請參閱 [電子郵件終結點設定](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings)。
-   * 要添加EJB終結點，請按一下「添加EJB」，然後指定終結點的名稱和說明。
-   * 要添加SOAP終結點，請按一下「添加SOAP」並指定終結點的名稱和說明。
-   * 要添加遠程處理終結點，請按一下添加遠程處理。 有關遠程處理設定的詳細資訊，請參閱 [遠程處理終結點設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)。
-   * 要添加REST端點，請按一下「添加REST」(Add REST)，並指定端點的名稱和說明。 請注意「添加REST端點」頁上顯示的REST調用URL。
-   * 要刪除端點，請選中端點旁邊的複選框，然後按一下「刪除」。
+   * 若要重新命名端點或編輯其說明，請按一下該端點。
+   * 若要新增「工作管理員」端點，請按一下「新增工作管理員」。 如需「工作管理員」設定的詳細資訊，請參閱 [設定任務管理員端點](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints).
+   * 若要新增Watched資料夾端點，請按一下[新增WatchedFolder]。 如需Watched資料夾設定的詳細資訊，請參閱 [Watched資料夾端點設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings).
+   * 若要新增電子郵件端點，請按一下[新增電子郵件]。 如需電子郵件設定的詳細資訊，請參閱 [電子郵件端點設定](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings).
+   * 若要新增EJB端點，請按一下新增EJB並指定端點的名稱和描述。
+   * 若要新增SOAP端點，請按一下新增SOAP並指定端點的名稱和描述。
+   * 若要新增遠端處理端點，請按一下[新增遠端處理]。 如需有關遠端設定的詳細資訊，請參閱 [遠端端點設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings).
+   * 若要新增REST端點，請按一下新增REST並指定端點的名稱和描述。 記下「新增REST端點」頁面上顯示的REST呼叫URL。
+   * 若要移除端點，請選取端點旁的核取方塊，然後按一下「移除」。
 
 1. 按一下下一步。
-1. 如果LCA中的進程或服務具有配置參數，則會顯示「配置參數」頁，在該頁中配置服務參數並按一下下一步。
-1. 在「配置安全性配置檔案」頁上，您可以進行任何需要的更改：
+1. 如果LCA中的程式或服務有組態引數，就會顯示「設定引數」頁面，您可以在此設定服務引數，然後按下一步。
+1. 在「設定安全性設定檔」頁面上，進行您所需的任何變更：
 
-   * **要求呼叫者驗證：** 此設定指示是否可以使用或不使用憑據調用服務。
+   * **要求來電者進行驗證：** 此設定會指出是否可使用認證叫用服務。
 
-      如果 *當前需要呼叫者進行身份驗證* 服務的調用方必須經過驗證，並且該調用方的用戶主體必須被授權調用該服務；否則，調用嘗試將被拒絕。 要刪除驗證的需要，請按一下允許未驗證的呼叫者。
+      若 *目前需要來電者才能進行驗證* 顯示，服務的呼叫者必須經過驗證，而且該呼叫者的使用者主體必須獲得授權才能叫用服務；否則，將會拒絕叫用嘗試。 若要移除驗證需求，請按一下[允許未驗證的來電者]。
 
-      如果 *不需要呼叫者進行身份驗證* 顯示，服務的呼叫者可以或不可以被認證。 由於沒有授權檢查，因此服務調用將始終成功。 要要求驗證，請按一下要求呼叫者驗證。
+      若 *來電者不需要進行驗證* 顯示，不需要驗證服務的呼叫者。 因為沒有授權檢查，所以服務的呼叫一律會成功。 若要要求驗證，請按一下[要求來電者進行驗證]。
 
-   * **運行方式：** 指定在調用服務後由服務使用的運行時標識。 要更改此選項，請按一下「更改」。 從以下選項中選擇：
+   * **執行身分：** 指定服務在叫用後所使用的執行階段身分。 若要變更此選項，請按一下[變更]。 從下列選項中選擇：
 
-      **未指定：** 使用預設行為。
+      **未指定：** 系統會使用預設行為。
 
-      **調用程式：** 使用與調用服務的用戶相同的標識。
+      **叫用者：** 使用與叫用服務的使用者相同的身分。
 
-      **系統：** 以完全權限運行服務。 這是長期進程的預設設定。
+      **系統：** 以完整許可權執行服務。 這是長期處理程式的預設設定。
 
-      **命名用戶：** 允許您以特定用戶身份運行服務。 這是短時間進程的預設設定。 選擇此選項後，按一下選擇用戶以顯示「選擇承擔者」頁，在該頁中可以搜索和選擇用戶。
+      **已命名的使用者：** 可讓您以特定使用者的身分執行服務。 這是短期程式的預設設定。 選取此選項時，按一下「選取使用者」以顯示「選取主參與者」頁面，您可以在此頁面搜尋和選取使用者。
 
-   * 要將承擔者添加到安全配置檔案，請按一下「添加承擔者」(Add Principal)，然後選擇要作為承擔者添加的用戶或組。 按一下「下一步」，然後選擇要分配給此承擔者的權限：
+   * 若要將主體新增至安全性設定檔，請按一下「新增主體」，然後選取要新增為主體的使用者或群組。 按一下「下一步」 ，然後選取您要指派給此主體的許可權：
 
-      **INVOKE_PERM:** 調用服務上的所有操作：
+      **INVOKE_PERM：** 啟動服務上的所有作業
 
-      **MODIFY_CONFIG_PERM:** 修改服務的配置
+      **MODIFY_CONFIG_PERM：** 修改服務的組態
 
-      **SUPERVISOR_PERM:** 查看從進程建立的服務的進程實例資料
+      **監督員_PERM：** 若要檢視從處理建立之服務的處理序執行處理資料
 
-      **START_STOP_PERM:** 啟動和停止服務
+      **START_STOP_PERM：** 啟動和停止服務的方式
 
-      **ADD_REMOVE_ENDPOINTS_PERM:** 添加、刪除和修改服務的端點
+      **ADD_REMOVE_ENDPOINTS_PERM：** 新增、移除和修改服務的端點
 
-      **CREATE_VERSION_PERM:** 建立服務的新版本
+      **CREATE_VERSION_PERM：** 建立新版服務的方式
 
-      **DELETE_版本_PERM:** 刪除服務版本
+      **DELETE_版本_PERM：** 刪除服務版本的方式
 
-      **MODIFY_VERSION_PERM:** 修改服務版本
+      **MODIFY_VERSION_PERM：** 修改服務版本的方式
 
-      **讀取(_P):** 查看服務
+      **讀取_PERM：** 檢視服務的方式
 
-      按一下「完成」(Finished)將承擔者添加到安全配置檔案。
+      按一下[完成]將主體新增至安全性設定檔。
 
-## 刪除存檔 {#remove-an-archive}
+1. 按一下「完成」以完成設定。
+
+## 設定屬於封存檔案的AEM表單 {#configure-the-aem-forms-that-are-part-of-an-archive-file}
+
+1. 在Administration Console中，按一下「服務>應用程式和服務>應用程式管理」，然後按一下「封存」標籤。
+1. 在「封存管理」頁面上，選取要設定的封存檔案。
+1. 在「檢視封存」頁面上，選取醒目提示的封存資源。
+1. 設定匯入的程式封存檔案。
+
+## 使用設定精靈來設定屬於封存檔案一部分的AEM表單 {#use-the-configuration-wizard-to-configure-the-aem-forms-that-are-part-of-an-archive-file}
+
+1. 在Administration Console中，按一下「服務>應用程式和服務>應用程式管理」，然後按一下「封存」標籤。
+1. 按一下要設定的封存檔案旁的「設定」。
+1. 便會顯示「設定端點」頁面，您可以在此頁面進行任何需要的變更：
+
+   * 若要重新命名端點或編輯其說明，請按一下該端點。
+   * 若要新增「工作管理員」端點，請按一下「新增工作管理員」。 如需「工作管理員」設定的詳細資訊，請參閱 [設定任務管理員端點](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints).
+   * 若要新增Watched資料夾端點，請按一下[新增WatchedFolder]。 如需Watched資料夾設定的詳細資訊，請參閱 [Watched資料夾端點設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings).
+   * 若要新增電子郵件端點，請按一下[新增電子郵件]。 如需電子郵件設定的詳細資訊，請參閱 [電子郵件端點設定](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings).
+   * 若要新增EJB端點，請按一下新增EJB並指定端點的名稱和描述。
+   * 若要新增SOAP端點，請按一下新增SOAP並指定端點的名稱和描述。
+   * 若要新增遠端處理端點，請按一下[新增遠端處理]。 如需有關遠端設定的詳細資訊，請參閱 [遠端端點設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings).
+   * 若要新增REST端點，請按一下新增REST並指定端點的名稱和描述。 記下「新增REST端點」頁面上顯示的REST呼叫URL。
+   * 若要移除端點，請選取端點旁的核取方塊，然後按一下「移除」。
+
+1. 按一下下一步。
+1. 如果LCA中的程式或服務有組態引數，就會顯示「設定引數」頁面，您可以在此設定服務引數，然後按下一步。
+1. 在「設定安全性設定檔」頁面上，您可以進行任何需要的變更：
+
+   * **要求來電者進行驗證：** 此設定會指出是否可使用認證叫用服務。
+
+      若 *目前需要來電者才能進行驗證* 顯示，服務的呼叫者必須經過驗證，而且該呼叫者的使用者主體必須獲得授權才能叫用服務；否則，將會拒絕叫用嘗試。 若要移除驗證需求，請按一下[允許未驗證的來電者]。
+
+      若 *來電者不需要進行驗證* 顯示時，服務的呼叫者可能會驗證，也可能不會驗證。 因為沒有授權檢查，所以服務的呼叫一律會成功。 若要要求驗證，請按一下[要求來電者進行驗證]。
+
+   * **執行身分：** 指定服務在叫用後所使用的執行階段身分。 若要變更此選項，請按一下[變更]。 從下列選項中選擇：
+
+      **未指定：** 系統會使用預設行為。
+
+      **叫用者：** 使用與叫用服務的使用者相同的身分。
+
+      **系統：** 以完整許可權執行服務。 這是長期處理程式的預設設定。
+
+      **已命名的使用者：** 可讓您以特定使用者的身分執行服務。 這是短期程式的預設設定。 選取此選項時，按一下「選取使用者」以顯示「選取主參與者」頁面，您可以在此頁面搜尋和選取使用者。
+
+   * 若要將主體新增至安全性設定檔，請按一下「新增主體」，然後選取要新增為主體的使用者或群組。 按一下「下一步」 ，然後選取您要指派給此主體的許可權：
+
+      **INVOKE_PERM：** 啟動服務上的所有作業
+
+      **MODIFY_CONFIG_PERM：** 修改服務的組態
+
+      **監督員_PERM：** 若要檢視從處理建立之服務的處理序執行處理資料
+
+      **START_STOP_PERM：** 啟動和停止服務的方式
+
+      **ADD_REMOVE_ENDPOINTS_PERM：** 新增、移除和修改服務的端點
+
+      **CREATE_VERSION_PERM：** 建立新版服務的方式
+
+      **DELETE_版本_PERM：** 刪除服務版本的方式
+
+      **MODIFY_VERSION_PERM：** 修改服務版本的方式
+
+      **讀取_PERM：** 檢視服務的方式
+
+      按一下[完成]將主體新增至安全性設定檔。
+
+## 移除封存 {#remove-an-archive}
 
 >[!NOTE]
 >
->要刪除包含儲存在第三方儲存庫(EMC Documentum Content Server 、IBM FileNet Content Manager或IBMContent Manager)中的資產的存檔，還必須使用Workbench從儲存庫中刪除資產檔案。
+>若要移除包含儲存在協力廠商存放庫(EMC Documentum Content Server、IBM FileNet Content Manager或IBM Content Manager)中之資產的封存，您也必須使用Workbench從存放庫中刪除資產檔案。
 
-1. 在管理控制台中，按一下「服務」>「應用程式和服務」>「存檔管理」。
-1. 在「存檔管理」頁上，選中要刪除的存檔的複選框，然後按一下刪除。
+1. 在Administration Console中，按一下「服務>應用程式和服務>封存管理」。
+1. 在「封存管理」頁面上，選取要移除的封存核取方塊，然後按一下移除。

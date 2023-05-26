@@ -1,6 +1,6 @@
 ---
-title: 在中創作內容頁AEM面
-description: 創作內容頁面時涉及的任務。
+title: 在AEM中編寫內容頁面
+description: 編寫內容頁面時涉及的任務。
 uuid: 454d94aa-da27-45cb-bbb2-7bfcef103806
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,42 +16,42 @@ ht-degree: 0%
 
 ---
 
-# 創作頁面{#authoring-pages}
+# 製作頁面{#authoring-pages}
 
-下面提供了兩種用於創作的概AEM述：
+以下提供兩種使用AEM撰寫的概觀：
 
-* [作者的第一步](/help/sites-authoring/first-steps.md)  — 新作家介紹
+* [作者的首要步驟](/help/sites-authoring/first-steps.md)  — 新作者的簡介
 
-* [創作頁面快速指南](/help/sites-authoring/qg-page-authoring.md)  — 主要行動的快速指南（高級別）
+* [製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)  — 主要動作的快速指南（高階說明）
 
 >[!NOTE]
 >
->本節介紹創作內容頁面時涉及的任務。 還有許多與頁面創作密切相關的附加功能，這些功能在 [創作指南](/help/sites-authoring/home.md)。
+>本節說明撰寫內容頁面時涉及的作業。 有許多與頁面製作密切相關的其他功能，請參閱 [Authoring指南](/help/sites-authoring/home.md).
 
-## 用於創作頁面的功能快速概述 {#quick-overview-of-features-used-for-authoring-pages}
+## 用於編寫頁面的功能的快速概覽 {#quick-overview-of-features-used-for-authoring-pages}
 
-為在創作頁面時幫助您，作者環境提供了以下功能：
+為協助您撰寫頁面，作者環境會提供下列功能：
 
 * **拖放**
-元件（如文本、影像）和數字資產（如影像）可以簡單地通過將它們拖放到所需位置來定位在頁面上。
+只要將元件（例如文字、影像）和數位資產（例如影像）拖放至所需位置，就能在頁面上放置元件。
 
 * **編輯**
-一旦定位到頁面上，就可以開啟元件特定對話框以輸入該元件的內容和/或配置其特性（例如，影像大小）。
+一旦定位在頁面上，即可開啟元件專用對話方塊，以輸入內容及/或設定該元件的特性（例如影像大小）。
 
 * **就地編輯**
-文本和影像元件可以直接在網頁上編輯，而無需開啟對話框或顯式保存操作。
+可直接在網頁上編輯文字和影像元件，而不需開啟對話方塊或明確儲存動作。
 
 * **[元件瀏覽器](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)**
-在可編輯頁面的左側，可開啟滑動瀏覽器；可將元件從此處拖到頁面上，然後進行編輯。
+在可編輯頁面的左側，可以開啟滑動瀏覽器；您可以從此處將元件拖曳至頁面上，然後進行編輯。
 
 * **[資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)**
-在可編輯頁面的左側，可開啟滑動瀏覽器；資產可以從此拖到頁面上；例如，定位資產或建立指向其他頁面的連結。
+在可編輯頁面的左側，可以開啟滑動瀏覽器；可以從此處將資產拖曳至頁面；例如，放置資產或建立其他頁面的連結。
 
-* **元件工具欄**
-單次或慢速按兩下/點擊都將顯示相應的工具欄（單次顯示就地編輯工具欄，雙次顯示全工具欄）。
+* **元件工具列**
+按一下或緩慢按兩下/點選都會顯示適當的工具列（按一下可放置就地編輯工具列，按一下緩慢按兩下可放置完整工具列）。
 
-* **[響應佈局](/help/sites-authoring/responsive-layout.md)**
-這提供了段落系統，允許您在響應網格中定位元件。
+* **[回應式佈局](/help/sites-authoring/responsive-layout.md)**
+這提供了段落系統，可讓您在回應式格線中定位元件。
 
-* **鍵入時搜索**
-在某些情況（例如，編輯對話框中的路徑選擇）中，通過介面搜索內容會AEM在鍵入查詢時顯示動態匹配項。
+* **依輸入內容搜尋**
+在某些情況下（例如，編輯對話方塊中的路徑選擇），當您鍵入查詢時，透過AEM介面搜尋內容會顯示動態比對。

@@ -1,7 +1,7 @@
 ---
-title: 加密和解密PDF文檔
+title: 加密和解密PDF檔案
 seo-title: Encrypting and Decrypting PDF Documents
-description: 使用加密服務對文檔進行加密和解密。 加密服務任務包括用密碼加密PDF文檔、用證書加密PDF文檔、從PDF文檔中刪除基於密碼的加密、從PDF文檔中刪除基於證書的加密、解鎖PDF文檔以便能夠執行其他服務操作以及確定安全PDF文檔的加密類型。
+description: 使用加密服務來加密和解密檔案。 加密服務工作包括使用密碼加密PDF檔案、使用憑證加密PDF檔案、從PDF檔案移除密碼式加密、從PDF檔案移除憑證式加密、解鎖PDF檔案以便執行其他服務操作，以及決定安全PDF檔案的加密型別。
 seo-description: Use the Encryption service to encrypt and decrypt documents. The Encryption service tasks include encrypting a PDF document with a password, encrypting a PDF document with a certificate, removing password-based encryption from a PDF document, removing certificate-based encryption from a PDF document, unlocking the PDF document so that other service operations can be performed, and determining the encryption type of a secured PDF document.
 uuid: 4e4e2716-c21f-4bfe-ae7a-7e91442414ef
 contentOwner: admin
@@ -18,1067 +18,1067 @@ ht-degree: 0%
 
 ---
 
-# 加密和解密PDF文檔 {#encrypting-and-decrypting-pdf-documents}
+# 加密和解密PDF檔案 {#encrypting-and-decrypting-pdf-documents}
 
-**本文檔中的示例和示例僅針對AEM Forms的JEE環境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
 **關於加密服務**
 
-加密服務允許您加密和解密文檔。 當文檔被加密時，其內容將變得不可讀。 授權用戶可解密文檔以獲得對內容的訪問。 如果PDF文檔使用密碼進行加密，則用戶必須指定開啟的密碼，然後才能在Adobe Reader或Adobe Acrobat查看該文檔。 同樣，如果PDF文檔用證書加密，則用戶必須使用與用於加密PDF文檔的證書（私鑰）對應的公鑰來解密PDF文檔。
+加密服務可讓您加密和解密檔案。 檔案加密後，其內容會變得無法讀取。 授權的使用者可以解密檔案以取得內容的存取權。 如果PDF檔案已使用密碼加密，使用者必須先指定開啟的密碼，才能在Adobe Reader或Adobe Acrobat中檢視該檔案。 同樣地，如果PDF檔案已使用憑證加密，使用者必須使用與用於加密PDF檔案的憑證（私密金鑰）相對應的公開金鑰來解密PDF檔案。
 
-您可以使用加密服務完成以下任務：
+您可以使用加密服務完成這些工作：
 
-* 使用密碼加密PDF文檔。 (請參閱 [使用密碼加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)。)
-* 使用證書加密PDF文檔。 (請參閱 [使用證書加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)。)
-* 從PDF文檔中刪除基於密碼的加密。 (請參閱 [刪除密碼加密](encrypting-decrypting-pdf-documents.md#removing-password-encryption)。)
-* 從PDF文檔中刪除基於證書的加密。 (請參閱 [刪除基於證書的加密](encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption)。)
-* 解鎖PDF文檔，以便可以執行其他服務操作。 例如，在解鎖密碼加密的PDF文檔後，您可以對其應用數字簽名。 (請參閱 [解鎖加密PDF文檔](encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)。)
-* 確定安全PDF文檔的加密類型。 (請參閱 [確定加密類型](encrypting-decrypting-pdf-documents.md#determining-encryption-type)。)
-
->[!NOTE]
->
->有關加密服務的詳細資訊，請參見 [《AEM Forms服務參考》](https://www.adobe.com/go/learn_aemforms_services_63)。
-
-## 使用密碼加密PDF文檔 {#encrypting-pdf-documents-with-a-password}
-
-使用密碼加密PDF文檔時，用戶必須指定密碼才能在Adobe Reader或Acrobat開啟PDF文檔。 此外，在對文檔執行諸如對PDF文檔進行數字簽名的另一個AEM Forms操作之前，必須解鎖密碼加密的PDF文檔。
+* 使用密碼加密PDF檔案。 (請參閱 [使用密碼加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
+* 使用憑證加密PDF檔案。 (請參閱 [使用憑證加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates).)
+* 從PDF檔案中移除密碼式加密。 (請參閱 [移除密碼加密](encrypting-decrypting-pdf-documents.md#removing-password-encryption).)
+* 從PDF檔案中移除憑證式加密。 (請參閱 [移除憑證式加密](encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption).)
+* 解鎖PDF檔案，以便執行其他服務操作。 例如，在解除鎖定密碼加密的PDF檔案後，您可以對其套用數位簽名。 (請參閱 [解除鎖定加密的PDF檔案](encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents).)
+* 決定安全PDF檔案的加密型別。 (請參閱 [決定加密型別](encrypting-decrypting-pdf-documents.md#determining-encryption-type).)
 
 >[!NOTE]
 >
->如果將加密的PDF文檔上載到AEM Forms儲存庫，則無法解密PDF文檔並提取XDP內容。 建議在將文檔上載到AEM Forms儲存庫之前不要對其進行加密。 (請參閱 [編寫資源](/help/forms/developing/aem-forms-repository.md#writing-resources)。)
+>如需加密服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+
+## 使用密碼加密PDF檔案 {#encrypting-pdf-documents-with-a-password}
+
+使用密碼加密PDF檔案時，使用者必須指定密碼，才能在Adobe Reader或Acrobat中開啟PDF檔案。 此外，必須先解除鎖定密碼加密的AEM Forms檔案，才能對檔案執行其他PDF作業(例如數位簽署PDF檔案)。
 
 >[!NOTE]
 >
->有關加密服務的詳細資訊，請參見 [《AEM Forms服務參考》](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如果您將加密的PDF檔案上傳到AEM Forms存放庫，它將無法解密PDF檔案並擷取XDP內容。 建議您在將檔案上傳至AEM Forms存放庫之前，不要將檔案加密。 (請參閱 [寫入資源](/help/forms/developing/aem-forms-repository.md#writing-resources).)
+
+>[!NOTE]
+>
+>如需加密服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary-of-steps}
 
-要使用密碼加密PDF文檔，請執行以下步驟：
+若要使用密碼加密PDF檔案，請執行下列步驟：
 
-1. 包括項目檔案。
-1. 建立加密客戶端API對象。
-1. 獲取要加密的PDF文檔。
-1. 設定加密運行時選項。
-1. 添加密碼。
-1. 將加密的PDF文檔另存為PDF檔案。
+1. 包含專案檔案。
+1. 建立加密使用者端API物件。
+1. 取得要加密的PDF檔案。
+1. 設定加密執行階段選項。
+1. 新增密碼。
+1. 將加密的PDF檔案儲存為PDF檔案。
 
-**包括項目檔案**
+**包含專案檔案**
 
-在開發項目中包括必要的檔案。 如果使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-必須將以下JAR檔案添加到項目的類路徑：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar(在JBoss上部署AEM Forms時必需)
-* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-**建立加密客戶端API對象**
+**建立加密使用者端API物件**
 
-要以寫程式方式執行加密服務操作，必須建立加密服務客戶端。
+若要以程式設計方式執行「加密」服務作業，您必須建立「加密」服務使用者端。
 
-**獲取要加密的PDF文檔**
+**取得要加密的PDF檔案**
 
-必須獲取未加密的PDF文檔，才能使用密碼對文檔進行加密。 如果嘗試保護已加密的PDF文檔，將導致異常。
+您必須取得未加密的PDF檔案，才能使用密碼加密檔案。 如果您嘗試保護已加密的PDF檔案，會產生例外狀況。
 
-**設定加密運行時選項**
+**設定加密執行階段選項**
 
-要使用口令加密PDF文檔，請指定四個值，包括兩個口令值。 第一個密碼值用於加密PDF文檔，並且在開啟PDF文檔時必須指定。 第二個口令值（稱為主口令值）用於從PDF文檔中刪除加密。 密碼值區分大小寫，這兩個密碼值不能是相同的值。
+若要使用密碼加密PDF檔案，請指定四個值，包括兩個密碼值。 第一個密碼值用於加密PDF檔案，且必須在開啟PDF檔案時指定。 第二個密碼值，稱為主密碼值，用於從PDF檔案中移除加密。 密碼值區分大小寫，且這兩個密碼值不能相同。
 
-必須指定要加密的PDF文檔資源。 您可以加密整個PDF文檔、除文檔元資料之外的所有內容，或僅加密文檔的附件。 如果僅加密文檔的附件，則當用戶嘗試訪問檔案附件時，系統會提示用戶輸入密碼。
+您必須指定要加密的PDF檔案資源。 您可以加密整個PDF檔案，除了檔案的中繼資料以外的所有內容，或只是檔案的附件。 如果您只加密檔案的附件，則當使用者嘗試存取檔案附件時，系統會提示使用者輸入密碼。
 
-加密PDF文檔時，可以指定與安全文檔關聯的權限。 通過指定權限，您可以控制開啟密碼加密PDF文檔的用戶允許執行的操作。 例如，要成功提取表單資料，必須設定以下權限：
+加密PDF檔案時，您可以指定與受保護檔案相關聯的許可權。 透過指定許可權，您可以控制允許開啟密碼加密PDF檔案的使用者執行的動作。 例如，若要成功擷取表單資料，您必須設定下列許可權：
 
 * PASSWORD_EDIT_ADD
 * PASSWORD_EDIT_MODIFY
 
 >[!NOTE]
 >
->權限指定為 `PasswordEncryptionPermission` 枚舉值。
+>許可權指定為 `PasswordEncryptionPermission` 分項清單。
 
-**添加密碼**
+**新增密碼**
 
-檢索不安全的PDF文檔並設定加密運行時值後，可以向PDF文檔添加密碼。
+擷取不安全的PDF檔案並設定加密執行階段值後，您可以將密碼新增到PDF檔案。
 
-**將加密的PDF文檔另存為PDF檔案**
+**將加密的PDF檔案儲存為PDF檔案**
 
-可以將密碼加密的PDF文檔另存為PDF檔案。
+您可以將密碼加密的PDF檔案儲存為PDF檔案。
 
 **另請參閱**
 
-[使用Java API加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypt-a-pdf-document-using-the-java-api)
+[使用Java API加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypt-a-pdf-document-using-the-java-api)
 
-[使用Web服務API加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypting-a-pdf-document-using-the-web-service-api)
+[使用Web服務API加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypting-a-pdf-document-using-the-web-service-api)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 [加密服務API快速啟動](/help/forms/developing/encryption-service-java-api-quick.md#encryption-service-java-api-quick-start-soap)
 
-[使用證書加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)
+[使用憑證加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)
 
-### 使用Java API加密PDF文檔 {#encrypt-a-pdf-document-using-the-java-api}
+### 使用Java API加密PDF檔案 {#encrypt-a-pdf-document-using-the-java-api}
 
-使用Encryption API(Java)使用口令加密PDF文檔：
+使用加密API (Java)以密碼加密PDF檔案：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-encryption-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-encryption-client.jar。
 
-1. 建立加密客戶端API。
+1. 建立加密使用者端API。
 
-   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
-   * 建立 `EncryptionServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 的雙曲餘切值。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EncryptionServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 獲取要加密的PDF文檔。
+1. 取得要加密的PDF檔案。
 
-   * 建立 `java.io.FileInputStream` 表示要加密的PDF文檔的對象，方法是使用其建構子並傳遞一個字串值，該字串值指定PDF文檔的位置。
-   * 建立 `com.adobe.idp.Document` 使用其建構子並傳遞對象 `java.io.FileInputStream` 的雙曲餘切值。
+   * 建立 `java.io.FileInputStream` 物件，代表要加密的PDF檔案，使用它的建構函式並傳遞指定PDF檔案位置的字串值。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 設定加密運行時選項。
+1. 設定加密執行階段選項。
 
-   * 建立 `PasswordEncryptionOptionSpec` 調用其建構子。
-   * 通過調用要加密的PDF文檔資源 `PasswordEncryptionOptionSpec` 對象 `setEncryptOption` 方法和通過 `PasswordEncryptionOption` 指定要加密的文檔資源的枚舉值。 例如，要加密整個PDF文檔，包括其元資料及其附件，請指定 `PasswordEncryptionOption.ALL`。
-   * 建立 `java.util.List` 使用 `ArrayList` 建構子。
-   * 通過調用 `java.util.List` 對象s `add` 方法，並傳遞與要設定的權限對應的枚舉值。 例如，要設定允許用戶複製位於PDF文檔中的資料的權限，請指定 `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`。 （對要設定的每個權限重複此步驟）。
-   * 通過調用 `PasswordEncryptionOptionSpec` 對象 `setCompatability` 方法，並傳遞指定Acrobat相容性級別的枚舉值。 例如，可以指定 `PasswordEncryptionCompatability.ACRO_7`。
-   * 指定口令值，該口令值允許用戶通過調用 `PasswordEncryptionOptionSpec` 對象 `setDocumentOpenPassword` 方法，並傳遞表示開啟口令的字串值。
-   * 指定主密碼值，該值允許用戶通過調用PDF文檔刪除加密 `PasswordEncryptionOptionSpec` 對象 `setPermissionPassword` 和傳遞表示主密碼的字串值。
+   * 建立 `PasswordEncryptionOptionSpec` 物件（透過叫用其建構函式）。
+   * 透過叫用指定要加密的PDF檔案資源 `PasswordEncryptionOptionSpec` 物件的 `setEncryptOption` 方法和傳遞 `PasswordEncryptionOption` 指定要加密的檔案資源的列舉值。 例如，若要加密整個PDF檔案，包括其中繼資料及其附件，請指定 `PasswordEncryptionOption.ALL`.
+   * 建立 `java.util.List` 使用儲存加密許可權的物件 `ArrayList` 建構函式。
+   * 透過叫用 `java.util.List` 物件 `add` 方法並傳遞對應至您要設定之許可權的列舉值。 例如，若要設定允許使用者複製PDF檔案中資料的許可權，請指定 `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`. （對每個要設定的許可權重複此步驟）。
+   * 請叫用「 」，指定Acrobat相容性選項 `PasswordEncryptionOptionSpec` 物件的 `setCompatability` 並傳遞分項清單值，以指定Acrobat相容性層級。 例如，您可以指定 `PasswordEncryptionCompatability.ACRO_7`.
+   * PDF指定密碼值，讓使用者透過叫用 `PasswordEncryptionOptionSpec` 物件的 `setDocumentOpenPassword` 方法並傳遞代表開啟密碼的字串值。
+   * PDF指定主要密碼值，讓使用者可以叫用 `PasswordEncryptionOptionSpec` 物件的 `setPermissionPassword` 方法並傳遞代表主要密碼的字串值。
 
-1. 添加密碼。
+1. 新增密碼。
 
-   通過調用PDF文檔 `EncryptionServiceClient` 對象 `encryptPDFUsingPassword` 方法並傳遞以下值：
+   透過叫用「 」將PDF檔案加密 `EncryptionServiceClient` 物件的 `encryptPDFUsingPassword` 並傳遞下列值：
 
-   * 的 `com.adobe.idp.Document` 包含要用密碼加密的PDF文檔的對象。
-   * 的 `PasswordEncryptionOptionSpec` 包含加密運行時選項的對象。
+   * 此 `com.adobe.idp.Document` 包含要以密碼加密之PDF檔案的物件。
+   * 此 `PasswordEncryptionOptionSpec` 包含加密執行階段選項的物件。
 
-   的 `encryptPDFUsingPassword` 方法返回 `com.adobe.idp.Document` 包含密碼加密PDF文檔的對象。
+   此 `encryptPDFUsingPassword` 方法傳回 `com.adobe.idp.Document` 包含密碼加密PDF檔案的物件。
 
-1. 將加密的PDF文檔另存為PDF檔案。
+1. 將加密的PDF檔案儲存為PDF檔案。
 
-   * 建立 `java.io.File` 並確保檔案副檔名為.pdf。
-   * 調用 `com.adobe.idp.Document` 對象 `copyToFile` 複製內容的方法 `com.adobe.idp.Document` 對象。 確保使用 `com.adobe.idp.Document` 返回的對象 `encryptPDFUsingPassword` 的雙曲餘切值。
+   * 建立 `java.io.File` 物件，並確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件至檔案。 確保您使用 `com.adobe.idp.Document` 物件，由 `encryptPDFUsingPassword` 方法。
 
 **另請參閱**
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[快速啟動（SOAP模式）:使用Java API加密PDF文檔](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API加密PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API加密PDF文檔 {#encrypting-a-pdf-document-using-the-web-service-api}
+### 使用Web服務API加密PDF檔案 {#encrypting-a-pdf-document-using-the-web-service-api}
 
-使用Encryption API（Web服務）使用密碼加密PDF文檔：
+使用Encryption API （Web服務）以密碼加密PDF檔案：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft.NET項目。 確保使用以下WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >替換 `localhost` IP地址為AEM Forms。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 建立加密客戶端API對象。
+1. 建立加密使用者端API物件。
 
-   * 建立 `EncryptionServiceClient` 對象。
-   * 建立 `EncryptionServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`。) 你不需要 `lc_version` 屬性。 在建立服務引用時使用此屬性。)
-   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `EncryptionServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
-   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
-   * 通過執行以下任務啟用基本HTTP身份驗證：
+   * 建立 `EncryptionServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `EncryptionServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `EncryptionServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 將表AEM單用戶名分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`。
-      * 將相應的密碼值分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`。
-      * 分配常數值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 分配常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 到 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 獲取要加密的PDF文檔。
+1. 取得要加密的PDF檔案。
 
-   * 建立 `BLOB` 對象。 的 `BLOB` object用於儲存使用密碼加密的PDF文檔。
-   * 建立 `System.IO.FileStream` 調用其建構子並傳遞一個字串值，該字串值表示要加密的PDF文檔的檔案位置以及開啟檔案的模式。
-   * 建立一個位元組陣列，用於儲存 `System.IO.FileStream` 的雙曲餘切值。 通過獲取 `System.IO.FileStream` 對象 `Length` 屬性。
-   * 通過調用 `System.IO.FileStream` 對象 `Read` 方法，將位元組陣列、起始位置和流長度傳遞給讀取。
-   * 填充 `BLOB` 對象，方法是將位元組陣列的內容分配給 `BLOB` 對象 `MTOM` 資料成員。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存已使用密碼加密的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表要加密之PDF檔案的檔案位置，以及開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，方法是將位元組陣列的內容指派給 `BLOB` 物件的 `MTOM` 資料成員。
 
-1. 設定加密運行時選項。
+1. 設定加密執行階段選項。
 
-   * 建立 `PasswordEncryptionOptionSpec` 對象。
-   * 通過分配PDF文檔資源來指定要加密的 `PasswordEncryptionOption` 枚舉值 `PasswordEncryptionOptionSpec` 對象 `encryptOption` 資料成員。 要加密整個PDF，包括其元資料及其附件，請分配 `PasswordEncryptionOption.ALL` 到此資料成員。
-   * 通過指定 `PasswordEncryptionCompatability` 枚舉值 `PasswordEncryptionOptionSpec` 對象 `compatability` 資料成員。 例如，分配 `PasswordEncryptionCompatability.ACRO_7` 到此資料成員。
-   * 指定口令值，該口令值允許用戶通過將表示開啟口令的字串值分配給 `PasswordEncryptionOptionSpec` 對象 `documentOpenPassword` 資料成員。
-   * 指定口令值，該口令值允許用戶通過為PDF文檔指定表示主口令的字串值來刪除加密 `PasswordEncryptionOptionSpec` 對象 `permissionPassword` 資料成員。
+   * 建立 `PasswordEncryptionOptionSpec` 物件（使用其建構函式）。
+   * 透過指派來指定要加密的PDF檔案資源 `PasswordEncryptionOption` 列舉值至 `PasswordEncryptionOptionSpec` 物件的 `encryptOption` 資料成員。 若要加密整個PDF（包括其中繼資料及其附件），請指派 `PasswordEncryptionOption.ALL` 至此資料成員。
+   * 透過指派以下專案來指定Acrobat相容性選項 `PasswordEncryptionCompatability` 列舉值至 `PasswordEncryptionOptionSpec` 物件的 `compatability` 資料成員。 例如，指派 `PasswordEncryptionCompatability.ACRO_7` 至此資料成員。
+   * 指定密碼值，讓使用者透過將代表開啟密碼的字串值指派給，來開啟加密的PDF檔案。 `PasswordEncryptionOptionSpec` 物件的 `documentOpenPassword` 資料成員。
+   * 將代表主密碼的字串值指派給，以指定密碼值，讓使用者可以從PDF檔案中移除加密。 `PasswordEncryptionOptionSpec` 物件的 `permissionPassword` 資料成員。
 
-1. 添加密碼。
+1. 新增密碼。
 
-   通過調用PDF文檔 `EncryptionServiceClient` 對象 `encryptPDFUsingPassword` 方法並傳遞以下值：
+   透過叫用「 」將PDF檔案加密 `EncryptionServiceClient` 物件的 `encryptPDFUsingPassword` 並傳遞下列值：
 
-   * 的 `BLOB` 包含要用密碼加密的PDF文檔的對象。
-   * 的 `PasswordEncryptionOptionSpec` 包含加密運行時選項的對象。
+   * 此 `BLOB` 包含要以密碼加密之PDF檔案的物件。
+   * 此 `PasswordEncryptionOptionSpec` 包含加密執行階段選項的物件。
 
-   的 `encryptPDFUsingPassword` 方法返回 `BLOB` 包含密碼加密PDF文檔的對象。
+   此 `encryptPDFUsingPassword` 方法傳回 `BLOB` 包含密碼加密PDF檔案的物件。
 
-1. 將加密的PDF文檔另存為PDF檔案。
+1. 將加密的PDF檔案儲存為PDF檔案。
 
-   * 建立 `System.IO.FileStream` 通過調用其建構子並傳遞一個字串值來表示安全PDF文檔的檔案位置。
-   * 建立一個位元組陣列，用於儲存 `BLOB` 返回的對象 `encryptPDFUsingPassword` 的雙曲餘切值。 通過獲取 `BLOB` 對象 `MTOM` 資料成員。
-   * 建立 `System.IO.BinaryWriter` 通過調用其建構子並傳遞對象 `System.IO.FileStream` 的雙曲餘切值。
-   * 通過調用 `System.IO.BinaryWriter` 對象 `Write` 和傳遞位元組陣列。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表受保護PDF檔案檔案位置的字串值。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `encryptPDFUsingPassword` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另請參閱**
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 使用證書加密PDF文檔 {#encrypting-pdf-documents-with-certificates}
+## 使用憑證加密PDF檔案 {#encrypting-pdf-documents-with-certificates}
 
-基於證書的加密允許您通過公鑰技術為特定收件人加密文檔。 可以為文檔授予不同的權限。 公鑰技術使加密的許多方面成為可能。 算法用於生成兩個大數，稱為 *鍵*，具有以下屬性：
+憑證式加密可讓您透過公開金鑰技術為特定收件者加密檔案。 可以為各種收件者授予該檔案的不同許可權。 公開金鑰技術可讓加密的許多方面成為可能。 演演算法可用來產生兩個大數字，稱為 *金鑰*，具有以下屬性：
 
-* 一個密鑰用於加密一組資料。 隨後，只能使用其他密鑰解密資料。
-* 一把鑰匙和另一把鑰匙是無法區分的。
+* 一個金鑰可用來加密一組資料。 接著，只有另一個金鑰可以用來解密資料。
+* 無法區分一個金鑰。
 
-其中一個密鑰用作用戶的私鑰。 只有用戶才能訪問此密鑰，這一點非常重要。 另一個密鑰是用戶的公鑰，可以與他人共用。
+其中一個金鑰可作為使用者的私密金鑰。 重要的是，只有使用者才有權存取此金鑰。 另一個金鑰是使用者的公開金鑰，可與其他人共用。
 
-公鑰證書包含用戶的公鑰和標識資訊。 X.509格式用於儲存證書。 證書通常由證書頒發機構(CA)頒發和數字簽名，該機構是一個被認可的實體，提供對證書有效性的信任度。 證書的到期日期已過，在此日期之後，證書不再有效。 此外，證書吊銷清單(CRL)提供了在證書過期之前已吊銷的證書的資訊。 CRL由證書頒發機構定期發佈。 還可以通過網路通過線上證書狀態協定(OCSP)檢索證書的吊銷狀態。
-
->[!NOTE]
->
->如果將加密的PDF文檔上載到AEM Forms儲存庫，則無法解密PDF文檔並提取XDP內容。 建議在將文檔上載到AEM Forms儲存庫之前不要對其進行加密。 (請參閱 [編寫資源](/help/forms/developing/aem-forms-repository.md#writing-resources)。)
+公開金鑰憑證包含使用者的公開金鑰和識別資訊。 X.509格式用於儲存憑證。 憑證通常由憑證授權單位(CA)簽發和數位簽署，CA是可識別的實體，可提供憑證有效性的信任度量。 憑證有到期日，到期日之後便不再有效。 此外，憑證撤銷清單(CRL)會提供在憑證到期日之前被撤銷的相關資訊。 憑證授權單位會定期發佈CRL。 憑證的撤銷狀態也可以透過網路上的線上憑證狀態通訊協定(OCSP)來擷取。
 
 >[!NOTE]
 >
->在使用證書加密PDF文檔之前，必須確保將證書添加到AEM Forms。 證書是使用管理控制台或使用Trust Manager API以寫程式方式添加的。 (請參閱 [使用Trust Manager API導入憑據](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api)。)
+>如果您將加密的PDF檔案上傳到AEM Forms存放庫，它將無法解密PDF檔案並擷取XDP內容。 建議您在將檔案上傳至AEM Forms存放庫之前，不要將檔案加密。 (請參閱 [寫入資源](/help/forms/developing/aem-forms-repository.md#writing-resources).)
 
 >[!NOTE]
 >
->有關加密服務的詳細資訊，請參見 [《AEM Forms服務參考》](https://www.adobe.com/go/learn_aemforms_services_63)。
+>您必須確定將憑證新增至AEM Forms，才能使用憑證加密PDF檔案。 憑證是使用管理控制檯或使用Trust Manager API以程式設計方式新增。 (請參閱 [使用信任管理員API匯入認證](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api).)
+
+>[!NOTE]
+>
+>如需加密服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary_of_steps-1}
 
-要使用證書加密PDF文檔，請執行以下步驟：
+若要使用憑證加密PDF檔案，請執行下列步驟：
 
-1. 包括項目檔案。
-1. 建立加密客戶端API對象。
-1. 獲取要加密的PDF文檔。
-1. 引用證書。
-1. 設定加密運行時選項。
-1. 建立證書加密的PDF文檔。
-1. 將加密的PDF文檔另存為PDF檔案。
+1. 包含專案檔案。
+1. 建立加密使用者端API物件。
+1. 取得要加密的PDF檔案。
+1. 參考憑證。
+1. 設定加密執行階段選項。
+1. 建立憑證加密的PDF檔案。
+1. 將加密的PDF檔案儲存為PDF檔案。
 
-**包括項目檔案**
+**包含專案檔案**
 
-在開發項目中包括必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-必須將以下JAR檔案添加到項目的類路徑：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
-* jbossall-client.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-**建立加密客戶端API對象**
+**建立加密使用者端API物件**
 
-要以寫程式方式執行加密服務操作，必須建立加密服務客戶端。 如果使用Java加密服務API，請建立 `EncrytionServiceClient` 的雙曲餘切值。 如果使用Web服務加密服務API，請建立 `EncryptionServiceService` 的雙曲餘切值。
+若要以程式設計方式執行「加密」服務作業，您必須建立「加密」服務使用者端。 如果您使用Java加密服務API，請建立 `EncrytionServiceClient` 物件。 如果您使用Web服務加密服務API，請建立 `EncryptionServiceService` 物件。
 
-**獲取要加密的PDF文檔**
+**取得要加密的PDF檔案**
 
-必須獲取未加密的PDF文檔才能加密。 如果嘗試保護已加密的PDF文檔，則會引發異常。
+您必須取得未加密的PDF檔案才能加密。 如果您嘗試保護已加密的PDF檔案，則會擲回例外狀況。
 
-**引用證書**
+**參考憑證**
 
-要使用證書加密PDF文檔，請引用用於加密PDF文檔的證書。 證書是.cer檔案、.crt檔案或.pem檔案。 PKCS#12檔案用於儲存具有相應證書的私鑰。
+若要使用憑證加密PDF檔案，請參考用來加密PDF檔案的憑證。 憑證是.cer檔案、.crt檔案或.pem檔案。 PKCS#12檔案可用來儲存具有對應憑證的私密金鑰。
 
-使用證書加密PDF文檔時，指定與安全文檔關聯的權限。 通過指定權限，您可以控制開啟證書加密PDF文檔的用戶可以執行的操作。
+使用憑證加密PDF檔案時，請指定與受保護檔案相關聯的許可權。 透過指定許可權，您可以控制開啟憑證加密PDF檔案的使用者可以執行的動作。
 
-**設定加密運行時選項**
+**設定加密執行階段選項**
 
-指定要加密的PDF文檔資源。 您可以加密整個PDF文檔、除文檔元資料之外的所有內容，或僅加密文檔的附件。
+指定要加密的PDF檔案資源。 您可以加密整個PDF檔案，除了檔案的中繼資料以外的所有內容，或僅加密檔案的附件。
 
-**建立證書加密的PDF文檔**
+**建立憑證加密的PDF檔案**
 
-檢索不安全的PDF文檔、引用證書並設定運行時選項後，可以建立證書加密的PDF文檔。 PDF文檔被加密後，需要相應的公鑰來解密它。
+擷取不安全的PDF檔案後，參照憑證並設定執行階段選項，即可建立憑證加密的PDF檔案。 在PDF檔案加密後，您需要對應的公開金鑰才能將其解密。
 
-**將加密的PDF文檔另存為PDF檔案**
+**將加密的PDF檔案儲存為PDF檔案**
 
-可以將加密的PDF文檔另存為PDF檔案。
+您可以將加密的PDF檔案儲存為PDF檔案。
 
 **另請參閱**
 
-[使用Java API使用證書加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypt-a-pdf-document-with-a-certificate-using-the-java-api)
+[使用Java API以憑證加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypt-a-pdf-document-with-a-certificate-using-the-java-api)
 
-[使用Web服務API使用證書加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypt-a-pdf-document-with-a-certificate-using-the-web-service-api)
+[使用Web服務API以憑證加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypt-a-pdf-document-with-a-certificate-using-the-web-service-api)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 [加密服務API快速啟動](/help/forms/developing/encryption-service-java-api-quick.md#encryption-service-java-api-quick-start-soap)
 
-[使用密碼加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
+[使用密碼加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
 
-### 使用Java API使用證書加密PDF文檔 {#encrypt-a-pdf-document-with-a-certificate-using-the-java-api}
+### 使用Java API以憑證加密PDF檔案 {#encrypt-a-pdf-document-with-a-certificate-using-the-java-api}
 
-使用Encryption API(Java)使用證書加密PDF文檔：
+使用Encryption API (Java)以憑證加密PDF檔案：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-encryption-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-encryption-client.jar。
 
-1. 建立加密客戶端API對象。
+1. 建立加密使用者端API物件。
 
-   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
-   * 建立 `EncryptionServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 的雙曲餘切值。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EncryptionServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 獲取要加密的PDF文檔。
+1. 取得要加密的PDF檔案。
 
-   * 建立 `java.io.FileInputStream` 表示要加密的PDF文檔的對象，方法是使用其建構子並傳遞一個字串值，該字串值指定PDF文檔的位置。
-   * 建立 `com.adobe.idp.Document` 使用其建構子並傳遞對象 `java.io.FileInputStream` 的雙曲餘切值。
+   * 建立 `java.io.FileInputStream` 物件，代表要加密的PDF檔案，使用它的建構函式並傳遞指定PDF檔案位置的字串值。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 引用證書。
+1. 參考憑證。
 
-   * 建立 `java.util.List` 使用其建構子儲存權限資訊的對象。
-   * 通過調用 `java.util.List` 對象 `add` 方法和通過 `CertificateEncryptionPermissions` 表示授予開啟安全PDF文檔的用戶的權限的枚舉值。 例如，要指定所有權限，請傳遞 `CertificateEncryptionPermissions.PKI_ALL_PERM`。
-   * 建立 `Recipient` 對象。
-   * 建立 `java.io.FileInputStream` 對象，該對象表示使用PDF文檔的建構子並傳遞一個字串值，指定證書的位置，用於加密該文檔。
-   * 建立 `com.adobe.idp.Document` 使用其建構子並傳遞對象 `java.io.FileInputStream` 表示證書的對象。
-   * 調用 `Recipient` 對象 `setX509Cert` 方法和通過 `com.adobe.idp.Document` 包含證書的對象。 (此外，本集團 `Recipient`對象可以將Truststore證書別名或LDAP URL作為證書源。)
-   * 建立 `CertificateEncryptionIdentity` 使用其建構子儲存權限和證書資訊的對象。
-   * 調用 `CertificateEncryptionIdentity` 對象 `setPerms` 方法和通過 `java.util.List` 儲存權限資訊的對象。
-   * 調用 `CertificateEncryptionIdentity` 對象 `setRecipient` 方法和通過 `Recipient` 儲存證書資訊的對象。
-   * 建立 `java.util.List` 使用其建構子儲存證書資訊的對象。
-   * 調用 `java.util.List` 對象的add方法並傳遞 `CertificateEncryptionIdentity` 的雙曲餘切值。 (此 `java.util.List` 對象作為參數傳遞給 `encryptPDFUsingCertificates` )。
+   * 建立 `java.util.List` 物件，使用其建構函式來儲存許可權資訊。
+   * 透過叫用「 」，指定與加密檔案相關聯的許可權 `java.util.List` 物件的 `add` 方法和傳遞 `CertificateEncryptionPermissions` 列舉值，代表將許可權授與開啟安全PDF檔案的使用者。 例如，若要指定所有許可權，請傳遞 `CertificateEncryptionPermissions.PKI_ALL_PERM`.
+   * 建立 `Recipient` 物件（使用其建構函式）。
+   * 建立 `java.io.FileInputStream` 物件，代表使用憑證的建構函式並傳遞指定憑證位置的字串值來加密PDF檔案的憑證。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 代表憑證的物件。
+   * 叫用 `Recipient` 物件的 `setX509Cert` 方法並傳遞 `com.adobe.idp.Document` 包含憑證的物件。 (此外， `Recipient`物件可以有Truststore憑證別名或LDAP URL做為憑證來源。)
+   * 建立 `CertificateEncryptionIdentity` 物件，使用其建構函式來儲存許可權和憑證資訊。
+   * 叫用 `CertificateEncryptionIdentity` 物件的 `setPerms` 方法並傳遞 `java.util.List` 物件，用來儲存許可權資訊。
+   * 叫用 `CertificateEncryptionIdentity` 物件的 `setRecipient` 方法並傳遞 `Recipient` 儲存憑證資訊的物件。
+   * 建立 `java.util.List` 物件，使用其建構函式來儲存憑證資訊。
+   * 叫用 `java.util.List` 物件的add方法並傳遞 `CertificateEncryptionIdentity` 物件。 (此 `java.util.List` 物件作為引數傳遞至 `encryptPDFUsingCertificates` 方法)。
 
-1. 設定加密運行時選項。
+1. 設定加密執行階段選項。
 
-   * 建立 `CertificateEncryptionOptionSpec` 調用其建構子。
-   * 通過調用要加密的PDF文檔資源 `CertificateEncryptionOptionSpec` 對象 `setOption` 方法和通過 `CertificateEncryptionOption` 指定要加密的文檔資源的枚舉值。 例如，要加密整個PDF文檔，包括其元資料及其附件，請指定 `CertificateEncryptionOption.ALL`。
-   * 通過調用 `CertificateEncryptionOptionSpec` 對象 `setCompat` 方法和通過 `CertificateEncryptionCompatibility` 指定Acrobat相容性級別的枚舉值。 例如，可以指定 `CertificateEncryptionCompatibility.ACRO_7`。
+   * 建立 `CertificateEncryptionOptionSpec` 物件（透過叫用其建構函式）。
+   * 透過叫用指定要加密的PDF檔案資源 `CertificateEncryptionOptionSpec` 物件的 `setOption` 方法和傳遞 `CertificateEncryptionOption` 指定要加密的檔案資源的列舉值。 例如，若要加密整個PDF檔案，包括其中繼資料及其附件，請指定 `CertificateEncryptionOption.ALL`.
+   * 請叫用「 」，指定Acrobat相容性選項 `CertificateEncryptionOptionSpec` 物件的 `setCompat` 方法和傳遞 `CertificateEncryptionCompatibility` 指定Acrobat相容性層級的列舉值。 例如，您可以指定 `CertificateEncryptionCompatibility.ACRO_7`.
 
-1. 建立證書加密的PDF文檔。
+1. 建立憑證加密的PDF檔案。
 
-   通過調用PDF `EncryptionServiceClient` 對象 `encryptPDFUsingCertificates` 方法並傳遞以下值：
+   透過叫用憑證加密PDF檔案 `EncryptionServiceClient` 物件的 `encryptPDFUsingCertificates` 並傳遞下列值：
 
-   * 的 `com.adobe.idp.Document` 包含要加密的PDF文檔的對象。
-   * 的 `java.util.List` 儲存證書資訊的對象。
-   * 的 `CertificateEncryptionOptionSpec` 包含加密運行時選項的對象。
+   * 此 `com.adobe.idp.Document` 包含要加密之PDF檔案的物件。
+   * 此 `java.util.List` 儲存憑證資訊的物件。
+   * 此 `CertificateEncryptionOptionSpec` 包含加密執行階段選項的物件。
 
-   的 `encryptPDFUsingCertificates` 方法返回 `com.adobe.idp.Document` 包含證書加密PDF文檔的對象。
+   此 `encryptPDFUsingCertificates` 方法傳回 `com.adobe.idp.Document` 包含憑證加密PDF檔案的物件。
 
-1. 將加密的PDF文檔另存為PDF檔案。
+1. 將加密的PDF檔案儲存為PDF檔案。
 
-   * 建立 `java.io.File` 對象，並確保檔案副檔名為.pdf。
-   * 調用 `com.adobe.idp.Document` 對象 `copyToFile` 複製內容的方法 `com.adobe.idp.Document` 對象。 確保使用 `com.adobe.idp.Document` 返回的對象 `encryptPDFUsingCertificates` 的雙曲餘切值。
+   * 建立 `java.io.File` 物件並確保副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件至檔案。 確保您使用 `com.adobe.idp.Document` 物件，由 `encryptPDFUsingCertificates` 方法。
 
 **另請參閱**
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[快速啟動（SOAP模式）:使用Java API使用證書加密PDF文檔](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API使用憑證加密PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API使用證書加密PDF文檔 {#encrypt-a-pdf-document-with-a-certificate-using-the-web-service-api}
+### 使用Web服務API以憑證加密PDF檔案 {#encrypt-a-pdf-document-with-a-certificate-using-the-web-service-api}
 
-使用加密API（Web服務）使用證書加密PDF文檔：
+使用Encryption API （Web服務）以憑證加密PDF檔案：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft.NET項目。 確保使用以下WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >替換 `localhost` IP地址為AEM Forms。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 建立加密客戶端API對象。
+1. 建立加密使用者端API物件。
 
-   * 建立 `EncryptionServiceClient` 對象。
-   * 建立 `EncryptionServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`。) 你不需要 `lc_version` 屬性。 在建立服務引用時使用此屬性。)
-   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `EncryptionServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
-   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
-   * 通過執行以下任務啟用基本HTTP身份驗證：
+   * 建立 `EncryptionServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `EncryptionServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `EncryptionServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 將表AEM單用戶名分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`。
-      * 將相應的密碼值分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`。
-      * 分配常數值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 分配常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 到 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 獲取要加密的PDF文檔。
+1. 取得要加密的PDF檔案。
 
-   * 建立 `BLOB` 對象。 的 `BLOB` 對象用於儲存用證書加密的PDF文檔。
-   * 建立 `System.IO.FileStream` 調用其建構子並傳遞一個字串值，該字串值表示要加密的PDF文檔的檔案位置以及開啟檔案的模式。
-   * 建立一個位元組陣列，用於儲存 `System.IO.FileStream` 的雙曲餘切值。 通過獲取 `System.IO.FileStream` 對象 `Length` 屬性。
-   * 通過調用 `System.IO.FileStream` 對象 `Read` 方法，將位元組陣列、起始位置和流長度傳遞給讀取。
-   * 填充 `BLOB` 通過指定對象 `MTOM` 屬性。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存已使用憑證加密的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表要加密之PDF檔案的檔案位置，以及開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 具有位元組陣列內容的屬性。
 
-1. 引用證書。
+1. 參考憑證。
 
-   * 建立 `Recipient` 對象。 此對象將儲存證書資訊。
-   * 建立 `BLOB` 對象。 此 `BLOB` 對象將儲存加密PDF文檔的證書。
-   * 建立 `System.IO.FileStream` 對象，方法是調用其建構子並傳遞一個字串值，該字串值表示證書的檔案位置以及開啟檔案的模式。
-   * 建立一個位元組陣列，用於儲存 `System.IO.FileStream` 的雙曲餘切值。 通過獲取 `System.IO.FileStream` 對象 `Length` 屬性。
-   * 通過調用 `System.IO.FileStream` 對象 `Read` 方法，將位元組陣列、起始位置和流長度傳遞給讀取。
-   * 填充 `BLOB` 對象，方法是將位元組陣列的內容分配給 `BLOB` 對象 `MTOM` 資料成員。
-   * 分配 `BLOB` 將證書儲存到 `Recipient` 對象 `x509Cert` 資料成員。
-   * 建立 `CertificateEncryptionIdentity` 使用其建構子儲存證書資訊的對象。
-   * 分配 `Recipient` 將證書儲存到 `CertificateEncryptionIdentity`對象的收件人資料成員。
-   * 建立 `Object` 陣列並分配 `CertificateEncryptionIdentity` 對象到 `Object` 陣列。 此 `Object` 陣列作為參數傳遞給 `encryptPDFUsingCertificates` 的雙曲餘切值。
+   * 建立 `Recipient` 物件（使用其建構函式）。 此物件將儲存憑證資訊。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件會儲存加密PDF檔案的憑證。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表憑證檔案位置和開啟檔案模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，方法是將位元組陣列的內容指派給 `BLOB` 物件的 `MTOM` 資料成員。
+   * 指派 `BLOB` 將憑證儲存到的物件 `Recipient` 物件的 `x509Cert` 資料成員。
+   * 建立 `CertificateEncryptionIdentity` 物件，使用其建構函式來儲存憑證資訊。
+   * 指派 `Recipient` 將憑證儲存到的物件 `CertificateEncryptionIdentity`物件的收件者資料成員。
+   * 建立 `Object` 陣列並指派 `CertificateEncryptionIdentity` 物件至的第一個元素 `Object` 陣列。 此 `Object` 陣列作為引數傳遞至 `encryptPDFUsingCertificates` 方法。
 
-1. 設定加密運行時選項。
+1. 設定加密執行階段選項。
 
-   * 建立 `CertificateEncryptionOptionSpec` 對象。
-   * 通過分配PDF文檔資源來指定要加密的 `CertificateEncryptionOption` 枚舉值 `CertificateEncryptionOptionSpec` 對象 `option` 資料成員。 要加密整個PDF文檔，包括其元資料及其附件，請分配 `CertificateEncryptionOption.ALL` 到此資料成員。
-   * 通過指定 `CertificateEncryptionCompatibility` 枚舉值 `CertificateEncryptionOptionSpec` 對象 `compat` 資料成員。 例如，分配 `CertificateEncryptionCompatibility.ACRO_7` 到此資料成員。
+   * 建立 `CertificateEncryptionOptionSpec` 物件（使用其建構函式）。
+   * 透過指派來指定要加密的PDF檔案資源 `CertificateEncryptionOption` 列舉值至 `CertificateEncryptionOptionSpec` 物件的 `option` 資料成員。 若要加密整個PDF檔案，包括其中繼資料及其附件，請指派 `CertificateEncryptionOption.ALL` 至此資料成員。
+   * 透過指派以下專案來指定Acrobat相容性選項 `CertificateEncryptionCompatibility` 列舉值至 `CertificateEncryptionOptionSpec` 物件的 `compat` 資料成員。 例如，指派 `CertificateEncryptionCompatibility.ACRO_7` 至此資料成員。
 
-1. 建立證書加密的PDF文檔。
+1. 建立憑證加密的PDF檔案。
 
-   通過調用PDF `EncryptionServiceService` 對象 `encryptPDFUsingCertificates` 方法並傳遞以下值：
+   透過叫用憑證加密PDF檔案 `EncryptionServiceService` 物件的 `encryptPDFUsingCertificates` 並傳遞下列值：
 
-   * 的 `BLOB` 包含要加密的PDF文檔的對象。
-   * 的 `Object` 儲存證書資訊的陣列。
-   * 的 `CertificateEncryptionOptionSpec` 包含加密運行時選項的對象。
+   * 此 `BLOB` 包含要加密之PDF檔案的物件。
+   * 此 `Object` 儲存憑證資訊的陣列。
+   * 此 `CertificateEncryptionOptionSpec` 包含加密執行階段選項的物件。
 
-   的 `encryptPDFUsingCertificates` 方法返回 `BLOB` 包含證書加密PDF文檔的對象。
+   此 `encryptPDFUsingCertificates` 方法傳回 `BLOB` 包含憑證加密PDF檔案的物件。
 
-1. 將加密的PDF文檔另存為PDF檔案。
+1. 將加密的PDF檔案儲存為PDF檔案。
 
-   * 建立 `System.IO.FileStream` 通過調用其建構子並傳遞一個字串值來表示安全PDF文檔的檔案位置。
-   * 建立一個位元組陣列，用於儲存 `BLOB` 返回的對象 `encryptPDFUsingCertificates` 的雙曲餘切值。 通過獲取 `BLOB` 對象 `binaryData` 資料成員。
-   * 建立 `System.IO.BinaryWriter` 通過調用其建構子並傳遞對象 `System.IO.FileStream` 的雙曲餘切值。
-   * 通過調用 `System.IO.BinaryWriter` 對象 `Write` 和傳遞位元組陣列。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表受保護PDF檔案檔案位置的字串值。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `encryptPDFUsingCertificates` 方法。 透過取得 `BLOB` 物件的 `binaryData` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另請參閱**
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 刪除基於證書的加密 {#removing-certificate-based-encryption}
+## 移除憑證式加密 {#removing-certificate-based-encryption}
 
-可以從PDF文檔中刪除基於證書的加密，以便用戶可以在Adobe Reader或Acrobat開啟PDF文檔。 要從使用證書加密的PDF文檔中刪除加密，必須引用公鑰。 從PDF文檔中刪除加密後，它不再安全。
+憑證式加密可以從PDF檔案中移除，以便使用者可以在Adobe Reader或Acrobat中開啟PDF檔案。 若要從使用憑證加密的PDF檔案中移除加密，必須參考公開金鑰。 從PDF檔案中移除加密後，就不再安全了。
 
 >[!NOTE]
 >
->有關加密服務的詳細資訊，請參見 [《AEM Forms服務參考》](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需加密服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary_of_steps-2}
 
-要從PDF文檔中刪除基於證書的加密，請執行以下步驟：
+若要從PDF檔案中移除憑證式加密，請執行下列步驟：
 
-1. 包括項目檔案。
-1. 建立加密服務客戶端。
-1. 獲取加密的PDF文檔。
-1. 刪除加密。
-1. 將PDF文檔另存為PDF檔案。
+1. 包含專案檔案。
+1. 建立加密服務使用者端。
+1. 取得加密的PDF檔案。
+1. 移除加密。
+1. 將PDF檔案儲存為PDF檔案。
 
-**包括項目檔案**
+**包含專案檔案**
 
-在開發項目中包含必要的檔案。 如果使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-必須將以下JAR檔案添加到項目的類路徑：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
-* jbossall-client.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-**建立加密服務客戶端**
+**建立加密服務使用者端**
 
-要以寫程式方式執行加密服務操作，必須建立加密服務客戶端。 如果使用Java加密服務API，請建立 `EncrytionServiceClient` 的雙曲餘切值。 如果使用Web服務加密服務API，請建立 `EncryptionServiceService` 的雙曲餘切值。
+若要以程式設計方式執行「加密」服務作業，您必須建立「加密」服務使用者端。 如果您使用Java加密服務API，請建立 `EncrytionServiceClient` 物件。 如果您使用Web服務加密服務API，請建立 `EncryptionServiceService` 物件。
 
-**獲取加密的PDF文檔**
+**取得加密的PDF檔案**
 
-必須獲取加密的PDF文檔才能刪除基於證書的加密。 如果嘗試從未加密的PDF文檔中刪除加密，則會引發異常。 同樣，如果嘗試從密碼加密文檔中刪除基於證書的加密，則會引發異常。
+您必須取得加密的PDF檔案，才能移除憑證式加密。 如果您嘗試從未加密的PDF檔案中移除加密，則會擲回例外狀況。 同樣，如果您嘗試從密碼加密的檔案中移除憑證式加密，則會擲回例外狀況。
 
-**刪除加密**
+**移除加密**
 
-要從加密的PDF文檔中刪除基於證書的加密，您需要加密的PDF文檔和與用於加密PDF文檔的密鑰對應的私鑰。 在從加密的PDF文檔中刪除基於證書的加密時指定私鑰的別名值。 有關公鑰的資訊，請參見 [使用證書加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)。
+若要從加密的PDF檔案移除憑證式加密，您需要加密的PDF檔案以及與用於加密PDF檔案的金鑰對應的私密金鑰。 從加密的PDF檔案中移除憑證式加密時，會指定私密金鑰的別名值。 如需公開金鑰的相關資訊，請參閱 [使用憑證加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates).
 
 >[!NOTE]
 >
->私鑰儲存在AEM Forms信託商店中。 將證書放在那裡時，將指定別名值。
+>私密金鑰會儲存在AEM Forms信任存放區。 將憑證放在那裡時，會指定別名值。
 
-**保存PDF文檔**
+**儲存PDF檔案**
 
-在從加密的PDF文檔中刪除基於證書的加密後，可以將PDF文檔另存為PDF檔案。 用戶可以在Adobe Reader或Acrobat開啟PDF文檔。
+從加密的PDF檔案中移除憑證式加密後，您可以將PDF檔案儲存為PDF檔案。 使用者可以在Adobe Reader或Acrobat中開啟PDF檔案。
 
 **另請參閱**
 
-[使用Java API刪除基於證書的加密](encrypting-decrypting-pdf-documents.md#remove-certificate-based-encryption-using-the-java-api)
+[使用Java API移除憑證式加密](encrypting-decrypting-pdf-documents.md#remove-certificate-based-encryption-using-the-java-api)
 
-[使用Web服務API刪除基於證書的加密](encrypting-decrypting-pdf-documents.md#remove-certificate-based-encryption-using-the-web-service-api)
+[使用Web服務API移除憑證式加密](encrypting-decrypting-pdf-documents.md#remove-certificate-based-encryption-using-the-web-service-api)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 [加密服務API快速啟動](/help/forms/developing/encryption-service-java-api-quick.md#encryption-service-java-api-quick-start-soap)
 
-### 使用Java API刪除基於證書的加密 {#remove-certificate-based-encryption-using-the-java-api}
+### 使用Java API移除憑證式加密 {#remove-certificate-based-encryption-using-the-java-api}
 
-使用Encryption API(Java)從PDF文檔中刪除基於證書的加密：
+使用加密API (Java)從PDF檔案中移除憑證式加密：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-encryption-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-encryption-client.jar。
 
-1. 建立加密服務客戶端。
+1. 建立加密服務使用者端。
 
-   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
-   * 建立 `EncryptionServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 的雙曲餘切值。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EncryptionServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 獲取加密的PDF文檔。
+1. 取得加密的PDF檔案。
 
-   * 建立 `java.io.FileInputStream` 表示加密PDF文檔的對象，方法是使用其建構子並傳遞一個字串值，該字串值指定加密PDF文檔的位置。
-   * 建立 `com.adobe.idp.Document` 使用其建構子並傳遞對象 `java.io.FileInputStream` 的雙曲餘切值。
+   * 建立 `java.io.FileInputStream` 物件，使用加密的PDF檔案的建構函式，並傳遞字串值，指定加密PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 刪除加密。
+1. 移除加密。
 
-   通過調用PDF文檔來刪除基於證書的加密 `EncryptionServiceClient` 對象 `removePDFCertificateSecurity` 方法並傳遞以下值：
+   PDF透過叫用 `EncryptionServiceClient` 物件的 `removePDFCertificateSecurity` 並傳遞下列值：
 
-   * 的 `com.adobe.idp.Document` 包含加密PDF文檔的對象。
-   * 一個字串值，它指定與用於加密PDf文檔的密鑰相對應的私鑰的別名。
+   * 此 `com.adobe.idp.Document` 包含加密PDF檔案的物件。
+   * 字串值，指定與用來加密PDf檔案的金鑰對應的私密金鑰別名。
 
-   的 `removePDFCertificateSecurity` 方法返回 `com.adobe.idp.Document` 包含不安全PDF文檔的對象。
+   此 `removePDFCertificateSecurity` 方法傳回 `com.adobe.idp.Document` 包含不安全PDF檔案的物件。
 
-1. 保存PDF文檔。
+1. 儲存PDF檔案。
 
-   * 建立 `java.io.File` 並確保檔案副檔名為.pdf。
-   * 調用 `com.adobe.idp.Document` 對象 `copyToFile` 複製內容的方法 `Document` 對象。 確保使用 `com.adobe.idp.Document` 返回的對象 `removePDFCredentialSecurity` 的雙曲餘切值。
+   * 建立 `java.io.File` 物件，並確認副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `Document` 物件至檔案。 確保您使用 `com.adobe.idp.Document` 物件，由 `removePDFCredentialSecurity` 方法。
 
 **另請參閱**
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[快速啟動（SOAP模式）:使用Java API刪除基於證書的加密](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API移除憑證式加密](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API刪除基於證書的加密 {#remove-certificate-based-encryption-using-the-web-service-api}
+### 使用Web服務API移除憑證式加密 {#remove-certificate-based-encryption-using-the-web-service-api}
 
-使用Encryption API（Web服務）刪除基於證書的加密：
+使用加密API （Web服務）移除憑證式加密：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft.NET項目。 確保使用以下WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >替換 `localhost` IP地址為AEM Forms。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 建立加密服務客戶端。
+1. 建立加密服務使用者端。
 
-   * 建立 `EncryptionServiceClient` 對象。
-   * 建立 `EncryptionServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`。) 你不需要 `lc_version` 屬性。 在建立服務引用時使用此屬性。)
-   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `EncryptionServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
-   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
-   * 通過執行以下任務啟用基本HTTP身份驗證：
+   * 建立 `EncryptionServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `EncryptionServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `EncryptionServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 將表AEM單用戶名分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`。
-      * 將相應的密碼值分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`。
-      * 分配常數值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 分配常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 到 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 獲取加密的PDF文檔。
+1. 取得加密的PDF檔案。
 
-   * 建立 `BLOB` 對象。 的 `BLOB` 對象用於儲存加密的PDF文檔。
-   * 建立 `System.IO.FileStream` 調用其建構子並傳遞一個字串值，該字串值表示加密PDF文檔的檔案位置以及開啟檔案的模式。
-   * 建立一個位元組陣列，用於儲存 `System.IO.FileStream` 的雙曲餘切值。 通過獲取 `System.IO.FileStream` 對象 `Length` 屬性。
-   * 通過調用 `System.IO.FileStream` 對象 `Read` 方法，將位元組陣列、起始位置和流長度傳遞給讀取。
-   * 填充 `BLOB` 對象，方法是將位元組陣列的內容分配給 `BLOB` 對象 `MTOM` 資料成員。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存加密的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表加密PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，方法是將位元組陣列的內容指派給 `BLOB` 物件的 `MTOM` 資料成員。
 
-1. 刪除加密。
+1. 移除加密。
 
-   調用 `EncryptionServiceClient` 對象 `removePDFCertificateSecurity` 方法並傳遞以下值：
+   叫用 `EncryptionServiceClient` 物件的 `removePDFCertificateSecurity` 方法並傳遞下列值：
 
-   * 的 `BLOB` 包含表示加密PDF文檔的檔案流資料的對象。
-   * 一個字串值，它指定與用於加密PDf文檔的私鑰相對應的公鑰的別名。
+   * 此 `BLOB` 包含代表加密PDF檔案的檔案資料流資料的物件。
+   * 字串值，指定與用來加密PDf檔案的私密金鑰對應的公開金鑰別名。
 
-   的 `removePDFCredentialSecurity` 方法返回 `BLOB` 包含不安全PDF文檔的對象。
+   此 `removePDFCredentialSecurity` 方法傳回 `BLOB` 包含不安全PDF檔案的物件。
 
-1. 保存PDF文檔。
+1. 儲存PDF檔案。
 
-   * 建立 `System.IO.FileStream` 通過調用其建構子並傳遞一個字串值來表示不安全PDF文檔的檔案位置。
-   * 建立一個位元組陣列，用於儲存 `BLOB` 返回的對象 `removePDFPasswordSecurity` 的雙曲餘切值。 通過獲取 `BLOB` 對象 `MTOM` 資料成員。
-   * 建立 `System.IO.BinaryWriter` 通過調用其建構子並傳遞對象 `System.IO.FileStream` 的雙曲餘切值。
-   * 通過調用 `System.IO.BinaryWriter` 對象 `Write` 和傳遞位元組陣列。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表不安全PDF檔案檔案位置的字串值。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `removePDFPasswordSecurity` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另請參閱**
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 刪除密碼加密 {#removing-password-encryption}
+## 移除密碼加密 {#removing-password-encryption}
 
-可以從PDF文檔中刪除基於密碼的加密，以便用戶可以在Adobe Reader或Acrobat開啟PDF文檔，而無需指定密碼。 從PDF文檔中刪除基於密碼的加密後，文檔不再安全。
+密碼式加密可從PDF檔案中移除，讓使用者不必指定密碼，即可在Adobe Reader或Acrobat中開啟PDF檔案。 從PDF檔案中移除密碼式加密後，檔案就不再安全。
 
 >[!NOTE]
 >
->有關加密服務的詳細資訊，請參見 [《AEM Forms服務參考》](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需加密服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary_of_steps-3}
 
-要從PDF文檔中刪除基於密碼的加密，請執行以下步驟：
+若要從PDF檔案中移除密碼式加密，請執行下列步驟：
 
-1. 包括項目檔案
-1. 建立加密服務客戶端。
-1. 獲取加密的PDF文檔。
-1. 刪除密碼。
-1. 將PDF文檔另存為PDF檔案。
+1. 包含專案檔案
+1. 建立加密服務使用者端。
+1. 取得加密的PDF檔案。
+1. 移除密碼。
+1. 將PDF檔案儲存為PDF檔案。
 
-**包括項目檔案**
+**包含專案檔案**
 
-將必要的檔案包括到您的開發項目中。 如果使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必須將以下JAR檔案添加到項目的類路徑：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar(在JBoss上部署AEM Forms時必需)
-* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-**建立加密服務客戶端**
+**建立加密服務使用者端**
 
-要以寫程式方式執行加密服務操作，必須建立加密服務客戶端。 如果使用Java加密服務API，請建立 `EncrytionServiceClient` 的雙曲餘切值。 如果使用Web服務加密服務API，請建立 `EncryptionServiceService` 的雙曲餘切值。
+若要以程式設計方式執行「加密」服務作業，您必須建立「加密」服務使用者端。 如果您使用Java加密服務API，請建立 `EncrytionServiceClient` 物件。 如果您使用Web服務加密服務API，請建立 `EncryptionServiceService` 物件。
 
-**獲取加密的PDF文檔**
+**取得加密的PDF檔案**
 
-必須獲取加密的PDF文檔才能刪除基於密碼的加密。 如果嘗試從未加密的PDF文檔中刪除加密，則會引發異常。
+您必須取得加密的PDF檔案，才能移除密碼式加密。 如果您嘗試從未加密的PDF檔案中移除加密，則會擲回例外狀況。
 
-**刪除密碼**
+**移除密碼**
 
-要從加密的PDF文檔中刪除基於密碼的加密，您需要加密的PDF文檔和用於從PDF文檔中刪除加密的主密碼值。 用於開啟密碼加密PDF文檔的密碼不能用於刪除加密。 使用密碼對PDF文檔進行加密時指定主密碼。 (請參閱 [使用密碼加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)。)
+若要從已加密的PDF檔案移除密碼式加密，您需要已加密的PDF檔案以及用於從PDF檔案移除加密的主密碼值。 用來開啟密碼加密的PDF檔案的密碼不能用來移除加密。 使用密碼加密PDF檔案時，會指定主密碼。 (請參閱 [使用密碼加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
 
-**保存PDF文檔**
+**儲存PDF檔案**
 
-在加密服務從PDF文檔中刪除基於密碼的加密後，您可以將PDF文檔另存為PDF檔案。 用戶可以在Adobe Reader或Acrobat開啟PDF文檔，而無需指定密碼。
+在「加密」服務從PDF檔案中移除密碼式加密之後，您可以將PDF檔案儲存為PDF檔案。 使用者無需指定密碼，即可在Adobe Reader或Acrobat中開啟PDF檔案。
 
 **另請參閱**
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 [加密服務API快速啟動](/help/forms/developing/encryption-service-java-api-quick.md#encryption-service-java-api-quick-start-soap)
 
-[使用密碼加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
+[使用密碼加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
 
-### 使用Java API刪除基於密碼的加密 {#remove-password-based-encryption-using-the-java-api}
+### 使用Java API移除密碼式加密 {#remove-password-based-encryption-using-the-java-api}
 
-使用Encryption API(Java)從PDF文檔中刪除基於密碼的加密：
+使用加密API (Java)從PDF檔案中移除密碼型加密：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-encryption-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-encryption-client.jar。
 
-1. 建立加密服務客戶端。
+1. 建立加密服務使用者端。
 
-   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
-   * 建立 `EncryptionServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 的雙曲餘切值。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EncryptionServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 獲取加密的PDF文檔。
+1. 取得加密的PDF檔案。
 
-   * 建立 `java.io.FileInputStream` 表示加密PDF文檔的對象，方法是使用其建構子並傳遞一個字串值，該字串值指定PDF文檔的位置。
-   * 建立 `com.adobe.idp.Document` 使用其建構子並傳遞對象 `java.io.FileInputStream` 的雙曲餘切值。
+   * 建立 `java.io.FileInputStream` 物件，使用加密的PDF檔案的建構函式，並傳遞字串值，指定PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 刪除密碼。
+1. 移除密碼。
 
-   通過調用PDF文檔來刪除基於密碼的加密 `EncryptionServiceClient` 對象 `removePDFPasswordSecurity` 方法並傳遞以下值：
+   叫用，從PDF檔案中移除密碼式加密 `EncryptionServiceClient` 物件的 `removePDFPasswordSecurity` 並傳遞下列值：
 
-   * A `com.adobe.idp.Document` 包含加密PDF文檔的對象。
-   * 一個字串值，它指定用於從PDF文檔中刪除加密的主密碼值。
+   * A `com.adobe.idp.Document` 包含加密PDF檔案的物件。
+   * 字串值，指定用來從PDF檔案中移除加密的主密碼值。
 
-   的 `removePDFPasswordSecurity` 方法返回 `com.adobe.idp.Document` 包含不安全PDF文檔的對象。
+   此 `removePDFPasswordSecurity` 方法傳回 `com.adobe.idp.Document` 包含不安全PDF檔案的物件。
 
-1. 保存PDF文檔。
+1. 儲存PDF檔案。
 
-   * 建立 `java.io.File` 對象，並確保檔案副檔名為.pdf。
-   * 調用 `com.adobe.idp.Document` 對象 `copyToFile` 複製內容的方法 `Document` 對象。 確保使用 `Document` 返回的對象 `removePDFPasswordSecurity` 的雙曲餘切值。
+   * 建立 `java.io.File` 物件並確保副檔名為.pdf。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `Document` 物件至檔案。 確保您使用 `Document` 物件，由 `removePDFPasswordSecurity` 方法。
 
 **另請參閱**
 
-[快速啟動（SOAP模式）:使用Java API刪除基於密碼的加密](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API移除密碼式加密](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
 
-### 使用Web服務API刪除基於密碼的加密 {#remove-password-based-encryption-using-the-web-service-api}
+### 使用Web服務API移除密碼式加密 {#remove-password-based-encryption-using-the-web-service-api}
 
-使用Encryption API（Web服務）刪除基於密碼的加密：
+使用加密API （Web服務）移除密碼式加密：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft.NET項目。 確保使用以下WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >替換 `localhost` IP地址為AEM Forms。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 建立加密服務客戶端。
+1. 建立加密服務使用者端。
 
-   * 建立 `EncryptionServiceClient` 對象。
-   * 建立 `EncryptionServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`。) 你不需要 `lc_version` 屬性。 在建立服務引用時使用此屬性。)
-   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `EncryptionServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
-   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
-   * 通過執行以下任務啟用基本HTTP身份驗證：
+   * 建立 `EncryptionServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `EncryptionServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `EncryptionServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 將表AEM單用戶名分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`。
-      * 將相應的密碼值分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`。
-      * 分配常數值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 分配常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 到 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 獲取加密的PDF文檔。
+1. 取得加密的PDF檔案。
 
-   * 建立 `BLOB` 對象。 的 `BLOB` 對象用於儲存密碼加密的PDF文檔。
-   * 建立 `System.IO.FileStream` 調用其建構子並傳遞一個字串值，該字串值表示加密PDF文檔的檔案位置以及開啟檔案的模式。
-   * 建立一個位元組陣列，用於儲存 `System.IO.FileStream` 的雙曲餘切值。 通過獲取 `System.IO.FileStream` 對象 `Length` 屬性。
-   * 通過調用 `System.IO.FileStream` 對象 `Read` 方法，將位元組陣列、起始位置和流長度傳遞給讀取。
-   * 填充 `BLOB` 對象，方法是將位元組陣列的內容分配給 `BLOB` 對象 `MTOM` 資料成員。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件是用來儲存密碼加密的PDF檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表加密PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，方法是將位元組陣列的內容指派給 `BLOB` 物件的 `MTOM` 資料成員。
 
-1. 刪除密碼。
+1. 移除密碼。
 
-   調用 `EncryptionServiceService` 對象 `removePDFPasswordSecurity` 方法並傳遞以下值：
+   叫用 `EncryptionServiceService` 物件的 `removePDFPasswordSecurity` 方法並傳遞下列值：
 
-   * 的 `BLOB` 包含表示加密PDF文檔的檔案流資料的對象。
-   * 一個字串值，它指定用於從PDF文檔中刪除加密的密碼值。 使用密碼加密PDF文檔時指定此值。
+   * 此 `BLOB` 包含代表加密PDF檔案的檔案資料流資料的物件。
+   * 字串值，指定用來從PDF檔案中移除加密的密碼值。 使用密碼加密PDF檔案時，會指定此值。
 
-   的 `removePDFPasswordSecurity` 方法返回 `BLOB` 包含不安全PDF文檔的對象。
+   此 `removePDFPasswordSecurity` 方法傳回 `BLOB` 包含不安全PDF檔案的物件。
 
-1. 保存PDF文檔。
+1. 儲存PDF檔案。
 
-   * 建立 `System.IO.FileStream` 通過調用其建構子並傳遞一個字串值來表示不安全PDF文檔的檔案位置。
-   * 建立一個位元組陣列，用於儲存 `BLOB` 返回的對象 `removePDFPasswordSecurity` 的雙曲餘切值。 通過獲取 `BLOB` 對象 `MTOM` 資料成員。
-   * 建立 `System.IO.BinaryWriter` 通過調用其建構子並傳遞對象 `System.IO.FileStream` 的雙曲餘切值。
-   * 通過調用 `System.IO.BinaryWriter` 對象 `Write` 和傳遞位元組陣列。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表不安全PDF檔案檔案位置的字串值。
+   * 建立位元組陣列，儲存 `BLOB` 物件，由 `removePDFPasswordSecurity` 方法。 透過取得 `BLOB` 物件的 `MTOM` 資料成員。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
 **另請參閱**
 
-[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 解鎖加密PDF文檔 {#unlocking-encrypted-pdf-documents}
+## 解除鎖定加密的PDF檔案 {#unlocking-encrypted-pdf-documents}
 
-必須解鎖密碼加密或證書加密的PDF文檔，然後才能對其執行其他AEM Forms操作。 如果嘗試對加密的PDF文檔執行操作，將生成異常。 解鎖加密的PDF文檔後，可以對其執行一個或多個操作。 這些操作可以屬於其他服務，如Acrobat Reader DC分機處。
+必須先解鎖密碼加密或憑證加密的PDF檔案，才能對其執行其他AEM Forms操作。 如果您嘗試對加密的PDF檔案執行作業，將會產生例外。 解鎖加密的PDF檔案後，您可以對其執行一個或多個操作。 這些操作可能屬於其他服務，例如Acrobat Reader DC擴充功能服務。
 
 >[!NOTE]
 >
->有關加密服務的詳細資訊，請參見 [《AEM Forms服務參考》](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需加密服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary_of_steps-4}
 
-要解鎖加密的PDF文檔，請執行以下步驟：
+若要解除鎖定加密的PDF檔案，請執行下列步驟：
 
-1. 包括項目檔案。
-1. 建立加密服務客戶端。
-1. 獲取加密的PDF文檔。
-1. 解鎖文檔。
-1. 執行AEM Forms操作。
+1. 包含專案檔案。
+1. 建立加密服務使用者端。
+1. 取得加密的PDF檔案。
+1. 解鎖檔案。
+1. 執行AEM Forms作業。
 
-**包括項目檔案**
+**包含專案檔案**
 
-在開發項目中包含必要的檔案。 如果使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請務必包含Proxy檔案。
 
-必須將以下JAR檔案添加到項目的類路徑：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
-* jbossall-client.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-**建立加密服務客戶端**
+**建立加密服務使用者端**
 
-要以寫程式方式執行加密服務操作，必須建立加密服務客戶端。 如果使用Java加密服務API，請建立 `EncrytionServiceClient` 的雙曲餘切值。 如果使用Web服務加密服務API，請建立 `EncryptionServiceService` 的雙曲餘切值。
+若要以程式設計方式執行「加密」服務作業，您必須建立「加密」服務使用者端。 如果您使用Java加密服務API，請建立 `EncrytionServiceClient` 物件。 如果您使用Web服務加密服務API，請建立 `EncryptionServiceService` 物件。
 
-**獲取加密的PDF文檔**
+**取得加密的PDF檔案**
 
-必須獲取加密的PDF文檔才能將其解鎖。 如果嘗試解鎖未加密的PDF文檔，則會引發異常。
+您必須取得加密的PDF檔案，才能解除鎖定。 如果您嘗試解鎖未加密的PDF檔案，則會擲回例外狀況。
 
-**解鎖文檔**
+**解鎖檔案**
 
-要解鎖密碼加密的PDF文檔，您需要加密的PDF文檔和用於開啟密碼加密的PDF文檔的密碼值。 使用密碼加密PDF文檔時指定此值。 (請參閱 [使用密碼加密PDF文檔](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)。)
+若要解除鎖定密碼加密的PDF檔案，您需要加密的PDF檔案以及用於開啟密碼加密的PDF檔案的密碼值。 使用密碼加密PDF檔案時，會指定此值。 (請參閱 [使用密碼加密PDF檔案](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
 
-要解鎖證書加密的PDF文檔，您需要加密的PDF文檔和與用於加密PDF文檔的私鑰對應的公鑰的別名值。
+若要解除鎖定憑證加密的PDF檔案，您需要加密的PDF檔案，以及與用來加密PDF檔案的私密金鑰對應的公開金鑰的別名值。
 
 **執行AEM Forms操作**
 
-解鎖加密的PDF文檔後，您可以對其執行其他服務操作，如對其應用使用權限。 此操作屬於Acrobat Reader DC分機服務。
+解除鎖定加密的PDF檔案後，您可以對其執行其他服務操作，例如對其套用使用許可權。 此操作屬於Acrobat Reader DC擴充功能服務。
 
 **另請參閱**
 
-[使用Java API解鎖加密的PDF文檔](encrypting-decrypting-pdf-documents.md#unlock-an-encrypted-pdf-document-using-the-java-api)
+[使用Java API解鎖加密的PDF檔案](encrypting-decrypting-pdf-documents.md#unlock-an-encrypted-pdf-document-using-the-java-api)
 
-[使用Web服務API解鎖加密的PDF文檔](encrypting-decrypting-pdf-documents.md#unlock-an-encrypted-pdf-document-using-the-web-service-api)
+[使用Web服務API解鎖加密的PDF檔案](encrypting-decrypting-pdf-documents.md#unlock-an-encrypted-pdf-document-using-the-web-service-api)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 [加密服務API快速啟動](/help/forms/developing/encryption-service-java-api-quick.md#encryption-service-java-api-quick-start-soap)
 
-### 使用Java API解鎖加密的PDF文檔 {#unlock-an-encrypted-pdf-document-using-the-java-api}
+### 使用Java API解鎖加密的PDF檔案 {#unlock-an-encrypted-pdf-document-using-the-java-api}
 
-使用Encryption API(Java)解鎖加密的PDF文檔：
+使用加密API (Java)解鎖加密的PDF檔案：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-encryption-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-encryption-client.jar。
 
-1. 建立加密服務客戶端。
+1. 建立加密服務使用者端。
 
-   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
-   * 建立 `EncryptionServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 的雙曲餘切值。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EncryptionServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 獲取加密的PDF文檔。
+1. 取得加密的PDF檔案。
 
-   * 建立 `java.io.FileInputStream` 表示加密PDF文檔的對象，方法是使用其建構子並傳遞一個字串值，該字串值指定加密PDF文檔的位置。
-   * 建立 `com.adobe.idp.Document` 使用其建構子並傳遞對象 `java.io.FileInputStream` 的雙曲餘切值。
+   * 建立 `java.io.FileInputStream` 物件，使用加密的PDF檔案的建構函式，並傳遞字串值，指定加密PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 解鎖文檔。
+1. 解鎖檔案。
 
-   通過調用 `EncryptionServiceClient` 對象 `unlockPDFUsingPassword` 或 `unlockPDFUsingCredential` 的雙曲餘切值。
+   PDF透過叫用 `EncryptionServiceClient` 物件的 `unlockPDFUsingPassword` 或 `unlockPDFUsingCredential` 方法。
 
-   要解鎖使用密碼加密的PDF文檔，請調用 `unlockPDFUsingPassword` 方法並傳遞以下值：
+   若要解除鎖定已使用密碼加密的PDF檔案，請叫用 `unlockPDFUsingPassword` 方法並傳遞下列值：
 
-   * A `com.adobe.idp.Document` 包含密碼加密PDF文檔的對象。
-   * 一個字串值，它指定用於開啟密碼加密的PDF文檔的密碼值。 使用密碼加密PDF文檔時指定此值。
+   * A `com.adobe.idp.Document` 包含密碼加密PDF檔案的物件。
+   * 字串值，指定用來開啟密碼加密PDF檔案的密碼值。 使用密碼加密PDF檔案時，會指定此值。
 
-   要解鎖使用證書加密的PDF文檔，請調用 `unlockPDFUsingCredential` 方法並傳遞以下值：
+   若要解除鎖定已使用憑證加密的PDF檔案，請叫用 `unlockPDFUsingCredential` 方法並傳遞下列值：
 
-   * A `com.adobe.idp.Document` 包含證書加密PDF文檔的對象。
-   * 一個字串值，它指定與用於加密PDF文檔的私鑰相對應的公鑰的別名。
+   * A `com.adobe.idp.Document` 包含憑證加密PDF檔案的物件。
+   * 字串值，指定與用來加密PDF檔案的私密金鑰對應的公開金鑰別名。
 
-   的 `unlockPDFUsingPassword` 和 `unlockPDFUsingCredential` 方法都返回 `com.adobe.idp.Document` 傳遞給另一個AEM FormsJava方法以執行操作的對象。
+   此 `unlockPDFUsingPassword` 和 `unlockPDFUsingCredential` 兩種方法都會傳回 `com.adobe.idp.Document` 傳遞至其他AEM Forms Java方法以執行操作的物件。
 
-1. 執行AEM Forms操作。
+1. 執行AEM Forms作業。
 
-   對解鎖的PDF文檔執行AEM Forms操作，以滿足您的業務要求。 例如，假定要將使用權限應用於未鎖定的PDF文檔，請將 `com.adobe.idp.Document` 由其中一個 `unlockPDFUsingPassword` 或 `unlockPDFUsingCredential` 方法 `ReaderExtensionsServiceClient` 對象 `applyUsageRights` 的雙曲餘切值。
+   在未鎖定的PDF檔案上執行AEM Forms操作，以符合您的業務需求。 例如，假設您要將使用許可權套用至未鎖定的PDF檔案，請傳遞 `com.adobe.idp.Document` 由下列任一專案傳回的物件： `unlockPDFUsingPassword` 或 `unlockPDFUsingCredential` 方法 `ReaderExtensionsServiceClient` 物件的 `applyUsageRights` 方法。
 
 **另請參閱**
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[快速啟動（SOAP模式）:使用Java API解鎖加密PDF文檔](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api) （SOAP模式）
+[快速入門（SOAP模式）：使用Java API解除鎖定加密的PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api) （SOAP模式）
 
-[將使用權限應用於PDF文檔](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
+[將使用許可權套用至PDF檔案](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API解鎖加密的PDF文檔 {#unlock-an-encrypted-pdf-document-using-the-web-service-api}
+### 使用Web服務API解鎖加密的PDF檔案 {#unlock-an-encrypted-pdf-document-using-the-web-service-api}
 
-使用Encryption API（Web服務）解鎖加密PDF文檔：
+使用加密API （Web服務）解鎖加密的PDF檔案：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft.NET項目。 確保使用以下WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >替換 `localhost` IP地址為AEM Forms。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 建立加密服務客戶端。
+1. 建立加密服務使用者端。
 
-   * 建立 `EncryptionServiceClient` 對象。
-   * 建立 `EncryptionServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`。) 你不需要 `lc_version` 屬性。 在建立服務引用時使用此屬性。)
-   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `EncryptionServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
-   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
-   * 通過執行以下任務啟用基本HTTP身份驗證：
+   * 建立 `EncryptionServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `EncryptionServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `EncryptionServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 將表AEM單用戶名分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`。
-      * 將相應的密碼值分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`。
-      * 分配常數值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 分配常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 到 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 獲取加密的PDF文檔。
+1. 取得加密的PDF檔案。
 
-   * 建立 `BLOB` 對象。
-   * 建立 `System.IO.FileStream` 調用其建構子並傳遞一個字串值，該字串值表示加密PDF文檔的檔案位置以及開啟檔案的模式。
-   * 建立一個位元組陣列，用於儲存 `System.IO.FileStream` 的雙曲餘切值。 通過獲取 `System.IO.FileStream` 對象 `Length` 屬性。
-   * 通過調用 `System.IO.FileStream` 對象 `Read` 方法，將位元組陣列、起始位置和流長度傳遞給讀取。
-   * 填充 `BLOB` 對象，方法是將位元組陣列的內容分配給 `BLOB` 對象 `MTOM` 資料成員。
+   * 建立 `BLOB` 物件（使用其建構函式）。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表加密PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，方法是將位元組陣列的內容指派給 `BLOB` 物件的 `MTOM` 資料成員。
 
-1. 解鎖文檔。
+1. 解鎖檔案。
 
-   通過調用 `EncryptionServiceClient` 對象 `unlockPDFUsingPassword` 或 `unlockPDFUsingCredential` 的雙曲餘切值。
+   PDF透過叫用 `EncryptionServiceClient` 物件的 `unlockPDFUsingPassword` 或 `unlockPDFUsingCredential` 方法。
 
-   要解鎖使用密碼加密的PDF文檔，請調用 `unlockPDFUsingPassword` 方法並傳遞以下值：
+   若要解除鎖定已使用密碼加密的PDF檔案，請叫用 `unlockPDFUsingPassword` 方法並傳遞下列值：
 
-   * A `BLOB` 包含密碼加密PDF文檔的對象。
-   * 一個字串值，它指定用於開啟密碼加密的PDF文檔的密碼值。 使用密碼加密PDF文檔時指定此值。
+   * A `BLOB` 包含密碼加密PDF檔案的物件。
+   * 字串值，指定用來開啟密碼加密PDF檔案的密碼值。 使用密碼加密PDF檔案時，會指定此值。
 
-   要解鎖使用證書加密的PDF文檔，請調用 `unlockPDFUsingCredential` 方法並傳遞以下值：
+   若要解除鎖定已使用憑證加密的PDF檔案，請叫用 `unlockPDFUsingCredential` 方法並傳遞下列值：
 
-   * A `BLOB` 包含證書加密PDF文檔的對象。
-   * 一個字串值，它指定與用於加密PDf文檔的私鑰相對應的公鑰的別名。
+   * A `BLOB` 包含憑證加密PDF檔案的物件。
+   * 字串值，指定與用來加密PDf檔案的私密金鑰對應的公開金鑰別名。
 
-   的 `unlockPDFUsingPassword` 和 `unlockPDFUsingCredential` 方法都返回 `com.adobe.idp.Document` 傳遞給另一個AEM Forms方法以執行操作的對象。
+   此 `unlockPDFUsingPassword` 和 `unlockPDFUsingCredential` 兩種方法都會傳回 `com.adobe.idp.Document` 傳遞給其他AEM Forms方法以執行操作的物件。
 
-1. 執行AEM Forms操作。
+1. 執行AEM Forms作業。
 
-   對解鎖的PDF文檔執行AEM Forms操作，以滿足您的業務要求。 例如，假定要將使用權限應用於未鎖定的PDF文檔，請將 `BLOB` 由其中一個 `unlockPDFUsingPassword` 或 `unlockPDFUsingCredential` 方法 `ReaderExtensionsServiceClient` 對象 `applyUsageRights` 的雙曲餘切值。
+   在未鎖定的PDF檔案上執行AEM Forms操作，以符合您的業務需求。 例如，假設您要將使用許可權套用至未鎖定的PDF檔案，請傳遞 `BLOB` 由下列任一專案傳回的物件： `unlockPDFUsingPassword` 或 `unlockPDFUsingCredential` 方法 `ReaderExtensionsServiceClient` 物件的 `applyUsageRights` 方法。
 
 **另請參閱**
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 確定加密類型 {#determining-encryption-type}
+## 決定加密型別 {#determining-encryption-type}
 
-可以通過使用Java加密服務API或Web服務加密服務API以寫程式方式確定保護PDF文檔的加密類型。 有時需要動態確定PDF文檔是否已加密，如果加密，則需要確定加密類型。 例如，您可以確定PDF文檔是使用基於密碼的加密還是使用Rights Management策略進行保護。
+您可以使用Java Encryption Service API或Web服務Encryption Service API，以程式設計方式判斷保護PDF檔案的加密型別。 有時需要動態判斷PDF檔案是否已加密，如果是，則需判斷加密型別。 例如，您可以決定PDF檔案是否受到密碼式加密或Rights Management原則的保護。
 
-PDF文檔可以受以下加密類型的保護：
+PDF檔案可受下列加密型別保護：
 
-* 基於密碼的加密
-* 基於證書的加密
-* 由Rights Management服務建立的策略
-* 另一種加密類型
+* 密碼式加密
+* 憑證式加密
+* 由Rights Management服務建立的原則
+* 另一種加密型別
 
 >[!NOTE]
 >
->有關加密服務的詳細資訊，請參見 [《AEM Forms服務參考》](https://www.adobe.com/go/learn_aemforms_services_63)。
+>如需加密服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary_of_steps-5}
 
-要確定保護PDF文檔的加密類型，請執行以下步驟：
+若要判斷保護PDF檔案的加密型別，請執行下列步驟：
 
-1. 包括項目檔案。
-1. 建立加密服務客戶端。
-1. 獲取加密的PDF文檔。
-1. 確定加密類型。
+1. 包含專案檔案。
+1. 建立加密服務使用者端。
+1. 取得加密的PDF檔案。
+1. 決定加密型別。
 
-**包括項目檔案**
+**包含專案檔案**
 
-在開發項目中包含必要的檔案。 如果使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
+將必要的檔案納入您的開發專案中。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-必須將以下JAR檔案添加到項目的類路徑：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
-* jbossall-client.jar(如果AEM Forms部署在JBoss Application Server上，則為必需)
+* adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-**建立服務客戶端**
+**建立服務使用者端**
 
-要以寫程式方式執行加密服務操作，必須建立加密服務客戶端。 如果使用Java加密服務API，請建立 `EncrytionServiceClient` 的雙曲餘切值。 如果使用Web服務加密服務API，請建立 `EncryptionServiceService` 的雙曲餘切值。
+若要以程式設計方式執行「加密」服務作業，您必須建立「加密」服務使用者端。 如果您使用Java加密服務API，請建立 `EncrytionServiceClient` 物件。 如果您使用Web服務加密服務API，請建立 `EncryptionServiceService` 物件。
 
-**獲取加密的PDF文檔**
+**取得加密的PDF檔案**
 
-必須獲取PDF文檔，才能確定保護該文檔的加密類型。
+您必須取得PDF檔案，才能判斷保護它的加密型別。
 
-**確定加密類型**
+**決定加密型別**
 
-您可以確定保護PDF文檔的加密類型。 如果PDF文檔未受保護，則加密服務會通知您PDF文檔未受保護。
+您可以決定保護PDF檔案的加密型別。 如果PDF檔案未受到保護，則加密服務會通知您PDF檔案未受到保護。
 
 **另請參閱**
 
-[使用Java API確定加密類型](encrypting-decrypting-pdf-documents.md#determine-the-encryption-type-using-the-java-api)
+[使用Java API判斷加密型別](encrypting-decrypting-pdf-documents.md#determine-the-encryption-type-using-the-java-api)
 
-[使用Web服務API確定加密類型](encrypting-decrypting-pdf-documents.md#determine-the-encryption-type-using-the-web-service-api)
+[使用Web服務API決定加密型別](encrypting-decrypting-pdf-documents.md#determine-the-encryption-type-using-the-web-service-api)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 [加密服務API快速啟動](/help/forms/developing/encryption-service-java-api-quick.md#encryption-service-java-api-quick-start-soap)
 
-[使用策略保護文檔](/help/forms/developing/protecting-documents-policies.md#protecting-documents-with-policies)
+[使用原則保護檔案](/help/forms/developing/protecting-documents-policies.md#protecting-documents-with-policies)
 
-### 使用Java API確定加密類型 {#determine-the-encryption-type-using-the-java-api}
+### 使用Java API判斷加密型別 {#determine-the-encryption-type-using-the-java-api}
 
-使用Encryption API(Java)確定保護PDF文檔的加密類型：
+使用加密API (Java)判斷保護PDF檔案的加密型別：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-encryption-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-encryption-client.jar。
 
-1. 建立服務客戶端。
+1. 建立服務使用者端。
 
-   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
-   * 建立 `EncryptionServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 的雙曲餘切值。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `EncryptionServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 獲取加密的PDF文檔。
+1. 取得加密的PDF檔案。
 
-   * 建立 `java.io.FileInputStream` 表示PDF文檔的對象，方法是使用其建構子並傳遞一個字串值，該字串值指定PDF文檔的位置。
-   * 建立 `com.adobe.idp.Document` 使用其建構子並傳遞對象 `java.io.FileInputStream` 的雙曲餘切值。
+   * 建立 `java.io.FileInputStream` 物件，使用它的建構函式並傳遞字串值來表示PDF檔案，該字串值指定PDF檔案的位置。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 確定加密類型。
+1. 決定加密型別。
 
-   * 通過調用 `EncryptionServiceClient` 對象 `getPDFEncryption` 方法和傳遞 `com.adobe.idp.Document` 包含PDF文檔的對象。 此方法返回 `EncryptionTypeResult` 的雙曲餘切值。
-   * 調用 `EncryptionTypeResult` 對象 `getEncryptionType` 的雙曲餘切值。 此方法返回 `EncryptionType` 指定加密類型的枚舉值。 例如，如果PDF文檔使用基於密碼的加密進行保護，則此方法將返回 `EncryptionType.PASSWORD`。
+   * 透過叫用 `EncryptionServiceClient` 物件的 `getPDFEncryption` 方法和傳遞 `com.adobe.idp.Document` 包含PDF檔案的物件。 此方法會傳回 `EncryptionTypeResult` 物件。
+   * 叫用 `EncryptionTypeResult` 物件的 `getEncryptionType` 方法。 此方法會傳回 `EncryptionType` 指定加密型別的列舉值。 例如，如果PDF檔案受到密碼式加密的保護，則此方法會傳回 `EncryptionType.PASSWORD`.
 
 **另請參閱**
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[快速啟動（SOAP模式）:使用Java API確定加密類型](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API判斷加密型別](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API確定加密類型 {#determine-the-encryption-type-using-the-web-service-api}
+### 使用Web服務API決定加密型別 {#determine-the-encryption-type-using-the-web-service-api}
 
-使用Encryption API（Web服務）確定保護PDF文檔的加密類型：
+使用Encryption API （Web服務）判斷保護PDF檔案的加密型別：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft.NET項目。 確保使用以下WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/EncryptionService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >替換 `localhost` IP地址為AEM Forms。
+   >Replace `localhost` 搭配裝載AEM Forms之伺服器的IP位址。
 
-1. 建立服務客戶端。
+1. 建立服務使用者端。
 
-   * 建立 `EncryptionServiceClient` 對象。
-   * 建立 `EncryptionServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`。) 你不需要 `lc_version` 屬性。 在建立服務引用時使用此屬性。)
-   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `EncryptionServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
-   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
-   * 通過執行以下任務啟用基本HTTP身份驗證：
+   * 建立 `EncryptionServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `EncryptionServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/EncryptionService?WSDL`.) 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。)
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `EncryptionServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 將表AEM單用戶名分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`。
-      * 將相應的密碼值分配給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`。
-      * 分配常數值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 分配常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 到 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `EncryptionServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 獲取加密的PDF文檔。
+1. 取得加密的PDF檔案。
 
-   * 建立 `BLOB` 對象。
-   * 建立 `System.IO.FileStream` 調用其建構子並傳遞一個字串值，該字串值表示加密PDF文檔的檔案位置以及開啟檔案的模式。
-   * 建立一個位元組陣列，用於儲存 `System.IO.FileStream` 的雙曲餘切值。 通過獲取 `System.IO.FileStream` 對象 `Length` 屬性。
-   * 通過調用 `System.IO.FileStream` 對象 `Read` 方法，將位元組陣列、起始位置和流長度傳遞給讀取。
-   * 填充 `BLOB` 對象，方法是將位元組陣列的內容分配給 `BLOB` 對象 `MTOM` 資料成員。
+   * 建立 `BLOB` 物件（使用其建構函式）。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表加密PDF檔案的檔案位置和開啟檔案的模式的字串值。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，方法是將位元組陣列的內容指派給 `BLOB` 物件的 `MTOM` 資料成員。
 
-1. 確定加密類型。
+1. 決定加密型別。
 
-   * 調用 `EncryptionServiceClient` 對象 `getPDFEncryption` 方法和通過 `BLOB` 包含PDF文檔的對象。 此方法返回 `EncryptionTypeResult` 的雙曲餘切值。
-   * 獲取的值 `EncryptionTypeResult` 對象 `encryptionType` 資料方法。 例如，如果PDF文檔使用基於密碼的加密進行保護，則此資料成員的值為 `EncryptionType.PASSWORD`。
+   * 叫用 `EncryptionServiceClient` 物件的 `getPDFEncryption` 方法並傳遞 `BLOB` 包含PDF檔案的物件。 此方法會傳回 `EncryptionTypeResult` 物件。
+   * 取得 `EncryptionTypeResult` 物件的 `encryptionType` 資料方法。 例如，如果PDF檔案受到密碼式加密的保護，則此資料成員的值為 `EncryptionType.PASSWORD`.
 
 **另請參閱**
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[使用SwaRef調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)

@@ -1,7 +1,7 @@
 ---
 title: 行銷活動
 seo-title: Campaigns
-description: 瞭解使用市場活動的AEM基本知識。
+description: 瞭解使用AEM Campaigns的基本知識。
 seo-description: Learn the basics of using AEM Campaigns.
 uuid: f4be814f-8b0f-4089-88bb-0141227bce02
 contentOwner: Guillaume Carlino
@@ -19,16 +19,16 @@ ht-degree: 1%
 
 # 行銷活動{#campaigns}
 
-營銷活動管理為數字營銷商提供了提供個性化內容和為訪問者建立專用體驗的機會。
+Campaign管理為數位行銷人員提供機會，以提供個人化內容並為訪客建立專屬體驗。
 
-如果要管理市場活動（包括登錄頁），則可能需要執行以下操作：
+如果您正在管理行銷活動（包括登入頁面），您可能需要執行下列動作：
 
-* **定義段**  — 您需要為目標內容定義段和策略。
-* **準備登錄頁HTML**  — 登錄頁允許作者快速輕鬆地將設計和內AEM容導入頁面。 您需要準備HTML，以便能夠正確導入資產。 在建立僅在有限時間內處於活動狀態且需要快速建立的市場營銷登錄頁時，登錄頁非常有用。
-* **與SiteCatalyst整合**  — 您可以將登錄頁與SiteCatalyst整合。
+* **定義區段**  — 您需要定義目標內容的區段和策略。
+* **為登入頁面準備HTML**  — 登入頁面可讓作者快速輕鬆地將設計和內容直接匯入AEM頁面。 您必須準備HTML，才能正確匯入資產。 建立僅在有限時間內有效且需要快速建立的行銷登入頁面時，登入頁面會很有用。
+* **與SiteCatalyst整合**  — 您可以將登入頁面與SiteCatalyst整合。
 
-請參閱以下頁：
+請參閱下列頁面：
 
-* [配置分段](/help/sites-administering/campaign-segmentation.md)
-* [擴展和配置登錄頁的設計導入程式](/help/sites-administering/extending-the-design-importer-for-landingpages.md)
-* [將登錄頁與Adobe Analytics整合](/help/sites-administering/integrating-landing-pages-with-adobe-analytics.md)
+* [設定分段](/help/sites-administering/campaign-segmentation.md)
+* [擴充和設定登入頁面的Design Importer](/help/sites-administering/extending-the-design-importer-for-landingpages.md)
+* [將登入頁面與Adobe Analytics整合](/help/sites-administering/integrating-landing-pages-with-adobe-analytics.md)

@@ -1,6 +1,6 @@
 ---
-title: 配置LDAPAEM 6
-description: 瞭解如何使用配置LDAPAEM。
+title: 使用AEM 6設定LDAP
+description: 瞭解如何使用AEM設定LDAP。
 uuid: 0007def4-86f0-401d-aa37-c8d49d5acea1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,289 +15,289 @@ ht-degree: 0%
 
 ---
 
-# 配置LDAPAEM 6 {#configuring-ldap-with-aem}
+# 使用AEM 6設定LDAP {#configuring-ldap-with-aem}
 
-LDAP( **L**&#x200B;八八 **D**&#x200B;記錄 **A**&#x200B;訪問 **P**&#x200B;協定)用於訪問集中式目錄服務。 它有助於減少管理用戶帳戶所需的工作量，因為用戶帳戶可以被多個應用程式訪問。 此類LDAP伺服器之一是Active Directory。 LDAP通常用於實現單一登錄，允許用戶在一次登錄後訪問多個應用程式。
+LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotocol)用來存取集中式目錄服務。 它有助於減少管理使用者帳戶所需的工作量，因為使用者帳戶可由多個應用程式存取。 Active Directory就是這類LDAP伺服器。 LDAP通常用於實現單一登入，可讓使用者在登入一次後存取多個應用程式。
 
-用戶帳戶可以在LDAP伺服器和儲存庫之間同步，LDAP帳戶詳細資訊將保存在儲存庫中。 此功能允許將帳戶分配給儲存庫組以分配所需的權限和權限。
+使用者帳戶可以在LDAP伺服器和存放庫之間同步，而LDAP帳戶詳細資訊會儲存在存放庫中。 此功能允許將帳戶指派給存放庫群組，以配置所需的許可權和許可權。
 
-儲存庫使用LDAP身份驗證來驗證這些用戶，憑據將傳遞到LDAP伺服器進行驗證，這是允許訪問儲存庫之前所必需的。 為了提高效能，儲存庫可以快取成功驗證的憑據，並設定到期超時，以確保在適當的時間段後重新驗證。
+存放庫會使用LDAP驗證來驗證這類使用者，並將認證傳遞給LDAP伺服器進行驗證，在允許存取存放庫之前需要驗證。 為了改善效能，存放庫可以快取已成功驗證的認證，並且設有到期逾時，以確保在適當的時間段後進行重新驗證。
 
-從LDAP伺服器中刪除帳戶後，將不再授予驗證權，並拒絕訪問儲存庫。 也可以清除儲存庫中保存的LDAP帳戶的詳細資訊。
+從LDAP伺服器移除帳戶時，不再授與驗證並拒絕存取存放庫。 儲存於儲存庫中的LDAP帳戶詳細資訊也可以清除。
 
-此類帳戶的使用對用戶是透明的。 也就是說，他們看不到從LDAP建立的用戶和組帳戶與僅在儲存庫中建立的帳戶之間的差異。
+這類帳戶的使用對使用者而言是透明的。 也就是說，他們發現從LDAP建立的使用者和群組帳戶，與只在存放庫中建立的帳戶之間沒有差異。
 
-在AEM6中，LDAP支援附帶了一種新的實現，它要求與以前版本不同的配置類型。
+在AEM 6中，LDAP支援隨附的新實作需要與舊版不同的設定型別。
 
-所有LDAP配置現在都可作為OSGi配置使用。 可通過Web管理控制台在以下位置進行配置：
+所有LDAP設定現在都可作為OSGi設定使用。 這些設定可透過Web管理主控台進行設定，網址為：
 `https://serveraddress:4502/system/console/configMgr`
 
-要使LDAP與之配合使用AEM，必須建立三個OSGi配置：
+若要讓LDAP與AEM搭配使用，您必須建立三個OSGi設定：
 
-1. LDAP標識提供程式(IDP)。
-1. 同步處理程式。
-1. 外部登錄模組。
+1. LDAP身分提供者(IDP)。
+1. 同步處理常式。
+1. 外部登入模組。
 
 >[!NOTE]
 >
->監視 [Oak的外部登錄模組 — 使用LDAP和更高版本進行身份驗證](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html?lang=en) 深入查看外部登錄模組。
+>觀看 [Oak的外部登入模組 — 使用LDAP及以外進行驗證](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html?lang=en) 以深入探究外部登入模組。
 >
->要閱讀使用Apache DS配置Experience Manager的示例，請參見 [正在配置Adobe Experience Manager6.5以使用Apache目錄服務。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
+>若要閱讀使用Apache DS設定Experience Manager的範例，請參閱 [設定Adobe Experience Manager 6.5以使用Apache Directory Service。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
 
-## 配置LDAP標識提供程式 {#configuring-the-ldap-identity-provider}
+## 設定LDAP識別提供者 {#configuring-the-ldap-identity-provider}
 
-LDAP標識提供程式用於定義如何從LDAP伺服器檢索用戶。
+LDAP身分提供者用於定義如何從LDAP伺服器擷取使用者。
 
-在管理控制台中， **Apache Jackrabbit Oak LDAP標識提供程式** 名稱。
+您可以在管理主控台的 **Apache Jackrabbit Oak LDAP身分提供者** 名稱。
 
-以下配置選項可用於LDAP標識提供程式：
+下列組態選項適用於LDAP識別提供者：
 
 <table>
  <tbody>
   <tr>
-   <td><strong>LDAP提供程式名稱</strong></td>
-   <td>此LDAP提供程式配置的名稱。</td>
+   <td><strong>LDAP提供者名稱</strong></td>
+   <td>此LDAP提供者設定的名稱。</td>
   </tr>
   <tr>
-   <td><strong>LDAP伺服器主機名</strong><br /> </td>
-   <td>LDAP伺服器的主機名</td>
+   <td><strong>ldap伺服器主機名稱</strong><br /> </td>
+   <td>LDAP伺服器的主機名稱</td>
   </tr>
   <tr>
-   <td><strong>LDAP伺服器埠</strong></td>
-   <td>LDAP伺服器的埠</td>
+   <td><strong>LDAP伺服器連線埠</strong></td>
+   <td>LDAP伺服器的連線埠</td>
   </tr>
   <tr>
    <td><strong>使用SSL</strong></td>
-   <td>指示是否應使用SSL(LDAP)連接。</td>
+   <td>指出是否應該使用SSL (LDAP)連線。</td>
   </tr>
   <tr>
    <td><strong>使用TLS</strong></td>
-   <td>指示是否應在連接上啟動TLS。</td>
+   <td>指出是否應該在連線上啟動TLS。</td>
   </tr>
   <tr>
-   <td><strong>禁用證書檢查</strong></td>
-   <td>指示是否應禁用伺服器證書驗證。</td>
+   <td><strong>停用憑證檢查</strong></td>
+   <td>指出是否應該停用伺服器憑證驗證。</td>
   </tr>
   <tr>
-   <td><strong>綁定DN</strong></td>
-   <td>用於驗證的用戶的DN。 如果此欄位為空，則執行匿名綁定。</td>
+   <td><strong>繫結DN</strong></td>
+   <td>用於驗證的使用者DN。 如果此欄位留空，則會執行匿名繫結。</td>
   </tr>
   <tr>
-   <td><strong>綁定密碼</strong></td>
-   <td>用於驗證的用戶密碼</td>
+   <td><strong>繫結密碼</strong></td>
+   <td>用於驗證的使用者密碼</td>
   </tr>
   <tr>
-   <td><strong>搜索超時</strong></td>
-   <td>直到搜索超時</td>
+   <td><strong>搜尋逾時</strong></td>
+   <td>搜尋逾時前的時間</td>
   </tr>
   <tr>
-   <td><strong>管理池最大活動</strong></td>
-   <td>管理員連接池的最大活動大小。</td>
+   <td><strong>管理集區最大使用中</strong></td>
+   <td>管理連線集區的作用中大小上限。</td>
   </tr>
   <tr>
-   <td><strong>最大活動用戶池</strong></td>
-   <td>用戶連接池的最大活動大小。</td>
+   <td><strong>使用者集區最大使用中</strong></td>
+   <td>使用者連線集區的作用中大小上限。</td>
   </tr>
   <tr>
-   <td><strong>用戶基DN</strong></td>
-   <td>用戶搜索的DN</td>
+   <td><strong>使用者基本DN</strong></td>
+   <td>使用者搜尋的DN</td>
   </tr>
   <tr>
-   <td><strong>用戶對象類</strong></td>
-   <td>用戶條目必須包含的對象類清單。</td>
+   <td><strong>使用者物件類別</strong></td>
+   <td>使用者專案必須包含的物件類別清單。</td>
   </tr>
   <tr>
-   <td><strong>用戶ID屬性</strong></td>
-   <td>包含用戶ID的屬性的名稱。</td>
+   <td><strong>使用者ID屬性</strong></td>
+   <td>包含使用者ID的屬性名稱。</td>
   </tr>
   <tr>
-   <td><strong>用戶額外篩選器</strong></td>
-   <td>搜索用戶時要使用的額外LDAP篩選器。 最終篩選器的格式如下：'(&amp;)&lt;idattr&gt;=&lt;userid&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)'(user.extraFilter)</td>
+   <td><strong>使用者額外篩選器</strong></td>
+   <td>搜尋使用者時要使用的額外LDAP篩選器。 最終篩選的格式如下： '(&amp;(&lt;idattr&gt;=&lt;userid&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)' (user.extraFilter)</td>
   </tr>
   <tr>
-   <td><strong>用戶DN路徑</strong></td>
-   <td>控制是否應將DN用於計算中間路徑的一部分。</td>
+   <td><strong>使用者DN路徑</strong></td>
+   <td>控制是否應該使用DN來計算部分中繼路徑。</td>
   </tr>
   <tr>
-   <td><strong>組基本DN</strong></td>
-   <td>組搜索的基本DN。</td>
+   <td><strong>群組基本DN</strong></td>
+   <td>群組搜尋的基礎DN。</td>
   </tr>
   <tr>
-   <td><strong>組對象類</strong></td>
-   <td>組條目必須包含的對象類清單。</td>
+   <td><strong>群組物件類別</strong></td>
+   <td>群組專案必須包含的物件類別清單。</td>
   </tr>
   <tr>
-   <td><strong>組名稱屬性</strong></td>
-   <td>包含組名稱的屬性的名稱。</td>
+   <td><strong>群組名稱屬性</strong></td>
+   <td>包含群組名稱的屬性名稱。</td>
   </tr>
   <tr>
-   <td><strong>組額外篩選器</strong></td>
-   <td>搜索組時要使用的額外LDAP篩選器。 最終篩選器的格式如下：'(&amp;)&lt;nameattr&gt;=&lt;groupname&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)'</td>
+   <td><strong>群組額外篩選器</strong></td>
+   <td>搜尋群組時要使用的額外LDAP篩選器。 最終篩選的格式如下： '(&amp;(&lt;nameattr&gt;=&lt;groupname&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)'</td>
   </tr>
   <tr>
-   <td><strong>組DN路徑</strong></td>
-   <td>控制是否應將DN用於計算中間路徑的一部分。</td>
+   <td><strong>群組DN路徑</strong></td>
+   <td>控制是否應該使用DN來計算部分中繼路徑。</td>
   </tr>
   <tr>
-   <td><strong>組成員屬性</strong></td>
-   <td>包含組的一個或多個成員的組屬性。</td>
+   <td><strong>群組成員屬性</strong></td>
+   <td>包含一或多個群組成員的群組屬性。</td>
   </tr>
  </tbody>
 </table>
 
-## 配置同步處理程式 {#configuring-the-synchronization-handler}
+## 設定同步處理常式 {#configuring-the-synchronization-handler}
 
-同步處理程式定義身份提供程式用戶和組如何與儲存庫同步。
+同步處理常式會定義身分提供者使用者和群組如何與存放庫同步。
 
-位於 **Apache Jackrabbit Oak預設同步處理程式** 名稱。
+它位在 **Apache Jackrabbit Oak預設同步處理常式** 管理主控台中的名稱。
 
-以下配置選項可用於同步處理程式：
+同步處理常式可使用下列組態選項：
 
 <table>
  <tbody>
   <tr>
-   <td><strong>同步處理程式名稱</strong></td>
-   <td>同步配置的名稱。</td>
+   <td><strong>同步處理常式名稱</strong></td>
+   <td>同步設定的名稱。</td>
   </tr>
   <tr>
-   <td><strong>用戶到期時間</strong></td>
-   <td>持續時間，直到同步用戶過期。</td>
+   <td><strong>使用者到期時間</strong></td>
+   <td>同步使用者過期之前的持續時間。</td>
   </tr>
   <tr>
-   <td><strong>用戶自動成員身份</strong></td>
-   <td>已同步用戶自動添加到的組清單。</td>
+   <td><strong>使用者自動成員資格</strong></td>
+   <td>同步的使用者自動新增到的群組清單。</td>
   </tr>
   <tr>
-   <td><strong>用戶屬性映射</strong></td>
-   <td>外部屬性的清單映射定義。</td>
+   <td><strong>使用者屬性對應</strong></td>
+   <td>來自外部屬性的本機屬性的清單對應定義。</td>
   </tr>
   <tr>
-   <td><strong>用戶路徑前置詞</strong></td>
-   <td>建立用戶時使用的路徑前置詞。</td>
+   <td><strong>使用者路徑首碼</strong></td>
+   <td>建立使用者時使用的路徑前置詞。</td>
   </tr>
   <tr>
-   <td><strong>用戶成員資格過期</strong></td>
-   <td>成員資格過期的時間。<br /> </td>
+   <td><strong>使用者成員資格到期</strong></td>
+   <td>成員資格到期的時間。<br /> </td>
   </tr>
   <tr>
-   <td><strong>用戶成員身份嵌套深度</strong></td>
-   <td>返回成員關係同步時組嵌套的最大深度。 值0有效禁用組成員身份查找。 值1隻添加用戶的直接組。 僅當同步用戶成員身份祖先時，此值才在同步單個組時無效。</td>
+   <td><strong>使用者會籍巢狀深度</strong></td>
+   <td>同步成員關係時，傳回群組巢狀的最大深度。 值為0會有效停用群組成員資格查閱。 值1隻會新增使用者的直接群組。 只有在同步使用者成員資格祖先時，同步個別群組時，這個值才無效。</td>
   </tr>
   <tr>
-   <td><strong>組到期時間</strong></td>
-   <td>同步組到期前的持續時間。</td>
+   <td><strong>群組到期時間</strong></td>
+   <td>同步群組過期前的持續時間。</td>
   </tr>
   <tr>
-   <td><strong>組自動成員身份</strong></td>
-   <td>同步組自動添加到的組清單。</td>
+   <td><strong>群組自動成員資格</strong></td>
+   <td>同步群組自動新增到的群組清單。</td>
   </tr>
   <tr>
-   <td><strong>組屬性映射</strong></td>
-   <td>外部屬性的清單映射定義。</td>
+   <td><strong>群組屬性對應</strong></td>
+   <td>來自外部屬性的本機屬性的清單對應定義。</td>
   </tr>
   <tr>
-   <td><strong>組路徑前置詞</strong></td>
-   <td>建立組時使用的路徑前置詞。</td>
+   <td><strong>群組路徑前置詞</strong></td>
+   <td>建立群組時使用的路徑前置詞。</td>
   </tr>
  </tbody>
 </table>
 
-## 外部登錄模組 {#the-external-login-module}
+## 外部登入模組 {#the-external-login-module}
 
-外部登錄模組位於 **Apache Jackrabbit Oak外部登錄模組** 的下界。
+外部登入模組位於 **Apache Jackrabbit Oak外部登入模組** 在「管理主控台」下。
 
 >[!NOTE]
 >
->Apache Jackrabbit Oak外部登錄模組實現Java™身份驗證和授權服務(JAAS)規範。 查看 [官方OracleJava™安全參考指南](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) 的子菜單。
+>Apache Jackrabbit Oak外部登入模組實作Java™驗證和授權服務(JAAS)規格。 請參閱 [官方OracleJava™安全性參考指南](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) 以取得詳細資訊。
 
-其工作是定義要使用的身份提供程式和同步處理程式，有效地綁定兩個模組。
+其工作是定義要使用的身分提供者和同步處理常式，有效地繫結兩個模組。
 
-以下配置選項可用：
+下列組態選項可供使用：
 
-| **JAAS排名** | 指定此登錄模組條目的等級（即排序順序）。 這些條目按降序排序（即，排名較高的配置優先）。 |
+| **jaas排名** | 指定此登入模組專案的排名（即排序順序）。 專案會以遞減順序排序（也就是說，較高的值排名設定會排在首位）。 |
 |---|---|
-| **JAAS控制標誌** | 指定LOGINModule是必需、PROMENTIAL、EFPULITION還是OPTIONAL的屬性。 有關這些標誌含義的詳細資訊，請參閱JAAS配置文檔。 |
-| **雅斯王國** | 註冊LoginModule的領域名稱（或應用程式名稱）。 如果未提供領域名稱，則LoginModule將註冊到Felix JAAS配置中配置的預設領域。 |
-| **標識提供程式名稱** | 標識提供程式的名稱。 |
-| **同步處理程式名稱** | 同步處理程式的名稱。 |
+| **JAAS控制旗標** | 指定LoginModule為REQUIRED、REQUISITE、SUFFIENT或OPTIONAL的屬性。 如需這些標幟涵義的詳細資訊，請參閱JAAS設定檔案。 |
+| **JAAS領域** | LoginModule登入時所依據的領域名稱（或應用程式名稱）。 如果未提供領域名稱，則LoginModule會以Felix JAAS組態中設定的預設領域註冊。 |
+| **身分提供者名稱** | 身分提供者的名稱。 |
+| **同步處理常式名稱** | 同步處理常式的名稱。 |
 
 >[!NOTE]
-如果您計畫與實例一起使用多個LDAP配置AEM，則必須為每個配置建立單獨的身份提供程式和同步處理程式。
+如果您打算讓AEM執行個體擁有多個LDAP組態，則必須為每個組態建立個別的身分識別提供者與同步處理程式。
 
-## 通過SSL配置LDAP {#configure-ldap-over-ssl}
+## 透過SSL設定LDAP {#configure-ldap-over-ssl}
 
-按AEM照以下步驟配置6以通過SSL進行LDAP驗證：
+AEM 6可以設定為透過SSL使用LDAP進行驗證，其程式如下：
 
-1. 檢查 **使用SSL** 或 **使用TLS** 複選框 [LDAP標識提供程式](#configuring-the-ldap-identity-provider)。
-1. 根據您的設定配置同步處理程式和外部登錄模組。
-1. 如果需要，請在Java™ VM中安裝SSL證書。 此安裝可通過使用keytool完成：
+1. 檢查 **使用SSL** 或 **使用TLS** 核取方塊 [LDAP身分提供者](#configuring-the-ldap-identity-provider).
+1. 根據您的設定，設定同步處理常式和外部登入模組。
+1. 視需要在Java™ VM中安裝SSL憑證。 您可以使用keytool完成此安裝：
 
    `keytool -import -alias localCA -file <certificate location> -keystore <keystore location>`
 
-1. Test到LDAP伺服器的連接。
+1. 測試與LDAP伺服器的連線。
 
-### 建立SSL證書 {#creating-ssl-certificates}
+### 建立SSL憑證 {#creating-ssl-certificates}
 
-通過SSL配置到LDAP驗證時，可AEM以使用自簽名證書。 下面是生成用於的證書的工作過程示例AEM。
+設定AEM透過SSL以LDAP驗證時，可以使用自我簽署憑證。 以下是產生憑證以與AEM搭配使用的工作程式範例。
 
-1. 確保已安裝並正在運行SSL庫。 此過程以OpenSSL為例。
+1. 請確定您已安裝並運作SSL程式庫。 此程式使用OpenSSL作為範例。
 
-1. 建立自定義的OpenSSL配置(cnf)檔案。 可以通過複製預設的**openssl.cnf **配置檔案並自定義它來完成此配置。 在UNIX®系統上，它位於 `/usr/lib/ssl/openssl.cnf`
+1. 建立自訂的OpenSSL設定(cnf)檔案。 此設定可透過複製預設**openssl.cnf**設定檔案並自訂它來完成。 在UNIX®系統上，它位於 `/usr/lib/ssl/openssl.cnf`
 
-1. 通過在終端中運行以下命令，繼續建立CA根鍵：
+1. 在終端機中執行下列命令，繼續建立CA根金鑰：
 
    ```
    openssl genpkey -algorithm [public key algorithm] -out certificatefile.key -pkeyopt [public key algorithm option]
    ```
 
-1. 接下來，建立自簽名證書：
+1. 接下來，建立自我簽署憑證：
 
    `openssl req -new -x509 -days [number of days for certification] -key certificatefile.key -out root-ca.crt -config CA/openssl.cnf`
 
-1. 要確保一切正常，請檢查新生成的證書：
+1. 若要確定一切正常，請檢查新產生的憑證：
 
    `openssl x509 -noout -text -in root-ca.crt`
 
-1. 確保證書配置(.cnf)檔案中指定的所有資料夾都存在。 否則，建立它們。
-1. 通過運行(例如：
+1. 請確定憑證設定(.cnf)檔案中指定的所有資料夾都存在。 如果沒有，請建立它們。
+1. 建立隨機種子，例如透過執行：
 
    `openssl rand -out private/.rand 8192`
 
-1. 將建立的.pem檔案移動到.cnf檔案中配置的位置。
+1. 將建立的.pem檔案移動到.cnf檔案中設定的位置。
 
-1. 最後，將證書添加到Java™密鑰庫。
+1. 最後，將憑證新增至Java™金鑰存放區。
 
-## 啟用調試日誌記錄 {#enabling-debug-logging}
+## 啟用偵錯記錄 {#enabling-debug-logging}
 
-可以為LDAP身份提供程式和外部登錄模組啟用調試日誌記錄以解決連接問題。
+LDAP身分提供者和外部登入模組都可以啟用偵錯記錄，以疑難排解連線問題。
 
-要啟用調試日誌記錄，必須執行以下操作：
+若要啟用偵錯記錄，您必須執行下列動作：
 
-1. 轉到Web管理控制台。
-1. 查找「Apache Sling日誌記錄記錄器配置」，並建立兩個具有以下選項的記錄器：
+1. 前往「Web管理主控台」。
+1. 找到「Apache Sling記錄器設定」並使用以下選項建立兩個記錄器：
 
-* 日誌級別：調試
-* 日誌檔案logs/ldap.log
-* 消息模式：{0，日期，dd.MM.yyyy HH:mm:ss.SSS}&amp;ast;{4}&amp;ast;{2} {3} {5}
-* 記錄器：org.apache.jackrabbit.oak.security.authentication.ldap
+* 記錄層級：偵錯
+* 記錄檔logs/ldap.log
+* 訊息模式： {0，date，dd.MM.yyyy HH:mm:ss.SSS} &amp;ast；{4}&amp;ast； {2} {3} {5}
+* 記錄器： org.apache.jackrabbit.oak.security.authentication.ldap
 
-* 日誌級別：調試
-* 日誌檔案：logs/external.log
-* 消息模式：{0，日期，dd.MM.yyyy HH:mm:ss.SSS}&amp;ast;{4}&amp;ast;{2} {3} {5}
-* 記錄器：org.apache.jackrabbit.oak.spi.security.authentication.external
+* 記錄層級：偵錯
+* 記錄檔：logs/external.log
+* 訊息模式： {0，date，dd.MM.yyyy HH:mm:ss.SSS} &amp;ast；{4}&amp;ast； {2} {3} {5}
+* 記錄器： org.apache.jackrabbit.oak.spi.security.authentication.external
 
-## 關於群體隸屬關係 {#a-word-on-group-affiliation}
+## 關於群組從屬關係的一句話 {#a-word-on-group-affiliation}
 
-通過LDAP同步的用戶可以是中不同組的一AEM部分。 這些組可以是作為同步過程的一部分添加AEM到的外部LDAP組。 但是，它們也可以是單獨添加的組，並且不是原始LDAP組隸屬方案的一部分。
+透過LDAP同步的使用者可以屬於AEM中的不同群組。 這些群組可以是外部LDAP群組，這些群組會作為同步程式的一部分新增到AEM。 但是，它們也可以是單獨新增的群組，而不是原始LDAP群組從屬關係方案的一部分。
 
-通常，這些組由本地管理員或AEM任何其他身份提供程式添加。
+通常，這些群組是由本機AEM管理員或任何其他身分提供者所新增。
 
-如果從LDAP伺服器上的組中刪除用戶，則同步時會在一AEM側反映更改。 但是，未由LDAP添加的用戶的所有其他組從屬關係仍然有效。
+如果從LDAP伺服器上的群組移除使用者，則同步處理時變更會反映在AEM端。 但是，使用者未由LDAP新增的所有其他群組關聯仍會保留在原處。
 
-通過AEM使用 `rep:externalId` 屬性。 此屬性將自動添加到同步處理程式同步的任何用戶或組，並包含有關原始身份提供程式的資訊。
+AEM會使用，偵測並處理使用者從外部群組中清除作業。 `rep:externalId` 屬性。 此屬性會自動新增至同步處理常式同步的任何使用者或群組，且包含原始身分提供者的相關資訊。
 
-請參閱上的Apache Oak文檔 [用戶和組同步](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html)。
+請參閱Apache Oak檔案於 [使用者和群組同步](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html).
 
 ## 已知問題 {#known-issues}
 
-如果計畫通過SSL使用LDAP，請確保建立您使用的證書時沒有使用Netscape注釋選項。 如果啟用此選項，驗證將失敗，並出現SSL握手錯誤。
+如果您打算使用LDAP over SSL，請確定您使用的憑證是在沒有Netscape註解選項的情況下建立的。 如果啟用此選項，驗證會失敗並出現SSL交握錯誤。

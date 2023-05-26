@@ -1,7 +1,7 @@
 ---
-title: Acrobat Reader DC擴展服務Java API快速啟動(SOAP)
+title: Acrobat Reader DC擴充功能ServiceJava API快速入門(SOAP)
 seo-title: Acrobat Reader DC extensions ServiceJava API Quick Start(SOAP)
-description: 使用Acrobat Reader DC擴展服務可以對PDF文檔應用使用權限，從PDF文檔中刪除使用權限，並檢索有關用於對名為LoanUsageRights.pdf的啟用了權限的PDF文檔應用使用權限的憑據的資訊。
+description: 使用Acrobat Reader DC Extensions服務將使用許可權套用至PDF檔案、從PDF檔案移除使用許可權，以及擷取用來將使用許可權套用至名為LoanUsageRights.pdf且已啟用許可權的PDF檔案的認證相關資訊。
 seo-description: Use the  Acrobat Reader DC Extensions service to apply usage rights to a PDF document, remove usage rights from PDF documents, and retrieve  information about the credential that is used to apply usage-rights to a rights-enabled PDF document named LoanUsageRights.pdf.
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
 contentOwner: admin
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 ---
 
-# Acrobat Reader DC擴展服務Java API快速啟動(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
+# Acrobat Reader DC擴充功能ServiceJava API快速入門(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-以下快速啟動可用於Acrobat Reader DC分機服務。
+Acrobat Reader DC擴充功能服務提供下列快速入門功能。
 
-[快速啟動（SOAP模式）：使用Java API應用使用權限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API套用使用許可權](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
-[從PDF文檔中刪除使用權限](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
+[從PDF檔案中移除使用許可權](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
-[快速啟動（SOAP模式）:使用Java API檢索憑據資訊](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API擷取認證資訊](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
-AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定為SOAP。
+AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
 >[!NOTE]
 >
->「Quick Starts（快速入門）」位於「Programming withAEM Forms」(與Forms一起寫程式)」中，它基於伺服器作業系統。 但是，如果您使用的是其他作業系統，如UNIX，則用適用作業系統支援的路徑替換Windows特定路徑。 同樣，如果您使用的是另一個J2EE應用程式伺服器，請確保指定有效的連接屬性。 請參閱 [設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>「使用AEM Forms進行程式設計」中的「快速入門」是以Forms伺服器作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請以適用的作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速啟動（SOAP模式）：使用Java API應用使用權限 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API套用使用許可權 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-以下Java代碼示例將使用權限應用於名為 *Loan.pdf*。 啟用權限的PDF文檔另存為名為 *LoanUsageRights.pdf*。 以下使用權限應用於此PDF文檔： `enabledComments`。 `enabledFormFillIn`, `enabledDigitalSignatures`。 (請參閱 [將使用權限應用於PDF文檔](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java程式碼範例會將使用許可權套用至名為的PDF檔案 *Loan.pdf*. 啟用許可權的PDF檔案會儲存為名為的PDF檔案 *LoanUsageRights.pdf*. 以下使用許可權已套用至此PDF檔案： `enabledComments`， `enabledFormFillIn`、和 `enabledDigitalSignatures`. (請參閱 [將使用許可權套用至PDF檔案](/help/forms/developing/assigning-usage-rights.md).)
 
 
 ```java
@@ -145,9 +145,9 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
   
 ```
 
-## 快速啟動（SOAP模式）:使用Java API從PDF文檔中刪除使用權限 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API從PDF檔案中移除使用許可權 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
-以下Java代碼示例從名為「Java Decument」的啟用了權限的PDF文檔中刪除使用權限 *LoanUsageRights.pdf*。 (請參閱 [從PDF文檔中刪除使用權限](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java程式碼範例會從名為的已啟用許可權的PDF檔案中移除使用許可權 *LoanUsageRights.pdf*. (請參閱 [從PDF檔案中移除使用許可權](/help/forms/developing/assigning-usage-rights.md).)
 
 ```java
  /* 
@@ -245,9 +245,9 @@ AEM Forms操作可以使用AEM Forms強類型API執行，連接模式應設定�
  
 ```
 
-## 快速啟動（SOAP模式）:使用Java API檢索憑據資訊 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API擷取認證資訊 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-以下Java代碼示例檢索有關用於將使用權限應用於名為的啟用權限的PDF文檔的憑據的資訊 *LoanUsageRights.pdf*。 (請參閱 [正在檢索憑據資訊](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java程式碼範例會擷取用來將使用許可權套用至名為的已啟用許可權的PDF檔案的認證相關資訊 *LoanUsageRights.pdf*. (請參閱 [正在擷取認證資訊](/help/forms/developing/assigning-usage-rights.md).)
 
 ```java
  /* 

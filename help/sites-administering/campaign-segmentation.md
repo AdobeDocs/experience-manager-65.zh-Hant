@@ -1,7 +1,7 @@
 ---
-title: 配置分段
+title: 設定分段
 seo-title: Configuring Segmentation
-description: 瞭解如何為市場活動配AEM置細分。
+description: 瞭解如何設定AEM Campaign的分段。
 seo-description: Learn how to configure segmentation for AEM Campaign.
 uuid: 604ca34d-cdb9-49ff-8f75-02a44b60a8a2
 contentOwner: msm-service
@@ -18,178 +18,178 @@ ht-degree: 2%
 
 ---
 
-# 配置分段 {#configuring-segmentation}
+# 設定分段 {#configuring-segmentation}
 
 >[!NOTE]
 >
->本文檔介紹與客戶端上下文一起使用的分段配置。 要使用觸摸UI配置ContextHub的段，請參閱 [使用ContextHub配置分段](/help/sites-administering/segmentation.md)。
+>本文介紹與Client Context搭配使用之區段的設定。 若要使用觸控式UI以ContextHub設定區段，請參閱 [使用ContextHub設定分段](/help/sites-administering/segmentation.md).
 
-細分是建立市場活動時的一個關鍵考慮因素。 請參閱 [分詞術語表](/help/sites-authoring/segmentation-overview.md) 分段的工作原理和關鍵術語。
+區段是建立行銷活動時的主要考量事項。 另請參閱 [區段字彙表](/help/sites-authoring/segmentation-overview.md) 區段運作方式和主要術語的相關資訊。
 
-根據您已經收集到的有關站點訪問者的資訊以及您想要實現的目標，您需要定義目標內容所需的段和策略。
+根據您已收集到的網站訪客相關資訊以及您想要達成的目標，您將需要定義目標內容所需的區段和策略。
 
-然後，這些段被用於向訪問者提供特定的目標內容。 此內容在 [市場活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md) 的下界。 此處定義的預告頁面可以作為預告段落包含在任何頁面上，並定義專用內容適用的訪問者段。
+然後會使用這些區段來向訪客提供特別鎖定的目標內容。 此內容維護於 [行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md) 網站區段。 此處定義的Teaser頁面可包含在任何頁面上作為Teaser段落，並定義專用內容適用於的訪客區段。
 
-使AEM您可以輕鬆建立和更新段、預告和市場活動。 它還允許您驗證定義的結果。
+AEM可讓您輕鬆建立和更新區段、Teaser和行銷活動。 它也可讓您驗證定義的結果。
 
-的 **段編輯器** 允許您輕鬆定義段：
+此 **區段編輯器** 可讓您輕鬆定義區段：
 
 ![](assets/segmenteditor.png)
 
-你可以 **編輯** 要指定的每個段 **標題**。 **說明** 和 **提升** 因素。 使用可添加的幫手 **和** 和 **或** 要定義的容器 **段邏輯**，然後添加所需的 **分段特徵** 的子菜單。
+您可以 **編輯** 每個區段以指定 **標題**， **說明** 和 **提升** 因數。 使用您可以新增的Sidekick **和** 和 **或** 容器以定義 **區段邏輯**，然後新增必要的 **區段特徵** 以定義選取條件。
 
-## 提升因子 {#boost-factor}
+## 提升因數 {#boost-factor}
 
-每段 **提升** 權因子的參數；數字越大，表示將優先選擇數字越小的段。
+每個區段都有 **提升** 用作加權因數的引數；數字越高表示會優先選取區段，而非數字越低的區段。
 
 * 最小值： `0`
 * 最大值： `1000000`
 
-## 段邏輯 {#segment-logic}
+## 區段邏輯 {#segment-logic}
 
-以下邏輯容器是現成的，允許您構造段選擇的邏輯。 它們可以從旁邊拖到編輯器：
+下列邏輯容器可立即使用，讓您建構區段選取的邏輯。 他們可從副手拖曳到編輯者：
 
 <table>
  <tbody>
   <tr>
    <td> AND 容器<br /> </td>
-   <td> 布爾AND運算子。<br /> </td>
+   <td> 布林值AND運運算元。<br /> </td>
   </tr>
   <tr>
    <td> OR 容器<br /> </td>
-   <td> 布爾OR運算子。</td>
+   <td> 布林值OR運運算元。</td>
   </tr>
  </tbody>
 </table>
 
-## 分段特徵 {#segment-traits}
+## 區段特徵 {#segment-traits}
 
-以下片段特徵是現成的；可將它們從旁邊拖到編輯：
+下列區段特徵是現成可用的功能；可將它們從Sidekick拖曳至編輯器：
 
 <table>
  <tbody>
   <tr>
    <td> IP 範圍<br /> </td>
-   <td>定義訪問者可以擁有的IP地址範圍。<br /> </td>
+   <td>定義訪客可擁有的IP位址範圍。<br /> </td>
   </tr>
   <tr>
    <td> 頁面點擊<br /> </td>
-   <td>請求頁面的頻率。 <br /> </td>
+   <td>要求頁面的頻率。 <br /> </td>
   </tr>
   <tr>
    <td> 頁面屬性<br /> </td>
-   <td>已訪問頁面的任何屬性。<br /> </td>
+   <td>造訪頁面的任何屬性。<br /> </td>
   </tr>
   <tr>
    <td> 引用關鍵字<br /> </td>
-   <td>與引用網站中的資訊匹配的關鍵字。 <br /> </td>
+   <td>與反向連結網站資訊相符的關鍵字。 <br /> </td>
   </tr>
   <tr>
    <td> 指令碼</td>
-   <td>要計算的Javascript表達式。<br /> </td>
+   <td>要評估的Javascript運算式。<br /> </td>
   </tr>
   <tr>
    <td> 區段引用 <br /> </td>
-   <td>引用另一段定義。<br /> </td>
+   <td>參考其他區段定義。<br /> </td>
   </tr>
   <tr>
    <td> 標記雲<br /> </td>
-   <td>要與訪問的頁面中的標籤匹配的標籤。<br /> </td>
+   <td>與瀏覽頁面標籤進行比對的標籤。<br /> </td>
   </tr>
   <tr>
    <td> 使用者年齡<br /> </td>
-   <td>從用戶配置檔案中取出。<br /> </td>
+   <td>從使用者設定檔中擷取。<br /> </td>
   </tr>
   <tr>
    <td> 使用者屬性<br /> </td>
-   <td>用戶配置檔案中提供的任何其他資訊。 </td>
+   <td>使用者設定檔中可用的任何其他資訊。 </td>
   </tr>
  </tbody>
 </table>
 
-可以使用布爾運算子OR和AND組合這些特徵(請參見 [建立新段](#creating-a-new-segment))以定義選擇此段的確切方案。
+您可以使用布林運運算元OR和AND來結合這些特徵(請參閱 [建立新區段](#creating-a-new-segment))，以定義選取此區段的確切案例。
 
-當整個語句的計算結果為true時，此段已解析。 倘多個分段適用，則 **[提升](/help/sites-administering/campaign-segmentation.md#boost-factor)** 也使用因子。
+當整個陳述式評估為true時，表示此區段已解決。 如果適用多個區段，則 **[提升](/help/sites-administering/campaign-segmentation.md#boost-factor)** 也會使用因數。
 
 >[!CAUTION]
 >
->段編輯器不檢查是否有任何循環引用。 例如，段A參照另一段B，該段B又參照段A。必須確保段不包含任何循環參照。
+>區段編輯器不會檢查任何循環引用。 例如，區段A參照另一個區段B，而後者又參照區段A。您必須確保區段不包含任何循環參照。
 
 >[!NOTE]
 >
->具有 **_i18n** 尾碼由作為個性化的UI客戶端庫的一部分的指令碼設定。 只有在發佈時不需要UI，才會在作者上載入所有與UI相關的客戶端。
+>具有的屬性 **_i18n** 字尾由指令碼設定，此指令碼是個人化UI clientlib的一部分。 所有與UI相關的clientlib都只在作者上載入，因為發佈時不需要使用UI。
 >
->因此，在建立具有這些屬性的段時，通常需要依賴 **瀏覽器系列** 例如， **browserFamily_i18n**。
+>因此，使用這類屬性建立區段時，通常需要依賴 **browserFamily** 例如，而非 **browserFamily_i18n**.
 
-### 建立新段 {#creating-a-new-segment}
+### 建立新區段 {#creating-a-new-segment}
 
-要定義新段，請執行以下操作：
+若要定義新區段，請執行下列動作：
 
-1. 在鐵軌中，選擇 **工具>操作>配置**。
-1. 按一下 **分段** 的子菜單。
-1. 建立 [新頁](/help/sites-authoring/editing-content.md#creatinganewpage) 使用 **段** 的下界。
-1. 開啟新頁面以查看段編輯器：
+1. 在邊欄中，選擇 **「工具」>「作業」>「組態」**.
+1. 按一下 **細分** 頁面，並導覽至所需位置。
+1. 建立 [新頁面](/help/sites-authoring/editing-content.md#creatinganewpage) 使用 **區段** 範本。
+1. 開啟新頁面以檢視區段編輯器：
 
    ![](assets/screen_shot_2012-02-02at101726am.png)
 
-1. 使用邊框或上下文菜單(通常按一下右鍵，然後選擇 **新建……** 開啟「插入新元件」窗口)以查找所需的段特性。 然後將其拖到 **段編輯器** 將顯示在預設 **和** 容器。
-1. 按兩下新特徵編輯特定參數；例如滑鼠位置：
+1. 使用sidekick或內容功能表(通常是按一下滑鼠右鍵，然後選取 **新增……** 以開啟「插入新元件」視窗)來尋找所需的區段特徵。 然後將其拖曳至 **區段編輯器** 它將顯示在預設值 **和** 容器。
+1. 連按兩下新特徵以編輯特定引數；例如滑鼠位置：
 
    ![](assets/screen_shot_2012-02-02at103135am.png)
 
-1. 按一下 **確定** 保存定義：
-1. 你可以 **編輯** 段定義，以給它 **標題**。 **說明** 和 **[提升](#boost-factor)** 系數：
+1. 按一下 **確定** 若要儲存您的定義：
+1. 您可以 **編輯** 為其賦予「 」的區段定義 **標題**， **說明** 和 **[提升](#boost-factor)** 因數：
 
    ![](assets/screen_shot_2012-02-02at103547am.png)
 
-1. 如果需要，添加更多特徵。 可以使用 **和容器** 和 **OR容器** 在 **段邏輯**。 使用段編輯器，您可以刪除不再需要的特徵或容器，或將它們拖到語句中的新位置。
+1. 視需要新增更多特徵。 您可以使用 **AND容器** 和 **OR容器** 在以下位置找到元件： **區段邏輯**. 使用區段編輯器，您可以刪除不再需要的特徵或容器，或將它們拖曳至陳述式中的新位置。
 
 ### 使用AND和OR容器 {#using-and-and-or-containers}
 
-可在中構建複雜段AEM。 瞭解以下幾個基本要點有助於：
+您可以在AEM中建構複雜的區段。 瞭解一些基本要點會有所幫助：
 
-* 定義的頂層始終是最初建立的AND容器；不能更改，但對段定義的其餘部分沒有影響。
-* 確保將容器嵌套是合理的。 容器可以作為布爾表達式的括弧來查看。
+* 定義的頂層一律為最初建立的AND容器；這無法變更，但不會影響區段定義的其餘部分。
+* 確定容器的巢狀內嵌有意義。 容器可視為布林運算式的括弧。
 
-以下示例用於選擇以下任一訪問者：
+下列範例可用來選取符合下列任一條件的訪客：
 
-男，16至65歲
+男性及16至65歲
 
 或
 
-女性，16至62歲
+女性及16至62歲
 
-由於主運算子為OR，因此您需要從 **OR容器**。 在此內，您有2個AND語句，對於每個語句，您都需要 **和容器**&#x200B;可以添加個性特徵。
+由於主要運運算元為OR，因此您需要以 **OR容器**. 其中您有2個AND陳述式，對於每個陳述式，您都需要 **AND容器**，即可將個別特徵新增至其中。
 
 ![](assets/screen_shot_2012-02-02at105145am.png)
 
-## 測試段的應用 {#testing-the-application-of-a-segment}
+## 測試區段的應用 {#testing-the-application-of-a-segment}
 
-定義該段後，可借助 **[客戶端上下文](/help/sites-administering/client-context.md)**:
+定義區段後，可透過以下說明測試潛在結果 **[使用者端內容](/help/sites-administering/client-context.md)**：
 
-1. 選擇要測試的段。
-1. 按 **[Ctrl-Alt-C](/help/sites-authoring/page-authoring.md#keyboardshortcuts)** 開啟 **[客戶端上下文](/help/sites-administering/client-context.md)**，顯示已收集的資料。 為了測試目的，您可以 **編輯** 某些值，或 **載入** 另一個配置檔案，以查看其影響。
+1. 選取要測試的區段。
+1. 按下 **[Ctrl-Alt-C](/help/sites-authoring/page-authoring.md#keyboardshortcuts)** 以開啟 **[使用者端內容](/help/sites-administering/client-context.md)**，其中會顯示已收集的資料。 為了測試目的，您可以 **編輯** 特定值，或 **載入** 另一個設定檔以檢視那裡的影響。
 
-1. 根據定義的特性，當前頁可用的資料可能與段定義不匹配。 匹配狀態顯示在定義下面。
+1. 根據定義的特徵，目前頁面的可用資料可能與區段定義相符，也可能不相符。 相符的狀態會顯示在定義下方。
 
-例如，簡單的段定義可以基於用戶的年齡和性別。 載入特定配置檔案表明已成功解析段：
+例如，簡單的區段定義可以根據使用者的年齡和性別。 載入特定設定檔會顯示已成功解析區段：
 
 ![](assets/screen_shot_2012-02-02at105926am.png)
 
-或者不是：
+或非：
 
 ![](assets/screen_shot_2012-02-02at110019am.png)
 
 >[!NOTE]
 >
->所有特徵都會立即解析，儘管大多數情況只在重新載入頁面時更改。 對滑鼠位置的更改可立即顯示，因此對於測試目的非常有用。
+>所有特徵都會立即解析，但大多數只會隨著頁面重新載入而改變。 滑鼠位置的變更會立即顯示，因此可用於測試目的。
 
-這種test也可以在內容頁面上和與 **預告** 元件。
+此類測試也可在內容頁面上執行，並結合 **Teaser** 元件。
 
-預告段落上的滑鼠懸停將顯示所應用的段，無論這些段當前是否已解決，因此，當前預告實例為何已被選擇：
+在Teaser段落上滑鼠懸停會顯示套用的區段、這些區段目前是否解析，以及選取目前Teaser例項的原因：
 
 ![](assets/chlimage_1-47.png)
 
-### 使用段 {#using-your-segment}
+### 使用您的區段 {#using-your-segment}
 
-段當前在 [市場活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)。 它們用於指導特定目標受眾看到的實際內容。 請參閱 [瞭解段](/help/sites-authoring/segmentation-overview.md) 的子菜單。
+區段目前使用於 [行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md). 它們可用來控制特定目標對象看到的實際內容。 另請參閱 [瞭解區段](/help/sites-authoring/segmentation-overview.md) 以取得詳細資訊。

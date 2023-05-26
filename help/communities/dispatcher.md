@@ -1,7 +1,7 @@
 ---
-title: 為社區配置調度程式
+title: 為社群設定Dispatcher
 seo-title: Configuring Dispatcher for Communities
-description: 為AEM Communities配置調度程式
+description: 設定AEM Communities的Dispatcher
 seo-description: Configure the dispatcher for AEM Communities
 uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
 contentOwner: msm-service
@@ -17,83 +17,83 @@ ht-degree: 10%
 
 ---
 
-# 為社區配置調度程式 {#configuring-dispatcher-for-communities}
+# 為社群設定Dispatcher {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
-對於AEM Communities，必須配置調度程式，以確保 [社區站點](overview.md#community-sites)。 當包括社交登錄等功能時，需要進行其他配置。
+對於AEM Communities，必須設定Dispatcher以確保的正常運作 [社群網站](overview.md#community-sites). 包含社交登入等功能時，需要其他設定。
 
-瞭解特定部署和站點設計所需的內容
+瞭解您的特定部署和網站設計所需的專案
 
 * 聯絡[客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html)
 
-另請參閱主 [調度程式文檔](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
+另請參閱主要 [Dispatcher檔案](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
 
-## 調度程式快取 {#dispatcher-caching}
+## Dispatcher快取 {#dispatcher-caching}
 
 ### 概觀 {#overview}
 
-Dispatcher caching forAEM Communities是調度程式為社區站點頁面的完全快取版本提供服務的能力。
+AEM Communities的Dispatcher快取可讓Dispatcher提供社群網站頁面的完整快取版本。
 
-目前，僅對匿名站點訪問者（如瀏覽社區站點或由於搜索而在社區頁面上著陸的用戶）以及索引頁面的搜索引擎提供支援。 其好處是匿名用戶和搜索引擎將體驗到改進的效能。
+目前，它僅支援匿名網站訪客，例如瀏覽社群網站或因搜尋而登陸社群頁面的使用者，以及索引頁面的搜尋引擎。 其好處是匿名使用者和搜尋引擎將會體驗到效能的改善。
 
-對於登錄成員，調度程式繞過快取，直接將請求中繼到發佈者，這樣所有頁面都可動態生成和傳送。
+對於已登入的成員，Dispatcher會略過快取，直接將請求轉送給發佈者，以便動態產生並傳送所有頁面。
 
-當配置為支援調度程式快取時，基於TTL的「最大時間」過期將添加到報頭，以確保調度程式快取頁是最新的。
+設定為支援Dispatcher快取時，會將TTL型「最大期限」到期日新增到標頭，以確保Dispatcher快取頁面為最新版本。
 
 ### 要求 {#requirements}
 
-* Dispatcher 4.1.2或更高版本(請參見 [正在安裝Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) )
-* [ACS公AEM域包](https://adobe-consulting-services.github.io/acs-aem-commons/)
+* Dispatcher版本4.1.2或更新版本(請參閱 [安裝Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) （最新版本）
+* [ACS AEM Commons套件](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
-   * 3.3.2版或更高版本
-   * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi配置
+   * 版本3.3.2或更新版本
+   * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi設定
 
 ### 設定 {#configuration}
 
-OSGi配置 **ACS公AEM域 — Dispatcher快取控制標頭 — 最大使用期** 設定在指定路徑下出現的快取頁的過期時間。
+OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定出現在指定路徑下的快取頁面的到期日。
 
-* 從 [Web控制台](../../help/sites-deploying/configuring-osgi.md)
+* 從 [網頁主控台](../../help/sites-deploying/configuring-osgi.md)
 
-   * 比如說， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 定位 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
-* 選擇「+」表徵圖以建立新連接配置
+* 尋找 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* 選取「+」圖示以建立新的連線設定
 
    ![Dispatcher ](assets/dispatcher.png)
 
 * **篩選模式**
 
-   *（必需）* 一個或多個到社區頁的路徑。 比如說， `/content/sites/engage/(.*)`。
+   *（必要）* 社群頁面的一或多個路徑。 例如， `/content/sites/engage/(.*)`.
 
-* **快取控制最大時間**
+* **Cache-Control Max Age**
 
-   *（必需）* 要添加到「快取控制」標頭的最大時間（以秒為單位）。 值必須大於零(0)。
+   *（必要）* 要新增至「快取控制」標頭的最長存留時間（以秒為單位）。 值必須大於零(0)。
 
-## 調度程式篩選器 {#dispatcher-filters}
+## Dispatcher篩選器 {#dispatcher-filters}
 
-的/filter部分 `dispatcher.any` 檔案記錄在 [配置對內容的訪問 — /filter](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html#filter)。
+的/filter區段 `dispatcher.any` 檔案記錄於 [設定對內容的存取權 — /filter](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
 
-本節介紹可能對社區功能正常運行所必需的條目。
+本節說明Communities功能正常運作可能需要的專案。
 
-篩選器屬性名稱遵循使用四位數字來指示應用篩選器模式的順序的慣例。 將多個篩選模式套用到一個請求時，最後一個套用的篩選模式會生效。因此，第一過濾模式通常用於拒絕所有內容，使得以下模式用於以受控方式恢復訪問。
+篩選屬性名稱會遵循使用四位數字來指示套用篩選模式的順序的慣例。 將多個篩選模式套用到一個請求時，最後一個套用的篩選模式會生效。因此，第一個篩選模式通常用於拒絕所有內容，使得以下模式用於以受控方式恢復存取。
 
-以下示例使用屬性名稱，這些屬性名稱可能需要修改以適合任何特定的dispatcher.any檔案。
+以下範例使用屬性名稱，這些名稱可能需要修改以適合任何特定的dispatcher.any檔案。
 
 另請參閱:
 
-* [調度程式安全核對表](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/security-checklist.html)
+* [Dispatcher安全性檢查清單](https://helpx.adobe.com/tw/experience-manager/dispatcher/using/security-checklist.html)
 
 >[!NOTE]
 >
->**屬性名稱示例**
->顯示的所有屬性名稱，如 **/0050** 和 **/0170**，應調整以適合現有dispatcher.any配置檔案。
+>**屬性名稱範例**
+>所有顯示的屬性名稱，例如 **/0050** 和 **/0170**，應進行調整，以符合現有的dispatcher.any設定檔案。
 
 >[!CAUTION]
 >
->請參閱 [Dispatcher 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)，了解使用 Dispatcher 限制存取時的更多考量事項。另外，閱讀 [安AEM全檢查清單](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) 有關安裝的其他安全詳AEM細資訊。
+>請參閱 [Dispatcher 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)，了解使用 Dispatcher 限制存取時的更多考量事項。此外，請閱讀 [AEM安全性檢查清單](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) 以取得關於您的AEM安裝的其他安全性詳細資訊。
 
-應將以下條目添加到/filter節的末尾，特別是所有拒絕條目之後。
+下列專案應新增至/filter區段的結尾，尤其是在所有拒絕專案之後。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -223,9 +223,9 @@ OSGi配置 **ACS公AEM域 — Dispatcher快取控制標頭 — 最大使用期**
 ```
 -->
 
-## 調度程式規則 {#dispatcher-rules}
+## Dispatcher規則 {#dispatcher-rules}
 
-的規則部分 `dispatcher.any` 定義應根據請求的URL快取哪些響應。 對於社區，規則部分用於定義不應快取的內容。
+的規則區段 `dispatcher.any` 根據請求的URL定義應該快取哪些回應。 對於Communities，規則區段用於定義絕不應快取的內容。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -273,13 +273,13 @@ OSGi配置 **ACS公AEM域 — Dispatcher快取控制標頭 — 最大使用期**
 
 ## 疑難排解 {#troubleshooting}
 
-一個主要問題是插入篩選器規則而不注意對早期規則的影響，特別是在添加規則以拒絕訪問時。
+問題的一個主要來源是在未留意對舊版規則的影響的情況下插入篩選規則，尤其是在新增拒絕存取的規則時。
 
-第一個過濾器模式通常用於拒絕所有內容，以便後續過濾器以受控方式恢復訪問。 當多個篩選器應用於一個請求時，應用的最後一個篩選器是有效的篩選器。
+第一個篩選模式通常用於拒絕所有內容，以便以下列篩選恢復以受控方式存取。 當一個請求套用多個篩選器時，最後一個套用的篩選器是生效的篩選器。
 
-## 調度程式示例.any {#sample-dispatcher-any}
+## 範例dispatcher.any {#sample-dispatcher-any}
 
-以下是示例 `dispatcher.any` 包含社區/篩選器和/rules的檔案。
+以下是範例 `dispatcher.any` 包含Communities /filters和/rules的檔案。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->

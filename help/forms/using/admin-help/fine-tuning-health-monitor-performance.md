@@ -1,7 +1,7 @@
 ---
-title: 微調運行狀況監視器效能
+title: 微調健康狀態監視器效能
 seo-title: Fine-tuning Health Monitor performance
-description: 瞭解如何微調運行狀況監視器效能
+description: 瞭解如何微調健康狀態監視器效能
 seo-description: Learn how to fine-tune Health Monitor performance
 uuid: 770b10cb-065f-41b5-9594-a291e4311151
 contentOwner: admin
@@ -17,9 +17,9 @@ ht-degree: 1%
 
 ---
 
-# 微調運行狀況監視器效能{#fine-tuning-health-monitor-performance}
+# 微調健康狀態監視器效能{#fine-tuning-health-monitor-performance}
 
-收集填充運行狀況監視器的系統統計資訊會對表單環境的效能AEM產生一定影響。 可通過在應用程式伺服器中設定下面列出的Java選項來控制此影響。
+收集系統統計資料以填入「健康情況監視」會對您的AEM Forms環境的效能造成一些影響。 若要控制此影響，請在應用程式伺服器中設定下列的Java選項。
 
 <table>
  <thead>
@@ -32,7 +32,7 @@ ht-degree: 1%
  <tbody>
   <tr>
    <td><p>adobe.healthmonitor.enabled</p></td>
-   <td><p>開啟或關閉運行狀況監視器線程</p></td>
+   <td><p>開啟或關閉健康情況監視器執行緒</p></td>
    <td><p>true</p></td>
   </tr>
   <tr>
@@ -42,53 +42,53 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><p>adobe.healthmonitor.refresh-interval</p></td>
-   <td><p>運行狀況監視器線程收集統計資訊的時間間隔（毫秒）</p></td>
+   <td><p>健康情況監視執行緒收集統計資料的間隔（毫秒）</p></td>
    <td><p>10分鐘（600,000毫秒）</p></td>
   </tr>
   <tr>
    <td><p>adobe.cache.multicast-port</p></td>
-   <td><p>用於與分佈式系統的其他成員通信的組播埠。 如果設定為零，則會禁用成員發現和分發的多播。 </p><p>注：為不同的分佈式系統選擇不同的多播地址和埠。 不要只使用不同的地址。</p></td>
-   <td><p>無預設值。 有效值範圍從0到65535。</p></td>
+   <td><p>用來與分散式系統的其他成員通訊的多點傳送連線埠。 如果設為0，會停用成員探索和散發的多點傳送。 </p><p>注意：請為不同的分散式系統選取不同的多點傳送位址和連線埠。 請勿僅使用不同的地址。</p></td>
+   <td><p>無預設值。 有效值的範圍介於0到65535之間。</p></td>
   </tr>
   <tr>
-   <td><p>統計採樣率</p></td>
-   <td><p>統計資訊採樣的速率（毫秒）。 只有在採集示例時才更新作業系統統計資訊。</p></td>
+   <td><p>statistic-sample-rate</p></td>
+   <td><p>統計資料取樣速率（毫秒）。 作業系統統計資料只會在取得範例時更新。</p></td>
    <td><p>600000</p></td>
   </tr>
   <tr>
    <td><p>adobe.workmanager.healthmonitor.enabled</p></td>
-   <td><p>此屬性啟用或禁用Work Manager統計資訊收集，如作業或工作項計數。</p></td>
+   <td><p>此屬性可啟用或停用Work Manager統計資料集合，例如工作或工作專案計數。</p></td>
    <td><p>true</p></td>
   </tr>
  </tbody>
 </table>
 
-## 將Java選項添加到JBoss {#add-java-options-to-jboss}
+## 將Java選項新增至JBoss {#add-java-options-to-jboss}
 
 1. 停止JBoss應用程式伺服器。
-1. 開啟 *[appserver根]*/bin/run.bat(Windows)或run.sh（Linux或UNIX），並根據需要添加任何Java選項。
+1. 開啟 *[appserver根目錄]*/bin/run.bat (Windows)或run.sh （Linux或UNIX），並視需要新增任何Java選項。
 1. 重新啟動伺服器。
 
-## 將Java選項添加到WebLogic {#add-java-options-to-weblogic}
+## 將Java選項新增至WebLogic {#add-java-options-to-weblogic}
 
-1. 鍵入https://啟動WebLogic管理控制台[主機名]: Web瀏覽器的URL行中的「port」/console。
-1. 鍵入您為WebLogic Server域建立的用戶名和密碼，然後按一下「更改中心」下的「日誌」，然後按一下「鎖定和編輯」。
-1. 在「域結構」下，按一下「環境」>「伺服器」，然後在右窗格中按一下受控伺服器名稱。
-1. 在下一螢幕中，按一下「配置」頁籤>「伺服器啟動」頁籤。
-1. 在「參數」框中，將所需參數追加到當前內容的末尾。 例如，添加 —  `Dadobe.healthmonitor.enabled=false` 禁用運行狀況監視器。
-1. 按一下「保存」，然後按一下「激活更改」。
-1. 重新啟動WebLogic托管伺服器。
+1. 輸入https://以啟動WebLogic管理主控台[主機名稱]：&#39;port&#39;/console （在網頁瀏覽器的URL行中）。
+1. 輸入您為WebLogic Server網域建立的使用者名稱和密碼，然後按一下「變更中心」下的「記錄」，再按一下「鎖定與編輯」。
+1. 在「網域結構」下，按一下「環境>伺服器」，然後在右窗格中按一下Managed伺服器名稱。
+1. 在下一個畫面中，按一下「設定」標籤>「伺服器啟動」標籤。
+1. 在「引數」方塊中，將所需的引數附加至目前內容的結尾。 例如，新增 —  `Dadobe.healthmonitor.enabled=false` 停用健康情況監視。
+1. 按一下儲存，然後按一下啟用變更。
+1. 重新啟動WebLogic管理的伺服器。
 
-## 將Java選項添加到WebSphere {#add-java-options-to-websphere}
+## 將Java選項新增至WebSphere {#add-java-options-to-websphere}
 
-1. 在WebSphere管理控制台導航樹中，為應用程式伺服器執行以下操作：
+1. 在「WebSphere管理主控台」導覽樹狀結構中，對您的應用程式伺服器執行下列動作：
 
-   (WebSphere 6.x)按一下「伺服器」>「應用程式伺服器」
+   (WebSphere 6.x)按一下「伺服器>應用程式伺服器」
 
-   (WebSphere 7.x)按一下「伺服器」>「伺服器類型」>「WebSphere應用程式伺服器」
+   (WebSphere 7.x)按一下「伺服器>伺服器型別> WebSphere應用程式伺服器」
 
 1. 在右窗格中，按一下伺服器名稱。
-1. 在「伺服器基礎架構」下，按一下「Java」和「表單」工作流>「進程定義」。
-1. 在「其他屬性」下，按一下「Java虛擬機」。
-1. 在「一般JVM參數」框中，鍵入所需的參數。
-1. 按一下「確定」或「應用」，然後直接按一下「保存」到主配置。
+1. 在「伺服器基礎結構」下，按一下「Java和表單工作流程>程式定義」。
+1. 在「其他屬性」下，按一下「Java虛擬機器器」。
+1. 在「一般JVM引數」方塊中，輸入所需的引數。
+1. 按一下「確定」或「套用」，然後按一下「直接儲存至主組態」。

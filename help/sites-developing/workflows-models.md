@@ -1,7 +1,7 @@
 ---
 title: 建立工作流模型
 seo-title: Creating Workflow Models
-description: 您可以建立工作流模型，以定義用戶啟動工作流時執行的一系列步驟。
+description: 您可以建立工作流程模型，以定義使用者啟動工作流程時所執行的一系列步驟。
 seo-description: You create a workflow model to define the series of steps executed when a user starts the workflow.
 uuid: 31071d3a-d6d5-4476-9ac0-7b335de406d9
 contentOwner: User
@@ -22,230 +22,230 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->要使用經典UI，請參閱 [AEM 6.3文檔](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/workflows-models.html) 的下界。
+>若要使用傳統UI，請參閱 [AEM 6.3檔案](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/workflows-models.html) 以供參考。
 
-建立 [工作流模型](/help/sites-developing/workflows.md#model) 定義用戶啟動工作流時執行的一系列步驟。 您還可以定義模型屬性，如工作流是瞬態的還是使用多個資源。
+您建立 [工作流程模型](/help/sites-developing/workflows.md#model) 定義使用者啟動工作流程時執行的一系列步驟。 您也可以定義模型屬性，例如工作流程是暫時的或使用多個資源。
 
-當用戶啟動工作流時，啟動一個實例；這是相應的運行時模型，建立時 [同步](#sync-your-workflow-generate-a-runtime-model) 您的更改。
+當使用者啟動工作流程時，會啟動執行個體；這是對應的執行階段模型，當您建立 [同步](#sync-your-workflow-generate-a-runtime-model) 您的變更。
 
-## 建立新工作流 {#creating-a-new-workflow}
+## 建立新工作流程 {#creating-a-new-workflow}
 
-首次建立新工作流模型時，它包含：
+第一次建立新的工作流程模型時，模型會包含：
 
-* 台階， **流啟動** 和 **流結束**。
-這些表示工作流的開始和結束。 這些步驟是必需的，無法編輯/刪除。
-* 一個例子 **參與者** 步驟命名 **步驟1**。
-此步驟配置為將工作項分配給工作流啟動器。 編輯或刪除此步驟，並根據需要添加步驟。
+* 步驟、 **流程開始** 和 **流程結束**.
+這些代表工作流程的開始和結束。 這些步驟為必要步驟，無法編輯/移除。
+* 範例 **參與者** 步驟已命名 **步驟1**.
+此步驟設定為指派工作專案給工作流程發起人。 編輯或刪除此步驟，並視需要新增步驟。
 
-要使用編輯器建立新工作流，請執行以下操作：
+使用編輯器建立新工作流程：
 
-1. 開啟 **工作流模型** 控制台；通過 **工具**。 **工作流**。 **模型** 或，例如： [https://localhost:4502/aem/workflow](https://localhost:4502/aem/workflow)
-1. 選擇 **建立**，則 **建立模型**。
-1. 的 **添加工作流模型** 對話框。 輸入 **標題** 和 **名稱** （可選），然後選擇 **完成**。
-1. 新模型列於 **工作流模型** 控制台。
-1. 選擇新工作流，然後使用 [**編輯** 開啟它以進行配置](#editinganexistingworkflow):
+1. 開啟 **工作流程模型** 主控台；透過 **工具**， **工作流程**， **模型** 或者，例如： [https://localhost:4502/aem/workflow](https://localhost:4502/aem/workflow)
+1. 選取 **建立**，則 **建立模型**.
+1. 此 **新增工作流程模型** 對話方塊隨即顯示。 輸入 **標題** 和 **名稱** （選擇性）在選取之前 **完成**.
+1. 新模型會列於 **工作流程模型** 主控台。
+1. 選取您的新工作流程，然後使用 [**編輯** 以開啟以進行設定](#editinganexistingworkflow)：
    ![wf-01](assets/wf-01.png)
 
 >[!NOTE]
 >
->如果以寫程式方式（使用crx包）建立模型，也可以在以下位置建立子資料夾：
+>如果以程式設計方式建立模型（使用crx套件），您也可以在中建立子資料夾：
 >
 >`/var/workflow/models`
 >
 >例如 `/var/workflow/models/prototypes`
 >
->此資料夾可用於 [管理對該資料夾中模型的訪問](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that)。
+>然後，此資料夾可用於 [管理對該資料夾中模型的存取權](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that).
 
-## 編輯工作流 {#editing-a-workflow}
+## 編輯工作流程 {#editing-a-workflow}
 
-您可以編輯任何現有工作流模型以：
+您可以編輯任何現有的工作流程模型，以便：
 
-* [定義步驟](#addingasteptoamodel-) 和 [參數](#configuring-a-workflow-step)
-* 配置工作流屬性，包括 [階段](#configuring-workflow-stages-that-show-workflow-progress)。 [工作流是否是瞬時的](#creatingatransientworkflow-) 和/或 [使用多個資源](#configuring-a-workflow-for-multi-resource-support)
+* [定義步驟](#addingasteptoamodel-) 及其 [引數](#configuring-a-workflow-step)
+* 設定工作流程屬性，包括 [階段](#configuring-workflow-stages-that-show-workflow-progress)， [工作流程是否為暫時性](#creatingatransientworkflow-) 和/或 [使用多個資源](#configuring-a-workflow-for-multi-resource-support)
 
-編輯 [**預設和/或舊版** （現成）工作流](#editing-a-default-or-legacy-workflow-for-the-first-time) 還有一步，以確保 [安全複製](/help/sites-developing/workflows-best-practices.md#locations-workflow-models) 在進行更改之前進行。
+編輯 [**預設及/或舊版** （現成可用）工作流程](#editing-a-default-or-legacy-workflow-for-the-first-time) 有額外步驟，以確保 [安全複製](/help/sites-developing/workflows-best-practices.md#locations-workflow-models) 會在您進行變更前完成。
 
-完成對工作流的更新後，必須使用 **同步** 至 **生成運行時模型**。 請參閱 [同步工作流](#sync-your-workflow-generate-a-runtime-model) 的雙曲餘切值。
+工作流程更新完成後，您必須使用 **同步** 至 **產生執行階段模型**. 另請參閱 [同步處理您的工作流程](#sync-your-workflow-generate-a-runtime-model) 以取得詳細資訊。
 
-### 同步工作流 — 生成運行時模型 {#sync-your-workflow-generate-a-runtime-model}
+### 同步工作流程 — 產生執行階段模型 {#sync-your-workflow-generate-a-runtime-model}
 
-**同步** （位於編輯器工具欄中）生成 [運行時模型](/help/sites-developing/workflows.md#runtime-model)。 運行時模型是用戶啟動工作流時實際使用的模型。 如果你不 **同步** 您所做的更改，則在運行時將不可用更改。
+**同步** （在編輯器工具列中的右側）產生 [執行階段模型](/help/sites-developing/workflows.md#runtime-model). 執行階段模型是使用者啟動工作流程時實際使用的模型。 如果您沒有 **同步** 如此一來，您所做的變更將無法在執行階段使用。
 
-當您（或任何其他用戶）對必須使用的工作流進行任何更改時 **同步** 生成運行時模型 — 即使單個對話框（例如，步驟）具有自己的保存選項。
+當您（或任何其他使用者）對您必須使用的工作流程進行變更時 **同步** 產生執行階段模型 — 即使個別對話方塊（例如，步驟）有自己的儲存選項。
 
-當更改與運行時（已保存）模型同步時， **同步** 的下界。
+當變更與執行階段（儲存的）模型同步化時， **已同步** 會改為顯示。
 
-某些步驟具有必需欄位和/或內置驗證。 當這些條件不滿足時，當您嘗試 **同步** 模型。 例如，當沒有為 **參與者** 步驟：
+某些步驟具有必填欄位和/或內建驗證。 當這些條件不滿足時，當您嘗試 **同步** 模型。 例如，當尚未為定義參與者時 **參與者** 步驟：
 
 ![wf-21](assets/wf-21.png)
 
-### 首次編輯預設或舊式工作流 {#editing-a-default-or-legacy-workflow-for-the-first-time}
+### 首次編輯預設或舊版工作流程 {#editing-a-default-or-legacy-workflow-for-the-first-time}
 
-開啟 [預設和/或舊模型](/help/sites-developing/workflows.md#workflow-types) 編輯：
+當您開啟 [預設和/或舊版模型](/help/sites-developing/workflows.md#workflow-types) 進行編輯：
 
-* 步驟瀏覽器不可用（左側）。
-* 有 **編輯** 工具欄（右側）中提供的操作。
-* 最初，模型及其屬性以只讀模式顯示為：
-   * 預設工作流位於 `/libs`
-   * 舊工作流位於 `/etc`
-選擇 
+* 步驟瀏覽器無法使用（左側）。
+* 有一個 **編輯** 動作（右側）。
+* 最初，模型及其屬性會以唯讀模式呈現為：
+   * 預設工作流程位於 `/libs`
+   * 舊版工作流程位於 `/etc`
+選取 
 **編輯** 將：
-* 將工作流的副本 `/conf`
-* 使「步驟」瀏覽器可用
-* 使您能夠進行更改
+* 將工作流程副本帶入 `/conf`
+* 讓步驟瀏覽器可供使用
+* 讓您進行變更
 
 >[!NOTE]
 >
->請參閱 [工作流模型的位置](/help/sites-developing/workflows-best-practices.md#locations-workflow-models) 的上界。
+>另請參閱 [工作流程模型的位置](/help/sites-developing/workflows-best-practices.md#locations-workflow-models) 以取得進一步資訊。
 
 ![wf-22](assets/wf-22.png)
 
-### 向模型添加步驟 {#adding-a-step-to-a-model}
+### 將步驟新增至模型 {#adding-a-step-to-a-model}
 
-您需要向模型中添加步驟來表示要執行的活動 — 每個步驟都執行特定的活動。 在標準實例中可以選擇步驟組AEM件。
+您需要將步驟新增至模型，以表示要執行的活動 — 每個步驟都會執行特定活動。 標準AEM例項中提供一系列步驟元件。
 
-編輯模型時，可用步驟將出現在 **步驟瀏覽器**。 例如：
+當您編輯模型時，可用的步驟會出現在 **步驟瀏覽器**. 例如：
 
 ![wf-10](assets/wf-10.png)
 
 >[!NOTE]
 >
->有關隨之安裝的主要步驟元件的信AEM息，請參見 [工作流步驟參考](/help/sites-developing/workflows-step-ref.md)。
+>如需搭配AEM安裝之主要步驟元件的相關資訊，請參閱 [工作流程步驟參考](/help/sites-developing/workflows-step-ref.md).
 
-要向工作流模型添加步驟：
+若要將步驟新增至工作流程模型：
 
-1. 開啟現有工作流模型進行編輯。 從 **工作流模型** 控制台，選擇所需型號， **編輯**。
-1. 開啟「步驟」瀏覽器；使用 **切換側面板**&#x200B;的上界。 您可以在這裡：
+1. 開啟現有的工作流程模型以進行編輯。 從 **工作流程模型** 主控台，選取所需的模式，然後 **編輯**.
+1. 開啟「步驟」瀏覽器；使用 **切換側面板**，位於頂端工具列的最左側。 您可以在這裡：
 
-   * **篩選** 的子菜單。
-   * 使用下拉選擇器將選擇限制為特定步驟組。
-   * 選擇「顯示說明」表徵圖 ![wf-stepinfo-icon](assets/wf-stepinfo-icon.png) 顯示有關相應步驟的詳細資訊。
+   * **篩選** 以取得特定步驟。
+   * 使用下拉式選擇器，將選取範圍限制在特定的步驟群組中。
+   * 選取顯示說明圖示 ![wf-stepinfo-icon](assets/wf-stepinfo-icon.png) 以顯示適當步驟的詳細資訊。
 
    ![wf-02](assets/wf-02.png)
 
-1. 將相應步驟拖至模型中所需的位置。
+1. 將適當的步驟拖曳到模型中的所需位置。
 
-   例如， **參與者步驟**。
+   例如， **參與者步驟**.
 
-   添加到流後，您可以 [配置步驟](#configuring-a-workflow-step)。
+   新增至流量後，您可以 [設定步驟](#configuring-a-workflow-step).
 
    ![wf-03](assets/wf-03.png)
 
-1. 根據需要添加多個步驟或其他更新。
+1. 視需要新增任意數量的步驟或其他更新。
 
-   在運行時，按步驟在模型中顯示的順序執行步驟。 添加步驟元件後，可將它們拖動到模型中的不同位置。
+   在執行階段，步驟會依照它們在模型中出現的順序執行。 新增步驟元件後，可將它們拖曳至模型中的不同位置。
 
-   您還可以複製、剪切、貼上、分組或刪除現有步驟；和 [的子菜單。](/help/sites-authoring/editing-content.md)
+   您也可以複製、剪下、貼上、分組或刪除現有步驟；就像使用 [頁面編輯器。](/help/sites-authoring/editing-content.md)
 
-   還可以使用工具欄選項折疊/展開拆分步驟： ![wf折疊展開工具欄表徵圖](assets/wf-collapseexpand-toolbar-icon.png)
+   也可以使用工具列選項摺疊/展開分割步驟： ![wf-collapseexpand-toolbar-icon](assets/wf-collapseexpand-toolbar-icon.png)
 
-1. 確認更改 **同步** （編輯器工具欄）以生成運行時模型。
+1. 確認變更，透過 **同步** （編輯器工具列）以產生執行階段模型。
 
-   請參閱 [同步工作流](#sync-your-workflow-generate-a-runtime-model) 的雙曲餘切值。
+   另請參閱 [同步處理您的工作流程](#sync-your-workflow-generate-a-runtime-model) 以取得詳細資訊。
 
-### 配置工作流步驟 {#configuring-a-workflow-step}
+### 設定工作流程步驟 {#configuring-a-workflow-step}
 
-你可以 **配置** 並使用 **步驟屬性** 對話框。
+您可以 **設定** 並使用自訂工作流程步驟的行為 **步驟屬性** 對話方塊。
 
-1. 開啟 **步驟屬性** 對話框，用於執行步驟之一：
+1. 若要開啟 **步驟屬性** 步驟的對話方塊：
 
-   * 按一下/點擊工作流模型中的* *步驟，然後選擇 **配置** 的子菜單。
+   * 按一下/點選工作流程模型中的* *步驟，然後選取 **設定** 元件工具列中的。
 
-   * 按兩下步驟。
+   * 在步驟上按兩下。
    >[!NOTE]
    >
-   >有關隨之安裝的主要步驟元件的信AEM息，請參見 [工作流步驟參考](/help/sites-developing/workflows-step-ref.md)。
+   >如需搭配AEM安裝之主要步驟元件的相關資訊，請參閱 [工作流程步驟參考](/help/sites-developing/workflows-step-ref.md).
 
-1. 配置 **步驟屬性** 按要求；可用屬性取決於步驟類型，也可能有幾個頁籤可用。 例如， **參與者步驟**，在新工作流中顯示為 `Step 1`:
+1. 設定 **步驟屬性** 視需要；可用的屬性取決於步驟型別，可能也有幾個可用的標籤。 例如，預設值 **參與者步驟**，在新工作流程中顯示為 `Step 1`：
 
    ![wf-11](assets/wf-11.png)
 
-1. 使用勾選符確認更新。
-1. 確認更改 **同步** （編輯器工具欄）以生成運行時模型。
+1. 使用勾號確認您的更新。
+1. 確認變更，透過 **同步** （編輯器工具列）以產生執行階段模型。
 
-   請參閱 [同步工作流](#sync-your-workflow-generate-a-runtime-model) 的雙曲餘切值。
+   另請參閱 [同步處理您的工作流程](#sync-your-workflow-generate-a-runtime-model) 以取得詳細資訊。
 
-### 建立臨時工作流 {#creating-a-transient-workflow}
+### 建立暫時性工作流程 {#creating-a-transient-workflow}
 
-可以建立 [瞬態](/help/sites-developing/workflows.md#transient-workflows) 建立新模型時或通過編輯現有模型時的工作流模型：
+您可以建立 [暫時性](/help/sites-developing/workflows.md#transient-workflows) 建立新模型或編輯現有模型時的工作流程模型：
 
-1. 開啟工作流模型 [編輯](#editinganexistingworkflow)。
-1. 選擇 **工作流模型屬性** 的子菜單。
-1. 在對話框中激活 **臨時工作流** (或在需要時停用：
+1. 開啟的工作流程模型 [編輯](#editinganexistingworkflow).
+1. 選取 **工作流程模型屬性** （從工具列）。
+1. 在對話方塊中啟動 **暫時性工作流程** （或視需要停用）：
 
    ![wf-07](assets/wf-07.png)
 
-1. 確認更改 **保存並關閉**;後跟 **同步** （編輯器工具欄）以生成運行時模型。
+1. 確認變更，透過 **儲存並關閉**；後面接著 **同步** （編輯器工具列）以產生執行階段模型。
 
-   請參閱 [同步工作流](#sync-your-workflow-generate-a-runtime-model) 的雙曲餘切值。
+   另請參閱 [同步處理您的工作流程](#sync-your-workflow-generate-a-runtime-model) 以取得詳細資訊。
 
 >[!NOTE]
 >
->在中運行工作流時 [瞬態](/help/sites-developing/workflows.md#transient-workflows) 模式AEM不儲存任何工作流歷史記錄。 所以， [時間軸](/help/sites-authoring/basic-handling.md#timeline) 不顯示與該工作流相關的任何資訊。
+>當您在中執行工作流程時 [暫時性](/help/sites-developing/workflows.md#transient-workflows) 模式AEM不會儲存任何工作流程歷史記錄。 因此， [時間表](/help/sites-authoring/basic-handling.md#timeline) 不會顯示與該工作流程相關的任何資訊。
 
-## 使工作流模型在Touch UI中可用 {#classic2touchui}
+## 讓工作流程模型可在觸控式UI中使用 {#classic2touchui}
 
-如果工作流模型在傳統用戶介面中存在，但在 **[!UICONTROL 時間軸]** 觸控UI，然後按照配置使其可用。 以下步驟說明了如何使用稱為 **[!UICONTROL 激活請求]**。
+如果傳統UI中出現工作流程模型，但在的選取彈出式選單中遺失 **[!UICONTROL 時間表]** 觸控式UI的邊欄，然後依照設定使其可用。 下列步驟說明如何使用名為的工作流程模型 **[!UICONTROL 請求啟用]**.
 
-1. 確認模型在啟用觸摸的用戶介面中不可用。 使用 `/assets.html/content/dam` 路徑。 選擇資產。 開啟 **[!UICONTROL 時間軸]** 左欄。 按一下 **[!UICONTROL 啟動工作流]** 並確認 **[!UICONTROL 激活請求]** 彈出式清單中不存在模型。
+1. 確認模型不適用於觸控式UI。 使用存取資產 `/assets.html/content/dam` 路徑。 選取資產。 開啟 **[!UICONTROL 時間表]** 在左側邊欄中。 按一下 **[!UICONTROL 開始工作流程]** 並確認 **[!UICONTROL 請求啟用]** 模型不存在於彈出式清單中。
 
-1. 瀏覽 **[!UICONTROL 工具>常規>標籤]**。 選擇 **[!UICONTROL 工作流]**。
+1. 瀏覽至 **[!UICONTROL 「工具」>「一般」>「標籤」]**. 選取 **[!UICONTROL 工作流程]**.
 
-1. 選擇 **[!UICONTROL 「建立」>「建立標籤」]**。 設定 **[!UICONTROL 標題]** 如 `DAM` 和 **[!UICONTROL 名稱]** 如 `dam`。 選擇 **[!UICONTROL 提交]**。
-   ![在工作流模型中建立標籤](assets/workflow_create_tag.png)
+1. 選取 **[!UICONTROL 「建立」>「建立標籤」]**. 設定 **[!UICONTROL 標題]** 作為 `DAM` 和 **[!UICONTROL 名稱]** 作為 `dam`. 選取 **[!UICONTROL 提交]**.
+   ![在工作流程模型中建立標籤](assets/workflow_create_tag.png)
 
-1. 導航到 **[!UICONTROL 工具>工作流>模型]**。 選擇 **[!UICONTROL 激活請求]**，然後選擇 **[!UICONTROL 編輯]**。
+1. 導覽至 **[!UICONTROL 「工具」>「工作流程」>「模型」]**. 選取 **[!UICONTROL 請求啟用]**，然後選取 **[!UICONTROL 編輯]**.
 
-1. 選擇 **[!UICONTROL 編輯]**，開啟 **[!UICONTROL 頁面資訊]** 菜單，然後從中選擇 **[!UICONTROL 開啟屬性]** 去 **[!UICONTROL 基本]** 頁籤（如果尚未開啟）。
+1. 選取 **[!UICONTROL 編輯]**，開啟 **[!UICONTROL 頁面資訊]** 功能表，然後從那裡選取 **[!UICONTROL 開啟屬性]** 並前往 **[!UICONTROL 基本]** 標籤（如果尚未開啟）。
 
-1. 添加 `Workflow : DAM` 至 **[!UICONTROL 標籤]** 的子菜單。 使用檢查（勾選）確認所選內容。
+1. 新增 `Workflow : DAM` 至 **[!UICONTROL 標籤]** 欄位。 使用核取方塊（勾號）確認選取範圍。
 
-1. 確認添加標籤 **[!UICONTROL 保存並關閉]**。
+1. 確認新增標籤，使用 **[!UICONTROL 儲存並關閉]**.
    ![編輯模型的頁面屬性](assets/workflow_model_edit_activation1.png)
 
-1. 完成流程 **[!UICONTROL 同步]**。 該工作流現在可在啟用觸摸的用戶介面中使用。
+1. 使用完成此程式 **[!UICONTROL 同步]**. 觸控式UI現在提供工作流程。
 
-### 為多資源支援配置工作流 {#configuring-a-workflow-for-multi-resource-support}
+### 設定多資源支援的工作流程 {#configuring-a-workflow-for-multi-resource-support}
 
-可以為 [多資源支援](/help/sites-developing/workflows.md#multi-resource-support) 建立新模型時，或通過編輯現有模型：
+您可以為以下專案設定工作流程模型 [多重資源支援](/help/sites-developing/workflows.md#multi-resource-support) 建立新模型或編輯現有模型時：
 
-1. 開啟工作流模型 [編輯](#editinganexistingworkflow)。
-1. 選擇 **工作流模型屬性** 的子菜單。
+1. 開啟的工作流程模型 [編輯](#editinganexistingworkflow).
+1. 選取 **工作流程模型屬性** （從工具列）。
 
-1. 在對話框中激活 **多資源支援** (或在需要時停用：
+1. 在對話方塊中啟動 **多重資源支援** （或視需要停用）：
 
    ![wf-08](assets/wf-08.png)
 
-1. 確認更改 **保存並關閉**;後跟 **同步** （編輯器工具欄）以生成運行時模型。
+1. 確認變更，透過 **儲存並關閉**；後面接著 **同步** （編輯器工具列）以產生執行階段模型。
 
-   請參閱 [同步工作流](#sync-your-workflow-generate-a-runtime-model) 的雙曲餘切值。
+   另請參閱 [同步處理您的工作流程](#sync-your-workflow-generate-a-runtime-model) 以取得詳細資訊。
 
-### 配置工作流階段（顯示工作流進度） {#configuring-workflow-stages-that-show-workflow-progress}
+### 設定工作流程階段（顯示工作流程進度） {#configuring-workflow-stages-that-show-workflow-progress}
 
-[工作流階段](/help/sites-developing/workflows.md#workflow-stages) 幫助直觀顯示處理任務時的工作流進度。
+[工作流程階段](/help/sites-developing/workflows.md#workflow-stages) 協助在處理任務時以視覺效果呈現工作流程的進度。
 
 >[!CAUTION]
 >
->如果在中定義了工作流階段 **頁面屬性**，但未用於任何工作流步驟，則進度欄將不顯示任何進度（無論當前工作流步驟如何）。
+>如果工作流程階段定義於 **頁面屬性**，但不用於任何工作流程步驟，則進度列不會顯示任何進度（無論目前的工作流程步驟為何）。
 
-可用階段在工作流模型中定義；可以更新現有工作流模型以包括階段定義。 您可以為工作流模型定義任意數量的階段。
+可用的階段會在工作流程模型中定義；現有的工作流程模型可以更新以包含階段定義。 您可以為工作流程模型定義任意數量的階段。
 
-要定義 **階段** 對於您的工作流：
+若要定義 **階段** 針對您的工作流程：
 
-1. 開啟工作流模型進行編輯。
-1. 選擇 **工作流模型屬性** 的子菜單。 然後開啟 **階段** 頁籤。
-1. 添加（和定位）您所需的 **階段**。 您可以為工作流模型定義任意數量的階段。
+1. 開啟工作流程模型以進行編輯。
+1. 選取 **工作流程模型屬性** （從工具列）。 然後開啟 **階段** 標籤。
+1. 新增（和定位）您的必要專案 **階段**. 您可以為工作流程模型定義任意數量的階段。
 
    例如：
 
    ![wf-08-1](assets/wf-08-1.png)
 
-1. 按一下 **保存並關閉** 的子菜單。
-1. 為工作流模型中的每個步驟分配一個階段。 例如：
+1. 按一下 **儲存並關閉** 以儲存屬性。
+1. 將階段指派給工作流程模型中的每個步驟。 例如：
 
    ![wf-09](assets/wf-09.png)
 
-   可將階段分配給多個步驟。 例如：
+   一個階段可指派給多個步驟。 例如：
 
    | **步驟** | **測試** |
    |---|---|
@@ -256,188 +256,188 @@ ht-degree: 1%
    | 步驟 5 | 批准 |
    | 步驟 6 | 完成 |
 
-1. 確認更改 **同步** （編輯器工具欄）以生成運行時模型。
+1. 確認變更，透過 **同步** （編輯器工具列）以產生執行階段模型。
 
-   請參閱 [同步工作流](#sync-your-workflow-generate-a-runtime-model) 的雙曲餘切值。
+   另請參閱 [同步處理您的工作流程](#sync-your-workflow-generate-a-runtime-model) 以取得詳細資訊。
 
-## 導出包中的工作流模型 {#exporting-a-workflow-model-in-a-package}
+## 在封裝中匯出工作流程模型 {#exporting-a-workflow-model-in-a-package}
 
-要在包中導出工作流模型，請執行以下操作：
+若要匯出封裝中的工作流程模型：
 
-1. 使用 [包管理器](/help/sites-administering/package-manager.md#package-manager):
+1. 使用建立新套件 [封裝管理員](/help/sites-administering/package-manager.md#package-manager)：
 
-   1. 通過導航至包管理器 **工具**。 **部署**。 **包**。
+   1. 透過以下方式瀏覽至封裝管理員： **工具**， **部署**， **套件**.
 
-   1. 按一下 **建立包**。
-   1. 指定 **包名稱**，以及需要的任何其他詳細資訊。
+   1. 按一下 **建立封裝**.
+   1. 指定 **封裝名稱**，以及任何其他需要的詳細資訊。
    1. 按一下&#x200B;**「確定」**。
 
-1. 按一下 **編輯** 的上界。
+1. 按一下 **編輯** （在新封裝的工具列上）。
 
-1. 開啟 **篩選器** 頁籤。
+1. 開啟 **篩選器** 標籤。
 
-1. 選擇 **添加篩選器** 並指定工作流模型的路徑 *設計*:
+1. 選取 **新增篩選器** 並指定工作流程模型的路徑 *設計*：
 
    `/conf/global/settings/workflow/models/<*your-model-name*>`
 
-   按一下 **完成**。
+   按一下 **完成**.
 
-1. 選擇 **添加篩選器** 並指定 *運行時* 工作流模型：
+1. 選取 **新增篩選器** 並指定 *執行階段* 工作流程模型：
 
    `/var/workflow/models/<*your-model-name*>`
 
-   按一下 **完成**。
+   按一下 **完成**.
 
-1. 為模型使用的任何自定義指令碼添加其他篩選器。
-1. 按一下 **保存** 確認篩選器定義。
-1. 選擇 **生成** 的子菜單。
-1. 選擇 **下載** 的子菜單。
+1. 為您的模型使用的任何自訂指令碼新增其他篩選器。
+1. 按一下 **儲存** 以確認您的篩選定義。
+1. 選取 **建置** 從封裝定義的工具列。
+1. 選取 **下載** 從封裝工具列。
 
-## 使用工作流處理表單提交 {#using-workflows-to-process-form-submissions}
+## 使用工作流程處理表單提交 {#using-workflows-to-process-form-submissions}
 
-您可以配置要由所選工作流處理的表單。 當用戶提交表單時，將建立一個新的工作流實例，其中表單提交的資料作為其負載。
+您可以設定要由所選工作流程處理的表單。 使用者提交表單時，會建立新的工作流程例項，並將表單提交的資料當作其裝載。
 
-要配置要與表單一起使用的工作流，請執行以下操作：
+若要設定要與表單搭配使用的工作流程：
 
-1. 建立新頁面並開啟它進行編輯。
-1. 添加 **窗體** 元件。
-1. **配置** 這樣 **窗體開始** 顯示在頁面中的元件。
-1. 使用 **啟動工作流** 要從可用工作流中選擇所需的工作流，請執行以下操作：
+1. 建立新頁面並開啟它以進行編輯。
+1. 新增 **表單** 元件至頁面。
+1. **設定** 此 **表單開始** 出現在頁面中的元件。
+1. 使用 **開始工作流程** 若要從可用的工作流程中選取所需的工作流程：
 
    ![wf-12](assets/wf-12.png)
 
-1. 使用勾選符確認新窗體配置。
+1. 使用勾號確認新表單設定。
 
-## 測試工作流 {#testing-workflows}
+## 測試工作流程 {#testing-workflows}
 
-在測試工作流使用多種負載類型時，這是一個很好的做法；包括不同於其開發的類型。 例如，如果您打算將工作流處理資產，請通過將頁面設定為負載來test它，並確保它不會引發錯誤。
+測試工作流程時，好的做法是使用各種裝載型別；包括與為其開發工作流程的型別不同的型別。 例如，如果您打算讓工作流程處理資產，請將頁面設定為裝載以進行測試，並確保其不會擲回錯誤。
 
-例如，按如下方式test新工作流：
+例如，測試您的新工作流程，如下所示：
 
-1. [啟動工作流模型](/help/sites-administering/workflows-starting.md) 從控制台。
-1. 定義 **負載** 確認一下。
+1. [開始您的工作流程模型](/help/sites-administering/workflows-starting.md) 從主控台。
+1. 定義 **裝載** 並確認。
 
-1. 根據需要採取操作，以便繼續工作流。
-1. 在工作流運行時監視日誌檔案。
+1. 視需要執行動作，以便進行工作流程。
+1. 在工作流程執行時監視記錄檔。
 
-您還可以配置AEM為顯示 **調試** 日誌檔案中的消息。 請參閱 [記錄](/help/sites-deploying/configure-logging.md) 有關詳細資訊，並在開發完成時，設定 **日誌級別** 返回 **資訊**。
+您也可以設定AEM以顯示 **偵錯** 記錄檔中的訊息。 另請參閱 [記錄](/help/sites-deploying/configure-logging.md) 如需詳細資訊以及開發完成時，請將 **記錄層級** 返回 **資訊**.
 
 ## 範例 {#examples}
 
-### 示例：建立（簡單）工作流以接受或拒絕發佈請求 {#example-creating-a-simple-workflow-to-accept-or-reject-a-request-for-publication}
+### 範例：建立（簡單）工作流程以接受或拒絕發佈請求 {#example-creating-a-simple-workflow-to-accept-or-reject-a-request-for-publication}
 
-為了說明建立工作流的一些可能性，以下示例建立了 `Publish Example` 工作流。
+為了說明建立工作流程的一些可能性，以下範例建立 `Publish Example` 工作流程。
 
-1. [建立新工作流模型](#creating-a-new-workflow)。
+1. [建立新的工作流程模型](#creating-a-new-workflow).
 
-   新工作流將包含：
+   新工作流程將包含：
 
    * **流程啟動**
    * `Step 1`
    * **流程結束**
 
-1. 刪除 `Step 1` （因為此示例的步驟類型錯誤）:
+1. 刪除 `Step 1` （因為此範例中的步驟型別錯誤）：
 
-   * 按一下步驟並選擇 **刪除** 的子菜單。 確認操作。
+   * 按一下步驟並選取 **刪除** 元件工具列中的。 確認動作。
 
-1. 從 **工作流** 選擇步驟瀏覽器，拖動 **參與者步驟** 放到工作流上，並將其置於 **流啟動** 和 **流結束**。
-1. 要開啟屬性對話框，請執行以下操作：
+1. 從 **工作流程** 選取步驟瀏覽器，拖曳 **參與者步驟** 放到工作流程上，並將其放置在 **流程開始** 和 **流程結束**.
+1. 若要開啟屬性對話方塊，請執行下列其中一種動作：
 
-   * 按一下參與者步驟並選擇 **配置** 的子菜單。
-   * 按兩下參與者步驟。
+   * 按一下參與者步驟並選取 **設定** 元件工具列中的。
+   * 連按兩下參與者步驟。
 
-1. 在 **常用** 頁籤 `Validate Content` 兩者 **標題** 和 **說明**。
-1. 開啟 **用戶/組** 頁籤：
+1. 在 **通用** tab enter `Validate Content` 針對兩個 **標題** 和 **說明**.
+1. 開啟 **使用者/群組** 標籤：
 
-   * 激活 **通過電子郵件通知用戶**。
-   * 選擇 `Administrator` ( `admin`) **用戶/組** 的子菜單。
+   * 啟動 **透過電子郵件通知使用者**.
+   * 選取 `Administrator` ( `admin`)，適用於 **使用者/群組** 欄位。
 
    >[!NOTE]
    >
-   >要發送電子郵件， [需要配置郵件服務和用戶帳戶詳細資訊](/help/sites-administering/notification.md)。
+   >若要傳送電子郵件， [需要設定郵件服務和使用者帳戶詳細資料](/help/sites-administering/notification.md).
 
-1. 使用勾選符確認更新。
+1. 使用勾號確認更新。
 
-   您將返回到工作流模型的概述，此時參與者步驟將更名為 `Validate Content`。
+   您將會返回工作流程模型的概觀，在此參與者步驟將重新命名為 `Validate Content`.
 
-1. 拖動 **或拆分** 放到工作流上，並將其置於 `Validate Content` 和 **流結束**。
-1. 開啟 **或拆分** 的子菜單。
+1. 拖曳 **Or分割** 放到工作流程上，並將其放置在 `Validate Content` 和 **流程結束**.
+1. 開啟 **Or分割** 進行設定。
 1. 設定:
 
-   * **常用**:指定拆分名稱。
-   * **分支1**:選擇 **預設路由**。
+   * **通用**：指定分割名稱。
+   * **分支1**：選取 **預設路由**.
 
-   * **分支2**:確保 **預設路由** 的子菜單。
+   * **分支2**：確保 **預設路由** 未選取。
 
-1. 確認更新 **或拆分**。
-1. 拖動 **參與者步驟** 在左側分支中，開啟屬性，指定以下值，然後確認更改：
+1. 確認您對的更新 **OR分割**.
+1. 拖曳 **參與者步驟** 在左側分支中，開啟屬性，指定下列值，然後確認變更：
 
    * **標題**: `Reject Publish Request`
 
-   * **用戶/組**:比如說， `projects-administrators`
+   * **使用者/群組**：例如， `projects-administrators`
 
-   * **通過電子郵件通知用戶**:激活以通過電子郵件通知用戶。
+   * **透過電子郵件通知使用者**：啟動以透過電子郵件通知使用者。
 
-1. 拖動 **處理步驟** 在右側分支中，開啟屬性，指定以下值，然後確認更改：
+1. 拖曳 **程式步驟** 在右側分支中，開啟屬性，指定下列值，然後確認變更：
 
    * **標題**: `Publish Page as Requested`
 
-   * **進程**:選擇 `Activate Page`。 此進程將所選頁面發佈到發佈者實例。
+   * **程式**：選取 `Activate Page`. 此程式會將選取的頁面發佈至發行者執行處理。
 
-1. 按一下 **同步** （編輯器工具欄）以生成運行時模型。
+1. 按一下 **同步** （編輯器工具列）以產生執行階段模型。
 
-   請參閱 [同步工作流](#sync-your-workflow-generate-a-runtime-model) 的雙曲餘切值。
+   另請參閱 [同步處理您的工作流程](#sync-your-workflow-generate-a-runtime-model) 以取得詳細資訊。
 
-   您的新工作流模型將如下所示：
+   您的新工作流程模型看起來會像這樣：
 
    ![wf-13](assets/wf-13.png)
 
-1. 將此工作流應用到您的頁面，以便當用戶移到 **完成** 這樣 **驗證內容** 步驟，他們可以選擇 **按請求發佈頁面**&#x200B;或 **拒絕發佈請求**。
+1. 將此工作流程套用至您的頁面，以便在使用者移至 **完成** 此 **驗證內容** 步驟，他們可以選取是否要 **依要求發佈頁面**，或 **拒絕發佈請求**.
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-### 示例：使用ECMA指令碼定義OR拆分的規則 {#defineruleecmascript}
+### 範例：使用ECMA指令碼定義OR分割的規則 {#defineruleecmascript}
 
-**或拆分** 步驟允許將條件處理路徑引入工作流。
+**OR分割** 步驟可讓您在工作流程中匯入條件式處理路徑。
 
-要定義OR規則，請按如下步驟進行：
+若要定義OR規則，請依照下列步驟進行：
 
-1. 建立兩個指令碼並將它們保存到儲存庫中，例如：
+1. 建立兩個指令碼並將它們儲存在存放庫中，例如在下方：
 
    `/apps/myapp/workflow/scripts`
 
    >[!NOTE]
    >
-   >指令碼必須具有 [函式 `check()`](#function-check) 返回布爾值。
+   >指令碼必須具有 [函式 `check()`](#function-check) 會傳回布林值。
 
-1. 編輯工作流並添加 **或拆分** 到模型。
-1. 編輯 **分支1** 的 **或拆分**:
+1. 編輯工作流程並新增 **OR分割** 至模型。
+1. 編輯以下專案的屬性： **分支1** 的 **OR分割**：
 
-   * 將其定義為 **預設路由** 設定 **值** 至 `true`。
+   * 將此專案定義為 **預設路由** 藉由設定 **值** 至 `true`.
 
    * 作為 **規則**，設定指令碼的路徑。 例如：
       `/apps/myapp/workflow/scripts/myscript1.ecma`
    >[!NOTE]
    >
-   >如果需要，可以切換分支順序。
+   >您可以視需要切換分支順序。
 
-1. 編輯 **分支2** 的 **或拆分**。
+1. 編輯的屬性 **分支2** 的 **OR分割**.
 
    * 作為 **規則**，將路徑設定為其他指令碼。 例如：
       `/apps/myapp/workflow/scripts/myscript2.ecma`
 
-1. 設定每個分支中各個步驟的屬性。 確保 **用戶/組** 的子菜單。
-1. 按一下 **同步** （編輯器工具欄），以保留對運行時模型的更改。
+1. 設定每個分支中個別步驟的屬性。 確定 **使用者/群組** 已設定。
+1. 按一下 **同步** （編輯器工具列）來保留您對執行階段模型的變更。
 
-   請參閱 [同步工作流](#sync-your-workflow-generate-a-runtime-model) 的雙曲餘切值。
+   另請參閱 [同步處理您的工作流程](#sync-your-workflow-generate-a-runtime-model) 以取得詳細資訊。
 
-#### 函式檢查() {#function-check}
+#### 函式Check() {#function-check}
 
 >[!NOTE]
 >
->請參閱 [使用ECMAScript](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript)。
+>另請參閱 [使用ECMAScript](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).
 
-以下示例指令碼返回 `true` 如果節點是 `JCR_PATH` 位於 `/content/we-retail/us/en`:
+以下範例指令碼傳回 `true` 如果節點為 `JCR_PATH` 位於 `/content/we-retail/us/en`：
 
 ```
 function check() {
@@ -456,8 +456,8 @@ function check() {
 }
 ```
 
-### 示例：自定義激活請求 {#example-customized-request-for-activation}
+### 範例：自訂的啟用請求 {#example-customized-request-for-activation}
 
-您可以定制任何出廠設定的工作流。 要進行自定義行為，請覆蓋相應工作流的詳細資訊。
+您可以自訂任何現成的工作流程。 若要使用自訂行為，請覆蓋適當工作流程的詳細資訊。
 
-比如說， **激活請求**。 此工作流用於在 **站點** 當內容作者沒有相應的複製權限時，將自動觸發。 請參閱 [自定義頁面創作 — 自定義激活工作流請求](/help/sites-developing/customizing-page-authoring-touch.md#customizing-the-request-for-activation-workflow) 的上界。
+例如， **請求啟用**. 此工作流程用於發佈中的頁面 **網站** 當內容作者沒有適當的復寫許可權時，會自動觸發和。 另請參閱 [自訂頁面編寫 — 自訂啟動請求工作流程](/help/sites-developing/customizing-page-authoring-touch.md#customizing-the-request-for-activation-workflow) 以取得更多詳細資料。

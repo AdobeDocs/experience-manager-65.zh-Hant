@@ -1,7 +1,7 @@
 ---
-title: 建立自定義工具欄佈局
+title: 建立自訂工具列配置
 seo-title: Creating custom toolbar layout
-description: 可以為表單指定工具欄佈局。 工具欄佈局定義窗體上工具欄的命令和佈局。
+description: 您可以指定表單的工具列配置。 工具列配置會定義命令和表單上工具列的配置。
 seo-description: You can specify a toolbar layout for the form. The toolbar layout defines the commands and the layout of the toolbar on the form.
 uuid: 389a715a-4c91-4a63-895d-bb2d0f1054eb
 content-type: reference
@@ -17,80 +17,80 @@ ht-degree: 0%
 
 ---
 
-# 建立自定義工具欄佈局{#creating-custom-toolbar-layout}
+# 建立自訂工具列配置{#creating-custom-toolbar-layout}
 
-## 工具欄佈局 {#layout}
+## 工具列配置 {#layout}
 
-建立自適應表單時，可以為表單指定工具欄佈局。 工具欄佈局定義窗體上工具欄的命令和佈局。
+建立最適化表單時，您可以指定表單的工具列版面配置。 工具列配置會定義命令和表單上工具列的配置。
 
-工具欄佈局使用嚴重依賴由複雜JavaScript和CSS代碼驅動的客戶端處理。 組織和優化此代碼的服務可能是一個複雜的問題。 為幫助解決此問題，AEM提供了客戶端庫資料夾，允許您將客戶端代碼儲存在儲存庫中，將其組織成類別，並定義將每類代碼提供給客戶端的時間和方式。 然後，客戶端庫系統會注意在最終網頁中生成正確的連結以載入正確的代碼。 有關詳細資訊，請參見 [客戶端庫在中的工作方AEM式。](/help/sites-developing/clientlibs.md)
+工具列版面配置重度依賴由複雜JavaScript和CSS程式碼驅動的使用者端處理。 組織和最佳化此程式碼的伺服可能會是個複雜的問題。 為協助處理此問題，AEM提供使用者端程式庫資料夾，這可讓您將使用者端程式碼儲存在存放庫中、將其組織成類別，並定義每個類別程式碼何時及如何提供給使用者端。 然後，使用者端程式庫系統會負責在最終網頁中產生正確的連結，以載入正確的程式碼。 如需詳細資訊，請參閱 [使用者端程式庫在AEM中的運作方式。](/help/sites-developing/clientlibs.md)
 
-![工具欄的示例佈局](assets/default_toolbar_layout.png)
+![工具列的範例配置](assets/default_toolbar_layout.png)
 
-工具欄的示例佈局
+工具列的範例配置
 
-自適應表單提供一組現成佈局：
+調適型表單提供一組現成的版面配置：
 
-![工具欄佈局可用 ](assets/toolbar1.png)
+![現成可用的工具列配置 ](assets/toolbar1.png)
 
-工具欄佈局可用
+現成可用的工具列配置
 
-此外，還可以建立自定義工具欄佈局。
+此外，您也可以建立自訂工具列配置。
 
-以下過程詳細介紹了建立自定義工具欄的步驟，該工具欄在工具欄中顯示三個操作，在工具欄的下拉清單中顯示其他操作。
+下列程式詳細說明建立自訂工具列的步驟，該工具列在工具列中會顯示三個動作，並在工具列的下拉式清單中顯示其他動作。
 
-附加的內容包包含下面描述的整個代碼。 安裝內容包後，開啟 `/content/forms/af/CustomLayoutDemo.html` 來查看自定義工具欄佈局演示。
+附加的內容套件包含下述的完整程式碼。 安裝內容套件後，請開啟 `/content/forms/af/CustomLayoutDemo.html` 以檢視自訂工具列配置示範。
 
 CustomToolbarLayoutDemo.zip
 
-[獲取檔案](assets/customtoolbarlayoutdemo.zip)
-演示自定義工具欄佈局
+[取得檔案](assets/customtoolbarlayoutdemo.zip)
+示範自訂工具列配置
 
-## 建立自定義工具欄佈局 {#layout-1}
+## 若要建立自訂工具列配置 {#layout-1}
 
-1. 建立資料夾以維護自定義工具欄佈局。 例如：
+1. 建立資料夾以維護自訂工具列佈局。 例如：
 
    `/apps/customlayout/toolbar`。
 
-   要建立自定義佈局，可以使用（和自定義）以下資料夾中提供的一個預置工具欄佈局：
+   若要建立自訂配置，您可以使用（及自訂）下列資料夾中可用的其中一個現成工具列配置：
 
    `/libs/fd/af/layouts/toolbar`
 
-   例如，複製 `mobileFixedToolbarLayout` 節點 `/libs/fd/af/layouts/toolbar` 資料夾 `/apps/customlayout/toolbar` 的子菜單。
+   例如，複製 `mobileFixedToolbarLayout` 節點來自 `/libs/fd/af/layouts/toolbar` 資料夾至 `/apps/customlayout/toolbar` 資料夾。
 
-   另外，將工具欄Common.jsp複製到 `/apps/customlayout/toolbar` 的子菜單。
-
-   >[!NOTE]
-   >
-   >為維護自定義佈局而建立的資料夾 `apps` 的子菜單。
-
-1. 更名複製的節點， `mobileFixedToolbarLayout`。 `customToolbarLayout.`
-
-   另外，請提供節點的相關說明。 例如，將節點的jcr:description更改為 **工具欄的自定義佈局**。
-
-   的 `guideComponentType` 節點的屬性決定佈局類型。 在這種情況下，佈局類型為工具欄，因此它會顯示在工具欄佈局選擇下拉清單中。
-
-   ![具有相關描述的節點](assets/toolbar3.png)
-
-   具有相關描述的節點
-
-   新的自定義工具欄佈局顯示在 **自適應表單工具欄** 對話框配置。
-
-   ![可用工具欄佈局清單](assets/toolbar4.png)
-
-   可用工具欄佈局清單
+   此外，將toolbarCommon.jsp複製到 `/apps/customlayout/toolbar` 資料夾。
 
    >[!NOTE]
    >
-   >在上一步中更新的說明將顯示在「佈局」(Layout)下拉清單中。
+   >您建立用來維護自訂版面的資料夾多半會使用 `apps` 資料夾。
 
-1. 選擇此自定義工具欄佈局，然後按一下「確定」。
+1. 重新命名複製的節點， `mobileFixedToolbarLayout`，至 `customToolbarLayout.`
 
-   在 `/etc/customlayout` 並在 `customToolbarLayout.jsp`。
+   此外，也提供節點的相關說明。 例如，將節點的jcr：description變更為 **工具列的自訂配置**.
 
-   ![customToolbarLayout.css檔案的路徑](assets/toolbar_3.png)
+   此 `guideComponentType` 節點的屬性決定配置型別。 在此情況下，版面配置型別為工具列，因此會顯示在工具列版面配置選擇下拉式清單中。
 
-   customToolbarLayout.css檔案的路徑
+   ![具有相關說明的節點](assets/toolbar3.png)
+
+   具有相關說明的節點
+
+   您的新自訂工具列版面配置會顯示在 **最適化表單工具列** 對話方塊設定。
+
+   ![可用工具列配置清單](assets/toolbar4.png)
+
+   可用工具列配置清單
+
+   >[!NOTE]
+   >
+   >上一步驟中更新的說明會顯示在版面下拉式清單中。
+
+1. 選取此自訂工具列版面配置，然後按一下「確定」。
+
+   在中新增clientlib （javascript和css） `/etc/customlayout` 節點，並將clientlib的參照包含在 `customToolbarLayout.jsp`.
+
+   ![customToolbarLayout.css檔案路徑](assets/toolbar_3.png)
+
+   customToolbarLayout.css檔案路徑
 
    範例 `customToolbarLayout.jsp`:
 
@@ -108,7 +108,7 @@ CustomToolbarLayoutDemo.zip
 
    >[!NOTE]
    >
-   >為佈局添加指導工具欄類。 工具欄的出廠設定樣式是針對導向工具欄類定義的。
+   >為版面配置新增guidetoolbar類別。 工具列的現成樣式是根據guidetoolbar類別來定義。
 
    範例 `toolBarCommon.jsp`:
 
@@ -167,7 +167,7 @@ CustomToolbarLayoutDemo.zip
    </c:forEach>
    ```
 
-   客戶端庫節點記憶體在的CSS:
+   clientlib節點內存在的CSS：
 
    ```css
    .mobilecustomToolbar .dropdown {
@@ -229,8 +229,8 @@ CustomToolbarLayoutDemo.zip
 
 >[!NOTE]
 >
->在上一步中更新的說明將顯示在「佈局」(Layout)下拉清單中。
+>上一步驟中更新的說明會顯示在版面下拉式清單中。
 
-![自定義佈局工具欄的案頭視圖](assets/toolbar_1.png)
+![自訂配置工具列的案頭檢視](assets/toolbar_1.png)
 
-自定義佈局工具欄的案頭視圖
+自訂配置工具列的案頭檢視

@@ -1,5 +1,5 @@
 ---
-title: 使用PDF發生器簡介
+title: 使用PDF產生器簡介
 seo-title: Introduction to working with PDF Generator
 description: 瞭解如何將各種檔案格式轉換為PDF。
 seo-description: Learn how to convert various file formats to PDF.
@@ -19,14 +19,14 @@ ht-degree: 0%
 
 ---
 
-# 使用PDF發生器簡介 {#introduction-to-working-with-pdf-generator}
+# 使用PDF產生器簡介 {#introduction-to-working-with-pdf-generator}
 
-PDF生成器將各種檔案格式轉換為PDF。 它還將PDF轉換為其他檔案格式，並優化PDF文檔的大小。 有關支援的檔案格式的清單，請參見 [用於PDF發生器的軟體支援](/help/forms/using/aem-forms-jee-supported-platforms.md)
+PDF產生器將各種檔案格式轉換為PDF。 它也會將PDF轉換為其他檔案格式，並最佳化PDF檔案的大小。 如需支援的檔案格式清單，請參閱 [PDF產生器的軟體支援](/help/forms/using/aem-forms-jee-supported-platforms.md)
 
-**將檔案發送到PDF生成器以進行處理**
+**正在傳送檔案至PDF產生器以供處理**
 
-將檔案發送到PDF生成器進行處理有三種方法：
+有三種方式可將檔案傳送至PDF產生器以供處理：
 
-* 管理員可以訪問管理控制台中的PDFG頁。 (請參閱 [使用PDF生成器轉換檔案](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)。)
-* 用戶可以通過登錄到 `http(s)://'[server]:[port]'/pdfgui.` 從那裡，他們可以訪問PDFG網路打印機、建立PDF、HTML到PDF、Export PDF和Optimize PDF頁。
-* 可以為服務配置端點。 請參閱 <!--Fix broken link to Managing Endpoints --> [生成PDF服務建議](configuring-watched-folder-endpoints.md#generate-pdf-service-recommendations)。
+* 管理員可以存取管理控制檯中的PDFG頁面。 (請參閱 [使用PDF產生器轉換檔案](/help/forms/using/admin-help/converting-files-using-pdf-generator.md).)
+* 使用者可登入以存取PDFG一般使用者頁面 `http(s)://'[server]:[port]'/pdfgui.` 從那裡，他們可以存取PDFG網路印表機、建立PDF、PDFHTML、Export PDF和Optimize PDF頁面。
+* 您可以設定服務的端點。 請參閱 <!--Fix broken link to Managing Endpoints --> [產生PDF服務建議](configuring-watched-folder-endpoints.md#generate-pdf-service-recommendations).

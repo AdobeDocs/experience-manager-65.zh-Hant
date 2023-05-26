@@ -1,7 +1,7 @@
 ---
-title: 在頁面中嵌入連結元件
+title: 將連結元件內嵌在頁面中
 seo-title: Embedding link component in a page
-description: 可以使用連結元件從任何頁面連結自適應文檔或自適應表單。
+description: 您可以使用連結元件從任何頁面連結最適化檔案或最適化表單。
 seo-description: You can use the link component to link an adaptive document or an adaptive form from any page.
 uuid: 22f488fc-bb1a-40aa-a5f4-6d04d7250f29
 content-type: reference
@@ -17,46 +17,46 @@ ht-degree: 0%
 
 ---
 
-# 在頁面中嵌入連結元件{#embedding-link-component-in-a-page}
+# 將連結元件內嵌在頁面中{#embedding-link-component-in-a-page}
 
 ## 必備條件 {#prerequisites}
 
-連結元件是「文檔服務」類別的成員。 確保「文檔服務」類別在元件瀏覽器AEM中可見。 如果未列出類別，請按照中列出的步驟操作 [啟用表單門戶元件](/help/forms/using/enabling-forms-portal-components.md)。
+連結元件是Document Services類別的成員。 確保AEM元件瀏覽器中顯示Document Services類別。 如果未列出類別，請遵循下列步驟操作： [啟用表單入口網站元件](/help/forms/using/enabling-forms-portal-components.md).
 
 ## 連結元件 {#link-component}
 
-Link元件允許表單門戶作者從頁面上的任何位置建立指向自適應表單的連結。 「連結」元件可在元件瀏覽器的「文檔服務」部分使用。
+連結元件可讓表單入口網站作者從頁面上的任何位置建立最適化表單的連結。 連結元件可在元件瀏覽器的Document Services區段中取得。
 
-執行以下步驟將連結元件添加到頁面：
+執行下列步驟，將連結元件新增至頁面：
 
-1. 拖動 **連結** 元件。 選擇元件並點擊 ![招商](assets/cmppr.png)。 將開啟「編輯連結元件」對話框。
+1. 拖曳 **連結** 元件時。 選取元件並點選 ![cmppr](assets/cmppr.png). 「編輯連結元件」對話方塊開啟。
 
-   ![編輯連結元件](assets/edit-link-component.png)
+   ![edit-link-component](assets/edit-link-component.png)
 
-1. 在 **顯示** 頁籤，指定以下內容：
+1. 在 **顯示** 索引標籤中，指定下列專案：
 
-   * **連結標題**:連結的文本或標題。
-   * **連結工具提示**:連結的工具提示。
-   * **佈局模板**:連結元件佈局的模板。
+   * **連結標題**：連結的連結文字或標題。
+   * **連結工具提示**：連結的工具提示。
+   * **版面配置範本**：連結元件配置的範本。
 
-1. 開啟 **資產資訊** 頁籤，然後指定資產類型。 資產可以是 **表格**。 根據所選資產的類型，將顯示下列選項：
+1. 開啟 **資產資訊** 索引標籤並指定資產的型別。 資產可以是 **表單**. 視選取的資產型別而定，系統會顯示下列選項：
 
-   * **資產路徑**:儲存資產的儲存庫路徑。
+   * **資產路徑**：儲存資產的存放庫路徑。
 
-   * **呈現類型**:渲染格式 — PDF、HTML或自動。 「自動」呈現類型檢測用戶環境，並相應地將表單呈現為HTML或PDF。 例如，如果從移動設備訪問表單，則「自動」呈現類型會以HTML呈現表單。
-   * **提交URL:**  提交表單資料的Servlet的URL。
-   * **HTML配置檔案**:用於將表單呈現為HTML的配置檔案。
-   * **PDF配置檔案**:用於將表單呈現為PDF文檔的配置檔案。
+   * **演算型別**：轉譯器格式 — 「PDF」、「HTML」或「自動」。 「自動」轉譯型別會偵測使用者環境，並據此將表單轉譯為HTML或PDF。 例如，如果表單可從行動裝置存取，則Auto轉譯型別會以HTML轉譯表單。
+   * **提交URL：**  表單資料提交所在的servlet的URL。
+   * **HTML設定檔**：將表單轉譯為HTML的設定檔。
+   * **PDF設定檔**：將表單轉譯為PDF檔案的設定檔。
 
-1. 開啟 **高級** 頁籤。 可以以鍵值對格式指定附加參數。 按一下該連結時，這些附加參數會隨窗體一起傳遞。
+1. 開啟 **進階** 標籤。 您可以指定索引鍵/值組格式的其他引數。 按一下連結時，這些額外的引數會與表單一起傳遞。
 
-   點擊 **完成** 的子菜單。
+   點選 **完成** 以儲存設定。
 
-## 使用連結元件的最佳做法 {#best-practices-for-using-link-component-br}
+## 使用連結元件的最佳作法 {#best-practices-for-using-link-component-br}
 
-* 如果在「表單路徑」中指定的路徑指向具有PDF作為其允許的呈現格式的文檔，請確保選擇PDF作為呈現類型。
-* 表單的提交URL可以在多個位置指定，其優先順序如下：
+* 如果在「表單路徑」中指定的路徑指向將PDF作為其允許的轉譯格式的檔案，請確保選擇PDF作為轉譯型別。
+* 表單的提交URL可在數個位置指定，其優先順序如下：
 
-   1. 在表單（在提交按鈕中）中嵌入的提交URL優先順序最高。
-   1. 在Forms管理器中提及的提交URL具有中等優先順序。
-   1. 表單門戶中提及的提交URL優先順序最低。
+   1. 表單中內嵌的提交URL （在提交按鈕中）具有最高優先順序。
+   1. Forms Manager中提到的提交URL具有中優先順序。
+   1. Forms Portal中提到的提交URL優先順序最低。

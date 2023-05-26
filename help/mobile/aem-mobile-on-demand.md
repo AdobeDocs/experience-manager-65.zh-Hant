@@ -1,6 +1,6 @@
 ---
-title: AEM Mobile按需
-description: 以此頁作為開發On-Demand Services應用程式的起點(AEMAdobe Experience Manager)。 該頁面涵蓋與應用程式開發者相關的主題。
+title: AEM Mobile On-Demand
+description: 請依照本頁所述，開始使用AEM (Adobe Experience Manager)開發On-Demand Services應用程式。 此頁面涵蓋與應用程式開發人員相關的主題。
 uuid: 35b64823-9451-44bf-b254-3b6767f0d109
 contentOwner: JYOTIKA SYAL
 content-type: reference
@@ -14,39 +14,39 @@ ht-degree: 1%
 
 ---
 
-# AEM Mobile按需 {#aem-mobile-on-demand}
+# AEM Mobile On-Demand {#aem-mobile-on-demand}
 
 >[!NOTE]
 >
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
->如果您未用作AEM內容管理源，請參閱 [AEM Mobile On-demand Services幫助](https://helpx.adobe.com/digital-publishing-solution/topics.html)。
+>如果您沒有使用AEM作為內容管理來源，請參閱 [AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >
->在與AEM Mobile合作並遵循本入門指南中的步驟之前，用戶應該熟悉 [AEM](/help/sites-deploying/deploy.md)。
+>在使用AEM Mobile並按照本快速入門手冊中的步驟操作之前，使用者應該熟悉 [AEM](/help/sites-deploying/deploy.md).
 >
->要為AEM Mobile On-demand Services設定環境，請參閱 [AEM Mobile應用程式儀表板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
+>若要設定AEM Mobile On-demand Services的環境，請參閱 [AEM Mobile應用程式儀表板或控制中心](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-安 **開發AEM商** 擴展並建立自定義Web模板和元件，以啟用 *AEM作者* 創造美妙而迷人的移動體驗。 這些模板和元件不僅針對移動應用世界進行了優化；但要與設備和伺服器AEM（任何遠程伺服器）通信到全通道服務端點。 內AEM置內容編輯器由 *AEM作者* 在應用中創造豐富且相關的體驗，包括與Adobe Marketing Cloud其他地區的整合。
+一個 **AEM開發人員** 擴充及建立自訂Web範本和元件，以啟用 *AEM作者* 打造精美且吸引人的行動體驗。 這些範本和元件不僅已針對行動應用程式世界進行最佳化，而且可與裝置與全頻道服務端點的AEM伺服器（任何遠端伺服器）通訊。 AEM內建內容編輯器用於 *AEM作者* 在應用程式中建立豐富的相關體驗，包括與Adobe Marketing Cloud其他部分的整合。
 
-開發人員AEM在使用AEM Mobile On-demand Services建立應用時負責以下任務：
+使用AEM Mobile On-demand Services建立應用程式時，AEM開發人員會負責下列工作：
 
-* [應用程式模板和元件](/help/mobile/app-templates-and-components1.md)
-* [帶內容同步的移動](/help/mobile/mobile-ondemand-contentsync.md)
-* [內容屬性和內容導出](/help/mobile/on-demand-content-properties-exporting.md)
+* [應用程式範本和元件](/help/mobile/app-templates-and-components1.md)
+* [透過內容同步處理行動](/help/mobile/mobile-ondemand-contentsync.md)
+* [內容屬性和內容匯出](/help/mobile/on-demand-content-properties-exporting.md)
 
-請參閱 [開發AEM Mobile內容服務](/help/mobile/developing-content-services.md) 用於開發內容服務。
+另請參閱 [開發AEM Mobile內容服務](/help/mobile/developing-content-services.md) 用於開發內容服務。
 
 >[!NOTE]
 >
->安 *開AEM發商* 角色不以模板和元件的開發開始和結束。 安 *開發AEM商* 可以建立一個全新的應用，而不是簡單地擴展現成參考實現示例。
+>一個 *AEM開發人員* 角色不會以範本和元件的開發開始和結束。 一個 *AEM開發人員* 可建立全新的應用程式，而不只是擴充現成的參考實作範例。
 
 ## 其他資源 {#additional-resources}
 
-要瞭解管理員和作者的角色和職責，請參閱以下資源：
+若要瞭解管理員和作者的角色和責任，請參閱以下資源：
 
-* [AEM Mobile On-demand ServicesAEM應用的創作內容](/help/mobile/mobile-apps-ondemand.md)
+* [為AEM Mobile On-demand Services應用程式編寫AEM內容](/help/mobile/mobile-apps-ondemand.md)
 * [管理內容以使用AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)

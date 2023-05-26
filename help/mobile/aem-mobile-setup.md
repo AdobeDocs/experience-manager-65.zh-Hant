@@ -1,7 +1,7 @@
 ---
 title: AEM Mobile設定
 seo-title: AEM Mobile SetUp
-description: 按照此頁設定AEM Mobile，從而允許用戶建立和管理內AEM容。 本頁提供有關將實AEM例與基於雲的AEM Mobile On-demand Services帳戶和項目整合的資訊。
+description: 請依照此頁面設定AEM Mobile，進而允許使用者在AEM中建立和管理內容。 本頁提供整合AEM執行個體與雲端AEM Mobile On-demand Services帳戶和專案的資訊。
 seo-description: Follow this page for setting up AEM Mobile and thus allowing the user to create and manage the content within AEM. This page provides information on integrating the AEM instance with the cloud-based AEM Mobile On-Demand Services account and project(s).
 uuid: 03bf5b56-7750-4f76-b079-43761367655a
 contentOwner: User
@@ -21,68 +21,68 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 >[!CAUTION]
 >
->現有的AEM Mobile應用從AEM6.2或6.3遷移到AEM6.5的客戶可以通過從PackageShare下載包繼續使用AEM Mobile應用。 但是，新安裝的6AEM.5版不支援AEM Mobile應用程式功能。
+>從AEM 6.2或6.3移轉至AEM 6.5的現有AEM Mobile應用程式客戶，可以從PackageShare下載套件，繼續使用AEM Mobile應用程式。 不過，新安裝的AEM 6.5將不支援AEM Mobile應用程式功能。
 
-為了用AEM於為AEM Mobile應用生成內容，您必AEM須將實例與基於雲的AEM Mobile On-demand Services帳戶和項目整合。
+若要使用AEM產生AEM Mobile應用程式的內容，您必須將AEM執行個體與雲端型AEM Mobile On-demand Services帳戶和專案整合。
 
-按照這些步驟設定AEM Mobile，從而允許用戶建立和管理內AEM容。
+請依照下列步驟設定AEM Mobile，進而允許使用者在AEM中建立和管理內容。
 
-## AEM Mobile資源調配 {#aem-mobile-provisioning}
+## AEM Mobile布建 {#aem-mobile-provisioning}
 
-要開始設定AEM Mobile，您需要：
+若要開始使用AEM Mobile設定，您需要：
 
-* **請求API密鑰**:要訪問On-Demand Services API，需要請求API密鑰。 要請求API密鑰，請完成 [PDF窗體](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)。 將填寫好的表單發送至Adobe Developer支援： [wwds@adobe.com](mailto:wwds@adobe.com)
+* **請求API金鑰**：若要存取On-Demand Services API，您需要要求API金鑰。 若要請求API金鑰，請填妥 [PDF表單](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html). 將填妥的表單傳送至Adobe Developer支援： [wwds@adobe.com](mailto:wwds@adobe.com)
 
-* **生成設備ID和設備令牌**:收到API密鑰後，可以生成設備ID和設備令牌。 轉到 `https://aex.aemmobile.adobe.com` 並執行以下操作：
+* **產生裝置ID和裝置代號**：收到API金鑰後，即可產生裝置ID和裝置Token。 前往 `https://aex.aemmobile.adobe.com` 並執行下列動作：
 
-   * 提供API密鑰
-   * 使用您已添加到AEM Mobile項目的具有以下權限的Adobe ID登錄（請參閱以下建立項目的步驟）
+   * 提供API金鑰
+   * 使用您新增至AEM Mobile專案的Adobe ID登入，並擁有下列許可權（請參閱下列建立專案的步驟）
 
-      * 管理>管理項目和用戶
-      * 內容>添加和編輯內容、刪除內容、查看內容、發佈內容
+      * 管理>管理專案和使用者
+      * 內容>新增與編輯內容、刪除內容、檢視內容、發佈內容
 
-如果滿足所有條件，將生成設備ID和設備令牌。
-
->[!NOTE]
->
->Adobe ID應獲准參與AEM Mobile項目。 請參閱 [AEM Mobile帳戶管理](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) 中。
-
-## 為AEM Mobile建立項目 {#creating-projects-for-aem-mobile}
-
-建立項目時，您會為所瞄準的任何平台指定設定：iOS、Android、Windows和案頭Web查看器。 您指定的許多項目設定都會影響應用的行為。
-
-建立項目需要使用具有主管理員角色的Adobe ID登錄到按需服務門戶。 編輯項目需要主管理員角色或用戶角色 **管理項目和用戶** 權限。
+如果滿足所有條件，則會產生裝置ID和裝置代號。
 
 >[!NOTE]
 >
->要瞭解有關在AEM Mobile建立項目的詳細資訊，請按一下 [這裡](https://helpx.adobe.com/digital-publishing-solution/help/creating-projects.html)。
+>應授予所需的Adobe ID對AEM Mobile專案的存取權。 另請參閱 [AEM Mobile的帳戶管理](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) 在「線上說明」中。
 
-## 配置AEM Mobile連接器 {#configuring-an-aem-mobile-connector}
+## 建立AEM Mobile專案 {#creating-projects-for-aem-mobile}
 
-設定AEM涉及以下連接器配置步驟。 完成AEM Mobile連接器配置後，用戶可以設定用戶組和權限。
+建立專案時，您可以針對要定位的任何平台指定設定：iOS、Android、Windows和Desktop Web Viewer。 您指定的許多專案設定都會影響應用程式的行為。
 
-AEM Mobile按需連接器用於將AEM Mobile管理的內容與Adobe Experience Manager Mobile的按需服務綁定。 這使內容作者能夠使用工具為移動應用建立和管AEM理材料，同時使用AEM Mobile的按需服務輕鬆分發移動內容。
+建立專案需要使用具有主要管理員角色的Adobe ID登入On-Demand Services入口網站。 編輯專案需要主要管理員角色或具有的使用者角色 **管理專案和使用者** 許可權。
 
 >[!NOTE]
 >
->這是設定實例的一個步AEM驟。
+>若要進一步瞭解如何在AEM Mobile中建立專案，請按一下 [此處](https://helpx.adobe.com/digital-publishing-solution/help/creating-projects.html).
 
-### 配置AEM Mobile On-demand Services客戶端 {#configuring-aem-mobile-on-demand-services-client}
+## 設定AEM Mobile聯結器 {#configuring-an-aem-mobile-connector}
 
-必須完成配置步驟，才能使AEM Mobile整合正常運行。
+AEM設定涉及下列聯結器設定步驟。 AEM Mobile聯結器設定完成後，使用者可以設定使用者群組和許可權。
 
-1. 轉到OSGI服務配置
+AEM Mobile On-Demand聯結器可用來將AEM Mobile管理的內容與Adobe Experience Manager Mobile的On-Demand服務繫結。 這可讓內容作者使用AEM工具建立和管理行動應用程式的素材，同時使用AEM Mobile的On-Demand Services，輕鬆散佈行動內容。
 
-   1. AEM>工具>操作> Web控制台
-   1. 滾動或搜索 ***Experience Manager移動按需服務客戶端(以前是Adobe數字發佈解決方案客戶端)***
+>[!NOTE]
+>
+>這是設定AEM執行個體的一次性步驟。
 
-1. 編輯 ***Experience Manager移動按需服務客戶端***
+### 設定AEM Mobile On-demand Services使用者端 {#configuring-aem-mobile-on-demand-services-client}
 
-   1. **（強制）** 輸入必填欄位：
+您必須完成設定步驟，AEM Mobile整合才能正常運作。
+
+1. 前往OSGI服務設定
+
+   1. AEM >工具>作業> Web主控台
+   1. 捲動或搜尋 ***Experience Manager Mobile On-demand Services使用者端(之前為Adobe Digital Publishing Solution使用者端)***
+
+1. 編輯 ***Experience ManagerMobile On-demand Services使用者端***
+
+   1. **（必要）** 輸入必填欄位：
 
       1. 用戶端識別碼.
       1. 用戶端密碼.
@@ -90,53 +90,53 @@ AEM Mobile按需連接器用於將AEM Mobile管理的內容與Adobe Experience M
 
 
 1. 儲存變更。
-1. 下面是一個配置示例：
+1. 以下是設定範例：
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
 
-### 配置AEM Mobile On-demand Services雲服務 {#configuring-aem-mobile-on-demand-services-cloudservice}
+### 設定AEM Mobile On-demand Services雲端服務 {#configuring-aem-mobile-on-demand-services-cloudservice}
 
-1. 轉到Cloud Services
+1. 前往Cloud Services
 
-   1. >AEM工具>部署> [雲服務](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)。 滾動或搜索 ***Adobe Experience Manager Mobile按需服務***
+   1. AEM >工具>部署> [CloudService](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html). 捲動或搜尋 ***Adobe Experience Manager Mobile隨選服務***
 
-1. 選擇 ***立即配置*** 或 ***顯示配置*** ，然後選擇「添加新配置」表徵圖
+1. 選取 ***立即設定*** 或 ***顯示設定*** 並選取新增設定圖示
 
-1. 建立新配置
+1. 建立新設定
 
    1. 輸入標題和名稱
-   1. 輸入設備ID
-   1. 輸入設備令牌
-   1. 選擇 ***Test設備配置*** 驗證輸入的值
-   1. 選擇確定
+   1. 輸入裝置ID
+   1. 輸入裝置代號
+   1. 選取 ***測試裝置組態*** 驗證輸入的值
+   1. 選取確定
 
-## 添加AEM Mobile用戶角色和分配權限 {#adding-aem-mobile-user-roles-and-assigning-permissions}
+## 新增AEM Mobile使用者角色及指派許可權 {#adding-aem-mobile-user-roles-and-assigning-permissions}
 
-建立項目後，應建立角色並授予用戶訪問權限。 只有主管理員才能建立和編輯角色。 建立角色時，可以為任何分配了這些權限的用戶啟用權能（或權限）。 例如，您可以建立一個包含應用程式構建權限的角色和另一個包含建立和發佈內容權限的角色。
+建立專案後，您應建立角色並授予使用者存取許可權。 只有主要管理員才能建立及編輯角色。 當您建立角色時，您會為獲指派這些許可權的使用者啟用權能（或許可權）。 例如，您可以建立包含應用程式建置許可權的一個角色，以及包含建立和發佈內容許可權的另一個角色。
 
-在AEM Mobile應用開發中，存在三個不同的角色：
+在AEM Mobile應用程式開發中，有三個不同的角色：
 
 * 管理員
 * 開發人員
 * 作者
 
-有關建立具有不同權限的角色的詳細資訊，請按一下 [建立用戶角色和授予訪問權限](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) 在AEM Mobile。
+如需以不同許可權（例如應用程式建置或建立和發佈內容）建立角色的詳細資訊，請按一下 [建立使用者角色並授與存取權](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) (位於AEM Mobile說明)。
 
 >[!NOTE]
 >
->管理應用內容需要開發人員、內容作者和管理員共同努力。 作者操作頁面，這些頁面又基於應用程式開發人員生成的模板和元件。 最後，管理員戰略性地發佈更新的應用程式內容。 設定組AEM和權限在應用程式儀表板或控制中心中定義其角色。
+>管理應用程式內容需要開發人員、內容作者和管理員共同的努力。 作者操作頁面，而這些頁面又以應用程式開發人員產生的範本和元件為基礎。 最後，管理員可策略性地發佈更新的應用程式內容。 設定AEM群組和許可權會定義其在應用程式控制面板或控制中心中的角色。
 >
->有關AEM Mobile儀表板的詳細資訊，請按一下 [這裡](/help/mobile/mobile-apps-ondemand-application-dashboard.md)。
+>如需AEM Mobile儀表板的詳細資訊，請按一下 [此處](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-建立具有不同權限的角色後，請參閱 [**配置用戶和用戶組**](/help/mobile/aem-mobile-configure-users.md) 配置用戶和組以支援您的移動應用的創作和管理。
+使用不同的許可權建立角色後（例如應用程式建置或建立和發佈內容），請參閱 [**設定您的使用者和使用者群組**](/help/mobile/aem-mobile-configure-users.md) 設定您的使用者和群組，以支援行動應用程式的編寫和管理。
 
 ### 其他資源 {#additional-resources}
 
-要詳細瞭解建立AEM Mobile On-demand Services應用程式的其他兩個角色和職責，請參閱以下資源：
+若要進一步瞭解建立AEM Mobile On-demand Services應用程式的其他兩個角色和責任，請參閱下列資源：
 
-* [開發AEMAEM Mobile On-demand Services內容](/help/mobile/aem-mobile-on-demand.md)
-* [AEM Mobile On-demand ServicesAEM應用的創作內容](/help/mobile/mobile-apps-ondemand.md)
+* [針對AEM Mobile On-demand Services開發AEM內容](/help/mobile/aem-mobile-on-demand.md)
+* [為AEM Mobile On-demand Services應用程式編寫AEM內容](/help/mobile/mobile-apps-ondemand.md)
 
 >[!NOTE]
 >
->要預覽應用內容，包括瀏覽頁面和文章，請參閱 [使用印前檢查預覽](/help/mobile/aem-mobile-manage-ondemand-services.md)。
+>若要預覽應用程式內容（包括瀏覽頁面和文章），請參閱 [使用預檢預覽](/help/mobile/aem-mobile-manage-ondemand-services.md).

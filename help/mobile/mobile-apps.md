@@ -1,7 +1,7 @@
 ---
-title: 移動應用
+title: 行動應用程式
 seo-title: Mobile-Apps
-description: "移動應用"
+description: 「行動應用程式」
 seo-description: null
 uuid: 4a91241e-8c78-42fe-a5d3-732a6c34cbfd
 contentOwner: msm-service
@@ -16,19 +16,19 @@ ht-degree: 1%
 
 ---
 
-# 移動應用{#mobile-apps}
+# 行動應用程式{#mobile-apps}
 
 >[!NOTE]
 >
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-Adobe Experience Manager(AEMMobile)是Adobe Experience Manager多渠道數字平台的一部分，該平台還利用AEM Assets、網站、螢幕、工作流、用戶經理、商業和Forms。 AEM Mobile提供了卓越的部署靈活性，使企業能夠使用各種內容源。
+Adobe Experience Manager (AEM) Mobile是Adobe Experience Manager多頻道數位平台的一部分，也利用AEM Assets、Sites、Screens、Workflow、User Manager、Commerce和Forms。 AEM Mobile提供絕佳的部署彈性，讓企業能夠使用各種內容來源。
 
-AEM Mobile提供了多種建立應用的方法。 您可以使用以下不同方法建立應用：
+AEM Mobile提供多種建立應用程式的方法。 您可用來建立應用程式的不同方式包括：
 
-* [AEM Mobile On-demand Services入門](/help/mobile/mobile-apps-ondemand.md)
-* [Adobe PhoneGap企業入門AEM](/help/mobile/phonegap.md)
+* [AEM Mobile On-demand Services快速入門](/help/mobile/mobile-apps-ondemand.md)
+* [Adobe PhoneGap Enterprise with AEM快速入門](/help/mobile/phonegap.md)
 
 >[!NOTE]
 >
->如果你剛到Adobe Experience Manager，你可能想 [入AEM門](/help/sites-deploying/deploy.md)。
+>如果您是Adobe Experience Manager的新手，您可能想要逐步瞭解 [AEM快速入門](/help/sites-deploying/deploy.md).

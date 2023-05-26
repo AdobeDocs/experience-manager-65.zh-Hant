@@ -1,6 +1,6 @@
 ---
-title: 選擇UI
-description: 為方便創作用戶，啟用觸摸的UI允許在需要時切換到標準UI。
+title: 選取您的UI
+description: 為了方便編寫使用者，觸控式UI在必要時可切換至傳統UI。
 uuid: 755e513e-990c-4dba-8316-623f17bf5c33
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,20 +15,20 @@ ht-degree: 0%
 
 ---
 
-# 選擇UI{#selecting-your-ui}
+# 選取您的UI{#selecting-your-ui}
 
-由於啟用觸摸的UI取代經典UI，因此實例的用戶或管理AEM員必須做出一個活動決定，以繼續使用經典UI。 由於不再維護標準UI，因此創作用戶無法簡單地從標準UI切換到啟用觸摸的UI中的對等UI。
+由於觸控式UI會取代傳統UI，AEM執行個體的使用者或管理員必須做出有效決定，才能繼續使用傳統UI。 由於傳統UI已不再受到維護，因此編寫使用者無法僅從傳統UI切換至觸控式UI中的同等專案。
 
-為方便創作用戶，啟用觸摸的UI允許在需要時切換到標準UI。 查看 [選擇UI](/help/sites-authoring/select-ui.md) 的子菜單。
+為了方便編寫使用者，觸控式UI在必要時可切換至傳統UI。 請參閱 [選取您的UI](/help/sites-authoring/select-ui.md) 詳細資訊，請參閱標準撰寫檔案。
 
 >[!NOTE]
 >
->從先前版本升級的實例將保留用於頁面創作的標準用戶介面。
+>從舊版升級的執行個體將保留傳統UI以進行頁面編寫。
 >
->升級後，頁面創作不會自動切換到啟用觸摸功能的UI，但您可以使用[OSGi配置](/help/sites-deploying/configuring-osgi.md) 的 **WCM創作UI模式服務** ( `AuthoringUIMode` 服務)。 請參閱 [編輯器的UI覆蓋](#uioverridesfortheeditor)。
+>升級後，頁面製作功能不會自動切換至觸控式UI，但您可以使用[OSGi設定](/help/sites-deploying/configuring-osgi.md) 的 **WCM編寫UI模式服務** ( `AuthoringUIMode` 服務)。 另請參閱 [編輯器的使用者介面覆寫](#uioverridesfortheeditor).
 
-## 配置實例的預設UI {#configuring-the-default-ui-for-your-instance}
+## 為您的執行個體設定預設UI {#configuring-the-default-ui-for-your-instance}
 
-系統管理員可以使用 [根映射](/help/sites-deploying/osgi-configuration-settings.md#daycqrootmapping)。
+系統管理員可以使用設定啟動時看到的UI和登入 [根對應](/help/sites-deploying/osgi-configuration-settings.md#daycqrootmapping).
 
-用戶預設設定或會話設定可以覆蓋此設定。
+這可以由使用者預設值或工作階段設定來覆寫。

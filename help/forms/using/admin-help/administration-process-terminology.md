@@ -1,7 +1,7 @@
 ---
-title: 關於管理和流程術語
+title: 關於管理與程式術語
 seo-title: About administration and process terminology
-description: 瞭解管理和流程術語，如流程實例、流程圖和操作。
+description: 瞭解管理和程式術語，例如程式例項、程式圖和操作。
 seo-description: Learn about administration and process terms like process instance, process diagram and operation.
 uuid: cf3f5bfc-4650-4f3d-81e1-9c814cfd497c
 contentOwner: admin
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 ---
 
-# 關於管理和流程術語 {#about-administration-and-process-terminology}
+# 關於管理與程式術語 {#about-administration-and-process-terminology}
 
-要有效管理表單工作流，您應瞭解以下術語和元素的層次結構：
+若要有效管理表單工作流程，您應瞭解下列辭彙和元素的階層：
 
-* *流程類別* 將進程組織為邏輯組。
-* *進程* 表示自動化的業務流程。 每個實施的業務流程至少應存在一個流程。
-* A *流程圖* 是正在自動化的業務流程的直觀表示。
-* A *進程實例* 是由用戶啟動的流程（如填寫和提交表單）或自動化步驟。 進程可能有多個實例。
-* 安 *操作* 是流程圖的一個步驟，該流程圖在Workbench中由流程圖中的表徵圖表示。
-* A *任務* 是已分配給用戶的操作。 當任務運行並執行操作時，用戶服務會向用戶分配任務。
+* *程式類別* 將程式組織成邏輯群組。
+* *程式* 代表已自動化的業務流程。 實作的每個業務流程都應至少有一個流程。
+* A *程式圖* 是正在自動化的商務程式的視覺化表示。
+* A *程式執行個體* 是由使用者啟動的流程（例如完成和提交表單）或自動化步驟。 一個程式可能有多個執行個體。
+* 一個 *操作* 是流程圖的一個步驟，在Workbench中以流程圖中的圖示表示。
+* A *任務* 是已指派給使用者的動作。 執行工作並執行作業時，使用者服務會將工作指派給使用者。
 
-有關這些術語的詳細資訊，請參見 [工作台幫助](https://www.adobe.com/go/learn_aemforms_workbench_63)。
+如需這些字詞的詳細資訊，請參閱 [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63).

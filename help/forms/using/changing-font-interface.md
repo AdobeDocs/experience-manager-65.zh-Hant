@@ -1,7 +1,7 @@
 ---
-title: 更改介面上的字型
+title: 變更介面的字型
 seo-title: Changing the font on the interface
-description: 如何有選擇地更改用戶介面上的字型。
+description: 如何選擇性地變更使用者介面上的字型。
 seo-description: How to change the fonts on the user interface selectively.
 uuid: 421fdd24-441a-4092-8c52-f3ed3d5d5671
 contentOwner: robhagat
@@ -18,22 +18,22 @@ ht-degree: 1%
 
 ---
 
-# 更改介面上的字型{#changing-the-font-on-the-interface}
+# 變更介面的字型{#changing-the-font-on-the-interface}
 
-可以更改在AEM Forms工作區中顯示的字型。 用戶介面的特定部分中使用的字型在樣式表的相應部分中定義。 可以選擇性地更改用戶介面上的字型。
+您可以變更AEM Forms工作區中顯示的字型。 在使用者介面的特定區段中使用的字型，會在樣式表的對應區段中定義。 您可以選擇性地變更使用者介面上的字型。
 
-關注 [AEM Forms工作區定製的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md) 並根據您的要求，執行自定義CSS、HTML或兩者的步驟。
+請遵循 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md) 並根據您的需求，遵循自訂CSS、HTML或兩者的步驟。
 
-1. 以現有樣式更改或添加字型系列。
-1. 更改或添加HTML元素的font-family內聯。
-1. 添加樣式並將其用於HTML元素。
+1. 在現有樣式中變更或新增字型系列。
+1. 變更或新增HTML元素的字型系列內嵌。
+1. 新增樣式並將其用於HTML元素。
 
-例如，要將頂部導航欄錨點文本的字型更改為Courier New，請執行以下步驟：
+例如，若要將頂端導覽列錨點文字的字型變更為Courier New，請遵循下列步驟：
 
-1. 通過訪問登錄CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`。
+1. 透過存取登入CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. 執行下列任一項作業：
 
-   1. 要以現有樣式更改font-family，請在/apps/ws/css的newStyle.css檔案中添加以下內容。
+   1. 若要變更現有樣式中的font-family，請在/apps/ws/css的newStyle.css檔案中新增下列內容。
 
       ```css
       #topnav a {
@@ -41,9 +41,9 @@ ht-degree: 1%
       }
       ```
 
-   1. 要為HTML元素添加內嵌的font-family，請複製 `/libs/ws/js/runtime/templates/appnavigation.html` 檔案 `/apps/ws/js/runtime/templates/appnavigation.html`。
+   1. 若要為HTML元素新增字型系列內嵌，請複製 `/libs/ws/js/runtime/templates/appnavigation.html` 檔案至 `/apps/ws/js/runtime/templates/appnavigation.html`.
 
-      按如下方式更新/apps/ws/js/runtime/templates/appnavigation.html檔案：
+      更新/apps/ws/js/runtime/templates/appnavigation.html檔案，如下所示：
 
       ```jsp
       <li class="process"><a href="#" title="<%= $.t('index.header.topnav.startprocess.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.startprocess.name')%></a></li>
@@ -52,9 +52,9 @@ ht-degree: 1%
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      開啟/apps/ws/js/registry.js檔案進行編輯和替換 `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` 與 `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`。
+      開啟/apps/ws/js/registry.js檔案進行編輯和取代 `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` 替換為 `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
 
-   1. 要添加定義font-family的樣式，請在/apps/ws/css的newStyle.css檔案中添加以下內容。
+   1. 若要新增定義font-family的樣式，請在/apps/ws/css的newStyle.css檔案中新增下列內容。
 
       ```css
       .myNewFontStyle a {
@@ -62,7 +62,7 @@ ht-degree: 1%
       }
       ```
 
-      要為HTML元素添加內嵌的font-family，請在apps/ws/js/runtime/templates的appnavigation.html檔案中添加以下內容。
+      若要為HTML元素新增字型系列內嵌，請在/apps/ws/js/runtime/templates的appnavigation.html檔案中新增下列內容。
 
       ```jsp
       <div id="topnav" class="myNewFontStyle">
@@ -75,12 +75,12 @@ ht-degree: 1%
       </div>
       ```
 
-1. 重新啟動工作區並清除瀏覽器快取以使更改可見。
+1. 重新啟動工作區並清除瀏覽器快取，使變更可見。
 
-![更改_font_before](assets/change_font_before.png)
+![change_font_before](assets/change_font_before.png)
 
-字型自定義前的頂部導航欄
+字型自訂前的頂端導覽列
 
-![更改_font_after](assets/change_font_after.png)
+![change_font_after](assets/change_font_after.png)
 
-第一個頁籤的字型自定義後的頂部導航欄
+第一個索引標籤的字型自訂後的頂端導覽列

@@ -1,7 +1,7 @@
 ---
-title: 社區元件的客戶端
+title: Communities元件的Clientlibs
 seo-title: Clientlibs for Communities Components
-description: 社區的客戶端庫
+description: 適用於社群的使用者端程式庫
 seo-description: Client-side libraries for Communities
 uuid: d2a9f986-96cf-4ee8-81e6-36a96f45ddcb
 contentOwner: msm-service
@@ -18,78 +18,78 @@ ht-degree: 0%
 
 ---
 
-# 社區元件的客戶端 {#clientlibs-for-communities-components}
+# Communities元件的Clientlibs {#clientlibs-for-communities-components}
 
 ## 簡介 {#introduction}
 
-文檔的本節介紹如何將客戶端庫（客戶端庫）添加到社區元件的頁面。
+本檔案本節說明如何將使用者端程式庫(clientlibs)新增至Communities元件的頁面。
 
-有關基本資訊，請訪問：
+如需基本資訊，請造訪：
 
-* [使用客戶端庫](/help/sites-developing/clientlibs.md) 提供使用詳細資訊以及調試工具
-* [SCF的客戶端](/help/communities/client-customize.md#clientlibs) 在定制SCF元件時提供有用資訊
+* [使用使用者端資料庫](/help/sites-developing/clientlibs.md) 其中會提供使用方式詳細資訊以及偵錯工具
+* [適用於SCF的Clientlibs](/help/communities/client-customize.md#clientlibs) 提供自訂SCF元件時的實用資訊
 
 
-## 為什麼需要客戶端 {#why-clientlibs-are-required}
+## 為何需要Clientlibs {#why-clientlibs-are-required}
 
-要正確運行元件(JavaScript)和樣式(CSS)，需要客戶端。
+元件正常運作(JavaScript)和樣式(CSS)需要Clientlibs。
 
-當存在 [社區功能](/help/communities/functions.md) 對於功能，所有必要的元件和配置（包括所需的客戶端）都將出現在社區站點中。 只有在作者可以使用其他元件時，才需要添加其他客戶端。
+當存在 [社群功能](/help/communities/functions.md) 針對功能，所有必要的元件和設定（包括必要的clientlibs）都會顯示在社群網站中。 只有當作者可以使用其他元件時，才需要新增其他clientlibs。
 
-當缺少所需的客戶端時， [將社區元件添加到頁面](/help/communities/author-communities.md) 可能導致javascript錯誤和意外外觀。
+當缺少必要的clientlibs時， [將Communities元件新增至頁面](/help/communities/author-communities.md) 可能會導致javascript錯誤及意外外觀。
 
-### 示例：無客戶端的已置評 {#example-placed-reviews-without-clientlibs}
+### 範例：置入的評論沒有Clientlibs {#example-placed-reviews-without-clientlibs}
 
-![置評](assets/placed-reviews.png)
+![置入的評論](assets/placed-reviews.png)
 
-### 示例：與客戶端一起進行的審閱 {#example-placed-reviews-with-clientlibs}
+### 範例：使用Clientlibs置入稽核 {#example-placed-reviews-with-clientlibs}
 
-![審閱客戶端](assets/reviews-clientlibs.png)
+![reviews-clientlibs](assets/reviews-clientlibs.png)
 
-## 確定所需的客戶端 {#identifying-required-clientlibs}
+## 識別必要的Clientlibs {#identifying-required-clientlibs}
 
-開發人員的基本功能資訊標識所需的客戶端。
+開發人員的基本功能資訊可識別所需的clientlibs。
 
-此外，從實AEM例瀏覽到 [社區元件指南](/help/communities/components-guide.md) 提供對元件所需的客戶端庫類別清單的訪問。
+此外，從AEM執行個體瀏覽至 [社群元件指南](/help/communities/components-guide.md) 提供元件所需clientlib類別清單的存取權。
 
-例如，在 [「審閱」頁](https://localhost:4502/content/community-components/en/reviews.html) 列出的所需客戶端
+例如，在最上方的 [評論頁面](https://localhost:4502/content/community-components/en/reviews.html) 列出的必要clientlibs包括
 
 * cq.ckeditor
 * cq.social.hbs.reviews
 
-![客戶端評論](assets/clientlibs-reviews.png)
+![clientlibs-reviews](assets/clientlibs-reviews.png)
 
-## 添加所需客戶端 {#adding-required-clientlibs}
+## 新增必要的Clientlibs {#adding-required-clientlibs}
 
-當需要將社區元件添加到頁面時，如果元件尚未出現，則需要為其添加所需的客戶端。
+當想要將Communities元件新增到頁面時，如果元件尚未出現，則需要新增必要的clientlibs。
 
-使用 [CRXDE|Lite](#using-crxde-lite) 修改社區網站頁的現有客戶端libslist。
+使用 [CRXDE|Lite](#using-crxde-lite) 修改社群網站頁面的現有clientlibslist。
 
-為社區站點添加客戶端庫 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
+若要使用為社群網站新增clientlib [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)：
 
-* 瀏覽到 [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)。
-* 查找 `clientlibslist` 要添加元件的頁面的節點：
+* 瀏覽至 [https://&lt;server>：&lt;port>/crx/de](https://localhost:4502/crx/de).
+* 找到 `clientlibslist` 要新增元件的頁面節點：
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* 與 `clientlibslist` 選定的節點：
+* 替換為 `clientlibslist` 選取的節點：
 
-   * 查找字串[] 屬性 `scg:requiredClientLibs`。
-   * 選擇其 `Value` 訪問「字串陣列」對話框。
+   * 找到字串[] 屬性 `scg:requiredClientLibs`.
+   * 選取其 `Value` 以存取字串陣列對話方塊。
 
-      * 如有必要，向下滾動。
-      * 選擇+以輸入新的客戶端庫。
+      * 如有需要，向下捲動。
+      * 選取+以輸入新的使用者端資源庫。
 
-         * 重複以添加更多客戶端庫。
+         * 重複以上步驟以新增更多使用者端程式庫。
 
-         * 選擇 **確定**。
-   * 選擇 **全部保存**。
+         * 選取 **確定**.
+   * 選取 **全部儲存**.
 
 
 >[!NOTE]
 >
->如果站點不是社區站點，則需要發現用於該站點的客戶端庫的存在或位置。
+>如果網站不是社群網站，則需要探索用於網站的使用者端程式庫的存在或位置。
 
-使用 [AEM Communities入門](/help/communities/getting-started.md) 示例，其中 `site-name` 是 *參與*，這是添加審閱元件時客戶端liblist的顯示方式：
+使用 [AEM Communities快速入門](/help/communities/getting-started.md) 範例，其中 `site-name` 是 *參與*，這是新增檢閱元件時clientliblist的顯示方式：
 
-![審閱元件](assets/review-component.png)
+![review-component](assets/review-component.png)

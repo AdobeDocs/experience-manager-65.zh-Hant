@@ -1,7 +1,7 @@
 ---
-title: JEE上支援的AEM Forms平台
+title: AEM Forms on JEE的支援平台
 seo-title: Supported Platforms for AEM Forms on JEE
-description: 在JEE上安裝AEM Forms所需和支援的基礎架構元件清單
+description: 在JEE上安裝AEM Forms所需和支援的基礎結構元件清單
 seo-description: List of infrastructure components required and supported for installing AEM Forms on JEE
 uuid: 777f943b-4cb4-444e-a036-8032b9fce5be
 content-type: reference
@@ -19,33 +19,33 @@ ht-degree: 1%
 ---
 
 
-# JEE上支援的AEM Forms平台 {#supported-platforms-for-aem-forms-on-jee}
+# AEM Forms on JEE的支援平台 {#supported-platforms-for-aem-forms-on-jee}
 
 ## 支援的平台 {#supported-platforms}
 
 <div class="preview">
 
-Adobe已發佈 [完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) JEE上AEM的6.5Forms Service Pack 12(6.5.12.0)以及修補程式安裝程式。 完整安裝程式支援新平台，而修補程式安裝程式只包含錯誤修復。
+Adobe已發行 [完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) JEE版AEM 6.5 Forms Service Pack 12 (6.5.12.0)及修補程式安裝程式。 完整版安裝程式支援新平台，而修補程式安裝程式僅包含錯誤修正。
 
-如果您正在JEE環境中執行全新安裝或計畫為您的AEM6.5Forms使用最新軟體，Adobe建議使用 [AEM 6.5.12.0Forms on JEE完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 2022年3月3日發行，AEM而非2019年4月08日發行的6.5Forms安裝程式。
+如果您要在JEE環境中執行全新安裝或計畫使用最新軟體AEM 6.5 Forms，Adobe建議使用 [AEM 6.5.12.0 Forms on JEE完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 2022年3月3日發行，而非2019年4月8日發行的AEM 6.5 Forms安裝程式。
 
 </div>
 
-### 支援級別 {#support-levels}
+### 支援層級 {#support-levels}
 
-JEE伺服器上的AEM Forms可以使用支援的作業系統、應用程式伺服器、資料庫、資料庫驅動程式、JDK、LDAP伺服器和電子郵件伺服器的任意組合來設定。
+JEE伺服器上的AEM Forms可使用任何支援的作業系統、應用程式伺服器、資料庫、資料庫驅動程式、JDK、LDAP伺服器和電子郵件伺服器的組合進行設定。
 
-本文檔列出了JEE上AEM Forms支援的客戶端和伺服器平台。 Adobe為我們推薦的配置和其他配置提供了若干級別的支援。 該文檔還列出了其他受支援的軟體及其版本、異常、補丁程式定義和第三方軟體補丁程式支援策略。
+本檔案列出AEM Forms on JEE支援的使用者端和伺服器平台。 Adobe針對我們建議的設定和其他設定，提供多個層級的支援。 本檔案也會列出其他支援的軟體及其版本、例外、修補程式定義，以及協力廠商軟體修補程式支援原則。
 
 >[!NOTE]
 >
->- 有關受支援伺服器平台的例外的完整清單，請參見 [支援的伺服器平台的異常](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)。
->- JEE上的AEM Forms僅支援受支援的作業系統和應用程式的英文、法文、德文和日文版本。
+>- 如需受支援伺服器平台的例外狀況完整清單，請參閱 [支援的伺服器平台例外](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p).
+>- AEM Forms on JEE僅支援英文、法文、德文和日文版本的支援作業系統和應用程式。
 
 
-### 建議的配置 {#recommendedconfigurations}
+### 建議的設定 {#recommendedconfigurations}
 
-Adobe推薦這些配置，並作為標準軟體維護協定的一部分提供完整或受限的支援：
+Adobe建議使用這些設定，並在標準軟體維護合約中提供完整或有限的支援：
 
 <table>
  <tbody>
@@ -55,42 +55,42 @@ Adobe推薦這些配置，並作為標準軟體維護協定的一部分提供完
   </tr>
   <tr>
    <td>答：支援<br /> </td>
-   <td>Adobe為此配置提供全面支援和維護。 此配置由Adobe的質量保證流程覆蓋。</td>
+   <td>Adobe提供此設定的完整支援與維護。 此設定包含在Adobe品質保證程式中。</td>
   </tr>
   <tr>
-   <td>R:限制支援</td>
-   <td>Adobe在滿足某些先決條件後提供對此配置的完全支援。 與Adobe企業支援部門聯繫，瞭解先決條件並請求支援。</td>
+   <td>R：限制支援</td>
+   <td>在滿足某些先決條件後，Adobe就會提供此設定的完整支援。 請聯絡Adobe企業支援，瞭解必要條件並提出支援請求。</td>
   </tr>
   <tr>
-   <td>L:有限支援</td>
-   <td>Adobe在滿足某些先決條件後為此配置提供全面支援和維護。 並非所有功能在配置上都可用。 與Adobe企業支援部門聯繫，瞭解先決條件並請求支援。<br /> </td>
+   <td>L：有限支援</td>
+   <td>在滿足某些先決條件後，Adobe會提供此設定的完整支援與維護。 並非所有功能都可在設定上使用。 請聯絡Adobe企業支援，瞭解必要條件並提出支援請求。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### 不支援的配置 {#unsupported-configurations}
+### 不支援的設定 {#unsupported-configurations}
 
 | 支援程度 | 說明 |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| E:預計工作 | 預計該配置將起作用，沒有相反的報告。 |
-| Z:不支援 | 不支援配置。 Adobe不會對配置是否有效發表任何聲明，也不支援它。 |
+| E：預期可運作 | 設定預期可運作，且沒有相反的報告。 |
+| Z：不支援 | 不支援此設定。 Adobe不會就設定是否運作發表任何宣告，也不支援該設定。 |
 
 >[!NOTE]
 >
->為幫助AEM Forms客戶降低擁有成本、簡化部署體系結構並實現開發堆棧的現代化，Adobe Experience Manager企業平台正從基於應用伺服器的部署轉向基於OSGi的獨立部署。 Adobe繼續支援AEM FormsJEE堆棧，減少基礎設施元件。
+>為協助AEM Forms客戶降低擁有成本、簡化部署架構及匯入最新的開發棧疊，Adobe Experience Manager企業平台正從應用程式伺服器部署轉向獨立的OSGi部署。 Adobe持續支援AEM Forms JEE棧疊，並減少基礎架構元件的矩陣。
 >
->隨著6.5版的發佈，不再支援在客戶中使用率最低的基礎架構元件，如下所示：
+>在6.5版中，我們不再支援使用率最低的客戶之基礎結構元件，如下所示：
 >
->- IBMDB2資料庫
->- IBMAIX和Sun Solaris作業系統
+>- IBM DB2資料庫
+>- IBM AIX和Sun Solaris作業系統
 >
->對於新安裝，建議在可行時在現代OSGi堆棧上部署AEM Forms，以利用響應性Adaptive Forms的最新創新，使用表單資料模型實現移動、多通道交互通信和後端資料整合。
+>若為新安裝，建議在可行的情況下，將AEM Forms部署在現代OSGi棧疊上，以善用關於回應式最適化Forms的最新創新，用於行動、多頻道互動式通訊和使用表單資料模型的後端資料整合。
 >
->我們認識到現有用戶需要繼續在JEE堆棧上部署AEM Forms。 在這些情形中，Adobe需要部署AEM FormsJEE，如本文檔所述。 如果您要升級到AEM6.5Forms，並在上一版的AEM Forms上使用不支援的平台，則可以聯繫Adobe支援以獲取升級到受支援平台的幫助。
+>我們瞭解現有使用者需要繼續在JEE棧疊上部署AEM Forms。 在這種情況下，Adobe需要在支援的基礎架構上部署AEM Forms JEE，如本檔案所述。 如果您要升級至AEM 6.5 Forms並使用不支援的平台(在舊版AEM Forms上)，請聯絡Adobe支援以取得升級至支援平台的協助。
 
-### Java虛擬機(JVM) {#java-virtual-machines-jvm}
+### Java虛擬機器器(JVM) {#java-virtual-machines-jvm}
 
-Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開發工具包(JDK)分發提供。 Adobe Experience Manager使用以下版本的Java虛擬機運行：
+Adobe Experience Manager Forms需要由Java Development Kit (JDK)散發提供的Java Virtual Machine才能執行。 Adobe Experience Manager可搭配下列版本的Java虛擬機器器運作：
 
 <table>
  <tbody>
@@ -100,32 +100,32 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr> 
-   <td><p>OracleJava™ SE 11（64位） <sup> [8] </sup> </p>  </td>
+   <td><p>oracleJava™ SE 11 （64位元） <sup> [8] </sup> </p>  </td>
    <td><p>答：支援</p> </td>
    <td><p>次要版本和更新 </p> </td>
   </tr>
   <tr>
-   <td>Azul Zulu OpenJDK 11 - 64位</td>
-   <td>Z:不支援</td>
+   <td>Azul Zulu OpenJDK 11 - 64位元</td>
+   <td>Z：不支援</td>
    <td><p> </p> </td>
   </tr>
   <tr>
-   <td>Azul Zulu OpenJDK 8 - 64位</td>
-   <td>Z:不支援</td>
+   <td>Azul Zulu OpenJDK 8 - 64位元</td>
+   <td>Z：不支援</td>
    <td><p> </p> </td>
   </tr>
   <tr>
-   <td>OracleJava™ SE 8（64位）</td>
+   <td>oracleJava™ SE 8 （64位元）</td>
    <td>答：支援</td>
    <td>次要版本和更新</td>
   </tr>
   <tr>
-   <td>IBM® J9虛擬機(build 2.9, JRE 1.8.0)IBM® JDK SR6-FP26<br /> </td>
+   <td>IBM® J9虛擬機器器（版本編號2.9、JRE 1.8.0） IBM®JDK SR6-FP26<br /> </td>
    <td>答：支援</td>
    <td>次要版本和更新</td>
   </tr>
   <tr>
-   <td>IBMJAVA1.8.0_291(內部版8.0.6.30)<br /> </td>
+   <td>IBM JAVA1.8.0_291（版本編號8.0.6.30）<br /> </td>
    <td>答：支援</td>
    <td>次要版本和更新</td>
   </tr>
@@ -134,11 +134,11 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
 
 >[!NOTE]
 >
->- 建議從Java供應商跟蹤安全公告，以確保生產環境的安全和安全，並安裝最新的Java更新。
->- JEE上的AEM Forms僅支援生產環境上的64位JVM。
+>- 建議追蹤Java廠商的安全公告，以確保生產環境的安全與保障，並安裝最新的Java更新。
+>- JEE上的AEM Forms在生產環境中僅支援64位元JVM。
 
 
-### 資料庫和CRX持久性 {#databases-and-crx-persistence}
+### 資料庫和CRX持續性 {#databases-and-crx-persistence}
 
 <table>
  <tbody>
@@ -149,67 +149,67 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
   </tr>
   <tr>
    <td><p>檔案系統</p> </td>
-   <td><p>資料庫微內核（TAR MK檔案）</p> </td>
+   <td><p>存放庫微核心（TAR MK檔案）</p> </td>
    <td><p>支援</p> </td>
   </tr>
   <tr>
-   <td><p> MongoDB Enterprise 4.0（不建議使用） </p> </td>
-   <td><p>儲存庫微內核</p> </td>
+   <td><p> MongoDB Enterprise 4.0 （已棄用） </p> </td>
+   <td><p>存放庫微核心</p> </td>
    <td><p>支援</p> </td>
   </tr>
   <tr>
    <td><p>MongoDB Enterprise 4.2 </p> </td>
-   <td><p>儲存庫微內核</p> </td>
+   <td><p>存放庫微核心</p> </td>
    <td><p>支援</p> </td>
   </tr>
   <tr>
-   <td><p>Oracle資料庫12c版本2(12.2.0.1.0)（不建議使用）</p> </td>
-   <td><p>儲存庫微內核</p> </td>
+   <td><p>oracle Database 12c版本2 (12.2.0.1.0) （已棄用）</p> </td>
+   <td><p>存放庫微核心</p> </td>
    <td><p>支援</p> </td>
   </tr>
    <tr>
-   <td>Oracle資料庫19c(標準版、 Real Application Clusters(RAC)和企業版) </td>
-   <td>儲存庫微核 </td>
+   <td>oracle資料庫19c (標準、Real Application Clusters (RAC)和Enterprise版本) </td>
+   <td>存放庫微核心 </td>
    <td>支援</td>
   </tr>
   <tr>
-   <td><p>MicrosoftSQL Server 2016（不建議使用）</p> </td>
-   <td><p>儲存庫微內核</p> </td>
+   <td><p>Microsoft SQL Server 2016 （已棄用）</p> </td>
+   <td><p>存放庫微核心</p> </td>
    <td><p>支援</p> </td>
   </tr>
   <tr>
-   <td><p>MicrosoftSQL Server 2019</p> </td>
-   <td><p>儲存庫微內核</p> </td>
+   <td><p>Microsoft SQL Server 2019</p> </td>
+   <td><p>存放庫微核心</p> </td>
    <td><p>支援</p> </td>
   </tr>
   <tr>
-   <td>IBMDB2 11.1（不建議使用）</td>
-   <td>儲存庫微內核</td>
-   <td>R:限制支援</td>
+   <td>IBM DB2 11.1 （已棄用）</td>
+   <td>存放庫微核心</td>
+   <td>R：限制支援</td>
   </tr>
   <tr>
-   <td>MySQL 5.7.35（不建議使用） </td>
+   <td>MySQL 5.7.35 （已棄用） </td>
    <td>-</td>
-   <td>R:限制支援</td>
+   <td>R：限制支援</td>
   </tr>
   <tr>
    <td>MySQL 8.0.27</td>
    <td>-</td>
-   <td>R:限制支援</td>
+   <td>R：限制支援</td>
   </tr>
  </tbody>
 </table>
 
-- IBMDB2不支援新安裝。 只支援現有客戶升級到AEM6.5Forms。
-- MongoDB是第三方軟體，不包括在許AEM可包中。 有關詳細資訊，請參閱 [MongoDB許可策略](https://www.mongodb.org/about/licensing/) 的子菜單。
-- 為了充分利用您的部署AEM,Adobe建議授予MongoDB Enterprise版本許可，以便從專業支援中獲益。
-- Adobe客戶服務將幫助確定與MongoDB的使用有關的問AEM題。 有關詳細資訊，請參見 [用於Adobe Experience Manager的MongoDB頁](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)。
-- 「檔案系統」包括符合POSIX的塊儲存。 這包括網路儲存技術。 請注意，檔案系統效能可能會有所不同，並會影響整體效能。 建議將test與AEM網路/遠程檔案系統結合載入。
+- 全新安裝不支援IBM DB2。 僅現有客戶升級至AEM 6.5 Forms時支援此功能。
+- MongoDB是協力廠商軟體，未包含在AEM授權套件中。 如需詳細資訊，請參閱 [MongoDB授權原則](https://www.mongodb.org/about/licensing/) 頁面。
+- 為了充分利用AEM部署，Adobe建議授權MongoDB Enterprise版本，以受益於專業支援。
+- Adobe客戶服務將協助解決與AEM使用MongoDB相關的資格確認問題。 如需詳細資訊，請參閱 [適用於Adobe Experience Manager的MongoDB頁面](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
+- 「檔案系統」包含符合POSIX的區塊儲存。 這包括網路儲存技術。 請記住，檔案系統效能可能會有所不同，並影響整體效能。 建議將負載測試AEM與網路/遠端檔案系統結合。
 - 僅支援MongoDB儲存引擎WiredTiger。
-- 中不支援MongoDB共用AEM。
-- AEM Forms在JEE上不支援MySQL用於RDBMK持久性。
-- 文檔安全模組不使用內容儲存庫。 這意味著，如果您只使用「文檔安全性」，並且不計畫使用「HTML工作區」、「HTML5」表單或自適應表單，則不要安裝「內容儲存庫」。
-- AEM Forms在JEE上不支援使用MySQL來AEM保存儲存庫(CRX-Repository)。
+- AEM不支援MongoDB分片。
+- JEE上的AEM Forms不支援MySQL for RDBMK持續性。
+- Document Security模組不使用內容存放庫。 這表示，如果您只使用Document Security，並且不打算使用HTML工作區、HTML5表單或調適型表單，則不要安裝內容存放庫。
+- JEE上的AEM Forms不支援使用MySQL來儲存AEM存放庫(CRX-Repository)。
 
 ### 資料庫驅動程式 {#database-drivers}
 
@@ -222,28 +222,28 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
   </tr>
   <tr>
    <td>MySQL</td>
-   <td><p>MySQL Connector/J 5.7</p> <p>mysql-connector-java-5.1.44-bin.jar(5.1.44版)</p> </td>
-   <td><p>隨AEM Forms提供的JEE安裝</p> </td>
+   <td><p>MySQL Connector/J 5.7</p> <p>mysql-connector-java-5.1.44-bin.jar （5.1.44版）</p> </td>
+   <td><p>JEE安裝時隨AEM Forms提供</p> </td>
   </tr>
   <tr>
-   <td>MicrosoftSQL Server<br /> </td>
-   <td><p>Microsoft® SQL Server JDBC驅動程式6.2.1.0（不建議使用） <br /> </p> <p>sqljdbc6.jar</p> </td>
-   <td><p>隨AEM Forms提供，安裝JEE。</p> </td>
+   <td>Microsoft SQL Server<br /> </td>
+   <td><p>Microsoft® SQL Server JDBC驅動程式6.2.1.0 （已棄用） <br /> </p> <p>sqljdbc6.jar</p> </td>
+   <td><p>隨附於AEM Forms的JEE安裝。</p> </td>
   </tr>
     <tr>
-   <td>MicrosoftSQL Server<br /> </td>
+   <td>Microsoft SQL Server<br /> </td>
    <td><p>Microsoft® SQL Server JDBC驅動程式6.2.2.0 <br /> </p> <p>sqljdbc6.jar</p> </td>
-   <td><p>隨AEM Forms提供，安裝JEE。</p> </td>
+   <td><p>隨附於AEM Forms的JEE安裝。</p> </td>
   </tr>
   <tr>
-   <td>MicrosoftSQL Server<br /> </td>
+   <td>Microsoft SQL Server<br /> </td>
    <td><p>Microsoft® SQL Server JDBC驅動程式8.2.2<br /> </p> <p>sqljdbc8.jar</p> </td>
    <td><p>從Microsoft網站下載。</p> </td>
   </tr>
   <tr>
-   <td>Oracle</td>
-   <td><p>Oracle資料庫19.3.0.0.0 JDBC驅動程式</p> <p>ojdbc8.jar(19.3.0.0.0版)<br /> </p> </td>
-   <td><p>從 <a href="https://www.oracle.com/database/technologies/appdev/jdbc-ucp-19c-downloads.html">Oracle網站</a>。</p> </td>
+   <td>oracle</td>
+   <td><p>oracle資料庫19.3.0.0.0 JDBC驅動程式</p> <p>ojdbc8.jar （19.3.0.0.0版）<br /> </p> </td>
+   <td><p>下載來源 <a href="https://www.oracle.com/database/technologies/appdev/jdbc-ucp-19c-downloads.html">oracle網站</a>.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -258,22 +258,22 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
    <td><p><strong>支援的修補程式定義</strong></p> </td>
   </tr>
   <tr>
-   <td>OracleWebLogic Server 12.2.1(12c R2)</td>
+   <td>oracleWebLogic Server 12.2.1 (12c R2)</td>
    <td>答：支援</td>
-   <td>Service Pack和關鍵更新</td>
+   <td>Service Pack和重要更新</td>
   </tr>
   <tr>
    <td>IBM® WebSphere® Application Server 9.0.0.10 <sup>[1] [4]</sup><br /> </td>
    <td>答：支援</td>
-   <td>Service Pack和關鍵更新</td>
+   <td>Service Pack和重要更新</td>
   </tr>
   <tr>
-   <td><p>JBoss®企業應用程式平台(EAP)7.1.4 <sup>[2] [3] [7]</sup> （不建議使用） </p> </td>
+   <td><p>JBoss® Enterprise Application Platform (EAP) 7.1.4 <sup>[2] [3] [7]</sup> （已棄用） </p> </td>
    <td><p>答：支援</p> </td>
    <td><p>支援的EAP版本的修補程式和累積修補程式</p> </td>
   </tr>
   <tr>
-   <td><p>JBoss®企業應用程式平台(EAP)7.4 <sup>[2] [3] [7]</sup> </p> </td>
+   <td><p>JBoss® Enterprise Application Platform (EAP) 7.4 <sup>[2] [3] [7]</sup> </p> </td>
    <td><p>答：支援</p> </td>
    <td><p>支援的EAP版本的修補程式和累積修補程式</p> </td>
   </tr>
@@ -282,7 +282,7 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
 
 >[!NOTE]
 >
->IBM® WebSphere®群集僅在網路部署版中受支援。
+>僅網路部署版本支援IBM® WebSphere®叢集。
 
 ### 伺服器作業系統 {#server-operating-systems}
 
@@ -292,98 +292,98 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
  <tbody>
   <tr>
    <th><p><strong> Platform</strong></p> </th>
-   <th><p><strong>支援級別</strong></p> </th>
+   <th><p><strong>支援等級</strong></p> </th>
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
    <tr>
-   <td>MicrosoftWindows Server 2019（64位）</td>
+   <td>Microsoft Windows Server 2019 （64位元）</td>
    <td>答：支援</td>
-   <td>服務包和關鍵更新</td>
+   <td>Service Pack和重要更新</td>
   </tr>
   <tr>
-   <td>烏班圖20.04</td>
+   <td>Ubuntu 20.04</td>
    <td>答：支援</td>
-   <td>服務包和關鍵更新</td>
+   <td>Service Pack和重要更新</td>
   </tr>
   <tr>
-   <td> MicrosoftWindows Server 2016（64位）（不建議使用）</td>
+   <td> Microsoft Windows Server 2016 （64位元） （已棄用）</td>
    <td>答：支援</td>
-   <td>服務包和關鍵更新</td>
+   <td>Service Pack和重要更新</td>
   </tr>
   <tr>
-   <td><p>Red Hat Enterprise Linux 8（內核4.x）（64位）</p> </td>
+   <td><p>Red Hat Enterprise Linux 8 （核心4.x） （64位元）</p> </td>
    <td><p>答：支援</p> </td>
-   <td><p>次要版本、累計更新和關鍵更新</p> </td>
+   <td><p>次要版本、累積更新和關鍵更新</p> </td>
   </tr>
   <tr>
-   <td><p>Red Hat Enterprise Linux 7（內核3.x）（64位）（不建議使用）</td>
+   <td><p>Red Hat Enterprise Linux 7 （核心3.x） （64位元） （已棄用）</td>
    <td><p>答：支援</p> </td>
-   <td><p>次要版本、累計更新和關鍵更新</p> </td>
+   <td><p>次要版本、累積更新和關鍵更新</p> </td>
   </tr>
   <tr>
-   <td><p>SUSE® Linux® Enterprise Server 12（64位）</p> </td>
+   <td><p>SUSE® Linux® Enterprise Server 12 （64位元）</p> </td>
    <td><p>答：支援</p> </td>
-   <td><p>服務包、累積補丁程式和關鍵安全更新</p> </td>
+   <td><p>Service Pack、累積修補程式和重要安全性更新</p> </td>
   </tr>
   <tr>
-   <td>OracleLinux® 7 Update 3（64位）</td>
+   <td>oracleLinux® 7更新3 （64位元）</td>
    <td>答：支援</td>
-   <td>服務包、累積補丁程式和關鍵安全更新</td>
+   <td>Service Pack、累積修補程式和重要安全性更新</td>
   </tr>
   <tr>
-   <td>CentOS 7（64位）<sup> [6]</sup></td>
+   <td>CentOS 7 （64位元）<sup> [6]</sup></td>
    <td>答：支援</td>
-   <td>服務包、累積補丁程式和關鍵安全更新</td>
+   <td>Service Pack、累積修補程式和重要安全性更新</td>
   </tr>
  </tbody>
 </table>
 
 #### 虛擬化環境 {#virtualized-environment}
 
-您可以在物理機或虛擬環境上的JEE上運行AEM Forms。 但是，如果您在虛擬環境中與AEM Forms發生任何問題，請嘗試在物理機上複製該問題。 如果物理機上仍存在問題，請與Adobe支援聯繫以獲得解決方案。 有關無法在物理電腦上複製的問題，請與虛擬環境供應商聯繫。
+您可以在JEE上的實體電腦或虛擬環境中執行AEM Forms。 不過，如果您在虛擬環境中遇到AEM Forms的任何問題，請嘗試在實體機器上複製此問題。 如果實體電腦上持續發生問題，請聯絡Adobe支援以尋求解決方案。 針對您無法在實體機器上復寫的問題，請連絡您的虛擬環境廠商。
 
 #### 開發環境 {#development-environments}
 
 <table>
  <tbody>
   <tr>
-   <th><p><strong>平台（基本版本）</strong></p> </th>
+   <th><p><strong>平台（基礎版本）</strong></p> </th>
    <th>支援程度</th>
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr>
-   <td><p>Microsoft® Windows® 10 64位</p> </td>
-   <td>E:預計工作</td>
-   <td><p>Service Pack和關鍵更新</p> </td>
+   <td><p>Microsoft® Windows® 10 64位元</p> </td>
+   <td>E：預期可運作</td>
+   <td><p>Service Pack和重要更新</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 支援的伺服器平台的異常 {#exceptions-to-supported-server-platforms}
+### 支援的伺服器平台例外 {#exceptions-to-supported-server-platforms}
 
-在選擇平台以在JEE伺服器上設定AEM Forms時，請考慮以下例外。
+選擇在JEE伺服器上設定AEM Forms的平台時，請考量下列例外情況。
 
-1. AEM Forms在JEE上不支援IBM® WebSphere®和MySQL。
-1. JEE上的AEM Forms不支援SUSE Linux Enterprise Server 12上的JBoss。 SUSE Linux Enterprise Server 12僅支援IBMWebSphere。
-1. AEM FormsJEE不支援任何JDK(除OracleJava™ SE外)使用JBoss®。
-1. AEM Forms在JEE上不支援除IBM® JDK外的任何帶IBM® WebSphere®的JDK。
-1. CRX-repository支援TarMK、MongoDB和關係資料庫(RDBMK)類型的持久性。 應用程式伺服器和CRX-repository之間不能有兩個不同的資料庫系統。 但是，在JEE環境上的AEM Forms上，您可以將MongoMK與CRX-repository一起使用，並將受支援的關係資料庫與應用程式伺服器一起使用。
-1. AEM Forms在JEE上不支援CentOS上的WebSphere應用程式伺服器。
-1. AEM Forms在JEE上不支援基於JBoss角色的訪問控制(RBAC)。
-1. AEM Forms在JEE上僅支援OracleJava™ SE 11（64位）SDK，用於應用程式伺服器JBoss EAP 7.4。
+1. JEE上的AEM Forms不支援搭配MySQL使用的IBM® WebSphere®。
+1. JEE上的AEM Forms不支援SUSE Linux Enterprise Server 12上的JBoss。 SUSE Linux Enterprise Server 12僅支援IBM WebSphere。
+1. 除OracleJava™ SE外，JEE上的AEM Forms不支援任何具®JBoss的JDK。
+1. JEE上的AEM Forms不支援任何具有IBM® WebSphere®的JDK，IBM® JDK除外。
+1. CRX-repository支援TarMK、MongoDB和關聯式資料庫(RDBMK)型別的持續性。 應用程式伺服器和CRX-repository之間不能有兩個不同的資料庫系統。 不過，在JEE環境上的AEM Forms上，您可以搭配CRX儲存庫和支援的關聯式資料庫與應用程式伺服器使用MongoMK。
+1. JEE上的AEM Forms不支援CentOS上的WebSphere應用程式伺服器。
+1. JEE上的AEM Forms不支援JBoss角色型存取控制(RBAC)。
+1. JEE上的AEM Forms僅支援應用程式伺服器JBoss EAP 7.4的OracleJava™ SE 11 （64位元） SDK。
 
-此外，在選擇軟體以AdobeAEM Forms部署JEE時，請考慮以下幾點：
+此外，選擇在JEE部署上AdobeAEM Forms的軟體時，請考量下列幾點：
 
-- JEE上的AEM Forms支援受支援軟體的指定主版本和次版本上的更新、修補程式和修復包。 但是，除非指定，否則不支援更新到下一個主版本或次版本。
-- 基於群集的安裝不支援TarMK持久性。 有關支援的持久性的資訊，請參見 [為AEM Forms安裝選擇持久性類型](/help/forms/using/choosing-persistence-type-for-aem-forms.md)。
-- AEM FormsJEE支援各種第三方軟體 [第三方軟體支援策略](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p)。
-- AEM FormsJEE支援第三方供應商提供的平台。 第三方供應商可能不允許某些組合。 例如，許多供應商尚未通過Oracle對其應用程式伺服器進行認證。 因此，AEM Forms在JEE上也不支援這些組合。 為確保您選擇受支援的軟體版本，請檢查第三方供應商的支援清單。
-- AEM Forms在JEE上不支援TarMK冷備用。
-- AEM Forms的JEE不支援垂直聚類。
-- JEE上的AEM Forms不支援群集環境上的MySQL資料庫。
-- 有關已刪除或已更新的平台的清單，請參見 [AEM6.5Forms新功能摘要](../../forms/using/whats-new.md) 的子菜單。
+- JEE版AEM Forms除了支援軟體的指定主要和次要版本以外，也支援更新、修補程式和修正套件。 不過，除非另有指定，否則不支援更新至下一個主要或次要版本。
+- 叢集式安裝不支援TarMK持續性。 如需有關支援的持續性的資訊，請參閱 [為AEM Forms安裝選擇持續性型別](/help/forms/using/choosing-persistence-type-for-aem-forms.md).
+- AEM Forms on JEE支援各種協力廠商軟體，具體如下： [協力廠商軟體支援政策](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p).
+- 根據協力廠商提供的支援，JEE上的AEM Forms可支援平台。 協力廠商可能不允許某些組合。 例如，許多廠商尚未認證其應用程式伺服器的Oracle。 因此，JEE上的AEM Forms也不支援這些組合。 為確保您選擇支援的軟體版本，請一併參閱協力廠商的支援矩陣。
+- JEE上的AEM Forms不支援TarMK冷待命。
+- JEE上的AEM Forms不支援垂直叢集。
+- JEE上的AEM Forms不支援叢集環境上的MySQL資料庫。
+- 如需已移除或更新平台的清單，請參閱 [AEM 6.5 Forms新功能摘要](../../forms/using/whats-new.md) 檔案。
 
-### LDAP伺服器（可選） {#ldap-servers-optional}
+### LDAP伺服器（選購） {#ldap-servers-optional}
 
 <table>
  <tbody>
@@ -392,24 +392,24 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr>
-   <td>Microsoft2016</td>
-   <td>維護版本和修復包</td>
+   <td>Microsoft Active Directory 2016</td>
+   <td>維護版本和修正套件</td>
   </tr>
   <tr>
    <td><p>IBM® Tivoli Directory Server 6.4</p> </td>
-   <td><p>功能包和臨時修復</p> </td>
+   <td><p>功能套件和暫時修正</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 電子郵件伺服器（可選） {#email-servers-optional}
+### 電子郵件伺服器（選購） {#email-servers-optional}
 
 | 產品 |
 | ----------------------- |
-| MicrosoftExchange 2013 |
+| Microsoft Exchange 2013 |
 | Microsoft Office 365 |
 
-### 內容管理器和相應的連接器 {#content-managers-and-corresponding-connectors}
+### 內容管理員和對應的聯結器 {#content-managers-and-corresponding-connectors}
 
 <table>
  <tbody>
@@ -422,155 +422,155 @@ Adobe Experience Manager Forms需要運行Java虛擬機，該虛擬機由Java開
    <td>7.3</td>
   </tr>
   <tr>
-   <td>IBM·菲萊內</td>
+   <td>IBM Filenet</td>
    <td>5.5.2</td>
   </tr>
   <tr>
-   <td>IBMContent Manager伺服器（不建議使用） </td>
-   <td>8.5修復包2</td>
+   <td>IBM Content Manager伺服器（已棄用） </td>
+   <td>8.5 Fix Pack 2</td>
   </tr>
   <tr>
-   <td> IBMContent Manager客戶端（不建議使用）</td>
+   <td> IBM內容管理員使用者端（已棄用）</td>
    <td>8.5 </td>
   </tr>
   <tr>
-   <td>MicrosoftSharepoint </td>
-   <td>2016（不建議使用）<br /> </td>
+   <td>Microsoft Sharepoint </td>
+   <td>2016 （已棄用）<br /> </td>
   </tr>
   <tr>
-   <td>MicrosoftSharepoint </td>
+   <td>Microsoft Sharepoint </td>
    <td>2019<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### 支援科爾多瓦 {#support-for-cordova}
+### 支援Cordova {#support-for-cordova}
 
-AEM Forms應用現在支援Apache Cordova。 以下是支援的特定於平台的Cordova版本：
+AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特定版本Cordova：
 
-- 阿帕奇科爾多瓦6.4.0
-- 科爾多瓦iOS4.3.0
-- 科爾多瓦安卓6.0.0
-- 科爾多瓦Windows 4.4.3
+- Apache Cordova 6.4.0
+- Cordova iOS 4.3.0
+- Cordova Android 6.0.0
+- Cordova Windows 4.4.3
 
-### 用於PDF發生器的軟體支援 {#software-support-for-pdf-generator}
+### PDF產生器的軟體支援 {#software-support-for-pdf-generator}
 
 <table>
  <tbody>
   <tr>
    <th><p><strong>產品</strong></p> </th>
-   <th><p><strong>支援的轉換到PDF格式</strong></p> </th>
+   <th><p><strong>支援的PDF轉換格式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat2020年經典賽道</a> 最新版本</td>
-   <td>XPS，影像格式(BMP,GIF,JPEG,JPG, TIF,TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC),HTML, HTM, DWG, DXF和DWF</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic路線</a> 最新版本</td>
+   <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat2017年經典賽道</a> 最新版本（不建議使用）</td>
-   <td>XPS，影像格式(BMP,GIF,JPEG,JPG, TIF,TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC),HTML, HTM, DWG, DXF和DWF</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic路線</a> 最新版本（已棄用）</td>
+   <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
    <td>Microsoft® Office 2019</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
-   <td>Microsoft® Office 2016（不建議使用）</td>
+   <td>Microsoft® Office 2016 （已棄用）</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
    <td>WordPerfect 2020<br /> </td>
-   <td>WP,WPD</td>
+   <td>WP、WPD</td>
   </tr>
   <tr>
-   <td>Microsoft® Office Visio 2016（不建議使用）<br /> </td>
+   <td>Microsoft® Office Visio 2016 （已棄用）<br /> </td>
    <td>VSD、VSDX</td>
   </tr>
   <tr>
-   <td>Microsoft®發行商2019<br /> </td>
-   <td>酒吧</td>
+   <td>Microsoft®發佈商2019<br /> </td>
+   <td>公共</td>
   </tr>
   <tr>
-   <td>Microsoft® Publisher 2016（不建議使用）<br /> </td>
-   <td>酒吧</td>
+   <td>Microsoft® Publisher 2016 （已棄用）<br /> </td>
+   <td>公共</td>
   </tr>
   <tr>
-   <td>Microsoft® Project 2016（不建議使用）<br /> </td>
+   <td>Microsoft®專案2016 （已棄用）<br /> </td>
    <td>MPP</td>
   </tr>
   <tr>
    <td>OpenOffice 4.1.10</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXD、XLS、XLS、DOC、DOCX、PPT、PPTX、影像格式(BMP、GIF、JPEG、JPG、TIF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF和TXT</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、和TXT</td>
   </tr>
   <tr>
-   <td>OpenOffice 4.1.2（已棄用）</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXD、XLS、XLS、DOC、DOCX、PPT、PPTX、影像格式(BMP、GIF、JPEG、JPG、TIF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF和TXT</td>
+   <td>OpenOffice 4.1.2 （已棄用）</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、和TXT</td>
   </tr>  
  </tbody>
 </table>
 
 >[!NOTE]
-PDF生成器僅支援受支援的作業系統和應用程式的英文、法文、德文和日文版本。
+PDF產生器僅支援英文、法文、德文和日文版本的支援作業系統和應用程式。
 此外：
-- PDF生成器需要32位版本 [Acrobat2020經典賽道20.004.30006版](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 或Acrobat2017 17.011.30078版執行轉換。
-- PDF生成器僅支援32位Retail版的MicrosoftOffice Professional Plus和轉換所需的其他軟體。
-- PDF生成器不支援MicrosoftOffice 365。
-- OpenOffice的PDF生成器轉換僅在Windows和Linux上受支援。
-- OCRPDF、Optimize PDF和Export PDF功能僅在Windows上受支援。
-- Acrobat版本與AEM Forms捆綁，以啟用PDF生成器功能。 捆綁版本只應在AEM Forms許可證期間通過AEM Forms以寫程式方式訪問，以便與AEM FormsPDF生成器一起使用。 有關詳細資訊，請參閱按部署的AEM Forms產品說明([內部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
-- PDF生成器服務不支援MicrosoftWindows 10。
-- PDF生成器無法使用MicrosoftVisio 2019轉換檔案。 您可以繼續使用MicrosoftVisio 2016轉換.VSD和.VSDX檔案。
-- PDF生成器無法使用Microsoft項目2019轉換檔案。 您可以繼續使用Microsoft項目2016轉換.MPP檔案。
+- PDF產生器需要32位元版本的 [Acrobat 2020 classic路線20.004.30006版](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 或Acrobat 2017 17.011.30078版來執行轉換。
+- PDF產生器僅支援32位元零售版的Microsoft Office Professional Plus以及其他轉換所需的軟體。
+- PDF產生器不支援Microsoft Office 365。
+- 僅在Windows和Linux上支援OpenOffice的PDF產生器轉換。
+- 只有Windows支援OCRPDF、Optimize PDF和Export PDF功能。
+- Acrobat版本與AEM Forms搭配，可啟用PDF產生器功能。 套件版本僅可透過AEM Forms (在AEM Forms授權期間)以程式設計方式存取，以與AEM FormsPDF產生器搭配使用。 如需詳細資訊，請參閱根據您的部署說明的AEM Forms產品說明([內部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))」
+- PDF產生器服務不支援Microsoft Windows 10。
+- PDF產生器無法使用Microsoft Visio 2019轉換檔案。 您可以繼續使用Microsoft Visio 2016來轉換.VSD和.VSDX檔案。
+- PDF產生器無法使用Microsoft Project 2019轉換檔案。 您可以繼續使用Microsoft Project 2016來轉換.MPP檔案。
 >
 
 
-### 輔助功能支援例外 {#exceptions-to-accessibility-support}
+### 協助工具支援的例外情況 {#exceptions-to-accessibility-support}
 
-以下AEM Forms子系統不是 [508](https://www.section508.gov/) 符合：
+下列AEM Forms子系統不是 [508](https://www.section508.gov/) 相容：
 
-- 自適應Forms創作UI
-- Forms經理創作UI
-- 通信管理創作UI
-- 管理UI（管理控制台UI）
+- 最適化Forms編寫UI
+- Forms Manager編寫UI
+- Correspondence Management編寫UI
+- Admin UI (Administration Console UI)
 
-## AEM Forms對JEE的系統要求 {#system-requirements-for-aem-forms-on-jee}
+## JEE版AEM Forms的系統需求 {#system-requirements-for-aem-forms-on-jee}
 
-### 最低硬體要求 {#minimum-hardware-requirements}
+### 最低硬體需求 {#minimum-hardware-requirements}
 
 <table>
  <tbody>
   <tr>
    <td>Platform</td>
-   <td>最低硬體要求</td>
+   <td>最低硬體需求</td>
   </tr>
   <tr>
-   <td>MicrosoftWindows伺服器</td>
-   <td>英特爾®至強® E5-2680,2.4 GHz處理器或等效處理器<br /> VMWare ESX 5.1或更高版本<br /> 記憶體：6 GB（64位作業系統，帶64位JVM）<br /> 可用磁碟空間：15GB的臨時空間加22GB<br /> AEM Forms的JEE</td>
+   <td>Microsoft Windows Server</td>
+   <td>Intel® Xeon® E5-2680、2.4 GHz處理器或同等處理器<br /> VMWare ESX 5.1或更新版本<br /> RAM：6 GB （64位元作業系統搭配64位元JVM）<br /> 可用磁碟空間：15GB的暫存空間加上22GB<br /> 適用於AEM Forms on JEE的</td>
   </tr>
   <tr>
    <td>SUSE Linux Enterprise Server</td>
-   <td>英特爾至強E5-2670v2,1 vCPU,2.5 GHz處理器<br /> AWSM3.medium（3個ECU）<br /> 記憶體：6 GB（64位作業系統，帶64位JVM）<br /> 可用磁碟空間：6 GB的臨時空間加22 GB<br /> AEM Forms的JEE</td>
+   <td>Intel Xeon E5-2670v2,1個vCPU，2.5 GHz處理器<br /> AWS m3.medium （3個ECU）<br /> RAM：6 GB （64位元作業系統搭配64位元JVM）<br /> 可用磁碟空間：6 GB的暫存空間加上22 GB<br /> 適用於AEM Forms on JEE的</td>
   </tr>
   <tr>
    <td>Red Hat Enterprise Linux</td>
-   <td>英特爾至強E5-2670v2,1 vCPU,2.5 GHz處理器<br /> AWSM3.medium（3個ECU）<br /> 記憶體：6 GB（64位作業系統，帶64位JVM）<br /> 可用磁碟空間：6 GB的臨時空間加22 GB<br /> AEM Forms的JEE<br /> </td>
+   <td>Intel Xeon E5-2670v2,1個vCPU，2.5 GHz處理器<br /> AWS m3.medium （3個ECU）<br /> RAM：6 GB （64位元作業系統搭配64位元JVM）<br /> 可用磁碟空間：6 GB的暫存空間加上22 GB<br /> 適用於AEM Forms on JEE的<br /> </td>
   </tr>
   <tr>
-   <td>小型生產環境的硬體要求</td>
+   <td>小型生產環境的硬體需求</td>
    <td>
     <ul>
-     <li><strong>英特爾支援的環境</strong>:英特爾®至強® E5-2680,2.4 GHz或更高。 使用雙核處理器將進一步提高效能</li>
+     <li><strong>Intel支援的環境</strong>：Intel® Xeon® E5-2680,2.4 GHz或更高。 使用雙核心處理器可進一步提升效能</li>
      <li><strong>記憶體： </strong>4 GB <br /> </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-有關其他要求，請參閱：
+如需其他需求，請參閱：
 
-- [JEE部署上單伺服器AEM Forms的系統要求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65)
-- [JEE部署群集AEM Forms的系統要求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65)
+- [JEE部署之單一伺服器AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65)
+- [JEE部署上叢集AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65)
 
-## 在JEE上為AEM Forms提供支援的客戶端 {#supported-clients-for-aem-forms-on-jee}
+## AEM Forms on JEE的支援使用者端 {#supported-clients-for-aem-forms-on-jee}
 
 ### Workbench {#workbench}
 
@@ -581,93 +581,93 @@ PDF生成器僅支援受支援的作業系統和應用程式的英文、法文�
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr>
-   <td><p>Microsoft® Windows® 10（企業版、專業版、基本版）</p> <p>32位或64位版本</p> <p> </p> </td>
-   <td>服務包和關鍵更新</td>
+   <td><p>Microsoft® Windows® 10 (Enterprise、Pro、Basic)</p> <p>32位元或64位元版本</p> <p> </p> </td>
+   <td>Service Pack和重要更新</td>
   </tr>
   <tr>
-   <td>Microsoft® Windows® 2016伺服器</td>
-   <td>服務包和關鍵更新</td>
+   <td>Microsoft® Windows® 2016 Server</td>
+   <td>Service Pack和重要更新</td>
   </tr>
  </tbody>
 </table>
 
-- 安裝的磁碟空間：僅Workbench為1.7 GB,Workbench、Designer和示例程式集的單個驅動器上為2.7 GB，用於完全安裝Workbench、Designer和示例程式集，400 MB用於臨時安裝目錄 — 200 MB用於用戶臨時目錄，200 MB。 如果所有這些位置都位於單個驅動器上，則安裝期間必須有1.5 GB的可用空間。 安裝完成後，將刪除複製到臨時目錄的檔案。
+- 安裝磁碟空間：1.7 GB （僅適用於Workbench）、2.7 GB （僅適用於Workbench、Designer完整安裝的單一磁碟機），以及範例元件400 MB （適用於暫存安裝目錄）：200 MB （位於使用者暫存目錄）和200 MB （位於Windows暫存目錄）。 如果所有這些位置都位於單一磁碟機上，安裝期間必須有1.5 GB的可用空間。 安裝完成時，會刪除複製到暫存目錄的檔案。
 
-- 運行Workbench的記憶體：2 GB記憶體
-- 硬體要求：英特爾®奔騰® 4或AMD等效處理器，1 GHz處理器
-- 16位或更高顏色的顯示器解析度至少為1024 X 768像素或更高
-- TCP/IPv4或TCP/IPv6網路連接到JEE伺服器上的AEM Forms
-- 您必須具有管理權限才能在Windows上安裝Workbench。 如果您使用非管理員帳戶進行安裝，安裝程式將提示您輸入相應帳戶的憑據。
+- 執行Workbench所需的記憶體：2 GB的RAM
+- 硬體需求：Intel® Pentium® 4或AMD同等處理器，1 GHz處理器
+- 最低1024 X 768畫素或更高的熒幕解析度（含16位元色彩或更高）
+- 與JEE伺服器上AEM Forms的TCP/IPv4或TCP/IPv6網路連線
+- 您必須具有系統管理許可權，才能在Windows上安裝Workbench。 如果您使用非管理員帳戶進行安裝，安裝程式會提示您輸入適當帳戶的認證。
 
 ### Designer {#designer}
 
-- Microsoft® Windows® 2016伺服器、Microsoft® Windows® 2019伺服器或Microsoft® Windows® 10
+- Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server或Microsoft® Windows® 10
 - 1 GHz或更快的處理器，支援PAE、NX和SSE2。
-- 1 GB RAM（用於32位）或2 GB RAM（用於64位作業系統）
-- 16 GB磁碟空間用於32位或20 GB磁碟空間用於64位作業系統
-- 圖形記憶體 — 128 MB的GPU（建議256 MB）
+- 32位元的1 GB RAM或64位元作業系統的2 GB RAM
+- 16 GB磁碟空間，適用於32位元或20 GB磁碟空間，適用於64位元作業系統
+- 顯示卡記憶體：128 MB的GPU （建議使用256 MB）
 - 2.35 GB的可用硬碟空間
-- 1024 X 768像素或更高的顯示器解析度
-- 視頻硬體加速（可選）
-- Acrobat Pro DC,Acrobat Standard DC或Adobe Acrobat Reader DC。
-- 安裝設計器的管理權限。
+- 1024 X 768畫素或更高的熒幕解析度
+- 視訊硬體加速（選購）
+- Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC。
+- 安裝Designer的管理許可權。
 
 ### Adobe Acrobat和Adobe Reader {#adobe-acrobat-and-adobe-reader}
 
 <table>
  <tbody>
   <tr>
-   <th><p><strong>Acrobat和Adobe Reader（基地）</strong></p> </th>
+   <th><p><strong>Acrobat和Adobe Reader （基礎版）</strong></p> </th>
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr>
-   <td>Acrobat2020（經典賽道）</td>
-   <td>20.004.30006版或更高版本<br /> </td>
+   <td>Acrobat 2020 （傳統路線）</td>
+   <td>20.004.30006版或更新版本<br /> </td>
   </tr>
   <tr>
-   <td>Acrobat2017（經典曲目）（不建議使用）</td>
-   <td>17.011.30078版或更高版本<br /> </td>
+   <td>Acrobat 2017 （傳統路線） （已棄用）</td>
+   <td>17.011.30078版或更新版本<br /> </td>
   </tr>
 
 </tbody>
 </table>
 
 >[!NOTE]
-Acrobat DC產品系列為Acrobat和Reader引入了兩種本質上不同的產品：&quot;經典&quot;和&quot;連續&quot; 有關詳細資訊和兩個軌道的比較，請參見 [https://www.adobe.com/go/acrobatdctracks。](https://www.adobe.com/go/acrobatdctracks)
+Acrobat DC產品系列為Acrobat和Reader引進了兩種路線，本質上是不同的產品：「Classic」和「Continuous」。 如需詳細資訊和兩個曲目的比較，請參閱 [https://www.adobe.com/go/acrobatdctracks.](https://www.adobe.com/go/acrobatdctracks)
 
 ### 瀏覽器 {#browsers}
 
-#### 台式機 {#desktops}
+#### 桌上型 {#desktops}
 
 <table>
  <tbody>
   <tr>
    <th><p><strong>瀏覽器（基本）</strong></p> </th>
-   <th><p><strong>支援級別</strong></p> </th>
+   <th><p><strong>支援等級</strong></p> </th>
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr>
-   <td><p>Microsoft邊（長青）</p> </td>
+   <td><p>Microsoft Edge （長青）</p> </td>
    <td><p>答：支援</p> </td>
-   <td><p>服務包和更新</p> </td>
+   <td><p>Service Pack和更新</p> </td>
   </tr>
   <tr>
-   <td><p>Mozilla Firefox(Evergreen)</p> </td>
+   <td><p>Mozilla Firefox （常青）</p> </td>
    <td><p>答：支援</p> </td>
    <td>所有更新</td>
   </tr>
   <tr>
    <td>Mozilla Firefox ESR</td>
-   <td>E:預計工作</td>
+   <td>E：預期可運作</td>
    <td> 所有更新</td>
   </tr>
   <tr>
-   <td><p>Google克羅姆語（長青）</p> </td>
+   <td><p>Google Chrome （常青）</p> </td>
    <td><p>答：支援</p> </td>
    <td>所有更新</td>
   </tr>
   <tr>
-   <td>Apple·薩法里在macOS</td>
+   <td>macOS上的Apple Safari</td>
    <td>答：支援</td>
    <td>所有更新</td>
   </tr>
@@ -675,15 +675,15 @@ Acrobat DC產品系列為Acrobat和Reader引入了兩種本質上不同的產品
 </table>
 
 >[!NOTE]
-某些與瀏覽器相關的台式機例外如下：
-- 僅Macintosh OS X支援Safari。
-- Workspace支援Macintosh OS X 10.6和10.7上的Safari 5.1(含Acrobat DC或更高版本)。 有關Safari 5.1與AcrobatAdobe Reader的相容性的詳細資訊，請參見 [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html)。
-- Safari不支援管理控制台。
-- Tergementage Management不支援Windows® Internet Explorer 9.0 for AEM 6.1表單。
-- Forms門戶支援Internet Explorer 11上的JAWS 14.0螢幕閱讀器軟體，用於輔助功能。
+桌上型電腦的一些瀏覽器相關例外狀況如下：
+- 只有Macintosh OS X支援Safari。
+- Workspace支援Macintosh OS X 10.6和10.7上的Safari 5.1 (含Acrobat DC或更新版本)。 如需Safari 5.1與Adobe Reader、Acrobat相容性的詳細資訊，請參閱 [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
+- Safari不支援管理主控台。
+- Correspondence Management不支援AEM 6.1表單適用的Windows® Internet Explorer 9.0。
+- Forms入口網站支援Internet Explorer 11上的JAWS 14.0熒幕助讀程式軟體，以提供協助工具。
 
 
-#### 移動客戶端 {#mobile-clients}
+#### 行動使用者端 {#mobile-clients}
 
 <table>
  <tbody>
@@ -692,116 +692,116 @@ Acrobat DC產品系列為Acrobat和Reader引入了兩種本質上不同的產品
    <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr>
-   <td><p>Android™ 4.1.2及以上版本上的Chrome</p> </td>
+   <td><p>Android™ 4.1.2及更高版本上的Chrome</p> </td>
    <td><p>所有更新</p> </td>
   </tr>
   <tr>
-   <td>iOS15.1及以上</td>
+   <td>iOS 15.1及更高版本上的Safari</td>
    <td>所有更新</td>
   </tr>
   <tr>
-   <td>Microsoft邊<br /> </td>
+   <td>Microsoft Edge<br /> </td>
    <td>所有更新<br /> </td>
   </tr>
   <tr>
-   <td>Android™ 4.4及更高版本的Android瀏覽器</td>
+   <td>Android™ 4.4及更高版本上的原生Android瀏覽器</td>
    <td>所有更新</td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
-- Forms門戶僅在iPad的Safari上受支援。
+- Forms入口網站僅在iPad上的Safari上受支援。
 
 
-### AEM Forms應用 {#aem-forms-workspace-app}
+### AEM Forms應用程式 {#aem-forms-workspace-app}
 
-#### 移動設備支援 {#mobile-device-support}
+#### 行動裝置支援 {#mobile-device-support}
 
-AEM Forms應用可在以下平台上使用：
+AEM Forms應用程式適用於下列平台：
 
-| **Platform** | **支援的設備** |
+| **Platform** | **支援的裝置** |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------- |
-| AppleiOS | AppleiPhone,iPad,iPad航空和iPad迷你跑iOS15.1及以上 |
-| Google安卓 | Android 5.1及更高版本。 AEM Forms的app通過7英吋和10英吋三星Galaxy平板電腦和流行智慧手機的認證。 |
-| Microsoft窗 | Microsoft運行MicrosoftWindows 10作業系統的Surface設備、平板電腦、筆記型電腦和台式機。 |
+| Apple iOS | Apple iPhone、iPad、iPad Air和執行iOS 15.1及更高版本的iPad mini。 |
+| Google Android | Android 5.1及更高版本。 AEM Forms應用程式已通過7英吋及10英吋Samsung Galaxy平板電腦及熱門智慧型手機的認證。 |
+| Microsoft Windows | 執行Microsoft Windows 10作業系統的Microsoft Surface裝置、平板電腦、筆記型電腦和桌上型電腦。 |
 
-### AdobeMicrosoft辦事處檔案安全擴展 {#adobe-rights-management-extension-for-microsoft-office}
+### Microsoft Office適用的AdobeDocument Security Extension {#adobe-rights-management-extension-for-microsoft-office}
 
-按一下 [這裡](https://www.adobe.com/products/livecycle/rightsmanagement/extension/downloads.html) 查看Microsoft® OfficeAdobe文檔安全擴展的系統要求。
+按一下 [此處](https://www.adobe.com/products/livecycle/rightsmanagement/extension/downloads.html) 若要檢視Microsoft® Office適用的AdobeDocument Security Extension的系統需求。
 
-### 客戶端支援的異常 {#exceptions-to-client-support}
+### 使用者端支援的例外 {#exceptions-to-client-support}
 
-JEE上的AEM Forms支援受支援軟體的指定主版本和次版本上的更新、修補程式和修復包。 但是，除非指定，否則不支援更新到下一個主版本或次版本。
+JEE版AEM Forms除了支援軟體的指定主要和次要版本以外，也支援更新、修補程式和修正套件。 不過，除非另有指定，否則不支援更新至下一個主要或次要版本。
 
-## 第三方修補程式支援策略 {#third-party-patch-support-policy}
+## 協力廠商修補程式支援原則 {#third-party-patch-support-policy}
 
-AEM FormsJEE的第三方軟體要求記錄在其各自產品文檔的「系統要求」部分。 所有文檔都可以從 [https://adobe.com/go/learn_aemforms_documentation_65](https://adobe.com/go/learn_aemforms_documentation_65) 。
+JEE版AEM Forms的協力廠商軟體需求記錄在各自產品檔案的「系統需求」一節中。 所有檔案都可從以下位置存取： [https://adobe.com/go/learn_aemforms_documentation_65](https://adobe.com/go/learn_aemforms_documentation_65) .
 
-AEM Forms在JEE的第三方參考平台上說明了在開發和發佈JEE上的AEM Forms時當前的第三方基礎架構的特定補丁程式級別，以及該版本的AEM Forms在JEE上支援的基礎架構的最低補丁程式/服務包級別。
+JEE上的AEM Forms第三方參考平台會說明在JEE上AEM Forms開發和發行期間第三方基礎架構的特定修補程式層級，以及該版本AEM Forms on JEE支援之基礎架構的最低修補程式/Service Pack層級。
 
-Adobe支援第三方供應商在其發佈時發佈的緊急或建議的修補程式，前提是第三方供應商保證向後相容AEM Forms在JEE上支援的版本。 Adobe將僅支援在AEM FormsJEE文檔中規定的最低修補程式級別之後發佈的修補程式。
+Adobe支援協力廠商在發行時發出的緊急或建議修補程式，並假設協力廠商保證回溯相容於AEM Forms on JEE支援的版本。 Adobe僅支援在AEM Forms on JEE檔案中規定的最低修補程式等級之後發行的修補程式。
 
-在某些情況下，Adobe不支援更改主要功能的第三方更新，因此不支援完全向後相容。 有關支援的更新的詳細資訊，請參見 [支援的修補程式定義](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) 針對特定供應商產品和Adobe支援的修補程式類型。
+在某些情況下，Adobe不支援變更主要功能的協力廠商更新，因此不支援完全的回溯相容性。 如需支援更新的詳細資訊，請參閱 [支援的修補程式定義](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) 適用於特定廠商的產品和Adobe支援的修補程式型別。
 
-在Adobe無法控制的情況下，聲稱向後相容的第三方補丁程式可能會對Adobe產品或客戶環境產生負面影響。 在這種情況下，Adobe建議客戶在將任何緊急補丁程式應用於關鍵系統之前，先評估第三方的任何緊急補丁程式的影響。 Adobe將與第三方合作，通過合理的業務努力解決此類問題，或通過正常的Adobe支援計畫，或通過第三方在他們的區域內糾正該問題。 這不能保證新發佈的受Adobe支援的第三方修補程式將按照供應商或AEM Forms在JEE上的記錄運行。
+在Adobe無法控制的情況下，聲稱回溯相容性的協力廠商修補程式可能會對Adobe產品或客戶環境造成負面影響。 在這種情況下，Adobe建議客戶在將第三方提供的任何緊急修補程式套用至關鍵系統之前，先評估其影響。 Adobe將與第三方合作，透過正常的Adobe支援計畫或第三方修正修補程式中的問題，透過合理的業務努力來解決此類問題。 這並不保證Adobe支援的新發行協力廠商修補程式將可如供應商記錄或在JEE上與AEM Forms搭配運作。
 
-Adobe保留在任何給定時刻更改AEM Forms在JEE版本上支援的第三方參考平台及其支援的修補程式定義的權利。
+Adobe保留隨時變更AEM Forms on JEE版本支援的第三方參考平台及其支援之修補程式定義的權利。
 
-通過搜索Adobe企業支援站點以查找與您的產品相關的知識庫文章，還可以找到有關第三方補丁程式的其他資訊。
+您也可以在Adobe企業支援網站中搜尋與產品相關的知識庫文章，以找到第三方修補程式的其他資訊。
 
 ## 平台更新 {#platform-updates}
 
-2022年6月2日AEM Forms6.5.13.0版將以下平台標籤為不建議使用：
+以下平台在2022年6月2日發行的AEM Forms 6.5.13.0中標示為已過時：
 
-- MicrosoftSharePoint2016
+- Microsoft SharePoint 2016
 
-2022年3月3日AEM Forms6.5.12.0版將以下平台標籤為不建議使用：
+下列平台在2022年3月3日發行的AEM Forms 6.5.12.0中標示為已過時：
 
 - MongoDB Enterprise 4.0
-- IBMDB2 11.1
-- Oracle資料庫12c版本2
+- IBM DB2 11.1
+- oracle資料庫12c發行版本2
 - MySQL 5.7.35
 - Microsoft® SQL Server JDBC驅動程式6.2.1.0
-- JBoss®企業應用程式平台(EAP)7.1.4
-- IBMContent Manager Server 8.5修復包2
-- IBMContent Manager客戶端8.5
-- MicrosoftSQL Server 2016
+- JBoss® Enterprise Application Platform (EAP) 7.1.4
+- IBM Content Manager Server 8.5 Fix Pack 2
+- IBM Content Manager Client 8.5
+- Microsoft SQL Server 2016
 
-2021年9月7日AEM Forms6.5.10.0版將以下平台標籤為不建議使用：
+以下平台在2021年9月7日發行的AEM Forms 6.5.10.0中標示為已過時：
 
-- Adobe Acrobat2017 - [2017年Adobe Acrobat核心支助於2022年6月6日結束](https://helpx.adobe.com//tw/support/programs/eol-matrix.html)。
-- MicrosoftWindows Server 2016（64位）
-- Red Hat Enterprise Linux 7（內核3.x）（64位）
+- Adobe Acrobat 2017 - [Adobe Acrobat 2017的核心支援將於2022年6月6日終止](https://helpx.adobe.com//tw/support/programs/eol-matrix.html).
+- Microsoft Windows Server 2016 （64位元）
+- Red Hat Enterprise Linux 7 （核心3.x） （64位元）
 - Microsoft® Office 2016
 - OpenOffice 4.1.2
 
 >[!NOTE]
-標籤為 [不建議使用AEM Forms6.5.12.0和6.5.10.0，在AEM Forms6.5 Service Pack 18(6.5.18.0版之前仍支援](https://helpx.adobe.com//tw/support/programs/eol-matrix.html)。
+標示為 [AEM Forms 6.5.12.0和6.5.10.0已棄用，直到AEM Forms 6.5 Service Pack 18 (6.5.18.0)發行版本為止，仍提供支援](https://helpx.adobe.com//tw/support/programs/eol-matrix.html).
 
 ## 修訂歷史記錄 {#revision-history}
 
-- 2022年9月1日
+- 2022年9月01日
 
-   - 添加了對OracleJava™ SE 11（64位）SDK的支援，用於應用程式伺服器JBoss EAP 7.4。
+   - 新增應用程式伺服器JBoss EAP 7.4的OracleJava™ SE 11 （64位元） SDK支援。
 
-- 2022年3月3日
+- 2022年3月03日
 
-   - 已刪除對以下內容的支援：
-      - IBM® J9虛擬機(build 2.8, JRE 1.8.0)
-      - Oracle資料庫12c版本1
-      - Oracle資料庫18c
-      - Oracle統一目錄(OUD)11g版本2
-      - IBM蓮達樂9.0
-      - IBMFilenet 5.2
+   - 移除對下列專案的支援：
+      - IBM® J9虛擬機器器（版本編號2.8、JRE 1.8.0）
+      - oracle資料庫12c發行版本1
+      - oracle資料庫18c
+      - oracle Unified Directory (OUD) 11g版本2
+      - IBM Lotus Domino 9.0
+      - IBM Filenet 5.2
       - AdobeFlash Player
 
 - 2021年10月10日
 
-   - 已將AEM Forms應用支援的iOS版更改為iOS15.1。以前的版本是iOS12
+   - 將適用於AEM Forms應用程式的iOS支援版本變更為iOS 15.1。舊版為iOS 12。
 
-- 2021年9月7日
-   - **平台更新**: [!DNL Adobe Experience Manager Forms] on JEE增加了對以下平台的支援：
+- 2021年9月07日
+   - **平台更新**： [!DNL Adobe Experience Manager Forms] on JEE已新增對下列平台的支援：
       - [!DNL Adobe Acrobat 2020]
       - [!DNL Ubuntu 20.04]
       - [!DNL Open Office 4.1.10]
@@ -809,11 +809,11 @@ Adobe保留在任何給定時刻更改AEM Forms在JEE版本上支援的第三方
       - [!DNL Microsoft Windows Server 2019]
       - [!DNL RHEL8]
 
-- 2020年12月3日
-   - 隨AEM Forms6.5.7.0或更高版本為以下平台添加的支援：
+- 2020年12月03日
+   - 為下列平台新增AEM Forms 6.5.7.0或更新版本的支援：
       - [!DNL Microsoft SQL Server 2019]
 
-- 2020年9月9日
+- 2020年9月09日
 
-   - 已將AEM Forms應用支援的iOS版更改為iOS12。 以前的版本是iOS11
+   - 將適用於AEM Forms應用程式的iOS支援版本變更為iOS 12。 舊版為iOS 11。
 

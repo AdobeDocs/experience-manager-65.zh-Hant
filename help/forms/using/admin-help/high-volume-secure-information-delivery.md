@@ -1,7 +1,7 @@
 ---
-title: 大容量安全資訊傳遞
+title: 大量安全資訊傳遞
 seo-title: High-volume secure information delivery
-description: 文檔安全性支援許可證與用戶的關聯，而不是與大規模生產環境中的文檔的關聯。
+description: Document Security支援將授權與使用者相關聯，而不是與大量生產環境中的檔案相關聯。
 seo-description: Document security supports the association of licenses to users, rather than to the documents in mass production environments.
 uuid: 9747d283-506c-434e-9850-e50b95290cc8
 contentOwner: admin
@@ -18,16 +18,16 @@ ht-degree: 0%
 
 ---
 
-# 大容量安全資訊傳遞 {#high-volume-secure-information-delivery}
+# 大量安全資訊傳遞 {#high-volume-secure-information-delivery}
 
-在大規模生產環境中，建立特定於每個文檔的許可證可以成為資源密集型流程。 在這種情況下，文檔安全性支援將許可證與用戶而不是文檔相關聯。 為用戶生成的許可證用於為該用戶保護的所有文檔。
+在大量生產環境中（例如為電信公司產生每月安全發票的環境），建立每個檔案特定的授權可能會成為資源密集的過程。 在這種情況下，Document Security支援將授權與使用者相關聯，而不是與檔案相關聯。 為使用者產生的授權將用於為該使用者保護的所有檔案。
 
-這種方法的一個優點是，文檔安全資料庫的大小不會隨文檔而線性增長，而會隨用戶數量而增長。 此外，由於您只需為用戶建立一次許可證，因此通過這些策略對文檔的後續保護會更快。 所有此類文檔都支援離線訪問、文檔過期和吊銷等功能。
+此方法的一個優點是Document Security資料庫的大小不會隨著檔案線性增加，而是隨著使用者人數線性增加。 此外，由於您只需為使用者建立一次授權，因此透過這些原則後續保護檔案的速度會更快。 所有這類檔案都支援離線存取、檔案到期和撤銷等功能。
 
-文檔安全性還支援抽象策略。 抽象策略是包含所有策略屬性（如文檔安全設定和使用權限）但不包含承擔者清單的策略模板。 管理員可以從抽象策略中建立任意數量的策略，這些策略具有不同的承擔者，這些承擔者應有權訪問文檔。 對抽象策略所做的更改不會影響從抽象策略生成的實際策略。
+Document Security也支援抽象原則。 抽象原則是包含所有原則屬性（例如Document Security設定和使用許可權）但不包含主參與者清單的原則範本。 管理員可以從抽象原則建立任意數量的原則，這些原則包含應該具有檔案存取權的不同主體。 對抽象原則所做的變更不會影響從抽象原則產生的實際原則。
 
-在為電信公司每月生成發票的情況下，您可以建立抽象策略，建立用戶，然後為每個用戶生成唯一的許可證。 這些許可證稍後將應用於每個用戶的文檔。
+在電信公司每月產生發票的情況下，您可以建立抽象原則、建立使用者，然後為每個使用者產生唯一授權。 授權稍後會套用至每個使用者的檔案。
 
-只有通過文檔安全性Java SDK才支援建立抽象策略。 但是，您可以從文檔安全網頁管理從抽象策略建立的策略。 使用此方法建立的策略與從文檔安全網頁建立的策略的行為相同。
+僅支援透過Document Security Java SDK建立抽象原則。 但是，您可以管理從Document Security網頁的抽象原則建立的原則。 使用此方法建立的原則，其行為與從Document Security網頁建立的原則相同。
 
-請參閱 [用表格編AEM程](https://www.adobe.com/go/learn_aemforms_programming_63) 的子菜單。
+另請參閱 [使用AEM表單程式設計](https://www.adobe.com/go/learn_aemforms_programming_63) 以取得詳細資訊。

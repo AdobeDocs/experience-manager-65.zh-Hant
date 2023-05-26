@@ -1,7 +1,7 @@
 ---
-title: 管理通用電子商務
+title: 管理一般電子商務
 seo-title: Administering generic eCommerce
-description: 該通AEM用解決方案提供了管理儲存在儲存庫中的商業資訊的方法。
+description: AEM一般解決方案提供管理存放庫中存放的商務資訊的方法。
 seo-description: The AEM generic solution provides methods of managing the commerce information held within the repository.
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 ---
 
-# 管理通用電子商務 {#administering-generic-ecommerce}
+# 管理一般電子商務 {#administering-generic-ecommerce}
 
-該通AEM用解決方案提供了管理儲存庫中保存的商業資訊（而不是使用外部電子商務引擎）的方法。 這包括：
+AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法（與使用外部電子商務引擎相反）。 其中包括：
 
 * [產品](/help/commerce/cif-classic/administering/concepts.md#products)
 * [產品的系列品種](/help/commerce/cif-classic/administering/concepts.md#product-variants)
@@ -25,46 +25,46 @@ ht-degree: 2%
 * [促銷活動](/help/commerce/cif-classic/administering/concepts.md#promotions)
 * [憑單](/help/commerce/cif-classic/administering/concepts.md#vouchers)
 * [訂購](/help/commerce/cif-classic/administering/concepts.md#shopping-cart-and-orders)
-* [代理頁](/help/commerce/cif-classic/administering/concepts.md#proxy-pages)
+* [Proxy頁面](/help/commerce/cif-classic/administering/concepts.md#proxy-pages)
 
 >[!NOTE]
 >
->標準安AEM裝包括通AEM用(JCR)電子商務實現。
+>標準AEM安裝包含通用AEM (JCR)電子商務實作。
 >
->目前，這是為了演示目的，或根據您的要求作為自定義實施的基本基礎。
+>這目前僅供示範之用，或根據您的需求作為自訂實作的基本基礎。
 
-## 產品和產品變體 {#products-and-product-variations}
+## 產品和產品變數 {#products-and-product-variations}
 
 >[!NOTE]
 >
->以下過程適用於「產品」和「產品變體」。
+>以下程式適用於產品和產品變體。
 
-在建立產品之前，您需要定義 [支架](/help/sites-authoring/scaffolding.md)。 這指定了定義產品以及編輯產品的方式所需的欄位。
+建立產品之前，您需要定義 [支架](/help/sites-authoring/scaffolding.md). 這會指定定義產品所需的欄位以及編輯產品的方式。
 
-每種不同的產品類型都需要支架。 適當的支架通過以下任一方式與產品相關聯：
+每個不同的產品型別都需要支架。 適當的支架可透過以下任一方式與產品相關聯：
 
 * 路徑
-* 產品可以參照腳手架
+* 產品可參考此支架
 
 >[!NOTE]
 >
->Geometrixx — 室外商店有一種單一的產品類型（因此也有一種支架）:
+>Geometrixx-Outdoors商店只有單一產品型別（因此只有單一支架）：
 >
 >`/etc/scaffolding/geometrixx-outdoors`
 >
->Geometrixx — 室外產品類型在以下位置處於活動狀態：
+>Geometrixx — 戶外活動產品型別啟用於：
 >
 >`/etc/commerce/products/geometrixx-outdoors`
 >
->您可以在新產品定義的任何位置建立新產品定義，而無需任何附加設定。
+>您可以在此下的任何位置建立新的產品定義，而不需要任何其他設定。
 
-### 導入產品 {#importing-products}
+### 匯入產品 {#importing-products}
 
-#### 導入產品 — 觸摸優化UI {#importing-products-touch-optimized-ui}
+#### 匯入產品 — 觸控最佳化UI {#importing-products-touch-optimized-ui}
 
-1. 導航到 **產品** 控制台，通過 **商業**。
-1. 使用 **產品** 控制台導航到所需位置。
-1. 使用 **導入產品** 表徵圖開啟嚮導。
+1. 導覽至 **產品** 主控台，透過 **商務**.
+1. 使用 **產品** 主控台導覽至所需位置。
+1. 使用 **匯入產品** 圖示以開啟精靈。
 
    ![chlimage_1-1](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
@@ -72,37 +72,37 @@ ht-degree: 2%
 
    * **匯入工具**
 
-      具體的進口商 [商務提供商](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)，預設 `Geometrixx`。
+      特定的Importer [商務提供者](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)，預設為 `Geometrixx`.
 
    * **來源**
 
-      要導入的檔案；可以使用瀏覽器來選擇檔案。
+      您要匯入的檔案；您可以使用瀏覽器來選取檔案。
 
    * **增量匯入**
 
-      指示這是否是增量導入（而不是完全導入）。
+      指出這是否為增量匯入（而非完全匯入）。
    >[!NOTE]
    >
-   >增量導入（樣例幾何 — 室外導入程式）在產品級操作。
+   >增量匯入（範例geometrixx-outdoor匯入工具的）會在產品層級運作。
    >
-   >可根據需要定義自定義導入程式以運行。
+   >您可以定義自訂的匯入工具來視需要操作。
 
-1. 選擇 **下一個** 要導入產品，將顯示所執行操作的日誌。
-
-   >[!NOTE]
-   >
-   >產品將導入到當前位置或相對於當前位置。
+1. 選取 **下一個** 若要匯入產品，將會顯示所採取動作的記錄。
 
    >[!NOTE]
    >
-   >重複使用 **下一個** 和 **後退** 將重複導入產品定義。 但是，由於它們具有相同的SKU，因此儲存庫中現有的資訊將被覆蓋。
+   >產品將會匯入至目前位置或相對於目前位置。
 
-1. 選擇 **完成** 按鈕。
+   >[!NOTE]
+   >
+   >重複使用 **下一個** 和 **返回** 將重複匯入產品定義。 但是，由於它們的SKU相同，存放庫中存在的資訊只會被覆寫。
 
-#### 導入產品 — 經典UI {#importing-products-classic-ui}
+1. 選取 **完成** 以關閉精靈。
 
-1. 使用 **工具** 控制台開啟 **商業** 的子菜單。
-1. 按兩下以開啟 **產品導入程式**:
+#### 匯入產品 — Classic UI {#importing-products-classic-ui}
+
+1. 使用 **工具** 主控台開啟 **商務** 資料夾。
+1. 按兩下以開啟 **產品匯入工具**：
 
    ![chlimage_1-22](/help/sites-administering/assets/chlimage_1-22.jpeg)
 
@@ -110,236 +110,236 @@ ht-degree: 2%
 
    * **存放區名稱**
 
-      產品將導入到：
+      產品將匯入至：
 
       `/etc/commerce/products/<*store name*>/`
 
    * **商務提供程式**
 
-      你的進口商 [商務提供商](/help/commerce/cif-classic/administering/concepts.md#commerce-providers);預設Geometrixx。
+      您的匯入工具 [商務提供者](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)；預設Geometrixx。
 
    * **來源檔案**
 
-      要導入的檔案的儲存庫中的位置。
+      您要匯入的檔案在存放庫中的位置。
 
    * **增量匯入**
 
-      指示這是否是增量導入（而不是完全導入）。
+      指出這是否為增量匯入（而非完全匯入）。
 
-1. 按一下 **導入產品**。
+1. 按一下 **匯入產品**.
 
 ### 建立產品資訊 {#creating-product-information}
 
 >[!NOTE]
 >
->標準產品管理是基本的，因為Geometrixx — 室外產品集一直保持基本。 複雜性基於產品 [腳](/help/sites-authoring/scaffolding.md)因此，借助您自己的產品腳手架，可以實現更複雜的編輯。
+>標準產品管理是基本功能，因為Geometrixx-Outdoors產品集是基本功能。 複雜性取決於產品 [支架](/help/sites-authoring/scaffolding.md)，有了您自己的產品支架，就能進行更複雜的編輯。
 
-#### 建立產品資訊 — 觸控優化的UI {#creating-product-information-touch-optimized-ui}
+#### 建立產品資訊 — 觸控最佳化UI {#creating-product-information-touch-optimized-ui}
 
-1. 使用 **產品** 控制台(通過 **商業**)導航到所需位置。
-1. 使用 **建立** 表徵圖，以選擇以下任一選項（取決於結構和位置）:
+1. 使用 **產品** 主控台(透過 **商務**)導覽至所需位置。
+1. 使用 **建立** 圖示以選取（視結構和位置而定）：
 
    * **建立產品**
-   * **建立產品變體**
+   * **建立產品變數**
 
    ![chlimage_1-14](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
-1. 嚮導將開啟。 使用 **基本** 和 **產品頁籤** 的 [產品屬性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 或產品變型。
+1. 精靈將會開啟。 使用 **基本** 和 **產品標籤** 以輸入 [產品屬性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 用於新產品或產品變體。
 
    >[!NOTE]
    >
-   >**標題** 和 **SKU** 是建立產品或變型所需的最小值。
+   >**標題** 和 **SKU** 是建立產品或變體所需的最低值。
 
-1. 選擇 **建立** 的子菜單。
+1. 選取 **建立** 以儲存資訊。
 
 >[!NOTE]
 >
->許多產品都以各種顏色和/或尺寸提供。 有關基本產品和相關產品變型的資訊都可以從 **產品** 控制台。
+>許多產品提供多種顏色和/或尺寸。 基本產品和相關產品變體的相關資訊都可從以下網址管理： **產品** 主控台。
 >
->產品及其變型以樹形結構儲存，產品資訊位於頂部，下面有變型（此結構由UI強制實施）。
+>產品及其變體會以樹狀結構儲存，產品資訊位於頂端，變體位於下方（此結構由UI強制執行）。
 
 ### 編輯產品資訊 {#editing-product-information}
 
 >[!NOTE]
 >
->Geometrixx-outdoors中的產品影像提供自：
+>geometrixx-outdoors中的產品影像提供自：
 >
 >`/etc/commerce/products/...`
 >
->這意味著，預設情況下，它們被 [調度](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)，因此根據需要進行配置。
+>這表示預設會加以封鎖， [dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)，請視需要設定。
 
-#### 編輯產品資訊 — 觸控優化的UI {#editing-product-information-touch-optimized-ui}
+#### 編輯產品資訊 — 觸控最佳化UI {#editing-product-information-touch-optimized-ui}
 
-1. 使用 **產品** 控制台(通過 **商業**)導航到您的產品資訊。
-1. 使用以下任一項：
+1. 使用 **產品** 主控台(透過 **商務**)導覽至您的產品資訊。
+1. 使用：
 
-   * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
+   * [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選擇模式](/help/sites-authoring/basic-handling.md#navigating-and-selection-mode)
 
-   選擇 **查看產品資料** 表徵圖：
+   選取 **檢視產品資料** 圖示：
 
    ![chlimage_1-3](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
-1. 的 [產品屬性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 的下界。 使用 **編輯** 和 **完成** 進行任何更改。
+1. 此 [產品屬性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 將會顯示。 使用 **編輯** 和 **完成** 以進行任何變更。
 
 ### 顯示產品參考 {#showing-product-references}
 
-#### 顯示產品參考 — 觸控優化的用戶介面 {#showing-product-references-touch-optimized-ui}
+#### 顯示產品參考 — 觸控最佳化UI {#showing-product-references-touch-optimized-ui}
 
-1. 使用 **產品** 控制台(通過 **商業**)導航到您的產品資訊。
-1. 使用表徵圖開啟「參照」(References)的輔助滑軌：
+1. 使用 **產品** 主控台(透過 **商務**)導覽至您的產品資訊。
+1. 使用圖示開啟「參考」的次要邊欄：
 
    ![chlimage_1-4](/help/sites-administering/do-not-localize/chlimage_1-16.png)
 
-1. 選擇所需產品 — 輔助導軌將更新以顯示可用的參考類型：
+1. 選取您需要的產品 — 次要邊欄將更新以顯示可用的參考型別：
 
    ![chlimage_1-88](/help/sites-administering/assets/chlimage_1-88.png)
 
-1. 按一下/點按參考類型（如「產品頁」）以展開清單。
-1. 選擇特定參照以顯示選項：
+1. 按一下/點選參考型別（例如產品頁面）以展開清單。
+1. 選取要顯示選項的特定參照：
 
    * 導覽至產品頁面
    * 編輯產品頁面
 
    ![chlimage_1-89](/help/sites-administering/assets/chlimage_1-89.png)
 
-### 搜索產品 {#search-for-products}
+### 搜尋產品 {#search-for-products}
 
-1. 導航到 **產品** 控制台，通過 **商業**。
-1. 使用表徵圖開啟輔助導軌以進行搜索：
+1. 導覽至 **產品** 主控台，透過 **商務**.
+1. 使用圖示開啟要搜尋的次要邊欄：
 
    ![](/help/sites-administering/do-not-localize/chlimage_1-17.png)
 
-1. 有幾個方面可供您搜索產品。 只能使用一個或多個小平面進行搜索。 將顯示找到的產品：
+1. 有數個Facet可供您搜尋產品。 搜尋只能使用一或多個面向。 找到的產品將會出現：
 
    ![chlimage_1-90](/help/sites-administering/assets/chlimage_1-90.png)
 
-1. 按一下/輕擊產品可開啟產品。 您還可以發佈或查看產品資料。
+1. 按一下/點選產品即可將其開啟。 您也可以發佈或檢視產品資料。
 
-#### 擴展搜索 {#extending-search}
+#### 延伸搜尋 {#extending-search}
 
-可以使用CRXDE Lite修改現有小平面或添加新小平面：
+您可以使用CRXDE Lite修改現有多面或新增多面：
 
 1. 瀏覽到:
 
    `http://localhost:4502/crx/de/index.jsp#/libs/commerce/gui/content/products/aside/items/search/items/searchpanel/facets`
 
-1. 例如，您可以修改將出現在產品搜索頁面上的大小。 按一下 `sizegroup` 的下界。
-1. 按一下 `items` 節點，然後按一下 `propertypredicate` 的下界。
-1. 可以修改 `propertyValues`。 例如，可以添加XS、XXL或刪除大小。
-1. 按一下 **全部保存** 並導航到產品搜索頁。 應顯示您所做的更改。
+1. 例如，您可以修改將顯示在產品搜尋頁面上的大小。 按一下 `sizegroup` 節點。
+1. 按一下 `items` 節點，然後按一下 `propertypredicate` 節點。
+1. 您可以修改 `propertyValues`. 例如，您可以新增XS、XXL或移除大小。
+1. 按一下 **全部儲存** 並導覽至「產品搜尋」頁面。 您的變更將會顯示。
 
-### 多資產 {#multiple-assets}
+### 多個資產 {#multiple-assets}
 
-您可以在產品元件中添加多個資產，然後指定將出現在產品頁面上的資產。
+您可以在產品元件中新增多個資產，然後指定將顯示在產品頁面上的資產。
 
 >[!NOTE]
 >
->與多個資產相關的所有操作都使用Touch優化的UI完成。
+>與多個資產相關的所有工作都透過觸控最佳化的UI完成。
 
-#### 添加多個資產 {#adding-multiple-assets}
+#### 新增多個資產 {#adding-multiple-assets}
 
-1. 導航到 **產品** 控制台，通過 **商業**。
-1. 使用 **產品** 控制台，導航至所需產品。
+1. 導覽至 **產品** 主控台，透過 **商務**.
+1. 使用 **產品** 主控台，導覽至所需的產品。
 
    >[!NOTE]
    >
-   >你必須在產品級別，而不是變型級別。
+   >您必須處於產品層級，而不是變體層級。
 
-1. 點擊/按一下 **查看產品資料** 表徵圖。
-1. 點擊/按一下「編輯」表徵圖。
-1. 滾動到 **添加**。
+1. 點選/按一下 **檢視產品資料** 圖示來顯示選取模式或快速動作。
+1. 點選/按一下編輯圖示。
+1. 捲動至 **新增**.
 
    ![chlimage_1-91](/help/sites-administering/assets/chlimage_1-91.png)
 
-1. 點擊/按一下 **添加**。 此時將出現新的資產佔位符。
-1. 點擊/按一下**更改**開啟一個對話框，您可以選擇資產。
-1. 選擇要添加的資產。
+1. 點選/按一下 **新增**. 新的資產預留位置隨即顯示。
+1. 點選/按一下**變更**開啟對話方塊，讓您選擇資產。
+1. 選取您要新增的資產。
 
    >[!NOTE]
    >
-   >可以選擇的資產來自 [資產](/help/assets/assets.md)。
+   >您可以選取的資產來自 [資產](/help/assets/assets.md).
 
-1. 點擊/按一下「完成」表徵圖。
+1. 點選/按一下完成圖示。
 
-兩個資產現在儲存在您的產品元件中。 您可以配置在產品頁上顯示哪個。 這適用於類別系統。 首先，您需要向單個資產添加一個類別：
+兩個資產現在儲存在您的產品元件中。 您可以設定要在產品頁面上顯示的專案。 這適用於類別系統。 首先，您需要將類別新增至個別資產：
 
-1. 點擊/按一下 **查看產品資料**。
-1. 鍵入 **資產類別** 例如 `cat1` 和 `cat2`。
+1. 點選/按一下 **檢視產品資料**.
+1. 輸入 **資產類別** 在資產底下，例如 `cat1` 和 `cat2`.
 
    >[!NOTE]
    >
-   >也可以對類別使用標籤。
+   >您也可以使用類別的標籤。
 
-1. 點擊/按一下「完成」表徵圖。 你現在必須 [推廣](#rolling-out-a-catalog) 您的更改。
+1. 點選/按一下完成圖示。 您現在必須 [轉出](#rolling-out-a-catalog) 您的變更。
 
-現在，您在產品元件中的資產具有類別。 您可以配置在三個不同級別顯示的類別：
+現在，您在產品元件中的資產有一個類別。 您可以設定將在三個不同層級顯示哪個類別：
 
 * [產品頁面](#product-page)
 * [目錄](#catalog)
-* [產品控制台](#products-console)
+* [產品主控台](#products-console)
 
 >[!NOTE]
 >
->如果未設定類別，則第一個資產將顯示在產品頁面上。
+>如果您未設定類別，產品頁面上將顯示第一個資產。
 
-選擇要顯示的影像的機制如下：
+選取要顯示的影像的機制如下：
 
-1. 驗證是否為「產品」頁設定了類別。
-1. 否則，驗證是否為目錄設定了類別。
-1. 否則，驗證是否為產品控制台設定了類別。
+1. 驗證是否為「產品頁面」設定了類別。
+1. 如果沒有，則驗證是否為「目錄」設定了類別。
+1. 如果沒有，請確認是否為「產品主控台」設定了類別。
 
 >[!NOTE]
 >
->對於目錄級別和產品控制台級別，您必須先部署更改，然後應用修改並在產品頁面上查看差異。
+>對於目錄層級和產品主控台層級，您必須轉出變更以套用修改，並在產品頁面上檢視差異。
 
 #### 產品頁面 {#product-page}
 
-1. 導航到您的產品頁。
+1. 導覽至您的產品頁面。
 1. **編輯** 產品元件。
-1. 鍵入 **影像類別** 您選擇了( `cat1` 例如)。
-1. 點擊/按一下 **完成**。 頁面將刷新，應顯示正確的資產。
+1. 輸入 **影像類別** 您已選擇( `cat1` 例如)。
+1. 點選/按一下 **完成**. 頁面會重新整理，且應會顯示正確的資產。
 
 #### 目錄  {#catalog}
 
-1. 導航到目錄。
-1. 點擊/按一下 **查看屬性**。
-1. 點擊/按一下 **編輯**。
-1. 點擊/按一下 **資產** 頁籤。
-1. 鍵入所需 **產品資產類別**。
-1. 點擊/按一下 **完成**。
-1. [推廣](#rolling-out-a-catalog) 您的更改。
+1. 導覽至您的目錄。
+1. 點選/按一下 **檢視屬性**.
+1. 點選/按一下 **編輯**.
+1. 點選/按一下 **資產** 標籤。
+1. 輸入所需的 **產品資產類別**.
+1. 點選/按一下 **完成**.
+1. [轉出](#rolling-out-a-catalog) 您的變更。
 
-#### 產品控制台 {#products-console}
+#### 產品主控台 {#products-console}
 
-1. 使用 **產品** 控制台，導航至所需的產品。
-1. 點擊/按一下 **查看產品資料**。
-1. 點擊/按一下 **編輯**。
-1. 鍵入 **預設資產類別**。
-1. 點擊/按一下 **完成**。
-1. [推廣](#rolling-out-a-catalog) 您的更改。
+1. 使用 **產品** 主控台，導覽至所需的產品。
+1. 點選/按一下 **檢視產品資料**.
+1. 點選/按一下 **編輯**.
+1. 輸入a **預設資產類別**.
+1. 點選/按一下 **完成**.
+1. [轉出](#rolling-out-a-catalog) 您的變更。
 
 ### 發佈/取消發佈產品資訊 {#publishing-unpublishing-product-information}
 
-#### 發佈/取消發佈產品資訊 — 觸控優化用戶介面 {#publishing-unpublishing-product-information-touch-optimized-ui}
+#### 發佈/取消發佈產品資訊 — 觸控最佳化UI {#publishing-unpublishing-product-information-touch-optimized-ui}
 
 >[!NOTE]
 >
->產品資訊通常通過引用它的頁面發佈。 例如，在發佈引用產品Y的頁面X時，AEM會詢問您是否也要發佈產品Y。
+>通常產品資訊會透過參考它的頁面發佈。 例如，發佈參考產品Y的頁面X時，AEM會詢問您是否要同時發佈產品Y。
 >
->對於特殊情況，AEM還支援直接從產品資料發佈。
+>對於特殊情況，AEM也支援直接從產品資料發佈。
 
-1. 使用 **產品** 控制台(通過 **商業**)導航到您的產品資訊。
-1. 使用以下任一項：
+1. 使用 **產品** 主控台(透過 **商務**)導覽至您的產品資訊。
+1. 使用：
 
-   * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
+   * [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選擇模式](/help/sites-authoring/basic-handling.md#navigating-and-selection-mode)
 
-   選擇 **發佈** 或 **取消發佈** 表徵圖（如需要）:
+   選取 **發佈** 或 **取消發佈** 圖示依需要：
 
-   ![chlimage-1-6](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![chlimage-1-7](/help/sites-administering/do-not-localize/chlimage_1-19.png)
+   ![chlimage_1-6](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![chlimage_1-7](/help/sites-administering/do-not-localize/chlimage_1-19.png)
 
-   產品資訊將根據需要發佈或取消發佈。
+   產品資訊將視情況發佈或取消發佈。
 
 <!-- Search&Promote is end of life as of September 1, 2022 ### Product Feed {#product-feed} -->
 
@@ -352,9 +352,9 @@ ht-degree: 2%
 
 <!-- Search&Promote is end of life as of September 1, 2022 For more information, read [Product Feed](/help/sites-administering/product-feed.md). -->
 
-### 產品更新的事件處理程式 {#event-handler-for-product-updates}
+### 產品更新的事件處理常式 {#event-handler-for-product-updates}
 
-有一個事件處理程式，它在添加、修改或刪除產品以及添加、修改或刪除產品頁面時記錄事件。 有以下OSGi事件：
+有一個事件處理常式，可在新增、修改或刪除產品以及新增、修改或刪除產品頁面時記錄事件。 有以下OSGi事件：
 
 * `com/adobe/cq/commerce/pim/PRODUCT_ADDED`
 * `com/adobe/cq/commerce/pim/PRODUCT_MODIFIED`
@@ -363,323 +363,323 @@ ht-degree: 2%
 * `com/adobe/cq/commerce/pim/PRODUCT_PAGE_MODIFIED`
 * `com/adobe/cq/commerce/pim/PRODUCT_PAGE_DELETED`
 
-對於 `PRODUCT_*` 事件，路徑指向 `/etc/commerce/products`。 對於 `PRODUCT_PAGE_*` 事件，路徑指向 `cq:Page` 的下界。
+對於 `PRODUCT_*` 事件，路徑會指向中的基礎產品 `/etc/commerce/products`. 對於 `PRODUCT_PAGE_*` 事件，路徑指向 `cq:Page` 節點。
 
-您可以在Web控制台中的OSGI事件中查看它們( `/system/console/events`)，例如：
+您可以在OSGI事件的Web主控台中檢視它們( `/system/console/events`)，例如：
 
 ![](/help/sites-administering/do-not-localize/chlimage_1-20.png)
 
 >[!NOTE]
 >
->另請閱讀 [事件處AEM理](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)。
+>另請閱讀 [AEM中的事件處理](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/).
 
-### 具有添加到購物車連結的影像 {#image-with-add-to-cart-links}
+### 含有加入購物車連結的影像 {#image-with-add-to-cart-links}
 
-使用「添加到購物車連結的影像」元件，您可以通過在影像上建立與產品連結的熱點來快速將產品添加到購物車。
+「包含加入購物車連結的影像」元件可讓您在影像上建立與產品連結的熱點，以快速將產品加入購物車。
 
-按一下熱點將開啟一個對話框，您可以選擇產品的大小和數量。
+按一下熱點會開啟一個對話方塊，讓您選擇產品的大小和數量。
 
-1. 導航到要添加元件的頁面。
-1. 在頁面中拖放元件。
-1. 從 [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)。
+1. 導覽至您要新增元件的頁面。
+1. 將元件拖放至頁面中。
+1. 將元件中的影像從 [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser).
 1. 您可以執行下列兩個動作中的一個:
 
-   * 按一下元件，然後按一下「編輯」表徵圖
-   * 慢點按兩下
+   * 按一下元件，然後按一下「編輯」圖示
+   * 進行緩慢連按兩下
 
-1. 按一下全屏表徵圖。
+1. 按一下全熒幕圖示。
 
    ![chlimage_1-92](/help/sites-administering/assets/chlimage_1-92.png)
 
-1. 按一下「啟動映射」表徵圖。
+1. 按一下「啟動地圖」圖示。
 
    ![chlimage_1-93](/help/sites-administering/assets/chlimage_1-93.png)
 
-1. 按一下其中一個形狀表徵圖。
+1. 按一下其中一個形狀圖示。
 
    ![chlimage_1-21](/help/sites-administering/do-not-localize/chlimage_1-21.png)
 
-1. 根據需要修改和移動形狀。
+1. 視需要修改和移動形狀。
 1. 按一下形狀。
-1. 按一下瀏覽表徵圖可開啟 [資產選取器](/help/assets/search-assets.md#assetpicker)。
+1. 按一下瀏覽圖示會開啟 [資產選取器](/help/assets/search-assets.md#assetpicker).
 
    >[!NOTE]
    >
-   >或者，可以直接鍵入必須位於產品級別而不是變型級別的產品路徑。
+   >或者，您可以直接鍵入必須在產品層級（而不是變體層級）的產品路徑。
 
    ![chlimage_1-94](/help/sites-administering/assets/chlimage_1-94.png)
 
-1. 按一下兩次確認表徵圖，然後按一下退出全屏。
-1. 按一下該元件旁邊的頁面上的某個位置。 頁面應刷新，您應在影像上看到以下符號：
+1. 按兩下確認圖示，然後按一下退出全熒幕。
+1. 在頁面上的元件旁的某個位置按一下。 頁面應重新整理，且您應會在影像上看到下列符號：
 
    ![](/help/sites-administering/do-not-localize/chlimage_1-22.png)
 
-1. 切換到 [預覽](/help/sites-authoring/editing-content.md#previewingpagestouchoptimizedui) 的子菜單。
-1. 按一下+熱點。 將開啟一個對話框，您可以在其中選擇在中輸入的產品的大小和數量 **路徑**。
+1. 切換至 [預覽](/help/sites-authoring/editing-content.md#previewingpagestouchoptimizedui) 模式。
+1. 按一下+熱點。 隨即開啟一個對話方塊，您可以在其中選擇所輸入產品的大小和數量 **路徑**.
 
    ![chlimage_1-95](/help/sites-administering/assets/chlimage_1-95.png)
 
-1. 輸入大小和數量。
-1. 按一下「Add to cart（添加到購物車）」按鈕。 對話框關閉。
-1. 導航到您的購物車。 產品應該在這裡。
+1. 輸入大小與數量。
+1. 按一下「加入購物車」按鈕。 對話方塊關閉。
+1. 導覽至您的購物車。 產品應位於此處。
 
-#### 配置選項 {#configuration-options}
+#### 設定選項 {#configuration-options}
 
-您可以配置按一下熱點時對話框的外觀：
+您可以設定當您按一下熱點時對話方塊的外觀：
 
-1. 按一下元件，然後按一下「配置」表徵圖。
+1. 按一下元件，然後按一下設定圖示。
 
    ![chlimage_1-96](/help/sites-administering/assets/chlimage_1-96.png)
 
-1. 向下捲動. 有 **添加到購物車** 頁籤。
+1. 向下捲動. 有一個 **加入購物車** 標籤。
 
    ![chlimage_1-97](/help/sites-administering/assets/chlimage_1-97.png)
 
-1. 按一下 **添加到購物車**。 可以使用3個配置選項。
+1. 按一下 **加入購物車**. 有3個組態選項可供您使用。
 
    ![chlimage_1-98](/help/sites-administering/assets/chlimage_1-98.png)
 
-1. 按一下「完成」(Done)表徵圖。
+1. 按一下完成圖示。
 
 ## 目錄 {#catalogs}
 
-### 生成目錄 {#generating-a-catalog}
+### 產生目錄 {#generating-a-catalog}
 
-#### 生成目錄 — 觸控優化的UI {#generating-a-catalog-touch-optimized-ui}
+#### 產生目錄 — 觸控最佳化UI {#generating-a-catalog-touch-optimized-ui}
 
 >[!NOTE]
 >
->目錄將引用您的產品資料。
+>目錄將參考您的產品資料。
 
-要生成目錄，請執行以下操作：
+若要產生目錄，請執行下列動作：
 
-1. 開啟「站點」控制台(例如， [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content))。
-1. 導航到要建立新頁面的位置。
-1. 要開啟選項清單，請使用 **建立** 表徵圖：
+1. 開啟Sites主控台(例如 [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content))。
+1. 導覽至您要建立新頁面的位置。
+1. 若要開啟選項清單，請使用 **建立** 圖示：
 
-   ![建立表徵圖](/help/sites-administering/do-not-localize/chlimage_1-23.png)
+   ![create-icon](/help/sites-administering/do-not-localize/chlimage_1-23.png)
 
-1. 從清單中選擇 **建立目錄**，將開啟「建立目錄」嚮導。
+1. 從清單中選取 **建立目錄**，建立目錄精靈隨即開啟。
 
    ![chlimage_1-99](/help/sites-administering/assets/chlimage_1-99.png)
 
-1. 導航到所需的目錄藍圖。
-1. 點擊/按一下 **選擇** 按鈕，然後按一下/按一下所需的目錄藍圖。
-1. 點擊/按一下 **下一個**。
+1. 導覽至所需的目錄Blueprint。
+1. 點選/按一下 **選取** 按鈕並點選/按一下所需的目錄Blueprint。
+1. 點選/按一下 **下一個**.
 
    ![chlimage_1-100](/help/sites-administering/assets/chlimage_1-100.png)
 
-1. 鍵入 **標題** 和 **名稱**。
-1. 點擊/按一下 **建立** 按鈕 將建立目錄並開啟一個對話框。
+1. 輸入a **標題** 和 **名稱**.
+1. 點選/按一下 **建立** 按鈕。 目錄隨即建立，對話方塊隨即開啟。
 
    ![chlimage_1-101](/help/sites-administering/assets/chlimage_1-101.png)
 
-1. 點擊/按一下 **完成** 按鈕將返回到「站點」控制台，在該控制台中，您將能夠查看目錄。
+1. 點選/按一下 **完成** 按鈕帶您回到Sites主控台，您會在這裡看到您的目錄。
 
-   點擊/按一下 **開啟目錄** 按鈕開啟目錄(例如 `http://localhost:4502/editor.html/content/test-catalog.html`)。
+   點選/按一下 **開啟目錄** 按鈕會開啟您的目錄(例如 `http://localhost:4502/editor.html/content/test-catalog.html`)。
 
-#### 生成目錄 — 經典UI {#generating-a-catalog-classic-ui}
+#### 產生目錄 — Classic UI {#generating-a-catalog-classic-ui}
 
 >[!NOTE]
 >
->目錄將引用 [產品資料](#products-and-product-variants)。
+>目錄將參考您的 [產品資料](#products-and-product-variants).
 
-1. 使用 **網站** 控制台，導航至 **目錄藍圖**，然後是基目錄。
+1. 使用 **網站** 主控台，導覽至 **目錄Blueprint**，然後基本目錄。
 
    例如：
 
    `http://localhost:4502/siteadmin#/content/catalogs/geometrixx-outdoors/base-catalog`
 
-1. 使用 **節藍圖** 的下界。
+1. 使用建立新頁面 **區域Blueprint** 範本。
 
-   比如說， `Swimwear`。
+   例如， `Swimwear`.
 
-1. 開啟新 `Swimwear` ，然後按一下 **編輯藍圖** 開啟 **屬性** 對話框，您可以在其中設定 **產品** 的子菜單。
+1. 開啟新的 `Swimwear` 頁面，然後按一下 **編輯Blueprint** 以開啟 **屬性** 對話方塊，您可以在此設定 **產品** 選取。
 
-   例如，開啟 **標籤/關鍵字** 欄位以選擇「活動」，然後從「Geometrixx — 室外」部分選擇「游泳」。
+   例如，開啟 **標籤/關鍵字** 欄位以選取「活動」，然後從「Geometrixx — 戶外」區段選取「游泳」。
 
-1. 按一下 **確定** 保存您的財產；示例產品將顯示在 **產品選擇標準** 在藍圖頁面。
-1. 按一下 **推廣更改……**&#x200B;選中 **展示頁和所有子頁**，然後按一下 **下一個** 然後 **推廣**。 成功完成部署後， **狀態** 指示器將顯示為綠色。
-1. 您現在可以按一下 **關閉** 查新目錄部分；例如，on和on:
+1. 按一下 **確定** 以儲存您的屬性；範例產品將顯示在 **產品選擇條件** 在blueprint頁面上。
+1. 按一下 **轉出變更……**，選取 **轉出頁面和所有子頁面**，然後按一下 **下一個** 則 **轉出**. 轉出成功完成後， **狀態** 指示器會顯示為綠色。
+1. 您現在可以按一下 **關閉** 和勾選新目錄區段；例如，在和底下：
 
    `http://localhost:4502/cf#/content/geometrixx-outdoors/en/swimwear.html`
 
-1. 再次從「藍圖」頁面按一下 **編輯藍圖** 在 **屬性** 對話框開啟 **生成的頁** 頁籤。 在「橫幅廣告」清單欄位中，選擇要顯示的影像；比如說， `summer.jpg`
-1. 按一下 **確定** 保存您的財產；標題資訊將顯示在 **產品選擇標準** 在藍圖頁面。
-1. 推廣這些新更改。
+1. 再次從Blueprint頁面按一下 **編輯Blueprint** 和 **屬性** 對話方塊開啟 **產生的頁面** 標籤。 在「橫幅」清單欄位中，選取您要顯示的影像；例如， `summer.jpg`
+1. 按一下 **確定** 以儲存屬性；橫幅資訊會顯示在 **產品選擇條件** 在blueprint頁面上。
+1. 轉出這些新變更。
 
-### 展開目錄 {#rolling-out-a-catalog}
+### 轉出目錄 {#rolling-out-a-catalog}
 
-#### 推出目錄 — 觸控優化的UI {#rolling-out-a-catalog-touch-optimized-ui}
+#### 轉出目錄 — 觸控最佳化UI {#rolling-out-a-catalog-touch-optimized-ui}
 
-要部署目錄，請執行以下操作：
+轉出目錄：
 
-1. 導航到 **目錄** 控制台，通過 **商業**。
-1. 導航到要推廣的目錄。
-1. 使用以下任一項：
+1. 導覽至 **目錄** 主控台，透過 **商務**.
+1. 導覽至您要轉出的目錄。
+1. 使用：
 
-   * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
+   * [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選擇模式](/help/sites-authoring/basic-handling.md#navigating-and-selection-mode)
 
-   選擇 **推廣更改** 表徵圖：
+   選取 **轉出變更** 圖示：
 
    ![轉出](/help/sites-administering/do-not-localize/chlimage_1-24.png)
 
-1. 在嚮導中，根據需要設定展示，然後點擊/按一下 **推廣更改**。
-1. 將開啟一個對話框。 點擊/按一下 **完成** 的子菜單。
+1. 在精靈中，視需要設定轉出，然後點選/按一下 **轉出變更**.
+1. 對話方塊開啟。 點選/按一下 **完成** 程式完成時。
 
-#### 正在推出目錄 — 經典UI {#rolling-out-a-catalog-classic-ui}
+#### 轉出目錄 — Classic UI {#rolling-out-a-catalog-classic-ui}
 
-要部署目錄，請執行以下操作：
+轉出目錄：
 
-1. 導航到要推廣的目錄。 例如：
+1. 導覽至您要轉出的目錄。 例如：
 
    `http://localhost:4502/cf#/content/catalogs/geometrixx-outdoors/base-catalog.html`
 
-1. 按一下 **推廣更改……**
-1. 根據需要設定部署。
-1. 按一下 **推廣**。
+1. 按一下 **轉出變更……**
+1. 視需要設定轉出。
+1. 按一下 **轉出**.
 
-### 藍圖導入程式 {#blueprint-importer}
+### Blueprint Importer {#blueprint-importer}
 
-#### 藍圖導入程式 — 觸控優化的UI {#blueprint-importer-touch-optimized-ui}
+#### Blueprint Importer — 觸控最佳化UI {#blueprint-importer-touch-optimized-ui}
 
-1. 導航到 **目錄** 控制台，通過 **商業**。
-1. 導航到要導入目錄藍圖的位置。
-1. 點擊/按一下 **導入藍圖** 表徵圖
+1. 導覽至 **目錄** 主控台，透過 **商務**.
+1. 導覽至您要匯入目錄Blueprint的位置。
+1. 點選/按一下 **匯入Blueprint** 圖示。
 
    ![](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
-1. 在嚮導中，根據需要選擇「源」，然後點擊/按一下 **下一個**。
+1. 在精靈中，視需要選取來源，然後點選/按一下 **下一個**.
 
    ![chlimage_1-340](/help/sites-administering/assets/chlimage_1-102.png)
 
-1. 點擊/按一下 **完成** 完成導入後。
+1. 點選/按一下 **完成** 匯入完成後。
 
-#### 藍圖導入程式 — 經典UI {#blueprint-importer-classic-ui}
+#### Blueprint Importer — 傳統UI {#blueprint-importer-classic-ui}
 
-1. 使用 **工具** 控制台，導航至 **商業**。
+1. 使用 **工具** 主控台，導覽至 **商務**.
 
    例如：
 
    `http://localhost:4502/miscadmin#/etc/commerce`
 
-1. 開啟 **目錄藍印導入程式**。
-1. 根據需要設定導入。
-1. 按一下 **導入目錄藍圖**。
+1. 開啟 **目錄Blueprint匯入工具**.
+1. 視需要設定匯入。
+1. 按一下 **匯入目錄Blueprint**.
 
 ## 促銷活動 {#promotions}
 
-### 建立促銷 {#creating-a-promotion}
+### 建立促銷活動 {#creating-a-promotion}
 
-#### 建立升級 — 經典用戶介面 {#creating-a-promotion-classic-ui}
+#### 建立促銷活動 — Classic UI {#creating-a-promotion-classic-ui}
 
 >[!NOTE]
 >
->以下示例處理直接在 [活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)，這用於憑證。
+>下列範例會處理直接在中持有的促銷活動 [行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)，此資料用於憑單。
 >
->促銷也可以在 [體驗](/help/sites-authoring/personalization.md) 在競選中。
+>促銷活動也可以位於 [體驗](/help/sites-authoring/personalization.md) 在行銷活動中。
 >
->有關詳細資訊，請參閱 [促銷和憑單](#promotions-and-vouchers)。
+>如需詳細資訊，請參閱 [促銷活動和憑單](#promotions-and-vouchers).
 
-1. 開啟 **網站** 作者實例的控制台。
-1. 在左窗格中，選擇所需 **活動**。
-1. 按一下 **新建**，選擇 **升級** 模板，然後指定 **標題** (和 **名稱** )。
-1. 按一下&#x200B;**建立**。新的升級頁面將顯示在右窗格中。
+1. 開啟 **網站** 作者執行個體的主控台。
+1. 在左側窗格中，選取您需要的專案 **Campaign**.
+1. 按一下 **新增**，選取 **促銷活動** 範本，然後指定 **標題** (和 **名稱** （若有需要）。
+1. 按一下&#x200B;**建立**。新的促銷活動頁面將顯示在右側窗格中。
 
-1. 編輯 **屬性** 按以下任一：
+1. 編輯 **屬性** 透過以下其中一種方式：
 
-   * 開啟頁面，然後按一下「編輯」按鈕以開啟「屬性」對話框
-   * 在「網站」控制台中選擇頁面，然後使用上下文菜單（通常是滑鼠右鍵）選擇 **屬性……** 開啟「屬性」對話框
+   * 開啟頁面，然後按一下「編輯」按鈕以開啟「屬性」對話方塊
+   * 在網站主控台中選取頁面，然後使用內容功能表（通常是滑鼠右鍵）來選取 **屬性……** 並開啟「屬性」對話方塊
 
-   指定 **升級類型**。 **折扣類型**。 **折扣值** 和其他任何需要的欄位。
+   指定 **促銷活動型別**， **折扣型別**， **折扣值** 和任何其他必要欄位。
 
-1. 按一下 **確定** 來保存。
+1. 按一下 **確定** 以儲存。
 
-1. 您現在可以激活促銷，以便購物者在發佈實例上看到它。
+1. 您現在可以啟動促銷活動，讓購物者可以在發佈執行個體上看到。
 
 ## 憑單 {#vouchers}
 
-### 建立憑證 {#creating-a-voucher}
+### 建立憑單 {#creating-a-voucher}
 
-#### 建立憑單 — 傳統用戶介面 {#creating-a-voucher-classic-ui}
+#### 建立憑單 — 傳統UI {#creating-a-voucher-classic-ui}
 
-1. 開啟 **網站** 作者實例的控制台。
-1. 在左窗格中，選擇所需 **活動**。
-1. 按一下 **新建**，選擇 **憑證** 模板，然後指定 **標題** (和 **名稱** )。
-1. 按一下&#x200B;**建立**。新憑證頁將顯示在右窗格中。
+1. 開啟 **網站** 作者執行個體的主控台。
+1. 在左側窗格中，選取您需要的專案 **Campaign**.
+1. 按一下 **新增**，選取 **憑單** 範本，然後指定 **標題** (和 **名稱** （若有需要）。
+1. 按一下&#x200B;**建立**。新的憑單頁面將顯示在右窗格中。
 
-1. 按兩下開啟新的憑單頁，然後按一下 **編輯** 以根據需要配置資訊。
-1. 按一下 **確定** 來保存。
+1. 連按兩下以開啟您的新憑單頁面，然後按一下 **編輯** 以視需要設定資訊。
+1. 按一下 **確定** 以儲存。
 
-1. 現在，您可以激活您的憑單，以便購物者可以在發佈實例上的購物車中使用它。
+1. 您現在可以啟用憑單，讓購物者可以在發佈執行個體的購物車中使用它。
 
-### 刪除憑單 {#removing-vouchers}
+### 移除憑單 {#removing-vouchers}
 
-#### 刪除憑單 — 經典UI {#removing-vouchers-classic-ui}
+#### 移除憑單 — Classic UI {#removing-vouchers-classic-ui}
 
-為使憑證不可供客戶使用，您可以執行以下任一操作：
+若要讓憑單無法供客戶使用，您可以：
 
-* 停用憑單 — 憑單將在作者環境中保持可用，以便您可以稍後重新激活它。
-* 完全刪除它。
+* 停用憑單 — 它仍可在作者環境中使用，以便您稍後可以重新啟用。
+* 完全刪除。
 
-可以通過 **網站** 控制台。
+這兩個動作都可以從 **網站** 主控台。
 
-### 修改憑證 {#modifying-vouchers}
+### 修改憑單 {#modifying-vouchers}
 
-#### 修改憑單 — 經典UI {#modifying-vouchers-classic-ui}
+#### 修改憑單 — 傳統UI {#modifying-vouchers-classic-ui}
 
-要更改憑證或促銷的屬性，可在 **網站** 按一下 **編輯**。 保存後，應激活它，以便將更改推送到發佈實例。
+若要變更憑單或促銷活動的屬性，您可以連按兩下 **網站** 主控台並按一下 **編輯**. 儲存後，您應該將其啟動，以便將變更推送至發佈執行個體。
 
-### 將憑單添加到購物車 {#adding-vouchers-to-a-cart}
+### 新增憑單至購物車 {#adding-vouchers-to-a-cart}
 
-要允許用戶將憑單添加到購物車中，可以使用 **憑證** 元件（Commerce類別）。 您需要將此內容添加到顯示購物車的同一頁（但不是強制）。 憑單元件只是用戶可以輸入憑單代碼的表單，實際顯示已應用憑單及其折扣清單的購物車元件。
+若要讓使用者將憑單新增至購物車，您可以使用內建的 **憑單** 元件（商務類別）。 您需要將此專案新增到顯示購物車的相同頁面（但非必要）。 憑單元件只是使用者可以輸入憑單代碼的表單，購物車元件實際上會顯示套用憑單及其折扣的清單。
 
-在演示站點(Geometrixx Outdoors — 英語)中，您可以在購物車頁面的實際購物車下查看憑單。
+在示範網站(Geometrixx Outdoors文 — 英文)中，您可以在購物車頁面上實際購物車下方看到憑單表單。
 
 ## 訂購 {#orders}
 
 >[!NOTE]
 >
->應該記住，現成產品不AEM具備與訂單相關的標準功能所需的操作，例如退貨、更新訂單狀態、完成、生成裝箱單。 它主要是作為技術預覽。
+>請記住，現成可用的AEM並不具備與訂單相關的標準功能所需的動作，例如退回商品、更新訂單狀態、執行履行、產生包裝單。 其主要用途為技術預覽。
 >
->中的通用訂單管AEM理保持基本；嚮導中可用的欄位取決於指令碼框：
+>AEM中的通用訂單管理保持為基本；精靈中可用的欄位取決於支架：
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
 >
->如果建立了自定義的支架，則可以儲存更多訂單資訊。
+>如果您建立自訂的支架，可以儲存更多訂單資訊。
 
 >[!NOTE]
 >
->訂單控制台公開供應商訂單資訊，這些資訊從未發佈。
+>訂單主控台會公開永遠不會發佈的廠商訂單資訊。
 >
->客戶訂單資訊保存在其主目錄中，並由其帳戶的訂單歷史記錄公開。 此資訊與其他主目錄一起發佈。
+>客戶訂單資訊會儲存在其主目錄中，並由其帳戶的「訂單歷史記錄」顯示。 此資訊會與其主目錄的其他部分一起發佈。
 
 ### 建立訂單資訊 {#creating-order-information}
 
-#### 建立訂單資訊 — 觸控優化用戶介面 {#creating-order-information-touch-optimized-ui}
+#### 建立訂單資訊 — 觸控最佳化UI {#creating-order-information-touch-optimized-ui}
 
-1. 使用 **訂單** 控制台導航到所需位置。
-1. 使用 **建立** 表徵圖 **建立訂單**。
+1. 使用 **訂購** 主控台導覽至所需位置。
+1. 使用 **建立** 圖示以選取 **建立訂單**.
 
    ![](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
-1. 嚮導將開啟。 使用 **基本**。 **內容**。 **付款** 和 **履行** 頁籤 [有關新訂單的資訊](/help/commerce/cif-classic/administering/concepts.md#order-information)。
+1. 精靈將會開啟。 使用 **基本**， **內容**， **付款** 和 **履行** 標籤以輸入 [新訂單的相關資訊](/help/commerce/cif-classic/administering/concepts.md#order-information).
 
-1. 選擇 **建立** 的子菜單。
+1. 選取 **建立** 以儲存資訊。
 
 ### 編輯訂單資訊 {#editing-order-information}
 
-#### 編輯訂單資訊 — 觸控優化用戶介面 {#editing-order-information-touch-optimized-ui}
+#### 編輯訂單資訊 — 觸控最佳化UI {#editing-order-information-touch-optimized-ui}
 
-1. 使用 **訂單** 控制台導航至訂單。
-1. 使用以下任一項：
+1. 使用 **訂購** 主控台導覽至訂單。
+1. 使用：
 
-   * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
+   * [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選擇模式](/help/sites-authoring/basic-handling.md#navigating-and-selection-mode)
 
-   選擇 **查看訂單資料** 表徵圖：
+   選取 **檢視訂單資料** 圖示：
 
    ![](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
-1. 的 [訂單資訊](/help/commerce/cif-classic/administering/concepts.md#order-information) 的下界。 使用 **編輯** 和 **完成** 進行任何更改。
+1. 此 [訂單資訊](/help/commerce/cif-classic/administering/concepts.md#order-information) 將會顯示。 使用 **編輯** 和 **完成** 以進行任何變更。
 

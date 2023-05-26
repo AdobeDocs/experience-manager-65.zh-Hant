@@ -1,7 +1,7 @@
 ---
-title: 社區元件
+title: Communities元件
 seo-title: Communities Components
-description: 將社區功能添加到任AEM何站點
+description: 新增社群功能至任何AEM網站
 seo-description: Adding community features to any AEM site
 uuid: 76824820-81e9-4192-8df3-dff55eaf144e
 contentOwner: Chris Bohnert
@@ -18,30 +18,30 @@ ht-degree: 27%
 
 ---
 
-# 社區元件 {#communities-components}
+# Communities元件 {#communities-components}
 
 ## 簡介 {#introduction}
 
-AEM Communities獲得許可後，除了建立社區網站外，還可以使用標準創作工具將社區功AEM能添加到任AEM何站點。
+取得AEM Communities授權後，除了建立社群網站，您也可以使用標準AEM編寫工具將社群功能新增至任何AEM網站。
 
-要瞭解有關建立社區站點的詳細資訊，請訪問：
+若要進一步瞭解如何建立社群網站，請造訪：
 
-* [AEM Communities概述](/help/communities/overview.md)
-* [AEM Communities入門](/help/communities/getting-started.md)
-
->[!NOTE]
->
->如果不熟悉創作環境，請查看 [基本處理](/help/sites-authoring/basic-handling.md) 和 [創作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md)。
-
-## 可用社區元件 {#available-communities-components}
-
-下表列出了在元件瀏覽器（側腳）中啟用時，作者可看到的社區元件。
-
-另請參閱互動式 [社區元件指南](/help/communities/components-guide.md)。
+* [AEM Communities概觀](/help/communities/overview.md)
+* [AEM Communities快速入門](/help/communities/getting-started.md)
 
 >[!NOTE]
 >
->閱讀 [社區元件基礎](/help/communities/basics.md) 因為它包含用「社區」元件進行創作所需的資訊。
+>如果您不熟悉製作環境，請在以下位置檢視檔案： [基本處理](/help/sites-authoring/basic-handling.md) 和 [製作頁面的快速指南](/help/sites-authoring/qg-page-authoring.md).
+
+## 可用的Communities元件 {#available-communities-components}
+
+下表列出在元件瀏覽器(sidekick)中啟用時，作者可見的Communities元件。
+
+另請參閱互動式 [社群元件指南](/help/communities/components-guide.md).
+
+>[!NOTE]
+>
+>讀取 [Communities元件基本知識](/help/communities/basics.md) 因為它包含使用Communities元件編寫時所需的資訊。
 
 | **元件標題** | **功能** |
 |---|---|
@@ -52,17 +52,17 @@ AEM Communities獲得許可後，除了建立社區網站外，還可以使用�
 | 評論 | [評論](/help/communities/comments.md) |
 | 社群活動清單 | [活動趨勢](/help/communities/trends.md) |
 | 社群群組成員清單 | [社群群組](/help/communities/creating-groups.md) |
-| 撰寫郵件 | [傳送訊息](/help/communities/configure-messaging.md) |
+| 撰寫訊息 | [傳送訊息](/help/communities/configure-messaging.md) |
 | 主要內容 | [主要內容](/help/communities/featured.md) |
 | 檔案庫 | [檔案庫](/help/communities/file-library.md) |
 | 關注 | [社交圖](/help/communities/socialgraph.md) |
 | 關注 | [社交圖](/help/communities/socialgraph.md) |
 | 論壇 | [論壇](/help/communities/forum.md) |
 | 創意力 | [創意力](/help/communities/ideation-feature.md) |
-| 排行榜 | [評分和徽章](/help/communities/enabling-leaderboard.md) |
+| 排行榜 | [評分和預算](/help/communities/enabling-leaderboard.md) |
 | 連結 | [連結](/help/communities/liking.md) |
 | 訊息 | [傳送訊息](/help/communities/configure-messaging.md) |
-| 消息清單 | [傳送訊息](/help/communities/configure-messaging.md) |
+| 訊息清單 | [傳送訊息](/help/communities/configure-messaging.md) |
 | QnA | [問題與答案](/help/communities/working-with-qna.md) |
 | 快速搜尋 | [搜尋](/help/communities/search.md) |
 | 評等 | [評等](/help/communities/rating.md) |
@@ -76,12 +76,12 @@ AEM Communities獲得許可後，除了建立社區網站外，還可以使用�
 
 >[!NOTE]
 >
->輪詢元件不再可用，在Experience Manager社區中不受支援。
+>Experience Manager Communities不再提供輪詢元件，也不再支援輪詢元件。
 
-## 相關社區文檔 {#related-communities-documentation}
+## 相關Communities檔案 {#related-communities-documentation}
 
-* 訪問 [部署社區](/help/communities/deploy-communities.md) 瞭解建議的部署。
+* 造訪 [部署社群](/help/communities/deploy-communities.md) 以瞭解建議的部署。
 
-* 訪問 [管理社區站點](/help/communities/administer-landing.md) 瞭解如何建立社區站點、配置社區站點模板、調節社區內容、管理成員和配置消息傳遞。
+* 造訪 [管理社群網站](/help/communities/administer-landing.md) 瞭解有關建立社群網站、設定社群網站範本、仲裁社群內容、管理成員和設定傳訊功能的資訊。
 
-* 訪問 [發展中社區](/help/communities/communities.md) 瞭解社會元件框架(SCF)和自定義社區元件和功能。
+* 造訪 [開發社群](/help/communities/communities.md) 瞭解社交元件架構(SCF)和自訂Communities元件和功能。

@@ -1,7 +1,7 @@
 ---
-title: 用於HTML5個表單的表單橋API
+title: 適用於HTML5表單的Form Bridge API
 seo-title: Form Bridge APIs for HTML5 forms
-description: 外部應用程式使用FormBridge API連接到XFA移動表單。 API在父窗口上調度FormBridgeInitialized事件。
+description: 外部應用程式會使用FormBridge API連線至XFA行動表單。 API會在父視窗上排程FormBridgeInitialized事件。
 seo-description: External applications use the FormBridge API to connect to the XFA Mobile Form. The API dispatches a FormBridgeInitialized event on the parent window.
 uuid: 0db22649-522b-4857-9ffd-826c52381d15
 content-type: reference
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 ---
 
-# 用於HTML5個表單的表單橋API {#form-bridge-apis-for-html-forms}
+# 適用於HTML5表單的Form Bridge API {#form-bridge-apis-for-html-forms}
 
-您可以使用表單橋API在基於XFA的HTML5表單和應用程式之間開啟通信通道。 表單橋API提供 **連接** 建立連接的API。
+您可以使用Form Bridge API來開啟XFA型HTML5表單與您的應用程式之間的通訊通道。 Form Bridge API提供 **connect** 用於建立連線的API。
 
-的 **連接** API將處理程式作為參數接受。 在基於XFA的HTML5窗體和窗體橋之間建立成功連接後，將調用句柄。
+此 **connect** API接受處理常式作為引數。 在XFA型HTML5表單與表單橋接器之間成功建立連線後，就會叫用控制代碼。
 
-可以使用以下示例代碼建立連接。
+您可以使用以下範常式式碼來建立連線。
 
 ```javascript
 // Example showing how to connect to FormBridge
@@ -37,65 +37,65 @@ window.addEventListener("FormBridgeInitialized",
 
 >[!NOTE]
 >
->確保在包括formRuntime.jsp檔案之前建立連接。
+>在加入formRuntime.jsp檔案之前，請確定您已建立連線。
 
-## 可用表單橋API  {#available-form-bridge-api-nbsp}
+## 可用的Form Bridge API  {#available-form-bridge-api-nbsp}
 
 **getBridgeVersion()**
 
-返回指令碼庫的版本號
+傳回指令碼程式庫的版本號碼
 
-* **輸入**:無
-* **輸出**:指令碼庫的版本號
-* **錯誤**:無
+* **輸入**：無
+* **輸出**：指令碼程式庫的版本號碼
+* **錯誤**：無
 
 **isConnected()** 檢查表單狀態是否已初始化
 
-* **輸入**:無
-* **輸出**: **真** 是否已初始化XFA窗體狀態
+* **輸入**：無
+* **輸出**： **True** 如果XFA表單狀態已初始化
 
-* **錯誤**:無
+* **錯誤**：無
 
-**connect（handler，上下文）** 建立到FormBridge的連接，並在建立連接並初始化窗體狀態後執行該函式
+**connect(handler， context)** 連線至FormBridge並在連線完成且表單狀態初始化後執行函式
 
 * **輸入**:
 
-   * **處理程式**:連接窗體橋後要執行的函式
-   * **上下文**:對象的上下文（此） *處理程式* 的子菜單。
+   * **處理常式**：連線Form Bridge後要執行的函式
+   * **內容**：前後關聯（這個）的目標物件 *處理常式* 函式已設定。
 
-* **輸出**:無
-* **錯誤**:無
+* **輸出**：無
+* **錯誤**：無
 
-**getDataXML（選項）** 以XML格式返回當前表單資料
+**getDataXML(options)** 以XML格式傳回目前的表單資料
 
 * **輸入:**
 
-   * **選項：** 包含以下屬性的JavaScript對象：
+   * **選項：** 包含下列屬性的JavaScript物件：
 
-      * **錯誤**:錯誤處理程式函式
-      * **成功**:成功處理程式函式。 此函式傳遞的對象包含XML *資料* 屬性。
-      * **上下文**:對象的上下文（此） *成功* 函式
-      * **驗證檢查器**:用於調用以檢查從伺服器接收的驗證錯誤的函式。 驗證函式傳遞了錯誤字串陣列。
-      * **窗體狀態**:必須返回資料XML的XFA表單的JSON狀態。 如果未指定，則返回當前呈現表單的資料XML。
+      * **錯誤**：錯誤處理常式函式
+      * **成功**：成功處理常式函式。 此函式傳遞一個包含XML的物件 *資料* 屬性。
+      * **內容**：前後關聯（這個）的目標物件 *成功* 函式已設定
+      * **validationChecker**：呼叫以檢查從伺服器收到的驗證錯誤的函式。 驗證函式傳遞了錯誤字串陣列。
+      * **formState**：必須傳回資料XML之XFA表單的JSON狀態。 如果未指定，則會傳回目前轉譯之表單的資料XML。
 
 * **輸出：** 無
 * **錯誤：** 無
 
-**registerConfig(configName, config)** 使用FormBridge註冊用戶/門戶特定配置。 這些配置將覆蓋預設配置。 在config節中指定了支援的配置。
+**registerConfig(configName， config)** 向FormBridge註冊使用者/入口網站的特定設定。 這些設定會覆寫預設設定。 在設定區段中指定支援的設定。
 
 * **輸入:**
 
-   * **configName:** 要覆蓋的配置的名稱
+   * **configName：** 要覆寫的設定名稱
 
-      * **widgetConfig（小部件配置）:** 允許用戶使用自定義小部件覆蓋窗體中的預設小部件。 配置被覆蓋如下：
+      * **widgetConfig：** 允許使用者以自訂Widget覆寫表單中的預設Widget。 設定會覆寫，如下所示：
 
-         *formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})*
+         *formBridge.registerConfig(&quot;widgetConfig&quot;：{/&amp;ast；configuration&amp;ast；/})*
 
-      * **pagingConfig（尋呼配置）:** 允許用戶覆蓋僅呈現第一頁的預設行為。 配置被覆蓋如下：
+      * **pagingConfig：** 允許使用者覆寫僅轉譯第一頁的預設行為。 設定會覆寫，如下所示：
 
-         *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true false=&quot;&quot;>,shrinkPageDisabled: &lt;true false=&quot;&quot;> })。*
+         *window.formBridge.registerConfig(&quot;pagingConfig&quot;：{pagingDisabled： &lt;true false=&quot;&quot;>，shrinkPageDisabled： &lt;true false=&quot;&quot;> })。*
 
-      * **日誌配置：** 允許用戶覆蓋記錄級別、禁用類別記錄，或者是顯示日誌控制台還是發送到伺服器。 可以按如下方式覆蓋配置：
+      * **Loggingconfig：** 允許使用者覆寫記錄層級、停用類別的記錄，或是否要顯示記錄主控台或傳送至伺服器。 設定可以覆寫，如下所示：
 
       ```javascript
       formBridge.registerConfig{
@@ -109,7 +109,7 @@ window.addEventListener("FormBridgeInitialized",
         }
       ```
 
-      * **SubmitServiceProxyConfig:** 允許用戶註冊提交和記錄代理服務。
+      * **SubmitServiceProxyConfig：** 允許使用者註冊提交和記錄器Proxy服務。
 
          ```javascript
          window.formBridge.registerConfig("submitServiceProxyConfig",
@@ -119,83 +119,83 @@ window.addEventListener("FormBridgeInitialized",
          "submitUrl" : "`<submitUrl>`"
          });
          ```
-   * **配置：** 配置的值
+   * **設定：** 設定的值
 
 
 
-* **輸出：** 包含中配置的原始值的對象 *資料* 屬性。
+* **輸出：** 包含中組態原始值的物件 *資料* 屬性。
 
 * **錯誤：** 無
 
-**hideFields(fieldArray)** 隱藏其Som表達式在fieldArray中提供的欄位。 將指定欄位的存在屬性設定為不可見
+**hideFields(fieldArray)** 隱藏fieldArray中提供Som運算式的欄位。 將指定欄位的presence屬性設定為隱藏
 
 * **輸入:**
 
-   * **欄位陣列：** 要隱藏的欄位的Som表達式陣列
+   * **fieldArray：** 要隱藏之欄位的Som運算式陣列
 
 * **輸出：** 無
 * **錯誤：** 無
 
-**showFields(fieldArray)** 顯示其Som表達式在fieldArray中提供的欄位。 將提供的欄位的存在屬性設定為可見
+**showFields(fieldArray)** 顯示fieldArray中提供Som運算式的欄位。 將所提供欄位的presence屬性設定為可見
 
 * **輸入:**
 
-   * **欄位陣列：** 要顯示的欄位的Som表達式陣列
+   * **fieldArray：** 要顯示之欄位的Som運算式陣列
 
 * **輸出：** 無
 * **錯誤：** 無
 
-**hideSubmitButtons()** 隱藏表單中的所有提交按鈕
+**hideSubmitButton()** 隱藏表單中的所有提交按鈕
 
-* **輸入**:無
-* **輸出**:無
-* **錯誤**:如果窗體狀態未初始化，則引發異常
+* **輸入**：無
+* **輸出**：無
+* **錯誤**：如果未初始化表單狀態，則會擲回例外狀況
 
-**getFormState()** 返回表示窗體狀態的JSON
+**getFormState()** 傳回代表表單狀態的JSON
 
 * **輸入：** 無
-* **輸出：** 包含JSON的對象，該JSON表示中的當前窗體狀態 *資料* 屬性。
+* **輸出：** 物件，內含代表下列專案之目前表單狀態的JSON： *資料* 屬性。
 
 * **錯誤：** 無
 
-**restoreFormState（選項）** 從選項對象中提供的JSON狀態恢復表單狀態。 應用該狀態，並在操作完成後調用成功或錯誤處理程式
+**restoreFormState(options)** 從選項物件中提供的JSON狀態還原表單狀態。 狀態已套用，並在作業完成後呼叫成功或錯誤處理常式
 
 * **輸入:**
 
-   * **選項：** 包含以下屬性的JavaScript對象：
+   * **選項：** 包含下列屬性的JavaScript物件：
 
-      * **錯誤**:錯誤處理程式函式
-      * **成功**:成功處理程式函式
-      * **上下文**:對象的上下文（此） *成功* 函式
-      * **窗體狀態**:窗體的JSON狀態。 表單已還原為JSON狀態。
+      * **錯誤**：錯誤處理常式函式
+      * **成功**：成功處理常式函式
+      * **內容**：前後關聯（這個）的目標物件 *成功* 函式已設定
+      * **formState**：表單的JSON狀態。 表單會還原為JSON狀態。
 
 * **輸出：** 無
 * **錯誤：** 無
 
-**setFocus(som)** 集中於在Som表達式中指定的欄位
+**setFocus (som)** 將焦點設定在Som運算式中指定的欄位
 
-* **輸入：** 要設定焦點的欄位的某些表達式
+* **輸入：** 要設定焦點的欄位的一些運算式
 * **輸出：** 無
-* **錯誤：** 如果Som表達式不正確，則引發異常
+* **錯誤：** Som運算式不正確時擲回例外狀況
 
-**setFieldValue（som，值）** 設定給定Som表達式的欄位值
+**setFieldValue (som， value)** 設定指定Som運算式的欄位值
 
 * **輸入:**
 
-   * **som:** 包含欄位的Som表達式的陣列。 設定欄位值的som表達式。
-   * **值：** 包含與Som表達式相應的值的陣列 **宋**&#x200B;陣列。 如果值的資料類型與fieldType不同，則不修改值。
+   * **som：** 包含欄位的Som運算式的陣列。 用來設定欄位值的som運算式。
+   * **值：** 陣列包含對應至中提供的Som運算式的值 **som**&#x200B;陣列。 如果值的資料型別與fieldType不同，則不會修改值。
 
 * **輸出：** 無
-* **錯誤：** 如果Som表達式不正確，則引發異常
+* **錯誤：** Som運算式不正確時擲回例外狀況
 
-**getFieldValue(som)** 返回給定Som表達式的欄位值
+**getFieldValue (som)** 傳回指定Som運算式的欄位值
 
-* **輸入：** 包含需要檢索其值的欄位的Som表達式的陣列
-* **輸出：** 包含結果為Array的對象 **資料** 屬性。
+* **輸入：** 包含必須擷取其值之欄位的Som運算式的陣列
+* **輸出：** 包含結果為Array的物件 **資料** 屬性。
 
 * **錯誤：** 無
 
-### getFieldValue()API示例 {#example-of-nbsp-getfieldvalue-api}
+### getFieldValue() API範例 {#example-of-nbsp-getfieldvalue-api}
 
 ```JavaScript
 var a =  formBridge.getFieldValue("xfa.form.form1.Subform1.TextField");
@@ -208,29 +208,29 @@ if(a.errors) {
 }
 ```
 
-**getFieldProperties（som，屬性）** 檢索Som表達式中指定欄位的給定屬性的值清單
+**getFieldProperties(som， property)** 擷取Som運算式中所指定欄位之指定屬性的值清單
 
 * **輸入:**
 
-   * **som:** 包含欄位的Som表達式的陣列
-   * **屬性**:需要其值的屬性的名稱
+   * **som：** 包含欄位的Som運算式的陣列
+   * **屬性**：需要其值的屬性名稱
 
-* **輸出：** 包含結果為Array的對象 *資料* 屬性
+* **輸出：** 包含結果為Array的物件 *資料* 屬性
 
 * **錯誤：** 無
 
-**setFieldProperties（som，屬性，值）** 為Som表達式中指定的所有欄位設定給定屬性的值
+**setFieldProperties（som，屬性，值）** 為Som運算式中指定的所有欄位設定指定屬性的值
 
 * **輸入:**
 
-   * **som:** 包含必須設定其值的欄位的Som表達式的陣列
-   * **屬性**:必須設定其值的屬性
-   * **值：** 包含Som表達式中指定欄位的給定屬性值的陣列
+   * **som：** 包含必須設定其值的欄位之Som運算式的陣列
+   * **屬性**：必須設定值的屬性
+   * **值：** 包含Som運算式中所指定欄位之指定屬性的值的陣列
 
 * **輸出：** 無
 * **錯誤：** 無
 
-## 表單橋API的示例使用 {#sample-usage-of-form-bridge-api}
+## Form Bridge API的範例用法 {#sample-usage-of-form-bridge-api}
 
 ```JavaScript
 // Example 1: FormBridge.restoreFormState

@@ -1,7 +1,7 @@
 ---
-title: 配置佈局容器和佈局模式
+title: 設定配置容器和配置模式
 seo-title: Configuring Layout Container and Layout Mode
-description: 瞭解如何配置佈局容器和佈局模式。
+description: 瞭解如何設定配置容器和配置模式。
 seo-description: Learn how to configure Layout Container and Layout Mode.
 uuid: 952b7c86-76ab-4699-8530-8638e46bb50f
 contentOwner: Guillaume Carlino
@@ -18,137 +18,137 @@ ht-degree: 1%
 
 ---
 
-# 配置佈局容器和佈局模式{#configuring-layout-container-and-layout-mode}
+# 設定配置容器和配置模式{#configuring-layout-container-and-layout-mode}
 
-[響應佈局](/help/sites-authoring/responsive-layout.md) 是實現 [響應性Web設計](https://en.wikipedia.org/wiki/Responsive_web_design)。 這允許用戶建立佈局和維度取決於用戶使用的設備的網頁。
+[回應式佈局](/help/sites-authoring/responsive-layout.md) 是用來實現的機制 [回應式網頁設計](https://en.wikipedia.org/wiki/Responsive_web_design). 這可讓使用者建立具有與其使用者使用之裝置相依之版面和維度的網頁。
 
 >[!NOTE]
 >
->可以將此值與 [移動Web](/help/sites-developing/mobile-web.md) 機制，使用自適應web設計（主要針對經典UI）。
+>這可以與 [行動網頁](/help/sites-developing/mobile-web.md) 機制，使用最適化網頁設計（主要用於傳統UI）。
 
-使AEM用多種機制實現頁面的響應式佈局：
+AEM使用多種機制組合，為您的頁面實現回應式佈局：
 
-* [**佈局容器**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode) 元件
+* [**配置容器**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode) 元件
 
-   此元件提供了網格段落系統，允許您在響應網格中添加和定位元件。 它可用作頁面的預設參數和/或可供元件瀏覽器中的作者使用。
+   此元件提供格點段落系統，可讓您在回應式格點內新增和定位元件。 它可用作頁面的預設parsys和/或供元件瀏覽器中的作者使用。
 
-   * 預設 **佈局容器** 元件定義如下：
+   * 預設 **配置容器** 元件定義於：
 
-      /libs/wcm/foundation/components/responsedgrid
+      /libs/wcm/foundation/components/responsivegrid
 
-   * 您可以定義佈局容器：
+   * 您可以定義版面配置容器：
 
-      * 作為用戶可添加到頁面的元件。
-      * 作為頁面的預設參數。
+      * 作為使用者可新增至頁面的元件。
+      * 做為頁面的預設parsys。
       * 兩者.
 
-         您可以將佈局容器作為頁面的標準，同時允許用戶在此中添加更多佈局容器；例如，實現列控制。
+         您可以將版面容器設為頁面的標準，同時允許使用者在此內新增更多版面容器；例如，實現欄控制。
 
-* **[佈局模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
-佈局容器放置在頁面上後，您可以使用 
-**佈局** 在響應網格中定位內容的模式。
+* **[版面模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
+將版面容器放置到頁面上後，您就可以使用 
+**版面** 在回應式格線中定位內容的模式。
 
 * [**模擬器**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
-這允許您建立和編輯響應性網站，這些網站通過交互調整元件大小來根據設備/窗口大小重新排列佈局。 然後，用戶可以查看如何使用模擬器呈現內容。
+這可讓您建立並編輯回應式網站，這些網站可透過以互動方式調整元件大小，根據裝置/視窗大小重新安排版面。 之後，使用者就可以使用模擬器檢視內容的呈現方式。
 
 >[!CAUTION]
 >
->儘管 **佈局容器** 元件在標準UI中可用，其完整功能僅在啟用觸摸的UI中可用。
+>雖然 **配置容器** 元件可在傳統UI中使用，其完整功能僅在觸控式UI中可用。
 
-利用這些響應網格機制，您可以：
+透過這些回應式格點機制，您可以：
 
-* 使用斷點（表示設備分組）根據設備佈局定義不同的內容行為。
-* 根據設備組隱藏元件（定義元件將隱藏在哪個斷點上）。
-* 使用水準對齊網格（將元件放入網格中，根據需要調整大小，定義它們應在何時折疊/重排並排或在上/下）。
-* 實現列控制。
+* 使用中斷點（表示裝置分組）可依據裝置配置定義不同的內容行為。
+* 根據裝置群組隱藏元件（定義元件將隱藏在哪個中斷點上）。
+* 使用水準對齊格點（將元件放入格點，視需要調整大小，定義它們何時應該摺疊/重排成並排或上下對齊）。
+* 實現欄控制。
 
 >[!NOTE]
 >
->在現成安裝中，已為 [We.Retail參考網站](/help/sites-developing/we-retail.md)。 你必須 [激活佈局容器元件](#enable-the-layout-container-component-for-page) 頁。
+>在現成可用的安裝中，已針對 [We.Retail參考網站](/help/sites-developing/we-retail.md). 您仍須要 [啟動配置容器元件](#enable-the-layout-container-component-for-page) 用於其他頁面。
 
-## 配置響應模擬器 {#configuring-the-responsive-emulator}
+## 設定回應式模擬器 {#configuring-the-responsive-emulator}
 
-通過此任務，您可以看到 **模擬器** 在你的網站上。
+此任務可讓您檢視回應式 **模擬器** 在您的網站上。
 
-### 註冊要模擬的頁面元件 {#register-your-page-components-for-emulation}
+### 註冊頁面元件以進行模擬 {#register-your-page-components-for-emulation}
 
-要使模擬器支援您的頁面，必須註冊頁面元件。 請參閱 [註冊模擬的頁面元件](/help/sites-developing/responsive.md#registering-page-components-for-simulation)。
+若要讓模擬器支援您的頁面，您必須註冊頁面元件。 另請參閱 [註冊模擬的頁面元件](/help/sites-developing/responsive.md#registering-page-components-for-simulation).
 
-### 指定設備組 {#specify-the-device-groups}
+### 指定裝置群組 {#specify-the-device-groups}
 
-要指定在模擬器的「設備」清單中顯示的設備組，請參見 [指定設備組](/help/sites-developing/responsive.md#specifying-the-device-groups)。
+若要指定顯示在模擬器的「裝置」清單中的裝置群組，請參閱 [指定裝置群組](/help/sites-developing/responsive.md#specifying-the-device-groups).
 
-### 將站點連結到指定的設備組 {#link-your-site-to-the-specified-device-groups}
+### 將您的網站連結至指定的裝置群組 {#link-your-site-to-the-specified-device-groups}
 
-要包括模擬器，請將站點連結到設備組。 請參閱 [添加設備清單](/help/sites-developing/responsive.md#adding-the-devices-list) （適用於經典和觸控優化的UI）。
+若要加入模擬器，請將您的網站連結至裝置群組。 另請參閱 [新增裝置清單](/help/sites-developing/responsive.md#adding-the-devices-list) （適用於傳統和觸控最佳化的UI）。
 
-## 激活網站的佈局模式 {#activate-layout-mode-for-your-site}
+## 啟用網站的佈局模式 {#activate-layout-mode-for-your-site}
 
-這些過程用於啟用 **佈局** 的子菜單。
+這些程式用於啟用 **版面** 模式。
 
-### 配置斷點 {#configure-the-breakpoints}
+### 設定中斷點 {#configure-the-breakpoints}
 
 [中斷點](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate):
 
-* 用於響應設計。
+* 用於回應式設計。
 * 可以定義：
 
-   * 在頁面模板上，將設定從其中複製到使用該模板建立的任何頁面。
-   * 在頁面節點上，任何子頁面都從中繼承設定。
+   * 在頁面範本上，設定會從此處複製到使用該範本建立的任何頁面。
+   * 在頁面節點上，任何子頁面會從中繼承設定。
 
 * 定義標題和寬度：
 
-   * 標題描述了通用設備分組，必要時可提供方向；例如，手機、平板電腦、平板電腦。
-   * 寬度定義該通用設備分組的最大寬度（以像素為單位）。 例如，如果斷點電話的寬度為768，則它為用於電話設備的佈局的最大寬度。
+   * 標題說明一般裝置群組，必要時提供方向；例如，電話、平板電腦、桌上型橫向。
+   * 寬度會定義該一般裝置群組的最大寬度（畫素）。 例如，如果中斷點電話的寬度為768，則表示它是用於電話裝置的配置寬度上限。
 
-* 在使用模擬器時，在頁面編輯器頂部以標籤形式可見。
-* 繼承自父節點層次結構，可以隨意覆蓋。
-* 有一個預設（現成）斷點，該斷點覆蓋上一個 *配置* 斷點。
+* 使用模擬器時，會在頁面編輯器頂端顯示為標籤。
+* 繼承自父節點階層，並可隨意覆寫。
+* 有一個預設（現成）中斷點，可涵蓋最後一個中斷點以上的所有內容 *已設定* 中斷點。
 
-可以使用CRXDE Lite或XML定義它們。
+它們可以使用CRXDE Lite或XML來定義。
 
 >[!NOTE]
 >
->如果要設定新項目：
+>如果您要設定新專案：
 >
->* 將斷點添加到模板。
+>* 將中斷點新增至範本。
 >
->如果要遷移現有項目（包含現有內容），必須：
+>如果您要移轉現有專案（包含現有內容），您必須：
 >
->* 將斷點添加到模板
->* 將相同的斷點添加到現有頁面
+>* 將中斷點新增至範本
+>* 將相同的中斷點新增至現有頁面
 >
->  繼承操作時，您可以將繼承限制在內容的根頁。
+>  由於繼承正在運作，您可以將此限製為內容的根頁面。
 
-#### 使用CRXDE Lite配置斷點 {#configuring-breakpoints-using-crxde-lite}
+#### 使用CRXDE Lite設定中斷點 {#configuring-breakpoints-using-crxde-lite}
 
-1. 使用CRXDE Lite（或等效），導航至以下任一選項：
+1. 使用CRXDE Lite（或同等專案），導覽至：
 
-   * 您的模板定義。
-   * 的 `jcr:content` 的子菜單。
+   * 您的範本定義。
+   * 此 `jcr:content` 頁面節點。
 
 1. 下 `jcr:content` 建立節點：
 
    * 名稱: `cq:responsive`
    * 類型: `nt:unstructured`
 
-1. 在此下建立節點：
+1. 在此底下建立節點：
 
    * 名稱: `breakpoints`
    * 類型: `nt:unstructured`
 
-1. 在斷點節點下，可以建立任意數量的斷點。 每個定義都是具有以下屬性的單個節點：
+1. 在中斷點節點下，您可以建立任意數量的中斷點。 每個定義都是單一節點，具有以下屬性：
 
    * 名稱: `<descriptive name>`
    * 類型: `nt:unstructured`
    * 標題: `String` * `<descriptive title seen in Emulator>`*
    * 寬度: `Decimal` * `<value of breakpoint>`*
 
-#### 使用XML配置斷點 {#configuring-breakpoints-using-xml}
+#### 使用XML設定中斷點 {#configuring-breakpoints-using-xml}
 
-斷點位於 `<jcr:content>` 的下界 `.context.html` 的子菜單。
+中斷點位於 `<jcr:content>` 部分 `.context.html` 在適當的範本（或內容）資料夾下。
 
-示例定義：
+範例定義：
 
 ```xml
 <cq:responsive jcr:primaryType="nt:unstructured">
@@ -159,32 +159,32 @@ ht-degree: 1%
 </cq:responsive>
 ```
 
-### 添加響應資訊提供程式 {#add-a-responsive-information-provider}
+### 新增回應式資訊提供者 {#add-a-responsive-information-provider}
 
 >[!NOTE]
 >
->僅當頁面元件不基於基礎頁面元件時才需要這樣做。
+>只有在頁面元件不是根據基礎頁面元件時，才需要此專案。
 
-複製以下內容 `cq:infoProviders` 節點結構到父頁元件中：
+複製下列專案 `cq:infoProviders` 將節點結構放入上層頁面元件中：
 
 `/libs/foundation/components/page/cq:infoProviders/responsive`
 
 ## 為頁面啟用元件調整大小 {#enable-component-resizing-for-the-page}
 
-這些過程是必需的，因此您可以在 **佈局** 的子菜單。
+這些程式是必要的，因此您可以調整元件在 **版面** 模式。
 
-### 將佈局容器設定為主參數 {#set-layout-container-as-main-parsys}
+### 將配置容器設定為主要Parsys {#set-layout-container-as-main-parsys}
 
-要將頁面的主參數設定為佈局容器，請將參數定義為：
+若要將頁面的main parsys設定為配置容器，請將parsys定義為：
 
 `wcm/foundation/components/responsivegrid`
 
-在以下任一位置：
+在下列任一位置：
 
 * 頁面元件
-* 頁面模板（供將來使用）
+* 頁面範本（供日後使用）
 
-以下兩個示例說明了定義：
+以下兩個範例說明定義：
 
 * **HTL:**
 
@@ -192,19 +192,19 @@ ht-degree: 1%
    <sly data-sly-resource="${'par' @ resourceType='wcm/foundation/components/responsivegrid'}/>
    ```
 
-* **JSP:**
+* **JSP：**
 
    ```
    <cq:include path="par" resourceType="wcm/foundation/components/responsivegrid" />
    ```
 
-### 包括響應CSS {#include-the-responsive-css}
+### 包含回應式CSS {#include-the-responsive-css}
 
-#### 使用LESS的斷點的CSS {#css-for-breakpoints-using-less}
+#### 使用LESS的中斷點CSS {#css-for-breakpoints-using-less}
 
-使AEM用LESS生成所需CSS的部分，這些需要包含在項目中。
+AEM使用LESS來產生必要CSS的部分，這些需要包含在您的專案中。
 
-您還必須建立 [客戶端庫](https://experienceleague.adobe.com/docs/) 提供其他配置和函式調用。 以下LESS提取是必須添加到項目中的最小值的示例：
+您也必須建立 [使用者端資源庫](https://experienceleague.adobe.com/docs/) 以提供其他設定和函式呼叫。 以下LESS擷取是您必須新增至專案的最小值範例：
 
 ```java
 @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
@@ -232,13 +232,13 @@ ht-degree: 1%
 }
 ```
 
-基本網格定義可在以下位置找到：
+基底格點定義可在下列位置找到：
 
 `/libs/wcm/foundation/clientlibs/grid/grid_base.less`
 
-#### 造型注意事項 {#styling-considerations}
+#### 樣式考量事項 {#styling-considerations}
 
-根據響應柵格大小調整保持在響應容器內的部件的大小(連同它們各自的HTMLDOM元件)。 因此，在這些情況下，建議避免（或更新）固定寬度（包含）DOM元素的定義。
+保持在回應式容器中的元件會根據回應式格線大小調整大小(連同其各自的HTMLDOM元素)。 因此，在這些情況下，建議避免（或更新）固定寬度（包含） DOM元素的定義。
 
 例如：
 
@@ -250,9 +250,9 @@ ht-degree: 1%
 
    * `max-width=100px`
 
-#### 調整大小和自適應影像符合性 {#resizing-and-adaptive-image-compliance}
+#### 調整大小與自我調整影像法規遵循 {#resizing-and-adaptive-image-compliance}
 
-網格中任何調整元件大小都將觸發以下偵聽器：
+在格線內調整元件大小的任何動作，都會適當地觸發下列接聽程式：
 
 * `beforeedit`
 * `beforechildedit`
@@ -260,55 +260,55 @@ ht-degree: 1%
 
 * `afterchildedit`
 
-要正確調整和更新響應網格中包含的自適應影像的內容，需要添加 `afterEdit` 設定為 `REFRESH_PAGE` 監聽器 `EditConfig` 包含的每個元件的檔案。
+若要正確調整回應式格線中包含的最適化影像內容大小並加以更新，您需要新增 `afterEdit` 設定為 `REFRESH_PAGE` 監聽器進入 `EditConfig` 每個包含的元件的檔案。
 
 例如：
 
 `<cq:listeners jcr:primaryType="cq:EditListenersConfig" afteredit="REFRESH_PAGE" />`
 
-自適應影像機制通過控制針對窗口的當前大小的正確影像選擇的指令碼而可用。 在DOM就緒或接收專用事件後激活。 當前必須刷新頁面才能正確反映用戶操作的結果。
+可透過指令碼使用最適化影像機制，該指令碼控制選擇符合目前視窗大小的正確影像。 它會在DOM準備就緒或收到專用事件時啟用。 目前必須重新整理頁面，才能正確反映使用者動作的結果。
 
 >[!CAUTION]
 >
->自定義樣式表客戶端必須作為標題的一部分載入，以便它們能夠在作者和發佈上正常工作。
+>自訂樣式表clientlibs必須載入為標頭的一部分，才能在製作和發佈上正確運作。
 
-## 為頁啟用佈局容器元件 {#enable-the-layout-container-component-for-page}
+## 啟用頁面的版面配置容器元件 {#enable-the-layout-container-component-for-page}
 
-這些任務允許作者拖動 **佈局容器** 元件。
+這些工作可讓作者拖曳 **配置容器** 元件至頁面。
 
-### 啟用佈局容器元件以進行頁面編輯 {#enable-the-layout-container-component-for-page-editing}
+### 啟用版面容器元件以編輯頁面 {#enable-the-layout-container-component-for-page-editing}
 
-要允許作者向內容頁面添加更多響應的網格，您需要為頁面啟用佈局容器元件。 您可以使用以下任一方法執行此操作：
+若要允許作者進一步將回應式網格新增至內容頁面，您必須啟用頁面的「版面容器」元件。 您可以使用以下其中一種方式來達成此目的：
 
 * **作者環境**
 
-   使用 [設計模式](/help/sites-authoring/default-components-designmode.md) 來激活 **層容器** 元件。
+   使用 [設計模式](/help/sites-authoring/default-components-designmode.md) 以啟動 **圖層容器** 頁面的元件。
 
 * **元件定義**
 
-   使用 `allowedComponent` 或定義元件時的靜態包括。
+   使用 `allowedComponent` 或定義元件時的靜態包含。
 
-### 配置佈局容器的網格 {#configure-the-grid-of-the-layout-container}
+### 設定版面容器的格線 {#configure-the-grid-of-the-layout-container}
 
-您可以配置佈局容器的每個特定實例的可用列數：
+您可以設定版面配置容器的每個特定執行個體可用的欄數：
 
 1. **作者環境**
 
-   您可以配置佈局容器的每個特定實例的可用列數。
+   您可以設定版面配置容器的每個特定執行個體可用的欄數。
 
-   要執行此操作，請使用 [設計模式](/help/sites-authoring/default-components-designmode.md)，然後開啟所需容器的設計對話框。 在這裡，您可以具體說明有多少列可用於定位和調整大小。 預設值為12。
+   若要這麼做，請使用 [設計模式](/help/sites-authoring/default-components-designmode.md)，然後開啟所需容器的「設計」對話方塊。 您可以在此指定有多少欄可用於定位和調整大小。 預設值為12。
 
 1. **XML**
 
-   響應網格的定義在以下位置指定：
+   回應式格線的定義指定於：
 
    `etc/design/<*your-project-name*>/.content.xml`
 
-   可以定義以下參數：
+   可以定義下列引數：
 
-   * 可用列數：
+   * 可用的欄數：
 
       * `columns="{String}8"`
-   * 可添加到當前元件的元件：
+   * 可新增至目前元件的元件：
 
       * `components="[/libs/wcm/foundation/components/responsivegrid, ...`

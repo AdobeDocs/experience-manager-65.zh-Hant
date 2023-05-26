@@ -26,7 +26,7 @@ SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA�
 
 >[!NOTE]
 >
->編輯SPA器是需要基於框架的SPA客戶端呈現(例如，反應或Angular)的項目的推薦解決方案。
+>SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
 
 ## 簡介 {#introduction}
 
@@ -39,7 +39,7 @@ AEM 中的 SPA 支援帶入一個薄 JS 層，在頁面編輯器中載入內容�
 有關 AEM 中 SPA 的更多詳細資訊，請參閱以下文件：
 
 * [SPA 藍圖](/help/sites-developing/spa-blueprint.md)：說明 SPA 的技術要求
-* [入SPA門AEM](/help/sites-developing/spa-getting-started-react.md) 快速瀏覽一SPA下
+* [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 以快速瀏覽簡單的SPA
 
 ## 設計 {#design}
 
@@ -141,7 +141,7 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 
 這是重點放在編寫體驗的更詳細概述。
 
-![spa_content_authoring模型](assets/spa_content_authoringmodel.png)
+![spa_content_authoringmodel](assets/spa_content_authoringmodel.png)
 
 1. SPA 取得頁面模型。
 1. **2a** 頁面模型將編寫所需資料提供給編輯器。
@@ -159,7 +159,7 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 
 ## 要求和限制 {#requirements-limitations}
 
-若要使作者能夠使用頁面編輯器編輯 SPA 的內容，必須實作 SPA 應用程式以與 AEM SPA Editor SDK 互動。請參閱 [入SPA門AEM](/help/sites-developing/spa-getting-started-react.md) 你至少需要知道的檔案才能運行。
+若要使作者能夠使用頁面編輯器編輯 SPA 的內容，必須實作 SPA 應用程式以與 AEM SPA Editor SDK 互動。請參閱 [AEM中的SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 最少的檔案，讓您知道如何執行自己的工作。
 
 ### 支援的框架 {#supported-frameworks}
 
@@ -176,22 +176,22 @@ SPA Editor SDK 支援以下最低版本：
 
 ### 使用多個選擇器 {#multiple-selectors}
 
-可以定義其他自訂選擇器，並將其納入為 AEM SPA SDK 開發的 SPA 中。但是，此支援要求 `model` 選擇器是第一個選擇器，副檔名是 `.json` 如 [JSON導出器所需。](json-exporter-components.md#multiple-selectors)
+可以定義其他自訂選擇器，並將其納入為 AEM SPA SDK 開發的 SPA 中。然而，這項支援需要 `model` 選擇器是第一個選擇器，擴充功能是 `.json` 作為 [JSON匯出工具的要求。](json-exporter-components.md#multiple-selectors)
 
 ### 文字編輯器要求 {#text-editor-requirements}
 
 如果您想使用在 SPA 中建立之文字元件的就地編輯器，則需要額外的設定。
 
-1. 在包含文本 HTML 的容器包裝函式元素上設定一個屬性 (可以是任何屬性)。如果是WKND日誌樣本內容，則 `<div>` 元素和已使用的選擇器 `data-rte-editelement`。
-1. 設定配置 `editElementQuery` 對應文AEM本元件的 `cq:InplaceEditingConfig` 指向該選擇器，例如 `data-rte-editelement`。 這讓編輯器知道哪個 HTML 元素包裝 HTML 文字。
+1. 在包含文本 HTML 的容器包裝函式元素上設定一個屬性 (可以是任何屬性)。若是WKND日誌範例內容，則是 `<div>` 元素和已使用的選取器為 `data-rte-editelement`.
+1. 設定設定 `editElementQuery` 在對應AEM文字元件的 `cq:InplaceEditingConfig` 會指向該選取器，例如 `data-rte-editelement`. 這讓編輯器知道哪個 HTML 元素包裝 HTML 文字。
 
-有關如何執行此操作的示例，請參見 [WKND日誌示例內容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
+如需如何執行此作業的範例，請參閱 [WKND日誌範例內容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 
 如需關於 `editElementQuery` 屬性和 RTF 文字編輯器設定的其他資訊，請參閱[設定 RTF 文字編輯器](/help/sites-administering/rich-text-editor.md)
 
 ### 限制 {#limitations}
 
-Editor AEM SDK隨AEM6.4 Service Pack 2而推出。 它得到Adobe的充分支援，並繼續得到加強和擴大。 SPA 編輯器尚未支援以下 AEM 功能：
+AEM SPA Editor SDK隨AEM 6.4 Service Pack 2推出。 Adobe完全支援此功能，且功能會持續增強和擴充。 SPA 編輯器尚未支援以下 AEM 功能：
 
 * 目標模式
 * ContextHub

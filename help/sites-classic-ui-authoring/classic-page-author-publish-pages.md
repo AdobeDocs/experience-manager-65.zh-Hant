@@ -1,6 +1,6 @@
 ---
 title: 發佈頁面
-description: 在作者環境中建立和審閱您的內容後，請在您的公共網站上提供。
+description: 在您於作者環境中建立並檢閱您的內容後，請將其開放在您的公開網站上使用。
 uuid: ab5ffc59-1c41-46fe-904e-9fc67d7ead04
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,155 +18,155 @@ ht-degree: 0%
 
 # 發佈頁面{#publishing-pages}
 
-在作者環境中建立和查看內容後，請將其發佈到您的公共網站（發佈環境）。
+在您於作者環境中建立並檢閱您的內容後，請將其放在您的公共網站（您的發佈環境）上。
 
-這稱為發佈頁面。 當要從發佈環境中刪除頁面時，稱為取消發佈。 在發佈和取消發佈頁面時，該頁面在作者環境中仍然可用，以便進行進一步更改，直到您將其刪除。
+這稱為發佈頁面。 當您想要從發佈環境中移除頁面時，會稱為取消發佈。 發佈和取消發佈頁面時，作者環境仍會提供頁面以供進一步變更，直到您刪除為止。
 
-您還可以立即發佈/取消發佈頁面，或在將來的預定義日期/時間發佈/取消發佈頁面。
+您也可以立即發佈/取消發佈頁面，或在預先定義的未來日期/時間發佈/取消發佈頁面。
 
 >[!NOTE]
 >
->某些與發佈相關的術語可能會被混淆：
+>某些與發佈相關的辭彙可能會混淆：
 >
 >* **發佈/取消發佈**
-   >  這些是使您的內容在發佈環境中（或不在發佈環境中）公開可用的操作的主要條款。
+   >  這些是讓您的內容在發佈環境中公開使用（或不公開使用）之動作的主要詞語。
 >
->* **激活/停用**
-   >  這些術語與發佈/取消發佈是同義的。
+>* **啟用/停用**
+   >  這些辭彙與發佈/取消發佈同義。
 >
->* **複製/複製**
-   >  這些技術術語描述資料從一個環境移動到另一個環境（例如發佈或反向複製用戶注釋時）的移動。
+>* **復寫/複製**
+   >  這些是技術術語，說明資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境，例如發佈或反向複製使用者註解時。
 >
 
 
 >[!NOTE]
 >
->如果您沒有發佈特定頁面所需的權限：
+>如果您沒有發佈特定頁面所需的許可權：
 >
->* 將觸發一個工作流以通知相應人員您的發佈請求。
->* 將顯示一條消息（在短時間內）以通知您。
+>* 系統會觸發工作流程，將您要發佈的請求通知適當人員。
+>* 將會顯示訊息（短時間內）以通知您此問題。
 >
 
 
 ## 發佈頁面 {#publishing-a-page}
 
-激活頁面有兩種方法：
+啟用頁面的方法有兩種：
 
-* [從網站控制台](#activating-a-page-from-the-websites-console)
-* [來自網頁本身的副手](#activating-a-page-from-sidekick)
+* [從網站主控台](#activating-a-page-from-the-websites-console)
+* [從頁面本身的sidekick](#activating-a-page-from-sidekick)
 
 >[!NOTE]
 >
->您還可以使用 [激活樹](#howtoactivateacompletesectiontreeofyourwebsite) 在工具控制台上。
+>您也可以使用啟動多個頁面的子樹狀結構 [啟動樹狀結構](#howtoactivateacompletesectiontreeofyourwebsite) 工具主控台上的。
 
-### 從網站控制台激活頁面 {#activating-a-page-from-the-websites-console}
+### 從網站主控台啟動頁面 {#activating-a-page-from-the-websites-console}
 
-您可以在網站控制台中激活頁面。 開啟頁面並修改其內容後，您將返回到「網站」控制台：
+您可以在網站主控台中啟動頁面。 開啟頁面並修改其內容後，您會返回「網站」主控台：
 
-1. 在網站控制台中，選擇要激活的頁面。
-1. 選擇 **激活**，或選定頁項上的下拉菜單。
+1. 在「網站」主控台中，選取您要啟動的頁面。
+1. 選取 **啟動**，可從頂端功能表或所選頁面專案上的下拉式功能表取得。
 
-   要激活頁面及其所有子頁面的內容，請使用 [**工具** 控制台](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#howtoactivateacompletesectiontreeofyourwebsite)。
+   若要啟用頁面及其所有子頁面的內容，請使用 [**工具** 主控台](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#howtoactivateacompletesectiontreeofyourwebsite).
 
    ![screen_shot_2012-02-08at13817pm](assets/screen_shot_2012-02-08at13817pm.png)
 
    >[!NOTE]
    >
-   >如有必要，AEM請求您激活或重新激活連結到該頁面的任何資產。 您可以選中或清除複選框以激活這些資產。
+   >必要時，AEM會要求您啟動或重新啟動連結至頁面的任何資產。 您可以選取或清除核取方塊以啟動這些資產。
 
-1. 如有必要，AEM請求您激活或重新激活連結到該頁面的任何資產。 您可以選中或清除複選框以激活這些資產。
+1. 必要時，AEM會要求您啟動或重新啟動連結至頁面的任何資產。 您可以選取或清除核取方塊以啟動這些資產。
 
    ![chlimage_1-100](assets/chlimage_1-100.png)
 
-1. AEMWCM激活所選內容。 已發佈的頁面或頁面顯示在 [網站控制台](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) （標籤為綠色），其中包含有關激活內容的人以及激活日期和時間的資訊。
+1. AEM WCM會啟動選取的內容。 已發佈的一或多個頁面會顯示在 [網站主控台](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) （標籤為綠色），內含啟動內容者以及啟動日期和時間的資訊。
 
    ![screen_shot_2012-02-08at14335pm](assets/screen_shot_2012-02-08at14335pm.png)
 
-### 從Sidekick激活頁面 {#activating-a-page-from-sidekick}
+### 從Sidekick啟動頁面 {#activating-a-page-from-sidekick}
 
-也可以在開啟頁面進行編輯時將其激活。
+您也可以在開啟頁面進行編輯時將其啟動。
 
-開啟頁面並修改其內容後，您將：
+開啟頁面並修改其內容後，您可以：
 
-1. 選擇 **頁面** 按鈕。
-1. 按一下 **激活頁面**。
-窗口右上角顯示一條消息，確認頁面已激活。
+1. 選取 **頁面** tab鍵進入Sidekick。
+1. 按一下 **啟動頁面**.
+視窗右上方會顯示訊息，確認頁面已啟動。
 
 ## 取消發佈頁面 {#unpublishing-a-page}
 
-要從發佈環境中刪除頁面，請停用內容。
+若要從發佈環境移除頁面，請停用內容。
 
-要停用頁面：
+若要停用頁面：
 
-1. 在「網站」控制台中，選擇要停用的頁面。
-1. 選擇 **停用**，或選定頁項上的下拉菜單。 系統要求您確認刪除。
+1. 在「網站」主控台中，選取您要停用的頁面。
+1. 選取 **停用**，可從頂端功能表或所選頁面專案上的下拉式功能表取得。 系統會要求您確認刪除。
 
    ![screen_shot_2012-02-08at14859pm](assets/screen_shot_2012-02-08at14859pm.png)
 
-1. 刷新 [網站控制台](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) 內容以紅色標籤，表示不再發佈。
+1. 重新整理 [網站主控台](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) 且內容會以紅色標示，表示其已不再發佈。
 
    ![screen_shot_2012-02-08at15018pm](assets/screen_shot_2012-02-08at15018pm.png)
 
-## 稍後激活/停用 {#activate-deactivate-later}
+## 稍後啟用/停用 {#activate-deactivate-later}
 
 ### 稍後啟動 {#activate-later}
 
-要安排以後的激活時間，請執行以下操作：
+若要排程您的啟動作業以供稍後使用：
 
-1. 在網站控制台中，轉到 **激活** ，然後選擇 **稍後激活**。
-1. 在開啟的對話框中，提供激活的日期和時間，然後按一下 **確定**。 這將建立在指定時間激活的頁面版本。
+1. 在網站主控台中，前往 **啟動** 功能表，然後選取 **稍後啟動**.
+1. 在開啟的對話方塊中，您提供啟動日期和時間，然後按一下 **確定**. 這會建立會在指定時間啟動的頁面版本。
 
    ![screen_shot_2012-02-08at14751pm](assets/screen_shot_2012-02-08at14751pm.png)
 
-稍後激活將啟動工作流以在指定時間激活此版本的頁面。 相反，稍後停用將啟動工作流以在特定時間停用此版本的頁面。
+稍後啟用會啟動工作流程，以在指定時間啟用此版本的頁面。 反之，稍後停用會啟動工作流程，以在特定時間停用此版本頁面。
 
-如果要取消此激活/停用，請轉到 [工作流控制台](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd) 以終止相應的工作流。
+若要取消此啟動/停用，請前往 [工作流程主控台](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd) 以終止對應的工作流程。
 
 ### 稍後停用 {#deactivate-later}
 
-要安排稍後停用：
+若要排程稍後再停用：
 
-1. 在網站控制台中，轉到 **停用** ，然後選擇 **稍後停用**。
+1. 在網站主控台中，前往 **停用** 功能表，然後選取 **稍後停用**.
 
-1. 在開啟的對話框中，您提供停用的日期和時間，然後按一下 **確定**。
+1. 在開啟的對話方塊中，您提供停用的日期和時間，然後按一下 **確定**.
 
    ![screen_shot_2012-02-08at15129pm](assets/screen_shot_2012-02-08at15129pm.png)
 
-**延遲停用** r啟動工作流以在特定時間停用此版本的頁面。
+**延遲停用** r會啟動工作流程，以在特定時間停用此版本的頁面。
 
-如果要取消此停用，請轉到 [工作流控制台](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd) 以終止相應的工作流。
+如果您要取消此停用，請前往 [工作流程主控台](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd) 以終止對應的工作流程。
 
-## 計畫激活/停用（開/關時間） {#scheduled-activation-deactivation-on-off-time}
+## 已排程的啟用/停用（開啟/關閉時間） {#scheduled-activation-deactivation-on-off-time}
 
-您可以使用 **準時** 和 **關機時間** 可以在 [頁面屬性](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)。
+您可以使用排程頁面發佈/取消發佈的時間 **準時** 和 **關閉時間** 可定義於 [頁面屬性](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
 
-### 確定頁面發佈狀態 {#determining-page-publication-status-classic-ui}
+### 判斷頁面發佈狀態 {#determining-page-publication-status-classic-ui}
 
-可從 [網站控制台](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)。 顏色指示發佈狀態。
+可以從以下位置檢視狀態： [網站主控台](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console). 顏色指示出版狀態。
 
-## 激活網站的完整部分（樹） {#activating-a-complete-section-tree-of-your-website}
+## 啟用網站的完整區段（樹狀結構） {#activating-a-complete-section-tree-of-your-website}
 
-從 **網站** 頁籤。 當您輸入或更新了大量內容頁面（所有內容都駐留在同一根頁面下）時，在一個操作中激活整個樹會更容易。 還可以執行「乾運行」來模擬激活並突出顯示要激活的頁面。
+從 **網站** 標籤您可以啟動個別頁面。 當您輸入或更新了大量內容頁面時 — 所有內容頁面都位於同一個根頁面下 — 可以更輕鬆地在一次動作中啟用整個樹狀結構。 您也可以執行「試用」來模擬啟用，並反白要啟用的頁面。
 
-1. 開啟 **工具** 通過從 **歡迎** ，然後按兩下 **複製** 開啟控制台( `https://localhost:4502/etc/replication.html`)。
+1. 開啟 **工具** 從控制檯中選取它 **歡迎** 頁面，然後按兩下 **復寫** 以開啟主控台( `https://localhost:4502/etc/replication.html`)。
 
    ![screen_shot_2012-02-08at125033pm](assets/screen_shot_2012-02-08at125033pm.png)
 
-1. 在 **複製** 控制台，按一下 **激活樹**。
+1. 於 **復寫** 主控台，按一下 **啟動樹狀結構**.
 
-   以下窗口( `https://localhost:4502/etc/replication/treeactivation.html`)。
+   下列視窗( `https://localhost:4502/etc/replication/treeactivation.html`)將會顯示。
 
    ![screen_shot_2012-02-08at125033pm-1](assets/screen_shot_2012-02-08at125033pm-1.png)
 
-1. 輸入 **起始路徑**。 這指定要激活（發佈）的節的根的路徑。 此頁和下面的所有頁均被視為激活（如果選擇了「乾式運行」，則在模擬中使用）。
-1. 根據需要激活選擇條件：
+1. 輸入 **開始路徑**. 這會指定您要啟動（發佈）之區段的根路徑。 系統會將此頁面及其下方的所有頁面視為啟動（或如果選取「試用」，則用於模擬）。
+1. 視需要啟動選取條件：
 
-   * **僅修改**:僅激活已修改的頁面。
-   * **僅激活**:只激活已（已）激活的頁。 充當一種重新激活的形式。
-   * **忽略已停用**:忽略已停用的所有頁面。
+   * **僅限已修改的專案**：僅啟用已修改的頁面。
+   * **僅限已啟動**：僅啟動（已）已啟動的頁面。 作為重新啟用的一種形式。
+   * **忽略已停用的專案**：忽略任何已停用的頁面。
 
-1. 選擇要執行的操作：
+1. 選取您要執行的動作：
 
-   1. 選擇 **乾跑** 如果要檢查 *會* 按鈕。 這只是一個模擬，不會激活任何頁面。
+   1. 選取 **練習** 如果您要檢查哪些頁面 *會* 已啟用。 這只是模擬，不會啟用任何頁面。
 
-   1. 選擇 **激活** 的子菜單。
+   1. 選取 **啟動** 如果您想要啟動頁面。

@@ -1,7 +1,7 @@
 ---
-title: DSRP — 關係資料庫儲存資源提供程式
+title: DSRP — 關聯式資料庫儲存資源提供者
 seo-title: DSRP - Relational Database Storage Resource Provider
-description: 設定AEM Communities以將關係資料庫用作其公用儲存
+description: 設定AEM Communities以使用關聯式資料庫作為其一般存放區
 seo-description: Set up AEM Communities to use a relational database as its common store
 uuid: f364e7da-ee54-4ab2-a630-7ec9239005ac
 contentOwner: Janice Kendall
@@ -18,130 +18,130 @@ ht-degree: 2%
 
 ---
 
-# DSRP — 關係資料庫儲存資源提供程式 {#dsrp-relational-database-storage-resource-provider}
+# DSRP — 關聯式資料庫儲存資源提供者 {#dsrp-relational-database-storage-resource-provider}
 
 ## 關於DSRP {#about-dsrp}
 
-當AEM Communities配置為使用關係資料庫作為其公共儲存時，用戶生成的內容(UGC)可從所有作者和發佈實例訪問，而無需同步或複製。
+當AEM Communities設定為使用關聯式資料庫作為其通用存放區時，使用者產生的內容(UGC)可從所有製作和發佈執行個體存取，而不需要同步或復寫。
 
-另請參閱 [SRP選項的特點](working-with-srp.md#characteristics-of-srp-options) 和 [推薦的拓撲](topologies.md)。
+另請參閱 [SRP選項的特性](working-with-srp.md#characteristics-of-srp-options) 和 [建議的拓撲](topologies.md).
 
 ## 要求 {#requirements}
 
-* [MySQL](#mysql-configuration)，關係資料庫。
-* [阿帕奇索爾](#solr-configuration)，搜索平台。
+* [MySQL](#mysql-configuration)，關聯式資料庫。
+* [Apache Solr](#solr-configuration)，搜尋平台。
 
 >[!NOTE]
 >
->預設儲存配置現在儲存在conf path(`/conf/global/settings/community/srpc/defaultconfiguration`)而不是等路徑(`/etc/socialconfig/srpc/defaultconfiguration`)。 建議您按照 [遷移步驟](#zerodt-migration-steps) 使defaultsrp按預期工作。
+>預設儲存設定現在儲存在conf path(`/conf/global/settings/community/srpc/defaultconfiguration`)而非etc路徑(`/etc/socialconfig/srpc/defaultconfiguration`)。 建議您遵循 [移轉步驟](#zerodt-migration-steps) 讓defaultsrp如預期運作。
 
-## 關係資料庫配置 {#relational-database-configuration}
+## 關聯式資料庫組態 {#relational-database-configuration}
 
-### MySQL配置 {#mysql-configuration}
+### MySQL設定 {#mysql-configuration}
 
-MySQL安裝可以通過使用不同的資料庫（架構）名稱和不同的連接（伺服器：埠）在同一連接池內在啟用功能和公共儲存(DSRP)之間共用。
+MySQL安裝可以使用不同的資料庫（綱要）名稱以及不同的連線（伺服器：連線埠），在啟用功能與相同連線集區內的通用存放區(DSRP)之間共用。
 
-有關安裝和配置的詳細資訊，請參見 [用於DSRP的MySQL配置](dsrp-mysql.md)。
+如需安裝和設定詳細資訊，請參閱 [DSRP的MySQL組態](dsrp-mysql.md).
 
 ### Solr 設定 {#solr-configuration}
 
-通過使用不同集合，節點儲存(Oak)和公共儲存(SRP)之間可以共用Solr安裝。
+可以使用不同的集合，在節點存放區(Oak)與共用存放區(SRP)之間共用Solr安裝。
 
-如果Oak和SRP集合都被集中使用，則可能出於效能原因安裝第二個Solr。
+如果同時大量使用Oak和SRP集合，則可能會基於效能原因安裝第二個Solr。
 
-對於生產環境，SolrCloud模式比獨立模式（單個本地Solr設定）提供了更高的效能。
+對於生產環境，SolrCloud模式比獨立模式（單一本機Solr設定）提供更優異的效能。
 
-有關安裝和配置的詳細資訊，請參見 [SRP的Solr配置](solr.md)。
+如需安裝和設定詳細資訊，請參閱 [SRP的Solr設定](solr.md).
 
-### 選擇DSRP {#select-dsrp}
+### 選取DSRP {#select-dsrp}
 
-的 [儲存配置控制台](srp-config.md) 允許選擇預設儲存配置，該配置可標識要使用的SRP實現。
+此 [儲存設定主控台](srp-config.md) 允許選取預設儲存設定，以識別要使用的SRP實作。
 
-作者：訪問儲存配置控制台
+在作者上，存取「儲存設定」主控台
 
-* 使用管理員權限登錄
-* 從 **主菜單**
+* 以管理員許可權登入
+* 從 **主功能表**
 
-   * 選擇 **[!UICONTROL 工具]** （從左窗格）
-   * 選擇 **[!UICONTROL 社區]**
-   * 選擇 **[!UICONTROL 儲存配置]**
+   * 選取 **[!UICONTROL 工具]** （從左側窗格）
+   * 選取 **[!UICONTROL Communities]**
+   * 選取 **[!UICONTROL 儲存設定]**
 
-      * 例如，結果位置是： [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)
+      * 例如，產生的位置為： [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)
       >[!NOTE]
       >
-      >預設儲存配置現在儲存在conf path(`/conf/global/settings/community/srpc/defaultconfiguration`)而不是等路徑(`/etc/socialconfig/srpc/defaultconfiguration`)。 建議您按照 [遷移步驟](#zerodt-migration-steps) 使defaultsrp按預期工作。
+      >預設儲存設定現在儲存在conf path(`/conf/global/settings/community/srpc/defaultconfiguration`)而非etc路徑(`/etc/socialconfig/srpc/defaultconfiguration`)。 建議您遵循 [移轉步驟](#zerodt-migration-steps) 讓defaultsrp如預期運作。
    ![dsrp-config](assets/dsrp-config.png)
 
-* 選擇 **[!UICONTROL 資料庫儲存資源提供程式(DSRP)]**
+* 選取 **[!UICONTROL 資料庫儲存體資源提供者(DSRP)]**
 * **資料庫設定**
 
    * **[!UICONTROL JDBC 資料來源名稱]**
 
-      給MySQL連接的名稱必須與在中輸入的名稱相同 [JDBC OSGi配置](dsrp-mysql.md#configurejdbcconnections)
+      指定給MySQL連線的名稱必須與輸入名稱相同 [JDBC OSGi設定](dsrp-mysql.md#configurejdbcconnections)
 
-      *預設*:社區
+      *預設*：社群
 
    * **[!UICONTROL 資料庫名稱]**
 
-      為中的架構指定的名稱 [init_schema_sql](dsrp-mysql.md#obtain-the-sql-script) 指令碼
+      為中的結構描述提供的名稱 [init_schema.sql](dsrp-mysql.md#obtain-the-sql-script) 指令碼
 
-      *預設*:社區
+      *預設*：社群
 
-* **Solr配置**
+* **SolrConfiguration**
 
    * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper Host**
 
-      如果使用內部ZooKeeper運行Solr，請將此值留空。 否則，在 [SolrCloud模式](solr.md#solrcloud-mode) 使用外部ZooKeeper，將此值設定為ZooKeeper的URI，如 *my.server.com:80*
+      如果使用內部ZooKeeper執行Solr，請將此值留空。 否則，在中執行時 [SolrCloud模式](solr.md#solrcloud-mode) 使用外部ZooKeeper，將此值設定為ZooKeeper的URI，例如 *my.server.com:80*
 
-      *預設*: *&lt;blank>*
+      *預設*： *&lt;blank>*
 
    * **[!UICONTROL Solr URL]**
 
-      *預設*:https://127.0.0.1:8983/solr/
+      *預設*： https://127.0.0.1:8983/solr/
 
    * **[!UICONTROL Solr 集合]**
 
-      *預設*:集合1
+      *預設*：collection1
 
-* 選擇 **[!UICONTROL 提交]**。
+* 選取 **[!UICONTROL 提交]**.
 
-### 預設SRP的零停機時間遷移步驟 {#zerodt-migration-steps}
+### Defaultsrp的零停機移轉步驟 {#zerodt-migration-steps}
 
-按照以下步驟確保預設SRP頁 [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) 按預期工作：
+請依照下列步驟，確認defaultsrp頁面 [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) 如預期運作：
 
-1. 更名位於 `/etc/socialconfig` 至 `/etc/socialconfig_old`，以便系統配置返回jsrp（預設）。
-1. 轉到defaultsrp頁 [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)，其中配置了jsrp。 按一下 **[!UICONTROL 提交]** 按鈕，以在 `/conf/global/settings/community/srpc`。
-1. 刪除建立的預設配置 `/conf/global/settings/community/srpc/defaultconfiguration`。
-1. 複製舊配置 `/etc/socialconfig_old/srpc/defaultconfiguration` 代替已刪除的節點(`/conf/global/settings/community/srpc/defaultconfiguration`)。
-1. 刪除舊等節點 `/etc/socialconfig_old`。
+1. 將路徑重新命名為 `/etc/socialconfig` 至 `/etc/socialconfig_old`，以便系統設定回覆為jsrp （預設）。
+1. 移至defaultsrp頁面 [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)，其中已設定jsrp。 按一下 **[!UICONTROL 提交]** 按鈕，以便在以下位置建立新的預設設定節點 `/conf/global/settings/community/srpc`.
+1. 刪除建立的預設設定 `/conf/global/settings/community/srpc/defaultconfiguration`.
+1. 複製舊設定 `/etc/socialconfig_old/srpc/defaultconfiguration` 取代已刪除的節點(`/conf/global/settings/community/srpc/defaultconfiguration`)。
+1. 刪除舊的etc節點 `/etc/socialconfig_old`.
 
-## 發佈配置 {#publishing-the-configuration}
+## 發佈設定 {#publishing-the-configuration}
 
-DSRP必須標識為所有作者和發佈實例上的公用儲存。
+DSRP必須識別為所有製作和發佈執行個體上的通用存放區。
 
-要在發佈環境中使相同的配置可用：
+若要讓發佈環境中可使用相同的設定：
 
-* 作者：
+* 在作者上：
 
-   * 從主菜單導航到 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 複製]**
-   * 按兩下 **[!UICONTROL 激活樹]**
+   * 從主要功能表瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]**
+   * 按兩下 **[!UICONTROL 啟動樹狀結構]**
    * **開始路徑**:
 
-      * 瀏覽到 `/etc/socialconfig/srpc/`
-   * 確保 `Only Modified` 的子菜單。
-   * 選擇 **[!UICONTROL 激活]**。
+      * 瀏覽至 `/etc/socialconfig/srpc/`
+   * 確定 `Only Modified` 未選取。
+   * 選取 **[!UICONTROL 啟動]**.
 
 
-## 管理用戶資料 {#managing-user-data}
+## 管理使用者資料 {#managing-user-data}
 
-有關 *用戶*。 *用戶配置檔案* 和 *用戶組*，通常輸入到發佈環境中，訪問：
+有關以下專案的資訊： *使用者*， *使用者設定檔* 和 *使用者群組*，通常輸入發佈環境中，請造訪：
 
-* [用戶同步](sync.md)
-* [管理用戶和用戶組](users.md)
+* [使用者同步](sync.md)
+* [管理使用者和使用者群組](users.md)
 
-## 為DSRP重新編製索引 {#reindexing-solr-for-dsrp}
+## 為DSRP重新索引Solr {#reindexing-solr-for-dsrp}
 
-要重新索引DSRP Solr，請按照文檔 [重新索引MSRP](msrp.md#msrp-reindex-tool)但是，在為DSRP重新編製索引時，請改用此URL: **/services/social/datastore/rdb/reindex**
+若要重新索引DSRP Solr，請遵循以下檔案： [重新索引MSRP](msrp.md#msrp-reindex-tool)，但重新索引DSRP時，請改用此URL： **/services/social/datastore/rdb/reindex**
 
 例如，重新索引DSRP的curl命令如下所示：
 

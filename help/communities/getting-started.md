@@ -1,7 +1,7 @@
 ---
-title: AEM Communities入門
+title: AEM Communities快速入門
 seo-title: Getting Started with AEM Communities
-description: 入門教程：AEM Communities
+description: AEM Communities快速入門教學課程
 seo-description: A tutorial on getting started with AEM Communities
 uuid: b7adf7c0-5563-4e44-bb53-04a566f271d5
 contentOwner: Janice Kendall
@@ -18,16 +18,16 @@ ht-degree: 2%
 
 ---
 
-# AEM Communities入門 {#getting-started-with-aem-communities}
+# AEM Communities快速入門 {#getting-started-with-aem-communities}
 
-AEM Communities允許公司從網站模板庫中建立專用品牌社區體驗。 論壇、組、部落格、檔案共用、日曆、活動源和擴展用戶配置檔案可整合到您的網站中，以促進各個目標、客戶和公司之間的交互。
+AEM Communities可讓公司從網站範本資料庫中建立專屬的品牌社群體驗。 論壇、群組、部落格、檔案共用、行事曆、活動摘要和擴充的使用者設定檔可整合至您的網站，以促進預測者、客戶和公司之間的互動。
 
-下面是快速設定 [參與社區](/help/communities/overview.md#engagement-community) 為示範或開發目的。
+以下是有關快速設定 [參與社群](/help/communities/overview.md#engagement-community) 用於示範或開發目的。
 
 * [初始設定](/help/communities/setup.md)
 
-* [新建社區網站](/help/communities/create-site.md)
+* [撰寫新社群網站](/help/communities/create-site.md)
 
-* [體驗已發佈站點](/help/communities/published-site.md)
+* [體驗已發佈的網站](/help/communities/published-site.md)
 
-* [創作嵌套組](/help/communities/nested-groups.md)
+* [製作巢狀群組](/help/communities/nested-groups.md)

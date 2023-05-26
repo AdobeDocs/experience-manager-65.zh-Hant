@@ -1,7 +1,7 @@
 ---
-title: 測試和跟蹤工具
+title: 測試和追蹤工具
 seo-title: Testing and Tracking Tools
-description: 提AEM供了元件UI測試框架和元件測試和調試機制
+description: AEM提供測試元件UI的架構，以及測試和偵錯元件的機制
 seo-description: AEM provides a framework for testing component UI and a mechanism for testing and debugging components
 uuid: 12abedb5-4ee7-4389-9340-e628adbbc053
 contentOwner: Guillaume Carlino
@@ -18,50 +18,50 @@ ht-degree: 0%
 
 ---
 
-# 測試和跟蹤工具{#testing-and-tracking-tools}
+# 測試和追蹤工具{#testing-and-tracking-tools}
 
 ## 測試 {#testing}
 
 AEM提供：
 
-* [元件UI測試框架](/help/sites-developing/hobbes.md)。
-* [用於測試和調試元件的機制](/help/sites-developing/developer-mode.md)。
+* [測試元件UI的架構](/help/sites-developing/hobbes.md).
+* [用於測試和偵錯元件的機制](/help/sites-developing/developer-mode.md).
 
-以下是兩個開源測試工具：
+以下是兩種開放原始碼測試工具：
 
-**硒**
+**Selenium**
 
-Selenium用於在瀏覽器中進行功能測試，每個活動有一個用戶。 它將測試步驟（按一下）記錄為HTML表或Java類。
+Selenium可用於瀏覽器中的功能測試，每個活動有一個使用者。 測試步驟（點按）會記錄為HTML表格或Java類別。
 
-有關詳細資訊，請參閱 [https://www.seleniumhq.org/](https://www.seleniumhq.org/)。
+如需詳細資訊，請參閱 [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
 
-**JMeter**
+**Jmeter**
 
-JMeter用於跟蹤請求，可用於功能、效能和壓力test。
+JMeter可用來追蹤要求，也可用於功能、效能和壓力測試。
 
-有關詳細資訊，請參閱 [https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter)。
+如需詳細資訊，請參閱 [https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter).
 
-還有許多專有工具用於自動test和管理test計畫。
+還有許多自動化測試和管理測試計畫的專有工具。
 
-### 跟蹤 {#tracking}
+### 追蹤 {#tracking}
 
-以下工具可輕鬆使用。 但是，在所有情況下，一個關鍵問題是項目團隊的所有成員 — 合作夥伴和客戶 — 都能獲得資料。
+您可輕鬆使用下列工具。 不過，所有案例中的關鍵問題是專案團隊的所有成員（合作夥伴和客戶）都能取得資料。
 
-**布吉利亞**
+**Bugzilla**
 
-可根據您自己的要求配置的錯誤跟蹤系統。
+可依您自己的需求設定的錯誤追蹤系統。
 
 **試算表**
 
-雖然不是專門的錯誤跟蹤工具，但電子錶格通常 *管理*&#x200B;用於此目的，因為他們易於理解，而且大多數用戶都有其功能的經驗。
+雖然不是專門用於追蹤錯誤的工具，但試算表通常 *mis*&#x200B;用於此目的，因為它們容易理解，且大多數使用者對其功能有體驗。
 
-如果這些用於跟蹤，則：
+如果這些是用於追蹤，則：
 
-* 應該保持簡單。
-* 個別電子錶格的數量應保持在最少。
+* 應該儘量保持簡單。
+* 個別試算表的數量應維持在最低限度。
 * 必須定期更新。
-* 只應維護一個主副本，每個人都應知道主副本的位置。
-* 所有項目成員都可以訪問。
-* 如果安全性是問題（通常發生在大型公司），並且不可能進行通用訪問，則只要每個人都知道這些是副本，並且無法更新，就可能分發副本。
+* 只應維護一個主版副本，而且每個人都應知道主版副本的位置。
+* 所有專案成員都應該可存取這些檔案。
+* 如果安全性是個問題（通常發生在大公司）且無法共同存取，只要每個人都知道這些是復本且無法更新，就可以發佈復本。
 
-同樣，有許多專用工具用於跟蹤錯誤和功能要求。
+同樣地，也有許多追蹤錯誤和功能要求的專有工具。

@@ -1,7 +1,7 @@
 ---
-title: 外部化URL
+title: 將URL外部化
 seo-title: Externalizing URLs
-description: Externalizer是OSGI服務，它允許您以寫程式方式將資源路徑轉換為外部和絕對URL
+description: Externalizer是一種OSGI服務，可讓您以程式設計方式將資源路徑轉換為外部和絕對URL
 seo-description: The Externalizer is an OSGI service that allows you to programmatically transform a resource path into an external and absolute URL
 uuid: 65bcc352-fc8c-4aa0-82fb-1321a035602d
 contentOwner: Guillaume Carlino
@@ -18,117 +18,117 @@ ht-degree: 0%
 
 ---
 
-# 外部化URL{#externalizing-urls}
+# 將URL外部化{#externalizing-urls}
 
-在AEM中 **外部化器** 是一種OSGI服務，它允許您以寫程式方式轉換資源路徑(例如， `/path/to/my/page`)到外部和絕對URL(例如， `https://www.mycompany.com/path/to/my/page`)，方法是使用預配置的DNS預先固定路徑。
+在AEM中， **Externalizer** 是OSGI服務，可讓您以程式設計方式轉換資源路徑(例如 `/path/to/my/page`)轉換成外部和絕對URL (例如， `https://www.mycompany.com/path/to/my/page`)，將路徑加上預先設定的DNS當作前置詞。
 
-由於實例在Web層後面運行時無法知道其外部可見URL，並且由於有時必須在請求範圍之外建立連結，因此此服務提供了一個中心位置來配置這些外部URL並生成它們。
+由於執行個體在網頁層後面執行時無法知道其外部可見的URL，而且由於有時必須在請求範圍之外建立連結，此服務會提供一個中央位置，以設定這些外部URL並建置它們。
 
-本頁說明如何配置 **外部化器** 服務和使用方法。 有關詳細資訊，請參閱 [賈瓦多克](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html)。
+本頁面說明如何設定 **Externalizer** 服務及其使用方式。 如需詳細資訊，請參閱 [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).
 
-## 配置Externalizer服務 {#configuring-the-externalizer-service}
+## 設定Externalizer服務 {#configuring-the-externalizer-service}
 
-的 **外部化器** 服務允許您集中定義多個域，這些域可用於以寫程式方式為資源路徑添加前置詞。 每個域都由用於以寫程式方式引用域的唯一名稱標識。
+此 **Externalizer** 服務可讓您集中定義多個網域，以便以程式設計方式為資源路徑加上前置詞。 每個網域都由唯一名稱來識別，該名稱以程式設計方式參考該網域。
 
-定義域映射 **外部化器** 服務：
+若要定義領域對應，請執行下列動作： **Externalizer** 服務：
 
-1. 通過導航到配置管理器 **工具**，則 **Web控制台**，或輸入：
+1. 透過以下方式瀏覽至設定管理員： **工具**，則 **網頁主控台**，或輸入：
 
    `https://<host>:<port>/system/console/configMgr`
 
-1. 按一下 **第CQ天連結外部化程式** 的子菜單。
+1. 按一下 **Day CQ連結外部化器** 以開啟組態對話方塊。
 
    >[!NOTE]
    >
-   >到配置的直接連結是 `https://<host>:<port>/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl`
+   >設定的直接連結為 `https://<host>:<port>/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl`
 
    ![aem-externalizer-01](assets/aem-externalizer-01.png)
 
-1. 定義 **域** 映射：映射由唯一名稱組成，可在代碼中用於引用域、空間和域：
+1. 定義 **網域** 對應：對應包含唯一名稱，可用於程式碼中參照網域、空格和網域：
 
    `<unique-name> [scheme://]server[:port][/contextpath]`
 
    其中：
 
-   * **方案** 通常是http或https，但也可以是ftp等。
+   * **配置** 通常為http或https，但也可以是ftp等。
 
-      * 如果需要，使用https強制https連結
-      * 如果客戶端代碼在請求將URL外部化時未覆蓋方案，則將使用它。
-   * **伺服器** 是主機名（可以是域名或ip地址）。
-   * **埠** （可選）是埠號。
-   * **上下文路徑** （可選）僅當作為Webapp安裝AEM在其他上下文路徑下時才設定。
+      * 必要時使用https強制執行https連結
+      * 若使用者端代碼在要求外部化URL時未覆寫配置，則會使用它。
+   * **伺服器** 是主機名稱（可以是網域名稱或ip位址）。
+   * **連線埠** （選用）是連線埠號碼。
+   * **contextpath** （選用）只有當AEM安裝為Webapp且位於不同的內容路徑下時，才會設定。
 
    例如：`production https://my.production.instance`
 
-   以下映射名稱是預定義的，必須始終根據它們AEM進行設定：
+   下列對應名稱是預先定義的，必須一律設定為AEM依賴這些名稱：
 
-   * `local`  — 本地實例
-   * `author`  — 創作系統DNS
+   * `local`  — 本機執行個體
+   * `author`  — 編寫系統DNS
    * `publish`  — 面向公眾的網站DNS
 
    >[!NOTE]
    >
-   >自定義配置允許您添加新類別，如 `production`。 `staging` 甚至外部非系AEM統，例如 `my-internal-webservice`。 避免在項目代碼庫的不同位置對此類URL進行硬編碼是有用的。
+   >自訂設定可讓您新增類別，例如 `production`， `staging` 甚至外部非AEM系統，例如 `my-internal-webservice`. 避免在專案的程式碼基底中跨不同位置對這類URL進行硬式編碼很有用。
 
-1. 按一下 **保存** 的子菜單。
+1. 按一下 **儲存** 以儲存變更。
 
 >[!NOTE]
 >
->Adobe建議您 [將配置添加到儲存庫](/help/sites-deploying/configuring.md#addinganewconfigurationtotherepository)。
+>Adobe建議您 [將設定新增至存放庫](/help/sites-deploying/configuring.md#addinganewconfigurationtotherepository).
 
 ### 使用Externalizer服務 {#using-the-externalizer-service}
 
-本節顯示了以下幾個示例： **外部化器** 可以使用服務：
+本節提供幾個範例，說明如何 **Externalizer** 服務可用於：
 
-1. **要在JSP中獲取Externalizer服務：**
+1. **若要在JSP中取得Externalizer服務：**
 
    ```java
    Externalizer externalizer = resourceResolver.adaptTo(Externalizer.class);
    ```
 
-1. **要將路徑與「publish」域外部化：**
+1. **若要使用「發佈」網域外部化路徑：**
 
    ```java
    String myExternalizedUrl = externalizer.publishLink(resolver, "/my/page") + ".html";
    ```
 
-   假定域映射：
+   假設網域對應：
 
    * `publish https://www.website.com`
 
-   `myExternalizedUrl` 最後是值：
+   `myExternalizedUrl` 最後會得到值：
 
    * `https://www.website.com/contextpath/my/page.html`
 
 
-1. **要將路徑與「author」域外部化：**
+1. **若要使用「作者」網域外部化路徑：**
 
    ```java
    String myExternalizedUrl = externalizer.authorLink(resolver, "/my/page") + ".html";
    ```
 
-   假定域映射：
+   假設網域對應：
 
    * `author https://author.website.com`
 
-   `myExternalizedUrl` 最後是值：
+   `myExternalizedUrl` 最後會得到值：
 
    * `https://author.website.com/contextpath/my/page.html`
 
 
-1. **要將路徑與「local」域外部化：**
+1. **若要使用「本機」網域外部化路徑：**
 
    ```java
    String myExternalizedUrl = externalizer.externalLink(resolver, Externalizer.LOCAL, "/my/page") + ".html";
    ```
 
-   假定域映射：
+   假設網域對應：
 
    * `local https://publish-3.internal`
 
-   `myExternalizedUrl` 最後是值：
+   `myExternalizedUrl` 最後會得到值：
 
    * `https://publish-3.internal/contextpath/my/page.html`
 
 
-1. 可以在 [賈瓦多克](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html)。
+1. 如需更多範例，請參閱 [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).

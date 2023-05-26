@@ -1,7 +1,7 @@
 ---
-title: 開AEM發 — 指南和最佳做法
+title: AEM開發 — 指導方針與最佳作法
 seo-title: AEM Development - Guidelines and Best Practices
-description: 關於開發
+description: 在AEM上開發的准則和最佳實務
 seo-description: Guidelines and best practices for developing on AEM
 uuid: a67de085-4441-4a1d-bec3-2f27892a67ff
 contentOwner: Guillaume Carlino
@@ -17,153 +17,153 @@ ht-degree: 0%
 
 ---
 
-# 開AEM發 — 指南和最佳做法{#aem-development-guidelines-and-best-practices}
+# AEM開發 — 指導方針與最佳作法{#aem-development-guidelines-and-best-practices}
 
-## 使用模板和元件的指南 {#guidelines-for-using-templates-and-components}
+## 使用範本和元件的准則 {#guidelines-for-using-templates-and-components}
 
-元件AEM和模板構成了一個功能強大的工具包。 開發人員可以使用它們為網站業務用戶、編輯和管理員提供功能，使其網站適應不斷變化的業務需求（內容靈活性），同時保留網站的統一佈局（品牌保護）。
+AEM元件和範本形成非常強大的工具組。 開發人員可使用這些功能，為網站業務使用者、編輯和管理員提供調整其網站以符合不斷變化的業務需求（內容靈敏度）的功能，同時保留網站的統一版面配置（品牌保護）。
 
-對於負責網站或一組網站（例如全球性企業的分支機構）的人員來說，一個典型的挑戰是在其網站上引入一種新型的內容演示。
+對於負責一個網站或一組網站（例如在全球企業的分支機構）的人來說，一個典型的挑戰是在他們的網站上引入一種新型別的內容簡報。
 
-讓我們假設有必要向網站添加新聞清單頁面，該頁面列出已發佈的其他文章的摘要。 頁面的設計和結構應與網站的其他部分相同。
+假設需要將新聞清單頁面新增至網站，其中會列出從其他已發佈文章中擷取的資訊。 此頁面應具有與網站其他部分相同的設計和結構。
 
-建議的應對這種挑戰的方法是：
+解決此類挑戰的推薦方法是：
 
-* 重用現有模板以建立新類型的頁面。 模板大致定義頁面結構（導航元素、面板等），該結構通過其設計（CSS、圖形）進一步進行微調。
+* 重複使用現有範本以建立新的頁面型別。 範本會粗略定義頁面結構（導覽元素、面板等），再透過其設計（CSS、圖形）進一步微調。
 * 在新頁面上使用段落系統(parsys/iparsys)。
-* 定義對段落系統「設計」模式的訪問權限，以便只有授權人員（通常是管理員）才能更改這些權限。
-* 定義給定段落系統中允許的元件，以便編輯人員隨後可以將所需的元件放在頁面上。 在本例中，它可以是一個清單元件，它可以遍歷頁面的子樹並根據預定義的規則提取資訊。
-* 編輯在他們負責的頁面上添加和配置允許的元件，以將請求的功能（資訊）交付給業務。
+* 定義段落系統「設計」模式的存取權，以便只有授權人員（通常是管理員）才能變更它們。
+* 定義指定段落系統中允許的元件，讓編輯人員隨後可以將所需的元件放在頁面上。 在我們的案例中，它可能是清單元件，可周遊頁面的子樹狀結構，並根據預先定義的規則擷取資訊。
+* 編輯者在他們負責的頁面上新增並設定允許的元件，以將請求的功能（資訊）提供給企業。
 
-這說明了這種方法如何使網站的貢獻用戶和管理員能夠快速響應業務需求，而無需開發團隊的參與。 另一種方法，如建立新模板，通常需要付出高昂的代價，需要變更管理流程和開發團隊的參與。 這使得整個過程更長，成本也更高。
+這說明了這種方法如何讓網站貢獻的使用者和管理員能夠快速回應業務需求，而不需要開發團隊的參與。 替代方法（例如建立新範本）通常是成本高昂的練習，需要變更管理流程和開發團隊的參與。 這會導致整個程式耗時更久，成本更高。
 
-因此，基AEM於系統的開發人員應使用：
+因此，AEM系統的開發人員應使用：
 
-* 模板和訪問控制段落系統設計以實現一致性和品牌保護
-* 段落系統，包括其靈活性配置選項。
+* 範本和段落系統設計的存取控制，以實現一致性和品牌保護
+* 段落系統，包含其組態選項以提供彈性。
 
-在大多數通常的項目中，開發商的以下一般規則是有意義的：
+下列為開發人員的一般規則，在大部分的常見專案中都有意義：
 
-* 將模板數保持為低 — 與網站上基本不同的頁面結構數一樣低。
-* 為您的定製元件提供必要的靈活性和配置功能。
-* 最大限度地利用段落系統（parsys和iparsys元件）AEM的功能和靈活性。
+* 將範本數量維持在較低的水準 — 與網站上完全不同的頁面結構數量一樣低。
+* 為自訂元件提供必要的彈性和設定功能。
+* 充分利用AEM段落系統（parsys和iparsys元件）的功能和彈性。
 
-### 定制元件和其他元素 {#customizing-components-and-other-elements}
+### 自訂元件和其他元素 {#customizing-components-and-other-elements}
 
-在建立您自己的元件或自定義現有元件時，重新使用現有定義通常最簡單（也最安全）。 同樣的原則也適用於內部的其AEM他元素，例如錯誤處理程式。
+建立您自己的元件或自訂現有元件時，重複使用現有定義通常最簡單（也最安全）。 同樣的原則也適用於AEM內的其他元素，例如錯誤處理常式。
 
-這可以通過複製和覆蓋現有定義來完成。 換句話說，從 `/libs` 至 `/apps/<your-project>`。 此新定義，在 `/apps`，可根據您的要求進行更新。
+這可以透過複製和覆蓋現有定義來完成。 換言之，復制定義來源 `/libs` 至 `/apps/<your-project>`. 此新定義，在 `/apps`可以根據您的要求更新。
 
 >[!NOTE]
 >
->請參閱 [使用疊加](/help/sites-developing/overlays.md) 的子菜單。
+>另請參閱 [使用覆蓋](/help/sites-developing/overlays.md) 以取得更多詳細資料。
 
 例如：
 
-* [自定義元件](/help/sites-developing/components.md)
+* [自訂元件](/help/sites-developing/components.md)
 
    這涉及覆蓋元件定義：
 
-   * 在中建立新元件資料夾 `/apps/<website-name>/components/<MyComponent>` 通過複製現有元件：
+   * 在中建立新的元件資料夾 `/apps/<website-name>/components/<MyComponent>` 複製現有元件：
 
-      * 例如，要自定義文本元件副本：
+      * 例如，若要自訂文字元件副本：
 
          * 從 `/libs/foundation/components/text`
          * 至 `/apps/myProject/components/text`
 
-* [自定義錯誤處理程式顯示的頁](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
+* [自訂錯誤處理常式顯示的頁面](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
 
-   本例涉及覆蓋Servlet:
+   此案例涉及覆蓋servlet：
 
-   * 在儲存庫中，複製預設指令碼：
+   * 在存放庫中，複製預設指令碼：
 
       * 從 `/libs/sling/servlet/errorhandler/`
       * 至 `/apps/sling/servlet/errorhandler/`
 
 >[!CAUTION]
 >
->你 **不能** 改變了 `/libs` 路徑。
+>您 **不得** 變更 `/libs` 路徑。
 >
->這是因為 `/libs` 在下次升級實例時被覆蓋（在應用修補程式或功能包時很可能被覆蓋）。
+>這是因為 `/libs` 下次升級執行個體時會被覆寫（而您在套用hotfix或feature pack時很可能會被覆寫）。
 >
->對於配置和其他更改：
+>設定和其他變更：
 >
->1. 複製中的項 `/libs` 至 `/apps`
->1. 進行任何更改 `/apps`
+>1. 複製專案於 `/libs` 至 `/apps`
+>1. 進行任何變更 `/apps`
 
 
-## 何時使用JCR查詢以及何時不使用它們 {#when-to-use-jcr-queries-and-when-not-to-use-them}
+## 何時應使用JCR查詢以及何時不應使用 {#when-to-use-jcr-queries-and-when-not-to-use-them}
 
-JCR查詢是正確使用時功能強大的工具。 它們適用於：
+正確使用時，JCR查詢是功能強大的工具。 它們適用於：
 
-* 真正的最終用戶查詢，例如對內容的全文搜索。
-* 需要在整個儲存庫中找到結構化內容的場合。
+* 真正的一般使用者查詢，例如對內容進行全文搜尋。
+* 需要在整個存放庫中找到結構化內容的情況。
 
-   在這種情況下，請確保查詢僅在絕對需要時運行，例如元件激活或快取無效（而不是在內容修改時觸發的工作流步驟、事件處理程式、篩選器等）。
+   在這種情況下，請確定查詢僅在絕對需要時執行，例如在元件啟動或快取失效時（相對於工作流程步驟、觸發內容修改的事件處理常式、篩選器等）。
 
-JCR查詢不應用於純呈現請求。 例如，JCR查詢不適用於
+JCR查詢絕不應該用於純粹的呈現請求。 例如，JCR查詢不適用於
 
-* 繪製導航
-* 建立「前10大最新新聞」概述
-* 顯示內容項計數
+* 轉譯導覽
+* 建立「前10名最新新聞專案」概觀
+* 顯示內容專案計數
 
-要呈現內容，請使用對內容樹的導航訪問，而不是執行JCR查詢。
+若要呈現內容，請使用內容樹的導覽存取權，而非執行JCR查詢。
 
 >[!NOTE]
 >
->如果使用 [查詢生成器](/help/sites-developing/querybuilder-api.md)，使用「JCR查詢」(JCR Queries)，因為查詢生成器在引擎蓋下生成JCR查詢。
+>如果您使用 [查詢產生器](/help/sites-developing/querybuilder-api.md)，您會使用JCR查詢，因為查詢產生器會在幕後產生JCR查詢。
 
-## 安全注意事項 {#security-considerations}
+## 安全性考量 {#security-considerations}
 
 >[!NOTE]
 >
->也值得參考 [安全檢查](/help/sites-administering/security-checklist.md)。
+>也值得一提的是 [安全性檢查清單](/help/sites-administering/security-checklist.md).
 
-### JCR（儲存庫）會話 {#jcr-repository-sessions}
+### JCR （存放庫）工作階段 {#jcr-repository-sessions}
 
-您應使用用戶會話，而不是管理會話。 這意味著您應使用：
+您應該使用使用者工作階段，而不是管理工作階段。 這表示您應該使用：
 
 ```java
 slingRequest.getResourceResolver().adaptTo(Session.class);
 ```
 
-### Protect反對跨站點指令碼(XSS) {#protect-against-cross-site-scripting-xss}
+### Protect避免跨網站指令碼(XSS) {#protect-against-cross-site-scripting-xss}
 
-跨站點指令碼(XSS)允許攻擊者將代碼注入其他用戶查看的網頁。 惡意Web用戶可利用此安全漏洞繞過訪問控制。
+跨網站指令碼(XSS)可讓攻擊者將程式碼插入其他使用者檢視的網頁中。 惡意的網頁使用者可以利用這個安全性弱點來略過存取控制。
 
-應AEM用輸出時過濾所有用戶提供的內容的原則。 在開發和測試期間，防止XSS是最優先的任務。
+AEM會套用輸出時篩選所有使用者提供內容的原則。 在開發和測試期間，防止XSS都被賦予最高優先權。
 
-另外，Web應用防火牆，例如 [mod_security for Apache](https://modsecurity.org)，可以對部署環境的安全性提供可靠、集中的控制，並防止以前未被發現的跨站點指令碼攻擊。
+此外，Web應用程式防火牆，例如 [Apache適用的mod_security](https://modsecurity.org)，可提供部署環境安全性的可靠集中控制，並抵禦先前未偵測到的跨網站指令碼攻擊。
 
 >[!CAUTION]
 >
->隨附的示例代AEM碼本身可能無法防止此類攻擊，並且通常依賴Web應用程式防火牆的請求過濾。
+>隨AEM提供的範常式式碼本身可能無法抵禦這類攻擊，且通常依賴網頁應用程式防火牆的請求篩選。
 
-XSS API欺騙表包含您需要瞭解的資訊，以便使用XSS API並使應用更AEM加安全。 您可以從以下位置下載：
+XSS API速查表包含您需要瞭解的資訊，才能使用XSS API並使AEM應用程式更安全。 您可以在此處下載：
 
-XSSAPI欺騙表。
+XSSAPI速查表。
 
 [取得檔案](assets/xss_cheat_sheet_2016.pdf)
 
-### 保護機密資訊的通信安全 {#securing-communication-for-confidential-information}
+### 保護機密資訊的通訊安全 {#securing-communication-for-confidential-information}
 
-對於任何Internet應用程式，請確保在傳輸機密資訊時
+對於任何網際網路應用程式，在傳輸機密資訊時，請務必確認
 
-* 通過SSL保護通信
-* HTTPPOST（如果適用）
+* 流量會透過SSL受到保護
+* 會使用HTTPPOST（如適用）
 
-這適用於對系統保密的資訊（如配置或管理訪問），以及對用戶保密的資訊（如其個人詳細資訊）
+這適用於系統機密資訊（如設定或管理存取權）及其使用者機密資訊（如個人詳細資訊）
 
 ## 不同的開發任務 {#distinct-development-tasks}
 
-### 自定義錯誤頁 {#customizing-error-pages}
+### 自訂錯誤頁面 {#customizing-error-pages}
 
-可為自定義錯誤頁AEM。 建議這樣做，以便實例不會顯示內部伺服器錯誤上的吊帶跟蹤。
+可針對AEM自訂錯誤頁面。 建議這麼做，讓執行個體不會顯示內部伺服器錯誤上的Sling追蹤。
 
-請參閱 [自定義錯誤處理程式顯示的錯誤頁](/help/sites-developing/customizing-errorhandler-pages.md) 的雙曲餘切值。
+另請參閱 [自訂錯誤處理常式顯示的錯誤頁面](/help/sites-developing/customizing-errorhandler-pages.md) 以取得完整詳細資訊。
 
-### 在Java進程中開啟檔案 {#open-files-in-the-java-process}
+### 在Java程式中開啟檔案 {#open-files-in-the-java-process}
 
-因AEM為可以訪問大量檔案，建議 [開啟Java進程的檔案](/help/sites-deploying/configuring.md#open-files-in-the-java-process) 已明確配置AEM。
+由於AEM可以存取大量檔案，因此建議將 [開啟Java程式的檔案](/help/sites-deploying/configuring.md#open-files-in-the-java-process) 已針對AEM明確設定。
 
-要盡量減少此問題的發展，應確保盡快（有意義地）正確關閉開啟的任何檔案。
+為了將這個問題最小化，開發應確保任何開啟的檔案都會儘快（有意義）正確關閉。

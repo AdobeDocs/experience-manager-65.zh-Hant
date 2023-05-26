@@ -1,7 +1,7 @@
 ---
-title: 使用內容屬性導出內容
+title: 使用內容屬性匯出內容
 seo-title: Using Content Properties to Export Content
-description: 下頁顯示「應用程式屬性」和「節點」。
+description: 以下頁面顯示應用程式屬性和節點。
 seo-description: The following page shows App Properties and Nodes.
 uuid: 73f1832f-e457-47d0-a0e1-80af90897d31
 contentOwner: User
@@ -17,19 +17,19 @@ ht-degree: 4%
 
 ---
 
-# 使用內容屬性導出內容{#using-content-properties-to-export-content}
+# 使用內容屬性匯出內容{#using-content-properties-to-export-content}
 
 >[!NOTE]
 >
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-應用程式表示為 *cq：頁面* 的上AEM界。
+應用程式表示為 *cq：Pages* 在AEM中。
 
-它們共用在任何 *cq：頁* 除下面顯示的其他表示整合支援屬性的屬性外。
+它們共用在任何網站中找到的相同通用屬性 *cq：Page* 除了下面顯示的其他表示支援屬性的整合專案外。
 
 ## 應用程式屬性 {#app-properties}
 
-下表顯示 **應用程式屬性和節點**。
+下表顯示 **應用程式屬性和節點**.
 
 <table>
  <tbody>
@@ -41,17 +41,17 @@ ht-degree: 4%
   <tr>
    <td>dps-cloudConfig</td>
    <td>字串：路徑</td>
-   <td><p>配置的移動按需Cloud Service的路徑。 用於AEM Mobile到移動按需操作（API調用）</p> <p>當作者選擇Mobile On-DemandCloud Service將應用與關聯時，通過「管理連接」磁貼配置此關聯。</p> </td>
+   <td><p>已設定的Mobile On-DemandCloud Service的路徑。 用於AEM Mobile以進行Mobile On-Demand動作（API叫用）</p> <p>作者選擇應用程式建立關聯的Mobile On-DemandCloud Service時，可透過「管理連線」圖磚設定此關聯。</p> </td>
   </tr>
   <tr>
    <td>dps-exportTemplate</td>
    <td>字串：路徑</td>
-   <td><p>應用導出配置的路徑。 導出配置是一個包含2個子ContentSync導出配置模板的資料夾；</p> <p><i>dps文章</i>:ContentSync導出配置以導出項目內容</p> <p><i>dps-HTMLR資源</i>:ContentSync導出配置以導出應用/項目共用資源</p> </td>
+   <td><p>應用程式的匯出設定路徑。 匯出設定是包含2個子ContentSync匯出設定範本的資料夾；</p> <p><i>dps-article</i>：用於匯出文章內容的ContentSync匯出設定</p> <p><i>dps-HTMLResources</i>：ContentSync匯出設定可匯出應用程式/文章共用資源</p> </td>
   </tr>
   <tr>
    <td>dps-projectId</td>
    <td>字串</td>
-   <td><p>此應用連結到/綁定到的Mobile On-Demand項目的ID/URI。</p> <p>當作者從關聯的Mobile On-DemandCloud Service的可用項目清單中選擇項目時，通過「管理連接」磁貼配置此關聯。</p> </td>
+   <td><p>此應用程式連結/繫結至Mobile On-Demand專案的ID/URI。</p> <p>作者從相關Mobile On-DemandCloud Service的可用專案清單中選擇專案時，可透過「管理連線」表徵圖設定此關聯。</p> </td>
   </tr>
   <tr>
    <td>dps-projectTitle</td>
@@ -66,28 +66,28 @@ ht-degree: 4%
   <tr>
    <td>dps-sharedHTMLResources-lastUploaded</td>
    <td>日期</td>
-   <td>上次將共用資源從上次上載到AEMAEM Mobile的日期。</td>
+   <td>共用資源上次從AEM上傳至AEM Mobile的日期。</td>
   </tr>
   <tr>
    <td>dps-sharedHTMLResources-lastUploadedBy</td>
-   <td>字串：用戶ID</td>
-   <td>上次將共用資源請求上載到AEM Mobile的用戶AEMID。</td>
+   <td>String：userid</td>
+   <td>執行上次從AEM將共用資源請求上傳至AEM Mobile的使用者ID。</td>
   </tr>
   <tr>
    <td>pge-dashboard-config</td>
    <td>字串：路徑</td>
-   <td>儀表板配置的路徑。 路徑可以根據需要重定向到自定義儀表板配置。</td>
+   <td>儀表板設定的路徑。 路徑可視需要重新導向至自訂控制面板設定。</td>
   </tr>
   <tr>
    <td>sling:resourceType</td>
    <td>字串：路徑</td>
-   <td><p>cq的路徑：已擴展或已擴展的元件 <i>mobileapps/core/components/instance。</i></p> <p>這提供了應用程式目錄中的存在和呈現。</p> </td>
+   <td><p>為或延伸的cq：Component的路徑 <i>mobileapps/core/components/instance。</i></p> <p>這會提供應用程式目錄中的顯示和轉譯功能。</p> </td>
   </tr>
  </tbody>
 </table>
 
-您可以使用 ***內容屬性*** 的子菜單。 有關建立和導出項目和共用資源，請參閱以下資源：
+您可以使用 ***內容屬性*** 以建立內容。 請參閱下列資源，以建立和匯出文章和共用資源：
 
 * [內容屬性](/help/mobile/content-properties.md)
-* [建立項目導出配置](/help/mobile/creating-article-export-configuration.md)
-* [建立共用資源導出配置](/help/mobile/creating-shared-resources-export-configuration.md)
+* [建立文章匯出設定](/help/mobile/creating-article-export-configuration.md)
+* [建立共用資源匯出設定](/help/mobile/creating-shared-resources-export-configuration.md)

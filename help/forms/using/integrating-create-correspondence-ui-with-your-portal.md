@@ -1,7 +1,7 @@
 ---
-title: 將建立通信UI與自定義門戶整合
+title: 整合建立通訊UI與您的自訂入口網站
 seo-title: Integrating Create Correspondence UI with your custom portal
-description: 瞭解如何將建立通信UI與自定義門戶整合
+description: 瞭解如何整合建立通訊UI與您的自訂入口網站
 seo-description: Learn how to integrate create correspondence UI with your custom portal
 uuid: 68ef5bf2-b271-4c44-8840-6c495069164d
 content-type: reference
@@ -18,45 +18,45 @@ ht-degree: 4%
 
 ---
 
-# 將建立通信UI與自定義門戶整合{#integrating-create-correspondence-ui-with-your-custom-portal}
+# 整合建立通訊UI與您的自訂入口網站{#integrating-create-correspondence-ui-with-your-custom-portal}
 
 ## 概觀 {#overview}
 
-本文詳細介紹了如何將建立通信解決方案與您的環境整合。
+本文詳細說明如何將建立通訊解決方案與您的環境整合。
 
-## 基於URL的調用 {#url-based-invocation}
+## 以URL為基礎的叫用 {#url-based-invocation}
 
-從自定義門戶調用「建立對應」應用程式的一種方法是使用以下請求參數準備URL:
+從自訂入口網站呼叫「建立通訊」應用程式的一種方法是使用下列請求引數準備URL：
 
-* 字母模板的標識符（使用cmLetterId參數）。
+* 信件範本的識別碼（使用cmLetterId引數）。
 
-* 從所需資料源（使用cmDataUrl參數）獲取的XML資料的URL。
+* 從所需資料來源擷取之XML資料的URL （使用cmDataUrl引數）。
 
-例如，自定義門戶將準備URL為\
-`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，可能是入口連結的href。
-
->[!NOTE]
->
->通過在URL中顯示相同（明顯可見），以這種方式調用是不安全的，因為必需的參數作為GET請求傳遞。
+例如，自訂入口網站會將URL準備為\
+`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，這可能是來自入口網站連結的href。
 
 >[!NOTE]
 >
->在調用「建立對應」應用程式之前，保存並上載資料，以在給定dataURL上調用「建立對應」UI。 這可以通過自定義門戶本身或通過另一個後端過程來完成。
+>以這種方式呼叫並不安全，因為必要的引數會作為GET請求傳遞，方法是在URL中公開相同的（清楚可見）。
 
-## 基於內聯資料的調用 {#inline-data-based-invocation}
+>[!NOTE]
+>
+>在呼叫「建立通訊」應用程式之前，請儲存並上傳資料以在指定的dataURL呼叫「建立通訊」UI。 您可以從自訂入口網站本身或透過其他後端程式完成此操作。
 
-調用「建立通信」應用程式的另一種（而且更安全）方法是，只需點擊https://&#39;上的URL即可[伺服器]:[埠]&#39;/[上下文路徑]/aem/forms/createcorrespondence.html ，同時發送參數和資料以作為POST請求調用「建立對應」應用程式（將其隱藏在最終用戶面前）。 這還意味著您現在可以以內聯方式（作為同一請求的一部分，使用cmData參數）傳遞Create Tergement應用程式的XML資料，這在以前的方法中是不可能的/不理想的。
+## 內嵌資料型叫用 {#inline-data-based-invocation}
 
-### 用於指定字母的參數 {#parameters-for-specifying-letter}
+呼叫建立通訊應用程式的另一個（且更安全）方法可能是直接點選https://&#39;的URL[伺服器]：[連線埠]&#39;/[contextPath]/aem/forms/createcorrespondence.html ，同時傳送引數和資料以作為POST要求呼叫建立通訊應用程式（對一般使用者隱藏它們）。 這也表示您現在可以內嵌傳遞「建立對應」應用程式的XML資料（作為相同請求的一部分，使用cmData引數），這在先前的方法中是不可能/理想的。
+
+### 指定字母的引數 {#parameters-for-specifying-letter}
 
 | **名稱** | **類型** | **說明** |
 |---|---|---|
-| cmLetterInstanceId | 字串 | 字母實例的標識符。 |
-| cmLetterId | 字串 | 字母模板的名稱。 |
+| cmLetterInstanceId | 字串 | 信件例項的識別碼。 |
+| cmLetterId | 字串 | Letter範本的名稱。 |
 
-表中參數的順序指定了用於載入字母的參數的首選項。
+表格中引數的順序會指定用來載入字母的引數偏好設定。
 
-### 用於指定XML資料源的參數 {#parameters-for-specifying-the-xml-data-source}
+### 用於指定XML資料來源的引數 {#parameters-for-specifying-the-xml-data-source}
 
 <table>
  <tbody>
@@ -68,24 +68,24 @@ ht-degree: 4%
   <tr>
    <td>cmDataUrl<br /> </td> 
    <td>URL</td> 
-   <td>使用基本協定（如cq、ftp、http或檔案）從源檔案獲取的XML資料。<br /> </td> 
+   <td>來自使用基本通訊協定（例如cq、ftp、http或檔案）之來源檔案的XML資料。<br /> </td> 
   </tr>
   <tr>
    <td>cmLetterInstanceId</td> 
    <td>字串</td> 
-   <td>使用字母實例中可用的xml資料。</td> 
+   <td>使用信件例項中可用的xml資料。</td> 
   </tr>
   <tr>
    <td>cmUseTestData</td> 
    <td>布林值</td> 
-   <td>重用資料字典中附加的test資料。</td> 
+   <td>重複使用資料字典中附加的測試資料。</td> 
   </tr>
  </tbody>
 </table>
 
-表中參數的順序指定了用於載入XML資料的參數的首選項。
+表格中引數的順序會指定用來載入XML資料的引數偏好設定。
 
-### 其他參數 {#other-parameters}
+### 其他引數 {#other-parameters}
 
 <table>
  <tbody>
@@ -95,16 +95,16 @@ ht-degree: 4%
    <td><strong>說明</strong></td> 
   </tr>
   <tr>
-   <td>cm預覽<br /> </td> 
+   <td>cmPreview<br /> </td> 
    <td>布林值</td> 
-   <td>為True以預覽模式開啟字母<br /> </td> 
+   <td>若為True，則在預覽模式下開啟字母<br /> </td> 
   </tr>
   <tr>
    <td>隨機</td> 
-   <td>時間戳</td> 
-   <td>解決瀏覽器快取問題。</td> 
+   <td>時間戳記</td> 
+   <td>若要解決瀏覽器快取問題。</td> 
   </tr>
  </tbody>
 </table>
 
-如果對cmDataURL使用http或cq協定，則應匿名訪問http/cq的URL。
+如果您對cmDataURL使用http或cq通訊協定，應可匿名存取http/cq的URL。

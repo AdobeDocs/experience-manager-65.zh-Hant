@@ -1,6 +1,6 @@
 ---
-title: 建立無頭配置快速入門手冊
-description: 建立配置，作為6.5版無頭入門的AEM第一步。
+title: 建立設定Headless快速入門手冊
+description: 建立設定作為在AEM 6.5中開始使用Headless的第一步。
 exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
 source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 61%
 
 ---
 
-# 建立無頭配置快速入門手冊 {#creating-configuration}
+# 建立設定Headless快速入門手冊 {#creating-configuration}
 
-作為6.5中無頭入門的第AEM一步，您需要建立配置。
+在AEM 6.5中開始使用Headless的第一步，是您必須建立設定。
 
 ## 什麼是設定？ {#what-is-a-configuration}
 
@@ -27,12 +27,12 @@ ht-degree: 61%
 
 系統管理員一次只需建立一個設定，或者在需要新工作區來組織內容模型時建立，這個情況很少發生。出於本快速入門指南的目的，我們只需要建立一個設定。
 
-1. 登錄AEM並從主菜單選擇 **工具 — >常規 — >配置瀏覽器**。
-1. 提供 **標題** 的下界。
-   * 名稱將根據標題自動生成，並根據 [命AEM名約定。](/help/sites-developing/naming-conventions.md)。它將成為儲存庫中的節點名稱。
+1. 登入AEM，並從主功能表選取 **工具 — >一般 — >設定瀏覽器**.
+1. 提供 **標題** 以取得設定。
+   * 系統會根據標題自動產生名稱，並根據 [AEM命名慣例。](/help/sites-developing/naming-conventions.md)。它會成為存放庫中的節點名稱。
 1. 檢查以下選項：
    * **內容片段模型**
-   * **GraphQL持久查詢**
+   * **GraphQL持續查詢**
 
    ![建立設定](assets/create-configuration.png)
 
@@ -42,7 +42,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->除了 **內容片段模型** 和 **GraphQL持久查詢** 可能是必要的，具體取決於您的實施要求。
+>除了設定選項外， **內容片段模型** 和 **GraphQL持續查詢** 視您的實作需求而定。
 
 ## 後續步驟 {#next-steps}
 

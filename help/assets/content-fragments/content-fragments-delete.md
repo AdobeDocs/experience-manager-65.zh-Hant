@@ -1,6 +1,6 @@
 ---
 title: 內容片段 - 刪除考量事項
-description: 在中定義內容片段刪除策略之前，請查看這些重要注意事項AEM。 內容片段是提供無頭內容的強大工具，刪除它們的含義必須仔細考慮。
+description: 在AEM中定義內容片段刪除原則之前，請先檢閱這些重要考量。 內容片段是傳送Headless內容的強大工具，必須仔細考慮刪除這些片段的影響。
 feature: Content Fragments
 role: User
 exl-id: 6212457e-a171-4c33-8d19-54c26516e981
@@ -13,63 +13,63 @@ ht-degree: 9%
 
 # 內容片段 - 刪除考量事項 {#content-fragments-delete-considerations}
 
-在中定義內容片段刪除策略之前，請查看這些重要注意事項AEM。 內容片段是提供無頭內容的強大工具，刪除它們的含義必須仔細考慮。
+在AEM中定義內容片段刪除原則之前，請先檢閱這些重要考量。 內容片段是傳送Headless內容的強大工具，必須仔細考慮刪除這些片段的影響。
 
-## 權限 — 刪除或不刪除 {#permissions-delete-or-not-delete}
+## 許可權 — 刪除或不刪除 {#permissions-delete-or-not-delete}
 
-刪除內容的能力非常強大，但可能是敏感的，許多行業需要限制和控制這些權限的分配方式。
+刪除內容的功能非常強大，但可能比較敏感，許多行業都需要限制和控制這些許可權的分配方式。
 
-關於刪除權限，必須在兩個級別考慮內容片段：
+關於刪除許可權，內容片段必須考量為兩個層級：
 
-1. **內容片段作為單個實體。**
+1. **內容片段為單一實體。**
 
-   * **用例**:需要編輯/更新內容片段的用戶 —  **並刪除整個片段**。
-   * **權限**:的 [刪除](/help/sites-administering/security.md#actions) 權限可以 [通過用戶和/或組管理分配](/help/sites-administering/security.md#managing-permissions)。
+   * **使用案例**：需要編輯/更新內容片段的使用者 —  **並刪除整個片段**.
+   * **許可權**：此 [刪除](/help/sites-administering/security.md#actions) 許可權可以是 [透過使用者和/或群組管理指派](/help/sites-administering/security.md#managing-permissions).
 
-2. **構成內容片段的多個子實體；例如，變體，子節點。**
+2. **構成內容片段的多個子實體；例如，變化、子節點。**
 
-   內容片段編輯器的基本操作要求可以刪除此類臨時子元素。 例如，在操縱變體時；編輯元資料或管理關聯內容時。
+   內容片段編輯器的基本操作要求可以刪除此類暫時性子元素。 例如，操控變化時；編輯中繼資料或管理相關內容時，也會如此。
 
-   * **用例**:需要編輯/更新內容片段的用戶 —  **不允許刪除整個片段**。
-   * **權限**:請參閱 [僅編輯器功能所需的權限](#permissions-required-for-editor-functionality-only)。
-
->[!NOTE]
->
->當用戶沒有 [刪除](/help/sites-administering/security.md#actions) 權限，內容片段編輯器在 *只讀* 的子菜單。
+   * **使用案例**：需要編輯/更新內容片段的使用者 —  **不允許刪除整個片段**.
+   * **許可權**：請參閱 [僅編輯器功能所需的許可權](#permissions-required-for-editor-functionality-only).
 
 >[!NOTE]
 >
->另請參閱 [如何審核用戶管理操AEM作](/help/sites-administering/audit-user-management-operations.md)。
+>當使用者沒有任何 [刪除](/help/sites-administering/security.md#actions) 許可權，內容片段編輯器便會在下列位置運作： *唯讀* 模式。
 
-## 僅編輯器功能所需的權限 {#permissions-required-for-editor-functionality-only}
+>[!NOTE]
+>
+>另請參閱 [如何在AEM中稽核使用者管理作業](/help/sites-administering/audit-user-management-operations.md).
+
+## 僅編輯器功能所需的許可權 {#permissions-required-for-editor-functionality-only}
 
 對於需要編輯/更新內容片段而不允許他們刪除整個片段的使用者 ****，必須指派特定權限，因為內容片段編輯器的基本操作要求可以刪除暫時的子元素。
 
-例如，在操縱變體時；編輯元資料或管理關聯內容時。
+例如，操控變化時；編輯中繼資料或管理相關內容時，也會如此。
 
 >[!NOTE]
 >
->編輯/更新內容片段所需的刪除權限包含在「刪除」權限中 [通過用戶和/或組管理分配](/help/sites-administering/security.md#managing-permissions)。
+>編輯/更新內容片段所需的刪除許可權包含在刪除許可權中 [透過使用者和/或群組管理指派](/help/sites-administering/security.md#managing-permissions).
 
-編輯/更新片段所需的權限需要應用於包含內容片段的節點或相應的父節點（位於以下任何級別） `/content/dam`)。 當分配給這樣的父節點時，權限將應用於該分支中的所有節點。
+編輯/更新片段所需的許可權需要套用至包含內容片段的節點或適當的父節點（在下的任何層級）。 `/content/dam`)。 指派給此類父節點時，許可權將套用至該分支內的所有節點。
 
-例如，將保存所有內容片段的資料夾，如：
+例如，將包含所有內容片段的資料夾，例如：
 
 * `/content/dam/contentfragments`
 
 >[!CAUTION]
 >
->設定權限 `/content/dam` 也是可能的，因為所有內容片段都儲存在這裡。
+>設定許可權： `/content/dam` 也是可能的，因為所有內容片段都儲存在這裡。
 >
->但是，此操作將相同的刪除權限應用於 *全部* 其他資產類型。
+>不過，此動作會將相同的刪除許可權套用至 *全部* 其他資產型別。
 
-允許特定用戶和/或組編輯/更新內容片段的權限先決條件是：
+允許特定使用者和/或群組編輯/更新內容片段的先決條件許可權為：
 
 >[!NOTE]
 >
->此清單顯示所需的所有權限，而不僅顯示刪除權限。
+>此清單顯示所需的所有許可權，而不只是刪除許可權。
 
-* 對於「內容片段」節點或資料夾：
+* 對於內容片段節點或資料夾：
 
    * `jcr:addChildNodes`、`jcr:modifyProperties`
 
@@ -77,14 +77,14 @@ ht-degree: 9%
 
    * `jcr:addChildNodes`, `jcr:modifyProperties` 和 `jcr:removeChildNodes`
 
-* 適用於以下所有節點 `jcr:content` 所有內容片段：
+* 適用於以下所有節點 `jcr:content` 所有內容片段的：
 
-   * `jcr:addChildNodes`。 `jcr:modifyProperties` 和 `jcr:removeChildNodes`。 `jcr:removeNode`
+   * `jcr:addChildNodes`， `jcr:modifyProperties` 和 `jcr:removeChildNodes`， `jcr:removeNode`
 
-這些 `remove` 權限必須 [在CRXDE Lite內使用訪問控制清單進行管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)。
+這些 `remove` 許可權必須為 [在CRXDE Lite中使用存取控制清單進行管理](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
-的 `add` 和 `modify` 也可以在CRXDE Lite中或使用用戶管理控制台管理權限。
+此 `add` 和 `modify` 許可權也可以在CRXDE Lite中管理，或使用「使用者管理」主控台進行管理。
 
-例如， `remove` 組的權限 `content-authors-no-delete`:
+例如，定義 `remove` 群組的許可權 `content-authors-no-delete`：
 
 ![cf-delete-03](assets/cf-delete-03.png)

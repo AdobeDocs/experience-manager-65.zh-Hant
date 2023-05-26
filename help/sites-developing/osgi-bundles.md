@@ -1,7 +1,7 @@
 ---
-title: OSGI捆綁包
+title: OSGI組合
 seo-title: OSGI Bundles
-description: 管理OSGi捆綁包的提示
+description: 管理OSGi套裝的秘訣
 seo-description: Tips for managing your OSGi bundles
 uuid: 07af7089-a233-4e5b-928c-76ddc0af8839
 contentOwner: User
@@ -17,30 +17,30 @@ ht-degree: 0%
 
 ---
 
-# OSGI捆綁包{#osgi-bundles}
+# OSGI組合{#osgi-bundles}
 
-## 使用語義版本控制 {#use-semantic-versioning}
+## 使用語意版本設定 {#use-semantic-versioning}
 
-有關語義版本編號的商定最佳做法，請參見 [https://semver.org/](https://semver.org/)。
+語意版本編號的商定最佳實務可在 [https://semver.org/](https://semver.org/).
 
-## 不要在OSGi捆綁包中嵌入超出嚴格要求的類和Jar {#do-not-embed-more-classes-and-jars-than-strictly-needed-in-osgi-bundles}
+## 不要內嵌超過OSGi套件組合嚴格需要的類別和jar {#do-not-embed-more-classes-and-jars-than-strictly-needed-in-osgi-bundles}
 
-應將常用庫納入單獨的捆綁包。 這樣，它們就可以在您的捆綁包中重複使用。 包裝時 *JAR* 在OSGI捆綁包中，確保檢查聯機源以查看是否有人以前已經這樣做。 查找現有捆綁包裝的一些常見位置是：Apache Felix、Apache Sling、Apache Geronimo、Apache ServiceMix、Eclipse Bundle Recipes和SpringSource Enterprise Bundle Repository。
+通用程式庫應分解為個別的組合。 這可讓您在套件組合中重複使用它們。 包裝時 *JAR* 在OSGI套件組合中，請務必檢查線上來源，以檢視是否有人之前已執行此動作。 尋找現有套件組合包裝的常見位置包括：Apache Felix、Apache Sling、Apache Geronimo、Apache ServiceMix、Eclipse套件組合配方和SpringSource企業套件組合存放庫。
 
-## 取決於最低需要的捆綁包版本 {#depend-on-the-lowest-needed-bundle-versions}
+## 取決於所需的最低套件組合版本 {#depend-on-the-lowest-needed-bundle-versions}
 
-對於POM檔案中的編譯時依賴項，請始終依賴於暴露所需API的最低所需版本。 這將允許更高的向後相容性，並使對舊版本的備份修復更容易。
+針對POM檔案中的編譯時間相依性，一律取決於公開所需API的最低所需版本。 這樣可允許更高的回溯相容性，並使得對舊版進行反向移植修正更容易。
 
-## 從OSGi捆綁包導出最小的包集 {#export-a-minimal-set-of-packages-from-osgi-bundles}
+## 從OSGi套件組合匯出最小套件集 {#export-a-minimal-set-of-packages-from-osgi-bundles}
 
-一旦導出了包，我們就建立了一個API供其他人依賴。 確保盡可能少地導出，並確保導出的是API。 將私有方法/類轉為公開比將以前導出的內容轉為私有要容易得多。
+一旦匯出套件後，我們就會建立供其他人依賴的API。 請務必儘可能減少匯出次數，並確認要匯出的內容為API。 取得私密方法/類別並將其設為公用比取得先前匯出的內容並將其設為私密要容易得多。
 
-應始終將實施放在單獨的 *撞擊* 檔案。 預設情況下， *Maven捆綁插件* 將導出項目中沒有 *撞擊* 名字。
+實作應一律放在另一個檔案中 *實作* 封裝。 根據預設， *maven-bundle-plugin* 將會匯出專案中沒有 *實作* 在其名稱中。
 
-## 始終為導出的每個包顯式定義語義版本 {#always-explicitly-define-a-semantic-version-for-each-package-exported}
+## 一律明確定義每個匯出套件的語意版本 {#always-explicitly-define-a-semantic-version-for-each-package-exported}
 
-這將允許您的API的使用者隨您一起發展。 執行此操作時，請始終遵循語義版本化最佳實踐。 這樣，您的API的使用者就可以知道新版本中需要哪些類型的更改。
+這可讓您API的消費者與您一同演化。 在這樣做時，請一律遵循語義版本設定最佳實務。 這可讓您API的消費者知道新版本中預期的變更型別。
 
-## 包括暴露的元類型資訊 {#include-metatype-information-where-exposed}
+## 在公開處包含中繼資料型別資訊 {#include-metatype-information-where-exposed}
 
-通過指定有意義的元類型資訊，將使您的服務和元件在Felix控制台中更容易理解。 SCR注釋和屬性清單可在以下位置找到： [https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html)。
+藉由指定有意義的中繼型別資訊，讓您的服務和元件在Felix主控台中更容易理解。 SCR註釋和屬性清單可在以下網址找到： [https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html).

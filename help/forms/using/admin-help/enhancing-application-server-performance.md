@@ -1,7 +1,7 @@
 ---
-title: 增強應用伺服器效能
+title: 增強應用程式伺服器效能
 seo-title: Enhancing application server performance
-description: 本文檔介紹可配置以提高Forms應用程式伺服器效能AEM的可選設定。
+description: 本檔案說明您可以設定的選用設定，以改善AEM表單應用程式伺服器的效能。
 seo-description: This document describes optional settings that you can configure to improve the performance of your AEM forms application server.
 uuid: 88d2f96a-3b59-410d-8160-20581d27acad
 contentOwner: admin
@@ -17,178 +17,178 @@ ht-degree: 0%
 
 ---
 
-# 增強應用伺服器效能{#enhancing-application-server-performance}
+# 增強應用程式伺服器效能{#enhancing-application-server-performance}
 
-此內容介紹可配置以提高Forms應用程式伺服器效能AEM的可選設定。
+本內容說明您可以設定的選用設定，以改善AEM表單應用程式伺服器的效能。
 
-## 配置應用程式伺服器資料源 {#configuring-application-server-data-sources}
+## 設定應用程式伺服器資料來源 {#configuring-application-server-data-sources}
 
-表AEM單使AEM用表單儲存庫作為資料源。 表AEM單儲存庫儲存應用程式資產，在運行時，服務可以從儲存庫中檢索資產，作為完成自動化業務流程的一部分。
+AEM forms使用AEM forms存放庫作為其資料來源。 AEM表單存放庫會儲存應用程式資產，並且在執行階段，服務可以在完成自動化業務流程的過程中從存放庫擷取資產。
 
-對資料源的訪問可能非常重要，具體取決於您正AEM在運行的表單模組數量和訪問應用程式的併發用戶數量。 可以使用連接池優化資料源訪問。 *連接池* 是一種技術，用於避免每次應用程式或伺服器對象需要訪問資料庫時建立新資料庫連接的開銷。 連接池通常用於基於Web和企業的應用程式，通常由應用程式伺服器處理，但不限於應用程式伺服器。
+根據您正在執行的AEM表單模組數目以及同時存取應用程式的使用者數目，存取資料來源可能相當重要。 可使用連線集區來最佳化資料來源存取。 *連線集區* 是一種技術，用來避免每次應用程式或伺服器物件需要存取資料庫時，建立新資料庫連線的額外負荷。 連線集區通常用於Web應用程式和企業應用程式，通常由應用程式伺服器處理，但不限於應用程式伺服器。
 
-正確配置連接池參數非常重要，這樣您就永遠不會用完連接，這可能導致應用程式效能惡化。
+請務必正確設定連線集區引數，以免連線用盡，進而導致應用程式效能降低。
 
-要正確配置連接池設定，應用程式伺服器管理員必須在一天的高峰時段監視連接池。 監控可確保應用程式和用戶始終有足夠的連接。 大多數應用程式伺服器都包括監控工具。
+若要正確設定連線集區設定，應用程式伺服器管理員必須在當天的尖峰時段監視連線集區。 監控可確保應用程式和使用者隨時都能使用足夠的連線。 大部分的應用程式伺服器都包含監控工具。
 
-可以使用WebLogic伺服器管理控制台監視域中每個JDBC資料源實例的各種統計資訊。 有關詳細資訊，請參閱WebLogic文檔。
+您可以使用「WebLogic伺服器管理主控台」來監視網域中每個JDBC資料來源執行處理的各種統計資料。 如需詳細資訊，請參閱您的WebLogic檔案。
 
-當應用程式伺服器管理員確定正確的連接池設定時，該人員必須將此資訊與資料庫管理員通信。 資料庫管理員需要此資訊，因為資料庫連接數等於資料源連接池中的連接數。 然後，完成以下步驟以配置應用程式伺服器和資料源類型的連接池設定。
+當應用程式伺服器管理員決定正確的連線集區設定時，該人員必須將此資訊傳達給資料庫管理員。 資料庫管理員需要此資訊，因為資料庫連線數目等於資料來源之連線集區中的連線數目。 然後，完成以下步驟來設定應用程式伺服器和資料來源型別的連線集區設定。
 
-### 為WebLogic配置連接池設定以用於Oracle和MySQL {#configure-connection-pool-settings-for-weblogic-for-oracle-and-mysql}
+### 設定WebLogic的連線集區設定，以供Oracle和MySQL使用 {#configure-connection-pool-settings-for-weblogic-for-oracle-and-mysql}
 
-1. 在「域結構」下，按一下「服務」>「JDBC」>「資料源」，然後在右窗格中按一下IDP_DS。
-1. 在下一螢幕中，按一下「配置」>「連接池」頁籤，然後在以下框中輸入值：
-
-   * 初始容量
-   * 最大容量
-   * 容量增量
-   * 語句快取大小
-
-1. 按一下「保存」，然後按一下「激活更改」。
-1. 重新啟動WebLogic托管伺服器。
-
-### 為SQLServer配置WebLogic的連接池設定 {#configure-connection-pool-settings-for-weblogic-for-sqlserver}
-
-1. 在「變更中心」(Change Center)下，按一下「鎖定和編輯」(Lock &amp; Edit)。
-1. 在「域結構」下，按一下「服務」>「JDBC」>「資料源」，然後在右窗格中按一下「EDC_DS」。
-1. 在下一螢幕中，按一下「配置」>「連接池」頁籤，然後在以下框中輸入值：
+1. 在「領域結構」下，按一下「服務」>「JDBC」>「資料來源」，然後在右窗格中按一下「IDP_DS」。
+1. 在下一個畫面中，按一下「組態>連線集區」標籤，然後在下列方塊中輸入值：
 
    * 初始容量
    * 最大容量
-   * 容量增量
-   * 語句快取大小
+   * 容量增加
+   * 陳述式快取大小
 
-1. 按一下「保存」，然後按一下「激活更改」。
-1. 重新啟動WebLogic托管伺服器。
+1. 按一下儲存，然後按一下啟用變更。
+1. 重新啟動WebLogic管理的伺服器。
 
-### 為DB2配置WebSphere的連接池設定 {#configure-connection-pool-settings-for-websphere-for-db2}
+### 為SQLServer設定WebLogic的連線集區設定 {#configure-connection-pool-settings-for-weblogic-for-sqlserver}
 
-1. 在導航樹中，按一下「資源」>「JDBC」>「JDBC提供程式」。 在右窗格中，按一下您建立的資料源，即DB2通用JDBC驅動程式提供程式或LiveCycle- db2 - IDP_DS。
-1. 在「其他屬性」下，按一下「資料源」，然後選擇IDP_DS。
-1. 在下一螢幕的「其他屬性」下，按一下「連接池屬性」，然後在「最大連接數」框和「最小連接數」框中輸入一個值。
-1. 按一下「確定」或「應用」，然後按一下「直接保存到主配置」。
+1. 在「變更中心」下，按一下「鎖定與編輯」。
+1. 在「網域結構」下，按一下「服務」>「JDBC」>「資料來源」，然後在右窗格中按一下「EDC_DS」。
+1. 在下一個畫面中，按一下「組態>連線集區」標籤，然後在下列方塊中輸入值：
 
-### 為WebSphere配置連接池設定以進行Oracle {#configure-connection-pool-settings-for-websphere-for-oracle}
+   * 初始容量
+   * 最大容量
+   * 容量增加
+   * 陳述式快取大小
 
-1. 在導航樹中，按一下「資源」>「JDBC」>「JDBC提供程式」。 在右窗格中，按一下您建立的OracleJDBC驅動程式資料源。
-1. 在「其他屬性」下，按一下「資料源」，然後選擇IDP_DS。
-1. 在下一螢幕的「其他屬性」下，按一下「連接池屬性」，然後在「最大連接數」框和「最小連接數」框中輸入一個值。
-1. 按一下「確定」或「應用」，然後按一下「直接保存到主配置」。
+1. 按一下儲存，然後按一下啟用變更。
+1. 重新啟動WebLogic管理的伺服器。
 
-### 為SqlServer的WebSphere配置連接池設定 {#configure-connection-pool-settings-for-websphere-for-sqlserver}
+### 為DB2的WebSphere設定連線集區設定 {#configure-connection-pool-settings-for-websphere-for-db2}
 
-1. 在導航樹中，按一下「資源」>「JDBC」>「JDBC提供程式」，然後在右窗格中按一下您建立的「用戶定義的JDBC驅動程式」資料源。
-1. 在「其他屬性」下，按一下「資料源」，然後選擇IDP_DS。
-1. 在下一螢幕的「其他屬性」下，按一下「連接池屬性」，然後在「最大連接數」框和「最小連接數」框中輸入一個值：
-1. 按一下「確定」或「應用」，然後按一下「直接保存到主配置」。
+1. 在導覽樹狀結構中，按一下「資源」>「JDBC」>「JDBC提供者」。 在右窗格中，按一下您建立的資料來源：DB2 Universal JDBC Driver Provider或LiveCycle- db2 - IDP_DS。
+1. 在「其他屬性」下，按一下「資料來源」，然後選取IDP_DS。
+1. 在下一個畫面的「其他屬性」下，按一下「連線集區屬性」，然後在「最大連線數」方塊和「最小連線數」方塊中輸入值。
+1. 按一下「確定」或「套用」，然後按一下「直接儲存至主組態」。
 
-## 優化內聯文檔和對JVM記憶體的影響 {#optimizing-inline-documents-and-impact-on-jvm-memory}
+### 設定WebSphere的連線集區設定以進行Oracle {#configure-connection-pool-settings-for-websphere-for-oracle}
 
-如果您通常處理的文檔大小相對較小，則可以提高與文檔傳輸速度和儲存空間相關的效能。 為此，請實施以AEM下表單產品配置：
+1. 在導覽樹狀結構中，按一下「資源」>「JDBC」>「JDBC提供者」。 在右窗格中，按一下您建立的OracleJDBC驅動程式資料來源。
+1. 在「其他屬性」下，按一下「資料來源」，然後選取IDP_DS。
+1. 在下一個畫面的「其他屬性」下，按一下「連線集區屬性」，然後在「最大連線數」方塊和「最小連線數」方塊中輸入值。
+1. 按一下「確定」或「套用」，然後按一下「直接儲存至主組態」。
 
-* 增加表單的預設文檔最大內AEM聯大小，使其大於大多數文檔的大小。
-* 要處理較大的檔案，請指定高速磁碟系統或RAM磁碟上的儲存目錄。
+### 設定WebSphere for SqlServer的連線集區設定值 {#configure-connection-pool-settings-for-websphere-for-sqlserver}
 
-在管理控制台中配置了最大內聯大小AEM和儲存目錄（表單臨時檔案目錄和GDS目錄）。
+1. 在導覽樹狀結構中，按一下「資源」>「JDBC」>「JDBC提供者」，然後在右窗格中，按一下您建立的「使用者定義的JDBC驅動程式」資料來源。
+1. 在「其他屬性」下，按一下「資料來源」，然後選取IDP_DS。
+1. 在下一個畫面的「其他屬性」下，按一下「連線集區屬性」，然後在「最大連線數」方塊和「最小連線數」方塊中輸入值：
+1. 按一下「確定」或「套用」，然後按一下「直接儲存至主組態」。
 
-### 文檔大小和最大內聯大小 {#document-size-and-maximum-inline-size}
+## 最佳化內嵌檔案及對JVM記憶體的影響 {#optimizing-inline-documents-and-impact-on-jvm-memory}
 
-當由表單發送以處理的文AEM檔小於或等於預設文檔的最大內聯大小時，該文檔將內聯儲存在伺服器上，並將該文檔序列化為Adobe文檔對象。 在內部儲存文檔可帶來顯著的效能優勢。 但是，如果您使用表單工作流，則內容也可能儲存在資料庫中以用於跟蹤。 因此，增加最大內聯大小可能會影響資料庫大小。
+如果您通常要處理相對較小大小的檔案，您可以改善與檔案傳輸速度和儲存空間相關的效能。 若要這麼做，請實作下列AEM Forms產品設定：
 
-大於最大內聯大小的文檔儲存在本地檔案系統上。 從伺服器傳輸和傳輸的Adobe文檔對象只是指向該檔案的指針。
+* 增加AEM表單的預設檔案最大內嵌大小，使其大於大多數檔案的大小。
+* 若要處理大型檔案，請指定位於高速磁碟系統或RAM磁碟上的儲存目錄。
 
-當文檔內容被內聯（即小於最大內聯大小）時，內容將作為文檔序列化負載的一部分儲存在資料庫中。 因此，增加最大內聯大小會影響資料庫大小。
+內嵌大小上限和儲存目錄(AEM表單暫存檔目錄和GDS目錄)是在管理主控台中設定的。
 
-**更改最大內聯大小**
+### 檔案大小和最大內嵌大小 {#document-size-and-maximum-inline-size}
 
-1. 在管理控制台中，按一下「設定」>「核心繫統設定」>「配置」。
-1. 在「預設文檔最大內聯大小」框中輸入一個值，然後按一下「確定」。
+當由AEM表單傳送以進行處理的檔案小於或等於預設檔案最大內嵌大小，檔案會儲存在伺服器內嵌，且會序列化為Adobe檔案物件。 內嵌儲存檔案可帶來顯著的效能優勢。 不過，如果您使用表單工作流程，內容也可能儲存在資料庫中以供追蹤。 因此，增加最大內嵌大小可能會影響資料庫大小。
+
+大於最大內嵌大小的檔案會儲存在本機檔案系統中。 傳輸到伺服器或從伺服器傳輸的Adobe檔案物件只是指向該檔案的指標。
+
+當檔案內容內聯（即小於最大內聯大小）時，內容會作為檔案序列化承載的一部分儲存在資料庫中。 因此，增加最大內嵌大小可能會影響資料庫大小。
+
+**變更內嵌大小上限**
+
+1. 在管理控制檯中，按一下「設定>核心系統設定>設定」。
+1. 在「預設檔案最大內嵌大小」方塊中輸入值，然後按一下「確定」。
 
    >[!NOTE]
    >
-   >對於JEE環境上的AEM Forms和OSGi捆綁包上的AEM Forms,Document Max Inline Size屬性的值必須相同，JEE環境上的AEM Forms包括在OSGi捆綁包上。 此步驟僅更新了AEM Forms在JEE環境上的價值，而不更新OSGi捆綁包上的AEM Forms在JEE環境上的價值。
+   >對於JEE環境上的AEM Forms和JEE環境中包含的OSGi套件組合上的AEM Forms AEM Forms，檔案最大內嵌大小屬性的值必須相同。 此步驟僅針對JEE環境上的AEM Forms更新值，而非JEE環境上的AEM Forms (包含OSGi套件的AEM Forms)。
 
-1. 使用以下系統屬性重新啟動應用程式伺服器：
+1. 使用下列系統屬性重新啟動應用程式伺服器：
 
    com.adobe.idp.defaultDocumentMaxInlineSize=`[value specified in Step 2]`
 
    >[!NOTE]
    >
-   >上述系統屬性覆蓋為JEE環境上的AEM Forms和OSGi捆綁包上的AEM Forms設定的Document Max Inline Size屬性集的值，JEE環境上的AEM Forms包括在OSGi捆綁包上。
+   >上述系統屬性會覆寫針對JEE環境上的AEM Forms和JEE環境上的OSGi套件組合中包含的AEM FormsAEM Forms所設定的Document Max Inline Size屬性值。
 
 >[!NOTE]
 >
->預設最大內聯大小為65536位元組。
+>預設內嵌大小上限為65536位元組。
 
-### JVM最大堆大小 {#jvm-maximum-heap-size}
+### JVM棧積大小上限 {#jvm-maximum-heap-size}
 
-增加最大內聯大小需要更多記憶體來儲存序列化文檔。 因此，它通常還需要增加JVM最大堆大小。
+增加最大內嵌大小需要更多記憶體來儲存序列化檔案。 因此，通常還需要增加JVM棧積大小上限。
 
-處理許多文檔的負載較重的系統可快速使JVM堆記憶體飽和。 為避免OutOfMemoryError，請將JVM最大堆大小增加一個量，該量與內聯文檔的大小相乘，乘以通常在任何給定時間執行的文檔數。
+處理許多檔案的過載系統可快速讓JVM棧積記憶體達到飽和。 若要避免OutOfMemoryError，請將JVM棧積大小上限增加一個量，該量等於內嵌檔案大小乘以通常在任何指定時間執行的檔案數目。
 
-JVM最大堆大小增加=（內聯文檔大小）x（處理的文檔平均數）。
+JVM棧積大小上限增加= （內嵌檔案大小） x （已處理的平均檔案數）。
 
-**計算JVM最大堆大小**
+**正在計算JVM棧積大小上限**
 
-在此示例中，當前JVM最大堆設定為512 MB，最大內聯大小為64 KB。 必須為伺服器配置10個作業同時運行的情形，每個作業有9個輸入檔案和1個結果檔案（每個作業總共有10個檔案，同時處理了100個檔案）。 所有檔案的大小都在512 KB以下。
+在此範例中，目前的JVM最大棧積設定為512 MB，最大內嵌大小為64 KB。 伺服器必須針對同時執行10個作業的案例進行設定，每個作業都有9個輸入檔案和1個結果檔案（每個作業共有10個檔案和100個檔案同時處理）。 所有檔案的大小都在512 KB以下。
 
-要內聯儲存所有檔案，請將最大內聯大小設定為至少512 KB。
+若要內嵌儲存所有檔案，請將內嵌大小上限設定為至少512 KB。
 
-使用以下公式計算JVM最大堆大小所需的增加量：
+使用以下方程式計算JVM棧積大小上限所需的增加：
 
-(512 KB)x(100)= 51200 KB或50 MB
+(512 KB) x (100) = 51200 KB或50 MB
 
-JVM最大堆大小必須增加50 MB，總容量為562 MB。
+JVM棧積大小上限必須增加50 MB，總容量才能達到562 MB。
 
-**考慮堆碎片**
+**考慮棧積片段**
 
-將內聯文檔的大小設定為大值會增加易發生堆碎片的系統上的OutOfMemoryError風險。 要內聯儲存文檔，JVM堆記憶體必須具有足夠的連續空間。 一些作業系統、JVM和垃圾收集算法容易發生堆碎片。 碎片會減少連續堆空間的量，並且即使存在足夠的總可用空間，也可能導致OutOfMemoryError。
+將內嵌檔案的大小設定為較大的值，會增加容易產生棧積片段的系統發生OutOfMemoryError的風險。 若要內嵌儲存檔案，JVM棧積記憶體必須有足夠的連續空間。 某些作業系統、JVM和垃圾收集演演算法容易產生棧積片段。 片段會減少連續棧積空間的數量，即使總可用空間足夠，也可能導致OutOfMemoryError。
 
-例如，應用程式伺服器上的先前操作使JVM堆處於碎片狀態，而垃圾回收器無法充分壓縮堆以重新獲得大塊的可用空間。 即使JVM最大堆大小已針對最大內聯大小的增加進行調整，也可能發生OutOfMemoryError。
+例如，先前在應用程式伺服器上的操作導致JVM棧積處於分散狀態，而且垃圾回收程式無法充分壓縮棧積，以重新獲得較大的可用空間區塊。 即使已調整JVM棧集大小上限來增加內嵌大小，也可能發生OutOfMemoryError。
 
-要考慮堆碎片，內聯文檔大小不能設定為高於堆總大小的0.1%。 例如，JVM最大堆大小為512 MB時，最大內聯大小可支援512 MB x 0.001 = 0.512 MB或512 KB。
+若要說明棧積碎片，內嵌檔案大小不可設定為大於棧積總大小的0.1%。 例如，512 MB的JVM最大棧積大小可以支援最大內嵌大小512 MB x 0.001 = 0.512 MB或512 KB。
 
-## WebSphere應用程式伺服器增強 {#websphere-application-server-enhancements}
+## WebSphere Application Server增強功能 {#websphere-application-server-enhancements}
 
-本節介紹特定於WebSphere應用程式伺服器環境的設定。
+本節說明WebSphere Application Server環境的特定設定值。
 
-### 增加分配給JVM的最大記憶體 {#increasing-the-maximum-memory-allocated-to-the-jvm}
+### 增加配置給JVM的最大記憶體 {#increasing-the-maximum-memory-allocated-to-the-jvm}
 
-如果您正在運行Configuration Manager或嘗試使用命令行實用程式生成Enterprise JavaBeans(EJB)部署代碼 *ejbdeploy* 出現OutOfMemory錯誤，請增加分配給JVM的記憶體量。
+如果您正在執行Configuration Manager或嘗試使用命令列公用程式產生Enterprise JavaBeans (EJB)建置程式碼 *ejbdeploy* 且發生OutOfMemory錯誤，請增加配置給JVM的記憶體數量。
 
-1. 在中編輯ejbdeploy指令碼 *[appserver根]*/deploytool/itp/目錄：
+1. 在中編輯ejbdeploy指令碼 *[appserver根目錄]*/deploytool/itp/目錄：
 
    * (Windows) `ejbdeploy.bat`
    * （Linux和UNIX） `ejbdeploy.sh`
 
-1. 查找 `-Xmx256M` 參數並將其更改為更高的值，如 `-Xmx1024M`。
+1. 尋找 `-Xmx256M` 引數並將其變更為較高的值，例如 `-Xmx1024M`.
 1. 儲存檔案。
-1. 運行 `ejbdeploy` 命令或重新部署。
+1. 執行 `ejbdeploy` 命令或使用Configuration Manager重新部署。
 
-## 使用LDAP提高Windows Server 2003效能 {#improving-windows-server-2003-performance-with-ldap}
+## 透過LDAP改善Windows Server 2003效能 {#improving-windows-server-2003-performance-with-ldap}
 
-此內容描述特定於MicrosoftWindows Server 2003作業系統環境的設定。
+此內容說明Microsoft Windows Server 2003作業系統環境的特定設定。
 
-在搜索連接上使用連接池可將所需埠數減少50%。 這是因為該連接始終對給定域使用相同的憑據，並且上下文和相關對象被顯式關閉。
+在搜尋連線上使用連線集區最多可減少50%所需的連線埠數量。 這是因為該連線一律會針對指定網域使用相同的認證，而且上下文和相關物件會明確關閉。
 
-### 為連接池配置Windows Server {#configure-your-windows-server-for-connection-pooling}
+### 設定您的Windows Server以進行連線集區 {#configure-your-windows-server-for-connection-pooling}
 
-1. 按一下「開始」>「運行」以啟動註冊表編輯器，並在「開啟」框中鍵入 `regedit` 然後按一下「確定」。
-1. 轉到註冊表項 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
-1. 在註冊表編輯器的右窗格中，找到TcpTimedWaitDelay值名稱。 如果未顯示名稱，請從菜單欄中選擇「編輯」>「新建」>「DWORD值」以添加名稱。
-1. 在「名稱」(Name)框中，鍵入 `TcpTimedWaitDelay`
+1. 按一下[開始] > [執行]以啟動登入編輯程式，並在[開啟]方塊中輸入 `regedit` 並按一下「確定」。
+1. 移至登入機碼 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
+1. 在登入編輯器的右窗格中，找到TcpTimedWaitDelay值名稱。 如果名稱未出現，請從選單列中選取「編輯」>「新增」>「DWORD值」以新增名稱。
+1. 在「名稱」方塊中，輸入 `TcpTimedWaitDelay`
 
    >[!NOTE]
    >
-   >如果沒有看到閃爍的游標 `New Value #` 在框內，按一下右鍵右面板，選擇「更名」，然後在「名稱」框中鍵入 `TcpTimedWaitDelay`*。*
+   >如果您沒有看到閃爍的游標和 `New Value #` 在方塊內，在右側面板內按一下滑鼠右鍵，選取「重新命名」，然後在「名稱」方塊中輸入 `TcpTimedWaitDelay`*.*
 
 1. 對值名稱MaxUserPort、MaxHashTableSize和MaxFreeTcbs重複步驟4。
-1. 在右窗格中按兩下以設定TcpTimedWaitDelay值。 在「基本」(Base)下，選擇「小數」(Decimal)，然後在「值」(Value)框中鍵入 `30`。
-1. 在右窗格中按兩下以設定MaxUserPort值。 在「基本」(Base)下，選擇「小數」(Decimal)，然後在「值」(Value)框中鍵入 `65534`。
-1. 在右窗格中按兩下以設定MaxHashTableSize值。 在「基本」(Base)下，選擇「小數」(Decimal)，然後在「值」(Value)框中鍵入 `65536`。
-1. 在右窗格中按兩下以設定MaxFreeTcbs值。 在「基本」(Base)下，選擇「小數」(Decimal)，然後在「值」(Value)框中鍵入 `16000`。
+1. 在右窗格內連按兩下以設定TcpTimedWaitDelay值。 在「基底」下，選取「小數」，然後在「值」方塊中鍵入 `30`.
+1. 在右窗格內連按兩下以設定MaxUserPort值。 在「基底」下，選取「小數」，然後在「值」方塊中鍵入 `65534`.
+1. 在右窗格內連按兩下以設定MaxHashTableSize值。 在「基底」下，選取「小數」，然後在「值」方塊中鍵入 `65536`.
+1. 在右窗格內連按兩下以設定MaxFreeTcbs值。 在「基底」下，選取「小數」，然後在「值」方塊中鍵入 `16000`.
 
 >[!NOTE]
 >
->如果使用註冊表編輯器或使用其他方法錯誤地修改註冊表，則可能會出現嚴重問題。 這些問題可能需要重新安裝作業系統。 自行修改註冊表。
+>如果您使用登入編輯器或使用其他方法不正確地修改登入，可能會發生嚴重問題。 這些問題可能需要您重新安裝作業系統。 自行修改登入。

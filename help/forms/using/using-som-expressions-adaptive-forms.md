@@ -1,7 +1,7 @@
 ---
-title: 在自適應形式中使用SOM表達式
+title: 在最適化表單中使用SOM運算式
 seo-title: Using SOM expressions in adaptive forms
-description: 瞭解如何提取自適應窗體面板的SOM表達式。
+description: 瞭解如何擷取最適化表單面板的SOM運算式。
 seo-description: Learn how to extract SOM expressions of a panel of an adaptive form.
 uuid: c5d55aff-fb69-4a1c-96ea-fb3f9322cbb0
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,34 +17,34 @@ ht-degree: 0%
 
 ---
 
-# 在自適應形式中使用SOM表達式{#using-som-expressions-in-adaptive-forms}
+# 在最適化表單中使用SOM運算式{#using-som-expressions-in-adaptive-forms}
 
-自適應表單建模AEM為頁面，表示為JCR內容結AEM構。 內容結構的關鍵元素是guideContainer節點。 在guideContainer下，可以有rootPanel，它可以包含嵌套的面板和欄位。
+調適型表單將建模為AEM頁面，在AEM存放庫中表示為JCR內容結構。 內容結構的關鍵元素是guideContainer節點。 guideContainer下方有rootPanel，其中可能包含巢狀面板和欄位。
 
-可以使用指令碼對象模型(SOM)來引用特定文檔對象模型(DOM)中的值、屬性和方法。 DOM在樹層次結構中組織記憶體對象和屬性。 SOM表達式引用「欄位」/「繪圖」元素和面板。
+您可以使用指令碼物件模型(SOM)來參照特定檔案物件模型(DOM)中的值、屬性和方法。 DOM會以樹狀階層組織記憶體物件和屬性。 SOM運算式會參考欄位/繪製元素和面板。
 
-下圖描述了在向表單添加元件時，自適應表單轉換為的節點結構。 例如，您可以向根面板添加一個面板，並在面板中添加一個單選按鈕，該按鈕在運行時轉換為DOM。 以自適應形式為單選按鈕欄位指定的SOM表達式為 `guide[0].guide1[0].guideRootPanel[0].panel1[0].radiobutton[0]`。
+下圖說明將元件新增至表單時，最適化表單所轉譯的節點結構。 例如，您可以將面板新增至根面板，並在執行階段轉換為DOM的面板中新增選項按鈕。 最適化表單中選項按鈕欄位的SOM運算式指定為 `guide[0].guide1[0].guideRootPanel[0].panel1[0].radiobutton[0]`.
 
-![DOM樹](assets/hierarchy.png)
+![DOM樹狀結構](assets/hierarchy.png)
 
-DOM樹
+DOM樹狀結構
 
-自適應形式中任何元素的SOM表達式由 `guide[0].guide1[0]`。 元件在節點結構層次中的位置用於導出其SOM表達式。
+適用性表單中任何元素的SOM運算式都以前置詞表示 `guide[0].guide1[0]`. 元件在節點結構階層中的位置是用來衍生其SOM運算式。
 
-![具有兩個單選按鈕的DOM樹](assets/hierarchy_radio_button.png)
+![具有兩個選項按鈕的DOM樹狀結構](assets/hierarchy_radio_button.png)
 
-具有兩個單選按鈕的DOM樹
+具有兩個選項按鈕的DOM樹狀結構
 
-當您以自適應形式更改單選按鈕的位置時，SOM表達式會發生更改。 在創作模式中，可以使用「查看SOM表達式」選項查看AEM Forms內欄位或元素的SOM表達式。 該選項出現在面板上，並在按一下右鍵該欄位或元素時顯示。
+當您變更最適化表單中選項按鈕的位置時，SOM運算式會變更。 在撰寫模式中，您可以使用「檢視SOM運算式」選項來檢視AEM Forms中欄位或元素的SOM運算式。 當您以滑鼠右鍵按一下欄位或元素時，面板上會顯示選項。
 
-![自適應形式的SOM表達式提取](assets/som-expressions.png)
+![以最適化表單擷取SOM運算式](assets/som-expressions.png)
 
-自適應形式的SOM表達式提取
+以最適化表單擷取SOM運算式
 
-在面板中，可從面板工具欄訪問該特徵。 該功能便於自適應表單作者編寫指令碼。
+在面板中，您可以從面板工具列存取功能。 此功能有助於最適化表單作者編寫指令碼。
 
-![使用面板工具欄提取SOM表達式](assets/som-expression.png)
+![使用面板工具列擷取SOM運算式](assets/som-expression.png)
 
-使用面板工具欄提取SOM表達式
+使用面板工具列擷取SOM運算式
 
-中列出的某些API [導橋](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) 使用元素的SOM表達式。 例如，要以自適應形式將焦點引入特定欄位，請將相應的SOM表達式傳遞到 `getFocus`API在 `guideBridge`。
+中列出部分API [GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) 使用元素的SOM運算式。 例如，若要將焦點置於最適化表單中的特定欄位，請將對應的SOM運算式傳遞至 `getFocus`中的API `guideBridge`.

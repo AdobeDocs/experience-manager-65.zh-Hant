@@ -54,14 +54,14 @@ Headless 內容不是以傳統的頁面和元件結構為基礎。相反，是�
 | # | 文章 | 說明 |
 |---|---|---|
 | 0 | AEM Headless 內容作者歷程 | 本文件 |
-| 1 | [無頭創AEM作 — 簡介](introduction.md) | 介紹Adobe Experience Manager的無頭功能，以及如何為項目編寫內容。 |
+| 1 | [為AEM Headless編寫 — 簡介](introduction.md) | 介紹Adobe Experience Manager的Headless功能，以及如何為您的專案編寫內容。 |
 | 2 | [AEM Headless 編寫基本知識](basics.md) | 了解使用內容片段為 Headless CMS 編寫內容的概念和機制。 |
 | 3 | [了解如何在內容片段中使用參考](references.md) | 了解如何在內容片段中使用參考。這些也可讓您使用巢狀片段為您的 Headless CMS 建立和管理多層結構。 |
 | 4 | [了解如何為內容片段定義中繼資料和標記](metadata-tagging.md) | 了解如何為內容片段定義中繼資料和標記。 |
 
 ## 下一步 {#what-is-next}
 
-您現在已準備好開始您的 Adobe Headless 歷程。我們鼓勵您繼續下一段旅程，閱讀文章 [無頭AEM創作 — 簡介](introduction.md)
+您現在已準備好開始您的 Adobe Headless 歷程。我們鼓勵您繼續下一段歷程並閱讀文章 [為AEM Headless編寫 — 簡介。](introduction.md)
 
 <!--
 ### Choose Your Own Adventure {#choose-your-path}
@@ -80,6 +80,6 @@ However, Adobe wants you to succeed as you get started with your AEM Headless pr
 
 * [AEM Headless 翻譯歷程](/help/journey-headless/translation/overview.md) - 此文件歷程讓您對無周邊技術、AEM 如何提供無周邊內容以及如何翻譯它，有廣泛的了解。
 * [AEM Headless 開發人員歷程](/help/journey-headless/developer/overview.md) - 從這裡開始，此歷程會逐步引導您了解 AEM 強大且靈活的無周邊特性、其功能，以及如何在您的第一個開發專案中運用這些功能。
-* [無頭建築師之旅](/help/journey-headless/architect/overview.md)  — 從此處開始，介紹Adobe Experience Manager強大、靈活、無頭的功能，以及如何為您的項目建模內容。
+* [Headless架構者歷程](/help/journey-headless/architect/overview.md)  — 從這裡開始，瞭解Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案建立內容的模型。
 * [AEM 技術文件](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant) - 如果您已經對 AEM 和無周邊技術有深入的了解，您可能想要直接查閱我們深入的技術文件。
 * [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 如果您偏好做中學並為傾向技術，請加入我們的由 API 和框架組織的實作教學課程，其在探究如何建立和使用 AEM Headless 應用程式。

@@ -1,7 +1,7 @@
 ---
-title: 字母PDF預覽中的自定義水印
+title: 信件PDF預覽中的自訂浮水印
 seo-title: Custom watermark in letter PDF preview
-description: 瞭解如何在字母PDF預覽中建立自定義水印。
+description: 瞭解如何在信件PDF預覽中建立自訂浮水印。
 seo-description: Learn how to create custom watermark in letter PDF preview.
 uuid: 5adfede3-9b38-4a12-bf14-6d80cfb0a05a
 content-type: reference
@@ -18,52 +18,52 @@ ht-degree: 0%
 
 ---
 
-# 字母PDF預覽中的自定義水印{#custom-watermark-in-letter-pdf-preview}
+# 信件PDF預覽中的自訂浮水印{#custom-watermark-in-letter-pdf-preview}
 
 ## 概觀 {#overview}
 
-在「建立通信」UI中，座席用戶以最終形式預覽通信，在最終形式中，通信被發送到後處理，例如用於電子郵件或打印。
+在建立通訊UI中，代理使用者以最終形狀預覽通訊，其中通訊被傳送到後處理，例如電子郵件或列印。
 
-為防止未經授權使用此資料，組織可以在預覽PDF上加上水印。 預設水印為「PREVIEW」，該水印出現在PDF中。
+為避免未經授權使用此資料，組織可以對預覽PDF加上浮水印。 預設浮水印為「PREVIEW」，會出現在整個PDF中。
 
-要在預覽PDF中啟用水印，請選擇 **[!UICONTROL 應用水印]** 「預覽期間」選項 **[!UICONTROL 通信管理配置]** https://&#39;[伺服器]:[埠]「/system/console/configMgr。
+若要在預覽PDF中啟用浮水印，請選取 **[!UICONTROL 套用浮水印]** 中的「預覽期間」選項 **[!UICONTROL 通訊管理設定]** 在https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr.
 
-![預設水印](assets/default-watermark.png)
+![default-watermark](assets/default-watermark.png)
 
-可以使用以下步驟來自定義水印的文本和外觀：
+您可以使用下列步驟來自訂浮水印的文字和外觀：
 
-## 在「建立對應UI」中的PDF預覽中自定義水印 {#customizewatermark-}
+## 在建立通訊UI中自訂PDF預覽中的浮水印 {#customizewatermark-}
 
-1. 轉到 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身份登錄。
-1. 在應用資料夾中，建立名為 **[!UICONTROL 預覽水印]** 路徑/結構與libs資料夾中的previewwatermark資料夾類似：
+1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
+1. 在apps資料夾中，建立名為的資料夾 **[!UICONTROL 預覽浮水印]** 具有與libs資料夾中previewwatermark資料夾類似的路徑/結構：
 
-   1. 按一下右鍵 **預覽水印** 資料夾，然後選擇 **覆蓋節點**:
+   1. 以滑鼠右鍵按一下 **預覽浮水印** 資料夾並選取 **覆蓋節點**：
 
       `/libs/fd/cm/configFiles/previewwatermark`
 
-   1. 確保「覆蓋節點」對話框具有以下值：
+   1. 確定「覆蓋節點」對話方塊具有下列值：
 
       **路徑：** /libs/fd/cm/configFiles/previewwatermark
 
       **覆蓋位置：** /apps/
 
-      **匹配節點類型：** 已選中
+      **符合節點型別：** 已核取
 
       >[!NOTE]
       >
-      >不要在/libs分支中進行更改。 您所做的任何更改都可能丟失，因為在以下情況下，此分支可能會發生更改：
+      >請勿在/libs分支中進行變更。 您所做的任何變更都可能遺失，因為每當您：
       >
       >    
       >    
-      >    * 在實例上升級
-      >    * 應用熱修復
-      >    * 安裝功能包
+      >    * 在您的執行個體上升級
+      >    * 套用Hot Fix
+      >    * 安裝功能套件
 
 
-   1. 按一下 **確定** 然後按一下 **全部保存**。 的 **[!UICONTROL 預覽水印]** 資料夾是在指定路徑中建立的。
+   1. 按一下 **確定** 然後按一下 **全部儲存**. 此 **[!UICONTROL 預覽浮水印]** 資料夾會在指定的路徑中建立。
 
-1. 將ddx檔案從&quot;/libs/fd/cm/configFiles/previewwatermark&quot;資料夾複製並貼上到&quot;/apps/fd/cm/configFiles/previewwatermark&quot;資料夾，然後按一下 **[!UICONTROL 全部保存]**。
-1. 在/apps/fd/cm/configFiles/previewwatermark/下對ddx檔案進行所需更改。
+1. 將ddx檔案從「/libs/fd/cm/configFiles/previewwatermark」資料夾複製並貼到「/apps/fd/cm/configFiles/previewwatermark」資料夾，然後按一下 **[!UICONTROL 全部儲存]**.
+1. 在/apps/fd/cm/configFiles/previewwatermark/下的ddx檔案中進行所需的變更。
 
    ```xml
    <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -80,10 +80,10 @@ ht-degree: 0%
    </DDX>
    ```
 
-   有關自定義水印外觀、文本和對齊方式的資訊，請參閱中的添加和刪除水印和背景 [匯編程式服務和DDX參考](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf) 的子菜單。
+   如需自訂浮水印外觀、文字和對齊方式的資訊，請參閱新增和移除浮水印和背景。 [組合器服務和DDX參考](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf) 檔案。
 
    >[!NOTE]
    >
-   >在ddx檔案中，對結果和源的引用應保持未更改為output.pdf和input.pdf。 也不應更改檔案ddx的名稱。
+   >在ddx檔案中，對結果和來源的參照應保持未變更為output.pdf和input.pdf。 檔案ddx的名稱也不應變更。
 
-1. 按一下 **全部保存**。
+1. 按一下 **全部儲存**.

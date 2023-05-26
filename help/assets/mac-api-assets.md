@@ -1,6 +1,6 @@
 ---
 title: "[!DNL Assets] HTTP API."
-description: 使用HTTP API建立、讀取、更新、刪除、管理數字資產 [!DNL Adobe Experience Manager Assets]。
+description: 在中使用HTTP API建立、讀取、更新、刪除和管理數位資產 [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
@@ -22,175 +22,175 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-的 [!DNL Assets] HTTP API允許對數字資產（包括元資料、格式副本和注釋）以及結構化內容（使用）執行建立 — 讀取 — 更新 — 刪除(CRUD)操作 [!DNL Experience Manager] 內容片段。 它在 `/api/assets` 並作為REST API實現。 包括 [支援內容片段](/help/assets/assets-api-content-fragments.md)。
+此 [!DNL Assets] HTTP API允許對數位資產進行建立 — 讀取 — 更新 — 刪除(CRUD)操作，包括對中繼資料、轉譯和評論的操作，以及使用的結構化內容 [!DNL Experience Manager] 內容片段。 它公開於 `/api/assets` 和實作為REST API。 其中包括 [支援內容片段](/help/assets/assets-api-content-fragments.md).
 
-要訪問API:
+若要存取API：
 
-1. 在以下位置開啟API服務文檔： `https://[hostname]:[port]/api.json`。
-1. 關注 [!DNL Assets] 服務連結導向 `https://[hostname]:[server]/api/assets.json`。
+1. 開啟API服務檔案，網址為 `https://[hostname]:[port]/api.json`.
+1. 請遵循 [!DNL Assets] 服務連結導向 `https://[hostname]:[server]/api/assets.json`.
 
-API響應是某些MIME類型的JSON檔案，是所有MIME類型的響應代碼。 JSON響應是可選的，可能不可用，例如，PDF檔案。 依靠響應代碼進行進一步分析或操作。
+API回應是適用於某些MIME型別的JSON檔案，也是適用於所有MIME型別的回應代碼。 JSON回應為選用，可能不可使用(例如PDF檔案)。 依賴回應代碼進行進一步分析或執行動作。
 
-在 [!UICONTROL 關機時間]，資產及其格式副本不可通過 [!DNL Assets] Web介面和通過HTTP API。 如果 [!UICONTROL 準時] 是將來的 [!UICONTROL 關機時間] 是過去。
+晚於 [!UICONTROL 關閉時間]，無法透過 [!DNL Assets] 網頁介面以及透過HTTP API。 如果 [!UICONTROL 準時] 為未來或 [!UICONTROL 關閉時間] 為過去。
 
 >[!CAUTION]
 >
->[HTTP API更新元資料屬性](#update-asset-metadata) 的 `jcr` 命名空間。 但是，Experience Manager用戶介面將更新 `dc` 命名空間。
+>[HTTP API會更新中繼資料屬性](#update-asset-metadata) 在 `jcr` 名稱空間。 不過，Experience Manager使用者介面會更新 `dc` 名稱空間。
 
 ## 內容片段 {#content-fragments}
 
-A [內容片段](/help/assets/content-fragments/content-fragments.md) 是一種特殊的資產類型。 它可用於訪問結構化資料，如文本、數字、日期等。 由於有幾種不同 `standard` 資產（如影像或文檔），某些附加規則適用於處理內容片段。
+A [內容片段](/help/assets/content-fragments/content-fragments.md) 是一種特殊型別的資產。 它可用來存取結構化資料，例如文字、數字、日期等。 由於有幾項差異， `standard` 資產（例如影像或檔案），則處理內容片段會套用一些其他規則。
 
-有關詳細資訊，請參閱 [Experience Manager AssetsHTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md)。
+如需詳細資訊，請參閱 [Experience Manager Assets HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md).
 
 ## 資料模型 {#data-model}
 
-的 [!DNL Assets] HTTP API公開兩個主要元素，資料夾和資產（對於標準資產）。
+此 [!DNL Assets] HTTP API會顯示兩個主要元素，資料夾和資產（適用於標準資產）。
 
-此外，它還為描述內容片段中結構化內容的自定義資料模型顯示了更詳細的元素。 請參閱 [內容片段資料模型](/help/assets/assets-api-content-fragments.md#content-fragments) 的上界。
+此外，它會公開描述內容片段中結構化內容的自訂資料模型更詳細的元素。 另請參閱 [內容片段資料模型](/help/assets/assets-api-content-fragments.md#content-fragments) 以取得進一步資訊。
 
 ### 資料夾 {#folders}
 
-資料夾類似於傳統檔案系統中的目錄。 它們是其他資料夾或斷言的容器。 資料夾具有以下元件：
+資料夾就像傳統檔案系統中的目錄。 它們是其他資料夾或判斷提示的容器。 資料夾包含下列元件：
 
-**實體**:資料夾的實體是其子元素，可以是資料夾和資產。
+**實體**：資料夾的實體是它的子元素，可以是資料夾和資產。
 
 **屬性**:
 
-* `name` 是資料夾的名稱。 這與URL路徑中沒有副檔名的最後一個段相同。
-* `title` 是資料夾的可選標題，可以顯示該標題，而不是其名稱。
+* `name` 是資料夾的名稱。 這與URL路徑中沒有副檔名的最後一個區段相同。
+* `title` 是資料夾的可選標題，可顯示而非其名稱。
 
 >[!NOTE]
 >
->資料夾或資產的某些屬性映射到其他前置詞。 的 `jcr` 前置詞 `jcr:title`。 `jcr:description`, `jcr:language` 替換為 `dc` 前置詞。 因此，在返回的JSON中， `dc:title` 和 `dc:description` 包含 `jcr:title` 和 `jcr:description`的下界。
+>資料夾或資產的某些屬性對應至不同的首碼。 此 `jcr` 前置詞 `jcr:title`， `jcr:description`、和 `jcr:language` 已取代為 `dc` 前置詞。 因此在傳回的JSON中， `dc:title` 和 `dc:description` 包含值 `jcr:title` 和 `jcr:description`（分別）。
 
-**連結** 資料夾公開三個連結：
+**連結** 資料夾會顯示三個連結：
 
-* `self`:連結到自身。
-* `parent`:連結到父資料夾。
-* `thumbnail`:（可選）指向資料夾縮略圖的連結。
+* `self`：連結至本身。
+* `parent`：連結至父資料夾。
+* `thumbnail`：（選用）連結至資料夾縮圖影像。
 
 ### Assets {#assets}
 
 在Experience Manager中，資產包含以下元素：
 
-* 資產的屬性和元資料。
-* 多個格式副本，如原始格式副本（最初上載的資產）、縮略圖和各種其他格式副本。 其他格式副本可以是不同大小的影像、不同的視頻編碼，或從PDF或 [!DNL Adobe InDesign] 的子菜單。
-* 可選注釋。
+* 資產的屬性和中繼資料。
+* 多個轉譯，例如原始轉譯（即最初上傳的資產）、縮圖和各種其他轉譯。 其他轉譯可能是不同大小的影像、不同的視訊編碼，或從PDF或擷取的頁面 [!DNL Adobe InDesign] 檔案。
+* 選擇性註解。
 
-有關內容片段中元素的資訊，請參見 [Experience Manager AssetsHTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md#content-fragments)。
+如需內容片段中元素的相關資訊，請參閱 [Experience Manager Assets HTTP API中的內容片段支援](/help/assets/assets-api-content-fragments.md#content-fragments).
 
-在 [!DNL Experience Manager] 資料夾具有以下元件：
+在 [!DNL Experience Manager] 資料夾包含下列元件：
 
-* 實體：資產的子項是其格式副本。
+* 實體：資產的子系為其轉譯。
 * 屬性.
 * 連結.
 
-的 [!DNL Assets] HTTP API包括以下功能：
+此 [!DNL Assets] HTTP API包含下列功能：
 
-* [檢索資料夾清單](#retrieve-a-folder-listing)。
-* [建立資料夾](#create-a-folder)。
-* [建立資產](#create-an-asset)。
-* [更新資產二進位](#update-asset-binary)。
-* [更新資產元資料](#update-asset-metadata)。
-* [建立資產格式副本](#create-an-asset-rendition)。
-* [更新資產格式副本](#update-an-asset-rendition)。
-* [建立資產注釋](#create-an-asset-comment)。
-* [複製資料夾或資產](#copy-a-folder-or-asset)。
-* [移動資料夾或資產](#move-a-folder-or-asset)。
-* [刪除資料夾、資產或格式副本](#delete-a-folder-asset-or-rendition)。
+* [擷取資料夾清單](#retrieve-a-folder-listing).
+* [建立資料夾](#create-a-folder).
+* [建立資產](#create-an-asset).
+* [更新資產二進位檔](#update-asset-binary).
+* [更新資產中繼資料](#update-asset-metadata).
+* [建立資產轉譯](#create-an-asset-rendition).
+* [更新資產轉譯](#update-an-asset-rendition).
+* [建立資產註解](#create-an-asset-comment).
+* [複製資料夾或資產](#copy-a-folder-or-asset).
+* [行動資料夾或資產](#move-a-folder-or-asset).
+* [刪除資料夾、資產或轉譯](#delete-a-folder-asset-or-rendition).
 
 >[!NOTE]
 >
->為便於讀取，以下示例省略了完整的cURL符號。 事實上，符號的確與 [雷斯蒂](https://github.com/micha/resty) 是的 `cURL`。
+>為了方便閱讀，下列範例會省略完整的cURL標籤法。 事實上，符號確實與 [Resty](https://github.com/micha/resty) 的指令碼包裝函式 `cURL`.
 
 **必備條件**
 
 * 存取 `https://[aem_server]:[port]/system/console/configMgr`.
-* 導航到 **[!UICONTROL Adobe花崗岩CSRF濾池]**。
-* 確保屬性 **[!UICONTROL 篩選方法]** 包括： `POST`。 `PUT`。 `DELETE`。
+* 導覽至 **[!UICONTROL AdobeGranite CSRF篩選器]**.
+* 確認屬性 **[!UICONTROL 篩選方法]** 包括： `POST`， `PUT`， `DELETE`.
 
-## 檢索資料夾清單 {#retrieve-a-folder-listing}
+## 擷取資料夾清單 {#retrieve-a-folder-listing}
 
-檢索現有資料夾及其子實體（子資料夾或資產）的Siren表示法。
+擷取現有資料夾及其子系實體（子資料夾或資產）的Siren表示法。
 
-**請求**: `GET /api/assets/myFolder.json`
+**請求**： `GET /api/assets/myFolder.json`
 
-**響應代碼**:響應代碼為：
+**回應代碼**：回應程式碼為：
 
-* 200 — 好 — 成功。
-* 404 — 未找到 — 資料夾不存在或無法訪問。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
+* 200 — 確定 — 成功。
+* 404 — 找不到 — 資料夾不存在或無法存取。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
-**響應**:返回的實體類是資產或資料夾。 包含的實體的屬性是每個實體的全部屬性集的子集。 為了獲得實體的完整表示形式，客戶端應檢索連結指向的URL的內容 `rel` 共 `self`。
+**回應**：傳回實體的類別是資產或資料夾。 包含之圖元的屬性是每個圖元的完整屬性集的子集。 為了取得實體的完整表示法，使用者端應擷取具有的連結所指向的URL內容 `rel` 之 `self`.
 
 ## 建立資料夾 {#create-a-folder}
 
-建立新 `sling`: `OrderedFolder` 在給定路徑上。 如果 `*` 提供而不是節點名稱，servlet將參數名稱用作節點名稱。 接受為請求資料是新資料夾的Siren表示形式或一組名稱 — 值對，編碼為 `application/www-form-urlencoded` 或 `multipart`/ `form`- `data`，用於直接從HTML窗體建立資料夾。 此外，可以將資料夾的屬性指定為URL查詢參數。
+建立新的 `sling`： `OrderedFolder` 在指定的路徑。 若為 `*` 會提供引數名稱而非節點名稱，此servlet會使用引數名稱作為節點名稱。 接受為請求資料是新資料夾的Siren表示或一組名稱 — 值組，編碼為 `application/www-form-urlencoded` 或 `multipart`/ `form`- `data`，對於直接從HTML表單建立資料夾很有用。 此外，資料夾的屬性可指定為URL查詢引數。
 
-API調用失敗， `500` 響應代碼（如果提供路徑的父節點不存在）。 呼叫返迴響應代碼 `409` 資料夾。
+API呼叫失敗，因為 `500` 回應代碼（如果所提供路徑的父節點不存在）。 呼叫傳回回應代碼 `409` 若資料夾已存在。
 
-**參數**: `name` 是資料夾名稱。
+**引數**： `name` 是資料夾名稱。
 
 **要求**
 
 * `POST /api/assets/myFolder -H"Content-Type: application/json" -d '{"class":"assetFolder","properties":{"jcr:title":"My Folder"}}'`
 * `POST /api/assets/* -F"name=myfolder" -F"jcr:title=My Folder"`
 
-**響應代碼**:響應代碼為：
+**回應代碼**：回應程式碼為：
 
-* 201 — 建立 — 成功建立。
+* 201 — 建立 — 成功建立時。
 * 409 — 衝突 — 如果資料夾已存在。
-* 412 - PRECONTIDE FAILED — 如果找不到或無法訪問根集合。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
+* 412 - PRECONDITION FAILED — 如果找不到或無法存取根集合。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
 ## 建立資產 {#create-an-asset}
 
-將提供的檔案放在提供的路徑上，以在DAM儲存庫中建立資產。 如果 `*` 提供而不是節點名稱，servlet使用參數名或檔案名作為節點名稱。
+將提供的檔案放在提供的路徑，以在DAM存放庫中建立資產。 若為 `*` 提供的servlet使用引數名稱或檔案名稱作為節點名稱，而不是節點名稱。
 
-**參數**:參數為 `name` 資產名稱和 `file` 的子菜單。
+**引數**：引數包括 `name` 資產名稱和 `file` 以作為檔案參照。
 
 **要求**
 
 * `POST /api/assets/myFolder/myAsset.png -H"Content-Type: image/png" --data-binary "@myPicture.png"`
 * `POST /api/assets/myFolder/* -F"name=myAsset.png" -F"file=@myPicture.png"`
 
-**響應代碼**:響應代碼為：
+**回應代碼**：回應程式碼為：
 
-* 201 — 已建立 — 如果資產已成功建立。
+* 201 - CREATED — 如果已成功建立資產。
 * 409 — 衝突 — 如果資產已存在。
-* 412 - PRECONTIDE FAILED — 如果找不到或無法訪問根集合。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
+* 412 - PRECONDITION FAILED — 如果找不到或無法存取根集合。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
-## 更新資產二進位 {#update-asset-binary}
+## 更新資產二進位檔 {#update-asset-binary}
 
-更新資產的二進位檔案（名稱為原始格式的格式副本）。 更新觸發要執行的預設資產處理工作流（如果已配置）。
+更新資產的二進位檔（名稱為原始的轉譯）。 如果已設定，更新會觸發預設資產處理工作流程執行。
 
-**請求**: `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: image/png" --data-binary @myPicture.png`
+**請求**： `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: image/png" --data-binary @myPicture.png`
 
-**響應代碼**:響應代碼為：
-
-* 200 — 確定 — 如果資產已成功更新。
-* 404 — 未找到 — 如果在提供的URI中找不到或無法訪問資產。
-* 412 - PRECONTIDE FAILED — 如果找不到或無法訪問根集合。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
-
-## 更新資產元資料 {#update-asset-metadata}
-
-更新資產元資料屬性。 如果更新中的任何屬性 `dc:` 命名空間， API更新 `jcr` 命名空間。 API不同步兩個命名空間下的屬性。
-
-**請求**: `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"jcr:title":"My Asset"}}'`
-
-**響應代碼**:響應代碼為：
+**回應代碼**：回應程式碼為：
 
 * 200 — 確定 — 如果資產已成功更新。
-* 404 — 未找到 — 如果在提供的URI中找不到或無法訪問資產。
-* 412 - PRECONTIDE FAILED — 如果找不到或無法訪問根集合。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
+* 404 — 找不到 — 如果在提供的URI中找不到或無法存取資產。
+* 412 - PRECONDITION FAILED — 如果找不到或無法存取根集合。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
-### 同步元資料更新 `dc` 和 `jcr` 命名空間 {#sync-metadata-between-namespaces}
+## 更新資產中繼資料 {#update-asset-metadata}
 
-API方法更新中的元資料屬性 `jcr` 命名空間。 使用用戶介面進行的更新更改了 `dc` 命名空間。 在以下位置同步元資料值： `dc` 和 `jcr` 命名空間，您可以建立工作流並配置Experience Manager以在資產編輯時執行工作流。 使用ECMA指令碼同步所需的元資料屬性。 以下示例指令碼將標題字串同步於 `dc:title` 和 `jcr:title`。
+更新資產中繼資料屬性。 如果您更新 `dc:` 名稱空間中，API會更新 `jcr` 名稱空間。 API不會同步兩個名稱空間下的屬性。
+
+**請求**： `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"jcr:title":"My Asset"}}'`
+
+**回應代碼**：回應程式碼為：
+
+* 200 — 確定 — 如果資產已成功更新。
+* 404 — 找不到 — 如果在提供的URI中找不到或無法存取資產。
+* 412 - PRECONDITION FAILED — 如果找不到或無法存取根集合。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
+
+### 同步中繼資料更新，介於 `dc` 和 `jcr` 名稱空間 {#sync-metadata-between-namespaces}
+
+API方法會更新 `jcr` 名稱空間。 使用使用者介面進行的更新會變更 `dc` 名稱空間。 若要同步中繼資料值，請執行下列動作： `dc` 和 `jcr` 名稱空間，您可以建立工作流程並設定Experience Manager，以在資產編輯時執行工作流程。 使用ECMA指令碼來同步必要的中繼資料屬性。 以下範例指令碼會同步標題字串於 `dc:title` 和 `jcr:title`.
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
@@ -209,99 +209,99 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 }
 ```
 
-## 建立資產格式副本 {#create-an-asset-rendition}
+## 建立資產轉譯 {#create-an-asset-rendition}
 
-為資產建立新資產格式副本。 如果未提供請求參數名，則檔案名將用作格式副本名稱。
+為資產建立新的資產轉譯。 如果未提供請求引數名稱，則會使用檔案名稱作為轉譯名稱。
 
-**參數**:參數為 `name` 格式副本的名稱和 `file` 檔案引用。
+**引數**：引數包括 `name` 代表轉譯名稱和 `file` 作為檔案參照。
 
 **要求**
 
 * `POST /api/assets/myfolder/myasset.png/renditions/web-rendition -H"Content-Type: image/png" --data-binary "@myRendition.png"`
 * `POST /api/assets/myfolder/myasset.png/renditions/* -F"name=web-rendition" -F"file=@myRendition.png"`
 
-**響應代碼**:響應代碼為：
+**回應代碼**：回應程式碼為：
 
-* 201 — 已建立 — 如果已成功建立格式副本。
-* 404 — 未找到 — 如果在提供的URI中找不到或無法訪問資產。
-* 412 - PRECONTIDE FAILED — 如果找不到或無法訪問根集合。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
+* 201 - CREATED — 如果已成功建立轉譯。
+* 404 — 找不到 — 如果在提供的URI中找不到或無法存取資產。
+* 412 - PRECONDITION FAILED — 如果找不到或無法存取根集合。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
-## 更新資產格式副本 {#update-an-asset-rendition}
+## 更新資產轉譯 {#update-an-asset-rendition}
 
-更新分別用新二進位資料替換資產格式副本。
+更新會分別以新的二進位資料取代資產轉譯。
 
-**請求**: `PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png`
+**請求**： `PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png`
 
-**響應代碼**:響應代碼為：
+**回應代碼**：回應程式碼為：
 
-* 200 — 確定 — 如果格式副本已成功更新。
-* 404 — 未找到 — 如果在提供的URI中找不到或無法訪問資產。
-* 412 - PRECONTIDE FAILED — 如果找不到或無法訪問根集合。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
+* 200 - OK — 如果已成功更新轉譯。
+* 404 — 找不到 — 如果在提供的URI中找不到或無法存取資產。
+* 412 - PRECONDITION FAILED — 如果找不到或無法存取根集合。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
-## 在資產上添加註釋 {#create-an-asset-comment}
+## 在資產上新增註解 {#create-an-asset-comment}
 
-建立新資產注釋。
+建立新的資產註解。
 
-**參數**:參數為 `message` 以獲取注釋和 `annotationData` 標籤。
+**引數**：引數包括 `message` 註解的訊息內文和 `annotationData` JSON格式的附注資料。
 
-**請求**: `POST /api/assets/myfolder/myasset.png/comments/* -F"message=Hello World." -F"annotationData={}"`
+**請求**： `POST /api/assets/myfolder/myasset.png/comments/* -F"message=Hello World." -F"annotationData={}"`
 
-**響應代碼**:響應代碼為：
+**回應代碼**：回應程式碼為：
 
-* 201 — 已建立 — 如果已成功建立注釋。
-* 404 — 未找到 — 如果在提供的URI中找不到或無法訪問資產。
-* 412 - PRECONTIDE FAILED — 如果找不到或無法訪問根集合。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
+* 201 - CREATED — 如果評論已成功建立。
+* 404 — 找不到 — 如果在提供的URI中找不到或無法存取資產。
+* 412 - PRECONDITION FAILED — 如果找不到或無法存取根集合。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
 ## 複製資料夾或資產 {#copy-a-folder-or-asset}
 
-複製在提供的路徑中可用到新目標的資料夾或資產。
+將所提供路徑中可用的資料夾或資產複製到新目的地。
 
-**請求標題**:參數包括：
+**請求標頭**：引數包括：
 
-* `X-Destination` - API解決方案作用域內的新目標URI，將資源複製到。
-* `X-Depth` - `infinity` 或 `0`。 使用 `0` 只複製資源及其屬性，而不複製其子項。
-* `X-Overwrite`  — 使用 `F` 來防止覆蓋現有目標上的資產。
+* `X-Destination` - API解決方案範圍內的新目的地URI，可將資源複製到其中。
+* `X-Depth`  — 任一 `infinity` 或 `0`. 使用 `0` 僅複製資源及其屬性，而不複製其子項。
+* `X-Overwrite`  — 使用 `F` 以防止覆寫現有目的地的資產。
 
-**請求**: `COPY /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-copy"`
+**請求**： `COPY /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-copy"`
 
-**響應代碼**:響應代碼為：
+**回應代碼**：回應程式碼為：
 
-* 201 — 已建立 — 如果資料夾/資產已複製到非現有目標。
-* 204 — 無內容 — 如果資料夾/資產已複製到現有目標。
-* 412 - PRECONTIDE FAILED — 如果缺少請求標頭。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
+* 201 - CREATED — 若資料夾/資產已複製到不存在的目的地。
+* 204 — 無內容 — 若資料夾/資產已複製到現有目的地。
+* 412 - PRECONDITION失敗 — 如果缺少請求標頭。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
-## 移動資料夾或資產 {#move-a-folder-or-asset}
+## 行動資料夾或資產 {#move-a-folder-or-asset}
 
-將給定路徑上的資料夾或資產移動到新目標。
+將指定路徑的資料夾或資產移動到新目的地。
 
-**請求標題**:參數包括：
+**請求標頭**：引數包括：
 
-* `X-Destination` - API解決方案作用域內的新目標URI，將資源複製到。
-* `X-Depth` - `infinity` 或 `0`。 使用 `0` 只複製資源及其屬性，而不複製其子項。
-* `X-Overwrite`  — 使用 `T` 強制刪除現有資源或 `F` 來防止覆蓋現有資源。
+* `X-Destination` - API解決方案範圍內的新目的地URI，可將資源複製到其中。
+* `X-Depth`  — 任一 `infinity` 或 `0`. 使用 `0` 僅複製資源及其屬性，而不複製其子項。
+* `X-Overwrite`  — 使用 `T` 強制刪除現有資源或 `F` 以防止覆寫現有資源。
 
-**請求**: `MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
+**請求**： `MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
 
-不使用 `/content/dam` 的子菜單。 移動資產並覆蓋現有資產的命令示例如下：
+不要使用 `/content/dam` 在URL中。 移動資產和覆寫現有資產的命令範例為：
 
 ```shell
 curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: https://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"
 ```
 
-**響應代碼**:響應代碼為：
+**回應代碼**：回應程式碼為：
 
-* 201 — 已建立 — 如果資料夾/資產已複製到非現有目標。
-* 204 — 無內容 — 如果資料夾/資產已複製到現有目標。
-* 412 - PRECONTIDE FAILED — 如果缺少請求標頭。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
+* 201 - CREATED — 若資料夾/資產已複製到不存在的目的地。
+* 204 — 無內容 — 若資料夾/資產已複製到現有目的地。
+* 412 - PRECONDITION失敗 — 如果缺少請求標頭。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
-## 刪除資料夾、資產或格式副本 {#delete-a-folder-asset-or-rendition}
+## 刪除資料夾、資產或轉譯 {#delete-a-folder-asset-or-rendition}
 
-刪除所提供路徑上的資源(-tree)。
+刪除提供路徑中的資源(-tree)。
 
 **要求**
 
@@ -309,14 +309,14 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 * `DELETE /api/assets/myFolder/myAsset.png`
 * `DELETE /api/assets/myFolder/myAsset.png/renditions/original`
 
-**響應代碼**:響應代碼為：
+**回應代碼**：回應程式碼為：
 
 * 200 — 確定 — 如果資料夾已成功刪除。
-* 412 - PRECONTIDE FAILED — 如果找不到或無法訪問根集合。
-* 500 — 內部伺服器錯誤 — 如果出現其他問題。
+* 412 - PRECONDITION FAILED — 如果找不到或無法存取根集合。
+* 500 — 內部伺服器錯誤 — 如果發生其他錯誤。
 
 ## 提示和限制 {#tips-best-practices-limitations}
 
-* [HTTP API更新元資料屬性](#update-asset-metadata) 的 `jcr` 命名空間。 但是，Experience Manager用戶介面將更新 `dc` 命名空間。
+* [HTTP API會更新中繼資料屬性](#update-asset-metadata) 在 `jcr` 名稱空間。 不過，Experience Manager使用者介面會更新 `dc` 名稱空間。
 
-* 資產HTTP API不返回完整的元資料。 命名空間是硬編碼的，只返回那些命名空間。 有關完整元資料，請參閱資產路徑 `/jcr_content/metadata.json`。
+* Assets HTTP API未傳回完整的中繼資料。 系統會以硬式編碼撰寫名稱空間，且只會傳回這些名稱空間。 如需完整的中繼資料，請參閱資產路徑 `/jcr_content/metadata.json`.

@@ -1,7 +1,7 @@
 ---
-title: 驗證DDX文檔
+title: 驗證DDX檔案
 seo-title: Validating DDX Documents
-description: 使用Java API和Web服務API以寫程式方式驗證DDX文檔。
+description: 使用Java API和Web服務API以程式設計方式驗證DDX檔案。
 seo-description: Validate a DDX document programmatically using the Java API and the Web Service API.
 uuid: da668170-d2e9-4fff-aef5-432a856bd0bd
 contentOwner: admin
@@ -19,196 +19,196 @@ ht-degree: 0%
 
 ---
 
-# 驗證DDX文檔 {#validating-ddx-documents}
+# 驗證DDX檔案 {#validating-ddx-documents}
 
-**本文檔中的示例和示例僅針對AEM Forms的JEE環境。**
+**本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-可以以寫程式方式驗證匯編器服務使用的DDX文檔。 即，使用匯編程式服務API，可以確定DDX文檔是否有效。 例如，如果您從以前的AEM Forms版本升級，並且希望確保DDX文檔有效，則可以使用匯編程式服務API驗證它。
-
->[!NOTE]
->
->有關匯編器服務的詳細資訊，請參見 [《AEM Forms服務參考》](https://www.adobe.com/go/learn_aemforms_services_63)。
+您可以以程式設計方式驗證Assembler服務所使用的DDX檔案。 也就是說，您可以使用Assembler服務API來判斷DDX檔案是否有效。 例如，如果您從先前的AEM Forms版本升級，並且想要確保DDX檔案有效，則可以使用組合器服務API來驗證它。
 
 >[!NOTE]
 >
->有關DDX文檔的詳細資訊，請參見 [匯編程式服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63)。
+>如需有關組合器服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+
+>[!NOTE]
+>
+>如需有關DDX檔案的詳細資訊，請參閱 [組合器服務和DDX參考](https://www.adobe.com/go/learn_aemforms_ddx_63).
 
 ## 步驟摘要 {#summary-of-steps}
 
-要驗證DDX文檔，請執行以下任務：
+若要驗證DDX檔案，請執行下列工作：
 
-1. 包括項目檔案。
-1. 建立匯編器客戶端。
-1. 引用現有DDX文檔。
-1. 設定運行時選項以驗證DDX文檔。
+1. 包含專案檔案。
+1. 建立組合器使用者端。
+1. 參考現有的DDX檔案。
+1. 設定執行階段選項以驗證DDX檔案。
 1. 執行驗證。
-1. 將驗證結果保存到日誌檔案中。
+1. 將驗證結果儲存在記錄檔中。
 
-**包括項目檔案**
+**包含專案檔案**
 
-在開發項目中包括必要的檔案。 如果要使用Java建立客戶端應用程式，請包括必要的JAR檔案。 如果使用Web服務，請確保包含代理檔案。
+在您的開發專案中包含必要的檔案。 如果您使用Java建立使用者端應用程式，請包含必要的JAR檔案。 如果您使用Web服務，請確定您包含Proxy檔案。
 
-必須將以下JAR檔案添加到項目的類路徑：
+必須將以下JAR檔案新增到專案的類別路徑中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(在JBoss上部署AEM Forms時必需)
-* jbossall-client.jar(如果AEM Forms部署在JBoss上，則為必需)
+* adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
+* jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果AEM Forms部署在JBoss以外的受支援的J2EE應用程式伺服器上，則必須將adobe-utilities.jar和jbossall-client.jar檔案替換為特定於AEM Forms部署在其上的J2EE應用程式伺服器的JAR檔案。
+如果AEM Forms部署在支援的J2EE應用程式伺服器上，而不是JBoss，您必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。
 
-**建立PDF匯編器客戶端**
+**建立PDF組合器使用者端**
 
-在以寫程式方式執行匯編器操作之前，必須建立匯編器服務客戶端。
+您必須先建立Assembler服務使用者端，才能以程式設計方式執行Assembler作業。
 
-**引用現有DDX文檔**
+**參考現有的DDX檔案**
 
-要驗證DDX文檔，必須引用現有DDX文檔。
+若要驗證DDX檔案，您必須參考現有的DDX檔案。
 
-**設定運行時選項以驗證DDX文檔**
+**設定執行階段選項以驗證DDX檔案**
 
-驗證DDX文檔時，必須設定指示匯編程式服務驗證DDX文檔的特定運行時選項，而不是執行它。 此外，還可以增加匯編程式服務寫入日誌檔案的資訊量。
+驗證DDX檔案時，您必須設定特定的執行階段選項，指示組合器服務驗證DDX檔案，而不是執行。 此外，您也可以增加Assembler服務寫入記錄檔的資訊量。
 
 **執行驗證**
 
-建立匯編程式服務客戶端、引用DDX文檔並設定運行時選項後，可以調用 `invokeDDX` 驗證DDX文檔的操作。 驗證DDX文檔時，可以通過 `null` 映射參數(此參數通常儲存匯編程式執行在DDX文檔中指定的操作所需的PDF文檔)。
+建立Assembler服務使用者端、參考DDX檔案並設定執行階段選項之後，您可以叫用 `invokeDDX` 驗證DDX檔案的作業。 驗證DDX檔案時，您可以通過 `null` 作為map引數(此引數通常會儲存Assembler執行DDX檔案中指定之作業所需的PDF檔案)。
 
-如果驗證失敗，則會引發異常，並且日誌檔案包含詳細資訊，解釋DDX文檔無效的原因。 `OperationException` 實例。 經過基本XML分析和模式檢查後，將執行對DDX規範的驗證。 DDX文檔中的所有錯誤都在日誌中指定。
+如果驗證失敗，系統會擲回例外狀況，而記錄檔中包含說明DDX檔案無效原因的詳細資訊，您可從 `OperationException` 執行個體。 一旦通過基本的XML剖析和結構描述檢查，就會執行DDX規格的驗證。 所有位於DDX檔案中的錯誤都會在記錄中指定。
 
-**將驗證結果保存到日誌檔案中**
+**將驗證結果儲存在記錄檔中**
 
-匯編器服務返回可寫入XML日誌檔案的驗證結果。 匯編程式服務寫入日誌檔案的詳細資訊量取決於您設定的運行時選項。
+Assembler服務會傳回您可以寫入XML記錄檔的驗證結果。 Assembler服務寫入記錄檔的詳細資訊量取決於您設定的執行階段選項。
 
 **另請參閱**
 
-[使用Java API驗證DDX文檔](#validate-a-ddx-document-using-the-java-api)
+[使用Java API驗證DDX檔案](#validate-a-ddx-document-using-the-java-api)
 
-[使用Web服務API驗證DDX文檔](#validate-a-ddx-document-using-the-web-service-api)
+[使用網站服務API驗證DDX檔案](#validate-a-ddx-document-using-the-web-service-api)
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以寫程式方式裝配PDF文檔](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[以程式設計方式組裝PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
-## 使用Java API驗證DDX文檔 {#validate-a-ddx-document-using-the-java-api}
+## 使用Java API驗證DDX檔案 {#validate-a-ddx-document-using-the-java-api}
 
-使用匯編器服務API(Java)驗證DDX文檔：
+使用組合器服務API (Java)驗證DDX檔案：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   在Java項目的類路徑中包括客戶端JAR檔案，如adobe-assembler-client.jar。
+   在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-assembler-client.jar。
 
-1. 建立PDF匯編器客戶端。
+1. 建立PDF組合器使用者端。
 
-   * 建立 `ServiceClientFactory` 包含連接屬性的對象。
-   * 建立 `AssemblerServiceClient` 使用其建構子並傳遞對象 `ServiceClientFactory` 的雙曲餘切值。
+   * 建立 `ServiceClientFactory` 包含連線屬性的物件。
+   * 建立 `AssemblerServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。
 
-1. 引用現有DDX文檔。
+1. 參考現有的DDX檔案。
 
-   * 建立 `java.io.FileInputStream` 表示DDX文檔的對象，方法是使用其建構子並傳遞一個字串值，該字串值指定DDX檔案的位置。
-   * 建立 `com.adobe.idp.Document` 使用其建構子並傳遞對象 `java.io.FileInputStream` 的雙曲餘切值。
+   * 建立 `java.io.FileInputStream` 物件，使用它的建構函式並傳遞字串值（指定DDX檔案的位置）來代表DDX檔案。
+   * 建立 `com.adobe.idp.Document` 物件，使用它的建構函式並傳遞 `java.io.FileInputStream` 物件。
 
-1. 設定運行時選項以驗證DDX文檔。
+1. 設定執行階段選項以驗證DDX檔案。
 
-   * 建立 `AssemblerOptionSpec` 使用其建構子儲存運行時選項的對象。
-   * 設定運行時選項，該選項指示匯編器服務通過調用 `AssemblerOptionSpec` 對象的setValidateOnly方法和傳遞 `true`。
-   * 通過調用匯編程式服務寫入日誌檔案的資訊量 `AssemblerOptionSpec` 對象 `getLogLevel` 方法和傳遞字串值符合您的要求。 驗證DDX文檔時，您需要將更多資訊寫入日誌檔案，以幫助驗證過程。 因此，您可以傳遞該值 `FINE` 或 `FINER`。
+   * 建立 `AssemblerOptionSpec` 物件，使用其建構函式來儲存執行階段選項。
+   * 設定執行階段選項，指示組合器服務透過叫用 `AssemblerOptionSpec` 物件的setValidateOnly方法和傳遞 `true`.
+   * 透過叫用「 」，設定Assembler服務寫入記錄檔的資訊量 `AssemblerOptionSpec` 物件的 `getLogLevel` 方法和傳遞字串值符合您的需求。 驗證DDX檔案時，您想要將更多資訊寫入記錄檔，以協助進行驗證程式。 因此，您可以傳遞值 `FINE` 或 `FINER`.
 
 1. 執行驗證。
 
-   調用 `AssemblerServiceClient` 對象 `invokeDDX` 方法並傳遞以下值：
+   叫用 `AssemblerServiceClient` 物件的 `invokeDDX` 方法並傳遞下列值：
 
-   * A `com.adobe.idp.Document` 表示DDX文檔的對象。
-   * 值 `null` 用於通常儲存PDF文檔的java.io.Map對象。
-   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 指定運行時選項的對象。
+   * A `com.adobe.idp.Document` 代表DDX檔案的物件。
+   * 值 `null` java.io.Map物件(通常儲存PDF檔案)。
+   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 指定執行階段選項的物件。
 
-   的 `invokeDDX` 方法返回 `AssemblerResult` 包含指定DDX文檔是否有效的資訊的對象。
+   此 `invokeDDX` 方法傳回 `AssemblerResult` 包含指定DDX檔案是否有效的資訊的物件。
 
-1. 將驗證結果保存到日誌檔案中。
+1. 將驗證結果儲存在記錄檔中。
 
-   * 建立 `java.io.File` 對象，並確保檔案副檔名為.xml。
-   * 調用 `AssemblerResult` 對象 `getJobLog` 的雙曲餘切值。 此方法返回 `com.adobe.idp.Document` 包含驗證資訊的實例。
-   * 調用 `com.adobe.idp.Document` 對象 `copyToFile` 複製內容的方法 `com.adobe.idp.Document` 對象。
+   * 建立 `java.io.File` 物件，並確認副檔名為.xml。
+   * 叫用 `AssemblerResult` 物件的 `getJobLog` 方法。 此方法會傳回 `com.adobe.idp.Document` 包含驗證資訊的例項。
+   * 叫用 `com.adobe.idp.Document` 物件的 `copyToFile` 複製目錄內容的方法 `com.adobe.idp.Document` 物件至檔案。
 
    >[!NOTE]
    >
-   >如果DDX文檔無效，則 `OperationException` 。 在catch語句中，可以調用 `OperationException` 對象 `getJobLog` 的雙曲餘切值。
+   >如果DDX檔案無效，請 `OperationException` 擲回。 在catch陳述式中，您可以叫用 `OperationException` 物件的 `getJobLog` 方法。
 
 **另請參閱**
 
-[驗證DDX文檔](#validating-ddx-documents)
+[驗證DDX檔案](#validating-ddx-documents)
 
-[快速啟動（SOAP模式）:使用Java API驗證DDX文檔](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api) （SOAP模式）
+[快速入門（SOAP模式）：使用Java API驗證DDX檔案](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api) （SOAP模式）
 
-[包括AEM FormsJava庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[設定連接屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用Web服務API驗證DDX文檔 {#validate-a-ddx-document-using-the-web-service-api}
+## 使用網站服務API驗證DDX檔案 {#validate-a-ddx-document-using-the-web-service-api}
 
-使用匯編器服務API（Web服務）驗證DDX文檔：
+使用組合器服務API （Web服務）驗證DDX檔案：
 
-1. 包括項目檔案。
+1. 包含專案檔案。
 
-   建立使用MTOM的Microsoft.NET項目。 確保使用以下WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
+   建立使用MTOM的Microsoft .NET專案。 請確定您使用下列WSDL定義： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >將localhost替換為表單伺服器的IP地址。
+   >將localhost取代為表單伺服器的IP位址。
 
-1. 建立PDF匯編器客戶端。
+1. 建立PDF組合器使用者端。
 
-   * 建立 `AssemblerServiceClient` 對象。
-   * 建立 `AssemblerServiceClient.Endpoint.Address` 對象 `System.ServiceModel.EndpointAddress` 建構子。 將指定WSDL的字串值傳遞給AEM Forms服務(例如， `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 你不需要 `lc_version` 屬性。 建立服務引用時使用此屬性。
-   * 建立 `System.ServiceModel.BasicHttpBinding` 通過獲取 `AssemblerServiceClient.Endpoint.Binding` 的子菜單。 將返回值強制轉換為 `BasicHttpBinding`。
-   * 設定 `System.ServiceModel.BasicHttpBinding` 對象 `MessageEncoding` 欄位 `WSMessageEncoding.Mtom`。 此值確保使用MTOM。
-   * 通過執行以下任務啟用基本HTTP身份驗證：
+   * 建立 `AssemblerServiceClient` 物件（使用其預設建構函式）。
+   * 建立 `AssemblerServiceClient.Endpoint.Address` 物件，使用 `System.ServiceModel.EndpointAddress` 建構函式。 將指定WSDL的字串值傳遞至AEM Forms服務(例如， `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 您不需要使用 `lc_version` 屬性。 當您建立服務參考時，會使用此屬性。
+   * 建立 `System.ServiceModel.BasicHttpBinding` 物件，方法是取得 `AssemblerServiceClient.Endpoint.Binding` 欄位。 將傳回值轉換為 `BasicHttpBinding`.
+   * 設定 `System.ServiceModel.BasicHttpBinding` 物件的 `MessageEncoding` 欄位至 `WSMessageEncoding.Mtom`. 此值可確保使用MTOM。
+   * 執行下列工作來啟用基本HTTP驗證：
 
-      * 將表AEM單用戶名分配給欄位 `AssemblerServiceClient.ClientCredentials.UserName.UserName`。
-      * 將相應的密碼值分配給欄位 `AssemblerServiceClient.ClientCredentials.UserName.Password`。
-      * 分配常數值 `HttpClientCredentialType.Basic` 到 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 分配常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 到 `BasicHttpBindingSecurity.Security.Mode`。
+      * 將AEM表單使用者名稱指派給欄位 `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * 將對應的密碼值指派給欄位 `AssemblerServiceClient.ClientCredentials.UserName.Password`.
+      * 指派常數值 `HttpClientCredentialType.Basic` 至欄位 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 指派常數值 `BasicHttpSecurityMode.TransportCredentialOnly` 至欄位 `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 引用現有DDX文檔。
+1. 參考現有的DDX檔案。
 
-   * 建立 `BLOB` 對象。 的 `BLOB` 對象用於儲存DDX文檔。
-   * 建立 `System.IO.FileStream` 通過調用其建構子並傳遞一個字串值（該字串值表示DDX文檔的檔案位置和開啟檔案的模式）來對對象。
-   * 建立一個位元組陣列，用於儲存 `System.IO.FileStream` 的雙曲餘切值。 通過獲取 `System.IO.FileStream` 對象 `Length` 屬性。
-   * 通過調用 `System.IO.FileStream` 對象 `Read` 方法，將位元組陣列、起始位置和流長度傳遞給讀取。
-   * 填充 `BLOB` 通過指定對象 `MTOM` 屬性。
+   * 建立 `BLOB` 物件（使用其建構函式）。 此 `BLOB` 物件可用來儲存DDX檔案。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表DDX檔案檔案位置的字串值，以及用來開啟檔案的模式。
+   * 建立位元組陣列，儲存 `System.IO.FileStream` 物件。 您可以取得 `System.IO.FileStream` 物件的 `Length` 屬性。
+   * 叫用 `System.IO.FileStream` 物件的 `Read` 方法，並傳遞位元組陣列、起始位置以及要讀取的資料流長度。
+   * 填入 `BLOB` 物件，透過指派其 `MTOM` 具有位元組陣列內容的屬性。
 
-1. 設定運行時選項以驗證DDX文檔。
+1. 設定執行階段選項以驗證DDX檔案。
 
-   * 建立 `AssemblerOptionSpec` 使用其建構子儲存運行時選項的對象。
-   * 設定運行時選項，該選項指示匯編器服務通過將值true賦給 `AssemblerOptionSpec` 對象 `validateOnly` 資料成員。
-   * 通過為匯編程式服務指定字串值，設定匯編程式服務寫入日誌檔案的資訊量 `AssemblerOptionSpec` 對象 `logLevel` 資料成員。 方法驗證DDX文檔時，希望將更多資訊寫入日誌檔案，以幫助驗證過程。 因此，可以指定值 `FINE` 或 `FINER`。 有關可設定的運行時選項的資訊，請參見 `AssemblerOptionSpec` 類引用 [AEM FormsAPI參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+   * 建立 `AssemblerOptionSpec` 物件，使用其建構函式來儲存執行階段選項。
+   * 將值true指派給，設定執行階段選項，指示Assembler服務驗證DDX檔案。 `AssemblerOptionSpec` 物件的 `validateOnly` 資料成員。
+   * 將字串值指派給，設定Assembler服務寫入記錄檔的資訊量。 `AssemblerOptionSpec` 物件的 `logLevel` 資料成員。 方法驗證DDX檔案時，您想要將更多資訊寫入記錄檔，以協助進行驗證程式。 因此，您可以指定值 `FINE` 或 `FINER`. 如需您可以設定的執行階段選項的相關資訊，請參閱 `AssemblerOptionSpec` 中的類別參考 [AEM Forms API參考](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. 執行驗證。
 
-   調用 `AssemblerServiceClient` 對象 `invokeDDX` 方法並傳遞以下值：
+   叫用 `AssemblerServiceClient` 物件的 `invokeDDX` 方法並傳遞下列值：
 
-   * A `BLOB` 表示DDX文檔的對象。
-   * 值 `null` 為 `Map` 通常儲存PDF文檔的對象。
-   * 安 `AssemblerOptionSpec` 指定運行時選項的對象。
+   * A `BLOB` 代表DDX檔案的物件。
+   * 值 `null` 的 `Map` 通常儲存PDF檔案的物件。
+   * 一個 `AssemblerOptionSpec` 指定執行階段選項的物件。
 
-   的 `invokeDDX` 方法返回 `AssemblerResult` 包含指定DDX文檔是否有效的資訊的對象。
+   此 `invokeDDX` 方法傳回 `AssemblerResult` 包含指定DDX檔案是否有效的資訊的物件。
 
-1. 將驗證結果保存到日誌檔案中。
+1. 將驗證結果儲存在記錄檔中。
 
-   * 建立 `System.IO.FileStream` 對象，方法是調用其建構子並傳遞一個字串值，該字串值表示日誌檔案的檔案位置以及在中開啟檔案的模式。 確保檔案副檔名為.xml。
-   * 建立 `BLOB` 通過獲取日誌資訊 `AssemblerResult` 對象 `jobLog` 資料成員。
-   * 建立一個位元組陣列，用於儲存 `BLOB` 的雙曲餘切值。 通過獲取 `BLOB` 對象 `MTOM` 的子菜單。
-   * 建立 `System.IO.BinaryWriter` 通過調用其建構子並傳遞對象 `System.IO.FileStream` 的雙曲餘切值。
-   * 通過調用 `System.IO.BinaryWriter` 對象 `Write` 和傳遞位元組陣列。
+   * 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表記錄檔檔案位置的字串值，以及用來開啟檔案的模式。 確認副檔名為.xml。
+   * 建立 `BLOB` 物件，透過取得 `AssemblerResult` 物件的 `jobLog` 資料成員。
+   * 建立位元組陣列，儲存 `BLOB` 物件。 透過取得 `BLOB` 物件的 `MTOM` 欄位。
+   * 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式並傳遞 `System.IO.FileStream` 物件。
+   * PDF透過叫用 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
    >[!NOTE]
    >
-   >如果DDX文檔無效，則 `OperationException` 。 在catch語句中，可以獲取 `OperationException` 對象 `jobLog` 成員。
+   >如果DDX檔案無效，請 `OperationException` 擲回。 在catch陳述式中，您可以取得 `OperationException` 物件的 `jobLog` 成員。
 
 **另請參閱**
 
-[驗證DDX文檔](#validating-ddx-documents)
+[驗證DDX檔案](#validating-ddx-documents)
 
-[使用MTOM調用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

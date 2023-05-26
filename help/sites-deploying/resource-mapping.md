@@ -1,7 +1,7 @@
 ---
 title: 資源對應
 seo-title: Resource Mapping
-description: 瞭解如何使用資源映射為定義重定向、虛AEM擬URL和虛擬主機。
+description: 瞭解如何使用資源對應為AEM定義重新導向、虛名URL和虛擬主機。
 seo-description: Learn how to define redirects, vanity URLs and virtual hosts for AEM by using resource mapping.
 uuid: 2ca2d0e4-6f90-4ecc-82db-26991f08c66f
 contentOwner: User
@@ -21,60 +21,60 @@ ht-degree: 3%
 
 # 資源對應{#resource-mapping}
 
-資源映射用於定義重定向、虛擬URL和虛擬主AEM機。
+資源對應可用來定義AEM的重新導向、虛名URL和虛擬主機。
 
-例如，可以使用這些映射：
+例如，您可以使用這些對應來：
 
-* 將所有請求前置詞為 `/content` 這樣內部結構就不會被訪問您網站的人看到。
-* 定義重定向，以便向 `/content/en/gateway` 將網站的頁面重定向到 `https://gbiv.com/`。
+* 所有請求的前置詞為 `/content` 以便對網站的訪客隱藏內部結構。
+* 定義重新導向，讓所有要求到 `/content/en/gateway` 您的網站頁面會重新導向至 `https://gbiv.com/`.
 
-一個可能的HTTP映射將所有請求前置詞為 `localhost:4503` 與 `/content`。 這樣的映射可用於在網站訪問者允許的情況下隱藏內部結構：
+一個可能的HTTP對應會將所有請求加上前置詞 `localhost:4503` 替換為 `/content`. 像這樣的對應可用於在允許的情況下對網站的訪客隱藏內部結構：
 
 `localhost:4503/content/we-retail/en/products.html`
 
-要訪問，使用：
+以透過以下方式存取：
 
 `localhost:4503/we-retail/en/products.html`
 
-因為映射將自動添加前置詞 `/content` 至 `/we-retail/en/products.html`。
+因為對應會自動新增前置詞 `/content` 至 `/we-retail/en/products.html`.
 
 >[!CAUTION]
 >
->虛榮型URL不支援規則運算式模式。
+>虛名URL不支援規則運算式模式。
 
 >[!NOTE]
 >
->請參閱Sling文檔， [資源解析的映射](https://sling.apache.org/site/resources.html) 和 [資源](https://sling.apache.org/site/mappings-for-resource-resolution.html) 的上界。
+>請參閱Sling檔案，以及 [資源解析的對應](https://sling.apache.org/site/resources.html) 和 [資源](https://sling.apache.org/site/mappings-for-resource-resolution.html) 以取得進一步資訊。
 
-## 查看映射定義 {#viewing-mapping-definitions}
+## 檢視對應定義 {#viewing-mapping-definitions}
 
-映射形成兩個清單，JCR資源解析程式會計算（自上而下）以查找匹配項。
+JCR資源解析器評估（由上而下）以尋找相符專案的對應表單有兩個清單。
 
-這些清單可在 **JCR資源解析器** Felix控制台選項；比如說， `https://<*host*>:<*port*>/system/console/jcrresolver`:
+這些清單可在「 」下方檢視（連同設定資訊） **JCR ResourceResolver** Felix主控台的選項；例如， `https://<*host*>:<*port*>/system/console/jcrresolver`：
 
-* 配置顯示當前配置(如 [Apache Sling資源解析器](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver))。
+* 組態顯示目前的組態（為下列專案所定義）： [Apache Sling資源解析程式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver))。
 
-* 配置Test這允許您輸入URL或資源路徑。 按一下 **解決** 或 **地圖** 確認系統將如何轉換條目。
+* 設定測試這可讓您輸入URL或資源路徑。 按一下 **解決** 或 **地圖** 以確認系統如何轉換專案。
 
-* **解析程式映射項**
-ResourceResolver.resolve方法用於將URL映射到Resources的條目清單。
+* **解析器對應專案**
+ResourceResolver.resolve方法用來將URL對應至資源的專案清單。
 
-* **映射映射條目**
-ResourceResolver.map方法用於將資源路徑映射到URL的條目清單。
+* **對應對應專案**
+ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
 
-這兩個清單顯示各種條目，包括應用程式定義為預設值的條目。 這些URL通常旨在簡化用戶的URL。
+這兩個清單會顯示各種專案，包括應用程式定義為預設值的專案。 這些功能的目的通常是簡化使用者的URL。
 
-清單對a **圖案**，與請求匹配的規則運算式， **替換** 定義強制重定向。
+清單會配對 **圖樣**，此規則運算式與請求相符，且具有一個 **替代** 定義要強制的重新導向。
 
 例如：
 
-**圖案** `^[^/]+/[^/]+/welcome$`
+**圖樣** `^[^/]+/[^/]+/welcome$`
 
 將觸發：
 
-**替換** `/libs/cq/core/content/welcome.html`。
+**替代** `/libs/cq/core/content/welcome.html`.
 
-要重定向請求：
+若要重新導向請求：
 
 `https://localhost:4503/welcome` ``
 
@@ -82,60 +82,60 @@ ResourceResolver.map方法用於將資源路徑映射到URL的條目清單。
 
 `https://localhost:4503/libs/cq/core/content/welcome.html`
 
-在儲存庫內建立新的映射定義。
+新的對應定義會在存放庫中建立。
 
 >[!NOTE]
 >
->有許多資源可以幫助解釋如何定義規則運算式；例如 [https://www.regular-expressions.info/](https://www.regular-expressions.info/)。
+>有許多資源可協助說明如何定義規則運算式，例如 [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
 
-### 在中建立映射定AEM義 {#creating-mapping-definitions-in-aem}
+### 在AEM中建立對應定義 {#creating-mapping-definitions-in-aem}
 
-在標準安裝中，AEM您可以找到資料夾：
+在AEM的標準安裝中，您可以找到資料夾：
 
 `/etc/map/http`
 
-這是定義HTTP協定映射時使用的結構。 其他資料夾( `sling:Folder`) `/etc/map` 用於您要映射的其他協定。
+這是定義HTTP通訊協定對應時使用的結構。 其他資料夾( `sling:Folder`)可建立於 `/etc/map` 任何其他要對應的通訊協定。
 
-#### 配置內部重定向到/content {#configuring-an-internal-redirect-to-content}
+#### 設定內部重新導向至/content {#configuring-an-internal-redirect-to-content}
 
-建立將任何請求前置詞為https://localhost:4503/的映射 `/content`:
+建立為https://localhost:4503/的任何請求加上前置詞的對映 `/content`：
 
-1. 使用CRXDE導航到 `/etc/map/http`。
+1. 使用CRXDE導覽至 `/etc/map/http`.
 
 1. 建立新節點：
 
-   * **類型** `sling:Mapping`
-此節點類型用於此類映射，但其使用並非必需。
+   * **型別** `sling:Mapping`
+此節點型別適用於此類對應，不過其使用並非強制性。
 
    * **名稱** `localhost_any`
 
-1. 按一下 **全部保存**。
-1. **添加** 此節點的以下屬性：
+1. 按一下 **全部儲存**.
+1. **新增** 此節點的下列屬性：
 
    * **名稱** `sling:match`
 
-      * **類型** `String`
+      * **型別** `String`
 
       * **值** `localhost.4503/`
    * **名稱** `sling:internalRedirect`
 
-      * **類型** `String[]`
+      * **型別** `String[]`
 
       * **值** `/content/`
 
 
-1. 按一下 **全部保存**。
+1. 按一下 **全部儲存**.
 
-這將處理請求，例如：
+這將處理如下請求：
 `localhost:4503/geometrixx/en/products.html`
-如：
+就好像：
 `localhost:4503/content/geometrixx/en/products.html`
-已被要求。
+已要求。
 
 >[!NOTE]
 >
->請參閱 [資源](https://sling.apache.org/site/mappings-for-resource-resolution.html) 中，瞭解有關sling屬性以及如何配置這些屬性的詳細資訊。
+>另請參閱 [資源](https://sling.apache.org/site/mappings-for-resource-resolution.html) Sling檔案中，以取得有關可用sling屬性及其設定方式的進一步資訊。
 
 >[!NOTE]
 >
->您可以使用 `/etc/map.publish` 以保存發佈環境的配置。 然後必須複製這些檔案，並且新位置( `/etc/map.publish`) **映射位置** 的 [Apache Sling資源解析器](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) 的子菜單。
+>您可以使用 `/etc/map.publish` 以保留發佈環境的設定。 然後必須複製這些專案，並且新位置( `/etc/map.publish`)設定的 **對應位置** 的 [Apache Sling資源解析程式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) 發佈環境的。

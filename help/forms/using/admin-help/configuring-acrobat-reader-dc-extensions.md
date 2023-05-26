@@ -1,7 +1,7 @@
 ---
-title: 配置Acrobat Reader DC擴展以捕獲資料
+title: 設定資料擷取的Acrobat Reader DC擴充功能
 seo-title: Configuring Acrobat Reader DC extensions for data capture
-description: 瞭解如何配置Acrobat Reader DC擴展以進行資料捕獲。
+description: 瞭解如何設定Acrobat Reader DC擴充功能以進行資料擷取。
 seo-description: Learn how to configure Acrobat Reader DC extensions for data capture.
 uuid: af6b3c72-601e-4f54-8343-a323eeee5906
 contentOwner: admin
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 ---
 
-# 配置Acrobat Reader DC擴展以捕獲資料 {#configuring-acrobat-reader-dc-extensions-for-data-capture}
+# 設定資料擷取的Acrobat Reader DC擴充功能 {#configuring-acrobat-reader-dc-extensions-for-data-capture}
 
-如果表單安裝AEM的用戶使用Content Services（已棄用）的資料捕獲功能，建議您為這些用戶建立具有只讀訪問權限的角色。
+如果您安裝AEM Forms的使用者使用Content Services的資料擷取功能（已棄用），建議您為這些使用者建立具有唯讀存取權的角色。
 
-***附註&#x200B;**:Adobe®LiveCycle®內容服務ES（已棄用）是安裝有LiveCycle的內容管理系統。 它使用戶能夠設計、管理、監控和優化以人為中心的流程。 Content Services（已棄用）支援在12/31/2014結束。 請參閱 [Adobe產品生命週期文檔](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。*
+***注意&#x200B;**：Adobe®LiveCycle® Content Services ES （已棄用）是隨LiveCycle安裝的內容管理系統。 它可讓使用者設計、管理、監控及最佳化以人為中心的流程。 內容服務（已棄用）支援將於2014年12月31日終止。 另請參閱 [Adobe產品生命週期檔案](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).*
 
-資料捕獲要求您分配用戶角色以訪問SampleReaderExtensionsCredential。 您可以分配標準的信任管理員角色，但請考慮此角色為一般非管理用戶提供強大的管理員權限，這些權限可以控制PKI信任設定和管理PKI憑據，這可能會危害您在生產環境中安裝表單AEM的安全性。 建議表單系統AEM管理員建立一個僅授予對信任儲存的只讀訪問權限的角色，並將此新角色分配給使用資料捕獲的非管理員用戶。
+資料擷取需要您指派使用者角色來存取SampleReaderExtensionsCredential。 您可以指派標準的「信任管理員」角色，但認為此角色會賦予一般的非管理使用者強大的管理員許可權，可控制「PKI信任」設定並管理「PKI認證」，這可能會危及您在生產環境中安裝AEM表單的安全性。 建議AEM表單系統管理員建立僅授與信任存放區唯讀存取權的角色，並將此新角色指派給使用資料擷取的非管理員使用者。
 
-## 為資料捕獲用戶建立角色 {#create-a-role-for-data-capture-users}
+## 為資料擷取使用者建立角色 {#create-a-role-for-data-capture-users}
 
-1. 在管理控制台中，按一下「設定」>「用戶管理」>「角色管理」，然後按一下「新建角色」。
-1. 在相應欄位中輸入角色名稱（例如，資料捕獲用戶）和說明，然後按一下下一步。
-1. 在「角色權限」螢幕上，按一下「查找權限」，然後從可用權限清單中選擇「憑據讀取」。
-1. 按一下「OK（確定）」 ，然後按一下「Finish（完成）」。
+1. 在管理控制檯中，按一下「設定>使用者管理>角色管理」，然後按一下「新增角色」。
+1. 在適當的欄位中輸入角色名稱（例如「資料擷取使用者」）和說明，然後按一下「下一步」。
+1. 在「角色許可權」畫面上，按一下「尋找許可權」，然後從可用許可權清單中選取「認證讀取」。
+1. 按一下「確定」，然後按一下「完成」。
 
-## 分配資料捕獲角色 {#assign-the-data-capture-role}
+## 指派資料擷取角色 {#assign-the-data-capture-role}
 
-1. 在管理控制台中，按一下「設定」>「用戶管理」>「角色管理」，然後按一下「查找」。
-1. 按一下您建立的資料捕獲用戶角色。
-1. 在「角色用戶/組」頁籤上，按一下「查找用戶/組」。
-1. 在「查找用戶和組」螢幕上，按一下「查找」，選擇需要資料捕獲用戶角色的用戶，然後按一下「確定」。
-1. 在「編輯角色」螢幕上，按一下「保存」。
+1. 在管理控制檯中，按一下「設定>使用者管理>角色管理」，然後按一下「尋找」。
+1. 按一下您建立的資料擷取使用者角色。
+1. 在「角色使用者/群組」標籤上，按一下「尋找使用者/群組」。
+1. 在「尋找使用者和群組」畫面上，按一下「尋找」，選取需要資料擷取使用者角色的使用者，然後按一下「確定」。
+1. 在「編輯角色」畫面上，按一下「儲存」。

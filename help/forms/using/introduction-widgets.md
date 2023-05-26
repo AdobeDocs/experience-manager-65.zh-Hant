@@ -1,7 +1,7 @@
 ---
-title: 用於自適應和HTML5形式的外觀框架
+title: 最適化和HTML5表單的外觀架構
 seo-title: Appearance framework for adaptive and HTML5 forms
-description: 移動Forms將表單模板渲染為HTML5表單。 這些表單使用jQuery、Backbone.js和Underwork.js檔案進行外觀和啟用指令碼。
+description: Mobile Forms會將表單範本轉譯為HTML5表單。 這些表單使用jQuery、Backbone.js和Underscore.js檔案作為外觀並啟用指令碼。
 seo-description: Mobile Forms render Form Templates as HTML5 forms. These forms use jQuery, Backbone.js and Underscore.js files for the appearance and to enable scripting.
 uuid: 183b8d71-44fc-47bf-8cb2-1cf920ffd23a
 content-type: reference
@@ -16,21 +16,21 @@ ht-degree: 2%
 
 ---
 
-# 用於自適應和HTML5形式的外觀框架 {#appearance-framework-for-adaptive-and-html-forms}
+# 最適化和HTML5表單的外觀架構 {#appearance-framework-for-adaptive-and-html-forms}
 
-Forms(適應形式和HTML5形式)使用 [j查詢](https://jquery.com/)。 [骨幹.js](https://backbonejs.org/) 和 [下划線.js](https://underscorejs.org/) 用於外觀和指令碼編寫的庫。 表單還使用 [j查詢UI](https://jqueryui.com/) **小部件** 窗體中所有交互元素（如欄位和按鈕）的體系結構。 此體系結構使窗體開發人員能夠在Forms使用一組豐富的可用jQuery小部件和插件。 您還可以實現特定於表單的邏輯，同時從用戶（如leadDigits/trailDigits限制）或實現圖片子句中捕獲資料。 表單開發人員可以建立和使用自定義附件來改進資料捕獲體驗，並使其更易於用戶使用。
+Forms (適用性表單和HTML5表單)使用 [jQuery](https://jquery.com/)， [Backbone.js](https://backbonejs.org/) 和 [底線.js](https://underscorejs.org/) 用於外觀和指令碼的程式庫。 這些表單也使用 [jQuery UI](https://jqueryui.com/) **Widget** 表單中所有互動式元素（例如欄位和按鈕）的架構。 此架構可讓Form開發人員在Forms中使用一組豐富的可用jQuery Widget和外掛程式。 您也可以從使用者擷取資料（例如leadDigits/trailDigits限制或實作圖片子句）時實作表單特定邏輯。 表單開發人員可以建立和使用自訂外觀，以改善資料擷取體驗，並使其更人性化。
 
-本文是為對jQuery和jQuery小部件有充分認識的開發人員而設計的。 它提供了對外觀框架的洞察，並使開發人員能夠為表單域建立替代外觀。
+本文內容適用於對jQuery和jQuery Widget有足夠瞭解的開發人員。 它提供外觀架構的深入分析，並可讓開發人員為表單欄位建立替代外觀。
 
-該外觀框架依賴於各種選項、事件（觸發器）和函式來捕獲用戶與表單的交互，並響應模型更改以通知最終用戶。 此外：
+外觀架構仰賴各種選項、事件（觸發器）和函式來擷取使用者與表單的互動，並回應模型變更以通知一般使用者。 此外：
 
-* 框架提供一組用於欄位外觀的選項。 這些選項是鍵值對，並分為兩類：常用選項和欄位類型特定選項。
-* 外觀作為合同的一部分，會觸發一組事件，如進入和退出。
-* 實現一組功能需要外觀。 有些函式是常用的，而有些函式是特定於欄位類型函式的。
+* 此架構提供一組欄位外觀的選項。 這些選項是索引鍵/值組，分為兩個類別：通用選項和欄位型別特定選項。
+* 作為合約的一部分，外觀會觸發一系列事件，例如enter和exit。
+* 實作一組函式需要外觀。 有些函式是通用的，有些則是欄位型別函式專用的。
 
 ## 常用選項 {#common-options}
 
-以下是設定全局選項。 這些選項可用於每個欄位。
+以下是設定的全域選項。 這些選項適用於每個欄位。
 
 <table>
  <tbody>
@@ -40,58 +40,58 @@ Forms(適應形式和HTML5形式)使用 [j查詢](https://jquery.com/)。 [骨�
   </tr>
   <tr>
    <td>名稱</td>
-   <td>用於在指令碼表達式中指定此對象或事件的標識符。 例如，此屬性指定主機應用程式的名稱。</td>
+   <td>用於在指令碼運算式中指定此物件或事件的識別碼。 例如，此屬性會指定主機應用程式的名稱。</td>
   </tr>
   <tr>
    <td>值</td>
    <td>欄位的實際值。 </td>
   </tr>
   <tr>
-   <td>displayValue</td>
-   <td>將顯示該欄位的值。 </td>
+   <td>displayvalue</td>
+   <td>此時會顯示欄位的這個值。 </td>
   </tr>
   <tr>
-   <td>螢幕閱讀器文本</td>
-   <td>螢幕Reader使用此值來說明有關欄位的資訊。 表單提供值，您可以覆蓋該值。<br /> </td>
+   <td>screenreaderText</td>
+   <td>熒幕Reader使用此值來提供欄位相關資訊的旁白。 表單會提供值，您可以覆寫值。<br /> </td>
   </tr>
   <tr>
-   <td>頁籤索引</td>
-   <td>欄位在表單的制表符序列中的位置。 僅當要更改表單的預設制表符順序時，才覆蓋tabIndex。</td>
+   <td>tabIndex</td>
+   <td>欄位在表單索引標籤序列中的位置。 只有在您想要變更表單的預設tab鍵順序時，才覆寫tabIndex。</td>
   </tr>
   <tr>
    <td>角色</td>
-   <td>元素的角色，例如標題或表。</td>
+   <td>元素的角色，例如，標題或表格。</td>
   </tr>
   <tr>
    <td>高度</td>
-   <td>小部件的高度。 它以像素指定。 </td>
+   <td>Widget的高度。 以畫素為單位指定。 </td>
   </tr>
   <tr>
    <td>寬度</td>
-   <td>小部件的寬度。 它以像素指定。</td>
+   <td>Widget的寬度。 以畫素為單位指定。</td>
   </tr>
   <tr>
-   <td>訪問</td>
-   <td>用於訪問容器對象（如子窗體）的內容的控制項。</td>
+   <td>存取</td>
+   <td>用來存取容器物件（例如子表單）內容的控制項。</td>
   </tr>
   <tr>
-   <td>para樣式</td>
-   <td>構件的XFA元素的para屬性。</td>
+   <td>paraStyles</td>
+   <td>Widget之XFA元素的para屬性。</td>
   </tr>
   <tr>
    <td>目錄</td>
-   <td>文本的方向。 可能的值為ltr（從左到右）和rtl（從右到左）。</td>
+   <td>文字的方向。 可能的值為ltr （由左至右）和rtl （由右至左）。</td>
   </tr>
  </tbody>
 </table>
 
-除了這些選項外，框架還提供了一些其他選項，這些選項因欄位類型而異。 下面列出了特定於欄位的選項的詳細資訊。
+除了這些選項，框架還提供其他選項，這些選項會因欄位型別而異。 以下列出欄位特定選項的詳細資料。
 
-### 與表單框架的交互 {#interaction-with-forms-framework}
+### 與表單框架的互動 {#interaction-with-forms-framework}
 
-要與表單框架交互，小部件會觸發一些事件以使表單指令碼能夠工作。 如果小部件未引發這些事件，則在該欄位的窗體中編寫的某些指令碼將不起作用。
+為了與表單架構互動，Widget會觸發一些事件，讓表單指令碼運作。 如果Widget未擲回這些事件，則在該欄位表單中撰寫的某些指令碼將無法運作。
 
-#### 由小部件觸發的事件 {#events-triggered-by-widget}
+#### Widget觸發的事件 {#events-triggered-by-widget}
 
 <table>
  <tbody>
@@ -101,26 +101,26 @@ Forms(適應形式和HTML5形式)使用 [j查詢](https://jquery.com/)。 [骨�
   </tr>
   <tr>
    <td>XFA_ENTER_EVENT</td>
-   <td>只要欄位處於焦點，就會觸發此事件。 它允許在欄位上運行「enter」指令碼。 觸發事件的語法為<br /> （小部件）。_trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
+   <td>每當欄位成為焦點時，就會觸發此事件。 它可讓「enter」指令碼在欄位上執行。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_EXIT_EVENT</td>
-   <td>每當用戶離開該欄位時，都會觸發此事件。 它允許引擎設定欄位的值並運行其「exit」指令碼。 觸發事件的語法為<br /> （小部件）。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
+   <td>只要使用者離開欄位，就會觸發此事件。 它可讓引擎設定欄位的值並執行其「退出」指令碼。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CHANGE_EVENT</td>
-   <td>觸發此事件，以允許引擎運行寫入該欄位的「更改」指令碼。 觸發事件的語法為<br /> （小部件）。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
+   <td>此事件會觸發，以允許引擎執行在欄位上寫入的「變更」指令碼。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CLICK_EVENT</td>
-   <td>只要按一下該欄位，就會觸發此事件。 它允許引擎運行寫在欄位上的「click」指令碼。 觸發事件的語法為<br /> （小部件）。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
+   <td>只要按一下欄位，就會觸發此事件。 它可讓引擎執行在欄位上寫入的「click」指令碼。 觸發事件的語法為<br /> (Widget)。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
   </tr>
  </tbody>
 </table>
 
-#### 由小部件實現的API {#apis-implemented-by-widget}
+#### 由Widget實作的API {#apis-implemented-by-widget}
 
-外觀框架調用了在自定義小部件中實現的小部件的某些功能。 小部件必須實現以下功能：
+外觀架構會呼叫在自訂Widget中實作的Widget的某些函式。 Widget必須實作下列函式：
 
 <table>
  <tbody>
@@ -129,29 +129,29 @@ Forms(適應形式和HTML5形式)使用 [j查詢](https://jquery.com/)。 [骨�
    <th>說明</th>
   </tr>
   <tr>
-   <td>焦點：函式()</td>
-   <td>集中精力在現場。</td>
+   <td>聚焦：function()</td>
+   <td>將焦點放在欄位。</td>
   </tr>
   <tr>
-   <td>按一下：函式()</td>
-   <td>將焦點放在欄位上並調用XFA_CLICK_EVENT。</td>
+   <td>click： function()</td>
+   <td>將焦點放在欄位上並呼叫XFA_CLICK_EVENT。</td>
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>錯誤消息：字串 </em>表示錯誤<br /> <em>錯誤類型：字串("warning"/"error")</em></p> <p><strong>注釋</strong>:僅適用於HTML5窗體。</p> </td>
-   <td>將錯誤消息和錯誤類型發送到小部件。 小部件顯示錯誤。</td>
+   <td><p>markError：function(errorMessage， errorType)<br /> <br /> <em>錯誤訊息：字串 </em>代表錯誤<br /> <em>errorType：字串("warning"/"error")</em></p> <p><strong>注意</strong>：僅適用於HTML5表單。</p> </td>
+   <td>傳送錯誤訊息和錯誤型別至Widget。 Widget會顯示錯誤。</td>
   </tr>
   <tr>
-   <td><p>clearError:函式()</p> <p><strong>注釋</strong>:僅適用於HTML5窗體。</p> </td>
-   <td>如果欄位中的錯誤已修復，則調用。 小部件隱藏錯誤。</td>
+   <td><p>clearError： function()</p> <p><strong>注意</strong>：僅適用於HTML5表單。</p> </td>
+   <td>如果欄位中的錯誤已修正，則呼叫。 Widget會隱藏錯誤。</td>
   </tr>
  </tbody>
 </table>
 
-## 特定於欄位類型的選項 {#options-specific-to-type-of-field}
+## 欄位型別特定的選項 {#options-specific-to-type-of-field}
 
-所有自定義小部件都應符合上述規範。 要使用不同欄位的功能，小部件必須符合該特定欄位的准則。
+所有自訂Widget都應符合上述規格。 若要使用不同欄位的功能，Widget必須符合該特定欄位的准則。
 
-### 文本編輯：文本欄位 {#textedit-text-field}
+### 文字編輯：文字欄位 {#textedit-text-field}
 
 <table>
  <tbody>
@@ -160,21 +160,21 @@ Forms(適應形式和HTML5形式)使用 [j查詢](https://jquery.com/)。 [骨�
    <th>說明</th>
   </tr>
   <tr>
-   <td>多線</td>
-   <td>如果欄位支援輸入換行符，則返回true；否則返回false。</td>
+   <td>多行</td>
+   <td>如果欄位支援輸入新行字元，則為True，否則為false。</td>
   </tr>
   <tr>
-   <td>最大字元數</td>
+   <td>maxChars</td>
    <td>可在欄位中輸入的最大字元數。</td>
   </tr>
   <tr>
-   <td><p>limitLengthToVisibleArea</p> <p><strong>注釋</strong>:僅適用於HTML5窗體</p> </td>
-   <td>指定當文本寬度超過構件寬度時文本欄位的行為。</td>
+   <td><p>limitLengthToVisibleArea</p> <p><strong>注意</strong>：僅適用於HTML5表單</p> </td>
+   <td>指定文字寬度超過Widget寬度時文字欄位的行為。</td>
   </tr>
  </tbody>
 </table>
 
-### 選擇清單：下拉清單，清單框 {#choicelist-dropdownlist-listbox}
+### ChoiceList： DropDownList， ListBox {#choicelist-dropdownlist-listbox}
 
 <table>
  <tbody>
@@ -184,23 +184,23 @@ Forms(適應形式和HTML5形式)使用 [j查詢](https://jquery.com/)。 [骨�
   </tr>
   <tr>
    <td>值<br /> </td>
-   <td>選定值的陣列。<br /> </td>
+   <td>選取值的陣列。<br /> </td>
   </tr>
   <tr>
    <td>項目<br /> </td>
-   <td>要作為選項顯示的對象陣列。 每個對象包含兩個屬性 — <br /> 保存：要保存的值，顯示：值。<br /> <br /> </td>
+   <td>要顯示為選項的物件陣列。 每個物件包含兩個屬性 — <br /> 儲存：值儲存，顯示：值顯示。<br /> <br /> </td>
   </tr>
   <tr>
-   <td><p>可編輯</p> <p><strong>注釋</strong>:僅適用於HTML5窗體。<br /> </p> </td>
-   <td>如果值為true，則在小部件中啟用自定義文本條目。<br /> </td>
+   <td><p>可編輯</p> <p><strong>注意</strong>：僅適用於HTML5表單。<br /> </p> </td>
+   <td>如果值為true，則會在Widget中啟用自訂文字輸入。<br /> </td>
   </tr>
   <tr>
-   <td>displayValue<br /> </td>
+   <td>displayvalue<br /> </td>
    <td>要顯示的值陣列。<br /> </td>
   </tr>
   <tr>
    <td>多選<br /> </td>
-   <td>如果允許多個選擇，則返回true；否則返回false。<br /> </td>
+   <td>如果允許多重選取，則為True，否則為false。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -214,31 +214,31 @@ Forms(適應形式和HTML5形式)使用 [j查詢](https://jquery.com/)。 [骨�
    <th>說明</th>
   </tr>
   <tr>
-   <td><p>addItem:<em> 函式(itemValues)<br /> itemValues:包含顯示和保存值的對象 <br /> {sDisplayVal: &lt;displayvalue&gt;, sSaveVal: &lt;save value=""&gt;}</em></p> </td>
-   <td>將項添加到清單。</td>
+   <td><p>addItem：<em> function(itemValues)<br /> itemvalues：包含顯示和儲存值的物件 <br /> {sDisplayVal： &lt;displayvalue&gt;，儲存值： &lt;save value=""&gt;}</em></p> </td>
+   <td>將專案新增至清單。</td>
   </tr>
   <tr>
-   <td>刪除項<em>:函式(nIndex)<br /> 索引：要從清單中刪除的項的索引<br /> </em><br /> <br /> </td>
+   <td>deleteItem<em>：函式(nIndex)<br /> nIndex：要從清單中移除之專案的索引<br /> </em><br /> <br /> </td>
    <td>從清單中刪除選項。</td>
   </tr>
   <tr>
-   <td>clearItems:<code> function()</code></td>
-   <td>從清單中清除所有選項。</td>
+   <td>clearItems：<code> function()</code></td>
+   <td>清除清單中的所有選項。</td>
   </tr>
  </tbody>
 </table>
 
-### 數字編輯：NumericField、DecimalField {#numericedit-numericfield-decimalfield}
+### NumericEdit： NumericField， DecimalField {#numericedit-numericfield-decimalfield}
 
 | 選項 | 說明 |
 |---|---|
-| 資料類型 | 表示欄位的資料類型（整數/小數）的字串。 |
-| leadDigits | 十進位數中允許的最大前導位數。 |
-| frac數字 | 十進位數中允許的最大小數位數。 |
-| 零 | 欄位區域設定中零的字串表示法。 |
-| 小數 | 欄位區域設定中小數的字串表示。 |
+| 資料型別 | 代表欄位資料型別（整數/小數）的字串。 |
+| leadDigits | 十進位數字中允許的前置位數上限。 |
+| fracDigits | 十進位數字中允許的分數位數上限。 |
+| 零 | 欄位地區設定中零的字串表示。 |
+| 小數 | 欄位地區設定中十進位的字串表示。 |
 
-### CheckButton:單選按鈕，複選框 {#checkbutton-radiobutton-checkbox}
+### CheckButton： RadioButton， CheckBox {#checkbutton-radiobutton-checkbox}
 
 <table>
  <tbody>
@@ -248,24 +248,24 @@ Forms(適應形式和HTML5形式)使用 [j查詢](https://jquery.com/)。 [骨�
   </tr>
   <tr>
    <td>values</td>
-   <td><p>值陣列（開/關/中性）。</p> <p>它是checkButton不同狀態的值陣列。 值[0]是狀態為ON時的值，值[1]是狀態為OFF時的值，<br /> 值[2]是狀態為NETRAL時的值。 值陣列的長度等於state選項的值。<br /> </p> </td>
-  </tr>
-  <tr>
-   <td>州</td>
-   <td><p>允許的狀態數。 </p> <p>兩個用於自適應表單（開啟、關閉），三個用於HTML5表單（開啟、關閉、中性）。</p> </td>
+   <td><p>值的陣列（開啟/關閉/中性）。</p> <p>它是checkButton不同狀態的值陣列。 values[0]是狀態為開啟時的值，values[1]是狀態為關閉時的值，<br /> values[2]是狀態為NEUTRAL時的值。 值陣列的長度等於狀態選項的值。<br /> </p> </td>
   </tr>
   <tr>
    <td>狀態</td>
-   <td><p>元素的當前狀態。</p> <p>兩個用於自適應表單（開啟、關閉），三個用於HTML5表單（開啟、關閉、中性）。</p> </td>
+   <td><p>允許的狀態數。 </p> <p>兩個用於調適型表單（開、關），三個用於HTML5表單（開、關、中性）。</p> </td>
+  </tr>
+  <tr>
+   <td>狀態</td>
+   <td><p>元素的目前狀態。</p> <p>兩個用於調適型表單（開、關），三個用於HTML5表單（開、關、中性）。</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 日期時間編輯：（日期欄位） {#datetimeedit-datefield}
+### 日期時間編輯： （日期欄位） {#datetimeedit-datefield}
 
 | 選項 | 說明 |
 |---|---|
-| 天 | 該欄位的本地化天數。 |
-| 個月 | 該欄位的本地化月名。 |
-| 零 | 數字0的本地化文本。 |
-| 純文字檔案 | 用於清除按鈕的本地化文本。 |
+| 天 | 該欄位的本地化天數名稱。 |
+| 個月 | 該欄位的當地語系化月份名稱。 |
+| 零 | 數字0本地化文字。 |
+| cleartext | 清除按鈕的本地化文字。 |

@@ -1,7 +1,7 @@
 ---
 title: 活動趨勢
 seo-title: Activity Trends
-description: 將社區活動清單元件添加到頁面
+description: 將社群活動清單元件新增至頁面
 seo-description: Adding a Community Activity List component to a page
 uuid: 316aabf7-01a5-46da-be59-70c206eb6a3d
 contentOwner: msm-service
@@ -22,79 +22,79 @@ ht-degree: 4%
 
 ## 簡介 {#introduction}
 
-的 `Community Activity List` 元件提供了添加有關成員的帖子和視圖以及內容帖子和視圖的趨勢資訊的能力。
+此 `Community Activity List` 元件提供新增成員貼文和檢視的趨勢資訊，以及貼文和內容檢視的功能。
 
-文檔描述：
+本檔案說明：
 
-* 添加 `Community Activity List` 元件 [社區站點](/help/communities/overview.md#community-sites)。
+* 新增 `Community Activity List` 元件至 [社群網站](/help/communities/overview.md#community-sites).
 
-* 的配置設定 `Community Activity List` 元件。
+* 的組態設定 `Community Activity List` 元件。
 
 ### 需求 {#requirement}
 
-資料 `Community Activity List` 僅在Adobe Analytics獲得社區站點的許可和配置時才可用。
+的資料 `Community Activity List` 只有在Adobe Analytics已獲得授權並針對社群網站進行設定時，才可使用。
 
-請參閱 [社區功能的分析配置](/help/communities/analytics.md)。
+另請參閱 [Communities功能的Analytics設定](/help/communities/analytics.md).
 
-### 將社區活動清單添加到頁面 {#adding-a-community-activity-list-to-a-page}
+### 將社群活動清單新增至頁面 {#adding-a-community-activity-list-to-a-page}
 
-添加 `Community Activity List` 在作者模式下將元件定位到頁面
+若要新增 `Community Activity List` 元件至作者模式下的頁面，找到元件
 
 * `Communities / Community Activity List`
 
-然後拖到頁面上。
+並將其拖曳至頁面上的適當位置。
 
-如需必要資訊，請訪問 [社區元件基礎](/help/communities/basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-首次放置在社區站點的頁面上時，元件的顯示方式如下：
+當元件首次放置於社群網站的頁面時，以下是元件的顯示方式：
 
-![社區活動](assets/community-activity.png)
+![社群活動](assets/community-activity.png)
 
-### 配置社區活動清單  {#configuring-community-activity-list}
+### 設定社群活動清單  {#configuring-community-activity-list}
 
-選取已放置的 `Community Activity List` 要訪問和選擇的元件 `Configure` 表徵圖。
+選取已放置的 `Community Activity List` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
 
-![配置](assets/configure-new.png)
+![設定](assets/configure-new.png)
 
-在 **注釋** 頁籤，指定上載檔案的注釋的顯示方式和顯示方式：
+在 **註解** 索引標籤中，指定是否要顯示已上傳檔案的註解及顯示方式：
 
 ![屬性](assets/activity-list-properties.png)
 
 * **類型**
 
-   指定是顯示有關社區成員或用戶生成內容(UGC)的資料。
+   指定是否要顯示有關社群成員或使用者產生內容(UGC)的資料。
 
-   從以下位置選擇：
+   從下列專案選取：
 
    * `Members`
    * `Content`
 
-   預設值為 `Members`。
+   預設為 `Members`.
 
 * **顯示標題**
 
-   顯示在資料上方的描述性標題，如 `Trending Content`。
+   資料上方顯示的描述性標題，例如 `Trending Content`.
 預設為無標題。
 
 * **顯示計數**
 
-   要列出的項數。
+   要列出的專案數。
 預設值為10。
 
 * **活動類型**
 
-   選擇以下選項之一：
+   選取下列其中一項：
 
-   * `Views`（頁面訪問）
+   * `Views`（頁面瀏覽次數）
    * `Posts`（建立UGC）
    * `Follows`
    * `Likes`
 
-   預設為視圖。
+   預設為「檢視」。
 
 * **時間段**
 
-   選擇以下選項之一：
+   選取下列其中一項：
 
    * `Last 24 hours`
    * `Last 7 days`
@@ -103,26 +103,26 @@ ht-degree: 4%
    * `This year (since Jan 1st)`
    * `Total`
 
-   預設值為 `Total`。
+   預設為 `Total`.
 
 * **內容路徑**
 
-   提供將活動範圍限定到站點子集（如特定部落格）的能力。
-預設值是整個社區站點。
+   提供將活動範圍限定為網站子集（例如特定部落格）的功能。
+預設為整個社群網站。
 
 * **成員人數彙總**
 
-   取消選擇（關閉）時，只計算頂級員額。 例如，如果上下文是根頁（預設），則 `Activity Type` 共 `Posts` 不會顯示任何活動，因為無法將內容發佈到根頁面。 選中後，將包括所有子體頁面上的計數。
-選中預設值。
+   取消選取（關閉）時，只會計算最上層的貼文。 例如，如果內容是根頁面（預設），則 `Activity Type` 之 `Posts` 永遠不會顯示任何活動，因為無法將內容發佈到根頁面。 如果勾選，則會包含所有下級頁面上的計數。
+預設為已核取。
 
-### 包含4個元件的示例頁 {#example-page-with-components}
+### 包含4個元件的範例頁面 {#example-page-with-components}
 
-**頂級訪問者** 配置：類型=成員，活動類型=視圖
+**排名在前的訪客** config：型別=成員，活動型別=檢視
 
-**最佳參與者** 配置：類型=成員，活動類型=帖子
+**主要貢獻者** config：型別=成員，活動型別=貼文
 
-**頂級內容** 配置：類型=內容，活動類型=視圖，
+**熱門內容** 設定：型別=內容，活動型別=檢視，
 
-**趨勢內容** 配置：類型=內容，活動類型=帖子
+**趨勢內容** config： Type = Content， Activity type = Posts
 
 ![元件](assets/activity-list-components.png)

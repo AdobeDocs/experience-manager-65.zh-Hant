@@ -42,8 +42,8 @@ ht-degree: 81%
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [可編輯的範本](/help/sites-developing/page-templates-editable.md)
 
-在詳細介紹上述概念之前，請先完成本教程。
+在深入瞭解上述概念之前，請先完成本教學課程。
 
 ## 後續步驟 {#next-steps}
 
-完成 [教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)，考慮審閱文檔 [核AEM心概念](/help/sites-developing/the-basics.md) 以便更好地瞭解某些基礎技術和開發模式AEM。
+當您完成 [教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)，請考慮檢閱檔案 [AEM核心概念](/help/sites-developing/the-basics.md) 以更進一步瞭解AEM的一些基礎技術和開發範例。

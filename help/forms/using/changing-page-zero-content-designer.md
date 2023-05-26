@@ -1,7 +1,7 @@
 ---
-title: 在設計器中更改頁面零內容
+title: 在Designer中變更頁面零點內容
 seo-title: Changing Page Zero content in Designer
-description: 在非Adobe PDF查看器中查看XFAPDF時，您知道如何更改XFA頁面零頁上顯示的消息？
+description: 您知道在非Adobe PDF檢視器中檢視XFAPDF時，如何變更顯示在第0頁的訊息嗎？
 seo-description: Do you know how you can change the message displayed on Page Zero of an XFA PDF when viewing it in a non-Adobe PDF viewer?
 uuid: ac23fb21-3f15-48ea-aeeb-4ecc12b771ac
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,34 +17,34 @@ ht-degree: 1%
 
 ---
 
-# 在設計器中更改頁面零內容 {#changing-page-zero-content-in-designer}
+# 在Designer中變更頁面零點內容 {#changing-page-zero-content-in-designer}
 
-當非Adobe PDF查看器(如中的預設PDF查看器)時，預設顯示「零頁」內容 [!DNL Chrome] 或 [!DNL Firefox]，無法讀取PDF/XFA表單的內容。 下面顯示預設的「零頁」消息。
+當非Adobe PDF檢視器(例如中的預設PDF檢視器)出現時，預設會顯示「頁面零」內容 [!DNL Chrome] 或 [!DNL Firefox]，無法讀取PDF/XFA表單的內容。 預設的「頁面零」訊息顯示如下。
 
 ![defaultpage0message](assets/defaultpage0message.png)
 
-[!DNL AEM Forms] Designer版本允許您更改「零頁」上顯示的消息。 要更改「零頁」消息，請執行以下步驟：
+[!DNL AEM Forms] 版本Designer可讓您變更顯示在Page Zero上的訊息。 若要變更「頁數零」訊息，請執行下列步驟：
 
-1. 確保您 [!DNL AEM Forms] 已安裝Designer版本。 可以從設計器的「關於」螢幕中檢查版本。
+1. 確保您擁有 [!DNL AEM Forms] 已安裝的Designer版本。 您可以從Designer的「關於」畫面檢查版本。
 
-1. 開啟要更改「零頁」內容的表單。
+1. 開啟您要變更「頁面零」內容的表單。
 
-1. 按一下 **[!UICONTROL 檔案]** > **[!UICONTROL 窗體屬性]**。
+1. 按一下 **[!UICONTROL 檔案]** > **[!UICONTROL 表單屬性]**.
 
-1. 在 [!UICONTROL 窗體屬性] 對話框，按一下 ![加](assets/plus.png) （加號表徵圖）以添加自定義屬性。
+1. 在 [!UICONTROL 表單屬性] 對話方塊，按一下 ![加](assets/plus.png) （加號圖示）以新增自訂屬性。
 
 1. 指定 **_pagezerocontent** 作為屬性的名稱。
-1. 以RTF格式將新的「零頁」消息添加為值。 例如：
+1. 以RTF格式新增新的「頁面零」訊息作為值。 例如：
 
 
    `<body xmlns="https://www.w3.org/1999/xhtml" xmlns:xfa="https://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:'Times';font-size:12pt;letter-spacing:0in"><span style="xfa-spacerun:yes"> </code></p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in">You are seeing this message maybe because you are using a non Adobe PDF Viewer or an Old version of Adobe Reader. You can upgrade to the latest version of Adobe Reader for Windows, Mac, or Linux by visiting <span style="xfa-spacerun:yes"> </code>https://www.adobe.com/go/reader_download.</p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in"><span style="xfa-spacerun:yes"> </code></p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in">For more assistance with Adobe Reader visit <span style="xfa-spacerun:yes"> </code>https://www.adobe.com/go/acrreader.</p></body>`
 
-1. 將表單另存為PDF。
+1. 將表單儲存為PDF。
 
-1. 在瀏覽器中查看PDF表單以確認消息已更新。 上面的示例值如下所示：
+1. 在瀏覽器中檢視PDF表單，以確認訊息已更新。 上述範例值顯示如下：
 
-   ![更改消息](assets/changedmessage.png)
+   ![changedmessage](assets/changedmessage.png)
 
 >[!NOTE]
 >
->當您重新開啟表單時，您剛建立的自定義屬性可能不會正確顯示在「表單屬性」對話框中。 但是，它工作正常，表單顯示更新的「零頁」消息。
+>當您重新開啟表單時，您剛才建立的自訂屬性可能無法正確顯示在「表單屬性」對話方塊中。 不過，它仍可正常運作，且表單會顯示更新的「頁面零」訊息。

@@ -1,7 +1,7 @@
 ---
-title: 自定義任務詳細資訊頁
+title: 自訂工作詳細資訊頁面
 seo-title: Customizing the task details page
-description: How-to在AEM Forms工作區中自定義任務詳細資訊頁面以修改顯示的有關任務的預設資訊。
+description: 如何在AEM Forms工作區中自訂任務詳細資訊頁面，以修改顯示的有關任務的預設資訊。
 seo-description: How-to customize the task details page in AEM Forms workspace to modify the default information displayed about a task.
 uuid: d85fae55-8e66-4595-8560-5485622b6841
 content-type: reference
@@ -16,23 +16,23 @@ ht-degree: 0%
 
 ---
 
-# 自定義任務詳細資訊頁 {#customizing-the-task-details-page}
+# 自訂工作詳細資訊頁面 {#customizing-the-task-details-page}
 
-任務詳細資訊頁面包含有關任務及其進程的資訊。 但是，您可以自定義任務詳細資訊頁面以添加或刪除資訊。
+任務詳細資訊頁面包含有關任務及其流程的資訊。 不過，您可以自訂工作詳細資訊頁面以新增或刪除資訊。
 
-您可以將以下資訊添加到任務詳細資訊頁面：
+您可以將下列資訊新增至工作詳細資訊頁面：
 
-* 任務的JSON對象中可用的資訊(中的「任務」部分 [AEM Forms工作區JSON對象說明](/help/forms/using/html-workspace-json-object-description.md))
-* 進程實例的JSON對象中可用的資訊(中的「進程實例」部分 [AEM Forms工作區JSON對象說明](/help/forms/using/html-workspace-json-object-description.md))
+* 任務的JSON物件中可用的資訊(任務區段位於 [AEM Forms工作區JSON物件說明](/help/forms/using/html-workspace-json-object-description.md))
+* 程式執行個體的JSON物件中可用的資訊（中的程式執行個體區段） [AEM Forms工作區JSON物件說明](/help/forms/using/html-workspace-json-object-description.md))
 
-要自定義任務詳細資訊頁，請執行以下操作：
+若要自訂工作詳細資訊頁面，請執行下列動作：
 
-1. 關注 [AEM Forms工作區定製的一般步驟。](/help/forms/using/generic-steps-html-workspace-customization.md)
-1. 要顯示任何附加資訊，請向 `translation.json` 檔案 `todo`塊> `details`塊> `app`塊> [ `required`塊]。
+1. 追隨 [AEM Forms工作區自訂的一般步驟。](/help/forms/using/generic-steps-html-workspace-customization.md)
+1. 若要顯示任何其他資訊，請將對應的機碼值組新增至 `translation.json` 檔案位於 `todo`區塊> `details`區塊> `app`區塊> [ `required`區塊].
 
-   的 [ `required`塊] 引用可用塊，如任務資訊的任務塊、流程資訊的流程塊和待定任務資訊的當前待處理任務塊。
+   此 [ `required`區塊] 參考可用的區塊，例如工作資訊的工作區塊、處理資訊的處理區塊，以及擱置工作資訊的目前擱置的工作區塊。
 
-   例如，要在任務詳細資訊頁中添加有關「需要路由選擇」的資訊，可以在任務塊中添加以下鍵值對：
+   例如，若要在工作詳細資訊頁面中新增關於「需要路由選擇」的資訊，您可以在工作區塊中新增下列索引鍵/值組：
 
    ```json
    "todo" : {
@@ -53,11 +53,11 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >為所有支援的語言添加相應的鍵值對。
+   >為所有支援的語言新增對應的機碼值組。
 
-1. 複製 `/libs/ws/js/runtime/templates/taskdetails.html` 至 `/apps/ws/js/runtime/templates/taskdetails.html`。
+1. 複製 `/libs/ws/js/runtime/templates/taskdetails.html` 至 `/apps/ws/js/runtime/templates/taskdetails.html`.
 
-   將新資訊添加到 `/apps/ws/js/runtime/templates/taskdetails.html`。 例如：
+   將新資訊新增至 `/apps/ws/js/runtime/templates/taskdetails.html`. 例如：
 
    ```css
    <div class="detailsContainer">
@@ -80,10 +80,10 @@ ht-degree: 0%
 
 1. 開啟/apps/ws/js/registry.js進行編輯。
 
-   搜索和替換 `text!/lc/libs/ws/js/runtime/templates/taskdetails.html` 與 `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`。
+   搜尋和取代 `text!/lc/libs/ws/js/runtime/templates/taskdetails.html` 替換為 `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`.
 
 >[!NOTE]
 >
->使用在 **啟動進程** 頁籤，將新資訊添加到 `/apps/ws/js/runtime/templates/startprocess.html`。
+>若要使用在中建立的任務自訂任務詳細資訊頁面 **開始程式** AEM Forms標籤，將新資訊新增至 `/apps/ws/js/runtime/templates/startprocess.html`.
 >
->要為在詳細資訊頁面中添加的資訊添加新樣式，請使用 *用戶介面更改* 部分 [工作區自定義](changing-locale-user-interface.md)。
+>若要為新增至詳細資訊頁面的資訊新增樣式，請使用 *使用者介面變更* 中的區段 [工作區自訂](changing-locale-user-interface.md).

@@ -1,7 +1,7 @@
 ---
-title: 在Web應用程式中整合AEM Forms工作區元件
+title: 在網頁應用程式中整合AEM Forms工作區元件
 seo-title: Integrating AEM Forms workspace components in web applications
-description: 如何在您自己的Web應用中重新使用AEM Forms工作區元件，以利用功能並提供緊密整合。
+description: 如何在您自己的網頁應用程式中重複使用AEM Forms工作區元件，以運用功能並提供緊密整合。
 seo-description: How to reuse AEM Forms workspace components in your own webapps to leverage functionality and provide tight integration.
 uuid: bb9b8aa0-3f41-4f44-8eb7-944e778ee8a6
 contentOwner: robhagat
@@ -17,19 +17,19 @@ ht-degree: 0%
 
 ---
 
-# 在Web應用程式中整合AEM Forms工作區元件 {#integrating-aem-forms-workspace-components-in-web-applications}
+# 在網頁應用程式中整合AEM Forms工作區元件 {#integrating-aem-forms-workspace-components-in-web-applications}
 
-可以使用AEM Forms工作區 [元件](/help/forms/using/description-reusable-components.md) 在您自己的Web應用程式中。 以下示例實現使用CRX™實例上安裝的AEM Forms工作區開發包中的元件來建立Web應用程式。 根據您的特定需要定制以下解決方案。 示例實現重用 `UserInfo`。 `FilterList`, `TaskList`Web門戶中的元件。
+您可以使用AEM Forms工作區 [元件](/help/forms/using/description-reusable-components.md) 在您自己的網頁應用程式中。 以下實作範例使用安裝在CRX™執行個體上的AEM Forms Workspace Dev套件中的元件來建立網頁應用程式。 根據您的特定需求，自訂以下的解決方案。 實作重複使用範例 `UserInfo`， `FilterList`、和 `TaskList`網站入口網站內的元件。
 
-1. 登錄到CRXDE Lite環境，位於 `https://'[server]:[port]'/lc/crx/de/`。 確保已安裝AEM FormsWorkPace Dev軟體包。
-1. 建立路徑 `/apps/sampleApplication/wscomponents`。
-1. 複製css、images、js/libs、js/runtime和js/registry.js
+1. 登入CRXDE Lite環境於 `https://'[server]:[port]'/lc/crx/de/`. 確保您已安裝AEM Forms workspace dev套件。
+1. 建立路徑 `/apps/sampleApplication/wscomponents`.
+1. 複製css、影像、js/libs、js/runtime和js/registry.js
 
    * 從 `/libs/ws`
    * 至 `/apps/sampleApplication/wscomponents`.
 
-1. 在/apps/sampleApplication/wscomponents/js資料夾內建立demomain.js檔案。 將代碼從/libs/ws/js/main.js複製到demomain.js。
-1. 在demomain.js中，刪除要初始化Router的代碼，並添加以下代碼：
+1. 在/apps/sampleApplication/wscomponents/js資料夾中建立demomain.js檔案。 將程式碼從/libs/ws/js/main.js複製到demomain.js中。
+1. 在demomain.js中，移除程式碼以初始化Router並新增下列程式碼：
 
    ```javascript
    require(['initializer','runtime/util/usersession'],
@@ -42,9 +42,9 @@ ht-degree: 0%
        });
    ```
 
-1. 按名稱在/content下建立節點 `sampleApplication` 和類型 `nt:unstructured`。 在此節點的屬性中添加 `sling:resourceType` 字串和值類型 `sampleApplication`。 在此節點的「訪問控制清單」中，為 `PERM_WORKSPACE_USER` 允許jcr:read權限。 另外，在 `/apps/sampleApplication` 添加條目 `PERM_WORKSPACE_USER` 允許jcr:read權限。
-1. 在 `/apps/sampleApplication/wscomponents/js/registry.js` 更新路徑 `/lc/libs/ws/` 至 `/lc/apps/sampleApplication/wscomponents/` 的下界。
-1. 在門戶首頁的JSP檔案中，位於 `/apps/sampleApplication/GET.jsp`，添加以下代碼以包括入口中所需的元件。
+1. 在/content下依名稱建立節點 `sampleApplication` 和型別 `nt:unstructured`. 在此節點的屬性中新增 `sling:resourceType` 字串和值的型別 `sampleApplication`. 在此節點的「存取控制清單」中新增專案 `PERM_WORKSPACE_USER` 允許jcr：read許可權。 此外，在的「存取控制」清單中 `/apps/sampleApplication` 新增專案 `PERM_WORKSPACE_USER` 允許jcr：read許可權。
+1. 在 `/apps/sampleApplication/wscomponents/js/registry.js` 更新路徑 `/lc/libs/ws/` 至 `/lc/apps/sampleApplication/wscomponents/` 範本值。
+1. 在您的入口網站首頁，JSP檔案位於 `/apps/sampleApplication/GET.jsp`，新增下列程式碼，在入口網站中包含必要元件。
 
    ```jsp
    <script data-main="/lc/apps/sampleApplication/wscomponents/js/demomain" src="/lc/apps/sampleApplication/wscomponents/js/libs/require/require.js"></script>
@@ -53,13 +53,13 @@ ht-degree: 0%
    <div class="taskListView gcomponent" data-name="tasklist"></div>
    ```
 
-   還包括AEM Forms工作區元件所需的CSS檔案。
+   也包含AEM Forms工作區元件所需的CSS檔案。
 
    >[!NOTE]
    >
-   >在呈現時，每個元件被添加到元件標籤（具有類元件）。 確保首頁包含這些標籤。 查看 `html.jsp` AEM Forms工作區的檔案，以瞭解有關這些基本控制項標籤的詳細資訊。
+   >呈現時，每個元件都會新增至元件標籤（具有類別元件）。 確定您的首頁包含這些標籤。 請參閱 `html.jsp` AEM Forms工作區檔案，以進一步瞭解這些基本控制項標籤。
 
-1. 要定制元件，可以按如下方式擴展所需元件的現有視圖：
+1. 若要自訂元件，您可以延伸所需元件的現有檢視，如下所示：
 
    ```javascript
    define([
@@ -81,7 +81,7 @@ ht-degree: 0%
    });
    ```
 
-1. 修改門戶CSS以配置門戶上所需元件的佈局、定位和樣式。 例如，您希望將背景顏色保留為黑色，以便此門戶能夠正確查看userInfo元件。 可以通過更改中的背景顏色來執行此操作 `/apps/sampleApplication/wscomponents/css/style.css` 如下：
+1. 修改入口網站CSS以設定入口網站上所需元件的版面、位置和樣式。 例如，您想要讓此入口網站的背景顏色保持為黑色，以便順利檢視userInfo元件。 您可以變更下列專案的背景顏色來完成此操作： `/apps/sampleApplication/wscomponents/css/style.css` 如下所示：
 
    ```css
    body {

@@ -1,7 +1,7 @@
 ---
-title: 社區工具
+title: Communities工具
 seo-title: Communities Tools
-description: 如何訪問社區工具控制台
+description: 如何存取社群工具主控台
 seo-description: How to access Communities Tools console
 uuid: 3172fe00-7132-4cee-9fd1-b6f96eb43200
 contentOwner: Janice Kendall
@@ -19,22 +19,22 @@ ht-degree: 0%
 
 ---
 
-# 社區工具 {#communities-tools}
+# Communities工具 {#communities-tools}
 
-要訪問社區工具控制台，請登錄作者實例：
+若要存取Communities工具主控台，請登入您的Author例項：
 
-* 從全局導航： **[!UICONTROL 工具]** > **[!UICONTROL 社區]**。
+* 從全域導覽： **[!UICONTROL 工具]** > **[!UICONTROL Communities]**.
 
    ![社群](assets/communities-home.png)
 
-* [站點模板](sites.md)  — 用於建立和管理站點模板的控制台。
+* [網站範本](sites.md)  — 用於網站範本建立和管理的主控台。
 
-* [組模板](tools-groups.md)  — 用於組模板建立和管理的控制台。
+* [群組範本](tools-groups.md)  — 群組範本建立和管理主控台。
 
-* [社區功能](functions.md)  — 用於社區功能建立和管理的控制台。
+* [社群功能](functions.md)  — 社群功能建立與管理的主控台。
 
-* [儲存配置](srp-config.md)  — 用於配置和選擇 [預設SRP](working-with-srp.md)。
+* [儲存設定](srp-config.md)  — 用於設定和選擇的控制檯 [預設SRP](working-with-srp.md).
 
-* [元件指南](components-guide.md)  — 開啟一個互動式站點，允許您嘗試SCF元件的工作方式以及如何配置或定制它們。
+* [元件指南](components-guide.md)  — 開啟互動式網站，讓您實驗SCF元件的運作方式以及設定或自訂方式。
 
-* [徽章](badges.md)  — 可添加自定義徽章以用於的控制台 [評分和簽名規則](implementing-scoring.md)
+* [徽章](badges.md)  — 可在其中新增自訂徽章以供使用的主控台 [評分和徽章規則](implementing-scoring.md)

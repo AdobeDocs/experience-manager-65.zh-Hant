@@ -1,7 +1,7 @@
 ---
 title: 使用投票
 seo-title: Using Voting
-description: 將投票元件添加到頁
+description: 新增投票元件至頁面
 seo-description: Adding the Voting component to a page
 uuid: 56e6cced-2f2d-434a-8fde-92a6c2478a04
 contentOwner: Guillaume Carlino
@@ -19,50 +19,50 @@ ht-degree: 5%
 
 # 使用投票 {#using-voting}
 
-的 `Voting` 元件是一種有用的工具，它允許社區成員對特定內容（如QnA元件中的答案）進行分級。 使用 `Voting` 元件，成員選擇向上或向下箭頭以指示其意見。
+此 `Voting` 元件是實用的工具，可讓社群成員為特定內容片段（例如QnA元件中的答案）評分。 使用 `Voting` 元件時，成員會選取向上或向下箭頭來表示其意見。
 
-## 向頁面添加投票 {#adding-voting-to-a-page}
+## 新增投票至頁面 {#adding-voting-to-a-page}
 
-添加 `Voting` 在作者模式下對頁面的元件，使用元件瀏覽器查找 `Communities / Voting` 並將其拖到頁面上，如相對於功能的位置，供用戶投票。
+若要新增 `Voting` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找 `Communities / Voting` 並將其拖曳至頁面上適當的位置，例如與功能相對的位置以供使用者投票。
 
-如需必要資訊，請訪問 [社區元件基礎](basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
 
-當 [所需的客戶端庫](essentials-voting.md#essentials-for-client-side) 包括，這是 `Voting` 元件。
+當 [必要的使用者端程式庫](essentials-voting.md#essentials-for-client-side) 包含，這就是 `Voting` 元件隨即出現。
 
-![投票分量](assets/voting-component.png)
+![voting-component](assets/voting-component.png)
 
-## 配置投票 {#configuring-voting}
+## 設定投票 {#configuring-voting}
 
-選取已放置的 `Voting` 要訪問和選擇的元件 `Configure` 表徵圖。
+選取已放置的 `Voting` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
 
-![配置](assets/configure-new.png)
+![設定](assets/configure-new.png)
 
-在 **[!UICONTROL 文本和標籤]** 頁籤，指定用於記錄投票的屬性。
+在 **[!UICONTROL 文字和標籤]** 索引標籤中，指定用來記錄投票的屬性。
 
-![投票標籤](assets/voting-label.png)
+![voting-label](assets/voting-label.png)
 
 * **[!UICONTROL 正面回應標籤]**
 
-   (*必需*)正響應的內部屬性名稱。
+   (*必填*)正面回應的內部屬性名稱。
 
 * **[!UICONTROL 負面回應標籤]**
 
-   (*必需*)負響應的內部屬性名稱。
+   (*必填*)負面回應的內部屬性名稱。
 
 * **[!UICONTROL 記帳名稱]**
 
-   (*必需*)此投票元件實例的內部、可識別屬性名稱。
+   (*必填*)此投票元件例項的內部可識別屬性名稱。
 
-## 站點訪問者體驗 {#site-visitor-experience}
+## 網站訪客體驗 {#site-visitor-experience}
 
 ### 成員 {#members}
 
-成員只能投一票，但可隨時更改投票。
+成員只能投票一次，但可隨時變更投票。
 
 ### 匿名 {#anonymous}
 
-不支援匿名投票。 站點訪問者必須註冊（成為成員）並登錄一次以參與投票。
+不支援匿名投票。 網站訪客必須註冊（成為會員）並登入才能參與投票一次。
 
 ## 其他資訊 {#additional-information}
 
-有關 [投票要點](essentials-voting.md) 頁面。
+如需詳細資訊，請參閱 [Voting Essentials](essentials-voting.md) 適用於開發人員的頁面。

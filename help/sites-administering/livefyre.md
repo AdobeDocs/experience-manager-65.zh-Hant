@@ -1,7 +1,7 @@
 ---
 title: 與 Livefyre 整合
 seo-title: Integrating with Livefyre
-description: 瞭解如何將Livefyre的業界領先的管理功能與您的AEM6.5實例整合，使您能夠在幾分鐘內將用戶生成的重要內容(UGC)從社交網路發佈到您的站點。
+description: 瞭解如何將Livefyre領先業界的策展功能與您的AEM 6.5執行個體整合，好讓您可以在幾分鐘內將使用者產生的寶貴內容(UGC)從社交網路發佈至您的網站。
 seo-description: Learn how to integrate and use Livefyre with AEM 6.5.
 uuid: c355705d-6e0f-4a33-aa1f-d2d1c818aac0
 contentOwner: ind14750
@@ -21,7 +21,7 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->[AdobeLivefyre自2021年11月30日起正式停業](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html?lang=en)。
+>[Adobe Livefyre將於2021年11月30日正式終止服務](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html?lang=en).
 
 <!-- Learn how to integrate Livefyre's industry-leading curation capabilities with your AEM 6.5 instance, allowing you to publish valuable user-generated content (UGC) from social networks to your site in minutes.
 

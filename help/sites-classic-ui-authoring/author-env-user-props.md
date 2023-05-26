@@ -1,7 +1,7 @@
 ---
 title: 設定帳戶環境
 seo-title: Configuring your account environment
-description: 為您AEM提供了配置帳戶和作者環境某些方面的功能。
+description: AEM提供您設定帳戶及製作環境某些方面的功能。
 seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment.
 uuid: a4a408f4-e33e-4304-90ab-f564ae772b7d
 contentOwner: Chris Bohnert
@@ -20,33 +20,33 @@ ht-degree: 12%
 
 # 設定帳戶環境{#configuring-your-account-environment}
 
-為您AEM提供了配置帳戶和作者環境某些方面的功能。
+AEM提供您設定帳戶及製作環境某些方面的功能。
 
-使用 [帳戶設定](#account-settings) 和 [用戶首選項](#user-preferences) 可以定義以下選項和首選項：
+使用 [帳戶設定](#account-settings) 和 [使用者偏好設定](#user-preferences) 可以定義下列選項和偏好設定：
 
-* **編輯工具欄**
-選擇是否要使用全局編輯工具欄。 此工具欄顯示在瀏覽器窗口頂部，它提供 
-**複製**。 **剪切**。 **貼上**。 **刪除** 用於與該頁上的段落元件一起使用的按鈕：
+* **編輯工具列**
+選取是否要全域編輯工具列。 此工具列會顯示在瀏覽器視窗上方，供您使用 
+**複製**， **剪下**， **貼上**， **刪除** 用於搭配該頁面上的段落元件使用的按鈕：
 
    * 需要時顯示 (預設)
    * 永遠顯示
-   * 隱藏
+   * 保持隱藏
 
 * **模擬為**
-使用 [模擬為](/help/sites-administering/security.md#impersonating-another-user) 功能用戶可以代表其他用戶工作。
+使用 [模擬為](/help/sites-administering/security.md#impersonating-another-user) 使用者可以代表其他使用者工作的功能。
 
 * **語言**
-用於創作環境的UI的語言。 從可用清單中選擇所需的語言。
+用於編寫環境UI的語言。 從可用清單中選取所需的語言。
 
-* **窗口管理**
-選擇以下任一項：
+* **視窗管理**
+選取：
 
-   * 將在新窗口中開啟多個Windows（預設）頁面。
-   * 將在當前窗口中開啟單個窗口頁面。
+   * 將在新視窗中開啟多個Windows （預設）頁面。
+   * 單一視窗頁面將在目前視窗中開啟。
 
 ## 帳戶設定 {#account-settings}
 
-用戶表徵圖允許您訪問下列各種選項：
+使用者圖示可讓您存取下列各種選項：
 
 * 登出
 * [模擬為](/help/sites-administering/security.md#impersonating-another-user)
@@ -57,10 +57,10 @@ ht-degree: 12%
 
 ### 使用者偏好設定 {#user-preferences}
 
-每個用戶都可以為自己設定某些屬性。 可從 **首選項** 對話框。
+每個使用者都可以為自己設定某些屬性。 您可從以下位置取得此資訊： **偏好設定** 對話方塊。
 
 ![screen_shot_2012-02-08at105033am](assets/screen_shot_2012-02-08at105033am.png)
 
-該對話框提供以下選項：
+此對話方塊提供下列選項：
 
 ![chlimage_1-123](assets/chlimage_1-123.png)

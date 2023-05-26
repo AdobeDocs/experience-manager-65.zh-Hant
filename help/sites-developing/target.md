@@ -1,7 +1,7 @@
 ---
-title: 為目標內容開發
+title: 針對目標內容開發
 seo-title: Developing for Targeted Content
-description: 有關開發用於內容目標的元件的主題
+description: 有關開發元件以與內容鎖定目標搭配使用的主題
 seo-description: Topics about developing components for use with content targeting
 uuid: 2449347e-7e1c-427b-a5b0-561055186934
 contentOwner: Guillaume Carlino
@@ -18,24 +18,24 @@ ht-degree: 0%
 
 ---
 
-# 為目標內容開發{#developing-for-targeted-content}
+# 針對目標內容開發{#developing-for-targeted-content}
 
-本節介紹有關開發用於內容目標的元件的主題。
+本節說明有關開發元件以與內容鎖定目標搭配使用的主題。
 
-* 有關與Adobe Target連接的資訊，請參見 [與Adobe Target整合](/help/sites-administering/target.md)。
-* 有關創作目標內容的資訊，請參見 [使用目標模式創作目標內容](/help/sites-authoring/content-targeting-touch.md)。
+* 如需與Adobe Target連線的詳細資訊，請參閱 [與Adobe Target整合](/help/sites-administering/target.md).
+* 如需有關編寫目標內容的資訊，請參閱 [使用定位模式製作目標內容](/help/sites-authoring/content-targeting-touch.md).
 
 >[!NOTE]
 >
->當您針對作者中的元件AEM時，該元件會向Adobe Target發出一系列伺服器端呼叫，以註冊市場活動、設定優惠和檢索Adobe Target段（如果已配置）。 發佈到Adobe Target時不會進行AEM伺服器端呼叫。
+>當您在AEM作者中鎖定元件時，該元件會對Adobe Target發出一系列伺服器端呼叫，以註冊行銷活動、設定選件及擷取Adobe Target區段（如果已設定）。 不會從AEM發佈對Adobe Target發出伺服器端呼叫。
 
-## 在您的頁面上啟用Adobe Target目標 {#enabling-targeting-with-adobe-target-on-your-pages}
+## 在您的頁面上使用Adobe Target啟用目標定位 {#enabling-targeting-with-adobe-target-on-your-pages}
 
-要在頁面中使用與Adobe Target交互的目標元件，請在 &lt;head> 的子菜單。
+若要在與Adobe Target互動的頁面中使用目標元件，請在以下檔案中包含特定使用者端代碼： &lt;head> 元素。
 
-### 頭部 {#the-head-section}
+### 標題區段 {#the-head-section}
 
-將以下兩個代碼塊添加到 &lt;head> 的下一頁：
+將下列兩個程式碼區塊新增至 &lt;head> 頁面的區段：
 
 ```xml
 <!--/* Include Context Hub */-->
@@ -46,11 +46,11 @@ ht-degree: 0%
 <cq:include script="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>
 ```
 
-此代碼添加所需的分析Javascript對象並載入與網站關聯的雲服務庫。 對於目標服務，通過 `/libs/cq/analytics/components/testandtarget/headlibs.jsp`
+此程式碼會新增必要的Analytics JavaScript物件，並載入與網站相關聯的雲端服務程式庫。 若為Target服務，程式庫會透過以下方式載入： `/libs/cq/analytics/components/testandtarget/headlibs.jsp`
 
-載入的庫集取決於目標配置上使用的目標客戶端庫（mbox.js或at.js）的類型：
+載入的程式庫組取決於Target設定中所使用的目標使用者端程式庫型別（mbox.js或at.js）：
 
-**對於預設mbox.js**
+**預設mbox.js**
 
 ```
 <script type="text/javascript" src="/libs/cq/foundation/testandtarget/parameters.js"></script>
@@ -60,7 +60,7 @@ ht-degree: 0%
  <script type="text/javascript" src="/libs/cq/foundation/testandtarget/init.js"></script>
 ```
 
-**對於自定義mbox.js**
+**適用於自訂mbox.js**
 
 ```
 <script type="text/javascript" src="/etc/cloudservices/testandtarget/<CLIENT-CODE>/_jcr_content/public/mbox.js"></script>
@@ -70,7 +70,7 @@ ht-degree: 0%
  <script type="text/javascript" src="/libs/cq/foundation/testandtarget/init.js"></script>
 ```
 
-**對於at.js**
+**適用於at.js**
 
 ```
 <script type="text/javascript" src="/libs/cq/foundation/testandtarget/parameters.js"></script>
@@ -80,11 +80,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->僅版本 `at.js` 支援隨產品一起提供。 版本 `at.js` 通過查看產品 `at.js` 檔案位於位置：
+>僅限的版本 `at.js` 隨附此產品受到支援。 的版本 `at.js` 產品隨附隨附，請檢視 `at.js` 檔案位置：
 >
->**/libs/cq/testandtarget/clientlibs/testandtarget/atjs/source/at.js**。
+>**/libs/cq/testandtarget/clientlibs/testandtarget/atjs/source/at.js**.
 
-**對於自定義at.js**
+**適用於自訂at.js**
 
 ```
 <script type="text/javascript" src="/etc/cloudservices/testandtarget/<CLIENT-CODE>/_jcr_content/public/at.js"></script>
@@ -92,7 +92,7 @@ ht-degree: 0%
  <script type="text/javascript" src="/libs/cq/foundation/testandtarget/atjs-integration.js"></script>
 ```
 
-客戶端上的目標功能由 `CQ_Analytics.TestTarget` 的雙曲餘切值。 因此，該頁將包含一些init代碼，如以下示例中：
+使用者端的Target功能是由 `CQ_Analytics.TestTarget` 物件。 因此，頁面將包含一些init程式碼，例如以下範例中的：
 
 ```
 <script type="text/javascript">
@@ -126,7 +126,7 @@ ht-degree: 0%
  </div>
 ```
 
-JSP將添加所需的分析Javascript對象和對客戶端Javascript庫的引用。 testandtarget.js檔案包含mbox.js函式。 指令碼生成的HTML與以下示例類似：
+JSP會新增必要的Analytics JavaScript物件和對使用者端JavaScript程式庫的參照。 testandtarget.js檔案包含mbox.js函式。 指令碼產生的HTML類似於以下範例：
 
 ```xml
 <script type="text/javascript">
@@ -143,23 +143,23 @@ JSP將添加所需的分析Javascript對象和對客戶端Javascript庫的引用
 <script type="text/javascript" src="/etc/clientlibs/foundation/testandtarget/init.js"></script>
 ```
 
-#### 正文節（開始） {#the-body-section-start}
+#### 主體區段（開頭） {#the-body-section-start}
 
-在 &lt;body> 將客戶端上下文功能添加到頁面的標籤：
+緊接著新增下列程式碼 &lt;body> 標籤以新增使用者端內容功能至頁面：
 
 ```xml
 <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext"/>
 ```
 
-#### 主體部分（尾） {#the-body-section-end}
+#### 主體區段（結束） {#the-body-section-end}
 
-在 &lt;/body> 結束標籤：
+將下列程式碼新增至緊接在 &lt;/body> 結束標籤：
 
 ```xml
 <cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
 ```
 
-此元件的JSP指令碼將生成對目標javascript API的調用，並實現其他所需配置。 指令碼生成的HTML與以下示例類似：
+此元件的JSP指令碼會產生對Target javascript API的呼叫，並實作其他必要的設定。 指令碼產生的HTML類似於以下範例：
 
 ```xml
 <div class="servicecomponents cloudservices">
@@ -187,61 +187,61 @@ JSP將添加所需的分析Javascript對象和對客戶端Javascript庫的引用
 </div>
 ```
 
-### 使用自定義目標庫檔案 {#using-a-custom-target-library-file}
+### 使用自訂Target資料庫檔案 {#using-a-custom-target-library-file}
 
 >[!NOTE]
 >
->如果不使用DTM或其他目標市場營銷系統，則可以使用自定義目標庫檔案。
+>如果您沒有使用DTM或其他目標行銷系統，則可以使用自訂目標資料庫檔案。
 
 >[!NOTE]
 >
->預設情況下，mboxes是隱藏的 — mboxDefault類確定此行為。 隱藏框可確保訪問者在交換預設內容之前不會看到它；但是，隱藏框會影響感知效能。
+>預設會隱藏mbox - mboxDefault類別會決定此行為。 隱藏mbox可確保訪客在交換預設內容之前不會看到該內容；但是，隱藏mbox會影響感知的效能。
 
-用於建立mboxes的預設mbox.js檔案位於/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js。 要使用customer mbox.js檔案，請將該檔案添加到目標雲配置。 要添加檔案，mbox.js檔案必須在檔案系統上可用。
+用來建立mbox的預設mbox.js檔案位於/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js。 若要使用客戶mbox.js檔案，請將該檔案新增至Target雲端設定。 若要新增檔案，mbox.js檔案必須在檔案系統上可用。
 
-例如，如果要使用 [Marketing CloudID服務](https://experienceleague.adobe.com/docs/id-service/using/home.html) 您需要下載mbox.js，以便它包含的 `imsOrgID` 變數，基於您的租戶。 此變數是與Marketing CloudID服務整合所必需的。 有關資訊，請參見 [Adobe Analytics為Adobe Target報導來源](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) 和 [實施前](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html)。
+例如，如果您想使用 [Marketing CloudID服務](https://experienceleague.adobe.com/docs/id-service/using/home.html) 您必須下載mbox.js，才能包含正確的值 `imsOrgID` 變數，根據您的租使用者而定。 若要與Marketing CloudID服務整合，此變數為必要專案。 如需詳細資訊，請參閱 [Adobe Analytics作為Adobe Target的報表來源](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) 和 [實作之前](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html).
 
 >[!NOTE]
 >
->如果在目標配置中定義了自定義框，則每個人都必須具有對 **/etc/cloudservices** 在發佈伺服器上。 如果沒有此訪問權限，則在發佈網站上載入mbox.js檔案將導致404錯誤。
+>如果自訂mbox定義於Target設定中，則每個人都必須擁有下列專案的讀取存取權： **/etc/cloudservices** 發佈伺服器上。 若沒有此存取權，在發佈網站上載入mbox.js檔案會導致404錯誤。
 
-1. 轉到CQ **工具** 選擇 **Cloud Services**。 ([https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
-1. 在樹中，選擇Adobe Target，在配置清單中，按兩下目標配置。
-1. 在配置頁上，按一下編輯。
-1. 對於Custom mbox.js屬性，按一下「瀏覽」並選擇檔案。
-1. 要應用更改，請輸入Adobe Target帳戶的密碼，按一下重新連接到目標，然後在連接成功時按一下確定。 然後，在「編輯元件」(Edit Component)對話框中按一下「確定」(OK)。
+1. 前往CQ **工具** 頁面並選取 **Cloud Services**. ([https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
+1. 在樹狀結構中選取Adobe Target，然後在設定清單中按兩下Target設定。
+1. 在設定頁面上，按一下編輯。
+1. 針對「自訂mbox.js」屬性，按一下「瀏覽」並選取檔案。
+1. 若要套用變更，請輸入Adobe Target帳戶的密碼，按一下「重新連線至Target」，然後在連線成功時按一下「確定」。 然後，按一下「編輯元件」對話方塊上的「確定」。
 
-您的目標配置包括自定義mbox.js檔案， [頭部所需的代碼](/help/sites-developing/target.md#p-the-head-section-p) 將檔案添加到客戶端庫框架，而不是引用testandtarget.js庫。
+您的Target設定包含自訂mbox.js檔案 [head區段中的必要程式碼](/help/sites-developing/target.md#p-the-head-section-p) ，會將檔案新增至使用者端程式庫架構，而非testandtarget.js程式庫的參照。
 
-## 禁用元件的目標命令 {#disabling-the-target-command-for-components}
+## 停用元件的目標命令 {#disabling-the-target-command-for-components}
 
-大多數元件都可以使用上下文菜單上的「目標」(Target)命令轉換為目標元件。
+大部分元件都可以使用快顯選單上的「目標」指令轉換成目標元件。
 
 ![chlimage_1-21](assets/chlimage_1-21.png)
 
-要從上下文菜單中刪除「目標」命令，請將以下屬性添加到元件的cq:editConfig節點：
+若要從快顯選單中移除Target命令，請將下列屬性新增至元件的cq：editConfig節點：
 
-* 名稱：cq：禁用目標
-* 類型：布爾型
-* 值：真
+* 名稱：cq：disableTargeting
+* 型別：布林值
+* 值： True
 
-例如，要禁用「Geometrixx演示網站」頁的標題元件的目標，請將該屬性添加到/apps/geometrixx/components/title/cq:editConfig節點。
+例如，若要停用Geometrixx示範網站頁面標題元件的目標定位，請將屬性新增至/apps/geometrixx/components/title/cq：editConfig節點。
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
-## 向Adobe Target發送訂單確認資訊 {#sending-order-confirmation-information-to-adobe-target}
+## 傳送訂單確認資訊至Adobe Target {#sending-order-confirmation-information-to-adobe-target}
 
 >[!NOTE]
 >
->如果您不使用DTM，則向Adobe Target發送訂單確認。
+>如果您沒有使用DTM，請傳送訂單確認給Adobe Target。
 
-要跟蹤網站的效能，請將訂單確認頁中的採購資訊發送到Adobe Target。 (請參閱 [建立orderConfirmPage複選框](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=en) 和 [訂單確認框 — 添加自定義參數。](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779))當您的MBox名稱為 `orderConfirmPage` 並使用以下特定參數名稱：
+若要追蹤您網站的效能，請從訂單確認頁面將購買資訊傳送至Adobe Target。 (請參閱 [建立orderConfirmPage Mbox](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=en) 和 [訂單確認Mbox — 新增自訂引數。](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779)) Adobe Target會在您的MBox名稱為時，將mbox資料辨識為訂單確認資料 `orderConfirmPage` 和使用下列特定引數名稱：
 
-* productPewhiedId:標識所購買產品的ID清單。
-* orderId:訂單的ID。
-* 訂單合計：採購的總額。
+* productPurchasedId：識別已購買產品的ID清單。
+* orderId：訂單的ID。
+* orderTotal：購買的總金額。
 
-建立該框的呈現HTML頁上的代碼與以下示例類似：
+轉譯HTML頁面上建立mbox的程式碼類似於以下範例：
 
 ```xml
 <script type="text/javascript">
@@ -252,13 +252,13 @@ JSP將添加所需的分析Javascript對象和對客戶端Javascript庫的引用
 </script>
 ```
 
-每個順序的每個參數的值都不同。 因此，您需要一個元件，它根據採購的屬性生成代碼。 CQ [電子商務整合框架](/help/commerce/cif-classic/administering/ecommerce.md) 使您能夠與產品目錄整合併實施購物車和結帳頁。
+每個訂單的每個引數值都不同。 因此，您需要根據購買屬性產生代碼的元件。 CQ [電子商務整合架構](/help/commerce/cif-classic/administering/ecommerce.md) 可讓您與產品目錄整合，並實作購物車和結帳頁面。
 
-Geometrixx Outdoors示例顯示訪問者購買產品時的以下確認頁：
+訪客購買產品時，Geometrixx Outdoors範例會顯示下列確認頁面：
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
-元件的JSP指令碼的以下代碼訪問購物車的屬性，然後打印用於建立框的代碼。
+以下元件的JSP指令碼程式碼會存取購物車的屬性，然後列印建立mbox的程式碼。
 
 ```java
 <%--
@@ -303,7 +303,7 @@ String orderID = session.getOrderId();
 </script>
 ```
 
-當元件包含在上例的簽出頁中時，頁面源包括建立框的以下指令碼：
+在上一個範例中，當元件包含在結帳頁面中時，頁面來源會包含下列建立mbox的指令碼：
 
 ```
 <div class="mboxDefault"></div>
@@ -317,38 +317,38 @@ String orderID = session.getOrderId();
 </script>
 ```
 
-## 瞭解目標元件 {#understanding-the-target-component}
+## 瞭解Target元件 {#understanding-the-target-component}
 
-「目標」元件使作者能夠從CQ內容元件建立動態框。 (請參閱 [內容目標](/help/sites-authoring/content-targeting-touch.md)。) 目標元件位於/libs/cq/personalization/components/target。
+Target元件可讓作者從CQ內容元件建立動態mbox。 (請參閱 [內容目標定位](/help/sites-authoring/content-targeting-touch.md).) Target元件位於/libs/cq/personalization/components/target。
 
-target.jsp指令碼訪問頁面屬性以確定要用於元件的目標引擎，然後執行相應的指令碼：
+target.jsp指令碼會存取頁面屬性，以決定要用於元件的目標定位引擎，然後執行適當的指令碼：
 
-* Adobe Target:/libs/cq/personalization/components/target/engine_tnt.jsp
-* [Adobe Target與AT.JS](/help/sites-administering/target.md):/libs/cq/personalization/components/target/engine_atjs.jsp
-* [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md):/libs/cq/personalization/components/target/engine_cq_campaign.jsp
-* 客戶端規則/ContextHub:/libs/cq/personalization/components/target/engine_cq.jsp
+* Adobe Target： /libs/cq/personalization/components/target/engine_tnt.jsp
+* [Adobe Target與AT.JS](/help/sites-administering/target.md)： /libs/cq/personalization/components/target/engine_atjs.jsp
+* [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)： /libs/cq/personalization/components/target/engine_cq_campaign.jsp
+* 使用者端Rules/ContextHub： /libs/cq/personalization/components/target/engine_cq.jsp
 
-### 框的建立 {#the-creation-of-mboxes}
+### Mbox的建立 {#the-creation-of-mboxes}
 
 >[!NOTE]
 >
->預設情況下，mboxes是隱藏的 — mboxDefault類確定此行為。 隱藏框可確保訪問者在交換預設內容之前不會看到它；但是，隱藏框會影響感知效能。
+>預設會隱藏mbox - mboxDefault類別會決定此行為。 隱藏mbox可確保訪客在交換預設內容之前不會看到該內容；但是，隱藏mbox會影響感知的效能。
 
-當Adobe Target驅動內容目標時，engine_tnt.jsp指令碼將建立包含目標體驗內容的框：
+當Adobe Target驅動內容鎖定目標時，engine_tnt.jsp指令碼會建立包含目標體驗內容的mbox：
 
-* 添加 `div` 具有類的元素 `mboxDefault`，按Adobe TargetAPI的要求。
+* 新增 `div` 類別為的元素 `mboxDefault`，如Adobe Target API所要求。
 
-* 將框內內容（目標體驗的內容）添加到 `div` 的子菜單。
+* 在中新增mbox內容（目標體驗的內容） `div` 元素。
 
-遵循 `mboxDefault` div元素，插入建立mbox的javascript:
+遵循 `mboxDefault` div元素中，會插入建立mbox的javascript：
 
-* mbox名稱、ID和位置基於元件的儲存庫路徑。
-* 指令碼獲取客戶端上下文參數名稱和值。
-* 調用mbox.js和其他客戶端庫定義的函式以建立mboxes。
+* mbox名稱、ID和位置均以元件的存放庫路徑為基礎。
+* 指令碼會取得Client Context引數名稱和值。
+* 系統會呼叫mbox.js和其他使用者端程式庫所定義的函式，以建立mbox。
 
-#### 針對內容目標的客戶端庫 {#client-libraries-for-content-targeting}
+#### 內容鎖定的使用者端資料庫 {#client-libraries-for-content-targeting}
 
-以下是可用的客戶端庫類別：
+以下是可用的clientlib類別：
 
 * testandtarget.mbox
 * testandtarget.init

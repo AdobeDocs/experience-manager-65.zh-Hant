@@ -1,6 +1,6 @@
 ---
-title: 自定義和擴展 [!DNL Assets]
-description: 瞭解如何自定義和擴展資產共用和資產編輯器，這些編輯器為用戶提供了專門定製的介面和一組功能。
+title: 自訂和擴充 [!DNL Assets]
+description: 瞭解您可以自訂和擴充Asset Share和Asset Editor的方式，為使用者提供專門定製的介面和功能集。
 contentOwner: AG
 role: Developer
 feature: Developer Tools
@@ -12,31 +12,31 @@ ht-degree: 0%
 
 ---
 
-# 自定義和擴展 [!DNL Assets] {#customizing-and-extending-assets}
+# 自訂和擴充 [!DNL Assets] {#customizing-and-extending-assets}
 
-資產編輯器是AdobeEnterprise Manager網站的用戶用來查找、查看和操作儲存庫中的數字資產的主要訪問點。
+Asset Editor是AdobeEnterprise Manager網站的使用者用來尋找、檢視及操控存放庫中數位資產的主要存取點。
 
-作為 [!DNL Experience Manager] 開發人員，您可以通過多種方式自定義和擴展資產編輯器，向用戶提供專門定製的介面和一組功能。
+作為 [!DNL Experience Manager] 開發人員，您可以透過多種方式自訂和擴充Asset Editor，為使用者提供量身打造的介面和功能集。
 
-功能的以下方面可以定制或增強：
+可以自訂或增強功能的下列方面：
 
-* [擴展資產編輯器](asseteditorx.md)
-* [擴展資產搜索](searchx.md)
-* [使用媒體處理程式和工作流處理資產](media-handlers.md)
-* [將資產與活動流整合](extending-activity-stream.md)
-* [資產代理開發](proxy.md)
-* [配置ImageMagick的最佳做法](best-practices-for-imagemagick.md)
+* [擴充Asset Editor](asseteditorx.md)
+* [擴充資產搜尋](searchx.md)
+* [使用媒體處理常式和工作流程處理資產](media-handlers.md)
+* [將資產與活動資料流整合](extending-activity-stream.md)
+* [資產Proxy開發](proxy.md)
+* [設定ImageMagick的最佳作法](best-practices-for-imagemagick.md)
 
-## 自定義外觀 {#customizing-the-look-and-feel}
+## 自訂外觀 {#customizing-the-look-and-feel}
 
-資產編輯器外觀的以下方面可自定義：
+以下是可自訂的Asset Editor外觀與風格：
 
-* 標識：您可以將您自己組織的徽標添加到介面。
-* 顏色和字型：可以更改介面中使用的顏色和字型。
-* HTML代碼：要進行更徹底的自定義，您可以更改定義介面的基礎HTML代碼。
+* 標誌：您可以將自己組織的標誌新增至介面。
+* 顏色和字型：您可以變更介面中使用的顏色和字型。
+* HTML代碼：如需更徹底的自訂，您可以變更定義介面的基礎HTML代碼。
 
-## 自定義格式副本 {#customizing-renditions}
+## 自訂轉譯 {#customizing-renditions}
 
-在 [!DNL Experience Manager Assets] 術語格式副本是顯示資產的形式。 通常，特定資產可能具有多個格式副本。 例如，全色影像可能具有一個原始大小的格式副本，另一個格式副本具有縮放大小，另一個格式副本同時縮放並轉換為灰度。
+在 [!DNL Experience Manager Assets] 術語轉譯是資產出現的形式。 一般而言，特定資產可以有多個轉譯。 例如，全色影像可能有一個原始大小的轉譯，另一個是縮小大小轉譯，另一個是縮小並轉換為灰階。
 
-特定資產可用的格式副本可以自定義，並可以建立新格式副本。
+您可以自訂特定資產可用的轉譯，並建立新的轉譯。

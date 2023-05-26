@@ -32,7 +32,7 @@ DevOps 旨在避免下列問題：
 
 ## 環境 {#environments}
 
-Adobe Experience Manager(AEM)部署通常由多個環境組成，用於不同級別上的不同用途：
+Adobe Experience Manager (AEM)部署通常包含多個環境，分別用於不同層級的不同用途：
 
 * [開發](#development)
 * [品質保證](#quality-assurance)
@@ -62,7 +62,7 @@ Adobe Experience Manager(AEM)部署通常由多個環境組成，用於不同級
 
 ### 品質保證 {#quality-assurance}
 
-此環境由質量保證小組全面使用 [test](/help/sites-developing/test-plan.md) 新系統；設計和功能。 此環境應同時具備作者環境、發佈環境及適當的內容，並提供所有啟用完整測試套件所需的服務。
+品質保證團隊會使用此環境來全面執行 [測試](/help/sites-developing/test-plan.md) 您的新系統；設計和功能。 此環境應同時具備作者環境、發佈環境及適當的內容，並提供所有啟用完整測試套件所需的服務。
 
 ### 預備 {#staging}
 
@@ -118,7 +118,7 @@ Adobe Experience Manager(AEM)部署通常由多個環境組成，用於不同級
 
 通常會透過在不同內容存放庫間匯出和匯入封裝，來轉移程式碼 (例如自訂的 Web 應用程式功能和設計範本)。這代表可以將此複寫設定為自動程序。
 
-AEM項目通常觸發代碼部署：
+AEM專案通常會觸發程式碼部署：
 
 * 自動：用於轉移至開發和 QA 環境。
 * 手動：部署至預備和生產環境的方式比較需要控制，通常以手動進行；不過，也可視需要採取自動化部署。
@@ -140,6 +140,6 @@ AEM項目通常觸發代碼部署：
 內容可經由下列途徑轉移：
 
 * 在不同環境間：透過匯出和匯入套件。
-* 在不同實例之間 — 通過直接複製([AEM複製](/help/sites-deploying/replication.md))內容（使用HTTP或HTTPS連接）。
+* 在不同執行個體之間 — 透過直接複製([AEM復寫](/help/sites-deploying/replication.md))內容（使用HTTP或HTTPS連線）。
 
 ![chlimage_1-1](assets/chlimage_1-1.png)

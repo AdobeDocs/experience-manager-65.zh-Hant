@@ -1,7 +1,7 @@
 ---
 title: ClientContext
 seo-title: Client Context
-description: 瞭解如何在中使用客戶端上AEM下文。
+description: 瞭解如何在AEM中使用Client Context。
 seo-description: Learn how to use the Client Context in AEM.
 uuid: 82b2f976-cb41-42f8-ad4b-3a5cd23cc5f5
 contentOwner: msm-service
@@ -22,263 +22,263 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->客戶端上下文已被ContextHub取代。 有關詳細資訊，請參閱相關 [配置](/help/sites-developing/ch-configuring.md) 和 [開發者](/help/sites-developing/contexthub.md) 檔案。
+>ContextHub已取代Client Context。 如需詳細資訊，請參閱相關 [設定](/help/sites-developing/ch-configuring.md) 和 [開發人員](/help/sites-developing/contexthub.md) 檔案。
 
-「客戶端上下文」是一種機制，可為您提供有關當前頁面和訪問者的某些資訊。 可以使用 **Ctrl-Alt-c** （窗口）或 **控制選項 — c** (Mac):
+Client Context是一種機制，可向您提供有關目前頁面和訪客的特定資訊。 可使用下列方式開啟它： **Ctrl-Alt-c** (windows)或 **control-option-c** (Mac)：
 
 ![](assets/clientcontext_alisonparker.png)
 
-在 [發佈和建立環境，它顯示資訊](#propertiesavailableintheclientcontext) 關於：
+在 [它會顯示資訊的發佈和作者環境](#propertiesavailableintheclientcontext) 關於：
 
-* 訪客；根據您的實例，會請求或派生某些資訊。
-* 頁面標籤和當前訪問者訪問這些標籤的次數（當您將滑鼠移到特定標籤上時會顯示此資訊）。
+* 訪客；根據您的執行個體，會要求或衍生某些資訊。
+* 頁面標籤以及目前訪客存取這些標籤的次數（這會在您將滑鼠移到特定標籤上時顯示） 。
 * 頁面資訊。
-* 技術環境資訊；如IP地址、瀏覽器和螢幕解析度。
-* 當前已解析的任何段。
+* 技術環境的相關資訊；例如IP位址、瀏覽器和熒幕解析度。
+* 目前解析的任何區段。
 
-表徵圖（僅在作者環境中可用）允許您配置客戶端上下文的詳細資訊：
+圖示（僅適用於作者環境）可讓您設定使用者端內容的詳細資訊：
 
 ![](do-not-localize/clientcontext_icons.png)
 
 * **編輯**
-將會開啟新頁面，以便 [編輯、添加或刪除配置檔案屬性](#editingprofiledetails)。
+將會開啟一個新頁面，讓您可以 [編輯、新增或移除設定檔屬性](#editingprofiledetails).
 
 * **載入**
-你可以 [從配置檔案清單中選擇並載入配置檔案](#loading-a-new-user-profile) 你想test。
+您可以 [從設定檔清單中選取並載入設定檔](#loading-a-new-user-profile) 您想要測試。
 
-* **重置**
-你可以 [重置配置檔案](#resetting-the-profile-to-the-current-user) 到當前用戶。
+* **重設**
+您可以 [重設設定檔](#resetting-the-profile-to-the-current-user) 與目前使用者的相同。
 
-## 可用的客戶端上下文元件 {#available-client-context-components}
+## 可用的使用者端內容元件 {#available-client-context-components}
 
-客戶端上下文可顯示以下屬性([根據使用「編輯」選擇的內容](#adding-a-property-component)):
+Client Context可顯示下列屬性([根據使用「編輯」選取的內容](#adding-a-property-component))：
 
-**衝浪資訊** 顯示以下客戶端資訊：
+**瀏覽者資訊** 顯示下列使用者端資訊：
 
-* 這樣 **IP地址**
-* **關鍵字** 用於搜索引擎引用
-* 這樣 **瀏覽器** 正在使用
-* 這樣 **作業系統** （正在使用的作業系統）
-* 螢幕 **決議**
-* 這樣 **滑鼠X** 位置
-* 這樣 **滑鼠Y** 位置
+* 此 **ip位址**
+* **關鍵字** 用於搜尋引擎轉介
+* 此 **瀏覽器** 正在使用
+* 此 **作業系統** （作業系統）使用中
+* 畫面 **解析度**
+* 此 **滑鼠X** position
+* 此 **滑鼠Y** position
 
-**活動流** 這提供了用戶在各種平台上的社交活動資訊；例如，論AEM壇、部落格、評級等。
+**活動資料流** 這可提供使用者在各種平台(例如AEM論壇、部落格、評分等)上的社交活動相關資訊。
 
-**活動** 允許作者模擬市場活動的特定體驗。 此元件替代了常規的市場活動解決方案和經驗選擇，以便能夠測試各種組合。
+**Campaign** 可讓作者模擬行銷活動的特定體驗。 此元件會覆寫一般的促銷活動解析度和體驗選擇，以啟用各種置換的測試。
 
-市場活動解決通常基於市場活動的優先屬性。 通常根據分割來選擇經驗。
+行銷活動的解析度通常以行銷活動的優先順序屬性為基礎。 通常會根據細分來選取體驗。
 
-**購物車** 顯示購物車資訊，包括產品條目（標題、數量、價格格式化等）、已解決促銷（標題、消息等） 和憑證（代碼、說明等）。
+**購物車** 顯示購物車資訊，包括產品專案（標題、數量、價格格式等）、已解決的促銷活動（標題、訊息等） 和憑單（代碼、說明等）。
 
-購物車會話儲存還使用ClientContextCartServlet向伺服器通知已解決的升級更改（基於分段更改）。
+購物車工作階段存放區也會使用ClientContextCartServlet將已解決的促銷活動變更（根據分段變更）通知伺服器。
 
-**一般儲存** 是顯示儲存內容的通用元件。 它是通用儲存屬性元件的低級版本。
+**通用存放區** 是顯示存放區內容的一般元件。 這是一般存放區屬性元件的較低層級版本。
 
-通用儲存必須配置JS呈現器，該呈現器將以自定義方式顯示資料。
+Generic Store必須設定有JS轉譯器，以自訂方式顯示資料。
 
-**常規儲存屬性** 是顯示儲存內容的通用元件。 它是通用儲存元件的更高級版本。
+**一般存放區屬性** 是顯示存放區內容的一般元件。 這是一般存放區元件的較高層級版本。
 
-「通用儲存屬性」元件包括一個預設呈現器，它列出了配置的屬性（連同縮略圖）。
+「一般存放區屬性」元件包含預設轉譯器，其列出已設定的屬性（連同縮圖）。
 
-**地理位置** 顯示客戶端的經緯度。 它使用HTML5地理位置API查詢瀏覽器的當前位置。 這會導致向訪問者顯示一個彈出窗口，瀏覽器會詢問他們是否同意共用其位置。
+**地理位置** 顯示使用者端的經緯度。 它會使用HTML5地理位置API在瀏覽器中查詢目前位置。 這會向訪客顯示快顯視窗，瀏覽器會詢問訪客是否同意共用其位置。
 
-在上下文雲中顯示時，元件使用GoogleAPI將映射顯示為縮略圖。 該元件受GoogleAPI約束 [使用限制](https://developers.google.com/maps/documentation/staticmaps/intro#Limits)。
-
->[!NOTE]
->
->在AEM6.1中，Geolocation儲存不再提供反向地理編碼功能。 因此，Geolocation儲存不再檢索有關當前位置的詳細資訊，如城市名稱或國家/地區代碼。 使用此儲存資料的段無法正常工作。 地理位置儲存區只包含某個位置的經緯度。
-
-**JSONP商店** 顯示與安裝相關的內容的元件。
-
-JSONP標準是對JSON的補充，它允許規避相同的源策略（使Web應用無法與位於另一個域上的伺服器通信）。 它包括在函式調用中包裝JSON對象，以便能夠將其作為 `<script>` 從另一個域（允許對同一源策略執行異常）。
-
-JSONP儲存區與任何其他儲存區一樣，但它載入來自另一個域的資訊，而無需在當前域上擁有該資訊的代理。 請參閱中的示例 [通過JSONP在客戶端上下文中儲存資料](/help/sites-administering/client-context.md#storing-data-in-client-context-via-jsonp)。
+在Context Cloud中顯示時，元件會使用Google API將地圖顯示為縮圖。 元件受Google API限制 [使用量限制](https://developers.google.com/maps/documentation/staticmaps/intro#Limits).
 
 >[!NOTE]
 >
->JSONP儲存不快取Cookie中的資訊，而是在每個頁載入時檢索該資料。
+>在AEM 6.1中，地理位置存放區不再提供反向地理編碼功能。 因此，地理位置存放區不會再擷取有關目前位置的詳細資訊，例如城市名稱或國家/地區代碼。 使用此存放區資料的區段將無法正常運作。 地理位置存放區僅包含位置的經緯度。
 
-**配置檔案資料** 顯示在用戶配置檔案中收集的資訊。 例如，性別、年齡、電子郵件地址等。
+**JSONP存放區** 顯示與安裝相依之內容的元件。
 
-**已解析的段** 顯示當前解析的段（通常取決於客戶端上下文中顯示的其他資訊）。 這在配置市場活動時很有意義。
+JSONP標準是JSON的補充功能，可讓您規避相同原始原則（使網頁應用程式無法與其他網域上的伺服器通訊）。 它包含於包裝JSON物件於函式呼叫中，以便能夠將其載入為 `<script>` 來自其他網域（這是相同來源原則的允許例外）。
 
-例如，滑鼠當前是位於窗口的左手部分還是右手部分上。 此分段主要用於測試，因為可立即看到更改。
-
-**社會圖** 顯示用戶好友和關注者的社交圖表。
+JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊，而不需要在目前網域上為該資訊擁有Proxy。 請參閱中的範例 [透過JSONP在Client Context中儲存資料](/help/sites-administering/client-context.md#storing-data-in-client-context-via-jsonp).
 
 >[!NOTE]
 >
->當前，這是一個演示功能，它依賴於我們演示用戶配置檔案節點上的預配置資料集。 例如，請參見：
->
->`/home/users/geometrixx/aparker@geometrixx.info/profile` =>朋友屬性
+>JSONP存放區不會快取Cookie中的資訊，但會在每次頁面載入時擷取該資料。
 
-**標籤雲** 顯示在當前頁面上設定的標籤以及在瀏覽站點時收集的標籤。 將滑鼠移到標籤上顯示當前用戶訪問包含該特定標籤的頁面的次數。
+**設定檔資料** 顯示使用者設定檔中收集的資訊。 例如，性別、年齡、電子郵件地址等。
+
+**已解析的區段** 顯示目前解析的區段（通常取決於使用者端內容中顯示的其他資訊）。 這在設定行銷活動時是有意義的。
+
+例如，滑鼠目前是在視窗的左手或右手部分上方。 此區段主要用於測試，因為可以立即看到變更。
+
+**社交圖** 顯示使用者的朋友和關注者的社交圖。
 
 >[!NOTE]
-將不計算在訪問的頁面上顯示的DAM資產上設定的標籤。
+>
+>目前這是示範功能，需要仰賴示範使用者設定檔節點上預先設定的資料集。 例如，請參閱：
+>
+>`/home/users/geometrixx/aparker@geometrixx.info/profile` => friends屬性
+
+**標籤雲** 顯示在目前頁面上設定的標籤以及瀏覽網站時收集的標籤。 將滑鼠移到標籤上會顯示目前使用者存取包含該特定標籤的頁面的次數。
+
+>[!NOTE]
+在造訪的頁面上顯示的DAM資產上設定的標籤不會計算在內。
 
 **Technographics商店** 此元件取決於您的安裝。
 
-**已查看產品** 跟蹤購物者查看的產品。 可以查詢最近查看的產品或尚未在購物車中的最近查看的產品。
+**已檢視的產品** 追蹤購物者已檢視的產品。 可查詢最近檢視的產品或未在購物車中的最近檢視的產品。
 
-此會話儲存沒有預設的客戶端上下文元件。
+此工作階段存放區沒有預設的使用者端內容元件。
 
-有關其他資訊，請參見 [客戶端上下文詳細資訊](/help/sites-developing/client-context.md)。
+如需詳細資訊，請參閱 [詳細的使用者端內容](/help/sites-developing/client-context.md).
 
 >[!NOTE]
-頁面資料不再作為預設元件存在於客戶端上下文中。 如果需要，可以通過編輯客戶端上下文和添加 **常規儲存屬性** 元件，然後配置它以定義 **儲存** 如 `pagedata`。
+頁面資料不再在使用者端內容中作為預設元件。 如有需要，您可以編輯使用者端內容、新增 **一般存放區屬性** 元件，然後設定以定義 **儲存** 作為 `pagedata`.
 
-## 更改客戶端上下文配置檔案 {#changing-the-client-context-profile}
+## 變更使用者端內容設定檔 {#changing-the-client-context-profile}
 
-客戶端上下文允許您交互更改詳細資訊：
+「使用者端內容」可讓您以互動方式變更詳細資訊：
 
-* 更改在客戶端上下文中使用的配置檔案允許您查看不同用戶在當前頁面中看到的不同體驗。
-* 除了更改用戶配置檔案外，您還可以更改一些配置檔案詳細資訊，以查看在不同條件下頁面體驗的不同。
+* 變更Client Context中使用的設定檔，可讓您檢視不同使用者在目前頁面上會看到的不同體驗。
+* 除了變更使用者設定檔之外，您還可以變更一些設定檔詳細資料，以檢視頁面體驗在各種條件下的差異。
 
-### 載入新用戶配置檔案 {#loading-a-new-user-profile}
+### 正在載入新的使用者設定檔 {#loading-a-new-user-profile}
 
-您可以通過以下任一方式更改配置檔案：
+您可以透過以下任一方式變更設定檔：
 
-* [使用「載入」表徵圖](#loading-a-new-visitor-profile-with-the-load-profile-icon)
-* [使用選擇滑塊](#loadinganewvisitorprofilewiththeselectionslider)
+* [使用載入圖示](#loading-a-new-visitor-profile-with-the-load-profile-icon)
+* [使用選取範圍滑桿](#loadinganewvisitorprofilewiththeselectionslider)
 
-完成後，您可以 [重置配置檔案](#resetting-the-profile-to-the-current-user)。
+完成後，您可以 [重設設定檔](#resetting-the-profile-to-the-current-user).
 
-#### 使用「載入配置檔案」表徵圖載入新訪問者配置檔案 {#loading-a-new-visitor-profile-with-the-load-profile-icon}
+#### 使用載入設定檔圖示載入新訪客設定檔 {#loading-a-new-visitor-profile-with-the-load-profile-icon}
 
-1. 按一下「載入配置檔案」(Load Profile)表徵圖：
+1. 按一下「載入設定檔」圖示：
 
    ![](do-not-localize/clientcontext_loadprofile.png)
 
-1. 這將開啟對話框，您可以在此處選擇要載入的配置檔案：
+1. 這將開啟對話方塊，您可以在此處選取要載入的設定檔：
 
    ![](assets/clientcontext_profileloader.png)
 
-1. 按一下 **確定** 裝入。
+1. 按一下 **確定** 以載入。
 
-#### 使用選擇滑塊載入新用戶配置檔案 {#loading-a-new-user-profile-with-the-selection-slider}
+#### 使用選取範圍滑桿載入新的使用者設定檔 {#loading-a-new-user-profile-with-the-selection-slider}
 
-也可以使用選擇滑塊選取配置檔案：
+您也可以使用選取範圍滑桿來選取設定檔：
 
-1. 按兩下表示當前用戶的表徵圖。 選擇器將開啟，使用箭頭導航並查看可用的配置檔案：
+1. 連按兩下代表目前使用者的圖示。 選取器將會開啟，使用箭頭來導覽並檢視可用的設定檔：
 
    ![](assets/clientcontext_profileselector.png)
 
-1. 按一下要載入的配置檔案。 載入詳細資訊後，按一下選擇器外部關閉。
+1. 按一下要載入的設定檔。 載入詳細資料後，按一下選取器外部以關閉。
 
-#### 將配置檔案重置為當前用戶 {#resetting-the-profile-to-the-current-user}
+#### 將設定檔重設為目前使用者 {#resetting-the-profile-to-the-current-user}
 
-1. 使用重置表徵圖將客戶端上下文中的配置檔案返回到當前用戶的配置檔案：
+1. 使用重設圖示將Client Context中的設定檔傳回至目前使用者的設定檔：
 
    ![](do-not-localize/clientcontext_resetprofile.png)
 
-### 更改瀏覽器平台 {#changing-the-browser-platform}
+### 變更瀏覽器平台 {#changing-the-browser-platform}
 
-1. 按兩下表示瀏覽器平台的表徵圖。 選擇器將開啟，使用箭頭導航並查看可用的平台/瀏覽器：
+1. 連按兩下代表瀏覽器平台的圖示。 選擇器將會開啟、使用箭頭來導覽並檢視可用的平台/瀏覽器：
 
    ![](assets/clientcontext_browserplatform.png)
 
-1. 按一下要載入的平台瀏覽器。 載入詳細資訊後，按一下選擇器外部關閉。
+1. 按一下您要載入的平台瀏覽器。 載入詳細資料後，按一下選取器外部以關閉。
 
-### 更改地理位置 {#changing-the-geolocation}
+### 變更地理位置 {#changing-the-geolocation}
 
-1. 按兩下地理位置表徵圖。 將開啟展開的映射，您可以在此處將標籤拖動到新位置：
+1. 連按兩下地理位置圖示。 展開的地圖將會開啟，您可以在此處將標籤拖曳到新位置：
 
    ![](assets/clientcontext_geomocationrelocate.png)
 
-1. 在映射外按一下以關閉。
+1. 按一下地圖外部以關閉。
 
-### 更改標籤選擇 {#changing-the-tag-selection}
+### 變更標籤選取範圍 {#changing-the-tag-selection}
 
-1. 按兩下「客戶端上下文」的「標籤雲」部分。 該對話框將開啟，您可以在此處選擇標籤：
+1. 連按兩下Client Context的「標籤雲」區段。 隨即會開啟對話方塊，您可在此處選取標籤：
 
    ![](assets/clientcontext_tagselection.png)
 
-1. 按一下「確定」(OK)以載入到「客戶端上下文」(Client Context)中。
+1. 按一下「確定」以載入使用者端內容。
 
-## 編輯客戶端上下文 {#editing-the-client-context}
+## 編輯使用者端內容 {#editing-the-client-context}
 
-編輯客戶端上下文可用於設定（或重置）某些屬性的值、添加新屬性或刪除不再需要的屬性。
+編輯使用者端內容可用於設定（或重設）特定屬性的值、新增屬性或移除不再需要的屬性。
 
-### 編輯屬性詳細資訊 {#editing-property-details}
+### 編輯屬性詳細資料 {#editing-property-details}
 
-編輯客戶端上下文可用於設定（或重置）某些屬性的值。 這允許您test特定方案(對於 [分割](/help/sites-administering/campaign-segmentation.md) 和 [活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md))。
+編輯使用者端內容可用於設定（或重設）某些屬性的值。 這可讓您測試特定情境(對以下專案尤其有用： [細分](/help/sites-administering/campaign-segmentation.md) 和 [行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md))。
 
 ![](assets/clientcontext_alisonparker_edit.png)
 
-### 添加屬性元件 {#adding-a-property-component}
+### 新增屬性元件 {#adding-a-property-component}
 
-開啟後 **ClientContext設計頁**，也 **添加** 使用可用元件(元件列在側腳上或從 **插入新元件** 在 **將元件或資產拖到此處** ):
+在您開啟 **ClientContext設計頁面**，您也可以 **新增** 使用可用元件的全新屬性（元件會列在sidekick上或清單中）。 **插入新元件** 連按兩下後開啟的對話方塊 **將元件或資產拖曳到這裡** box)：
 
 ![](assets/clientcontext_alisonparker_new.png)
 
-### 刪除屬性元件 {#removing-a-property-component}
+### 移除屬性元件 {#removing-a-property-component}
 
-開啟後 **ClientContext設計頁**，也 **刪除** 屬性（如果不再需要）。 這包括出廠時提供的屬性； **重置** 如果它們被移除，將恢復。
+在您開啟 **ClientContext設計頁面**，您也可以 **移除** 屬性（若不再需要）。 這包括現成可用的屬性； **重設** 如果這些專案已移除，則會恢復這些專案。
 
-## 通過JSONP在客戶端上下文中儲存資料 {#storing-data-in-client-context-via-jsonp}
+## 透過JSONP在Client Context中儲存資料 {#storing-data-in-client-context-via-jsonp}
 
-請按照此示例使用JSONP儲存上下文儲存元件將外部資料添加到客戶端上下文。 然後，基於來自該資料的資訊建立段。 該示例使用WIPmania.com提供的JSONP服務。 該服務基於Web客戶端的IP地址返回地理位置資訊。
+請依照此範例使用JSONP存放區內容存放區元件，將外部資料新增至使用者端內容。 然後，根據該資料中的資訊建立區段。 此範例使用WIPmania.com提供的JSONP服務。 此服務會根據Web使用者端的IP位址傳回地理位置資訊。
 
-此示例使用Geometrixx Outdoors示例網站訪問客戶端上下文並test建立的段。 只要該頁啟用了「客戶端上下文」，您就可以使用其他網站。 (請參閱 [將客戶端上下文添加到頁面](/help/sites-developing/client-context.md#adding-client-context-to-a-page)。)
+此範例使用Geometrixx Outdoors範例網站來存取Client Context並測試建立的區段。 只要頁面已啟用「使用者端內容」，您就可以使用不同的網站。 (請參閱 [新增使用者端內容至頁面](/help/sites-developing/client-context.md#adding-client-context-to-a-page).)
 
-### 添加JSONP儲存元件 {#add-the-jsonp-store-component}
+### 新增JSONP存放區元件 {#add-the-jsonp-store-component}
 
-將JSONP儲存元件添加到客戶端上下文，並使用它檢索和儲存有關Web客戶端的地理位置資訊。
+將JSONP Store元件新增至Client Context，並使用它來擷取和儲存Web使用者端的地理位置資訊。
 
-1. 開啟作者實例上的Geometrixx Outdoors網站的英AEM語首頁。 ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))。
-1. 要開啟客戶端上下文，請按Ctrl-Alt-c（窗口）或control-option-c(Mac)。
-1. 按一下「客戶端上下文」頂部的編輯表徵圖以開啟「客戶端上下文設計器」。
+1. 開啟AEM編寫執行個體上Geometrixx Outdoors網站的英文首頁。 ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html))。
+1. 若要開啟「使用者端內容」，請按Ctrl-Alt-c (windows)或control-option-c (Mac)。
+1. 按一下「使用者端內容」頂端的編輯圖示，開啟「使用者端內容設計工具」。
 
    ![](do-not-localize/chlimage_1.png)
 
-1. 將JSONP儲存元件拖到客戶端上下文。
+1. 將JSONP存放區元件拖曳至Client Context。
 
    ![](assets/chlimage_1-4.jpeg)
 
-1. 按兩下元件以開啟編輯對話框。
-1. 在「JSONP服務URL」框中，輸入以下URL，然後按一下「提取儲存」：
+1. 連按兩下元件以開啟「編輯」對話方塊。
+1. 在「JSONP服務URL」方塊中，輸入以下URL，然後按一下「擷取存放區」：
 
    `https://api.wipmania.com/jsonp?callback=${callback}`
 
-   該元件調用JSONP服務並列出返回的資料包含的所有屬性。 清單中的屬性是那些在客戶端上下文中可用的屬性。
+   元件會呼叫JSONP服務並列出傳回資料包含的所有屬性。 清單中的屬性是可在Client Context中使用的屬性。
 
    ![](assets/chlimage_1-40.png)
 
 1. 按一下「確定」。
-1. 返回Geometrixx Outdoors首頁並刷新頁面。 客戶端上下文現在包括來自JSONP儲存元件的資訊。
+1. 返回Geometrixx Outdoors首頁並重新整理頁面。 Client Context現在包含來自JSONP存放區元件的資訊。
 
    ![](assets/chlimage_1-41.png)
 
-### 建立段 {#create-the-segment}
+### 建立區段 {#create-the-segment}
 
-使用您使用JSONP儲存元件建立的會話儲存中的資料。 該段使用會話儲存的緯度和當前日期來確定是否是客戶機位置的冬季時間。
+使用您使用JSONP存放區元件建立的工作階段存放區中的資料。 區段會使用工作階段存放區的緯度和目前日期，來判斷這是否為使用者端位置的冬季時間。
 
-1. 在Web瀏覽器中開啟「工具」控制台(`https://localhost:4502/miscadmin#/etc`)。
-1. 在資料夾樹中，按一下「工具」/「分段」資料夾，然後按一下「新建」>「新建資料夾」。 指定以下屬性值，然後按一下建立：
+1. 在網頁瀏覽器中開啟「工具」主控台(`https://localhost:4502/miscadmin#/etc`)。
+1. 在資料夾樹狀結構中，按一下「工具/分段」資料夾，然後按一下「新增>新增資料夾」。 指定下列屬性值，然後按一下「建立」：
 
-   * 名稱：my片段
-   * 標題：我的段
+   * 名稱： mysegments
+   * 標題：我的區段
 
-1. 選擇「我的段」資料夾，然後按一下「新建」>「新建頁」：
+1. 選取「我的區段」資料夾，然後按一下「新增>新增頁面」：
 
-   1. 在「Title（標題）」中，鍵入Winter。
-   1. 選擇段模板。
+   1. 在「標題」中輸入Winter。
+   1. 選取區段範本。
    1. 按一下建立。
 
-1. 按一下右鍵「Winter（冬季）」段，然後按一下「Open（開啟）」。
-1. 將「一般儲存」屬性拖到預設的AND容器中。
+1. 以滑鼠右鍵按一下Winter區段，然後按一下「開啟」。
+1. 將Generic Store屬性拖曳至預設的AND容器。
 
    ![](assets/chlimage_1-5.jpeg)
 
-1. 按兩下元件以開啟編輯對話框，指定以下屬性值，然後按一下確定：
+1. 連按兩下元件以開啟「編輯」對話方塊，指定下列屬性值，然後按一下「確定」：
 
-   * 商店：維曼尼亞
-   * 屬性名稱：緯度
-   * 運算子：大於
-   * 屬性值：30
+   * 商店： wipmania
+   * 屬性名稱： latitude
+   * 運運算元：大於
+   * 屬性值： 30
 
-1. 將指令碼元件拖到同一AND容器，然後開啟其編輯對話框。 添加以下指令碼，然後按一下「確定」：
+1. 將Script元件拖曳至相同的AND容器，並開啟其編輯對話方塊。 新增下列指令碼，然後按一下「確定」：
 
    `3 < new Date().getMonth() < 12`

@@ -1,7 +1,7 @@
 ---
 title: 整合 Adobe Target
 seo-title: Integrating with Adobe Target
-description: 瞭解與AEMAdobe Target的整合。
+description: 瞭解如何整合AEM與Adobe Target。
 seo-description: Learn about integrating AEM with Adobe Target.
 uuid: b90346e8-9757-4272-a870-bbe5e647303f
 contentOwner: Guillaume Carlino
@@ -19,66 +19,66 @@ ht-degree: 1%
 
 # 整合 Adobe Target{#integrating-with-adobe-target}
 
-作為Adobe Marketing Cloud的一部分， [Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) 允許您通過針對所有渠道進行定位和測量來提高內容相關性。 Adobe Target被營銷人員用於設計和執行線上test、建立即時（基於行為）受眾群，以及自動確定內容和線上體驗的目標。 採AEM用了Adobe Target標準的目標工作流程。 如果使用「目標」，您將熟悉中的目標編輯環AEM境。
+身為Adobe Marketing Cloud的一部分， [Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) 可讓您透過所有管道的目標定位和測量，提高內容關聯性。 行銷人員使用Adobe Target來設計和執行線上測試、建立即時受眾區段（根據行為）以及自動化內容和線上體驗的鎖定目標。 AEM已採用Adobe Target Standard中使用的目標定位工作流程。 如果您使用Target，則會熟悉AEM中的目標定位編輯環境。
 
-將您的站AEM點與Adobe Target整合，以個性化頁面中的內容：
+將AEM網站與Adobe Target整合，以個人化頁面中的內容：
 
-* 實施內容目標。
-* 使用目標受眾建立個性化體驗。
-* 訪問者與您的頁面交互時，將上下文資料提交到目標。
-* 跟蹤轉換率。
+* 實作內容目標定位。
+* 使用Target受眾建立個人化體驗。
+* 當訪客與您的頁面互動時，將內容資料提交至Target。
+* 追蹤轉換率。
 
-要與目標整合，請執行以下任務：
+若要與Target整合，請執行下列工作：
 
-1. [執行必備任務](/help/sites-administering/target-requirements.md):向Adobe Target註冊並配置作者實例的AEM某些方面。 您的Adobe Target帳戶必須至少具有**批准者**級別權限。 此外，必須保護發佈節點上的活動設定，以便用戶無法訪問該活動設定。
+1. [執行先決條件任務](/help/sites-administering/target-requirements.md)：向Adobe Target註冊並設定AEM編寫執行個體的某些方面。 您的Adobe Target帳戶必須至少具有**核准者**層級的許可權。 此外，您必須保護發佈節點上的活動設定，讓使用者無法存取。
 
 1. 可以：
 
-   1. [選擇加入Adobe Target](/help/sites-administering/opt-in.md):選擇加入嚮導將獲取目標帳戶資訊並建立Adobe Target雲配置和目標框架。 嚮導還將您的站點與目標框架相關聯。 如果嚮導無法連接到目標，請參閱 [連接故障](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems) 的子菜單。 你可以 [修改預設雲配置](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations):如有必要，請修改選擇加入嚮導建立的雲配置和框架。 例如，修改框架以將附加上下文資料發送到目標。 如果要將Adobe Analytics用作Adobe Target的報告源，則需要修改雲配置以指向A4T配置。
-   1. [手動與Adobe Target整合](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target)。
+   1. [選擇加入Adobe Target](/help/sites-administering/opt-in.md)：選擇加入精靈會考量您的Target帳戶資訊，並建立Adobe Target雲端設定和Target架構。 精靈也會將您的網站與Target架構建立關聯。 如果精靈無法連線到目標，請參閱 [連線故障診斷](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems) 區段。 然後，您可以 [修改預設雲端設定](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations)：如有必要，請修改選擇加入精靈建立的雲端設定和架構。 例如，修改架構以傳送其他內容資料至Target。 如果您想要使用Adobe Analytics做為Adobe Target的報表來源，您需要修改雲端設定以指向A4T設定。
+   1. [手動與Adobe Target整合](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target).
 
-1. [配置活動](/help/sites-authoring/activitylib.md):將活動與目標雲配置關聯。
-
->[!NOTE]
->
->另請參閱 [使用AEMDTM與Adobe Target和Adobe Analytics整合](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html)。
+1. [設定活動](/help/sites-authoring/activitylib.md)：將您的活動與Target雲端設定建立關聯。
 
 >[!NOTE]
 >
->如果將目標與自定義代理配置一起使用，則需要配置兩個HTTP客戶端代理配置AEM，因為其中的某些功能使用3.x API，而其他功能則使用4.x API:
+>另請參閱 [使用DTM整合AEM與Adobe Target和Adobe Analytics](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
+
+>[!NOTE]
 >
->* 3.x配置 [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
->* 4.x配置 [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+>如果您使用具有自訂Proxy設定的Target，則需要設定HTTP使用者端Proxy設定，因為AEM的某些功能使用3.x API，而其他功能則使用4.x API：
+>
+>* 3.x已設定為 [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
+>* 4.x已設定為 [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 >
 
 
 >[!CAUTION]
 >
->必須保護活動設定節點的安全 **cq：活動設定** 在發佈實例上，以便普通用戶無法訪問。 活動設定節點只能由處理與Adobe Target的活動同步的服務訪問。
+>您必須保護活動設定節點 **cq：ActivitySettings** ，讓一般使用者無法存取。 活動設定節點應該只能由處理活動同步至Adobe Target的服務存取。
 >
->請參閱 [與Adobe Target整合的先決條件](/help/sites-administering/target-requirements.md#securing-the-activity-settings-node) 的上界。
+>另請參閱 [與Adobe Target整合的必要條件](/help/sites-administering/target-requirements.md#securing-the-activity-settings-node) 詳細資訊。
 
-整合完成後，您可以 [作者目標內容](/help/sites-authoring/content-targeting-touch.md) 把訪問者資料發送到Adobe Target。 請注意，頁面元件需要特定代碼才能啟用內容目標。 (請參閱 [為目標內容開發](/help/sites-developing/target.md)。)
+整合完成後，您可以 [作者目標內容](/help/sites-authoring/content-targeting-touch.md) 將訪客資料傳送至Adobe Target的功能。 請注意，頁面元件需要特定程式碼才能啟用內容目標定位。 (請參閱 [針對目標內容開發](/help/sites-developing/target.md).)
 
 >[!NOTE]
 >
->當您針對作者中的元件AEM時，該元件會向Adobe Target發出一系列伺服器端呼叫，以註冊市場活動、設定優惠和檢索Adobe Target段（如果已配置）。 發佈到Adobe Target時不會進行AEM伺服器端呼叫。
+>當您在AEM作者中鎖定元件時，該元件會對Adobe Target發出一系列伺服器端呼叫，以註冊行銷活動、設定選件及擷取Adobe Target區段（如果已設定）。 不會從AEM發佈對Adobe Target發出伺服器端呼叫。
 
-## 背景資訊源 {#background-information-sources}
+## 背景資訊來源 {#background-information-sources}
 
-與AEMAdobe Target的整合需要Adobe Target、AEM活動管理AEM和受眾管理。 您應熟悉以下資訊：
+將AEM與Adobe Target整合需要Adobe Target、AEM Activities管理和AEM Audiences管理的知識。 您應熟悉下列資訊：
 
-* Adobe Target(請參閱 [Adobe Target文檔](https://experienceleague.adobe.com/docs/target/using/target-home.html))。
-* 活AEM動控制台(請參閱 [管理活動](/help/sites-authoring/activitylib.md))。
-* 觀AEM眾(請參閱 [管理受眾](/help/sites-authoring/managing-audiences.md))。
+* Adobe Target (請參閱 [Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/target-home.html))。
+* AEM活動主控台(請參閱 [管理活動](/help/sites-authoring/activitylib.md))。
+* AEM對象(請參閱 [管理對象](/help/sites-authoring/managing-audiences.md))。
 
 >[!NOTE]
 >
->使用Adobe Target時，以下是市場活動中允許的最大工件數：
+>使用Adobe Target時，以下是行銷活動中允許的成品數目上限：
 >
->* 50個地點
->* 2,000次經驗
->* 50個指標
->* 50個報告分部
+>* 50個位置
+>* 2,000個體驗
+>* 50個量度
+>* 50個報表區段
 >
 

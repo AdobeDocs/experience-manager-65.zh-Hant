@@ -1,6 +1,6 @@
 ---
 title: 元件
-description: 隨附AEM了各種現成元件，可為網站作者提供全面的功能。
+description: AEM隨附多種現成的元件，為網站作者提供全方位功能。
 page-status-flag: de-activated
 uuid: 02720edd-853c-4893-bf28-0e7b018029ea
 contentOwner: Chris Bohnert
@@ -18,26 +18,26 @@ ht-degree: 1%
 
 # 元件{#components}
 
-Adobe Experience ManagerAEM()附帶了各種現成元件，可為網站作者提供全面的功能。 當 [編輯頁面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 按主功能區（即元件組）分組，以幫助過濾。
+Adobe Experience Manager (AEM)隨附多種現成的元件，為網站作者提供全方位功能。 它們可用於 [編輯頁面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 和會依主要功能區域（即元件群組）分組，以協助篩選。
 
 >[!CAUTION]
 >
->本節僅討論標準安裝中現成的元件AEM。
+>本節僅討論標準AEM安裝中現成可用的元件。
 >
->根據您的實例，您可能已根據您的要求明確開發了自定義元件。 這些元件甚至可能與此處討論的某些元件具有相同的名稱。
+>根據您的執行個體，您可能已針對您的需求明確開發自訂元件。 這些元件的名稱甚至可能與此處討論的部分元件相同。
 
 ## 元件 — 主要區域 {#components-major-areas}
 
-以下頁面提供了指向內容管理的一些主要領域的快速連結（以上概述頁面中提供了指向其他領域的連結）:
+下列頁面提供內容管理部分主要區域的快速連結（上方概觀頁面提供進一步區域的連結）：
 
-* [頁面創作元件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
+* [用於頁面編寫的元件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 
-   用於建立標準頁面內容的元件主要包含在組中 **常規**。 **列** 和 **Forms**。
+   用於建立標準頁面內容的元件主要包含在群組中 **一般**， **欄** 和 **Forms**.
 
 * [電子商務](/help/commerce/cif-classic/administering/ecommerce.md)
 
-   其中的電子商務功AEM能還包括包含在 **商業** 組。 實際使用取決於所使用的商業引擎。
+   AEM中的電子商務功能也包含一系列元件，包含在 **商務** 群組。 實際使用情形取決於所使用的商業引擎。
 
-## 使用設計模式配置元件 {#using-design-mode-to-configure-components}
+## 使用設計模式設定元件 {#using-design-mode-to-configure-components}
 
-除了作者可以通過標準安裝中的輔助工具訪問的元件外，還提供了各種其他元件。 您可以使用 [設計模式](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components) 啟用/禁用這些參數並編輯特定元件的參數。
+除了作者可在標準安裝中透過Sidekick存取的元件外，您也可以使用其他各種元件。 您可以使用 [設計模式](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components) 以啟用/停用這些元件及編輯特定元件的引數。

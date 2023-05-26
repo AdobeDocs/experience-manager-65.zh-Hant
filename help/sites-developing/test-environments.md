@@ -1,7 +1,7 @@
 ---
-title: 需要哪些Test環境？
+title: 需要哪些測試環境？
 seo-title: Which Test Environments are needed?
-description: 應將幾個環境視為測試的一部分
+description: 在測試中應考慮幾個環境
 seo-description: Several environments should be considered as part of testing
 uuid: bb725e50-edae-4c20-8107-d1c8df2e60e2
 contentOwner: Guillaume Carlino
@@ -17,26 +17,26 @@ ht-degree: 0%
 
 ---
 
-# 需要哪些Test環境？{#which-test-environments-will-be-needed}
+# 需要哪些測試環境？{#which-test-environments-will-be-needed}
 
-要定義測試的配置，應考慮以下內容：
+若要定義要測試的設定，您應考量下列事項：
 
-**開發**  — 用於Unit和某些整合test。
+**開發**  — 適用於單位和某些整合測試。
 
-**測試**  — 大多數test。
+**測試**  — 適用於大部分測試。
 
-**實況**  — 用於最終效能和壓力test。 也用於與客戶的接受test。
+**即時**  — 進行最終效能與壓力測試。 也用於和客戶進行驗收測試。
 
-您還需要確定需要哪些實例（通常每個實例中至少有一個用於所有測試級別）:
+您還需要決定您將在何處需要哪些執行個體（通常是所有測試層級至少各一個）：
 
-**作者**  — 此實例允許作者輸入和發佈內容。
+**作者**  — 此例項可讓作者輸入及發佈內容。
 
-**發佈**  — 此實例以其發佈的形式顯示網站供訪問者訪問。
+**發佈**  — 此例項會以已發佈的形式顯示網站，以供訪客存取。
 
-應與Dispatcher一起測試。
+應結合Dispatcher進行測試。
 
-最後，必須考慮實際硬體 — 任何效能test都應在與最終即時環境盡可能接近的配置中對系統進行。 因此，還建議將項目啟動拆分為：
+最後，必須考量實際的硬體 — 任何效能測試都應在儘可能接近最終上線環境的設定上進行。 因此，我們也建議將Project Launch分割為：
 
-**軟啟動**  — 降低可用性；它允許在生產環境的實際條件下進行效能test、調整和優化。
+**軟啟動**  — 減少可用性；可在實際生產環境中進行效能測試、調校和最佳化。
 
-**硬啟動**  — 完全可用。
+**硬式啟動**  — 完整可用性。

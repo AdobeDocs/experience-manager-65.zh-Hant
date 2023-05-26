@@ -1,5 +1,5 @@
 ---
-title: 建立內容片段無頭快速入門手冊
+title: 建立內容片段Headless快速入門手冊
 description: 了解如何使用 AEM 的內容片段來設計、建立、規劃和使用每頁自主的內容以進行無周邊傳遞。
 exl-id: 5787204d-bcce-447e-b98c-2bc1c0d744c3
 source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
@@ -9,7 +9,7 @@ ht-degree: 67%
 
 ---
 
-# 建立內容片段無頭快速入門手冊 {#creating-content-fragments}
+# 建立內容片段Headless快速入門手冊 {#creating-content-fragments}
 
 了解如何使用 AEM 的內容片段來設計、建立、規劃和使用每頁自主的內容以進行無周邊傳遞。
 
@@ -25,24 +25,24 @@ ht-degree: 67%
 
 內容作者將建立任意數量的內容片段來表示他們建立的內容。這將是他們在 AEM 中的主要任務。出於本快速入門指南的目的，我們只需要建立一個。
 
-1. 登錄AEM並從主菜單選擇 **導航 — >資產**。
-1. 導航到 [資料夾。](create-assets-folder.md)
-1. 點擊或按一下 **建立 — >內容片段**。
-1. 內容片段的建立將分兩步顯示為嚮導。 首先選擇要用於建立內容片段的模型，然後點擊或按一下 **下一個**。
+1. 登入AEM，並從主功能表選取 **導覽 — >資產**.
+1. 導覽至 [您先前建立的資料夾。](create-assets-folder.md)
+1. 點選或按一下 **建立 — >內容片段**.
+1. 內容片段的建立會以兩個步驟的精靈呈現。 首先，選取您要使用哪個模式來建立內容片段，然後點選或按一下 **下一個**.
    * 可用模型取決於您為內容片段建立所在資產資料夾所定義的&#x200B;[**雲端設定**](create-assets-folder.md)。
-   * 如果您收到消息 `We could not find any models`，檢查資產資料夾的配置。
+   * 如果您收到訊息 `We could not find any models`，檢查資產資料夾的設定。
 
    ![選取內容片段模型](assets/content-fragment-model-select.png)
-1. 提供 **標題**。 **說明**, **標籤** 根據需要按一下 **建立**。
+1. 提供 **標題**， **說明**、和 **標籤** 視需要並點選或按一下 **建立**.
 
    ![建立內容片段](assets/content-fragment-create.png)
-1. 點擊或按一下 **開啟** 的子菜單。
+1. 點選或按一下 **開啟** 在確認視窗中。
 
-   ![內容片段已建立確認](assets/content-fragment-confirmation.png)
-1. 提供內容片段編輯器中內容片段的詳細資訊。
+   ![內容片段建立確認](assets/content-fragment-confirmation.png)
+1. 在內容片段編輯器中提供內容片段的詳細資訊。
 
    ![內容片段編輯器](assets/content-fragment-edit.png)
-1. 點擊或按一下 **保存** 或  **保存並關閉**。
+1. 點選或按一下 **儲存** 或  **儲存並關閉**.
 
 內容片段可以參考其他內容片段，必要時允許巢狀內容結構。
 

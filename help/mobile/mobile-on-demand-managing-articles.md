@@ -1,7 +1,7 @@
 ---
 title: 管理文章
 seo-title: Managing Articles
-description: 請按照本頁瞭解有關建立和管理文章的資訊。
+description: 請依照本頁所述操作，瞭解如何建立和管理文章。
 seo-description: Follow this page to learn about creating and managing Articles.
 uuid: 72b86cd7-3016-41b6-a001-9dce4084e9db
 contentOwner: User
@@ -21,19 +21,19 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建SPA議對需要基於單頁應用程式框架的客戶端呈現（如React）的項目使用編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-內容管理操作是幫助在應用程式中建立和管理文章的構造塊。 對應用程式中的項目執行以下操作。
+內容管理動作是建置區塊，可協助您在應用程式中建立和管理文章。 會在應用程式內的文章上執行下列動作。
 
 ## 文章概述 {#articles-overview}
 
-文章表示基於文本和藝術以傳遞資訊。
+文章以文字為基礎，搭配藝術以傳達資訊。
 
 >[!NOTE]
 >
->請參閱聯機幫助中的以下資源，以瞭解AEM Mobile應用中的以下主題：
+>請參閱線上說明中的下列資源，瞭解AEM Mobile應用程式中的下列主題：
 >
->* [設計注意事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [設計考量](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
 >* [管理文章](https://helpx.adobe.com/digital-publishing-solution/help/creating-articles.html)
 >
@@ -41,102 +41,102 @@ ht-degree: 1%
 
 ## 建立文章 {#creating-an-article}
 
-建立項目的一般工作流如下：
+建立文章的一般工作流程如下：
 
-1. 選擇 **移動** 從側軌上。
-1. 從Mobile中，從目錄中選擇您的Mobile On-Demand應用。
-1. 按一下右上角的向下箭頭 **管理文章** 平鋪。
-1. 選擇文章模板並按一下 **下一個**。
-1. 通過嚮導的每個步驟繼續建立新項目。
-1. 準備好後，按一下 **建立**。
-1. 您的新文章將出現在 **管理文章** 平鋪。
+1. 選取 **行動** 從側邊欄移除。
+1. 在Mobile中，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 按一下右上角的向下箭頭 **管理文章** 圖磚。
+1. 選擇文章範本並按一下 **下一個**.
+1. 完成精靈的每個步驟，以繼續建立您的新文章。
+1. 準備就緒後，按一下 **建立**.
+1. 您的新文章會出現在 **管理文章** 圖磚。
 
-## 導入新文章 {#importing-a-new-article}
+## 匯入新文章 {#importing-a-new-article}
 
-現有移動按需內容可從移動按需下載（導入）到AEM。 這允許編輯和查看本地內容。
+現有的Mobile On-Demand內容可以從Mobile On-Demand下載（匯入）到AEM。 如此可讓您編輯和檢視本機內容。
 
 >[!NOTE]
 >
->導入不包括映像。
+>匯入不包括影像。
 
-導入新文章的工作流
+匯入新文章的工作流程
 
-1. 從Mobile中，從目錄中選擇您的Mobile On-Demand應用。
-1. 按一下右上角的向下箭頭 **管理文章** 平鋪並選擇「導入文章」。
-1. 按一下 **導入文章** ，然後選擇「關閉」。
-1. 您的Mobile On-Demand文章現在出現在 **管理文章** 平鋪。
+1. 從Mobile從目錄中選擇您的Mobile On-Demand應用程式。
+1. 按一下右上角的向下箭頭 **管理文章** 並選取匯入文章。
+1. 按一下 **匯入文章** 在對話方塊上，然後按一下「關閉」。
+1. 您的Mobile On-Demand文章現在會出現在 **管理文章** 圖磚。
 
 >[!CAUTION]
 >
->必須先關聯移動按需連接。
+>您必須先關聯Mobile On-Demand連線。
 
 ![chlimage_1-3](assets/chlimage_1-3.gif)
 
 ## 編輯文章 {#editing-an-article}
 
-使用內置的AEM拖放編輯器添加或更改項目。 可以添加/刪除文本和影像等元件。 可以插入DAM Assets中的影像。
+使用內建的AEM拖放編輯器來新增或變更文章。 可以新增/移除文字和影像等元件。 可以插入DAM Assets中的影像。
 
 >[!CAUTION]
 >
->編輯器中只AEM能開啟在中建立的項目。
+>編輯器中只能開啟在AEM中建立的文章。
 
-編輯項目的工作流：
+編輯文章的工作流程：
 
-1. 從Mobile中，從目錄中選擇您的Mobile On-Demand應用。
-1. 從中選AEM擇源項目 **管理文章** 平鋪。
-1. 從清單視圖中按一下突出顯示的項目，在內容編輯器中將其開啟。
-1. 使用內容編輯器拖動文章內容（稿件、影像、文本等）。
+1. 在Mobile中，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 選取AEM來源文章，從 **管理文章** 圖磚。
+1. 從清單檢視中按一下醒目提示的文章，以在內容編輯器中開啟它。
+1. 使用內容編輯器拖曳文章內容（手稿、影像、文字等）。
 
-### 查看和編輯項目中的元資料 {#viewing-and-editing-the-metadata-within-an-article}
+### 檢視和編輯文章中的中繼資料 {#viewing-and-editing-the-metadata-within-an-article}
 
-諸如文章、橫幅等內容具有許多屬性，如標題、說明、影像。 此操作用於查看和修改此類屬性。 （可選）這些更改可在保存後上載到Mobile On-Demand。
+文章、橫幅等內容具有標題、說明、影像等多項屬性。 此動作用於檢視和修改此類屬性。 或者，您也可以在儲存時將這些變更上傳至Mobile On-Demand。
 
-檢視/編輯項目的常規工作流：
+檢視/編輯文章的一般工作流程：
 
-1. 從Mobile中，從目錄中選擇您的Mobile On-Demand應用。
-1. 從 **管理文章** 平鋪。
+1. 在Mobile中，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 從中選擇文章 **管理文章** 圖磚。
 
-1. 選擇 **查看屬性** 按鈕。
-1. 查看該文章的所有可用元資料。
-1. 編輯元資料（如果需要），然後按一下 **保存** 完成。
-1. （可選）立即將更改上載到Mobile On-Demand。
+1. 選取 **檢視屬性** 動作列中的。
+1. 檢視該文章的所有可用中繼資料。
+1. 視需要編輯中繼資料，然後按一下 **儲存** 完成時。
+1. 或者，您可以立即將變更上傳至Mobile On-Demand。
 
-## 上載文章 {#uploading-an-article}
+## 上傳文章 {#uploading-an-article}
 
-上載操作將複製所選內容並將其添加到移動按需項目。 現有的Mobile On-Demand內容已被新版本取代。
+上傳動作會複製所選內容，並將其新增至Mobile On-Demand專案。 現有的Mobile On-Demand內容將由新版本取代。
 
-上載項目的常規工作流：
+上傳文章的一般工作流程：
 
-1. 從 **移動**，從目錄中選擇您的Mobile On-Demand應用。
-1. 在 **管理文章** 平鋪，選擇要上載到Mobile On-Demand的項目。
-1. 如果需要，從清單視圖中添加更多項目。
-1. 選擇 **上載** 在操作欄中，然後按一下對話框中的上載。
-1. 您的文章現在已上載到Mobile On-Demand。
+1. 從 **行動**，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 在 **管理文章** 圖磚，選取文章以上傳至Mobile On-Demand。
+1. 如有需要，可從清單檢視新增更多文章。
+1. 選取 **上傳** 從動作列，然後按一下對話方塊中的「上傳」 。
+1. 您的文章現在已上傳至Mobile On-Demand。
 
 ![chlimage_1-4](assets/chlimage_1-4.gif)
 
 ## 刪除文章 {#deleting-an-article}
 
-此操作從Mobile On-Demand中刪除所選內容，也可從本地實例中AEM刪除。
+此操作會從Mobile On-Demand以及本機AEM執行個體中刪除選取的內容（選擇性）。
 
-刪除項目的一般工作流：
+刪除文章的一般工作流程：
 
-1. 從Mobile中，從目錄中選擇您的Mobile On-Demand應用。
-1. 選擇要刪除的文章 **管理文章** 平鋪。
-1. 確保在清單中選中了它（根據需要選擇要刪除的其他選項）。
-1. 按一下 **刪除** 按鈕。
-1. 檢查是否要從Mobile On-DemandAEM和Mobile On-Demand中刪除。
+1. 在Mobile中，從目錄中選擇您的Mobile On-Demand應用程式。
+1. 在中選取要刪除的文章 **管理文章** 圖磚。
+1. 確定在清單中選取它，（視需要選取要刪除的其他專案）。
+1. 按一下 **刪除** 動作列中的。
+1. 檢查您是否要從AEM和Mobile On-Demand中刪除。
 1. 按一下&#x200B;**刪除**。
-1. 您的文章現在已從清單中刪除。
+1. 您的文章現在已從清單中移除。
 
 ![chlimage_1-5](assets/chlimage_1-5.gif)
 
 ### 後續步驟 {#the-next-steps}
 
-您瞭解管理文章的一個資訊，請參閱
+若要瞭解如何管理文章，請參閱
 
 * [管理橫幅](/help/mobile/mobile-on-demand-managing-banners.md)
 * [管理集合](/help/mobile/mobile-on-demand-managing-collections.md)
-* [正在上載共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
+* [上傳共用資源](/help/mobile/mobile-on-demand-shared-resources.md)
 * [發佈/取消發佈內容](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
-* [使用印前檢查預覽](/help/mobile/aem-mobile-manage-ondemand-services.md)
+* [使用預檢預覽](/help/mobile/aem-mobile-manage-ondemand-services.md)

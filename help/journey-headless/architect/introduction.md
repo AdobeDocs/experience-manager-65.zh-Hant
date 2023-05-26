@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Manager無頭內容架構師之旅
-description: 介紹Adobe Experience Manager強大、靈活、無頭的功能，以及如何為項目建模內容。
+title: Adobe Experience Manager Headless內容架構者歷程
+description: 介紹Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案建立內容的模型。
 exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
 source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 88%
 
 # 使用 AEM 建立 Headless 的內容模型 - 簡介 {#architect-headless-introduction}
 
-在 [無AEM頭內容架構師旅程](overview.md)，您可以學習瞭解與Adobe Experience Manager()一起進行無頭內容交付的內容建模所需的（基本）概念和AEM術語。
+在這部分中 [AEM Headless內容架構者歷程](overview.md)，您可以學習必要的（基本）概念和術語，以瞭解透過Adobe Experience Manager (AEM)進行headless內容交付的內容模型。
 
 此文件可協助您了解無周邊內容傳遞、AEM 如何支援無周邊以及如何建立無周邊內容模型。閱讀本文件後，您應該：
 
@@ -68,7 +68,7 @@ ht-degree: 88%
 
 一旦您建立了內容片段模型，並且您的作者已使用它們產生內容，無周邊應用程式將需要存取此內容。
 
-Adobe Experience Manager(AEM)，可以使用GraphQLAPI有選擇地訪AEM問您的內容片段，以僅返回所需的內容。 使用 API，開發人員可以制定選取特定內容的查詢。此選取流程是根據&#x200B;*您的*&#x200B;內容片段模型進行的。
+Adobe Experience Manager (AEM)可以選擇使用AEM GraphQL API存取您的內容片段，以僅傳回所需的內容。 使用 API，開發人員可以制定選取特定內容的查詢。此選取流程是根據&#x200B;*您的*&#x200B;內容片段模型進行的。
 
 這表示您的專案可以實現結構化內容的無周邊傳遞，以便用於您的應用程式中。
 

@@ -1,7 +1,7 @@
 ---
-title: 螢幕內容管理
+title: 畫面內容管理
 seo-title: Content Management for Screens
-description: 瞭解螢幕內容管理的基本知識。
+description: 瞭解畫面內容管理的基本概念。
 seo-description: Learn about the basics of Content Management for Screens.
 uuid: eee0036e-b352-4cde-84d2-04b27d3dfe95
 contentOwner: Jyotika Syal
@@ -17,15 +17,15 @@ ht-degree: 1%
 
 ---
 
-# 螢幕內容管理{#content-management-for-screens}
+# 畫面內容管理{#content-management-for-screens}
 
-A ***內容管理器*** 因為AEM Screens是一位創意專家，與市場營銷密切合作，瞭解活動、觀眾和所希望的焦點。 內容管理器負責通過開發不同頻道和將序列分配給定時頻道體驗來建立和協調最終用戶體驗。
+A ***內容管理員*** AEM Screens的創意專業人士與行銷工作緊密合作，瞭解行銷活動、對象和想要的焦點。 內容管理員負責開發不同的頻道，並將序列指派至定時頻道體驗，以建立和協調一般使用者體驗。
 
-Content Manager for Screens設計位置和時間表、維護渠道完整性、執行分析和報告，以及維護視頻配置檔案。
+Screens的內容管理員可設計位置和排程、維護頻道完整性、執行分析和報告，以及維護視訊設定檔。
 
-AEM Screens內容經理負責以下任務：
+AEM Screens內容管理員負責下列工作：
 
 * 設計位置
-* 設計計畫
-* 維護通道完整性
+* 設計時程表
+* 維護管道完整性
 * 視訊設定檔

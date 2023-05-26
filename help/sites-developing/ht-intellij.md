@@ -1,6 +1,6 @@
 ---
-title: 如何利用IntelliJ IDEAAEM開發項目
-description: 使用IntelliJ IDEA開發項AEM目
+title: 如何使用IntelliJ IDEA開發AEM專案
+description: 使用IntelliJ IDEA開發AEM專案
 uuid: 382b5008-2aed-4e08-95be-03c48f2b549e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -15,114 +15,114 @@ ht-degree: 1%
 
 ---
 
-# 如何利用IntelliJ IDEAAEM開發項目{#how-to-develop-aem-projects-using-intellij-idea}
+# 如何使用IntelliJ IDEA開發AEM專案{#how-to-develop-aem-projects-using-intellij-idea}
 
 ## 概觀 {#overview}
 
-要開始在AEMIntelliJ上開發，需要以下步驟。
+若要開始在IntelliJ上進行AEM開發，必須執行下列步驟。
 
-本主題的其餘部分將更詳細地說明每個步驟。
+本主題其餘部分將更詳細地說明每個步驟。
 
 * 安裝IntelliJ
-* 基於Maven設AEM置項目
+* 根據Maven設定您的AEM專案
 * 在Maven POM中為IntelliJ準備JSP支援
-* 將Maven項目導入IntelliJ
+* 將Maven專案匯入IntelliJ
 
 >[!NOTE]
 >
->本指南基於IntelliJ IDEA旗艦版12.1.4和5.6.1。
+>本指南以IntelliJ IDEA Ultimate Edition 12.1.4和AEM 5.6.1為基礎。
 
 ### 安裝IntelliJ IDEA {#install-intellij-idea}
 
-從下載IntelliJ IDEA [JetBrains的下載頁面](https://www.jetbrains.com/idea/download/)。
+下載IntelliJ IDEA，網址為 [JetBrains的下載頁面](https://www.jetbrains.com/idea/download/).
 
-然後，按照該頁上的安裝說明進行操作。
+然後，請依照該頁面上的安裝指示操作。
 
-### 基於Maven設AEM置項目 {#set-up-your-aem-project-based-on-maven}
+### 根據Maven設定您的AEM專案 {#set-up-your-aem-project-based-on-maven}
 
-接下來，使用Maven設定項目，如中所述 [使用Apache Maven構建AEM項目的方法](/help/sites-developing/ht-projects-maven.md)。
+接下來，使用Maven設定您的專案，如所述 [如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md).
 
-要開始在AEMIntelliJ IDEA中使用項目， [5分鐘後開始](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) 足夠了。
+若要開始使用IntelliJ IDEA中的AEM專案，請依下列步驟執行： [5分鐘搞定快速入門](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) 就足夠了。
 
-### 準備IntelliJ IDEA的JSP支援 {#prepare-jsp-support-for-intellij-idea}
+### 為IntelliJ IDEA準備JSP支援 {#prepare-jsp-support-for-intellij-idea}
 
-IntelliJ IDEA還可以在使用JSP時提供支援，例如：
+IntelliJ IDEA也可以提供使用JSP的支援，例如：
 
-* 自動完成標籤庫
-* 對由定義的對象的感知 `<cq:defineObjects />` 和 `<sling:defineObjects />`
+* 自動完成標籤程式庫
+* 對物件的感知定義如下 `<cq:defineObjects />` 和 `<sling:defineObjects />`
 
-要使其工作，請按照 [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) 在 [使用Apache Maven構建AEM項目的方法](/help/sites-developing/ht-projects-maven.md)。
+若要讓此功能發揮作用，請遵循以下說明： [如何使用JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) 在 [如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md).
 
-### 導入Maven項目 {#import-the-maven-project}
+### 匯入Maven專案 {#import-the-maven-project}
 
-1. 開啟 **導入** 對話框
+1. 開啟 **匯入** IntelliJ IDEA中的對話方塊，作者：
 
-   * 選擇 **導入項目** 在「歡迎」螢幕上，如果尚未開啟項目
-   * 選擇 **檔案 — >導入項目** 菜單
+   * 選取 **匯入專案** 在歡迎畫面上（如果您尚未開啟任何專案）
+   * 選取 **檔案 — >匯入專案** 從主功能表
 
-1. 在「導入」對話框中，選擇項目的POM檔案。
+1. 在「匯入」對話方塊中，選取專案的POM檔案。
 
    ![chlimage_1-45](assets/chlimage_1-45a.png)
 
-1. 繼續使用以下對話框中顯示的預設設定。
+1. 繼續使用預設設定，如下方對話方塊所示。
 
    ![chlimage_1-46](assets/chlimage_1-46a.png)
 
-1. 通過按一下 **下一個** 和 **完成**。
-1. 現在，您已使用IntelliJ IDEAAEM設定為開發
+1. 繼續下列對話方塊，按一下 **下一個** 和 **完成**.
+1. 您現在已使用IntelliJ IDEA設定AEM開發
 
    ![chlimage_1-47](assets/chlimage_1-47a.png)
 
-### 使用IntelliJ IDEA調試JSP {#debugging-jsps-with-intellij-idea}
+### 使用IntelliJ IDEA偵錯JSP {#debugging-jsps-with-intellij-idea}
 
-使用IntelliJ IDEA調試JSP時需要以下步驟
+使用IntelliJ IDEA偵錯JSP時，必須執行下列步驟
 
-* 在項目中設定Web方面
-* 安裝JSR45支援插件
-* 配置調試配置檔案
-* 配置AEM調試模式
+* 在專案中設定網頁面向
+* 安裝JSR45支援外掛程式
+* 設定偵錯設定檔
+* 設定除錯模式的AEM
 
-#### 在項目中設定Web方面 {#set-up-a-web-facet-in-the-project}
+#### 在專案中設定網頁面向 {#set-up-a-web-facet-in-the-project}
 
-IntelliJ IDEA必須瞭解在何處查找用於調試的JSP。 因為IDEA無法解釋 `content-package-maven-plugin` 設定，必須手動配置。
+IntelliJ IDEA必須瞭解在哪裡可以找到JSP以進行偵錯。 因為IDEA無法解譯 `content-package-maven-plugin` 設定，則必須手動設定。
 
-1. 轉到 **檔案 — >項目結構**
-1. 選擇 **內容** 模組
-1. 按一下 **+** 並選擇 **Web**
-1. 作為Web資源目錄，選擇 `content/src/main/content/jcr_root subdirectory` 螢幕截圖中顯示的。
+1. 前往 **檔案 — >專案結構**
+1. 選取 **內容** 模組
+1. 按一下 **+** 在模組清單上方並選取 **Web**
+1. 以「Web資源目錄」形式選取 `content/src/main/content/jcr_root subdirectory` ，如下方熒幕擷圖所示。
 
 ![chlimage_1-48](assets/chlimage_1-48a.png)
 
-#### 安裝JSR45支援插件 {#install-the-jsr-support-plugin}
+#### 安裝JSR45支援外掛程式 {#install-the-jsr-support-plugin}
 
-1. 轉到 **插件** IntelliJ IDEA設定中的窗格
-1. 導航到 **JSR45整合** 插件，並選中它旁邊的複選框
-1. 按一下 **應用**
+1. 前往 **外掛程式** IntelliJ IDEA設定中的窗格
+1. 導覽至 **JSR45整合** 外掛程式並選取其旁邊的核取方塊
+1. 按一下 **套用**
 1. 請求時重新啟動IntelliJ IDEA
 
 ![chlimage_1-49](assets/chlimage_1-49a.png)
 
-#### 配置調試配置檔案 {#configure-a-debug-profile}
+#### 設定偵錯設定檔 {#configure-a-debug-profile}
 
-1. 轉到 **運行 — >編輯配置**
-1. 擊 **+** 選擇 **JSR45遠程**
-1. 在配置對話框中，選擇 **配置** 下 **應用程式伺服器** 並配置通用伺服器
-1. 如果要在開始調試時開啟瀏覽器，請將起始頁設定為相應的URL
-1. 全部刪除 **啟動前** 任務（如果您使用vlt autosync），或配置相應的Maven任務（如果您不使用vlt autosync）
-1. 在 **啟動/連接** 窗格，如有必要，調整埠
-1. 複製IntelliJ IDEA建議的命令行參數
+1. 前往 **執行 — >編輯設定**
+1. 點選 **+** 並選取 **JSR45遠端**
+1. 在設定對話方塊中，選取 **設定** 旁邊 **應用程式伺服器** 並設定一般伺服器
+1. 如果您要在開始偵錯時開啟瀏覽器，請將起始頁面設定為適當的URL
+1. 全部移除 **啟動前** 任務（如果您使用vlt autosync），或配置適當的Maven任務（如果您未使用）
+1. 於 **啟動/連線** 窗格，視需要調整連線埠
+1. 複製IntelliJ IDEA建議的命令列引數
 
 ![chlimage_1-50](assets/chlimage_1-50a.png) ![chlimage_1-51](assets/chlimage_1-51a.png)
 
-#### 配置AEM調試模式 {#configure-aem-for-debug-mode}
+#### 設定除錯模式的AEM {#configure-aem-for-debug-mode}
 
-最後一步是從IntelliJ IDEA提AEM議的JVM選項開始。
+最後一個必要步驟是使用IntelliJ IDEA建議的JVM選項啟動AEM。
 
-直接啟AEM動jar檔案並添加這些選項，例如使用以下命令行：
+直接啟動AEM jar檔案並新增這些選項，例如使用下列命令列：
 
 `java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -jar cq-quickstart-6.5.0.jar`
 
-您也可以將這些選項添加到中的開始指令碼 `crx-quickstart/bin/start` 如下所示。
+您也可以在下列位置將這些選項新增至您的開始指令碼： `crx-quickstart/bin/start` 如下所示。
 
 ```shell
 # ...
@@ -137,16 +137,16 @@ CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,su
 # ...
 ```
 
-#### 開始調試 {#start-debugging}
+#### 開始偵錯 {#start-debugging}
 
-現在，您已設定為在中調試JSPAEM。
+您現在已準備好在AEM中偵錯JSP。
 
-1. 選擇 **運行 — >調試 — >調試配置檔案**
-1. 在元件代碼中設定斷點
-1. 在瀏覽器中訪問頁面
+1. 選取 **執行 — >偵錯 — >您的偵錯設定檔**
+1. 在元件程式碼中設定中斷點
+1. 存取瀏覽器中的頁面
 
 ![chlimage_1-52](assets/chlimage_1-52a.png)
 
-### 使用IntelliJ IDEA調試捆綁包 {#debugging-bundles-with-intellij-idea}
+### 使用IntelliJ IDEA偵錯套件組合 {#debugging-bundles-with-intellij-idea}
 
-可以使用標準通用遠程調試連接調試捆綁包中的代碼。 您可以 [關於遠程調試的Jetbrain文檔](https://www.jetbrains.com/help/idea/remote-debugging-with-product.html#remote-interpreter)。
+可以使用標準通用遠端偵錯連線來偵錯套件中的程式碼。 您可以遵循 [有關遠端偵錯的Jetbrain檔案](https://www.jetbrains.com/help/idea/remote-debugging-with-product.html#remote-interpreter).

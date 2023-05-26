@@ -1,5 +1,5 @@
 ---
-title: 開發沙盒內容
+title: 開發沙箱內容
 seo-title: Develop Sandbox Content
 description: 開發內容
 seo-description: Develop content
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# 開發沙盒內容  {#develop-sandbox-content}
+# 開發沙箱內容  {#develop-sandbox-content}
 
-**[添加客戶端](add-clientlibs.md)**
+**[新增Clientlibs](add-clientlibs.md)**
 
-此時，可以在沙箱中探索社區功能，同時使用 [We-Retail社區](../../help/sites-developing/we-retail.md)，也請參見Wiki頁。 [社區元件指南](components-guide.md) 和 [功能要件](essentials.md) 的下界。
+此時，您可以探索沙箱中的社群功能，並搭配使用 [We-Retail社群](../../help/sites-developing/we-retail.md)，則 [社群元件指南](components-guide.md) 和 [功能要點](essentials.md) 以供參考。

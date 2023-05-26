@@ -1,7 +1,7 @@
 ---
-title: 為自適應表單域建立自定義外觀
+title: 建立最適化表單欄位的自訂外觀
 seo-title: Create custom appearances for adaptive form fields
-description: 在Adaptive Forms中定制現成元件的外觀。
+description: 自訂Adaptive Forms中現成可用元件的外觀。
 seo-description: Customize appearance of out-of-the-box components in Adaptive Forms.
 uuid: 1aa36443-774a-49fb-b3d1-d5a2d5ff849a
 content-type: reference
@@ -17,61 +17,61 @@ ht-degree: 0%
 
 ---
 
-# 為自適應表單域建立自定義外觀{#create-custom-appearances-for-adaptive-form-fields}
+# 建立最適化表單欄位的自訂外觀{#create-custom-appearances-for-adaptive-form-fields}
 
 ## 簡介 {#introduction}
 
-自適應表單利用 [外觀框架](/help/forms/using/introduction-widgets.md) 幫助您為自適應表單域建立自定義外觀，並提供不同的用戶體驗。 例如，用切換按鈕替換單選按鈕和複選框，或使用自定義jQuery插件限制用戶在電話號碼或電子郵件ID等欄位中的輸入。
+適用性表單會利用 [外觀架構](/help/forms/using/introduction-widgets.md) 可協助您建立最適化表單欄位的自訂外觀，並提供不同的使用者體驗。 例如，以切換按鈕取代選項按鈕和核取方塊，或使用自訂jQuery外掛程式來限制使用者在電話號碼或電子郵件ID等欄位中的輸入。
 
-本文檔介紹如何使用jQuery插件為自適應表單域建立這些替代體驗。 此外，它還展示了一個示例，用於為數字欄位元件建立一個自定義外觀，以顯示為數字步進器或滑塊。
+本檔案說明如何使用jQuery外掛程式，為最適化表單欄位建立這些替代體驗。 此外，它還會展示一個範例，說明如何建立自訂外觀，讓數值欄位元件以數值步進器或滑桿顯示。
 
-首先來看本文使用的關鍵術語和概念。
+讓我們先來看看本文中使用的關鍵辭彙和概念。
 
-**外觀** 指適應性表單域中各種元素的樣式、外觀和感覺以及組織。 它通常包括標籤、提供輸入的交互區域、幫助表徵圖以及欄位的簡短和長說明。 本文所討論的外觀定制方法適用於該欄位輸入區域的外觀。
+**外觀** 指最適化表單欄位中各種元素的樣式、外觀和風格，以及組織。 它通常包括標籤、提供輸入的互動區域、說明圖示，以及欄位的簡短和詳細說明。 本文討論的外觀自訂適用於欄位輸入區域的外觀。
 
-**jQuery插件** 提供基於jQuery構件框架的標準機制，以實現替代外觀。
+**jQuery外掛程式** 提供基於jQuery Widget架構的標準機制，以實作替代外觀。
 
-**客戶端庫** 一種客戶端庫系統，AEM由複雜的JavaScript和CSS代碼驅動。 有關詳細資訊，請參閱使用客戶端庫。
+**ClientLib** AEM使用者端處理中的使用者端程式庫系統，由複雜的JavaScript和CSS程式碼驅動。 如需詳細資訊，請參閱使用使用者端資料庫。
 
-**原型** Maven項目模板化工具包，定義為Maven項目的原始模式或模型。 有關詳細資訊，請參閱原型簡介。
+**原型** 定義為Maven專案原始模式或模型的Maven專案範本工具組。 如需詳細資訊，請參閱原型簡介。
 
-**用戶控制項** 引用構件中包含欄位值的主元素，該元素由外觀框架用於將自定義構件UI與自適應表單模型綁定。
+**使用者控制項** 指包含欄位值的Widget中的主要元素，並由外觀架構用來將自訂Widget UI與調適型表單模型繫結。
 
-## 建立自定義外觀的步驟 {#steps-to-create-a-custom-appearance}
+## 建立自訂外觀的步驟 {#steps-to-create-a-custom-appearance}
 
-在高級別上建立自定義外觀的步驟如下：
+建立自訂外觀的高層步驟如下：
 
-1. **建立項目**:建立生成要部署的內容包的Maven項AEM目。
-1. **擴展現有小部件類**:擴展現有小部件類並覆蓋所需類。
-1. **建立客戶端庫**:建立 `clientLib: af.customwidget` 庫並添加所需的JavaScript和CSS檔案。
+1. **建立專案**：建立可產生內容套件的Maven專案，以部署在AEM上。
+1. **擴充現有的Widget類別**：擴充現有的Widget類別並覆寫必要的類別。
+1. **建立使用者端資源庫**：建立 `clientLib: af.customwidget` 程式庫並新增必要的JavaScript和CSS檔案。
 
-1. **生成並安裝項目**:生成Maven項目並在上安裝生成的內容包AEM。
-1. **更新自適應窗體**:更新自適應表單域屬性以使用自定義外觀。
+1. **建置並安裝專案**：建置Maven專案並在AEM上安裝產生的內容套件。
+1. **更新最適化表單**：更新最適化表單欄位屬性以使用自訂外觀。
 
-### 建立項目 {#create-a-project}
+### 建立專案 {#create-a-project}
 
-主原型是建立自定義外觀的起點。 所用原型詳情如下：
+Maven原型是建立自訂外觀的起點。 要使用的原型的詳細資訊如下：
 
-* **儲存庫**:https://repo1.maven.org/maven2/com/adobe/
-* **項目ID**:定制外觀原型
-* **組ID**:com.adobe.aemforms
-* **版本**:1.0.4
+* **存放庫**： https://repo1.maven.org/maven2/com/adobe/
+* **成品ID**： custom-appearance-archetype
+* **群組ID**： com.adobe.aemforms
+* **版本**： 1.0.4
 
-執行以下命令以基於原型建立本地項目：
+執行以下命令，根據原型建立本機專案：
 
 `mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
-該命令從儲存庫中下載Maven插件和原型資訊，並基於以下資訊生成項目：
+該命令會從存放庫下載Maven外掛程式和原型資訊，並根據以下資訊產生專案：
 
-* **組ID**:生成的Maven項目使用的組ID
-* **項目ID**:生成的Maven項目使用的項目ID。
-* **版本**:生成的Maven項目的版本。
-* **包**:用於檔案結構的包。
-* **項目名稱**:生成的包的對AEM像名。
-* **包組**:生成的包的包AEM組。
-* **小部件名稱**:用於引用的外觀名稱。
+* **groupId**：產生的Maven專案使用的群組ID
+* **artifactId**：產生的Maven專案所使用的成品ID。
+* **版本**：產生的Maven專案的版本。
+* **封裝**：用於檔案結構的套件。
+* **成品名稱**：產生的AEM封裝的成品名稱。
+* **packageGroup**：產生的AEM套件的套件群組。
+* **widgetName**：用於參照的外觀名稱。
 
-生成的項目具有以下結構：
+產生的專案具有以下結構：
 
 ```java
 ─<artifactId>
@@ -107,17 +107,17 @@ ht-degree: 0%
                                      └───javascript
 ```
 
-### 擴展現有小部件類 {#extend-an-existing-widget-class}
+### 擴充現有的Widget類別 {#extend-an-existing-widget-class}
 
-建立項目模板後，根據需要進行以下更改：
+建立專案範本後，視需要執行下列變更：
 
-1. 包括項目的第三方插件依賴項。
+1. 將協力廠商外掛程式相依性納入專案中。
 
-   1. 將第三方或自定義jQuery插件置於 `jqueryplugin/javascript` 資料夾和相關的CSS檔案 `jqueryplugin/css` 的子菜單。 有關詳細資訊，請參閱 `jqueryplugin/javascript and jqueryplugin/css` 的子菜單。
+   1. 將協力廠商或自訂jQuery外掛程式放入 `jqueryplugin/javascript` 中的資料夾和相關CSS檔案 `jqueryplugin/css` 資料夾。 如需詳細資訊，請參閱 `jqueryplugin/javascript and jqueryplugin/css` 資料夾。
 
-   1. 修改 `js.txt` 和 `css.txt` 檔案，以包括jQuery插件的任何其他JavaScript和CSS檔案。
+   1. 修改 `js.txt` 和 `css.txt` 檔案以包含jQuery外掛程式的任何其他JavaScript和CSS檔案。
 
-1. 將第三方插件與框架整合，以啟用自定義外觀框架與jQuery插件之間的交互。 只有在擴展或覆蓋以下功能後，新小部件才能正常工作。
+1. 將協力廠商外掛程式與框架整合，以啟用自訂外觀框架與jQuery外掛程式之間的互動。 只有在您擴充或覆寫下列功能後，新Widget才能運作。
 
 <table>
  <tbody>
@@ -127,79 +127,79 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><code>render</code></td>
-   <td>呈現函式返回小部件的預設HTML元素的jQuery對象。 預設HTML元素應為可聚焦類型。 比如說， <code>&lt;a&gt;</code>。 <code>&lt;input&gt;</code>, <code>&lt;li&gt;</code>。 返回的元素用作 <code>$userControl</code>。 如果 <code>$userControl</code> 指定上述約束， <code>AbstractWidget</code> 類按預期工作，否則某些常見API（焦點，按一下）需要更改。 </td>
+   <td>轉譯器函式會傳回Widget預設HTML元素的jQuery物件。 預設HTML元素應為可聚焦型別。 例如， <code>&lt;a&gt;</code>， <code>&lt;input&gt;</code>、和 <code>&lt;li&gt;</code>. 傳回的元素會用作 <code>$userControl</code>. 如果 <code>$userControl</code> 指定上述限制，此限制的 <code>AbstractWidget</code> 類別如預期般運作，其他部分常見的API （焦點、點選）需要變更。 </td>
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
-   <td>返回將HTML事件轉換為XFA事件的映射。 <br /> <code class="code">{
+   <td>傳回對應以將HTML事件轉換為XFA事件。 <br /> <code class="code">{
       blur: XFA_EXIT_EVENT,
-      }</code><br /> 此示例說明 <code>blur</code> 是HTML事件 <code>XFA_EXIT_EVENT</code> 是相應的XFA事件。 </td>
+      }</code><br /> 此範例顯示 <code>blur</code> 是HTML事件，且 <code>XFA_EXIT_EVENT</code> 是對應XFA事件。 </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>
-   <td>返回一個映射，該映射提供有關在更改選項時要執行的操作的詳細資訊。 鍵是提供給小部件的選項，值是每當檢測到選項的更改時調用的函式。 該構件為所有常用選項(除 <code>value</code> 和 <code>displayValue</code>)。</td>
+   <td>傳回提供選項變更時所要執行動作詳細資訊的地圖。 鍵值是提供給Widget的選項，值是偵測到選項變更時呼叫的函式。 Widget為所有常見選項提供處理常式(除了 <code>value</code> 和 <code>displayValue</code>)。</td>
   </tr>
   <tr>
    <td><code>getCommitValue</code></td>
-   <td>只要jQuery小部件的值保存在XFA模型中（例如，在文本欄位的退出事件上）,jQuery小部件框架就會載入該函式。 實現應返回小部件中保存的值。 該處理程式提供了該選項的新值。</td>
+   <td>每當jQuery Widget的值儲存在XFA模型中（例如文字欄位的退出事件），jQuery Widget架構就會載入函式。 實作應傳回儲存在Widget中的值。 處理常式會提供選項的新值。</td>
   </tr>
   <tr>
    <td><code>showValue</code></td>
-   <td>預設情況下，在XFA中輸入事件時， <code>rawValue</code> 的上界。 調用此函式可顯示 <code>rawValue</code> 到用戶。 </td>
+   <td>根據預設，在XFA中，輸入事件時， <code>rawValue</code> 欄位的「 」會顯示。 呼叫此函式是為了顯示 <code>rawValue</code> 至使用者。 </td>
   </tr>
   <tr>
    <td><code>showDisplayValue</code></td>
-   <td>預設情況下，在XFA on exit事件中， <code>formattedValue</code> 的上界。 調用此函式可顯示 <code>formattedValue</code> 到用戶。 </td>
+   <td>依預設，在退出事件的XFA中， <code>formattedValue</code> 欄位的「 」會顯示。 呼叫此函式是為了顯示 <code>formattedValue</code> 至使用者。 </td>
   </tr>
  </tbody>
 </table>
 
-1. 在中更新JavaScript檔案 `integration/javascript` 資料夾。
+1. 更新中的JavaScript檔案 `integration/javascript` 資料夾（視需要）。
 
-   * 替代文字 `__widgetName__` 具有實際小部件名稱。
-   * 從合適的開箱構件類擴展構件。 在大多數情況下，它是與要替換的現有小部件對應的小部件類。 父類名在多個位置使用，因此建議搜索字串的所有實例 `xfaWidget.textField` ，並將其替換為使用的實際父類。
-   * 擴展 `render` 提供備用UI的方法。 它是調用jQuery插件以更新UI或交互行為的位置。 的 `render` 方法應返回用戶控制項元素。
+   * 取代文字 `__widgetName__` 包含實際Widget名稱。
+   * 從適當的現成可用Widget類別延伸Widget。 在大多數情況下，它是與要取代的現有Widget相對應的Widget類別。 父類別名稱用於多個位置，因此建議搜尋字串的所有例項 `xfaWidget.textField` 並將它們替換為實際使用的父類別。
+   * 擴充 `render` 提供替代UI的方法。 這是叫用jQuery外掛程式以更新UI或互動行為的位置。 此 `render` 方法應傳回使用者控制元素。
 
-   * 擴展 `getOptionsMap` 方法，以覆蓋因構件更改而受影響的任何選項設定。 該函式返回一個映射，該映射提供了選項更改時要執行的操作的詳細資訊。 鍵是提供給小部件的選項，值是每當檢測到選項的更改時調用的函式。
-   * 的 `getEventMap` 方法將小部件觸發的事件與自適應表單模型所需的事件進行映射。 預設值映射預設小部件的標準HTML事件，如果觸發了備用事件，則需要更新。
-   * 的 `showDisplayValue` 和 `showValue` 應用display and edit picture子句，並且可以覆蓋以具有替代行為。
+   * 擴充 `getOptionsMap` 覆寫任何因Widget變更而受影響的選項設定的方法。 此函式會傳回對應，提供選項變更時執行動作的詳細資訊。 鍵值是提供給Widget的選項，值是偵測到選項變更時呼叫的函式。
+   * 此 `getEventMap` 方法將由Widget觸發的事件與最適化表單模型所需的事件對應。 預設值會對應預設Widget的標準HTML事件，而且如果觸發替代事件，則需要更新。
+   * 此 `showDisplayValue` 和 `showValue` 套用display和edit picture子句，而且可以覆寫為有替代行為。
 
-   * 的 `getCommitValue` 方法由自適應表單框架調用 `commit`事件。 通常，它是退出事件，但下拉、單選按鈕和複選框元素在更改時發生的除外)。 有關詳細資訊，請參見 [自適應Forms表達式](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p)。
+   * 此 `getCommitValue` 當以下情況時，調適型表單框架會呼叫方法： `commit`事件發生。 一般而言，這是退出事件（除了下拉式選單、選項按鈕和核取方塊元素，這些元素會在變更時發生）。 如需詳細資訊，請參閱 [最適化Forms運算式](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p).
 
-   * 模板檔案為各種方法提供了示例實現。 刪除不要擴展的方法。
+   * 範本檔案提供各種方法的範例實作。 移除不可擴充的方法。
 
-### 建立客戶端庫 {#create-a-client-library}
+### 建立使用者端資源庫 {#create-a-client-library}
 
-由Maven原型生成的示例項目會自動建立所需的客戶端庫，並將它們包裝到具有類別的客戶端庫中 `af.customwidgets`。 中提供的JavaScript和CSS檔案 `af.customwidgets` 在運行時自動包含。
+Maven原型產生的範例專案會自動建立所需的使用者端資料庫，並將其包裝到具有類別的使用者端資料庫中 `af.customwidgets`. JavaScript和CSS檔案可用於 `af.customwidgets` 會在執行階段自動包含。
 
-### 生成和安裝 {#build-and-install}
+### 建置和安裝 {#build-and-install}
 
-要生成項目，請在shell上執行以下命令以生成需要安裝在伺服器上的CRXAEM包。
+若要建置專案，請在殼層上執行以下命令，以產生需要安裝在AEM伺服器上的CRX套件。
 
 `mvn clean install`
 
 >[!NOTE]
 >
->maven項目指POM檔案內的遠程儲存庫。 這僅供參考，根據Maven標準，儲存庫資訊在 `settings.xml` 的子菜單。
+>Maven專案是指POM檔案內的遠端存放庫。 此資訊僅供參考，根據Maven標準，存放庫資訊會擷取至 `settings.xml` 檔案。
 
-### 更新自適應窗體 {#update-the-adaptive-form}
+### 更新最適化表單 {#update-the-adaptive-form}
 
-要將自定義外觀應用於自適應表單域：
+若要將自訂外觀套用至最適化表單欄位：
 
-1. 在編輯模式下開啟自適應窗體。
-1. 開啟 **屬性** 對話框，用於應用自定義外觀的欄位。
-1. 在 **造型** 頁籤，更新 `CSS class` 屬性，以在 `widget_<widgetName>` 的子菜單。 例如： **widget_numeristepper**
+1. 在編輯模式下開啟最適化表單。
+1. 開啟 **屬性** 要套用自訂外觀之欄位的對話方塊。
+1. 在 **樣式** 標籤，更新 `CSS class` 屬性來新增外觀名稱 `widget_<widgetName>` 格式。 例如： **widget_numericstepper**
 
-## 示例：建立自定義外觀   {#sample-create-a-custom-appearance-nbsp}
+## 範例：建立自訂外觀   {#sample-create-a-custom-appearance-nbsp}
 
-現在，讓我們看一個示例，以為數字欄位建立一個自定義外觀，使其顯示為數字步進器或滑塊。 執行以下步驟：
+現在來看看範例，如何建立自訂外觀，讓數值欄位顯示為數值步進器或滑桿。 執行下列步驟：
 
-1. 執行以下命令以基於Maven原型建立本地項目：
+1. 執行以下命令以根據Maven原型建立本機專案：
 
    `mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
-   它提示您為以下參數指定值。
-   *此示例中使用的值以粗體加亮*。
+   它會提示您指定下列引數的值。
+   *此範例中使用的值會以粗體突出顯示*.
 
    `Define value for property 'groupId': com.adobe.afwidgets`
 
@@ -215,38 +215,38 @@ ht-degree: 0%
 
    `Define value for property 'widgetName': numericStepper`
 
-1. 導航到 `customWidgets` (為 `artifactID` 屬性)目錄，並執行以下命令以生成Eclipse項目：
+1. 導覽至 `customWidgets` (為指定的值 `artifactID` 屬性)，然後執行下列命令來產生Eclipse專案：
 
    `mvn eclipse:eclipse`
 
-1. 開啟Eclipse工具，然後執行以下操作以導入Eclipse項目：
+1. 開啟Eclipse工具，然後執行下列操作以匯入Eclipse專案：
 
-   1. 選擇 **[!UICONTROL 「檔案」(File)>「導入」(Import)>「現有項目」(Existing Projects)到Workspace]**。
+   1. 選取 **[!UICONTROL 檔案>匯入>將現有專案匯入工作區中]**.
 
-   1. 瀏覽並選擇執行資料夾 `archetype:generate` 的子菜單。
+   1. 瀏覽並選取您執行 `archetype:generate` 命令。
 
-   1. 按一下 **[!UICONTROL 完成]**。
+   1. 按一下 **[!UICONTROL 完成]**.
 
-      ![eclipse螢幕截圖](assets/eclipse-screenshot.png)
+      ![eclipse熒幕擷圖](assets/eclipse-screenshot.png)
 
-1. 選擇要用於自定義外觀的構件。 此示例使用以下數字步進小部件：
+1. 選取要用於自訂外觀的Widget。 此範例使用下列數值步進器Widget：
 
    [https://www.jqueryscript.net/form/User-Friendly-Number-Input-Spinner-with-jQuery-Bootstrap.html](https://www.jqueryscript.net/form/User-Friendly-Number-Input-Spinner-with-jQuery-Bootstrap.html)
 
-   在Eclipse項目中，查看 `plugin.js` 檔案，確保其符合外觀要求。 在此示例中，外觀符合以下要求：
+   在Eclipse專案中，檢閱 `plugin.js` 檔案以確保其符合外觀要求。 在此範例中，外觀符合下列要求：
 
-   * 數字步進器應從 `- $.xfaWidget.numericInput`。
-   * 的 `set value` 小部件的方法在焦點位於欄位後設定值。 它是自適應表單構件的必備要求。
-   * 的 `render` 需要重寫方法以調用 `bootstrapNumber` 的雙曲餘切值。
+   * 數值步進器應從 `- $.xfaWidget.numericInput`.
+   * 此 `set value` widget的方法會在焦點位於欄位後設定值。 這是最適化表單Widget的強制要求。
+   * 此 `render` 方法必須覆寫才能叫用 `bootstrapNumber` 方法。
 
-   * 除了插件的主原始碼之外，插件沒有其他依賴項。
-   * 該示例在步進器上不執行任何樣式設定，因此不需要附加CSS。
-   * 的 `$userControl` 對象應可用於 `render` 的雙曲餘切值。 它是 `text` 使用插件代碼克隆的類型。
+   * 外掛程式除了主要原始程式碼外，沒有其他相依性。
+   * 範例不會在步進器上執行任何樣式，因此不需要額外的CSS。
+   * 此 `$userControl` 物件應可供 `render` 方法。 它是以下欄位： `text` 使用外掛程式程式碼複製的型別。
 
-   * 的 **+** 和 **-** 在禁用欄位時，應禁用按鈕。
+   * 此 **+** 和 **-** 欄位停用時，按鈕應該停用。
 
-1. 替換 `bootstrap-number-input.js` （jQuery插件） `numericStepper-plugin.js` 的子菜單。
-1. 在 `numericStepper-widget.js` 檔案，添加以下代碼以覆蓋調用插件的render方法並返回 `$userControl` 對象：
+1. 取代 `bootstrap-number-input.js` （jQuery外掛程式）及其內容 `numericStepper-plugin.js` 檔案。
+1. 在 `numericStepper-widget.js` 檔案中，新增下列程式碼以覆寫render方法以叫用外掛程式並傳回 `$userControl` 物件：
 
    ```javascript
    render : function() {
@@ -266,7 +266,7 @@ ht-degree: 0%
    }
    ```
 
-1. 在 `numericStepper-widget.js` 檔案，覆蓋 `getOptionsMap` 屬性，以覆蓋訪問選項，並在禁用模式下隱藏+和 — 按鈕。
+1. 在 `numericStepper-widget.js` 檔案，覆寫 `getOptionsMap` 屬性以覆寫存取選項，並在停用模式中隱藏+和 — 按鈕。
 
    ```javascript
    getOptionsMap: function(){
@@ -308,16 +308,16 @@ ht-degree: 0%
     }
    ```
 
-1. 保存更改，導航到包含 `pom.xml` ，然後執行以下Maven命令來生成項目：
+1. 儲存變更，導覽至包含 `pom.xml` 檔案，並執行以下Maven命令來建置專案：
 
    `mvn clean install`
 
-1. 使用包管理器安AEM裝包。
+1. 使用AEM Package Manager安裝套件。
 
-1. 在要應用自定義外觀的編輯模式下開啟自適應窗體，然後執行以下操作：
+1. 在您要套用自訂外觀的編輯模式中開啟最適化表單，然後執行下列動作：
 
-   1. 按一下右鍵要應用外觀的欄位，然後按一下 **[!UICONTROL 編輯]** 開啟「編輯元件」(Edit Component)對話框。
+   1. 以滑鼠右鍵按一下要套用外觀的欄位，然後按一下 **[!UICONTROL 編輯]** 以開啟「編輯元件」對話方塊。
 
-   1. 在「樣式」(Styling)頁籤中，更新 **[!UICONTROL CSS類]** 添加屬性 `widget_numericStepper`。
+   1. 在「樣式」標籤中，更新 **[!UICONTROL CSS類別]** 要新增的屬性 `widget_numericStepper`.
 
 您剛建立的新外觀現在可供使用。

@@ -1,7 +1,7 @@
 ---
 title: 雲端服務設定
 seo-title: Cloud Service Configurations
-description: 您可以擴展現有實例以建立您自己的配置
+description: 您可以擴充現有執行個體以建立自己的設定
 seo-description: You can extend the existing instances to create your own configurations
 uuid: 9d20c3a4-2a12-4d3c-80c3-fcac3137a675
 contentOwner: User
@@ -19,59 +19,59 @@ ht-degree: 3%
 
 # 雲端服務設定{#cloud-service-configurations}
 
-配置設計為提供用於儲存服務配置的邏輯和結構。
+設定旨在提供儲存服務設定的邏輯和結構。
 
-您可以擴展現有實例以建立您自己的配置。
+您可以擴充現有執行個體來建立自己的設定。
 
 ## 概念 {#concepts}
 
-在開發配置時使用的原則基於以下概念：
+開發設定時採用的原則以以下概念為基礎：
 
-* 服務/適配器用於檢索配置。
-* 配置（例如屬性/段落）從父級繼承。
-* 按路徑從分析節點引用。
-* 易於擴展。
-* 具有靈活性，可滿足更複雜的配置，如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)。
-* 支援依賴項(例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 插件需要 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 配置)。
+* 服務/配接器用於擷取組態。
+* 設定（例如屬性/段落）繼承自父項。
+* 依路徑從Analytics節點參照。
+* 易於擴充。
+* 具備彈性以因應更複雜的設定，例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
+* 支援相依性(例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 外掛程式需要 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) configuration)。
 
 ## 結構 {#structure}
 
-配置的基本路徑是：
+設定的基本路徑為：
 
 `/etc/cloudservices`。
 
-對於每種配置類型，都將提供一個模板和一個元件。這樣，就可以擁有配置模板，這些模板在自定義後可以滿足大多數需要。
+對於每種組態型別，都會提供範本和元件。如此一來，設定範本就能在自訂之後滿足大部分的需求。
 
-要為新服務提供配置，您需要：
+若要提供新服務的設定，您需要：
 
-* 建立服務頁
+* 在中建立服務區段
 
    `/etc/cloudservices`
 
-* 下：
+* 在此底下：
 
-   * 配置模板
-   * 配置元件
+   * 設定範本
+   * 設定元件
 
-模板和元件必須繼承 `sling:resourceSuperType` 從基本模板：
+範本和元件必須繼承 `sling:resourceSuperType` 從基本範本：
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-分別是基元
+或基礎元件
 
 `cq/cloudserviceconfigs/components/configpage`
 
-服務提供商還應提供服務頁：
+服務提供者也應提供服務頁面：
 
 `/etc/cloudservices/<service-name>`
 
 ### 範本 {#template}
 
-您的模板將擴展基本模板：
+您的範本將會擴充基本範本：
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-定義 `resourceType` 指向自定義元件。
+並定義 `resourceType` 指向自訂元件。
 
 ```xml
 /libs/cq/analytics/templates/sitecatalyst
@@ -94,7 +94,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 ### 元件 {#components}
 
-您的元件應擴展基本元件：
+您的元件應擴充基本元件：
 
 `cq/cloudserviceconfigs/templates/configpage`
 
@@ -104,13 +104,13 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /libs/cq/analytics/components/generictrackerpage
 ```
 
-在設定模板和元件後，您可以通過在以下位置添加子頁來添加配置：
+設定範本和元件後，您可以在下方新增子頁面來新增設定：
 
 `/etc/cloudservices/<service-name>`
 
 ### 內容模型 {#content-model}
 
-內容模型儲存為 `cq:Page` 下：
+內容模型儲存為 `cq:Page` 在：
 
 `/etc/cloudservices/<service-name>(/*)`
 
@@ -121,10 +121,10 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /etc/cloudservices/service-name/config/inherited-config
 ```
 
-配置儲存在子節點下 `jcr:content`。
+設定會儲存在子節點下 `jcr:content`.
 
-* 在對話框中定義的固定屬性應儲存在 `jcr:node` 直接輸入。
-* 動態元素(使用 `parsys` 或 `iparsys`)使用子節點儲存元件資料。
+* 在對話方塊中定義的固定屬性應儲存在 `jcr:node` 直接。
+* 動態元素(使用 `parsys` 或 `iparsys`)使用子節點來儲存元件資料。
 
 ```xml
 /etc/cloudservices/service/config/jcr:content as nt:unstructured
@@ -137,36 +137,36 @@ propertyname
 
 ### API {#api}
 
-有關API的參考文檔，請參見 [com.day.cq.wcm.webservicesupport](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html)。
+如需有關API的參考檔案，請參閱 [com.day.cq.wcm.webservicesupport](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
 
-### 集AEM成 {#aem-integration}
+### AEM整合 {#aem-integration}
 
-可用服務列於 **Cloud Services** 頁籤 **頁面屬性** 對話框(繼承自 `foundation/components/page` 或 `wcm/mobile/components/page`)。
+可用的服務列於 **Cloud Services** 的標籤 **頁面屬性** 對話方塊（任何繼承自的頁面） `foundation/components/page` 或 `wcm/mobile/components/page`)。
 
-該頁籤還提供：
+索引標籤也提供：
 
-* 指向可啟用服務的位置的連結
-* 從路徑欄位中選擇配置（服務的子節點）
+* 您可以啟用服務之位置的連結
+* 從路徑欄位選擇設定（服務的子節點）
 
 #### 密碼加密 {#password-encryption}
 
-儲存服務的用戶憑據時，應加密所有密碼。
+儲存服務的使用者認證時，所有密碼都應加密。
 
-可以通過添加隱藏表單域來實現此目的。 此欄位應具有注釋 `@Encrypted` 在屬性名稱中；即 `password` 欄位名稱將寫為：
+您可以新增隱藏的表單欄位來達成此目的。 此欄位應該有註解 `@Encrypted` 在屬性名稱中；亦即 `password` 欄位名稱將寫成：
 
 `password@Encrypted`
 
-然後將自動加密該屬性(使用 `CryptoSupport` 服務) `EncryptionPostProcessor`。
+然後，該屬性將自動加密(使用 `CryptoSupport` service)，由 `EncryptionPostProcessor`.
 
 >[!NOTE]
 >
->這與標準類似 ` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)` 注釋。
+>這類似標準 ` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)` 註解。
 
 >[!NOTE]
 >
->預設情況下， `EcryptionPostProcessor` 僅加密 `POST` 請求 `/etc/cloudservices`。
+>根據預設 `EcryptionPostProcessor` 僅加密 `POST` 向提出要求 `/etc/cloudservices`.
 
-#### 服務頁jcr：內容節點的其他屬性 {#additional-properties-for-service-page-jcr-content-nodes}
+#### 服務頁面的其他屬性jcr：content節點 {#additional-properties-for-service-page-jcr-content-nodes}
 
 <table>
  <tbody>
@@ -175,49 +175,49 @@ propertyname
    <td><strong>說明</strong></td>
   </tr>
   <tr>
-   <td>元件引用</td>
-   <td>要自動包括在頁面中的元件的引用路徑。<br /> 這用於附加功能和JS包含。<br /> 這包括頁面上的元件，其中<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 包含(通常在 <code>body</code> 標籤)。<br /> 在分析和目標中，我們使用它來包括其他功能，如跟蹤訪問者行為的JavaScript調用。</td>
+   <td>componentreference</td>
+   <td>要自動包含在頁面中的元件的參照路徑。<br /> 這會用於其他功能和JS包含。<br /> 這包括頁面上的元件，其中<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 包含(通常早於 <code>body</code> 標籤)。<br /> 若是Analytics和Target，我們會使用這個包含其他功能，例如追蹤訪客行為的JavaScript呼叫。</td>
   </tr>
   <tr>
    <td>說明</td>
    <td>服務的簡短說明。<br /> </td>
   </tr>
   <tr>
-   <td>說明擴展</td>
-   <td>服務的擴展說明。</td>
+   <td>descriptionExtended</td>
+   <td>服務的延伸說明。</td>
   </tr>
   <tr>
    <td>排名</td>
    <td>用於清單中的服務排名。</td>
   </tr>
   <tr>
-   <td>可選子項</td>
-   <td>用於在頁面屬性對話框中顯示配置的篩選器。</td>
+   <td>selectableChildren</td>
+   <td>用於在頁面屬性對話方塊中顯示設定的篩選器。</td>
   </tr>
   <tr>
-   <td>服務URL</td>
+   <td>serviceUrl</td>
    <td>服務網站的URL。</td>
   </tr>
   <tr>
    <td>serviceUrlLabel</td>
-   <td>服務URL的標籤。</td>
+   <td>服務URL標籤。</td>
   </tr>
   <tr>
-   <td>縮略圖路徑</td>
-   <td>服務縮略圖的路徑。</td>
+   <td>thumbnailPath</td>
+   <td>服務的縮圖路徑。</td>
   </tr>
   <tr>
    <td>可見</td>
-   <td>頁面屬性對話框中的可見性；預設可見（可選）</td>
+   <td>頁面屬性對話方塊中的可見性；預設為可見（選擇性）</td>
   </tr>
  </tbody>
 </table>
 
 ### 使用案例 {#use-cases}
 
-這些服務預設提供：
+預設會提供下列服務：
 
-* [跟蹤器代碼段](/help/sites-administering/external-providers.md) (Google、WebTrends等)
+* [追蹤器代碼片段](/help/sites-administering/external-providers.md) (Google、WebTrends等)
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
 
@@ -226,4 +226,4 @@ propertyname
 
 >[!NOTE]
 >
->另請參閱 [建立自定義Cloud Service](/help/sites-developing/extending-cloud-config-custom-cloud.md)。
+>另請參閱 [建立自訂Cloud Service](/help/sites-developing/extending-cloud-config-custom-cloud.md).

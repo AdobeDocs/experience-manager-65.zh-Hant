@@ -251,7 +251,7 @@ API 參考文件中定義了受支援要求的確切格式。
 
 >[!CAUTION]
 >
->實例上的調度AEM程式配置可能阻止訪問 `/api`。
+>AEM執行個體上的Dispatcher設定可能會封鎖對的存取 `/api`.
 
 >[!NOTE]
 >
@@ -318,7 +318,7 @@ API 參考文件中定義了受支援要求的確切格式。
 
 <!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
 
-您應繼續無AEM頭之旅，下次查看文檔 [如何與無頭應用程式一起生活](go-live.md) 讓你的&quot;無頭AEM計畫&quot;實現！
+您應該透過下一次檢視檔案來繼續您的AEM Headless歷程 [如何使用Headless應用程式上線](go-live.md) 您實際將AEM Headless專案上線的位置！
 
 ## 其他資源 {#additional-resources}
 

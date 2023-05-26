@@ -1,6 +1,6 @@
 ---
 title: 使用IMS與Adobe Target整合
-description: 瞭解使用IMSAEM與Adobe Target的整合
+description: 瞭解如何使用IMS整合AEM與Adobe Target
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
 source-git-commit: 5c3de9c272030b3e258aea95899a58553c3b33db
 workflow-type: tm+mt
@@ -11,108 +11,108 @@ ht-degree: 1%
 
 # 使用IMS與Adobe Target整合{#integration-with-adobe-target-using-ims}
 
-通過目標標AEM準API與Adobe Target整合需要使用Adobe Developer控制台配置Adobe IMS(Identity Management系統)。
+透過Target Standard API整合AEM與Adobe Target時，需要使用Adobe Developer主控台設定Adobe IMS (Identity Management系統)。
 
 >[!NOTE]
 >
->對Adobe Target標準API的支援在6AEM.5中新增。目標標準API使用IMS驗證。
+>AEM 6.5新增了對Adobe Target Standard API的支援。Target Standard API使用IMS驗證。
 >
->仍支援在中使用Adobe TargetAEM經典API進行向後相容。 的 [目標經典API使用用戶憑據驗證](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target)。
+>在AEM中使用Adobe Target Classic API仍支援回溯相容性。 此 [Target Classic API使用使用者認證驗證](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target).
 >
 >API選擇由用於AEM/Target整合的驗證方法驅動。
->另請參閱 [租戶ID和客戶端代碼](#tenant-client) 的子菜單。
+>另請參閱 [租使用者ID和使用者端代碼](#tenant-client) 區段。
 
 ## 必備條件 {#prerequisites}
 
-開始此過程之前：
+開始此程式之前：
 
-* [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 必須設定帳戶：
+* [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 必須為下列專案布建您的帳戶：
 
-   * Adobe控制台
+   * Adobe主控台
    * Adobe Developer Console
-   * Adobe Target
-   * Adobe IMS(Identity Management系統)
+   * Adobe Target和
+   * Adobe IMS (Identity Management System)
 
-* 您組織的系統管理員應使用該Admin Console將組織中所需的開發人員添加到相關的產品配置檔案中。
+* 您組織的系統管理員應使用Admin Console，將您組織中必要的開發人員新增到相關的產品設定檔。
 
-   * 這為特定開發人員提供了在Adobe Developer控制台中啟用整合的權限。
-   * 有關詳細資訊，請參閱 [管理開發人員](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)。
+   * 這可讓特定開發人員擁有在Adobe Developer主控台中啟用整合的許可權。
+   * 如需詳細資訊，請參閱 [管理開發人員](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 
-## 配置IMS配置 — 生成公鑰 {#configuring-an-ims-configuration-generating-a-public-key}
+## 設定IMS設定 — 產生公開金鑰 {#configuring-an-ims-configuration-generating-a-public-key}
 
-配置的第一階段是在中建立IMS配置並AEM生成公鑰。
+設定的第一個階段是在AEM中建立IMS設定並產生公開金鑰。
 
-1. 開啟AEM **工具** 的子菜單。
-1. 在 **安全** 節選 **Adobe IMS配置**。
-1. 選擇 **建立** 開啟 **Adobe IMS技術帳戶配置**。
-1. 使用下拉框 **雲配置**&#x200B;選中 **Adobe Target**。
-1. 激活 **建立新證書** 並輸入新別名。
-1. 確認 **建立證書**。
+1. 在AEM中開啟 **工具** 功能表。
+1. 在 **安全性** 區段選取 **Adobe IMS設定**.
+1. 選取 **建立** 以開啟 **Adobe IMS技術帳戶設定**.
+1. 使用下方的下拉式清單 **雲端設定**，選取 **Adobe Target**.
+1. 啟動 **建立新憑證** 並輸入新別名。
+1. 確認方式 **建立憑證**.
 
    ![](assets/integrate-target-io-01.png)
 
-1. 選擇 **下載** 或 **下載公鑰**)將檔案下載到本地驅動器，以便在 [配置IMS以與Adobe Target集AEM成](#configuring-ims-for-adobe-target-integration-with-aem)。
+1. 選取 **下載** (或 **下載公開金鑰**)將檔案下載至本機磁碟機，以便在下列情況下可以使用： [為Adobe Target與AEM的整合設定IMS](#configuring-ims-for-adobe-target-integration-with-aem).
 
    >[!CAUTION]
    >
-   >保持此配置開啟，當 [在中完成IMS配AEM置](#completing-the-ims-configuration-in-aem)。
+   >保持此設定開啟，以下情況下將再次需要它： [完成AEM中的IMS設定](#completing-the-ims-configuration-in-aem).
 
    ![](assets/integrate-target-io-02.png)
 
-## 配置IMS以與Adobe Target集AEM成 {#configuring-ims-for-adobe-target-integration-with-aem}
+## 為Adobe Target與AEM的整合設定IMS {#configuring-ims-for-adobe-target-integration-with-aem}
 
-使用Adobe Developer控制台，您需要與Adobe Target建立一個項目（整合）,AEM然後分配所需的權限。
+使用Adobe Developer Console時，您需要使用AEM將使用的Adobe Target建立專案（整合），然後指派所需的許可權。
 
-### 建立項目 {#creating-the-project}
+### 建立專案 {#creating-the-project}
 
-開啟Adobe Developer控制台，與Adobe Target一起創AEM建項目：
+開啟Adobe Developer Console以使用AEM將使用的Adobe Target建立專案：
 
-1. 開啟「項目的Adobe Developer控制台：
+1. 開啟專案的Adobe Developer主控台：
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-1. 將顯示您擁有的任何項目。 選擇 **建立新項目**  — 地點和用途取決於：
+1. 將會顯示您擁有的任何專案。 選取 **建立新專案**  — 位置和使用將取決於：
 
-   * 如果你還沒有項目， **建立新項目** 中間，底部。
-      ![新建項目 — 第一個項目](assets/integration-target-io-02.png)
-   * 如果您已經擁有現有項目，將列出並 **建立新項目** 右上。
-      ![建立新項目 — 多個項目](assets/integration-target-io-03.png)
+   * 如果您還沒有任何專案， **建立新專案** 將會是底部中心。
+      ![建立新專案 — 第一個專案](assets/integration-target-io-02.png)
+   * 如果您已有專案，這些專案將會列示於 **建立新專案** 將位於右上方。
+      ![建立新專案 — 多個專案](assets/integration-target-io-03.png)
 
 
-1. 選擇 **添加到項目** 後跟 **API**:
+1. 選取 **新增至專案** 後面接著 **API**：
 
    ![](assets/integration-target-io-10.png)
 
-1. 選擇 **Adobe Target**，則 **下一個**:
+1. 選取 **Adobe Target**，則 **下一個**：
 
    >[!NOTE]
    >
-   >如果您訂閱了Adobe Target，但未看到列出，則應檢查 [預請求](#prerequisites)。
+   >如果您已訂閱Adobe Target，但未看到它列出，則應檢視 [先決條件](#prerequisites).
 
    ![](assets/integration-target-io-12.png)
 
-1. **上載公鑰**，完成後繼續 **下一個**:
+1. **上傳您的公開金鑰**，完成後，請繼續 **下一個**：
 
    ![](assets/integration-target-io-13.png)
 
-1. 查看憑據，並繼續 **下一個**:
+1. 檢閱認證，並繼續 **下一個**：
 
    ![](assets/integration-target-io-15.png)
 
-1. 選擇所需的產品配置檔案，然後繼續 **保存已配置的API**:
+1. 選取所需的產品設定檔，並繼續 **儲存已設定的API**：
 
    >[!NOTE]
    >
-   >顯示的產品配置檔案取決於您是否具有：
+   >顯示的產品設定檔取決於您是否具備：
    >
-   >* Adobe Target標準 — 僅 **預設工作區** 可用
-   >* Adobe Target高級版 — 列出所有可用工作區，如下所示
+   >* Adobe Target Standard — 僅限 **預設工作區** 可用
+   >* Adobe Target Premium — 列出所有可用的工作區，如下所示
 
 
    ![](assets/integration-target-io-16.png)
 
-1. 將確認建立。
+1. 將會確認建立。
 
 <!--
 1. The creation will be confirmed, you can now **Continue to integration details**; these are needed for [Completing the IMS Configuration in AEM](#completing-the-ims-configuration-in-aem).
@@ -120,64 +120,64 @@ ht-degree: 1%
    ![](assets/integrate-target-io-07.png)
 -->
 
-### 為整合分配權限 {#assigning-privileges-to-the-integration}
+### 指派許可權給整合 {#assigning-privileges-to-the-integration}
 
-您現在必須為整合分配所需的權限：
+您現在必須將必要的許可權指派給整合：
 
-1. 開啟Adobe **Admin Console**:
+1. 開啟Adobe **Admin Console**：
 
    * [https://adminconsole.adobe.com](https://adminconsole.adobe.com/)
 
-1. 導航到 **產品** （頂部工具欄），然後選擇 **Adobe Target- &lt;*您的租戶ID*>** （從左面板）。
-1. 選擇 **產品配置檔案**，然後從顯示的清單中找到所需的工作區。 例如，預設工作區。
-1. 選擇 **API憑據**，然後是所需的整合配置。
-1. 選擇 **編輯器** 的 **產品角色**;而不是 **觀察者**。
+1. 導覽至 **產品** （頂端工具列），然後選取 **ADOBE TARGET - &lt;*your-tenant-id*>** （從左側面板）。
+1. 選取 **產品設定檔**，然後從顯示的清單中找出您所需的工作區。 例如，預設工作區。
+1. 選取 **API認證**，則為所需的整合設定。
+1. 選取 **編輯者** 作為 **產品角色**；而非 **觀察者**.
 
-## 為Adobe Developer控制台整合項目儲存的詳細資訊 {#details-stored-for-the-ims-integration-project}
+## 為Adobe Developer主控台整合專案儲存的詳細資訊 {#details-stored-for-the-ims-integration-project}
 
-從「Adobe Developer控制台 — 項目」中，您可以看到所有整合項目的清單：
+在Adobe Developer Console — 專案中，您可以看到所有整合專案的清單：
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-選擇 **視圖** （位於特定項目條目的右側）以顯示有關配置的詳細資訊。 這些類別包括：
+選取 **檢視** （特定專案專案右側）以顯示有關設定的更多詳細資料。 這些類別包括：
 
-* 項目概述
+* 專案概述
 * Insights
-* 憑據
+* 認證
    * 服務帳戶(JWT)
-      * 憑據詳細資訊
-      * 生成JWT
-* APIS
-   * 比如說Adobe Target
+      * 認證詳細資料
+      * 產生JWT
+* API
+   * 例如，Adobe Target
 
-其中一些需要完成Adobe Target在基於IMSAEM的整合。
+您需要其中的一些專案，才能在AEM的IMS架構中完成Adobe Target的整合。
 
-## 在中完成IMS配AEM置 {#completing-the-ims-configuration-in-aem}
+## 完成AEM中的IMS設定 {#completing-the-ims-configuration-in-aem}
 
-返回到AEM時，您可以通過添加目標的Adobe Developer控制台整合中的所需值來完成IMS配置：
+返回AEM後，您可以從Target的Adobe Developer主控台整合中新增所需值，以完成IMS設定：
 
-1. 返回到 [IMS配置在中打AEM開](#configuring-an-ims-configuration-generating-a-public-key)。
-1. 選擇 **下一個**。
+1. 返回 [在AEM中開啟的IMS設定](#configuring-an-ims-configuration-generating-a-public-key).
+1. 選取 **下一個**.
 
-1. 在這裡，你可以 [Adobe Developer控制台中項目配置的詳細資訊](#details-stored-for-the-ims-integration-project):
+1. 您可以在此處使用 [Adobe Developer Console中專案設定的詳細資料](#details-stored-for-the-ims-integration-project)：
 
-   * **標題**:你的簡訊。
-   * **授權伺服器**:從 `aud` 行 **負載** 如 `https://ims-na1.adobelogin.com` 在下面的示例中
-   * **API密鑰**:從 [概述](#details-stored-for-the-ims-integration-project) 節
-   * **客戶端密碼**:在 [概述](#details-stored-for-the-ims-integration-project) 和複製
-   * **負載**:從 [生成JWT](#details-stored-for-the-ims-integration-project) 節
+   * **標題**：您的文字。
+   * **授權伺服器**：從以下位置複製/貼上此 `aud` 行 **裝載** 以下區段，例如 `https://ims-na1.adobelogin.com` 在以下範例中
+   * **API金鑰**：從以下位置複製此專案： [概觀](#details-stored-for-the-ims-integration-project) 區段
+   * **使用者端密碼**：在中產生此專案 [概觀](#details-stored-for-the-ims-integration-project) 區段和副本
+   * **裝載**：從以下位置複製此專案： [產生JWT](#details-stored-for-the-ims-integration-project) 區段
 
-   ![技術帳戶配置](assets/integrate-target-io-10.png)
+   ![技術帳戶設定](assets/integrate-target-io-10.png)
 
 1. 使用&#x200B;**建立**&#x200B;確認。
 
-1. 您的Adobe Target配置將顯示在控AEM制台中。
+1. 您的Adobe Target設定將顯示在AEM主控台中。
 
    ![](assets/integrate-target-io-11.png)
 
-## 確認IMS配置 {#confirming-the-ims-configuration}
+## 確認IMS設定 {#confirming-the-ims-configuration}
 
-要確認配置按預期運行，請執行以下操作：
+若要確認設定是否如預期般運作，請執行下列動作：
 
 1. 開啟:
 
@@ -188,99 +188,99 @@ ht-degree: 1%
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
 
 
-1. 選擇您的配置。
-1. 選擇 **檢查運行狀況** ，然後 **檢查**。
+1. 選取您的設定。
+1. 選取 **檢查健康狀態** （從工具列），後面接著 **Check**.
 
    ![](assets/integrate-target-io-12.png)
 
-1. 如果成功，您將看到以下消息：
+1. 如果成功，您會看到訊息：
 
    ![](assets/integrate-target-io-13.png)
 
-## 配置Adobe TargetCloud Service {#configuring-the-adobe-target-cloud-service}
+## 設定Adobe TargetCloud Service {#configuring-the-adobe-target-cloud-service}
 
-現在，可以為Cloud Service引用配置以使用目標標準API:
+此設定現在可供使用Target Standard API的Cloud Service參考：
 
-1. 開啟 **工具** 的子菜單。 然後，在 **Cloud Services** 選擇 **舊Cloud Services**。
-1. 向下滾動到 **Adobe Target** 選擇 **立即配置**。
+1. 開啟 **工具** 功能表。 然後，在 **Cloud Services** 區段，選取 **舊版Cloud Services**.
+1. 向下捲動至 **Adobe Target** 並選取 **立即設定**.
 
-   的 **建立配置** 對話框。
+   此 **建立設定** 對話方塊將會開啟。
 
-1. 輸入 **標題** 如果你願意， **名稱** （如果留空，則從標題生成）。
+1. 輸入 **標題** 此外，如果您願意，也可以 **名稱** （如果留空，這將從標題產生）。
 
-   也可以選擇所需的模板（如果有多個模板可用）。
+   您也可以選取所需的範本（如果有多個範本可用）。
 
 1. 使用&#x200B;**建立**&#x200B;確認。
 
-   的 **編輯元件** 對話框。
+   此 **編輯元件** 對話方塊將會開啟。
 
-1. 在 **Adobe Target設定** 頁籤：
+1. 在「 」中輸入詳細資料 **Adobe Target設定** 標籤：
 
-   * **驗證**:IMS
+   * **驗證**： IMS
 
-   * **租戶ID**:Adobe IMS租戶ID。 另請參閱 [租戶ID和客戶端代碼](#tenant-client) 的子菜單。
+   * **租使用者ID**：Adobe IMS租使用者ID。 另請參閱 [租使用者ID和使用者端代碼](#tenant-client) 區段。
 
       >[!NOTE]
       >
-      >對於IMS而言，這一價值需要從Target本身中取出。 您可以登錄到目標並從URL中提取租戶ID。
+      >IMS需要從Target本身取得此值。 您可以登入Target，並從URL擷取租使用者ID。
       >
       >例如，如果URL為：
       >
       >`https://experience.adobe.com/#/@yourtenantid/target/activities`
       >
-      >那你就用 `yourtenantid`。
+      >然後您會使用 `yourtenantid`.
 
-   * **客戶端代碼**:查看 [租戶ID和客戶端代碼](#tenant-client) 的子菜單。
+   * **使用者端代碼**：請參閱 [租使用者ID和使用者端代碼](#tenant-client) 區段。
 
-   * **IMS配置**:選擇IMS配置的名稱
+   * **IMS設定**：選取IMS設定的名稱
 
-   * **API類型**:休息
+   * **API型別**：REST
 
-   * **A4TAnalytics Cloud配置**:選擇用於目標活動目標和度量的分析雲配置。 如果在針對內容時使用Adobe Analytics作為報告源，則需要此選項。 如果看不到雲配置，請參閱中的注釋 [配置A4TAnalytics Cloud配置](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)。
+   * **A4T Analytics Cloud設定**：選取用於Target活動目標和量度的Analytics雲端設定。 如果您在鎖定目標內容時使用Adobe Analytics作為報表來源，則需要此專案。 如果您沒有看到雲端設定，請參閱中的注意事項 [設定A4T Analytics Cloud設定](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
 
-   * **使用準確的目標**:預設情況下，此複選框處於選中狀態。 如果選中，則雲服務配置將在載入內容之前等待上下文載入。 請參閱下面的注釋。
+   * **使用準確定位**：預設會選取此核取方塊。 如果選取，雲端服務設定將等待內容載入後再載入內容。 請參閱下列附註。
 
-   * **同步來自Adobe Target的段**:選擇此選項可下載在目標中定義的段以在中使AEM用。 當API Type屬性為REST時，必須選擇此選項，因為不支援內聯段，並且您始終需要使用「目標」中的段。 (請注意，AEM「段」的術語等同於目標「受眾」。)
+   * **從Adobe Target同步區段**：選取此選項可下載Target中定義的區段，以便在AEM中使用它們。 當API型別屬性為REST時，您必須選取此選項，因為不支援內嵌區段，而且您一律需要使用來自Target的區段。 (請注意，AEM辭彙「區段」等同於Target「對象」。)
 
-   * **客戶端庫**:選擇是要AT.js客戶端庫還是mbox.js（不建議使用）。
+   * **使用者端資源庫**：選取您想要使用AT.js使用者端程式庫，還是mbox.js （已棄用）。
 
-   * **使用Tag Management系統提供客戶端庫**:使用DTM（不建議使用）、Adobe啟動或任何其他標籤管理系統。
+   * **使用Tag Management系統來提供使用者端資源庫**：使用DTM （已棄用）、AdobeLaunch或任何其他標籤管理系統。
 
-   * **自定義AT.js**:如果選中「Tag Management」框或使用預設AT.js，則保留為空。 或者上載自定義AT.js。 僅當選擇了AT.js時才顯示。
+   * **自訂AT.js**：如果您勾選Tag Management方塊或使用預設的AT.js，請保留空白。 或者，您也可以上傳自訂AT.js。 僅當您已選取AT.js時顯示。
    >[!NOTE]
    >
-   >[配置Cloud Service以使用目標經典API](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) 已棄用(使用「Adobe Recommendations設定」頁籤)。
+   >[使用Target Classic API的Cloud Service設定](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) 已棄用(使用Adobe Recommendations設定索引標籤)。
 
-1. 按一下 **連接到目標** 初始化與Adobe Target的連接。
+1. 按一下 **連線到目標** 以初始化與Adobe Target的連線。
 
-   如果連接成功，則消息 **連接成功** 的上界。
+   如果連線成功，則訊息會 **連線成功** 隨即顯示。
 
-1. 選擇 **確定** 在留言上，然後 **確定** 的子菜單。
+1. 選取 **確定** 在訊息上，後面接著 **確定** ，以確認設定。
 
-1. 您現在可以繼續 [添加目標框架](/help/sites-administering/target-configuring.md#adding-a-target-framework) 配置將發送到目標的ContextHub或ClientContext參數。 請注意，將體驗片段導出到目AEM標時可能不需要這樣做。
+1. 您現在可以繼續前往 [新增目標框架](/help/sites-administering/target-configuring.md#adding-a-target-framework) 以設定將傳送至Target的ContextHub或ClientContext引數。 請注意，這可能不是將AEM體驗片段匯出至Target的必要專案。
 
-### 租戶ID和客戶端代碼 {#tenant-client}
+### 租使用者ID和使用者端代碼 {#tenant-client}
 
-與 [Adobe Experience Manager6.5.8.0](/help/release-notes/release-notes.md)，「客戶機代碼」欄位已添加到「目標配置」窗口。
+替換為 [Adobe Experience Manager 6.5.8.0](/help/release-notes/release-notes.md)，則「使用者端代碼」欄位已新增至Target設定視窗。
 
-配置租戶ID和客戶端代碼欄位時，請注意以下事項：
+設定租使用者ID和使用者端代碼欄位時，請注意下列事項：
 
-1. 對於大多數客戶，租戶ID和客戶端代碼相同。 這意味著這兩個欄位包含相同的資訊且完全相同。 確保在這兩個欄位中輸入租戶ID。
-2. 為了傳統目的，您還可以在「租戶ID」和「客戶端代碼」欄位中輸入不同的值。
+1. 對於大多數客戶而言，租使用者ID和使用者端代碼是相同的。 這表示兩個欄位包含相同的資訊且相同。 請務必在兩個欄位中輸入租使用者ID。
+2. 若是舊版用途，您也可以在「租使用者ID」和「使用者端代碼」欄位中輸入不同的值。
 
 在這兩種情況下，請注意：
 
-* 預設情況下，客戶端代碼（如果先添加）也將自動複製到租戶ID欄位中。
-* 您可以選擇更改預設租戶ID集。
-* 因此，對目標的後端調用將基於租戶ID，而對目標的客戶端調用將基於客戶端代碼。
+* 根據預設，使用者端代碼（如果先新增）也會自動複製到「租使用者ID」欄位中。
+* 您可以選擇變更預設的租使用者ID集。
+* 因此，對Target進行的後端呼叫將以租使用者ID為基礎，而對Target進行的使用者端呼叫將以使用者端代碼為基礎。
 
-如前所述，第一個案例是6.AEM5中最常見的。不管怎樣，確保 **兩者** 欄位包含的資訊正確，具體取決於您的要求。
+如前所述，第一個案例最常用於AEM 6.5。無論是哪一種方式，請確定 **兩者** 欄位包含正確的資訊，具體取決於您的需求。
 
 >[!NOTE]
 >
->如果要更改現有目標配置：
+>如果您想要變更現有的Target組態：
 >
->1. 重新輸入租戶ID。
->2. 重新連接到目標。
+>1. 重新輸入租使用者ID。
+>2. 重新連線至Target。
 >3. 儲存設定。
 

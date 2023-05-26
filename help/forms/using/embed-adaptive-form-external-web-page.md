@@ -1,7 +1,7 @@
 ---
 title: 在外部網頁中內嵌適用性表單
 seo-title: Embed adaptive form in external web page
-description: 瞭解如何在外部網頁中嵌入自適應表單
+description: 瞭解如何將最適化表單內嵌在外部網頁中
 seo-description: Learn how to embed an adaptive form in an external HTML web page
 uuid: d81032dd-af80-4f4b-a717-ee1b89fd3d3d
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -19,23 +19,23 @@ ht-degree: 1%
 
 # 在外部網頁中內嵌適用性表單{#embed-adaptive-form-in-external-web-page}
 
-你可以 [在AEM Sites頁中嵌入自適應表單](/help/forms/using/embed-adaptive-form-aem-sites.md) 或外部的網頁AEM。 嵌入式自適應表單功能齊全，用戶無需離開頁面即可填寫和提交表單。 它幫助用戶保持在網頁上其他元素的上下文中，同時與表單交互。
+您可以 [在AEM Sites頁面中內嵌最適化表單](/help/forms/using/embed-adaptive-form-aem-sites.md) 或託管於AEM外部的網頁。 內嵌的最適化表單功能齊全，使用者無須離開頁面即可填寫和提交表單。 它有助於使用者停留在網頁上其他元素的內容中，同時與表單互動。
 
 ## 必備條件 {#prerequisites}
 
-在將自適應表單嵌入到外部網站之前，請執行以下步驟
+將最適化表單內嵌至外部網站之前，請先執行下列步驟
 
-* 發佈要嵌入到AEM Forms伺服器發佈實例的自適應表單。
-* 在您的網站上建立或標識網頁以承載自適應表單。 確保網頁可以 [從CDN讀取jQuery檔案](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) 或嵌入了jQuery的本地副本。 jQuery是呈現自適應表單所必需的。
-* 當服AEM務器和網頁位於不同的域上時，請執行一節中列出的步驟。 [使AEM Forms能夠為跨域站點提供自適應表單](#cross-site)。
+* 發佈要內嵌至AEM Forms伺服器發佈執行個體的最適化表單。
+* 在您的網站上建立或識別要託管最適化表單的網頁。 確保網頁可以 [從CDN讀取jQuery檔案](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) 或內嵌jQuery的本機副本。 需要jQuery才能演算最適化表單。
+* 當AEM伺服器和網頁位於不同的網域時，請執行區段中列出的步驟， [讓AEM Forms能夠為跨網域網站提供最適化表單](#cross-site).
 
-## 嵌入自適應表單 {#embed-adaptive-form}
+## 內嵌最適化表單 {#embed-adaptive-form}
 
-通過在網頁中插入幾行JavaScript，可以嵌入自適應表單。 代碼中的API向伺服器發送HTTP請AEM求以獲取自適應表單資源，並在指定的表單容器中彈出自適應表單。
+您可以在網頁中插入幾行JavaScript，以內嵌最適化表單。 程式碼中的API會傳送HTTP請求至AEM伺服器以取得調適型表單資源，並在指定的表單容器中插入調適型表單。
 
-要嵌入自適應表單：
+若要內嵌最適化表單：
 
-1. 在您的網站上建立包含以下代碼的網頁：
+1. 使用以下程式碼在您的網站上建立網頁：
 
    ```html
    <!doctype html>
@@ -96,45 +96,45 @@ ht-degree: 1%
    </html>
    ```
 
-1. 在嵌入代碼中：
+1. 在內嵌程式碼中：
 
-   * 更改 *選項.path* 變數，其路徑為自適應表單的發佈URL。 如果服AEM務器正在上下文路徑上運行，請確保URL包含上下文路徑。 始終提及包括擴展的自適應表單的完整名稱。   例如，上述代碼和adaptive from位於同一表單伺服器AEM上，因此該示例使用adaptive form /content/forms/af/locbasic.html的上下文路徑。
-   * 替換 *選項.dataRef* 與URL一起傳遞的屬性。 可以使用dataref變數 [預填自適應表單](/help/forms/using/prepopulate-adaptive-form-fields.md)。
-   * 替換 *options.themePath* 的子目錄。 或者，可以使用request屬性指定主題路徑。
-   * CSS_Selector是嵌入自適應表單的表單容器的CSS選擇器。 例如，.customafsection css類是上例中的CSS選擇器。
+   * 變更的值 *options.路徑* 變數加上最適化表單的發佈URL的路徑。 如果AEM伺服器是在內容路徑上執行，請確定URL包含內容路徑。 一律提及最適化表單的完整名稱，包括副檔名。   例如，上述程式碼和調適型來自位於相同的AEM表單伺服器上，所以此範例使用調適型表單的上下文路徑/content/forms/af/locbasic.html 。
+   * Replace *options.dataRef* 屬性透過URL傳遞。 您可以使用dataref變數來 [預填最適化表單](/help/forms/using/prepopulate-adaptive-form-fields.md).
+   * Replace *options.themePath* 非最適化表單中設定的主題路徑。 或者，您也可以使用請求屬性來指定主題路徑。
+   * CSS_Selector為內嵌最適化表單之表單容器的CSS選取器。 例如，.customafsection css類別是上述範例中的CSS選取器。
 
-自適應表單嵌入到網頁中。 在嵌入式自適應表單中觀察以下內容：
+最適化表單已內嵌在網頁中。 在內嵌的最適化表單中觀察下列事項：
 
-* 原始自適應表單中的頁眉和頁腳不包括在嵌入表單中。
-* 草稿和提交的表格可在Forms門戶的「草稿和提交」頁籤中找到。
-* 在原始自適應表單上配置的提交操作將保留在嵌入式表單中。
-* 自適應表單規則在嵌入式表單中被保留和完全功能化。
-* 在原始自適應表單中配置的體驗目標和A/Btest在嵌入式表單中不起作用。
-* 如果在原始窗體上配置了Adobe Analytics，則分析資料將在Adobe Analytics伺服器中捕獲。 但是，Forms分析報告沒有提供。
+* 內嵌表單中不包含原始最適化表單的頁首和頁尾。
+* 草稿和已提交的表單可在Forms入口網站的「草稿和提交」索引標籤中取得。
+* 在原始最適化表單上設定的提交動作會保留在內嵌表單中。
+* 最適化表單規則會保留，並在內嵌表單中充分發揮作用。
+* 在原始最適化表單中設定的體驗鎖定目標和A/B測試在內嵌表單中無法運作。
+* 如果在原始表單上設定Adobe Analytics，則會在Adobe Analytics伺服器中擷取分析資料。 但是，Forms分析報表中並未提供此功能。
 
-## 拓撲示例 {#sample-topology}
+## 範例拓撲 {#sample-topology}
 
-嵌入自適應表單的外部網頁會將請求發送到伺服器AEM，伺服器通常位於專用網路中防火牆的後面。 為確保將請求安全地定向AEM到伺服器，建議設定反向代理伺服器。
+內嵌最適化表單的外部網頁會將請求傳送至AEM伺服器，該伺服器通常位於私人網路的防火牆之後。 為確保將請求安全地導向至AEM伺服器，建議設定反向Proxy伺服器。
 
-讓我們看一個示例，您如何在沒有調度程式的情況下設定Apache 2.4反向代理伺服器。 在本示例中，您將使用 `/forms` 上下文路徑和映射 `/forms` 的下界。 它確保 `/forms` Apache伺服器上的實例AEM。 此拓撲有助於減少調度器層上所有請求的前置詞時的規則數 `/forms` 路由到服AEM務器。
+讓我們來看一個範例，瞭解如何設定不含Dispatcher的Apache 2.4反向Proxy伺服器。 在此範例中，您會以代管AEM伺服器 `/forms` 內容路徑與地圖 `/forms` 用於反向Proxy。 這可確保針對以下專案的任何請求： `/forms` Apache伺服器上的資料會被導向至AEM執行個體。 此拓撲有助於減少Dispatcher層上的規則數量，因為所有請求都有前置詞 `/forms` 路由至AEM伺服器。
 
-1. 開啟 `httpd.conf` 並取消注釋以下代碼行。 或者，可以在檔案中添加這些代碼行。
+1. 開啟 `httpd.conf` 設定檔案並取消註解下列幾行程式碼。 或者，您也可以在檔案中新增這些程式碼行。
 
    ```text
    LoadModule proxy_html_module modules/mod_proxy_html.so
    LoadModule proxy_http_module modules/mod_proxy_http.so
    ```
 
-1. 通過在中添加以下代碼行來設定代理規則 `httpd-proxy.conf` 配置檔案。
+1. 將下列幾行程式碼新增至 `httpd-proxy.conf` 設定檔。
 
    ```text
    ProxyPass /forms https://[AEM_Instance]/forms
    ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
 
-   替換 `[AEM_Instance]` 以及AEM伺服器發佈URL。
+   Replace `[AEM_Instance]` 在規則中設定AEM伺服器發佈URL。
 
-如果未在上下文路AEM徑上裝載伺服器，則Apache層的代理規則如下：
+如果您沒有在內容路徑上掛載AEM伺服器，Apache層的Proxy規則將如下所示：
 
 ```text
 ProxyPass /content https://<AEM_Instance>/content
@@ -151,20 +151,20 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 >[!NOTE]
 >
->如果設定了任何其他拓撲，請確保將提交、預填充和其他URL添加到調度程式層的允許清單中。
+>如果您設定了任何其他拓撲，請務必在Dispatcher層將提交、預填和其他URL新增到允許清單。
 
-## 最佳做法 {#best-practices}
+## 最佳實務 {#best-practices}
 
-在網頁中嵌入自適應表單時，請考慮以下最佳做法：
+將最適化表單內嵌在網頁中時，請考慮下列最佳實務：
 
-* 確保網頁CSS中定義的樣式規則與表單對象CSS不衝突。 為避免衝突，可以使用客戶端庫在自適應表單主題中重AEM用網頁CSS。 有關在自適應表單主題中使用客戶端庫的資訊，請參見 [AEM Forms主題](../../forms/using/themes.md)。
-* 使網頁中的表單容器使用整個窗口寬度。 它確保為移動設備配置的CSS規則在不進行任何更改的情況下工作。 如果表單容器不採用整個窗口寬度，則需要編寫自定義CSS以使表單適應不同的移動設備。
-* 使用 `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API，用於獲取客戶端中表單資料的XML或JSON表示。
-* 使用 `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 從HTMLDOM卸載自適應表單的API。
-* 從伺服器發送響應時設定訪問控制源報AEM頭。
+* 請確定網頁CSS中定義的樣式規則不會與表單物件CSS衝突。 若要避免衝突，您可以使用AEM使用者端資料庫，在調適型表單主題中重複使用網頁CSS。 如需在最適化表單主題中使用使用者端資料庫的相關資訊，請參閱 [AEM Forms中的主題](../../forms/using/themes.md).
+* 讓網頁中的表單容器使用整個視窗寬度。 這可確保為行動裝置設定的CSS規則不會有任何變更而運作。 如果表單容器未採用整個視窗寬度，您需要撰寫自訂CSS，讓表單適應不同的行動裝置。
+* 使用 `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 用於取得使用者端中表單資料的XML或JSON表示的API。
+* 使用 `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API可從HTMLDOM解除安裝調適型表單。
+* 設定從AEM伺服器傳送回應時的存取控制來源標頭。
 
-## 使AEM Forms能夠為跨域站點提供自適應表單 {#cross-site}
+## 啟用AEM Forms以將最適化表單提供給跨網域網站 {#cross-site}
 
-1. 在發AEM布實例上，轉AEM到Web Console Configuration Manager `https://'[server]:[port]'/system/console/configMgr`。
-1. 查找並開啟 **Apache Sling引用篩選器** 配置。
-1. 在「允許的主機」欄位中，指定網頁所在的域。 它使主機能夠向伺服器發出POSTAEM請求。 也可以使用規則運算式指定一系列外部應用程式域。
+1. 在AEM發佈執行個體上，前往AEM Web主控台組態管理員，網址為 `https://'[server]:[port]'/system/console/configMgr`.
+1. 找到並開啟 **Apache Sling查閱者篩選器** 設定。
+1. 在允許的主機欄位中，指定網頁所在的網域。 它可讓主機向AEM伺服器發出POST要求。 您也可以使用規則運算式來指定一系列外部應用程式網域。

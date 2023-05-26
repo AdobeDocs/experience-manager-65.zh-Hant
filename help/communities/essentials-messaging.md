@@ -1,7 +1,7 @@
 ---
-title: 消息傳送軟體包
+title: 傳訊要點
 seo-title: Messaging Essentials
-description: 消息元件概述
+description: 傳訊元件概觀
 seo-description: Messaging component overview
 uuid: e0dad45e-d84d-4b28-b357-aded1c5d2605
 contentOwner: Guillaume Carlino
@@ -18,89 +18,89 @@ ht-degree: 2%
 
 ---
 
-# 消息傳送軟體包 {#messaging-essentials}
+# 傳訊要點 {#messaging-essentials}
 
-此頁記錄了使用消息元件在網站上包含消息功能的詳細資訊。
+本頁會記錄使用傳訊元件的詳細資訊，以便在網站上包含傳訊功能。
 
-## 客戶端基本知識 {#essentials-for-client-side}
+## 適用於使用者端的Essentials {#essentials-for-client-side}
 
-**撰寫郵件**
+**撰寫訊息**
 
 <table>
  <tbody>
   <tr>
-   <td> <strong>資源類型</strong></td>
-   <td><p>社交/消息/元件/hbs/組合消息</p> </td>
+   <td> <strong>resourceType</strong></td>
+   <td><p>social/messaging/components/hbs/composemessage</p> </td>
   </tr>
   <tr>
-   <td> <a href="/help/communities/client-customize.md#clientlibs-for-scf" target="_blank"><strong>客戶端</strong></a></td>
+   <td> <a href="/help/communities/client-customize.md#clientlibs-for-scf" target="_blank"><strong>clientllibs</strong></a></td>
    <td><p>cq.social.hbs.messaging</p> </td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td>/libs/social/messaging/components/hbs/composemessage/composemessage.hbs</td>
   </tr>
   <tr>
-   <td><strong>cs</strong></td>
+   <td><strong>css</strong></td>
    <td>/libs/social/messaging/components/hbs/composemessage/clientlibs/composemessage.css</td>
   </tr>
   <tr>
    <td><strong>屬性</strong></td>
-   <td>請參閱 <a href="/help/communities/configure-messaging.md" target="_blank">配置消息</a></td>
+   <td>另請參閱 <a href="/help/communities/configure-messaging.md" target="_blank">設定傳訊</a></td>
   </tr>
   <tr>
-   <td><strong>管理員配置</strong></td>
-   <td><a href="/help/communities/messaging.md">配置消息</a></td>
+   <td><strong>管理員設定</strong></td>
+   <td><a href="/help/communities/messaging.md">設定傳訊</a></td>
   </tr>
  </tbody>
 </table>
 
-**消息清單**
+**訊息清單**
 
-（用於收件箱、已發送和資源回收筒）
+（收件匣、已傳送和垃圾桶）
 
 <table>
  <tbody>
   <tr>
-   <td> <strong>資源類型</strong></td>
-   <td><p>社交/消息/元件/hbs/消息框</p> </td>
+   <td> <strong>resourceType</strong></td>
+   <td><p>social/messaging/components/hbs/messageBox</p> </td>
   </tr>
   <tr>
-   <td> <a href="/help/communities/client-customize.md#clientlibs-for-scf" target="_blank"><strong>客戶端</strong></a></td>
+   <td> <a href="/help/communities/client-customize.md#clientlibs-for-scf" target="_blank"><strong>clientllibs</strong></a></td>
    <td><p>cq.social.hbs.messaging</p> </td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
-   <td>/libs/social/messaging/components/hbs/messagebox/messagebox/messagebox/hbs</td>
+   <td> <strong>範本</strong></td>
+   <td>/libs/social/messaging/components/hbs/messagebox/messagebox.hbs</td>
   </tr>
   <tr>
-   <td><strong>cs</strong></td>
-   <td>/libs/social/messaging/components/hbs/messagebox/clientlibs/messagebox/css</td>
+   <td><strong>css</strong></td>
+   <td>/libs/social/messaging/components/hbs/messagebox/clientlibs/messagebox.css</td>
   </tr>
   <tr>
    <td><strong>屬性</strong></td>
-   <td>請參閱 <a href="/help/communities/configure-messaging.md" target="_blank">配置消息</a></td>
+   <td>另請參閱 <a href="/help/communities/configure-messaging.md" target="_blank">設定傳訊</a></td>
   </tr>
   <tr>
-   <td><strong>管理員配置</strong></td>
-   <td><a href="/help/communities/messaging.md" target="_blank">配置消息</a></td>
+   <td><strong>管理員設定</strong></td>
+   <td><a href="/help/communities/messaging.md" target="_blank">設定傳訊</a></td>
   </tr>
  </tbody>
 </table>
 
-另請參閱 [客戶端自定義](/help/communities/client-customize.md)
+另請參閱 [使用者端自訂](/help/communities/client-customize.md)
 
-## 伺服器端軟體包 {#essentials-for-server-side}
+## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [配置消息](/help/communities/configure-messaging.md)
-* [消息傳送客戶端API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) 對於SCF元件
-* [消息傳遞API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) 服務
-* [消息終結點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
-* [伺服器端自定義](/help/communities/server-customize.md)
+* [設定傳訊](/help/communities/configure-messaging.md)
+* [傳訊使用者端API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) 適用於SCF元件
+* [傳訊API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) 服務
+* [傳訊端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
+* [伺服器端自訂](/help/communities/server-customize.md)
 
 >[!CAUTION]
 >
->String參數必須 *不* 包含以下MessageBuilder方法的尾斜槓「/」：
+>字串引數必須 *not* 包含下列MessageBuilder方法的結尾斜線「/」：
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
@@ -115,36 +115,36 @@ ht-degree: 2%
 
 ### 社群網站 {#community-site}
 
-使用嚮導建立的社區站點結構在選中時包括消息傳遞功能。 請參閱 `User Management` 設定 [社區站點控制台](/help/communities/sites-console.md#user-management)。
+使用精靈建立的社群網站結構，在選取時包含傳訊功能。 另請參閱 `User Management` 設定 [社群網站主控台](/help/communities/sites-console.md#user-management).
 
-### 示例代碼：收到的消息通知 {#sample-code-message-received-notification}
+### 範常式式碼：訊息已接收通知 {#sample-code-message-received-notification}
 
-「社交消息」功能可引發操作事件，例如 `send`。 `marking read`。 `marking delete`。 可以捕獲這些事件並對事件中包含的資料執行的操作。
+社交訊息功能會擲回作業事件，例如 `send`， `marking read`， `marking delete`. 您可以擷取這些事件，並對事件中包含的資料採取動作。
 
-以下示例是偵聽的 `message sent` 事件，並使用 `Day CQ Mail Service`。
+以下範例是事件處理常式的範例，它會偵聽 `message sent` 事件並傳送電子郵件給所有郵件收件者，使用 `Day CQ Mail Service`.
 
-要嘗試伺服器端示例指令碼，您需要開發環境和構建OSGi捆綁包的能力：
+若要嘗試伺服器端範例指令碼，您需要開發環境和建置OSGi套件的功能：
 
-1. 以管理員身份登錄到 ` [CRXDE|Lite](https://localhost:4502/crx/de)`。
-1. 建立 `bundle node`在 `/apps/engage/install` 具有任意名稱，如：
+1. 以管理員身分登入 ` [CRXDE|Lite](https://localhost:4502/crx/de)`.
+1. 建立 `bundle node`在 `/apps/engage/install` 具有任意名稱，例如：
 
    * 符號名稱: `com.engage.media.social.messaging.MessagingNotification`
-   * 名稱：入門教程消息通知
-   * 描述：用於在用戶收到消息時向其發送電子郵件通知的示例服務
+   * 名稱：快速入門教學課程訊息通知
+   * 說明：當使用者收到訊息時，傳送電子郵件通知給使用者的範例服務
    * 封裝: `com.engage.media.social.messaging.notification`
 
-1. 導航到 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`，然後：
+1. 導覽至 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`，然後：
 
-   1. 刪除 `Activator.java` 類自動建立。
-   1. 建立類 `MessageEventHandler.java`。
-   1. 將下面的代碼複製並貼上到 `MessageEventHandler.java`。
+   1. 刪除 `Activator.java` 類別已自動建立。
+   1. 建立類別 `MessageEventHandler.java`.
+   1. 將下列程式碼複製並貼到 `MessageEventHandler.java`.
 
-1. 按一下 **全部保存**。
-1. 導航到 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`，並添加在 `MessageEventHandler.java` 代碼。
-1. 生成捆綁包。
-1. 確保 `Day CQ Mail Service`已配置OSGi服務。
-1. 以演示用戶身份登錄，向另一用戶發送電子郵件。
-1. 收件人接收有關新消息的電子郵件。
+1. 按一下 **全部儲存**.
+1. 導覽至 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`，並新增所有匯入陳述式，如中所寫入 `MessageEventHandler.java` 程式碼。
+1. 建置套件組合。
+1. 確定 `Day CQ Mail Service`OSGi服務已設定。
+1. 以示範使用者身分登入，並傳送電子郵件給其他使用者。
+1. 收件者會收到有關新訊息的電子郵件。
 
 #### MessageEventHandler.java {#messageeventhandler-java}
 

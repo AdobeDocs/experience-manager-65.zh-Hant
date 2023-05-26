@@ -1,6 +1,6 @@
 ---
 title: 編輯頁面內容
-description: 內容是使用可拖動到頁面上的元件添加的。 然後可以就地編輯、移動或刪除這些內容。
+description: 使用可拖曳至頁面上的元件來新增內容。 然後可以在原地進行編輯、移動或刪除。
 uuid: e7b65ceb-263c-46f2-91e3-11dec3a016fa
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,21 +18,21 @@ ht-degree: 1%
 
 # 編輯頁面內容{#editing-page-content}
 
-建立頁面（新建或作為啟動或即時拷貝的一部分）後，您可以編輯內容以進行所需的更新。
+建立頁面（新頁面或作為啟動或即時副本的一部分）後，您可以編輯內容以進行您所需的更新。
 
-內容是使用 [元件](/help/sites-classic-ui-authoring/classic-page-author-default-components.md) （適用於內容類型），可以拖到頁面上。 然後可以就地編輯、移動或刪除這些內容。
+內容新增方式： [元件](/help/sites-classic-ui-authoring/classic-page-author-default-components.md) （適用於內容型別）可供拖曳至頁面上。 然後可以在原地進行編輯、移動或刪除。
 
 >[!NOTE]
 >
->您的帳戶需要 [適當的訪問權限](/help/sites-administering/security.md) 和 [權限](/help/sites-administering/security.md#permissions) 編輯頁面；例如，添加、編輯或刪除元件、注釋、解鎖。
+>您的帳戶需要 [適當的存取許可權](/help/sites-administering/security.md) 和 [許可權](/help/sites-administering/security.md#permissions) 編輯頁面；例如，新增、編輯或刪除元件、註釋、解除鎖定。
 >
->如果您遇到任何問題，我們建議您與系統管理員聯繫。
+>如果您遇到任何問題，我們建議您連絡系統管理員。
 
-## 側腳 {#sidekick}
+## Sidekick {#sidekick}
 
-邊框是創作頁面時的關鍵工具。 在創作頁面時它會浮動，因此它始終可見。
+sidekick是編寫頁面時的關鍵工具。 它會在編寫頁面時浮動，所以一律可見。
 
-有幾個頁籤和表徵圖，包括：
+有數個標籤和圖示可供使用，包括：
 
 * 元件
 * Page
@@ -46,52 +46,52 @@ ht-degree: 1%
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
 
-這些功能提供了對多種功能的訪問；包括：
+這些可讓您存取廣泛的功能選擇；包括：
 
-* [選擇元件](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)
+* [選取元件](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)
 * [顯示引用](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#showing-references)
-* [訪問審核日誌](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#audit-log)
+* [存取稽核記錄](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#audit-log)
 * [切換模式](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes)
-* [建立](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version)。 [恢復](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) 和 [比較](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#comparing-with-a-previous-version) 版本
+* [建立](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version)， [還原](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) 和 [比較](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#comparing-with-a-previous-version) 版本
 
-* [發佈](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#publishing-a-page)。 [取消發佈](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page) 頁面
+* [發佈](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#publishing-a-page)， [取消發佈](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page) 頁面
 
 * [編輯頁面屬性](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)
 
-* [腳](/help/sites-authoring/scaffolding.md)
+* [支架](/help/sites-authoring/scaffolding.md)
 
-* [客戶端上下文](/help/sites-administering/client-context.md)
+* [使用者端內容](/help/sites-administering/client-context.md)
 
 ## 插入元件 {#inserting-a-component}
 
 ### 插入元件 {#inserting-a-component-1}
 
-開啟頁面後，可以開始添加內容。 通過添加元件（也稱為段落）來完成此操作。
+開啟頁面後，您可以開始新增內容。 若要這麼做，請新增元件（也稱為段落）。
 
-插入新元件：
+若要插入新元件：
 
-1. 選擇要插入的段落類型有幾種方法：
+1. 選取要插入的段落型別的方法有幾種：
 
-   * 按兩下標有的區域 **將元件或資產拖到此處……** - **插入新元件** 按鈕。 選取一個元件並按一下 **確定**。
+   * 連按兩下標示為的區域 **將元件或資產拖曳到這裡……** - **插入新元件** 工具列開啟。 選取元件並按一下 **確定**.
 
-   * 從浮動工具欄拖動元件（稱為旁腳）以插入新段落。
-   * 按一下右鍵現有段落並選擇 **新建……**  — 「插入新元件」工具欄開啟。 選取一個元件並按一下 **確定**。
+   * 從浮動工具列拖曳元件（稱為sidekick）以插入新段落。
+   * 在現有段落上按一下滑鼠右鍵，然後選取 **新增……**  — 插入新元件工具列開啟。 選取元件並按一下 **確定**.
 
    ![screen_shot_2012-02-15at115605am](assets/screen_shot_2012-02-15at115605am.png)
 
-1. 無論是在旁邊還是 **插入新元件** 工具欄，您可以看到可用元件（段落類型）的清單。 這些部分可分成不同的部分(例如，「常規」(General)、「列」(Columns)等)，可根據需要展開。
+1. 在sidekick和 **插入新元件** 工具列會顯示可用元件的清單（段落型別）。 這些區段可以分割成不同的區段（例如，「一般」、「欄」等），可視需要展開。
 
-   根據您的生產環境，這些選項可能會有所不同。 有關元件的完整詳細資訊，請參閱 [預設元件](/help/sites-classic-ui-authoring/classic-page-author-default-components.md)。
+   視您的生產環境而定，這些選項可能有所不同。 如需有關元件的完整詳細資訊，請參閱 [預設元件](/help/sites-classic-ui-authoring/classic-page-author-default-components.md).
 
-1. 在頁面中插入所需的元件。 然後按兩下該段落，將開啟一個窗口，允許您配置段落並添加內容。
+1. 在頁面上插入您想要的元件。 然後按兩下該段落，即會開啟一個視窗，讓您設定段落並新增內容。
 
-### 使用Content Finder插入元件 {#inserting-a-component-using-the-content-finder}
+### 使用內容尋找器插入元件 {#inserting-a-component-using-the-content-finder}
 
-也可以通過從 [內容查找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)。 這將自動建立包含資產的相應類型的新元件。
+您也可以從以下位置拖曳資產，將新元件新增至頁面： [內容尋找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder). 這會自動建立包含資產的適當型別的新元件。
 
-這對以下資產類型有效（某些類型將依賴於頁/段系統）:
+這適用於下列資產型別（部分將取決於頁面/段落系統）：
 
-| 資產類型 | 合成元件類型 |
+| 資產類型 | 結果元件型別 |
 |---|---|
 | 影像 | 影像 |
 | 文件 | 下載 |
@@ -100,208 +100,208 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->可以為安裝配置此行為。 請參閱 [配置段落系統，以便拖動資產建立元件實例](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) 的上界。
+>此行為可針對您的安裝進行設定。 另請參閱 [設定段落系統以便拖曳資產建立元件例項](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) 以取得更多詳細資料。
 
-要通過拖動上述資產類型之一來建立元件：
+若要拖曳上述任一資產型別來建立元件：
 
-1. 確保您的頁面位於 [**編輯** 模式](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes)。
-1. 開啟 [內容查找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)。
-1. 將所需資產拖到所需位置。 的 [元件佔位符](#componentplaceholder) 顯示元件的位置。
+1. 確定您的頁面位於 [**編輯** 模式](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes).
+1. 開啟 [內容尋找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder).
+1. 將所需資產拖曳至所需位置。 此 [元件預留位置](#componentplaceholder) 顯示元件將放置的位置。
 
-   將在所需位置建立與資產類型相適應的元件 — 該元件將包含所選資產。
+   將在所需位置建立適合資產型別的元件 — 它將包含所選資產。
 
-1. [編輯](#editmovecopypastedelete) 元件（如果需要）。
+1. [編輯](#editmovecopypastedelete) 元件（若有需要）。
 
 ## 編輯元件（內容和屬性） {#editing-a-component-content-and-properties}
 
-要編輯現有段落，請執行以下操作之一：
+若要編輯現有段落，請執行下列任一項動作：
 
-* **按兩下** 開啟它的段落。 與使用現有內容建立段落時看到的窗口相同。 進行更改，然後按一下 **確定**。
+* **按兩下** 段落以開啟它。 您會看到與使用現有內容建立段落時相同的視窗。 進行變更並按一下 **確定**.
 
-* **按一下右鍵** 並按一下 **編輯**。
+* **按一下右鍵** 段落並按一下 **編輯**.
 
-* **按一下** 按兩次（慢速按兩下）進入就地編輯模式。 您將能夠直接編輯頁面上的文本，而不是在對話框窗口內。 在此模式下，頁面頂部將提供工具欄。 只需進行更改，即可自動保存。
+* **按一下** 在段落上按兩下（緩慢連按兩下）以進入就地編輯模式。 您將能夠直接編輯頁面上的文字，而不是在對話方塊視窗內。 在此模式中，頁面頂端會提供工具列。 只需進行變更，系統就會自動儲存變更。
 
 ## 移動元件 {#moving-a-component}
 
-移動段落：
+若要移動段落，請執行下列動作：
 
 >[!NOTE]
 >
->您還可以使用 [剪切和貼上](#cut-copy-paste-a-component) 的子菜單。
+>您也可以使用 [剪下並貼上](#cut-copy-paste-a-component) 移動元件。
 
-1. 選擇要移動的段落：
+1. 選取要移動的段落：
 
    ![screen_shot_2012-02-15at115855am](assets/screen_shot_2012-02-15at115855am.png)
 
-1. 將段落拖到新位置 — 指AEM示可以將段落移動到的位置，並帶有綠色複選標籤。 將其放在您所需的位置。
+1. 將段落拖曳至新位置 — AEM會以綠色核取記號指出可將段落移動至何處。 將其拖曳至所需位置。
 1. 您的段落已移動：
 
    ![screen_shot_2012-02-15at120030pm](assets/screen_shot_2012-02-15at120030pm.png)
 
 ## 刪除元件 {#deleting-a-component}
 
-刪除段落：
+若要刪除段落，請執行下列動作：
 
-1. 選擇段落並 **按一下右鍵**:
+1. 選取段落並 **按一下右鍵**：
 
    ![screen_shot_2012-02-15at120220pm](assets/screen_shot_2012-02-15at120220pm.png)
 
-1. 選擇 **刪除** 的子菜單。 AEMWCM請求確認您要刪除該段落，因為此操作無法撤消。
+1. 選取 **刪除** 功能表中的。 AEM WCM會要求確認您要刪除段落，因為此動作無法復原。
 1. 按一下&#x200B;**「確定」**。
 
 >[!NOTE]
 >
->如果你已經 [顯示全局編輯工具欄的用戶屬性](/help/sites-classic-ui-authoring/author-env-user-props.md) 也可以使用 **複製**。 **剪切**。 **貼上**。 **刪除** 按鈕。
+>如果您已設定 [顯示全域編輯工具列的使用者屬性](/help/sites-classic-ui-authoring/author-env-user-props.md) 您也可以對段落執行某些動作，方法是使用 **複製**， **剪下**， **貼上**， **刪除** 按鈕可用。
 >
->各種 [鍵盤快捷鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 中。
+>各種 [鍵盤快速鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 也可供使用。
 
-## 剪切/複製/貼上元件 {#cut-copy-paste-a-component}
+## 剪下/複製/貼上元件 {#cut-copy-paste-a-component}
 
-當 [刪除元件](#deleting-a-component) 可以使用上下文菜單複製、剪切和/或貼上元件
-
->[!NOTE]
->
->如果你已經 [顯示全局編輯工具欄的用戶屬性](/help/sites-classic-ui-authoring/author-env-user-props.md) 也可以使用 **複製**。 **剪切**。 **貼上**。 **刪除** 按鈕。
->
->各種 [鍵盤快捷鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 中。
+當 [刪除元件](#deleting-a-component) 您可以使用快顯選單來複製、剪下和/或貼上元件
 
 >[!NOTE]
 >
->僅在同一頁中支援剪切、複製和貼上內容。
+>如果您已設定 [顯示全域編輯工具列的使用者屬性](/help/sites-classic-ui-authoring/author-env-user-props.md) 您也可以對段落執行某些動作，方法是使用 **複製**， **剪下**， **貼上**， **刪除** 按鈕可用。
+>
+>各種 [鍵盤快速鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 也可供使用。
+
+>[!NOTE]
+>
+>僅支援在相同頁面中剪下、複製和貼上內容。
 
 ## 繼承的元件 {#inherited-components}
 
-繼承的元件可以是各種方案的產物，包括：
+繼承的元件可能是各種情況的產物，包括：
 
-* [多站點管理](/help/sites-administering/msm.md);也與 [腳](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)。
+* [多網站管理](/help/sites-administering/msm.md)；也與 [支架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance).
 
-* [啟動](/help/sites-classic-ui-authoring/classic-launches.md) （基於livecopy）。
-* 具體元件；例如Geometrixx中的繼承段落系統。
+* [啟動](/help/sites-classic-ui-authoring/classic-launches.md) （當以livecopy為基準時）。
+* 特定元件；例如Geometrixx內的繼承段落系統。
 
-可以取消（然後重新啟用）繼承。 根據元件的不同，可從以下站點獲得：
+您可以取消（然後重新啟用）繼承。 根據元件，這可從以下位置取得：
 
 1. **Live Copy**
 
-   如果元件是livecopy或啟動的一部分，則它由掛鎖表徵圖指示。 可以按一下掛鎖取消繼承。
+   如果元件是LiveCopy或Launch的一部分，則會以掛鎖圖示表示。 您可以按一下掛鎖來取消繼承。
 
-   * 選擇元件時，將顯示掛鎖表徵圖；例如：
+   * 選取元件時會顯示掛鎖圖示；例如：
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-   * 掛鎖也顯示在元件對話框中；例如：
+   * 掛鎖也會顯示在元件的對話方塊中；例如：
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
-1. **繼承的段落制度**
+1. **繼承的段落系統**
 
-   配置對話框。 例如，與Geometrixx中的繼承段落系統一樣：
+   設定對話方塊。 例如，與Geometrixx中的繼承段落系統一樣：
 
    ![chlimage_1-74](assets/chlimage_1-74.png)
 
-## 添加註釋 {#adding-annotations}
+## 新增註解 {#adding-annotations}
 
-[注釋](/help/sites-classic-ui-authoring/classic-page-author-annotations.md) 允許其他作者提供有關您內容的反饋。 這通常用於審查和驗證目的。
+[註解](/help/sites-classic-ui-authoring/classic-page-author-annotations.md) 允許其他作者對您的內容提供意見回饋。 這通常用於審查和驗證目的。
 
 ## 預覽頁面 {#previewing-pages}
 
-旁邊框的下邊框有兩個對預覽頁面很重要的表徵圖：
+Sidekick的底部邊框中有兩個圖示對預覽頁面很重要：
 
 ![](do-not-localize/chlimage_1-5.png)
 
-* 鉛筆表徵圖顯示您當前處於編輯模式，在該模式下可以添加、修改、移動或刪除內容。
+* 鉛筆圖示會顯示您目前處於編輯模式，您可以在此新增、修改、移動或刪除內容。
 
    ![](do-not-localize/chlimage_1-6.png)
 
-* 放大鏡表徵圖允許您選擇頁面在發佈環境中顯示時的預覽模式（有時還需要刷新頁面）:
+* 放大鏡圖示可讓您選取預覽模式，其中頁面會顯示在發佈環境中（有時也需要重新整理頁面）：
 
    ![](do-not-localize/chlimage_1-7.png)
 
-   在預覽模式下，將減少旁鍵，按一下向下箭頭表徵圖返回編輯模式：
+   在預覽模式中sidekick將會減少，按一下向下箭頭圖示以返回編輯模式：
 
    ![](do-not-localize/chlimage_1-8.png)
 
 ## 尋找和取代 {#find-replace}
 
-對於同一短語的較大比例編輯， **[查找和替換](/help/sites-classic-ui-authoring/author-env-search.md#find-and-replace)** 菜單選項允許您在網站的某個部分中搜索和替換字串的多個實例。
+若要對相同片語進行更大規模的編輯，請 **[尋找和取代](/help/sites-classic-ui-authoring/author-env-search.md#find-and-replace)** 功能表選項可讓您在網站的某個區段中搜尋和取代字串的多個執行個體。
 
 ## 鎖定頁面 {#locking-a-page}
 
-允AEM許您鎖定頁面，以便其他人不能修改內容。 當您對一個特定頁面進行大量編輯或需要將頁面凍結一段時間時，此功能非常有用。
+AEM可讓您鎖定頁面，讓其他人無法修改內容。 當您對某個特定頁面進行大量編輯，或需要凍結頁面一段時間時，此功能會很有用。
 
 >[!CAUTION]
 >
->鎖定頁面時應小心謹慎，因為唯一能夠解鎖頁面的人是鎖定頁面的人（或具有管理員權限的帳戶）。
+>鎖定頁面時應謹慎使用，因為唯一可以解鎖頁面的人是鎖定頁面的人（或具有管理員許可權的帳戶）。
 
-要鎖定頁面：
+若要鎖定頁面：
 
-1. 在 **網站** 頁籤。
-1. 按兩下該頁面以將其開啟以進行編輯。
-1. 在 **頁面** 頁籤，選擇 **鎖定頁**:
+1. 在 **網站** 索引標籤中，選取您要鎖定的頁面。
+1. 連按兩下頁面以開啟頁面進行編輯。
+1. 在 **頁面** sidekick索引標籤，選擇 **鎖定頁面**：
 
    ![screen_shot_2012-02-08at15750pm](assets/screen_shot_2012-02-08at15750pm.png)
 
-   一條消息顯示您的頁面已鎖定給其他用戶。 此外，在 **網站** 控制台AEM中， WCM將頁面顯示為已鎖定，並指示哪個用戶已鎖定頁面。
+   訊息會顯示您的頁面已鎖定給其他使用者。 此外，在 **網站** 主控台、AEM WCM會將頁面顯示為已鎖定，並指出已鎖定頁面的使用者。
 
    ![screen_shot_2012-02-08at20657pm](assets/screen_shot_2012-02-08at20657pm.png)
 
 ## 解鎖頁面 {#unlocking-a-page}
 
-要解鎖頁面：
+若要解除鎖定頁面：
 
-1. 在 **網站** 頁籤。
-1. 按兩下該頁面以將其開啟。
-1. 在 **頁面** 頁籤，選擇 **解鎖頁**。
+1. 在 **網站** 索引標籤中，選取您要解除鎖定的頁面。
+1. 連按兩下頁面以開啟。
+1. 在 **頁面** sidekick索引標籤，選擇 **解鎖頁面**.
 
-## 撤消和重做頁面編輯 {#undoing-and-redoing-page-edits}
+## 還原和重做頁面編輯 {#undoing-and-redoing-page-edits}
 
-當頁面的內容框架具有焦點時，請使用以下鍵盤快捷鍵：
+當頁面的內容框架具有焦點時，請使用下列鍵盤快速鍵：
 
-* 撤消：Ctrl+Z(Windows)或Cmd+Z(Mac)
-* 重做：Ctrl+Y(Windows)或Cmd+Y(Mac)
+* 還原：Ctrl+Z (Windows)或Cmd+Z (Mac)
+* 重做：Ctrl+Y (Windows)或Cmd+Y (Mac)
 
-撤消或重做一個或多個段落的刪除、添加或重新定位時，閃爍（預設行為）會突出顯示受影響的段落。
-
->[!NOTE]
->
->請參閱 [撤消和重做頁面編輯 — 理論](#undoing-and-redoing-page-edits-the-theory) 的子菜單。
-
-## 撤消和重做頁面編輯 — 理論 {#undoing-and-redoing-page-edits-the-theory}
+當您復原或重做一個或多個段落的移除、新增或重新定位時，閃爍（預設行為）的醒目提示會指出受影響的段落。
 
 >[!NOTE]
 >
->您的系統管理員可以 [配置「撤消/重做」特徵的各個方面](/help/sites-administering/config-undo.md) 根據你們的情況要求。
+>另請參閱 [還原和重做頁面編輯 — 理論](#undoing-and-redoing-page-edits-the-theory) 以取得復原和重做頁面編輯時可行功能的完整細節。
 
-存AEM儲所執行操作的歷史記錄以及所執行操作的順序。 因此，您可以按執行順序撤消多個操作。 然後，可以使用重做重新應用一個或多個操作。
+## 還原和重做頁面編輯 — 理論 {#undoing-and-redoing-page-edits-the-theory}
 
-如果選擇了內容頁上的元素，則撤消和重做命令將應用於所選項目，如文本元件。
+>[!NOTE]
+>
+>您的系統管理員可以 [設定「復原/重做」功能的各個層面](/help/sites-administering/config-undo.md) 根據您執行個體的需求。
 
-撤消和重做命令的行為與其他軟體程式中的行為類似。 在您對內容做出決策時，使用命令恢復網頁的最近狀態。 例如，如果將文本段落移動到頁面上的其他位置，則可以使用撤消命令將段落移回。 如果隨後再次決定移動段落，請使用重做命令。
+AEM會儲存您執行動作的歷史記錄，以及執行動作的順序。 因此，您可以依照執行動作的順序復原數個動作。 然後，您可以使用重做來重新套用一或多個動作。
+
+如果選取了內容頁面上的元素，則復原和重做命令會套用至選取的專案，例如文字元件。
+
+復原和重做命令的行為與其他軟體程式中的類似。 當您決定內容時，請使用命令來還原網頁的最近狀態。 例如，如果您將文欄位落移動到頁面上的不同位置，則可以使用復原命令將段落移回。 如果您隨後再次決定移動段落，請使用重做命令。
 
 >[!NOTE]
 >
 >您可以：
 >
->* 只要自使用撤消後未進行頁面編輯，就重做操作。
->* 撤消最多20個編輯操作（預設設定）。
->* 也 [鍵盤快捷鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 撤消和重做。
+>* 只要您使用復原後尚未進行頁面編輯，就可以重做動作。
+>* 最多可復原20個編輯動作（預設設定）。
+>* 也使用 [鍵盤快速鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 「復原」和「重做」。
 >
 
 
-可以對以下類型的頁面更改使用撤消和重做：
+您可以對下列型別的頁面變更使用還原和重做：
 
-* 添加、編輯、刪除和移動段落
-* 原地編輯段落內容
-* 在頁面中複製、剪切和貼上項目
-* 跨頁複製、剪切和貼上項目
-* 添加、刪除和更改檔案和影像
-* 添加、刪除和更改注釋和草繪
-* 對Scaffold的更改
-* 添加和刪除引用
-* 更改元件對話框中的屬性值。
+* 新增、編輯、移除和移動段落
+* 就地編輯段落內容
+* 在頁面中複製、剪下和貼上專案
+* 跨頁面複製、剪下和貼上專案
+* 新增、移除和變更檔案和影像
+* 新增、移除和變更註釋和草圖
+* 支架的變更
+* 新增和移除參照
+* 變更元件對話方塊中的屬性值。
 
-表單元件呈現的表單域不意味著在創作頁面時指定值。 因此，撤消和重做命令不會影響對這些類型元件的值所做的更改。 例如，無法撤消在下拉清單中選擇值。
+表單元件轉譯的表單欄位不應在編寫頁面時指定值。 因此，「還原」和「重做」指令不會影響您對這些元件型別值所做的變更。 例如，您無法還原在下拉式清單中選取值的作業。
 
 >[!NOTE]
 >
->要撤消和重做對檔案和影像的更改，需要特殊權限。 此外，還要撤消對檔案和影像所做的更改的歷史記錄，最少持續數小時。 但是，在此之後，無法保證撤消更改。 管理員可以提供權限並更改預設時間（10小時）。
+>需要特殊許可權才能復原和重做檔案和影像的變更。 此外，復原檔案和影像變更的歷史記錄至少會持續數小時。 然而，在這段時間之後，無法保證會復原變更。 您的管理員可以提供許可權並變更十小時的預設時間。

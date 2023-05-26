@@ -1,6 +1,6 @@
 ---
 title: 套用 Dynamic Media 影像預設集
-description: 瞭解如何在Dynamic Media應用影像預設
+description: 瞭解如何在Dynamic Media中套用影像預設集
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -17,44 +17,44 @@ ht-degree: 4%
 
 ---
 
-# 應用Dynamic Media影像預設 {#applying-image-presets}
+# 套用Dynamic Media影像預設集 {#applying-image-presets}
 
-影像預設使資產能夠以不同大小、不同格式或使用動態生成的其他影像屬性動態傳送影像。 導出影像時，可以選擇預設。 預設將影像重新格式化為管理員指定的規範。
+影像預設集可讓資產動態傳送不同大小、不同格式或動態產生之其他影像屬性的影像。 您可在匯出影像時選擇預設集。 預設集會根據管理員指定的規格重新格式化影像。
 
-此外，您還可以選擇響應的影像預設(由 **[!UICONTROL RESS]** 按鈕)。
+此外，您也可以選擇回應式影像預設集(由 **[!UICONTROL RESS]** 按鈕)。
 
-本節介紹如何使用影像預設。 [管理員可以建立和配置影像預設](managing-image-presets.md)。
-
->[!NOTE]
->
->智慧成像可與您現有的影像預設配合使用，並在傳輸的最後一毫秒使用智慧功能，以根據瀏覽器或網路連接速度進一步減小影像檔案大小。 請參閱 [智慧映像](imaging-faq.md) 的子菜單。
-
-您可以在預覽影像時將影像預設應用於影像。
+本節說明如何使用影像預設集。 [管理員可以建立和設定影像預設集](managing-image-presets.md).
 
 >[!NOTE]
 >
->在Dynamic Media-Scene7模式中，僅影像資產支援影像預設。
+>智慧型影像處理可搭配您現有的影像預設集運作，並在傳送的最後毫秒內運用智慧功能，根據瀏覽器或網路連線速度，進一步縮減影像檔案大小。 另請參閱 [智慧型影像](imaging-faq.md) 以取得詳細資訊。
 
-**要應用Dynamic Media影像預設：**
+您可以隨時將影像預設集套用至影像預覽。
 
-1. 開啟資產，在左滑軌中，選擇下拉菜單，然後選擇 **[!UICONTROL 格式副本]**。
+>[!NOTE]
+>
+>在Dynamic Media - Scene7模式中，影像預設集僅支援影像資產。
+
+**若要套用Dynamic Media影像預設集：**
+
+1. 開啟資產，然後在左側邊欄中選取下拉式功能表，然後選取「 」 **[!UICONTROL 轉譯]**.
 
    >[!NOTE]
    >
-   >* 靜態格式副本顯示在窗格的上半部。 動態格式副本顯示在下半部。 僅使用動態格式副本，可以使用URL顯示影像。 的 **[!UICONTROL URL]** 按鈕。 的 **[!UICONTROL RESS]** 按鈕。
+   >* 靜態轉譯會顯示在窗格的上半部。 動態轉譯會顯示在下半部。 若僅限動態轉譯，您可以使用URL來顯示影像。 此 **[!UICONTROL URL]** 按鈕僅在您選取動態轉譯時顯示。 此 **[!UICONTROL RESS]** 按鈕僅在您選取回應式影像預設集時顯示。
    >
-   >* 當您選擇 **[!UICONTROL 格式副本]** 的子菜單。 您可以增加所檢視的預設集數目。請參閱 [增加顯示的影像預設數](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)。
+   >* 當您選取時，系統會顯示許多轉譯 **[!UICONTROL 轉譯]** 在資產的「詳細資訊」檢視中。 您可以增加所檢視的預設集數目。另請參閱 [增加顯示的影像預設集數目](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display).
 
 
    ![chlimage_1-208](assets/chlimage_1-208.png)
 
-1. 執行下列任一操作：
+1. 執行下列任一項作業：
 
-   * 選擇動態格式副本，以便預覽影像預設。
-   * 要顯示彈出窗口，請選擇 **[!UICONTROL URL]**。 **[!UICONTROL 嵌入]**&#x200B;或 **[!UICONTROL RESS]**。
+   * 選取動態轉譯，以便預覽影像預設集。
+   * 若要顯示快顯視窗，請選取 **[!UICONTROL URL]**， **[!UICONTROL 內嵌]**，或 **[!UICONTROL RESS]**.
 
    >[!NOTE]
    >
-   >如果資產 *和* 影像預設尚未發佈， **[!UICONTROL URL]** 按鈕 **[!UICONTROL URL]** 和 **[!UICONTROL RESS]** 按鈕（如果適用）不可用。
+   >如果資產 *和* 影像預設集尚未發佈，因此 **[!UICONTROL URL]** 按鈕(或 **[!UICONTROL URL]** 和 **[!UICONTROL RESS]** 按鈕（如果適用）不可用。
    >
-   >另請注意，影像預設會自動發佈在Dynamic Media伺服器上。
+   >另請注意，影像預設集會自動發佈在Dynamic Media伺服器上。

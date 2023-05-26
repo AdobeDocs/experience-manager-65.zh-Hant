@@ -1,7 +1,7 @@
 ---
-title: 將規則應用於自適應表單域
+title: 將規則套用至最適化表單欄位
 seo-title: Apply rules to adaptive form fields
-description: 建立規則，以將交互性、業務邏輯和智慧驗證添加到自適應表單。
+description: 建立規則以將互動、商業邏輯和智慧驗證新增到最適化表單。
 seo-description: Create rules to add interactivity, business logic, and smart validations to an adaptive form.
 page-status-flag: de-activated
 uuid: 60f142aa-81ca-4333-8614-85a01e23e917
@@ -15,115 +15,115 @@ ht-degree: 0%
 
 ---
 
-# 教程：將規則應用於自適應表單域 {#tutorial-apply-rules-to-adaptive-form-fields}
+# 教學課程：將規則套用至最適化表單欄位 {#tutorial-apply-rules-to-adaptive-form-fields}
 
 ![06-apply-rules-to-adaptive-form_main](assets/06-apply-rules-to-adaptive-form_main.png)
 
-本教程是 [建立第一個自適應窗體](/help/forms/using/create-your-first-adaptive-form.md) 的下界。 Adobe建議按時間順序按系列進行操作，以瞭解、執行和演示完整的教程使用案例。
+本教學課程是 [建立第一個最適化表單](/help/forms/using/create-your-first-adaptive-form.md) 數列。 Adobe建議依照時間順序觀看本系列，以瞭解、執行和示範完整的教學課程使用案例。
 
-## 關於教程 {#about-the-tutorial}
+## 關於教學課程 {#about-the-tutorial}
 
-可以使用規則將交互性、業務邏輯和智慧驗證添加到自適應表單。 自適應表單具有內置規則編輯器。 規則編輯器提供拖放功能，類似於引導式導覽。 拖放方法是建立規則的最快、最簡便的方法。 規則編輯器還為有興趣測試其編碼技能或將規則帶到下一個級別的用戶提供代碼窗口。
+您可以使用規則將互動、商業邏輯和智慧驗證新增至最適化表單。 調適型表單有內建規則編輯器。 規則編輯器提供拖放功能，類似於引導式導覽。 拖放方法是最快速且最簡單的規則建立方法。 規則編輯器還為有興趣測試其編碼技能或將規則提升到更高層級的使用者提供了一個代碼視窗。
 
-您可以在以下位置瞭解有關規則編輯器的詳細資訊： [自適應Forms規則編輯器](/help/forms/using/rule-editor.md)。
+如需規則編輯器的詳細資訊，請參閱 [最適化Forms規則編輯器](/help/forms/using/rule-editor.md).
 
-在本教程結束時，您將學習建立規則以：
+在本教學課程結束時，您將瞭解如何建立規則來：
 
-* 調用表單資料模型服務以從資料庫檢索資料
-* 調用表單資料模型服務以向資料庫添加資料
-* 運行驗證檢查並顯示錯誤消息
+* 叫用表單資料模型服務以從資料庫擷取資料
+* 叫用表單資料模型服務以將資料新增至資料庫
+* 執行驗證檢查並顯示錯誤訊息
 
-在本教程的每一部分末尾，互動式GIF影像可幫助您即時學習和驗證要構建的表單的功能。
+教學課程每個區段末尾的互動式GIF影像可協助您快速學習及驗證所建置表單的功能。
 
-## 步驟1:從資料庫檢索客戶記錄 {#retrieve-customer-record}
+## 步驟1：從資料庫擷取客戶記錄 {#retrieve-customer-record}
 
-通過以下方式建立表單資料模型： [建立表單資料模型](/help/forms/using/create-form-data-model.md) 文章。 現在，您可以使用規則編輯器調用Forms資料模型服務來檢索和向資料庫添加資訊。
+您已遵循下列步驟建立表單資料模型 [建立表單資料模型](/help/forms/using/create-form-data-model.md) 文章。 現在，您可以使用規則編輯器來叫用Forms資料模型服務，以擷取資訊並新增至資料庫。
 
-為每個客戶分配一個唯一的客戶ID號，這有助於識別資料庫中的相關客戶資料。 以下過程使用客戶ID從資料庫檢索資訊：
+每個客戶都會獲派一個唯一的客戶ID號碼，這有助於識別資料庫中的相關客戶資料。 下列程式會使用客戶ID從資料庫擷取資訊：
 
-1. 開啟自適應表單進行編輯。
+1. 開啟最適化表單進行編輯。
 
    [http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html](http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html)
 
-1. 點擊 **[!UICONTROL 客戶ID]** 點擊 **[!UICONTROL 編輯規則]** 表徵圖 將開啟「規則編輯器」(Rule Editor)窗口。
-1. 點擊 **[!UICONTROL +建立]** 表徵圖以添加規則。 開啟可視編輯器。
+1. 點選 **[!UICONTROL 客戶ID]** 欄位並點選 **[!UICONTROL 編輯規則]** 圖示。 「規則編輯器」視窗隨即開啟。
+1. 點選 **[!UICONTROL +建立]** 圖示以新增規則。 它會開啟視覺化編輯器。
 
-   在可視編輯器中， **[!UICONTROL 時間]** 預設情況下，選擇語句。 另外，表單對象(在本例中， **[!UICONTROL 客戶ID]**)中的 **[!UICONTROL 時間]** 的雙曲餘切值。
+   在視覺化編輯器中， **[!UICONTROL 時間]** 陳述式預設為選取。 此外，表單物件(在此案例中， **[!UICONTROL 客戶ID]**)啟動規則編輯器的位置，會於 **[!UICONTROL 時間]** 陳述式。
 
-1. 點擊 **[!UICONTROL 選擇狀態]** 下拉並選擇 **[!UICONTROL 已更改]**。
+1. 點選 **[!UICONTROL 選取狀態]** 下拉式清單並選取 **[!UICONTROL 已變更]**.
 
-   ![更改客戶時](assets/whencustomeridischanged.png)
+   ![whencustomeridischanged](assets/whencustomeridischanged.png)
 
-1. 在 **[!UICONTROL 然後]** 語句，選擇 **[!UICONTROL 調用服務]** 從 **[!UICONTROL 選擇操作]** 下拉。
-1. 選擇 **[!UICONTROL 檢索發運地址]** 服務 **[!UICONTROL 選擇]** 下拉。
-1. 拖放 **[!UICONTROL 客戶ID]** 從「表單對象」頁籤到 **[!UICONTROL 刪除對象或選擇此處]** 的 **[!UICONTROL 輸入]** 框。
+1. 在 **[!UICONTROL 則]** 陳述式，選取 **[!UICONTROL 啟動服務]** 從 **[!UICONTROL 選取動作]** 下拉式清單。
+1. 選取 **[!UICONTROL 擷取送貨地址]** 服務來自 **[!UICONTROL 選取]** 下拉式清單。
+1. 拖放 **[!UICONTROL 客戶ID]** 欄位(從「表單物件」標籤到 **[!UICONTROL 拖放物件或在這裡選取]** 中的欄位 **[!UICONTROL 輸入]** 方塊。
 
-   ![dropobjectstoinputfield-retriedata](assets/dropobjectstoinputfield-retrievedata.png)
+   ![dropobjectstoinputfield-retrievedata](assets/dropobjectstoinputfield-retrievedata.png)
 
-1. 拖放 **[!UICONTROL 客戶ID、名稱、發運地址、狀態和郵遞區號]** 從「表單對象」頁籤到 **[!UICONTROL 刪除對象或選擇此處]** 的 **[!UICONTROL 輸出]** 框。
+1. 拖放 **[!UICONTROL 客戶ID、名稱、送貨地址、州/省和郵遞區號]** 欄位(從「表單物件」標籤到 **[!UICONTROL 拖放物件或在這裡選取]** 中的欄位 **[!UICONTROL 輸出]** 方塊。
 
-   ![dropobjectstooutputfield-retriedata](assets/dropobjectstooutputfield-retrievedata.png)
+   ![dropobjectstooutputfield-retrievedata](assets/dropobjectstooutputfield-retrievedata.png)
 
-   點擊 **[!UICONTROL 完成]** 來保存規則。 在規則編輯器窗口中，按一下 **[!UICONTROL 關閉]**。
+   點選 **[!UICONTROL 完成]** 以儲存規則。 在規則編輯器視窗上，點選 **[!UICONTROL 關閉]**.
 
-1. 預覽自適應窗體。 在 **[!UICONTROL 客戶ID]** 的子菜單。 現在，表單可以從資料庫中檢索客戶詳細資訊。
+1. 預覽最適化表單。 在中輸入ID **[!UICONTROL 客戶ID]** 欄位。 表單現在可以從資料庫擷取客戶詳細資訊。
 
-   ![檢索資訊](assets/retrieve-information.gif)
+   ![retrieve-info](assets/retrieve-information.gif)
 
-## 步驟2:將更新的客戶地址添加到資料庫 {#updated-customer-address}
+## 步驟2：將更新的客戶地址新增至資料庫 {#updated-customer-address}
 
-從資料庫中檢索客戶詳細資訊後，您可以更新發運地址、狀態和郵遞區號。 以下過程調用表單資料模型服務以將客戶資訊更新到資料庫：
+從資料庫擷取客戶詳細資料後，您可以更新送貨地址、州別和郵遞區號。 下列程式會叫用「表單資料模型」服務，將客戶資訊更新至資料庫：
 
-1. 選擇 **[!UICONTROL 提交]** 點擊 **[!UICONTROL 編輯規則]** 表徵圖 將開啟「規則編輯器」(Rule Editor)窗口。
-1. 選擇 **[!UICONTROL 提交 — 按一下]** 規則並點擊 **[!UICONTROL 編輯]** 表徵圖 此時將顯示編輯「提交」規則的選項。
+1. 選取 **[!UICONTROL 提交]** 欄位並點選 **[!UICONTROL 編輯規則]** 圖示。 「規則編輯器」視窗隨即開啟。
+1. 選取 **[!UICONTROL 提交 — 按一下]** 規則，然後點選 **[!UICONTROL 編輯]** 圖示。 隨即顯示編輯「提交」規則的選項。
 
-   ![提交規則](assets/submit-rule.png)
+   ![submit-rule](assets/submit-rule.png)
 
-   在WHEN選項中， **[!UICONTROL 提交]** 和 **[!UICONTROL 按一下]** 選項。
+   在WHEN選項中， **[!UICONTROL 提交]** 和 **[!UICONTROL 已點按]** 已選取選項。
 
-   ![已按一下提交](assets/submit-is-clicked.png)
+   ![submit-is-clicked](assets/submit-is-clicked.png)
 
-1. 在 **[!UICONTROL 然後]** 選項，按一下 **[!UICONTROL +添加語句]** 的雙曲餘切值。 選擇 **[!UICONTROL 調用服務]** 從 **[!UICONTROL 選擇操作]** 下拉。
-1. 選擇 **[!UICONTROL 更新發運地址]** 服務 **[!UICONTROL 選擇]** 下拉。
+1. 在 **[!UICONTROL 則]** 選項，點選 **[!UICONTROL +新增陳述式]** 選項。 選取 **[!UICONTROL 啟動服務]** 從 **[!UICONTROL 選取動作]** 下拉式清單。
+1. 選取 **[!UICONTROL 更新送貨地址]** 服務來自 **[!UICONTROL 選取]** 下拉式清單。
 
-   ![更新發運地址](assets/update-shipping-address.png)
+   ![update-shipping-address](assets/update-shipping-address.png)
 
    ![dropobjectstoinputfield-updatedata](assets/dropobjectstoinputfield-updatedata.png)
 
-1. 拖放 **[!UICONTROL 發運地址、省/自治區/直轄市和郵遞區號]** 的 [!UICONTROL 窗體對象] 的子目錄。 **[!UICONTROL 刪除對象或選擇此處]** 的 **[!UICONTROL 輸入]** 框。 所有以表名前置詞的欄位（例如，此用例中的customerdetails）都用作更新服務的輸入資料。 在資料源中更新這些欄位中提供的所有內容。
+1. 拖放 **[!UICONTROL 送貨地址、州/省和郵遞區號]** 欄位來自 [!UICONTROL 表單物件] 定位字元至的相應tablename .property （例如customerdetails .shippingAddress）。 **[!UICONTROL 拖放物件或在這裡選取]** 中的欄位 **[!UICONTROL 輸入]** 方塊。 所有以tablename為前置詞的欄位（例如，此使用案例中的customerdetails）都會當作更新服務的輸入資料。 這些欄位中提供的所有內容都會在資料來源中更新。
 
    >[!NOTE]
    >
-   >不要拖放 **[!UICONTROL 名稱]** 和 **[!UICONTROL 客戶ID]** 欄位到相應的tablename.property（例如customerdetails.name）。 它有助於避免錯誤更新客戶的名稱和ID。
+   >請勿拖放 **[!UICONTROL 名稱]** 和 **[!UICONTROL 客戶ID]** 至對應tablename.property的欄位（例如customerdetails.name）。 它有助於避免錯誤地更新客戶的名稱和ID。
 
-1. 拖放 **[!UICONTROL 客戶ID]** 的 [!UICONTROL 窗體對象] 頁籤 **[!UICONTROL 輸入]** 框。 沒有前置詞表名的欄位（例如，此使用情形中的customerdetails）用作更新服務的搜索參數。 的 **[!UICONTROL ID]** 此用例中的欄位唯一標識記錄  **customerdetails（客戶詳細資訊）**  的子菜單。
-1. 點擊 **[!UICONTROL 完成]** 來保存規則。 在規則編輯器窗口中，按一下 **[!UICONTROL 關閉]**。
-1. 預覽自適應窗體。 檢索客戶的詳細資訊、更新發運地址並提交表單。 當您再次檢索同一客戶的詳細資訊時，將顯示更新的發運地址。
+1. 拖放 **[!UICONTROL 客戶ID]** 欄位來自 [!UICONTROL 表單物件] 標籤切換至中的id欄位 **[!UICONTROL 輸入]** 方塊。 沒有前置詞tablename的欄位（例如，此使用案例中的customerdetails）會作為更新服務的搜尋引數。 此 **[!UICONTROL id]** 此使用案例中的欄位可唯一識別中的記錄  **customerdetails**  表格。
+1. 點選 **[!UICONTROL 完成]** 以儲存規則。 在規則編輯器視窗上，點選 **[!UICONTROL 關閉]**.
+1. 預覽最適化表單。 擷取客戶的詳細資料、更新送貨地址並提交表單。 當您再次擷取相同客戶的詳細資料時，會顯示更新的送貨地址。
 
-## 第3步：（附加部分）使用代碼編輯器運行驗證並顯示錯誤消息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
+## 步驟3： （額外章節）使用程式碼編輯器執行驗證並顯示錯誤訊息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
 
-您應對表單運行驗證，以確保在表單中輸入的資料正確，並在資料不正確時顯示錯誤消息。 例如，如果在表單中輸入了非現有客戶ID，則應顯示一條錯誤消息。
+您應該對表單執行驗證，以確保在表單中輸入的資料正確無誤，並且在資料不正確的情況下會顯示錯誤訊息。 例如，如果在表單中輸入不存在的客戶ID，則會顯示錯誤訊息。
 
-自適應表單提供了幾個具有內置驗證的元件，例如，電子郵件和數字欄位，您可以將這些欄位用於常用案例。 使用規則編輯器進行高級使用情形，例如，當資料庫返回零(0)條記錄（無記錄）時，顯示錯誤消息。
+適用性表單提供數個內建驗證的元件，例如電子郵件和數值欄位，您可將其用於常見使用案例。 針對進階使用案例使用規則編輯器，例如在資料庫傳回零(0)記錄（無記錄）時顯示錯誤訊息。
 
-以下過程說明如何建立規則，以在資料庫中不存在在表單中輸入的客戶ID時顯示錯誤消息。 該規則還將焦點放在 **[!UICONTROL 客戶ID]** 的子菜單。 規則使用 [表單資料模型服務的dataIntegrationUtils API](/help/forms/using/invoke-form-data-model-services.md) 以檢查資料庫中是否存在客戶ID。
+下列程式說明如果表單中輸入的客戶ID不存在於資料庫中，如何建立規則以顯示錯誤訊息。 此規則也會將焦點導向並重設 **[!UICONTROL 客戶ID]** 欄位。 規則使用 [表單資料模型服務的dataIntegrationUtils API](/help/forms/using/invoke-form-data-model-services.md) 檢查客戶ID是否存在於資料庫中。
 
-1. 點擊 **[!UICONTROL 客戶ID]** 點擊 `Edit Rules` 表徵圖 的 [!UICONTROL 規則編輯器] 的下界。
-1. 點擊 **[!UICONTROL +建立]** 表徵圖以添加規則。 開啟可視編輯器。
+1. 點選 **[!UICONTROL 客戶ID]** 欄位並點選 `Edit Rules` 圖示。 此 [!UICONTROL 規則編輯器] 視窗隨即開啟。
+1. 點選 **[!UICONTROL +建立]** 圖示以新增規則。 它會開啟視覺化編輯器。
 
-   在可視編輯器中， **[!UICONTROL 時間]** 預設情況下，選擇語句。 另外，表單對象(在本例中， **[!UICONTROL 客戶ID]**)中的 **[!UICONTROL 時間]** 的雙曲餘切值。
+   在視覺化編輯器中， **[!UICONTROL 時間]** 陳述式預設為選取。 此外，表單物件(在此案例中， **[!UICONTROL 客戶ID]**)啟動規則編輯器的位置，會於 **[!UICONTROL 時間]** 陳述式。
 
-1. 點擊 **[!UICONTROL 選擇狀態]** 下拉並選擇 **[!UICONTROL 已更改]**。
+1. 點選 **[!UICONTROL 選取狀態]** 下拉式清單並選取 **[!UICONTROL 已變更]**.
 
-   ![更改客戶時](assets/whencustomeridischanged.png)
+   ![whencustomeridischanged](assets/whencustomeridischanged.png)
 
-   在 **[!UICONTROL 然後]** 語句，選擇 **[!UICONTROL 調用服務]** 從 **[!UICONTROL 選擇操作]** 下拉。
+   在 **[!UICONTROL 則]** 陳述式，選取 **[!UICONTROL 啟動服務]** 從 **[!UICONTROL 選取動作]** 下拉式清單。
 
-1. 切換自 **[!UICONTROL 可視編輯器]** 至 **[!UICONTROL 代碼編輯器]**。 開關控制項位於窗口的右側。 「代碼編輯器」(Code Editor)開啟，顯示與以下內容類似的代碼：
+1. 切換來源 **[!UICONTROL 視覺化編輯器]** 至 **[!UICONTROL 代碼編輯器]**. 切換器控制項位於視窗的右側。 程式碼編輯器隨即開啟，顯示類似下列的程式碼：
 
-   ![代碼編輯器](assets/code-editor.png)
+   ![程式碼編輯器](assets/code-editor.png)
 
-1. 用以下代碼替換輸入變數部分：
+1. 以下列程式碼取代輸入變數區段：
 
    ```javascript
    var inputs = {
@@ -131,7 +131,7 @@ ht-degree: 0%
    };
    ```
 
-1. 替換 `guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)` 下面的代碼：
+1. 取代 `guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)` 區段，代碼如下：
 
    ```javascript
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, function (result) {
@@ -148,6 +148,6 @@ ht-degree: 0%
    });
    ```
 
-1. 預覽自適應窗體。 輸入不正確的客戶ID。 出現錯誤資訊。
+1. 預覽最適化表單。 輸入不正確的客戶ID。 出現錯誤訊息。
 
-   ![顯示驗證錯誤](assets/display-validation-error.gif)
+   ![display-validation-error](assets/display-validation-error.gif)

@@ -1,6 +1,6 @@
 ---
-title: 配置富格文本編輯器以建立可訪問的網頁和站點。
-description: 配置富格文本編輯器以建立可訪問的網頁和站點。
+title: 設定RTF編輯器以建立無障礙的網頁和網站。
+description: 設定RTF編輯器以建立無障礙的網頁和網站。
 contentOwner: AG
 exl-id: d2451710-5abf-4816-8052-57d8f04a228e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
@@ -10,80 +10,80 @@ ht-degree: 0%
 
 ---
 
-# 配置RTE以建立可訪問的網頁和站點 {#configure-rte-for-accessibility}
+# 設定RTE以建立無障礙的網頁和網站 {#configure-rte-for-accessibility}
 
-Adobe Experience Manager支援符合各種無障礙標準的標準無障礙功能。 此外，開發人員可以自定義或擴展功能，以提供一些功能，這些功能使用使用RTE(RTE)的Experience Manager元件幫助建立可訪問的內容。
+Adobe Experience Manager支援符合各種協助工具標準的多種標準協助工具功能。 此外，開發人員可以自訂或擴充，以提供有助於使用使用RTF編輯器(RTE)的Experience Manager元件建立無障礙內容的功能。
 
-在設計網頁和向網頁添加內容時，內容開發者和作者可以使用RTE的功能來提供與輔助功能相關的資訊。 例如，通過標題和段落元素添加結構資訊。
+在設計網頁並將內容新增至頁面時，內容開發人員和作者可以使用RTE的功能來提供協助工具的相關資訊。 例如，透過標題和段落元素新增結構資訊。
 
-要配置和定制這些功能， [配置RTE插件](#configure-the-plugin-features) 的子菜單。 例如， `paraformat` 插件允許您添加附加的塊級語義元素，包括擴展支援的標題級別數，超出基本 `H1`。 `H2`, `H3` 預設提供。
+若要設定和自訂這些功能， [設定RTE外掛程式](#configure-the-plugin-features) 用於元件。 例如， `paraformat` 外掛程式可讓您新增其他區塊層級語意元素，包括擴充基本標題以外支援的標題層級數目 `H1`， `H2`、和 `H3` 預設提供。
 
-RTE可在支援觸摸的用戶介面和經典用戶介面的各種元件中使用。 但是，使用RTE的主要元件是 **文本** 可用於兩個介面的元件。 以下影像顯示啟用了一系列插件的RTE，包括 `paraformat`:
+RTE有多種元件可供觸控式使用者介面和傳統使用者介面使用。 不過，使用RTE的主要元件是 **文字** 兩個介面都可用的元件。 下列影像顯示已啟用一系列外掛程式的RTE，包括 `paraformat`：
 
-![啟用觸摸的UI中全屏模式的文本元件(RTE)。](assets/chlimage_1-206.png)
+![觸控式UI中全熒幕模式的文字元件(RTE)。](assets/chlimage_1-206.png)
 
-*圖：啟用觸摸的用戶介面中的「文本」元件。*
+*圖：觸控式使用者介面中的文字元件。*
 
-![在傳統UI中編輯文本元件的對話框(RTE)。](assets/chlimage_1-207.png)
+![傳統UI中文字元件的「編輯」對話方塊(RTE)。](assets/chlimage_1-207.png)
 
-*圖：Classic用戶介面中的Text元件。*
+*圖： Classic使用者介面中的文字元件。*
 
-有關各種介面中可用的RTE功能之間的差異，請參見 [插件及其功能](/help/sites-administering/rich-text-editor.md#aboutplugins)。
+如需各種介面中可用的RTE功能之間的差異，請參閱 [外掛程式及其功能](/help/sites-administering/rich-text-editor.md#aboutplugins).
 
-## 配置插件功能 {#configure-the-plugin-features}
+## 設定外掛程式功能 {#configure-the-plugin-features}
 
-有關配置RTE的完整說明，請參見 [配置RTF編輯器](/help/sites-administering/rich-text-editor.md) 的子菜單。 這涵蓋所有問題，包括關鍵步驟：
+如需設定RTE的完整指示，請參閱 [設定RTF編輯器](/help/sites-administering/rich-text-editor.md) 頁面。 這涵蓋所有問題，包括關鍵步驟：
 
-* [插件和功能](/help/sites-administering/rich-text-editor.md#aboutplugins)。
-* [配置位置](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations)。
-* [激活插件並配置功能屬性](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)。
-* [配置RTE的其他功能](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)。
+* [外掛程式和功能](/help/sites-administering/rich-text-editor.md#aboutplugins).
+* [設定位置](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations).
+* [啟動外掛程式並設定功能屬性](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
+* [設定RTE的其他功能](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
 
-通過在適當的 `rtePlugins` 在CRXDE Lite中的子分支，您可以激活該插件的所有功能或特定功能。
+藉由在適當位置中設定外掛程式 `rtePlugins` CRXDE Lite的子分支，您可以為該外掛程式啟動所有或特定功能。
 
-![CRXDE Lite，顯示一個rtePlugin示例。](assets/chlimage_1-208.png)
+![顯示rtePlugin範例的CRXDE Lite。](assets/chlimage_1-208.png)
 
-### 示例 — 指定RTE選擇欄位中可用的段落格式 {#example-specifying-paragraph-formats-available-in-rte-selection-field}
+### 範例 — 指定RTE選取欄位中可用的段落格式 {#example-specifying-paragraph-formats-available-in-rte-selection-field}
 
-新的語義塊格式可通過以下方式可供選擇：
+新的語意區塊格式可能可供下列使用者選擇：
 
-1. 根據RTE，確定並導航到 [配置位置](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations)。
-1. [啟用「段落選擇」欄位](/help/sites-administering/rich-text-editor.md);按 [激活插件](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)。
-1. [在「段落選擇」欄位中指定要使用的格式](/help/sites-administering/rich-text-editor.md)。
-1. 然後，從RTE的選擇欄位中，內容作者可以使用段落格式。 可訪問：
+1. 根據您的RTE，決定並導覽至 [設定位置](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations).
+1. [啟用段落選擇欄位](/help/sites-administering/rich-text-editor.md)；依據 [啟用外掛程式](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
+1. [在「段落選取」欄位中指定您想要的可用格式](/help/sites-administering/rich-text-editor.md).
+1. 然後，內容作者可以從RTE的選擇欄位中使用段落格式。 它們可以存取：
 
-   * 使用啟用觸摸的用戶介面中的段落標尾表徵圖。
-   * 使用 **格式** 欄位（彈出式選擇器）。
+   * 在觸控式UI中使用段落枕頭圖示。
+   * 使用 **格式** 傳統UI中的欄位（彈出式選取器）。
 
-在RTE中通過段落格式選項提供了結構性元素AEM，為開發可訪問內容提供了良好基礎。 內容作者不能使用RTE格式化字型大小、顏色或其他相關屬性，從而阻止建立內嵌格式。 相反，它們必須選擇相應的結構元素，如標題，並使用從「樣式」(Styles)選項中選擇的全局樣式。 這確保了清晰的標籤，為使用自己的樣式表瀏覽的用戶提供了更好的選項，並確保了正確的結構化內容。
+透過RTE中可透過段落格式選項使用的結構元素，AEM為開發無障礙內容提供了良好的基礎。 內容作者無法使用RTE來格式化字型大小、顏色或其他相關屬性，因而無法建立內嵌格式。 相反地，他們必須選取適當的結構元素（例如標題），並使用從「樣式」選項中選擇的全域樣式。 這可確保為使用自己的樣式表和正確結構化的內容瀏覽的使用者提供乾淨的標示、更豐富的選項。
 
-## 源編輯功能的使用 {#use-of-the-source-edit-feature}
+## 使用來源編輯功能 {#use-of-the-source-edit-feature}
 
-在某些情況下，內容作者將發現有必要檢查和調整使用RTE建立的HTML原始碼。 例如，在RTE中建立的某一內容可能需要附加標籤，以確保符合WCAG 2.0。這可以通過 [源編輯](/help/sites-administering/rich-text-editor.md#aboutplugins) 選項。 可以指定 [ `sourceedit` 功能 `misctools` 插件](/help/sites-administering/rich-text-editor.md#aboutplugins)。
+在某些情況下，內容作者會發現必須檢查和調整使用RTE建立的HTML原始碼。 例如，在RTE內建立的內容片段可能需要額外的標籤，以確保符合WCAG 2.0。您可以透過以下專案完成此作業： [來源編輯](/help/sites-administering/rich-text-editor.md#aboutplugins) RTE選項。 您可以指定 [ `sourceedit` 上的功能 `misctools` 外掛程式](/help/sites-administering/rich-text-editor.md#aboutplugins).
 
 >[!CAUTION]
 >
->使用 `sourceedit` 特寫。 鍵入錯誤和/或不受支援的功能可能會帶來更多問題。
+>使用 `sourceedit` 功能精心。 輸入錯誤和/或不支援的功能可能會導致更多問題。
 
-## 添加對更多HTML元素和屬性的支援 {#add-support-for-more-html-elements-and-attributes}
+## 新增對更多HTML元素和屬性的支援 {#add-support-for-more-html-elements-and-attributes}
 
-為了進一步擴展其可AEM訪問性特徵，可以基於RTE擴展現有元件(例如 **文本** 和 **表格** 元件)。
+若要進一步擴充AEM的協助工具功能，您可以根據RTE擴充現有元件(例如 **文字** 和 **表格** 元件)與其他元素和屬性。
 
-以下過程說明了如何擴展 **表格** 具有 **標題** 向輔助技術用戶提供有關資料表資訊的元素：
+下列程式說明如何延伸 **表格** 元件與 **註解** 向輔助技術使用者提供有關資料表資訊的元素：
 
-### 示例 — 將標題添加到「表屬性」對話框 {#example-adding-the-caption-to-the-table-properties-dialog}
+### 範例 — 將註解新增至表格屬性對話方塊 {#example-adding-the-caption-to-the-table-properties-dialog}
 
-在的建構子中 `TablePropertiesDialog`，添加用於編輯標題的附加文本輸入欄位。 請注意 `itemId` 必須設定為 `caption` （即DOM屬性的名稱）以自動處理其內容。
+在的建構函式 `TablePropertiesDialog`，新增其他文字輸入欄位來編輯標題。 請注意 `itemId` 必須設定為 `caption` （即DOM屬性的名稱）以自動處理其內容。
 
-在 **表格**，將屬性顯式設定或從DOM元素中刪除。 該值通過 `config` 的雙曲餘切值。 請注意，應使用相應的 `CQ.form.rte.Common` 方法( `com` 是 `CQ.form.rte.Common`)以避免瀏覽器實現中的常見錯誤。
+在 **表格**，明確設定或移除DOM元素中的屬性。 此值會由以下位置的對話方塊傳遞： `config` 物件。 請注意，應使用對應的設定/移除DOM屬性 `CQ.form.rte.Common` 方法( `com` 是以下專案的捷徑： `CQ.form.rte.Common`)以避免瀏覽器實作的常見陷阱。
 
 >[!NOTE]
 >
->此過程僅適用於Classic用戶介面。
+>此程式僅適用於Classic使用者介面。
 
-### 示例 — 在文本中使用強調時建立可訪問HTML {#create-accessible-html-for-text}
+### 範例 — 在文字中使用強調時建立無障礙HTML {#create-accessible-html-for-text}
 
-RTE可以使用 `strong` 和 `em` 標籤代替 `b` 和 `i`。 將以下節點作為同級添加到 `uiSettings` 和 `rtePlugins` 的子菜單。
+RTE可以使用 `strong` 和 `em` 標籤取代 `b` 和 `i`. 將下列節點新增為同層級至 `uiSettings` 和 `rtePlugins` 對話方塊中的節點。
 
 ```HTML
 <htmlRules jcr:primaryType="nt:unstructured">
@@ -98,9 +98,9 @@ RTE可以使用 `strong` 和 `em` 標籤代替 `b` 和 `i`。 將以下節點作
 </htmlRules>
 ```
 
-### 逐步說明 {#step-by-step-instructions}
+### 逐步指示 {#step-by-step-instructions}
 
-1. 啟動CRXDE Lite。 例如： [http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
+1. 開始CRXDE Lite。 例如： [http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
 1. 複製:
 
    `/libs/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`
@@ -111,7 +111,7 @@ RTE可以使用 `strong` 和 `em` 標籤代替 `b` 和 `i`。 將以下節點作
 
    >[!NOTE]
    >
-   >如果中間資料夾不存在，則可能需要建立中間資料夾。
+   >如果中間資料夾尚不存在，您可能需要建立它們。
 
 1. 複製:
 
@@ -121,17 +121,17 @@ RTE可以使用 `strong` 和 `em` 標籤代替 `b` 和 `i`。 將以下節點作
 
    `/apps/cq/ui/widgets/source/widgets/form/rte/plugins/TablePropertiesDialog.js`。
 
-1. 開啟以下檔案進行編輯（按兩下開啟）:
+1. 開啟下列檔案進行編輯（按兩下即可開啟）：
 
    `/apps/cq/ui/widgets/source/widgets/form/rte/plugins/TablePropertiesDialog.js`
 
-1. 在 `constructor` 方法，在讀取行之前：
+1. 在 `constructor` 方法，在行讀取之前：
 
    ```
    var dialogRef = this;
    ```
 
-   添加以下代碼：
+   新增下列程式碼：
 
    ```
    editItems.push({
@@ -143,11 +143,11 @@ RTE可以使用 `strong` 和 `em` 標籤代替 `b` 和 `i`。 將以下節點作
    });
    ```
 
-1. 開啟以下檔案：
+1. 開啟下列檔案：
 
    `/apps/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`。
 
-1. 在 `transferConfigToTable` 方法：
+1. 將下列程式碼新增至 `transferConfigToTable` 方法：
 
    ```
    /**
@@ -182,20 +182,20 @@ RTE可以使用 `strong` 和 `em` 標籤代替 `b` 和 `i`。 將以下節點作
    }
    ```
 
-1. 使用 **全部保存……**
+1. 儲存您的變更，使用 **全部儲存……**
 
 >[!NOTE]
 >
->純文字檔案欄位不是字幕元素值允許的唯一輸入類型。 可以使用任何ExtJS構件，該構件通過其 `getValue()` 的雙曲餘切值。
+>純文字欄位不是註解元素值允許的唯一輸入型別。 您可以使用任何ExtJS Widget，透過其提供註解值 `getValue()` 方法。
 >
->要為其他元素和屬性添加編輯功能，請確保兩者都：
+>若要為其他元素和屬性新增編輯功能，請確定兩者：
 >
->* 的 `itemId` 將每個相應欄位的屬性設定為相應DOM屬性的名稱(`TablePropertiesDialog`)。
->* 在DOM元素上顯式設定和/或刪除該屬性(`Table`)。
+>* 此 `itemId` 每個對應欄位的屬性都會設定為適當DOM屬性的名稱(`TablePropertiesDialog`)。
+>* 在DOM元素上明確設定和/或移除屬性(`Table`)。
 
 
 >[!MORELIKETHIS]
 >
 >* [WCAG 2.0快速指南](/help/managing/qg-wcag.md)
->* [建立可訪問內容（WCAG 2.0一致性）](/help/sites-authoring/creating-accessible-content.md)
+>* [建立無障礙內容（符合WCAG 2.0）](/help/sites-authoring/creating-accessible-content.md)
 

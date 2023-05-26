@@ -1,5 +1,5 @@
 ---
-title: 建立內容片段模型無頭快速入門手冊
+title: 建立內容片段模型Headless快速入門手冊
 description: 針對您將建立並使用 AEM 無周邊功能提供的內容，使用內容片段模型來定義該內容的結構。
 exl-id: 653e35c9-7b6a-49ae-b55d-af2ec40e257d
 source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
@@ -9,7 +9,7 @@ ht-degree: 93%
 
 ---
 
-# 建立內容片段模型無頭快速入門手冊 {#creating-content-fragment-models}
+# 建立內容片段模型Headless快速入門手冊 {#creating-content-fragment-models}
 
 針對您將建立並使用 AEM 無周邊功能提供的內容，使用內容片段模型來定義該內容的結構。
 
@@ -23,7 +23,7 @@ ht-degree: 93%
 
 資訊架構師只會在需要新模型時偶爾執行這些任務。基於本快速入門指南的目的，我們只需要建立一個模型。
 
-1. 登錄AEM並從主菜單選擇 **工具 — >資產 — >內容片段模型**。
+1. 登入AEM，並從主功能表選取 **工具 — >資產 — >內容片段模型**.
 1. 點選或按一下建立設定時所建立的資料夾。
 
    ![模型資料夾](assets/models-folder.png)

@@ -1,7 +1,7 @@
 ---
-title: 社會圖表要點
+title: Social Graph Essential
 seo-title: Social Graph Essentials
-description: 後續元件和後續元件概述
+description: 關注元件和關注元件概述
 seo-description: follow component and following component overview
 uuid: 8ea33760-62b1-4de2-b07f-bc2417ade156
 contentOwner: Guillaume Carlino
@@ -17,74 +17,74 @@ ht-degree: 2%
 
 ---
 
-# 社會圖表要點  {#social-graph-essentials}
+# Social Graph Essential  {#social-graph-essentials}
 
-社區成員遵循的能力 [活動](essentials-activities.md) 並通過兩個部分建立：
+社群成員可遵循的功能 [活動](essentials-activities.md) 以及所遵循的規範是透過兩個元件建立的：
 
-的 `following` 元件必須與另一個資源關聯，並且此關聯已針對中的現有社區成員和功能建立 [社區站點](overview.md#communitiessites)。
+此 `following` 元件必須與另一個資源相關聯，而且此關聯已針對中的現有Communities成員和功能建立 [社群網站](overview.md#communitiessites).
 
-的 `following` 元件列出當前成員後面或當前成員後面的成員。 在為社區站點建立的用戶配置檔案中包括成員之間關係的社會圖形。
+此 `following` 元件會列出目前成員之後或目前成員之後的成員。 此成員間關係的社交圖表包含在為社群網站建立的使用者個人資料中。
 
-## 客戶端基本知識 {#essentials-for-client-side}
+## 適用於使用者端的Essentials {#essentials-for-client-side}
 
 ### 關注 {#following}
 
 <table>
  <tbody>
   <tr>
-   <td> <strong>資源類型</strong></td>
-   <td>社交/社交圖/元件/hbs/關係</td>
+   <td> <strong>resourceType</strong></td>
+   <td>social/socialgraph/components/hbs/relationships</td>
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>客戶端</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
    <td>cq.social.hbs.socialgraph</td>
   </tr>
   <tr>
-   <td> <strong>模板</strong></td>
+   <td> <strong>範本</strong></td>
    <td> /libs/social/socialgraph/components/hbs/relationships/relationships.hbs</td>
   </tr>
   <tr>
-   <td> <strong>cs</strong></td>
+   <td> <strong>css</strong></td>
    <td> /libs/social/socialgraph/components/hbs/relationships/clientlibs/relationships.css</td>
   </tr>
   <tr>
    <td><strong> 屬性</strong></td>
-   <td>請參閱 <a href="socialgraph.md">使用社交圖</a></td>
+   <td>另請參閱 <a href="socialgraph.md">使用社交圖</a></td>
   </tr>
   <tr>
    <td><strong> 可選<br /> 屬性</strong></td>
    <td>
     <ul>
      <li>名稱: <strong><code>outgoing</code></strong></li>
-     <li>類型：布爾型</li>
+     <li>型別：布林值</li>
      <li>值:<br />
       <ul>
-       <li><i>真 </i>- <code>following</code> 元件將列出當前登錄成員的成員 <code>follows</code></li>
-       <li><i>假 </i>- <code>following</code> 元件將列出 <code>follow </code>當前已登錄的成員</li>
+       <li><i>True </i>- <code>following</code> 元件會列出目前登入的成員 <code>follows</code></li>
+       <li><i>False </i>- <code>following</code> 元件將列出以下成員 <code>follow </code>目前登入的成員</li>
       </ul> </li>
-    </ul> <p>預設為 <i>真</i> 的子菜單。 當前，無法在作者模式下使用編輯對話框設定此屬性。 必須將屬性添加到的實例 <code>following </code>節點使用 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>。</p> </td>
+    </ul> <p>預設為 <i>true</i> 如果屬性遺失。 目前，在作者模式中無法使用編輯對話方塊設定此屬性。 屬性必須新增至的例項 <code>following </code>節點使用 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
   </tr>
  </tbody>
 </table>
 
 ### 關注 {#follow}
 
-| **資源類型** | `social/socialgraph/components/hbs/following` |
+| **resourceType** | `social/socialgraph/components/hbs/following` |
 |---|---|
 | [**包含**](scf.md#add-or-include-a-communities-component) | 否 |
-| **模板** | `/libs/social/socialgraph/components/hbs/following/following.hbs` |
-| **cs** | `/libs/social/socialgraph/components/hbs/following/clientlibs/following.css` |
+| **範本** | `/libs/social/socialgraph/components/hbs/following/following.hbs` |
+| **css** | `/libs/social/socialgraph/components/hbs/following/clientlibs/following.css` |
 
-* [客戶端自定義](client-customize.md)
+* [使用者端自訂](client-customize.md)
 
-## 伺服器端軟體包 {#essentials-for-server-side}
+## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [社交圖API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
+* [社交圖表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
 
-* [社交圖終結點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/endpoint/package-frame.html)
+* [社交圖端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/endpoint/package-frame.html)
 
-* [伺服器端自定義](server-customize.md)
+* [伺服器端自訂](server-customize.md)

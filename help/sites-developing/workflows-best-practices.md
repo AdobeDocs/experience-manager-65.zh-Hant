@@ -1,7 +1,7 @@
 ---
-title: 工作流最佳實踐
+title: 工作流程最佳實務
 seo-title: Workflow Best Practices
-description: 工作流最佳實踐
+description: 工作流程最佳實務
 seo-description: null
 uuid: 79be4055-c2ef-428e-9054-103c6cfde1d2
 contentOwner: User
@@ -17,198 +17,198 @@ ht-degree: 1%
 
 ---
 
-# 工作流最佳實踐{#workflow-best-practices}
+# 工作流程最佳實務{#workflow-best-practices}
 
-工作流使您能夠自動執行Adobe Experience Manager(AEM)活動。
+工作流程可讓您自動化Adobe Experience Manager (AEM)活動。
 
-它們通常表示環境中發生的大量處理AEM，因此，當自定義工作流步驟未根據最佳做法編寫或出廠設定工作流未配置為盡可能高效地運行時，系統會因此受損。
+它們通常代表AEM環境中發生的大量處理，因此，當自訂工作流程步驟未根據最佳實務編寫，或現成的工作流程未設定為儘可能有效率地執行時，系統可能會受損。
 
-因此，強烈建議仔細規劃您的工作流實施。
+因此，強烈建議您仔細規劃工作流程實作。
 
 ## 設定 {#configuration}
 
-在配置工作流進程（自定義和/或開箱即用）時，應牢記以下幾點。
+設定工作流程程式（自訂和/或現成可用）時，請謹記以下事項。
 
 ### 暫時性工作流程 {#transient-workflows}
 
-要優化高吞吐載荷，可以定義 [工作流作為暫時](/help/sites-developing/workflows.md#transient-workflows)。
+若要最佳化高擷取負載，您可以定義 [暫時性工作流程](/help/sites-developing/workflows.md#transient-workflows).
 
-當工作流處於臨時狀態時，與中間工作步驟相關的運行時資料在運行時不會保留在JCR中（當然，輸出格式副本會保留）。
+當工作流程為暫時性時，與中繼工作步驟相關的執行階段資料在執行時不會儲存在JCR中（當然，會儲存輸出轉譯）。
 
 其優點包括：
 
-* 減少工作流處理時間；高達10%。
-* 顯著減少儲存庫增長。
-* 不再需要CRUD工作流來清除。
-* 另外，它還減少了TAR檔案的數量，使其緊湊。
+* 減少工作流程處理時間；最高可縮短10%。
+* 大幅減少存放庫的成長。
+* 不再需要清除CRUD工作流程。
+* 此外，它還可以減少TAR檔案的數量，使其壓縮。
 
 >[!CAUTION]
 >
->如果您的業務要求您保留/存檔工作流運行時資料以用於審核目的，請不要啟用此功能。
+>如果您的企業要求您保留/封存工作流程執行階段資料以進行稽核，請勿啟用此功能。
 
-### 調整DAM工作流 {#tuning-dam-workflows}
+### 調整DAM工作流程 {#tuning-dam-workflows}
 
-有關DAM工作流的效能調整指南，請參見 [AEM Assets效能調整指南](/help/assets/performance-tuning-guidelines.md)。
+如需DAM工作流程的效能調整指南，請參閱 [AEM Assets效能調整指南](/help/assets/performance-tuning-guidelines.md).
 
-### 配置最大併發工作流數 {#configure-the-maximum-number-of-concurrent-workflows}
+### 設定並行工作流程的最大數量 {#configure-the-maximum-number-of-concurrent-workflows}
 
-允許AEM多個工作流線程併發運行。 預設情況下，線程數配置為系統上處理器內核數的一半。
+AEM可允許多個工作流程執行緒同時執行。 根據預設，執行緒的數量設定為系統處理器核心數量的一半。
 
-如果正在執行的工作流要求系統資源，則這可能意味AEM著很少可用於其他任務，如呈現創作UI。 因此，在諸如批量影像上傳等活動期間，系統可能處於停滯狀態。
+如果正在執行的工作流程需要系統資源，這可能意味著AEM幾乎無法用於其他任務，例如呈現編寫UI。 因此，系統在大量影像上傳等活動期間可能會變得緩慢。
 
-要解決此問題，Adobe建議配置 **最大並行作業數** 佔系統處理器內核數量的半至四分之三。 這應允許系統有足夠的容量在處理這些工作流時保持響應。
+若要解決此問題，Adobe建議將 **最大平行作業數** 大約是系統處理器核心數目的二分之一至四分之三。 這應該會提供足夠的容量，讓系統在處理這些工作流程時保持回應。
 
-配置 **最大並行作業數**，您可以選擇：
+進行設定 **最大平行作業數**，您可以：
 
-* 配置 **[OSGi配置](/help/sites-deploying/configuring-osgi.md)** 從AEMWeb控制台；為 **隊列：花崗岩工作流隊列** (a) **Apache Sling作業隊列配置**)。
+* 設定 **[OSGi設定](/help/sites-deploying/configuring-osgi.md)** 從AEM Web主控台； **佇列： Granite工作流程佇列** (一 **Apache Sling工作佇列設定**)。
 
-* 從 **斯林喬布斯** Web控制AEM台選項；為 **作業隊列配置：花崗岩工作流隊列**。 `http://localhost:4502/system/console/slingevent`。
+* 設定佇列可從 **Sling工作** AEM Web主控台的選項； **工作佇列設定： Granite工作流程佇列**，在 `http://localhost:4502/system/console/slingevent`.
 
-此外，還有一個單獨的配置 **花崗岩工作流外部進程作業隊列**。 這用於啟動外部二進位檔案的工作流進程，如 **InDesign Server** 或 **影像馬吉克**。
+此外，另有單獨的設定 **Granite工作流程外部程式工作佇列**. 這用於啟動外部二進位檔的工作流程程式，例如 **InDesign Server** 或 **影像Magick**.
 
-### 配置單個作業隊列 {#configure-individual-job-queues}
+### 設定個別工作佇列 {#configure-individual-job-queues}
 
-在某些情況下，配置單個作業隊列以控制並行線程或其它隊列選項是非常有用的。 您可以通過Web控制台添加和配置單個隊列 **Apache Sling作業隊列配置** 工廠。 要查找要列出的相應主題，請執行工作流模型並在 **斯林喬布斯** 控制台；例如，在 `http://localhost:4502/system/console/slingevent`。
+在某些情況下，根據個別工作設定個別工作佇列來控制並行執行緒或其他佇列選項會很有用。 您可以透過以下方式，從Web主控台新增及設定個別佇列： **Apache Sling工作佇列設定** 工廠。 若要尋找要列出的適當主題，請執行工作流程模型，並在 **Sling工作** 主控台；例如，在 `http://localhost:4502/system/console/slingevent`.
 
-也可以為臨時工作流添加單個作業隊列。
+您也可以為暫時性工作流程新增個別工作佇列。
 
-### 配置工作流清除 {#configure-workflow-purging}
+### 設定工作流程清除 {#configure-workflow-purging}
 
-在標準安裝中，AEM提供了維護控制台，可安排和配置每日和每週的維護活動；例如，在：
+在標準安裝中，AEM提供維護主控台，可以排程和設定每日和每週的維護活動；例如：
 
 `http://localhost:4502/libs/granite/operations/content/maintenance.html`
 
-預設情況下， **每週維護窗口** 有 **工作流清除** 任務，但需要先配置此項，然後才能運行。 要配置工作流清除，請新建 **Adobe花崗岩工作流清除配置** 必須添加到Web控制台中。
+根據預設， **每週維護期間** 具有 **工作流程清除** 工作，但此工作必須在執行前進行設定。 若要設定工作流程清除，請建立 **AdobeGranite工作流程清除設定** 必須新增至Web主控台。
 
-有關中維護任務的詳細信AEM息，請參閱 [操作儀表板](/help/sites-administering/operations-dashboard.md)。
+如需AEM維護任務的詳細資訊，請參閱 [操作控制面板](/help/sites-administering/operations-dashboard.md).
 
-## 自定義 {#customization}
+## 自訂 {#customization}
 
-在編寫自定義工作流進程時，應牢記一些事項。
+在撰寫自訂工作流程時，有些事情應牢記在心。
 
 ### 位置 {#locations}
 
-工作流模型、啟動器、指令碼和通知的定義按類型保存在儲存庫中；例如，開箱即用、定制等。
+工作流程模型、啟動器、指令碼和通知的定義會根據型別儲存在存放庫中；也就是現成可用的自訂等。
 
 >[!NOTE]
 >
->另請參閱 [6.5中的AEM儲存庫重組](/help/sites-deploying/repository-restructuring.md)。
+>另請參閱 [AEM 6.5中的存放庫重組](/help/sites-deploying/repository-restructuring.md).
 
-#### 位置 — 工作流模型 {#locations-workflow-models}
+#### 位置 — 工作流程模型 {#locations-workflow-models}
 
-工作流模型根據類型儲存在儲存庫中：
+工作流程模型會根據型別儲存在存放庫中：
 
-* 現成工作流設計按以下路徑保存：
+* 現成的工作流程設計儲存在以下路徑下：
 
    `/libs/settings/workflow/models/`
 
    >[!CAUTION]
    >
-   >不要：
+   >請勿：
    >
-   >* 將您的任何自定義工作流模型放置在此資料夾中
+   >* 將您的任何自訂工作流程模型放入此資料夾
    >* 編輯任何內容 `/libs`
 
    >
-   >由於升級時或安裝熱修復程式時，任何更改都可能被覆蓋，因此累積的修復程式包或服務包會被覆蓋。
+   >因為任何變更可能會在升級或安裝修補程式、累積修補程式套件或Service Pack時覆寫。
 
-* 自定義工作流設計保留在：
+* 自訂工作流程設計會保留在：
 
    ```
    /conf/global/settings/workflow/models/...
    ```
 
-* 運行時工作流設計（現成和自定義）都保存在以下路徑下：
+* 執行階段工作流程設計（現成和自訂）會儲存在以下路徑下：
 
    `/var/workflow/models/`
 
-* 舊式工作流設計（設計時間和運行時）保留在以下路徑下：
+* 舊版工作流程設計（設計階段和執行階段）儲存在以下路徑下：
 
    `/etc/workflow/models/`
 
    >[!NOTE]
    >
-   >如果編輯了這些設計 *使用AEMUI*，然後將詳細資訊複製到新位置。
+   >如果編輯這些設計 *使用AEM UI*，則詳細資料將會複製到新位置。
 
-#### 位置 — 工作流啟動程式 {#locations-workflow-launchers}
+#### 位置 — 工作流程啟動器 {#locations-workflow-launchers}
 
-工作流啟動程式定義也根據類型儲存在儲存庫中：
+工作流程啟動器定義也會根據型別儲存在存放庫中：
 
-* 現成工作流啟動程式按以下路徑持有：
+* 現成的工作流程啟動器位於以下路徑下：
 
    `/libs/settings/workflow/launcher/`
 
    >[!CAUTION]
    >
-   >不要：
+   >請勿：
    >
-   >* 將您的任何自定義工作流啟動程式放置在此資料夾中
+   >* 將任何自訂工作流程啟動器放置在此資料夾中
    >* 編輯任何內容 `/libs`
 
    >
-   >由於升級時或安裝熱修復程式時，任何更改都可能被覆蓋，因此累積的修復程式包或服務包會被覆蓋。
+   >因為任何變更可能會在升級或安裝修補程式、累積修補程式套件或Service Pack時覆寫。
 
-* 自定義工作流啟動器位於：
+* 自訂工作流程啟動器位於：
 
    ```
    /conf/global/settings/workflow/launcher/...
    ```
 
-* 舊式工作流啟動器按以下路徑持有：
+* 舊版工作流程啟動器位於以下路徑下：
 
    `/etc/workflow/launcher/`
 
    >[!NOTE]
    >
-   >如果編輯了這些定義 *使用AEMUI*，然後將詳細資訊複製到新位置。
+   >如果已編輯這些定義 *使用AEM UI*，則詳細資料將會複製到新位置。
 
-#### 位置 — 工作流指令碼 {#locations-workflow-scripts}
+#### 位置 — 工作流程指令碼 {#locations-workflow-scripts}
 
-工作流指令碼還根據以下類型儲存在儲存庫中：
+工作流程指令碼也會根據型別儲存在存放庫中：
 
-* 現成工作流指令碼保存在以下路徑下：
+* 現成的工作流程指令碼會儲存在以下路徑下：
 
    `/libs/workflow/scripts/`
 
    >[!CAUTION]
    >
-   >不要：
+   >請勿：
    >
-   >* 將您的任何自定義工作流指令碼放在此資料夾中
+   >* 將您的任何自訂工作流程指令碼放在此資料夾中
    >* 編輯任何內容 `/libs`
 
    >
-   >由於升級時或安裝熱修復程式時，任何更改都可能被覆蓋，因此累積的修復程式包或服務包會被覆蓋。
+   >因為任何變更可能會在升級或安裝修補程式、累積修補程式套件或Service Pack時覆寫。
 
-* 自定義工作流指令碼保存在：
+* 自訂工作流程指令碼存放於：
 
    ```
    /apps/workflow/scripts/...
    ```
 
-* 舊工作流指令碼保存在以下路徑下：
+* 舊版工作流程指令碼會儲存在以下路徑下：
 
    `/etc/workflow/scripts/`
 
-#### 位置 — 工作流通知 {#locations-workflow-notifications}
+#### 位置 — 工作流程通知 {#locations-workflow-notifications}
 
-工作流通知還根據以下類型儲存在儲存庫中：
+工作流程通知也會根據型別儲存在存放庫中：
 
-* 現成工作流通知定義保存在以下路徑下：
+* 現成的工作流程通知定義會儲存在下列路徑下：
 
    `/libs/settings/workflow/notification/`
 
    >[!CAUTION]
    >
-   >不要：
+   >請勿：
    >
-   >* 將任何自定義工作流通知定義放在此資料夾中
+   >* 將任何自訂工作流程通知定義放在此資料夾中
    >* 編輯任何內容 `/libs`
 
    >
-   >由於升級時或安裝熱修復程式時，任何更改都可能被覆蓋，因此累積的修復程式包或服務包會被覆蓋。
+   >因為任何變更可能會在升級或安裝修補程式、累積修補程式套件或Service Pack時覆寫。
 
-* 自定義工作流通知定義保存在：
+* 自訂工作流程通知定義位於下方：
 
    ```
    /conf/global/settings/workflow/notification/...
@@ -216,27 +216,27 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >如果要覆蓋工作流通知文本，請在以下位置建立重疊路徑：
+   >如果您想要覆寫工作流程通知文字，請在下列位置建立覆蓋的路徑：
    >
    >
    >`/conf/global/settings/workflow/notification/<path-under-libs>`
 
-* 舊式工作流通知定義保存在以下路徑下：
+* 舊版工作流程通知定義位於以下路徑下：
 
    `/etc/workflow/notification/`
 
-### 進程會話 {#process-sessions}
+### 程式工作階段 {#process-sessions}
 
-與任何自定義開發一樣，始終建議盡可能使用用戶的會話：
+如同任何自訂開發一樣，一律建議儘可能使用使用者的工作階段：
 
-* 以最好地遵守安全准則
-* 允許系統管理開啟和關閉會話
+* 以最佳方式遵守安全性方針
+* 允許系統管理開啟和關閉工作階段
 
-實施工作流進程時：
+實作工作流程程式時：
 
-* 將提供工作流會話，並且應使用該會話，除非有令人信服的理由不使用。
-* 不應根據工作流步驟建立新會話，因為這會導致狀態不一致以及工作流引擎中可能的併發問題。
-* 您不應從工作流中的進程步驟中獲取新的JCR會話；您應將「進程步驟API」提供的工作流會話調整為jcr會話。 例如：
+* 將會提供工作流程工作階段，除非有令人信服的理由不提供，否則應使用此工作流程。
+* 不應從工作流程步驟建立新工作階段，因為這會造成狀態不一致，並可能導致工作流程引擎中出現並發問題。
+* 您不應從工作流程中的程式步驟中取得新的JCR工作階段；您應將「程式步驟API」提供的工作流程工作階段調整為JCR工作階段。 例如：
 
 ```
 public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap args) throws WorkflowException {
@@ -247,103 +247,103 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
         org.apache.sling.api.resource.ResourceResolver slingResourceResolver = workflowSession.adaptTo(org.apache.sling.api.resource.ResourceResolver.class);
 ```
 
-保存會話：
+儲存工作階段：
 
-* 在工作流進程內，如果 `WorkflowSession` 正在用於修改儲存庫，然後不顯式保存會話 — 工作流將在會話完成後保存會話。
-* `Session.Save` 不應從工作流步驟中調用：
+* 在工作流程內，如果 `WorkflowSession` 用於修改存放庫，然後不要明確儲存工作階段 — 工作流程將在完成時儲存工作階段。
+* `Session.Save` 不應從工作流程步驟中呼叫：
 
-   * 建議調整工作流jcr會話；然後 `save` 不需要，因為工作流引擎會在工作流完成執行後自動保存會話。
-   * 不建議進程步驟建立自己的jcr會話。
+   * 建議調整工作流程jcr工作階段，然後 `save` 不需要使用，因為工作流程引擎會在工作流程執行完畢後自動儲存工作階段。
+   * 不建議流程步驟建立自己的jcr工作階段。
 
-* 通過消除不必要的儲存，您可以減少開銷，從而提高工作流的效率。
+* 透過消除不必要的節省，您可以減少額外負荷，進而讓工作流程更有效率。
 
 >[!CAUTION]
 >
->如果您確實建立了自己的jcr會話，則需要保存它。
+>儘管有此處的建議，但如果您確實建立了自己的jcr工作階段，則需要儲存。
 
-### 最大限度地減少發射器的數量/範圍 {#minimize-the-number-scope-of-launchers}
+### 將啟動器的數量/範圍最小化 {#minimize-the-number-scope-of-launchers}
 
-有一個監聽器負責 [工作流程啟動器](/help/sites-administering/workflows-starting.md#workflows-launchers) 已註冊：
+有一個監聽器負責所有 [工作流程啟動器](/help/sites-administering/workflows-starting.md#workflows-launchers) 已註冊的：
 
-* 它將偵聽其他啟動器的globbing屬性中指定的所有路徑的更改。
-* 當調度事件時，工作流引擎將評估每個啟動程式以確定它是否應運行。
+* 它會接聽其他啟動器萬用字元屬性中指定的所有路徑變更。
+* 傳送事件時，工作流程引擎會評估每個啟動器，以判斷其是否應該執行。
 
-建立過多的啟動器將導致評估過程運行更慢。
+建立太多啟動器將導致評估程式執行速度變慢。
 
-在單個啟動器上儲存庫的根位置建立全局路徑將導致工作流引擎偵聽並評估建立/修改事件到儲存庫中的每個節點。 因此，建議只建立所需的啟動器，並盡可能使全域路徑具體化。
+在單一啟動器的存放庫根目錄下建立萬用路徑，工作流程引擎就會監聽並評估存放庫中每個節點的建立/修改事件。 因此，建議僅建立所需的啟動器，並儘可能指定萬用路徑。
 
-由於這些啟動程式對工作流行為的影響，禁用任何未使用的出廠設定啟動程式也會有所幫助。
+由於這些啟動器對工作流程行為的影響，停用任何未使用的現成啟動器也會有幫助。
 
-### 啟動器的配置增強 {#configuration-enhancements-for-launchers}
+### 啟動器的設定增強功能 {#configuration-enhancements-for-launchers}
 
-自定義 [啟動程式配置](/help/sites-administering/workflows-starting.md#workflows-launchers) 已增強，以支援以下內容：
+自訂 [啟動器設定](/help/sites-administering/workflows-starting.md#workflows-launchers) 已增強以支援下列專案：
 
-* 將多個條件「AND」連在一起。
-* 在單個條件內具有OR條件。
-* 根據功能標誌是啟用還是禁用，禁用/啟用啟動程式。
-* 在啟動程式條件中支援regex。
+* 同時具備多個條件「AND」。
+* 在單一條件中具有OR條件。
+* 根據功能標幟已啟用或停用，停用/啟用啟動器。
+* 在啟動器條件中支援Regex。
 
-### 不從其他工作流啟動工作流 {#do-not-start-workflows-from-other-workflows}
+### 不要從其他工作流程開始工作流程 {#do-not-start-workflows-from-other-workflows}
 
-工作流可以帶來大量開銷，無論是在記憶體中建立的對象，還是在儲存庫中跟蹤的節點。 因此，最好讓工作流在其內部完成其處理，而不是啟動其他工作流。
+工作流程可能會產生大量額外負荷，例如在記憶體中建立的物件和在存放庫中追蹤的節點兩方面都是如此。 因此，讓工作流程在內部進行處理比開始其他工作流程要好。
 
-一個示例是一個工作流，它在一組內容上實現業務流程，然後激活該內容。 最好建立一個自定義工作流進程來激活這些節點中的每個節點，而不是啟動 **激活內容** 每個需要發佈的內容節點的模型。 此方法需要額外的開發工作，但執行時比為每次激活啟動單獨的工作流實例更高效。
+例如，在內容集上實作商業程式然後啟動該內容的工作流程。 最好是建立自訂工作流程來啟動每個節點，而不是啟動 **啟用內容** 需要發佈的每個內容節點的模型。 此方法將需要額外的開發工作，但在執行時比為每個啟動啟動啟動個別的工作流程例項更有效率。
 
-另一個示例是處理多個節點的工作流，建立工作流包，然後激活所述包。 您可以在建立包的步驟中更改工作流的負載，然後調用該步驟以在同一工作流模型內激活包，而不是建立包，然後以包作為負載啟動單獨的工作流。
+另一個範例是處理許多節點的工作流程，建立工作流程封裝，然後啟動所述封裝。 與其建立封裝，然後以封裝作為裝載啟動單獨的工作流程，您可以在建立封裝的步驟中變更工作流程的裝載，然後呼叫步驟以啟用相同工作流程模型中的封裝。
 
 ### 處理常式前進 {#handler-advance}
 
-在設計工作流模型時，您可以選擇在工作流步驟上啟用處理程式高級。 或者，您可以將代碼添加到工作流步驟中，以確定下一步應運行哪個步驟，然後執行該步驟。
+設計工作流程模型時，您可以選擇啟用工作流程步驟的處理常式。 或者，您也可以將程式碼新增至工作流程步驟，以決定接下來應該執行哪個步驟，然後執行。
 
-建議使用處理程式高級，因為它提供了更好的效能。
+建議使用處理常式進階，因為它可提供較出色的效能。
 
-### 工作流階段 {#workflow-stages}
+### 工作流程階段 {#workflow-stages}
 
-您可以定義 [工作流階段](/help/sites-developing/workflows.md#workflow-stages)，然後將任務/步驟分配給特定的工作流階段。
+您可以定義 [工作流程階段](/help/sites-developing/workflows.md#workflow-stages)，然後將任務/步驟指派至特定工作流程階段。
 
-此資訊用於在按一下 [**工作流資訊** 的子菜單。 **收件箱**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)。 可以編輯現有工作流模型以添加階段。
+當您按一下 [**工作流程資訊** 工作專案的索引標籤 **收件匣**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions). 可以編輯現有的工作流程模型以新增階段。
 
-### 激活頁面處理步驟 {#activate-page-process-step}
+### 啟動頁面程式步驟 {#activate-page-process-step}
 
-的 **激活頁面進程** 步驟將為您激活頁面，但不會自動找到任何引用的DAM資產並激活這些資產。
+此 **啟動頁面程式** 步驟將為您啟動頁面，但不會自動找到任何參考的DAM資產並啟動它們。
 
-如果您計畫將此步驟用作工作流模型的一部分，請記住這一點。
+如果您計畫將此步驟用作工作流程模型的一部分，請記住這一點。
 
-### 升級注意事項 {#upgrade-considerations}
+### 升級考量 {#upgrade-considerations}
 
-升級實例時：
+升級執行個體時：
 
-* 確保在升級實例之前備份所有自定義工作流模型。
-* 確認您的自定義工作流未儲存在 [位置](#locations):
+* 在升級執行個體之前，請確定已備份任何自訂工作流程模型。
+* 確認您的自訂工作流程未儲存在 [位置](#locations)：
 
    * `/libs/settings/workflow/models/projects`
 
 >[!NOTE]
 >
->另請參閱 [6.5中的AEM儲存庫重組](/help/sites-deploying/repository-restructuring.md)。
+>另請參閱 [AEM 6.5中的存放庫重組](/help/sites-deploying/repository-restructuring.md).
 
 ## 系統工具 {#system-tools}
 
-有許多系統工具可用於幫助監控、維護和排除工作流故障。 下面的所有示例URL都使用 `localhost:4502`，但任何作者實例( `<hostname>:<port>`)。
+有許多系統工具可協助監控、維護和疑難排解工作流程。 以下所有範例URL都使用 `localhost:4502`，但應該可以在任何編寫執行個體上使用( `<hostname>:<port>`)。
 
-### Sling作業處理控制台 {#sling-job-handling-console}
+### Sling工作處理主控台 {#sling-job-handling-console}
 
 `http://localhost:4502/system/console/slingevent`
 
-Sling作業處理控制台將顯示：
+Sling作業處理主控台將顯示：
 
-* 自上次重新啟動以來系統中作業狀態的統計資訊。
-* 它還將顯示所有作業隊列的配置，並提供在配置管理器中編輯這些隊列的快捷方式。
+* 自上次重新啟動後，系統中工作狀態的統計資料。
+* 它也會顯示所有工作佇列的設定，並提供在Configuration Manager中編輯它們的捷徑。
 
-### 工作流報告工具 {#workflow-report-tool}
+### 工作流程報告工具 {#workflow-report-tool}
 
-6.3中刪除了工作流報告工具，以防止效能下降。
+6.3版中移除了工作流程報告工具，以防止效能降低。
 
-### 工作流維護操作MBean {#workflow-maintenance-operations-mbean}
+### 工作流程維護作業MBean {#workflow-maintenance-operations-mbean}
 
 `http://localhost:4502/system/console/jmx/com.adobe.granite.workflow:type=Maintenance`
 
-工作流維護MBean公開了一些有用的維護常式，如清除已完成的工作流和檢索工作流統計資訊。
+工作流程維護MBean會顯示數個實用的維護常式，例如清除已完成的工作流程及擷取工作流程統計資料。
 
 ## 更多資訊 {#further-information}
 
@@ -352,4 +352,4 @@ Sling作業處理控制台將顯示：
 * [使用工作流程](/help/sites-authoring/workflows.md)
 * [管理工作流程](/help/sites-administering/workflows.md)
 * [開發和延伸工作流程](/help/sites-developing/workflows.md)
-* [效能優化](/help/sites-deploying/configuring-performance.md)
+* [效能最佳化](/help/sites-deploying/configuring-performance.md)

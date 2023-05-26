@@ -8,9 +8,9 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南說明如何建立 AEM 執行個體。
 feature: Developing
 role: Developer
-source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1285'
 ht-degree: 35%
 
 ---
@@ -142,8 +142,6 @@ ht-degree: 35%
       + [管理GraphQL端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
       + [使用 GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
       + [持續性查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md)
-      + [最佳化 GraphQL 查詢](/help/sites-developing/headless/graphql-api/graphql-optimization.md)
-      + [更新您的內容片段，以達到最佳化 GraphQL 篩選](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md)
       + [針對內容片段之遠端 AEM GraphQL 查詢的驗證](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md)
       + [包含內容片段的AEM GraphQL API — 範例內容和查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
 + 混合式和SPA AEM開發{#spas}
@@ -191,10 +189,10 @@ ht-degree: 35%
    + [ContextHub UI模組型別範例](ch-samplemodules.md)
    + [ContextHub 診斷](ch-diagnostics.md)
    + [針對目標內容開發](target.md)
-   + [ContextHub JavaScript API參考](contexthub-api.md)
+   + [ContextHub Javascript API參考](contexthub-api.md)
    + ClientContext{#client-context}
       + [詳細的使用者端內容](client-context.md)
-      + [Client Context JavaScript API](ccjsapi.md)
+      + [Client Context Javascript API](ccjsapi.md)
 + 擴充AEM{#extending-aem}
    + [使用 Adobe Developer App Builder 延伸 AEM](app-builder.md)
    + [自訂頁面製作](customizing-page-authoring-touch.md)

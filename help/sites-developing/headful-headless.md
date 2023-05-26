@@ -1,6 +1,6 @@
 ---
 title: AEM Headful 和 Headless 技術
-description: 項AEM目可以採用無頭和無頭的模式，但選擇不是二進位的。 AEM 提供了在一個專案中利用兩種模型優勢的靈活性。
+description: AEM專案可以在headful和headless模型中實作，但選擇不是二進位。 AEM 提供了在一個專案中利用兩種模型優勢的靈活性。
 exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
 source-git-commit: ac70fb534a95c9eee6f8340d9b8720a607b9f79f
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 94%
 
 # AEM Headful 和 Headless 技術 {#headful-headless}
 
-Adobe Experience Manager項目可以採用頭腦式和頭腦式兩種模式，但選擇不是二元的。 AEM 提供了在一個專案中利用兩種模型優勢的靈活性。本文檔概述了不同的模型並描述了整合級SPA別。
+Adobe Experience Manager專案可在headful和headless模式中實作，但選擇不是二進位。 AEM 提供了在一個專案中利用兩種模型優勢的靈活性。本檔案提供不同模式的概觀，並說明SPA整合的等級。
 
 ## 概觀 {#overview}
 

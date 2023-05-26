@@ -1,6 +1,6 @@
 ---
-title: 使用頁面跟蹤器並在網頁中嵌入代碼
-description: 瞭解如何在您的網站代碼中包括頁面跟蹤器並嵌入JavaScript代碼，以便Adobe Analytics能夠捕獲圍繞資產的使用情況資料。
+title: 在網頁中使用頁面追蹤器和內嵌程式碼
+description: 瞭解如何在網站程式碼中納入頁面追蹤器及內嵌JavaScript程式碼，以讓Adobe Analytics擷取資產的使用情況資料。
 contentOwner: AG
 role: Architect, Admin
 feature: Asset Reports
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 ---
 
-# 使用頁面跟蹤器並在網頁中嵌入代碼 {#using-page-tracker-and-embed-code-in-web-pages}
+# 在網頁中使用頁面追蹤器和內嵌程式碼 {#using-page-tracker-and-embed-code-in-web-pages}
 
-「頁面跟蹤器」是JavaScript代碼的一部分，您將其包含在第三方網站的代碼中，以使Adobe Analytics能夠捕獲周圍的使用資料 [!DNL Adobe Experience Manager Assets] 在這些網站上。
+頁面追蹤器是您包含在協力廠商網站程式碼中的JavaScript程式碼，可讓Adobe Analytics擷取周圍的使用情況資料 [!DNL Adobe Experience Manager Assets] 這些網站上的資訊。
 
-要捕獲特定於資產的事件（如點擊等），還應在第三方網站的代碼中包含嵌入代碼。
+若要擷取資產專屬的事件（例如點按等），您還可以在第三方網站的程式碼中包含內嵌程式碼。
 
-以下示例代碼顯示包含「頁跟蹤器」代碼和「嵌入」代碼的網頁的外觀：
+以下範常式式碼顯示同時包含頁面追蹤器程式碼和內嵌程式碼的網頁的外觀：
 
 ```html
 <!DOCTYPE html>
@@ -60,9 +60,9 @@ ht-degree: 0%
 </html>
 ```
 
-## 添加頁跟蹤器代碼 {#adding-page-tracker-code}
+## 新增頁面追蹤器程式碼 {#adding-page-tracker-code}
 
-在網站代碼的標題部分中添加頁面跟蹤器代碼。 以下代碼段顯示示例網頁中包含的Page Tracker代碼：
+您在網站程式碼的標題區段中新增頁面追蹤器程式碼。 下列程式碼片段會顯示範例網頁中包含的頁面追蹤器程式碼：
 
 ```xml
  <head>
@@ -80,9 +80,9 @@ ht-degree: 0%
  </head>
 ```
 
-## 添加嵌入代碼 {#add-embed-code}
+## 新增內嵌程式碼 {#add-embed-code}
 
-將嵌入代碼添加到網站代碼正文中。 以下代碼段顯示示例網頁中包含的嵌入代碼：
+您可在網站程式碼內文中新增內嵌程式碼。 下列程式碼片段會顯示範例網頁中包含的內嵌程式碼：
 
 ```xml
 <body>

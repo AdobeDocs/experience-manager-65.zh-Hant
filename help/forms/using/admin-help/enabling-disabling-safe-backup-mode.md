@@ -1,7 +1,7 @@
 ---
-title: 啟用和禁用安全備份模式
+title: 啟用和停用安全備份模式
 seo-title: Enabling and disabling safe backup mode
-description: 在「備份設定」頁面上，您可以AEM在安全備份模式下操作表單，以便能夠可靠地備份資料庫和全局文檔儲存(GDS)(GDS)目錄。 瞭解如何啟用和禁用安全備份模式。
+description: 您可以在「備份設定值」頁面以安全的備份模式操作AEM表單，以便可靠地備份資料庫和全域檔案儲存(GDS) (GDS)目錄。 瞭解如何啟用和停用安全備份模式。
 seo-description: On the Backup Settings page, you can operate AEM forms in safe backup mode so that you can reliably back up your database and Global Document Storage (GDS) (GDS) directory. Learn how to enable and disable safe backup mode.
 uuid: 2fdeaeaf-e969-40a4-8aee-1f2b627d3942
 contentOwner: admin
@@ -17,26 +17,26 @@ ht-degree: 0%
 
 ---
 
-# 啟用和禁用安全備份模式 {#enabling-and-disabling-safe-backup-mode}
+# 啟用和停用安全備份模式 {#enabling-and-disabling-safe-backup-mode}
 
-在「備份設定」頁面上，您可以AEM在安全備份模式下操作表單，以便能夠可靠地備份資料庫和全局文檔儲存(GDS)(GDS)目錄。
+您可以在「備份設定值」頁面以安全的備份模式操作AEM表單，以便可靠地備份資料庫和全域檔案儲存(GDS) (GDS)目錄。
 
-當表AEM單處於安全備份模式時，它可以正常運行，但它不會主動從GDS目錄中刪除檔案。
+當AEM Forms處於安全備份模式時，它會正常運作，但不會主動從GDS目錄移除檔案。
 
 >[!NOTE]
 >
->設定此選項不備份系統；它為備份準備了系統。
+>設定這個選項並不會備份您的系統，而是讓您的系統準備進行備份。
 
 ## 啟用安全備份模式 {#enable-safe-backup-mode}
 
-1. 在管理控制台中，按一下「設定」>「核心繫統設定」>「備份設定」。
-1. 在「備份設定」頁上，選擇「在安全備份模式下操作」，然後按一下「確定」。
+1. 在管理控制檯中，按一下「設定>核心系統設定>備份設定」。
+1. 在「備份設定值」頁面上，選取「在安全備份模式下作業」，然後按一下「確定」。
 
 >[!NOTE]
 >
->如果系統已在安全備份模式下運行，則按一下「確定」後將不會建立新保留。
+>如果系統已經在安全備份模式下執行，則按一下「確定」時將不會建立新的預訂。
 
-## 禁用安全備份模式 {#disable-safe-backup-mode}
+## 停用安全備份模式 {#disable-safe-backup-mode}
 
-1. 在管理控制台中，按一下「設定」>「核心繫統設定」>「備份設定」。
-1. 在「備份設定」頁面上，取消選擇「在安全備份模式下操作」，然後按一下「確定」。
+1. 在管理控制檯中，按一下「設定>核心系統設定>備份設定」。
+1. 在「備份設定值」頁面上，取消選取「在安全備份模式下作業」，然後按一下「確定」。

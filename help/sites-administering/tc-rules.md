@@ -20,40 +20,40 @@ ht-degree: 2%
 
 # 識別要翻譯的內容{#identifying-content-to-translate}
 
-翻譯規則標識要翻譯的內容，這些內容包括在翻譯項目中或從翻譯項目中排除。 當正在翻譯頁面或資產時，AEM請提取此內容，以便將其發送到翻譯服務。
+翻譯規則會針對翻譯專案中包含或排除的頁面、元件和資產，識別要翻譯的內容。 在翻譯頁面或資產時，AEM會擷取此內容，以便將其傳送至翻譯服務。
 
-頁面和資產在JCR儲存庫中以節點表示。 提取的內容是節點的一個或多個屬性值。 翻譯規則標識包含要提取的內容的屬性。
+頁面和資產在JCR存放庫中會顯示為節點。 擷取的內容為節點的一或多個屬性值。 翻譯規則會識別包含要擷取之內容的屬性。
 
-翻譯規則以XML格式表示並儲存在以下可能的位置：
+翻譯規則會以XML格式表示，並儲存在下列可能位置：
 
 * `/libs/settings/translation/rules/translation_rules.xml`
 * `/apps/settings/translation/rules/translation_rules.xml`
 * `/conf/global/settings/translation/rules/translation_rules.xml`
 
-該檔案適用於所有翻譯項目。
+檔案會套用至所有翻譯專案。
 
 >[!NOTE]
 >
->升級到6.4後，建議將檔案從/etc中移動。 請參閱 [6.5版中的通AEM用儲存庫重組](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-rules) 的子菜單。
+>升級至6.4後，建議從/etc移動檔案。 另請參閱 [AEM 6.5中的常見存放庫重組](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-rules) 以取得更多詳細資料。
 
-規則包括以下資訊：
+規則包含下列資訊：
 
-* 應用規則的節點的路徑。 該規則也適用於節點的後代。
-* 包含要翻譯的內容的節點屬性的名稱。 該屬性可專屬於特定資源類型或所有資源類型.
+* 規則套用的節點路徑。 此規則也會套用至節點的子代。
+* 包含要翻譯之內容的節點屬性名稱。 該屬性可專屬於特定資源類型或所有資源類型.
 
-例如，您可以建立一個規則來翻譯作者添加到頁面上AEM所有基礎文本元件中的內容。 該規則可識別 `/content` 和 `text` 屬性 `foundation/components/text` 元件。
+例如，您可以建立規則來轉譯作者新增至您頁面上所有AEM Foundation Text元件的內容。 此規則可識別 `/content` 節點和 `text` 的屬性 `foundation/components/text` 元件。
 
-有 [控制台](#translation-rules-ui) 已添加的用於配置轉換規則的轉換。 UI中的定義將為您填充檔案。
+有一個 [主控台](#translation-rules-ui) 已新增用於設定翻譯規則。 UI中的定義將為您填入檔案。
 
-有關中的內容翻譯功能的概AEM述，請參見 [翻譯多語言站點的內容](/help/sites-administering/translation.md)。
+如需AEM內容翻譯功能的概觀，請參閱 [翻譯多語言網站的內容](/help/sites-administering/translation.md).
 
 >[!NOTE]
 >
->支AEM持資源類型和引用屬性之間的一對一映射，以翻譯頁面上引用的內容。
+>AEM支援資源型別和參考屬性之間的一對一對應，以便翻譯頁面上的參考內容。
 
 ## 頁面、元件和資產的規則語法 {#rule-syntax-for-pages-components-and-assets}
 
-規則是 `node` 一個或多個子元素 `property` 元素和零個或多個子項 `node` 元素：
+規則是 `node` 具有一個或多個子項的元素 `property` 元素和零個或多個子項 `node` 元素：
 
 ```xml
 <node path="content path">
@@ -64,20 +64,20 @@ ht-degree: 2%
 </node>
 ```
 
-每個 `node` 元素具有以下特徵：
+每一個 `node` 元素具有下列特性：
 
-* 的 `path` 屬性包含規則所應用的分支的根節點的路徑。
-* 子 `property` 元素標識要轉換的所有資源類型的節點屬性：
+* 此 `path` attribute包含套用規則之分支的根節點路徑。
+* 子項 `property` 元素為所有資源型別識別要翻譯的節點屬性：
 
-   * 的 `name` 屬性包含屬性名稱。
-   * 可選 `translate` 屬性等於 `false` 的子菜單。 預設情況下，值為 `true`。 此屬性在覆蓋以前的規則時非常有用。
+   * 此 `name` 屬性包含屬性名稱。
+   * 選填 `translate` 屬性等於 `false` 如果屬性未翻譯。 預設值為 `true`. 在覆寫先前的規則時，此屬性很有用。
 
-* 子 `node` 元素標識要轉換特定資源類型的節點屬性：
+* 子項 `node` 元素會針對特定資源型別識別要翻譯的節點屬性：
 
-   * 的 `resourceType` 屬性包含解析為實現資源類型的元件的路徑。
-   * 子 `property` 元素標識要轉換的節點屬性。 以與子節點相同的方式使用此節點 `property` 節點規則的元素。
+   * 此 `resourceType` attribute包含解析為實作資源型別的元件的路徑。
+   * 子項 `property` 元素會識別要翻譯的節點屬性。 以與子節點相同的方式使用此節點 `property` 節點規則的元素。
 
-以下示例規則將導致所有 `text` 要翻譯的屬性 `/content` 的下界。 該規則對於儲存內容的任何元件都有效 `text` 屬性，如foundation Text元件和foundation Image元件。
+下列範例規則會導致 `text` 屬性以翻譯以下所有頁面 `/content` 節點。 此規則適用於任何將內容儲存在 `text` 屬性，例如foundation Text元件和foundation Image元件。
 
 ```xml
 <node path="/content">
@@ -85,7 +85,7 @@ ht-degree: 2%
 </node>
 ```
 
-下面的示例翻譯所有內容 `text` 屬性，還可以轉換基礎Image元件的其他屬性。 如果其他元件具有同名屬性，則規則不適用於這些屬性。
+以下範例會轉譯所有 `text` 屬性，也會轉譯foundation Image元件的其他屬性。 如果其他元件具有同名屬性，則規則不適用於它們。
 
 ```xml
 <node path="/content">
@@ -98,28 +98,28 @@ ht-degree: 2%
 </node>
 ```
 
-## 用於從頁面中提取資產的規則語法  {#rule-syntax-for-extracting-assets-from-pages}
+## 從頁面擷取資產的規則語法  {#rule-syntax-for-extracting-assets-from-pages}
 
-使用以下規則語法包括嵌入元件或從元件引用的資產：
+使用下列規則語法來包含內嵌在元件中或從元件中參照的資產：
 
 ```xml
 <assetNode resourceType="path to component" assetReferenceAttribute="property that stores asset"/>
 ```
 
-每個 `assetNode` 元素具有以下特徵：
+每個 `assetNode` 元素具有下列特性：
 
-* 一 `resourceType` 與解析到元件的路徑相等的屬性。
-* 一 `assetReferenceAttribute` 屬性，該屬性等於儲存資產二進位檔案（對於嵌入資產）或引用資產路徑的屬性的名稱。
+* 一 `resourceType` 屬性，代表解析為元件的路徑。
+* 一 `assetReferenceAttribute` 屬性，代表儲存資產二進位檔（用於內嵌資產）的屬性名稱或參考資產的路徑。
 
-下面的示例從基礎影像元件中提取影像：
+下列範例會從foundation Image元件中擷取影像：
 
 ```xml
 <assetNode resourceType="foundation/components/image" assetReferenceAttribute="fileReference"/>
 ```
 
-## 覆蓋規則 {#overriding-rules}
+## 覆寫規則 {#overriding-rules}
 
-translation_rules.xml檔案由 `nodelist` 元素具有多個子項 `node` 元素。 從AEM上到下讀取節點清單。 當多個規則針對同一節點時，將使用檔案中較低的規則。 例如，以下規則導致 `text` 要轉換的屬性， `/content/mysite/en` 頁的分支：
+translation_rules.xml檔案包含 `nodelist` 具有多個子項的元素 `node` 元素。 AEM會從上到下讀取節點清單。 如果有多個規則鎖定同一個節點，系統會使用檔案中較低位置的規則。 例如，下列規則會導致所有內容位於 `text` 要翻譯的屬性，但 `/content/mysite/en` 頁面分支：
 
 ```xml
 <nodelist>
@@ -134,9 +134,9 @@ translation_rules.xml檔案由 `nodelist` 元素具有多個子項 `node` 元素
 
 ## 篩選屬性 {#filtering-properties}
 
-可以使用 `filter` 的子菜單。
+您可以使用來篩選具有特定屬性的節點 `filter` 元素。
 
-例如，以下規則導致 `text` 要轉換的屬性，但具有該屬性的節點除外 `draft` 設定為 `true`。
+例如，下列規則會導致所有內容位於 `text` 要翻譯的屬性，但具有屬性的節點除外 `draft` 設定為 `true`.
 
 ```xml
 <nodelist>
@@ -151,37 +151,37 @@ translation_rules.xml檔案由 `nodelist` 元素具有多個子項 `node` 元素
 
 ## 翻譯規則UI {#translation-rules-ui}
 
-還有一個控制台可用於配置轉換規則。
+控制檯也可用於設定翻譯規則。
 
 若要存取它：
 
-1. 導航到 **工具** 然後 **常規**。
+1. 導覽至 **工具** 然後 **一般**.
 
    ![chlimage_1-55](assets/chlimage_1-55.jpeg)
 
-1. 選擇 **翻譯配置**。
+1. 選取 **翻譯設定**.
 
    ![chlimage_1-56](assets/chlimage_1-56.jpeg)
 
-從這裡，你可以 **添加上下文**。 這允許您添加路徑。
+從這裡，您可以 **新增內容**. 這可讓您新增路徑。
 
 ![chlimage_1-57](assets/chlimage_1-57.jpeg)
 
-然後，您需要選擇上下文，然後按一下 **編輯**。 這將開啟翻譯規則編輯器。
+接著，您需要選取內容，然後按一下 **編輯**. 這將開啟翻譯規則編輯器。
 
 ![chlimage_1-58](assets/chlimage_1-58.jpeg)
 
-可通過UI更改4個屬性： `isDeep`。 `inherit`。 `translate` 和 `updateDestinationLanguage`。
+您可透過UI變更下列4個屬性： `isDeep`， `inherit`， `translate` 和 `updateDestinationLanguage`.
 
-**深** 此屬性適用於節點篩選器，預設為true。 它將檢查節點（或其祖先）是否包含篩選器中具有指定屬性值的屬性。 如果為false，則只檢查當前節點。
+**isDeep** 此屬性適用於節點篩選器，預設為true。 它會檢查節點（或其上階）是否包含該屬性，且該屬性在篩選器中具有指定的屬性值。 若為false，則只會檢查目前節點。
 
-例如，子節點即使在父節點具有屬性時，也會被添加到轉換作業中 `draftOnly` 設定為true可標籤草稿內容。 這裡 `isDeep` 開始播放並檢查父節點是否具有屬性 `draftOnly` 並排除這些子節點。
+例如，即使父節點具有屬性，子節點也會新增到翻譯作業中 `draftOnly` 設為true可標幟草稿內容。 此處 `isDeep` 就會發揮作用，並檢查父節點是否具有屬性 `draftOnly` 為true並排除這些子節點。
 
-在編輯器中，可以選中/取消選中 **深** 的 **篩選器** 頁籤。
+在編輯器中，您可以核取/取消核取 **深入** 在 **篩選器** 標籤。
 
 ![chlimage_1-59](assets/chlimage_1-59.jpeg)
 
-以下是生成的xml的示例 **深** 在UI中未選中：
+以下範例是產生以下專案的xml： **深入** 未在UI中勾選：
 
 ```xml
  <filter>
@@ -189,25 +189,25 @@ translation_rules.xml檔案由 `nodelist` 元素具有多個子項 `node` 元素
 </filter>
 ```
 
-**繼承** 這適用於屬性。 預設情況下，每個屬性都是繼承的，但如果希望某些屬性不能繼承到子代上，則可以將該屬性標籤為false，以便它僅應用於該特定節點。
+**繼承** 這適用於屬性。 依預設，每個屬性都會被繼承，但如果您不想讓某個屬性在子項上被繼承，則可以將該屬性標示為false，以便只將該屬性套用到該特定節點。
 
-在UI中，您可以選中/取消選中 **繼承** 的 **屬性** 頁籤。
+在UI中，您可以勾選/取消勾選 **繼承** 在 **屬性** 標籤。
 
 ![chlimage_1-60](assets/chlimage_1-60.jpeg)
 
-**翻譯** 轉換屬性僅用於指定是否轉換屬性。
+**轉換** translate屬性僅用於指定是否翻譯屬性。
 
-在UI中，您可以選中/取消選中 **翻譯** 的 **屬性** 頁籤。
+在UI中，您可以勾選/取消勾選 **轉換** 在 **屬性** 標籤。
 
-**updateDestinationLanguage** 此屬性用於沒有文本但沒有語言代碼的屬性，例如jcr:language。 用戶不是在翻譯文本，而是在從源到目標的語言區域設定。 這些屬性不會發送到翻譯。
+**updateDestinationLanguage** 此屬性用於沒有文字但有語言代碼的屬性，例如jcr：language。 使用者不會翻譯文字，而是翻譯從來源到目的地的語言地區設定。 不會傳送此類屬性以供翻譯。
 
-在UI中，您可以選中/取消選中 **翻譯** 的 **屬性** 頁籤，但是對於將語言代碼作為值的特定屬性。
+在UI中，您可以勾選/取消勾選 **轉換** 在 **屬性** 標籤，但用於以語言程式碼為值的特定屬性。
 
-幫助澄清 `updateDestinationLanguage` 和 `translate`，下面是只有兩個規則的上下文的簡單示例：
+協助釐清兩者之間的差異 `updateDestinationLanguage` 和 `translate`，以下是僅有兩個規則的前後關聯的簡單範例：
 
 ![chlimage_1-61](assets/chlimage_1-61.jpeg)
 
-xml的結果將如下所示：
+xml中的結果將如下所示：
 
 ```xml
 <property inherit="true" name="text" translate="true" updateDestinationLanguage="false"/>
@@ -216,15 +216,15 @@ xml的結果將如下所示：
 
 ## 手動編輯規則檔案 {#editing-the-rules-file-manually}
 
-隨一起安裝的translation_rules.xml檔案AEM包含一組預設的轉換規則。 您可以編輯檔案以支援翻譯項目的要求。 例如，您可以添加規則，以便翻譯自定義元件的內容。
+與AEM一起安裝的translation_rules.xml檔案包含一組預設的翻譯規則。 您可以編輯檔案以支援翻譯專案的要求。 例如，您可以新增規則，以便翻譯自訂元件的內容。
 
-如果編輯translation_rules.xml檔案，請在內容包中保留備份副本。 安AEM裝Service Pack或重新安AEM裝某些軟體包可以用原始檔案替換當前的translation_rules.xml檔案。 要在這種情況下恢復規則，可以安裝包含備份副本的包。
+如果您編輯translation_rules.xml檔案，請在內容封裝中保留備份復本。 安裝AEM Service Pack或重新安裝某些AEM套件可將目前的translation_rules.xml檔案取代為原始檔案。 若要在此情況下還原規則，您可以安裝包含備份復本的套件。
 
 >[!NOTE]
 >
->建立內容包後，每次編輯檔案時都重新生成包。
+>建立內容封裝後，每次編輯檔案時都會重新建置封裝。
 
-## 翻譯規則檔案示例 {#example-translation-rules-file}
+## 範例翻譯規則檔案 {#example-translation-rules-file}
 
 ```xml
 <nodelist>

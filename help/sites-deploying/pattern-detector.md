@@ -1,7 +1,7 @@
 ---
-title: 用模式檢測器評估升級複雜度
+title: 使用模式偵測器評估升級複雜性
 seo-title: Assessing the Upgrade Complexity with the Pattern Detector
-description: 瞭解如何使用模式檢測器來評估升級的複雜性。
+description: 瞭解如何使用模式偵測器來評估升級的複雜性。
 seo-description: Learn how to use the Pattern Detector to assess the complexity of your upgrade.
 uuid: 84d0add9-3123-4188-9877-758911b1899f
 contentOwner: sarchiz
@@ -19,60 +19,60 @@ ht-degree: 1%
 
 ---
 
-# 用模式檢測器評估升級複雜度
+# 使用模式偵測器評估升級複雜性
 
 ## 概觀 {#overview}
 
-此功能允許您通過檢測AEM使用的模式來檢查現有實例的可升級性：
+此功能可讓您透過偵測使用中的模式來檢查現有AEM執行個體的可升級性，這些模式包括：
 
-1. 違反某些規則，並在受升級影響或覆蓋的區域內執行
-1. 使用AEM6.x功能或API，該功能在6.5上向後不相容，AEM升級後可能中斷。
+1. 違反特定規則，並在將受升級影響或覆寫的區域執行
+1. 使用AEM 6.x功能或AEM 6.5上無法回溯相容、且在升級後可能會中斷的API。
 
-這可作為對升級至6.5所涉發展努力的AEM評估。
+這可作為升級到AEM 6.5相關開發工作的評估。
 
 ## 設定方法 {#how-to-set-up}
 
-圖案檢測器作為 [一個包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) 針對6.AEM5升級，處理從6.1到6.5AEM的任何源版本。 可以使用 [包管理器](/help/sites-administering/package-manager.md)。
+模式偵測器會單獨發行，做為 [一個套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) 正在處理目標為AEM 6.5升級的任何來源AEM 6.1到6.5版本。 它可使用以下工具安裝： [封裝管理員](/help/sites-administering/package-manager.md).
 
 ## 使用方式 {#how-to-use}
 
 >[!NOTE]
 >
->模式檢測器可以在任何環境中運行，包括本地開發實例。 但是，為了：
+>模式偵測器可在任何環境中執行，包括本機開發執行個體。 不過，為了：
 >
->* 提高檢測率
->* 避免業務關鍵型實例出現任何減速
+>* 增加偵測率
+>* 避免業務關鍵執行個體速度減慢
 >
->同時建議運行 **在轉移環境中** 在用戶應用程式、內容和配置方面盡可能接近生產應用程式。
+>建議兩者同時執行 **在中繼環境中** 儘可能接近使用者應用程式、內容和設定領域的生產環境。
 
-可以使用多種方法檢查陣列檢測器輸出：
+您可以使用數種方法來檢查「模式偵測器」輸出：
 
-* **通過Felix Inventory控制台：**
+* **透過Felix詳細目錄主控台：**
 
-1. 通過瀏覽AEM到，轉到Web控制台 *https://serveraddress:serverport/system/console/configMgr*
-1. 選擇 **狀態 — 模式檢測器** 如下圖所示：
+1. 瀏覽至，前往AEM Web Console *https://serveraddress:serverport/system/console/configMgr*
+1. 選取 **狀態 — 模式偵測器** 如下圖所示：
 
-   ![螢幕截圖–2018-2-5模式檢測器](assets/screenshot-2018-2-5pattern-detector.png)
+   ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
-* **通過基於反應文本或常規JSON介面**
-* **通過反應JSON行介面**在每行中生成單獨的JSON文檔。
+* **透過互動式文字型或一般JSON介面**
+* **透過反應式JSON行介面，**可在每行中產生個別JSON檔案。
 
-以下對這兩種方法進行了詳細介紹：
+這兩種方法的詳細資訊如下：
 
-## 反應介面 {#reactive-interface}
+## 反應式介面 {#reactive-interface}
 
-該被動介面允許一旦檢測到懷疑就處理違規報告。
+反應式介面允許在偵測到可疑時立即處理違規報告。
 
-輸出當前可在2個URL下使用：
+目前可在2個URL下取得輸出：
 
-1. 純文字檔案介面
+1. 純文字介面
 1. JSON介面
 
-## 處理純文字檔案介面 {#handling-the-plain-text-interface}
+## 處理純文字介面 {#handling-the-plain-text-interface}
 
-輸出中的資訊被格式化為一系列事件條目。 有兩種渠道：一種是發佈違規，另一種是發佈當前進展。
+輸出中的資訊會格式化為一系列事件專案。 有兩個管道 — 一個用於發佈違規，另一個用於發佈目前的進度。
 
-可以使用以下命令獲取這些命令：
+可使用下列指令來取得：
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.txt | tee patterns-report.log | grep SUSPICION
@@ -84,13 +84,13 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 2018-02-13T14:18:32.071+01:00 [SUSPICION] The pattern=ECU/extraneous.content.usage was found by detector=ContentAccessDetector with id=a07fd94318f12312c165e06d890cbd3c2c8b8dad0c030663db8b4c800dd7c33f message="Cross-boundary overlay of internal marked path /libs/granite/operations/components/commons/commons.jsp/jcr:content referenced at /apps/granite/operations/components/commons/commons.jsp/jcr:content with properties redefined: jcr:lastModifiedBy, jcr:mimeType, jcr:data, jcr:lastModified, jcr:uuid". More info at=https://www.adobe.com/go/aem6_EC
 ```
 
-可以使用 `grep` 命令：
+您可以使用以下專案篩選進度 `grep` 命令：
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.txt | tee patterns-report.log | grep PROGRESS
 ```
 
-這將導致以下輸出：
+這會產生以下輸出：
 
 ```
 2018-02-13T14:19:26.909+01:00 [PROGRESS] emitted=127731/52 MB patterns (from=6.5), analysed=45780/16 MB items, found=0 suspicions so far in period=PT5.005S (throughput=34667 items/sec)
@@ -100,13 +100,13 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 ## 處理JSON介面 {#handling-the-json-interface}
 
-同樣，JSON可以使用 [jq工具](https://stedolan.github.io/jq/) 一經發表，
+同樣地，JSON的處理方式也可使用 [jq工具](https://stedolan.github.io/jq/) 一經發佈。
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == true)'
 ```
 
-輸出：
+透過輸出：
 
 ```
 {
@@ -125,13 +125,13 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 }
 ```
 
-進度每5秒報告一次，可通過排除標籤為懷疑的郵件以外的其他郵件來獲取：
+每5秒會報告一次進度，而且可以透過排除標籤為懷疑的訊息以外的其他訊息來擷取進度：
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == false)'
 ```
 
-輸出：
+透過輸出：
 
 ```
 {
@@ -210,18 +210,18 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 >[!NOTE]
 >
->建議的方法是將捲曲的整個輸出保存到檔案中，然後通過 `jq` 或 `grep` 按鈕。
+>建議的方法是將curl的整個輸出儲存到檔案中，然後透過處理 `jq` 或 `grep` 以篩選資訊型別。
 
-## 檢測範圍 {#scope}
+## 偵測範圍 {#scope}
 
-當前模式檢測器允許檢查：
+目前的模式偵測器允許檢查：
 
-* OSGi捆綁了進出口不匹配
-* Sling資源類型和超類型（帶搜索路徑內容覆蓋）重疊使用
+* OSGi套件組合匯出和匯入不相符
+* Sling資源型別和超級型別（具有搜尋路徑內容覆蓋圖）使用過量
 * Oak索引的定義（相容性）
-* VLT包（超額使用）
-* rep：用戶節點相容性（在OAuth配置上下文中）
+* VLT封裝（使用過度）
+* rep：User節點相容性（在OAuth設定的內容中）
 
 >[!NOTE]
 >
->請注意，模式檢測器試圖準確預測升級警告。 但是，在某些情況下，它可能會產生誤報。
+>請注意，模式偵測器會嘗試準確預測升級警告。 但是，在某些情況下，它可能會產生誤報。

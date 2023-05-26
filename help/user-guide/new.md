@@ -1,6 +1,6 @@
 ---
-title: 新Adobe Experience Manager用戶資源
-description: 新訪問Adobe Experience Manager的用戶的問題、答案和資源
+title: 適用於新Adobe Experience Manager使用者的資源
+description: 初次使用Adobe Experience Manager之使用者的問題、解答和資源
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
 source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
@@ -9,38 +9,38 @@ ht-degree: 7%
 
 ---
 
-# 新用戶的資AEM源 {#resources-for-new-aem-users}
+# 新AEM使用者的資源 {#resources-for-new-aem-users}
 
-## 什麼是Adobe Experience Manager(AEM)，從何處獲取文檔？ {#what-is-aem}
+## 什麼是Adobe Experience Manager (AEM)以及在何處取得檔案？ {#what-is-aem}
 
-Adobe Experience ManagerAEM()是一個基於Web的客戶端 — 伺服器系統，用於構建、管理和部署商業網站和相關服務。 它將多個基礎架構級和應用程式級功能合併到單個整合的軟體包中。
+Adobe Experience Manager (AEM)是網頁式使用者端伺服器系統，用於建立、管理和部署商業網站及相關服務。 它將數個基礎架構層級和應用程式層級的功能合併為單一整合套件。
 
-* [有關詳細資訊，請訪問文檔](/help/sites-deploying/home.md)
-* [最近的文檔更新AEM](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=en)
+* [如需更多詳細資訊，請瀏覽檔案](/help/sites-deploying/home.md)
+* [AEM近期說明檔案更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=en)
 
-## 從何處下載AEM軟體？ {#download}
+## AEM軟體下載位置？ {#download}
 
-具有有效維護和支援合同的客戶應已收到包含代碼的郵件通知，並能夠從AEM [Adobe許可網站](https://licensing.adobe.com/)。
+AEM持有有效維護與支援合約的客戶應已收到內含程式碼的郵件通知，並可從 [Adobe授權網站](https://licensing.adobe.com/).
 
-[有關部署軟體的詳細AEM資訊。](/help/sites-deploying/home.md)
+[有關部署AEM軟體的詳細資訊。](/help/sites-deploying/home.md)
 
-訪問 [維AEM護中心](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant) 以獲取有關發AEM行的資訊。
+造訪 [AEM維護中心](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant) 以取得AEM發行版本的相關資訊。
 
-## 如何得到官方的支AEM持？ {#official-support}
+## 如何取得AEM的官方支援？ {#official-support}
 
-作為獲得許可的客戶，您可以從 [客戶服務團隊](https://experienceleague.adobe.com/?support-solution=General#support)。 您還可以在 [社AEM區](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) 或AdobeExpCareTwitter句柄上 `https://twitter.com/adobeexpcare`。
+身為授權客戶，您可以從「 」取得AEM支援 [客戶服務團隊](https://experienceleague.adobe.com/?support-solution=General#support). 您也可以透過以下連結向我們提問： [AEM社群](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) 或位於AdobeExpCare Twitter控制代碼上的 `https://twitter.com/adobeexpcare`.
 
-## 其他版本的文檔在AEM哪裡？ {#versions}
+## 其他版本AEM的檔案在哪裡？ {#versions}
 
-您在6.5文檔的AEM正確位置。
+您正符合AEM 6.5檔案的需求。
 
-Adobe還有關於舊版Adobe Experience Manager的文檔。 你可以看看 [Adobe Experience Manager、CQ和CRX文檔的舊版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) 的子菜單。
+Adobe也提供舊版Adobe Experience Manager的檔案。 您可以檢視 [舊版Adobe Experience Manager、CQ和CRX檔案](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) 以取得詳細資訊。
 
-## 6.AEM5發行說明在哪裡？ {#release-notes}
+## AEM 6.5發行說明在何處？ {#release-notes}
 
-您可以在此處找到所有發行AEM說明：
+您可以在這裡找到AEM的所有發行說明：
 
-* [AEM6.5發行說明](/help/release-notes/home.md)
-* [6.5中已刪除和不建議使用AEM的功能清單](/help/release-notes/deprecated-removed-features.md)
+* [AEM 6.5發行說明](/help/release-notes/home.md)
+* [AEM 6.5中已移除和已棄用的功能清單](/help/release-notes/deprecated-removed-features.md)
 
-如果有問題，請聯繫 [社AEM區團隊](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) 或詢問AdobeExpCareTwitter句柄 `https://twitter.com/adobeexpcare`。
+如有疑問，請聯絡 [AEM社群團隊](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) 或詢問位於的AdobeExpCare Twitter控制代碼 `https://twitter.com/adobeexpcare`.

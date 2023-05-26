@@ -1,7 +1,7 @@
 ---
-title: 在We.Retail中嘗試可編輯模板
+title: 在We.Retail中嘗試可編輯的範本
 seo-title: Trying out Editable Templates in We.Retail
-description: 在We.Retail中嘗試可編輯模板
+description: 在We.Retail中嘗試可編輯的範本
 seo-description: null
 uuid: 0d4b97cb-efcc-4312-a783-eae3ecd6f889
 contentOwner: User
@@ -17,62 +17,62 @@ ht-degree: 10%
 
 ---
 
-# 在We.Retail中嘗試可編輯模板{#trying-out-editable-templates-in-we-retail}
+# 在We.Retail中嘗試可編輯的範本{#trying-out-editable-templates-in-we-retail}
 
-使用可編輯模板，建立和維護模板不再是僅面向開發人員的任務。 一種稱為模板作者的高級用戶現在可以建立模板。 開發人員仍需要設定環境、建立用戶端程式庫和建立要使用的元件，但是當這些基本功能準備就緒後，範本作者就可以彈性地建立和設定範本，而不需要開發專案。
+使用可編輯的範本時，建立和維護範本不再是開發人員專屬的工作。 稱為範本作者的權力使用者型別，現在可以建立範本。 開發人員仍需要設定環境、建立用戶端程式庫和建立要使用的元件，但是當這些基本功能準備就緒後，範本作者就可以彈性地建立和設定範本，而不需要開發專案。
 
-We.Retail中的所有頁面都基於可編輯的模板，允許非開發人員調整和自定義模板。
+We.Retail中的所有頁面都是以可編輯的範本為基礎，讓非開發人員能夠調整及自訂範本。
 
-## 嘗試 {#trying-it-out}
+## 正在試用 {#trying-it-out}
 
-1. 編輯語言主分支的「設備」頁。
+1. 編輯語言主分支的「裝置」頁面。
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
-1. 請注意，模式選擇器不再提供「設計」模式。 We.Retail的所有頁面都基於可編輯模板，要改變可編輯模板的設計，必須在模板編輯器中編輯這些模板。
-1. 從 **頁面資訊** 菜單 **編輯模板**。
-1. 您現在正在編輯「英雄頁面」模板。
+1. 請注意，模式選擇器不再提供設計模式。 We.Retail的所有頁面都以可編輯的範本為基礎，若要變更可編輯範本的設計，必須在範本編輯器中編輯這些頁面。
+1. 從 **頁面資訊** 功能表選取 **編輯範本**.
+1. 您現在正在編輯主圖頁面範本。
 
-   頁面的結構模式允許您修改模板的結構。 這包括例如佈局容器中允許的元件。
+   頁面的結構模式可讓您修改範本的結構。 例如，這包括配置容器中允許的元件。
 
    ![chlimage_1-138](assets/chlimage_1-138.png)
 
-1. 配置佈局容器的策略以定義容器中允許的元件。
+1. 設定配置容器原則以定義容器中允許哪些元件。
 
-   策略與設計配置相當。
+   原則等同於設計組態。
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
-1. 在佈局容器的設計對話框中，可以
+1. 在配置容器的設計對話方塊中，您可以
 
-   * 選擇現有策略或為容器建立新策略
-   * 選擇容器中允許的元件
-   * 定義將資產拖至容器時要放置的預設元件
+   * 選取現有原則或建立容器的新原則
+   * 選取容器中允許的元件
+   * 定義將資產拖曳至容器時要置入的預設元件
 
    ![chlimage_1-140](assets/chlimage_1-140.png)
 
-1. 返回到模板編輯器中，可以編輯佈局容器中文本元件的策略。
+1. 回到範本編輯器，您可以在版面配置容器中編輯文字元件的原則。
 
-   這允許您：
+   這可讓您：
 
-   * 選擇現有策略或為容器建立新策略
-   * 定義使用此元件時頁面作者可用的功能，如
+   * 選取現有原則或建立容器的新原則
+   * 定義頁面作者使用此元件時可用的功能，例如
 
-      * 允許貼上源
-      * 格式設定選項
+      * 允許的貼上來源
+      * 格式選項
       * 允許的段落樣式
       * 允許的特殊字元
 
-   許多基於核心元件的元件都允許通過可編輯模板在元件級別配置選項，從而消除了開發人員進行定製的需要。
+   許多以核心元件為基礎的元件，都允許透過可編輯的範本在元件層級設定選項，消除了開發人員自訂的需求。
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
-1. 返回到模板編輯器中，可以使用模式選擇器更改為 **初始內容** 的子菜單。
+1. 返回範本編輯器，您可以使用模式選取器變更為 **初始內容** 模式，定義頁面上所需的內容。
 
-   **佈局** 模式可以使用，因為它位於普通頁面上，以定義模板的佈局。
+   **版面** 模式可在正常頁面上使用，以定義範本的版面。
 
 ## 更多資訊 {#more-information}
 
-有關詳細資訊，請參閱創作文檔 [建立頁面模板](/help/sites-authoring/templates.md) 或開發人員文檔頁面 [模板 — 可編輯](/help/sites-developing/page-templates-editable.md) 的子菜單。
+如需進一步資訊，請參閱撰寫檔案 [建立頁面範本](/help/sites-authoring/templates.md) 或開發人員檔案頁面 [範本 — 可編輯](/help/sites-developing/page-templates-editable.md) 以取得可編輯範本的完整技術詳細資訊。
 
-您可能還希望調查 [核心元件](/help/sites-developing/we-retail-core-components.md)。 請參閱創作文檔 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 查看核心元件和開發人員文檔的功能 [開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 的子菜單。
+您可能也想要調查 [核心元件](/help/sites-developing/we-retail-core-components.md). 請參閱撰寫檔案 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 核心元件和開發人員檔案的功能概觀 [開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以取得技術概覽。

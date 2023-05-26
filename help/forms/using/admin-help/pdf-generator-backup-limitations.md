@@ -1,7 +1,7 @@
 ---
-title: PDF生成器備份限制
+title: PDF產生器備份限制
 seo-title: PDF Generator backup limitations
-description: 瞭解PDF生成器備份限制。
+description: 瞭解PDF產生器備份限制。
 seo-description: Learn about PDF Generator backup limitations.
 uuid: 9537ffde-4396-46d1-81ea-edcd25923ffb
 contentOwner: admin
@@ -18,6 +18,6 @@ ht-degree: 0%
 
 ---
 
-# PDF生成器備份限制 {#pdf-generator-backup-limitations}
+# PDF產生器備份限制 {#pdf-generator-backup-limitations}
 
-無法備份PDF生成器用於轉換檔案的臨時目錄。 即使服務將正確恢復，資料也可能會丟失，因為PDF生成器會按設定的時間間隔查看和清除臨時目錄的內容。
+無法備份PDF產生器用來轉換檔案的暫存目錄。 即使服務將正確還原，資料仍可能會遺失，因為PDF產生器會依設定的間隔來檢視及清除暫存目錄的內容。

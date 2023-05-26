@@ -1,7 +1,7 @@
 ---
-title: 上下文審核
+title: 內文中稽核
 seo-title: In-Context Moderation
-description: 如何執行版主操作
+description: 如何執行版主動作
 seo-description: How to perform moderator actions
 uuid: 282a8bea-2822-4e5c-b9f4-4d9a5380d895
 contentOwner: Janice Kendall
@@ -18,153 +18,153 @@ ht-degree: 1%
 
 ---
 
-# 上下文審核 {#in-context-moderation}
+# 內文中稽核 {#in-context-moderation}
 
-對於AEM Communities，管理員和受信任的社區成員可以直接在發佈社區內容的頁面上執行審核。
+對於AEM Communities，管理員和受信任的社群成員可直接在發佈社群內容的頁面上執行稽核。
 
-使用 [調節控制台](moderation.md)，為內容顯示的資訊包括指向已發佈頁面的連結，以允許訪問當在上下文中調節時可用的附加調節動作。
+使用時 [稽核主控台](moderation.md)，針對內容顯示的資訊包含已發佈頁面的連結，可讓您存取在內容中進行仲裁時可用的其他仲裁動作。
 
-## 審核操作 {#moderation-actions}
+## 稽核動作 {#moderation-actions}
 
-訪問審核概述以瞭解 [緩和操作](moderate-ugc.md#moderation-actions)。
+請造訪協調概述，瞭解的相關說明 [稽核動作](moderate-ugc.md#moderation-actions).
 
-## 審核UI {#moderation-ui}
+## 稽核UI {#moderation-ui}
 
-在發佈實例上呈現給主持人的UI包含在用於發佈和管理用戶生成的內容(UGC)的對話框中。 UI的元素由站點訪問者的狀態確定 — 無論它們是……
+在發佈執行個體上向版主顯示的UI包含在用於發佈和管理使用者產生的內容(UGC)的對話方塊中。 UI的元素由網站訪客的狀態決定，無論它們是……
 
 1. 發佈內容的成員。
 1. 受信任的成員版主。
 1. 管理員。
-1. 已登錄，但既不是管理員、版主，也不是內容的作者。
-1. 未登錄。
+1. 已登入，但不是內容的管理員、版主，也不是作者。
+1. 未登入。
 
 ## 範例 {#example}
 
-使用 [Geometrixx](http://localhost:4503/content/sites/engage/en.html) 建立站點 [AEM Communities入門](getting-started.md)，可以在論壇中快速設定一個主題，以便在該論壇上體驗發佈環境中的各種審核活動，如下所示。
+使用 [Geometrixx參與](http://localhost:4503/content/sites/engage/en.html) 網站建立時間 [AEM Communities快速入門](getting-started.md)，您可在論壇中快速設定對話串，在發佈環境中體驗各種協調活動，如下所示。
 
-Aaron McDonald(aaron.mcdonald@mailinator.com)在建立網站時將他加入社區參與主持者小組，被確定為值得信賴的社區成員。
+Aaron McDonald (aaron.mcdonald@mailinator.com)在建立網站時加入community-engage-moderators群組，因此被確認為信任的社群成員。
 
-Rebekah Larsen(rebekah.larsen@trashymail.com)可以添加為社區參與成員組的成員， [成員控制台](members.md)。
+Rebekah Larsen (rebekah.larsen@trashymail.com)可使用以下網址新增為community-engage-members群組的成員： [成員主控台](members.md).
 
-有關社區用戶組的詳細資訊，請訪問 [管理用戶和用戶組](users.md)。
+如需社群使用者群組的詳細資訊，請造訪 [管理使用者和使用者群組](users.md).
 
 ### 建立論壇帖子 {#create-the-forum-posts}
 
-* 以麗貝卡·拉森(rebekah.larsen@trashymail.com)身份登錄
+* 以Rebekah Larsen (rebekah.larsen@trashymail.com)登入
 
-   * 選擇論壇
-   * 選擇新帖子
-   * 輸入主題
+   * 選取論壇
+   * 選取新貼文
+   * 輸入主旨
 
-      何時更換蜂鳥餵食器的花蜜
+      何時在嗡嗡的餵鳥機中變更花蜜
 
-   * 輸入正文文本
+   * 輸入內文
 
-      我每年在蜂鳥餵食器上掛一次，但並沒有取得什麼成功。 看來他們來了一兩天就夠了。 我每週換一次，那麼長嗎？ 我需要更早改變嗎？
+      我每年都懸掛一隻蜂鳥的餵食器，可不太成功。 他們似乎一兩天就來了，那就夠了。 我每週變更一次，會不會太長？ 我是否需要更早進行變更？
 
-   * 選擇帖子
-   * 選擇註銷
+   * 選取貼文
+   * 選取登出
 
-* 以Aaron McDonald(aaron.mcdonald@mailinator.com)身份登錄
+* 以Aaron McDonald (aaron.mcdonald@mailinator.com)登入
 
-   * 選擇論壇
-   * 對於Hummingbird主題，選擇「更多」
-   * 輸入帖子回復的注釋
+   * 選取論壇
+   * 蜂鳥主題，請選取閱讀更多
+   * 輸入張貼回覆的註解
 
-      我每週換一次，從5月到10月。
+      我每週都會變更一次我的帳號，並且從5月到10月都會收到帳號。
 
-   * 選擇答復
-   * 選擇註銷
+   * 選取回覆
+   * 選取登出
 
-* 以Andrew Schaeffer(andrew.schaeffer@trashymail.com)身份登錄
+* 以Andrew Schaeffer身分登入(andrew.schaeffer@trashymail.com)
 
-   * 選擇論壇
-   * 對於Hummingbird主題，選擇「更多」
-   * 輸入帖子回復的注釋
+   * 選取論壇
+   * 蜂鳥主題，請選取閱讀更多
+   * 輸入張貼回覆的註解
 
-      我銷售花蜜和飼料 — 請訪問https://my.viral.url/
+      我賣花蜜和飼料 — 請造訪https://my.viral.url/
 
-   * 選擇答復
-   * 選擇註銷
+   * 選取回覆
+   * 選取登出
 
-### 匿名站點訪問者(#5) {#anonymous-site-visitor}
+### 匿名網站訪客(#5) {#anonymous-site-visitor}
 
-以下是未登錄(5)的站點訪問者看到的論壇視圖。
+以下是未登入的網站訪客所看到的論壇檢視(5)。
 
-匿名站點訪問者只能查看論壇，但我不發佈任何內容，也不執行任何審核操作。
+匿名網站訪客只能檢視論壇，但不得發佈任何內容或執行任何稽核動作。
 
-![社區論壇訪問者](assets/community-forum-visitor.png)
+![community-forum-visitor](assets/community-forum-visitor.png)
 
 ### 新成員(#4) {#new-member}
 
-在作者身份下，以管理員身份登錄，並使用 [成員控制台](members.md)，然後註銷。
+boyd.larsen@dodgit.com在作者上，以管理員身分登入，並使用 [成員主控台](members.md)，然後登出。
 
-在發佈時，以Boyd Larsen身份登錄，通過選擇 `Forum`，然後 `Read more` 蜂鳥哨所。
+在發佈時，以Boyd Larsen身分登入，並透過選取以下專案存取對話串： `Forum`，然後 `Read more` 蜂鳥貼文。
 
 注意:
 
-* 博伊德沒有參加論壇。
-* 博伊德不能刪除任何內容。
-* Boyd已登錄，可以回復或標籤內容。
+* Boyd尚未參與論壇。
+* Boyd無法刪除任何內容。
+* Boyd已登入，可以回覆或標幟內容。
 
-讓Boyd選擇Flag來標籤Andrew發佈的內容。
+讓Boyd選取Flag來標示Andrew張貼的內容。
 
 登出
 
-![社區論壇成員](assets/community-forum-member.png)
+![社群 — 論壇 — 成員](assets/community-forum-member.png)
 
 ### 管理員(#3) {#administrator}
 
-以管理員（管理員）身份登錄，通過選擇「論壇」，然後選擇「更多內容」以發佈帖子來訪問線程。
+以管理員（管理員）身分登入，並選取「論壇」，然後選取「閱讀文章的詳細資訊」來存取對話串。
 
 注意:
 
-* 管理員可以標籤、刪除、編輯、拒絕、剪切、關閉、固定、功能。
-* 管理員可以選擇「管理」以訪問審核控制台。
+* 管理員可以標幟、刪除、編輯、拒絕、剪下、關閉、釘選、功能。
+* 管理員可以選取「管理」來存取稽核主控台。
 
-![社區管理論壇](assets/community-admin-forum.png)
+![community-admin-forum](assets/community-admin-forum.png)
 
-選擇「管理」菜單項以訪問 [調節控制台](moderation.md) 的子菜單。
+選取管理功能表專案以存取 [稽核主控台](moderation.md) 從發佈環境。
 
-請注意，對於管理員，所有可現代化內容都可見，而不只是「Geometrixx參與」社區站點中的內容。
+請注意，對於管理員而言，所有可稽核內容皆可見，而不僅僅是GeometrixxEngage社群網站的內容。
 
-搜索過濾器是切換開啟或關閉的側面板。
+搜尋篩選是可切換開啟或關閉的側面板。
 
 登出.
 
-![Moderation-Console-Publish](assets/moderation-console-publish.png)
+![moderation-console-publish](assets/moderation-console-publish.png)
 
-### 社區主持人(#2) {#community-moderator}
+### 社群版主(#2) {#community-moderator}
 
-以社區主持人Aaron McDonald(aaron.mcdonal@mailinator.com)身份登錄，通過選擇「論壇」，然後為蜂鳥帖子閱讀更多內容來訪問該主題。
+以社群版主Aaron McDonald (aaron.mcdonal@mailinator.com)身分登入，並選取「論壇」來存取對話串，然後選取Hummingbird貼文的「瞭解詳情」。
 
 注意:
 
-* Aaron可以回復、刪除、編輯或拒絕他自己的帖子。
-* Aaron還可以標籤/允許、答復、刪除、編輯、拒絕其他內容。
-* 亞倫可以剪掉論壇話題，把話題轉移到他所主持的另一個論壇。
-* Aaron可以選擇「管理」以訪問審核控制台。
+* Aaron可以回覆、刪除、編輯或拒絕自己的貼文。
+* Aaron也可以標幟/允許、回覆、刪除、編輯、拒絕其他內容。
+* Aaron可以剪下論壇主題，將其移至他主持的另一個論壇。
+* Aaron可以選取「管理」來存取稽核主控台。
 
-![社區論壇 — 主持人](assets/community-forum-moderator.png)
+![社群 — 論壇 — 版主](assets/community-forum-moderator.png)
 
-選擇「管理」菜單項以訪問 [調節控制台](moderation.md) 的子菜單。
+選取管理功能表專案以存取 [稽核主控台](moderation.md) 從發佈環境。
 
-請注意，對於社區版主持人，只有「Geometrixx參與」社區站點中的可調節內容可見。
+請注意，對於社群版主，只會顯示來自GeometrixxEngage社群網站的可稽核內容。
 
-請注意，社區主持人與管理員具有相同的選項（影像處於搜索邊欄切換關閉狀態），但無法訪問其AEM他控制台。
+請注意，社群版主的選項與管理員相同（影像已關閉搜尋側邊欄），但無法存取其他AEM主控台。
 
 登出.
 
-![版權訪問](assets/moderator-access.png)
+![版主 — 存取](assets/moderator-access.png)
 
 ### 內容作者(#1) {#content-author}
 
-以Rebekah Larsen(rebekah.larsen@mailinator.com)的身份登錄，此社區成員啟動了該主題，並通過選擇「論壇」，然後為蜂鳥帖子選擇「更多」來訪問該主題。
+以Rebekah Larsen (rebekah.larsen@mailinator.com)身分登入（一位開啟對話串的社群成員），並選取「論壇」來存取對話串，然後選取Hummingbird貼文的「瞭解詳情」。
 
 注意:
 
-* 麗貝卡可以刪除或編輯她自己的帖子。
-* Rebekah還可以回復或標籤其他內容。
-* 麗貝卡無法訪問節制控制台。
+* Rebekah可以刪除或編輯自己的貼文。
+* Rebekah也可以回覆或標幟其他內容。
+* Rebekah無法存取稽核主控台。
 
-![社區論壇作者](assets/community-forum-author.png)
+![community-forum-author](assets/community-forum-author.png)

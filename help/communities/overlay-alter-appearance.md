@@ -1,5 +1,5 @@
 ---
-title: 更改外觀
+title: 變更外觀
 seo-title: Alter the Appearance
 description: 修改指令碼
 seo-description: Modify the script
@@ -18,33 +18,33 @@ ht-degree: 0%
 
 ---
 
-# 更改外觀 {#alter-the-appearance}
+# 變更外觀 {#alter-the-appearance}
 
 ## 修改指令碼 {#modify-the-script}
 
-comment.hbs指令碼負責為每個注釋建立整體HTML。
+comment.hbs指令碼負責為每個評論建立整體HTML。
 
-不在每個已發佈注釋旁顯示虛擬形象：
+不顯示每個張貼的評論旁的頭像：
 
 1. 複製 `comment.hbs`從 `libs`至 `apps`
 
    1. 選取 `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
-   1. 選擇 **[!UICONTROL 複製]**
+   1. 選取 **[!UICONTROL 複製]**
    1. 選取 `/apps/social/commons/components/hbs/comments/comment`
-   1. 選擇 **[!UICONTROL 貼上]**
+   1. 選取 **[!UICONTROL 貼上]**
 
-1. 開啟覆蓋 `comment.hbs`
+1. 開啟覆蓋的 `comment.hbs`
 
-   * 按兩下節點 `comment.hbs` 在 `/apps/social/commons/components/hbs/comments/comment folder`
+   * 連按兩下節點 `comment.hbs` 在 `/apps/social/commons/components/hbs/comments/comment folder`
 
-1. 查找以下行，然後刪除或注釋它們：
+1. 尋找下列行，然後刪除或註解它們：
 
 ```xml
   <aside class="scf-comment-author">
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-刪除線，或用 `<!--` 和 `-->` 來評論一下。 此外，正在添加字元「xxx」作為虛擬形象所在位置的視覺指示器。
+請刪除線段或將其周圍加上 `<!--` 和 `-->` 以取消註解。 此外，字元「xxx」也會新增為顯示頭像位置的視覺指標。
 
 ```xml
    xxx
@@ -53,24 +53,24 @@ comment.hbs指令碼負責為每個注釋建立整體HTML。
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-### 複製覆蓋 {#replicate-the-overlay}
+### 復寫覆蓋 {#replicate-the-overlay}
 
-使用複製工具將重疊的注釋元件推送到發佈實例。
+使用復寫工具將覆蓋的註解元件推送至發佈例項。
 
 >[!NOTE]
 >
->更強健的複製形式是在包管理器中建立包， [激活](/help/sites-administering/package-manager.md#replicating-packages) 它。 可以導出和存檔包。
+>更強大的復寫形式是在封裝管理員中建立封裝，並且 [啟用](/help/sites-administering/package-manager.md#replicating-packages) it. 套件可以匯出和封存。
 
-從全局導航中，選擇 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 複製]** 按一下 **[!UICONTROL 激活樹]**。
+在全域導覽中選取 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** 並按一下 **[!UICONTROL 啟動樹狀結構]**.
 
-對於起始路徑輸入 `/apps/social/commons` 選擇 **[!UICONTROL 激活]**。
+開始路徑請輸入 `/apps/social/commons` 並選取 **[!UICONTROL 啟動]**.
 
-![驗證內容模板](assets/verify-content-template.png)
+![verify-content-template](assets/verify-content-template.png)
 
-### 查看結果 {#view-results}
+### 檢視結果 {#view-results}
 
-如果您以管理員身份登錄到發佈實例，例如以admin/admin身份登錄https://localhost:4503/crx/de，則可以驗證重疊的元件是否在其中。
+如果您以管理員身分(例如https://localhost:4503/crx/de )登入發佈執行個體（例如，以管理員/管理員身分），您可以驗證覆蓋的元件是否存在。
 
-如果註銷並重新登錄為 `aaron.mcdonald@mailinator.com/password` 刷新頁面後，您將注意到已發佈的注釋不再顯示為虛擬形象，而是顯示一個簡單的「xxx」。
+如果您登出後重新登入， `aaron.mcdonald@mailinator.com/password` 和重新整理頁面，您會發現貼出的評論不再以頭像顯示，而是顯示簡單的「xxx」。
 
-![建立模板元件](assets/create-template-component.png)
+![create-template-component](assets/create-template-component.png)

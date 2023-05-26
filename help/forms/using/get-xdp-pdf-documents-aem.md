@@ -1,7 +1,7 @@
 ---
-title: 在AEM Forms獲取XDP和PDF文檔
+title: 在AEM Forms中取得XDP和PDF檔案
 seo-title: Getting XDP and PDF documents in AEM Forms
-description: AEM Forms允許您上傳表單和支援的資產，以便與自適應表單一起使用。 您還可以將表單和相關資源批量上載為ZIP。
+description: AEM Forms可讓您上傳表單和支援的資產，以便搭配最適化表單使用。 您也可以以ZIP檔形式大量上傳表單和相關資源。
 seo-description: AEM Forms allows you to upload forms and supported assets to use with adaptive forms. You can also bulk upload forms and related resources as a ZIP.
 uuid: cd49b4a8-c282-4059-95a0-c98f6c92ab14
 content-type: reference
@@ -18,73 +18,73 @@ ht-degree: 0%
 
 ---
 
-# 在AEM Forms獲取XDP和PDF文檔{#getting-xdp-and-pdf-documents-in-aem-forms}
+# 在AEM Forms中取得XDP和PDF檔案{#getting-xdp-and-pdf-documents-in-aem-forms}
 
 ## 概觀 {#overview}
 
-您可以將表單從本地檔案系統導入到CRX儲存庫，方法是將表單上載到AEM Forms。 以下資產類型支援上載操作：
+您可以將表單上傳到AEM Forms，將表單從您的本機檔案系統匯入到CRX存放庫。 下列資產型別支援上傳作業：
 
-* 表單模板（XFA表單）
+* 表單範本（XFA表單）
 * PDF forms
-* 文檔(平面PDF文檔)
+* 檔案(平面PDF檔案)
 
-您可以單獨或作為ZIP存檔上載受支援的資產類型。 您可以上載類型的資產 `Resource`，僅與ZIP存檔中的XFA窗體一起使用。
+您可以個別上傳支援的資產型別，或當作ZIP封存檔上傳。 您可以上傳型別的資產 `Resource`，且僅與ZIP封存中的XFA表單並排。
 
 >[!NOTE]
 >
->確保您是 `form-power-users` 組以能夠上載XDP檔案。 請與管理員聯繫以成為組的成員。
+>確定您是 `form-power-users` 群組以上傳XDP檔案。 請聯絡您的管理員以成為群組的成員。
 
-## 正在上載表單 {#uploading-forms}
+## 正在上傳表單 {#uploading-forms}
 
-1. 通過訪問 `https://'[server]:[port]'/aem/forms.html`。
-1. 導航到要上載表單的資料夾或包含表單的資料夾。
-1. 在操作工具欄中，按一下 **建立>檔案上載**。
+1. 透過存取登入AEM Forms使用者介面 `https://'[server]:[port]'/aem/forms.html`.
+1. 導覽至您要上傳表單的資料夾或包含表單的資料夾。
+1. 在動作工具列中，點選 **建立>檔案上傳**.
 
-   ![「建立」下的「本地儲存檔案」選項](assets/step.png)
+   ![「建立」下的「本機儲存體的檔案」選項](assets/step.png)
 
-1. 通過「上載表單」或「包」對話框，可以瀏覽並選擇要上載的檔案。 檔案瀏覽器只顯示支援的檔案格式(ZIP、XDP和PDF)。
-
-   >[!NOTE]
-   >
-   >檔案名只能包含字母數字字元、連字元或下划線。
-
-1. 選擇檔案後按一下「上載」以上載檔案，或按一下「取消」取消上載。 彈出窗口列出了添加的資產和在當前位置更新的資產。
+1. 上傳表單或封裝對話方塊可讓您瀏覽並選擇您要上傳的檔案。 檔案瀏覽器只會顯示支援的檔案格式(ZIP、XDP和PDF)。
 
    >[!NOTE]
    >
-   >對於ZIP檔案，將顯示所有受支援資產的相對路徑。 ZIP中不支援的資產將被忽略，且未列出。 但是，如果ZIP存檔中只包含不受支援的資產，則會顯示一條錯誤消息，而不是彈出對話框。
+   >檔案名稱只能包含英數字元、連字型大小或底線。
 
-   ![上載XFA表單時的「上載」對話框](assets/upload-scr.png)
+1. 選擇檔案後按一下「上傳」以上傳檔案，或按一下「取消」取消上傳。 快顯視窗會列出在目前位置新增的資產和更新的資產。
 
-1. 如果一個或多個資產的檔案名無效，則顯示錯誤。 更正以紅色突出顯示的檔案名並重新上載。
+   >[!NOTE]
+   >
+   >對於ZIP檔案，會顯示所有支援資產的相對路徑。 ZIP內不支援的資產會遭忽略，不會列出。 不過，如果ZIP封存僅包含不支援的資產，則會顯示錯誤訊息，而非快顯對話方塊。
 
-   ![上載XFA表單時出現錯誤消息](assets/upload-scr-err.png)
+   ![上傳XFA表單時顯示上傳對話方塊](assets/upload-scr.png)
 
-上載完成後，後台工作流將根據資產的預覽為每個資產生成縮略圖。 較新版本的資產（如果上載）將覆蓋現有資產。
+1. 如果一或多個資產的檔案名稱無效，則會顯示錯誤。 修正以紅色反白顯示的檔案名稱，然後重新上傳。
 
-### 保護模式 {#protected-mode}
+   ![上傳XFA表單時出現錯誤訊息](assets/upload-scr-err.png)
 
-AEM Forms伺服器允許您運行JavaScript代碼。 惡意的JavaScript代碼可能會危害AEM Forms環境。 受保護模式限制AEM Forms僅從受信任的資產和位置運行XDP檔案。 AEM FormsUI中提供的所有XDP都被視為可信資產。
+上傳完成後，背景工作流程會根據資產的預覽為每個資產產生縮圖。 較新版本的資產（如果上傳）會覆寫現有資產。
 
-預設情況下，受保護模式處於開啟狀態。 如有必要，可以禁用受保護模式：
+### 受保護模式 {#protected-mode}
 
-1. 以管理員身AEM份登錄到Web控制台。 URL為https://&#39;[伺服器]:[埠]「/system/console/configMgr
-1. 開啟移動Forms配置進行編輯。
-1. 取消選擇「受保護模式」選項，然後按一下 **保存**。 已禁用受保護模式。
+AEM Forms伺服器可讓您執行JavaScript程式碼。 惡意JavaScript程式碼可能會傷害AEM Forms環境。 保護模式會限制AEM Forms只從受信任的資產和位置執行XDP檔案。 AEM Forms UI中可用的所有XDP都視為受信任的資產。
 
-## 更新引用的XFA表單 {#updating-referenced-xfa-forms}
+受保護模式預設為開啟。 如有必要，您可以停用受保護模式：
 
-在AEM Forms,XFA表單模板可以由自適應表單或另一個XFA表單模板引用。 此外，模板可以引用資源或其他XFA模板。
+1. 以管理員身分登入AEM Web Console。 URL為https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr
+1. 開啟Mobile Forms設定以進行編輯。
+1. 取消選取「受保護模式」選項，然後按一下 **儲存**. 受保護模式已停用。
 
-引用XFA的自適應表單的欄位與XFA中可用的欄位綁定。 在更新表單模板時，關聯的自適應表單會嘗試與XFA同步。 有關詳細資訊，請參閱 [將自適應表單與關聯的XFA同步](../../forms/using/synchronizing-adaptive-forms-xfa.md)。
+## 更新參考的XFA表單 {#updating-referenced-xfa-forms}
 
-刪除表單模板會損壞從屬自適應表單或表單模板。 這種自適應形式有時被非正式地稱為臟形式。 在AEM Forms用戶介面中，您可以通過以下兩種方式查找臟表單。
+在AEM Forms中，XFA表單範本可由最適化表單或其他XFA表單範本參照。 此外，範本可以參考資源或其他XFA範本。
 
-* 在資產清單中的自適應表單縮略圖上顯示一個警告表徵圖，當將指針懸停在警告表徵圖上時，將顯示以下消息。\
+引用XFA的最適化表單會有其欄位與XFA中可用的欄位繫結。 更新表單範本時，關聯的調適型表單會嘗試與XFA同步。 如需詳細資訊，請參閱 [將調適型表單與關聯的XFA同步](../../forms/using/synchronizing-adaptive-forms-xfa.md).
+
+移除表單範本會損毀相依的最適化表單或表單範本。 這類最適化表單有時會被非正式地稱為「骯髒表單」。 在AEM Forms使用者介面中，您可以透過以下兩種方式找到已變更的表單。
+
+* 資產清單中的最適化表單縮圖上會顯示警告圖示，而當您將指標停留在警告圖示上時，會顯示下列訊息。\
    `Schema/Form Template for this adaptive form has been updated so please go to Authoring mode and rebase it with new version.`
 
-![更新關聯的XFA後出現不同步自適應表單的警告](assets/dirtyaf.png)
+![更新相關XFA後針對不同步的最適化表單發出警告](assets/dirtyaf.png)
 
-保持標誌以指示自適應形式是否臟。 此資訊可在表單屬性頁和表單元資料上找到。 僅對臟自適應表單，元資料屬性 `Model Refresh` 顯示 `Recommended` 值。
+系統會維持旗標，指出最適化表單是否已變更。 此資訊可與表單中繼資料一併顯示在表單屬性頁面上。 僅適用於已修改的最適化表單，中繼資料屬性 `Model Refresh` 顯示 `Recommended` 值。
 
-![表示自適應形式與XFA模型不同步](assets/model-refresh.png)
+![最適化表單與XFA模型不同步的指示](assets/model-refresh.png)

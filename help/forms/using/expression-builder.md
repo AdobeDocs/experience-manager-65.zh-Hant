@@ -1,7 +1,7 @@
 ---
-title: Expression Builder中的遠程函式
+title: 運算式產生器中的遠端函式
 seo-title: Expression Builder
-description: Oracle Tergement中的Expression Builder允許您建立表達式和遠程函式。
+description: 通訊管理中的運算式產生器可讓您建立運算式及遠端函式。
 seo-description: Expression Builder in Correspondence Management lets you create expressions and remote functions.
 uuid: 6afb84c0-ad03-4bb1-a154-d46cc47650ae
 content-type: reference
@@ -18,40 +18,40 @@ ht-degree: 1%
 
 ---
 
-# Expression Builder中的遠程函式{#remote-functions-in-expression-builder}
+# 運算式產生器中的遠端函式{#remote-functions-in-expression-builder}
 
-使用表達式生成器，可以建立對資料字典或最終用戶提供的資料值執行計算的表達式或條件。 Oracle Tergement使用表達式評估的結果來選擇文本、影像、清單和條件等資產，並根據需要將它們插入對應中。
+您可以使用「運算式產生器」建立運算式或條件，對「資料字典」或一般使用者提供的資料值進行計算。 「對應關係管理」會使用運算式評估的結果來選取文字、影像、清單和條件等資產，並視需要將其插入對應關係中。
 
-## 使用表達式生成器建立表達式和遠程函式 {#creating-expressions-and-remote-functions-with-expression-builder}
+## 使用運算式產生器建立運算式及遠端函式 {#creating-expressions-and-remote-functions-with-expression-builder}
 
-表達式生成器內部使用JSP EL庫，因此表達式遵循JSPEL語法。 有關詳細資訊，請參見 [示例表達式](#exampleexpressions)。
+運算式產生器內部使用JSP EL程式庫，因此運算式會遵循JSPEL語法。 如需詳細資訊，請參閱 [運算式範例](#exampleexpressions).
 
 ![運算式產生器](assets/expressionbuilder.png)
 
 ### 運算子 {#operators}
 
-在表達式中可用的運算子在表達式生成器的頂欄中可用。
+運算式產生器頂列中有可用於運算式的運運算元。
 
-### 示例表達式 {#exampleexpressions}
+### 運算式範例 {#exampleexpressions}
 
-以下是幾個常用的JSP EL示例，您可以在「通信管理」解決方案中使用：
+以下是一些常用的JSP EL範例，您可以在通訊管理解決方案中使用：
 
-* 要添加兩個數字：${number1 +數字2}
-* 要連接兩個字串：${str1} ${str2}
-* 要比較兩個數字：${age &lt; 18}
+* 若要新增兩個數字： ${number1 + number2}
+* 若要串連兩個字串： ${str1} ${str2}
+* 若要比較兩個數字： ${age &lt; 18}
 
-您可以在 [JSP EL規範](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)。 客戶端表達式管理器不支援JSP EL規範中的某些變數和函式，具體是：
+如需詳細資訊，請參閱 [JSP EL規格](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). 使用者端運算式管理員不支援JSP EL規格中的某些變數和函式，特別是：
 
-* 集合索引和映射鍵(使用 [] 在客戶端上計算的表達式的變數名稱中不支援符號)。
-* 以下是表達式中使用的函式的參數類型或返回類型：
+* 集合索引和對應索引鍵(使用 [] 表示法)的變數名稱中不支援在使用者端評估的運算式。
+* 以下是運算式中使用的引數型別或傳回函式型別：
 
    * java.lang.String
    * java.lang.Character
-   * 查爾
+   * Char
    * java.lang.Boolean
    * 布林值
    * java.lang.Integer
-   * 整型
+   * Int
    * java.util.list
    * java.lang.Short
    * 短
@@ -62,28 +62,28 @@ ht-degree: 1%
    * java.lang.Long
    * 長整數
    * java.lang.Float
-   * 浮動
+   * 浮點數
    * java.util.Calendar
    * java.util.Date
    * java.util.List
 
-### 遠程函式 {#remote-function}
+### 遠端函式 {#remote-function}
 
-遠程函式提供了在表達式中使用自定義邏輯的功能。 可以將自定義邏輯寫入表達式中用作Java中的方法，而同一函式可以在表達式中使用。 可用的遠程函式列在表達式編輯器左側的「遠程函式」頁籤下。
+遠端函式提供在運算式中使用自訂邏輯的功能。 您可以將自訂邏輯寫入運算式，作為Java中的方法使用，並在運算式中使用相同的函式。 可用的遠端函式會列在運算式編輯器左側的「遠端函式」標籤下。
 
-![remote函式](assets/remotefunction.png)
+![remotefunction](assets/remotefunction.png)
 
-#### 添加自定義遠程函式 {#adding-custom-remote-functions}
+#### 新增自訂遠端函式 {#adding-custom-remote-functions}
 
-您可以建立自定義捆綁包以導出自己的遠程函式以在表達式內部使用。 要建立自定義捆綁包以導出您自己的遠程功能，請執行以下任務。 它演示了如何編寫自定義函式來使其輸入字串大寫。
+您可以建立自訂套件組合來匯出您自己的遠端函式，以便在運算式內使用。 若要建立自訂套件組合以匯出您自己的遠端函式，請執行下列工作。 它示範如何撰寫將輸入字串轉換為大寫的自訂函式。
 
-1. 為OSGi服務定義一個介面，該介麵包含要導出以供表達式管理器使用的方法。
-1. 在介面A上聲明方法，並使用@ServiceMethod注釋(com.adobe.exm.expaval.ServiceMethod)對其進行注釋。 表達式管理器忽略任何未注釋的方法。 ServiceMethod批注具有以下可選屬性，也可以指定這些屬性：
+1. 定義OSGi服務的介面，其中包含要匯出以供Expression Manager使用的方法。
+1. 在介面A上宣告方法，並使用@ServiceMethod註解(com.adobe.exm.expeval.ServiceMethod)標註這些方法。 Expression Manager會忽略任何未標註的方法。 ServiceMethod附註具有下列可選屬性，也可以指定：
 
-   1. **已啟用**:確定是否啟用此方法。 表達式管理器忽略禁用的方法。
-   1. **家庭ID**:指定方法的族（組）。 如果為空，則表達式管理器假定該方法屬於預設族。 沒有從中選擇函式的族（預設的族除外）的註冊表。 Expression Manager通過採用由各個捆綁包導出的所有函式指定的所有族ID的聯合來動態建立註冊表。 請確保他們在此處指定的ID是可讀的，因為它也顯示在表達式創作用戶介面中。
-   1. **displayName**:函式的可讀名稱。 此名稱用於創作用戶介面中的顯示目的。 如果為空，則表達式管理器使用函式的前置詞和local-name構建預設名稱。
-   1. **說明**:函式的詳細說明。 此說明用於創作用戶介面中的顯示目的。 如果為空，則表達式管理器使用函式的前置詞和local-name構建預設說明。
+   1. **已啟用**：判斷此方法是否已啟用。 Expression Manager會忽略停用的方法。
+   1. **familyId**：指定方法的系列（群組）。 如果為空，Expression Manager會假設方法屬於預設系列。 沒有從中選擇函式的系列登入（預設系列除外）。 Expression Manager會使用由各種組合匯出的所有函式所指定的所有系列ID的聯集，以動態方式建立登入。 請確定此處指定的ID可合理讀取，因為它也會顯示在運算式編寫使用者介面中。
+   1. **顯示名稱**：人類看得懂的函式名稱。 此名稱用於製作使用者介面中的顯示目的。 如果為空，Expression Manager會使用函式的前置詞和local-name來建構預設名稱。
+   1. **說明**：函式的詳細描述。 此說明用於製作使用者介面中的顯示用途。 如果為空，Expression Manager會使用函式的前置詞和local-name建構預設描述。
 
    ```java
    package mergeandfuse.com;
@@ -96,15 +96,15 @@ ht-degree: 1%
    }
    ```
 
-   也可以選擇使用@ServiceMethodParameter注釋(com.adobe.exm.expeval.ServiceMethodParameter)對方法的參數進行注釋。 此注釋僅用於指定在創作用戶介面中使用的方法參數的人可讀名稱和說明。 確保介面方法的參數和返回值屬於以下類型之一：
+   您也可以選擇使用@ServiceMethodParameter註解(com.adobe.exm.expeval.ServiceMethodParameter)標註方法的引數。 此註解僅用於指定在編寫使用者介面中使用的人類可讀名稱與方法引數說明。 確定介面方法的引數和傳回值屬於下列其中一種型別：
 
    * java.lang.String
    * java.lang.Character
-   * 查爾
+   * Char
    * java.lang.Boolean
    * 布林值
    * java.lang.Integer
-   * 整型
+   * Int
    * java.lang.Short
    * 短
    * java.lang.Byte
@@ -114,13 +114,13 @@ ht-degree: 1%
    * java.lang.Long
    * 長整數
    * java.lang.Float
-   * 浮動
+   * 浮點數
    * java.util.Calendar
    * java.util.Date
    * java.util.List
 
 
-1. 定義介面的實現，將其配置為OSGI服務，並定義以下服務屬性：
+1. 定義介面的實作、將其設定為OSGI服務，並定義以下服務屬性：
 
 ```jsp
 @org.apache.felix.scr.annotations.Properties({
@@ -129,7 +129,7 @@ ht-degree: 1%
   @org.apache.felix.scr.annotations.Property(name = "exm.service", boolValue = true)})
 ```
 
-exm.service=true條目指示表達式管理器，該服務包含適合在表達式中使用的遠程函式。 的 &lt;service_id> 值必須是有效的Java標識符（字母數字、$、_，沒有其他特殊字元）。 此值以REMOTE_關鍵字為前置詞，構成表達式內使用的前置詞。 例如，可在使用REMOTE_foo:bar()的表達式內引用帶有注釋方法bar()和服務屬性中的服務ID foo的介面。
+exm.service=true專案會指示Expression Manager此服務包含適用於運算式的遠端函式。 此 &lt;service_id> 值必須為有效的Java識別碼（英數、$、_且不含其他特殊字元）。 以REMOTE_關鍵字為前置詞的這個值，構成運算式內部使用的前置詞。 例如，使用REMOTE_foo：bar()可在運算式內參照具有註解方法bar()和服務屬性中服務ID的介面。
 
 ```java
 package mergeandfuse.com;
@@ -155,10 +155,10 @@ public class RemoteFuntionImpl implements RemoteFunction {
 }
 ```
 
-以下是要使用的示例存檔：
+以下是要使用的範例封存：
 
-* **GoodFunctions.jar.zip** 是包含示例遠程函式定義的包的jar檔案。 下載GoodFunctions.jar.zip檔案並解壓縮它以獲取jar檔案。
-* **GoodFunctions.zip** 是原始碼的包，用於定義自定義遠程函式並為其建立包。
+* **GoodFunctions.jar.zip** 是jar檔案，其套件包含範例遠端函式定義。 下載GoodFunctions.jar.zip檔案並將其解壓縮以取得jar檔案。
+* **GoodFunctions.zip** 是定義自訂遠端函式並為其建立套件組合的原始程式碼套件。
 
 GoodFunctions.jar.zip
 

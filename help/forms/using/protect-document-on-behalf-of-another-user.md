@@ -1,7 +1,7 @@
 ---
-title: Protect代表其他用戶的文檔
+title: 代表其他使用者Protect檔案
 seo-title: Protect a document on behalf of another user
-description: Protect代表其他用戶的文檔
+description: 代表其他使用者Protect檔案
 uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
@@ -14,27 +14,27 @@ ht-degree: 1%
 
 ---
 
-# Protect代表其他用戶的文檔 {#protect-a-document-on-behalf-of-another-user}
+# 代表其他使用者Protect檔案 {#protect-a-document-on-behalf-of-another-user}
 
-AEM Forms文檔安全Java SDK提供API，允許用戶帳戶代表其他用戶保護文檔，而不獲得編輯文檔的權限。 可以在工作流進程中或以寫程式方式將API用作文檔服務。 新API包括：
+AEM Forms Document Security Java SDK提供的API可讓使用者帳戶代表其他使用者保護檔案，而不會獲得編輯檔案的許可權。 您可以在工作流程流程中使用API，或以程式設計方式將API用作檔案服務。 新API包括：
 
-* **保護文檔使用** ProtectDocument API，用於代表將策略應用於文檔
+* **protectDocumentUse** ProtectDocument API可代表以下人員將原則套用至檔案：
 
-   另一個用戶帳戶。 用於應用策略的用戶帳戶的權限仍限於保護文檔。 它不擁有開啟和查看文檔的權利。 RMSecureDocumentResult protectDocument（Document inDoc, String documentName, String policySetName, String policyName, RMLocale，布爾型bExactMatchForNames）
+   另一個使用者帳戶。 用於套用原則的使用者帳戶的許可權仍限於保護檔案。 無法取得開啟和檢視檔案的許可權。 RMSecureDocumentResult protectDocument(Document inDoc， String documentName， String policySetName， String policyName， RMLocale locale， boolean bExactMatchForNames)
 
-* **createLicenseUse** 建立許可證API，以代表另一個用戶帳戶為策略建立許可證。 PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
-* **protectDocumentWithCoverPageUse** ProtectDocumentWithCoverPage API以應用策略並代表其他用戶向文檔添加封面。 用於應用策略的用戶帳戶的權限仍限於保護文檔。 它沒有開啟和查看文檔的權利。 RMSecureDocumentResult protectDocumentWithCoverPage（Document inDoc, String documentName, String policySetName, String policyName, Document coverDoc，布爾型bExactMatchForNames）
+* **createLicenseUse** CreateLicense API可代表其他使用者帳戶為原則建立授權。 PublishLicenseDTO createLicense(String policyId， String documentName， boolean logSecureDocEvent)
+* **protectDocumentWithCoverPageUse** ProtectDocumentWithCoverPage API可代表其他使用者套用原則並將封面頁新增至檔案。 用於套用原則的使用者帳戶的許可權仍限於保護檔案。 無法取得開啟和檢視檔案的權利。 RMSecureDocumentResult protectDocumentWithCoverPage（檔案inDoc、字串documentName、字串policySetName、字串policyName、檔案coverDoc、布林值bExactMatchForNames）
 
-## 使用API代表其他用戶保護文檔 {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
+## 使用API代表其他使用者保護檔案 {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
 
-執行以下步驟以代表其他用戶保護文檔，而不獲得編輯文檔的權限：
+執行以下步驟以代表其他使用者保護檔案，並且不取得編輯檔案的許可權：
 
-1. 建立策略集。 例如，PolicySet1。
-1. 在新建立的策略集中建立策略。 例如，PolicySet1中的Policy1。
-1. 建立具有角色Rights Management最終用戶的用戶。 例如User1。 為新建立的用戶提供查看使用Policy1保護的文檔的權限。
-1. 建立新角色. 例如，Role1。 為新建立的角色提供服務調用權限。 建立具有新建立角色的用戶。 例如，User2.您可以使用User2或管理員建立SDK連接並調用protectDocument服務。
+1. 建立原則集。 例如，PolicySet1。
+1. 在新建立的原則集中建立原則。 例如，PolicySet1中的Policy1。
+1. 建立具有角色Rights Management一般使用者的使用者。 例如，User1。 向新建立的使用者提供檢視使用Policy1保護的檔案的許可權。
+1. 建立新角色. 例如，Role1。 為新建立的角色提供「服務叫用」許可權。 建立具有新建立角色的使用者。 例如，User2。您可以使用User2或管理員來建立SDK連線並叫用protectDocument服務。
 
-   現在，您可以運行以下示例代碼來保護文檔，而無需向保護文檔的用戶提供編輯文檔的權限：
+   現在，您可以執行以下範常式式碼以保護檔案，而不向保護檔案的使用者提供編輯檔案的許可權：
 
    ```java
    import java.io.File;

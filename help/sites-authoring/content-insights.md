@@ -1,7 +1,7 @@
 ---
 title: 內容分析
 seo-title: Content Insight
-description: Content Insight使用Web分析和SEO建議提供有關頁面效能的資訊
+description: 內容深入分析會使用網頁分析和SEO建議來提供頁面效能的相關資訊
 seo-description: Content Insight provides information about page performance using web analytics and SEO recommendation
 uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
@@ -19,82 +19,82 @@ ht-degree: 2%
 
 # 內容分析{#content-insight}
 
-Content Insight使用Web分析和SEO建議提供有關頁面效能的資訊。 使用Content Insight可就如何修改頁面做出決策，或瞭解以前的更改如何更改效能。 對於您所創作的每個頁面，您都可以開啟內容透視來分析該頁面。
+「內容分析」會使用網頁分析和SEO建議來提供頁面效能的相關資訊。 使用「內容分析」來決定如何修改頁面，或瞭解先前的變更如何改變效能。 對於您編寫的每個頁面，您可以開啟「內容分析」來分析頁面。
 
 ![chlimage_1-311](assets/chlimage_1-311.png)
 
-Content Insight頁面的佈局會更改，以適應您所使用設備的螢幕尺寸和方向。
+「內容分析」頁面的版面會隨著您使用之裝置的熒幕維度和方向而改變。
 
 ## 報表資料
 
-「內容透視」頁包括使用Adobe SiteCatalyst、Adobe Target、Adobe Social和BrightEdge資料的報告：
+「內容分析」頁面包含使用Adobe SiteCatalyst、Adobe Target、Adobe Social和BrightEdge資料的報表：
 
-* SiteCatalyst:以下指標的報告可用：
+* SiteCatalyst：提供下列量度的報表：
 
-   * 頁面視圖
-   * 頁上花費的平均時間
+   * 頁面檢視
+   * 頁面平均逗留時間
    * 來源
 
-* 目標：有關您的頁面包括優惠的促銷活動的報告。
-* BrightEdge:頁面上的報告功能可提高頁面對搜索引擎的可見性，並建議應實施的功能。
+* Target：您的頁面包含選件的促銷活動報表。
+* BrightEdge：報告可改善搜尋引擎對頁面可見度的頁面功能，並建議應實作的功能。
 
-請參閱 [開啟分析和Recommendations頁](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page)。
+另請參閱 [開啟頁面的Analytics和Recommendations](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
 
-## 報告期
+## 報告期間
 
-報表顯示您控制的一段時間的資料。 在調整報告期間時，報表會自動刷新該期間的資料。 視覺提示指示頁面版本更改的時間，以便您可以比較每個版本的效能。
+報表會顯示您所控制的一段時間的資料。 當您調整報告時段時，報表會自動重新整理該時段的資料。 視覺提示會指出頁面版本變更的時間，讓您能夠比較每個版本的效能。
 
-您還可以指定報告資料的粒度，例如，您可以查看每日、每週、每月或每年的資料。
+您也可以指定報告資料的詳細程度，例如，您可以檢視每日、每週、每月或每年的資料。
 
-請參閱 [更改報告期](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period)。
+另請參閱 [變更報告期間](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
 
 >[!NOTE]
 >
->Content Insights報告要求您的管理員已AEM與SiteCatalyst、目標和BrightEdge整合。 請參閱 [與SightCatalyst整合](/help/sites-administering/adobeanalytics.md)。 [與Adobe Target整合](/help/sites-administering/target.md), [與BrightEdge整合](/help/sites-administering/brightedge.md)。
+>內容深入分析報表要求您的管理員已將AEM與SiteCatalyst、Target和BrightEdge整合。 另請參閱 [與SightCatalyst整合](/help/sites-administering/adobeanalytics.md)， [與Adobe Target整合](/help/sites-administering/target.md)、和 [與BrightEdge整合](/help/sites-administering/brightedge.md).
 
-## 視圖報告 {#the-views-report}
+## 檢視報告 {#the-views-report}
 
-「視圖」報告包含以下用於評估頁面流量的功能：
+「檢視」報表包含下列評估頁面流量的功能：
 
-* 報告期間某頁的視圖總數。
-* 報告期內視圖數的圖表：
+* 報告期間頁面檢視的總數。
+* 報告期間檢視次數的圖表：
 
-   * 視圖總數。
-   * 獨特的儲存器。
+   * 檢視總數。
+   * 不重複訪客。
 
 ![chlimage_1-312](assets/chlimage_1-312.png)
 
-## 頁面平均已參與報告 {#the-page-average-engaged-report}
+## 頁面平均參與報表 {#the-page-average-engaged-report}
 
-「Page Average Engabed 」報告包含以下用於評估頁面有效性的功能：
+「頁面平均參與」報表包含下列功能，可用來評估頁面成效：
 
-* 整個報告期間頁面保持開啟的平均時間。
-* 整個報告期間頁面視圖的平均長度的圖表。
+* 整個報告期間保持頁面開啟的平均時間。
+* 整個報告期間頁面檢視的平均長度圖表。
 
 ![chlimage_1-313](assets/chlimage_1-313.png)
 
-## 源報告 {#the-sources-report}
+## 來源報表 {#the-sources-report}
 
-「源」報告指示用戶如何從搜索引擎結果或使用已知URL導航到該頁。
+「來源」報表指出使用者如何導覽至頁面，例如從搜尋引擎結果或使用已知URL。
 
 ![chlimage_1-314](assets/chlimage_1-314.png)
 
-## 跳躍報告 {#the-bounces-report}
+## 彈回報表 {#the-bounces-report}
 
-「退貨」報表包含一個圖表，該圖表顯示在所選報告期間內某頁發生的退貨數。
+「跳出數」報表包含圖形，顯示所選報告期間某個頁面發生的跳出數。
 
 ![chlimage_1-315](assets/chlimage_1-315.png)
 
-## 市場活動報表 {#the-campaign-activity-report}
+## 行銷活動報表 {#the-campaign-activity-report}
 
-對於頁面處於活動狀態的每個市場活動，都會顯示一個名為 *市場活動名稱* 活動。 此報表顯示為其提供優惠的每個段的頁面印象和轉換。
+對於頁面有效的每個行銷活動，都會顯示一個報表，並命名為 *行銷活動名稱* 活動。 報表會顯示提供選件的每個區段的頁面曝光次數和轉換次數。
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
-## 徐Recommendations報導 {#the-seo-recommendations-report}
+## SEO Recommendations報表 {#the-seo-recommendations-report}
 
-SEORecommendations報告包含該頁面的BrightEdge分析結果。 報告是頁面功能的核對表，它指示頁面包含哪些功能，但不包括哪些功能，以使用搜索引擎最大化查找性。
+SEO Recommendations報表包含頁面BrightEdge分析的結果。 該報告是頁面功能的檢查清單，指出頁面包含和不包含哪些功能，以使用搜尋引擎最大化發現能力。
 
-報告使您能夠建立任務，以便改進頁面查找能力。 Recommendations指出，已經為執行該建議而制定了任務。 請參閱 [為SEORecommendations分配任務](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations)。
+報表可讓您建立任務，以便進行改善以改善頁面可發現性。 Recommendations會指出已建立實施建議的工作。 另請參閱 [指派SEO Recommendations的任務](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
 
 ![chlimage_1-317](assets/chlimage_1-317.png)

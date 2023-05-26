@@ -1,7 +1,7 @@
 ---
 title: Campaign Management
 seo-title: Campaign Management
-description: 營銷活動管理為數字營銷商提供了提供個性化內容的機會，從而為訪問者建立專用體驗。 它使您能夠通過Web、電子郵件和移動服務協調您的營銷活動，從而吸引您的訪問者。
+description: Campaign管理為數位行銷人員提供機會，以提供個人化內容，並為訪客建立專屬體驗。 它可讓您在網路、電子郵件和行動服務之間協調行銷活動，從而吸引訪客。
 seo-description: Campaign management provides digital marketers the opportunity to deliver personalized content and so create dedicated experiences for visitors. It allows you to orchestrate your marketing campaigns across the web, email and mobile services and so engage your visitors.
 uuid: 202d614b-a607-45de-8c24-1ee66b230315
 contentOwner: Chris Bohnert
@@ -19,79 +19,79 @@ ht-degree: 2%
 
 # Campaign Management{#campaign-management}
 
-營銷活動管理為數字營銷商提供了提供個性化內容的機會，從而為訪問者建立專用體驗。
+Campaign管理為數位行銷人員提供機會，以提供個人化內容，並為訪客建立專屬體驗。
 
-它使您能夠通過Web、電子郵件和移動服務協調您的營銷活動，從而吸引您的訪問者。 您可以建立內容、段訪問者、推送和升級特定用戶配置檔案的目標內容以及跨多個渠道管理市場活動。
+它可讓您在網路、電子郵件和行動服務之間協調行銷活動，從而吸引訪客。 您可以建立內容、區隔訪客、針對特定使用者設定檔推送和促銷目標式內容，以及管理多個管道中的行銷活動。
 
-本文檔描述了構成市場活動的各種要素。 以下文檔提供了更多詳細資訊：
+本檔案說明構成行銷活動的各種元素。 下列檔案提供更詳細的資訊：
 
-* [預告和策略](/help/sites-classic-ui-authoring/classic-personalization-campaigns-teasers-strategy.md)
-* [電子郵件營銷](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email.md)
+* [Teaser和策略](/help/sites-classic-ui-authoring/classic-personalization-campaigns-teasers-strategy.md)
+* [電子郵件行銷](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email.md)
 * [登陸頁面](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
-* [目標產品](/help/sites-classic-ui-authoring/classic-personalization-campaigns-target-offers.md)
-* [使用市場營銷活動經理](/help/sites-classic-ui-authoring/classic-personalization-campaigns-mktg-manager.md)
+* [Target優惠](/help/sites-classic-ui-authoring/classic-personalization-campaigns-target-offers.md)
+* [使用行銷活動管理員](/help/sites-classic-ui-authoring/classic-personalization-campaigns-mktg-manager.md)
 * [了解分段](/help/sites-classic-ui-authoring/classic-personalization-campaigns-segmentation.md)
-* [設定您的活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns-setting-up-your.md)
+* [設定您的行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns-setting-up-your.md)
 
-市場活動管理由多種要素組成：
+行銷活動管理由各種元素組成：
 
 * **品牌**
-在AEM中，品牌是頂級單元，並形成 
+在AEM中，品牌是頂層單位，並形成以下集合 
 **行銷活動**.
 
-* **市場活動**
-市場活動是個人的集合 
+* **行銷活動**
+行銷活動是個人的集合 
 **體驗**.
 
 * **體驗**
-這些重點內容形成了各種經驗，並呈現在 
-**接觸點**. 有幾種可用體驗：
+重點內容會形成各種體驗，並在呈現給訪客的 
+**接觸點**. 有多種體驗型別可供使用：
 
    * **Teaser**
-      [預告頁/段落](#teasers) 用於引導特定訪問者 **段** 關注他們興趣的內容。
+      [Teaser頁面/段落](#teasers) 用於引導特定訪客 **區段** 專注於客戶興趣的內容。
 
-      預告頁可以：
+      Teaser頁面可以：
 
-      * 為訪問者提供一系列可供選擇的選項
-      * 只顯示一個基於特定訪客段的預告段；例如，所顯示的預告段落可能取決於訪問者的年齡。
+      * 提供訪客可選擇的一系列選項
+      * 僅顯示以特定訪客區段為基礎的Teaser段落；例如，顯示的Teaser段落可能取決於訪客的年齡。
 
-      通常，預告頁是臨時操作，將持續一段特定時間，直到被下一個預告頁替換為止。
+      通常Teaser頁面是暫時性動作，會持續一段特定時間，直到被下一個Teaser頁面取代。
 
-   * **通訊**
+   * **電子報**
 
-      [電子郵件通信](#emailmarketing) 用於吸引用戶並鼓勵他們訪問您的網站。 這些通常以新聞稿的形式發送給您 **銷售線索** (通常分為 **清單**)。 **注：** Adobe並沒有計畫進一步增強這一能力。 建議是 [利用Adobe Campaign和AEM](/help/sites-administering/campaign.md)。
+      [電子郵件通訊](#emailmarketing) 用於吸引使用者並鼓勵他們造訪您的網站。 這些通常採用電子報的形式，傳送給您的 **銷售機會** (通常會分組到 **清單**)。 **注意：** Adobe不打算進一步增強此功能。 建議為 [善用Adobe Campaign以及與AEM的整合](/help/sites-administering/campaign.md).
 
    * **Adobe Target**
 
-      這允許與Adobe Target(以前是Test&amp;目標公司)整合，這為營銷人員提供了轉換網站優化工具，使他們能夠持續製作其線上內容並提供與客戶更相關的服務，從而實現更大的轉換。 Adobe Target為設計和執行test、建立受眾段和瞄準內容提供了直觀的介面 — 所有這一切都來自單個應用程式。
+      這允許與Adobe Target （先前稱為Test&amp;Target）整合，後者為行銷人員提供轉換網站最佳化工具，以及持續使其線上內容和選件與其客戶更相關的必要功能，從而提供更高的轉換。 Adobe Target提供直覺式介面，讓您透過單一應用程式設計和執行測試、建立受眾區段及鎖定目標內容。
 
 
 * **接觸點**
 
-   這些是訪問者與您的活動之間的聯繫點。 觸點與您建立的體驗相連。
+   這些是訪客與促銷活動之間的聯絡點。 接觸點會連結至您建立的體驗。
 
-   例如，對於預告，它是預告段落所在的內容頁面，對於新聞稿，它是郵寄清單。
+   例如，對於Teaser，這是Teaser段落所在的內容頁面；對於Newsletter，則是郵寄清單。
 
 * **銷售機會**
 
-   您收集的有關訪問者的資訊以及如何聯繫他們是您銷售線索的基礎。 **注：** Adobe並沒有計畫進一步增強這一能力。
+   您收集到的訪客相關資訊以及如何聯絡這些資訊會形成潛在客戶的基礎。 **注意：** Adobe不打算進一步增強此功能。
 
-   建議是 [利用Adobe Campaign和AEM](/help/sites-administering/campaign.md)。
+   建議為 [善用Adobe Campaign以及與AEM的整合](/help/sites-administering/campaign.md).
 
 * **清單**
 
-   銷售線索通常被分組到清單中，以便您可以對它們採取集體行動。 注： **注：** Adobe並沒有計畫進一步增強這一能力。
+   潛在客戶通常會分組到清單中，以便您對其採取集體行動。 注意： **注意：** Adobe不打算進一步增強此功能。
 
-   建議是 [利用Adobe Campaign和整合AEM。](/help/sites-administering/campaign.md)
+   建議為 [善用Adobe Campaign以及與AEM的整合。](/help/sites-administering/campaign.md)
 
 * **區段**
 
-   站點訪問者在訪問站點時有不同的興趣和目標。 根據網站上的活動、註冊的配置檔案資訊和其他網站上的活動等因素分析此資訊，有助於您定義網段。 然後，內容可以根據訪問者的需要和興趣根據他們匹配的段來特別針對訪問者的需求和興趣。
+   網站訪客造訪網站時，有不同的興趣和目標。 根據網站上活動、註冊的設定檔資訊和其他網站上的活動等因素來分析此專案，有助於您定義區段。 接著，您就可以根據訪客相符的區段，針對其需求和興趣特別鎖定內容。
 
 * **MCM**
 
-   市場營銷活動經理(MCM)是一個控制台，它允許您訪問建立和控制您的市場活動、品牌、經驗、聯繫點、銷售線索、清單、段和報表所需的所有功能。
+   行銷活動管理員(MCM)是一個主控台，可讓您存取建立和控制行銷活動、品牌、體驗、接觸點、銷售機會、清單、區段和報告所需的所有功能。
 
-   可以從不同位置訪問(標為 **市場活動**)，或使用，例如URL:
+   可從不同位置存取(標示為 **行銷活動**)，或以URL為例：
 
    `http://localhost:4502/libs/mcm/content/admin.html`

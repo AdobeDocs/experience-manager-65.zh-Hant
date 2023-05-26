@@ -1,7 +1,7 @@
 ---
-title: 元件旁載入
+title: 元件側載
 seo-title: Component Sideloading
-description: 當將網頁設計為簡單、單頁的應用時，社區元件旁載入非常有用，該應用根據站點訪問者選擇的內容動態更改顯示的內容
+description: 當網頁設計成簡單的單頁應用程式時，Communities元件旁載會很有用，該應用程式會根據網站訪客的選取內容動態地變更顯示的內容
 seo-description: Communities component sideloading is useful when a web page is designed as a simple, single page app that dynamically alters what is displayed depending on what is selected by the site visitor
 uuid: 8c9a5fde-26a3-4610-bc14-f8b665059015
 contentOwner: msm-service
@@ -17,50 +17,50 @@ ht-degree: 0%
 
 ---
 
-# 元件旁載入 {#component-sideloading}
+# 元件側載 {#component-sideloading}
 
 ## 概觀 {#overview}
 
-當將網頁設計為簡單的單頁應用時，社區元件旁載入非常有用，該應用會根據站點訪問者選擇的內容動態更改顯示的內容。
+當網頁設計成簡單的單頁應用程式時，Communities元件旁載會很有用，該應用程式會根據網站訪客的選取內容動態地變更顯示內容。
 
-如果頁面模板中不存在社區元件，而是在站點訪問者選擇後動態添加社區元件，則會完成此操作。
+當Communities元件不存在於頁面範本中，而是隨著網站訪客的選擇而動態新增時，即可完成這項工作。
 
-由於社交元件框架(SCF)具有輕量級的存在，因此只註冊在初始頁載入時存在的SCF元件。 要在頁面載入後註冊動態添加的SCF元件，必須調用SCF以「側載」該元件。
+由於社交元件架構(SCF)具有輕量型存在，因此只會註冊初始頁面載入時存在的SCF元件。 若要在頁面載入後註冊動態新增的SCF元件，必須叫用SCF來「側載」元件。
 
-當設計頁面以旁載入社區元件時，可以快取整個頁面。
+當頁面設計為側載Communities元件時，可以快取整個頁面。
 
-動態添加SCF元件的步驟如下：
+動態新增SCF元件的步驟如下：
 
-1. [將元件添加到DOM](#dynamically-add-component-to-dom)
+1. [將元件新增至DOM](#dynamically-add-component-to-dom)
 
-1. [側載元件](#sideload-by-invoking-scf) 使用兩種方法之一：
+1. [側載元件](#sideload-by-invoking-scf) 使用下列兩種方法之一：
 
 * [動態包含](#dynamic-inclusion)
-   * 啟動所有動態添加的元件
+   * 啟動所有動態新增的元件
 * [動態載入](#dynamic-loading)
-   * 按需添加一個特定元件
+   * 隨選新增一個特定元件
 
 >[!NOTE]
 >
->側裝 [非現有資源](scf.md#add-or-include-a-communities-component) 不支援。
+>側載 [非現有資源](scf.md#add-or-include-a-communities-component) 不受支援。
 
-## 將元件動態添加到DOM {#dynamically-add-component-to-dom}
+## 動態新增元件至DOM {#dynamically-add-component-to-dom}
 
-無論元件是動態包含的還是動態載入的，都必須先將其添加到DOM中。
+無論元件是以動態方式包含還是以動態方式載入，都必須先將其新增至DOM。
 
-添加SCF元件時，最常使用的標籤是DIV標籤，但也可以使用其他標籤。 由於SCF僅在頁面初始載入時檢查DOM，因此在顯式調用SCF之前，對DOM的添加不會被注意。
+新增SCF元件時，最常使用的標籤是DIV標籤，但也可能使用其他標籤。 因為SCF只會在頁面初次載入時檢查DOM，所以在明確叫用SCF之前，不會注意到DOM的這項新增。
 
-無論使用什麼標籤，元素至少必須通過包含以下兩個屬性來符合正常的SCF根元素模式：
+無論使用何種標籤，元素至少都必須包含下列兩個屬性，以符合一般的SCF根元素模式：
 
-* **資料元件ID**
+* **data-component-id**
 
-   添加的元件的有效路徑。
+   新增元件的有效路徑。
 
-* **資料scf分量**
+* **data-scf-component**
 
    元件的resourceType。
 
-下面是添加的注釋元件的一個示例：
+以下是新增註解元件的一個範例：
 
 ```xml
 <div
@@ -71,21 +71,21 @@ ht-degree: 0%
 </div>
 ```
 
-## 通過調用SCF進行側載 {#sideload-by-invoking-scf}
+## 透過叫用SCF進行側載 {#sideload-by-invoking-scf}
 
 ### 動態包含 {#dynamic-inclusion}
 
-動態包含使用引導請求，導致SCF檢查DOM並引導頁面上找到的所有SCF元件。
+動態包含使用啟動載入要求，該要求會導致SCF檢查DOM並啟動載入頁面上找到的所有SCF元件。
 
-要在頁面載入後隨時初始化SCF元件，只需觸發JQuery事件，如下所示：
+若要在頁面載入後隨時初始化SCF元件，只需引發JQuery事件，如下所示：
 
 `$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);`
 
 ### 動態載入 {#dynamic-loading}
 
-動態載入提供了對載入SCF元件的控制。
+動態載入可讓您控制如何載入SCF元件。
 
-不要引導在DOM中找到的所有SCF元件，而是可以指定特定的SCF元件來使用此JavaScript方法載入：
+您可以使用JavaScript方法指定特定SCF元件來載入，而不需啟動載入在DOM中找到的所有SCF元件：
 
 `SCF.addComponent(document.getElementById(*someId*));`
 

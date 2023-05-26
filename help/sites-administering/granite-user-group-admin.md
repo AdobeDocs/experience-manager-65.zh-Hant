@@ -1,7 +1,7 @@
 ---
-title: 花崗岩操作 — 用戶和組管理
+title: Granite作業 — 使用者和群組管理
 seo-title: Granite Operations - User and Group Administration
-description: 瞭解Granite用戶和組管理。
+description: 瞭解Granite使用者和群組管理。
 seo-description: Learn about Granite user and group administration.
 uuid: 7b6b7767-712c-4cc8-8d90-36f26280d6e3
 contentOwner: Guillaume Carlino
@@ -18,64 +18,64 @@ ht-degree: 5%
 
 ---
 
-# 花崗岩操作 — 用戶和組管理{#granite-operations-user-and-group-administration}
+# Granite作業 — 使用者和群組管理{#granite-operations-user-and-group-administration}
 
-當Granite採用JCR API規範的CRX Repository實現時，它擁有自己的用戶和組管理。
+由於Granite納入JCR API規格的CRX Repository實作，因此擁有自己的使用者和群組管理。
 
-此等賬目為本集團財務報表之 [AEM帳戶](/help/sites-administering/security.md) 如果/當從Granite管理部門訪問帳戶時，將反映與Granite管理部門進行的任何帳戶更改 [用AEM戶控制台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) (例如 `http://localhost:4502/useradmin`)。 從「用AEM戶」控制台，您還可以管理權限和其AEM他細節。
+這些帳戶是 [AEM帳戶](/help/sites-administering/security.md) 而且如果存取帳號，則會反映對Granite管理所做的任何帳號變更。 [AEM使用者主控台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) (例如： `http://localhost:4502/useradmin`)。 您也可以從AEM使用者主控台管理許可權和其他AEM細節。
 
-Granite用戶和組管理控制台均可從 **[工具](/help/sites-administering/tools-consoles.md)** 觸控優化用戶介面的控制台：
+Granite使用者和群組管理主控台都可從 **[工具](/help/sites-administering/tools-consoles.md)** 觸控最佳化UI的控制檯：
 
 ![chlimage_1-72](assets/chlimage_1-72a.png)
 
-選擇 **用戶** 或 **組** 從工具控制台開啟相應的控制台。 在這兩種操作中，您都可以先使用按一下框，然後從工具欄執行操作，或通過下面的連結開啟帳戶詳細資訊 **名稱**。
+選擇其中一項 **使用者** 或 **群組** 從「工具」主控台將開啟適當的主控台。 在這兩種模式中，您都可從工具列使用點按方塊然後動作，或透過下方的連結開啟帳戶詳細資訊，以採取動作 **名稱**.
 
-* [用戶管理](#user-administration)
+* [使用者管理](#user-administration)
 
    ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-   的 **用戶** 控制台清單：
+   此 **使用者** 主控台清單：
 
-   * 用戶名
-   * 用戶登錄名（帳戶名）
-   * 已給帳戶的任何標題
+   * 使用者名稱
+   * 使用者登入名稱（帳戶名稱）
+   * 已指定帳戶的任何標題
 
-* [組管理](#group-administration)
+* [群組管理](#group-administration)
 
    ![chlimage_1-74](assets/chlimage_1-74a.png)
 
-   的 **組** 控制台清單：
+   此 **群組** 主控台清單：
 
-   * 組名
-   * 組描述
-   * 組中的用戶/組數
+   * 群組名稱
+   * 群組說明
+   * 群組中的使用者/群組數量
 
-## 用戶管理 {#user-administration}
+## 使用者管理 {#user-administration}
 
-### 添加新用戶 {#adding-a-new-user}
+### 新增使用者 {#adding-a-new-user}
 
-1. 使用 **添加用戶** 表徵圖：
+1. 使用 **新增使用者** 圖示：
 
    ![](do-not-localize/chlimage_1-1.png)
 
-1. 的 **建立用戶** 將開啟窗體：
+1. 此 **建立使用者** 表單將會開啟：
 
    ![chlimage_1-75](assets/chlimage_1-75a.png)
 
-   在此，您可以輸入帳戶的用戶詳細資訊（大多數是標準的和不言自明的）:
+   您可以在此處輸入帳戶的使用者詳細資訊（大部分為標準且易於說明）：
 
    * **ID**
 
-      這是用戶帳戶的唯一標識。 它是必需的，不能包含空格。
+      這是使用者帳戶的唯一識別碼。 此為必填欄位，不得包含空格。
 
    * **電子郵件地址**
    * **密碼**
 
-      密碼是必需的。
+      密碼為必填。
 
    * **重新鍵入密碼**
 
-      這是必需的，因為確認密碼時需要它。
+      這是強制性的，因為確認密碼需要它。
 
    * **名字**
    * **姓氏**
@@ -93,144 +93,144 @@ Granite用戶和組管理控制台均可從 **[工具](/help/sites-administering
    * **帳戶設定**
 
       * **狀態**
-您可以將帳戶標籤為 
-**活動** 或 **非活動**。
+您可以將帳戶標幟為 
+**作用中** 或 **非使用中**.
    * **相片**
 
-      在這裡，您可以上傳照片以用作虛擬形象。
+      您可以在此處上傳像片以用作頭像。
 
       接受的檔案類型: `.jpg .png .tif .gif`
 
-      首選大小： `240x240px`
+      偏好大小： `240x240px`
 
    * **新增使用者至群組**
 
-      使用「選擇」下拉清單選擇用戶應是其成員的組。 選擇後，使用 **X** 的子菜單。
+      使用選擇下拉式清單來選取使用者應成為其成員的群組。 選取後，使用 **X** 儲存前取消選取的名稱。
 
    * **群組**
 
-      用戶當前是其成員的組清單。 使用 **X** 的子菜單。
+      使用者目前所屬的群組清單。 使用 **X** 儲存前取消選取的名稱。
 
 
-1. 定義用戶帳戶使用時：
+1. 當您已定義使用者帳戶時，請使用：
 
-   * **取消** 中止註冊。
-   * **保存** 完成註冊。 用戶帳戶的建立將通過消息確認。
+   * **取消** 以中止註冊。
+   * **儲存** 以完成註冊。 將使用訊息確認使用者帳戶的建立。
 
-### 編輯現有用戶 {#editing-an-existing-user}
+### 編輯現有使用者 {#editing-an-existing-user}
 
-1. 從用戶控制台中用戶名下的連結訪問用戶詳細資訊。
+1. 從使用者控制檯使用者名稱下的連結存取使用者詳細資訊。
 
-1. 您現在可以按照 [添加新用戶](#adding-a-new-user)。
+1. 您現在可以編輯詳細資訊，如下所示 [新增使用者](#adding-a-new-user).
 
-1. 從用戶控制台中用戶名下的連結訪問用戶詳細資訊。
+1. 從使用者控制檯使用者名稱下的連結存取使用者詳細資訊。
 
-1. 您現在可以按照 [添加新用戶](#adding-a-new-user)。
+1. 您現在可以編輯詳細資訊，如下所示 [新增使用者](#adding-a-new-user).
 
-### 更改現有用戶的密碼 {#changing-the-password-for-an-existing-user}
+### 變更現有使用者的密碼 {#changing-the-password-for-an-existing-user}
 
-1. 從用戶控制台中用戶名下的連結訪問用戶詳細資訊。
+1. 從使用者控制檯使用者名稱下的連結存取使用者詳細資訊。
 
-1. 您現在可以按照 [添加新用戶](#adding-a-new-user)。 下 **帳戶設定** 有一個連結 **更改密碼**。
+1. 您現在可以編輯詳細資訊，如下所示 [新增使用者](#adding-a-new-user). 下 **帳戶設定** 有一個連結 **變更密碼**.
 
    ![chlimage_1-76](assets/chlimage_1-76a.png)
 
-1. 的 **更改密碼** 對話框。 輸入並重新鍵入新密碼以及密碼。 使用 **確定** 確認更改。
+1. 此 **變更密碼** 對話方塊將會開啟。 輸入並重新輸入新密碼以及您的密碼。 使用 **確定** 以確認變更。
 
    ![chlimage_1-77](assets/chlimage_1-77a.png)
 
-   消息將確認密碼已更改。
+   訊息會確認密碼已變更。
 
-### 快速組分配 {#quick-group-assignment}
+### 快速群組指派 {#quick-group-assignment}
 
-1. 使用按一下框可標籤一個或多個用戶。
-1. 使用 **組** 表徵圖：
+1. 使用點按方塊標示一或多個使用者。
+1. 使用 **群組** 圖示：
 
    ![](do-not-localize/chlimage_1-2.png)
 
-   要開啟組選擇下拉清單：
+   若要開啟群組選擇下拉式清單：
 
    ![chlimage_1-78](assets/chlimage_1-78a.png)
 
-1. 在選擇框中，您可以選擇或取消選擇用戶帳戶應屬於的組。
+1. 在選取方塊中，您可以選取或取消選取使用者帳戶應屬於的群組。
 
-1. 分配或未分配組時，將根據需要使用：
+1. 當您已指派或未指派群組時，視需要使用：
 
-   * **取消** 中止更改
-   * **保存** 確認更改
+   * **取消** 中止變更
+   * **儲存** 確認變更
 
-### 刪除現有用戶詳細資訊 {#deleting-existing-user-details}
+### 刪除現有使用者詳細資訊 {#deleting-existing-user-details}
 
-1. 使用按一下框可標籤一個或多個用戶。
-1. 使用 **刪除** 表徵圖以刪除用戶詳細資訊：
+1. 使用點按方塊標示一或多個使用者。
+1. 使用 **刪除** 圖示可刪除使用者詳細資訊：
 
    ![](do-not-localize/chlimage_1-3.png)
 
-1. 系統將要求您確認刪除，然後會顯示一條消息，確認實際刪除已發生。
+1. 系統會要求您確認刪除，然後訊息會確認已實際刪除。
 
-## 組管理 {#group-administration}
+## 群組管理 {#group-administration}
 
-### 添加新組 {#adding-a-new-group}
+### 新增群組 {#adding-a-new-group}
 
-1. 使用「添加組」表徵圖：
+1. 使用「新增群組」圖示：
 
    ![](do-not-localize/chlimage_1-4.png)
 
-1. 的 **建立組** 將開啟窗體：
+1. 此 **建立群組** 表單將會開啟：
 
    ![chlimage_1-79](assets/chlimage_1-79a.png)
 
-   在此，您可以輸入組詳細資訊：
+   您可以在此處輸入群組詳細資料：
 
    * **ID**
 
-      這是組的唯一標識符。 這是必需的，不能包含空格。
+      這是群組的唯一識別碼。 此為必填欄位，不得包含空格。
 
    * **名稱**
 
-      組的名稱；它將顯示在組控制台中。
+      群組的名稱；將顯示在群組主控台中。
 
    * **說明**
 
-      組的說明。
+      群組的說明。
 
    * **新增成員到群組**
 
-      使用「選擇」下拉清單選擇要添加到組的用戶。 選擇後，使用 **X** 的子菜單。
+      使用選取下拉式清單來選取要新增至群組的使用者。 選取後，使用 **X** 儲存前取消選取的名稱。
 
    * **群組成員**
 
-      組中用戶的清單。 使用 **X** 的子菜單。
+      群組中的使用者清單。 使用 **X** 儲存前取消選取的名稱。
 
-1. 定義組後，請使用：
+1. 定義群組後，請使用：
 
-   * **取消** 中止註冊。
-   * **保存** 完成註冊。 將通過消息確認組的建立。
+   * **取消** 以中止註冊。
+   * **儲存** 以完成註冊。 將使用訊息確認群組的建立。
 
-### 編輯現有組 {#editing-an-existing-group}
+### 編輯現有群組 {#editing-an-existing-group}
 
-1. 從「組」控制台中組名稱下的連結訪問組詳細資訊。
+1. 從「群組」主控台中群組名稱下方的連結存取群組詳細資料。
 
-1. 您現在可以編輯和保存詳細資訊，如 [添加新組](#adding-a-new-group)。
+1. 您現在可以在中編輯並儲存詳細資料 [新增群組](#adding-a-new-group).
 
-### 複製現有組 {#copying-an-existing-group}
+### 複製現有群組 {#copying-an-existing-group}
 
-1. 使用按一下框來標籤組。
-1. 使用 **複製** 表徵圖以複製組詳細資訊：
+1. 使用點按方塊標示群組。
+1. 使用 **複製** 圖示以複製群組詳細資訊：
 
    ![](do-not-localize/chlimage_1-5.png)
 
-1. 的 **編輯組設定** 開啟。
+1. 此 **編輯群組設定** 將開啟表單。
 
-   組ID將與原始ID相同，但前置詞為 `Copy of`。 您必須編輯此項，因為ID不能包含空格。 所有其他細節都與原文相同。
+   群組ID將與原始的相同，但首碼為 `Copy of`. 您必須編輯此專案，因為ID不可包含空格。 所有其他詳細資料將與原始資料相同。
 
-   您現在可以編輯和保存詳細資訊，如 [添加新組](#adding-a-new-group)。
+   您現在可以在中編輯並儲存詳細資料 [新增群組](#adding-a-new-group).
 
-### 刪除現有組 {#deleting-an-existing-group}
+### 刪除現有群組 {#deleting-an-existing-group}
 
-1. 使用按一下框可標籤一個或多個組。
-1. 使用 **刪除** 表徵圖以刪除組詳細資訊：
+1. 使用點按方塊標示一或多個群組。
+1. 使用 **刪除** 圖示可刪除群組詳細資訊：
 
    ![](do-not-localize/chlimage_1-6.png)
 
-1. 系統將要求您確認刪除，然後會顯示一條消息，確認實際刪除已發生。
+1. 系統會要求您確認刪除，然後訊息會確認已實際刪除。

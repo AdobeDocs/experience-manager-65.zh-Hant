@@ -1,7 +1,7 @@
 ---
-title: 使用審閱和審閱摘要（顯示）
+title: 使用稽核和稽核摘要（顯示）
 seo-title: Using Reviews and Reviews Summary (Display)
-description: 將「審閱」和「審閱摘要」元件添加到頁面
+description: 新增複查和複查摘要元件至頁面
 seo-description: Adding the Reviews and Reviews Summary components to a page
 uuid: bd1ccee7-b26b-4a27-b1ea-89609f5080af
 contentOwner: Guillaume Carlino
@@ -17,229 +17,229 @@ ht-degree: 2%
 
 ---
 
-# 使用審閱和審閱摘要（顯示） {#using-reviews-and-reviews-summary-display}
+# 使用稽核和稽核摘要（顯示） {#using-reviews-and-reviews-summary-display}
 
-的 `Reviews` 元件是 [注釋](comments.md) 和 [評級](rating.md) 元件可供使用。
+此 `Reviews` 元件是以下專案的組合： [註解](comments.md) 和 [評等](rating.md) 元件可供使用。
 
-的 `Reviews Summary (Display)` 元件提供活動或關閉實例的摘要 `Reviews` 用於在站點的其他位置顯示的元件。
+此 `Reviews Summary (Display)` 元件提供作用中或已關閉之執行個體的摘要， `Reviews` 在網站上其他位置顯示的元件。
 
 >[!NOTE]
 >
->不支援匿名發佈審閱。 站點訪問者必須註冊（成為成員）並登錄以參與。 已簽署的訪問者可隨時更新其審查。
+>不支援評論的匿名張貼。 網站訪客必須註冊（成為會員）並登入才能參與。 已登入的訪客可隨時更新其評論。
 
-## 將審閱添加到頁面 {#adding-a-review-to-a-page}
+## 新增複查至頁面 {#adding-a-review-to-a-page}
 
-添加 `Reviews` 在作者模式下對頁面的元件，使用元件瀏覽器查找 `Communities / Reviews` 並將其拖到頁面上，如相對於要供用戶查看的功能的位置。
+若要新增 `Reviews` 元件至作者模式下的頁面，請使用元件瀏覽器來尋找 `Communities / Reviews` 並將其拖曳至頁面上某個位置，例如與功能相對的位置以供使用者檢閱。
 
-如需必要資訊，請訪問 [社區元件基礎](basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
 
-當 [所需的客戶端庫](reviews-basics.md#essentials-for-client-side) 包括，這是 `Reviews` 元件。
+當 [必要的使用者端程式庫](reviews-basics.md#essentials-for-client-side) 包含，這就是 `Reviews` 元件隨即出現。
 
-![建立審閱](assets/create-review.png)
+![create-review](assets/create-review.png)
 
-## 配置審閱 {#configuring-reviews}
+## 設定稽核 {#configuring-reviews}
 
-選取已放置的 `Reviews` 要訪問和選擇的元件 `Configure` 表徵圖。
+選取已放置的 `Reviews` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
 
-![配置 — 新建](assets/configure-new.png)
+![configure-new](assets/configure-new.png)
 
-在 **[!UICONTROL 允許的評級]** 頁籤，指定要顯示給成員的評級的完整清單。 第一個評級應是總體/一般評級，因為它是提供對 `Review Summary (Display)` 元件。 預設配置中的後兩個分級應指定不同的標題，而不是「分級1」或「分級2」。
+在 **[!UICONTROL 允許的評等]** 索引標籤中，指定要顯示給成員的完整評等清單。 第一個評等應該是整體/一般評等，因為它是提供以下專案的平均評等的評等： `Review Summary (Display)` 元件。 預設設定中的下兩個評等應該給予不同的標題，「Subrating 1」或「Subrating 2」除外。
 
-![允許評級](assets/configure-review1.png)
+![允許評等](assets/configure-review1.png)
 
 * **[!UICONTROL 允許的評等]**
 
-   成員可以從中選擇的評級清單。
+   成員可選擇的評等清單。
 
-   使用上箭頭、下箭頭和刪除按鈕修改可見的選擇。
+   使用向上鍵、向下鍵和刪除按鈕來修改可見選取專案。
 
-   按一下 **[!UICONTROL 添加項]** 添加其他評級選項。
+   按一下 **[!UICONTROL 新增專案]** 以新增其他評等選擇。
 
-在 **[!UICONTROL 所需評級]** 的子菜單。 **[!UICONTROL 允許的評級]** 需要評級的。 如果僅在「允許的評級」頁籤上指定了項，則成員提交時可能不標籤該項。
+在 **[!UICONTROL 必要的評等]** 標籤，從清單重新輸入專案 **[!UICONTROL 允許的評等]** 需要評等的。 如果專案僅在「允許的評等」標籤上指定，則當成員提交時，該專案可能會保持未標籤狀態。
 
-在網站上，必需評級標有星號。 如果需要某個項，並且未標籤，則會向成員顯示一條消息，並且在標籤所有必需評級之前拒絕提交。
+在網站上，必要的評等會以星號標示。 如果專案為必要專案且未標籤，則會向成員顯示訊息，並拒絕提交，直到標籤完所有必要的評等為止。
 
-![要求評級](assets/configure-review2.png)
+![required-rating](assets/configure-review2.png)
 
 * **[!UICONTROL 必要評等]**
 
-   允許評級的子集，指示需要哪些評級。
+   允許的評等子集，指出所需的評等。
 
-   使用上箭頭、下箭頭和刪除按鈕修改可見的選擇。
+   使用向上鍵、向下鍵和刪除按鈕來修改可見選取專案。
 
-   按一下 **[!UICONTROL 添加項]** 來添加其他響應選項。
+   按一下 **[!UICONTROL 新增專案]** 以新增其他回應選擇。
 
 >[!NOTE]
 >
->如果在 **[!UICONTROL 所需評級]** 頁籤 **[!UICONTROL 允許的評級]** 頁籤，則不會將其包含在要評級的項目中。
+>若專案輸入於 **[!UICONTROL 必要的評等]** 標籤上未指定的 **[!UICONTROL 允許的評等]** 索引標籤中，則不會包含在要評級的專案中。
 
-在 **[!UICONTROL 評論]** 頁籤，指定處理審閱的方式。
+在 **[!UICONTROL 評論]** 索引標籤中，指定如何處理稽核。
 
 ![評論](assets/configure-review3.png)
 
-* **[!UICONTROL 允許答復]**
+* **[!UICONTROL 允許回覆]**
 
-   如果選中，則允許回複評論。 未選中預設值。
+   如果勾選，則允許回複稽核。 預設為未勾選。
 
 * **[!UICONTROL 已關閉]**
 
-   如果選中，則審閱將關閉新審閱和回復。 未選中預設值。
+   如果勾選，則新評論和回覆將關閉審閱。 預設為未勾選。
 
 * **[!UICONTROL 允許檔案上傳]**
 
-   如果選中，則允許上載檔案附件以供審閱。 未選中預設值。
+   如果勾選，則允許上傳檔案附件以供稽核。 預設為未勾選。
 
 * **最大檔案大小**
 
-   僅在 **[!UICONTROL 允許檔案上載]** 的子菜單。 此欄位限制上載檔案的大小（以位元組為單位）。 預設為10 MB。
+   相關條件僅限於 **[!UICONTROL 允許檔案上傳]** 已勾選。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為10 MB。
 
 * **[!UICONTROL 訊息長度上限]**
 
-   可輸入到文本框中的最大字元數。 預設為4096個字元。
+   可在文字方塊中輸入的最大字元數。 預設為4096個字元。
 
 * **[!UICONTROL 允許的檔案類型]**
 
-   僅在 **[!UICONTROL 允許檔案上載]** 的子菜單。 以逗號分隔的檔案副檔名清單，其中帶有「點」分隔符。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案類型，則不允許指定那些未指定的檔案類型。 未指定預設值，因此允許所有檔案類型。
+   相關條件僅限於 **[!UICONTROL 允許檔案上傳]** 已勾選。 以「點」分隔符號分隔的副檔名清單（以逗號分隔）。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 預設為none，因此允許所有檔案型別。
 
 * **[!UICONTROL RTF 編輯器]**
 
-   如果選中，則可以使用標籤輸入帖子。 未選中預設值。
+   如果勾選，可輸入帶有標籤的貼文。 預設為未勾選。
 
 * **[!UICONTROL 允許投票]**
 
-   如果選中，則包括主題的投票功能。 未選中預設值。
+   如果勾選，請為主題加入投票功能。 預設為未勾選。
 
-在 **[!UICONTROL 用戶審核]** 頁籤，指定如何管理已過帳的審閱。 有關詳細資訊，請參見 [調節用戶生成的內容](moderate-ugc.md)。
+在 **[!UICONTROL 使用者稽核]** 索引標籤中，指定如何管理已發佈的稽核。 如需詳細資訊，請參閱 [稽核使用者產生的內容](moderate-ugc.md).
 
-![用戶審核](assets/configure-review4.png)
+![user-moderation](assets/configure-review4.png)
 
 * **[!UICONTROL 事先審核]**
 
-   如果選中，則必須先批准審閱，然後才會將審閱顯示在發佈網站上。 未選中預設值。
+   如果勾選，則必須先核准稽核，評論才會出現在發佈網站上。 預設為未勾選。
 
-* **[!UICONTROL 刪除審閱]**
+* **[!UICONTROL 刪除評論]**
 
-   如果選中，則發佈審閱的成員將能夠刪除審閱。 未選中預設值。
+   如果勾選，發表評論的成員將獲得刪除的能力。 預設為未勾選。
 
-* **[!UICONTROL 拒絕審閱]**
+* **[!UICONTROL 拒絕評論]**
 
-   如果選中，允許審閱人拒絕審閱。 未選中預設值。
+   如果勾選，則允許版主拒絕評論。 預設為未勾選。
 
-* **[!UICONTROL 關閉/重新開啟審閱]**
+* **[!UICONTROL 關閉/重新開啟檢閱]**
 
-   如果選中，允許審閱人關閉並重新開啟審閱。 未選中預設值。
+   如果勾選，則允許版主關閉和重新開啟檢閱。 預設為未勾選。
 
-* **[!UICONTROL 標籤審閱]**
+* **[!UICONTROL 標幟評論]**
 
-   如果選中，允許成員將審閱標籤為不適當。 未選中預設值。
+   如果勾選，則允許成員將稽核標籤為不適當。 預設為未勾選。
 
-* **[!UICONTROL 標誌原因清單]**
+* **[!UICONTROL 標幟原因清單]**
 
-   如果選中，則允許成員從下拉清單中選擇將審閱標籤為不適當的原因。 未選中預設值。
+   如果勾選，則允許成員從下拉式清單中選擇將評論標籤為不適當的原因。 預設為未勾選。
 
-* **[!UICONTROL 自定義標誌原因]**
+* **[!UICONTROL 自訂標幟原因]**
 
-   如果選中，允許成員輸入將審閱標籤為不適當的自己原因。 未選中預設值。
+   如果勾選，則允許成員輸入他們自己的理由，將稽核標籤為不適當。 預設為未勾選。
 
-* **[!UICONTROL 審核閾值]**
+* **[!UICONTROL 稽核臨界值]**
 
-   輸入成員在通知審閱人之前必須標籤審閱的次數。 預設值為一次(1)。
+   輸入在通知版主之前，成員必須標幟稽核的次數。 預設為一次(1)。
 
-* **[!UICONTROL 標籤限制]**
+* **[!UICONTROL 標幟限制]**
 
-   輸入在將審閱隱藏在公共視圖之前必須標籤的次數。 此數字必須大於或等於 **[!UICONTROL 審核閾值]**。 預設值為5。
+   輸入將評論從公開檢視隱藏之前必須標幟的次數。 此數字必須大於或等於 **[!UICONTROL 稽核臨界值]**. 預設值為5。
 
-### 將審閱摘要（顯示）添加到頁面 {#adding-a-review-summary-display-to-a-page}
+### 新增檢閱摘要（顯示）至頁面 {#adding-a-review-summary-display-to-a-page}
 
-添加 `Reviews Summary (Display)` 在作者模式下將元件定位到頁面
+若要新增 `Reviews Summary (Display)` 元件至作者模式下的頁面，找到元件
 
 * `Communities / Reviews Summary (Display)`
 
-並將其拖到要顯示活動或關閉審閱摘要的頁面上。
+並將其拖曳至將顯示作用中或已關閉評論之摘要的頁面上。
 
-如需必要資訊，請訪問 [社區元件基礎](basics.md)。
+如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
 
-當 [所需的客戶端庫](reviews-basics.md#essentials-for-client-side) 包括，這是 `Reviews Summary (Display)`元件。
+當 [必要的使用者端程式庫](reviews-basics.md#essentials-for-client-side) 包含，這就是 `Reviews Summary (Display)`元件隨即出現。
 
-![審閱摘要](assets/configure-review5.png)
+![review-summary](assets/configure-review5.png)
 
 >[!NOTE]
 >
->「平均值」反映匯總的審閱的「允許評級」頁籤上列出的第一項的投票。
+>「平均」反映所彙總稽核的「允許評等」標籤上所列第一個專案的票數。
 
-### 配置審閱摘要（顯示） {#configuring-reviews-summary-display}
+### 設定稽核摘要（顯示） {#configuring-reviews-summary-display}
 
-選取已放置的 `Reviews Summary (Display)` 要訪問和選擇的元件 `Configure` 表徵圖。
+選取已放置的 `Reviews Summary (Display)` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
 
-![配置](assets/configure-new.png)
+![設定](assets/configure-new.png)
 
-在 **[!UICONTROL 審閱摘要]** 頁籤
+在 **[!UICONTROL 稽核摘要]** 標籤
 
-![審閱摘要](assets/configure-review6.png)
+![review-summary](assets/configure-review6.png)
 
 * `Review Path`
 
-   輸入或瀏覽至 `reviews`元件，例如，如果添加到的Web頁 [Geometrixx參與網站，](getting-started.md) 路徑是：
+   輸入或瀏覽至放置的執行個體 `reviews`要摘要的元件，例如，如果新增至 [Geometrixx參與網站，](getting-started.md) 路徑會是：
 
    `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
 * `Include histogram`
 
-   如果選中，則包括條形圖的顯示，該條形圖指示摘要中每個星級分數的多少。 未選中預設值。
+   如果勾選，則包括橫條圖的顯示，指出所摘要的評論中有多少個星級評等。 預設為未勾選。
 
-### 更改為自定義審閱類型 {#changing-to-a-custom-review-type}
+### 變更為自訂稽核型別 {#changing-to-a-custom-review-type}
 
-「審閱」(Reviews)元件使用「注釋系統」(Comment System)。
+「稽核」元件使用「註解系統」。
 
-通過更改注釋資源類型，注釋系統將不再使用預設值生成注釋實例，而是使用開發人員自定義（擴展）的注釋實例。
+透過變更「註解資源型別」，註解系統不再使用預設值產生註解的執行個體，而是由開發人員自訂（擴充）的執行個體。
 
-在已知自定義資源類型後，輸入 [設計模式](../../help/sites-authoring/default-components-designmode.md) 並按兩下放置的 `Comments` 的子菜單。
+知道自訂資源型別後，請輸入 [設計模式](../../help/sites-authoring/default-components-designmode.md) 並連按兩下置入的 `Comments` 元件以開啟具有額外索引標籤的對話方塊。
 
-在 **[!UICONTROL 資源類型]** 頁籤，為 `Comments or Voting` 元件：
+在 **[!UICONTROL 資源型別]** 索引標籤中，為以下專案的新執行個體指定自訂resourceType `Comments or Voting` 元件：
 
-![評語投票](assets/configure-review7.png)
+![評論投票](assets/configure-review7.png)
 
 * **[!UICONTROL 評論資源類型]**
 
-   導航到擴展的resourceType `comment`/apps中的元件（單個注釋）。 比如說， `/apps/social/commons/components/hbs/comments/comment`。
+   導覽至擴充功能的resourceType `comment`/apps中的元件（單一註釋）。 例如， `/apps/social/commons/components/hbs/comments/comment`.
 
-   此資源將標識訪問者發佈注釋時建立的UGC的resourceType。
+   此資源將識別訪客發表評論時建立的UGC的resourceType。
 
 * **[!UICONTROL 投票資源類型]**
 
-   導航到擴展的resourceType `voting`/apps中的元件。 比如說， `/apps/social/components/hbs/voting`。
+   導覽至擴充功能的resourceType `voting`/apps中的元件。 例如， `/apps/social/components/hbs/voting`.
 
-   此資源將標識訪問者投票時建立的UGC的資源類型。
+   此資源將識別訪客張貼投票時建立的UGC資源型別。
 
-* **[!UICONTROL 注釋系統資源類型]**
+* **[!UICONTROL 註解系統資源型別]**
 
-   導航到擴展的resourceType `comments`/apps中的元件（注釋系統）。 除非頁面模板，否則保留為空 [動態包](scf.md#add-or-include-a-communities-component) 在基礎指令碼中添加註釋系統，而不是作為資源（注釋節點）添加到頁面。 通過閱讀 [{{include}} 幫助](handlebars-helpers.md#include)。
+   導覽至擴充功能的resourceType `comments`/apps中的元件（註解系統）。 除非頁面範本，否則保留空白 [動態包含](scf.md#add-or-include-a-communities-component) 基礎指令碼中的「註解系統」，而非以資源（註解節點）的形式新增至頁面。 閱讀以下內容以瞭解更多資訊： [{{include}} 協助程式](handlebars-helpers.md#include).
 
-## 站點訪問者體驗 {#site-visitor-experience}
+## 網站訪客體驗 {#site-visitor-experience}
 
-### 審閱人和管理員 {#moderators-and-administrators}
+### 版主和管理員 {#moderators-and-administrators}
 
-當登錄用戶具有版主或管理員權限時，他們能夠執行元件配置允許的審核任務，而不管是誰建立了審閱。
+當登入的使用者具有版主或管理員許可權時，無論審閱的作者是誰，他們都能執行元件設定所允許的版主任務。
 
 ### 成員 {#members}
 
-站點訪問者登錄時，根據配置的不同，他們可以：
+網站訪客登入時，根據設定，他們可能：
 
-* 發佈新審閱
-* 編輯自己的審閱
-* 刪除其自己的審閱
-* 標籤其他審閱評論
+* 發表新評論
+* 編輯自己的評論
+* 刪除自己的評論
+* 標示其他人的評論意見
 
-每個成員只允許一個分級。 會員可隨時更改其評級。
+每個成員只允許一個評等。 會員可隨時變更其評等。
 
 ### 匿名 {#anonymous}
 
-未登錄的站點訪問者只能閱讀已發佈的評論、翻譯（如果支援），但不能添加評級或評論，也不能標籤其他評論評論。
+未登入的網站訪客只能閱讀張貼的評論，並在支援時進行翻譯，但不得新增評等或評論，亦不得標示其他人的評論意見。
 
 ## 其他資訊 {#additional-information}
 
-有關 [審閱基本內容](reviews-basics.md) 頁面。
+如需詳細資訊，請參閱 [檢閱Essentials](reviews-basics.md) 適用於開發人員的頁面。
 
-有關審核已發佈的注釋，請參閱 [調節用戶生成的內容](moderate-ugc.md)。
+有關張貼的評論的稽核，請參閱 [稽核使用者產生的內容](moderate-ugc.md).
 
-有關已發佈注釋的翻譯，請參閱 [翻譯用戶生成的內容](translate-ugc.md)。
+如需已張貼評論的翻譯，請參閱 [翻譯使用者產生的內容](translate-ugc.md).

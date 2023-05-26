@@ -1,6 +1,6 @@
 ---
 title: 建立 Launch
-description: 建立啟動以啟用更新現有網頁的新版本以供將來激活。 建立「啟動」時，指定標題和源頁。
+description: 建立啟動項，以更新現有網頁的新版本，以供日後啟用。 建立Launch時，您可以指定標題和來源頁面。
 uuid: e67608a9-e6c9-42f3-bd1d-63a5fa87ae18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,41 +18,41 @@ ht-degree: 15%
 
 # 建立 Launch{#creating-launches}
 
-建立啟動以啟用更新現有網頁的新版本以供將來激活。 建立「啟動」時，可指定標題和源頁：
+建立啟動項，以更新現有網頁的新版本，以供日後啟用。 建立Launch時，您可以指定標題和來源頁面：
 
-* 標題將出現在 **側腳**&#x200B;從那裡，作者們可以接觸到他們，對他們進行工作。
-* 預設情況下，源頁面的子頁面將包括在啟動中。 如果需要，只能使用源頁。
-* 預設情況下， [即時拷貝](/help/sites-administering/msm.md) 在源頁更改時自動更新啟動頁。 可以指定建立靜態副本以防止自動更改。
+* 標題會顯示在 **Sidekick**，作者可從中存取縮圖，進而加以處理。
+* 來源頁面的子頁面預設會包含在啟動中。 您可以視需要只使用來源頁面。
+* 依預設， [即時副本](/help/sites-administering/msm.md) 當來源頁面變更時，會自動更新啟動頁面。 您可以指定建立靜態副本以防止自動變更。
 
 (可選) 您可以指定 **啟動日期**  (和時間)，以定義啟動頁面要升級和啟動的時間。不過，「 **啟動日期** 」只會搭配「生產就緒 **」旗標運作(請** 參閱編輯啟動設定 [](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration));要讓動作實際自動發生，必須同時設定。
 
 ## 建立啟動 {#creating-a-launch}
 
-以下過程建立啟動。
+下列程式會建立啟動。
 
-1. 開啟網站管理頁([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))。
-1. 按一下 **新建……** 然後 **新建啟動……**。
-1. 在 **建立啟動** 對話框，指定以下屬性的值：
+1. 開啟網站管理頁面([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))。
+1. 按一下 **新增……** 則 **新增啟動項……**.
+1. 在 **建立啟動項** 對話方塊中，指定下列屬性的值：
 
-   * **啟動標題**:啟動的名稱。 該名稱對作者應有意義。
-   * **「源」頁**:要為其建立啟動的頁面的路徑。 預設情況下，所有子頁都包括在內。
-   * **排除子頁**:選擇此選項僅為源頁面而不是子頁面建立啟動。 預設情況下，未選擇此選項。
-   * **保持同步**:選擇此選項可在源頁面更改時自動更新啟動頁面的內容。 這是通過使發射 [即時拷貝](/help/sites-administering/msm.md)。
-   * **啟動日期**:激活啟動副本的日期和時間(取決於 **生產就緒** 標誌；見 [啟動 — 事件順序](/help/sites-authoring/launches.md#launches-the-order-of-events))。
+   * **啟動項標題**：啟動項的名稱。 此名稱對作者應有意義。
+   * **來源頁面**：要建立啟動項的頁面路徑。 依預設，會包含所有子頁面。
+   * **排除子頁面**：選取此選項可僅針對來源頁面而非子頁面建立啟動。 依預設，不會選取此選項。
+   * **保持同步**：選取此選項，可在來源頁面變更時自動更新啟動頁面的內容。 這是透過將啟動設為 [即時副本](/help/sites-administering/msm.md).
+   * **啟動日期**：啟動副本的啟用日期和時間(取決於 **生產就緒** 標幟；請參閱 [啟動 — 事件順序](/help/sites-authoring/launches.md#launches-the-order-of-events))。
 
    ![chlimage_1-99](assets/chlimage_1-99a.png)
 
 1. 按一下&#x200B;**建立**。
 
-## 刪除啟動 {#deleting-a-launch}
+## 刪除啟動項 {#deleting-a-launch}
 
-您也可以刪除啟動。
+您也可以刪除啟動項。
 
-1. 在 [啟動控制台](/help/sites-classic-ui-authoring/classic-launches.md)，選擇所需的啟動。
+1. 在 [啟動主控台](/help/sites-classic-ui-authoring/classic-launches.md)，選取所需的啟動。
 1. 按一下 **刪除**  — 需要確認：
 
    ![chlimage_1-100](assets/chlimage_1-100a.png)
 
    >[!CAUTION]
    >
-   >刪除嵌套啟動時，應先刪除較低級別。
+   >刪除巢狀啟動時，您應該先刪除較低層級。
