@@ -1,18 +1,18 @@
 ---
-title: 了解搭配使用 GraphQL 與 AEM - 範例內容和查詢
-description: 透過探索範例內容和查詢，了解如何搭配使用 GraphQL 與 AEM 以提供無周邊內容。
+title: 瞭解如何搭配AEM使用GraphQL — 範例內容和查詢
+description: 瞭解如何搭配AEM使用GraphQL，透過探索範例內容和查詢來提供Headless內容。
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: 85f8da2a30e1bb5b78cbb36cd9b79939dd913251
+source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
 workflow-type: tm+mt
 source-wordcount: '1586'
-ht-degree: 92%
+ht-degree: 73%
 
 ---
 
 # 了解搭配使用 GraphQL 與 AEM - 範例內容和查詢 {#learn-graphql-with-aem-sample-content-queries}
 
-透過探索範例內容和查詢，了解如何搭配使用 GraphQL 與 AEM 以提供無周邊內容。
+瞭解如何搭配AEM使用GraphQL，透過探索範例內容和查詢來提供Headless內容。
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ ht-degree: 92%
 >* [與內容片段搭配使用的 AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
 
 
-若要開始使用 GraphQL 查詢，及了解它們如何與 AEM 內容片段搭配使用，查看一些實際範例會有所幫助。
+若要開始使用GraphQL查詢以及它們如何使用AEM內容片段，檢視一些實用的範例會有所幫助。
 
 如需相關幫助，請參閱：
 
@@ -38,7 +38,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->視您的執行個體而定，您可以直接存取 ](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)AEM GraphQL API 包含的 GraphiQL 介面[以提交和測試查詢。
+>根據您的執行個體，您可以直接存取 [AEM GraphQL API隨附的GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface) 用於提交和測試查詢。
 >
 >例如：`http://localhost:4502/content/graphiql.html`
 
@@ -48,11 +48,11 @@ ht-degree: 92%
 
 ### 範例查詢 - 所有可用的結構描述和資料類型 {#sample-all-schemes-datatypes}
 
-這將傳回所有可用結構描述的所有 `types`。
+此範例查詢會傳回所有 `types` 用於所有可用的結構描述。
 
 **範例查詢**
 
-```xml
+```graphql
 {
   __schema {
     types {
@@ -65,7 +65,7 @@ ht-degree: 92%
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "__schema": {
@@ -141,10 +141,10 @@ ht-degree: 92%
 
 ### 範例查詢 - 關於所有城市的所有資訊 {#sample-all-information-all-cities}
 
-若要擷取關於所有城市的所有資訊，您可以使用非常基本的查詢：
+若要擷取有關所有城市的所有資訊，您可以使用基本查詢：
 **範例查詢**
 
-```xml
+```graphql
 {
   cityList {
     items
@@ -152,9 +152,9 @@ ht-degree: 92%
 }
 ```
 
-執行時，系統會自動擴展查詢以包括所有欄位：
+執行時，系統會自動展開查詢以包含所有欄位：
 
-```xml
+```graphql
 {
   cityList {
     items {
@@ -169,7 +169,7 @@ ht-degree: 92%
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -224,11 +224,11 @@ ht-degree: 92%
 
 ### 範例查詢 - 所有城市的名稱 {#sample-names-all-cities}
 
-這是簡單查詢可傳回 `city` 結構描述中所有項目的 `name`。
+此範例查詢是直接查詢，可傳回 `name`中所有專案的 `city`結構描述。
 
 **範例查詢**
 
-```xml
+```xmgraphqll
 query {
   cityList {
     items {
@@ -240,7 +240,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -274,11 +274,11 @@ query {
 
 ### 範例查詢 - 單一特定城市片段 {#sample-single-specific-city-fragment}
 
-這個查詢可傳回存放庫中特定位置之單一片段項目的詳細資訊。
+此範例查詢是返回存放庫中特定位置單一片段專案詳細資料的查詢。
 
 **範例查詢**
 
-```xml
+```graphql
 {
   cityByPath (_path: "/content/dam/sample-content-fragments/cities/berlin") {
     item {
@@ -294,7 +294,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "cityByPath": {
@@ -315,11 +315,11 @@ query {
 
 ### 範例查詢 - 所有具有名稱變化的城市 {#sample-cities-named-variation}
 
-如果您為 `city`柏林建立名為「柏林中心」(`berlin_centre`) 的新變化，那麼您可以使用查詢傳回該變化的詳細資訊。
+如果您建立名為「柏林中心」的變數(`berlin_centre`)，適用於 `city` 柏林，您可以使用查詢來傳回變數的詳細資訊。
 
 **範例查詢**
 
-```xml
+```graphql
 {
   cityList (variation: "berlin_center") {
     items {
@@ -335,7 +335,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -361,13 +361,13 @@ query {
 如果您：
 
 * 建立各種標籤，已命名 `Tourism` ： `Business`， `City Break`， `Holiday`
-* 並將它們指派給各種變數的主變數 `City` 執行個體
+* 並將這些標籤指派給各種變數的主變數 `City` 執行個體
 
 然後，您可以使用查詢來傳回 `name` 和 `tags`中所有標示為「城市分隔符號」的專案 `city`結構描述。
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   cityList(
     includeVariations: true,
@@ -383,7 +383,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -414,7 +414,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   companyList {
     items {
@@ -443,7 +443,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "companyList": {
@@ -538,11 +538,11 @@ query {
 
 ### 範例查詢 - 所有名稱為「Jobs」或「Smith」的所有人員 {#sample-all-persons-jobs-smith}
 
-這將篩選所有名稱為 `Jobs` 或 `Smith` 的 `persons`。
+此範例查詢篩選全部 `persons` ，適用於任何擁有名稱的 `Jobs`或 `Smith`.
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   personList(filter: {
     name: {
@@ -567,7 +567,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "personList": {
@@ -592,11 +592,11 @@ query {
 
 ### 範例查詢 - 所有名稱不為「Jobs」的人員 {#sample-all-persons-not-jobs}
 
-這將篩選所有名稱為 `Jobs` 或 `Smith` 的 `persons`。
+此範例查詢篩選全部 `persons` ，適用於任何擁有名稱的 `Jobs`或 `Smith`.
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   personList(filter: {
     name: {
@@ -618,7 +618,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "personList": {
@@ -663,7 +663,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   adventureList(
     filter: {
@@ -685,7 +685,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "adventureList": {
@@ -702,13 +702,13 @@ query {
 }
 ```
 
-### 範例查詢 - 位於德國或瑞士且人口在 400000 到 999999 之間的所有城市 {#sample-all-cities-d-ch-population}
+### 範例查詢 — 德國或瑞士人口為400000到999999的所有城市 {#sample-all-cities-d-ch-population}
 
-這裡篩選了欄位組合。`AND` (隱含) 用於選擇 `population` 範圍，而 `OR` (明確) 用於選擇所需城市。
+在這裡篩選出一組欄位。 `AND` (隱含) 用於選擇 `population` 範圍，而 `OR` (明確) 用於選擇所需城市。
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     population: {
@@ -744,7 +744,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -771,7 +771,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     name: {
@@ -795,7 +795,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -822,7 +822,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     categories: {
@@ -846,7 +846,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -880,7 +880,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     categories: {
@@ -906,7 +906,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -932,7 +932,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   companyList(filter: {
     employees: {
@@ -964,7 +964,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "companyList": {
@@ -998,7 +998,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   companyList(filter: {
     employees: {
@@ -1040,7 +1040,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "companyList": {
@@ -1090,7 +1090,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   awardList(filter: {
       id: {
@@ -1117,7 +1117,7 @@ query {
 
 **範例結果**
 
-```xml
+```json
 {
   "data": {
     "awardList": {
@@ -1146,7 +1146,7 @@ query {
 
 ## 使用 WKND 專案的範例查詢 {#sample-queries-using-wknd-project}
 
-這些是根據 WKND 專案的範例查詢。其：
+這些是根據 WKND 專案的範例查詢。它具有下列功能：
 
 * 內容片段模型可在以下位置取用：
    `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
@@ -1156,7 +1156,7 @@ query {
 
 >[!NOTE]
 >
->由於結果可能很龐大，因此不在此處重現。
+>由於結果可能會很龐大，此處不再重現。
 
 ### 具有指定的屬性之特定模型的所有內容片段的範例查詢 {#sample-wknd-all-model-properties}
 
@@ -1167,7 +1167,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 {
   articleList {
     items {
@@ -1187,7 +1187,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 {
   adventureList {
     items {
@@ -1244,7 +1244,7 @@ query {
 此範例查詢會質詢：
 
 * 在特定路徑中類型為 `article` 的單一內容片段
-   * 其中，所有內容格式：
+   * 在該路徑內，所有格式的內容：
       * HTML
       * Markdown
       * 純文字
@@ -1252,7 +1252,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 {
   articleByPath (_path: "/content/dam/wknd/en/magazine/alaska-adventure/alaskan-adventures") {
     item {
@@ -1278,7 +1278,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 {
   adventureByPath(_path: "/content/dam/wknd/en/adventures/riverside-camping-australia/riverside-camping-australia") {
     item {
@@ -1298,7 +1298,7 @@ query {
 此查詢會質詢：
 
 * 在特定路徑中類型為 `article` 的單一內容片段
-   * 其中，被參考 (巢狀) 片段的路徑和作者
+   * 在該路徑內，參照（巢狀）片段的路徑和作者
 
 >[!NOTE]
 >
@@ -1393,7 +1393,7 @@ query {
 
 以下查詢使用 `_references` 傳回所有內容參考：
 
-```xml
+```graphql
 {
   bookmarkList {
      _references {
@@ -1427,13 +1427,13 @@ query {
 
 #### 具有附件之多個內容片段的範例查詢 {#sample-wknd-multiple-fragments-attachments}
 
-以下查詢傳回所有 `attachments` - 類型為 `content-reference` 的特定欄位 (子群組)：
+下列查詢會傳回全部 `attachments`  — 型別的特定欄位（子群組） `content-reference`：
 
 >[!NOTE]
 >
 >`attachments` 欄位的資料類型為 `content-reference`，並選擇了各種表單。
 
-```xml
+```graphql
 {
   bookmarkList {
     items {
@@ -1477,7 +1477,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 {
   bookmarkByPath(_path: "/content/dam/wknd/en/bookmarks/skitouring") {
     item {
@@ -1514,12 +1514,12 @@ query {
 
 此查詢會質詢：
 
-* 特定路徑中類型為 `article` 的單一內容片段
-   * 其中有與變化相關的資料：`variation1`
+* 在特定路徑中類型為 `article` 的單一內容片段
+   * 在該路徑中，與變數相關的資料： `variation1`
 
 **範例查詢**
 
-```xml
+```graphql
 {
   articleByPath (_path: "/content/dam/wknd/en/magazine/alaska-adventure/alaskan-adventures", variation: "variation1") {
     item {
@@ -1544,7 +1544,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 {
   articleList (variation: "variation1") {
     items {
@@ -1569,7 +1569,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 query {
   articleList(
     includeVariations: true  ){
@@ -1596,7 +1596,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 {
   articleList(
     includeVariations: true,
@@ -1625,7 +1625,7 @@ query {
 
 **範例查詢**
 
-```xml
+```graphql
 { 
   articleList (_locale: "fr") {
     items {
@@ -1652,7 +1652,7 @@ query {
 
 ### 範例內容片段結構 (結構描述) {#sample-content-fragment-models-schemas}
 
-對於範例查詢，我們將使用以下內容模型及其相互關係 (參考 ->)：
+對於範例查詢，請使用以下內容模型及其相互關係（參照 — >）：
 
 * [公司](#model-company)
 -> [人員](#model-person)
