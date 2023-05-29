@@ -6,9 +6,9 @@ role: User, Admin
 feature: Metadata
 exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 8bd103e392bf5630cb2db654dedcfe4f926b2c9d
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '808'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 中的此XMP回寫功能 [!DNL Adobe Experience Manager Assets] 會將中繼資料變更複製到原始資產的轉譯。 當您從Assets內變更資產的中繼資料或上傳資產時，變更最初會儲存在資產階層中的中繼資料節點中。
 
-XMP回寫功能可讓您將中繼資料變更傳播到資產的所有或特定轉譯。 功能只會回寫那些使用的中繼資料屬性 `jcr` 名稱空間，也就是名為的屬性 `dc:title` 會寫回，但有一個屬性命名為 `mytitle` 不是。
+XMP回寫功能可讓您將中繼資料變更傳播到資產的所有或特定轉譯。 此功能只會回寫使用已註冊名稱空間的中繼資料屬性，也就是名為的屬性 `dc:title` 會寫回，但有一個屬性命名為 `mytitle` 不是。
 
 請考量您修改 [!UICONTROL 標題] 標題為的資產屬性 `Classic Leather` 至 `Nylon`.
 
