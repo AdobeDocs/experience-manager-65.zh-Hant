@@ -7,10 +7,10 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 7bfa9a9e143f199c42161b92dcba66ae441ad1fb
 workflow-type: tm+mt
-source-wordcount: '9970'
-ht-degree: 3%
+source-wordcount: '9993'
+ht-degree: 4%
 
 ---
 
@@ -402,6 +402,9 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    ![日期時間選擇器或在「準時」欄位中使用鍵盤鍵，新增資產啟用的日期和時間](assets/datepicker.png)
 
    *圖：使用日期選擇器來排程資產啟用。*
+
+1. 您需要檢查 **[!UICONTROL 已達到開啟/關閉時間]** 選項，以更新中繼資料屬性中的復寫代理程式觸發器。
+   ![代理設定](assets-dm/Agent-settings.png)
 
 1. 若要在特定期間後停用資產，請從日期選擇器旁的停用日期/時間 **[!UICONTROL 關閉時間]** 欄位。 停用日期應晚於資產的啟用日期。 晚於 [!UICONTROL 關閉時間]，資產及其轉譯無法透過 [!DNL Assets] 網頁介面或透過HTTP API。
 
