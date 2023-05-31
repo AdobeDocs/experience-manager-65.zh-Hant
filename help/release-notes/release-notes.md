@@ -2,9 +2,10 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 0bce05571590bc09e2b65f6bd6c1f387c71fba3a
+exl-id: fed4e110-9415-4740-aba1-75da522039a9
+source-git-commit: efd2a41b6b53a72b941ac23386b6aa4c41c9da15
 workflow-type: tm+mt
-source-wordcount: '2620'
+source-wordcount: '2683'
 ht-degree: 2%
 
 ---
@@ -103,6 +104,36 @@ ht-degree: 2%
 * 將Adobe Target IMS設定轉換為舊版雲端設定中的使用者認證時， `connectedWhen` 屬性不會變更。 此問題會使所有呼叫看起來好像設定仍以IMS為基礎。 (CQ-4352810)
 * 新增 `modifyProperties` 許可權： `fd-cloudservice` 用於Adobe Sign設定的系統使用者。 (FORMS-6164)
 * 透過Experience Manager與Adobe Target整合，當您建立AB測試活動時，它不會將與其關聯的對象同步至Target。 (NPR-40085)
+
+## Oak{#oak-6517}
+
+從Service Pack 13及更高版本開始，影響持續性快取的下列錯誤記錄開始出現：
+
+```shell
+org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
+at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+    at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+    at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+    at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+    at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4052)
+    at org.h2.mvstore.db.Store.<init>(Store.java:129)
+```
+
+或
+
+```shell
+org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.214/5].
+```
+
+若要解決此例外狀況，請執行下列動作：
+
+1. 從以下兩個資料夾中刪除 `crx-quickstart/repository/`
+
+   * `cache`
+   * `diff-cache`
+
+1. 安裝Service Pack，或重新啟動Experience Manageras a Cloud Service。
+的新資料夾 `cache` 和 `diff-cache` 都會自動建立，而您不會再遇到與相關的例外狀況 `mvstore` 在 `error.log`.
 
 ## Platform{#platform-6517}
 
