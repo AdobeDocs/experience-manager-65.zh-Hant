@@ -3,9 +3,9 @@ title: 使用OAuth 2.0使用者端憑證流程與AEM Forms整合Salesforce
 seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 description: 使用OAuth 2.0使用者端憑證流程整合Salesforce與AEM Forms的步驟
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
-source-git-commit: f03513c98455e00beef37819a5a47ba56dfa5028
+source-git-commit: cc0375f5b5616f82a73bd983a9da95225c51db99
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -40,9 +40,9 @@ ht-degree: 0%
 
 Swagger是一組開放原始碼的規則、規格和工具，用於開發和描述RESTful API。 [建立Swagger檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) 將Salesforce與AEM Forms整合之前。
 
-    >[！NOTE]
-    >
-    > AEM 6.5僅支援Swagger 2.0檔案規格。
+>[!NOTE]
+>
+> AEM 6.5僅支援Swagger 2.0檔案規格。
 
 +++
 
