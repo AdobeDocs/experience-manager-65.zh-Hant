@@ -2,10 +2,10 @@
 title: 適用於AEM Forms的AEM Forms修補程式安裝指示
 description: OSGi和JEE環境的AEM Forms service pack安裝指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 01bf12ec46966ab2c78e2e825840230ea1bd3395
+source-git-commit: 57ead48ba3211075ae4b85801ba8cf6394582a9d
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 8%
 
 | 產品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| 版本 | 6.5.16.0 |
+| 版本 | 6.5.17.0 |
 | 類型 | Service Pack發行 |
-| 日期 | 2023年3月2日 |
+| 日期 | 2023年6月1日 |
 | 下載 URL | [最新AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -240,4 +240,4 @@ Adobe Experience Manager (AEM) Forms service pack包含新功能和升級功能�
 
 * 安裝完成後，請檢查監視記錄(error.log)是否有任何活動。 等候幾分鐘，直到記錄中沒有活動。 重新啟動AEM執行個體。
 
-* 萬一您收到 **服務無法使用的錯誤** 安裝AEM Forms 6.5.15.0 Service Pack後， [安裝servlet片段和套裝](/help/forms/using/aem-service-pack-installation-solution.md) 以修正錯誤。
+* 萬一您收到 **服務無法使用的錯誤** 安裝AEM Forms 6.5.15.0或更新版Service Pack後， [安裝servlet片段和套裝](/help/forms/using/aem-service-pack-installation-solution.md) 以修正錯誤。

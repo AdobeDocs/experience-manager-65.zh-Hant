@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 071d7bf2e7c9ceb3328e77262cc45ed3f2e303cc
+source-git-commit: f0ffa552bd4a5b8b20a58aed7847c4de07acc4f4
 workflow-type: tm+mt
-source-wordcount: '3846'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -127,6 +127,7 @@ ht-degree: 4%
    + [AEM Forms資料整合簡介](using/data-integration.md)
    + [設定資料來源](using/configure-data-sources.md)
    + [Microsoft Dynamics Odata設定](using/ms-dynamics-odata-configuration.md)
+   + [使用OAuth 2.0使用者端憑證流程的Salesforce整合](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [建立表單資料模型](using/create-form-data-models.md)
    + [使用表單資料模型](using/work-with-form-data-model.md)
    + [使用表單資料模型](using/using-form-data-model.md)
@@ -690,6 +691,7 @@ ht-degree: 4%
    + [無法還原CRX存放庫](/help/forms/using/restore-crx-repository.md)
    + [安裝AEM 6.5.15.0 Service Pack後，發生服務無法使用的錯誤](/help/forms/using/aem-service-pack-installation-solution.md)
    + [JBoss Linux環境上的AEM Forms JEE 6.5.15.0 Service Pack安裝問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
+   + [JEE WebLogic伺服器上的EAR部署失敗](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
 + 舊版檔案 {#legacy-documentation}
    + [使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料](developing/building-xml.md)
    + [在JEE自訂DSC上使用AEM Forms壓縮和解壓縮檔案](developing/compressing-decompressing-custom-dsc.md)
