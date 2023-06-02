@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: a54d75ba653f469495203fa4643dbd78dbd7c38f
+source-git-commit: 7f152c3b7b80c78bb73b45e83cc566e9bbb0c393
 workflow-type: tm+mt
-source-wordcount: '3499'
+source-wordcount: '3494'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 1%
 * **透過AEM Forms支援適用於政府的Adobe Acrobat Sign**：允許安全且合規的AEM Forms與適用於政府的Adobe Sign（符合FedRAMP）整合。
 * **啟用Salesforce與AEM Forms的整合以進行資料交換**：使用OAuth 2.0使用者端憑證流程設定AEM表單與Salesforce應用程式之間的整合。 如此一來，應用程式就能安全且直接地進行驗證和授權，且使用者不需介入即可進行順暢的通訊。
 * **最佳化及增強工作流程引擎功能**：將工作流程例項數目減到最少，以提高工作流程引擎效能。 除了 `COMPLETED` 和 `RUNNING` 狀態值，工作流程也支援三個新的狀態值： `ABORTED`， `SUSPENDED`、和 `FAILED`.
-* **ZPL輸出的紙張大小支援**：在AEM Forms Designer中，XMLFM會針對以XDP為基礎的範本，產生紙張大小不同的ZPL輸出，例如字母、A4和A5。
+
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
@@ -139,6 +139,7 @@ ht-degree: 1%
 * 當使用者按一下 `Configure` 的選項 `Form Container` 元件時，瀏覽器會停止回應(FORMS-7605)。
 * 當使用者更新至AEM Forms 6.5.16.0 Service Pack並嘗試變更 `LicenseType` 至 `Production`，變更不會反映出來。 (FORMS-7594)
 * 當使用者嘗試使用包含的PDF叫用LCA程式時 `Chinese Full Width Characters`，發生下列問題 `ValidateForm` 程式。 (FORMS-7464)
+* 在AEM Forms Designer中，XMLFM會針對以XDP為基礎的範本，產生紙張大小不同的ZPL輸出，例如字母、A4和A5。(FORMS-7898)
 
 ## 整合{#integrations-6517}
 
