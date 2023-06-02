@@ -2,10 +2,10 @@
 title: 適用於AEM Forms的AEM Forms修補程式安裝指示
 description: OSGi和JEE環境的AEM Forms service pack安裝指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 57ead48ba3211075ae4b85801ba8cf6394582a9d
+source-git-commit: a54d75ba653f469495203fa4643dbd78dbd7c38f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1727'
+ht-degree: 8%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Manager (AEM) Forms service pack包含新功能和升級功能�
 
 >[!NOTE]
 >
-> Adobe會每隔6個Service Pack發行完整安裝程式。 JEE上的AEM 6.5 Forms Service Pack 12 (6.5.12.0)是最後一個完整安裝程式。 完整版安裝程式支援新平台，而一般Service Pack安裝程式則包含新功能、錯誤修正和一般改善。 如果您正在執行全新安裝或計畫針對JEE環境的AEM 6.5 Forms使用最新軟體，Adobe建議使用2022年3月3日發行的JEE版AEM 6.5.12.0 Forms完整安裝程式，而非2019年4月8日發行的AEM 6.5 Forms安裝程式。 使用完整安裝程式後，請安裝最新的Service Pack。
+> Adobe會每六個service pack發行完整安裝程式。 JEE上的AEM 6.5 Forms Service Pack 12 (6.5.12.0)是最後一個完整安裝程式。 完整版安裝程式支援新平台，而一般Service Pack安裝程式則包含新功能、錯誤修正和一般改善。 如果您正在執行全新安裝或計畫針對JEE環境的AEM 6.5 Forms使用最新軟體，Adobe建議使用2022年3月3日發行的JEE版AEM 6.5.12.0 Forms完整安裝程式，而非2019年4月8日發行的AEM 6.5 Forms安裝程式。 使用完整安裝程式後，請安裝最新的Service Pack。
 
 ## 在JEE環境的AEM表單上下載並安裝Service Pack {#download-and-install-for-jee-service-pack}
 
@@ -112,11 +112,11 @@ Adobe Experience Manager (AEM) Forms service pack包含新功能和升級功能�
 
 +++
 
-+++4. 安裝servlet片段
++++4. 安裝servlet片段(AEM Service Pack 6.5.14.0或更舊版本)
 
 >[!NOTE]
 >
-> * 如果是，您正在從 **AEM Service Pack 6.5.15.0**，則不需要安裝 **servlet片段**. 如果您要升級所使用的版本早於 **AEM Service Pack 6.5.15.0**，您必須安裝 **servlet片段**.
+> * 如果您要從 **AEM Service Pack 6.5.15.0**，安裝 **servlet片段** 非必要。 針對版本 **AEM Service Pack 6.5.14.0** 或更早版本，則必須安裝servlet片段。
 > * 您必須安裝 **servlet片段** 適用於所有應用程式伺服器，但不包括在 **JBoss® EAP 7.4.0**.
 
 

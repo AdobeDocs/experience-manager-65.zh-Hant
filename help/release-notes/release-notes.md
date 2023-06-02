@@ -3,10 +3,10 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 2391eb74979b7ee9ed148763ffebf125ef09fc88
+source-git-commit: a54d75ba653f469495203fa4643dbd78dbd7c38f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3499'
+ht-degree: 1%
 
 ---
 
@@ -52,9 +52,9 @@ ht-degree: 0%
 * **在AEM網站頁面上整合最適化Forms**：透過AEM Sites編輯器中的最適化Forms元件，使用下列專案順暢地建立數位註冊體驗： — 最適化Forms容器和最適化Forms — 內嵌(v2)元件。
 * **AEM Forms中支援reCAPTCHA Enterprise**：在AEM Forms中新增reCAPTCHA Enterprise支援，除了現有的Google reCAPTCHA v2支援外，還針對詐騙活動和垃圾郵件提供增強型保護。
 * **透過AEM Forms支援適用於政府的Adobe Acrobat Sign**：允許安全且合規的AEM Forms與適用於政府的Adobe Sign（符合FedRAMP）整合。
-* **啟用Salesforce與AEM Forms的整合以進行資料交換**： OAuth 2.0使用者端憑證流程，可在Salesforce應用程式中進行安全且直接的應用程式驗證和授權，以在使用者不介入的情況下實現應用程式之間的無縫通訊。
-* **工作流程引擎的最佳化與增強功能**：減少工作流程例項的數目可提高工作流程引擎的效能。 除了 `COMPLETED` 和 `RUNNING` 狀態值，工作流程也支援三個新的狀態值： `ABORTED`， `SUSPENDED`、和 `FAILED`.
-* ZPL輸出格式支援不同的紙張大小，例如Letter、A4和A5。
+* **啟用Salesforce與AEM Forms的整合以進行資料交換**：使用OAuth 2.0使用者端憑證流程設定AEM表單與Salesforce應用程式之間的整合。 如此一來，應用程式就能安全且直接地進行驗證和授權，且使用者不需介入即可進行順暢的通訊。
+* **最佳化及增強工作流程引擎功能**：將工作流程例項數目減到最少，以提高工作流程引擎效能。 除了 `COMPLETED` 和 `RUNNING` 狀態值，工作流程也支援三個新的狀態值： `ABORTED`， `SUSPENDED`、和 `FAILED`.
+* **ZPL輸出的紙張大小支援**：在AEM Forms Designer中，XMLFM會針對以XDP為基礎的範本，產生紙張大小不同的ZPL輸出，例如字母、A4和A5。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
