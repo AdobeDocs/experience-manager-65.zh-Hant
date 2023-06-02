@@ -6,7 +6,7 @@ role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: d6587ef59332d6b4d419c7d7b6e29930f366d171
 workflow-type: tm+mt
 source-wordcount: '5499'
 ht-degree: 8%
@@ -524,9 +524,9 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
    >
    >由於上的多個工作流程設定，最終記錄失敗/錯誤訊息可能需要很長時間 **[!UICONTROL 重試]**， **[!UICONTROL 重試延遲]**、和 **[!UICONTROL 逾時]** 從 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)例如：
    >
-   >    * Apache Sling工作佇列設定
-   >    * AdobeGranite工作流程外部程式工作處理常式
-   >    * Granite工作流程逾時佇列
+   >* Apache Sling工作佇列設定
+   >* AdobeGranite工作流程外部程式工作處理常式
+   >* Granite工作流程逾時佇列
 
    >
    >您可以調整 **[!UICONTROL 重試]**， **[!UICONTROL 重試延遲]**、和 **[!UICONTROL 逾時]** 這些設定中的屬性。
@@ -557,13 +557,10 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
    >
    >由於上的多個工作流程設定，最終記錄錯誤訊息可能需要很長時間 **[!UICONTROL 重試]**， **[!UICONTROL 重試延遲]**、和 **[!UICONTROL 逾時]** 從 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)例如：
    >
-   >
-   >
-   >    * Apache Sling工作佇列設定
-   >    * AdobeGranite工作流程外部程式工作處理常式
-   >    * Granite工作流程逾時佇列
+   >* Apache Sling工作佇列設定
+   >* AdobeGranite工作流程外部程式工作處理常式
+   >* Granite工作流程逾時佇列
 
-   >
    >
    >您可以調整 **[!UICONTROL 重試]**， **[!UICONTROL 重試延遲]**、和 **[!UICONTROL 逾時]** 這些設定中的屬性。
 
