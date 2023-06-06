@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 46e76c36db3396a013c8610b62f5cff9f1ea14d9
+source-git-commit: 9bf19cd21db185229d565d684dbac9e44f236532
 workflow-type: tm+mt
-source-wordcount: '3548'
+source-wordcount: '3586'
 ht-degree: 1%
 
 ---
@@ -48,11 +48,11 @@ ht-degree: 1%
    您不需要導覽至資產位置並檢視其屬性，即可執行這些作業。
 * **Dynamic Media _快照_**— 實驗測試影像或Dynamic Media URL，以檢視不同影像修飾元的輸出，以及針對檔案大小（使用WebP和AVIF傳送）、網路頻寬和裝置畫素比的智慧型影像最佳化。 另請參閱 [Dynamic Media快照](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **使用Dynamic Media進行DASH串流**  — 新通訊協定(DASH - Dynamic Adaptive Streaming over HTTP)已針對Dynamic Media視訊傳送中的最適化資料流推出（已啟用CMAF）支援。 現在所有地區都可使用， [透過支援票證啟用](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
-* **AEM Sites和內容片段與AEM Assets新一代Dynamic Media的整合**：AEM Assetsas a Cloud Service新一代Dynamic Media的使用者現在可以使用這些雲端託管的資產，透過AEM Sites 6.5的內部部署或受管理服務例項進行製作和交付。
-* **在AEM網站頁面上整合最適化Forms**：透過AEM Sites編輯器中的最適化Forms元件，使用下列專案順暢地建立數位註冊體驗： — 最適化Forms容器和最適化Forms — 內嵌(v2)元件。
-* **AEM Forms中支援reCAPTCHA Enterprise**：在AEM Forms中新增reCAPTCHA Enterprise支援，除了現有的Google reCAPTCHA v2支援外，還針對詐騙活動和垃圾郵件提供增強型保護。
-* **透過AEM Forms支援適用於政府的Adobe Acrobat Sign**：允許安全且合規的AEM Forms與適用於政府的Adobe Sign（符合FedRAMP）整合。
-* **啟用Salesforce與AEM Forms的整合以進行資料交換**：使用OAuth 2.0使用者端憑證流程設定AEM表單與Salesforce應用程式之間的整合。 如此一來，應用程式就能安全且直接地進行驗證和授權，且使用者不需介入即可進行順暢的通訊。
+* **Experience Manager Sites和內容片段與資產新一代Dynamic Media的整合** -Experience Manager Assetsas a Cloud Service新一代Dynamic Media的使用者現在可以使用這些雲端託管的資產，透過Experience Manager Sites 6.5的內部部署或Managed Services執行個體進行製作和交付。
+* **在Experience Manager Sites頁面上整合最適化Forms**：透過Experience Manager Sites編輯器中的最適化Forms元件，使用下列元件順暢地建立數位註冊體驗： — 最適化Forms容器和最適化Forms — 內嵌(v2)元件。
+* **Experience Manager Forms中支援reCAPTCHA Enterprise**：在Experience Manager Forms中新增reCAPTCHA Enterprise支援，除了現有的Google reCAPTCHA v2支援外，還針對詐騙活動和垃圾郵件提供增強型保護。
+* **透過Experience Manager Forms支援適用於政府的Adobe Acrobat Sign**：允許安全且合規的Experience Manager Forms與適用於政府的Adobe Sign（符合FedRAMP）整合。
+* **啟用Salesforce與Experience Manager Forms的整合以進行資料交換**：使用OAuth 2.0使用者端憑證流程設定Experience Manager Forms與Salesforce應用程式之間的整合。 此功能可讓應用程式獲得安全且直接的驗證和授權，且無需使用者介入，即可進行順暢通訊。
 * **最佳化及增強工作流程引擎功能**：將工作流程例項數目減到最少，以提高工作流程引擎效能。 除了 `COMPLETED` 和 `RUNNING` 狀態值，工作流程也支援三個新的狀態值： `ABORTED`， `SUSPENDED`、和 `FAILED`.
 
 
@@ -104,42 +104,42 @@ ht-degree: 1%
 
 ## [!DNL Forms]{#forms-6517}
 
-* 當使用者升級到AEM 6.5.16.0 Service Pack時，附加的檔案無法正確擷取。 (FORMS-8906)
-* 更新至AEM 6.5.15.0 Service Pack後，HTML5表單在具有IE相容模式的Edge瀏覽器中無法運作或正確載入。 (FORMS-8526、FORMS-8523)
-* 當使用者套用AEM 6.5.16.0 Service Pack時，規則編輯器無法開啟。 (FORMS-8290)
+* 當使用者升級到Experience Manager6.5.16.0 Service Pack時，附加的檔案無法正確擷取。 (FORMS-8906)
+* 更新至Experience Manager6.5.15.0 Service Pack後，HTML5表單在具有IE相容模式的Edge瀏覽器中無法運作或正確載入。 (FORMS-8526、FORMS-8523)
+* 當使用者套用Experience Manager6.5.16.0 Service Pack時，規則編輯器無法開啟。 (FORMS-8290)
 * 當數字方塊元件套用最大位數驗證時，會失敗。 (FORMS-7938)
 * 建立互動式通訊陳述式時，PDF中的圖表元件未正確產生。 (FORMS-7827、FORMS-8297)
-* Java垃圾收藏集無法清除AEM Forms OSGi伺服器上的舊性別棧積。 (FORMS-8207)
-* 當使用者升級至AEM 6.5.16.0 Service Pack，在提交後遺失CRX中繼資料屬性。 (FORMS-8205)
+* Java™垃圾收藏集無法清除Experience Manager Forms OSGi伺服器上的舊程式碼棧積。 (FORMS-8207)
+* 當使用者升級至Experience Manager6.5.16.0 Service Pack，在提交後遺失CRX中繼資料屬性。 (FORMS-8205)
 * 當使用者停用最適化表單中的日期選擇器元件時，該元件仍可編輯。 (FORMS-7804)
-* 在AEM 6.5.16.0 Forms Service Pack中，當使用者嘗試編輯原則集協調員時，Manager Document Publisher一律保持未勾選狀態。 (FORMS-7775、FORMS-8599)
-* 當使用者升級到AEM 6.5.16.0 Service Pack時，「GuideNode.externalize」方法（處理必須轉譯的字串）停止運作。 (FORMS-7709)
+* 在Experience Manager6.5.16.0 Forms Service Pack中，當使用者嘗試編輯「原則組協調員」時，Manager Document Publisher一律保持未勾選狀態。 (FORMS-7775、FORMS-8599)
+* 當使用者升級為Experience Manager6.5.16.0 Service Pack時，「GuideNode.externalize」方法（處理必須轉譯的字串）停止運作。 (FORMS-7709)
 * 在 `Assign task` 步驟，當使用者選擇「傳送通知電子郵件」並叫用工作流程時，文字未正確顯示在收到的電子郵件中。 會收到問號，而不是收到的電子郵件中的文字。 (FORMS-7675)
 * 記錄檔案正在部分本地化。 (FORMS-7674、FORMS-7573)
 * 即使已分配特定許可權，使用者也無法編輯原則集。 (FORMS-7665)
-* 當使用者在 `forms-users` 群組嘗試建立新表單，AEM Forms執行個體當機。 (FORMS-7629)
+* 當使用者在 `forms-users` 群組嘗試建立表單，Experience Manager Forms執行個體當機。 (FORMS-7629)
 * 當使用者按一下最適化表單上的重設、儲存或提交按鈕時，畫面上不會顯示任何訊息。 (FORMS-7524)
-* 為了改善AEM 6.5.16.0 Service Pack上PDFG轉換的效能，可以設定睡眠間隔。 (FORMS-6752)
+* 為了改善Experience Manager6.5.16.0 Service Pack上PDFG轉換的效能，可以設定睡眠間隔。 (FORMS-6752)
 * 切換選項會維持不變，但欄位的可見度會變更，即使使用者稍微拖曳游標亦然。 (FORMS-6728)
-* 當使用者升級至AEM 6.5.15.0 Service Pack時，重新導向在Internet Explorer中轉譯最適化表單時停止運作。 (FORMS-6725)
-* AEM Designer建立之PDF表單中所有背景物件的PAC 2021工具傳回錯誤為 `Path object not tagged`. (FORMS-6707)
+* 當使用者升級為Experience Manager6.5.15.0 Service Pack時，重新導向在Internet Explorer中轉譯最適化表單時停止運作。 (FORMS-6725)
+* 由Experience Manager設計者建立的PDF表單中，所有背景物件的PAC 2021工具傳回錯誤為 `Path object not tagged`. (FORMS-6707)
 * 當使用者在收件匣中套用篩選器時，它會擲回 `NullPointerException` 錯誤。 (FORMS-6706)
-* 當使用者匯入包含參考片段的範本(.tds)檔案時，AEM Designer當機。  (FORMS-6702)
-* 如果使用者在AEM Forms Designer 6.5中使用輸出服務建立靜態PDF，則會發生以下錯誤： `OCCD (optional content configuration dictionary) contains AS key`. (FORMS-6691)
+* 當使用者匯入包含參考片段的範本(.tds)檔案時，Experience Manager設計工具當機。 (FORMS-6702)
+* 如果使用者在Experience Manager Forms Designer 6.5中使用輸出服務建立靜態PDF，則會發生以下錯誤： `OCCD (optional content configuration dictionary) contains AS key`. (FORMS-6691)
 * 當使用者建立簡單工作流程並新增簡單變數 `set variable mapping` 發生錯誤。 (FORMS-5819)
 * 當使用者嘗試使用輸出服務產生PDF時，即使它標籤為 `PDF/A-1a`，合規性檢查，使用`Preflight` 服務失敗。 (LC-3920837)
-* 安裝AEM 6.5.16.0 Service Pack後，AEM設計工具無法開啟。 (LC-3921000)
+* 安裝Experience Manager6.5.16.0 Service Pack後，Experience Manager設計工具無法開啟。 (LC-3921000)
 * 當使用者新增核取方塊和選項按鈕時，未根據PDF標準產生標籤樹狀結構的結構。 (LC-3920838)
 * 如果使用者透過輸出服務使用字型的嵌入和子設定來產生靜態PDF，則產生的PDF僅包含嵌入的字型。 (LC-3920963)
 * 希伯來文字在RTL格式中無法正確顯示。 (LC-3919632)
-* 當使用者在JBoss Turnkey伺服器上升級至AEM 6.5.16.0 Service Pack時，無法叫用Signature Service。 遇到的錯誤為： `java.lang.ClassCastException: com.adobe.xfa.TextNode cannot be cast to com.adobe.xfa.Element`. (FORMS-7833)
-* 升級至AEM 6.5.14.0 Service Pack後，Workbench將CRX節點從一個位置移動到另一個位置的程式無法運作。 錯誤發生於 `ALC-CRX-30000-000: com.adobe.ep.crx.client.exceptions.CRCException: ALC-CRX-030-000-[Internal Server Error]`.(FORMS-7713)
-* 當使用者更新至AEM 6.5.16.0 Service Pack時， `Usage Rights` 無法套用。 (FORMS-7892)
+* 當使用者升級至JBoss® Turnkey伺服器上的Experience Manager6.5.16.0 Service Pack時，無法叫用Signature Service。 遇到的錯誤為： `java.lang.ClassCastException: com.adobe.xfa.TextNode cannot be cast to com.adobe.xfa.Element`. (FORMS-7833)
+* 升級至Experience Manager6.5.14.0 Service Pack後，Workbench將CRX節點從一個位置移動到另一個位置的程式無法運作。 錯誤發生於 `ALC-CRX-30000-000: com.adobe.ep.crx.client.exceptions.CRCException: ALC-CRX-030-000-[Internal Server Error]`. (FORMS-7713)
+* 當使用者更新至Experience Manager6.5.16.0 Service Pack時， `Usage Rights` 無法套用。 (FORMS-7892)
 * 當使用者嘗試產生PDF檔案時，PDF/A-1b驗證失敗。 (FORMS-7615)
-* 當使用者按一下 `Configure` 的選項 `Form Container` 元件時，瀏覽器會停止回應(FORMS-7605)。
-* 當使用者更新至AEM Forms 6.5.16.0 Service Pack並嘗試變更 `LicenseType` 至 `Production`，變更不會反映出來。 (FORMS-7594)
+* 當使用者按一下 `Configure` 的選項 `Form Container` 元件時，瀏覽器會停止回應。 (FORMS-7605)
+* 當使用者更新至Experience Manager Forms 6.5.16.0 Service Pack並嘗試變更 `LicenseType` 至 `Production`，變更不會反映出來。 (FORMS-7594)
 * 當使用者嘗試使用包含的PDF叫用LCA程式時 `Chinese Full Width Characters`，發生下列問題 `ValidateForm` 程式。 (FORMS-7464)
-* 在AEM Forms Designer中，XMLFM會針對以XDP為基礎的範本，產生紙張大小不同的ZPL輸出，例如字母、A4和A5。(FORMS-7898)
+* 在Experience Manager Forms Designer中，XMLFM會針對以XDP為基礎的範本，產生紙張大小不同的ZPL輸出，例如字母、A4和A5。 (FORMS-7898)
 
 ## 整合{#integrations-6517}
 
@@ -189,7 +189,7 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 * 開啟非行銷活動頁面呼叫 `targeteditor.html` 不必要的。 移除 `targeteditor` 不需要時呼叫。 (SITES-12469)
 * 無法為有註解的頁面建立即時副本。 (SITES-12154)
 * Experience Manager6.5.16正在轉出頁面。 (SITES-12008)
-* 記憶體不足；高記憶體回收活動是由於 `NotificationManagerImpl`. `NotificationManager` 套件升級至AEM 6.5。 (SITES-11440)
+* 記憶體不足；高記憶體回收活動是由於 `NotificationManagerImpl`. `NotificationManager` 套件組合升級至Experience Manager6.5。 (SITES-11440)
 * 修正封鎖Service Pack 17的WCM IT測試。 (SITES-13089)
 * 在servlet上擷取網站參考失敗。 (SITES-10901)
 
@@ -204,7 +204,7 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 * 將Polaris資產選擇器整合至內容片段編輯器中。 (SITES-12125)
 * 必須有http標頭才能存取中繼資料服務端點。 (SITES-13068)
 * GraphQL 6.5的實作不與Cloud Service（主要）相同；已識別的問題已修正。 (SITES-13096)
-* GraphQL分頁/排序和混合篩選應該可以在AEM 6.5/AMS上使用。 (SITES-9154)
+* GraphQL分頁/排序和混合篩選應該可以在Experience Manager6.5/AMS上使用。 (SITES-9154)
 
 ### [!DNL Sites] - 核心元件{#sites-core-components-6517}
 
@@ -258,7 +258,7 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 >[!IMPORTANT]
 >
 > Adobe不建議您移除或解除安裝 [!DNL Experience Manager] 6.5.17.0套件。 因此，在安裝套件之前，您應該建立 `crx-repository` 以防您必須將其回覆。 <!-- UPDATE FOR EACH NEW RELEASE -->
-<!-- For instructions to install Service Pack for AEM Forms, see [AEM Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
+<!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
 ### 在上安裝Service Pack [!DNL Experience Manager] 6.5{#install-service-pack}
@@ -302,11 +302,11 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 
 ### 安裝Service Pack for [!DNL Experience Manager] Forms{#install-aem-forms-add-on-package}
 
-如需在AEM Forms上安裝Service Pack的說明，請參閱 [AEM Forms Service Pack安裝指示](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
+如需在Experience Manager Forms上安裝Service Pack的說明，請參閱 [Experience Manager Forms Service Pack安裝指示](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
 
 ### 安裝適用於Experience Manager內容片段的GraphQL索引套件{#install-aem-graphql-index-add-on-package}
 
-使用GraphQL的客戶必須安裝 [具有GraphQL索引套件1.1.1的AEM內容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/cfm-graphql-index-def-1.1.1.zip).
+使用GraphQL的客戶必須安裝 [使用GraphQL索引套件1.1.1Experience Manager內容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/cfm-graphql-index-def-1.1.1.zip).
 
 如此一來，您就可以根據實際使用的功能，新增所需的索引定義。
 
@@ -343,7 +343,7 @@ The UberJar for [!DNL Experience Manager] 6.5.17.0可在以下網址取得： [M
 
 | 區域 | 功能 | 替代方案 |
 |---|---|---|
-| 整合 | 畫面 **[!UICONTROL AEM Cloud Services選擇加入]** 已過時，因為 [!DNL Experience Manager] 和 [!DNL Adobe Target] 整合更新於 [!DNL Experience Manager] 6.5.整合支援Adobe Target Standard API。 API透過Adobe IMS和以下方式使用驗證 [!DNL Adobe I/O Runtime]. 它可支援Adobe Launch在樂器領域日益增加的作用 [!DNL Experience Manager] 頁面進行分析和個人化時，選擇加入精靈在功能上並不相關。 | 設定系統連線、Adobe IMS驗證和 [!DNL Adobe I/O Runtime] 透過個別 [!DNL Experience Manager] 雲端服務。 |
+| 整合 | 畫面 **[!UICONTROL Experience Manager Cloud Services選擇加入]** 已過時，因為 [!DNL Experience Manager] 和 [!DNL Adobe Target] 整合更新於 [!DNL Experience Manager] 6.5.整合支援Adobe Target Standard API。 API透過Adobe IMS和以下方式使用驗證 [!DNL Adobe I/O Runtime]. 它可支援Adobe Launch在樂器領域日益增加的作用 [!DNL Experience Manager] 頁面進行分析和個人化時，選擇加入精靈在功能上並不相關。 | 設定系統連線、Adobe IMS驗證和 [!DNL Adobe I/O Runtime] 透過個別 [!DNL Experience Manager] 雲端服務。 |
 | 連接器 | Microsoft®SharePoint 2010和Microsoft®SharePoint 2013的AdobeJCR聯結器已過時 [!DNL Experience Manager] 6.5. | N/A |
 
 ## 已知問題{#known-issues}
@@ -367,7 +367,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
    執行這些步驟後，GraphQL查詢的執行速度應該會更快。
 
-* 作為 [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支援以下專案的turnkey安裝 [!DNL AEM Forms 6.5.10.0].
+* 作為 [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支援以下專案的turnkey安裝 [!DNL Experience Manager Forms 6.5.10.0].
 
 * 如果您升級您的 [!DNL Experience Manager] 從6.5.0 - 6.5.4執行個體到Java™ 11上的最新Service Pack，您會看到 `RRD4JReporter` 中的例外狀況 `error.log` 檔案。 若要停止例外，請重新啟動您的執行個體 [!DNL Experience Manager]. <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
@@ -393,7 +393,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    "refresh": true
    ```
 
-* 在JBoss® 7.1.4平台上，當使用者安裝AEM 6.5.16.0或更新版Service Pack時， `adobe-livecycle-jboss.ear` 部署失敗。
+* 在JBoss® 7.1.4平台上，當使用者安裝Experience Manager6.5.16.0或更新版Service Pack時， `adobe-livecycle-jboss.ear` 部署失敗。
 * WebLogic JEE伺服器不支援高於1.8.0_281的JDK版本。
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
