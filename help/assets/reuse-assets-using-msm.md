@@ -7,9 +7,9 @@ role: User, Admin, Architect
 feature: Asset Management,Multi Site Manager
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 56632bd6ce9fc90f0bc61f903f84f7ea8bbcd12d
 workflow-type: tm+mt
-source-wordcount: '3389'
+source-wordcount: '3288'
 ht-degree: 10%
 
 ---
@@ -287,22 +287,6 @@ MSM會維護來源資產與其即時副本之間的即時關係，以便：
    ![從即時副本概述控制檯輕鬆更新即時副本資料夾中的許多資產](assets/livecopyconsole_update_many_assets.png)
 
    *圖：從以下位置輕鬆更新即時副本資料夾中的許多資產： [!UICONTROL 即時副本概觀] 主控台。*
-
-## 延伸MSM [!DNL Assets] {#extend-api}
-
-[!DNL Experience Manager] 可讓您使用MSM Java API來擴充功能。 對象 [!DNL Assets]，擴充功能的運作方式與搭配使用MSM的運作方式相同， [!DNL Sites]. 如需詳細資訊，請參閱 [擴充MSM](/help/sites-developing/extending-msm.md) 以及下列專案，以取得特定工作的相關資訊：
-
-* [API概觀](/help/sites-developing/extending-msm.md#overview-of-the-java-api)
-* [建立同步化動作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)
-* [建立轉出設定](/help/sites-developing/extending-msm.md#creating-a-new-rollout-configuration)
-* [建立並使用簡單的LiveActionFactory類別](/help/sites-developing/extending-msm.md#creating-and-using-a-simple-liveactionfactory-class)
-
->[!NOTE]
->
->* MSM中的Blueprint用於 [!DNL Sites] 在MSM中稱為「即時副本」來源， [!DNL Assets].
->* MSM不支援在建立網站精靈中移除章節步驟 [!DNL Assets].
->* MSM不支援在頁面屬性（觸控式UI）上設定MSM鎖定 [!DNL Assets].
-
 
 ## 資產管理任務對即時副本的影響 {#manage-assets}
 
