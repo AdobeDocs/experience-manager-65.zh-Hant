@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 7f152c3b7b80c78bb73b45e83cc566e9bbb0c393
+source-git-commit: 206242583fcbf651dbc6234dc01be5140d0cfca7
 workflow-type: tm+mt
-source-wordcount: '3494'
+source-wordcount: '3537'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 1%
    您不需要導覽至資產位置並檢視其屬性，即可執行這些作業。
 * **Dynamic Media _快照_**— 實驗測試影像或Dynamic Media URL，以檢視不同影像修飾元的輸出，以及針對檔案大小（使用WebP和AVIF傳送）、網路頻寬和裝置畫素比的智慧型影像最佳化。 另請參閱 [Dynamic Media快照](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **使用Dynamic Media進行DASH串流**  — 新通訊協定(DASH - Dynamic Adaptive Streaming over HTTP)已針對Dynamic Media視訊傳送中的最適化資料流推出（已啟用CMAF）支援。 現在所有地區都可使用， [透過支援票證啟用](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
-
+* **AEM Sites和內容片段與AEM Assets新一代Dynamic Media的整合**：AEM Assetsas a Cloud Service新一代Dynamic Media的使用者現在可以使用這些雲端託管的資產，透過AEM Sites 6.5的內部部署或受管理服務例項進行製作和交付。
 * **在AEM網站頁面上整合最適化Forms**：透過AEM Sites編輯器中的最適化Forms元件，使用下列專案順暢地建立數位註冊體驗： — 最適化Forms容器和最適化Forms — 內嵌(v2)元件。
 * **AEM Forms中支援reCAPTCHA Enterprise**：在AEM Forms中新增reCAPTCHA Enterprise支援，除了現有的Google reCAPTCHA v2支援外，還針對詐騙活動和垃圾郵件提供增強型保護。
 * **透過AEM Forms支援適用於政府的Adobe Acrobat Sign**：允許安全且合規的AEM Forms與適用於政府的Adobe Sign（符合FedRAMP）整合。
