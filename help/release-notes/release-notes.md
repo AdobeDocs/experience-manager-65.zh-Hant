@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 9bf19cd21db185229d565d684dbac9e44f236532
+source-git-commit: 2c9337af99811d7b58712e1d0def7b5af5661c11
 workflow-type: tm+mt
-source-wordcount: '3586'
+source-wordcount: '3567'
 ht-degree: 1%
 
 ---
@@ -104,9 +104,8 @@ ht-degree: 1%
 
 ## [!DNL Forms]{#forms-6517}
 
-* 當使用者升級到Experience Manager6.5.16.0 Service Pack時，附加的檔案無法正確擷取。 (FORMS-8906)
-* 更新至Experience Manager6.5.15.0 Service Pack後，HTML5表單在具有IE相容模式的Edge瀏覽器中無法運作或正確載入。 (FORMS-8526、FORMS-8523)
-* 當使用者套用Experience Manager6.5.16.0 Service Pack時，規則編輯器無法開啟。 (FORMS-8290)
+* 更新至AEM 6.5.15.0 Service Pack後，HTML5表單在具有IE相容模式的Edge瀏覽器中無法運作或正確載入。 (FORMS-8526、FORMS-8523)
+* 當使用者套用AEM 6.5.16.0 Service Pack時，規則編輯器無法開啟。 (FORMS-8290)
 * 當數字方塊元件套用最大位數驗證時，會失敗。 (FORMS-7938)
 * 建立互動式通訊陳述式時，PDF中的圖表元件未正確產生。 (FORMS-7827、FORMS-8297)
 * Java™垃圾收藏集無法清除Experience Manager Forms OSGi伺服器上的舊程式碼棧積。 (FORMS-8207)
