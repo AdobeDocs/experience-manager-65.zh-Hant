@@ -7,10 +7,10 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 7bfa9a9e143f199c42161b92dcba66ae441ad1fb
+source-git-commit: 0afd721ff02f2c9abeed40c4b8f4fdf169523c35
 workflow-type: tm+mt
-source-wordcount: '9993'
-ht-degree: 4%
+source-wordcount: '10068'
+ht-degree: 3%
 
 ---
 
@@ -33,7 +33,6 @@ ht-degree: 4%
 >
 >* 共用 [!DNL Assets] 型別的資料夾 `sling:OrderedFolder` 不支援在共用至Experience Cloud時使用。 如果要共用資料夾，請勿選取 [!UICONTROL 已訂購] 建立資料夾時。
 >* [!DNL Experience Manager] 不允許使用 `subassets` word做為資料夾的名稱。 這是為包含複合資產之子資產的節點保留的關鍵字。
-
 
 1. 導覽至數位資產資料夾中您要建立資料夾的位置。 在功能表中，按一下 **[!UICONTROL 建立]**. 選取 **[!UICONTROL 新增資料夾]**.
 1. 在 **[!UICONTROL 標題]** 欄位中，提供資料夾名稱。 根據預設，DAM會使用您提供的標題作為資料夾名稱。 建立資料夾後，您可以覆寫預設值並指定另一個資料夾名稱。
@@ -58,6 +57,12 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >[!NOTE]
 >
 >在Dynamic Media - Scene7模式中，預設的資產上傳檔案大小為2 GB以下。 若要設定大於2 GB資產的上傳，最高可達15 GB，請參閱 [（可選）設定Dynamic Media - Scene7模式以上傳大於2 GB的資產](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb).
+
+>[!IMPORTANT]
+>
+>您上傳至Experience Manager的資產，如果檔案名稱超過100個字元，在Dynamic Media中使用時，名稱會縮短。
+>
+>檔案名稱中的前100個字元會依原樣使用；其餘字元會以英數字元字串取代。 在Dynamic Media中使用資產時，此重新命名方法可確保唯一的名稱。 這也旨在容納Dynamic Media中允許的最大資產檔案名稱長度。
 
 您可以選擇將資產上傳到資料夾，而不論資料夾是否已指派處理設定檔。
 
@@ -104,7 +109,6 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >* 確保在上傳過程中，針對很可能導致認證到期的檔案啟用區塊上傳。
 >
 >* 確保每個區塊在認證過期之前完成。
-
 
 如果您上傳的資產名稱與上傳資產位置已有可用的資產名稱相同，系統會顯示警告對話方塊。
 
@@ -198,22 +202,22 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您想要上傳大
 
 | 上傳選項 | 子選項 | 說明 |
 |---|---|---|
-| 工作名稱 |  | 文字欄位中預先填寫的預設名稱包括使用者輸入的名稱部分和日期與時間戳記。 您可以使用預設名稱，或為此上載工作輸入您自己建立的名稱。 <br>工作和其他上載及發佈工作會記錄在「工作」頁面上，您可以在此檢查工作的狀態。 |
-| 上傳後發佈 |  | 自動發佈您上傳的資產。 |
-| 任何檔案夾內若有基本資產名稱相同者 (無論副檔名為何)，將予以覆寫 |  | 如果您希望上傳的檔案以相同名稱取代現有檔案，請選取此選項。 此選項的名稱可能會有所不同，視中的設定而定 **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]** > **[!UICONTROL 上傳至應用程式]** > **[!UICONTROL 覆寫影像]**. |
-| 上傳時解壓縮Zip或Tar檔案 |  |  |
-| 工作選項 |  | 按一下 **[!UICONTROL 工作選項]** 以便您能開啟 [!UICONTROL 上載工作選項] 對話方塊，然後選擇影響整個上載工作的選項。 這些選項對於所有檔案型別都相同。<br>您可以從「應用程式一般設定」頁面開始選擇上傳檔案的預設選項。 若要開啟此頁面，請選擇 **[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]**. 選取 **[!UICONTROL 預設上傳選項]** 開啟 [!UICONTROL 上載工作選項] 對話方塊。 |
-|  | 時間 | 選取「一次性」或「週期性」。 若要設定週期性工作，請選擇重複選項（每日、每週、每月或自訂），以指定您希望FTP上傳工作重複的時間。 然後視需要指定排程選項。 |
-|  | 包含子資料夾 | 上傳您要上傳之資料夾中的所有子資料夾。 您上傳的資料夾及其子資料夾的名稱會自動輸入到 [!DNL Experience Manager Assets]. |
-|  | 裁切選項 | 若要從影像側面手動裁切，請選取「裁切」選單，然後選擇「手動」。 然後輸入要從影像任何一面或每一面裁切的畫素數。 裁切多少影像取決於影像檔案中的ppi （每英吋畫素）設定。 例如，如果影像顯示150 ppi，而您在「上」、「右」、「下」和「左」文字方塊中輸入75，則會從每側裁切半英吋。<br> 若要自動裁切影像中的空白畫素，請開啟「裁切」選單，選擇「手動」，然後在「上」、「右」、「下」和「左」欄位中輸入畫素度量，從側面裁切。 您也可以選擇「裁切」選單上的「裁切」，然後選擇下列選項：<br> **修剪依據** <ul><li>**顏色**  — 選擇「顏色」選項。 然後選取「轉角」功能表，再選擇最能代表您要裁切之空白顏色的影像轉角。</li><li>**透明度**  — 選擇「透明度」選項。<br> **容許度**  — 拖曳滑桿以指定從0到1的容許度。若要根據顏色進行裁剪，請指定0以裁切畫素，但前提是畫素完全符合您在影像角落選取的顏色。 數字越接近1，色彩差異越大。<br>若要根據透明度進行裁剪，請指定0以裁切畫素，除非畫素是透明的。 數字越接近1，透明度越高。</li></ul><br>這些裁切選項不具破壞性。 |
-|  | 色彩設定檔選項 | 當您建立用於傳送的最佳化檔案時，請選擇色彩轉換：<ul><li>預設色彩儲存：當影像包含色域資訊時，保留來源影像色彩；沒有色彩轉換。 目前幾乎所有影像都已內嵌適當的色彩設定檔。 不過，如果CMYK來源影像未包含內嵌色彩設定檔，則這些色彩會轉換為sRGB （標準紅綠藍）色彩空間。 sRGB是在網頁上顯示影像的建議色彩空間。</li><li>保留原始色域：保留原始顏色，而不進行任何色彩轉換。 對於沒有內嵌色彩設定檔的影像，任何色彩轉換都是使用在「發佈」設定中設定的預設色彩設定檔來完成。 色彩設定檔可能不會與使用此選項建立的檔案中的色彩對齊。 因此，建議您使用「預設色彩保留」選項。</li><li>自訂從>到<br> 開啟選單，讓您能夠選擇「轉換自」和「轉換至」色域。 此進階選項會覆寫任何內嵌在來源檔案中的顏色資訊。 當您提交的所有影像包含不正確或遺失色彩設定檔資料時，請選取此選項。</li></ul> |
-|  | 影像編輯選項 | 您可以保留影像中的剪裁遮色片，並選擇色彩設定檔。<br> 另請參閱 [設定上傳時影像編輯的選項](#setting-image-editing-options-at-upload). |
-|  | Postscript選項 | 您可以點陣化PostScript®檔案、裁切檔案、保留透明背景、選擇解析度以及選擇色域。<br> 另請參閱 [設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options). |
-|  | Photoshop選項 | 您可以從Adobe® Photoshop®檔案建立範本、維護圖層、指定圖層的命名方式、擷取文字，以及指定影像錨定到範本的方式。<br> 不支援範本 [!DNL Experience Manager].<br> 另請參閱 [設定Photoshop上傳選項](#setting-photoshop-upload-options). |
-|  | PDF選項 | 您可以點陣化檔案、擷取搜尋字詞和連結、自動產生eCatalog、設定解析度，以及選擇色域。<br>不支援eCatalog [!DNL Experience Manager]. <br> 另請參閱 [設定PDF上傳選項](#setting-pdf-upload-options).<br>**注意**：對於新上傳，PDF要考慮用於擷取的最大頁數為5000。 2022年12月31日起，所有PDF的此限制將變更為100頁。 另請參閱 [Dynamic Media限制](/help/assets/limitations.md). |
-|  | Illustrator選項 | 您可以點陣化Adobe Illustrator®檔案、維持透明背景、選擇解析度，以及選擇色域。<br> 另請參閱 [設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options). |
-|  | EVideo選項 | 您可以透過選擇視訊預設集來轉碼視訊檔案。<br> 另請參閱 [設定eVideo上傳選項](#setting-evideo-upload-options). |
-|  | 批次集預設集 | 若要從上傳的檔案建立「影像集」或「迴轉集」，請按一下您要使用之預設集的「作用中」欄。 您可以選取多個預設集。 您可以在Dynamic Media Classic的「應用程式設定/批次集預設集」頁面中建立預設集。<br> 另請參閱 [設定批次集預設集以自動生成影像集和迴轉集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 以進一步瞭解如何建立批次集預設集。<br> 另請參閱 [在上傳時設定批次集預設集](#setting-batch-set-presets-at-upload). |
+| 工作名稱 | | 文字欄位中預先填寫的預設名稱包括使用者輸入的名稱部分和日期與時間戳記。 您可以使用預設名稱，或為此上載工作輸入您自己建立的名稱。 <br>工作和其他上載及發佈工作會記錄在「工作」頁面上，您可以在此檢查工作的狀態。 |
+| 上傳後發佈 | | 自動發佈您上傳的資產。 |
+| 任何檔案夾內若有基本資產名稱相同者 (無論副檔名為何)，將予以覆寫 | | 如果您希望上傳的檔案以相同名稱取代現有檔案，請選取此選項。 此選項的名稱可能會有所不同，視中的設定而定 **[!UICONTROL 應用程式設定]** > **[!UICONTROL 一般設定]** > **[!UICONTROL 上傳至應用程式]** > **[!UICONTROL 覆寫影像]**. |
+| 上傳時解壓縮Zip或Tar檔案 | | |
+| 工作選項 | | 按一下 **[!UICONTROL 工作選項]** 以便您能開啟 [!UICONTROL 上載工作選項] 對話方塊，然後選擇影響整個上載工作的選項。 這些選項對於所有檔案型別都相同。<br>您可以從「應用程式一般設定」頁面開始選擇上傳檔案的預設選項。 若要開啟此頁面，請選擇 **[!UICONTROL 設定]** > **[!UICONTROL 應用程式設定]**. 選取 **[!UICONTROL 預設上傳選項]** 開啟 [!UICONTROL 上載工作選項] 對話方塊。 |
+| | 時間 | 選取「一次性」或「週期性」。 若要設定週期性工作，請選擇重複選項（每日、每週、每月或自訂），以指定您希望FTP上傳工作重複的時間。 然後視需要指定排程選項。 |
+| | 包含子資料夾 | 上傳您要上傳之資料夾中的所有子資料夾。 您上傳的資料夾及其子資料夾的名稱會自動輸入到 [!DNL Experience Manager Assets]. |
+| | 裁切選項 | 若要從影像側面手動裁切，請選取「裁切」選單，然後選擇「手動」。 然後輸入要從影像任何一面或每一面裁切的畫素數。 裁切多少影像取決於影像檔案中的ppi （每英吋畫素）設定。 例如，如果影像顯示150 ppi，而您在「上」、「右」、「下」和「左」文字方塊中輸入75，則會從每側裁切半英吋。<br> 若要自動裁切影像中的空白畫素，請開啟「裁切」選單，選擇「手動」，然後在「上」、「右」、「下」和「左」欄位中輸入畫素度量，從側面裁切。 您也可以選擇「裁切」選單上的「裁切」，然後選擇下列選項：<br> **修剪依據** <ul><li>**顏色**  — 選擇「顏色」選項。 然後選取「轉角」功能表，再選擇最能代表您要裁切之空白顏色的影像轉角。</li><li>**透明度**  — 選擇「透明度」選項。<br> **容許度**  — 拖曳滑桿以指定從0到1的容許度。若要根據顏色進行裁剪，請指定0以裁切畫素，但前提是畫素完全符合您在影像角落選取的顏色。 數字越接近1，色彩差異越大。<br>若要根據透明度進行裁剪，請指定0以裁切畫素，除非畫素是透明的。 數字越接近1，透明度越高。</li></ul><br>這些裁切選項不具破壞性。 |
+| | 色彩設定檔選項 | 當您建立用於傳送的最佳化檔案時，請選擇色彩轉換：<ul><li>預設色彩儲存：當影像包含色域資訊時，保留來源影像色彩；沒有色彩轉換。 目前幾乎所有影像都已內嵌適當的色彩設定檔。 不過，如果CMYK來源影像未包含內嵌色彩設定檔，則這些色彩會轉換為sRGB （標準紅綠藍）色彩空間。 sRGB是在網頁上顯示影像的建議色彩空間。</li><li>保留原始色域：保留原始顏色，而不進行任何色彩轉換。 對於沒有內嵌色彩設定檔的影像，任何色彩轉換都是使用在「發佈」設定中設定的預設色彩設定檔來完成。 色彩設定檔可能不會與使用此選項建立的檔案中的色彩對齊。 因此，建議您使用「預設色彩保留」選項。</li><li>自訂從>到<br> 開啟選單，讓您能夠選擇「轉換自」和「轉換至」色域。 此進階選項會覆寫任何內嵌在來源檔案中的顏色資訊。 當您提交的所有影像包含不正確或遺失色彩設定檔資料時，請選取此選項。</li></ul> |
+| | 影像編輯選項 | 您可以保留影像中的剪裁遮色片，並選擇色彩設定檔。<br> 另請參閱 [設定上傳時影像編輯的選項](#setting-image-editing-options-at-upload). |
+| | Postscript選項 | 您可以點陣化PostScript®檔案、裁切檔案、保留透明背景、選擇解析度以及選擇色域。<br> 另請參閱 [設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options). |
+| | Photoshop選項 | 您可以從Adobe® Photoshop®檔案建立範本、維護圖層、指定圖層的命名方式、擷取文字，以及指定影像錨定到範本的方式。<br> 不支援範本 [!DNL Experience Manager].<br> 另請參閱 [設定Photoshop上傳選項](#setting-photoshop-upload-options). |
+| | PDF選項 | 您可以點陣化檔案、擷取搜尋字詞和連結、自動產生eCatalog、設定解析度，以及選擇色域。<br>不支援eCatalog [!DNL Experience Manager]. <br> 另請參閱 [設定PDF上傳選項](#setting-pdf-upload-options).<br>**注意**：對於新上傳，PDF要考慮用於擷取的最大頁數為5000。 2022年12月31日起，所有PDF的此限制將變更為100頁。 另請參閱 [Dynamic Media限制](/help/assets/limitations.md). |
+| | Illustrator選項 | 您可以點陣化Adobe Illustrator®檔案、維持透明背景、選擇解析度，以及選擇色域。<br> 另請參閱 [設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options). |
+| | EVideo選項 | 您可以透過選擇視訊預設集來轉碼視訊檔案。<br> 另請參閱 [設定eVideo上傳選項](#setting-evideo-upload-options). |
+| | 批次集預設集 | 若要從上傳的檔案建立「影像集」或「迴轉集」，請按一下您要使用之預設集的「作用中」欄。 您可以選取多個預設集。 您可以在Dynamic Media Classic的「應用程式設定/批次集預設集」頁面中建立預設集。<br> 另請參閱 [設定批次集預設集以自動生成影像集和迴轉集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 以進一步瞭解如何建立批次集預設集。<br> 另請參閱 [在上傳時設定批次集預設集](#setting-batch-set-presets-at-upload). |
 
 #### 設定上傳時影像編輯的選項 {#setting-image-editing-options-at-upload}
 
@@ -247,14 +251,14 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您想要上傳大
 
 | 選項 | 子選項 | 說明 |
 |---|---|---|
-| 處理 |  | 選擇 **[!UICONTROL 點陣化]** 將檔案中的向量圖形轉換為點陣圖格式。 |
-| 在演算後的影像中維持透明背景 |  | 維持檔案的背景透明度。 |
-| 解析度 |  | 決定解析度設定。 此設定決定檔案中每英吋顯示的畫素數。 |
-| 色彩空間 |  | 選取「色域」選單，然後從下列色域選項中選擇： |
-|  | 自動偵測 | 保留檔案的色域。 |
-|  | 強製為RGB | 轉換為RGB色域。 |
-|  | 強製為CMYK | 轉換為CMYK色彩空間。 |
-|  | 強製為灰階 | 轉換為灰階色彩空間。 |
+| 處理 | | 選擇 **[!UICONTROL 點陣化]** 將檔案中的向量圖形轉換為點陣圖格式。 |
+| 在演算後的影像中維持透明背景 | | 維持檔案的背景透明度。 |
+| 解析度 | | 決定解析度設定。 此設定決定檔案中每英吋顯示的畫素數。 |
+| 色彩空間 | | 選取「色域」選單，然後從下列色域選項中選擇： |
+| | 自動偵測 | 保留檔案的色域。 |
+| | 強製為RGB | 轉換為RGB色域。 |
+| | 強製為CMYK | 轉換為CMYK色彩空間。 |
+| | 強製為灰階 | 轉換為灰階色彩空間。 |
 
 #### 設定Photoshop上傳選項 {#setting-photoshop-upload-options}
 
@@ -270,15 +274,15 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 | 選項 | 子選項 | 說明 |
 |---|---|---|
-| 保留圖層 |  | 將PSD中的圖層（如果有的話）擷取到個別資產中。 資產圖層會維持與PSD相關聯。 您可以在「詳細資訊」檢視中開啟PSD檔案，並選取圖層面板來檢視它們。 |
-| 建立範本 |  | 從PSD檔案中的圖層建立範本。 |
-| 擷取文字 |  | 擷取文字，讓使用者能在檢視器中搜尋文字。 |
-| 延伸圖層以符合背景大小 |  | 將擷取的影像圖層大小延伸至背景圖層大小。 |
-| 圖層命名 |  | PSD檔案中的圖層會以個別影像的形式上傳。 |
-|  | 圖層名稱 | 在PSD檔案中，將影像命名為圖層名稱后的名稱。 例如，原始PSD檔案中名為「價格標籤」的圖層會變成名為「價格標籤」的影像。 不過，如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱（「背景」、「圖層1」、「圖層2」等），則會以影像在PSD檔案中的圖層編號來命名影像。 它們不會以預設圖層名稱命名。 |
-|  | Photoshop和圖層編號 | 將影像命名為PSD檔案中的圖層編號後方，略過原始圖層名稱。 影像以Photoshop檔案名稱及附加的圖層編號命名。 例如，名為Spring Ad.psd之檔案的第二層名為Spring Ad_2，即使它在Photoshop中有非預設名稱亦然。 |
-|  | Photoshop和圖層名稱 | 在PSD檔案後面加上圖層名稱或圖層編號來命名影像。 如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱，則會使用圖層編號。 例如，在名為SpringAd的PSD檔案中，名為Price Tag的圖層名為Spring Ad_Price Tag。 具有預設名稱Layer 2的圖層稱為Spring Ad_2。 |
-| 錨點 |  | 指定如何在範本中錨定影像，範本是從PSD檔案產生的圖層構成產生的。 依預設，錨點是中心。 無論取代影像的外觀比例為何，置中錨點都可讓取代影像以最佳方式填滿相同的空間。 以不同外觀取代此影像的影像，在參照範本並使用引數替代時，實際上會佔據相同的空間。 如果您的應用程式需要取代影像來填滿範本中配置的空間，請變更為其他設定。 |
+| 保留圖層 | | 將PSD中的圖層（如果有的話）擷取到個別資產中。 資產圖層會維持與PSD相關聯。 您可以在「詳細資訊」檢視中開啟PSD檔案，並選取圖層面板來檢視它們。 |
+| 建立範本 | | 從PSD檔案中的圖層建立範本。 |
+| 擷取文字 | | 擷取文字，讓使用者能在檢視器中搜尋文字。 |
+| 延伸圖層以符合背景大小 | | 將擷取的影像圖層大小延伸至背景圖層大小。 |
+| 圖層命名 | | PSD檔案中的圖層會以個別影像的形式上傳。 |
+| | 圖層名稱 | 在PSD檔案中，將影像命名為圖層名稱后的名稱。 例如，原始PSD檔案中名為「價格標籤」的圖層會變成名為「價格標籤」的影像。 不過，如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱（「背景」、「圖層1」、「圖層2」等），則會以影像在PSD檔案中的圖層編號來命名影像。 它們不會以預設圖層名稱命名。 |
+| | Photoshop和圖層編號 | 將影像命名為PSD檔案中的圖層編號後方，略過原始圖層名稱。 影像以Photoshop檔案名稱及附加的圖層編號命名。 例如，名為Spring Ad.psd之檔案的第二層名為Spring Ad_2，即使它在Photoshop中有非預設名稱亦然。 |
+| | Photoshop和圖層名稱 | 在PSD檔案後面加上圖層名稱或圖層編號來命名影像。 如果PSD檔案中的圖層名稱是預設的Photoshop圖層名稱，則會使用圖層編號。 例如，在名為SpringAd的PSD檔案中，名為Price Tag的圖層名為Spring Ad_Price Tag。 具有預設名稱Layer 2的圖層稱為Spring Ad_2。 |
+| 錨點 | | 指定如何在範本中錨定影像，範本是從PSD檔案產生的圖層構成產生的。 依預設，錨點是中心。 無論取代影像的外觀比例為何，置中錨點都可讓取代影像以最佳方式填滿相同的空間。 以不同外觀取代此影像的影像，在參照範本並使用引數替代時，實際上會佔據相同的空間。 如果您的應用程式需要取代影像來填滿範本中配置的空間，請變更為其他設定。 |
 
 #### 設定PDF上傳選項 {#setting-pdf-upload-options}
 
@@ -296,14 +300,14 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 |---|---|---|
 | 處理 | 點陣化 | （預設）撕裂PDF檔案中的頁面，並將向量圖形轉換為點陣圖影像。 如果要建立eCatalog，請選擇此選項。 |
 | 提取 | 搜尋字詞 | 從PDF檔案中擷取文字，以便在eCatalog檢視器中依關鍵字搜尋檔案。 |
-|  | 連結 | 從PDF檔案中擷取連結，並將其轉換成eCatalog檢視器中使用的影像地圖。 |
-| 從多頁PDF自動產生eCatalog |  | 自動從PDF檔案建立eCatalog。 eCatalog是以您上傳的PDF檔案命名。 (只有在您上傳時點陣化PDF檔案時，才可使用此選項。) |
-| 解析度 |  | 決定解析度設定。 此設定會決定PDF檔案中每英吋顯示的畫素數。 預設值為150。 |
-| 色彩空間 |  | 選取「色域」選單，並為PDF檔案選擇色域。 大多數PDF檔案都有RGB和CMYK彩色影像。 RGB色域較適合線上檢視。 |
-|  | 自動偵測 | 保留PDF檔案的色域。 |
-|  | 強制為 RGB | 轉換為RGB色域。 |
-|  | 強制為 CMYK | 轉換為CMYK色彩空間。 |
-|  | 強制為灰階 | 轉換為灰階色彩空間。 |
+| | 連結 | 從PDF檔案中擷取連結，並將其轉換成eCatalog檢視器中使用的影像地圖。 |
+| 從多頁PDF自動產生eCatalog | | 自動從PDF檔案建立eCatalog。 eCatalog是以您上傳的PDF檔案命名。 (只有在您上傳時點陣化PDF檔案時，才可使用此選項。) |
+| 解析度 | | 決定解析度設定。 此設定會決定PDF檔案中每英吋顯示的畫素數。 預設值為150。 |
+| 色彩空間 | | 選取「色域」選單，並為PDF檔案選擇色域。 大多數PDF檔案都有RGB和CMYK彩色影像。 RGB色域較適合線上檢視。 |
+| | 自動偵測 | 保留PDF檔案的色域。 |
+| | 強制為 RGB | 轉換為RGB色域。 |
+| | 強制為 CMYK | 轉換為CMYK色彩空間。 |
+| | 強制為灰階 | 轉換為灰階色彩空間。 |
 
 #### 設定eVideo上傳選項 {#setting-evideo-upload-options}
 
@@ -311,11 +315,11 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 | 選項 | 子選項 | 說明 |
 |---|---|---|
-| 適應性影片 |  | 單一編碼預設集可與任何長寬比搭配使用，建立視訊以傳送至行動裝置、平板電腦和案頭。 使用此預設集編碼的上傳來源視訊會設定為固定高度。 不過，寬度會自動縮放以保留視訊的外觀比例。 <br>最佳實務是使用最適化視訊編碼。 |
+| 適應性影片 | | 單一編碼預設集可與任何長寬比搭配使用，建立視訊以傳送至行動裝置、平板電腦和案頭。 使用此預設集編碼的上傳來源視訊會設定為固定高度。 不過，寬度會自動縮放以保留視訊的外觀比例。 <br>最佳實務是使用最適化視訊編碼。 |
 | 單一編碼預設集 | 排序編碼預設集 | 選取 **[!UICONTROL 名稱]** 或 **[!UICONTROL 大小]** 如果您想要依名稱或解析度大小對「案頭」、「行動裝置」和「平板電腦」下列出的編碼預設集進行排序。 |
-|  | 桌面 | 建立MP4檔案，為桌上型電腦提供串流或漸進式視訊體驗。 選取一或多個外觀比例，搭配您想要的解析度大小和目標資料速率。 |
-|  | 行動 | 建立MP4檔案，以在iPhone或Android™行動裝置上傳送。 選取一或多個外觀比例，搭配您想要的解析度大小和目標資料速率。 |
-|  | 平板電腦 | 建立MP4檔案，以在iPad或Android™平板電腦裝置上傳送。 選取一或多個外觀比例，搭配您想要的解析度大小和目標資料速率。 |
+| | 桌面 | 建立MP4檔案，為桌上型電腦提供串流或漸進式視訊體驗。 選取一或多個具有您想要之解析度大小和目標資料速率的外觀比例。 |
+| | 行動 | 建立MP4檔案，以在iPhone或Android™行動裝置上傳送。 選取一或多個具有您想要之解析度大小和目標資料速率的外觀比例。 |
+| | 平板電腦 | 建立MP4檔案，以在iPad或Android™平板電腦裝置上傳送。 選取一或多個具有您想要之解析度大小和目標資料速率的外觀比例。 |
 
 #### 在上傳時設定批次集預設集 {#setting-batch-set-presets-at-upload}
 
@@ -382,7 +386,6 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 >* [預覽Dynamic Media資產](/help/assets/previewing-assets.md).
 >* [檢視子資產](managing-linked-subassets.md#viewing-subassets).
 
-
 ## 編輯屬性和中繼資料 {#editing-properties}
 
 1. 導覽至您要編輯其中繼資料的資產位置。
@@ -403,7 +406,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
    *圖：使用日期選擇器來排程資產啟用。*
 
-1. 您需要檢查 **[!UICONTROL 已達到開啟/關閉時間]** 選項，以更新中繼資料屬性中的復寫代理程式觸發器。
+1. Check **[!UICONTROL 已達到開啟/關閉時間]** 選項，以更新中繼資料屬性中的復寫代理程式觸發器。
    ![代理設定](assets-dm/Agent-settings.png)
 
 1. 若要在特定期間後停用資產，請從日期選擇器旁的停用日期/時間 **[!UICONTROL 關閉時間]** 欄位。 停用日期應晚於資產的啟用日期。 晚於 [!UICONTROL 關閉時間]，資產及其轉譯無法透過 [!DNL Assets] 網頁介面或透過HTTP API。
@@ -482,11 +485,11 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    * 指定資產移動後的名稱。 然後按一下 **[!UICONTROL 下一個]** 以繼續進行。
 
    * 按一下 **[!UICONTROL 取消]** 以停止程式。
+
    >[!NOTE]
    >
    >* 如果新位置沒有同名的資產，您可以為該資產指定相同的名稱。 不過，如果您將資產移至有相同名稱的資產存在的位置，則應使用不同的名稱。 如果您使用相同的名稱，系統會自動產生名稱的變數。 例如，如果資產的名稱為Square，則系統會為其副本產生名稱Square1。
    >* 重新命名時，檔案名稱中不允許有空格。
-
 
 1. 於 **[!UICONTROL 選取目的地]** 對話方塊，請執行下列任一項作業：
 
@@ -576,11 +579,11 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
    * 如果資產沒有參考資料，則會刪除資產。
 
    * 如果資產有參考資料，則會出現錯誤訊息，通知您 **一個或多個資產被引用**. 您可以選取 **[!UICONTROL 強制刪除]** 或 **[!UICONTROL 取消]**.
+
    >[!NOTE]
    >
    >* 若要從其他頁面解析或移除傳入參照，請先更新相關參照，然後再刪除資產。 此外，使用覆蓋圖停用強制刪除選項，以禁止使用者刪除參照的資產並留下中斷的連結。
    >* 可以刪除 *資料夾* 包含已取出資產檔案的檔案。 刪除資料夾之前，請確保使用者未簽出任何數位資產。
-
 
 >[!NOTE]
 >
@@ -683,7 +686,7 @@ CUG是限制資產存取權的額外方式。 您也可以為資料夾設定登�
 
 1. 若要裁切影像，請按一下 **[!UICONTROL 裁切]** ![裁切影像的選項](assets/do-not-localize/crop.png).
 
-1. 從清單中選取所需的選項。裁切區域會根據您選擇的選項出現在影像上。「自 **由手形** 」選項可讓您裁切影像，而不受任何外觀比例限制。
+1. 從清單中選取所需的選項。裁切區域會根據您選擇的選項顯示在影像上。 「自 **由手形** 」選項可讓您裁切影像，而不受任何外觀比例限制。
 
 1. 選取要裁切的區域，並在影像上調整大小或重新定位。
 
@@ -863,9 +866,9 @@ CUG是限制資產存取權的額外方式。 您也可以為資料夾設定登�
 
 1. 從下列連結下載Google Noto CJK字型，並將其儲存在Font Manager Service中設定的字型目錄中。
 
-   * 全部使用單一Super CJK字型： [https://www.google.com/get/noto/help/cjk/](https://www.google.com/get/noto/help/cjk/)
-   * Noto Sans （適用於歐洲語言）： [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
-   * 選擇哪種語言時不要使用字型： [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
+   * 全部使用單一Super CJK字型： [https://fonts.google.com/noto/use](https://fonts.google.com/noto/use)
+   * Noto Sans （適用於歐洲語言）： [https://fonts.google.com/noto](https://fonts.google.com/noto)
+   * 選擇哪種語言時不要使用字型： [https://fonts.google.com/noto](https://fonts.google.com/noto)
 
 1. 透過將font-family引數設定為來設定註釋PDF檔案 `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`. 此設定預設可用，適用於所有歐洲和CJK語言。
 1. 如果您選擇的語言與步驟2中提到的語言不同，請將適當的（逗號分隔）專案附加至預設字型系列。
@@ -879,7 +882,7 @@ CUG是限制資產存取權的額外方式。 您也可以為資料夾設定登�
 * 上傳具有相同檔案名稱、且位於相同位置的資產。 可以是新資產，也可以是相同資產的修改版本。
 * 在中編輯影像 [!DNL Experience Manager] 並儲存變更。
 * 編輯資產的中繼資料。
-* 使用 [!DNL Experience Manager] 案頭應用程式，以取出現有資產並加以編輯，然後 [上傳您的變更](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets).
+* 使用 [!DNL Experience Manager] 案頭應用程式，以簽出現有資產、編輯該資產，以及 [上傳您的變更](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets).
 
 您也可以透過工作流程啟用自動版本設定。 當您建立資產的版本時，中繼資料和轉譯會與版本一起儲存。 轉譯會取代相同的影像，例如上傳之JPEG檔案的PNG轉譯。
 
@@ -895,9 +898,9 @@ CUG是限制資產存取權的額外方式。 您也可以為資料夾設定登�
    * 按一下 **[!UICONTROL 另存為版本]** 以便建立資產的版本。 選擇性地新增標籤和註解。
    * 按一下 **[!UICONTROL 建立]** 以建立版本。
 
-      ![從側欄建立資產版本](assets/create-new-version-from-timeline.png)
+     ![從側欄建立資產版本](assets/create-new-version-from-timeline.png)
 
-      *圖：從建立資產的版本 [!UICONTROL 時間表] 左側邊欄。*
+     *圖：從建立資產的版本 [!UICONTROL 時間表] 左側邊欄。*
 
 1. 若要檢視資產的版本：
 
@@ -911,9 +914,9 @@ CUG是限制資產存取權的額外方式。 您也可以為資料夾設定登�
    * 按一下資產的版本。 選擇性地新增標籤和註解。
    * 按一下 **[!UICONTROL 還原為此版本]**.
 
-      ![選取版本以還原至該版本](assets/select_version.png)
+     ![選取版本以還原至該版本](assets/select_version.png)
 
-      *圖：選取一個版本並還原到該版本。 它會成為目前版本，然後可供DAM使用者使用。*
+     *圖：選取一個版本並還原到該版本。 它會成為目前版本，然後可供DAM使用者使用。*
 
 1. 若要比較兩個版本的影像，請遵循下列步驟：
    * 按一下要與目前版本進行比較的版本。
@@ -934,7 +937,7 @@ CUG是限制資產存取權的額外方式。 您也可以為資料夾設定登�
 * 集合可以包含來自不同位置的資產，因為它們僅包含對這些資產的引用。 每個集合都會維護資產的參考完整性。
 * 您可以與具有不同許可權層級的多個使用者共用集合，包括編輯、檢視等。
 
-若要瞭解集合管理的詳細資訊，請參閱 [管理集合](/help/assets/manage-collections.md).
+若要瞭解集合管理的詳細資訊，請參閱 [管理數位資產集合](/help/assets/manage-collections.md).
 
 ## 在案頭應用程式中檢視資產或AdobeAsset Link時隱藏過期的資產 {#hide-expired-assets-via-acp-api}
 
@@ -954,4 +957,4 @@ curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/glo
 --data-urlencode '../../jcr:primaryType=sling:Folder'
 ```
 
-若要瞭解更多，請參閱如何 [使用案頭應用程式瀏覽DAM資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) 和 [如何使用Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html).
+若要瞭解更多，請參閱如何 [使用案頭應用程式瀏覽DAM資產](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) 和 [如何使用Adobe Asset Link](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html).
