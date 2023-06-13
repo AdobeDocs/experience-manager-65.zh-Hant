@@ -1,8 +1,6 @@
 ---
-title: 與Adobe Campaign Standard整合
-seo-title: Integrating with Adobe Campaign Standard
-description: 瞭解如何將AEM與Adobe Campaign Standard整合。
-seo-description: Learn how to integrate AEM with Adobe Campaign Standard.
+title: 將AEM 6.5與Adobe Campaign Standard整合
+description: 瞭解如何將AEM 6.5與Adobe Campaign Standard整合。
 uuid: ef31339e-d925-499c-b8fb-c00ad01e38ad
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,19 +8,23 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 5c0fec99-7b1e-45d6-a115-e498d288e9e1
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: a0062ffbdd6477eca494fea4142d271f3015599a
+source-git-commit: 8db2cadc83b26e04f9931e18c53db3bf0be03796
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1834'
 ht-degree: 0%
 
 ---
 
 
-# 與Adobe Campaign Standard整合 {#integrating-with-adobe-campaign-standard}
+# 將AEM 6.5與Adobe Campaign Standard整合 {#integrating-with-adobe-campaign-standard}
 
-將AEM與Adobe Campaign整合後，您可以直接在AEM中管理電子郵件傳送、內容和表單。 需要同時執行Adobe Campaign Standard和AEM中的設定步驟，才能在解決方案之間啟用雙向通訊。
+將AEM 6.5與Adobe Campaign Standard (ACS)整合後，您可以直接在AEM中管理電子郵件傳送、內容和表單。 需要同時執行Adobe Campaign Standard和AEM中的設定步驟，才能在解決方案之間啟用雙向通訊。
 
 此整合可讓AEM和Adobe Campaign Standard獨立使用。 行銷人員可以在Adobe Campaign中建立行銷活動並使用目標定位，而內容建立者則可以同時在AEM中設計內容。 透過整合，Adobe Campaign可鎖定在AEM中建立之行銷活動的內容和設計，並加以傳遞。
+
+>[!INFO]
+>
+>本檔案詳細說明如何將Adobe Campaign Standard與AEM 6.5整合。如需其他Campaign整合，請參閱檔案 [整合AEM 6.5與Adobe Campaign。](campaign.md)
 
 ## 整合步驟 {#integration-steps}
 
@@ -198,6 +200,7 @@ Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項�
 您已設定Externalizer，Adobe Campaign現在可以存取您的內容。
 
 >[!NOTE]
+>
 發佈執行個體必須可以從Adobe Campaign伺服器連線。 如果它指向 `localhost:4503` 或Adobe Campaign無法存取的其他伺服器，來自AEM的影像將不會顯示在Adobe Campaign主控台中。
 
 ## 在AEM中設定行銷活動 — 遠端使用者 {#campaign-remote-user}
