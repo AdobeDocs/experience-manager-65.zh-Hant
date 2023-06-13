@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 70be796a50a93267b965d00db1b359d9a809ec08
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1070'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->已棄用AEM電子郵件元件。 由於電子郵件結合了內容和樣式，因此由AEM提供的現成可用電子郵件元件對於客戶的重複使用有限，因為需要將自訂樣式實作到專案所需的任何元件中。
+>本文適用於已棄用的Foundation元件型AEM電子郵件元件。
 >
->電子郵件元件可在專案層級實作，而過時的AEM電子郵件元件會說明如何實作。 不過，這些已棄用的元件不應用於專案。
+>建議使用者運用現代化的 [核心元件電子郵件元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)
 
 本檔案說明產生完善開發之電子郵件行銷活動範本的電子郵件設計相關最佳實務。
 

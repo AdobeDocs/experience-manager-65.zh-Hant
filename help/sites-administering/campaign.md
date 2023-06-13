@@ -1,8 +1,6 @@
 ---
 title: 與 Adobe Campaign 整合
-seo-title: Integrating with Adobe Campaign
-description: 瞭解如何將AEM與Adobe Campaign整合。
-seo-description: Learn how to integrate AEM with Adobe Campaign.
+description: 瞭解AEMas a Cloud Service支援與Adobe Campaign整合。
 uuid: 6113279e-d1f5-46c3-ac94-50270fa55060
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,29 +8,48 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fd96f30c-0616-445e-adb9-050d52862ffc
 exl-id: ab41e540-1d43-4fc2-99d4-621ff2290e77
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d02a8eaba853bf96c7f706e924b4286275d582aa
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 5%
+source-wordcount: '239'
+ht-degree: 8%
 
 ---
 
+
 # 與 Adobe Campaign 整合{#integrating-with-adobe-campaign}
+
+瞭解AEMas a Cloud Service支援與Adobe Campaign整合。
 
 Adobe Campaign是一組解決方案，可讓您跨所有線上和離線管道個人化並傳遞行銷活動。
 
-您可以將此版本的AEM與下列其中一個版本的Adobe Campaign整合：
+## 與Adobe Campaign Classic整合 {#acc}
 
-* Adobe Campaign 6.1，內部部署解決方案。
-* Adobe Campaign Standard （訂閱式解決方案）。
+Adobe Campaign Classic (ACC)有許多版本。 與AEM整合的支援取決於您實作的ACC版本，以及AEM是否安裝在Adobe管理服務(AMS)的內部部署中。
 
-本檔案說明如何將AEM與Adobe Campaign整合。 視您使用訂閱式或內部部署解決方案而定，整合步驟會略有不同。
+| ACC版本 | 與AEM 6.5整合 <br>內部部署 | 與AEM 6.5整合<br>AMS |
+|---|---|---|
+| [v7](https://experienceleague.adobe.com/docs/campaign-classic.html) | 支援 | 支援 |
+| [v8](https://experienceleague.adobe.com/docs/campaign-v8.html) | 支援 | 支援 |
+| Web UI* | 支援 | 支援 |
 
-* [與Adobe Campaign 6.1整合](/help/sites-administering/campaignonpremise.md)
+*Adobe Campaign Classic的Web UI預計在2023年底前推出。
+
+以下檔案說明如何將AEM與Adobe Campaign Classic整合。
+
+* [與Adobe Campaign Classic整合](/help/sites-administering/campaignonpremise.md)
+* [電子郵件核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)
+* [疑難排解Adobe Campaign Classic整合](/help/sites-administering/troubleshooting-campaignintegration.md)
+
+## 與Adobe Campaign Standard整合 {#acs}
+
+Adobe Campaign Standard (ACS)與AEM的整合取決於AEM是否安裝在Adobe管理服務(AMS)的內部部署中。
+
+| 與AEM 6.5整合 <br>內部部署 | 與AEM 6.5整合<br>AMS |
+|---|---|
+| 支援 | 支援 |
+| 支援 | 支援 |
+
+以下檔案說明如何將AEM與Adobe Campaign Standard整合。
+
 * [與Adobe Campaign Standard整合](/help/sites-administering/campaignstandard.md)
-* [電子郵件範本的最佳實務](/help/sites-administering/best-practices-for-email-templates.md)
-* [疑難排解Adobe Campaign整合](/help/sites-administering/troubleshooting-campaignintegration.md)
-
->[!NOTE]
->
->若要檢閱相關的AEM社群文章，請參閱： [整合Adobe Experience Manager和Adobe Campaign Standard以建立Newletter](https://helpx.adobe.com/experience-manager/using/aem_campaign.html).
+* [電子郵件核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)

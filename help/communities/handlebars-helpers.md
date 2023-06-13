@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1509'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 | **[⇐ Feature Essentials](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
 |---|---|
-|  | **[使用者端自訂⇒](client-customize.md)** |
+|   | **[使用者端自訂⇒](client-customize.md)** |
 
 Handlebars Helpers (helpers)是可從Handlebars指令碼呼叫的方法，以方便使用SCF元件。
 
@@ -49,19 +49,19 @@ AEM Communities提供的自訂SCF協助程式定義於 [使用者端程式庫](.
 
 * **內容**：字串
 
-   （選用）預設為空字串
+  （選用）預設為空字串
 
 * **maxLength**：數字
 
-   （選用）預設值是前後關聯的長度。
+  （選用）預設值是前後關聯的長度。
 
 * **maxWords**：數字
 
-   （選用）預設值是裁剪字串中的字數。
+  （選用）預設值是裁剪字串中的字數。
 
 * **safeString**：布林值
 
-   （選用）如果為true，則傳回Handlebars.SafeString()。 預設值為false。
+  （選用）如果為true，則傳回Handlebars.SafeString()。 預設值為false。
 
 ### 範例 {#examples}
 
@@ -97,23 +97,23 @@ Then abbreviate would return
 
 * **內容**：字串
 
-   （選用）預設為空字串。
+  （選用）預設為空字串。
 
 * **numChars**：數字
 
-   （選用）未顯示全文字時要顯示的字元數。 預設值為100。
+  （選用）未顯示全文字時要顯示的字元數。 預設值為100。
 
 * **更多文字**：字串
 
-   （選用）要顯示的文字，表示還有更多文字要顯示。 預設值為「更多」。
+  （選用）要顯示的文字，表示還有更多文字要顯示。 預設值為「更多」。
 
 * **省略符號文字**：字串
 
-   （選用）要顯示的文字，表示有隱藏的文字。 預設值為「……」。
+  （選用）要顯示的文字，表示有隱藏的文字。 預設值為「……」。
 
 * **safeString**：布林值
 
-   （選用）布林值，指出在傳回結果之前是否套用Handlebars.SafeString()。 預設值為false。
+  （選用）布林值，指出在傳回結果之前是否套用Handlebars.SafeString()。 預設值為false。
 
 ### 範例 {#example}
 
@@ -137,11 +137,11 @@ Then content-loadmore would return
 
 * **內容**：數字
 
-   （選用）從1970年1月1日起位移的毫秒值（紀元）。 預設值為目前日期。
+  （選用）從1970年1月1日起位移的毫秒值（紀元）。 預設值為目前日期。
 
 * **格式**：字串
 
-   （選用）要套用的日期格式。 預設值為&quot;YYYY-MM-DDTHH:mm:ss.sssZ」而結果會顯示為「2015-03-18T18」:17:13-07:00英吋
+  （選用）要套用的日期格式。 預設值為&quot;YYYY-MM-DDTHH:mm:ss.sssZ」而結果會顯示為「2015-03-18T18」:17:13-07:00英吋
 
 ### 範例 {#examples-1}
 
@@ -165,11 +165,11 @@ Then content-loadmore would return
 
 * **值**：字串
 
-   要比較的左側值。
+  要比較的左側值。
 
 * **rvalue**：字串
 
-   要比較的右側值。
+  要比較的右側值。
 
 ### 範例 {#example-1}
 
@@ -189,11 +189,11 @@ Then content-loadmore would return
 
 * **內容**：字串
 
-   （選用）要翻譯的字串。 若未提供預設值，則為必要。
+  （選用）要翻譯的字串。 若未提供預設值，則為必要。
 
 * **模式**：字串
 
-   （選用）以逗號分隔的 [WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) 以測試是否設定。
+  （選用）以逗號分隔的 [WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) 以測試是否設定。
 
 ### 範例 {#example-2}
 
@@ -215,15 +215,15 @@ Then content-loadmore would return
 
 * **內容**：字串
 
-   （選用）要翻譯的字串。 若未提供預設值，則為必要。
+  （選用）要翻譯的字串。 若未提供預設值，則為必要。
 
 * **預設**：字串
 
-   （選用）要翻譯的預設字串。 如果未提供內容，則為必要。
+  （選用）要翻譯的預設字串。 如果未提供內容，則為必要。
 
 * **評論**：字串
 
-   （選用）翻譯提示
+  （選用）翻譯提示
 
 ### 範例 {#example-3}
 
@@ -246,27 +246,27 @@ Then content-loadmore would return
 
 * **內容**：字串或物件
 
-   （選擇性，除非提供相對路徑）
+  （選擇性，除非提供相對路徑）
 
-   使用 `this` 以傳遞目前內容。
+  使用 `this` 以傳遞目前內容。
 
-   使用 `this.id` 若要取得資源，請前往 `id` 用於呈現請求的resourceType。
+  使用 `this.id` 若要取得資源，請前往 `id` 用於呈現請求的resourceType。
 
 * **resourceType**：字串
 
-   （選用）資源型別預設為上下文中的資源型別。
+  （選用）資源型別預設為上下文中的資源型別。
 
 * **範本**：字串
 
-   元件指令碼的路徑。
+  元件指令碼的路徑。
 
 * **路徑**：字串
 
-   （必要）資源的路徑。 如果路徑是相對路徑，則必須提供上下文，否則會傳回空字串。
+  （必要）資源的路徑。 如果路徑是相對路徑，則必須提供上下文，否則會傳回空字串。
 
 * **authoringDisabled**：布林值
 
-   （選用）預設值為false。 僅供內部使用。
+  （選用）預設值為false。 僅供內部使用。
 
 ### 範例 {#example-4}
 
@@ -286,19 +286,19 @@ Then content-loadmore would return
 
 * **類別**：字串
 
-   （選用）以逗號分隔的使用者端程式庫類別清單。 這將包含給定類別的所有Javascript和CSS程式庫。 主題名稱是從請求中擷取。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 這將包含給定類別的所有Javascript和CSS程式庫。 主題名稱是從請求中擷取。
 
 * **主題**：字串
 
-   （選用）以逗號分隔的使用者端程式庫類別清單。 這將包含給定類別的所有主題相關資料庫（CSS和JS）。 主題名稱是從請求中擷取。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 這將包含給定類別的所有主題相關資料庫（CSS和JS）。 主題名稱是從請求中擷取。
 
 * **js**：字串
 
-   （選用）以逗號分隔的使用者端程式庫類別清單。 這會包含指定類別的所有Javascript程式庫。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 這會包含指定類別的所有Javascript程式庫。
 
 * **css**：字串
 
-   （選用）以逗號分隔的使用者端程式庫類別清單。 這將包含給定類別的所有CSS資料庫。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 這將包含給定類別的所有CSS資料庫。
 
 ### 範例 {#examples-2}
 
@@ -353,11 +353,11 @@ Then content-loadmore would return
 
 * **內容**：數字
 
-   與「現在」進行比較的過去時間。 時間以從1970年1月1日起（紀元）偏移的毫秒值表示。
+  與「現在」進行比較的過去時間。 時間以從1970年1月1日起（紀元）偏移的毫秒值表示。
 
 * **daysCutoff**：數字
 
-   切換至實際日期之前的天數。 預設值為60。
+  切換至實際日期之前的天數。 預設值為60。
 
 ### 範例 {#example-5}
 
@@ -385,7 +385,7 @@ Depending on how long in the past, may return
 
 * **內容**：物件
 
-   要編碼的HTML。
+  要編碼的HTML。
 
 ### 範例 {#example-6}
 
@@ -403,7 +403,7 @@ Depending on how long in the past, may return
 
 * **內容**：物件
 
-   要編碼的HTML。
+  要編碼的HTML。
 
 ### 範例 {#example-7}
 
@@ -421,7 +421,7 @@ Depending on how long in the past, may return
 
 * **內容**：物件
 
-   要編碼的HTML。
+  要編碼的HTML。
 
 ### 範例 {#example-8}
 
@@ -439,7 +439,7 @@ var input = {{xss-jsString topic-title}}
 
 * **內容**：物件
 
-   要清理的URL。
+  要清理的URL。
 
 ### 範例 {#example-9}
 
@@ -457,7 +457,7 @@ var input = {{xss-jsString topic-title}}
 * 內容可以是字串、數字、布林值或JSON資料物件。
 * 可以將目前前後關聯內巢狀的物件作為前後關聯傳遞，例如 `this.url` 或 `this.id` （請參閱下列簡單和區塊協助程式的範例）。
 
-* 區塊協助程式是可從範本中任何位置呼叫的函式。 他們每次可使用不同的內容呼叫範本區塊零次或多次。 它們包含介於以下兩點之間的內容： {{#*name*}} and {{/*name*}}.
+* 區塊協助程式是可從範本中任何位置呼叫的函式。 他們每次可使用不同的內容呼叫範本區塊零次或多次。 它們包含介於以下兩點之間的內容： `{{#*name*}}` 和 `{{/*name*}}`.
 
 * Handlebars為名為&#39;options&#39;的協助程式提供最終引數。 特殊物件&#39;options&#39;包含
 
@@ -603,4 +603,4 @@ clientlib必須：
 
 | **[⇐ Feature Essentials](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
 |---|---|
-|  | **[使用者端自訂⇒](client-customize.md)** |
+|   | **[使用者端自訂⇒](client-customize.md)** |
