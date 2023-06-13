@@ -11,9 +11,9 @@ topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 feature: Configuring
 exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b8027a8564f2dce408e7cd5b01f3b86c703c9e3a
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1392'
 ht-degree: 7%
 
 ---
@@ -202,8 +202,7 @@ ht-degree: 7%
 ### 安裝作者憑證 {#install-the-author-certificate}
 
 1. 開啟發佈執行個體的「使用者管理」頁面。 ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
-1. 找到您用來執行復寫請求的使用者帳戶，然後按一下或點選使用者名稱。
-1. 如果[Create TrustStore]連結出現在[Account Settings]區域中，請按一下該連結，為TrustStore建立密碼，然後按一下[OK]。
+1. 如果[Create TrustStore]連結出現在[Global Trust Store]區域中，請按一下連結，為TrustStore建立密碼，然後按一下[OK]。
 1. 在「帳戶設定」區域中，按一下「管理TrustStore」。
 1. 按一下「從CER檔案新增憑證」。
 1. 請確定已選取將憑證對應至使用者選項。 按一下「選取憑證檔案」，選取「author.cer」，然後按一下「開啟」。
