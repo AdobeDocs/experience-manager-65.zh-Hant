@@ -2,9 +2,9 @@
 title: AEM Content and Commerce 2022年發行說明
 description: AEM Content and Commerce 2022年發行說明
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 0fdff88695646603cec120d25f156f8c918686df
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '816'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 | Component | 系統需求 |
 |:-------|:-----:|
-| CIF附加元件 | 最小值： AEM 6.5.7、Magento2.3.5 GraphQL結構描述 |
+| CIF附加元件 | 最低： AEM 6.5.7、Adobe Commerce 2.3.5 GraphQL結構描述 |
 | CIF Core Components | [系統需求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統需求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
@@ -45,7 +45,7 @@ ht-degree: 9%
 ### 新增功能 {#what-is-new-july}
 
 * 透過AEM頁面屬性以及產品主控室中的概觀，將AEM頁面與產品和類別相關聯
-   ![產品駕駛艙頁面關聯](/help/assets/CIF/product_cockpit_page_association.png)
+  ![產品駕駛艙頁面關聯](/help/assets/CIF/product_cockpit_page_association.png)
 
 ## 發行日期： 2022年6月
 
@@ -57,7 +57,7 @@ ht-degree: 9%
 
 ### 新增功能 {#what-is-new-june}
 
-* 產品目錄擴充現在支援AEM頁面。 這可讓作者管理頁面 — 產品關聯。
+* 產品目錄擴充現在支援AEM頁面，讓作者能夠管理頁面 — 產品關聯。
 
 * 多項CIF核心元件改良
 
@@ -65,7 +65,7 @@ ht-degree: 9%
 
 * 新增登入權杖至使用者端價格擷取
 
-* 資料層中的頁面元件錯誤
+* 資料層中的頁面元件錯誤。
 
 ## 發行日期： 2022年5月
 
@@ -81,13 +81,13 @@ ht-degree: 9%
 
 ![產品駕駛艙屬性概觀](/help/assets/CIF/product_cockpit_properties_overview.png)
 
-* 改善協力廠商聯結器在I/O執行階段的相容性和健全性
+* 改善協力廠商聯結器在I/O Runtime上的相容性和健全性
 
 * 改善對GQL使用者端設定覆寫的支援（例如，設定自訂快取行為）
 
 ### 錯誤修正 {#bug-fixes-may}
 
-* 多值產品選擇器欄位會將第2個和其他產品顯示為無效
+* 多值產品選取器欄位會將第二個和其他產品顯示為無效
 
 * 產品選取器偶爾會隱藏在元件後面
 
@@ -103,11 +103,11 @@ ht-degree: 9%
 
 * 快速存取產品駕駛艙：在Sites Editor中按一下即可輕鬆存取完整詳細的產品資訊
 
-   ![啟用願望清單](/help/assets/CIF/enable-wishlist.png)
+  ![啟用願望清單](/help/assets/CIF/enable-wishlist.png)
 
 * 支援其他行銷商務元件：元件可設定為顯示加入購物車和加入願望清單的號召性用語
 
-   ![網站編輯器到產品駕駛艙的捷徑](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
+  ![網站編輯器到產品駕駛艙的捷徑](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
 ## 發行日期： 2022年2月
 
@@ -121,9 +121,9 @@ ht-degree: 9%
 
 * 測試版： AEM CIF搜尋核心元件支援Commerce LiveSearch
 * 針對多儲存場景的改進SEO：PDP/PLP的URL格式現在可以透過CIF雲端設定屬性在儲存層級上設定
-* 產品選取器透過UI中的新篩選器選項支援分階段產品。  這可讓內容從業人員為即將推出的產品準備產品內容管理
+* 產品選取器透過使用者介面中的新篩選器選項支援分階段產品。 讓內容從業人員為即將推出的產品準備產品內容管理
 * 使用CIF雲端設定名稱（而非設定Proxy URL）簡化CIF設定管理和錯誤處理
-* 產品清單和輪播元件的手動類別選擇。 這可讓內容從業人員在目錄體驗之外的內容頁面上使用這些元件
+* 產品清單和輪播元件的手動類別選擇。 允許內容從業人員在目錄體驗之外的內容頁面上使用這些元件
 
 ## 發行日期： 2022年1月
 

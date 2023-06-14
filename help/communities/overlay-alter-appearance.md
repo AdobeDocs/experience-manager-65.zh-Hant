@@ -1,8 +1,6 @@
 ---
 title: 變更外觀
-seo-title: Alter the Appearance
 description: 修改指令碼
-seo-description: Modify the script
 uuid: 30555b9f-da29-4115-9ed5-25f80a247bd6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 exl-id: cb8f6967-216c-46d3-a7ba-068b0f5e3b94
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -35,7 +33,7 @@ comment.hbs指令碼負責為每個評論建立整體HTML。
 
 1. 開啟覆蓋的 `comment.hbs`
 
-   * 連按兩下節點 `comment.hbs` 在 `/apps/social/commons/components/hbs/comments/comment folder`
+   * 按兩下節點 `comment.hbs` 在 `/apps/social/commons/components/hbs/comments/comment folder`
 
 1. 尋找下列行，然後刪除或註解它們：
 
@@ -44,7 +42,7 @@ comment.hbs指令碼負責為每個評論建立整體HTML。
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-請刪除線段或將其周圍加上 `<!--` 和 `-->` 以取消註解。 此外，字元「xxx」也會新增為顯示頭像位置的視覺指標。
+請刪除線段或將其周圍加上 `<!--` 和 `-->` 所以您應將其註釋掉。 此外，字元「xxx」也會新增為顯示頭像位置的視覺指標。
 
 ```xml
    xxx
@@ -63,14 +61,14 @@ comment.hbs指令碼負責為每個評論建立整體HTML。
 
 在全域導覽中選取 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]** 並按一下 **[!UICONTROL 啟動樹狀結構]**.
 
-開始路徑請輸入 `/apps/social/commons` 並選取 **[!UICONTROL 啟動]**.
+在起始路徑中，輸入 `/apps/social/commons` 並選取 **[!UICONTROL 啟動]**.
 
 ![verify-content-template](assets/verify-content-template.png)
 
 ### 檢視結果 {#view-results}
 
-如果您以管理員身分(例如https://localhost:4503/crx/de )登入發佈執行個體（例如，以管理員/管理員身分），您可以驗證覆蓋的元件是否存在。
+如果您以管理員身分登入發佈執行個體，例如，以admin/admin身分登入https://localhost:4503/crx/de ，則可驗證是否有覆蓋的元件存在。
 
-如果您登出後重新登入， `aaron.mcdonald@mailinator.com/password` 和重新整理頁面，您會發現貼出的評論不再以頭像顯示，而是顯示簡單的「xxx」。
+如果您登出，然後登入身份 `aaron.mcdonald@mailinator.com/password` 並重新整理頁面，您會發現顯示的人偶沒有顯示張貼的評論。 而是顯示簡單的「xxx」。
 
 ![create-template-component](assets/create-template-component.png)
