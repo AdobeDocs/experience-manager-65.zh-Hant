@@ -1,8 +1,6 @@
 ---
 title: SCF Handlebars協助程式
-seo-title: SCF Handlebars Helpers
 description: Handlebars Helper方法可加快處理SCF的速度
-seo-description: Handlebars Helper methods to facilitate work with SCF
 uuid: 9c514199-871e-4b68-8147-2052d2eeda15
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,9 +8,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1473'
 ht-degree: 2%
 
 ---
@@ -27,7 +25,7 @@ Handlebars Helpers (helpers)是可從Handlebars指令碼呼叫的方法，以方
 
 實施包含使用者端和伺服器端定義。 開發人員也可以建立自訂協助程式。
 
-AEM Communities提供的自訂SCF協助程式定義於 [使用者端程式庫](../../help/sites-developing/clientlibs.md)：
+AEM Communities提供的自訂SCF協助程式定義於 [使用者端資源庫](../../help/sites-developing/clientlibs.md)：
 
 * `/etc/clientlibs/social/commons/scf/helpers.js`
 
@@ -113,7 +111,7 @@ Then abbreviate would return
 
 * **safeString**：布林值
 
-  （選用）布林值，指出在傳回結果之前是否套用Handlebars.SafeString()。 預設值為false。
+  （選用）布林值，指出在傳回結果之前是否要套用Handlebars.SafeString()。 預設值為false。
 
 ### 範例 {#example}
 
@@ -183,7 +181,7 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-測試目前值的區塊輔助程式 [WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) 以字串分隔的模式清單。
+測試目前值的區塊輔助程式 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 以字串分隔的模式清單。
 
 ### 參數 {#parameters-4}
 
@@ -193,7 +191,7 @@ Then content-loadmore would return
 
 * **模式**：字串
 
-  （選用）以逗號分隔的 [WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) 以測試是否設定。
+  （選用）以逗號分隔的 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 以測試是否設定。
 
 ### 範例 {#example-2}
 
@@ -236,9 +234,9 @@ Then content-loadmore would return
 
 將元件加入為範本中不存在資源的協助程式。
 
-這允許資源以程式設計方式比新增為JCR節點的資源更容易自訂。 另請參閱 [新增或包含Communities元件](scf.md#add-or-include-a-communities-component).
+與新增為JCR節點的資源相比，此方法可讓您更輕鬆地以程式設計方式自訂資源。 另請參閱 [新增或包含Communities元件](scf.md#add-or-include-a-communities-component).
 
-只能納入少量Communities元件。 對於AEM 6.1，可包含的有 [評論](essentials-comments.md)， [評等](rating-basics.md)， [評論](reviews-basics.md)、和 [投票](essentials-voting.md).
+只有為數不多的幾個社群元件可供納入。 <!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
 
 此協助程式僅適用於伺服器端，可提供類似以下的功能 [cq：include](../../help/sites-developing/taglib.md) 用於JSP指令碼。
 
@@ -254,7 +252,7 @@ Then content-loadmore would return
 
 * **resourceType**：字串
 
-  （選用）資源型別預設為上下文中的資源型別。
+  （選擇性）資源型別預設為上下文中的資源型別。
 
 * **範本**：字串
 
@@ -274,11 +272,11 @@ Then content-loadmore would return
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-這將會包含位於的新註釋元件 `this.id` + /comments。
+在加入新的註解元件 `this.id` + /comments。
 
 ## IncludeClientLib {#includeclientlib}
 
-包含AEM html使用者端程式庫的協助程式，可以是js、css或主題程式庫。 對於不同型別的多個包含專案（例如js和css），此標籤需要在Handlebars指令碼中使用多次。
+包含AEM html使用者端程式庫的協助程式，可以是js、css或主題程式庫。 對於不同型別的多個包含專案（例如js和css），此標籤必須在Handlebars指令碼中多次使用。
 
 此協助程式僅適用於伺服器端，可提供類似以下的功能 [ui：includeClientLib](../../help/sites-developing/taglib.md) 用於JSP指令碼。
 
@@ -286,19 +284,19 @@ Then content-loadmore would return
 
 * **類別**：字串
 
-  （選用）以逗號分隔的使用者端程式庫類別清單。 這將包含給定類別的所有Javascript和CSS程式庫。 主題名稱是從請求中擷取。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 納入指定類別的所有JavaScript和CSS程式庫。 主題名稱是從請求中擷取。
 
 * **主題**：字串
 
-  （選用）以逗號分隔的使用者端程式庫類別清單。 這將包含給定類別的所有主題相關資料庫（CSS和JS）。 主題名稱是從請求中擷取。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 包含指定類別的所有主題相關資料庫（CSS和JS）。 主題名稱是從請求中擷取。
 
 * **js**：字串
 
-  （選用）以逗號分隔的使用者端程式庫類別清單。 這會包含指定類別的所有Javascript程式庫。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 包含指定類別的所有JavaScript程式庫。
 
 * **css**：字串
 
-  （選用）以逗號分隔的使用者端程式庫類別清單。 這將包含給定類別的所有CSS資料庫。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 包含指定類別的所有CSS程式庫。
 
 ### 範例 {#examples-2}
 
@@ -379,7 +377,7 @@ Depending on how long in the past, may return
 
 協助程式會編碼HTML元素內容的來源字串，以協助防範XSS。
 
-注意：這不是驗證器，且不可用於寫入屬性值。
+注意：此協助程式不是驗證器，且不可用於寫入屬性值。
 
 ### 參數 {#parameters-9}
 
@@ -397,7 +395,7 @@ Depending on how long in the past, may return
 
 協助程式會編碼來源字串，以寫入HTML屬性值，協助防範XSS。
 
-注意：這不是驗證器，且不可用於撰寫可操作的屬性（href、src、事件處理常式）。
+注意：此協助程式不是驗證器，且不可用於撰寫可操作的屬性（href、src、事件處理常式）。
 
 ### 參數 {#parameters-10}
 
@@ -415,7 +413,7 @@ Depending on how long in the past, may return
 
 協助程式會編碼原始字串，以寫入JavaScript字串內容以協助防範XSS。
 
-注意：這不是驗證器，且不可用來寫入任意JavaScript。
+注意：此Helper不是驗證器，且不可用來寫入任意JavaScript。
 
 ### 參數 {#parameters-11}
 
@@ -433,7 +431,7 @@ var input = {{xss-jsString topic-title}}
 
 協助程式會清理要當作HTMLhref或srce屬性值寫入的URL，以協助防範XSS。
 
-注意：這可能會傳回空字串
+注意：此協助程式可能傳回空字串。
 
 ### 參數 {#parameters-12}
 
@@ -522,11 +520,11 @@ template(data);
 
 ## 自訂SCF協助程式 {#custom-scf-helpers}
 
-必須在伺服器端及使用者端實作自訂協助程式，尤其是在傳遞資料時。 對於SCF，當伺服器產生特定元件的HTML時，大多數範本會在伺服器端編譯和轉譯。
+必須在伺服器端和使用者端實作自訂協助程式，尤其是在傳遞資料時。 對於SCF，當伺服器產生特定元件的HTML時，大多數範本會在伺服器端編譯和轉譯。
 
 ### 伺服器端自訂協助程式 {#server-side-custom-helpers}
 
-若要在伺服器端實作和註冊自訂SCF helper，只需實作Java介面即可 [TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，使其成為 [OSGi服務](../../help/sites-developing/the-basics.md#osgi) 並將其安裝為OSGi套件組合的一部分。
+若要在伺服器端實作和註冊自訂SCF helper，只需實作Java™介面即可 [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，使其成為 [OSGi服務](../../help/sites-developing/the-basics.md#osgi) 並將其安裝為OSGi套件組合的一部分。
 
 例如：
 

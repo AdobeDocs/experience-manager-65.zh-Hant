@@ -1,8 +1,6 @@
 ---
 title: 檔案庫功能
-seo-title: File Library Feature
 description: 檔案庫功能可讓登入的網站訪客上傳、管理和下載檔案
-seo-description: The File Library feature lets signed-in site visitors upload, manage, and download files
 uuid: e78a90bd-f1d3-44f8-98eb-1498a55e8217
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: ea2b23af-49c3-409b-a041-43c42d846f21
 docset: aem65
 exl-id: 05cfaab5-a12d-475f-9095-a9fb13571d0a
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '733'
 ht-degree: 7%
 
 ---
@@ -39,13 +37,13 @@ ht-degree: 7%
 
 如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-當 [必要的使用者端程式庫](/help/communities/essentials-file-library.md#essentials-for-client-side) 包含，這就是 `File Library` 元件將會出現：
+當 [必要的使用者端程式庫](/help/communities/essentials-file-library.md#essentials-for-client-side) 包括，它是如何 `File Library` 元件出現：
 
 ![file-library1](assets/file-library1.png)
 
 ### 設定檔案庫 {#configuring-file-library}
 
-選取已放置的 `File Library` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
+選取已放置的 `File Library` 元件供您存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
 
 ![configure-new](assets/configure-new.png)
 
@@ -61,11 +59,11 @@ ht-degree: 7%
 
 * **每頁的評論數**
 
-  限制每頁顯示的評論數以及顯示的回複數。 預設為 **10**.
+  限制每頁顯示的評論數和顯示的回複數。 預設為 **10**.
 
 * **最大檔案大小**
 
-  此值將限制上傳的檔案大小。 預設限製為104857600 (10 Mb)。
+  此值會限制上傳的檔案大小。 預設限製為104857600 (10 MB)。
 
 * **訊息長度上限**
 
@@ -73,7 +71,7 @@ ht-degree: 7%
 
 * **允許的檔案類型**
 
-  以「點」分隔符號分隔的副檔名清單（以逗號分隔）。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 並未指定預設值，因此允許所有檔案型別。
+  以「點」分隔符號分隔的副檔名清單（以逗號分隔）。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定任何檔案型別。 並未指定預設值，因此允許所有檔案型別。
 
 * **RTF 編輯器**
 
@@ -89,7 +87,7 @@ ht-degree: 7%
 
 * **允許的命名空間**
 
-  如果勾選「允許標籤」，則可用標籤將限製為已勾選的名稱空間。 如果未勾選任何專案，則允許全部勾選。 預設為所有名稱空間。
+  如果勾選「允許標籤」 ，則可用標籤會限制在已勾選的名稱空間。 如果未核取任何名稱空間，則允許所有名稱空間。 預設為所有名稱空間。
 
 * **建議限制**
 
@@ -97,7 +95,7 @@ ht-degree: 7%
 
 * **允許投票**
 
-  如果勾選，將會啟用為檔案投票的功能。 預設為未勾選。
+  如果勾選，則會啟用投票給檔案的功能。 預設為未勾選。
 
 * **允許關注**
 
@@ -113,7 +111,7 @@ ht-degree: 7%
 
 * **UI 提及模式**
 
-  指定允許的模式字串，以在貼文中標籤(@mention)註冊使用者。 例如 `~{{familyName}}{{givenName}}`。
+  指定允許的模式字串，以便在貼文中標籤(@mention)已註冊的使用者。 例如， `~{{familyName}}{{givenName}}`.
 
 * **允許執行緒式回覆**
 
@@ -125,11 +123,11 @@ ht-degree: 7%
 
 * **事先審核**
 
-  如果勾選，註解必須先獲得核准，才會出現在發佈網站上。 預設為未勾選。
+  如果勾選，註解在發佈網站上出現之前必須先獲得核准。 預設為未勾選。
 
 * **刪除注釋**
 
-  如果勾選，發表評論的訪客將獲得刪除評論的功能。 預設為已核取。
+  如果勾選，發表評論的訪客可視需要刪除評論。 預設為已核取。
 
 * **拒絕評論**
 

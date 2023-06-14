@@ -1,8 +1,6 @@
 ---
 title: 部落格功能
-seo-title: Blog Feature
 description: 日誌格式的社群資訊
-seo-description: Community information in a journaling format
 uuid: 7323063f-81e8-45c3-9035-bf7df6124830
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 exl-id: 4650ac36-5506-4efc-be35-fac9e5a58f3d
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1652'
 ht-degree: 6%
 
 ---
@@ -34,7 +32,7 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 * 內嵌式社交網路內容([內嵌支援](/help/communities/blog-developer-basics.md#allowing-rich-media))
 * 草稿模式
 * 已排程發佈
-* 代表撰寫(a [有特殊許可權的成員](/help/communities/users.md#privileged-members-group) 可以代表不同的社群成員建立內容)
+* 代表撰寫(a [有特殊許可權的成員](/help/communities/users.md#privileged-members-group) 可以代表其他社群成員建立內容)
 * [內容中和大量仲裁](/help/communities/moderate-ugc.md) 部落格和評論數量
 
 本檔案的這一節將說明：
@@ -59,13 +57,13 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
 如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-當 [必要的使用者端程式庫](/help/communities/blog-developer-basics.md#essentials-for-client-side) 包含，這就是 `Blog` 元件將會出現：
+當 [必要的使用者端程式庫](/help/communities/blog-developer-basics.md#essentials-for-client-side) 包含在 `Blog` 元件顯示如下：
 
 ![add-blog-component](assets/add-blog-component.png)
 
 ### 設定部落格 {#configuring-blog}
 
-選取已放置的 `Blog` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
+選取已放置的 `Blog` 元件供您存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
 
 ![設定](assets/configure-new.png)
 
@@ -99,7 +97,7 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
   新增允許建立內容的特權成員。
 
-* **封鎖使用者在作者編輯模式中產生的內容**
+* **在作者編輯模式下封鎖使用者產生的內容**
 
   如果啟用，在作者模式下編輯時會封鎖使用者產生的內容。
 
@@ -143,11 +141,11 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
 * **最大檔案大小**
 
-  相關條件僅限於 `Allow File Uploads` 已勾選。 此欄位將限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600 (10 Mb)。
+  相關條件僅限於 `Allow File Uploads` 已勾選。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600 (10 Mb)。
 
 * **允許的檔案類型**
 
-  相關條件僅限於 `Allow File Uploads` 已勾選。 以「點」分隔符號分隔的副檔名清單（以逗號分隔）。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許上傳未指定的檔案型別。 預設為none，因此允許所有檔案型別。
+  相關條件僅限於 `Allow File Uploads` 已勾選。 以「點」分隔符號分隔的副檔名清單（以逗號分隔）。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則無法上傳未指定的檔案型別。 預設為none，因此允許所有檔案型別。
 
 * **附加影像檔案最大大小**
 
@@ -181,11 +179,11 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
 * **允許主要內容**
 
-  如果勾選，便可將創意識別為 [精選內容](/help/communities/featured.md). 預設為未勾選。
+  如果勾選，構思會識別為 [精選內容](/help/communities/featured.md). 預設為未勾選。
 
 * **啟用提及功能**
 
-  啟用後，可讓註冊社群使用者識別其他註冊成員（使用名字、姓氏、使用者名稱），並使用通用@user-name語語法標籤這些成員。 標籤的使用者會收到有關其提及的通知。
+  啟用後，可讓註冊社群使用者識別其他註冊成員（使用名字、姓氏、使用者名稱），並使用通用@user-name語語法標籤這些成員。 標籤的使用者會收到他們提及的相關通知。
 
 * **最大提及數**
 
@@ -193,7 +191,7 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
 * **UI 提及模式**
 
-  指定允許的模式字串，以在貼文中標籤(@mention)已註冊的使用者。 例如 `~{{familyName}}{{givenName}}`。
+  指定允許的模式字串，以在貼文中標籤(@mention)已註冊的使用者。 例如， `~{{familyName}}{{givenName}}`.
 
 #### 「使用者稽核」標籤 {#user-moderation-tab}
 
@@ -201,7 +199,7 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
 * **拒絕貼文**
 
-  如果勾選，受信任的成員版主將可以拒絕貼文，並阻止貼文出現在公開論壇上。 預設為未勾選。
+  如果勾選，則允許受信任的成員版主拒絕貼文，並阻止貼文出現在公開論壇上。 預設為未勾選。
 
 * **關閉/重新開啟主題**
 
@@ -229,11 +227,11 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
 #### 標籤欄位索引標籤 {#tag-field-tab}
 
-在 **標籤欄位** 索引標籤中，指定在下列情況下可以套用的標籤 **允許標籤** 檢查 **設定** 索引標籤：
+在 **標籤欄位** 標籤，指定在下列情況下可以套用哪些標籤 **允許標籤** 檢查 **設定** 索引標籤：
 
 * **允許的命名空間**
 
-  相關條件 `Allow Tagging` 已勾選下方的 **設定** 標籤。 可套用的標籤僅限於已核取的名稱空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設名稱空間）以及「包含所有標籤」。 預設為未勾選，這表示允許所有名稱空間。
+  相關條件 `Allow Tagging` 已勾選下方的 **設定** 標籤。 可套用的標籤僅限於已核取之名稱空間類別內的那些標籤。 名稱空間清單包含「標準標籤」（預設名稱空間）和「包含所有標籤」。 預設為未勾選，這表示允許所有名稱空間。
 
 * **建議限制**
 
@@ -249,7 +247,7 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
 * **日期格式**
 
-  用來顯示部落格專案封存的格式。 此格式會遵循Java慣例使用預留位置。
+  用來顯示部落格專案封存的格式。 此格式會遵循Java™慣例使用預留位置。
 
    * yyyy ：全年，如「2015」
    * yy ：短年，如「15」
@@ -267,9 +265,9 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
    * 類別
    * 封存
 
-* **Blopg元件路徑**
+* **部落格元件路徑**
 
-  *（可選）* 部落格資源的位置，將從中列出部落格。 如果保留為空白，將使用resourceType的元件 `social/journal/components/hbs/journal` 顯示在相同頁面上。
+  *（可選）* 部落格資源的位置，將從中列出部落格。 如果保留為空白，則會使用resourceType的元件 `social/journal/components/hbs/journal` 顯示在相同頁面上。
 
    * 例如 `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
@@ -279,7 +277,7 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
 ## 網站訪客體驗 {#site-visitor-experience}
 
-在發佈環境中，部落格功能將會以建立順序的遞減順序顯示最新的部落格，後面接著較舊的部落格。 部落格側邊欄可讓網站訪客套用篩選器，以限制顯示的部落格選擇。
+在發佈環境中，部落格功能會依建立順序的遞減順序，顯示最新的部落格，後面接著較舊的部落格。 部落格側邊欄可讓網站訪客套用篩選器，以限制顯示的部落格選擇。
 
 部落格後面會有一個連結，可讓您發表或檢視評論。
 
@@ -289,7 +287,7 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
 ### 使用文章 {#working-with-articles}
 
-建立新部落格時，可選擇執行以下操作：
+建立部落格時，可以選擇執行下列動作：
 
 1. 立即發佈
 1. 發佈草稿
@@ -309,7 +307,7 @@ AEM Communities的部落格功能已從製作活動轉變為在發佈環境中�
 
 具體而言，他們可能：
 
-* 建立新的部落格
+* 建立部落格
 * 代表其他成員發表新部落格
 * 在部落格中發表評論
 * 編輯自己的部落格或評論
