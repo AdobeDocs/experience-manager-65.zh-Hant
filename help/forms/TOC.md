@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: f0ffa552bd4a5b8b20a58aed7847c4de07acc4f4
+source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3870'
+ht-degree: 4%
 
 ---
 
@@ -134,6 +134,7 @@ ht-degree: 0%
 + Adaptive Forms — 基本製作 {#adaptive-forms-basic-authoring}
    + [使用最適化表單的最佳作法](using/adaptive-forms-best-practices.md)
    + [建立最適化表單](using/creating-adaptive-form.md)
+   + [建立或新增調適型表單至 AEM Sites 頁面](using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
    + [最適化表單片段](using/adaptive-form-fragments.md)
    + [設定提交動作](using/configuring-submit-actions.md)
    + [在最適化表單中使用驗證碼](using/captcha-adaptive-forms.md)
@@ -469,7 +470,7 @@ ht-degree: 0%
       + [設定與Acrobat Reader DC擴充功能搭配使用的逾時值](/help/forms/using/admin-help/setting-timeout-values-acrobat-reader.md)
       + [正在更新過期的Reader延伸服務憑證](/help/forms/using/admin-help/updating-expired-reader-extension-certificates.md)
    + 使用PDF產生器 {#work-with-pdf-generator}
-      + [使用PDF產生器簡介](/help/forms/using/admin-help/overview-5.md)
+      + [使用PDF Generator簡介](/help/forms/using/admin-help/overview-5.md)
       + [啟用多執行緒檔案轉換](/help/forms/using/admin-help/enabling-multi-threaded-file-conversions.md)
       + [設定Adobe PDF設定](/help/forms/using/admin-help/configuring-pdf-settings.md)
       + [正在設定安全性設定](/help/forms/using/admin-help/configuring-security-settings.md)
