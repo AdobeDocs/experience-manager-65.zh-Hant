@@ -2,19 +2,15 @@
 title: 建立或新增調適型表單至 AEM Sites 頁面
 description: 探索如何輕鬆建立或無縫新增調適型表單至您的 AEM Sites 頁面。 了解整合動態和可自訂表單至網站中的步驟式技術和最佳實務，最佳化您的數位體驗以達到最大影響。
 feature: Adaptive Forms
-source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2862'
 ht-degree: 23%
 
 ---
 
 
 # 建立或新增調適型表單至 AEM Sites 頁面 {#create-or-add-an-adaptive-form-to-aem-sites-page}
-
-[!BADGE 搶鮮版檔案]{type=Caution tooltip="黃色狀態"}
-
-<span class="preview"> 這是搶鮮版說明檔案，可能會有變動。</span>
 
 透過 AEM Forms，您可以將調適型表單無縫整合到您的網頁中。 這可讓您的訪客方便填寫和提交表單，而無需離開他們所在的頁面。 這麼，他們便可毫不費力地使用網站的其他元素，同時積極與表單進行互動。
 
@@ -236,8 +232,6 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
 1. 按一下最適化表單容器屬性 ![最適化表單容器屬性](/help/forms/using/assets/configure-icon.svg) 圖示。 設定資料模型的「最適化表單容器」對話方塊開啟。
    ![](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
 1. 選擇表單資料模型. 開啟 **[!UICONTROL 基本]** 標籤。 在預填服務中，選取 **[!UICONTROL Forms入口網站草稿預填服務]**.
-
-
 1. 按一下&#x200B;**[!UICONTROL 「完成」]**。
 
 ## 在表單提交時將使用者重新導向至新使用者，或顯示感謝訊息

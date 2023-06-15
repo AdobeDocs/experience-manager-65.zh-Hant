@@ -11,10 +11,10 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 66674f0e2621d8786ab4d662cddad373122d8b51
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 18%
+source-wordcount: '1972'
+ht-degree: 19%
 
 ---
 
@@ -91,9 +91,9 @@ ht-degree: 18%
    1. 在 **[!UICONTROL 重新導向URL]** 方塊中，新增在上一步中複製的HTTPS URL。
    1. 啟用下列OAuth設定 [!DNL Adobe Sign] 應用程式並按一下 **[!UICONTROL 儲存]**.
 
-   * aggrement_read
-   * aggrement_write
-   * aggrement_send
+   * agreement_read
+   * agreement_write
+   * agreement_send
    * widget_write
    * workflow_read
 
@@ -136,9 +136,6 @@ ht-degree: 18%
 
 ## 連線適用於政府的AEM Forms與Adobe Acrobat Sign Solutions {#adobe-acrobat-sign-for-government}
 
-[!BADGE 測試版檔案]{type=Caution tooltip="黃色狀態"}
-<span class="preview"> 本節包含測試版檔案，且可能有所變更。</span>
-
 將AEM Forms與適用於政府的Adobe Acrobat Sign Solutions連線是多步驟流程。 其中涉及：
 
 * 為您的AEM執行個體建立重新導向URL
@@ -168,25 +165,24 @@ ht-degree: 18%
 1. 在設定頁面上，點選 **[!UICONTROL 建立]** 建立 [!DNL Adobe Acrobat Sign] AEM Forms中的設定。
 1. 將您目前瀏覽器視窗的URL從URL複製到記事本。 此URL稱為 `re-direct URL`. 在下一節中，您共用 `re-direct URL` 和 `Scopes` Adobe Sign團隊和要求認證（使用者端ID和使用者端密碼）。
 
+>[!NOTE]
 >
 >
->
-* 使用 [頂層](https://en.wikipedia.org/wiki/Top-level_domain) 網域為 `re-direct URL`. 例如 `https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
-* 請勿使用本機URL做為 `re-direct URL`. 例如， `https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/SignConfig`.
-> 
+* A `re-direct URL` 應包含 [頂層](https://en.wikipedia.org/wiki/Top-level_domain) 網域。 例如 `https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
+* 請勿使用本機URL做為 `re-direct URL`. 例如， `https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`.
 
 
 #### 與Adobe Sign團隊共用重新導向URL和範圍並接收認證
 
 適用於政府解決方案的Adobe Acrobat Sign團隊需要 `re-direct URL` 以及要為您的Adobe Acrobat Sign應用程式啟用的特定範圍（如下所列），以產生認證（使用者端ID和使用者端密碼），讓您將AEM Forms與適用於政府的Adobe Acrobat Sign Solutions連線。
 
-共用 `scopes` （如下所列）和 `re-direct URL` 建立並記錄上一節的最後一步，並請您的Adobe Acrobat Sign政府解決方案代表([Adobe Professional Services團隊成員](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#password))。
+共用 `scopes` （如下所列）和 `re-direct URL` 建立並記錄上一節的最後一步，並請您的Adobe Acrobat Sign政府解決方案代表 [Adobe Professional Services團隊成員](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#password).
 
 **_範圍_**
 
-* [!DNL aggrement_read]
-* [!DNL aggrement_write]
-* [!DNL aggrement_send]
+* [!DNL agreement_read]
+* [!DNL agreement_write]
+* [!DNL agreement_send]
 * [!DNL widget_read]
 * [!DNL widget_write]
 * [!DNL workflow_read]
@@ -212,11 +208,11 @@ ht-degree: 18%
 
 1. 選取 **[!UICONTROL 為附件啟用Adobe Acrobat Sign]** 將最適化表單附加的檔案附加至對應 [!DNL Adobe Acrobat Sign] 檔案已傳送供簽署。
 
-1. 點選 **[!UICONTROL 連線至Adobe Sign]**. 出現認證提示時，請提供在建立 [!DNL Adobe Acrobat Sign] 應用程式時使用的帳戶使用者名稱和密碼。當要求確認存取時 `your developer account`，按一下 **[!UICONTROL 允許存取]**. 如果認證正確且您允許 [!DNL AEM Forms] 存取您的 [!DNL Adobe Acrobat Sign] 開發人員帳戶，則會出現與以下訊息相似的成功訊息。
+1. 點選 **[!UICONTROL 連線至Adobe Sign]**. 出現認證提示時，請提供在建立 [!DNL Adobe Acrobat Sign] 應用程式時使用的帳戶使用者名稱和密碼。當要求確認存取時 `Adobe Acrobat Sign for Government Solutions` 和，按一下 **[!UICONTROL 允許存取]**. 如果認證正確且您允許 [!DNL AEM Forms] 存取您的 [!DNL Adobe Acrobat Sign] 開發人員帳戶，則會出現與以下訊息相似的成功訊息。
 
    ![Adobe Acrobat Sign雲端設定成功](/help/forms/using/assets/adobe-sign-cloud-configuration-success.png)
 
-   <!-- > When prompted for credentials, provide username and password of the account used while creating [!DNL Adobe Acrobat Sign] application. When asked to confirm access for `your developer account`, Click **[!UICONTROL Allow Access]**. -->
+   出現認證提示時，請提供在建立 [!DNL Adobe Acrobat Sign] 應用程式時使用的帳戶使用者名稱和密碼。當要求確認存取時 `your account`，然後按一下 **[!UICONTROL 允許存取]**.
 
 1. 點選 **[!UICONTROL 建立]** 以建立設定。
 1. 開啟AEM Web Console。 URL是 `https://'[server]:[port]'/system/console/configMgr`
@@ -245,4 +241,5 @@ ht-degree: 18%
 ## 相關文章 {#related-articles}
 
 * [在最適化表單中使用Adobe Sign](../../forms/using/working-with-adobe-sign.md)
+* [Adobe Sign具有表單中心工作流程](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step)
 * [將Adobe Sign與AEM Forms搭配使用（影片）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)

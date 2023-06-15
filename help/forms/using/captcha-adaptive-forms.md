@@ -11,9 +11,9 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---
@@ -26,33 +26,28 @@ AEM Forms支援最適化表單中的驗證碼。 您可以使用Google的reCAPTC
 
 >[!NOTE]
 >
->* AEM Forms支援reCaptcha v2和enterprise。 不支援任何其他版本。
->* 已棄用預設的AEM CAPTCHA服務。
+>* AEM Forms支援reCAPTCHA v2和enterprise。 不支援任何其他版本。
 >* AEM Forms應用程式上的離線模式不支援適用性表單中的驗證碼。
->
 
-## 透過Google設定reCAPTCHA服務 {#google-recaptcha}
+## 由Google為最適化Forms設定reCAPTCHA服務 {#google-reCAPTCHA}
 
-表單作者可使用Google的reCAPTCHA服務，在最適化表單中實作CAPTCHA。 它提供進階的驗證碼功能，以保護您的網站。 如需reCAPTCHA運作方式的詳細資訊，請參閱 [Google reCAPTCHA](https://developers.google.com/recaptcha/). reCAPTCHA服務（包括reCAPTCHA v2和reCAPTCHA Enterprise）已整合至AEM Forms。 您可以視需要設定reCAPTCHA服務，以啟用：
+AEM Forms使用者可以使用Google的reCAPTCHA服務，在最適化表單中實作CAPTCHA。 它提供進階的驗證碼功能，以保護您的網站。 如需reCAPTCHA運作方式的詳細資訊，請參閱 [Google reCAPTCHA](https://developers.google.com/reCAPTCHA/). reCAPTCHA服務（包括reCAPTCHA v2和reCAPTCHA Enterprise）已整合至AEM Forms。 您可以視需要設定reCAPTCHA服務，以啟用：
 
-* [AEM表單中的reCAPTCHA enterprise](#steps-to-implement-recaptcha-enterprise-in-forms)
-* [AEM表單中的reCAPTCHA v2](#steps-to-implement-recaptcha-v2-in-forms)
+* [AEM Forms中的reCAPTCHA Enterprise](#steps-to-implement-reCAPTCHA-enterprise-in-forms)
+* [AEM Forms中的reCAPTCHA v2](#steps-to-implement-reCAPTCHA-v2-in-forms)
 
-![Recaptcha](assets/recaptcha_new.png)
+![reCAPTCHA](/help/forms/using/assets/recaptcha_new.png)
 
-## 在Forms中實作reCAPTCHA Enterprise的步驟  {#steps-to-implement-recaptcha-enterprise-in-forms}
+### 設定reCAPTCHA Enterprise  {#steps-to-implement-reCAPTCHA-enterprise-in-forms}
 
-1. 建立新的 [reCAPTCHA企業專案](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) 啟用方式 [reCaptcha Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api).
+1. 建立 [reCAPTCHA企業專案](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) 啟用方式 [reCAPTCHA Enterprise API](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-reCAPTCHA-enterprise-api).
 1. [取得](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed) 專案識別碼。
-1. 建立 [API金鑰](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) 和 [網站的網站金鑰](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key).
+1. 建立 [API金鑰](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) 和 [網站的網站金鑰](https://cloud.google.com/reCAPTCHA-enterprise/docs/create-key#create-key).
 1. 建立雲端服務的設定容器。
 
-   1. 前往 **[!UICONTROL 「工具」>「一般」>「設定瀏覽器」]**.
-      * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
+   1. 前往 **[!UICONTROL 「工具」>「一般」>「設定瀏覽器」]**. 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
    1. 請執行以下操作來啟用雲端設定的全域資料夾，或跳過此步驟來建立和設定雲端服務設定的另一個資料夾。
-
       1. 在設定瀏覽器中，選取 **[!UICONTROL 全域]** 資料夾並點選 **[!UICONTROL 屬性]**.
-
       1. 在「組態屬性」對話方塊中，啟用 **[!UICONTROL 雲端設定]**.
       1. 點選 **[!UICONTROL 儲存並關閉]** 以儲存設定並結束對話方塊。
 
@@ -65,7 +60,7 @@ AEM Forms支援最適化表單中的驗證碼。 您可以使用Google的reCAPTC
    1. 點選 **[!UICONTROL reCAPTCHA]**. 「組態」頁面隨即開啟。 選取在上一步建立的設定容器並點選 **[!UICONTROL 建立]**.
    1. 選取reCAPTCHA Enterprise版本並指定reCAPTCHA Enterprise服務的名稱；專案ID、網站金鑰和API金鑰（在步驟2和3中取得）。
    1. 選取金鑰型別，金鑰型別應與Google雲端專案中設定的網站金鑰相同，例如， **核取方塊網站索引鍵** 或 **以分數為基礎的網站金鑰**.
-   1. 指定介於0到1之間的臨界值分數([按一下以進一步瞭解分數](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores))。 分數大於或等於臨界值分數會識別人類互動，否則會被視為機器人互動。
+   1. 指定介於0到1之間的臨界值分數([按一下以進一步瞭解分數](https://cloud.google.com/reCAPTCHA-enterprise/docs/interpret-assessment#interpret_scores))。 分數大於或等於臨界值分數會識別人類互動，否則會被視為機器人互動。
 
       > 注意:
       >
@@ -75,18 +70,16 @@ AEM Forms支援最適化表單中的驗證碼。 您可以使用Google的reCAPTC
 
    1. 在「編輯元件」對話方塊中，指定名稱、專案ID、網站金鑰、API金鑰（在步驟2和3中取得）、選取金鑰型別，然後輸入臨界值分數。 點選 **[!UICONTROL 儲存設定]** 然後點選 **[!UICONTROL 確定]** 以完成設定。
 
-reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 另請參閱 [在最適化表單中使用驗證碼](#using-recaptcha).
+reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 另請參閱 [在最適化表單中使用驗證碼](#using-reCAPTCHA).
 
-![Recaptcha enterprise](assets/recaptcha1-enterprise.png)
+![reCAPTCHA Enterprise](/help/forms/using/assets/recaptcha1-enterprise.png)
 
 
-## 在表單中實作reCAPTCHA v2的步驟 {#steps-to-implement-recaptcha-v2-in-forms}
+## 設定Google reCAPTCHA v2 {#steps-to-implement-reCAPTCHA-v2-in-forms}
 
-1. 取得 [recaptcha API金鑰組](https://www.google.com/recaptcha/admin) 來自Google。 它包含 **網站金鑰** 和 **秘密金鑰**.
+1. 取得 [recaptcha API金鑰組](https://www.google.com/reCAPTCHA/admin) 來自Google。 它包含 **網站金鑰** 和 **秘密金鑰**.
 1. 建立雲端服務的設定容器。
-
-   1. 前往 **[!UICONTROL 「工具」>「一般」>「設定瀏覽器」]**.
-      * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
+   1. 前往 **[!UICONTROL 「工具」>「一般」>「設定瀏覽器」]**. 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
    1. 請執行以下操作來啟用雲端設定的全域資料夾，或跳過此步驟來建立和設定雲端服務設定的另一個資料夾。
 
       1. 在設定瀏覽器中，選取 **[!UICONTROL 全域]** 資料夾並點選 **[!UICONTROL 屬性]**.
@@ -107,10 +100,10 @@ reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 另�
 
    設定reCAPTCHA服務後，就可在調適型表單中使用。 如需詳細資訊，請參閱 [在最適化表單中使用驗證碼](#using-captcha).
 
-![Recaptcha v2](assets/recaptcha-v2.png)
+![reCAPTCHA v2](/help/forms/using/assets/recaptcha-v2.png)
 
 
-## 在最適化表單中使用reCAPTCHA {#using-recaptcha}
+## 在最適化表單中使用reCAPTCHA {#using-reCAPTCHA}
 
 若要在最適化表單中使用reCAPTCHA：
 
@@ -132,7 +125,7 @@ reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 另�
 
 1. 選取您新增的Captcha元件並點選 ![cmppr](assets/cmppr.png) 以編輯其屬性。
 1. 指定驗證碼介面工具集的標題。 預設值為 **驗證碼**. 選取 **隱藏標題** 如果您不想顯示標題。
-1. 從 **驗證碼服務** 下拉式清單，選取 **recaptcha** 啟用reCAPTCHA服務（若您已依照中的說明進行設定） [Google的ReCAPTCHA服務](#google-recaptcha).
+1. 從 **驗證碼服務** 下拉式清單，選取 **reCAPTCHA** 啟用reCAPTCHA服務（若您已依照中的說明進行設定） [Google的reCAPTCHA服務](#google-reCAPTCHA).
 1. 從「設定」下拉式清單中選取設定。
 1. **如果選取的組態版本為reCAPTCHA Enterprise**：
    1. 您可以透過以下方式選取reCAPTCHA雲端設定 **金鑰型別** 作為 **核取方塊**. 在核取方塊索引鍵中，如果驗證碼驗證失敗，自訂的錯誤訊息會顯示為內嵌訊息。 您可以選取大小為 **[!UICONTROL 一般]** 和 **[!UICONTROL 壓縮]**.
@@ -145,7 +138,7 @@ reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 另�
           <afUnboundData>
               <data>
                   <captcha16820607953761>
-                      <captchaType>reCaptchaEnterprise</captchaType>
+                      <captchaType>reCAPTCHAEnterprise</captchaType>
                       <captchaScore>0.9</captchaScore>
                   </captcha16820607953761>
               </data>
@@ -189,7 +182,7 @@ reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 另�
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <PersonalDetails>
                       <SSN>
-                          <captchaType>reCaptchaEnterprise</captchaType>
+                          <captchaType>reCAPTCHAEnterprise</captchaType>
                           <captchaScore>0.9</captchaScore>
                       </SSN>
                       <FirstName>Sarah</FirstName>
@@ -216,7 +209,7 @@ reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 另�
    **如果選取的組態有版本reCAPTCHA v2**：
    1. 選取大小為 **[!UICONTROL 一般]** 或 **[!UICONTROL 壓縮]** 用於reCAPTCHA小工具。 您也可以選取 **[!UICONTROL 隱藏]** 選項，僅在可疑活動的情況下顯示CAPTCHA質詢。 此 **受reCAPTCHA保護** 徽章（如下所示）會顯示在受保護的表單上。
 
-      ![受reCAPTCHA徽章保護的Google](assets/google-recaptcha-v2.png)
+      ![受reCAPTCHA徽章保護的Google](/help/forms/using/assets/google-recaptcha-v2.png)
 
 
    已在最適化表單上啟用reCAPTCHA服務。 您可以預覽表單並檢視驗證碼運作中。
@@ -261,9 +254,10 @@ reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 另�
 1. 在 **[!UICONTROL 驗證碼驗證]** 區段，選取 **[!UICONTROL 使用者動作時驗證驗證碼]**.
 1. 點選 ![完成](assets/save_icon.svg) 以儲存元件屬性。
 
-   > 注意:
+   >[!NOTE]
    >
-   > * 如果您選取reCAPTCHA v2設定，大小為 **[!UICONTROL 隱藏]** 或reCAPTCHA Enterprise分數型金鑰，則使用者動作上的有效Captcha不適用。
+   >
+   > 如果您選取reCAPTCHA v2設定，大小為 **[!UICONTROL 隱藏]** 或reCAPTCHA Enterprise分數型金鑰，則使用者動作上的有效Captcha不適用。
 
 [!DNL Experience Manager Forms] 提供 `ValidateCAPTCHA` 使用預先定義的條件來驗證驗證碼的API。 您可以使用自訂提交動作或透過在調適型表單中定義元件規則來叫用API。
 
@@ -271,7 +265,7 @@ reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 另�
 
 ```javascript
 if (slingRequest.getParameter("numericbox1614079614831").length() >= 5) {
-    	GuideCaptchaValidatorProvider apiProvider = sling.getService(GuideCaptchaValidatorProvider.class);
+        GuideCaptchaValidatorProvider apiProvider = sling.getService(GuideCaptchaValidatorProvider.class);
         String formPath = slingRequest.getResource().getPath();
         String captchaData = slingRequest.getParameter(GuideConstants.GUIDE_CAPTCHA_DATA);
         if (!apiProvider.validateCAPTCHA(formPath, captchaData).isCaptchaValid()){
@@ -341,4 +335,4 @@ public interface GuideCaptchaValidator {
 
 `captchaPropertyNodePath` 指的是Sling存放庫中驗證碼元件的資源路徑。 此屬性用於包含驗證碼元件的特定詳細資料。 例如， `captchaPropertyNodePath` 包含在CAPTCHA元件上設定的reCAPTCHA雲端設定資訊。 雲端設定資訊提供 **[!UICONTROL 網站金鑰]** 和 **[!UICONTROL 秘密金鑰]** 實作reCAPTCHA服務的設定。
 
-`userResponseToken` 是指 `g_recaptcha_response` 在表單中解決驗證碼後產生的驗證碼。
+`userResponseToken` 是指 `g_reCAPTCHA_response` 在表單中解決驗證碼後產生的驗證碼。
