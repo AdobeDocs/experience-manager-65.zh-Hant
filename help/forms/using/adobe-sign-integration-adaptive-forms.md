@@ -11,10 +11,10 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 9b792e8601ac52f92e8bc143e3d1e8c4eb7cd79c
+source-git-commit: 66674f0e2621d8786ab4d662cddad373122d8b51
 workflow-type: tm+mt
-source-wordcount: '2004'
-ht-degree: 19%
+source-wordcount: '1953'
+ht-degree: 18%
 
 ---
 
@@ -29,8 +29,7 @@ ht-degree: 19%
 
 ## 將AEM Forms與Adobe Acrobat Sign連線 {#adobe-sign}
 
-若要連線 **[!DNL AEM Forms]** 替換為 **[!DNL Adobe Acrobat Sign]**，設定「先決條件」區段中列出的軟體和帳戶，並在AEM Forms「作者」和「發佈」執行個體中設定Adobe Sign Cloud Service：
-
+若要連線 **[!DNL AEM Forms]** 替換為 **[!DNL Adobe Acrobat Sign]**，設定「先決條件」區段中列出的軟體和帳戶，並將Adobe Sign連線至您的所有AEM Forms作者和發佈執行個體：
 
 ## 必備條件 {#prerequisites}
 
@@ -50,7 +49,7 @@ ht-degree: 19%
 1. 在AEM上 [!DNL Forms] 作者執行個體，導覽至 **工具** ![槌子](assets/hammer.png) > **[!UICONTROL 一般]** > **[!UICONTROL 設定瀏覽器]**.
 1. 於 **[!UICONTROL 設定瀏覽器]** 頁面，點選 **[!UICONTROL 建立]**.
    * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
-1. 在 **[!UICONTROL 建立設定]** 對話方塊，指定 **[!UICONTROL 標題]** 針對設定，啟用 **[!UICONTROL 雲端設定]**，然後點選 **[!UICONTROL 建立]**. 它會建立雲端服務的設定容器。
+1. 在 **[!UICONTROL 建立設定]** 對話方塊，指定 **[!UICONTROL 標題]** 針對設定，啟用 **[!UICONTROL 雲端設定]**，然後點選 **[!UICONTROL 建立]**. 它會建立設定容器。
 1. 導覽至 **工具** ![槌子](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]** 並選取您在上一步中建立的設定容器。
 
    >[!NOTE]
@@ -59,7 +58,7 @@ ht-degree: 19%
 
    >[!NOTE]
    >
-   確定雲端服務設定頁面的URL開頭為 **HTTPS**. 如果沒有， [啟用SSL](/help/sites-administering/ssl-by-default.md) 適用於AEM [!DNL Forms] 伺服器。
+   確定「Cloud Services設定」頁面的URL開頭為 **HTTPS**. 如果沒有， [啟用SSL](/help/sites-administering/ssl-by-default.md) 適用於AEM [!DNL Forms] 伺服器。
 
 1. 在設定頁面上，點選 **[!UICONTROL 建立]** 建立 [!DNL Adobe Sign] AEM中的設定 [!DNL Forms].
 1. 在 **[!UICONTROL 一般]** 的標籤 **[!UICONTROL 建立Adobe Sign設定]** 頁面，指定 **[!UICONTROL 名稱]** 設定並點選 **[!UICONTROL 下一個]**. 您可以選擇指定標題並瀏覽以選取設定的縮圖。
@@ -149,8 +148,6 @@ ht-degree: 19%
 
 ![](/help/forms/using/assets/adobe-acrobat-sign-govt-workflow.png)
 
-AEM Formsas a Cloud Service提供開發、測試和生產環境。 您可以開始將的開發環境與適用於政府的Adobe Acrobat Sign Solutions連線，並在稍後連線預備和生產環境。
-
 ### 開始之前 {#prerequisites-for-adobe-sign-for-acrobat-sign-for-government}
 
 開始將AEM Forms與Adobe Acrobat Sign解決方案連線之前，
@@ -159,13 +156,14 @@ AEM Formsas a Cloud Service提供開發、測試和生產環境。 您可以開�
 * 您的AEM [!DNL Forms] 伺服器為 [SSL已啟用](/help/sites-administering/ssl-by-default.md) .
 * 您的AEM [!DNL Forms] 伺服器正在使用 [相同的加密金鑰](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed) 用於製作和發佈例項。
 
-### 將AEM Formsas a Cloud Service與適用於政府的Adobe Acrobat Sign Solutions連線 {#connect-adobe-acrobat-sign-for-government}
+### 將AEM Forms連結至適用於政府的Adobe Acrobat Sign Solutions {#connect-adobe-acrobat-sign-for-government}
 
 #### 為您的AEM執行個體建立重新導向URL
 
-1. 在Formsas a Cloud Service作者例項上，導覽至 **[!UICONTROL 工具]** ![槌子](assets/hammer.png) > **[!UICONTROL 一般]** > **[!UICONTROL 設定瀏覽器]**.
+1. 在您的AEM Forms執行個體上，導覽至 **[!UICONTROL 工具]** ![槌子](assets/hammer.png) > **[!UICONTROL 一般]** > **[!UICONTROL 設定瀏覽器]**.
 1. 於 **[!UICONTROL 設定瀏覽器]** 頁面，點選 **[!UICONTROL 建立]**.
-1. 在 **[!UICONTROL 建立設定]** 對話方塊，指定 **[!UICONTROL 標題]** 針對設定，啟用 **[!UICONTROL 雲端設定]**，然後點選 **[!UICONTROL 建立]**. 這樣便會建立儲存 Cloud Services 的設定容器。請確保資料夾名稱未含任何空格。
+1. 在 **[!UICONTROL 建立設定]** 對話方塊，指定 **[!UICONTROL 標題]** 針對設定，啟用 **[!UICONTROL 雲端設定]**，然後點選 **[!UICONTROL 建立]**. 它會建立設定容器。 確定容器/資料夾名稱未包含任何空格。
+
 1. 導覽至 **[!UICONTROL 工具]** ![槌子](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Acrobat Sign]** 並開啟您在上一步建立的設定容器。 建立最適化表單時，請在 **[!UICONTROL 設定容器]** 欄位。
 1. 在設定頁面上，點選 **[!UICONTROL 建立]** 建立 [!DNL Adobe Acrobat Sign] AEM Forms中的設定。
 1. 將您目前瀏覽器視窗的URL從URL複製到記事本。 此URL稱為 `re-direct URL`. 在下一節中，您共用 `re-direct URL` 和 `Scopes` Adobe Sign團隊和要求認證（使用者端ID和使用者端密碼）。

@@ -11,9 +11,9 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 4714554609a10e58b1c7141696d694fac46887a6
+source-git-commit: 66674f0e2621d8786ab4d662cddad373122d8b51
 workflow-type: tm+mt
-source-wordcount: '3826'
+source-wordcount: '3855'
 ht-degree: 0%
 
 ---
@@ -122,7 +122,8 @@ ht-degree: 0%
    >
    >    * 使用 [!DNL Adobe Sign] 區塊並非強制使用 [!DNL Adobe Sign] 在最適化表單中。 如果您不使用 [!DNL Adobe Sign] 封鎖並新增簽署者的欄位，則預設簽名欄位會顯示在簽署檔案的底部。
    >    * 使用 [!DNL Adobe Sign] 僅封鎖那些自動產生記錄檔案的最適化表單。 如果您使用自訂XDP來產生記錄檔案或表單範本式的最適化表單， [!DNL Adobe Sign] 不支援此區塊。
-
+   >
+   >
 
 1. 選取 **[!UICONTROL Adobe Sign區塊]** 元件並點選 **編輯** ![aem_6_3_edit](assets/aem_6_3_edit.png) 圖示。 它會顯示新增欄位和格式化欄位外觀的選項。
 
@@ -194,11 +195,13 @@ ht-degree: 0%
 
    * **[!UICONTROL 簽署者電子郵件地址]：** 指定簽署者的電子郵件地址。 簽署者在指定的電子郵件地址上接收要簽署的檔案/表單。 您可以選擇使用表單欄位、登入使用者的AEM使用者設定檔中提供的電子郵件地址，或手動輸入電子郵件地址。 此為必要步驟。 確保第一個簽名者或唯一簽名者的電子郵件地址（如果是單一簽名者）與 [!DNL Adobe Sign] 用於設定AEM雲端服務的帳戶。
 
-   * **[!UICONTROL 簽署者驗證方法]：** 指定在開啟表單進行簽署之前驗證使用者的方法。 您可以在電話、知識庫及以社交身分為基礎的驗證之間進行選擇。
+   * **[!UICONTROL 簽署者驗證方法]：** 指定在開啟表單進行簽署之前驗證使用者的方法。 您可以在電話、知識庫及以社交身分為基礎的驗證之間進行選擇。 政府用Adobe Acrobat Sign Solutions僅提供電話和知識型驗證選項。
+
    >[!NOTE]
    >
    >    * 依預設，社交身分型驗證會提供使用Facebook、Google和LinkedIn驗證的選項。 您可以聯絡 [!DNL Adobe Sign] 支援啟用其他社交驗證服務提供者。
-
+   >
+   >
 
    * **[!DNL Adobe Sign]要填寫或簽署的欄位：** 選取 [!DNL Adobe Sign] 簽署者的欄位。 最適化表單可以有多個 [!DNL Adobe Sign] 欄位。 您可以選擇為簽署者啟用特定欄位。 欄位會顯示所有可用的 [!DNL Adobe Sign] 個區塊。 當您選取區塊時，會選取區塊的所有欄位。 您可以使用X圖示來取消選取欄位。
 
@@ -248,7 +251,8 @@ ht-degree: 0%
 
    使用以下方法將數位簽名套用至最適化表單：
 
-   * 雲端簽名：使用 [數位ID](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 由信任服務提供者代管。
+   * 雲端簽名：使用 [數位ID](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 由信任服務提供者代管。 雲端簽名選項不適用於適用於政府的Adobe Acrobat Sign Solutions。
+
    * Adobe Acrobat或Reader：使用Adobe Acrobat或Reader下載並開啟檔案，以使用智慧卡、USB權杖或檔案式數位ID簽名。
 
    將雲端簽名欄位新增至最適化表單後，執行以下步驟以完成設定程式：
@@ -257,7 +261,6 @@ ht-degree: 0%
    * [為最適化表單選取Adobe Sign Cloud Service](../../forms/using/working-with-adobe-sign.md#selectadobesigncloudserviceforanadaptiveform)
    * [將Adobe Sign簽署者新增至最適化表單](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform)
    * [為最適化表單選取提交動作](../../forms/using/working-with-adobe-sign.md#selectsubmitactionforanadaptiveform)
-
 
 ## 建立表單內簽名體驗 {#create-in-form-signing-experience}
 
@@ -297,7 +300,6 @@ ht-degree: 0%
    >
    >* 當您拖放 **[!UICONTROL 簽章步驟]** 表單的元件， **[!UICONTROL 簽署者和填表人是否相同？]** 選項會自動設定為 **是**. 需要保持表單正常運作。
    >* 在簽名步驟元件後使用摘要步驟元件以獲得最佳體驗。 在簽名步驟元件中完成表單簽名後，「摘要」步驟會自動並立即提交表單。 如果您不使用摘要步驟，則只有在使用設定的間隔後，才會觸發自動提交。 [Adobe Sign設定服務](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status).
-
    >
    >一些最佳實務如下：
    >
@@ -306,7 +308,6 @@ ht-degree: 0%
    >* 包含簽名步驟的最適化表單不能有提交按鈕。
    >* 包含簽名步驟的最適化表單的提交透過背景服務或摘要步驟處理。 如果有一個已設定的簽署者也在填寫表單，則使用「摘要」步驟處理最適化表單提交的優點是會立即評估簽署者是否已簽署表單並叫用提交動作。 背景服務需要更多時間來評估是否所有已設定的簽署者都已簽署表單，並延遲提交最適化表單。
    >* 將表單設計為不允許使用者從包含簽名或摘要步驟的面板導覽回來。
-
 
 
 ### 設定感謝頁面或摘要步驟元件 {#configure-the-thank-you-page-or-summary-step-component}
