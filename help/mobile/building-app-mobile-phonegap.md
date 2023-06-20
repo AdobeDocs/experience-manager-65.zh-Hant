@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1022'
 ht-degree: 1%
 
 ---
@@ -112,7 +112,7 @@ AEM提供將大量內容移動到發佈執行個體的兩種方法：
 
 ### 使用PhoneGap CLI建置 {#using-the-phonegap-cli-to-build}
 
-使用PhoneGap CLI編譯及安裝應用程式。 如需有關如何使用PhoneGap CLI的資訊，請參閱PhoneGap [命令列介面](https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html) 說明檔案。
+使用PhoneGap CLI編譯及安裝應用程式。 如需有關如何使用PhoneGap CLI的資訊，請參閱PhoneGap命令列介面(`https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html`)檔案。
 
 1. 開啟終端機或命令提示字元，並將目前目錄變更為下載的應用程式ZIP檔案。 例如，下列會將目錄變更為ng-app-cli.1392137825303.zip檔案：
 
@@ -162,7 +162,7 @@ AEM提供將大量內容移動到發佈執行個體的兩種方法：
 
    **注意：** 建置成功完成時，Beta版的AEM Beta版不會建立收件匣通知。
 
-1. 在「成功」對話方塊中，按一下「PhoneGap Build」以開啟Adobe PhoneGap Build頁面，網址為 [https://build.phonegap.com/apps](https://build.phonegap.com/apps). 如果您正等待應用程式出現，可以檢查 [PhoneGap Build狀態](https://status.build.phonegap.com/) 頁面。
+1. 在「成功」對話方塊中，按一下「PhoneGap Build」以開啟Adobe PhoneGap Build頁面，網址為 `https://build.phonegap.com/apps`. 如果您正等待應用程式出現，您可以檢視PhoneGap Build狀態，網址為 `https://status.build.phonegap.com/`.
 
    如需關於安裝組建的資訊，請參閱 [PhoneGap Build檔案](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
 

@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ## 手動測試 {#manual-testing}
 
-除了自動化測試之外，您的應用程式還應進行一系列手動測試。 指令碼無法複製在真實裝置上執行應用程式的客戶。 在這裡，您也有許多選項。 您可以使用HockeyApp等平台來定義誰有權存取及收集意見回饋。 或者，您可以將整個程式外包給UTest、ElusiveStars或Testn等服務。 如果您有一組內部測試者，但缺少裝置的變化，則可使用雲端服務在其裝置集區上執行手動測試。 SauceLabs就是提供這項服務的廠商。 您也可以從遠端建立應用程式至PhoneGap Enterprise，並安裝在本機裝置上，作為驗收測試或降級等級。 請參閱 [PhoneGap](https://phonegap.com/) 網站以取得其最新功能和檔案。 無論採用何種方法，手動測試都應如此；
+除了自動化測試之外，您的應用程式還應進行一系列手動測試。 指令碼無法複製在真實裝置上執行應用程式的客戶。 在這裡，您也有許多選項。 您可以使用HockeyApp等平台來定義誰有權存取及收集意見回饋。 或者，您可以將整個程式外包給UTest、ElusiveStars或Testn等服務。 如果您有一組內部測試者，但缺少裝置的變化，則可使用雲端服務在其裝置集區上執行手動測試。 SauceLabs就是提供這項服務的廠商。 您也可以從遠端建立應用程式至PhoneGap Enterprise，並安裝在本機裝置上，作為驗收測試或降級等級。 請參閱PhoneGap (`https://phonegap.com/`)網站以取得其最新功能和檔案。 無論採用何種方法，手動測試都應如此；
 
 * 撞上了一大群測試者，
 * 針對大型裝置集區進行測試（最好是真實的裝置，但如果沒有真正的裝置，則為模擬器/模擬器），

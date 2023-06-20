@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 1%
@@ -85,23 +85,23 @@ JSP指令碼檔案 `global.jsp` 用於提供對用於呈現元件的任何JSP指
 
 * 透過中引入的屬性物件 `global.jsp`：
 
-   properties物件是ValueMap的例項(請參閱 [Sling API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ValueMap.html))並包含目前資源的所有屬性。
+  properties物件是ValueMap的例項(請參閱 [Sling API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ValueMap.html))並包含目前資源的所有屬性。
 
-   範例： `String pageTitle = properties.get("jcr:title", "no title");` 用於頁面元件的轉譯指令碼。
+  範例： `String pageTitle = properties.get("jcr:title", "no title");` 用於頁面元件的轉譯指令碼。
 
-   範例： `String paragraphTitle = properties.get("jcr:title", "no title");` 用於標準段落元件的轉譯指令碼。
+  範例： `String paragraphTitle = properties.get("jcr:title", "no title");` 用於標準段落元件的轉譯指令碼。
 
 * 透過 `currentPage` 在中引入的物件 `global.jsp`：
 
-   此 `currentPage` 物件是頁面的例項(請參閱 [AEM API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.mhtml))。 Page類別提供一些存取內容的方法。
+  此 `currentPage` 物件是頁面的例項(請參閱 [AEM API](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html))。 Page類別提供一些存取內容的方法。
 
-   範例: `String pageTitle = currentPage.getTitle();`
+  範例: `String pageTitle = currentPage.getTitle();`
 
 * Via `currentNode` 在中引入的物件 `global.jsp`：
 
-   此 `currentNode` 物件是節點的執行個體(請參閱 [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html))。 節點屬性可透過以下方式存取： `getProperty()` 方法。
+  此 `currentNode` 物件是節點的執行個體(請參閱 [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html))。 節點屬性可透過以下方式存取： `getProperty()` 方法。
 
-   範例: `String pageTitle = currentNode.getProperty("jcr:title");`
+  範例: `String pageTitle = currentNode.getProperty("jcr:title");`
 
 ## JSP標籤庫 {#jsp-tag-libraries}
 
@@ -167,6 +167,7 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
       * `cq:dialog`  — 觸控式UI的對話方塊
       * `dialog`  — 傳統UI的對話方塊
+
    * 取代 `.jsp` 檔案（以新元件的名稱命名）
    * 或完全重工整個元件（若您需要）
 
@@ -178,7 +179,6 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
    >
    >* 觸控式UI使用 [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) 元件
    >* 傳統UI使用 [ExtJS Widget](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
-
 
    >[!NOTE]
    >
@@ -215,9 +215,9 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
    * 新增 `?wcmmode=design` 移至URL結尾並再次存取，例如：
 
-      `<contextPath>/ Test.html?wcmmode=design`
+     `<contextPath>/ Test.html?wcmmode=design`
 
-   * 按一下Sidekick中的「設計」
+   * 按一下Sidekick中的設計
 
    您現在處於設計模式，可以編輯段落系統。
 
@@ -275,16 +275,17 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
    >* 觸控式UI： `textimage/cq:dialog`
    >* 傳統 UI: `textimage/dialog`
 
-
 1. 編輯元件中繼資料：
 
    * 元件名稱
 
       * 設定 `jcr:description` 至 `Text Image Component (Extended)`
       * 設定 `jcr:title` 至 `Text Image (Extended)`
+
    * 群組，其中的元件列在Sidekick中（保持原樣）
 
       * 離開 `componentGroup` 設定為 `General`
+
    * 新元件的父元件（標準文字元件）
 
       * 設定 `sling:resourceSuperType` 至 `foundation/components/textimage`
@@ -308,6 +309,7 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
       * 將xtype變更為cqinclude （繼承自標準元件）。
       * 使用值新增路徑屬性 `/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`和 `/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`（分別）。
       * 移除所有其他屬性或子節點。
+
    * 對於tab3：
 
       * 保留屬性和子節點而不變更
@@ -318,9 +320,11 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
          * `xtype`: `selection`
          * `fieldLabel`: `Image Position`
          * `type`: `select`
+
       * 新增子節點 `position/options` 型別 `cq:WidgetCollection` 代表兩個影像放置選項，並在其下建立兩個節點，o1和o2型別 `nt:unstructured`.
       * 針對節點 `position/options/o1` 設定屬性： `text` 至 `Left` 和 `value` 至 `left.`
       * 針對節點 `position/options/o2` 設定屬性： `text` 至 `Right` 和 `value` 至 `right`.
+
    * 刪除Tab4。
 
    影像位置會持續保留在內容中，做為 `imagePosition`節點的屬性，表示 `textimage` 段落。 執行這些步驟後，「元件」對話方塊看起來像這樣：
@@ -355,7 +359,7 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 開發元件後，您可以將其新增至段落系統，讓作者在編輯頁面時選取並使用元件。 這些步驟可讓您測試元件。
 
 1. 以Geometrixx（例如英文/公司）開啟頁面。
-1. 按一下Sidekick中的「設計」切換至設計模式。
+1. 按一下「在Sidekick中設計」以切換至設計模式。
 1. 按一下頁面中間段落系統上的「編輯」，編輯段落系統設計。 隨即顯示可放置在段落系統中的元件清單，清單中應包含新開發的元件Text Image (Extended) 。 選取它並按一下確定，為段落系統啟動它。
 1. 切換回編輯模式。
 1. 將文字影像（延伸）段落新增至段落系統，以範例內容初始化文字和影像。 儲存變更。

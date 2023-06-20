@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: ed8c51d2-5aac-4fe8-89e8-c175d4ea1374
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3280'
 ht-degree: 1%
 
 ---
@@ -133,7 +133,6 @@ AEM已設定為使用下列三種服務之一來推送通知：
    1. 按一下「安全性證明資料」標籤。
    1. 從這裡，您可以看到您的金鑰並建立新金鑰。 儲存金鑰以供日後使用。
 
-
 1. **建立主題**
 
    1. 按一下 **建立主題** 並選擇主題名稱。 記錄所有欄位，例如「主題ARN」、「主題擁有者」、「區域」、「顯示名稱」。
@@ -150,8 +149,8 @@ AEM已設定為使用下列三種服務之一來推送通知：
 
       1. 對於APNS，必須輸入P12檔案、密碼、憑證和私密金鑰。 這些應該已在步驟中取得 *使用Apple推播通知服務(APNS)* 以上。
       1. 對於GCM，必須輸入API金鑰。 這應該已在步驟中取得 *使用Google雲端通訊(GCM)服務* 以上。
-   1. 針對您將支援的每個平台重複上述步驟一次。 若要同時推送至iOS和Android，您必須建立兩個平台應用程式。
 
+   1. 針對您將支援的每個平台重複上述步驟一次。 若要同時推送至iOS和Android，您必須建立兩個平台應用程式。
 
 1. **建立識別集區**
 
@@ -178,7 +177,6 @@ AEM已設定為使用下列三種服務之一來推送通知：
     </table>
 
    1. 按一下 **套用原則**
-
 
 #### 使用Pushwoosh訊息服務 {#using-the-pushwoosh-messaging-service}
 
@@ -275,9 +273,9 @@ CRXDE Lite：
 
 **注意：** 對於推播通知測試，模擬器是不夠的，因為推播通知在推播提供者(Apple或Google)和裝置之間使用不同的通訊協定。 目前的Mac/PC硬體和模擬器不支援此功能。
 
-1. *PhoneGap Build* 是PhoneGap提供的服務，可在伺服器上為您建立應用程式，並允許您直接下載至裝置。 請參閱 [PhoneGap Build檔案](https://build.phonegap.com/) 以瞭解如何設定和使用PhoneGap Build。
+1. *PhoneGap Build* 是PhoneGap提供的服務，可在伺服器上為您建立應用程式，並允許您直接下載至裝置。 請參閱PhoneGap Build檔案，網址為 `https://build.phonegap.com/` 以瞭解如何設定和使用PhoneGap Build。
 
-1. *PhoneGap命令列介面* (CLI)可讓您在命令列上使用一組豐富的PhoneGap命令，以建置、偵錯和部署您的應用程式。 請參閱 [PhoneGap開發人員檔案](https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface) 瞭解如何設定和使用PhoneGap CLI。
+1. *PhoneGap命令列介面* (CLI)可讓您在命令列上使用一組豐富的PhoneGap命令，以建置、偵錯和部署您的應用程式。 請參閱PhoneGap開發人員檔案(`https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface`)，瞭解如何設定及使用PhoneGap CLI。
 
 ### 步驟7：傳送推播通知 {#step-send-a-push-notification}
 

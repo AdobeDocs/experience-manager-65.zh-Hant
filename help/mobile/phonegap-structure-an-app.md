@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: c614a7ff-0d13-4407-bda0-c0a402a13dcd
 exl-id: f37f239f-065b-44f8-acb1-93485b713b49
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ AEM Mobile專案涉及多樣化的內容型別集，包括頁面、JavaScript和
 
 ## PhoneGap設定 {#phonegap-configuration}
 
-每個AEM Mobile應用程式都包含一個目錄，其中託管PhoneGap使用的設定檔案 [命令列介面](https://github.com/phonegap/phonegap-cli) 和 [PhoneGap Build](https://build.phonegap.com/) 將您的網頁內容轉換為可執行的應用程式。 舉例來說，在Geometrixx範例中，此目錄(/content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-content)位於殼層的一部分；這是由於其中僅包含無法直接更新的內容而做出的設計決定，例如處理裝置API和應用程式本身設定的外掛程式。
+每個AEM Mobile應用程式都包含一個目錄，其中託管PhoneGap使用的設定檔案 [命令列介面](https://github.com/phonegap/phonegap-cli) 和PhoneGap Build位於 `https://build.phonegap.com/` 將您的網頁內容轉換為可執行的應用程式。 舉例來說，在Geometrixx範例中，此目錄(/content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-content)位於殼層的一部分；這是由於其中僅包含無法直接更新的內容而做出的設計決定，例如處理裝置API和應用程式本身設定的外掛程式。
 
 在此目錄中，您也會找到 [Cordova鉤點](https://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html#Hooks%20Guide) ，可用來安裝外掛程式、將資源檔案置於其平台特定位置，以及其他應在建置中執行的動作。 注意：除了在建置中下載每個外掛程式外，您也可以遵循「廚房水槽」應用程式的模式，並且 [包含外掛程式原始碼](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) 與其他應用程式專案搭配使用。
 

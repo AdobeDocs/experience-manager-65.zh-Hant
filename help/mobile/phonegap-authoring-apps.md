@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -93,9 +93,9 @@ Content Package會為每次更新建立ZIP檔案（視為內容發行套件）�
 
 ### PhoneGap Build拼貼 {#the-phonegap-build-tile}
 
-此 **PhoneGap Build拼貼** 連線方式 [https://build.phonegap.com](https://build.phonegap.com) 建置並託管遠端組建。 建置後，此組建版本即可下載使用，或直接透過二維碼下載至您的裝置。
+此 **PhoneGap Build拼貼** 連線方式 `https://build.phonegap.com` 建置並託管遠端組建。 建置後，此組建版本即可下載使用，或直接透過二維碼下載至您的裝置。
 
-或者，您可以下載裝置來源，以透過 [PhoneGap CLI](https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html).
+或者，您可以下載裝置來源，透過PhoneGap CLI在本機建置(`https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html`)。
 
 ![PhoneGap Build拼貼](assets/chlimage_1-140.png)
 

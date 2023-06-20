@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 0019e367-8edc-4a23-bfa4-5beda266ace6
 exl-id: 385f7924-e8ab-4dcb-83f0-7b81bead3dda
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '190'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 3%
 
 這些裝置API元件的原始碼都是 [適用於Github](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components).
 
-如需每個API使用方式的詳細資訊，我建議您檢視 [Cordova外掛程式檔案](https://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html).
+如需每個API使用方式的詳細資訊，我建議檢視Cordova外掛程式檔案(`https://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html`)。
 
 ## 後續步驟 {#the-next-steps}
 

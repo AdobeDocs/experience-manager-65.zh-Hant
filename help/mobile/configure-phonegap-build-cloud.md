@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 3c84f4ec-d89b-4ad4-802e-ee3e2d49d916
 exl-id: d91a00d1-12fa-4c84-a426-49413f61c126
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '660'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 內定義的所有支援平台 **管理應用程式** 使用PhoneGap Build推播遠端組建時，將建置圖磚 **PhoneGap Build** 圖磚。
 
-您可以將遠端組建推送至 [https://build.phonegap.com](https://build.phonegap.com) 或下載來源以使用在本機建置 [PhoneGap CLI](https://docs.phonegap.com/references/phonegap-cli/).
+您可以將遠端組建推送至 `https://build.phonegap.com` 或下載來源以使用PhoneGap CLI在本機建置，網址為 `https://docs.phonegap.com/references/phonegap-cli/`.
 
 ![PhoneGap Build拼貼](assets/chlimage_1-60.png)
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 為了充分利用PhoneGap Build，您需要使用您的PhoneGap Build帳戶資訊設定AEMPhoneGap BuildCloud Service。
 
-如果您目前沒有帳戶，請瀏覽至 [https://build.phonegap.com](https://build.phonegap.com) 並註冊！ 如果您擁有Adobe Creative Cloud會籍，最多可支援25個私人應用程式（非開放原始碼應用程式）。
+如果您目前沒有帳戶，請瀏覽至 `https://build.phonegap.com` 並註冊！ 如果您擁有Adobe Creative Cloud會籍，最多可支援25個私人應用程式（非開放原始碼應用程式）。
 
 在您驗證PhoneGap Build帳戶有效後，請導覽至您的AEM Cloud Management Console，尤其是 [PhoneGap BuildCloud Service](http://localhost:4502/etc/cloudservices/phonegap-build.html) (http://localhost:4502/etc/cloudservices/phonegap-build.html)。
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果組建因任何原因而失敗(下方紅色iOS圖示表示平台失敗)，您可以將滑鼠移至圖示上方，取得錯誤訊息。 或者，您可以按一下圖磚底部的三點圖示「……」，直接導覽至https://build.phonegap.com （您必須驗證），並直接觀看及管理您的組建。
+>如果組建因任何原因而失敗(下方紅色iOS圖示表示平台失敗)，您可以將滑鼠移至圖示上方，取得錯誤訊息。 或者，您可以按一下圖磚底部的三點圖示「……」，直接導覽至 `https://build.phonegap.com` （您必須進行驗證），並直接觀看和管理您的建置。
 
 ### 使用PhoneGap CLI建置您的應用程式 {#building-your-application-with-phonegap-cli}
 
@@ -86,7 +86,7 @@ PhoneGap提供命令列介面，可在本機建立您的應用程式。
 1. Platform SDK (iOS、Android、WindowsPhone...)和
 1. PhoneGap CLI
 
-您可以閱讀更多資訊 [此處](https://docs.phonegap.com/references/phonegap-cli/).
+如需詳細資訊，請參閱 `https://docs.phonegap.com/references/phonegap-cli/`.
 
 安裝先決條件後，請從終端機嘗試建立簡單的應用程式，並在模擬器中或更好的裝置上執行，以進行簡單的測試：
 

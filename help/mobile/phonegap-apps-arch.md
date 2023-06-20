@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 55667e62-a61b-4794-b292-8d54929c41ac
 exl-id: ab4f1c61-be83-420e-a339-02cf1f33efed
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '2691'
+source-wordcount: '2687'
 ht-degree: 0%
 
 ---
@@ -370,7 +370,7 @@ www目錄包含實施應用程式外觀和行為的所有網頁內容(HTML、JS�
 
 #### www/config.xml {#www-config-xml}
 
-此 [PhoneGap檔案](https://docs.phonegap.com) 將此檔案稱為「全域設定檔案」。 config.xml包含許多應用程式屬性，例如應用程式名稱、應用程式「偏好設定」(例如iOS Webview是否允許捲動)以及 *僅限* 已由PhoneGap Build使用。
+PhoneGap檔案(`https://docs.phonegap.com`)將此檔案稱為「全域設定檔案」。 config.xml包含許多應用程式屬性，例如應用程式名稱、應用程式「偏好設定」(例如iOS Webview是否允許捲動)以及 *僅限* 已由PhoneGap Build使用。
 
 config.xml檔案是AEM中的靜態檔案，會透過Content Sync依原樣匯出。
 
@@ -382,7 +382,7 @@ config.xml檔案包含 `content` 元素：
 
 `<content src="content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en.html" />`
 
-在 [PhoneGap檔案](https://docs.phonegap.com)，此元素會說明為「選擇性」 &lt;content> 元素會定義應用程式在頂層web assets目錄中的起始頁面。 預設值為index.html，通常顯示在專案的頂層www目錄中。」
+在PhoneGap檔案中(`https://docs.phonegap.com`)，此元素的說明為「The optional &lt;content> 元素會定義應用程式在頂層web assets目錄中的起始頁面。 預設值為index.html，通常顯示在專案的頂層www目錄中。」
 
 如果沒有index.html檔案，PhoneGap Build會失敗。 因此，包含此檔案。
 

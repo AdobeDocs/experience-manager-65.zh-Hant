@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: f45d8a9b-14d6-468f-a44c-3933e962922c
 exl-id: 7f00d426-4d28-41ee-8c54-636349e48669
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2653'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ angular視是否偵測到wcmMode (！= WCMMode.DISABLED)，以判斷開啟頁面
 
 在製作模式中，每個個別頁面會個別呈現。 angular不會處理頁面之間的路由，也不會使用ng-view載入包含頁面元件的部分範本。 相反地，頁面範本(template.jsp)的內容會透過包含在伺服器端 `cq:include` 標籤之間。
 
-此策略可啟用作者功能（例如在段落系統、Sidekick、設計模式等中新增和編輯元件） 在不修改的情況下運作。 依賴使用者端轉譯的頁面（例如應用程式的頁面）在AEM編寫模式中無法正常運作。
+此策略可啟用作者功能(例如在段落系統、Sidekick、設計模式等中新增和編輯元件) 在不修改的情況下運作。 依賴使用者端轉譯的頁面（例如應用程式的頁面）在AEM編寫模式中無法正常運作。
 
 請注意，template.jsp include會包裝在 `div` 元素包含 `ng-controller` 指令。 此結構可啟用DOM內容與控制器的連結。 因此，雖然在使用者端轉譯的頁面會失敗，但這麼做可正常運作的個別元件（請參閱下文元件一節）。
 
@@ -369,7 +369,7 @@ www目錄包含實施應用程式外觀和行為的所有網頁內容(HTML、JS�
 
 ### www/config.xml {#www-config-xml}
 
-此 [PhoneGap檔案](https://docs.phonegap.com) 將此檔案稱為「全域設定檔案」。 config.xml包含許多應用程式屬性，例如應用程式名稱、應用程式「偏好設定」(例如iOS Webview是否允許捲動)以及 *僅限* 已由PhoneGap Build使用。
+PhoneGap檔案(`https://docs.phonegap.com`)將此檔案稱為「全域設定檔案」。 config.xml包含許多應用程式屬性，例如應用程式名稱、應用程式「偏好設定」(例如iOS Webview是否允許捲動)以及 *僅限* 已由PhoneGap Build使用。
 
 config.xml檔案是AEM中的靜態檔案，會透過Content Sync依原樣匯出。
 
@@ -381,7 +381,7 @@ config.xml檔案包含 `content` 元素：
 
 `<content src="content/phonegap/weretail/apps/ng-we-retail/en.html" />`
 
-在 [PhoneGap檔案](https://docs.phonegap.com)，此元素會說明為「選擇性」 &lt;content> 元素會定義應用程式在頂層web assets目錄中的起始頁面。 預設值為index.html，通常顯示在專案的頂層www目錄中。」
+在PhoneGap檔案中(`https://docs.phonegap.com`)，此元素的說明為「The optional &lt;content> 元素會定義應用程式在頂層web assets目錄中的起始頁面。 預設值為index.html，通常顯示在專案的頂層www目錄中。」
 
 如果沒有index.html檔案，PhoneGap Build會失敗。 因此，包含此檔案。
 
