@@ -11,7 +11,7 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 4e6521f0d40fc10e016bf197d5b31033192e3214
+source-git-commit: 031c683029c61f8f49c07d276c27e05b3fcfd5fc
 workflow-type: tm+mt
 source-wordcount: '1915'
 ht-degree: 0%
@@ -40,9 +40,9 @@ AEM Forms使用者可以使用Google的reCAPTCHA服務，在最適化表單中�
 
 ### 設定reCAPTCHA Enterprise  {#steps-to-implement-reCAPTCHA-enterprise-in-forms}
 
-1. 建立 [reCAPTCHA企業專案](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) 啟用方式 [reCAPTCHA Enterprise API](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-reCAPTCHA-enterprise-api).
+1. 建立 [reCAPTCHA企業專案](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) 啟用方式 [reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api).
 1. [取得](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed) 專案識別碼。
-1. 建立 [API金鑰](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) 和 [網站的網站金鑰](https://cloud.google.com/reCAPTCHA-enterprise/docs/create-key#create-key).
+1. 建立 [API金鑰](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) 和 [網站的網站金鑰](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key).
 1. 建立雲端服務的設定容器。
 
    1. 前往 **[!UICONTROL 「工具」>「一般」>「設定瀏覽器」]**. 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
@@ -60,7 +60,7 @@ AEM Forms使用者可以使用Google的reCAPTCHA服務，在最適化表單中�
    1. 點選 **[!UICONTROL reCAPTCHA]**. 「組態」頁面隨即開啟。 選取在上一步建立的設定容器並點選 **[!UICONTROL 建立]**.
    1. 選取reCAPTCHA Enterprise版本並指定reCAPTCHA Enterprise服務的名稱；專案ID、網站金鑰和API金鑰（在步驟2和3中取得）。
    1. 選取金鑰型別，金鑰型別應與Google雲端專案中設定的網站金鑰相同，例如， **核取方塊網站索引鍵** 或 **以分數為基礎的網站金鑰**.
-   1. 指定介於0到1之間的臨界值分數([按一下以進一步瞭解分數](https://cloud.google.com/reCAPTCHA-enterprise/docs/interpret-assessment#interpret_scores))。 分數大於或等於臨界值分數會識別人類互動，否則會被視為機器人互動。
+   1. 指定介於0到1之間的臨界值分數([按一下以進一步瞭解分數](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores))。 分數大於或等於臨界值分數會識別人類互動，否則會被視為機器人互動。
 
       > 注意:
       >
@@ -77,7 +77,7 @@ reCAPTCHA Enterprise服務啟用後，就可在調適型表單中使用。 另�
 
 ## 設定Google reCAPTCHA v2 {#steps-to-implement-reCAPTCHA-v2-in-forms}
 
-1. 取得 [recaptcha API金鑰組](https://www.google.com/reCAPTCHA/admin) 來自Google。 它包含 **網站金鑰** 和 **秘密金鑰**.
+1. 取得 [recaptcha API金鑰組](https://www.google.com/recaptcha/admin) 來自Google。 它包含 **網站金鑰** 和 **秘密金鑰**.
 1. 建立雲端服務的設定容器。
    1. 前往 **[!UICONTROL 「工具」>「一般」>「設定瀏覽器」]**. 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 說明檔案以取得詳細資訊。
    1. 請執行以下操作來啟用雲端設定的全域資料夾，或跳過此步驟來建立和設定雲端服務設定的另一個資料夾。
