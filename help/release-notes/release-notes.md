@@ -3,10 +3,10 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
+source-git-commit: 1077aeabacb1dbb489dbc7222c45da0a35b8cf16
 workflow-type: tm+mt
-source-wordcount: '3738'
-ht-degree: 1%
+source-wordcount: '3777'
+ht-degree: 6%
 
 ---
 
@@ -40,22 +40,22 @@ ht-degree: 1%
 
 此版本中的部分主要功能和改進如下：
 
-* **搜尋體驗增強功能**  — 您現在可以對搜尋結果中顯示的資產快速執行下列操作：
+* **搜尋體驗增強功能** - 您現在可以對搜尋結果中顯示的資產快速執行以下作業：
    * 建立工作流程
    * 建立版本
    * 建立資產關聯或取消關聯
 
-  您不需要導覽至資產位置並檢視其屬性，即可執行這些作業。
-* **Dynamic Media _快照_**— 實驗測試影像或Dynamic Media URL，以檢視不同影像修飾元的輸出，以及針對檔案大小（使用WebP和AVIF傳送）、網路頻寬和裝置畫素比的智慧型影像最佳化。 另請參閱 [Dynamic Media快照](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
+  若要執行這些作業，您並不需要瀏覽至資產位置及檢視其屬性。
+* **Dynamic Media _快照_**- 對測試影像或 Dynamic Media URL 進行實驗，以查看不同影像修飾元的輸出以及針對檔案大小 (使用 WebP 和 AVIF 傳遞)、網路頻寬和裝置像素比的智慧型影像最佳化。請參閱 [Dynamic Media 快照](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html)。
 * **使用Dynamic Media進行DASH串流**  — 新通訊協定(DASH - Dynamic Adaptive Streaming over HTTP)已針對Dynamic Media視訊傳送中的最適化資料流推出（已啟用CMAF）支援。 現在所有地區都可使用， [透過支援票證啟用](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
 * **Experience Manager Sites和內容片段與資產新一代Dynamic Media的整合** -Experience Manager Assetsas a Cloud Service新一代Dynamic Media的使用者現在可以使用這些雲端託管的資產，透過Experience Manager Sites 6.5的內部部署或Managed Services執行個體進行製作和交付。
 
 **AEM Forms**
 
-* **[AEM頁面編輯器中的最適化Forms](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)**：您現在可以使用AEM頁面編輯器快速建立多個表單並新增至您的網站頁面。 此功能可讓內容作者運用最適化表單元件的功能（包括動態行為、驗證、資料整合、產生記錄檔案和業務流程自動化），在Sites頁面內建立順暢的資料擷取體驗。 您可以：
-   * 建立最適化表單，方法是拖放表單元件至AEM Sites編輯器或體驗片段中的最適化Forms容器元件。
+* **[AEM 頁面編輯器中的最適化表單](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)**：您現在可以使用 AEM 頁面編輯器快速建立多個表單，並將這些表單新增至您的 Sites 頁面。 此功能讓內容作者可使用最適化表單元件 (包括動態行為、驗證、資料整合、產生記錄文件和業務流程自動化) 的強大功能，在 Sites 頁面內建立順暢的資料擷取體驗。 您可以：
+   * 將表單元件拖放到 AEM Sites 編輯器或體驗片段中的最適化表單容器元件，即可建立最適化表單。
    * 在AEM Sites編輯器中使用最適化Forms精靈，以便您可以建立獨立於任何Sites頁面的表單，讓您自由地在多個頁面中重複使用此類表單。
-   * 新增多個表單至Sites頁面，精簡使用者體驗並提供更大的彈性。
+   * 將多個表單新增到 Sites 頁面，簡化使用者體驗並提供更大的靈活性。
 * **[Experience Manager Forms中支援reCAPTCHA Enterprise](/help/forms/using/captcha-adaptive-forms.md)**：在Experience Manager Forms中新增reCAPTCHA Enterprise支援，除了現有的Google reCAPTCHA v2支援外，還針對詐騙活動和垃圾郵件提供增強型保護。
 * **[透過Experience Manager Forms支援適用於政府的Adobe Acrobat Sign](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**：AEM Forms現在與適用於政府的Adobe Acrobat Sign整合（符合FedRAMP）。 此整合針對政府相關帳戶（政府部門及機構）提交的最適化表單電子簽章，提供進階層級的法規遵循與安全性。 與適用於政府的Adobe Acrobat Sign整合可讓Adobe的合作夥伴和政府客戶在Adaptive Forms中使用電子簽章，處理某些最關鍵和敏感的業務線。 此額外的安全層可確保所有電子簽章完全符合FedRAMP Moderate合規性，讓Adobe的政府客戶高枕無憂。
 * **[啟用Salesforce與Experience Manager Forms的整合以進行資料交換](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)**：使用OAuth 2.0使用者端憑證流程設定Experience Manager Forms與Salesforce應用程式之間的整合。 此功能可讓應用程式獲得安全且直接的驗證和授權，且無需使用者介入，即可進行順暢通訊。
@@ -400,6 +400,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * 在JBoss® 7.1.4平台上，當使用者安裝Experience Manager6.5.16.0或更新版Service Pack時， `adobe-livecycle-jboss.ear` 部署失敗。
 * WebLogic JEE伺服器不支援高於1.8.0_281的JDK版本。
+* 從AEM 6.5.15開始，Rhino JavaScript Engine由 ```org.apache.servicemix.bundles.rhino``` 組合有新的提升行為。 使用嚴格模式的指令碼(```use strict;```)必須正確宣告其變數，否則變數將不會執行，而會擲回執行階段錯誤。
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 
