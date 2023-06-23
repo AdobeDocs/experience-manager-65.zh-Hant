@@ -3,7 +3,7 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: fa8ddf107e2cf19b4d162501a5fbb21cf48b8e66
+source-git-commit: 540de86c4b16d3e9ab823e36158bf1c62fd4ba63
 workflow-type: tm+mt
 source-wordcount: '3798'
 ht-degree: 6%
@@ -145,7 +145,7 @@ ht-degree: 6%
 * 當使用者更新至Experience Manager Forms 6.5.16.0 Service Pack並嘗試變更 `LicenseType` 至 `Production`，變更不會反映出來。 (FORMS-7594)
 * 當使用者嘗試使用包含的PDF叫用LCA程式時 `Chinese Full Width Characters`，發生下列問題 `ValidateForm` 程式。 (FORMS-7464)
 * 在Experience Manager Forms Designer中，XMLFM會針對以XDP為基礎的範本，產生紙張大小不同的ZPL輸出，例如字母、A4和A5。 (FORMS-7898)
-* 由於瀏覽器的限制，表單中的自動填寫選項在Experience Manager Forms 6.5.14.0的194個表單欄位後無法運作。 (FORMS-9426)
+* 由於瀏覽器限制，表單中的自動填寫選項在Experience Manager Forms 6.5.14.0中的194個表單欄位之後無法運作。 (FORMS-9426)
 
 ## 整合{#integrations-6517}
 
