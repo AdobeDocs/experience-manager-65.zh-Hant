@@ -5,9 +5,9 @@ role: Admin,Leader,Architect
 feature: Integrations
 exl-id: 57e2bffe-8094-4557-99c8-7b482681687e
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 39930967e2f423b7fbbc79bcb85f78d15809e97d
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1155'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-integrations.html?lang=en) |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets-view/integrations/workfront-integrations.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 [!DNL Adobe Workfront] 是工作管理應用程式，協助您在一個地方管理整個工作生命週期。以下兩者的整合： [!DNL Workfront] 和 [!DNL Adobe Experience Manager Assets] 可讓組織在本質上連線工作和數位資產管理，藉以改善內容速度和上市時間。 在Workfront中管理其工作的情況下，使用者可以存取所需的檔案和影像。
@@ -43,7 +43,6 @@ ht-degree: 5%
 >
 >* 另請參閱 [適用於Experience Manager Assets增強型聯結器的Workfront合作夥伴認證考試](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). 如需有關考試的資訊，請參閱 [考試指南](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
 
-
 ## 比較以下專案之間的不同整合： [!DNL Assets] 和 [!DNL Workfront] {#feature-parity-matrix}
 
 以下為透過以下各種整合型別所提供的功能細節： [!DNL Assets] 和 [!DNL Workfront].
@@ -52,7 +51,7 @@ ht-degree: 5%
 |----|----|----|-----|-----|
 | 部署方法 | 適合的 [!DNL Assets] 方案。 | Assets Essentials | Adobe Managed Services，內部部署 | 雲端服務 |
 | **一般** |
-| 傳送數位檔案來源 [!DNL Workfront] 至 [!DNL Assets] | WF檔案的最新版本可上傳至AEM Assets，這會連結為檔案的新版本。 | ✓ | ✓ | ✓ |
+| 傳送數位檔案來源 [!DNL Workfront] 至 [!DNL Assets] | WF檔案的最新版本可上傳至AEM Assets，並以檔案新版本連結。 | ✓ | ✓ | ✓ |
 | 手動將AEM資料夾連結至Workfront物件 | 現有的AEM資料夾可連結為Workfront資料夾，其子資產可連結為新的Workfront檔案。 | ✓ | ✓ | ✓ |
 | 連結 [!DNL Assets] Workfront物件 | AEM中的現有資產可以連結到新的Workfront檔案，或作為現有檔案的新版本。 | ✓ | ✓ | ✓ |
 | 新增至連結資料夾的資產會自動傳送至AEM | 如果將檔案新增至連結的資料夾，則會自動將關聯的資產作為新資產上傳到AEM Assets。 | ✓ | ✓ | ✓ |
@@ -71,14 +70,14 @@ ht-degree: 5%
 | 支援連線至單一AEM環境的多個Workfront環境 | 來自多個Workfront環境的使用者可以連線至單一AEM環境。 | ✓ | 否 | ✓ |
 | 支援連線至單一Workfront環境的多個AEM環境 | 單一Workfront環境內的使用者可以在多個AEM環境之間傳送或連結資產。 | ✓ | ✓ | ✓ |
 | **中繼資料** |
-| 將Workfront資產中繼資料對應至AEM Assets | Workfront物件和自訂表單屬性可能會對應至AEM資產中繼資料屬性。 值將在初始上傳/連結時推送。 | ✓ | ✓ | ✓ |
+| 將Workfront資產中繼資料對應至AEM Assets | Workfront物件和自訂表單屬性可能會對應至AEM資產中繼資料屬性。 值會在初始上傳/連結時推送。 | ✓ | ✓ | ✓ |
 | 在Workfront中自動建立檔案自訂Forms | 使用AEM工作流程將自訂表單附加至Workfront檔案、任務和問題。 | 否 | ✓ | 否 |
 | 在AEM Assets和Workfront之間雙向自動更新中繼資料 | 在AEM Assets和Workfront之間自動更新中繼資料。 資產必須先從Workfront推送至AEM，且Workfront資產中繼資料必須對應至AEM資產，才能正確進行雙向中繼資料更新。 | 否 | ✓ | 否 |
 | 在Workfront中即時檢視對應至AEM的中繼資料 | 在「Workfront檔案詳細資訊」和「檔案摘要」面板中，檢視更新後對應至AEM的中繼資料。 | ✓ | 否 | ✓ |
 | 將更新的Workfront中繼資料即時推送到AEM | 自動將對應的Workfront中繼資料更新為AEM，無需重新推送資產或資產的新版本。 | ✓ | 否 | ✓ |
 | 將Workfront中繼資料對應至AEM Assets資料夾 | 將Workfront專案中繼資料與連結的AEM資料夾同步。 | 否 | ✓ | ✓ |
 | 新版本的AEM中繼資料更新 | AEM中的設定可決定Workfront中新版本的資產是否也會推動對其中繼資料所做的任何變更。 | 否 | ✓ | 否 |
-| 在Workfront中自訂Forms變更時自動更新AEM中繼資料 | AEM可讓您訂閱Workfront中檔案表單的更新。 因此，Workfront檔案自訂表單中繼資料的任何更新都會修改對應AEM中繼資料欄位的值。 | 否 | ✓ | 否 |
+| 在Workfront中自訂Forms變更時自動更新AEM中繼資料 | AEM可讓您訂閱Workfront中檔案表單的更新。 因此，Workfront檔案自訂表單中繼資料的任何更新都會編輯對應AEM中繼資料欄位的值。 | 否 | ✓ | 否 |
 | **工作流程（現成可用）** |
 | 在連結的資產上建立新校訂版本 | 在Workfront中連結資產時，會自動產生校訂。 | 否 | 自訂 | 否 |
 | 在Workfront物件上設定狀態 | 使用AEM工作流程根據可設定的條件設定Workfront物件狀態 | 否 | ✓ | 近期 |

@@ -5,7 +5,7 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 39930967e2f423b7fbbc79bcb85f78d15809e97d
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-configure.html?lang=en) |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets-view/integrations/workfront-connector-configure.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 在中擁有管理員存取許可權的使用者 [!DNL Adobe Experience Manager] 在安裝增強型聯結器後進行設定。 如需安裝指示，請參閱 [安裝聯結器](/help/assets/workfront-integrations.md).
@@ -30,7 +30,6 @@ ht-degree: 1%
 >* Adobe支援增強型聯結器1.7.4版及更新版本。 不支援舊版發行前版本和自訂版本。 若要檢查增強型聯結器版本，請導覽至 `digital.hoodoo` 群組可在左側窗格中找到，位置為 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant).
 >
 >* 另請參閱 [適用於Experience Manager Assets增強型聯結器的Workfront合作夥伴認證考試](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). 如需有關考試的資訊，請參閱 [考試指南](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
-
 
 ## 設定事件訂閱 {#event-subscriptions}
 
@@ -46,7 +45,7 @@ ht-degree: 1%
 * 選取 [!UICONTROL Workfront自訂整合] 您已在第6節中建立。
 * 按一下 [!UICONTROL 啟用Workfront事件訂閱].
 
-   ![事件訂閱](/help/assets/assets/event-subs.png)
+  ![事件訂閱](/help/assets/assets/event-subs.png)
 
 ## 設定連結的資料夾 {#linked-folders}
 
