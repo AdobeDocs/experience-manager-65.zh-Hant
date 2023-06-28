@@ -2,9 +2,10 @@
 title: Assets HTTP API中的Adobe Experience Manager內容片段支援
 description: 瞭解資產HTTP API支援內容片段，這是AEM Headless傳送功能的重要部分。
 feature: Content Fragments,Assets HTTP API
+role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 48131c5accfe73b83197bd581ed5a22bc4890a56
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 24%
@@ -76,7 +77,6 @@ Assets REST API提供 [REST](https://en.wikipedia.org/wiki/Representational_stat
 >
 >* `/api/assets`**不需要**&#x200B;使用 `.model` 選擇器。
 >* `/content/path/to/page` **需要**&#x200B;使用 `.model` 選擇器。
-
 
 HTTP 方法決定要執行的操作：
 
@@ -155,7 +155,6 @@ HTTP 方法決定要執行的操作：
 >* [CORS/AEM 說明](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
 >* [影片 - 使用 AEM 開發 CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)
 >
-
 
 在有特定驗證需求的環境中，建議使用OAuth。
 
@@ -331,49 +330,52 @@ A [內容片段](/help/assets/content-fragments/content-fragments.md) 是一種�
 
 * **500** （內部伺服器錯誤）
 
-   >[!NOTE]
-   >
-   >傳回此錯誤：
-   >
-   >* 當發生無法使用特定程式碼識別的錯誤時
-   >* 當指定的裝載無效時
+  >[!NOTE]
+  >
+  >傳回此錯誤：
+  >
+  >* 當發生無法使用特定程式碼識別的錯誤時
+  >* 當指定的裝載無效時
 
-
-   以下列出傳回此錯誤狀態的常見案例，以及產生的錯誤訊息（等寬）：
+  以下列出傳回此錯誤狀態的常見案例，以及產生的錯誤訊息（等寬）：
 
    * 父資料夾不存在（透過建立內容片段時） `POST`)
    * 未提供任何內容片段模型（缺少cq：model）、無法讀取（由於無效路徑或許可權問題）或沒有有效的片段模型：
 
       * `No content fragment model specified`
       * `Cannot create a resource of given model '/foo/bar/qux'`
+
    * 無法建立內容片段（可能是許可權問題）：
 
       * `Could not create content fragment`
+
    * 無法更新標題和/或說明：
 
       * `Could not set value on content fragment`
+
    * 無法設定中繼資料：
 
       * `Could not set metadata on content fragment`
+
    * 找不到內容元素或無法更新
 
       * `Could not update content element`
       * `Could not update fragment data of element`
 
-   詳細錯誤訊息通常會以下列方式傳回：
+  詳細錯誤訊息通常會以下列方式傳回：
 
-   ```xml
-   {
-     "class": "core/response",
-     "properties": {
-       "path": "/api/assets/foo/bar/qux",
-       "location": "/api/assets/foo/bar/qux.json",
-       "parentLocation": "/api/assets/foo/bar.json",
-       "status.code": 500,
-       "status.message": "...{error message}.."
-     }
-   }
-   ```
+  ```xml
+  {
+    "class": "core/response",
+    "properties": {
+      "path": "/api/assets/foo/bar/qux",
+      "location": "/api/assets/foo/bar/qux.json",
+      "parentLocation": "/api/assets/foo/bar.json",
+      "status.code": 500,
+      "status.message": "...{error message}.."
+    }
+  }
+  ```
 
 ## API 參考 {#api-reference}
 
