@@ -1,8 +1,6 @@
 ---
 title: 測試您的UI
-seo-title: Testing Your UI
 description: AEM為AEM UI提供自動化測試框架
-seo-description: AEM provides a framework for automating tests for your AEM UI
 uuid: 408a60b5-cba9-4c9f-abd3-5c1fb5be1c50
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ topic-tags: components, testing
 discoiquuid: 938100ad-94f9-408a-819d-72657dc115f7
 docset: aem65
 exl-id: 2d28cee6-31b0-4288-bad3-4d2ecad7b626
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '771'
 ht-degree: 2%
 
 ---
@@ -28,11 +26,11 @@ ht-degree: 2%
 
 AEM為AEM UI提供自動化測試框架。 使用該架構，您可以直接在網頁瀏覽器中編寫和執行UI測試。 此架構提供用於建立測試的JavaScript API。
 
-AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 開發Hobbes.js架構是為了在開發過程中測試AEM。 此架構現在可供公眾用來測試您的AEM應用程式。
+AEM測試架構使用Hobbes.js，這是以JavaScript撰寫的測試程式庫。 開發Hobbes.js架構是為了在開發過程中測試AEM。 此架構現在可供公眾用來測試您的AEM應用程式。
 
 >[!NOTE]
 >
->請參閱Hobbes.js [檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html) 以取得API的完整詳細資料。
+>請參閱Hobbes.js [檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html) 以取得API的完整詳細資料。
 
 ## 測試結構 {#structure-of-tests}
 
@@ -53,7 +51,7 @@ AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
-開啟主控台時，左側會列出測試套裝，以及可依序執行所有測試的選項。 右側顯示有格線背景的空格是測試執行時顯示頁面內容的預留位置。
+開啟主控台時，左側會列出測試套裝，以及可依序執行所有測試的選項。 右側顯示有格線背景的空間是測試執行時顯示頁面內容的預留位置。
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
@@ -63,11 +61,11 @@ AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 
 
 核取記號圖示表示測試通過：
 
-![](do-not-localize/chlimage_1-2.png)
+![勾選圖示。](do-not-localize/chlimage_1-2.png)
 
 「X」圖示表示測試失敗：
 
-![](do-not-localize/chlimage_1-3.png)
+![圓圈內以X表示的失敗測試圖示。](do-not-localize/chlimage_1-3.png)
 
 若要執行測試套裝：
 
@@ -75,9 +73,9 @@ AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 按一下或點選 **執行測試** 按鈕。
+1. 按一下 **執行測試**.
 
-   ![](do-not-localize/chlimage_1-4.png)
+   ![「執行測試」按鈕的影像，以圓圈內面向右的指標表示。](do-not-localize/chlimage_1-4.png)
 
 1. 測試執行時，預留位置會取代為頁面內容。
 
@@ -95,9 +93,9 @@ AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 
 
 1. 在「測試」面板上，點選或按一下 **執行所有測試** 按鈕或 **執行測試** 按鈕來設定您要執行之測試套裝的標題。
 
-   ![](do-not-localize/chlimage_1-5.png)
+   ![「執行所有測試」按鈕和「執行測試」按鈕的影像，以圓圈內面向右的指標表示。](do-not-localize/chlimage_1-5.png)
 
-1. 若要檢視每個測試案例的結果，請點選或按一下測試案例的標題。 在「 」中點選或按一下您的測試名稱 **結果** 面板顯示所有詳細資料。
+1. 若要檢視每個測試案例的結果，請按一下測試案例的標題。 在「 」中按一下您的測試名稱 **結果** 面板顯示所有詳細資料。
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -105,7 +103,7 @@ AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 
 
 下列程式會逐步引導您使用建立和執行測試套裝 [We.Retail內容](/help/sites-developing/we-retail.md)，但您可以輕鬆修改測試，以使用不同的網頁。
 
-如需建立您自己的測試套裝的完整詳細資訊，請參閱 [Hobbes.js API檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html).
+如需建立您自己的測試套裝的完整詳細資訊，請參閱 [Hobbes.js API檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html).
 
 1. 開啟CRXDE Lite。 ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
 1. 以滑鼠右鍵按一下 `/etc/clientlibs` 資料夾並按一下 **「建立」>「建立資料夾」**. 型別 `myTests` ，然後按一下 **確定**.
@@ -118,8 +116,8 @@ AEM測試架構使用Hobbes.js，這是以Javascript撰寫的測試程式庫。 
 
    | 名稱 | 類型 | 值 |
    |---|---|---|
-   | `categories` | 字串[] | `granite.testing.hobbes.tests` |
-   | `dependencies` | 字串[] | `granite.testing.hobbes.testrunner` |
+   | `categories` | String[] | `granite.testing.hobbes.tests` |
+   | `dependencies` | String[] | `granite.testing.hobbes.testrunner` |
 
    >[!NOTE]
    >

@@ -8,9 +8,9 @@ content-type: reference
 discoiquuid: bbb9936e-ecd2-44b3-b4ae-dd62a3160641
 docset: aem65
 exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
-source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '2048'
+source-wordcount: '2096'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 0%
    * 表單資料模型 — 指定表單資料模型路徑。
    * ArrayList — 指定集合的子型別。
 
-1. 指定變數的說明（選用），然後點選 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以儲存變更。 變數會顯示在左窗格中的可用清單中。
+1. 指定變數的說明（選用），然後點選 ![儲存方塊內的核取標籤所指示的圖示。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以儲存變更。 變數會顯示在左窗格中的可用清單中。
 
 建立變數時，請考量下列作法：
 
@@ -92,10 +92,10 @@ ht-degree: 0%
 若要新增變數之間的對應，請執行下列動作：
 
 1. 在工作流程編輯頁面上，點選工作流程模型Sidekick中可用的「步驟」圖示。
-1. 拖放 **設定變數** 步驟至工作流程編輯器，點選該步驟，然後選取 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （設定）。
+1. 拖放 **設定變數** 步驟至工作流程編輯器，點選該步驟，然後選取 ![設定扳手所指示的圖示。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (設定).
 1. 在「設定變數」對話方塊中，選取 **[!UICONTROL 對應]** > **[!UICONTROL 新增對應]**.
 1. 在 **對應變數** 區段，選取要儲存資料的變數、選取對應模式，然後指定要儲存在變數中的值。 對應模式會因變數型別而異。
-1. 對應更多變數，以便做出有意義的運算式。 點選 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以儲存變更。
+1. 對應更多變數，以便做出有意義的運算式。 點選 ![儲存方塊內的核取標籤所指示的圖示。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以儲存變更。
 
 ### 範例1：查詢XML變數以設定字串變數的值 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -250,8 +250,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## 編輯變數 {#edit-a-variable}
 
 1. 在編輯工作流程頁面上，點選工作流程模型Sidekick中可用的「變數」圖示。 左窗格中的變數區段會顯示所有現有的變數。
-1. 點選 ![](https://helpx.adobe.com/content/dam/help/images/en/edit.png) （編輯）圖示加以選取，並位於您要編輯的變數名稱旁。
-1. 編輯變數資訊並點選 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以儲存變更。 您無法編輯 **[!UICONTROL 名稱]** 和 **[!UICONTROL 型別]** 變數的欄位。
+1. 點選 ![以鉛筆符號表示的編輯圖示。](https://helpx.adobe.com/content/dam/help/images/en/edit.png) （編輯）圖示加以選取，並位於您要編輯的變數名稱旁。
+1. 編輯變數資訊並點選 ![以核取標籤指示的儲存圖示。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以儲存變更。 您無法編輯 **[!UICONTROL 名稱]** 和 **[!UICONTROL 型別]** 變數的欄位。
 
 ## 刪除變數 {#delete-a-variable}
 
@@ -261,4 +261,4 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 1. 在編輯工作流程頁面上，點選工作流程模型Sidekick中可用的「變數」圖示。 左窗格中的變數區段會顯示所有現有的變數。
 1. 點選要刪除的變數名稱旁的「刪除」圖示。
-1. 點選 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以確認和刪除變數。
+1. 點選 ![以核取標籤符號表示的「完成」圖示。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 以確認和刪除變數。

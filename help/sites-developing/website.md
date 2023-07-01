@@ -1,8 +1,6 @@
 ---
 title: 建立功能完整的網站(JSP)
-seo-title: Create a Fully-Featured Website (JSP)
 description: 本教學課程可讓您使用AEM建立完整功能的網站
-seo-description: This tutorial enables you to create a fully featured website with AEM
 uuid: ec76ad5e-af6c-43ad-ae57-a4ae4ac7029f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +9,7 @@ content-type: reference
 discoiquuid: 90bc05c9-e971-4e75-bc07-5e137c6c913e
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
 source-wordcount: '4935'
 ht-degree: 3%
@@ -24,7 +22,7 @@ ht-degree: 3%
 >
 >本文介紹如何使用JSP並根據傳統UI建立網站。 Adobe建議您為網站運用最新的AEM技術，如文章所述 [開發AEM Sites快速入門](/help/sites-developing/getting-started.md).
 
-本教學課程可讓您使用Adobe Experience Manager (AEM)建立完整功能的網站。 該網站將以通用網站為基礎，主要針對網頁開發人員。 所有開發都將在作者環境中進行。
+本教學課程可讓您使用Adobe Experience Manager (AEM)建立完整功能的網站。 該網站將以通用網站為基礎，主要針對網頁開發人員。 所有開發都會在作者環境中進行。
 
 本教學課程說明如何：
 
@@ -293,8 +291,8 @@ static.css檔案和影像範例
       * **名稱：** sling：resourceSuperType
       * **型別：** 字串
       * **值：** foundation/components/page
-   1. 按一下「儲存全部」。
 
+   1. 按一下「儲存全部」。
 
 1. 開啟 `contentpage.jsp` 下的檔案 `/apps/mywebsite/components/contentpage` 和以下列程式碼取代現有程式碼：
 
@@ -313,7 +311,7 @@ static.css檔案和影像範例
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-   開啟頁面來源以檢視head.jsp和body.jsp指令碼產生的javascript和HTML元素。 下列指令碼片段會在您開啟頁面時開啟Sidekick：
+   開啟頁面來源以檢視head.jsp和body.jsp指令碼產生的javascript和HTML元素。 下列指令碼片段會在您開啟頁面時Sidekick開啟：
 
    ```java
    CQ.WCM.launchSidekick("/content/mywebsite/en/products",
@@ -481,7 +479,7 @@ static.css檔案和影像範例
 頁面元件會定義屬性，讓您為頁面提供字幕。 新增提供頁面內容相關資訊的字幕。
 
 1. 在您的瀏覽器中，開啟 **產品** 頁面。
-1. 在Sidekick **頁面** 標籤，按一下 **頁面屬性**.
+1. 在Sidekick上 **頁面** 標籤，按一下 **頁面屬性**.
 1. 在對話方塊的「基本」標籤上，展開 **更多標題和說明，** 和 **字幕** 屬性，型別 **我們的工作**. 按一下&#x200B;**「確定」**。
 1. 重複上述步驟以新增副標題 **關於我們的服務** 至 **服務** 頁面。
 1. 重複上述步驟以新增副標題 **我們獲得的信任** 至 **客戶** 頁面。
@@ -524,9 +522,9 @@ static.css檔案和影像範例
 
 1. 將下列程式碼複製到 `navimage.png.java.`此程式碼會擴充AbstractImageServlet類別：
 
-   * [AbstractImageServlet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) 建立儲存目前資源屬性的ImageContext物件。
+   * [AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) 建立儲存目前資源屬性的ImageContext物件。
    * 資源的父頁面是從ImageContext物件擷取。 然後取得頁面標題和副標題。
-   * [ImageHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ImageHelper.html) 用於從網站設計的navimage_bg.jpg檔案、頁面標題和頁面子標題產生影像。
+   * [ImageHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/ImageHelper.html) 用於從網站設計的navimage_bg.jpg檔案、頁面標題和頁面子標題產生影像。
 
    ```java
    package apps.mywebsite.components.contentpage;
@@ -679,6 +677,7 @@ static.css檔案和影像範例
       * 名稱: `jcr:description`
       * 類型: `String`
       * 值: `This is a description of the Product 1!.`
+
    1. 按一下 **新增**.
    1. 在 **屬性** 索引標籤中，使用下列值建立另一個屬性：
 
@@ -686,9 +685,8 @@ static.css檔案和影像範例
       * 型別：字串
       * 值： 2008年2月14日
       * 按一下「新增」。
+
    1. 按一下「儲存全部」。
-
-
 
 1. 在CRXDE Lite中，設定「產品2」頁面的說明和日期：
 
@@ -698,6 +696,7 @@ static.css檔案和影像範例
       * 名稱： jcr：description
       * 型別：字串
       * 值：這是產品2的說明！。
+
    1. 按一下 **新增**.
    1. 在相同文字方塊中，將先前的值取代為下列值：
 
@@ -705,9 +704,8 @@ static.css檔案和影像範例
       * 型別：字串
       * 值： 2012年5月11日
       * 按一下「新增」。
+
    1. 按一下「儲存全部」。
-
-
 
 #### 建立清單子元件 {#creating-the-list-children-component-1}
 
@@ -939,7 +937,7 @@ static.css檔案和影像範例
 
 建立指令碼，擷取標誌影像並將其寫入頁面。
 
-1. 以滑鼠右鍵按一下logo元件節點，然後按一下「建立>建立檔案」以建立名為img.java的GET檔。
+1. 以滑鼠右鍵按一下標誌元件節點，然後按一下「建立>建立檔案」以建立名為img.java的GET檔。
 1. 開啟檔案，將下列程式碼複製到檔案中，然後按一下「儲存全部」：
 
 ```java
@@ -1033,7 +1031,7 @@ public class img_GET extends AbstractImageServlet {
 
 1. 在瀏覽器中開啟「產品」頁面後，按一下Sidekick底部的「設計」按鈕以進入設計模式。
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![右方顯示的「設計」按鈕。](do-not-localize/chlimage_1-1.png)
 
 1. 在「設計圖志列」中，按一下「編輯」以使用對話方塊來編輯圖志元件的設定。
 1. 在對話方塊中，按一下「影像」標籤面板中的，瀏覽您從mywebsite.zip檔案擷取的logo.png影像，然後按一下「確定」。
@@ -1124,7 +1122,7 @@ public class img_GET extends AbstractImageServlet {
 
 #### 建立影像元件 {#creating-the-image-component-1}
 
-1. 用滑鼠右鍵按一下 `/apps/mywebsite/components/logo` 節點，然後按一下「複製」。
+1. 以滑鼠右鍵按一下 `/apps/mywebsite/components/logo` 節點，然後按一下「複製」。
 1. 以滑鼠右鍵按一下 `/apps/mywebsite/components` 節點，然後按一下「貼上」。
 1. 以滑鼠右鍵按一下 `Copy of logo` 節點，按一下「重新命名」，刪除現有文字並鍵入 `image`.
 
@@ -1206,7 +1204,7 @@ public class img_GET extends AbstractImageServlet {
 
 #### 新增圖示 {#adding-the-icon}
 
-在本節中，您新增圖示，以便在Sidekick中列出影像元件時顯示在影像元件旁邊：
+您可以在此段落中新增圖示，讓此圖示在Sidekick中列出時顯示在影像元件旁邊：
 
 1. 在CRXDE Lite中，以滑鼠右鍵按一下檔案 `/libs/foundation/components/image/icon.png` 並選取 **複製。**
 1. 以滑鼠右鍵按一下節點 `/apps/mywebsite/components/image` 並按一下 **貼上**，然後按一下 **全部儲存**.
@@ -1281,10 +1279,10 @@ public class img_GET extends AbstractImageServlet {
       * 標題：我的搜尋元件
       * 說明：這是我的搜尋元件
       * 群組：我的網站
+
    1. 按「下一步」，然後再次按「下一步」。
    1. 在「允許的父項」面板上，按一下+按鈕並鍵入 `*/parsys`.
    1. 按一下「下一步」，然後按一下「確定」。
-
 
 1. 按一下「儲存全部」。
 1. 複製下列節點並貼到apps/mywebsite/components/search節點：
@@ -1504,7 +1502,7 @@ public class img_GET extends AbstractImageServlet {
 1. 在「設計段落區塊」(Design of par block)中（在「搜尋」標題下），按一下「編輯」(Edit)。
 1. 在對話方塊中，向下捲動至  **我的網站** 群組，選取 **我的搜尋元件** 並按一下 **確定**.
 1. 在Sidekick上，按一下三角形以返回編輯模式。
-1. 將My Search元件從Sidekick拖曳至parsys框架。 如下所示：
+1. 將「我的搜尋元件」從Sidekick拖曳至parsys框架。 如下所示：
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 

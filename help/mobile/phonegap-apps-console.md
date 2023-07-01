@@ -1,8 +1,6 @@
 ---
 title: 使用Apps Console建立和編輯應用程式
-seo-title: Creating and Editing Apps Using the Apps Console
 description: 請依照本頁面的說明操作，瞭解如何使用應用程式主控台建立和編輯應用程式。
-seo-description: Follow this page to learn about creating and editing apps using apps console.
 uuid: 4f7db978-ae2b-4ca6-89f1-26e091d9140a
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 9890d045-cead-4d70-b797-95319284e0d8
 exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '2615'
+source-wordcount: '2695'
 ht-degree: 1%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 AEM行動應用程式開發程式認可擁有不同專業知識的使用者對行動應用程式的開發有貢獻。 下列程式圖說明內容作者和應用程式開發人員執行工作的一般順序。
 
@@ -62,7 +60,7 @@ AEM Mobile提供Phonegap應用程式的藍圖，以建立行動應用程式。 �
 
 ### 首頁 {#the-home-page}
 
-開啟應用程式時，會出現應用程式語言變數的「首頁」或index.html頁面。首頁會提供使用者應用程式中各種頁面的連結功能表。 段落系統可讓您新增元件至頁面以建立內容。
+開啟應用程式時，會出現應用程式之語言變數的「首頁」或index.html頁面。 首頁為使用者提供應用程式中各種頁面的連結功能表。 段落系統可讓您新增元件至頁面以建立內容。
 
 ## 建立行動應用程式 {#creating-a-mobile-application}
 
@@ -89,9 +87,9 @@ AEM Mobile提供Phonegap應用程式的藍圖，以建立行動應用程式。 �
 下列程式會使用Touch UI建立行動應用程式。
 
 1. 在邊欄上，按一下「應用程式」。
-1. 按一下或點選「建立」圖示。
+1. 按一下建立圖示。
 
-   ![](do-not-localize/chlimage_1-7.png)
+   ![正方形內由加號指示的建立圖示。](do-not-localize/chlimage_1-7.png)
 
 1. （可選）在進階索引標籤上，提供應用程式的說明，並視需要變更伺服器URL。
 1. （選擇性）如果您使用PhoneGap Build編譯應用程式，請在「建置」標籤上選取要使用的組態。
@@ -114,30 +112,30 @@ AEM Mobile提供Phonegap應用程式的藍圖，以建立行動應用程式。 �
 1. 在邊欄上，按一下或點選「應用程式」。
 1. 選取要設定的應用程式，然後按一下檢視頁面屬性圖示。
 
-   ![](do-not-localize/chlimage_1-8.png)
+   ![「檢視頁面屬性」圖示由圓圈內的字母I表示。](do-not-localize/chlimage_1-8.png)
 
 1. 若要變更屬性值，請按一下或點選「編輯」圖示。
 
-   ![](do-not-localize/chlimage_1-9.png)
+   ![鉛筆所指示的編輯圖示。](do-not-localize/chlimage_1-9.png)
 
 1. 設定「基本」和「進階」屬性，然後按一下或點選「完成」圖示。
 
-   ![](do-not-localize/chlimage_1-10.png)
+   ![「完成」圖示以核取標籤符號表示。](do-not-localize/chlimage_1-10.png)
 
 #### 設定應用程式的語言變數 {#configure-a-language-variation-of-the-application}
 
-1. 在邊欄上，按一下或點選「應用程式」。
-1. 按一下「 」，深入探究您要在Apps Admin Console中編輯的行動應用程式。 選取要設定的應用程式語言版本，然後按一下檢視應用程式屬性圖示。
+1. 在邊欄上，按一下「應用程式」。
+1. 按一下「 」，深入探究您要在應用程式Admin Console中編輯的行動應用程式。 選取要設定的應用程式語言版本，然後按一下檢視應用程式屬性圖示。
 
-   ![](do-not-localize/chlimage_1-11.png)
+   ![「檢視應用程式屬性」圖示由圓圈內的字母I表示。](do-not-localize/chlimage_1-11.png)
 
 1. 若要變更屬性值，請按一下或點選「編輯」圖示。
 
-   ![](do-not-localize/chlimage_1-12.png)
+   ![鉛筆所指示的編輯圖示。](do-not-localize/chlimage_1-12.png)
 
 1. 在「基本」、「進階」、「建置」和「Analytics」標籤上設定屬性，然後按一下或點選「完成」圖示。
 
-   ![](do-not-localize/chlimage_1-13.png)
+   ![「完成」圖示以核取標籤符號表示。](do-not-localize/chlimage_1-13.png)
 
 ### 編寫行動應用程式的內容 {#authoring-the-content-of-a-mobile-application}
 
@@ -167,7 +165,7 @@ Content Sync也會追蹤更新何時發生。 有了這些資訊，Content Sync�
 1. 在邊欄上，按一下或點選「應用程式」，然後按一下或點選您的應用程式。
 1. 選取啟動顯示頁面，然後按一下或點選「更新快取」圖示。
 
-   ![](do-not-localize/chlimage_1-14.png)
+   ![「更新快取」圖示以帶有回收符號的條狀旗標表示。](do-not-localize/chlimage_1-14.png)
 
 ### 使用應用程式範本 {#using-app-templates}
 
@@ -195,7 +193,7 @@ Content Sync也會追蹤更新何時發生。 有了這些資訊，Content Sync�
 1. 按一下下一步。
 1. 提供應用程式ID和標題，不過您可能也要包含名稱和說明。
 
-   1. 此外，您可以瀏覽AEM資產，以提供PNG （支援的PhoneGap圖示格式）作為圖示。
+   1. 您也可以瀏覽AEM資產，以提供PNG （支援的PhoneGap圖示格式）作為圖示。
    1. 請記得，在「管理應用程式」動態磚中建立應用程式後，您可以編輯所有這些欄位。 應用程式ID除外，一旦設定應用程式ID，您就無法加以變更。
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
@@ -222,7 +220,7 @@ Geometrixx Outdoors應用程式是範例PhoneGap應用程式，示範預設Phone
 行動應用程式的每個頁面都包含下列功能：
 
 * 返回父頁面的返回按鈕。 請注意，「上一步」按鈕不會出現在「首頁」上。
-* 提供指令和連結功能表的可擴充邊欄：
+* 提供指令和連結功能表的可消耗邊欄：
 
    * 開啟「位置」頁面。
    * 開啟購物車。
@@ -251,7 +249,7 @@ Geometrixx Outdoors應用程式是範例PhoneGap應用程式，示範預設Phone
 
 ### 產品頁面 — Geometrixx行動應用程式 {#the-products-page-geometrixx-mobile-app}
 
-「產品」頁面及其子頁面的階層會實施產品頁面的分類系統。 階層的每個分支中的最低頁面是包含ng Product元件的產品頁面。
+「產品」頁面及其子頁面的階層會實施產品頁面的分類系統。 階層每個分支中的最低頁面是包含ng Product元件的產品頁面。
 
 應用程式使用者無法使用「產品」頁面。 「齒輪」頁面提供每個產品頁面的存取權。
 
@@ -269,7 +267,7 @@ Geometrixx Outdoors應用程式是範例PhoneGap應用程式，示範預設Phone
 
 ### 我們的相關頁面 — Geometrixx行動應用程式 {#the-about-us-page-geometrixx-mobile-app}
 
-「關於我們」頁面包含數個「兩欄列」元件。 每欄都包含「影像」或「文字」元件。 元件可編輯，而段落系統可讓您新增元件。
+「關於我們」頁面包含兩個資料行元件。 每欄都包含「影像」或「文字」元件。 元件可編輯，而段落系統可讓您新增元件。
 
 使用應用程式時，可以從英文頁面的輪播取得「關於我們」頁面。
 

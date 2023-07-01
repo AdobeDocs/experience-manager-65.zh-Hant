@@ -1,8 +1,6 @@
 ---
 title: 網頁的回應式設計
-seo-title: Responsive design for web pages
-description: 透過回應式設計，能以多種方向在多種裝置上有效顯示相同頁面
-seo-description: With responsive design, the same pages can be effectively displayed on multiple devices in multiple orientations
+description: 透過回應式設計，相同的頁面可有效地以多個方向顯示在多個裝置上。
 uuid: 3d324557-e7ff-4c82-920f-9b5a906925e8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '5336'
+source-wordcount: '5375'
 ht-degree: 0%
 
 ---
@@ -23,6 +21,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯的專案使用SPA編輯器(例如 _React_)。 [深入了解](/help/sites-developing/spa-overview.md).
+>
 
 >[!NOTE]
 >
@@ -201,7 +200,7 @@ JSP指令碼會產生下列參考樣式表的HTML程式碼：
 * 父資料夾： `/apps/application_name/config`
 * 名稱: `com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider-*alias*`
 
-   此 —  `*alias*` 需要字尾，因為MobileEmulatorProvider服務是工廠服務。 使用這個工廠唯一的任何別名。
+  此 —  `*alias*` 需要字尾，因為MobileEmulatorProvider服務是工廠服務。 使用這個工廠唯一的任何別名。
 
 * jcr:primaryType: `sling:OsgiConfig`
 
@@ -211,12 +210,12 @@ JSP指令碼會產生下列參考樣式表的HTML程式碼：
 * 類型: `String[]`
 * 值：轉譯您網頁的頁面元件路徑。 例如， geometrixx-media應用程式會使用以下值：
 
-   ```
-   geometrixx-media/components/page
-    geometrixx-unlimited/components/pages/page
-    geometrixx-unlimited/components/pages/coverpage
-    geometrixx-unlimited/components/pages/issue
-   ```
+  ```
+  geometrixx-media/components/page
+   geometrixx-unlimited/components/pages/page
+   geometrixx-unlimited/components/pages/coverpage
+   geometrixx-unlimited/components/pages/issue
+  ```
 
 ### 指定裝置群組 {#specifying-the-device-groups}
 
@@ -235,6 +234,7 @@ JSP指令碼會產生下列參考樣式表的HTML程式碼：
 >[!NOTE]
 >
 >對於您用於回應式設計的裝置群組，請編輯裝置群組，然後在「一般」標籤上選取「停用模擬器」。 此選項可防止出現與回應式設計無關的模擬器輪播。
+>
 
 ## 使用自適應影像 {#using-adaptive-images}
 
@@ -326,6 +326,7 @@ W3C [圖片元素](https://html.spec.whatwg.org/multipage/embedded-content.html#
 >* 產生HTML的指令碼： `/libs/foundation/components/adaptiveimage/adaptiveimage.jsp`
 >
 >後續章節會提供此元件的詳細資訊。
+>
 
 ### 瞭解AEM中的影像演算 {#understanding-image-rendering-in-aem}
 
@@ -366,6 +367,7 @@ W3C [圖片元素](https://html.spec.whatwg.org/multipage/embedded-content.html#
 >[!NOTE]
 >
 >Web使用者端使用matchMedia和Picturefill JavaScript程式庫（或類似的程式庫）來評估媒體選擇器。
+>
 
 處理影像要求的servlet必須執行下列工作：
 
@@ -657,6 +659,7 @@ info.geometrixx.commons.impl.servlets.ImageReferenceModificationServlet類別可
 
 >[!NOTE]
 >此 [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) 類別提供getFileReferencemethod。
+>
 
 ## 開發流動格線 {#developing-a-fluid-grid}
 
@@ -698,6 +701,7 @@ AEM可讓您有效率且有效地實作流動格線。 此頁面說明如何整�
 >[!NOTE]
 >
 >當元件包含多個時 `cq:include` 參照parsys元件的元素，每個 `path` 屬性必須有不同的值。
+>
 
 #### 縮放頁面元件格線 {#scaling-the-page-component-grid}
 
@@ -862,13 +866,13 @@ AEM可讓您有效率且有效地實作流動格線。 此頁面說明如何整�
 
 使用格點來縮放內容區塊，以適應不同的檢視區大小。 內容區塊跨越特定數量的欄。 當欄寬增加或減少以符合不同的檢視區大小時，內容區塊的寬度也會相應地增加或減少。 縮放可支援寬到足以容納並排放置內容區塊的大中型檢視區。
 
-![](do-not-localize/chlimage_1-1a.png)
+![兩個格點的影像，其中一個的縮放比例小於另一個。](do-not-localize/chlimage_1-1a.png)
 
 #### 在格線中重新定位內容 {#repositioning-content-in-the-grid}
 
 內容區塊的大小可由最小寬度限制，超出此寬度縮放不再有效。 對於較小的檢視區，格點可用於垂直分配內容區塊，而非水準分配。
 
-![](do-not-localize/chlimage_1-2a.png)
+![兩個格點的影像，其中一個格點的重新定位位置小於另一個。](do-not-localize/chlimage_1-2a.png)
 
 ### 設計格線 {#designing-the-grid}
 
@@ -953,7 +957,7 @@ CSS包含一系列使用下列結構的媒體查詢：
 
 將樣式新增至 `.row-fluid` 每個媒體查詢內的選擇器。 根據您用於該媒體查詢的頁面版面配置設定值。 例如，下圖說明為寬檢視區水準分送內容，為窄檢視區垂直分送內容的列。
 
-![](do-not-localize/chlimage_1-3a.png)
+![連續兩個內容區塊影像，第二個影像顯示重新定位的資料列。](do-not-localize/chlimage_1-3a.png)
 
 下列CSS可實作此行為：
 

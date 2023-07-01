@@ -1,8 +1,6 @@
 ---
 title: Eclipse 適用的 AEM 開發人員工具
-seo-title: AEM Developer Tools for Eclipse
 description: Eclipse 適用的 AEM 開發人員工具
-seo-description: null
 uuid: 566e49f2-6f28-4aa7-bfe0-b5f9675310bf
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +8,16 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 exl-id: 00473769-c447-4966-a71e-117c669e0151
-source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '788'
 ht-degree: 4%
 
 ---
 
 # Eclipse 適用的 AEM 開發人員工具{#aem-developer-tools-for-eclipse}
 
-![](do-not-localize/chlimage_1-9.png)
+![Eclipse適用的AEM開發人員工具的圓形影像主題。](do-not-localize/chlimage_1-9.png)
 
 ## 概觀 {#overview}
 
@@ -159,6 +157,6 @@ Eclipse適用的AEM開發工具隨附透視，可讓您完全控制AEM專案和�
 
 下列官方 [Eclipse](https://www.eclipse.org/) 說明檔案有助於設定您的環境：
 
-* [Eclipse快速入門](https://www.eclipse.org/getting-started/)
+* [Eclipse快速入門](https://eclipseide.org/getting-started/)
 * [Eclipse Luna說明系統](https://help.eclipse.org/latest/index.jsp)
 * [Maven整合(m2eclipse)](https://www.eclipse.org/m2e/)

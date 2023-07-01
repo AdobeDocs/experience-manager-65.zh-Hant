@@ -1,8 +1,6 @@
 ---
 title: 將Adobe Analytics追蹤新增至元件
-seo-title: Adding Adobe Analytics Tracking to Components
 description: 將Adobe Analytics追蹤新增至元件
-seo-description: null
 uuid: 447b140c-678c-428d-a1c9-ecbdec75cd42
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: a11c39b4-c23b-4207-8898-33aea25f2ad0
 exl-id: e6c1258c-81d5-48e4-bdf1-90d7cc13a22d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1267'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 0%
 
 ## 在頁面元件中包含Adobe Analytics模組 {#including-the-adobe-analytics-module-in-a-page-component}
 
-頁面範本元件(例如 `head.jsp, body.jsp`)需要JSP包含才能載入ContextHub和Adobe Analytics整合(這是Cloud Services的一部分)。 全部包括載入JavaScript檔案。
+頁面範本元件(例如， `head.jsp, body.jsp`)需要JSP包含才能載入ContextHub和Adobe Analytics整合(這是Cloud Services的一部分)。 全部包括載入JavaScript檔案。
 
 ContextHub專案應直接包含在 `<head>` 標籤中，而Cloud Services應包含在 `<head>` 而且早於 `</body>` 區段；例如：
 
@@ -42,7 +40,7 @@ ContextHub專案應直接包含在 `<head>` 標籤中，而Cloud Services應包�
 
 此 `cloudservices` 您在中新增的指令碼 `<head>` 和 `<body>` 區段會套用至新增至頁面的雲端服務設定。 (如果頁面使用多個Cloud Services組態，您只需包含一次ContextHub jsp和Cloud Servicesjsp。)
 
-將Adobe Analytics架構新增至頁面時， `cloudservices` 指令碼會產生與Adobe Analytics相關的javascript和對使用者端資料庫的參考，類似於以下範例：
+將Adobe Analytics架構新增至頁面時， `cloudservices` 指令碼會產生與Adobe Analytics相關的JavaScript和對使用者端程式庫的參考，類似於以下範例：
 
 ```xml
 <div class="sitecatalyst cloudservice">
@@ -130,7 +128,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 啟用您的AEM元件，以與Adobe Analytics架構互動。 然後，設定您的架構，讓Adobe Analytics追蹤元件資料。
 
-當您編輯框架時，與Adobe Analytics框架互動的元件會顯示在SideKick中。 將元件拖曳至框架後，元件屬性隨即顯示，然後您就可以使用Adobe Analytics屬性加以對應。 (請參閱 [設定基本追蹤的框架](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
+當您編輯框架時，與Adobe Analytics框架互動的元件會顯示在Sidekick中。 將元件拖曳至框架後，元件屬性隨即顯示，然後您就可以使用Adobe Analytics屬性加以對應。 (請參閱 [設定基本追蹤的框架](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
 
 當元件具有名為的子節點時，元件可以與Adobe Analytics架構互動 `analytics`. 此 `analytics` 節點具有下列屬性：
 
@@ -139,7 +137,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 * `cq:componentName`：顯示在Sidekick中的元件名稱。
 * `cq:componentGroup`：Sidekick中包含元件的群組。
 
-元件JSP中的程式碼會將JavaScript新增至觸發追蹤的頁面，並定義要追蹤的資料。 Javascript中使用的事件名稱和資料名稱必須與 `analytics` 節點屬性。
+元件JSP中的程式碼會將JavaScript新增至觸發追蹤的頁面，並定義要追蹤的資料。 JavaScript中使用的事件名稱和資料名稱必須與 `analytics` 節點屬性。
 
 * 在頁面載入時，使用data-tracking屬性追蹤事件資料。 (請參閱 [追蹤頁面載入時的自訂事件](/help/sites-developing/extending-analytics.md#tracking-custom-events-on-page-load).)
 * 使用CQ_Analytics.record函式來追蹤使用者與頁面功能互動時的事件資料。 (請參閱 [頁面載入後追蹤自訂事件](/help/sites-developing/extending-analytics.md#tracking-custom-events-after-page-load).)
@@ -204,7 +202,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
    onclick = "tracknav('<%= child.getPath() %>.html')"
    ```
 
-1. 在頁面底部，新增下列javascript程式碼：
+1. 在頁面底部，新增下列JavaScript程式碼：
 
    ```xml
    <script type="text/javascript">
@@ -289,7 +287,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 >[!NOTE]
 >
->通常需要從ContextHub追蹤資料。 如需使用javascript取得此資訊的詳細資訊，請參閱 [存取ContextHub中的值](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub).
+>通常需要從ContextHub追蹤資料。 如需使用JavaScript來取得此資訊的相關資訊，請參閱 [存取ContextHub中的值](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub).
 
 #### 將追蹤元件新增至Sidekick {#adding-the-tracking-component-to-sidekick}
 
@@ -298,7 +296,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 1. 從Adobe Analytics設定開啟您的Adobe Analytics架構。 ([http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html))
 1. 在Sidekick上，按一下「設計」按鈕。
 
-   ![](assets/chlimage_1a.png)
+   ![設計按鈕以直角方塊為特色。](assets/chlimage_1a.png)
 
 1. 在連結追蹤設定區域中，按一下設定繼承。
 
@@ -328,7 +326,7 @@ Adobe Analytics s.products變數會使用以下語法：
 s.products="category;product;quantity;price;eventY={value}|eventZ={value};evarA={value}|evarB={value}"
 ```
 
-Adobe Analytics整合模組會建構 `s.products` 變數，使用 `product` AEM元件產生的值。 此 `product` AEM元件所產生javascript中的值是具有以下結構的值陣列：
+Adobe Analytics整合模組會建構 `s.products` 變數，使用 `product` AEM元件產生的值。 此 `product` AEM元件所產生的JavaScript值是具有以下結構的值陣列：
 
 ```
 "product": [{
@@ -364,7 +362,7 @@ Adobe Analytics整合模組會建構 `s.products` 變數，使用 `product` AEM�
 * product.evars.eVarName1
 * product.evars.eVarName_n
 
-電子商務模組提供數個會產生s.products變數資料的元件。 例如，submitorder元件([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp))會產生與下列範例類似的javascript：
+電子商務模組提供數個會產生s.products變數資料的元件。 例如，submitorder元件([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp))會產生與下列範例類似的JavaScript：
 
 ```
 <script type="text/javascript">

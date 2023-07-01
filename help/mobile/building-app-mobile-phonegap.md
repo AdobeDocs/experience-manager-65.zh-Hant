@@ -1,8 +1,6 @@
 ---
 title: 建立行動應用程式
-seo-title: Building Mobile Applications
-description: 本頁提供如何使用GitHub提供的程式碼來建立行動應用程式的完整逐步文章。建立您的應用程式以安裝至裝置或模擬器，以進行測試或發佈至應用程式商店。 您可以使用PhoneGap命令列介面在本機建立應用程式，或使用PhoneGap Build在雲端中建立應用程式。
-seo-description: This page provides a complete step-by-step article on how to build a mobile application using code available from GitHub is available here.Build your application to install to a device or simulator for testing or for publishing to app stores. You can build applications locally using the PhoneGap Command Line Interface, or in the cloud using PhoneGap Build.
+description: 本頁面提供有關如何使用GitHub提供的程式碼來建立行動應用程式的完整逐步文章，請前往此處。 建置您的應用程式以安裝至裝置或模擬器，以進行測試或發佈至應用程式商店。 您可以使用PhoneGap命令列介面在本機建立應用程式，或使用PhoneGap Build在雲端中建立應用程式。
 uuid: 1ff6fe1a-24cc-4973-a2cd-8d356bc649b0
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1058'
 ht-degree: 1%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 建置您的應用程式以安裝至裝置或模擬器，以進行測試或發佈至應用程式商店。 您可以使用PhoneGap命令列介面在本機建立應用程式，或使用PhoneGap Build在雲端中建立應用程式。
 
@@ -59,16 +57,16 @@ AEM提供將大量內容移動到發佈執行個體的兩種方法：
 
 若要使用PhoneGap CLI建置，您必須安裝Node.js和PhoneGap使用者端公用程式。 您需要網際網路連線才能執行下列程式。
 
-1. 下載並安裝 [Node.js](https://nodejs.org/).
+1. 下載並安裝 [Node.js](https://nodejs.org/en).
 1. 開啟終端機或命令提示字元並輸入下列節點命令以安裝PhoneGap公用程式：
 
    ```shell
    npm install -g phonegap
    ```
 
-   在Unix或Linux系統上，您可能需要在命令的前置詞中加上 `sudo`.
+   在UNIX®或Linux®系統上，您可能需要在命令的前置詞中加上 `sudo`.
 
-   終端機會顯示一系列HTTPGET命令的結果。 安裝成功時，終端機會顯示程式庫的安裝位置，類似於以下範例：
+   終端機會顯示一系列HTTPGET命令的結果。 安裝成功後，終端機會顯示程式庫的安裝位置，類似於以下範例：
 
    ```xml
    /usr/local/bin/phonegap -> /usr/local/lib/node_modules/phonegap/bin/phonegap.js
@@ -88,16 +86,16 @@ AEM提供將大量內容移動到發佈執行個體的兩種方法：
 1. （選用）取得您鎖定目標之行動平台的SDK：
 
    * 若要為iOS平台建置應用程式，請安裝最新版本的 [Xcode](https://developer.apple.com/xcode/).
-   * 若要建置Android應用程式，請安裝 [Android SDK](https://developer.android.com/).
+   * 若要建置Android™應用程式，請安裝 [Android™ SDK](https://developer.android.com/).
 
 ### 下載內容ZIP檔案 {#downloading-the-content-zip-file}
 
 將行動應用程式的內容移至檔案系統。
 
 1. 在行動應用程式頁面上，選取您的應用程式。
-1. （可選）若要建置應用程式以進行完整安裝，請在工具列上按一下或點選「清除快取」圖示。
+1. （可選）若要建立應用程式以完成安裝，請在工具列上按一下「清除快取」圖示。
 
-   ![](do-not-localize/chlimage_1.png)
+   ![清除由中斷連結符號所指示的快取圖示。](do-not-localize/chlimage_1.png)
 
    >[!NOTE]
    >
@@ -105,7 +103,7 @@ AEM提供將大量內容移動到發佈執行個體的兩種方法：
 
 1. 在工具列上，按一下或點選「下載CLI資產」圖示。
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![以重疊的平板電腦符號表示的下載CLI資產圖示。](do-not-localize/chlimage_1-1.png)
 
 1. 儲存ZIP檔案後，按一下「成功」對話方塊上的「關閉」 。
 1. 解壓縮ZIP檔案的內容。
@@ -120,7 +118,7 @@ AEM提供將大量內容移動到發佈執行個體的兩種方法：
    cd ~/Downloads/ng-app-cli.1392137825303
    ```
 
-1. 輸入您要定位之平台的phonegap指令。 例如，以下命令會建置適用於Android的應用程式：
+1. 輸入您要定位之平台的phonegap指令。 例如，以下命令會建置適用於Android™的應用程式：
 
    ```shell
    phonegap build android
@@ -140,7 +138,7 @@ AEM提供將大量內容移動到發佈執行個體的兩種方法：
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
-1. 在建立設定對話方塊中，輸入Title屬性的值。 依預設，「名稱」屬性的值是從標題衍生而來，但您可以輸入名稱。 按一下建立。
+1. 在「建立組態」對話方塊中，輸入Title屬性的值。 依預設，「名稱」屬性的值是從標題衍生而來，但您可以輸入名稱。 按一下建立。
 1. 在「PhoneGap Build組態」對話方塊中，輸入您的PhoneGap Build使用者名稱和密碼，然後按一下「確定」。
 
 ### 使用PhoneGap Build {#using-phonegap-build}
@@ -150,7 +148,7 @@ AEM提供將大量內容移動到發佈執行個體的兩種方法：
 1. 在行動應用程式頁面上，開啟您的行動應用程式。 ([http://localhost:4502/mobile.html/content/phonegap](http://localhost:4502/mobile.html/content/phonegap))
 1. （選擇性）若要建立應用程式以完成安裝，請選取應用程式並按一下「清除快取」圖示。
 
-   ![](do-not-localize/chlimage_1-2.png)
+   ![清除由中斷連結符號所指示的快取圖示。](do-not-localize/chlimage_1-2.png)
 
    >[!NOTE]
    >
@@ -158,7 +156,7 @@ AEM提供將大量內容移動到發佈執行個體的兩種方法：
 
 1. 選取啟動顯示頁面，然後按一下「建置遠端」圖示。
 
-   ![](do-not-localize/chlimage_1-3.png)
+   ![由兩個倒圓角齒輪指示的「建立遠端」圖示。](do-not-localize/chlimage_1-3.png)
 
    **注意：** 建置成功完成時，Beta版的AEM Beta版不會建立收件匣通知。
 

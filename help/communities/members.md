@@ -1,8 +1,6 @@
 ---
 title: 成員與群組管理主控台
-seo-title: Members & Groups Management Consoles
 description: 如何存取成員和群組管理主控台
-seo-description: How to access Members and Groups Management consoles
 uuid: 2e93e861-a066-4189-91db-f8b784bc5aea
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '942'
 ht-degree: 4%
 
 ---
@@ -55,7 +53,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
 選取左側面板圖示 `Members` 標題以切換開啟「搜尋」側面板。
 
-![](assets/leftpanel-icon.png)
+![搜尋側面板圖示。](assets/leftpanel-icon.png)
 
 
 ![member-console2](assets/member-console2.png)
@@ -76,7 +74,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
 ## 建立新成員 {#create-new-member}
 
-選取 `Create Member` 以便在發佈環境中建立使用者。
+選取 `Create Member` 以在發佈環境中建立使用者。
 
 ![create-member1](assets/create-member1.png)
 
@@ -97,19 +95,19 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
 * **[!UICONTROL 密碼]**
 
-   (*必填*)登入密碼。
+  (*必填*)登入密碼。
 
 * **[!UICONTROL 重新鍵入密碼]**
 
-   (*必填*)重新輸入密碼以進行驗證。
+  (*必填*)重新輸入密碼以進行驗證。
 
 * **[!UICONTROL 新增成員至網站]**
 
-   (*可選*)從現有的社群網站中選取，以將成員新增至社群網站的成員群組。
+  (*可選*)從現有的社群網站中選取，以將成員新增至社群網站的成員群組。
 
 * **[!UICONTROL 將成員新增至群組]**
 
-   (*可選*)從現有成員群組中選取，以將成員新增到該群組。
+  (*可選*)從現有成員群組中選取，以將成員新增至該群組。
 
 * 選取 **[!UICONTROL 儲存]**
 
@@ -122,17 +120,17 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
    * 未禁止成員具有社群網站的完整存取權。
 
-   預設為 `Not Banned`.
+  預設為 `Not Banned`.
 
 * **[!UICONTROL 貢獻限制]**
 
-   如果勾選，則成員的張貼內容能力有限。
+  如果勾選，則成員的張貼內容能力有限。
 預設值取決於貢獻限制的設定。
 另請參閱 [成員貢獻限制](limits.md).
 
 * **[!UICONTROL 變更密碼]**
 
-   修改現有成員時顯示的連結。 提供社群管理員重設成員密碼的功能。
+  修改現有成員時顯示的連結。 提供社群管理員重設成員密碼的功能。
 
 ### 一般 — 像片 {#general-photo}
 
@@ -173,7 +171,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
 ### 建立新群組 {#create-new-group}
 
-選取 `Add Group` 以便在發佈環境中建立群組。
+選取 `Add Group` 以在發佈環境中建立群組。
 
 ![group-console1](assets/group-console1.png)
 
@@ -181,23 +179,23 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
 * **[!UICONTROL ID]**
 
-   (*必填*)群組唯一ID。
+  (*必填*)群組唯一ID。
 
-   *ID建立後即不可修改。*
+  *ID建立後即不可修改。*
 
 * **[!UICONTROL 名稱]**
 
-   (*可選*)群組的顯示名稱。
+  (*可選*)群組的顯示名稱。
 
-   預設值為ID。
+  預設值為ID。
 
 * **[!UICONTROL 說明]**
 
-   (*可選*)群組用途和許可權的說明。
+  (*可選*)群組用途和許可權的說明。
 
 * **[!UICONTROL 將成員新增至群組]**
 
-   (*可選*)選取要作為群組的初始成員包含的發佈端成員。
+  (*可選*)選取要作為群組的初始成員包含的發佈端成員。
 
 * 選取 **[!UICONTROL 儲存]**
 

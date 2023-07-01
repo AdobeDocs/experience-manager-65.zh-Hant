@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 exl-id: bc9c864b-8bc3-42b4-ba25-6c5108be4f65
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '3511'
+source-wordcount: '3532'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果Dynamic Media Classic (Scene7)資產未正確顯示，請確定Dynamic Media已 [已停用](/help/assets/config-dynamic.md#disabling-dynamic-media) 然後重新整理頁面。
+>如果Dynamic Media Classic (Scene7)資產無法正確顯示，請確定Dynamic Media [已停用](/help/assets/config-dynamic.md#disabling-dynamic-media) 然後重新整理頁面。
 
 ## 從Assets手動發佈至Dynamic Media Classic (Scene7) {#manually-publishing-to-scene-from-assets}
 
@@ -49,6 +49,7 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Experience Manager以非同步方式發佈至Dynamic Media Classic (Scene7)。 在您選取之後 **[!UICONTROL 發佈]**，您的資產可能需要幾秒鐘才能發佈至Dynamic Media Classic (Scene7)。
+>
 
 ### 從Assets控制檯發佈 {#publishing-from-the-assets-console}
 
@@ -56,7 +57,7 @@ ht-degree: 1%
 
 1. 在Experience Manager Classic UI中，選取 **[!UICONTROL 數位資產]** 以存取digital asset manager。
 
-1. 從您要發佈至Dynamic Media Classic (Scene7)的目標資料夾中選取資產（或資產）或資料夾，然後按一下滑鼠右鍵並選取 **[!UICONTROL 發佈至Dynamic Media Classic (Scene7)]**. 或者，您可以選取 **[!UICONTROL 發佈至Dynamic Media Classic (Scene7)]** 從 **[!UICONTROL 工具]** 功能表。
+1. 從目標資料夾中選取您要發佈至Dynamic Media Classic (Scene7)的資產（或資產）或資料夾，然後按一下右鍵並選取 **[!UICONTROL 發佈至Dynamic Media Classic (Scene7)]**. 或者，您可以選取 **[!UICONTROL 發佈至Dynamic Media Classic (Scene7)]** 從 **[!UICONTROL 工具]** 功能表。
 
    ![chlimage_1-48](assets/chlimage_1-48.png)
 
@@ -205,7 +206,7 @@ Adobe建議您只從Dynamic Media Classic (Scene7)目標資料夾內的資產發
 
 資產底部有縮放工具。 選取 **[!UICONTROL +]** 放大。 選取 **[!UICONTROL -]** 以減少。 選取 **[!UICONTROL x]** 或重設縮放箭頭會將影像帶回匯入的原始大小。 選取對角線箭頭，使其變成全熒幕。 選取 **[!UICONTROL 編輯]** 以便設定元件。 使用此元件，您可以設定 [所有Dynamic Media Classic (Scene7)元件的通用設定](#settings-common-to-all-scene-components).
 
-![](do-not-localize/chlimage_1-3.png)
+![HTML5縮放元件內鬱金香花的影像。](do-not-localize/chlimage_1-3.png)
 
 ### 彈出 {#flyout}
 
@@ -223,7 +224,7 @@ Adobe建議您只從Dynamic Media Classic (Scene7)目標資料夾內的資產發
 
 Dynamic Media Classic (Scene7)影像元件可讓您將Dynamic Media Classic (Scene7)功能新增至影像，例如Dynamic Media Classic (Scene7)修飾元、影像或檢視器預設集，以及銳利化。 Dynamic Media Classic (Scene7)影像元件類似於Experience Manager中的其他影像元件，具有特殊的Dynamic Media Classic (Scene7)功能。 在此範例中，影像有Dynamic Media Classic (Scene7) URL修飾元， `&op_invert=1` 已套用。
 
-![](do-not-localize/chlimage_1-4.png)
+![Dynamic Media Classic (Scene 7)影像元件內的球體影像](do-not-localize/chlimage_1-4.png)
 
 **標題，替代文字**  — 在「進階」標籤中，為已關閉圖形的使用者新增標題和替代文字。
 
@@ -331,16 +332,15 @@ Dynamic Media Classic (Scene7)內容瀏覽器可讓您直接在Experience Manage
 >* 時間 [已啟用安全預覽](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)，Dynamic Media Classic (Scene7)上已發佈和未發佈的資產都會出現在Dynamic Media Classic (Scene7)內容瀏覽器中。
 >* 如果您沒有看見 **[!UICONTROL Dynamic Media Classic (Scene7)]** 或 **[!UICONTROL S7]** 圖示作為內容瀏覽器中的選項，您必須 [設定Dynamic Media Classic (Scene7)以使用Experience Manager](/help/sites-administering/scene7.md).
 >* 對於視訊，Dynamic Media Classic (Scene7)內容瀏覽器支援：
-   >   * 最適化視訊集：包含跨多個熒幕無縫播放所需的所有視訊轉譯的容器
-   >   * 單一MP4視訊
-   >   * 單一F4V視訊
-
+>   * 最適化視訊集：包含跨多個熒幕無縫播放所需的所有視訊轉譯的容器
+>   * 單一MP4視訊
+>   * 單一F4V視訊
 
 ### 瀏覽內容 {#browsing-content-in-the-classic-ui}
 
 在Dynamic Media Classic (Scene7)中瀏覽內容，方法是選取 **[!UICONTROL S7]** 標籤。
 
-您可以選取組態來變更您正在存取的組態。 資料夾會依您選取的組態而變更。
+您可以選取組態來變更您正在存取的組態。 資料夾會依選取的組態而變更。
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
@@ -357,7 +357,6 @@ Dynamic Media Classic (Scene7)內容瀏覽器可讓您直接在Experience Manage
 >* 單一F4V視訊
 >
 
-
 ### 使用內容瀏覽器搜尋Dynamic Media Classic (Scene7)資產 {#searching-for-scene-assets-with-the-content-browser}
 
 搜尋Dynamic Media Classic (Scene7)資產與搜尋Experience Manager資產類似。 例外情況是，當您搜尋時，您實際上會在Dynamic Media Classic (Scene7)系統中看到資產的遠端檢視，而不是直接將資產匯入Experience Manager。
@@ -366,7 +365,7 @@ Dynamic Media Classic (Scene7)內容瀏覽器可讓您直接在Experience Manage
 
 在任何一個UI中搜尋時，您可以依下列條件進行篩選（如觸控最佳化UI中所示）：
 
-**輸入關鍵字**  — 您可以依名稱搜尋資產。 搜尋關鍵字時，您會輸入檔案名稱的開頭。 例如，輸入「swimming」會尋找任何以那個順序開頭字母的資產檔案名稱。 輸入搜尋資產的辭彙後，請務必選取Enter。
+**輸入關鍵字**  — 您可以依名稱搜尋資產。 搜尋關鍵字時，您會輸入檔案名稱的開頭。 例如，輸入「swimming」會尋找任何以那個順序開頭字母的資產檔案名稱。 請務必選取 `Enter` 輸入辭彙以尋找資產後。
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
@@ -397,7 +396,6 @@ Dynamic Media Classic (Scene7)內容瀏覽器可讓您直接在Experience Manage
 >* 搜尋視訊時，您會搜尋單一轉譯。 結果會傳回原始轉譯(僅限 &#42;.mp4)和編碼的轉譯。
 >* 搜尋最適化視訊集時，您會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子資料夾。
 >
-
 
 **發佈狀態**  — 您可以根據發佈狀態來篩選資產：未發佈或已發佈。 如果您未選取任何發佈狀態，則Experience Manager預設會搜尋所有發佈狀態。
 

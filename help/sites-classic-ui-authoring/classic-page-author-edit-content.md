@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1836'
 ht-degree: 1%
 
 ---
@@ -207,19 +207,19 @@ sidekick是編寫頁面時的關鍵工具。 它會在編寫頁面時浮動，�
 
 Sidekick的底部邊框中有兩個圖示對預覽頁面很重要：
 
-![](do-not-localize/chlimage_1-5.png)
+![Sidekick的底邊框，水準列有7個圖示。 列開頭的兩個圖示（編輯圖示和預覽模式圖示）分別以鉛筆符號和放大鏡符號表示。](do-not-localize/chlimage_1-5.png)
 
 * 鉛筆圖示會顯示您目前處於編輯模式，您可以在此新增、修改、移動或刪除內容。
 
-   ![](do-not-localize/chlimage_1-6.png)
+  ![以鉛筆符號表示的編輯圖示。](do-not-localize/chlimage_1-6.png)
 
 * 放大鏡圖示可讓您選取預覽模式，其中頁面會顯示在發佈環境中（有時也需要重新整理頁面）：
 
-   ![](do-not-localize/chlimage_1-7.png)
+  ![以放大鏡符號表示的預覽模式圖示。](do-not-localize/chlimage_1-7.png)
 
-   在預覽模式中sidekick將會減少，按一下向下箭頭圖示以返回編輯模式：
+  在預覽模式中sidekick將會減少，按一下向下箭頭圖示以返回編輯模式：
 
-   ![](do-not-localize/chlimage_1-8.png)
+  ![以AEM為標題的橫條，在標題右邊有一個編輯模式圖示，以向下箭頭符號表示。](do-not-localize/chlimage_1-8.png)
 
 ## 尋找和取代 {#find-replace}
 
@@ -286,7 +286,6 @@ AEM會儲存您執行動作的歷史記錄，以及執行動作的順序。 因�
 >* 最多可復原20個編輯動作（預設設定）。
 >* 也使用 [鍵盤快速鍵](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 「復原」和「重做」。
 >
-
 
 您可以對下列型別的頁面變更使用還原和重做：
 
