@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: d9155cdac183acbdd190da552512a1e9bcc43d64
 workflow-type: tm+mt
-source-wordcount: '3047'
+source-wordcount: '3082'
 ht-degree: 7%
 
 ---
@@ -46,51 +46,51 @@ ht-degree: 7%
 
 * **切換側面板**
 
-   這會開啟/關閉側面板，側面板中會包含 [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)， [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)、和 [內容樹狀結構](/help/sites-authoring/author-environment-tools.md#content-tree).
+  這會開啟/關閉側面板，側面板中會包含 [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)， [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)、和 [內容樹狀結構](/help/sites-authoring/author-environment-tools.md#content-tree).
 
-   ![](do-not-localize/screen_shot_2018-03-22at111425.png)
+  ![切換側面板](do-not-localize/screen_shot_2018-03-22at111425.png)
 
 * **頁面資訊**
 
-   提供對的存取 [頁面資訊](/help/sites-authoring/author-environment-tools.md#page-information) 功能表，其中包含頁面詳細資訊以及可在頁面上採取的動作，包括檢視和編輯頁面資訊、檢視頁面屬性，以及發佈/取消發佈頁面。
+  提供對的存取 [頁面資訊](/help/sites-authoring/author-environment-tools.md#page-information) 功能表，其中包含頁面詳細資訊以及可在頁面上採取的動作，包括檢視和編輯頁面資訊、檢視頁面屬性，以及發佈/取消發佈頁面。
 
-   ![](do-not-localize/screen_shot_2018-03-22at111437.png)
+  ![頁面資訊](do-not-localize/screen_shot_2018-03-22at111437.png)
 
 * **模擬器**
 
-   切換 [模擬器工具列](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)，用來模擬頁面在其他裝置上的外觀。 這會在版面配置模式中自動切換。
+  切換 [模擬器工具列](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)，用來模擬頁面在其他裝置上的外觀。 這會在版面配置模式中自動切換。
 
-   ![](do-not-localize/screen_shot_2018-03-22at111442.png)
+  ![模擬器](do-not-localize/screen_shot_2018-03-22at111442.png)
 
 * **ContextHub**
 
-   開啟 [內容中心](/help/sites-authoring/ch-previewing.md). 僅適用於預覽模式。
+  開啟 [內容中心](/help/sites-authoring/ch-previewing.md). 僅適用於「預覽」模式。
 
-   ![screen_shot_2018-03-22at111543](assets/screen_shot_2018-03-22at111543.png)
+  ![screen_shot_2018-03-22at111543](assets/screen_shot_2018-03-22at111543.png)
 
 * **頁面標題**
 
-   這僅供參考。
+  這僅供參考。
 
-   ![screen_shot_2018-03-22at111554](assets/screen_shot_2018-03-22at111554.png)
+  ![screen_shot_2018-03-22at111554](assets/screen_shot_2018-03-22at111554.png)
 
 * **模式選擇器**
 
-   顯示目前的 [模式](/help/sites-authoring/author-environment-tools.md#page-modes) 並可讓您選取其他模式，例如編輯、版面、時間扭曲或定位。
+  顯示目前的 [模式](/help/sites-authoring/author-environment-tools.md#page-modes) 並可讓您選取其他模式，例如編輯、版面、時間扭曲或定位。
 
-   ![chlimage_1-120](assets/chlimage_1-120.png)
+  ![chlimage_1-120](assets/chlimage_1-120.png)
 
 * **預覽**
 
-   啟用 [預覽模式](/help/sites-authoring/editing-content.md#preview-mode). 這會顯示發佈時所顯示的頁面。
+  啟用 [預覽模式](/help/sites-authoring/editing-content.md#preview-mode). 這會顯示發佈時所顯示的頁面。
 
-   ![chlimage_1-121](assets/chlimage_1-121.png)
+  ![chlimage_1-121](assets/chlimage_1-121.png)
 
 * **注釋**
 
-   可讓您新增 [註解](/help/sites-authoring/annotations.md) 在檢閱頁面時跳至頁面。 第一個註解後，圖示會切換為數字，指出頁面上的註解數量。
+  可讓您新增 [註解](/help/sites-authoring/annotations.md) 在檢閱頁面時跳至頁面。 第一個註解後，圖示會切換為數字，指出頁面上的註解數量。
 
-   ![](do-not-localize/screen_shot_2018-03-22at111638.png)
+  ![注釋](do-not-localize/screen_shot_2018-03-22at111638.png)
 
 ### 狀態通知 {#status-notification}
 
@@ -122,11 +122,11 @@ ht-degree: 7%
 
 * 將新元件新增至頁面時（從元件瀏覽器拖曳）：
 
-   ![screen_shot_2018-03-22at111928](assets/screen_shot_2018-03-22at111928.png)
+  ![screen_shot_2018-03-22at111928](assets/screen_shot_2018-03-22at111928.png)
 
 * 移動現有元件時：
 
-   ![screen_shot_2018-03-22at112445](assets/screen_shot_2018-03-22at112445.png)
+  ![screen_shot_2018-03-22at112445](assets/screen_shot_2018-03-22at112445.png)
 
 ## 插入元件 {#inserting-a-component}
 
@@ -230,77 +230,77 @@ ht-degree: 7%
 
 * **編輯**
 
-   [取決於元件型別](/help/sites-authoring/default-components.md) 這可讓您 [編輯元件的內容](#edit-content). 通常會提供工具列。
+  [取決於元件型別](/help/sites-authoring/default-components.md) 這可讓您 [編輯元件的內容](#edit-content). 通常會提供工具列。
 
-   ![](do-not-localize/screen_shot_2018-03-22at112936.png)
+  ![編輯](do-not-localize/screen_shot_2018-03-22at112936.png)
 
 * **設定**
 
-   [取決於元件型別](/help/sites-authoring/default-components.md) 這可讓您編輯及設定元件的屬性。 通常會開啟一個對話方塊。
+  [取決於元件型別](/help/sites-authoring/default-components.md) 這可讓您編輯及設定元件的屬性。 通常會開啟一個對話方塊。
 
-   ![](do-not-localize/screen_shot_2018-03-22at112955.png)
+  ![設定](do-not-localize/screen_shot_2018-03-22at112955.png)
 
 * **複製**
 
-   這會將元件複製到剪貼簿。 貼上動作後，原始元件將保留。
+  這會將元件複製到剪貼簿。 貼上動作後，原始元件將保留。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113000.png)
+  ![複製](do-not-localize/screen_shot_2018-03-22at113000.png)
 
 * **剪下**
 
-   這會將元件複製到剪貼簿。 貼上動作後，原始元件將被移除。
+  這會將元件複製到剪貼簿。 貼上動作後，原始元件將被移除。
 
-   ![screen_shot_2018-03-22at113007](assets/screen_shot_2018-03-22at113007.png)
+  ![screen_shot_2018-03-22at113007](assets/screen_shot_2018-03-22at113007.png)
 
 * **刪除**
 
-   這將會從含有您確認的頁面中刪除元件。
+  這將會從含有您確認的頁面中刪除元件。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113012.png)
+  ![刪除](do-not-localize/screen_shot_2018-03-22at113012.png)
 
 * **插入元件**
 
-   這將開啟對話方塊，以 [新增元件](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
+  這將開啟對話方塊，以 [新增元件](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
 
-   ![](do-not-localize/screen_shot_2018-03-22at113017.png)
+  ![插入元件](do-not-localize/screen_shot_2018-03-22at113017.png)
 
 * **貼上**
 
-   這會將元件從剪貼簿貼到頁面上。 原始物件是否保留，取決於您是使用複製還是切削。
+  這會將元件從剪貼簿貼到頁面上。 原始物件是否保留，取決於您是使用複製還是切削。
 
    * 您可以貼到相同頁面或不同頁面。
    * 貼上的專案將會貼在您選取貼上動作的專案上方。
    * 唯有剪貼簿上有內容時，才會顯示「貼上」動作。
 
-   ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
+  ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
 
-   >[!NOTE]
-   >
-   >如果您在剪下/復製作業之前貼到已開啟的其他頁面，則必須重新整理頁面以檢視貼上的內容。
+  >[!NOTE]
+  >
+  >如果您在剪下/復製作業之前貼到已開啟的其他頁面，則必須重新整理頁面以檢視貼上的內容。
 
 * **群組**
 
-   這可讓您一次選取多個元件。 桌上型電腦裝置也可以透過以下步驟達到相同目的： **Control+按一下** 或 **Command+按一下**.
+  這可讓您一次選取多個元件。 桌上型電腦裝置也可以透過以下步驟達到相同目的： **Control+按一下** 或 **Command+按一下**.
 
-   ![](do-not-localize/screen_shot_2018-03-22at113240.png)
+  ![群組](do-not-localize/screen_shot_2018-03-22at113240.png)
 
 * **父級**
 
-   可讓您選取所選元件的父元件。
+  可讓您選取所選元件的父元件。
 
-   ![screen_shot_2018-03-22at113028](assets/screen_shot_2018-03-22at113028.png)
+  ![screen_shot_2018-03-22at113028](assets/screen_shot_2018-03-22at113028.png)
 
 * **配置**
 
-   這可讓您修改 [版面](/help/sites-authoring/editing-content.md#edit-component-layout) 所選元件的ID。 這僅適用於選取的元件，不會啟動 [版面模式](/help/sites-authoring/author-environment-tools.md#page-modes) 整個頁面。
+  這可讓您修改 [版面](/help/sites-authoring/editing-content.md#edit-component-layout) 所選元件的ID。 這僅適用於選取的元件，不會啟動 [版面模式](/help/sites-authoring/author-environment-tools.md#page-modes) 整個頁面。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113044.png)
+  ![配置](do-not-localize/screen_shot_2018-03-22at113044.png)
 
 * **轉換為體驗片段變數**
 
-   這可讓您建立新的 [體驗片段](/help/sites-authoring/experience-fragments.md) 或將其新增至現有的體驗片段。
+  這可讓您建立新的 [體驗片段](/help/sites-authoring/experience-fragments.md) 或將其新增至現有的體驗片段。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113033.png)
+  ![轉換為體驗片段變數](do-not-localize/screen_shot_2018-03-22at113033.png)
 
 ## 編輯（內容） {#edit-content}
 
@@ -317,28 +317,28 @@ ht-degree: 7%
 
 * [文字元件](/help/sites-authoring/rich-text-editor.md#main-pars-title-24)
 
-   ![screen_shot_2018-03-22at120215](assets/screen_shot_2018-03-22at120215.png)
+  ![screen_shot_2018-03-22at120215](assets/screen_shot_2018-03-22at120215.png)
 
 * 影像元件
 
-   ![screen_shot_2018-03-22at120252](assets/screen_shot_2018-03-22at120252.png)
+  ![screen_shot_2018-03-22at120252](assets/screen_shot_2018-03-22at120252.png)
 
-   >[!NOTE]
-   >
-   >編輯無法在空白影像元件上運作。
-   >
-   >
-   >您必須 [拖曳或上傳影像（使用「設定」）](/help/sites-authoring/default-components-foundation.md#image) 才能開始編輯。
+  >[!NOTE]
+  >
+  >編輯無法在空白影像元件上運作。
+  >
+  >
+  >您必須 [拖曳或上傳影像（使用「設定」）](/help/sites-authoring/default-components-foundation.md#image) 才能開始編輯。
 
 * 影像元件 — 全熒幕
 
-   [進入影像元件的全螢幕模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) ，可讓您有更多空間編輯影像，並顯示額外的編輯選項，例如「啟動地圖」和「重設縮放」 ********。此外，全螢幕還允許選取裁切預設集。
+  [進入影像元件的全螢幕模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) ，可讓您有更多空間編輯影像，並顯示額外的編輯選項，例如「啟動地圖」和「重設縮放」 ********。此外，全螢幕還允許選取裁切預設集。
 
-   ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
+  ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
 
 * 由多個基本元件所建構的元件，例如 [文字與影像基礎元件](/help/sites-authoring/default-components-foundation.md#text-image)，首先要求您確認想要哪一組編輯選項：
 
-   ![chlimage_1-123](assets/chlimage_1-123.png)
+  ![chlimage_1-123](assets/chlimage_1-123.png)
 
 ### 將資產拖放至元件中 {#drag-and-drop-assets-into-component}
 
@@ -356,7 +356,7 @@ ht-degree: 7%
 
 對於所有元件，全熒幕模式可透過以下方式存取（和退出）：
 
-![](do-not-localize/chlimage_1-20.png)
+![編輯全熒幕模式](do-not-localize/chlimage_1-20.png)
 
 例如， **文字** 元件：
 
@@ -391,7 +391,7 @@ ht-degree: 7%
 
    按一下或點選 **版面** 調整元件版面的動作。
 
-   ![](do-not-localize/chlimage_1-21.png)
+   ![元件工具列](do-not-localize/chlimage_1-21.png)
 
 1. 選取「配置」動作後：
 
@@ -405,7 +405,7 @@ ht-degree: 7%
 
 1. 進行必要的版面變更後，按一下 **關閉** 按鈕來停止修改元件的版面。 元件的工具列會回到其正常的編輯狀態。
 
-   ![](do-not-localize/screen_shot_2018-03-22at133920.png)
+   ![關閉](do-not-localize/screen_shot_2018-03-22at133920.png)
 
 >[!NOTE]
 >
@@ -425,27 +425,27 @@ ht-degree: 7%
 
 * **Live Copy**
 
-   元件工具列(如果元件位於屬於即時副本或啟動項的頁面（根據即時副本）)。 例如：
+  元件工具列(如果元件位於屬於即時副本或啟動項的頁面（根據即時副本）)。 例如：
 
-   ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
+  ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
 
-   取消繼承選項可供使用：
+  取消繼承選項可供使用：
 
-   ![](do-not-localize/screen_shot_2018-03-22at134406.png)
+  ![取消繼承](do-not-localize/screen_shot_2018-03-22at134406.png)
 
-   或者，如果已取消，則重新啟用繼承：
+  或者，如果已取消，則重新啟用繼承：
 
-   ![](do-not-localize/screen_shot_2018-03-22at134417.png)
+  ![重新啟用繼承](do-not-localize/screen_shot_2018-03-22at134417.png)
 
-   「轉出」動作也適用於Blueprint或即時副本來源：
+  「轉出」動作也適用於Blueprint或即時副本來源：
 
-   ![](do-not-localize/screen_shot_2018-03-22at134516.png)
+  ![推出](do-not-localize/screen_shot_2018-03-22at134516.png)
 
 * **繼承的段落系統**
 
-   設定對話方塊。 例如，與繼承的段落系統一樣：
+  設定對話方塊。 例如，與繼承的段落系統一樣：
 
-   ![chlimage_1-124](assets/chlimage_1-124.png)
+  ![chlimage_1-124](assets/chlimage_1-124.png)
 
 ## 編輯頁面範本 {#editing-the-page-template}
 
@@ -485,7 +485,6 @@ ht-degree: 7%
 >* 使用 [鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md) `Ctrl-Shift-M` 在預覽和上次選取的模式之間切換。
 >
 
-
 >[!NOTE]
 >
 >這兩個選項都會設定WCM模式Cookie。
@@ -517,7 +516,7 @@ AEM可讓您鎖定頁面，讓其他人無法修改內容。 當您對某個特�
    1. 選取頁面，並選取 [選擇模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
    1. 選取鎖定圖示。
 
-   ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
+  ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
 
 * **頁面編輯器**
 
@@ -552,7 +551,7 @@ AEM可讓您鎖定頁面，讓其他人無法修改內容。 當您對某個特�
 
 下列圖示可讓您還原或重做動作。 這些會在適當時顯示在工具列中：
 
-![](do-not-localize/screen_shot_2018-03-23at093614.png)
+![還原和重做](do-not-localize/screen_shot_2018-03-23at093614.png)
 
 >[!NOTE]
 >
@@ -584,7 +583,6 @@ AEM會儲存您執行動作的歷史記錄，以及執行動作的順序，如�
 >* 最多可復原20個編輯動作（預設設定）。
 >* 也使用 [鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) 「復原」和「重做」。
 >
-
 
 您可以對下列型別的頁面變更使用還原和重做：
 

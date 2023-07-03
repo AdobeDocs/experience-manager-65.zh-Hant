@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: bc1f0bd20804bbae78c7ea9a5209e183d6bbaaf3
+source-git-commit: d9155cdac183acbdd190da552512a1e9bcc43d64
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2242'
 ht-degree: 9%
 
 ---
@@ -69,21 +69,21 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 * **行動裝置(例如iPad)**
 
-   元件瀏覽器會完整涵蓋正在編輯的頁面。
+  元件瀏覽器會完整涵蓋正在編輯的頁面。
 
-   若要新增元件至頁面，請按住所需元件並向右移動，元件瀏覽器將關閉並重新顯示頁面 — 您可以在此處放置元件。
+  若要新增元件至頁面，請按住所需元件並向右移動，元件瀏覽器將關閉並重新顯示頁面 — 您可以在此處放置元件。
 
-   ![ateat-04](assets/ateat-04.png)
+  ![ateat-04](assets/ateat-04.png)
 
 * **案頭裝置**
 
-   元件瀏覽器會在視窗左側開啟。
+  元件瀏覽器會在視窗左側開啟。
 
-   若要新增元件至頁面，請按一下所需元件，然後將其拖曳至所需位置。
+  若要新增元件至頁面，請按一下所需元件，然後將其拖曳至所需位置。
 
-   ![ateat-05](assets/ateat-05.png)
+  ![ateat-05](assets/ateat-05.png)
 
-   元件表示方式：
+  元件表示方式：
 
    * 元件名稱
    * 元件群組（灰色）
@@ -92,16 +92,16 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
       * 標準元件的圖示為單色。
       * 縮寫一律為元件名稱的前兩個字元。
 
-   從頂部工具列中的 **元件** 瀏覽器您可以：
+  從頂部工具列中的 **元件** 瀏覽器您可以：
 
    * 依名稱篩選元件。
    * 使用下拉式選取範圍將顯示限製為特定群組。
 
-   如需元件的詳細說明，您可以在「元件」瀏覽器中按一下或點選元件旁的資訊圖示(如果 **有** )。例如，對於「版面 **容器」**:
+  如需元件的詳細說明，您可以在「元件」瀏覽器中按一下或點選元件旁的資訊圖示(如果 **有** )。例如，對於「版面 **容器」**:
 
-   ![ateat-06](assets/ateat-06.png)
+  ![ateat-06](assets/ateat-06.png)
 
-   如需有關可用元件的詳細資訊，請參閱 [元件主控台](/help/sites-authoring/default-components-console.md).
+  如需有關可用元件的詳細資訊，請參閱 [元件主控台](/help/sites-authoring/default-components-console.md).
 
 ## 資產瀏覽器 {#assets-browser}
 
@@ -150,23 +150,23 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 * **行動裝置，例如iPad**
 
-   資產瀏覽器會完整涵蓋正在編輯的頁面。
+  資產瀏覽器會完整涵蓋正在編輯的頁面。
 
-   若要將資產新增至頁面，請觸控並按住所需資產，然後將其向右移動 — 資產瀏覽器將關閉並重新顯示頁面，您可以在其中將資產新增至所需元件。
+  若要將資產新增至頁面，請觸控並按住所需資產，然後將其向右移動 — 資產瀏覽器將關閉並重新顯示頁面，您可以在其中將資產新增至所需元件。
 
-   ![ateat-09](assets/ateat-09.png)
+  ![ateat-09](assets/ateat-09.png)
 
 * **案頭裝置**
 
-   資產瀏覽器會在視窗左側開啟。
+  資產瀏覽器會在視窗左側開啟。
 
-   若要將資產新增至頁面，請按一下所需的資產，並將其拖曳至所需的元件或位置。
+  若要將資產新增至頁面，請按一下所需的資產，並將其拖曳至所需的元件或位置。
 
-   ![ateat-10](assets/ateat-10.png)
+  ![ateat-10](assets/ateat-10.png)
 
 如果您需要快速變更資產，可以開始 [資產編輯器](/help/assets/manage-assets.md) 直接從資產瀏覽器按一下資產名稱旁邊顯示的編輯圖示。
 
-![](do-not-localize/screen_shot_2018-03-22at142448.png)
+![資產瀏覽器案頭裝置](do-not-localize/screen_shot_2018-03-22at142448.png)
 
 ## 內容樹 {#content-tree}
 
@@ -174,7 +174,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 內容樹狀結構是側面板中的標籤（連同元件和資產瀏覽器）。 要開啟 (或關閉) 側面板，請使用工具欄左上角的表徵圖：
 
-![](do-not-localize/screen_shot_2018-03-22at142042.png)
+![內容樹](do-not-localize/screen_shot_2018-03-22at142042.png)
 
 當您開啟側面板時，它會滑開（從左側）。 選取 **內容樹狀結構** 索引標籤進行標籤（如有必要）。 開啟時，您可以看到頁面或範本的樹狀檢視表示法，因此更容易瞭解其內容如何以階層方式建構。 此外，在複雜頁面上，它可讓您更輕鬆地在頁面的元件之間跳轉。
 
@@ -196,19 +196,19 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 * 例如，基本頁面：
 
-   `https://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html`
+  `https://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html`
 
-   ![ateat-12](assets/ateat-12.png)
+  ![ateat-12](assets/ateat-12.png)
 
-   如果您在樹狀結構中點選的元件可編輯，則名稱右側會出現扳手圖示。 按一下此圖示將直接啟動元件的編輯對話方塊。
+  如果您在樹狀結構中點選的元件可編輯，則名稱右側會出現扳手圖示。 按一下此圖示將直接啟動元件的編輯對話方塊。
 
-   ![](do-not-localize/screen_shot_2018-03-22at142725.png)
+  ![扳手圖示 — 編輯](do-not-localize/screen_shot_2018-03-22at142725.png)
 
 * 或屬於的頁面 [即時副本](/help/sites-administering/msm.md)，其中元件繼承自其他頁面；例如：
 
-   `https://localhost:4502/editor.html/content/we-retail/us/en/equipment.html`
+  `https://localhost:4502/editor.html/content/we-retail/us/en/equipment.html`
 
-   ![ateat-13](assets/ateat-13.png)
+  ![ateat-13](assets/ateat-13.png)
 
 ## 片段 — 關聯的內容瀏覽器 {#fragments-associated-content-browser}
 
@@ -320,7 +320,6 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 >* 有一個鍵 [盤](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) ( `Ctrl-Shift-M`可切換 **)，在「預覽」和目前選取的模式之間切換(例如，「編輯」、「排版**********」等)。
 >
 
-
 ## 路徑選擇 {#path-selection}
 
 通常在製作時，需要選取其他資源，例如定義指向其他頁面或資源的連結，或選取影像時。 若要輕鬆選取路徑， [路徑欄位](/help/sites-authoring/author-environment-tools.md#path-fields) 優惠自動完成和 [路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) 允許更強大的選擇。
@@ -333,7 +332,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 按一下 **開啟選取範圍對話方塊** 路徑欄位中的按鈕會開啟 [路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) 對話方塊，以取得更詳細的選取選項。
 
-![](do-not-localize/screen_shot_2018-03-22at154427.png)
+![開啟選擇對話方塊](do-not-localize/screen_shot_2018-03-22at154427.png)
 
 或者，您可以開始在路徑欄位中輸入，AEM會在您輸入時提供相符的路徑。
 
@@ -351,7 +350,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 * 您可以隨時使用對話方塊頂端的搜尋欄位。 按一下 **X** 以清除搜尋。
 * 若要縮小搜尋範圍，您可以顯示篩選選項並根據特定路徑篩選結果。
 
-   ![ateat-21](assets/ateat-21.png)
+  ![ateat-21](assets/ateat-21.png)
 
 ## 鍵盤快速鍵 {#keyboard-shortcuts}
 
