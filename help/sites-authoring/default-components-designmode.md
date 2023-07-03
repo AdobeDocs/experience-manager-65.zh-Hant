@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: cae9890cd61d6d894f34c7299e2e15ee70e14ac9
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '913'
 ht-degree: 1%
 
 ---
@@ -68,13 +68,13 @@ ht-degree: 1%
 
 1. 按一下或點選 **父級** 圖示。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103204.png)
+   ![父級](do-not-localize/screen_shot_2018-03-22at103204.png)
 
    這將會選取包含目前元件的段落系統。
 
 1. 此 **設定** 段落系統的圖示將顯示在父項的動作列中。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103256.png)
+   ![設定](do-not-localize/screen_shot_2018-03-22at103256.png)
 
    選取此選項以顯示對話方塊。
 
@@ -121,7 +121,7 @@ ht-degree: 1%
 
 1. 使用 **設定** 圖示以開啟對話方塊。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103256-1.png)
+   ![設定圖示](do-not-localize/screen_shot_2018-03-22at103256-1.png)
 
    在「設計」對話方塊中，您可以根據可用的設計引數來設定元件。
 
@@ -151,12 +151,12 @@ ht-degree: 1%
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-   使用**刪除**圖示從多專案對話方塊清單中移除專案。
+   使用 **刪除** 圖示來從多專案對話方塊清單中移除專案。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103809.png)
+   ![刪除](do-not-localize/screen_shot_2018-03-22at103809.png)
 
    使用 **移動** 圖示可重新排列多專案對話方塊清單中的專案順序。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103816.png)
+   ![移動](do-not-localize/screen_shot_2018-03-22at103816.png)
 
 1. 按一下或點選 **完成** 圖示以儲存並關閉對話方塊。

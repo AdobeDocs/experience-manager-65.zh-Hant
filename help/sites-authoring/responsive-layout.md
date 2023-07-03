@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: cae9890cd61d6d894f34c7299e2e15ee70e14ac9
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1805'
 ht-degree: 7%
 
 ---
@@ -40,11 +40,11 @@ AEM使用多種機制組合，為您的頁面實現回應式佈局：
 
 * [**配置容器**](#adding-a-layout-container-and-its-content-edit-mode) 元件
 
-   此元件位於 [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser) 和提供了一個格點段落系統，可讓您在回應式格點內新增和定位元件。 它也可以設定為您的頁面上的預設段落系統。
+  此元件位於 [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser) 和提供了一個格點段落系統，可讓您在回應式格點內新增和定位元件。 它也可以設定為您的頁面上的預設段落系統。
 
 * [**佈局模式**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
 
-   將版面容器放置到頁面上後，您就可以使用 **版面** 在回應式格線中定位內容的模式。
+  將版面容器放置到頁面上後，您就可以使用 **版面** 在回應式格線中定位內容的模式。
 
 * [**模擬器**](#selecting-a-device-to-emulate)
 這可讓您建立並編輯回應式網站，這些網站可透過以互動方式調整元件大小，根據裝置/視窗大小重新安排版面。 之後，使用者便可使用模擬器檢視內容的呈現方式。
@@ -101,7 +101,7 @@ AEM可讓您根據裝置的寬度來定義版面：
 
 1. 選取 **模擬器** 圖示從上方工具列選取：
 
-   ![](do-not-localize/screen_shot_2018-03-23at084256.png)
+   ![模擬器](do-not-localize/screen_shot_2018-03-23at084256.png)
 
 1. 模擬器工具列將會開啟。
 
@@ -111,11 +111,11 @@ AEM可讓您根據裝置的寬度來定義版面：
 
    * **旋轉裝置**  — 可讓您將裝置從垂直（縱向）方向旋轉至水準（橫向）方向，反之亦然。
 
-   ![](do-not-localize/screen_shot_2018-03-23at084612.png) ![](do-not-localize/screen_shot_2018-03-23at084637.png)
+     ![旋轉裝置](do-not-localize/screen_shot_2018-03-23at084612.png) ![旋轉裝置](do-not-localize/screen_shot_2018-03-23at084637.png)
 
    * **選取裝置**  — 從清單定義要模擬的特定裝置（請參閱下一步以瞭解詳細資訊）
 
-   ![](do-not-localize/screen_shot_2018-03-23at084743.png)
+     ![選取裝置](do-not-localize/screen_shot_2018-03-23at084743.png)
 
 1. 若要選取要模擬的特定裝置，您可以：
 
@@ -138,8 +138,6 @@ AEM可讓您根據裝置的寬度來定義版面：
    * 摺頁也可以視為分頁符號(不要與 [中斷點](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints))以取得詳細資訊。 為方便起見，此畫面會顯示在捲動前，使用者在裝置上看到的內容部分。
    * 如果模擬的裝置高度高於熒幕大小，則不會顯示折線。
    * 顯示摺頁是為了方便作者，不會顯示在已發佈的頁面上。
-
-
 
 ## 新增版面容器及其內容 (編輯模式) {#adding-a-layout-container-and-its-content-edit-mode}
 
@@ -172,7 +170,7 @@ A **配置容器** 是段落系統，具備以下功能：
 
    您需要選取 **父級** 選項。
 
-   ![](do-not-localize/screen_shot_2018-03-23at085417.png)
+   ![父選項](do-not-localize/screen_shot_2018-03-23at085417.png)
 
 1. 如果配置元件為巢狀，請選取 **父級** 選項會顯示下拉式選取專案，讓您選取巢狀配置容器或其父項。
 
@@ -212,62 +210,63 @@ A **配置容器** 是段落系統，具備以下功能：
 
 * 使用藍點調整內容元件的大小。 調整大小一律靠齊格點。 當調整背景格點大小時，將顯示以協助對齊：
 
-   ![screen_shot_2018-03-23at090140](assets/screen_shot_2018-03-23at090140.png)
+  ![screen_shot_2018-03-23at090140](assets/screen_shot_2018-03-23at090140.png)
 
-   >[!NOTE]
-   >
-   >當元件(例如 **影像** 都會重新調整大小。
+  >[!NOTE]
+  >
+  >當元件(例如 **影像** 都會重新調整大小。
 
 * 按一下/點選內容元件，工具列可讓您：
 
    * **父級**
 
-      可讓您選取整個版面容器元件，以便對整體執行動作。
+     可讓您選取整個版面容器元件，以便對整體執行動作。
 
    * **浮動至新行**
 
-      元件將會移至新的一行，視格線內的可用空間而定。
+     元件將會移至新的一行，視格線內的可用空間而定。
 
    * **隱藏元件**
 
-      元件將變得不可見（可以從版面配置容器的工具列恢復）。
-   ![screen_shot_2018-03-23at090246](assets/screen_shot_2018-03-23at090246.png)
+     元件將變得不可見（可以從版面配置容器的工具列恢復）。
+
+  ![screen_shot_2018-03-23at090246](assets/screen_shot_2018-03-23at090246.png)
 
 * 在 **版面** 模式：您可以點選/按一下 **將元件拖曳到這裡** 以選取整個元件。 這將會顯示此模式的工具列。
 
-   根據版面配置元件和屬於它的元件的狀態，工具列會有不同的選項。 例如：
+  根據版面配置元件和屬於它的元件的狀態，工具列會有不同的選項。 例如：
 
    * **父級**  — 選取父元件。
 
-   ![](do-not-localize/screen_shot_2018-03-23at090823.png)
+     ![父級](do-not-localize/screen_shot_2018-03-23at090823.png)
 
    * **顯示隱藏的元件**  — 顯示所有或個別元件。 數字表示目前有多少個隱藏的元件。計數器顯示隱藏的元件數目。
 
-   ![](do-not-localize/screen_shot_2018-03-23at091007.png)
+     ![顯示隱藏的元件](do-not-localize/screen_shot_2018-03-23at091007.png)
 
    * **還原中斷點配置**  — 還原至預設版面。 這表示不會強制使用自訂版面。
 
-   ![](do-not-localize/screen_shot_2018-03-23at091013.png)
+     ![反向中斷點配置](do-not-localize/screen_shot_2018-03-23at091013.png)
 
    * **浮動至新行**  — 如果間距允許，將元件向上移動一個位置。
 
-   ![screen_shot_2018-03-23at090829](assets/screen_shot_2018-03-23at090829.png)
+     ![screen_shot_2018-03-23at090829](assets/screen_shot_2018-03-23at090829.png)
 
    * **隱藏元件**  — 隱藏目前的元件。
 
-   ![](do-not-localize/screen_shot_2018-03-23at090834.png)
+     ![隱藏元件](do-not-localize/screen_shot_2018-03-23at090834.png)
 
-   >[!NOTE]
-   >
-   >在上述範例中，浮動和隱藏動作可供使用，因為此配置容器巢狀內嵌於上層配置容器中。
+     >[!NOTE]
+     >
+     >在上述範例中，浮動和隱藏動作可供使用，因為此配置容器巢狀內嵌於上層配置容器中。
 
    * **取消隱藏元件**
-選取父元件以顯示包含「 」的動作工具列 
-**顯示隱藏的元件** 選項。 在此示例中，隱藏了兩個元件。
-   ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
+選取父元件以顯示包含「 」的動作工具列 **顯示隱藏的元件** 選項。 在此示例中，隱藏了兩個元件。
 
-   選取「顯 **示隱藏的元件** 」(Show hidden components)選項，會以藍色顯示目前隱藏在原始位置的元件。
+     ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 
-   ![screen_shot_2018-03-23at091224](assets/screen_shot_2018-03-23at091224.png)
+  選取「顯 **示隱藏的元件** 」(Show hidden components)選項，會以藍色顯示目前隱藏在原始位置的元件。
 
-   選取 **全部還原** 將取消隱藏所有隱藏的元件。
+  ![screen_shot_2018-03-23at091224](assets/screen_shot_2018-03-23at091224.png)
+
+  選取 **全部還原** 將取消隱藏所有隱藏的元件。
