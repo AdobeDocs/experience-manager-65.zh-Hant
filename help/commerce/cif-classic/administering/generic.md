@@ -8,9 +8,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
+source-git-commit: 6ebcc7bd5c72c01672244fdfba353a8949f6e331
 workflow-type: tm+mt
-source-wordcount: '2910'
+source-wordcount: '2979'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 
 每個不同的產品型別都需要支架。 適當的支架可透過以下任一方式與產品相關聯：
 
-* 路徑
+* path
 * 產品可參考此支架
 
 >[!NOTE]
@@ -66,21 +66,22 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 1. 使用 **產品** 主控台導覽至所需位置。
 1. 使用 **匯入產品** 圖示以開啟精靈。
 
-   ![chlimage_1-1](/help/sites-administering/do-not-localize/chlimage_1-13.png)
+   ![匯入產品圖示](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
 1. 指定下列設定：
 
    * **匯入工具**
 
-      特定的Importer [商務提供者](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)，預設為 `Geometrixx`.
+     特定的Importer [商務提供者](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)，預設為 `Geometrixx`.
 
    * **來源**
 
-      您要匯入的檔案；您可以使用瀏覽器來選取檔案。
+     您要匯入的檔案；您可以使用瀏覽器來選取檔案。
 
    * **增量匯入**
 
-      指出這是否為增量匯入（而非完全匯入）。
+     指出這是否為增量匯入（而非完全匯入）。
+
    >[!NOTE]
    >
    >增量匯入（範例geometrixx-outdoor匯入工具的）會在產品層級運作。
@@ -104,27 +105,27 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 1. 使用 **工具** 主控台開啟 **商務** 資料夾。
 1. 按兩下以開啟 **產品匯入工具**：
 
-   ![chlimage_1-22](/help/sites-administering/assets/chlimage_1-22.jpeg)
+   ![產品匯入工具主控台](/help/sites-administering/assets/chlimage_1-22.jpeg)
 
 1. 指定下列設定：
 
    * **存放區名稱**
 
-      產品將匯入至：
+     產品將匯入至：
 
-      `/etc/commerce/products/<*store name*>/`
+     `/etc/commerce/products/<*store name*>/`
 
    * **商務提供程式**
 
-      您的匯入工具 [商務提供者](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)；預設Geometrixx。
+     您的匯入工具 [商務提供者](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)；預設Geometrixx。
 
    * **來源檔案**
 
-      您要匯入的檔案在存放庫中的位置。
+     您要匯入的檔案在存放庫中的位置。
 
    * **增量匯入**
 
-      指出這是否為增量匯入（而非完全匯入）。
+     指出這是否為增量匯入（而非完全匯入）。
 
 1. 按一下 **匯入產品**.
 
@@ -142,7 +143,7 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
    * **建立產品**
    * **建立產品變數**
 
-   ![chlimage_1-14](/help/sites-administering/do-not-localize/chlimage_1-14.png)
+   ![加號形狀建立圖示](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
 1. 精靈將會開啟。 使用 **基本** 和 **產品標籤** 以輸入 [產品屬性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 用於新產品或產品變體。
 
@@ -178,7 +179,7 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 
    選取 **檢視產品資料** 圖示：
 
-   ![chlimage_1-3](/help/sites-administering/do-not-localize/chlimage_1-15.png)
+   ![檢視產品資料圖示 — 資訊圖示](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
 1. 此 [產品屬性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 將會顯示。 使用 **編輯** 和 **完成** 以進行任何變更。
 
@@ -189,11 +190,11 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 1. 使用 **產品** 主控台(透過 **商務**)導覽至您的產品資訊。
 1. 使用圖示開啟「參考」的次要邊欄：
 
-   ![chlimage_1-4](/help/sites-administering/do-not-localize/chlimage_1-16.png)
+   ![雙箭頭圖示](/help/sites-administering/do-not-localize/chlimage_1-16.png)
 
 1. 選取您需要的產品 — 次要邊欄將更新以顯示可用的參考型別：
 
-   ![chlimage_1-88](/help/sites-administering/assets/chlimage_1-88.png)
+   ![開啟參考資料的產品主控台](/help/sites-administering/assets/chlimage_1-88.png)
 
 1. 按一下/點選參考型別（例如產品頁面）以展開清單。
 1. 選取要顯示選項的特定參照：
@@ -201,18 +202,18 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
    * 導覽至產品頁面
    * 編輯產品頁面
 
-   ![chlimage_1-89](/help/sites-administering/assets/chlimage_1-89.png)
+   ![產品主控台參考面板](/help/sites-administering/assets/chlimage_1-89.png)
 
 ### 搜尋產品 {#search-for-products}
 
 1. 導覽至 **產品** 主控台，透過 **商務**.
 1. 使用圖示開啟要搜尋的次要邊欄：
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-17.png)
+   ![放大鏡圖示](/help/sites-administering/do-not-localize/chlimage_1-17.png)
 
 1. 有數個Facet可供您搜尋產品。 搜尋只能使用一或多個面向。 找到的產品將會出現：
 
-   ![chlimage_1-90](/help/sites-administering/assets/chlimage_1-90.png)
+   ![產品控制檯中的產品資料](/help/sites-administering/assets/chlimage_1-90.png)
 
 1. 按一下/點選產品即可將其開啟。 您也可以發佈或檢視產品資料。
 
@@ -250,7 +251,7 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 1. 點選/按一下編輯圖示。
 1. 捲動至 **新增**.
 
-   ![chlimage_1-91](/help/sites-administering/assets/chlimage_1-91.png)
+   ![新增產品資料熒幕擷圖](/help/sites-administering/assets/chlimage_1-91.png)
 
 1. 點選/按一下 **新增**. 新的資產預留位置隨即顯示。
 1. 點選/按一下**變更**開啟對話方塊，讓您選擇資產。
@@ -337,7 +338,7 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 
    選取 **發佈** 或 **取消發佈** 圖示依需要：
 
-   ![chlimage_1-6](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![chlimage_1-7](/help/sites-administering/do-not-localize/chlimage_1-19.png)
+   ![世界圖示](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![帶十字元號的世界圖示 — 無符號](/help/sites-administering/do-not-localize/chlimage_1-19.png)
 
    產品資訊將視情況發佈或取消發佈。
 
@@ -367,7 +368,7 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 
 您可以在OSGI事件的Web主控台中檢視它們( `/system/console/events`)，例如：
 
-![](/help/sites-administering/do-not-localize/chlimage_1-20.png)
+![OSGI事件範例](/help/sites-administering/do-not-localize/chlimage_1-20.png)
 
 >[!NOTE]
 >
@@ -389,15 +390,15 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 
 1. 按一下全熒幕圖示。
 
-   ![chlimage_1-92](/help/sites-administering/assets/chlimage_1-92.png)
+   ![全熒幕圖示](/help/sites-administering/assets/chlimage_1-92.png)
 
 1. 按一下「啟動地圖」圖示。
 
-   ![chlimage_1-93](/help/sites-administering/assets/chlimage_1-93.png)
+   ![啟動地圖圖示](/help/sites-administering/assets/chlimage_1-93.png)
 
 1. 按一下其中一個形狀圖示。
 
-   ![chlimage_1-21](/help/sites-administering/do-not-localize/chlimage_1-21.png)
+   ![形狀圖示](/help/sites-administering/do-not-localize/chlimage_1-21.png)
 
 1. 視需要修改和移動形狀。
 1. 按一下形狀。
@@ -407,17 +408,17 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
    >
    >或者，您可以直接鍵入必須在產品層級（而不是變體層級）的產品路徑。
 
-   ![chlimage_1-94](/help/sites-administering/assets/chlimage_1-94.png)
+   ![輸入路徑](/help/sites-administering/assets/chlimage_1-94.png)
 
 1. 按兩下確認圖示，然後按一下退出全熒幕。
 1. 在頁面上的元件旁的某個位置按一下。 頁面應重新整理，且您應會在影像上看到下列符號：
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-22.png)
+   ![加號](/help/sites-administering/do-not-localize/chlimage_1-22.png)
 
 1. 切換至 [預覽](/help/sites-authoring/editing-content.md#previewingpagestouchoptimizedui) 模式。
 1. 按一下+熱點。 隨即開啟一個對話方塊，您可以在其中選擇所輸入產品的大小和數量 **路徑**.
 
-   ![chlimage_1-95](/help/sites-administering/assets/chlimage_1-95.png)
+   ![產品範例： poncho](/help/sites-administering/assets/chlimage_1-95.png)
 
 1. 輸入大小與數量。
 1. 按一下「加入購物車」按鈕。 對話方塊關閉。
@@ -429,15 +430,15 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 
 1. 按一下元件，然後按一下設定圖示。
 
-   ![chlimage_1-96](/help/sites-administering/assets/chlimage_1-96.png)
+   ![設定圖示](/help/sites-administering/assets/chlimage_1-96.png)
 
 1. 向下捲動. 有一個 **加入購物車** 標籤。
 
-   ![chlimage_1-97](/help/sites-administering/assets/chlimage_1-97.png)
+   ![新增至購物車標籤](/help/sites-administering/assets/chlimage_1-97.png)
 
 1. 按一下 **加入購物車**. 有3個組態選項可供您使用。
 
-   ![chlimage_1-98](/help/sites-administering/assets/chlimage_1-98.png)
+   ![設定選項](/help/sites-administering/assets/chlimage_1-98.png)
 
 1. 按一下完成圖示。
 
@@ -461,18 +462,18 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 
 1. 從清單中選取 **建立目錄**，建立目錄精靈隨即開啟。
 
-   ![chlimage_1-99](/help/sites-administering/assets/chlimage_1-99.png)
+   ![建立目錄精靈](/help/sites-administering/assets/chlimage_1-99.png)
 
 1. 導覽至所需的目錄Blueprint。
 1. 點選/按一下 **選取** 按鈕並點選/按一下所需的目錄Blueprint。
 1. 點選/按一下 **下一個**.
 
-   ![chlimage_1-100](/help/sites-administering/assets/chlimage_1-100.png)
+   ![目錄屬性精靈](/help/sites-administering/assets/chlimage_1-100.png)
 
 1. 輸入a **標題** 和 **名稱**.
 1. 點選/按一下 **建立** 按鈕。 目錄隨即建立，對話方塊隨即開啟。
 
-   ![chlimage_1-101](/help/sites-administering/assets/chlimage_1-101.png)
+   ![目錄已建立對話方塊](/help/sites-administering/assets/chlimage_1-101.png)
 
 1. 點選/按一下 **完成** 按鈕帶您回到Sites主控台，您會在這裡看到您的目錄。
 
@@ -548,11 +549,11 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 1. 導覽至您要匯入目錄Blueprint的位置。
 1. 點選/按一下 **匯入Blueprint** 圖示。
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-13.png)
+   ![匯入Blueprint圖示](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
 1. 在精靈中，視需要選取來源，然後點選/按一下 **下一個**.
 
-   ![chlimage_1-340](/help/sites-administering/assets/chlimage_1-102.png)
+   ![Blueprint精靈](/help/sites-administering/assets/chlimage_1-102.png)
 
 1. 點選/按一下 **完成** 匯入完成後。
 
@@ -661,7 +662,7 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 1. 使用 **訂購** 主控台導覽至所需位置。
 1. 使用 **建立** 圖示以選取 **建立訂單**.
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-14.png)
+   ![加號形狀建立圖示](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
 1. 精靈將會開啟。 使用 **基本**， **內容**， **付款** 和 **履行** 標籤以輸入 [新訂單的相關資訊](/help/commerce/cif-classic/administering/concepts.md#order-information).
 
@@ -679,7 +680,7 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 
    選取 **檢視訂單資料** 圖示：
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-15.png)
+   ![資訊圖示](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
 1. 此 [訂單資訊](/help/commerce/cif-classic/administering/concepts.md#order-information) 將會顯示。 使用 **編輯** 和 **完成** 以進行任何變更。
 

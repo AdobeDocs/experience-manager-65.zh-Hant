@@ -10,9 +10,9 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
-source-git-commit: 66631fd0813f623f3321072fc00fd90f7fa33d21
+source-git-commit: fef4f47794942b1fca4b30ce518b2faa8951f482
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1533'
 ht-degree: 3%
 
 ---
@@ -112,7 +112,7 @@ Analytics資料會儲存在客戶特定的存放庫（稱為報表套裝）。 �
 Cloud Service設定是有關Adobe Analytics帳戶的資訊。 此設定可讓Adobe Experience Manager (AEM)連線至Adobe Analytics。 為您使用的每個Analytics帳戶建立個別設定。
 
 1. 以管理員身分登入您的AEM編寫執行個體。
-1. 在左上角，按一下 **Adobe Experience Manager** > **工具** ![](/help/forms/using/assets/tools.png) > **Cloud Services** > **舊版Cloud Services**.
+1. 在左上角，按一下 **Adobe Experience Manager** > **工具** ![槌子圖示](/help/forms/using/assets/tools.png) > **Cloud Services** > **舊版Cloud Services**.
 1. 尋找 **Adobe Analytics** 圖示。 按一下 **顯示設定** 然後繼續按一下 **[+]** 以新增設定。
 
    如果您是首次使用的使用者，請按一下 **立即設定**.
@@ -169,6 +169,7 @@ Adobe Analytics架構是Adobe Analytics變數與AEM變數之間的一組對應�
    * **Analytics報表同步cron**：指定從Adobe Analytics擷取報表的cron運算式。 預設值為0 0 2 ？ &#42; &#42;.
 
    * **擷取報表逾時：** 以秒數指定等候伺服器回應分析報告的持續時間。 預設時間為120秒。
+
    >[!NOTE]
    >
    >逾時報表擷取作業最多可能需要10秒，而不是指定的秒數。

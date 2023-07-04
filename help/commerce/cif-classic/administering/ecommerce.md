@@ -5,9 +5,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 745ca1aa7bc96d0938ec550a357d9edcbea341db
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '751'
 ht-degree: 2%
 
 ---
@@ -137,11 +137,11 @@ AEM eCommerce提供：
    * 憑單
    * 和其他
 
-   ![](/help/sites-administering/assets/chlimage_1-130.png)
+  ![geometrixx元件範例](/help/sites-administering/assets/chlimage_1-130.png)
 
-   >[!NOTE]
-   >
-   >AEM提供的整合架構也可讓您為商業功能建立其他AEM元件，不受特定電子商務引擎影響。
+  >[!NOTE]
+  >
+  >AEM提供的整合架構也可讓您為商業功能建立其他AEM元件，不受特定電子商務引擎影響。
 
 * **搜尋**  — 使用：
 
@@ -150,28 +150,28 @@ AEM eCommerce提供：
    * 第三方搜尋
    * 或兩者的組合。
 
-   ![](/help/sites-administering/assets/chlimage_1-131.png)
+  ![搜尋範例](/help/sites-administering/assets/chlimage_1-131.png)
 
 * 使用AEM功能來 **在多個管道上顯示您的內容**、完整瀏覽器視窗或行動裝置。 如此一來，您的內容就會以訪客所需的格式傳送。
 
-   ![](/help/sites-administering/assets/chlimage_1-132.png)
+  ![行動檢視範例](/help/sites-administering/assets/chlimage_1-132.png)
 
 * 能夠 **根據以下專案開發您自己的整合實作： [AEM電子商務架構](#the-framework)**.
 
-   目前可用的兩個實作都是以相同的基礎建置 — 在一般API （框架）之上。 實作新整合只需要實作您整合所需的功能。 前端元件可供任何新實施使用，因為它們使用介面（因此獨立於實施）。
+  目前可用的兩個實作都是以相同的基礎建置 — 在一般API （框架）之上。 實作新整合只需要實作您整合所需的功能。 前端元件可供任何新實施使用，因為它們使用介面（因此獨立於實施）。
 
 * 開發的可能性 **根據購物者資料和活動的體驗導向型商務**. 這可讓您實現許多情境：
 
    * 例如，當訂單總額超過特定金額時，可減少運費。
    * 另一種方式可讓您提供使用設定檔資料的季節性優惠方案（例如位置）。 然後可反白這些內容，同樣視需要根據其他因素而定。
 
-   在以下範例中，當購物車的內容少於$75美元時，顯示了一個Teaser：
+  在以下範例中，當購物車的內容少於$75美元時，顯示了一個Teaser：
 
-   ![](/help/sites-administering/assets/chlimage_1-133.png)
+  ![具有使用者端內容的購物車](/help/sites-administering/assets/chlimage_1-133.png)
 
-   當購物車內容超過$75美元時，可以變更此設定：
+  當購物車內容超過$75美元時，可以變更此設定：
 
-   ![](/help/sites-administering/assets/chlimage_1-134.png)
+  ![變更後具有使用者端內容的購物車](/help/sites-administering/assets/chlimage_1-134.png)
 
 * 和其他功能包括：
 

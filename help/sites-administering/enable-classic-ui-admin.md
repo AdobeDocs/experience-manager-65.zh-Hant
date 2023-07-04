@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6dbe82c2-7a25-49ab-a980-3635f0344817
 docset: aem65
 exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b4370d23c7b1bd43e1f02a862f11952d04892eb3
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '226'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 1%
 
    例如
 
-   [ `https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav`](https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav)
+   [`https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav`](https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav)
 
 1. 選取與您要為其重新啟用Classic UI的主控台對應的節點。 例如，我們將為Sites主控台重新啟用傳統UI。
 
@@ -50,6 +50,6 @@ ht-degree: 1%
 
 1. 此 **傳統UI** 選項在admin console中再次作為彈出視窗選項提供。
 
-   ![](assets/syui-01-2019-02-27-15-16-55.png)
+   ![傳統UI彈出式選項](assets/syui-01-2019-02-27-15-16-55.png)
 
 針對您想要為其重新啟用對傳統UI版本存取權的每個主控台，重複這些步驟。
