@@ -10,9 +10,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '5398'
+source-wordcount: '5402'
 ht-degree: 1%
 
 ---
@@ -284,14 +284,14 @@ AEM WCM使用存取控制清單(ACL)來組織套用至不同頁面的許可權�
 
 * 不要直接將許可權指派給使用者。 僅將其指派給群組。
 
-   這麼做可簡化維護作業，因為群組數量遠低於使用者數量，且波動性也較低。
+  這麼做可簡化維護作業，因為群組數量遠低於使用者數量，且波動性也較低。
 
 * 如果您希望群組/使用者只能修改頁面，請勿授予他們建立或拒絕許可權。 僅授予他們修改和讀取許可權。
 * 請謹慎使用「拒絕」。 儘可能使用「僅允許」。
 
-   如果許可權套用的順序與預期順序不同，則使用deny可能會造成非預期的影響。 如果使用者是多個群組的成員，則一個群組的Deny陳述式可能會取消另一個群組的Allow陳述式，反之亦然。 發生這類事情時，很難提供概觀，並且容易導致無法預見的結果，而「允許指派」不會導致這類衝突。
+  如果許可權套用的順序與預期順序不同，則使用deny可能會造成非預期的影響。 如果使用者是多個群組的成員，則一個群組的Deny陳述式可能會取消另一個群組的Allow陳述式，反之亦然。 發生這類事情時，很難提供概觀，並且容易導致無法預見的結果，而「允許指派」不會導致這類衝突。
 
-   Adobe建議您使用「允許」而非「拒絕」，請參閱 [最佳實務](#best-practices).
+  Adobe建議您使用「允許」而非「拒絕」，請參閱 [最佳實務](#best-practices).
 
 在修改任一許可權之前，請務必瞭解其運作和相互關聯的方式。 請參閱說明AEM WCM的CRX檔案 [評估存取許可權](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated)以及設定存取控制清單的範例。
 
@@ -391,7 +391,7 @@ AEM WCM使用存取控制清單(ACL)來組織套用至不同頁面的許可權�
 
 * 從「歡迎」畫面或AEM中的各種位置，按一下安全性圖示：
 
-![](do-not-localize/wcmtoolbar.png)
+![AEM WCM安全性索引標籤](do-not-localize/wcmtoolbar.png)
 
 * 直接導覽至 `https://<server>:<port>/useradmin`. 請確定您以管理員身分登入AEM。
 
@@ -640,7 +640,6 @@ AEM提供三種不同的方式可移除群組中的使用者或群組：
 >* 使用者的復寫許可權會取代群組的復寫許可權。
 >* 允許復寫許可權的優先順序高於拒絕復寫許可權。 另請參閱 [AEM中的許可權](#permissions-in-aem) 以取得詳細資訊。
 >
-
 
 若要設定復寫許可權：
 

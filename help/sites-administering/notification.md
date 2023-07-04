@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 144fbe2d0efe20d848e9556f8d652a403d1835b2
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '2026'
 ht-degree: 12%
 
 ---
@@ -144,11 +144,11 @@ This is an automatically generated message. Please do not reply.
 * `${userId}`，觸發事件的使用者的ID。
 * `${modifications}`，說明頁面事件的型別和格式的頁面路徑：
 
-   &lt;page event=&quot;&quot; type=&quot;&quot;> => &lt;page path=&quot;&quot;>
+  &lt;page event=&quot;&quot; type=&quot;&quot;> => &lt;page path=&quot;&quot;>
 
-   例如：
+  例如：
 
-   PageModified => /content/geometrixx/en/products
+  PageModified => /content/geometrixx/en/products
 
 ### 工作流程通知的電子郵件範本 {#email-templates-for-workflow-notification}
 
@@ -342,7 +342,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 1. 在搜尋列中搜尋 **Azure Active Directory**，然後按一下結果。或者，您可以直接瀏覽到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 1. 按一下「**應用程式註冊** - **新註冊**」
 
-   ![](assets/oauth-outlook1.png)
+   ![Microsoft Outlook設定](assets/oauth-outlook1.png)
 
 1. 根據您的要求填寫資訊，然後按一下「**註冊**」
 1. 前往新建的應用程式，然後選取「**API 權限**」
@@ -397,7 +397,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 
 設定完成後，設定應如下所示：
 
-![](assets/oauth-outlook-smptconfig.png)
+![AEM端設定檢視](assets/oauth-outlook-smptconfig.png)
 
 現在啟動OAuth元件。 您可以透過以下方式進行：
 

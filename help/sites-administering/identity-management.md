@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1226'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 * [AEM Communities](/help/communities/overview.md)網站訪客必須登入才能將內容發佈至社群。
 * [已關閉的使用者群組](/help/sites-administering/cug.md)
 
-   您可能需要限制特定訪客對您網站（或其中部分）的存取權。
+  您可能需要限制特定訪客對您網站（或其中部分）的存取權。
 
 * [個人化](/help/sites-administering/personalization.md) 允許訪客設定存取您網站的特定方式。
 
@@ -33,15 +33,15 @@ ht-degree: 2%
 
 * 從網站自行註冊
 
-   A [社群網站](/help/communities/sites-console.md) 可設定為允許訪客使用其Facebook或Twitter帳戶自我註冊或登入。
+  A [社群網站](/help/communities/sites-console.md) 可設定為允許訪客使用其Facebook或Twitter帳戶自我註冊或登入。
 
 * 向網站要求註冊
 
-   對於封閉式使用者群組，您可以允許訪客要求註冊，但透過工作流程強制執行授權。
+  對於封閉式使用者群組，您可以允許訪客要求註冊，但透過工作流程強制執行授權。
 
 * 從作者環境註冊每個帳戶
 
-   如果您的設定檔數量較少（無論如何都需要授權），您可以決定直接註冊每個設定檔。
+  如果您的設定檔數量較少（無論如何都需要授權），您可以決定直接註冊每個設定檔。
 
 若要讓訪客註冊，可使用一系列元件和表單來收集所需的身分識別資訊，然後收集其他（通常是選擇性的）設定檔資訊。 註冊後，他們應該也能夠檢查並更新他們已提交的詳細資訊。
 
@@ -106,7 +106,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 1. 按下 **control-alt-C** 以開啟使用者端內容。
 1. 在使用者端內容的左上角，按一下 **載入設定檔** 按鈕。
 
-   ![](do-not-localize/loadprofile.png)
+   ![載入設定檔按鈕](do-not-localize/loadprofile.png)
 
 1. 從對話方塊視窗的下拉式清單中選取另一個設定檔；例如， **艾莉森·帕克**.
 1. 按一下&#x200B;**「確定」**。
@@ -156,11 +156,11 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 * [狀態提供者](#state-providers)
 
-   管理特定屬性的兩種狀態，以及這兩種狀態之間的轉變。
+  管理特定屬性的兩種狀態，以及這兩種狀態之間的轉變。
 
 * [工作流程](#workflows)
 
-   若要管理與狀態相關的動作。
+  若要管理與狀態相關的動作。
 
 可以定義多個狀態；例如，在Geometrixx中，這些狀態包括：
 

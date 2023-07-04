@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '945'
 ht-degree: 5%
 
 ---
@@ -32,9 +32,9 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
 * [使用者管理](#user-administration)
 
-   ![chlimage_1-73](assets/chlimage_1-73a.png)
+  ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-   此 **使用者** 主控台清單：
+  此 **使用者** 主控台清單：
 
    * 使用者名稱
    * 使用者登入名稱（帳戶名稱）
@@ -42,9 +42,9 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
 * [群組管理](#group-administration)
 
-   ![chlimage_1-74](assets/chlimage_1-74a.png)
+  ![chlimage_1-74](assets/chlimage_1-74a.png)
 
-   此 **群組** 主控台清單：
+  此 **群組** 主控台清單：
 
    * 群組名稱
    * 群組說明
@@ -56,7 +56,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
 1. 使用 **新增使用者** 圖示：
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![新增使用者](do-not-localize/chlimage_1-1.png)
 
 1. 此 **建立使用者** 表單將會開啟：
 
@@ -66,16 +66,16 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
    * **ID**
 
-      這是使用者帳戶的唯一識別碼。 此為必填欄位，不得包含空格。
+     這是使用者帳戶的唯一識別碼。 此為必填欄位，不得包含空格。
 
    * **電子郵件地址**
    * **密碼**
 
-      密碼為必填。
+     密碼為必填。
 
    * **重新鍵入密碼**
 
-      這是強制性的，因為確認密碼需要它。
+     這是強制性的，因為確認密碼需要它。
 
    * **名字**
    * **姓氏**
@@ -93,24 +93,23 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
    * **帳戶設定**
 
       * **狀態**
-您可以將帳戶標幟為 
-**作用中** 或 **非使用中**.
+您可以將帳戶標幟為 **作用中** 或 **非使用中**.
+
    * **相片**
 
-      您可以在此處上傳像片以用作頭像。
+     您可以在此處上傳像片以用作頭像。
 
-      接受的檔案類型: `.jpg .png .tif .gif`
+     接受的檔案類型: `.jpg .png .tif .gif`
 
-      偏好大小： `240x240px`
+     偏好大小： `240x240px`
 
    * **新增使用者至群組**
 
-      使用選擇下拉式清單來選取使用者應成為其成員的群組。 選取後，使用 **X** 儲存前取消選取的名稱。
+     使用選擇下拉式清單來選取使用者應成為其成員的群組。 選取後，使用 **X** 儲存前取消選取的名稱。
 
    * **群組**
 
-      使用者目前所屬的群組清單。 使用 **X** 儲存前取消選取的名稱。
-
+     使用者目前所屬的群組清單。 使用 **X** 儲存前取消選取的名稱。
 
 1. 當您已定義使用者帳戶時，請使用：
 
@@ -146,7 +145,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 1. 使用點按方塊標示一或多個使用者。
 1. 使用 **群組** 圖示：
 
-   ![](do-not-localize/chlimage_1-2.png)
+   ![使用「群組」圖示](do-not-localize/chlimage_1-2.png)
 
    若要開啟群組選擇下拉式清單：
 
@@ -164,7 +163,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 1. 使用點按方塊標示一或多個使用者。
 1. 使用 **刪除** 圖示可刪除使用者詳細資訊：
 
-   ![](do-not-localize/chlimage_1-3.png)
+   ![刪除現有使用者詳細資訊](do-not-localize/chlimage_1-3.png)
 
 1. 系統會要求您確認刪除，然後訊息會確認已實際刪除。
 
@@ -174,7 +173,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
 1. 使用「新增群組」圖示：
 
-   ![](do-not-localize/chlimage_1-4.png)
+   ![新增群組](do-not-localize/chlimage_1-4.png)
 
 1. 此 **建立群組** 表單將會開啟：
 
@@ -184,23 +183,23 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
    * **ID**
 
-      這是群組的唯一識別碼。 此為必填欄位，不得包含空格。
+     這是群組的唯一識別碼。 此為必填欄位，不得包含空格。
 
    * **名稱**
 
-      群組的名稱；將顯示在群組主控台中。
+     群組的名稱；將顯示在群組主控台中。
 
    * **說明**
 
-      群組的說明。
+     群組的說明。
 
    * **新增成員到群組**
 
-      使用選取下拉式清單來選取要新增至群組的使用者。 選取後，使用 **X** 儲存前取消選取的名稱。
+     使用選取下拉式清單來選取要新增至群組的使用者。 選取後，使用 **X** 儲存前取消選取的名稱。
 
    * **群組成員**
 
-      群組中的使用者清單。 使用 **X** 儲存前取消選取的名稱。
+     群組中的使用者清單。 使用 **X** 儲存前取消選取的名稱。
 
 1. 定義群組後，請使用：
 
@@ -218,7 +217,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 1. 使用點按方塊標示群組。
 1. 使用 **複製** 圖示以複製群組詳細資訊：
 
-   ![](do-not-localize/chlimage_1-5.png)
+   ![複製現有群組](do-not-localize/chlimage_1-5.png)
 
 1. 此 **編輯群組設定** 將開啟表單。
 
@@ -231,6 +230,6 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 1. 使用點按方塊標示一或多個群組。
 1. 使用 **刪除** 圖示可刪除群組詳細資訊：
 
-   ![](do-not-localize/chlimage_1-6.png)
+   ![刪除現有群組](do-not-localize/chlimage_1-6.png)
 
 1. 系統會要求您確認刪除，然後訊息會確認已實際刪除。
