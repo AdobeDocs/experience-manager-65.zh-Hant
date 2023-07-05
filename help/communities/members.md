@@ -9,12 +9,13 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 201c87da1316944e594ade6d95800326b1e6667c
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 4%
+source-wordcount: '961'
+ht-degree: 3%
 
 ---
+
 
 # 成員與群組管理主控台 {#members-groups-management-consoles}
 
@@ -47,7 +48,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 >
 >如果符合以下條件，則無法使用成員主控台： [通道服務](deploy-communities.md#tunnel-service-on-author) 未啟用。
 
-![member-console1](assets/member-console1.png)
+![成員主控台](assets/member-console1.png)
 
 ### 搜尋 {#search-features}
 
@@ -56,7 +57,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 ![搜尋側面板圖示。](assets/leftpanel-icon.png)
 
 
-![member-console2](assets/member-console2.png)
+![成員控制檯的篩選選項](assets/member-console2.png)
 
 選取左側的搜尋圖示 `Members` 標題以切換搜尋側面板關閉。
 
@@ -76,7 +77,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
 選取 `Create Member` 以在發佈環境中建立使用者。
 
-![create-member1](assets/create-member1.png)
+![建立新成員視窗](assets/create-member1.png)
 
 ### 一般 — 成員詳細資訊 {#general-member-details}
 
@@ -150,7 +151,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
 另請參閱 [評分和預算](implementing-scoring.md).
 
-![create-member2](assets/create-member2.png)
+![編輯成員資格設定視窗](assets/create-member2.png)
 
 * **[!UICONTROL 新增徽章]**
    * 開始輸入以從中選取 [可用徽章](badges.md). 選取徽章後，請選擇每個網站或所有網站，徽章應隨成員頭像一起顯示於這些網站上。
@@ -173,7 +174,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
 選取 `Add Group` 以在發佈環境中建立群組。
 
-![group-console1](assets/group-console1.png)
+![建立新群組視窗](assets/group-console1.png)
 
 建立新發佈端成員群組的必要欄位包括：
 

@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 4dd216167f97eb6f6181586b57694b139872c5ef
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 5%
+source-wordcount: '958'
+ht-degree: 4%
 
 ---
+
 
 # Granite作業 — 使用者和群組管理{#granite-operations-user-and-group-administration}
 
@@ -26,7 +27,7 @@ ht-degree: 5%
 
 Granite使用者和群組管理主控台都可從 **[工具](/help/sites-administering/tools-consoles.md)** 觸控最佳化UI的控制檯：
 
-![chlimage_1-72](assets/chlimage_1-72a.png)
+![工具主控台](assets/chlimage_1-72a.png)
 
 選擇其中一項 **使用者** 或 **群組** 從「工具」主控台將開啟適當的主控台。 在這兩種模式中，您都可從工具列使用點按方塊然後動作，或透過下方的連結開啟帳戶詳細資訊，以採取動作 **名稱**.
 
@@ -42,7 +43,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
 * [群組管理](#group-administration)
 
-  ![chlimage_1-74](assets/chlimage_1-74a.png)
+  ![使用者管理主控台](assets/chlimage_1-74a.png)
 
   此 **群組** 主控台清單：
 
@@ -56,11 +57,11 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
 1. 使用 **新增使用者** 圖示：
 
-   ![新增使用者](do-not-localize/chlimage_1-1.png)
+   ![「新增使用者」圖示](do-not-localize/chlimage_1-1.png)
 
 1. 此 **建立使用者** 表單將會開啟：
 
-   ![chlimage_1-75](assets/chlimage_1-75a.png)
+   ![使用者詳細資料表單](assets/chlimage_1-75a.png)
 
    您可以在此處輸入帳戶的使用者詳細資訊（大部分為標準且易於說明）：
 
@@ -132,11 +133,11 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
 1. 您現在可以編輯詳細資訊，如下所示 [新增使用者](#adding-a-new-user). 下 **帳戶設定** 有一個連結 **變更密碼**.
 
-   ![chlimage_1-76](assets/chlimage_1-76a.png)
+   ![帳戶設定對話方塊](assets/chlimage_1-76a.png)
 
 1. 此 **變更密碼** 對話方塊將會開啟。 輸入並重新輸入新密碼以及您的密碼。 使用 **確定** 以確認變更。
 
-   ![chlimage_1-77](assets/chlimage_1-77a.png)
+   ![變更密碼對話方塊](assets/chlimage_1-77a.png)
 
    訊息會確認密碼已變更。
 
@@ -149,7 +150,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
    若要開啟群組選擇下拉式清單：
 
-   ![chlimage_1-78](assets/chlimage_1-78a.png)
+   ![群組選擇器](assets/chlimage_1-78a.png)
 
 1. 在選取方塊中，您可以選取或取消選取使用者帳戶應屬於的群組。
 
@@ -177,7 +178,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
 1. 此 **建立群組** 表單將會開啟：
 
-   ![chlimage_1-79](assets/chlimage_1-79a.png)
+   ![群組詳細資料表單](assets/chlimage_1-79a.png)
 
    您可以在此處輸入群組詳細資料：
 

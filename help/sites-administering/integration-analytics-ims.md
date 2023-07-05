@@ -2,12 +2,13 @@
 title: 使用IMS與Adobe Analytics整合
 description: 瞭解如何使用IMS整合AEM與Adobe Analytics
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 5789954afea2d42444b6f6f9f185d7926624e7f0
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1056'
 ht-degree: 2%
 
 ---
+
 
 # 使用IMS與Adobe Analytics整合 {#integration-with-adobe-analytics-using-ims}
 
@@ -51,7 +52,7 @@ ht-degree: 2%
 1. 啟動 **建立新憑證** 並輸入新別名。
 1. 確認方式 **建立憑證**.
 
-   ![](assets/integrate-analytics-io-01.png)
+   ![Adobe IMS技術帳戶設定精靈](assets/integrate-analytics-io-01.png)
 
 1. 選取 **下載** (或 **下載公開金鑰**)將檔案下載至本機磁碟機，以便在下列情況下可以使用： [為Adobe Analytics與AEM的整合設定IMS](#configuring-ims-for-adobe-analytics-integration-with-aem).
 
@@ -59,7 +60,7 @@ ht-degree: 2%
    >
    >保持此設定開啟，以下情況下將再次需要它： [完成AEM中的IMS設定](#completing-the-ims-configuration-in-aem).
 
-   ![](assets/integrate-analytics-io-02.png)
+   ![新增金鑰至Adobe I/O的資訊對話方塊](assets/integrate-analytics-io-02.png)
 
 ## 為Adobe Analytics與AEM的整合設定IMS {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
@@ -76,9 +77,9 @@ ht-degree: 2%
 1. 將會顯示您擁有的任何專案。 選取 **建立新專案**  — 位置和使用將取決於：
 
    * 如果您還沒有任何專案， **建立新專案** 將會是底部中心。
-      ![建立新專案 — 第一個專案](assets/integration-analytics-io-02.png)
+     ![建立新專案 — 第一個專案](assets/integration-analytics-io-02.png)
    * 如果您已有專案，這些專案將會列示於 **建立新專案** 將位於右上方。
-      ![建立新專案 — 多個專案](assets/integration-analytics-io-03.png)
+     ![建立新專案 — 多個專案](assets/integration-analytics-io-03.png)
 
 
 1. 選取 **新增至專案** 後面接著 **API**：
@@ -177,7 +178,6 @@ ht-degree: 2%
    例如：
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
-
 
 1. 選取您的設定。
 1. 選取 **檢查健康狀態** （從工具列），後面接著 **Check**.

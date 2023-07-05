@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 69ca5acb-83f9-4e1b-9639-ec305779c931
 docset: aem65
 exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 1ba34f95cf3ce3f136482075802d2e4372f28917
 workflow-type: tm+mt
-source-wordcount: '1760'
+source-wordcount: '1770'
 ht-degree: 1%
 
 ---
+
 
 # 電子郵件行銷{#e-mail-marketing}
 
@@ -56,13 +57,13 @@ ht-degree: 1%
 
 1. 使用圖示選取清單檢視：
 
-   ![清單檢視](do-not-localize/mcm_icon_listview-1.png)
+   ![清單檢檢視示](do-not-localize/mcm_icon_listview-1.png)
 
 1. 按一下 **新增……**
 
    您可以指定 **標題**， **名稱** 以及要建立的體驗型別；在此案例中為Newsletter。
 
-   ![mcm_createnewsletter](assets/mcm_createnewsletter.png)
+   ![建立體驗對話方塊](assets/mcm_createnewsletter.png)
 
 1. 按一下&#x200B;**建立**。
 
@@ -70,7 +71,7 @@ ht-degree: 1%
 
    此 **預設收件者清單** 為必填欄位，因為這會形成電子報的接觸點(請參閱 [使用清單](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists) 以取得清單的詳細資訊)。
 
-   ![mcm_newsletterdialog](assets/mcm_newnewsletterdialog.png)
+   ![頁面屬性對話方塊](assets/mcm_newnewsletterdialog.png)
 
    * **發件人名稱**
 應顯示為Newsletter寄件者的名稱。
@@ -110,7 +111,7 @@ Newsletter的說明。
    >
    >您可以使用變數個人化電子報。 在Geometrixx電子報中，變數可在文字元件中使用。 變數的值繼承自使用者設定檔中的資訊。
 
-   ![mcm_newsletter_content](assets/mcm_newsletter_content.png)
+   ![編輯新聞稿內容](assets/mcm_newsletter_content.png)
 
 1. 若要插入變數，請從清單中選取變數，然後按一下 **插入**. 變數會從設定檔填入。
 
@@ -128,13 +129,13 @@ Newsletter的說明。
 
 1. 將游標放在您要變數出現的位置，並從下拉式清單中選取變數，然後按一下 **插入**. 視需要對任意數量的變數執行此動作，然後按一下 **確定**.
 
-   ![mcm_newsletter_variables](assets/mcm_newsletter_variables.png)
+   ![新增變數](assets/mcm_newsletter_variables.png)
 
 1. 若要模擬變數在傳送時的外觀，請按下CTRL+ALT+c以開啟使用者端內容，然後選取 **載入**. 從清單中選取您要載入其設定檔的使用者，然後按一下 **確定**.
 
    您載入的設定檔資訊已填入變數。
 
-   ![mc_newsletter_testvariables](assets/mc_newsletter_testvariables.png)
+   ![測試變數](assets/mc_newsletter_testvariables.png)
 
 ## 在不同電子郵件使用者端測試電子報 {#testing-newsletters-in-different-e-mail-clients}
 
@@ -161,11 +162,11 @@ Newsletter的說明。
 
 1. 按一下頂端列中的電子郵件使用者端，檢視該使用者端中的Newsletter外觀。
 
-   ![chlimage_1-119](assets/chlimage_1-119.png)
+   ![切換電子郵件使用者端](assets/chlimage_1-119.png)
 
 1. 對您要檢視的其他電子郵件使用者端重複此步驟。
 
-   ![chlimage_1-120](assets/chlimage_1-120.png)
+   ![變更電子郵件使用者端](assets/chlimage_1-120.png)
 
 ## 自訂Newsletter設定 {#customizing-newsletter-settings}
 
@@ -178,11 +179,11 @@ Newsletter的說明。
 
 1. 從MCM開啟您想要自訂設定的Newsletter。
 
-   ![mcm_newsletter_open](assets/mcm_newsletter_open.png)
+   ![開啟電子報](assets/mcm_newsletter_open.png)
 
 1. 在Newsletter頂端按一下 **設定**.
 
-   ![mcm_newsletter_settings](assets/mcm_newsletter_settings.png)
+   ![編輯Newsletter設定](assets/mcm_newsletter_settings.png)
 1. 輸入 **從** 電子郵件地址
 
 1. 修改 **主旨** 電子郵件的URL名稱（如有必要）。
@@ -213,7 +214,7 @@ Newsletter的說明。
 
 1. 在Newsletter頂端按一下 **測試** ，以在傳送前進行測試。
 
-   ![mcm_newsletter_testsettings](assets/mcm_newsletter_testsettings.png)
+   ![測試Newsletter的設定](assets/mcm_newsletter_testsettings.png)
 
 1. 輸入您要傳送Newsletter的測試郵件地址，然後按一下 **傳送**. 如果要變更設定檔，請在使用者端內容中載入另一個設定檔。 若要這麼做，請按下CTRL+ALT+c並選取「載入」並載入設定檔。
 
@@ -253,11 +254,11 @@ Newsletter的說明。
 
 1. 在收件者清單中，選取您要接收Newsletter的清單並按一下 **下一個**.
 
-   ![mcm_newslettersend](assets/mcm_newslettersend.png)
+   ![傳送Newsletter](assets/mcm_newslettersend.png)
 
 1. 已確認設定完成。 按一下 **傳送** 以實際傳送Newsletter。
 
-   ![mcm_newslettersendconfirm](assets/mcm_newslettersendconfirm.png)
+   ![Newsletter已傳送確認](assets/mcm_newslettersendconfirm.png)
 
    >[!NOTE]
    >
@@ -277,15 +278,15 @@ Newsletter的說明。
 
 1. 在 **工具** 功能表，選取 **傳送Newsletter**. 此 **傳送Newsletter** 視窗隨即開啟。
 
-   ![mcm_newslettersendfromlist](assets/mcm_newslettersendfromlist.png)
+   ![Newletter主控台](assets/mcm_newslettersendfromlist.png)
 
 1. 在 **電子報** 欄位中，選取您要傳送的Newsletter，然後按一下 **下一個**.
 
-   ![mcm_newslettersenddialog](assets/mcm_newslettersenddialog.png)
+   ![傳送Newsletter對話方塊](assets/mcm_newslettersenddialog.png)
 
 1. 已確認設定完成。 按一下 **傳送** 將選取的Newsletter傳送至指定的潛在客戶清單。
 
-   ![mcm_newslettersenddialog_confirmation](assets/mcm_newslettersenddialog_confirmation.png)
+   ![傳送確認](assets/mcm_newslettersenddialog_confirmation.png)
 
    您的Newsletter已傳送給所選的收件者。
 
@@ -299,6 +300,6 @@ Newsletter的說明。
 
 1. 按一下 **網站** 並導覽至Geometrixx **工具列** 並開啟。
 
-   ![chlimage_1-121](assets/chlimage_1-121.png)
+   ![訂閱範例](assets/chlimage_1-121.png)
 
 1. 在Geometrixx電子報中 **註冊** 欄位，輸入您的電子郵件地址，然後按一下 **註冊**. 您現已訂閱電子報。

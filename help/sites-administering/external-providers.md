@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ec4f24528089fe3de639b974ff4ab6f8807fc7fc
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 0%
+source-wordcount: '448'
+ht-degree: 1%
 
 ---
+
 
 # Analytics與外部提供者 {#analytics-with-external-providers}
 
@@ -70,15 +71,15 @@ _gaq.push(['_trackPageview']);
 1. 從左窗格展開 **Cloud Services設定**.
 1. 按兩下 **一般Analytics程式碼片段** 若要開啟頁面：
 
-   ![](assets/analytics_genericoverview.png)
+   ![一般Analytics程式碼片段](assets/analytics_genericoverview.png)
 
 1. 按一下+以使用對話方塊新增設定；至少指派名稱，例如google analytics：
 
-   ![](assets/analytics_addconfig.png)
+   ![建立設定](assets/analytics_addconfig.png)
 
 1. 按一下 **建立**，會立即開啟程式碼片段對話方塊 — 將適當的javascript程式碼片段貼入欄位：
 
-   ![](assets/analytics_snippet.png)
+   ![編輯元件](assets/analytics_snippet.png)
 
 1. 按一下 **確定** 以儲存。
 
@@ -90,12 +91,12 @@ _gaq.push(['_trackPageview']);
 1. 開啟 **頁面屬性** 從sidekick，然後 **Cloud Services** 標籤。
 1. 按一下 **新增服務**，然後選取所需的服務；例如 **一般Analytics程式碼片段**：
 
-   ![](assets/analytics_selectservice.png)
+   ![新增雲端服務](assets/analytics_selectservice.png)
 
 1. 按一下 **確定** 以儲存。
 1. 您將會返回 **Cloud Services** 標籤。 此 **一般Analytics程式碼片段** 現在會與訊息一併列出 `Configuration reference missing`. 使用下拉式清單來選取您的特定服務執行個體，例如google-analytics：
 
-   ![](assets/analytics_selectspecificservice.png)
+   ![新增雲端服務設定](assets/analytics_selectspecificservice.png)
 
 1. 按一下 **確定** 以儲存。
 

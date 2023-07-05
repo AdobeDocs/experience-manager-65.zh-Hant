@@ -13,12 +13,13 @@ feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 14988b55c21131391fdcb033373774ee170f5305
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2124'
 ht-degree: 8%
 
 ---
+
 
 # 使用 Brand Portal 設定 AEM Assets {#configure-integration-65}
 
@@ -103,6 +104,7 @@ AEM Assets是透過Adobe Developer主控台使用Brand Portal設定的，可取�
 >AEM Assets作者執行個體只能設定為一個Brand Portal租使用者。
 
 如果您是第一次使用Brand Portal設定AEM Assets，請依照列出的順序執行下列步驟：
+
 1. [取得公開憑證](#public-certificate)
 1. [建立服務帳戶(JWT)連線](#createnewintegration)
 1. [設定IMS帳戶](#create-ims-account-configuration)
@@ -274,7 +276,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    按一下 **[!UICONTROL Check]** （在對話方塊中）。 在成功設定時，會出現一則訊息， *已成功擷取權杖*.
 
-   ![](assets/create-new-integration5.png)
+   ![設定狀況良好確認對話方塊](assets/create-new-integration5.png)
 
 >[!CAUTION]
 >
@@ -298,7 +300,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    在 **[!UICONTROL 服務URL]** 欄位中，指定您的Brand Portal租使用者（組織） URL。
 
-   ![](assets/create-cloud-service.png)
+   ![Brand Portal設定視窗](assets/create-cloud-service.png)
 
 1. 按一下&#x200B;**[!UICONTROL 「儲存並關閉」]**。雲端設定此時已建立。
 
@@ -312,17 +314,17 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 從 **工具** ![工具](assets/do-not-localize/tools.png) 面板，導覽至 **[!UICONTROL 部署]** > **[!UICONTROL 復寫]**.
 
-   ![](assets/test-integration1.png)
+   ![「工具」面板](assets/test-integration1.png)
 
 1. 在「復寫」頁面中，按一下 **[!UICONTROL 作者上的代理]**.
 
-   ![](assets/test-integration2.png)
+   ![復寫頁面](assets/test-integration2.png)
 
    您可以看到為您的Brand Portal租使用者建立的四個復寫代理。
 
    找到Brand Portal租使用者的復寫代理，然後按一下復寫代理URL。
 
-   ![](assets/test-integration3.png)
+   ![資產復寫設定](assets/test-integration3.png)
 
    >[!NOTE]
    >
@@ -330,11 +332,11 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 若要驗證AEM Assets與Brand Portal之間的連線，請按一下 **[!UICONTROL 測試連線]** 圖示。
 
-   ![](assets/test-integration4.png)
+   ![驗證資產復寫設定](assets/test-integration4.png)
 
    系統會顯示訊息，指出 *測試封裝已成功傳遞*.
 
-   ![](assets/test-integration5.png)
+   ![測試確認輸出](assets/test-integration5.png)
 
 1. 驗證全部四個復寫代理的測試結果。
 
@@ -362,6 +364,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 ## 升級設定 {#upgrade-integration-65}
 
 按照列出的順序執行以下步驟，將現有設定升級至Adobe Developer Console：
+
 1. [驗證執行中的工作](#verify-jobs)
 1. [刪除現有設定](#delete-existing-configuration)
 1. [建立設定](#configure-new-integration-65)
@@ -376,13 +379,13 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 在「復寫」頁面中，按一下 **[!UICONTROL 作者上的代理]**.
 
-   ![](assets/test-integration2.png)
+   ![資產的復寫代理](assets/test-integration2.png)
 
 1. 找到Brand Portal租使用者的復寫代理。
 
    確保 **佇列閒置** 對於所有復寫代理程式，沒有作用中的發佈工作。
 
-   ![](assets/test-integration3.png)
+   ![復寫佇列設定](assets/test-integration3.png)
 
 ### 刪除現有設定 {#delete-existing-configuration}
 
@@ -395,15 +398,15 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 導覽至 `/etc/replications/agents.author` 並刪除Brand Portal租使用者的全部四個復寫代理。
 
-   ![](assets/delete-replication-agent.png)
+   ![CRXDE中的復寫代理](assets/delete-replication-agent.png)
 
 1. 導覽至 `/etc/cloudservices/mediaportal` 並刪除Brand Portal雲端服務設定。
 
-   ![](assets/delete-cloud-service.png)
+   ![CRXDE中復寫代理程式的詳細資料](assets/delete-cloud-service.png)
 
 1. 導覽至 `/home/users/mac` 並刪除 **Mac使用者** 您的Brand Portal租使用者。
 
-   ![](assets/delete-mac-user.png)
+   ![CRXDE中復寫代理程式的詳細資訊](assets/delete-mac-user.png)
 
 
 您現在可以 [建立設定](#configure-new-integration-65) 透過您AEM 6.5編寫執行個體上的Adobe Developer主控台。

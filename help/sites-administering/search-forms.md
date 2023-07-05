@@ -6,12 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1a3e0f90bbe133a7b0fc383b997e69b10ca82478
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 12%
+source-wordcount: '2067'
+ht-degree: 11%
 
 ---
+
 
 # 設定搜尋表單{#configuring-search-forms}
 
@@ -29,7 +30,7 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 
 第一次存取此主控台時，您可以看到所有設定都有掛鎖符號。 這表示適當的設定是預設（現成可用）設定 — 並且不能刪除。 一旦您自訂了設定，鎖定就會消失 — 除非您 [刪除您的自訂設定](#deleting-a-configuration-to-reinstate-the-default)，則系統會恢復預設值（和掛鎖指標）。
 
-![chlimage_1-374](assets/chlimage_1-374.png)
+![搜尋表單視窗](assets/chlimage_1-374.png)
 
 ## 設定 {#configurations}
 
@@ -37,63 +38,63 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 
 * **頁面編輯器 (文件搜尋):**
 
-   此設定會定義在資產瀏覽器中搜尋檔案時（編輯頁面時）可用的選項。
+  此設定會定義在資產瀏覽器中搜尋檔案時（編輯頁面時）可用的選項。
 
 * **頁面編輯器 (影像搜尋):**
 
-   此設定會定義在資產瀏覽器中搜尋影像時（編輯頁面時）可用的選項。
+  此設定會定義在資產瀏覽器中搜尋影像時（編輯頁面時）可用的選項。
 
 * **頁面編輯器 (手稿搜尋):**
 
-   此設定會定義在資產瀏覽器中搜尋手稿時（編輯頁面時）可用的選項。
+  此設定會定義在資產瀏覽器中搜尋手稿時（編輯頁面時）可用的選項。
 
 * **頁面編輯器 (頁面搜尋):**
 
-   此設定會定義在資產瀏覽器中搜尋頁面時（編輯頁面時）可用的選項。
+  此設定會定義在資產瀏覽器中搜尋頁面時（編輯頁面時）可用的選項。
 
 * **頁面編輯器 (段落搜尋):**
 
-   此設定會定義在資產瀏覽器中搜尋段落時（編輯頁面時）可用的選項。
+  此設定會定義在資產瀏覽器中搜尋段落時（編輯頁面時）可用的選項。
 
 * **頁面編輯器 (產品搜尋):**
 
-   此設定會定義在資產瀏覽器中搜尋產品時（編輯頁面時）可用的選項。
+  此設定會定義在資產瀏覽器中搜尋產品時（編輯頁面時）可用的選項。
 
 * **頁面編輯器(Dynamic Media Classic) [先前稱為Scene7] search)**：
 
-   此設定會定義在資產瀏覽器中搜尋Scene7資源（編輯頁面時）時可用的選項。
+  此設定會定義在資產瀏覽器中搜尋Scene7資源（編輯頁面時）時可用的選項。
 
 * **網站管理搜尋邊欄**:
 
-   此設定會定義使用者在使用Sites主控台的搜尋邊欄時可用的搜尋選項。
+  此設定會定義使用者在使用Sites主控台的搜尋邊欄時可用的搜尋選項。
 
 * **頁面編輯器 (視訊搜尋):**
 
-   此設定會定義在資產瀏覽器中搜尋視訊時（編輯頁面時）可用的選項。
+  此設定會定義在資產瀏覽器中搜尋視訊時（編輯頁面時）可用的選項。
 
 * **資產管理搜尋邊欄:**
 
-   此設定會定義使用者在使用Assets控制檯時可用的搜尋選項。
+  此設定會定義使用者在使用Assets控制檯時可用的搜尋選項。
 
 * **目錄管理搜尋邊欄:**
 
-   此設定會定義使用者在搜尋商務目錄時可使用的搜尋選項。
+  此設定會定義使用者在搜尋商務目錄時可使用的搜尋選項。
 
 * **訂單管理搜尋邊欄:**
 
-   此設定會定義使用者在搜尋商務訂單時可用的搜尋選項。
+  此設定會定義使用者在搜尋商務訂單時可用的搜尋選項。
 
 * **產品集合管理搜尋邊攔:**
 
-   此設定會定義使用者在搜尋商務產品集合時可用的搜尋選項。
+  此設定會定義使用者在搜尋商務產品集合時可用的搜尋選項。
 
 * **產品管理搜尋邊欄:**
 
-   此設定會定義使用者在搜尋商務產品時可用的搜尋選項。
+  此設定會定義使用者在搜尋商務產品時可用的搜尋選項。
 
 * **專案管理搜尋邊欄:**
 
-   此設定會定義使用者在搜尋專案時可用的搜尋選項。
+  此設定會定義使用者在搜尋專案時可用的搜尋選項。
 
 ## 述詞及其設定 {#predicates-and-their-settings}
 
@@ -329,11 +330,11 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 >[!NOTE]
 >
 >* 常見的搜尋述詞定義於：
-   >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
+>  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
 >* 僅與Siteadmin （傳統UI）相關的搜尋述詞位於以下位置：
-   >  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
-   >   * 這些功能已過時，僅供回溯相容性使用。
+>  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
+>   * 這些功能已過時，僅供回溯相容性使用。
 >
 >此資訊僅供參考，您不得對下列專案進行變更 `/libs`.
 
@@ -343,47 +344,46 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 
 * **欄位標籤**
 
-   將顯示為可摺疊標題或述詞欄位標籤的標籤。
+  將顯示為可摺疊標題或述詞欄位標籤的標籤。
 
 * **說明**
 
-   使用者的描述性詳細資料。
+  使用者的描述性詳細資料。
 
 * **預留位置**
 
-   空白文字或述詞的預留位置（若未輸入篩選文字）。
+  空白文字或述詞的預留位置（若未輸入篩選文字）。
 
 * **屬性名稱**
 
-   要搜尋的屬性。 它使用相對路徑和萬用字元 `*/*/*` 指定屬性相對於的深度 `jcr:content` 節點（每個星號代表一個節點層級）。
+  要搜尋的屬性。 它使用相對路徑和萬用字元 `*/*/*` 指定屬性相對於的深度 `jcr:content` 節點（每個星號代表一個節點層級）。
 
-   如果您只想搜尋具有下列專案的資源之第一層子節點： `x` 上的屬性 `jcr:content` 節點使用 `*/jcr:content/x`
+  如果您只想搜尋具有下列專案的資源之第一層子節點： `x` 上的屬性 `jcr:content` 節點使用 `*/jcr:content/x`
 
 * **屬性深度**
 
-   在資源中搜尋該屬性的最大深度。 因此，可針對資源及遞回子系執行該屬性的搜尋，直到子系層級等於指定的深度為止。
+  在資源中搜尋該屬性的最大深度。 因此，可針對資源及遞回子系執行該屬性的搜尋，直到子系層級等於指定的深度為止。
 
 * **屬性值**
 
-   作為絕對字串或作為運算式語言的屬性值；例如， `cq:Page` 或
+  作為絕對字串或作為運算式語言的屬性值；例如， `cq:Page` 或
 
-   `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`。
+  `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`。
 
 * **範圍文字**
 
-   中範圍欄位的標籤 **日期範圍** 述詞。
+  中範圍欄位的標籤 **日期範圍** 述詞。
 
 * **選項路徑**
 
-   使用者可以使用述詞設定索引標籤中的路徑瀏覽器來選取路徑。 選取 **+** 圖示可將選取專案新增至有效選項清單(然後 **-** 圖示以視需要移除)。
+  使用者可以使用述詞設定索引標籤中的路徑瀏覽器來選取路徑。 選取 **+** 圖示可將選取專案新增至有效選項清單(然後 **-** 圖示以視需要移除)。
 
-   選項是使用者建立的內容節點，結構如下：
+  選項是使用者建立的內容節點，結構如下：
 
-   `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
+  `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
 * **選項節點路徑**
-實際上與 
-**選項路徑**，只有這個在「通用述詞」欄位中，其他則專用於資產。
+實際上與 **選項路徑**，只有這個在「通用述詞」欄位中，其他則專用於資產。
 
 * **單選**
 如果勾選，這些選項會呈現為僅允許單一選取的核取方塊。 若誤選，可取消選取核取方塊。
@@ -411,7 +411,6 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
    >* `/apps/cq/gui/content/facets/<option>`
    >* `/apps/commerce/gui/content/facets/<option>`
 
-
 ### 新增/編輯述詞欄位和定義欄位設定 {#add-edit-a-predicate-field-and-define-field-settings}
 
 您可以新增或編輯欄位，以及定義/更新其設定：
@@ -419,20 +418,21 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 1. [開啟自訂設定](#creating-opening-a-customized-configuration) 以進行更新。
 1. 如果您想要新增欄位，請開啟 **選取述詞** 定位並拖曳所需的述詞至所需的位置。 例如， **日期範圍述詞**：
 
-   ![chlimage_1-375](assets/chlimage_1-375.png)
+   ![編輯搜尋表單](assets/chlimage_1-375.png)
 
 1. 視以下情況而定：
 
    * 您正在新增欄位：
 
-      新增述詞後 **設定** 標籤會開啟並顯示可定義的屬性。
+     新增述詞後 **設定** 標籤會開啟並顯示可定義的屬性。
 
    * 您要更新現有的述詞：
 
-      選取述詞欄位（在右側），然後開啟 **設定** 標籤。
+     選取述詞欄位（在右側），然後開啟 **設定** 標籤。
+
    例如， **日期範圍述詞**：
 
-   ![chlimage_1-376](assets/chlimage_1-376.png)
+   ![日期範圍述詞的屬性](assets/chlimage_1-376.png)
 
 1. 視需要進行變更，並確認： **完成**.
 
@@ -440,11 +440,11 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 
 1. 選取「預覽」圖示：
 
-   ![](do-not-localize/chlimage_1-31.png)
+   ![預覽圖示](do-not-localize/chlimage_1-31.png)
 
 1. 如此將顯示搜尋表單，如同它們在適當主控台的「搜尋」欄中顯示（完全展開）一樣。
 
-   ![chlimage_1-377](assets/chlimage_1-377.png)
+   ![預覽搜尋表單](assets/chlimage_1-377.png)
 
 1. **關閉** 預覽以傳回並完成設定。
 
@@ -453,7 +453,7 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 1. [開啟自訂設定](#creating-opening-a-customized-configuration) 以進行更新。
 1. 選取述詞欄位（在右側），開啟 **設定** 標籤，然後選取 **刪除** 圖示（左下方）。
 
-   ![](do-not-localize/chlimage_1-32.png)
+   ![「刪除」圖示](do-not-localize/chlimage_1-32.png)
 
 1. 對話方塊會要求確認刪除動作。
 
@@ -471,7 +471,7 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 
 1. 選取所需的設定(例如， **頁面編輯器（段落搜尋）**)，然後按一下 **刪除** 圖示：
 
-   ![chlimage_1-378](assets/chlimage_1-378.png)
+   ![刪除表單](assets/chlimage_1-378.png)
 
 1. 自訂的設定將會刪除並恢復預設設定（這由主控台中掛鎖符號的重新出現表示）。
 
@@ -490,7 +490,7 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
    * `jcr:title`  — 搜尋邊欄中顯示的欄位標籤
    * `value`  — 要搜尋的屬性值
 
-   ![chlimage_1-379](assets/chlimage_1-379.png)
+   ![在CRXDE中新增選項](assets/chlimage_1-379.png)
 
    >[!NOTE]
    >
@@ -504,7 +504,6 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
    >1. `/libs/cq/gui/content/common/options/predicates`
    >1. 進行任何變更 `/apps.`
 
-
 1. 開啟 **搜尋Forms** 控制檯並選取您要更新的設定。 例如， **網站管理搜尋邊欄**.
 
    然後按一下/點選 **編輯搜尋表單** 圖示。
@@ -514,21 +513,22 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 
    * **屬性名稱**
 
-      指定要在目標節點上搜尋的節點屬性。 例如：
+     指定要在目標節點上搜尋的節點屬性。 例如：
 
-      `jcr:content/cq:template`
+     `jcr:content/cq:template`
 
    * **選項節點路徑**
 
-      選取保留選項的路徑。 例如：
+     選取保留選項的路徑。 例如：
 
-      `/apps/cq/gui/content/common/options/predicates/templatetype`
-   ![chlimage_1-380](assets/chlimage_1-380.png)
+     `/apps/cq/gui/content/common/options/predicates/templatetype`
+
+   ![正在新增屬性路徑](assets/chlimage_1-380.png)
 
 1. 選取 **完成** 以儲存您的設定。
 1. 導覽至適當的主控台(在此範例中， **網站**)並開啟 **搜尋** 邊欄。 將顯示新定義的搜尋表單以及各種選項。 選取必要選項以檢視搜尋結果：
 
-   ![chlimage_1-381](assets/chlimage_1-381.png)
+   ![最終結果](assets/chlimage_1-381.png)
 
 ## 使用者權限 {#user-permissions}
 

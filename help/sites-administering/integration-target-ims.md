@@ -2,12 +2,13 @@
 title: 使用IMS與Adobe Target整合
 description: 瞭解如何使用IMS整合AEM與Adobe Target
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: 5c3de9c272030b3e258aea95899a58553c3b33db
+source-git-commit: 2f5f6a94a20feb2813b6da1b71e22f8675529ea5
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 1%
+source-wordcount: '1548'
+ht-degree: 2%
 
 ---
+
 
 # 使用IMS與Adobe Target整合{#integration-with-adobe-target-using-ims}
 
@@ -50,7 +51,7 @@ ht-degree: 1%
 1. 啟動 **建立新憑證** 並輸入新別名。
 1. 確認方式 **建立憑證**.
 
-   ![](assets/integrate-target-io-01.png)
+   ![Adobe IMS技術帳戶設定精靈](assets/integrate-target-io-01.png)
 
 1. 選取 **下載** (或 **下載公開金鑰**)將檔案下載至本機磁碟機，以便在下列情況下可以使用： [為Adobe Target與AEM的整合設定IMS](#configuring-ims-for-adobe-target-integration-with-aem).
 
@@ -58,7 +59,7 @@ ht-degree: 1%
    >
    >保持此設定開啟，以下情況下將再次需要它： [完成AEM中的IMS設定](#completing-the-ims-configuration-in-aem).
 
-   ![](assets/integrate-target-io-02.png)
+   ![要在Adobe I/O上新增憑證的資訊訊息](assets/integrate-target-io-02.png)
 
 ## 為Adobe Target與AEM的整合設定IMS {#configuring-ims-for-adobe-target-integration-with-aem}
 
@@ -75,14 +76,14 @@ ht-degree: 1%
 1. 將會顯示您擁有的任何專案。 選取 **建立新專案**  — 位置和使用將取決於：
 
    * 如果您還沒有任何專案， **建立新專案** 將會是底部中心。
-      ![建立新專案 — 第一個專案](assets/integration-target-io-02.png)
+     ![建立新專案 — 第一個專案](assets/integration-target-io-02.png)
    * 如果您已有專案，這些專案將會列示於 **建立新專案** 將位於右上方。
-      ![建立新專案 — 多個專案](assets/integration-target-io-03.png)
+     ![建立新專案 — 多個專案](assets/integration-target-io-03.png)
 
 
 1. 選取 **新增至專案** 後面接著 **API**：
 
-   ![](assets/integration-target-io-10.png)
+   ![Adobe Developer Console](assets/integration-target-io-10.png)
 
 1. 選取 **Adobe Target**，則 **下一個**：
 
@@ -90,15 +91,15 @@ ht-degree: 1%
    >
    >如果您已訂閱Adobe Target，但未看到它列出，則應檢視 [先決條件](#prerequisites).
 
-   ![](assets/integration-target-io-12.png)
+   ![按「下一步」](assets/integration-target-io-12.png)
 
 1. **上傳您的公開金鑰**，完成後，請繼續 **下一個**：
 
-   ![](assets/integration-target-io-13.png)
+   ![使用開發人員控制檯新增整合](assets/integration-target-io-13.png)
 
 1. 檢閱認證，並繼續 **下一個**：
 
-   ![](assets/integration-target-io-15.png)
+   ![建立新專案](assets/integration-target-io-15.png)
 
 1. 選取所需的產品設定檔，並繼續 **儲存已設定的API**：
 
@@ -109,8 +110,7 @@ ht-degree: 1%
    >* Adobe Target Standard — 僅限 **預設工作區** 可用
    >* Adobe Target Premium — 列出所有可用的工作區，如下所示
 
-
-   ![](assets/integration-target-io-16.png)
+   ![選取要新增的API](assets/integration-target-io-16.png)
 
 1. 將會確認建立。
 
@@ -173,7 +173,7 @@ ht-degree: 1%
 
 1. 您的Adobe Target設定將顯示在AEM主控台中。
 
-   ![](assets/integrate-target-io-11.png)
+   ![Adobe IMS 技術帳戶設定](assets/integrate-target-io-11.png)
 
 ## 確認IMS設定 {#confirming-the-ims-configuration}
 
@@ -187,15 +187,14 @@ ht-degree: 1%
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
 
-
 1. 選取您的設定。
 1. 選取 **檢查健康狀態** （從工具列），後面接著 **Check**.
 
-   ![](assets/integrate-target-io-12.png)
+   ![Adobe IMS 設定](assets/integrate-target-io-12.png)
 
 1. 如果成功，您會看到訊息：
 
-   ![](assets/integrate-target-io-13.png)
+   ![檢查設定](assets/integrate-target-io-13.png)
 
 ## 設定Adobe TargetCloud Service {#configuring-the-adobe-target-cloud-service}
 
@@ -220,15 +219,15 @@ ht-degree: 1%
 
    * **租使用者ID**：Adobe IMS租使用者ID。 另請參閱 [租使用者ID和使用者端代碼](#tenant-client) 區段。
 
-      >[!NOTE]
-      >
-      >IMS需要從Target本身取得此值。 您可以登入Target，並從URL擷取租使用者ID。
-      >
-      >例如，如果URL為：
-      >
-      >`https://experience.adobe.com/#/@yourtenantid/target/activities`
-      >
-      >然後您會使用 `yourtenantid`.
+     >[!NOTE]
+     >
+     >IMS需要從Target本身取得此值。 您可以登入Target，並從URL擷取租使用者ID。
+     >
+     >例如，如果URL為：
+     >
+     >`https://experience.adobe.com/#/@yourtenantid/target/activities`
+     >
+     >然後您會使用 `yourtenantid`.
 
    * **使用者端代碼**：請參閱 [租使用者ID和使用者端代碼](#tenant-client) 區段。
 
@@ -247,6 +246,7 @@ ht-degree: 1%
    * **使用Tag Management系統來提供使用者端資源庫**：使用DTM （已棄用）、AdobeLaunch或任何其他標籤管理系統。
 
    * **自訂AT.js**：如果您勾選Tag Management方塊或使用預設的AT.js，請保留空白。 或者，您也可以上傳自訂AT.js。 僅當您已選取AT.js時顯示。
+
    >[!NOTE]
    >
    >[使用Target Classic API的Cloud Service設定](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) 已棄用(使用Adobe Recommendations設定索引標籤)。
@@ -283,4 +283,3 @@ ht-degree: 1%
 >1. 重新輸入租使用者ID。
 >2. 重新連線至Target。
 >3. 儲存設定。
-

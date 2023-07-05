@@ -10,12 +10,13 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fe6ba6af-f500-4c0d-b984-fb617d4bf48a
 exl-id: 9fa3e531-11b3-4b8d-a87c-a08faf06f5b7
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 5e94a0cdb363e95ce398ea4ed0bce4a6aba9e7ce
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1612'
 ht-degree: 0%
 
 ---
+
 
 # 設定Adobe Analytics的連結追蹤{#configuring-link-tracking-for-adobe-analytics}
 
@@ -28,7 +29,7 @@ ht-degree: 0%
 1. 使用 **顯示設定**，開啟必要的Adobe Analytics架構。
 1. 展開 **連結追蹤設定** 區段並視需要設定（此頁面提供進一步詳細資訊）：
 
-   ![aa-08](assets/aa-08.png)
+   ![Analytics框架](assets/aa-08.png)
 
 ## 追蹤檔案下載 {#tracking-file-downloads}
 
@@ -48,7 +49,7 @@ ht-degree: 0%
 * PDF
 * xls
 
-因此，舉例來說，若為PDF檔案啟用下載追蹤，則每當使用者按一下指向PDF檔案的連結時，就會追蹤PDF的下載。
+因此，舉例來說，若為PDF檔案啟用下載追蹤功能，則每當使用者按一下連結PDF檔案時，就會追蹤PDF的下載。
 
 架構的下載追蹤屬性會實作為中的程式碼 `analytics.sitecatalyst.js` 為頁面產生的檔案。 下列程式碼範例代表預設的下載追蹤設定：
 
@@ -80,19 +81,19 @@ s.linkDownloadFileTypes= 'exe,zip,wav,mp3,mov,mpg,avi,wmv,doc,pdf,xls';
 * **外部篩選器**
 （選用）定義符合連結目標外部URL的篩選器。 當連結目標符合篩選器時，就會追蹤連結。 外部篩選器適合用來追蹤頁面上的部分外部連結。
 
-   若要指定要追蹤的外部連結，請輸入連結目標的全部或部分URL。 請使用逗號分隔多個篩選器。 將字串常值括在單引號中。 無值(的預設值 `''`，兩個單引號)會導致追蹤所有外部連結。
+  若要指定要追蹤的外部連結，請輸入連結目標的全部或部分URL。 請使用逗號分隔多個篩選器。 將字串常值括在單引號中。 無值(的預設值 `''`，兩個單引號)會導致追蹤所有外部連結。
 
 * **內部篩選器**
 定義符合內部連結URL的篩選器。 當連結鎖定符合此篩選器的URL時，將不會追蹤連結。 預設值是javascript命令，它會傳回目前視窗位址的URL主機名稱。
 
-   若要指定未追蹤的內部連結，請輸入連結目標的全部或部分內部URL。 請使用逗號分隔多個篩選器。 將字串常值括在單引號中。
+  若要指定未追蹤的內部連結，請輸入連結目標的全部或部分內部URL。 請使用逗號分隔多個篩選器。 將字串常值括在單引號中。
 
-   預設值為 `'javascript:,'+window.location.hostname`
+  預設值為 `'javascript:,'+window.location.hostname`
 
 * **保留查詢字串**
 評估符合內部和外部篩選器時包含URL引數。
 
-   啟用以在根據外部和內部篩選器評估連結目標URL時包含URL引數。
+  啟用以在根據外部和內部篩選器評估連結目標URL時包含URL引數。
 
 外部連結追蹤屬性會實作為中的程式碼 `analytics.sitecatalyst.js` 為頁面產生的檔案。 下列範常式式碼產生自與架構相關聯的頁面，此架構已透過下列設定啟用外部連結追蹤：
 
@@ -123,14 +124,14 @@ s.linkLeaveQueryString= false;
 * **連結追蹤事件**
 輸入您要用來計算連結點按次數的Adobe Analytics事件變數。
 
-   請使用逗號分隔多個變數名稱。
+  請使用逗號分隔多個變數名稱。
 
-   預設值 `None` 不會造成事件追蹤。
+  預設值 `None` 不會造成事件追蹤。
 
 * **連結追蹤Var**
 輸入您要在點按連結時傳送至Adobe Analytics的Adobe Analytics變數。 請使用逗號分隔多個變數名稱。
 
-   預設值 `None` 不會傳送任何變數資料。
+  預設值 `None` 不會傳送任何變數資料。
 
 當您指定要傳送的事件和變數時，設定會實作為中的程式碼 `analytics.sitecatalyst.js` 為頁面產生的檔案。 當架構追蹤 `event10` 事件與 `prop4` 屬性：
 
@@ -148,7 +149,7 @@ s.linkTrackVars= 'prop4';
 此範例說明對應在追蹤和Debugger環境中如何運作：
 
 1. 開啟與網頁相關聯的架構。
-1. 拖曳 **頁面** 元件到框架的對映區域。 此 **頁面** 元件屬於 **一般** Sidekick中的元件群組。
+1. 拖曳 **頁面** 元件到框架的對映區域。 此 **頁面** 元件屬於 **一般** Sidekick的元件群組。
 
    >[!NOTE]
    >
@@ -178,7 +179,7 @@ s.linkTrackVars= 'prop4';
  </tbody>
 </table>
 
-1. 將「搜尋」元件拖曳至框架的對映區域。 搜尋元件屬於Sidekick中的「一般」元件群組。 從左側面板拖曳Analytics (SiteCatalyst)變數，根據下表設定對應：
+1. 將「搜尋」元件拖曳至框架的對映區域。 「搜尋」元件屬於Sidekick中的「一般」元件群組。 從左側面板拖曳Analytics (SiteCatalyst)變數，根據下表設定對應：
 
 <table>
  <tbody>
@@ -236,7 +237,7 @@ s.linkTrackVars= 'prop4';
 
 使用Adobe Marketing Cloud Debugger檢視時，所進行的呼叫看起來會像這樣：
 
-![aa-leavequerysearch-blank](assets/aa-leavequerysearch-blank.png)
+![Adobe Marketing Cloud Debugger](assets/aa-leavequerysearch-blank.png)
 
 >[!NOTE]
 >
@@ -250,7 +251,7 @@ s.linkTrackVars= 'prop4';
 
 Adobe Marketing Cloud Debugger中顯示的呼叫詳細資訊類似於以下範例：
 
-![aa-leavequerysearch-active](assets/aa-leavequerysearch-active.png)
+![再次使用Adobe Marketing Cloud Debugger](assets/aa-leavequerysearch-active.png)
 
 >[!NOTE]
 >
@@ -323,7 +324,7 @@ Adobe Marketing Cloud Debugger中顯示的呼叫詳細資訊類似於以下範�
 
 1. 選取要當作超文字使用的文字，然後按一下「超連結」按鈕。
 
-   ![](do-not-localize/chlimage_1.png)
+   ![連結圖示](do-not-localize/chlimage_1.png)
 
 1. 在「連結至」方塊中新增目標URL，然後展開「連結追蹤」區域。
 
@@ -333,7 +334,7 @@ Adobe Marketing Cloud Debugger中顯示的呼叫詳細資訊類似於以下範�
    >
    >只有當您在RTE中選取有效的連結時，才會啟用它。
 
-   ![aa-17](assets/aa-17.png)
+   ![啟用連結追蹤](assets/aa-17.png)
 
 1. 啟用 **自訂連結追蹤** 覆寫Adobe Analytics架構的連結追蹤設定，並為目前連結啟用連結追蹤。
 

@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 1036127ae508ec76c868db5fb67709c104c51123
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1250'
 ht-degree: 2%
 
 ---
+
 
 # Identity Management{#identity-management}
 
@@ -61,11 +62,11 @@ A [表單](/help/sites-authoring/default-components.md#form-component) 可用來
 例如，使用者可以使用Geometrixx頁面來請求新的設定檔
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
 
-![registerform](assets/registerform.png)
+![登錄檔單範例](assets/registerform.png)
 
 提交請求後，設定檔頁面會開啟，使用者可在其中提供個人詳細資訊。
 
-![個人資料頁](assets/profilepage.png)
+![範例設定檔頁面](assets/profilepage.png)
 
 新帳戶也會顯示在 [使用者主控台](/help/sites-administering/security.md).
 
@@ -79,7 +80,7 @@ A [表單](/help/sites-authoring/default-components.md#form-component) 可用來
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
-![登入](assets/login.png)
+![範例登入頁面](assets/login.png)
 
 ## 登出 {#logging-out}
 
@@ -106,13 +107,13 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 1. 按下 **control-alt-C** 以開啟使用者端內容。
 1. 在使用者端內容的左上角，按一下 **載入設定檔** 按鈕。
 
-   ![載入設定檔按鈕](do-not-localize/loadprofile.png)
+   ![載入設定檔圖示](do-not-localize/loadprofile.png)
 
 1. 從對話方塊視窗的下拉式清單中選取另一個設定檔；例如， **艾莉森·帕克**.
 1. 按一下&#x200B;**「確定」**。
 1. 再按一下 **我的設定檔**. 此表單將以Alison的詳細資訊更新。
 
-   ![設定檔分析](assets/profilealison.png)
+   ![Alison的範例設定檔](assets/profilealison.png)
 
 1. 您現在可以使用 **編輯設定檔** 或 **變更密碼** 以更新詳細資料。
 
@@ -136,11 +137,11 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
    下次檢視設定檔時，您可以選取最喜愛的顏色：
 
-   ![aparkerfavcolor](assets/aparkerfavcolour.png)
+   ![Alison Parker最愛的顏色範例欄位](assets/aparkerfavcolour.png)
 
    該欄位將儲存在 **設定檔** 相關使用者帳戶的區段：
 
-   ![aparkercrxdelite](assets/aparkercrxdelite.png)
+   ![Alison Parker在CRXDE中的資料](assets/aparkercrxdelite.png)
 
 ## 設定檔狀態 {#profile-states}
 
@@ -188,7 +189,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 此設定檔位於 `/home/users/geometrixx`：
 
-![chlimage_1-138](assets/chlimage_1-138.png)
+![在CRXDE中看到的設定檔](assets/chlimage_1-138.png)
 
 在標準安裝中（製作或發佈），每個人都可以讀取所有使用者的完整設定檔資訊。 每個人都是&quot;*內建群組會自動包含所有現有的使用者和群組。 無法編輯成員清單*「。
 
@@ -205,7 +206,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 這可以透過以下方式完成： **[存取控制](/help/sites-administering/user-group-ac-admin.md#access-right-management)** 標籤：
 
-![aclmanager](assets/aclmanager.png)
+![在CRXDE中管理ACL](assets/aclmanager.png)
 
 ## 設定檔元件 {#profile-components}
 
@@ -220,22 +221,22 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 使用預設設定時，元件將顯示如下：
 
-![dc_profiles_checkedpassword](assets/dc_profiles_checkedpassword.png)
+![檢查密碼對話方塊](assets/dc_profiles_checkedpassword.png)
 
 ### 設定檔頭像相片 {#profile-avatar-photo}
 
 此元件為使用者提供選擇和上傳頭像像片檔案的機制。
 
-![dc_profiles_avatarphoto](assets/dc_profiles_avatarphoto.png)
+![頭像選擇器](assets/dc_profiles_avatarphoto.png)
 
 ### 設定檔詳細名稱 {#profile-detailed-name}
 
 此元件可讓使用者輸入詳細名稱。
 
-![dc_profiles_detailedname](assets/dc_profiles_detailedname.png)
+![詳細名稱對話方塊](assets/dc_profiles_detailedname.png)
 
 ### 設定檔性別 {#profile-gender}
 
 此元件可讓使用者輸入其性別。
 
-![dc_profiles_gender](assets/dc_profiles_gender.png)
+![性別選擇器](assets/dc_profiles_gender.png)

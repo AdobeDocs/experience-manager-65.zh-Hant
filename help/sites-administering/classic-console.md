@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
 exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 21330d460d1080ab1dee3e82bc3c3877677c1420
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 0%
+source-wordcount: '889'
+ht-degree: 1%
 
 ---
+
 
 # 傳統UI標籤控制檯{#classic-ui-tagging-console}
 
@@ -30,7 +31,7 @@ ht-degree: 0%
 * 以管理許可權登入
 * 瀏覽至主控台，例如， [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
-![](assets/managing_tags_usingthetagasministrationconsole.png)
+![傳統主控台視窗](assets/managing_tags_usingthetagasministrationconsole.png)
 
 ## 建立標籤和名稱空間 {#creating-tags-and-namespaces}
 
@@ -38,42 +39,38 @@ ht-degree: 0%
 
    如果您選取 **標籤** 您可以建立名稱空間：
 
-   ![](assets/creating_tags_andnamespaces.png)
+   ![建立名稱空間對話方塊](assets/creating_tags_andnamespaces.png)
 
    如果您選取名稱空間(例如 **示範**)您可以在該名稱空間中建立標籤：
 
-   ![](assets/creating_tags_andnamespacesinnewnamespace.png)
+   ![建立標籤對話方塊](assets/creating_tags_andnamespacesinnewnamespace.png)
 
 1. 在這兩種情況下，請輸入
 
    * **標題**
-(
-*必填*)標籤的顯示標題。 雖然可以輸入任何字元，但建議您不要使用這些特殊字元：
+(*必填*)標籤的顯示標題。 雖然可以輸入任何字元，但建議您不要使用這些特殊字元：
 
       * `colon (:)`  — 名稱空間分隔符號
       * `forward slash (/)`  — 子標籤分隔符號
 
-      如果輸入，這些字元將不會顯示。
+     如果輸入，這些字元將不會顯示。
 
    * **名稱**
-(
-*必填*)標籤的節點名稱。
+(*必填*)標籤的節點名稱。
 
    * **說明**
-(
-*可選*)標籤的說明。
+(*可選*)標籤的說明。
 
    * 選取 **建立**
 
-
-## 編輯標籤 {#editing-tags}
+## 編輯標記 {#editing-tags}
 
 1. 在右側窗格中，選取您要編輯的標籤。
 1. 按一下 **編輯**.
 1. 您可以修改 **標題** 和 **說明**.
 1. 按一下 **儲存** 以關閉對話方塊。
 
-## 刪除標籤 {#deleting-tags}
+## 刪除標記 {#deleting-tags}
 
 1. 在右窗格中，選取您要刪除的標籤。
 1. 按一下&#x200B;**刪除**。
@@ -90,9 +87,9 @@ ht-degree: 0%
 
 **清單** 開啟新視窗，顯示使用反白標籤的所有頁面的路徑：
 
-![](assets/list_showing_wheretagsarereferenced.png)
+![尋找參照標籤的位置](assets/list_showing_wheretagsarereferenced.png)
 
-## 移動標籤 {#moving-tags}
+## 移動標記 {#moving-tags}
 
 為協助標籤管理員和開發人員清理分類或重新命名標籤ID，可以將標籤移動到新位置：
 
@@ -107,7 +104,7 @@ ht-degree: 0%
 
 此 **移動標籤** 對話方塊如下所示：
 
-![](assets/move_tag.png)
+![移動標籤](assets/move_tag.png)
 
 >[!NOTE]
 >
@@ -129,7 +126,7 @@ ht-degree: 0%
 
 此 **合併標籤** 對話方塊如下所示：
 
-![](assets/mergetag.png)
+![合併標籤](assets/mergetag.png)
 
 ## 計算標籤的使用量 {#counting-usage-of-tags}
 
@@ -158,7 +155,7 @@ ht-degree: 0%
 
 對話方塊如下所示：
 
-![](assets/edit_tag.png)
+![編輯標籤](assets/edit_tag.png)
 
 「標籤」控制檯會使用使用者語言設定，因此對於Animal標籤，會針對在使用者屬性中將語言設定為法文的使用者顯示「Animaux」。
 
@@ -175,11 +172,11 @@ ht-degree: 0%
 
    選取 **動物** (**Animaux**)，並選取對話方塊外部以關閉它，並將標籤新增至頁面屬性。
 
-   ![](assets/french_tag.png)
+   ![編輯另一個標籤](assets/french_tag.png)
 
 依預設，「頁面屬性」對話方塊會顯示標籤 `titles`根據頁面語言。
 
-一般而言，如果頁面語言可用，則會從頁面語言取得標籤的語言。 當 [ `tag` Widget](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情況下使用（例如在表單或對話方塊中），標籤語言取決於上下文。
+一般而言，如果頁面語言可用，則會從頁面語言取得標籤的語言。 當 [`tag` Widget](/help/sites-developing/building.md#tagging-on-the-client-side) 在其他情況下使用（例如在表單或對話方塊中），標籤語言取決於上下文。
 
 >[!NOTE]
 >

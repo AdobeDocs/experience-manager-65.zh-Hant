@@ -10,12 +10,13 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 93dfac20bbb761abd580a004741ade20dc4ee2fe
 workflow-type: tm+mt
-source-wordcount: '2026'
+source-wordcount: '2068'
 ht-degree: 12%
 
 ---
+
 
 # 設定電子郵件通知{#configuring-email-notification}
 
@@ -54,7 +55,7 @@ AEM傳送電子郵件通知給使用者：
 
 在Web主控台中，設定如下所示：
 
-![chlimage_1-276](assets/chlimage_1-276.png)
+![Day CQ Mail Service OSGi設定視窗](assets/chlimage_1-276.png)
 
 ## 設定電子郵件通知通道 {#configuring-the-email-notification-channel}
 
@@ -88,7 +89,7 @@ AEM傳送電子郵件通知給使用者：
 
 在Web主控台中，預設設定如下所示：
 
-![chlimage_1-277](assets/chlimage_1-277.png)
+![Day CQ工作流程電子郵件通知服務設定視窗](assets/chlimage_1-277.png)
 
 ### 頁面通知的電子郵件範本 {#email-templates-for-page-notification}
 
@@ -233,7 +234,7 @@ subject=<text_1>
 
 * `${payload.type}`，裝載型別
 * `${payload.path}`，裝載的路徑
-* `${host.prefix}`，主機首碼，例如： http://localhost:4502
+* `${host.prefix}`，主機首碼，例如： `http://localhost:4502`
 
 ### 新增新語言的電子郵件範本 {#adding-an-email-template-for-a-new-language}
 
@@ -310,11 +311,11 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
    * 重新整理Token到期日：永不
 1. 按一下「**儲存**」。
 
-<!-- clarify refresh token expiry, currrently not present in the UI -->
+<!-- clarify refresh token expiry, currently not present in the UI -->
 
 設定完成後，設定應如下所示：
 
-![oauth smtp提供者](assets/oauth-smtpprov2.png)
+![CQ Mailer SMTP Oauth2 Provider設定視窗](assets/oauth-smtpprov2.png)
 
 現在啟動OAuth元件。 您可以透過以下方式進行：
 
@@ -324,7 +325,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
 1. 按元件左側的「播放」圖示
 
-   ![元件](assets/oauth-components-play.png)
+   ![顯示OAuthCodeGenerateServlet和OAuthCodeAccessTokenGenerator的元件清單](assets/oauth-components-play.png)
 
 最後，透過以下方式確認設定：
 
@@ -342,7 +343,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 1. 在搜尋列中搜尋 **Azure Active Directory**，然後按一下結果。或者，您可以直接瀏覽到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 1. 按一下「**應用程式註冊** - **新註冊**」
 
-   ![Microsoft Outlook設定](assets/oauth-outlook1.png)
+   ![設定Microsoft Outlook時的新註冊按鈕](assets/oauth-outlook1.png)
 
 1. 根據您的要求填寫資訊，然後按一下「**註冊**」
 1. 前往新建的應用程式，然後選取「**API 權限**」
@@ -397,7 +398,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 
 設定完成後，設定應如下所示：
 
-![AEM端設定檢視](assets/oauth-outlook-smptconfig.png)
+![已完成的CQ Mailer SMTP OAuth2設定](assets/oauth-outlook-smptconfig.png)
 
 現在啟動OAuth元件。 您可以透過以下方式進行：
 
@@ -407,7 +408,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
 1. 按元件左側的「播放」圖示
 
-![components2](assets/oauth-components-play.png)
+![包含OAuthCodeGenerateServlet和OAuthCodeAccessTokenGenerator的元件清單片段](assets/oauth-components-play.png)
 
 最後，透過以下方式確認設定：
 

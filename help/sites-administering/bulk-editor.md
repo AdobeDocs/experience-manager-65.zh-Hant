@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 3649cffb-418a-4ad6-862f-56346a831b0b
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: feef7362b832f2ddef1902ef2a25d55323b6be26
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1167'
 ht-degree: 1%
 
 ---
+
 
 # 大量編輯器{#the-bulk-editor}
 
@@ -46,11 +47,11 @@ Geometrixx網站中提供了說明此使用案例的範例：
 1. 導覽至 **支援** 頁面，然後前往 **客戶服務滿意度** 意見調查。
 1. **編輯** 此 **表單的開頭** 段落。 在對話方塊中，按一下 **進階** 標籤中，展開 **動作設定**，然後按一下 **檢視資料……**.
 
-   ![](assets/custsatsurvey.png)
+   ![客戶滿意度調查範例](assets/custsatsurvey.png)
 
 1. 「大量編輯器」是完全可自訂的。不過在此範例中，大量編輯器不允許使用者編輯內容，但僅允許他們將資訊匯出至試算表。
 
-   ![](assets/bulkeditor.png)
+   ![大量編輯器主控台](assets/bulkeditor.png)
 
 ## 如何使用大量編輯器 {#how-to-use-the-bulk-editor}
 
@@ -100,16 +101,16 @@ Geometrixx網站中提供了說明此使用案例的範例：
 
 例如：
 
-![](assets/searchfilter.png)
+![大量編輯器篩選器選項](assets/searchfilter.png)
 
 1. 按一下 **搜尋**. 大量編輯器會顯示結果。
 以上例為例，系統會傳回符合搜尋條件的所有頁面，並顯示要求的欄。
 
-   ![](assets/chlimage_1-39.png)
+   ![大量編輯器結果](assets/chlimage_1-39.png)
 
 1. 在儲存格中按兩下以進行所需的任何變更。
 
-   ![](assets/srchresultedit.png)
+   ![大量編輯](assets/srchresultedit.png)
 
 1. 按一下 **儲存** 以儲存變更( **儲存** 按鈕會在您編輯儲存格後啟動)。
 
@@ -137,12 +138,12 @@ Geometrixx網站中提供了說明此使用案例的範例：
    >
    >依預設，變更會編碼為 [Windows-1252](https://en.wikipedia.org/wiki/Windows-1252) （也稱為CP-1252）。 您可以核取UTF-8以匯出UTF-8的變更。
 
-   ![](assets/srchrsesultexport.png)
+   ![匯出結果](assets/srchrsesultexport.png)
 
 1. 選取位置並確認您要下載檔案。
 1. 下載檔案後，您可以從試算表程式(例如Microsoft Excel)開啟它。 試算表程式會匯入檔案，並將其轉換為試算表格式。
 
-   ![](assets/exportinexcel.png)
+   ![在試算表中匯出的結果](assets/exportinexcel.png)
 
 ### 匯入內容 {#importing-content}
 

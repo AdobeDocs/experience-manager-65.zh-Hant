@@ -11,24 +11,25 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 02afc4eb78acaacc40d3ba1830ccb1e9c3907d0f
+source-git-commit: aaeef8fcc0ed5f205aeb7ab40cc61f60912c9869
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1973'
 ht-degree: 0%
 
 ---
+
 
 # ClientContext{#client-context}
 
 >[!NOTE]
 >
->ContextHub已取代Client Context。 如需詳細資訊，請參閱相關 [設定](/help/sites-developing/ch-configuring.md) 和 [開發人員](/help/sites-developing/contexthub.md) 檔案。
+>ContextHub已取代Client Context。 如需詳細資訊，請參閱相關 [設定](/help/sites-developing/ch-configuring.md) 和 [開發人員](/help/sites-developing/contexthub.md) 說明檔案。
 
 Client Context是一種機制，可向您提供有關目前頁面和訪客的特定資訊。 可使用下列方式開啟它： **Ctrl-Alt-c** (windows)或 **control-option-c** (Mac)：
 
-![](assets/clientcontext_alisonparker.png)
+![「使用者端內容」視窗的範例](assets/clientcontext_alisonparker.png)
 
-在 [它會顯示資訊的發佈和作者環境](#propertiesavailableintheclientcontext) 關於：
+在發佈和作者環境中，它會顯示以下相關資訊：
 
 * 訪客；根據您的執行個體，會要求或衍生某些資訊。
 * 頁面標籤以及目前訪客存取這些標籤的次數（這會在您將滑鼠移到特定標籤上時顯示） 。
@@ -38,7 +39,7 @@ Client Context是一種機制，可向您提供有關目前頁面和訪客的特
 
 圖示（僅適用於作者環境）可讓您設定使用者端內容的詳細資訊：
 
-![](do-not-localize/clientcontext_icons.png)
+![「從屬端前後關聯」視窗的「編輯」、「載入」和「重設」圖示](do-not-localize/clientcontext_icons.png)
 
 * **編輯**
 將會開啟一個新頁面，讓您可以 [編輯、新增或移除設定檔屬性](#editingprofiledetails).
@@ -109,13 +110,14 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 
 >[!NOTE]
 >
->目前這是示範功能，需要仰賴示範使用者設定檔節點上預先設定的資料集。 例如，請參閱：
+>目前這是示範功能，需要仰賴示範使用者設定檔節點上的預先設定資料集。 例如，請參閱：
 >
 >`/home/users/geometrixx/aparker@geometrixx.info/profile` => friends屬性
 
 **標籤雲** 顯示在目前頁面上設定的標籤以及瀏覽網站時收集的標籤。 將滑鼠移到標籤上會顯示目前使用者存取包含該特定標籤的頁面的次數。
 
 >[!NOTE]
+>
 在造訪的頁面上顯示的DAM資產上設定的標籤不會計算在內。
 
 **Technographics商店** 此元件取決於您的安裝。
@@ -127,6 +129,7 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 如需詳細資訊，請參閱 [詳細的使用者端內容](/help/sites-developing/client-context.md).
 
 >[!NOTE]
+>
 頁面資料不再在使用者端內容中作為預設元件。 如有需要，您可以編輯使用者端內容、新增 **一般存放區屬性** 元件，然後設定以定義 **儲存** 作為 `pagedata`.
 
 ## 變更使用者端內容設定檔 {#changing-the-client-context-profile}
@@ -149,11 +152,11 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 
 1. 按一下「載入設定檔」圖示：
 
-   ![](do-not-localize/clientcontext_loadprofile.png)
+   ![Client Context的「載入設定檔」圖示](do-not-localize/clientcontext_loadprofile.png)
 
 1. 這將開啟對話方塊，您可以在此處選取要載入的設定檔：
 
-   ![](assets/clientcontext_profileloader.png)
+   ![設定檔載入器對話方塊會顯示選取設定檔的下拉式清單](assets/clientcontext_profileloader.png)
 
 1. 按一下 **確定** 以載入。
 
@@ -163,7 +166,7 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 
 1. 連按兩下代表目前使用者的圖示。 選取器將會開啟，使用箭頭來導覽並檢視可用的設定檔：
 
-   ![](assets/clientcontext_profileselector.png)
+   ![使用者選擇器](assets/clientcontext_profileselector.png)
 
 1. 按一下要載入的設定檔。 載入詳細資料後，按一下選取器外部以關閉。
 
@@ -171,13 +174,13 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 
 1. 使用重設圖示將Client Context中的設定檔傳回至目前使用者的設定檔：
 
-   ![](do-not-localize/clientcontext_resetprofile.png)
+   ![重設圖示](do-not-localize/clientcontext_resetprofile.png)
 
 ### 變更瀏覽器平台 {#changing-the-browser-platform}
 
 1. 連按兩下代表瀏覽器平台的圖示。 選擇器將會開啟、使用箭頭來導覽並檢視可用的平台/瀏覽器：
 
-   ![](assets/clientcontext_browserplatform.png)
+   ![瀏覽器平台選擇器](assets/clientcontext_browserplatform.png)
 
 1. 按一下您要載入的平台瀏覽器。 載入詳細資料後，按一下選取器外部以關閉。
 
@@ -185,7 +188,7 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 
 1. 連按兩下地理位置圖示。 展開的地圖將會開啟，您可以在此處將標籤拖曳到新位置：
 
-   ![](assets/clientcontext_geomocationrelocate.png)
+   ![地理位置詳細資料](assets/clientcontext_geomocationrelocate.png)
 
 1. 按一下地圖外部以關閉。
 
@@ -193,7 +196,7 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 
 1. 連按兩下Client Context的「標籤雲」區段。 隨即會開啟對話方塊，您可在此處選取標籤：
 
-   ![](assets/clientcontext_tagselection.png)
+   ![標籤雲端對話方塊](assets/clientcontext_tagselection.png)
 
 1. 按一下「確定」以載入使用者端內容。
 
@@ -205,13 +208,13 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 
 編輯使用者端內容可用於設定（或重設）某些屬性的值。 這可讓您測試特定情境(對以下專案尤其有用： [細分](/help/sites-administering/campaign-segmentation.md) 和 [行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md))。
 
-![](assets/clientcontext_alisonparker_edit.png)
+![編輯使用者端內容](assets/clientcontext_alisonparker_edit.png)
 
 ### 新增屬性元件 {#adding-a-property-component}
 
 在您開啟 **ClientContext設計頁面**，您也可以 **新增** 使用可用元件的全新屬性（元件會列在sidekick上或清單中）。 **插入新元件** 連按兩下後開啟的對話方塊 **將元件或資產拖曳到這裡** box)：
 
-![](assets/clientcontext_alisonparker_new.png)
+![將屬性新增至「使用者端內容」視窗](assets/clientcontext_alisonparker_new.png)
 
 ### 移除屬性元件 {#removing-a-property-component}
 
@@ -231,11 +234,11 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 1. 若要開啟「使用者端內容」，請按Ctrl-Alt-c (windows)或control-option-c (Mac)。
 1. 按一下「使用者端內容」頂端的編輯圖示，開啟「使用者端內容設計工具」。
 
-   ![](do-not-localize/chlimage_1.png)
+   ![連結圖示](do-not-localize/chlimage_1.png)
 
 1. 將JSONP存放區元件拖曳至Client Context。
 
-   ![](assets/chlimage_1-4.jpeg)
+   ![將JSONP存放區元件拖放到Client Context中](assets/chlimage_1-4.jpeg)
 
 1. 連按兩下元件以開啟「編輯」對話方塊。
 1. 在「JSONP服務URL」方塊中，輸入以下URL，然後按一下「擷取存放區」：
@@ -244,12 +247,12 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 
    元件會呼叫JSONP服務並列出傳回資料包含的所有屬性。 清單中的屬性是可在Client Context中使用的屬性。
 
-   ![](assets/chlimage_1-40.png)
+   ![JSONP服務的屬性](assets/chlimage_1-40.png)
 
 1. 按一下「確定」。
 1. 返回Geometrixx Outdoors首頁並重新整理頁面。 Client Context現在包含來自JSONP存放區元件的資訊。
 
-   ![](assets/chlimage_1-41.png)
+   ![填入資料的JSONP元件範例](assets/chlimage_1-41.png)
 
 ### 建立區段 {#create-the-segment}
 
@@ -270,7 +273,7 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 1. 以滑鼠右鍵按一下Winter區段，然後按一下「開啟」。
 1. 將Generic Store屬性拖曳至預設的AND容器。
 
-   ![](assets/chlimage_1-5.jpeg)
+   ![將元件新增至區段編輯器](assets/chlimage_1-5.jpeg)
 
 1. 連按兩下元件以開啟「編輯」對話方塊，指定下列屬性值，然後按一下「確定」：
 
