@@ -11,10 +11,10 @@ topic-tags: site-features
 discoiquuid: 57cd61d5-78f2-4f8c-99ee-75e100c052ef
 docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 0%
+source-wordcount: '666'
+ht-degree: 1%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 1. 如果時間範圍未出現在頁面頂端，請按一下或點選「切換時間範圍」圖示。
 
-   ![](do-not-localize/chlimage_1-22.png)
+   ![切換時間範圍](do-not-localize/chlimage_1-22.png)
 
 1. 若要變更報告時段的開始日期，請將陰影區域左側的圓圈拖曳至所需的開始日期。
 
@@ -92,7 +92,7 @@ SEO建議的狀態會指出工作已建立但尚未完成的時間。
 
 1. 按一下或點選SEO建議的資訊圖示。
 
-   ![](do-not-localize/chlimage_1-23.png)
+   ![資訊圖示](do-not-localize/chlimage_1-23.png)
 
 1. 按一下資訊圖示旁邊顯示的環繞三角形圖示。
 

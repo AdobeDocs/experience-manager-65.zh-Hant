@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 exl-id: 78673609-8cbc-4b4b-953e-56c31ea1b4ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '369'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ ContextHub工具列可在「預覽」模式下使用。 工具列僅在作者執
 
 1. 若要顯示工具列，請按一下或點選ContextHub圖示。
 
-   ![](do-not-localize/screen_shot_2018-03-23at093621.png)
+   ![內容中心](do-not-localize/screen_shot_2018-03-23at093621.png)
 
 ## UI模組功能 {#ui-module-features}
 
@@ -68,4 +68,4 @@ UI模組可以在工具列中顯示一或多個ContextHub存放區的資料。 U
 
 彈出式覆蓋圖可包含您按一下或點選以展開彈出式內容的圖示，以涵蓋整個瀏覽器視窗或熒幕。
 
-![](do-not-localize/chlimage_1-18.png)
+![全熒幕](do-not-localize/chlimage_1-18.png)

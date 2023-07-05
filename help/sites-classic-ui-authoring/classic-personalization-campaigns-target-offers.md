@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
 exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '93'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 7%
 1. 在左窗格中選取新的行銷活動，或在右窗格中連按兩下。
 1. 使用圖示選取清單檢視：
 
-   ![](do-not-localize/chlimage_1-11.png)
+   ![清單檢視](do-not-localize/chlimage_1-11.png)
 
 1. 按一下 **新增……**
 1. 您可以指定 **標題**， **名稱** 以及要建立的體驗型別；在此案例中為Test&amp;Target選件。

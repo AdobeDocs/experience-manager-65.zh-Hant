@@ -9,9 +9,9 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '2839'
 ht-degree: 5%
 
 ---
@@ -85,7 +85,7 @@ ht-degree: 5%
 
 影像上傳後（而非上傳前），您可以使用 [就地編輯](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) 若要視需要裁切/旋轉影像：
 
-![](do-not-localize/chlimage_1-10.png)
+![就地編輯工具列](do-not-localize/chlimage_1-10.png)
 
 >[!NOTE]
 >
@@ -95,7 +95,7 @@ ht-degree: 5%
 
 全熒幕編輯模式中有數個其他選項可供使用；例如，地圖和縮放：
 
-![](do-not-localize/chlimage_1-11.png)
+![全熒幕編輯模式](do-not-localize/chlimage_1-11.png)
 
 載入影像時，您可以設定下列專案：
 
@@ -132,6 +132,7 @@ ht-degree: 5%
 >您必須在 **替代文字** 中的欄位 **進階** 標籤內，或影像無法儲存時，您會看到下列錯誤訊息：
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 下列範例顯示正在顯示的影像（行銷活動）元件。
 
@@ -150,8 +151,7 @@ ht-degree: 5%
 新增如何使用連結的其他資訊。
 
 * **連結型別**
-在下拉式清單中，選取 
-**自訂URL** 和 **最適化檔案**. 此欄位為必填欄位. 如果您選取「自訂URL」，可以提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
+在下拉式清單中，選取 **自訂URL** 和 **最適化檔案**. 此欄位為必填欄位. 如果您選取「自訂URL」，可以提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
 
 * **其他URL引數**
 新增任何其他URL引數。 按一下「新增專案」以新增多個專案。
@@ -161,6 +161,7 @@ ht-degree: 5%
 >您必須在 **連結型別** 中的欄位 **URL資訊** 標籤，或元件無法儲存時，您會看到以下錯誤訊息：
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 下列範例顯示正在顯示的連結（行銷活動）元件。
 
@@ -196,11 +197,11 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
 
 選取 **文字** 顯示內嵌編輯器：
 
-![](do-not-localize/chlimage_1-12.png)
+![文字工具列](do-not-localize/chlimage_1-12.png)
 
 選取 **影像** 顯示影像的就地編輯器：
 
-![](do-not-localize/chlimage_1-13.png)
+![影像工具列](do-not-localize/chlimage_1-13.png)
 
 另請參閱 [影像（行銷活動）元件](#image-campaign) 以取得有關使用影像的詳細資訊。 另請參閱 [文字和個人化（行銷活動）元件](#text-personalization-campaign) 以取得有關使用文字的詳細資訊。
 
@@ -234,6 +235,7 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
 >此 **替代文字** 中的欄位 **進階** 索引標籤為必填，否則元件無法儲存，且您會看到以下錯誤訊息：
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 下列範例顯示正在顯示的文字與影像（行銷活動）元件。
 
@@ -300,7 +302,7 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
   <tr>
    <td><p>核取方塊 (行銷活動)</p> </td>
    <td><p>布林值</p> </td>
-   <td><p>不再聯絡（透過任何管道）</p> </td>
+   <td><p>否 延長連絡時間（透過任何管道）</p> </td>
   </tr>
   <tr>
    <td><p>日期欄位 (行銷活動)</p> <p>日期欄位/HTML 5 (行銷活動)</p> </td>
@@ -345,7 +347,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 新增說明至欄位，為使用者提供詳細資訊。
 
 * **僅顯示值**
-只顯示值（如果有）
+僅顯示值（如果有）
 
 #### Adobe Campaign {#adobe-campaign}
 

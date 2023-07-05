@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 1%
 
 為了聚焦於特定內容，您可以按一下並排差異的任一「邊」的全熒幕圖示，將其放大至整個瀏覽器視窗。
 
-![](do-not-localize/chlimage_1-18.png)
+![全熒幕模式圖示](do-not-localize/chlimage_1-18.png)
 
 選取的一側會填滿整個視窗，但橫條會保留在頂端，讓您在兩個頁面之間切換。
 
@@ -82,7 +82,7 @@ ht-degree: 1%
 
 您也可以選擇按一下退出全熒幕圖示來關閉全熒幕檢視。
 
-![](do-not-localize/chlimage_1-19.png)
+![關閉全熒幕](do-not-localize/chlimage_1-19.png)
 
 您可以隨時按一下標頭中的「關閉」按鈕來結束並排比較。
 

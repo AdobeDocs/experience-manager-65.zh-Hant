@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 11ff8bb3-39eb-4f77-b3dc-720262fa7f3f
 docset: aem65
 exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1179'
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ AEM提供不同的報表，協助您分析和監控執行個體的狀態。 此M
 
    使用圖示：
 
-   ![](do-not-localize/mcm_iconcalendarview.png)
+   ![行事曆檢視](do-not-localize/mcm_iconcalendarview.png)
 
    這會呈現所有接觸點（灰色）清單，以及連線至該接觸點的體驗水準時間範圍（綠色）：
 
@@ -166,7 +166,7 @@ AEM提供不同的報表，協助您分析和監控執行個體的狀態。 此M
 
    使用圖示：
 
-   ![](do-not-localize/mcm_icon_listview.png)
+   ![清單檢視](do-not-localize/mcm_icon_listview.png)
 
    這會列出所選行銷活動的所有體驗（例如Teaser和電子報）：
 

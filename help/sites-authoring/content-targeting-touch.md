@@ -11,9 +11,9 @@ topic-tags: personalization
 discoiquuid: 9d940744-3b00-4721-829a-96d17bb738e8
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '5349'
+source-wordcount: '5390'
 ht-degree: 6%
 
 ---
@@ -253,7 +253,7 @@ ht-degree: 6%
 
 1. 按一下或點選Target圖示。
 
-   ![](do-not-localize/chlimage_1.png)
+   ![目標](do-not-localize/chlimage_1.png)
 
    元件內容是預設體驗的選件。 鎖定元件為目標時，其預設節點會針對每個體驗進行復寫。 在體驗特定撰寫期間，需要此屬性才能編輯正確的內容節點。 對於這些非預設體驗，可以 [新增自訂優惠方案](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer) 或 [新增資料庫選件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library).
 
@@ -275,7 +275,7 @@ ht-degree: 6%
 
 在「編輯」模式中，Target元件有一個靶心圖示。
 
-![](do-not-localize/chlimage_1-1.png)
+![編輯模式下的目標元件](do-not-localize/chlimage_1-1.png)
 
 將元件拖曳至Target元件時，這些元件即為目標元件。
 
@@ -296,6 +296,8 @@ ht-degree: 6%
    >
    >
    >管理員可以決定是否需要在以下位置設定此設定： **https://&lt;host>：&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**
+   >
+   >
    若要要求使用者輸入位置，請選取**強制位置**核取方塊。
 
 1. 選取您要建立選件的體驗。
@@ -321,7 +323,7 @@ ht-degree: 6%
 
 1. 按一下或點選選選件以顯示選件功能表，然後按一下或點選編輯圖示。
 
-   ![](do-not-localize/chlimage_1-2.png)
+   ![選件功能表](do-not-localize/chlimage_1-2.png)
 
 1. 編輯元件的內容。
 
@@ -338,7 +340,7 @@ ht-degree: 6%
 
 1. 按一下或點選資料夾圖示。
 
-   ![](do-not-localize/chlimage_1-3.png)
+   ![資料夾圖示](do-not-localize/chlimage_1-3.png)
 
 1. 從資料庫中選取選件，然後按一下或點選核取標籤圖示。
 
@@ -371,7 +373,7 @@ ht-degree: 6%
 1. 選取體驗以顯示自訂選件。
 1. 按一下或點選自訂選件以顯示選件功能表，然後按一下或點選 **將選件儲存至選件資料庫** 圖示。
 
-   ![](do-not-localize/chlimage_1-4.png)
+   ![將選件儲存至選件資料庫](do-not-localize/chlimage_1-4.png)
 
 1. 輸入選件的名稱，並選取您要新增選件的資料庫，然後按一下或點選核取標籤圖示。
 
@@ -382,7 +384,7 @@ ht-degree: 6%
 1. 選取要顯示資料庫選件的體驗。
 1. 按一下或點選資料庫選件以顯示選件功能表，然後按一下或點選「轉換為內嵌選件」圖示。
 
-   ![](do-not-localize/chlimage_1-5.png)
+   ![轉換為內嵌選件](do-not-localize/chlimage_1-5.png)
 
 #### 編輯程式庫選件 {#editing-a-library-offer}
 
@@ -410,7 +412,7 @@ ht-degree: 6%
 
 對象不可由多個體驗使用。 當體驗對應至對象且對象已對應至其他體驗時，警告符號會出現在體驗旁邊。
 
-![](do-not-localize/chlimage_1-6.png)
+![對應到已對應到其他體驗的受眾時的警告符號](do-not-localize/chlimage_1-6.png)
 
 ### 將體驗與受眾建立關聯(AEM或Adobe Target) {#associating-experiences-with-audiences-aem-or-adobe-target}
 
@@ -577,11 +579,13 @@ ht-degree: 6%
    所有量度都有您可以定義的進階設定。 選取 **進階設定** 以存取這些。 請參閱上一個表格中成功量度計數方式的定義，並參閱 [Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html).
 
    >[!NOTE]
+   >
    您必須至少定義一個目標。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
    >[!NOTE]
+   >
    如果您的量度中遺漏資訊，會在量度周圍加上紅線。
 
 1. 按一下 **新增量度** 以設定其他成功量度。
@@ -589,6 +593,7 @@ ht-degree: 6%
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
    >[!NOTE]
+   >
    您可以按一下或點選三個點，然後按一下或點選，以移除其他目標 **刪除**. AEM要求您至少定義一個目標。
 
 1. 如果您想要進一步控制成功量度的計數方式，請按一下或點選 **進階設定** 以存取這些。
@@ -611,6 +616,7 @@ ht-degree: 6%
 如果您在載入設定檔時頁面上出現非預期的內容，請檢查此清單中每個專案的設定。
 
 >[!NOTE]
+>
 如果您使用A/B測試，模擬體驗時將會根據流量百分比顯示。 這項操作由Adobe Target控制，可能會對作者造成非預期的結果。 (作者活動會與特定設定同步，以便在模擬期間重新評估(_A)。) 作者可能需要重新整理，才能根據其流量設定檢視其他體驗。
 
 若要模擬訪客的體驗，請使用下列工具：
@@ -621,7 +627,7 @@ ht-degree: 6%
 1. 若要切換至預覽模式，請在工具列上按一下或點選 **預覽**.
 1. 在工具列上，按一下或點選Context Hub圖示。
 
-   ![](do-not-localize/chlimage_1-7.png)
+   ![內容中心](do-not-localize/chlimage_1-7.png)
 
 1. 使用Context Hub變更內容屬性。 例如，按一下或點選Persona屬性以選取其他使用者。
 
@@ -637,7 +643,7 @@ ht-degree: 6%
 
 1. 將元件設為目標後，在Target元件中，按一下或點選元件，然後按一下設定圖示(cog)。
 
-   ![](do-not-localize/chlimage_1-8.png)
+   ![Target元件功能表](do-not-localize/chlimage_1-8.png)
 
    AEM會顯示Target元件選項視窗。
 
@@ -645,7 +651,7 @@ ht-degree: 6%
 
 1. 或者，若要以全熒幕模式存取這些設定，請在Target元件選項視窗中，按一下或點選全熒幕圖示。
 
-   ![](do-not-localize/chlimage_1-9.png)
+   ![目標元件選項視窗](do-not-localize/chlimage_1-9.png)
 
    AEM會顯示全熒幕Target元件選項視窗。
 
@@ -704,6 +710,7 @@ ht-degree: 6%
 </table>
 
 >[!NOTE]
+>
 當您選取元件並使其可鎖定目標時，AEM也會取代該元件並插入Adobe Target元件。 (Adobe Target元件不僅會在您手動新增至頁面時使用，也會在鎖定現有元件為目標時使用。)
 
 如果您選取Client Context (client side)作為引擎：

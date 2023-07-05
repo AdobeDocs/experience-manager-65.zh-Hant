@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '902'
 ht-degree: 3%
 
 ---
@@ -40,7 +40,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 以及存取 [主控台工具列的說明](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)，您也可以存取sidekick的協助(使用？ 圖示)編輯頁面時：
 
-![](do-not-localize/sidekick-collapsed-2.png)
+![Sidekick已摺疊](do-not-localize/sidekick-collapsed-2.png)
 
 或透過使用 **說明** 按鈕；這將顯示上下文相關說明。
 
@@ -188,7 +188,7 @@ AEM可讓您檢視哪些頁面連結至您目前正在處理的頁面。
 
 使用傳統UI編輯頁面時，可使用Sidekick底部的圖示來存取各種模式：
 
-![](do-not-localize/chlimage_1-12.png)
+![頁面模式](do-not-localize/chlimage_1-12.png)
 
 Sidekick底部的圖示列可用來切換使用頁面的模式：
 
@@ -209,7 +209,6 @@ Sidekick底部的圖示列可用來切換使用頁面的模式：
 >* [ClientContext](/help/sites-administering/client-context.md)
 >* 網站 — 將開啟網站主控台。
 >* 重新載入 — 將重新整理頁面。
-
 
 ## 鍵盤快速鍵 {#keyboard-shortcuts}
 

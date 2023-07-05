@@ -9,9 +9,9 @@ topic-tags: site-features
 discoiquuid: f170613c-329e-446b-9ac3-350615f1bfb6
 docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1526'
 ht-degree: 1%
 
 ---
@@ -33,11 +33,11 @@ ht-degree: 1%
 
 * 您的 [通知](/help/sites-authoring/inbox.md) 指標（工具列）將遞增：
 
-   ![](do-not-localize/wf-57.png)
+  ![通知指標](do-not-localize/wf-57.png)
 
 * 此專案將列在您的通知中 [收件匣](/help/sites-authoring/inbox.md)：
 
-   ![wf-58](assets/wf-58.png)
+  ![wf-58](assets/wf-58.png)
 
 * 使用頁面編輯器時，狀態列將顯示：
 
@@ -48,18 +48,18 @@ ht-degree: 1%
       * 使用左/右箭頭，導覽各種工作流程的狀態資訊。
       * 按一下/點選實際數字，以開啟所有適用工作流程的下拉式清單，然後選取您要顯示在狀態列中的工作流程。
 
-   ![wf-59](assets/wf-59.png)
+  ![wf-59](assets/wf-59.png)
 
-   >[!NOTE]
-   >
-   >狀態列僅對具有工作流程許可權的使用者可見；例如， `workflow-users` 群組。
-   >
-   >
-   >當目前使用者直接參與工作流程的目前步驟時，會顯示動作。
+  >[!NOTE]
+  >
+  >狀態列僅對具有工作流程許可權的使用者可見；例如， `workflow-users` 群組。
+  >
+  >
+  >當目前使用者直接參與工作流程的目前步驟時，會顯示動作。
 
 * 時間 **時間表** 已為資源開啟，將會顯示工作流程步驟。 當您按一下/點選警報橫幅時，也會顯示可用的動作：
 
-   ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
+  ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
 
 ### 完成參與者步驟 {#completing-a-participant-step}
 
@@ -229,19 +229,19 @@ ht-degree: 1%
 
 * **工作專案** 標籤：
 
-   ![wf-72](assets/wf-72.png)
+  ![wf-72](assets/wf-72.png)
 
 * **工作流程資訊** 標籤：
 
-   ![wf-73](assets/wf-73.png)
+  ![wf-73](assets/wf-73.png)
 
-   若 [工作流程階段](/help/sites-developing/workflows.md#workflow-stages) 已經為模型配置了，您可以根據以下內容檢視進度：
+  若 [工作流程階段](/help/sites-developing/workflows.md#workflow-stages) 已經為模型配置了，您可以根據以下內容檢視進度：
 
-   ![wf-107](assets/wf-107.png)
+  ![wf-107](assets/wf-107.png)
 
 * **註解** 標籤：
 
-   ![wf-75](assets/wf-75.png)
+  ![wf-75](assets/wf-75.png)
 
 您可以透過下列任一方式開啟工作專案詳細資料：
 

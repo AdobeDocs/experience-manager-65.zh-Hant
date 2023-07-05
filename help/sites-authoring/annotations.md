@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
@@ -53,14 +53,13 @@ ht-degree: 0%
 >* [為視訊資產加上註釋](/help/assets/managing-video-assets.md#annotate-video-assets)
 >
 
-
 ### 為元件加上註釋 {#annotating-a-component}
 
 「註釋」模式可讓您在內容上建立、編輯、移動或刪除註釋：
 
 1. 編輯頁面時，您可以使用工具列（右上方）中的圖示來進入附註模式：
 
-   ![](do-not-localize/screen_shot_2018-03-22at110414.png)
+   ![注釋](do-not-localize/screen_shot_2018-03-22at110414.png)
 
    您現在可以檢視任何現有的註解。
 
@@ -83,16 +82,17 @@ ht-degree: 0%
    * 輸入註釋文字。
    * 建立草繪（線條和形狀）以反白元件的某個區域。
 
-      建立草繪時，游標會變成十字線。 您可以繪製多條不同的線條。 草繪線會反映註釋顏色，可以是箭頭、圓圈或橢圓形。
-   ![](do-not-localize/screen_shot_2018-03-22at110640.png)
+     建立草繪時，游標會變成十字線。 您可以繪製多條不同的線條。 草繪線會反映註釋顏色，可以是箭頭、圓圈或橢圓形。
+
+     ![素描](do-not-localize/screen_shot_2018-03-22at110640.png)
 
    * 選擇/變更色彩：
 
-   ![](do-not-localize/chlimage_1-19.png)
+     ![選擇/變更色彩](do-not-localize/chlimage_1-19.png)
 
    * 刪除註解。
 
-   ![](do-not-localize/screen_shot_2018-03-22at110647.png)
+     ![刪除註解](do-not-localize/screen_shot_2018-03-22at110647.png)
 
 1. 您可以按一下/點選註釋對話方塊，關閉對話方塊。 隨即顯示截斷的註釋檢視（第一個字）以及任何草圖：
 
@@ -103,12 +103,12 @@ ht-degree: 0%
    * 按一下/點選文字標籤以開啟附註。 開啟後，您可以檢視全文、進行變更或刪除註釋。
 
       * 不能獨立於註釋刪除草圖。
+
    * 重新定位文字標籤。
    * 按一下/點選草圖線以選取該草圖，並將其拖曳至所需位置。
    * 移動或複製元件
 
       * 任何相關的註釋及其草繪也會移動或複製，而且它們相對於段落的位置將保持不變。
-
 
 1. 若要退出「註釋」模式並返回先前使用的模式，請點選/按一下頂端工具列右側的「註釋」圖示（x符號）。
 

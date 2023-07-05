@@ -12,9 +12,9 @@ discoiquuid: 5d192a48-c86f-4803-bb0d-0411ac7470f5
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '449'
 ht-degree: 11%
 
 ---
@@ -83,7 +83,7 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 1. 在Sites主控台中，選取您要檢視其內容深入分析的頁面。
 1. 在工具列上，按一下Analytics和Recommendations圖示。
 
-   ![](do-not-localize/chlimage_1-14.png)
+   ![Analytics和Recommendations圖示](do-not-localize/chlimage_1-14.png)
 
 ## 頁面編輯器中的Analytics (Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
 

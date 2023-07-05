@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 10466b49-f8bd-4c2c-8106-b0c7ba054989
 docset: aem65
 exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 1. 若要進入設計模式，請開啟頁面進行編輯，並使用Sidekick圖示：
 
-   ![](do-not-localize/chlimage_1.png)
+   ![設計模式](do-not-localize/chlimage_1.png)
 
 1. 按一下 **編輯** 在段落系統(**Par設計**)。
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 1. Sidekick在設計模式中會最小化。 按一下箭頭可以將Sidekick最大化，並返回編輯模式：
 
-   ![](do-not-localize/sidekick-collapsed.png)
+   ![Sidekick已最小化](do-not-localize/sidekick-collapsed.png)
 
 ## 設定元件設計 {#configuring-the-design-of-a-component}
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 1. 若要進入設計模式，請開啟頁面進行編輯，並使用Sidekick圖示：
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![設計模式 — Sidekick](do-not-localize/chlimage_1-1.png)
 
 1. 您可以設定元件設計。
 
@@ -79,4 +79,4 @@ ht-degree: 0%
 
 1. Sidekick在設計模式中會最小化。 按一下箭頭可以將Sidekick最大化，並返回編輯模式：
 
-   ![](do-not-localize/sidekick-collapsed-1.png)
+   ![Sidekick已最小化](do-not-localize/sidekick-collapsed-1.png)

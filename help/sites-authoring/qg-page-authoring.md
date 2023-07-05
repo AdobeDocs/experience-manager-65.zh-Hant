@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1580'
 ht-degree: 5%
 
 ---
@@ -64,7 +64,6 @@ ht-degree: 5%
 >* [編輯頁面時的鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
 >* [主控台的鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)
 >
-
 
 ### 尋找您的頁面 {#finding-your-page}
 
@@ -119,6 +118,7 @@ ht-degree: 5%
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
 
    * 卡片上將覆蓋一個勾號，表示已選取該頁面。
+
    >[!NOTE]
    >
    >進入選取模式後 **選取** 圖示（勾號）將變更為 **取消選取** 圖示（十字形）。
@@ -154,8 +154,9 @@ ht-degree: 5%
       * 選取「元件」標籤( [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser))
       * 將所需元件拖曳至您的頁面。
 
-      可以透過以下方式開啟（和關閉）側面板：
-   ![](do-not-localize/screen_shot_2018-03-21at160738.png)
+     可以透過以下方式開啟（和關閉）側面板：
+
+     ![開啟側面板](do-not-localize/screen_shot_2018-03-21at160738.png)
 
    * [編輯現有元件的內容](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 在頁面上：
 
@@ -163,18 +164,21 @@ ht-degree: 5%
       * 使用點選並按住或按兩下緩慢的方式開啟元件的就地編輯器。 將顯示可用的動作（對於某些元件，這將是一個有限的選擇）。
       * 若要檢視所有可用動作，請使用以下方法進入全熒幕模式：
 
-   ![](do-not-localize/screen_shot_2018-03-21at160706.png)
+     ![全熒幕模式](do-not-localize/screen_shot_2018-03-21at160706.png)
 
    * [設定現有元件的屬性](/help/sites-authoring/editing-content.md#component-edit-dialog)
 
       * 點選或按一下以開啟元件工具列。 使用 **設定** （扳手）圖示以開啟對話方塊。
+
    * [移動元件](/help/sites-authoring/editing-content.md#moving-a-component) 可以：
 
       * 將所需元件拖曳至其新位置。
       * 點選或按一下以開啟元件工具列。 使用 **剪下** 則 **貼上** 圖示視需要顯示。
+
    * [複製（和貼上）](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 元件：
 
       * 點選或按一下以開啟元件工具列。 使用 **複製** 則 **貼上** 圖示視需要而定。
+
    >[!NOTE]
    >
    >您可以 **貼上** 元件放入相同頁面或不同頁面。 如果貼上至剪下/復製作業前已開啟的其他頁面，則需重新整理該頁面。
@@ -182,15 +186,17 @@ ht-degree: 5%
    * [刪除](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 元件：
 
       * 點選或按一下以開啟元件工具列，然後使用 **刪除** 圖示。
+
    * [新增註解](/help/sites-authoring/annotations.md#annotations) 至頁面：
 
       * 選取 **註釋** 模式（語音泡泡圖示）。 使用新增附註 **新增註解** （加號）圖示。 使用右上方的X退出附註模式。
 
-   ![](do-not-localize/screen_shot_2018-03-21at160813.png)
+     ![注釋](do-not-localize/screen_shot_2018-03-21at160813.png)
 
    * [預覽頁面](/help/sites-authoring/editing-content.md#preview-mode) （檢視其顯示在發佈環境中的方式）
 
       * 選取 **預覽** （從工具列）。
+
    * 使用返回編輯模式（或選取其他模式） **編輯** 下拉式選擇器。
 
    >[!NOTE]
@@ -209,17 +215,16 @@ ht-degree: 5%
       * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 適當的資源。
       * 工具列，當 [已選取頁面](#selectiingyourpageforfurtheraction).
 
-   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
+  ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
    1. 將會顯示頁面屬性。 您可以視需要進行更新，然後使用「儲存」來儲存這些專案
-
 
 * 時間 [編輯您的頁面](#editing-your-page-content)：
 
    1. 開啟 **頁面資訊** 功能表。
    1. 選取 **開啟屬性** 以開啟對話方塊來編輯屬性。
 
-   ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
+  ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
 
 ### 發佈頁面（或取消發佈） {#publishing-your-page-or-unpublishing}
 
@@ -233,22 +238,22 @@ ht-degree: 5%
       * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 適當的資源。
       * 工具列，當 [已選取頁面](#selectiingyourpageforfurtheraction) (也可讓您存取 [稍後發佈](/help/sites-authoring/publishing-pages.md#main-pars-title-12))。
 
-   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
+  ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
 * 時間 [編輯您的頁面](#editing-your-page-content)：
 
    1. 開啟 **頁面資訊** 功能表。
    1. 選取 **發佈頁面**.
 
-   ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
+  ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
 * 從主控台取消發佈頁面只能透過「管理出版物 **** 」選項完成，此選項只能在工具列上使用 (不能透過快速動作)。
 
-   此 **取消發佈頁面** 選項仍可透過 **頁面資訊** 功能表。
+  此 **取消發佈頁面** 選項仍可透過 **頁面資訊** 功能表。
 
-   ![screen_shot_2018-03-21at161059](assets/screen_shot_2018-03-21at161059.png)
+  ![screen_shot_2018-03-21at161059](assets/screen_shot_2018-03-21at161059.png)
 
-   另請參閱 [發佈頁面](/help/sites-authoring/publishing-pages.md#unpublishing-pages) 以取得詳細資訊。
+  另請參閱 [發佈頁面](/help/sites-authoring/publishing-pages.md#unpublishing-pages) 以取得詳細資訊。
 
 ### 移動、複製和貼上或刪除您的頁面 {#move-copy-and-paste-or-delete-your-page}
 
@@ -265,12 +270,15 @@ ht-degree: 5%
    * 複製:
 
       * 然後，您需要導覽至新位置並貼上。
+
    * 移動:
 
       * 精靈將會開啟，以收集移動頁面所需的資訊。 請依照熒幕上的指示操作。
+
    * 刪除:
 
       * 系統會要求您確認動作。
+
    >[!NOTE]
    >
    >「刪除」無法當作快速動作使用。
@@ -330,6 +338,7 @@ ht-degree: 5%
    * **還原為此版本**
 
       * 將還原版本。
+
    * **顯示差異**
 
       * 開啟頁面時，會醒目提示（兩個版本之間的）差異。

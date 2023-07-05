@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '1841'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ RTF編輯器提供了一系列功能，包括 [視設定而定](/help/sites-admi
 
 ### 基本字元格式 {#basic-character-formats}
 
-![](do-not-localize/cq55_rte_basicchars.png)
+![字元格式工具列](do-not-localize/cq55_rte_basicchars.png)
 
 您可以在此處將格式套用至您選取（反白顯示）的字元；有些選項也有快捷鍵：
 
@@ -98,7 +98,7 @@ RTF編輯器提供了一系列功能，包括 [視設定而定](/help/sites-admi
 
 ### 剪下、複製、貼上 {#cut-copy-paste}
 
-![](do-not-localize/cq55_rte_cutcopypaste.png)
+![剪下、複製、貼上工具列](do-not-localize/cq55_rte_cutcopypaste.png)
 
 的標準函式 **[!UICONTROL 剪下]** 和 **[!UICONTROL 複製]** 可用。 幾種口味 **[!UICONTROL 貼上]** 提供以滿足不同格式的需求。
 
@@ -112,7 +112,7 @@ RTF編輯器提供了一系列功能，包括 [視設定而定](/help/sites-admi
 
 ### 還原，重做 {#undo-redo}
 
-![](do-not-localize/cq55_rte_undoredo.png)
+![復原，重做工具列](do-not-localize/cq55_rte_undoredo.png)
 
 AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有需要，這些動作可以嚴格順序復原（然後重做）。
 
@@ -126,7 +126,7 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 ### 對齊方式 {#alignment}
 
-![](do-not-localize/cq55_rte_alignment.png)
+![對齊工具列](do-not-localize/cq55_rte_alignment.png)
 
 文字可以靠左、置中或靠右對齊。
 
@@ -134,7 +134,7 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 ### 縮排 {#indentation}
 
-![](do-not-localize/cq55_rte_indent.png)
+![縮排工具列](do-not-localize/cq55_rte_indent.png)
 
 段落的縮排可以增加或減少。 所選段落將縮排，輸入的任何新文字將保留目前的縮排層級。
 
@@ -142,7 +142,7 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 ### 清單 {#lists}
 
-![](do-not-localize/cq55_rte_lists.png)
+![清單工具列](do-not-localize/cq55_rte_lists.png)
 
 專案符號和編號清單都可以在文字中建立。 選取清單型別並開始鍵入或反白要轉換的文字。 在這兩種情況下，換行字元都會開始新的清單專案。
 
@@ -154,11 +154,11 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 ### 連結 {#links}
 
-![](do-not-localize/cq55_rte_links.png)
+![連結工具列](do-not-localize/cq55_rte_links.png)
 
 反白必要文字，然後按一下超連結圖示，會產生指向URL的連結（位於您的網站內或外部位置）：
 
-![](do-not-localize/chlimage_1-9.png)
+![超連結圖示](do-not-localize/chlimage_1-9.png)
 
 對話方塊可讓您指定目標URL，以及是否應在新視窗中開啟。
 
@@ -178,11 +178,11 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 若要中斷連結位置，將游標置於連結文字中的任何位置，然後按一下 [!UICONTROL 取消連結] 圖示：
 
-![](do-not-localize/chlimage_1-10.png)
+![取消連結圖示](do-not-localize/chlimage_1-10.png)
 
 ### 錨點 {#anchors}
 
-![](do-not-localize/cq55_rte_anchor.png)
+![錨點工具列](do-not-localize/cq55_rte_anchor.png)
 
 您可以透過定位游標或選取某些文字，在文字內的任何位置建立錨點。 然後按一下 **錨點** 圖示以開啟對話方塊。
 
@@ -196,7 +196,7 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 ### 尋找和取代 {#find-and-replace}
 
-![](do-not-localize/cq55_rte_findreplace.png)
+![尋找和取代工具列](do-not-localize/cq55_rte_findreplace.png)
 
 AEM同時提供 **尋找** 和 **Replace** （尋找和取代）函式。
 
@@ -222,7 +222,7 @@ AEM同時提供 **尋找** 和 **Replace** （尋找和取代）函式。
 
 ### 拼字檢查 {#spelling-checker}
 
-![](do-not-localize/cq55_rte_spellchecker.png)
+![拼字檢查程式](do-not-localize/cq55_rte_spellchecker.png)
 
 拼字檢查程式會檢查目前元件中的所有文字。
 
@@ -240,15 +240,15 @@ AEM同時提供 **尋找** 和 **Replace** （尋找和取代）函式。
 
 * 作為 **表格** 元件
 
-   ![chlimage_1-105](assets/chlimage_1-105.png)
+  ![表格元件](assets/chlimage_1-105.png)
 
 * 從 **文字** 元件
 
-   ![](do-not-localize/chlimage_1-11.png)
+  ![文字工具列](do-not-localize/chlimage_1-11.png)
 
-   >[!NOTE]
-   >
-   >雖然RTE中已有表格，但建議您使用 **表格** 建立表格時的元件。
+  >[!NOTE]
+  >
+  >雖然RTE中已有表格，但建議您使用 **表格** 建立表格時的元件。
 
 在 **文字** 和 **表格** 元件表格功能可透過在表格內按一下前後關聯選單（通常是按滑鼠右鍵）來使用；例如：
 
@@ -362,7 +362,6 @@ AEM同時提供 **尋找** 和 **Replace** （尋找和取代）函式。
 >* Windows IE：使用Ctrl+按住滑鼠鍵（通常是左鍵）以選取多個儲存格。
 >* Firefox：拖曳指標以選取儲存格範圍。
 
-
 #### 移除表格 {#remove-table}
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
@@ -371,7 +370,7 @@ AEM同時提供 **尋找** 和 **Replace** （尋找和取代）函式。
 
 ### 特殊字元 {#special-characters}
 
-![](do-not-localize/cq55_rte_specialchars.png)
+![特殊字元工具列](do-not-localize/cq55_rte_specialchars.png)
 
 RTF編輯器可使用特殊字元；這些字元可能會因您的安裝而異。
 
@@ -381,7 +380,7 @@ RTF編輯器可使用特殊字元；這些字元可能會因您的安裝而異�
 
 ### 來源編輯模式 {#source-editing-mode}
 
-![](do-not-localize/cq55_rte_sourceedit.png)
+![來源編輯模式工具列](do-not-localize/cq55_rte_sourceedit.png)
 
 來源編輯模式可讓您檢視及編輯元件的基礎HTML。
 

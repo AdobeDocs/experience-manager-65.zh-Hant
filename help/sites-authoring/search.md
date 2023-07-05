@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 4ec15013-f7ab-44d6-8053-ed28b14f95e2
 docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 6%
+source-wordcount: '507'
+ht-degree: 7%
 
 ---
 
@@ -28,7 +28,7 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 
 可從頂端工具列搜尋專案：
 
-![](do-not-localize/chlimage_1-17.png)
+![搜尋](do-not-localize/chlimage_1-17.png)
 
 您可以使用搜尋邊欄來：
 
@@ -61,7 +61,7 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 
 1. 如果您想要進一步向下切入，請選取「邊欄」符號（左上方）以開啟側面板 **篩選和選項**.
 
-   ![](do-not-localize/screen_shot_2018-03-23at101542.png)
+   ![篩選和選項](do-not-localize/screen_shot_2018-03-23at101542.png)
 
    根據資源型別，搜尋將顯示預先定義的搜尋/篩選條件選擇。
 
@@ -80,7 +80,8 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
    >
    >    * 根據您選取的資源型別，例如Assets和Communities條件具有專業化是可以理解的。
    >    * 您的執行個體為 [搜尋Forms](/help/sites-administering/search-forms.md) 可自訂(適用於AEM內的位置)。
-
+   >
+   >
 
    ![screen-shot_2019-03-05at102509](assets/screen-shot_2019-03-05at102509.png)
 
