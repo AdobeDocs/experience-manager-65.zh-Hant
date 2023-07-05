@@ -110,7 +110,7 @@ JSONP存放區與其他存放區類似，但會載入來自其他網域的資訊
 
 >[!NOTE]
 >
->目前這是示範功能，需要仰賴示範使用者設定檔節點上的預先設定資料集。 例如，請參閱：
+>目前這是示範功能，需要仰賴示範使用者設定檔節點上預先設定的資料集。 例如，請參閱：
 >
 >`/home/users/geometrixx/aparker@geometrixx.info/profile` => friends屬性
 
