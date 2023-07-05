@@ -9,10 +9,10 @@ topic-tags: site-features
 discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 86%
+source-wordcount: '846'
+ht-degree: 84%
 
 ---
 
@@ -53,7 +53,7 @@ Launches 可讓您：
 
       * 來源頁面可以取自多個 (獨立的) 分支。
 
-   ![chlimage_1-111](assets/chlimage_1-111.png)
+  ![啟動動作概觀](assets/chlimage_1-111.png)
 
 * 編輯 Launch 設定：
 
@@ -67,32 +67,32 @@ Launches 可讓您：
       * 當準備好發佈時，將 Launch 內容推回 **Target** (來源頁面)。
       * 從來源頁面 (推回後) 發佈內容。
       * 提升所有頁面，或僅提升修改後的頁面。
+
    * 自動 - 這涉及以下項目：
 
       * **Launch** (**上線**) **日期**&#x200B;欄位：這可在建立或編輯 Launch 時設定。
 
       * **生產就緒**&#x200B;標幟：這只能在編輯 Launch 時設定。
       * 如果&#x200B;**生產就緒**&#x200B;標幟已設定，Launch 將於 **Launch** (**上線**) **日期**&#x200B;自動提升至生產頁面。提升後，生產頁面會自動發佈。\
-         如果未設定日期，則該標幟將無效。
-
+        如果未設定日期，則該標幟將無效。
 
 * 並行更新來源頁面和 Launch 頁面：
 
    * 對來源頁面的變更會自動實作在 Launch 副本 (如果設定為繼承，即為 Live Copy)。
    * 可以在不中斷這些自動更新或來源頁面的情況下，對 Launch 副本進行變更。
 
-   ![chlimage_1-112](assets/chlimage_1-112.png)
+  ![更新概觀](assets/chlimage_1-112.png)
 
 * [建立巢狀 Launch](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - Launch 中的 Launch：
 
    * 來源是現有的 Launch。
    * 您可以[將巢狀 Launch](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch) 提升到任何目標，這可以是父 Launch 或頂層來源頁面 (生產)。
 
-   ![chlimage_1-113](assets/chlimage_1-113.png)
+  ![巢狀啟動概述](assets/chlimage_1-113.png)
 
-   >[!CAUTION]
-   >
-   >刪除 Launch 將移除 Launch 本身和所有子系巢狀 Launch。
+  >[!CAUTION]
+  >
+  >刪除 Launch 將移除 Launch 本身和所有子系巢狀 Launch。
 
 >[!NOTE]
 >
@@ -121,8 +121,8 @@ Launches 主控台可提供您 Launch 的概觀，並允許您對列出的 Launc
 1. 開啟&#x200B;**參考**&#x200B;邊欄並選取來源頁面。
 1. 選取 **啟動**，則會列出現有的啟動項：
 
-   ![screen-shot_2019-03-05at121901-1](assets/screen-shot_2019-03-05at121901-1.png)
+   ![參考標籤 — 啟動](assets/screen-shot_2019-03-05at121901-1.png)
 
 1. 點選/按一下適當的 Launch，將顯示可用動作清單：
 
-   ![screen-shot_2019-03-05at121952-1](assets/screen-shot_2019-03-05at121952-1.png)
+   ![選取啟動以顯示可能的動作](assets/screen-shot_2019-03-05at121952-1.png)

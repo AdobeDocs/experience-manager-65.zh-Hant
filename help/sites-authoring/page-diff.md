@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '578'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 兩個頁面的來源會清楚顯示在瀏覽器視窗頂端的標頭列中。
 
-![chlimage_1-109](assets/chlimage_1-109.png)
+![標題中顯示的來源](assets/chlimage_1-109.png)
 
 差異會偵測元件和HTML層級的變更。 已變更的專案會以不同的顏色反白。
 
@@ -78,7 +78,7 @@ ht-degree: 1%
 
 選取的一側會填滿整個視窗，但橫條會保留在頂端，讓您在兩個頁面之間切換。
 
-![chlimage_1-110](assets/chlimage_1-110.png)
+![頂端列可讓您切換頁面](assets/chlimage_1-110.png)
 
 您也可以選擇按一下退出全熒幕圖示來關閉全熒幕檢視。
 

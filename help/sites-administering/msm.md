@@ -10,10 +10,10 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
 exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 31%
+source-wordcount: '2667'
+ht-degree: 30%
 
 ---
 
@@ -45,80 +45,79 @@ MSM和即時副本有許多使用案例，某些情況包括：
 
 * **跨國公司 - 全球公司到本地公司**
 
-   MSM 支援的典型使用案例是在多個跨國同語言網站中重複使用內容。這允許重複使用核心內容，同時允許國家差異。
+  MSM 支援的典型使用案例是在多個跨國同語言網站中重複使用內容。這允許重複使用核心內容，同時允許國家差異。
 
-   例如，We.Retail參考網站範例的英文區段是為美國客戶建立的。 此網站中的大部分內容也可用於其他迎合不同國家/地區和文化的講英語客戶的We.Retail網站。 所有網站的核心內容都保持不變，但可以進行區域性調整。
+  例如，We.Retail參考網站範例的英文區段是為美國客戶建立的。 此網站中的大部分內容也可用於其他迎合不同國家/地區和文化的講英語客戶的We.Retail網站。 所有網站的核心內容都保持不變，但可以進行區域性調整。
 
-   以下結構可用於美國、英國、加拿大和澳洲的網站：
+  以下結構可用於美國、英國、加拿大和澳洲的網站：
 
-   ```xml
-   /content
-       |- we.retail
-           |- language-masters
-               |- en
-       |- we.retail
-           |- us
-               |- en
-       |- we.retail
-           |- gb
-               |- en
-       |- we.retail
-           |- ca
-               |- en
-       |- we.retail
-           |- au
-               |- en
-   ```
+  ```xml
+  /content
+      |- we.retail
+          |- language-masters
+              |- en
+      |- we.retail
+          |- us
+              |- en
+      |- we.retail
+          |- gb
+              |- en
+      |- we.retail
+          |- ca
+              |- en
+      |- we.retail
+          |- au
+              |- en
+  ```
 
-   >[!NOTE]
-   >
-   >MSM 不翻譯內容。它用於建立所需結構和部署內容。
-   >
-   >
-   >另請參閱 [翻譯多語言網站的內容](/help/sites-administering/translation.md) 如果您想要延伸此類範例。
+  >[!NOTE]
+  >
+  >MSM 不翻譯內容。它用於建立所需結構和部署內容。
+  >
+  >
+  >另請參閱 [翻譯多語言網站的內容](/help/sites-administering/translation.md) 如果您想要延伸此類範例。
 
 * **全國 - 總公司到地區分公司**
 
-   或者，擁有經銷商網路的公司可能希望為其個別經銷商提供個別網站，每個網站都是總部所提供之主要網站的變體。 這可能適用於擁有多個區域辦公室的單一公司，或由特許加盟總部和多個地方加盟店組成的全國特許加盟系統。
+  或者，擁有經銷商網路的公司可能希望為其個別經銷商提供個別網站，每個網站都是總部所提供之主要網站的變體。 這可能適用於擁有多個區域辦公室的單一公司，或由特許加盟總部和多個地方加盟店組成的全國特許加盟系統。
 
-   總公司可以提供核心資訊，而區域實體可以加入當地資訊，例如聯絡方式、營業時間和活動。
+  總公司可以提供核心資訊，而區域實體可以加入當地資訊，例如聯絡方式、營業時間和活動。
 
-   ```xml
-   /content
-       |- head-office-Berlin
-       |- branch-Hamburg
-       |- branch-Stuttgart
-       |- branch-Munich
-       |- branch-Frankfurt
-   ```
+  ```xml
+  /content
+      |- head-office-Berlin
+      |- branch-Hamburg
+      |- branch-Stuttgart
+      |- branch-Munich
+      |- branch-Frankfurt
+  ```
 
 * **多個版本**
 
-   或者，您可以使用MSM來建立特定子分支的版本，例如，包含特定產品不同版本的詳細資訊的支援子網站，其中基本資訊保持不變，只需變更更新的功能：
+  或者，您可以使用MSM來建立特定子分支的版本，例如，包含特定產品不同版本的詳細資訊的支援子網站，其中基本資訊保持不變，只需變更更新的功能：
 
-   ```xml
-   /content
-       |- support
-           |- product X
-               |- v5.0
-               |- v4.0
-               |- v3.0
-               |- v2.0
-               |- v1.0
-   ```
+  ```xml
+  /content
+      |- support
+          |- product X
+              |- v5.0
+              |- v4.0
+              |- v3.0
+              |- v2.0
+              |- v1.0
+  ```
 
-   >[!NOTE]
-   >
-   >在這種情況下，總是要詢問是直接複製還是使用即時副本。
-   >
-   >兩者之間會取得平衡：
-   >
-   >  * 需要在多個版本上更新的核心內容量。
-   >
-   >對比：
-   >
-   >  * 需要調整多少個別復本。
-
+  >[!NOTE]
+  >
+  >在這種情況下，總是要詢問是直接複製還是使用即時副本。
+  >
+  >兩者之間會取得平衡：
+  >
+  >  * 需要在多個版本上更新的核心內容量。
+  >
+  >對比：
+  >
+  >  * 需要調整多少個別復本。
 
 ## 從 UI 存取 MSM {#msm-from-the-ui}
 
@@ -304,7 +303,7 @@ MSM Live Copy是特定網站內容的副本，其會維持與原始來源的即�
 
 * 變更可以根據需要[同步](/help/sites-administering/msm-livecopy.md#synchronizing-your-live-copy)。
 
-![chlimage_1-367](assets/chlimage_1-367.png)
+![同步](assets/chlimage_1-367.png)
 
 #### 含非 Live Copy 頁面的 Live Copy {#live-copy-with-non-live-copy-pages}
 
@@ -313,7 +312,7 @@ MSM Live Copy是特定網站內容的副本，其會維持與原始來源的即�
 * 這類資源與來源/藍圖頁面沒有即時關係，並且不同步。
 * 可能會發生 MSM 作為特殊案例處理的情況。例如，當您（或程式）在來源/Blueprint和即時副本分支中建立具有相同位置和名稱的頁面時。 對於此類情況，請參閱 [MSM 推出衝突](/help/sites-administering/msm-rollout-conflicts.md)了解更多資訊。
 
-![chlimage_1-368](assets/chlimage_1-368.png)
+![推出衝突](assets/chlimage_1-368.png)
 
 #### 巢狀 Live Copy {#nested-live-copies}
 
@@ -322,9 +321,9 @@ MSM Live Copy是特定網站內容的副本，其會維持與原始來源的即�
 * 為頂層即時副本觸發的深層轉出可以繼續進入巢狀即時副本（例如，如果觸發器符合）。
 * 來源之間的任何連結都將在即時副本中重寫。
 
-   例如，從第二個到第一個Blueprint的連結將重寫為從巢狀/第二個即時副本到第一個即時副本的連結。
+  例如，從第二個到第一個Blueprint的連結將重寫為從巢狀/第二個即時副本到第一個即時副本的連結。
 
-![chlimage_1-369](assets/chlimage_1-369.png)
+![來源之間的連結](assets/chlimage_1-369.png)
 
 >[!NOTE]
 >
@@ -350,13 +349,13 @@ MSM Live Copy是特定網站內容的副本，其會維持與原始來源的即�
 
 * [建立Blueprint設定](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)
 
-   此設定會（事前）定義要用來建立即時副本的頁面。
+  此設定會（事前）定義要用來建立即時副本的頁面。
 
 * [建立頁面的即時副本](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
 
-   用來建立即時副本的頁面（來源頁面）為Blueprint頁面。
+  用來建立即時副本的頁面（來源頁面）為Blueprint頁面。
 
-   Blueprint設定是否可參照來源頁面。
+  Blueprint設定是否可參照來源頁面。
 
 ### 推出和同步 {#rollout-and-synchronize}
 
@@ -365,15 +364,15 @@ MSM Live Copy是特定網站內容的副本，其會維持與原始來源的即�
 * 可以定義[推出設定](#rollout-configurations)，以便特定的[事件](/help/sites-administering/msm-sync.md#rollout-triggers)可以促使推出自動發生。
 * 編寫Blueprint頁面時，您可以使用 [轉出](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) 將變更推送至即時副本的命令。
 
-   **可在藍圖設定所參考的藍圖頁面上使用推出**&#x200B;命令。
+  **可在藍圖設定所參考的藍圖頁面上使用推出**&#x200B;命令。
 
-   ![chlimage_1-370](assets/chlimage_1-370.png)
+  ![推出](assets/chlimage_1-370.png)
 
 * 在製作即時副本頁面時，您可以使用 [同步](/help/sites-administering/msm-livecopy.md#synchronizing-a-live-copy) 將變更從來源提取至即時副本的命令。
 
-   此 **同步** 命令一律可用於即時副本頁面（無論來源/blueprint頁面是否由blueprint設定包含）。
+  此 **同步** 命令一律可用於即時副本頁面（無論來源/blueprint頁面是否由blueprint設定包含）。
 
-   ![chlimage_1-371](assets/chlimage_1-371.png)
+  ![同步](assets/chlimage_1-371.png)
 
 ### 推出設定 {#rollout-configurations}
 
@@ -381,15 +380,15 @@ MSM Live Copy是特定網站內容的副本，其會維持與原始來源的即�
 
 * **觸發器**
 
-   觸發器是引發即時動作同步化的事件，例如來源頁面的啟動。 MSM 定義了您可以使用的觸發器。
+  觸發器是引發即時動作同步化的事件，例如來源頁面的啟動。 MSM 定義了您可以使用的觸發器。
 
 * **同步動作**
 
-   在即時副本上執行，以使其與來源同步。 範例動作包括複製內容、排序子節點和啟動即時副本頁面。 MSM提供許多同步動作。
+  在即時副本上執行，以使其與來源同步。 範例動作包括複製內容、排序子節點和啟動即時副本頁面。 MSM提供許多同步動作。
 
-   >[!NOTE]
-   >
-   >您可以使用 Java API. 為您的執行個體建立自訂動作。
+  >[!NOTE]
+  >
+  >您可以使用 Java API. 為您的執行個體建立自訂動作。
 
 轉出設定可以重複使用，以便多個即時副本可以使用相同的轉出設定。 標準安裝中包含多個[推出設定](/help/sites-administering/msm-sync.md#installed-rollout-configurations)。
 
@@ -440,10 +439,10 @@ MSM Live Copy是特定網站內容的副本，其會維持與原始來源的即�
 MSM提供工具，讓您的實作可適應共用內容時可能存在的特殊複雜性：
 
 * **自訂轉出設定**
-   [建立轉出設定](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) 當安裝的轉出設定不符合您的需求時。 您可以使用任何可用的推出觸發器和同步動作。
+  [建立轉出設定](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) 當安裝的轉出設定不符合您的需求時。 您可以使用任何可用的推出觸發器和同步動作。
 
 * **自訂同步動作**
-   [建立自訂同步動作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) 安裝的動作不符合您的特定應用程式需求時。 MSM提供Java API來建立自訂同步動作。
+  [建立自訂同步動作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) 安裝的動作不符合您的特定應用程式需求時。 MSM提供Java API來建立自訂同步動作。
 
 ## 最佳做法 {#best-practices}
 

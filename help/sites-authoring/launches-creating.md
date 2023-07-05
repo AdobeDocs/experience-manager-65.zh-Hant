@@ -9,10 +9,10 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: 7f595bec8ea138d5a73a17d0548320a31544dcd1
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 16%
+source-wordcount: '1040'
+ht-degree: 14%
 
 ---
 
@@ -41,6 +41,7 @@ ht-degree: 16%
    * **Launch**:
 
       1. 選取 **建立啟動項** 以開啟精靈。
+
    * **Sites**:
 
       1. 選取 **建立** 以開啟選取方塊。
@@ -59,7 +60,7 @@ ht-degree: 16%
 
    視需要重複。
 
-   ![chlimage_1-225](assets/chlimage_1-225.png)
+   ![選取來源並新增頁面](assets/chlimage_1-225.png)
 
    >[!NOTE]
    >
@@ -77,7 +78,7 @@ ht-degree: 16%
 
    繼續進行 **下一個**.
 
-   ![chlimage_1-226](assets/chlimage_1-226.png)
+   ![指定是否包含頁面](assets/chlimage_1-226.png)
 
 1. 在 **屬性** 您可以指定的精靈步驟：
 
@@ -86,11 +87,11 @@ ht-degree: 16%
    * **使用新範本取代頁面**：請參閱 [使用新範本建立啟動項](#create-launch-with-new-template) 以取得更多詳細資料。
    * **繼承來源頁面即時資料**：選取此選項，可在來源頁面變更時自動更新啟動頁面的內容。 此選項可讓啟動成為 [即時副本](/help/sites-administering/msm.md).
 
-      依預設，會選取此選項。
+     依預設，會選取此選項。
 
    * **啟動日期**：啟動副本的啟用日期和時間(取決於 **生產就緒** 標幟；請參閱 [啟動 — 事件順序](/help/sites-authoring/launches.md#launches-the-order-of-events))。
 
-   ![chlimage_1-227](assets/chlimage_1-227.png)
+   ![指定屬性](assets/chlimage_1-227.png)
 
 1. 使用 **建立** 以完成程式並建立您的新啟動項。 確認對話方塊會詢問您是否要立即開啟啟動項。
 
@@ -101,22 +102,20 @@ ht-degree: 16%
 
 ### 使用新範本建立啟動項 {#create-launch-with-new-template}
 
-時間 [建立啟動](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) 您可以選取是否使用新範本：
-
-**使用新範本來取代頁面**
+時間 [建立啟動](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) 您可以選取是否要將新範本與選項一起使用： **使用新範本取代頁面**
 
 >[!CAUTION]
 >
 >此選項僅適用於從建立啟動項 **網站** 主控台。 從建立啟動時，無法使用 **啟動** 主控台。
 
-![chlimage_1-228](assets/chlimage_1-228.png)
+![使用新範本取代頁面](assets/chlimage_1-228.png)
 
 選取此選項將：
 
 * 更新其他可用選項，
 * 包括一個新步驟，您可在其中選取所需的範本。
 
-![chlimage_1-229](assets/chlimage_1-229.png)
+![選取範本](assets/chlimage_1-229.png)
 
 >[!CAUTION]
 >
@@ -139,11 +138,11 @@ ht-degree: 16%
 1. 在 **啟動** 主控台選取 **建立**.
 1. 選取「 **新增頁面**」，然後在篩選條件中指定以導覽至啟 `/content/launches` 動分支。選擇所需的啟動並使用「選擇 **」確認**:
 
-   ![chlimage_1-230](assets/chlimage_1-230.png)
+   ![選取啟動](assets/chlimage_1-230.png)
 
 1. 繼續進行 **下一個** 並完成 **屬性** 和任何其他啟動項一樣。
 
-   ![chlimage_1-231](assets/chlimage_1-231.png)
+   ![指定屬性](assets/chlimage_1-231.png)
 
 #### 建立巢狀啟動 — Sites主控台 {#creating-a-nested-launch-sites-console}
 

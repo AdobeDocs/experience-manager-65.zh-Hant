@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ae4a6e97-c0d7-472d-a25f-b89b1abf4df3
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -80,4 +80,4 @@ ht-degree: 0%
 1. 導覽至OSGi Web主控台，網址為 **https://&lt;server>：&lt;port>/system/console/configMgr。**
 1. 尋找 **Day CQ連結外部化器** 並輸入作者節點的網域。
 
-   ![chlimage_1-120](assets/aem-externalizer-01.png)
+   ![Day CQ連結外部化器](assets/aem-externalizer-01.png)

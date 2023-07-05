@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '348'
 ht-degree: 4%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 4%
 
 下圖說明主要概念如何相交（但未顯示所涉及的所有層級/元素）：
 
-![chlimage_1-71](assets/chlimage_1-71a.png)
+![顯示MSM和翻譯主要概念的圖表](assets/chlimage_1-71a.png)
 
 >[!NOTE]
 >
@@ -61,9 +61,8 @@ ht-degree: 4%
 >對於所有使用案例，建議閱讀以下最佳實務：
 >
 >* [MSM的最佳作法](/help/sites-administering/msm-best-practices.md)；尤其是：
-   >
-   >   * [建立網站](/help/sites-administering/msm-best-practices.md#create-site)
-   >   * [MSM和多語言網站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+>
+>   * [建立網站](/help/sites-administering/msm-best-practices.md#create-site)
+>   * [MSM和多語言網站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
 >* [翻譯最佳實務](/help/sites-administering/tc-bp.md)
-

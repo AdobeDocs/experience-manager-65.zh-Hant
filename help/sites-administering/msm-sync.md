@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 96aa75dec7433aa3961944fa57a80c4719316ba5
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '2696'
+source-wordcount: '2702'
 ht-degree: 4%
 
 ---
@@ -322,7 +322,7 @@ ht-degree: 4%
 
 依預設，轉出時排除符合下列規則運算式的屬性（即未更新）：
 
-![chlimage_1](assets/chlimage_1.png)
+![CQ MSM內容更新動作](assets/chlimage_1.png)
 
 您可以視需要變更定義排除清單的運算式。
 
@@ -384,7 +384,7 @@ MSM可讓您指定一般使用的轉出設定集，並視需要覆寫特定即�
 
    此 **設定** 區段會顯示頁面繼承的轉出設定。
 
-   ![chlimage_1-1](assets/chlimage_1-1.png)
+   ![設定](assets/chlimage_1-1.png)
 
 1. 如有需要，請調整 **即時副本繼承** 標幟。 如果勾選，即時副本設定將在所有子項上都有效。
 
@@ -392,7 +392,7 @@ MSM可讓您指定一般使用的轉出設定集，並視需要覆寫特定即�
 
    選取的轉出設定會顯示在下拉式清單下方。
 
-   ![chlimage_1-2](assets/chlimage_1-2.png)
+   ![選取的轉出設定](assets/chlimage_1-2.png)
 
 1. 按一下或點選 **儲存**.
 
@@ -413,8 +413,7 @@ MSM可讓您指定一般使用的轉出設定集，並視需要覆寫特定即�
 指定要作為系統預設值的轉出組態。 若要指定預設值，請設定OSGi服務：
 
 * **Day CQ WCM即時關係管理員**
-服務PID為 
-`com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
+服務PID為 `com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
 
 使用下列任一專案設定服務： [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [存放庫節點](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository).
 

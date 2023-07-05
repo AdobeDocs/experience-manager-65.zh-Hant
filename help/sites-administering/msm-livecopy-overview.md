@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 29%
+source-wordcount: '553'
+ht-degree: 27%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 29%
 1. 在 **網站** 主控台， [導覽至您的Blueprint頁面並加以選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 1. 開啟 **[引用](/help/sites-authoring/basic-handling.md#references)** 面板並選取 **即時副本**.
 
-   ![chlimage_1-359](assets/chlimage_1-359.png)
+   ![引用面板 — 即時副本](assets/chlimage_1-359.png)
 
    >[!NOTE]
    >
@@ -60,7 +60,7 @@ ht-degree: 29%
 1. 開啟相關藍圖頁面的&#x200B;**屬性**。
 1. 開啟&#x200B;**藍圖**&#x200B;索引標籤 - **Live Copy 概觀** 選項將顯示在頂端工具列中：
 
-   ![chlimage_1-360](assets/chlimage_1-360.png)
+   ![Blueprint標籤 — 即時副本概觀](assets/chlimage_1-360.png)
 
 1. 選取 **即時副本概觀** 以顯示和使用與目前Blueprint相關之所有即時副本的概觀。
 
@@ -81,7 +81,7 @@ ht-degree: 29%
 
 選擇藍圖頁面時，可以執行以下動作：
 
-![chlimage_1-361](assets/chlimage_1-361.png)
+![已選取Blueprint — 可用的動作](assets/chlimage_1-361.png)
 
 * 編輯
 
@@ -95,7 +95,7 @@ ht-degree: 29%
 
 當您選取即時副本頁面時，以下動作可供使用：
 
-![chlimage_1-362](assets/chlimage_1-362.png)
+![即時副本頁面已選取 — 可用動作](assets/chlimage_1-362.png)
 
 * 編輯
 
@@ -136,10 +136,10 @@ ht-degree: 29%
 
 此標籤提供有關Blueprint與即時副本之間關係狀態的詳細資訊：
 
-![chlimage_1-363](assets/chlimage_1-363.png)
+![關係狀態資訊](assets/chlimage_1-363.png)
 
 ### 即時副本資訊 {#live-copy-information}
 
 此索引標籤可讓您檢視和編輯即時副本設定：
 
-![chlimage_1-364](assets/chlimage_1-364.png)
+![即時副本資訊](assets/chlimage_1-364.png)

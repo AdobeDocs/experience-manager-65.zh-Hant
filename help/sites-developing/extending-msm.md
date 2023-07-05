@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '2575'
+source-wordcount: '2583'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,6 @@ ht-degree: 1%
 >* [多站點管理員Blueprint設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-blueprint-configurations)
 >* [多網站管理員轉出設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-rollout-configurations)
 
-
 >[!CAUTION]
 >
 >多網站管理員及其API在製作網站時使用，因此僅適用於製作環境。
@@ -50,13 +49,13 @@ ht-degree: 1%
 
 主要的MSM API物件會以下列方式互動(另請參閱 [使用的辭彙](/help/sites-administering/msm.md#terms-used))：
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![主要MSM API物件](assets/chlimage_1-73.png)
 
 * **`Blueprint`**
 
-   A `Blueprint` （如所示） [Blueprint設定](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations))指定即時副本可以繼承內容的頁面。
+  A `Blueprint` （如所示） [Blueprint設定](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations))指定即時副本可以繼承內容的頁面。
 
-   ![chlimage_1-74](assets/chlimage_1-74.png)
+  ![藍圖](assets/chlimage_1-74.png)
 
    * 使用Blueprint設定( `Blueprint`)為選用，但：
 
@@ -66,7 +65,7 @@ ht-degree: 1%
 
 * **`LiveRelationship`**
 
-   此 `LiveRelationship` 指定即時副本分支中的資源與其對等來源/Blueprint資源之間的連線（關係）。
+  此 `LiveRelationship` 指定即時副本分支中的資源與其對等來源/Blueprint資源之間的連線（關係）。
 
    * 實現繼承和轉出時會使用這些關係。
    * `LiveRelationship` 物件提供轉出設定的存取（參照） ( `RolloutConfig`)， `LiveCopy`、和 `LiveStatus` 與關係相關的物件。
@@ -75,7 +74,7 @@ ht-degree: 1%
 
 * **`LiveCopy`**
 
-   `LiveCopy` 保留關係的設定詳細資料( `LiveRelationship`)，位於即時副本資源與其來源/Blueprint資源之間。
+  `LiveCopy` 保留關係的設定詳細資料( `LiveRelationship`)，位於即時副本資源與其來源/Blueprint資源之間。
 
    * 使用 `LiveCopy` 類別以存取頁面的路徑、來源/Blueprint頁面的路徑、轉出設定以及子頁面是否也包含在 `LiveCopy`.
 
@@ -83,21 +82,21 @@ ht-degree: 1%
 
 * **`LiveStatus`**
 
-   `LiveStatus` 物件可讓您存取的執行階段狀態 `LiveRelationship`. 用於查詢即時副本的同步狀態。
+  `LiveStatus` 物件可讓您存取的執行階段狀態 `LiveRelationship`. 用於查詢即時副本的同步狀態。
 
 * **`LiveAction`**
 
-   A `LiveAction` 是在轉出涉及的每個資源上執行的動作。
+  A `LiveAction` 是在轉出涉及的每個資源上執行的動作。
 
    * LiveActions僅由RolloutConfigs產生。
 
 * **`LiveActionFactory`**
 
-   建立 `LiveAction` 物件已指定 `LiveAction` 設定。 設定會儲存為存放庫中的資源。
+  建立 `LiveAction` 物件已指定 `LiveAction` 設定。 設定會儲存為存放庫中的資源。
 
 * **`RolloutConfig`**
 
-   此 `RolloutConfig` 儲存清單 `LiveActions`，以便在觸發時使用。 此 `LiveCopy` 繼承 `RolloutConfig` 而結果會顯示在 `LiveRelationship`.
+  此 `RolloutConfig` 儲存清單 `LiveActions`，以便在觸發時使用。 此 `LiveCopy` 繼承 `RolloutConfig` 而結果會顯示在 `LiveRelationship`.
 
    * 第一次設定即時副本也會使用RolloutConfig （會觸發LiveActions）。
 
@@ -105,8 +104,8 @@ ht-degree: 1%
 
 建立要與轉出設定搭配使用的自訂同步動作。 建立同步化動作，當 [已安裝的動作](/help/sites-administering/msm-sync.md#installed-synchronization-actions) 不符合您的特定應用程式需求。 若要這麼做，請建立兩個類別：
 
-* 的實作 [ `com.day.cq.wcm.msm.api.LiveAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveAction.html) 執行此動作的介面。
-* 實作的OSGI元件 [ `com.day.cq.wcm.msm.api.LiveActionFactory`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) 介面並建立您的執行個體 `LiveAction` 類別。
+* 的實作 [`com.day.cq.wcm.msm.api.LiveAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveAction.html) 執行此動作的介面。
+* 實作的OSGI元件 [`com.day.cq.wcm.msm.api.LiveActionFactory`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) 介面並建立您的執行個體 `LiveAction` 類別。
 
 此 `LiveActionFactory` 建立以下專案的例項： `LiveAction` 指定設定的類別：
 
@@ -147,9 +146,9 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 下列物件是作為 `execute` 方法 `LiveAction` 物件：
 
-* A [ `Resource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html) 代表即時副本來源的物件。
+* A [`Resource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html) 代表即時副本來源的物件。
 * A `Resource` 代表即時副本目標的物件。
-* 此 [ `LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) 即時副本的物件。
+* 此 [`LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) 即時副本的物件。
 * 此 `autoSave` 值會指出您的 `LiveAction` 應該會儲存對存放庫所做的變更。
 
 * 重設值表示轉出重設模式。
@@ -166,7 +165,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 >[!NOTE]
 >
->此 `Resource` 引數可以是 `null` 或 `Resources` 不適應的物件 `Node` 物件，例如 [ `NonExistingResource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/NonExistingResource.html) 物件。
+>此 `Resource` 引數可以是 `null` 或 `Resources` 不適應的物件 `Node` 物件，例如 [`NonExistingResource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/NonExistingResource.html) 物件。
 
 ## 建立新的轉出設定 {#creating-a-new-rollout-configuration}
 
@@ -205,7 +204,6 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
    >* 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
    >* 進行任何變更 `/apps`
 
-
 1. 在此底下 **建立** 具有下列屬性的節點：
 
    * **名稱**：轉出設定的節點名稱。 md#installed-synchronization-actions)，例如 `contentCopy` 或 `workflow`.
@@ -213,17 +211,14 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. 將下列屬性新增至此節點：
    * **名稱**: `jcr:title`
-
-      **型別**： `String`
-      **值**：將顯示在UI中的識別標題。
+     **型別**： `String`
+     **值**：將顯示在UI中的識別標題。
    * **名稱**: `jcr:description`
-
-      **型別**： `String`
-      **值**：選用的說明。
+     **型別**： `String`
+     **值**：選用的說明。
    * **名稱**: `cq:trigger`
-
-      **型別**： `String`
-      **值**：此 [轉出觸發器](/help/sites-administering/msm-sync.md#rollout-triggers) 以利使用。 從下列專案選取：
+     **型別**： `String`
+     **值**：此 [轉出觸發器](/help/sites-administering/msm-sync.md#rollout-triggers) 以利使用。 從下列專案選取：
       * `rollout`
       * `modification`
       * `publish`
@@ -639,7 +634,7 @@ MSM會使用儲存的語言和國家/地區代碼清單，來判斷與頁面語�
 * 此 `country` 節點的屬性會儲存程式碼所在國家/地區的全名。
 * 當節點名稱僅包含語言代碼(例如 `en`)，則country屬性為 `*`，以及其他 `defaultCountry` 屬性會儲存language-country的程式碼，以指出要使用的國家/地區。
 
-![chlimage_1-76](assets/chlimage_1-76.png)
+![語言定義](assets/chlimage_1-76.png)
 
 若要修改語言，請執行下列動作：
 
@@ -648,7 +643,7 @@ MSM會使用儲存的語言和國家/地區代碼清單，來判斷與頁面語�
 
    為新資料夾命名 `wcm`.
 
-1. 重複上一步驟以建立 `/apps/wcm/core` 資料夾樹狀結構。 建立型別的節點 `sling:Folder` 在 `core` 已呼叫 `resources`. <!-- ![chlimage_1-77](assets/chlimage_1-77.png) -->
+1. 重複上一步驟以建立 `/apps/wcm/core` 資料夾樹狀結構。 建立型別的節點 `sling:Folder` 在 `core` 已呼叫 `resources`. <!-- ![Resources](assets/chlimage_1-77.png) -->
 
 1. 以滑鼠右鍵按一下 `/libs/wcm/core/resources/languages` 節點並按一下 **複製**.
 1. 以滑鼠右鍵按一下 `/apps/wcm/core/resources` 資料夾並按一下 **貼上**. 視需要修改子節點。
@@ -656,7 +651,7 @@ MSM會使用儲存的語言和國家/地區代碼清單，來判斷與頁面語�
 1. 按一下 **工具**， **作業** 則 **網頁主控台**. 從此主控台按一下 **osgi**，則 **設定**.
 1. 找到並按一下 **Day CQ WCM語言管理員**，並變更的值 **語言清單** 至 `/apps/wcm/core/resources/languages`，然後按一下 **儲存**.
 
-   ![chlimage_1-78](assets/chlimage_1-78.png)
+   ![Day CQ WCM語言管理員](assets/chlimage_1-78.png)
 
 ## 在頁面屬性上設定MSM鎖定（觸控式UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
@@ -693,7 +688,7 @@ MSM會使用儲存的語言和國家/地區代碼清單，來判斷與頁面語�
       * **型別**： `String`
 
       * **值**：保留考量中屬性的名稱（且相當於屬性的值） `name`；例如，請參閱
-         `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
+        `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 時間 `cq-msm-lockable` 已定義，中斷/關閉鏈結將以下列方式與MSM互動：
 
@@ -702,12 +697,12 @@ MSM會使用儲存的語言和國家/地區代碼清單，來判斷與頁面語�
    * **相對** (例如： `myProperty` 或 `./myProperty`)
 
       * 它會從新增和移除屬性 `cq:propertyInheritanceCancelled`.
+
    * **絕對** (例如： `/image`)
 
       * 中斷鏈結將會透過新增來取消繼承 `cq:LiveSyncCancelled` mixin至 `./image` 和設定 `cq:isCancelledForChildren` 至 `true`.
 
       * 關閉鏈結將會回覆繼承。
-
 
 >[!NOTE]
 >

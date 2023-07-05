@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
 docset: aem65
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 24%
+source-wordcount: '263'
+ht-degree: 25%
 
 ---
 
@@ -42,35 +42,37 @@ ht-degree: 24%
 
 * **屬性**
 
-   ![screen_shot_2018-03-27at165847](assets/screen_shot_2018-03-27at165847.png)
+  ![screen_shot_2018-03-27at165847](assets/screen_shot_2018-03-27at165847.png)
 
-   在「屬性」標籤上，您可以：
+  在「屬性」標籤上，您可以：
 
    * 檢視元件的一般屬性。
    * 檢視 [圖示或縮寫已定義](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) 用於元件。
 
       * 按一下圖示的來源會前往該元件。
+
    * 檢視 **資源型別** 和 **資源超級型別** （如果已定義）。
 
       * 按一下「資源超級型別」即可前往該元件。
-   >[!NOTE]
-   >
-   >因為 `/apps` 在執行階段不可編輯，元件主控台為唯讀。
+
+  >[!NOTE]
+  >
+  >因為 `/apps` 在執行階段不可編輯，元件主控台為唯讀。
 
 * **原則**
 
-   ![chlimage_1-169](assets/chlimage_1-169.png)
+  ![原則](assets/chlimage_1-169.png)
 
 * **即時使用情況**
 
-   ![chlimage_1-170](assets/chlimage_1-170.png)
+  ![即時使用情況](assets/chlimage_1-170.png)
 
-   >[!CAUTION]
-   >
-   >由於為此檢視收集之資訊的性質，它可能需要一段時間才能整理/顯示。
+  >[!CAUTION]
+  >
+  >由於為此檢視收集之資訊的性質，它可能需要一段時間才能整理/顯示。
 
 * **文件**
 
-   如果開發人員已提供 [元件的檔案](/help/sites-developing/developing-components.md#documenting-your-component)，它會顯示在 **檔案** 標籤。 如果沒有可用的檔案， **檔案** 索引標籤不會顯示。
+  如果開發人員已提供 [元件的檔案](/help/sites-developing/developing-components.md#documenting-your-component)，它會顯示在 **檔案** 標籤。 如果沒有可用的檔案， **檔案** 索引標籤不會顯示。
 
-   ![chlimage_1-171](assets/chlimage_1-171.png)
+  ![文件](assets/chlimage_1-171.png)
