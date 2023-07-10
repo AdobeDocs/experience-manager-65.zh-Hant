@@ -5,9 +5,9 @@ description: 如何部署AEM Communities
 seo-description: How to deploy AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1755'
 ht-degree: 1%
 
 ---
@@ -53,27 +53,27 @@ ht-degree: 1%
       * [安裝及設定MongoDB](/help/communities/msrp.md#mongodb-configuration)
       * [設定Solr](/help/communities/solr.md)
       * [選取MSRP](/help/communities/srp-config.md)
+
    * 如果關聯式資料庫SRP [(DSRP)](/help/communities/dsrp.md)
 
       * [安裝適用於MySQL的JDBC驅動程式](#jdbc-driver-for-mysql)
       * [安裝及設定MySQL for DSRP](/help/communities/dsrp-mysql.md)
       * [設定Solr](/help/communities/solr.md)
       * [選取DSRP](/help/communities/srp-config.md)
+
    * 如果AdobeSRP [(ASRP)](/help/communities/asrp.md)
 
       * 請與您的客戶代表合作以進行布建。
       * [選取ASRP](/help/communities/srp-config.md)
+
    * 若為JCR SRP [(JSRP)](/help/communities/jsrp.md)
 
       * 不是共用的UGC存放區：
 
          * 絕不會復寫UGC。
          * UGC只顯示在輸入它的AEM執行個體或叢集上。
+
       * 預設為JSRP
-
-
-
-
 
 
 ## 最新版本 {#latest-releases}
@@ -124,7 +124,7 @@ AEM 6.5 Communities GA包含Communities套件。 瞭解AEM 6.5的更新 [Communi
 
 #### 範例：已安裝MySQL聯結器套件組合 {#example-installed-mysql-connector-bundle}
 
-![](../assets/mysql-connector.png)
+![Adobe Experience Manager Web主控台MySQL聯結器套裝](../assets/mysql-connector.png)
 
 ### AEM進階MLS {#aem-advanced-mls}
 
@@ -186,7 +186,7 @@ AEM 6.5 Communities GA包含Communities套件。 瞭解AEM 6.5的更新 [Communi
 
 因此，有必要 **編輯所有次要發佈執行個體的設定** 取消核取 **`Primary Publisher`** 核取方塊。
 
-![](../assets/primary-publisher.png)
+![顯示[主要發行者]核取方塊的[AEM Communities發行者組態]對話方塊](../assets/primary-publisher.png)
 
 對於發佈伺服器陣列中的所有其他（次要）發佈執行個體：
 
@@ -234,7 +234,7 @@ AEM 6.5 Communities GA包含Communities套件。 瞭解AEM 6.5的更新 [Communi
 
 #### 反向復寫代理程式（反向發佈） {#reverse-replication-agent-publish-reverse}
 
-![](../assets/reverse-replication-agent.png)
+![反向復寫代理程式（發佈回覆）顯示其已開啟或啟用。](../assets/reverse-replication-agent.png)
 
 ### 作者上的通道服務 {#tunnel-service-on-author}
 
@@ -256,7 +256,7 @@ AEM 6.5 Communities GA包含Communities套件。 瞭解AEM 6.5的更新 [Communi
 * 選取 **啟用** 核取方塊
 * 選取 **儲存**
 
-![](../assets/tunnel-service.png)
+![AEM Communities Publish Tunnel Service顯示「啟用」核取方塊，已選取或已核取。](../assets/tunnel-service.png)
 
 ### 復寫加密金鑰 {#replicate-the-crypto-key}
 
@@ -270,25 +270,25 @@ AEM Communities有兩項功能需要所有AEM伺服器執行個體使用相同�
 
    * 找到 `com.adobe.granite.crypto.file` 本機檔案系統中的組合
 
-      例如，
+     例如，
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
       * 此 `bundle.info` 檔案將識別該組合
+
    * 導覽至資料夾，例如，
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+
    * 複製hmac和主要節點檔案。
-
-
 
 * 針對每個目標AEM執行個體
 
    * 導覽至資料夾，例如，
 
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+
    * 貼上先前複製的2個檔案
    * 必須 [重新整理Granite加密套件組合](#refresh-the-granite-crypto-bundle) 目標AEM執行個體是否目前正在執行。
-
 
 >[!CAUTION]
 >
@@ -315,7 +315,7 @@ AEM Communities有兩項功能需要所有AEM伺服器執行個體使用相同�
 
 * [重新整理Granite加密套件組合](#refresh-the-granite-crypto-bundle)
 
-![](../assets/replicare-repository.png)
+![CRXDE Lite在左側面板上顯示/etc/key路徑，並在右下角面板中選取Replication索引標籤。](../assets/replicare-repository.png)
 
 #### 重新整理Granite加密套件組合 {#refresh-the-granite-crypto-bundle}
 
@@ -326,10 +326,10 @@ AEM Communities有兩項功能需要所有AEM伺服器執行個體使用相同�
 * 尋找 `Adobe Granite Crypto Support` 套件組合(com.adobe.granite.crypto)
 * 選取 **重新整理**
 
-![](../assets/refresh-granite-bundle.png)
+![正在重新整理AdobeGranite加密支援組合。](../assets/refresh-granite-bundle.png)
 
 * 過了一會兒， **成功** 對話方塊應該會出現：
-   `Operation completed successfully.`
+  `Operation completed successfully.`
 
 ### Apache HTTP Server {#apache-http-server}
 

@@ -5,7 +5,7 @@ role: Admin
 feature: Integrations
 exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
 hide: true
-source-git-commit: 39930967e2f423b7fbbc79bcb85f78d15809e97d
+source-git-commit: 6f01f5725ed2b0533756830c1a5e55b7464708f6
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 4%
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets-view/integrations/workfront-connector-install.html?lang=en) |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 在中擁有管理員存取許可權的使用者 [!DNL Adobe Experience Manager] 安裝增強型聯結器。 安裝之前，請先檢閱平台支援及其他 [聯結器的先決條件](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).

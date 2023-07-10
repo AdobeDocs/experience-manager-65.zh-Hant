@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1558'
 ht-degree: 5%
 
 ---
@@ -40,11 +40,11 @@ ht-degree: 5%
 
 * **建立**
 
-   * 此按鈕可用於許多主控台 — 顯示的選項與內容相關，因此可根據情境而有所不同。
+   * 此按鈕可用於許多主控台 — 顯示的選項會區分大小寫，因此會根據情況而有所不同。
 
 * 在資料夾中重新排序頁面
 
-   * 這可以在以下位置完成： [清單檢視](/help/sites-authoring/basic-handling.md#list-view). 變更將會套用並在其他檢視中可見。
+   * 這可以在以下位置完成： [清單檢視](/help/sites-authoring/basic-handling.md#list-view). 變更會套用並顯示在其他檢視中。
 
 #### 頁面製作 {#page-authoring}
 
@@ -59,7 +59,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->有許多鍵盤快速鍵可讓撰寫體驗更輕鬆。
+>有數種鍵盤快速鍵可讓您更輕鬆進行撰寫體驗。
 >
 >* [編輯頁面時的鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
 >* [主控台的鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md)
@@ -69,7 +69,7 @@ ht-degree: 5%
 
 尋找頁面有多種方式；您可以導覽及/或搜尋：
 
-1. 開啟 **網站** 主控台(使用 **網站** 中的選項 [全域導覽](/help/sites-authoring/basic-handling.md#global-navigation)  — 當您選取Adobe Experience Manager連結（左上方）時，就會觸發此動作（下拉式清單）。
+1. 開啟 **網站** 主控台(使用 **網站** 中的選項 [全域導覽](/help/sites-authoring/basic-handling.md#global-navigation)) — 這會在您選取Adobe Experience Manager連結（左上方）時觸發（下拉式清單）。
 
 1. 點選/按一下適當的頁面，在樹狀結構中向下導覽。 頁面資源的呈現方式取決於您使用的檢視 —  [卡片、清單或欄](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)：
 
@@ -85,9 +85,9 @@ ht-degree: 5%
 
 ### 建立新頁面 {#creating-a-new-page}
 
-至 [建立新頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page)：
+至 [建立頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page)：
 
-1. [導覽至該位置](#finding-your-page) 建立新頁面的位置。
+1. [導覽至該位置](#finding-your-page) 建立頁面的位置。
 1. 使用 **建立** 圖示，然後選取 **頁面** 從清單中：
 
    ![qgtap-02](assets/qgtap-02.png)
@@ -134,8 +134,6 @@ ht-degree: 5%
 
 ### 編輯您的頁面內容 {#editing-your-page-content}
 
-若要編輯您的頁面：
-
 1. [導覽至頁面](#finding-your-page) 您想要編輯。
 1. [開啟您的頁面以進行編輯](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing) 使用「編輯」（鉛筆）圖示：
 
@@ -143,7 +141,7 @@ ht-degree: 5%
 
    您可透過以下任一方式存取此檔案：
 
-   * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 適當的資源。
+   * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 以取得適當的資源。
    * 工具列，當 [已選取頁面](#selectiingyourpageforfurtheraction).
 
 1. 編輯器開啟時，您可以：
@@ -161,7 +159,7 @@ ht-degree: 5%
    * [編輯現有元件的內容](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 在頁面上：
 
       * 點選或按一下以開啟元件工具列。 使用 **編輯** （鉛筆）圖示以開啟對話方塊。
-      * 使用點選並按住或按兩下緩慢的方式開啟元件的就地編輯器。 將顯示可用的動作（對於某些元件，這將是一個有限的選擇）。
+      * 使用點選並按住或按兩下緩慢的方式開啟元件的就地編輯器。 會顯示可用的動作（對於某些元件，這是有限的選擇）。
       * 若要檢視所有可用動作，請使用以下方法進入全熒幕模式：
 
      ![全熒幕模式](do-not-localize/screen_shot_2018-03-21at160706.png)
@@ -212,7 +210,7 @@ ht-degree: 5%
    1. [導覽至頁面](#finding-your-page) 您要發佈。
    1. 選取 **屬性** 圖示來自：
 
-      * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 適當的資源。
+      * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 以取得適當的資源。
       * 工具列，當 [已選取頁面](#selectiingyourpageforfurtheraction).
 
   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
@@ -235,7 +233,7 @@ ht-degree: 5%
    1. [導覽至頁面](#finding-your-page) 您要發佈。
    1. 選取 **快速發佈** 圖示來自：
 
-      * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 適當的資源。
+      * [快速動作（僅限卡片檢視/案頭）](#quick-actions-card-view-desktop-only) 以取得適當的資源。
       * 工具列，當 [已選取頁面](#selectiingyourpageforfurtheraction) (也可讓您存取 [稍後發佈](/help/sites-authoring/publishing-pages.md#main-pars-title-12))。
 
   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
@@ -269,11 +267,11 @@ ht-degree: 5%
 
    * 複製:
 
-      * 然後，您需要導覽至新位置並貼上。
+      * 導覽至新位置並貼上。
 
    * 移動:
 
-      * 精靈將會開啟，以收集移動頁面所需的資訊。 請依照熒幕上的指示操作。
+      * 精靈會開啟，以收集移動頁面所需的資訊。 請依照熒幕上的指示操作。
 
    * 刪除:
 
@@ -297,7 +295,7 @@ ht-degree: 5%
 
 ### 存取頁面參考 {#accessing-page-references}
 
-[快速存取參考](/help/sites-authoring/author-environment-tools.md#references) 「參考」邊欄中會提供頁面的「結束日期」/「結束日期」。
+[快速存取參考](/help/sites-authoring/author-environment-tools.md#references) 至某個頁面或從某個頁面，均可在參考邊欄中使用。
 
 1. 選取 **引用** 使用工具列圖示（在之前或之後） [選取您的頁面](#selecting-your-page-for-further-action))：
 
@@ -331,14 +329,14 @@ ht-degree: 5%
 
    ![screen_shot_2018-03-21at161355-1](assets/screen_shot_2018-03-21at161355-1.png)
 
-   如果頁面的某個版本已儲存，這會列在時間軸中。
+   如果頁面的某個版本已儲存，則會列在時間軸中。
 
 1. 點選/按一下您要還原的版本 — 這會顯示其他動作按鈕：
 
    * **還原為此版本**
 
-      * 將還原版本。
+      * 版本已還原。
 
    * **顯示差異**
 
-      * 開啟頁面時，會醒目提示（兩個版本之間的）差異。
+      * 開啟頁面時，會反白顯示（兩個版本之間的）差異。

@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: ddd908ed8287d77d9009633399c1e0bc1a12fe1b
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '774'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ CRXDE可管理進階許可權和限制。 它已在相同檢視中合併。 該�
 >
 >如需完整的許可權和說明清單，請參閱 [此頁面](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
-![指定路徑的搜尋許可權](assets/image2019-3-21_0-5-47.png) ![](assets/image2019-3-21_0-6-53.png)
+![指定路徑的搜尋許可權。](assets/image2019-3-21_0-5-47.png) ![為「dam-users」新增專案，如在垂直欄中選取的路徑所示。](assets/image2019-3-21_0-6-53.png)
 
 選取許可權清單後，使用者可以選擇許可權型別：拒絕或允許，如下所示。
 
