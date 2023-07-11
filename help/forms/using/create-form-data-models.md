@@ -10,16 +10,16 @@ discoiquuid: 7c392909-ff84-4411-b44f-16f99dffac54
 docset: aem65
 feature: Form Data Model
 exl-id: 7f5978c3-6c9f-4ce4-b0fb-660ac1d49244
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
 
 # 建立表單資料模型{#create-form-data-model}
 
-![](do-not-localize/data-integeration.png)
+![hero-image](do-not-localize/data-integration.png)
 
 AEM Forms資料整合提供直覺式使用者介面，用於建立和使用表單資料模型。 表單資料模型仰賴資料來源交換資料；不過，您可以建立有或沒有資料來源的表單資料模型。 根據您是否已設定資料來源，從資料模型建立有兩個方法：
 

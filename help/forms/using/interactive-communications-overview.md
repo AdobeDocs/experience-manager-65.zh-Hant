@@ -9,9 +9,9 @@ topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: 415744ca5c46a1495fe90369c162158c7fc2f1d4
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '487'
 ht-degree: 7%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 本文包括概述、範例使用案例、建立工作流程，以及互動式通訊與信函之間的差異。
 
-![](do-not-localize/correspondence-management.png)
+![hero-image](do-not-localize/correspondence-management.png)
 
 互動式通訊可集中處理及管理安全、個人化與互動式通訊的建立、集合與傳遞，例如商務信函、檔案、對帳單、利益通知、行銷郵件、帳單和歡迎套件。
 

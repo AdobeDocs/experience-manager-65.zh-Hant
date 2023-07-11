@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: 1a3e0f90bbe133a7b0fc383b997e69b10ca82478
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2068'
 ht-degree: 11%
 
 ---
@@ -397,7 +397,7 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 
 ### 建立/開啟自訂組態 {#creating-opening-a-customized-configuration}
 
-1. 導覽至 **工具**， **一般**， **搜尋Forms**.
+1. 導覽至 **工具** >>  **一般** >> **搜尋Forms**.
 
 1. 選取您要自訂的設定。
 1. 使用 **編輯** 圖示以開啟設定以進行更新。
@@ -440,7 +440,7 @@ A [述詞範圍](#predicates-and-their-settings)s是現成可用的。 您可以
 
 1. 選取「預覽」圖示：
 
-   ![預覽圖示](do-not-localize/chlimage_1-31.png)
+   ![預覽搜尋表單](do-not-localize/chlimage_1-31.png)
 
 1. 如此將顯示搜尋表單，如同它們在適當主控台的「搜尋」欄中顯示（完全展開）一樣。
 

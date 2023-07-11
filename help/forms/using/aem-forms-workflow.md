@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
-source-git-commit: d9608d584e822accc0c198fcf1d1b706d065938e
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '3681'
+source-wordcount: '3682'
 ht-degree: 1%
 
 ---
 
 # OSGi上以Forms為中心的工作流程{#forms-centric-workflow-on-osgi}
 
-![](do-not-localize/header.png)
+![hero-image](do-not-localize/header.png)
 
 企業會從數以百計與數以千計的表單、各種後端系統，以及線上或離線資料來源收集資料。 他們還擁有一組動態的使用者，可就資料做出決策，其中涉及反複的稽核和核准流程。
 
@@ -236,7 +236,7 @@ AEM Forms應用程式會與AEM Forms伺服器同步，並可讓您變更帳戶�
   </tr>
   <tr>
    <td><span class="uicontrol">處理檔案使用</code></td>
-   <td>選取 <span class="uicontrol">工作流程 </code>選項。 </code></td>
+   <td>選取 <span class="uicontrol">工作流程 </code>選項。 </td>
   </tr>
   <tr>
    <td><span class="uicontrol">工作流程模型</code></td>

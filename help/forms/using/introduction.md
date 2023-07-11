@@ -10,9 +10,9 @@ discoiquuid: 672ee050-63d1-46ed-bef2-f55800208d78
 docset: aem65
 feature: Mobile Forms
 exl-id: 0facca18-ffa1-420c-859a-6f1f2c449d71
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ HTML5表單是Adobe Experience Manager 6.0 (AEM 6.0)軟體中的新功能，可�
 
 HTML5表單會根據標準HTML5建構產生檔案。 您可以在支援HTML5的所有新式瀏覽器中檢視HTML5表單。 它不需要為瀏覽器安裝任何其他瀏覽器外掛程式。 如需有關受支援瀏覽器的詳細資訊，請參閱 [支援的使用者端平台](https://adobe.com/go/learn_aemforms_supportedplatforms_63).
 
-![](do-not-localize/mobile_form_on_an_ipad_date_14.png)
+![HTML5表單預覽](do-not-localize/mobile_form_on_an_ipad_date_14.png)
 
 ## HTML5表單的主要功能 {#key-capabilities-of-html-forms-br}
 

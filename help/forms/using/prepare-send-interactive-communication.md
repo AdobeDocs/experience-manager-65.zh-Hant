@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2022'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 0%
 
       * [從其他應用程式複製貼上格式化文字](#pasteformattedtext)
       * [反白部分文字](#highlightemphasize)
+
    * [特殊字元](#specialcharacters)
    * [鍵盤快速鍵](/help/forms/using/keyboard-shortcuts.md)
 
@@ -147,7 +148,7 @@ Agent UI已內建對210個特殊字元的支援。 管理員可以 [透過自訂
 
 ### 檔案片段 {#document-fragments}
 
-![](do-not-localize/contentoptionsdocfragments.png)
+![document-fragments-ui-operations](do-not-localize/contentoptionsdocfragments.png)
 
 * **向上/向下箭頭**：在互動式通訊中向上或向下移動檔案片段的箭頭。
 * **刪除**：如果允許，請從互動式通訊中刪除檔案片段。
@@ -187,7 +188,7 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
 
    如需範例SPI實施，請參閱 [ccrDocumentInstance SPI實作範例](#sample-ccrDocumentInstance-spi).
 1. 開啟 `http://<hostname>:<port>/ system/console/bundles` 並點選 **[!UICONTROL 安裝/更新]** 上傳OSGi套件組合。 確認上傳之封裝的狀態顯示為 **作用中**. 如果封裝的狀態未顯示為，請重新啟動伺服器 **作用中**.
-1. 前往 `https://'[server]:[port]'/system/console/configMgr`.
+1. 前往 `https://'[server]:[port]'/system/console/configMgr`。
 1. 點選 **[!UICONTROL 建立對應設定]**.
 1. 選取 **[!UICONTROL 使用CCRDocumentInstanceService啟用儲存]** 並點選 **[!UICONTROL 儲存]**.
 
@@ -324,20 +325,20 @@ public class CCRDraftService implements CCRDocumentInstanceService {
   <td><p><strong>資料庫服務範例</strong></p></td> 
    </tr>
   <tr>
-   <td><p>您可以建立互動式通訊的草稿或直接提交它。 儲存作業的API會檢查互動式通訊是否以草稿形式提交，並包含草稿名稱。 然後，API會呼叫mySQLDataBaseServiceCRUD服務，並將Save儲存為輸入方法。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
-   <td><p>mySQLDataBaseServiceCRUD服務會驗證Save做為輸入方法，並產生自動產生的草稿ID並將其傳回AEM。 產生草稿ID的邏輯可能會因資料庫而異。</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
+   <td><p>您可以建立互動式通訊的草稿或直接提交它。 儲存作業的API會檢查互動式通訊是否以草稿形式提交，並包含草稿名稱。 然後，API會呼叫mySQLDataBaseServiceCRUD服務，並將Save儲存為輸入方法。</p></br><img src="assets/save-as-draft-save-operation.png"/></td>
+   <td><p>mySQLDataBaseServiceCRUD服務會驗證Save做為輸入方法，並產生自動產生的草稿ID並將其傳回AEM。 產生草稿ID的邏輯可能會因資料庫而異。</p></br><img src="assets/save-operation-service.png"/></td>
    </tr>
   <tr>
-   <td><p>更新作業的API會擷取互動式通訊草稿的狀態，並檢查互動式通訊是否包含草稿名稱。 API會呼叫mySQLDataBaseServiceCRUD服務，以更新資料庫中的狀態。</p></br><img src="assets/save-as-draft-update-operation.png"/></br>[#$sd1_sf1_dp17]</td>
+   <td><p>更新作業的API會擷取互動式通訊草稿的狀態，並檢查互動式通訊是否包含草稿名稱。 API會呼叫mySQLDataBaseServiceCRUD服務，以更新資料庫中的狀態。</p></br><img src="assets/save-as-draft-update-operation.png"/></td>
    <td><p>mySQLDataBaseServiceCRUD服務會驗證Update作為輸入方法，並將互動式通訊草稿的狀態儲存在資料庫中。</br></p><img src="assets/update-operation-service.png"/></td>
    </tr>
    <tr>
    <td><p>取得作業的API會檢查互動式通訊是否包含草稿ID。 然後API會呼叫mySQLDataBaseServiceCRUD服務（使用Get作為輸入方法），以擷取互動式通訊的資料。</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
-   <td><p>mySQLDataBaseServiceCRUD服務會驗證Get作為輸入方法，並根據草稿ID擷取互動式通訊的資料。</p></br><img src="assets/get-operation-service.png"/></br>[#$sd1_sf1_dp29]</td>
+   <td><p>mySQLDataBaseServiceCRUD服務會驗證Get作為輸入方法，並根據草稿ID擷取互動式通訊的資料。</p></br><img src="assets/get-operation-service.png"/></td>
    </tr>
    <tr>
    <td><p>getAll作業的API會呼叫mySQLGetALLData服務，以擷取資料庫中儲存之所有互動式通訊的資料。</br></p><img src="assets/save-as-draft-getall-operation.png"/></td>
-   <td><p>mySQLGetALLData服務會擷取資料庫中儲存之所有互動式通訊的資料。</p></br><img src="assets/getall-operation-service.png"/></br>[#$sd1_sf1_dp37]</td>
+   <td><p>mySQLGetALLData服務會擷取資料庫中儲存之所有互動式通訊的資料。</p></br><img src="assets/getall-operation-service.png"/></td>
    </tr>
   </tbody>
 </table>

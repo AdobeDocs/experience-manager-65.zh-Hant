@@ -9,9 +9,9 @@ discoiquuid: 1142bcd4-e3a7-41ce-a710-132ae6c21dbe
 docset: aem65
 feature: Adaptive Forms
 exl-id: 77a05f83-ac9a-4221-85ac-439e82623a28
-source-git-commit: 318347178fd626dea8e5a15caa7cdad8fe353eba
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '966'
 ht-degree: 9%
 
 ---
@@ -95,7 +95,7 @@ ht-degree: 9%
 
 ## 步驟4：設定最適化表單的樣式 {#step-style-your-adaptive-form}
 
-![](/help/forms/using/assets/09-style-your-adaptive-form-small.png)
+![adaptive-form-styling](/help/forms/using/assets/09-style-your-adaptive-form-small.png)
 
 最適化表單提供主題和 [編輯者](../../forms/using/themes.md) 為最適化表單建立主題。 主題包含元件和面板的樣式細節，您可以重複使用不同表單中的主題。 樣式包含背景顏色、狀態顏色、透明度、對齊方式及大小等屬性。 將主題套用至表單時，指定的樣式會反映在表單的對應元件上。 最適化表單也支援表單特定樣式的內嵌樣式。
 

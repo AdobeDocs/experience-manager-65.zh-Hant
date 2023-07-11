@@ -10,16 +10,16 @@ discoiquuid: 87f5f9f5-2d03-4565-830e-eacc3757e542
 docset: aem65
 feature: Form Data Model
 exl-id: 9a73a643-7ad4-49aa-a971-08d52679158d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1253'
 ht-degree: 0%
 
 ---
 
 # 使用表單資料模型{#use-form-data-model}
 
-![](do-not-localize/data-integeration.png)
+![hero-image](do-not-localize/data-integration.png)
 
 AEM Forms資料整合可讓您使用不同的後端資料來源，建立可作為各種最適化表單和互動式通訊工作流程中的結構描述的表單資料模型。 它需要根據資料來源中可用的資料模型物件和服務來設定資料來源及建立表單資料模型。 如需詳細資訊，請參閱下列內容：
 

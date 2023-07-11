@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '894'
 ht-degree: 10%
 
 ---
@@ -32,7 +32,7 @@ AEM Forms結合表單編寫、管理和發佈，以及通訊管理功能、檔�
 
 AEM Forms提供的表單管理工具不僅可讓您管理最適化表單，還可管理XFA表單、PDF forms和相關資產。 如需詳細資訊，請參閱 [管理表單簡介](../../forms/using/introduction-managing-forms.md).
 
-![](do-not-localize/4th-draft.gif)
+![AEM forms功能](do-not-localize/4th-draft.gif)
 
 ### 重要功能 {#key-capabilities}
 

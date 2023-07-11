@@ -10,9 +10,9 @@ topic-tags: forms-workspace
 discoiquuid: 538591fe-29e4-40c4-a045-06095cc0c6b8
 docset: aem65
 exl-id: 8fd9770b-6ec4-4b09-b6b2-47a5e5d40f79
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Backbone是程式庫，可協助在Web應用程式中建立和遵循MVC架構。
 
 初始化檢視時，檢視會呼叫其對應模型，以從伺服器擷取資料。 檢視所需的所有資料都可用後，檢視會以HTML範本指定的格式呈現資料。 多個檢視可共用相同的通訊模式。
 
-![](do-not-localize/aem_forms_workflow.png)
+![AEM forms骨幹檢視](do-not-localize/aem_forms_workflow.png)
 
 範例：
 

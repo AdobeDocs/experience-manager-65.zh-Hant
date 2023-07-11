@@ -8,9 +8,9 @@ uuid: 0010d274-a683-499e-9fa6-ce355d7898a0
 discoiquuid: 55c08940-8c25-4938-8e49-25bce20aaf22
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '1376'
+source-wordcount: '1380'
 ht-degree: 3%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 3%
 * [預覽和提交最適化表單](/help/forms/using/create-adaptive-form.md)
 
 在文章結尾處，您的表單將類似於以下內容：\
-[![](do-not-localize/form-preview-mobile.gif)](do-not-localize/form-preview-mobile.gif)
+[![行動裝置中的表單預覽](do-not-localize/form-preview-mobile.gif)](do-not-localize/form-preview-mobile.gif)
 
 ## 步驟1：建立最適化表單 {#step-create-the-adaptive-form}
 

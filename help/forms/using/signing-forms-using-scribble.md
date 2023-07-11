@@ -10,9 +10,9 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >簽名一律以PNG格式儲存。
+>
 
 ## 設定最適化表單以使用手寫簽名 {#configure-an-adaptive-form-to-use-scribble-signature}
 
@@ -54,12 +55,14 @@ ht-degree: 0%
    >[!NOTE]
    >
    >簽章步驟元件會佔據可用於表單的完整寬度。 建議在包含簽名步驟元件的區段上不要有任何其他元件。
+   >
 
-1. 在「內容」瀏覽器中，點選 **表單容器**，然後點選 **設定** ![](/help/forms/using/assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示最適化表單容器屬性。 導覽至 **最適化表單容器** > **電子簽章** 並取消選取 **啟用Adobe Sign** 選項。 點選「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。
+1. 在「內容」瀏覽器中，點選 **表單容器**，然後點選 **設定** ![設定](/help/forms/using/assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示最適化表單容器屬性。 導覽至 **最適化表單容器** > **電子簽章** 並取消選取 **啟用Adobe Sign** 選項。 點選「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。
 
    >[!NOTE]
    >
    >將簽名步驟元件新增至最適化表單時，會自動選取「啟用Adobe Sign」選項。
+   >
 
 1. 點選 **設定** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示簽名步驟屬性。 設定下列屬性：
 

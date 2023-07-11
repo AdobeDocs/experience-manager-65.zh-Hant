@@ -10,16 +10,16 @@ discoiquuid: e24dbd0e-4481-4f9d-9570-3a4046b3ef35
 docset: aem65
 feature: Adaptive Forms
 exl-id: c039faec-f832-43d5-8a86-22afa3bef2a4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '937'
 ht-degree: 1%
 
 ---
 
 # 教學課程：發佈最適化表單 {#tutorial-publish-your-adaptive-form}
 
-![](do-not-localize/13-publish-your-adaptive-form-small.png)
+![Hero-image](do-not-localize/13-publish-your-adaptive-form-small.png)
 
 本教學課程是 [建立第一個最適化表單](https://helpx.adobe.com/tw/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) 數列。 建議您依照時間順序觀看本系列，以瞭解、執行和示範完整的教學課程使用案例。
 
@@ -69,7 +69,8 @@ AEM [!DNL Forms] 提供元件AEM [!DNL Forms] 容器，用於將最適化表單�
    * 如果您只修改已發佈網站頁面中的內嵌表單，請發佈原始表單，所做的變更會反映在已發佈的網站頁面中。 已發佈的網站頁面包含對表單的引用，不需要重新發佈頁面。
    * 如果您修改 [!DNL Sites] 頁面和內嵌表單，重新發佈 [!DNL Sites] 頁面和表單。
 
-      ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
+     ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
+
    將送貨與帳單地址變更表單新增至AEM [!DNL Sites] 頁面。
 
 ## 將最適化表單內嵌於外部網頁 {#embed-the-adaptive-form-in-an-external-webpage}

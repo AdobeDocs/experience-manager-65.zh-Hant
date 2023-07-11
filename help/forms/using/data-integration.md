@@ -11,16 +11,16 @@ discoiquuid: e397c6ce-d73f-4183-8445-1897a8906960
 docset: aem65
 feature: Form Data Model
 exl-id: dd1146e4-952d-4dfa-8084-46c6096c4177
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
 
 # [!DNL AEM Forms] 資料整合 {#aem-forms-data-integration}
 
-![](do-not-localize/data-integeration.png)
+![hero-image](do-not-localize/data-integration.png)
 
 企業基礎架構包括不同的後端系統或資料來源，例如資料庫、網站服務、REST服務、OData服務和CRM解決方案。 他們共同組成資訊系統，為企業應用程式提供資料，以執行日常業務。 另一方面，應用程式會擷取資料，並將其傳回以更新資料來源。
 

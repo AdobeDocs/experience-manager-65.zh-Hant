@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '2208'
+source-wordcount: '2209'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 執行以下步驟來建立變數：
 
-1. 在AEM執行個體上，導覽至工具 ![](/help/forms/using/assets/hammer.png) >工作流程>模型。
+1. 在AEM執行個體上，導覽至工具 ![工具](/help/forms/using/assets/hammer.png) >工作流程>模型。
 1. 點選 **[!UICONTROL 建立]** 和指定工作流程模型的標題和選用名稱。 選取模型並點選 **[!UICONTROL 編輯]**.
 1. 點選工作流程模型Sidekick中可用的變數圖示，然後點選 **[!UICONTROL 新增變數]**.
 

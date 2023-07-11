@@ -10,7 +10,7 @@ discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 feature: Interactive Communication
 exl-id: bef1f05e-aea2-433e-b3d5-0b7ad8163fa7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 0%
@@ -93,6 +93,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 
       * 費用
       * 圖表
+
    * ItemisedCalls
    * Paynow
    * ValueAddedServices
@@ -162,6 +163,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
    1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
 
    1. 點選 **儲存**.
+
    使用Forms Designer建立版面片段的XDP範本後，您必須 [上傳](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server) 將其傳送至AEM Forms伺服器，以便建立版面片段時可以使用範本。
 
 ## 建立Web channel範本 {#create-template-for-web-channel}
@@ -231,7 +233,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
    1. 指定 **帳單詳細資訊** 標題欄位中。
    1. 選取 **1** 從 **欄數** 下拉式清單。
 
-   1. 點選 ![](/help/forms/using/assets/done_icon.png) 以儲存屬性。
+   1. 點選 ![儲存](/help/forms/using/assets/done_icon.png) 以儲存屬性。
 
    面板名稱會更新為 **帳單詳細資訊** 在內容樹狀結構中。
 
@@ -275,4 +277,4 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 
    ![允許的元件](assets/allowed_components_af_new.png)
 
-1. 點選 ![done_icon](assets/done_icon.png) 以儲存屬性。
+1. 點選 ![儲存](assets/done_icon.png) 以儲存屬性。
