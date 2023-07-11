@@ -1,20 +1,16 @@
 ---
 title: 編寫
-seo-title: Authoring
-description: AEM中的製作概念
-seo-description: Concepts of authoring in AEM
-uuid: eaa5f613-a138-4215-8f84-dfc962fe7fa7
+description: Adobe Experience Manager中的製作概念
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 81ff6f6f-11b3-4f8e-80e6-b3e104158394
 docset: aem65
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 0%
+source-wordcount: '551'
+ht-degree: 2%
 
 ---
 
@@ -31,26 +27,26 @@ AEM提供您兩個環境：
 
 作者環境提供機制，可在實際發佈此內容之前建立、更新和檢閱此內容：
 
-* 作者建立並檢閱內容（可以是數種型別；例如，頁面、資產、出版物等）
+* 作者建立和檢閱內容（可以是多種型別；例如，頁面、資產、出版物等）
 * 之後會發佈至您的網站。
 
 ![環境概觀](assets/chlimage_1-132.png)
 
-在製作環境中，AEM的功能可透過兩個UI使用。 對於發佈環境，您可以設計可供使用者使用的介面的完整外觀。
+在作者環境中，AEM的功能可透過兩個UI使用。 對於發佈環境，您可以設計可供使用者使用的介面的整個外觀。
 
 ### 作者環境 {#author-environment}
 
-作者的工作方式稱為 **作者環境**. 這提供建立內容時易於使用的介面(圖形化使用者介面（GUI或UI）)。 它通常位於公司防火牆後面，提供完整保護，並要求作者使用已指派適當存取許可權的帳戶登入。
+作者的工作方式稱為 **作者環境**. 這提供建立內容時易於使用的介面(圖形化使用者介面（GUI或UI）)。 它位於公司防火牆的後面，可提供完全保護，並要求作者使用已指派適當存取許可權的帳戶登入。
 
 >[!NOTE]
 >
 >您的帳戶需要適當的存取權才能建立、編輯或發佈內容。
 
-根據您設定執行個體和個人存取許可權的方式，您可以對內容執行許多工作，包括（其中包括）：
+根據您執行個體和個人存取許可權的設定方式，您可以對內容執行許多工作，包括（其中包括）：
 
 * 在頁面上產生新內容或編輯現有內容
 * 使用預先定義的範本來建立新內容頁面
-* 建立、編輯及管理您的資產和集合
+* 建立、編輯和管理您的資產和集合
 * 建立、編輯及管理您的出版物
 * 開發您的行銷活動和相關資源
 * 開發及管理社群網站
@@ -59,12 +55,12 @@ AEM提供您兩個環境：
 
 此外，還有一些管理任務可協助您管理內容：
 
-* 控制變更管理方式的工作流程；例如。 在發佈前強制執行稽核
+* 控制變更管理方式的工作流程；例如，在發佈前強制執行稽核
 * 協調個別任務的專案
 
 >[!NOTE]
 >
->AEM也是 [已管理](/help/sites-administering/home.md) （適用於大部分任務）來自製作環境。
+>AEM也是 [已管理](/help/sites-administering/home.md) （適用於大部分任務）來自作者環境。
 
 #### 發佈環境 {#publish-environment}
 
@@ -85,9 +81,9 @@ AEM提供您兩個環境：
 >  這些辭彙與發佈/取消發佈同義。
 >
 >* **復寫/複製**
->  這些是技術術語，用於表示資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境（即發佈或反向複製使用者註解時）。
+>  這些是技術術語，用於表示資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境；即發佈或反向複製使用者註解時。
 >
 
 #### Dispatcher {#dispatcher}
 
-若要最佳化網站訪客的效能， **[dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)** 實作負載平衡和快取。
+若要最佳化網站訪客的效能， **[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)** 實作負載平衡和快取。

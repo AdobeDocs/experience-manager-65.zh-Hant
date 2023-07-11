@@ -5,9 +5,9 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '714'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 >
 >`Geometrixx Outdoors Site English (US)`
 
-部署 [必要的電子商務套件](#packages-needed-for-ecommerce-with-hybris) 將提供eCommerce架構的完整功能，以及hybris實作所提供的電子商務功能參考實作（包括示範目錄）
+部署 [必要的電子商務套件](#packages-needed-for-ecommerce-with-hybris) 提供電子商務架構的完整功能，以及hybris實作所提供的電子商務功能參考實作（包括示範目錄）
 
 這可在英文（美國）分支下取得( `/content/geometrixx-outdoors/en_US`)的Geometrixx Outdoors網站：
 
@@ -44,10 +44,9 @@ ht-degree: 2%
 >[!NOTE]
 >
 >* 支援18.11版及更高版本。
->* 您需要Java 7才能執行 [hybris 5伺服器。](https://www.hybris.com/en/architecture-technology)
->* hybris附加元件， [Telco加速器](https://www.hybris.com/en/products/telecommunication)AEM擴充功能不支援。
+>* 您需要Java™ 7才能執行 [hybris 5伺服器。](https://www.sap.com/products/crm.html)
+* hybris附加元件， [Telco加速器](https://www.sap.com/products/crm.html)AEM擴充功能不支援。
 >
-
 
 ### 具有hybris的電子商務所需的套件 {#packages-needed-for-ecommerce-with-hybris}
 
@@ -92,29 +91,29 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->使用hybris伺服器需要個別的hybris授權。
+使用hybris伺服器需要個別的hybris授權。
 
 >[!NOTE]
 >
->適用於開發人員 [API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下載。
+適用於開發人員 [API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下載。
 
 ### 下載並建置您的hybris伺服器 {#download-and-build-your-hybris-server}
 
-此程式中的步驟將下載並建置hybris伺服器。 它也會進行hybris和cq之間連線所需的初始設定。 之後，擴充功能即可使用預設設定。
+此程式中的步驟會下載及建置hybris伺服器。 也會進行hybris和cq之間連線所需的初始設定。 擴充功能便會可與預設設定搭配使用。
 
 >[!CAUTION]
 >
->不支援5.5.1之前的Hybris版本。
+不支援5.5.1之前的Hybris版本。
 
 >[!NOTE]
 >
->若要完成此作業，您需要 [Groovy](https://groovy-lang.org/) 已安裝在您的系統上。
+若要完成此作業，您需要 [Groovy](https://groovy-lang.org/) 已安裝在您的系統上。
 
 1. 下載 **hybris Commerce Suite** 從hybris下載網站發佈。
 
    >[!CAUTION]
    >
-   >您需要帳戶（來自hybris）才能存取此專案。
+   您需要帳戶（來自Hybris）才能存取此專案。
 
 1. 將散發檔案解壓縮至所需位置(稱為 &lt;hybris-root-directory>)。
 1. 從命令列，執行下列動作：
@@ -128,11 +127,11 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >執行時：
+   執行時：
    >
-   >`ant clean all`
+   `ant clean all`
    >
-   >按下 `Return` 必要時。
+   按下 `Return` 必要時。
 
 1. 將下列檔案下載至解壓縮的hybris散佈的根資料夾，
 
@@ -145,7 +144,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >對於hybris 5.6.0和更新版本，請使用下列setup.groovy。
+   對於hybris 5.6.0和更新版本，請使用下列setup.groovy。
 
    5.6.0和更新版本
 
@@ -166,23 +165,23 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >視您的系統而定，這些步驟中的數個可能需要幾分鐘才能完成。
+   視您的系統而定，這些步驟中的數個可能需要幾分鐘才能完成。
 
 1. 在您的瀏覽器中，導覽至 **hybris管理主控台** 於：
 
    [http://localhost:9002](http://localhost:9002)
 
-1. 按一下 **初始化** 然後確認初始化動作（因為它將會刪除現有資料）。
+1. 按一下 **初始化** 然後確認初始化動作（因為它刪除現有資料）。
 
-   進度將顯示在主控台上，包含 `FINISHED` 表示完成。
+   進度會顯示在主控台上，包含 `FINISHED` 表示完成。
 
    >[!NOTE]
    >
-   >視您的系統而定，這可能需要幾分鐘才能完成。
+   視您的系統而定，這可能需要幾分鐘才能完成。
 
 ### 設定Geometrixx Outdoors存放區 {#setup-the-geometrixx-outdoors-store}
 
-此程式將上傳並設定示範存放區 — 線上Geometrixx。
+此程式會上傳並設定示範存放區 — 「線上Geometrixx」。
 
 1. 啟動您的hybris執行個體。 從命令列，執行下列動作：
 

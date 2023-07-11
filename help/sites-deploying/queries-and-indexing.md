@@ -1,20 +1,16 @@
 ---
 title: Oak查詢和索引
-seo-title: Oak Queries and Indexing
 description: 瞭解如何在AEM中設定索引。
-seo-description: Learn how to configure indexes in AEM.
-uuid: a1233d2e-1320-43e0-9b18-cd6d1eeaad59
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: b27a7a1cc2295b1640520dcb56be4f3eb4851499
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '2674'
+source-wordcount: '2619'
 ht-degree: 1%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-不同於Jackrabbit 2，Oak預設不會索引內容。 必要時需要建立自訂索引，就像傳統關聯式資料庫一樣。 如果特定查詢沒有索引，則可能會遍歷許多節點。 查詢可能仍然有效，但速度可能非常慢。
+不同於Jackrabbit 2，Oak預設不會索引內容。 必要時必須建立自訂索引，就像傳統關聯式資料庫一樣。 如果特定查詢沒有索引，則可能會遍歷許多節點。 查詢可能仍然有效，但速度可能相當慢。
 
 如果Oak遇到沒有索引的查詢，則會列印WARN層級的記錄訊息：
 
@@ -68,20 +64,20 @@ Oak查詢引擎支援下列語言：
 
 >[!NOTE]
 >
->對於大型存放庫而言，建立索引是一項耗時的作業。 這適用於初始建立索引和重新建立索引（在變更定義後重建索引）。 另請參閱 [疑難排解Oak索引](/help/sites-deploying/troubleshooting-oak-indexes.md) 和 [防止重新索引緩慢](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>對於大型存放庫而言，建立索引是一項耗時的作業。 這適用於初始建立索引和重新建立索引（在變更定義後重建索引）。 另請參閱 [疑難排解Oak索引](/help/sites-deploying/troubleshooting-oak-indexes.md) 和 [防止緩慢重新索引](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
-如果非常大的存放庫需要重新索引，尤其是使用MongoDB和進行全文檢索索引時，請考慮文字預先擷取，並使用oak-run建立初始索引和重新索引。
+如果大型存放庫需要重新索引，尤其是使用MongoDB和進行全文檢索索引時，請考慮文字預先擷取，並使用oak-run建立初始索引和重新索引。
 
-索引會設定為存放庫中的節點，位於 **oak：index** 節點。
+索引會設定為存放庫中的節點，位於 **Oak：index** 節點。
 
 索引節點的型別必須是 **oak：QueryIndexDefinition。** 每個索引器都有數個設定選項可作為節點屬性使用。 如需詳細資訊，請參閱以下每個索引器型別的設定詳細資料。
 
 ### 屬性索引 {#the-property-index}
 
-對於具有屬性限制但不是全文檢索的查詢，屬性索引通常非常有用。 可依照下列程式進行設定：
+屬性索引適用於具有屬性限制但不是全文檢索的查詢。 可依照下列程式進行設定：
 
 1. 開啟CRXDE，方法是前往 `http://localhost:4502/crx/de/index.jsp`
-1. 在下建立新節點 **oak：index**
+1. 在下建立節點 **oak：index**
 1. 為節點命名 **PropertyIndex**，並將節點型別設為 **oak：QueryIndexDefinition**
 1. 為新節點設定下列屬性：
 
@@ -94,7 +90,7 @@ Oak查詢引擎支援下列語言：
 
 「屬性索引」有以下組態選項：
 
-* 此 **type** 屬性會指定索引的型別，在此情況下，必須將其設為 **屬性**
+* 此 **type** 屬性指定索引的型別，在此情況下，必須將其設為 **屬性**
 
 * 此 **屬性名稱** 屬性指出要儲存在索引中的屬性清單。 如果遺失此名稱，則會使用節點名稱作為屬性名稱參考值。 在此範例中， **jcr：uuid** 其工作是公開其節點之唯一識別碼(UUID)的屬性會新增至索引。
 
@@ -105,7 +101,7 @@ Oak查詢引擎支援下列語言：
 
 ### 有序索引 {#the-ordered-index}
 
-Ordered索引是Property索引的延伸。 但是，它已被取代。 需要將此型別的索引取代為 [Lucene屬性索引](#the-lucene-property-index).
+Ordered索引是Property索引的延伸。 但是，它已被取代。 此型別的索引必須取代為 [Lucene屬性索引](#the-lucene-property-index).
 
 ### Lucene全文索引 {#the-lucene-full-text-index}
 
@@ -115,11 +111,11 @@ AEM 6提供以Apache Lucene為基礎的全文檢索器。
 
 如果未設定全文檢索索引，則具有全文檢索條件的查詢將無法如預期運作。
 
-由於索引是透過非同步背景執行緒來更新，因此在背景處理完成之前，某些全文檢索搜尋將在一段很短的時間內無法使用。
+由於索引是透過非同步背景執行緒來更新，因此在背景處理完成之前，某些全文檢索搜尋無法在很短的時間內完成。
 
 您可以依照以下程式設定Lucene全文索引：
 
-1. 開啟CRXDE並在下方建立新節點 **oak：index**.
+1. 開啟CRXDE並在下建立節點 **oak：index**.
 1. 為節點命名 **LuceneIndex** 並將節點型別設為 **oak：QueryIndexDefinition**
 1. 將下列屬性新增至節點：
 
@@ -130,17 +126,17 @@ AEM 6提供以Apache Lucene為基礎的全文檢索器。
 
 Lucene索引有下列設定選項：
 
-* 此 **type** 將指定索引型別的屬性必須設定為 **lucene**
+* 此 **type** 指定索引型別的屬性必須設定為 **lucene**
 * 此 **非同步** 屬性必須設定為 **非同步**. 這會將索引更新程式傳送至背景執行緒。
-* 此 **includePropertyTypes** 屬性，定義要納入索引的屬性型別子集。
-* 此 **excludePropertyNames** 將定義屬性名稱清單的屬性 — 應從索引中排除的屬性。
+* 此 **includePropertyTypes** 屬性，定義索引中包含哪些屬性型別子集。
+* 此 **excludePropertyNames** 定義屬性名稱清單的屬性 — 應從索引中排除的屬性。
 * 此 **重新索引** 標幟設定為 **true**，會觸發完整內容重新索引。
 
 ### Lucene屬性索引 {#the-lucene-property-index}
 
 從 **Oak 1.0.8**，Lucene可用來建立涉及非全文檢索之屬性限制的索引。
 
-為了達到Lucene屬性索引 **fulltextEnabled** 屬性必須一律設定為false。
+若要取得Lucene屬性索引，請 **fulltextEnabled** 屬性必須一律設定為false。
 
 以下列範例查詢為例：
 
@@ -148,7 +144,7 @@ Lucene索引有下列設定選項：
 select * from [nt:base] where [alias] = '/admin'
 ```
 
-若要為上述查詢定義Lucene屬性索引，您可以在下方建立新節點來新增以下定義 **oak:index:**
+若要為上述查詢定義Lucene屬性索引，您可以在下方建立節點來新增以下定義 **oak:index:**
 
 * **名稱:** `LucenePropertyIndex`
 * **型別：** `oak:QueryIndexDefinition`
@@ -157,21 +153,21 @@ select * from [nt:base] where [alias] = '/admin'
 
 * **類型:**
 
-   ```xml
-   lucene (of type String)
-   ```
+  ```xml
+  lucene (of type String)
+  ```
 
 * **非同步處理:**
 
-   ```xml
-   async (of type String)
-   ```
+  ```xml
+  async (of type String)
+  ```
 
 * **fulltextEnabled：**
 
-   ```xml
-   false (of type Boolean)
-   ```
+  ```xml
+  false (of type Boolean)
+  ```
 
 * **includePropertyNames：** `["alias"] (of type String)`
 
@@ -215,13 +211,13 @@ select * from [nt:base] where [alias] = '/admin'
 
    值是您要使用的分析器類別名稱。
 
-   您也可以使用選用的將分析器設定為與特定lucene版本搭配使用 `luceneMatchVersion` 字串屬性。 搭配Lucene 4.7使用的有效合成為：
+   您也可以使用選用的將分析器設定為與特定lucene版本搭配使用 `luceneMatchVersion` 字串屬性。 搭配Lucene 4.7使用它的有效語法為：
 
    * **名稱:** `luceneMatchVersion`
    * **型別：** `String`
    * **值:** `LUCENE_47`
 
-   若 `luceneMatchVersion` 若未提供，Oak將會使用隨附的Lucene版本。
+   若 `luceneMatchVersion` 未提供，Oak會使用隨附的Lucene版本。
 
 1. 如果您想要將stopwords檔案新增至分析器設定，您可以在 `default` 一個具有下列屬性：
 
@@ -243,12 +239,14 @@ select * from [nt:base] where [alias] = '/admin'
 
          * **名稱:** `HTMLStrip`
          * **名稱:** `Mapping`
+
       * **名稱:** `tokenizer`
 
          * **屬性名稱:** `name`
 
             * **型別：** `String`
             * **值:** `Standard`
+
       * **名稱:** `filters`
       * **型別：** `nt:unstructured`
 
@@ -259,16 +257,14 @@ select * from [nt:base] where [alias] = '/admin'
 
                * **型別：** `String`
                * **值:** `stop1.txt, stop2.txt`
+
             * **名稱:** `stop1.txt`
 
                * **型別：** `nt:file`
+
             * **名稱:** `stop2.txt`
 
                * **型別：** `nt:file`
-
-
-
-
 
 篩選器、charFilters和tokenizer的名稱是透過移除Factory尾碼來形成。 因此：
 
@@ -284,7 +280,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 ### Solr索引 {#the-solr-index}
 
-Solr索引的主要用途是全文檢索搜尋，但也可用於依路徑、屬性限制和主要型別限制來索引搜尋。 這表示Oak中的Solr索引可用於任何型別的JCR查詢。
+Solr索引的用途是全文檢索搜尋，但也可用於依路徑、屬性限制和主要型別限制來索引搜尋。 這表示Oak中的Solr索引可用於任何型別的JCR查詢。
 
 AEM中的整合會在存放庫層級進行，因此Solr是可用於Oak (AEM隨附的新存放庫實作)中的可能索引之一。
 
@@ -305,7 +301,7 @@ AEM也可以設定為與遠端Solr伺服器執行處理搭配使用：
 
    `<solrunpackdirectory>\aemsolr2\node2`
 
-1. 找到Solr套裝程式中的範例執行處理。 它通常位於名為「」的資料夾中 `example`」在封裝的根目錄中的。
+1. 找到Solr套裝程式中的範例執行處理。 它位在名為「」的資料夾中 `example`」在封裝的根目錄中的。
 1. 將下列資料夾從範例例例項複製到兩個分片資料夾( `aemsolr1\node1` 和 `aemsolr2\node2`)：
 
    * `contexts`
@@ -317,7 +313,7 @@ AEM也可以設定為與遠端Solr伺服器執行處理搭配使用：
    * `webapps`
    * `start.jar`
 
-1. 建立名為「」的新資料夾 `cfg`&quot;，分別位於兩個分片資料夾中。
+1. 建立名為「」的資料夾 `cfg`&quot;，分別位於兩個分片資料夾中。
 1. 將您的Solr和Zookeeper組態檔案放在新建立的 `cfg` 資料夾。
 
    >[!NOTE]
@@ -345,7 +341,7 @@ AEM也可以設定為與遠端Solr伺服器執行處理搭配使用：
 1. 選擇 **遠端Solr** 在下拉式清單中的 **Oak Solr** 伺服器提供者。
 
 1. 前往CRXDE並以管理員身分登入。
-1. 建立名為的新節點 **solrIndex** 在 **oak：index**，並設定下列屬性：
+1. 建立名為的節點 **solrIndex** 在 **oak：index**，並設定下列屬性：
 
    * **型別：** solr （字串型別）
    * **非同步：** 非同步（字串型別）
@@ -357,7 +353,7 @@ AEM也可以設定為與遠端Solr伺服器執行處理搭配使用：
 
 以下是可搭配本文所述所有三個Solr部署使用的基本設定範例。 它可容納已存在於AEM中且不應與其他應用程式搭配使用的專用屬性索引。
 
-為了正確使用它，您需要將歸檔的內容直接放在Solr主目錄中。 若是多節點部署，則應直接前往每個節點的根資料夾下方。
+若要正確使用它，您必須將歸檔的內容直接放在Solr主目錄中。 若是多節點部署，則應直接前往每個節點的根資料夾下方。
 
 建議的Solr組態檔
 
@@ -386,11 +382,11 @@ ACS Commons套件也會公開可用於建立屬性索引的OSGi設定。
 
 可能會出現查詢執行時間長，且一般系統回應時間緩慢的情況。
 
-本節提供一組建議，說明需要採取哪些措施來追蹤此類問題的原因，並提供如何解決這些問題的建議。
+本節提供一組建議，說明必須執行哪些操作來追蹤這類問題的原因，並提供如何解決這些問題的建議。
 
 #### 正在準備偵錯資訊以進行分析 {#preparing-debugging-info-for-analysis}
 
-要取得所執行查詢的所需資訊，最簡單的方式是透過 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query). 這可讓您收集對緩慢的查詢進行偵錯所需的精確資訊，而無需查閱記錄層級資訊。 如果您知道正在偵錯的查詢，這會是您理想的作法。
+要取得所執行查詢的所需資訊，最簡單的方式是透過 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query). 這可讓您收集對緩慢查詢進行偵錯所需的精確資訊，而無需查閱記錄層級資訊。 如果您知道正在偵錯的查詢，這會是您理想的作法。
 
 如果由於任何原因而無法執行此操作，您可以將索引記錄收集在單一檔案中，並使用它來疑難排解您的特定問題。
 
@@ -406,7 +402,7 @@ ACS Commons套件也會公開可用於建立屬性索引的OSGi設定。
 
 >[!NOTE]
 >
->請務必在您要疑難排解查詢的執行期間，將記錄檔設為DEBUG，否則隨著時間推移，記錄檔中將會產生大量事件。 因此，收集到所需的記錄後，請切換回INFO層級記錄，以記錄上述類別。
+>請務必只將您要疑難排解之查詢執行期間的記錄檔設為DEBUG。 否則，會隨著時間在記錄中產生大量事件。 因此，收集到所需的記錄後，請切換回INFO層級記錄，以記錄上述類別。
 
 您可以依照下列程式來啟用記錄日誌：
 
@@ -414,15 +410,15 @@ ACS Commons套件也會公開可用於建立屬性索引的OSGi設定。
 1. 按一下 **新增記錄器** 按鈕。
 1. 在新建立的列中，新增上述類別。 您可以使用 **+** 登入以將多個類別新增至單一記錄器。
 1. 選擇 **偵錯** 從 **記錄層級** 下拉式清單。
-1. 將輸出檔案設定為 `logs/queryDebug.log`. 這會將所有DEBUG事件關聯至單一記錄檔。
+1. 將輸出檔案設定為 `logs/queryDebug.log`. 這會將所有DEBUG事件關聯到單一記錄檔中。
 1. 執行查詢或轉譯正在使用您要偵錯的查詢的頁面。
 1. 執行查詢後，請返回記錄主控台，並將新建立的記錄器的記錄層級變更為 **資訊**.
 
 #### 索引設定 {#index-configuration}
 
-評估查詢的方式在很大程度上受索引設定影響。 請務必取得索引設定，以便進行分析或傳送給支援人員。 您可以以內容套件形式取得設定，或取得JSON轉譯。
+評估查詢的方式在很大程度上受索引設定影響。 請務必分析索引設定或將其傳送給支援人員。 您可以以內容套件形式取得設定，或取得JSON轉譯。
 
-因為大多數情況下，索引設定會儲存在 `/oak:index` 節點，您可在下列位置取得JSON版本：
+索引設定通常儲存在 `/oak:index` 節點，您可在下列位置取得JSON版本：
 
 `https://serveraddress:port/oak:index.tidy.-1.json`
 
@@ -430,7 +426,7 @@ ACS Commons套件也會公開可用於建立屬性索引的OSGi設定。
 
 #### MBean輸出 {#mbean-output}
 
-在某些情況下，提供索引相關MBean的輸出以進行偵錯會很有幫助。 您可以透過以下方式進行：
+有時候，提供索引相關MBean的輸出以進行偵錯會很有幫助。 您可以透過以下方式進行：
 
 1. 前往位於的JMX主控台：
    `https://serveraddress:port/system/console/jmx`
@@ -455,7 +451,7 @@ ACS Commons套件也會公開可用於建立屬性索引的OSGi設定。
 
 #### 其他詳細資料 {#other-details}
 
-您可以收集其他詳細資訊，以協助疑難排解問題，例如：
+您可以收集其他詳細資訊以協助疑難排解問題，例如：
 
-1. 執行您執行個體的Oak版本。 您可以透過開啟CRXDE並檢視歡迎頁面右下角的版本來檢視此內容，或透過檢查的版本 `org.apache.jackrabbit.oak-core` 套件組合。
+1. 執行個體所在的Oak版本。 您可以透過開啟CRXDE並檢視歡迎頁面右下角的版本來檢視此內容，或透過檢查的版本 `org.apache.jackrabbit.oak-core` 套件組合。
 1. 疑難查詢的QueryBuilder Debugger輸出。 此偵錯工具可從以下位置存取： `https://serveraddress:port/libs/cq/search/content/querydebug.html`

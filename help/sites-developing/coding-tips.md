@@ -1,18 +1,14 @@
 ---
 title: 編碼提示
-seo-title: Coding Tips
 description: AEM的編碼秘訣
-seo-description: Tips for coding for AEM
-uuid: 1bb1cc6a-3606-4ef4-a8dd-7c08a7cf5189
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 4adce3b4-f209-4a01-b116-a5e01c4cc123
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -21,27 +17,27 @@ ht-degree: 0%
 
 ## 儘可能使用taglibs或HTL {#use-taglibs-or-htl-as-much-as-possible}
 
-在JSP中加入Scriptlet會使得在程式碼中偵錯問題變得困難。 此外，若在JSP中加入指令碼，就很難將商業邏輯與檢視層分離，這違反了單一職責原則和MVC設計模式。
+在JSP中加入Scriptlet會使得在程式碼中偵錯問題變得困難。 此外，在JSP中加入Scriptlet，很難將商業邏輯與檢視層分離，這違反了單一職責原則和MVC設計模式。
 
 ### 寫入可讀取的程式碼 {#write-readable-code}
 
-程式碼只會寫入一次，但會讀取許多次。 花點時間提前清理我們撰寫的程式碼，日後將可獲得回報，因為我們和其他開發人員日後需要閱讀此程式碼。
+程式碼只會寫入一次，但會讀取許多次。 您和其他開發人員稍後會閱讀程式碼，預先花一些時間清理程式碼會派發紅利。
 
 ### 選擇意向顯露的名稱 {#choose-intention-revealing-names}
 
-理想情況下，另一位程式設計師不必開啟模組來瞭解其功能。 同樣地，他們應該能夠在不閱讀方法的情況下判斷方法的作用。 我們訂閱這些創意的效果越好，閱讀程式碼就會越容易，就能越快撰寫和變更程式碼。
+理想情況下，另一位程式設計師不必開啟模組來瞭解其功能。 同樣地，他們應該能夠在不閱讀方法的情況下判斷方法的作用。 您訂閱這些想法越好，閱讀程式碼就越容易，編寫和變更程式碼的速度就越快。
 
 在AEM程式碼基底中，會使用下列慣例：
 
 
-* 介面的單一實作已命名 `<Interface>Impl`，即 `ReaderImpl`.
-* 已命名介面的多個實作 `<Variant><Interface>`，即 `JcrReader` 和 `FileSystemReader`.
+* 介面的單一實作已命名 `<Interface>Impl`，也就是說， `ReaderImpl`.
+* 已命名介面的多個實作 `<Variant><Interface>`，也就是說， `JcrReader` 和 `FileSystemReader`.
 * 抽象基底類別已命名 `Abstract<Interface>` 或 `Abstract<Variant><Interface>`.
-* 封裝已命名 `com.adobe.product.module`.  每個Maven成品或OSGi套件組合都必須有自己的套件。
-* Java實作會放置在其API下方的實作套件中。
+* 封裝已命名 `com.adobe.product.module`. 每個Maven成品或OSGi套件組合都必須有自己的套件。
+* Java™實作會放置在其API下方的實作套件中。
 
 
-請注意，這些慣例不一定需要套用至客戶實作，但請務必定義並遵守慣例，這樣程式碼才能持續可供維護。
+這些慣例不一定適用於客戶實作，但請務必定義並遵守慣例，這樣程式碼才能持續可供維護。
 
 理想情況下，名稱應會顯示其意圖。 當名稱不如應有的清楚時，的常見程式碼測試是存在解釋變數或方法的用途的註釋：
 
@@ -68,7 +64,7 @@ DRY指出同一組程式碼絕不應重複。 這也適用於字串常值等。 
 
 ### 避免使用裸露的CSS規則 {#avoid-naked-css-rules}
 
-CSS規則應該專屬於應用程式內容中的目標元素。 例如，套用至以下專案的CSS規則： *.content .center* 過於廣泛，可能會影響您系統中的許多內容，未來需要其他人覆寫此風格。 *.myapp-centertext* 將會是更具體的規則，因為它會指定「置中」 *文字* 在應用程式內容中。
+CSS規則應該專屬於應用程式內容中的目標元素。 例如，套用至以下專案的CSS規則： *.content .center* 過於廣泛，可能會影響您系統中的許多內容，未來需要其他人覆寫此風格。 然而， *.myapp-centertext* 將會是更具體的規則，因為它會指定「置中」 *文字* 在應用程式內容中。
 
 ### 避免使用過時的API {#eliminate-usage-of-deprecated-apis}
 
@@ -88,9 +84,9 @@ AEM提供XSS API來輕鬆清除引數，並確保安全性不受跨網站指令�
 
 ### 實作適當的記錄 {#implement-appropriate-logging}
 
-對於Java程式碼，AEM支援slf4j作為記錄訊息的標準API，並且應該與透過OSGi控制檯提供的設定結合使用，以確保管理的一致性。 Slf4j會公開五個不同的記錄層級。 選擇要在哪個層級記錄訊息時，我們建議使用下列准則：
+對於Java™程式碼，AEM支援slf4j作為記錄訊息的標準API，並且應該與透過OSGi主控台提供的設定一起使用，以確保管理的一致性。 Slf4j會公開五個不同的記錄層級。 Adobe建議您在選擇記錄訊息的層級時，遵循下列准則：
 
-* 錯誤：當程式碼中的某些專案損毀，且處理無法繼續時。 這通常會發生於非預期的例外狀況。 在這些情況下包含棧疊追蹤通常會有幫助。
+* 錯誤：當程式碼中的某些專案損毀，且處理無法繼續時。 這通常會發生於非預期的例外狀況。 在這些情境中加入棧疊追蹤會很有幫助。
 * 警告：當某些專案未正確運作時，可以繼續處理。 這通常是因為我們預期的例外狀況，例如 *PathNotFoundException*.
 * INFO：監視系統時有用的資訊。 請記住，這是預設值，並且大多數客戶會在他們的環境中保留此設定。 因此，請勿過度使用。
 * DEBUG：有關處理的較低層級資訊。 對支援問題進行偵錯時很有用。

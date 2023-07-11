@@ -1,14 +1,10 @@
 ---
 title: 員工招聘參考網站逐步說明
-seo-title: Employee recruitment
 description: AEM Forms參考網站會展示組織如何使用AEM Forms功能來實作員工招募工作流程。
-seo-description: AEM Forms reference site showcases how organizations can use AEM Forms features to implement employee recruitment workflow.
-uuid: 27e456ba-3c08-4c43-ad54-1ba0070995ad
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 5f04b13e-ea40-4c86-9168-e020c52435a2
 exl-id: bdfc0a20-1e98-47f9-a1d1-5af5b3ef15db
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 0%
@@ -86,13 +82,13 @@ We.Finance首頁和職涯頁面為AEM Sites頁面。 職涯頁面內嵌最適化
 
 ### 親眼看看 {#see-it-yourself}
 
-前往 `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` 並按一下 **[!UICONTROL 職業]**. 按一下 **[!UICONTROL 搜尋]** 填入工作清單，然後按一下 **[!UICONTROL 套用]** 以取得工作。 填寫表單的詳細資料並提交申請。
+前往 `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` 並按一下 **[!UICONTROL 職業]**. 按一下 **[!UICONTROL 搜尋]** 以便您填入工作清單，然後按一下 **[!UICONTROL 套用]** 以取得工作。 填寫表單的詳細資料並提交申請。
 
 請務必在應用程式中指定有效的電子郵件ID，因為透過此逐步說明的任何通訊都會傳送至指定的電子郵件ID。
 
 ## John Jacobs將Sarah Rose的設定檔列入篩選名單 {#john-jacobs-shortlists-sarah-rose-s-profile-for-the-hiring-manager-s-screening}
 
-組織會收到Sarah提交的工作申請。 招聘人員John Jacobs被指派稽核Sarah設定檔的任務。 他檢閱其AEM收件匣中的任務，尋找符合工作需求的設定檔，然後按一下短清單。 Sarah的個人檔案會轉送給招聘經理Gloria Rios，等待她核准。
+組織會收到Sarah提交的工作申請。 招聘人員John Jacobs被指派稽核Sarah設定檔的任務。 John會檢閱其AEM收件匣中的任務、尋找符合工作需求的設定檔，然後按一下「短清單」。 Sarah的個人檔案會轉送給招聘經理Gloria Rios，等待她核准。
 
 ![jjacobs-inbox-1](assets/jjacobs-inbox-1.png)
 
@@ -146,7 +142,7 @@ John Doe安排面試，並將詳細資料傳送給Sarah Rose
 
 ## Sarah Rose收到包含面試排程的電子郵件 {#sarah-rose-receives-the-email-with-interview-schedule}
 
-Sarah Rose會收到包含面試時間表、地點和其他詳細資訊的電子郵件。 她按一下「接受」，表示她同意面試排程和地點。 在精確資訊的指引下，Sarah接受了採訪。
+Sarah Rose會收到包含面試時間表、地點和其他詳細資訊的電子郵件。 Sarah按一下「接受」，表示她同意面試的時間表和地點。 在精確資訊的指引下，Sarah接受了採訪。
 
 ![sarahroseinterviewemail](assets/sarahroseinterviewemail.png)
 
@@ -166,7 +162,7 @@ Gloria Rios在面試後挑選Sarah Rose
 
 ## John Doe要求更多資訊 {#john-doe-requests-more-information}
 
-要求候選人加入組織之前，必須先檢查其背景。 John Doe會開啟並檢閱選取的應徵者詳細資料，發現其部分就業與教育詳細資料尚未填寫。 John Doe點按需要更多資訊。
+要求候選人加入組織前，必須先檢查Sarah的背景。 John Doe會開啟並檢閱選取的應徵者詳細資料，發現其部分就業與教育詳細資料尚未填寫。 John Doe點按需要更多資訊。
 
 ![Johndoeinbox](assets/johndoeinbox.png) ![johndoeneedmoreinformation](assets/johndoeneedmoreinformation.png)
 

@@ -1,9 +1,6 @@
 ---
 title: 如何設定MongoDB以進行示範
-seo-title: How to Setup MongoDB for Demo
 description: 如何為一個製作執行個體和一個發佈執行個體設定MSRP
-seo-description: How to setup MSRP for one author instance and one publish instance
-uuid: d2035a9e-f05c-4f90-949d-7cdae9646750
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -11,9 +8,9 @@ content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 role: Admin
 exl-id: 7e257b34-a0f5-47db-b1a9-e26333c287d9
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -38,17 +35,17 @@ ht-degree: 0%
 
 ### 安裝MongoDb {#install-mongodb}
 
-* 下載MongoDB，從 [https://www.mongodb.org/](https://www.mongodb.org/)
+* 下載MongoDB，從 [https://www.mongodb.com/](https://www.mongodb.com/)
 
    * 選擇作業系統：
 
-      * Linux
+      * Linux®
       * Mac 10.8
       * Windows 7
+
    * 版本選擇：
 
       * 至少使用2.6版
-
 
 * 基本設定
 
@@ -56,9 +53,9 @@ ht-degree: 0%
    * 設定mongod：
 
       * 不需要設定蒙哥或分片。
-   * 安裝的MongoDB資料夾將稱為 &lt;mongo-install>.
-   * 定義的資料目錄路徑將參照為 &lt;mongo-dbpath>.
 
+   * 系統會呼叫已安裝的MongoDB資料夾 &lt;mongo-install>.
+   * 已定義的資料目錄路徑稱為 &lt;mongo-dbpath>.
 
 * MongoDB可在與AEM相同的主機上執行或遠端執行。
 
@@ -66,7 +63,7 @@ ht-degree: 0%
 
 * &lt;mongo-install>/bin/mongod —dbpath &lt;mongo-dbpath>
 
-這將使用預設連線埠27017啟動MongoDB伺服器。
+這會使用預設連線埠27017啟動MongoDB伺服器。
 
 * 對於Mac，請使用開頭為&#39;ulimit -n 2048&#39;的ulimit增加
 
@@ -100,13 +97,13 @@ ht-degree: 0%
 
    * 適用於任何作業系統。
    * Solr 7.0版。
-   * Solr需要Java 1.7或更高版本。
+   * Solr需要Java™ 1.7或更高版本。
 
 * 基本設定
 
    * 遵循&#39;example&#39; Solr設定。
    * 不需要服務。
-   * 安裝的Solr資料夾將稱為 &lt;solr-install>.
+   * 已安裝的Solr資料夾稱為 &lt;solr-install>.
 
 ### 為AEM Communities設定Solr {#configure-solr-for-aem-communities}
 
@@ -122,20 +119,21 @@ ht-degree: 0%
 為簡單起見，以4.10版為例，以獨立模式啟動Solr：
 
 * cd至 &lt;solrinstall>/example
-* java -jar start.jar
+* Java™ -jar start.jar
 
-這會使用預設連線埠8983啟動Solr HTTP伺服器。 您可以瀏覽至Solr主控台，取得Solr主控台以進行測試。
+此程式會使用預設連線埠8983啟動Solr HTTP伺服器。 您可以瀏覽至Solr主控台，取得Solr主控台以進行測試。
 
 * 預設Solr主控台： [http://localhost:8983/solr/](http://localhost:8983/solr/)
 
 >[!NOTE]
 >
 >如果Solr主控台無法使用，請檢查 &lt;solrinstall>/example/logs. 檢視SOLR是否嘗試繫結至無法解析的特定主機名稱（例如「user-macbook-pro」）。
-若是如此，請使用此主機名稱的新專案更新etc/hosts檔案（例如127.0.0.1 user-macbook-pro），Solr將正常啟動。
+>
+如果是，請更新 `etc/hosts` 檔案中新增此主機名稱的專案（例如127.0.0.1 user-macbook-pro），以正確啟動Solr。
 
 ### SolrCloud {#solrcloud}
 
-若要執行非常基本的（非生產） solrCloud設定，請啟動solr並執行下列動作：
+若要執行基本（非生產） solrCloud安裝程式，請啟動solr並執行下列動作：
 
 * `java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar`
 
@@ -143,7 +141,7 @@ ht-degree: 0%
 
 視需要啟動作者和發佈AEM例項。
 
-如果AEM在MongoDB啟動之前執行，則需要重新啟動AEM執行個體。
+如果AEM在MongoDB啟動之前執行，則必須重新啟動AEM執行個體。
 
 請依照主要檔案頁面上的指示操作： [MSRP - MongoDB公用存放區](msrp.md)
 
@@ -161,7 +159,7 @@ ht-degree: 0%
 
    ![view-comment](assets/view-comment.png)
 
-   注意：雖然下有JCR節點， *asith* 在作者上，這些用於SCF框架。 實際的UGC不在JCR中，而是在MongoDB中。
+   注意：雖然下有JCR節點， *asith* 在作者上，這些節點用於SCF框架。 實際的UGC不在JCR中，而是在MongoDB中。
 
 1. 在mongodb中檢視UGC **[!UICONTROL Communities]** > **[!UICONTROL 集合]** > **[!UICONTROL 內容]**
 
@@ -184,7 +182,7 @@ ht-degree: 0%
 
 1. 請確定MSRP已設定為預設提供者：
 
-   * 在所有作者和發佈AEM執行個體上，重新造訪 [儲存設定主控台](srp-config.md) 或檢查AEM存放庫：
+   * 在所有作者和發佈AEM執行個體上，重新造訪 [儲存設定主控台](srp-config.md)，或檢查AEM存放庫：
 
    * 在JCR中，如果 [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) 不包含 [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) 節點，這表示儲存提供者為JSRP。
    * 如果srpc節點存在且包含節點 [default設定](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，defaultconfiguration的屬性應將MSRP定義為預設提供者。

@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 | **[⇐ Feature Essentials](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
 |---|---|
-|  | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
 
 若要自訂AEM Communities元件在使用者端的外觀和/或行為，有數種方法。
 
@@ -53,9 +53,9 @@ ht-degree: 0%
 
 如需擴充註解元件的快速範例，請嘗試 [延伸註解元件教學課程](extend-comments.md).
 
-## Javascript繫結 {#javascript-binding}
+## JavaScript繫結 {#javascript-binding}
 
-元件的HBS指令碼必須繫結至實作此功能的JavaScript物件、模型和檢視。
+元件的HBS指令碼必須繫結至JavaScript物件、模型和檢視，以實作此功能。
 
 的值 `data-scf-component` 屬性可以是預設值，例如 **`social/tally/components/hbs/rating`**&#x200B;或延伸（自訂）元件用於自訂功能，例如 **weretail/components/hbs/rating**.
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 * `data-component-id`=&quot;{{id}}&quot;
 
-   從內容解析為id屬性
+  從內容解析為id屬性
 
 * `data-scf-component`=&quot;*&lt;resourcetype>*
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 1. 識別您要變更的元素（例如：撰寫器區域、工具列按鈕、訊息字型等）。
 1. 識別影響這些元素的CSS類別/規則。
 1. 建立樣式表檔案(.css)。
-1. 將樣式表包含在使用者端資料庫資料夾中([clientlibs](#clientlibs-for-scf))，並確保其包含在您的範本和頁面中 [ui：includeClientLib](../../help/sites-developing/clientlibs.md).
+1. 將樣式表包含在使用者端程式庫資料夾中([clientlibs](#clientlibs-for-scf))，並確保其包含在您的範本和頁面中 [ui：includeClientLib](../../help/sites-developing/clientlibs.md).
 
 1. 重新定義已在樣式表中識別(#2)的CSS類別和規則，並新增樣式。
 
@@ -104,17 +104,17 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->前置詞為的任何CSS類別名稱 `scf-js` 在javascript程式碼中有特定用途。 這些類別會影響元件的狀態（例如，從隱藏切換到可見），且不應覆寫或移除。
+>前置詞為的任何CSS類別名稱 `scf-js` 在JavaScript程式碼中具有特定用途。 這些類別會影響元件的狀態（例如，從隱藏切換到可見），且不應覆寫或移除。
 >
->而 `scf-js` 類別不會影響樣式，類別名稱可用於樣式表中，但請注意，由於類別名稱控制元素的狀態，因此可能會產生副作用。
+>而 `scf-js` 類別不會影響樣式，類別名稱可用於樣式表中，但請注意，當類別名稱控制元素的狀態時，可能會產生副作用。
 
-## 擴充Javascript {#extending-javascript}
+## 延伸JavaScript {#extending-javascript}
 
-若要擴充元件Javascript實作，您需要：
+若要擴充元件JavaScript實作，您需要：
 
 1. 為應用程式建立元件，並將jcr：resourceSuperType設定為擴充元件的jcr：resourceType值，例如social/forum/components/hbs/forum。
-1. 檢查預設SCF元件的Javascript，以判斷需要使用SCF.registerComponent()註冊的方法。
-1. 複製擴充元件的Javascript或從頭開始。
+1. 檢查預設SCF元件的JavaScript，以判斷需要使用SCF.registerComponent()註冊的方法。
+1. 複製擴充元件的JavaScript或從頭開始。
 1. 擴充方法。
 1. 使用SCF.registerComponent()以預設值或自訂物件和檢視來註冊所有方法。
 
@@ -151,7 +151,7 @@ ht-degree: 0%
 
 ## 適用於SCF的Clientlibs {#clientlibs-for-scf}
 
-使用 [使用者端程式庫](../../help/sites-developing/clientlibs.md) (clientlibs)，提供整理和最佳化在使用者端上呈現內容所使用的Javascript和CSS的方法。
+使用 [使用者端程式庫](../../help/sites-developing/clientlibs.md) (clientlibs)，提供整理和最佳化用於呈現使用者端內容的JavaScript和CSS的方法。
 
 SCF的clientlibs遵循兩個變體的非常特定命名模式，這些模式僅在類別名稱中存在「author」時有所不同：
 
@@ -179,7 +179,7 @@ SCF的clientlibs遵循兩個變體的非常特定命名模式，這些模式僅�
 
 ### 創作Clientlibs {#author-clientlibs}
 
-製作版本clientlibs會被精簡為實施元件所需的最小Javascript。
+製作版本clientlibs會被精簡為實施元件所需的最小JavaScript。
 
 這些clientlibs絕不應該直接包含在內，而是可以內嵌到其他為網站手動打造的clientlibs中。
 
@@ -200,10 +200,10 @@ SCF的clientlibs遵循兩個變體的非常特定命名模式，這些模式僅�
 
 每個網站的管理使用者端程式庫的方式都不同。 各種因素包括：
 
-* 整體速度：可能是希望網站有所回應，但第一頁載入緩慢是可以接受的。 如果許多頁面使用相同的Javascript，則各種Javascript可以嵌入到一個clientlib中，並從要載入的第一個頁面引用。 此單一下載中的Javascript仍會保持快取，將後續頁面的資料下載量減到最少。
-* 第一頁短時間：可能希望第一頁快速載入。 在此情況下，Javascript會位於多個小型檔案中，而只會在需要時參考。
+* 整體速度：可能是希望網站有所回應，但第一頁載入緩慢是可以接受的。 如果許多頁面使用相同的JavaScript，則各種JavaScript可以嵌入到一個clientlib中，並從要載入的第一個頁面引用。 此單一下載中的JavaScript仍會保持快取，將後續頁面的資料下載量減到最少。
+* 第一頁短時間：可能希望第一頁快速載入。 在此情況下，JavaScript會位於多個小型檔案中，而只會在需要時參考。
 * 首次頁面載入與後續下載之間的平衡。
 
 | **[⇐ Feature Essentials](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
 |---|---|
-|  | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
