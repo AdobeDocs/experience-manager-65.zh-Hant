@@ -1,18 +1,14 @@
 ---
 title: 內容架構
-seo-title: Content Architecture
 description: 架構內容的秘訣（提示 — 一切都是內容）
-seo-description: Tips for architecting your content in Adobe Experience Manager (AEM). (hint - everything is content)
-uuid: fef2bf0f-70ec-4621-8479-a62b7e1fbc07
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: ca46b74c-6114-458b-98c0-2a93abffcdc3
 exl-id: bcebbdb4-20b9-4c2d-8a87-013549d686c1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -28,14 +24,14 @@ David&#39;s Model是由David Nuescheler在多年前所撰寫，但現今的想�
 * 工作區用於 `clone()`， `merge()`、和 `update()`.
 * 注意同名的同層級。
 * 參照會被視為有害。
-* 檔案就是檔案。
+* 檔案是檔案。
 * ID是邪惡的。
 
 David的模型可在Jackrabbit維基百科上找到，網址為 [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
 
 ### 一切都是內容 {#everything-is-content}
 
-所有資料都應儲存在存放庫中，而不是依賴獨立的第三方資料來源，例如資料庫。 這適用於編寫的內容、二進位資料，例如影像、程式碼、設定等。 這可讓我們使用一組API來管理所有內容，並透過復寫管理此內容的促銷活動。 此外，我們還可以獲得備份、記錄等單一來源。
+所有資料都應儲存在存放庫中，而不是依賴獨立的第三方資料來源，例如資料庫。 這適用於編寫的內容、二進位資料，例如影像、程式碼和設定。 這可讓我們使用一組API來管理所有內容，並透過復寫管理此內容的促銷活動。 您也可以取得備份、記錄等的單一來源。
 
 ### 使用「內容模型優先」設計原則 {#use-the-content-model-first-design-principle}
 
@@ -47,7 +43,7 @@ Servlet應根據resourceTypes而不是路徑來定義。 這可讓您使用JCR�
 
 ### 避免定義新節點型別 {#avoid-defining-new-node-types}
 
-節點型別在基礎結構層中的作用較低，大多數需求都可以通過使用指派給nt：unstructured、oak：Unstructured、sling：Folder或cq：Page節點型別的sling：resourceType來滿足。 節點型別等同於存放庫中的結構描述，之後變更節點型別可能會非常昂貴。
+節點型別在基礎結構層中的作用較低，大多數需求都可以通過使用指派給nt：unstructured、oak：Unstructured、sling：Folder或cq：Page節點型別的sling：resourceType來滿足。 節點型別等同於存放庫中的結構描述，而且變更節點型別之後可能很昂貴。
 
 ### 遵守JCR中的命名慣例 {#adhere-to-naming-conventions-in-the-jcr}
 

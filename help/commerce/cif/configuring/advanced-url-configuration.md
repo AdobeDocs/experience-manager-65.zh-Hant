@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '898'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->搜尋引擎最佳化 (SEO) 已成為許多行銷人員的重點考量。因此，許多AEM專案需要解決SEO問題。 請閱讀 [SEO和URL管理最佳作法](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) 以取得其他資訊。
+>搜尋引擎最佳化 (SEO) 已成為許多行銷人員的重點考量。因此，許多AEM專案都必須解決SEO問題。 另請參閱 [SEO和URL管理最佳作法](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) 以取得其他資訊。
 
 [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) 提供進階設定，以便自訂產品和類別頁面的URL。 許多實施會針對搜尋引擎最佳化(SEO)目的自訂這些URL。 以下影片詳細說明如何設定 `UrlProvider` 的服務與功能 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) 自訂產品和類別頁面的URL。
 
@@ -32,7 +32,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->自AEM CIF核心元件2.0.0版以來，「URL提供者」設定僅提供預先定義的url格式，而非1.x版所擁有的自由文字可設定格式。 此外，使用選取器在URL中傳遞資料的做法已更換為尾碼。
+>自AEM CIF核心元件2.0.0版以來，「URL提供者」設定僅提供預先定義的url格式，而非1.x版已知的自由文字可設定格式。 此外，使用選取器在URL中傳遞資料的做法已更換為尾碼。
 
 ### 產品頁面URL格式 {#product}
 
@@ -46,15 +46,15 @@ ht-degree: 6%
 
 若為 [Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)：
 
-* `{{page}}` 將取代為 `/content/venia/us/en/products/product-page`
-* `{{sku}}` 將由產品的sku取代，例如 `VP09`
-* `{{url_key}}` 將由產品的 `url_key` 屬性，例如 `lenora-crochet-shorts`
-* `{{url_path}}` 將由產品的 `url_path`，例如 `venia-bottoms/venia-pants/lenora-crochet-shorts`
-* `{{variant_sku}}` 將由目前選取的變體取代，例如 `VP09-KH-S`
+* `{{page}}` 取代為 `/content/venia/us/en/products/product-page`
+* `{{sku}}` 由產品的SKU取代，例如， `VP09`
+* `{{url_key}}` 由產品的 `url_key` 屬性，例如， `lenora-crochet-shorts`
+* `{{url_path}}` 由產品的 `url_path`例如， `venia-bottoms/venia-pants/lenora-crochet-shorts`
+* `{{variant_sku}}` 由目前選取的變體取代，例如， `VP09-KH-S`
 
-由於 `url_path` 已過時，預先定義的產品URL格式會使用產品的 `url_rewrites` 並挑選路徑分段最多的路徑作為替代路徑，如果 `url_path` 無法使用。
+由於 `url_path` 已過時，預先定義的產品URL格式會使用產品的 `url_rewrites` 並挑選路徑區段最多的路徑作為替代路徑，如果 `url_path` 無法使用。
 
-在上述範例資料中，使用預設URL格式的產品變體URL看起來會像 `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
+在上述範例資料中，使用預設URL格式的產品變體URL看起來像 `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
 
 ### 類別頁面URL格式 {#product-list}
 
@@ -65,11 +65,11 @@ ht-degree: 6%
 
 若為 [Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)：
 
-* `{{page}}` 將取代為 `/content/venia/us/en/products/category-page`
-* `{{url_key}}` 將由類別的 `url_key` 屬性
-* `{{url_path}}` 將由類別的 `url_path`
+* `{{page}}` 取代為 `/content/venia/us/en/products/category-page`
+* `{{url_key}}` 由類別的 `url_key` 屬性
+* `{{url_path}}` 由類別的 `url_path`
 
-在上述範例資料中，使用預設URL格式化的類別頁面URL看起來會像 `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html`.
+在上述範例資料中，使用預設URL格式格式的類別頁面URL看起來像 `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html`.
 
 >[!NOTE]
 > 
@@ -85,17 +85,17 @@ ht-degree: 6%
 
 ## 自訂URL格式 {#custom-url-format}
 
-若要提供自訂URL格式，專案可實作 [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) 或 [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) 服務介面，並將實作註冊為OSGI服務。 這些實施（如果可用）將取代已設定的預先定義格式。 如果註冊了多個實作，則服務排名較高的實作會取代服務排名較低的實作。
+若要提供自訂URL格式，讓專案可實作 [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) 或 [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) 服務介面，並將實作註冊為OSGI服務。 這些實施（如果可用）會取代已設定的預先定義格式。 如果註冊了多個實作，則服務排名較高的實作會取代服務排名較低的實作。
 
 自訂URL格式實作必須實作一組方法，以便從指定引數建立URL，並剖析URL以分別傳回相同的引數。
 
 ## 與Sling對應結合 {#sling-mapping}
 
-除了 `UrlProvider`，也可以設定 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) 以便重寫及處理URL。 AEM原型專案也提供 [設定範例](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish) 為連線埠4503 （發佈）和80 （排程程式）設定一些Sling對應。
+除了 `UrlProvider`，也可以設定 [Sling對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) 以重寫及處理URL。 AEM原型專案也提供 [設定範例](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish) 為連線埠4503 （發佈）和80 (Dispatcher)設定一些Sling對應。
 
 ## 與AEM Dispatcher結合 {#dispatcher}
 
-也可以使用AEM Dispatcher HTTP伺服器搭配 `mod_rewrite` 模組。 此 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 提供已包含基本設定的AEM Dispatcher參考設定 [重寫規則](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) 所產生的大小。
+透過以下方式使用AEM Dispatcher HTTP伺服器也可實現URL重寫： `mod_rewrite` 模組。 此 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 提供已包含基本設定的AEM Dispatcher參考設定 [重寫規則](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) 所產生的大小。
 
 ## 範例
 

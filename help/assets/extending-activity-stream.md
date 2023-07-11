@@ -5,16 +5,16 @@ contentOwner: AG
 role: Developer
 feature: Asset Management
 exl-id: 2a08a7c1-8be9-42d1-9983-f9c8b12ea4e8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
 
 # 整合 [!DNL Assets] 使用活動資料流 {#integrating-assets-with-activity-stream}
 
-[!DNL Adobe Experience Manager Assets] 使用者可執行許多動作，例如建立、上傳和刪除資產。 這些動作可以記錄下來，這樣您就可以提供使用者已完成動作的歷史記錄。 本節說明的錄製功能 [!DNL Experience Manager] 以及如何設定 [!DNL Experience Manager] 以記錄特定事件。
+[!DNL Adobe Experience Manager Assets] 使用者可執行許多動作，例如建立、上傳和刪除資產。 這些動作可以記錄下來，這樣您就可以提供使用者已完成的歷程記錄。 本節說明的錄製功能 [!DNL Experience Manager] 以及如何設定 [!DNL Experience Manager] 以記錄特定事件。
 
 ## 效能考量事項和預設行為 {#performance-considerations-and-default-behavior}
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 支援的動作事件 {#supported-action-events}
 
-可以將下列事件設定為記錄：
+您可以設定要記錄的下列事件：
 
 * 授權已接受（已接受）
 * 已建立的資產(ASSET_CREATED)
@@ -52,10 +52,10 @@ ht-degree: 0%
 
 1. Check **[!UICONTROL 啟用此服務]**.
 
-1. 檢查哪一個 **[!UICONTROL 事件型別]** 您想要記錄在使用者活動資料流中。
+1. 檢查哪一個 **[!UICONTROL 事件型別]** 您想要記錄在使用者活動資料流中的資訊。
 
 1. 按一下「**[!UICONTROL 儲存]**」。
 
 ## 讀取記錄的事件 {#reading-recorded-events}
 
-記錄的事件會儲存為活動。 您可以使用以下程式設計方式閱讀這些檔案： [ActivityManager API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ActivityManager.html).
+記錄的事件會儲存為活動。 您可以使用以下程式設計方式閱讀這些檔案： [ActivityManager API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/activitystreams/ActivityManager.html).

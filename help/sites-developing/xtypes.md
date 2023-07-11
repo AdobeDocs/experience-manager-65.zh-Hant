@@ -1,16 +1,14 @@
 ---
 title: 使用xtype （傳統UI）
-description: 瞭解AEM可用的所有xtype
-uuid: 6497caa4-2f9b-4f21-9023-88d485fd1d78
+description: 瞭解Adobe Experience Manager提供的所有xtype
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: adb70b43-1b0b-4302-905a-c7612675dabb
 exl-id: 06ca4e6d-9ab7-4c5b-905c-07c448632f2b
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '6400'
+source-wordcount: '6384'
 ht-degree: 0%
 
 ---
@@ -31,17 +29,17 @@ ht-degree: 0%
 >
 >本頁說明傳統UI中ExtJS xtypes的使用方式。
 >
->Adobe建議您善用標準、現代、 [觸控式UI](/help/sites-developing/touch-ui-concepts.md) 根據 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
+>Adobe建議您使用標準、現代、 [觸控式UI](/help/sites-developing/touch-ui-concepts.md) 根據 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) 和 [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
 
 ## xtypes {#xtypes}
 
-請於下方找到Adobe Experience Manager中可用的xtype清單：
+以下列出Adobe Experience Manager中可用的xtype：
 
 * 註解
 
   [CQ.wcm.Annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Annotation)
 
-  「對話方塊」是一種特殊視窗，其內文中有表單，頁尾中有按鈕群組。 它通常用於編輯內容，但也可以只顯示資訊。
+  「對話方塊」是一種特殊視窗，其內文中有表單，頁尾中有按鈕群組。 它通常用於編輯內容，但也只能顯示資訊。
 
 * 陣列存放區
 
@@ -49,7 +47,7 @@ ht-degree: 0%
 
   先前稱為「SimpleStore」。
 
-  建立小型協助程式類別 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)從陣列資料更輕鬆。 ArrayStore將自動設定為 [CQ.Ext.data.ArrayReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.ArrayReader).
+  建立小型協助程式類別 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)從陣列資料更輕鬆。 ArrayStore會自動設定為 [CQ.Ext.data.ArrayReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.ArrayReader).
 
 * asseteditor
 
@@ -73,7 +71,7 @@ ht-degree: 0%
 
   [CQ.wcm.msm.BlueprintStatus](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus)
 
-  BlueprintStatus提供一個面板來檢視和編輯Blueprint及其即時副本關係。 瀏覽是透過 [CQ.wcm.msm.BlueprintStatus.Tree](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus.Tree)，編輯透過 [CQ.wcm.msm.BlueprintConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig) 和a [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties).
+  BlueprintStatus提供一個面板來檢視和編輯Blueprint及其即時副本關係。 瀏覽是透過 [CQ.wcm.msm.BlueprintStatus.Tree](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus.Tree)，編輯透過 [CQ.wcm.msm.BlueprintConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig) 和 [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties).
 
 * 方塊
 
@@ -181,7 +179,7 @@ ht-degree: 0%
 
   [CQ.Ext.Component](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component)
 
-  所有Ext元件的基底類別。 Component的所有子類別均可參與建立、演算及銷毀的自動化Ext元件生命週期，由 [容器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 類別。 元件可透過以下方式新增至容器 [個專案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 建立容器時的config選項。
+  所有Ext元件的基底類別。 Component的所有子類別都可參與建立、演算和銷毀的自動化Ext元件生命週期，此生命週期由 [容器](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 類別。 元件可透過以下方式新增至容器 [個專案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) 建立容器時的config選項。
 
 * componentextractor
 
@@ -211,13 +209,13 @@ ht-degree: 0%
 
   任何的基底類別 [CQ.Ext.BoxComponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.BoxComponent) 可能包含其他元件的元件。 容器可處理包含專案的基本行為，即新增、插入和移除專案。
 
-  最常用的Container類別為 [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel)， [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) 和 [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel).
+  最常用的Container類別為 [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel)， [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)、和 [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel).
 
 * contentfinder
 
   [CQ.wcm.ContentFinder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder)
 
-  ContentFinder是專門的兩欄 [檢視區](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) 左側包含實際的「內容尋找器」，右側包含內容框架。
+  ContentFinder是專門的兩欄式 [檢視區](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) 左側包含實際的「內容尋找器」，右側包含內容框架。
 
 * contentfindertab
 
@@ -295,7 +293,7 @@ ht-degree: 0%
 
   [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)
 
-  「對話方塊」是一種特殊視窗，其內文中有表單，頁尾中有按鈕群組。 它通常用於編輯內容，但也可以只顯示資訊。
+  「對話方塊」是一種特殊視窗，其內文中有表單，頁尾中有按鈕群組。 它通常用於編輯內容，但也只能顯示資訊。
 
 * dialogfieldset
 
@@ -391,7 +389,7 @@ ht-degree: 0%
 
   [CQ.Ext.data.GroupingStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.GroupingStore)
 
-  提供依其中一個可用欄位分組記錄的專用存放區實施。 這通常會與 [CQ.Ext.grid.GroupingView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GroupingView) 以證明已分組GridPanel的資料模型。
+  提供依其中一個可用欄位分組記錄的專用存放區實施。 此項搭配 [CQ.Ext.grid.GroupingView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GroupingView) 以證明已分組GridPanel的資料模型。
 
 * heavymovedialog
 
@@ -403,7 +401,7 @@ ht-degree: 0%
 
   [CQ.Ext.form.Hidden](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Hidden)
 
-  在表單中儲存隱藏值的基本隱藏欄位，需要在表單提交中傳遞。
+  在表單中儲存隱藏值的基本隱藏欄位，必須在表單提交中傳遞。
 
 * 「歷程記錄」按鈕
 
@@ -441,7 +439,7 @@ ht-degree: 0%
 
   [CQ.Ext.data.JsonStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonStore)
 
-  建立小型協助程式類別 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)從JSON資料更輕鬆。 JsonStore會自動設定 [CQ.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader).
+  建立小型協助程式類別 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)從JSON資料更輕鬆。 JsonStore會自動設定為 [CQ.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader).
 
 * 標籤
 
@@ -517,7 +515,7 @@ ht-degree: 0%
 
   [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem)
 
-  呈現至功能表之所有專案的基底類別。 BaseItem提供預設呈現、啟動狀態管理和所有功能表元件共用的基本組態選項。
+  呈現至功能表之所有專案的基底類別。 BaseItem提供預設呈現、啟動狀態管理，以及所有功能表元件共用的基本組態選項。
 
 * menucheckitem
 
@@ -535,19 +533,19 @@ ht-degree: 0%
 
   [CQ.Ext.menu.Separator](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Separator)
 
-  在選單中新增分隔列，用來分割選單專案的邏輯群組。 通常，您會在要新增的專案設定中呼叫()或專案設定中使用「 — 」來新增其中之一，而不是直接建立一個。
+  在選單中新增分隔列，用來分割選單專案的邏輯群組。 一般而言，您會在呼叫add()或專案設定中使用「 — 」來新增這些專案之一，而非直接建立一個。
 
 * menutextitem
 
   [CQ.Ext.menu.TextItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.TextItem)
 
-  將靜態文字字串新增至功能表，通常作為標題或群組分隔符號。
+  將靜態文字字串新增至功能表，作為標題或群組分隔符號使用。
 
 * 中繼資料
 
   [CQ.dam.form.Metadata](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.dam.form.Metadata)
 
-  中繼資料提供一組欄位，可決定中繼資料欄位所需的資訊，例如在資產編輯器頁面上。
+  中繼資料提供一組欄位，可決定中繼資料欄位所需的資訊，例如在Asset Editor頁面上。
 
   它提供下列欄位：
 
@@ -561,7 +559,7 @@ ht-degree: 0%
 
   [CQ.form.MVT](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.MVT)
 
-  多變數測試元件可用來定義及編輯一組以交替橫幅顯示的影像。 每個橫幅會收集點進率統計資料。
+  Multivariate Testing元件可用來定義及編輯一組以交替橫幅顯示的影像。 每個橫幅會收集點進率統計資料。
 
 * notificationinbox
 
@@ -579,7 +577,7 @@ ht-degree: 0%
 
   [cq.wcm.OfflineImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.OfflineImporter)
 
-  OfflineImporter是一種將Microsoft Word檔案匯入並轉換成AEM頁面的工具。 此功能允許使用文書處理器離線編輯內容。
+  OfflineImporter是一種將Microsoft® Word檔案匯入並轉換成AEM頁面的工具。 此功能允許使用文書處理器離線編輯內容。
 
 * ownerdraw
 
@@ -591,7 +589,7 @@ ht-degree: 0%
 
   [CQ.Ext.PagingToolbar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.PagingToolbar)
 
-  隨著記錄數量增加，瀏覽器轉譯記錄所需的時間也會增加。 分頁用於減少與使用者端交換的資料量。
+  隨著記錄數增加，瀏覽器轉譯記錄所需的時間也會增加。 分頁用於減少與使用者端交換的資料量。
 
 * 面板
 
@@ -605,7 +603,7 @@ ht-degree: 0%
 
   [cq.form.ParagraphReference](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ParagraphReference)
 
-  段落參考欄位可瀏覽頁面並選取其中一個段落。 它由觸發欄位和關聯的段落瀏覽對話方塊組成。
+  段落參考欄位可讓您瀏覽頁面並選取其中一個段落。 它由觸發欄位和關聯的段落瀏覽對話方塊組成。
 
 * 密碼
 
@@ -717,7 +715,7 @@ ht-degree: 0%
 
   [CQ.wcm.Sidekick](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Sidekick)
 
-  Sidekick是浮動協助程式，為使用者提供用於頁面編輯的常用工具。
+  Sidekick是浮動協助程式，為使用者提供用於編輯頁面的常用工具。
 
 * siteadmin
 
@@ -765,7 +763,7 @@ ht-degree: 0%
 
   SmartImage是智慧型影像上傳程式。 它提供處理上傳影像的工具，例如定義影像地圖和影像裁剪程式的工具。
 
-  請注意，元件主要是設計成用於個別的對話方塊索引標籤。
+  此元件設計為在單獨的對話方塊索引標籤上使用。
 
 * 分隔符號
 
@@ -783,7 +781,7 @@ ht-degree: 0%
 
   [CQ.Ext.SplitButton](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.SplitButton)
 
-  分割按鈕提供內建的下拉式箭頭，可以單獨引發事件與按鈕的預設點按事件。 這通常用於顯示提供主要按鈕動作其他選項的下拉式選單，但任何自訂處理常式都可提供arrowclick實施。
+  分割按鈕提供內建的下拉式箭頭，可以單獨引發事件與按鈕的預設點按事件。 通常，這會用於顯示提供主要按鈕動作其他選項的下拉式選單，但任何自訂處理常式都可以提供arrowclick實施。
 
 * 靜態
 
@@ -807,7 +805,7 @@ ht-degree: 0%
 
   [CQ.form.SuggestField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SuggestField)
 
-  SuggestField會根據使用者輸入的內容，提供使用者建議。
+  SuggestField會根據使用者的輸入為其提供建議。
 
 * 切換器
 
@@ -875,13 +873,13 @@ ht-degree: 0%
 
   [CQ.Ext.Tip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tip)
 
-  @xtype秘訣這是的基底類別 [CQ.Ext.QuickTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTip) 和 [CQ.Ext.Tooltip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tooltip) 提供所有提示型類別所需的基本版面與定位。 此類別可直接用於簡單的靜態定位提示。
+  @xtype秘訣這是的基底類別 [CQ.Ext.QuickTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTip) 和 [CQ.Ext.Tooltip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tooltip) 提供所有提示型類別所需的基本版面與定位。 此類別可直接用於簡單、靜態定位的提示。
 
 * 標題分隔符號
 
   [CQ.menu.TitleSeparator](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.menu.TitleSeparator)
 
-  在選單中新增分隔列，用來分割選單專案的邏輯群組。 分隔符號可額外帶有標題。
+  在選單中新增分隔列，用來分割選單專案的邏輯群組。 分隔符號也可以帶有標題。
 
 * 工具列
 
@@ -945,6 +943,6 @@ ht-degree: 0%
 
   [CQ.Ext.data.XmlStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlStore)
 
-  建立小型協助程式類別 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)從XML資料更輕鬆。 XmlStore將自動設定為 [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader).
+  建立小型協助程式類別 [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)從XML資料更輕鬆。 XmlStore會自動設定為 [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader).
 
   **cqinclude** 包含來自存放庫中不同路徑的Widget定義的偽xtype。 最常用於頁面對話方塊。 此xtype沒有實際的JavaScript Widget類別。 這會由CQ.Util類別的formatData()函式處理。 如需詳細資訊，請參閱此知識庫文章。

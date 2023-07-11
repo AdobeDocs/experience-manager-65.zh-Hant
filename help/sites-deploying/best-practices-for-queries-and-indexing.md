@@ -1,27 +1,23 @@
 ---
 title: 查詢和建立索引的最佳實務
-seo-title: Best Practices for Queries and Indexing
 description: 本文提供如何最佳化索引和查詢的准則。
-seo-description: This article provides guidelines on how to optimize your indexes and queries.
-uuid: 0609935a-4a72-4b8e-a28e-daede9fc05f4
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: d8ae63edd71c7d27fe93d24b30fb00a29332658d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '4663'
+source-wordcount: '4614'
 ht-degree: 0%
 
 ---
 
 # 查詢和建立索引的最佳實務{#best-practices-for-queries-and-indexing}
 
-除了在AEM 6中轉換至Oak外，也針對管理查詢和索引的方式進行了一些重大變更。 在Jackrabbit 2中，所有內容都預設編制索引，並可自由查詢。 在Oak中，必須在以下位置手動建立索引： `oak:index` 節點。 可以在沒有索引的情況下執行查詢，但是對於大型資料集，查詢執行速度會非常慢，甚至會中止。
+除了在AEM 6中轉換至Oak外，也針對管理查詢和索引的方式進行了一些重大變更。 在Jackrabbit 2下，所有內容預設都已編制索引，並可自由查詢。 在Oak中，必須在以下位置手動建立索引： `oak:index` 節點。 可以在沒有索引的情況下執行查詢，但是對於大型資料集，查詢會執行緩慢，甚至會中止。
 
-本文會概述何時建立索引以及何時不需要索引、避免在不需要查詢時使用查詢的技巧，以及最佳化索引和查詢以儘可能最佳執行的相關提示。
+本文概述何時建立索引以及何時不需要索引、避免在不需要查詢時使用查詢的技巧，以及最佳化索引和查詢以儘可能最佳執行的相關提示。
 
 此外，請務必閱讀 [有關編寫查詢和索引的Oak檔案](/help/sites-deploying/queries-and-indexing.md). 除了索引是AEM 6的新概念之外，從舊版AEM安裝移轉程式碼時，需要考慮Oak查詢的語法差異。
 
@@ -31,9 +27,9 @@ ht-degree: 0%
 
 在設計存放庫的分類法時，需要考慮幾個因素。 其中包括存取控制、本地化、元件和頁面屬性繼承等。
 
-在設計解決這些擔憂的分類法時，考慮索引設計的「可通行性」也很重要。 在這種情況下，可通行性是分類法的能力，允許根據其路徑以可預測的方式存取內容。 這將造就一個比需要執行大量查詢的系統更易於維護的更高效能系統。
+在設計解決這些擔憂的分類法時，考慮索引設計的「可通行性」也很重要。 在這種情況下，可通行性是分類法的能力，允許根據其路徑以可預測的方式存取內容。 這將造就比需要執行許多查詢的系統更易於維護的更高效能系統。
 
-此外，在設計分類法時，請務必考慮排序是否重要。 如果不需要明確排序，並且需要大量同層級節點，則最好使用無序節點型別，例如 `sling:Folder` 或 `oak:Unstructured`. 如果需要排序， `nt:unstructured` 和 `sling:OrderedFolder` 會更合適。
+此外，在設計分類法時，考慮排序是否重要也很重要。 如果不需要明確排序，並且需要許多同層級節點，則最好使用無序節點型別，例如 `sling:Folder` 或 `oak:Unstructured`. 如果需要排序， `nt:unstructured`、和 `sling:OrderedFolder` 較為合適。
 
 ### 元件中的查詢 {#queries-in-components}
 
@@ -67,11 +63,11 @@ ht-degree: 0%
 
 ## 查詢最佳化 {#query-optimization}
 
-執行未使用索引的查詢時，將記錄有關節點周遊的警告。 如果這是經常執行的查詢，則應建立索引。 若要判斷指定的查詢正在使用哪個索引，請 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query) 建議使用。 如需其他資訊，可以為相關搜尋API啟用DEBUG記錄。
+執行未使用索引的查詢時，會記錄有關節點周遊的警告。 如果這是經常執行的查詢，請建立索引。 若要判斷指定的查詢正在使用哪個索引，請 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query) 建議使用。 如需其他資訊，可以為相關搜尋API啟用DEBUG記錄。
 
 >[!NOTE]
 >
->修改索引定義後，需要重新建立索引（重新索引）。 根據索引的大小，這可能需要一些時間才能完成。
+>修改索引定義後，必須重新建立索引（重新編制索引）。 根據索引的大小，這可能需要一些時間才能完成。
 
 執行複雜查詢時，在某些情況下，將查詢劃分為多個較小的查詢，並在事後透過程式碼聯結資料的效能會更高。 對於這些案例，建議比較兩種方法的效能，以判斷哪一種選項更適合相關使用案例。
 
@@ -85,11 +81,11 @@ AEM允許以下列三種方式之一寫入查詢：
 
 >[!NOTE]
 >
->使用QueryBuilder時，依預設會判斷結果計數，這在Oak中比舊版Jackrabbit要慢。 為了彌補此問題，您可以使用 [guessTotal引數](/help/sites-developing/querybuilder-api.md#using-p-guesstotal-to-return-the-results).
+>使用QueryBuilder時，依預設會決定結果計數，這在Oak中比舊版Jackrabbit要慢。 為了彌補此問題，您可以使用 [guessTotal引數](/help/sites-developing/querybuilder-api.md#using-p-guesstotal-to-return-the-results).
 
 ### Explain查詢工具 {#the-explain-query-tool}
 
-和任何查詢語言一樣，最佳化查詢的第一步是瞭解其執行方式。 若要啟用此活動，您可以使用 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query) 它是「操作圖示板」的一部分。 使用此工具，可以插入查詢並加以說明。 如果查詢會造成大型存放庫以及執行時間和將使用的索引發生問題，則會顯示警告。 此工具也可以載入緩慢和熱門查詢的清單，然後加以說明和最佳化。
+和任何查詢語言一樣，最佳化查詢的第一步是瞭解其執行方式。 若要啟用此活動，您可以使用 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query) 它是「操作圖示板」的一部分。 使用此工具，可以插入查詢並加以說明。 如果查詢會導致大型存放庫和執行時間以及將要使用的索引發生問題，則會顯示警告。 此工具也可以載入緩慢和熱門查詢的清單，然後加以說明和最佳化。
 
 ### 查詢的DEBUG記錄 {#debug-logging-for-queries}
 
@@ -99,7 +95,7 @@ AEM允許以下列三種方式之一寫入查詢：
 * org.apache.jackrabbit.oak.query
 * com.day.cq.search
 
-完成查詢偵錯後，請務必移除此記錄器，因為此記錄器會輸出許多活動，而且最終可能會將記錄檔填滿磁碟。
+完成查詢偵錯後，請務必移除此記錄器。 它通常會輸出大量活動，而且最終可能會用記錄檔填滿您的磁碟。
 
 如需如何執行此動作的詳細資訊，請參閱 [記錄檔案](/help/sites-deploying/configure-logging.md).
 
@@ -121,9 +117,9 @@ Lucene會註冊一個JMX Bean，以提供索引內容的詳細資訊，包括每
 
 **開發期間**
 
-設定以下專案的低臨界值 `oak.queryLimitInMemory` (例如： 10000)和oak. `queryLimitReads` (例如： 5000)，並在點選UnsupportedOperationException時最佳化昂貴的查詢，指出「查詢讀取超過x個節點……」
+設定以下專案的低臨界值 `oak.queryLimitInMemory` (例如10000)和Oak。 `queryLimitReads` （例如5000），並在點選UnsupportedOperationException時最佳化昂貴的查詢，指出「查詢讀取超過x個節點……」
 
-這有助於避免資源密集的查詢(即 不受任何索引支援，或受涵蓋範圍較少的索引支援)。 例如，讀取100萬個節點的查詢會導致I/O增加，並對整體應用程式效能造成負面影響。 應分析和最佳化任何因上述限制而失敗的查詢。
+這有助於避免資源密集的查詢（即不受任何索引支援或較少涵蓋範圍索引支援）。 例如，讀取100萬個節點的查詢會導致I/O增加，並對整體應用程式效能造成負面影響。 應分析和最佳化任何因上述限制而失敗的查詢。
 
 #### **部署後** {#post-deployment}
 
@@ -144,7 +140,7 @@ Lucene會註冊一個JMX Bean，以提供索引內容的詳細資訊，包括每
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
 
-在AEM 6.3中，上述2個引數是預先設定的OOTB，並可透過OSGi QueryEngineSettings持續存在。
+在AEM 6.3中，上述兩個引數是預先設定的OOTB，並可透過OSGi QueryEngineSettings持續存在。
 
 如需詳細資訊，請前往： [https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
 
@@ -152,11 +148,11 @@ Lucene會註冊一個JMX Bean，以提供索引內容的詳細資訊，包括每
 
 ### 我應該建立索引嗎？ {#should-i-create-an-index}
 
-建立或最佳化索引時，首先要問的問題是特定情況下是否確實需要索引。 如果您只打算透過批次程式在系統的非尖峰時段執行一次有問題的查詢，最好根本不建立索引。
+建立或最佳化索引時，首先要問的問題是特定情況下是否需要索引。 如果您只打算透過批次程式在系統的非尖峰時段執行一次有問題的查詢，最好根本不建立索引。
 
-建立索引後，每次更新索引資料時，也必須更新索引。 由於這會對系統造成效能影響，因此應該僅在實際需要索引時建立索引。
+建立索引後，每次更新索引資料時，也必須更新索引。 由於這會對系統造成效能影響，因此應僅在需要索引時建立索引。
 
-此外，只有在索引中包含的資料足夠獨特，足以保證使用時，索引才有用。 考量書籍中的索引及其涵蓋的主題。 在文字中索引一組主題時，通常會有數百或數千個專案，這可讓您快速跳至頁面子集，以快速找到您要尋找的資訊。 如果該索引只有兩個或三個專案，而每個專案都指向數百個頁面，則該索引將不是很有用。 這個概念同樣適用於資料庫索引。 如果只有幾個唯一值，則索引將不是很有用。 也就是說，索引也可能變得太大而無法使用。 若要檢視索引統計資料，請參閱 [索引統計資料](/help/sites-deploying/best-practices-for-queries-and-indexing.md#index-statistics) 以上。
+此外，只有在索引中包含的資料足夠獨特，足以保證使用時，索引才有用。 考量書籍中的索引及其涵蓋的主題。 在文字中索引一組主題時，通常會有數百或數千個專案，這可讓您快速跳至頁面子集，以快速找到您要尋找的資訊。 如果該索引只有兩個或三個專案，而每個專案都指向數百個頁面，則該索引將沒有用處。 這個概念同樣適用於資料庫索引。 如果只有幾個唯一值，則索引將沒有用處。 也就是說，索引也可能變得太大而無法使用。 若要檢視索引統計資料，請參閱 [索引統計資料](/help/sites-deploying/best-practices-for-queries-and-indexing.md#index-statistics) 以上。
 
 ### Lucene或屬性索引？ {#lucene-or-property-indexes}
 
@@ -170,9 +166,9 @@ Lucene索引在Oak 1.0.9中引入，並針對AEM 6首次推出時引入的屬性
 
 ### Solr索引 {#solr-indexing}
 
-AEM也依預設提供Solr索引支援。 這主要用於支援全文檢索搜尋，但也可用來支援任何型別的JCR查詢。 當AEM執行個體沒有CPU容量來處理大量搜尋部署（例如具有大量同時使用者的搜尋驅動網站）所需的查詢數量時，應該考慮Solr。 或者，Solr也可以以爬行者程式為基礎的方法實作，以利用平台的一些更進階的功能。
+AEM也依預設提供Solr索引支援。 這會用於支援全文檢索搜尋，但也可用來支援任何型別的JCR查詢。 當AEM執行個體沒有CPU容量來處理大量搜尋部署（例如具有大量同時使用者的搜尋驅動網站）所需的查詢數量時，應該考慮Solr。 或者，Solr也可以以編目程式的方式實作，以使用平台的一些更進階的功能。
 
-Solr索引可以設定為針對開發環境在AEM伺服器上執行內嵌，也可以解除安裝到遠端執行個體，以改善生產和中繼環境的搜尋擴充性。 雖然解除安裝搜尋可改善擴充性，但會造成延遲，因此除非有需要，否則不建議使用。 如需有關如何設定Solr整合以及如何建立Solr索引的詳細資訊，請參閱 [Oak查詢和索引檔案](/help/sites-deploying/queries-and-indexing.md#the-solr-index).
+Solr索引可以設定為針對開發環境在AEM伺服器上執行內嵌，也可以解除安裝到遠端執行個體，以改善生產和中繼環境的搜尋擴充性。 雖然解除安裝搜尋可改善擴充性，但會導致延遲，因此除非有需要，否則不建議使用。 如需有關如何設定Solr整合以及如何建立Solr索引的詳細資訊，請參閱 [Oak查詢和索引檔案](/help/sites-deploying/queries-and-indexing.md#the-solr-index).
 
 >[!NOTE]
 >
@@ -186,8 +182,8 @@ Solr索引可以設定為針對開發環境在AEM伺服器上執行內嵌，也�
 
 Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
-* 如果查詢使用不同的路徑限制，請使用 `evaluatePathRestrictions`. 這將允許查詢傳回指定路徑下的結果子集，然後根據查詢篩選它們。 否則，查詢將搜尋與存放庫中查詢引數相符的所有結果，然後根據路徑篩選它們。
-* 如果查詢使用排序，請為已排序的屬性設定明確的屬性定義，並設定 `ordered` 至 `true` 為了它。 這樣可讓結果在索引中依此方式排序，並節省查詢執行時昂貴的排序作業。
+* 如果查詢使用不同的路徑限制，請使用 `evaluatePathRestrictions`. 這可讓查詢傳回指定路徑下的結果子集，然後根據查詢篩選它們。 否則，查詢會搜尋與存放庫中查詢引數相符的所有結果，然後根據路徑篩選它們。
+* 如果查詢使用排序，請為已排序的屬性設定明確的屬性定義，並設定 `ordered` 至 `true` 為了它。 如此可讓結果在索引中依此排序，並節省查詢執行時昂貴的排序作業。
 
 * 只將所需的內容放入索引中。 新增不需要的功能或屬性會導致索引增加和效能降低。
 * 在屬性索引中，擁有唯一的屬性名稱有助於減小索引的大小，但對於Lucene索引，請使用 `nodeTypes` 和 `mixins` 應該達到有凝聚力的索引。 查詢特定 `nodeType` 或 `mixin` 將比查詢更有效 `nt:base`. 使用此方法時，定義 `indexRules` 的 `nodeTypes` 有疑問。
@@ -197,17 +193,17 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
 ### CopyonRead {#copyonread}
 
-在 `NodeStore` 會從遠端儲存，稱為 `CopyOnRead` 可以啟用。 此選項將導致遠端索引在讀取時寫入本機檔案系統。 這有助於改善經常針對這些遠端索引執行的查詢效能。
+在 `NodeStore` 會從遠端儲存，稱為 `CopyOnRead` 可以啟用。 選項會在讀取遠端索引時，將其寫入本機檔案系統。 這有助於改善經常針對這些遠端索引執行的查詢效能。
 
 這可以在OSGi主控台中的 **LuceneIndexProvider** 並從Oak 1.0.13起預設啟用。
 
 ### 移除索引 {#removing-indexes}
 
-移除索引時，一律建議透過設定 `type` 屬性至 `disabled` 並進行測試，以確保您的應用程式在實際刪除前可正常運作。 請注意，索引在停用時不會更新，因此，如果重新啟用，可能沒有正確的內容，並且可能需要重新索引。
+移除索引時，一律建議透過設定 `type` 屬性至 `disabled` 並進行測試，以確保您的應用程式在實際刪除前可正常運作。 索引在停用時不會更新，因此，如果重新啟用，可能沒有正確的內容，並且可能需要重新索引。
 
-移除TarMK執行個體上的屬性索引後，需要執行壓縮以回收任何使用的磁碟空間。 對於Lucene索引，實際的索引內容存在於BlobStore中，因此需要資料存放區垃圾收集。
+移除TarMK執行個體上的屬性索引後，必須執行壓縮以回收任何使用的磁碟空間。 對於Lucene索引，實際的索引內容存在於BlobStore中，因此需要資料存放區垃圾收集。
 
-移除MongoDB執行個體上的索引時，刪除的成本與索引中的節點數量成比例。 由於刪除大型索引可能會造成問題，建議方法是停用索引，並僅在維護期間使用（例如）工具將其刪除 **oak-mongo.js**. 請注意，不應針對一般節點內容使用此方法，因為這會造成資料不一致。
+移除MongoDB執行個體上的索引時，刪除的成本與索引中的節點數量成比例。 由於刪除大型索引可能會造成問題，建議方法是停用索引，並僅在維護期間使用（例如）工具將其刪除 **oak-mongo.js**. 請注意，不應將此方法用於一般節點內容，因為它可能會導致資料不一致。
 
 >[!NOTE]
 >
@@ -221,25 +217,24 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
 本節概述 **僅限** 重新索引Oak索引的可接受原因。
 
-除了下面列出的原因外，起始Oak索引的重新索引將 **not** 變更行為或解決問題，而不必要地增加AEM的負載。
+除了下面列出的原因外，起始Oak索引的重新索引會 **not** 變更行為或解決問題，以及不必要地增加AEM上的負載。
 
 除非下表中原因涵蓋，否則應避免重新索引Oak索引。
 
 >[!NOTE]
 >
->在參閱下表以判斷是否重新索引之前很有用， **一律** 驗證：
+>在參閱下表以判斷重新索引是否有用之前， **一律** 驗證：
 >
 >* 查詢正確
 >* 查詢解析為預期的索引(使用 [說明查詢](/help/sites-administering/operations-dashboard.md#diagnosis-tools))
 >* 索引程式已完成
 >
 
-
 ### Oak索引設定變更 {#oak-index-configuration-changes}
 
 重新索引Oak索引唯一可接受的不錯誤條件是Oak索引的設定已變更。
 
-*重新索引一律應考慮對AEM整體效能的影響，並在活動較少或維護期間執行。*
+*在重新索引時，應一律適當考量索引對AEM整體效能的影響，並在活動較少或維護期間執行。*
 
 以下詳細說明可能的問題及解決方法：
 
@@ -264,7 +259,7 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
 * 如何解決：
 
-   * [重新編列索引](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-re-index) lucene索引
+   * [重新索引](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-re-index) lucene索引
    * 或者，也可以觸控（執行良性寫入操作）遺失的節點
 
       * 需要手動接觸或自訂程式碼
@@ -286,27 +281,27 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
 * 如何驗證：
 
-   * 驗證是否已使用Lucene索引統計資料JMX Mbean (LuceneIndex)方法變更索引定義 `diffStoredIndexDefinition`.
+   * 確認索引定義已使用Lucene索引統計資料JMX Mbean (LuceneIndex)方法變更 `diffStoredIndexDefinition`.
 
 * 如何解決：
 
    * 1.6之前的Oak版本：
 
-      * [重新編列索引](#how-to-re-index) lucene索引
+      * [重新索引](#how-to-re-index) lucene索引
+
    * Oak 1.6+版
 
-      * 如果現有內容不受變更影響，則只需要重新整理
+      * 如果現有內容不受變更影響，則只需重新整理
 
          * [重新整理](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition) lucene索引（透過設定） [oak：queryIndexDefinition]@refresh=true
+
       * 否則， [重新索引](#how-to-re-index) lucene索引
 
-         * 注意：將會使用上次良好重新索引（或初始索引）後的索引狀態，直到觸發新的重新索引為止
-
-
+         * 注意：將會使用上次良好重新索引（或初始索引）的索引狀態，直到觸發新的重新索引為止
 
 ### 錯誤和特殊情況 {#erring-and-exceptional-situations}
 
-下表說明重新索引Oak索引將解決此問題的唯一可接受錯誤和例外情況。
+下表說明重新索引Oak索引可解決此問題的唯一可接受錯誤和例外情況。
 
 如果AEM上遇到不符合下列條件的問題，請 **not** 重新索引任何索引，因為這不能解決問題。
 
@@ -334,17 +329,17 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
    * 執行周遊存放庫檢查；例如：
 
-      [http://localhost:4502/system/console/repositorycheck](http://localhost:4502/system/console/repositorycheck)
+     [http://localhost:4502/system/console/repositorycheck](http://localhost:4502/system/console/repositorycheck)
 
-      周遊存放庫會判斷是否有其他二進位檔案（lucene檔案除外）遺失
+     周遊存放庫會判斷是否有其他二進位檔案（lucene檔案除外）遺失
 
    * 如果缺少lucene索引以外的二進位檔案，請從備份還原
    * 否則， [重新索引](#how-to-re-index) *全部* lucene索引
    * 注意:
 
-      此條件表示資料存放區設定錯誤，可能會導致ANY二進位(例如 assets二進位檔案)遺失。
+     此狀況表示資料存放區設定錯誤，可能會導致ANY二進位（例如assets二進位檔）遺失。
 
-      在此情況下，請還原至存放庫的最後一個已知良好版本，以復原所有遺失的二進位檔案。
+     在此情況下，請還原至存放庫的最後一個已知良好版本，以復原所有遺失的二進位檔案。
 
 #### Lucene索引二進位檔已損毀 {#lucene-index-binary-is-corrupt}
 
@@ -361,7 +356,7 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
    * 此 `AsyncIndexUpdate` （每5秒）會失敗，但error.log中會有例外狀況：
 
-      `...a Lucene index file is corrupt...`
+     `...a Lucene index file is corrupt...`
 
 * 如何解決：
 
@@ -370,17 +365,17 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
       1. 停止AEM
       1. 刪除位於的Lucene索引的本機副本 `crx-quickstart/repository/index`
       1. 重新啟動AEM
+
    * 如果這不能解決問題，而且 `AsyncIndexUpdate` 例外狀況持續存在，則：
 
-      1. [重新編列索引](#how-to-re-index) 錯誤索引
+      1. [重新索引](#how-to-re-index) 錯誤索引
       1. 另外請將 [Adobe支援](https://helpx.adobe.com/support.html) 票證
 
-
-### 如何重新編列索引 {#how-to-re-index}
+### 如何重新索引 {#how-to-re-index}
 
 >[!NOTE]
 >
->在AEM 6.5中， [oak-run.jar是唯一支援的方法](/help/sites-deploying/indexing-via-the-oak-run-jar.md#reindexingapproachdecisiontree) ，以便在MongoMK或RDBMK存放庫上重新索引。
+>在AEM 6.5中， [oak-run.jar是唯一支援的方法](/help/sites-deploying/indexing-via-the-oak-run-jar.md#reindexingapproachdecisiontree) ，以重新索引MongoMK或RDBMK存放庫。
 
 #### 重新索引屬性索引 {#re-indexing-property-indexes}
 
@@ -391,13 +386,13 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
 * 使用Web主控台，透過以下非同步方式重新索引屬性索引： **PropertyIndexAsyncReindex** 兆順電子；
 
-   例如，
+  例如，
 
-   [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DPropertyIndexAsyncReindex](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DPropertyIndexAsyncReindex)
+  [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DPropertyIndexAsyncReindex](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DPropertyIndexAsyncReindex)
 
 #### 重新索引Lucene屬性索引 {#re-indexing-lucene-property-indexes}
 
-* 使用 [oak-run.jar以重新編列索引](/help/sites-deploying/oak-run-indexing-usecases.md#usecase3reindexing) Lucene屬性索引。
+* 使用 [oak-run.jar以重新索引](/help/sites-deploying/oak-run-indexing-usecases.md#usecase3reindexing) Lucene屬性索引。
 * 在lucene屬性索引上，將async-reindex屬性設定為true
 
    * `[oak:queryIndexDefinition]@reindex-async=true`
@@ -410,20 +405,20 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
 文字預先擷取是指透過獨立程式，直接從資料存放區從二進位檔擷取及處理文字的程式，並直接將擷取的文字公開給後續的Oak索引重新/索引。
 
-* 建議使用Oak文字預先擷取，在具有大量包含可擷取文字的檔案（二進位檔）的存放庫上重新編排Lucene索引(例如 PDF、Word檔案、PPT、TXT等) 透過部署的Oak索引符合全文檢索搜尋資格的物件，例如 `/oak:index/damAssetLucene`.
-* 文字預先擷取將只對Lucene索引和NOT Oak屬性索引的重新編列/索引有利，因為屬性索引不會從二進位檔案中擷取文字。
-* 當對大量文字的二進位檔(PDF、Doc、TXT等)進行全文重新索引時，文字預先擷取會有很高的正面影響，其中作為影像存放庫將無法享有相同的效率，因為影像不包含可擷取的文字。
+* 建議使用Oak文字預先擷取，在具有大量檔案（二進位檔）的存放庫上重新編排/索引Lucene索引，這些檔案包含可擷取文字(例如PDF、Word檔案、PPT、TXT等)，這些文字有資格透過部署的Oak索引進行全文搜尋；例如， `/oak:index/damAssetLucene`.
+* 文字預先擷取僅有利於Lucene索引的重新編列/索引，而非Oak屬性索引，因為屬性索引不會從二進位檔案中擷取文字。
+* 當大量文字的二進位檔(PDF、Doc、TXT等)的全文檢索重新索引時，文字預先擷取會有很高的正面影響，而影像存放庫將不會享有相同的效率，因為影像不包含可擷取的文字。
 * 文字預先擷取會以特別有效率的方式執行全文檢索搜尋相關文字的擷取，並以特別有效率的方式將其公開給Oak重新索引/編制索引過程。
 
 #### 何時可以使用TEXT預先擷取？ {#when-can-text-pre-extraction-be-used}
 
-重新索引和 **現有** 已啟用二進位擷取的lucene索引
+重新索引 **現有** 已啟用二進位擷取的lucene索引
 
-* 重新索引處理 **全部** 存放庫中的候選內容；當要從中擷取全文檢索的二進位檔數量眾多或複雜時，AEM上會增加執行全文檢索擷取的運算負擔。 文字預先擷取會將文字擷取的「運算成本高的工作」移入直接存取AEM Data Store的隔離處理序，避免AEM中的開銷和資源爭用。
+* 正在處理重新索引 **全部** 存放庫中的候選內容；當要從中擷取全文檢索的二進位檔數量眾多或複雜時，AEM上會增加執行全文檢索擷取的運算負擔。 文字預先擷取會將文字擷取的「運算成本高的工作」移入直接存取AEM Data Store的隔離處理序，避免AEM中的開銷和資源爭用。
 
 支援部署 **新** 已啟用二進位擷取的lucene索引至AEM
 
-* 當新索引（已啟用二進位擷取）部署到AEM時，Oak會在下次非同步全文檢索索引執行時自動索引所有候選內容。 基於上述重新索引中所述的相同原因，這可能會導致AEM上的過度載入。
+* 當新索引（已啟用二進位擷取）部署到AEM時，Oak會在下次非同步全文檢索索引執行時自動索引所有候選內容。 基於上述重新索引中所述的相同原因，這可能會導致在AEM上過度載入。
 
 #### 何時可以使用文字預先擷取？ {#when-can-text-pre-extraction-not-be-used}
 
@@ -435,7 +430,7 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
 #### 使用文字預先擷取的先決條件 {#prerequisites-to-using-text-pre-extraction}
 
-* 您將重新索引執行全文檢索二進位擷取的Lucene索引，或部署將現有內容的全文檢索二進位索引的新索引
+* 您將重新索引執行全文檢索二進位擷取的lucene索引，或部署將現有內容的全文檢索二進位索引的新索引
 * 要從中預先擷取文字的內容（二進位檔）必須位於儲存庫中
 * 產生CSV檔案並執行最終重新索引的維護視窗
 * Oak版本： 1.0.18+、1.2.3+
@@ -456,13 +451,13 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
 **產生要預先擷取的內容清單**
 
-*在此作業期間周遊節點存放區時，在維護期間/低使用期間執行步驟1(a-b)，這可能會導致系統產生大量負載。*
+*在維護期間/低使用期間執行步驟1(a-b)，因為在此作業期間會周遊節點存放區，這可能會導致系統產生大量負載。*
 
 1a. 執行 `oak-run.jar --generate` 建立節點清單，預先擷取其文字。
 
 1b. 節點清單(1a)會以CSV檔案形式儲存至檔案系統
 
-請注意，每次都會周遊整個節點存放區（如oak-run命令中的路徑所指定） `--generate` 「 」已執行，且 **新** CSV檔案已建立。 CSV檔案是 **not** 在文字預先擷取程式的獨立執行之間重複使用（步驟1 - 2）。
+每次都會周遊整個節點存放區（如oak-run命令中的路徑所指定） `--generate` 「 」已執行，且 **新** CSV檔案已建立。 CSV檔案是 **not** 在文字預先擷取程式的獨立執行之間重複使用（步驟1 - 2）。
 
 **將文字預先擷取至檔案系統**
 
@@ -472,7 +467,7 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
 2b. 在(2a)中起始的程式會直接存取Data Store中CSV定義的二進位節點，並擷取文字。
 
-2c.  擷取的文字會以可由Oak重新索引程式(3a)擷取的格式儲存在檔案系統上
+2c. 擷取的文字會以可由Oak重新索引程式(3a)擷取的格式儲存在檔案系統上
 
 預先擷取的文字會在CSV中由二進位指紋識別。 如果二進位檔案相同，AEM執行個體之間可以使用相同的預先擷取文字。 由於AEM Publish通常是AEM Author的子集，從AEM Author預先擷取的文字通常也可以用來重新索引AEM Publish （假設AEM Publish具有擷取文字檔案的檔案系統存取權）。
 
@@ -480,8 +475,8 @@ Lucene索引的Oak檔案列出在設計索引時要注意的幾個事項：
 
 **重新索引Oak索引，從擷取的文字檔案取得全文檢索**
 
-*在此操作期間周遊節點存放區時，在維護/低使用期間執行重新索引（步驟3a-b），這可能會導致系統產生大量負載。*
+*在此操作期間遍歷節點存放區時，在維護/低使用期間執行重新索引（步驟3a-b），這可能會導致系統產生大量負載。*
 
-3a. [重新編列索引](#how-to-re-index) 在AEM中叫用的Lucene索引
+3a. [重新索引](#how-to-re-index) 在AEM中叫用的Lucene索引。
 
 3b. Apache Jackrabbit Oak DataStore PreExtractedTextProvider OSGi設定（設定為透過檔案系統路徑指向已擷取的文字）會指示Oak從已擷取的檔案取得全文檢索文字，並避免直接點選及處理儲存於存放庫中的資料。

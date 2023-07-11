@@ -1,18 +1,14 @@
 ---
 title: We.Retail參考實作
-seo-title: We.Retail Reference Implementation
 description: We.Retail是參考實作的技術預覽，說明使用AEM設定線上存在的建議方式
-seo-description: We.Retail is a technology preview of a reference implementation that illustrates the recommended way of setting up an online presence with AEM
-uuid: d8833192-b592-4812-bf9b-bd882e8ee7f0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '749'
 ht-degree: 8%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 8%
 
 We.Retail是參考實作和範例內容，說明使用Adobe Experience Manager設定線上存在的建議方式。
 
-We.Retail運用最新AEM技術，例如HTL、回應式版面、可編輯範本、核心元件等。
+We.Retail使用最新AEM技術，例如HTL、回應式版面、可編輯範本、核心元件等。
 
 雖然它說明了零售的垂直方向，但網站的設定方式可套用至任何垂直方向，而且只有產品目錄和購物車功能是零售專用的。
 
@@ -45,11 +41,11 @@ We.Retail運用最新AEM技術，例如HTL、回應式版面、可編輯範本�
 
 ## 快速入門 {#getting-started}
 
-We.Retail會以AEM範例內容的形式提供。 為了使用，只需 [正常啟動AEM](/help/sites-deploying/deploy.md#getting-started)，確定未停用範例內容。
+We.Retail會以AEM範例內容的形式提供。 若要使用，僅需以下步驟： [正常啟動AEM](/help/sites-deploying/deploy.md#getting-started)，確定未停用範例內容。
 
 >[!CAUTION]
 >
->We.Retail不應安裝在生產執行個體上。 生產執行個體應於以下時間啟動： `nosamplecontent` [執行模式](/help/sites-deploying/configure-runmodes.md).
+>請勿在生產執行個體上安裝We.Retail。 生產執行個體應於以下時間啟動： `nosamplecontent` [執行模式](/help/sites-deploying/configure-runmodes.md).
 
 >[!CAUTION]
 >
@@ -109,11 +105,11 @@ GITHUB上的程式碼
 您可以在GitHub上找到此頁面的程式碼
 
 * [在GitHub上開啟aem-sample-we-retail專案](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
-* 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/archive/master.zip)
+* 將專案下載為 [ZIP檔案](https://codeload.github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/zip/refs/heads/master)
 
-最新版本也可以 [已直接下載](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest) 作為可安裝的套件。
+最新版本也可以 [已直接下載](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/tag/we.retail.reactor-4.0.0) 作為可安裝的套件。
 
-如果您遇到問題，請歸檔 [GitHub問題](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
+如果您遇到問題，請將 [GitHub問題](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
 
 您可以隨意取用資料或協助撰寫 [提取請求](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls).
 

@@ -1,19 +1,15 @@
 ---
 title: 定義測試案例
-seo-title: Defining your Test Cases
 description: 您的測試案例應以使用案例和詳細需求規格為基礎
-seo-description: Your test cases should be based upon the use cases and the detailed requirements specification
-uuid: daaa5370-bcd3-45a6-9974-f9b5af6a1529
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
-discoiquuid: f01eb2aa-6891-4f5d-8a4a-43fc1534c222
 docset: aem65
 exl-id: c09cde0d-401c-437f-9ec8-a0530c1312d5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -38,15 +34,15 @@ ht-degree: 0%
 * 預期結果。
 * 清除通過或失敗的准則。
 
-自動化測試案例的前景顯然很有吸引力，因為它可以消除重複性的任務。
+自動化測試案例的前景很有吸引力，因為它消除了重複性的任務。
 
 ## 手動與自動化測試 {#manual-versus-automated-tests}
 
 然而，自動化測試案例是一項重大投資，因此應考慮某些方面：
 
-* 需要時間、精力和經驗才能進行設定和設定。
+* 設定和設定需要時間、精力和經驗。
 * 如果以瀏覽器為基礎，安裝瀏覽器更新時問題的風險會增加；需要更多時間才能更正。
-* 只適用於大型專案。
+* 僅適用於大型專案。
 * 當針對測試或長期發行計畫產生多個發行時良好。
 
 ## 測試特定方面 {#testing-specific-aspects}
@@ -55,15 +51,15 @@ ht-degree: 0%
 
 **製作和發佈環境**
 
-不過，涵蓋在 [環境](/help/sites-developing/the-basics.md#environments) 在測試方面，值得強調AEM的決定因素。
+雖然涵蓋在 [環境](/help/sites-developing/the-basics.md#environments)，這值得強調AEM關於測試的決定性因素。
 
-您必須將AEM視為兩個應用程式：
+將AEM視為兩個應用程式：
 
 * 此 *作者* 環境此例項可讓作者輸入及發佈內容。
 這擁有一小部分可預測的使用者，對他們來說，特定的功能和效能至關重要。
 
 * 此 *發佈* 環境此例項會以已發佈的形式顯示網站，以供訪客存取。
-這通常會有較多的使用者集，其流量並不總是100%可預測。 效能仍然至關重要 — 在回應請求時。 快取和負載平衡也必須考量。
+這通常會有較多的使用者集，其流量並不總是100%可預測。 效能仍然至關重要 — 在回應請求時。 也請考量快取和負載平衡。
 
 雖然是相同的軟體，但：
 
@@ -71,7 +67,7 @@ ht-degree: 0%
 * 對功能與效能有不同的需求
 * 設定方式不同
 * 已分別調整
-* 各自將擁有自己的驗收測試集
+* 每個都有自己的驗收測試集
 
 換言之，必須分別使用不同測試案例進行測試。
 
@@ -79,7 +75,7 @@ ht-degree: 0%
 
 測試個人化時，每個個別使用案例應使用多個使用者帳戶重複以證明行為。
 
-快取也必須檢查是否有正確行為。
+同時檢查快取是否行為正確。
 
 **排程程式**
 
@@ -94,7 +90,7 @@ ht-degree: 0%
 確保關閉一台伺服器時，網站仍然可用。
 
 * **叢集**
-叢集用於提供：
+用於提供下列內容：
 
    * **容錯移轉**
 如果一個伺服器發生故障，則叢集中的其他伺服器將會接管處理作業。

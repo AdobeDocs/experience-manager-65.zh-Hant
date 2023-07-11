@@ -1,38 +1,34 @@
 ---
 title: AEM 標記框架
-seo-title: AEM Tagging Framework
-description: 標籤內容並運用AEM標籤基礎結構
-seo-description: Tag content and leverage the AEM Tagging infrastructure
-uuid: f80a2cb1-359f-41dd-a70b-626d92cc3d4c
+description: 標籤內容並使用AEM標籤基礎結構
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: efb4f9f8a97baf8d3d02160226e4f4d3f8f64c89
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
 
 # AEM 標記框架 {#aem-tagging-framework}
 
-若要標籤內容並運用AEM標籤基礎結構：
+若要標籤內容並使用AEM標籤基礎結構：
 
 * 標籤必須作為型別的節點存在 ` [cq:Tag](#tags-cq-tag-node-type)` 在 [分類根節點](#taxonomy-root-node)
 
-* 標籤的內容節點的NodeType必須包含 [ `cq:Taggable`](#taggable-content-cq-taggable-mixin) mixin
-* 此 [標籤ID](#tagid) 新增至內容節點的 [ `cq:tags`](#tagged-content-cq-tags-property) 屬性並解析為型別的節點 ` [cq:Tag](#tags-cq-tag-node-type)`
+* 標籤的內容節點的NodeType必須包含 [`cq:Taggable`](#taggable-content-cq-taggable-mixin) mixin
+* 此 [標籤ID](#tagid) 新增至內容節點的 [`cq:tags`](#tagged-content-cq-tags-property) 屬性並解析為型別的節點 ` [cq:Tag](#tags-cq-tag-node-type)`
 
 ## 標籤：cq：Tag節點型別  {#tags-cq-tag-node-type}
 
 標籤的宣告會擷取到存放庫中的型別節點中 `cq:Tag.`
 
-標籤可以是簡單的字詞（例如sky），或代表階層式分類法（例如fruit/apple，表示類屬水果和較特定的蘋果）。
+標籤可以是簡單字詞（例如sky），或代表階層式分類法（例如fruit/apple，表示類屬水果和更具體的蘋果）。
 
 標籤由唯一的TagID識別。
 
@@ -61,7 +57,7 @@ TagID會識別解析為存放庫中的標籤節點的路徑。
 
 標籤內容時，如果內容尚不存在， ` [cq:tags](#tagged-content-cq-tags-property)` 屬性會新增至內容節點，而TagID會新增至屬性的String陣列值。
 
-TagID包含 [名稱空間](#tag-namespace) 後面接著本機TagID。 [容器標籤](#container-tags) 具有代表分類法中階層順序的子標籤。 子標籤可用於參照與任何本機TagID相同的標籤。 例如，即使內容是包含子標籤的容器標籤，例如「fruit/apple」和「fruit/banana」，也允許使用「fruit」標籤內容。
+TagID包含 [名稱空間](#tag-namespace) 後面接著本機TagID。 [容器標籤](#container-tags) 具有代表分類法中階層順序的子標籤。 子標籤可用於參照與任何本機TagID相同的標籤。 例如，允許使用「fruit」標籤內容，即使它是具有子標籤的容器標籤，例如「fruit/apple」和「fruit/banana」。
 
 ### 分類根節點 {#taxonomy-root-node}
 
@@ -71,7 +67,7 @@ TagID包含 [名稱空間](#tag-namespace) 後面接著本機TagID。 [容器標
 
 ### 標籤名稱空間 {#tag-namespace}
 
-名稱空間允許將專案分組。 最典型的使用案例是每個（網站） （例如公用、內部和入口網站）或大型應用程式（例如WCM、Assets、Communities）都有一個名稱空間，但名稱空間可用於各種其他需求。 在使用者介面中使用名稱空間，以僅顯示適用於目前內容的標籤子集（即特定名稱空間的標籤）。
+名稱空間可讓您將專案分組。 最典型的使用案例是每個（網站） （例如公用、內部和入口網站）或大型應用程式（例如WCM、Assets、Communities）都有一個名稱空間，但名稱空間可用於各種其他需求。 在使用者介面中使用名稱空間，以僅顯示適用於目前內容的標籤子集（即特定名稱空間的標籤）。
 
 標籤的名稱空間是分類子樹狀結構中的第一個層級，也就是 [分類根節點](#taxonomy-root-node). 名稱空間是型別的節點 `cq:Tag` 其父項不是 `cq:Tag`節點型別。
 
@@ -81,11 +77,11 @@ TagID包含 [名稱空間](#tag-namespace) 後面接著本機TagID。 [容器標
 
 容器標籤是型別的節點 `cq:Tag` 包含任何數量及型別的子節點，可讓您使用自訂中繼資料來增強標籤模型。
 
-此外，分類法中的容器標籤（或超級標籤）是所有子標籤的彙總：例如，以水果/蘋果標籤的內容也被視為以水果標籤，也就是說，搜尋僅以水果標籤的內容也會找到以水果/蘋果標籤的內容。
+此外，分類法中的容器標籤（或超級標籤）是所有子標籤的彙總。 例如，以水果/蘋果標籤的內容也被視為以水果標籤。 也就是說，搜尋以水果標籤的內容也會找到以水果/蘋果標籤的內容。
 
 ### 解析標籤ID {#resolving-tagids}
 
-如果標籤ID包含冒號「：」，冒號會將名稱空間與標籤或子分類法分開，然後再以一般斜線「/」分隔。 如果標籤ID沒有冒號，則會隱含預設名稱空間。
+如果標籤ID包含冒號「：」，冒號會將名稱空間與標籤或子分類分開，然後再以一般斜線「/」分隔。 如果標籤ID沒有冒號，則會隱含預設名稱空間。
 
 標籤的標準且唯一位置位於/content/cq：tags之下。
 
@@ -161,7 +157,7 @@ TagID包含 [名稱空間](#tag-namespace) 後面接著本機TagID。 [容器標
 
 標籤會作為節點存在於下的存放庫中 [分類根節點](#taxonomy-root-node). 若要允許或拒絕作者和網站訪客在指定的名稱空間中建立標籤，可在存放庫中設定適當的ACL。
 
-此外，拒絕特定標籤或名稱空間的讀取許可權將控制將標籤套用至特定內容的能力。
+此外，拒絕特定標籤或名稱空間的讀取許可權會控制將標籤套用至特定內容的能力。
 
 典型做法包括：
 
@@ -172,7 +168,7 @@ TagID包含 [名稱空間](#tag-namespace) 後面接著本機TagID。 [容器標
 
 ## 可標籤內容：cq：Taggable Mixin {#taggable-content-cq-taggable-mixin}
 
-為了讓應用程式開發人員將標籤附加到內容型別，節點的註冊([CND](https://jackrabbit.apache.org/node-type-notation.html))必須包含 `cq:Taggable` mixin或 `cq:OwnerTaggable` mixin.
+對於要將標籤附加至內容型別的應用程式開發人員，節點的註冊([CND](https://jackrabbit.apache.org/jcr/node-type-notation.html))必須包含 `cq:Taggable` mixin或 `cq:OwnerTaggable` mixin.
 
 此 `cq:OwnerTaggable` mixin，繼承自 `cq:Taggable`，表示內容可依所有者/作者分類。 在AEM中，它只是 `cq:PageContent` 節點。 此 `cq:OwnerTaggable` 標籤框架不需要mixin。
 
@@ -185,10 +181,9 @@ TagID包含 [名稱空間](#tag-namespace) 後面接著本機TagID。 [容器標
 >* 資產( `cq:Asset`)其中 `jcr:content/metadata` 節點一律具有 `cq:Taggable` mixin.
 >
 
-
 ### 節點型別標籤法(CND) {#node-type-notation-cnd}
 
-節點型別定義以CND檔案的形式存在於存放庫中。 CND標籤法定義為JCR檔案的一部分 [此處](https://jackrabbit.apache.org/node-type-notation.html).
+節點型別定義以CND檔案的形式存在於存放庫中。 CND標籤法定義為JCR檔案的一部分 [此處](https://jackrabbit.apache.org/jcr/node-type-notation.html).
 
 AEM中包含的「節點型別」的基本定義如下：
 
@@ -213,7 +208,7 @@ AEM中包含的「節點型別」的基本定義如下：
 
 >[!NOTE]
 >
->若要運用AEM標籤功能，自訂開發的應用程式不應定義以外的標籤屬性 `cq:tags`.
+>若要使用AEM標籤功能，自訂開發的應用程式不應定義以外的標籤屬性 `cq:tags`.
 
 ## 移動和合併標籤 {#moving-and-merging-tags}
 
@@ -222,28 +217,26 @@ AEM中包含的「節點型別」的基本定義如下：
 * 將標籤A移動或合併至下的標籤B時 `/content/cq:tags`：
 
    * 標籤A未刪除並取得 `cq:movedTo` 屬性。
-   * 標籤B已建立（若發生移動），並取得 `cq:backlinks` 屬性。
+   * 標籤B已建立（如果有移動）並取得 `cq:backlinks` 屬性。
 
 * `cq:movedTo` 指向標籤B。此屬性表示標籤A已移動或合併到標籤B中。移動標籤B會相應地更新此屬性。 標籤A因此會隱藏，並只會保留在存放庫中，以解析指向標籤A的內容節點中的標籤ID。標籤垃圾回收器會移除標籤A之類的標籤，而內容節點不再指向這些標籤。
 的特殊值 `cq:movedTo` 屬性為 `nirvana`：此變數會在標籤刪除時套用，但無法從存放庫中移除，因為有子標籤具有 `cq:movedTo` 必須保留。
 
-   >[!NOTE]
-   >
-   >此 `cq:movedTo` 只有在符合下列任一條件時，屬性才會新增至移動或合併的標籤：
-   >
-   >1. 標籤用於內容中（表示它有參考）或
-   >1. 標籤具有已移動的子系。
+  >[!NOTE]
+  >
+  >此 `cq:movedTo` 只有在符合下列任一條件時，屬性才會新增至移動或合併的標籤：
+  >
+  >1. 標籤用於內容中（表示它有參考）或
+  >1. 標籤具有已移動的子系。
 
+* `cq:backlinks` 使參照保持在另一個方向。 也就是說，它會保留已移至標籤B或與標籤B合併的所有標籤清單。這通常需要保留 `cq:movedTo`屬性是當標籤B移動/合併/刪除或是當標籤B啟動時的最新狀態，在這種情況下，其所有反向連結標籤也必須啟動。
 
-* `cq:backlinks` 會將參照保持在另一個方向，即會保留所有已移至標籤B或與標籤B合併的標籤清單。這通常需要保留 `cq:movedTo`屬性是當標籤B移動/合併/刪除或是當標籤B啟動時的最新狀態，在這種情況下，其所有反向連結標籤也必須啟動。
-
-   >[!NOTE]
-   >
-   >此 `cq:backlinks` 只有在符合下列任一條件時，屬性才會新增至移動或合併的標籤：
-   >
-   >1. 標籤用於內容中（表示它有參考）或
-   >1. 標籤具有已移動的子系。
-
+  >[!NOTE]
+  >
+  >此 `cq:backlinks` 只有在符合下列任一條件時，屬性才會新增至移動或合併的標籤：
+  >
+  >1. 標籤用於內容中（表示它有參考）或
+  >1. 標籤具有已移動的子系。
 
 * 讀取 `cq:tags` 內容節點的屬性涉及以下解析：
 
@@ -263,7 +256,7 @@ AEM中包含的「節點型別」的基本定義如下：
 
 ## 標籤移轉 {#tags-migration}
 
-Experience Manager6.4以後的標籤儲存於 `/content/cq:tags`，之前儲存於 `/etc/tags`. 不過，在Adobe Experience Manager已從舊版升級的情況下，標籤仍會顯示在舊位置下 `/etc/tags`. 在已升級的系統中，標籤需要移轉至 `/content/cq:tags`.
+Experience Manager6.4以後的標籤儲存於 `/content/cq:tags`，之前儲存於 `/etc/tags`. 不過，在Adobe Experience Manager已從舊版升級的情況下，標籤仍會顯示在舊位置下 `/etc/tags`. 在升級後的系統中，標籤必須移轉到 `/content/cq:tags`.
 
 >[!NOTE]
 >
@@ -341,9 +334,9 @@ println "---------------------------------Success-------------------------------
 
 >[!NOTE]
 >
->傳統UI不符合零停機規範，不支援新的標籤庫路徑。 如果您想要使用傳統UI，而非 `/etc/tags` 需要建立，接著 `cq-tagging` 元件重新啟動。
+>傳統UI不符合零停機規範，不支援新的標籤庫路徑。 如果您想要使用傳統UI，請 `/etc/tags` 之後必須建立 `cq-tagging` 元件重新啟動。
 
-如果TagManager API支援升級的AEM執行個體，並在傳統UI中執行：
+如果TagManager API支援已升級的AEM執行個體，且在傳統UI中執行：
 
 1. 參照舊標籤基底路徑一次 `/etc/tags` 取代為使用tagId或新標籤位置 `/content/cq:tags`，您可以將標籤移轉至新位置 `/content/cq:tags` 在CRX中，之後重新啟動元件。
 
