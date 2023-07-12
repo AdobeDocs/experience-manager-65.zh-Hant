@@ -1,17 +1,14 @@
 ---
 title: We.Finance汽車保險續約參考網站逐步說明
-seo-title: We.Finance Auto Insurance Renewal reference site walkthrough
 description: We.Finance汽車保險續約參考網站逐步說明
-uuid: c749a6f7-71f1-4f47-b824-9c7b699072c7
 contentOwner: dekalra
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
-discoiquuid: ad450124-49a5-4afb-aac3-ed3733d6504b
 docset: aem65
 exl-id: b6ded6ac-4fb1-49f9-b272-16774c3e89a3
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -22,11 +19,11 @@ ht-degree: 0%
 
 We.Finance網站是金融服務網站，旨在協助您學習AEM Forms的互動式通訊功能。
 
-閱讀We.Finance汽車保險使用案例的詳細逐步解說，該使用案例展示AEM表單及其與Microsoft Dynamics的整合如何協助個人化金融服務公司的客戶體驗。 互動式逐步解說可簡化複雜數位交易的實作，以及金融公司的客戶通訊。
+閱讀We.Finance汽車保險使用案例的詳細逐步解說，該使用案例展示AEM表單及其與Microsoft® Dynamics的整合如何協助個人化金融服務公司的客戶體驗。 互動式逐步解說可簡化複雜數位交易的實作，以及金融公司的客戶通訊。
 
 **歷程從使用案例開始：**
 
-Sarah Rose是We.Finance的現有客戶，並購買汽車保險單。 現在正是她續保的時候。 We.Finance保險代理Gloria Rios向Sarah傳送有關其保單續約的提醒。 Sarah遵循電子郵件中提供的指示，並成功完成程式。
+Sarah Rose是We.Finance的現有客戶，並購買汽車保險單。 現在是Sarah保單續約的日子。 We.Finance保險代理Gloria Rios向Sarah傳送有關其保單續約的提醒。 Sarah遵循電子郵件中提供的指示，並成功完成程式。
 
 ## 自動保險應用程式逐步說明 {#auto-insurance-application-walkthrough}
 
@@ -45,15 +42,15 @@ Sarah收到一封電子郵件，主題為「您的汽車保險續約」。
 
 #### 親眼看看 {#see-it-yourself}
 
-前往 **Adobe Experience Manager** > **Forms** > **Forms與檔案** > **We.Finance** > **汽車保險**. 選取自動保險續約 **互動式通訊** 並按一下 **開啟代理程式UI**. 互動式通訊會在Agent UI中開啟。 輸入有效的電子郵件地址，以接收附加原則檔案的電子郵件，然後按一下「提交」。
+前往 **Adobe Experience Manager** > **Forms** > **Forms與檔案** > **We.Finance** > **汽車保險**. 選取自動保險續約 **互動式通訊** 並按一下 **開啟代理程式UI**. 互動式通訊會在Agent UI中開啟。 輸入有效的電子郵件地址，讓他們能夠接收附加原則檔案的電子郵件，然後按一下「提交」。
 
 您可以直接從存取及檢視「汽車保險續約」互動式通訊 `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.`
 
 ### Sarah收到We.Finance的保單續約通訊，並決定續約 {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
 
-Sarah收到一封包含We.Finance附件的電子郵件，提醒她汽車保險單即將到期。 附件是她的「汽車保險」信函的列印版本。
+Sarah收到一封包含We.Finance附件的電子郵件，提醒Sarah她的車險保單即將到期。 附件為Sarah汽車保險信函的列印版本。
 
-Sarah點按 **立即續約** 並導向至其汽車保險信件的網頁版本。 Sarah會在此信函上尋找原則到期的剩餘天數。 此頁面會為Sarah提供保單詳細資料的基本概觀，例如保單編號、到期金額以及其他資訊，例如折扣優惠和忠誠度獎勵。 Sarah再次點按 **立即續約** 位於原則底部。
+Sarah點按 **立即續約** 並導向至其汽車保險信件的網頁版本。 在此信函的最上方，Sarah會尋找原則到期前的剩餘時間。 此頁面會為Sarah提供保單詳細資料的基本概觀，例如保單編號、到期金額以及其他資訊，例如折扣優惠和忠誠度獎勵。 Sarah再次點按 **立即續約** 位於原則底部。
 
 ![ref1](assets/ref1.png)
 
@@ -67,7 +64,7 @@ Sarah點按 **立即續約** 並導向至其汽車保險信件的網頁版本。
 
 您必須已收到附加PDF的電子郵件。 此PDF是您車險信函的列印版本。 按一下 **立即續約** 以存取原則的Web版本。 檢查您的個人資訊和原則詳細資料，然後按一下 **立即續約** 它會帶您進入另一個互動式通訊。
 
-此 **立即續約** 電子郵件中的按鈕會將Sarah導向原則的網頁版本。 您可以造訪下列URL：
+此 **立即續約** 電子郵件中的按鈕會將Sarah導向網頁上的原則。 您可以造訪下列URL：
 
 `https://[authorServer]:[authorPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=1`
 

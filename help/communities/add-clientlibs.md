@@ -1,19 +1,15 @@
 ---
 title: 新增Clientlibs
-seo-title: Add Clientlibs
 description: 新增ClientLibraryFolder
-seo-description: Add a ClientLibraryFolder
-uuid: 2944923d-caca-4607-81a4-4122a2ce8e41
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '672'
 ht-degree: 1%
 
 ---
@@ -45,7 +41,7 @@ ht-degree: 1%
 * 按一下 **新增**
 * 按一下 **全部儲存**
 
-注意：在類別值前面加上「apps」。 是用於將「擁有的應用程式」識別為/apps資料夾中的慣例，而非/libs。  重要：新增預留位置 `js.tx`t和 **`css.txt`** 檔案。 （官方上並不是cq：ClientLibraryFolder沒有它們。）
+注意：在類別值前面加上「apps」。 是用於將「擁有的應用程式」識別為/apps資料夾中的慣例，而非/libs。 重要：新增預留位置 `js.tx`t和 **`css.txt`** 檔案。 （官方上並不是cq：ClientLibraryFolder沒有它們。）
 
 1. 按一下右鍵 **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. 選取 **建立檔案……**
@@ -77,13 +73,13 @@ css.txt和js.txt的第一行會識別要找到下列檔案清單的基本位置�
 
 在 **屬性** 的索引標籤 `clientlibs` 節點，輸入多值字串屬性 **內嵌**. 這會嵌入必要的 [適用於SCF元件的使用者端程式庫(clientlibs)](/help/communities/client-customize.md#clientlibs-for-scf). 在本教學課程中，我們將新增Communities元件所需的許多clientlibs。
 
-**注意** 這可能是或不可能是用於生產網站的理想方法，因為需要考量便利性與每個頁面下載的clientlibs大小/速度。
+這可能是或不可能是用於生產網站的理想方法，因為考量便利性與為每個頁面下載的clientlibs的大小/速度而定。
 
-如果僅在一個頁面上使用一個功能，您可以直接在頁面上包含該功能的完整clientlib，例如
+如果在一個頁面上僅使用一個功能，您可以直接在頁面上包含該功能的完整clientlib，例如，
 
 `% ui:includeClientLib categories=cq.social.hbs.forum" %`
 
-在此情況下，請將它們全部納入，以偏好使用作者clientlibs中最基本的SCF clientlibs：
+在此情況下，請將它們全部納入，因此偏好使用作者clientlibs中更基本的SCF clientlibs：
 
 * 名稱 : **`embed`**
 * 類型 : **`String`**
@@ -110,7 +106,7 @@ css.txt和js.txt的第一行會識別要找到下列檔案清單的基本位置�
 
 ### 在PlayPage範本中包含Clientlibs {#include-clientlibs-in-playpage-template}
 
-不包括 `apps.an-scf-sandbox` ClientLibraryFolder類別時，SCF元件將無法正常運作，也無法設定樣式，因為無法取得必要的Javascript和樣式。
+不包括 `apps.an-scf-sandbox` ClientLibraryFolder類別時，SCF元件無法正常運作，且樣式不正確，因為沒有必要的JavaScript和樣式。
 
 例如，若不包含clientlibs，SCF註解元件會以無樣式顯示：
 
@@ -155,7 +151,7 @@ include陳述式屬於 `head` 部分 `html` 指令碼。 預設 **`foundation he
 
 此時，存在一個極簡沙箱，並且可能值得另存為套件，以便在播放時，如果您的存放庫損壞並且您想要重新開始，您可以關閉伺服器、重新命名或刪除資料夾crx-quickstart/、開啟伺服器、上傳和安裝此儲存的套件，並且不必重複這些最基本的步驟。
 
-此套件存在於 [建立範例頁面](/help/communities/create-sample-page.md) 教學課程適用於迫不及待想跳進來開始播放的人！...
+此套件存在於 [建立範例頁面](/help/communities/create-sample-page.md) 教學課程適用於迫不及待想要加入並開始播放的讀者！...
 
 若要建立套件：
 
@@ -180,9 +176,9 @@ include陳述式屬於 `head` 部分 `html` 指令碼。 預設 **`foundation he
       * 按一下 **新增篩選器**
       * 根路徑：瀏覽至 `/content/an-scf-sandbox**`
       * 按一下 **完成**
-   * 按一下 **儲存**
 
+   * 按一下 **儲存**
 
 * 按一下 **建置**
 
-現在您可以選取 **下載** 以儲存至磁碟及 **上傳套裝** 其他位置，以及選取 **更多>復寫** 以便將沙箱推送至localhost發佈執行個體，以擴展沙箱的範圍。
+現在您可以選取 **下載** 以儲存至磁碟及 **上傳套裝** 其他位置，並選取 **更多>復寫** 將沙箱推送至localhost發佈執行個體，以擴展沙箱的範圍。

@@ -1,24 +1,19 @@
 ---
 title: 建立SCF沙箱
-seo-title: Create An SCF Sandbox
-description: 本教學課程主要供初次接觸AEM且有興趣使用SCF元件的開發人員使用。  它會逐步建立SCF沙箱網站
-seo-description: This tutorial is primarily for developers, new to AEM, who are interested in using SCF components.  It walks through the creation of An SCF Sandbox site
-uuid: ee52e670-e1e6-4bcd-9548-c963142e6704
+description: 本教學課程主要供初次接觸AEM且有興趣使用SCF元件的開發人員使用。 它會逐步建立SCF沙箱網站
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: e1b5c25d-cbdd-421c-b81a-feb6039610a3
 exl-id: 89858814-6625-4a56-8359-cc1eca402816
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
 # 建立SCF沙箱  {#create-an-scf-sandbox}
-
 
 自AEM 6.1社群起，快速建立沙箱最簡單的方式就是建立社群網站。 另請參閱 [AEM Communities快速入門](getting-started.md).
 
@@ -26,7 +21,7 @@ ht-degree: 0%
 
 建立網站的練習有助於瞭解AEM網站的結構，其中可能包含Communities功能，同時也提供簡單頁面，讓您探索如何使用 [社交元件架構(SCF)](scf.md).
 
-本教學課程主要供初次接觸AEM且有興趣使用SCF元件的開發人員使用。 它會逐步建立SCF沙箱網站，類似於的教學課程 [如何建立功能齊全的網際網路網站](../../help/sites-developing/website.md) 其著重於網站結構，例如導覽、標誌、搜尋、工具列和列出子頁面。
+本教學課程主要供初次接觸AEM且有興趣使用SCF元件的開發人員使用。 它會逐步建立SCF沙箱網站，類似於的教學課程 [如何建立功能齊全的網際網路網站](../../help/sites-developing/website.md) 它會著重於網站上的結構，例如導覽、標誌、搜尋、工具列和列出子頁面。
 
 開發會在作者執行個體上進行，而實驗網站最適合在發佈執行個體上進行。
 
@@ -80,7 +75,7 @@ AEM開發人員的大部分時間都花在 [CRXDE Lite](../../help/sites-develop
 * `password: admin`
 
 
-**注意** 此登入將會逾時，您需要使用CRXDe Lite工具列右端的下拉式功能表，定期重新登入。
+此登入逾時，您必須使用CRXDE Lite工具列右端的下拉式功能表，定期重新登入。
 
 如果未登入，您將無法導覽JCR存放庫或執行任何編輯/儲存操作。
 

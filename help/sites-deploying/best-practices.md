@@ -1,29 +1,25 @@
 ---
 title: 部署最佳實務
-seo-title: Deploying Best Practices
 description: 部署及維護最佳實務。
-seo-description: Deploying and maintaining best practices.
-uuid: 4546ed2c-43d5-40f3-874f-567b324e78c2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
 exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 9%
+source-wordcount: '434'
+ht-degree: 11%
 
 ---
 
 # 部署最佳實務{#deploying-best-practices}
 
-部署最佳實務說明如何以最有效率且最有效的方式部署或維護AEM。 這份不斷增加的主題清單包括AEM中的各種領域。
+部署最佳實務說明如何以最有效率和最有效率的方式部署或維護Adobe Experience Manager (AEM)。 這份不斷增加的主題清單包含AEM中的各個領域。
 
 下列區域已有關於部署和維護最佳實務和建議的說明檔案：
 
-* [OAK](#oak)
+* [Oak](#oak)
 * [社群](#communities)
 * [UI](#ui)
 * [效能](#performance)
@@ -36,19 +32,19 @@ ht-degree: 9%
 
 以下表格中會說明並連結特定檔案。
 
-## OAK {#oak}
+## Oak {#oak}
 
 [Oak](/help/sites-deploying/platform.md) 是可擴充且具備優異效能的階層式內容存放庫，是AEM的基礎。
 
 <table>
  <tbody>
   <tr>
-   <td><p>擴充性、效能與災難回覆</p> </td>
+   <td><p>擴充性、效能和災難回覆</p> </td>
    <td><a href="/help/sites-deploying/performance.md">效能與擴充性</a></td>
    <td>提供一份白皮書，討論技術靈敏度、高效能及健全的災難回覆功能</td>
   </tr>
   <tr>
-   <td>建議的OAK部署</td>
+   <td>建議的Oak部署</td>
    <td><a href="/help/sites-deploying/recommended-deploys.md">建議的部署</a></td>
    <td>說明部署案例</td>
   </tr>
@@ -60,10 +56,10 @@ ht-degree: 9%
   <tr>
    <td>資料存放區選項</td>
    <td><a href="/help/sites-deploying/data-store-config.md">設定節點和資料存放區</a></td>
-   <td>本檔案說明有關儲存二進位資料和內容節點的最佳實務。 包括使用Amazon S3資料存放區的資訊。</td>
+   <td>本檔案說明有關儲存二進位資料和內容節點的最佳實務。 包含使用Amazon S3資料存放區的相關資訊。</td>
   </tr>
   <tr>
-   <td>在OAK中搜尋</td>
+   <td>在Oak中搜尋</td>
    <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">查詢和建立索引的最佳實務</a><br /> </td>
    <td>說明如何為內容建立索引的最佳實務。</td>
   </tr>
@@ -99,7 +95,7 @@ AEM目前有兩個UI：相同版本中的傳統和觸控最佳化UI。 因此，
   </tr>
   <tr>
    <td>搭配 CDN 使用 Dispatcher</td>
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">搭配 CDN 使用 Dispatcher</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant#using-dispatcher-with-a-cdn">搭配 CDN 使用 Dispatcher</a></td>
    <td>內容傳遞網路 (CDN) (例如 Akamai Edge Delivery 或 Amazon Cloud Front) 會從接近使用者的位置傳遞內容。</td>
   </tr>
   <tr>
