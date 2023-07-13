@@ -1,17 +1,17 @@
 ---
-title: 在 AEM 中編輯外部 SPA
-description: 本檔案說明將獨立SPA上傳至AEM執行個體、新增可編輯的內容區段及啟用編寫的建議步驟。
+title: 在Adobe Experience Manager中編輯外部SPA
+description: 本檔案說明將獨立SPA上傳至Adobe Experience Manager執行個體、新增可編輯的內容區段及啟用編寫功能的建議步驟。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 90f3fb05581820167ea0dcf50fb23048609af31d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '2446'
+source-wordcount: '2441'
 ht-degree: 1%
 
 ---
 
-# 在 AEM 中編輯外部 SPA {#editing-external-spa-within-aem}
+# 在Adobe Experience Manager中編輯外部SPA {#editing-external-spa-within-aem}
 
-在決定您要在外部SPA和AEM之間進行的整合層級時，您通常需要能夠在AEM內編輯和檢視SPA。
+在決定您要在外部SPA和Adobe Experience Manager (AEM)之間進行的整合層級時，您通常需要能夠在AEM中編輯和檢視SPA。
 
 ## 概觀 {#overview}
 
@@ -21,10 +21,10 @@ ht-degree: 1%
 
 先決條件很簡單。
 
-* 確保AEM的執行個體在本機執行。
-* 建立基礎AEM SPA專案，使用 [AEM專案原型。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties)
-   * 這將構成AEM專案的基礎，將更新以包括外部SPA。
-   * 對於本檔案中的範例，我們使用 [wknd SPA專案。](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor)
+* 確定AEM的執行個體正在本機執行。
+* 建立基礎AEM SPA專案，使用 [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties).
+   * 這會構成AEM專案的基礎，之後會更新以包含外部SPA。
+   * 本檔案中的範例使用 [WKND SPA專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor).
 * 準備好您想要整合的可使用的外部React SPA。
 
 ## 上傳SPA至AEM專案 {#upload-spa-to-aem-project}
@@ -33,13 +33,13 @@ ht-degree: 1%
 
 1. Replace `src` 在 `/ui.frontend` 含有您React應用程式的專案資料夾 `src` 資料夾。
 1. 在應用程式的 `package.json` 在 `/ui.frontend/package.json` 檔案。
-   * 確保SPA SDK相依性屬於 [建議版本。](spa-getting-started-react.md#dependencies)
+   * 確保SPA SDK相依性屬於 [建議版本](spa-getting-started-react.md#dependencies).
 1. 將任何自訂專案納入 `/public` 資料夾。
 1. 包含任何新增至中的任何內嵌指令碼或樣式 `/public/index.html` 檔案。
 
 ## 設定遠端SPA {#configure-remote-spa}
 
-現在，外部SPA已成為AEM專案的一部分，因此需在AEM中設定。
+現在，外部SPA已成為AEM專案的一部分，因此必須在AEM中進行設定。
 
 ### 包含AdobeSPA SDK套件 {#include-spa-sdk-packages}
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 * [`@adobe/aem-spa-component-mapping`](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [`@adobe/aem-spa-page-model-manager`](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
 
-`@adobe/aem-spa-page-model-manager` 提供初始化模型管理員和從AEM執行個體擷取模型的API。 然後，此模型可用於使用來自的API轉譯AEM元件 `@adobe/aem-react-editable-components` 和 `@adobe/aem-spa-component-mapping`.
+此 `@adobe/aem-spa-page-model-manager` 提供初始化模型管理員和從AEM執行個體擷取模型的API。 然後，此模型可用於使用來自的API轉譯AEM元件 `@adobe/aem-react-editable-components` 和 `@adobe/aem-spa-component-mapping`.
 
 #### 安裝 {#installation}
 
@@ -61,19 +61,19 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 ### ModelManager初始化 {#model-manager-initialization}
 
-在應用程式轉譯之前， [`ModelManager`](spa-blueprint.md#pagemodelmanager) 需要初始化才能處理AEM的建立 `ModelStore`.
+在應用程式轉譯之前， [`ModelManager`](spa-blueprint.md#pagemodelmanager) 必須初始化才能處理AEM的建立 `ModelStore`.
 
 這需要在以下範圍內完成 `src/index.js` 應用程式的檔案，或是呈現應用程式根目錄的位置。
 
-為此，我們可使用 `initializationAsync` API由 `ModelManager`.
+為此，請使用 `initializationAsync` API由 `ModelManager`.
 
-下列熒幕擷圖顯示如何啟用 `ModelManager` 在簡單的React應用程式中。 唯一的限制是 `initializationAsync` 需要先呼叫 `ReactDOM.render()`.
+下列熒幕擷圖顯示如何啟用 `ModelManager` 在簡單的React應用程式中。 唯一的限制是 `initializationAsync` 必須在之前呼叫 `ReactDOM.render()`.
 
 ![初始化ModelManager](assets/external-spa-initialize-modelmanager.png)
 
 在此範例中， `ModelManager` 已初始化且為空白 `ModelStore` 「 」已建立。
 
-`initializationAsync` 可選擇接受 `options` 物件作為引數：
+此 `initializationAsync` 可選擇接受 `options` 物件作為引數：
 
 * `path`  — 初始化時，會擷取定義路徑處的模型並儲存在 `ModelStore`. 這可用來擷取 `rootModel` 在初始化時（如有需要）。
 * `modelClient`  — 允許提供負責擷取模型的自訂使用者端。
@@ -81,7 +81,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 ### AEM可授權分葉元件 {#authorable-leaf-components}
 
-1. 建立/識別將為其建立可授權的React元件的AEM元件。 在此範例中，我們使用WKND專案的文字元件。
+1. 建立/識別將為其建立可授權的React元件的AEM元件。 在此範例中，WKND專案使用文字元件。
 
    ![WKND文字元件](assets/external-spa-text-component.png)
 
@@ -147,17 +147,17 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
    >[!NOTE]
    >
-   >在此範例中，我們進一步對演算後的元件進行自訂，以符合現有的文字元件。 但這與AEM中的製作無關。
+   >在此範例中，已對轉譯的元件進行進一步自訂，以符合現有的文字元件。 但這與AEM中的製作無關。
 
 #### 將可編寫的元件新增至頁面 {#add-authorable-component-to-page}
 
-建立可授權的React元件後，我們便可在整個應用程式中使用這些元件。
+建立可授權的React元件後，即可在整個應用程式中使用。
 
-讓我們舉一個需要從WKND SPA專案新增文字的範例頁面。 在此範例中，我們想要顯示文字「Hello World！」 於 `/content/wknd-spa-react/us/en/home.html`.
+以需要新增WKND SPA專案文字的範例頁面為例。 在此範例中，您想要顯示文字「Hello World！」 於 `/content/wknd-spa-react/us/en/home.html`.
 
 1. 決定要顯示的節點路徑。
 
-   * `pagePath`：在我們的範例中，包含節點的頁面 `/content/wknd-spa-react/us/en/home`
+   * `pagePath`：範例中包含節點的頁面 `/content/wknd-spa-react/us/en/home`
    * `itemPath`：範例中頁面內節點的路徑 `root/responsivegrid/text`
       * 這包括頁面上包含專案的名稱。
 
@@ -171,7 +171,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 #### 驗證在AEM上編輯文字內容 {#verify-text-edit}
 
-我們現在可以在執行中的AEM例項上測試元件。
+現在請在執行中的AEM例項上測試元件。
 
 1. 從以下位置執行以下Maven命令： `aem-guides-wknd-spa` 目錄，以建置專案並部署至AEM。
 
@@ -188,8 +188,8 @@ mvn clean install -PautoInstallSinglePackage
 ### AEM可編寫頁面 {#aem-authorable-pages}
 
 1. 識別要新增以在SPA中編寫的頁面。 此範例使用 `/content/wknd-spa-react/us/en/home.html`.
-1. 建立新檔案(例如 `Page.js`)時，不會顯示任何文字。 在此，我們可以重複使用中提供的頁面元件 `@adobe/cq-react-editable-components`.
-1. 在區段中重複步驟4 [AEM可授權分葉元件。](#authorable-leaf-components) 使用包裝函式 `withMappable` 在元件上。
+1. 建立檔案(例如， `Page.js`)時，不會顯示任何文字。 在此，頁面元件可重複使用，可在 `@adobe/cq-react-editable-components`.
+1. 在區段中重複步驟4 [AEM可授權分葉元件](#authorable-leaf-components). 使用包裝函式 `withMappable` 在元件上。
 1. 如同先前一樣，套用 `MapTo` 至頁面中所有子元件的AEM資源型別。
 
    ```javascript
@@ -203,13 +203,13 @@ mvn clean install -PautoInstallSinglePackage
 
    >[!NOTE]
    >
-   >在此範例中，我們使用未包裝的React文字元件，而非包裝的 `AEMText` 先前建立。 這是因為當元件是頁面/容器的一部分且不是獨立元件時，容器會負責遞回對應元件並啟用撰寫功能，而且每個子項不需要額外的包裝函式。
+   >在此範例中，使用的是未包裝的React文字元件，而非包裝的 `AEMText` 先前建立。 這是因為當元件是頁面/容器的一部分且不是獨立元件時，容器會負責遞回對應元件並啟用撰寫功能，而且每個子項不需要額外的包裝函式。
 
-1. 若要在SPA中新增可授權頁面，請遵循區段中的相同步驟 [將可編寫的元件新增至頁面。](#add-authorable-component-to-page) 我們可以在這裡略過 `itemPath` 屬性。
+1. 若要在SPA中新增可授權頁面，請遵循區段中的相同步驟 [將可編寫的元件新增至頁面](#add-authorable-component-to-page). 我們可以在這裡略過 `itemPath` 屬性。
 
 #### 驗證AEM上的頁面內容 {#verify-page-content}
 
-若要驗證頁面是否可以編輯，請遵循區段中的相同步驟 [驗證是否編輯AEM上的文字內容。](#verify-text-edit)
+若要驗證頁面是否可以編輯，請遵循區段中的相同步驟 [驗證在AEM上編輯文字內容](#verify-text-edit).
 
 ![在AEM中編輯頁面](assets/external-spa-edit-page.png)
 
@@ -237,7 +237,7 @@ mvn clean install -PautoInstallSinglePackage
 >
 >確保 `AEMText` 元件有其 `resourceType` 在設定中設定以啟用此功能。
 
-您現在可以依照一節中的步驟將變更部署至AEM [驗證是否編輯AEM上的文字內容。](#verify-text-edit) 將顯示目前不存在的預留位置 `text_20` 節點。
+您現在可以依照一節中的步驟將變更部署至AEM [驗證在AEM上編輯文字內容](#verify-text-edit). 此時會顯示目前不存在的預留位置 `text_20` 節點。
 
 ![aem中的text_20節點](assets/external-spa-text20-aem.png)
 
@@ -247,13 +247,13 @@ mvn clean install -PautoInstallSinglePackage
 
 #### 要求和限制 {#limitations}
 
-新增虛擬分葉元件有許多需求，但也有一些限制。
+新增虛擬分葉元件有幾項需求以及一些限制。
 
 * 此 `pagePath` 屬性是建立虛擬元件的必要專案。
 * 中的路徑所提供的頁面節點 `pagePath` 必須在AEM專案中。
 * 要建立的節點名稱必須提供在 `itemPath`.
 * 可在任何層級建立元件。
-   * 如果我們提供 `itemPath='text_20'` 在上一個範例中，新節點將直接建立於頁面下方，即 `/content/wknd-spa-react/us/en/home/jcr:content/text_20`
+   * 如果我們提供 `itemPath='text_20'` 在上一個範例中，新節點將直接建立於頁面 `/content/wknd-spa-react/us/en/home/jcr:content/text_20`
 * 透過提供時，建立新節點所在節點的路徑必須有效 `itemPath`.
    * 在此範例中， `root/responsivegrid` 必須存在，才能使用新節點 `text_20` 可以在那裡建立。
 * 僅支援建立分葉元件。 未來版本將支援虛擬容器和頁面。
@@ -286,7 +286,7 @@ mvn clean install -PautoInstallSinglePackage
 
 #### 要求和限制 {#container-limitations}
 
-新增虛擬容器有許多需求，但也存在一些限制。
+新增虛擬容器有幾項要求以及一些限制。
 
 * 決定可新增哪些元件的原則將會從父容器繼承。
 * 要建立的容器的直接父系必須已存在於AEM中。
@@ -324,7 +324,7 @@ mvn clean install -PautoInstallSinglePackage
 
 ### 編輯React SPA與路由 {#editing-react-spa-with-routing}
 
-如果外部React SPA應用程式有多個頁面， [它可使用路由來決定要轉譯的頁面/元件。](spa-routing.md) 基本的使用案例是將目前作用中的URL與為路由提供的路徑進行比對。 若要在啟用路由的應用程式上啟用編輯，需要轉換要比對的路徑，以容納AEM的特定資訊。
+如果外部React SPA應用程式有多個頁面， [它可使用路由來決定要轉譯的頁面/元件](spa-routing.md). 基本的使用案例是將目前作用中的URL與為路由提供的路徑進行比對。 若要在啟用路由的應用程式上啟用編輯，需要轉換要比對的路徑，以容納AEM的特定資訊。
 
 在下列範例中，我們有一個簡單的具有兩個頁面的React應用程式。 要呈現的頁面是根據提供給路由器的路徑與作用中URL相符來決定。 例如，若我們在 `mydomain.com/test`， `TestPage` 將會呈現。
 
@@ -351,9 +351,8 @@ mvn clean install -PautoInstallSinglePackage
       * 路由所需的路徑
       * 編輯SPA的AEM執行個體的來源URL
       * AEM上的專案根目錄，如第一個步驟所決定
+
    * 這些值可以設定為環境變數，以獲得更多彈性。
-
-
 
 1. 驗證是否在AEM中編輯頁面。
 
@@ -361,13 +360,13 @@ mvn clean install -PautoInstallSinglePackage
 
 ## 框架限制 {#framework-limitations}
 
-RemotePage元件預期實作會提供如下的資產資訊清單 [可在此處找到。](https://github.com/shellscape/webpack-manifest-plugin) 不過，RemotePage元件僅經過測試，可用於React架構（以及透過remote-page-next元件的Next.js），因此不支援從其他架構(例如Angular)遠端載入應用程式。
+RemotePage元件預期實作會提供如下的資產資訊清單 [可在此處找到](https://github.com/shellscape/webpack-manifest-plugin). 不過，RemotePage元件僅經過測試，可用於React架構（以及透過remote-page-next元件的Next.js），因此不支援從其他架構(例如Angular)遠端載入應用程式。
 
 ## 其他資源 {#additional-resources}
 
 下列參考資料可能有助於瞭解AEM內容中的SPA。
 
-* [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)
+* [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [WKND SPA專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html)
 * [開始在 AEM 中使用 React 建立 SPA](spa-getting-started-react.md)
 * [SPA參考資料（API參考）](spa-reference-materials.md)

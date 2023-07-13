@@ -1,25 +1,21 @@
 ---
 title: 如何使用Proxy伺服器工具
-seo-title: How to use the Proxy Server Tool
 description: Proxy伺服器會作為中繼伺服器，在使用者端和伺服器之間轉送請求
-seo-description: The proxy server acts as an intermediate server that relays requests between a client and a server
-uuid: 30f4f46d-839e-4d23-a511-12f29b3cc8aa
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: dfbc1d2f-80c1-4564-a01c-a5028b7257d7
 exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
 
 # 如何使用Proxy伺服器工具{#how-to-use-the-proxy-server-tool}
 
-Proxy伺服器會作為中繼伺服器，在使用者端和伺服器之間轉送請求。 Proxy伺服器會追蹤所有使用者端 — 伺服器互動，並輸出整個TCP通訊的記錄。 這可讓您監控確切的狀況，而不需要存取主要伺服器。
+Proxy伺服器會作為中繼伺服器，在使用者端和伺服器之間轉送請求。 Proxy伺服器會追蹤所有使用者端 — 伺服器互動，並輸出整個TCP通訊的記錄。 這可讓您精確監視正在發生的事情，而無需存取主伺服器。
 
 您可以在AEM安裝中找到代理伺服器，網址為：
 
@@ -44,7 +40,7 @@ Proxy伺服器會作為中繼伺服器，在使用者端和伺服器之間轉送
 
 `<host>`
 
-這是您要連線的CRX執行個體的主機位址。 如果執行個體位於您的本機電腦上，則這將會是 `localhost`.
+這是您要連線的CRX執行個體的主機位址。 如果執行個體位於您的本機電腦上，則這是 `localhost`.
 
 `<remoteport>`
 
@@ -98,7 +94,7 @@ C-6-Finished: 758 bytes (1.0 kb/s)
 S-6-Finished: 665 bytes (1.0 kb/s)
 ```
 
-這會顯示使用者端( `C`)和伺服器( `S`)和平均速度進行。
+這會顯示使用者端( `C`)和伺服器( `S`)，並以平均速度進行。
 
 **記錄輸出範例**
 
@@ -106,11 +102,11 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 
 ### 範例 {#example}
 
-例如，請考量位於存放庫中的非常簡單的html檔案
+例如，請考量存放庫中的簡單html檔案：
 
 `/content/test.html`
 
-與位於下列位置的影像檔案並排
+在影像檔案旁邊
 
 `/content/test.jpg`
 
@@ -128,26 +124,26 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 </html>
 ```
 
-假設AEM執行個體執行於 `localhost:4502` 我們啟動Proxy的方式如下：
+假設AEM執行個體執行於 `localhost:4502`，Proxy的啟動方式如下：
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
-CQ/CRX例項現在可以透過Proxy進行存取，網址為 `localhost:4444` 而且所有透過此連線埠的通訊都會記錄到 `test.log`.
+CQ/CRX例項現在可以透過Proxy進行存取，網址為 `localhost:4444` 所有透過此連線埠的通訊都會記錄到 `test.log`.
 
-如果我們現在觀看Proxy的輸出，就會看到瀏覽器與AEM執行個體之間的互動。
+如果您現在觀看Proxy的輸出，您會看到瀏覽器與AEM執行個體之間的互動。
 
-啟動時，Proxy輸出以下內容：
+啟動時，Proxy會輸出下列內容：
 
 ```xml
 starting proxy for localhost:4502 on port 4444
 using logfile: <some-dir>/crx-quickstart/opt/helpers/test.log
 ```
 
-然後，我們開啟瀏覽器並存取測試頁面：
+現在開啟瀏覽器並存取測試頁面：
 
 `http://localhost:4444/content/test.html`
 
-而且我們看到瀏覽器讓了 `GET` 頁面的請求：
+而且您會看到瀏覽器會 `GET` 頁面的請求：
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]
@@ -208,7 +204,7 @@ S-7-#000017 -> [Connection: Keep-Alive ]
 
 **檢查保持連線是否有效**
 
-Keep-alive是HTTP的一項功能，可讓使用者端重複使用伺服器的TCP連線，以提出多個要求（頁面代碼、圖片、樣式表等）。 若不保持連線，使用者端必須為每個要求建立新的連線。
+Keep-alive是HTTP的一項功能，可讓使用者端重複使用與伺服器的TCP連線，以提出多個要求（頁面代碼、圖片、樣式表等）。 若不保持連線，使用者端必須為每個要求建立新的連線。
 
 若要檢查保持連線是否有效：
 
@@ -219,7 +215,7 @@ Keep-alive是HTTP的一項功能，可讓使用者端重複使用伺服器的TCP
 
 **尋找遺失的請求**
 
-如果您在複雜的伺服器設定中遺失要求（例如使用防火牆和Dispatcher），您可以使用Proxy伺服器來找出遺失要求的位置。 若使用防火牆：
+如果您在複雜的伺服器設定中遺失要求（例如使用防火牆和Dispatcher），您可以使用Proxy伺服器來找出遺失要求的位置。 如果有防火牆：
 
 * 在防火牆之前啟動Proxy
 * 在防火牆之後啟動另一個Proxy

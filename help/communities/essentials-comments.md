@@ -1,27 +1,23 @@
 ---
 title: Comments Essentials
-seo-title: Comments Essentials
 description: 註解元件概觀
-seo-description: Comments component overview
-uuid: 58b7bb58-f598-4bcb-93ae-b7795cab51cd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
 exl-id: 8b4034f7-2f97-45ad-96d4-51cfbeae5991
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '335'
 ht-degree: 3%
 
 ---
 
 # Comments Essentials {#comments-essentials}
 
-此頁面提供使用註解系統（註解元件）的要點，以及管理使用者產生的內容(UGC)的選項，該內容是在成員發表註解或回覆時產生的。
+此頁面提供使用註解系統（註解元件）的要點，以及管理成員張貼註解或回覆時產生的使用者產生內容(UGC)的選項。
 
-註解元件建立註解系統，使得每個個別貼文都由註解元件（單數）表示。 它是包含在頁面上的註解系統。 呼叫註解系統時，將會建立個別註解。
+註解元件建立註解系統，使得每個個別貼文都由註解元件（單數）表示。 它是包含在頁面上的註解系統。 呼叫註解系統時，會建立個別註解。
 
 ## 適用於使用者端的Essentials {#essentials-for-client-side}
 
@@ -32,7 +28,7 @@ ht-degree: 3%
    <td> social/commons/components/hbs/comments</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>includible</strong></a></td>
    <td>是 — 屬性可在下列位置編輯： <i>設計 </i>模式</td>
   </tr>
   <tr>
@@ -79,9 +75,9 @@ ht-degree: 3%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [註解API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
+* [註解API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
 
-* [評論端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/endpoints/package-summary.html)
+* [評論端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/comments/endpoints/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 
