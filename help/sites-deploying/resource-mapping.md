@@ -1,27 +1,23 @@
 ---
 title: 資源對應
-seo-title: Resource Mapping
-description: 瞭解如何使用資源對應為AEM定義重新導向、虛名URL和虛擬主機。
-seo-description: Learn how to define redirects, vanity URLs and virtual hosts for AEM by using resource mapping.
-uuid: 2ca2d0e4-6f90-4ecc-82db-26991f08c66f
+description: 瞭解如何使用資源對應為Adobe Experience Manager定義重新導向、虛名URL和虛擬主機。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 3582a4d8-a47b-467a-9e25-cb45f969ec93
 docset: aem65
 feature: Configuring
 exl-id: 3eebdd38-da5b-4c38-868a-22c3c7a97b66
-source-git-commit: 7c24379c01f247f5ad45e3ecd40f3edef4ac3cfb
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 3%
+source-wordcount: '522'
+ht-degree: 2%
 
 ---
 
 # 資源對應{#resource-mapping}
 
-資源對應可用來定義AEM的重新導向、虛名URL和虛擬主機。
+資源對應可用來定義Adobe Experience Manager (AEM)的重新導向、虛名URL和虛擬主機。
 
 例如，您可以使用這些對應來：
 
@@ -32,11 +28,11 @@ ht-degree: 3%
 
 `localhost:4503/content/we-retail/en/products.html`
 
-以透過以下方式存取：
+使用下列專案存取：
 
 `localhost:4503/we-retail/en/products.html`
 
-因為對應會自動新增前置詞 `/content` 至 `/we-retail/en/products.html`.
+由於對應會自動新增前置詞 `/content` 至 `/we-retail/en/products.html`.
 
 >[!CAUTION]
 >
@@ -44,7 +40,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->請參閱Sling檔案，以及 [資源解析的對應](https://sling.apache.org/site/resources.html) 和 [資源](https://sling.apache.org/site/mappings-for-resource-resolution.html) 以取得進一步資訊。
+>請參閱Sling檔案，以及 [資源解析的對應](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) 和 [資源](https://sling.apache.org/documentation/the-sling-engine/resources.html) 以取得進一步資訊。
 
 ## 檢視對應定義 {#viewing-mapping-definitions}
 
@@ -86,7 +82,7 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
 
 >[!NOTE]
 >
->有許多資源可協助說明如何定義規則運算式，例如 [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
+>有許多資源可協助說明如何定義規則運算式。 例如， [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
 
 ### 在AEM中建立對應定義 {#creating-mapping-definitions-in-aem}
 
@@ -102,7 +98,7 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
 
 1. 使用CRXDE導覽至 `/etc/map/http`.
 
-1. 建立新節點：
+1. 建立節點：
 
    * **型別** `sling:Mapping`
 此節點型別適用於此類對應，不過其使用並非強制性。
@@ -117,16 +113,16 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
       * **型別** `String`
 
       * **值** `localhost.4503/`
+
    * **名稱** `sling:internalRedirect`
 
       * **型別** `String[]`
 
       * **值** `/content/`
 
-
 1. 按一下 **全部儲存**.
 
-這將處理如下請求：
+這會處理請求，例如：
 `localhost:4503/geometrixx/en/products.html`
 就好像：
 `localhost:4503/content/geometrixx/en/products.html`
@@ -134,8 +130,8 @@ ResourceResolver.map方法用來將資源路徑對應至URL的專案清單。
 
 >[!NOTE]
 >
->另請參閱 [資源](https://sling.apache.org/site/mappings-for-resource-resolution.html) Sling檔案中，以取得有關可用sling屬性及其設定方式的進一步資訊。
+>另請參閱 [資源](https://sling.apache.org/documentation/the-sling-engine/resources.html) Sling檔案中，以取得有關可用sling屬性及其設定方式的進一步資訊。
 
 >[!NOTE]
 >
->您可以使用 `/etc/map.publish` 以保留發佈環境的設定。 然後必須複製這些專案，並且新位置( `/etc/map.publish`)設定的 **對應位置** 的 [Apache Sling資源解析程式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) 發佈環境的。
+>您可以使用 `/etc/map.publish` 以保留發佈環境的設定。 這些都必須複製，而且新位置( `/etc/map.publish`)設定的 **對應位置** 的 [Apache Sling資源解析程式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) 發佈環境的。

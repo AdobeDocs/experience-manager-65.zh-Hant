@@ -1,20 +1,16 @@
 ---
 title: 硬體大小調整准則
-seo-title: Hardware Sizing Guidelines
 description: 這些大小調整准則提供部署AEM專案所需硬體資源的近似值。
-seo-description: These sizing guidelines offer an approximation of the hardware resources required to deploy an AEM project.
-uuid: 395f9869-17c4-4b9b-99f8-d35a44dd6256
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing
 content-type: reference
-discoiquuid: 8893306f-4bc0-48eb-8448-36d0214caddf
 docset: aem65
 exl-id: 5837ef4f-d4e0-49d7-a671-87d5547e0d98
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '2816'
-ht-degree: 0%
+source-wordcount: '2796'
+ht-degree: 1%
 
 ---
 
@@ -57,7 +53,7 @@ ht-degree: 0%
 在典型的專案設定中，您有幾個環境要中繼專案階段：
 
 * **開發環境**
-開發新功能或進行重大變更。 最佳實務是為每位開發人員使用開發環境（通常是個人系統上的本機安裝）來運作。
+開發新功能或進行重大變更。 最佳實務是為每位開發人員使用開發環境（在其個人系統上的本機安裝）來運作。
 
 * **作者測試環境**
 驗證變更。 測試環境的數量會依專案需求而有所不同（例如，QA、整合測試或使用者驗收測試會分開）。
@@ -71,11 +67,11 @@ ht-degree: 0%
 * **發佈生產環境**
 提供已發佈的內容。
 
-此外，環境可能會有所不同，從執行AEM的單伺服器系統和應用程式伺服器，到高度擴充的多伺服器、多CPU叢集執行個體集。 建議您為每個生產系統使用個別的電腦，並且不要在這些電腦上執行其他應用程式。
+此外，環境可能有所不同，從執行AEM和應用程式伺服器的單一伺服器系統，到高度擴充的多伺服器、多CPU叢集執行個體集。 Adobe建議您為每個生產系統使用個別的電腦，並且不要在這些電腦上執行其他應用程式。
 
 ## 一般硬體大小調整考量事項 {#generic-hardware-sizing-considerations}
 
-以下各節提供如何計算硬體需求的指引，並考量各種考量。 對於大型系統，我們建議您在參考組態上執行一組簡單的內部基準測試。
+以下各節提供如何計算硬體需求的指引，並考量各種考量。 對於大型系統，Adobe建議您在參考組態上執行一組簡單的內部基準測試。
 
 效能最佳化是一項基本工作，必須先執行，才能對特定專案進行任何基準測試。 請務必套用 [效能最佳化檔案](/help/sites-deploying/configuring-performance.md) 執行任何效能標竿測試並將其結果用於任何硬體大小計算之前。
 
@@ -87,16 +83,16 @@ ht-degree: 0%
 
 ### 磁碟空間/硬碟 {#disk-space-hard-drive}
 
-所需的磁碟空間在很大程度上取決於您的Web應用程式的磁碟區和型別。 計算應考慮到：
+所需的磁碟空間在很大程度上取決於您的Web應用程式的磁碟區和型別。 計算時應考慮以下因素：
 
 * 頁面、資產和其他儲存庫儲存的實體（例如工作流程、設定檔等）的數量和大小。
 * 預估的內容變更頻率，進而建立內容版本
 * 將產生的DAM資產轉譯數量
 * 一段時間內內容的整體成長
 
-線上上和離線修訂清除期間，會持續監視磁碟空間。 如果可用磁碟空間下降到關鍵值以下，則會取消此程式。 關鍵值是存放庫目前磁碟空間的25%，且無法設定。 建議磁碟大小至少比存放庫大小（包括預估成長）大2或3倍。
+線上上和離線修訂清除期間，會持續監視磁碟空間。 如果可用磁碟空間下降到關鍵值以下，則取消此程式。 關鍵值是存放庫目前磁碟空間的25%，且無法設定。 Adobe建議磁碟的大小至少比存放庫大小（包括預估成長）大2或3倍。
 
-請考慮設定獨立磁碟的備援陣列（RAID，例如RAID10），以提供資料備援。
+請考慮設定獨立磁碟的備援陣列（例如RAID10），以提供資料備援。
 
 >[!NOTE]
 >
@@ -104,7 +100,7 @@ ht-degree: 0%
 
 #### 虛擬化 {#virtualization}
 
-AEM在虛擬化環境中運作良好，但可能有CPU或I/O等因素無法直接等同於實體硬體。 建議選擇更高的I/O速度（一般而言），因為這是大多數情況下最關鍵的因素。 設定您的環境基準對於準確瞭解所需的資源是必要的。
+AEM在虛擬化環境中運作良好，但可能有CPU或I/O等因素無法直接等同於實體硬體。 建議選擇更高的I/O速度（一般而言），因為這是關鍵因素。 設定環境基準是準確瞭解所需資源所必需的。
 
 #### AEM執行個體的平行化 {#parallelization-of-aem-instances}
 
@@ -114,14 +110,14 @@ AEM在虛擬化環境中運作良好，但可能有CPU或I/O等因素無法直�
 
 **系統資源可擴充性**
 
-當所有系統都在執行時，可提供更高的運算效能。 額外的效能不一定與叢集節點數量成線性關係，因為這種關係在很大程度上取決於技術環境；請參閱 [叢集檔案](/help/sites-deploying/recommended-deploys.md) 以取得詳細資訊。
+當所有系統都在執行時，可提供更高的運算效能。 這種額外效能不一定與叢集節點數量成線性關係，因為這種關係在很大程度上取決於技術環境。 另請參閱 [叢集檔案](/help/sites-deploying/recommended-deploys.md) 以取得詳細資訊。
 
 預估需要多少叢集節點是根據特定Web專案的基本需求和特定使用案例所決定：
 
-* 從故障安全的角度來看，必須根據叢集節點復原所需的時間，為所有環境判斷嚴重故障以及故障補償時間。
-* 在可擴充性方面，寫入作業的數目基本上是最重要的因素；請參閱 [同時工作的作者](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) 用於製作環境和 [Social Collaboration](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) 用於發佈環境。 可以針對僅存取系統的作業建立負載平衡，以處理讀取作業；請參閱 [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) 以取得詳細資訊。
+* 從故障安全的角度來看，必須根據叢集節點復原所需的時間，為所有環境確定嚴重故障以及故障補償時間。
+* 在可擴充性方面，寫入作業的數目基本上是最重要的因素；請參閱 [同時工作的作者](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) 用於製作環境和 [Social Collaboration](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) 用於發佈環境。 可以針對僅存取系統的作業建立負載平衡，以處理讀取作業；請參閱 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 以取得詳細資訊。
 
-## 作者環境特定計算 {#author-environment-specific-calculations}
+## 編寫環境特定的計算 {#author-environment-specific-calculations}
 
 為了進行基準測試，Adobe已針對獨立製作例項開發了一些基準測試。
 
@@ -145,13 +141,13 @@ AEM在虛擬化環境中運作良好，但可能有CPU或I/O等因素無法直�
 
 ### 快取 {#caching}
 
-在製作環境中，快取效率通常會低得多，因為網站變更更頻繁，而且內容具有高度互動性和個人化。 使用Dispatcher，您可以快取AEM資料庫、JavaScripts、CSS檔案和版面配置影像。 如此可加快編寫程式的某些方面。 設定網頁伺服器以在這些資源上額外設定瀏覽器快取的標頭，將減少HTTP請求的數量，從而提高系統回應速度，就像作者所做的那樣。
+在製作環境中，快取效率通常會低得多，因為網站變更更頻繁，而且內容具有高度互動性和個人化。 使用Dispatcher，您可以快取AEM資料庫、JavaScript、CSS檔案和版面影象。 如此可加快編寫程式的某些方面。 設定網頁伺服器也可在這些資源上設定瀏覽器快取的標頭，以減少HTTP請求的數量，從而提高系統回應速度，與作者一樣好。
 
 ### 同時工作的作者 {#authors-working-in-parallel}
 
-在作者環境中，同時工作的作者人數及其互動增加到系統的負載是主要限制因素。 因此，我們建議您根據共用的資料輸送量來擴充系統。
+在作者環境中，同時工作的作者人數及其互動增加到系統的負載是主要限制因素。 因此，Adobe建議您根據共用的資料輸送量來擴充系統。
 
-對於這種情況，Adobe會在作者執行個體的兩個節點非共用叢集上執行基準測試。
+對於這類情況，Adobe會在作者執行個體的兩個非共用節點叢集上執行基準測試。
 
 * **效能標竿測試1a**
 使用2個製作執行個體的active-active shared-nothing叢集，使用載入設定檔計算最大輸送量，使用者在具有300個現有頁面的基本載入上執行簡單的建立頁面練習，所有這些都具有類似的性質。
@@ -179,19 +175,19 @@ AEM在虛擬化環境中運作良好，但可能有CPU或I/O等因素無法直�
 
 當作者使用AEM執行基本作業時，此公式可作為調整CPU比例的一般准則。 它假設系統和應用程式已最佳化。 不過，MSM或Assets等進階功能的公式不成立（請參閱以下章節）。
 
-另請參閱以下文章中的其他註解： [平行化](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) 和 [效能最佳化](/help/sites-deploying/configuring-performance.md).
+另請參閱 [平行化](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) 和 [效能最佳化](/help/sites-deploying/configuring-performance.md).
 
 ### 硬體Recommendations {#hardware-recommendations}
 
 通常，您可以依照發佈環境的建議，對製作環境使用相同的硬體。 一般而言，編寫系統的網站流量會低得多，但快取效率也較低。 不過，這裡的基本因素是同時工作的作者數量，以及對系統執行的動作型別。 一般而言，AEM叢集（作者環境）在縮放讀取作業方面最有效；換言之，AEM叢集可配合執行基本編輯作業的作者進行良好的縮放。
 
-在Adobe時的效能標竿測試是使用RedHat 5.5作業系統執行，在Hewlett-Packard ProLiant DL380 G5硬體平台上執行，並具有下列組態：
+Adobe時的效能標竿測試是使用Red Hat® 5.5作業系統執行，在Hewlett-Packard ProLiant DL380 G5硬體平台上執行，並具有下列組態：
 
-* 兩個四核心Intel Xeon X5450 CPU，3.00GHz
+* 兩個四核心Intel Xeon® X5450 CPU，3.00 GHz
 * 8 GB RAM
 * Broadcom NetXtreme II BCM5708 Gigabit乙太網路
-* HP Smart Array RAID控制器，256 MB快取記憶體
-* 2個146 GB 10,000 RPM SAS磁碟，配置為RAID0磁條組
+* HP Smart Array RAID控制器，256-MB快取記憶體
+* 2個146 GB 10,000-RPM SAS磁碟，配置為RAID0磁條組
 * SPEC CINT2006評比基準分數為110
 
 AEM執行個體在執行時的最小棧積大小為256M，最大棧積大小為1024M。
@@ -215,7 +211,7 @@ AEM執行個體在執行時的最小棧積大小為256M，最大棧積大小為1
 >
 >免責宣告：此數字是根據預設硬體組態而定的，可能會因使用的特定硬體而有所不同。
 
-快取比率是Dispatcher不必存取AEM即可傳回的頁面百分比。 100%表示Dispatcher會回應所有請求，0%表示AEM會計算每個頁面。
+快取比率是Dispatcher在無須存取AEM的情況下可傳回的頁面百分比。 100%表示Dispatcher回應所有請求，0%表示AEM計算每個頁面。
 
 ### 範本和應用程式的複雜性 {#complexity-of-templates-and-applications}
 
@@ -256,7 +252,7 @@ AEM執行個體在執行時的最小棧積大小為256M，最大棧積大小為1
   </tr>
   <tr>
    <td>templateComplex</td>
-   <td>使用介於1到10之間的值來指示範本的複雜性。 數字較高表示範本較複雜，數值1代表平均每頁10個元件的網站，數值5代表平均每頁40個元件，數值10代表平均超過100個元件。</td>
+   <td>使用1到10之間的值來指示範本的複雜性。 數字較高表示範本較複雜，數值1代表平均每頁10個元件的網站，數值5代表平均每頁40個元件，數值10代表平均超過100個元件。</td>
   </tr>
   <tr>
    <td>啟用</td>
@@ -267,14 +263,17 @@ AEM執行個體在執行時的最小棧積大小為256M，最大棧積大小為1
 
 如果您的網站較為複雜，則還需要功能較強大的網頁伺服器，讓AEM能夠在可接受的時間內回應請求。
 
-* 複雜性低於4：· 1024 MB JVM RAM&#42;
-·低效能至中效能的CPU
+* 複雜性低於4：
+   * 1024 MB JVM RAM&#42;
+   * 中低效能CPU
 
-* 4到8之間的複雜性：· 2048 MB JVM RAM&#42;
-·中高效能CPU
+* 複雜性從4到8：
+   * 2048 MB JVM RAM&#42;
+   * 中高效能CPU
 
-* 複雜性高於8：· 4096 MB JVM RAM&#42;
-·高至高階效能CPU
+* 複雜性高於8：
+   * 4096 MB JVM RAM&#42;
+   * 高至高階效能CPU
 
 >[!NOTE]
 >
@@ -292,9 +291,9 @@ AEM執行個體在執行時的最小棧積大小為256M，最大棧積大小為1
 
 >[!NOTE]
 >
->較高的影像傳輸量意味著運算資源必須能跟上系統I/O的速度，反之亦然。 例如，如果透過匯入影像來啟動工作流程，則透過WebDAV上傳許多影像可能會導致工作流程積壓。
+>較高的影像傳輸量意味著運算資源必須能夠跟上系統I/O的速度，反之亦然。 例如，如果透過匯入影像來啟動工作流程，則透過WebDAV上傳許多影像可能會導致工作流程積壓。
 >
->對TarPM、資料存放區和搜尋索引使用個別的磁碟，有助於最佳化系統I/O行為（不過，通常將搜尋索引保留在本機是有意義的）。
+>為TarPM、資料存放區和搜尋索引使用個別的磁碟，有助於最佳化系統I/O行為（不過，通常將搜尋索引保留在本機是有意義的）。
 
 >[!NOTE]
 >
@@ -311,7 +310,7 @@ AEM執行個體在執行時的最小棧積大小為256M，最大棧積大小為1
 
 使用代表性內容摘錄來測試規劃的使用案例，有助於您改善對資源消耗的瞭解。 如果您使用計畫輸送量來推斷結果，則可以評估AEM MSM所需的其他資源。
 
-也請考量，如果AEM MSM使用案例消耗的資源比計畫多，同時作業的作者會察覺到效能的副作用。
+此外，也會說明同時工作的作者。 如果AEM MSM使用案例消耗的資源比計畫多，使用者會察覺到效能的副作用。
 
 ### AEM Communities大小調整考量事項 {#aem-communities-sizing-considerations}
 

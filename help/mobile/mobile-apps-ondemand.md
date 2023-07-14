@@ -1,18 +1,14 @@
 ---
 title: Mobile On-Demand
-seo-title: Mobile On-Demand
-description: 請依照本頁瞭解AEM Mobile On-Demand Services作者的角色和責任。
-seo-description: Follow this page to learn about the roles and responsibilities for AEM mobile On-Demand services author.
-uuid: dd0184d8-1220-4f6a-96b2-acdb31caae17
+description: 請依照本頁瞭解Adobe Experience Manager Mobile On-Demand Services作者的角色和責任。
 contentOwner: msm-service
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: 2ae7ea8d-fc58-4647-bc83-915d9f4b7dd8
 exl-id: 357e75f8-2c98-4377-afef-016d58505b4d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '273'
 ht-degree: 4%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
@@ -35,9 +31,9 @@ ht-degree: 4%
 
 ## AEM Mobile Author {#aem-mobile-author}
 
-一個 ***AEM作者* (或 *行銷人員*)**使用自訂開發或現成可用的範本和元件來新增和編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 AEM內建內容編輯器隨後由使用 *AEM作者* 在應用程式中建立豐富的相關體驗，包括與Adobe Marketing Cloud其他部分的整合。
+一個 ***AEM作者* (或 *行銷人員*)**使用自訂開發或現成可用的範本和元件來新增和編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 AEM內建內容編輯器隨後由使用 *AEM作者* 以建立應用程式內豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
 
-使用AEM Mobile On Demand Services建立應用程式時，AEM作者會負責下列工作。
+使用AEM Mobile On-demand Services建立應用程式時，AEM作者會負責下列工作。
 
 **為AEM Mobile On-demand Services應用程式編寫AEM內容** 涉及下列動作：
 
@@ -55,7 +51,6 @@ ht-degree: 4%
 >* [範本](/help/sites-developing/templates.md)
 >* [元件](/help/sites-developing/components.md)
 >
-
 
 ## 其他資源 {#additional-resources}
 

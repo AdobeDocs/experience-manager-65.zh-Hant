@@ -1,18 +1,14 @@
 ---
 title: 開發社群
-seo-title: Developing Communities
-description: 建立和自訂社群功能，例如論壇、使用者群組等
-seo-description: Create and customize community features such as forums, user groups, and more
-uuid: 51dc54da-9090-4d36-adf9-72d5479062a5
+description: 建立和自訂社群功能，例如論壇、使用者群組等。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 exl-id: 3ed3768a-1b3c-45a1-a34c-61694cd407d9
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '391'
 ht-degree: 5%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 5%
 
 ## 概觀 {#overview}
 
-AEM Communities可簡化社群功能的建立和自訂作業，例如論壇、使用者群組、部落格、Q&amp;A、行事曆、評論、評論、投票、評分和指派。 這些功能導致使用者產生的內容(UGC)輸入到發佈環境中。
+Adobe Experience Manager (AEM) Communities可簡化社群功能的建立和自訂作業，例如論壇、使用者群組、部落格、Q&amp;A、行事曆、評論、評論、投票、評分和指派。 這些功能導致使用者產生的內容(UGC)被輸入發佈環境中。
 
 的基礎 [社群網站](overview.md#communitiessites) 是 [社交元件框架](scf.md) (SCF)。 社群網站的建立從選擇開始 [社群網站範本](sites-console.md) 由下列專案組成 [社群功能](functions.md).
 
@@ -36,7 +32,7 @@ AEM Communities可簡化社群功能的建立和自訂作業，例如論壇、�
 
 ## 建議的部署 {#recommended-deployments}
 
-* [社群內容儲存](working-with-srp.md)：討論UGC一般存放區的可用SRP選擇
+* [社群內容儲存](working-with-srp.md)：討論UGC一般存放區可用的社交資源提供者(SRP)選擇
 * [社群適用的建議拓撲](topologies.md)：根據使用案例和SRP選擇討論拓撲
 
 ## 社交元件架構 {#social-component-framework}
@@ -51,7 +47,7 @@ AEM Communities可簡化社群功能的建立和自訂作業，例如論壇、�
 
 ## 元件、函式和Feature Essentials {#component-function-and-feature-essentials}
 
-AEM Communities元件、函式和功能提供建置區塊，以便 [社群網站](sites-console.md).
+AEM Communities元件、函式和功能提供建置區塊， [社群網站](sites-console.md).
 
 * [元件、函式和Feature Essentials](essentials.md)
 * [Communities元件的Clientlibs](clientlibs.md)

@@ -1,19 +1,15 @@
 ---
 title: 擴充和設定登入頁面的Design Importer
-seo-title: Extending and Configuring the Design Importer for Landing Pages
 description: 瞭解如何設定登入頁面的Design Importer。
-seo-description: Learn how to configure the Design Importer for landing pages.
-uuid: a2dd0c30-03e4-4e52-ba01-6b0b306c90fc
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: e02f5484-fbc2-40dc-8d06-ddb53fd9afc2
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '3503'
+source-wordcount: '3502'
 ht-degree: 0%
 
 ---
@@ -127,15 +123,15 @@ Internet Explorer和Firefox 3.6版及舊版不支援拖放zip上傳。 若要在
 
 ### 不支援Modernizer {#modernizr-is-not-supported}
 
-`Modernizr.js` 是以javascript為基礎的工具，可偵測瀏覽器的原生功能，並偵測這些功能是否適用於html5元素。 設計若使用Modernizer來增強舊版不同瀏覽器的支援，可能會導致登陸頁面解決方案中出現匯入問題。 `Modernizr.js` Design Importer不支援指令碼。
+`Modernizr.js` 是以JavaScript為基礎的工具，可偵測瀏覽器的原生功能，並偵測這些功能是否適用於html5元素。 設計若使用Modernizer來增強舊版不同瀏覽器的支援，可能會導致登陸頁面解決方案中出現匯入問題。 `Modernizr.js` Design Importer不支援指令碼。
 
 ### 匯入設計封裝時未保留頁面屬性 {#page-properties-are-not-preserved-at-the-time-of-importing-design-package}
 
-任何頁面屬性（例如自訂網域、強制執行HTTPS等） 在設計匯入後，在匯入設計套件之前為頁面（使用空白登陸頁面範本）設定的將會遺失。 因此，建議您在匯入設計套件後設定頁面屬性。
+匯入設計套件之前，為頁面（使用空白登陸頁面範本）設定的任何頁面屬性（例如，自訂網域、強制執行HTTPS等）會在設計匯入後遺失。 因此，建議您在匯入設計套件後設定頁面屬性。
 
 ### 假設僅HTML標籤 {#html-only-markup-assumed}
 
-匯入時，標籤會因為安全性原因而經過消毒，以避免匯入和發佈無效的標籤。 這假設僅限HTML的標籤和所有其他形式的元素(例如內嵌SVG或Web元件)將被篩選掉。
+匯入時，標籤會因為安全性原因而經過清理，以避免匯入和發佈無效的標籤。 這假設僅限HTML的標籤和所有其他形式的元素(例如內嵌SVG或Web元件)將被篩選掉。
 
 ### 文字 {#text}
 
@@ -191,7 +187,7 @@ HTML標籤可插入標題元件( `wcm/landingpage/components/title`)在design pa
 * 設定 `jcr:title` 將建立的標題元件屬性改成包在div中的標題標籤內的文字。
 * 設定 `type` 屬性至標題標籤，在此案例中為 `h1`.
 
-標題元件支援7種型別 —  `h1, h2, h3, h4, h5, h6` 和 `default`.
+標題元件支援七種型別 —  `h1, h2, h3, h4, h5, h6` 和 `default`.
 
 **速記元件標籤宣告**：
 
@@ -277,7 +273,7 @@ HTML標籤，以在匯入的zip檔案中包含點進元件。 此處href對應�
 
 #### 圖形連結 {#graphical-link}
 
-此CTA元件可用來新增登陸頁面上具有連結的任何圖形影像。 影像可以是簡單的按鈕，也可以是任何圖形影像作為背景。 按一下影像時，使用者將被帶往元件屬性中指定的目標URL。 它是「號召性用語」群組的一部分。
+此CTA元件可用來新增登陸頁面上具有連結的任何圖形影像。 影像可以是簡單的按鈕，也可以是任何圖形影像作為背景。 按一下影像時，使用者會被帶往元件屬性中指定的目標URL。 它是「號召性用語」群組的一部分。
 
 支援的屬性
 
@@ -286,7 +282,7 @@ HTML標籤，以在匯入的zip檔案中包含點進元件。 此處href對應�
 * 目標URL，支援第三方和AEM URL
 * 頁面呈現選項（相同視窗、新視窗等）
 
-HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡href將對應到目標url，img src將是轉譯影像，「title」將被視為暫留文字等。
+HTML標籤，在匯入的zip檔案中包含圖形連結元件。 此處href對應至目標url，img src是呈現影像，「title」是當作暫留文字等。
 
 ```xml
 <div id="cqcanvas">
@@ -304,9 +300,9 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡href將�
 >
 >若要建立點進圖形連結，您必須使用將錨點標籤和影像標籤包裹在div中 `data-cq-component="clickthroughgraphicallink"` 屬性。
 >
->例如： `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
+>例如 `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
 >
->不支援使用CSS將影像與錨點標籤建立關聯的其他方法，例如，下列標籤將無法運作：
+>不支援使用CSS將影像與錨點標籤建立關聯的其他方法。 例如，下列標籤無法運作：
 >
 >`<div data-cq-component="clickthroughgraphicallink">`
 >
@@ -315,27 +311,28 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡href將�
 >`</div>`
 >
 >與相關聯的 `css .hasbackground { background-image: pathtoimage }`
+>
 
 ### 銷售機會表單 {#lead-form}
 
-潛在客戶表單是用於收集訪客/潛在客戶設定檔資訊的表單。 此資訊可以儲存並稍後使用，以根據資訊進行有效的行銷。 這些資訊通常包括標題、名稱、電子郵件、出生日期、地址、興趣等。 它是「CTA銷售機會表單」群組的一部分。
+潛在客戶表單是用於收集訪客/潛在客戶設定檔資訊的表單。 此資訊可以儲存並稍後使用，以根據資訊進行有效的行銷。 此資訊通常包括標題、名稱、電子郵件、出生日期、地址、興趣等。 它是「CTA銷售機會表單」群組的一部分。
 
 **支援的功能**
 
 * 預先定義的銷售機會欄位 — 名字、姓氏、地址、dob、性別、關於、userId、emailId、提交按鈕可在sidekick中使用。 只需在潛在客戶表單中拖放所需的元件即可。
-* 在這些元件的協助下，作者可以設計獨立的銷售機會表單，這些欄位對應到銷售機會表單欄位。 在獨立或匯入的zip應用程式中，使用者可以使用cq：form或cta潛在客戶表單欄位來新增額外欄位，並根據要求命名和設計。
+* 在這些元件的協助下，作者可以設計獨立的銷售機會表單，這些欄位對應到銷售機會表單欄位。 在獨立或匯入的zip應用程式中，使用者可以使用cq：form或cta潛在客戶表單欄位、名稱來新增額外欄位，並根據需求進行設計。
 * 使用CTA潛在客戶表單的特定預先定義名稱對應潛在客戶表單欄位，例如 — 潛在客戶表單中名字的firstName等。
-* 未對應到潛在客戶表單的欄位將對應到cq：form元件 — 文字、單選按鈕、核取方塊、下拉選單、隱藏、密碼。
+* 未對應到潛在客戶表單對應到cq：form元件的欄位 — 文字、單選、核取方塊、下拉式清單、隱藏、密碼。
 * 使用者可以使用「label」標籤提供標題，也可以使用樣式屬性「class」提供樣式（僅適用於CTA銷售機會表單元件）。
 * 感謝頁面和訂閱清單可作為表單的隱藏引數提供（出現在index.htm中），或從「潛在客戶表單開始」的編輯列新增/編輯
 
-   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
+  &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
 
-   &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot;/>
+  &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot;/>
 
 * 可透過每個元件的編輯設定提供如下的限制：必要。
 
-HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡「firstName」對應至銷售機會表單firstName等，但核取方塊除外 — 這兩個核取方塊對應至cq：form下拉式清單元件。
+HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡「firstName」對應到潛在客戶表單firstName，依此類推，但核取方塊除外 — 這兩個核取方塊對應到cq：form下拉式清單元件。
 
 ```xml
 <div id="cqcanvas">
@@ -519,7 +516,7 @@ data-cq-component中的路徑應為元件的resourceType。
   <tr>
    <td> </td>
    <td>取代圖樣</td>
-   <td>用來取代找到之相符的模式。 您可以使用$1、$2等規則運算式群組參考。 此外，此模式支援在匯入期間以實際值解析的{designPath}等關鍵字。</td>
+   <td>用來取代找到之相符的模式。 您可以使用$1、$2等規則運算式群組參考。 此外，此模式支援的關鍵字包括 {designPath} 會在匯入期間以實際值來解析。</td>
   </tr>
  </tbody>
 </table>
@@ -530,10 +527,12 @@ data-cq-component中的路徑應為元件的resourceType。
 >如果您需要對搜尋模式進行任何變更，在開啟felix屬性編輯器時，您需要手動新增反斜線字元以逸出規則運算式中繼字元。 如果您未手動新增反斜線字元，則規則運算式會被視為無效，且不會取代舊的。
 >
 >例如，如果預設設定為
->`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
->而且您需要更換 >`CQ_DESIGN_PATH` 替換為 `VIPURL` 在搜尋模式中，您的搜尋模式應如下所示：
-`/\* *VIPURL *\*/ *(['"])`
+>>`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
+>
+>而且您需要更換 `CQ_DESIGN_PATH` 替換為 `VIPURL` 在搜尋模式中，您的搜尋模式應如下所示：
+>
+>`/\* *VIPURL *\*/ *(['"])`
 
 ## 疑難排解 {#troubleshooting}
 
@@ -545,14 +544,14 @@ data-cq-component中的路徑應為元件的resourceType。
 
 ### 匯入期間顯示的錯誤訊息 {#error-messages-displayed-during-import}
 
-萬一發生任何錯誤（例如匯入的封裝不是有效的zip檔），設計匯入將不會匯入封裝，而是會在頁面上方拖放方塊上方顯示錯誤訊息。 此處提供錯誤情況的範例。 更正錯誤後，您可以將更新後的zip重新匯入至相同的空白登陸頁面。 擲回錯誤的不同情況如下：
+如果發生任何錯誤（例如，匯入的封裝不是有效的zip），則設計匯入不會匯入封裝。 相反地，錯誤訊息會顯示在頁面上方拖放方塊的上方。 此處提供錯誤情況的範例。 更正錯誤後，您可以將更新後的zip檔案重新匯入至相同的空白登陸頁面。 擲回錯誤的不同情況如下：
 
 * 匯入的設計封裝不是有效的zip封存。
 * 匯入的設計封裝在頂層不包含index.html。
 
 ### 匯入後顯示警告 {#warnings-displayed-after-import}
 
-萬一出現任何警告(例如HTML是指封裝內不存在的影像)，設計匯入工具會匯入zip，但同時在結果窗格中顯示問題/警告清單，按一下問題連結會顯示警告清單，指出設計封裝內的任何問題。 設計匯入工具攔截到警告並顯示警告的不同情況如下：
+如果有任何警告(例如HTML參照的影像不存在於套件中)，設計匯入工具會匯入zip，但同時在結果窗格上顯示問題/警告清單，按一下問題連結將顯示警告清單，指出設計套件中的任何問題。 設計匯入工具攔截到警告並顯示警告的不同情況如下：
 
 * HTML是指封裝內不存在的影像。
 * HTML是指套件中不存在的指令碼。
@@ -560,7 +559,7 @@ data-cq-component中的路徑應為元件的resourceType。
 
 ### ZIP檔案的檔案儲存在AEM中的何處？ {#where-are-the-files-of-the-zip-file-being-stored-in-aem}
 
-匯入登入頁面後，檔案（影像、css、js等） 在設計封裝內，儲存在AEM的以下位置：
+匯入登入頁面後，設計套件中的檔案（影像、css、js等）會儲存在AEM的下列位置：
 
 `/etc/designs/default/canvas/content/campaigns/<name of brand>/<name of campaign>/<name of landing page>`
 
@@ -589,7 +588,7 @@ height="116" /></div>Some Text </p>
 { width: 450px; padding:10px; border: 1px #C5DBE7 solid; margin: 0px auto 0 auto; background-image:url(assets/box.gif); background-repeat:repeat-x,y; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#6D6D6D; }
 ```
 
-則 `box img` 用於design importer，因此產生的登陸頁面似乎並未保留格式。 若要解決此問題，請注意AEM會在CSS中新增div標籤，並據此重寫程式碼。 否則，某些CSS規則將無效。
+則 `box img` 用於design importer，因此產生的登陸頁面似乎未保留格式。 為了解決這個問題，AEM在CSS中新增div標籤，並據此重寫程式碼。 否則，某些CSS規則將無效。
 
 ```xml
 .box img
@@ -598,4 +597,5 @@ height="116" /></div>Some Text </p>
 ```
 
 >[!NOTE]
-此外，設計人員應注意，只有內部的程式碼 **id=cqcanvas** 標籤會由匯入工具識別，否則不會保留設計。
+>
+>此外，設計人員應注意，只有內部的程式碼 **id=cqcanvas** 標籤會由匯入工具識別，否則不會保留設計。

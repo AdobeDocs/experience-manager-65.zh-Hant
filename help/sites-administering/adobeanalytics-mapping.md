@@ -1,19 +1,15 @@
 ---
 title: 將元件資料與Adobe Analytics屬性對應
-seo-title: Mapping Component Data with Adobe Analytics Properties
 description: 瞭解如何使用SiteCatalyst屬性對應元件資料。
-seo-description: Learn how to map component data with SiteCatalyst properties.
-uuid: b08ab37f-ad58-4c04-978f-8e21a3823ae8
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 6c1f8869-62d9-4fac-aa0d-b99bb0e86d6b
 docset: aem65
 exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -39,7 +35,7 @@ ht-degree: 0%
 
 使用以下程式，將CQ元件變數與Adobe Analytics報表屬性對應。
 
-1. 在 **AEM檢視**，將追蹤元件從sidekick拖曳至架構上。 例如，拖曳 **頁面** 元件元件來自 **一般** 類別。
+1. 在 **AEM檢視**，將追蹤元件從sidekick拖曳至架構上。 例如，拖曳 **頁面** 元件來自 **一般** 類別。
 
    ![aa-13](assets/aa-13.png)
 
@@ -57,7 +53,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >您可以對應多個Analytics變數(例如 `props`， `eVars`， `events`)至相同的CQ變數(例如： `pagedata.title`)
+   >您可以對應多個Analytics變數(例如 `props`， `eVars`， `events`)至相同的CQ變數(例如， `pagedata.title`)
 
    >[!CAUTION]
    >
@@ -65,7 +61,6 @@ ht-degree: 0%
    >
    >* `eVars` 和 `props` 都會對應至開頭為以下列任一專案的CQ變數： `pagedata.X` 或 `eventdata.X`
    >* 而事件應對應至變數，開頭為 `eventdata.events.X`
-
 
 1. 若要讓架構可用於網站的發佈執行個體，請開啟 **頁面** 索引標籤，然後按一下 **啟動框架。**
 
@@ -111,7 +106,7 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 
 清單可透過下列方式操作：
 
-1. 當在 **AEM檢視**，您可根據使用3個篩選按鈕選取的變數型別來篩選清單：
+1. 當在 **AEM檢視**，您可使用下列三個篩選按鈕，根據選取的變數型別來篩選清單：
 
    * 若 *無按鈕* 選取時，清單會顯示完整清單。
    * 如果 **流量** 按鈕時，清單只會顯示屬於流量區段的變數。
@@ -127,23 +122,23 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
    1. 清單可隨時使用旋轉箭頭按鈕重新載入。
    1. 如果在架構上選取了多個RSID，清單中的所有變數都會使用選取的RSID內使用的所有標籤來顯示。
 
-
 1. 在Adobe Analytics檢視中，內容尋找器會顯示屬於CQ檢視中拖曳之追蹤元件的所有CQ變數。
 
-   * 例如，如果 **下載元件** 是 *僅拖曳一個* 在CQ檢視中（其中包含兩個可對應的變數） *eventdata.downloadLink* 和 *eventdata.events.startDownload*)，則內容尋找器切換至Adobe Analytics檢視時看起來會像這樣：
+   * 例如，如果 **下載元件** 是 *僅拖曳一個* 在CQ檢視中（其中包含兩個可對應的變數） *eventdata.downloadLink* 和 *eventdata.events.startDownload*)，內容尋找器切換至Adobe Analytics檢視時看起來會像這樣：
 
    ![aa-22](assets/aa-22.png)
 
-   * 這些變數可拖放至屬於3個變數區段之一的任何Adobe Analytics變數上(**流量**， **轉換** 和 **事件**)。
+   * Adobe Analytics這些變數可拖放至屬於三個變數區段(**流量**， **轉換** 和 **事件**)。
 
    * 將新的追蹤元件拖曳至CQ檢視中的框架時，屬於該元件的CQ變數會自動新增至Adobe Analytics檢視中的內容尋找器(cf#)。
+
    >[!NOTE]
    >
    >在任何指定時間，只能將一個CQ變數對應至Adobe Analytics變數。
 
 ## 使用AEM檢視和Analytics檢視 {#using-aem-view-and-analytics-view}
 
-在任何指定時間，使用者可以選擇在框架頁面上切換檢視Adobe Analytics對應的兩種方式。 從2個不同的角度來看，這2個檢視可提供架構內對應的更佳概述。
+在任何指定時間，使用者在框架頁面上時，可以在兩種檢視Adobe Analytics對應的方式之間切換。 從兩個不同的角度來看，這兩個檢視可提供架構內對應的更佳概述。
 
 ### AEM檢視 {#aem-view}
 
@@ -160,15 +155,15 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
    1. 如果框架具有從其父項繼承的元件，則會在此處列出這些元件，以及對應到元件的變數。
 
       1. 繼承的元件已鎖定。
-      1. 若要解除鎖定繼承的元件，只要按兩下元件名稱旁的掛鎖即可
-      1. 為了恢復繼承，您必須刪除已解鎖的元件；之後它將重新獲得其鎖定狀態。
+      1. 若要解除鎖定繼承的元件，請連按兩下元件名稱旁的掛鎖
+      1. 若要還原繼承，請刪除已解鎖的元件；之後會重新獲得其鎖定狀態。
+
    1. **將元件拖曳到此處以包含在分析框架中**：元件可從Sidekick拖曳並放置在這裡。
    1. 您可以找到目前包含在分析框架中的所有元件：
 
       1. 若要新增元件，請從sidekick的「元件」標籤中拖曳一個元件
       1. 若要刪除元件及其所有對映，請從元件的快顯選單中選取「刪除」，然後在確認對話方塊上接受刪除。
       1. 請記住，元件只能從建立該元件的架構中刪除，且無法從傳統意義上的子架構中刪除（只能覆寫）。
-
 
 ### 分析檢視 {#analytics-view}
 
@@ -185,24 +180,26 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
       * 流量變數( `prop1`)對應至CQ變數( `eventdata.downloadLink`)
 
       * 當元件旁邊有掛鎖時，這表示它繼承自父框架，因此無法編輯
+
    * **轉換**:
 
       * 轉換變數( `eVar1`)對應至CQ變數( `pagedata.title`)
 
-      * 轉換變數( `eVar3`)對應至內嵌新增的javascript運算式，方法是按兩下CQ變數欄位，然後手動輸入程式碼
+      * 轉換變數( `eVar3`)對應至內嵌新增的JavaScript運算式，方法是按兩下CQ變數欄位並手動輸入程式碼
+
    * **Event**:
 
       * 事件變數( `event1`)對應至CQ事件( `eventdata.events.pageView`)
 
-
-
 >[!NOTE]
 >
->您也可以內嵌填入任何表格的CQ變數欄，方法是按兩下該欄位並新增文字。 這些欄位接受javascript作為輸入。
+>您也可以內嵌任何表格的CQ變數欄，方法是連按兩下該欄位並新增文字。 這些欄位接受JavaScript作為輸入。
 >
 >例如，旁邊的 `prop3` 您可以新增：
 >     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
 以傳送 *標題* 與其串連的頁面的 *sitesection* 使用 *：* （冒號）和前置詞 *Adobe* 作為 `prop3`
+>
 
 >[!CAUTION]
+>
 在任何指定時間，只能將一個CQ變數對應至Adobe Analytics變數。

@@ -1,17 +1,15 @@
 ---
 title: 使用內容頁面版本
 description: 建立、比較和還原頁面的版本
-uuid: 29e049f0-532c-4e3b-b64f-5be88ee6b08c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: 0a06837576e102d0e46f7afd0f5a197c292ddae7
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1497'
 ht-degree: 3%
 
 ---
@@ -56,7 +54,7 @@ ht-degree: 3%
 1. 導覽以顯示您要建立版本的頁面。
 1. 選取中的頁面 [選擇模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 1. 選取 **建立** 工具列中的選項以開啟對話方塊。
-1. 在對話方塊中，您可以輸入 **標籤** 和 **註解** 如有需要：
+1. 在對話方塊中，您可以輸入 **標籤** 和 **註解**，如有需要：
 
    ![輸入標籤和註解](assets/screen_shot_2012-02-15at105050am.png)
 
@@ -89,7 +87,7 @@ ht-degree: 3%
 >舉例說明：
 >
 >1. 建立任何頁面的版本。
->1. 初始標籤和版本節點名稱將為1.0、1.1、1.2等。
+>1. 初始標籤和版本節點名稱將為1.0、1.1、1.2，依此類推。
 >1. 恢復第一個版本；在此例中為1.0。
 >1. 再次建立版本。
 >1. 產生的標籤和節點名稱現在將為1.0.0、1.0.1、1.0.2，以此類推。

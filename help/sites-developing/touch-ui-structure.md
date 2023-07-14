@@ -1,25 +1,21 @@
 ---
-title: AEM觸控式UI的結構
-seo-title: Structure of the AEM Touch-Enabled UI
-description: 在AEM中實作的觸控最佳化UI有幾項基礎原則，而且由數個關鍵元素組成
-seo-description: The touch-optimized UI, as implemented in AEM, has several underlying principles and is made up of several key elements
-uuid: 9a255238-1adc-4a40-9c37-30cb53ffb26c
+title: Adobe Experience Manager觸控式UI的結構
+description: Adobe Experience Manager中實作的觸控最佳化UI有幾項基礎原則，而且由數項關鍵元素組成
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
 exl-id: e562b289-5d8b-4fa8-ad1c-fff5f807a45e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '857'
 ht-degree: 3%
 
 ---
 
-# AEM觸控式UI的結構{#structure-of-the-aem-touch-enabled-ui}
+# Adobe Experience Manager觸控式UI的結構{#structure-of-the-aem-touch-enabled-ui}
 
-AEM觸控式UI具備數個基本原則，且由數個關鍵元素組成：
+Adobe Experience Manager (AEM)觸控式UI具備數個基本原則，並包含數個關鍵元素：
 
 ## 主控台 {#consoles}
 
@@ -33,7 +29,7 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe決定使用一種�
 
 版面配置會遵循回應式設計樣式，並配合您所使用的裝置/視窗大小。
 
-例如，當解析度低於1024px （如同在行動裝置上）時，顯示器將會相應地調整：
+例如，當解析度低於1024 px （如同在行動裝置上）時，顯示器將會相應地調整：
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
@@ -58,7 +54,7 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe決定使用一種�
 
 ![chlimage_1-145](assets/chlimage_1-145.png)
 
-也取決於目前是否選取資源：
+也取決於是否選取了資源：
 
 ![chlimage_1-146](assets/chlimage_1-146.png)
 
@@ -80,7 +76,7 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe決定使用一種�
 
 ### 內容框架 {#content-frame}
 
-頁面內容會在內容框架中呈現。 內容框架完全獨立於編輯器 — 以確保不會因CSS或JavaScript而發生衝突。
+頁面內容會在內容框架中呈現。 內容框架獨立於編輯器 — 以確保不會因CSS或JavaScript而發生衝突。
 
 內容框架位於視窗的右側區段、工具列下方。
 
@@ -101,7 +97,7 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe決定使用一種�
 
 ### 側面板 {#side-panel}
 
-其中包含兩個預設標籤，可讓您選取資產和元件；您可以從此處將其拖放到頁面上。
+此檔案包含兩個預設標籤，可讓您選取資產和元件。 它們可以從此處拖曳並放置到頁面上。
 
 側面板預設為隱藏。 選取時，它將顯示在左側，或滑過以覆蓋整個視窗（當視窗大小低於1024畫素的寬度時；例如在行動裝置上）。
 
@@ -115,7 +111,7 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe決定使用一種�
 
 ### 側面板 — 資產群組 {#side-panel-asset-groups}
 
-在「資產」標籤中有一個下拉式清單，可用來選取特定資產群組。
+在「資產」標籤中，有一個下拉式清單，可用來選取特定資產群組。
 
 ![chlimage_1-152](assets/chlimage_1-152.png)
 
@@ -127,7 +123,7 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe決定使用一種�
 
 ### 覆蓋 {#overlays}
 
-這些會覆蓋內容框架，並由 [圖層](#layer) 瞭解如何與元件及其內容互動（完全透明）的機制。
+這些會覆蓋內容框架，並由 [圖層](#layer) 瞭解如何與元件及其內容互動（透明）的機制。
 
 這些覆蓋圖會在編輯器框架中顯示（包含所有其他頁面製作元素），但實際上會在內容框架中覆蓋適當的元件。
 
@@ -146,19 +142,19 @@ AEM隨附已為頁面製作實作的數個圖層；包括例如，編輯、預�
 
 >[!NOTE]
 >
->圖層是一個強大的概念，可影響使用者對頁面內容的檢視以及與頁面內容的互動。 開發自己的圖層時，您需要確保圖層在退出時進行清除。
+>圖層是一個強大的概念，可影響使用者對頁面內容的檢視以及與頁面內容的互動。 開發您自己的圖層時，您必須確保圖層在退出時進行清除。
 
 ### 圖層切換器 {#layer-switcher}
 
 圖層切換器可讓您選擇要使用的圖層。 當關閉時，它會指出目前使用的圖層。
 
-圖層切換器可從工具列（位於視窗頂端、編輯器框架內）以下拉式清單的形式提供。
+圖層切換器可從工具列（位於視窗頂端、編輯器框架內）以下拉式清單形式提供。
 
 ![chlimage_1-155](assets/chlimage_1-155.png)
 
 ### 元件工具列 {#component-toolbar}
 
-每個元件例項在按一下後都會顯示其工具列（按一下或緩慢按兩下）。 工具列包含頁面上元件執行個體（可編輯）可用的特定動作（例如複製、貼上、開啟編輯器）。
+每個元件例項在按一下時都會顯示其工具列（按一下或緩慢按兩下）。 工具列包含頁面上元件例項（可編輯）可用的特定動作（例如，複製、貼上、開啟編輯器）。
 
 根據可用的空間，元件工具列會放置在適當元件的右上角或右下角。
 
@@ -166,6 +162,6 @@ AEM隨附已為頁面製作實作的數個圖層；包括例如，編輯、預�
 
 ## 更多資訊 {#further-information}
 
-如需觸控式UI概念的詳細資訊，請繼續閱讀文章 [AEM觸控式UI的概念](/help/sites-developing/touch-ui-concepts.md).
+如需觸控式UI概念的詳細資訊，請閱讀 [AEM觸控式UI的概念](/help/sites-developing/touch-ui-concepts.md).
 
-如需進一步的技術資訊，請參閱 [JS檔案集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) （觸控式頁面編輯器）。
+如需更多技術資訊，請參閱 [JS檔案集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) （觸控式頁面編輯器）。

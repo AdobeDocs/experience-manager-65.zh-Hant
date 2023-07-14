@@ -1,28 +1,24 @@
 ---
 title: 移轉至Touch UI
-seo-title: Migration to the Touch UI
 description: 移轉至Touch UI
-seo-description: Migration to the Touch UI
-uuid: 47c43b56-532b-4ada-8503-04d66bab3564
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
-discoiquuid: b315720f-e9b8-4063-99e2-1b9aa6bba460
 docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '667'
-ht-degree: 4%
+source-wordcount: '659'
+ht-degree: 5%
 
 ---
 
 # 移轉至Touch UI{#migration-to-the-touch-ui}
 
-從6.0版開始，Adobe Experience Manager (AEM)推出新的使用者介面，稱為 *觸控式UI* (也簡稱為 *觸控式UI*)。 此版本符合Adobe Marketing Cloud和整體Adobe使用者介面准則。 這已成為AEM中的標準UI，而舊型案頭導向介面稱為 *傳統UI*.
+從6.0版開始，Adobe Experience Manager (AEM)推出了稱為 *觸控式UI* (也簡稱為 *觸控式UI*)。 此版本符合Adobe Experience Cloud和整體Adobe使用者介面准則。 這已成為AEM中的標準UI，而舊型案頭導向介面稱為 *傳統UI*.
 
-如果您一直使用AEM搭配傳統UI，則需要採取行動來移轉您的執行個體。 本頁旨在提供個別資源的連結，以發揮跳板的作用。
+如果您一直使用AEM搭配傳統UI，請採取行動移轉您的執行個體。 本頁旨在提供個別資源的連結，以發揮跳板的作用。
 
 >[!NOTE]
 >
@@ -30,7 +26,7 @@ ht-degree: 4%
 
 ## 基本知識 {#the-basics}
 
-移轉時，請留意Classic和觸控式UI之間的下列（主要）差異：
+移轉時，請留意Classic和觸控式UI之間的下列主要差異：
 
 <table>
  <tbody>
@@ -66,11 +62,11 @@ ht-degree: 4%
     </ul> </td>
   </tr>
   <tr>
-   <td><p>Javascript位置：</p>
+   <td><p>JavaScript位置：</p>
     <ul>
      <li>必要部分使用接聽程式直接內嵌或在clientlibs中管理。</li>
     </ul> </td>
-   <td><p>Javascript位置：</p>
+   <td><p>JavaScript位置：</p>
     <ul>
      <li>命令部分不能嵌入對話方塊定義中；責任分離。</li>
     </ul> </td>
@@ -78,11 +74,11 @@ ht-degree: 4%
   <tr>
    <td><p>事件處理：</p>
     <ul>
-     <li>對話方塊Widget會直接參照Javascript程式碼。</li>
+     <li>對話方塊Widget會直接參照JavaScript程式碼。</li>
     </ul> </td>
    <td><p>事件處理：</p>
     <ul>
-     <li>Javascript會觀察對話方塊事件。</li>
+     <li>JavaScript會觀察對話方塊事件。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -107,7 +103,7 @@ ht-degree: 4%
 * [觸控式UI功能狀態](/help/release-notes/touch-ui-features-status.md)
 * [客戶適用的使用者介面Recommendations](/help/sites-deploying/ui-recommendations.md)
 
-開發觸控式UI的基礎知識將為您提供堅實的基礎：
+開發觸控式UI的基礎知識提供了堅實的基礎：
 
 * [AEM觸控式UI的概念](/help/sites-developing/touch-ui-concepts.md)
 * [AEM觸控式UI的結構](/help/sites-developing/touch-ui-structure.md)
@@ -149,10 +145,10 @@ ht-degree: 4%
 如需有關開發AEM的完整資訊，請參閱以下資源集合：
 
 * [開發使用手冊](/help/sites-developing/home.md)
-* [Granite UI檔案](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+* [Granite UI檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 SitesTutorials和影片](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 * [開發 AEM Sites 快速入門 - WKND 教學課程](/help/sites-developing/getting-started.md)
-* [AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
+* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=en)
 * [AEM 現代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]

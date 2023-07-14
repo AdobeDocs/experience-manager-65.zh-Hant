@@ -1,18 +1,14 @@
 ---
 title: 雲端服務設定
-seo-title: Cloud Service Configurations
 description: 您可以擴充現有執行個體以建立自己的設定
-seo-description: You can extend the existing instances to create your own configurations
-uuid: 9d20c3a4-2a12-4d3c-80c3-fcac3137a675
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: d25c03bf-6eaa-45f4-ab60-298865935a62
 exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '563'
 ht-degree: 3%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 3%
 
 開發設定時採用的原則以以下概念為基礎：
 
-* 服務/配接器用於擷取組態。
+* 服務/介面卡用於擷取組態。
 * 設定（例如屬性/段落）繼承自父項。
 * 依路徑從Analytics節點參照。
 * 易於擴充。
@@ -40,13 +36,13 @@ ht-degree: 3%
 
 `/etc/cloudservices`。
 
-對於每種組態型別，都會提供範本和元件。如此一來，設定範本就能在自訂之後滿足大部分的需求。
+對於每種型別的設定，都會提供範本和元件。 如此一來，設定範本就能在自訂後滿足大部分的需求。
 
-若要提供新服務的設定，您需要：
+若要提供新服務的設定，請執行下列動作：
 
 * 在中建立服務區段
 
-   `/etc/cloudservices`
+  `/etc/cloudservices`
 
 * 在此底下：
 
@@ -57,7 +53,7 @@ ht-degree: 3%
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-或基礎元件
+或基本元件各自執行
 
 `cq/cloudserviceconfigs/components/configpage`
 
@@ -67,7 +63,7 @@ ht-degree: 3%
 
 ### 範本 {#template}
 
-您的範本將會擴充基本範本：
+您的範本會擴充基本範本：
 
 `cq/cloudserviceconfigs/templates/configpage`
 
@@ -137,7 +133,7 @@ propertyname
 
 ### API {#api}
 
-如需有關API的參考檔案，請參閱 [com.day.cq.wcm.webservicesupport](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
+如需API的參考檔案，請參閱 [com.day.cq.wcm.webservicesupport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
 
 ### AEM整合 {#aem-integration}
 
@@ -176,7 +172,7 @@ propertyname
   </tr>
   <tr>
    <td>componentreference</td>
-   <td>要自動包含在頁面中的元件的參照路徑。<br /> 這會用於其他功能和JS包含。<br /> 這包括頁面上的元件，其中<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 包含(通常早於 <code>body</code> 標籤)。<br /> 若是Analytics和Target，我們會使用這個包含其他功能，例如追蹤訪客行為的JavaScript呼叫。</td>
+   <td>要自動包含在頁面中的元件的參照路徑。<br /> 這會用於其他功能和JS包含。<br /> 這包括頁面上的元件，其中<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 包含(通常早於 <code>body</code> 標籤)。<br /> 若是Adobe Analytics和Adobe Target，我們會使用這一點來包含其他功能，例如追蹤訪客行為的JavaScript呼叫。</td>
   </tr>
   <tr>
    <td>說明</td>
@@ -220,7 +216,6 @@ propertyname
 * [追蹤器代碼片段](/help/sites-administering/external-providers.md) (Google、WebTrends等)
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
-
 <!-- Search&Promote is end of life as of September 1, 2022 * [Search&Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote) -->
 * [Dynamic Media](/help/sites-administering/marketing-cloud.md#integrating-with-scene)
 

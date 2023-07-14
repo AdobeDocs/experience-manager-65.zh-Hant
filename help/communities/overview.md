@@ -1,26 +1,22 @@
 ---
 title: AEM Communities概觀
-seo-title: AEM Communities Overview
 description: AEM Communities功能和設定概觀
-seo-description: An overview of AEM Communities features and setup
-uuid: 14405847-36ae-4958-bdc6-d799ecd05f06
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 exl-id: d6243dff-a067-455c-a326-5f451f225efd
-source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1265'
 ht-degree: 1%
 
 ---
 
 # AEM Communities概觀 {#aem-communities-overview}
 
-Adobe Experience Manager (AEM) Communities可讓您快速建立內部部署社群網站，進而改善效能、改善網站管理，並鼓勵將網站訪客轉化為有價值的社群成員。
+Adobe Experience Manager (AEM) Communities提供快速建立內部部署社群網站的功能，進而改善效能、改善網站管理，並鼓勵將網站訪客轉化為有價值的社群成員。
 
 ## Communities功能 {#communities-features}
 
@@ -60,7 +56,7 @@ AEM Communities可讓您發展與網站訪客的關係，這會：
 
    * 回應式設計：使用 [twitterBootstrap主題](https://getbootstrap.com)
 
-   * 登入：自助註冊， [社交登入](/help/communities/social-login.md)，使用者設定檔
+   * 登入：自行註冊， [社交登入](/help/communities/social-login.md)，使用者設定檔
 
       * 通知：成員會看到與其相關的事件，以及使用者產生的內容 [@mentioned](/help/communities/overview.md#mentionssupport).
 
@@ -75,19 +71,19 @@ AEM Communities可讓您發展與網站訪客的關係，這會：
    * 品牌推廣：可選擇上傳橫幅影像以在社群網站的所有頁面上顯示
    * 導覽功能表：社群網站範本中包含的功能提供導覽連結。
 
-若要體驗快速建立新社群網站的簡易性，請造訪 [AEM Communities快速入門](/help/communities/getting-started.md).
+若要體驗快速建立社群網站的簡易性，請造訪 [AEM Communities快速入門](/help/communities/getting-started.md).
 
 ## 社群內容持續性 {#community-content-persistence}
 
-為了改善社群內容的效能和同步化，AEM Communities需要專為使用者產生的內容(UGC)在所有AEM （製作和發佈）執行個體之間共用的公用存放區。
+為了改善社群內容的效能和同步化，AEM Communities需要專門針對在所有AEM （製作和發佈）執行個體之間共用的使用者產生內容(UGC)的共同存放區。
 
 可透過儲存資源提供者(SRP)輕鬆存取社群內容，SRP提供將存取與基礎拓撲分隔開的圖層，並支援UGC的共同存放區。
 
 若要進一步瞭解社群內容持續性和建議的部署，請參閱：
 
-* [社群內容儲存](/help/communities/working-with-srp.md)，其中討論UGC的可用SRP儲存選項。
-* [建議的拓撲](/help/communities/topologies.md)，會根據使用案例和SRP選擇討論拓撲。
-* [升級至AEM 6.5社群](/help/communities/upgrade.md)，可提供移至AEM 6.5時關於UGC的實用資訊。
+* [社群內容儲存](/help/communities/working-with-srp.md) — 討論UGC的可用SRP儲存選項。
+* [建議的拓撲](/help/communities/topologies.md) — 根據使用案例和SRP選擇討論拓撲。
+* [升級至AEM 6.5社群](/help/communities/upgrade.md) — 在移至AEM 6.5時提供有關UGC的實用資訊。
 
 ## 社群主控台 {#communities-consoles}
 
@@ -135,7 +131,7 @@ AEM Communities可讓您發展與網站訪客的關係，這會：
 
 * [元件指南](/help/communities/components-guide.md)
 
-   * 範例網站， [社群元件](https://localhost:4502/editor.html/content/community-components/en.html)，提供所有Communities元件的範例及其預設設定，以及實驗這些元件的能力。
+   * 範例網站， [社群元件](https://localhost:4502/editor.html/content/community-components/en.html) 提供所有Communities元件的範例，包括元件的預設設定和實驗能力。
 
 ## 社群網站範本 {#community-site-templates}
 
@@ -157,9 +153,9 @@ AEM Communities可讓您發展與網站訪客的關係，這會：
 
 社群群組功能可讓作者和發佈環境中的授權使用者和社群成員，在社群網站中動態建立子社群。
 
-在作者環境中，當範本的結構包含 [群組功能](/help/communities/functions.md#groups-function).
+從製作環境中，當範本的結構包含 [群組功能](/help/communities/functions.md#groups-function).
 
-建立社群群組需要選取提供社群群組頁面設計的社群群組範本。 將「群組」功能新增至範本結構時，會將其設定為指定一個群組範本，或在建立新社群群組時提供範本選擇。
+建立社群群組需要選擇社群群組範本，以設計社群群組頁面。 將「群組」功能新增至範本結構時，會將其設定為指定一個群組範本，或在建立新社群群組時提供範本選擇。
 
 另請參閱:
 
@@ -195,7 +191,7 @@ AEM Communities可讓您發展與網站訪客的關係，這會：
 * 評分和預算
 * Analytics報表
 
-若要體驗快速建立新參與社群的簡易性，請造訪 [AEM Communities快速入門](/help/communities/getting-started.md).
+若要體驗快速建立參與社群的簡易性，請造訪 [AEM Communities快速入門](/help/communities/getting-started.md).
 
 ## AEM示範電腦 {#aem-demo-machine}
 
@@ -208,7 +204,7 @@ AEM示範電腦包含：
 
 * 要安裝的套件。
 
-AEM Demo Machine已在Windows、MacOS和Linux上透過CQ 5.5、CQ 5.6.1、AEM 6.0、AEM 6.1、AEM 6.2、AEM 6.3和AEM 6.4成功進行測試。
+AEM Demo Machine已在Windows、MacOS和Linux®上透過CQ 5.5、CQ 5.6.1、AEM 6.0、AEM 6.1、AEM 6.2、AEM 6.3和AEM 6.4成功進行測試。
 
 AEM示範機器需要有效的AEM授權。
 

@@ -1,23 +1,21 @@
 ---
 title: 預設元件
-description: Adobe Experience Manager隨附多種現成的元件，為網站作者提供全方位功能。
-uuid: 55caeec3-add7-4d05-a620-07e33901adb7
+description: Adobe Experience Manager隨附各種現成元件，為網站作者提供全方位功能。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '425'
 ht-degree: 1%
 
 ---
 
 # 元件{#components}
 
-Adobe Experience Manager (AEM)隨附多種現成的元件，為網站作者提供全方位功能。 它們可用於 [編輯頁面](/help/sites-authoring/editing-content.md) 和會依主要功能區域（稱為元件群組）分組，以協助篩選。
+Adobe Experience Manager (AEM)隨附各種現成元件，為網站作者提供全方位功能。 它們可用於 [編輯頁面](/help/sites-authoring/editing-content.md) 和會依主要功能區域（稱為元件群組）分組，以協助篩選。
 
 元件在以下情況下可用： [編輯頁面](/help/sites-authoring/editing-content.md). 為協助篩選，元件會依主要功能區域（即元件群組）分組。
 
@@ -38,7 +36,7 @@ Adobe Experience Manager (AEM)隨附多種現成的元件，為網站作者提�
 
 * [編輯內容 — 全熒幕模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
-如需有關將元件新增至頁面的進一步資訊，請參閱文章 [編輯頁面內容](/help/sites-authoring/editing-content.md).
+如需將元件新增至頁面的詳細資訊，請參閱 [編輯頁面內容](/help/sites-authoring/editing-content.md).
 元件會根據稱為元件群組的各種類別排序。 這類元件群組的範例包括：
 
 * **We.Retail**：包含與搭配使用的核心元件 [We.Retail參考實作](/help/sites-developing/we-retail.md).

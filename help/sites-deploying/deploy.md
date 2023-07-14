@@ -1,26 +1,22 @@
 ---
 title: 部署和維護
-seo-title: Deploying and Maintaining
 description: 瞭解如何開始安裝AEM。
-seo-description: Learn how to get started with the AEM installation.
-uuid: 4429ac4d-abd7-47d8-b19d-773accb7cc7a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 9052ed3e89fdc67d94fc60bbff64d42255565767
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1802'
+source-wordcount: '1766'
 ht-degree: 3%
 
 ---
 
 # 部署和維護{#deploying-and-maintaining}
 
-在此頁面中，您會找到：
+您可以在此頁面找到：
 
 * [基本概念](#basic-concepts)
 
@@ -39,7 +35,7 @@ ht-degree: 3%
    * [解壓縮的安裝目錄](#unpacked-install-directory)
    * [啟動和停止](#starting-and-stopping)
 
-熟悉這些基本知識後，您將會在下列子頁面中找到更進階和詳細的資訊：
+熟悉這些基本知識後，您就可以在下列子頁面中找到更進階和詳細的資訊：
 
 * [技術需求](/help/sites-deploying/technical-requirements.md)
 * [建議的部署](/help/sites-deploying/recommended-deploys.md)
@@ -64,15 +60,15 @@ ht-degree: 3%
 
 ### 什麼是AEM？ {#what-is-aem}
 
-Adobe Experience Manager是網頁式使用者端伺服器系統，用於建立、管理和部署商業網站及相關服務。 它將許多基礎架構層級和應用程式層級的功能合併為單一整合套件。
+Adobe Experience Manager是網頁式使用者端伺服器系統，用於建立、管理和部署商業網站及相關服務。 它將數個基礎架構層級和應用程式層級的功能合併為單一整合套件。
 
 在基礎架構層級，AEM提供下列功能：
 
 * **Web應用程式伺服器**：AEM可以獨立模式部署（包含整合式Jetty Web伺服器），或部署為協力廠商應用程式伺服器內的Web應用程式。
 * **Web應用程式架構**：AEM納入Sling Web應用程式架構，簡化RESTful內容導向Web應用程式的撰寫。
-* **內容存放庫**： AEM包含Java Content Repository (JCR)，這是專為非結構化與半結構化資料而設計的階層式資料庫型別。 存放庫不僅儲存面向使用者的內容，也儲存應用程式使用的所有程式碼、範本和內部資料。
+* **內容存放庫**： AEM包含Java™ Content Repository (JCR)，這是一種專為非結構化與半結構化資料而設計的階層式資料庫型別。 存放庫不僅儲存面向使用者的內容，也儲存應用程式使用的所有程式碼、範本和內部資料。
 
-在此基礎之上，AEM還提供許多應用程式層級的功能，用於管理：
+在此基礎之上，AEM還提供幾個應用程式層級的功能，用於管理：
 
 * **網站**
 * **行動應用計畫**
@@ -95,9 +91,9 @@ AEM伺服器是 **以Java為基礎** 並會在大多數支援該平台的作業�
 
 這些例項在安裝軟體方面完全相同。 它們僅能透過設定來區分。 此外，大部分安裝都使用Dispatcher：
 
-* **Dispatcher**：靜態網頁伺服器(Apache httpd、Microsoft IIS等) 以AEM Dispatcher模組增強。 它快取發佈執行個體產生的網頁以提升效能。
+* **Dispatcher**：靜態網頁伺服器(Apache httpd、Microsoft®IIS等)以AEM Dispatcher模組擴充。 它快取發佈執行個體產生的網頁以提升效能。
 
-此設定有許多進階選項和詳細說明，但作者、發佈和Dispatcher的基本模式是大多數部署的核心。 我們先從相對簡單的設定開始。 隨後將討論進階部署選項。
+此設定有許多進階選項和詳細說明，但作者、發佈和Dispatcher的基本模式是大多數部署的核心。 首先，我們來關注簡單的設定。 隨後將討論進階部署選項。
 
 以下小節說明這兩種情況：
 
@@ -107,7 +103,7 @@ AEM伺服器是 **以Java為基礎** 並會在大多數支援該平台的作業�
 
 ### 內部部署 {#on-premise}
 
-您可以在公司環境中的伺服器上安裝AEM。 典型安裝例項包括：開發、測試和發佈環境。 請參閱 [快速入門](/help/sites-deploying/deploy.md#getting%20started) 區段，以瞭解如何取得AEM軟體以在本機安裝。
+您可以在公司環境中的伺服器上安裝AEM。 典型安裝例項包括：開發、測試和發佈環境。 另請參閱 [快速入門](/help/sites-deploying/deploy.md#getting%20started) 取得有關如何取得AEM軟體以在本機安裝的基本詳細資訊。
 
 若要進一步瞭解典型內部部署，請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md).
 
@@ -121,7 +117,7 @@ AEM Managed Services是數位體驗管理的完整解決方案。 它提供雲�
 
 **更高的效能：** 提供99.5%、99.9%、99.95%和99.99%四種服務可用性選項，為您的企業提供可靠的數位體驗。 此外，它還可提供自動備份和多模式災難回覆模式，協助確保可靠性和應急管理。
 
-**最佳化的IT成本：** 主動式指引和專業知識可幫助組織隨時掌握最新版本的AEM。 AMS Enterprise/Basic的全新部署自動包含Adobe白金級維護和支援，提供技術專業知識和營運經驗，以協助組織維護其關鍵任務應用程式。 免費基本Analytics或Target功能提供額外價值，特別適用於對分析和個人化需求有限的中端市場組織。
+**最佳化的IT成本：** 主動式指引和專業知識可幫助組織隨時掌握最新版本的AEM。 AMS Enterprise/Basic的新部署會自動包含Adobe白金級維護和支援，提供技術專業知識和營運經驗，以協助組織維護其關鍵任務應用程式。 免費基本Analytics或Target功能提供額外價值，特別適用於對分析和個人化需求有限的中端市場組織。
 
 **最高安全性：** 將客戶應用程式託管於受限制的存取設施、防火牆系統後面或虛擬私人雲端，確保企業級實體、網路和資料安全性。 它包含單一租使用者虛擬機器器，提供強大的資料儲存加密、防毒軟體和資料隔離功能。
 
@@ -133,11 +129,11 @@ AEM Managed Services是數位體驗管理的完整解決方案。 它提供雲�
 
 ### 必備條件 {#prerequisites}
 
-雖然生產執行個體通常在執行官方支援的作業系統的專用電腦上執行(請參閱 [技術需求](/help/sites-deploying/technical-requirements.md))，則Experience Manager伺服器實際上會在任何支援 [**Java Standard Edition 8**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+雖然生產執行個體是在執行官方支援之作業系統的專用電腦上執行(請參閱 [技術需求](/help/sites-deploying/technical-requirements.md))，則Experience Manager伺服器實際上會在任何支援 [**Java™ Standard Edition 8**](https://www.oracle.com/java/technologies/downloads/#java8).
 
-為了熟悉和在AEM上進行開發，使用安裝在執行Apple OS X或Microsoft Windows或Linux案頭版本的本機電腦上的執行個體是很常見的。
+為了熟悉和開發AEM，通常使用安裝在執行Apple OS X或Microsoft® Windows或Linux®案頭版本的本機電腦上的執行個體。
 
-在使用者端，AEM可與所有現代化瀏覽器搭配使用(**Microsoft Edge**， **Internet Explorer** 11， **Chrome **51+** **、**Firefox **47+、 **Safari** 8+)。 另請參閱 [支援的使用者端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms) 以取得詳細資訊。
+在使用者端，AEM可與所有現代化瀏覽器搭配使用(**Microsoft® Edge**， **Internet Explorer** 11， **Chrome **51+** **、**Firefox **47+、 **Safari** 8+)。 另請參閱 [支援的使用者端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms) 以取得詳細資訊。
 
 ### 取得軟體 {#getting-the-software}
 
@@ -145,7 +141,7 @@ AEM持有有效維護與支援合約的客戶應已收到內含程式碼的郵�
 
 AEM軟體套件有兩種形式：
 
-* **cq-quickstart-6.5.0.jar：** 獨立可執行檔 *jar* 包含啟動和執行所需一切的檔案。
+* **cq-quickstart-6.5.0.jar：** 獨立可執行檔 *jar* 包含您執行所需一切的檔案。
 
 * **cq-quickstart-6.5.0.war：** A *戰爭* 供部署至協力廠商應用程式伺服器的檔案。
 
@@ -155,15 +151,15 @@ AEM軟體套件有兩種形式：
 
 1. 在本機電腦上建立安裝目錄。 例如：
 
-   UNIX安裝位置： **/opt/aem**
+   UNIX®安裝位置： **/opt/aem**
 
    Windows安裝位置： **`C:\Program Files\aem`**
 
-   同樣地，將範例執行個體直接安裝在案頭上的資料夾中也很常見。 無論如何，我們都會以一般方式將此位置稱為：
+   同樣地，將範例執行個體直接安裝在案頭上的資料夾中也很常見。 無論如何，我們一般會將此位置稱為：
 
    `<aem-install>`
 
-   *請注意，檔案目錄的路徑只能包含美國ASCII字元。*
+   *檔案目錄的路徑只能包含美國ASCII字元。*
 
 1. 放置 **jar** 和 **授權** 此目錄中的檔案：
 
@@ -173,9 +169,9 @@ AEM軟體套件有兩種形式：
        license.properties
    ```
 
-   如果您不提供 `license.properties` 檔案時，AEM會將您的瀏覽器重新導向至 **歡迎** 啟動時畫面，您可在此輸入授權金鑰。 如果您還沒有有效的授權金鑰，則需要向Adobe索取有效授權金鑰。
+   如果您不提供 `license.properties` 檔案時，AEM會將您的瀏覽器重新導向至 **歡迎** 啟動時畫面，您可在此輸入授權金鑰。 如果您尚未取得有效的授權金鑰，則需要向Adobe索取此金鑰。
 
-1. 若要在GUI環境中啟動執行個體，只需按兩下 **`cq-quickstart-6.5.0.jar`** 檔案。
+1. 若要在GUI環境中啟動執行處理，請連按兩下 **`cq-quickstart-6.5.0.jar`** 檔案。
 
    或者，您可以從命令列啟動AEM：
 
@@ -205,13 +201,13 @@ AEM需要幾分鐘的時間來解壓縮jar檔案、自行安裝並啟動。 上�
 
 **`cq-author-p4502.jar`**
 
-並啟動它將會導致編寫執行個體在 **`localhost:4502`**.
+然後啟動它，就會產生一個編寫執行個體，執行於 **`localhost:4502`**.
 
 同樣地，重新命名和啟動檔案
 
 **`cq-publish-p4503.jar`**
 
-將導致發佈執行個體執行於 **`localhost:4503`**.
+導致發佈執行個體執行於 **`localhost:4503`**.
 
 舉例來說，您可以將這兩個例項安裝在中
 
@@ -226,7 +222,7 @@ AEM需要幾分鐘的時間來解壓縮jar檔案、自行安裝並啟動。 上�
 
 ### 解壓縮的安裝目錄 {#unpacked-install-directory}
 
-第一次啟動快速入門jar時，它會將其自身解壓縮到名為的新子目錄下的相同目錄中 `crx-quickstart`. 您最後應該會遇到以下問題：
+第一次啟動快速入門jar時，它會將其本身解壓縮到名為的新子目錄下的相同目錄中 `crx-quickstart`. 您應該具備下列條件：
 
 ```xml
 <aem-install>/
@@ -250,7 +246,7 @@ AEM需要幾分鐘的時間來解壓縮jar檔案、自行安裝並啟動。 上�
         readme.txt
 ```
 
-如果從UI安裝執行個體，則會自動開啟瀏覽器視窗，同時開啟案頭應用程式視窗，顯示執行個體的主機和連線埠，以及開啟/關閉開關：
+如果從UI安裝執行個體，瀏覽器視窗會自動開啟，案頭應用程式視窗也會開啟，顯示執行個體的主機和連線埠，以及開啟/關閉開關：
 
 ![啟動畫面](assets/screen_shot_.png)
 
@@ -260,15 +256,15 @@ AEM需要幾分鐘的時間來解壓縮jar檔案、自行安裝並啟動。 上�
 
 ### 啟動和停止 {#starting-and-stopping}
 
-在AEM自行解壓縮並初次啟動後，只要連按兩下安裝目錄中的jar檔案即可啟動執行個體，它不會重新安裝。
+在AEM自行解壓縮並首次啟動後，連按兩下安裝目錄中的jar檔案只會啟動執行個體，不會重新安裝。
 
-若要從GUI停止執行處理，只要按一下 **開啟/關閉** 開啟[案頭應用程式]視窗。
+若要從GUI停止執行處理，請按一下 **開啟/關閉** 開啟[案頭應用程式]視窗。
 
-您也可以從命令列停止和啟動AEM。 假設您第一次安裝執行個體時， **命令列指令碼** 位於此處：
+您也可以從命令列停止和啟動AEM。 假設您第一次安裝執行個體時， **命令列指令碼** 在此：
 
 **`<aem-install>/crx-quickstart/bin/`**
 
-此資料夾包含下列Unix bash shell指令碼：
+此資料夾包含下列UNIX® bash shell指令碼：
 
 * **`start`**：啟動執行個體
 * `stop`：停止執行個體

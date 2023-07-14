@@ -1,18 +1,14 @@
 ---
 title: 初始沙箱內容
-seo-title: Initial Sandbox Content
 description: 建立內容
-seo-description: Create content
-uuid: 9810fe47-8d1a-4238-9b9c-0cc47c63d97a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 exl-id: 068a0fff-ca48-4847-ba3f-d78416c97f6d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '462'
 ht-degree: 2%
 
 ---
@@ -21,17 +17,17 @@ ht-degree: 2%
 
 在本節中，您將建立以下頁面，這些頁面都使用 [頁面範本](initial-app.md#createthepagetemplate)：
 
-* SCF沙箱網站，將重新導向至首頁面的英文版。
+* SCF沙箱網站，可重新導向至首頁面的英文版。
 
    * SCF沙箱 — 英文版網站的首頁。
 
    * SCF播放 — 要播放之首頁面的子頁面。
 
-雖然本教學課程並未深入探討 [語言副本](../../help/sites-administering/tc-prep.md)，其設計讓根頁面可透過HTML標頭為使用者實施偏好的語言偵測，並重新導向至該語言的適當首頁面。 慣例是將兩個字母的國家代碼用於頁面的節點名稱，例如「en」表示英文，「fr」表示法文等。
+雖然本教學課程並未深入探討 [語言副本](../../help/sites-administering/tc-prep.md)，其設計讓根頁面可透過HTML標頭為使用者實施偏好的語言偵測，並重新導向至該語言的適當首頁面。 慣例是將兩個字母的國家代碼用於頁面的節點名稱，例如「en」用於英文，「fr」用於法文。
 
 ## 建立第一頁 {#create-first-pages}
 
-現在，有一個 [頁面範本](initial-app.md#createthepagetemplate)，我們可在/content目錄中建立網站的根頁面。
+現在，有一個 [頁面範本](initial-app.md#createthepagetemplate)，您可以在/content目錄中建立網站的根頁面。
 
 1. 標準UI目前提供建立網站的藍圖。 由於本教學課程會建立簡單的網站，傳統UI會很實用。
 
@@ -58,14 +54,14 @@ ht-degree: 2%
 
    ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
-1. 在總管窗格中，選取您剛建立的頁面， `/Websites/SCF Sandbox Site`，然後按一下 **[!UICONTROL 新增]** > **[!UICONTROL 新頁面]**：
+1. 在總管窗格中，選取您建立的頁面， `/Websites/SCF Sandbox Site`，然後按一下 **[!UICONTROL 新增]** > **[!UICONTROL 新頁面]**：
 
    * 標題: `SCF Sandbox`
    * 名稱: `en`
    * 選取 **[!UICONTROL SCF沙箱播放範本]**
    * 按一下 **[!UICONTROL 建立]**
 
-1. 在總管窗格中，選取您剛建立的頁面， `/Websites/SCF Sandbox Site/SCF Sandbox`，然後按一下 **[!UICONTROL 新增]** > **[!UICONTROL 新頁面]**
+1. 在總管窗格中，選取您建立的頁面， `/Websites/SCF Sandbox Site/SCF Sandbox`，然後按一下 **[!UICONTROL 新增]** > **[!UICONTROL 新頁面]**
 
    * 標題: `SCF Play`
    * 名稱: `play`
@@ -107,4 +103,4 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->使用 `cq:designPath` 是選用的，而且與 [clientlibs的使用](develop-app.md#includeclientlibsintemplate)，此專案為SCF元件使用時的主要必要專案 [clientlibs](client-customize.md#clientlibs-for-scf) 以管理其JS和CSS。
+>使用 `cq:designPath` 是選用的，而且與 [clientlibs的使用](develop-app.md#includeclientlibsintemplate)，這是SCF元件使用時的必要專案 [clientlibs](client-customize.md#clientlibs-for-scf) 以管理其JS和CSS。

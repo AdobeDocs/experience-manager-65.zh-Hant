@@ -1,18 +1,14 @@
 ---
 title: 協助撰寫AEM
-seo-title: Contributing to AEM
 description: AEM的開發遵循大型開放原始碼專案中常用的成熟方法
-seo-description: AEM is developed following proven methodologies commonly practiced in large open source projects
-uuid: ffef60ae-8a9a-4c4b-8cbd-3cd72792a42e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: f52402df-f6dc-4c62-82bc-cbce489b2b74
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '2672'
 ht-degree: 0%
 
 ---
@@ -21,20 +17,20 @@ ht-degree: 0%
 
 ## 開發方法 {#development-methodology}
 
-AEM的開發遵循大型開放原始碼專案中常用的成熟方法。 AEM技術棧疊中的許多核心元素實際上是作為活躍的開放原始碼專案來維護的，例如Sling和Jackrabbit，這些專案是對Apache Software Foundation貢獻的。 AEM中展現的這種精神的一個主要方面，是鼓勵您利用可用的郵寄清單和線上論壇，與開發團隊直接互動。
+AEM的開發遵循大型開放原始碼專案中常用的成熟方法。 AEM技術棧疊中的許多核心元素實際上是作為活躍的開放原始碼專案進行維護的，例如Sling和Jackrabbit，這些專案是對Apache Software Foundation貢獻的。 AEM中展現的這種精神的一個主要方面，是鼓勵您使用可用的郵寄清單和線上論壇，與開發團隊直接互動。
 
-若您正在為AEM的元件投稿，您應該像投稿至開放原始碼專案時一樣熟悉AEM，並像您打算投稿至此專案時一樣與現有的核心團隊溝通。
+如果您要協助撰寫AEM的元件，請像協助撰寫開放原始碼專案一樣熟悉AEM，並像您打算協助撰寫這類專案一樣與現有核心團隊溝通。
 
 ## 所需體驗 {#required-experience}
 
-HyperText傳輸通訊協定(HTTP)是我們所有工作的核心。 因此，在為AEM貢獻內容之前，您應該對HTTP有深入的瞭解，最好能夠撰寫您自己的具有執行緒集區的多執行緒HTTP伺服器Java實作。 您也應該瞭解HTTP/1.1保持連線行為，並且您應該對伺服器/使用者端與JavaScript的互動有深入的瞭解，特別是AJAX所代表的非同步互動風格。
+HyperText傳輸通訊協定(HTTP)是我們所有工作的核心。 因此，在為AEM貢獻內容之前，您應該對HTTP有深入的瞭解，最好能撰寫您自己的Java™實作，實施具有執行緒集區的多執行緒HTTP伺服器。 您也應該瞭解HTTP/1.1保持連線行為，並且您應該對伺服器/使用者端與JavaScript的互動有深入的瞭解，特別是AJAX所代表的非同步互動風格。
 
-由於頁面動態和互動式內容是WM體驗的關鍵，因此您必須相當深入地瞭解檔案物件模型，及其回應事件的程式化操作潛力。 您應該具備一些知識，例如即時DOM操作和在多個瀏覽器檔案上的拖放行為（例如使用iframe）。
+由於頁面動態和互動式內容是WM體驗的關鍵，因此您必須相當深入地瞭解檔案物件模型，及其回應事件的程式化操作潛力。 您應該具備一些知識，例如即時DOM操作和在多個瀏覽器檔案上的拖放行為（例如，使用iframe）。
 
-因此，您應該對以下內容有深入的瞭解：
+在最高層級上，您應該對以下內容有深入的瞭解：
 
 * 此 [http/1.1通訊協定](https://www.ietf.org/rfc/rfc2616.txt)
-* HTML（最好） [HTML5](https://dev.w3.org/html5/spec/Overview.html))
+* HTML（最好） [HTML5](https://html.spec.whatwg.org/))
 * 階層式樣式表
 * 可延伸標籤語言(XML)
 * 非同步JavaScript和XML (AJAX)設計模式
@@ -45,7 +41,7 @@ HyperText傳輸通訊協定(HTTP)是我們所有工作的核心。 因此，在�
 * 瀏覽器Cookie
 * 和其他現代網路開發概念
 
-Adobe Experience Manager的技術棧疊是以 [Apache Felix](https://felix.apache.org/) 具有的OSGI容器 [Apache Sling](https://sling.apache.org/site/index.html) 網頁框架並嵌入Java內容存放庫([JCR](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html))根據 [Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html). 您應熟悉這些個別專案，以及您打算投稿的區域中使用的任何其他開放原始碼元件（例如Apache Lucene）。
+Adobe Experience Manager的技術棧疊是以 [Apache Felix](https://felix.apache.org/documentation/index.html) 具有的OSGI容器 [Apache Sling](https://sling.apache.org/index.html) 網頁框架並內嵌Java™內容存放庫([JCR](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html))根據 [Apache Jackrabbit](https://jackrabbit.apache.org/jcr/jcr-api.html). 請熟悉這些個別專案，以及您打算貢獻內容的區域中所使用的任何其他開放原始碼元件（例如Apache Lucene）。
 
 ## 部落知識 {#tribal-knowledge}
 
@@ -57,7 +53,7 @@ Adobe Experience Manager的技術棧疊是以 [Apache Felix](https://felix.apach
 
 ### David模型 {#david-s-model}
 
-在Java Content Repository中設定內容模型的方式，需要一種與軟體產業在關聯式世界中設定資料模型的一般做法完全不同的思維方式。 對於任何內容管理的新手來說，JCR方法必不可少 [David模型：內容模型指南](https://wiki.apache.org/jackrabbit/DavidsModel).
+在Java™內容存放庫中對內容進行模型化的方式，需要一種與軟體產業中在關聯式世界中進行資料模型化的常見做法完全不同的思維方式。 對於任何內容管理的新手來說，JCR方法必不可少 [David模型：內容模型指南](https://wiki.apache.org/jackrabbit/DavidsModel).
 
 ### RESTful {#restfulness}
 
@@ -69,17 +65,17 @@ REST (REpresentational State Transfer)是指全球資訊網所依據的軟體架
 
 ### Sling請求解析 {#sling-request-resolution}
 
-瞭解AEM的一個重要面向是傳入請求如何與內容和應用程式行為相關、內容在內容存放庫中的結構方式，以及AEM在何處尋找處理請求的應用程式邏輯。 瞭解Apache [Sling URL分解](https://sling.apache.org/site/url-decomposition.html) 以及強制執行REST架構樣式及其無狀態、可快取及分層系統限制的方式。
+瞭解AEM的一個重要面向是傳入請求如何與內容和應用程式行為相關、內容在內容存放庫中的結構方式，以及AEM在何處尋找處理請求的應用程式邏輯。 瞭解Apache [Sling URL分解](https://sling.apache.org/documentation/the-sling-engine/url-decomposition.html) 以及強制執行REST架構樣式及其無狀態、可快取及分層系統限制的方式。
 
-要瞭解Apache Sling的請求解析度的關鍵方面是，請求如何主要對應到內容存放庫中的特定資源、請求的其他屬性以及這些內容物件的屬性如何判斷將叫用哪些應用程式程式碼來呈現內容，以及/apps中的程式碼如何覆寫/libs中的程式碼。
+要瞭解Apache Sling的請求解析度的關鍵方面是，請求如何主要對應到內容存放庫中的特定資源、請求的其他屬性以及這些內容物件的屬性如何決定叫用哪個應用程式程式碼來呈現內容，以及/apps中的程式碼如何覆寫/libs中的程式碼。
 
 ### 快速入門 {#quickstart}
 
 沒有步驟三：若要安裝並執行，只要下載並連按兩下Quickstart JAR檔案即可。 沒有步驟3。 任何其他選用功能只需要從Package Share安裝適當的套件。
 
-小型快速入門：將快速入門JAR檔案的大小維持在最小。 以智慧方式最佳化使用程式庫，將選用功能移至封裝共用。
+小型快速入門：將快速入門JAR檔案的大小維持在最小。 使用程式庫並加以最佳化的智慧型使用，將選用功能移至「封裝共用」。
 
-更短的啟動時間：進行會影響啟動時間的變更時，請確定這會縮短啟動時間，而非更長。
+更短的啟動時間：進行可能影響啟動時間的變更時，請確定這會縮短啟動時間，而非更長。
 
 ### 精簡與中等 {#lean-and-mean}
 
@@ -91,7 +87,7 @@ REST (REpresentational State Transfer)是指全球資訊網所依據的軟體架
 
 ### 不要破壞示範 {#don-t-break-the-demo}
 
-熟悉示範指令碼和示範中最常顯示的產品功能。 請至少瞭解，您所做的任何操作都不應中斷「示範指令碼」功能。 核心產品應一律可供展示使用，即使在開發期間亦然。
+熟悉示範指令碼和示範中最常顯示的產品功能。 瞭解您所做的任何事都不應中斷「示範指令碼」功能。 核心產品應一律可供展示使用，即使在開發期間亦然。
 
 ### 針對可靠性而設計 {#design-for-reliability}
 
@@ -105,55 +101,55 @@ REST (REpresentational State Transfer)是指全球資訊網所依據的軟體架
 
 ### 準備好彈性叢集 {#be-ready-for-elastic-clustering}
 
-隨時準備彈性叢集，隨時假設有叢集。 一般而言，遵守內容存放庫中的所有內容即表示內建叢集支援。
+隨時準備彈性叢集；隨時假設有叢集。 一般而言，遵守內容存放庫中的所有內容表示內建叢集支援。
 
 ### 設計提供回溯相容性 {#design-for-backward-compatibility}
 
-您所做的任何操作都不應破壞客戶的舊程式碼。 僅考慮 `/libs` 以包含可在升級期間更新的產品程式碼。 此 `/apps` 存放庫的區段是專案程式碼，而 `/etc` 區段包含需要保留的自訂設定。 一般而言，請勿覆寫中的任何專案 `/apps`， `/content` 和 `/home`. 升級後，舊的專案程式碼、設定和內容應會像升級前一樣繼續運作。
+您所做的任何操作都不應破壞客戶的舊程式碼。 僅考慮 `/libs` 以包含可在升級期間更新的產品程式碼。 此 `/apps` 存放庫的區段是專案程式碼，而 `/etc` 區段包含必須保留的自訂設定。 一般而言，請勿覆寫中的任何專案 `/apps`， `/content`、和 `/home`. 升級後，舊的專案程式碼、設定和內容應會像升級前一樣繼續運作。
 
-設計回溯相容性也可確保升級體驗與初始安裝的簡單性相符。 只需停止AEM、取代Quickstart JAR檔案並重新啟動AEM即可。 隨著安裝基礎的迅速成長，升級效率將日益成為一項顯著優勢。
+設計回溯相容性也可確保升級體驗與初始安裝的簡易性相符。 只需停止AEM、取代Quickstart JAR檔案，然後再次啟動AEM就足夠了。 隨著安裝基礎的急速成長，升級效率已成為日益顯著的優勢。
 
 雖然現有的API在更新且更完善的功能時會標示為已過時，但之前5.x版中公開的所有API都需要保持功能，因為它們可能用於自訂應用程式程式碼中。 不應移除此類API。
 
-在內容結構和使用者體驗的一般一致性方面，也應牢記回溯相容性。
+關於內容結構和使用者體驗的一般一致性，也應牢記回溯相容性。
 
 ## 核心概念 {#core-concepts}
 
-**作者執行個體**  — 一般而言，基於安全、控管和其他原因，生產網站會將AEM例項分成作者例項和發佈例項。 如需部署架構（包括作者/發佈執行個體）的詳細資訊，請參閱AEM執行個體相關檔案。
+**作者執行個體**  — 一般而言，基於安全、控管和其他原因，生產網站會將AEM例項劃分為製作例項和發佈例項。 如需部署架構（包括作者/發佈執行個體）的詳細資訊，請參閱AEM執行個體相關檔案。
 
-**快取、煎炸和烘烤**  — 傳統上，烘焙和油炸的概念是不同網頁內容管理系統之間的重要區別。 在CMS行話中，「烘烤」是指在發佈時讓資料認可至靜態檔案的概念，而「油炸」是指在請求時處理資料以供最終呈現（即即即及時）的概念。
+**快取、煎炸和烘烤**  — 傳統上，烘焙和油炸的概念是不同網頁內容管理系統之間的重要區別。 在CMS行話中，「烘烤」是指在發佈時讓資料認可至靜態檔案的概念，而「油炸」是指在請求時處理資料以供最終呈現（即即及時）的概念。
 
-**群集和負載平衡**  — 為了提高可用性並改善生產環境的效能，通常會合併多個作者和/或發佈執行個體（放入叢集中），方法是讓不同的使用者群組可以使用它們，或在Dispatcher設定後平衡它們的負載。
+**群集和負載平衡**  — 為了提高可用性並改善生產環境的效能，通常結合多個製作和/或發佈執行個體（進入叢集），方法是讓不同的使用者群組可以使用它們，或在Dispatcher設定後平衡它們的負載。
 
 也可以合併內容存放庫的多個例項，以建立 *高可用性* JCR解決方案，然後可與AEM解決方案整合，以針對硬體與軟體故障提供最大程度的保護。 另請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md#oak-cluster-with-mongomk-failover-for-high-availability-in-a-single-datacenter) 以取得進一步資訊。
 
-**元件**  — 在AEM中，元件是一種物件型別，其例項通常可透過從Sidekick拖放來建立。 舉例來說，AEM隨附的現成可用元件包括文字、標題、Tag Cloud、輪播、影像和清單元件，這些元件都可在執行階段從Sidekick取得。
+**元件**  — 在AEM中，元件是物件型別，其例項通常可透過從Sidekick拖放來建立。 舉例來說，AEM隨附的現成可用元件包括文字、標題、標籤雲、輪播、影像和清單元件，這些元件在執行階段都可從Sidekick取得。
 
 **內容尋找器**  — 在製作模式中，「內容尋找器」是位於頁面左側的特殊面板（框架），視您在上方選取的標籤而定，會顯示影像、檔案、Flash資產、頁面、段落或存放庫資源的清單，您可以將這些資源從「內容尋找器」拖放至您正在處理的頁面（右方）。
 
 **數位資產**  — 在AEM中，數位資產通常（通常）是影像和多媒體檔案。 如需詳細資訊，請參閱在DAM中使用數位資產。
 
-**Dispatcher** - Dispatcher既是快取與負載平衡工具，也提供某些安全性保障。
+**Dispatcher** - Dispatcher既是快取工具，也是負載平衡工具，並提供某些安全性保障。
 
 **ExtJS Widget** - AEM中的大部分使用者介面元素都使用ExtJS，這是以JavaScript撰寫的協力廠商Widget程式庫。 ExtJS提供高效能、可自訂的UI Widget，以及設計良好且可擴充的元件模型。
 
-**JCR、Java內容存放庫** - Java內容存放庫規格(JSR-283)提供抽象資料模型和應用程式設計介面，用於實現結合了檔案系統和物件資料庫功能的大規模可擴充NoSQL資料存放庫。 雖然您不需要詳盡瞭解JSR-283，但應花時間熟悉JCR的基本功能及其背後的資料模型，因為JCR才可能實現AEM的「一切都是內容」哲學。
+**JCR、Java™內容存放庫** - Java™內容存放庫規格(JSR-283)提供抽象資料模型和應用程式設計介面，用於實現結合了檔案系統和物件資料庫功能的大規模可擴充NoSQL資料存放庫。 雖然您不需要詳盡瞭解JSR-283，但應花時間熟悉JCR的基本功能及其背後的資料模型，因為JCR才可能實現AEM的「一切都是內容」哲學。
 
 本質上，JCR是節點和屬性的系統，節點可以從其他節點繼承，所有內容都作為屬性儲存 *值*. 請注意，除了一般繼承以外，JCR還允許使用「mixin」節點的概念，這可以啟用多個繼承的模型化。
 
-JCR有許多預先定義的節點型別和屬性型別，但一般而言，輸入系統相當靈活，（事實上） JCR的強項之一就是允許以相同的方式儲存/管理結構化與非結構化內容。 也就是說，JCR可容納高度結構化的資料，但也可以容納任意的動態資料結構，而不受結構描述限制。
+JCR有幾種預先定義的節點型別和屬性型別，但一般而言，輸入系統是有彈性的，而且（事實上） JCR的強項之一，就是它允許以相同的方式儲存/管理結構化和非結構化內容。 也就是說，JCR可容納高度結構化的資料，但也可以容納任意的動態資料結構，而不受結構描述限制。
 
-JCR的Java API適用的JavaDoc為 [此處](https://jackrabbit.apache.org/jcr/jcr-api.html).
+JCR的Java™ API的JavaDoc是 [此處](https://jackrabbit.apache.org/jcr/jcr-api.html).
 
 在嘗試讀取JavaDoc或JCR規格本身之前，您可能需要先檢視 [此高階說明](/help/sites-developing/the-basics.md#java-content-repository) Adobe Experience Services實作的JCR數量。
 
 **多站點管理員(MSM)** - AEM的MSM功能可協助客戶處理多語言和跨國內容，讓客戶在集中品牌推廣與本地化內容之間取得平衡。
 
-**osgi** - OSGi是以服務為基礎的執行階段技術，為AEM的模組化Java開發提供基礎。 此架構不僅為程式碼資源（稱為套裝）提供高度動態（且安全）的類別載入和執行環境，而且可完全控制套裝所公開的各種服務的可見度和生命週期。 服務登入會提供結合生命週期動態（和版本需求）的合作模型。 OSGi解決了許多應用程式伺服器原本要解決的問題，但是以輕量、高度動態的方式解決的，因此可以使用熱部署服務（使新程式碼立即可用，而不需重新啟動伺服器）。
+**osgi** - OSGi是以服務為基礎的執行階段技術，為AEM的模組化Java™開發提供基礎。 此架構不僅為程式碼資源（稱為套裝）提供高度動態（且安全）的類別載入和執行環境，而且可完全控制套裝所公開的各種服務的可見度和生命週期。 服務登入會提供結合生命週期動態（和版本需求）的合作模型。 OSGi解決了許多應用程式伺服器原本要解決的問題，但是以輕量、高度動態的方式解決的，因此可以使用熱部署服務（使新程式碼立即可用，而不需重新啟動伺服器）。
 
 **Parsys，段落系統**  — 段落系統(parsys)是複合元件，可讓作者將不同型別的元件新增至頁面，並包含其他段落元件。 每個段落型別都表示為一個元件。 段落系統本身也是元件，包含其他段落元件。
 
-**微核心**  — 存放庫中的每個工作區都可以個別設定，以透過特定微核心（管理資料讀取和寫入的類別）儲存其資料。 同樣地，也可以獨立設定存放庫範圍的版本存放區，以使用特定的微核心。 有許多不同的微核心可供使用，能夠以各種檔案格式或關聯式資料庫儲存資料。 (例如，有MongoDB、DB2或Oracle的持續性管理員) AEM的預設微核心為TarMK （請參閱下文）。
+**微核心**  — 存放庫中的每個工作區都可以個別設定，以透過特定微核心（管理資料讀取和寫入的類別）儲存其資料。 同樣地，也可以獨立設定存放庫範圍的版本存放區，以使用特定的微核心。 有數種不同的微核心可供使用，能夠以各種檔案格式或關聯式資料庫儲存資料。 (例如，有MongoDB、DB2®或Oracle的持續性管理員) AEM的預設微核心為TarMK （請參閱下文）。
 
 **發佈執行個體**  — 基於安全性、控管和其他原因，生產網站通常會將AEM例項劃分為作者例項和發佈例項。 如需部署架構（包括作者/發佈執行個體）的詳細資訊，請參閱AEM執行個體相關檔案。
 
@@ -173,11 +169,11 @@ java -jar <quickstartfilename>.jar -help
 
 **細分**  — 網站訪客造訪網站時，有不同的興趣和目標。 瞭解訪客的目標並達到他們的期望，是線上行銷的重要成功先決條件。 區段可透過分析和描述訪客的詳細資料來協助達成此目的。
 
-**Sidekick** - Sidekick是出現在可編輯頁面上的浮動視窗，可從中拖曳新元件並執行套用至頁面的動作。
+**Sidekick**  — 此Sidekick是類似浮動視窗的浮動視窗，會顯示在可編輯的頁面上，您可從中拖曳新元件並執行套用至頁面的動作。
 
 **Site Calyst** -SiteCatalyst為行銷人員提供一個可以測量、分析和最佳化多個行銷管道中所有線上方案的整合資料的位置。 您可以使用Adobe SiteCatalyst來分析來自AEM網站的資料。
 
-**Tar儲存(TarMK)** - TarMK是AEM中的預設持續性系統。 雖然AEM可以設定為使用不同的持續性系統（例如MongoDB），但TarMK具有某些優勢，因為它是針對典型JCR使用案例進行效能最佳化（因此非常快速）、使用業界標準資料格式，並且可以快速輕鬆地備份。
+**Tar儲存(TarMK)** - TarMK是AEM中的預設持續性系統。 雖然AEM可設定為使用不同的持續性系統（例如MongoDB），但TarMK具有某些優勢，因為它是針對典型JCR使用案例進行效能最佳化（因此很快）、使用業界標準資料格式，並且可快速輕鬆地備份。
 
 **範本**  — 在AEM中，範本會指定特定型別的頁面。 它會定義頁面的結構（同時通常會指定縮圖影像和各種屬性）。 例如，您可以為產品頁面、網站地圖和聯絡資訊使用不同的範本。
 
