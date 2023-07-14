@@ -1,5 +1,5 @@
 ---
-title: 使用標籤將網站中的內容分類
+title: 使用標記
 description: 標籤是分類網站內容的一種快速輕鬆的方法。
 uuid: 5d922443-f924-426e-acf4-27dffd1053f6
 contentOwner: Chris Bohnert
@@ -9,14 +9,15 @@ topic-tags: site-features
 discoiquuid: 9fb6d603-eb17-4192-bfa6-6c316f14ac7d
 docset: aem65
 exl-id: 49f95b31-92cd-4124-8c0f-c9802099fd0b
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 8dafa901bc628ee5e4823e9f8811bf4d09b7e072
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 3%
+source-wordcount: '569'
+ht-degree: 4%
 
 ---
 
-# 使用標記{#using-tags}
+
+# 使用標記 {#using-tags}
 
 標籤是分類網站內容的一種快速輕鬆的方法。 標籤可視為可附加至頁面、資產或其他內容的關鍵字或標籤，以啟用搜尋來尋找該內容和相關內容。
 
@@ -54,7 +55,7 @@ ht-degree: 3%
 
 * 啟用個別標籤。
 
-   就像頁面一樣，新建立的標籤需要先啟用，才能在發佈環境中使用。
+  就像頁面一樣，新建立的標籤需要先啟用，才能在發佈環境中使用。
 
 >[!NOTE]
 >
