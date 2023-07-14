@@ -1,19 +1,15 @@
 ---
 title: 在We.Retail中試用核心元件
-seo-title: Trying out Core Components in We.Retail
 description: 在We.Retail中試用核心元件
-seo-description: null
-uuid: 8d1cea0b-99d9-49b2-b275-41f14864b1ff
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 3%
+source-wordcount: '533'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +19,7 @@ ht-degree: 3%
 
 ## 正在試用 {#trying-it-out}
 
-1. 以We.Retail範例內容開始AEM，然後開啟 [元件主控台](/help/sites-authoring/default-components-console.md).
+1. 以We.Retail範例內容啟動Adobe Experience Manager (AEM)，並開啟 [元件主控台](/help/sites-authoring/default-components-console.md).
 
    **全域導覽 — >工具 — >元件**
 
@@ -36,7 +32,7 @@ ht-degree: 3%
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. 請注意，所有核心元件都已命名 **v1**，反映這是此核心元件的第一個版本。 未來將發行常規版本，其版本相容於AEM，且升級容易，因此您可以利用最新功能。
+1. 所有核心元件都已命名 **v1**，反映這是此核心元件的第一個版本。 未來將發行常規版本，其版本相容於AEM，且升級容易，因此您可以利用最新功能。
 1. 按一下 **文字(v1)**.
 
    請參閱 **資源型別** 元件的 `/apps/core/wcm/components/text/v1/text`. 核心元件位於 `/apps/core/wcm/components` 和會根據元件建立版本。
@@ -52,7 +48,7 @@ ht-degree: 3%
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
-1. 按一下 **即時使用情況** 標籤來檢視目前使用這個元件的頁面。 按一下第一個 **感謝您** 頁面以編輯頁面。
+1. 按一下 **即時使用情況** 標籤來檢視此元件在哪些頁面上使用。 按一下第一個 **感謝您** 頁面以編輯頁面。
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
@@ -66,7 +62,7 @@ ht-degree: 3%
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
-1. 取消繼承並選取文字元件後，您就可以使用更多選項。 按一下**編輯**。
+1. 取消繼承並選取文字元件後，您就可以使用更多選項。 按一下 **編輯**.
 
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
@@ -74,12 +70,12 @@ ht-degree: 3%
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. 從 **頁面資訊** 功能表選取 **編輯範本**.
+1. 從 **頁面資訊** 功能表，選取 **編輯範本**.
 1. 在頁面的範本編輯器中，按一下 **原則** 圖示中的文字元件 **配置容器** 頁面的。
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
-1. 核心元件可讓範本作者設定哪些屬性可供頁面作者使用。 這些功能包括允許貼上來源、格式選項、可用的段落樣式等功能。
+1. 核心元件可讓範本作者設定哪些屬性可供頁面作者使用。 這些功能包括允許貼上來源、格式選項和可用段落樣式等功能。
 
    這類設計對話方塊適用於許多核心元件，並與範本編輯器搭配使用。 在啟用後，作者就可以透過元件編輯器使用它們。
 
@@ -87,6 +83,6 @@ ht-degree: 3%
 
 ## 更多資訊 {#further-information}
 
-如需核心元件的詳細資訊，請參閱撰寫檔案 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 核心元件和開發人員檔案的功能概觀 [開發核心元件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以取得技術概覽。
+如需核心元件的詳細資訊，請參閱撰寫檔案 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 核心元件和開發人員檔案的功能概觀 [開發核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hant) 以取得技術概覽。
 
 此外，您可能希望進一步調查 [可編輯的範本](/help/sites-developing/we-retail-editable-templates.md). 請參閱撰寫檔案 [建立頁面範本](/help/sites-authoring/templates.md) 或開發人員檔案頁面 [範本 — 可編輯](/help/sites-developing/page-templates-editable.md) 以取得可編輯範本的完整詳細資訊。

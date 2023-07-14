@@ -1,25 +1,21 @@
 ---
 title: 在We.Retail中試用內容片段
-seo-title: Trying out Content Fragments in We.Retail
 description: 在We.Retail中試用內容片段
-seo-description: null
-uuid: 66daddfe-8e98-47b6-8499-db055887ac17
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '455'
 ht-degree: 4%
 
 ---
 
 # 在We.Retail中試用內容片段{#trying-out-content-fragments-in-we-retail}
 
-內容片段可讓您建立管道中性內容，以及各種（特定於管道的）變數。 **We.Retail** (如在AEM的現成可用例項中可用)提供片段 **羅富登北極衝浪** 作為基本範例。 這說明：
+內容片段可讓您建立管道中性內容，以及各種（特定於管道的）變數。 **We.Retail** (如Adobe Experience Manager的現成可用例項中所提供)提供片段 **羅富登北極衝浪** 作為基本範例。 這說明：
 
 * Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md)。它們可讓您建立管道中性內容，以及（可能特定於管道的）變數。
 
@@ -48,7 +44,7 @@ We.Retail中有數個範例內容片段；導覽至 **資產**， **檔案**， 
 
 其中包括 **羅富登北極衝浪**，片段及相關視覺資產：
 
-* 導覽： **資產**， **檔案**， **We.Retail**， **英文**， **體驗**， **洛富登荒蕪衝浪**：
+* 瀏覽方式： **資產**， **檔案**， **We.Retail**， **英文**， **體驗**， **羅富登北極衝浪**：
 
    * [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
 
