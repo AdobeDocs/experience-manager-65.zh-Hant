@@ -1,17 +1,13 @@
 ---
 title: 使用註解
-seo-title: Using Comments
 description: 「註解」功能可讓登入的網站訪客分享他們的意見和知識
-seo-description: Comments feature lets signed-in site visitors share their opinions and knowledge
-uuid: 40acd962-846c-483c-b789-aab3a7d2b31b
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 exl-id: 30baebd9-13c5-4fde-a494-85601abc32a5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 4%
@@ -65,43 +61,43 @@ ht-degree: 4%
 
 * **允許回覆**
 
-   如果勾選，則允許成員回覆現有註解。 「預設」已取消選取。
+  如果勾選，則允許成員回覆現有註解。 「預設」已取消選取。
 
 * **每頁的評論數**
 
-   限制每頁顯示的評論數和顯示的回複數。 預設值為10。
+  限制每頁顯示的評論數和顯示的回複數。 預設值為10。
 
 * **允許檔案上傳**
 
-   如果勾選，上傳檔案的選項會顯示文字輸入方塊。 「預設」已取消選取。
+  如果勾選，上傳檔案的選項會顯示文字輸入方塊。 「預設」已取消選取。
 
 * **最大檔案大小**
 
-   只有在勾選「允許檔案上傳」時才相關。 此值會限制上傳的檔案大小。 預設限製為10 MB。
+  只有在勾選「允許檔案上傳」時才相關。 此值會限制上傳的檔案大小。 預設限製為10 MB。
 
 * **訊息長度上限**
 
-   可在文字方塊中輸入的最大字元數。 預設為4096個字元。
+  可在文字方塊中輸入的最大字元數。 預設為4096個字元。
 
 * **允許的檔案類型**
 
-   只有在勾選「允許檔案上傳」時才相關。 以「點」分隔符號分隔的副檔名清單（以逗號分隔）。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 預設為none，因此允許所有檔案型別。
+  只有在勾選「允許檔案上傳」時才相關。 以「點」分隔符號分隔的副檔名清單（以逗號分隔）。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 預設為none，因此允許所有檔案型別。
 
 * **RTF 編輯器**
 
-   如果勾選，註解會以標示輸入。 「預設」已取消選取。
+  如果勾選，註解會以標示輸入。 「預設」已取消選取。
 
 * **允許投票**
 
-   如果勾選，則向上或向下投票的選項會顯示文字輸入方塊。 「預設」已取消選取。
+  如果勾選，則向上或向下投票的選項會顯示文字輸入方塊。 「預設」已取消選取。
 
 * **允許關注**
 
-   如果勾選，則允許成員關注註解。 「預設」已取消選取。
+  如果勾選，則允許成員關注註解。 「預設」已取消選取。
 
 * **顯示徽章**
 
-   如果勾選，則允許顯示贏取和獎勵徽章。 「預設」已取消選取。
+  如果勾選，則允許顯示贏取和獎勵徽章。 「預設」已取消選取。
 
 #### 「使用者稽核」標籤 {#user-moderation-tab}
 
@@ -109,39 +105,39 @@ ht-degree: 4%
 
 * **事先審核**
 
-   如果勾選，註解在發佈網站上出現之前必須先獲得核准。 「預設」已取消選取。
+  如果勾選，註解在發佈網站上出現之前必須先獲得核准。 「預設」已取消選取。
 
 * **刪除注釋**
 
-   如果勾選，發表評論的成員將獲得刪除評論的功能。 「預設」已取消選取。
+  如果勾選，發表評論的成員將獲得刪除評論的功能。 「預設」已取消選取。
 
 * **拒絕評論**
 
-   如果勾選，則允許版主拒絕評論。 「預設」已取消選取。
+  如果勾選，則允許版主拒絕評論。 「預設」已取消選取。
 
 * **關閉/重新開啟註解**
 
-   如果勾選，則允許版主關閉和重新開啟註解。 「預設」已取消選取。
+  如果勾選，則允許版主關閉和重新開啟註解。 「預設」已取消選取。
 
 * **標幟評論**
 
-   如果勾選，則允許成員將評論標幟為不適當。 「預設」已取消選取。
+  如果勾選，則允許成員將評論標幟為不適當。 「預設」已取消選取。
 
 * **標幟原因清單**
 
-   如果勾選，則允許成員從下拉式清單中選擇將評論標籤為不適當的原因。 「預設」已取消選取。
+  如果勾選，則允許成員從下拉式清單中選擇將評論標籤為不適當的原因。 「預設」已取消選取。
 
 * **自訂標幟原因**
 
-   如果勾選，則允許成員輸入將評論標籤為不適當的原因。 「預設」已取消選取。
+  如果勾選，則允許成員輸入將評論標籤為不適當的原因。 「預設」已取消選取。
 
 * **稽核臨界值**
 
-   輸入在通知版主之前，評論必須由成員標幟的次數。 預設為一次(1)。
+  輸入在通知版主之前，評論必須由成員標幟的次數。 預設為一次(1)。
 
 * **標幟限制**
 
-   輸入在將評論從公開檢視隱藏之前必須將其標幟的次數。 此數字必須大於或等於 **稽核臨界值**. 預設值為5。
+  輸入在將評論從公開檢視隱藏之前必須將其標幟的次數。 此數字必須大於或等於 **稽核臨界值**. 預設值為5。
 
 #### 排序設定索引標籤 {#sort-settings-tab}
 
@@ -149,11 +145,11 @@ ht-degree: 4%
 
 * **排序欄位**
 
-   下拉以選取其中一項 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`，或 `Most Liked`.
+  下拉以選取其中一項 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`，或 `Most Liked`.
 
 * **排序順序**
 
-   下拉以選取其中一項 `Ascending` 或 `Descending`.
+  下拉以選取其中一項 `Ascending` 或 `Descending`.
 
 ### 變更為自訂註解型別 {#changing-to-a-custom-comment-type}
 
@@ -167,19 +163,19 @@ ht-degree: 4%
 
 * **評論資源類型**
 
-   導覽至擴充功能的resourceType `comment` /apps中的元件（單一註釋）。 例如 `/apps/social/commons/components/hbs/comments/comment`
+  導覽至擴充功能的resourceType `comment` /apps中的元件（單一註釋）。 例如 `/apps/social/commons/components/hbs/comments/comment`
 
-   此資源會識別訪客發表評論時建立的UGC的resourceType。
+  此資源會識別訪客發表評論時建立的UGC的resourceType。
 
 * **投票資源類型**
 
-   導覽至擴充功能的resourceType `voting` /apps中的元件。 例如 `/apps/social/components/hbs/voting`
+  導覽至擴充功能的resourceType `voting` /apps中的元件。 例如 `/apps/social/components/hbs/voting`
 
-   此資源會識別訪客張貼投票時建立的UGC資源型別。
+  此資源會識別訪客張貼投票時建立的UGC資源型別。
 
 * **註解系統資源型別**
 
-   導覽至擴充功能的resourceType `comments`/apps中的元件（註解系統）。 除非頁面範本，否則保留空白 [動態包含](/help/communities/scf.md#add-or-include-a-communities-component) 基礎指令碼中的「註解系統」，而非以資源（註解節點）的形式新增至頁面。 閱讀以下內容以瞭解更多資訊： [{{include}} 協助程式](/help/communities/handlebars-helpers.md#include).
+  導覽至擴充功能的resourceType `comments`/apps中的元件（註解系統）。 除非頁面範本，否則保留空白 [動態包含](/help/communities/scf.md#add-or-include-a-communities-component) 基礎指令碼中的「註解系統」，而非以資源（註解節點）的形式新增至頁面。 閱讀以下內容以瞭解更多資訊： [{{include}} 協助程式](/help/communities/handlebars-helpers.md#include).
 
 ### 網站訪客體驗 {#site-visitor-experience}
 

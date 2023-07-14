@@ -1,18 +1,14 @@
 ---
 title: 社群群組Essentials
-seo-title: Community Group Essentials
 description: 動態建立社群網站
-seo-description: Creating community sites dynamically
-uuid: 168e7aeb-6e9a-468d-8ac4-274007cea252
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 4f85cd3c-5158-4f23-abe2-7e375fd0c8d4
 exl-id: f45ae7be-a500-463a-ab3e-81f281651a9d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '407'
 ht-degree: 1%
 
 ---
@@ -79,17 +75,17 @@ ht-degree: 1%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [社群群組API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
+* [社群群組API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
-* [社群群組端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
+* [社群群組端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 
 ### 群組功能 {#groups-function}
 
-社群網站結構包含 [群組功能](functions.md#groups-function) 將支援建立新的 `community groups` 從發佈和作者環境。 建立的社群群組將包含 `community groups member list` 列出群組成員的元件。
+社群網站結構包含 [群組功能](functions.md#groups-function) 支援建立新的 `community groups` 從發佈和作者環境。 建立的社群群組包括 `community groups member list` 列出群組成員的元件。
 
-一或多個 [社群群組範本](tools-groups.md)（提供社群群組頁面設計），可在將函式新增至時為「群組」函式進行設定 [社群網站範本](sites.md) 或巢狀內嵌在社群群組範本中。
+一或多個 [社群群組範本](tools-groups.md)（提供社群群組頁面設計）可在將函式新增至時針對「群組」功能進行設定 [社群網站範本](sites.md) 或巢狀內嵌在社群群組範本中。
 
 納入多個社群群組範本後，授權使用者可選擇在為社群網站建立新社群群組時看到的設計，如以下章節所示： [社群群組](creating-groups.md) 適用於作者。
 
@@ -103,7 +99,7 @@ ht-degree: 1%
 
 * 設定為允許時，在發佈環境中建立群組。
 
-在作者環境中建立群組時，必須先發佈社群網站，然後再發佈群組。 發佈社群網站將會發佈群組的頁面，而不會建立子社群的成員群組（ACL已設定至這些群組）。 因此，在群組明確發佈之前，受限制的（秘密）群組可能一直可見。
+在作者環境中建立群組時，必須先發佈社群網站，然後再發佈群組。 發佈社群網站會發佈群組的頁面，而不會建立設定ACL的子社群成員群組。 因此，在群組明確發佈之前，受限制的（秘密）群組可能一直可見。
 
 ## 連結和相關資訊 {#links-and-related-information}
 
