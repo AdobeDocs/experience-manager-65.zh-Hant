@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版本中已過時和已移除的功能。
 description: 特定於Adobe Experience Manager 6.5中已過時和已移除功能的發行說明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 11e848d93964b5f8e45ccd7388a48953a3148e35
+source-git-commit: 9be9bb1706df750ede3f804012442bd73dc462ee
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1730'
 ht-degree: 12%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 12%
 
 Adobe 持續評估產品功能，以更新或替代的方式來改善或取代舊功能，以提升客戶享有的整體價值，且隨時謹慎考慮是否回溯相容。
 
-若要傳達AEM功能即將移除或取代的訊息，請套用下列規則：
+若要傳達Adobe Experience Manager (AEM)功能即將移除或取代的訊息，請套用下列規則：
 
 1. 首先需公告功能已過時。雖然已棄用，但功能仍可使用，但不會進一步增強。
 1. 下列主要發行版本最先會移除已棄用的功能。 將會宣佈實際的目標移除日期。

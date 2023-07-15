@@ -1,16 +1,12 @@
 ---
 title: 元件、函式和Feature Essentials
-seo-title: Component, Function and Feature Essentials
 description: 社群網站、範本和群組的運作方式
-seo-description: How community sites, templates, and groups function
-uuid: 6edfca2d-fe5b-4261-b033-51dc2f9dbfd7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 exl-id: a43c1c4d-a6c2-4ef9-9047-a945978e618b
-source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 17%
@@ -19,9 +15,9 @@ ht-degree: 17%
 
 # 元件、函式和Feature Essentials  {#component-function-and-feature-essentials}
 
-AEM Communities功能會要求網站訪客成為會員並登入 [社群網站](overview.md#communitiessites) 之後才能發佈內容。 因此， [社群網站範本](sites.md)，社群網站會從此建立 [已建立](sites-console.md)，包含登入功能以及使用者設定檔、傳訊、搜尋、協調和翻譯。
+Adobe Experience Manager (AEM) Communities功能需要網站訪客成為會員並登入 [社群網站](overview.md#communitiessites) 之後才能發佈內容。 因此， [社群網站範本](sites.md)，社群網站會從此建立 [已建立](sites-console.md)，包含登入功能和使用者設定檔、傳訊、搜尋、稽核和翻譯。
 
-社群網站將支援成員建立社群群組，當 [社群群組功能](functions.md#groups-function) 包含在選取的社群網站範本中。
+社群網站支援成員建立社群群組，當 [社群群組功能](functions.md#groups-function) 包含在選取的社群網站範本中。
 
 以下是Communities元件、功能和功能之基本資訊的連結。
 

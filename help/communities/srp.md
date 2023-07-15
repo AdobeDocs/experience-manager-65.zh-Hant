@@ -1,18 +1,14 @@
 ---
 title: 儲存資源提供者概觀
-seo-title: Storage Resource Provider Overview
 description: 適用於社群的通用儲存裝置
-seo-description: Common storage for Communities
-uuid: abdf4e5a-767b-428f-9aa4-0dc06819a26e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 exl-id: 5f313274-1a2a-4e83-9289-60a4729b99b4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1125'
 ht-degree: 0%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-自AEM Communities 6.1起，社群內容(通常稱為使用者產生的內容(UGC))會儲存在由提供的單一通用存放區中， [儲存資源提供者](working-with-srp.md) (SRP)。
+截至Adobe Experience Manager (AEM) Communities 6.1，社群內容(通常稱為使用者產生的內容(UGC))會儲存在由提供的單一通用存放區中。 [儲存資源提供者](working-with-srp.md) (SRP)。
 
 有數個SRP選項，所有選項都可透過新的AEM Communities介面( [SocialResourceProvider API](srp-and-ugc.md) (SRP API)，包括所有建立、讀取、更新和刪除(CRUD)作業。
 
@@ -31,7 +27,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->**自訂元件**：對於AEM Communities的授權客戶，自訂元件的開發人員可將SRP API用於存取UGC，而不考慮基礎拓撲。 另請參閱 [SRP和UGC Essentials](srp-and-ugc.md).
+>**自訂元件**：對於AEM Communities的授權客戶，自訂元件的開發人員可以使用SRP API來存取UGC，而不考慮基礎拓撲。 另請參閱 [SRP和UGC Essentials](srp-and-ugc.md).
 
 另請參閱:
 
@@ -41,19 +37,19 @@ ht-degree: 0%
 
 ## 關於存放庫 {#about-the-repository}
 
-若要瞭解SRP，瞭解AEM存放庫(OAK)在AEM社群網站中的角色會很有幫助。
+若要瞭解SRP，瞭解AEM存放庫(Oak)在AEM社群網站中的角色會很有幫助。
 
-**Java內容存放庫(JCR)**
-此標準會定義資料模型和應用程式設計介面([JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html))時，不會顯示任何額外資訊。 它結合了傳統檔案系統與關聯式資料庫的特性，並增加了內容應用程式經常需要的一些額外功能。
+**Java™內容存放庫(JCR)**
+此標準會定義資料模型和應用程式設計介面([JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html))時，不會顯示任何額外資訊。 它結合了傳統檔案系統與關聯式資料庫的特性，並新增了內容應用程式經常需要的幾項額外功能。
 
-JCR的一個實作是AEM存放庫OAK。
+JCR的一個實作是AEM存放庫Oak。
 
-**Apache Jackrabbit Oak (OAK)**
-[OAK](../../help/sites-deploying/platform.md) 是JCR 2.0的實作，這是專為以內容為中心的應用程式而設計的資料儲存系統。 這是一種階層式資料庫，專為非結構化和半結構化的資料而設計。 存放庫不僅儲存面向使用者的內容，也儲存應用程式使用的所有程式碼、範本和內部資料。 用於存取內容的UI是 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
+**Apache Jackrabbit Oak**
+[Oak](../../help/sites-deploying/platform.md) 是JCR 2.0的實作，是一種專為以內容為中心的應用程式而設計的資料儲存系統。 這是一種階層式資料庫，專為非結構化和半結構化的資料而設計。 存放庫不僅儲存面向使用者的內容，也儲存應用程式使用的所有程式碼、範本和內部資料。 用於存取內容的UI是 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
 
-JCR和OAK通常用於表示AEM存放庫。
+JCR和Oak通常用於表示AEM存放庫。
 
-在私人製作環境中開發網站內容後，必須將其複製至公開發佈環境。 這通常是透過名為的作業來完成 *[復寫](deploy-communities.md#replication-agents-on-author)*. 這會發生在作者/開發人員/管理員的控制下。
+在私人作者環境中開發網站內容後，必須將其複製到公開發佈環境。 這通常是透過名為的作業來完成 *[復寫](deploy-communities.md#replication-agents-on-author)*. 這會發生在作者/開發人員/管理員的控制下。
 
 對於UGC，內容是由公共發佈環境中的註冊網站訪客（社群成員）輸入。 這是隨機發生的。
 
@@ -71,7 +67,7 @@ UGC儲存至共用儲存體時，在大部分部署中，成員內容的單一�
 
 ### ASRP {#asrp}
 
-若是ASRP，UGC不會儲存在JCR中，而是儲存在由Adobe託管和管理的雲端服務中。 ASRP中儲存的UGC不可以CRXDE Lite檢視，也不可使用JCR API存取。
+如果有ASRP，UGC不會儲存在JCR中，而是儲存在由Adobe託管和管理的雲端服務中。 ASRP中儲存的UGC不可使用CRXDE Lite檢視或使用JCR API存取。
 
 另請參閱 [ASRP -Adobe儲存資源提供者](asrp.md).
 
@@ -81,7 +77,7 @@ ASRP會使用Adobe雲端進行查詢。
 
 ### MSRP {#msrp}
 
-若是MSRP，UGC不會儲存在JCR中，而是儲存在MongoDB中。 儲存在MSRP中的UGC不能使用CRXDE Lite檢視，也不能使用JCR API存取。
+如果有，MSRP、UGC就不會儲存在JCR中，而是儲存在MongoDB中。 儲存在MSRP中的UGC不可使用CRXDE Lite檢視或使用JCR API存取。
 
 另請參閱 [MSRP - MongoDB儲存資源提供者](msrp.md).
 
@@ -91,11 +87,11 @@ MSRP使用Solr進行查詢。
 
 ### JSRP {#jsrp}
 
-JSRP是存取單一AEM執行個體上所有UGC的預設提供者。 它提供快速體驗AEM Communities 6.1的能力，而不需要設定MSRP或ASRP。
+JSRP是存取單一AEM執行個體上所有UGC的預設提供者。 它可讓您快速體驗AEM Communities 6.1，而不需要設定MSRP或ASRP。
 
 另請參閱 [JSRP - JCR儲存資源提供者](jsrp.md).
 
-若是JSRP，雖然UGC儲存在JCR中，並可透過CRXDE Lite和JCR API存取，但強烈建議不要使用JCR API這麼做，否則日後的變更可能會影響自訂程式碼。
+如果有JSRP，而UGC儲存在JCR中，並可透過CRXDE Lite和JCR API存取，則建議您不要使用JCR API來存取，否則日後的變更可能會影響自訂程式碼。
 
 此外，不會共用作者和發佈環境的存放庫。 雖然發佈執行個體的叢集會產生共用發佈存放庫，但在發佈時輸入的UGC將不會顯示在作者身上，因此無法管理來自作者的UGC。 UGC只會保留在輸入它的執行個體的AEM存放庫(JCR)中。
 
@@ -122,7 +118,7 @@ ACL檢查會使用公用程式方法，傳回適合檢查套用至資源UGC之�
 
 ### 針對非現有資源(NER) {#for-non-existing-resources-ners}
 
-部分Communities元件可包含在指令碼中，因此需要Sling可定址節點來支援Communities功能。 [包含的元件](scf.md#add-or-include-a-communities-component) 稱為非現有資源(NER)。
+部分Communities元件不可包含在指令碼中，因此需要Sling可定址節點來支援Communities功能。 [包含的元件](scf.md#add-or-include-a-communities-component) 稱為非現有資源(NER)。
 
 陰影節點在存放庫中提供Sling可定址位置。
 
@@ -136,17 +132,17 @@ ACL檢查會使用公用程式方法，傳回適合檢查套用至資源UGC之�
 
 * 元件存在於本機存放庫中：
 
-   `/content/community-components/en/comments/jcr:content/content/includable/comments`
+  `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 * 對應的陰影節點存在於本機存放庫中：
 
-   `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
+  `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 在陰影節點下找不到UGC。
 
 預設行為是在發佈執行個體上設定陰影節點，只要參照相關的子樹狀結構以進行讀取或寫入。
 
-例如，假設部署為 [MSRP](msrp.md) TarMK發佈伺服器陣列。
+例如，假設部署是 [MSRP](msrp.md) TarMK發佈伺服器陣列。
 
 當 [會員](users.md) 在pub1上發佈UGC （儲存在MongoDB中），在pub1上的JCR中建立陰影節點。
 

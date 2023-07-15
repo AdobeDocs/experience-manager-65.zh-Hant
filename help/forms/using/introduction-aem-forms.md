@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '898'
 ht-degree: 10%
 
 ---
@@ -96,7 +96,7 @@ AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務�
 * 可自訂的儀表板，可即時深入分析業務營運
 * 用於連線協力廠商報告工具的API
 
-![](do-not-localize/3rd-draft.gif)
+![第三份草稿](do-not-localize/3rd-draft.gif)
 
 ## 個人化通訊 {#personalized-communication}
 
@@ -115,6 +115,6 @@ AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務�
 * 支援數位簽章，以驗證內容完整性和簽署者的身分
 * AEM Forms的Document Security附加元件，包括加密、使用原則、追蹤和稽核
 
-![](do-not-localize/layout-02.png)
+![版面配置二](do-not-localize/layout-02.png)
 
 簡化的個人化通訊工作流程

@@ -1,18 +1,14 @@
 ---
 title: 社交元件架構
-seo-title: Social Component Framework
 description: 社交元件架構(SCF)簡化了設定、自訂和擴展Communities元件的程式
-seo-description: The social component framework (SCF) simplifies the process of configuring, customizing, and extending Communities components
-uuid: 23b4418d-b91c-46fc-bf42-1154ef79fe5a
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 exl-id: 5ca58bc3-8505-4d91-9cd1-6b2e2671f1be
-source-git-commit: 1d5cfff10735ea31dc0289b6909851b8717936eb
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1478'
 ht-degree: 0%
 
 ---
@@ -38,7 +34,7 @@ ht-degree: 0%
 
 Handlebars JS範本可延伸模型/檢視JS元件，以處理使用者與使用者端元件之間的互動。
 
-如果元件需要支援資料修改，可以撰寫SocialComponent API的實作來支援編輯/儲存資料，類似於傳統Web應用程式中的模型/資料物件。 此外，可以新增作業（控制者）和作業服務來處理作業請求、執行商業邏輯，以及叫用模型/資料物件上的API。
+如果元件必須支援資料修改，則可以撰寫SocialComponent API的實作來支援編輯/儲存資料，類似於傳統Web應用程式中的模型/資料物件。 此外，可以新增作業（控制者）和作業服務來處理作業請求、執行商業邏輯，以及叫用模型/資料物件上的API。
 
 SocialComponent API可延伸以提供使用者端檢視層或HTTP使用者端所需的資料。
 
@@ -55,7 +51,7 @@ SocialComponent API可延伸以提供使用者端檢視層或HTTP使用者端所
 * 外觀：
    * 變更JS範本和CSS。
 * 外觀、感覺和UX：
-   * 變更JS範本、CSS和 [擴充/覆寫Javascript](client-customize.md#extending-javascript).
+   * 變更JS範本、CSS和 [擴充/覆寫JavaScript](client-customize.md#extending-javascript).
 * 若要修改JS範本或GET端點可用的資訊：
    * 擴充 [社交元件](server-customize.md#socialcomponent-interface).
 * 若要在作業期間新增自訂處理：
@@ -63,15 +59,15 @@ SocialComponent API可延伸以提供使用者端檢視層或HTTP使用者端所
 * 若要新增自訂作業：
    * 建立新的 [Sling Post操作](server-customize.md#postoperation-class).
    * 使用現有 [OperationServices](server-customize.md#operationservice-class) 視需要。
-   * 新增Javascript程式碼，以視需要從使用者端叫用作業。
+   * 新增JavaScript程式碼，以視需要從使用者端叫用作業。
 
 ## 伺服器端架構 {#server-side-framework}
 
 此架構提供API來存取伺服器上的功能，並支援使用者端與伺服器之間的互動。
 
-### Java API {#java-apis}
+### Java™ API {#java-apis}
 
-Java API提供可輕鬆繼承或子類別的抽象類別和介面。
+Java™ API提供可輕鬆繼承或子類別的抽象類別和介面。
 
 主要類別的說明請參閱 [伺服器端自訂](server-customize.md) 頁面。
 
@@ -131,11 +127,11 @@ HBS指令碼簡單、無邏輯、在伺服器和使用者端上編譯、易於�
 
 此架構提供數種 [Handlebars協助程式](handlebars-helpers.md) 在開發SocialComponents時很有用。
 
-在伺服器上，當Sling解析GET請求時，它會識別將用於回應請求的指令碼。 如果指令碼是HBS範本(.hbs)，Sling會將請求委派給Handlebars引擎。 然後Handlebars引擎會從適當的SocialComponentFactory取得SocialComponent、建置上下文，並轉譯HTML。
+在伺服器上，當Sling解析GET請求時，它會識別用於回應請求的指令碼。 如果指令碼是HBS範本(.hbs)，Sling會將請求委派給Handlebars引擎。 然後Handlebars引擎會從適當的SocialComponentFactory取得SocialComponent、建置上下文，並轉譯HTML。
 
 ### 無存取限制 {#no-access-restriction}
 
-Handlebars (HBS)範本檔案(.hbs)類似於.jsp和.html範本檔案，但它們可用於在使用者端瀏覽器和伺服器上呈現。 因此，請求使用者端範本的使用者端瀏覽器將會從伺服器接收.hbs檔案。
+Handlebars (HBS)範本檔案(.hbs)類似於.jsp和.html範本檔案，但它們可用於在使用者端瀏覽器和伺服器上呈現。 因此，請求使用者端範本的使用者端瀏覽器會從伺服器接收.hbs檔案。
 
 這要求Sling搜尋路徑中的所有HBS範本（/libs/或/apps下的任何.hbs檔案）可由任何使用者從製作或發佈中擷取。
 
@@ -157,7 +153,7 @@ Handlebars (HBS)範本檔案(.hbs)類似於.jsp和.html範本檔案，但它們�
 
 包含元件是指將參照加入至的過程 [「非現有」資源](srp.md#for-non-existing-resources-ners) （無JCR節點），例如使用指令碼語言。
 
-自AEM 6.1起，當動態包含而不是新增元件時，可以在author *design *mode中編輯元件的屬性。
+自Adobe Experience Manager (AEM) 6.1起，若動態包含而非新增元件，便可在author中編輯元件的屬性 *設計* 模式。
 
 只能動態納入少數AEM Communities元件。 包括：
 
@@ -166,7 +162,7 @@ Handlebars (HBS)範本檔案(.hbs)類似於.jsp和.html範本檔案，但它們�
 * [評論](reviews-basics.md)
 * [投票](essentials-voting.md)
 
-此 [社群元件指南](components-guide.md) 允許將可包含元件從新增切換到包含。
+此 [社群元件指南](components-guide.md) 允許將包含元件從新增切換到包含。
 
 **使用Handlebars** 範本化語言，非現有資源會使用 [包含協助程式](handlebars-helpers.md#include) 透過指定其resourceType：
 
@@ -189,17 +185,17 @@ Handlebars (HBS)範本檔案(.hbs)類似於.jsp和.html範本檔案，但它們�
 
 ## 使用者端架構 {#client-side-framework}
 
-### 模型檢視Javascript框架 {#model-view-javascript-framework}
+### 模型檢視JavaScript架構 {#model-view-javascript-framework}
 
-此架構包含 [Backbone.js](https://www.backbonejs.org/)，此元件為模型檢視JavaScript架構，可協助開發豐富的互動式元件。 物件導向性質支援可擴充/可重複使用的架構。 透過HTTP API，可簡化使用者端與伺服器之間的通訊。
+此架構包含 [Backbone.js](https://backbonejs.org/)，此元件為模型檢視JavaScript架構，可協助開發豐富的互動式元件。 物件導向性質支援可擴充/可重複使用的架構。 HTTP API可簡化使用者端與伺服器之間的通訊。
 
-此架構利用伺服器端Handlebars範本來呈現使用者端的元件。 模型以HTTP API產生的JSON回應為基礎。 檢視會將自身繫結到Handlebars範本產生的HTML，並提供互動功能。
+此架構會使用伺服器端Handlebars範本來呈現使用者端的元件。 模型以HTTP API產生的JSON回應為基礎。 檢視會將自身繫結到Handlebars範本產生的HTML，並提供互動功能。
 
 ### CSS慣例 {#css-conventions}
 
 以下是定義和使用CSS類別的建議慣例：
 
-* 使用名稱空間明確的CSS類別選擇器名稱，並避免使用一般名稱，例如「標題」、「影像」等。
+* 使用名稱空間明確的CSS類別選擇器名稱，並避免使用通用名稱，例如「heading」和「image」。
 * 定義特定的類別選取器樣式，讓CSS樣式表可以和頁面上的其他元素和樣式搭配使用。 例如：`.social-forum .topic-list .li { color: blue; }`
 * 將樣式設定的CSS類別與由JavaScript驅動的UX的CSS類別分開。
 
@@ -211,7 +207,7 @@ Handlebars (HBS)範本檔案(.hbs)類似於.jsp和.html範本檔案，但它們�
 * [擴充功能](client-customize.md#extensions)
 * [HTML標籤](client-customize.md#htmlmarkup)
 * [建立CSS外觀](client-customize.md#skinning-css)
-* [擴充Javascript](client-customize.md#extending-javascript)
+* [延伸JavaScript](client-customize.md#extending-javascript)
 * [適用於SCF的Clientlibs](client-customize.md#clientlibs-for-scf)
 
 ## 功能和元件要點 {#feature-and-component-essentials}

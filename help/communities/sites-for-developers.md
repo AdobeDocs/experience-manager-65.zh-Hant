@@ -1,18 +1,14 @@
 ---
 title: 社群網站要點
-seo-title: Community Site Essentials
 description: 匯出和刪除社群網站以及建立自訂網站範本
-seo-description: Exporting and deleting community sites and creating custom site templates
-uuid: f0ec0e71-64e9-415a-b14a-939a9b1611c1
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
-source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '497'
 ht-degree: 1%
 
 ---
@@ -73,19 +69,19 @@ ht-degree: 1%
 
 ![crxde-siteconfiguration](assets/crxde-siteconfiguration.png)
 
-請確定 **全部儲存** 並將自訂程式碼復寫至所有AEM例項（從主控台發佈社群網站內容時，未包含自訂程式碼）。
+請確定 **全部儲存** 並將自訂程式碼復寫至所有Adobe Experience Manager (AEM)例項（從主控台發佈社群網站內容時未包含自訂程式碼）。
 
 復寫自訂程式碼的建議作法是 [建立套件](../../help/sites-administering/package-manager.md#creating-a-new-package) 並將其部署在所有執行個體上。
 
 ## 匯出社群網站 {#exporting-a-community-site}
 
-社群網站建立後，即可將網站匯出為儲存在封裝管理程式中的AEM套件，並可供下載和上傳。
+社群網站建立後，即可將網站匯出為儲存在封裝管理員中的AEM套件，並可供下載和上傳。
 
 這可從以下網址取得： [社群網站主控台](sites-console.md#exporting-the-site).
 
-請注意，UGC和自訂程式碼不會包含在社群網站套件中。
+UGC和自訂程式碼未包含在社群網站套件中。
 
-若要匯出UGC，請使用 [AEM Communities UGC移轉工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)，這是GitHub上提供的開放原始碼移轉工具。
+若要匯出UGC，請使用 [AEM Communities UGC移轉工具](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration)，這是GitHub上提供的開放原始碼移轉工具。
 
 ## 刪除社群網站 {#deleting-a-community-site}
 
@@ -105,7 +101,7 @@ ht-degree: 1%
 
 * 網站ID是的第三個元件 `rep:principalName`
 
-   例如，如果 `rep:principalName = community-enable-nrh9h-members`
+  例如，如果 `rep:principalName = community-enable-nrh9h-members`
 
    * **網站名稱** = *啟用*
    * **網站ID** = *nrh9h*
@@ -113,9 +109,9 @@ ht-degree: 1%
 
 ### 使用者產生的內容 {#user-generated-content}
 
-從Github取得communities-srp-tools專案：
+從GitHub取得communities-srp-tools專案：
 
-* [https://github.com/Adobe-Marketing-Cloud/communities-srp-tools](https://github.com/Adobe-Marketing-Cloud/communities-srp-tools)
+* [https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools](https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools)
 
 這包含一個servlet，可從任何SRP刪除所有UGC。
 
@@ -132,4 +128,4 @@ ht-degree: 1%
 * 前置詞為 `community`
 * 後面接著 [唯一網站id](#community-unique-site-id)
 
-例如， `community-engage-x0e11-members`.
+例如，`community-engage-x0e11-members`。

@@ -3,9 +3,9 @@ title: 建立或新增調適型表單至 AEM Sites 頁面
 description: 探索如何輕鬆建立或無縫新增調適型表單至您的 AEM Sites 頁面。 了解整合動態和可自訂表單至網站中的步驟式技術和最佳實務，最佳化您的數位體驗以達到最大影響。
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: cd6d9b4d019e24002e4fe1cc8679d270b24c2934
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '2883'
+source-wordcount: '2913'
 ht-degree: 23%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 23%
 
 AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 您可以使用調適型表單容器在體驗片段或AEM Sites頁面中建立新表單，而調適型Forms — 內嵌元件可讓您新增現有調適型表單或使用調適型Forms編輯器建立新表單。
 
-![](/help/forms/using/assets/adaptive-form-in-sites-page.png)
+![網站頁面中的最適化表單](/help/forms/using/assets/adaptive-form-in-sites-page.png)
 
 ## 在AEM頁面編輯器或體驗片段中使用最適化表單容器元件的好處
 
@@ -177,7 +177,7 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
 1. 在編輯模式中開啟包含最適化表單的AEM Sites頁面(在最適化Forms容器元件中)。
 1. 開啟「內容樹狀結構」，然後選取 **[!UICONTROL 最適化Forms容器]** 託管您的最適化表單的訪客。 一個AEM Sites頁面可以託管多個最適化Forms。 因此，請仔細選取正確的最適化Forms容器。
 1. 在功能表列上，選取 ![「轉換為體驗片段變數」圖示](/help/forms/using/assets/Smock_FilingCabinet_18_N.svg) 「轉換為體驗片段變數」圖示。
-   ![](/help/forms/using/assets/convert-form-in-sites-page-to-an-experience-fragment.png)
+   ![將網站頁面中的表單轉換為體驗片段](/help/forms/using/assets/convert-form-in-sites-page-to-an-experience-fragment.png)
 
    會出現對話方塊，將最適化表單容器轉換為新的體驗片段或新增到現有的體驗片段
 1. 在轉換為體驗片段變數對話方塊中，設定以下選項的值：
@@ -195,7 +195,7 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
 1. 開啟包含最適化表單的AEM頁面編輯器或體驗片段。
 1. 開啟「內容樹狀結構」，然後選取 **[!UICONTROL 最適化Forms容器]** 託管您的最適化表單的訪客。 一個AEM Sites頁面可以託管多個最適化Forms。 因此，請仔細選取正確的最適化Forms容器。
 1. 按一下最適化表單容器屬性 ![最適化表單容器屬性](/help/forms/using/assets/configure-icon.svg) 圖示。 設定提交動作的最適化表單容器對話方塊開啟。
-   ![](/help/forms/using/assets/adaptive-forms-container.png)
+   ![調適型表單容器](/help/forms/using/assets/adaptive-forms-container.png)
 1. 根據您的需求，選取並設定提交動作。 如需提交動作的詳細資訊，請參閱 [最適化表單提交動作](configuring-submit-actions.md)
 
 
@@ -213,7 +213,7 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
 1. 開啟包含最適化表單的AEM頁面編輯器或體驗片段。
 1. 開啟「內容樹狀結構」，然後選取 **[!UICONTROL 最適化Forms容器]** 託管您的最適化表單的訪客。 一個AEM Sites頁面可以託管多個最適化Forms。 因此，請仔細選取正確的最適化Forms容器。
 1. 按一下最適化表單容器屬性 ![最適化表單容器屬性](/help/forms/using/assets/configure-icon.svg) 圖示。 設定資料模型的「最適化表單容器」對話方塊開啟。
-   ![](/help/forms/using/assets/form-data-model-adaptive-forms-container.png)
+   ![表單資料模型調適型表單容器](/help/forms/using/assets/form-data-model-adaptive-forms-container.png)
 1. 根據您的要求，選取並設定JSON結構描述或表單資料模型。 如需提交動作的詳細資訊，請參閱 [最適化表單提交動作](configuring-submit-actions.md).
 
    * 當您選取 **[!UICONTROL 表單模型]** 選項，使用 **[!UICONTROL 選取表單資料模型]** 選項以選取預先設定的表單資料模型。
@@ -235,7 +235,7 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
 1. 開啟包含最適化表單的AEM頁面編輯器或體驗片段。
 1. 開啟「內容樹狀結構」，然後選取 **[!UICONTROL 最適化Forms容器]** 託管您的最適化表單的訪客。 一個AEM Sites頁面可以託管多個最適化Forms。 因此，請仔細選取正確的最適化Forms容器。
 1. 按一下最適化表單容器屬性 ![最適化表單容器屬性](/help/forms/using/assets/configure-icon.svg) 圖示。 設定資料模型的「最適化表單容器」對話方塊開啟。
-   ![](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
+   ![預填服務fdm aem sites頁面編輯器](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
 1. 選擇表單資料模型. 開啟 **[!UICONTROL 基本]** 標籤。 在預填服務中，選取 **[!UICONTROL Forms入口網站草稿預填服務]**.
 1. 按一下&#x200B;**[!UICONTROL 「完成」]**。
 

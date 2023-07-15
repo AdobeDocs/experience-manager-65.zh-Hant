@@ -11,9 +11,9 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '1972'
+source-wordcount: '1973'
 ht-degree: 19%
 
 ---
@@ -143,7 +143,7 @@ ht-degree: 19%
 * 從Adobe Sign團隊接收認證
 * 使用收到的認證連線AEM Forms與適用於政府的Adobe Acrobat Sign Solutions
 
-![](/help/forms/using/assets/adobe-acrobat-sign-govt-workflow.png)
+![adobe-acrobat-sign-govt-workflow](/help/forms/using/assets/adobe-acrobat-sign-govt-workflow.png)
 
 ### 開始之前 {#prerequisites-for-adobe-sign-for-acrobat-sign-for-government}
 
@@ -169,7 +169,7 @@ ht-degree: 19%
 >
 >
 * A `re-direct URL` 應包含 [頂層](https://en.wikipedia.org/wiki/Top-level_domain) 網域。 例如 `https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
-* 請勿使用本機URL做為 `re-direct URL`. 例如， `https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`.
+* 請勿使用本機URL做為 `re-direct URL`. 例如，`https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`。
 
 
 #### 與Adobe Sign團隊共用重新導向URL和範圍並接收認證

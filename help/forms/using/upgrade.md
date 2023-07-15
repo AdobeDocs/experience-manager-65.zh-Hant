@@ -11,9 +11,9 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '335'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ AEM 6.5 Forms包含數項新功能和增強功能，可簡化表單和交易的�
 
 下圖顯示AEM Forms on JEE的可用升級路徑：
 
-![](do-not-localize/jee-upgrade-6-5.png)
+![JEE升級6.5](do-not-localize/jee-upgrade-6-5.png)
 
 您可以從下列位置執行直接升級：
 
