@@ -1,16 +1,14 @@
 ---
 title: 社群疑難排解
 description: 疑難排解社群，包括已知問題
-uuid: 99225430-fa2a-4393-ae5a-18b19541c358
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 exl-id: ef4f4108-c485-4e2e-a58f-ff64eee9937e
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '350'
 ht-degree: 1%
 
 ---
@@ -49,17 +47,17 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 作者和發佈的失敗情況不同。 在作者上，它會無訊息地失敗，並且不會顯示論壇主題。 發佈時，會在頁面上擲回錯誤。
 
-請參閱 [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API以取得詳細資訊。
+請參閱 [com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API以取得詳細資訊。
 
 ## 常見問題 {#common-concerns}
 
 ### 記錄檔中的警告：已棄用Handlebars {#warning-in-logs-handlebars-deprecated}
 
-在啟動期間（不是第一次 — 但之後每次），可能會在記錄中看到以下警告：
+在啟動期間（不是第一個，但之後的每一個），可能會在記錄中看到以下警告：
 
 * `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` 已取代為 `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-此警告可以安全地忽略，因為 `jknack.handlebars.Handlebars`，使用者： [SCF](scf.md#handlebarsjavascripttemplatinglanguage)，隨附專屬的i18n helper公用程式。 啟動時，此變數會被AEM指定的變數取代 [i18n協助程式](handlebars-helpers.md#i-n). 此警告由第三方程式庫產生，以確認覆寫現有的協助程式。
+此警告可以安全地忽略，因為 `jknack.handlebars.Handlebars`，使用者： [SCF](scf.md#handlebarsjavascripttemplatinglanguage)，隨附專屬的i18n helper公用程式。 在啟動時，它會被取代為AEM特定的 [i18n協助程式](handlebars-helpers.md#i-n). 此警告由協力廠商程式庫產生，以確認覆寫現有的協助程式。
 
 ### 記錄檔中的警告： OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
