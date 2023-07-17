@@ -1,20 +1,16 @@
 ---
-title: 處理AEM Foundation的GDPR請求
-seo-title: Handling GDPR Requests for the AEM Foundation
-description: 處理AEM Foundation的GDPR請求
-seo-description: null
-uuid: d470061c-bbcf-4d86-9ce3-6f24a764ca39
+title: 處理Adobe Experience Manager Foundation的GDPR請求
+description: 處理Adobe Experience Manager Foundation的GDPR請求
 contentOwner: sarchiz
-discoiquuid: 8ee843b6-8cea-45fc-be6c-99c043f075d4
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 53%
+source-wordcount: '436'
+ht-degree: 45%
 
 ---
 
-# 處理AEM Foundation的GDPR請求{#handling-gdpr-requests-for-the-aem-foundation}
+# 處理Adobe Experience Manager (AEM) Foundation的GDPR請求{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
 >
@@ -22,7 +18,7 @@ ht-degree: 53%
 
 ## AEM Foundation GDPR支援 {#aem-foundation-gdpr-support}
 
-在AEM Foundation層級，儲存的個人資料是使用者設定檔。 因此，本文資訊主要說明如何存取和刪除使用者設定檔，以及分別處理GDPR存取和刪除請求。
+在AEM Foundation層級，儲存的個人資料是使用者設定檔。 因此，本文資訊主要說明如何存取和刪除使用者設定檔，以及分別說明GDPR存取和刪除請求。
 
 ## 存取使用者個人資料 {#accessing-a-user-profile}
 
@@ -76,7 +72,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 ### 停用使用者 {#disable-user}
 
 1. 如上所述，開啟「使用者管理」主控台並搜尋相關使用者。
-1. 將滑鼠停留在使用者上，並按一下選取圖示。 設定檔將變成灰色，表示已選取它。
+1. 將滑鼠停留在使用者上，並按一下選取圖示。設定檔變成灰色，表示已選取它。
 
 1. 在上層選單中按下「停用」按鈕以停用使用者：
 
@@ -86,7 +82,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   然後，使用者介面將變成灰色並在設定檔卡新增鎖定，以指出使用者已停用：
+   使用者介面會將設定檔卡片變灰並新增鎖定，藉此指出使用者已停用：
 
    ![disableduser](assets/disableduser.png)
 
@@ -100,7 +96,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
-1. 刪除設定檔節點及其所有子節點。 設定檔節點有兩種格式，取決於AEM版本：
+1. 刪除設定檔節點及其所有子節點。 設定檔節點有兩種格式，視AEM版本而定：
 
    1. 下的預設私人設定檔 `[!UICONTROL /profile]`
    1. `[!UICONTROL /profiles]`，適用於使用AEM 6.5建立的新設定檔。
@@ -109,7 +105,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### HTTP API {#http-api-1}
 
-以下程序使用 `curl` 命令列工具說明如何使用 **[!UICONTROL cavery]**`userId` 停用使用者並刪除她在預設位置可用的個人資料。
+下列程式使用 `curl` 命令列工具，說明如何使用 **[!UICONTROL cavery]** `userId` 並刪除的設定檔 `cavery` 預設位置可用的預設值。
 
 * *探索使用者首頁*
 

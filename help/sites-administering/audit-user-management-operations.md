@@ -1,29 +1,25 @@
 ---
-title: 如何在AEM中稽核使用者管理作業
-seo-title: How to Audit User Management Operations in AEM
-description: 瞭解如何在AEM中稽核使用者管理作業。
-seo-description: Learn how to audit User Management Operations in AEM.
-uuid: 9d177afb-172c-4858-a678-254c97cfa472
+title: 如何在Adobe Experience Manager中稽核使用者管理作業
+description: 瞭解如何在Adobe Experience Manager中稽核使用者管理操作。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: ba6a56e5-b91c-4779-9154-d4300b2827f8
 docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
 feature: Operations
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '300'
 ht-degree: 1%
 
 ---
 
-# 如何在AEM中稽核使用者管理作業{#how-to-audit-user-management-operations-in-aem}
+# 如何在Adobe Experience Manager (AEM)中稽核使用者管理作業 {#how-to-audit-user-management-operations-in-aem}
 
 ## 簡介 {#introduction}
 
-AEM已引入記錄許可權變更的功能，以便稍後可以稽核這些變更。
+AEM匯入了記錄許可權變更的功能，以便您稍後稽核這些變更。
 
 增強功能允許稽核CRUD （建立、讀取、更新、刪除）使用者許可權和群組指派的動作。 更具體地說，它會記錄：
 
@@ -31,14 +27,14 @@ AEM已引入記錄許可權變更的功能，以便稍後可以稽核這些變�
 * 正在新增至群組的使用者
 * 現有使用者或群組的許可權變更
 
-依預設，這些專案會寫入 `error.log` 檔案。 為了更輕鬆地進行監視，建議將它們重新導向到單獨的記錄檔。 如需如何執行此動作的詳細資訊，請參閱以下段落。
+依預設，專案會寫入 `error.log` 檔案。 為了更輕鬆地進行監視，建議將它們重新導向到單獨的記錄檔。 如需如何執行此動作的詳細資訊，請參閱以下段落。
 
 ## 將輸出重新導向至個別的記錄檔 {#redirecting-the-output-to-a-separate-log-file}
 
-若要將記錄輸出重新導向至個別的記錄檔，您需要建立新的 **Apache Sling記錄記錄器** 設定。 我們將使用 `useraudit.log` 做為下方範例中個別檔案的名稱。
+若要將記錄輸出重新導向至個別的記錄檔，請建立 **Apache Sling記錄記錄器** 設定。 讓我們使用 `useraudit.log` 做為下方範例中個別檔案的名稱。
 
 1. 瀏覽至Web主控台 *https://serveraddress:serverport/system/console/configMgr*
-1. 搜尋 **Apache Sling記錄記錄器設定**. 然後，按專案右側的「+」以建立新的工廠設定。
+1. 搜尋 **Apache Sling記錄記錄器設定**. 然後，按專案右側的「+」以建立工廠設定。
 1. 建立下列設定：
 
    * **記錄層級：** 資訊
@@ -46,7 +42,7 @@ AEM已引入記錄許可權變更的功能，以便稍後可以稽核這些變�
    * **訊息模式：** 層級預設
    * **記錄器：** com.adobe.granite.security.user.internal.audit， com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
-   若要將兩個記錄器輸入到 **Logger** 欄位，您必須輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱，以建立另一個欄位。
+   若要將兩個記錄器都輸入到 **Logger** 欄位，您必須輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱，以建立另一個欄位。
 
 ## 範例輸出 {#example-output}
 

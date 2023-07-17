@@ -1,17 +1,13 @@
 ---
 title: 呈現和傳遞
-seo-title: Rendering and Delivery
 description: 呈現和傳遞
-seo-description: null
-uuid: 1253b6a5-6bf3-42b1-be3a-efa23b6ddb51
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
 exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '580'
 ht-degree: 7%
 
 ---
@@ -20,13 +16,13 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
-AEM內容可透過以下方式輕鬆呈現： [Sling預設Servlet](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) 要轉譯 [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) 和其他格式。
+Adobe Experience Manager (AEM)內容可透過以下方式輕鬆呈現： [Sling預設Servlet](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) 要轉譯 [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) 和其他格式。
 
 這些現成可用的轉譯器通常會導覽存放庫並依原樣傳回內容。
 
-AEM （透過Sling）也支援開發和部署自訂Sling轉譯器，以完全控制轉譯的結構與內容。
+AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉譯的結構描述和內容。
 
 Content Services Default Renderer可填補現成可用的Sling Defaults和自訂開發之間的空白，以便在不開發的情況下自訂和控制呈現內容的許多方面。
 
@@ -120,14 +116,14 @@ Content Services Default Renderer可填補現成可用的Sling Defaults和自訂
   </tr>
   <tr>
    <td>excludeChildren</td>
-   <td>字串[]<br /> <br /> </td>
+   <td>String[]<br /> <br /> </td>
    <td>不排除任何專案</td>
    <td>子名稱</td>
    <td>從JSON匯出僅包含指定的子項，排除其他</td>
   </tr>
   <tr>
    <td>renameProperties</td>
-   <td>字串[]<br /> <br /> </td>
+   <td>String[]<br /> <br /> </td>
    <td>不重新命名任何內容</td>
    <td>&lt;actual_property_name&gt;，&lt;replacement_property_name&gt;</td>
    <td>使用取代物重新命名屬性</td>
@@ -143,7 +139,7 @@ Content Services Default Renderer可填補現成可用的Sling Defaults和自訂
 |---|---|
 | jcr:primaryType | nt:unstructured |
 
-下表顯示屬性：
+下表顯示特性：
 
 <table>
  <tbody>
@@ -173,7 +169,7 @@ Content Services包含兩個匯出設定：
 
 #### 預設匯出設定 {#default-export-configuration}
 
-如果在請求的URI中指定了配置，則將套用Content Services預設匯出配置。
+如果在請求的URI中指定了配置，則會套用Content Services預設匯出配置。
 
 &lt;resource>.caas[.&lt;depth-int>].json
 

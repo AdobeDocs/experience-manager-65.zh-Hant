@@ -1,24 +1,20 @@
 ---
-title: AEM中的服務使用者
-seo-title: Service Users in AEM
-description: 瞭解AEM中的服務使用者。
-seo-description: Learn about Service Users in AEM.
-uuid: 4efab5fb-ba11-4922-bd68-43ccde4eb355
+title: Adobe Experience Manager中的服務使用者
+description: 瞭解Adobe Experience Manager中的服務使用者。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 9cfe5f11-8a0e-4a27-9681-a8d50835c864
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Security
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1766'
 ht-degree: 0%
 
 ---
 
-# AEM中的服務使用者{#service-users-in-aem}
+# Adobe Experience Manager (AEM)中的服務使用者 {#service-users-in-aem}
 
 ## 概觀 {#overview}
 
@@ -66,7 +62,7 @@ ht-degree: 0%
 
 * **尊重隱私權設定**
 
-   * 若是私人設定檔，其中一個範例是不公開私人設定檔圖片、電子郵件或全名 `/profile` 節點。
+   * 如果有私人設定檔，其中一個範例就是不要公開私人設定檔圖片、電子郵件或全名 `/profile` 節點。
 
 ## 嚴格存取控制 {#strict-access-control}
 
@@ -86,9 +82,9 @@ ht-degree: 0%
 如果上述操作失敗，Sling 7提供服務使用者對應服務，可設定套件與使用者對應和兩個對應的API方法： ` [SlingRepository.loginService()](https://sling.apache.org/apidocs/sling7/org/apache/sling/jcr/api/SlingRepository.html#loginService-java.lang.String-java.lang.String-)` 和 ` [ResourceResolverFactory.getServiceResourceResolver()](https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolverFactory.html#getServiceResourceResolver-java.util.Map-)` 只會傳回具有已設定使用者許可權的工作階段/資源解析程式。 這些方法具有下列特性：
 
 * 它們允許對應服務到使用者
-* 它們使得定義子服務使用者成為可能
+* 它們可讓您定義子服務使用者
 * 中心設定點為： `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl`
-* `service-id` = `service-name` [ 「：」子服務名稱 ] 
+* `service-id` = `service-name` [「：」子服務名稱]
 
 * `service-id` 對應到資源解析程式和/或JCR存放庫使用者ID以進行驗證
 * `service-name` 是提供服務的套件組合之符號名稱
@@ -104,7 +100,7 @@ ht-degree: 0%
 若要以服務使用者取代管理工作階段，您應該執行下列步驟：
 
 1. 識別您服務的必要許可權，並牢記最低許可權原則。
-1. 檢查是否有使用者可完全依照您需要的許可權設定使用。 如果沒有任何現有使用者符合您的需求，請建立新的系統服務使用者。 需要RTC才能建立新的服務使用者。 有時候，建立多個子服務使用者（例如，一個用於寫入，一個用於讀取）以進一步劃分存取權是有意義的。
+1. 檢查是否有使用者可完全依照您需要的許可權設定使用。 如果沒有符合您需求的現有使用者，請建立系統服務使用者。 需要RTC才能建立服務使用者。 有時候，建立多個子服務使用者（例如，一個用於寫入，一個用於讀取）以進一步劃分存取權是有意義的。
 1. 為您的使用者設定和測試ACE。
 1. 新增 `service-user` 對應您的服務和 `user/sub-users`
 
@@ -112,13 +108,13 @@ ht-degree: 0%
 
 1. 取代 `admin-session` 在程式碼中使用 `loginService` 或 `getServiceResourceResolver` API。
 
-## 建立新的服務使用者 {#creating-a-new-service-user}
+## 建立服務使用者 {#creating-a-new-service-user}
 
 在您確認AEM服務使用者清單中的任何使用者都不適用於您的使用案例，且對應的RTC問題已核准後，您可以繼續並將新使用者新增至預設內容。
 
 建議的方法是建立服務使用者，以便在以下位置使用存放庫總管： *https://&lt;server>：&lt;port>/crx/explorer/index.jsp*
 
-目標是取得有效的 `jcr:uuid` 屬性，這是透過內容套件安裝建立使用者時的必要屬性。
+目標是取得有效的 `jcr:uuid` 屬性，透過內容套件安裝建立使用者時必須使用。
 
 您可以透過以下方式建立服務使用者：
 
@@ -134,7 +130,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >請注意，沒有任何與服務使用者相關聯的mixin型別。 這表示系統使用者沒有存取控制原則。
+   >沒有與服務使用者相關聯的mixin型別。 這表示系統使用者沒有存取控制原則。
 
 將對應的.content.xml新增至套件組合的內容時，請確定您已設定 `rep:authorizableId` 而且主要型別為 `rep:SystemUser`. 看起來應該像這樣：
 
@@ -149,15 +145,15 @@ ht-degree: 0%
 
 ## 新增組態修正至ServiceUserMapper組態 {#adding-a-configuration-amendment-to-the-serviceusermapper-configuration}
 
-若要將服務對應新增至對應的系統使用者，您需要為建立工廠組態 ` [ServiceUserMapper](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html)` 服務。 若要保持此模組化，可以使用 [Sling修正機制](https://issues.apache.org/jira/browse/SLING-3578). 建議在套件中安裝此類設定的方式是使用 [Sling初始內容載入](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)：
+若要將服務對應新增至對應的系統使用者，請建立 ` [ServiceUserMapper](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html)` 服務。 若要保持此模組化，可以使用 [Sling修正機制](https://issues.apache.org/jira/browse/SLING-3578). 建議在套件中安裝此類設定的方式是使用 [Sling初始內容載入](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)：
 
 1. 在套件的src/main/resources資料夾下方建立子資料夾SLING-INF/content
-1. 在此資料夾中建立名為org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.modified-&lt;some unique=&quot;&quot; name=&quot;&quot; for=&quot;&quot; your=&quot;&quot; factory=&quot;&quot; configuration=&quot;&quot;>.xml與工廠設定的內容（包括所有子服務使用者對應）。 範例:
+1. 在此資料夾中，建立名為org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.modified-&lt;some unique=&quot;&quot; name=&quot;&quot; for=&quot;&quot; your=&quot;&quot; factory=&quot;&quot; configuration=&quot;&quot;>.xml與工廠設定的內容（包括所有子服務使用者對應）。 範例：
 
 1. 建立 `SLING-INF/content` 資料夾位於 `src/main/resources` 資料夾；
 1. 在此資料夾中建立檔案 `named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml` 包含您工廠設定的內容，包括所有子服務使用者對應。
 
-   為了方便說明，請取一個名為 `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-com.adobe.granite.auth.saml.xml`：
+   為了方便說明，請取用名為 `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-com.adobe.granite.auth.saml.xml`：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -176,7 +172,7 @@ ht-degree: 0%
    </node>
    ```
 
-1. 在的設定中參考Sling初始內容 `maven-bundle-plugin` 在 `pom.xml` 您的套件組合。 範例:
+1. 在的設定中參考Sling初始內容 `maven-bundle-plugin` 在 `pom.xml` 您的套件組合。 範例：
 
    ```xml
    <Sling-Initial-Content>
@@ -184,7 +180,7 @@ ht-degree: 0%
    </Sling-Initial-Content>
    ```
 
-1. 安裝您的套件組合，並確認已安裝工廠組態。 您可以透過以下方式進行：
+1. 安裝您的套件組合，並確定已安裝工廠組態。 您可以透過以下方式進行：
 
    * 前往網頁主控台： *https://serverhost:serveraddress/system/console/configMgr*
    * 搜尋 **Apache Sling Service使用者對應程式服務修正**
@@ -195,7 +191,7 @@ ht-degree: 0%
 呼叫目標 `loginAdministrative()` 通常會與共用工作階段一起出現。 這些工作階段會在服務啟動時取得，並只會在服務停止後登出。 雖然這是常見做法，但會導致兩個問題：
 
 * **安全性：** 此類管理工作階段用於快取和傳回繫結至共用工作階段的資源或其他物件。 稍後在呼叫棧疊中，這些物件可以適應具有更高許可權的工作階段或資源解析器，並且呼叫者通常不清楚它是否是他們正在操作的管理員工作階段。
-* **效能：** 在Oak共用工作階段中，可能會導致效能問題，目前不建議使用它們。
+* **效能：** 在Oak中，共用工作階段可能會導致效能問題，不建議您使用它們。
 
 針對安全性風險最明顯的解決方案是直接取代 `loginAdministrative()` 使用呼叫 `loginService()` 一對一給具有受限制許可權的使用者。 但是，這不會對任何潛在的效能降低造成任何影響。 緩解這種情況的一個可能方式是，將所有請求的資訊包裝在與工作階段無關聯的物件中。 接著，依需求建立（或銷毀）工作階段。
 
@@ -214,7 +210,7 @@ JSP無法使用 `loginService()`，因為沒有關聯的服務。 不過，JSP�
 
 ## 處理事件、複製前置處理器和工作 {#processing-events-replication-preprocessors-and-jobs}
 
-處理事件或作業時，以及在某些情況下，工作流程通常會遺失觸發事件的對應工作階段。 這會導致事件處理常式和工作處理常式使用管理工作階段來執行其工作。 解決此問題的各種可行方法各有優缺點：
+處理事件或工作（有時是工作流程）時，觸發事件的對應工作階段會遺失。 這會導致事件處理常式和工作處理常式使用管理工作階段來執行其工作。 解決此問題的各種可行方法各有優缺點：
 
 1. 傳遞 `user-id` 在事件裝載中，並使用模擬。
 
@@ -226,7 +222,7 @@ JSP無法使用 `loginService()`，因為沒有關聯的服務。 不過，JSP�
 
    **優點：** 與目前的設計一致。 需要最小的變更。
 
-   **缺點：** 需要功能非常強大的服務使用者靈活處理，這很容易導致許可權提升。 規避安全性模型。
+   **缺點：** 需要功能強大的服務使用者具有彈性，這可以輕鬆導致許可權提升。 規避安全性模型。
 
 1. 傳遞序列化 `Subject` 在事件裝載中，並建立 `ResourceResolver` 根據該主題而定。 例如，使用JAAS `doAsPrivileged` 在 `ResourceResolverFactory`.
 
@@ -234,13 +230,13 @@ JSP無法使用 `loginService()`，因為沒有關聯的服務。 不過，JSP�
 
    **缺點：** 需要重構。 安全性相關程式碼對事件的取用者而言是透明的，也可能會導致問題。
 
-第三種方法是目前偏好的處理技術。
+第三種方法是慣用的處理技術。
 
 ## 工作流程程式 {#workflow-processes}
 
-在工作流程流程實作中，通常會遺失觸發工作流程的對應使用者工作階段。 這會導致工作流程處理經常使用管理工作階段來執行其工作。
+在工作流程流程實作中，觸發工作流程的對應使用者工作階段會遺失。 這會導致工作流程處理經常使用管理工作階段來執行其工作。
 
-若要修正這些問題，建議您使用中提到的相同方法 [處理事件、複製前置處理器和工作](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs) 使用。
+若要修正這些問題，建議使用中提到的相同方法 [處理事件、複製前置處理器和工作](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs) 使用。
 
 ## SlingPOST處理器與已刪除的頁面 {#sling-post-processors-and-deleted-pages}
 

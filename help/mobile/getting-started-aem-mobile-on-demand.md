@@ -1,16 +1,14 @@
 ---
 title: Adobe Experience Manager Mobile On-Demand
-description: 開始新的AEM Mobile應用程式體驗時，必須先整合角色，才可編輯內容。 請依照本頁面的說明開始使用AEM Mobile On-Demand Services。
-uuid: 175c609d-3cb8-4a1b-bfea-278df272e500
+description: 開始新的Adobe Experience Manager (AEM) Mobile應用程式體驗需要角色的內建性，才能準備好進行內容編輯。 請依照本頁面的說明開始使用AEM Mobile On-Demand Services。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: introduction
 content-type: reference
-discoiquuid: dc6891cd-19cc-4dff-8bda-a41ed8af8bfb
 exl-id: 4be199d8-963d-4807-b9bb-e23fa577c5f2
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 1%
 
 ---
@@ -19,11 +17,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
->如果您沒有使用AEM作為內容管理來源，請參閱 [AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>如果您沒有使用Adobe Experience Manager (AEM)作為內容管理來源，請參閱 [AEM Mobile On-demand Services說明](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 AEM提供數種工具，可讓您將內容整合至行動應用程式。
 
@@ -45,7 +43,7 @@ AEM Preflight應用程式可視為測試環境，可在發佈前預覽應用程�
 
 AEM Mobile只是構成完整AEM平台的支柱之一。
 
-開始新的AEM Mobile應用程式體驗時，必須先整合角色，才可編輯內容。 下列角色提供建立新AEM Mobile應用程式的起點：
+開始新的AEM Mobile應用程式體驗時，必須先整合角色，才可編輯內容。 下列角色提供建立AEM Mobile應用程式的起點：
 
 * **管理員**
 * **開發人員**
@@ -57,11 +55,11 @@ AEM Mobile只是構成完整AEM平台的支柱之一。
 
 ### 瞭解AEM Mobile應用程式控制面板 {#understanding-the-aem-mobile-application-dashboard}
 
-在瞭解角色和責任之前，使用者應該具備以下全面知識 **AEM Mobile控制中心** 或 **應用程式控制面板**. 按一下 [此處](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 以深入瞭解。
+在瞭解角色和責任之前，使用者應充分瞭解 **AEM Mobile控制中心** 或 **應用程式控制面板**. 按一下 [此處](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 以深入瞭解。
 
 ### AEM 管理員 {#aem-administrator}
 
-一個 ***AEM管理員*** 負責透過使用建立精靈建立新應用程式，或匯入現有應用程式，將新應用程式新增至AEM Mobile目錄。 使用AEM Mobile建立新應用程式的AEM管理員 *建立精靈* 通常會從我們現成的參考範例或（大多數情況下）建立的自訂應用程式範本中，選取其中一個所需的應用程式範本 *AEM開發人員。*
+一個 ***AEM管理員*** 負責透過使用建立精靈建立應用程式，或匯入現有應用程式，將應用程式新增至AEM Mobile目錄。 使用AEM Mobile建立應用程式的AEM管理員 *建立精靈* 通常會從Adobe現成的參考範例或（通常）建立的自訂應用程式範本中，選取其中一個所需的應用程式範本 *AEM開發人員。*
 
 使用AEM Mobile On-demand Services建立應用程式時，AEM管理員會負責下列工作：
 
@@ -74,7 +72,7 @@ AEM Mobile只是構成完整AEM平台的支柱之一。
 
 ## AEM開發人員 {#aem-developer}
 
-一個 **AEM開發人員** 延伸並建立自訂Web範本和元件，以讓*AEM Author *建立精美且吸引人的行動體驗。 這些範本和元件不僅已針對行動應用程式世界進行最佳化，而且可與裝置與全頻道服務端點的AEM伺服器（任何遠端伺服器）通訊。 AEM內建內容編輯器用於 *AEM作者* 在應用程式中建立豐富的相關體驗，包括與Adobe Marketing Cloud其他部分的整合。
+一個 **AEM開發人員** 延伸並建立自訂Web範本和元件，以讓*AEM Author *建立精美且吸引人的行動體驗。 這些範本和元件不僅已針對行動應用程式世界進行最佳化，而且可與裝置與全頻道服務端點的AEM伺服器（任何遠端伺服器）通訊。 AEM內建內容編輯器用於 *AEM作者* 以建立應用程式內豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
 
 使用AEM Mobile On-demand Services建立應用程式時，AEM開發人員會負責下列工作：
 
@@ -91,7 +89,7 @@ AEM Mobile只是構成完整AEM平台的支柱之一。
 
 ## AEM 作者 {#aem-author}
 
-一個 ***AEM作者* (或 *行銷人員*)**使用自訂開發或現成可用的範本和元件來新增和編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 AEM內建內容編輯器隨後由使用 *AEM作者* 在應用程式中建立豐富的相關體驗，包括與Adobe Marketing Cloud其他部分的整合。
+一個 ***AEM作者* (或 *行銷人員*)**使用自訂開發或現成可用的範本和元件來新增和編輯頁面、拖放元件，以及從DAM新增所有型別的媒體，包括影像、影片和文字片段（內容片段）。 AEM內建內容編輯器隨後由使用 *AEM作者* 以建立應用程式內豐富的相關體驗，包括與Adobe Experience Cloud其他部分的整合。
 
 使用AEM Mobile On-demand Services建立應用程式時，AEM作者必須瞭解下列主題：
 
