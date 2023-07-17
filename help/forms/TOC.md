@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
-source-wordcount: '3870'
+source-wordcount: '3881'
 ht-degree: 4%
 
 ---
@@ -127,14 +127,17 @@ ht-degree: 4%
    + [AEM Forms資料整合簡介](using/data-integration.md)
    + [設定資料來源](using/configure-data-sources.md)
    + [Microsoft Dynamics Odata設定](using/ms-dynamics-odata-configuration.md)
-   + [使用OAuth 2.0使用者端憑證流程的Salesforce整合](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [建立表單資料模型](using/create-form-data-models.md)
    + [使用表單資料模型](using/work-with-form-data-model.md)
    + [使用表單資料模型](using/using-form-data-model.md)
++ 最適化Forms — 核心元件 {#adaptive-forms-core-components}
+   + [為您的環境啟用核心元件](/help/forms/using/enable-adaptive-forms-core-components.md)
+   + [建立以Core Components為基礎的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
+   + [建立以核心元件為基礎的最適化Forms的主題](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
 + Adaptive Forms — 基本製作 {#adaptive-forms-basic-authoring}
    + [使用最適化表單的最佳作法](using/adaptive-forms-best-practices.md)
    + [建立最適化表單](using/creating-adaptive-form.md)
-   + [建立或新增調適型表單至 AEM Sites 頁面](using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+   + [建立或新增最適化表單至 AEM Sites 頁面](using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
    + [最適化表單片段](using/adaptive-form-fragments.md)
    + [設定提交動作](using/configuring-submit-actions.md)
    + [在最適化表單中使用驗證碼](using/captcha-adaptive-forms.md)
@@ -470,7 +473,7 @@ ht-degree: 4%
       + [設定與Acrobat Reader DC擴充功能搭配使用的逾時值](/help/forms/using/admin-help/setting-timeout-values-acrobat-reader.md)
       + [正在更新過期的Reader延伸服務憑證](/help/forms/using/admin-help/updating-expired-reader-extension-certificates.md)
    + 使用PDF產生器 {#work-with-pdf-generator}
-      + [使用PDF Generator簡介](/help/forms/using/admin-help/overview-5.md)
+      + [使用PDF產生器簡介](/help/forms/using/admin-help/overview-5.md)
       + [啟用多執行緒檔案轉換](/help/forms/using/admin-help/enabling-multi-threaded-file-conversions.md)
       + [設定Adobe PDF設定](/help/forms/using/admin-help/configuring-pdf-settings.md)
       + [正在設定安全性設定](/help/forms/using/admin-help/configuring-security-settings.md)
@@ -692,7 +695,6 @@ ht-degree: 4%
    + [無法還原CRX存放庫](/help/forms/using/restore-crx-repository.md)
    + [安裝AEM 6.5.15.0 Service Pack後，發生服務無法使用的錯誤](/help/forms/using/aem-service-pack-installation-solution.md)
    + [JBoss Linux環境上的AEM Forms JEE 6.5.15.0 Service Pack安裝問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
-   + [JEE WebLogic伺服器上的EAR部署失敗](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
 + 舊版檔案 {#legacy-documentation}
    + [使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料](developing/building-xml.md)
    + [在JEE自訂DSC上使用AEM Forms壓縮和解壓縮檔案](developing/compressing-decompressing-custom-dsc.md)

@@ -3,7 +3,7 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: d244fb50ad0f165d31bc51ee671b80bdd13c860e
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
 source-wordcount: '3777'
 ht-degree: 9%
@@ -52,13 +52,13 @@ ht-degree: 9%
 
 **AEM Forms**
 
-* **[AEM 頁面編輯器中的最適化表單](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)**：您現在可以使用 AEM 頁面編輯器快速建立多個表單，並將這些表單新增至您的 Sites 頁面。 此功能讓內容作者可使用最適化表單元件 (包括動態行為、驗證、資料整合、產生記錄文件和業務流程自動化) 的強大功能，在 Sites 頁面內建立順暢的資料擷取體驗。 您可以：
+* **[AEM 頁面編輯器中的最適化表單](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)**：您現在可以使用 AEM 頁面編輯器快速建立多個表單，並將這些表單新增至您的 Sites 頁面。此功能讓內容作者可使用最適化表單元件 (包括動態行為、驗證、資料整合、產生記錄文件和業務流程自動化) 的強大功能，在 Sites 頁面內建立順暢的資料擷取體驗。您可以：
    * 將表單元件拖放到 AEM Sites 編輯器或體驗片段中的最適化表單容器元件，即可建立最適化表單。
    * 使用 AEM Sites 編輯器中的最適化表單精靈，以便建立不屬於任何 Sites 頁面的表單，讓您能夠在多個頁面之間自由地重複使用這些表單。
-   * 將多個表單新增到 Sites 頁面，簡化用戶體驗並提供更大的彈性。
+   * 將多個表單新增到 Sites 頁面，簡化使用者體驗並提供更大的彈性。
 * **[Experience Manager Forms中支援reCAPTCHA Enterprise](/help/forms/using/captcha-adaptive-forms.md)**：在Experience Manager Forms中新增reCAPTCHA Enterprise支援，除了現有的Google reCAPTCHA v2支援外，還針對詐騙活動和垃圾郵件提供增強型保護。
 * **[透過Experience Manager Forms支援適用於政府的Adobe Acrobat Sign](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**：AEM Forms現在與適用於政府的Adobe Acrobat Sign整合（符合FedRAMP）。 這種整合能夠讓政府相關帳戶 (政府部門和機構) 在提交最適化表單時，享有等級更高的電子簽名合規性和安全性。藉由與政府適用之 Adobe Acrobat Sign 整合，在一些最重要的關鍵任務和敏感業務線，Adobe 的合作夥伴和政府客戶便可以在最適化表單使用電子簽名。這額外一層的安全性可確保所有電子簽名完全符合 FedRAMP 中等合規性，讓 Adobe 的政府客戶安心使用。
-* **[啟用Salesforce與Experience Manager Forms的整合以進行資料交換](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)**：使用OAuth 2.0使用者端憑證流程設定Experience Manager Forms與Salesforce應用程式之間的整合。 此功能可讓應用程式獲得安全且直接的驗證和授權，且無需使用者介入，即可進行順暢通訊。
+* **啟用Salesforce與Experience Manager Forms的整合以進行資料交換**：使用OAuth 2.0使用者端憑證流程設定Experience Manager Forms與Salesforce應用程式之間的整合。 此功能可讓應用程式獲得安全且直接的驗證和授權，且無需使用者介入，即可進行順暢通訊。
 * **最佳化及增強工作流程引擎功能**：將工作流程例項數目減到最少，以提高工作流程引擎效能。 除了 `COMPLETED` 和 `RUNNING` 狀態值，工作流程也支援三個新的狀態值： `ABORTED`， `SUSPENDED`、和 `FAILED`.
 
 

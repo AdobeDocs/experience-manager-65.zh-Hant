@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 85f423b98ff680d7ed7cdbdde65e2dec1cfe4c03
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2072'
 ht-degree: 4%
 
 ---
@@ -68,7 +68,7 @@ AEM Forms 6.5提供下列核心元件型Adaptive Forms的參考主題。
 
 ### 自訂主題的先決條件 {#prerequisites}
 
-* [為您的環境啟用調適型表單核心元件.](/help/forms/using/installing-core-components.md)
+* [為您的環境啟用調適型表單核心元件.](/help/forms/using/enable-adaptive-forms-core-components.md)
 
 * 安裝最新版本的 [Apache Maven。](https://maven.apache.org/download.cgi) Apache Maven是常用於Java™專案的組建自動化工具。 安裝最新版本可確保您擁有佈景主題自訂的必要相依性。
 
@@ -145,20 +145,17 @@ AEM Forms 6.5提供下列核心元件型Adaptive Forms的參考主題。
 
 1. 閇啟 `<your-theme-sources>/src/site/_variables.scss` 檔案進行編輯。
 1. 變更任何屬性的值。 例如，預設的錯誤顏色為紅色。 若要將錯誤顏色從紅色變更為藍色，請將 `$error`變數。 例如，`$error: #196ee5`。
+
+   ![範例：錯誤顏色設定為藍色](/help/forms/using/assets/theme-level-changes.png)
+
 1. 儲存並關閉檔案。
 
-<!--
-
-![Example: Error color set to blue](/help/forms/using/assets/variable-customization.png)
-
--->
 
 同樣地，您可以使用 `variable.scss` 檔案來設定字型系列和型別、主題和字型顏色、字型大小、主題間距、錯誤圖示、主題邊框樣式，以及影響多個最適化表單元件的更多變數。
 
 ##### 設定元件層級樣式 {#component-based-customization}
 
 您也可以選擇自訂特定Adaptive Form核心元件的字型、顏色、大小及其他CSS屬性，例如按鈕、核取方塊、容器、頁尾等。 透過編輯與特定元件相關聯的CSS檔案，您可以將其樣式與組織的品牌對齊。 若要自訂元件的樣式，請遵循下列步驟：
-
 
 1. 開啟檔案 `<your-theme-sources>/src/components/<component>/<component.scss>` 進行編輯。 例如，若要變更按鈕元件的字型顏色，請開啟 `<your-theme-sources>/src/components/button/button.scss`，檔案。
 1. 根據您的需求變更any的值。 例如，若要將滑鼠懸停時按鈕元件的顏色變更為綠色，請將 `color: $white` 中的屬性 `cmp-adaptiveform-button__widget:hover` 類別至十六進位代碼#12b453或任何其他綠色陰影。 最終程式碼如下所示：
@@ -326,9 +323,9 @@ AEM Forms 6.5提供下列核心元件型Adaptive Forms的參考主題。
 
 ## 另請參閱
 
-* [建立以Core Components為基礎的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [建立以Core Components為基礎的最適化表單](create-an-adaptive-form-core-components.md)
 * [使用規則編輯器將動態行為新增至表單](rule-editor.md)
 * [建立或自訂以核心元件為基礎的最適化Forms的主題](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [建立以核心元件為基礎的最適化Forms範本](template-editor.md)
-* [建立最適化表單或新增最適化表單至AEM Sites頁面或體驗片段](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [建立最適化表單或新增最適化表單至AEM Sites頁面或體驗片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 

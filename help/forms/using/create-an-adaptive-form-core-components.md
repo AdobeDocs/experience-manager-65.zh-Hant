@@ -9,7 +9,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 85f423b98ff680d7ed7cdbdde65e2dec1cfe4c03
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
 source-wordcount: '1869'
 ht-degree: 2%
@@ -30,13 +30,13 @@ ht-degree: 2%
 
 * [最適化Forms核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hant)：這些是標準化的資料擷取元件。 這些元件提供自訂功能、縮短開發時間，並降低數位註冊體驗的維護成本。 開發人員可以輕鬆自訂這些元件並設定其樣式。 Adobe建議運用這些現代且可擴充的元件來開發最適化Forms。
 
-* [Adaptive Forms Foundation元件](creating-adaptive-form.md)：這些是傳統（舊）資料擷取元件。 您可以繼續使用這些專案來編輯現有的基礎元件型最適化表單。 如果您要建立表單，Adobe建議使用  [最適化Forms核心元件](creating-adaptive-form-core-components.md) 以建立最適化Forms。
+* [Adaptive Forms Foundation元件](creating-adaptive-form.md)：這些是傳統（舊）資料擷取元件。 您可以繼續使用這些專案來編輯現有的基礎元件型最適化表單。 如果您要建立表單，Adobe建議使用  [最適化Forms核心元件](/help/forms/using/create-adaptive-form.md) 以建立最適化Forms。
 
 ## 先決條件
 
 您需要下列專案才能建立最適化表單：
 
-* **為您的環境啟用最適化Forms核心元件**：需要AEM Archetype專案版本41或更新版本，才能 [為您的環境啟用核心元件](/help/forms/using/installing-core-components.md). 為您的環境啟用核心元件時， **最適化Forms （核心元件）** 範本和畫布主題會新增至您的環境。
+* **為您的環境啟用最適化Forms核心元件**：需要AEM Archetype專案版本41或更新版本，才能 [為您的環境啟用核心元件](/help/forms/using/enable-adaptive-forms-core-components.md). 為您的環境啟用核心元件時， **最適化Forms （核心元件）** 範本和畫布主題會新增至您的環境。
 
 * **自適應表單範本**：範本提供基本結構，並定義調適型表單的外觀（版面配置和樣式）。 它有預先格式化的元件，包含特定屬性和內容結構。 它還提供定義主題和提交動作的選項。 主題定義外觀，提交動作定義提交最適化表單時要採取的動作。 例如，將收集的資料傳送至資料來源。 範本已命名 `blank` 支援OOTB：
 
@@ -46,7 +46,7 @@ ht-degree: 2%
 
   >[!NOTE]
   >
-  > 如果您沒有， **最適化Forms （核心元件）** 您環境上的範本， [為您的環境啟用最適化Forms核心元件](/help/forms/using/installing-core-components.md). 為您的環境啟用核心元件時， **最適化Forms （核心元件）** 範本已新增至您的環境。
+  > 如果您沒有， **最適化Forms （核心元件）** 您環境上的範本， [為您的環境啟用最適化Forms核心元件](/help/forms/using/enable-adaptive-forms-core-components.md). 為您的環境啟用核心元件時， **最適化Forms （核心元件）** 範本已新增至您的環境。
 
 * **最適化表單主題**：主題包含元件和面板的樣式詳細資訊。 樣式包含背景顏色、狀態顏色、透明度、對齊方式及大小等屬性。 套用主題時，指定的樣式會反映在相應的元件上。  此 `Canvas` 為您的環境啟用核心元件時，預設會新增主題。 您也可以 [下載和自訂參考主題](create-or-customize-themes-for-adaptive-forms-core-components.md).
 
@@ -91,7 +91,7 @@ ht-degree: 2%
 
    ![按一下扳手圖示以開啟最適化表單容器對話方塊，以設定提交動作](/help/forms/using/assets/adaptive-forms-submit-message.png)
 
-1. 選取並設定 **[!UICONTROL 提交動作]**，根據您的需求。 如需提交動作的詳細資訊，請參閱 [最適化表單提交動作](/help/forms/configuring-submit-actions.md)
+1. 選取並設定 **[!UICONTROL 提交動作]**，根據您的需求。 如需提交動作的詳細資訊，請參閱 [最適化表單提交動作](/help/forms/using/configuring-submit-actions.md)
 
 <!--
     
@@ -117,8 +117,8 @@ ht-degree: 2%
 
 您可以使用表單資料模型將表單連線至資料來源，以根據使用者動作傳送及接收資料。 您也可以將表單連線至JSON結構描述，以預先定義的格式接收提交的資料。 根據需求，將您的表單連結至JSON結構描述或表單資料模型：
 
-* [建立JSON結構描述並上傳至您的環境](/help/forms/adaptive-form-json-schema-form-model.md)
-* [建立表單資料模型](/help/forms/create-form-data-models.md)
+* [建立JSON結構描述並上傳至您的環境](/help/forms/using/adaptive-form-json-schema-form-model.md)
+* [建立表單資料模型](/help/forms/using/create-form-data-models.md)
 
 ### 為您的表單設定JSON結構描述或表單資料模型
 
@@ -141,7 +141,7 @@ ht-degree: 2%
 
 您可以使用預填服務，以使用現有資料自動填入最適化表單的欄位。 當使用者開啟表單時，這些欄位的值會預先填充。 您可以：
 
-* [建立自訂預填服務](/help/forms/prepopulate-adaptive-form-fields.md)
+* [建立自訂預填服務](/help/forms/using/prepopulate-adaptive-form-fields.md)
 * [使用表單資料模型預填服務](#fdm-prefill-service)
 
 ### 使用表單資料模型預填服務預先填入最適化表單的欄位 {#fdm-prefill-service}
@@ -171,6 +171,6 @@ ht-degree: 2%
 
 ## 另請參閱
 
-* [建立以Core Components為基礎的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
-* [建立最適化表單或新增最適化表單至AEM Sites頁面或體驗片段](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [建立以Core Components為基礎的最適化表單](create-an-adaptive-form-core-components.md)
+* [建立最適化表單或新增最適化表單至AEM Sites頁面或體驗片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 
