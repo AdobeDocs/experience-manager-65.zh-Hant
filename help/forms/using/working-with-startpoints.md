@@ -1,18 +1,14 @@
 ---
 title: 使用起點
-seo-title: Working with Startpoints
-description: 從Workbench中定義的行動裝置使用AEM Forms程式的步驟。
-seo-description: Steps to work with a AEM Forms process from your Mobile device defined in Workbench.
-uuid: 1c4b4c86-cbdb-4e72-b0eb-7f8a2f5dcdde
+description: 從Workbench中定義的行動裝置使用Adobe Experience Manager Forms程式的步驟。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
 exl-id: d5970f90-2899-43a5-a3a0-61a2c844d919
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
@@ -23,9 +19,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->當提及此概念時，術語起點、開始過程和形式可互換使用。
+>在提及此概念時，術語起點、開始流程和表單可互換使用。
 
-若要從AEM Forms應用程式起始程式，您必須有型別的起點 **Workspace** 在您的程式中。 此外，您必須選取 **[!UICONTROL 行動工作區中的可見性]** 起點的選項。
+若要從Adobe Experience Manager (AEM) Forms應用程式起始程式，您必須有型別的起點 **Workspace** 在您的程式中。 此外，您必須選取 **[!UICONTROL 在行動工作區中可見]** 起點的選項。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
@@ -46,6 +42,6 @@ ht-degree: 0%
 
 如果應用程式離線，表單及其資料會儲存在Outbox資料夾中。
 
-如果應用程式上線，則會將工作與AEM Forms伺服器同步，並指派給程式中指定的使用者。
+如果應用程式上線，則會與AEM Forms伺服器同步處理工作，並指派給程式中指定的使用者。
 
 若要使用您任務清單中的任務，請參閱 [開啟任務](/help/forms/using/open-task.md).

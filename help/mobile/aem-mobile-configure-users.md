@@ -1,16 +1,14 @@
 ---
 title: 設定您的使用者和使用者群組
 description: 請詳閱本頁面，瞭解使用者角色，以及如何設定使用者和群組，以支援Mobile On-Demand Services應用程式的撰寫和管理。
-uuid: 461e1725-41dd-4883-92b9-a7e175660401
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
-discoiquuid: c3c73e67-7f85-4308-b4cd-1b42d4f3f2d9
 exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '512'
 ht-degree: 1%
 
 ---
@@ -19,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 本章說明使用者角色，以及如何設定使用者和群組，以支援行動應用程式的編寫和管理。
 
@@ -31,7 +29,7 @@ ht-degree: 1%
 
 #### 群組設定 — 應用程式作者 {#group-configuration-app-authors}
 
-1. 建立名為「app-authors」的新使用者群組：
+1. 建立名為「app-authors」的使用者群組：
 
    導覽至「使用者」Admin Console： [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
@@ -43,7 +41,7 @@ ht-degree: 1%
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. 現在您已建立應用程式 — 作者使用者群組，您可以透過以下方式將個別團隊成員新增至此新群組： [使用者Admin console](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. 現在您已建立應用程式 — 作者使用者群組，您可以透過以下方式將個別團隊成員新增至此新群組： [使用者Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -66,11 +64,11 @@ app-admins群組的成員可以使用與應用程式作者相同的許可權來�
 >
 >許可權會決定AEM App Command Center中某些使用者動作的可用性。
 >
->您會注意到，某些選項不適用於應用程式作者，而僅適用於應用程式管理員。
+>請注意，某些選項不適用於應用程式作者且適用於應用程式管理員。
 
 ### 群組設定 — 應用程式管理員 {#group-configuration-app-admins}
 
-1. 建立名為app-admins的新群組。
+1. 建立名為app-admins的群組。
 1. 將下列群組新增至新的app-admins群組：
 
    * content-author
@@ -105,7 +103,7 @@ app-admins群組的成員可以使用與應用程式作者相同的許可權來�
 1. 匯出內容或上傳
 
    * （讀取） /etc/contentsync以存取匯出範本
-   * （讀取） /var上的，路徑在讀取時周遊
+   * （讀取） /var上的路徑在讀取時遍歷
    * （讀取、寫入、修改、刪除） /var/contentsync上的，以寫入、讀取和清除ContentSync快取匯出內容
 
 ### 其他資源 {#additional-resources}

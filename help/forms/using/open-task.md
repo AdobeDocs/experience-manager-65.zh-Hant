@@ -1,24 +1,20 @@
 ---
 title: 開啟任務
-seo-title: Opening a task
-description: 在您的AEM Forms應用程式中開啟任務的步驟。
-seo-description: Steps to open a task on your AEM Forms app.
-uuid: 3f543391-a62b-40ef-aa28-59b7f99554f1
+description: 在您的Adobe Experience Manager Forms應用程式中開啟任務的步驟。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
 exl-id: 08e267f3-7f90-4e75-aea0-2128e8eb7b30
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
 
 # 開啟任務 {#opening-a-task}
 
-如果AEM Forms應用程式與AEM Forms伺服器同步，您可以處理指派給您的任務。 任務是Workbench中定義的工作流程或AEM工作流程編輯器中的步驟。
+如果Adobe Experience Manager (AEM) Forms應用程式與AEM Forms伺服器同步，您可以處理指派給您的任務。 任務是Workbench中定義的工作流程或AEM工作流程編輯器中的步驟。
 
 其他表單會儲存為「草稿」標籤中的草稿。 另請參閱 [儲存草稿](/help/forms/using/save-as-draft.md).
 
