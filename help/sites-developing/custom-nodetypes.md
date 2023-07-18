@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
-source-git-commit: 939132e8b461b51e1c49237e481243bcc5de3bf6
+source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1866'
 ht-degree: 9%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 9%
 
 由於Adobe Experience Manager (AEM)以Sling為基礎，並使用JCR存放庫，因此這兩者提供的節點型別都可供使用：
 
-* [JCR節點型別](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
+* [JCR節點型別](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling節點型別](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
-除此之外， AEM提供一系列自訂節點型別。
+除了這些節點型別外，AEM還提供一系列自訂節點型別。
 
 ## 稽核 {#audit}
 
@@ -145,7 +145,7 @@ ht-degree: 9%
 
 **說明**
 
-定義將節點標示為虛擬頁面的mixin型別。 這表示它們可以調整為頁面和WCM編輯支援。
+定義將節點標示為虛擬頁面的mixin型別。 換言之，這表示它們可以適應頁面和WCM編輯支援。
 
 **定義**
 
@@ -161,8 +161,8 @@ ht-degree: 9%
 * `@prop jcr:description`  — 此頁面的說明。
 * `@prop cq:template`  — 用來建立頁面的範本路徑。
 * `@prop cq:allowedTemplates`  — 用來決定允許範本之路徑的規則運算式清單。
-* `@prop pageTitle`  — 標題通常顯示在 `<title>` 標籤之間。
-* `@prop navTitle`  — 導覽中常用的標題。
+* `@prop pageTitle`  — 標題顯示在 `<title>` 標籤之間。
+* `@prop navTitle`  — 導覽中使用的標題。
 * `@prop hideInNav`  — 指定是否要在導覽中隱藏頁面。
 * `@prop onTime`  — 此頁面生效的時間。
 * `@prop offTime`  — 此頁面失效的時間。
@@ -197,7 +197,7 @@ ht-degree: 9%
 * `@node jcr:content`  — 新頁面的預設內容。
 * `@node icon.png`  — 包含特徵圖示的檔案。
 * `@node thumbnail.png`  — 儲存特徵縮圖影像的檔案。
-* `@node workflows`  — 自動指派工作流程設定。 設定將遵循以下結構：
+* `@node workflows`  — 自動指派工作流程設定。 設定遵循下列結構：
    * `+ workflows`
       * `+ name1`
          * `- cq:path`
@@ -232,7 +232,7 @@ ht-degree: 9%
 * `@prop dialogPath`  — 主要對話方塊路徑（對話方塊的替代方式）。
 * `@node design_dialog`  — 設計對話方塊。
 * `@prop cq:cellName`  — 設計儲存格的名稱。
-* `@prop cq:isContainer`  — 指出這是否為容器元件。 這會強制使用子元件的儲存格名稱，而非路徑名稱。 例如， `parsys` 是容器元件。 如果此值未定義，則會根據是否存在 `cq:childEditConfig`.
+* `@prop cq:isContainer`  — 指出是否為容器元件。 強制使用子元件的儲存格名稱，而非路徑名稱。 例如， `parsys` 是容器元件。 如果此值未定義，則會根據是否存在 `cq:childEditConfig`.
 * `@prop cq:noDecoration`  — 如果為true，則無裝飾 `div` 包含此元件時會繪製標籤。
 * `@node cq:editConfig`  — 定義編輯列引數的設定。
 * `@node cq:childEditConfig`  — 子元件繼承的編輯設定。
@@ -240,7 +240,7 @@ ht-degree: 9%
 * `@node icon.png` — 包含特徵圖示的檔案。
 * `@node thumbnail.png`  — 儲存特徵縮圖影像的檔案。
 * `@prop allowedParents`  — 規則運算式模式，可決定允許作為父元件的元件路徑。
-* `@prop allowedChildren`  — 規則運算式模式，用來決定允許做為子元件的元件路徑。
+* `@prop allowedChildren`  — 規則運算式模式，可決定允許做為子元件的元件路徑。
 * `@node virtual`  — 包含反映用於元件拖放之虛擬元件的子節點。
 * `@prop componentGroup`  — 元件群組的名稱，用於元件拖放。
 * `@node cq:infoProviders`  — 包含子節點，每個子節點都有屬性 `className` 這指的是 `PageInfoProvider`.
@@ -314,9 +314,9 @@ ht-degree: 9%
 
 **說明**
 
-設定元件的一個放置目標。 此節點的名稱將用作拖放的ID。
+設定元件的一個放置目標。 此節點名稱會作為用於拖放的ID。
 
-* `@prop accept`  — 此放置目標接受的MIME型別清單；例如 `["image/*"]`
+* `@prop accept`  — 此放置目標接受的MIME型別清單；例如， `["image/*"]`
 * `@prop groups`  — 接受來源的拖放群組清單。
 * `@prop propertyName`  — 用來儲存參考的屬性名稱。
 
@@ -332,7 +332,7 @@ ht-degree: 9%
 
 **說明**
 
-定義虛擬CQ元件。 這些目前僅用於新元件拖放精靈。
+定義虛擬CQ元件。 目前僅用於新元件拖放精靈。
 
 * `@prop jcr:title`  — 此元件的標題。
 * `@prop jcr:description`  — 此元件的說明。
@@ -340,8 +340,8 @@ ht-degree: 9%
 * `@node cq:childEditConfig` — 編輯子元件繼承的設定。
 * `@node icon.png`  — 包含特徵圖示的檔案。
 * `@node thumbnail.png`  — 儲存特徵縮圖影像的檔案。
-* `@prop allowedParents`  — 規則運算式模式，用來決定允許做為父元件的元件路徑。
-* `@prop allowedChildren`  — 規則運算式模式，用來決定允許做為子元件的元件路徑。
+* `@prop allowedParents`  — 規則運算式模式，可決定允許作為父元件的元件路徑。
+* `@prop allowedChildren`  — 規則運算式模式，可決定允許做為子元件的元件路徑。
 * `@prop componentGroup`  — 元件拖放的元件群組名稱。
 
 **定義**
@@ -444,7 +444,7 @@ DAM資產。
 
 **說明**
 
-`cq:attributes` 是ContentBus版本標籤的節點型別。 此節點只有一系列屬性；其中三個是預先定義的「已建立」、「csd」和「時間戳記」。
+節點型別 `cq:attributes` 用於ContentBus版本標籤。 此節點只有一系列屬性；其中三個為預先定義的「created」、「csd」和「timestamp」。
 
 * `@prop created (long) mandatory copy`  — 建立版本資訊的時間戳記，通常是前一個版本的入庫時間或建立頁面的時間。
 * `@prop csd (string) mandatory copy` - csd標準屬性，頁面節點的cq：csd屬性副本
@@ -485,9 +485,9 @@ DAM資產。
 
 輪詢設定。
 
-* `@prop source (String) mandatory`  — 資料來源URI，此為必要項，不得為空白
-* `@prop target (String)`  — 儲存從資料來源擷取之資料的目標位置。 這是選用專案，預設值為cq：PollConfig節點。
-* `@prop interval (Long)`  — 輪詢資料來源中新資料或更新資料的間隔（秒）。 這是選擇性的，預設值為30分鐘（1800秒）。
+* `@prop source (String) mandatory`  — 資料來源URI。 必要且不得為空白。
+* `@prop target (String)`  — 儲存從資料來源擷取之資料的目標位置。 選用且預設為cq：PollConfig節點。
+* `@prop interval (Long)`  — 輪詢資料來源中新資料或更新資料的間隔（秒）。 選填，預設值為30分鐘（1800秒）。
 * [建立Adobe Experience Manager的自訂資料匯入工具服務](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **定義**
@@ -578,7 +578,7 @@ MailerService節點型別。 郵件程式會使用具有此mixin的節點作為�
 
 **說明**
 
-定義LiveSyncCanceled mixin。 取消即時副本（受控）節點的LiveSync行為，該節點可能因其父項之一而包含在LiveRelationship中。
+定義LiveSyncCanceled mixin。 取消即時副本（受控）節點的LiveSync行為，該節點可能因其父項之一而與LiveRelationship有關。
 
 * `@prop cq:isCancelledForChildren`  — 定義是否取消LiveSync；也適用於子系。
 
@@ -1062,7 +1062,7 @@ Wiki屬性
 
 **說明**
 
-自動指派工作流程設定。 設定將遵循以下結構：
+自動指派工作流程設定。 設定遵循以下結構：
 * `workflows`
    * `+ name1`
       * `- cq:path`

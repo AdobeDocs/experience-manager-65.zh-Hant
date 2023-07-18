@@ -1,21 +1,17 @@
 ---
 title: 社群評分和預算
-seo-title: Communities Scoring and Badges
 description: AEM Communities評分和徽章可讓您識別並獎勵社群成員
-seo-description: AEM Communities scoring and badges lets you identify and reward community members
-uuid: d73683df-a413-4b3c-869c-67568bfdfcf6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
 workflow-type: tm+mt
-source-wordcount: '2868'
+source-wordcount: '2853'
 ht-degree: 2%
 
 ---
@@ -44,39 +40,36 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 
 徽章會放置在成員的名稱下，以表示他們在社群中的角色或地位。 徽章可以顯示為影像或名稱。 當顯示為影像時，名稱會包含為協助工具的替代文字。
 
-依預設，徽章位於存放庫中
+依預設，徽章位於以下位置的存放庫中：
 
 * `/libs/settings/community/badging/images`
 
 若儲存在其他位置，應讓所有人都能讀取這些檔案。
 
-在UGC中，會根據徽章的指派或贏取規則來區分徽章。 目前，指派的徽章顯示為文字，而贏取的徽章則顯示為影像。
+在UGC中會區分徽章，無論其是根據規則指派或贏得。 目前，指派的徽章顯示為文字，而贏取的徽章則顯示為影像。
 
 ### 徽章管理UI {#badge-management-ui}
 
-社群 [徽章主控台](/help/communities/badges.md) 提供新增自訂徽章的功能，當成員獲得（授予）或在社群中擔任特定角色（已指派）時，徽章可以針對該成員顯示。
+社群 [徽章主控台](/help/communities/badges.md) 可讓您新增自訂徽章，當成員贏取（授予）或在社群中擔任特定角色（已指派）時，徽章可針對該成員顯示。
 
 ### 指派的徽章 {#assigned-badges}
 
 管理員會根據社群成員在社群中的角色，將角色型徽章指派給社群成員。
 
-指派（和等待）的徽章會儲存在選取的中 [SRP](/help/communities/srp.md) 和無法直接存取。 在GUI可用之前，指派角色型徽章的唯一方法是使用程式碼或cURL。 如需cURL指示，請參閱標題為 [指派和撤銷徽章](#assign-and-revoke-badges).
+指派（和授予）徽章會儲存在選取的 [SRP](/help/communities/srp.md) 和無法直接存取。 在GUI可用之前，指派角色型徽章的唯一方法是使用程式碼或cURL。 如需cURL指示，請參閱標題為 [指派和撤銷徽章](#assign-and-revoke-badges).
 
 此版本包含三個角色型預算：
 
 * **版主**
-
-   `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
+  `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
 
 * **群組管理員**
-
-   `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
+  `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
 
 * **有特殊許可權的成員**
+  `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
-   `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
-
-   ![已指派的徽章](assets/assigned-badges.png)
+  ![已指派的徽章](assets/assigned-badges.png)
 
 ### 獎勵徽章 {#awarded-badges}
 
@@ -90,18 +83,15 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 此版本包含三個獎勵型徽章：
 
 * **金級**
-
-   `/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
+  `/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
 * **銀級**
-
-   `/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
+  `/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
 * **銅級**
+  `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
-   `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
-
-   ![獎勵徽章](assets/awarded-badges.png)
+  ![獎勵徽章](assets/awarded-badges.png)
 
 >[!NOTE]
 >
@@ -135,7 +125,7 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 
 套用至已啟用徽章的元件的規則為目前節點或其上階的規則。
 
-如果節點的型別為 `cq:Page` （建議使用），然後使用CRXDE|Lite將屬性新增至其 `jcr:content` 節點。
+如果節點的型別為 `cq:Page` （建議使用），然後使用CRXDE|Lite，將屬性新增至其 `jcr:content` 節點。
 
 | **屬性** | **類型** | **說明** |
 |---|---|---|
@@ -150,7 +140,7 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 
 評分和徽章規則僅適用於已透過編輯中的元件設定來啟用徽章的元件例項 [製作模式](/help/communities/author-communities.md).
 
-布林值屬性， `allowBadges`，啟用/停用元件例項的徽章顯示。 它可在 [元件編輯對話方塊](/help/communities/author-communities.md) 對於論壇、QnA和評論元件，請透過標示為的核取方塊進行 **顯示徽章**.
+布林值屬性， `allowBadges`，啟用/停用元件例項的徽章顯示。 它可在 [元件編輯對話方塊](/help/communities/author-communities.md) 適用於論壇、QnA和評論元件，請透過標示為 **顯示徽章**.
 
 #### 範例：論壇元件例項的allowBadges {#example-allowbadges-for-forum-component-instance}
 
@@ -162,18 +152,18 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 
 ## 評分規則 {#scoring-rules}
 
-評分規則是評分的基礎，用於獎勵徽章。
+評分規則是獎勵徽章進行評分的基礎。
 
-簡單來說，每個評分規則都是一或多個子規則的清單。 評分規則會套用至社群網站內容，以識別啟用徽章時要套用的規則。
+每個評分規則都是一或多個子規則的清單。 評分規則會套用至社群網站內容，以識別啟用徽章時要套用的規則。
 
 評分規則會繼承，但不會累加。 例如：
 
 * 如果頁面2包含評分規則2，且其上階page1包含評分規則1。
-* page2元件上的動作將會同時叫用rule1和rule2。
+* page2元件上的動作會同時叫用rule1和rule2。
 * 如果兩個規則包含相同專案的適用子規則 `topic/verb`：
 
-   * 只有規則2的子規則會影響分數。
-   * 兩個子規則的分數不會相加。
+   * 只有來自rule2的子規則會影響分數。
+   * 兩個子規則的分數都不會新增。
 
 如果有多個評分規則，則會分別維護每個規則的分數。
 
@@ -183,7 +173,7 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 
 >[!NOTE]
 >
->最佳實務：為各個評分規則指定唯一名稱。
+>最佳實務：唯一命名每個評分規則。
 >
 >評分規則名稱應在全域內是唯一的；不應以相同名稱結尾。
 >
@@ -202,11 +192,11 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 * 涉及哪些特定的社群功能？
 * 會獲得多少點數？
 
-根據預設，分數會授與採取動作的會員，除非子規則將內容擁有者指定為接收分數( `forOwner`)。
+依預設，會授與採取動作的成員積分，除非子規則將內容擁有者指定為接收積分( `forOwner`)。
 
 每個子規則可包含在一或多個評分規則中。
 
-子規則的名稱通常遵循以下模式： *主旨* ， *物件* 和 *動詞*. 例如：
+子規則的名稱通常遵循以下模式：使用 *主旨*， *物件*、和 *動詞*. 例如：
 
 * member-comment-create
 * member-receive-vote
@@ -268,7 +258,7 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
       </ul> </li>
      <li>若為「進階」，會根據品質和數量指定評分引擎
       <ul>
-       <li>需要 <a href="/help/communities/advanced.md">其他套件</a></li>
+       <li>需要 <a href="/help/communities/advanced.md">額外套件</a></li>
       </ul> </li>
      <li>預設值為「basic」</li>
     </ul> </td>
@@ -301,14 +291,14 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 
 ### 啟用自訂評分規則 {#activating-custom-scoring-rules}
 
-發佈時需要安裝作者環境中對評分規則或子規則所做的任何變更或新增。
+在製作環境中對評分規則或子規則所做的任何變更或新增都必須安裝在發佈上。
 
 ## 徽章規則 {#badging-rules}
 
 徽章規則透過指定以下內容，將評分規則連結至徽章：
 
 * 評分規則
-* 必須等待特定徽章的分數
+* 授予特定徽章所需的分數
 
 徽章規則是型別的節點 `cq:Page` 具有屬性 `jcr:content` 將評分規則與分數和徽章相關聯的節點。
 
@@ -316,7 +306,7 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 
 * `1|/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
-   * 銅級徽章可獲得1分。
+   * 銅級徽章可因成績一分而授予。
 
 * `60|/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
@@ -324,7 +314,7 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 
 * `80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
-   * 當累積80點時，就會獲得金級徽章。
+   * 當累積80分時，會授予金級徽章。
 
 徽章規則會與評分規則配對，這會決定如何累積分數。 請參閱標題為的區段 [將規則套用至內容](#apply-rules-to-content).
 
@@ -377,13 +367,13 @@ AEM Communities評分和徽章功能可讓您識別及獎勵社群成員。
 **附註:**
 
 * `rules` 節點的型別為cq：Page。
-* `rules` 應位於具有所有人讀取許可權的存放庫位置。
+* `rules` 應該位在儲存庫位置，且每個人都有讀取許可權。
 
    * 無論位置為何，規則名稱必須是唯一的。
 
 ### 啟用自訂徽章規則 {#activating-custom-badging-rules}
 
-在製作環境中對徽章規則或影像所做的任何變更或新增都需要安裝在發佈上。
+在製作環境中對徽章規則或影像所做的任何變更或新增都必須安裝在發佈上。
 
 ## 指派和撤銷徽章 {#assign-and-revoke-badges}
 
@@ -411,7 +401,6 @@ cURL -i -XPOST-H *頁首* -u *登入* -F *操作* -F *徽章* *member-profile-ur
 >
 >* 在以下情況下，可以參考作者例項： [通道服務](/help/communities/users.md#tunnel-service) 已啟用。
 >* 可能是晦澀的隨機名稱 — 請參閱 [安全性檢查清單](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) 關於可授權的ID。
-
 
 ### 範例： {#examples}
 
@@ -445,7 +434,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 >[!NOTE]
 >
->新的布林值屬性， `allowBadges`，啟用/停用元件例項的徽章顯示。 它可以在更新中設定 [元件編輯對話方塊](/help/communities/author-communities.md) 透過標籤為的核取方塊 **顯示徽章**.
+>新的布林值屬性， `allowBadges`，啟用/停用元件例項的徽章顯示。 可在更新中設定 [元件編輯對話方塊](/help/communities/author-communities.md) 透過標籤為的核取方塊 **顯示徽章**.
 
 **[行事曆元件](/help/communities/calendar.md)**
 社交事件 `topic`= com/adobe/cq/social/calendar
@@ -550,13 +539,13 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 對於自訂元件，SocialEvent會具現化，以將元件的事件記錄為 `actions` 發生於 `topic`.
 
-若要支援評分，SocialEvent必須覆寫方法 `getVerb()` 以便適當的 `verb` 會針對每個傳回 `action`. 此 `verb` 針對動作傳回的可能是常用的(例如 `POST`)或專用於元件的元件(例如 `ADD RATING`)。 有一個 *n-1* 關係介於 `actions` 和 `verbs`.
+若要支援評分，SocialEvent需要覆寫方法 `getVerb()` 以便適當的 `verb` 會針對每個傳回 `action`. 此 `verb` 針對動作傳回的可能是常用的(例如 `POST`)或專用於元件的元件(例如 `ADD RATING`)。 有一個 *n-1* 關係介於 `actions` 和 `verbs`.
 
 ## 疑難排解 {#troubleshooting}
 
 ### 徽章未出現 {#badges-are-not-appearing}
 
-如果評分和徽章規則已套用至網站的內容，但沒有任何活動等待徽章，請確保已為該元件的執行個體啟用徽章。
+如果評分和徽章規則已套用至網站的內容，但未授予任何活動的徽章，請確定已為該元件的執行個體啟用徽章。
 
 另請參閱 [啟用元件的預算](#enable-badges-for-component).
 
@@ -607,7 +596,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 ![test-scoring-badging](assets/test-scoring-badging.png)
 
-接下來，確保論壇和評論元件允許顯示徽章：
+接下來，確定論壇和評論元件允許顯示徽章：
 
 * 再次使用CRXDE Lite。
 * 瀏覽至論壇元件

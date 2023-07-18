@@ -1,14 +1,12 @@
 ---
 title: 推播通知
 description: 請依照本頁面的說明操作，瞭解如何在Adobe Experience Manager Mobile應用程式中使用推播通知。
-uuid: 0ed8b183-ef81-487f-8f35-934d74ec82af
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: ed8c51d2-5aac-4fe8-89e8-c175d4ea1374
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
 workflow-type: tm+mt
 source-wordcount: '3280'
 ht-degree: 1%
@@ -19,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 能夠透過重要通知立即提醒您的AEM Mobile應用程式使用者，對行動應用程式及其行銷活動的價值至關重要。 我們在此處說明允許應用程式接收推播通知所需執行的步驟，以及如何設定推播並從AEM Mobile傳送推播至安裝在電話上的應用程式。 此外，本節將說明如何設定 [深層連結](#deeplinking) 功能加入推播通知。
 
