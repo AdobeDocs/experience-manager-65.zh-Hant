@@ -1,6 +1,6 @@
 ---
 title: 透過關聯的AEM內容豐富產品資料
-description: 瞭解行銷人員如何使用Adobe Experience Manager的關聯內容豐富產品資料。 AEM中的資產和體驗片段等內容可以與商業產品相關聯。 關聯後，這些內容型別可以動態地插入至產品頁面或類別頁面中的預留位置。 這開啟了行銷人員以影像和視訊等額外內容鎖定特定產品頁面的廣泛可能性。
+description: 瞭解行銷人員如何藉由將行銷內容動態新增至產品頁面，以Adobe Experience Manager的關聯內容豐富產品資料。 這為行銷人員提供了廣泛的可能性，讓他們能使用影像和視訊等額外內容鎖定特定產品頁面。
 sub-product: Commerce
 version: 6.5
 doc-type: feature-video
@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 7065
 thumbnail: 333205.jpg
 exl-id: 1a069fbc-c036-419a-b585-6aa43e15de16
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: a600acb7d65fbfa1806ef582642a6c5ac7859890
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '350'
 ht-degree: 2%
 
 ---
