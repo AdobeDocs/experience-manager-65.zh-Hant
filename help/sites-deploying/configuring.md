@@ -1,54 +1,50 @@
 ---
 title: 基本設定概念
-seo-title: Basic Configuration Concepts
-description: 瞭解如何設定AEM。
-seo-description: Learn how to configure AEM.
-uuid: edcdd4bd-5917-417e-8913-40d488383ea9
+description: 瞭解如何設定Adobe Experience Manager。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 2673ea92-1651-4b1b-9aac-f4ba8b36782e
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '2112'
 ht-degree: 1%
 
 ---
 
 # 基本設定概念{#basic-configuration-concepts}
 
-Adobe Experience Manager (AEM)已安裝所有引數的預設設定，可讓其「開箱即用」。 不過，您可以根據自己的特定需求設定AEM。
+Adobe Experience Manager (AEM)已安裝所有引數的預設設定，這些設定可讓其「立即可用」。 不過，您可以根據自己的特定需求設定AEM。
 
 AEM有許多方面可以設定：
 
-* 部分為 [通常為每個專案安裝設定](#primary-configuration-considerations) 而且必須經過稽核，確認其是否適用於您的專案。
+* 部分為 [通常為每個專案安裝設定](#primary-configuration-considerations) 且必須檢閱以確認其是否適用於您的專案。
 * [其他設定](#further-configuration-considerations) 可能是通用的，但不是強制性的；與功能或系統效能和穩定性相關。
 * 只有AEM的某些選用功能才需要其他功能（這些功能會與適當的功能一起記錄）。
 
-視特定設定而定，這些變更可使用以下任一項來進行：
+視特定設定而定，您可使用下列任一專案來進行這些變更：
 
 * **Adobe CQ Web Console**
 
-   這是設定OSGi套件組合和服務的標準位置。
+  這是設定OSGi套件組合和服務的標準位置。
 
-   另請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得進一步詳細資訊和建議作法。
+  另請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得進一步詳細資訊和建議作法。
 
 * **存放庫**
 
-   存放庫中提供OSGi設定的子集。 這樣可確保複製或複製存放庫內容會重新建立相同的設定。 您也可以根據執行模式將自己的設定新增到存放庫。
+  存放庫中提供OSGi設定的子集。 這樣可確保複製或複製存放庫內容會重新建立相同的設定。 您也可以根據執行模式將自己的設定新增到存放庫。
 
-   另請參閱 [存放庫中的OSGi設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 尤其是 [新增設定至存放庫](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository) 以取得更多詳細資料。
+  另請參閱 [存放庫中的OSGi設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 尤其是 [新增設定至存放庫](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository) 以取得更多詳細資料。
 
 * **檔案系統**
 
-   檔案系統內有一些組態檔。
+  檔案系統內有一些組態檔。
 
 * **AEM WCM**
 
-   您可以在AEM WCM本身中設定各種面向，許多情況下都會使用 [工具](/help/sites-administering/tools-consoles.md) 主控台；例如，復寫代理。
+  您可以在AEM WCM本身中設定各種面向，許多情況下都會使用 [工具](/help/sites-administering/tools-consoles.md) 主控台；例如，復寫代理。
 
 >[!NOTE]
 >
@@ -58,9 +54,7 @@ AEM有許多方面可以設定：
 
 >[!NOTE]
 >
->設定AEM很簡單，但您必須注意：
->
->某些變更可能會對應用程式產生重大影響。 因此，在開始設定AEM之前，請確定您具備必要的經驗和知識，並只進行您知道必要的變更。 透過OSGi主控台所做的任何變更包括 **立即** 套用至執行中的系統（不需要重新啟動）。
+>AEM設定簡單明瞭。 但是，請注意，某些變更可能會對應用程式產生重大影響。 因此，在開始設定AEM之前，請確定您具備必要的經驗和知識，並只進行您知道必要的變更。 透過OSGi主控台所做的任何變更包括 **立即** 套用至執行中的系統（不需要重新啟動）。
 
 ## 主要設定考量事項 {#primary-configuration-considerations}
 
@@ -70,7 +64,7 @@ AEM有許多方面可以設定：
 
 ### 安全性檢查清單 {#security-checklist}
 
-中列出了幾個主要設定問題 [安全性檢查清單](/help/sites-administering/security-checklist.md). 請確定您已閱讀本文，並採取安裝所需的任何動作。
+中列出了幾個主要設定問題 [安全性檢查清單](/help/sites-administering/security-checklist.md). 請務必閱讀本文，並採取安裝所需的任何動作。
 
 ### 設定預設UI — 觸控最佳化或Classic {#configuring-the-default-ui-touch-optimized-or-classic}
 
@@ -87,33 +81,33 @@ AEM中有兩個可供使用的UI：
 
 ### IPv4和IPv6 {#ipv-and-ipv}
 
-AEM的所有元素（例如存放庫、Dispatcher等）都可以安裝在IPv4和IPv6網路中。
+AEM的所有元素（例如存放庫和Dispatcher）都可以安裝在IPv4和IPv6網路中。
 
 操作是順暢的，因為不需要特殊設定，需要時您只需使用適合您網路型別的格式來指定IP位址。
 
-這表示當需要指定IP位址時，您可以（視需要）從以下選取：
+這表示當必須指定IP位址時，您可以視需要從下列專案中選擇：
 
 * ipv6位址
 
-   例如 `https://[ab12::34c5:6d7:8e90:1234]:4502`
+  例如 `https://[ab12::34c5:6d7:8e90:1234]:4502`
 
 * ipv4位址
 
-   例如 `https://123.1.1.4:4502`
+  例如 `https://123.1.1.4:4502`
 
 * 伺服器名稱
 
-   例如， `https://www.yourserver.com:4502`
+  例如， `https://www.yourserver.com:4502`
 
 * 預設大小寫為 `localhost` 將針對IPv4和IPv6網路安裝進行解譯
 
-   例如， `http://localhost:4502`
+  例如， `http://localhost:4502`
 
 ### 版本清除 {#version-purging}
 
-在標準安裝中，每當您啟動頁面時（更新內容後），AEM都會建立頁面或節點的新版本。您也可以使用根據請求建立其他版本 **版本設定** 索引標籤。 所有這些版本都儲存在存放庫中，並可在必要時還原。
+在標準安裝中，AEM會在您啟動頁面時（更新內容後）建立頁面或節點的版本。 您也可以使用，依要求建立其他版本 **版本設定** 索引標籤。 所有這些版本都儲存在存放庫中，並可在必要時還原。
 
-這些版本永遠不會清除，因此存放庫大小會隨著時間增長，因此需要管理。
+這些版本永遠不會清除，因此存放庫大小會隨著時間而增加，因此必須加以管理。
 
 另請參閱 [版本清除](/help/sites-deploying/version-purging.md) 以取得完整詳細資訊，特別是 [版本管理員](/help/sites-deploying/version-purging.md#version-manager) 瞭解如何設定AEM在建立新版本時清除舊版本的詳細資訊。
 
@@ -129,7 +123,7 @@ AEM可讓您設定：
 
 ### 執行模式 {#run-modes}
 
-執行模式可讓您針對特定目的調整AEM執行個體；例如製作或發佈、測試、開發或內部網路等。
+執行模式可讓您針對特定目的調整AEM執行個體。 例如，作者或發佈、測試、開發或內部網路等。
 
 這是透過定義每個執行模式的設定引數集合來完成的。 所有執行模式都會套用一組基本組態引數，然後您就可以根據特定環境的目的調整其他組。 然後視需要套用這些引數。
 
@@ -154,7 +148,7 @@ AEM可讓您設定：
 
 另請參閱 [資源對應](/help/sites-deploying/resource-mapping.md) 以取得更多詳細資料。
 
-### 復寫、反向復寫和復寫代理程式 {#replication-reverse-replication-and-replication-agents}
+### 復寫、反向復寫及復寫代理程式 {#replication-reverse-replication-and-replication-agents}
 
 復寫代理程式是AEM的核心，因為可用來：
 
@@ -182,17 +176,17 @@ LDAP驗證會發生在存放庫層級，因此直接由存放庫處理。 如需
 
 ### 設定Dispatcher {#configuring-the-dispatcher}
 
-Dispatcher 是 Adobe Experience Manager 的快取及/或負載平衡工具，可搭配企業級網頁伺服器使用。
+Dispatcher是Adobe Experience Manager的快取或負載平衡工具，或兩者兼而有之。 它可與企業級Web伺服器一起使用。
 
-另請參閱 [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) 以取得完整詳細資訊，特別是 [設定Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) 以取得進一步的設定詳細資料。
+另請參閱 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 以取得完整詳細資訊，特別是 [設定Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant) 以取得進一步的設定詳細資料。
 
 ### 設定AEMLiveCycle聯結器 {#configuring-aem-livecycle-connector}
 
-隨著AEM Doc Services和AEM Doc Security的發行，我們現在能夠叫用LiveCycle檔案服務來轉譯XFA表單、將檔案轉換為PDF以及原則保護檔案。 請閱讀 [AEMLiveCycle聯結器](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) 以取得更多詳細資料。
+隨著AEM Doc Services和AEM Doc Security的發行，AEM現在能夠叫用LiveCycle檔案服務來轉譯XFA表單、將檔案轉換為PDF並原則保護檔案。 另請參閱 [AEMLiveCycle聯結器](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) 以取得更多詳細資料。
 
 ### 工作解除安裝與拓撲管理 {#job-offloading-and-topology-administration}
 
-[解除安裝](/help/sites-deploying/offloading.md) 將處理工作分散到拓撲中的Experience Manager執行個體。 透過解除安裝，您可以使用特定Experience Manager執行個體來執行特定型別的處理。 專業化的處理可讓您最大限度地使用可用的伺服器資源。
+[解除安裝](/help/sites-deploying/offloading.md) 在拓撲中的Experience Manager執行個體之間分配處理任務。 透過解除安裝，您可以使用特定Experience Manager執行個體來執行特定型別的處理。 專業化的處理可讓您最大限度地使用可用的伺服器資源。
 
 拓撲是參與解除安裝的鬆散耦合Experience Manager叢集。 叢集由一或多個Experience Manager伺服器執行處理（單一執行處理視為叢集）組成。
 
@@ -244,17 +238,17 @@ Scaling a CQ installation correctly depends greatly on the details of your parti
 
 另請參閱 [靜態物件的到期日](/help/sites-deploying/expiration-static-objects.md) 以取得更多詳細資料。
 
-### Java程式中的開啟檔案 {#open-files-in-the-java-process}
+### 在Java™程式中開啟檔案 {#open-files-in-the-java-process}
 
-每個Java程式都可以存取檔案 — 這需要系統資源。 因此，上限被定義為每個程式可同時存取多少檔案。 如果超過此限制，則可能會發生例外狀況錯誤。
+每個Java™處理序都可以存取檔案 — 這需要系統資源。 因此，上限被定義為允許每個處理程式同時存取多少檔案。 如果超過此限制，可能會發生例外狀況錯誤。
 
-如果AEM處理序超過此上限，則訊息「 `too many open files`「」將顯示在 `error.log`.
+如果AEM處理序超過此上限，則訊息「 `too many open files`「」顯示於 `error.log`.
 
-若要避免此類例外，您需要：
+若要避免此類例外，請執行下列動作：
 
 1. 檢查您的AEM程式正在使用多少個開啟的檔案。
 
-   如何進行這項檢查將取決於執行個體所在的平台。 您可以使用lsof (Unix)或Process Explorer (Windows)等公用程式。
+   此檢查取決於執行個體的平台。 您可以使用lsof (UNIX®)或Process Explorer (Windows)等公用程式。
 
    在開發和測試期間應監控此值，以：
 
@@ -301,7 +295,7 @@ CQ傳送電子郵件通知給使用者，該使用者：
 
 ### 啟用頁面印象 {#enabling-page-impressions}
 
-頁面印象會顯示在 **曝光次數** classic UI siteadmin console的欄。 若要啟用頁面印象的擷取，您需要設定：
+頁面印象會顯示在 **曝光次數** classic UI siteadmin console的欄。 若要啟用頁面印象的擷取，請設定下列專案：
 
 * 在發佈執行個體上：
 
@@ -309,8 +303,8 @@ CQ傳送電子郵件通知給使用者，該使用者：
 
 * 在作者執行個體上：
 
-   * [Adobe頁面曝光數追蹤](/help/sites-deploying/osgi-configuration-settings.md)
+   * [Adobe頁面曝光數追蹤器](/help/sites-deploying/osgi-configuration-settings.md)
 
 >[!CAUTION]
 >
->作者環境上Adobe頁面曝光數追蹤器的設定將允許向追蹤服務提出匿名請求。
+>作者環境上的Adobe頁面曝光數追蹤器設定允許向追蹤服務提出匿名請求。

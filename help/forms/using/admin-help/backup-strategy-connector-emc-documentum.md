@@ -6,16 +6,16 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: b759b936-5907-4311-a5cc-60f321476368
-source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
+source-git-commit: 939132e8b461b51e1c49237e481243bcc5de3bf6
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '157'
 ht-degree: 0%
 
 ---
 
 # EMC Documentum®使用者的Connector備份策略 {#backup-strategy-for-connector-for-emc-documentum-users}
 
-如果您已安裝Connector for EMC Documentum®，則除了本章中的說明外，您的備份與復原策略還必須包括備份（或復原）安裝各個ECM系統的電腦。 (請參閱ECM Documentum®檔案)。
+如果您已安裝Connector for EMC Documentum®，除了本章的說明以外，您的備份與復原策略還必須包括備份（或復原）安裝ECM系統的電腦。 (請參閱ECM Documentum®檔案)。
 
 使用ECM存放庫並執行下列工作，備份您的AEM表單環境：
 

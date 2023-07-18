@@ -1,19 +1,15 @@
 ---
 title: 選擇加入彙總使用狀況統計資料的收集
-seo-title: Opting Into Aggregated Usage Statistics Collection
 description: 瞭解如何選擇加入彙總的使用情況統計資料。
-seo-description: Learn how to opt into aggregated usage statistics.
-uuid: 8bd0b870-4bea-42e1-8179-e900164591b6
 contentOwner: raiman
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 075f53cc-146b-4eea-bfbb-54beaed97915
 docset: aem65
 exl-id: e626bdd8-b7ae-4de5-a0a0-47fb74c080d7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '300'
 ht-degree: 2%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 2%
 
 ## 簡介 {#introduction}
 
-您可以傳送有關您如何與AEM互動的Adobe統計資料，以協助改善Adobe Marketing Cloud。 此資訊不包含有關您公司網站訪客的任何資料，且僅會用於協助Adobe交付、支援和改善您的使用者體驗。
+您可以傳送有關您如何與Adobe Experience Cloud (AEM)互動的Adobe統計資料，以協助改善Adobe Experience Manager。 此資訊不包含有關您公司網站訪客的任何資料，且僅用於協助Adobe交付、支援和改善您的使用者體驗。
 
 您可以使用Touch UI或Web Console來選擇使用狀況統計資料的收集。
 
@@ -34,7 +30,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->您也可以隨時使用 [網頁主控台](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) 或是不選取AEM選擇加入畫面上的選擇加入選項。
+>您隨時可以使用以下任一方式選擇退出 [網頁主控台](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) 或是不選取AEM選擇加入畫面上的選擇加入選項。
 
 ## 使用觸控式UI選擇加入 {#opt-in-by-using-the-touch-ui}
 
