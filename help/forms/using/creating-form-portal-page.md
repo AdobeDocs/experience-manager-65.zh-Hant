@@ -11,14 +11,19 @@ discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1641'
-ht-degree: 1%
+source-wordcount: '1663'
+ht-degree: 2%
 
 ---
 
 # 建立表單入口網站頁面{#creating-a-forms-portal-page}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM 6.5 | 本文 |
 
 Forms入口網站元件可讓Web開發人員在使用Adobe Experience Manager (AEM)編寫的網站上建立和自訂表單入口網站。 如需表單入口網站的快速總覽，請參閱 [在入口網站上發佈表單的簡介](../../forms/using/introduction-publishing-forms.md).
 

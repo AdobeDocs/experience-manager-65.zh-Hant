@@ -10,14 +10,20 @@ discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 feature: Adaptive Forms
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '2398'
+source-wordcount: '2421'
 ht-degree: 0%
 
 ---
 
 # 調適型表單中的表格{#tables-in-adaptive-forms}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/adaptive-forms-tables.html) |
+| AEM 6.5 | 本文 |
+
 
 使用表格是呈現複雜資料的一種有效、簡化且有條理的方式。 它可協助使用者輕鬆識別資訊，並以有序的列和欄排列提供輸入。 金融服務和政府機構的大部分表單都需要大型資料表才能輸入數字和執行計算。
 
@@ -75,7 +81,7 @@ AEM Forms的側邊欄中的元件瀏覽器提供表格元件，可讓您以最�
 
 1. 選取表格並點選 ![cmppr](assets/cmppr.png) 以在側欄中檢視其屬性。
 1. 在「協助工具」標籤中指定摘要。
-1. 按一下 **完成**.
+1. 按一下&#x200B;**「完成」**。
 
 ### 排序表格中的欄 {#sortcolumnstable}
 
@@ -137,7 +143,7 @@ AEM Forms的側邊欄中的元件瀏覽器提供表格元件，可讓您以最�
 
 1. 選取表格列並點選 ![cmppr](assets/cmppr.png).
 1. 在「重複設定」索引標籤中，指定最小和最大計數，以限制表格中的列數。
-1. 按一下 **完成**.
+1. 按一下&#x200B;**「完成」**。
 
 在執行階段，您將會看到 **+** 和 *-* 按鈕以新增或刪除列。
 
@@ -312,4 +318,4 @@ XFA表格元素對應至表格元件，可在調適型表單中立即運作。 X
 * 如果您在編寫XSD型表格時上下行動資料列，提交表單時產生的資料XML中會顯示表格資料列的某些資料遺失。
 * 預設表格中的每個主體儲存格都有與其關聯的預先定義元素名稱。 如果您以最適化表單新增另一個表格，新表格中的預設內文儲存格將具有與第一個表格相同的元素名稱。 在這種情況下，提交表單時產生的資料將僅包含其中一個表格的預設內文儲存格中的資料。 因此，請務必重新命名預設內文儲存格的元素名稱，以使其在表格中保持唯一，並避免資料遺失。
 
-   請注意，這僅適用於預設的內文儲存格。 如果您在表格中新增更多列或欄，將會自動為非預設內文儲存格產生唯一的元素名稱。
+  請注意，這僅適用於預設的內文儲存格。 如果您在表格中新增更多列或欄，將會自動為非預設內文儲存格產生唯一的元素名稱。

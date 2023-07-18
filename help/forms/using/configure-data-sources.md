@@ -10,14 +10,20 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: db4b432a95856302eb2e80b6386eee557d6afd17
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2112'
+ht-degree: 1%
 
 ---
 
 # 設定資料來源{#configure-data-sources}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html) |
+| AEM 6.5 | 本文 |
+
 
 ![資料整合](do-not-localize/data-integeration.png)
 
@@ -51,7 +57,6 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
    >
    > 1. 前往https://&#39;[伺服器]：[連線埠]&#39;/system/console/crypto.
    > 1. 在 **[!UICONTROL 純文字]** 欄位，指定要加密和點選的密碼或任何字串 **[!UICONTROL Protect]**.
-
    >
    >加密的文字會顯示在「受保護的文字」欄位中，您可以在設定中指定該欄位。
 
@@ -131,7 +136,8 @@ RESTful Web服務可使用以下方式描述： [Swagger規格](https://swagger.
       * 配置： REST API使用的傳輸通訊協定。 下拉式清單中顯示的配置型別數目，取決於Swagger來源中定義的配置。
       * 主機：提供REST API之主機的網域名稱或IP位址。 它是必填欄位。
       * 基本路徑：所有API路徑的URL首碼。 此為選用欄位。\
-         如有需要，請編輯這些欄位的預先填入值。
+        如有需要，請編輯這些欄位的預先填入值。
+
    * 選取驗證型別 — 無、OAuth2.0([授權代碼](https://oauth.net/2/grant-types/authorization-code/)， [使用者端認證](https://oauth.net/2/grant-types/client-credentials/))、基本驗證、API金鑰、自訂驗證或相互驗證 — 以存取RESTful服務，並相應地提供驗證的詳細資訊。
 
    如果您選取 **[!UICONTROL API金鑰]** 由於是驗證型別，請指定API金鑰的值。 API金鑰可作為請求標頭或查詢引數傳送。 從以下選項中選取其中一個選項： **[!UICONTROL 位置]** 下拉式清單，並在 **[!UICONTROL 引數名稱]** 欄位中輸入。
@@ -176,10 +182,10 @@ RESTful Web服務可使用以下方式描述： [Swagger規格](https://swagger.
    * 服務端點. 在此欄位中指定值，以覆寫WSDL中提到的服務端點。
    * 選取驗證型別 — 無、OAuth2.0([授權代碼](https://oauth.net/2/grant-types/authorization-code/)， [使用者端認證](https://oauth.net/2/grant-types/client-credentials/))、基本驗證、自訂驗證、X509 Token或相互驗證 — 以存取SOAP服務，並相應地提供驗證的詳細資訊。
 
-      如果您選取 **[!UICONTROL X509 Token]** 以「驗證」型別，設定X509憑證。 如需詳細資訊，請參閱 [設定憑證](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
+     如果您選取 **[!UICONTROL X509 Token]** 以「驗證」型別，設定X509憑證。 如需詳細資訊，請參閱 [設定憑證](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
 在中指定X509憑證的KeyStore別名 **[!UICONTROL 金鑰別名]** 欄位。 指定驗證請求保持有效的時間（以秒為單位），並位於 **[!UICONTROL 存留時間]** 欄位。 或者，選取以簽署訊息本文或時間戳記標頭，或兩者皆簽署。
 
-      如果您選取 **[!UICONTROL 相互驗證]** 做為驗證型別，請參閱 [RESTful和SOAP Web服務的憑證式相互驗證](#mutual-authentication).
+     如果您選取 **[!UICONTROL 相互驗證]** 做為驗證型別，請參閱 [RESTful和SOAP Web服務的憑證式相互驗證](#mutual-authentication).
 
 1. 點選 **[!UICONTROL 建立]** 建立SOAP Web服務的雲端設定。
 

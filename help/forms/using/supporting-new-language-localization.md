@@ -12,14 +12,19 @@ docset: aem65
 feature: Adaptive Forms
 role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 0%
+source-wordcount: '815'
+ht-degree: 1%
 
 ---
 
 # 支援最適化表單本地化的新地區設定{#supporting-new-locales-for-adaptive-forms-localization}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html) |
+| AEM 6.5 | 本文 |
 
 ## 關於地區設定字典 {#about-locale-dictionaries}
 
@@ -38,9 +43,8 @@ ht-degree: 0%
 * 依指定順序檢視下列引數：
 
    * 請求引數 `afAcceptLang`
-若要覆寫使用者的瀏覽器地區設定，您可以傳遞 
-`afAcceptLang` 要求引數以強制地區設定。 例如，下列URL將強制以日文地區設定呈現表單：
-      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+若要覆寫使用者的瀏覽器地區設定，您可以傳遞 `afAcceptLang` 要求引數以強制地區設定。 例如，下列URL將強制以日文地區設定呈現表單：
+     `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
    * 為使用者設定的瀏覽器地區設定，這在使用請求的指定 `Accept-Language` 標頭。
 
@@ -73,7 +77,7 @@ AEM Forms目前支援英文(en)、西班牙文(es)、法文(fr)、義大利文(i
 
 ### 新增地區設定至指南本地化服務 {#add-a-locale-to-the-guide-localization-service-br}
 
-1. 前往 `https://'[server]:[port]'/system/console/configMgr`.
+1. 前往 `https://'[server]:[port]'/system/console/configMgr`。
 1. 按一下以編輯 **指導本地化服務** 元件。
 1. 將您想要新增的區域設定新增至支援的區域設定清單。
 
@@ -95,7 +99,7 @@ I18N.js
 
 ### 為地區設定新增最適化表單使用者端資料庫 {#add-adaptive-form-client-library-for-a-locale-br}
 
-建立型別的節點 `cq:ClientLibraryFolder` 在 `etc/<folderHierarchy>`，類別為 `guides.I18N.<locale>` 和相依性為 `xfaforms.3rdparty`， `xfaforms.I18N.<locale>` 和 `guide.common`.&quot;
+建立型別的節點 `cq:ClientLibraryFolder` 在 `etc/<folderHierarchy>`，類別為 `guides.I18N.<locale>` 和相依性 `xfaforms.3rdparty`， `xfaforms.I18N.<locale>` 和 `guide.common`.&quot;
 
 將下列檔案新增至使用者端程式庫：
 

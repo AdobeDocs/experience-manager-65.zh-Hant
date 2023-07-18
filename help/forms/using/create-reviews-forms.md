@@ -8,14 +8,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 docset: aem65
 feature: Adaptive Forms
-source-git-commit: 0ca7d76d0f5a3e440e5df9c986e3bb0efec368c1
+exl-id: 9ca4fcd6-3eb0-4fc1-a09c-e4ad532bbed0
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 0%
+source-wordcount: '673'
+ht-degree: 2%
 
 ---
 
 # 建立和管理表單的稽核{#creating-and-managing-reviews-to-forms}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-reviews-forms.html) |
+| AEM 6.5 | 本文 |
 
 ## 評論 {#review}
 
@@ -39,7 +45,6 @@ ht-degree: 0%
    >* 管理員可以存取與表單使用者相關聯的任何群組。
    >* 服務使用者群組無法供選取檢閱。
 
-
 ### 設定稽核時發生的動作 {#actions-that-occur-when-a-review-is-set-up}
 
 本節說明建立或設定稽核時會發生什麼情況。
@@ -59,7 +64,6 @@ ht-degree: 0%
 >
 >* 只能修改正在進行的稽核。
 >* 無法修改已完成的稽核。
-
 
 1. 導覽至表單索引標籤並選取表單。
 
@@ -111,4 +115,5 @@ ht-degree: 0%
    1. **檢閱者**：對於每個稽核者，與稽核相關的未完成任務會終止。 任務在檢閱者的「通知」區段中不再顯示為「待定」。
    1. **發起人**：指派給檢閱發起人的任務已標籤為完成。 任務會從稽核發起人的Notification區段中移除。
    1. **全部**：評論會顯示在「先前的評論」區段中。 無法新增更多註解。
+
    ![檢閱完成](assets/review-complete-imgg.png)

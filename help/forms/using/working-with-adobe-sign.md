@@ -11,14 +11,20 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 66674f0e2621d8786ab4d662cddad373122d8b51
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '3855'
-ht-degree: 0%
+source-wordcount: '3878'
+ht-degree: 1%
 
 ---
 
 # 使用 [!DNL Adobe Sign] 在最適化表單中{#using-adobe-sign-in-an-adaptive-form}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/use-adobe-sign/working-with-adobe-sign.html) |
+| AEM 6.5 | 本文 |
+
 
 [!DNL Adobe Sign] 啟用最適化表單的電子簽章工作流程。 電子簽章可改善處理法律、銷售、薪資、人力資源管理等領域檔案的工作流程。
 

@@ -10,14 +10,19 @@ discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 feature: Form Data Model
 exl-id: 16b76265-9ec4-4993-9ac0-b7aef1b1e5f1
-source-git-commit: e4aaef48ce7d6e49e9a76f78a74b7dea127f6cce
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '4165'
+source-wordcount: '4187'
 ht-degree: 0%
 
 ---
 
 # 使用表單資料模型{#work-with-form-data-model}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model.html) |
+| AEM 6.5 | 本文 |
 
 ![資料整合](do-not-localize/data-integeration.png)
 
@@ -204,10 +209,9 @@ ht-degree: 0%
    >[!NOTE]
    >
    >* 如果您使用靜態範本，請將head.jsp覆蓋在：
-      >  `/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+   >  `/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
    >* 如果您使用可編輯的範本，請覆蓋aftemplatedpage.jsp：
-      >  `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`
-
+   >  `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`
 
 1. 設定 [!DNL paramMap] 請求屬性的。 例如，將下列程式碼加入apps資料夾的.jsp檔案中：
 

@@ -10,14 +10,19 @@ discoiquuid: 627507f5-1ffc-48f8-8cc9-5dbc5e409ae3
 docset: aem65
 feature: Form Data Model
 exl-id: 90cc9452-e107-4e57-80a3-f44f0bde132e
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 0%
+source-wordcount: '1227'
+ht-degree: 1%
 
 ---
 
 # Microsoft Dynamics OData設定{#microsoft-dynamics-odata-configuration}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/ms-dynamics-odata-configuration.html) |
+| AEM 6.5 | 本文 |
 
 ![資料整合](assets/data-integeration.png)
 
@@ -100,7 +105,7 @@ Microsoft Dynamics使用宣告式驗證，向外部使用者提供對Microsoft D
 
    * `Client-ID` 是您可以使用任何GUID產生器產生的使用者端ID。
    * `redirect-uri` 是AEM Forms上Microsoft Dynamics OData雲端服務的URL。 與AEM Forms套件一起安裝的預設雲端服務會部署在以下URL：
-      `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
+     `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
 1. 執行以下命令以授與AD FS電腦上的存取權：
 

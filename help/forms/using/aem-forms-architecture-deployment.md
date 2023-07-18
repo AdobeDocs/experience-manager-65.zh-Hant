@@ -11,14 +11,19 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
 role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '2460'
+source-wordcount: '2481'
 ht-degree: 0%
 
 ---
 
 # AEM Forms的架構和部署拓撲 {#architecture-and-deployment-topologies-for-aem-forms}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/aem-forms-cloud-service-architecture.html) |
+| AEM 6.5 | 本文 |
 
 ## 架構 {#architecture}
 
@@ -74,9 +79,9 @@ OSGi上的AEM Forms和JEE上的AEM Forms都有工作流程功能。 您可以在
 * **處理從Publish執行個體到達的原始表單資料：** 這主要是透過AEM工作流程在處理執行個體上達成，此工作流程會在資料到達時觸發。 工作流程可以使用提供的現成可用表單資料模型步驟，將資料或檔案封存到適當的資料存放區。
 * **安全儲存表單資料**：處理作業會針對與使用者隔離的原始表單資料，提供防火牆後的存放庫。 Author執行個體的表單設計人員和Publish執行個體的一般使用者都無法存取此存放庫。
 
-   >[!NOTE]
-   >
-   >Adobe建議使用協力廠商資料存放區來儲存最終處理的資料，而非使用AEM存放庫。
+  >[!NOTE]
+  >
+  >Adobe建議使用協力廠商資料存放區來儲存最終處理的資料，而非使用AEM存放庫。
 
 * **對從Publish執行個體到達的對應資料進行儲存和後處理：** AEM工作流程會針對對應的字母定義執行選擇性後續處理。 這些工作流程可將最終處理的資料儲存至適當的外部資料存放區。
 
@@ -95,7 +100,7 @@ OSGi上的AEM Forms和JEE上的AEM Forms都有工作流程功能。 您可以在
 
 計畫僅使用Document Services或Document Security功能的AEM Forms客戶可擁有類似於以下顯示的拓撲。 此拓撲建議使用單一AEM Forms例項。 如有需要，您也可以建立AEM Forms伺服器的叢集或陣列。 當大部分使用者以程式設計方式存取AEM Forms伺服器的功能，且透過使用者介面的干預最小時，建議使用此拓撲。 此拓撲有助於檔案服務的批次處理操作。 例如，每天使用輸出服務建立數百份不可編輯的PDF檔案。
 
-雖然AEM Forms可讓您從單一伺服器設定並執行所有功能，但您仍應執行容量規劃、負載平衡，並為生產環境中的特定功能設定專用伺服器。 例如，在使用PDF產生器服務的環境中，每天轉換數千頁並新增數位簽名以限制對檔案的存取，請為PDF產生器服務和數位簽名功能設定單獨的AEM Forms伺服器。 它有助於提供最佳效能，並獨立擴充伺服器。
+雖然AEM Forms可讓您從單一伺服器設定並執行所有功能，但您仍應執行容量規劃、負載平衡，並為生產環境中的特定功能設定專用伺服器。 例如，在使用PDF Generator服務每天轉換數千頁並新增數位簽名以限制存取檔案的環境中，請為PDF Generator服務和數位簽名功能設定單獨的AEM Forms伺服器。 它有助於提供最佳效能，並獨立擴充伺服器。
 
 ![基本功能](assets/basic-features.png)
 
@@ -142,6 +147,6 @@ OSGi上的AEM Forms和JEE上的AEM Forms都有工作流程功能。 您可以在
 
 計畫僅使用document services功能的AEM Forms客戶可擁有類似於以下所示的拓撲。 此拓撲建議在OSGi伺服器上使用AEM Forms叢集。 當大部分使用者以程式設計（使用API）方式存取AEM Forms伺服器的功能，且透過使用者介面的干預最小時，建議使用此拓撲。 此拓撲在多個軟體使用者端案例中相當實用。 例如，使用PDF產生器服務來依需求建立PDF檔案的多個使用者端。
 
-雖然AEM Forms可讓您從單一伺服器設定並執行所有功能，但您應執行容量規劃、負載平衡，並為生產環境中的特定功能設定專用伺服器。 例如，若環境使用PDF產生器服務每天轉換數千頁頁面，並使用多個調適型表單來擷取資料，請為PDF產生器服務和調適型表單功能設定個別的AEM Forms伺服器。 它有助於提供最佳效能，並獨立擴充伺服器。
+雖然AEM Forms可讓您從單一伺服器設定並執行所有功能，但您應執行容量規劃、負載平衡，並為生產環境中的特定功能設定專用伺服器。 例如，在使用PDF Generator服務每天轉換數千頁以及多個調適型表單來擷取資料的環境中，請為PDF Generator服務和調適型表單功能設定個別的AEM Forms伺服器。 它有助於提供最佳效能，並獨立擴充伺服器。
 
 ![offline-api型處理](assets/offline-api-based-processing.png)

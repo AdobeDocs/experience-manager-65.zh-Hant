@@ -10,14 +10,20 @@ topic-tags: author, interactive-communications
 discoiquuid: 43362643-69cd-4006-a613-f998c79eeddc
 feature: Adaptive Forms
 exl-id: 00ee7929-649f-4cbb-be79-ba13ac73a16d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
 
 # 在AEM sites頁面中內嵌最適化表單或互動式通訊 {#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-page}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/embed-adaptive-form-aem-sites.html) |
+| AEM 6.5 | 本文 |
+
 
 ## 概觀 {#overview}
 
@@ -62,10 +68,10 @@ AEM Forms提供可新增至網站頁面的元件。 AEM Forms容器元件可讓�
       * **感謝訊息**：使用RTF編輯器撰寫訊息，以在表單提交時顯示。 只有當您選擇顯示感謝訊息時，才可使用此選項。
       * **感謝頁面**：瀏覽並選取表單提交時顯示的頁面。 只有當您選擇顯示感謝頁面時，才可使用此選項。
       * **提交時重新整理頁面**：啟用以重新整理包含內嵌最適化表單的頁面，以顯示感謝頁面。 否則，感謝頁面會取代AEM Forms容器中的最適化表單，而不會重新整理頁面。 只有當您選擇顯示感謝頁面時，才可使用此選項。
+
    * **主題**：選取定義最適化表單或互動式通訊元件樣式的主題。 樣式包含外觀屬性，例如字型樣式、背景顏色、尺寸和對齊方式。
    * **高度**：指定容器的高度。 保留空白以自動調整容器大小。
    * **CSS使用者端資源庫**：指定CSS使用者端資料庫的路徑。
-
 
 1. 儲存設定。 最適化表單或互動式通訊現在內嵌在頁面中。
 

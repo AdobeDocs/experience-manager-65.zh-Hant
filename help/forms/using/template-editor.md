@@ -11,14 +11,21 @@ discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
 feature: Adaptive Forms
 exl-id: d7287ee7-fb4e-4d47-b37e-0a9260344070
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1964'
-ht-degree: 0%
+source-wordcount: '1987'
+ht-degree: 1%
 
 ---
 
 # 最適化表單範本{#adaptive-form-templates}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/template-editor.html) |
+| AEM 6.5 | 本文 |
+
+
 
 當您編寫表單時，可在編輯器中新增欄位和元件以定義表單結構、內容和動作。 您可以在「 」中新增欄位和元件 `guideRootPanel` 表單容器的。 使用範本編輯器，您可以建立包含作者可用來建立表單的基本結構和初始內容的範本。
 

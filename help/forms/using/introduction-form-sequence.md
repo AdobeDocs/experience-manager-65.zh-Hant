@@ -11,14 +11,20 @@ discoiquuid: 0f335ea0-504f-4cc0-b97b-c3fc715bcc2e
 docset: aem65
 feature: Adaptive Forms
 exl-id: 1333c6cb-15cc-429b-a13e-5d23afdee69a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 0%
+source-wordcount: '538'
+ht-degree: 2%
 
 ---
 
 # 多步驟表單序列簡介{#introduction-to-multi-step-form-sequence}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/introduction-form-sequence.html) |
+| AEM 6.5 | 本文 |
+
 
 最適化表單可讓表單作者輕鬆建立多步驟資料擷取體驗。 隨附內建支援，可建立多個面板，以及將每個面板與不同導覽模式建立關聯。 表單作者可將邏輯區段中的表單欄位分組，並將群組表示為面板。 面板之間的整體導覽會使用面板配置來控制。 作者可以選擇以不同的版面配置來排列面板，例如，使用「精靈」版面配置按順序放置，或使用「索引標籤」版面配置以臨機操作方式放置。 如需面板配置的相關資訊，請參閱 [調適型表單的版面配置功能](../../forms/using/layout-capabilities-adaptive-forms.md).
 
@@ -30,7 +36,7 @@ ht-degree: 0%
 
 以您需要建立表單填寫、驗證、簽署和確認步驟的序列的使用案例為例。 建立此類序列的步驟如下：
 
-1. 定義表單範本並新增必要面板。 請注意，序列中的每個步驟都應該有一個面板。 不過，您可以在面板中包含子面板。
+1. 定義表單範本並在其中新增必要面板。 請注意，序列中的每個步驟都應該有一個面板。 不過，您可以在面板中包含子面板。
 
    在此範例中，我們可以新增下列面板：
 
@@ -42,8 +48,8 @@ ht-degree: 0%
 
       * Adobe Document Cloud eSign服務
       * 草寫簽名
-   * **確認**：此變數包含 **摘要** 在使用者簽署表單並到達序列中的確認（摘要）步驟後，顯示確認表單提交的訊息的元件。 作者可以設定「摘要」元件的文字、顯示感謝訊息、顯示產生PDF的連結等。
 
+   * **確認**：此變數包含 **摘要** 在使用者簽署表單並到達序列中的確認（摘要）步驟後，顯示確認表單提交的訊息的元件。 作者可以設定「摘要」元件的文字、顯示感謝訊息、顯示產生PDF的連結等。
 
 1. 選取根面板的版面配置為 **[!UICONTROL 精靈]**.
 1. 完成其餘步驟以建立表單範本。 如需詳細資訊，請參閱 [建立自訂最適化表單範本](../../forms/using/custom-adaptive-forms-templates.md).

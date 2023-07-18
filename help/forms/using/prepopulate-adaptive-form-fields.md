@@ -10,14 +10,19 @@ discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 feature: Adaptive Forms
 exl-id: 29cbc330-7b3d-457e-ba4a-7ce6091f3836
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '2169'
+source-wordcount: '2191'
 ht-degree: 0%
 
 ---
 
 # 預填自適應表單欄位{#prefill-adaptive-form-fields}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/prepopulate-adaptive-form-fields.html) |
+| AEM 6.5 | 本文 |
 
 ## 簡介 {#introduction}
 
@@ -25,7 +30,7 @@ ht-degree: 0%
 
 ## 預填資料的結構 {#the-prefill-structure}
 
-調適型表單可以混合有已繫結和未繫結的欄位。 繫結欄位是從「內容尋找器」索引標籤拖曳的欄位，且包含非空白 `bindRef` 「欄位編輯」對話方塊中的屬性值。 未繫結欄位是從Sidekick的元件瀏覽器直接拖曳，並且有空白 `bindRef` 值。
+調適型表單可以混合有已繫結和未繫結的欄位。 繫結欄位是從「內容尋找器」索引標籤拖曳的欄位，且包含非空白 `bindRef` 「欄位編輯」對話方塊中的屬性值。 未繫結欄位是直接從Sidekick的元件瀏覽器拖曳而來，而且是空的 `bindRef` 值。
 
 您可以預先填寫最適化表單的繫結和未繫結欄位。 預填資料包含afBoundData和afUnBoundData區段，以預填最適化表單的繫結和未繫結欄位。 此 `afBoundData` 區段包含繫結欄位和面板的預填資料。 此資料必須符合關聯的表單模型結構描述：
 
@@ -244,6 +249,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
    * file:///C:/Users/public/Document/Prefill/.&#42;
    * https://localhost:8000/somesamplexmlfile.xml
+
    >[!NOTE]
    >
    >依預設，所有型別的Adaptive Forms （XSD、XDP、JSON、FDM和無表單模型型）都允許透過crx檔案進行預填。 只有JSON和XML檔案才允許預填。
@@ -384,8 +390,9 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
    1. 啟用Configuration.af.clientside.datamerge.enabled.name選項
 * 若要從命令列啟用或停用：
    * 若要啟用，請執行下列cURL命令：
-      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+     `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
    * 若要停用，請執行下列cURL命令：
-      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
-   若要充分利用在使用者端預先填入資料選項，請更新您的預先填入服務以返回 [FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) 和 [自訂內容](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)
+     `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+
+  若要充分利用在使用者端預先填入資料選項，請更新您的預先填入服務以返回 [FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) 和 [自訂內容](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)

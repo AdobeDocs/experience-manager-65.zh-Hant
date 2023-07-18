@@ -11,14 +11,19 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 10%
+source-wordcount: '919'
+ht-degree: 11%
 
 ---
 
 # AEM Forms簡介{#introduction-to-aem-forms}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html) |
+| AEM 6.5 | 本文 |
 
 如需AEM Forms最新功能和增強功能的相關資訊，請參閱 [AEM Forms的新功能](../../forms/using/whats-new.md).
 

@@ -5,14 +5,20 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1718'
-ht-degree: 3%
+source-wordcount: '1741'
+ht-degree: 5%
 
 ---
 
 # 使用JSON結構描述建立調適型表單 {#creating-adaptive-forms-using-json-schema}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/adaptive-form-json-schema-form-model.html) |
+| AEM 6.5 | 本文 |
+
 
 ## 必備條件 {#prerequisites}
 
@@ -632,7 +638,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
    <td><p><strong> 結構描述屬性</strong></p> </td>
    <td><p><strong>資料類型</strong></p> </td>
    <td><p><strong>說明</strong></p> </td>
-   <td><p><strong>Component</strong></p> </td>
+   <td><p><strong>元件</strong></p> </td>
   </tr>
   <tr>
    <td><p><code>maximum</code></p> </td>

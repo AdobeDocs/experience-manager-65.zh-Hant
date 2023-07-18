@@ -6,16 +6,22 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 240ed4d8-b21b-46eb-80a9-9e8093b77235
-source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
 
 # 在入口網站上發佈表單的簡介{#introduction-to-publishing-forms-on-a-portal}
 
-## AEM Forms Portal元件概觀 {#aem-forms-portal-components-overview}
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM 6.5 | 本文 |
+
+
+## AEM Forms入口網站元件概觀 {#aem-forms-portal-components-overview}
 
 在典型的以表單為中心的入口網站部署情境中，表單開發和入口網站開發是兩個分離的活動。 當表單設計人員將表單設計和儲存在存放庫時，網頁開發人員會建立網站應用程式以列出表單並處理表單提交。 Forms會複製到Web層，因為Forms存放庫和Web應用程式之間沒有通訊。
 

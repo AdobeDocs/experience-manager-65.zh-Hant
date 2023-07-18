@@ -9,16 +9,22 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 0%
+source-wordcount: '1245'
+ht-degree: 1%
 
 ---
 
 # 新功能摘要 | AEM 6.5 Forms{#new-features-summary-aem-forms}
 
 ## 交易報告 {#transaction-reports}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/latest-innovations.html) |
+| AEM 6.5 | 本文 |
+
 
 交易報表可讓您擷取及追蹤已提交的表單、已處理檔案及已轉譯檔案數目。 追蹤這些交易的目的在於，針對產品使用狀況做出明智的決策，並重新平衡軟硬體投資。 交易的一些範例包括：
 
@@ -134,7 +140,7 @@ AEM Forms可使用任何支援的作業系統、應用程式伺服器、資料�
 <table>
  <tbody>
   <tr>
-   <td>Component</td>
+   <td>元件</td>
    <td>支援已移除</td>
   </tr>
   <tr>

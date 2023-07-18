@@ -10,14 +10,19 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 26403941129f3a80fdb3e9b964cb943a04b3bfa1
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '6888'
+source-wordcount: '6884'
 ht-degree: 0%
 
 ---
 
 # 調適型表單規則編輯器{#adaptive-forms-rule-editor}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html) |
+| AEM 6.5 | 本文 |
 
 ## 概觀 {#overview}
 
@@ -65,11 +70,11 @@ Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使�
 
 * 建立規則時通常的經驗法則是在您寫入規則的物件內容中考慮它。 假設您要根據使用者在欄位A中指定的值隱藏或顯示欄位B。在此情況下，您評估的是欄位A的條件，而且根據它傳回的值，您會觸發欄位B的動作。
 
-   因此，如果您要在欄位B （評估條件的物件）上撰寫規則，請使用condition-action建構或When規則型別。 同樣地，使用動作條件建構或在欄位A上顯示或隱藏規則型別。
+  因此，如果您要在欄位B （評估條件的物件）上撰寫規則，請使用condition-action建構或When規則型別。 同樣地，使用動作條件建構或在欄位A上顯示或隱藏規則型別。
 
 * 有時候，您需要根據一個條件執行多個動作。 在這種情況下，建議使用條件 — 動作建構。 在此建構中，您可以評估條件一次，並指定多個動作陳述式。
 
-   例如，若要根據檢查使用者在欄位A中指定的值的條件來隱藏欄位B、C和D，請撰寫一個規則，並在欄位A上使用條件 — 動作結構或When規則型別，並指定動作來控制欄位B、C和D的可見性。否則，您需要在欄位B、C和D上有三個單獨的規則，每個規則會檢查條件並顯示或隱藏各自的欄位。 在此範例中，在一個物件上撰寫「When」規則型別比在三個物件上撰寫「Show」或「Hide」規則型別更有效率。
+  例如，若要根據檢查使用者在欄位A中指定的值的條件來隱藏欄位B、C和D，請撰寫一個規則，並在欄位A上使用條件 — 動作結構或When規則型別，並指定動作來控制欄位B、C和D的可見性。否則，您需要在欄位B、C和D上有三個單獨的規則，每個規則會檢查條件並顯示或隱藏各自的欄位。 在此範例中，在一個物件上撰寫「When」規則型別比在三個物件上撰寫「Show」或「Hide」規則型別更有效率。
 
 * 若要根據多個條件觸發動作，建議使用動作條件建構。 例如，若要藉由評估欄位B、C和D的條件來顯示和隱藏欄位A，請在欄位A上使用顯示或隱藏規則型別。
 * 如果規則包含適用於一個條件的一個動作，請使用條件 — 動作或動作條件建構。
@@ -372,7 +377,7 @@ _
 
 ### E.視覺化程式碼編輯器切換器 {#e-visual-code-editors-switcher}
 
-表單超級使用者群組中的使用者可以存取程式碼編輯器。 其他使用者的程式碼編輯器無法使用。 如果您有許可權，則可以使用規則編輯器右上方的切換器，從視覺化編輯器模式切換至規則編輯器的代碼編輯器模式（反之亦然）。 第一次啟動規則編輯器時，它會在視覺化編輯器模式下開啟。 您可以在視覺化編輯器模式中編寫規則，或切換到程式碼編輯器模式以編寫規則指令碼。 但請注意，如果您在程式碼編輯器中修改規則或寫入規則，則除非清除程式碼編輯器，否則無法切換回該規則的視覺化編輯器。
+表單超級使用者群組中的使用者可以存取程式碼編輯器。 其他使用者的程式碼編輯器無法使用。 如果您有許可權，您可以從視覺化編輯器模式切換到規則編輯器的程式碼編輯器模式，反之，也可以使用規則編輯器上方的切換器。 第一次啟動規則編輯器時，它會在視覺化編輯器模式下開啟。 您可以在視覺化編輯器模式中編寫規則，或切換到程式碼編輯器模式以編寫規則指令碼。 但請注意，如果您在程式碼編輯器中修改規則或寫入規則，則除非清除程式碼編輯器，否則無法切換回該規則的視覺化編輯器。
 
 AEM Forms會追蹤您上次用來撰寫規則的規則編輯器模式。 當您下次啟動規則編輯器時，它將會在該模式下開啟。 不過，您也可以設定預設模式，以在指定模式下開啟規則編輯器。 若要這麼做：
 
@@ -550,68 +555,67 @@ AEM Forms會追蹤您上次用來撰寫規則的規則編輯器模式。 當您�
 支援 `jsdoc` 標籤：
 
 * **私人**
-語法：私用函式不會作為自訂函式納入。`@private`
+語法： `@private`
 私有函式不會包含為自訂函式。
 
 * **名稱**
-語法：或者 `@name funcName <Function Name>`
+語法： `@name funcName <Function Name>`
 或者 `,` 您可以使用： `@function funcName <Function Name>` **或** `@func` `funcName <Function Name>`.
-   `funcName` 是函式的名稱（不允許空格）。
-   `<Function Name>` 是函式的顯示名稱。
+  `funcName` 是函式的名稱（不允許空格）。
+  `<Function Name>` 是函式的顯示名稱。
 
 * **會員**
-語法：將名稱空間附加至函式。`@memberof namespace`
+語法： `@memberof namespace`
 將名稱空間附加至函式。
 
 * **引數**
-語法：或者，您可以使用： `@param {type} name <Parameter Description>`
+語法： `@param {type} name <Parameter Description>`
 或者，您可以使用： `@argument` `{type} name <Parameter Description>` **或** `@arg` `{type}` `name <Parameter Description>`.
 顯示函式使用的引數。 函式可以有多個引數標籤，每個引數會依發生順序各一個標籤。
-   `{type}` 代表引數型別。 允許的引數型別包括：
+  `{type}` 代表引數型別。 允許的引數型別包括：
 
    1. 字串
    1. 數字
    1. 布林值
    1. 範圍
 
-   範圍是用來反向連結最適化表單的欄位。 表單使用延遲載入時，您可以使用 `scope` 以存取其欄位。 您可以在載入欄位時存取欄位，或者如果欄位標示為全域。
+  範圍是用來反向連結最適化表單的欄位。 表單使用延遲載入時，您可以使用 `scope` 以存取其欄位。 您可以在載入欄位時存取欄位，或者如果欄位標示為全域。
 
-   所有其他引數型別則歸類於上述其中一種。 不支援無。 請確定您選取上述其中一種型別。 型別不區分大小寫。 引數中不允許有空格 `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
+  所有其他引數型別則歸類於上述其中一種。 不支援無。 請確定您選取上述其中一種型別。 型別不區分大小寫。 引數中不允許有空格 `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
 * **傳回型別**
-語法：或者，您可以使用 `@return {type}`
+語法： `@return {type}`
 或者，您可以使用 `@returns {type}`.
 新增函式的相關資訊，例如其目標。
-{type}代表函式的傳回型別。 允許的傳回型別包括：
+{type} 代表函式的傳回型別。 允許的傳回型別包括：
 
    1. 字串
    1. 數字
    1. 布林值
 
-   所有其他回訪型別則歸類到上述任一型別之下。 不支援無。 請確定您選取上述其中一種型別。 傳回型別不區分大小寫。
+  所有其他回訪型別則歸類到上述任一型別之下。 不支援無。 請確定您選取上述其中一種型別。 傳回型別不區分大小寫。
 
 * **此**
-語法： 
-`@this currentComponent`
+語法： `@this currentComponent`
 
-   使用@this可參照寫入規則的最適化表單元件。
+  使用@this可參照寫入規則的最適化表單元件。
 
-   以下範例是根據欄位值。 在以下範例中，規則會隱藏表單中的欄位。 此 `this` 部分 `this.value` 指寫入規則的基礎調適型表單元件。
+  以下範例是根據欄位值。 在以下範例中，規則會隱藏表單中的欄位。 此 `this` 部分 `this.value` 指寫入規則的基礎調適型表單元件。
 
-   ```
-      /**
-      * @function myTestFunction
-      * @this currentComponent
-      * @param {scope} scope in which code inside function will be executed.
-      */
-      myTestFunction = function (scope) {
-         if(this.value == "O"){
-               scope.age.visible = true;
-         } else {
-            scope.age.visible = false;
-         }
-      }
-   ```
+  ```
+     /**
+     * @function myTestFunction
+     * @this currentComponent
+     * @param {scope} scope in which code inside function will be executed.
+     */
+     myTestFunction = function (scope) {
+        if(this.value == "O"){
+              scope.age.visible = true;
+        } else {
+           scope.age.visible = false;
+        }
+     }
+  ```
 
 >[!NOTE]
 >
@@ -641,7 +645,7 @@ AEM Forms會追蹤您上次用來撰寫規則的規則編輯器模式。 當您�
 
 1. 選取輸入數字方塊，然後點選 ![edit-rules](assets/edit-rules.png) 以開啟規則編輯器。
 1. 點選 **建立規則**. 使用下列選項，建立規則以將輸入的平方值儲存在表單的「輸出」欄位中。
-   [ ![使用自訂函式建立規則](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)點選 **完成**. 您的自訂函式已新增。
+   [![使用自訂函式建立規則](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)點選 **完成**. 您的自訂函式已新增。
 
 #### 函式宣告支援的型別 {#function-declaration-supported-types}
 
@@ -767,7 +771,7 @@ var c = {
 
 規則編輯器可讓您使用日期比較來建立條件。
 
-以下是一個範例條件，會在房屋抵押貸款已到期時顯示靜態文字物件，使用者需填入日期欄位來表示該條件。
+以下是一個範例條件，會在房屋已抵押時顯示靜態文字物件，使用者需填入日期欄位來表示該條件。
 
 當使用者填寫的屬性按揭日期為過去時，最適化表單會顯示有關收入計算的備註。 下列規則會比較使用者填寫的日期與目前日期，如果使用者填寫的日期早於目前日期，則表單會顯示文字訊息（名為Income）。
 

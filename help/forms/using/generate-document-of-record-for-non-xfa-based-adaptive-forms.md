@@ -11,14 +11,20 @@ discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '3466'
-ht-degree: 2%
+source-wordcount: '3488'
+ht-degree: 3%
 
 ---
 
 # 產生最適化表單的記錄檔案{#generate-document-of-record-for-adaptive-forms}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
+| AEM 6.5 | 本文 |
+
 
 ## 概觀 {#overview}
 
@@ -32,7 +38,7 @@ ht-degree: 2%
 
 ## 最適化表單型別及其記錄檔案 {#adaptive-form-types-and-their-documents-of-record}
 
-建立最適化表單時，您可以選取表單模型。 您的選項包括：
+建立最適化表單時，您可以選取表單模型。 您的選項有：
 
 * [表單範本](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)
 可讓您為最適化表單選取XFA範本。 當您選取XFA範本時，您可以使用關聯的XDP檔案來記錄檔案，如上所述。
@@ -106,7 +112,7 @@ ht-degree: 2%
    <td> </td>
   </tr>
   <tr>
-   <td>日期選擇器</td>
+   <td>日期挑選器</td>
    <td>日期/時間欄位</td>
    <td>true</td>
    <td> </td>
@@ -287,7 +293,8 @@ ht-degree: 2%
    >
    >    * 您的最適化表單是以結構描述為基礎
    >    * 您正在使用 **建立表單範本為記錄檔案範本的關聯** 記錄檔案選項
-
+   >
+   >
 
 1. 按一下 **完成。**
 

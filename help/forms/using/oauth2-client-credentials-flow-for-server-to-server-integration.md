@@ -3,15 +3,21 @@ title: 使用OAuth 2.0使用者端憑證流程與AEM Forms整合Salesforce
 seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 description: 使用OAuth 2.0使用者端憑證流程整合Salesforce與AEM Forms的步驟
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
-source-git-commit: cc0375f5b5616f82a73bd983a9da95225c51db99
+exl-id: 31f2ccf8-1f4f-4d88-8c5f-ef1b7d1bfb4f
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 0%
+source-wordcount: '524'
+ht-degree: 4%
 
 ---
 
-
 # 使用OAuth 2.0使用者端憑證流程整合Salesforce  {#configure-salesforce-with-ouath-2.0-client-credential}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html) |
+| AEM 6.5 | 本文 |
+
 
 若要將AEM Forms與Salesforce應用程式整合，則會使用OAuth 2.0使用者端憑證流程。 這是一種標準化和安全的直接通訊方法，使用者無需參與。 在此流程中，使用者端應用程式(AEM Form)會交換Salesforce連線應用程式中定義的使用者端憑證，以取得存取權杖。 必要的使用者端憑證包括使用者金鑰和使用者密碼。
 
@@ -74,5 +80,3 @@ Swagger是一組開放原始碼的規則、規格和工具，用於開發和描�
 1. 如果連線成功，請按一下 **[!UICONTROL 建立]** 按鈕。
 
 現在，您可以 [建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) 將設定的資料來源與您的調適型表單整合。
-
-

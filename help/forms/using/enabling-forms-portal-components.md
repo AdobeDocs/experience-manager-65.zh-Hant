@@ -10,14 +10,19 @@ topic-tags: publish
 discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
 feature: Forms Portal
 exl-id: 572194b7-063b-4c38-af43-aba78e9c51c6
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 0%
+source-wordcount: '342'
+ht-degree: 3%
 
 ---
 
 # 啟用表單入口網站元件 {#enabling-forms-portal-components}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM 6.5 | 本文 |
 
 開箱即用的Forms Portal元件無法使用。 若要讓元件出現在AEM sidekick的可用元件清單中，請執行以下步驟：
 

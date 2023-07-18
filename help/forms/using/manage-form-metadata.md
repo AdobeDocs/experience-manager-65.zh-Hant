@@ -11,14 +11,19 @@ discoiquuid: ba571f8e-8bd3-48eb-82e1-c93b14ffe44a
 docset: aem65
 role: Admin
 exl-id: f82bbd39-b655-47a9-bca9-21d7cd30c082
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1972'
-ht-degree: 1%
+source-wordcount: '1995'
+ht-degree: 2%
 
 ---
 
 # 管理表單中繼資料{#manage-form-metadata}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/manage-metadata/manage-form-metadata.html) |
+| AEM 6.5 | 本文 |
 
 ## 概觀  {#overview-nbsp}
 
@@ -203,7 +208,6 @@ AEM Forms支援下列資產型別：
    * 左側面板包含表單的縮圖
    * 右側面板包含唯讀模式的中繼資料屬性，並分佈於各種索引標籤中。
 
-
 ## 新增/更新表單中繼資料值 {#add-update-form-metadata-values}
 
 您可以編輯現有中繼資料屬性的值，或向現有中繼資料屬性欄位新增值（例如，當中繼資料欄位空白時）。
@@ -240,7 +244,6 @@ AEM Forms支援下列資產型別：
 >* 縮圖使用正方形影像。 當您使用非正方形影像並在清單檢視中檢視縮圖時，縮圖會以裁剪方式顯示。
 >* 上傳或產生新影像後，縮圖就會被此影像取代，且無法重設為上一個影像。
 >
-
 
 ## 新增自訂中繼資料 {#add-custom-metadata}
 

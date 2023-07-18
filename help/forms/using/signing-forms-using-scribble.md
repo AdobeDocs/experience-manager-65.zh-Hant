@@ -10,14 +10,20 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 0%
+source-wordcount: '662'
+ht-degree: 1%
 
 ---
 
 # 使用手寫簽名將電子簽章套用至表單{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/signing-forms-using-scribble.html) |
+| AEM 6.5 | 本文 |
+
 
 您可以使用 **手寫簽名** 元件和 **簽章步驟** 在最適化表單上繪圖（塗鴉）簽章的元件。 簽名步驟元件會顯示最適化表單的PDF版本。 您需要啟用「記錄檔案」選項或表單範本式最適化表單，才能使用簽名步驟元件。
 

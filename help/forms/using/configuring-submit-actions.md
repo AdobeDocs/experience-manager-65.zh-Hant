@@ -9,14 +9,20 @@ discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1870'
-ht-degree: 0%
+source-wordcount: '1893'
+ht-degree: 1%
 
 ---
 
 # 設定提交動作{#configuring-the-submit-action}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html) |
+| AEM 6.5 | 本文 |
+
 
 ## 提交動作簡介 {#introduction-to-submit-actions}
 
@@ -68,6 +74,7 @@ ht-degree: 0%
 設定Rest端點提交動作
 
 >[!NOTE]
+>
 若要在REST URL中將欄位作為引數傳遞，所有欄位都必須有不同的元素名稱，即使欄位位於不同的面板上也是如此。
 
 ### 將提交的資料發佈到資源或外部Rest端點  {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
@@ -98,6 +105,7 @@ ht-degree: 0%
 此 **傳送電子郵件** 提交動作會在成功提交表單時傳送電子郵件給一或多位收件者。 產生的電子郵件可以包含預先定義的格式表單資料。
 
 >[!NOTE]
+>
 所有表單欄位都必須有不同的元素名稱（即使它們放在不同的面板上），才能在電子郵件中包含表單資料。
 
 ## 透過電子郵件傳送PDF {#send-pdf-via-email}
@@ -105,6 +113,7 @@ ht-degree: 0%
 此 **透過電子郵件傳送PDF** 提交動作會在成功提交表單時，傳送內含表單資料PDF的電子郵件給一或多個收件者。
 
 >[!NOTE]
+>
 此提交動作適用於具有記錄檔案範本的XFA型最適化表單和XSD型最適化表單。
 
 ## 叫用Forms Workflow {#invoke-a-forms-workflow}
@@ -138,6 +147,7 @@ ht-degree: 0%
 * **資料檔案**：此變數包含提交至最適化表單的資料。 您可以使用 **[!UICONTROL 資料檔案路徑]** 選項來指定檔案的名稱及相對於承載的檔案路徑。 例如， `/addresschange/data.xml` path會建立名為的資料夾 `addresschange` 並將其相對於承載放置。 您也可僅指定 `data.xml` 只傳送已提交的資料，而不建立資料夾階層。 使用變數選項，並從工作流程模型可用的變數清單中選取變數。
 
 >[!NOTE]
+>
 無論工作流程模型是否標示為外部資料儲存，都可以使用變數。
 
 * **附件**：您可以使用 **[!UICONTROL 附件路徑]** 用於指定資料夾名稱以儲存已上傳至最適化表單的附件。 資料夾會相對於承載建立。 如果工作流程已標籤為外部資料儲存，請使用變數選項，並從工作流程模型可用的變數清單中選取變數。
@@ -169,6 +179,7 @@ ht-degree: 0%
 如果一般使用者略過這些驗證並提交表單，伺服器會再次執行驗證。 如果驗證在伺服器端失敗，則送出交易會停止。 使用者會再次看到原始表單。 擷取的資料和提交的資料會向使用者呈現為錯誤。
 
 >[!NOTE]
+>
 伺服器端驗證會驗證表單模型。 建議建立個別的使用者端程式庫進行驗證，不要將其與其他專案(例如HTML樣式和DOM操作)混合在同一個使用者端程式庫中。
 
 ### 在驗證運算式中支援自訂函式 {#supporting-custom-functions-in-validation-expressions-br}

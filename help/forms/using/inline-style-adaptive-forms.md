@@ -10,14 +10,19 @@ discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
 feature: Adaptive Forms
 exl-id: 67cfecb8-c31d-4192-904d-7bfaa1a31ea5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 2%
+source-wordcount: '548'
+ht-degree: 4%
 
 ---
 
 # 最適化表單元件的內嵌樣式 {#inline-styling-of-adaptive-form-components}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/inline-style-adaptive-forms.html) |
+| AEM 6.5 | 本文 |
 
 您可以透過以下方式指定樣式，定義最適化表單的整體外觀和樣式： [主題編輯器](../../forms/using/themes.md). 此外，您也可以將內嵌CSS樣式套用至個別的最適化表單元件，並即時預覽變更。 內嵌樣式會覆寫主題中提供的樣式。
 

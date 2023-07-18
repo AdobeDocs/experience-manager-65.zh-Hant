@@ -3,14 +3,20 @@ title: 使用版面模式調整最適化表單的元件大小
 description: 使用版面配置模式中可用的回應式格線來定義元件位置
 feature: Adaptive Forms
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 0%
+source-wordcount: '1068'
+ht-degree: 1%
 
 ---
 
 # 使用版面模式調整元件大小 {#use-layout-mode-to-resize-components}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/resize-using-layout-mode.html?) |
+| AEM 6.5 | 本文 |
+
 
 最適化表單製作介面可讓您使用版面模式調整元件大小。 拖放欄內的藍點以定義起始點和終止點來定位元件。 點選回應式格線內的元件後，會顯示藍點。 回應式格線由12個相等的欄組成。 替代欄中的白色和藍色陰影可區分一欄與另一欄。
 
