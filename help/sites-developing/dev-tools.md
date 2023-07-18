@@ -1,33 +1,35 @@
 ---
 title: 開發工具
-seo-title: Development Tools
-description: 若要開發您的JCR、Apache Sling或AEM應用程式，可使用許多工具集
-seo-description: To develop your JCR, Apache Sling or AEM applications, a number of tool sets are available
-uuid: 1bee3a52-5d76-4b0c-a222-a02e12ff3a43
+description: 若要開發您的JCR、Apache Sling或Adobe Experience Manager應用程式，可使用數個工具集。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: 76c570e5-46ed-46be-9864-4fe4a83f0caf
 exl-id: 97310ed5-f8fb-416c-8a66-68f652abeaa0
-source-git-commit: 4967a6d9ad92272a1ff442456fe65de51cc46a73
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '379'
 ht-degree: 3%
 
 ---
 
 # 開發工具{#development-tools}
 
-若要開發您的JCR、Apache Sling或AEM應用程式，可使用下列工具集：
+若要開發JCR、Apache Sling或Adobe Experience Manager (AEM)應用程式，可使用下列工具集：
 
 * 一組包含 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) 和WebDAV。 CRXDE Lite內嵌於CRX/AEM中，可讓您在瀏覽器中執行標準開發工作。 透過CRXDE Lite，您可以在記錄並與SVN整合時建立和編輯檔案(如.jsp和.java)、資料夾、範本、元件、對話方塊、節點、屬性和組合。
 
-   當您無法直接存取CRX/AEM伺服器、透過擴充或修改現成元件和Java套件組合來開發應用程式，或當您不需要專用的除錯程式、程式碼完成和語法醒目提示時，建議使用CRXDE Lite。
+  當您無法直接存取CRX/AEM伺服器、透過擴充或修改現成元件和Java™套件組合來開發應用程式，或當您不需要專用的除錯程式、程式碼完成和語法醒目提示時，建議使用CRXDE Lite。
 
-* 由整合式開發環境所組成的集合(例如： [Eclipse](/help/sites-developing/howto-projects-eclipse.md) 或 [IntelliJ](/help/sites-developing/ht-intellij.md))，建置工具(例如： [Apache Maven](/help/sites-developing/ht-projects-maven.md))、Adobe開發的將存放庫對應至檔案系統的FileVault、版本控制系統（例如：Subversion）、錯誤追蹤器系統（例如：Jira）、中央相依性管理系統（例如：Apache Archiva）和組建自動化系統（例如：Apache Continuum）。
+* 一組包含下列專案：
+   * 整合式開發環境。 例如， [Eclipse](/help/sites-developing/howto-projects-eclipse.md) 或 [IntelliJ](/help/sites-developing/ht-intellij.md).
+   * 建置工具。 例如， [Apache Maven](/help/sites-developing/ht-projects-maven.md).
+   * FileVault，由Adobe開發，用於將存放庫對應到檔案系統（版本控制系統）。 例如，Subversion。
+   * 錯誤追蹤系統。 例如，Jira。
+   * 中央相依性管理系統。 例如，Apache Archiva。
+   * 以及組建自動化系統。 例如，Apache Continuum。
 
-   此設定可讓您將應用程式（內容、程式碼、組態）完全整合到任何開發環境和程式中。不同元素之間的連結是透過FileVault表示存放庫的檔案系統，因為上述所有開發工具都可以處理檔案。
+  此設定可讓您將應用程式（內容、程式碼、設定）完全整合到任何開發環境和程式中。 不同元素之間的連結是透過FileVault表示存放庫的檔案系統，因為之前提到的所有開發工具都可以處理檔案。
 
 ## 整合式開發環境的擴充功能 {#extensions-for-integrated-development-environments}
 
@@ -53,7 +55,7 @@ AEM隨附其他有助於開發的工具：
 
 有助於建立新專案的工具：
 
-* [AEM 專案原型](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)
+* [AEM 專案原型](https://github.com/adobe/aem-project-archetype)
 * [AEM Lazybones範本](https://github.com/Adobe-Consulting-Services/lazybones-aem-templates)
 
 >[!NOTE]

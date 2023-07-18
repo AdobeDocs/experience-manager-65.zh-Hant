@@ -1,17 +1,15 @@
 ---
-title: AEM Sites開發中的體驗片段
+title: Adobe Experience Manager Sites開發中的體驗片段
 description: 瞭解如何自訂體驗片段。
-uuid: fc9f7e59-bd7c-437a-8c63-de8559b5768d
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1777'
 ht-degree: 0%
 
 ---
@@ -71,7 +69,7 @@ HTML轉譯是使用Sling重寫程式管道產生的。 管道定義於 `/libs/ex
 
 ## 社交變數 {#social-variations}
 
-社交變體可發佈在社群媒體（文字和影像）上。 在AEM中，這些社交變體可包含元件；例如，文字元件、影像元件。
+社交變體可發佈在社群媒體（文字和影像）上。 在Adobe Experience Manager (AEM)中，這些社交變體可包含元件；例如，文字元件、影像元件。
 
 社交貼文的影像和文字可從任何深度層級的影像資源型別或文字資源型別取得（在建置區塊或版面配置容器中）。
 
@@ -109,11 +107,9 @@ HTML轉譯是使用Sling重寫程式管道產生的。 管道定義於 `/libs/ex
 
    1. 範本名稱的開頭必須是：
       `experience-fragments`
-這可讓使用者在/content/experience-fragments中建立體驗片段，作為 
-`cq:allowedTemplates` 此資料夾的屬性包含名稱開頭為的所有範本 `experience-fragment`. 客戶可以更新此屬性，以包含自己的命名配置或範本位置。
+這可讓使用者在/content/experience-fragments中建立體驗片段，作為 `cq:allowedTemplates` 此資料夾的屬性包含名稱開頭為的所有範本 `experience-fragment`. 客戶可以更新此屬性，以包含自己的命名配置或範本位置。
 
 1. [允許的範本](/help/sites-authoring/experience-fragments.md#configure-allowed-templates-folder) 可在體驗片段主控台中設定。
-
 <!--
 1. Add the template details manually in `cq:allowedTemplates` on the `/content/experience-fragment` node.
 -->
@@ -148,7 +144,7 @@ HTML轉譯是使用Sling重寫程式管道產生的。 管道定義於 `/libs/ex
 
 此功能可以 [已在AEM的作者執行個體上啟用](/help/sites-administering/experience-fragments-target.md#Prerequisites). 它需要有效的Adobe Target設定，以及Link Externalizer設定。
 
-Link Externalizer可用來判斷建立Target選件的HTML版本時所需的正確URL，此版本隨後會傳送至Adobe Target。 這是必要的，因為Adobe Target要求可以公開存取TargetHTML選件內的所有連結；這表示連結參照的任何資源以及體驗片段本身，都必須先發佈，才能使用。
+Link Externalizer可用來判斷建立Target選件的HTML版本時需要正確的URL，然後傳送至Adobe Target。 這是必要的，因為Adobe Target要求可以公開存取TargetHTML選件內的所有連結；這表示連結參照的任何資源以及體驗片段本身，都必須先發佈，才能使用。
 
 根據預設，當您建構TargetHTML選件時，要求會傳送至AEM中的自訂Sling選取器。 此選取器稱為 `.nocloudconfigs.html`. 顧名思義，它會建立體驗片段的純HTML轉譯，但不包括雲端設定（這會是多餘的資訊）。
 
@@ -165,13 +161,13 @@ Link Externalizer可用來判斷建立Target選件的HTML版本時所需的正�
    1. `src` 屬性
    1. `href` 屬性
    1. `*-src` 屬性（如data-src、custom-src等）
-   1. `*-href` 屬性(類似 `data-href`， `custom-href`， `img-href`、等)
+   1. `*-href` 屬性(類似 `data-href`， `custom-href`， `img-href`、等等)
 
    >[!NOTE]
    >
-   >在大多數情況下，HTML中的內部連結是相對連結，但自訂元件在HTML中可能會提供完整URL的情況。 依預設，AEM會忽略這些完整的URL且不會進行任何修改。
+   >HTML中的內部連結通常是相對連結，但自訂元件在HTML中提供完整URL時可能會發生這種情況。 依預設，AEM會忽略這些完整的URL且不會進行任何修改。
 
-   這些屬性中的連結會透過AEM Link Externalizer執行 `publishLink()` 以便將URL重新建立為在已發佈的例項上，而且是公開可用的。
+   這些屬性中的連結會透過AEM Link Externalizer執行 `publishLink()` 將URL重新建立為在已發佈的例項上，如此便可公開使用。
 
 使用現成可用的實作時，上述流程應足以從體驗片段產生Target選件，然後將其匯出至Adobe Target。 不過，此程式並未說明部分使用案例，其中包括：
 
@@ -216,7 +212,7 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 若要使用介面，您首先需要建立包含實作連結重寫程式提供者介面的新服務元件的組合。
 
-此服務將用於插入Experience Fragment Export to Target重新寫入，以便存取各種連結。
+此服務用於插入Experience Fragment Export to Target重新寫入，以便存取各種連結。
 
 例如， `ComponentService`：
 
@@ -281,7 +277,7 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 * `href` 僅限屬性
 
 * 針對特定體驗片段：
-   `/content/experience-fragment/master`
+  `/content/experience-fragment/master`
 
 任何透過「匯出至目標」系統的其他體驗片段會遭忽略，且不會受到此服務中實作的變更影響。
 
@@ -293,16 +289,16 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 
 作為輸入，方法會接收引數：
 
-* `link`  
-`String` 表示目前處理中的連結。 這通常是指向作者執行個體上資源的相對URL。
+* `link`
+此 `String` 表示正在處理的連結。 這通常是指向作者執行個體上資源的相對URL。
 
 * `tag`
-目前處理中的HTML元素名稱。
+正在處理的HTML元素的名稱。
 
 * `attribute`
 確切的屬性名稱。
 
-例如，如果「匯出至目標」系統目前正在處理此元素，您可以定義 `CSSInclude` 作為：
+例如，如果「匯出至目標」系統正在處理此元素，您可以定義 `CSSInclude` 作為：
 
 ```java
 <link rel="stylesheet" href="/etc.clientlibs/foundation/clientlibs/main.css" type="text/css">
@@ -349,7 +345,7 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 >[!NOTE]
 >
->如果上述方法傳回 `null`，則「匯出至Target」系統將保持連結不變，即資源的相對連結。
+>如果上述方法傳回 `null`，則「匯出至Target」系統會將連結維持不變，即資源的相對連結。
 
 #### 優先順序 — getPriority {#priorities-getpriority}
 

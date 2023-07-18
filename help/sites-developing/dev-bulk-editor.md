@@ -1,18 +1,14 @@
 ---
 title: 開發大量編輯器
-seo-title: Developing the Bulk Editor
 description: 標籤可讓內容分類並整理
-seo-description: Tagging allows content to be categorized and organized
-uuid: 3cd04c52-5bdb-47f6-9fa3-d7a4937e8e20
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: e9a1ff95-e88e-41f0-9731-9a59159b4653
 exl-id: 8753aaab-959f-459b-bdb6-057cbe05d480
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1836'
 ht-degree: 2%
 
 ---
@@ -23,15 +19,15 @@ ht-degree: 2%
 
 ## 大量編輯器查詢引數 {#bulk-editor-query-parameters}
 
-使用大量編輯器時，您可以將多個查詢引數新增到URL中，以使用特定設定呼叫大量編輯器。 如果您希望大量編輯器一律搭配特定設定使用（例如，如同在產品清單元件中使用），則您需要修改bulkeditor.jsp （位於/libs/wcm/core/components/bulkeditor）或建立具有特定設定的元件。 使用查詢引數所做的變更不是永久性的。
+使用「大量編輯器」時，您可以將多個查詢引數新增到URL中，以使用特定設定呼叫「大量編輯器」。 如果您希望批次編輯器一律搭配特定設定使用（例如，如在產品清單元件中使用），則必須編輯 `bulkeditor.jsp` （位於/libs/wcm/core/components/bulkeditor）或使用特定設定建立元件。 使用查詢引數所做的變更不是永久性的。
 
 例如，如果您在瀏覽器的URL中鍵入以下內容：
 
 `https://<servername><port_number>/etc/importers/bulkeditor.html?rootPath=/content/geometrixx/en&queryParams=geometrixx&initialSearch=true&hrp=true`
 
-顯示大量編輯器，但不包含 **根路徑** 欄位為hrp=true會隱藏欄位。 使用引數hrp=false，會顯示欄位（預設值）。
+顯示大量編輯器時，不包含 **根路徑** 欄位為hrp=true會隱藏欄位。 使用引數hrp=false，會顯示欄位（預設值）。
 
-以下是大量編輯器查詢引數的清單：
+以下是「大量編輯器」查詢引數的清單：
 
 >[!NOTE]
 >
@@ -166,11 +162,11 @@ ht-degree: 2%
 
 本節提供如何使用大量編輯器的概觀，並說明以大量編輯器為基礎的現有Geometrixx元件：產品清單元件。
 
-產品清單元件可讓使用者顯示和編輯資料表。 例如，您可以使用產品清單元件來代表目錄中的產品。 此資訊會顯示在標準HTML表格中，且任何編輯都會在 **編輯** 對話方塊，其中包含BulkEditor Widget。 (此大量編輯器與在/etc/importers/bulkeditor.html或透過「工具」功能表存取的編輯器完全相同)。 產品清單元件已針對特定、有限的大量編輯器功能進行設定。 可以設定大量編輯器的每個部分（或衍生自大量編輯器的元件）。
+產品清單元件可讓使用者顯示和編輯資料表。 例如，您可以使用產品清單元件來代表目錄中的產品。 此資訊會顯示在標準HTML表格中，且任何編輯都會在 **編輯** 對話方塊，其中包含BulkEditor Widget。 (此大量編輯器與在/etc/importers/bulkeditor.html或透過「工具」功能表存取的編輯器相同)。 產品清單元件已針對特定、有限的大量編輯器功能進行設定。 可以設定批次編輯器的每個部分（或衍生自批次編輯器的元件）。
 
-使用大量編輯器，您可以新增、修改、刪除、篩選和匯出列、儲存修改和匯入一組列。 每一列都會儲存為「產品清單」元件實體本身的節點。 每個儲存格都是每個節點的屬性。 這是設計選擇，可以輕鬆變更，例如，您可以將節點儲存在存放庫中的其他位置。 查詢servlet的角色是傳回要顯示的節點清單；搜尋路徑被定義為產品清單執行個體。
+使用「大量編輯器」，您可以新增、修改、刪除、篩選和匯出列、儲存修改和匯入一組列。 每一列都會儲存為「產品清單」元件實體本身的節點。 每個儲存格都是每個節點的屬性。 這是設計選擇，可以輕鬆變更，例如，您可以將節點儲存在存放庫中的其他位置。 查詢servlet的角色是傳回要顯示的節點清單；搜尋路徑被定義為產品清單執行個體。
 
-產品清單元件的原始程式碼可在存放庫中的/apps/geometrixx/components/productlist取得，並且由幾個部分組成，例如所有AEM元件：
+產品清單元件的原始程式碼可在存放庫中的/apps/geometrixx/components/productlist取得，並且由幾個部分組成，例如所有Adobe Experience Manager (AEM)元件：
 
 * HTML呈現：呈現會在JSP檔案(/apps/geometrixx/components/productlist/productlist.jsp)中完成。 JSP會讀取目前「產品清單」元件的子節點，並將每個子節點顯示為HTML表格的一列。
 * 「編輯」對話方塊，您可在其中定義「大量編輯器」設定。 設定對話方塊以符合元件的需求：可用的欄以及在格線或搜尋時可能執行的動作。 另請參閱 [大量編輯器設定屬性](#bulk-editor-configuration-properties) 以取得所有設定屬性的資訊。
@@ -268,7 +264,7 @@ ht-degree: 2%
 
 ### 大量編輯器設定屬性 {#bulk-editor-configuration-properties}
 
-可設定大量編輯器的每個部分。 下表列出大量編輯器的所有組態屬性。
+可設定大量編輯器的每個部分。 下表列出「大量編輯器」的所有組態屬性。
 
 <table>
  <tbody>
@@ -533,7 +529,7 @@ CSS和唯讀欄
 * 查詢： &quot;path：/content/geometrixx/en/customers/jcr：content/par/productlist Cube&quot;
 * 欄位： &quot;Selection、ProductId、ProductName、Color、CatalogCode、SellingSku&quot;
 
-而傳回的JSON資料流如下：
+而且JSON資料流會傳回如下：
 
 ```
 {
@@ -564,14 +560,14 @@ CSS和唯讀欄
 
 * 引數名稱： &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;>
 
-   範例： /content/geometrixx/en/products/jcr：content/par/productlist/1258674859000/SellingSku
+  範例： /content/geometrixx/en/products/jcr：content/par/productlist/1258674859000/SellingSku
 
 * 值： &lt;value>
 
-   例如: 12123
+  例如: 12123
 
 此servlet需要知道catalogCode屬性的儲存位置。
 
 預設的「儲存servlet」實作可在/libs/wcm/bulkeditor/save/POST.jsp取得，並用於產品清單元件。 它會從請求中取得所有引數(使用 &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;> 格式化)，並在使用JCR API的節點上寫入屬性。 如果節點不存在，它也會建立節點（網格插入列）。
 
-不應使用預設程式碼，因為它會重新實作伺服器的原生功能(POST於 &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;>)，因此只是建置將管理屬性繼承模型的「儲存servlet」的良好起點。
+預設程式碼不應照原樣使用，因為它會重新實作伺服器的原生功能(POST於 &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;>)，因此只是建置可管理屬性繼承模型的「儲存」servlet的良好起點。

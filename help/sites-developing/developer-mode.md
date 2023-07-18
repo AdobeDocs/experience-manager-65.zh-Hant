@@ -1,26 +1,22 @@
 ---
 title: 開發人員模式
-seo-title: Developer Mode
-description: 開發人員模式會開啟一個側面板，其中包含數個標籤，為開發人員提供有關目前頁面的資訊
-seo-description: Developer mode opens a side panel with several tabs that provide a developer with infomation about the current page
-uuid: 8301ab51-93d6-44f9-a813-ba7f03f54485
+description: 開發人員模式會開啟一個側面板，其中包含數個標籤，為開發人員提供有關目前頁面的資訊。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
 exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '686'
 ht-degree: 2%
 
 ---
 
 # 開發人員模式{#developer-mode}
 
-在AEM中編輯頁面時，有數個 [模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) 可用，包括開發人員模式。 這會開啟一個側面板，其中包含數個標籤，為開發人員提供有關目前頁面的資訊。 三個標籤為：
+在Adobe Experience Manager (AEM)中編輯頁面時，會有數個 [模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) 可用，包括開發人員模式。 這會開啟一個側面板，其中包含數個標籤，為開發人員提供有關目前頁面的資訊。 三個標籤為：
 
 * **[元件](#components)** 以檢視結構和效能資訊。
 * **[測試](#tests)** 以執行測試和分析結果。
@@ -38,16 +34,15 @@ ht-degree: 2%
 >
 >* 僅適用於觸控式UI （編輯頁面時）。
 >* 不適用於行動裝置或桌上型電腦上的小型視窗（因為空間限制）。
-   >
-   >   * 當寬度小於1024畫素時，就會發生這種情況。
+>
+>   * 當寬度小於1024畫素時，就會發生這種情況。
 >* 僅適用於屬於以下群組的使用者： `administrators` 群組。
-
 
 >[!CAUTION]
 >
 >開發人員模式僅適用於未使用nosamplecontent執行模式的標準制作執行個體。
 >
->如有需要，可將其設定為使用：
+>如有必要，可將其設定為使用：
 >
 >* 在使用nosamplecontent執行模式的作者執行個體上
 >* 發佈執行個體
@@ -59,9 +54,8 @@ ht-degree: 2%
 >請參閱：
 >
 >* 知識庫文章， [疑難排解AEM TouchUI問題](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以取得進一步的提示和工具。
->* AEM Gems課程關於 [AEM 6.0開發人員模式](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=en).
+>* AEM Gems課程關於 [AEM 6.0開發人員模式](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html?lang=en).
 >
-
 
 ## 開啟開發人員模式 {#opening-developer-mode}
 
@@ -81,14 +75,14 @@ ht-degree: 2%
 
 這顯示一個元件樹狀結構，其中：
 
-* 概述在頁面上呈現的元件和範本鏈（SLY、JSP等）。 可展開樹狀結構以顯示階層內的前後關聯。
-* 顯示轉譯元件所需的伺服器端運算時間。
+* 概述在頁面上轉譯的元件鏈和範本（SLY、JSP等）。 可展開樹狀結構以顯示階層內的前後關聯。
+* 顯示轉譯元件的伺服器端運算時間。
 * 可讓您展開樹狀結構並選取樹狀結構中的特定元件。 選取範圍可讓您存取元件詳細資訊，例如：
 
    * 存放庫路徑
    * 指令碼連結(以CRXDE Lite存取)
 
-* 選取的元件（在內容流程中，以藍色邊框表示）將在內容樹狀結構中反白顯示（反之亦然）。
+* 選取的元件（在內容流程中，以藍色邊框表示）會在內容樹狀結構中反白顯示（反之亦然）。
 
 這有助於：
 
@@ -105,7 +99,7 @@ ht-degree: 2%
    * 用於呈現元件的所有元件指令碼。
    * 此特定元件的存放庫內容路徑。
 
-   ![chlimage_1-14](assets/chlimage_1-14.png)
+  ![chlimage_1-14](assets/chlimage_1-14.png)
 
 * **編輯指令碼**：連結：
 
@@ -116,11 +110,11 @@ ht-degree: 2%
    * 所選元件內的階層。
    * 所選元件的單獨呈現時間、任何巢狀在其中的個別元件以及合併總數。
 
-   ![chlimage_1-15](assets/chlimage_1-15.png)
+  ![chlimage_1-15](assets/chlimage_1-15.png)
 
 >[!CAUTION]
 >
->有些連結會指向下的指令碼 `/libs`. 不過，這些僅供參考，您 **不得** 編輯下的任何專案 `/libs`，因為您所做的任何變更都可能遺失。 這是因為每當您升級或套用Hotfix/Feature Pack時，此分支隨時可能變更。 您所需的任何變更都應該在 `/apps`，請參閱 [覆蓋和覆寫](/help/sites-developing/overlays.md).
+>有些連結會指向下的指令碼 `/libs`. 不過，這些僅供參考，您 **不得** 編輯下的任何專案 `/libs`，因為您所做的任何變更都可能遺失。 這是因為每當您升級或套用Hotfix或Feature Pack時，此分支很容易變更。 進行您需要的變更 `/apps`. 另請參閱 [覆蓋和覆寫](/help/sites-developing/overlays.md).
 
 ### 錯誤 {#errors}
 
@@ -131,7 +125,7 @@ ht-degree: 2%
 * 如果元件將專案寫入錯誤記錄檔，連同錯誤的詳細資訊以及指向CRXDE Lite內適當程式碼的直接連結，會出現警告。
 * 如果元件開啟管理員工作階段，會出現警告。
 
-例如，在呼叫未定義的方法的情況下，產生的錯誤將顯示在 **錯誤** 標籤：
+例如，在呼叫未定義的方法的情況下，產生的錯誤會顯示在 **錯誤** 標籤：
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
