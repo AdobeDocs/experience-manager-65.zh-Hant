@@ -11,9 +11,9 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 1d914b12c3279bacaf5cabb3b1953e927c04bad1
 workflow-type: tm+mt
-source-wordcount: '2579'
+source-wordcount: '2571'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ## 您將建置的內容
 
-Venia品牌最近開始使用永續性材料製造一些產品，而企業想要展示 **環保型** 徽章作為產品Teaser的一部分。 將在Adobe Commerce中建立新的自訂屬性，以指出產品是否使用 **環保型** 材質。 然後，此自訂屬性將新增為GraphQL查詢的一部分，並顯示在指定產品的產品Teaser上。
+Venia品牌最近開始使用永續性材料製造一些產品，而企業想要展示 **環保型** 徽章作為產品Teaser的一部分。 在Adobe Commerce中建立新的自訂屬性，以指出產品是否使用 **環保型** 材質。 此自訂屬性新增為GraphQL查詢的一部分，並顯示在指定產品的產品Teaser上。
 
 ![環保徽章最終實作](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
@@ -69,7 +69,7 @@ Venia品牌最近開始使用永續性材料製造一些產品，而企業想要
 
 ## 編寫產品Teaser {#author-product-teaser}
 
-產品Teaser元件已在本教學課程中擴充。 第一步，將產品Teaser的新執行個體新增到首頁，以瞭解基準線功能。
+產品Teaser元件已在本教學課程中擴充。 第一步，將產品Teaser的執行個體新增到首頁，以瞭解基準線功能。
 
 1. 導覽至 **首頁** 網站的： [http://localhost:4502/editor.html/content/acme/us/en.html](http://localhost:4502/editor.html/content/acme/us/en.html)
 
@@ -178,11 +178,11 @@ AEM中顯示的產品和產品資料會儲存在Adobe Commerce中。 接著新�
 
    ![GraphQL回應範例](../assets/customize-cif-components/sample-graphql-query.png)
 
-   的值 **是** 為的整數 **1**. 當您使用Java™撰寫GraphQL查詢時，這會很有用。
+的值 **是** 為的整數 **1**. 當您使用Java™撰寫GraphQL查詢時，這會很有用。
 
-   >[!TIP]
-   >
-   >更詳細的檔案關於 [您可以在此處找到Adobe Commerce GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
+>[!TIP]
+>
+>更詳細的檔案關於 [您可以在此處找到Adobe Commerce GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
 
 ## 更新產品Teaser的Sling模型 {#updating-sling-model-product-teaser}
 
@@ -213,7 +213,7 @@ Sling模型會實作為Java™，且可在以下網址找到： **核心** 所�
    }
    ```
 
-   這是一種封裝邏輯的新方法，可指出產品是否具備 `eco_friendly` 屬性設定為 **是** 或 **否**.
+這是一種封裝邏輯的新方法，可指出產品是否具備 `eco_friendly` 屬性設定為 **是** 或 **否**.
 
 1. 接下來，檢查 `MyProductTeaserImpl.java` 於 `core/src/main/java/com/venia/core/models/commerce/MyProductTeaserImpl.java`.
 
@@ -234,7 +234,7 @@ Sling模型會實作為Java™，且可在以下網址找到： **核心** 所�
    }
    ```
 
-   如此一來，實作所需寫入的Java™程式碼數量便降至最低。
+   如此一來，實作所必須撰寫的Java™程式碼數量便降至最低。
 
 1. AEM CIF核心元件提供的額外擴充功能點之一是 `AbstractProductRetriever` 可讓您存取特定產品屬性。 Inspect `initModel()` 方法：
 
@@ -486,11 +486,11 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 這是透過覆�
 
 ## 恭喜 {#congratulations}
 
-您已完成自訂第一個AEM CIF元件！ 下載 [已在此完成解決方案檔案](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip).
+您已自訂您的第一個AEM CIF元件！ 下載 [已在此完成解決方案檔案](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip).
 
 ## 額外挑戰 {#bonus-challenge}
 
-檢閱的功能 **新增** 已在產品Teaser中實作的徽章。 嘗試新增額外的核取方塊讓作者控制 **環保型** 應顯示徽章。 您需要更新元件對話方塊： `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
+檢閱的功能 **新增** 已在產品Teaser中實作的徽章。 嘗試新增額外的核取方塊讓作者控制 **環保型** 應顯示徽章。 您必須更新元件對話方塊，位於 `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
 
 ![新徽章實作挑戰](../assets/customize-cif-components/new-badge-implementation-challenge.png)
 
