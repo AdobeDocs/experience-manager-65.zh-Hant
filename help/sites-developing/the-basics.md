@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '3324'
+source-wordcount: '3327'
 ht-degree: 1%
 
 ---
@@ -138,7 +138,7 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 系統會劃分請求，並擷取必要資訊。 系統會搜尋存放庫中的請求資源（內容節點）：
 
 * 第一個Sling會檢查請求中指定的位置是否存在節點；例如， `../content/corporate/jobs/developer.html`
-* 如果找不到節點，則會捨棄擴充功能並重複搜尋；例如： `../content/corporate/jobs/developer`
+* 如果找不到任何節點，則會捨棄擴充功能並重複搜尋；例如， `../content/corporate/jobs/developer`
 * 如果找不到節點，則Sling將傳回http代碼404 （找不到）。
 
 Sling也可讓JCR節點以外的專案成為資源，但這是進階功能。
@@ -152,7 +152,7 @@ Sling也可讓JCR節點以外的專案成為資源，但這是進階功能。
 * 絕對值
 * 相對，相對於設定引數
 
-   由於相對路徑會增加可移植性，因此Adobe會建議使用相對路徑。
+  由於相對路徑會增加可移植性，因此Adobe會建議使用相對路徑。
 
 所有Sling指令碼都儲存在下列任一專案的子資料夾中： `/apps` 或 `/libs`，依此順序搜尋(請參閱 [自訂元件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
 
@@ -175,39 +175,39 @@ Felix管理主控台會列出指定AEM執行個體支援的指令碼引擎清單
 
 * GET/HEAD請求，以及以.html結尾的URL （預設請求型別、預設格式）
 
-   指令碼為/apps/hr/jobs/jobs.esp；sling：resourceType的最後一個區段會形成檔案名稱。
+  指令碼為/apps/hr/jobs/jobs.esp；sling：resourceType的最後一個區段會形成檔案名稱。
 
 * POST請求(除GET/HEAD以外的所有請求型別，方法名稱必須為大寫)
 
-   指令碼名稱會使用POST。
+  指令碼名稱會使用POST。
 
-   指令碼為 `/apps/hr/jobs/jobs.POST.esp`.
+  指令碼為 `/apps/hr/jobs/jobs.POST.esp`.
 
 * 其他格式的URL，結尾不是.html
 
-   例如 `../content/corporate/jobs/developer.pdf`
+  例如 `../content/corporate/jobs/developer.pdf`
 
-   指令碼會是 `/apps/hr/jobs/jobs.pdf.esp`；字尾會新增至指令碼名稱。
+  指令碼會是 `/apps/hr/jobs/jobs.pdf.esp`；字尾會新增至指令碼名稱。
 
 * 具有選取器的URL
 
-   選取器可用來以替代格式顯示相同的內容。 例如，適合印表機的版本、RSS摘要或摘要。
+  選取器可用來以替代格式顯示相同的內容。 例如，適合印表機的版本、RSS摘要或摘要。
 
-   如果檢視印表機易記版本，選擇器可能是 *列印*；如在 `../content/corporate/jobs/developer.print.html`
+  如果檢視印表機易記版本，選擇器可能是 *列印*；如在 `../content/corporate/jobs/developer.print.html`
 
-   指令碼會是 `/apps/hr/jobs/jobs.print.esp`；選取器會新增至指令碼名稱。
+  指令碼會是 `/apps/hr/jobs/jobs.print.esp`；選取器會新增至指令碼名稱。
 
 * 如果尚未定義sling：resourceType ，則：
 
    * 內容路徑將用於搜尋適當的指令碼（如果基於路徑的ResourceTypeProvider為作用中）。
 
-      例如，的指令碼 `../content/corporate/jobs/developer.html` 會在下列位置產生搜尋： `/apps/content/corporate/jobs/`.
+     例如，的指令碼 `../content/corporate/jobs/developer.html` 會在下列位置產生搜尋： `/apps/content/corporate/jobs/`.
 
    * 將使用主要節點型別。
 
 * 如果完全找不到指令碼，則會使用預設指令碼。
 
-   目前支援的預設轉譯為純文字(.txt)、HTML(.html)和JSON (.json)，所有這些都會列出節點的屬性（格式適當）。 副檔名為.res或沒有副檔名的請求的預設轉譯為將資源多工緩衝處理（如果可能）。
+  目前支援的預設轉譯為純文字(.txt)、HTML(.html)和JSON (.json)，所有這些都會列出節點的屬性（格式適當）。 副檔名為.res或沒有副檔名的請求的預設轉譯為將資源多工緩衝處理（如果可能）。
 * 若為http錯誤處理（程式碼403或404），Sling會在以下其中一個位置尋找指令碼：
 
    * /apps/sling/servlet/errorhandler的位置 [自訂指令碼](/help/sites-developing/customizing-errorhandler-pages.md)
@@ -248,19 +248,19 @@ Felix管理主控台會列出指定AEM執行個體支援的指令碼引擎清單
    * b
 
       * sling：resourceSuperType = a
+
    * c
 
       * sling：resourceSuperType = b
+
    * x
 
       * sling：resourceType = c
+
    * y
 
       * sling：resourceType = c
       * sling：resourceSuperType = a
-
-
-
 
 型別階層：
 
@@ -418,29 +418,29 @@ S`tring pageName = currentPage.getName();`
 
 * `/apps`
 
-   與應用程式相關；包含您網站專用的元件定義。 您開發的元件可以依據以下位置提供的現成可用元件： `/libs/foundation/components`.
+  與應用程式相關；包含您網站專用的元件定義。 您開發的元件可以依據以下位置提供的現成可用元件： `/libs/foundation/components`.
 
 * `/content`
 
-   為您的網站建立的內容。
+  為您的網站建立的內容。
 
 * `/etc`
 
 * `/home`
 
-   使用者和群組資訊。
+  使用者和群組資訊。
 
 * `/libs`
 
-   屬於AEM核心的程式庫和定義。 中的子資料夾 `/libs` 代表現成可用的AEM功能，例如搜尋或復寫。 中的內容 `/libs` 不應修改，因為它會影響AEM的運作方式。 您網站的特定功能應開發於 `/apps` (請參閱 [自訂元件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
+  屬於AEM核心的程式庫和定義。 中的子資料夾 `/libs` 代表現成可用的AEM功能，例如搜尋或復寫。 中的內容 `/libs` 不應修改，因為它會影響AEM的運作方式。 您網站的特定功能應開發於 `/apps` (請參閱 [自訂元件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements))。
 
 * `/tmp`
 
-   臨時工作區。
+  臨時工作區。
 
 * `/var`
 
-   變更並由系統更新的檔案；例如稽核記錄、統計資料、事件處理。
+  變更並由系統更新的檔案；例如稽核記錄、統計資料、事件處理。
 
 ## 環境 {#environments}
 

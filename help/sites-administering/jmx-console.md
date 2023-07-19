@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4957'
+source-wordcount: '4956'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 以下各節會�
 
    * model：要查詢的模型ID。 若要檢視所有工作流程模型的失敗工作流程例項計數，請不要指定任何值。 ID是模型節點的路徑，例如：
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回的值：失敗的工作流程例項數目。
 
@@ -101,7 +101,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 以下各節會�
    * 試執行： （選擇性）指定值 `true` 以檢視作業結果，而不實際執行作業。 預設值 `false` 導致執行作業。
    * 模型： （選用）要套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的失敗執行個體。 ID是模型節點的路徑，例如：
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回的值：關於已終止之執行處理的表格資料，包含下列資料行：
 
@@ -119,7 +119,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 以下各節會�
    * 試執行： （選擇性）指定值 `true` 以檢視作業結果，而不實際執行作業。 預設值 `false` 導致執行作業。
    * 模型： （選用）要套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的失敗工作專案。 ID是模型節點的路徑，例如：
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回值：關於重試的失敗工作專案的表格資料，包括下列欄：
 
@@ -136,7 +136,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 以下各節會�
 
    * 模型： （選用）要套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的工作流程例項。 ID是模型節點的路徑，例如：
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * 自工作流程開始以來的天數：要清除的工作流程例項存留期（以天為單位）。
    * 試執行： （選擇性）指定值 `true` 以檢視作業結果，而不實際執行作業。 預設值 `false` 導致執行作業。
 
@@ -155,7 +155,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 以下各節會�
 
    * 模型： （選用）要套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的工作流程例項。 ID是模型節點的路徑，例如：
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回的值：過時的工作流程例項數目。
 
@@ -165,7 +165,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 以下各節會�
 
    * 模型： （選用）要套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的過時執行個體。 ID是模型節點的路徑，例如：
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * 試執行： （選擇性）指定值 `true` 以檢視作業結果，而不實際執行作業。 預設值 `false` 導致執行作業。
 
 * 傳回的值：重新啟動的工作流程執行個體清單。
@@ -181,7 +181,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 以下各節會�
 
    * 模型： （選用）傳回執行中例項數目的模型ID。 指定無模型可傳回所有工作流程模型的執行中例項數。 ID是模型節點的路徑，例如：
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回的值：執行中的工作流程例項數目。
 
@@ -191,7 +191,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 以下各節會�
 
    * 模型： （選用）傳回已完成例項數目的模型ID。 指定無模型可傳回所有工作流程模型的已完成例項數。 ID是模型節點的路徑，例如：
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 傳回的值：已完成的工作流程例項數目。
 
@@ -201,7 +201,7 @@ JMX主控台可讓您監視和管理CRX伺服器上的服務。 以下各節會�
 
    * 模型： （選用）要套用作業的模型識別碼。 指定沒有模型可將操作套用至所有工作流程模型的工作流程例項。 ID是模型節點的路徑，例如：
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * 自工作流程完成以來的天數：工作流程例項處於完成狀態的天數。
    * 試執行： （選擇性）指定值 `true` 以檢視作業結果，而不實際執行作業。 預設值 `false` 導致執行作業。
 
@@ -556,11 +556,11 @@ CRX存放庫的相關資訊
 
    * `target`：（選用） A `String` 值，代表要封存存放庫資料的ZIP檔案或目錄的名稱。 若要使用ZIP檔案，請包含ZIP副檔名。 若要使用目錄，請勿包含副檔名。
 
-      若要執行增量備份，請指定先前用於備份的目錄。
+     若要執行增量備份，請指定先前用於備份的目錄。
 
-      您可以指定絕對或相對路徑。 相對路徑是相對於crx-quickstart目錄的父路徑。
+     您可以指定絕對或相對路徑。 相對路徑是相對於crx-quickstart目錄的父路徑。
 
-      若您未指定任何值，預設值為 `backup-currentdate.zip` 使用，其中 `currentdate` 為格式 `yyyyMMdd-HHmm`.
+     若您未指定任何值，預設值為 `backup-currentdate.zip` 使用，其中 `currentdate` 為格式 `yyyyMMdd-HHmm`.
 
 * 傳回值：無
 
@@ -736,7 +736,7 @@ CRX存放庫的相關資訊
 
 ### 運作 {#operations-3}
 
-**queueForceRetry** 針對封鎖的佇列，向佇列發出重試命令。
+**queueForceRetry** 對於已封鎖的佇列，會向佇列發出重試命令。
 
 * 引數：無
 * 傳回值：無
@@ -929,7 +929,7 @@ JConsole將顯示本機Java虛擬機器器處理程式的清單。 清單將包�
 
 請參閱 [相關JMX檔案](https://docs.oracle.com/javase/6/docs/technotes/guides/management/agent.html) 以取得設定密碼檔的詳細指示。
 
-範例:
+範例：
 
 ```shell
 $ java

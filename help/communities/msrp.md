@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 role: Admin
 exl-id: 799d5ae1-caac-4c92-8835-696ad25de553
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1190'
 ht-degree: 1%
 
 ---
@@ -64,41 +64,39 @@ ht-degree: 1%
 
    * **[!UICONTROL mongoDB URI]**
 
-      *預設*： mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+     *預設*： mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
    * **[!UICONTROL mongoDB 資料庫]**
 
-      *預設*：社群
+     *預設*：社群
 
    * **[!UICONTROL mongoDB UGC 集合]**
 
-      *預設*：內容
+     *預設*：內容
 
    * **[!UICONTROL mongoDB 附件集合]**
 
-      *預設*：附件
+     *預設*：附件
 
 * **[!UICONTROL SolrConfiguration]**
 
    * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper Host**
 
-      在中執行時 [SolrCloud模式](solr.md#solrcloud-mode) 使用外部ZooKeeper，將此值設定為 `HOST:PORT` ，例如： *my.server.com:2181*
+     在中執行時 [SolrCloud模式](solr.md#solrcloud-mode) 使用外部ZooKeeper，將此值設定為 `HOST:PORT` ，例如： *my.server.com:2181*
 
-      對於ZooKeeper Ensemble，請輸入逗號分隔 `HOST:PORT` 值，例如 *host1:2181，host2:2181*
+     對於ZooKeeper Ensemble，請輸入逗號分隔 `HOST:PORT` 值，例如 *host1:2181，host2:2181*
 
-      如果使用內部ZooKeeper在獨立模式下執行Solr，請保留空白。
-      *預設*： *&lt;blank>*
+     如果使用內部ZooKeeper在獨立模式下執行Solr，請保留空白。
+     *預設*： *&lt;blank>*
 
       * **[!UICONTROL Solr URL]**
 用於在獨立模式下與Solr通訊的URL。
 若以SolrCloud模式執行，則保留空白。
-
-         *預設*： https://127.0.0.1:8983/solr/
+        *預設*： https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr集合]**
 Solr集合名稱。
-
-         *預設*：collection1
+        *預設*：collection1
 
 * 選取 **[!UICONTROL 提交]**
 
@@ -198,7 +196,7 @@ cURL -u *登入* -d *資料* *reindex-url*
 *路徑* =要重新索引的UGC樹狀結構的根位置
 
 * 若要重新索引所有UGC，請指定 `asipath`屬性
-   `/etc/socialconfig/srpc/defaultconfiguration`
+  `/etc/socialconfig/srpc/defaultconfiguration`
 * 若要將索引限製為某些UGC，請指定子樹狀結構： `asipath`
 
 *reindex-url* = SRP重新索引的端點

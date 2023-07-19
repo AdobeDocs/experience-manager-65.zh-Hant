@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 99528fda-5c8c-4034-bcbe-a4cea42f694b
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '6086'
+source-wordcount: '6088'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Portlet可使用下列偏好設定進行設定：
  <tbody>
   <tr>
    <td>start路徑</td>
-   <td><p>這是Portlet的開始路徑：它定義最初顯示的內容。</p> <p><strong>重要</strong>AEM ：如果將Portlet設定為連線至在不同於<strong> /</strong>，您必須啟用此力 <strong>CQUrlInfo</strong> 在這些AEM例項的Html資料庫管理員設定中（例如透過Felix Webconsole），或編輯將無法運作，且不會顯示偏好設定對話方塊。</p> </td>
+   <td><p>這是Portlet的開始路徑：它定義最初顯示的內容。</p> <p><strong>重要</strong>AEM ：如果將Portlet設定為連線至在不同於<strong> /</strong>，您必須啟用此力 <strong>CQUrlInfo</strong> 在這些AEM例項的Html資料庫管理員設定中（例如，透過Felix Webconsole），或編輯將無法運作，且不會顯示偏好設定對話方塊。</p> </td>
   </tr>
   <tr>
    <td>htmlSelector</td>
@@ -216,7 +216,7 @@ Portlet可自行設定其快取，以便顯示Portlet中的內容而不需要存
    ![screen_shot_2012-02-15at42515pm](assets/screen_shot_2012-02-15at42515pm.png)
 
 1. 在 **HTTP方法** 欄位，型別 **GET**.
-1. 在 **HTTP標頭** 欄位，按一下 **+** 以新增專案及型別 **路徑：{path}**.
+1. 在 **HTTP標頭** 欄位，按一下 **+** 以新增專案及型別 **路徑： {path}**.
 1. 如有需要，請按一下 **代理** 索引標籤並輸入代理程式的Proxy資訊。
 1. 按一下 **確定** 以儲存變更。
 1. 若要測試連線，請按一下 **測試連線** 連結。 此時會出現日誌訊息，指出復寫測試是否成功。 例如：
@@ -509,7 +509,7 @@ Portlet的工具列基本上有兩個檢視狀態。 每個檢視和關聯的按
 | {id} | 按鈕的CSS ID。 |
 | {url} | 按鈕目標的URL。 |
 | {text} | 按鈕的標籤。 |
-| {onclick} | Javascript **onclick** 函式（包含{url}）。 |
+| {onclick} | JavaScript **onclick** 函式(包含 {url})。 |
 
 button.html檔案的範例：
 
@@ -590,7 +590,7 @@ AEM內容Portlet具有內建的本地化功能，可確保來自AEM的內容使�
   </tr>
   <tr>
    <td>TextMapper</td>
-   <td>可讓您發佈程式HTML、CSS和Javascript檔案。</td>
+   <td>可讓您發佈程式HTML、CSS和JavaScript檔案。</td>
   </tr>
   <tr>
    <td>ToolbarButton</td>
@@ -708,7 +708,7 @@ AEM快速入門JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 
 使用Portal元件將Portlet視窗新增至您的網頁。 使用元件屬性來指定要顯示的Portlet。
 
-1. 在網頁上，拖曳 **Portlet** 元件從Sidekick中的General群組移至頁面。
+1. 在網頁上，拖曳 **Portlet** 元件從「一般」群組Sidekick至頁面。
 
    >[!NOTE]
    >
@@ -766,7 +766,7 @@ AEM快速入門JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 
    >[!NOTE]
    >
-   >如果將Portlet設定為連線到在/**以外的內容路徑上執行的AEM作者和發佈執行個體**則需要啟用此強制功能 **CQUrlInfo** 在這些AEM例項的Html資料庫管理員設定中（例如透過Felix Webconsole），或編輯將無法運作，且不會顯示偏好設定對話方塊。
+   >如果將Portlet設定為連線到在/**以外的內容路徑上執行的AEM作者和發佈執行個體**則需要啟用此強制功能 **CQUrlInfo** 在這些AEM例項的Html資料庫管理員設定中（例如，透過Felix Webconsole），或編輯將無法運作，且不會顯示偏好設定對話方塊。
 
 1. 將設定變更儲存在應用程式伺服器中。
 

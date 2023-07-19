@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '6845'
 ht-degree: 0%
@@ -229,7 +229,7 @@ while (it.hasNext()) {
 }
 
 if (cugPolicy == null) {
-   log.debug("no applicable policy"); // path not supported or no applicable policy (e.g.
+   log.debug("no applicable policy"); // path not supported or no applicable policy (for example,
                                                    // the policy was set before)
    return;
 }
@@ -496,7 +496,7 @@ while (isSupported(node)) {
 
 您也需要設定 [Sling查閱者篩選器](/help/sites-administering/security-checklist.md#the-sling-referrer-filter) 所有可用於存取AEM的主機名稱；例如，透過CDN、負載平衡器和任何其他裝置。
 
-如果未設定反向連結篩選器，則當使用者嘗試登入CUG網站時，會出現類似下列的錯誤：
+如果未設定反向連結篩選，則當使用者嘗試登入CUG網站時，會出現類似下列的錯誤：
 
 ```shell
 31.01.2017 13:49:42.321 *INFO* [qtp1263731568-346] org.apache.sling.security.impl.ReferrerFilter Rejected referrer header for POST request to /libs/granite/core/content/login.html/j_security_check : https://hostname/libs/granite/core/content/login.html?resource=%2Fcontent%2Fgeometrixx%2Fen%2Ftest-site%2Ftest-page.html&$$login$$=%24%24login%24%24&j_reason=unknown&j_reason_code=unknown

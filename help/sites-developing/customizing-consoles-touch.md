@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '671'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,6 @@ AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 >
 
 
-
 >[!CAUTION]
 >
 >您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
@@ -54,9 +53,7 @@ AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 >1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
 >
 >1. 進行任何變更 `/apps`
-
 >
-
 
 例如，下列位置位於 `/libs` 結構可以重疊：
 
@@ -142,17 +139,18 @@ AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
    * 在節點上：
 
-      ```
-             /apps/wcm/core/content/common/availablecolumns
-      ```
+     ```
+            /apps/wcm/core/content/common/availablecolumns
+     ```
 
    * 新增欄或移除現有欄。
+
    另請參閱 [使用覆蓋（和Sling資源合併）](/help/sites-developing/overlays.md) 以取得詳細資訊。
 
 1. 選擇性：
 
    * 如果您想要插入其他資料，您需要撰寫 [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) 搭配
-      `pageInfoProviderType` 屬性.
+     `pageInfoProviderType` 屬性.
 
    例如，請參閱下方的附加類別/套件（來自GitHub）。
 

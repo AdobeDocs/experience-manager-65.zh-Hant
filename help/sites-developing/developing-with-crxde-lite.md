@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 4537c1fb-f99c-42e2-a222-b037794bdb52
 docset: aem65
 exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2139'
 ht-degree: 2%
 
 ---
@@ -81,7 +81,7 @@ CRXDE Lite提供下列功能：
   </tr>
   <tr>
    <td>存取控制標籤</td>
-   <td><p>根據目前路徑、存放庫層級或主體顯示許可權。</p> <p>這些許可權可劃分為</p> <p>- <strong>適用的存取控制原則</strong>：可套用至目前選取範圍的原則。</p> <p>- <strong>本機存取控制原則</strong>：目前的原則已套用至本機目前的選取範圍。</p> <p>- <strong>有效的存取控制原則</strong>：套用至目前選取範圍的目前原則，可能在本機設定或從父節點繼承。</p> <p>注意. 若要能夠檢視存取控制資訊，登入CRXDE Lite的使用者必須擁有讀取ACL專案的許可權。 匿名使用者預設無法看到此資訊 — 請以管理員身分登入以檢視資訊。</p> </td>
+   <td><p>根據目前路徑、存放庫層級或主體顯示許可權。</p> <p>這些許可權可劃分為</p> <p>- <strong>適用的存取控制原則</strong>：可套用至目前選取範圍的原則。</p> <p>- <strong>本機存取控制原則</strong>：目前的原則已套用至本機目前的選取範圍。</p> <p>- <strong>有效的存取控制原則</strong>：套用至目前選取範圍的目前原則，可能在本機設定或從父節點繼承。</p> <p>注意. 若要能夠檢視存取控制資訊，登入CRXDE Lite的使用者必須擁有讀取ACL專案的許可權。 匿名使用者預設無法看到此資訊 — 請以管理員身分登入，以檢視資訊。</p> </td>
   </tr>
   <tr>
    <td>「復寫」標籤</td>
@@ -137,7 +137,7 @@ CRXDE Lite提供下列功能：
   </tr>
   <tr>
    <td>登入Widget<br /> </td>
-   <td><p>顯示目前登入的使用者及其登入的工作區，例如admin@crx.default。</p> <p>按一下以登入或以特定使用者身分重新登入。 如果您未指定要登入的工作區，則會登入預設的工作區crx.default。</p> <p>如果您想以匿名使用者的身份瀏覽存放庫，請使用 <strong>匿名</strong> 作為登入名稱，以及任何密碼（例如空格或點）。<br /> </p> <p>如果您的授權不再有效（例如，已過期），登入Widget會顯示"<strong>未獲授權 — 登入……</strong>「。 按一下以重新登入。</p> </td>
+   <td><p>顯示目前登入的使用者及其登入的工作區，例如admin@crx.default。</p> <p>按一下以登入或以特定使用者身分重新登入。 如果您未指定要登入的工作區，則會登入預設的工作區crx.default。</p> <p>如果您想以匿名使用者的身份瀏覽存放庫，請使用 <strong>匿名</strong> 作為登入名稱，以及任何密碼（例如，空格或點）。<br /> </p> <p>如果您的授權不再有效（例如，已過期），登入Widget會顯示"<strong>未獲授權 — 登入……</strong>「。 按一下以重新登入。</p> </td>
   </tr>
  </tbody>
 </table>

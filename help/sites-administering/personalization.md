@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: d6b595b6b5477b5cad662e219f1abd483491897f
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1687'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 2%
 
 * 使用者需要登入才能獲得授權；這將連結到提供個人化所需資訊的設定檔；可能的詳細資訊，例如其位置、與產品的關係、使用記錄、預算責任等。
 * 這類例項可涵蓋多個網站，例如：
-* 為市場高度專業化部分提供網站的公司，例如為醫生提供專業網站的製藥公司。
+* 提供網站給市場高度專業化的公司，例如，為醫生提供專業網站的製藥公司。
 * 提供網站讓客戶檢視目前帳戶和帳單資訊的公司；例如電話服務提供者。
 
 ### 銷售與分銷網站 {#sales-site}

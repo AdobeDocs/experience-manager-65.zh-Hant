@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 3f64bd7f5b4eb43aeefb9277a94e10ef1f0df59c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2690'
+source-wordcount: '2691'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 2%
 
 此外，在ContextHub設定上， `sling:resourceType` 需要更新為相對而非絕對。
 
-1. 在CRX DE Lite中開啟ContextHub設定節點的屬性，例如 `/apps/settings/cloudsettings/legacy/contexthub`
+1. 在CRX DE Lite中開啟ContextHub設定節點的屬性，例如， `/apps/settings/cloudsettings/legacy/contexthub`
 1. 變更 `sling:resourceType` 從 `/libs/granite/contexthub/cloudsettings/components/baseconfiguration` 至 `granite/contexthub/cloudsettings/components/baseconfiguration`
 
 即 `sling:resourceType` 的URL必須是相對的，而不是絕對的。
@@ -99,7 +99,7 @@ ht-degree: 2%
       <ol>
        <li>例如，匯出：
         <ul>
-         <li><code>/conf/global/settings/workflow/models/dam/my_workflow_model</code> 和 </li>
+         <li><code>/conf/global/settings/workflow/models/dam/my_workflow_model</code><br /> 和 </li>
          <li><code>/var/workflow/models/dam/my_workflow_model</code></li>
         </ul> </li>
       </ol> </li>
@@ -510,7 +510,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>重組指引</strong></td>
-   <td><p>任何新的或修改過的AEM專案儀表板小工具設定必須移轉到新位置(<code>/apps</code>)。</p>
+   <td><p>任何新的或修改過的AEM專案儀表板小工具設定都必須移轉到新位置(<code>/apps</code>)。</p>
     <ol>
      <li>將任何新的或修改過的AEM專案儀表板小工具設定從先前的位置複製到新位置(<code>/apps</code>)。
       <ol>

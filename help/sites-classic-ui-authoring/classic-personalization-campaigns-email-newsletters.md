@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1108'
 ht-degree: 3%
@@ -112,7 +112,6 @@ ht-degree: 3%
 >* 需要兩種電子郵件工具： **郵寄地址（必填）** 和 **設定檔中心（必要）**. 將電子郵件發佈至ExactTarget時，這兩個電子郵件工具會預設新增至每封郵件的底部。
 >
 
-
 ### 新增文字和個人化工具至您的電子郵件 {#adding-text-and-personalization-tool-to-your-e-mail}
 
 您可以在電子郵件中新增個人化欄位，方法是新增 **文字和個人化** 元件至頁面：
@@ -160,6 +159,7 @@ ht-degree: 3%
 >如果電子郵件/電子報的發佈名稱與電子郵件/電子報的發佈名稱相同，則不會取代先前的電子郵件/電子報。 而是以相同名稱建立新的電子郵件/電子報（但兩個電子報的ID不同）。
 >
 >將電子郵件/電子報發佈到電子郵件服務提供者也會將電子郵件/電子報發佈到AEM發佈執行個體。
+>
 
 ### 更新已發佈的電子郵件 {#updating-a-published-e-mail}
 

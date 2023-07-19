@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 exl-id: 4acc5f7f-0bcb-4b5a-8531-52e146cffeae
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 使用xgettext-maven-plugin從您的原始程式碼中擷取需要翻譯的字串。 Maven外掛程式會將字串擷取至您傳送的XLIFF檔案進行翻譯。 字串會從下列位置擷取：
 
 * Java來源檔案
-* Javascript來源檔案
+* JavaScript來源檔案
 * SVN資源（JCR節點）的XML表示法
 
 ## 設定字串擷取 {#configuring-string-extraction}
@@ -45,11 +45,11 @@ ht-degree: 1%
 /potentials { }
 ```
 
-| 章節 | 說明 |
+| 區段 | 說明 |
 |---|---|
 | /filter | 識別要剖析的檔案。 |
 | /parsers/vaultxml | 設定儲存庫檔案的剖析。 識別包含外部化字串和本地化提示的JCR節點。 也會識別要忽略的JCR節點。 |
-| /parsers/javascript | 識別可將字串外部化的Javascript函式。 您不需要變更此區段。 |
+| /parsers/javascript | 識別可將字串外部化的JavaScript函式。 您不需要變更此區段。 |
 | /parsers/regexp | 設定剖析Java、JSP和ExtJS範本檔案。 您不需要變更此區段。 |
 | /潛能 | 偵測要國際化的字串的公式。 |
 

@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1312'
 ht-degree: 2%
@@ -53,7 +53,7 @@ ht-degree: 2%
 
 1. AEM頁面作者隨後可以透過元件工具列的樣式選單，在頁面編輯器中選擇設計的樣式。
 
-請注意，在AEM中實際執行的只有最後三個步驟。 這表示所有必要的CSS和Javascript開發都可以在不使用AEM的情況下完成。
+請注意，在AEM中實際執行的只有最後三個步驟。 這表示所有必要的CSS和JavaScript開發都可以在不使用AEM的情況下完成。
 
 實際實作樣式只需要在AEM上部署，並在所需範本的元件中選取。
 
@@ -111,7 +111,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->設定為元件原則的樣式屬性的CSS類別（以及任何必要的Javascript）必須部署為 [使用者端資料庫](/help/sites-developing/clientlibs.md) 才能順利運作。
+>設定為元件原則的樣式屬性的CSS類別（以及任何必要的JavaScript）必須部署為 [使用者端資料庫](/help/sites-developing/clientlibs.md) 才能順利運作。
 
 ## 設定 {#setup}
 
@@ -156,9 +156,7 @@ ht-degree: 2%
 >1. HTL優先於所有內容： `data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`
 >1. 然後，在多個作用中樣式中，會採用元件原則中設定的樣式清單中的第一個樣式。
 >1. 最後，元件的 `cq:htmlTag`/ `cq:tagName` 將被視為遞補值。
-
 >
-
 
 這種定義樣式名稱的功能對於非常一般的元件（例如佈局容器或內容片段元件）非常有用，可為它們提供額外的含義。
 

@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
 exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2668'
 ht-degree: 30%
 
 ---
@@ -307,7 +307,7 @@ MSM Live Copy是特定網站內容的副本，其會維持與原始來源的即�
 
 #### 含非 Live Copy 頁面的 Live Copy {#live-copy-with-non-live-copy-pages}
 
-當您在AEM中建立即時副本時，您可以看見並瀏覽即時副本分支，並在即時副本分支上使用一般AEM功能。 這表示您（或程式）可以在即時副本分支內建立新資源（頁面和/或段落） (例如 `myCanadaOnlyProduct`)。
+當您在AEM中建立即時副本時，您可以看見並瀏覽即時副本分支，並在即時副本分支上使用一般AEM功能。 這表示您（或程式）可以在即時副本分支內建立新資源（頁面和/或段落） (例如， `myCanadaOnlyProduct`)。
 
 * 這類資源與來源/藍圖頁面沒有即時關係，並且不同步。
 * 可能會發生 MSM 作為特殊案例處理的情況。例如，當您（或程式）在來源/Blueprint和即時副本分支中建立具有相同位置和名稱的頁面時。 對於此類情況，請參閱 [MSM 推出衝突](/help/sites-administering/msm-rollout-conflicts.md)了解更多資訊。

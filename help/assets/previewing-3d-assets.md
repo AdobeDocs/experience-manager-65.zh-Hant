@@ -7,9 +7,9 @@ feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '579'
 ht-degree: 8%
 
 ---
@@ -33,10 +33,10 @@ Experience Manager支援3D資產的上傳、傳送和互動式預覽，這是製
 
 | 3D副檔名 | 檔案格式 | MIME型別 | 附註 |
 |---|---|---|---|
-| GLB | 二進位GL傳輸 | model/gltf-binary |  |
+| GLB | 二進位GL傳輸 | model/gltf-binary | |
 | GLTF | 總帳傳輸格式 | model/gltf+json | 另請參閱 **注意** 下方的。 |
-| 物件 | WaveFront 3D物件檔案 | application/x-tgif |  |
-| STL | 立體光刻 | application/vnd.ms-pki.stl |  |
+| 物件 | WaveFront 3D物件檔案 | application/x-tgif | |
+| STL | 立體光刻 | application/vnd.ms-pki.stl | |
 | DN | Adobe Dimension | model/x-adobe-dn | 僅支援內嵌；無法預覽。 |
 | USDZ | Universal Scene說明Zip封存 | model/vnd.usdz+zip | 僅支援內嵌；無法預覽。 |
 
@@ -82,7 +82,7 @@ Experience Manager支援3D資產的上傳、傳送和互動式預覽，這是製
    | **平移相機** | 向左、向右、向上或向下平移檢視。 | 按一下滑鼠右鍵+拖曳。 | 兩指按下+拖曳。 |
    | **縮放相機** | 在3D場景中移入和移出區域。 | 滾輪。 | 兩指捏合。 |
    | **重新將相機置中** | 將相機重新置中至3D場景中物件上的一點。 | 按兩下。 | 點兩下。 |
-   | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點恢復到3D資產的中心。 重設也會將相機移到更近或更遠的位置，以完整的方式顯示資產，並維持合理的檢視大小。 |  |  |
-   | **全熒幕模式** | 若要進入全熒幕模式，請在頁面的右下角，選取「全熒幕」圖示。 |  |  |
+   | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點恢復到3D資產的中心。 重設也會將相機移到更近或更遠的位置，以完整的方式顯示資產，並維持合理的檢視大小。 |   |   |
+   | **全熒幕模式** | 若要進入全熒幕模式，請在頁面的右下角，選取「全熒幕」圖示。 |   |   |
 
 1. 完成後，在頁面的右上角附近，選取 **[!UICONTROL 關閉]**.

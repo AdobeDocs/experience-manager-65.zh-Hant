@@ -10,9 +10,9 @@ topic-tags: spa
 content-type: reference
 discoiquuid: d9f1e24e-51a9-4f28-b2cd-2e97aed63a24
 exl-id: eaef65ec-2e4d-490f-8158-d48d738e3409
-source-git-commit: 509ea0945e6c80e50f6f5bffd4c68282d586504a
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
+>SPA編輯器是建議解決方案，供需要SPA架構使用者端轉譯(例如React或Angular)的專案使用。
 
 ## 專案路由 {#project-routing}
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 <meta property="cq:pagemodel_router" content="disabled"\>
 ```
 
-請注意，SPA的每個路由都應對應至AEM中可存取的資源(例如「 `/content/mysite/mypage"`)從以下日期開始： `PageModelManager` 選取路由後，將自動嘗試載入對應的頁面模型。 不過，如有需要，SPA也可以定義路由的「封鎖清單」，該清單應被 `PageModelManager`：
+請注意，SPA的每個路由都應對應至AEM中可存取的資源(例如，「 `/content/mysite/mypage"`)從以下日期開始： `PageModelManager` 選取路由後，將自動嘗試載入對應的頁面模型。 不過，如有需要，SPA也可以定義路由的「封鎖清單」，該清單應被 `PageModelManager`：
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>

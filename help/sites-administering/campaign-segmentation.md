@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c68d5853-684f-42f2-a215-c1eaee06f58a
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 8f98d018518f2491f29211552863d3fa005cc0b7
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 1%
@@ -87,7 +87,7 @@ AEM可讓您輕鬆建立和更新區段、Teaser和行銷活動。 它也可讓�
   </tr>
   <tr>
    <td> 指令碼</td>
-   <td>要評估的Javascript運算式。<br /> </td>
+   <td>要評估的JavaScript運算式。<br /> </td>
   </tr>
   <tr>
    <td> 區段引用 <br /> </td>

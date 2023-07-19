@@ -11,9 +11,9 @@ discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1087'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,8 @@ ht-degree: 0%
       >    * 在您的執行個體上升級
       >    * 套用Hot Fix
       >    * 安裝功能套件
-
+      >    
+      >
 
    1. 按一下&#x200B;**「確定」**。CSS資料夾是在指定的路徑中建立。
 
@@ -115,7 +116,7 @@ ht-degree: 0%
 
 使用下列步驟將自訂標誌檔案上傳至CRX：
 
-1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，請以管理員身分登入。
+1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`。如有必要，請以管理員身分登入。
 1. 在CRXDE中，以滑鼠右鍵按一下 **影像** 資料夾並選取 **「建立」>「建立檔案」**：
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs/`
@@ -158,7 +159,7 @@ ht-degree: 0%
 
 使用下列步驟來設定呈現標誌的樣式表：
 
-1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，請以管理員身分登入。
+1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`。如有必要，請以管理員身分登入。
 1. 在下列位置建立名為customcss.css的檔案（不能使用其他檔案名稱）：
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css/`

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 7d91fbdaae7ade27e9d6bf42bbcd5b16d3f6e358
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '748'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 * [定義每個執行模式的設定引數集合](#defining-configuration-properties-for-a-run-mode).
 
-   所有執行模式都會套用一組基本組態引數，然後您就可以根據特定環境的目的調整其他組。 這些會視需要套用。
+  所有執行模式都會套用一組基本組態引數，然後您就可以根據特定環境的目的調整其他組。 這些會視需要套用。
 
 * [定義要針對特定模式安裝的其他組合](#defining-additional-bundles-to-be-installed-for-a-run-mode).
 
@@ -89,25 +89,25 @@ nosamplecontent執行模式是針對生產安裝所設計。
 
 * `config`
 
-   適用於所有執行模式
+  適用於所有執行模式
 
 * `config.author`
 
-   用於作者執行模式
+  用於作者執行模式
 
 * `config.publish`
 
-   用於發佈執行模式
+  用於發佈執行模式
 
 * `config.<run-mode>`
 
-   用於適用的執行模式；例如，設定
+  用於適用的執行模式；例如，設定
 
 另請參閱 [存放庫中的OSGi設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 有關定義這些資料夾中的個別設定節點以及為多個執行模式的組合建立設定的更多詳細資訊。
 
 >[!NOTE]
 >
->對象 [安裝執行模式](#installation-run-modes) （例如author）安裝後無法變更執行模式。 不過，個別設定屬性的變更將在重新啟動後生效。
+>對象 [安裝執行模式](#installation-run-modes) （例如，作者）安裝後無法變更執行模式。 不過，個別設定屬性的變更將在重新啟動後生效。
 
 ## 定義要針對執行模式安裝的其他組合 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
@@ -123,8 +123,8 @@ nosamplecontent執行模式是針對生產安裝所設計。
 如果您已定義多個執行模式的設定，則需要定義要在啟動時使用的設定。 有數種方法可指定要使用的執行模式；解析的順序為：
 
 1. [系統屬性(](#using-a-system-property-in-the-start-script)
-1. [ ](#using-the-sling-properties-file)
-1. [ ](#using-the-r-option)
+1. [](#using-the-sling-properties-file)
+1. [](#using-the-r-option)
 1. [檔案名稱偵測](#filename-detection-renaming-the-jar-file)
 
 使用應用程式伺服器時，您也可以 [在web.xml中定義執行模式](#defining-the-run-mode-in-web-xml-with-application-server).
@@ -155,7 +155,7 @@ java -jar cq-56-p4545.jar -r dev
 
 * 例如，使用以下專案將執行個體啟動為位於美國的生產發佈執行個體：
 
-   `-Dsling.run.modes=publish,prod,us`
+  `-Dsling.run.modes=publish,prod,us`
 
 ### 檔案名稱偵測 — 重新命名jar檔案 {#filename-detection-renaming-the-jar-file}
 

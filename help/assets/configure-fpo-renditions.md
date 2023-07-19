@@ -6,9 +6,9 @@ role: Admin
 feature: Renditions
 exl-id: 1e4ddd73-a31c-4ddd-94eb-1dac6a4835b3
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ Experience Manager可讓許多方法處理可用來產生FPO轉譯的影像。 �
 
    ![fpo_rendition_damupdateasset_model](assets/fpo_rendition_damupdateasset_model.png)
 
-1. 調整 **[!UICONTROL 品質]** 並新增或修改 **[!UICONTROL 格式清單]** 視需要提供值。 依預設，產生FPO轉譯的MIME型別清單為pjpeg、jpeg、jpg、gif、png、x-png和tiff。 按一下 **[!UICONTROL 完成]**.
+1. 調整 **[!UICONTROL 品質]** 並新增或修改 **[!UICONTROL 格式清單]** 視需要提供值。 依預設，產生FPO轉譯的MIME型別清單為pjpeg、jpeg、jpg、gif、png、x-png和tiff。 按一下&#x200B;**[!UICONTROL 「完成」]**。
 
    >[!NOTE]
    >

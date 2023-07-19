@@ -12,7 +12,7 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '4150'
 ht-degree: 0%
@@ -94,6 +94,7 @@ Forms服務可在表單轉譯時執行指令碼。 因此，您可以連線至�
 位於form：ready事件中的表單指令碼在表單的初始轉譯期間只會執行一次，而不會在後續的頁面擷取中執行。 相較之下，form：calculate事件會針對每個呈現表單的頁面導覽執行。
 
 >[!NOTE]
+>
 在多頁表單中，如果您移至其他頁面，JavaScript對頁面所做的變更不會保留。
 
 您可以在提交表單前叫用自訂指令碼。 此功能適用於所有可用瀏覽器。 但是，它只能在使用者轉譯具有它的HTML表單時使用 `Output Type` 屬性設定為 `Form Body`. 當 `Output Type` 是 `Full HTML`. 如需設定此功能的步驟，請參閱管理說明中的設定表單。
@@ -167,6 +168,7 @@ XFA子集會定義對應至HTML事件的XFA事件。 計算及驗證事件的時
 ```
 
 >[!NOTE]
+>
 巢狀內嵌於表格儲存格時，靜態物件不會顯示在演算後的HTML表單中。 例如，巢狀在表格儲存格內的圓形和矩形不會顯示在轉譯HTML表單中。 不過，當這些相同的靜態物件位於表格外部時，會正確顯示。
 
 ## 數位簽署HTML表單 {#digitally-signing-html-forms}
@@ -189,6 +191,7 @@ XFA子集會定義對應至HTML事件的XFA事件。 計算及驗證事件的時
 在將表單轉譯為HTML表單時，建議您限制對表單欄位使用驗證規則。 HTML表單可能不支援某些驗證規則。 例如，將MM-DD-YYYY的驗證模式套用至 `Date/Time` 位於呈現為HTML表單之表單設計中的欄位，即使正確輸入日期，也無法正常運作。 不過，此驗證模式適用於轉譯為PDF的表單。
 
 >[!NOTE]
+>
 如需Forms服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## 步驟摘要 {#summary-of-steps}
@@ -217,16 +220,18 @@ XFA子集會定義對應至HTML事件的XFA事件。 計算及驗證事件的時
 * `Upload`：提供使用者介面，以選取要附加至目前表單的檔案。
 * `Download`：提供顯示附加檔案的使用者介面。
 
-當HTML工具列出現在HTML表單上時，使用者可以選擇最多10個要與表單資料一起提交的檔案。 提交檔案後，Forms服務即可擷取檔案。
+當HTML表單上出現HTML工具列時，使用者可以選擇最多10個要與表單資料一起提交的檔案。 提交檔案後，Forms服務即可擷取檔案。
 
 將表單轉譯為HTML時，您可以指定使用者代理程式值。 使用者代理程式值提供瀏覽器和系統資訊。 這是選用值，您可以傳遞空字串值。 使用Java API快速入門呈現HTML表單會顯示如何取得使用者代理程式值，並使用它來將表單呈現為HTML。
 
 使用Forms服務使用者端API設定目標URL即可指定表單資料張貼處的HTTP URL，或可在XDP表單設計內含的提交按鈕中指定。 如果在表單設計中指定了目標URL，則請勿使用Forms服務使用者端API設定值。
 
 >[!NOTE]
+>
 使用工具列呈現HTML表單為選用。
 
 >[!NOTE]
+>
 如果您轉譯AHTML表單，建議您不要將工具列新增至表單。
 
 **呈現HTML表單**
@@ -278,6 +283,7 @@ Forms服務轉譯HTML表單時，會傳回您必須寫入使用者端網頁瀏�
    * 若要在完整HTML標籤內呈現HTML表單，請叫用 `HTMLRenderSpec` 物件的 `setOutputType` 方法與傳遞 `OutputType.FullHTMLTags`. （此為選擇性設定）。
 
    >[!NOTE]
+   >
    Forms無法成功在HTML中呈現，當 `StandAlone` 選項為 `true` 和 `ApplicationWebRoot` 會參考裝載AEM Forms之J2EE應用程式伺服器以外的伺服器( `ApplicationWebRoot` 值是使用 `URLSpec` 傳遞至的物件 `FormsServiceClient` 物件的 `(Deprecated) renderHTMLForm` 方法)。 當 `ApplicationWebRoot` 是另一部託管AEM Forms的伺服器，管理控制檯中的Web根URI值需要設定為表單的Web應用程式URI值。 您可以登入管理主控台，按一下「服務> Forms」，然後將Web根URI設為https://server-name:port/FormServer，即可完成這項作業。 然後，儲存您的設定。
 
 1. 呈現HTML表單
@@ -335,6 +341,7 @@ Forms服務轉譯HTML表單時，會傳回您必須寫入使用者端網頁瀏�
    * 若要在完整HTML標籤內呈現HTML表單，請叫用 `HTMLRenderSpec` 物件的 `setOutputType` 方法與傳遞 `OutputType.FullHTMLTags`.
 
    >[!NOTE]
+   >
    Forms無法成功在HTML中呈現，當 `StandAlone` 選項為 `true` 和 `ApplicationWebRoot` 會參考裝載AEM Forms之J2EE應用程式伺服器以外的伺服器( `ApplicationWebRoot` 值是使用 `URLSpec` 傳遞至的物件 `FormsServiceClient` 物件的 `(Deprecated) renderHTMLForm` 方法)。 當 `ApplicationWebRoot` 是另一部託管AEM Forms的伺服器，管理控制檯中的Web根URI值需要設定為表單的Web應用程式URI值。 您可以登入管理主控台，按一下「服務> Forms」，然後將Web根URI設為https://server-name:port/FormServer，即可完成這項作業。 然後，儲存您的設定。
 
 1. 呈現HTML表單

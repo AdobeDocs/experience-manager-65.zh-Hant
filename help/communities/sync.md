@@ -12,9 +12,9 @@ discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2482'
 ht-degree: 2%
 
 ---
@@ -53,11 +53,11 @@ ht-degree: 2%
 
 * **vlt封裝**
 
-   這是包含發佈商上完成的所有變更的zip檔案，這些變更需要跨發佈商分發。 發行者上的變更會產生由變更事件接聽程式挑選的事件。 這會建立包含所有變更的vlt套裝程式。
+  這是包含發佈商上完成的所有變更的zip檔案，這些變更需要跨發佈商分發。 發行者上的變更會產生由變更事件接聽程式挑選的事件。 這會建立包含所有變更的vlt套裝程式。
 
 * **發佈套件**
 
-   它包含Sling的分發資訊。 這是需要發佈內容的地點以及上次發佈時間的相關資訊。
+  它包含Sling的分發資訊。 這是需要發佈內容的地點以及上次發佈時間的相關資訊。
 
 ## 當……發生什麼情況？ {#what-happens-when}
 
@@ -124,13 +124,14 @@ ht-degree: 2%
 
    * 選取要開啟以進行編輯的現有設定（鉛筆圖示）。
 
-      驗證名稱： **socialpubsync。**
+     驗證名稱： **socialpubsync。**
 
    * 選取 **已啟用** 核取方塊。
    * 選取 **使用多個佇列。**
    * 指定 **匯出工具端點** 和 **匯入工具端點** （您可以新增更多匯出工具與匯入工具端點）。
 
-      這些端點會定義您要從何處取得內容，以及您要推送內容的位置。 作者會從指定的匯出工具端點擷取內容，並將內容推送至發行者（而非從中擷取內容的發行者）。
+     這些端點會定義您要從何處取得內容，以及您要推送內容的位置。 作者會從指定的匯出工具端點擷取內容，並將內容推送至發行者（而非從中擷取內容的發行者）。
+
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
 ### AdobeGranite發佈 — 加密的密碼傳輸機密提供者 {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
@@ -216,7 +217,7 @@ ht-degree: 2%
 
    * 選取要開啟以進行編輯的現有設定（鉛筆圖示）。
 
-      驗證 **socialpubsync -scheduled-trigger**
+     驗證 **socialpubsync -scheduled-trigger**
 
    * 將「間隔」（以秒為單位）設定為所需的間隔，然後儲存。
 

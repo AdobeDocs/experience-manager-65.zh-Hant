@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1563'
 ht-degree: 2%
 
 ---
@@ -37,6 +37,7 @@ SharePoint聯結器支援下列基本功能：
 >AEM 6.1 Service Pack 2也支援SharePoint Connector。 聯結器不再支援虛擬存放庫掛載，因此無法掛載。 如果您想要使用Java API存取Sharepoint存放庫，請在您的專案中使用Sharepoint聯結器的JCR存放庫實作。
 >
 >SharePoint伺服器和相關IT基礎結構的安裝、設定、管理和IT作業不在本檔案的涵蓋範圍內。 請參閱供應商檔案，網址為 [SharePoint](https://www.microsoft.com/sharepoint) 以取得這些主題的相關資訊。 聯結器需要正確安裝、設定和操作基礎架構的這些部分。
+>
 
 ## 快速入門 {#getting-started}
 

@@ -10,9 +10,9 @@ discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 feature: Adaptive Forms
 exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2055'
+source-wordcount: '2054'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,6 @@ Ultramine-Accessible主題是參考主題。 它有助於示範如何以最適�
 >* 「選項按鈕」和「核取方塊」只能有兩個協助工具選項，即「自訂文字」和「標題」。
 >* 對於XFA型調適型表單，協助工具選項繼承自XDP中設定的協助工具選項。 XDP的工具提示會對應到簡短說明，而註解則會對應到標題。 其他選項則按原樣運作。
 
-
 ### 3.提供影像的對等文字 {#provide-text-equivalents-for-images}
 
 影像有助於改善部分使用者的理解。 不過，對於使用熒幕助讀程式的使用者，影像會降低表單的協助工具。 如果您選擇使用影像，請提供所有影像的文字說明。
@@ -144,7 +143,7 @@ Ultramine-Accessible主題是參考主題。 它有助於示範如何以最適�
 
 有視覺障礙的使用者需仰賴文字與背景的高對比來閱讀數位內容。 如果沒有足夠的對比，某些使用者可能很難閱讀表單，甚至根本無法閱讀。
 
-建議您使用預設字型與背景顏色 — 白色背景上的黑色內容。 如果您變更預設顏色，請在淺色背景顏色上選擇深色前景顏色，反之亦然。
+建議您使用預設字型與背景顏色 — 白色背景上的黑色內容。 如果您變更預設顏色，請在淺色背景顏色上選擇深色前景顏色，或反之。
 
 另請參閱 [建立最適化表單的自訂主題](/help/forms/using/creating-custom-adaptive-form-themes.md)，以取得有關變更最適化表單的顏色對比和主題的詳細資訊。
 

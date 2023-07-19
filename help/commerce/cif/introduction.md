@@ -3,10 +3,10 @@ title: 簡介和概觀
 description: Content and Commerce 簡介和概觀。在透過 Experience Cloud 整合和擴充 Adobe Commerce 和其他第三方商務解決方案的商務服務時，Adobe 建議使用 Experience Manager 商務整合框架 (CIF) 作為模式。
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 92%
+source-wordcount: '871'
+ht-degree: 94%
 
 ---
 
@@ -64,7 +64,7 @@ CIF 旨在透過始終保持最新的附加元件不斷創新，使客戶能夠�
 
 ### 整合
 
-使用以下專案將您的生態系統（例如商務解決方案）與Experience Cloud連線：  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)，一種基於微服務的無伺服器PaaS，以及 [CIF的參考實作](https://github.com/adobe/commerce-cif-graphql-integration-reference).
+使用 [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)、微服務式無伺服器的 PaaS 和 [CIF 的參考實作](https://github.com/adobe/commerce-cif-graphql-integration-reference)，將您的生態系統 (例如，商務解決方案) 與 Experience Cloud 相連接。
 
 ## 經驗證的模式和最佳做法
 
@@ -72,7 +72,7 @@ CIF 透過基於最佳做法的標準化整合模式支援客戶。這有助於�
 
 * 消除可能發生的產品目錄整合方面的典型挑戰。範例：
    * 目錄量或複雜性變高的效能問題
-   * 無法存取預備資料
+   * 無法存取中繼資料
    * 需要即時產品資料和體驗
 * 數位化日益成熟導致對體驗管理的需求。CIF 提供產品體驗管理功能，無需額外的 IT 工作即可逐步整合。
 * 為全管道做好準備：CIF 支援各種具有模式、加速器和核心元件的接觸點技術 (伺服器端、混合、用戶端)。

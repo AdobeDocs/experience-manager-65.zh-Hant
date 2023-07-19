@@ -8,9 +8,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1144'
 ht-degree: 11%
 
 ---
@@ -29,8 +29,8 @@ ht-degree: 11%
    * 代表您需要對頁面內容執行之動作的工作專案；
 
       * 這些是工作流程的產物 **參與者** 步驟
-   * 失敗專案，以允許管理員重試失敗的步驟。
 
+   * 失敗專案，以允許管理員重試失敗的步驟。
 
 您會在自己的收件匣中收到這些通知，您可以在其中檢視通知並採取行動。
 
@@ -47,7 +47,6 @@ ht-degree: 11%
 >* [工作流程](/help/sites-authoring/workflows.md)
 >* [Forms](/help/forms/home.md)
 >
-
 
 ## 標題中的收件匣 {#inbox-in-the-header}
 
@@ -114,22 +113,22 @@ ht-degree: 11%
 
 * **日曆檢視**
 
-   對象 **行事曆檢視** 您可以設定：
+  對象 **行事曆檢視** 您可以設定：
 
    * **分組依據**
    * **排程** 或無 ****
    * **卡片大小**
 
-   ![wf-92](assets/wf-92.png)
+  ![wf-92](assets/wf-92.png)
 
 * **清單檢視**
 
-   對象 **清單檢視** 您可以設定排序機制：
+  對象 **清單檢視** 您可以設定排序機制：
 
    * **排序欄位**
    * **排序順序**
 
-   ![wf-83](assets/inbox-settings.png)
+  ![wf-83](assets/inbox-settings.png)
 
 ### 收件匣 — 管理員控制 {#inbox-admin-control}
 
@@ -149,7 +148,7 @@ ht-degree: 11%
    * **刪除欄**：點選 ![刪除](assets/delete_updated.svg) 圖示以從AEM收件匣中刪除欄。
    * **移動欄**：拖曳 ![移動](assets/move_updated.svg) 圖示將欄移動到AEM收件匣中的新位置。
 
-   ![admin-control](assets/admin-control-column-customize.png)
+  ![admin-control](assets/admin-control-column-customize.png)
 
 * **品牌自訂**
 
@@ -181,6 +180,7 @@ ht-degree: 11%
       * 顯示專案屬性
       * 開啟適當的儀表板或精靈以進一步操作
       * 開啟相關檔案
+
    * **後退** 到上一個步驟。
    * 檢視工作流程的裝載。
    * 從專案建立專案。
@@ -190,7 +190,6 @@ ht-degree: 11%
    >如需進一步詳細資訊，請參閱：
    >
    >* 工作流程專案 —  [參與工作流程](/help/sites-authoring/workflows-participating.md)
-
 
 1. 視選取的專案而定，將會啟動動作；例如：
 
@@ -204,10 +203,9 @@ ht-degree: 11%
 
    視是否已開啟對話方塊、精靈、檔案頁面而定，您可以：
 
-   * 確認適當的動作；例如重新指派。
+   * 確認適當的動作；例如，重新指派。
    * 取消動作。
    * 上一頁箭頭；例如，如果已開啟動作精靈或檔案頁面，您可以返回「收件匣」。
-
 
 ## 建立任務 {#creating-a-task}
 
@@ -260,9 +258,11 @@ ht-degree: 11%
       * **開始日期**
       * **到期日期**
       * **使用者** 和角色
+
    * **進階**
 
       * **名稱**
+
    >[!NOTE]
    >
    >另請參閱 [建立專案](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project) 以取得完整資訊。

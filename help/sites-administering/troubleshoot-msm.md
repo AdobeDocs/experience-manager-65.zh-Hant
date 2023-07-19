@@ -4,9 +4,9 @@ description: 瞭解如何疑難排解最常見的MSM相關問題，並獲得最�
 feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
-source-git-commit: a323e6c30bf2c226f6613d1b9b037a0beedbfc0d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ MSM會在資源URL上向選取器註冊數個可請求的servlet。 這些供UI�
 1. `http://<host>:<port>/content/path/to/bluprint/page.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
    * 在Blueprint頁面上使用這個專案來擷取連結到它的所有即時副本清單，連同其他即時副本狀態資訊。
    * 例如：
-      `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
+     `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
 
 
 1. `http://<host>:<port>/content/path/to/livecopy/page.msm.json`
    * 在即時副本頁面上使用它可擷取關於其與其Blueprint頁面之連線的進階資訊。 如果頁面不是即時副本，則不會傳回任何內容。
    * 例如：
-      `http://localhost:4502/content/wknd/ca/en.msm.json`
+     `http://localhost:4502/content/wknd/ca/en.msm.json`
 
 這些servlet會透過產生DEBUG記錄訊息 `com.day.cq.wcm.msm` 記錄器，也會有所幫助。
 
@@ -64,7 +64,7 @@ MSM會在資源URL上向選取器註冊數個可請求的servlet。 這些供UI�
 
 以下是與MSM和即時副本相關的一些常見問題。
 
-### 為什麼有些屬性（例如標題、註解）在MSM轉出期間沒有更新？ {#missing-properties}
+### 為什麼有些屬性（例如標題、註解）在MSM轉出期間未更新？ {#missing-properties}
 
 MSM同步動作是高度可設定的。 轉出時修改的屬性或元件會直接取決於這些設定的屬性。
 
@@ -81,7 +81,7 @@ MSM同步動作是高度可設定的。 轉出時修改的屬性或元件會直�
 
 ### 為什麼我會看到尾碼為「_msm_moved」的即時副本頁面？ {#moved-pages}
 
-如果轉出Blueprint頁面，它將更新其即時副本頁面或建立新的即時副本頁面（如果該頁面不存在） （例如，首次轉出或手動刪除即時副本頁面時）。
+如果轉出Blueprint頁面，它將更新其即時副本頁面或建立新的即時副本頁面（如果它不存在）（例如，首次轉出或手動刪除即時副本頁面時）。
 
 但在後一種情況下，如果頁面沒有 `cq:LiveRelationship` 屬性以相同名稱存在，建立即時副本頁面之前，此頁面會相應重新命名。
 

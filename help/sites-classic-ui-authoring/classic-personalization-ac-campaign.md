@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 61b2bd47-dcef-4107-87b1-6bf7bfd3043b
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1169'
 ht-degree: 1%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 1%
 >[!NOTE]
 >
 >新增電子郵件範本時，請務必將其新增至 **/content/campaigns** 以使其可用。
+>
 
 1. 在AEM中，選取 **網站** 資料夾，然後瀏覽您的檔案總管，以找出管理電子郵件行銷活動的位置。 在以下範例中，相關節點為 **網站** > **行銷活動** > **Geometrixx Outdoors** > **電子郵件行銷活動**.
 
@@ -124,7 +125,6 @@ ht-degree: 1%
 >* 僅限Adobe Campaign的欄位 **設定檔** 目標維度會納入考量。
 >* 從檢視屬性時 **網站**，您無權存取Adobe Campaign內容欄位。 您可以在編輯時直接從電子郵件存取這些專案。
 >
-
 
 1. 插入新專案 **電子報** > **文字與個人化（行銷活動）** 元件。
 1. 連按兩下元件以將其開啟。 此 **編輯** 視窗具備可讓您插入個人化元素的功能。

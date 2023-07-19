@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: acf5c17a-95b7-43ba-9734-241e20f4f374
 exl-id: 3fd50655-7461-4900-a3b8-c01b04c7ba7a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # ContextHub{#contexthub}
 
-ContextHub是一種用於儲存、操控和呈現內容資料的架構。 使用者端Javascript API可讓您存取個人化內容的資料。
+ContextHub是一種用於儲存、操控和呈現內容資料的架構。 使用者端JavaScript API可讓您存取個人化內容的資料。
 
 >[!NOTE]
 >
@@ -33,18 +33,18 @@ ContextHub是一種用於儲存、操控和呈現內容資料的架構。 使用
 
 ## 持續性 {#persistence}
 
-ContextHub會儲存持續存在於使用者端上的內容資料。 ContextHub Javascript API可讓您存取存放區，以視需要建立、更新和刪除資料。 因此，ContextHub代表頁面上的資料層。
+ContextHub會儲存持續存在於使用者端上的內容資料。 ContextHub JavaScript API可讓您存取存放區，以視需要建立、更新和刪除資料。 因此，ContextHub代表頁面上的資料層。
 
 每個ContextHub存放區都是預先定義存放區型別的例項：
 
 * ContextHub提供數種 [範例存放區型別](/help/sites-developing/ch-samplestores.md).
 * 使用AEM主控台 [建立存放區](ch-configuring.md#creating-a-contexthub-store).
 * 開發人員可以 [建立自訂商店型別](/help/sites-developing/ch-extend.md#creating-custom-store-candidates).
-* 開發人員可以 [存取存放區資料](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) 透過Javascript。
+* 開發人員可以 [存取存放區資料](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) 透過JavaScript。
 
 ## Segmentation {#segmentation}
 
-ContextHub包含區段引擎，可管理區段並決定針對目前內容解析哪些區段。 已定義數個區段。 您可以使用Javascript API來 [決定已解析的區段](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments).
+ContextHub包含區段引擎，可管理區段並決定針對目前內容解析哪些區段。 已定義數個區段。 您可以使用JavaScript API來 [決定已解析的區段](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments).
 
 ## 簡報 {#presentation}
 

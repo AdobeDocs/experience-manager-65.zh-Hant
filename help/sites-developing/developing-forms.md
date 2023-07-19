@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1947'
 ht-degree: 0%
 
 ---
@@ -128,13 +128,13 @@ ht-degree: 0%
 1. 在資料夾中建立：
 
    1. 貼文指令碼。
-指令碼的名稱為 `post.POST.<extension>`，例如 `post.POST.jsp`
-提交表單以處理表單時會叫用貼文指令碼，其中包含處理表單所傳送資料的程式碼 
-`POST`。
+指令碼的名稱為 `post.POST.<extension>`例如， `post.POST.jsp`
+提交表單以處理表單時會叫用貼文指令碼，其中包含處理表單所傳送資料的程式碼 `POST`.
 
    1. 新增在提交表單時叫用的轉寄指令碼。
-指令碼的名稱為 `forward.<extension`>，例如 `forward.jsp`
+指令碼的名稱為 `forward.<extension`>，例如， `forward.jsp`
 此指令碼可定義路徑。 然後會將目前的請求轉送至指定的路徑。
+
    必要的呼叫是 `FormsHelper#setForwardPath` （2種變體）。 典型案例是執行一些驗證或邏輯，以尋找目標路徑，然後前進到該路徑，讓預設的SlingPOSTservlet在JCR中執行實際儲存。
 
    也可能會有另一個servlet執行實際處理，在這種情況下，表單動作和 `forward.jsp` 只能當作「粘合」程式碼。 這方面的範例為郵件動作： `/libs/foundation/components/form/actions/mail`，會將詳細資料轉送至 `<currentpath>.mail.html`郵件servlet所在的位置。
@@ -153,6 +153,7 @@ ht-degree: 0%
       1. 表單的validationRt： `clientvalidation.jsp`
       1. 表單已透過載入資源載入（如果已設定）
       1. `addfields.jsp` 在演算內時 `<form></form>`
+
    * 處理表單時 `POST`：
 
       1. `init.jsp`
@@ -163,22 +164,18 @@ ht-degree: 0%
 
       1. 如果未設定轉送路徑，請呼叫 `post.POST.jsp` (結尾為，否 `cleanup.jsp` called)
 
-
-
-
 1. 再次在資料夾中選擇性新增：
 
    1. 用於新增欄位的指令碼。
-指令碼的名稱為 `addfields.<extension>`，例如 `addfields.jsp`
-一個 
-`addfields` 在寫入表單開頭的HTML後，會立即叫用指令碼。 這可讓動作在表單內新增自訂輸入欄位或其他此類HTML。
+指令碼的名稱為 `addfields.<extension>`例如， `addfields.jsp`
+一個 `addfields` 在寫入表單開頭的HTML後，會立即叫用指令碼。 這可讓動作在表單內新增自訂輸入欄位或其他此類HTML。
 
    1. 初始化指令碼。
-指令碼的名稱為 `init.<extension>`，例如 `init.jsp`
+指令碼的名稱為 `init.<extension>`例如， `init.jsp`
 此指令碼會在表單轉譯時叫用。 它可用來初始化動作細節。
 
    1. 清除指令碼。
-指令碼的名稱為 `cleanup.<extension>`，例如 `cleanup.jsp`
+指令碼的名稱為 `cleanup.<extension>`例如， `cleanup.jsp`
 此指令碼可用於執行清理。
 
 1. 使用 **Forms** parsys中的元件。 此 **動作型別** 下拉式清單現在會包含您的新動作。
@@ -220,10 +217,10 @@ ht-degree: 0%
 
 1. 在此資料夾中，您可能需要下列指令碼：
 
-   * 使用者端驗證指令碼：指令碼的名稱為 `clientvalidation.<extension>`，例如 `clientvalidation.jsp`
+   * 使用者端驗證指令碼：指令碼的名稱為 `clientvalidation.<extension>`例如， `clientvalidation.jsp`
 這會在表單欄位轉譯時叫用。 它可用來建立使用者端JavaScript來驗證使用者端上的欄位。
 
-   * 伺服器驗證指令碼：指令碼的名稱為 `servervalidation.<extension>`，例如 `servervalidation.jsp`
+   * 伺服器驗證指令碼：指令碼的名稱為 `servervalidation.<extension>`例如， `servervalidation.jsp`
 這會在提交表單時叫用。 提交欄位後，可使用它來驗證伺服器上的欄位。
 
 >[!NOTE]
@@ -268,7 +265,7 @@ ht-degree: 0%
 
 ![SHOWHIDECONDITION](assets/showhidecondition.png)
 
-在Javascript中，條件會使用Element Name屬性的值來參照欄位。 在上一個範例中，「選項群組」元件的「元素名稱」屬性是 `contact`. 下列程式碼為該範例的等效Javascript程式碼：
+在JavaScript中，條件會使用Element Name屬性的值來參照欄位。 在上一個範例中，「選項群組」元件的「元素名稱」屬性是 `contact`. 下列程式碼為該範例的等效JavaScript程式碼：
 
 `((contact == "Yes"))`
 
@@ -284,6 +281,7 @@ ht-degree: 0%
 
       * **全部**  — 如果所有條件都必須為true才能顯示或隱藏元件
       * **任何**  — 如果只有一個或多個條件必須為true以顯示或隱藏元件
+
    * 在條件行（預設為其中一行）中，選取元件、運運算元，然後指定值。
    * 視需要按一下「 」，以新增更多條件 **新增條件**.
 
@@ -306,7 +304,6 @@ ht-degree: 0%
    >* 在 **預覽** 作者環境上的模式（第一次切換為預覽時需要重新載入頁面）
    >
    >* 在發佈環境中
-
 
 #### 處理損壞的元件參照 {#handling-broken-component-references}
 

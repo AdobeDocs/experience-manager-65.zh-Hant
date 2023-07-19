@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: cae9890cd61d6d894f34c7299e2e15ee70e14ac9
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1805'
+source-wordcount: '1806'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ AEM可讓您透過使用 **配置容器** 元件。
 配置容器：
 
 * 提供水準對齊格點的功能，以及將元件並排放置到格點中並定義它們何時應摺疊/重排的功能。
-* 使用預先定義的中斷點（例如用於手機、平板電腦等） 可讓您定義相關裝置/方向的必要內容行為。
+* 使用預先定義的中斷點（例如，手機、平板電腦等） 可讓您定義相關裝置/方向的必要內容行為。
 
    * 例如，您可以自訂元件大小，或是否在特定裝置上可看見元件。
 

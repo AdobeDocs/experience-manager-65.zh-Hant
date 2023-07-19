@@ -11,9 +11,9 @@ discoiquuid: 582b0fe8-a92b-4a1d-b859-57f13f53d0d8
 docset: aem65
 feature: Mobile Forms
 exl-id: 4c84cfd1-50a4-416f-b4a5-7f2f4c7f10af
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ HTML5表單會使用HTML5功能演算，演算後表單的樣式會使用CSS完�
 
    導覽至您建立設定檔轉譯器的資料夾，並建立CSS樣式表檔案。 請遵循下列步驟
 
-   1. 以滑鼠右鍵按一下資料夾並選取 **建立** > **建立檔案** 從功能表
+   1. 以滑鼠右鍵按一下資料夾，然後選取 **建立** > **建立檔案** 從功能表
 
    1. 在建立檔案對話方塊中，輸入樣式表的名稱。 請務必使用.css副檔名（例如stylesheet.css）
    1. 從導覽窗格中，開啟您已建立的CSS檔案。

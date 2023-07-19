@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: b833c28b-76c6-42a2-b690-3e81ddf91bc2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 1%
@@ -63,8 +63,8 @@ URL區段包含ContextHub功能的連結：
 
 * **設定編輯器：** 開啟 [ContextHub設定頁面](ch-configuring.md) 您可以在此處設定存放區、UI模式和UI模組。
 
-* **ContextHub模組的設定：** 開啟/etc/cloudsettings/default/contexthub.config.kernel.js檔案，其中包含ContextHub存放區設定的Javascript物件表示法。
-* **ContextHub UI的設定：** 開啟/etc/cloudsettings/default/contexthub.config.ui.js檔案，其中包含ContextHub UI模式設定的Javascript物件表示法。
+* **ContextHub模組的設定：** 開啟/etc/cloudsettings/default/contexthub.config.kernel.js檔案，其中包含ContextHub存放區設定的JavaScript物件表示法。
+* **ContextHub UI的設定：** 開啟/etc/cloudsettings/default/contexthub.config.ui.js檔案，其中包含ContextHub UI模式設定的JavaScript物件表示。
 * **kernel.js：** 開啟/etc/cloudsettings/default/contexthub.kernel.js檔案，其中包含實作ContextHub架構、區段引擎和存放區型別的使用者端程式庫原始碼。
 * **ui.js：** 開啟/etc/cloudsettings/default/contexthub.ui.js檔案，其中包含實作ContextHub UI和UI模組型別的使用者端程式庫原始碼。
 * **style.css：** 開啟/etc/cloudsettings/default/contexthub.styles.css檔案，其中包含ContextHub UI和UI模組的CSS樣式。

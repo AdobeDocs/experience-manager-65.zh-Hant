@@ -5,7 +5,7 @@ contentOwner: AG
 role: User, Admin
 feature: Developer Tools,Asset Management
 exl-id: 53e310a9-c511-447a-91bd-8c5b2760dc03
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '2125'
 ht-degree: 1%
@@ -181,7 +181,7 @@ The following predicates are available:
 | **[!UICONTROL Date Predicate]** |Lets users search for assets that were modified before and after certain dates. |
 | **[!UICONTROL Options Predicate]** |The site owner can specify a property to search for (as in the property predicate, for example cq:tags) and a content tree to populate the options from (for example the tag tree). Doing so generates a list of options where the users can select the values (tags) that the selected property (tag property) should have. This predicate lets you build list controls like the list of tags, file types, image orientations, and so on. It is great for a fixed set of options. |
 | **[!UICONTROL Path Predicate]** |Lets users define the path and subfolders, if desired. |
-| **[!UICONTROL Property Predicate]** |The site owner specifies a property to search for, e.g. tiff:ImageLength and the user can then enter a value, e.g. 800. This returns all images that are 800 pixels high. Useful predicate if your property can have arbitrary values. |
+| **[!UICONTROL Property Predicate]** |The site owner specifies a property to search for, for example, tiff:ImageLength and the user can then enter a value, for example, 800. This returns all images that are 800 pixels high. Useful predicate if your property can have arbitrary values. |
 
 For more information, see the [predicate Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html).
 
@@ -251,7 +251,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 >
 >設計資產編輯器頁面時，您可以建立唯讀或可編輯的元件。 使用者知道如果鉛筆影像出現在元件中，可以編輯欄位。 依預設，大部分元件都設定為唯讀。
 
-| Component | 說明 |
+| 元件 | 說明 |
 |---|---|
 | **[!UICONTROL 中繼資料表單] 和 [!UICONTROL 中繼資料文字欄位]** | 可讓您新增其他中繼資料至資產，以及對該資產執行動作（例如提交）。 |
 | **[!UICONTROL 子資產]** | 可讓您自訂子資產。 |

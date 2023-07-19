@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '219'
 ht-degree: 2%
 
 ---
@@ -27,11 +27,11 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
 
 | 位置 | 捷徑 | 說明 |
 |---|---|---|
-| 任何編輯視窗模式 | `Ctrl-Shift-m` | 切換於 **預覽** 和目前選取的 [模式](/help/sites-authoring/author-environment-tools.md#page-modes)</a> (例如： **編輯**， **版面**、等)* |
+| 任何編輯視窗模式 | `Ctrl-Shift-m` | 切換於 **預覽** 和目前選取的 [模式](/help/sites-authoring/author-environment-tools.md#page-modes)</a> (例如， **編輯**， **版面**、等)* |
 | **編輯** 模式 | `Ctrl-z` | [復原上次變更](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-y` | [重做最後一次變更](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | 選取多個段落 |
-|  | `Ctrl-c` | 複製所選段落 |
+|  | `Ctrl-c` | 複製選取的段落 |
 |  | `Ctrl-x` | 剪下選取的段落，（剪下的段落在貼上之前不會在UI中消失） |
 |  | `Ctrl-v` | 貼上先前剪下或複製的段落 |
 |  | `Ctrl-Backspace` | 刪除選取的段落 |

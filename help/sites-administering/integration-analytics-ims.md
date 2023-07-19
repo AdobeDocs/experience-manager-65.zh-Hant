@@ -2,9 +2,9 @@
 title: 使用IMS與Adobe Analytics整合
 description: 瞭解如何使用IMS整合AEM與Adobe Analytics
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: 5789954afea2d42444b6f6f9f185d7926624e7f0
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1057'
 ht-degree: 2%
 
 ---
@@ -154,7 +154,7 @@ ht-degree: 2%
 1. 您可以在此處使用 [為Adobe Developer主控台整合專案儲存的詳細資訊](#details-stored-for-the-ims-integration-project)：
 
    * **標題**：您的文字。
-   * **授權伺服器**：從以下位置複製/貼上此 `aud` 行 **裝載** 以下區段，例如 `https://ims-na1.adobelogin.com` 在以下範例中
+   * **授權伺服器**：從以下位置複製/貼上此 `aud` 行 **裝載** 下方的區段，例如， `https://ims-na1.adobelogin.com` 在以下範例中
    * **API金鑰**：從以下位置複製此專案： **認證** 部分 [專案概述](#details-stored-for-the-ims-integration-project)
    * **使用者端密碼**：在中產生此專案 [「服務帳戶(JWT)」區段的「使用者端密碼」索引標籤](#details-stored-for-the-ims-integration-project)，並複製
    * **裝載**：從以下位置複製此專案： [產生「服務帳戶(JWT)」區段的JWT標籤](#details-stored-for-the-ims-integration-project)

@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 AEM Mobile On-Demand提供完整設定的應用程式範本、文章範本和文章元件。
 
@@ -62,6 +62,7 @@ We.Unlimited應用程式是範例範本，代表可完全設定及管理的AEM M
 >此 ***redirecttarget*** 如果應用程式範本中有redirectTarget屬性可用，且redirectTarget的值定義為相對，則計算為建立應用程式作業的一部分並嘗試解析路徑。 當建立應用程式程式在應用程式範本中找到redirectTarget的相對值時，該值會附加至建立應用程式的已解析位置。
 >
 >例如，如果應用程式範本定義 ***redirecttarget*** ，值為&quot;*lanugage-masters/en*「」，而應用程式建立於「*/content/mobileapps/fooApp*&quot;，建立應用程式後，redirectTarget的最終值將會是&quot;*/content/mobileapps/fooApp/language-masters/en*「。
+>
 
 ## 建立內容範本 {#creating-content-templates}
 
@@ -124,6 +125,7 @@ Unlimited文章是範例範本，代表典型的AEM Mobile On-Demand文章版面
 >[!NOTE]
 >
 >目前沒有為AEM Mobile提供立即可用的元件。
+>
 
 您可以將元件新增至頁面。 任何元件都可以在AEM Mobile應用程式中使用，但在套用時，可能無法正確呈現。
 

@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: df28180f-7af4-437d-8e91-bfd305f73113
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1176'
 ht-degree: 1%
@@ -41,7 +41,7 @@ contexthub.base UI模組型別是所有其他UI模組型別的基底型別。 �
 
 ### 設定 {#configuration}
 
-使用JSON格式的Javascript物件設定contexthub.base UI模組。 納入以下任何屬性以設定UI模組功能：
+使用JSON格式的JavaScript物件設定contexthub.base UI模組。 納入以下任何屬性以設定UI模組功能：
 
 * **影像：** 要顯示為圖示之影像的URL。
 * **圖示：** 的名稱 [Coral UI圖示](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 類別。 如果您同時指定圖示和影像屬性的值，則會使用影像。

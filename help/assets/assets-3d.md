@@ -8,9 +8,9 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 787c0c25da2258f234d3c821038d62bf8ef68932
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2358'
+source-wordcount: '2348'
 ht-degree: 2%
 
 ---
@@ -70,16 +70,16 @@ Dynamic Media支援下列3D格式。
       * [組織數位資產](/help/assets/organize-assets.md#organize-digital-assets).
       * [搜尋三維資產](/help/assets/search-assets.md).
       * [使用自訂述詞來篩選搜尋結果](/help/assets/search-assets.md#custompredicates).
+
    * 檢視三維資產
 
       * [檢視及與3D資產互動](#viewing-three-d-assets).
       * [管理維度檢視器預設集](/help/assets/managing-viewer-presets.md).
+
    * 使用3D資產中繼資料
 
       * [管理數位資產的中繼資料](/help/assets/metadata.md).
       * [中繼資料結構描述](/help/assets/metadata-schemas.md).
-
-
 
 1. **發佈3D資產**
 
@@ -128,8 +128,8 @@ Dynamic Media支援下列3D格式。
    | **平移相機** | 向左、向右、向上或向下平移檢視。 | 按一下滑鼠右鍵+拖曳。 | 兩指按下+拖曳。 |
    | **縮放相機** | 在3D場景中移入和移出區域。 | 滾輪。 | 兩指捏合。 |
    | **重新將相機置中** | 將相機重新置中至3D場景中物件上的一點。 | 按兩下。 | 點兩下。 |
-   | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點恢復到3D資產的中心。 重設也會將相機移到更近或更遠的位置，以完整的方式顯示資產，並維持合理的檢視大小。 |  |  |
-   | **全熒幕模式** | 若要進入全熒幕模式，請在頁面的右下角，選取「全熒幕」圖示。 |  |  |
+   | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點恢復到3D資產的中心。 重設也會將相機移到更近或更遠的位置，以完整的方式顯示資產，並維持合理的檢視大小。 |   |   |
+   | **全熒幕模式** | 若要進入全熒幕模式，請在頁面的右下角，選取「全熒幕」圖示。 |   |   |
 
 1. 在頁面的右上角，選取 **[!UICONTROL 關閉]** 返回「資產」頁面。
 
@@ -150,7 +150,7 @@ Dynamic Media支援下列3D格式。
    * 在頁面的右上角附近，選取 **[!UICONTROL 預覽]** 以輸入 **[!UICONTROL 預覽]** 模式。
    * 刪除 `/editor.html` 從瀏覽器中的頁面URL。
 
-完全互動的3D資產，顯示於    ![3D資產顯示在3D媒體元件內](/help/assets/assets-dm/3d-asset-in-3d-media.png)
+   ![3D資產顯示在3D媒體元件內](/help/assets/assets-dm/3d-asset-in-3d-media.png)
 完全互動的3D資產，顯示於 **[!UICONTROL 預覽]** 模式。
 
 1. 當在 **[!UICONTROL 預覽]** 模式，執行下列任一項作業：
@@ -161,8 +161,8 @@ Dynamic Media支援下列3D格式。
    | **平移相機** | 向左、向右、向上或向下平移檢視。 | 按一下滑鼠右鍵+拖曳。 | 兩指按下+拖曳。 |
    | **縮放相機** | 在3D場景中移入和移出區域。 | 滾輪。 | 兩指捏合。 |
    | **重新將相機置中** | 將相機重新置中至3D場景中物件上的一點。 | 按兩下。 | 點兩下。 |
-   | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點恢復到3D資產的中心。 重設也會將相機移到更近或更遠的位置，以完整的方式顯示資產，並維持合理的檢視大小。 |  |  |
-   | **全熒幕模式** | 若要進入全熒幕模式，請在頁面的右下角，選取「全熒幕」圖示。 |  |  |
+   | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點恢復到3D資產的中心。 重設也會將相機移到更近或更遠的位置，以完整的方式顯示資產，並維持合理的檢視大小。 |   |   |
+   | **全熒幕模式** | 若要進入全熒幕模式，請在頁面的右下角，選取「全熒幕」圖示。 |   |   |
 
 ## 關於使用3D媒體元件 {#working-with-three-d-media-component}
 
@@ -287,8 +287,8 @@ Dynamic Media接受以下支援的各種3D檔案格式 *靜態內容* 在Dynamic
 
 * **[!UICONTROL URL]**  — 使用 **[!UICONTROL URL]** 如果您使用協力廠商網頁內容管理系統，且想使用「維度」檢視器將Dynamic Media 3D資產連結至網頁。
 
-   另請參閱 [將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset).
+  另請參閱 [將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset).
 
 * **[!UICONTROL 內嵌]**  — 使用 **[!UICONTROL 內嵌]** 當您想要使用「維度」檢視器來檢視內嵌在網頁上的Dynamic Media 3D資產時。 您可將內嵌代碼複製到剪貼簿，以便貼到網頁中。中不允許編輯程式碼 **[!UICONTROL 內嵌]** 對話方塊。
 
-   另請參閱 [將Dynamic Media視訊、影像檢視器或維度檢視器內嵌在網頁上](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page).
+  另請參閱 [將Dynamic Media視訊、影像檢視器或維度檢視器內嵌在網頁上](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page).

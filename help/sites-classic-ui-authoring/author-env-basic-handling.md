@@ -8,7 +8,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 4%
@@ -24,7 +24,6 @@ ht-degree: 4%
 >* 部分功能並非在所有主控台中提供，且/或某些主控台提供其他功能。 有關個別主控台及其相關功能的特定資訊，將在其他頁面上詳細說明。
 >* 在整個AEM環境中都可以使用鍵盤快速鍵。 尤其是當 [使用主控台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md) 和 [編輯頁面](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
 >
-
 
 ## 歡迎畫面 {#the-welcome-screen}
 
@@ -53,7 +52,7 @@ ht-degree: 4%
    <td>這些主控台可讓您匯入和 <a href="/help/sites-classic-ui-authoring/classicui-assets.md">管理數位資產</a> 例如影像、影片、檔案和音訊檔案。 然後這些資產便可由同一AEM執行個體上執行的任何網站使用。 </td>
   </tr>
   <tr>
-   <td><strong>Launch</strong></td>
+   <td><strong>啟動</strong></td>
    <td>這可協助您管理您的 <a href="/help/sites-classic-ui-authoring/classic-launches.md">啟動</a>；這些功能可讓您為日後發行的一或多個已啟動網頁開發內容。<br /> <i>注意：在觸控式UI中，Sites主控台與「參考」邊欄提供許多相同的功能。</i> <i>必要時，可以從「工具」主控台使用此主控台；請選取作業，然後選取啟動。</i></td>
   </tr>
   <tr>
@@ -87,13 +86,13 @@ ht-degree: 4%
 
 * 左窗格
 
-   這會顯示您網站的樹狀結構以及這些網站中的頁面。
+  這會顯示您網站的樹狀結構以及這些網站中的頁面。
 
-   它也會顯示其他方面或AEM的相關資訊，包括專案、藍圖和資產。
+  它也會顯示其他方面或AEM的相關資訊，包括專案、藍圖和資產。
 
 * 右窗格
 
-   這會顯示頁面（在左窗格中選取的位置），且可用於執行動作。
+  這會顯示頁面（在左窗格中選取的位置），且可用於執行動作。
 
 從這裡，您可以 [管理您的頁面](/help/sites-authoring/managing-pages.md) 使用工具列、快顯功能表或開啟頁面以進一步操作。
 
@@ -105,7 +104,7 @@ ht-degree: 4%
 
 ## 存取說明 {#accessing-help}
 
-在各種主控台（例如網站）上， **說明** 按鈕可用，這會開啟Package Share或檔案網站。
+在各種主控台（例如網站）上，也有 **說明** 按鈕可用，這會開啟Package Share或檔案網站。
 
 ![chlimage_1-10](assets/chlimage_1-10a.png)
 
@@ -120,9 +119,9 @@ ht-degree: 4%
    * 在右窗格中列出子頁面
    * 同時展開左側窗格中的結構。
 
-      基於效能原因，此動作取決於子節點數目。 在標準安裝中，此擴充方法適用於 `30` 或較少的子節點。
+     基於效能原因，此動作取決於子節點數目。 在標準安裝中，此擴充方法適用於 `30` 或較少的子節點。
 
-* 在頁面名稱（左窗格）上按兩下也會展開樹狀結構，不過同時開啟頁面時，這種效果並不明顯。
+* 連按兩下頁面名稱（左窗格）也會展開樹狀結構，不過同時開啟頁面並不會造成太明顯的效果。
 
 >[!NOTE]
 >

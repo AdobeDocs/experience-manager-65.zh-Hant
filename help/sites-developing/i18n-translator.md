@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: components
 discoiquuid: adf3364c-11f1-45c6-b41d-2c7d48b626f9
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2327'
 ht-degree: 1%
 
 ---
@@ -85,7 +85,7 @@ AEM提供一個主控台，用於管理元件UI中使用的各種文字翻譯。
    >
    >這是以下專案的結構： [Sling i18n模組](https://sling.apache.org/site/internationalization-support.html).
 
-1. 重新載入翻譯程式和字典路徑(例如 `/apps/myProject/i18n`)會顯示在工具列的下拉式選取器中。 選取此項以開始新增字串及其翻譯。
+1. 重新載入翻譯程式和字典路徑(例如， `/apps/myProject/i18n`)會顯示在工具列的下拉式選取器中。 選取此項以開始新增字串及其翻譯。
 
    >[!NOTE]
    >
@@ -214,7 +214,7 @@ AEM提供一個主控台，用於管理元件UI中使用的各種文字翻譯。
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
-   * 按兩下 **字串** 或 **註解** 必要字串的欄位以開啟 **編輯字串** 對話方塊，視需要編輯翻譯，然後按一下 **確定** 若要關閉對話方塊：
+   * 連按兩下 **字串** 或 **註解** 必要字串的欄位以開啟 **編輯字串** 對話方塊，視需要編輯翻譯，然後按一下 **確定** 若要關閉對話方塊：
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
@@ -337,7 +337,7 @@ AEM提供一個主控台，用於管理元件UI中使用的各種文字翻譯。
 
 不同的國家/地區使用相同的語言，例如美國、英國和澳洲都使用英文。 這由表示語言和國家/地區的代碼表示，例如 `en_US`， `en_GB` 和 `en_AU`.
 
-顯示旗標時會使用預設國家/地區（例如，在語言副本對話方塊中），它們會用於解析語言代碼的國家/地區。
+顯示旗標時會使用預設國家/地區（例如，在語言副本對話方塊中），它們會用來解析語言代碼的國家/地區。
 
 >[!NOTE]
 >
@@ -353,17 +353,18 @@ AEM提供一個主控台，用於管理元件UI中使用的各種文字翻譯。
 
    `/apps/wcm/core/resources/languages`
 
-   然後在那裡變更或擴充清單。 屬性 `defaultCountry` 在語言節點上(例如 `ja`)必須包含完整程式碼，例如 `ja_jp`，會定義 `jp` 作為語言的預設國家/地區 `ja`.
+   然後在那裡變更或擴充清單。 屬性 `defaultCountry` 在語言節點上(例如， `ja`)必須包含完整程式碼，例如 `ja_jp`，會定義 `jp` 作為語言的預設國家/地區 `ja`.
 
 1. 更新 **CQ WCM語言管理員**.
 
    * **語言清單**：
 
-      存放庫中語言清單的路徑。 將此專案設定為用來覆蓋的位置：
+     存放庫中語言清單的路徑。 將此專案設定為用來覆蓋的位置：
 
-      ```
-             /apps/wcm/core/resources/languages
-      ```
+     ```
+            /apps/wcm/core/resources/languages
+     ```
+
    您可以使用OSGi Web主控台執行此操作：
 
    ```shell

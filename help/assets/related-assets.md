@@ -5,9 +5,9 @@ contentOwner: AG
 role: User
 feature: Collaboration,Asset Management
 exl-id: ddb69727-74a0-4a4d-a14e-7d3bb5ceea2a
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '631'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 2%
 
 1. 若要取消資產的相關性，請按一下 **[!UICONTROL 取消關聯]** ![取消資產關聯](assets/do-not-localize/link-unrelate-icon.png) （從工具列）。
 
-1. 選取您要取消關聯的資產 **[!UICONTROL 移除關係]** 對話方塊，然後按一下 **[!UICONTROL 取消關聯]**.
+1. 選取您要從下列專案取消關聯的資產： **[!UICONTROL 移除關係]** 對話方塊，然後按一下 **[!UICONTROL 取消關聯]**.
 
    ![chlimage_1-280](assets/chlimage_1-280.png)
 

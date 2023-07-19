@@ -10,10 +10,10 @@ content-type: reference
 discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 7%
+source-wordcount: '460'
+ht-degree: 6%
 
 ---
 
@@ -76,27 +76,27 @@ OSGi設定為：
   <tr>
    <td><strong>資源類型</strong></td>
    <td><code>dam.cfm.component.resourceType</code></td>
-   <td>要註冊的資源型別；例如 <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
+   <td>要註冊的資源型別；例如， <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
   </tr>
   <tr>
    <td><strong>參考屬性</strong></td>
    <td><code>dam.cfm.component.fileReferenceProp</code></td>
-   <td>包含片段參照的屬性名稱；例如 <code>fragmentPath</code> 或 <code>fileReference</code></td>
+   <td>包含片段參照的屬性名稱；例如， <code>fragmentPath</code> 或 <code>fileReference</code></td>
   </tr>
   <tr>
    <td><strong>元素屬性</strong></td>
    <td><code>dam.cfm.component.elementsProp</code></td>
-   <td>包含要呈現之元素名稱的屬性名稱；例如：<code>elementName</code></td>
+   <td>包含要呈現之元素名稱的屬性名稱；例如，<code>elementName</code></td>
   </tr>
   <tr>
    <td><strong>變數屬性</strong><br /> </td>
    <td><code>dam.cfm.component.variationProp</code></td>
-   <td>包含要轉譯之變數名稱的屬性名稱；例如<code>variationName</code></td>
+   <td>包含要呈現之變數名稱的屬性名稱；例如，<code>variationName</code></td>
   </tr>
  </tbody>
 </table>
 
-對於某些功能（例如僅呈現段落範圍），您必須遵守一些慣例：
+對於某些功能（例如，僅呈現段落範圍），您必須遵守一些慣例：
 
 <table>
  <tbody>

@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 061dee36-a3bb-4166-a9c1-3ab7e4de1d1d
 docset: aem65
 exl-id: 0f1014a7-b0ba-4455-b3a4-5023bcd4c5a1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '3335'
 ht-degree: 2%
@@ -304,10 +304,10 @@ CTA銷售機會表單由數個不同的元件組成：
 如果您要驗證完整的表單，請一併包含下列其中一項：
 
 * 使用者端驗證的指令碼：
-   ` /apps/<myApp>/form/<myValidation>/formclientvalidation.jsp`
+  ` /apps/<myApp>/form/<myValidation>/formclientvalidation.jsp`
 
 * 伺服器端驗證的指令碼：
-   ` /apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
+  ` /apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
 
 **動作設定** 根據「發佈選項」中的選取專案，「動作組態」會變更。 例如，當您選取「建立銷售機會」時，可以設定要新增銷售機會的清單。
 

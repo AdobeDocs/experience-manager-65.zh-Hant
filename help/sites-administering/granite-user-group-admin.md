@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 4dd216167f97eb6f6181586b57694b139872c5ef
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '959'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 4%
 
 由於Granite納入JCR API規格的CRX Repository實作，因此擁有自己的使用者和群組管理。
 
-這些帳戶是 [AEM帳戶](/help/sites-administering/security.md) 而且如果存取帳號，則會反映對Granite管理所做的任何帳號變更。 [AEM使用者主控台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) (例如： `http://localhost:4502/useradmin`)。 您也可以從AEM使用者主控台管理許可權和其他AEM細節。
+這些帳戶是 [AEM帳戶](/help/sites-administering/security.md) 而且如果存取帳號，則會反映對Granite管理所做的任何帳號變更。 [AEM使用者主控台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) (例如， `http://localhost:4502/useradmin`)。 您也可以從AEM使用者主控台管理許可權和其他AEM細節。
 
 Granite使用者和群組管理主控台都可從 **[工具](/help/sites-administering/tools-consoles.md)** 觸控最佳化UI的控制檯：
 

@@ -2,9 +2,9 @@
 title: 持續性 GraphQL 查詢
 description: 瞭解如何在Adobe Experience Manager中保留GraphQL查詢，以最佳化效能。 持續性查詢可以由使用者端應用程式使用HTTPGET方法請求，並且回應可以快取在Dispatcher和CDN層，最終提高使用者端應用程式的效能。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1423'
 ht-degree: 90%
 
 ---
@@ -40,9 +40,9 @@ AEM 有提供 [GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiq
 例如，如果有一個名為 `my-query` 的特定查詢，它使用 Sites 設定 `my-conf` 中的模型 `my-model`：
 
 * 您可以使用 `my-conf` 專屬端點建立查詢，然後查詢將儲存為：
-   `/conf/my-conf/settings/graphql/persistentQueries/my-query`
+  `/conf/my-conf/settings/graphql/persistentQueries/my-query`
 * 您可以使用 `global` 端點建立相同查詢，然後查詢將儲存為：
-   `/conf/global/settings/graphql/persistentQueries/my-query`
+  `/conf/global/settings/graphql/persistentQueries/my-query`
 
 >[!NOTE]
 >
@@ -52,7 +52,7 @@ AEM 有提供 [GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiq
 
 ## 如何保留 GraphQL 查詢 {#how-to-persist-query}
 
-建議最初在 AEM 作者環境中保留查詢，然後[將查詢傳輸到](#transfer-persisted-query-production)生產 AEM 發佈環境，以供應用程式使用。
+建議最初在 AEM 編寫環境中保留查詢，然後[將查詢傳輸到](#transfer-persisted-query-production)生產 AEM 發佈環境，以供應用程式使用。
 
 有多種保留查詢的方法，包括：
 
@@ -384,7 +384,7 @@ URL 可以分解成以下幾個部分：
 /graphql/execute.json/wknd/adventure-by-path;adventurePath=/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp
 ```
 
-若要在用戶端應用程式中使用持續性查詢，AEM 無周邊用戶端 SDK 應該用於 [JavaScript](https://github.com/adobe/aem-headless-client-js)、[Java](https://github.com/adobe/aem-headless-client-java) 或 [NodeJS](https://github.com/adobe/aem-headless-client-nodejs)。Headless 用戶端 SDK 會自動將要求中的任何查詢變數適當地編碼。
+若要在用戶端應用程式中使用持續性查詢，AEM Headless 用戶端 SDK 應該用於 [JavaScript](https://github.com/adobe/aem-headless-client-js)、[Java](https://github.com/adobe/aem-headless-client-java) 或 [NodeJS](https://github.com/adobe/aem-headless-client-nodejs)。Headless 用戶端 SDK 會自動將要求中的任何查詢變數適當地編碼。
 
 ## 將持續性查詢轉移到您的生產環境  {#transfer-persisted-query-production}
 
@@ -392,7 +392,7 @@ URL 可以分解成以下幾個部分：
 
 ### 封裝持續性查詢
 
-持續性查詢可以內建在 [AEM 套件](/help/sites-administering/package-manager.md) 中。然後，AEM 套件可以下載和安裝在不同的環境中。AEM 套件也可以從 AEM 作者環境複製到 AEM 發佈環境。
+持續性查詢可以內建在 [AEM 套件](/help/sites-administering/package-manager.md) 中。然後，AEM 套件可以下載和安裝在不同的環境中。AEM 套件也可以從 AEM 編寫環境複製到 AEM 發佈環境。
 
 若要建立套件：
 

@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '3024'
+source-wordcount: '3025'
 ht-degree: 7%
 
 ---
@@ -269,7 +269,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
 
 ## 動作工具列 {#actions-toolbar}
 
-每當選取資源（例如頁面或資產）時，工具列中都會有附有說明文字的圖示來指示各種動作。 這些動作相依於：
+每當選取資源（例如頁面或資產）時，工具列中都會有圖示顯示各種動作，並附上說明文字。 這些動作相依於：
 
 * 目前的主控台。
 * 目前內容。
@@ -546,7 +546,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
       * [評論](#timelineaddingandviewingcomments)
       * 註解
       * 活動
-      * [Launch](/help/sites-authoring/launches.md)
+      * [啟動](/help/sites-authoring/launches.md)
       * [版本](/help/sites-authoring/working-with-page-versions.md)
       * [工作流程](/help/sites-authoring/workflows-applying.md)
 
@@ -569,7 +569,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
 
 **引用** 顯示所選資源的任何連線。 例如，在 **網站** 主控台 [引用](/help/sites-authoring/author-environment-tools.md#showingpagereferences) 若為頁面，則顯示：
 
-* [Launch](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+* [啟動](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 * [即時副本](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)
 * [語言副本](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
 * 內容參考：

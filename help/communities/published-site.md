@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## 在發佈時瀏覽至新網站 {#browse-to-new-site-on-publish}
 
-現在新建立的Communities網站已發佈，請瀏覽至建立網站時顯示的URL，但在發佈伺服器上，例如：
+現在新建立的社群網站已發佈，請瀏覽至建立網站時顯示的URL，但在發佈伺服器上，例如：
 
 * 作者URL = https://localhost:4502/content/sites/engage/en.html
 * 發佈URL = https://localhost:4503/content/sites/engage/en.html
@@ -107,7 +107,6 @@ ht-degree: 1%
 >* [Communities元件](/help/communities/author-communities.md) （適用於作者）
 >* [元件、函式和Feature Essentials](/help/communities/essentials.md) （適用於開發人員）
 
-
 ### 論壇連結 {#forum-link}
 
 選取論壇連結，檢視基本論壇功能。
@@ -168,7 +167,7 @@ ht-degree: 1%
 
 * 必須重新整理頁面才能顯示這兩個群組。
 * 此範本有 *not* 包含「群組」功能，因此不可能進一步巢狀化群組。
-* 對於作者， [群組主控台](/help/communities/groups.md) 提供第三個選擇 — a `Public Group` （選擇性會籍）。
+* 對於作者， [群組主控台](/help/communities/groups.md) 提供第三個選擇 — a `Public Group` （選擇性成員資格）。
 
 建立兩個群組後，請選取「棒球」群組、開啟的群組，並注意其連結：
 

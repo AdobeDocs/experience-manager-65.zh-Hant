@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1747'
 ht-degree: 1%
 
 ---
@@ -97,7 +97,7 @@ XX字尾是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.events.a.media.timePlayed</td>
-   <td>每次觸發里程碑時都會傳送，使用者觀看指定區段所花費的秒數也會與此事件一併傳送。 例如eventX=21<br /> </td>
+   <td>每次觸發里程碑時都會傳送，使用者觀看指定區段所花費的秒數也會與此事件一併傳送。 例如， eventX=21<br /> </td>
   </tr>
   <tr>
    <td>eventdata.events.a.media.view </td>
@@ -290,7 +290,7 @@ eventdata.events.milestoneXX
 
 1. 設定「軌跡位移」。
 
-   * e.g.10,50,75,100
+   * 例如，10,50,75,100
 
    此外，傳送至Adobe Analytics的資訊可自訂性較低；只有3個變數可用於對應：
 
@@ -343,7 +343,8 @@ eventdata.events.milestoneXX
 
 1. 將「軌跡位移」設定為任何秒數，
 
-   * 例如6
+   * 例如， 6
+
    >[!NOTE]
    >
    >「追蹤位移」欄位僅接受大於0的整數

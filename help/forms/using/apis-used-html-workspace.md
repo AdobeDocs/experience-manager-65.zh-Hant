@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '998'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 <table>
  <tbody>
   <tr>
-   <td><strong>Javascript方法</strong></td>
+   <td><strong>JavaScript方法</strong></td>
    <td><strong>服務名稱</strong></td>
    <td><strong>API 名稱</strong></td>
    <td><strong>評論</strong></td>
@@ -308,7 +308,7 @@ ht-degree: 1%
    <td>getAssignmentsForTask</td>
    <td>ProcessManagementTaskService</td>
    <td>getAssignmentsForTask</td>
-   <td>它會取得任務的所有指派。 例如： — 如果使用者轉送或諮詢另一個使用者的任務，則它是任務的指派。</td>
+   <td>它會取得任務的所有指派。 例如， ： — 如果使用者轉送或諮詢另一個使用者的任務，則它是任務的指派。</td>
   </tr>
   <tr>
    <td>deleteAttachment </td>

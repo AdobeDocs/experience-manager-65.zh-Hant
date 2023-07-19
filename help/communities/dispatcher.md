@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '644'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -59,7 +59,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定
   ![Dispatcher ](assets/dispatcher.png)
 
 * **篩選模式**
-  *（必要）* 社群頁面的一或多個路徑。 例如， `/content/sites/engage/(.*)`.
+  *（必要）* 社群頁面的一或多個路徑。 例如，`/content/sites/engage/(.*)`。
 
 * **Cache-Control Max Age**
   *（必要）* 要新增至Cache Control標頭的最長時間（以秒為單位）。 值必須大於零(0)。
@@ -328,14 +328,14 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定
     #
     # Entries can be either specified using urls, or elements of the request line:
     #
-    # (1) urls will be compared against the entire request line, e.g.:
+    # (1) urls will be compared against the entire request line, for example,:
     #
     #     /0001 { /type "deny" /url "* /index.html *" }
     #
     #   matches request "GET /index.html HTTP/1.1" but not "GET /index.html?a=b HTTP/1.1".
     #
     # (2) method/url/query/protocol will be compared againts the respective elements of
-    #   the request line, e.g.:
+    #   the request line, for example,:
     #
     #     /0001 { /type "deny" /method "GET" /url "/index.html" }
     #
@@ -641,14 +641,14 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定
     #
     # Entries can be either specified using globs, or elements of the request line:
     #
-    # (1) globs will be compared against the entire request line, e.g.:
+    # (1) globs will be compared against the entire request line, for example,:
     #
     #     /0001 { /type "deny" /glob "* /index.html *" }
     #
     #   matches request "GET /index.html HTTP/1.1" but not "GET /index.html?a=b HTTP/1.1".
     #
     # (2) method/url/query/protocol will be compared againts the respective elements of
-    #   the request line, e.g.:
+    #   the request line, for example,:
     #
     #     /0001 { /type "deny" /method "GET" /url "/index.html" }
     #

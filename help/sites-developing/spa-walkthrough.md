@@ -4,10 +4,10 @@ description: 本文章介紹 SPA 的概念，並逐步解說如何使用基本 S
 topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: 0e8ad326e883f73e795929ce7d5d36f1bcdc5347
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1966'
-ht-degree: 73%
+source-wordcount: '1967'
+ht-degree: 71%
 
 ---
 
@@ -20,7 +20,7 @@ SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA�
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
+>SPA編輯器是建議解決方案，供需要SPA架構使用者端轉譯(例如React或Angular)的專案使用。
 
 ## 簡介 {#introduction}
 
@@ -50,7 +50,7 @@ SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA�
 
 ### 什麼是 SPA？ {#what-is-a-spa}
 
-單頁應用程式 (SPA) 與傳統頁面的不同之處在於它是在用戶端呈現並且主要由 Javascript 驅動，依賴 Ajax 呼叫來載入資料和動態更新頁面。在單頁載入時一次擷取大部分或所有內容，並根據使用者與頁面的互動，視需要非同步載入其他資源。
+單頁應用程式 (SPA) 與傳統頁面的不同之處在於它是在用戶端呈現並且主要由 JavaScript 驅動，依賴 Ajax 呼叫來載入資料和動態更新頁面。在單頁載入時一次擷取大部分或所有內容，並根據使用者與頁面的互動，視需要非同步載入其他資源。
 
 這減少了頁面重新整理的需要，讓使用者擁有順暢、快速且像是使用原生應用程式的體驗。
 
@@ -183,7 +183,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以儘可能減少伺�
 
 1. 切換至 **網路** 標籤並重新載入頁面。
 
-   忽略影像要求，注意為頁面載入的主要資源是頁面本身、CSS、React Javascript、其相依性，以及頁面的 JSON 資料。
+   忽略影像要求，請注意，為頁面載入的主要資源為頁面本身、CSS、React JavaScript、其相依性，以及頁面的JSON資料。
 
    ![步驟5](assets/spa-walkthrough-step-1-5.png)
 

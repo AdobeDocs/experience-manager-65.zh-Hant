@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -49,8 +49,8 @@ ht-degree: 0%
 
       * 如果找到，則會使用值來篩選商務服務查閱。
       * 如果找不到，則會使用排名最高的商務服務。
-   * A `cq:Commerce` mixin用於 `cq:commerceProvider` 可新增至強型別資源。
 
+   * A `cq:Commerce` mixin用於 `cq:commerceProvider` 可新增至強型別資源。
 
 * 此 `cq:commerceProvider` 屬性也可用來參考適當的商務工廠定義。
 
@@ -97,11 +97,11 @@ ht-degree: 0%
    * 執行新增/移除/等
    * 在購物車上執行各種計算；
 
-      `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
+     `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
 
 * 擁有的持續性 **訂購** 資料：
 
-   `CommerceSession.getUserContext()`
+  `CommerceSession.getUserContext()`
 
 * 可使用擷取/更新傳遞詳細資料 `updateOrder(Map<String, Object> delta)`
 * 同時擁有 **付款** 正在處理連線
@@ -129,7 +129,6 @@ ht-degree: 0%
 >
 >1. `size`
 >1. 加上一個
-
 >
 >   此額外變體是透過 `variationAxis` 產品參考的屬性(通常 `color` (適用於Geometrixx Outdoors)。
 
@@ -197,7 +196,7 @@ public interface Product extends Adaptable {
  * Interface for filtering variants and AxisFilter provided as common implementation
  *
  * The <code>VariantFilter</code> is used to filter variants,
- * e.g. when using {@link Product#getVariants(VariantFilter filter)}.
+ * for example, when using {@link Product#getVariants(VariantFilter filter)}.
  */
 public interface VariantFilter {
     public boolean includes(Product product);
@@ -249,11 +248,11 @@ public class AxisFilter implements VariantFilter {
          * 產品參考包含 `productData` 屬性，指向產品資料(通常位於 `/etc/commerce/products`)。
          * 產品資料為階層式；產品屬性繼承自產品資料節點的祖先。
          * 產品參考也可以包含本機屬性，這會覆寫其產品資料中指定的屬性。
+
       * 產品本身：
 
          * 不含 `productData` 屬性。
          * 在本機持有所有屬性（且不包含productData屬性）的產品節點會直接從自己的祖先繼承產品屬性。
-
 
 * **AEM-generic產品結構**
 
@@ -321,11 +320,11 @@ public class AxisFilter implements VariantFilter {
       * 數量折扣。
       * 不同的貨幣。
       * VAT須繳納，且免繳增值稅。
+
    * 修飾元完全開放至下列介面：
 
       * `int CommerceSession.getQuantityBreakpoints(Product product)`
       * `String CommerceSession.getProductPrice(Product product)`
-
 
 **儲存空間**
 
@@ -432,36 +431,37 @@ public class AxisFilter implements VariantFilter {
 
    * 憑單是使用Websites主控台建立/編輯的頁面型元件，並儲存在下列位置：
 
-      `/content/campaigns`
+     `/content/campaigns`
 
    * 憑單供應：
 
       * 憑單代碼（由購物者輸入購物車中）。
       * 憑單標籤（在購物者將其輸入購物車後顯示）。
       * 促銷活動路徑（定義憑單套用的動作）。
+
    * 憑單沒有自己的開啟和結束日期/時間，但會使用其父行銷活動的日期/時間。
    * 外部商務引擎也可以提供憑單；這些至少需要：
 
       * 憑單代碼
       * 一個 `isValid()` 方法
+
    * 此 **憑單** 元件( `/libs/commerce/components/voucher`)提供：
 
       * 憑單管理的轉譯器；這會顯示目前購物車中的任何憑單。
       * 用於管理（新增/移除）憑單的編輯對話方塊（表單）。
       * 在購物車中新增/移除憑單所需的動作。
 
-
-
 * 促銷活動:
 
    * 促銷活動是以頁面為基礎的元件，會使用「網站」主控台建立/編輯，並儲存在下列位置：
 
-      `/content/campaigns`
+     `/content/campaigns`
 
    * 促銷活動提供：
 
       * 優先順序
       * 推進處理常式路徑
+
    * 您可以將促銷活動連結至促銷活動，以定義其開啟/關閉日期/時間。
    * 您可以將促銷活動連結至體驗，以定義其區段。
    * 未連線至體驗的促銷活動不會自行引發，但仍可由憑單引發。
@@ -469,17 +469,16 @@ public class AxisFilter implements VariantFilter {
 
       * 推進管理的轉譯器和對話方塊
       * 用於呈現和編輯升級處理常式專屬設定引數的子元件
+
    * 現成提供兩個提升處理常式：
 
       * `DiscountPromotionHandler`，會套用購物車範圍的絕對折扣或百分比折扣
       * `PerfectPartnerPromotionHandler`，如果合作夥伴產品也在購物車中，則套用產品絕對折扣或百分比折扣
+
    * ClientContext `SegmentMgr` 解析區段和ClientContext `CartMgr` 解析促銷活動。 至少會引發一個已解析區段的促銷活動。
 
       * 已引發的促銷活動會透過AJAX呼叫傳回至伺服器，以重新計算購物車。
       * 已引發的促銷活動（以及新增的憑單）也會顯示在「ClientContext」面板中。
-
-
-
 
 從購物車新增/移除憑單是透過 `CommerceSession` API：
 
@@ -522,7 +521,7 @@ public List<Voucher> getVouchers() throws CommerceException;
 
 * `jcr:title` （字串） — 憑單說明
 * `code` （字串） — 使用者必須輸入以套用此憑單的代碼
-* `promotion` （字串） — 要套用的促銷活動；例如 `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
+* `promotion` （字串） — 要套用的促銷活動；例如， `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
 促銷處理常式是修改購物車的OSGi服務。 購物車將支援中定義的多個鉤點 `PromotionHandler` 介面。
 

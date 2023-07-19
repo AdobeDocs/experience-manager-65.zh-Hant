@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7669'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ JEE上的AEM Forms可高度自訂，並可在許多不同的環境中運作。 �
 
 **在Windows上的安裝和設定**
 
-如果您使用Turnkey方法在JBoss上的JEE上安裝AEM Forms，或是安裝PDF產生器，您應該以管理員身分在Windows上執行安裝。 此外，在具有原生應用程式支援的Windows上安裝PDF產生器時，您必須以安裝Microsoft Office的同一Windows使用者身分執行安裝。 如需有關安裝許可權的詳細資訊，請參閱應用程式伺服器的*在JEE上安裝和部署AEM Forms*檔案。
+如果您使用turnkey方法在JBoss上的JEE上安裝AEM Forms，或是安裝PDF Generator，您應該以管理員身分在Windows上執行安裝。 此外，在具有原生應用程式支援的Windows上安裝PDF Generator時，您必須以安裝Microsoft Office的同一Windows使用者身分執行安裝。 如需有關安裝許可權的詳細資訊，請參閱應用程式伺服器的*在JEE上安裝和部署AEM Forms*檔案。
 
 ### 網路層安全性 {#network-layer-security}
 
@@ -208,7 +208,6 @@ JEE上的AEM Forms預設會使用LocalSystem帳戶安裝服務。 內建的Local
    >
    >* Windows： C:\Adobe\Adobe_Experience_Manager_Forms\jboss
    >* Linux： /opt/jboss/
-
 
 1. 啟動應用程式伺服器。
 
@@ -460,9 +459,9 @@ AEM Forms on JEE通常會使用輕量型目錄存取協定(LDAP)目錄作為企�
  </tbody> 
 </table>
 
-### 啟用非管理員使用者以執行PDF產生器
+### 讓非管理員使用者執行PDF Generator
 
-您可以讓非管理員使用者使用PDF產生器。 通常只有具有管理許可權的使用者才能使用PDF產生器。 執行以下步驟，讓非管理員使用者能夠執行PDF產生器：
+您可以讓非管理員使用者使用PDF Generator。 通常只有具有管理許可權的使用者才能使用PDF Generator。 執行以下步驟，讓非管理員使用者能夠執行PDF產生器：
 
 1. 建立環境變數名稱PDFG_NON_ADMIN_ENABLED。
 
@@ -514,7 +513,7 @@ A *反向Proxy* 可用來確保外部和內部使用者均可使用JEE網頁應�
   </tr> 
   <tr> 
    <td><p>/pdfgui/*</p> </td> 
-   <td><p>PDF產生器管理Web應用程式</p> </td> 
+   <td><p>PDF Generator管理Web應用程式</p> </td> 
    <td><p>是</p> </td> 
    <td><p>是</p> </td> 
   </tr> 
@@ -728,7 +727,7 @@ JEE上的AEM Forms提供API來管理允許的反向連結例外清單和允許�
 
 如需API的詳細資訊，請參閱* AEM Forms on JEE API參考資料*。
 
-使用 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** 全域層次的「允許的反向連結例外」清單，即定義適用於所有應用程式的例外。 此清單僅包含具有絕對路徑的URI (例如 `/index.html`)或相對路徑(例如： `/sample/`)。 您也可以將規則運算式附加至相對URI的結尾，例如： `/sample/(.)*`.
+使用 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** 全域層次的「允許的反向連結例外」清單，即定義適用於所有應用程式的例外。 此清單僅包含具有任一絕對路徑的URI (例如， `/index.html`)或相對路徑(例如， `/sample/`)。 您也可以將規則運算式附加至相對URI的結尾，例如， `/sample/(.)*`.
 
 此 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** 清單ID在中定義為常數 `UMConstants` 類別 `com.adobe.idp.um.api` 名稱空間，可在 `adobe-usermanager-client.jar`. 您可以使用AEM Forms API來建立、修改或編輯此清單。 例如，若要建立「全域允許的反向連結例外」清單，請使用：
 
@@ -1030,7 +1029,6 @@ AEM Forms on JEE整套金鑰安裝預設會使用「本機系統」帳戶設定�
    >
    >* Windows： C:\Adobe\Adobe_Experience_Manager_Forms\jboss
    >* Linux： /opt/jboss/。
-
 
 1. 啟動應用程式伺服器服務。
 

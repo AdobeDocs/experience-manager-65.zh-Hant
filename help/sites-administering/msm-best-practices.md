@@ -4,9 +4,9 @@ description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協�
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1617'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,6 @@ MSM是可設定的架構，用於自動化內容部署。 實作通常涉及網�
 >* [疑難排解MSM問題和常見問題](troubleshoot-msm.md)
 >
 
-
 >[!NOTE]
 >
 >您也可以使用 [參照元件](/help/sites-authoring/default-components-foundation.md#reference) 重複使用單一頁面或段落。 但請記住：
@@ -40,7 +39,6 @@ MSM是可設定的架構，用於自動化內容部署。 實作通常涉及網�
 >* MSM更為靈活，可讓您對同步的內容和時間進行細微控制。
 >* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 現在建議使用，而不使用基礎元件。
 >
-
 
 ## 即時副本來源和Blueprint設定 {#live-copy-sources-and-blueprint-configurations}
 
@@ -81,11 +79,11 @@ MSM是可設定的架構，用於自動化內容部署。 實作通常涉及網�
 
 * 時間 [建立即時副本](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
 
-   這可視為較通用的方法，可讓您從任何頁面建立即時副本。 即時副本的內容結構與來源完全相符。
+  這可視為較通用的方法，可讓您從任何頁面建立即時副本。 即時副本的內容結構與來源完全相符。
 
 * 時間 [建立網站](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)
 
-   這是一種更專業的方法，主要用於建立具有多語言結構的網站。
+  這是一種更專業的方法，主要用於建立具有多語言結構的網站。
 
 建立網站時，請謹記以下一些考量事項：
 
@@ -93,7 +91,7 @@ MSM是可設定的架構，用於自動化內容部署。 實作通常涉及網�
 * 若要允許選取要在新網站中建立的語言路徑，對應的語言根必須存在於Blueprint （來源）中。
 * 一次a [新網站已建立為即時副本](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (使用 **建立**，則 **網站**)，此即時副本的前兩個層級為 *淺*. 頁面的子系不屬於即時關係，但如果找到符合觸發器的即時關係，轉出仍會下降。
 
-   這有助於避免：
+  這有助於避免：
 
    * 在Blueprint中手動新增語言（第一個層級以下）
    * 手動將內容直接新增至語言根下，
@@ -110,7 +108,7 @@ MSM可透過兩種方式協助建立多語言網站：
       * MSM可讓您在頁面和/或元件層級取消繼承。 這有助於防止在下一次轉出時覆寫已翻譯內容（來自即時副本，以及來自Blueprint的尚未翻譯內容）。
       * 某些協力廠商翻譯聯結器會自動管理MSM繼承。
 
-         如需詳細資訊，請洽詢您的翻譯服務供應商。
+        如需詳細資訊，請洽詢您的翻譯服務供應商。
 
       * 建立及翻譯語言母版的另一種方法是將語言副本與AEM現成的翻譯整合架構搭配使用。
 
@@ -142,9 +140,9 @@ MSM可透過兩種方式協助建立多語言網站：
 
    * 此新設定必須包含動作：
 
-      `PageMoveAction`
+     `PageMoveAction`
 
-      請勿將其他動作新增至此設定。
+     請勿將其他動作新增至此設定。
 
 * 定位新設定：
 
@@ -152,13 +150,13 @@ MSM可透過兩種方式協助建立多語言網站：
 
       * 將新建立的設定放置在標準轉出設定之前。
 
-         標準轉出設定會負責刪除舊位置的頁面。
+        標準轉出設定會負責刪除舊位置的頁面。
+
    * 若要轉出頁面移動，同時將個別頁面保留在即時副本中的舊位置（基本上是重複內容）：
 
       * 將新建立的設定放置在標準轉出設定之後。
 
-         這將確保即時副本中不會刪除內容或從發佈中停用。
-
+        這將確保即時副本中不會刪除內容或從發佈中停用。
 
 ## 自訂轉出 {#customizing-rollouts}
 

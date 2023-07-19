@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2392'
+source-wordcount: '2393'
 ht-degree: 1%
 
 ---
@@ -359,7 +359,7 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 開發元件後，您可以將其新增至段落系統，讓作者在編輯頁面時選取並使用元件。 這些步驟可讓您測試元件。
 
 1. 以Geometrixx（例如英文/公司）開啟頁面。
-1. 按一下「在Sidekick中設計」以切換至設計模式。
+1. 按一下Sidekick中的「設計」切換至設計模式。
 1. 按一下頁面中間段落系統上的「編輯」，編輯段落系統設計。 隨即顯示可放置在段落系統中的元件清單，清單中應包含新開發的元件Text Image (Extended) 。 選取它並按一下確定，為段落系統啟動它。
 1. 切換回編輯模式。
 1. 將文字影像（延伸）段落新增至段落系統，以範例內容初始化文字和影像。 儲存變更。

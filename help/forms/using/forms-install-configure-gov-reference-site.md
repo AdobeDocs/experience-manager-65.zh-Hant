@@ -4,9 +4,9 @@ description: 安裝、設定和自訂AEM Forms示範套件。
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4622'
+source-wordcount: '4626'
 ht-degree: 2%
 
 ---
@@ -155,8 +155,8 @@ ht-degree: 2%
 
 1. 設定服務以連線至您選擇的SMTP伺服器：
 
-   1. **SMTP伺服器主機名稱**：例如(smtp.gmail.com)
-   1. **伺服器連線埠**：例如使用SSL的gmail (465)
+   1. **SMTP伺服器主機名稱**：例如， (smtp.gmail.com)
+   1. **伺服器連線埠**：例如，(465)適用於使用SSL的gmail
    1. **SMTP使用者：** demo@ &lt;companyname> .com
    1. **「寄件者」地址**： aemformsdemo@adobe.com
 
@@ -240,7 +240,7 @@ ht-degree: 2%
 1. 瀏覽至「驗證設定」標籤。
 1. 輸入下列詳細資料：
 
-   1. **服務根目錄：** 例如 `https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
+   1. **服務根目錄：** 例如， `https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
    1. **驗證型別：** OAuth 2.0
    1. **驗證設定** (請參閱 [MS® Dynamics雲端組態設定](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig) 收集此資訊)：
 
@@ -251,7 +251,7 @@ ht-degree: 2%
       1. 存取權杖URL — 例如， [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
       1. 授權範圍 —  **openid**
       1. 驗證標頭 —  **授權持有者**
-      1. 資源 — 例如 `https://msdynamicsserver.api.crm3.dynamics.com`
+      1. 資源 — 例如， `https://msdynamicsserver.api.crm3.dynamics.com`
 
    1. 按一下「連線至OAuth」。
 
@@ -277,7 +277,7 @@ ht-degree: 2%
 1. 若要尋找資源URL/服務根URL，請導覽至MS® Dynamics執行個體控制面板。
 1. 在頂端導覽列中，按一下「銷售」或您自己的執行個體型別和「選取設定」。
 1. 按一下右下角附近的「自訂」和「開發人員資源」。
-1. 您可在此找到服務根URL：例如
+1. 您可以在此處找到服務根URL：例如，
 
    *`https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
 

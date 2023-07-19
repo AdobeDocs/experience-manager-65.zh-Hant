@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 exl-id: 2a4297e4-2d88-4fa6-8fea-3fea06753605
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '345'
 ht-degree: 4%
 
 ---
@@ -62,39 +62,39 @@ ht-degree: 4%
 
 * **類型**
 
-   指定是否要顯示有關社群成員或使用者產生內容(UGC)的資料。
+  指定是否要顯示有關社群成員或使用者產生內容(UGC)的資料。
 
-   從下列專案選取：
+  從下列專案選取：
 
    * `Members`
    * `Content`
 
-   預設為 `Members`.
+  預設為 `Members`.
 
 * **顯示標題**
 
-   資料上方顯示的描述性標題，例如 `Trending Content`.
+  資料上方顯示的描述性標題，例如 `Trending Content`.
 預設為無標題。
 
 * **顯示計數**
 
-   要列出的專案數。
+  要列出的專案數。
 預設值為10。
 
 * **活動類型**
 
-   選取下列其中一項：
+  選取下列其中一項：
 
    * `Views`（頁面瀏覽次數）
    * `Posts`（建立UGC）
    * `Follows`
    * `Likes`
 
-   預設為「檢視」。
+  預設為「檢視」。
 
 * **時間段**
 
-   選取下列其中一項：
+  選取下列其中一項：
 
    * `Last 24 hours`
    * `Last 7 days`
@@ -103,16 +103,16 @@ ht-degree: 4%
    * `This year (since Jan 1st)`
    * `Total`
 
-   預設為 `Total`.
+  預設為 `Total`.
 
 * **內容路徑**
 
-   提供將活動範圍限定為網站子集（例如特定部落格）的功能。
+  提供將活動範圍限定為網站子集（例如特定部落格）的功能。
 預設為整個社群網站。
 
 * **成員人數彙總**
 
-   取消選取（關閉）時，只會計算最上層的貼文。 例如，如果內容是根頁面（預設），則 `Activity Type` 之 `Posts` 永遠不會顯示任何活動，因為無法將內容發佈到根頁面。 如果勾選，則會包含所有下級頁面上的計數。
+  取消選取（關閉）時，只會計算最上層的貼文。 例如，如果內容是根頁面（預設），則 `Activity Type` 之 `Posts` 永遠不會顯示任何活動，因為無法將內容發佈到根頁面。 如果勾選，則會包含所有下級頁面上的計數。
 預設為已核取。
 
 ### 包含4個元件的範例頁面 {#example-page-with-components}

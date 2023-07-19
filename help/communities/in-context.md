@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '788'
 ht-degree: 1%
 
 ---
@@ -56,11 +56,11 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可使用以下網址新增為comm
    * 選取新貼文
    * 輸入主旨
 
-      何時在嗡嗡的餵鳥機中變更花蜜
+     何時在嗡嗡的餵鳥機中變更花蜜
 
    * 輸入內文
 
-      我每年都懸掛一隻蜂鳥的餵食器，可不太成功。 他們似乎一兩天就來了，那就夠了。 我每週變更一次，會不會太長？ 我是否需要更早進行變更？
+     我每年都懸掛一隻蜂鳥的餵食器，可不太成功。 他們似乎一兩天就來了，那就夠了。 我每週變更一次，會不會太長？ 我是否需要更早進行變更？
 
    * 選取貼文
    * 選取登出
@@ -71,7 +71,7 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可使用以下網址新增為comm
    * 蜂鳥主題，請選取閱讀更多
    * 輸入張貼回覆的註解
 
-      我每週都會變更一次我的帳號，並且從5月到10月都會收到帳號。
+     我每週都會變更一次我的帳號，並且從5月到10月都會收到帳號。
 
    * 選取回覆
    * 選取登出
@@ -82,7 +82,7 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可使用以下網址新增為comm
    * 蜂鳥主題，請選取閱讀更多
    * 輸入張貼回覆的註解
 
-      我賣花蜜和飼料 — 請造訪https://my.viral.url/
+     我賣花蜜和飼料 — 請造訪https://my.viral.url/
 
    * 選取回覆
    * 選取登出

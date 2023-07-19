@@ -1,5 +1,5 @@
 ---
-title: 使用用戶端程式庫
+title: 使用用戶端資料庫
 seo-title: Using Client-Side Libraries
 description: AEM提供使用者端程式庫資料夾，可讓您將使用者端程式碼儲存在存放庫中、將其組織成類別，並定義每個類別程式碼何時及如何提供給使用者端
 seo-description: AEM provides Client-side Library Folders, which allow you to store your client-side code in the repository, organize it into categories, and define when and how each category of code is to be served to the client
@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 7ceee6819618d785f04029b9ac1c6f763995b3ac
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2861'
+source-wordcount: '2862'
 ht-degree: 1%
 
 ---
 
-# 使用用戶端程式庫{#using-client-side-libraries}
+# 使用用戶端資料庫{#using-client-side-libraries}
 
 現代網站非常依賴由複雜的JavaScript和CSS程式碼驅動的使用者端處理。 組織和最佳化此程式碼的伺服可能會是個複雜的問題。
 
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 ### 使用HTL {#using-htl}
 
-在HTL中，使用者端程式庫是透過AEM提供的helper範本載入，該範本可透過以下方式存取： [ `data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use). 此檔案中有三個範本可用，這些範本可透過來呼叫 [ `data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call)：
+在HTL中，使用者端程式庫是透過AEM提供的helper範本載入，該範本可透過以下方式存取： [`data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use). 此檔案中有三個範本可用，這些範本可透過來呼叫 [`data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call)：
 
 * **css**  — 僅載入參照的使用者端程式庫的CSS檔案。
 * **js**  — 僅載入參照的使用者端程式庫的JavaScript檔案。
@@ -102,7 +102,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`過去常用來包含使用者端程式庫，但自AEM 5.6起已棄用。 [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) 應改用，如上所述。
+>`<cq:includeClientLib>`過去常用來包含使用者端程式庫，但自AEM 5.6起已棄用。 [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) 應改用，如上所述。
 
 ## 建立使用者端資料庫資料夾 {#creating-client-library-folders}
 
@@ -115,7 +115,7 @@ ht-degree: 1%
 * 要合併的JS和/或CSS來源檔案。
 * 支援CSS樣式的資源，例如影像檔案。
 
-   **注意：** 您可以使用子資料夾來組織來源檔案。
+  **注意：** 您可以使用子資料夾來組織來源檔案。
 * 一 `js.txt` 檔案和/或一個 `css.txt` 可識別在產生的JS和/或CSS檔案中要合併之來源檔案的檔案。
 
 ![clientlibarch](assets/clientlibarch.png)
@@ -399,7 +399,7 @@ YUI已設定為AEM中的預設縮制器。 若要將此變更為GCC，請按照�
 1. 啟用 **最小化** 選項（如果尚未啟用）。
 1. 設定值 **JS處理器預設設定** 至 `min:gcc`.
 
-   如果以分號分隔，例如： `min:gcc;obfuscate=true`.
+   例如，如果以分號分隔，則可以傳遞選項， `min:gcc;obfuscate=true`.
 
 1. 按一下 **儲存** 以儲存變更。
 

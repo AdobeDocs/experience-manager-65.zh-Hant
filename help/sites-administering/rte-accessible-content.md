@@ -3,9 +3,9 @@ title: 設定RTF編輯器以建立無障礙的網頁和網站。
 description: 設定RTF編輯器以建立無障礙的網頁和網站。
 contentOwner: AG
 exl-id: d2451710-5abf-4816-8052-57d8f04a228e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ RTE有多種元件可供觸控式使用者介面和傳統使用者介面使用�
 
 ## 使用來源編輯功能 {#use-of-the-source-edit-feature}
 
-在某些情況下，內容作者會發現必須檢查和調整使用RTE建立的HTML原始碼。 例如，在RTE內建立的內容片段可能需要額外的標籤，以確保符合WCAG 2.0。您可以透過以下專案完成此作業： [來源編輯](/help/sites-administering/rich-text-editor.md#aboutplugins) RTE選項。 您可以指定 [ `sourceedit` 上的功能 `misctools` 外掛程式](/help/sites-administering/rich-text-editor.md#aboutplugins).
+在某些情況下，內容作者會發現必須檢查和調整使用RTE建立的HTML原始碼。 例如，在RTE內建立的內容片段可能需要額外的標籤，以確保符合WCAG 2.0。您可以透過以下專案完成此作業： [來源編輯](/help/sites-administering/rich-text-editor.md#aboutplugins) RTE選項。 您可以指定 [`sourceedit` 上的功能 `misctools` 外掛程式](/help/sites-administering/rich-text-editor.md#aboutplugins).
 
 >[!CAUTION]
 >
@@ -193,9 +193,7 @@ RTE可以使用 `strong` 和 `em` 標籤取代 `b` 和 `i`. 將下列節點新�
 >* 此 `itemId` 每個對應欄位的屬性都會設定為適當DOM屬性的名稱(`TablePropertiesDialog`)。
 >* 在DOM元素上明確設定和/或移除屬性(`Table`)。
 
-
 >[!MORELIKETHIS]
 >
 >* [WCAG 2.0快速指南](/help/managing/qg-wcag.md)
 >* [建立無障礙內容（符合WCAG 2.0）](/help/sites-authoring/creating-accessible-content.md)
-

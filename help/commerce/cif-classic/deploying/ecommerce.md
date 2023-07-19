@@ -9,7 +9,7 @@ content-type: reference
 docset: aem65
 feature: Commerce Integration Framework
 exl-id: 3567bd28-73aa-401a-8aa9-a62a99d2a613
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 3%
@@ -22,10 +22,10 @@ AEM通用電子商務是標準安裝的一部分，為您提供電子商務框�
 
 Adobe提供兩個版本的Commerce Integration Framework：
 
-|  | CIF內部部署 | CIF Cloud |
+|                         | CIF內部部署 | CIF Cloud |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | 支援的 AEM 版本 | AEM內部部署或AMS 6.x | AEM AMS 6.4和6.5 |
-| 後端 | - AEM、Java <br>  — 整體整合，建置前對應（範本）<br> - JCR存放庫 | - ADOBE COMMERCE <br>- Java和Javascript <br>- JCR存放庫中不會儲存任何Commerce資料 |
+| 後端 | - AEM、Java <br>  — 整體整合，建置前對應（範本）<br> - JCR存放庫 | - ADOBE COMMERCE <br>- Java和JavaScript <br>- JCR存放庫中不會儲存任何Commerce資料 |
 | 前端 | AEM伺服器端轉譯頁面 | 混合頁面應用程式（混合呈現） |
 | 產品目錄 |  — 產品匯入工具、編輯器、AEM中的快取 <br> — 具有AEM或Proxy頁面的一般目錄 |  — 無產品匯入 <br> — 一般範本 <br> — 透過聯結器的隨選資料 |
 | 擴充性 |  — 最多可支援數百萬種產品（視使用案例而定） <br> - Dispatcher上的快取 |  — 無音量限制 <br>- Dispatcher或CDN上的快取 |

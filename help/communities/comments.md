@@ -7,9 +7,9 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 30baebd9-13c5-4fde-a494-85601abc32a5
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '979'
 ht-degree: 4%
 
 ---
@@ -155,7 +155,7 @@ ht-degree: 4%
 
 透過變更「註解資源型別」，註解系統不再使用預設值產生註解的執行個體，而是由開發人員自訂（擴充）的執行個體。
 
-知道自訂資源型別後，請輸入 [設計模式](/help/sites-authoring/default-components-designmode.md) 然後按兩下置入的 `Comments` 元件以開啟具有額外索引標籤的對話方塊。
+知道自訂資源型別後，請輸入 [設計模式](/help/sites-authoring/default-components-designmode.md) 並連按兩下置入的 `Comments` 元件以開啟具有額外索引標籤的對話方塊。
 
 在 **資源型別** 索引標籤中，為以下專案的新執行個體指定自訂resourceType `Comments or Voting` 元件：
 

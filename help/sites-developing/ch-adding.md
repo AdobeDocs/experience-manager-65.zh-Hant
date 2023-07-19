@@ -1,8 +1,8 @@
 ---
 title: 將ContextHub新增至頁面並存取存放區
-description: 將ContextHub新增至您的頁面，以啟用ContextHub功能並連結至ContextHub Javascript程式庫
+description: 將ContextHub新增至您的頁面，以啟用ContextHub功能並連結至ContextHub JavaScript程式庫
 exl-id: ae745af9-b49f-46b9-ab48-2fd256e9a681
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # 將ContextHub新增至頁面並存取存放區 {#adding-contexthub-to-pages-and-accessing-stores}
 
-將ContextHub新增至您的頁面，以啟用ContextHub功能並連結至ContextHub Javascript程式庫。
+將ContextHub新增至您的頁面，以啟用ContextHub功能並連結至ContextHub JavaScript資料庫。
 
-ContextHub Javascript API可讓您存取ContextHub管理的內容資料。 本頁面簡要說明用於存取及操控內容資料的API的主要功能。 請依照API參考檔案的連結檢視詳細資訊和程式碼範例。
+ContextHub JavaScript API可讓您存取ContextHub管理的內容資料。 本頁面簡要說明用於存取及操控內容資料的API的主要功能。 請依照API參考檔案的連結檢視詳細資訊和程式碼範例。
 
 ## 將ContextHub新增至頁面元件 {#adding-contexthub-to-a-page-component}
 
-若要啟用ContextHub功能並連結至ContextHub Javascript程式庫，請包含 `contexthub` 中的元件 `head` 區段。 頁面元件的HTL程式碼應類似於以下範例：
+若要啟用ContextHub功能並連結至ContextHub JavaScript程式庫，請包含 `contexthub` 中的元件 `head` 區段。 頁面元件的HTL程式碼應類似於以下範例：
 
 ```xml
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
@@ -44,7 +44,7 @@ Context Hub存放區會使用下列其中一種持續性模式：
 * **工作階段：** 使用HTML5 sessionStorage來儲存資料。 工作階段存放區會在瀏覽器工作階段期間持續存在，並可供所有瀏覽器視窗使用。
 * **Cookie：** 使用瀏覽器原生支援的Cookie來儲存資料。 Cookie資料會以HTTP請求傳送至伺服器，或從伺服器傳送。
 * **Window.name：** 使用window.name屬性來儲存資料。
-* **記憶體：** 使用Javascript物件來儲存資料。
+* **記憶體：** 使用JavaScript物件來儲存資料。
 
 根據預設，Context Hub會使用本機持續性模式。 如果瀏覽器不支援或允許HTML5 localStorage，則會使用工作階段持續性。 如果瀏覽器不支援或允許HTML5 sessionStorage，則會使用Window.name持續性。
 
@@ -83,17 +83,17 @@ Object {
 
 ### 操控物件 {#manipulating-objects}
 
-ContextHub提供 [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-utils-json-tree) 用於操控Javascript物件的類別。 在您將Javascript物件新增至存放區之前，或是從存放區取得之後，可以使用此類別的函式來操控這些物件。
+ContextHub提供 [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-utils-json-tree) 用於操控JavaScript物件的類別。 在將JavaScript物件新增至存放區之前，或在從存放區取得物件之後，使用此類別的函式來操控這些物件。
 
 此外， [`ContextHub.Utils.JSON`](contexthub-api.md#contexthub-utils-json) class提供將物件序列化為字串，以及將字串還原序列化為物件的函式。 此類別用於處理JSON資料，以支援本身不包含 `JSON.parse` 和 `JSON.stringify` 函式。
 
 ## 與ContextHub存放區互動 {#interacting-with-contexthub-stores}
 
-使用 [`ContextHub`](contexthub-api.md#ui-event-constants) Javascript物件以取得儲存區做為Javascript物件。 取得存放區物件後，您就可以操作其中包含的資料。 使用 [`getAllStores`](contexthub-api.md#getallstores) 或 [`getStore`](contexthub-api.md#getstore-name) 函式以取得存放區。
+使用 [`ContextHub`](contexthub-api.md#ui-event-constants) JavaScript物件，可取得儲存區作為JavaScript物件。 取得存放區物件後，您就可以操作其中包含的資料。 使用 [`getAllStores`](contexthub-api.md#getallstores) 或 [`getStore`](contexthub-api.md#getstore-name) 函式以取得存放區。
 
 ### 存取存放區資料 {#accessing-store-data}
 
-此 [`ContexHub.Store.Core`](contexthub-api.md#contexthub-store-core) Javascript類別會定義數個函式，以便與存放區資料互動。 以下函式儲存和擷取物件中包含的多個資料專案：
+此 [`ContexHub.Store.Core`](contexthub-api.md#contexthub-store-core) JavaScript類別會定義數個函式，以便與存放區資料互動。 以下函式儲存和擷取物件中包含的多個資料專案：
 
 * [addAllItems](contexthub-api.md#addallitems-tree-options)
 * [getTree](contexthub-api.md#gettree-includeinternals)
@@ -113,11 +113,11 @@ ContextHub提供 [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-uti
 
 ### ContextHub事件 {#contexthub-eventing}
 
-ContextHub包括事件架構，可讓您自動對儲存事件做出反應。 每個存放區物件都包含 [`ContextHub.Utils.Eventing`](contexthub-api.md#contexthub-utils-eventing) 物件，可作為商店的 [`eventing`](contexthub-api.md#eventing) 屬性。 使用 [`on`](contexthub-api.md#on-name-handler-selector-triggerforpastevents) 或 [`once`](contexthub-api.md#once-name-handler-selector-triggerforpastevents) 將Javascript函式繫結至存放區事件的函式。
+ContextHub包括事件架構，可讓您自動對儲存事件做出反應。 每個存放區物件都包含 [`ContextHub.Utils.Eventing`](contexthub-api.md#contexthub-utils-eventing) 物件，可作為商店的 [`eventing`](contexthub-api.md#eventing) 屬性。 使用 [`on`](contexthub-api.md#on-name-handler-selector-triggerforpastevents) 或 [`once`](contexthub-api.md#once-name-handler-selector-triggerforpastevents) 將JavaScript函式繫結至存放區事件的函式。
 
 ## 使用Context Hub操作Cookie {#using-context-hub-to-manipulate-cookies}
 
-Context Hub Javascript API為處理瀏覽器Cookie提供跨瀏覽器支援。 此 [`ContextHub.Utils.Cookie`](contexthub-api.md#contexthub-utils-cookie) 名稱空間會定義建立、操作和刪除Cookie的多個函式。
+Context Hub JavaScript API為處理瀏覽器Cookie提供跨瀏覽器支援。 此 [`ContextHub.Utils.Cookie`](contexthub-api.md#contexthub-utils-cookie) 名稱空間會定義建立、操作和刪除Cookie的多個函式。
 
 ## 決定已解析的ContextHub區段 {#determining-resolved-contexthub-segments}
 

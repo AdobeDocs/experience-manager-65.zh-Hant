@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ed15763-02cc-45d1-adf6-cf9e5e8ebdb0
 docset: aem65
 exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
-source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '547'
 ht-degree: 11%
 
 ---
@@ -26,11 +26,11 @@ SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
+>SPA編輯器是建議解決方案，供需要SPA架構使用者端轉譯(例如React或Angular)的專案使用。
 
 ## 簡介 {#introduction}
 
-有了AEM所需的簡單且輕量型的合約，以及SPA與SPA編輯器之間的建立合約，直接了當要採用現有的Javascript應用程式，並將其調整為與AEM中的SPA搭配使用時，就很簡單了。
+有了AEM所需的簡單且輕量型的合約，以及SPA與SPA編輯器之間的建立合約，直接了當要採用現有的JavaScript應用程式並將其調整為與AEM中的SPA一起使用時，就很簡單了。
 
 本文說明We.Retail Journal範例SPA上的天氣元件範例。
 
@@ -39,7 +39,7 @@ SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 >[!CAUTION]
 >本檔案使用 [We.Retail日誌應用程式](https://github.com/adobe/aem-sample-we-retail-journal) 僅供展示之用。 它不應用於任何專案。
 >
->任何 AEM 專案都應利用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，它支援使用 React 或 Angular 的 SPA 專案並利用 SPA SDK。
+>任何 AEM 專案都應利用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並利用 SPA SDK。
 
 ## 天氣元件 {#the-weather-component}
 

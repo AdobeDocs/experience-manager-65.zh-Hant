@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
 exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '356'
 ht-degree: 21%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 在AEM中，文章、橫幅和集合以cq：Pages表示。
 
@@ -50,9 +50,9 @@ ht-degree: 21%
 | dps-shortAbstract | 字串 |  |
 | dps-department | 字串 |  |
 | dps-category | 字串 |  |
-| dps-keywords | 字串[] |  |
-| dps-internalKeywords | 字串[] |  |
-| dps-importance | 字串[] | 重要性來自{&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;} |
+| dps-keywords | String[] |  |
+| dps-internalKeywords | String[] |  |
+| dps-importance | String[] | 重要性來自{&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;} |
 
 ### 文章 {#articles}
 
@@ -71,7 +71,7 @@ ht-degree: 21%
 
 | **屬性名稱** | **類型** | **預設值或預期值** |
 |---|---|---|
-| dps-tapAction |  | 來自{webLink}的TapAction |
+| dps-tapAction |  | 點選動作來源 {webLink} |
 | dps-tapActionUrl |  |  |
 
 ### 集合 {#collections}

@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 747d13d3-e7cc-4aa1-bcc8-4b57157e71ed
 exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -47,27 +47,27 @@ ht-degree: 0%
 
    `"EventName Selector": "Function"`
 
-   當您觸發名為的Javascript事件時 `EventName`於指定的HTML元素上 `Selector`，則 `Function`稱為。
+   當您觸發名為的JavaScript事件時 `EventName`於指定的HTML元素上 `Selector`，則 `Function`稱為。
 
 1. 尋找
 
    * &quot;點選.taskContentArea&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;點選.taskOpenArea&quot; ： &quot;onTaskClick&quot;，
+     &quot;點選.taskOpenArea&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;點選.task-content&quot; ： &quot;onTaskClick&quot;，
+     &quot;點選.task-content&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;點選.last_empty_div&quot; ： &quot;onTaskClick&quot;，
+     &quot;點選.last_empty_div&quot; ： &quot;onTaskClick&quot;，
+
    和取代為
 
    * &quot;撥動.taskContentArea&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;撥動.taskOpenArea&quot; ： &quot;onTaskClick&quot;，
+     &quot;撥動.taskOpenArea&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;撥動.task-content&quot; ： &quot;onTaskClick&quot;，
+     &quot;撥動.task-content&quot; ： &quot;onTaskClick&quot;，
 
-      &quot;swipe .last_empty_div&quot; ： &quot;onTaskClick&quot;，
-
+     &quot;swipe .last_empty_div&quot; ： &quot;onTaskClick&quot;，
 
 1. 儲存並關閉 `task.js` 檔案。
 1. 建置並執行AEM Forms應用程式。 現在您可以使用向左撥動和向右撥動來開啟。

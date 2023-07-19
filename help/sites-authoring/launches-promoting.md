@@ -10,14 +10,14 @@ discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '774'
 ht-degree: 6%
 
 ---
 
-# 提升 Launch{#promoting-launches}
+# 提升啟動{#promoting-launches}
 
 您必須提升啟動頁面，才能在發佈前將內容移回來源（生產環境）。 提升啟動頁面時，來源頁面的對應頁面會取代為提升頁面的內容。 提升啟動頁面時，有以下選項可供使用：
 
@@ -56,7 +56,7 @@ ht-degree: 6%
 
       1. 開啟 [參考邊欄](/help/sites-authoring/author-environment-tools.md#showingpagereferences) 並使用以下方式選取所需的來源頁面 [選擇模式](/help/sites-authoring/basic-handling.md) （或是選取並開啟參照邊欄，順序並不重要）。 將顯示所有參考。
 
-      1. 選取 **啟動** (例如啟動(1))以顯示特定啟動的清單。
+      1. 選取 **啟動** (例如，「啟動」(1))會顯示特定啟動的清單。
       1. 選取特定啟動項以顯示可用的動作。
       1. 選取 **提升啟動** 以開啟精靈。
 

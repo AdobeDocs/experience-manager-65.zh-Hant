@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
@@ -27,18 +27,18 @@ ht-degree: 1%
 
 每個頁面屬性的預設狀態為：
 
-* 在建立檢視中隱藏(例如 **建立頁面** 精靈)
+* 在建立檢視中隱藏(例如， **建立頁面** 精靈)
 
-* 可在編輯檢視中使用(例如 **檢視屬性**)
+* 可在「編輯」檢視中使用(例如， **檢視屬性**)
 
 如果需要任何變更，則必須明確設定欄位。 這是使用適當的節點屬性來完成的：
 
-* 建立檢視中可用的頁面屬性(例如 **建立頁面** 精靈)：
+* 建立檢視中可用的頁面屬性(例如， **建立頁面** 精靈)：
 
    * 名稱: `cq:showOnCreate`
    * 類型: `Boolean`
 
-* 編輯檢視中可用的頁面屬性(例如 **檢視**/**編輯**) **屬性** option)：
+* 編輯檢視中可用的頁面屬性(例如， **檢視**/**編輯**) **屬性** option)：
 
    * 名稱: `cq:hideOnEdit`
    * 類型: `Boolean`
@@ -71,12 +71,15 @@ ht-degree: 1%
    >如需參考，請參閱：
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
+   >
    不過，您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
+   >
    這是因為 `/libs` 下次升級執行個體時會被覆寫（而您在套用hotfix或feature pack時很可能會被覆寫）。
+   >
    設定和其他變更的建議方法是：
+   >
    1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
    1. 進行任何變更 `/apps`
-
 
 1. 設定 `path` 屬性： `basic` 指向基本標籤的覆寫（另請參閱下一個步驟）。 例如：
 
@@ -99,6 +102,7 @@ ht-degree: 1%
    此 **更多標題和說明** 區段將不再顯示於 **建立頁面** 精靈。
 
 >[!NOTE]
+>
 設定要與即時副本一起使用的頁面屬性時，請參閱 [在頁面屬性上設定MSM鎖定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) 以取得更多詳細資料。
 
 ## 頁面屬性的設定範例 {#sample-configuration-of-page-properties}

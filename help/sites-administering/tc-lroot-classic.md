@@ -12,9 +12,9 @@ discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
 feature: Language Copy
 exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 0%
 
       * 支援的語言程式碼為ISO-639-1所定義的小寫雙字母程式碼
       * 支援的國家代碼是小寫或大寫、兩個字母的代碼，如ISO 3166所定義
+
    1. 選取範本，然後按一下「建立」。
 
    ![newpagefr](assets/newpagefr.png)
@@ -54,8 +55,8 @@ ht-degree: 0%
    |---|---|
    | auto | 使用父頁面的行為 |
    | 忽略 | 不建立此頁面及其子頁面的復本 |
-   | `<language>+` （例如French+） | 複製該語言的頁面及其所有子頁面 |
-   | `<language>` （例如法文） | 僅複製該語言的頁面 |
+   | `<language>+` （例如，French+） | 複製該語言的頁面及其所有子頁面 |
+   | `<language>` （例如，法文） | 僅複製該語言的頁面 |
 
 1. 按一下「確定」關閉對話方塊。
 1. 在下一個對話方塊中，按一下「是」以確認複製。

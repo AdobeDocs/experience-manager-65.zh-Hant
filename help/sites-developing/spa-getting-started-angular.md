@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: 9cdd7648-d67e-414d-aedf-a5687da39326
 docset: aem65
 exl-id: 9528d92b-0989-4e2d-83be-ba6c07c845e2
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 5%
@@ -29,7 +29,7 @@ SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
+>SPA編輯器是建議解決方案，供需要SPA架構使用者端轉譯(例如React或Angular)的專案使用。
 
 ## 簡介 {#introduction}
 
@@ -114,7 +114,7 @@ module.exports = {
 
 ### AEM 專案原型 {#aem-project-archetype}
 
-任何 AEM 專案都應利用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)，它支援使用 React 或 Angular 的 SPA 專案並利用 SPA SDK。
+任何 AEM 專案都應利用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並利用 SPA SDK。
 
 ## 應用程式結構 {#application-structure}
 
@@ -255,7 +255,7 @@ export class ImageComponent {
 MapTo('my-angular-app/components/image')(ImageComponent, ImageEditConfig);
 ```
 
-AEM中SPA的核心想法是將SPA元件對應至AEM元件，並在修改內容時更新元件（反之亦然）。 檢視檔案 [SPA編輯器概觀](/help/sites-developing/spa-overview.md) 以取得此通訊模式的摘要。
+AEM中SPA的核心構想是將元件對應至SPAAEM元件，並在內容修改時更新元件（反之亦然）。 檢視檔案 [SPA編輯器概觀](/help/sites-developing/spa-overview.md) 以取得此通訊模式的摘要。
 
 `MapTo('my-angular-app/components/image')(Image, ImageEditConfig);`
 

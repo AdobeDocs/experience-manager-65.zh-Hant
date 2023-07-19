@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '839'
 ht-degree: 4%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 4%
 1. 在 **工具** 區段，按一下 **設定主控台**.
 1. 在樹狀結構中，按兩下 **儀表板**.
 1. 按一下 **新儀表板**.
-1. 輸入 **標題** (例如：我的儀表板)和 **名稱**.
+1. 輸入 **標題** （例如，「我的控制面板」）和 **名稱**.
 1. 按一下&#x200B;**建立**。
 
 ### 複製控制面板 {#cloning-a-dashboard}
@@ -73,7 +73,7 @@ ht-degree: 4%
 
 ### 網站分析報表元件 {#web-analytics-reporting-components}
 
-AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-administering/adobeanalytics.md) 資料。 這些元件列在Sidekick中的 **儀表板** 區段。
+AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-administering/adobeanalytics.md) 資料。 這些元件會列在Sidekick中的 **儀表板** 區段。
 
 每個報表元件至少提供三個標籤：
 
@@ -114,7 +114,7 @@ AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-a
 
 ![chlimage_1-26](assets/chlimage_1-26a.png)
 
-**日期詳細程度** X軸的時間單位（例如天、小時）。
+**日期詳細程度** X軸的時間單位（例如，天、小時）。
 
 **量度** 您要顯示的事件清單。
 
@@ -150,7 +150,7 @@ AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-a
 
 ![chlimage_1-30](assets/chlimage_1-30a.png)
 
-**日期詳細程度** X軸的時間單位（例如天、小時）。
+**日期詳細程度** X軸的時間單位（例如，天、小時）。
 
 **量度** 您要顯示的事件。
 
@@ -188,7 +188,7 @@ AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-a
 
 ![chlimage_1-32](assets/chlimage_1-32a.png)
 
-下列Javascript檔案定義於 `geout.reporting.topauthors` [使用者端資源庫](/help/sites-developing/clientlibs.md) 作為元件本身的子項。
+下列JavaScript檔案定義於 `geout.reporting.topauthors` [使用者端資源庫](/help/sites-developing/clientlibs.md) 作為元件本身的子項。
 
 此 [Querybuilder](/help/sites-developing/querybuilder-api.md) 用於查詢要讀取的存放庫 `cq:AuditEvent` 節點。 查詢結果是JSON物件，系統會從中擷取作者貢獻。
 

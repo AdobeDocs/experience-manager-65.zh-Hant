@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '351'
 ht-degree: 4%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 4%
 * 使用 [多網站管理員](/help/sites-administering/msm.md) 至：
 
    * 重複使用主要網站的內容和翻譯，為其他國家/地區和文化建立網站。
-   * 請務必將多網站管理員的使用限製為使用單一語言的內容，例如，英文母版 — >國網站的英文分支，法文母版 — >國網站的法文分支。
+   * 請務必將多網站管理員的使用限製為使用一種語言的內容，例如，英文母版 — >國網站的英文分支，法文母版 — >國網站的法文分支。
    * 必要時，請分離即時副本的元素，以新增本地化詳細資訊。
 
 下圖說明主要概念如何相交（但未顯示所涉及的所有層級/元素）：

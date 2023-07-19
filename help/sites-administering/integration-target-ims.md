@@ -2,9 +2,9 @@
 title: 使用IMS與Adobe Target整合
 description: 瞭解如何使用IMS整合AEM與Adobe Target
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1549'
 ht-degree: 2%
 
 ---
@@ -162,7 +162,7 @@ ht-degree: 2%
 1. 您可以在此處使用 [Adobe Developer Console中專案設定的詳細資料](#details-stored-for-the-ims-integration-project)：
 
    * **標題**：您的文字。
-   * **授權伺服器**：從以下位置複製/貼上此 `aud` 行 **裝載** 以下區段，例如 `https://ims-na1.adobelogin.com` 在以下範例中
+   * **授權伺服器**：從以下位置複製/貼上此 `aud` 行 **裝載** 下方的區段，例如， `https://ims-na1.adobelogin.com` 在以下範例中
    * **API金鑰**：從以下位置複製此專案： [概觀](#details-stored-for-the-ims-integration-project) 區段
    * **使用者端密碼**：在中產生此專案 [概觀](#details-stored-for-the-ims-integration-project) 區段和副本
    * **裝載**：從以下位置複製此專案： [產生JWT](#details-stored-for-the-ims-integration-project) 區段

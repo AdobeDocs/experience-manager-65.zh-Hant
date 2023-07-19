@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 24a64e603d460c659467c7679934bbdfd381aaa8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '5903'
+source-wordcount: '5902'
 ht-degree: 0%
 
 ---
@@ -182,7 +182,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>如果我意外執行了錯誤的存放庫格式，會發生什麼情況？</strong></td>
-   <td>如果您嘗試對oak-segment-tar存放庫執行oak-segment模組（反之亦然），啟動將失敗 <em>IllegalState例外狀況</em> 並顯示「無效區段格式」訊息。 不會發生資料損毀。</td>
+   <td>如果您嘗試對oak-segment-tar存放庫執行oak-segment模組（或反之），啟動將失敗 <em>IllegalState例外狀況</em> 並顯示「無效區段格式」訊息。 不會發生資料損毀。</td>
    <td> </td>
   </tr>
   <tr>
@@ -400,7 +400,7 @@ TarMK GC: no base state available, running full compaction instead
       </ul> </li>
      <li>修訂清除所取得的磁碟空間
       <ul>
-       <li>只有在清除階段完成時，才會回收空間。 清理階段的完成會以記錄訊息「T」標示<code>arMK GC #{}: cleanup completed in {} ({} ms</code>「。 後續清理大小為{} （{}位元組），已回收空間{} （{}位元組）。 壓縮地圖寬度/深度為{}/{} （{}位元組/{}）。」</li>
+       <li>只有在清除階段完成時，才會回收空間。 清理階段的完成會以記錄訊息「T」標示<code>arMK GC #{}: cleanup completed in {} ({} ms</code>「。 後續清理大小為 {} ({} 位元組)和已回收的空間 {} ({} 位元組)。 壓縮地圖寬度/深度為 {}/{} ({} 位元組/{})。」。</li>
       </ul> </li>
      <li>修訂清除期間發生問題
       <ul>
@@ -534,7 +534,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
     <td>N/A</td>
-    <td>TarMK GC #2：估計中斷： ${REASON}。 正在略過壓縮。</td>
+    <td>TarMK GC #2：估計中斷： ${REASON}. 正在略過壓縮。</td>
     <td>預估階段過早結束。 可能中斷估計階段的一些事件範例：主機系統上的記憶體或磁碟空間不足。</td>
     <td>取決於特定原因。</td>
   </td>
@@ -548,7 +548,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
    <tr>
     <td>N/A</td>
-    <td>TarMK GC #2：壓縮已取消： ${REASON}。</td>
+    <td>TarMK GC #2：壓縮已取消： ${REASON}.</td>
     <td>壓縮階段提前結束。 可能中斷壓縮階段的一些事件範例：主機系統上的記憶體或磁碟空間不足。 此外，也可以關閉系統或透過管理介面（例如「操作控制面板」內的「維護視窗」）明確取消系統，來取消壓縮。</td>
     <td>取決於特定原因。</td>
   </td>

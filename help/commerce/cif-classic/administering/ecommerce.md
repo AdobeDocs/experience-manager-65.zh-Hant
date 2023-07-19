@@ -5,9 +5,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: 745ca1aa7bc96d0938ec550a357d9edcbea341db
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '753'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ Adobe提供兩個版本的Commerce Integration Framework：
    <td>
     <ul>
      <li>Adobe Commerce</li>
-     <li>Java和Javascript</li>
+     <li>Java和JavaScript</li>
      <li>JCR存放庫中未儲存商業資料</li>
     </ul> </td>
   </tr>
@@ -90,7 +90,7 @@ Adobe提供兩個版本的Commerce Integration Framework：
   </tr>
   <tr>
    <td>使用時機</td>
-   <td>有限的使用案例：適用於可能需要匯入小型靜態目錄的情況</td>
+   <td>有限的使用案例：例如，可能需要匯入小型靜態目錄的情況</td>
    <td>大多數使用案例中偏好的解決方案</td>
   </tr>
  </tbody>
@@ -163,7 +163,7 @@ AEM eCommerce提供：
 * 開發的可能性 **根據購物者資料和活動的體驗導向型商務**. 這可讓您實現許多情境：
 
    * 例如，當訂單總額超過特定金額時，可減少運費。
-   * 另一種方式可讓您提供使用設定檔資料的季節性優惠方案（例如位置）。 然後可反白這些內容，同樣視需要根據其他因素而定。
+   * 另一種方式可讓您提供使用設定檔資料的季節性優惠方案（例如，位置）。 然後可反白這些內容，同樣視需要根據其他因素而定。
 
   在以下範例中，當購物車的內容少於$75美元時，顯示了一個Teaser：
 

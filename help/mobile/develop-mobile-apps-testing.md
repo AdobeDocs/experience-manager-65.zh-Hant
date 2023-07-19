@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 鑑於市面上各種裝置和即將發行的裝置，測試您的應用程式已變得極為重要。 這是功能和可用性在應用程式商店中可能獲得低評價的地方，但單一缺陷可能會導致您的應用程式解除安裝。 測試計畫和品質保證必須謹慎處理。 以下連結涵蓋許多需要一般處理的主題，例如，識別您的環境、定義測試案例、測試型別、假設、客戶參與等。 另外還討論了有助於測試工作的工具。 內部工具，例如 [Hobbes](/help/sites-developing/hobbes.md)，可協助您進行網頁式UI測試。 [艱難的一天](/help/sites-developing/tough-day.md) 會以模擬的負載來強調例證。 如果您的測試環境已有使用協力廠商工具（例如Selenium）的經驗，也可以使用這些工具。
 

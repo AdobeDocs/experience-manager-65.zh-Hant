@@ -11,9 +11,9 @@ discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4443'
+source-wordcount: '4435'
 ht-degree: 4%
 
 ---
@@ -296,7 +296,7 @@ ht-degree: 4%
 
    1. 按一下 **全部儲存**.
 
-1. 若要在自訂標籤中建立欄位（這裡是收件者），請新增節點（這裡是地理位置）。 此屬性與您建立的欄相對應。 使用下列步驟建立欄位（若要建立更多欄位/節點，請重複這些步驟）。:
+1. 若要在自訂標籤中建立欄位（這裡是收件者），請新增節點（這裡是地理位置）。 此屬性與您建立的欄相對應。 使用下列步驟建立欄位（若要建立更多欄位/節點，請重複這些步驟）。：
 
    1. 以滑鼠右鍵按一下專案節點並選取 **建立** > **建立節點**.
    1. 確定「建立節點」對話方塊具有下列值，然後按一下 **確定**：
@@ -356,7 +356,7 @@ ht-degree: 4%
            <td><strong>值</strong></td>
          </tr>
          <tr>
-           <td>路徑<br /> </td>
+           <td>path<br /> </td>
            <td>字串</td>
            <td>fd/cm/ma/gui/content/cmmetadataproperties/commontab<br /> </td>
          </tr>
@@ -561,7 +561,7 @@ ht-degree: 4%
    <td><strong>值</strong></td>
   </tr>
   <tr>
-   <td>路徑</td>
+   <td>path</td>
    <td>字串</td>
    <td><p>此路徑是指向在中建立的欄的指標：</p>
     <ul>
@@ -803,7 +803,7 @@ ht-degree: 4%
            <td><strong>值</strong></td>
          </tr>
          <tr>
-           <td>路徑</td>
+           <td>path</td>
            <td>字串</td>
            <td>extendedProperties<br /> </td>
          </tr>

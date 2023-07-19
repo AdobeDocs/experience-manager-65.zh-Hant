@@ -11,9 +11,9 @@ topic-tags: spa
 discoiquuid: 6c320633-ce0b-4eb1-bb54-05e1a514d139
 docset: aem65
 exl-id: ca4c3161-90a8-4c02-8554-125eac62dff7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '192'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform Launch是在單頁應用程式(SPA)中實作Analytics�
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
+>SPA編輯器是建議解決方案，供需要SPA架構使用者端轉譯(例如React或Angular)的專案使用。
 
 ## 教學課程 {#tutorial}
 
@@ -34,4 +34,4 @@ Adobe Experience Platform Launch是在單頁應用程式(SPA)中實作Analytics�
 >
 >參考的知識庫是用來啟用Adobe Experience Platform Launch與SPA的整合，但不會運用AEM SPA編輯器。 這些方法也應允許Adobe Experience Platform Launch整合與使用SPA編輯器建立的SPA並存。
 >
->Redux與Javascript SPA程式庫搭配使用的問題尚未完全解決。 SPA Editor的未來版本計畫支援Redux。
+>Redux與JavaScript SPA程式庫搭配使用的問題尚未完全解決。 SPA Editor的未來版本計畫支援Redux。

@@ -11,9 +11,9 @@ topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4599'
+source-wordcount: '4597'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 * *&lt;install_directory>\Adobe_Experience_Manager_forms\sdk\misc\DataServices\Client-Libraries*
 
-   其中&lt;*install_directory*>是安裝AEM Forms的目錄。
+  其中&lt;*install_directory*>是安裝AEM Forms的目錄。
 
 **另請參閱**
 
@@ -133,6 +133,7 @@ docRef.text = "Text for my document";  // Optionally, you can override the ser
 * 當檔案不在伺服器上時，請使用遠端上傳servlet將檔案上傳到AEM Forms。 AEM Forms的新功能是上傳安全檔案。 上傳安全檔案時，您必須使用具有 *檔案上傳應用程式使用者* 角色。 若沒有此角色，使用者無法上傳安全檔案。 建議您使用單一登入來上傳安全檔案。 (請參閱 [傳遞安全檔案以使用遠端處理來叫用程式](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).)
 
 >[!NOTE]
+>
 如果將AEM Forms設定為允許上傳不安全的檔案，您可以使用沒有檔案上傳應用程式使用者角色的使用者來上傳檔案。 使用者也可以擁有檔案上傳許可權。 不過，如果AEM Forms設定為僅允許安全檔案，則請確保使用者具有「檔案上傳應用程式」使用者角色或「檔案上傳」許可權。 (請參閱 [將AEM Forms設定為接受安全和不安全的檔案](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).
 
 您可對指定的上傳URL使用標準Flash上傳功能： `https://SERVER:PORT/remoting/lcfileupload`. 然後，您可以使用 `DocumentReference` 任何型別的輸入引數所在的物件 `Document` 預期
@@ -197,6 +198,7 @@ function completeHandler(event: DataEvent): void  { 
 1. 處理傳回值。
 
 >[!NOTE]
+>
 本節探討如何叫用AEM Forms程式，以及當AEM Forms設定為上傳不安全的檔案時如何上傳檔案。 如需如何叫用AEM Forms程式及上傳安全檔案，以及如何設定AEM Forms以接受安全和不安全檔案的詳細資訊，請參閱 [傳遞安全檔案以使用遠端處理來叫用程式](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).
 
 **建立mx：RemoteObject執行個體**
@@ -302,6 +304,7 @@ AEM Forms使用者管理員可透過數種方式，驗證來自Flex應用程式�
 對於自訂驗證，伺服器會傳送錯誤給使用者端，以指出需要驗證。
 
 >[!NOTE]
+>
 如需使用HTTP權杖執行驗證的詳細資訊，請參閱 [建立使用HTTP權杖執行SSO驗證的Flash Builder應用程式](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens).
 
 ### 使用自訂驗證 {#using-custom-authentication}
@@ -309,6 +312,7 @@ AEM Forms使用者管理員可透過數種方式，驗證來自Flex應用程式�
 您可以在管理主控台中啟用自訂驗證，方法是從遠端端點上的驗證方法從基本變更為自訂。 如果您使用自訂驗證，使用者端應用程式會呼叫 `ChannelSet.login` 登入方法和 `ChannelSet.logout` 登出的方法。
 
 >[!NOTE]
+>
 在舊版AEM Forms中，您藉由呼叫 `RemoteObject.setCredentials` 方法。 此 `setCredentials` 在元件第一次嘗試連線至伺服器之前，方法實際上並未將認證傳遞至伺服器。 因此，如果元件發出錯誤事件，您就無法確定錯誤是否是因為驗證錯誤或其他原因而發生。 此 `ChannelSet.login` 方法會在您呼叫伺服器時連線至伺服器，以便您可以立即處理驗證問題。 雖然您可以繼續使用 `setCredentials` 方法，建議您使用 `ChannelSet.login` 方法。
 
 由於多個目的地可以使用相同的頻道和相應的ChannelSet物件，因此登入一個目的地會將使用者登入使用相同頻道或頻道的任何其他目的地。 如果兩個元件對相同的ChannelSet物件套用不同的認證，則會使用最後套用的認證。 如果有多個元件使用相同的已驗證ChannelSet物件，請呼叫 `logout` 方法會將所有元件登出目的地。
@@ -454,6 +458,7 @@ AEM Forms開發人員撰寫使用者端應用程式以擴充表單指南（已�
 使用(不適用於AEM表單) AEM Forms Remoting叫用AEM Forms服務時，使用者端應用程式會傳遞驗證Cookie作為請求的一部分。 由於使用者已驗證，因此從使用者端應用程式連線至AEM Forms服務不需要額外登入。
 
 >[!NOTE]
+>
 如果Cookie無效或遺失，則不會隱含重新導向至登入頁面。 因此，您仍然可以呼叫匿名服務。
 
 您可以撰寫自行登入和登出的使用者端應用程式，略過AEM Forms單一登入機制。 如果您略過單一登入機制，則可以在應用程式中使用基本或自訂驗證。
@@ -548,6 +553,7 @@ AEM Forms開發人員撰寫使用者端應用程式以擴充表單指南（已�
 AEM傳遞安全檔案時，請使用單一登入，並指定擁有 *檔案上傳應用程式使用者* 角色。 若沒有此角色，使用者無法上傳安全檔案。 您可以以程式設計方式將角色指派給使用者。 (請參閱 [管理角色和許可權](/help/forms/developing/users.md#managing-roles-and-permissions).)
 
 >[!NOTE]
+>
 當您建立新角色並希望該角色的成員上傳安全檔案時，請確保您指定檔案上傳許可權。
 
 AEM Forms支援名為的操作 `getFileUploadToken` 會傳回傳遞至上傳servlet的Token。 此 `DocumentReference.constructRequestForUpload` 方法需要AEM Forms的URL以及傳回的權杖 `LC.FileUploadAuthenticator.getFileUploadToken` 方法。 此方法會傳回 `URLRequest` 用於叫用上傳servlet的物件。 下列程式碼會示範此應用程式邏輯。
@@ -616,6 +622,7 @@ AEM Forms支援名為的操作 `getFileUploadToken` 會傳回傳遞至上傳serv
 1. 確保取消選取「允許從Flex應用程式上傳不安全的檔案」選項。
 
 >[!NOTE]
+>
 若要設定AEM Forms以接受不安全的檔案，請選取允許從Flex應用程式上傳不安全的檔案選項。 然後重新啟動應用程式或服務，確保設定生效。
 
 ### 快速入門：透過使用Remoting傳遞安全檔案來叫用短期程式 {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
@@ -969,6 +976,7 @@ AEM Forms複雜型別的完整資料型別會指派給別名標籤。
 ActionScript類別的欄位與屬於AEM Forms複雜型別的欄位相符。 位於客戶ActionScript類別中的六個欄位與屬於的欄位相符 `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
+>
 判斷屬於Forms複雜型別的欄位名稱的一個好方法是在Web瀏覽器中檢視服務的WSDL。 WSDL會指定服務的複雜型別和對應的資料成員。 客戶服務使用下列WSDL： `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.`
 
 CustomerActionScript類別屬於名為customer的套件。 建議您將對應到複雜AEM Forms資料型別的所有ActionScript類別放在自己的套件中。 在Flex專案的src資料夾中建立一個資料夾，並將ActionScript檔案放在資料夾中，如下圖所示。
@@ -980,6 +988,7 @@ CustomerActionScript類別屬於名為customer的套件。 建議您將對應到
 下列程式碼範例會叫用客戶服務並建立客戶。 執行此程式碼範例時，請確定您填寫所有文字方塊。 此外，請確定您建立了對應至下列專案的Customer.as檔案： `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
+>
 您必須先建立並部署Bank自訂元件，才能執行此快速入門。
 
 ```java

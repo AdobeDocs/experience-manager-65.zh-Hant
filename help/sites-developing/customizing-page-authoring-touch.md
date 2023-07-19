@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1357'
 ht-degree: 0%
 
 ---
@@ -27,14 +27,14 @@ AEM提供多種機制，可讓您自訂頁面製作功能(以及 [主控台](/he
 
 * Clientlibs
 
-   Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標準函式、物件和方法。 自訂時，您可以在下建立自己的clientlib `/apps.` 新clientlib必須：
+  Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標準函式、物件和方法。 自訂時，您可以在下建立自己的clientlib `/apps.` 新clientlib必須：
 
    * 取決於編寫clientlib `cq.authoring.editor.sites.page`
    * 屬於適當的 `cq.authoring.editor.sites.page.hook` 類別
 
 * 覆蓋
 
-   覆蓋是以節點定義為基礎，並允許您覆蓋標準功能(在 `/libs`)的自訂功能(位於 `/apps`)。 建立覆蓋圖時，不需要原始的1:1復本，因為 [sling資源合併](/help/sites-developing/sling-resource-merger.md) 允許繼承。
+  覆蓋是以節點定義為基礎，並允許您覆蓋標準功能(在 `/libs`)的自訂功能(位於 `/apps`)。 建立覆蓋圖時，不需要原始的1:1復本，因為 [sling資源合併](/help/sites-developing/sling-resource-merger.md) 允許繼承。
 
 >[!NOTE]
 >
@@ -53,7 +53,6 @@ AEM提供多種機制，可讓您自訂頁面製作功能(以及 [主控台](/he
 >
 
 
-
 >[!CAUTION]
 >
 >您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
@@ -64,7 +63,6 @@ AEM提供多種機制，可讓您自訂頁面製作功能(以及 [主控台](/he
 >
 >1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
 >1. 進行任何變更 `/apps`
-
 
 ## 新增圖層（模式） {#add-new-layer-mode}
 
@@ -108,7 +106,7 @@ GITHUB上的程式碼
 
 ## 篩選資源 {#filtering-resources}
 
-編寫頁面時，使用者必須經常從資源（例如頁面、元件、資產等）中進行選取。 例如，這可採取清單的形式，作者必須從中選擇專案。
+編寫頁面時，使用者通常必須從資源（例如頁面、元件、資產等）中進行選取。 例如，這可採取清單的形式，作者必須從中選擇專案。
 
 為了將清單保持在合理的大小並與使用案例相關，可採用自訂述詞的形式實施篩選器。 例如，如果 [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) 元件是用來讓使用者選取特定資源的路徑，可透過下列方式篩選顯示的路徑：
 
@@ -152,14 +150,14 @@ GITHUB上的程式碼
 
    * `cq:inplaceEditing`
 
-      例如：
+     例如：
 
       * `/libs/foundation/components/text/cq:editConfig`
       * `/libs/foundation/components/image/cq:editConfig`
 
          * 屬性: `editorType`
 
-            定義為該元件觸發就地編輯時將使用的內嵌編輯器型別；例如 `text`， `textimage`， `image`， `title`.
+           定義為該元件觸發就地編輯時將使用的內嵌編輯器型別；例如， `text`， `textimage`， `image`， `title`.
 
 1. 編輯器的其他設定詳細資料可使用 `config` 包含設定的節點以及 `plugin` 節點，以包含必要的外掛程式設定詳細資料。
 
@@ -260,4 +258,4 @@ GITHUB上的程式碼
    >`/libs/cq/gui/content/common/managepublicationwizard`
 
 1. 更新 [工作流程模型](/help/sites-developing/workflows-models.md) 以及所需的相關設定/指令碼。
-1. 移除「 」的許可權 [ `replicate` 動作](/help/sites-administering/security.md#actions) 來自所有相關頁面的所有適當使用者；當任何使用者嘗試發佈（或復寫）頁面時，將此工作流程作為預設動作觸發。
+1. 移除「 」的許可權 [`replicate` 動作](/help/sites-administering/security.md#actions) 來自所有相關頁面的所有適當使用者；當任何使用者嘗試發佈（或復寫）頁面時，將此工作流程作為預設動作觸發。

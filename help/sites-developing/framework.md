@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: 8dafa901bc628ee5e4823e9f8811bf4d09b7e072
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1645'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ TagID包含 [名稱空間](#tag-namespace) 後面接著本機TagID。 [容器標
 
 ### 標籤名稱空間 {#tag-namespace}
 
-名稱空間可讓您將專案分組。 最典型的使用案例是每個網站（例如公用、內部和入口網站）或大型應用程式（例如WCM、Assets、Communities）的名稱空間。 但名稱空間可用於各種其他需求。 在使用者介面中使用名稱空間，以僅顯示適用於目前內容的標籤子集（即特定名稱空間的標籤）。
+名稱空間可讓您將專案分組。 最典型的使用案例是每個網站的名稱空間（例如，公用、內部和入口網站）或大型應用程式（例如，WCM、Assets、Communities）。 但名稱空間可用於各種其他需求。 在使用者介面中使用名稱空間，以僅顯示適用於目前內容的標籤子集（即特定名稱空間的標籤）。
 
 標籤的名稱空間是分類子樹狀結構中的第一個層級，也就是 [分類根節點](#taxonomy-root-node). 名稱空間是型別的節點 `cq:Tag` 其父項不是 `cq:Tag` 節點型別。
 

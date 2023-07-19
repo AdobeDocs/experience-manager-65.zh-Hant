@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: be2aa297-5b78-4b1d-8ff1-e6a585a177dd
 exl-id: 17a4e4dc-804e-44a9-9942-c37dbfc8016f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe Analytics使用 `s.pageName` 屬性，用來唯一識別頁面及關聯為
 
 * 設計頁面元件，使其包含您對應至的CQ變數 `s.pageName` 屬性。 (請參閱 [對自訂元件實作Adobe Analytics追蹤](/help/sites-developing/extending-analytics-components.md).)
 
-若要在Sites主控台和內容分析中公開Analytics報表資料，AEM需要 `s.pageName` 屬性。 AEM Analytics Java API會定義 `AnalyticsPageNameProvider` 您實作以提供Sites主控台和內容深入分析之值的介面， `s.pageName` 屬性。 您的 `AnaltyicsPageNameProvider` 服務會解析伺服器上的pageName屬性以用於報表用途，因為它可以在使用者端上使用Javascript動態設定以用於追蹤用途。
+若要在Sites主控台和內容分析中公開Analytics報表資料，AEM需要 `s.pageName` 屬性。 AEM Analytics Java API會定義 `AnalyticsPageNameProvider` 您實作以提供Sites主控台和內容深入分析之值的介面， `s.pageName` 屬性。 您的 `AnaltyicsPageNameProvider` 服務會解析伺服器上的pageName屬性以用於報表用途，因為它可以在使用者端上使用JavaScript動態設定以用於追蹤用途。
 
 ## 預設Analytics頁面名稱提供者服務 {#the-default-analytics-page-name-provider-service}
 
@@ -43,7 +43,7 @@ Adobe Analytics使用 `s.pageName` 屬性，用來唯一識別頁面及關聯為
 
 * `pagedata.navTitle`：此服務使用 `page.getNavigationTitle()`
 
-此 `page` 物件是 [ `com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) 頁面的Java物件。
+此 `page` 物件是 [`com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) 頁面的Java物件。
 
 如果您未將CQ變數對應至 `s.pageName` 屬性，的值 `s.pageName` 從頁面路徑產生。 例如，路徑為的頁面 `/content/geometrixx/en` 使用值 `content:geometrixx:en` 的 `s.pageName`.
 
@@ -64,7 +64,7 @@ Adobe Analytics使用 `s.pageName` 屬性，用來唯一識別頁面及關聯為
 * 穩定。
 * 人類看得懂的。
 
-例如，自訂頁面元件可以包含頁面屬性，作者可使用它來指定作為下列專案值的頁面的唯一ID： `s.pageProperties` 屬性：
+例如，自訂頁面元件可包含頁面屬性，作者可使用它來指定作為下列專案值的頁面的唯一ID： `s.pageProperties` 屬性：
 
 * 頁面包含分析變數，該變數會設定為儲存在頁面屬性中之唯一ID的值。
 * 分析變數會對應至 `s.pageProperties` Analytics框架中的屬性。

@@ -1,8 +1,8 @@
 ---
-title: ContextHub Javascript API參考
-seo-title: ContextHub Javascript API Reference
-description: 將ContextHub元件新增至頁面後，您的指令碼即可使用ContextHub Javascript API
-seo-description: The ContextHub Javascript API is available to your scripts when the ContextHub component has been added to the page
+title: ContextHub JavaScript API參考
+seo-title: ContextHub JavaScript API Reference
+description: 將ContextHub元件新增至頁面後，您的指令碼即可使用ContextHub JavaScript API
+seo-description: The ContextHub JavaScript API is available to your scripts when the ContextHub component has been added to the page
 uuid: 296d6c8e-517f-4837-9e86-ae571ea8aa17
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 feature: Context Hub
 exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '5006'
+source-wordcount: '5007'
 ht-degree: 2%
 
 ---
 
-# ContextHub Javascript API參考{#contexthub-javascript-api-reference}
+# ContextHub JavaScript API參考{#contexthub-javascript-api-reference}
 
-ContextHub Javascript API適用於您的指令碼，當 [ContextHub元件已新增至頁面](/help/sites-developing/ch-adding.md#adding-contexthub-to-a-page-component).
+ContextHub JavaScript API適用於您的指令碼，當 [ContextHub元件已新增至頁面](/help/sites-developing/ch-adding.md#adding-contexthub-to-a-page-component).
 
 ## ContextHub常數 {#contexthub-constants}
 
-ContextHub Javascript API定義的常數值。
+ContextHub JavaScript API定義的常數值。
 
 ### 事件常數 {#event-constants}
 
@@ -67,11 +67,11 @@ ContextHub Javascript API定義的常數值。
 | ContextHub.Constants.EVENT_UI_CONTAINER_OPENED | 開啟ContextHub UI時引發 | ui-container-open |
 | ContextHub.Constants.EVENT_UI_CONTAINER_CLOSED | 當ContextHub UI摺疊時引發 | ui-container-closed |
 | ContextHub.Constants.EVENT_UI_PROPERTY_MODIFIED | 修改屬性時引發 | ui-property-modified |
-| ContextHub.Constants.EVENT_UI_RENDERED | 每次呈現ContextHub UI時引發（例如在屬性變更後） | ui演算 |
+| ContextHub.Constants.EVENT_UI_RENDERED | 每次呈現ContextHub UI時引發（例如，在屬性變更後） | ui演算 |
 | ContextHub.Constants.EVENT_UI_INITIALIZED | UI容器初始化時引發 | ui已初始化 |
 | ContextHub.Constants.ACTIVE_UI_MODE | 指示作用中的UI模式 | /_/active-ui-mode |
 
-## ContextHub Javascript API參考 {#contexthub-javascript-api-reference-2}
+## ContextHub JavaScript API參考 {#contexthub-javascript-api-reference-2}
 
 ContextHub物件可讓您存取所有存放區。
 
@@ -98,7 +98,7 @@ var geoloc = allStores.geolocation
 
 #### getStore(name) {#getstore-name}
 
-將存放區擷取為Javascript物件。
+擷取作為JavaScript物件的存放區。
 
 **參數**
 
@@ -391,9 +391,9 @@ A `boolean` 值：
 
 ## ContextHub.Store.JSONPStore {#contexthub-store-jsonpstore}
 
-包含JSON資料的存放區。 資料會從外部JSONP服務擷取，或選擇性地從傳回JSON資料的服務擷取。 使用指定服務詳細資料 [ `init`](/help/sites-developing/contexthub-api.md#init-name-config) 建立此類別的執行個體時執行函式。
+包含JSON資料的存放區。 資料會從外部JSONP服務擷取，或選擇性地從傳回JSON資料的服務擷取。 使用指定服務詳細資料 [`init`](/help/sites-developing/contexthub-api.md#init-name-config) 建立此類別的執行個體時執行函式。
 
-存放區使用記憶體內持續性（Javascript變數）。 存放區資料僅在頁面存留期內可用。
+存放區使用記憶體內持續性（JavaScript變數）。 存放區資料僅在頁面存留期內可用。
 
 ContextHub.Store.JSONPStore延伸 [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) 並繼承該類別的函式。
 
@@ -471,7 +471,7 @@ A `string` 代表服務URL的值。
 
    * eventDeferring： 32。
    * 事件：此存放區的ContextHub.Utils.Eventing物件。 預設值為 `ContextHub.eventing` 物件。
-   * 持續性：此存放區的ContextHub.Utils.Persistence物件。 預設會使用記憶體持續性（Javascript物件）。
+   * 持續性：此存放區的ContextHub.Utils.Persistence物件。 預設會使用記憶體持續性（JavaScript物件）。
    * 服務： （物件）
 
       * host： （字串）伺服器名稱或IP位址。
@@ -484,9 +484,9 @@ A `string` 代表服務URL的值。
          * auto: //
          * true： https://
          * false： https://
+
       * timeout： (Number)逾時前等待JSONP服務回應的時間長度，以毫秒為單位。
       * ttl：呼叫JSONP服務之間的最小時間量（以毫秒為單位）。 (請參閱 [queryservice](/help/sites-developing/contexthub-api.md#queryservice-reload) 函式)。
-
 
 #### queryService（重新載入） {#queryservice-reload}
 
@@ -522,7 +522,7 @@ ContextHub.Store.PersistedStore延伸 [ContextHub.Store.Core](/help/sites-develo
 
 ## ContextHub.Store.SessionStore {#contexthub-store-sessionstore}
 
-ContextHub.Store.SessionStore延伸 [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) 所以它會繼承該類別的所有函式。 此存放區中的資料會使用記憶體內持續性（Javascript物件）持續存在。
+ContextHub.Store.SessionStore延伸 [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) 所以它會繼承該類別的所有函式。 此存放區中的資料是使用記憶體內持續性（JavaScript物件）來持續儲存。
 
 ## ContextHub.UI {#contexthub-ui}
 
@@ -816,7 +816,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **傳回**
 
-Javascript物件。
+javascript物件。
 
 **範例**
 
@@ -832,7 +832,7 @@ Object {
 
 #### stringify(data) {#stringify-data}
 
-將Javascript值和物件序列化為JSON格式的字串值。
+將JavaScript值和物件序列化為JSON格式的字串值。
 
 **參數**
 
@@ -900,7 +900,7 @@ ContextHub.Utils.JSON.stringify({
 
 **範例**
 
-請考量下列Javascript物件：
+請考量下列JavaScript物件：
 
 ```
 myObject {
@@ -1074,7 +1074,7 @@ ContextHub.Utils.JSON.tree.sanitizeKey(key)
 
 **範例**
 
-考量下列Javascript程式碼：
+考量下列JavaScript程式碼：
 
 ```
 var myObject = {
@@ -1109,7 +1109,7 @@ myObject物件具有下列值：
 
 **參數**
 
-* **storeType：** （字串）商店型別的名稱。 請參閱 `storeType` 的引數 [ `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 函式。
+* **storeType：** （字串）商店型別的名稱。 請參閱 `storeType` 的引數 [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 函式。
 
 **傳回**
 
@@ -1121,7 +1121,7 @@ myObject物件具有下列值：
 
 **參數**
 
-* storeType： （字串）候選商店的名稱。 請參閱 `storeType` 的引數 [ `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 函式。
+* storeType： （字串）候選商店的名稱。 請參閱 `storeType` 的引數 [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 函式。
 
 **傳回**
 
@@ -1133,7 +1133,7 @@ myObject物件具有下列值：
 
 **傳回**
 
-字串值的陣列，其中每個字串都是用來登入存放區候選的存放區型別。 請參閱 `storeType` 的引數 [ `ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 函式。
+字串值的陣列，其中每個字串都是用來登入存放區候選的存放區型別。 請參閱 `storeType` 的引數 [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 函式。
 
 #### registerStoreCandidate(store， storeType， priority， applies) {#registerstorecandidate-store-storetype-priority-applies}
 

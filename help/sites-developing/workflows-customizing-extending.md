@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 13f15bee38b6b4af4cd59376849810a788f0c467
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3584'
 ht-degree: 1%
 
 ---
@@ -52,27 +52,26 @@ ht-degree: 1%
 >1. 重新建立所需專案（即該專案存在於中） `/libs` 在 `/apps`
 >2. 進行任何變更 `/apps`
 
-
 此 `/libs/cq/workflow/components/model/step` component是最接近的共同祖先 **程式步驟**， **參與者步驟**、和 **動態參與者步驟**，會繼承下列專案：
 
 * `step.jsp`
 
-   此 `step.jsp` 指令碼在新增到模型時呈現步驟元件的標題。
+  此 `step.jsp` 指令碼在新增到模型時呈現步驟元件的標題。
 
-   ![wf-22-1](assets/wf-22-1.png)
+  ![wf-22-1](assets/wf-22-1.png)
 
 * [cq：dialog](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog)
 
-   對話方塊，內含下列索引標籤：
+  對話方塊，內含下列索引標籤：
 
    * **通用**：用於編輯標題和說明。
    * **進階**：用於編輯電子郵件通知屬性。
 
-   ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
+  ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
 
-   >[!NOTE]
-   >
-   >當步驟元件的「編輯」對話方塊的索引標籤不符合此預設外觀時，步驟元件已定義指令碼、節點屬性或對話方塊索引標籤，以取代這些繼承的索引標籤。
+  >[!NOTE]
+  >
+  >當步驟元件的「編輯」對話方塊的索引標籤不符合此預設外觀時，步驟元件已定義指令碼、節點屬性或對話方塊索引標籤，以取代這些繼承的索引標籤。
 
 ### ECMA指令碼 {#ecma-scripts}
 
@@ -125,7 +124,6 @@ ECMA指令碼中可用的物件如下（視步驟型別而定）：
 >  當「編輯」對話方塊使用「常用」索引標籤時， `/libs/cq/flow/components/step/step` 元件實作。
 >
 >* 步驟元件或元件的父項不會覆寫 `step.jsp` 指令碼 `/libs/cq/flow/components/step/step` 元件實作。
-
 
 1. 在 `cq:Component` 節點，新增下列節點：
 
@@ -669,7 +667,6 @@ function getParticipant() {
 >* [`com.day.cq.wcm.workflow.process.DeactivatePageProcess`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/DeactivatePageProcess.html)
 >
 
-
 您可以開發工作流程步驟來取得封裝資源並加以處理。 下列成員 `com.day.cq.workflow.collection` 封裝提供對工作流程封裝的存取權：
 
 * `ResourceCollection`：工作流程封裝類別。
@@ -826,21 +823,21 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    * `sling:resourceSuperType`
 
-      必須繼承自現有步驟。
+     必須繼承自現有步驟。
 
-      在此範例中，我們繼承自下列位置的基本步驟 `cq/workflow/components/model/step`，但您可以使用其他超級型別，例如 `participant`， `process`等。
+     在此範例中，我們繼承自下列位置的基本步驟 `cq/workflow/components/model/step`，但您可以使用其他超級型別，例如 `participant`， `process`等。
 
    * `jcr:title`
 
-      是元件在步驟瀏覽器中列出時顯示的標題（工作流程模型編輯器的左側面板）。
+     是元件在步驟瀏覽器中列出時顯示的標題（工作流程模型編輯器的左側面板）。
 
    * `cq:icon`
 
-      用於指定 [珊瑚圖示](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 用於步驟。
+     用於指定 [珊瑚圖示](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 用於步驟。
 
    * `componentGroup`
 
-      必須為下列其中一項：
+     必須為下列其中一項：
 
       * Collaboration 工作流程
       * DAM 工作流程
@@ -873,11 +870,12 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    * `cq:inherit`
 
-      當設定為 `true`，則步驟元件將會繼承您在中指定的步驟的屬性 `sling:resourceSuperType`.
+     當設定為 `true`，則步驟元件將會繼承您在中指定的步驟的屬性 `sling:resourceSuperType`.
 
    * `cq:disableTargeting`
 
-      視需要設定。
+     視需要設定。
+
    ![wf-39](assets/wf-39.png)
 
 1. 在節點上設定屬性 `cq:formsParameter` 如下所示：
@@ -886,7 +884,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    * `jcr:title`
 
-      在模型圖中的步驟卡片上設定預設標題 **標題** 的欄位 **我的自訂 — 步驟屬性** 設定對話方塊。
+     在模型圖中的步驟卡片上設定預設標題 **標題** 的欄位 **我的自訂 — 步驟屬性** 設定對話方塊。
 
    * 您也可以定義自己的自訂屬性。
 

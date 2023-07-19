@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 exl-id: 170414a6-c40b-4ad2-9294-7c2266850c3d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1293'
 ht-degree: 2%
 
 ---
@@ -49,11 +49,11 @@ ht-degree: 2%
 
 * **[!UICONTROL 允許的評等]**
 
-   成員可選擇的評等清單。
+  成員可選擇的評等清單。
 
-   使用向上鍵、向下鍵和刪除按鈕來修改可見選取專案。
+  使用向上鍵、向下鍵和刪除按鈕來修改可見選取專案。
 
-   按一下 **[!UICONTROL 新增專案]** 以新增其他評等選擇。
+  按一下 **[!UICONTROL 新增專案]** 以新增其他評等選擇。
 
 在 **[!UICONTROL 必要的評等]** 標籤，從清單重新輸入專案 **[!UICONTROL 允許的評等]** 需要評等的。 如果專案僅在「允許的評等」標籤上指定，則當成員提交時，該專案可能會保持未標籤狀態。
 
@@ -63,11 +63,11 @@ ht-degree: 2%
 
 * **[!UICONTROL 必要評等]**
 
-   允許的評等子集，指出所需的評等。
+  允許的評等子集，指出所需的評等。
 
-   使用向上鍵、向下鍵和刪除按鈕來修改可見選取專案。
+  使用向上鍵、向下鍵和刪除按鈕來修改可見選取專案。
 
-   按一下 **[!UICONTROL 新增專案]** 以新增其他回應選擇。
+  按一下 **[!UICONTROL 新增專案]** 以新增其他回應選擇。
 
 >[!NOTE]
 >
@@ -79,35 +79,35 @@ ht-degree: 2%
 
 * **[!UICONTROL 允許回覆]**
 
-   如果勾選，則允許回複稽核。 預設為未勾選。
+  如果勾選，則允許回複稽核。 預設為未勾選。
 
 * **[!UICONTROL 已關閉]**
 
-   如果勾選，則新評論和回覆將關閉審閱。 預設為未勾選。
+  如果勾選，則新評論和回覆將關閉審閱。 預設為未勾選。
 
 * **[!UICONTROL 允許檔案上傳]**
 
-   如果勾選，則允許上傳檔案附件以供稽核。 預設為未勾選。
+  如果勾選，則允許上傳檔案附件以供稽核。 預設為未勾選。
 
 * **最大檔案大小**
 
-   相關條件僅限於 **[!UICONTROL 允許檔案上傳]** 已勾選。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為10 MB。
+  相關條件僅限於 **[!UICONTROL 允許檔案上傳]** 已勾選。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為10 MB。
 
 * **[!UICONTROL 訊息長度上限]**
 
-   可在文字方塊中輸入的最大字元數。 預設為4096個字元。
+  可在文字方塊中輸入的最大字元數。 預設為4096個字元。
 
 * **[!UICONTROL 允許的檔案類型]**
 
-   相關條件僅限於 **[!UICONTROL 允許檔案上傳]** 已勾選。 以「點」分隔符號分隔的副檔名清單（以逗號分隔）。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 預設為none，因此允許所有檔案型別。
+  相關條件僅限於 **[!UICONTROL 允許檔案上傳]** 已勾選。 以「點」分隔符號分隔的副檔名清單（以逗號分隔）。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 預設為none，因此允許所有檔案型別。
 
 * **[!UICONTROL RTF 編輯器]**
 
-   如果勾選，可輸入帶有標籤的貼文。 預設為未勾選。
+  如果勾選，可輸入帶有標籤的貼文。 預設為未勾選。
 
 * **[!UICONTROL 允許投票]**
 
-   如果勾選，請為主題加入投票功能。 預設為未勾選。
+  如果勾選，請為主題加入投票功能。 預設為未勾選。
 
 在 **[!UICONTROL 使用者稽核]** 索引標籤中，指定如何管理已發佈的稽核。 如需詳細資訊，請參閱 [稽核使用者產生的內容](moderate-ugc.md).
 
@@ -115,39 +115,39 @@ ht-degree: 2%
 
 * **[!UICONTROL 事先審核]**
 
-   如果勾選，則必須先核准稽核，評論才會出現在發佈網站上。 預設為未勾選。
+  如果勾選，則必須先核准稽核，評論才會出現在發佈網站上。 預設為未勾選。
 
 * **[!UICONTROL 刪除評論]**
 
-   如果勾選，發表評論的成員將獲得刪除的能力。 預設為未勾選。
+  如果勾選，發表評論的成員將獲得刪除的能力。 預設為未勾選。
 
 * **[!UICONTROL 拒絕評論]**
 
-   如果勾選，則允許版主拒絕評論。 預設為未勾選。
+  如果勾選，則允許版主拒絕評論。 預設為未勾選。
 
 * **[!UICONTROL 關閉/重新開啟檢閱]**
 
-   如果勾選，則允許版主關閉和重新開啟檢閱。 預設為未勾選。
+  如果勾選，則允許版主關閉和重新開啟檢閱。 預設為未勾選。
 
 * **[!UICONTROL 標幟評論]**
 
-   如果勾選，則允許成員將稽核標籤為不適當。 預設為未勾選。
+  如果勾選，則允許成員將稽核標籤為不適當。 預設為未勾選。
 
 * **[!UICONTROL 標幟原因清單]**
 
-   如果勾選，則允許成員從下拉式清單中選擇將評論標籤為不適當的原因。 預設為未勾選。
+  如果勾選，則允許成員從下拉式清單中選擇將評論標籤為不適當的原因。 預設為未勾選。
 
 * **[!UICONTROL 自訂標幟原因]**
 
-   如果勾選，則允許成員輸入他們自己的理由，將稽核標籤為不適當。 預設為未勾選。
+  如果勾選，則允許成員輸入他們自己的理由，將稽核標籤為不適當。 預設為未勾選。
 
 * **[!UICONTROL 稽核臨界值]**
 
-   輸入在通知版主之前，成員必須標幟稽核的次數。 預設為一次(1)。
+  輸入在通知版主之前，成員必須標幟稽核的次數。 預設為一次(1)。
 
 * **[!UICONTROL 標幟限制]**
 
-   輸入將評論從公開檢視隱藏之前必須標幟的次數。 此數字必須大於或等於 **[!UICONTROL 稽核臨界值]**. 預設值為5。
+  輸入將評論從公開檢視隱藏之前必須標幟的次數。 此數字必須大於或等於 **[!UICONTROL 稽核臨界值]**. 預設值為5。
 
 ### 新增檢閱摘要（顯示）至頁面 {#adding-a-review-summary-display-to-a-page}
 
@@ -179,13 +179,13 @@ ht-degree: 2%
 
 * `Review Path`
 
-   輸入或瀏覽至放置的執行個體 `reviews`要摘要的元件，例如，如果新增至 [Geometrixx參與網站，](getting-started.md) 路徑會是：
+  輸入或瀏覽至放置的執行個體 `reviews`要摘要的元件，例如，如果新增至 [Geometrixx參與網站，](getting-started.md) 路徑會是：
 
-   `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
+  `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
 * `Include histogram`
 
-   如果勾選，則包括橫條圖的顯示，指出所摘要的評論中有多少個星級評等。 預設為未勾選。
+  如果勾選，則包括橫條圖的顯示，指出所摘要的評論中有多少個星級評等。 預設為未勾選。
 
 ### 變更為自訂稽核型別 {#changing-to-a-custom-review-type}
 
@@ -201,19 +201,19 @@ ht-degree: 2%
 
 * **[!UICONTROL 評論資源類型]**
 
-   導覽至擴充功能的resourceType `comment`/apps中的元件（單一註釋）。 例如， `/apps/social/commons/components/hbs/comments/comment`.
+  導覽至擴充功能的resourceType `comment`/apps中的元件（單一註釋）。 例如，`/apps/social/commons/components/hbs/comments/comment`。
 
-   此資源將識別訪客發表評論時建立的UGC的resourceType。
+  此資源將識別訪客發表評論時建立的UGC的resourceType。
 
 * **[!UICONTROL 投票資源類型]**
 
-   導覽至擴充功能的resourceType `voting`/apps中的元件。 例如， `/apps/social/components/hbs/voting`.
+  導覽至擴充功能的resourceType `voting`/apps中的元件。 例如，`/apps/social/components/hbs/voting`。
 
-   此資源將識別訪客張貼投票時建立的UGC資源型別。
+  此資源將識別訪客張貼投票時建立的UGC資源型別。
 
 * **[!UICONTROL 註解系統資源型別]**
 
-   導覽至擴充功能的resourceType `comments`/apps中的元件（註解系統）。 除非頁面範本，否則保留空白 [動態包含](scf.md#add-or-include-a-communities-component) 基礎指令碼中的「註解系統」，而非以資源（註解節點）的形式新增至頁面。 閱讀以下內容以瞭解更多資訊： [{{include}} 協助程式](handlebars-helpers.md#include).
+  導覽至擴充功能的resourceType `comments`/apps中的元件（註解系統）。 除非頁面範本，否則保留空白 [動態包含](scf.md#add-or-include-a-communities-component) 基礎指令碼中的「註解系統」，而非以資源（註解節點）的形式新增至頁面。 閱讀以下內容以瞭解更多資訊： [{{include}} 協助程式](handlebars-helpers.md#include).
 
 ## 網站訪客體驗 {#site-visitor-experience}
 

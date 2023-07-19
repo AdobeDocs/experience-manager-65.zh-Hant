@@ -12,9 +12,9 @@ discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
 feature: Configuring
 exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2730'
+source-wordcount: '2729'
 ht-degree: 0%
 
 ---
@@ -163,11 +163,13 @@ Tar Micro Kernel的「冷待命」容量可讓一或多個待命AEM執行處理�
 
       * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
       * `org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`
+
    1. 建立名為的新資料夾 `crx3` 在 `aem-standby/crx-quickstart/install`
 
    1. 建立資料存放區設定，並將其放在 `aem-standby/crx-quickstart/install/crx3`. 在此範例中，您需要建立的檔案為：
 
       * org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config
+
    1. 編輯檔案並建立必要的設定。
 
    以下是典型待命執行個體的組態檔範例：

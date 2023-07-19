@@ -5,16 +5,16 @@ contentOwner: AG
 feature: Asset Management
 role: User, Architect, Admin
 exl-id: d167cf97-6829-45a7-ba46-2239d530b060
-source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '985'
 ht-degree: 2%
 
 ---
 
 # 設定AEM Assets與Experience Cloud的整合 {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
 
-如果您是Adobe Experience Cloud客戶，則可以將Adobe Experience Manager Assets中的資產與Adobe Creative Cloud同步，反之亦然。 您也可以將資產與Experience Cloud同步，反之亦然。 您可以透過以下方式設定此同步處理 [!DNL Adobe I/O]. 已更新的名稱 [!DNL Adobe Marketing Cloud] 是 [!DNL Adobe Experience Cloud].
+如果您是Adobe Experience Cloud客戶，則可以將Adobe Experience Manager資產中的資產與Adobe Creative Cloud同步，反之亦然。 您也可以將資產與Experience Cloud同步，反之亦然。 您可以透過以下方式設定此同步處理 [!DNL Adobe I/O]. 已更新的名稱 [!DNL Adobe Marketing Cloud] 是 [!DNL Adobe Experience Cloud].
 
 設定此整合的工作流程為：
 
@@ -165,10 +165,9 @@ AEM Assets lets you share folders containing assets with Adobe Creative Cloud us
 
 The AEM Assets-Marketing Cloud synchronization is designed in a way that the user machine instance from where the asset is uploaded retains the right to modify the asset. Only these changes are propagated to the other instance.
 
-For example, if an asset is uploaded from an AEM Assets (on premises) instance, the changes to the asset from this instance are propagated to the Marketing Cloud instance. However, the changes done from the Marketing Cloud instance to the same asset aren’t propagated to the AEM instance and vice versa for asset uploaded from Marketing Cloud.
+For example, if an asset is uploaded from an AEM Assets (on premises) instance, the changes to the asset from this instance are propagated to the Marketing Cloud instance. However, the changes done from the Marketing Cloud instance to the same asset aren’t propagated to the AEM instance and conversely for asset uploaded from Marketing Cloud.
 -->
 
 >[!MORELIKETHIS]
 >
 >* [資產與Creative Cloud整合最佳實務](/help/assets/aem-cc-integration-best-practices.md)
-

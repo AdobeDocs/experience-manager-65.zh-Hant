@@ -8,7 +8,7 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 6ebcc7bd5c72c01672244fdfba353a8949f6e331
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 2%
@@ -196,7 +196,7 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 
    ![開啟參考資料的產品主控台](/help/sites-administering/assets/chlimage_1-88.png)
 
-1. 按一下/點選參考型別（例如產品頁面）以展開清單。
+1. 按一下/點選參考型別（例如「產品頁面」）以展開清單。
 1. 選取要顯示選項的特定參照：
 
    * 導覽至產品頁面
@@ -493,7 +493,7 @@ AEM一般解決方案會提供管理存放庫內儲存的商務資訊的方法�
 
 1. 使用建立新頁面 **區域Blueprint** 範本。
 
-   例如， `Swimwear`.
+   例如，`Swimwear`。
 
 1. 開啟新的 `Swimwear` 頁面，然後按一下 **編輯Blueprint** 以開啟 **屬性** 對話方塊，您可以在此設定 **產品** 選取。
 

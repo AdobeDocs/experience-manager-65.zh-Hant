@@ -11,9 +11,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 84f0c406-4ab6-48c7-8223-61a8c3ade363
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1368'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 1%
       <p><strong>導覽3D場景</strong></p>
       <ul>
       <li><p><strong>轉動您的3D攝影機</strong>  — 使檢視畫面在3D場景和物件周圍環繞。</p> 滑鼠：按一下左鍵+拖曳 </p> 觸控熒幕：按下+拖曳</p></li>
-      <li><p><strong>平移相機</strong>  — 向左、向右、向上和向下平移檢視。</p> 滑鼠：按一下右鍵+拖曳 </p> 觸控熒幕：雙指按下+拖曳</p></li>
+      <li><p><strong>平移相機</strong>  — 向左、向右、向上和向下平移檢視。</p> 滑鼠：按一下滑鼠右鍵+拖曳 </p> 觸控熒幕：雙指按下+拖曳</p></li>
       <li><p><strong>縮放相機</strong>  — 縮放相機，讓您能夠進出3D場景中的區域。</p> 滑鼠：捲動滾輪 </p> 觸控熒幕：手指捏合</p></li>
       <li><p><strong>重新將相機置中</strong>  — 使檢視畫面在3D場景和物件周圍環繞。</p> 滑鼠：按兩下 </p> 觸控熒幕：點兩下</li></ul></td>
       </tr>

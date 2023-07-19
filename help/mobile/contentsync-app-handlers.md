@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fec86f03-f81e-460a-9f84-d6304c95128c
 exl-id: e2ddf5d1-0f5b-4f3b-9666-0f388915730e
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1410'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 請參閱下列開發Content Sync處理常式的准則：
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 * ***includeModifiedPagesOnly — 布林值***  — 如果為false或省略，則會轉譯所有頁面並在轉譯中檢查更新。 如果為true，則根據對頁面lastModified的變更進行區分。
 * ***+重寫（節點）***
-   ***- relativeParentPath — 字串***  — 寫入所有其他相對路徑的路徑。
+  ***- relativeParentPath — 字串***  — 寫入所有其他相對路徑的路徑。
 
 >[!NOTE]
 >

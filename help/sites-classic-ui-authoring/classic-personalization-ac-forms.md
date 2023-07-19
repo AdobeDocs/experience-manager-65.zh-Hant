@@ -8,9 +8,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
 exl-id: 3f9ed24e-c54b-4bd4-9212-eabc67bb540e
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1227'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,7 @@ AEM可讓您建立並使用與您網站上的Adobe Campaign互動的表單。 �
 >[!NOTE]
 >
 >確定 **acMapping** 頁面上的屬性 **jcr：content** 節點已設為 **mapRecipient** 或 **設定檔** 分別使用Adobe Campaign 6.1.x或Adobe Campaign Standard時
+>
 
 ### 建立表單 {#creating-a-form}
 
@@ -100,7 +101,7 @@ Adobe Campaign專用的Forms具有特定元件。 這些元件可讓您選擇將
 
    ![chlimage_1-188](assets/chlimage_1-188.png)
 
-1. 按兩下新增的欄位以設定它們。 此 **Adobe Campaign** 索引標籤可讓您將欄位連結至Adobe Campaign收件者表格中的欄位。 您也可以指定欄位是否為調解金鑰的一部分，以允許辨識Adobe Campaign資料庫中已存在的收件者。
+1. 連按兩下新增的欄位以設定它們。 此 **Adobe Campaign** 索引標籤可讓您將欄位連結至Adobe Campaign收件者表格中的欄位。 您也可以指定欄位是否為調解金鑰的一部分，以允許辨識Adobe Campaign資料庫中已存在的收件者。
 
    >[!CAUTION]
    >

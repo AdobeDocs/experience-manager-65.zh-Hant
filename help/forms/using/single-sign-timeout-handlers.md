@@ -10,16 +10,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 698990a2-dd3f-480f-9d15-d87563860297
 exl-id: 4f824d80-f3f8-4010-9583-5a9ab1151a7b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
 # 單一登入和逾時處理常式 {#single-sign-on-and-timeout-handlers}
 
-AEM Forms工作區已啟用SSO。 如果使用者已登入AEM Forms應用程式(如Forms管理員或PDF產生器使用者介面)並在相同的瀏覽器工作階段中存取AEM Forms工作區，則使用者會登入AEM Forms工作區，反之亦然。
+AEM Forms工作區已啟用SSO。 如果使用者已登入AEM Forms應用程式(例如Forms管理員或PDF Generator使用者介面)，並在相同的瀏覽器工作階段中存取AEM Forms工作區，則使用者會登入AEM Forms工作區，反之亦然。
 
 ## 在AEM Forms工作區中處理伺服器逾時 {#handling-server-timeout-in-nbsp-aem-forms-workspace}
 

@@ -2,10 +2,10 @@
 title: 在 AEM 中使用 GraphiQL IDE
 description: 了解如何在 Adobe Experience Manager 中使用 GraphiQL IDE。
 exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
-source-git-commit: b8c9e5cd3192b51954091b677d700c51617c9460
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 94%
+source-wordcount: '791'
+ht-degree: 93%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 94%
 * 選擇適合您要用於查詢之 Sites 設定的&#x200B;**端點**
 * 直接輸入新查詢
 * 建立和存取&#x200B;**[持續性查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md)**
-* 執行查詢以立即查看結果
+* 執行查詢以立即檢視結果
 * 管理&#x200B;**查詢變數**
 * 儲存和管理&#x200B;**持續性查詢**
 * 發佈或取消發佈&#x200B;**持續性查詢** (例如，to/from `dev-publish`)

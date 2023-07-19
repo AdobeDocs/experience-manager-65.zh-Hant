@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '1843'
 ht-degree: 1%
 
 ---
@@ -168,7 +168,7 @@ AEM會依時間順序保留目前元件中最後50個動作的記錄。 如有�
 
 * 直接輸入URI
 * 使用網站地圖在您的網站內選取頁面
-* 輸入URI，然後附加目標錨點；例如。 `www.TargetUri.org#AnchorName`
+* 輸入URI，然後附加目標錨點；例如， `www.TargetUri.org#AnchorName`
 * 僅輸入錨點（參照「目前頁面」）；例如， `#anchor`
 * 在內容尋找器中搜尋頁面，然後將頁面圖示拖放至「超連結」對話方塊中
 

@@ -2,9 +2,9 @@
 title: 使用AEM建立及組織頁面
 description: 如何使用AEM建立和管理頁面
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2525'
+source-wordcount: '2526'
 ht-degree: 4%
 
 ---
@@ -37,10 +37,10 @@ ht-degree: 4%
 以下顯示We.Retail網站的範例，其中健行短褲頁面( `desert-sky-shorts`)已存取：
 
 * 作者環境
-   `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
+  `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
 * 發佈環境
-   `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
+  `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
 根據您執行個體的設定，使用 `/content` 在發佈環境中可能是選用的。
 
@@ -102,7 +102,7 @@ ht-degree: 4%
 >
 >定義頁面名稱時，一個好的經驗法則是保持頁面名稱簡短，但儘可能表現力且容易記憶，讓讀者容易理解。 請參閱 [W3C風格指南](https://www.w3.org/Provider/Style/TITLE.html) 的 `title` 元素以取得詳細資訊。
 >
->另請注意，有些瀏覽器（例如舊版的IE）只能接受一定長度的URL，因此還有技術原因需縮短頁面名稱。
+>另請注意，某些瀏覽器（例如舊版IE）只能接受一定長度的URL，因此還有技術原因需縮短頁面名稱。
 
 建立新頁面時，AEM會 [根據慣例驗證頁面名稱](/help/sites-developing/naming-conventions.md) 由AEM和JCR所強制。
 
@@ -209,12 +209,14 @@ AEM隨附多種現成可用的範本。 可用的範本視個別網站而定。 
    * **標題**:
 
       * 這會向使用者顯示，且是強制性的。
+
    * **名稱**:
 
       * 這可用來產生URI。 如果未指定，則會從標題衍生名稱。
       * 如果您提供頁面 **名稱** 建立新頁面時，AEM會 [根據慣例驗證名稱](/help/sites-developing/naming-conventions.md) 由AEM和JCR所強制。
 
       * 您 **無法提交無效的字元** 在 **名稱** 欄位。 當AEM偵測到無效字元時，將會反白顯示欄位，並顯示說明訊息，指出需要移除/取代的字元。
+
    >[!NOTE]
    >
    >另請參閱 [頁面命名慣例](#page-naming-conventions).
@@ -341,6 +343,7 @@ AEM提供可更新任何內部連結的功能，這些連結會參照正在重�
 
       * 按一下目的地的縮圖，以選取目的地。
       * 按一下 **下一個** 以繼續。
+
    * 使用 **返回** 以返回頁面名稱規格。
 
    >[!NOTE]
@@ -386,7 +389,7 @@ AEM提供可更新任何內部連結的功能，這些連結會參照正在重�
       * **現在** 立即開始執行非同步作業。
       * **稍後** 可讓使用者定義非同步作業何時開始。
 
-         ![非同步頁面移動](assets/asynchronous-page-move.png)
+        ![非同步頁面移動](assets/asynchronous-page-move.png)
 
 非同步作業的狀態可在以下位置檢視： [**非同步工作狀態** 儀表板](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 於 **全域導覽** -> **工具** -> **作業** -> **工作**
 
@@ -441,7 +444,6 @@ AEM提供可更新任何內部連結的功能，這些連結會參照正在重�
 >* 您可以在資料夾上執行移動、複製、貼上、刪除、發佈、取消發佈和檢視/編輯屬性的標準動作。
 >* 資料夾無法供即時副本中選取。
 >
-
 
 1. 開啟 **網站** 主控台並導覽至所需位置。
 1. 若要開啟選項清單，請選取 **建立** （從工具列）

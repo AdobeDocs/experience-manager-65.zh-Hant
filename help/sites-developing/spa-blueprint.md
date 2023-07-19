@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2079'
+source-wordcount: '2080'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
+>SPA編輯器是建議解決方案，供需要SPA架構使用者端轉譯(例如React或Angular)的專案使用。
 
 ## 簡介 {#introduction}
 
@@ -61,7 +61,7 @@ ht-degree: 1%
 
 #### 動態模型到元件對應 {#dynamic-model-to-component-mapping}
 
-如需有關在AEM適用的Javascript SPA SDK中如何發生動態模型與元件對應的詳細資訊，請參閱文章 [SPA的動態模型到元件對應](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
+如需有關動態模型如何在AEM適用的JavaScript SPA SDK中進行元件對應的詳細資訊，請參閱文章 [SPA的動態模型到元件對應](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
 ### 框架特定層 {#framework-specific-layer}
 
@@ -185,7 +185,6 @@ SPA元件會對應至圖形容器（例如回應式格線），且必須在編�
 >* `"aem-Grid-newComponent"`：標準化配置編寫的元件
 >
 
-
 #### 元件對應 {#component-mapping}
 
 基礎 [`Component Mapping`](/help/sites-developing/spa-blueprint.md#componentmapping) 程式庫及其 `MapTo` 函式可以封裝和延伸，以提供與目前元件類別旁提供的編輯設定相關的功能。
@@ -272,7 +271,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 應用程式擁有路由。 前端開發人員首先需要實作導覽元件(對應至AEM導覽元件)。 此元件會呈現URL連結，以搭配顯示或隱藏內容片段的一系列路由使用。
 
-基礎 [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) 程式庫及其 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 模組（預設為啟用）負責預先擷取和提供對與指定資源路徑相關聯之模型的存取權。
+基礎 [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) 程式庫及其 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 模組（預設為啟用）負責預先擷取和提供對與指定資源路徑相關聯之模型的存取權。
 
 這兩個圖元與繞線的概念有關，但 ` [ModelRouter](/help/sites-developing/spa-routing.md)` 只負責執行 ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` 以與目前應用程式狀態同步的結構化資料模型載入。
 

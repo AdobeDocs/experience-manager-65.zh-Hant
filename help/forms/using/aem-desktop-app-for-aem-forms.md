@@ -10,9 +10,9 @@ discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -42,4 +42,4 @@ AEM案頭應用程式在Microsoft Windows上使用WebDAV通訊協定，在Mac OS
 1. 重新啟動AEM Forms伺服器。 重新啟動後，AEM Forms伺服器會啟用，以接受內容並與AEM案頭應用程式共用。
 1. 開啟應用程式並連線至AEM Forms伺服器。
 
-   成功連線時，應用程式會填入 `content/dam` 和 `content/dam/formsanddocuments` 資料夾。 除了將檔案從上方資料夾移至本機資料夾（反之亦然）外，您也可以使用應用程式在自動填入的資料夾之間移動內容。
+   成功連線時，應用程式會填入 `content/dam` 和 `content/dam/formsanddocuments` 資料夾。 除了將檔案從上方資料夾移至本機資料夾外，您也可以使用應用程式在自動填入的資料夾之間移動內容。

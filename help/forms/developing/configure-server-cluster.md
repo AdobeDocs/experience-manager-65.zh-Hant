@@ -2,9 +2,9 @@
 title: 如何在JEE伺服器叢集上設定和疑難排解AEM Forms？
 description: 瞭解如何在JEE伺服器叢集上設定和疑難排解AEM Forms
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
-source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4033'
+source-wordcount: '4032'
 ht-degree: 0%
 
 ---

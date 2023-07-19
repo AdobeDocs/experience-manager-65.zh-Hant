@@ -11,7 +11,7 @@ topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 role: Developer
 exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 0%
@@ -1974,7 +1974,7 @@ Forms服務提供下列快速入門：
 * `convertDataSource`：轉換 `org.w3c.dom.Document` 物件至 `com.adobe.idp.Document` 物件。 此方法接受 `org.w3c.dom.Document` 物件作為輸入引數並傳回 `com.adobe.idp.Document` 物件。
 * `renderPOForm`：使用Forms服務Java API來轉譯動態採購訂單表單。 此 `com.adobe.idp.Document` 物件，由 `convertDataSource` 方法可用來預先填入表單。
 
-   所有這些方法都是從Java servlet的 `doPost` 方法。 (請參閱 [使用可流動版面預先填入Forms](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts).)
+  所有這些方法都是從Java servlet的 `doPost` 方法。 (請參閱 [使用可流動版面預先填入Forms](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts).)
 
 ```java
 /*
@@ -2346,7 +2346,7 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
              if (processState == 1)
              {
  
-                 //Write the data back to to the client web browser
+                 //Write the data back to the client web browser
                  ServletOutputStream oOutput = resp.getOutputStream();
                  Document calData = formOut.getOutputContent();
  

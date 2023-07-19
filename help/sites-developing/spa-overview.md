@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: a547b2e24205c63284a0e77f2e7f5678ae24968b
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1657'
-ht-degree: 89%
+source-wordcount: '1659'
+ht-degree: 90%
 
 ---
 
@@ -26,7 +26,7 @@ SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA�
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，適用於需要SPA架構使用者端轉譯的專案(例如React或Angular)。
+>SPA編輯器是建議解決方案，供需要SPA架構使用者端轉譯(例如React或Angular)的專案使用。
 
 ## 簡介 {#introduction}
 
@@ -101,7 +101,6 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 >* SPA 編輯器與 SPA 本身隔離。
 >* 在生產 (發佈) 中，SPA 編輯器從不載入。
 >
-
 
 ### 用戶端-伺服器頁面編輯工作流程 {#client-server-page-editing-workflow}
 
@@ -183,7 +182,7 @@ SPA Editor SDK 支援以下最低版本：
 如果您想使用在 SPA 中建立之文字元件的就地編輯器，則需要額外的設定。
 
 1. 在包含文本 HTML 的容器包裝函式元素上設定一個屬性 (可以是任何屬性)。若是WKND日誌範例內容，則是 `<div>` 元素和已使用的選取器為 `data-rte-editelement`.
-1. 設定設定 `editElementQuery` 在對應AEM文字元件的 `cq:InplaceEditingConfig` 會指向該選取器，例如 `data-rte-editelement`. 這讓編輯器知道哪個 HTML 元素包裝 HTML 文字。
+1. 在指向該選擇器的對應 AEM 文字元件的 `cq:InplaceEditingConfig` 上建立設定 `editElementQuery`，例如 `data-rte-editelement`。這讓編輯器知道哪個 HTML 元素包裝 HTML 文字。
 
 如需如何執行此作業的範例，請參閱 [WKND日誌範例內容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 
@@ -201,4 +200,4 @@ AEM SPA Editor SDK隨AEM 6.4 Service Pack 2推出。 Adobe完全支援此功能�
 * 頁面差異和時間彎曲
 * 執行 HTML 重寫伺服器端的功能，例如連結檢查程式、CDN 重寫程式服務、URL 縮短等。
 * 開發人員模式
-* AEM Launches
+* AEM 啟動

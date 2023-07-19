@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1663'
 ht-degree: 7%
 
 ---
@@ -29,15 +29,14 @@ ht-degree: 7%
 >某些與發佈相關的辭彙可能會混淆：
 >
 >* **發佈/取消發佈**
-   >  這些是讓您的內容在發佈環境中公開使用（或不公開使用）之動作的主要詞語。
+>  這些是讓您的內容在發佈環境中公開使用（或不公開使用）之動作的主要詞語。
 >
 >* **啟用/停用**
-   >  這些辭彙與發佈/取消發佈同義。
+>  這些辭彙與發佈/取消發佈同義。
 >
 >* **復寫/複製**
-   >  這些是技術術語，說明資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境，例如發佈或反向複製使用者註解時。
+>  這些是技術術語，說明資料（例如頁面內容、檔案、程式碼、使用者註解）從一個環境移動到另一個環境，例如發佈或反向複製使用者註解時。
 >
-
 
 >[!NOTE]
 >
@@ -47,7 +46,6 @@ ht-degree: 7%
 >* 此 [工作流程可能已自訂](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6) 由您的開發團隊提供。
 >* 系統會顯示簡短的訊息，通知您工作流程已觸發。
 >
-
 
 ## 發佈頁面 {#publishing-pages-1}
 
@@ -270,14 +268,14 @@ ht-degree: 7%
 
 * 在 [sites console上的資源概觀資訊](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
 
-   ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
+  ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 
-   發佈狀態會顯示在 [網站主控台](/help/sites-authoring/basic-handling.md#card-view)[的卡片](/help/sites-authoring/basic-handling.md#column-view)、欄和 [清單檢視中](/help/sites-authoring/basic-handling.md#list-view) 。
+  發佈狀態會顯示在 [網站主控台](/help/sites-authoring/basic-handling.md#card-view)[的卡片](/help/sites-authoring/basic-handling.md#column-view)、欄和 [清單檢視中](/help/sites-authoring/basic-handling.md#list-view) 。
 
 * 在 [時間表](/help/sites-authoring/basic-handling.md#timeline)
 
-   ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
+  ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
 
 * 在 [頁面資訊功能表](/help/sites-authoring/author-environment-tools.md#page-information) 編輯頁面時
 
-   ![screen_shot_2018-03-21at154456](assets/screen_shot_2018-03-21at154456.png)
+  ![screen_shot_2018-03-21at154456](assets/screen_shot_2018-03-21at154456.png)

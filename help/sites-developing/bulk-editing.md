@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '415'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 * 某些欄位通常是唯一的；例如頁面標題。 您必須決定在套用一個值時，啟用此類欄位進行大量編輯是否有意義。
 * 某些欄位可能有多個值 — 這在呈現時需要有意義的表示。
 
-   例如，顯示「準備發佈」的核取方塊。 在大量編輯之前，這可能有數個值（例如，就緒、稽核中、進行中）。
+  例如，顯示「準備發佈」的核取方塊。 在大量編輯之前，這可能有數個值（例如，就緒、稽核中、進行中）。
 
 >[!CAUTION]
 >
@@ -36,7 +36,6 @@ ht-degree: 2%
 >* 不適用於即時副本中的頁面。
 >* 僅適用於具有相同資源型別的頁面。
 >
-
 
 >[!NOTE]
 >
@@ -55,7 +54,6 @@ ht-degree: 2%
 >* `/libs/granite/ui/components/foundation/form/pathbrowser`
 >* `/libs/granite/ui/components/foundation/form/checkbox`
 >
-
 
 欄位在頁面元件上已啟用(*not* （在範本上）：
 
@@ -92,6 +90,5 @@ ht-degree: 2%
    >
    >    1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
    >    1. 進行任何變更 `/apps`
-
 
 1. 選取 **全部儲存** 以儲存您的更新。

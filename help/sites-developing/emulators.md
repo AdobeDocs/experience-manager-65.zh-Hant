@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
 
 Adobe Experience Manager (AEM)可讓作者在模擬一般使用者將檢視頁面之環境的模擬器中，檢視頁面，例如在行動裝置或電子郵件使用者端中。
 
@@ -110,26 +110,26 @@ AEM模擬器架構：
 * 在/libs/wcm/mobile/components/emulators之下。
 * 可透過JSON servlet在以下網址取得：
 
-   http://localhost:4502/bin/wcm/mobile/emulators.json
+  http://localhost:4502/bin/wcm/mobile/emulators.json
 
 當頁面元件依賴行動頁面元件時( `/libs/wcm/mobile/components/page`)，則模擬器功能會透過下列機制自動整合到頁面中：
 
 * 行動頁面元件 `head.jsp` 包含裝置群組相關的模擬器初始元件（僅在製作模式下）以及裝置群組的轉譯CSS，透過：
 
-   `deviceGroup.drawHead(pageContext);`
+  `deviceGroup.drawHead(pageContext);`
 
 * 方法 `DeviceGroup.drawHead(pageContext)` 包含模擬器的init元件，也就是呼叫 `init.html.jsp` 模擬器元件的。 如果模擬器元件沒有自己的 `init.html.jsp` 並仰賴行動裝置基礎模擬器( `wcm/mobile/components/emulators/base)`，行動基本模擬器的init指令碼稱為( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
 
-* 行動基本模擬器的初始指令碼透過Javascript定義：
+* 行動基本模擬器的初始指令碼透過JavaScript定義：
 
    * 為頁面定義的所有模擬器的設定(emulatorConfigs)
    * 模擬器管理員透過以下方式將模擬器的功能整合到頁面中：
 
-      `emulatorMgr.launch(config)`;
+     `emulatorMgr.launch(config)`;
 
-      模擬器管理員的定義如下：
+     模擬器管理員的定義如下：
 
-      `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
+     `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
 
 #### 建立自訂行動模擬器 {#creating-a-custom-mobile-emulator}
 
@@ -152,4 +152,5 @@ AEM模擬器架構：
    * 名稱= `canRotate`，型別= `Boolean`，值= `true`：包含旋轉功能。
 
    * 名稱= `touchScrolling`，型別= `Boolean`，值= `true`：包含觸控捲動功能。
+
    您可以定義自己的外掛程式，以新增更多功能。

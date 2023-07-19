@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 23a5a65e-774d-4789-9659-09e8be0c2bcd
 exl-id: 56af5362-78de-4308-8958-63a45e8573cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '557'
 ht-degree: 5%
 
 ---
@@ -57,19 +57,19 @@ ht-degree: 5%
    * `From page and child pages`
    * `All tags`
 
-   預設值為 `From page and child pages`，其中「page」是指 **頁面** 設定於下方。
+  預設值為 `From page and child pages`，其中「page」是指 **頁面** 設定於下方。
 
 * **[!UICONTROL Page]**
 
-   （若非必要，則為必要） `All tags)` 頁面的UGC路徑。 如果保留為空白，預設值為目前頁面。
+  （若非必要，則為必要） `All tags)` 頁面的UGC路徑。 如果保留為空白，預設值為目前頁面。
 
 * **[!UICONTROL 標記上無連結]**
 
-   如果勾選，標籤會以純文字顯示在標籤雲中。 如果未勾選，則標籤會顯示為作用中連結，可在套用該標籤的所有內容上搜尋。 預設為未勾選，且需要 **[!UICONTROL 搜尋結果路徑]** 待設定。
+  如果勾選，標籤會以純文字顯示在標籤雲中。 如果未勾選，則標籤會顯示為作用中連結，可在套用該標籤的所有內容上搜尋。 預設為未勾選，且需要 **[!UICONTROL 搜尋結果路徑]** 待設定。
 
 * **[!UICONTROL 搜尋結果路徑]**
 
-   頁面的路徑，該頁面上 `Search Result` 元件已放置，設定為參照UGC，其中包含指定的UGC路徑 **頁面** 設定。
+  頁面的路徑，該頁面上 `Search Result` 元件已放置，設定為參照UGC，其中包含指定的UGC路徑 **頁面** 設定。
 
 ## 變更社交標籤雲端的顯示 {#change-display-of-social-tag-cloud}
 
@@ -81,43 +81,43 @@ ht-degree: 5%
 
 * **[!UICONTROL 顯示完整的標題路徑]**
 
-   如果勾選，會顯示父標籤的標題和每個套用標籤的名稱空間。
+  如果勾選，會顯示父標籤的標題和每個套用標籤的名稱空間。
 
-   例如：
+  例如：
 
    * 已核取: `Geometrixx Media: Gadgets / Cars`
    * 未核取: `Cars`
 
-   簡單標籤沒有區別。
+  簡單標籤沒有區別。
 
-   預設為未勾選。
+  預設為未勾選。
 
 * **[!UICONTROL 僅顯示葉標記]**
 
-   如果勾選，僅顯示不包含其他標籤的已套用標籤。
+  如果勾選，僅顯示不包含其他標籤的已套用標籤。
 
-   例如，假定TagID為：
+  例如，假定TagID為：
 
-   `Geometrixx Media: Gadgets / Cars`
+  `Geometrixx Media: Gadgets / Cars`
 
-   有3個標籤可以套用：
+  有3個標籤可以套用：
 
-   `Geometrixx Media (the namespace)`, `Gadgets`, 和 `Cars`
+  `Geometrixx Media (the namespace)`, `Gadgets`, 和 `Cars`
 
    * 已核取：僅限 `Cars` 將會顯示（如果套用）。
    * 未核取： `Geometrixx Media` 和 `Gadgets`以及 `Cars` 將會顯示（如果套用）。
 
-   簡單標籤是葉標籤。
+  簡單標籤是葉標籤。
 
-   預設為未勾選。
+  預設為未勾選。
 
 * **[!UICONTROL 連結範本]**
 
-   透過元件編輯對話方塊啟用連結時，預設以外的範本可用於在標籤雲中顯示連結。
+  透過元件編輯對話方塊啟用連結時，預設以外的範本可用於在標籤雲中顯示連結。
 
 * **[!UICONTROL 所有標記相同尺寸]**
 
-   如果勾選，則標籤雲中的所有字詞的樣式都相同。 如果未勾選，文字會根據其使用方式而採用不同的樣式。 預設為未勾選。
+  如果勾選，則標籤雲中的所有字詞的樣式都相同。 如果未勾選，文字會根據其使用方式而採用不同的樣式。 預設為未勾選。
 
 ## 其他資訊 {#additional-information}
 

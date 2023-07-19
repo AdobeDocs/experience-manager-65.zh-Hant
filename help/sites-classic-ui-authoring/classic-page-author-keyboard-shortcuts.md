@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 exl-id: 1c761aa7-a72f-46f0-8717-0b6e0d1cff55
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '308'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,6 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
 >* Windows：按住Ctrl鍵並按一下必要元件。
 >* Mac：按住Cmd鍵並按一下必要元件。
 >
-
 
 ## 編輯鍵盤快速鍵 {#editing-keyboard-shortcuts}
 
@@ -64,12 +63,12 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-C</code></strong></td>
-   <td>複製所選段落。</td>
+   <td>複製選取的段落。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-X</code></strong></td>
-   <td>剪下所選段落。<strong><br /> 注意：</strong> 剪下的段落在貼到新位置之前不會消失。</td>
+   <td>剪下選取的段落。<strong><br /> 注意：</strong> 剪下的段落在貼到新位置之前不會消失。</td>
   </tr>
   <tr>
    <td> </td>

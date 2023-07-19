@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 0%
 在可編輯頁面的左側，可以開啟滑動瀏覽器；可以從此處將資產拖曳至頁面；例如，放置資產或建立其他頁面的連結。
 
 * **元件工具列**
-按一下或緩慢按兩下/點選都會顯示適當的工具列（按一下可放置就地編輯工具列，按一下緩慢按兩下可放置完整工具列）。
+按一下或緩慢按兩下/點選都會顯示適當的工具列（按一下可放置就地編輯工具列，按一下緩慢雙下可放置完整工具列）。
 
 * **[回應式佈局](/help/sites-authoring/responsive-layout.md)**
 這提供了段落系統，可讓您在回應式格線中定位元件。

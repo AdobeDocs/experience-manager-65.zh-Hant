@@ -10,16 +10,16 @@ topic-tags: operations
 content-type: reference
 discoiquuid: f3683696-663d-4de5-a388-1709f44d58c1
 exl-id: e25f0b7f-5f12-4363-b302-e51c81035c7d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '85'
 ht-degree: 1%
 
 ---
 
 # 啟用對傳統UI的存取{#enabling-access-to-classic-ui}
 
-由於觸控式功能在AEM的許多區域已達到和傳統UI同等的地位，而且實際上已超過傳統UI，現在預設會停用透過觸控式介面存取傳統介面。 下列頁面說明如何在必要時重新啟用此存取權。
+由於觸控功能在AEM許多區域已達到甚至超越傳統UI的同等功能，現在預設會停用透過觸控功能介面存取傳統介面。 下列頁面說明如何在必要時重新啟用此存取權。
 
 * [編輯者](/help/sites-administering/enable-classic-ui-editor.md)
 * [Admin Console](/help/sites-administering/enable-classic-ui-admin.md)

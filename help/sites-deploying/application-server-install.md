@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ AEM會以單一war檔案的形式來部署。
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-如果您使用的部署掃描器來安裝AEM Web應用程式，則增加 `deployment-timeout,` 針對該集合 `deployment-timeout` 屬性（例如，Attribute） `configuration/standalone.xml)`：
+如果您使用的部署掃描器來安裝AEM Web應用程式，則增加 `deployment-timeout,` 針對該集合 `deployment-timeout` 屬性(例如： `configuration/standalone.xml)`：
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -241,7 +241,7 @@ AEM會以單一war檔案的形式來部署。
       * 取消註解sling.home初始引數並視需要設定此路徑
       * 重新封裝web.xml檔案
 
-   * 如果您想要將AEM war檔案部署為根webapp，請將其重新命名為ROOT.war；如果您想要將aemauthor重新命名為內容根，請將其重新命名為aemauthor.war
+   * 如果您想要將AEM war檔案部署為根webapp，請將其重新命名為ROOT.war；例如，如果您想要將aemauthor重新命名為內容根，請將其重新命名為aemauthor.war
    * 將其複製到tomcat的webapps資料夾
    * 等到AEM安裝完成
 

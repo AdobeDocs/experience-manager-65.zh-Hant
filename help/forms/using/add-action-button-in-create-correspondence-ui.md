@@ -11,9 +11,9 @@ discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
-source-git-commit: ba2c753cfd041ccfcd6ba7a45648234290b99d25
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1880'
 ht-degree: 1%
 
 ---
@@ -170,7 +170,7 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
 >
 >您可能需要清除瀏覽器快取。
 
-1. 前往 `https://[host]:'port'/system/console/bundles`. 如有必要，請以管理員身分登入。
+1. 前往 `https://[host]:'port'/system/console/bundles`。如有必要，請以管理員身分登入。
 
 1. 找出Adobe資產撰寫器建置區塊套件。 重新啟動套件：按一下[停止]，然後按一下[啟動]。
 
@@ -192,7 +192,7 @@ ACMExtensionsMessages.properties檔案包含「建立通訊」使用者介面中
 * 啟用/停用新增的動作：覆寫actionEnabled()函式來完成。
 * 使用者按一下按鈕時的實際動作處理：覆寫handleAction()函式的實作來完成。
 
-1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de`. 如有必要，請以管理員身分登入。
+1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de`。如有必要，請以管理員身分登入。
 
 1. 在apps資料夾中，建立名為的資料夾 `js` 在CRX的/apps分支中，其結構與以下資料夾類似：
 

@@ -3,9 +3,9 @@ title: 建立和同步 Live Copy
 description: 瞭解如何建立和同步即時副本。
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4230'
+source-wordcount: '4229'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Blueprint設定會識別您想要用作一或多個即時副本頁面來源的�
 >
 >Blueprint設定可讓您將內容變更推送至即時副本。 另請參閱 [即時副本 — 來源、Blueprint和Blueprint設定](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations).
 
-建立Blueprint設定時，您會選取定義Blueprint內部結構的範本。 預設Blueprint範本假設來源網站具有下列特性：
+建立Blueprint設定時，您可以選取定義Blueprint內部結構的範本。 預設Blueprint範本假設來源網站具有下列特性：
 
 * 網站具有根頁面。
 * 根的直接子頁面是網站的語言分支。 建立即時副本時，語言會顯示為可選內容，以便包含在副本中。
@@ -154,7 +154,7 @@ Blueprint設定會識別您想要用作一或多個即時副本頁面來源的�
 
    ![選取Blueprint設定作為即時副本的來源](assets/blueprint-configuration-select.png)
 
-1. 使用 **初始語言** 選擇器，以指定要用於即時副本的Blueprint網站的語言。
+1. 使用 **初始語言** 選擇器，指定用於即時副本的Blueprint網站語言。
 
    預設會選取所有可用語言。 若要移除語言，請按一下或點選 **X** 顯示在語言旁邊。
 

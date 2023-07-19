@@ -11,9 +11,9 @@ topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '9905'
+source-wordcount: '9902'
 ht-degree: 0%
 
 ---
@@ -231,7 +231,7 @@ A `BLOB` 物件會傳送二進位資料(例如PDF檔案、XML資料等)至AEM Fo
 
    * 服務的SOAP端點引數「輸出Blob物件的預設通訊協定」設定為「智慧」。
 
-      對於具有SOAP端點的每個服務，管理控制檯可讓您為任何傳回的blob指定傳輸通訊協定。 (請參閱 [管理說明](https://www.adobe.com/go/learn_aemforms_admin_63).)
+     對於具有SOAP端點的每個服務，管理控制檯可讓您為任何傳回的blob指定傳輸通訊協定。 (請參閱 [管理說明](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
    * AEM Forms服務會以一或多個檔案作為輸入。
 
@@ -685,7 +685,7 @@ A `BLOB` 物件會傳送二進位資料(例如PDF檔案、XML資料等)至AEM Fo
 
    * 將WSDL端點和編碼型別指派給 `javax.xml.ws.BindingProvider` 物件的 `ENDPOINT_ADDRESS_PROPERTY` 欄位。 叫用 `MyApplication/EncryptDocument` 服務使用Base64編碼，請指定下列URL值：
 
-      `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
+     `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
 
    * 將AEM表單使用者指派給 `javax.xml.ws.BindingProvider` 物件的 `USERNAME_PROPERTY` 欄位。
    * 將對應的密碼值指派給 `javax.xml.ws.BindingProvider` 物件的 `PASSWORD_PROPERTY` 欄位。
@@ -880,7 +880,7 @@ Replace `localhost` IP位址為J2EE應用程式伺服器(主控AEM Forms)。 Rep
 
    * 將WSDL端點和編碼型別指派給 `javax.xml.ws.BindingProvider` 物件的 `ENDPOINT_ADDRESS_PROPERTY` 欄位。 叫用 `MyApplication/EncryptDocument` 服務使用SwaRef編碼，請指定下列URL值：
 
-      ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
+     ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
 
    * 將AEM表單使用者指派給 `javax.xml.ws.BindingProvider` 物件的 `USERNAME_PROPERTY` 欄位。
    * 將對應的密碼值指派給 `javax.xml.ws.BindingProvider` 物件的 `PASSWORD_PROPERTY` 欄位。
@@ -1003,7 +1003,7 @@ Replace `localhost` IP位址為J2EE應用程式伺服器(主控AEM Forms)。 Rep
 
    * 將WSDL端點和編碼型別指派給 `javax.xml.ws.BindingProvider` 物件的 `ENDPOINT_ADDRESS_PROPERTY` 欄位。 叫用 `MyApplication/EncryptDocument` 服務使用BLOB over HTTP編碼，請指定下列URL值：
 
-      `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
+     `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
 
    * 將AEM表單使用者指派給 `javax.xml.ws.BindingProvider` 物件的 `USERNAME_PROPERTY` 欄位。
    * 將對應的密碼值指派給 `javax.xml.ws.BindingProvider` 物件的 `PASSWORD_PROPERTY` 欄位。

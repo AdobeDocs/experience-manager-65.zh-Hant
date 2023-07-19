@@ -5,10 +5,10 @@ contentOwner: AG
 role: Architect, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 17%
+source-wordcount: '1870'
+ht-degree: 15%
 
 ---
 
@@ -24,7 +24,6 @@ ht-degree: 17%
 >
 >* 建立翻譯專案的使用者是群組的成員 `projects-administrators`.
 >* 翻譯服務提供者支援二進位檔的翻譯。
-
 
 ## 建立及翻譯工作流程 {#create-and-translate-workflow}
 
@@ -67,7 +66,7 @@ ht-degree: 17%
 
 1. 按一下 **[!UICONTROL 建立並翻譯]** 在底部。
 
-1. 從「目 **[!UICONTROL 標語言]** 」清單中，選取您要建立檔案夾結構的語言。
+1. 從 **[!UICONTROL 目標語言]** 清單中，選取您要建立檔案夾結構的語言。
 
 1. 從 **[!UICONTROL 專案]** 清單，選取 **[!UICONTROL 建立新的翻譯專案]**.
 
@@ -118,7 +117,7 @@ ht-degree: 17%
 1. 按一下 **[!UICONTROL 語言副本]** 在 **[!UICONTROL 份數]**. 將顯示可用翻譯副本的清單。
 1. 按一下 **[!UICONTROL 建立並翻譯]** 在底部。
 
-1. 從「目 **[!UICONTROL 標語言]** 」清單中，選取您要建立檔案夾結構的語言。
+1. 從 **[!UICONTROL 目標語言]** 清單中，選取您要建立檔案夾結構的語言。
 
 1. 從「項 **[!UICONTROL 目]** 」清單中，選擇「 **[!UICONTROL 添加到現有翻譯項目」]** ，以在資料夾中運行翻譯工作流。
 

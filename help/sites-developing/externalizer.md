@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 938469ad-f466-42f4-8b6f-bfc060ae2785
 docset: aem65
 exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,7 @@ ht-degree: 0%
 
       * 必要時使用https強制執行https連結
       * 若使用者端代碼在要求外部化URL時未覆寫配置，則會使用它。
+
    * **伺服器** 是主機名稱（可以是網域名稱或ip位址）。
    * **連線埠** （選用）是連線埠號碼。
    * **contextpath** （選用）只有當AEM安裝為Webapp且位於不同的內容路徑下時，才會設定。
@@ -100,7 +101,6 @@ ht-degree: 0%
 
    * `https://www.website.com/contextpath/my/page.html`
 
-
 1. **若要使用「作者」網域外部化路徑：**
 
    ```java
@@ -115,7 +115,6 @@ ht-degree: 0%
 
    * `https://author.website.com/contextpath/my/page.html`
 
-
 1. **若要使用「本機」網域外部化路徑：**
 
    ```java
@@ -129,6 +128,5 @@ ht-degree: 0%
    `myExternalizedUrl` 最後會得到值：
 
    * `https://publish-3.internal/contextpath/my/page.html`
-
 
 1. 如需更多範例，請參閱 [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).
