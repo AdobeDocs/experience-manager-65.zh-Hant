@@ -8,7 +8,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
+source-git-commit: 90731516671ee0681ff91f2ac47888b1febee199
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 4%
@@ -179,10 +179,9 @@ AEM Forms 6.5提供下列核心元件型Adaptive Forms的標準主題。
 
 -->
 
->
+>[!NOTE]
 >
 > 在主題和元件層級同時定義樣式時，在元件層級定義的樣式優先。
-
 
 #### 3.準備好部署主題 {#generate-the-clientlib}
 
@@ -275,9 +274,10 @@ The selected theme is applied to the Adaptive Form.
 
 ![主題用戶端程式庫](/help/forms/using/assets/themeclientlibrary.png)
 
+>[!NOTE]
 >
 >
->如果您在存取發佈執行個體的登入對話方塊以透過封裝管理員安裝封裝時遇到困難，請嘗試透過以下URL登入： `http://[Publish Server URL]:[PORT]/system/console`. 這可讓您登入發佈執行個體，讓您繼續安裝程式。
+> 如果您在存取發佈執行個體的登入對話方塊以透過封裝管理員安裝封裝時遇到困難，請嘗試透過以下URL登入： `http://[Publish Server URL]:[PORT]/system/console`. 這可讓您登入發佈執行個體，讓您繼續安裝程式。
 
 ## 將主題套用至最適化表單 {#using-theme-in-adaptive-form}
 
