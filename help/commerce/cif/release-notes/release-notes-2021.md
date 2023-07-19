@@ -1,10 +1,10 @@
 ---
-title: AEM Content and Commerce 2021年發行說明
-description: AEM Content and Commerce 2021年發行說明
+title: Adobe Experience Manager Content and Commerce 2021年發行說明
+description: Adobe Experience Manager Content and Commerce 2021年發行說明
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1318'
 ht-degree: 9%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 9%
 
 請檢閱下表的最低系統需求，瞭解您目前使用或計畫未來使用的CIF版本。
 
-| Component | 系統需求 |
+| 元件 | 系統需求 |
 |:-------|:-----:|
-| CIF附加元件 | 最低： AEM 6.5.7、Adobe Commerce 2.3.5 GraphQL結構描述 |
+| CIF附加元件 | 最低： Adobe Experience Manager (AEM) 6.5.7、Adobe Commerce 2.3.5 GraphQL結構描述 |
 | CIF Core Components | [系統需求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 專案原型 | [系統需求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
 ## 發行日期： 2021年11月
 
-| Component | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.11.18.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.11.18.00.zip) |
 | CIF Core Components | 2.4.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.2) |
@@ -41,7 +41,7 @@ ht-degree: 9%
 
 ## 發行日期： 2021年10月
 
-| Component | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.10.20.02 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.10.20.02.zip) |
 | CIF Core Components | 2.4.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.0) |
@@ -61,7 +61,7 @@ ht-degree: 9%
 
 ## 發行日期： 2021年9月
 
-| Component | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.09.27 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.27.zip) |
 | CIF Core Components | 2.2.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.2.0) |
@@ -71,11 +71,11 @@ ht-degree: 9%
 
 * Sites編輯器中新的「相關商務內容」索引標籤透過快速存取目前內容的相關AEM產品內容來提高作者效率
 
-   ![關聯的商務內容](/help/assets/CIF/associated-commerce-content.png)
+  ![關聯的商務內容](/help/assets/CIF/associated-commerce-content.png)
 
-* 改善產品選擇器UI，提供更佳的使用者體驗、更高的效率，以及支援複雜的產品目錄
+* 改善產品選擇器UI，提供更佳的使用者體驗、更高的效率，並支援複雜的產品目錄
 
-   ![新的產品選取器](/help/assets/CIF/product-picker.png)
+  ![新的產品選取器](/help/assets/CIF/product-picker.png)
 
 * 在導覽元件中遵循「include_in_menu」屬性
 
@@ -83,13 +83,13 @@ ht-degree: 9%
 
 * 功能表快取排清未按預期運作
 
-* AEM CS部署步驟期間以及未使用使用者端元件時的JS錯誤
+* AEM CS部署步驟期間及未使用使用者端元件時的JS錯誤
 
 * 無法在具有sling：configs節點的資料夾中建立CIF雲端設定
 
 ## 發行日期： 2021年8月
 
-| Component | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.09.02 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.02.zip) |
 | CIF Core Components | 2.1.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.1.0) |
@@ -99,7 +99,7 @@ ht-degree: 9%
 
 * 新的類別選擇器UI可改善使用者體驗、提高效率，以及更好地支援複雜的產品目錄
 
-   ![新增類別選取器](/help/assets/CIF/category-picker.png)
+  ![新增類別選取器](/help/assets/CIF/category-picker.png)
 
 * CIF核心元件更好的A11Y支援
 
@@ -115,7 +115,7 @@ ht-degree: 9%
 
 ## 發行日期： 2021年7月
 
-| Component | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.07.21 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
 | CIF Core Components | 2.0.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.0.0) |
@@ -132,7 +132,7 @@ ht-degree: 9%
 
 ## 發行日期： 2021年6月
 
-| Component | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.06.18 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
 | CIF Core Components | 1.12.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.12.0) |
@@ -149,7 +149,7 @@ ht-degree: 9%
 
 ## 發行日期： 2021年5月
 
-| Component | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.05.26 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.05.26.zip) |
 | CIF Core Components | 1.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.11.0) |
@@ -167,7 +167,7 @@ ht-degree: 9%
 
 ## 發行日期： 2021年4月
 
-| Component | 版本 | 詳細資料 |
+| 元件 | 版本 | 詳細資料 |
 |:-------|:-----:|---------------------:|
 | CIF附加元件 | 2021.04.22 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
 | CIF Core Components | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
