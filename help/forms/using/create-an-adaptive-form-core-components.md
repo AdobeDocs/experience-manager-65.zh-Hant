@@ -9,9 +9,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1725'
 ht-degree: 2%
 
 ---
@@ -19,10 +19,16 @@ ht-degree: 2%
 
 # 建立以核心元件為基礎的最適化Forms {#creating-an-adaptive-form-core-components}
 
+
+<span class="preview"> Adobe建議使用核心元件 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) 或 [建立獨立的最適化Forms](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
+
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM 6.5 | 本文 |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html) |
+
+**套用至：** ✅最適化表單核心元件❎ [最適化表單基礎元件](/help/forms/using/create-adaptive-form.md).
+
 
 最適化表單可讓您建立吸引人、回應式、動態且最適化的表單。AEM Forms為商業使用者提供易於使用的UI，以便快速建立最適化Forms。 UI提供快速索引標籤導覽，以便輕鬆選取預先設定的範本、樣式、欄位和提交選項來建立調適型表單。
 
@@ -38,17 +44,13 @@ ht-degree: 2%
 
 * **為您的環境啟用最適化Forms核心元件**：需要AEM Archetype專案版本41或更新版本，才能 [為您的環境啟用核心元件](/help/forms/using/enable-adaptive-forms-core-components.md). 為您的環境啟用核心元件時， **最適化Forms （核心元件）** 範本和畫布主題會新增至您的環境。
 
-* **自適應表單範本**：範本提供基本結構，並定義調適型表單的外觀（版面配置和樣式）。 它有預先格式化的元件，包含特定屬性和內容結構。 它還提供定義主題和提交動作的選項。 主題定義外觀，提交動作定義提交最適化表單時要採取的動作。 例如，將收集的資料傳送至資料來源。 範本已命名 `blank` 支援OOTB：
-
-   * 此 `blank` 範本包含在所有全新的AEM Forms內部部署和AMS環境中。
-   * 您可以透過「封裝管理員」安裝參考封裝，以新增 `blank` 範本至您的AEM Forms內部部署和AMS環境。
-   * 您也可以 [建立新的Adaptive Forms範本（核心元件）](template-editor.md) 從頭開始。
+* **自適應表單範本**：範本提供基本結構，並定義調適型表單的外觀（版面配置和樣式）。 它有預先格式化的元件，包含特定屬性和內容結構。 它還提供定義主題和提交動作的選項。 主題定義外觀，提交動作定義提交最適化表單時要採取的動作。
 
   >[!NOTE]
   >
   > 如果您沒有， **最適化Forms （核心元件）** 您環境上的範本， [為您的環境啟用最適化Forms核心元件](/help/forms/using/enable-adaptive-forms-core-components.md). 為您的環境啟用核心元件時， **最適化Forms （核心元件）** 範本已新增至您的環境。
 
-* **最適化表單主題**：主題包含元件和面板的樣式詳細資訊。 樣式包含背景顏色、狀態顏色、透明度、對齊方式及大小等屬性。 套用主題時，指定的樣式會反映在相應的元件上。  此 `Canvas` 為您的環境啟用核心元件時，預設會新增主題。 您也可以 [下載和自訂參考主題](create-or-customize-themes-for-adaptive-forms-core-components.md).
+* **最適化表單主題**：主題包含元件和面板的樣式詳細資訊。 樣式包含背景顏色、狀態顏色、透明度、對齊方式及大小等屬性。 套用主題時，指定的樣式會反映在相應的元件上。  此 `Canvas` 為您的環境啟用核心元件時，預設會新增主題。 您也可以 [下載和自訂標準主題](create-or-customize-themes-for-adaptive-forms-core-components.md).
 
 * **許可權**：將使用者新增至 [!DNL forms-users] 群組。 的成員 [!DNL forms-users] 群組有權建立最適化表單。 如需表單特定使用者群組的詳細清單，請參閱 [群組與許可權](forms-groups-privileges-tasks.md).
 
@@ -137,6 +139,10 @@ ht-degree: 2%
 
 1. 按一下&#x200B;**[!UICONTROL 「完成」]**。
 
+>[!NOTE]
+>
+> 您可以使用指南容器屬性來編輯最適化表單的JSON結構描述或表單資料模型。
+
 ## 設定預填服務  {#configure-prefill-service-for-form}
 
 您可以使用預填服務，以使用現有資料自動填入最適化表單的欄位。 當使用者開啟表單時，這些欄位的值會預先填充。 您可以：
@@ -155,13 +161,15 @@ ht-degree: 2%
 1. 選擇表單資料模型. 開啟 **[!UICONTROL 基本]** 標籤。 在預填服務中，選取 **[!UICONTROL 表單資料模型預填服務]**.
 1. 按一下&#x200B;**[!UICONTROL 「完成」]**。您的最適化表單現在已設定為使用表單資料模型預填。 您現在可以使用 [規則編輯器](rule-editor.md) 建立規則以預先填入表單的欄位。
 
-## 編輯最適化表單的表單模型屬性 {#edit-form-model}
+<!--
+## Edit Form Model properties of an Adaptive Form {#edit-form-model}
 
-1. 選取最適化表單並點選 ![頁面資訊](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL 開啟屬性]**. 「表單屬性」頁面隨即開啟。
+1. Select the Adaptive Form and tap ![Page information](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL Open Properties]**. The Form Properties page opens. 
 
-1. 前往 **[!UICONTROL 表單模型]** 標籤並選擇表單模型。 如果最適化表單沒有表單模型，您可以自由選擇JSON結構描述或表單資料模型。 另一方面，如果最適化表單已基於表單模型，您可以選擇切換到相同型別的另一個表單模型。 例如，如果表單使用JSON結構描述，您可以輕鬆切換到另一個JSON結構描述，同樣如果表單使用表單資料模型，您可以切換到另一個表單資料模型。
+1. Go to the **[!UICONTROL Form Model]** tab and choose a form model. If the Adaptive Form is without a form model, you have the freedom to choose either a JSON schema or a form data model. On the other hand, if the Adaptive Form is already based on a form model, you have the option to switch to another form model of the same type. For instance, if the form is using a JSON schema, you can easily switch to another JSON schema, and similarly if the form is using a Form Data Model, you can switch to another Form Data Model. 
 
-1. 點選 **[!UICONTROL 儲存]** 以儲存屬性。
+1. Tap **[!UICONTROL Save]** to save the properties.
+-->
 
 ## 下一步
 
