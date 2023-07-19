@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 90731516671ee0681ff91f2ac47888b1febee199
+source-git-commit: a5d38ef6b3281992fd9ac3121cdb6c998631b205
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1961'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 在AEM Forms 6.5中，主題是AEM使用者端資料庫，可用來定義調適型表單的樣式（外觀）。 主題包含元件和面板的樣式詳細資訊。 樣式包含背景顏色、狀態顏色、透明度、對齊方式及大小等屬性。 套用主題時，指定的樣式會反映在相應的元件上。 主題是獨立管理，不需參考最適化表單，且可在多個最適化Forms中重複使用。
 
-## 可用主題 {#available-standard-theme}
+## 可用主題 {#available-theme}
 
 AEM 6.5環境針對以核心元件為基礎的最適化Forms提供下列主題：
 
@@ -51,13 +51,13 @@ AEM 6.5環境針對以核心元件為基礎的最適化Forms提供下列主題�
 
 ## 建立主題
 
-AEM Forms 6.5提供下列核心元件型Adaptive Forms的標準主題。
+AEM Forms 6.5提供下列核心元件型Adaptive Forms的主題。
 
 * [畫布主題](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND主題](https://github.com/adobe/aem-forms-theme-wknd)
 * [畫架主題](https://github.com/adobe/aem-forms-theme-easel)
 
-您可以 [自訂這些標準主題的任何一個來建立主題](#customize-a-theme-core-components).
+您可以 [自訂任何這些主題以建立主題](#customize-a-theme-core-components).
 
 ## 自訂主題 {#customize-a-theme-core-components-based-adaptive-forms}
 
@@ -92,7 +92,7 @@ AEM Forms 6.5提供下列核心元件型Adaptive Forms的標準主題。
 
 建立或自訂主題是多步驟的過程。 依照列出的順序執行步驟，以建立/自訂主題：
 
-1. [複製標準主題](#clone-git-repo-of-theme)
+1. [複製主題](#clone-git-repo-of-theme)
 1. [自訂主題的外觀](#customize-the-theme)
 1. [準備好本機部署的主題](#generate-the-clientlib)
 1. [在本機環境中部署主題](#deploy-the-theme-on-a-local-environment)
@@ -102,17 +102,17 @@ AEM Forms 6.5提供下列核心元件型Adaptive Forms的標準主題。
  ![Theme Customization workflow](/help/forms/using/assets/custom-theme-steps.png)
 -->
 
-檔案中提供的範例是根據 **畫布** 佈景主題，但您可以複製任何標準佈景主題，並使用相同的指示加以自訂。 這些指示適用於任何主題，可讓您根據特定需求修改主題。
+檔案中提供的範例是根據 **畫布** 佈景主題，但您可以複製任何佈景主題，並使用相同的指示加以自訂。 這些指示適用於任何主題，可讓您根據特定需求修改主題。
 
 #### 1.複製主題的Git存放庫 {#clone-git-repo-of-theme}
 
-若要複製以核心元件為基礎的最適化Forms的標準主題，請選擇下列標準主題之一：
+若要複製以核心元件為基礎的最適化Forms的主題，請選擇以下主題之一：
 
 * [畫布主題](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND主題](https://github.com/adobe/aem-forms-theme-wknd)
 * [畫架主題](https://github.com/adobe/aem-forms-theme-easel)
 
-執行下列指示以複製標準主題：
+執行下列指示以複製主題：
 
 1. 在本機開發環境中開啟命令提示字元或終端機視窗。
 
