@@ -8,17 +8,15 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
+source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
 workflow-type: tm+mt
-source-wordcount: '1988'
+source-wordcount: '1968'
 ht-degree: 4%
 
 ---
 
 
 # 建立或自訂最適化表單主題 {#introduction-to-theme}
-
-<span class="preview"> Adobe建議使用核心元件 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) 或 [建立獨立的最適化Forms](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
@@ -290,6 +288,7 @@ The selected theme is applied to the Adaptive Form.
 1. 按一下 **建立** > **最適化Forms**.
 1. 選取最適化Forms核心元件範本，然後按一下 **下一個**. 此 **新增屬性** 出現
 1. 指定 **名稱** 最適化表單的預設值。
+
 
    >[!NOTE]
    >
