@@ -1,27 +1,24 @@
 ---
-title: 適用於AEM Forms的AEM案頭應用程式
-seo-title: AEM desktop app for AEM Forms
-description: 適用於AEM Forms的AEM案頭應用程式
-uuid: 99e0f2fb-8623-45bb-8e2e-5c5d6f482366
+title: 適用於AEM Forms的Adobe Experience Manager (AEM)案頭應用程式
+description: 適用於AEM Forms的Adobe Experience Manager (AEM)案頭應用程式
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: manage
-discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
-# 適用於AEM Forms的AEM案頭應用程式 {#aem-desktop-app-for-aem-forms}
+# 適用於AEM Forms的Adobe Experience Manager (AEM)案頭應用程式 {#aem-desktop-app-for-aem-forms}
 
 AEM案頭應用程式可讓您將Adobe Experience Manager (AEM) Assets存放庫和AEM Forms二進位檔案對應到您系統上的網路目錄。 您可以在檔案總管中檢視同步的資產和二進位檔案，並視需要使用各種應用程式來編輯檔案。 除了檢視檔案之外，您也可以建立、上傳和刪除二進位檔案。 您也可以直接從軟體開啟、編輯和儲存檔案。 例如，您可以從Designer直接開啟和編輯XDP檔案。 您對本機資產所做的變更，會反映在AEM Assets存放庫和AEM Forms UI中。
 
-您可以從AEM執行個體下載應用程式。 如需下載應用程式的詳細資訊，請參閱 [AEM案頭應用程式發行說明](https://helpx.adobe.com/experience-manager/desktop-app/release-notes.html).
+您可以從AEM執行個體下載應用程式。 如需下載應用程式的詳細資訊，請參閱 [AEM案頭應用程式發行說明](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=en).
 
 ## AEM案頭應用程式支援的AEM Forms資產 {#aem-forms-assets-supported-in-aem-desktop-app}
 

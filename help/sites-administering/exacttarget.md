@@ -1,26 +1,22 @@
 ---
 title: 與ExactTarget整合
-seo-title: Integrating with ExactTarget
-description: 瞭解如何將AEM與ExactTarget整合。
-seo-description: Learn how to integrate AEM with ExactTarget.
-uuid: a53bbdaa-98f7-4035-b842-aa7ea63712ca
+description: 瞭解如何將Adobe Experience Manager與ExactTarget整合。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 5b2f624d-e5b8-4484-a773-7784ebce58bd
 docset: aem65
 exl-id: 4183fe78-5055-4b77-8a54-55666e86a04e
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '469'
 ht-degree: 1%
 
 ---
 
 # 與ExactTarget整合{#integrating-with-exacttarget}
 
-將AEM與Exact Target整合可讓您透過Exact Target管理及傳送在AEM中建立的電子郵件。 它也可讓您透過AEM頁面上的AEM Forms使用Exact Target的銷售機會管理功能。
+將Adobe Experience Manager (AEM)與Exact Target整合可讓您透過Exact Target管理及傳送在AEM中建立的電子郵件。 它也可讓您透過AEM頁面上的AEM Forms來使用Exact Target的銷售機會管理功能。
 
 整合提供您下列功能：
 
@@ -31,7 +27,7 @@ ht-degree: 1%
 
 ## 建立ExactTarget設定 {#creating-an-exacttarget-configuration}
 
-可透過Cloudservices或工具新增ExactTarget設定。 本節將說明這兩種方法。
+您可以透過Cloudservices或Tools新增ExactTarget設定。 本節將說明這兩種方法。
 
 ### 透過Cloudservices設定ExactTarget {#configuring-exacttarget-via-cloudservices}
 
@@ -46,8 +42,8 @@ ht-degree: 1%
 
    ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. 輸入使用者名稱和密碼，然後選取API端點(例如， **https://webservice.exacttarget.com/Service.asmx**)。
-1. 按一下 **連線到ExactTarget。** 成功連線後，您會看到成功對話方塊。 按一下 **確定** 以結束視窗。
+1. 輸入使用者名稱、密碼，然後選取API端點(例如， **https://webservice.exacttarget.com/Service.asmx**)。
+1. 按一下 **連線到ExactTarget。** 成功連線後，您會看到成功對話方塊。 方塊按一下 **確定** 以結束視窗。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
@@ -55,7 +51,7 @@ ht-degree: 1%
 
    已設定ExactTarget。 您可以按一下「 」以編輯設定 **編輯**. 您可以按一下「 」，前往「精確目標」 **前往ExactTarget**.
 
-1. AEM現在提供資料擴充功能功能。 您可以匯入ExactTarget資料擴充功能欄。 除了已成功建立的ExactTarget設定外，按一下出現的「+」符號即可進行設定。 您可以從下拉式清單中選取任何現有的資料延伸模組。 如需如何設定資料擴充功能的詳細資訊，請參閱 [ExactTarget檔案](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_relationships_classic.htm&amp;type=5).
+1. AEM現在提供資料擴充功能功能。 您可以匯入ExactTarget資料延伸欄。 除了已成功建立的ExactTarget設定外，按一下出現的「+」符號即可進行設定。 您可以從下拉式清單中選取任何現有的資料延伸模組。 如需如何設定資料擴充功能的詳細資訊，請參閱 [ExactTarget檔案](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_relationships_classic.htm&amp;type=5).
 
    匯入的資料延伸模組欄稍後可透過 **文字和個人化** 元件。
 
@@ -78,5 +74,5 @@ ht-degree: 1%
 
 若要新增多個組態：
 
-1. 在歡迎頁面上，按一下 **Cloud Services** 並按一下 **ExactTarget**. 按一下 **顯示設定** 當有一個或多個ExactTarget設定可用時顯示的按鈕。 列出所有可用的設定。
-1. 按一下 **+** 在「可用設定」旁邊簽署。 如此將可開啟 **建立設定** 視窗。 按照之前的組態程式來建立新組態。
+1. 在歡迎頁面上，按一下 **Cloud Services** 並按一下 **ExactTarget**. 按一下 **顯示設定** 如果有一個或多個ExactTarget設定可用，就會顯示此訊息。 列出所有可用的設定。
+1. 按一下 **+** 在「可用設定」旁邊簽署。 如此將可開啟 **建立設定** 視窗。 按照之前的組態程式來建立組態。

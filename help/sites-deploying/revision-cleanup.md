@@ -1,19 +1,15 @@
 ---
 title: 修訂清除
-seo-title: Revision Cleanup
-description: 瞭解如何使用AEM 6.5中的修訂清除功能。
-seo-description: Learn how to use the Revision Cleanup functionality in AEM 6.5.
-uuid: 321f5038-44b0-4f1e-a1aa-2d29074eed70
+description: 瞭解如何使用Adobe Experience Manager 6.5中的修訂清除功能。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '5902'
+source-wordcount: '5814'
 ht-degree: 0%
 
 ---
@@ -22,13 +18,13 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-存放庫的每次更新都會建立新的內容修訂版本。 因此，每次更新後，存放庫的大小都會增加。 舊版修訂需要清理以釋放磁碟資源 — 這對於避免不受控制的存放庫成長非常重要。 此維護功能稱為「版本清理」。 自AEM 6.0起，即已可作為離線常式使用。
+存放庫的每次更新都會建立內容修訂版本。 因此，每次更新後，存放庫的大小都會增加。 必須清理舊修訂版本以釋放磁碟資源 — 這很重要，可避免儲存庫成長不受控制。 此維護功能稱為「版本清理」。 自Adobe Experience Manager (AEM) 6.0起，即已可作為離線常式使用。
 
 在AEM 6.3及更高版本中，引進了此功能的線上版本，稱為「線上修訂清除」。 與必須關閉AEM執行個體的離線修訂清除相比，可以在AEM執行個體上線時執行線上修訂清除。 線上修訂清除預設為開啟，建議使用此方式執行修訂清除。
 
-**注意**： [觀看影片](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/revision-cleanup-technical-video-use.html) 瞭解如何使用「線上修訂清除」的簡介。
+**注意**： [觀看影片](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html?lang=en) 瞭解如何使用「線上修訂清除」的簡介。
 
-修訂清除處理包含三個階段： **預估**， **壓縮** 和 **clean up**. 預估會根據可能收集到的垃圾數量來決定是否執行下一個階段（壓縮）。 在壓縮階段期間，區段和tar檔案會被重寫，而遺漏任何未使用的內容。 清理階段隨後會移除舊區段，包括這些區段可能包含的任何垃圾。 離線模式通常可以回收更多空間，因為線上模式需要考慮AEM工作集，這樣才能保留額外區段不被收集。
+修訂清除處理包含三個階段： **預估**， **壓縮**、和 **clean up**. 預估會根據可能收集到的垃圾數量來決定是否執行下一個階段（壓縮）。 在壓縮階段期間，區段和tar檔案會被重寫，而遺漏任何未使用的內容。 然後，清理階段會移除舊區段，包括這些區段可能包含的任何垃圾。 離線模式通常可以回收更多空間，因為線上模式必須考慮AEM工作集，這樣才能保留額外區段不被收集。
 
 如需有關「修訂清除」的詳細資訊，請參閱下列連結：
 
@@ -36,7 +32,7 @@ ht-degree: 0%
 * [線上修訂清除常見問題](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions)
 * [如何執行離線修訂清除](/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup)
 
-此外，您也可以閱讀 [Oak官方檔案。](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html)
+此外，您也可以閱讀 [Oak官方檔案](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html).
 
 ### 何時使用線上修訂清除，而非離線修訂清除？ {#when-to-use-online-revision-cleanup-as-opposed-to-offline-revision-cleanup}
 
@@ -71,7 +67,7 @@ ht-degree: 0%
 
 修訂清除程式會依層代回收舊修訂版本。 這表示每次您執行修訂清除時，都會建立新一代並保留在磁碟上。 不過，兩種修訂清除型別之間有差異：離線修訂清除會保留一代版本，而線上修訂清除則會保留兩代版本。 因此，當您執行線上修訂清除 **晚於** 離線修訂清除會發生下列情況：
 
-1. 在第一次線上修訂清除執行後，存放庫的大小將會加倍。 發生此狀況是因為磁碟目前保留了兩代磁碟。
+1. 第一次線上修訂清除執行後，存放庫大小會翻倍。 發生此狀況是因為磁碟目前保留了兩代磁碟。
 1. 在後續執行期間，存放庫會在建立新世代時暫時增大，然後穩定到第一次執行後的大小，因為線上修訂清除程式會回收先前的世代。
 
 此外，請記住，根據認可型別和數量的不同，每一代都可以和上一代相比有不同的大小，因此最終大小會因執行而異。
@@ -82,8 +78,8 @@ ht-degree: 0%
 
 **AEM 6.5** 介紹 **兩種新模式** 的 **壓縮** 線上版次清除處理的階段：
 
-* 此 **完全壓縮** 模式會重寫整個存放庫中的所有區段和tar檔案。 因此，後續的清理階段可以移除存放庫中的最大垃圾量。 由於完全壓縮會影響整個存放庫，因此需要相當多的系統資源和時間才能完成。 完全壓縮對應至AEM 6.3中的壓縮階段。
-* 此 **尾部壓縮** 模式只會重寫存放庫中最近的區段和tar檔案。 最近的區段和tar檔案是自上次執行完整或尾部壓縮以來新增的區段。 因此，後續的清理階段只能移除存放庫最近部分中所包含的垃圾。 由於尾部壓縮只會影響存放庫的一部分，因此完成所需的系統資源和時間比完全壓縮要少得多。
+* 此 **完全壓縮** 模式會重寫整個存放庫中的所有區段和tar檔案。 因此，後續的清理階段可以移除存放庫中的最大垃圾量。 因為完整壓縮會影響整個存放庫，所以需要相當多的系統資源和時間才能完成。 完全壓縮對應至AEM 6.3中的壓縮階段。
+* 此 **尾部壓縮** 模式只會重寫存放庫中最近的區段和tar檔案。 最近的區段和tar檔案是自上次執行完整或尾部壓縮以來新增的區段。 因此，後續的清理階段只能移除存放庫最近部分中所包含的垃圾。 由於尾部壓縮只會影響存放庫的一部分，因此它比完全壓縮需要更少的系統資源和完成時間。
 
 這些壓真實模式構成效率和資源消耗之間的權衡：尾端壓實效率較低，對正常系統作業的影響也較小。 相較之下，完全壓縮的效果較佳，但對正常系統作業的影響較大。
 
@@ -95,14 +91,14 @@ AEM 6.5在壓縮期間也引進了更有效率的內容重複資料刪除機制�
 
 ### 如何設定完全和尾部壓縮 {#how-to-configure-full-and-tail-compaction}
 
-預設設定會在週日執行尾部壓縮，並在星期日執行完全壓縮。 預設設定可使用新設定值變更 `full.gc.days` 的 `RevisionCleanupTask` [維護任務](/help/sites-deploying/revision-cleanup.md#how-to-run-online-revision-cleanup).
+預設設定會在平日執行尾部壓縮，並在星期日執行完全壓縮。 預設設定可使用新設定值變更 `full.gc.days` 的 `RevisionCleanupTask` [維護任務](/help/sites-deploying/revision-cleanup.md#how-to-run-online-revision-cleanup).
 
-當您設定 `full.gc.days` 值請注意，完全壓縮會在值中定義的日子執行，而尾部壓縮會在值中未定義的日子執行。 例如，如果您設定完全壓縮在星期日執行，則尾部壓縮將在星期一到星期六執行。 例如，如果您將完全壓縮設定為一週中的每一天執行，則尾部壓縮將完全不執行。
+當您設定 `full.gc.days` 值，完整壓縮會在值中定義的天數期間執行，而尾部壓縮會在值中未定義的天數期間執行。 例如，如果您設定完全壓縮在星期日執行，則尾部壓縮會在星期一到星期六執行。 例如，如果您將完全壓縮設定為一週中的每一天執行，則尾部壓縮完全不會執行。
 
-此外，請考量以下事項：
+此外，請考量：
 
 * **尾部壓縮** 效率較低，對正常系統作業的影響也較小。 因此，此函式會在營業日執行。
-* **完全壓縮** 更有效率，但對一般系統作業的影響也更大。 因此，此函式適用於非工作日。
+* **完全壓縮** 不僅更有效率，而且對正常系統作業的影響也更大。 因此，此函式適用於非工作日。
 * 尾部壓縮和完全壓縮都應該排程在非尖峰時段執行。
 
 ### 疑難排解 {#troubleshooting}
@@ -111,7 +107,7 @@ AEM 6.5在壓縮期間也引進了更有效率的內容重複資料刪除機制�
 
 * 您可以監視輸入/輸出(I/O)活動，例如：I/O作業、等待IO的CPU、認可佇列大小。 這有助於判斷系統是否受到I/O限制，且需要升級。
 * 此 `RevisionCleanupTaskHealthCheck` 表示「線上修訂清除」的整體健康狀態。 其運作方式與AEM 6.3相同，且無法區分完整和尾部壓縮。
-* 記錄訊息包含有關壓縮模式的相關資訊。 例如，當「線上修訂清除」啟動時，對應的記錄訊息將指示壓縮模式。 此外，在某些轉角案例中，當排定執行尾部壓縮時，系統將恢復為完全壓縮，而記錄訊息將指示此變更。 下列記錄檔範例指出壓縮模式，以及從尾部到完全壓縮的變更：
+* 記錄訊息包含有關壓縮模式的相關資訊。 例如，當「線上修訂清除」啟動時，對應的記錄訊息會指出壓縮模式。 此外，在某些轉角案例中，當排定執行尾部壓縮且記錄訊息指示此變更時，系統恢復為完全壓縮。 下列記錄檔範例指出壓縮模式，以及從尾部到完全壓縮的變更：
 
 ```
 TarMK GC: running tail compaction
@@ -120,7 +116,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### 已知限制 {#known-limitations}
 
-在某些情況下，在尾部模式和完全壓縮模式之間切換會延遲清理過程。 更準確地說，完全壓縮後，存放庫會成長（大小會加倍）。 當存放庫下降到完全壓縮前的大小下方時，額外的空間將在後續的尾部壓縮中回收。 也應避免執行平行維護任務。
+有時候，在尾部模式和完全壓縮模式之間切換會延遲清理過程。 更準確地說，完全壓縮後，存放庫會成長（大小加倍）。 當存放庫低於完整壓縮前的大小時，後續的尾部壓縮會回收額外的空間。 也應避免執行平行維護任務。
 
 **建議磁碟大小至少比最初估計的存放庫大小大兩到三倍。**
 
@@ -136,7 +132,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td>升級至AEM 6.5時應該注意什麼？</td>
-   <td><p>TarMK的持續性格式將隨AEM 6.5而改變。這些變更不需要主動移轉步驟。 現有存放庫將進行滾動式移轉，這對使用者而言是透明的。 移轉程式會在AEM 6.5 （或相關工具）首次存取存放庫時啟動。</p> <p><strong>一旦開始移轉至AEM 6.5持續性格式，存放庫就無法恢復為之前的AEM 6.3持續性格式。</strong></p> </td>
+   <td><p>TarMK的持續性格式會隨著AEM 6.5而改變。這些變更不需要主動移轉步驟。 現有存放庫會進行滾動式移轉，對使用者而言是透明的。 移轉程式會在AEM 6.5 （或相關工具）首次存取存放庫時啟動。</p> <p><strong>一旦開始移轉至AEM 6.5持續性格式，存放庫就無法恢復為之前的AEM 6.3持續性格式。</strong></p> </td>
   </tr>
  </tbody>
 </table>
@@ -182,7 +178,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>如果我意外執行了錯誤的存放庫格式，會發生什麼情況？</strong></td>
-   <td>如果您嘗試對oak-segment-tar存放庫執行oak-segment模組（或反之），啟動將失敗 <em>IllegalState例外狀況</em> 並顯示「無效區段格式」訊息。 不會發生資料損毀。</td>
+   <td>如果您嘗試對oak-segment-tar存放庫執行oak-segment模組（或反之），啟動失敗並顯示 <em>IllegalState例外狀況</em> 並顯示「無效區段格式」訊息。 沒有發生資料損毀。</td>
    <td> </td>
   </tr>
   <tr>
@@ -239,7 +235,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>為什麼第一次線上修訂清除在離線修訂清除後執行時，不會回收任何空間？</strong></td>
-   <td><p>離線修訂清除正在回收除了最新一代以外的所有內容，而線上修訂清除則使用最新兩代。 若是新的存放庫，「線上修訂清除」在離線修訂清除後第一次執行時，不會回收任何空間，因為沒有足夠舊的層代可回收。</p> <p>此外，請閱讀的「離線修訂清除後執行線上修訂清除」一節。 <a href="/help/sites-deploying/revision-cleanup.md#how-to-run-online-revision-cleanup">本章節</a>.</p> </td>
+   <td><p>離線修訂清除正在回收除了最新一代以外的所有內容，而線上修訂清除則使用最新兩代。 如果有新的存放庫，「線上修訂清除」在離線修訂清除後第一次執行時，將不會回收任何空間，因為沒有足夠舊的層代可回收。</p> <p>此外，請閱讀的「離線修訂清除後執行線上修訂清除」一節。 <a href="/help/sites-deploying/revision-cleanup.md#how-to-run-online-revision-cleanup">本章節</a>.</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -249,7 +245,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>執行線上修訂清除之前是否有任何先決條件？</strong></td>
-   <td><p>線上修訂清除僅適用於AEM 6.3及更高版本。 此外，如果您使用舊版AEM，則需要移轉至新版 <a href="/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar">Oak區段Tar</a>.</p> </td>
+   <td><p>線上修訂清除僅適用於AEM 6.3及更高版本。 此外，如果您使用舊版AEM，則必須移轉至新版 <a href="/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar">Oak區段Tar</a>.</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -265,22 +261,22 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>執行「線上修訂清除」時，作者是否仍可繼續工作？</strong></td>
-   <td>是，「線上修訂清除」可處理同時寫入。 不過，「線上版次清理」可以更快更有效率地運作，而不需要同時執行寫入異動。 建議將「線上修訂清除」維護工作排程在相對安靜的時間，不會有太多流量。</td>
+   <td>是，「線上修訂清除」可處理同時寫入。 不過，「線上版次清理」可以更快更有效率地運作，而不需要同時執行寫入異動。 Adobe建議將「線上修訂清除」維護作業排程至相對安靜的時間，不會有太多流量。</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>執行線上修訂清除時，磁碟空間和棧積記憶體的最低需求為何？</strong></td>
-   <td><p>線上上修訂清除期間，會持續監視磁碟空間。 如果可用磁碟空間下降到關鍵值以下，則會取消此程式。 關鍵值是存放庫目前磁碟空間的25%，且無法設定。</p> <p><strong>建議磁碟大小至少比最初估計的存放庫大小大兩到三倍。</strong></p> <p>在清理程式期間，會持續監控可用棧積空間。 如果可用棧積空間下降到關鍵值以下，則會取消此程式。 臨界值是透過org.apache.jackrabbit.oak.segment.SegmentNodeStoreService#MEMORY_THRESHOLD設定。 預設值為15%。</p> <p>Recommendations提供最小壓縮棧積大小，但並未與AEM記憶體大小調整建議分開。 一般規則： <strong>如果AEM執行個體的大小足以應付使用案例和預期上的裝載，則清理程式將獲得足夠的記憶體。</strong></p> </td>
+   <td><p>線上上修訂清除期間，會持續監視磁碟空間。 如果可用磁碟空間下降到關鍵值以下，則取消此程式。 關鍵值是存放庫目前磁碟空間的25%，且無法設定。</p> <p><strong>Adobe建議您讓磁碟大小至少比最初估計的存放庫大小大兩到三倍。</strong></p> <p>在清理程式期間，會持續監控可用棧積空間。 如果可用棧積空間下降到關鍵值以下，則會取消此程式。 臨界值是透過org.apache.jackrabbit.oak.segment.SegmentNodeStoreService#MEMORY_THRESHOLD設定。 預設值為15%。</p> <p>Recommendations提供最小壓縮棧積大小，但並未與AEM記憶體大小調整建議分開。 一般而言： <strong>如果AEM執行個體的大小足以應付使用案例和預期上的裝載，則清理程式可獲得足夠的記憶體。</strong></p> </td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>執行「線上修訂清除」時，預期的效能影響為何？</strong></td>
-   <td>線上修訂清除」是背景程式，可同時讀取和寫入存放庫以進行正常的系統作業。 尤其是，它可能需要在短時間內獨佔存取存放庫，以防止其他對話串寫入存放庫。</td>
+   <td>線上修訂清除」是背景程式，可同時讀取和寫入存放庫以進行正常的系統作業。 尤其是，它可能需要在短時間內獨佔存取存放庫，以防止其他執行緒寫入存放庫。</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>線上修訂清除預計執行多久？</strong></td>
-   <td>根據我們在內部執行的最新效能測試，執行時間不應超過2小時。</td>
+   <td>根據內部執行的最新效能測試Adobe，執行時間不應超過兩個小時。</td>
    <td> </td>
   </tr>
   <tr>
@@ -295,15 +291,15 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>如果線上修訂清除超過設定的維護期間會發生什麼情況？</strong></td>
-   <td>請確定其他維護任務沒有延遲執行。 如果在相同的維護時段內執行比「線上修訂清除」更多的維護任務，就可能會發生這種情況。 請注意，維護任務會依序執行，而不會有可設定的順序。</td>
+   <td>請確定其他維護任務沒有延遲執行。 如果在相同的維護時段內執行比「線上修訂清除」更多的維護任務，就可能會發生這種情況。 維護任務會依序執行，而不會有可設定的順序。</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>為何略過修訂垃圾收藏集？</strong></td>
-   <td><p>修訂清除依賴估計階段來判斷是否有足夠的垃圾要清除。 估算程式會比較目前大小與上次壓縮後存放庫的大小。 如果大小超過設定的差異，將會執行清理。 大小差異設定為1 GB。 這實際上意味著，如果存放庫大小自上次清除執行以來未增加1 GB，則會略過新的修訂版清除反複專案。 </p> <p>以下是估算階段的相關記錄專案：</p>
+   <td><p>修訂清除依賴估計階段來判斷是否有足夠的垃圾要清除。 估算程式會比較目前大小與上次壓縮後存放庫的大小。 如果大小超過設定的差異，則會執行清理。 大小差異設定為1 GB。 這實際上意味著，如果存放庫大小自上次清除執行以來未增加1 GB，則會略過新的修訂版清除反複專案。 </p> <p>以下是估算階段的相關記錄專案：</p>
     <ul>
-     <li>修訂GC將會執行： <em>大小差異為N%或N/N （N/N位元組），因此執行壓縮</em></li>
-     <li>修訂GC將 <strong>not</strong> 執行： <em>大小差異為N%或N/N （N/N位元組），因此現在會略過壓縮</em></li>
+     <li>修訂GC執行： <em>大小差異為N%或N/N （N/N位元組），因此執行壓縮</em></li>
+     <li>修訂GC會 <strong>not</strong> 執行： <em>大小差異為N%或N/N （N/N位元組），因此現在會略過壓縮</em></li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -314,12 +310,12 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>如果AEM執行個體在排定的清理工作期間關閉，處理程式是否會安全地中止，或是在壓縮完成前封鎖關機？</strong></td>
-   <td>修訂清除將中斷，存放庫將安全關閉。</td>
+   <td>修訂清除已中斷，存放庫將安全關閉。</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>當系統線上上修訂清除期間當機時，會發生什麼情況？</strong></td>
-   <td>在這種情況下，沒有資料損毀的風險。 後續執行將清理垃圾剩餘。</td>
+   <td>在這種情況下，沒有資料損毀的風險。 後續執行會清理垃圾剩餘。</td>
    <td> </td>
   </tr>
   <tr>
@@ -333,8 +329,8 @@ TarMK GC: no base state available, running full compaction instead
    <td> </td>
   </tr>
   <tr>
-   <td><strong>如果同時寫入存放庫的干擾太大，會發生什麼情況？</strong></td>
-   <td><p>如果系統上有寫入並行，線上修訂清除可能需要獨佔寫入存取權，才能在壓縮週期結束時認可變更。 系統將會進入 <strong>forceCompact模式</strong>，詳情請參閱 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html" target="_blank">Oak檔案</a>. 在強制壓縮期間，會取得獨佔寫入鎖定，以最終認可變更，而不會同時干擾寫入。 若要限制對回應時間的影響，可定義逾時值。 此值預設為1分鐘，這表示如果強制壓縮未在1分鐘內完成，壓縮流程將中止，以支援同時認可。</p> <p>強制壓縮的持續時間取決於以下因素：</p>
+   <td><strong>如果同時寫入存放庫時發生太多干擾，會發生什麼情況？</strong></td>
+   <td><p>如果系統上有寫入並行，線上修訂清除可能需要獨佔寫入存取權，才能在壓縮週期結束時認可變更。 系統進入 <strong>forceCompact模式</strong>，詳情請參閱 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html" target="_blank">Oak檔案</a>. 在強制壓縮期間，會取得獨佔寫入鎖定，以最終認可變更，而不會同時干擾寫入。 若要限制對回應時間的影響，可定義逾時值。 此值預設為一分鐘，這表示如果強制壓縮未在一分鐘內完成，壓縮程式將中止，以支援同時認可。</p> <p>強制壓縮的持續時間取決於以下因素：</p>
     <ul>
      <li>硬體：尤其是IOPS。 持續時間會隨著IOPS的增加而縮短。</li>
      <li>區段存放區大小：持續時間會隨著區段存放區的大小而增加。</li>
@@ -343,12 +339,12 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><p><strong>線上修訂清除在待命執行個體上如何執行？</strong></p> </td>
-   <td><p>在冷待命設定中，只需要將主要執行個體設定為執行「線上修訂清除」。 在待命執行個體上，不需要特別排定「線上修訂清除」。</p> <p>待命執行個體上的對應操作是「自動清理」 — 這對應於「線上修訂清理」的清理階段。 在主要執行個體上執行「線上修訂清除」之後，在待命執行個體上執行「自動清除」。</p> <p>預估和壓縮階段不會在待命執行個體上執行。</p> </td>
+   <td><p>在冷待命設定中，只有主要執行個體必須設定為執行線上修訂清除。 在待命執行個體上，不需要特別排定「線上修訂清除」。</p> <p>待命執行個體上的對應操作是「自動清理」 — 這對應於「線上修訂清理」的清理階段。 在主要執行個體上執行「線上修訂清除」之後，在待命執行個體上執行「自動清除」。</p> <p>預估和壓縮階段不會在待命執行個體上執行。</p> </td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>離線修訂清除是否比線上修訂清除能釋放更多磁碟空間？</strong></td>
-   <td><p>離線修訂清除可以立即移除舊修訂版本，而線上修訂清除需要說明應用程式棧疊仍在參考的舊修訂版本。 因此，前者比後者能更積極地移除垃圾，其效果會在幾個垃圾收集週期內攤銷。</p> <p>此外，請閱讀的「離線修訂清除後執行線上修訂清除」一節。 <a href="/help/sites-deploying/revision-cleanup.md#how-to-run-online-revision-cleanup">本章節</a>.</p> </td>
+   <td><p>離線修訂清除可以立即移除舊修訂版本，而線上修訂清除必須說明應用程式棧疊仍在參考的舊修訂版本。 因此，前者比後者能更積極地移除垃圾，其效果會在幾個垃圾收集週期內攤銷。</p> <p>此外，請閱讀的「離線修訂清除後執行線上修訂清除」一節。 <a href="/help/sites-deploying/revision-cleanup.md#how-to-run-online-revision-cleanup">本章節</a>.</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -371,10 +367,10 @@ TarMK GC: no base state available, running full compaction instead
 <table style="table-layout:auto">
  <tbody>
   <tr>
-   <td><strong>線上修訂清除期間需要監控哪些專案？</strong></td>
+   <td><strong>線上修訂清除期間必須監控哪些專案？</strong></td>
    <td>
     <ul>
-     <li>啟用[線上修訂清除]時，應該監視磁碟空間。 當磁碟空間不足時，將不會執行或會先佔終止清理。</li>
+     <li>啟用[線上修訂清除]時，應該監視磁碟空間。 當磁碟空間不足時，清理不會執行或會先佔終止。</li>
      <li>檢查線上修訂清除的完成時間記錄。 此過程不應超過2小時。</li>
      <li>查核點數目。 如果在壓縮執行時有超過3個查核點，建議清除查核點。</li>
     </ul> </td>
@@ -387,7 +383,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>我們可以在哪裡找到上次線上修訂清除執行的統計資料？</strong></td>
-   <td><p>狀態、進度和統計資料會透過JMX (<code>SegmentRevisionGarbageCollection</code> MBean)。 如需更多關於 <code>SegmentRevisionGarbageCollection</code> MBean，請閱讀 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">跟隨段落</a>.</p> <p>進度可透過 <code>EstimatedRevisionGCCompletion</code> 的屬性 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>您可以使用取得MBean的參照 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code>.</p> <p>請注意，統計資料僅自上次系統啟動後提供。 可運用外部監控工具，讓資料超出AEM運作時間。 另請參閱 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">將健康情況檢查附加至Nagios的AEM檔案，作為外部監控工具的範例</a>.</p> </td>
+   <td><p>狀態、進度和統計資料會透過JMX (<code>SegmentRevisionGarbageCollection</code> MBean)。 如需更多關於 <code>SegmentRevisionGarbageCollection</code> MBean，請閱讀 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">跟隨段落</a>.</p> <p>進度可透過 <code>EstimatedRevisionGCCompletion</code> 的屬性 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>您可以使用取得MBean的參照 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code>.</p> <p>統計資料只能從上次系統啟動後取得。 外部監控工具可用來讓資料超出AEM運作時間。 另請參閱 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">將健康情況檢查附加至Nagios的AEM檔案，作為外部監控工具的範例</a>.</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -430,16 +426,16 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>修訂清除健康情況檢查中會公開哪些資訊？ 它們如何以及何時對顏色編碼狀態層級作出貢獻？ </strong></td>
-   <td><p>修訂清理健康情況檢查是 <a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">操作控制面板</a>.<br /> </p> <p>狀態將為 <strong>綠色</strong> 如果「線上修訂清除」維護任務的最後一次執行成功完成。</p> <p>將會是 <strong>黃色</strong> 如果「線上版次清理」維護作業已取消一次。<br /> </p> <p>將會是 <strong>紅色</strong> 如果「線上版次清理」維護作業連續取消三次。 <strong>在此情況下，需要手動互動</strong> 或「線上修訂清除」可能再次失敗。 如需詳細資訊，請閱讀 <a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">疑難排除</a> 區段底下。<br /> </p> <p>另請注意，系統重新啟動後，將會重設健康情況檢查狀態。 因此，新重新啟動的執行個體會在修訂清除健康情況檢查中顯示綠色狀態。 可運用外部監控工具，讓資料超出AEM運作時間。 另請參閱 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">將健康情況檢查附加至Nagios的AEM檔案，作為外部監控工具的範例</a>.</p> </td>
+   <td><p>修訂清理健康情況檢查是 <a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">操作控制面板</a>.<br /> </p> <p>狀態是 <strong>綠色</strong> 如果「線上修訂清除」維護任務的最後一次執行已成功完成。</p> <p>它是 <strong>黃色</strong> 如果「線上版次清理」維護作業已取消一次。<br /> </p> <p>它是 <strong>紅色</strong> 如果「線上版次清理」維護作業連續取消三次。 <strong>在此情況下，需要手動互動</strong> 或「線上修訂清除」可能再次失敗。 如需詳細資訊，請閱讀 <a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">疑難排除</a> 區段底下。<br /> </p> <p>另請注意，系統重新啟動後，將會重設健康情況檢查狀態。 因此，新重新啟動的執行個體會在修訂清除健康情況檢查中顯示綠色狀態。 外部監控工具可用來讓資料超出AEM運作時間。 另請參閱 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">將健康情況檢查附加至Nagios的AEM檔案，作為外部監控工具的範例</a>.</p> </td>
    <td> </td>
   </tr>
   <tr>
    <td><p><strong>如何在待命執行個體上監視自動清除？</strong></p> </td>
-   <td><p>透過JMX使用公開狀態、進度和統計資料 <code>SegmentRevisionGarbageCollection</code> MBean。 另請參閱下列內容 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak檔案</a>. </p> <p>您可以使用取得MBean的參照 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code>.</p> <p>請注意，統計資料僅自上次系統啟動後可用。 可運用外部監控工具，讓資料超出AEM運作時間。 另請參閱 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">將健康情況檢查附加至Nagios的AEM檔案，作為外部監控工具的範例</a>.</p> <p>記錄檔也可用來檢查自動清理的狀態、進度和統計資料。</p> </td>
+   <td><p>透過JMX使用公開狀態、進度和統計資料 <code>SegmentRevisionGarbageCollection</code> MBean。 另請參閱下列內容 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak檔案</a>. </p> <p>您可以使用取得MBean的參照 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code>.</p> <p>統計資料只能從上次系統啟動後使用。 外部監控工具可用來讓資料超出AEM運作時間。 另請參閱 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">將健康情況檢查附加至Nagios的AEM檔案，作為外部監控工具的範例</a>.</p> <p>記錄檔也可用來檢查自動清理的狀態、進度和統計資料。</p> </td>
    <td> </td>
   </tr>
   <tr>
-   <td><p><strong>在待命執行個體的自動清除期間，需要監視哪些專案？</strong></p> </td>
+   <td><p><strong>在待命執行個體的自動清理期間必須監視哪些專案？</strong></p> </td>
    <td>
     <ul>
      <li>執行「自動清理」時，應監視磁碟空間。</li>
@@ -457,7 +453,7 @@ TarMK GC: no base state available, running full compaction instead
  <tbody>
   <tr>
    <td><strong>如果不執行線上修訂清除，可能會發生什麼最壞的情況？</strong></td>
-   <td>AEM執行個體的磁碟空間將會用盡，進而導致生產中斷。</td>
+   <td>AEM執行個體的磁碟空間不足，導致生產中斷。</td>
    <td> </td>
   </tr>
   <tr>
@@ -472,31 +468,31 @@ TarMK GC: no base state available, running full compaction instead
      <li>首先，檢查記錄專案<br /> </li>
      <li>根據記錄檔中的資訊，採取適當的動作：
       <ul>
-       <li>如果紀錄顯示五個錯過的壓縮週期和一個逾時 <code>forceCompact</code> 週期，將維護期間排程為存放庫寫入量低時的安靜時間。 您可以在存放庫度量監視工具中檢視存放庫寫入，該工具位於 <em>https://serveraddress:serverport/libs/granite/operations/content/monitoring/page.html</em></li>
+       <li>如果紀錄顯示五個錯過的壓縮週期和一個逾時 <code>forceCompact</code> 週期，將維護期間排程為存放庫寫入量低時的安靜時間。 您可以在存放庫度量監視工具中檢查存放庫寫入 <em>https://serveraddress:serverport/libs/granite/operations/content/monitoring/page.html</em></li>
        <li>如果清理在維護時段結束時停止，請確定維護任務使用者介面中的維護時段設定足夠大</li>
        <li>如果可用的棧積記憶體不足，請確定執行個體有足夠的記憶體。</li>
-       <li>如果反應延遲，區段存放區可能會增長太多，線上修訂清除甚至無法在較長的維護時段內完成。 例如，如果上週未成功完成線上修訂清除，則建議規劃離線維護並執行離線修訂清除，以將區段存放區恢復到可管理的大小。</li>
+       <li>如果反應延遲，區段存放區可能會增長太多，線上修訂清除甚至無法在較長的維護時段內完成。 例如，如果上週未成功完成線上修訂清除，則建議規劃離線維護，並執行離線修訂清除，將區段存放區恢復到可管理的大小。</li>
       </ul> </li>
     </ul> </td>
    <td> </td>
   </tr>
   <tr>
-   <td><strong>Healthcheck警示開啟後需要做什麼？</strong></td>
+   <td><strong>當Healthcheck警示開啟時，必須做什麼？</strong></td>
    <td>請參閱上一個點。</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>如果「線上修訂清除」在排程的維護期間逾時，會發生什麼情況？</strong></td>
-   <td>將取消線上修訂清除，並將移除剩餘的專案。 下次排定維護時段時，它會重新開始。</td>
+   <td>線上修訂清除」已取消，剩餘的部分已移除。 下次排定維護時段時，它會再次啟動。</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>原因 <code>SegmentNotFoundException</code> 要登入的例項 <code>error.log</code> 如何復原？</strong></td>
-   <td><p>A <code>SegmentNotFoundException</code> 當TarMK嘗試存取其找不到之儲存單位（區段）時會由TarMK記錄。 有三種情況可能會導致此問題：</p>
+   <td><p>A <code>SegmentNotFoundException</code> 當TarMK嘗試存取其找不到之儲存單位（區段）時，會記錄下來。 有三種情況可能會導致此問題：</p>
     <ol>
-     <li>一種應用程式，可規避建議的存取機制（例如Sling和JCR API），並使用較低層級的API/SPI來存取存放庫，然後超過區段的保留時間。 也就是說，它會保留實體參照，保留時間超過線上修訂清除所允許的保留時間（預設為24小時）。 此案例為暫時性，不會導致資料損毀。 若要復原，應使用Oak-run工具來確認例外狀況的暫時性（Oak-run檢查不應回報任何錯誤）。 若要這麼做，需要讓執行個體離線並稍後重新啟動。</li>
-     <li>外部事件造成磁碟上的資料損毀。 這可能是磁碟故障、磁碟空間不足或意外修改所需資料檔案所致。 在此情況下，需要離線執行個體，並使用Oak-run檢查來修復。 如需如何執行Oak-run檢查的詳細資訊，請閱讀以下內容 <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache檔案</a>.</li>
-     <li>所有其他事件應透過 <a href="https://helpx.adobe.com/tw/marketing-cloud/contact-support.html" target="_blank">Adobe客戶服務</a>.</li>
+     <li>一種應用程式，可規避建議的存取機制（例如Sling和JCR API），並使用較低層級的API/SPI來存取存放庫，然後超過區段的保留時間。 也就是說，它會保留實體參照，保留時間超過線上修訂清除所允許的保留時間（預設為24小時）。 此案例為暫時性，不會導致資料損毀。 若要復原，應使用Oak-run工具來確認例外狀況的暫時性（Oak-run檢查不應回報任何錯誤）。 若要這麼做，執行個體必須離線並稍後重新啟動。</li>
+     <li>外部事件造成磁碟上的資料損毀。 這可能是磁碟故障、磁碟空間不足或意外修改所需資料檔案所致。 在此情況下，必須離線執行個體，並使用Oak-run檢查來修復。 如需如何執行Oak-run檢查的詳細資訊，請閱讀以下內容 <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache檔案</a>.</li>
+     <li>透過「 」處理所有其他發生次數 <a href="https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support" target="_blank">Adobe客戶服務</a>.</li>
     </ol> </td>
    <td> </td>
   </tr>
@@ -505,7 +501,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### 根據錯誤訊息進行疑難排解 {#troubleshooting-based-on-error-messages}
 
-如果線上上修訂清除程式期間發生事件，error.log將會是詳細的。 以下矩陣旨在說明最常見的訊息並提供可能的解決方案：
+如果線上上修訂清除程式期間發生事件，則error.log為詳細資訊。 以下矩陣旨在說明最常見的訊息並提供可能的解決方案：
 
 <!---| **Phase** |**Log Messages** |**Explanation** |**Next Steps** |
 |---|---|---|---|
@@ -514,7 +510,7 @@ TarMK GC: no base state available, running full compaction instead
 |   |TarMK GC #2: estimation interrupted: ${REASON}. Skipping compaction. |The estimation phase terminated prematurely. Some examples of events that could interrupt the estimation phase: not enough memory or disk space on the host system. |Depends on the given reason. |
 | Compaction |TarMK GC #2: compaction paused |As long as the compaction phase is paused by configuration, neither the estimation phase nor the compaction phase will be executed. |Enable online revision cleanup. |
 |   |TarMK GC #2: compaction cancelled: ${REASON}. |The compaction phase terminated prematurely. Some examples of events that could interrupt the compaction phase: not enough memory or disk space on the host system. Moreover, compaction can also be cancelled by shutting down the system or by explicitly cancelling it via administrative interfaces such as the Maintenance Window within the Operations Dashobard. |Depends on the given reason. |
-|   |TarMK GC #2: compaction failed in 32.902 min (1974140 ms), after 5 cycles |This message doesn’t mean that there was an unrecoverable error, but only that compaction was terminated after a certain amount of attempts. Also, read the [following paragraph](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes). |Read the following [Oak documentation](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes), and the last question of the [Running Online Revision Cleanup](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) section. |
+|   |TarMK GC #2: compaction failed in 32.902 min (1974140 ms), after 5 cycles |This message doesn't mean that there was an unrecoverable error, but only that compaction was terminated after a certain amount of attempts. Also, read the [following paragraph](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes). |Read the following [Oak documentation](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes), and the last question of the [Running Online Revision Cleanup](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) section. |
 | Cleanup |TarMK GC #2: cleanup interrupted |Cleanup has been cancelled by shutting down the repository. No impact on consistency is expected. Also, disk space is most likely not reclaimed to full extent. It will be reclaimed during next revision cleanup cycle. |Investigate why repository has been shut down and going forward try to avoid shutting down the repository during maintenance windows. |-->
 
 <table style="table-layout:auto">
@@ -556,7 +552,7 @@ TarMK GC: no base state available, running full compaction instead
   <tr>
     <td>N/A</td>
     <td>TarMK GC #2：5次循環後32.902分鐘(1974140毫秒)內壓實失敗。</td>
-    <td>此訊息並不表示發生無法復原的錯誤，只表示在嘗試一段時間後壓縮已終止。 此外，請閱讀 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">在段落之後。</a></td>
+    <td>此訊息並不表示發生無法復原的錯誤，只表示壓縮在嘗試一段時間後終止。 此外，請閱讀 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">在段落之後。</a></td>
     <td>閱讀下列內容 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak檔案</a>，以及「執行線上修訂清除」區段的最後一個問題。</a></td>
   </td>
   </tr>
@@ -616,21 +612,21 @@ Oak-run工具引進了多項功能，旨在提高修訂清除流程的效能，�
 
 此清單包含數個命令列引數，如下所述：
 
-* **-mmap。** 您可以將此項設為true或false。 如果設為true，則使用記憶體對應存取。 如果設為false，則會使用檔案存取。 如果未指定，記憶體對應存取會用於64位元系統，而檔案存取則會用於32位元系統。 在Windows上，一律會強制進行一般檔案存取，而會忽略此選項。 **此引數已取代 — Dtar.memoryMapped引數。**
+* **-mmap。** 您可以將此項設為true或false。 如果設為true，則使用記憶體對應存取。 如果設為false，則會使用檔案存取。 如果未指定，則會在64位元系統上使用記憶體對應存取，在32位元系統上使用檔案存取。 在Windows上，一律會強制進行一般檔案存取，而會忽略此選項。 **此引數已取代 — Dtar.memoryMapped引數。**
 
 * **-Dupdate.limit**. 定義磁碟臨時交易排清的臨界值。 預設值為 10000。
 
 * **-Dcompress間隔**. 壓縮目前地圖之前要保留的壓縮地圖專案數。 預設值為1000000。 如果有足夠的棧積記憶體可用，您應該將此值增加到更高的數目，以加快輸送量。 **此引數已在Oak 1.6版中移除，因此無效。**
 
-* **-Dcompaction-progress-log**. 將記錄的壓縮節點數。 預設值為150000，這表示在操作期間將記錄前150000個壓縮的節點。 請將此選項與以下記錄的下一個引數搭配使用。
+* **-Dcompaction-progress-log**. 記錄的已壓縮節點數。 預設值為150000，這表示在操作期間會記錄前150000個壓縮的節點。 將此函式與以下記錄的下一個引數搭配使用。
 
-* **-Dtar.PersistCompactionMap。** 將此引數設為true可使用磁碟空間來取代棧積記憶體來維持壓縮對應。 需要Oak-run工具 **版本1.4** 和更高版本。 如需更多詳細資訊，請參閱 [離線修訂清除常見問題](/help/sites-deploying/revision-cleanup.md#offline-revision-cleanup-frequently-asked-questions) 區段。 **此引數已在Oak 1.6版中移除，因此無效。**
+* **-Dtar.PersistCompactionMap。** 將此引數設為true可使用磁碟空間而非棧積記憶體來儲存壓縮對應。 需要Oak-run工具 **版本1.4** 和更高版本。 如需更多詳細資訊，請參閱 [離線修訂清除常見問題](/help/sites-deploying/revision-cleanup.md#offline-revision-cleanup-frequently-asked-questions) 區段。 **此引數已在Oak 1.6版中移除，因此無效。**
 
 * **—force。** 強制壓縮並忽略不匹配的區段存放區版本。
 
 >[!CAUTION]
 >
->使用 `--force` 引數會將區段存放區升級至最新版本，此版本與舊版Oak不相容。 此外，請考量到無法降級。 一般而言，使用這些引數時請務必謹慎，且僅在您瞭解如何使用這些引數時才會使用。
+>使用 `--force` 引數會將區段存放區升級至最新版本，此版本與舊版Oak不相容。 此外，請注意無法降級。 一般而言，使用這些引數時請務必謹慎，而且只有在您瞭解如何使用它們時才應謹慎。
 
 使用中的引數範例：
 
@@ -652,7 +648,7 @@ java -Dupdate.limit=10000 -Dcompaction-progress-log=150000 -Dlogback.configurati
  <tbody>
   <tr>
    <td><strong>決定離線修訂清除持續時間的因素為何？</strong></td>
-   <td><p>存放庫大小和需要清理的修訂數量會決定清理的持續時間。</p> </td>
+   <td><p>存放庫大小和必須清除的修訂數量會決定清除的持續時間。</p> </td>
   </tr>
   <tr>
    <td><strong>修訂版本和頁面版本之間有何差異？</strong></td>
@@ -664,7 +660,7 @@ java -Dupdate.limit=10000 -Dcompaction-progress-log=150000 -Dlogback.configurati
   </tr>
   <tr>
    <td><strong>如果「離線修訂清除」任務未在8小時內完成，該如何加快該任務執行速度？</strong></td>
-   <td>如果修訂任務未在8小時內完成，並且 <a href="/help/sites-administering/operations-dashboard.md#diagnosis-tools" target="_blank">執行緒傾印</a> 顯示主要熱點為 <code>InMemoryCompactionMap.findEntry</code>，搭配oak-run工具使用下列引數 <strong>版本1.4 </strong>或更高： <code>-Dtar.PersistCompactionMap=true</code>. 請注意 <code>-Dtar.PersistCompactionMap</code> 引數已在Oak 1.6版中移除。</td>
+   <td>如果修訂任務未在8小時內完成，並且 <a href="/help/sites-administering/operations-dashboard.md#diagnosis-tools" target="_blank">執行緒傾印</a> 顯示主要熱點為 <code>InMemoryCompactionMap.findEntry</code>，搭配oak-run工具使用下列引數 <strong>版本1.4 </strong>或更高： <code>-Dtar.PersistCompactionMap=true</code>. 此 <code>-Dtar.PersistCompactionMap</code> 引數已在Oak 1.6版中移除。</td>
   </tr>
  </tbody>
 </table>

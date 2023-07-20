@@ -1,22 +1,18 @@
 ---
-title: 設定Android Studio專案並建置Android應用程式
-seo-title: Set up the Android studio project and build the Android app
-description: 設定Android Studio專案和建置AEM Forms應用程式安裝程式的步驟
-seo-description: Steps to set up the Android Studio project and build the installer for the AEM Forms app
-uuid: 4c966cdc-d0f5-4b5b-b21f-f11e8a35ec8a
+title: 設定Android&trade； Studio專案並建置Android&trade；應用程式
+description: 設定Android&trade； Studio專案和建置Adobe Experience Manager (AEM) Forms應用程式安裝程式的步驟
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: forms-app
-discoiquuid: fabc981e-0c9e-4157-b0a1-0c13717fb6cd
 exl-id: 47d6af00-34d8-4e5d-8117-86fc1b6f58cb
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '597'
 ht-degree: 6%
 
 ---
 
-# 設定Android Studio專案並建置Android應用程式 {#set-up-the-android-studio-project-and-build-the-android-app}
+# 設定Android™ Studio專案並建置Android™應用程式 {#set-up-the-android-studio-project-and-build-the-android-app}
 
 本文章適用於建置AEM Forms應用程式6.3.1.1和更新版本。 若要從AEM Forms應用程式6.3的原始程式碼建立應用程式，請參閱 [設定Eclipse專案並建置Android™應用程式](/help/forms/using/setup-eclipse-project-build-installer.md).
 
@@ -49,27 +45,27 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 
 1. 複製下載的 `adobe-lc-mobileworkspace-src-<version>.zip` 封存至：
 
-   **適用於MAC使用者**： `[User_Home]/Projects`
+   **適用於Mac使用者**： `[User_Home]/Projects`
 
    **針對Windows®使用者**： `%HOMEPATH%\Projects`
 
    >[!NOTE]
    >
-   >若為Windows®，建議將Android專案保留在系統磁碟機中。
+   >若為Windows®，建議您將Android™專案保留在系統磁碟機中。
 
 1. 解壓縮下列目錄中的封存：
 
-   **適用於MAC使用者**： `[User_Home]/Projects/[your-project]`
+   **適用於Mac使用者**： `[User_Home]/Projects/[your-project]`
 
    **針對Windows®使用者**： `%HOMEPATH%\Projects\[your-project]`
 
    >[!NOTE]
    >
-   >建議您將擷取的Android專案匯入Android Studio之前，先保留在系統磁碟機中。
+   建議您將擷取的Android專案匯入Android™ Studio之前，先保留在系統磁碟機中。
 
 1. 啟動Android™ Studio。
 
-   **適用於MAC使用者**：更新 `local.properties` 檔案存在於 `[User_Home]/Projects/[your-project]/android` 資料夾並指向 `sdk.dir` 變數至 `SDK` 在案頭上的位置。
+   **適用於Mac使用者**：更新 `local.properties` 檔案存在於 `[User_Home]/Projects/[your-project]/android` 資料夾並指向 `sdk.dir` 變數至 `SDK` 在案頭上的位置。
 
    **針對Windows®使用者**：更新 `local.properties` 檔案存在於 `%HOMEPATH%\Projects\[your-project]\android` 資料夾並指向 `sdk.dir` 變數至 `SDK` 在案頭上的位置。
 
@@ -102,8 +98,8 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 
 ### 使用Android™ Debug Bridge {#andriod-debug-bridge}
 
-您可以透過，在Android™裝置上安裝應用程式 [Android™ Debug Bridge](https://developer.android.com/tools/help/adb.html) 使用下列指令：
+您可以在Android™裝置上安裝應用程式，方法是使用 [Android™ Debug Bridge](https://developer.android.com/tools/adb) 使用下列指令：
 
-**適用於MAC使用者**： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
+**適用於Mac使用者**： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
 
 **針對Windows®使用者**： `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`

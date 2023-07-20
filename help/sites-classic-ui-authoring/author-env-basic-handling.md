@@ -1,16 +1,14 @@
 ---
 title: 基本處理
-description: 使用AEM製作環境時基本處理的概觀。 它使用Sites主控台作為基礎。
-uuid: ab488d7c-7b7f-4a23-a80c-99d37ac84246
+description: 使用Adobe Experience Manager製作環境時基本處理的概觀。 它使用Sites主控台作為基礎。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1167'
 ht-degree: 4%
 
 ---
@@ -19,9 +17,9 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->* 此頁面旨在概述使用AEM製作環境時的基本處理方式。 它會使用 **網站** 以主控台為基礎。
+>* 此頁面旨在概述使用Adobe Experience Manager (AEM)製作環境時的基本處理方式。 它會使用 **網站** 以主控台為基礎。
 >
->* 部分功能並非在所有主控台中提供，且/或某些主控台提供其他功能。 有關個別主控台及其相關功能的特定資訊，將在其他頁面上詳細說明。
+>* 部分功能並未在所有主控台中提供，而其他功能則在某些主控台中提供。 有關個別主控台及其相關功能的特定資訊，將在其他頁面上詳細說明。
 >* 在整個AEM環境中都可以使用鍵盤快速鍵。 尤其是當 [使用主控台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md) 和 [編輯頁面](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
 >
 
@@ -29,7 +27,7 @@ ht-degree: 4%
 
 傳統UI提供一系列主控台，使用眾所周知的機制來導覽和起始動作，包括按一下、連按兩下和 [內容功能表](#context-menus).
 
-登入後，歡迎畫面會隨即顯示，其中會提供控制檯和服務連結清單：
+登入後，歡迎畫面會隨即顯示。 它提供控制檯和服務的連結清單：
 
 ![screen_shot_2012-01-30at61745pm](assets/screen_shot_2012-01-30at61745pm.png)
 
@@ -53,11 +51,11 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>啟動</strong></td>
-   <td>這可協助您管理您的 <a href="/help/sites-classic-ui-authoring/classic-launches.md">啟動</a>；這些功能可讓您為日後發行的一或多個已啟動網頁開發內容。<br /> <i>注意：在觸控式UI中，Sites主控台與「參考」邊欄提供許多相同的功能。</i> <i>必要時，可以從「工具」主控台使用此主控台；請選取作業，然後選取啟動。</i></td>
+   <td>這可協助您管理您的 <a href="/help/sites-classic-ui-authoring/classic-launches.md">啟動</a>；這些功能可讓您為日後發行的一或多個已啟動網頁開發內容。<br /> <i>注意：在觸控式UI中，Sites主控台與「參考」邊欄提供許多相同的功能。</i> <i>如有必要，可以從「工具」主控台使用此主控台；請選取作業，然後選取啟動。</i></td>
   </tr>
   <tr>
    <td><strong>收件匣 </strong></td>
-   <td>在許多情況下，許多人都參與工作流程的子任務，而且每個人都必須先完成自己的步驟，才能將工作移交給下一個人。 收件匣可讓您檢視與這類工作相關的通知。 另請參閱 <a href="/help/sites-administering/workflows.md">使用工作流程</a>. <br /> </td>
+   <td>通常，工作流程的子任務會涉及不同的人，每個人必須先完成自己的步驟，才能將工作移交給下一個人。 收件匣可讓您檢視與這類工作相關的通知。 另請參閱 <a href="/help/sites-administering/workflows.md">使用工作流程</a>. <br /> </td>
   </tr>
   <tr>
    <td><strong>標記</strong></td>
@@ -65,7 +63,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>工具</strong></td>
-   <td>此 <a href="/help/sites-administering/tools-consoles.md">工具主控台</a> 提供對許多專用工具和控制檯的存取，協助您管理網站、數位資產和內容存放庫的其他方面。</td>
+   <td>此 <a href="/help/sites-administering/tools-consoles.md">工具主控台</a> 提供存取數種專用工具和主控台的許可權，協助您管理網站、數位資產和內容存放庫的其他方面。</td>
   </tr>
   <tr>
    <td><strong>使用者</strong></td>
@@ -73,11 +71,11 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>網站</strong></td>
-   <td>Sites/Websites主控台可讓您 <a href="/help/sites-classic-ui-authoring/classic-page-author.md">建立、檢視及管理網站</a> 在您的AEM執行個體上執行。 透過這些主控台，您可以建立、複製、移動和刪除網站頁面、啟動工作流程，以及啟用（發佈）頁面。 您也可以開啟頁面進行編輯。<br /> </td>
+   <td>Sites/Websites主控台可讓您 <a href="/help/sites-classic-ui-authoring/classic-page-author.md">建立、檢視和管理網站</a> 在您的AEM執行個體上執行。 透過這些主控台，您可以建立、複製、移動和刪除網站頁面、啟動工作流程，以及啟用（發佈）頁面。 您也可以開啟頁面進行編輯。<br /> </td>
   </tr>
   <tr>
    <td><strong>工作流程</strong></td>
-   <td>工作流程是定義的一系列步驟，用於說明完成某些任務的流程。 在許多情況下，許多人都參與一項任務，每個人必須先完成自己的步驟，才能將工作移交給下一個人。 「工作流程」主控台可讓您建立工作流程模型並管理執行中的工作流程例項。 另請參閱 <a href="/help/sites-administering/workflows.md">使用工作流程</a>.<br /> </td>
+   <td>工作流程是定義的一系列步驟，用於說明完成某些任務的流程。 通常會有幾個人參與工作，而且每個人必須先完成自己的步驟，才能將工作移交給下一個人。 「工作流程」主控台可讓您建立工作流程模型並管理執行中的工作流程例項。 另請參閱 <a href="/help/sites-administering/workflows.md">使用工作流程</a>.<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -92,7 +90,7 @@ ht-degree: 4%
 
 * 右窗格
 
-  這會顯示頁面（在左窗格中選取的位置），且可用於執行動作。
+  這會顯示頁面（在左窗格中選取的位置），並可用來採取行動。
 
 從這裡，您可以 [管理您的頁面](/help/sites-authoring/managing-pages.md) 使用工具列、快顯功能表或開啟頁面以進一步操作。
 
@@ -104,28 +102,28 @@ ht-degree: 4%
 
 ## 存取說明 {#accessing-help}
 
-在各種主控台（例如網站）上，也有 **說明** 按鈕可用，這會開啟Package Share或檔案網站。
+在各種主控台（例如Websites）上， **說明** 按鈕可供使用。 按一下 **說明** 開啟Package Share或檔案網站。
 
 ![chlimage_1-10](assets/chlimage_1-10a.png)
 
-編輯頁面時 [sidekick也有存取說明的按鈕](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#accessing-help).
+編輯頁面時， [sidekick也有存取說明的按鈕](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#accessing-help).
 
 ## 使用網站控制檯導覽 {#navigating-with-the-websites-console}
 
 此 **網站** console會以樹狀結構列出您的內容頁面（左側窗格）。 為方便瀏覽，可視需要展開樹狀結構的區段(+)或收合區段(-)：
 
-* 按一下頁面名稱（在左窗格中）將：
+* 按一下左窗格中的頁面名稱會執行下列動作：
 
-   * 在右窗格中列出子頁面
-   * 同時展開左側窗格中的結構。
+   * 列出右側窗格中的子頁面
+   * 展開左側窗格中的結構。
 
-     基於效能原因，此動作取決於子節點數目。 在標準安裝中，此擴充方法適用於 `30` 或較少的子節點。
+     基於效能考量，此動作會視子節點的數目而定。 在標準安裝中，當有以下情況時，此擴充方法即可運作： `30` 或更少的子節點。
 
-* 連按兩下頁面名稱（左窗格）也會展開樹狀結構，不過同時開啟頁面並不會造成太明顯的效果。
+* 連按兩下頁面名稱（左窗格）會展開樹狀結構，不過同時開啟頁面時，這種效果並不明顯。
 
 >[!NOTE]
 >
->此預設值( `30`)可在您的應用程式特定的siteadmin widget設定中，依每個主控台進行變更：
+>此預設值( `30`)可在您的siteadmin widget應用程式專屬設定中依主控台變更：
 >
 >在網站管理員節點上：
 >
@@ -140,7 +138,7 @@ ht-degree: 4%
 >中的:
 >`/apps/cq/ui/widgets/themes/default/widgets/wcm/SiteAdmin.js`
 >
->另請參閱 [CQ Widget API中的SiteAdmin](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.SiteAdmin) 以取得更多詳細資料。
+>另請參閱 [CQ Widget API中的SiteAdmin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.SiteAdmin) 以取得更多詳細資料。
 
 ## 網站主控台上的頁面資訊 {#page-information-on-the-websites-console}
 
@@ -182,7 +180,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>狀態</td>
-   <td>指示頁面的目前狀態，例如頁面是否為工作流程或即時副本的一部分，或頁面目前是否已鎖定。</td>
+   <td>指出頁面的狀態，例如頁面是否為工作流程或即時副本的一部分，或頁面是否已鎖定。</td>
   </tr>
   <tr>
    <td>印象</td>
@@ -209,7 +207,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->若要選取可見欄，請將滑鼠停留在欄標題上。 隨即顯示下拉式功能表，您可在此處使用 **欄** 選項。
+>若要選取可見欄，請將滑鼠移至欄標題上方。 隨即顯示下拉式功能表，您可在此處使用 **欄** 選項。
 
 中頁面旁的顏色 **已發佈** 和 **修改時間** 欄指示發佈狀態：
 
@@ -224,6 +222,6 @@ ht-degree: 4%
 
 ## 內容功能表 {#context-menus}
 
-Classic UI使用眾所周知的機制來導覽和起始動作，包括按一下和連按兩下。 視目前情況而定，也可以使用一系列前後關聯選單（通常以滑鼠右鍵開啟）：
+Classic UI使用眾所周知的機制來導覽和起始動作，包括按一下和連按兩下。 根據目前的情況，也可以使用一系列前後關聯選單（以滑鼠右鍵開啟）：
 
 ![chlimage_1-11](assets/chlimage_1-11a.png)

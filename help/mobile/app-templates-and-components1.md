@@ -1,18 +1,14 @@
 ---
 title: 應用程式範本和元件
-seo-title: App Templates and Components
 description: 請依照本頁面的說明了解應用程式範本和元件。 它提供有關範本結構的詳細資訊。
-seo-description: Follow this page to learn about App Templates and Components. It provides detailed information on the structure of templates.
-uuid: ba2fd91b-de5a-4f39-a976-5455f9983669
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
-discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
 exl-id: 58d95325-7cb1-4204-842d-17add70e1fbf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '408'
 ht-degree: 1%
 
 ---
@@ -25,14 +21,14 @@ ht-degree: 1%
 
 範本可用來建立頁面，並定義可在所選範圍內使用的元件。 範本是節點的階層，其結構與要建立的頁面相同，但沒有任何實際內容。
 
-每個範本都會提供您一系列可供使用的元件。
+每個範本都會為您提供一系列可供使用的元件。
 
 * 範本的建置方式 [元件](/help/sites-developing/components.md)；
 * 元件會使用並允許存取Widget，而這些元件會用於轉譯內容。
 
 >[!NOTE]
 >
->若要瞭解如何使用CRXDE Lite開發您的AEM應用程式，請參閱 [使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md).
+>若要瞭解如何使用CRXDE Lite開發您的Adobe Experience Manager (AEM)應用程式，請參閱 [使用CRXDE Lite開發](/help/sites-developing/developing-with-crxde-lite.md).
 
 範本是頁面的基礎。
 
@@ -54,7 +50,7 @@ ht-degree: 1%
 * **jcr：title**  — 範本的標題；建立頁面時顯示在對話方塊中。
 * **jcr：description**  — 範本的說明；建立頁面時顯示在對話方塊中。
 
-此節點包含 *jcr：content (cq：PageContent)* 用作結果頁面內容節點基礎的節點；此參考使用 *sling：resourceType*，此元件用於呈現新頁面的實際內容。
+此節點包含 *jcr：content (cq：PageContent)* 用作結果頁面內容節點基礎的節點。 此參考資料，使用 *sling：resourceType*，此元件用於呈現新頁面的實際內容。
 
 >[!NOTE]
 >

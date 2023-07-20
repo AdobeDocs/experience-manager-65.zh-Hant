@@ -2,10 +2,10 @@
 title: 選用 — 如何使用Adobe Experience Manager建立單頁應用程式(SPA)
 description: 在此延續Adobe Experience Manager (AEM) Headless開發人員歷程的選擇性案例中，您將瞭解AEM如何將Headless傳送與傳統全棧疊CMS功能結合，以及如何使用AEM SPA Editor框架建立可編輯的SPA。
 exl-id: 91eadda2-b881-4e4a-867f-8c5c54e8f8b4
-source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '1267'
-ht-degree: 78%
+source-wordcount: '1264'
+ht-degree: 76%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 78%
 * 如何在 AEM 擷取和更新 Headless 內容。
 * 如何使 AEM Headless 專案上線。
 
-因此，您現在已經將您的第一個 AEM Headless 專案上線，或是已經掌握完成此作業的所有必要知識。恭喜！
+因此，您現在要麼已經啟用您的第一個AEM Headless專案，要麼已經具備執行此專案的知識。 恭喜！
 
-那麼你為什麼要閱讀這個額外的、選擇性的歷程延續部分呢？您可能還記得在 [快速入門](getting-started.md#integration-levels) 我們簡要討論AEM如何不僅支援headless傳送和傳統的全棧疊模式，而且支援結合了兩者優點的混合模式。 雖然不是傳統的 Headless 模型，但這類混合模型可以為特定專案提供前所未有的靈活性。
+那麼你為什麼要閱讀這個額外的、選擇性的歷程延續部分呢？您可能會回想起 [快速入門](getting-started.md#integration-levels)，會上簡要討論AEM如何不僅支援headless傳送和傳統的全棧疊模式，而且支援結合了兩者優點的混合模式。 雖然不是傳統的 Headless 模型，但這類混合模型可以為特定專案提供前所未有的靈活性。
 
 本文章以您對 AEM Headless 的了解為基礎，深入探討如何建立您自己的單頁應用程式 (SPA)，這些應用程式可在 AEM 中編輯。如此一來，您就可以建立內容並直接傳送至SPA，但該SPA在AEM中仍可編輯。
 
@@ -72,7 +72,7 @@ SPA不僅快速、流暢，而且更像原生應用程式，不僅對網頁訪�
 
 ## AEM 如何處理 SPA
 
-在 AEM 開發單頁應用程式是假設前端開發人員在建立 SPA 時有遵守標準最佳做法。如果您身為前端開發人員，遵循這些一般最佳實務和一些AEM特定原則，您的SPA將可透過AEM及其內容製作功能運作。
+在 AEM 開發單頁應用程式是假設前端開發人員在建立 SPA 時有遵守標準最佳做法。身為前端開發人員，如果您遵循這些一般最佳實務和一些AEM特定原則，您的SPA將可搭配AEM及其內容製作功能運作。
 
 * **可攜性** - 如同任何元件，SPA 元件應盡可能建置為具可攜性。SPA 應該使用可攜帶和可重複使用的元件建置。
 * **AEM 促成網站結構** - 前端開發人員建立元件並擁有其內部結構，但依賴 AEM 來定義網站的內容結構。
