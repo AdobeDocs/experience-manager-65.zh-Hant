@@ -4,7 +4,7 @@ seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credenti
 description: 使用OAuth 2.0使用者端憑證流程整合Salesforce與AEM Forms的步驟
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 exl-id: 31f2ccf8-1f4f-4d88-8c5f-ef1b7d1bfb4f
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 91683330024fbf1059715447073f35cecde45b0a
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 4%
@@ -79,4 +79,4 @@ Swagger是一組開放原始碼的規則、規格和工具，用於開發和描�
 1. 按一下 **[!UICONTROL 測試連線]**.
 1. 如果連線成功，請按一下 **[!UICONTROL 建立]** 按鈕。
 
-現在，您可以 [建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) 將設定的資料來源與您的調適型表單整合。
+現在，您可以 [建立表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) 將設定的資料來源與您的Adaptive Forms整合。

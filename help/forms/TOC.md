@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 91683330024fbf1059715447073f35cecde45b0a
 workflow-type: tm+mt
-source-wordcount: '3881'
+source-wordcount: '3889'
 ht-degree: 4%
 
 ---
@@ -127,6 +127,7 @@ ht-degree: 4%
    + [AEM Forms資料整合簡介](using/data-integration.md)
    + [設定資料來源](using/configure-data-sources.md)
    + [Microsoft Dynamics Odata設定](using/ms-dynamics-odata-configuration.md)
+   + [使用OAuth 2.0使用者端憑證流程授權的Salesforce整合](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [建立表單資料模型](using/create-form-data-models.md)
    + [使用表單資料模型](using/work-with-form-data-model.md)
    + [使用表單資料模型](using/using-form-data-model.md)
