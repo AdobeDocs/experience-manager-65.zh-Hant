@@ -8,7 +8,8 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
-source-git-commit: 91683330024fbf1059715447073f35cecde45b0a
+feature: Forms Service
+source-git-commit: fc148a5f5e0fcaac2980dc73004fa92ac3b91fb3
 workflow-type: tm+mt
 source-wordcount: '3889'
 ht-degree: 4%
@@ -473,7 +474,7 @@ ht-degree: 4%
       + [啟用Adobe Reader網頁瀏覽器外掛程式的線上註解](/help/forms/using/admin-help/enabling-online-commenting-reader-web.md)
       + [設定與Acrobat Reader DC擴充功能搭配使用的逾時值](/help/forms/using/admin-help/setting-timeout-values-acrobat-reader.md)
       + [正在更新過期的Reader延伸服務憑證](/help/forms/using/admin-help/updating-expired-reader-extension-certificates.md)
-   + 使用PDF產生器 {#work-with-pdf-generator}
+   + 使用PDF Generator {#work-with-pdf-generator}
       + [使用PDF產生器簡介](/help/forms/using/admin-help/overview-5.md)
       + [啟用多執行緒檔案轉換](/help/forms/using/admin-help/enabling-multi-threaded-file-conversions.md)
       + [設定Adobe PDF設定](/help/forms/using/admin-help/configuring-pdf-settings.md)
@@ -568,7 +569,7 @@ ht-degree: 4%
       + [備份AEM表單資料](/help/forms/using/admin-help/backing-aem-forms-data.md)
       + [要備份和復原的檔案](/help/forms/using/admin-help/files-back-recover.md)
       + [AEM表單的備份與回覆策略](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md)
-      + [PDF產生器備份限制](/help/forms/using/admin-help/pdf-generator-backup-limitations.md)
+      + [PDF Generator備份限制](/help/forms/using/admin-help/pdf-generator-backup-limitations.md)
       + [觀察資料夾的備份策略](/help/forms/using/admin-help/backup-strategies-watched-folders.md)
       + [復原AEM表單資料](/help/forms/using/admin-help/recovering-aem-forms-data.md)
       + [EMC Documentum使用者的Connector備份策略](/help/forms/using/admin-help/backup-strategy-connector-emc-documentum.md)
