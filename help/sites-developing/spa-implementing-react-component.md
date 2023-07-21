@@ -1,26 +1,22 @@
 ---
 title: 針對 SPA 實作 React元件
-seo-title: Implementing a React Component for SPA
-description: 本文介紹如何改寫簡單的現有React元件以與AEM SPA編輯器搭配使用的範例。
-seo-description: This article presents an example of how to adapt a simple, existing React component to work with the AEM SPA Editor.
-uuid: ae6a0a6f-0c3c-4820-9b58-c2a85a9f5291
+description: 本文介紹如何改寫簡單的現有React元件以搭配Adobe Experience Manager (AEM) SPA編輯器使用的範例。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: 6ed15763-02cc-45d1-adf6-cf9e5e8ebdb0
 docset: aem65
 exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 11%
+source-wordcount: '550'
+ht-degree: 10%
 
 ---
 
 # 針對 SPA 實作 React元件{#implementing-a-react-component-for-spa}
 
-單頁應用程式 (SPA) 可為網站使用者提供引人入勝的體驗。開發人員希望能夠使用SPA架構建立網站，而作者則希望能夠順暢地編輯使用SPA架構建立之網站的AEM內容。
+單頁應用程式 (SPA) 可為網站使用者提供引人入勝的體驗。開發人員希望能夠使用SPA架構建立網站，而作者則希望能夠順暢地編輯使用SPA架構建立之網站的Adobe Experience Manager (AEM)內容。
 
 SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文介紹如何改寫簡單的現有React元件以與AEM SPA編輯器搭配使用的範例。
 
@@ -37,9 +33,9 @@ SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 您應熟悉 [適用於AEM的SPA應用程式結構](/help/sites-developing/spa-getting-started-react.md) 閱讀本文之前。
 
 >[!CAUTION]
->本檔案使用 [We.Retail日誌應用程式](https://github.com/adobe/aem-sample-we-retail-journal) 僅供展示之用。 它不應用於任何專案。
+>本檔案使用 [We.Retail日誌應用程式](https://github.com/adobe/aem-sample-we-retail-journal) 僅供展示之用。 請勿用於任何專案工作。
 >
->任何 AEM 專案都應利用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並利用 SPA SDK。
+>任何 AEM 專案都應使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並使用 SPA SDK。
 
 ## 天氣元件 {#the-weather-component}
 
@@ -63,7 +59,7 @@ SPA製作功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 ### 天氣元件實作 {#weather-component-implementation}
 
-天氣元件實際上是根據公開可用的React元件，稱為 [React Open Weather](https://www.npmjs.com/package/react-open-weather)，此元件已改編為We.Retail Journal範例SPA應用程式中的元件。
+天氣元件以公開可用的React元件為基礎，稱為 [React Open Weather](https://www.npmjs.com/package/react-open-weather). 它已調整為可在We.Retail Journal範例SPA應用程式中作為元件使用。
 
 以下是使用React Open Weather元件的NPM檔案片段。
 
@@ -127,7 +123,7 @@ class Weather extends Component {
 MapTo('we-retail-journal/global/components/weather')(Weather, WeatherEditConfig);
 ```
 
-雖然後端元件必須已存在，但前端開發人員可以在We.Retail Journal SPA中善用React Open Weather元件，且只需很少的程式碼。
+雖然後端元件必須已經存在，但前端開發人員可以使用We.Retail Journal SPA中的React Open Weather元件，且幾乎不需要編碼。
 
 ## 下一步 {#next-step}
 

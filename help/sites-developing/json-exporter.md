@@ -1,16 +1,12 @@
 ---
 title: 內容服務的 JSON 匯出工具
-seo-title: JSON Exporter for Content Services
 description: AEM Content Services旨在概括AEM內/外內容的說明和傳遞，而不只是關注網頁。 它們使用可供任何使用者端使用的標準化方法，將內容傳送至非傳統AEM網頁的管道。
-seo-description: AEM Content Services are designed to generalize the description and delivery of content in/from AEM beyond a focus on web pages. They provide the delivery of content to channels that are not traditional AEM web pages, using standardized methods that can be consumed by any client.
-uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
 content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 11%
@@ -61,21 +57,21 @@ AEM Content Services旨在概括AEM內/外內容的說明和傳遞，而不只�
 
 * 例如，URL，例如：
 
-   ```shell
-   http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
-   ```
+  ```shell
+  http://localhost:4502/content/we-retail/language-masters/en/manchester-airport/jcr:content/root/responsivegrid/contentfragment.model.json
+  ```
 
 * 提供下列內容：
 
-   ![chlimage_1-193](assets/chlimage_1-193.png)
+  ![chlimage_1-193](assets/chlimage_1-193.png)
 
-   >[!NOTE]
-   >
-   >您可以 [調整您自己的元件](/help/sites-developing/json-exporter-components.md) 以存取及使用此資料。
+  >[!NOTE]
+  >
+  >您可以 [調整您自己的元件](/help/sites-developing/json-exporter-components.md) 以存取及使用此資料。
 
-   >[!NOTE]
-   >
-   >雖然不是標準實作， [支援多個選擇器，](json-exporter-components.md#multiple-selectors) 但是 `model` 必須為第一個。
+  >[!NOTE]
+  >
+  >雖然不是標準實作， [支援多個選擇器，](json-exporter-components.md#multiple-selectors) 但是 `model` 必須為第一個。
 
 ### 更多資訊 {#further-information}
 

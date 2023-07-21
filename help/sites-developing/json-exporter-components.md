@@ -1,18 +1,14 @@
 ---
 title: 為元件啟用 JSON 匯出
-seo-title: Enabling JSON Export for a Component
 description: 元件可調整為根據模型程式框架產生其內容的JSON匯出。
-seo-description: Components can be adapted to generate JSON export of their content based on a modeler framework.
-uuid: d7cc3347-2adb-4ea5-94a4-a847a2e66d28
 contentOwner: User
 content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 exl-id: 6d127e14-767e-46ad-aaeb-0ce9dd14d553
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '528'
 ht-degree: 7%
 
 ---
@@ -25,7 +21,7 @@ ht-degree: 7%
 
 JSON匯出是根據 [Sling模型](https://sling.apache.org/documentation/bundles/models.html)，並在上 [Sling模型匯出工具](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) 框架(本身需仰賴 [Jackson附註](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations))。
 
-這表示元件在需要匯出JSON時必須具有Sling模型。 因此，您需要遵循這兩個步驟，才能在任何元件上啟用JSON匯出。
+這表示元件必須匯出JSON，則必須有Sling模型。 因此，請依照這兩個步驟操作，以啟用任何元件的JSON匯出。
 
 * [為元件定義Sling模型](/help/sites-developing/json-exporter-components.md#define-a-sling-model-for-the-component)
 * [為Sling模型介面加上註釋](#annotate-the-sling-model-interface)
@@ -36,7 +32,7 @@ JSON匯出是根據 [Sling模型](https://sling.apache.org/documentation/bundles
 
 >[!NOTE]
 >
->如需使用Sling模型的範例，請參閱文章 [在AEM中開發Sling模型匯出工具](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html).
+>如需使用Sling模型的範例，請參閱 [在AEM中開發Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=en).
 
 Sling模型實作類別必須使用下列專案註釋：
 
@@ -52,7 +48,7 @@ Sling模型實作類別必須使用下列專案註釋：
 
 >[!NOTE]
 >
->Jackson註解通常不會在Sling模型類別層級指定，而是在Model介面層級指定。 這是為了確保將JSON匯出視為元件API的一部分。
+>Jackson註解不是在Sling模型類別層級指定的，而是在Model介面層級指定的。 這是為了確保將JSON匯出視為元件API的一部分。
 
 >[!NOTE]
 >
@@ -70,11 +66,11 @@ https://<server>:<port>/content/page.model.selector1.selector2.json
 
 ## 註釋Sling模型介面 {#annotate-the-sling-model-interface}
 
-若要JSON匯出工具架構列入考量，模型介面應實作 `ComponentExporter` 介面(或 `ContainerExporter`（若為容器元件）。
+若要JSON匯出工具架構列入考量，模型介面應實作 `ComponentExporter` 介面(或 `ContainerExporter`，如果有容器元件)。
 
 對應的Sling模型介面( `MyComponent`)之後會使用進行註解 [Jackson附註](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations) 以定義應如何匯出（序列化）。
 
-需要正確註解模型介面，以定義應序列化哪些方法。 依預設，所有遵守getter一般命名慣例的方法都將序列化，並且從getter名稱自然衍生出其JSON屬性名稱。 這可以使用防止或覆寫 `@JsonIgnore` 或 `@JsonProperty` 重新命名JSON屬性。
+必須正確註解模型介面，以定義應序列化哪些方法。 依預設，所有遵守getter一般命名慣例的方法都會序列化，並從getter名稱自然衍生其JSON屬性名稱。 這可以使用防止或覆寫 `@JsonIgnore` 或 `@JsonProperty` 重新命名JSON屬性。
 
 ## 範例 {#example}
 
@@ -91,7 +87,7 @@ GITHUB上的程式碼
 
 ## 相關檔案 {#related-documentation}
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱下列內容：
 
 * 此 [Assets使用手冊中的內容片段主題](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 

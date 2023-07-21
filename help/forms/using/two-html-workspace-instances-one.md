@@ -1,26 +1,22 @@
 ---
 title: 在單一伺服器上託管兩個AEM Forms工作區執行個體
-seo-title: Hosting two AEM Forms workspace instances on one server
 description: LC管理員如何自訂HTMLWS，以便在可透過不同URL存取的單一伺服器上託管兩個執行個體。
-seo-description: How LC administrators can customize HTML WS to host two instances on a single server accessible via different URLs.
-uuid: 0584f512-6b92-4418-b71c-93605cfa1927
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 exl-id: 32a546fc-e33f-46f9-ac3b-45eca0e12239
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
 
 # 在單一伺服器上託管兩個AEM Forms工作區執行個體 {#hosting-two-aem-forms-workspace-instances-on-one-server}
 
-AEM Forms的預設安裝與設定僅允許伺服器上使用一個AEM Forms工作區。 不過，您可能需要在一部AEM Forms伺服器上託管兩個不同的AEM Forms工作區例項。 這兩個例項可由不同的URL存取。
+AEM Forms的預設安裝與設定僅允許伺服器上使用一個AEM Forms工作區。 不過，您可能需要在一部AEM Forms伺服器上託管兩個不同的AEM Forms工作區例項。 這兩個執行個體可透過不同的URL存取。
 
-AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩個工作區可在同一部伺服器上使用。 在本自訂文章中，我們假設兩個工作區可在以下位置存取： `https://'[server]:[port]'/lc/ws` 和 `https://'[server]:[port]':/lc/ws2`.
+AEM Forms管理員可自訂工作區，以建立兩個不同的URL，並讓兩個工作區可在同一部伺服器上使用。 在本自訂文章中，您可以假設兩個工作區可在以下位置存取： `https://'[server]:[port]'/lc/ws` 和 `https://'[server]:[port]':/lc/ws2`.
 
 請依照下列步驟設定AEM Forms工作區。
 

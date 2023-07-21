@@ -1,19 +1,15 @@
 ---
 title: 編輯器限制
-seo-title: Editor Limitations
 description: 觸控式UI中的編輯器會使用覆蓋來與限制在iframe中的內容互動。 這個互動會對編輯器的使用以及開發人員造成一些限制。
-seo-description: The editor in the touch-enabled UI makes use of overlays to interact with content confined in an iframe. This interaction creates some limitations in both usage of the editor and also for developers.
-uuid: ff524530-3f3a-4c5b-9f94-4aa9aeb9d461
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
-discoiquuid: d748decb-a614-4c9e-a502-d6176b720f1a
 exl-id: fd64f5dc-dfff-466b-8cdd-3c24ea1a15c8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 10%
+source-wordcount: '306'
+ht-degree: 11%
 
 ---
 
@@ -33,7 +29,7 @@ ht-degree: 10%
 
 ### 結構頁面 {#structure-pages}
 
-頁面無法命名 `structure`. 已命名的頁面 `structure` 在頁面編輯器中將不可編輯。
+頁面無法命名 `structure`. 已命名的頁面 `structure` 在頁面編輯器中不可編輯。
 
 ## CSS限制 {#css-limitations}
 
@@ -43,15 +39,15 @@ ht-degree: 10%
 
 絕對定位的元素可能會導致其覆蓋的位置出現問題。
 
-* 如果發生此情況，請確定絕對位置元素的維度正確，因為編輯器將會使用完全相同的維度建立覆蓋。
+* 如果發生此情況，請確定絕對定位元素的維度正確無誤，因為編輯器會使用完全相同的維度建立覆蓋。
 
 ### vh單位 {#vh-units}
 
-`vh` 不支援單位，因為iframe高度必須由AEM自動調整。
+`vh` 不支援單位，因為iframe高度必須由Adobe Experience Manager (AEM)自動調整。
 
 ### 固定背景影像 {#fixed-background-images}
 
-由於固定背景影像內嵌於iframe中，捲動時可能無法顯示為固定背景影像。
+固定背景影像可能無法在捲動時顯示為固定，因為它內嵌在iframe中。
 
 * 選取 **以發佈的形式檢視頁面** 標題列動作可正確顯示頁面。
 
@@ -59,7 +55,7 @@ ht-degree: 10%
 
 頁面的內文元素不支援100%高度。
 
-* 您可以透過以下方式「拉伸」body元素，實作全熒幕主體：
+* 解決方法是透過「拉伸」body元素來實作全熒幕主體，如下所示：
 
 ```xml
 body {

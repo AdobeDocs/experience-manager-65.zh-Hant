@@ -1,30 +1,26 @@
 ---
 title: 將URL外部化
-seo-title: Externalizing URLs
 description: Externalizer是一種OSGI服務，可讓您以程式設計方式將資源路徑轉換為外部和絕對URL
-seo-description: The Externalizer is an OSGI service that allows you to programmatically transform a resource path into an external and absolute URL
-uuid: 65bcc352-fc8c-4aa0-82fb-1321a035602d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 938469ad-f466-42f4-8b6f-bfc060ae2785
 docset: aem65
 exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
 
 # 將URL外部化{#externalizing-urls}
 
-在AEM中， **Externalizer** 是OSGI服務，可讓您以程式設計方式轉換資源路徑(例如 `/path/to/my/page`)轉換成外部和絕對URL (例如， `https://www.mycompany.com/path/to/my/page`)，將路徑加上預先設定的DNS當作前置詞。
+在Adobe Experience Manager (AEM)中， **Externalizer** 是OSGI服務，可讓您以程式設計方式轉換資源路徑(例如 `/path/to/my/page`)轉換成外部和絕對URL (例如， `https://www.mycompany.com/path/to/my/page`)，將路徑加上預先設定的DNS當作前置詞。
 
 由於執行個體在網頁層後面執行時無法知道其外部可見的URL，而且由於有時必須在請求範圍之外建立連結，此服務會提供一個中央位置，以設定這些外部URL並建置它們。
 
-本頁面說明如何設定 **Externalizer** 服務及其使用方式。 如需詳細資訊，請參閱 [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).
+本頁面說明如何設定 **Externalizer** 服務及其使用方式。 如需詳細資訊，請參閱 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).
 
 ## 設定Externalizer服務 {#configuring-the-externalizer-service}
 
@@ -50,9 +46,9 @@ ht-degree: 0%
 
    其中：
 
-   * **配置** 通常為http或https，但也可以是ftp等。
+   * **配置** 是http或https，但也可以是ftp等。
 
-      * 必要時使用https強制執行https連結
+      * 如有需要，請使用https強制執行https連結
       * 若使用者端代碼在要求外部化URL時未覆寫配置，則會使用它。
 
    * **伺服器** 是主機名稱（可以是網域名稱或ip位址）。
@@ -61,7 +57,7 @@ ht-degree: 0%
 
    例如：`production https://my.production.instance`
 
-   下列對應名稱是預先定義的，必須一律設定為AEM依賴這些名稱：
+   下列對應名稱是預先定義的，必須加以設定，因為AEM仰賴這些名稱：
 
    * `local`  — 本機執行個體
    * `author`  — 編寫系統DNS
@@ -69,7 +65,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >自訂設定可讓您新增類別，例如 `production`， `staging` 甚至外部非AEM系統，例如 `my-internal-webservice`. 避免在專案的程式碼基底中跨不同位置對這類URL進行硬式編碼很有用。
+   >自訂設定可讓您新增類別，例如 `production`， `staging`，甚至外部非AEM系統，例如 `my-internal-webservice`. 避免在專案的程式碼基底中跨不同位置對這類URL進行硬式編碼很有用。
 
 1. 按一下 **儲存** 以儲存變更。
 
@@ -129,4 +125,4 @@ ht-degree: 0%
 
    * `https://publish-3.internal/contextpath/my/page.html`
 
-1. 如需更多範例，請參閱 [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).
+1. 如需更多範例，請參閱 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).

@@ -1,17 +1,15 @@
 ---
 title: 建立功能完整的網站(JSP)
-description: 本教學課程可讓您使用AEM建立完整功能的網站
-uuid: ec76ad5e-af6c-43ad-ae57-a4ae4ac7029f
+description: 本教學課程會教導您如何使用Adobe Experience Manager (AEM)建立功能齊全的網站。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 90bc05c9-e971-4e75-bc07-5e137c6c913e
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '4935'
+source-wordcount: '4941'
 ht-degree: 3%
 
 ---
@@ -20,9 +18,9 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->本文介紹如何使用JSP並根據傳統UI建立網站。 Adobe建議您為網站運用最新的AEM技術，如文章所述 [開發AEM Sites快速入門](/help/sites-developing/getting-started.md).
+>本文介紹如何使用JSP並根據傳統UI建立網站。 Adobe建議對您的網站使用最新的Adobe Experience Manager (AEM)技術，如文章詳細說明 [開發AEM Sites快速入門](/help/sites-developing/getting-started.md).
 
-本教學課程可讓您使用Adobe Experience Manager (AEM)建立完整功能的網站。 該網站將以通用網站為基礎，主要針對網頁開發人員。 所有開發都會在作者環境中進行。
+本教學課程可讓您使用AEM建立完整功能的網站。 該網站將以通用網站為基礎，主要針對網頁開發人員。 所有開發都會在作者環境中進行。
 
 本教學課程說明如何：
 
@@ -42,7 +40,7 @@ ht-degree: 3%
 
 1. 包含各種基礎元件。
 
-執行所有步驟後，您的頁面將如下所示：
+執行完所有步驟後，您的頁面應該如下所示：
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
@@ -50,7 +48,7 @@ ht-degree: 3%
 
 若要隨附教學課程而非進行練習，請下載website-1.0.zip。 此檔案是包含本教學課程結果的AEM內容套件。 使用 [封裝管理員](/help/sites-administering/package-manager.md) 以將套件安裝到您的編寫執行個體。
 
-**注意：** 安裝此套件將會覆寫您使用本教學課程建立的編寫執行個體上的任何資源。
+**注意：** 安裝此套件會覆寫您使用本教學課程在編寫執行個體上建立的任何資源。
 
 網站內容套件
 
@@ -110,9 +108,9 @@ static.css檔案和影像範例
 
 在本節中，您將建立下列專案：
 
-* 將在範例網站中用來建立內容頁面的內容頁面範本
-* 用於呈現內容頁面的contentpage元件
-* contentpage指令碼
+* 用來在範例網站中建立內容頁面的內容頁面範本。
+* 用於呈現內容頁面的contentpage元件。
+* contentpage指令碼。
 
 #### 建立Contentpage範本 {#creating-the-contentpage-template}
 
@@ -273,7 +271,7 @@ static.css檔案和影像範例
 
 本節說明如何使用AEM基礎元件指令碼及撰寫您自己的指令碼，來增強contentpage指令碼。
 
-此 **產品** 頁面如下所示：
+完成後， **產品** 頁面應如下所示：
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
@@ -311,7 +309,7 @@ static.css檔案和影像範例
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-   開啟頁面來源以檢視head.jsp和body.jsp指令碼產生的javascript和HTML元素。 下列指令碼片段會在您開啟頁面時Sidekick開啟：
+   開啟頁面來源以檢視head.jsp和body.jsp指令碼產生的JavaScript和HTML元素。 下列指令碼片段會在您開啟頁面時Sidekick開啟：
 
    ```java
    CQ.WCM.launchSidekick("/content/mywebsite/en/products",
@@ -407,9 +405,9 @@ static.css檔案和影像範例
 
 在本節中，您會建立一個元件，顯示網站所有頂層頁面的連結，以方便導覽。 此元件內容會顯示在使用內容頁面範本建立的所有頁面頂端。
 
-在頂端導覽元件(topnav)的第一個版本中，導覽專案僅為文字連結。 在第二個版本中，您會使用影像導覽連結來實作Topnav。
+在頂端導覽元件(topnav)的第一個版本中，導覽專案僅為文字連結。 在第二個版本中，您會使用影像導覽連結來實作topnav。
 
-您的頂端導覽列如下：
+完成後，您的頂端導覽應如下所示：
 
 ![chlimage_1-39](assets/chlimage_1-39.png)
 
@@ -479,7 +477,7 @@ static.css檔案和影像範例
 頁面元件會定義屬性，讓您為頁面提供字幕。 新增提供頁面內容相關資訊的字幕。
 
 1. 在您的瀏覽器中，開啟 **產品** 頁面。
-1. 在Sidekick上 **頁面** 標籤，按一下 **頁面屬性**.
+1. 在Sidekick **頁面** 標籤，按一下 **頁面屬性**.
 1. 在對話方塊的「基本」標籤上，展開 **更多標題和說明，** 和 **字幕** 屬性，型別 **我們的工作**. 按一下&#x200B;**「確定」**。
 1. 重複上述步驟以新增副標題 **關於我們的服務** 至 **服務** 頁面。
 1. 重複上述步驟以新增副標題 **我們獲得的信任** 至 **客戶** 頁面。
@@ -518,7 +516,7 @@ static.css檔案和影像範例
 1. 以滑鼠右鍵按一下 `/apps/mywebsite/components/contentpage` 節點並按一下 **建立** > **建立檔案**.
 1. 在 **建立檔案** 視窗，作為 **名稱**，型別 `navimage.png.java`.
 
-   .java副檔名會向Sling指出Apache Sling Scripting Java支援應該用於編譯指令碼和建立servlet。
+   .java副檔名會向Sling指示，應使用Apache Sling Scripting Java™支援來編譯指令碼和建立servlet。
 
 1. 將下列程式碼複製到 `navimage.png.java.`此程式碼會擴充AbstractImageServlet類別：
 
@@ -657,7 +655,7 @@ static.css檔案和影像範例
 在產品頁面下方建立兩個頁面。 對於每個說明兩個特定產品的頁面，您可以設定標題、說明和日期。
 
 1. 在「網站」頁面的資料夾樹狀結構中，選取「網站/我的網站/英文/產品」專案，然後按一下「新增>新增頁面」。
-1. 在對話方塊中輸入下列屬性值，然後按一下「建立」：
+1. 在對話方塊中，輸入下列屬性值，然後按一下「建立」：
 
    * 標題：產品1。
    * 名稱： product1。
@@ -712,7 +710,7 @@ static.css檔案和影像範例
 若要建立listchildren元件：
 
 1. 在CRXDE Lite中按一下滑鼠右鍵 `/apps/mywebsite/components`，選取 **建立**，則 **建立元件**.
-1. 在對話方塊中輸入下列屬性值，然後按下一步：
+1. 在對話方塊中，輸入下列屬性值，然後按下一步：
 
    * 標籤： listchildren。
    * 標題：我的Listchildren元件。
@@ -804,7 +802,7 @@ static.css檔案和影像範例
 
 #### 在Contentpage元件中包含清單子項 {#including-list-children-in-the-contentpage-component}
 
-若要在您的contentpage元件中包含listchildren元件，請依照下列步驟進行：
+若要將listchildren元件加入您的contentpage元件中，請依照下列步驟進行：
 
 1. 在CRXDE Lite中，開啟檔案 `left.jsp` 在 `/apps/mywebsite/components/contentpage` 並找出下列程式碼（第4行）：
 
@@ -846,7 +844,7 @@ static.css檔案和影像範例
 
 您的設計模式對話方塊包含設定影像和連結路徑的屬性。 標誌元件會放置在網站中所有頁面的左上角。
 
-其外觀如下：
+完成後，它應該如下所示：
 
 ![chlimage_1-46](assets/chlimage_1-46.png)
 
@@ -921,7 +919,7 @@ static.css檔案和影像範例
       * **標題:** `Logo (Design)`
 
 1. 以滑鼠右鍵按一下design_dialog分支中的tab1節點，然後按一下「刪除」。 按一下「儲存全部」。
-1. 在 `design_dialog/items/items`節點，建立名為的新節點 `img` 型別 `cq:Widget`. 新增下列屬性，然後按一下「儲存全部」：
+1. 在 `design_dialog/items/items`節點，建立名為的節點 `img` 型別 `cq:Widget`. 新增下列屬性，然後按一下「儲存全部」：
 
    | 名稱 | 類型 | 值 |
    |---|---|---|
@@ -1050,7 +1048,7 @@ public class img_GET extends AbstractImageServlet {
 
 在本節中，您將包含階層連結（追蹤）元件，這是基礎元件之一。
 
-1. 在CRXDE Lite中，瀏覽至 `/apps/mywebsite/components/contentpage`，開啟檔案 `center.jsp` 和取代：
+1. 在CRXDE Lite中，瀏覽至 `/apps/mywebsite/components/contentpage`，開啟檔案 `center.jsp`，並取代：
 
    ```java
    <div>trail</div>
@@ -1071,7 +1069,7 @@ public class img_GET extends AbstractImageServlet {
 
 在本節中，您將包含標題元件，這是基礎元件之一。
 
-1. 在CRXDE Lite中，瀏覽至 `/apps/mywebsite/components/contentpage`，開啟檔案 `center.jsp` 和取代：
+1. 在CRXDE Lite中，瀏覽至 `/apps/mywebsite/components/contentpage`，開啟檔案 `center.jsp`，並取代：
 
    ```xml
    <div>title</div>
@@ -1096,7 +1094,7 @@ public class img_GET extends AbstractImageServlet {
 
 將parsys元件（基礎元件之一）新增至contentpage元件。
 
-1. 在CRXDE Lite中，瀏覽至 `/apps/mywebsite/components/contentpage`，開啟檔案 `center.jsp` 並找到下列程式碼行：
+1. 在CRXDE Lite中，瀏覽至 `/apps/mywebsite/components/contentpage`，開啟檔案 `center.jsp`，並找到下列程式碼行：
 
    ```xml
    <div>parsys</div>
@@ -1177,17 +1175,17 @@ public class img_GET extends AbstractImageServlet {
 
 在此區段中，您可使用cq：editConfig節點將資產從「內容尋找器」拖曳至影像元件中。
 
-1. 在CRXDE Lite的/apps/mywebsite/components/image節點下，建立新節點，如下所示：
+1. 在CRXDE Lite中的/apps/mywebsite/components/image節點下，建立節點，如下所示：
 
    * 名稱：cq：editConfig。
    * 型別：cq：EditConfig。
 
-1. 在節點cq：editConfig下，建立新節點，如下所示：
+1. 在節點cq：editConfig下，建立節點，如下所示：
 
    * 名稱： cq：dropTargets。
    * 型別：cq：DropTargetConfig。
 
-1. 在cq：dropTargets節點下，建立新節點，如下所示：
+1. 在cq：dropTargets節點下，建立節點，如下所示：
 
    * 名稱：影像。
    * 型別： nt：unstructured。
@@ -1211,12 +1209,12 @@ public class img_GET extends AbstractImageServlet {
 
 #### 使用影像元件 {#using-the-image-component}
 
-在本節中，您將檢視 **產品** 頁面，並將影像元件新增至段落系統。
+在此區段中，您檢視 **產品** 頁面，並將影像元件新增至段落系統。
 
 1. 在您的瀏覽器中，重新載入 **產品** 頁面。
 1. 在Sidekick中，按一下 **設計模式** 圖示。
 1. 按一下「編輯」按鈕，編輯零件的設計對話方塊。
-1. 在對話方塊中， **允許的元件** 會顯示；導覽至 **我的網站**，選取 **我的影像元件** 並按一下 **確定。**
+1. 在對話方塊中， **允許的元件** 會顯示；導覽至 **我的網站**，選取 **我的影像元件**，然後按一下 **確定。**
 1. 返回至 **編輯模式。**
 1. 連按兩下parsys框架(開啟 **將元件或資產拖曳到這裡**)。 此 **插入新元件** 和 **Sidekick** 選取器如下所示：
 
@@ -1226,9 +1224,9 @@ public class img_GET extends AbstractImageServlet {
 
 在本節中，您將包含工具列元件，這是基礎元件之一。
 
-在編輯模式和設計模式中，您都有幾個選項。
+在編輯模式和設計模式中，您有幾個選項。
 
-1. 在CRXDE Lite中，導覽至 `/apps/mywebsite/components/contentpage`，開啟 `body.jsp` 檔案並找出下列程式碼：
+1. 在CRXDE Lite中，導覽至 `/apps/mywebsite/components/contentpage`，開啟 `body.jsp` 檔案，並找出下列程式碼：
 
    ```java
    <div class="toolbar">toolbar</div>
@@ -1264,7 +1262,7 @@ public class img_GET extends AbstractImageServlet {
 
 在本節中，您將建立元件以搜尋網站上的內容。 此搜尋元件可放置在任何頁面的段落系統中（例如，在專門的搜尋結果頁面上）。
 
-您的搜尋輸入方塊將會如下所示 **英文** 頁面：
+完成後，您的搜尋輸入方塊應如下所示 **英文** 頁面：
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -1500,7 +1498,7 @@ public class img_GET extends AbstractImageServlet {
 1. 在瀏覽器中，開啟「搜尋」頁面。
 1. 在Sidekick中，按一下設計模式圖示。
 1. 在「設計段落區塊」(Design of par block)中（在「搜尋」標題下），按一下「編輯」(Edit)。
-1. 在對話方塊中，向下捲動至  **我的網站** 群組，選取 **我的搜尋元件** 並按一下 **確定**.
+1. 在對話方塊中，向下捲動至  **我的網站** 群組，選取 **我的搜尋元件**，然後按一下 **確定**.
 1. 在Sidekick上，按一下三角形以返回編輯模式。
 1. 將「我的搜尋元件」從Sidekick拖曳至parsys框架。 如下所示：
 
@@ -1516,7 +1514,7 @@ public class img_GET extends AbstractImageServlet {
 
 對於此元件，您可以在編輯模式和設計模式中設定多個引數。
 
-1. 在CRXDE Lite中，導覽至 `/apps/mywebsite/components/contentpage`，開啟檔案 `right.jsp` 和取代：
+1. 在CRXDE Lite中，導覽至 `/apps/mywebsite/components/contentpage`，開啟檔案 `right.jsp`，並取代：
 
    ```java
    <div>iparsys</div>

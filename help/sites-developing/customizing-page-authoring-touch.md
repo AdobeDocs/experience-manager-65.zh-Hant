@@ -1,18 +1,14 @@
 ---
 title: 自訂頁面製作
-seo-title: Customizing Page Authoring
-description: AEM提供各種機制，讓您能夠自訂頁面製作功能
-seo-description: AEM provides various mechanisms to enable you to customize page authoring functionality
-uuid: 9dc72d98-c5ff-4a00-b367-688ccf896526
+description: Adobe Experience Manager (AEM)提供各種機制，可讓您自訂頁面製作功能。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 >
 >本檔案說明如何在現代化的觸控式UI中自訂頁面編寫，而不適用於傳統UI。
 
-AEM提供多種機制，可讓您自訂頁面製作功能(以及 [主控台](/help/sites-developing/customizing-consoles-touch.md))。
+Adobe Experience Manager (AEM)提供多種機制，可讓您自訂頁面製作功能(以及 [主控台](/help/sites-developing/customizing-consoles-touch.md))。
 
 * Clientlibs
 
@@ -38,30 +34,30 @@ AEM提供多種機制，可讓您自訂頁面製作功能(以及 [主控台](/he
 
 >[!NOTE]
 >
->如需進一步資訊，請參閱 [JS檔案集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html).
+>如需詳細資訊，請參閱 [JS檔案集](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html).
 
 您可以透過多種方式使用這些工具，來延伸AEM例項中的頁面製作功能。 以下說明選取範圍（概略說明）。
 
 >[!NOTE]
 >
->如需進一步詳細資訊，請參閱：
+>如需詳細資訊，請參閱下列內容：
 >
 >* 使用和建立 [clientlibs](/help/sites-developing/clientlibs.md).
 >* 使用和建立 [覆蓋](/help/sites-developing/overlays.md).
->* [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+>* [Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* [AEM觸控式UI的結構](/help/sites-developing/touch-ui-structure.md) 以取得用於編寫頁面的結構區域的詳細資訊。
 >
 
 
 >[!CAUTION]
 >
->您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
+>***不要*** 變更 `/libs` 路徑。
 >
->這是因為 `/libs` 下次升級執行個體時會被覆寫（而您在套用hotfix或feature pack時很可能會被覆寫）。
+>原因是因為內容屬於 `/libs` 下次升級您的執行個體時，即會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
 >
 >設定和其他變更的建議方法是：
 >
->1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
+>1. 重新建立必要專案（亦即，它存在於中）。 `/libs`)下 `/apps`
 >1. 進行任何變更 `/apps`
 
 ## 新增圖層（模式） {#add-new-layer-mode}
@@ -70,7 +66,7 @@ AEM提供多種機制，可讓您自訂頁面製作功能(以及 [主控台](/he
 
 ### 圖層範例：即時副本狀態 {#layer-example-live-copy-status}
 
-標準AEM例項提供MSM層。 這會存取與以下專案相關的資料： [多網站管理](/help/sites-administering/msm.md) 並在圖層中反白顯示。
+標準AEM例項提供MSM層。 這會存取與以下專案相關的資料： [多站台管理](/help/sites-administering/msm.md) 並在圖層中反白顯示。
 
 若要檢視其運作情況，您可以編輯任何 [We.Retail語言副本](/help/sites-developing/we-retail-globalized-site-structure.md) 頁面（或任何其他即時副本頁面）並選取 **即時副本狀態** 模式。
 
@@ -80,7 +76,7 @@ AEM提供多種機制，可讓您自訂頁面製作功能(以及 [主控台](/he
 
 ### 程式碼範例 {#code-sample}
 
-此範例套件說明如何建立新圖層（模式），這是MSM檢視的新圖層。
+此範例套件顯示如何建立圖層（模式），這是MSM檢視的新圖層。
 
 GITHUB上的程式碼
 
@@ -91,11 +87,11 @@ GITHUB上的程式碼
 
 ## 新增選擇類別至資產瀏覽器 {#add-new-selection-category-to-asset-browser}
 
-資產瀏覽器會顯示各種型別/類別（例如影像、檔案等）的資產。 這些資產也可依資產類別進行篩選。
+資產瀏覽器會顯示各種型別/類別的資產（例如影像和檔案）。 這些資產也可依資產類別進行篩選。
 
 ### 程式碼範例 {#code-sample-1}
 
-`aem-authoring-extension-assetfinder-flickr` 是一個範例套件，說明如何將新群組新增至資產尋找器。 此範例連線到 [閃爍](https://www.flickr.com)的公開串流並在sidepanel中顯示。
+`aem-authoring-extension-assetfinder-flickr` 是一個範例套件，說明如何將群組新增至資產尋找器。 此範例連線到 [閃爍](https://www.flickr.com)的公開資料流，並在側面板中顯示。
 
 GITHUB上的程式碼
 
@@ -106,11 +102,11 @@ GITHUB上的程式碼
 
 ## 篩選資源 {#filtering-resources}
 
-編寫頁面時，使用者通常必須從資源（例如頁面、元件、資產等）中進行選取。 例如，這可採取清單的形式，作者必須從中選擇專案。
+編寫頁面時，使用者通常必須從資源（例如頁面、元件和資產）中選取。 例如，這可採取清單的形式，作者必須從中選擇專案。
 
-為了將清單保持在合理的大小並與使用案例相關，可採用自訂述詞的形式實施篩選器。 例如，如果 [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) 元件是用來讓使用者選取特定資源的路徑，可透過下列方式篩選顯示的路徑：
+若要讓清單保持合理大小並與使用案例相關，可採用自訂述詞的形式實作篩選器。 例如，如果 [`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) 元件是用來讓使用者選取特定資源的路徑，可透過下列方式篩選顯示的路徑：
 
-* 實作自訂述詞 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/predicate/package-summary.html) 介面。
+* 實作自訂述詞 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) 介面。
 * 指定述詞的名稱，並在使用時參考該名稱 `pathbrowser`.
 
 如需建立自訂述詞的詳細資訊，請參閱 [本文](/help/sites-developing/implementing-custom-predicate-evaluator.md).
@@ -157,11 +153,11 @@ GITHUB上的程式碼
 
          * 屬性: `editorType`
 
-           定義為該元件觸發就地編輯時將使用的內嵌編輯器型別；例如， `text`， `textimage`， `image`， `title`.
+           定義為該元件觸發就地編輯時所使用的內嵌編輯器型別；例如， `text`， `textimage`， `image`， `title`.
 
-1. 編輯器的其他設定詳細資料可使用 `config` 包含設定的節點以及 `plugin` 節點，以包含必要的外掛程式設定詳細資料。
+1. 編輯器的其他設定詳細資料可使用 `config` 包含設定和的節點 `plugin` 節點，以包含必要的外掛程式設定詳細資料。
 
-   以下是為影像元件的影像裁切外掛程式定義外觀比例的範例。 請注意，由於熒幕大小可能非常有限，裁切比例已移至全熒幕編輯器，並且只能在那裡看到。
+   以下是為影像元件的影像裁切外掛程式定義外觀比例的範例。 由於熒幕大小有限的可能性，裁切外觀比例已移至全熒幕編輯器，並且只能在那裡看到。
 
    ```xml
    <cq:inplaceEditing
@@ -185,7 +181,7 @@ GITHUB上的程式碼
 
    >[!CAUTION]
    >
-   >請注意，在AEM中，裁切比例是由 `ratio` 屬性，定義為 **高度/寬度**. 這與傳統的寬度/高度定義不同，這麼做是出於舊版相容性的原因。 只要您定義「 」，製作使用者就不會知道任何差異 `name` 屬性明確，因為這是UI中顯示的內容。
+   >AEM裁切比例，由設定 `ratio` 屬性，定義為 **高度/寬度**. 這與傳統的寬度/高度定義不同，這樣做是出於舊版相容性的原因。 只要您定義「 」，製作使用者就不會知道任何差異 `name` 屬性明確，因為這是UI中顯示的內容。
 
 #### 建立新的就地編輯器 {#creating-a-new-in-place-editor}
 
@@ -209,7 +205,7 @@ GITHUB上的程式碼
 
 #### 建立新就地編輯器的程式碼範例 {#code-sample-for-creating-a-new-in-place-editor}
 
-`aem-authoring-extension-inplace-editor` 是一個範例套件，說明如何在AEM中建立新的就地編輯器。
+`aem-authoring-extension-inplace-editor` 是一個範例套件，說明如何在AEM中建立就地編輯器。
 
 GITHUB上的程式碼
 
@@ -243,7 +239,7 @@ GITHUB上的程式碼
 
 * 當有內容作者時，會自動出現在適當的功能表中 **沒有** 適當的復寫許可權，但 **有** DAM使用者和作者的成員資格。
 
-* 否則將不會顯示任何內容，因為復寫許可權已移除。
+* 否則，不會顯示任何內容，因為復寫許可權已移除。
 
 若要在發生此類啟動時具有自訂行為，您可以覆蓋 **請求啟用** 工作流程：
 
