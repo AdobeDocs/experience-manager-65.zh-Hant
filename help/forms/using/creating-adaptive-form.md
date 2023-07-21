@@ -5,16 +5,18 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: 6ab2538dd8095304a55433c15c8c3d095499d92c
+source-git-commit: f620966974b0f535d30a17a5fa3175a593e52fec
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1913'
 ht-degree: 0%
 
 ---
 
 # 建立最適化表單 {#creating-an-adaptive-form}
 
-<span class="preview"> 本文介紹最適化Forms的舊方法。 Adobe建議使用 [最適化Forms核心元件](/help/forms/using/create-an-adaptive-form-core-components.md) 以建立任何新表單。 這些元件代表 [最適化Forms建立工作取得重大進展](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，確保提供絕佳的使用者體驗。</span>
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+
+
 
 ## 建立最適化表單 {#strong-create-an-adaptive-form-strong}
 
