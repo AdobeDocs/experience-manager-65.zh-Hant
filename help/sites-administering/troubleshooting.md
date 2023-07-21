@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: da92d751-6f14-4512-9d77-7ecf098bd58e
 docset: aem65
 exl-id: ab4fc41f-e0e9-4577-aab2-f0b4298f9a59
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2f3168c9bd39926ee8cf86b48cc0daef9d783a1c
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '252'
 ht-degree: 3%
 
 ---
@@ -21,6 +21,13 @@ ht-degree: 3%
 # 使用記錄檔{#working-with-logs}
 
 本節包含可協助您進行疑難排解的記錄檔詳細資訊。
+
+>[!NOTE]
+>
+>如需有關記錄的進一步資訊，請參閱：
+>
+>* [AEM中的稽核記錄維護](/help/sites-administering/operations-audit-log.md)
+>* [使用稽核記錄和記錄檔](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)
 
 CRX記錄詳細記錄。 拆開包裝並啟動「快速入門」後，您可在下列位置找到記錄檔：
 
