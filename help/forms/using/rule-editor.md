@@ -10,14 +10,16 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '6884'
+source-wordcount: '6941'
 ht-degree: 0%
 
 ---
 
 # 調適型表單規則編輯器{#adaptive-forms-rule-editor}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
@@ -771,7 +773,7 @@ var c = {
 
 規則編輯器可讓您使用日期比較來建立條件。
 
-以下是一個範例條件，會在房屋已抵押時顯示靜態文字物件，使用者需填入日期欄位來表示該條件。
+以下是一個範例條件，會在房屋抵押貸款已到期時顯示靜態文字物件，使用者需填入日期欄位來表示該條件。
 
 當使用者填寫的屬性按揭日期為過去時，最適化表單會顯示有關收入計算的備註。 下列規則會比較使用者填寫的日期與目前日期，如果使用者填寫的日期早於目前日期，則表單會顯示文字訊息（名為Income）。
 

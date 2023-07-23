@@ -11,14 +11,16 @@ discoiquuid: ab694a93-00d2-44d7-8ded-68ab2ad50693
 docset: aem65
 feature: Adaptive Forms
 exl-id: a1a2b277-3133-404b-a7fc-337cedddb12c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 6%
+source-wordcount: '375'
+ht-degree: 7%
 
 ---
 
 # 將規則編輯器存取權授予給所選的使用者群組{#grant-rule-editor-access-to-select-user-groups}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 ## 概觀 {#overview}
 

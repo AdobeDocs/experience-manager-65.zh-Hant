@@ -9,14 +9,16 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
 
 # 建立具有可重複區段的表單 {#creating-forms-with-repeatable-sections}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 可重複區段是可動態新增或移除至表單的面板。
 
@@ -54,7 +56,7 @@ ht-degree: 0%
       * 若要建立新增面板按鈕，請指定 `this.panel.instanceManager.addInstance()`
       * 若要建立刪除面板按鈕，請指定 `this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
 
-      按一下 **完成**.
+      按一下&#x200B;**「完成」**。
 
       >[!NOTE]
       >
@@ -93,8 +95,6 @@ ht-degree: 0%
       >[!NOTE]
       >
       >從最適化表單中移除面板的所有執行個體時，若要新增已移除面板的執行個體，請使用_panelName語法來擷取面板的執行個體管理員，並使用執行個體管理員的addInstance API來新增已刪除的執行個體。 例如，_panelName.addInstance()。 它會新增已移除面板的例項。
-
-
 
 ## 使用上層面板的收合式選單版面   {#using-the-accordion-layout-for-the-parent-panel-nbsp}
 

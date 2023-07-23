@@ -10,14 +10,16 @@ discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
 feature: Adaptive Forms
 exl-id: ebec03a3-67a0-4ecd-84bb-8580388e048a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 15%
+source-wordcount: '810'
+ht-degree: 14%
 
 ---
 
 # 使用AEM翻譯工作流程將最適化表單和記錄檔案本地化 {#using-aem-translation-workflow-to-localize-adaptive-forms-and-document-of-record}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 本地化的表單可協助您跨地理區域提供更廣泛的受眾。 Adobe Experience Manager翻譯工作流程可協助您將最適化表單及其記錄檔案本地化。 您可以使用 **機器翻譯** 或 **人工翻譯** 將最適化表單本地化。
 
@@ -41,7 +43,6 @@ ht-degree: 15%
    >
    >* 在瀏覽器視窗中開啟表單的當地語系化版本之前，請確定瀏覽器的地區設定已設定為符合表單的地區設定。 例如，如果表單已翻譯成德文(de)語言，則將瀏覽器的地區設定設為德文(de)。
    >* 最適化表單元件不支援由右至左(RTL)語言。 例如，希伯來文。
-
 
    除了最適化表單外，自動產生的記錄檔案也會本地化。
 
@@ -78,4 +79,3 @@ ht-degree: 15%
 >
 >* 最適化表單元件不支援由右至左(RTL)語言。 例如，希伯來文。
 >
-

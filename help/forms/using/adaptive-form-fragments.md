@@ -10,14 +10,16 @@ discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2055'
+source-wordcount: '2112'
 ht-degree: 0%
 
 ---
 
 # 最適化表單片段{#adaptive-form-fragments}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 雖然每個表單都是專為特定目的而設計，但大多數表單中都有些常見的區段，例如提供個人詳細資訊，例如姓名和地址、家庭詳細資訊、收入詳細資訊等。 每次建立新表單時，表單開發人員都必須建立這些通用區段。
 
@@ -76,9 +78,9 @@ ht-degree: 0%
 1. 在「片段建立」對話方塊中，指定下列資訊：
 
    * **名稱**：片段名稱。 預設值為面板的元素名稱。 它是必填欄位。
-      >[!NOTE]
-      >
-      >請確定您為片段指定唯一的名稱。 如果已經有另一個相同名稱的片段，則無法建立片段。
+     >[!NOTE]
+     >
+     >請確定您為片段指定唯一的名稱。 如果已經有另一個相同名稱的片段，則無法建立片段。
 
    * **標題**：片段的標題。 預設值為面板的標題。
 
@@ -171,7 +173,7 @@ ht-degree: 0%
 
 您可以使用AEM Forms UI對最適化表單片段執行數個操作。
 
-1. 前往 `https://[hostname]:'port'/aem/forms.html`.
+1. 前往 `https://[hostname]:'port'/aem/forms.html`。
 
 1. 按一下 **選取** 在AEM Forms UI工具列中選取最適化表單片段。 工具列會顯示您可以對選取的最適化表單片段執行的下列操作。
 
@@ -241,7 +243,7 @@ ht-degree: 0%
 * 當您重新發佈更新的自適應表單片段時，變更會反映在使用片段的最適化表單已發佈例項中。
 * 包含Verify元件的調適型表單不支援匿名使用者。 此外，不建議在自適應表單片段中使用驗證元件。
 * (**僅限Mac**)為確保表單片段功能在所有情況下都完全運作，請將以下專案新增至/private/etc/hosts檔案：
-   `127.0.0.1 <Host machine>` **主機**：部署AEM Forms的Apple Mac電腦。
+  `127.0.0.1 <Host machine>` **主機**：部署AEM Forms的Apple Mac電腦。
 
 ## 參考片段 {#reference-fragments}
 

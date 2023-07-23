@@ -3,14 +3,16 @@ title: 建立或新增調適型表單至 AEM Sites 頁面
 description: 探索如何輕鬆建立或無縫新增調適型表單至您的 AEM Sites 頁面。 了解整合動態和可自訂表單至網站中的步驟式技術和最佳實務，最佳化您的數位體驗以達到最大影響。
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2913'
+source-wordcount: '2970'
 ht-degree: 23%
 
 ---
 
 # 建立或新增調適型表單至 AEM Sites 頁面 {#create-or-add-an-adaptive-form-to-aem-sites-page}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |

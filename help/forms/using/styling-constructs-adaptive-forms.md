@@ -10,14 +10,16 @@ discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2308'
-ht-degree: 3%
+source-wordcount: '2365'
+ht-degree: 4%
 
 ---
 
 # 調適型表單的樣式結構{#styling-constructs-for-adaptive-forms}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 ## 必備條件 {#prerequisites}
 
@@ -329,7 +331,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
  </tbody>
 </table>
 
-## 條款和條件 {#terms-and-conditions}
+## 條款與條件 {#terms-and-conditions}
 
 條款與條件(TnC) `` ``) widget可讓您指定條款與條件。 您可以使用下表所述的變數來自訂Widget。
 

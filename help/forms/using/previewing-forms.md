@@ -9,14 +9,16 @@ topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
 feature: Adaptive Forms
 exl-id: aed5703e-4fe6-4839-9657-c660ac48521e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 2%
+source-wordcount: '422'
+ht-degree: 4%
 
 ---
 
 # 預覽表單 {#previewing-a-form}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 ## 概觀 {#overview}
 
@@ -61,7 +63,7 @@ ht-degree: 2%
 
 1. 按一下「預覽」會列出適用於所選資產型別的可能預覽選項。 按一下所需的選項，在新索引標籤中轉譯選取的資產。
 
-   您的選項包括：
+   您的選項有：
 
    * 以HTML預覽
    * 以資料預覽

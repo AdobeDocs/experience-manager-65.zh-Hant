@@ -9,14 +9,16 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: f05ddd2fb72258b7de5d361eb87f5e68e7ddd7ff
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '4529'
+source-wordcount: '4586'
 ht-degree: 0%
 
 ---
 
 # 使用最適化表單的最佳作法 {#best-practices-for-working-with-adaptive-forms}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 ## 概觀 {#overview}
 
@@ -65,7 +67,7 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
 * 調適型表單範本是專門的AEM頁面，可定義調適型表單的結構和頁首頁尾資訊。 範本已預先設定最適化表單的版面、樣式和基本結構。 AEM Forms提供現成可用的範本和元件，供您製作調適型表單。 不過，您可以根據需求建立自訂範本和元件。 建議您收集最適化表單中所需其他範本和元件的需求。 如需詳細資訊，請參閱 [自訂最適化表單和元件](/help/forms/using/adaptive-forms-best-practices.md#customize-components).
 * AEM Forms可讓您根據下清單單模型建立最適化表單。 表單模型可作為表單與AEM系統之間資料交換的介面，並為最適化表單內外資料流提供XML型結構。 此外，表單模型會以結構描述和XFA限制的形式對調適型表單施加規則和限制。
 
-   * **無**：使用此選項建立的最適化表單不使用任何表單模型。 從此類表單產生的資料XML具有平面結構，其中包含欄位和對應值。
+   * **無**：使用此選項建立的最適化表單不使用任何表單模型。 從此類表單產生的資料 XML 具有包含欄位和對應值的單層結構。
    * **xml或JSON結構描述**： XML和JSON結構描述代表組織中後端系統產生或使用資料的結構。 您可以將結構描述關聯至最適化表單，並使用其元素將動態內容新增至最適化表單。 結構描述的元素可在內容瀏覽器的「資料模型物件」標籤中使用，以編寫調適型表單。 您可以拖放結構元素來建立表單。
    * **XFA表單範本**：如果您有投資以XFA為基礎的HTML5表單，這會是理想的表單模型。 它可讓您直接將XFA型表單轉換為最適化表單。 任何現有的XFA規則都會保留在關聯的最適化表單中。 產生的調適型表單支援XFA建構，例如驗證、事件、屬性和模式。
    * **表單資料模型**：如果您想要整合後端系統(例如資料庫、Web服務和AEM使用者設定檔)，以預先填寫最適化表單並將提交的表單資料寫入回後端系統，這會是偏好表單模型。 表單資料模型編輯器可讓您在可用來建立調適型表單的表單資料模型中定義及設定實體和服務。 如需詳細資訊，請參閱 [AEM Forms資料整合](/help/forms/using/data-integration.md).
@@ -128,11 +130,11 @@ AEM Forms提供 [規則編輯器](/help/forms/using/rule-editor.md) 可讓您建
 規則編輯器提供用於編寫規則的視覺化編輯器和代碼編輯器。 使用程式碼編輯器模式撰寫規則時，請考量下列事項：
 
 * 為表單欄位和元件使用有意義且唯一的名稱，以避免在撰寫規則時可能發生任何衝突。
-* 使用 `this` 運運算元，元件可在規則運算式中參照自身。 這可確保即使元件名稱變更，規則仍保持有效。 例如， `field1.valueCommit script: this.value > 10`.
+* 使用 `this` 運運算元，元件可在規則運算式中參照自身。 這可確保即使元件名稱變更，規則仍保持有效。 例如，`field1.valueCommit script: this.value > 10`。
 
-* 參照其他表單元件時使用元件名稱。 使用 `value` 屬性以擷取欄位或元件的值。 例如， `field1.value`.
+* 參照其他表單元件時使用元件名稱。 使用 `value` 屬性以擷取欄位或元件的值。 例如，`field1.value`。
 
-* 按相對唯一階層參照元件，以避免任何衝突。 例如， `parentName.fieldName`.
+* 按相對唯一階層參照元件，以避免任何衝突。 例如，`parentName.fieldName`。
 
 * 處理複雜或常用規則時，請考慮將商業邏輯寫入單獨的使用者端程式庫中，以便指定並在調適型表單中重複使用。 使用者端程式庫應為獨立程式庫，且不應有任何外部相依性，jQuery和Underscore.js除外。 您也可以使用使用者端程式庫來強制執行 [伺服器端重新驗證](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) 提交的表單資料中。
 * 調適型表單提供了一組API，您可以使用這些API與調適型表單進行通訊和對調適型表單執行動作。 部分重要API如下。 如需詳細資訊，請參閱 [Adaptive Forms的JavaScript資料庫API參考](https://adobe.com/go/learn_aemforms_documentation_63).
@@ -259,7 +261,7 @@ AEM提供翻譯工作流程，您可用來將最適化表單本地化。 如需�
 * 任何修改，例如新增元件或以當地語系化表單套用指令碼，都不會自動當地語系化。 因此，您必須先完成表單，再進行本地化，以避免多個本地化週期。
 * 使用 `afAcceptLang` 要求引數以覆寫瀏覽器地區設定並以指定的地區設定轉譯表單。 例如，無論瀏覽器設定中指定的地區設定為何，下列URL將強制以日文地區設定轉譯表單：
 
-   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+  `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * AEM Forms目前支援英文(en)、西班牙文(es)、法文(fr)、義大利文(it)、德文(de)、日文(ja)、葡萄牙文 — 巴西文(pt-BR)、中文(zh-CN)、中文 — 中國台灣(zh-TW)和韓文(ko-KR)本地化的最適化表單內容。 不過，您可在執行階段為最適化表單新增地區設定的支援。 如需詳細資訊，請參閱 [支援最適化表單本地化的新地區設定](/help/forms/using/supporting-new-language-localization.md).
 
@@ -269,7 +271,7 @@ AEM提供翻譯工作流程，您可用來將最適化表單本地化。 如需�
 
 您可以另外設定一個AEM Forms伺服器執行個體，駐留在防火牆後面的安全區域中。 您可以將此執行個體用於：
 
-* **批次處理**：以負載較重的批次重複產生或排程的工作。 例如，列印陳述式、產生對應，以及使用PDF產生器、輸出和組合器等檔案服務。
+* **批次處理**：以負載較重的批次重複產生或排程的工作。 例如，列印陳述式、產生對應，以及使用PDF Generator、輸出和組合器等檔案服務。
 * **儲存PII資料**：將PII資料儲存在處理伺服器上。 如果您已使用自訂儲存提供者來儲存PII資料，則不需要使用。
 
 ### 將專案移動到另一個環境 {#moving-project-to-another-environment}
@@ -312,7 +314,7 @@ AEM提供翻譯工作流程，您可用來將最適化表單本地化。 如需�
 
 * **儲存提交資料**：如果您使用Form Portal Submit Store，則應實作自訂SPI以將提交資料儲存在資料庫中。 另請參閱 [將草稿和提交元件與資料庫整合的範例](/help/forms/using/integrate-draft-submission-database.md) 以取得範例整合。
 
-   您也可以撰寫自訂提交動作，將表單資料和附件儲存在安全的儲存空間中。 另請參閱 [為最適化表單編寫自訂提交動作](/help/forms/using/custom-submit-action-form.md) 以取得詳細資訊。
+  您也可以撰寫自訂提交動作，將表單資料和附件儲存在安全的儲存空間中。 另請參閱 [為最適化表單編寫自訂提交動作](/help/forms/using/custom-submit-action-form.md) 以取得詳細資訊。
 
 * **草稿識別碼的長度**：將最適化表單儲存為草稿時，會產生草稿ID以唯一識別草稿。 草稿ID欄位長度的最小值是26個字元。 Adobe建議將草稿ID長度設定為26個或更多字元。
 

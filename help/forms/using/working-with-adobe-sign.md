@@ -11,14 +11,16 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '3878'
+source-wordcount: '3935'
 ht-degree: 1%
 
 ---
 
 # 使用 [!DNL Adobe Sign] 在最適化表單中{#using-adobe-sign-in-an-adaptive-form}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |

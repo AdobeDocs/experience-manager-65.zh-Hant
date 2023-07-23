@@ -10,14 +10,16 @@ discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '2803'
 ht-degree: 0%
 
 ---
 
 # 最適化表單運算式{#adaptive-form-expressions}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 適用性表單透過動態指令碼功能，為使用者提供最佳化和簡化的表單填寫體驗。 它可讓您編寫運算式以新增各種行為，例如動態顯示/隱藏欄位和面板。 它也可讓您新增計算欄位、讓欄位成為唯讀、新增驗證邏輯等。 動態行為取決於使用者輸入或預填的資料。
 
@@ -71,7 +73,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
 
 ### 計算運算式 {#calculate-expression}
 
-計算運算式可用來使用運算式自動計算欄位的值。 通常，這類運算式會使用其他欄位的值屬性。 例如， `field2.value + field3.value`. 每當值 `field2`或 `field3`會變更、重新觸發運算式並重新計算值。
+計算運算式可用來使用運算式自動計算欄位的值。 通常，這類運算式會使用其他欄位的值屬性。 例如，`field2.value + field3.value`。每當值 `field2`或 `field3`會變更、重新觸發運算式並重新計算值。
 
 **套用至**：欄位
 
@@ -282,7 +284,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 1. 開啟已建立節點的「屬性」標籤。 例如，開啟的「屬性」標籤 `textboxpatterns`. 新增 `guideComponentType` 屬性並設定其值為 *fd/af/components/formatter/guideTextBox*.
 
 1. 此屬性的值會依您要定義模式的欄位而有所不同。 數值欄位中， `guideComponentType` 屬性為 *fd/af/components/formatter/guideNumericBox*. 「日期挑選器」欄位的值為 *fd/af/components/formatter/guideDatepicker*.&quot;
-1. 您可以將屬性指派給，以新增自訂模式 `textboxpatterns` 節點。 以名稱新增屬性(例如 `pattern1`)，並將其值設定為您要新增的模式。 例如，新增屬性 `pattern1` 值為Fax=text{99-999-9999999}。 此模式適用於您在Adaptive Forms中使用的所有文字方塊。
+1. 您可以將屬性指派給，以新增自訂模式 `textboxpatterns` 節點。 以名稱新增屬性(例如 `pattern1`)，並將其值設定為您要新增的模式。 例如，新增屬性 `pattern1` 值為Fax=text{99-999-9999999}. 此模式適用於您在Adaptive Forms中使用的所有文字方塊。
 
    ![為CrxDe中的欄位建立自訂模式](assets/creating-custom-patterns.png)
 

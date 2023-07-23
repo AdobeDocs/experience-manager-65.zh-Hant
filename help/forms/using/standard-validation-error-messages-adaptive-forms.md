@@ -10,14 +10,16 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
 exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: cd6d9b4d019e24002e4fe1cc8679d270b24c2934
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '1131'
-ht-degree: 0%
+source-wordcount: '1188'
+ht-degree: 1%
 
 ---
 
 # 適用性表單的標準驗證錯誤訊息 {#standard-validation-error-messages}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |

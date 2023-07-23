@@ -10,14 +10,16 @@ discoiquuid: 264aa8c0-ba64-4768-b3d1-1b9baa6b4d72
 docset: aem65
 feature: Adaptive Forms
 exl-id: 4254c2cb-66cc-4a46-b447-bc5e32def7a0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 0%
+source-wordcount: '626'
+ht-degree: 1%
 
 ---
 
 # 使用一組最適化表單建立最適化表單{#create-an-adaptive-form-using-a-set-of-adaptive-forms}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 ## 概觀 {#overview}
 
@@ -141,7 +143,7 @@ ht-degree: 0%
 
 1. 在編輯模式下開啟父表單。
 1. 在側邊欄中，按一下 **資產** ![資產 — 瀏覽器](assets/assets-browser.png). 在Assets下，選取 **最適化表單** 下拉式清單。
-   [ ![在Assets下選取最適化表單](assets/asset.png)](assets/asset-1.png)
+   [![在Assets下選取最適化表單](assets/asset.png)](assets/asset-1.png)
 
 1. 拖放您要新增為子表單的最適化表單。
-   [ ![將最適化表單拖放至您的網站](assets/drag-drop.png)](assets/drag-drop-1.png)您拖放的最適化表單會新增為子表單。
+   [![將最適化表單拖放至您的網站](assets/drag-drop.png)](assets/drag-drop-1.png)您拖放的最適化表單會新增為子表單。

@@ -10,14 +10,16 @@ discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 feature: Adaptive Forms
 exl-id: 29cbc330-7b3d-457e-ba4a-7ce6091f3836
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2248'
 ht-degree: 0%
 
 ---
 
 # 預填自適應表單欄位{#prefill-adaptive-form-fields}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
@@ -137,7 +139,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
 >[!NOTE]
 >
->建議不要在繫結面板（非空白面板）中使用未繫結欄位 `bindRef` （透過從Sidekick或資料來源索引標籤拖動元件而建立）。 這可能會導致這些未繫結欄位的資料遺失。 此外，建議整個表單中的欄位名稱必須是唯一的，尤其是未繫結的欄位。
+>建議不要在繫結面板（非空白面板）中使用未繫結欄位 `bindRef` (透過從「Sidekick」或「資料來源」標籤拖動元件而建立)。 這可能會導致這些未繫結欄位的資料遺失。 此外，建議整個表單中的欄位名稱必須是唯一的，尤其是未繫結的欄位。
 
 #### 不含afData和afBoundData包裝函式的範例 {#an-example-without-afdata-and-afbounddata-wrapper}
 
@@ -202,7 +204,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
 >[!NOTE]
 >
->在繫結面板中使用未繫結欄位（具有非空白bindRef的面板，這些面板是透過從Sidekick或「資料來源」標籤拖動元件而建立的）是 **not** 建議使用，因為它可能會導致未繫結欄位的資料遺失。 建議在表單中設定唯一的欄位名稱，尤其是未繫結的欄位。
+>在繫結面板中使用未繫結欄位(具有非空白bindRef的面板，這些面板是透過從「Sidekick」或「資料來源」標籤拖動元件而建立的)是 **not** 建議使用，因為它可能會導致未繫結欄位的資料遺失。 建議在表單中設定唯一的欄位名稱，尤其是未繫結的欄位。
 
 ### 無表單模型的最適化表單 {#adaptive-form-with-no-form-model}
 

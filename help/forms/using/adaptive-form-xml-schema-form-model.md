@@ -5,14 +5,16 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '1073'
-ht-degree: 3%
+source-wordcount: '1130'
+ht-degree: 6%
 
 ---
 
 # 使用XML結構描述建立調適型表單 {#creating-adaptive-forms-using-xml-schema}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 ## 必備條件 {#prerequisites}
 
@@ -62,7 +64,7 @@ XML結構描述包含簡單和複雜的元素型別。 元素具有將規則新�
   </tr>
   <tr>
    <td><code>xs:date</code></td>
-   <td>日期選擇器</td>
+   <td>日期挑選器</td>
   </tr>
   <tr>
    <td><code class="code">xs:enumeration
@@ -178,7 +180,7 @@ XML結構描述包含簡單和複雜的元素型別。 元素具有將規則新�
    <td><p><strong> 結構描述屬性</strong></p> </td>
    <td><p><strong>資料類型</strong></p> </td>
    <td><p><strong>說明</strong></p> </td>
-   <td><p><strong>Component</strong></p> </td>
+   <td><p><strong>元件</strong></p> </td>
   </tr>
   <tr>
    <td><p><code>totalDigits</code></p> </td>
@@ -290,11 +292,11 @@ XML結構描述包含簡單和複雜的元素型別。 元素具有將規則新�
 
 ![XML結構描述元素的bindref欄位](assets/dblclick.png)
 
-bindRef</code> 欄位顯示樹狀元素與結構描述中元素或屬性之間的關聯。
+此 <code>bindRef</code> 欄位顯示樹狀元素與結構描述中元素或屬性之間的關聯。
 
 >[!NOTE]
 >
->屬性具有 `@` 符號在其中 `bindRef`值，以便與元素加以區分。 例如， `/config/projectDetails/@duration`.
+>屬性具有 `@` 符號在其中 `bindRef`值，以便與元素加以區分。 例如，`/config/projectDetails/@duration`。
 
 **為什麼我無法為可重複的子表單（minOccours或maxOccurs值大於1）拖曳子表單的個別元素（由任何複雜型別產生的結構）？**
 

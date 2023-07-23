@@ -10,14 +10,16 @@ discoiquuid: 71d1aa10-d191-49bc-a50f-1098324f1cfe
 docset: aem65
 feature: Adaptive Forms
 exl-id: 46e7b858-44d1-41c8-9f44-4e959e593dc1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 0%
+source-wordcount: '550'
+ht-degree: 1%
 
 ---
 
 # 將提交稽核者與表單建立關聯 {#associating-submission-reviewers-with-a-form}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 建立表單時，您可以指定透過表單入口網站稽核表單提交並提供意見回饋的使用者。 您的組織可以收集意見並對提交的表單進行重工。
 

@@ -9,14 +9,16 @@ topic-tags: author
 discoiquuid: d519ac4e-6d29-4a69-874e-792acabe87ff
 feature: Adaptive Forms
 exl-id: 948b2c12-895d-49e3-a943-d8fe87174fc4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 0%
+source-wordcount: '745'
+ht-degree: 1%
 
 ---
 
 # 自動儲存最適化表單 {#auto-save-an-adaptive-form}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 您可以設定最適化表單，以根據事件或預先定義的時間間隔自動開始儲存內容。 依預設，最適化表單的內容會在使用者動作時儲存，例如按下儲存按鈕時。 自動儲存選項有助於以下作業：
 
@@ -32,7 +34,7 @@ ht-degree: 0%
 1. 若要存取屬性中的自動儲存區段，請選取元件，然後點選 ![欄位層級](assets/field-level.png) > **[!UICONTROL 最適化表單容器]**，然後點選 ![cmppr](assets/cmppr.png).
 1. 在 **[!UICONTROL 自動儲存]** 區段， **[!UICONTROL 啟用]** 自動儲存選項。
 1. 在 **[!UICONTROL 最適化表單事件]** 方塊中，指定1或TRUE會在表單載入瀏覽器時自動開始儲存表單。 您也可以為事件指定條件運算式，觸發並傳回true時，條件運算式會開始儲存表單內容。
-1. 指定觸發器。 系統會根據您的設定觸發自動儲存。 您的選項包括：
+1. 指定觸發器。 系統會根據您的設定觸發自動儲存。 您的選項有：
 
    * **[!UICONTROL 基於時間：]** 選取根據特定時間間隔開始儲存內容的選項。
    * **[!UICONTROL 基於事件：]** 選取選項，以便在觸發事件時開始儲存內容。

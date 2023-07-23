@@ -10,9 +10,9 @@ discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
 feature: Adaptive Forms
 exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '740'
 ht-degree: 5%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 5%
 # XDP型調適型表單中的XFA支援{#xfa-support-in-xdp-based-adaptive-forms}
 
 ## 簡介 {#introduction}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 調適型表單可支援XDP檔案中定義的多種XFA事件、屬性、指令碼和驗證，包括：
 

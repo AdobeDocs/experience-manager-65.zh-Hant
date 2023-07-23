@@ -10,14 +10,16 @@ discoiquuid: f9ff2cc5-3f0a-4b2f-a206-2fe0985646ea
 docset: aem65
 feature: Adaptive Forms
 exl-id: 6b6e27b5-8b4e-489c-9e72-4d256692c1ca
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 0%
+source-wordcount: '272'
+ht-degree: 3%
 
 ---
 
 # AEM Forms中的預留位置文字 {#placeholder-text-in-aem-forms}
+
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 預留位置文字代表單字或短語。 其目的是協助使用者在控制項沒有值時輸入資料。 預留位置文字可以是範例值，或是預期格式的簡短說明。 預留位置文字會在使用者輸入值之前顯示，當使用者輸入或選取值時會移除預留位置文字。
 
