@@ -11,16 +11,19 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 498fb5f6f923710a907e1cf525f56f49850e16b2
 workflow-type: tm+mt
-source-wordcount: '1972'
+source-wordcount: '1995'
 ht-degree: 0%
 
 ---
 
 # 在最適化表單中使用驗證碼{#using-captcha-in-adaptive-forms}
 
+|版本 |文章連結 | |-------- |---------------------------- | | AEMAS A CLOUD SERVICE |    [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/captcha-adaptive-forms.html)                  | | AEM 6.5 |本文 |
+=======
 <span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+
 
 CAPTCHA （完全自動化的公用圖靈測試，用於區分電腦和人類）是一種常用於線上交易的程式，用來區分人類和自動化程式或機器人。 這會帶來挑戰，並評估使用者回應，以判斷它是人類還是機器人與網站互動。 它可防止使用者在測試失敗時繼續進行，並透過防止機器人張貼垃圾郵件或惡意目的來確保線上交易的安全。
 
