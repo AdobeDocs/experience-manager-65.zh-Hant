@@ -4,7 +4,7 @@ description: 探索如何輕鬆建立或無縫新增調適型表單至您的 AEM
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 4992416c0deec7eab51920fd9c7e1e2b10887ea5
+source-git-commit: 600dcc52829ff2c5e54176bda7631845ef24f986
 workflow-type: tm+mt
 source-wordcount: '2970'
 ht-degree: 24%
@@ -45,17 +45,17 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
 
 您可以通過使用以下選項來充分利用此功能：
 
-* **新增自訂最適化表單至AEM Sites頁面：** 從頭開始建立全新的表單，根據您的需求和設計偏好進行量身打造。
+* **[新增自訂最適化表單至AEM Sites頁面：](#create-an-adaptive-form-in-sites-editor)** 從頭開始建立全新的表單，根據您的需求和設計偏好進行量身打造。
 
-* **新增自訂最適化表單至體驗片段：** 將表單新增至AEM體驗片段，讓您的表單能夠延伸範圍，進而允許多個頁面或網站順暢地重複使用。
+* **[新增自訂最適化表單至體驗片段：](#create-an-adaptive-form-in-experience-fragment)** 將表單新增至AEM體驗片段，讓您的表單能夠延伸範圍，進而允許多個頁面或網站順暢地重複使用。
 
-* **將多個表單新增至AEM Sites頁面或體驗片段：**  新增多個表單至一個頁面，以根據使用者的偏好和需求為其提供多個選擇。 這些可以是從頭開始的全新形式和現有形式的組合。
-
-* **將最適化表單轉換為體驗片段：** 將新增至AEM Sites頁面的最適化表單轉換為體驗片段，以便在多個AEM Sites頁面中重複使用表單。
+* **[將最適化表單轉換為體驗片段：](#convert-an-adaptive-form-in-sites-page-to-an-experience-fragment)** 將新增至AEM Sites頁面的最適化表單轉換為體驗片段，以便在多個AEM Sites頁面中重複使用表單。
 
 * **根據核准的範本建立並新增表單至AEM Sites頁面：** 運用預先核准的範本，快速建立符合貴組織品牌指導方針與設計標準的表單。 此選項僅適用於以最適化Forms編輯器或Adaptive Forms — 內嵌元件建立的最適化Forms 。
 
 * **將現有表單新增至AEM Sites頁面：** 將您已建立的表單輕鬆整合至網站，讓訪客可直接與他們互動。 此選項僅適用於以最適化Forms編輯器或Adaptive Forms — 內嵌元件建立的最適化Forms 。
+
+* **將多個表單新增至AEM Sites頁面或體驗片段：**  新增多個表單至一個頁面，以根據使用者的偏好和需求為其提供多個選擇。 這些可以是從頭開始的全新形式和現有形式的組合。
 
 ## 考量事項 {#consideration}
 
