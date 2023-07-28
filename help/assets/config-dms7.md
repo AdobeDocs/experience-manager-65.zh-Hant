@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 48540664fa80ac7ecc94a2d9dc56682ceaf67206
+source-git-commit: 78842fb50d5aa5e5c22801389713cb3c69cac4bf
 workflow-type: tm+mt
-source-wordcount: '6491'
+source-wordcount: '6489'
 ht-degree: 3%
 
 ---
@@ -236,7 +236,7 @@ Dynamic Media中的密碼到期日設為目前系統日期起的100年。
 
 1. 在 **com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.name** 頁面中，選取以下兩個設定的核取方塊：
 
-   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name`  — 啟用時，此設定會快取許可權結果120秒或2分鐘（預設值）以儲存。
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name`  — 啟用時，此設定會快取許可權結果120秒（兩分鐘）（預設值）以儲存。
    * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.validate.userAccess.name`  — 啟用時，此設定會在使用者透過Dynamic Media影像伺服器預覽資產時，驗證使用者的存取權。
 
    ![在Dynamic Media - Scene7模式中啟用存取控制清單設定](/help/assets/assets-dm/acl.png)
@@ -703,7 +703,7 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 
    此 **[!UICONTROL 連線數目]** 設定可控制Experience Manager至Dynamic Media上傳時允許的最大HTTP連線數量；通常預先定義的10個連線值就足夠了。
 
-   此 **[!UICONTROL 作用中工作逾時]** 此設定會決定已上傳Dynamic Media資產在傳遞伺服器上發佈的等待時間。 此值預設為2100秒或35分鐘。
+   此 **[!UICONTROL 作用中工作逾時]** 此設定會決定已上傳Dynamic Media資產在傳遞伺服器上發佈的等待時間。 此值預設為2100秒（35分鐘）。
 
    對於大多數使用案例，設定2100已足夠。
 
