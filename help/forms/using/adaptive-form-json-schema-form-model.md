@@ -5,7 +5,7 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: f11bb43d914a43431cab408ca77690b6ba528a06
+source-git-commit: d0768679182567cc7cd618adaa78b6518f902f7c
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 5%
@@ -732,7 +732,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
 
 ## 啟用符合結構描述的資料 {#enablig-schema-compliant-data}
 
-若要讓最適化表單在表單提交時產生符合結構的資料，請執行下列步驟：
+若要讓所有JSON結構描述型最適化Forms在表單提交時產生結構描述相容的資料，請遵循下列步驟：
 
 1. 前往Experience Manager網頁主控台，位於 `https://server:host/system/console/configMgr`.
 1. 尋找 **[!UICONTROL 最適化表單和互動式通訊Web通道設定]**.
