@@ -4,10 +4,10 @@ seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credenti
 description: 使用OAuth 2.0使用者端憑證流程整合Salesforce與AEM Forms的步驟
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 exl-id: 31f2ccf8-1f4f-4d88-8c5f-ef1b7d1bfb4f
-source-git-commit: 91683330024fbf1059715447073f35cecde45b0a
+source-git-commit: f11bb43d914a43431cab408ca77690b6ba528a06
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 4%
+source-wordcount: '424'
+ht-degree: 5%
 
 ---
 
@@ -15,61 +15,51 @@ ht-degree: 4%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html) |
-| AEM 6.5 | 本文 |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html) |
+| AEM 6.5 | 本文章 |
 
+您可以使用OAuth 2.0使用者端認證，將AEM Forms與Salesforce應用程式整合。 OAuth 2.0使用者端憑證是直接通訊的標準和安全方法，使用者無需參與。
 
-若要將AEM Forms與Salesforce應用程式整合，則會使用OAuth 2.0使用者端憑證流程。 這是一種標準化和安全的直接通訊方法，使用者無需參與。 在此流程中，使用者端應用程式(AEM Form)會交換Salesforce連線應用程式中定義的使用者端憑證，以取得存取權杖。 必要的使用者端憑證包括使用者金鑰和使用者密碼。
+![設定AEM Forms與Salesforce應用程式之間的通訊時的工作流程](/help/forms/using/assets/salesforce-workflow.png)
 
-## 使用OAuth 2.0使用者端憑證流程整合Salesforce與AEM Forms的優點 {#advantages-of-integrating-saleforce-aemforms}
+AEM Forms會交換在Salesforce連線應用程式中定義的使用者端憑證（消費者金鑰和使用者密碼）以取得存取權杖。
 
-除了OAuth 2.0使用者端憑證流程外，AEM Forms還支援Salesforce與授權代碼流程的整合。 在OAuth 2.0授權代碼流程中，使用者端應用程式(AEM Forms)會代表Salesforce使用者取得資源存取權，但有一些限制：
+使用OAuth 2.0使用者端憑證來驗證授權碼流程驗證有多種好處：
 
-* 每個使用者最多允許五個連線。 進一步的連線會自動撤銷較舊的連線。
-* 如果使用者停用、失去存取權或更新密碼，AEM資料來源設定會停止運作。
+* OAuth 2.0使用者端憑證驗證允許每個使用者有超過五個連線。
+* AEM資料來源設定會繼續處理AEM使用者的停用、存取變更和密碼更新工作。
 
 ## 必備條件 {#prerequisites}
 
-若要在Salesforce和AEM環境之間擷取和擷取資料，請先符合某些先決條件，才能繼續進行：
+設定Salesforce應用程式與AEM環境之間的通訊之前：
 
-+++ **使用使用者端憑證流程和僅限API的使用者設定Saleforce連線的應用程式**
+* 建立 [使用OAuth 2.0使用者端認證流程的Salesforce已連線應用程式](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5) 以及貴組織僅限API的使用者，並取得應用程式的消費者金鑰和消費者機密。
 
-您必須使用OAuth 2.0使用者端憑證流程為貴組織建立具有API專用使用者的Salesforce連線應用程式。 如需詳細步驟，請參閱文章 [用於伺服器對伺服器整合的OAuth 2.0使用者端憑證流程](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5). 這些步驟可協助您取得使用者金鑰和使用者密碼。
-
->[!NOTE]
->
-> 建立AEM資料來源設定時，請務必記下必要的使用者金鑰和使用者機密。
-
-+++
-
-+++ **建立Swagger檔案**
-
-Swagger是一組開放原始碼的規則、規格和工具，用於開發和描述RESTful API。 [建立Swagger檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) 將Salesforce與AEM Forms整合之前。
-
+* 確保您的Swagger檔案已正確設定，以符合貴組織的API。 或者，您可以選擇使用 [建立Swagger檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) 從頭開始，針對您的AEM環境使用量身打造。
 >[!NOTE]
 >
 > AEM 6.5僅支援Swagger 2.0檔案規格。
 
 +++
 
-## 使用使用者端憑證設定Salesforce的步驟 {#steps-to-create-aem-datasource-configuration}
+## 使用使用者端憑證設定Salesforce流程的步驟 {#steps-to-create-aem-datasource-configuration}
 
-1. 登入您的Author執行個體。
+1. 登入您的  作者執行個體；
 1. 前往 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL 資料來源]**.
 1. 選取設定資料夾。
-1. 按一下 **[!UICONTROL 建立]** 和 **[!UICONTROL 建立資料來源組態]** 出現。
+1. 按一下 **[!UICONTROL 建立]** 和 **[!UICONTROL 建立資料來源組態]** 隨即顯示。
 1. 指定 **[!UICONTROL 標題]** 並選取 **[!UICONTROL 服務型別]** 作為 **[!UICONTROL RESTful服務]**.
 1. 按一下&#x200B;**[!UICONTROL 下一步]**。
 1. 選取 **[!UICONTROL Swagger來源]** 作為 **[!UICONTROL 檔案].**
    >[!NOTE]
    >
-   > 選取swagger檔案之後，就會自動填入「配置」、「主機名稱」和「基底」路徑。
+   > 選取swagger檔案之後，就會自動填入「配置」、「主機」名稱和「基底」路徑。
 
-1. 按一下「 」，從本機電腦上傳已建立的Swagger檔案 **[!UICONTROL 瀏覽]**.
+1. 按一下「 」，從本機電腦上傳已建立的swagger檔案 **[!UICONTROL 瀏覽]**.
 1. 選取 **[!UICONTROL 驗證型別]** 作為 **[!UICONTROL OAuth 2.0]** 和 **[!UICONTROL 驗證設定]** 面板隨即顯示。
 1. 選取 **[!UICONTROL 授權型別]** 作為 **[!UICONTROL 使用者端認證]**.
-1. 指定 **[!UICONTROL 使用者端ID]** 和 **[!UICONTROL 使用者端密碼]** 從Salesforce連線應用程式取得。
-1. 指定 **[!UICONTROL 存取權杖URL]** 格式
+1. 指定 **[!UICONTROL 使用者端ID]** 和 **[!UICONTROL 使用者端密碼]** 取得自Salesforce連線應用程式。
+1. 指定 **[!UICONTROL 存取記號URL]** 格式
    `https://[MyDomainName].my.salesforce.com/services/oauth2/token`。
 
    >[!NOTE]

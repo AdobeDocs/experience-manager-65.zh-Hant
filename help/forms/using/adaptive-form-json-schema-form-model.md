@@ -1,30 +1,30 @@
 ---
 title: 如何使用JSON結構描述建立最適化Forms？
-description: 瞭解如何使用JSON結構描述作為表單模型來建立調適型表單。 您可以使用現有的JSON結構描述來建立最適化表單。 深入瞭解JSON結構描述範例、在JSON結構描述定義中預先設定欄位、限制最適化表單元件的可接受值，以及瞭解不支援的建構。
+description: 瞭解如何使用JSON結構描述作為表單模型建立調適型表單。 您可以使用現有的JSON結構描述來建立調適型表單。 深入瞭解JSON結構描述範例、預先設定JSON結構描述定義中的欄位、限制最適化表單元件的可接受值，並瞭解不支援的建構。
 feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: f11bb43d914a43431cab408ca77690b6ba528a06
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1861'
 ht-degree: 5%
 
 ---
 
 # 使用JSON結構描述建立調適型表單 {#creating-adaptive-forms-using-json-schema}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/adaptive-form-json-schema-form-model.html) |
-| AEM 6.5 | 本文 |
+| AEM 6.5 | 本文章 |
 
 
 ## 必備條件 {#prerequisites}
 
-使用JSON結構描述作為表單模型來製作調適型表單需要基本瞭解JSON結構描述。 建議您先閱讀下列內容，再閱讀本文。
+使用JSON結構描述作為自適應表單的表單模型編寫時，需要基本瞭解JSON結構描述。 建議您先閱讀下列內容，再閱讀本文。
 
 * [建立最適化表單](creating-adaptive-form.md)
 * [JSON結構描述](https://json-schema.org/)
@@ -35,9 +35,9 @@ ht-degree: 5%
 
 使用JSON結構描述的主要功能包括：
 
-* 在最適化表單的製作模式下，JSON的結構會在「內容尋找器」標籤中顯示為樹狀結構。 您可以從JSON階層拖曳元素，並將其新增至調適型表單。
-* 您可以使用與相關結構描述相容的JSON預先填入表單。
-* 在提交時，使用者輸入的資料會以JSON形式提交，且符合相關聯的結構描述。
+* 在最適化表單的製作模式下，JSON的結構會在內容尋找器索引標籤中以樹狀結構顯示。 您可以從JSON階層拖曳元素並新增至最適化表單。
+* 您可以使用與關聯結構描述相容的JSON預先填入表單。
+* 在提交時，使用者輸入的資料會以JSON格式提交，且符合相關聯的結構描述。
 
 JSON結構描述包含簡單和複雜的元素型別。 元素具有將規則新增至元素的屬性。 將這些元素和屬性拖曳至最適化表單時，會自動對應至對應的最適化表單元件。
 
@@ -69,7 +69,7 @@ JSON元素與最適化表單元件的對應如下：
    <th><strong>最適化表單元件</strong></th>
   </tr>
   <tr>
-   <td><p>具有enum和enumNames限制的字串屬性。</p> <p>語法，</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td>
+   <td><p>具有enum和enumNames條件約束的字串屬性。</p> <p>語法，</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td>
    <td><p>下拉式元件：</p>
     <ul>
      <li>enumNames中列出的值會顯示在拖放方塊中。</li>
@@ -89,12 +89,12 @@ JSON元素與最適化表單元件的對應如下：
    <td><br /> <br /> 文字欄位<br /> <br /> <br /> </td>
   </tr>
   <tr>
-   <td>數字屬性<br /> </td>
+   <td>number屬性<br /> </td>
    <td>子型別設定為浮點數的數值欄位<br /> </td>
   </tr>
   <tr>
    <td>integer屬性<br /> </td>
-   <td>子型別設定為整數的數值欄位<br /> </td>
+   <td>子型別設為整數的數值欄位<br /> </td>
   </tr>
   <tr>
    <td>布林值屬性<br /> </td>
@@ -106,7 +106,7 @@ JSON元素與最適化表單元件的對應如下：
   </tr>
   <tr>
    <td>陣列屬性</td>
-   <td>可重複面板，最小值和最大值分別等於minItems和maxItems。 僅支援同質陣列。 因此，專案限制必須是物件，而不是陣列。<br /> </td>
+   <td>可重複面板，最小值和最大值分別等於minItems和maxItems。 僅支援同質陣列。 因此專案限制必須是物件，而不是陣列。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -116,16 +116,16 @@ JSON元素與最適化表單元件的對應如下：
 最適化表單會使用JSON結構描述中可用的資訊來對應每個產生的欄位。 尤其是：
 
 * 此 `title` 屬性可作為最適化表單元件的標籤。
-* 此 `description` 屬性已設定為最適化表單元件的完整說明。
+* 此 `description` 屬性會設定為最適化表單元件的完整說明。
 * 此 `default` 屬性會作為最適化表單欄位的初始值。
-* 此 `maxLength` 屬性已設為 `maxlength` 文字欄位元件的屬性。
-* 此 `minimum`， `maximum`， `exclusiveMinimum`、和 `exclusiveMaximum` 屬性用於Numeric box元件。
-* 若要支援範圍 `DatePicker component` 其他JSON結構描述屬性 `minDate` 和 `maxDate` 提供……
-* 此 `minItems` 和 `maxItems` 屬性可用來限制可從面板元件新增或移除的專案/欄位數量。
+* 此 `maxLength` 屬性設為 `maxlength` 文字欄位元件的屬性。
+* 此 `minimum`， `maximum`， `exclusiveMinimum`、和 `exclusiveMaximum` 屬性用於數值方塊元件。
+* 若要支援範圍 `DatePicker component` 其他JSON結構屬性 `minDate` 和 `maxDate` 提供……
+* 此 `minItems` 和 `maxItems` 屬性是用來限制可從面板元件新增或移除的專案/欄位數量。
 * 此 `readOnly` 屬性會設定 `readonly` 最適化表單元件的屬性。
-* 此 `required` 屬性會將最適化表單欄位標籤為必填欄位，而在面板（其中type為object欄位）中，最終提交的JSON資料中會有欄位具有對應於該物件的空白值。
+* 此 `required` 屬性將調適型表單欄位標籤為必填欄位，但在面板（其中type為object）中，最終提交的JSON資料具有的欄位具有對應於該物件的空白值。
 * 此 `pattern` 屬性已設定為最適化表單中的驗證模式（規則運算式）。
-* JSON結構描述檔案的副檔名必須保留為.schema.json。 例如， &lt;filename>.schema.json.
+* JSON結構描述檔案的副檔名必須保留為.schema.json。 例如， &lt;filename>.schema.json。
 
 ## 範例JSON結構描述 {#sample-json-schema}
 
@@ -311,7 +311,7 @@ JSON元素與最適化表單元件的對應如下：
 
 ### 可重複使用的結構描述定義 {#reusable-schema-definitions}
 
-定義索引鍵可用來識別可重複使用的結構描述。 可重複使用的結構描述定義用於建立片段。 這類似於在XSD中識別複雜型別。 具有定義的JSON結構描述範例如下：
+定義索引鍵是用來識別可重複使用的結構描述。 可重複使用的結構描述定義用於建立片段。 這類似於在XSD中識別複雜型別。 具有定義的JSON結構描述範例如下：
 
 ```json
 {
@@ -338,9 +338,9 @@ JSON元素與最適化表單元件的對應如下：
 }
 ```
 
-上述範例會定義客戶記錄，其中每個客戶都有送貨和帳單地址。 兩個地址的結構相同（地址有街道地址、城市和州/省），因此最好不要複製地址。 此外，日後變更時也能輕鬆新增和刪除欄位。
+上述範例會定義客戶記錄，其中每個客戶都有送貨和帳單地址。 兩個地址的結構相同（地址有街道地址、城市和州/省），因此最好不要重複這些地址。 它也會讓您日後在變更欄位時輕鬆新增和刪除欄位。
 
-## JSON結構描述定義中的預先設定欄位 {#pre-configuring-fields-in-json-schema-definition}
+## 在JSON結構描述定義中預先設定欄位 {#pre-configuring-fields-in-json-schema-definition}
 
 您可以使用 **aem：afProperties** 屬性來預先設定JSON結構描述欄位，以對應至自訂最適化表單元件。 範例如下：
 
@@ -364,9 +364,9 @@ JSON元素與最適化表單元件的對應如下：
 
 ## 設定表單物件的指令碼或運算式  {#configure-scripts-or-expressions-for-form-objects}
 
-JavaScript是適用性表單的運算式語言。 所有運算式都是有效的JavaScript運算式，且使用適用性表單指令碼模型API。 您可以將表單物件預先設定為 [評估運算式](adaptive-form-expressions.md) 在表單事件上。
+JavaScript是適用性表單的運算式語言。 所有運算式都是有效的JavaScript運算式，並使用適用性表單指令碼模型API。 您可以將表單物件預先設定為 [評估運算式](adaptive-form-expressions.md) 在表單事件上。
 
-使用aem：afproperties屬性預先設定最適化表單元件的最適化表單運算式或指令碼。 例如，觸發初始化事件時，下列程式碼會設定電話欄位的值，並將值列印至記錄檔：
+使用aem：afproperties屬性預先設定最適化表單元件的最適化表單運算式或指令碼。 例如，觸發初始化事件時，以下程式碼會設定電話欄位的值，並將值列印至記錄檔：
 
 ```json
 "telephone": {
@@ -589,7 +589,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
  </tbody>
 </table>
 
-在JSON中使用事件的一些範例是在初始化事件上隱藏欄位，以及在值認可事件上設定另一個欄位的值。 如需建立指令碼事件運算式的詳細資訊，請參閱 [最適化表單運算式](adaptive-form-expressions.md).
+在JSON中使用事件的一些範例包括：在初始化事件上隱藏欄位，以及在值認可事件上設定另一個欄位的值。 如需建立指令碼事件運算式的詳細資訊，請參閱 [最適化表單運算式](adaptive-form-expressions.md).
 
 以下是上述範例的JSON程式碼範例。
 
@@ -632,7 +632,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
 
 ## 限制最適化表單元件的可接受值 {#limit-acceptable-values-for-an-adaptive-form-component}
 
-您可以將下列限制新增至JSON結構描述元素，以限制最適化表單元件可接受的值：
+您可以將下列限制新增至JSON結構元素，以限制最適化表單元件可接受的值：
 
 <table>
  <tbody>
@@ -645,7 +645,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
   <tr>
    <td><p><code>maximum</code></p> </td>
    <td><p>字串</p> </td>
-   <td><p>指定數值和日期的上限。 依預設，會包含最大值。</p> </td>
+   <td><p>指定數值和日期的上限。 預設會包含最大值。</p> </td>
    <td>
     <ul>
      <li>數值方塊</li>
@@ -656,7 +656,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
   <tr>
    <td><p><code>minimum</code></p> </td>
    <td><p>字串</p> </td>
-   <td><p>指定數值和日期的下限。 依預設，會包含最小值。</p> </td>
+   <td><p>指定數值和日期的下限。 預設會包含最小值。</p> </td>
    <td>
     <ul>
      <li>數值方塊</li>
@@ -667,7 +667,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
   <tr>
    <td><p><code>exclusiveMaximum</code></p> </td>
    <td><p>布林值</p> </td>
-   <td><p>如果為true，則表單元件中指定的數值或日期必須小於為最大屬性指定的數值或日期。</p> <p>如果為false，則表單元件中指定的數值或日期必須小於或等於為最大屬性指定的數值或日期。</p> </td>
+   <td><p>如果為true，則表單元件中指定的數值或日期必須小於為maximum屬性指定的數值或日期。</p> <p>如果為false，則表單元件中指定的數值或日期必須小於或等於為maximum屬性指定的數值或日期。</p> </td>
    <td>
     <ul>
      <li>數值方塊</li>
@@ -678,7 +678,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
   <tr>
    <td><p><code>exclusiveMinimum</code></p> </td>
    <td><p>布林值</p> </td>
-   <td><p>如果為true，則表單元件中指定的數值或日期必須大於為最小屬性指定的數值或日期。</p> <p>如果為false，則表單元件中指定的數值或日期必須大於或等於為最小屬性指定的數值或日期。</p> </td>
+   <td><p>如果為true，則表單元件中指定的數值或日期必須大於針對minimum屬性指定的數值或日期。</p> <p>若為false，則表單元件中指定的數值或日期必須大於或等於針對minimum屬性指定的數值或日期。</p> </td>
    <td>
     <ul>
      <li>數值方塊</li>
@@ -722,28 +722,42 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
   <tr>
    <td><code>minItems</code></td>
    <td>字串</td>
-   <td>指定陣列中專案的最小數量。 最小專案數必須等於或大於零。</td>
+   <td>指定陣列中專案的最小數目。 最小專案數必須等於或大於零。</td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-## 不支援的結構  {#non-supported-constructs}
+
+
+## 啟用符合結構描述的資料 {#enablig-schema-compliant-data}
+
+若要讓最適化表單在表單提交時產生符合結構的資料，請執行下列步驟：
+
+1. 前往Experience Manager網頁主控台，位於 `https://server:host/system/console/configMgr`.
+1. 尋找 **[!UICONTROL 最適化表單和互動式通訊Web通道設定]**.
+1. 點選以在編輯模式中開啟設定。
+1. 選取 **[!UICONTROL 產生符合結構描述的資料]** 核取方塊。
+1. 儲存設定。
+
+![最適化表單和互動式通訊Web頻道設定](/help/forms/using/assets/af-ic-web-channel-configuration.png)
+
+## 不支援的建構  {#non-supported-constructs}
 
 調適型表單不支援下列JSON結構描述：
 
-* 空值型別
-* 聯合型別，例如any和
-* OneOf、AnyOf、AllOf和NOT
+* Null型別
+* 等位型別，例如any和
+* OneOf、AnyOf、AllOf及NOT
 * 僅支援同質陣列。 因此，專案限制必須是物件，而不是陣列。
 
 ## 常見問題 {#frequently-asked-questions}
 
-**為什麼我無法為可重複的子表單（minOccours或maxOccurs值大於1）拖曳子表單的個別元素（由任何複雜型別產生的結構）？**
+**我為何無法為可重複的子表單（minOccours或maxOccurs值大於1）拖曳子表單的個別元素（由任何複雜型別產生的結構）？**
 
 在可重複的子表單中，您必須使用完整的子表單。 如果您只想使用選擇性欄位，請使用整個結構並刪除不需要的結構。
 
-**我在內容尋找器中有個長而複雜的結構。 如何找到特定元素？**
+**我在內容尋找器中有個長而複雜的結構。 如何尋找特定元素？**
 
 您有兩個選項：
 
@@ -752,4 +766,4 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
 
 **JSON結構描述檔案的副檔名應該為何？**
 
-JSON結構描述檔案的副檔名必須是.schema.json。 例如， &lt;filename>.schema.json.
+JSON結構描述檔案的副檔名必須是.schema.json。 例如， &lt;filename>.schema.json。
