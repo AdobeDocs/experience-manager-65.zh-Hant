@@ -1,29 +1,29 @@
 ---
 title: 使用JEE自訂DSC上的AEM Forms壓縮和解壓縮檔案
-description: 瞭解如何在JEE自訂DSC上使用AEM Forms壓縮和解壓縮檔案
+description: 瞭解如何在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
 
-# 在JEE自訂DSC上使用AEM Forms壓縮和解壓縮檔案 {#compressing-decompressing-files}
+# 在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案 {#compressing-decompressing-files}
 
 ## 必備條件知識 {#prerequisites}
 
-AEM Forms在JEE程式管理、基本Java程式設計和建立自訂元件方面的使用體驗。
+在JEE程式管理、基本Java™程式設計和建立自訂元件方面使用AEM Forms的體驗。
 
-**其他必要的其他產品**
+**其他必要其他產品**
 
-Java編輯器，例如 [Eclipse](https://www.eclipse.org/) 或 [Netbeans IDE](https://netbeans.apache.org/)
+Java™編輯器，例如 [Eclipse](https://www.eclipse.org/) 或 [Netbeans IDE](https://netbeans.apache.org/)
 
 ## 使用者層級 {#user-level}
 
 中級
 
-JEE上的AEM Forms可讓開發人員建立自訂DSC （檔案服務容器），以建立豐富的現成功能。 建立這類元件可插入JEE執行階段環境的AEM Forms，並達到預期目的。 本文說明如何建立自訂ZIP服務，其可用於將檔案清單壓縮成.zip檔案，並將.zip解壓縮成檔案清單。
+JEE上的AEM Forms可讓開發人員建立自訂DSC （檔案服務容器），以建立豐富的現成功能。 建立這類元件可插入JEE執行階段環境的AEM Forms，並達到預期目的。 本文會說明如何建立自訂ZIP服務，可用來將檔案清單壓縮成.zip檔案，並將.zip解壓縮成檔案清單。
 
 ## 建立自訂DSC元件 {#create-custom-dsc-component}
 
@@ -33,7 +33,7 @@ JEE上的AEM Forms可讓開發人員建立自訂DSC （檔案服務容器），�
 1. 新增必要的圖示
 1. 建立公用類別
 1. 建立兩個名為UnzipDocument和ZipDocuments的公用方法
-1. 撰寫壓縮和解壓縮的邏輯
+1. 撰寫壓縮與解壓縮的邏輯
 
 您可在此處找到代碼：
 
@@ -124,7 +124,7 @@ public class ZIPService {
 
 必須在定義服務操作及其引數的封裝的根資料夾中建立component.xml檔案。
 
-component.xml檔案如下所示：
+component.xml檔案顯示於此處：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -185,27 +185,27 @@ component.xml檔案如下所示：
 </component>
 ```
 
-## 封裝及部署元件 {#packaging-deploying-component}
+## 封裝和部署元件 {#packaging-deploying-component}
 
-1. 編譯Java專案並建立.JAR檔案。
-1. 透過Workbench在JEE執行階段將元件（.JAR檔案）部署到AEM Forms。
+1. 編譯Java™專案並建立.JAR檔案。
+1. 透過Workbench在JEE執行階段將元件（.JAR檔案）部署至AEM Forms。
 1. 從Workbench啟動服務（請參閱下圖）。
 
-![程式設計](assets/process-design.jpg)
+![流程設計](assets/process-design.jpg)
 
 ## 在工作流程中使用壓縮服務 {#using-zip-service-in-workflows}
 
-自訂服務的UnzipDocument操作現在可以接受檔案變數作為輸入，並傳回檔案變數清單作為輸出。
+自訂服務的UnzipDocument作業現在可以接受檔案變數作為輸入，並傳回檔案變數清單作為輸出。
 
 ![解壓縮檔案](assets/unzip-doc.jpg)
 
-同樣地，自訂元件的ZipDocuments作業可接受檔案清單作為輸入，將其壓縮為zip檔案並傳回壓縮後的檔案。
+同樣地，自訂元件的ZipDocuments作業可接受檔案清單作為輸入，將其壓縮為zip檔案並傳回壓縮檔案。
 
-![Zip檔案](assets/zip-doc.jpg)
+![壓縮檔案](assets/zip-doc.jpg)
 
 下列工作流程協調流程說明如何解壓縮指定的ZIP檔案、將其壓縮回另一個ZIP檔案並傳回輸出（請參閱下圖）。
 
-![解壓縮Zip工作流程](assets/unzip-zip-process.jpg)
+![解壓縮壓縮壓縮工作流程](assets/unzip-zip-process.jpg)
 
 ## 部分業務使用案例 {#business-use-cases}
 
@@ -213,10 +213,10 @@ component.xml檔案如下所示：
 
 * 尋找指定資料夾中的所有檔案，並將檔案以壓縮檔案格式傳回。
 
-* 提供包含若干PDF檔案的ZIP檔案，解壓縮後可延伸這些檔案的讀取器。 這需要AEM Forms on JEEReader擴充功能模組。
+* 提供包含若干PDF檔案的ZIP檔案，在解壓縮這些檔案後可延伸讀取器。 這需要JEEReader擴充功能模組上的AEM Forms。
 
-* 提供包含異質性檔案型別的ZIP檔案，可使用「產生PDF」服務將其解壓縮並轉換為PDF檔案。
+* 提供包含異質性檔案型別的ZIP檔案，這些檔案可使用產生PDF服務解壓縮並轉換成PDF檔案。
 
-* 原則會保護檔案清單，並傳回ZIP檔案。
+* 原則會保護檔案清單，並以ZIP檔案傳回。
 
-* 允許使用者以單一ZIP檔案下載程式執行個體的所有附件。
+* 允許使用者以單一ZIP檔案下載流程執行個體的所有附件。
