@@ -12,18 +12,23 @@ discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 role: Admin
 exl-id: d802ac53-e3db-45ca-afcb-7e99d0bb7877
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 1%
+source-wordcount: '282'
+ht-degree: 6%
 
 ---
 
 # OSGi群組和許可權上的AEM Forms{#aem-forms-on-osgi-groups-and-privileges}
 
-您可以 [建立群組](/help/sites-administering/user-group-ac-admin.md#group-administration) 並指派原則和 [使用者](/help/sites-administering/user-group-ac-admin.md#user-administration) 至AEM中的群組。 這些原則控制屬於群組之使用者的許可權。
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/forms-groups-privileges-tasks.html) |
+| AEM 6.5 | 本文章 |
 
-安裝後 [AEM Forms附加元件套件](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提及的群組（例如forms-users和forms-power-user）可自動用於指派。 下表根據群組指派，列出使用者可以在OSGi上為AEM Forms執行的工作：
+您可以 [建立群組](/help/sites-administering/user-group-ac-admin.md#group-administration) 並指派原則和 [使用者](/help/sites-administering/user-group-ac-admin.md#user-administration) 到AEM中的群組。 這些原則控制屬於群組之使用者的許可權。
+
+安裝之後 [AEM Forms附加元件套件](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提到的群組（例如forms-users和forms-power-user）可自動用於指派。 下表列出使用者可以根據群組指派在OSGi上為AEM Forms執行的工作：
 
 <table>
  <tbody>
@@ -47,14 +52,14 @@ ht-degree: 1%
     <ul> 
      <li>建立、預覽、發佈及提交最適化表單</li> 
      <li>建立、預覽和發佈互動式通訊和檔案片段</li> 
-     <li>使用程式碼編輯器建立適用性表單的指令碼</li> 
-     <li>上傳資產（包括指令碼）</li> 
+     <li>使用程式碼編輯器建立最適化表單的指令碼</li> 
+     <li>上傳資產，包括指令碼</li> 
      <li>建立主題</li> 
      <li>匯入包含XDP的套件</li> 
     </ul> </td> 
   </tr>
   <tr>
-   <td>forms-submission-reviewer</td> 
+   <td>表單 — 提交 — 稽核者</td> 
    <td>
     <ul> 
      <li>稽核提交</li> 
@@ -83,7 +88,7 @@ ht-degree: 1%
     </ul> </td> 
   </tr>
   <tr>
-   <td><p>工作流程編輯器</p> </td> 
+   <td><p>workflow-editor</p> </td> 
    <td>
     <ul> 
      <li>建立收件匣應用程式</li> 
@@ -94,7 +99,7 @@ ht-degree: 1%
    <td>workflow-users</td> 
    <td>
     <ul> 
-     <li>使用AEM收件匣應用程式<br /> <strong>注意： </strong>您必須擁有cm-agent-users和workflow-users群組指派，才能存取AEM收件匣中的互動式通訊代理程式UI。</li> 
+     <li>使用AEM收件匣應用計畫<br /> <strong>注意： </strong>您必須有cm-agent-users和workflow-users群組指派，才能存取AEM收件匣中的互動式通訊代理程式UI。</li> 
      <li>管理工作流程例項</li> 
     </ul> </td> 
   </tr>

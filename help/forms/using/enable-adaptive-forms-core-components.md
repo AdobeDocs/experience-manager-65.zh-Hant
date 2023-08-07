@@ -3,15 +3,15 @@ title: 如何在AEM 6.5 Forms上啟用最適化Forms核心元件？
 seo-title: How to enable Adaptive Forms Core Components on AEM 6.5 Forms?
 description: 逐步指南可協助您在AEM 6.5 Forms環境中啟用最適化Forms核心元件。
 seo-description: Step-by-Step guide to help you enable Adaptive Forms Core Components on an AEM 6.5 Forms environment.
-keywords: 啟用核心元件、核心元件Adaptive Forms、6.5版上的核心元件、AEM 6.5版上的最適化Forms核心元件、AEM 6.5版上的AF核心元件、AEM 6.5 Forms核心元件
+keywords: 啟用核心元件、核心元件調適型Forms、6.5上的核心元件、AEM 6.5上的調適型Forms核心元件、AEM 6.5上的AF核心元件、AEM 6.5 Forms核心元件
 contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
+source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 21%
+source-wordcount: '889'
+ht-degree: 20%
 
 ---
 
@@ -20,21 +20,21 @@ ht-degree: 21%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html) |
 | AEM 6.5 | 本文 |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
 
-**套用至：** ✅用最適化表單核心元件❎最適化表單基礎元件。
+**套用至：** ✅立最適化表單核心元件❎最適化表單基礎元件。
 
-啟用Adaptive Forms核心元件，讓您開始建立、發佈和傳送內容 [Core Components based Adaptive Forms](create-an-adaptive-form-core-components.md) 和 [Headless最適化Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 來自您的AEM 6.5 Forms環境。
+啟用Adaptive Forms核心元件，讓您開始建立、發佈和傳送內容 [Core Components based Adaptive Forms](create-an-adaptive-form-core-components.md) 和 [Headless最適化Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 從您的AEM 6.5 Forms環境。
 
-若要在您的AEM 6.5 Forms環境中啟用HAdaptive Forms核心元件，請設定並部署 [AEM Archetype 41或更新版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 根據您所有的Author和Publish執行個體上的專案（已啟用表單選項）。
+若要在您的AEM 6.5 Forms環境中啟用HAdaptive Forms核心元件，請設定並部署 [AEM Archetype 41或更新版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 根據您所有作者和發佈執行個體上的專案（已啟用表單選項）。
 
-本文提供在AEM 6.5 Forms環境上設定和部署以AEM Archetype 41或更新版本為基礎的專案的詳細指示，以啟用Adaptive Forms核心元件。
+本文提供在您的AEM 6.5 Forms環境中設定和部署AEM Archetype 41或更新版本專案，以啟用最適化Forms核心元件的詳細指示。
 
 
 ## 必備條件 {#prerequisites}
 
-在AEM 6.5 Forms環境中啟用Adaptive Forms核心元件之前：
+在AEM 6.5 Forms環境中啟用最適化Forms核心元件之前：
 
 * [升級至AEM 6.5 Forms Service Pack 16 (6.5.16.0)或更新版本](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html).
 
@@ -44,9 +44,9 @@ ht-degree: 21%
 
 ## 建立及部署最新的AEM原型專案
 
-若要建立AEM Archetype 41或 [稍後](https://github.com/adobe/aem-project-archetype) 以專案為基礎，並將其部署至所有作者和發佈執行個體：
+若要建立AEM Archetype 41或 [稍後](https://github.com/adobe/aem-project-archetype) 根據專案並將其部署至所有作者和發佈執行個體：
 
-1. 以管理員身分登入您的電腦，託管並執行AEM 6.5 Forms執行個體。
+1. 以管理員身分登入電腦，託管並執行AEM 6.5 Forms執行個體。
 1. 開啟命令提示字元或終端機，然後執行下列命令以建立AEM Archetype專案（並啟用表單選項）：
 
    * Microsoft Windows
@@ -79,14 +79,14 @@ ht-degree: 21%
 
    執行上述命令時，請務必考慮以下幾點：
 
-   * 請勿變更 `aemVersion` 屬性來源 `6.5.15.0` 至任何其他專案。
+   * 請勿變更的值 `aemVersion` 屬性來源 `6.5.15.0` 至任何其他專案。
 
-   * 設定 `archetypeVersion` 屬性至 `41` 或更新版本。 如需最新版本，請參閱 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 說明檔案。
+   * 設定 `archetypeVersion` 屬性至 `41` 或更新版本。 如需最新版本的相關資訊，請參閱以下章節的系統需求一節： [AEM專案原型](https://github.com/adobe/aem-project-archetype) 檔案。
 
-   * 更新命令以反映環境的特定值，包括 `appTitle`， `appId`、和 `groupId`. 此外，設定  `includeFormsenrollment` 屬性至 `y`. 如果您使用Forms入口網站，請將 `includeExamples=y` 可在您的專案中包含Forms入口網站核心元件的選項。
+   * 更新命令以反映環境的特定值，包括 `appTitle`， `appId`、和 `groupId`. 此外，設定  `includeFormsenrollment` 屬性至 `y`. 如果您使用Forms入口網站，請設定 `includeExamples=y` 可在您的專案中包含Forms Portal核心元件的選項。
 
 
-1. （僅適用於以Archetype版本41為基礎的專案）建立AEM Archetype專案後，請啟用以核心元件為基礎的最適化Forms的主題。 若要啟用主題：
+1. （僅適用於以Archetype版本41為基礎的專案）在AEM Archetype專案建立後，請為以核心元件為基礎的最適化Forms啟用主題。 若要啟用主題：
 
    1. 開啟 [AEM原型專案資料夾]/ui.apps/src/main/content/jcr_root/apps/__appId__/components/adaptiveForm/page/customheaderlibs.html進行編輯：
 
@@ -125,18 +125,18 @@ ht-degree: 21%
       ![archetypebuild-success](/help/forms/using/assets/corecomponent-build-successful.png)
 
 
-   成功建置AEM Archetype專案後，會產生AEM套件。 您可以在下列位置找到套件： [AEM原型專案資料夾]\all\target\[appid].all-[版本].zip
+   成功建置AEM Archetype專案後，會產生AEM套件。 您可以在下列位置找到此套件： [AEM原型專案資料夾]\all\target\[appid].all-[版本].zip
 
-1. 使用 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant) 以部署 [AEM原型專案資料夾]\all\target\[appid].all-[版本].zip套件（在所有作者和發佈執行個體上）。
+1. 使用 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant) 以部署 [AEM原型專案資料夾]\all\target\[appid].all-[版本].zip套件。
 
 >[!NOTE]
 >
 >
 >
-> * 如果您在存取發佈執行個體上的登入對話方塊時遇到困難，若要透過封裝管理員安裝套件，請嘗試使用URL： `http://[Publish Server URL]:[PORT]/system/console` 以登入。 這可讓您存取發佈執行個體的登入頁面，讓您繼續安裝程式。
-> * 將原型專案部署至您的環境後，請勿刪除或捨棄該專案。 Archetype專案需要將自訂和新的Adaptive Forms核心元件主題新增到您的環境中。
+> * 如果您在存取發佈執行個體的登入對話方塊時遇到困難，若要透過封裝管理員安裝套件，請嘗試使用URL： `http://[Publish Server URL]:[PORT]/system/console` 以登入。 這可讓您存取發佈執行個體的登入頁面，讓您繼續安裝程式。
+> * 將原型專案部署到您的環境後，請勿刪除或捨棄該專案。 Archetype專案需要將自訂和新的最適化Forms核心元件主題新增到您的環境。
 
-核心元件已針對您的環境啟用。 將空白的Core Components型最適化表單範本和Canvas 3.0主題部署至您的環境，讓您能夠 [建立以核心元件為基礎的最適化Forms](create-an-adaptive-form-core-components.md).
+核心元件已針對您的環境啟用。 將空白的Core Components型最適化表單範本和畫布3.0主題部署到您的環境，讓您能夠 [建立以核心元件為基礎的最適化Forms](create-an-adaptive-form-core-components.md).
 
 ## 常見問答
 
@@ -156,7 +156,7 @@ ht-degree: 21%
 
 ## 下一步
 
-* [建立以Core Components為基礎的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [建立以核心元件為基礎的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
 * [建立最適化表單或新增最適化表單至AEM Sites頁面或體驗片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
-* [建立以核心元件為基礎的最適化Forms的主題](create-or-customize-themes-for-adaptive-forms-core-components.md)
-* [建立以核心元件為基礎的最適化Forms範本](template-editor.md)
+* [建立核心元件型最適化Forms的主題](create-or-customize-themes-for-adaptive-forms-core-components.md)
+* [建立核心元件型最適化Forms的範本](template-editor.md)

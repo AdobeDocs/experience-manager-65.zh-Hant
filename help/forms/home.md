@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Manager 6.5 Forms 指南
 seo-title: AEM 6.5 Forms Guide
-description: 使用本AEM 6.5指南來建立、管理、發佈和更新數位表格。 尋找安裝、升級和設定相關說明，並瞭解如何編寫最適化表單。
+description: 使用本AEM 6.5指南來建立、管理、發佈和更新數位表格。 尋找安裝、升級和設定說明，並瞭解如何撰寫最適化表單。
 seo-description: Covers all AEM Forms tasks, including how to create, manage, publish, and update digital forms.
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
 workflow-type: tm+mt
 source-wordcount: '369'
-ht-degree: 29%
+ht-degree: 30%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 29%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/setup-forms-cloud-service.html) |
-| AEM 6.5 | 本文 |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html) |
+| AEM 6.5 | 本文章 |
 
 
-使用本AEM 6.5指南來建立、管理、發佈和更新數位表格。 尋找安裝、升級和設定相關說明，並瞭解如何編寫最適化表單。
+使用本AEM 6.5指南來建立、管理、發佈和更新數位表格。 尋找安裝、升級和設定說明，並瞭解如何撰寫最適化表單。
 
 ## AEM重要文章
 
@@ -38,10 +38,10 @@ ht-degree: 29%
 | [Communities使用手冊](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
 | [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
 | [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
-| [Classic UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM中編寫的概念。 |
+| [傳統UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM編寫的概念。 |
 | [Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解用於發佈動態和互動式數位體驗的數位看板解決方案。 |
 | [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南說明AEM的基本概念。 |
-| [開發使用手冊](/help/sites-developing/home.md) | 瞭解如何建置AEM執行個體。 |
+| [Developing使用手冊](/help/sites-developing/home.md) | 瞭解如何建置您的AEM執行個體。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [Commerce 使用手冊](/help/commerce/home.md) | 瞭解AEM上的Commerce Integration Framework。 |
 | [Mobile使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
