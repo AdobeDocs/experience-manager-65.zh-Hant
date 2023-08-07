@@ -9,9 +9,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
+source-git-commit: d958f616803f92190493cc3f1ef474d0987991bd
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1730'
 ht-degree: 35%
 
 ---
@@ -174,10 +174,10 @@ ht-degree: 35%
 
 * [使用規則編輯器將動態行為新增至表單](rule-editor.md)
 * [建立或自訂核心元件型最適化Forms的主題](create-or-customize-themes-for-adaptive-forms-core-components.md)
-* 建立核心元件型最適化Forms的範本
+
 
 ## 另請參閱
 
 * [建立以核心元件為基礎的最適化表單](create-an-adaptive-form-core-components.md)
 * [建立最適化表單或新增最適化表單至AEM Sites頁面或體驗片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
-
+* [範例主題範本和表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
