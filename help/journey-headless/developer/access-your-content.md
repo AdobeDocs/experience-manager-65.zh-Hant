@@ -2,27 +2,27 @@
 title: 如何透過 AEM Delivery API 存取您的內容
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解如何使用 GraphQL 查詢來存取您的內容片段內容。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 96%
+source-wordcount: '1333'
+ht-degree: 93%
 
 ---
 
 # 如何透過 AEM Delivery API 存取您的內容 {#access-your-content}
 
-在 [AEM Headless 開發人員歷程](overview.md)的這一部分中，您可以了解如何使用 GraphQL 查詢來存取您的內容片段內容並提供給您的應用程式 (無周邊傳遞)。
+在 [AEM Headless 開發人員歷程](overview.md)的這一部分中，您可以了解如何使用 GraphQL 查詢來存取您的內容片段內容並提供給您的應用程式 ( Headless 傳遞)。
 
 ## 到目前為止 {#story-so-far}
 
-在 AEM 無周邊歷程的上一個文件「[如何建立內容模型](model-your-content.md)」中，您已了解在 AEM 中建立內容模型的基本知識，所以現在您應該了解如何建立內容結構模型，然後使用 AEM 內容片段模型和內容片段實現該結構。
+在 AEM Headless 歷程的上一個文件「[如何建立內容模型](model-your-content.md)」中，您已了解在 AEM 中建立內容模型的基本知識，所以現在您應該了解如何建立內容結構模型，然後使用 AEM 內容片段模型和內容片段實現該結構。
 
 * 認識內容模型相關的概念和術語。
 * 了解為什麼 Headless 內容傳遞需要內容模型。
 * 了解如何使用 AEM 內容片段模型實現此結構 (和使用內容片段編寫內容)。
 * 了解如何建立內容模型；基本範例的原則。
 
-本文章以這些基本知識為基礎，以便您了解如何使用 AEM GraphQL API 在 AEM 存取您現有的無周邊內容。
+本文章以這些基本知識為基礎，以便您了解如何使用 AEM GraphQL API 在 AEM 存取您現有的 Headless 內容。
 
 * **對象**：初學者
 * **目標**：了解如何使用 GraphQL 查詢來存取內容片段的內容。
@@ -36,7 +36,7 @@ ht-degree: 96%
 
 您需要的是可以找出特定內容為目標的方法，選擇您需要的內容並將其傳回到您的應用程式以進一步處理。
 
-透過Adobe Experience Manager (AEM)，您可以使用AEM GraphQL API選擇性地存取您的內容片段，以僅傳回您需要的內容。 這表示您可以實現無周邊傳遞結構化的內容，以便在您的應用程式中使用。
+透過Adobe Experience Manager (AEM)，您可以使用AEM GraphQL API選擇性地存取您的內容片段，以僅傳回您需要的內容。 這表示您可以實現 Headless 傳遞結構化的內容，以便在您的應用程式中使用。
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ GraphQL is used in various locations in AEM; for example:
 
 ## AEM GraphQL API {#aem-graphql-api}
 
-AEM GraphQL API 是根據標準 GraphQL API 規格的自訂版本，特別設定為允許您對內容片段執行 (複雜) 查詢。
+AEM GraphQL API是根據標準GraphQL API規格的自訂版本，特別設定為可讓您對內容片段執行（複雜）查詢。
 
 使用內容片段，因為內容的結構是根據內容片段模型建立的。這滿足了 GraphQL 的基本要求。
 
@@ -115,7 +115,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 
 內容片段可作為 AEM 結構描述和查詢之 GraphQL 的基礎，如下所示：
 
-* 它們使您能夠設計、建立、策劃和發佈可以無周邊方式傳遞之獨立於頁面的內容。
+* 它們使您能夠設計、建立、策劃和發佈可以 Headless 方式傳遞之獨立於頁面的內容。
 * 它們根據內容片段模型，該模型使用選擇的資料類型為產生的片段預先定義結構。
 * 可以使用片段參考資料類型完成額外的結構層，在定義模型時可用。
 
@@ -133,7 +133,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 
 * 是在定義內容片段模型時可用的特定資料類型。
 * 可參考另一個片段，取決於特定的內容片段模型。
-* 可讓您建立然後擷取結構化資料。
+* 可讓您建立並擷取結構化資料。
 
    * 當定義為 **multifeed** 時，主片段可以參考 (擷取) 多個子片段。
 
@@ -245,7 +245,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
    * 使用工具 — >資產 — > GraphQL
    * [啟用 GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
-* 存取GraphiQL （如有需要）
+* 存取GraphiQL （若有需要）
    * [AEM GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### 範例結構 {#sample-structure}
@@ -353,7 +353,7 @@ query {
 
 ## 下一步 {#whats-next}
 
-現在您已經了解如何使用 AEM GraphQL API 存取和查詢無周邊內容，您現在可以[了解如何使用 REST API 存取和更新內容片段的內容](update-your-content.md)。
+現在您已經了解如何使用 AEM GraphQL API 存取和查詢 Headless 內容，您現在可以[了解如何使用 REST API 存取和更新內容片段的內容](update-your-content.md)。
 
 ## 其他資源 {#additional-resources}
 
@@ -375,7 +375,7 @@ query {
    * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
    * [JSON 輸出](/help/assets/content-fragments/content-fragments-json-preview.md)
 * [了解跨原始資源共用 (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hant#understand-cross-origin-resource-sharing-(cors))
-* [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - 此為簡短的教學影片系列，概述如何使用 AEM 的無周邊功能，包括內容模型和 GraphQL。
+* [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - 此為簡短的教學影片系列，概述如何使用 AEM 的 Headless 功能，包括內容模型和 GraphQL。
 
 <!--
 * [Generating Access Tokens for Server Side APIs](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md)

@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 8d32960c-47c3-4e92-b02e-ad4d8fea7b2d
 docset: aem65
 exl-id: 1f46a57f-4966-4dd1-8c99-c0740718ae76
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '469'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 
 >[!NOTE]
 >
->在製作環境外，也可使用其他機制進行搜尋，例如 [查詢產生器](/help/sites-developing/querybuilder-api.md) 和 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>在製作環境之外，也提供其他機制可供搜尋，例如 [查詢產生器](/help/sites-developing/querybuilder-api.md) 和 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
-## 搜尋基本需知 {#search-basics}
+## 搜尋基本資訊 {#search-basics}
 
 若要存取搜尋面板，請按一下 **搜尋** 標籤顯示在適當主控台的左窗格頂端。
 
@@ -34,21 +34,20 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 
 * **全文**：搜尋指定的文字
 * **修改於以下日期之後/之前**：僅搜尋在特定日期之間變更的頁面
-* **範本**：僅搜尋根據指定範本的頁面
+* **範本**：僅根據指定的範本搜尋這些頁面
 * **標籤**：僅搜尋具有指定標籤的頁面
 
 >[!NOTE]
 >
->當您的執行個體設定為 [Lucene搜尋](/help/sites-deploying/queries-and-indexing.md) 您可在以下位置使用 **全文**：
+>當您的執行個體設定為 [Lucene搜尋](/help/sites-deploying/queries-and-indexing.md) 您可在以下中使用 **全文**：
 >
 >* [萬用字元](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
->* [布林值運運算元](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
+>* [布林運運算元](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
 >
 >* [規則運算式](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
 >* [欄位分組](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
->* [升冪](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
+>* [提升](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
 >
-
 
 按一下以執行搜尋 **搜尋** 位於窗格底部。 按一下 **重設** 以清除搜尋條件。
 
@@ -60,7 +59,7 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 
 ## 尋找和取代 {#find-and-replace}
 
-在 **網站** 主控台a **尋找和取代** 功能表選項可讓您在網站的某個區段中搜尋和取代字串的多個執行個體。
+在 **網站** 主控台a **尋找和取代** 功能表選項可讓您在網站的某個區段中搜尋及取代字串的多個執行個體。
 
 1. 選取您要執行尋找和取代動作的根頁面或資料夾。
 1. 選取 **工具** 則 **尋找和取代**：
@@ -70,16 +69,16 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 1. 此 **尋找和取代** 對話方塊會執行下列動作：
 
    * 確認尋找動作應該開始的根路徑
-   * 定義要尋找的字詞
+   * 定義要找到的字詞
    * 定義應取代它的字詞
    * 指出搜尋是否應區分大小寫
-   * 指示是否只應找到整字（否則也會找到子字串）
+   * 指示是否只應找到全字（否則也會找到子字串）
 
-   按一下 **預覽** 列出已找到辭彙的位置。 您可以選取/清除要取代的特定執行個體：
+   按一下 **預覽** 列出辭彙的發現位置。 您可以選取/清除要取代的特定執行個體：
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
-1. 按一下 **Replace** 以實際取代所有例證。 系統會要求您確認動作。
+1. 按一下 **取代** 以實際取代所有例項。 系統會要求您確認此動作。
 
 尋找和取代servlet的預設範圍涵蓋下列屬性：
 
@@ -88,10 +87,10 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 * `jcr:text`
 * `text`
 
-可使用Apache Felix Web Management Console變更範圍(例如 `https://localhost:4502/system/console/configMgr`)。 選取 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` 並視需要設定範圍。
+可使用Apache Felix Web管理主控台(例如 `https://localhost:4502/system/console/configMgr`)。 選取 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` 並視需要設定範圍。
 
 >[!NOTE]
 >
->在標準AEM安裝中，「尋找和取代」使用Lucene進行搜尋功能。
+>在標準AEM安裝中，「尋找和取代」會使用Lucene來搜尋功能。
 >
->Lucene索引長度最多16k的字串屬性。 超過此值的字串將不會被搜尋。
+>Lucene索引長度最多16k的字串屬性。 超出此範圍的字串將不會被搜尋。

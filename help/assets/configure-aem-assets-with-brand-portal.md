@@ -13,9 +13,9 @@ feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
-source-git-commit: 14988b55c21131391fdcb033373774ee170f5305
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '2123'
 ht-degree: 8%
 
 ---
@@ -26,19 +26,19 @@ ht-degree: 8%
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal.html?lang=zh-Hant) |
-| AEM 6.5 | 本文 |
+| AEM 6.5 | 本文章 |
 
-Adobe Experience Manager Assets Brand Portal可讓您將核准的品牌資產從Adobe Experience Manager Assets發佈到Brand Portal，並分發給Brand Portal使用者。
+Adobe Experience Manager Assets Brand Portal可讓您將核准的品牌資產從Adobe Experience Manager資產發佈到Brand Portal，並分發給Brand Portal使用者。
 
-AEM Assets是透過Adobe Developer主控台使用Brand Portal設定的，可取得AdobeIdentity Management服務(IMS)帳戶權杖以授權Brand Portal租使用者。
+AEM Assets是透過Brand Portal主控台使用Adobe Developer設定的，這可取得AdobeIdentity Management Services (IMS)帳戶Token以授權Brand Portal租使用者。
 
 >[!NOTE]
 >
 >AEM 6.5.4.0及更高版本支援透過AEM Assets主控台使用Brand Portal設定Adobe Developer。
 >
->之前，Brand Portal是透過舊版OAuth閘道進行設定，該閘道會使用JSON Web權杖(JWT)交換取得IMS存取權杖以取得授權。
+>之前，Brand Portal是透過舊版OAuth閘道進行設定，該閘道使用JSON Web權杖(JWT)交換取得IMS存取權杖以授權。
 >
->自2020年4月6日起，系統不再支援透過舊版OAuth閘道進行設定，且將變更為Adobe Developer主控台。
+>自2020年4月6日起，不再支援透過舊版OAuth閘道進行設定，且已變更為Adobe Developer主控台。
 
 >[!TIP]
 >
@@ -46,24 +46,24 @@ AEM Assets是透過Adobe Developer主控台使用Brand Portal設定的，可取�
 >
 >建議繼續使用現有的舊版OAuth閘道設定。 如果您遇到舊版OAuth閘道設定問題，請刪除現有設定，並透過Adobe Developer主控台建立新設定。
 
-本說明說明說明下列兩個使用案例：
+以下說明介紹以下兩個使用案例：
 
-* [新設定](#configure-new-integration-65)：如果您是新的Brand Portal使用者，並且想要使用Brand Portal設定您的AEM Assets編寫執行個體，您可以透過Adobe Developer主控台建立設定。
-* [升級設定](#upgrade-integration-65)：如果您是擁有舊版OAuth閘道設定的現有Brand Portal使用者，請刪除現有設定，並透過Adobe Developer主控台建立新設定。
+* [新設定](#configure-new-integration-65)：如果您是新的Brand Portal使用者，並且想要使用Brand Portal設定您的AEM Assets編寫執行個體，您可以透過Adobe Developer Console建立設定。
+* [升級設定](#upgrade-integration-65)：如果您是擁有舊版OAuth閘道組態的現有Brand Portal使用者，請刪除現有組態，並透過Adobe Developer主控台建立新的組態。
 
-所提供的資訊是根據以下假設，即任何閱讀本「說明」的人員都熟悉以下技術：
+所提供的資訊是基於任何閱讀本「說明」的人員都熟悉以下技術的假設：
 
 * 安裝、設定和管理Adobe Experience Manager和AEM套件。
 
 * 使用Linux和Microsoft Windows作業系統。
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 您需要下列項目才能使用 Brand Portal 設定 AEM Assets：
 
-* 使用最新Service Pack且正在執行中的AEM Assets作者執行個體
+* 具最新Service Pack且正在執行中的AEM Assets作者執行個體
 * Brand Portal租使用者URL
-* 對Brand Portal租使用者的IMS組織具有系統管理員許可權的使用者
+* 在Brand Portal租使用者的IMS組織具有系統管理員許可權的使用者
 
 [下載並安裝AEM 6.5](#aemquickstart)
 
@@ -73,9 +73,9 @@ AEM Assets是透過Adobe Developer主控台使用Brand Portal設定的，可取�
 
 建議使用AEM 6.5設定AEM編寫執行個體。 如果您尚未啟動並執行AEM，請從下列位置下載：
 
-* 如果您是現有AEM客戶，請從下載AEM 6.5 [Adobe授權網站](https://licensing.adobe.com).
+* 如果您是現有AEM客戶，請下載AEM 6.5，網址為 [Adobe授權網站](https://licensing.adobe.com).
 
-* 如果您是Adobe合作夥伴，請使用 [Adobe合作夥伴訓練計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) 以請求AEM 6.5。
+* 如果您是Adobe合作夥伴，請使用 [Adobe合作夥伴訓練計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) 請求AEM 6.5。
 
 下載AEM後，如需設定AEM編寫執行個體的指示，請參閱 [部署和維護](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#default-local-install).
 
@@ -89,7 +89,7 @@ AEM Assets是透過Adobe Developer主控台使用Brand Portal設定的，可取�
 
 ## 建立設定 {#configure-new-integration-65}
 
-使用Brand Portal設定AEM Assets需要在AEM Assets作者執行個體和Adobe Developer Console中進行設定。
+使用Brand Portal設定AEM Assets需要在AEM Assets作者執行個體以及Adobe Developer Console中進行設定。
 
 1. 在AEM Assets中，建立IMS帳戶並產生公開憑證（公開金鑰）。
 1. 在Adobe Developer主控台中，為您的Brand Portal租使用者（組織）建立專案。
@@ -97,11 +97,11 @@ AEM Assets是透過Adobe Developer主控台使用Brand Portal設定的，可取�
 1. 取得服務帳戶憑證和JWT裝載資訊。
 1. 在AEM Assets中，使用服務帳戶憑證和JWT裝載設定IMS帳戶。
 1. 在AEM Assets中，使用IMS帳戶和Brand Portal端點（組織URL）設定Brand Portal雲端服務。
-1. 將資產從AEM Assets發佈到Brand Portal以測試設定。
+1. 從AEM Assets發佈資產到Brand Portal以測試設定。
 
 >[!NOTE]
 >
->AEM Assets作者執行個體只能設定為一個Brand Portal租使用者。
+>AEM Assets作者例項僅可設定為一個Brand Portal租使用者。
 
 如果您是第一次使用Brand Portal設定AEM Assets，請依照列出的順序執行下列步驟：
 
@@ -113,7 +113,7 @@ AEM Assets是透過Adobe Developer主控台使用Brand Portal設定的，可取�
 
 ### 建立 IMS 設定 {#create-ims-configuration}
 
-IMS設定會向Brand Portal租使用者驗證您的AEM Assets作者執行個體。
+IMS設定會向Brand Portal租使用者驗證您的AEM Assets編寫執行個體。
 
 IMS 設定包括兩個步驟：
 
@@ -132,7 +132,7 @@ IMS 設定包括兩個步驟：
 
 1. 選取 **[!UICONTROL AdobeBrand Portal]** 在 **[!UICONTROL 雲端解決方案]** 下拉式清單。
 
-1. 選取 **[!UICONTROL 建立新憑證]** 核取方塊並指定 **別名** 以取得公開金鑰。 別名會作為公開金鑰的名稱。
+1. 選取 **[!UICONTROL 建立新憑證]** 核取方塊並指定 **別名** 以取得公開金鑰。 別名的作用是公開金鑰的名稱。
 
 1. 按一下&#x200B;**[!UICONTROL 建立憑證]**。然後，按一下 **[!UICONTROL 確定]** 以產生公開金鑰。
 
@@ -146,13 +146,13 @@ IMS 設定包括兩個步驟：
 
 1. 按一下&#x200B;**[!UICONTROL 下一步]**。
 
-   在 **帳戶** 索引標籤中，會建立Adobe IMS帳戶，而這需要在Adobe Developer Console中產生的服務帳戶認證。 暫時保持此頁面開啟。
+   在 **帳戶** 索引標籤中的「 」建立後，Adobe IMS帳戶需要在Adobe Developer主控台中產生的服務帳戶認證。 暫時保持此頁面開啟。
 
    開啟新標籤並 [在Adobe Developer主控台中建立服務帳戶(JWT)連線](#createnewintegration) 以取得用於設定IMS帳戶的認證和JWT裝載。
 
 ### 建立服務帳戶(JWT)連線 {#createnewintegration}
 
-在Adobe Developer主控台中，專案和API是在Brand Portal租使用者（組織）層級設定。 設定API會建立服務帳戶(JWT)連線。 有兩種設定API的方法，透過產生金鑰組（私密金鑰和公開金鑰）或透過上傳公開金鑰。 若要使用Brand Portal設定AEM Assets，您必須在AEM Assets中產生公開金鑰（憑證），並透過上傳公開金鑰在Adobe Developer Console中建立憑證。 在AEM Assets中設定IMS帳戶需要這些認證。 設定IMS帳戶後，您可以在AEM Assets中設定Brand Portal雲端服務。
+在Adobe Developer主控台中，專案和API是在Brand Portal租使用者（組織）層級設定。 設定API會建立服務帳戶(JWT)連線。 有兩種方式可設定API：產生金鑰組（私密金鑰和公開金鑰）或上傳公開金鑰。 若要使用Brand Portal設定AEM Assets，您必須在AEM Assets中產生公開金鑰（憑證），並透過上傳公開金鑰在Adobe Developer Console中建立憑證。 在AEM Assets中設定IMS帳戶需要這些認證。 設定IMS帳戶後，您可以在AEM Assets中設定Brand Portal雲端服務。
 
 執行以下步驟來產生服務帳戶憑證和JWT裝載：
 
@@ -171,17 +171,17 @@ IMS 設定包括兩個步驟：
 
 1. 在 **[!UICONTROL 新增API視窗]**，選取 **[!UICONTROL AEM Brand Portal]** 並按一下 **[!UICONTROL 下一個]**.
 
-   確保您有權存取AEM Brand Portal服務。
+   確定您有權存取AEM Brand Portal服務。
 
 1. 在 **[!UICONTROL 設定API]** 視窗，按一下 **[!UICONTROL 上傳您的公開金鑰]**. 然後，按一下 **[!UICONTROL 選取檔案]** 並上傳您在中下載的公開金鑰（.crt檔案） [取得公開憑證](#public-certificate) 區段。
 
-   按一下&#x200B;**[!UICONTROL 下一步]**。
+   按一下「**[!UICONTROL 下一步]**」。
 
    ![上傳公開金鑰](assets/service-account3.png)
 
 1. 驗證公開金鑰並按一下 **[!UICONTROL 下一個]**.
 
-1. 選取 **[!UICONTROL Assets Brand Portal]** ，然後按一下 **[!UICONTROL 儲存已設定的API]**.
+1. 選取 **[!UICONTROL Assets Brand Portal]** 作為預設產品設定檔，然後按一下 **[!UICONTROL 儲存已設定的API]**.
 
    <!-- 
    In Brand Portal, a default profile is created for each organization. The Product Profiles are created in admin console for assigning users to groups (based on the roles and permissions). For configuration with Brand Portal, the OAuth token is created at organization level. Therefore, you must configure the default Product Profile for your organization. 
@@ -262,27 +262,27 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 指定 IMS 帳戶的&#x200B;**[!UICONTROL 標題]**。
 
-   在 **[!UICONTROL 授權伺服器]** 欄位中指定URL： [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/).
+   在 **[!UICONTROL 授權伺服器]** 欄位，指定URL： [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/).
 
-   在中指定使用者端ID **[!UICONTROL API金鑰]** 欄位， **[!UICONTROL 使用者端密碼]**、和 **[!UICONTROL 裝載]** （JWT裝載）您複製的時間 [建立服務帳戶(JWT)連線](#createnewintegration).
+   在中指定使用者端ID **[!UICONTROL API金鑰]** 欄位， **[!UICONTROL 使用者端密碼]**、和 **[!UICONTROL 裝載]** （JWT裝載）您已複製的時間 [建立服務帳戶(JWT)連線](#createnewintegration).
 
    按一下&#x200B;**[!UICONTROL 建立]**。
 
-   IMS帳戶已設定。
+   已設定IMS帳戶。
 
    ![IMS 帳戶設定](assets/create-new-integration6.png)
 
 1. 選取IMS帳戶設定並按一下 **[!UICONTROL 檢查健康狀態]**.
 
-   按一下 **[!UICONTROL Check]** （在對話方塊中）。 在成功設定時，會出現一則訊息， *已成功擷取權杖*.
+   按一下 **[!UICONTROL 檢查]** 在對話方塊中。 成功設定時，系統會顯示訊息，指出 *Token擷取成功*.
 
-   ![設定狀況良好確認對話方塊](assets/create-new-integration5.png)
+   ![設定確認對話方塊狀況良好](assets/create-new-integration5.png)
 
 >[!CAUTION]
 >
 >您必須只有一個IMS設定。
 >
->確保IMS設定通過健康狀態檢查。 如果設定未通過健康狀態檢查，則為無效。 您必須刪除它並建立新的有效設定。
+>確保IMS設定通過健康狀態檢查。 如果設定未通過健康狀態檢查，則為無效。 您必須刪除它並建立新的有效組態。
 
 ### 設定雲端服務 {#configure-the-cloud-service}
 
@@ -290,7 +290,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 登入您的AEM Assets作者執行個體。
 
-1. 從 **工具** ![工具](assets/do-not-localize/tools.png) 面板，導覽至 **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
+1. 從 **工具** ![工具](assets/do-not-localize/tools.png) 面板，導覽至 **[!UICONTROL Cloud Service]** > **[!UICONTROL AEM Brand Portal]**.
 
 1. 在Brand Portal設定頁面中，按一下 **[!UICONTROL 建立]**.
 
@@ -304,7 +304,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 按一下&#x200B;**[!UICONTROL 「儲存並關閉」]**。雲端設定此時已建立。
 
-   您的AEM Assets作者執行個體現在已透過Brand Portal租使用者完成設定。
+   您的AEM Assets作者例項現在已透過Brand Portal租使用者完成設定。
 
 ### 測試設定 {#test-integration}
 
@@ -316,7 +316,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![「工具」面板](assets/test-integration1.png)
 
-1. 在「復寫」頁面中，按一下 **[!UICONTROL 作者上的代理]**.
+1. 在「復寫」頁面中，按一下 **[!UICONTROL 作者上的代理程式]**.
 
    ![復寫頁面](assets/test-integration2.png)
 
@@ -328,7 +328,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    >[!NOTE]
    >
-   >復寫代理程式會平行運作並平均共用工作分佈，因此將發佈速度提升至原始速度的四倍。 設定Cloud Service後，無需進行其他設定即可啟用復寫代理（預設會啟動以啟用多個資產的平行發佈）。
+   >復寫代理程式會平行運作，並平均共用工作分佈，因此將發佈速度提升至原始速度的四倍。 設定雲端服務後，無需進行額外設定即可啟用復寫代理程式，這些代理程式預設為啟用多個資產的平行發佈。
 
 1. 若要驗證AEM Assets與Brand Portal之間的連線，請按一下 **[!UICONTROL 測試連線]** 圖示。
 
@@ -338,14 +338,14 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![測試確認輸出](assets/test-integration5.png)
 
-1. 驗證全部四個復寫代理的測試結果。
+1. 驗證全部四個復寫代理程式的測試結果。
 
 
    >[!NOTE]
    >
-   >請避免停用任何復寫代理程式，因為這可能會導致資產（在佇列中執行）復寫失敗。
+   >請避免停用任何復寫代理程式，因為可能會導致資產（在佇列中執行）復寫失敗。
    >
-   >請確定四個復寫代理均已設定為避免逾時錯誤。 另請參閱 [疑難排解平行發佈至Brand Portal的問題](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
+   >請確定所有四個復寫代理程式均已設定為避免逾時錯誤。 另請參閱 [疑難排解平行發佈至Brand Portal的問題](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
    >
    >請勿修改任何自動產生的設定。
 
@@ -363,21 +363,21 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 ## 升級設定 {#upgrade-integration-65}
 
-按照列出的順序執行以下步驟，將現有設定升級至Adobe Developer Console：
+請依照所列順序執行下列步驟，將現有設定升級至Adobe Developer Console：
 
 1. [驗證執行中的工作](#verify-jobs)
-1. [刪除現有設定](#delete-existing-configuration)
+1. [刪除現有組態](#delete-existing-configuration)
 1. [建立設定](#configure-new-integration-65)
 
 ### 驗證執行中的工作 {#verify-jobs}
 
-在進行任何修改前，請確保您的AEM Assets作者執行個體上沒有執行發佈工作。 為此，您可以驗證所有四個復寫代理程式上作用中工作的狀態，並確保佇列處於閒置狀態。
+在修改之前，請確定AEM Assets作者執行個體上未執行任何發佈工作。 為此，您可以驗證所有四個復寫代理程式上作用中工作的狀態，並確保佇列處於閒置狀態。
 
 1. 登入您的AEM Assets作者執行個體。
 
 1. 從 **工具** ![工具](assets/do-not-localize/tools.png) 面板，導覽至 **[!UICONTROL 部署]** > **[!UICONTROL 部署復寫]**.
 
-1. 在「復寫」頁面中，按一下 **[!UICONTROL 作者上的代理]**.
+1. 在「復寫」頁面中，按一下 **[!UICONTROL 作者上的代理程式]**.
 
    ![資產的復寫代理](assets/test-integration2.png)
 
@@ -387,7 +387,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![復寫佇列設定](assets/test-integration3.png)
 
-### 刪除現有設定 {#delete-existing-configuration}
+### 刪除現有組態 {#delete-existing-configuration}
 
 刪除現有設定時，您必須執行下列檢查清單：
 * 刪除全部四個復寫代理
@@ -396,17 +396,17 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 登入您的AEM Assets作者執行個體並以管理員身分開啟CRX Lite。 預設URL為 `http://localhost:4502/crx/de/index.jsp`.
 
-1. 導覽至 `/etc/replications/agents.author` 並刪除Brand Portal租使用者的全部四個復寫代理。
+1. 瀏覽至 `/etc/replications/agents.author` 並刪除Brand Portal租使用者的全部四個復寫代理。
 
-   ![CRXDE中的復寫代理](assets/delete-replication-agent.png)
+   ![CRXDE中的復寫代理程式](assets/delete-replication-agent.png)
 
-1. 導覽至 `/etc/cloudservices/mediaportal` 並刪除Brand Portal雲端服務設定。
+1. 瀏覽至 `/etc/cloudservices/mediaportal` 並刪除Brand Portal雲端服務設定。
 
    ![CRXDE中復寫代理程式的詳細資料](assets/delete-cloud-service.png)
 
-1. 導覽至 `/home/users/mac` 並刪除 **Mac使用者** 您的Brand Portal租使用者。
+1. 瀏覽至 `/home/users/mac` 並刪除 **Mac使用者** 您的Brand Portal租使用者的。
 
-   ![CRXDE中復寫代理程式的詳細資訊](assets/delete-mac-user.png)
+   ![CRXDE中復寫代理的更多詳細資料](assets/delete-mac-user.png)
 
 
 您現在可以 [建立設定](#configure-new-integration-65) 透過您AEM 6.5編寫執行個體上的Adobe Developer主控台。

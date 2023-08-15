@@ -2,10 +2,10 @@
 title: 了解如何為內容片段定義中繼資料和標記
 description: 了解如何為內容片段定義中繼資料和標記
 exl-id: b4cc1311-1ef7-409a-bd41-0456519b3436
-source-git-commit: d33abafa0478de1f7b637a14df6d2b7712000c03
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 91%
+source-wordcount: '257'
+ht-degree: 83%
 
 ---
 
@@ -30,15 +30,15 @@ ht-degree: 91%
 
 * 首次建立片段時：
 
-   ![建立內容片段 - 提供名稱](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
+  ![建立內容片段 - 提供名稱](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
 * 此 **變數** 內容片段編輯器的索引標籤可讓您新增預先定義的 **標籤** 從您的專案：
 
-   ![內容片段編輯器 - Alaska Spirits](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
+  ![內容片段編輯器 - Alaska Spirits](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 
-* 內容片段編輯器的&#x200B;**中繼資料**&#x200B;索引標籤可讓您新增專案的各種中繼資料欄位和預先定義的&#x200B;**標記**：
+* 此 **中繼資料** 內容片段編輯器的索引標籤可讓您新增中繼資料的各種欄位和預先定義的欄位 **標籤** 從您的專案：
 
-   ![內容片段編輯器 - 中繼資料](/help/journey-headless/author/assets/headless-journey-author-metadata-01.png)
+  ![內容片段編輯器 - 中繼資料](/help/journey-headless/author/assets/headless-journey-author-metadata-01.png)
 
    * 這也可以使用資產主控台工具列中的&#x200B;**屬性**&#x200B;選項直接存取。
 

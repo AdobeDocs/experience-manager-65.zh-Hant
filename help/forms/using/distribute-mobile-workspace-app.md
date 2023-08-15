@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 5756cb52-dd47-4277-981c-fd0af9a20638
 exl-id: 375cfa95-ac6f-44c4-a736-f5dd55d24195
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此發佈僅適用於iOS和Android裝置。
+>此分佈僅適用於iOS和Android裝置。
 
 ## MDM解決方案通常提供的主要功能： {#main-features-generally-provided-by-mdm-solutions}
 
@@ -31,17 +31,17 @@ ht-degree: 0%
 * 強制執行安全性法規遵循。
 * 以行動裝置安全地存取公司資源
 
-MDM解決方案搭配行動應用程式管理，可讓您透過企業內的行動裝置，管理內部、公開和購買的應用程式。
+MDM解決方案搭配行動應用程式管理，可讓您透過企業內的行動裝置，管理內部、公開及已購買的應用程式。
 
 MDM管理員可以將ipa和apk檔案上傳到MDM伺服器，並控制可以存取ipa或apk檔案的使用者。 管理員也可以控制每個應用程式對應的設定檔設定。
 
 ## 影響AEM Forms應用程式的設定檔設定 {#profile-settings-affecting-the-aem-forms-app-br}
 
-裝置上的下列設定檔設定將會影響裝置上AEM Forms應用程式的運作：
+您裝置上的下列設定檔設定將會影響裝置上AEM Forms應用程式的運作：
 
 * **允許使用相機** 在 **裝置功能** 區段
 
-如果您停用 **允許使用相機**，的相機功能 [像片註解](/help/forms/using/add-attachments.md) 將無法運作。 您必須啟用此選項，才能在應用程式中使用相機。
+如果您停用 **允許使用相機**，的攝影機功能 [像片註解](/help/forms/using/add-attachments.md) 將無法運作。 您必須啟用此選項，才能在應用程式中使用相機。
 
 * **需要裝置上的密碼** 在密碼原則區段中
 

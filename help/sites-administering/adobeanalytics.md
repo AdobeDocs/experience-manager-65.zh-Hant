@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 444c522e-2f33-4f41-846c-8d317e799659
 docset: aem65
 exl-id: 0a87ece4-57ed-4022-a78a-264c1edf4b4e
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 25%
+source-wordcount: '313'
+ht-degree: 26%
 
 ---
 
@@ -23,26 +23,26 @@ ht-degree: 25%
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-aem-forms-with-adobe-analytics.html) |
-| AEM 6.5 | 本文 |
+| AEM 6.5 | 本文章 |
 
 
-整合Adobe Analytics和AEM可讓您追蹤網頁活動：
+整合Adobe Analytics和AEM可讓您追蹤您的網頁活動：
 
 * Adobe Analytics設定可讓AEM使用Adobe Analytics進行驗證。
-* 框架可識別傳送至您的Adobe Analytics報表套裝的資料。
+* 框架可識別傳送至Adobe Analytics報表套裝的資料。
 
-資料包含頁面和使用者資料；例如：
+資料包括頁面和使用者資料；例如：
 
 * AEM元件收集的資料
 * 連結點按次數
 * 視訊使用資訊
-* 來自Adobe Analytics的頁面瀏覽次數
+* 來自Adobe Analytics的頁面瀏覽數
 
 下列頁面可協助您設定整合：
 
-* [連線到Adobe Analytics和建立框架](/help/sites-administering/adobeanalytics-connect.md)
+* [連線到Adobe Analytics並建立框架](/help/sites-administering/adobeanalytics-connect.md)
 * [設定Adobe Analytics的連結追蹤](/help/sites-administering/adobeanalytics-link.md)
-* [將元件資料與Adobe Analytics屬性對應](/help/sites-administering/adobeanalytics-mapping.md)
+* [使用Adobe Analytics屬性對應元件資料](/help/sites-administering/adobeanalytics-mapping.md)
 * [設定Adobe Analytics的視訊追蹤](/help/sites-administering/adobeanalytics-video.md)
 * [Adobe分類](/help/sites-administering/adobeanalytics-classifications.md)
 
@@ -56,7 +56,7 @@ ht-degree: 25%
 
 請參閱：
 
-* [延伸Adobe Analytics整合](/help/sites-developing/extending-analytics.md) 瞭解開發收集使用者資料的元件以及自訂Adobe Analytics架構的相關資訊。
+* [擴充Adobe Analytics整合](/help/sites-developing/extending-analytics.md) 有關開發會收集使用者資料的元件以及自訂Adobe Analytics架構的資訊。
 * 知識庫文章， [Adobe Analytics整合 — 疑難排解問題](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html)，以取得疑難排解Adobe Analytics整合的相關資訊。
 
 >[!NOTE]

@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: ada61b87753f3f3e70acdca0e946428511bd7b00
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2788'
+source-wordcount: '2784'
 ht-degree: 2%
 
 ---
@@ -458,7 +458,7 @@ ht-degree: 2%
       * 如果存在，請確認編輯工作階段已針對目前編輯的內容片段啟動
 
          * 如果目前片段，請重新建立工作階段。
-         * 如果沒有，請嘗試取消編輯先前編輯的內容片段並移除Cookie （之後不會出現編輯工作階段）。
+         * 如果沒有，請嘗試取消編輯先前編輯的內容片段並移除Cookie （之後不會有編輯工作階段存在）。
 
       * 如果不存在編輯工作階段，請等待使用者進行第一次變更（請參閱下文）。
 
@@ -512,7 +512,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 * 節點： `<*conf-root*>/settings/dam/cfm/jcr:content`
 * 屬性名稱: `autoSaveInterval`
-* 類型: `Long`
+* 類型：`Long`
 
 * 預設： `600` （10分鐘）；此定義的日期為 `/libs/settings/dam/cfm/jcr:content`
 
@@ -521,7 +521,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 * 節點： `/conf/global/settings/dam/cfm/jcr:content`
 * 屬性名稱: `autoSaveInterval`
 
-* 類型: `Long`
+* 類型：`Long`
 
 * 值： `300` （5分鐘等於300秒）
 

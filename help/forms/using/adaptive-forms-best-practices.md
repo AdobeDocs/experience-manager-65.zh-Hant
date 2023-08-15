@@ -9,16 +9,16 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 000ab7bc9a686b62fcfc122f9cf09129101ec9a8
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '4738'
-ht-degree: 0%
+source-wordcount: '4734'
+ht-degree: 1%
 
 ---
 
 # 使用最適化表單的最佳作法 {#best-practices-for-working-with-adaptive-forms}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 ## 概觀 {#overview}
 
@@ -76,7 +76,7 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
 
 如需詳細資訊，請參閱 [建立最適化表單](/help/forms/using/creating-adaptive-form.md).
 
-* 最適化表單中會有一些通用區段。 您可以識別這些變數並定義策略以促進內容重複使用。 調適型表單可讓您建立獨立的片段，並在各個表單中重複使用。 您也可以將最適化表單中的面板儲存為片段。 片段中的任何變更會反映在所有關聯的表單中。 它有助於減少編寫時間，並確保各表單的一致性。 此外，使用片段使得最適化表單變得輕量化，進而改善編寫體驗，尤其是大型表單。 如需詳細資訊，請參閱 [最適化表單片段](/help/forms/using/adaptive-form-fragments.md).
+* 最適化表單中會有一些通用區段。 您可以識別這些變數並定義策略以促進內容重複使用。 最適化表單可讓您建立獨立的片段，並在各個表單中重複使用。 您也可以將最適化表單中的面板儲存為片段。 片段中的任何變更會反映在所有關聯的表單中。 它有助於減少編寫時間，並確保各表單的一致性。 此外，使用片段使得最適化表單變得輕量化，進而改善編寫體驗，尤其是大型表單。 如需詳細資訊，請參閱 [最適化表單片段](/help/forms/using/adaptive-form-fragments.md).
 
 ### 自訂最適化表單和元件 {#customize-components}
 
@@ -120,7 +120,7 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
 * 若要在側邊欄的元件瀏覽器中檢視和編輯元件的屬性，請選取元件並按一下 ![cmppr-1](assets/cmppr-1.png). 您也可以連按兩下元件，以在屬性瀏覽器中檢視其屬性。
 * 使用鍵盤快速鍵對您的表單執行快速動作。 另請參閱 [AEM Forms鍵盤快速鍵](/help/forms/using/keyboard-shortcuts.md).
 
-* 建議僅將調適型表單元件用於調適型表單頁面。 元件與其父項階層具有相依性。 因此，請勿在AEM頁面中使用這些引數。
+* 建議僅將最適化表單元件用於最適化表單頁面。 元件與其父項階層具有相依性。 因此，請勿在AEM頁面中使用這些引數。
 
 另請參閱元件說明和最佳作法，位置在： [製作調適型表單簡介](/help/forms/using/introduction-forms-authoring.md).
 

@@ -7,9 +7,9 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: 578e9eb45ab996df841cb22e89d45fadfe90592b
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3950'
+source-wordcount: '3949'
 ht-degree: 17%
 
 ---
@@ -356,7 +356,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線到多個Experien
 
   ![無痕模式中Chrome瀏覽器的Cookie錯誤](assets/chrome-cookies-incognito-dialog.png)
 
-* 如果您無法從Experience Manager Sitesas a Cloud ServiceSites部署存取Adobe Managed Services遠端DAM部署，請更新 `aem_author.vhost` 檔案，位於 `"/etc/httpd/conf.d/available_vhosts`，讓遠端DAM在Dispatcher設定中包含以下標頭：
+* 如果您無法從Managed Servicesas a Cloud ServiceSites部署存取AdobeExperience Manager Sites遠端DAM部署，請更新 `aem_author.vhost` 檔案，位於 `"/etc/httpd/conf.d/available_vhosts`，讓遠端DAM在Dispatcher設定中包含以下標頭：
 
   ```xml
   Header Set Access-Control-Allow-Origin <Local Sites instance host>

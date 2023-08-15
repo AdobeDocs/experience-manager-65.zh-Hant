@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '263'
 ht-degree: 6%
 
 ---
@@ -30,14 +30,14 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
-再次點選/按一下或最初以緩慢點選/按一下來選取元件，將會開啟就地編輯，此編輯有其專屬的工具列。 您可以在此處編輯內容並進行基本格式變更。
+再次點選/按一下，或以緩慢點選/按一下的方式初步選取元件，將開啟就地編輯，該編輯具有自己的工具列。 您可以在此處編輯內容並進行基本格式變更。
 
 ![screen_shot_2018-03-21at163214](assets/screen_shot_2018-03-21at163214.png)
 
 此工具列提供下列選項：
 
 * **格式**：這可讓您設定粗體、斜體和底線。
-* **清單**：您可以透過此建立專案符號或編號清單，或設定縮排。
+* **清單**：您可以使用此功能建立專案符號或編號清單，或設定縮排。
 * **超連結**
 * **取消連結**
 * **全螢幕**
@@ -46,9 +46,9 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 
 ## 全熒幕編輯 {#full-screen-editing}
 
-對於文字元件，從工具列點選全熒幕模式 ![全熒幕編輯模式](do-not-localize/screen_shot_2018-03-21at163236.png) 開啟RTF編輯器，並隱藏頁面內容的其餘部分。
+對於文字型元件，從工具列點選全熒幕模式 ![全熒幕編輯模式](do-not-localize/screen_shot_2018-03-21at163236.png) 開啟RTF編輯器，並隱藏頁面內容的其餘部分。
 
-全熒幕模式會顯示您可用來編寫的所有已設定選項。 可用性為選項 [取決於設定](/help/sites-administering/rich-text-editor.md).
+全熒幕模式會顯示所有可用於編寫的已設定選項。 可用性為選項 [取決於設定](/help/sites-administering/rich-text-editor.md).
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
@@ -59,7 +59,7 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 * **文字置中**
 * **向右對齊文字**
 
-按一下最小化圖示關閉全熒幕模式。
+按一下最小化圖示可關閉全熒幕模式。
 
 ![screen_shot_2018-03-21at163323](assets/screen_shot_2018-03-21at163323.png)
 

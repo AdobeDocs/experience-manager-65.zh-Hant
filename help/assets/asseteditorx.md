@@ -1,24 +1,24 @@
 ---
 title: 擴充Asset Editor
-description: 瞭解如何使用自訂元件延伸Asset Editor的功能。
+description: 瞭解如何使用自訂元件來擴充Asset Editor的功能。
 contentOwner: AG
 role: User, Admin
 feature: Developer Tools
 exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '687'
 ht-degree: 13%
 
 ---
 
 # 擴充Asset Editor {#extending-asset-editor}
 
-Asset Editor是點按透過Asset Share找到的資產時開啟的頁面，可讓使用者編輯資產的各個方面，例如中繼資料、縮圖、標題和標籤。
+Asset Editor是點按透過Asset Share找到的資產時開啟的頁面，可讓使用者編輯資產的方面，如中繼資料、縮圖、標題和標籤。
 
-有關使用預先定義的編輯元件來設定編輯器的詳情，請參閱 [建立和設定Asset Editor頁面](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page).
+有關使用預先定義的編輯元件來設定編輯器的資訊，請參見 [建立和設定Asset Editor頁面](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page).
 
-除了使用現有的編輯器元件外， [!DNL Adobe Experience Manager] 開發人員也可以建立自己的元件。
+除了使用現有的編輯器元件之外， [!DNL Adobe Experience Manager] 開發人員也可以建立自己的元件。
 
 ## 建立資產編輯器範本 {#creating-an-asset-editor-template}
 
@@ -30,7 +30,7 @@ Geometrixx中包含下列範例頁面：
 
 ### 設定Clientlib {#configuring-clientlib}
 
-[!DNL Assets] 元件使用WCM edit clientlib的擴充功能。 clientlibs通常會載入 `init.jsp`.
+[!DNL Assets] 元件使用WCM edit clientlib的擴充功能。 clientlibs通常載入到 `init.jsp`.
 
 與預設clientlib載入(在核心的 `init.jsp`)，和 [!DNL Assets] 範本必須具備下列條件：
 
@@ -38,21 +38,21 @@ Geometrixx中包含下列範例頁面：
 
 * clientlib也必須包含在停用的WCM模式中(例如，載入 **publish**)，才能轉換謂語、動作和鏡頭。
 
-在大多數情況下，複製現有的範例 `init.jsp` (`/apps/geometrixx/components/asseteditor/init.jsp`)應該可以滿足這些需求。
+在大多數情況下，複製現有的範例 `init.jsp` (`/apps/geometrixx/components/asseteditor/init.jsp`)應該能滿足這些需求。
 
 ### 設定JS動作 {#configuring-js-actions}
 
-部分 [!DNL Assets] 元件需要中定義的JS函式 `component.js`. 將此檔案複製到您的元件目錄並加以連結。
+部分 [!DNL Assets] 元件需使用JS函式，定義於 `component.js`. 將此檔案複製到您的元件目錄並加以連結。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-此範例會在中載入此JavaScript來源 `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)。
+此範例將此JavaScript來源載入到 `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)。
 
 ### 其他樣式表 {#additional-style-sheets}
 
-部分 [!DNL Assets] 元件使用Widget資料庫。 若要在內容內容內容中正確呈現，必須載入其他樣式表。 標籤動作元件還需要一個。
+部分 [!DNL Assets] 元件使用widget資料庫。 若要在內容內容內容中正確呈現，必須載入其他樣式表。 標籤動作元件需要另一個專案。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
@@ -64,18 +64,18 @@ Geometrixx中包含下列範例頁面：
 
 ### FormChooser：最終載入資源的調整 {#formchooser-adjustments-for-eventually-loaded-resources}
 
-Asset Editor會使用「表單選擇器」，只要將表單選擇器和表單路徑新增至資產的URL，即可讓您編輯相同表單頁面上的資源（在此例中是資產）。
+Asset Editor會使用「表單選擇器」，只要將表單選擇器和表單路徑新增至資產的URL，即可讓您編輯相同表單頁面上的資源（此案例中為資產）。
 
 例如：
 
-* 普通表單頁面： [http://localhost:4502/content/geometrixx/en/press/asseteditor.html](http://localhost:4502/content/geometrixx/en/press/asseteditor.html)
+* 純格式頁面： [http://localhost:4502/content/geometrixx/en/press/asseteditor.html](http://localhost:4502/content/geometrixx/en/press/asseteditor.html)
 * 資產已載入表單頁面： [http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/en/press/asseteditor.html](http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/en/press/asseteditor.html)
 
-中的範例控制代碼 `head.jsp` (`/apps/geometrixx/components/asseteditor/head.jsp`)執行下列動作：
+中的範例控制代碼 `head.jsp` (`/apps/geometrixx/components/asseteditor/head.jsp`)，請執行下列動作：
 
-* 它們會偵測資產是否已載入，或是否必須顯示純格式。
+* 他們可偵測是否已載入資產或是否必須顯示純格式。
 * 如果載入資產，則會停用WCM模式，因為parsys只能在純表單頁面上編輯。
-* 如果資產已載入，使用者會使用其標題，而非表單頁面上的標題。
+* 如果資產已載入，他們會使用其標題，而非表單頁面上的標題。
 
 ```javascript
  List<Resource> resources = FormsHelper.getFormEditResources(slingRequest);
@@ -115,7 +115,7 @@ Asset Editor會使用「表單選擇器」，只要將表單選擇器和表單�
     }
 ```
 
-在HTML部分中，使用之前的標題集（資產或頁面標題）：
+在HTML部分中，使用先前的標題集（資產或頁面標題）：
 
 ```html
 <title><%= title %></title>
@@ -123,10 +123,10 @@ Asset Editor會使用「表單選擇器」，只要將表單選擇器和表單�
 
 ## 建立簡單的表單欄位元件 {#creating-a-simple-form-field-component}
 
-此範例說明如何建立可顯示和顯示已載入資產中繼資料的元件。
+此範例說明如何建立可顯示並顯示已載入資產中繼資料的元件。
 
-1. 在專案目錄中建立元件資料夾，例如， `/apps/geometrixx/components/samplemeta`.
-1. 新增 `content.xml` 包含以下程式碼片段：
+1. 在專案目錄中建立元件資料夾，例如 `/apps/geometrixx/components/samplemeta`.
+1. 新增 `content.xml` 以及下列程式碼片段：
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -138,7 +138,7 @@ Asset Editor會使用「表單選擇器」，只要將表單選擇器和表單�
        componentGroup="Asset Editor"/>
    ```
 
-1. 新增 `samplemeta.jsp` 包含以下程式碼片段：
+1. 新增 `samplemeta.jsp` 以及下列程式碼片段：
 
    ```javascript
    <%--
@@ -196,7 +196,7 @@ Asset Editor會使用「表單選擇器」，只要將表單選擇器和表單�
    </div>
    ```
 
-1. 若要讓元件可用，您必須能夠加以編輯。若要讓元件可編輯，請在CRXDE Lite中新增節點 `cq:editConfig` 主要型別 `cq:EditConfig`. 為了能夠移除段落，請新增多值屬性 `cq:actions` ，其中單一值 `DELETE`為。
+1. 若要讓元件可用，您必須能夠加以編輯。若要讓元件可編輯，請在CRXDE Lite中新增節點 `cq:editConfig` 主要型別的 `cq:EditConfig`. 為了能夠移除段落，請新增多值屬性 `cq:actions` ，其中單一值 `DELETE`為。
 
 1. 導覽至您的瀏覽器，並在範例頁面上(例如， `asseteditor.html`)切換至設計模式，並為段落系統啟用新元件。
 
@@ -204,15 +204,15 @@ Asset Editor會使用「表單選擇器」，只要將表單選擇器和表單�
 
 ## 修改中繼資料選項 {#modifying-metadata-options}
 
-您可以修改中可用的名稱空間。 [中繼資料表單](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component).
+您可以修改中的可用名稱空間 [中繼資料表單](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component).
 
 目前可用的中繼資料定義於 `/libs/dam/options/metadata`：
 
 * 此目錄中的第一個層級包含名稱空間。
-* 每個名稱空間內的專案代表中繼資料，例如本機部分專案中的結果。
+* 每個名稱空間內的專案代表中繼資料，例如本機零件專案中的結果。
 * 中繼資料內容包含型別和多值選項的資訊。
 
-這些選項可以在下列位置被覆寫： `/apps/dam/options/metadata`：
+這些選項可以在下列位置覆寫： `/apps/dam/options/metadata`：
 
 1. 複製目錄來源 `/libs` 至 `/apps`.
 
@@ -220,4 +220,4 @@ Asset Editor會使用「表單選擇器」，只要將表單選擇器和表單�
 
 >[!NOTE]
 >
->如果您新增名稱空間，必須在您的存放庫/CRX中註冊它們。 否則，提交中繼資料表單將會導致錯誤。
+>如果您新增名稱空間，則必須在您的存放庫/CRX中註冊它們。 否則，提交中繼資料表單將會導致錯誤。

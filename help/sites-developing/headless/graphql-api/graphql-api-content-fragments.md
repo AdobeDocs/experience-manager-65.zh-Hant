@@ -1,18 +1,18 @@
 ---
 title: 與內容片段搭配使用的 AEM GraphQL API
-description: 瞭解如何在Adobe Experience Manager (AEM)中將內容片段與AEM GraphQL API搭配使用，以進行Headless內容傳送。
+description: 瞭解如何在Adobe Experience Manager (AEM)中使用內容片段搭配AEM GraphQL API來進行Headless內容傳送。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '4479'
-ht-degree: 55%
+source-wordcount: '4477'
+ht-degree: 58%
 
 ---
 
 # 與內容片段搭配使用的 AEM GraphQL API {#graphql-api-for-use-with-content-fragments}
 
-瞭解如何在Adobe Experience Manager (AEM)中將內容片段與AEM GraphQL API搭配使用，以進行Headless內容傳送。
+瞭解如何在Adobe Experience Manager (AEM)中使用內容片段搭配AEM GraphQL API來進行Headless內容傳送。
 
 與內容片段搭配使用的AEM GraphQL API很大程度上取決於標準的開放原始碼GraphQL API。
 
@@ -29,8 +29,7 @@ ht-degree: 55%
 >* [AEM Commerce 透過 GraphQL 取用來自 Commerce 平台的資料](/help/commerce/cif/integrating/magento.md)。
 >* AEM 內容片段與 AEM GraphQL API (基於標準 GraphQL 的自訂實作) 搭配運作，以傳遞結構化內容以供您的應用程式使用。
 
-
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 使用GraphQL的客戶應安裝AEM內容片段搭配GraphQL索引套件1.0.5。請參閱 [發行說明](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 以取得更多詳細資料。
 
@@ -40,21 +39,21 @@ GraphQL 是：
 
 * 「*...API 的查詢語言和使用現有資料完成這些查詢的執行階段。GraphQL提供API中資料的完整且可理解的說明。 它讓使用者端能夠精確地要求他們需要的內容，而不需要更多內容，讓API更容易隨時間演化，並啟用強大的開發人員工具。*「。
 
-   請參閱 [GraphQL.org](https://graphql.org)
+  請參閱 [GraphQL.org](https://graphql.org)
 
-* 「*...靈活 API 層的開放規格。將GraphQL放在現有後端之上，讓您可以以前所未有的速度建置產品....*「。
+* 「*...靈活 API 層的開放規格。將GraphQL放在現有的後端之上，讓您可以以前所未有的速度建置產品....*「。
 
-   請參閱[探索 GraphQL](https://graphql.com/)。
+  請參閱[探索 GraphQL](https://graphql.com/)。
 
 * *「……一種資料查詢語言和規格，由Facebook在2012年內部開發，然後在2015年公開開放原始碼。 它提供了 REST 式架構的替代方案，目的是提高開發人員的生產力並盡量減少傳輸的資料量。GraphQL 用於生產環境，數百個各種規模的組織都在使用...」*
 
-   請參閱 [GraphQL 基礎](https://graphql.org/foundation)。
+  請參閱 [GraphQL 基礎](https://graphql.org/foundation)。
 
 <!--
 "*Explore GraphQL is maintained by the Apollo team. Our goal is to give developers and technical leaders around the world all of the tools they need to understand and adopt GraphQL.*". 
 -->
 
-如需GraphQL API的詳細資訊，請參閱下列章節（以及許多其他資源）：
+如需GraphQL API的詳細資訊，請參閱下列章節（以及其他許多資源）：
 
 * 位於 [graphql.org](https://graphql.org)：
 
@@ -79,15 +78,15 @@ GraphQL 使用以下項目：
 
 * **[查詢](https://graphql.org/learn/queries/)**
 
-* **[結構描述和類型](https://graphql.org/learn/schema/)**：
+* **[綱要和類型](https://graphql.org/learn/schema/)**：
 
-   * 結構描述是由 AEM 根據內容片段模型所產生。
-   * 使用您的結構描述，GraphQL 呈現 GraphQL for AEM 實作可用的類型和操作。
+   * 綱要是由 AEM 根據內容片段模型所產生。
+   * 使用您的綱要，GraphQL 呈現 GraphQL for AEM 實作可用的類型和操作。
 
 * **[欄位](https://graphql.org/learn/queries/#fields)**
 
 * **[GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#graphql-aem-endpoint)**
-   * AEM 中回應 GraphQL 查詢並提供 GraphQL 結構描述存取權的路徑。
+   * AEM 中回應 GraphQL 查詢並提供 GraphQL 綱要存取權的路徑。
 
    * 如需詳細資訊，請參閱[啟用 GraphQL 端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)。
 
@@ -113,7 +112,7 @@ AEM提供將查詢（兩種型別）轉換為 [持久查詢](/help/sites-develop
 <!-- is this fully accurate? -->
 >[!NOTE]
 >
->通常創作例項上沒有Dispatcher/CDN，因此在那裡使用持續查詢不會提高效能；除了測試它們。
+>通常創作例項上沒有Dispatcher/CDN，因此在那裡使用持續性查詢不會提高效能；除了測試它們。
 
 不建議使用 POST 要求的 GraphQL 查詢，因為它們不會被快取，因此在預設執行個體上，Dispatcher 設定為阻擋此類查詢。
 
@@ -154,30 +153,30 @@ AEM提供將查詢（兩種型別）轉換為 [持久查詢](/help/sites-develop
 * 發佈環境：用於：
    * 為 JS 應用程式查詢資料 (標準使用案例)
 
-* 作者環境：用於：
+* 編寫環境：用於：
    * 為「內容管理目的」查詢資料：
       * AEM中的GraphQL是唯讀API。
       * REST API 可用於 CR(u)D 操作。
 
 ## 權限 {#permission}
 
-需要許可權才能存取資產。
+必須具備許可權才能存取Assets。
 
-GraphQL查詢是在基礎請求的AEM使用者的許可權下執行。 如果使用者沒有某些片段（儲存為資產）的讀取存取權，這些片段就不會成為結果集的一部分。
+GraphQL查詢是在基礎請求的AEM使用者許可權下執行。 如果使用者沒有某些片段（儲存為資產）的讀取存取權，這些片段就不會成為結果集的一部分。
 
 此外，使用者必須擁有GraphQL端點的存取權，才能執行GraphQL查詢。
 
-## 結構描述產生 {#schema-generation}
+## 綱要產生 {#schema-generation}
 
-GraphQL是型別化API，這表示資料必須清楚建構並按型別組織。
+GraphQL是型別API，這表示資料必須清楚建構並依型別組織。
 
-GraphQL 規格提供了一系列指南，說明如何建立健全的 API 來查詢特定執行個體上的資料。若要完成這些准則，使用者端必須擷取 [結構描述](#schema-generation)，其中包含查詢所需的所有型別。
+GraphQL 規格提供了一系列指南，說明如何建立健全的 API 來查詢特定執行個體上的資料。若要完成這些准則，使用者端必須擷取 [結構描述](#schema-generation)，其中包含查詢所需的全部型別。
 
-對於內容片段，GraphQL 結構描述 (結構和類型) 是以&#x200B;**啟用的**[內容片段模型](/help/assets/content-fragments/content-fragments-models.md)及其資料類型為基礎。
+對於內容片段，GraphQL 綱要 (結構和類型) 是以&#x200B;**啟用的**[內容片段模型](/help/assets/content-fragments/content-fragments-models.md)及其資料類型為基礎。
 
 >[!CAUTION]
 >
->所有 GraphQL 結構描述 (衍生自已&#x200B;**啟用**&#x200B;的內容片段模型) 都可透過 GraphQL 端點讀取。
+>所有 GraphQL 綱要 (衍生自已&#x200B;**啟用**&#x200B;的內容片段模型) 都可透過 GraphQL 端點讀取。
 >
 >此功能表示您必須確保沒有可用的敏感資料，因為資料可能會以這種方式外洩。 例如，其中包含可作為模型定義中的欄位名稱顯示的資訊。
 
@@ -187,40 +186,40 @@ GraphQL 規格提供了一系列指南，說明如何建立健全的 API 來查�
 
    ![與 GraphQL 搭配使用的內容片段模型](assets/cfm-graphqlapi-01.png "與 GraphQL 搭配使用的內容片段模型")
 
-1. 對應的 GraphQL 結構描述 (來自 GraphiQL 自動文件的輸出)：
-   ![根據內容片段模型的 GraphQL 結構描述](assets/cfm-graphqlapi-02.png "根據內容片段模型的 GraphQL 結構描述")
+1. 對應的 GraphQL 綱要 (來自 GraphiQL 自動文件的輸出)：
+   ![根據內容片段模型的 GraphQL 綱要](assets/cfm-graphqlapi-02.png "根據內容片段模型的 GraphQL 綱要")
 
    此影像顯示產生的型別 `ArticleModel` 包含多個 [欄位](#fields).
 
    * 其中三個是由使用者控制： `author`， `main`、和 `referencearticle`.
 
-   * 其他欄位是由AEM自動新增，並代表提供特定內容片段相關資訊的實用方法。在此範例中， [協助程式欄位](#helper-fields)) `_path`， `_metadata`， `_variations`.
+   * 其他欄位則由AEM自動新增，並代表提供特定內容片段相關資訊的實用方法。在此範例中， [協助程式欄位](#helper-fields)) `_path`， `_metadata`， `_variations`.
 
 1. 使用者根據文章模型建立內容片段後，就可以透過 GraphQL 對其進行查詢。例如，請參閱[範例查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#graphql-sample-queries) (根據[與 GraphQL 搭配使用的範例內容片段結構](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql))。
 
-在 GraphQL for AEM 中，結構描述是靈活的。此靈活性表示每次建立、更新或刪除內容片段模型時都會自動產生它。 當您更新內容片段模型時，資料結構描述快取也會重新整理。
+在 GraphQL for AEM 中，綱要是靈活的。這種靈活性表示每次建立、更新或刪除內容片段模型時都會自動產生。 當您更新內容片段模型時，資料綱要快取也會重新整理。
 
-Sites GraphQL 服務偵聽 (在背景) 對內容片段模型所做的任何修改。當偵測到更新時，只有該部分的結構描述會重新產生。這種最佳化作業可以節省時間並提供穩定性。
+Sites GraphQL 服務偵聽 (在背景) 對內容片段模型所做的任何修改。當偵測到更新時，只有該部分的綱要會重新產生。這種最佳化作業可以節省時間並提供穩定性。
 
 例如，您可以：
 
 1. 安裝包含 `Content-Fragment-Model-1` 和 `Content-Fragment-Model-2` 的套件：
 
-   1. GraphQL型別 `Model-1` 和 `Model-2` 「 」產生。
+   1. 會產生 `Model-1` 和 `Model-2` 的 GraphQL 類型。
 
 1. 然後修改 `Content-Fragment-Model-2`：
 
-   1. 僅限 `Model-2` GraphQL型別會更新。
+   1. 僅限 `Model-2` GraphQL型別已更新。
 
-   1. 而 `Model-1` 保持不變。
+   1. 然而 `Model-1` 保持不變。
 
 >[!NOTE]
 >
->此詳細資料務必注意，以防您透過REST API或其他方式對內容片段模型執行大量更新。
+>此詳細資料務必注意，以備您透過REST API或以其他方式大量更新內容片段模型。
 
-結構描述透過與 GraphQL 查詢相同的端點提供服務，用戶端處理以 `GQLschema` 副檔名呼叫結構描述這一事實。例如，執行簡單的 `GET` 請求日期 `/content/cq:graphql/global/endpoint.GQLschema` 結果會輸出具有內容型別的結構描述： `text/x-graphql-schema;charset=iso-8859-1`.
+綱要透過與 GraphQL 查詢相同的端點提供服務，用戶端處理以 `GQLschema` 副檔名呼叫綱要這一事實。例如，執行簡單 `GET` 請求於 `/content/cq:graphql/global/endpoint.GQLschema` 結果會輸出具有Content-type的結構描述： `text/x-graphql-schema;charset=iso-8859-1`.
 
-### 結構描述產生 - 未發佈的模型 {#schema-generation-unpublished-models}
+### 綱要產生 - 未發佈的模型 {#schema-generation-unpublished-models}
 
 巢狀內嵌內容片段時，可能會發佈父內容片段模型，但不會發佈被參考的模型。
 
@@ -228,7 +227,7 @@ Sites GraphQL 服務偵聽 (在背景) 對內容片段模型所做的任何修�
 >
 >AEM使用者介面可防止這種情況的發生，但如果以程式設計方式發佈，或透過內容套件發佈，則可能會發生。
 
-發生此情況時，AEM會產生 *未完成* 上層內容片段模式的結構描述。 這表示從結構描述中移除依賴未發佈模型的片段參考。
+當這種情況發生時，AEM會產生 *不完整* 上層內容片段模式的結構描述。 這表示從結構描述中移除依賴未發佈模型的片段參考。
 
 ## 欄位 {#fields}
 
@@ -236,13 +235,13 @@ Sites GraphQL 服務偵聽 (在背景) 對內容片段模型所做的任何修�
 
 * 產生的欄位。
 
-   一系列[資料類型](#data-types)用於根據內容片段模型的設定方式建立欄位。欄位名稱取自 **屬性名稱** 的欄位 **資料型別**.
+  一系列[資料類型](#data-types)用於根據內容片段模型的設定方式建立欄位。欄位名稱取得自 **屬性名稱** 欄位屬於 **資料型別**.
 
    * 此外， **呈現為** 設定，因為使用者可以設定特定資料型別。 例如，單行文字欄位可以設定為包含多個單行文字，方法是選擇 `multifield` 下拉式清單中的。
 
-* 適用於AEM的GraphQL也會產生數個 [協助程式欄位](#helper-fields).
+* 適用於AEM的GraphQL也產生數個 [協助程式欄位](#helper-fields).
 
-   這些欄位用於識別內容片段，或取得有關內容片段的詳細資訊。
+  這些欄位用於識別內容片段，或取得有關內容片段的詳細資訊。
 
 ### 資料類型 {#data-types}
 
@@ -264,13 +263,13 @@ GraphQL for AEM 支援類型清單。表示所有支援的內容片段模型資�
 
 ### Helper 欄位 {#helper-fields}
 
-除了使用者產生的欄位資料型別外，適用於AEM的GraphQL也會產生數個欄位 *協助程式* 可協助識別內容片段或提供有關內容片段的其他資訊的欄位。
+除了使用者產生的欄位資料型別外，適用於AEM的GraphQL也會產生數個欄位 *協助程式* 此欄位可協助識別內容片段，或提供有關內容片段的額外資訊。
 
 這些 [Helper 欄位](#helper-fields)前面加上 `_` 以區分是使用者定義的還是自動產生的。
 
 #### 路徑 {#path}
 
-路徑欄位作為 AEM GraphQL 中的標識符。它代表 AEM 存放庫中內容片段資產的路徑。此路徑被選為內容片段的識別碼，因為它：
+路徑欄位作為 AEM GraphQL 中的標識符。它代表 AEM 存放庫中內容片段資產的路徑。選擇此路徑作為內容片段的識別碼，因為它：
 
 * 在 AEM 中是唯一的，
 * 容易撷取。
@@ -312,7 +311,7 @@ GraphQL for AEM 支援類型清單。表示所有支援的內容片段模型資�
 * 內容片段的說明
 * 以及建立日期等。
 
-由於中繼資料是透過結構描述編輯器產生的，因此沒有特定的結構，所以實作 `TypedMetaData` GraphQL 類型來公開內容片段的中繼資料。此 `TypedMetaData` 公開依下列純量型別分組的資訊：
+由於中繼資料是透過綱要編輯器產生的，因此沒有特定的結構，所以實作 `TypedMetaData` GraphQL 類型來公開內容片段的中繼資料。此 `TypedMetaData` 公開依下列純量型別分組的資訊：
 
 | 欄位 |
 |--- |
@@ -329,7 +328,7 @@ GraphQL for AEM 支援類型清單。表示所有支援的內容片段模型資�
 
 每個純量類型代表單一名稱-值配對或名稱-值配對組，配對中的值屬於該群組的類型。
 
-例如，如果您想要擷取內容片段的標題，此屬性為字串屬性，因此您要查詢所有字串中繼資料：
+例如，如果您想擷取內容片段的標題，此屬性為字串屬性，因此您要查詢所有字串中繼資料：
 
 若要查詢中繼資料：
 
@@ -349,14 +348,14 @@ GraphQL for AEM 支援類型清單。表示所有支援的內容片段模型資�
 }
 ```
 
-如果檢視產生的 GraphQL 結構描述，則可以檢視所有中繼資料 GraphQL 類型。所有模型類型都具有相同的 `TypedMetaData`。
+如果檢視產生的 GraphQL 綱要，則可以檢視所有中繼資料 GraphQL 類型。所有模型類型都具有相同的 `TypedMetaData`。
 
 >[!NOTE]
 >
 >**一般和陣列中繼資料的區別**
 >請記住，`StringMetadata` 和 `StringArrayMetadata` 都是指儲存在存放庫的中繼資料，而不是擷取它們的方式。
 >
->例如，呼叫 `stringMetadata` 欄位中，您會收到儲存於存放庫中的所有中繼資料陣列，做為 `String`. 如果您呼叫 `stringArrayMetadata`，您會收到儲存於存放庫中所有中繼資料的陣列，如下所示 `String[]`.
+>例如，呼叫 `stringMetadata` 欄位中，您會收到儲存於存放庫中所有中繼資料的陣列作為 `String`. 如果您致電 `stringArrayMetadata`，您會收到儲存於存放庫中所有中繼資料的陣列，如下所示 `String[]`.
 
 請參閱[中繼資料的範例查詢 - 列出 GB 獎項的中繼資料](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)。
 
@@ -376,13 +375,13 @@ GraphQL for AEM 支援類型清單。表示所有支援的內容片段模型資�
 
 >[!NOTE]
 >
->此 `_variations` 欄位不包含 `master` 技術上來說，變數與原始資料相同(參照為 *主版* （在UI中）不會被視為明確變數。
+>此 `_variations` 欄位不包含 `master` 變數，就技術而言為原始資料(參照為 *主版* （在UI中）不會被視為明確變數。
 
 請參閱[範例查詢 - 所有具有名稱變化的城市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)。
 
 >[!NOTE]
 >
->如果內容片段不存在指定的變數，則原始資料（也稱為主要變數）會傳回為（備援）預設值。
+>如果內容片段不存在特定的變化，則原始資料 (也稱為主版變化) 會作為 (備援) 預設值傳回。
 
 <!--
 ## Security Considerations {#security-considerations}
@@ -390,9 +389,9 @@ GraphQL for AEM 支援類型清單。表示所有支援的內容片段模型資�
 
 ## GraphQL 變數 {#graphql-variables}
 
-GraphQL 允許在查詢中放置變數。如需詳細資訊，請參閱 [變數的GraphQL檔案](https://graphql.org/learn/queries/#variables).
+GraphQL 允許在查詢中放置變數。如需詳細資訊，請參閱 [GraphQL 變數文件](https://graphql.org/learn/queries/#variables)。
 
-例如，若要取得型別為的所有內容片段 `Article` 具有特定變數的可指定變數 `variation` 在GraphiQL中。
+例如，若要取得型別為的所有內容片段 `Article` 有特定變數的可指定變數 `variation` 在GraphiQL中。
 
 ![GraphQL 變數](assets/cfm-graphqlapi-03.png "GraphQL 變數")
 
@@ -445,9 +444,9 @@ query GetAdventureByType($includePrice: Boolean!) {
 
 篩選使用以邏輯運算子和運算式的語法。
 
-最不可部分完成的部分是可套用到特定欄位內容的單一運算式。它將欄位內容與給定的常數值進行比較。
+最不可部分完成的部分是可套用到特定欄位內容的單一運算式。它將欄位內容與特定的常數值進行比較。
 
-例如，下列運算式會比較欄位內容與值 `some text`，並在內容等於值時成功。 否則，運算式會失敗。：
+例如，下列運算式會比較欄位內容與值 `some text`，如果內容等於值，則會成功。 否則，運算式會失敗。：
 
 ```graphql
 {
@@ -462,16 +461,16 @@ query GetAdventureByType($includePrice: Boolean!) {
 |--- |--- |--- |
 | `EQUALS` | `String`, `ID`, `Boolean` | ...值與欄位內容相同 |
 | `EQUALS_NOT` | `String`, `ID` | ...值與欄位內容&#x200B;*不*&#x200B;相同 |
-| `CONTAINS` | `String` | ...欄位的內容包含值(`{ value: "mas", _op: CONTAINS }` 符合 `Christmas`， `Xmas`， `master`， ...) |
+| `CONTAINS` | `String` | ...欄位內容包含值(`{ value: "mas", _op: CONTAINS }` 符合 `Christmas`， `Xmas`， `master`， ...) |
 | `CONTAINS_NOT` | `String` | ...欄位內容 *不*&#x200B;包含值 |
-| `STARTS_WITH` | `ID` | ... ID以特定值開頭(`{ value: "/content/dam/", _op: STARTS_WITH` 符合 `/content/dam/path/to/fragment`，但不是 `/namespace/content/dam/something` |
+| `STARTS_WITH` | `ID` | ... ID以特定值開頭(`{ value: "/content/dam/", _op: STARTS_WITH` 符合 `/content/dam/path/to/fragment`，但不提供 `/namespace/content/dam/something` |
 | `EQUAL` | `Int`、`Float` | ...值與欄位內容相同 |
 | `UNEQUAL` | `Int`, `Float` | ...值與欄位內容&#x200B;*不*&#x200B;相同 |
 | `GREATER` | `Int`, `Float` | ...欄位內容大於值 |
 | `GREATER_EQUAL` | `Int`, `Float` | ...欄位內容大於或等於值 |
 | `LOWER` | `Int`, `Float` | ...欄位內容小於值 |
 | `LOWER_EQUAL` | `Int`, `Float` | ...欄位內容小於或等於值 |
-| `AT` | `Calendar`, `Date`, `Time` | ...欄位的內容與值相同（包括時區設定） |
+| `AT` | `Calendar`, `Date`, `Time` | ...欄位內容與值相同（包括時區設定） |
 | `NOT_AT` | `Calendar`, `Date`, `Time` | ...欄位內容與值&#x200B;*不*&#x200B;相同 |
 | `BEFORE` | `Calendar`, `Date`, `Time` | ...值表示的時間點在欄位內容表示的時間點之前 |
 | `AT_OR_BEFORE` | `Calendar`, `Date`, `Time` | ... 值表示的時間點在欄位內容表示的時間點之前或相同 |
@@ -488,9 +487,9 @@ query GetAdventureByType($includePrice: Boolean!) {
 運算式可以使用邏輯運算子 (`_logOp`) 合併成一個集合：
 
 * `OR`  — 如果至少有一個運算式成功，則運算式整合功
-* `AND`  — 如果所有運算式都成功，運算式集就會成功（預設）
+* `AND`  — 如果所有運算式都成功，表示式集就會成功（預設）
 
-每個欄位都可以由自己的運算式集進行篩選。篩選引數中提及之所有欄位的運算式集，最終將由其本身的邏輯運運算元合併。
+每個欄位都可以由自己的運算式集進行篩選。篩選器引數中提及的所有欄位的運算式集最終將由其自己的邏輯運運算元組合。
 
 篩選器定義 (作為 `filter` 引數傳遞給查詢) 包含：
 
@@ -498,7 +497,7 @@ query GetAdventureByType($includePrice: Boolean!) {
 * 每個子定義包含 `_expressions` 陣列，提供運算式集，以及 `_logOp` 定義運算式應結合之邏輯運運算元的欄位
 * 每個運算式由值 (`value` 欄位) 和運算子 (`_operator` 欄位) 定義，應比較欄位內容與
 
-您可以省略 `_logOp` 如果您想要結合專案與 `AND` 和 `_operator` 如果要檢查是否相等，因為這些值是預設值。
+您可以省略 `_logOp` 如果您想要結合專案與 `AND` 和 `_operator` 如果您要檢查是否相等，因為這些值是預設值。
 
 以下範例示範一個完整的查詢，該查詢會篩選所有 `lastName`為 `Provo` 或包含 `sjö` 的人，不受大小寫影響：
 
@@ -543,20 +542,20 @@ query GetAdventureByType($includePrice: Boolean!) {
 
 >[!NOTE]
 >
->為獲得最佳效能，請考慮 [更新GraphQL篩選中用於分頁和排序的內容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
+>為獲得最佳效能，請考慮 [在GraphQL篩選中更新要分頁和排序的內容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
-此功能允許您根據指定的欄位來排序查詢結果。
+此功能可讓您根據指定欄位來排序查詢結果。
 
 排序標準：
 
 * 是以逗號分隔的值清單，代表欄位路徑
    * 清單中的第一個欄位會定義主要排序順序
       * 如果主要排序標準的兩個值相等，則使用第二個欄位
-      * 如果前兩個條件相等，則使用第三個欄位，依此類推。
+      * 如果前兩個條件相等，則會使用第三個欄位，依此類推。
    * 點狀記號，即field1.subfield.subfield等……
 * 具有順序方向 (選擇性)
    * ASC (遞增) 或 DESC (遞減)；預設是套用 ASC
-   * 方向可依欄位指定；此功能表示您可以依遞增順序排序一個欄位，而依遞減順序排序另一個欄位(name， firstName DESC)
+   * 方向可依欄位指定；此功能表示您可以依遞增順序排序一個欄位，依遞減順序排序另一個欄位（名稱、名字DESC）
 
 例如：
 
@@ -612,9 +611,9 @@ query {
 
 >[!NOTE]
 >
->為獲得最佳效能，請考慮 [更新GraphQL篩選中用於分頁和排序的內容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
+>為獲得最佳效能，請考慮 [在GraphQL篩選中更新要分頁和排序的內容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
-此功能可讓您對傳回清單的查詢類型執行分頁。提供兩種方法：
+此功能可讓您對傳回清單的查詢型別執行分頁。 提供兩種方法：
 
 * 在 `List` 查詢中，`offset` 和 `limit`
 * 在 `Paginated` 查詢中，`first` 和 `after`
@@ -647,10 +646,9 @@ query {
 
 >[!NOTE]
 >
->* 分頁需要穩定的排序順序，才能在多個查詢要求同一結果集的不同頁面時，跨多個查詢正常運作。依預設，它會使用結果集中每個專案的存放庫路徑，以確保順序始終相同。 如果使用不同的排序順序，且無法在JCR查詢層級完成該排序，則會對效能造成負面影響。 原因是因為在決定分頁之前，必須將整個結果集載入記憶體。
+>* 分頁需要穩定的排序順序，才能在多個查詢要求同一結果集的不同頁面時，跨多個查詢正常運作。預設情況下，它使用結果集中每個專案的存放庫路徑來確保順序始終相同。 如果使用不同的排序順序，且無法在JCR查詢層級完成排序，則會對效能產生負面影響。 原因是因為在決定分頁之前，必須將整個結果集載入記憶體。
 >
->* 位移越大，從完整JCR查詢結果集略過專案所需的時間就越多。 針對大型結果集的替代解決方案是使用已分頁查詢搭配 `first` 和 `after` 方法。
-
+>* 位移越大，從完整JCR查詢結果集中略過專案所需的時間就越多。 針對大型結果集的替代解決方案是使用已分頁查詢搭配 `first` 和 `after` 方法。
 
 ### 已分頁查詢 - first 和 after {#paginated-first-after}
 
@@ -659,9 +657,9 @@ query {
 * `first`：要傳回的前 `n` 個項目。
 預設為 `50`。
 最大值為 `100`。
-* `after`：決定請求頁面開頭的游標。游標所表示的專案不包含在結果集中。 專案的游標由下列專案決定 `cursor` 的欄位 `edges` 結構。
+* `after`：決定請求頁面開頭的游標。游標所代表的專案不包含在結果集中。 專案的游標由下列專案決定 `cursor` 欄位屬於 `edges` 結構。
 
-例如，要輸出最多包含五篇文章的結果頁面，從&#x200B;*完整*&#x200B;結果清單中的給定游標項目開始：
+例如，要輸出最多包含五篇文章的結果頁面，從&#x200B;*完整*&#x200B;結果清單中的特定游標項目開始：
 
 ```graphql
 query {
@@ -687,8 +685,7 @@ query {
 >
 >* 依預設，分頁使用代表片段排序的存放庫節點的UUID，以確保結果的順序始終相同。 使用 `sort` 時，會以隱含的方式使用 UUID 以確保唯一排序；即使是排序鍵相同的兩個項目也一樣。
 >
->* 由於內部技術限制，如果對巢狀欄位套用排序和篩選，效能會降低。 因此，請使用儲存在根層級的篩選/排序欄位。 如果您想要查詢大型分頁結果集，建議使用此技巧。
-
+>* 由於內部技術限制，如果對巢狀欄位套用排序和篩選，效能會降低。 因此，請使用儲存在根層級的篩選/排序欄位。 如果要查詢大型分頁結果集，也建議使用此技巧。
 
 ## GraphQL for AEM - 擴充功能摘要 {#graphql-extensions}
 
@@ -701,24 +698,23 @@ query {
    * 新增 `List` 到模型名稱，例如 `cityList`
    * 請參閱[範例查詢 - 所有城市的所有資訊](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-information-all-cities)
 
-   然後，您可以：
+  然後，您可以：
 
    * [排序結果](#sorting)
 
       * `ASC`：遞增
       * `DESC`：遞減
+
    * 使用以下任一方法傳回一頁結果：
 
       * [清單查詢，使用 offset 和 limit](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#list-offset-limit)
       * [已分頁查詢，使用 first 和 after](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#paginated-first-after)
    * 請參閱[範例查詢 - 所有城市的所有資訊](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-information-all-cities)
 
-
-
 * 篩選器 `includeVariations` 包含在 `List` 查詢型別。 若要擷取查詢結果中的內容片段變數， `includeVariations` 篩選器必須設定為 `true`.
 
-   >[!CAUTION]
-   >篩選器 `includeVariations` 無法與系統產生的欄位一起使用 `_variation`.
+  >[!CAUTION]
+  >篩選器 `includeVariations` 無法與系統產生的欄位一起使用 `_variation`.
 
 * 如果要使用邏輯 OR：
    * 使用 ` _logOp: OR`
@@ -734,52 +730,51 @@ query {
    * 對於內容：
 
       * `_locale`：顯示語言，根據語言管理員
-         * 請參閱[範例查詢：給定地區設定的多個內容片段](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-given-locale)
+         * 請參閱[範例查詢：特定地區設定的多個內容片段](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-given-locale)
+
       * `_metadata`：顯示片段的中繼資料
          * 請參閱[中繼資料的範例查詢 - 列出 GB 獎項的中繼資料](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+
       * `_model`：允許查詢內容片段模型 (路徑和標題)
          * 請參閱[從模型進行的內容片段模型範例查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-content-fragment-model-from-model)
+
       * `_path`：存放庫中內容片段的路徑
          * 請參閱[範例查詢 - 單一特定城市片段](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
+
       * `_reference`：顯示參考；包含 RTF 編輯器中的內聯參考
          * 請參閱[預先擷取參考之多個內容片段的範例查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-prefetched-references)
+
       * `_variation`：顯示內容片段中的特定變化
 
-         >[!NOTE]
-         >
-         >如果內容片段不存在指定的變數，則主要變數會傳回為（備援）預設值。
+        >[!NOTE]
+        >
+        >如果內容片段不存在特定的變化，則主變化會作為 (備援) 預設值傳回。
 
-         >[!CAUTION]
-         >系統產生的欄位 `_variation` 無法與篩選器搭配使用 `includeVariations`.
+        >[!CAUTION]
+        >系統產生的欄位 `_variation` 不能和篩選器 `includeVariations` 同時使用。
 
          * 請參閱[範例查詢 - 所有具有名稱變化的城市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
+
       * `_tags` ：用於顯示包含標籤的內容片段或變體ID；此清單是一系列 `cq:tags` 識別碼。
 
-         * 另請參閱 [範例查詢 — 所有標籤為分行符號的城市名稱](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
-         * 另請參閱 [附加特定標籤之指定模型的內容片段變體範例查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
+         * 請參閱[範例查詢 - 所有標記為 City Breaks 的城市名稱](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
+         * 請參閱[對附加了特定標記的特定模式之內容片段變化的範例查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
 
-         >[!NOTE]
-         >
-         >也可以透過列出內容片段的中繼資料來查詢標籤。
+        >[!NOTE]
+        >
+        >對標記的查詢還能透過列出內容片段的中繼資料進行。
+
    * And 操作：
 
       * `_operator`：套用特定的運算子；`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`
          * 請參閱[範例查詢 - 所有姓名沒有「Jobs」的人員](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-persons-not-jobs)
          * 請參閱[範例查詢 - 所有 `_path` 以特定前置詞開頭的冒險](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-all-adventures-cycling-path-filter)
+
       * `_apply`：套用特定條件；例如，`AT_LEAST_ONCE`
          * 請參閱[範例查詢 - 篩選內含必須至少出現一次之項目的陣列](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-array-item-occur-at-least-once)
+
       * `_ignoreCase`：查詢時忽略大小寫
          * 請參閱[範例查詢 - 所有名稱包含 SAN 的城市，不區分大小寫](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-cities-san-ignore-case)
-
-
-
-
-
-
-
-
-
-
 
 * 支援 GraphQL 聯合類型：
 
@@ -796,7 +791,7 @@ query {
 >
 >如需AEM中CORS資源共用原則的詳細概觀，請參閱 [瞭解跨原始資源共用(CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html#understand-cross-origin-resource-sharing-(cors)).
 
-若要存取GraphQL端點，請在客戶Git存放庫中設定CORS原則。 此設定是透過為一個或多個所需端點新增適當的OSGi CORS設定檔案來完成。
+若要存取GraphQL端點，請在客戶Git存放庫中設定CORS原則。 此設定可透過為一個或多個所需端點新增適當的OSGi CORS設定檔案來完成。
 
 此設定必須指定信任的網站來源 `alloworigin` 或 `alloworiginregexp` 必須授予其存取權。
 
@@ -839,9 +834,9 @@ query {
 
 ### 查閱者篩選器 {#referrer-filter}
 
-除了CORS設定外，反向連結篩選條件必須設定為允許從協力廠商主機存取。
+除了CORS設定，反向連結篩選條件必須設定為允許從協力廠商主機存取。
 
-此篩選可透過新增適當的OSGi反向連結篩選設定檔案來完成，該設定檔案可以：
+若要完成此篩選，請新增適當的OSGi反向連結篩選設定檔，其可：
 
 * 指定受信任網站的主機名稱；`allow.hosts` 或 `allow.hosts.regexp`，
 * 授予此主機名稱的存取權。
@@ -876,14 +871,13 @@ query {
 >
 >* 僅將存取權授予受信任網域
 >* 請確定未公開任何敏感資訊
->* 不使用萬用字元 [*] 語法；此功能會停用對GraphQL端點的已驗證存取，並將其向全世界公開。
-
+>* 不使用萬用字元 [*] 語法；此功能會停用對GraphQL端點的已驗證存取權，並將其向全世界公開。
 
 >[!CAUTION]
 >
 >所有 GraphQL [結構描述](#schema-generation) (衍生自&#x200B;**已啟用**&#x200B;的內容片段模型) 都可透過 GraphQL 端點讀取。
 >
->此功能表示您必須確保沒有可用的敏感資料，因為資料可能會以這種方式外洩。 例如，其中包含可作為模型定義中的欄位名稱顯示的資訊。
+>此功能表示您必須確保沒有可用的敏感資料，因為這樣可能會洩漏資料。 例如，其中包含可作為模型定義中的欄位名稱顯示的資訊。
 
 ## 驗證 {#authentication}
 
@@ -901,4 +895,4 @@ AEM計畫在未來投資AEM GraphQL API。*&quot;
 
 ## 教學課程 - AEM Headless 和 GraphQL 快速入門 {#tutorial}
 
-正在尋找實作教學課程？簽出 [AEM Headless和GraphQL快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) 端對端教學課程，說明如何在Headless CMS案例中使用AEM GraphQL API建置和公開內容，並由外部應用程式使用。
+正在尋找實作教學課程？查看[AEM Headless 和 GraphQL 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)端對端教學課程，說明如何在 Headless CMS 情境下使用 AEM GraphQL API 建立和公開內容並供外部應用程式取用。

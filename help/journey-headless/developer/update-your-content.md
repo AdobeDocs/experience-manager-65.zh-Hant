@@ -2,10 +2,10 @@
 title: 如何透過 AEM Assets API 更新您的內容
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解如何使用 REST API 存取和更新內容片段的內容。
 exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 95%
+source-wordcount: '1037'
+ht-degree: 89%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 95%
 
 那麼為什麼需要另一個 API？
 
-Assets HTTP API 可讓您&#x200B;**讀取**&#x200B;您的內容，但它也可讓您&#x200B;**建立**、**更新** 和&#x200B;**刪除**&#x200B;內容 - GraphQL API 無法執行的動作。
+Assets HTTP API可讓您 **讀取** 您的內容，但也可讓您 **建立**， **更新** 和 **刪除** 內容 — GraphQL API無法執行的動作。
 
 Adobe Experience Manager 最新版本的每個開箱即用安裝中都有提供 Assets REST API。
 
@@ -54,7 +54,7 @@ Assets HTTP API 包含：
 
 Assets HTTP API 的目前實作是以 **REST** 架構型式為基礎，可讓您透過 **CRUD** 操作 (建立、讀取、更新、刪除) 存取內容。
 
-有了這些操作，API 可讓您將內容服務提供給 JavaScript 前端應用程式，藉此將 Adobe Experience Manager as a Headless CMS (內容管理系統)。或者任何其他可以執行 HTTP 要求並處理 JSON 回應的應用程式。例如，框架型或自訂的單頁應用程式 (SPA) 需要透過 API 提供的內容，通常採 JSON 格式。
+透過這些作業，API可讓您藉由向JavaScript前端應用程式提供內容服務，將Adobe Experience Manager當作Headless CMS （內容管理系統）來作業。 或者任何其他可以執行 HTTP 要求並處理 JSON 回應的應用程式。例如，框架型或自訂的單頁應用程式 (SPA) 需要透過 API 提供的內容，通常採 JSON 格式。
 
 <!--
 >[!NOTE]
@@ -223,7 +223,6 @@ Assets REST API 使用 `/api/assets` 端點並需要資產的路徑來存取它 
 >
 >* `/api/assets`**不需要**&#x200B;使用 `.model` 選擇器。
 >* `/content/path/to/page` **需要**&#x200B;使用 `.model` 選擇器。
-
 
 ### 操作 {#operation}
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: aedf890c-a2f1-412f-8897-2492ffab335a
-source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Roms入口網站的搜尋與清單元件會顯示AEM伺服器發佈執行個體�
 
 ### 搜尋和列表器 {#search-and-lister}
 
-「搜尋並製表器」元件可讓您將下列功能新增至您的表單入口網站：
+「搜尋並製表器」元件可讓您將下列功能新增至表單入口網站：
 
 * 在面板、卡片或格線檢視中列出可立即使用的表單。 它也支援來自Forms Manager中特定資料夾的自訂範本清單表單。
 * 指定表單的呈現方式 — HTML5、PDF或兩者。

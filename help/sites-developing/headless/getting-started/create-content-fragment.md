@@ -1,23 +1,23 @@
 ---
 title: 建立內容片段Headless快速入門手冊
-description: 了解如何使用 AEM 的內容片段來設計、建立、規劃和使用每頁自主的內容以進行無周邊傳遞。
+description: 了解如何使用 AEM 的內容片段來設計、建立、規劃和使用每頁自主的內容以進行 Headless 傳遞。
 exl-id: 5787204d-bcce-447e-b98c-2bc1c0d744c3
-source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 67%
+source-wordcount: '385'
+ht-degree: 60%
 
 ---
 
 # 建立內容片段Headless快速入門手冊 {#creating-content-fragments}
 
-了解如何使用 AEM 的內容片段來設計、建立、規劃和使用每頁自主的內容以進行無周邊傳遞。
+了解如何使用 AEM 的內容片段來設計、建立、規劃和使用每頁自主的內容以進行 Headless 傳遞。
 
 ## 什麼是內容片段？ {#what-are-content-fragments}
 
 [您已經建立資產資料夾](create-assets-folder.md)，其中可以儲存內容片段，現在您可以建立片段了！
 
-內容片段允許您設計、建立、規劃和發佈每頁自主的內容。它們可讓您將內容準備就緒用於多個位置和多個管道。
+內容片段可讓您設計、建立、策劃和發佈不受頁面影響的內容。 可讓您準備內容以用於多個位置和多個管道。
 
 內容片段包含結構化內容，能以 JSON 格式傳遞。
 
@@ -25,10 +25,10 @@ ht-degree: 67%
 
 內容作者將建立任意數量的內容片段來表示他們建立的內容。這將是他們在 AEM 中的主要任務。出於本快速入門指南的目的，我們只需要建立一個。
 
-1. 登入AEM，並從主功能表選取 **導覽 — >資產**.
+1. 登入AEM，從主功能表選取 **導覽 — >資產**.
 1. 導覽至 [您先前建立的資料夾。](create-assets-folder.md)
 1. 點選或按一下 **建立 — >內容片段**.
-1. 內容片段的建立會以兩個步驟的精靈呈現。 首先，選取您要使用哪個模式來建立內容片段，然後點選或按一下 **下一個**.
+1. 內容片段的建立以兩步驟的精靈呈現。 首先，選取您要使用哪個模式來建立內容片段，然後點選或按一下 **下一個**.
    * 可用模型取決於您為內容片段建立所在資產資料夾所定義的&#x200B;[**雲端設定**](create-assets-folder.md)。
    * 如果您收到訊息 `We could not find any models`，檢查資產資料夾的設定。
 
@@ -54,4 +54,4 @@ ht-degree: 67%
 
 >[!TIP]
 >
->有關管理內容片段的完整詳細資訊，請參閱[內容片段文件](/help/assets/content-fragments/content-fragments.md)
+>如需有關管理內容片段的完整詳細資訊，請參閱[內容片段文件](/help/assets/content-fragments/content-fragments.md)

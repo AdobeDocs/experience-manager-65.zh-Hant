@@ -12,9 +12,9 @@ discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '521'
 ht-degree: 1%
 
 ---
@@ -25,25 +25,25 @@ ht-degree: 1%
 
 此功能可讓您透過偵測使用中的模式來檢查現有AEM執行個體的可升級性，這些模式包括：
 
-1. 違反特定規則，並在將受升級影響或覆寫的區域執行
-1. 使用AEM 6.x功能或AEM 6.5上無法回溯相容、且在升級後可能會中斷的API。
+1. 違反特定規則，並在將受升級影響或覆寫的區域中執行
+1. 使用AEM 6.x功能或AEM 6.5上無法回溯相容且升級後可能會中斷的API。
 
-這可作為升級到AEM 6.5相關開發工作的評估。
+這可作為升級至AEM 6.5相關開發工作的評估。
 
 ## 設定方法 {#how-to-set-up}
 
-模式偵測器會單獨發行，做為 [一個套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) 正在處理目標為AEM 6.5升級的任何來源AEM 6.1到6.5版本。 它可使用以下工具安裝： [封裝管理員](/help/sites-administering/package-manager.md).
+模式偵測器會單獨發行，做為 [一個套件](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) 正在處理目標為AEM 6.5升級的任何來源AEM版本（從6.1到6.5）。 可使用進行安裝 [封裝管理員](/help/sites-administering/package-manager.md).
 
 ## 使用方式 {#how-to-use}
 
 >[!NOTE]
 >
->模式偵測器可在任何環境中執行，包括本機開發執行個體。 不過，為了：
+>模式偵測器可在任何環境中執行，包括本機開發執行個體。 但是，為了：
 >
 >* 增加偵測率
->* 避免業務關鍵執行個體速度減慢
+>* 避免業務關鍵執行個體速度變慢
 >
->建議兩者同時執行 **在中繼環境中** 儘可能接近使用者應用程式、內容和設定領域的生產環境。
+>建議同時執行 **在中繼環境中** 儘可能接近使用者應用程式、內容和設定領域的生產環境。
 
 您可以使用數種方法來檢查「模式偵測器」輸出：
 
@@ -55,9 +55,9 @@ ht-degree: 1%
    ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **透過互動式文字型或一般JSON介面**
-* **透過反應式JSON行介面，**可在每行中產生個別JSON檔案。
+* **透過反應式JSON行介面，**可在每行產生個別的JSON檔案。
 
-這兩種方法的詳細資訊如下：
+以下詳細說明了這兩種方法：
 
 ## 反應式介面 {#reactive-interface}
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 
 ## 處理純文字介面 {#handling-the-plain-text-interface}
 
-輸出中的資訊會格式化為一系列事件專案。 有兩個管道 — 一個用於發佈違規，另一個用於發佈目前的進度。
+輸出中的資訊會格式化為一系列事件專案。 有兩個管道 — 一個用於發佈違規，另一個用於發佈目前進度。
 
 可使用下列指令來取得：
 
@@ -100,7 +100,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 ## 處理JSON介面 {#handling-the-json-interface}
 
-同樣地，JSON的處理方式也可使用 [jq工具](https://stedolan.github.io/jq/) 一經發佈。
+同樣地，JSON也可使用 [jq工具](https://stedolan.github.io/jq/) 一經發佈。
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == true)'
@@ -125,7 +125,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 }
 ```
 
-每5秒會報告一次進度，而且可以透過排除標籤為懷疑的訊息以外的其他訊息來擷取進度：
+每5秒會報告一次進度，並且可透過排除標籤為懷疑的訊息以外的其他訊息來擷取進度：
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == false)'
@@ -217,9 +217,9 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 目前的模式偵測器允許檢查：
 
 * OSGi套件組合匯出和匯入不相符
-* Sling資源型別和超級型別（具有搜尋路徑內容覆蓋圖）使用過量
+* Sling資源型別和超級型別（具有搜尋路徑內容覆蓋圖）使用量
 * Oak索引的定義（相容性）
-* VLT封裝（使用過度）
+* VLT封裝（使用過量）
 * rep：User節點相容性（在OAuth設定的內容中）
 
 >[!NOTE]

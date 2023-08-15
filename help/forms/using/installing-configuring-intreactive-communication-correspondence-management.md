@@ -1,7 +1,7 @@
 ---
-title: 安裝及設定互動式通訊
+title: 安裝和設定互動式通訊
 seo-title: Install and configure Interactive Communications
-description: 安裝並設定AEM Forms互動式通訊，以建立商務對應、檔案、對帳單、權益通知、行銷郵件、帳單和歡迎套件。
+description: 安裝並設定 AEM Forms 互動式通訊，以建立 business correspondences、檔、報表、福利通知、行銷郵件、帳單和歡迎工具組。
 seo-description: Install and configure AEM Forms Interactive Communications to create business correspondences, documents, statements, benefit notices, marketing mails, bills, and welcome kits.
 uuid: 8acb7f68-0b52-4acd-97e2-af31c9408e8d
 topic-tags: installing
@@ -9,50 +9,50 @@ discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1381'
 ht-degree: 6%
 
 ---
 
-# 安裝及設定互動式通訊{#install-and-configure-interactive-communications}
+# 安裝和設定互動式通訊{#install-and-configure-interactive-communications}
 
 ## 簡介 {#introduction}
 
-AEM Form可集中建立、組裝、管理及傳送安全且互動式的檔案，例如商業信函、檔案、對帳單、利益通知、行銷郵件、帳單和歡迎套件。 此功能稱為互動式通訊。 此功能包含在AEM Forms附加元件套件中。 附加元件套件部署在AEM的Author或Publish執行個體上。
+AEM Form可集中建立、組裝、管理和傳送安全、互動式檔案，例如商務通訊、檔案、對帳單、福利通知、行銷郵件、帳單和歡迎套件。 此功能稱為互動式通訊。 此功能包含在AEM Forms附加元件套件中。 附加元件套件部署在AEM的製作或發佈執行個體上。
 
-您可以使用互動式通訊功能，以多種格式產生通訊。 例如，網頁和PDF。 您可以將互動式通訊與AEM Workflow整合，以便透過客戶選擇的管道處理及傳送已組裝的通訊給客戶。 例如，透過電子郵件傳送通訊給一般使用者。
+您可以使用互動式通訊功能，以多種格式產生通訊。 例如，Web和PDF。 您可以將互動式通訊與AEM Workflow整合，以透過客戶選擇的管道處理及傳遞組合通訊給客戶。 例如，透過電子郵件傳送通訊給一般使用者。
 
-如果您要從舊版升級，而且已投資通訊管理，您可以安裝 [相容性套件](../../forms/using/installing-configuring-intreactive-communication-correspondence-management.md#install-compatibility-package) 以繼續使用通訊管理。 如需互動式通訊與通訊管理之間差異的相關資訊，請參閱 [互動式通訊概述](/help/forms/using/interactive-communications-overview.md#interactive-communications-vs-correspondence-management).
+如果您要從舊版進行升級，而且已投資於通訊管理，則可以安裝 [相容性套件](../../forms/using/installing-configuring-intreactive-communication-correspondence-management.md#install-compatibility-package) 以繼續使用通訊管理。 如需互動式通訊與通訊管理之間差異的相關資訊，請參閱 [互動式通訊概述](/help/forms/using/interactive-communications-overview.md#interactive-communications-vs-correspondence-management).
 
 AEM Forms是功能強大的企業級平台。 互動式通訊只是AEM Forms的其中一項功能。 如需完整的功能清單，請參閱 [AEM Forms簡介](../../forms/using/introduction-aem-forms.md).
 
 ## 部署拓撲 {#deployment-topology}
 
-AEM Forms附加元件套件是部署至AEM的應用程式。 您至少只需要一個AEM製作和處理執行個體，即可執行互動式通訊功能。 下列拓撲可代表如何在OSGi功能上執行AEM Forms互動式通訊、通訊管理、AEM Forms資料擷取和以Forms為中心的工作流程。 如需拓撲的詳細資訊，請參閱 [AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms附加元件套件是部署至AEM的應用程式。 您只需要至少一個AEM製作與處理執行個體，即可執行互動式通訊功能。 下列拓朴可作為OSGi功能上執行AEM Forms互動式通訊、通訊管理、AEM Forms資料擷取和Forms工作流程的指示性拓朴。 如需有關拓朴的詳細資訊，請參閱 [AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md).
 
-![recommended-topology](assets/recommended-topology.png)
+![建議的拓朴](assets/recommended-topology.png)
 
-AEM Forms互動式通訊會在AEM Forms的製作執行個體上執行管理、製作和代理程式使用者介面。 Publish執行個體會託管互動式通訊的最終版本，以供一般使用者使用。
+AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作和代理程式使用者介面。 發佈執行個體會託管互動式通訊的最終版本，以供一般使用者使用。
 
 ## 系統需求 {#system-requirements}
 
 開始安裝及設定AEM Forms的互動式通訊與通訊管理功能之前，請確定：
 
-* 硬體與軟體基礎架構已準備就緒。 如需支援的硬體和軟體詳細清單，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md).
+* 硬體與軟體基礎架構已準備就緒。 如需支援的硬體和軟體的詳細清單，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md).
 
 * AEM執行個體的安裝路徑未包含空格。
-* AEM執行個體已啟動且正在執行。 在AEM術語中，「例項」是在伺服器上以製作或發佈模式執行的AEM的副本。 您需要至少一個AEM執行個體（製作或處理）來執行AEM Forms互動式通訊和通訊管理功能：
+* AEM執行個體已啟動且執行中。 在AEM術語中，「例項」是在伺服器上以製作或發佈模式執行的AEM的副本。 您至少需要一個AEM執行個體（製作或處理）才能執行AEM Forms互動式通訊和通訊管理功能：
 
-   * **作者**：AEM執行個體，用來建立、上傳和編輯內容以及管理網站。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
+   * **作者**：用來建立、上傳和編輯內容以及管理網站的AEM執行個體。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
    * **處理中：** 處理執行個體是 [強化的AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md) 執行個體。 您可以設定Author例項，並在執行安裝後加以強化。
 
-   * **發佈**：透過網際網路或內部網路，向公眾提供已發佈內容的AEM例項。
+   * **發佈**：透過網際網路或內部網路向公眾提供已發佈內容的AEM執行個體。
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
-   * 15 GB的暫存空間，適用於Microsoft® Windows安裝。
+   * 適用于 Microsoft® Windows 安裝的 15 GB 臨時空間。
    * UNIX安裝需要6 GB的暫存空間。
 
 * UNIX系統的額外需求：如果您使用的是UNIX作業系統，請從個別作業系統的安裝媒體安裝下列套件。
@@ -60,7 +60,7 @@ AEM Forms互動式通訊會在AEM Forms的製作執行個體上執行管理、�
 <table>
  <tbody>
   <tr>
-   <td>外傳</td>
+   <td>外派人員</td>
    <td>libxcb</td>
    <td>自由文字</td>
    <td>libXau</td>
@@ -88,20 +88,20 @@ AEM Forms互動式通訊會在AEM Forms的製作執行個體上執行管理、�
 
 ## 安裝AEM Forms附加元件套件 {#install-aem-forms-add-on-package}
 
-AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM Forms互動式通訊、通訊管理和其他功能。 執行以下步驟來安裝附加元件套件：
+AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM Forms互動式通訊、通訊管理和其他功能。 執行以下步驟來安裝附加套件：
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
 1. 點一下頁首功能表中的 **[!UICONTROL Adobe Experience Manager]**。
-1. 在 **[!UICONTROL 篩選器]** 區段：
-   1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
-   2. 選取套件的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
-1. 點選適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
+1. **[!UICONTROL 在「篩選]** 」區段中：
+   1. 從解決方案 ]**下拉式清單中**[!UICONTROL  選擇 **[!UICONTROL Forms]** 。
+   2. 選取封裝的版本和類型。 您也可以使用 **[!UICONTROL Search 下載]** 選項來篩選結果。
+1. 點擊適用于您的作業系統的封裝名稱，選擇 **[!UICONTROL 接受 EULA 條款]** ，然後點擊 **[!UICONTROL 下載]** 。
 1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
-1. 選取套件並按一下 **[!UICONTROL 安裝]**.
+1. 選取封裝，然後按一下 **[!UICONTROL 安裝]** 。
 
-   您也可以透過下列連結下載套件： [AEM Forms發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) 文章。
+   您也可以透過 AEM Forms 發行 ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) 文章中 [ 列出的直接連結下載封裝。
 
-1. 安裝套件後，系統會提示您重新啟動AEM執行個體。 **不要立即重新啟動伺服器。** 在停止AEM Forms伺服器之前，請等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED訊息停止出現在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log檔案且記錄穩定。
+1. 安裝套裝軟體後，系統會提示您重新開機 AEM 執行個體。 **請勿立即重新開機伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等到 ServiceEvent 註冊和 ServiceEvent 未註冊的訊息停止出現在 AEM 安裝目錄 ] /crx-quickstart/logs/error.log 檔案中 [ ，且記錄穩定。
 1. 對所有Author和Publish執行個體重複步驟1至7。
 
 ## 安裝後設定 {#post-installation-configurations}
@@ -112,38 +112,38 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 #### 設定RSA和BouncyCastle資料庫  {#configure-rsa-and-bouncycastle-libraries}
 
-在所有Author和Publish執行個體上執行下列步驟，以啟動委派程式庫：
+在所有作者和 Publish 例項上執行下列步驟，以引導委派資料庫：
 
 1. 停止基礎AEM執行個體。
 1. 開啟 [AEM安裝目錄]\crx-quickstart\conf\sling.properties檔案進行編輯。
 
-   如果您使用 [AEM安裝目錄]\crx-quickstart\bin\start.bat以啟動AEM，然後編輯sling.properties，網址為 [AEM_root]\crx-quickstart\。
+   如果您使用 [AEM安裝目錄]\crx-quickstart\bin\start.bat以啟動AEM，然後編輯sling.properties於 [AEM_root]\crx-quickstart\。
 
-1. 將下列屬性新增至sling.properties檔案：
+1. 將以下屬性新增到sling.properties檔案：
 
    ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    ```
 
 1. 儲存並關閉檔案，然後啟動AEM執行個體。
-1. 在所有Author和Publish執行個體上重複步驟1至4。
+1. 對所有Author和Publish執行個體重複步驟1至4。
 
 #### 設定序列化代理程式 {#configure-the-serialization-agent}
 
-對所有Author和Publish執行個體執行下列步驟，將套件新增至允許清單：
+對所有Author和Publish執行個體執行以下步驟，將套件新增到允許清單：
 
 1. 在瀏覽器視窗中開啟AEM Configuration Manager。 預設URL為https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr.
 1. 搜尋並開啟 **還原序列化防火牆設定**.
 1. 新增 **sun.util.calendar** 封裝到 **允許清單** 欄位。 按一下「儲存」。
-1. 在所有Author和Publish執行個體上重複步驟1至3。
+1. 對所有Author和Publish執行個體重複步驟1至3。
 
 ### 選用的安裝後設定 {#optional-post-installation-configurations}
 
 #### 安裝相容性套件 {#install-compatibility-package}
 
-在AEM 6.5 Forms中，互動式通訊是建立客戶通訊的預設和建議方法。 如果您已從舊版升級或移轉，並計畫繼續使用信件（通訊管理），請安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en).
+互動式通訊是在AEM 6.5 Forms中建立客戶通訊的預設和建議方法。 如果您已從舊版升級或移轉，並計畫繼續使用信件（通訊管理），請安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en).
 
-AEMFD相容性套件可讓您在AEM 6.5 Forms上使用AEM 6.4 Forms、AEM 6.3 Forms和AEM 6.2 Forms的下列資產：
+AEMFD相容性套件可讓您在AEM 6.5 Forms上使用下列AEM 6.4 Forms、AEM 6.3 Forms和AEM 6.2 Forms中的資產：
 
 * 檔案片段
 * 字母
@@ -156,25 +156,25 @@ Dispatcher 是 Adobe Experience Manager 的快取及負載平衡工具，搭配�
 
 1. 設定AEM Forms的存取權：
 
-   開啟dispatcher.any檔案以進行編輯。 導覽至篩選區段，並將下列篩選新增至篩選區段：
+   開啟dispatcher.any檔案進行編輯。 導覽至篩選區段，並將下列篩選新增至篩選區段：
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   儲存並關閉檔案。 如需篩選器的詳細資訊，請參閱 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant).
+   儲存並關閉檔案。 如需有關篩選器的詳細資訊，請參閱 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant).
 
 1. 設定反向連結篩選服務：
 
-   以管理員身分登入Apache Felix Configuration Manager。 設定管理員的預設URL為https://&#39;server&#39;：[連線埠號碼]/system/console/configMgr。 在 **設定** 功能表，選取 **Apache Sling查閱者篩選器** 選項。 在允許主機欄位中，輸入Dispatcher的主機名稱，以允許其作為反向連結，然後按一下 **儲存**. 專案的格式為https://&#39;[伺服器]：[連線埠]&#39;.
+   以管理員身分登入Apache Felix設定管理員。 組態管理員的預設URL為https://&#39;server&#39;：[連線埠號碼]/system/console/configMgr。 在 **設定** 功能表，選取 **Apache Sling查閱者篩選器** 選項。 在允許主機欄位中，輸入Dispatcher的主機名稱，以允許其作為反向連結，然後按一下 **儲存**. 專案的格式為https://&#39;[伺服器]：[連線埠]&#39;.
 
 #### 整合Adobe Target {#integrate-adobe-target}
 
-如果互動式通訊提供的體驗不吸引人，您的客戶可能會捨棄互動式通訊。 雖然讓客戶感到沮喪，但也提高了貴組織的支援數量和成本。 識別並提供適當的客戶體驗以提高轉換率，這既重要又具有挑戰性。 AEM forms保有此問題的關鍵。
+如果互動式通訊提供的體驗不吸引人，您的客戶可能會捨棄互動式通訊。 雖然這會讓客戶感到挫折，但也會提高貴組織的支援數量和成本。 識別並提供適當的客戶體驗以提高轉換率，這既重要又具有挑戰性。 AEM表單擁有此問題的關鍵所在。
 
-AEM forms與Adobe Target (一種Adobe Experience Cloud解決方案)整合，跨多個數位頻道提供個人化且吸引人的客戶體驗。 若要使用Adobe Target來個人化互動式通訊， [將Adobe Target與AEM Forms整合](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
+AEM forms與Adobe Experience Cloud解決方案Adobe Target整合，跨多個數位頻道提供個人化及吸引人的客戶體驗。 若要使用Adobe Target來個人化互動式通訊， [將Adobe Target與AEM Forms整合](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
 
 #### 設定表單資料模型的SSL通訊  {#configure-ssl-communcation-for-form-data-model}
 
-您可以為表單資料模型啟用SSL通訊。 若要為表單資料模型啟用SSL通訊，請在啟動任何AEM Forms執行個體之前，為所有執行個體的Java™信任存放區新增憑證。 您可以執行以下命令來新增憑證：
+您可以為表單資料模型啟用SSL通訊。 若要為表單資料模型啟用SSL通訊，在啟動任何AEM Forms執行個體之前，請將憑證新增到所有執行個體的Java™信任存放區。 您可以執行以下命令來新增憑證：
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
@@ -182,8 +182,8 @@ AEM forms與Adobe Target (一種Adobe Experience Cloud解決方案)整合，跨�
 
 您已將環境設定為使用互動式通訊和通訊管理功能。 現在，使用功能的步驟如下：
 
-* [通訊管理概觀](/help/forms/using/interactive-communications-overview.md)
+* [信件管理概述](/help/forms/using/interactive-communications-overview.md)
 
 * [建立互動式通訊](../../forms/using/create-interactive-communication.md)
 
-* [建立通訊管理信件](../../forms/using/create-letter.md)
+* [建立對應信件](../../forms/using/create-letter.md)

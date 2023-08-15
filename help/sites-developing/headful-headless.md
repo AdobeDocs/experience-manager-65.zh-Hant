@@ -1,33 +1,33 @@
 ---
 title: AEM Headful 和 Headless 技術
-description: AEM專案可以在headful和headless模型中實作，但選擇不是二進位。 AEM 提供了在一個專案中利用兩種模型優勢的靈活性。
+description: AEM 專案可以在 Headful 和 Headless 模型中實作，但這不必是二選一。AEM 提供了在一個專案中利用兩種模型優勢的靈活性。
 exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
-source-git-commit: ac70fb534a95c9eee6f8340d9b8720a607b9f79f
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1014'
 ht-degree: 94%
 
 ---
 
 # AEM Headful 和 Headless 技術 {#headful-headless}
 
-Adobe Experience Manager專案可在headful和headless模式中實作，但選擇不是二進位。 AEM 提供了在一個專案中利用兩種模型優勢的靈活性。本檔案提供不同模式的概觀，並說明SPA整合的等級。
+Adobe Experience Manager 專案可以在 Headful 和 Headless 模型中實作，但這不必是二選一。AEM 提供了在一個專案中利用兩種模型優勢的靈活性。本檔案提供不同模式的概觀，並說明SPA整合的等級。
 
 ## 概觀 {#overview}
 
-AEM 提供了強大的工具來在單一平台管理內容的建立和傳遞。這是內容管理的傳統「有周邊」模型，內容作者和開發人員在同一個平台上工作，將體驗傳遞給內容取用者。
+AEM 提供了強大的工具來在單一平台管理內容的建立和傳遞。這是內容管理的傳統「 Headful 」模型，內容作者和開發人員在同一個平台上工作，將體驗傳遞給內容取用者。
 
-AEM 還可用於簡單地管理內容，允許由另一個平台管理內容的呈現和傳遞作業。這是內容管理的「無周邊」模型，內容作者和開發人員在不同平台上工作，將體驗傳遞給內容取用者。
+AEM 還可用於簡單地管理內容，允許由另一個平台管理內容的呈現和傳遞作業。這是內容管理的「 Headless 」模型，內容作者和開發人員在不同平台上工作，將體驗傳遞給內容取用者。
 
-但這不必是二選一。AEM 提供了前所未有的靈活性，使您能夠在專案中利用這兩種模型的優勢。
+但這不需要是二進位選擇。 AEM 提供了前所未有的靈活性，使您能夠在專案中利用這兩種模型的優勢。
 
 ![AEM 實作模型](/help/sites-developing/headless/getting-started/assets/aem-implementation-models.png)
 
-在有周邊或全堆疊模型中，內容在 AEM 存放庫和 AEM 元件中管理，以 Java、HTL 等為基礎。用於呈現內容以提供用戶體驗。在此模型中，內容的建立、樣式設定、內容的呈現和傳遞都在 AEM 中進行。
+在 Headful 或全堆疊模型中，內容在 AEM 存放庫和 AEM 元件中管理，以 Java、HTL 等為基礎。用於呈現內容以提供使用者體驗。在此模型中，內容的建立、樣式設定、內容的呈現和傳遞都在 AEM 中進行。
 
-在無周邊模型中，內容在 AEM 存放庫中管理，但透過 REST 和 GraphQL 等 API 傳遞到另一個系統以呈現內容以提供用戶體驗。在此模型中，內容是在 AEM 中建立，但樣式設定、內容的呈現和傳遞都在另一個平台進行。
+在 Headless 模型中，內容在 AEM 存放庫中管理，但透過 REST 和 GraphQL 等 API 傳遞到另一個系統以呈現內容以提供使用者體驗。在此模型中，內容是在 AEM 中建立，但樣式設定、內容的呈現和傳遞都在另一個平台進行。
 
-單頁應用程式 (SPA) 通常是 AEM 無周邊傳遞內容的目的地。但是，這些 SPA 不必完全在 AEM 外部。AEM 允許您決定您的 SPA 整合到 AEM 中的程度。讓我們舉個例子。
+單頁應用程式 (SPA) 通常是 AEM Headless 傳遞內容的目的地。不過，這些SPA不需要完全位於AEM外部。 AEM可讓您決定SPA與AEM整合的程度。 讓我們舉個例子。
 
 ## 網路商店範例 {#web-shop-example}
 
@@ -69,7 +69,7 @@ SPA 整合在 AEM 中的四個層級。
    * 可以在 AEM 中依情境查看內容。
    * 大部分內容可以在 AEM 中編輯。
 
-層級 1 是典型無周邊實作的範例。但是，內容作者只能在 SPA 中依情境查看他們的內容。AEM 只是一種編寫工具。
+層級 1 是典型 Headless 實作的範例。但是，內容作者只能在 SPA 中依情境查看他們的內容。AEM 只是一種編寫工具。
 
 AEM 的優勢和靈活性在層級 2 和層級 3 變得顯著，同時仍保留 SPA 的優勢。內容作者可以在 AEM 中建立內容，也可以在 AEM 中依情境查看內容。SPA 可在 AEM 中加以編寫，但仍做為 SPA 傳遞。
 
@@ -77,7 +77,7 @@ AEM 的優勢和靈活性在層級 2 和層級 3 變得顯著，同時仍保留 
 
 AEM 中有不同的工具可用，取決於您選擇的整合層級。每個層級都建立在之前使用的工具之上。以下清單連結到相關資源。
 
-* **層級 1：** 內容片段和 [AEM 無周邊架構](/help/sites-developing/headless/introduction.md) 可用於將 AEM 內容傳遞到 SPA。
+* **層級 1：** 內容片段和 [AEM Headless 架構](/help/sites-developing/headless/introduction.md) 可用於將 AEM 內容傳遞到 SPA。
 * **層級 2：** 除了層級 1：
    * [RemotePage 元件](/help/sites-developing/spa-remote-page.md) 可用於將外部 SPA 嵌入到 AEM 中，AEM 內容可在情境中查看。
    * 還可以啟用 SPA 上的某些點以[允許在 AEM 中進行有限編輯。](/help/sites-developing/spa-edit-external.md)

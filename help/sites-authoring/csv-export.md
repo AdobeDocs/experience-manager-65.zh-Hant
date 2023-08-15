@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 36%
+source-wordcount: '190'
+ht-degree: 32%
 
 ---
 
@@ -28,9 +28,9 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->系統會使用瀏覽器的下載功能和預設目的地。
+>系統會使用瀏覽器的下載功能與預設目的地。
 
-「建 **立CSV匯出** 」精靈可讓您選擇：
+此 **建立CSV匯出** 精靈可讓您選取：
 
 * 要匯出的屬性
    * 中繼資料
@@ -55,7 +55,7 @@ ht-degree: 36%
 
 ![etc-01](assets/etc-01.png)
 
-建立 **CSV報表** 瀏覽「 」時可使用「 」選項 **網站** 控制檯（在清單檢視中）：它是 **建立** 下拉式功能表：
+建立 **CSV報表** 瀏覽「 」時可使用此選項 **網站** 主控台（在清單檢視中）：這是 **建立** 下拉式功能表：
 
 ![etc-02](assets/etc-02.png)
 

@@ -1,6 +1,6 @@
 ---
 title: 使用工作流程
-description: AEM Workflows可讓您自動執行在頁面或資產上執行的一系列步驟。 例如，在發佈時，編輯人員必須檢閱內容，網站管理員才能啟動頁面。自動化此範例的工作流程會在需要執行所需工作時通知每位參與者。
+description: AEM Workflows可讓您自動化在頁面或資產上執行的一系列步驟。 例如，在發佈時，編輯人員必須檢閱內容，網站管理員才能啟動頁面。自動化此範例的工作流程會通知每位參與者何時需要執行其所需工作。
 uuid: 3eb6e790-6589-414a-8e51-33c358f47a73
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,16 +8,16 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: b11f0e4c-4dec-4b66-9f54-a0aa13ac77b9
 exl-id: 298fcfeb-dc8d-4edc-8743-83c0e5e5bc08
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 74%
+source-wordcount: '210'
+ht-degree: 75%
 
 ---
 
 # 使用工作流程{#working-with-workflows}
 
-AEM Workflows可讓您自動執行在頁面或資產上執行的一系列步驟。 例如，在發佈時，編輯人員必須檢閱內容，網站管理員才能啟動頁面。自動進行此範例的工作流程會在各項工作必須執行時通知執行該工作的參與者：
+AEM Workflows可讓您自動化在頁面或資產上執行的一系列步驟。 例如，在發佈時，編輯人員必須檢閱內容，網站管理員才能啟動頁面。自動進行此範例的工作流程會在各項工作必須執行時通知執行該工作的參與者：
 
 1. 作者將工作流程套用到頁面。
 1. 編輯人員會收到工作項目，要求他們檢閱頁面內容。完成後，他們會表示他們的工作項目已完成。

@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
 exl-id: 8d2b07f5-5c4e-4111-8f78-eb1b156221bc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '151'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ AEM Forms工作區可讓您自訂錯誤對話方塊。 執行 [AEM Forms工作�
 
 ## 自訂文字 {#customizing-text}
 
-1. 在 `/apps/ws/locales/en-US/translation.json` 檔案中，變更下列專案的值： `wserror` 至自訂值。 例如：
+1. 在 `/apps/ws/locales/en-US/translation.json` 檔案，變更值 `wserror` 至自訂的值。 例如：
 
    ```json
    "wserror" : {
@@ -52,7 +52,7 @@ AEM Forms工作區可讓您自訂錯誤對話方塊。 執行 [AEM Forms工作�
 
 ## 自訂CSS {#customizing-css}
 
-1. 您可以更新對話方塊、頁首、內容區域、頁尾列、頁尾列按鈕和其他輔助專案，方法是在下列連結中新增下列程式碼片段： `/apps/ws/css/newStyle.css` 檔案：
+1. 您可以更新對話方塊、頁首、內容區域、頁尾列、頁尾列按鈕和其他輔助文字，方法是在下列欄位中新增下列程式碼片段： `/apps/ws/css/newStyle.css` 檔案：
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -187,7 +187,7 @@ AEM Forms工作區可讓您自訂錯誤對話方塊。 執行 [AEM Forms工作�
    }
    ```
 
-1. 若是腳列按鈕範圍，請將 `.error-dialog` 和 `.foot-bar` 按鈕跨越複合清單。 若要進行此變更，請在newStyle.css檔案中新增下列內容：
+1. 對於腳列按鈕範圍，請將 `.error-dialog` 和 `.foot-bar` 按鈕從複合清單中展開。 若要進行此變更，請在newStyle.css檔案中新增下列內容：
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -224,7 +224,7 @@ AEM Forms工作區可讓您自訂錯誤對話方塊。 執行 [AEM Forms工作�
 
 >[!NOTE]
 >
->如果您參考其他影像，請在下方的所需階層新增影像 `/apps/ws/images`.
+>如果您參考其他影像，請在下的所需階層新增影像 `/apps/ws/images`.
 
 ## 範例 {#examples}
 

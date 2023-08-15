@@ -2,10 +2,10 @@
 title: 了解如何在內容片段中使用參考
 description: 了解如何在內容片段中使用內容、其他片段和其他資產 (媒體) 的參考。介紹巢狀片段對 Headless CMS 編寫的必要性和機制。
 exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 98%
+source-wordcount: '726'
+ht-degree: 88%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 98%
 
 ## 到目前為止 {#story-so-far}
 
-在[AEM Headless 內容作者歷程](overview.md)的一開始，[簡介](introduction.md)部分介紹了和無周邊內容編寫相關的基本概念和術語。
+在[AEM Headless 內容作者歷程](overview.md)的一開始，[簡介](introduction.md)部分介紹了和 Headless 內容編寫相關的基本概念和術語。
 
 您已經了解 Headless CMS 編寫的基本知識，包含如何使用 AEMaaCS 編寫內容，尤其是編寫內容片段。
 
-本文以這些概念為基礎，以便您了解如何使用參考為您的 AEM 無周邊專案編寫您自己的內容。
+本文以這些概念為基礎，以便您了解如何使用參考為您的 AEM Headless 專案編寫您自己的內容。
 
 ## 目標 {#objective}
 
@@ -39,17 +39,17 @@ ht-degree: 98%
 
 ## 內容參考 {#content-references}
 
-內容參考的作用就是可讓您參考任何其他內容。這會開啟瀏覽器，您可在其中選取內容項目。
+內容參考可讓您參考任何其他內容。 這將會開啟一個瀏覽器，讓您選取內容專案。
 
 ## 資產/媒體參考 {#assets-media-references}
 
-可以使用&#x200B;**插入資產**&#x200B;選項，讓資產 (例如影像或媒體) 可在文字區塊內被參考。這將開啟可在其中選取資產的瀏覽器。
+可以使用&#x200B;**插入資產**&#x200B;選項，讓資產 (例如影像或媒體) 可在文字區塊內被參考。這將會開啟瀏覽器讓您選取資產。
 
 ![內容片段 - 插入資產](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
 
 ## 片段參考 {#fragment-references}
 
-同樣地，片段參考的作用就是可讓您參考另一個片段。為什麼這很重要需要進一步說明。
+片段參考可讓您參考其他片段。 為什麼這很重要需要進一步說明。
 
 例如，您可能定義了以下內容片段模型：
 
@@ -75,7 +75,7 @@ ht-degree: 98%
 
 ### 如何編寫巢狀片段 {#author-nested-fragment}
 
-編寫片段參考非常簡單 (儘管欄位通常不會被標記為&#x200B;**片段參考**)。您可以直接輸入參考，或者 (更有可能) 選取資料夾圖示以開啟瀏覽器，以便您瀏覽和選取所需片段。
+編寫片段參考非常簡單 (儘管欄位通常不會被標記為&#x200B;**片段參考**)。您可以直接在參考中輸入，或（更有可能的）選取資料夾圖示以開啟瀏覽器，讓您導覽並選取所需的片段。
 
 ![內容片段 - 參考](/help/journey-headless/author/assets/headless-journey-author-references-03.png)
 
@@ -113,6 +113,7 @@ ht-degree: 98%
       * [套用設定到資產資料夾](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
       * [建立內容片段](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+
    * [變化 - 編寫內容片段](/help/assets/content-fragments/content-fragments-variations.md)
 
    * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
@@ -120,7 +121,6 @@ ht-degree: 98%
       * [內容片段模型 - 資料類型](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
       * [內容片段模型 - 屬性](/help/assets/content-fragments/content-fragments-models.md#properties)
-
 
 * 快速入門指南
    * [建立資產資料夾Headless快速入門手冊](/help/sites-developing/headless/getting-started/create-assets-folder.md)

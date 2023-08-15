@@ -1,7 +1,7 @@
 ---
 title: Live Copy 概觀主控台
 seo-title: Live Copy Overview Console
-description: 瞭解Live Copy概述控制檯的基本概念。
+description: 瞭解Live Copy概觀控制檯的基本概念。
 seo-description: Learn about the basics of the Live Copy Overview Console.
 uuid: 6b1841ec-950e-455b-9b30-b5f5050a67b8
 contentOwner: AEM Docs
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '551'
 ht-degree: 27%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 27%
 
 此 **即時副本概觀** 可讓您：
 
-* 檢視/管理網站間的繼承：
+* 檢視/管理網站上的繼承：
 
    * 檢視Blueprint樹狀結構和對應的即時副本結構，以及其繼承狀態
    * 變更繼承狀態；例如，暫停、繼續
@@ -37,14 +37,14 @@ ht-degree: 27%
 * [藍圖頁面的參考側面板 (Sites 主控台)](#opening-live-copy-overview-references-for-a-blueprint-page)
 * [藍圖頁面的屬性](#opening-live-copy-overview-properties-of-a-blueprint-page)
 
-### 開啟即時副本總覽 — Blueprint頁面的引用 {#opening-live-copy-overview-references-for-a-blueprint-page}
+### 開啟即時副本總覽 — Blueprint頁面的參照 {#opening-live-copy-overview-references-for-a-blueprint-page}
 
 **Live Copy 概觀**&#x200B;可以從 **Sites** 主控台的&#x200B;**參考**&#x200B;側面板開啟：
 
 1. 在 **網站** 主控台， [導覽至您的Blueprint頁面並加以選取](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 1. 開啟 **[引用](/help/sites-authoring/basic-handling.md#references)** 面板並選取 **即時副本**.
 
-   ![引用面板 — 即時副本](assets/chlimage_1-359.png)
+   ![「參考」面板 — 即時副本](assets/chlimage_1-359.png)
 
    >[!NOTE]
    >
@@ -62,7 +62,7 @@ ht-degree: 27%
 
    ![Blueprint標籤 — 即時副本概觀](assets/chlimage_1-360.png)
 
-1. 選取 **即時副本概觀** 以顯示和使用與目前Blueprint相關之所有即時副本的概觀。
+1. 選取 **即時副本概觀** 以顯示及使用與目前Blueprint相關之所有即時副本的概觀。
 
    >[!NOTE]
    >
@@ -75,13 +75,13 @@ ht-degree: 27%
 此 **即時副本概觀** 也可用於對即時副本執行動作：
 
 1. 開啟 **Live Copy 概觀**。
-1. 選取所需的Blueprint或即時副本頁面 — 工具列將更新以顯示可用的操作。 此 [動作](/help/sites-administering/msm.md#terms-used) 是否可用取決於您是否選取 [Blueprint](#actions-for-a-blueprint-page) 或 [即時副本](#actions-for-a-live-copy-page) 頁面：
+1. 選取所需的Blueprint或即時副本頁面 — 工具列將更新以顯示可用操作。 此 [動作](/help/sites-administering/msm.md#terms-used) 是否可用取決於您是否選取 [Blueprint](#actions-for-a-blueprint-page) 或 [即時副本](#actions-for-a-live-copy-page) 頁面：
 
 ### 藍圖頁面的動作 {#actions-for-a-blueprint-page}
 
 選擇藍圖頁面時，可以執行以下動作：
 
-![已選取Blueprint — 可用的動作](assets/chlimage_1-361.png)
+![已選取Blueprint — 可用動作](assets/chlimage_1-361.png)
 
 * 編輯
 
@@ -93,9 +93,9 @@ ht-degree: 27%
 
 ### Live Copy 頁面的動作 {#actions-for-a-live-copy-page}
 
-當您選取即時副本頁面時，以下動作可供使用：
+選取即時副本頁面時，以下動作可供使用：
 
-![即時副本頁面已選取 — 可用動作](assets/chlimage_1-362.png)
+![即時副本頁面已選取 — 動作可用](assets/chlimage_1-362.png)
 
 * 編輯
 
@@ -103,7 +103,7 @@ ht-degree: 27%
 
 * [關係狀態](#relationship-status)
 
-   * 檢視狀態和繼承的相關資訊。
+   * 檢視有關狀態和繼承的資訊。
 
 * [同步](/help/sites-administering/msm.md#rollout-and-synchronize)
 
@@ -111,7 +111,7 @@ ht-degree: 27%
 
 * [重設](/help/sites-administering/msm-livecopy.md#resetting-a-live-copy-page)
 
-   * 重設即時副本頁面以移除所有繼承取消，並讓頁面恢復到與來源頁面相同的狀態。
+   * 重設即時副本頁面以移除所有繼承取消，並讓頁面回到與來源頁面相同的狀態。
 
 * [暫停](/help/sites-administering/msm.md#suspending-and-cancelling-inheritance-and-synchronization)
 
@@ -127,7 +127,7 @@ ht-degree: 27%
 
 ## 關係狀態 {#relationship-status}
 
-此 **關係狀態** console有兩個標籤，提供一系列功能：
+此 **關係狀態** 主控台有兩個標籤，提供了一系列功能：
 
 * [關係狀態資訊](#relationship-status-information)
 * [即時副本資訊](#live-copy-information)
@@ -140,6 +140,6 @@ ht-degree: 27%
 
 ### 即時副本資訊 {#live-copy-information}
 
-此索引標籤可讓您檢視和編輯即時副本設定：
+此索引標籤可讓您檢視及編輯即時副本設定：
 
 ![即時副本資訊](assets/chlimage_1-364.png)

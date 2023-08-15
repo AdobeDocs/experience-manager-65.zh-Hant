@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1138'
 ht-degree: 7%
 
 ---
@@ -20,28 +20,28 @@ ht-degree: 7%
 
 Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md)。
 
-它們可讓您建立管道中性內容，以及（可能特定於管道的）變數。 然後，您就可以在編寫內容頁面時使用這些片段及其變數。
+它們可讓您建立管道中性內容，連同（可能特定於管道）變數。 接著，您就可以在編寫內容頁面時，使用這些片段及其變數。
 
-結構化內容片段與更新的JSON匯出工具搭配使用，也可用於透過Content Services將AEM內容傳送至AEM頁面以外的管道。
+結構化內容片段與更新的JSON匯出工具搭配使用，也可用來透過Content Services將AEM內容傳送至AEM頁面以外的管道。
 
 >[!NOTE]
 >
 >**內容片段** 和 **[體驗片段](/help/sites-authoring/experience-fragments.md)** 是AEM中的不同功能：
 >
->* **內容片段** 是可編輯內容，主要為文字和相關影像。 它們是純內容，沒有設計和版面。
+>* **內容片段** 是可編輯內容，主要為文字和相關影像。 它們是純內容，沒有設計和配置。
 >* **體驗片段** 是完全佈局的內容；網頁的片段。
 >
 >體驗片段可以包含內容片段形式的內容，反之則不行。
 
 >[!CAUTION]
 >
->本頁必須結合下列內容一起閱讀： [使用內容片段](/help/assets/content-fragments/content-fragments.md) （及相關頁面），其中介紹基本術語和概念，以及建立和管理片段。
+>此頁面必須結合閱讀 [使用內容片段](/help/assets/content-fragments/content-fragments.md) （及相關頁面），其中介紹基本術語和概念，以及建立和管理片段。
 
 內容片段會啟用：
 
-* **行銷與行銷活動策略**
+* **行銷和行銷活動策略**
 
-   * 透過集中管理的內容片段來檢閱內容。
+   * 透過集中管理的內容片段稽核內容。
 
 * **Creative Pro**
 
@@ -49,19 +49,19 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 * **複製寫入者**
 
-   * 在AEM內容片段編輯器中撰寫。
+   * 在AEM內容片段編輯器中寫入。
    * 可以建立內容變數。
-   * 可以將相關內容與內容片段建立關聯。
+   * 可以關聯相關內容與內容片段。
    * 可以使用版本設定/工作流程。
-   * 可以共用內容片段。
+   * 可共用內容片段。
    * 可集中管理翻譯。
 
 * **製作者和歷程管理員**
 
    * 從預先定義的片段和AEM中編寫的變數中選取。
-   * 當復本作者和創意人員在集中管理的片段和資產中進行更新時，可以依賴片段和相關內容始終保持最新。
-   * 可以依賴因關聯性而監管的相關媒體內容。
-   * 可以立即建立隨選內容變數，同時仍確保這些變數在片段中受到集中管理。
+   * 當復本作者和創意人員以集中管理的片段和資產進行更新時，可依賴片段和相關內容始終保持最新。
+   * 可以依賴因關聯性而管理的相關媒體內容。
+   * 可以立即建立隨選內容變數，同時仍然確保這些變數在片段中受到集中管理。
 
 ## 新增內容片段至您的頁面 {#adding-a-content-fragment-to-your-page}
 
@@ -71,15 +71,15 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 1. 您可以執行下列兩個動作中的一個:
 
-   * 開啟 **資產** 瀏覽器和篩選器 **內容片段** （預設值為「影像」）。 然後將所需的片段拖曳至元件例項上。
+   * 開啟 **資產** 瀏覽器和篩選器 **內容片段** （預設值為「影像」）。 然後將所需的片段拖曳到元件例項上。
 
-   * 選取內容片段元件，然後 **設定** （從工具列）。 在對話方塊中，您可以開啟選取對話方塊以瀏覽並選取所需的 **內容片段**.
+   * 選取內容片段元件，然後 **設定** 工具列中的。 在對話方塊中，您可以開啟選取對話方塊以瀏覽並選取所需的專案 **內容片段**.
 
    >[!NOTE]
    >
-   >另一種方法是直接將特定內容片段拖曳至頁面上。 這會自動建立關聯的元件（內容片段）。
+   >另一種方法是將特定的內容片段直接拖曳到頁面上。 這會自動建立關聯的元件（內容片段）。
 
-1. 最初，來自 **主要** 元素和 **主版** （變數）將會顯示。 您可以 [選取其他元素和/或變數](#selecting-the-element-or-variation) 視需要。
+1. 最初，內容來自 **主要** 元素和 **主版** （變數）將會顯示。 您可以 [選取其他元素和/或變數](#selecting-the-element-or-variation) 視需要。
 
    ![cfm-6420-01](assets/cfm-6420-01.png)
 
@@ -96,9 +96,9 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 ### 選取元素或變數 {#selecting-the-element-or-variation}
 
-開啟片段的 **設定** 對話方塊來設定片段以便在目前頁面上使用。 此對話方塊取決於所使用的元件。
+開啟片段的 **設定** 對話方塊，以設定片段用於目前頁面。 此對話方塊取決於所使用的元件。
 
-在適當的設定對話方塊中，您可以選取可用的引數，包括：
+在適當的組態對話方塊中，您可以選取可用的引數，包括：
 
 * **內容片段**
 
@@ -113,7 +113,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 * **元素**
 
    * 預設 **主要** 將始終可用。
-   * 如果片段是以適當的範本建立，將有可選擇的範本可用。
+   * 如果片段是以適當的範本建立的，將有可選擇的範本可用。
 
   >[!NOTE]
   >
@@ -122,12 +122,12 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 * **變異**
 
    * 預設主 **版** (Master)將始終可用。
-   * 如果變數是為片段而建立，則可使用選取範圍。
+   * 如果變數是為片段而建立的，將有可選擇的變數可用。
 
 * **段落**：指定要包含的段落範圍：
 
    * **全部**
-   * **範圍**：例如， `1`， `3-5`， `9-*`
+   * **Range**：例如， `1`， `3-5`， `9-*`
 
       * **將標題當作其段落的一部分來處理**
 
@@ -135,7 +135,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 ### 快速連線到片段編輯器 {#quick-connection-to-fragment-editor}
 
-您可以使用開啟片段來源以進行編輯（資產） **編輯** 圖示加以檢視。 這可讓您 [編輯和管理內容片段](/help/assets/content-fragments/content-fragments.md).
+您可以使用開啟片段來源以進行編輯（資產） **編輯** 圖示來切換元件。 這可讓您 [編輯和管理內容片段](/help/assets/content-fragments/content-fragments.md).
 
 >[!CAUTION]
 >
@@ -143,11 +143,11 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 ### 新增中間內容 {#adding-in-between-content}
 
-將特定內容片段新增至頁面時， **將元件拖曳到這裡** 片段中每個HTML段落（和頂端/底部）之間的預留位置。
+將特定內容片段新增到頁面時， **將元件拖曳到這裡** 片段中每個HTML段落（和上/下）之間的預留位置。
 
-這可讓您新增額外內容 [中間內容（即中間內容）](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) 片段內容（在任何可用點），不必變更根片段。
+這可讓您新增額外內容 [中間（即中間內容）](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) 片段內容（在任何可用點），不必變更根片段。
 
-對於中間內容，您可以：
+針對中間內容，您可以：
 
 * 從新增元件 [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser).
 * 從新增資產 [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser).
@@ -163,7 +163,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 >
 >您也可以 [將視覺資產（影像）插入片段本身](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
 >
->插入片段本身的視覺資產會附加至片段中的前段落。 這表示您無法在視覺資產與前一段落之間放置中間內容。
+>插入片段本身的視覺資產會附加至片段中前面的段落。 這表示您無法在視覺資產與前一段落之間放置中間內容。
 
 >[!CAUTION]
 >
@@ -171,7 +171,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 >
 >發生此情況時，中間內容會維持不變：
 >
->* 中間元件在片段流程中的元件序列中具有絕對位置。 即使片段中的段落內容變更，此位置也不會變更。
+>* 中間元件在片段流程中的元件順序內有絕對位置。 此位置不會變更，即使片段中段落的內容變更亦然。
 >
 >  這可能使其看起來像是相對位置已變更，因為中間段落與它們旁邊的（片段）段落沒有上下文關係。
 >* 除非兩個段落結構衝突；在這種情況下，不會顯示中間內容（儘管它仍然存在於內部）。
@@ -183,34 +183,34 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 >[!NOTE]
 >
->有多種新增方法 [視覺資產（例如影像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) 至片段和/或頁面。
+>有多種方法可新增 [視覺資產（例如影像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) 至片段和/或頁面。
 
 >[!NOTE]
 >
->如果您在一個頁面上擁有多個內容片段， **關聯內容** 索引標籤會顯示適用於所有片段的資產。
+>如果您在一個頁面上有多個內容片段，請 **關聯內容** 索引標籤會顯示適用於所有片段的資產。
 
-將具有關聯內容的片段新增到頁面後，會出現新索引標籤(**關聯內容**)會在側面板中開啟。
+將具有關聯內容的片段新增到頁面後，就會顯示新索引標籤(**關聯內容**)即會在側面板中開啟。
 
-從這裡，您可以將資產拖曳至所需位置（或是拖曳至現有元件，或是拖曳至將建立適當元件的所需位置）：
+從這裡，您可以將資產拖曳至所需位置（可拖曳至現有元件，也可拖曳至將建立適當元件的所需位置）：
 
 ![cfm-6420-03](assets/cfm-6420-03.png)
 
 ### 插入到片段中的資產 {#assets-inserted-into-the-fragment}
 
-如果已將資產（例如影像）插入片段本身，則頁面編輯器中用於編輯這些資產的選項會受到限制。 <!-- Removed link as it was a 404 on helpx -->
+如果資產（例如影像）已插入片段本身，則頁面編輯器中用於編輯這些資產的選項會受到限制。 <!-- Removed link as it was a 404 on helpx -->
 
 例如，您可以對影像執行
 
 * 裁切、旋轉或翻轉影像。
 * 新增標題或替代文字。
 * 指定大小。
-* 您也可以設定版面。
+* 您也可以配置配置。
 
-必須在片段編輯器中執行其他變更，例如移動、複製、刪除。
+您必須在片段編輯器中執行其他變更，例如移動、複製、刪除。
 
 ### 發佈 {#publishing}
 
 片段必須發佈，才能用於您已發佈的網頁：
 
-* 片段可以在以下時間後發佈： [在「資產」控制檯中建立片段](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment).
-* 如果 *未發佈的片段* 用於正在發佈的頁面上，此時也可以發佈片段。
+* 片段可以在以下時間後發佈： [在資產控制檯中建立片段](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment).
+* 如果 *未發佈的片段* 用於正在發佈的頁面，目前也可以發佈片段。

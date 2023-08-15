@@ -9,18 +9,18 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: f6d6fcd1f174cc32a172f70ee3da8eff15156c15
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3067'
 ht-degree: 8%
 
 ---
 
 # 編輯頁面內容{#editing-page-content}
 
-建立頁面（新頁面或作為啟動或即時副本的一部分）後，您可以編輯內容以進行您所需的更新。
+建立頁面後（新頁面或作為啟動項或即時副本的一部分），您可以編輯內容以進行所需的更新。
 
-內容新增方式： [元件](/help/sites-authoring/default-components-console.md) （適用於內容型別）可供拖曳至頁面上。 然後可以在原地進行編輯、移動或刪除。
+內容新增方式： [元件](/help/sites-authoring/default-components-console.md) （適用於內容型別）可拖曳至頁面上的物件。 接著，您就可以就地編輯、移動或刪除這些專案。
 
 >[!NOTE]
 >
@@ -30,41 +30,41 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->如果您的頁面和/或範本已適當設定，您便可使用 [回應式佈局](/help/sites-authoring/responsive-layout.md) 編輯時。
+>如果您的頁面和/或範本已正確設定，則您可以使用 [回應式版面](/help/sites-authoring/responsive-layout.md) 編輯時。
 
 >[!NOTE]
 >
->當在 **編輯** 模式，會顯示內容中的連結，但 **無法存取**. 使用 [預覽模式](#previewingpagestouchoptimizedui) 如果您想使用內容中的連結來導覽。
+>當在 **編輯** 模式，會顯示內容中的連結，但 **無法存取**. 使用 [預覽模式](#previewingpagestouchoptimizedui) 如果您想使用內容中的連結進行導覽。
 
 ## 頁面工具列 {#page-toolbar}
 
-視頁面設定而定，頁面工具列會提供適當功能的存取權。
+根據頁面設定，頁面工具列會提供適當功能的存取權。
 
 ![頁面工具列](assets/screen_shot_2018-03-22at111338.png)
 
-工具列提供許多選項的存取權。 根據您目前的內容和設定，某些選項可能無法使用。
+工具列提供許多選項的存取權。 根據您目前的內容和組態，某些選項可能無法使用。
 
 * **切換側面板**
 
-  這會開啟/關閉側面板，側面板中會包含 [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)， [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)、和 [內容樹狀結構](/help/sites-authoring/author-environment-tools.md#content-tree).
+  這將會開啟/關閉側面板，側面板會保留 [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)， [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser)、和 [內容樹狀結構](/help/sites-authoring/author-environment-tools.md#content-tree).
 
   ![切換側面板](do-not-localize/screen_shot_2018-03-22at111425.png)
 
 * **頁面資訊**
 
-  提供對的存取 [頁面資訊](/help/sites-authoring/author-environment-tools.md#page-information) 功能表，其中包含頁面詳細資訊以及可在頁面上採取的動作，包括檢視和編輯頁面資訊、檢視頁面屬性，以及發佈/取消發佈頁面。
+  提供對的存取 [頁面資訊](/help/sites-authoring/author-environment-tools.md#page-information) 功能表包含頁面詳細資訊以及可在頁面上採取的動作，包括檢視和編輯頁面資訊、檢視頁面屬性以及發佈/取消發佈頁面。
 
   ![頁面資訊](do-not-localize/screen_shot_2018-03-22at111437.png)
 
 * **模擬器**
 
-  切換 [模擬器工具列](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)，用來模擬頁面在其他裝置上的外觀。 這會在版面配置模式中自動切換。
+  切換 [模擬器工具列](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)，用來模擬頁面在其他裝置上的外觀。 這會在版面模式中自動切換。
 
   ![模擬器](do-not-localize/screen_shot_2018-03-22at111442.png)
 
 * **ContextHub**
 
-  開啟 [內容中心](/help/sites-authoring/ch-previewing.md). 僅適用於預覽模式。
+  開啟 [內容中心](/help/sites-authoring/ch-previewing.md). 僅適用於「預覽」模式。
 
   ![內容中心](assets/screen_shot_2018-03-22at111543.png)
 
@@ -88,7 +88,7 @@ ht-degree: 8%
 
 * **注釋**
 
-  可讓您新增 [註解](/help/sites-authoring/annotations.md) 在檢閱頁面時跳至頁面。 第一個註解後，圖示會切換為數字，指出頁面上的註解數量。
+  讓您新增 [註解](/help/sites-authoring/annotations.md) 在檢閱頁面時移至頁面。 在第一個註解後，圖示會切換為指示頁面上註解數量的數字。
 
   ![注釋](do-not-localize/screen_shot_2018-03-22at111638.png)
 
@@ -100,9 +100,9 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->狀態列僅對具有適當許可權的使用者帳戶可見。
+>狀態列只對具有適當許可權的使用者帳戶可見。
 
-通知會列出針對頁面執行的工作流程。 如果使用者涉及目前的工作流程步驟，則選項 [影響工作流程狀態](/help/sites-authoring/workflows-participating.md) 並取得更多工作流程的相關資訊，例如：
+通知會列出針對頁面執行的工作流程。 如果使用者涉及目前工作流程步驟，則選項為 [影響工作流程狀態](/help/sites-authoring/workflows-participating.md) 並取得更多工作流程的相關資訊，例如：
 
 * **完成**  — 開啟 **完成工作專案** 對話方塊
 
@@ -110,15 +110,15 @@ ht-degree: 8%
 
 * **檢視詳細資料**  — 開啟 **詳細資料** 工作流程視窗
 
-透過通知列完成及委派工作流程步驟的運作方式與以下情況相同： [參與工作流程](/help/sites-authoring/workflows-participating.md) 從「通知」收件匣。
+透過通知列完成及委派工作流程步驟的運作方式 [參與工作流程](/help/sites-authoring/workflows-participating.md) 從「通知」收件匣。
 
-如果頁面受限於多個工作流程，則會在通知的右端顯示工作流程數量，並附上箭頭按鈕，讓您捲動瀏覽工作流程。
+如果頁面受限於多個工作流程，則在通知的右端會顯示工作流程數量，並附上箭頭按鈕，讓您捲動瀏覽工作流程。
 
 ![工作流程數量通知](assets/chlimage_1-122.png)
 
 ## 元件預留位置 {#component-placeholder}
 
-元件預留位置是一個指示器，可顯示將元件拖曳至目前暫留的元件上方時元件的放置位置。
+元件預留位置是一個指示器，可顯示將元件拖曳至目前暫留之元件的上方時，元件將放置於何處。
 
 * 將新元件新增至頁面時（從元件瀏覽器拖曳）：
 
@@ -130,7 +130,7 @@ ht-degree: 8%
 
 ## 插入元件 {#inserting-a-component}
 
-### 從元件瀏覽器插入元件 {#inserting-a-component-from-the-components-browser}
+### 使用元件瀏覽器插入元件 {#inserting-a-component-from-the-components-browser}
 
 您可以使用 [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser). 此 [元件預留位置](#component-placeholder) 顯示元件將放置的位置：
 
@@ -144,20 +144,20 @@ ht-degree: 8%
 >
 >在行動裝置上，元件瀏覽器會填滿整個畫面。 開始拖曳元件後，瀏覽器將關閉並再次顯示頁面，以便您放置元件。
 
-### 從段落系統插入元件 {#inserting-a-component-from-the-paragraph-system}
+### 使用段落系統插入元件 {#inserting-a-component-from-the-paragraph-system}
 
 您可以使用 **將元件拖曳到這裡** 段落系統的方塊：
 
 1. 確定您的頁面位於 [**編輯** 模式](/help/sites-authoring/author-environment-tools.md#page-modes).
 1. 有兩種方式可以從段落系統選取和新增元件：
 
-   * 選取 **插入元件** 選項(+)(位於現有元件的工具列或 **將元件拖曳到這裡** 方塊。
+   * 選取 **插入元件** 選項(+) (位於現有元件的工具列或 **將元件拖曳到這裡** 方塊。
 
    ![插入元件選取範圍](assets/screen_shot_2018-03-22at112536.png)
 
-   * 如果您使用桌上型電腦裝置，您可以連按兩下 **將元件拖曳到這裡** 方塊。
+   * 如果您使用桌上型裝置，可以按兩下 **將元件拖曳到這裡** 方塊。
 
-   此 **插入新元件** 將會開啟對話方塊，讓您選取所需的元件：
+   此 **插入新元件** 對話方塊將會開啟，讓您選取所需的元件：
 
    ![插入新元件](assets/screen_shot_2018-03-22at112650.png)
 
@@ -165,7 +165,7 @@ ht-degree: 8%
 
 ### 使用「資產瀏覽器」插入元件 {#inserting-a-component-using-the-assets-browser}
 
-您也可以從以下位置拖曳資產，將新元件新增至頁面： [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser). 這會自動建立適當型別的新元件（並包含資產）。
+您也可以拖曳以下專案的資產，將新元件新增至頁面： [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser). 這會自動建立適當型別（並包含資產）的新元件。
 
 這適用於下列資產型別（部分將取決於頁面/段落系統）：
 
@@ -173,7 +173,7 @@ ht-degree: 8%
  <tbody>
   <tr>
    <th><strong>資產類型</strong></th>
-   <th><strong>結果元件型別</strong></th>
+   <th><strong>產生的元件型別</strong></th>
   </tr>
   <tr>
    <td>影像</td>
@@ -200,21 +200,21 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->此行為可針對您的安裝進行設定。 另請參閱 [設定段落系統以便拖曳資產建立元件例項](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) 以取得更多詳細資料。
+>您可針對您的安裝設定此行為。 另請參閱 [設定段落系統以便拖曳資產建立元件例項](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) 以取得更多詳細資料。
 
 若要拖曳上述任一資產型別來建立元件：
 
 1. 確定您的頁面位於 [**編輯** 模式](/help/sites-authoring/author-environment-tools.md#page-modes).
 1. 開啟 [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser).
-1. 將所需資產拖曳至所需位置。 此 [元件預留位置](#component-placeholder) 顯示元件將放置的位置。
+1. 將所需的資產拖曳至所需的位置。 此 [元件預留位置](#component-placeholder) 顯示元件將放置的位置。
 
-   將在所需位置建立適合資產型別的元件 — 它將包含所選資產。
+   適合資產型別的元件將在所需位置建立 — 它將包含所選資產。
 
 1. [編輯](#editmovecopypastedelete) 元件（若有需要）。
 
 >[!NOTE]
 >
->在行動裝置上，資產瀏覽器會填滿整個畫面。 開始拖曳資產後，瀏覽器將關閉並重新顯示頁面，以便您放置資產。
+>在行動裝置上，資產瀏覽器會填滿整個畫面。 開始拖曳資產後，瀏覽器將關閉並再次顯示頁面，以便您放置資產。
 
 如果您在瀏覽資產時發現需要對資產進行快速變更，可以開始 [資產編輯器](/help/assets/manage-assets.md) 直接從瀏覽器按一下資產名稱旁的編輯圖示。
 
@@ -222,9 +222,9 @@ ht-degree: 8%
 
 ## 編輯/設定/複製/剪下/刪除/貼上 {#edit-configure-copy-cut-delete-paste}
 
-選取元件將會開啟工具列。 這可讓您存取可對元件執行的各種動作。
+選取元件後會開啟工具列。 這可讓您存取可在元件上執行的各種動作。
 
-使用者可用的實際動作會視情況顯示，此處並未說明所有動作。
+使用者可用的實際動作會適當地顯示，並非所有動作皆可在此處說明。
 
 ![元件工具列選項](assets/screen_shot_2018-03-22at112909.png)
 
@@ -242,7 +242,7 @@ ht-degree: 8%
 
 * **複製**
 
-  這會將元件複製到剪貼簿。 貼上動作後，原始元件將保留。
+  這會將元件複製到剪貼簿。 貼上動作後，原始元件仍會保留。
 
   ![複製](do-not-localize/screen_shot_2018-03-22at113000.png)
 
@@ -266,9 +266,9 @@ ht-degree: 8%
 
 * **貼上**
 
-  這會將元件從剪貼簿貼到頁面上。 原始物件是否保留，取決於您是使用複製還是切削。
+  這會將元件從剪貼簿貼到頁面上。 原始物件是否保留，取決於您是使用複製還是剪下。
 
-   * 您可以貼到相同頁面或不同頁面。
+   * 您可以貼至相同頁面或不同頁面。
    * 貼上的專案將會貼在您選取貼上動作的專案上方。
    * 只有在剪貼簿上有內容時，才會顯示「貼上」動作。
 
@@ -276,7 +276,7 @@ ht-degree: 8%
 
   >[!NOTE]
   >
-  >如果您在剪下/復製作業之前貼到已開啟的其他頁面，則必須重新整理頁面以檢視貼上的內容。
+  >如果您在剪下/復製作業前將頁面貼到已開啟的其他頁面，則必須重新整理頁面以檢視貼上的內容。
 
 * **群組**
 
@@ -292,13 +292,13 @@ ht-degree: 8%
 
 * **配置**
 
-  這可讓您修改 [版面](/help/sites-authoring/editing-content.md#edit-component-layout) 所選元件的ID。 這僅適用於選取的元件，不會啟動 [版面模式](/help/sites-authoring/author-environment-tools.md#page-modes) 整個頁面。
+  這可讓您修改 [版面](/help/sites-authoring/editing-content.md#edit-component-layout) 所選元件的ID。 這僅適用於所選的元件，且不會啟動 [版面模式](/help/sites-authoring/author-environment-tools.md#page-modes) 整個頁面。
 
   ![配置](do-not-localize/screen_shot_2018-03-22at113044.png)
 
 * **轉換為體驗片段變數**
 
-  這可讓您建立新的 [體驗片段](/help/sites-authoring/experience-fragments.md) 或將其新增至現有的體驗片段。
+  這可讓您建立新的 [體驗片段](/help/sites-authoring/experience-fragments.md) 或是將其新增到現有的體驗片段中。
 
   ![轉換為體驗片段變數](do-not-localize/screen_shot_2018-03-22at113033.png)
 
@@ -307,13 +307,13 @@ ht-degree: 8%
 在元件中新增及/或編輯內容的方法有兩種：
 
 * 開啟 [用於編輯的元件對話方塊](#component-edit-dialog).
-* [拖放資產](#draganddropintocomponent) 從「資產」瀏覽器直接新增內容。
+* [拖放資產](#draganddropintocomponent) 以直接新增內容。
 
 ### 元件編輯對話方塊 {#component-edit-dialog}
 
 您可以使用元件工具列的「編輯 (鉛筆) 」圖示， [開啟元件以編輯內容](#edit-configure-copy-cut-delete-paste)。
 
-確切的編輯選項取決於元件。 針對某些元件 [所有動作僅可在全熒幕模式下使用](#edit-content-full-screen-mode). 例如：
+確切的編輯選項取決於元件。 針對某些元件 [所有動作僅可在全熒幕模式中使用](#edit-content-full-screen-mode). 例如：
 
 * [文字元件](/help/sites-authoring/rich-text-editor.md#main-pars-title-24)
 
@@ -325,7 +325,7 @@ ht-degree: 8%
 
   >[!NOTE]
   >
-  >編輯無法在空白影像元件上運作。
+  >無法編輯空白的影像元件。
   >
   >
   >您必須 [拖曳或上傳影像（使用「設定」）](/help/sites-authoring/default-components-foundation.md#image) 才能開始編輯。
@@ -336,13 +336,13 @@ ht-degree: 8%
 
   ![影像元件全熒幕](assets/screen_shot_2018-03-22at120529.png)
 
-* 由多個基本元件所建構的元件，例如 [文字與影像基礎元件](/help/sites-authoring/default-components-foundation.md#text-image)，首先要求您確認想要哪一組編輯選項：
+* 由多個基本元件所建構的元件，例如 [文字與影像基礎元件](/help/sites-authoring/default-components-foundation.md#text-image)，請先要求您確認所要的編輯選項集：
 
   ![元件編輯選項](assets/chlimage_1-123.png)
 
 ### 將資產拖放至元件中 {#drag-and-drop-assets-into-component}
 
-對於特定元件型別，您可以直接從資產瀏覽器將資產拖放至元件以更新內容：
+對於特定元件型別，您可以直接從資產瀏覽器將資產拖放至元件，以更新內容：
 
 | **資產類型** | **元件類型** |
 |---|---|
@@ -354,7 +354,7 @@ ht-degree: 8%
 
 ## 編輯（內容）全熒幕模式 {#edit-content-full-screen-mode}
 
-對於所有元件，全熒幕模式可透過以下方式存取（和退出）：
+對於所有元件，可使用（和退出）存取全熒幕模式：
 
 ![編輯全熒幕模式](do-not-localize/chlimage_1-20.png)
 
@@ -371,21 +371,21 @@ ht-degree: 8%
 若要移動段落元件：
 
 1. 使用點選並按住或點選並按住來選取要移動的段落。
-1. 將段落拖曳到新位置。 AEM會指出段落可以存放的位置。 將其拖曳至所需位置。
+1. 將段落拖曳到新位置。 AEM會指出段落可以儲存的位置。 將其拖曳至所需位置。
 
    ![移動段落元件](assets/screen_shot_2018-03-22at121821.png)
 
-1. 您的段落已移動。
+1. 此時會移動您的段落。
 
 >[!NOTE]
 >
->您也可以使用 [剪下並貼上](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 移動元件。
+>您也可以使用 [剪下並貼上](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 以移動元件。
 
 ## 編輯元件配置 {#edit-component-layout}
 
 您可以選取元件的 [Layout](/help/sites-authoring/responsive-layout.md)****  (配置) 動作，以變更元件的配置，並節省時間，而不需離開編輯模式，而不需重複從編輯切換到配置模式來調整元件。
 
-1. 當在 **編輯** 在sites主控台的模式中，選取元件會顯示元件的工具列。
+1. 當在 **編輯** 在Sites Console模式中，選取元件會顯示元件的工具列。
 
    ![表單中的編輯模式](assets/screen_shot_2018-03-22at133756.png)
 
@@ -395,13 +395,13 @@ ht-degree: 8%
 
 1. 選取「配置」動作後：
 
-   * 元件顯示的調整大小操作框。
+   * 元件顯示的調整大小控點。
    * 模擬器工具列會顯示在畫面頂端。
    * 元件工具列上會顯示「配置」動作，而非標準編輯動作。
 
    ![在多個裝置上預覽表單](assets/screen_shot_2018-03-22at133843.png)
 
-   您現在可以修改元件的版面，就像在 [版面模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode).
+   您現在可以修改元件的版面，就像在中一樣 [佈局模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode).
 
 1. 進行必要的版面變更後，按一下 **關閉** 按鈕來停止修改元件的版面。 元件的工具列會回到其正常的編輯狀態。
 
@@ -409,23 +409,23 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->Layout動作僅限於選取的元件。 例如，如果您正在編輯一個元件的版面，然後按一下另一個元件，則會為新選取的元件顯示標準編輯工具列（而非版面工具列），而重新整理操作框以及模擬器工具列會消失。
+>「配置」動作僅限於選定元件的範圍。 例如，如果您正在編輯一個元件的版面，然後按一下另一個元件，則將為新選取的元件顯示標準編輯工具列（而非版面工具列），而重新整理操作框以及模擬器工具列將會消失。
 >
->如果您需要編輯頁面的整體版面，並影響多個元件，請切換至 [版面模式](/help/sites-authoring/responsive-layout.md).
+>如果您需要編輯頁面的整體版面配置，並影響多個元件，請切換至 [佈局模式](/help/sites-authoring/responsive-layout.md).
 
-## 繼承的元件 {#inherited-components}
+## 繼承元件 {#inherited-components}
 
 繼承的元件可能是各種情況的產物，包括：
 
 * [多網站管理](/help/sites-administering/msm.md)
-* [啟動](/help/sites-authoring/launches.md) （當以即時副本為基準時）。
+* [啟動](/help/sites-authoring/launches.md) （當以即時副本為基礎時）。
 * 特定元件，例如Geometrixx中的繼承段落系統。
 
-您可以取消（然後重新啟用）繼承。 根據元件，這可從以下位置取得：
+您可以取消（然後重新啟用）繼承。 此功能可從以下來源取得（視元件而定）：
 
 * **Live Copy**
 
-  元件工具列(如果元件位於屬於即時副本或啟動項的頁面（根據即時副本）)。 例如：
+  元件工具列（如果元件位在屬於即時副本或啟動專案的頁面上，則根據即時副本）。 例如：
 
   ![Live Copy](assets/screen_shot_2018-03-22at134339.png)
 
@@ -449,15 +449,15 @@ ht-degree: 8%
 
 ## 編輯頁面範本 {#editing-the-page-template}
 
-如果頁面是根據 [可編輯的範本](/help/sites-authoring/templates.md#editable-and-static-templates)，您可輕鬆切換至 [範本編輯器](/help/sites-authoring/templates.md#editing-templates-template-authors) 藉由選取 **編輯範本** 在 [頁面資訊功能表](/help/sites-authoring/author-environment-tools.md#page-information).
+如果頁面根據 [可編輯的範本](/help/sites-authoring/templates.md#editable-and-static-templates)，您可輕鬆切換至 [範本編輯器](/help/sites-authoring/templates.md#editing-templates-template-authors) 藉由選取 **編輯範本** 在 [頁面資訊功能表](/help/sites-authoring/author-environment-tools.md#page-information).
 
-如果頁面是根據 [靜態範本](/help/sites-authoring/templates.md#editable-and-static-templates)，您可以切換至 [設計模式](/help/sites-authoring/default-components-designmode.md) 使用 [頁面模式選擇器](/help/sites-authoring/author-environment-tools.md#page-modes) 啟用/停用元件以便在頁面上使用。
+如果頁面根據 [靜態範本](/help/sites-authoring/templates.md#editable-and-static-templates)，您可以切換至 [設計模式](/help/sites-authoring/default-components-designmode.md) 使用 [頁面模式選擇器](/help/sites-authoring/author-environment-tools.md#page-modes) 以啟用/停用頁面上使用的元件。
 
 在「欄檢視」或「清單檢視」中選取頁面時，您可輕鬆查看該頁 [面所依據](/help/sites-authoring/basic-handling.md#column-view)[的範本](/help/sites-authoring/basic-handling.md#list-view)。
 
 ## 即時副本狀態 {#live-copy-status}
 
-此 [即時副本狀態頁面模式](/help/sites-authoring/author-environment-tools.md#page-modes) 可讓您快速概略瞭解即時副本狀態以及哪些元件是/不是繼承的：
+此 [即時副本狀態頁面模式](/help/sites-authoring/author-environment-tools.md#page-modes) 可讓您快速概略瞭解即時副本狀態以及不會繼承哪些元件：
 
 * 綠色邊框：繼承
 * 粉紅色邊框：繼承已取消
@@ -468,7 +468,7 @@ ht-degree: 8%
 
 ## 新增註解 {#adding-annotations}
 
-[註解](/help/sites-authoring/annotations.md) 允許檢閱者和其他作者針對您的內容提供意見回饋。 它們通常用於審查和驗證目的。
+[註解](/help/sites-authoring/annotations.md) 允許檢閱者和其他作者針對您的內容提供意見回饋。 它們通常用於稽核和驗證目的。
 
 ## 預覽頁面 {#previewing-pages}
 
@@ -476,11 +476,11 @@ ht-degree: 8%
 
 * [預覽模式](#preview-mode)  — 快速就地預覽
 
-* [檢視已發佈](#view-as-published)  — 在新標籤中開啟頁面的完整預覽
+* [以發佈的形式檢視](#view-as-published)  — 在新標籤中開啟頁面的完整預覽
 
 >[!NOTE]
 >
->* 內容中的連結是可見的，但在編輯模式下無法存取。
+>* 內容中的連結可見，但在編輯模式中無法存取。
 >* 如果您想要使用連結來導覽，請使用任一預覽選項。
 >* 使用 [鍵盤快速鍵](/help/sites-authoring/keyboard-shortcuts.md) `Ctrl-Shift-M` 在預覽和上次選取的模式之間切換。
 >
@@ -491,51 +491,51 @@ ht-degree: 8%
 
 ### 預覽模式 {#preview-mode}
 
-編輯內容時，您可以使用預覽功能來預覽頁面 [模式](/help/sites-authoring/author-environment-tools.md#page-modes). 此模式：
+編輯內容時，您可以使用預覽來預覽頁面 [模式](/help/sites-authoring/author-environment-tools.md#page-modes). 此模式：
 
 * 隱藏各種編輯機制，讓您快速檢視頁面在發佈時的顯示方式。
 * 可讓您使用連結來導覽。
-* 會 **not** 重新整理頁面內容。
+* 會 **非** 重新整理頁面內容。
 
-製作時，可使用頁面編輯器右上角的圖示來使用預覽模式：
+製作時，使用頁面編輯器右上角的圖示即可使用預覽模式：
 
 ![預覽](assets/chlimage_1-125.png)
 
 ### 以已發佈狀態檢視 {#view-as-published}
 
-此 **檢視已發佈** 選項可從以下網址取得： [頁面資訊](/help/sites-authoring/author-environment-tools.md#page-information) 功能表。 這會在新標籤中開啟頁面、重新整理內容，並完全依照頁面在發佈環境中的顯示方式顯示頁面。
+此 **以發佈的形式檢視** 選項可從以下網址取得： [頁面資訊](/help/sites-authoring/author-environment-tools.md#page-information) 功能表。 這會在新索引標籤中開啟頁面、重新整理內容，並完全依照頁面在發佈環境中的顯示方式顯示頁面。
 
 ## 鎖定頁面 {#locking-a-page}
 
-AEM可讓您鎖定頁面，讓其他人無法修改內容。 當您對某個特定頁面進行大量編輯，或需要凍結頁面一段時間時，此功能會很有用。
+AEM可讓您鎖定頁面，不讓其他人修改內容。 當您對某個特定頁面進行大量編輯，或需要凍結頁面一段時間時，此功能會很有用。
 
-可從下列任一位置鎖定頁面：
+您可以透過下列任一方式鎖定頁面：
 
 * **網站** 主控台
 
-   1. 選取頁面，並選取 [選擇模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
+   1. 選擇頁面 [選擇模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
    1. 選取鎖定圖示。
 
-  ![鎖定圖示](assets/screen_shot_2018-03-22at134928.png)
+  ![「鎖定」圖示](assets/screen_shot_2018-03-22at134928.png)
 
 * **頁面編輯器**
 
    1. 選取 **頁面資訊** 圖示以開啟功能表。
    1. 選取 **鎖定頁面** 選項。
 
-鎖定後，主控台檢視資訊會更新；編輯時，工具列中會顯示鎖定符號。
+鎖定後，主控台檢視資訊會更新；編輯時，工具列會顯示鎖定符號。
 
 ![鎖定符號](assets/screen_shot_2018-03-22at135010.png)
 
 >[!CAUTION]
 >
->鎖定頁面可在以下情況下執行： [模擬使用者](/help/sites-administering/security.md#impersonating-another-user). 不過，以這種方式鎖定的頁面只能由被模擬的使用者或管理員使用者解除鎖定。
+>鎖定頁面可在以下情況下執行： [模擬使用者](/help/sites-administering/security.md#impersonating-another-user). 然而，以這種方式鎖定的頁面只能由被模擬的使用者或管理員使用者解除鎖定。
 >
 >無法透過模擬鎖定頁面的使用者來解鎖頁面。
 
 ## 解鎖頁面 {#unlocking-a-page}
 
-解鎖頁面非常類似於 [鎖定頁面](#locking-a-page). 頁面鎖定後，鎖定選項會由解鎖動作取代。
+解鎖頁面的方法非常類似於 [鎖定頁面](#locking-a-page). 鎖定頁面後，鎖定選項會由解鎖動作取代。
 
 「頁面資訊」功能表 **會列出** 「解除鎖定」為選項，而網站主控台中的「鎖定」圖示會以「解除鎖定」圖示 **** 取代。
 
@@ -543,21 +543,21 @@ AEM可讓您鎖定頁面，讓其他人無法修改內容。 當您對某個特�
 
 >[!CAUTION]
 >
->鎖定頁面可在以下情況下執行： [模擬使用者](/help/sites-administering/security.md#impersonating-another-user). 不過，以這種方式鎖定的頁面只能由被模擬的使用者或管理員使用者解除鎖定。
+>鎖定頁面可在以下情況下執行： [模擬使用者](/help/sites-administering/security.md#impersonating-another-user). 然而，以這種方式鎖定的頁面只能由被模擬的使用者或管理員使用者解除鎖定。
 >
 >無法透過模擬鎖定頁面的使用者來解鎖頁面。
 
-## 還原和重做頁面編輯 {#undoing-and-redoing-page-edits}
+## 復原和重做頁面編輯 {#undoing-and-redoing-page-edits}
 
 下列圖示可讓您還原或重做動作。 這些會在適當時顯示在工具列中：
 
-![還原和重做](do-not-localize/screen_shot_2018-03-23at093614.png)
+![還原與重做](do-not-localize/screen_shot_2018-03-23at093614.png)
 
 >[!NOTE]
 >
 >此 [鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) `Ctrl-Z` 也可用於還原頁面編輯動作。
 >
->鍵盤快速鍵 `Ctrl-Y` 也可用於重做頁面編輯動作。
+>鍵盤快速鍵 `Ctrl-Y` 也可用來重做頁面編輯動作。
 
 >[!NOTE]
 >
@@ -569,19 +569,19 @@ AEM可讓您鎖定頁面，讓其他人無法修改內容。 當您對某個特�
 >
 >您的系統管理員可以 [設定「復原/重做」功能的各個層面](/help/sites-administering/config-undo.md) 根據您執行個體的需求。
 
-AEM會儲存您執行動作的歷史記錄，以及執行動作的順序，如此您就可以依照執行動作的順序復原多個動作，並視需要重做這些動作，以重新套用一或多個動作。
+AEM會儲存您執行動作的歷史記錄，以及執行動作的順序，如此您就可以依照執行順序復原多個動作，並視需要重做它們，以重新套用一或多個動作。
 
 如果選取了內容頁面上的元素（例如文字元件），則復原和重做命令會套用至選取的專案。
 
-復原和重做命令的行為與其他軟體程式中的類似。 當您決定內容時，請使用命令來還原網頁的最近狀態。 例如，如果您將文欄位落移動到頁面上的不同位置，則可以使用復原命令將段落移回。 如果您認為前一個位置較好，請使用重做指令「復原復原」。
+復原和重做指令的行為與其他軟體程式中的類似。 在您決定內容時，請使用命令來還原網頁的最近狀態。 例如，如果您將文欄位落移至頁面上的不同位置，您可以使用復原指令將段落移回。 如果之後您認為前一個位置較好，請使用重做指令「復原復原」。
 
 >[!NOTE]
 >
 >您可以：
 >
 >* 只要您使用復原後尚未進行頁面編輯，就可以重做動作。
->* 最多可復原20個編輯動作（預設設定）。
->* 也使用 [鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) 「復原」和「重做」。
+>* 復原最多20個編輯動作（預設設定）。
+>* 也使用 [鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) 用於還原和重做。
 >
 
 您可以對下列型別的頁面變更使用還原和重做：
@@ -590,12 +590,12 @@ AEM會儲存您執行動作的歷史記錄，以及執行動作的順序，如�
 * 就地編輯段落內容
 * 在頁面中複製、剪下和貼上專案
 
-表單元件轉譯的表單欄位不應在編寫頁面時指定值。 因此，「還原」和「重做」指令不會影響您對這些元件型別值所做的變更。 例如，您無法還原在下拉式清單中選取值的作業。
+表單元件轉譯的表單欄位不應在編寫頁面時指定值。 因此，「復原」和「重做」指令不會影響您對這些元件型別值所做的變更。 例如，您無法還原在下拉式清單中選取值的作業。
 
 >[!NOTE]
 >
->需要特殊許可權才能復原和重做檔案和影像的變更。
+>需要特殊許可權才能復原和重做檔案與影像的變更。
 
 >[!NOTE]
 >
->檔案和影像的變更歷史記錄至少會持續10小時。 然而，在這段時間之後，無法保證會復原變更。 您的管理員可以變更十小時的預設時間。
+>檔案和影像的變更記錄至少會持續10小時。 然而，在這段時間之後，變更的復原則無法保證。 您的管理員可以變更十小時的預設時間。

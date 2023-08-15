@@ -5,16 +5,16 @@ contentOwner: AG
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2245'
+source-wordcount: '2244'
 ht-degree: 24%
 
 ---
 
 # 準備 [!DNL Assets] 用於智慧標籤 {#configure-asset-tagging-using-the-smart-content-service}
 
-開始使用Smart Content Services標籤資產之前，請先整合 [!DNL Experience Manager Assets] Adobe Developer Console所提供的智慧服務， [!DNL Adobe Sensei]. 設定完成後，請使用一些影像和標籤來訓練服務。
+開始使用Smart Content Services標籤資產之前，請先整合 [!DNL Experience Manager Assets] Adobe Developer Console所提供的智慧服務， [!DNL Adobe Sensei]. 設定好後，請使用一些影像和標籤來訓練服務。
 
 >[!NOTE]
 >
@@ -22,19 +22,18 @@ ht-degree: 24%
 >* 智慧內容服務適用於現有 [!DNL Experience Manager Assets] 已啟用此功能的Managed Services客戶。
 >* 新增 [!DNL Experience Manager Assets] Managed Services客戶可以依照本文所述的指示，設定智慧內容服務。
 
-
-在使用智慧內容服務之前，請確定以下事項：
+在使用智慧內容服務之前，請先確定下列事項：
 
 * [使用 Adobe 開發人員控制台進行整合](#integrate-adobe-io).
 * [訓練智慧內容服務](#training-the-smart-content-service).
 
-* 安裝最新的 [[!DNL Experience Manager] Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html).
+* 安裝最新版本 [[!DNL Experience Manager] Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html).
 
 ## 使用 Adobe 開發人員控制台進行整合 {#integrate-adobe-io}
 
-當您整合Adobe Developer Console時， [!DNL Experience Manager] 伺服器會先透過Adobe Developer主控台閘道驗證服務認證，再將您的請求轉送至智慧內容服務。 若要整合，您需要具有組織管理員許可權的Adobe ID帳戶，以及為貴組織購買並啟用的Smart Content Service授權。
+當您整合Adobe Developer Console時， [!DNL Experience Manager] 伺服器會先透過Adobe Developer主控台閘道驗證您的服務認證，再將您的要求轉送至智慧內容服務。 若要整合，您需要具有組織管理員許可權的Adobe ID帳戶，以及為貴組織購買並啟用的Smart Content Service授權。
 
-若要設定Smart Content Service，請遵循下列頂層步驟：
+若要設定智慧內容服務，請遵循下列最上層步驟：
 
 1. 若要產生公開金鑰， [建立智慧內容服務](#obtain-public-certificate) 中的設定 [!DNL Experience Manager]. [取得公開憑證](#obtain-public-certificate)以進行 OAuth 整合。
 
@@ -44,27 +43,27 @@ ht-degree: 24%
 
 1. [測試設定](#validate-the-configuration)。
 
-1. 或者， [在資產上傳時啟用自動標籤](#enable-smart-tagging-in-the-update-asset-workflow-optional).
+1. 或者 [在資產上傳時啟用自動標籤](#enable-smart-tagging-in-the-update-asset-workflow-optional).
 
 ### 透過建立智慧內容服務設定來取得公開憑證 {#obtain-public-certificate}
 
-公開憑證可讓您在 Adobe 開發人員控制台上驗證設定檔。
+公開憑證可讓您在Adobe Developer主控台驗證設定檔。
 
-1. 在 [!DNL Experience Manager] 使用者介面，存取 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL 舊版Cloud Services]**.
+1. 在 [!DNL Experience Manager] 使用者介面，存取 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL 舊版Cloud Service]**.
 
-1. 在Cloud Services頁面中，按一下 **[!UICONTROL 立即設定]** 在 **[!UICONTROL 資產智慧標籤]**.
+1. 在Cloud Service頁面中，按一下 **[!UICONTROL 立即設定]** 在 **[!UICONTROL 資產智慧標籤]**.
 
-1. 在 **[!UICONTROL 建立設定]** 對話方塊中，指定智慧標籤設定的標題和名稱。 按一下&#x200B;**[!UICONTROL 建立]**。
+1. 在 **[!UICONTROL 建立設定]** 對話方塊，指定智慧標籤設定的標題和名稱。 按一下&#x200B;**[!UICONTROL 建立]**。
 
-1. 在 **[!UICONTROL AEM智慧內容服務]** 對話方塊中，使用以下值：
+1. 在 **[!UICONTROL AEM智慧內容服務]** 對話方塊，請使用下列值：
 
    **[!UICONTROL 服務 URL]**: `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
 
-   例如， `https://smartcontent.adobe.io/apac`. 您可以指定 `na`， `emea`，或， `apac` 作為託管Experience Manager作者執行個體的地區。
+   例如 `https://smartcontent.adobe.io/apac`。您可以指定 `na`， `emea`，或， `apac` 作為託管Experience Manager作者例項的地區。
 
    >[!NOTE]
    >
-   >如果Experience Manager Managed Service是在2022年9月1日之前布建，請使用下列服務URL：
+   >如果Experience Manager託管服務在2022年9月1日之前布建，請使用以下服務URL：
    >`https://mc.adobe.io/marketingcloud/smartcontent`
 
    **[!UICONTROL 授權伺服器]**: `https://ims-na1.adobelogin.com`
@@ -78,7 +77,7 @@ ht-degree: 24%
 
    >[!NOTE]
    >
-   >提供的URL為 [!UICONTROL 服務URL] 無法透過瀏覽器存取，並產生404錯誤。 設定使用相同的值正常運作 [!UICONTROL 服務URL] 引數。 如需整體服務狀態和維護排程，請參閱 [https://status.adobe.com](https://status.adobe.com).
+   >提供的URL為 [!UICONTROL 服務URL] 無法透過瀏覽器存取，並產生404錯誤。 若的值相同，則組態運作正常。 [!UICONTROL 服務URL] 引數。 如需整體服務狀態和維護排程，請參閱 [https://status.adobe.com](https://status.adobe.com).
 
 1. 按一下 **[!UICONTROL 下載公開憑證以進行OAuth整合]**，並下載公開憑證檔案 `AEM-SmartTags.crt`.
 
@@ -100,7 +99,7 @@ ht-degree: 24%
    ![刪除Keystore中現有的相似性搜尋專案，以新增安全性憑證](assets/smarttags_delete_similaritysearch_keystore.png)
 
 
-   *圖：刪除現有的 `similaritysearch` Keystore中的專案以新增安全性憑證。*
+   *圖：刪除現有的 `similaritysearch` 金鑰存放區中的專案以新增安全性憑證。*
 
 1. 導覽至「 **[!UICONTROL 工具]** > **[!UICONTROL 雲端服務]** >舊 **[!UICONTROL 版雲端服務」]**。按一 **[!UICONTROL 下「資產智慧標籤]** >顯 **[!UICONTROL 示設定]** >可 **[!UICONTROL 用設定」]**。按一下所需的設定。
 
@@ -126,20 +125,20 @@ ht-degree: 24%
 
 1. 在&#x200B;**[!UICONTROL 選取產品設定檔]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL 「智慧內容服務」]**。按一下&#x200B;**[!UICONTROL 「儲存已設定的 API」]**。
 
-   此時會出現一個頁面，顯示更多關於設定的資訊。保持此頁面開啟，以複製這些值並新增至 [!UICONTROL 資產智慧標籤服務設定] 中的雲端設定 [!DNL Experience Manager] 以設定智慧標籤。
+   此時會出現一個頁面，顯示更多關於設定的資訊。請保持此頁面開啟，以複製這些值，並將其新增至 [!UICONTROL 資產智慧標籤服務設定] 中的雲端設定 [!DNL Experience Manager] 以設定智慧標籤。
 
    ![在「概覽」索引標籤中，您可以檢閱為整合提供的資訊。](assets/integration_details.png)
 
 
-   *圖：Adobe Developer主控台中的整合詳細資料*
+   *圖：Adobe Developer主控台整合的詳細資料*
 
 ### 設定智慧內容服務 {#configure-smart-content-service}
 
-若要設定整合，請使用 [!UICONTROL 技術帳戶ID]， [!UICONTROL 組織ID]， [!UICONTROL 使用者端密碼]、和 [!UICONTROL 使用者端ID] Adobe Developer主控台整合中的欄位。 建立智慧標籤雲端設定，可驗證來自以下專案的API請求： [!DNL Experience Manager] 部署。
+若要設定整合，請使用 [!UICONTROL 技術帳戶ID]， [!UICONTROL 組織ID]， [!UICONTROL 使用者端密碼]、和 [!UICONTROL 使用者端ID] Adobe Developer主控台整合中的欄位。 建立智慧標籤雲端設定，可驗證來自的API請求 [!DNL Experience Manager] 部署。
 
-1. 在 [!DNL Experience Manager]，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL 舊版Cloud Services]** 以開啟 [!UICONTROL Cloud Services] 主控台。
+1. 在 [!DNL Experience Manager]，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL 舊版Cloud Service]** 以開啟 [!UICONTROL Cloud Service] 主控台。
 
-1. 在 **[!UICONTROL 資產智慧標籤]**，開啟上方建立的設定。 在服務設定頁面上，按一下 **[!UICONTROL 編輯]**.
+1. 在 **[!UICONTROL 資產智慧標籤]**，開啟上面建立的設定。 在服務設定頁面上，按一下 **[!UICONTROL 編輯]**.
 
 1. 在「 **[!UICONTROL AEM Smart Content Service]** 」對話方塊中 **[!UICONTROL ，使用「服務URL」和「授權伺服器」欄位的預先填入值]****** 。
 
@@ -160,11 +159,11 @@ ht-degree: 24%
 
 1. 前往 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 網頁主控台]** 以開啟OSGi主控台。 按一下 **[!UICONTROL 主要] > [!UICONTROL JMX]**.
 
-1. 按一下 `com.day.cq.dam.similaritysearch.internal.impl`. 隨即開啟 **[!UICONTROL 相似性搜尋其他任務]**.
+1. 按一下 `com.day.cq.dam.similaritysearch.internal.impl`。隨即開啟 **[!UICONTROL 相似性搜尋其他任務]**.
 
-1. 按一下 `validateConfigs()`. 在 **[!UICONTROL 驗證設定]** 對話方塊，按一下 **[!UICONTROL 叫用]**.
+1. 按一下 `validateConfigs()`。在 **[!UICONTROL 驗證設定]** 對話方塊，按一下 **[!UICONTROL 叫用]**.
 
-驗證結果會顯示在同一個對話方塊中。
+驗證結果會顯示在相同的對話方塊中。
 
 ### 在中啟用智慧標籤 [!UICONTROL DAM更新資產] 工作流程（選擇性） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
@@ -189,31 +188,31 @@ ht-degree: 24%
 
 1. 在「參 **[!UICONTROL 數]** 」頁籤中，如果希望工作流完成，即使自動標籤步驟失敗，請選擇「忽略錯誤 **** 」。
 
-   ![設定DAM更新資產工作流程，以新增智慧標籤步驟並選取處理常式前進](assets/smart-tag-step-properties-workflow2.png)
+   ![設定DAM更新資產工作流程以新增智慧標籤步驟並選取處理常式前進](assets/smart-tag-step-properties-workflow2.png)
 
 
-   *圖：設定DAM更新資產工作流程以新增智慧標籤步驟並選取進階處理常式*
+   *圖：設定DAM更新資產工作流程以新增智慧標籤步驟並選取處理常式前進*
 
    若無論是否對資料夾啟用智慧標記，都要在資產上傳時標記資產，請選取&#x200B;**[!UICONTROL 「忽略智慧標記旗標」]**。
 
    ![設定DAM更新資產工作流程以新增智慧標籤步驟，並選取忽略智慧標籤標幟](assets/smart-tag-step-properties-workflow3.png)
 
 
-   *圖：設定DAM更新資產工作流程以新增智慧標籤步驟，並選取忽略智慧標籤標幟。*
+   *圖：設定DAM更新資產工作流程以新增智慧標籤步驟並選取忽略智慧標籤標幟。*
 
 1. 按一下&#x200B;**[!UICONTROL 「確定」]**&#x200B;關閉程序步驟，然後儲存工作流程。
 
 ## 訓練智慧內容服務 {#training-the-smart-content-service}
 
-若要讓智慧內容服務辨識您的企業分類法，請在已包含與您的企業相關之標籤的一組資產上執行它。 為了有效標籤您的品牌影像，智慧內容服務要求培訓影像符合特定准則。 訓練後，此服務可以對類似的一組資產套用相同的分類法。
+若要讓智慧內容服務辨識您的企業分類，請在已包含與企業相關標籤的一組資產上執行它。 為了有效標籤您的品牌影像，智慧內容服務要求培訓影像符合特定准則。 訓練之後，此服務可以將相同的分類法套用至類似的資產集。
 
-您可以訓練服務多次，以提高其套用相關標籤的能力。 在每個訓練週期後，執行標籤工作流程，並檢查資產是否已正確標籤。
+您可以訓練服務多次，以提高其套用相關標籤的能力。 在每個訓練週期後，執行標籤工作流程並檢查您的資產是否已正確標籤。
 
 您可以定期或依需求訓練智慧內容服務。
 
 >[!NOTE]
 >
->訓練工作流程僅在資料夾上執行。
+>訓練工作流程僅在資料夾中執行。
 
 ### 訓練准則 {#guidelines-for-training}
 
@@ -223,33 +222,33 @@ ht-degree: 24%
 
 **一致性**：用於特定標籤的影像在視覺上類似。
 
-例如，將所有影像標示為 `my-party` （適用於訓練），因為視覺上並不相似。
+例如，將所有影像標示為 `my-party` （適用於訓練），因為視覺效果不同。
 
-![說明性影像，以示範訓練准則](/help/assets/assets/do-not-localize/coherence.png)
+![插圖影像，以示範訓練准則](/help/assets/assets/do-not-localize/coherence.png)
 
-**涵蓋範圍**：在訓練中使用足夠的影像變化。 我們的想法是提供一些相當多元化的範例，讓Experience Manager學會專注於正確的事情。 如果您要在視覺上相異的影像上套用相同的標籤，請至少包含每種型別的五個範例。
+**涵蓋範圍**：在訓練的影像中使用足夠的變化。 我們的想法是提供一些合理多樣化的範例，讓Experience Manager學習如何聚焦於正確的事。 如果您要在視覺上相異的影像上套用相同的標籤，請至少包含每種型別的五個範例。
 
-例如，對於標籤 *模型向下姿態*，加入更多與下方醒目提示影像類似的培訓影像，以便服務在標籤期間更準確地識別類似影像。
+例如，對於標籤 *模型向下姿態*，請加入更多與下方醒目提示影像類似的培訓影像，以便服務在標籤期間更準確地識別類似影像。
 
-![說明性影像，以示範訓練准則](/help/assets/assets/do-not-localize/coverage_1.png)
+![插圖影像，以示範訓練准則](/help/assets/assets/do-not-localize/coverage_1.png)
 
-**干擾/阻礙**：此服務會針對干擾較少的影像（顯著背景、不相關的隨附，例如主要主題的物件/人員）提供更好的訓練。
+**干擾/阻礙**：此服務可針對干擾較少的影像（突出的背景、不相關的隨附，例如具有主要主題的物件/人員）提供更好的訓練。
 
 例如，對於標籤 *休閒鞋*，第二個影像不是良好的訓練候選項。
 
-![說明性影像，以示範訓練准則](/help/assets/assets/do-not-localize/distraction.png)
+![插圖影像，以示範訓練准則](/help/assets/assets/do-not-localize/distraction.png)
 
-**** 完整性：如果影像符合多個標籤的資格，請先新增所有適用的標籤，再加入影像以進行訓練。例如，對於標籤，例如 `raincoat` 和 `model-side-view`，請先在符合資格的資產上新增兩個標籤，然後再加入以進行訓練。
+**** 完整性：如果影像符合多個標籤的資格，請先新增所有適用的標籤，再加入影像以進行訓練。例如，對於標籤，例如 `raincoat` 和 `model-side-view`，請在符合資格的資產上新增兩個標籤，然後再加入以進行訓練。
 
-![說明性影像，以示範訓練准則](/help/assets/assets/do-not-localize/completeness.png)
+![插圖影像，以示範訓練准則](/help/assets/assets/do-not-localize/completeness.png)
 
 >[!NOTE]
 >
->智慧型內容服務是否能在您的標籤上訓練並套用至其他影像，取決於您用於訓練的影像品質。 為達到最佳效果，Adobe建議您使用視覺上相似的影像，來訓練每個標籤的服務。
+>智慧型內容服務針對您的標籤進行培訓並將這些內容套用至其他影像的能力，取決於您用於培訓的影像品質。 為達到最佳效果，Adobe建議您使用視覺上相似的影像，針對每個標籤來訓練服務。
 
 ### 定期訓練 {#periodic-training}
 
-您可以讓智慧內容服務定期訓練資料夾中的資產和關聯標籤。 開啟 [!UICONTROL 屬性] 頁面，選取 **[!UICONTROL 啟用智慧標籤]** 在 **[!UICONTROL 詳細資料]** 標籤，並儲存變更。
+您可以啟用智慧內容服務，定期訓練資料夾中的資產和關聯標籤。 開啟 [!UICONTROL 屬性] 第頁，請選取 **[!UICONTROL 啟用智慧標籤]** 在 **[!UICONTROL 詳細資料]** 標籤，並儲存變更。
 
 ![enable_smart_tags](assets/enable_smart_tags.png)
 
@@ -257,48 +256,47 @@ ht-degree: 24%
 
 ### 隨選培訓 {#on-demand-training}
 
-您可以視需要從「工作流程」主控台訓練「智慧內容服務」。
+您可以視需要從工作流程主控台訓練「智慧內容服務」。
 
 1. 在 [!DNL Experience Manager] 介面，前往 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**.
-1. 從 **[!UICONTROL 工作流程模型]** 頁面，選取 **[!UICONTROL 智慧標籤培訓]** 工作流程，然後按一下 **[!UICONTROL 開始工作流程]** （從工具列）。
-1. 在 **[!UICONTROL 執行工作流程]** 對話方塊中，瀏覽至包含標籤資產的裝載資料夾，以培訓服務。
+1. 從 **[!UICONTROL 工作流程模型]** 頁面，選取 **[!UICONTROL 智慧標籤培訓]** 工作流程，然後按一下 **[!UICONTROL 開始工作流程]** 工具列中的。
+1. 在 **[!UICONTROL 執行工作流程]** 對話方塊，瀏覽至包含標籤資產的裝載資料夾，以培訓服務。
 1. 指定工作流程的標題並新增註解。 然後，按一下 **[!UICONTROL 執行]**. 資產和標籤會提交以進行訓練。
 
    ![workflow_dialog](assets/workflow_dialog.png)
 
 >[!NOTE]
 >
->在處理資料夾中的資產以進行訓練後，後續訓練週期中只會處理修改的資產。
+>一旦資料夾中的資產處理完畢，用於訓練後，後續訓練週期內將僅處理修改後的資產。
 
 ### 檢視訓練報告 {#viewing-training-reports}
 
-若要檢查智慧型內容服務是否已針對您資產培訓集中的標籤進行培訓，請從「報表」控制檯檢閱培訓工作流程報表。
+若要檢查智慧型內容服務是否已針對您的資產培訓集中的標籤進行培訓，請從「報表」控制檯檢閱培訓工作流程報表。
 
 1. 在 [!DNL Experience Manager] 介面，前往 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 報表]**.
 1. 在 **[!UICONTROL 資產報表]** 頁面，按一下 **[!UICONTROL 建立]**.
-1. 選取 **[!UICONTROL 智慧標籤培訓]** 報表，然後按一下 **[!UICONTROL 下一個]** （從工具列）。
-1. 指定報表的標題和說明。在「 **[!UICONTROL 排程報表]**」下，保 **[!UICONTROL 留「現在]** 」選項。如果您想要排程報表以供稍後使用，請選 **[!UICONTROL 取]** 「稍後」並指定日期和時間。然後，按一下 **[!UICONTROL 建立]** （從工具列）。
-1. 在「資 **[!UICONTROL 產報表]** 」頁面中，選取您產生的報表。若要檢視報表，請按一下 **[!UICONTROL 檢視]** （從工具列）。
+1. 選取 **[!UICONTROL 智慧標籤培訓]** 報表，然後按一下 **[!UICONTROL 下一個]** 工具列中的。
+1. 指定報表的標題和說明。在「 **[!UICONTROL 排程報表]**」下，保 **[!UICONTROL 留「現在]** 」選項。如果您想要排程報表以供稍後使用，請選 **[!UICONTROL 取]** 「稍後」並指定日期和時間。然後，按一下 **[!UICONTROL 建立]** 工具列中的。
+1. 在「資 **[!UICONTROL 產報表]** 」頁面中，選取您產生的報表。若要檢視報表，請按一下 **[!UICONTROL 檢視]** 工具列中的。
 1. 檢閱報告的詳細資訊。
 
    報表會顯示您所訓練之標籤的訓練狀態。「培訓狀態」欄 **[!UICONTROL 中的綠色]** ，表示智慧型內容服務已接受標籤的培訓。黃色表示服務未針對特定標籤進行完整訓練。在這種情況下，請使用特定標籤新增更多影像，並執行培訓工作流程，以完全在標籤上訓練服務。
 
-   如果您在此報告中看不到您的標籤，請再次執行這些標籤的培訓工作流程。
+   如果您在此報告中未看到您的標籤，請再次執行這些標籤的培訓工作流程。
 
-1. 若要下載報表，請從清單中選取報表，然後按一下 **[!UICONTROL 下載]** （從工具列）。 報表會下載為Microsoft Excel試算表。
+1. 若要下載報表，請從清單中選取報表，然後按一下 **[!UICONTROL 下載]** 工具列中的。 報表會下載為Microsoft Excel試算表。
 
 ## 限制 {#limitations}
 
-* 增強型智慧標籤是以學習的影像模型及其標籤為基礎。 這些模型並不總是能夠完美地識別標籤。 目前版本的Smart Content Service有下列限制：
+* 增強型智慧標籤是以影像及其標籤的學習模型為基礎。 這些模型並非總能完美地識別標籤。 目前版本的智慧內容服務有下列限制：
 
-   * 無法辨認影像中的細微差異。 例如，超薄襯衣與一般適合的襯衫。
+   * 無法辨認影像中的細微差異。 例如，超薄襯衫和一般適合的襯衫。
    * 無法根據影像的微小模式/部分識別標籤。 例如，T恤上的標誌。
-   * 在以下地區設定中支援標籤： [!DNL Experience Manager] 支援。
+   * 在下列語言環境中支援標籤 [!DNL Experience Manager] 支援。
 
-* 若要搜尋具有智慧標籤（一般或增強功能）的資產，請使用 [!DNL Assets] Omnisearch （全文檢索搜尋）。 智慧標籤沒有獨立的搜尋述詞。
+* 若要搜尋具有智慧標籤（一般或增強功能）的資產，請使用 [!DNL Assets] Omnisearch （全文檢索搜尋）。 智慧標籤沒有單獨的搜尋述詞。
 
 >[!MORELIKETHIS]
 >
 >* [智慧標籤的概觀及訓練方式](enhanced-smart-tags.md)
 >* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
-

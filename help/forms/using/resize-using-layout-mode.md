@@ -1,36 +1,36 @@
 ---
-title: 使用版面模式調整最適化表單的元件大小
+title: 使用版面模式調整最適化表單元件的大小
 description: 使用版面配置模式中可用的回應式格線來定義元件位置
 feature: Adaptive Forms
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1125'
-ht-degree: 2%
+source-wordcount: '1124'
+ht-degree: 7%
 
 ---
 
 # 使用版面模式調整元件大小 {#use-layout-mode-to-resize-components}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/resize-using-layout-mode.html?) |
-| AEM 6.5 | 本文 |
+| AEM 6.5 | 本文章 |
 
 
-最適化表單製作介面可讓您使用版面模式調整元件大小。 拖放欄內的藍點以定義起始點和終止點來定位元件。 點選回應式格線內的元件後，會顯示藍點。 回應式格線由12個相等的欄組成。 替代欄中的白色和藍色陰影可區分一欄與另一欄。
+最適化表單製作介面可讓您使用版面模式調整元件大小。 在欄中拖放藍點以定義起始點和終止點來定位元件。 點選回應式格線中的元件後，系統會顯示藍點。 回應式格線由12個相等的欄組成。 替代欄中的白色和藍色陰影可區分一欄與另一欄。
 
-您可以使用「配置」模式為所有裝置型別（例如桌上型電腦、平板電腦、手機和其他小型裝置）調整元件大小。 平板電腦會自動從桌上型電腦版本衍生配置組態，而較小的裝置則會從電話衍生配置組態。 不過，您可以覆寫自動衍生的組態，以針對每種裝置型別定義不同的組態。
+您可以使用「配置」模式來調整所有裝置型別（例如桌上型電腦、平板電腦、手機和其他小型裝置）的元件大小。 平板電腦會自動從桌上型電腦版本衍生配置組態，而較小的裝置則會從手機衍生配置組態。 不過，您可以覆寫自動衍生的配置，以針對每種裝置型別定義不同的配置。
 
 ## 存取配置模式 {#access-layout-mode}
 
-選取 **版面** 從最適化表單製作介面頂端出現的下拉式清單，移至頁面旁邊 **預覽** 選項。 表單會以「版面」模式顯示。
+選取 **版面** 從最適化表單製作介面頂端出現的下拉式清單， **預覽** 選項。 表單會以「版面」模式顯示。
 
-1. 登入AEM編寫執行個體並導覽至 **Adobe Experience Manager** > **Forms** > **Forms與檔案**.
+1. 登入AEM作者執行個體並導覽至 **Adobe Experience Manager** > **Forms** > **Forms與檔案**.
 1. 建立新的或開啟現有的 [最適化表單](../../forms/using/creating-adaptive-form.md).
-1. 選取 **版面** 下拉式清單的下拉式清單(顯示在頂端的 **預覽** 選項。 表單會以「版面」模式顯示。
+1. 選取 **版面** 下拉式清單(顯示於頁面上方的 **預覽** 選項。 表單會以「版面」模式顯示。
 
    ![版面模式](assets/layout_mode_ic_new.png)
 
@@ -43,11 +43,11 @@ ht-degree: 2%
 
    點選元件後顯示的工具列包含下列選項：
 
-   * **[!UICONTROL 父級]**：選取元件的父系。
-   * **[!UICONTROL 還原中斷點配置]**：復原所有調整大小變更，並將預設版面套用至元件。
+   * **[!UICONTROL 父級]**：選取元件的父項。
+   * **[!UICONTROL 還原中斷點配置]**：還原所有調整大小的變更，並將預設版面套用至元件。
    * **[!UICONTROL 浮動至新行]**：如果同一行中有多個元件，請將元件移至下一行。
 
-   您也可以使用 **[!UICONTROL 還原中斷點配置]** ( ![還原中斷點](assets/reverttopreviouslypublishedversion.png))選項，以復原所有調整大小的變更。
+   您也可以使用 **[!UICONTROL 還原中斷點配置]** ( ![還原中斷點](assets/reverttopreviouslypublishedversion.png))選項來復原所有調整大小的變更。
 
    >[!NOTE]
    >
@@ -55,23 +55,23 @@ ht-degree: 2%
 
 ### 範例 {#example}
 
-**目標：** 您想要插入表格元件和影像元件，並以最適化表單彼此平行放置。
+**目標：** 您想要插入表格元件和影像元件，並以最適化表單將它們彼此平行放置。
 
 1. 在最適化表單中使用編輯模式插入表格和影像元件。 影像元件會顯示在表格元件之後。
-1. 切換至版面模式，然後點選「表格」元件。 調整元件大小的藍點會顯示在欄1和12。
+1. 切換至佈局模式，然後點選「表格」元件。 要調整元件大小的藍點會顯示在欄1和12。
 1. 將第12欄的藍色圓點拖放至回應式格線的第6欄。
 
    ![定義表格的端點](assets/layout_mode_end_point_table_new.png)
 
-1. 同樣地，選取「影像」元件，並將回應式格線第1欄的藍色圓點拖放至第7欄。 表格和影像元件彼此平行顯示。
+1. 同樣地，選取影像元件，並將回應式格線第1欄的藍色圓點拖放至第7欄。 表格和影像元件彼此平行顯示。
 
    ![在「版面」模式中同時顯示表格和影像](assets/table_image_parallel_new.png)
 
-   您可以選取影像元件並點選 **浮動至新行** 工具列中的可用選項，將影像元件移至下一行。
+   您可以選取影像元件，然後點選 **浮動至新行** 工具列中的可用選項，將影像元件移至下一行。
 
 ## 調整面板大小 {#resize-panels-layout-mode}
 
-如果您想要調整整個面板而非個別元件的大小，請執行以下步驟：
+如果您想要調整整個面板而非個別元件的大小，請執行下列步驟：
 
 1. 在面板中點選任何您想要調整大小的元件，選取 ![選取父系](assets/select_parent_icon.svg)，並選取下拉式清單中的第一個選項（如果面板為元件的直接父項）。
 
@@ -86,15 +86,15 @@ ht-degree: 2%
 
 1. 在 **[!UICONTROL 編輯]** 模式，點選面板，選取 ![設定](assets/configure_icon.png)，並選取 **[!UICONTROL 回應式 — 頁面上的所有內容，無需導覽]** 選項來自 **[!UICONTROL 面板配置]** 下拉式清單。
 
-1. 點選 ![儲存](assets/save_icon.svg) 以儲存屬性。
+1. 點選![儲存](assets/save_icon.svg)以儲存屬性。
 
 1. 在 **[!UICONTROL 版面]** 模式，點選面板中的任何元件，然後選取 ![選取父系](assets/select_parent_icon.svg)，然後選取面板。
 
-1. 點選 ![多欄](assets/multi-column.svg) 並從下拉式清單中選取欄數。 欄數可以介於1到12之間。 面板會分成多欄版面。
+1. 點選 ![多欄](assets/multi-column.svg) 並從下拉式清單中選取欄數。 欄數可以介於1到12之間。 面板會分成多欄配置。
 
-![在版面配置模式中的多欄](assets/multi-column-layout.png)
+![佈局模式下的多欄](assets/multi-column-layout.png)
 
-## 為舊回應式版面啟用新回應式格線 {#enableresponsivegrid}
+## 為舊的回應式版面配置啟用新的回應式格線 {#enableresponsivegrid}
 
 為您使用AEM Forms 6.4或更低版本建立的表單啟用新的回應式格線，以調整元件大小。
 
@@ -104,27 +104,27 @@ ht-degree: 2%
 
 執行以下步驟以啟用新的回應式格線：
 
-1. 選取 **版面** 下拉式清單的下拉式清單(顯示在頂端的 **預覽** 選項。 顯示啟用配置模式的確認。
+1. 選取 **版面** 下拉式清單(顯示於頁面上方的 **預覽** 選項。 隨即顯示啟用配置模式的確認訊息。
 1. 點選 **是** 以啟用 **版面** 表單模式。
 
-### 使用新回應式佈局將舊片段嵌入最適化表單中 {#embed-an-old-fragment-in-an-adaptive-form-with-new-responsive-layout}
+### 以新回應式佈局將舊片段嵌入最適化表單中 {#embed-an-old-fragment-in-an-adaptive-form-with-new-responsive-layout}
 
-最適化表單的全新回應式佈局可讓您使用舊的回應式佈局新增最適化表單片段至表單。 不過，新版面會捨棄已針對片段中使用之元件定義的版面屬性。 您可以切換到佈局模式以定義片段中使用的元件的佈局屬性。
+最適化表單的全新回應式佈局可讓您新增具有舊回應式佈局的最適化表單片段至表單。 不過，新版面會捨棄已針對片段中使用之元件定義的版面屬性。 您可以切換到佈局模式以定義片段中使用的元件的佈局屬性。
 
 ### 在舊的最適化表單中嵌入具有新回應式佈局的片段 {#embed-a-fragment-with-new-responsive-layout-in-an-old-adaptive-form}
 
-如果您使用舊的回應式佈局在自適應表單中嵌入帶有新回應式佈局的片段，系統會提示您啟用表單的佈局模式並重新嵌入片段。
+如果您使用舊回應式佈局在自適應表單中嵌入帶有新回應式佈局的片段，系統會提示您啟用表單的佈局模式並重新嵌入片段。
 
-若要啟用「版面」模式，請選取 **版面** 下拉式清單的下拉式清單(顯示在頂端的 **預覽** 選項並點選 **是** 以確認。 選取 **編輯** 模式以重新嵌入片段。
+若要啟用佈局模式，請選取 **版面** 下拉式清單(顯示於頁面上方的 **預覽** 選項並點選 **是** 以確認。 選取 **編輯** 模式以重新嵌入片段。
 
 ## 停用具有舊回應式佈局的表單的佈局模式 {#disable-layout-mode-for-forms-with-old-responsive-layout}
 
-您可以編輯表單中使用的範本屬性，以停用具有舊回應式版面的表單的版面模式。
+您可以編輯表單中所用範本的屬性，以停用具有舊回應式版面的表單版面模式。
 
 執行以下步驟以停用「配置」模式：
 
 1. 選取 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 範本]** 然後開啟表單中使用的範本，位置在 **[!UICONTROL 編輯]** 模式。
-1. 在左窗格中選取檔案容器並點選 **[!UICONTROL 原則。]**
+1. 在左窗格中選取檔案容器，然後點選 **[!UICONTROL 原則。]**
 
    ![停用佈局模式](assets/policy_disable_layout_mode.png)
 

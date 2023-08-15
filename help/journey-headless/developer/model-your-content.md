@@ -2,10 +2,10 @@
 title: 如何建立內容模型
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解如何使用內容模型和內容片段模型及內容片段，建立您的內容模型用於 AEM Headless 傳遞。
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1826'
-ht-degree: 99%
+source-wordcount: '1821'
+ht-degree: 94%
 
 ---
 
@@ -15,16 +15,16 @@ ht-degree: 99%
 
 ## 到目前為止 {#story-so-far}
 
-一開始，[了解 CMS Headless 開發](learn-about.md)介紹無周邊內容傳遞以及使用它的原因。然後[AEM Headless 快速入門](getting-started.md)以您自己的專案而言描述 AEM Headless 如何運作。
+一開始，[了解 CMS Headless 開發](learn-about.md)介紹 Headless 內容傳遞以及使用它的原因。然後[AEM Headless 快速入門](getting-started.md)以您自己的專案而言描述 AEM Headless 如何運作。
 
-在 AEM 無周邊歷程的上一個文件「[踏上首次使用 AEM Headless 之路](path-to-first-experience.md)」中，您接著了解實作第一個專案所需的步驟。閱讀本文件後，您應該：
+在 AEM Headless 歷程的上一個文件「[踏上首次使用 AEM Headless 之路](path-to-first-experience.md)」中，您接著了解實作第一個專案所需的步驟。閱讀本文件後，您應該：
 
 * 了解設計內容的重要規劃考量事項
-* 了解根據您的整合層級要求實作無周邊的步驟。
+* 了解根據您的整合層級要求實作 Headless 的步驟。
 * 設定必要的工具和 AEM 設定。
-* 了解使您的無周邊歷程順暢、持續高效產生內容以及確保內容快速傳遞的最佳做法。
+* 了解使您的 Headless 歷程順暢、持續高效產生內容以及確保內容快速傳遞的最佳做法。
 
-本文章以這些基本知識為基礎，以便您了解如何準備您自己的 AEM 無周邊專案。
+本文章以這些基本知識為基礎，以便您了解如何準備您自己的 AEM Headless 專案。
 
 ## 目標 {#objective}
 
@@ -147,13 +147,13 @@ AEM 使用內容片段來提供將內容 Headless 傳遞到應用程式所需的
 >
 >內容片段模型也作為 AEM GraphQL 結構描述的基礎，用於擷取您的內容 - 在後面的課程會詳細介紹。
 
-對內容的要求是使用 AEM GraphQL API 發出的，這是標準 GraphQL API 的自訂實作。AEM GraphQL API 允許您對內容片段執行 (複雜) 查詢，每個查詢都根據特定的模型類型。
+對內容的要求是使用 AEM GraphQL API 發出的，這是標準 GraphQL API 的自訂實作。AEM GraphQL API可讓您對內容片段執行（複雜）查詢，每個查詢都根據特定的模型型別。
 
 然後，您的應用程式可以使用傳回的內容。
 
 ## 使用內容片段模型建立架構 {#create-structure-content-fragment-models}
 
-內容片段模型提供多種機制，允許您定義內容的結構。
+內容片段模型提供多種機制，可讓您定義內容的結構。
 
 內容片段模型描述一個實體。
 
@@ -166,10 +166,10 @@ AEM 使用內容片段來提供將內容 Headless 傳遞到應用程式所需的
 
 在模型中：
 
-1. **資料類型**允許您定義個別屬性。
+1. **資料型別** 可讓您定義個別屬性。
 例如，將包含教師姓名的欄位定義為**文字** 並將他們的服務年限定義為&#x200B;**數字**。
-1. 資料類型&#x200B;**內容參考**&#x200B;和&#x200B;**片段參考**&#x200B;允許您在 AEM 中建立與其他內容的關係。
-1. **片段參考**&#x200B;資料類型允許您將內容片段巢狀化 (根據模型類型) 藉此實現多層結構。這對建立內容模型很重要。
+1. 資料型別 **內容參考** 和 **片段引用** 可讓您建立與AEM中其他內容的關聯。
+1. 此 **片段引用** 資料型別可讓您巢狀內嵌內容片段（根據模式型別），實現多個層級的結構。 這對建立內容模型很重要。
 
 例如：
 ![使用內容片段建立內容模型](assets/headless-modeling-01.png "使用內容片段建立內容模型")
@@ -214,7 +214,7 @@ AEM 提供以下資料類型用於建立內容模型：
 >
 >請參閱其他資源 - 設定瀏覽器中的內容片段
 
-然後可以建立內容片段模型並定義結構。這可以在「工具 — >資產 — >內容片段模型」下完成。 例如：
+然後可以建立內容片段模型並定義結構。您可以在「工具 — >資產 — >內容片段模型」底下執行此操作。 例如：
 
 ![內容片段模型](assets/cfm-model.png)
 
@@ -276,5 +276,5 @@ tbc...
    * [管理內容片段](/help/assets/content-fragments/content-fragments-managing.md) - 建立和編寫內容片段，此頁面將引領您到其他詳細章節
 * [AEM GraphQL 結構描述](access-your-content.md) - GraphQL 如何實現模型
 * [範例內容片段結構](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
-* [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - 此為簡短的教學影片系列，概述如何使用 AEM 的無周邊功能，包括內容模型和 GraphQL
+* [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - 此為簡短的教學影片系列，概述如何使用 AEM 的 Headless 功能，包括內容模型和 GraphQL
    * [GraphQL 模型基本概念](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/modeling-basics.html) - 了解如何在 Adobe Experience Manager (AEM) 中定義及使用內容片段以搭配 GraphQL 使用。

@@ -8,18 +8,18 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 exl-id: 0702858e-5e46-451f-9ac3-40a4fec68ca0
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '524'
 ht-degree: 1%
 
 ---
 
 # 建立自訂擴充功能{#creating-custom-extensions}
 
-一般而言，實作專案時，您在AEM和Adobe Campaign中都有自訂程式碼。 使用現有API，您可以在Adobe Campaign中從AEM或從AEM到Adobe Campaign呼叫自訂程式碼。 本檔案將說明如何執行此操作。
+一般而言，實作專案時，您在AEM和Adobe Campaign中都有自訂程式碼。 使用現有API，您可以在Adobe Campaign中從AEM或從AEM呼叫Adobe Campaign的自訂程式碼。 本檔案將說明如何執行此操作。
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 您必須安裝下列專案：
 
@@ -28,9 +28,9 @@ ht-degree: 1%
 
 另請參閱 [將AEM與Adobe Campaign 6.1整合](/help/sites-administering/campaignonpremise.md) 以取得詳細資訊。
 
-## 範例1：從AEM到Adobe Campaign {#example-aem-to-adobe-campaign}
+## 範例1：AEM至Adobe Campaign {#example-aem-to-adobe-campaign}
 
-AEM和Campaign之間的標準整合是以JSON和JSSP （JavaScript伺服器頁面）為基礎。 這些JSSP檔案可在Campaign主控台中找到，而且全都開頭為 **aec** (Adobe Experience Cloud)。
+AEM與Campaign之間的標準整合是以JSON和JSSP （JavaScript伺服器頁面）為基礎。 這些JSSP檔案可在Campaign主控台中找到，且全都以開頭 **aec** (Adobe Experience Cloud)。
 
 ![chlimage_1-15](assets/chlimage_1-15a.png)
 
@@ -38,7 +38,7 @@ AEM和Campaign之間的標準整合是以JSON和JSSP （JavaScript伺服器頁�
 >
 >[如需此範例，請參閱Geometrixx](/help/sites-developing/we-retail.md)，可在「封裝共用」中取得。
 
-在此範例中，已建立新的自訂JSSP檔案，並從AEM端呼叫該檔案以擷取結果。 例如，它可用來從Adobe Campaign擷取資料，或將資料儲存至Adobe Campaign。
+在此範例中，已建立新的自訂JSSP檔案，並從AEM端呼叫該檔案來擷取結果。 例如，它可用來從Adobe Campaign擷取資料，或將資料儲存至Adobe Campaign。
 
 1. 在Adobe Campaign中，若要建立JSSP檔案，請按一下 **新增** 圖示。
 
@@ -60,12 +60,12 @@ AEM和Campaign之間的標準整合是以JSON和JSSP （JavaScript伺服器頁�
 1. 儲存您的工作。 其餘的工作在AEM中。
 1. 在AEM端建立簡單的servlet，以便呼叫此JSSP。 在此範例中，您可以假設以下情況：
 
-   * 您已在AEM和Campaign之間使用連線
+   * 您的連線在AEM和Campaign之間正常運作
    * campaign雲端服務設定於 **/content/geometrixx-outdoors**
 
    此範例中最重要的物件是 **GenericCampaignConnector**，可讓您在Adobe Campaign端呼叫（取得和發佈） jssp檔案。
 
-   以下是一個小型程式碼片段：
+   以下是一個小的程式碼片段：
 
    ```
    @Reference
@@ -77,7 +77,7 @@ AEM和Campaign之間的標準整合是以JSON和JSSP （JavaScript伺服器頁�
    return results.bodyAsString();
    ```
 
-1. 在此範例中，您必須將認證傳遞至呼叫。 您可以透過getCredentials()方法取得這些值，也就是您傳入已設定Campaign雲端服務的頁面。
+1. 在此範例中，您必須將憑證傳遞至呼叫。 您可以透過getCredentials()方法取得，您可在其中傳入已設定Campaign雲端服務的頁面。
 
    ```xml
    // page containing the cloudservice for Adobe Campaign
@@ -162,7 +162,7 @@ public class CustomServlet extends SlingSafeMethodsServlet {
 
 ## 範例2：從Adobe Campaign到AEM {#example-adobe-campaign-to-aem}
 
-AEM提供立即可用的API，可擷取siteadmin explorer檢視中任何位置的物件。
+AEM提供立即可用的API，可擷取Siteadmin Explorer檢視中任何位置可用的物件。
 
 ![chlimage_1-17](assets/chlimage_1-17a.png)
 
@@ -178,13 +178,13 @@ API是：
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-URL結尾 **.1.json** 可以取代為 **.2.json**， **.3.json**，根據您想要取得的子層級數量而定。 若要取得所有關鍵字， **無限** 可使用：
+URL的結尾 **.1.json** 可以取代為 **.2.json**， **.3.json**，根據您感興趣的子層級數目。 若要取得所有關鍵字， **無限** 可使用：
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-若要使用API，AEM預設會使用基本驗證。
+為了使用API，AEM預設會使用基本驗證。
 
-名為的JS程式庫 **amcIntegration.js** 6.1.1 （版本編號8624及更新版本）中提供，可在其他數個版本中實作該邏輯。
+名為的JS程式庫 **amcIntegration.js** 提供於6.1.1 （版本編號8624及更新版本）中，可在其他數個版本中實作該邏輯。
 
 ### AEM API呼叫 {#aem-api-call}
 

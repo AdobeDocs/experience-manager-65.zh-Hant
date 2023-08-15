@@ -12,16 +12,16 @@ discoiquuid: 5d68a101-67e1-4dbc-9943-24fb754d4f77
 docset: aem65
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '213'
 ht-degree: 5%
 
 ---
 
 # 語言複製精靈{#language-copy-wizard}
 
-語言複製精靈是建立和檢測多語言內容結構的引導式體驗。 現在建立語言副本會更簡單、更快。
+語言複製精靈是建立和檢測多語言內容結構的引導式體驗。 現在建立語言副本會更簡單快速。
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ ht-degree: 5%
 
    ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 
-1. 選取「語言複製」，精靈隨即開啟。
+1. 選取語言複製，精靈隨即開啟。
 
    ![chlimage_1-10](assets/chlimage_1-10.jpeg)
 
@@ -41,15 +41,15 @@ ht-degree: 5%
 
    ![chlimage_1-11](assets/chlimage_1-11.jpeg)
 
-1. 此 **下一個** 按鈕帶您前往 **設定** 精靈的步驟。 您可以在這裡新增/移除語言並選取翻譯方法。
+1. 此 **下一個** 按鈕帶您前往 **設定** 精靈的步驟。 您可以在此新增/移除語言並選取翻譯方法。
 
    ![chlimage_1-12](assets/chlimage_1-12.jpeg)
 
    >[!NOTE]
    >
-   >依預設，只有一個翻譯設定。 若要能夠選取其他設定，您必須先設定雲端設定。 另請參閱 [設定翻譯整合架構](/help/sites-administering/tc-tic.md).
+   >依預設，只有一個翻譯設定。 若要能夠選取其他設定，您必須先設定雲端設定。 另請參閱 [設定翻譯整合框架](/help/sites-administering/tc-tic.md).
 
-1. 此 **下一個** 按鈕帶您前往 **轉換** 精靈的步驟。 您可以在此處選擇僅建立結構、建立新翻譯專案或新增到現有翻譯專案。
+1. 此 **下一個** 按鈕帶您前往 **Translate** 精靈的步驟。 在此，您可以選擇僅建立結構、建立新翻譯專案或新增至現有翻譯專案。
 
    >[!NOTE]
    >

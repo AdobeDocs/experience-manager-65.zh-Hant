@@ -2,16 +2,16 @@
 title: WCAG 2.1 快速指南
 description: WCAG 2.1 快速指南
 exl-id: 9cd37f5a-ff59-4617-a0f3-cd8994fbf4ab
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '1772'
-ht-degree: 99%
+source-wordcount: '1774'
+ht-degree: 97%
 
 ---
 
 # WCAG 2.1 快速指南{#quick-guide-to-wcag}
 
-Adobe Experience Manager (AEM)的開發過程充分遵循「網頁內容可及性指引」。
+Adobe Experience Manager (AEM)的開發過程儘可能地遵循「網頁內容可及性指引」。
 
 [網頁內容可及性 (WCAG) 指引 2.1 版](https://www.w3.org/TR/WCAG/)是由[全球資訊網協會 (W3C) ](https://www.w3.org/)[資訊網可及性推動組織 (WAI)](https://www.w3.org/WAI/) 所制定之一系列國際公認的指引。
 
@@ -66,7 +66,7 @@ WCAG 2.1 包含四大無障礙設計原則，有時簡稱為 **POUR**。說明�
 * 指引從 1.1 編號至 4.1，第一個數字與父項指引相對應。
 * 每則指引都包含一或多個&#x200B;**成功標準**。
 * 成功標準以陳述形式撰寫，針對任何特定網頁為 `True` 或 `False`。
-* 成功標準可能包含兩者擇一的選擇，也可能包含例外，意即不符合成功條件的情況。
+* 成功標準可能包含其中一項/或多項選擇，也可能包含例外，即不符合成功標準的情況。
 * 成功標準根據父項指引和原則，從 1.1.1 編號至 4.1.1。這些標準還各有一個簡短的名稱，用於摘要簡述該標準的目的，以便易於參考。舉例來說，成功標準 [1.1.1 是「非文字內容」](https://www.w3.org/TR/WCAG/#non-text-content)。
 * 成功標準包含一份相關&#x200B;**技術**&#x200B;清單 (詳細說明於下方)。
 

@@ -8,10 +8,10 @@ content-type: reference
 topic-tags: platform
 docset: aem65
 exl-id: da63c576-34cd-40ce-81de-d7391a331364
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 0%
+source-wordcount: '144'
+ht-degree: 3%
 
 ---
 
@@ -20,12 +20,12 @@ ht-degree: 0%
 整合架構包含具有API的整合層。 這可讓您：
 
 * 插入電子商務系統，將產品資料提取至AEM
-* 為獨立於特定電子商務引擎的商務功能建置AEM元件
+* 建置AEM元件，用於獨立於特定電子商務引擎的商務功能
 
 如需詳細資訊，請參閱：
 
 * [開發（一般）](/help/commerce/cif-classic/developing/generic.md)
-* [使用SAPCommerce Cloud進行開發](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
+* [使用SAPCommerce Cloud開發](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->若要與外部電子商務提供者使用整合架構，您首先需要安裝所需的套件。 如需詳細資訊，請參閱 [部署電子商務](/help/commerce/cif-classic/deploying/ecommerce.md).
+>若要搭配外部電子商務提供者使用整合架構，您必須先安裝所需的套件。 如需詳細資訊，請參閱 [部署電子商務](/help/commerce/cif-classic/deploying/ecommerce.md).
 >
 >如需有關概念和管理電子商務實作的資訊，請參閱 [管理電子商務](/help/commerce/cif-classic/administering/ecommerce.md).
 

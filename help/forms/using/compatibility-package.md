@@ -1,8 +1,8 @@
 ---
 title: 相容性套件
 seo-title: Compatibility Package
-description: 在AEM Forms 6.5上安裝相容性套件可讓您使用AEM Forms 6.4及舊版的「通訊管理」資產，以及已棄用的調適型表單範本和頁面
-seo-description: Installing the Compatibility package on AEM Forms 6.4 allows you to use the Correspondence Management assets from AEM Forms 6.4 and deprecated adaptive forms templates and pages
+description: 在AEM Forms 6.5上安裝相容性套件，可讓您使用AEM Forms 6.4及舊版本的通訊管理資產，以及已棄用的調適型表單範本和頁面
+seo-description: Installing the Compatibility package on AEM Forms 6.4 lets you use the Correspondence Management assets from AEM Forms 6.4 and deprecated adaptive forms templates and pages
 uuid: b49633d6-2cb3-422c-a314-25f3b8a37b7f
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,9 +12,9 @@ discoiquuid: 73e8ccc6-f857-493e-b6e3-878f93e2a356
 docset: aem65
 role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '314'
 ht-degree: 2%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-在AEM Forms 6.5中，互動式通訊是建立客戶通訊的預設和建議方法。若要繼續使用AEM Forms 6.5中的字母，您必須安裝最新的 [AEMFD相容性套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
+在AEM Forms 6.5中建立客戶通訊時，互動式通訊是預設且建議使用的方法。若要繼續使用AEM Forms 6.5中的字母，您必須安裝最新的 [AEMFD相容性套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
 
-AEMFD相容性套件也可讓您 [在AEM Forms 6.5上使用AEM Forms 6.4、6.3和6.2的以下資產：](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
+AEMFD相容性套件也可讓您 [在AEM Forms 6.5上使用AEM Forms 6.4、6.3和6.2的下列資產：](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
 
 * 檔案片段
 * 字母
@@ -44,7 +44,7 @@ AEMFD相容性套件也可讓您 [在AEM Forms 6.5上使用AEM Forms 6.4、6.3�
 
    如需上傳和安裝套件的詳細資訊，請參閱 [如何使用套件](/help/sites-administering/package-manager.md).
 
-1. 在記錄穩定之後，請重新啟動伺服器。
+1. 在記錄穩定後，請重新啟動伺服器。
 1. 使用移轉公用程式，讓您的資產相容於6.5。
 
    如需詳細資訊，請參閱 [移轉公用程式](../../forms/using/migration-utility.md).
@@ -53,7 +53,7 @@ AEMFD相容性套件也可讓您 [在AEM Forms 6.5上使用AEM Forms 6.4、6.3�
 
 透過安裝相容性套件，您可以使下列資產和範本與AEM Forms 6.5相容：
 
-* 來自AEM 6.4和更早版本的通訊管理資產：
+* AEM 6.4和更早版本的通訊管理資產：
 
    * [字母](../../forms/using/create-letter.md)
    * [資料字典](/help/forms/using/data-dictionary.md)

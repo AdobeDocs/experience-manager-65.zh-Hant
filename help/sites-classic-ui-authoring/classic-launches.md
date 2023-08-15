@@ -1,6 +1,6 @@
 ---
-title: Launch
-description: 建立啟動項，以更新現有網頁的新版本，以供日後啟用。 建立Launch時，您可以指定標題和來源頁面。
+title: 啟動
+description: 建立啟動項，以更新現有網頁的新版本，以供日後啟用。 建立啟動項時，您可以指定標題和來源頁面。
 uuid: b1952b6c-fc44-4e39-80ba-9380a6c66b8c
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,27 +8,27 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 4f62078d-b5b0-4eb9-bd9b-7647a093dec2
 exl-id: e64a66cb-d56a-4504-8883-609143d0daf8
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 43%
+source-wordcount: '182'
+ht-degree: 33%
 
 ---
 
-# Launch{#launches}
+# 啟動{#launches}
 
-Launches 可讓您有效率地開發未來版本的內容。
+啟動可讓您有效率地開發未來版本的內容。
 
-建立 Launch 可讓您完成變更以供未來發佈 (同時維護目前的頁面)。在編輯和更新您的 Launch 頁面後，您將它們提升回來源，然後啟動來源頁面 (頂層)。提升功能會將 Launch 內容複製回來源頁面，可以手動或自動完成 (視建立和編輯 Launch 時設定的欄位)。
+系統隨即會建立啟動，讓您將來的變更準備就緒，以便發佈（同時維護目前頁面）。 在編輯和更新您的啟動頁面後，您將它們提升回來源，然後啟動來源頁面 (頂層)。提升功能會將啟動內容複製回來源頁面，可以手動或自動完成 (視建立和編輯啟動時設定的欄位)。
 
 >[!NOTE]
 >
->以下詳細說明啟動背後的理論： [啟動](/help/sites-authoring/launches.md) 在標準撰寫檔案中。
+>有關啟動背後的理論的詳細說明，請參閱 [啟動](/help/sites-authoring/launches.md) 在標準撰寫檔案中。
 >
->在傳統UI中使用啟動的特定資訊，可在以下檔案連同 [建立啟動](/help/sites-classic-ui-authoring/classic-launches-creating.md)， [編輯啟動](/help/sites-classic-ui-authoring/classic-launches-editing.md)、和 [提升啟動](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
+>您可以在下列檔案中找到在傳統UI中使用啟動的特定資訊，以及 [建立啟動](/help/sites-classic-ui-authoring/classic-launches-creating.md)， [編輯啟動](/help/sites-classic-ui-authoring/classic-launches-editing.md)、和 [提升啟動](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
 
 >[!CAUTION]
 >
->傳統UI中無法針對啟動設定多個來源分支。
+>傳統UI中無法提供啟動的多個來源分支。
 
 您可以透過以下方式直接存取「啟動」主控台： [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)

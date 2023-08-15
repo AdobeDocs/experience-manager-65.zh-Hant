@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
 docset: aem65
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '262'
 ht-degree: 25%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->「元件主控台」會顯示系統中的所有元件。 此 [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser) 顯示作者可用的元件，並隱藏任何以句點( `.`)。
+>「元件主控台」會顯示系統中的所有元件。 此 [元件瀏覽器](/help/sites-authoring/author-environment-tools.md#components-browser) 顯示可供作者使用的元件，並隱藏任何以句點( `.`)。
 
 ## 搜尋 {#searching}
 
@@ -38,7 +38,7 @@ ht-degree: 25%
 
 ### 元件詳細資料 {#component-details}
 
-若要檢視特定元件的詳細資訊，請點選/按一下所需的資源。 三個索引標籤提供：
+若要檢視特定元件的詳細資訊，請點選/按一下所需資源。 三個索引標籤提供：
 
 * **屬性**
 
@@ -57,7 +57,7 @@ ht-degree: 25%
 
   >[!NOTE]
   >
-  >因為 `/apps` 在執行階段不可編輯，元件主控台為唯讀。
+  >因為 `/apps` 無法在執行階段編輯，元件主控台為唯讀。
 
 * **原則**
 

@@ -1,17 +1,17 @@
 ---
 title: AEM Headless 翻譯歷程
-description: 從這裡開始，此歷程會逐步引導您了解如何使用 AEM 強大的翻譯工具來翻譯您的無周邊內容。
+description: 從這裡開始，此歷程會逐步引導您了解如何使用 AEM 強大的翻譯工具來翻譯您的 Headless 內容。
 exl-id: 1a9d4c88-b676-4168-a9ef-7d218b39129f
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 97%
+ht-degree: 95%
 
 ---
 
 # AEM Headless 翻譯歷程 {#aem-headless-translation-journey}
 
-從這裡開始，此歷程會逐步引導您了解如何使用 AEM 強大的翻譯工具來翻譯您的無周邊內容。
+從這裡開始，此歷程會逐步引導您了解如何使用 AEM 強大的翻譯工具來翻譯您的 Headless 內容。
 
 ## 簡介 {#introduction}
 
@@ -19,16 +19,16 @@ Headless 實作對於將體驗傳遞給您的對象而言越來越重要，無�
 
 Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理，專注於建立管道中立、可重複使用的內容片段及其跨管道傳遞。透過使用 AEM 強大的翻譯工具，這些可重複使用的片段可以輕鬆翻譯並傳遞給您的對象，無論他們身在何處。
 
-本指南將引導您了解最重要的無周邊翻譯主題，完成後您將會：
+本指南將引導您了解最重要的 Headless 翻譯主題，完成後您將會：
 
-* 大致了解什麼是無周邊內容傳遞。
-* 對 AEM 無周邊功能有基本的了解。
-* 了解 AEM 的翻譯功能及其與無周邊內容的關係。
-* 能夠開始翻譯您自己的無周邊內容。
+* 大致了解什麼是 Headless 內容傳遞。
+* 對 AEM Headless 功能有基本的了解。
+* 了解 AEM 的翻譯功能及其與 Headless 內容的關係。
+* 能夠開始翻譯您自己的 Headless 內容。
 
-目標是讓您對無周邊技術、AEM 如何提供無周邊內容以及如何翻譯它，有廣泛的了解。如果這些主題有任何一個您不熟悉，那麼這就是您理想的起點。
+目標是讓您對 Headless 技術、AEM 如何提供 Headless 內容以及如何翻譯它，有廣泛的了解。如果這些主題有任何一個您不熟悉，那麼這就是您理想的起點。
 
-如果您已經熟悉 AEM、無周邊和翻譯，那麼您可能已經掌握了此歷程的基本知識。請考慮參閱下方[其他資源章節](#additional-resources)下的已連結技術文件。
+如果您已經熟悉 AEM、 Headless 和翻譯，那麼您可能已經掌握了此歷程的基本知識。請考慮參閱下方[其他資源章節](#additional-resources)下的已連結技術文件。
 
 ## AEM 文件歷程 {#documentation-journeys}
 
@@ -36,44 +36,44 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 
 文件歷程根據最佳實務原則而設計，其中包含 Adobe 的最新研究、Adobe 顧問的成熟實作經驗以及客戶專案的意見回饋。
 
-如果您想了解 Adobe 如何建議如何使用 AEM 解決無周邊商務案例，[AEM Headless 歷程](/help/journey-headless/home.md)是理想起點。
+如果您想了解 Adobe 如何建議如何使用 AEM 解決 Headless 商務案例，[AEM Headless 歷程](/help/journey-headless/home.md)是理想起點。
 
 ## 對象 {#audience}
 
-此歷程專為翻譯專家角色 (通常稱為翻譯專案經理或 TPM) 所設計。此歷程闡述在 AEM 中翻譯無周邊內容的要求、步驟和方法。此歷程定義了翻譯專家必須與之互動的其他角色，但此歷程是以翻譯專家的角度出發。
+此歷程專為翻譯專家角色 (通常稱為翻譯專案經理或 TPM) 所設計。此歷程闡述在 AEM 中翻譯 Headless 內容的要求、步驟和方法。此歷程定義了翻譯專家必須與之互動的其他角色，但此歷程是以翻譯專家的角度出發。
 
-歷程假設讀者具有在大型 CMS 系統上翻譯內容的經驗，但假設他們不了解無周邊技術或 AEM。
+歷程假設讀者具有在大型 CMS 系統上翻譯內容的經驗，但假設他們不了解 Headless 技術或 AEM。
 
 以下是在此歷程中會互動的角色。
 
 | 角色 | 說明 | 歷程中的角色 |
 |---|---|---|
 | 翻譯專家 | 定義應翻譯的內容並管理這些工作流程 | 此歷程的對象 |
-| 內容作者 | 建立並管理無周邊傳遞的內容 | 內容作者建立翻譯專家必須翻譯的內容。 |
+| 內容作者 | 建立並管理 Headless 傳遞的內容 | 內容作者建立翻譯專家必須翻譯的內容。 |
 | 管理員 | 管理 AEM 的基本設定和配置 | 翻譯專家與管理員一起進行翻譯作業所需的設定變更，例如安裝翻譯連接器。 |
-| 內容架構師 | 分析必須以無周邊方式傳遞之資料的要求並定義該資料的結構 | 翻譯專家與內容架構師一起定義內容的組織，以便輕鬆翻譯。 |
+| 內容架構師 | 分析必須以 Headless 方式傳遞之資料的要求並定義該資料的結構 | 翻譯專家與內容架構師一起定義內容的組織，以便輕鬆翻譯。 |
 
 此歷程的資訊當然對所有角色都有用，但有些資訊對於某些角色可能是多餘的。請密切注意[即將到來、涵蓋其他角色的歷程。](/help/journey-documentation/home.md#journeys)
 
 ## Headless 翻譯歷程 {#the-journey}
 
-您將在此歷程中探索許多主題。以下文章為您提供了在 AEM 中翻譯無周邊內容的基本知識，以及詳細技術文件的連結。
+您將在此歷程中探索許多主題。以下文章為您提供了在 AEM 中翻譯 Headless 內容的基本知識，以及詳細技術文件的連結。
 
-儘管您可以直接進入歷程的特定部分，但許多概念都是以先前文章中的概念為基礎。因此，如果您剛接觸 AEM 無周邊翻譯，我們建議您從頭開始，然後按順序進行。
+儘管您可以直接進入歷程的特定部分，但許多概念都是以先前文章中的概念為基礎。因此，如果您不熟悉AEM中的Headless翻譯，Adobe建議您從頭開始，然後循序漸進。
 
 | # | 文章 | 說明 |
 |---|---|---|
 | 0 | AEM Headless 翻譯歷程 | 本文件 |
-| 1 | [了解無周邊內容以及如何在 AEM 中翻譯](learn-about.md) | 了解無周邊概念、它們如何對應到 AEM 以及 AEM 翻譯理論。 |
-| 2 | [AEM Headless 翻譯快速入門](getting-started.md) | 了解如何組織無周邊內容以及 AEM 翻譯工具的運作原理。 |
+| 1 | [了解 Headless 內容以及如何在 AEM 中翻譯](learn-about.md) | 了解 Headless 概念、它們如何對應到 AEM 以及 AEM 翻譯理論。 |
+| 2 | [AEM Headless 翻譯快速入門](getting-started.md) | 了解如何組織 Headless 內容以及 AEM 翻譯工具的運作原理。 |
 | 3 | [設定翻譯連接器](configure-connector.md) | 了解如何將 AEM 連接到翻譯服務。 |
 | 4 | [設定翻譯規則](translation-rules.md) | 了解如何定義翻譯規則以識別要翻譯的內容。 |
-| 5 | [翻譯內容](translate-content.md) | 使用翻譯連接器和規則來翻譯您的無周邊內容。 |
+| 5 | [翻譯內容](translate-content.md) | 使用翻譯連接器和規則來翻譯您的 Headless 內容。 |
 | 6 | [發佈翻譯內容](publish-content.md) | 了解如何發佈翻譯後的內容，並在基礎內容更新時更新翻譯。 |
 
 ## 下一步 {#what-is-next}
 
-您現在已準備好開始您的 Adobe Headless 翻譯歷程。我們鼓勵您繼續歷程的下一部分並閱讀文章[了解無周邊內容以及如何在 AEM 中進行翻譯](learn-about.md)
+您現在已準備好開始您的 Adobe Headless 翻譯歷程。我們鼓勵您繼續歷程的下一部分並閱讀文章[了解 Headless 內容以及如何在 AEM 中進行翻譯](learn-about.md)
 
 ## 其他資源 {#additional-resources}
 
@@ -81,8 +81,8 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 
 因為這樣的歷程是設計成獨立的。然而，其中一些可以相互關聯。查看這些額外的歷程，進一步了解 AEM 的強大功能如何協同工作。
 
-* [Headless 編寫歷程](/help/journey-headless/author/overview.md) - 從這裡開始，此歷程會逐步引導您了解 AEM 強大且靈活的無周邊特性、其功能，以及如何在您的第一個無周邊專案中建立內容模型。
-* [Headless架構者歷程](/help/journey-headless/architect/overview.md)  — 從這裡開始，瞭解Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案建立內容的模型。
+* [Headless 編寫歷程](/help/journey-headless/author/overview.md) - 從這裡開始，此歷程會逐步引導您了解 AEM 強大且靈活的 Headless 特性、其功能，以及如何在您的第一個 Headless 專案中建立內容模型。
+* [Headless架構者歷程](/help/journey-headless/architect/overview.md)  — 從這裡開始瞭解Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案建立內容的模型。
 * [AEM Headless 開發人員歷程](/help/journey-headless/developer/overview.md) - 從這裡開始，此歷程會逐步引導您了解 AEM 強大且靈活的無周邊特性、其功能，以及如何在您的第一個開發專案中運用這些功能。
-* [AEM 技術文件](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant) - 如果您已經對 AEM 和無周邊技術有深入的了解，您可能想要直接查閱我們深入的技術文件。
+* [AEM 技術文件](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant) - 如果您已經對 AEM 和 Headless 技術有深入的了解，您可能想要直接查閱我們深入的技術文件。
 * [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 如果您偏好做中學並為傾向技術，請加入我們的由 API 和框架組織的實作教學課程，其在探究如何建立和使用 AEM Headless 應用程式。

@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: f8643f6118e0bc6bfb2ee0e093155cf0907eb5d3
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3212'
 ht-degree: 1%
 
 ---
@@ -271,7 +271,7 @@ CRXDE Lite：
 
 **注意：** 對於推播通知測試，模擬器是不夠的，因為推播通知在推播提供者(Apple或Google)和裝置之間使用不同的通訊協定。 目前的Mac/PC硬體和模擬器不支援此功能。
 
-1. *PhoneGap Build* 是PhoneGap提供的服務，可在伺服器上為您建置應用程式，並可讓您直接下載至裝置。 請參閱PhoneGap Build檔案，網址為 `https://build.phonegap.com/` 以瞭解如何設定和使用PhoneGap Build。
+1. *PhoneGap Build* 是PhoneGap提供的服務，可在伺服器上為您建立應用程式，並讓您直接下載至裝置。 請參閱PhoneGap Build檔案，網址為 `https://build.phonegap.com/` 以瞭解如何設定和使用PhoneGap Build。
 
 1. *PhoneGap命令列介面* (CLI)可讓您在命令列上使用一組豐富的PhoneGap命令，以建置、偵錯和部署您的應用程式。 請參閱PhoneGap開發人員檔案(`https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface`)，瞭解如何設定和使用PhoneGap CLI。
 

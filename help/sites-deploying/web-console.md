@@ -1,7 +1,7 @@
 ---
-title: Adobe Experience Manager中的Web控制檯
+title: Adobe Experience Manager中的網頁主控台
 seo-title: Web Console
-description: 瞭解如何使用AEM Web主控台。
+description: 瞭解如何使用AEM網頁主控台。
 seo-description: Learn how to use the AEM web console.
 uuid: 7856b2b3-4216-421d-a315-cd9a55936362
 contentOwner: Guillaume Carlino
@@ -11,38 +11,38 @@ topic-tags: configuring
 discoiquuid: 4a33fddd-0399-40e4-8687-564fb6765b76
 feature: Configuring
 exl-id: 9acbf61f-73a8-4998-9421-dd933f30ac8a
-source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '719'
 ht-degree: 2%
 
 ---
 
 # Web 主控台{#web-console}
 
-AEM中的Web主控台是以 [Apache Felix Web管理主控台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社群致力於實作OSGi R4服務平台，其中包括OSGi框架和標準服務。
+AEM中的Web主控台是根據 [Apache Felix Web管理主控台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社群努力實施OSGi R4服務平台，其中包括OSGi架構和標準服務。
 
 >[!NOTE]
 >
->在Web主控台上，提及預設設定的任何說明都與Sling預設值有關。
+>在Web主控台上，任何提及預設設定的說明都會與Sling預設值相關。
 >
->AEM有自己的預設值，因此預設集可能與控制檯上記錄的有所不同。
+>AEM有其本身的預設值，因此預設集可能會與主控台上的記錄不同。
 
 Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 * [設定](#configuration)：用於設定OSGi套件組合，因此是設定AEM系統引數的基礎機制
-* [套裝](#bundles)：用於安裝套件組合
+* [組合](#bundles)：用於安裝套件組合
 * [元件](#components)：用於控制AEM所需元件的狀態
 
 所做的任何變更都會立即套用至執行中的系統。 不需要重新啟動。
 
-控制檯可從以下位置存取： `../system/console`；例如：
+主控台可從下列位置存取： `../system/console`；例如：
 
 `http://localhost:4502/system/console/components`
 
 ## 設定 {#configuration}
 
-此 **設定** tab可用來設定OSGi組合，因此是設定AEM系統引數的基礎。
+此 **設定** tab可用來設定OSGi組合，因此是設定AEM系統引數的基礎機制。
 
 >[!NOTE]
 >
@@ -52,11 +52,11 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 * 下拉式功能表：
 
-   **OSGi >**
+  **OSGi >**
 
 * URL；例如：
 
-   `http://localhost:4502/system/console/configMgr`
+  `http://localhost:4502/system/console/configMgr`
 
 將會顯示設定清單：
 
@@ -65,15 +65,15 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 此畫面上的下拉式清單提供兩種型別的設定：
 
 * **設定**
-可讓您更新現有設定。 這些具有持續性身分(PID)，可以是：
+可讓您更新現有的組態。 這些具有持續性身分(PID)，可以是：
 
-   * 標準，是AEM不可或缺的一部分；若刪除這些值，則會傳回預設設定。
+   * 標準及為AEM不可或缺的一部分；若刪除這些值，則會傳回預設設定。
    * 從「工廠組態」建立的執行處理；這些執行處理是由使用者建立的，刪除會移除執行處理。
 
 * **工廠組態**
 可讓您建立所需功能物件的例項。
 
-   這將會被分配一個持續性身分，然後會列在設定下拉式清單中。
+  這將會被分配一個持續性身分，然後列在設定下拉式清單中。
 
 從清單中選取任何專案，都會顯示與該組態相關的引數：
 
@@ -83,73 +83,73 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 * **儲存**
 
-   儲存所做的變更。
+  儲存所做的變更。
 
-   對於Factory Configuration，這將建立具有永久識別的新執行個體。 然後，新執行個體將列在「設定」下。
+  對於Factory Configuration，這會建立具有永久識別的新執行個體。 然後，新執行個體將列在Configurations下。
 
 * **重設**
 
-   將熒幕上顯示的引數重設為上次儲存的引數。
+  將熒幕上顯示的引數重設為上次儲存的引數。
 
 * **刪除**
 
-   刪除目前的設定。 若為標準，引數會傳回預設設定。 如果是從「工廠組態」建立，則會刪除特定的執行處理。
+  刪除目前的設定。 若為standard，引數會傳回預設設定。 如果是從「工廠組態」建立，則會刪除特定的執行處理。
 
 * **解除繫結**
 
-   從套件組合中解除繫結目前設定。
+  從套件組合解除繫結目前組態。
 
 * **取消**
 
-   取消任何目前的變更。
+  取消任何目前的變更。
 
-## 套裝 {#bundles}
+## 組合 {#bundles}
 
-此 **套裝** tab是安裝AEM所需的OSGi套件組合的機制。 可透過下列其中一種方法來存取索引標籤：
+此 **組合** tab是安裝AEM所需的OSGi套件組合的機制。 可透過下列任一方法來存取標籤：
 
 * 下拉式功能表：
 
-   **OSGi >**
+  **OSGi >**
 
 * URL；例如：
 
-   `http://localhost:4502/system/console/bundles`
+  `http://localhost:4502/system/console/bundles`
 
-將會顯示套件組合清單：
+隨即顯示套件組合清單：
 
 ![screen_shot_2012-02-15at44740pm](assets/screen_shot_2012-02-15at44740pm.png)
 
-使用此索引標籤，您可以：
+您可以使用此標籤：
 
 * **安裝或更新**
 
-   您可以 **瀏覽** 以尋找包含您的套件組合的檔案，並指定它是否應 **開始** 立即且 **開始層級**.
+  您可以 **瀏覽** 以尋找包含您的套件組合的檔案，並指定它是否應 **開始** 立即且 **開始層級**.
 
 * **重新載入**
 
-   重新整理顯示的清單。
+  重新整理顯示的清單。
 
 * **重新整理封裝**
 
-   這將檢查所有套件的參考，並在必要時重新整理。
+  這將檢查所有套件的參考，並在必要時重新整理。
 
-   例如，在更新之後，由於先前的參照，舊版本和新版本可能仍在執行。 此選項將檢查並移動新版本的所有參考，允許舊版本停止。
+  例如，在更新後，由於先前的參照，舊版本和新版本可能仍在執行。 此選項會檢查並移動新版本的所有參考，讓舊版本停止。
 
 * **啟動**
 
-   根據指定的開始層級啟動組合。
+  根據指定的起始層級啟動束。
 
 * **停止**
 
-   停止該組合。
+  停止束。
 
 * **解除安裝**
 
-   從系統解除安裝該套裝。
+  從系統解除安裝套件。
 
 * **檢視狀態**
 
-   清單會指定束的目前狀態；按一下包含進一步資訊的特定束的名稱即可顯示進一步的資訊。
+  清單指定束的目前狀態；按一下特定束的名稱會顯示進一步的資訊。
 
 >[!NOTE]
 >
@@ -161,13 +161,13 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 * 下拉式功能表：
 
-   **主要 >**
+  **主要 >**
 
 * URL；例如：
 
-   `http://localhost:4502/system/console/components`
+  `http://localhost:4502/system/console/components`
 
-隨即顯示元件清單。 有各種圖示可讓您啟用、停用或（視情況而定）開啟特定元件的組態詳細資訊。
+元件清單隨即顯示。 有各種圖示可讓您啟用、停用或（在適當時）開啟特定元件的組態詳細資訊。
 
 ![screen_shot_2012-02-15at52144pm](assets/screen_shot_2012-02-15at52144pm.png)
 
@@ -177,6 +177,6 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 >[!NOTE]
 >
->啟用或停用元件只會套用到AEM/CRX重新啟動為止。
+>啟用或停用元件只適用於AEM/CRX重新啟動。
 >
 >開始狀態是在元件描述項中定義，在開發期間產生並在套件建立時儲存在套件中。

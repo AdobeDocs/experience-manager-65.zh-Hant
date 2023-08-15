@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '888'
 ht-degree: 20%
 
 ---
@@ -25,14 +25,14 @@ ht-degree: 20%
 
 **套用至：** ✅立最適化表單核心元件❎最適化表單基礎元件。
 
-啟用Adaptive Forms核心元件，讓您開始建立、發佈和傳送內容 [Core Components based Adaptive Forms](create-an-adaptive-form-core-components.md) 和 [Headless最適化Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 從您的AEM 6.5 Forms環境。
+啟用最適化Forms核心元件可讓您開始建立、發佈和傳遞 [Core Components based Adaptive Forms](create-an-adaptive-form-core-components.md) 和 [Headless最適化Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 從您的AEM 6.5 Forms環境。
 
 若要在您的AEM 6.5 Forms環境中啟用HAdaptive Forms核心元件，請設定並部署 [AEM Archetype 41或更新版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 根據您所有作者和發佈執行個體上的專案（已啟用表單選項）。
 
 本文提供在您的AEM 6.5 Forms環境中設定和部署AEM Archetype 41或更新版本專案，以啟用最適化Forms核心元件的詳細指示。
 
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 在AEM 6.5 Forms環境中啟用最適化Forms核心元件之前：
 

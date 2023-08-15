@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2245'
+source-wordcount: '2240'
 ht-degree: 9%
 
 ---
@@ -22,7 +22,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 ## 管理您的網站 {#managing-your-site}
 
-此 **網站** console可讓您使用標題列、工具列、動作圖示（適用於選取的資源）、階層連結，以及選取時的輔助導軌（例如時間軸和參考），來導覽和管理您的網站。
+此 **網站** console可讓您使用標題列、工具列、動作圖示（適用於選取的資源）、導覽路徑標示，以及選取時的輔助導軌（例如時間軸和參考），來導覽和管理您的網站。
 
 例如，欄檢視：
 
@@ -38,30 +38,30 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 >[!NOTE]
 >
->第一次開啟頁面進行編輯時，系統會提供一系列投影片來導覽功能。
+>第一次開啟頁面進行編輯時，一連串幻燈片會提供您功能導覽。
 >
 >您可以視需要略過導覽，並隨時透過選擇 **頁面資訊** 功能表。
 
 ## 存取說明 {#accessing-help}
 
-編輯頁面時， **說明** 可從下列位置存取：
+編輯頁面時， **說明** 可從以下位置存取：
 
-* 此 [**頁面資訊**](/help/sites-authoring/editing-page-properties.md#page-properties) 選擇器；這將顯示簡介幻燈片（在您第一次存取編輯器時顯示）。
-* 此 [設定](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 特定元件的對話方塊(使用？ 圖示)；這將顯示上下文相關說明。
+* 此 [**頁面資訊**](/help/sites-authoring/editing-page-properties.md#page-properties) 選擇器；這將顯示幻燈片介紹（在您第一次存取編輯器時顯示）。
+* 此 [設定](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 特定元件的對話方塊(使用？ 圖示)；這將會顯示內容感應式說明。
 
-進一步的 [說明相關資源可從主控台取得](/help/sites-authoring/basic-handling.md#accessing-help).
+進一步的 [可以從主控台取得說明相關資源](/help/sites-authoring/basic-handling.md#accessing-help).
 
 ## 元件瀏覽器 {#components-browser}
 
-元件瀏覽器會顯示可在目前頁面上使用的所有元件。 這些檔案可以拖曳至適當位置，然後編輯以新增您的內容。
+元件瀏覽器會顯示目前頁面上可用的所有元件。 這些檔案可以拖曳至適當位置，然後編輯以新增您的內容。
 
 元件瀏覽器是側面板中的標籤(連同資產 [瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser)[和內容樹](/help/sites-authoring/author-environment-tools.md#content-tree))。要開啟 (或關閉) 側面板，請使用工具欄左上角的表徵圖：
 
 ![ateat-03](assets/ateat-03.png)
 
-當您開啟側面板時，它將從左側滑開(選取 **元件** 索引標籤（如有需要）。 開啟時，您可以瀏覽頁面可用的所有元件。
+當您開啟側面板時，它會從左側滑開(選取 **元件** 標籤（如有需要）。 開啟時，您可以瀏覽頁面可用的所有元件。
 
-實際的外觀和處理方式取決於您使用的裝置型別：
+實際外觀和處理方式取決於您使用的裝置型別：
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
   元件瀏覽器會完整涵蓋正在編輯的頁面。
 
-  若要新增元件至頁面，請按住所需元件並向右移動，元件瀏覽器將關閉並重新顯示頁面 — 您可以在此處放置元件。
+  若要將元件新增至頁面，請按住所需元件並向右移動，元件瀏覽器會關閉並重新顯示頁面 — 您可以在此處放置元件。
 
   ![ateat-04](assets/ateat-04.png)
 
@@ -79,11 +79,11 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
   元件瀏覽器會在視窗左側開啟。
 
-  若要新增元件至頁面，請按一下所需元件，然後將其拖曳至所需位置。
+  若要將元件新增至頁面，請按一下所需元件，然後將其拖曳至所需位置。
 
   ![ateat-05](assets/ateat-05.png)
 
-  元件表示方式：
+  元件由表示
 
    * 元件名稱
    * 元件群組（灰色）
@@ -92,7 +92,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
       * 標準元件的圖示為單色。
       * 縮寫一律為元件名稱的前兩個字元。
 
-  從頂部工具列中的 **元件** 瀏覽器您可以：
+  從頂部的工具列 **元件** 瀏覽器您可以：
 
    * 依名稱篩選元件。
    * 使用下拉式選取範圍將顯示限製為特定群組。
@@ -105,13 +105,13 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 ## 資產瀏覽器 {#assets-browser}
 
-資產瀏覽器會顯示全部 [資產](/help/assets/home.md) 直接在您目前頁面上使用。
+資產瀏覽器會顯示全部 [資產](/help/assets/home.md) 這些檔案可直接在您目前頁面上使用。
 
 資產瀏覽器是側面板中的標籤，以及 [元件瀏覽](/help/sites-authoring/author-environment-tools.md#components-browser)r和 [內容樹狀結構](/help/sites-authoring/author-environment-tools.md#content-tree). 要開啟或關閉側面板，請使用工具欄左上角的表徵圖：
 
 ![ateat-03-1](assets/ateat-03-1.png)
 
-當您開啟側面板時，它將從左側滑開。 選取 **資產** 索引標籤進行標籤（如有必要）。
+當您開啟側面板時，它將會從左側滑開。 選取 **資產** 標籤（如有需要）。
 
 ![ateat-07](assets/ateat-07.png)
 
@@ -133,26 +133,26 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 >
 >這適用於特定資產和元件型別。 另請參閱 [使用「資產瀏覽器」插入元件](/help/sites-authoring/editing-content.md#inserting-a-component-using-the-assets-browser) 以取得更多詳細資料。
 
-從資產瀏覽器的頂端工具列，您可以依下列方式篩選資產：
+從資產瀏覽器頂端的工具列，您可以依以下方式篩選資產：
 
 * 名稱
 * 路徑
 * 資產型別，例如，影像、手稿、檔案、影片、頁面、段落和產品
-* 資產特性，例如方向（縱向、橫向、正方形）和樣式（顏色、單色、灰階）
+* 資產特性，例如，方向（縱向、橫向、正方形）和樣式（顏色、單色、灰階）
 
    * 僅適用於特定資產型別
 
-實際的外觀和處理方式取決於您使用的裝置型別：
+實際外觀和處理方式取決於您使用的裝置型別：
 
 >[!NOTE]
 >
->當寬度小於1024畫素時（亦即在小案頭視窗上）會偵測到行動裝置。
+>當寬度小於1024畫素時（亦即在小型案頭視窗上），會偵測到行動裝置。
 
 * **行動裝置，例如iPad**
 
   資產瀏覽器會完整涵蓋正在編輯的頁面。
 
-  若要將資產新增至頁面，請觸控並按住所需資產，然後將其向右移動 — 資產瀏覽器將關閉並重新顯示頁面，您可以在其中將資產新增至所需元件。
+  若要將資產新增至頁面，請觸控並按住所需資產，然後將其向右移動，資產瀏覽器會關閉並重新顯示頁面，您可在此將資產新增至所需元件。
 
   ![ateat-09](assets/ateat-09.png)
 
@@ -160,29 +160,29 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
   資產瀏覽器會在視窗左側開啟。
 
-  若要將資產新增至頁面，請按一下所需的資產，並將其拖曳至所需的元件或位置。
+  若要將資產新增至頁面，請按一下所需資產，並將其拖曳至所需元件或位置。
 
   ![ateat-10](assets/ateat-10.png)
 
-如果您需要快速變更資產，可以開始 [資產編輯器](/help/assets/manage-assets.md) 直接從資產瀏覽器按一下資產名稱旁邊顯示的編輯圖示。
+如果您需要快速變更資產，可以開始 [資產編輯器](/help/assets/manage-assets.md) 按一下資產名稱旁顯示的編輯圖示，即可直接從資產瀏覽器中存取。
 
 ![資產瀏覽器案頭裝置](do-not-localize/screen_shot_2018-03-22at142448.png)
 
 ## 內容樹 {#content-tree}
 
-此 **內容樹狀結構** 提供階層中頁面所有元件的概觀，讓您一眼就能看到頁面的構成方式。
+此 **內容樹狀結構** 會提供階層中頁面所有元件的概觀，讓您一眼就能看到頁面的構成方式。
 
-內容樹狀結構是側面板中的標籤（連同元件和資產瀏覽器）。 要開啟 (或關閉) 側面板，請使用工具欄左上角的表徵圖：
+內容樹是側面板中的標籤（連同元件和資產瀏覽器）。 要開啟 (或關閉) 側面板，請使用工具欄左上角的表徵圖：
 
 ![內容樹](do-not-localize/screen_shot_2018-03-22at142042.png)
 
-當您開啟側面板時，它會滑開（從左側）。 選取 **內容樹狀結構** 索引標籤進行標籤（如有必要）。 開啟時，您可以看到頁面或範本的樹狀檢視表示法，因此更容易瞭解其內容如何以階層方式建構。 此外，在複雜頁面上，它可讓您更輕鬆地在頁面的元件之間跳轉。
+當您開啟側面板時，它將滑開（從左側）。 選取 **內容樹狀結構** 標籤（如有需要）。 開啟時，您可以看到頁面或範本的樹狀檢視表示法，因此更容易瞭解其內容如何階層架構。 此外，在複雜頁面上，可讓您更輕鬆地在頁面元件之間跳轉。
 
 ![ateat-11](assets/ateat-11.png)
 
-頁面可以輕鬆地由許多相同型別的元件組成，因此內容（元件）樹狀結構會在元件型別名稱（黑色）之後顯示描述性文字（灰色）。 描述性文字來自元件的常見屬性，例如標題或文字。
+頁面可以輕鬆地由許多相同型別的元件組成，因此內容（元件）樹狀結構會在元件型別名稱（黑色）後面顯示描述性文字（灰色）。 描述性文字來自元件的常見屬性，例如標題或文字。
 
-元件型別將以使用者語言顯示，而元件說明文字則來自頁面語言。
+元件型別會以使用者語言顯示，而元件說明文字則來自頁面語言。
 
 按一下元件旁的>形箭號將會收合或展開該層級。
 
@@ -190,9 +190,9 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 >[!NOTE]
 >
->如果您在行動裝置上編輯頁面（如果瀏覽器寬度小於1024畫素），則無法使用內容樹狀結構。
+>如果您在行動裝置上編輯頁面（如果瀏覽器寬度小於1024畫素），則無法使用內容樹。
 
-按一下元件即可在頁面編輯器中反白顯示該元件。 可用的動作取決於頁面狀態：
+按一下元件即可在頁面編輯器中醒目顯示元件。 可執行的動作取決於頁面狀態：
 
 * 例如，基本頁面：
 
@@ -200,7 +200,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
   ![ateat-12](assets/ateat-12.png)
 
-  如果您在樹狀結構中點選的元件可編輯，則名稱右側會出現扳手圖示。 按一下此圖示將直接啟動元件的編輯對話方塊。
+  如果按一下樹狀結構中的元件可編輯，則名稱右側會出現扳手圖示。 按一下此圖示將直接啟動元件的編輯對話方塊。
 
   ![扳手圖示 — 編輯](do-not-localize/screen_shot_2018-03-22at142725.png)
 
@@ -210,11 +210,11 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
   ![ateat-13](assets/ateat-13.png)
 
-## 片段 — 關聯的內容瀏覽器 {#fragments-associated-content-browser}
+## 片段 — 相關聯的內容瀏覽器 {#fragments-associated-content-browser}
 
-如果您的頁面包含內容片段，那麼您也可以存取 [相關內容的瀏覽器](/help/sites-authoring/content-fragments.md#using-associated-content).
+如果您的頁面包含內容片段，那麼您也可以存取 [關聯內容的瀏覽器](/help/sites-authoring/content-fragments.md#using-associated-content).
 
-## 引用 {#references}
+## 參考 {#references}
 
 **引用** 顯示所選頁面的連線：
 
@@ -234,31 +234,31 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 ![ateat-22](assets/ateat-22.png)
 
-選取適當的參照型別以取得詳細資訊。 在某些情況下，當您選取特定參照時，可以使用進一步的動作，包括：
+選取適當的參照型別以取得詳細資訊。 在某些情況下，當您選取特定參照時，可使用進一步的動作，包括：
 
-* **傳入連結**，提供參照頁面的頁面清單，並可直接存取 **編輯** 選擇特定連結時顯示的其中一個頁面
+* **傳入連結**，提供參照頁面的頁面清單，並可直接存取 **編輯** 當您選取特定連結時顯示的其中一個頁面
 
-* 借入和借出內容的例項，使用 **參考資料** 元件，您可以在此處導覽至參照/參照的頁面
+* 借入和借出內容的例項，使用 **參考** 元件，您可從此處導覽至參照/參照頁面
 
-* [產品頁面的參考](/help/commerce/cif-classic/administering/generic.md#showing-product-references) （可從Commerce-Products控制檯取得）
+* [產品頁面的引用](/help/commerce/cif-classic/administering/generic.md#showing-product-references) （可從Commerce-Products控制檯取得）
 * [啟動](/help/sites-authoring/launches.md)，提供相關啟動項的存取權
-* [即時副本](/help/sites-administering/msm.md) 顯示基於所選資源的所有即時副本的路徑。
+* [即時副本](/help/sites-administering/msm.md) 顯示以所選資源為基礎之所有即時副本的路徑。
 * [Blueprint](/help/sites-administering/msm-best-practices.md)，提供詳細資訊和各種動作
 * [語言副本](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel)，提供詳細資訊和各種動作
 
-例如，您可以修正「參照」元件中的破斷參照：
+例如，您可以修復「參照」元件中的破斷參照：
 
 ![ateat-14](assets/ateat-14.png)
 
 ## 事件 — 時間表 {#events-timeline}
 
-適當的資源(例如，頁面來自 **網站** 控制檯或資產 **資產** console) [時間軸可用來顯示任何選取專案的最近活動](/help/sites-authoring/basic-handling.md#timeline).
+針對適當的資源(例如 **網站** 控制檯或資產 **資產** console) [時間軸可用來顯示任何選取專案上的最近活動](/help/sites-authoring/basic-handling.md#timeline).
 
 開啟所需的主控台，然後導覽至所需的資源並開啟 **時間表**，使用：
 
 ![ateat-15](assets/ateat-15.png)
 
-[選取您需要的資源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)，然後執行以下任一項作業 **全部顯示** 或 **活動** 若要列出所選資源上任何最近的動作：
+[選取您需要的資源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)，然後 **全部顯示** 或 **活動** 若要列出所選資源上任何最近的動作：
 
 ![ateat-16](assets/ateat-16.png)
 
@@ -285,28 +285,28 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 * [提升啟動](/help/sites-authoring/launches-promoting.md) 如果頁面為啟動項。
 * [在傳統UI中開啟](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 如果此選項已 [由管理員啟用](/help/sites-administering/enable-classic-ui-editor.md)
 
-此外， **頁面資訊** 可讓您在適當時存取analytics和建議。
+此外， **頁面資訊** 適時提供對analytics和建議的存取權。
 
 ## 頁面模式 {#page-modes}
 
 編輯頁面時，有多種模式可允許不同的動作：
 
-* [編輯](/help/sites-authoring/editing-content.md)  — 編輯頁面內容時使用的模式。
-* [版面](/help/sites-authoring/responsive-layout.md)  — 可讓您根據裝置建立及編輯回應式配置（如果頁面根據配置容器）
+* [編輯](/help/sites-authoring/editing-content.md)  — 編輯頁面內容時所使用的模式。
+* [版面](/help/sites-authoring/responsive-layout.md)  — 可讓您根據裝置建立及編輯回應式版面（如果頁面以版面容器為基礎）
 
 * [支架](/help/sites-authoring/scaffolding.md)  — 協助您建立共用相同結構但內容不同的大型頁面集。
 * [開發人員](/help/sites-developing/developer-mode.md)  — 可讓您執行各種動作（需要許可權）。 其中包括檢查頁面及其元件的技術細節。
 
-* [設計](/help/sites-authoring/default-components-designmode.md)  — 可讓您啟用/停用頁面上使用的元件，並設定元件的設計(如果頁面根據 [靜態範本](/help/sites-authoring/templates.md#editable-and-static-templates))。
+* [設計](/help/sites-authoring/default-components-designmode.md)  — 可讓您啟用/停用頁面上使用的元件，以及設定元件的設計(如果頁面根據 [靜態範本](/help/sites-authoring/templates.md#editable-and-static-templates))。
 
 * [目標定位](/help/sites-authoring/content-targeting-touch.md)  — 透過所有管道的目標定位和測量，提高內容關聯性。
 * [Activity Map](/help/sites-authoring/page-analytics-using.md#analyticsvisiblefromthepageeditor)  — 顯示頁面的Analytics資料。
 
 * [時間扭曲](/help/sites-authoring/working-with-page-versions.md#timewarp)  — 可讓您檢視特定時間點的頁面狀態。
-* [即時副本狀態](/help/sites-authoring/editing-content.md#live-copy-status)  — 可讓您快速概覽即時副本狀態以及不會繼承哪些元件。
-* [預覽](/help/sites-authoring/editing-content.md#previewing-pages)  — 用於檢視將在發佈環境中顯示的頁面；或使用內容中的連結導覽。
+* [即時副本狀態](/help/sites-authoring/editing-content.md#live-copy-status)  — 可讓您快速概略瞭解即時副本狀態以及不會繼承哪些元件。
+* [預覽](/help/sites-authoring/editing-content.md#previewing-pages)  — 用於檢視將在發佈環境中顯示的頁面；或使用內容中的連結進行導覽。
 
-* [註釋](/help/sites-authoring/annotations.md)  — 用於在頁面上新增或檢視註解。
+* [註解](/help/sites-authoring/annotations.md)  — 用於在頁面上新增或檢視註解。
 
 您可以使用右上角的圖示來存取這些專案。 實際圖示會變更，以反映您目前使用的模式：
 
@@ -314,7 +314,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 >[!NOTE]
 >
->* 視頁面特性而定，某些模式可能無法使用。
+>* 視頁面的特性而定，某些模式可能無法使用。
 >* 存取某些模式需要適當的許可權。
 >* 由於空間限制，開發人員模式不適用於行動裝置。
 >* 有一個 [鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) ( `Ctrl-Shift-M`)以在 **預覽** 和目前選取的模式(例如， **編輯**， **版面**、等)。
@@ -322,7 +322,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 ## 路徑選擇 {#path-selection}
 
-通常在製作時，需要選取其他資源，例如定義指向其他頁面或資源的連結，或選取影像時。 若要輕鬆選取路徑， [路徑欄位](/help/sites-authoring/author-environment-tools.md#path-fields) 優惠自動完成和 [路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) 允許更強大的選擇。
+通常在製作時，必須選取另一個資源，例如定義另一個頁面或資源的連結，或選取影像時。 若要輕鬆選取路徑， [路徑欄位](/help/sites-authoring/author-environment-tools.md#path-fields) 優惠自動完成和 [路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) 允許更強大的選取範圍。
 
 ### 路徑欄位 {#path-fields}
 
@@ -330,7 +330,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 路徑欄位現在具有自動完成和先行等功能，可更輕鬆找到資源。
 
-按一下 **開啟選取範圍對話方塊** 路徑欄位中的按鈕會開啟 [路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) 對話方塊，以取得更詳細的選取選項。
+按一下 **開啟選取範圍對話方塊** 路徑欄位中的按鈕會開啟 [路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) 對話方塊，以允許更詳細的選取選項。
 
 ![開啟選擇對話方塊](do-not-localize/screen_shot_2018-03-22at154427.png)
 
@@ -340,15 +340,15 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 ### 路徑瀏覽器 {#path-browser}
 
-路徑瀏覽器的組織方式如下 [欄檢視](/help/sites-authoring/basic-handling.md#column-view) ，以取得更詳細的資源選擇。
+路徑瀏覽器的組織方式如下 [欄檢視](/help/sites-authoring/basic-handling.md#column-view) ，以供您更詳細地選取資源。
 
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
-* 選取資源後， **選取** 對話方塊右上角的按鈕會變成使用中。 按一下或點選以確認選取範圍或 **取消** 以中止。
+* 選取資源後， **選取** 對話方塊右上角的按鈕會變成使用中按鈕。 按一下或點選以確認選取範圍或 **取消** 以中止。
 * 如果上下文允許選擇多個資源，則選擇資源也會激活「選擇 **** 」按鈕，但也會向窗口的右上角添加選定資源的計數。按一下 **數字旁** 的X，取消選取全部。
 * 當您瀏覽樹狀結構時，您的位置會反映在對話方塊頂端的階層連結中。 這些階層連結也可用來在資源階層內快速跳轉。
-* 您可以隨時使用對話方塊頂端的搜尋欄位。 按一下 **X** 以清除搜尋。
-* 若要縮小搜尋範圍，您可以顯示篩選選項並根據特定路徑篩選結果。
+* 您可以隨時使用對話方塊頂端的搜尋欄位。 按一下 **X** ，以清除搜尋。
+* 若要縮小搜尋範圍，您可以顯示篩選選項，並根據特定路徑篩選結果。
 
   ![ateat-21](assets/ateat-21.png)
 

@@ -11,16 +11,16 @@ discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 feature: Mobile Forms
 exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
 
 # 針對HTML5表單整合Form Bridge與自訂入口網站{#integrating-form-bridge-with-custom-portal-for-html-forms}
 
-FormBridge是HTML5 forms bridge API，可讓您與表單互動。 如需FormBridge API的參考資料，請參閱 [FormBridge API參考](/help/forms/using/form-bridge-apis.md).
+FormBridge是HTML5 Forms Bridge API，可讓您與表單互動。 如需FormBridge API的參考資訊，請參閱 [FormBridge API參考](/help/forms/using/form-bridge-apis.md).
 
 您可以使用FormBridge API從HTML頁面取得或設定表單欄位的值，並提交表單。 例如，您可以使用API來建置精靈般的體驗。
 
@@ -31,16 +31,16 @@ FormBridge是HTML5 forms bridge API，可讓您與表單互動。 如需FormBrid
 1. **選擇設定檔或建立設定檔**
 
    1. 在CRX DE介面中，導覽至： `https://'[server]:[port]'/crx/de`.
-   1. 使用管理員認證登入。
+   1. 使用系統管理員認證登入。
    1. 建立設定檔或選擇現有的設定檔。
 
       如需如何建立設定檔的詳細資訊，請參閱 [建立新的設定檔](/help/forms/using/custom-profile.md).
 
 1. **修改HTML設定檔**
 
-   在設定檔轉譯器中包含XFA執行階段、XFA地區設定程式庫和XFA表單HTML程式碼片段、設計您的網頁，並將表單放入網頁中。
+   在設定檔轉譯器中包含XFA執行階段、XFA地區設定程式庫和XFA表單HTML片段、設計您的網頁，並將表單放入網頁中。
 
-   例如，使用以下程式碼片段，建立包含兩個輸入欄位的應用程式，以及示範表單與外部應用程式之間互動的表單。
+   例如，使用下列程式碼片段，建立包含兩個輸入欄位的應用程式，並使用表單來示範表單與外部應用程式之間的互動。
 
    ```xml
    <%@ page session="false"
@@ -76,12 +76,16 @@ FormBridge是HTML5 forms bridge API，可讓您與表單互動。 如需FormBrid
 
    >[!NOTE]
    >
-   >此 **第9行**，包含其他CSS樣式的JSP參考和用來設計頁面的JavaScript檔案。
+   >此 **第9行**，包含其他CSS樣式的JSP參考資料以及用來設計頁面的JavaScript檔案。
    >
    >
    >此 &lt;div id=&quot;rightdiv&quot;> 標籤於 **第18行** 包含XFA表單的HTML片段。
-   頁面會設定為兩個容器的樣式： **left** 和 **右側**. 正確的容器有表單。 左側容器有兩個輸入欄位和部分外部HTML頁面。
-   以下熒幕擷圖顯示表單在瀏覽器中的顯示方式。
+   >
+   >
+   此頁面已設定為兩個容器的樣式： **左側** 和 **右**. 右邊的容器有表單。 左側容器有兩個輸入欄位和部分外部HTML頁面。
+   >
+   >
+   下列熒幕擷圖顯示表單在瀏覽器中的顯示方式。
 
    ![入口網站](assets/portal.jpg)
 
@@ -89,7 +93,7 @@ FormBridge是HTML5 forms bridge API，可讓您與表單互動。 如需FormBrid
 
 1. **從頁面存取表單欄位**
 
-   以下是範例指令碼，您可以新增此指令碼以在表單欄位中設定值。
+   以下是範例指令碼，您可新增此指令碼以在表單欄位中設定值。
 
    例如，如果您想要設定 **員工姓名** 使用欄位中的值 **名字** 和 **姓氏**，呼叫 **window.formBridge.setFieldValue** 函式。
 

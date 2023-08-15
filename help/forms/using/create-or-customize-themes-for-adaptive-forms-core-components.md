@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: d958f616803f92190493cc3f1ef474d0987991bd
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1975'
+source-wordcount: '1973'
 ht-degree: 6%
 
 ---
@@ -62,7 +62,7 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
 ## 自訂主題 {#customize-a-theme-core-components-based-adaptive-forms}
 
-自訂主題是指修改及個人化主題外觀的程式。 自訂主題時，您可以變更其設計元素、版面、顏色、印刷樣式，有時也會變更基礎程式碼。 這可讓您為您的網站或應用程式建立獨特且量身打造的外觀，同時維持主題提供的基本結構和功能。
+自訂主題是指修改及個人化主題外觀的程式。 自訂主題時，您可以變更其設計元素、版面、顏色、印刷樣式，有時也會變更基礎程式碼。 這可讓您為網站或應用程式建立獨一無二的量身打造外觀，同時維持主題提供的基本結構和功能。
 
 >[!NOTE]
 >

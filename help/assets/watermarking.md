@@ -6,10 +6,10 @@ role: User, Admin
 feature: Asset Management
 exl-id: bc0cfb0e-3f70-4377-8831-326a7cae73bd
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 2%
+source-wordcount: '327'
+ht-degree: 3%
 
 ---
 
@@ -18,27 +18,27 @@ ht-degree: 2%
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/watermark-assets.html?lang=en) |
-| AEM 6.5 | 本文 |
+| AEM 6.5 | 本文章 |
 
-[!DNL Adobe Experience Manager Assets] 可讓您為資產新增數位浮水印，協助使用者驗證資產的真實性和版權所有權。 [!DNL Experience Manager Assets] 支援在PNG和JPEG檔案上當作浮水印使用的文字。
+[!DNL Adobe Experience Manager Assets] 可讓您為資產新增數位浮水印，協助使用者驗證資產的真實性和版權所有權。 [!DNL Experience Manager Assets] 支援在PNG和JPEG檔案中當作浮水印使用的文字。
 
-若要在資產上套用浮水印，請在 [!UICONTROL DAM更新資產] 工作流程。
+若要在資產上套用浮水印，請在以下位置新增浮水印步驟： [!UICONTROL DAM更新資產] 工作流程。
 
 1. 存取 [!DNL Experience Manager] 使用者介面，並前往 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**.
-1. 從 **[!UICONTROL 工作流程模型]** 頁面，選取 **[!UICONTROL DAM更新資產]** 工作流程與點按 **[!UICONTROL 編輯]**.
+1. 從 **[!UICONTROL 工作流程模型]** 頁面，選取 **[!UICONTROL DAM更新資產]** 工作流程並按一下 **[!UICONTROL 編輯]**.
 
 1. 從側面板拖曳 **[!UICONTROL 新增浮水印]** 步驟至 [!UICONTROL DAM更新資產] 工作流程。
 
-   ![拖曳 [!UICONTROL 新增浮水印] 步驟並新增至 [!UICONTROL DAM更新資產] 工作流程](assets/add_watermark_step_aem_assets.png)
+   ![拖曳 [!UICONTROL 新增浮水印] 逐步並新增至 [!UICONTROL DAM更新資產] 工作流程](assets/add_watermark_step_aem_assets.png)
 
-   *圖：拖曳 [!UICONTROL 新增浮水印] 步驟並新增至 [!UICONTROL DAM更新資產] 工作流程。*
+   *圖：拖曳 [!UICONTROL 新增浮水印] 逐步並新增至 [!UICONTROL DAM更新資產] 工作流程。*
 
    >[!NOTE]
    >
    >放置 [!UICONTROL 新增浮水印] 步驟之前的任何位置 [!UICONTROL 程式縮圖] 步驟。
 
 1. 開啟 **[!UICONTROL 新增浮水印]** 步驟以顯示其屬性。
-1. 在 **[!UICONTROL 引數]** 標籤，指定各種欄位中的有效值，包括文字、字型型別、大小、顏色、位置、方向等等。 若要確認變更，請按一下 **[!UICONTROL 完成]**.
+1. 在 **[!UICONTROL 引數]** 定位字元)，指定各種欄位中的有效值，包括文字、字型型別、大小、顏色、位置、方向等。 若要確認變更，請按一下 **[!UICONTROL 完成]**.
 
    ![在中的新增浮水印步驟中提供引數 [!DNL Assets]](assets/arguments_add_watermark_aem_assets.png)
 
@@ -51,5 +51,5 @@ ht-degree: 2%
 
 ## 提示和限制 {#tips-limitations}
 
-* 僅支援文字型浮水印。 即使您可在建立「 」時上傳影像，影像也不會作為浮水印 [!UICONTROL 新增浮水印程式].
+* 僅支援文字浮水印。 即使您可在建立影像時上傳影像，影像也不會作為浮水印 [!UICONTROL 新增浮水印程式].
 * 僅支援PNG和JPEG檔案加注水印。 其他資產格式不會加上浮水印。

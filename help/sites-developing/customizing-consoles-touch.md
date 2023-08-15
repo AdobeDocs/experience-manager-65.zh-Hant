@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 1%
+source-wordcount: '669'
+ht-degree: 24%
 
 ---
 
@@ -22,15 +22,15 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->本檔案說明如何在現代、觸控式UI中自訂主控台，且不適用於傳統UI。
+>本檔案說明如何在現代、觸控式UI中自訂主控台，且不套用至傳統UI。
 
-AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](/help/sites-developing/customizing-page-authoring-touch.md))。
+AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](/help/sites-developing/customizing-page-authoring-touch.md))。
 
 * Clientlibs Clientlibs可讓您擴充預設實作以實現新功能，同時重複使用標準函式、物件和方法。 自訂時，您可以在下建立自己的clientlib `/apps.` 例如，它可以儲存自訂元件所需的程式碼。
 
-* 覆蓋圖覆蓋圖以節點定義為基礎，可讓您覆蓋標準功能(在 `/libs`)的自訂功能(位於 `/apps`)。 建立覆蓋時不需要1:1的原始副本，因為Sling資源合併允許繼承。
+* 覆蓋以節點定義為基礎，可讓您覆蓋標準功能(在 `/libs`)搭配您自己的自訂功能(在 `/apps`)。 建立覆蓋時不需要原始的1:1副本，因為Sling資源合併器允許繼承。
 
-您可以透過多種方式使用這些來擴充AEM主控台。 下面會覆蓋一個小的選取範圍（高階）。
+您可以透過多種方式使用這些來擴充AEM主控台。 以下會涵蓋小範圍選區（高階）。
 
 >[!NOTE]
 >
@@ -44,9 +44,9 @@ AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
 >[!CAUTION]
 >
->您 ***必須*** 不變更中的任何專案 `/libs` 路徑。
+>您 ***必須*** 不會變更中的任何專案 `/libs` 路徑。
 >
->這是因為 `/libs` 下次升級執行個體時會被覆寫（而您在套用hotfix或feature pack時很可能會被覆寫）。
+>這是因為 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
 >
 >設定和其他變更的建議方法是：
 >
@@ -67,15 +67,15 @@ AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
 ## 自訂主控台的預設檢視 {#customizing-the-default-view-for-a-console}
 
-您可以自訂主控台的預設檢視（欄、卡片、清單）：
+您可以自訂主控台的預設檢視 (欄、卡片、清單)：
 
 1. 您可以從下列位置覆蓋所需專案，以重新排序檢視：
 
    `/libs/wcm/core/content/sites/jcr:content/views`
 
-   第一個專案將是預設值。
+   第一個專案是預設值。
 
-   可用的節點與可用的檢視選項相關：
+   可用的節點和可用的檢視選項相互關聯：
 
    * `column`
    * `card`
@@ -85,35 +85,35 @@ AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
    `/apps/wcm/core/content/sites/jcr:content/views/list`
 
-   定義下列屬性：
+   定義以下屬性：
 
-   * **名稱**: `sling:orderBefore`
-   * **型別**： `String`
-   * **值**: `column`
+   * **名稱**：`sling:orderBefore`
+   * **類型**：`String`
+   * **值**：`column`
 
-### 將新動作新增至工具列 {#add-new-action-to-the-toolbar}
+### 將動作新增至工具列 {#add-new-action-to-the-toolbar}
 
-1. 您可以建置自己的元件，並包含自訂動作的對應使用者端程式庫。 例如， **提升至Twitter** 動作時間：
+1. 您可以建置自己的元件並包含相對應的用戶端資料庫，以用於自訂動作。例如， **提升至Twitter** 動作時間：
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
-   然後，即可將此連結至主控台上的工具列專案：
+   然後可以將其和主控台上的工具列項目連線：
 
    `/apps/<yourProject>/admin/ext/launches`
 
-   例如，在選擇模式中：
+   例如，在選擇模式下：
 
    `content/jcr:content/body/content/header/items/selection/items/twitter`
 
 ### 將工具列動作限制在特定群組 {#restrict-a-toolbar-action-to-a-specific-group}
 
-1. 您可以使用自訂演算條件來覆蓋標準動作，並施加演算前必須滿足的特定條件。
+1. 您可以使用自訂的轉譯條件來覆蓋標準動作，並在轉譯前強制實行必須滿足的特定條件。
 
    例如，建立元件以根據群組控制轉譯條件：
 
    `/apps/myapp/components/renderconditions/group`
 
-1. 若要將這些套用至Sites主控台上的「建立網站」動作：
+1. 若要將這些專案套用至Sites主控台上的「建立網站」動作：
 
    `/libs/wcm/core/content/sites`
 
@@ -125,7 +125,7 @@ AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   使用此節點上的屬性，您可以定義 `groups` 有權執行特定動作；例如， `administrators`
+   使用此節點上的屬性，您可以定義`groups`允許執行特定動作；例如，`administrators`
 
 ### 自訂清單檢視中的欄 {#customizing-columns-in-the-list-view}
 
@@ -143,21 +143,21 @@ AEM提供各種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
             /apps/wcm/core/content/common/availablecolumns
      ```
 
-   * 新增欄或移除現有欄。
+   * 新增欄 — 或移除現有欄。
 
-   另請參閱 [使用覆蓋（和Sling資源合併）](/help/sites-developing/overlays.md) 以取得詳細資訊。
+   另請參閱 [使用覆蓋（以及Sling Resource Merger）](/help/sites-developing/overlays.md) 以取得詳細資訊。
 
 1. 選擇性：
 
-   * 如果您想要插入其他資料，您需要撰寫 [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) 搭配
+   * 如果您想要插入其他資料，則需撰寫 [paginforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) 與
      `pageInfoProviderType` 屬性.
 
-   例如，請參閱下方的附加類別/套件（來自GitHub）。
+   例如，請參閱底下的附加類別/套件（來自GitHub）。
 
 1. 您現在可以在清單檢視的欄配置器中選取欄。
 
 ### 篩選資源 {#filtering-resources}
 
-使用主控台時，常見的使用案例是使用者必須從資源（例如頁面、元件、資產等）中進行選擇。 例如，這可採取清單的形式，作者必須從中選擇專案。
+使用主控台時，常見的使用案例是使用者必須從資源（例如頁面、元件、資產等）中進行選擇時。 這可以採用清單的形式，例如，作者必須從中選擇專案。
 
-為了將清單保持在合理的大小並與使用案例相關，可採用自訂述詞的形式實施篩選器。 另請參閱 [本文](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 以取得詳細資訊。
+為了將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。另請參閱 [本文](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 以取得詳細資訊。

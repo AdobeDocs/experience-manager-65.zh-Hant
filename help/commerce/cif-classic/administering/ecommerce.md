@@ -5,9 +5,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '749'
 ht-degree: 2%
 
 ---
@@ -36,14 +36,14 @@ Adobe提供兩個版本的Commerce Integration Framework：
    <td>
     <ul>
      <li>AEM， Java</li>
-     <li>整體整合、建置前對應（範本）</li>
+     <li>整體整合，建置前對應（範本）</li>
      <li>JCR存放庫</li>
     </ul> </td>
    <td>
     <ul>
      <li>Adobe Commerce</li>
      <li>Java和JavaScript</li>
-     <li>JCR存放庫中未儲存商業資料</li>
+     <li>JCR存放庫中未儲存任何商務資料</li>
     </ul> </td>
   </tr>
   <tr>
@@ -90,20 +90,20 @@ Adobe提供兩個版本的Commerce Integration Framework：
   </tr>
   <tr>
    <td>使用時機</td>
-   <td>有限的使用案例：例如，可能需要匯入小型靜態目錄的情況</td>
-   <td>大多數使用案例中偏好的解決方案</td>
+   <td>有限的使用案例：例如，需要匯入小型靜態目錄的情況</td>
+   <td>大部分使用案例中偏好的解決方案</td>
   </tr>
  </tbody>
 </table>
 
-電子商務與產品資訊管理(PIM)一起，透過線上商店處理專注於銷售產品的網站活動：
+電子商務與產品資訊管理(PIM)可處理透過線上商店銷售產品的網站活動：
 
-* 產品的建立、期限和淘汰
+* 產品的建立、期限和過時
 * 價格管理
 * 交易管理
 * 管理整個目錄
 * 即時和集中式儲存記錄
-* 網頁介面
+* Web介面
 
 AEM eCommerce可協助行銷人員跨網路、行動及社交接觸點，提供品牌和個人化的購物體驗。 AEM製作環境可讓您根據目標訪客內容和銷售策略來自訂頁面和元件；例如：
 
@@ -120,9 +120,9 @@ AEM eCommerce可協助行銷人員跨網路、行動及社交接觸點，提供�
 
 >[!NOTE]
 >
->若要與外部電子商務提供者使用整合架構，您首先需要安裝所需的套件。 如需詳細資訊，請參閱 [部署電子商務](/help/commerce/cif-classic/deploying/ecommerce.md).
+>若要搭配外部電子商務提供者使用整合架構，您必須先安裝所需的套件。 如需詳細資訊，請參閱 [部署電子商務](/help/commerce/cif-classic/deploying/ecommerce.md).
 >
->如需擴充電子商務功能的相關資訊，請參閱 [開發電子商務](/help/commerce/cif-classic/developing/ecommerce.md).
+>如需有關擴充電子商務功能的資訊，請參閱 [開發電子商務](/help/commerce/cif-classic/developing/ecommerce.md).
 
 ## 主要功能 {#main-features}
 
@@ -132,7 +132,7 @@ AEM eCommerce提供：
 
    * 產品顯示
    * 購物車
-   * 簽出
+   * 結帳
    * 最近檢視的產品
    * 憑單
    * 和其他
@@ -146,26 +146,26 @@ AEM eCommerce提供：
 * **搜尋**  — 使用：
 
    * AEM搜尋
-   * 電子商務系統的搜尋
+   * 搜尋電子商務系統
    * 第三方搜尋
    * 或兩者的組合。
 
   ![搜尋範例](/help/sites-administering/assets/chlimage_1-131.png)
 
-* 使用AEM功能來 **在多個管道上顯示您的內容**、完整瀏覽器視窗或行動裝置。 如此一來，您的內容就會以訪客所需的格式傳送。
+* 使用AEM功能來 **在多個管道上展示您的內容**、完整瀏覽器視窗或行動裝置。 這樣會以訪客所需的格式提供您的內容。
 
   ![行動檢視範例](/help/sites-administering/assets/chlimage_1-132.png)
 
-* 能夠 **根據以下專案開發您自己的整合實作： [AEM電子商務架構](#the-framework)**.
+* 能夠 **根據以下內容開發您自己的整合實作 [AEM電子商務架構](#the-framework)**.
 
-  目前可用的兩個實作都是以相同的基礎建置 — 在一般API （框架）之上。 實作新整合只需要實作您整合所需的功能。 前端元件可供任何新實施使用，因為它們使用介面（因此獨立於實施）。
+  目前可用的兩個實作都是以相同為基礎(在一般API （框架）之上)建置。 實作新的整合只需要實作您整合所需的功能即可。 前端元件可供任何新實作使用，因為它們使用介面（因此獨立於實作）。
 
-* 開發的可能性 **根據購物者資料和活動的體驗導向型商務**. 這可讓您實現許多情境：
+* 開發的可能性 **根據購物者資料和活動的體驗導向型商務**. 這可讓您瞭解許多案例：
 
    * 例如，當訂單總額超過特定金額時，可減少運費。
-   * 另一種方式可讓您提供使用設定檔資料的季節性優惠方案（例如，位置）。 然後可反白這些內容，同樣視需要根據其他因素而定。
+   * 另一種方式可讓您提供使用設定檔資料的季節性選件（例如位置）。 然後可反白顯示這些專案，在必要時會根據其他因素再次反白顯示。
 
-  在以下範例中，當購物車的內容少於$75美元時，顯示了一個Teaser：
+  在以下範例中，當購物車的內容少於$75美元時顯示了一個Teaser：
 
   ![具有使用者端內容的購物車](/help/sites-administering/assets/chlimage_1-133.png)
 
@@ -181,17 +181,17 @@ AEM eCommerce提供：
 
 ## 框架 {#the-framework}
 
-此 [概念](/help/commerce/cif-classic/administering/concepts.md) 一節會更詳細地涵蓋架構，但下列內容提供架構的高階高速檢視：
+此 [概念](/help/commerce/cif-classic/administering/concepts.md) 一節會更詳細地涵蓋架構，但下列內容提供架構的高階、高速檢視：
 
 ### 什麼？ {#what}
 
 * 整合框架提供API、一系列元件來說明功能，而數個擴充功能則提供連線方法的範例。
 * 此架構提供專案實作所需的基本結構。
 * 此框架可擴充。
-* 此架構不提供立即可用網站。 一律需要一定的開發工作，才能讓架構符合您的規格。
+* 此架構未提供立即可用、可立即使用的網站。 總是需要一定的開發工作來調整框架以符合您的規格。
 
 ### 原因為何？ {#why}
 
 * 提供快速實現自訂電子商務網站所需的基本機制。
 * Tp提供開發實際電子商務網站所需的彈性。
-* 說明最佳做法。
+* 說明最佳實務。
