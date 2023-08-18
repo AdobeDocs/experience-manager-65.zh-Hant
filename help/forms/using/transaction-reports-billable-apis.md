@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 929a298d-7f22-487f-bf7d-8ab2556d0d81
 docset: aem65
 exl-id: 1bc99f3b-3f28-4e74-b259-6ebddc11ffc5
-source-git-commit: 4eb4a15961e7b6e83d9e8a38f34ad92d829cb9b6
+source-git-commit: d636d987f5d62c9169bc4015d7ac50090e362faa
 workflow-type: tm+mt
-source-wordcount: '2084'
-ht-degree: 7%
+source-wordcount: '2089'
+ht-degree: 6%
 
 ---
 
@@ -325,11 +325,10 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
  </tbody>
 </table>
 
-Invoke被視為一項交易，取決於正在執行的作業。 當您執行下列一或多個作業時，會將其視為異動：
-1. 非PDF格式轉換為PDF格式。 例如，XDP格式到PDF格式的轉換（適用於互動式及非互動式通訊）、Word到PDF的轉換。
-1. PDF格式轉換為PDF/A格式。
-1. PDF格式轉換為非PDF格式。 例如，將PDF格式轉換為影像格式，將PDF格式轉換為文字格式。
-
+當您執行下列一或多個作業時，叫用API的使用量會計為交易：
+1. 從非PDF格式轉換成PDF格式。 例如，從XDP格式轉換成PDF格式，兼顧互動和非互動的通訊形式，以及從Word轉換成PDF。
+1. 從PDF格式轉換為PDF/A格式。
+1. 從PDF格式轉換為非PDF格式。 範例包括從PDF到影像格式的轉換或從PDF到文字格式的轉換。
 
 >[!NOTE]
 >
