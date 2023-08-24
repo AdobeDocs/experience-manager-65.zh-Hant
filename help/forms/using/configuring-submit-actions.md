@@ -9,14 +9,14 @@ discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
 workflow-type: tm+mt
-source-wordcount: '1949'
-ht-degree: 50%
+source-wordcount: '2154'
+ht-degree: 45%
 
 ---
 
-# 設定提交動作{#configuring-the-submit-action}
+# 設定提交動作 {#configuring-the-submit-action}
 
 <span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
@@ -45,6 +45,7 @@ ht-degree: 50%
 * 使用表單資料模型提交
 * Forms Portal提交動作
 * 叫用AEM工作流程
+* 提交至Power Automate
 
 >[!NOTE]
 >
@@ -155,6 +156,19 @@ ht-degree: 50%
 * **附件**：您可以使用「**[!UICONTROL 附件路徑]**」選項，指定用來儲存上傳到最適化表單之附件的資料夾名稱。該資料夾會建立在相對於承載的位置。如果工作流程標記為外部資料儲存空間，請使用變數選項，並從工作流程模型可用的變數清單中選取變數。
 
 * **記錄文件**：包含為最適化表單產生的記錄文件。您可以使用「**[!UICONTROL 記錄文件路徑]**」選項指定記錄文件檔案的名稱，以及相對於承載的檔案路徑。例如，`/addresschange/DoR.pdf` 路徑會在相對於承載的位置建立一個名為 `addresschange` 的資料夾，並將 `DoR.pdf` 放置在相對於承載的位置。您也可以指定 `DoR.pdf` 僅儲存記錄文件而不建立資料夾階層。如果工作流程標記為外部資料儲存空間，請使用變數選項，並從工作流程模型可用的變數清單中選取變數。
+
+## 提交至Power Automate {#microsoft-power-automate}
+
+您可以設定最適化表單，在提交時執行Microsoft® Power Automate Cloud Flow。 設定的最適化表單會將擷取的資料、附件和記錄檔案傳送到Power Automate雲端流程進行處理。 它可幫助您建立自訂資料擷取體驗，同時利用Microsoft® Power Automate的強大功能，圍繞擷取的資料建立商業邏輯，並自動化客戶工作流程。 以下是整合最適化表單與Microsoft® Power Automate後可以執行的一些範例：
+
+* 在Power Automate業務流程中使用自適應Forms資料
+* 使用Power Automate將擷取的資料傳送至500多個資料來源或任何公開可用的API
+* 對擷取的資料執行複雜的計算
+* 以預先定義的排程將最適化Forms資料儲存至儲存系統
+
+最適化Forms編輯器提供 **叫用Microsoft®Power Automate流程** 提交動作以將最適化表單資料、附件和記錄檔案傳送到Power Automate雲端流程。 若要使用提交動作將擷取的資料傳送至Microsoft®Power Automate， [連線您的AEM Forms執行個體與Microsoft® Power Automate](/help/forms/using/forms-microsoft-power-automate-integration.md)
+
+成功設定後，請使用 [叫用Microsoft®Power Automate流程](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action) 提交動作以將資料傳送至Power Automate流程。
 
 ## 最適化表單中的伺服器端重新驗證 {#server-side-revalidation-in-adaptive-form}
 
