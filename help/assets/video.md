@@ -10,7 +10,7 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 6ef87e4f86181f83b7c340e4954e9e85e6bb9ab1
+source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
 workflow-type: tm+mt
 source-wordcount: '11269'
 ht-degree: 2%
@@ -449,7 +449,7 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 
 >[!IMPORTANT]
 >
->您上傳的任何影片 *先前* 若要在您的Dynamic Media帳戶上啟用多重字幕與多重音訊曲目支援， [必須重新處理](/help/assets/processing-profiles.md##reprocessing-assets). 這個視訊重新處理步驟是必要的，因此使用者可以使用多字幕和多音訊曲目功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
+>您上傳的任何影片 *先前* 若要在您的Dynamic Media帳戶上啟用多重字幕與多重音訊曲目支援， [必須重新處理](/help/assets/processing-profiles.md#reprocessing-assets). 這個視訊重新處理步驟是必要的，因此使用者可以使用多字幕和多音訊曲目功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
 
 **若要在您的Dynamic Media帳戶上啟用DASH、多字幕和多音訊曲目支援：**
 
@@ -625,7 +625,7 @@ WebVTT和Adobe VTT格式支援新增的字幕和註解。 此外，新增的音�
 
 >[!IMPORTANT]
 >
->您上傳的任何影片 *先前* 若要在您的Dynamic Media帳戶上啟用多重字幕與多重音訊曲目支援， [必須重新處理](/help/assets/processing-profiles.md##reprocessing-assets). 這個視訊重新處理步驟是必要的，因此使用者可以使用多字幕和多音訊曲目功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
+>您上傳的任何影片 *先前* 若要在您的Dynamic Media帳戶上啟用多重字幕與多重音訊曲目支援， [必須重新處理](/help/assets/processing-profiles.md#reprocessing-assets). 這個視訊重新處理步驟是必要的，因此使用者可以使用多字幕和多音訊曲目功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
 
 **若要在視訊中加入多字幕和多音軌：**
 
@@ -693,7 +693,7 @@ WebVTT和Adobe VTT格式支援新增的字幕和註解。 此外，新增的音�
 
 >[!CAUTION]
 >
->將字幕檔案或音訊檔案上傳至已發佈的視訊時，如果您選擇上傳或上傳字幕檔案， [*重新處理*](/help/assets/processing-profiles.md##reprocessing-assets) 影片。 只有視訊的原始音訊會維持不變。 在這種情況下，您必須再次將字幕檔案和音訊曲目檔案重新上傳到視訊。
+>將字幕檔案或音訊檔案上傳至已發佈的視訊時，如果您選擇上傳或上傳字幕檔案， [*重新處理*](/help/assets/processing-profiles.md#reprocessing-assets) 影片。 只有視訊的原始音訊會維持不變。 在這種情況下，您必須再次將字幕檔案和音訊曲目檔案重新上傳到視訊。
 
 #### 在具有現有URL和註解修飾元的視訊中新增多個註解
 

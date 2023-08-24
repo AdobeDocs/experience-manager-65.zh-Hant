@@ -7,7 +7,7 @@ content-type: reference
 feature: Accessibility
 role: User, Admin
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
-source-git-commit: 01de1d5064f5ebf00acd2fe9f138d852f41f7273
+source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 1%
@@ -20,26 +20,26 @@ ht-degree: 1%
 
 ## 中的鍵盤協助工具支援 [!DNL Dynamic Media]
 
-因為 [!DNL Dynamic Media] 是外掛程式，用於 [!DNL Adobe Experience Manager Assets]，大部分的鍵盤控制行為與中的相同 [!DNL Experience Manager Assets]. 例如， `Cancel` 中的按鈕 [!DNL Dynamic Media] 與中的焦點反白顯示相同 [!DNL Experience Manager Assets]，並會對 `Spacebar` 索引鍵為 [!DNL Experience Manager Assets]. 另請參閱 [Assets中的鍵盤快速鍵](/help/assets/accessibility.md#keyboard-shortcuts).
+因為 [!DNL Dynamic Media] 是外掛程式，用於 [!DNL Adobe Experience Manager Assets]，大部分的鍵盤控制行為與中的相同 [!DNL Experience Manager Assets]. 例如， `Cancel` 中的按鈕 [!DNL Dynamic Media] 與中的焦點反白顯示相同 [!DNL Experience Manager Assets]，並會回應 `Spacebar` 鍵入原樣 [!DNL Experience Manager Assets]. 另請參閱 [Assets中的鍵盤快速鍵](/help/assets/accessibility.md#keyboard-shortcuts).
 
-中個別使用者介面元素支援的按鍵動作 [!DNL Dynamic Media] 清晰易懂。 中的鍵盤控制 [!DNL Dynamic Media] 內容如下：
+中個別使用者介面元素所支援的按鍵動作 [!DNL Dynamic Media] 清晰易懂。 中的鍵盤控制項 [!DNL Dynamic Media] 內容如下：
 
-* 使用功能 `Tab` 和 `Shift+Tab` 按鍵以導覽頁面上的互動式元素。
-使用 `Tab` 將輸入焦點推進至Tab鍵瀏覽順序中的下一個使用者介面元素；使用 `Shift+Tab` 將輸入焦點帶回上一個使用者介面元素。
-焦點周遊會依循熒幕上的自然使用者介面元素位置，並依序由左至右、由上至下的順序移動。 此外，如果任何欄位有錯誤，您可以按下 `Tab` 將焦點移至其中。
+* 使用功能 `Tab` 和 `Shift+Tab` 按鍵在頁面上的互動元素之間導覽。
+使用 `Tab` 將輸入焦點推進至Tab鍵順序中的下一個使用者介面元素；使用 `Shift+Tab` 將輸入焦點帶回上一個使用者介面元素。
+焦點周遊會依循熒幕上的自然使用者介面元素位置，並依由左至右、由上到下的順序移動。 此外，如果任何欄位有錯誤，您可以按下 `Tab` 將焦點移至其中。
 * 能夠使用 `Spacebar` 和 `Enter` 鍵以啟動標準使用者介面元素，例如按鈕和下拉式清單。
-* 可在作用中元素上看見鍵盤焦點反白顯示。 具有輸入焦點的使用者介面元素會接收視覺焦點指示，作為呈現於使用者介面元素周圍的邊框。
+* 可在作用中元素上看到鍵盤焦點反白顯示。 具有輸入焦點之使用者介面元素會接收視覺焦點指示，作為呈現於使用者介面元素周圍的邊框。
 * 在熱點編輯器中，您可以使用某些自訂按鍵（例如方向鍵）與複雜的使用者介面元素互動，以重新定位熱點。
-* 在互動式視訊編輯器中，您可以使用 `Spacebar` 以選取影像並將其新增至區段。 此外，您可以使用 `Backspace` 鍵以從中刪除選取的專案 **[!UICONTROL 內容]** 標籤。 此外，按下 `Tab` 功能視需要導覽頁面上的互動式元素。
+* 在互動式視訊編輯器中，您可以使用 `Spacebar` 以選取影像並將其新增至區段。 此外，您可以使用 `Backspace` 鍵以從刪除選取的專案 **[!UICONTROL 內容]** 標籤。 此外，按下 `Tab` 函式，在頁面上的互動式元素之間導覽。
 * 在影像裁切/智慧型裁切編輯器中，您可以執行下列動作：
    * 使用方向鍵來裁切框架大小、重新定位影像，或兩者皆使用。
    * 第一個 `Tab` 停止反白顯示整個影像框架。 然後您可以使用鍵盤上的方向鍵來重新定位框架。
-   * 接下來的四個 `Tab` 止點是框架的四個轉角。 將焦點放在框架轉角上時，轉角會反白顯示。 同樣地，您可以使用鍵盤上的方向鍵來移動焦點轉角。
+   * 接下來的四個 `Tab` 停駐點是框架的四個轉角。 將焦點放在框架轉角上時，轉角會反白顯示。 同樣地，您可以使用鍵盤上的方向鍵來移動焦點轉角。
 另請參閱 [編輯單一影像的智慧型裁切或智慧型色票](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
 
 <!-- Keyboarding is the same because Dynamic Media is using the same UI library (Coral 3 (AEM 6.5) or Coral Spectrum (in Skyline)) as entire AEM Assets.  -->
 
-<!-- In the Hotspot editor, Dynamic Media lets you use arrow keys to control the position of a hot spot. See [Carousel Banners](/help/assets/dynamic-media/carousel-banners.md##adding-hotspots-or-image-maps-to-an-image-banner) or [Interactive Images](/help/assets/dynamic-media/interactive-images.md#adding-hotspots-to-an-image-banner)  -->
+<!-- In the Hotspot editor, Dynamic Media lets you use arrow keys to control the position of a hot spot. See [Carousel Banners](/help/assets/dynamic-media/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner) or [Interactive Images](/help/assets/dynamic-media/interactive-images.md#adding-hotspots-to-an-image-banner)  -->
 
 <!-- I think we should definitely mention this in the DM-specific area of documentation for keyboard support. -->
 
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 所有現成可用功能 [!DNL Dynamic Media] 檢視器元件支援客戶的鍵盤協助功能。
 
-另請參閱 [鍵盤協助工具與導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) 在Dynamic Media檢視器參考指南中。
+另請參閱 [鍵盤協助工具和導覽](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) Dynamic Media檢視器參考指南中的。
 
 ## 中的輔助技術支援 [!DNL Dynamic Media] 檢視者 {#assistive-technology-support-for-dm-viewers}
 
@@ -62,12 +62,11 @@ ht-degree: 1%
 
 ## Dynamic Media中的隱藏式字幕支援 {#closed-caption-support}
 
-Dynamic Media支援以隱藏式字幕傳送視訊和自我調整視訊集。 註解必須顯示在視訊內容的頂端。
+Dynamic Media支援以隱藏式字幕傳送視訊與最適化視訊集。 註解必須顯示在視訊內容的最上方。
 
-另請參閱 [Dynamic Media中的影片 — 在影片中新增隱藏式字幕或字幕](/help/assets/video.md#adding-captions-to-video).
+另請參閱 [Dynamic Media中的影片 — 新增隱藏式字幕或字幕至影片](/help/assets/video.md#adding-captions-to-video).
 
 >[!MORELIKETHIS]
 >
 >* [Adobe解決方案的協助工具](https://www.adobe.com/accessibility.html)
 >* [ [!DNL Experience Manager Assets]](/help/assets/accessibility.md) 中的協助工具
-
