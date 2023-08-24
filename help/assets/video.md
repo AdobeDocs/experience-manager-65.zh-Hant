@@ -10,7 +10,7 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: d11914d0902075bd36cf1e8f7405b8ac90157f15
+source-git-commit: 6ef87e4f86181f83b7c340e4954e9e85e6bb9ab1
 workflow-type: tm+mt
 source-wordcount: '11269'
 ht-degree: 2%
@@ -852,7 +852,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題(請參閱 [�
 
 >[!IMPORTANT]
 >
-我們已停止積極維護此主題。 Dynamic Media的舊版使用者可依原樣提供。 Adobe建議您 [啟用多重字幕與多重音訊追蹤功能](##enable-dash) (在您的Dynamic Media帳戶上)。 如此一來，您便可運用最新的Dynamic Media後端架構和簡化的工作流程，在視訊中新增標題、字幕和音訊曲目。
+我們已停止積極維護此主題。 Dynamic Media的舊版使用者可依原樣提供。 Adobe建議您 [啟用多重字幕與多重音訊追蹤功能](#enable-dash) (在您的Dynamic Media帳戶上)。 如此一來，您便可運用最新的Dynamic Media後端架構和簡化的工作流程，在視訊中新增標題、字幕和音訊曲目。
 
 您可以將隱藏式字幕新增至單一視訊或最適化視訊集，以將視訊觸及全球市場。 透過新增隱藏式字幕，您就不需要對音訊進行配音，或是使用母語者重新錄製每種語言的音訊。 視訊會以錄製的語言播放。 出現外語字幕，讓不同語言的人仍然可以瞭解音訊部分。
 
