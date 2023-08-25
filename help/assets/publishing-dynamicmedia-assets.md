@@ -10,16 +10,16 @@ discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 role: User, Admin
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: Publishing
-source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+source-git-commit: 4005e09349d22dbb70a7af378bed2a991ea7218d
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '475'
 ht-degree: 4%
 
 ---
 
 # 發佈 Dynamic Media 資產 {#publishing-dynamic-media-assets}
 
-選取您已上傳的資產並點選，即可發佈您的Dynamic Media資產 **[!UICONTROL 發佈]** 或 **[!UICONTROL 快速發佈]**. 發佈Dynamic Media資產後，您可以透過URL或內嵌頁面程式碼的方式，將資產納入網頁中。
+選取您已上傳的資產並點選，即可發佈您的Dynamic Media資產 **[!UICONTROL 發佈]** 或 **[!UICONTROL 快速發佈]**. 發佈Dynamic Media資產後，您就可以透過URL或內嵌程式碼至網頁，將資產加入網頁。
 
 您也可立即發佈您上傳的資產，無需任何使用者介入。 另請參閱 [設定Dynamic Media - Scene7模式](config-dms7.md).
 或者，您可以選擇將資產發佈至Dynamic Media或Adobe Experience Manager （兩者互斥），使用 **[!UICONTROL 選擇性發佈]** 在資料夾層級。 另請參閱 [在Dynamic Media中使用選擇性發佈](/help/assets/selective-publishing.md).
