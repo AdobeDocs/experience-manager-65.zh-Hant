@@ -1,5 +1,5 @@
 ---
-title: 自我調整表單規則編輯者
+title: 調適型表單規則編輯器
 seo-title: Adaptive forms rule editor
 description: 調適型表單規則編輯器可讓您新增動態行為並將複雜邏輯建置到表單中，而不需要編碼或指令碼。
 seo-description: Adaptive forms rule editor lets you add dynamic behavior and build complex logic into forms without coding or scripting.
@@ -10,9 +10,9 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 0985e591df83c7f1604bac37af771e8a7a21e691
 workflow-type: tm+mt
-source-wordcount: '6929'
+source-wordcount: '6983'
 ht-degree: 1%
 
 ---
@@ -36,13 +36,13 @@ Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使�
 * 啟用或停用物件
 * 設定物件的值
 * 驗證物件的值
-* 執行函式以計算物件的值
-* 叫用表單資料模型服務並執行作業
+* 執行函數以計算物件的值
+* 啟動表單資料模型服務並執行操作
 * 設定物件的屬性
 
 規則編輯器取代了AEM 6.1 Forms及舊版中的指令碼功能。 不過，您現有的指令碼會保留在新規則編輯器中。 如需在規則編輯器中使用現有指令碼的詳細資訊，請參閱 [規則編輯器對現有指令碼的影響](#impact-of-rule-editor-on-existing-scripts).
 
-新增至表單超級使用者群組的使用者可以建立新指令碼並編輯現有指令碼。 表單 — 使用者群組中的使用者可以使用指令碼，但不能建立或編輯指令碼。
+新增至 forms 的使用者群組可以建立新的腳本並編輯現有的程式。 表單中的使用者-使用者群組可以使用腳本，但不能建立或編輯腳本。
 
 ## 瞭解規則 {#understanding-a-rule}
 
@@ -52,7 +52,7 @@ Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使�
 
 規則通常會遵循下列其中一種建構：
 
-**Condition-Action** 在此建構中，規則會先定義條件，接著定義要觸發的動作。 此建構與程式設計語言中的if-then陳述式類似。
+**Condition-Action** 在此建構中，規則會先定義條件，接著定義要觸發的動作。 構造與程式設計語言中的 if 語句相同。
 
 在規則編輯器中， **時間** 規則型別會強制執行condition-action結構。
 
@@ -81,12 +81,12 @@ Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使�
 * 若要根據多個條件來觸發動作，建議使用動作條件建構。 例如，若要透過評估欄位B、C和D的條件來顯示和隱藏欄位A，請在欄位A上使用顯示或隱藏規則型別。
 * 如果規則包含適用於一個條件的一個動作，請使用條件 — 動作或動作條件建構。
 * 如果規則檢查條件，並在欄位中提供值或退出欄位時立即執行動作，則建議在評估條件的欄位上編寫具有條件 — 動作建構或When規則型別的規則。
-* 當使用者變更套用When規則的物件值時，會評估When規則中的條件。 不過，如果您想要在伺服器端的值變更時觸發動作，請按讚若要預先填充值，建議在欄位初始化時寫入觸發動作的時間規則。
-* 編寫下拉式清單、單選鈕或核取方塊物件的規則時，表單中這些表單物件的選項或值會預先填入規則編輯者。
+* 當使用者變更套用When規則的物件值時，會評估When規則中的條件。 但是，如果您希望動作在伺服器端變更時觸發，像是預先填入值時，建議編寫在欄位初始化時觸發動作的When規則。
+* 在撰寫下拉清單、選項按鈕或核取方塊物件的規則時，這些表單物件在表單中的選項或值會預先填入規則編輯器中。
 
-## 規則編輯者中可用的運算子類型和事件 {#available-operator-types-and-events-in-rule-editor}
+## 規則編輯器中可用的運運算元型別和事件 {#available-operator-types-and-events-in-rule-editor}
 
-規則編輯者提供下列邏輯運算子和事件，可供使用來建立規則。
+規則編輯器提供下列邏輯運運算元和事件，您可使用它們建立規則。
 
 * **等於**
 * **不等於**
@@ -117,13 +117,15 @@ Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使�
 
 `Then, do the following:`
 
-物件B上的動作2；以及物件C上的動作3；
+物件 B 上的動作 2;
+和
+物件 C 上的動作 3;
 
 _
 
-當您有多值元件（如單選按鈕或清單）時，為該元件建立規則時，會自動擷取選項，並讓規則建立者可以使用這些選項。 您不需要再次輸入選項值。
+當您擁有多值元件（例如，選項按鈕或清單）規則時，會自動檢索選項，並將其提供給規則的建立者。 您不需要再次鍵入選項值。
 
-例如，清單有四個選項：紅色、藍色、綠色和黃色。 建立規則時，會自動擷取選項（選項按鈕），以供規則建立者使用，如下所示：
+例如，清單有四個選項：紅色、藍色、綠色和黃色。 建立規則時，會自動檢索選項（選項按鈕），並將其提供給規則建立者，如下所示：
 
 ![multivaluefcdisplaysoptions](assets/multivaluefcdisplaysoptions.png)
 
@@ -149,7 +151,19 @@ _
 
 如需在表單資料模型中設定服務的詳細資訊，請參閱 [AEM Forms資料整合](/help/forms/using/data-integration.md).
 
-此 **設定屬性** 規則型別可讓您根據條件動作來設定指定物件的屬性值。
+此 **[!UICONTROL 設定屬性]** 規則型別可讓您根據條件動作來設定指定物件的屬性值。 您可以將屬性設定為下列其中一項：
+* 可見（布林值）
+* dorExclusion （布林值）
+* chartType （字串）
+* 標題（字串）
+* 已啟用（布林值）
+* 強制（布林值）
+* validationsDisabled （布林值）
+* validateExpMessage （字串）
+* 值（數字、字串、日期）
+* 專案（清單）
+* 有效（布林值）
+* errorMessage （字串）
 
 它可讓您定義規則，以動態地將核取方塊新增至最適化表單。 您可以使用自訂函式、表單物件或物件屬性來定義規則。
 
@@ -179,13 +193,13 @@ _
 
 **新增例項** 新增指定之可重複面板或表格列的例項。
 
-**移除例** 項會移除指定的可重複面板或表格列的執行個體。
+**移除例項** 移除指定之可重複面板或表格列的例項。
 
-****&#x200B;導覽至其他互動式通訊、最適化表單、其他資產（例如影像或檔片段或外部 URL）。如需詳細資訊，請參閱 [ 將按鈕新增至互動式通訊 ](../../forms/using/create-interactive-communication.md#addbuttontothewebchannel) 。
+**瀏覽至** 導覽至其他互動式通訊、調適型表單、影像或檔案片段等其他資產，或外部URL。 如需詳細資訊，請參閱 [新增按鈕至互動式通訊](../../forms/using/create-interactive-communication.md#addbuttontothewebchannel).
 
 ### 設定下列項目的值:  {#set-value-of}
 
-**[!UICONTROL 規則類型的集合值]** 可讓您根據是否符合指定條件來設定表單物件的值。值可以設為另一個物件的值、文字字串、從數學運算式或函數派生的值、其他物件屬性的值或表單資料模型服務的輸出。 同樣地，您可以檢查元件、字串、屬性或衍生自函式或數學運算式的值的條件。
+此 **[!UICONTROL 設定值]** 規則型別可讓您根據是否滿足指定的條件來設定表單物件的值。 值可以設定為另一個物件的值、常值字串、從數學運算式或函式衍生的值、另一個物件的屬性值，或表單資料模型服務的輸出。 同樣地，您可以檢查元件、字串、屬性或衍生自函式或數學運算式的值的條件。
 
 請注意，並非所有表單物件（例如面板和工具列按鈕）都可使用「設定值」規則型別。 標準的「設定值」規則具有以下結構：
 
@@ -201,15 +215,15 @@ _
 
 
 
-以下範例接受值 `dependentid` 欄位作為輸入，並設定 `Relation` 欄位至的輸出 `Relation` 的引數 `getDependent` 表單資料模型服務。
+以下範例以欄位中 `dependentid` 的值作為輸入，並將欄位的值 `Relation` 設定為表單資料模型服務的引數 `getDependent` 輸出 `Relation` 。
 
-![set-value-web-service](assets/set-value-web-service.png)
+![設定--web 服務](assets/set-value-web-service.png)
 
-使用表單資料模型服務的設定值規則範例
+使用表單資料模型服務設定值規則的範例
 
 >[!NOTE]
 >
->此外，您可以使用規則的「設定值」，從表單資料模型服務或Web服務的輸出，填入下拉式清單元件中的所有值。 不過，請確定您選擇的輸出引數屬於陣列型別。 陣列中傳回的所有值都可在指定的下拉式清單中使用。
+>此外，您可以使用「設定值規則從表單資料模型服務或網站服務的輸出中填入下拉式清單元件中的所有值。 不過，請確定您選擇的輸出引數為數組類型。 陣列中傳回的所有值都可在指定的下拉式清單中使用。
 
 ### 顯示 {#show}
 
@@ -345,21 +359,21 @@ _
 
 讓我們來詳細瞭解規則編輯器UI的每個元件。
 
-### A. 元件-規則顯示 {#a-component-rule-display}
+### A.元件規則顯示 {#a-component-rule-display}
 
-顯示「最適化表單」物件的標題，您可透過它啟動規則編輯者和目前選取的規則類型。 在上述範例中，規則編輯者從標題為「薪水」的最適化表單物件啟動，而所選規則類型為何時。
+顯示啟動規則編輯器所使用的最適化表單物件的標題，以及目前選取的規則型別。 在上述範例中，規則編輯器是從名為Salary的最適化表單物件啟動，且選取的規則型別是When。
 
-### B. 表單物件和函數 {#b-form-objects-and-functions-br}
+### B.表單物件與函式 {#b-form-objects-and-functions-br}
 
-規則編輯者用戶介面左側的窗格包含兩個標籤， **[!UICONTROL Forms 物件]** 和 **[!UICONTROL 函數]** 。
+規則編輯器使用者介面左側的窗格包含兩個標籤 —  **[!UICONTROL Forms物件]** 和 **[!UICONTROL 函式]**.
 
 「表單物件」標籤會顯示最適化表單中包含之所有物件的階層檢視。 它會顯示物件的標題和型別。 撰寫規則時，您可以將表單物件拖放至規則編輯器上。 將物件或函式拖放至預留位置時，在建立或編輯規則時，預留位置會自動採用適當的值型別。
 
 已套用一或多個有效規則的表單物件會以綠色圓點標示。 如果套用至表單物件的任何規則無效，則表單物件會標示為黃點。
 
-函式索引標籤包含一組內建函式，例如Sum Of、Min Of、Max Of、Average Of、Number Of和Validate表單。 您可以使用這些函數來計算可重複的面板和表格列中的值，並在編寫規則時在動作和條件陳述式中使用。 不過，您可以建立 [自訂函式](#custom-functions) 也是。
+函式索引標籤包含一組內建函式，例如Sum Of、Min Of、Max Of、Average Of、Number Of和Validate表單。 您可以使用這些函式計算可重複面板和表格列中的值，並在撰寫規則時在動作和條件陳述式中使用它們。 不過，您可以建立 [自訂函式](#custom-functions) 也是。
 
-![函數標籤](assets/functions.png)
+![函式標籤](assets/functions.png)
 
 >[!NOTE]
 >
@@ -430,13 +444,13 @@ AEM Forms會追蹤您上次用來撰寫規則的規則編輯器模式。 當您�
 
    在婚姻狀況選項按鈕中， **已婚** 和 **單一** 已指派選項 **0** 和 **1** 個值。 您可以在「編輯」選項按鈕對話方塊的「標題」標籤中驗證指派的值，如下所示。
 
-   ![來自規則編輯者的無線電按鈕值](assets/radio-button-values.png)
+   ![規則編輯器的選項按鈕值](assets/radio-button-values.png)
 
-1. 在規則的 **輸入字串** 欄位中，指定 **0** 。
+1. 在 **輸入字串** 欄位，請指定 **0**.
 
-   ![寫入規則-可視-編輯者-4](assets/write-rules-visual-editor-4.png)
+   ![write-rules-visual-editor-4](assets/write-rules-visual-editor-4.png)
 
-   您已將條件定義為 `When Marital Status is equal to Married` 。 下一個中，定義條件為 True 時要執行的動作。
+   您已將條件定義為 `When Marital Status is equal to Married`. 接著，定義若此條件為True時要執行的動作。
 
 1. 在Then陳述式中，選取 **[!UICONTROL 顯示]** 從 **[!UICONTROL 選取動作]** 下拉式清單。
 
@@ -812,6 +826,10 @@ var c = {
 ![example-invoke-services](assets/example-invoke-services.png)
 
 使用最適化表單規則叫用表單資料模型服務
+
+>[!NOTE]
+>
+>如果輸入為陣列型別，則支援陣列的欄位會顯示在「輸出」下拉式區段下。
 
 ### 使用When規則觸發多個動作 {#triggering-multiple-actions-using-the-when-rule}
 

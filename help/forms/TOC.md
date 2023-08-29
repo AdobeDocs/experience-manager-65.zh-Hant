@@ -9,9 +9,9 @@ breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
 feature: Forms Service
-source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
+source-git-commit: 28cc10b79d2ac8cf12ddfd0bf7d1a8e013fe6238
 workflow-type: tm+mt
-source-wordcount: '3897'
+source-wordcount: '3912'
 ht-degree: 4%
 
 ---
@@ -136,6 +136,7 @@ ht-degree: 4%
    + [為您的環境啟用核心元件](/help/forms/using/enable-adaptive-forms-core-components.md)
    + [建立以核心元件為基礎的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
    + [建立核心元件型最適化Forms的主題](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
+   + [針對以核心元件為基礎的最適化Forms建立並使用自訂錯誤處理常式](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
 + 最適化Forms — 基本製作 {#adaptive-forms-basic-authoring}
    + [使用最適化表單的最佳作法](using/adaptive-forms-best-practices.md)
    + [建立最適化表單](using/creating-adaptive-form.md)
@@ -188,7 +189,7 @@ ht-degree: 4%
    + [將Adobe Sign與AEM Forms整合](using/adobe-sign-integration-adaptive-forms.md)
    + [建立和管理表單中資產的稽核](using/create-reviews-forms.md)
    + [在AEM Sites單頁應用程式中內嵌最適化表單或互動式通訊](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
-   + [最適化Forms的標準驗證錯誤訊息](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
+   + [建立並使用最適化Forms的自訂錯誤處理常式](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
 + 互動式通訊 {#interactive-communications}
    + [互動式通訊編寫UI簡介](using/introduction-interactive-communication-authoring.md)
    + [建立互動式通訊](using/create-interactive-communication.md)

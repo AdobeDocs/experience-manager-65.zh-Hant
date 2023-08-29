@@ -1,31 +1,21 @@
 ---
-title: 適用性表單的標準驗證錯誤訊息
-seo-title: Standard validation error messages for adaptive forms
-description: 使用自訂錯誤處理常式，將適用性表單的驗證錯誤訊息轉換為標準格式
-seo-description: Transform the validation error messages for adaptive forms into standard format using custom error handlers
-uuid: 0d1f9835-3e28-41d3-a3b1-e36d95384328
-contentOwner: anujkapo
+title: 根據AEM Adaptive Forms的核心元件，在Adaptive Forms中新增自訂錯誤處理常式
+seo-title: Error Handlers in Adaptive Forms for AEM Adaptive Forms core components
+description: AEM Forms使用設定為叫用外部服務的REST端點，為表單提供現成的成功和錯誤處理常式。 您可以在AEM最適化表單中新增預設錯誤處理常式和自訂錯誤處理常式。
+seo-description: Error handler function and Rule Editor in Adaptive Forms core components helps you to effectively manage and customize error handling. You can add a default error handler as well as custom error handler in an AEM Adaptive Form.
+keywords: 新增自訂錯誤處理程式、新增預設錯誤處理程式、在表單中新增錯誤處理程式、使用規則編輯器的叫用服務來新增自訂錯誤處理程式、設定規則編輯器來新增自訂錯誤處理程式、使用規則編輯器新增自訂錯誤處理程式
+contentOwner: Ruchita Srivastav
 content-type: reference
-geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
-discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
-exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: 5a475d73ce88035c3f5db47c03b652f3d491420c
+source-git-commit: 28cc10b79d2ac8cf12ddfd0bf7d1a8e013fe6238
 workflow-type: tm+mt
-source-wordcount: '2346'
-ht-degree: 4%
+source-wordcount: '2284'
+ht-degree: 1%
 
 ---
 
-# Adaptive Forms中的錯誤處理常式 {#error-handlers-in-adaptive-form}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
-
-| 版本 | 文章連結 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/add-custom-error-handler-adaptive-forms.html) |
-| AEM 6.5 | 本文章 |
-
+# 最適化Forms中的錯誤處理常式（核心元件） {#error-handlers-in-adaptive-form}
 
 AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此外，還提供自訂錯誤處理常式函式的功能。 例如，您可以針對特定錯誤程式碼在後端叫用自訂的工作流程，或通知客戶服務已關閉。處理常式是根據伺服器回應執行的使用者端功能。 使用API叫用外部服務時，資料會傳輸到伺服器進行驗證，伺服器會傳回回應給使用者端，其中包含提交成功或錯誤事件的相關資訊。 此資訊會以引數形式傳遞至相關處理常式，以執行函式。 錯誤處理常式有助於管理和顯示所遇到的錯誤或驗證問題。
 
@@ -39,6 +29,7 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
 ## 使用錯誤處理常式 {#uses-of-error-handler}
 
 錯誤處理常式有多種用途。 以下列出錯誤處理常式函式的一些用法：
+
 * **執行驗證**：錯誤處理從根據預先定義的規則或條件驗證使用者輸入開始。 使用者填寫最適化表單時，錯誤處理常式會驗證輸入內容，確保符合所需格式、長度或任何其他限制。
 
 * **提供即時意見反應**：偵測到任何錯誤時，錯誤處理常式會立即向使用者顯示回饋，例如對應表單欄位下的內嵌錯誤訊息。 此意見回饋可幫助使用者識別和更正錯誤，而無需提交表單並等待回應。
@@ -59,7 +50,6 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
     errorCausedBy : "SERVER_SIDE_VALIDATION/SERVICE_INVOCATION_FAILURE"
     errors : [
         {
-             somExpression  : <somexpr>
              errorMessage / errorMessages : <validationMsg> / [<validationMsg>, <validationMsg>]
         }
     ]
@@ -72,7 +62,7 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
 其中：
 
 * `errorCausedBy` 說明失敗的原因。
-* `errors` 提及未通過驗證准則的欄位的SOM運算式以及驗證錯誤訊息。
+* `errors` 提及未通過驗證條件的欄位之合格欄位名稱以及驗證錯誤訊息。
 * `originCode` 欄位由AEM新增，並包含外部服務傳回的http狀態代碼。
 * `originMessage` 欄位由AEM新增，並包含外部服務傳回的原始錯誤資料。
 
@@ -86,7 +76,7 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
         "instance": "", (optional)
         "validationErrors" : [ (required)
             {
-                "fieldName":"<SOM expression of the field whose data sent is invalid>",
+                "fieldName":"<qualified fieldname of the field whose data sent is invalid>",
                 "dataRef":<JSONPath (or XPath) of the data element which is invalid>
                 "details": ["Error Message(s) for the field"] (required)
     
@@ -115,7 +105,7 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
 * `detail (optional)` 如有必要，會提供失敗的其他詳細資訊。
 * `instance (optional)` 代表與失敗關聯的例項或識別碼，可協助追蹤或識別失敗的特定發生次數。
 * `validationErrors (required)` 包含有關驗證錯誤的資訊。 其包含下列欄位：
-   * `fieldname` 提及未通過驗證准則的欄位的SOM運算式。
+   * `fieldname` 提及未通過驗證條件的欄位之合格欄位名稱。
    * `dataRef` 代表驗證失敗之欄位的JSON路徑或XPath。
    * `details` 包含驗證錯誤訊息和錯誤欄位。
 * `originCode (optional)` 欄位由AEM新增，並包含外部服務傳回的http狀態代碼
@@ -136,7 +126,7 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
               "type": "VALIDATION_ERROR",
               "validationErrors": [
               {
-              "fieldName": "guide[0].guide1[0].guideRootPanel[0].textbox1686647736683[0]",
+              "fieldName": "$form.PetId",
               "dataRef": "",
               "details": [
               "Invalid ID supplied. Provided value is not correct!"
@@ -145,9 +135,6 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
           ]}
   ```
 
-  您可以點選任何欄位並選取「 」，以檢視最適化表單中任何欄位的SOM運算式 **[!UICONTROL 檢視SOM運算式]**.
-
-  ![在自訂錯誤處理常式中顯示錯誤回應的最適化表單欄位的SOM運算式](/help/forms/using/assets/custom-error-handler-somexpression.png)
 
 +++
 
@@ -163,7 +150,7 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
           "validationErrors": [
           {
               "fieldName": "",
-              "dataRef": "/Pet/id",
+              "dataRef": "$.Pet.id",
               "details": [
               "Invalid ID supplied. Provided value is not correct!"
               ]
@@ -171,19 +158,15 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
       ]}
   ```
 
-  ![在自訂錯誤處理常式中顯示錯誤回應的最適化表單欄位的資料參考](/help/forms/using/assets/custom-errorhandler-dataref.png)
-
-您可以檢視dataRef的值，位於 **[!UICONTROL 屬性]** 表單元件的視窗。
-
 +++
 
 ## 先決條件 {#prerequisites}
 
-在最適化Forms中使用自訂錯誤處理常式之前：
+在最適化Forms中使用錯誤處理常式之前：
 
+* [為您的AEM Cloud Service環境啟用最適化Forms核心元件](enable-adaptive-forms-core-components.md).
 * 基本知識給 [建立自訂函式](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=en#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.).
 * 安裝最新版本的 [Apache Maven](https://maven.apache.org/download.cgi).
-
 
 ## 使用規則編輯器新增錯誤處理常式 {#add-error-handler-using-rule-editor}
 
@@ -228,7 +211,7 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
 * 將analytics事件傳送至任何analytics平台。 例如，Adobe Analytics。
 * 顯示包含錯誤訊息的模型對話方塊。
 
-除了上述動作之外，自訂錯誤處理常式也可用來執行符合特定使用者需求的自訂函式。
+除了上述動作，還可使用自訂錯誤處理常式來執行符合特定使用者需求的自訂函式。
 
 自訂錯誤處理常式是函式（使用者端程式庫），設計用於回應外部服務傳回的錯誤，並為一般使用者提供自訂回應。 任何具有註解的使用者端資料庫 `@errorHandler` 視為自訂錯誤處理常式函式。 此註解有助於識別 `.js` 檔案。
 
@@ -268,24 +251,24 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
 讓我們將下列程式碼新增至JavaScript檔案，以在瀏覽器主控台中顯示從REST服務端點收到的回應和標題。
 
    ```javascript
-       /**
-       * Custom Error handler
+       /** 
+       Custom Error handler
        * @name customErrorHandler Custom Error Handler Function
        * @errorHandler
        */
-       function customErrorHandler(response, headers)
+       function customErrorHandler(response, headers, globals)
        {
            console.log("Custom Error Handler processing start...");
            console.log("response:"+JSON.stringify(response));
            console.log("headers:"+JSON.stringify(headers));
-           guidelib.dataIntegrationUtils.defaultErrorHandler(response, headers);
+           alert("CustomErrorHandler - Please enter valid PetId.")
+           globals.invoke('defaultErrorHandler',response, headers)
            console.log("Custom Error Handler processing end...");
        }
    ```
 
    若要從自訂錯誤處理常式呼叫預設錯誤處理常式，會使用下列程式碼範例行：
-   `guidelib.dataIntegrationUtils.defaultErrorHandler(response, headers) `
-
+   `globals.invoke('defaultErrorHandler',response, headers) `
 
 1. 儲存 `function.js`.
 1. 瀏覽至 `js.txt` 並新增下列程式碼：
@@ -303,7 +286,7 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
 
 在實作最適化表單中的自訂錯誤處理常式之前，請確定使用者端程式庫名稱位於 **[!UICONTROL 使用者端資料庫類別]** 會與的類別選項中指定的名稱對齊 `.content.xml` 檔案。
 
-![在調適型表單容器設定中新增使用者端資料庫的名稱](/help/forms/using/assets/client-library-category-name.png)
+![在調適型表單容器設定中新增使用者端資料庫的名稱](/help/forms/using/assets/client-library-category-name-core-component.png)
 
 在此情況下，使用者端程式庫名稱提供為 `customfunctionsdemo` 在 `.content.xml` 檔案。
 
@@ -322,87 +305,8 @@ AEM Forms為表單提交提供現成可用的成功和錯誤處理常式。 此�
 
 根據此規則，您為下列專案輸入的值 **寵物ID** 檢查驗證 **寵物名稱** 使用REST端點叫用的外部服務。 如果以資料來源為基礎的驗證條件失敗，則錯誤訊息會顯示在欄位層級。
 
-![在表單中新增自訂錯誤處理常式，以處理錯誤回應](/help/forms/using/assets/custom-error-handler-message.png)
+![在表單中新增自訂錯誤處理常式，以處理錯誤回應](/help/forms/using/assets/custom-error-handler-message-core-component.png)
 
 開啟瀏覽器主控台，並檢查從REST服務端點收到的回應和標頭，以取得驗證錯誤訊息。
 
 自訂錯誤處理常式函式會根據錯誤回應，負責執行其他動作，例如顯示模組對話方塊或傳送分析事件。 自訂錯誤處理常式函式可靈活地根據特定使用者需求量身打造錯誤處理方式。
-
-<!-- 
-
-## Configure Adaptive Form submission to add custom handlers {#configure-adaptive-form-submission}
-
-If the server validation error message does not display in the standard format, you can enable asynchronous submission and add a custom error handler on Adaptive Form submission to convert the message into a standard format.
-
-### Configure asynchronous Adaptive Form submission {#configure-asynchronous-adaptive-form-submission}
-
-Before adding custom handler, you must configure the adaptive form for asynchronous submission. Execute the following steps:
-
-1. In adaptive form authoring mode, select the Form Container object and tap ![adaptive form properties](assets/configure_icon.png) to open its properties.
-1. In the **[!UICONTROL Submission]** properties section, enable **[!UICONTROL Use asynchronous submission]**.
-1. Select **[!UICONTROL Revalidate on server]** to validate the input field values on server before submission.
-1. Select the Submit Action:
-
-    * Select **[!UICONTROL Submit using Form Data Model]** and select the appropriate data model, if you are using RESTful web service based [form data model](work-with-form-data-model.md) as the data source.
-    * Select **[!UICONTROL Submit to REST Service endpoint]** and specify the **[!UICONTROL Redirect URL/Path]**, if you are using RESTful web services as the data source.
-
-    ![adaptive form submission properties](assets/af_submission_properties.png)
-
-1. Tap ![Save](assets/save_icon.png) to save the properties.
-
-### Add custom error handler on Adaptive Form submission {#add-custom-error-handler-af-submission}
-
-AEM Forms provides out-of-the-box success and error handlers for form submissions. Handlers are client-side functions that execute based on the server response. When an Adaptive Form is submitted, the data is transmitted to the server for validation, which returns a response to the client with information about the success or error event for the submission. The information is passed as parameters to the relevant handler to execute the function.
-
-Execute the following steps to add custom error handler on Adaptive Form submission:
-
-1. Open an Adaptive Form in authoring mode, select any form object, and tap  to open the rule editor.
-1. Select **[!UICONTROL Form]** in the Form Objects tree and tap **[!UICONTROL Create]**.
-1. Select **[!UICONTROL Error in Submission]** from the Event drop-down list.
-1. Write a rule to convert custom error structure to the standard error structure and tap **[!UICONTROL Done]** to save the rule.
-
-The following is a sample code to convert a custom error structure to the standard error structure:
-
-```javascript
-var data = $event.data;
-var som_map = {
-    "id": "guide[0].guide1[0].guideRootPanel[0].Pet[0].id_1[0]",
-    "name": "guide[0].guide1[0].guideRootPanel[0].Pet[0].name_2[0]",
-    "status": "guide[0].guide1[0].guideRootPanel[0].Pet[0].status[0]"
-};
-
-var errorJson = {};
-errorJson.errors = [];
-
-if (data) {
-    if (data.originMessage) {
-        var errorData;
-        try {
-            errorData = JSON.parse(data.originMessage);
-        } catch (err) {
-            // not in json format
-        }
-
-        if (errorData) {
-            Object.keys(errorData).forEach(function(key) {
-                var som_key = som_map[key];
-                if (som_key) {
-                    var error = {};
-                    error.somExpression = som_key;
-                    error.errorMessage = errorData[key];
-                    errorJson.errors.push(error);
-                }
-            });
-        }
-        window.guideBridge.handleServerValidationError(errorJson);
-    } else {
-        window.guideBridge.handleServerValidationError(data);
-    }
-}
-```
-
-The `var som_map` lists the SOM expression of the Adaptive Form fields that you want to transform into the standard format. You can view the SOM expression of any field in an adaptive form by tapping the field and selecting **[!UICONTROL View SOM Expression]**.
-
-Using this custom error handler, the adaptive form converts the fields listed in `var som_map` to standard error message format. As a result, the validation error messages display at field-level in the adaptive form.
-
- -->
