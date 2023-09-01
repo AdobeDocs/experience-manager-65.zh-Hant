@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: d6e5684ee89d19ab0fc6d15038c22a4a5b816563
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1782'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,8 @@ ht-degree: 0%
 >[!NOTE]
 >
 >連結一律會參考發佈執行個體。 這些連結旨在由第三方使用，因此將一律從發佈例項（而非作者）呼叫連結。
+>
+>如需詳細資訊，請參閱 [外部化URL](/help/sites-developing/externalizer.md).
 
 ![xf-14](assets/xf-14.png)
 
