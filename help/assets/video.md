@@ -10,9 +10,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: ee1a0866aafd56fa53f5d3b936beab8f500d335c
+source-git-commit: 051e6838bea0be9f826183db935d33725c18386d
 workflow-type: tm+mt
-source-wordcount: '11363'
+source-wordcount: '11313'
 ht-degree: 2%
 
 ---
@@ -702,11 +702,7 @@ WebVTT和Adobe VTT格式支援新增的字幕和註解。 此外，新增的音�
 
 #### 在具有現有URL和註解修飾元的視訊中新增多個註解
 
-Dynamic Media支援透過URL修飾元在視訊中新增單一標題(請參閱 [註解](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html?lang=en))。
-
-<!-- IS THE CORRECT LINK THE ONE ABOVE OR IS IT THE LINK BELOW???? -->
-
-另請參閱 [提供靜態（非影像）內容](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) 在 *Dynamic Media影像提供與轉譯API說明* 以取得在URL中使用JSON函式的詳細資訊。
+Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 另請參閱 [新增註解至視訊](#adding-captions-to-video).
 
 多個註解變更的優先順序高於透過已發佈視訊URL修飾元新增的註解。
 
@@ -731,7 +727,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題(請參閱 [�
 | 字幕或音軌狀態 | 說明 |
 | --- | --- |
 | 處理中 | 新增並儲存新的字幕或音訊曲目檔案時，檔案會進入「正在處理」狀態。 Dynamic Media會將串流資訊清單附加至主要視訊，以處理檔案。 |
-| 已處理 | 處理完成後，字幕或音訊曲目檔案會以「已處理」狀態出現。 您可以預覽顯示為「已處理」的子標題和音訊曲目檔案 *早於* 您發佈視訊即時。 |
+| 已處理 | 處理完成後，字幕或音訊曲目檔案，或與主要視訊相關聯的原始音訊曲目會以「已處理」狀態出現。 您可以預覽顯示為「已處理」的子標題和音訊曲目檔案 *早於* 您發佈視訊即時。 |
 | 已發佈 | 「已發佈」狀態代表與主要視訊「已發佈」類似的狀態。 資產會在主要影片發佈時發佈，並可在公用Dynamic Media URL上使用。 |
 | 已失敗 | 「失敗」狀態表示字幕或音訊曲目檔案的處理未完成。 請刪除字幕或音訊曲目檔案，然後重新上傳。 |
 | 已取消發佈 | 明確取消發佈已發佈的主要視訊時，您新增至視訊的任何字幕或音訊曲目檔案也會取消發佈。 |
@@ -857,7 +853,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題(請參閱 [�
 
 >[!IMPORTANT]
 >
-我們已停止積極維護此主題。 Dynamic Media的舊版使用者可依原樣提供。 Adobe建議您 [啟用多重字幕與多重音訊追蹤功能](#enable-dash) (在您的Dynamic Media帳戶上)。 如此一來，您便可運用最新的Dynamic Media後端架構和簡化的工作流程，在視訊中新增標題、字幕和音訊曲目。
+Adobe建議您 [啟用多重字幕與多重音訊追蹤功能](#enable-dash) (在您的Dynamic Media帳戶上)。 如此一來，您便可運用最新的Dynamic Media後端架構和簡化的工作流程，在視訊中新增標題、字幕和音訊曲目。
 
 您可以將隱藏式字幕新增至單一視訊或最適化視訊集，以將視訊觸及全球市場。 透過新增隱藏式字幕，您就不需要對音訊進行配音，或是使用母語者重新錄製每種語言的音訊。 視訊會以錄製的語言播放。 出現外語字幕，讓不同語言的人仍然可以瞭解音訊部分。
 
