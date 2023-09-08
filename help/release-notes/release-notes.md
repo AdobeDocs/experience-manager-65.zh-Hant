@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 26cea35dcbdbafe622f975bac7920ea5fd5fbd6c
+source-git-commit: e330d69b7644e8f99498d0ed60afab009c649b40
 workflow-type: tm+mt
-source-wordcount: '4460'
+source-wordcount: '4552'
 ht-degree: 2%
 
 ---
@@ -450,6 +450,8 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 #### 安裝
 
 * 在JBoss® 7.1.4平台上，當使用者安裝Experience Manager6.5.16.0或更新版Service Pack時， `adobe-livecycle-jboss.ear` 部署失敗。 (CQ-4351522、CQDOC-20159)
+* 安裝AEM Service Pack 6.5.18.0完整安裝程式後，EAR部署在使用JBoss Turnkey (CQDOC-20803)的JEE上失敗。
+若要解決問題，請找到 `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` 檔案和更新 `Adobe_Adobe_JAVA_HOME` 至 `Adobe_JAVA_HOME` 執行configuration manager之前的所有事件。
 
 #### 最適化表單
 
@@ -459,7 +461,12 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 #### 互動式通訊
 
-* 升級至AEM Service Pack 18後，無法編輯互動式通訊信件。 (FORMS-10578)
+* 升級至AEM Service Pack 18後，無法編輯互動式通訊信件。 (FORMS-10578)若要解決此問題，請執行以下步驟：
+
+   1. 下載 [Hotfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 從SD連結。
+   1. 解壓縮Hotfix封存檔案以取得Experience Manager套件(.zip)和套件(.jar)檔案。
+   1. 透過封裝管理員上傳並安裝封裝(.zip)。
+   1. 開啟Configuration Manager組合 `https://server:host/system/console/bundles`，上傳並安裝套件組合(.jar)。
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 
