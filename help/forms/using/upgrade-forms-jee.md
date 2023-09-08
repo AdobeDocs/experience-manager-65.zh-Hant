@@ -9,27 +9,26 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
-source-git-commit: 34be3b4695679a9b5e8001d28f05ed804f929e61
+source-git-commit: fbc371e59c4f80195fe90da5f635267141c8849e
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '367'
 ht-degree: 1%
 
 ---
 
 # 在JEE上升級至AEM 6.5 Forms {#upgrade-to-aem-forms-jee}
 
-JEE上的AEM 6.5.12.0 Forms提供兩種型別的安裝程式：完整安裝程式和修補程式安裝程式。
+JEE上的AEM 6.5.18.0 Forms提供兩種型別的安裝程式：完整安裝程式和修補程式安裝程式。
 
-**完整安裝程式**：您可以使用 [jee上的AEM 6.5.12.0完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 以設定全新AEM Forms執行個體，或從JEE上的AEM 6.5.x.x Forms升級至JEE上的AEM 6.5.12.0 Forms。
+**完整安裝程式**：您可以使用 [jee上的AEM 6.5.18.0完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 以設定全新AEM Forms執行個體，或從JEE上的AEM 6.5.x.x Forms升級至JEE上的AEM 6.5.18.0 Forms。
 
-**修補程式安裝程式**： [JEE上的AEM 6.5.12.0修補程式安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 適用於已使用AEM 6.5.x.x版本的客戶。 您可以使用修補程式安裝程式來升級至最新版AEM Forms。
+**修補程式安裝程式**： [JEE上的AEM 6.5.18.0修補程式安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 適用於已使用AEM 6.5.x.x版本的客戶。 您可以使用修補程式安裝程式來升級至最新版AEM Forms。
 
-<!--
-The following table depicts senarios for using full and patch installer.
+下表說明使用完整安裝程式和修補程式安裝程式的情境。
 
-![Full and Patch installer scenario](assets/full-and-patch-installer.png) -->
+![完整和修補程式安裝程式案例](assets/full-and-patch-installer.png)
 
-執行以下程式，使用完整安裝程式將JEE上的現有AEM Forms 6.5.x.x升級為JEE上的AEM 6.5.12.0 Forms：
+執行以下程式，使用完整安裝程式將JEE上的現有AEM Forms 6.5.x.x升級為JEE上的AEM 6.5.18.0 Forms：
 
 1. 下載AEM 6.5 Forms on JEE安裝程式，網址為 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 您需要有效的維護與支援合約才能使用安裝程式。
 1. 另請參閱 [升級檢查清單與規劃](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65) 瞭解為確保成功升級而執行的檢查。

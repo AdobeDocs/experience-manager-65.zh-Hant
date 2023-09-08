@@ -7,7 +7,7 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bc6a97a55f392cba03131ee3ca7cad35b8c1e69b
 workflow-type: tm+mt
 source-wordcount: '3949'
 ht-degree: 17%
@@ -92,7 +92,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線到多個Experien
 1. 存取現有的 [!DNL Sites] 部署，或使用下列命令建立部署：
 
    1. 在JAR檔案的資料夾中，在終端機上執行以下命令以建立每個 [!DNL Experience Manager] 伺服器。
-      `java -XX:MaxPermSize=768m -Xmx4096m -jar <quickstart jar filepath> -r samplecontent -p 4502 -nofork -gui -nointeractive &`
+      `java -Xmx4096m -jar <quickstart jar filepath> -r samplecontent -p 4502 -nofork -gui -nointeractive &`
 
    1. 幾分鐘後， [!DNL Experience Manager] 伺服器啟動成功。 考慮以下事項 [!DNL Sites] 將部署為網頁編寫的本機電腦，例如 `https://[local_sites]:4502`.
 

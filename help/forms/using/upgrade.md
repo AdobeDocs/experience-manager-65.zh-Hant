@@ -11,10 +11,10 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: ae8502641294b4f07e70f74227ee4fd72bc0e5c1
+source-git-commit: fbc371e59c4f80195fe90da5f635267141c8849e
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 7%
+source-wordcount: '341'
+ht-degree: 6%
 
 ---
 
@@ -30,10 +30,9 @@ AEM 6.5 Forms包含數項新功能和增強功能，可簡化表單和對應項�
 
 您可以升級現有的LiveCycle或AEM Forms安裝，以取得AEM 6.5 Forms中提供的新功能和增強功能，同時完整保留現有的資料、流程和資產。 升級時，也會保留處理序的中繼資料和狀態。 您可以選擇升級路徑以開始升級。
 
-<!--
-The following diagram displays the available upgrade paths for AEM Forms on OSGi:
+下圖顯示OSGi上AEM Forms的可用升級路徑：
 
-![OSGi upgrade flow](do-not-localize/osgi-upgrade-path.png) -->
+![OSGi升級流程](do-not-localize/osgi-upgrade-path.png)
 
 您可以從下列位置執行直接升級：
 
@@ -46,10 +45,9 @@ The following diagram displays the available upgrade paths for AEM Forms on OSGi
 * OSGi上的AEM 6.1 Forms
 * OSGi上的AEM 6.2 Forms
 
-<!--
-The following diagram displays the available upgrade paths for AEM Forms on JEE:
+下圖顯示AEM Forms on JEE的可用升級路徑：
 
-![JEE upgrade 6.5](do-not-localize/jee-upgrade-6-5.png) -->
+![JEE升級6.5](do-not-localize/jee-upgrade-6-5.png)
 
 
 您可以從下列位置執行直接升級：
@@ -65,16 +63,15 @@ The following diagram displays the available upgrade paths for AEM Forms on JEE:
 * JEE上的AEM 6.1 Forms
 * JEE上的AEM 6.2 Forms
 
-JEE上的AEM 6.5.12.0 Forms提供兩種型別的安裝程式： [完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 和 [修補程式安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+JEE上的AEM 6.5.18.0 Forms提供兩種型別的安裝程式： [完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 和 [修補程式安裝程式](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
-**完整安裝程式**：您可以使用完整安裝程式來設定新的AEM Forms執行個體，或從JEE上的AEM 6.5.x.x Forms升級至JEE上的AEM 6.5.12.0 Forms。
+**完整安裝程式**：您可以使用完整安裝程式來設定新的AEM Forms執行個體，或從JEE上的AEM 6.5.x.x Forms升級至JEE上的AEM 6.5.18.0 Forms。
 
 **修補程式安裝程式**：修補程式安裝程式適用於已使用AEM 6.5.x.x版本的客戶。 您可以使用修補程式安裝程式來升級至最新版AEM Forms。
 
-<!--
-The following image depicts senarios for using full and patch installer.
+以下影像說明使用完整和修補程式安裝程式的情境。
 
-![Full Installer and Patch Installer](/help/forms/using/assets/full-and-patch-installer.png) -->
+![完整安裝程式和修補程式安裝程式](/help/forms/using/assets/full-and-patch-installer.png)
 
 <!--
 [Work in Progress]

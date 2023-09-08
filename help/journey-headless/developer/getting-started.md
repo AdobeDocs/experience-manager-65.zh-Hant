@@ -2,10 +2,10 @@
 title: AEM Headless 快速入門
 description: 在 AEM Headless 開發人員歷程的這一部分，了解 AEM Headless 先決條件。
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '3024'
-ht-degree: 95%
+source-wordcount: '3042'
+ht-degree: 96%
 
 ---
 
@@ -79,7 +79,7 @@ AEM 的 Headless 功能以幾個關鍵功能為基礎。這些將在歷程的後
 為了以 Headless 方式修改您的內容，AEM 提供了兩個強大的 API。
 
 * GraphQL API 可讓您建立存取和傳遞內容片段的要求。
-* Assets REST API可讓您建立和修改內容片段（和其他資產）。
+* Assets REST API 可讓您建立及修改內容片段 (和其他資產)。
 
 您將在 AEM 無周邊歷程的後續部分，了解這些 API 以及如何使用它們。或者參閱下面的[其他資源](#additional-resources)章節，以取得其他文件。
 
@@ -139,7 +139,7 @@ AEM 支援 CMS 的全 Headless 模型和傳統的全堆疊或 Headful 模型。�
 
 ### 範圍 {#scope}
 
-明確定義專案的範圍很重要。範圍會通知接受條件，並讓您建立「完成」的定義。
+明確定義專案的範圍很重要。範圍會告知接受標準，並讓您設立完成的定義。
 
 您必須問的第一個問題是「我想透過 AEM Headless 實現什麼目標？」答案通常是，您已經或將會擁有體驗應用程式，該應用程式是使用您自己的開發工具而非AEM所建置。 此體驗應用程式可以是行動應用程式、網站或任何其他面向取用內容之使用者的體驗應用程式。使用 AEM Headless 的目標是使用最先進的 API 為您的體驗應用程式提供在 AEM 中建立、儲存和管理的內容，這些 API 會直接從您的體驗應用程式呼叫 AEM Headless 以擷取內容或甚至是全 CRUD 內容。如果這不是您想要的，您可能想要[返回 AEM 文件](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)尋找符合您目標的內容。
 
@@ -188,7 +188,7 @@ AEM 支援 CMS 的全 Headless 模型和傳統的全堆疊或 Headful 模型。�
 * [翻譯](#translation) - AEM 透過在地區設定資料夾中維護內容副本，來管理內容翻譯。
 * 組織 - 資料夾用於定義支援翻譯需求以及邏輯管理內容片段所需的內容階層。
 
-AEM 允許靈活的內容結構，階層可以任意擴大。但是，重要的是要認識到，資料夾結構的任何變更都可能對 [依賴於內容路徑的現有查詢造成未預期的後果。](#developer)因此，事先明確設定的定義完善的階層可能對您的內容作者有所幫助。
+AEM 允許靈活的內容結構，階層可以任意擴大。但是，重要的是要認識到，資料夾結構的任何變更都可能對[依賴於內容路徑的現有查詢造成未預期的後果。](#developer)因此，事先明確設定的定義完善的階層可能對您的內容作者有所幫助。
 
 資料夾也可以限制為只允許某些類型的內容 (根據內容片段模型)。建議一律明確指定階層中的所有資料夾允許哪些模型。為特定資料夾指定允許的內容：
 
@@ -208,7 +208,7 @@ AEM 允許靈活的內容結構，階層可以任意擴大。但是，重要的�
 
 ##### 不要過度擴展內容巢狀 {#content-nesting}
 
-[內容片段](#content-fragments) 在 AEM 中用於建立 Headless 內容。對於內容片段的內容巢狀，AEM 支援最多十層。但是請務必記住，AEM 必須迭代解析父內容片段中定義的每個參考，然後檢查所有同層級中是否有任何子參考。這些操作可以迅速累加並成為效能問題。
+[內容片段](#content-fragments)在 AEM 中用於建立 Headless 內容。對於內容片段的內容巢狀，AEM 支援最多十層。但是請務必記住，AEM 必須迭代解析父內容片段中定義的每個參考，然後檢查所有同層級中是否有任何子參考。這些操作可以迅速累加並成為效能問題。
 
 作為一般經驗法則，內容片段參考巢狀不應超過五層。
 
@@ -255,7 +255,7 @@ GraphQL 可作為 AEM 和 Headless 內容取用者之間的「黏著劑」。Gra
 
 #### 更新頻率 {#update-frequency}
 
-通常不同的體驗部分具有不同的內容更新頻率。瞭解這一點對於能夠微調CDN和快取設定非常重要。 這也是給[內容架構師](#content-architects)的重要輸入，因為他們設計模型來表示您的內容。考慮：
+通常不同的體驗部分具有不同的內容更新頻率。了解這一點很重要，因為才能微調 CDN 和快取設定。這也是給[內容架構師](#content-architects)的重要輸入，因為他們設計模型來表示您的內容。考慮：
 
 * 某些類型的內容必須在一段時間後到期嗎？
 * 是否存在因使用者特定而無法快取的元素？
@@ -275,7 +275,12 @@ GraphQL 可作為 AEM 和 Headless 內容取用者之間的「黏著劑」。Gra
 
 雖然建議您查看文件[踏上首次使用 AEM Headless 之路](path-to-first-experience.md)，來繼續 Headless 開發歷程，但以下是一些額外的內容和選用資源，對此文件提到的一些概念有更深入的探討，但它們不是繼續 Headless 開發歷程的必要條件。
 
-* [ AEM Headless 翻譯歷程](/help/journey-headless/translation/overview.md) - 此文件歷程讓您對 Headless 技術、AEM 如何提供 Headless 內容以及如何翻譯它，有廣泛的了解。
+* [AEM Headful 和 Headless 技術 ](/help/sites-developing/headful-headless.md) - 對 AEM 中可用的 Headless 整合層級的完整討論
+
+* 一個 [AEM as a Headless CMS簡介](/help/sites-developing/headless/introduction.md)
+
+* [AEM Headless 翻譯歷程](/help/journey-headless/translation/overview.md) - 此文件歷程讓您對 Headless 技術、AEM 如何提供 Headless 內容以及如何翻譯它，有廣泛的了解。
+
 * [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 利用這些實作教學課程來探索如何運用各種不同方式使用 AEM 將內容傳遞到 Headless 端點，並選擇適合您的方式。
 * [使用 GraphQL API 進行 Headless 內容管理](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;Launch=ExperienceManager-D-1-2020.1.headless#courses) - 按照本課程說明對 AEM 中實作的 GraphQL API 有概略的了解。必須透過 AdobeID 進行驗證。
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - 此 GitHub 專案包含以 AEM GraphQL API 為重點的範例應用程式。
@@ -290,4 +295,4 @@ GraphQL 可作為 AEM 和 Headless 內容取用者之間的「黏著劑」。Gra
 * [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - 說明如何建立要求以存取和傳遞內容片段的技術文件
 * [資產 REST API](/help/assets/assets-api-content-fragments.md) - 說明如何建立和修改內容片段 (和其他資產) 的技術文件
 * [持續性查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md) - 關於 AEM 持續性查詢的技術文件
-* [AEM Headful 和 Headless 技術 ](/help/sites-developing/headful-headless.md) - 對 AEM 中可用的 Headless 整合層級的完整討論
+* 此 [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

@@ -1,24 +1,24 @@
 ---
-title: 了解無周邊內容以及如何在 AEM 中翻譯
-description: 了解無周邊概念、它們如何對應到 AEM 以及 AEM 翻譯理論。
+title: 了解 Headless 內容以及如何在 AEM 中翻譯
+description: 了解 Headless 概念、它們如何對應到 AEM 以及 AEM 翻譯理論。
 exl-id: cb2e2d89-e2d2-462f-8fff-b201847d0641
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 100%
+source-wordcount: '756'
+ht-degree: 97%
 
 ---
 
-# 了解無周邊內容以及如何在 AEM 中翻譯 {#learn-about}
+# 了解 Headless 內容以及如何在 AEM 中翻譯 {#learn-about}
 
-了解無周邊概念、它們如何對應到 AEM 以及 AEM 翻譯理論。
+了解 Headless 概念、它們如何對應到 AEM 以及 AEM 翻譯理論。
 
 ## 目標 {#objective}
 
-本文件可協助您了解無周邊內容傳遞、AEM 如何支援無周邊以及如何翻譯這類內容。閱讀本文件後，您應該：
+本文件可協助您了解 Headless 內容傳遞、AEM 如何支援 Headless 以及如何翻譯這類內容。閱讀本文件後，您應該：
 
-* 了解無周邊內容傳遞的基本概念。
-* 熟悉 AEM 如何支援無周邊和翻譯。
+* 了解 Headless 內容傳遞的基本概念。
+* 熟悉 AEM 如何支援 Headless 和翻譯。
 
 ## 全堆疊內容傳遞 {#full-stack}
 
@@ -53,9 +53,9 @@ ht-degree: 100%
 
 ## 在 AEM 翻譯 Headless 內容 {#translating-in-aem}
 
-除了提供強大的工具來以全堆疊方式建立、管理和傳遞傳統網頁外，AEM 還可讓您編寫獨立內容選集並以無周邊方式提供該內容。
+除了提供強大的工具來以全堆疊方式建立、管理和傳遞傳統網頁外，AEM 還可讓您編寫獨立內容選集並以 Headless 方式提供該內容。
 
-AEM 的強大功能使其能夠以無周邊方式、全堆疊方式或同時以兩種模式傳遞內容。對於翻譯專家來說，同一套翻譯工具可以套用於兩種類型的內容，為您提供統一的內容翻譯方法。
+AEM 的強大功能使其能夠以 Headless 方式、全堆疊方式或同時以兩種模式傳遞內容。對於翻譯專家來說，同一套翻譯工具可以套用於兩種類型的內容，為您提供統一的內容翻譯方法。
 
 在接下來的歷程中，您將了解有關 AEM 如何翻譯內容的詳細資訊，其大致概念很簡單：
 
@@ -68,13 +68,16 @@ AEM 的強大功能使其能夠以無周邊方式、全堆疊方式或同時以�
 
 感謝您開始進行 AEM Headless 翻譯歷程！閱讀了本文件後，您應該：
 
-* 了解無周邊內容傳遞的基本概念。
-* 熟悉 AEM 如何支援無周邊和翻譯。
+* 了解 Headless 內容傳遞的基本概念。
+* 熟悉 AEM 如何支援 Headless 和翻譯。
 
-以這些知識為基礎，接下來查看文件[AEM Headless 翻譯快速入門](getting-started.md) 以繼續您的 AEM Headless 翻譯歷程，您將在此文件大致了解 AEM 如何管理無周邊內容以及它的翻譯工具。
+以這些知識為基礎，接下來查看文件[AEM Headless 翻譯快速入門](getting-started.md) 以繼續您的 AEM Headless 翻譯歷程，您將在此文件大致了解 AEM 如何管理 Headless 內容以及它的翻譯工具。
 
 ## 其他資源 {#additional-resources}
 
-雖然建議您查閱文件[AEM Headless 翻譯快速入門](getting-started.md)來繼續無周邊翻譯歷程的下個部分，以下也有一些其他選擇性資源，在深入探究本文件提到的一些概念，但不是繼續無周邊歷程的必要條件。
+雖然建議您查閱文件[AEM Headless 翻譯快速入門](getting-started.md)來繼續 Headless 翻譯歷程的下個部分，以下也有一些其他選擇性資源，在深入探究本文件提到的一些概念，但不是繼續 Headless 歷程的必要條件。
 
 * [MSM 和翻譯](/help/sites-administering/msm-and-translation.md) - 詳細說明 AEM 多網站管理員以及它如何與其翻譯工具一起工作
+* 一個 [AEM as a Headless CMS簡介](/help/sites-developing/headless/introduction.md)
+* 此 [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM中Headless的Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

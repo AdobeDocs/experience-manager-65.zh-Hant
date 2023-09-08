@@ -2,10 +2,10 @@
 title: AEM Headless 開發人員歷程
 description: AEM Headless CMS 文件。從這裡開始，逐步引導您了解 AEM 強大且有彈性的無周邊功能、其功能，以及如何在您的第一個開發專案中運用這些功能。
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1212'
-ht-degree: 79%
+source-wordcount: '1230'
+ht-degree: 80%
 
 ---
 
@@ -54,7 +54,7 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 
 您將在此歷程中探索許多主題。以下文章為您提供 AEM Headless 的基本知識，以及詳細外部技術文件的連結。
 
-儘管您可以直接進入歷程的特定部分，但許多概念都是以先前文章中的概念為基礎。因此，如果您不熟悉AEM中的Headless，Adobe建議您從頭開始，然後循序漸進。
+儘管您可以直接進入歷程的特定部分，但許多概念都是以先前文章中的概念為基礎。因此，如果您是 AEM Headless 新手，Adobe 建議您從頭開始，然後循序漸進。
 
 | # | 文章 | 說明 |
 |---|---|---|
@@ -78,7 +78,7 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 不過，Adobe希望您隨著開始使用AEM Headless專案而成功，無論您的學習風格如何。 因此，請考慮這兩個選項。
 
 * 如果您希望繼續&#x200B;**了解 Headless 概念和 AEM Headless 技術**，您應該接著檢閱此文件[如何為您的內容建立 AEM 內容模型](model-your-content.md)來繼續您的 AEM Headless 歷程，此文件可讓您了解如何在 AEM 為內容結構建立模型。
-* 如果您偏好&#x200B;**做中學**，您可以移至[AEM Headless 入門實作教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)，在這裡您將直接進入 AEM Headless 開發，方式是實作一個簡單專案以公開 AEM Headless 內容。
+* 如果您偏好&#x200B;**做中學**，您可以移至 [AEM Headless 入門實作教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)，在這裡您將直接進入 AEM Headless 開發，方式是實作一個簡單專案以公開 AEM Headless 內容。
 
 ## 其他資源 {#additional-resources}
 
@@ -91,3 +91,7 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 * [Headless 編寫歷程](/help/journey-headless/author/overview.md) - 從這裡開始，此歷程會逐步引導您了解 AEM 強大且靈活的 Headless 特性、其功能，以及如何在您的第一個 Headless 專案中建立內容模型。
 * [Headless架構者歷程](/help/journey-headless/architect/overview.md)  — 從這裡開始瞭解Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案建立內容的模型。
 * [AEM 技術文件](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant) - 如果您已經對 AEM 和 Headless 技術有深入的了解，您可能想要直接查閱我們深入的技術文件。
+
+   * 一個 [AEM as a Headless CMS簡介](/help/sites-developing/headless/introduction.md)
+
+* 此 [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

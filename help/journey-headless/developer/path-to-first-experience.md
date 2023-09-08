@@ -1,37 +1,37 @@
 ---
 title: 踏上首次使用 AEM Headless 之路
-description: 在 AEM Headless 開發人員歷程的這一部分中，您將了解在 AEM 中實作您的第一個無周邊體驗的步驟 (包括規劃考量事項)，並學習最佳做法以使您的操作過程盡可能順利。
+description: 在 AEM Headless 開發人員歷程的這一部分中，您將了解在 AEM 中實作您的第一個 Headless 體驗的步驟 (包括規劃考量事項)，並學習最佳做法以使您的操作過程盡可能順利。
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1992'
 ht-degree: 97%
 
 ---
 
 # 踏上首次使用 AEM Headless 之路 {#path-to-first-experience}
 
-在 [AEM Headless 開發人員歷程](overview.md)的這一部分中，您將了解在 AEM 中實作您的第一個無周邊體驗的步驟 (包括規劃考量事項)，並學習最佳做法以使您的操作過程盡可能順利。
+在 [AEM Headless 開發人員歷程](overview.md)的這一部分中，您將了解在 AEM 中實作您的第一個 Headless 體驗的步驟 (包括規劃考量事項)，並學習最佳做法以使您的操作過程盡可能順利。
 
 ## 到目前為止 {#story-so-far}
 
-在 AEM 無周邊歷程的上一個文件「[AEM Headless 快速入門](getting-started.md)」中，您已了解 Headless CMS 的基本理論，您現在應該：
+在 AEM Headless 歷程的上一個文件「[AEM Headless 快速入門](getting-started.md)」中，您已了解 Headless CMS 的基本理論，您現在應該：
 
-* 了解 AEM 無周邊功能的基本概念。
-* 了解 AEM 無周邊功能的使用先決條件。
-* 明白 AEM 無周邊整合層級。
+* 了解 AEM Headless 功能的基本概念。
+* 了解 AEM Headless 功能的使用先決條件。
+* 明白 AEM Headless 整合層級。
 * 能夠根據範圍定義您的專案。
 
-本文章以這些基本知識為基礎，以便您了解如何準備您自己的 AEM 無周邊專案。
+本文章以這些基本知識為基礎，以便您了解如何準備您自己的 AEM Headless 專案。
 
 ## 目標 {#objective}
 
 本文件可協助您了解實作第一個專案所需的步驟。閱讀本文件後，您應該：
 
 * 了解設計內容的重要規劃考量事項。
-* 了解在 AEM 中實作無周邊的步驟。
+* 了解在 AEM 中實作 Headless 的步驟。
 * 了解需要哪些必要工具和 AEM 設定。
-* 了解使您的無周邊歷程順暢、持續高效產生內容以及確保內容快速傳遞的最佳做法。
+* 了解使您的 Headless 歷程順暢、持續高效產生內容以及確保內容快速傳遞的最佳做法。
 
 ## 要求 {#requirements}
 
@@ -42,9 +42,9 @@ ht-degree: 97%
 
 ## 為成功做規劃 {#planning-for-success}
 
-若要開始您的第一個 AEM 無周邊專案，需要確保您有一個內容模型，可支援您想要跨所有管道進行的個人化和更新。
+若要開始您的第一個 AEM Headless 專案，需要確保您有一個內容模型，可支援您想要跨所有管道進行的個人化和更新。
 
-與AEM不同，如果您要建置使用者端應用程式，也要確保設定適當的開發環境，這樣您就能根據對AEM的API呼叫來測試使用者端。
+與AEM不同，如果您是建置使用者端應用程式，也希望確保設定適當的開發環境，以便針對對AEM的API呼叫測試使用者端。
 
 ### 定義內容模型和 API {#defining-models}
 
@@ -56,25 +56,25 @@ ht-degree: 97%
 
 ## 了解您的環境 {#understanding-environments}
 
-AEM 有三種類型的環境：開發、預備和生產。
+AEM 有三種類型的環境：開發、中繼和生產。
 
 開發環境 (您可以有多個) 是實驗和嘗試想法的安全地方。在專案的初始階段，Adobe 建議使用開發環境來嘗試各種版本的內容模型，並查看哪些版本為表面提供預期的輸出。
 
-無周邊專案的預備環境用於在新的 AEM 產品版本推送到生產環境之前對其進行驗證。在那裡保留最新的生產內容模型清單和內容子集，當您進行變更或 AEM 版本引入變更時，您就可以呈現 JSON 檔案以比較它們是否仍然提供相同的輸出。
+Headless 專案的中繼環境用於在新的 AEM 產品版本推送到生產環境之前對其進行驗證。在那裡保留最新的生產內容模型清單和內容子集，當您進行變更或 AEM 版本引入變更時，您就可以呈現 JSON 檔案以比較它們是否仍然提供相同的輸出。
 
 生產環境是內容作者建立和管理其實際內容的地方。在生產環境變更模型必須小心進行，並謹記回溯相容性。
 
-在開發階段，建議您使用開發和預備環境。當您轉向效能測試時，您會想要移至生產環境。
+在開發階段，建議您使用開發和中繼環境。當您轉向效能測試時，您會想要移至生產環境。
 
 ### 開發人員和內容作者協力合作 {#cooperation}
 
-開發人員需要的 AEM 開發環境是內含填入的內容模型。由於內容作者仍在建立內容，開發人員開發的用戶端將取用 AEM 的無周邊內容。這就是 API 定義非常重要的原因。利用 AEM SDK，開發人員可以建立測試連結，以便建立用戶端和單元測試以確保用戶端能夠正確呈現內容。
+開發人員需要的 AEM 開發環境是內含填入的內容模型。由於內容作者仍在建立內容，開發人員開發的用戶端將取用 AEM 的 Headless 內容。這就是 API 定義非常重要的原因。利用 AEM SDK，開發人員可以建立測試連結，以便建立用戶端和單元測試以確保用戶端能夠正確呈現內容。
 
-內容作者根據已在預備環境定義的內容模型建立內容。使用內容片段編寫工具，作者可以建立新的內容片段或編輯現有的內容片段。在發佈之前，作者可以與開發人員合作將內容模型推送至開發環境，或僅為作者設定開發人員環境，來預覽它在用戶端中的外觀。
+內容作者根據已在中繼環境定義的內容模型建立內容。使用內容片段編寫工具，作者可以建立新的內容片段或編輯現有的內容片段。在發佈之前，作者可以與開發人員合作將內容模型推送至開發環境，或僅為作者設定開發人員環境，來預覽它在用戶端中的外觀。
 
 ## 設定 {#setup}
 
-在 AEM 中開始使用無周邊技術之前，您需要確保已啟用所有必要的功能。本章節概述相關要求。完成這些步驟的實際步驟將在 [AEM Headless 開發人員歷程](#overview.md)的後續部分詳細說明。
+在 AEM 中開始使用 Headless 技術之前，您需要確保已啟用所有必要的功能。本章節概述相關要求。完成這些步驟的實際步驟將在 [AEM Headless 開發人員歷程](#overview.md)的後續部分詳細說明。
 
 您也可以選擇參考[其他資源](#additional-resources)以取得個別主題的詳細資訊。
 
@@ -94,7 +94,7 @@ AEM 有三種類型的環境：開發、預備和生產。
 
 ## 最佳做法 {#best-practices}
 
-無周邊專案的成功不僅在於實作的技術，還在於良好的規劃和專案管理。以下是內容作者和開發人員在規劃專案時要謹記的一些最佳做法。
+ Headless 專案的成功不僅在於實作的技術，還在於良好的規劃和專案管理。以下是內容作者和開發人員在規劃專案時要謹記的一些最佳做法。
 
 ### 組織您的內容 {#organizing-content}
 
@@ -125,9 +125,9 @@ AEM 有三種類型的環境：開發、預備和生產。
 您已完成此部分的 AEM Headless 開發人員歷程，您應該：
 
 * 了解設計內容的重要規劃考量事項。
-* 了解在 AEM 中實作無周邊的步驟。
+* 了解在 AEM 中實作 Headless 的步驟。
 * 了解需要哪些必要工具和 AEM 設定。
-* 了解使您的無周邊歷程順暢、持續高效產生內容以及確保內容快速傳遞的最佳做法。
+* 了解使您的 Headless 歷程順暢、持續高效產生內容以及確保內容快速傳遞的最佳做法。
 
 我們希望您以此基本知識為基礎，充分了解 AEM Headless 的強大功能和靈活性，以便利用在自己的專案上。為此，您有多種選擇。
 
@@ -135,19 +135,20 @@ AEM 有三種類型的環境：開發、預備和生產。
 
 無論您的學習方式為何，Adobe 都希望您能順利開始您的 AEM Headless 專案。
 
-* 如果您偏好繼續&#x200B;**了解無周邊概念和 AEM 的無周邊技術**，您應該建議繼續您的 AEM 無周邊歷程，接著閱讀此文件[如何為您的內容建立 AEM 內容模型](model-your-content.md)，您可以在此了解如何在 AEM 中建立內容結構的模型。
-* 如果您偏好&#x200B;**做中學**，您可以移至 [AEM Headless 入門實作教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)，在這裡您將直接進入 AEM Headless 開發，方式是實作一個簡單專案以公開 AEM 無周邊內容。
+* 如果您偏好繼續&#x200B;**了解 Headless 概念和 AEM 的 Headless 技術**，您應該建議繼續您的 AEM Headless 歷程，接著閱讀此文件[如何為您的內容建立 AEM 內容模型](model-your-content.md)，您可以在此了解如何在 AEM 中建立內容結構的模型。
+* 如果您偏好&#x200B;**做中學**，您可以移至 [AEM Headless 入門實作教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)，在這裡您將直接進入 AEM Headless 開發，方式是實作一個簡單專案以公開 AEM Headless 內容。
 
 ## 其他資源 {#additional-resources}
 
-雖然建議您查閱文件[如何為您的內容建立 AEM 內容模型](model-your-content.md)來繼續無周邊開發歷程的下個部分，以下也有一些其他選擇性資源，在深入探究本文件提到的一些概念，但不是繼續無周邊歷程的必要條件。
+雖然建議您查閱文件[如何為您的內容建立 AEM 內容模型](model-your-content.md)來繼續 Headless 開發歷程的下個部分，以下也有一些其他選擇性資源，在深入探究本文件提到的一些概念，但不是繼續 Headless 歷程的必要條件。
 
-* [AEM Headless 翻譯歷程](/help/journey-headless/translation/overview.md) - 此文件歷程讓您對無周邊技術、AEM 如何提供無周邊內容以及如何翻譯它，有廣泛的了解。
+* [AEM Headless 翻譯歷程](/help/journey-headless/translation/overview.md) - 此文件歷程讓您對 Headless 技術、AEM 如何提供 Headless 內容以及如何翻譯它，有廣泛的了解。
 * [AEM Sites 的 Headless 開發](/help/sites-developing/headless/introduction.md) - 快速介紹讓 AEM Headless 開發人員熟悉必要的功能
-* [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 利用這些實作教學課程來探索如何運用各種不同方式使用 AEM 將內容傳遞到無周邊端點，並選擇適合您的方式。
+* [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 利用這些實作教學課程來探索如何運用各種不同方式使用 AEM 將內容傳遞到 Headless 端點，並選擇適合您的方式。
 * [使用 GraphQL API 進行 Headless 內容管理](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;Launch=ExperienceManager-D-1-2020.1.headless#courses) - 按照本課程說明對 AEM 中實作的 GraphQL API 有概略的了解。必須透過 AdobeID 進行驗證。
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - 此 GitHub 專案包含以 AEM GraphQL API 為重點的範例應用程式。
 * [Headless快速入門手冊](/help/sites-developing/headless/introduction.md#getting-started)  — 向已瞭解AEM的使用者快速介紹AEM Headless功能。
 * [建立內容片段模型](/help/assets/content-fragments/content-fragments-models.md) - 內容片段模型的技術文件
 * [建立內容片段](/help/assets/content-fragments/content-fragments.md) - 內容片段的技術文件
 * [使用 GraphQL 查詢內容](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - GraphQL API 的技術文件
+* 此 [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

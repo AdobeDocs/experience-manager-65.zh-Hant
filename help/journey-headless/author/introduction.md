@@ -1,17 +1,17 @@
 ---
 title: 使用Adobe Experience Manager編寫Headless
-description: 介紹Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案撰寫內容。
+description: 介紹Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案編寫內容。
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 90%
+source-wordcount: '659'
+ht-degree: 88%
 
 ---
 
 # 使用 AEM 編寫 Headless - 簡介 {#author-headless-introduction}
 
-在這部分中 [AEM Headless內容作者歷程](overview.md)，您可以瞭解使用Adobe Experience Manager (AEM)傳送headless內容所需的（基本）概念和術語，以瞭解authoring內容。
+在這部分中 [AEM Headless內容作者歷程](overview.md)，您可以瞭解使用Adobe Experience Manager (AEM)傳送headless內容所需的（基本）概念和術語，以瞭解製作內容。
 
 ## 目標 {#objective}
 
@@ -30,7 +30,7 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 
 傳統上，您會在 CMS 中管理內容，該 CMS 會負責將內容呈現在您的網頁上。
 
-現在，無周邊表示您的內容集可以在 CMS 中進行管理，然後由一個或多個 (獨立) 應用程式存取。
+現在， Headless 表示您的內容集可以在 CMS 中進行管理，然後由一個或多個 (獨立) 應用程式存取。
 
 這表示您的內容能以多種格式傳遞到任何裝置。這使整個流程更加靈活，也表示您無需擔心版面和格式。
 
@@ -47,7 +47,7 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 這表示它可以做為：
 
 * Headless CMS
-   * 若為無周邊，可將內容編寫為&#x200B;**內容片段**。
+   * 若為 Headless ，可將內容編寫為&#x200B;**內容片段**。
 這些是內容的獨立項目，可直接由各種應用程式存取，因為它們具有預先定義結構，以**內容片段模型**為基礎。
 這表示您的內容能以多種格式及內含多種功能呈現在多種裝置上。
 (作為一個雙重打擊，如果你想要的話，可以在建構 AEM 網頁時使用這些片段。)
@@ -59,7 +59,7 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 
 所以內容模型 (也稱為資料模型) 是另一個技術性術語，您身為作者為什麼對它感興趣？
 
-為了讓無周邊應用程式可以存取您的內容並進行一些操作，您的內容確實需要有預先定義的結構。您的內容可以採用自由格式，但會使應用程式&#x200B;*十分*&#x200B;不便。
+為了讓 Headless 應用程式可以存取您的內容並進行一些操作，您的內容確實需要有預先定義的結構。您的內容可以採用自由格式，但會使應用程式&#x200B;*十分*&#x200B;不便。
 
 基本上，定義要遵循之內容結構的流程包含設計模型，這稱為資料模型。
 
@@ -81,3 +81,9 @@ Headless 是一個術語，用於描述能夠有效地將內容與內容在 Web 
 * [AEM Headless 內容架構師歷程](/help/journey-headless/architect/overview.md)
 
 * [AEM Headless 內容翻譯歷程](/help/journey-headless/translation/overview.md)
+
+* [AEM as a Headless CMS簡介](/help/sites-developing/headless/introduction.md)
+
+* [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+
+* [AEM中Headless的Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

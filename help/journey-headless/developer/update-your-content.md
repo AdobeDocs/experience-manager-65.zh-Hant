@@ -2,10 +2,10 @@
 title: 如何透過 AEM Assets API 更新您的內容
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解如何使用 REST API 存取和更新內容片段的內容。
 exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1037'
-ht-degree: 89%
+source-wordcount: '1066'
+ht-degree: 88%
 
 ---
 
@@ -329,3 +329,6 @@ API 參考文件中定義了受支援要求的確切格式。
 * [AEM 核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM 說明](https://helpx.adobe.com/tw/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [影片 - 使用 AEM 開發 CORS](https://helpx.adobe.com/tw/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+* 一個 [AEM as a Headless CMS簡介](/help/sites-developing/headless/introduction.md)
+* 此 [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM中Headless的Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
