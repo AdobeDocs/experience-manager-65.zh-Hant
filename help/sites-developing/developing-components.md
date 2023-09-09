@@ -12,7 +12,7 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 823e756f470b0599f7d53a3e08fdf650b4e892d1
 workflow-type: tm+mt
 source-wordcount: '3454'
 ht-degree: 1%
@@ -228,7 +228,7 @@ newComponent (cq:Component)
 
 如果您想要定義元件的樣式和行為，可以建立專用的 [使用者端資料庫](/help/sites-developing/clientlibs.md) 會定義您的自訂CSS/LESS和JS。
 
-若要讓您的使用者端程式庫僅為您的元件對話方塊載入（即它不會為另一個元件載入），您需要設定屬性 `extraClientlibs`將**對話方塊新**至您剛建立的使用者端程式庫的類別名稱。 如果您的使用者端程式庫相當大和/或您的欄位專屬於該對話方塊，且不需要在其他對話方塊中使用，建議您這麼做。
+若要讓您的使用者端程式庫僅為您的元件對話方塊載入（即它不會為另一個元件載入），您需要設定屬性 `extraClientlibs` 對話方塊的類別名稱新增至您剛建立的使用者端程式庫的類別名稱。 如果您的使用者端程式庫相當大和/或您的欄位專屬於該對話方塊，且不需要在其他對話方塊中使用，建議您這麼做。
 
 若要讓您的使用者端程式庫載入所有對話方塊，請將使用者端程式庫的類別屬性設定為 `cq.authoring.dialog`. 這是呈現所有對話方塊時預設包含的使用者端程式庫的類別名稱。 如果您使用者端資料庫較小且/或您的欄位是通用的，且可在其他對話方塊中重複使用，則您想要執行此動作。
 
