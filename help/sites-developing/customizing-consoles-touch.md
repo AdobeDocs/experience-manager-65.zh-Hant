@@ -97,7 +97,7 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
-   然後可以將其和主控台上的工具列項目連線：
+   然後，這可以連接至主控台上的工具列項目：
 
    `/apps/<yourProject>/admin/ext/launches`
 
@@ -125,7 +125,7 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   使用此節點上的屬性，您可以定義`groups`允許執行特定動作；例如，`administrators`
+   使用此節點上的屬性，您可以定義被准許執行特定動作的 `groups`；例如，`administrators`
 
 ### 自訂清單檢視中的欄 {#customizing-columns-in-the-list-view}
 
@@ -160,4 +160,4 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
 使用主控台時，常見的使用案例是使用者必須從資源（例如頁面、元件、資產等）中進行選擇時。 這可以採用清單的形式，例如，作者必須從中選擇專案。
 
-為了將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。另請參閱 [本文](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 以取得詳細資訊。
+為了維持清單的合理大小並，同時也維持與案例相關，可以實施自訂述詞形式的篩選器。另請參閱 [本文](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 以取得詳細資訊。

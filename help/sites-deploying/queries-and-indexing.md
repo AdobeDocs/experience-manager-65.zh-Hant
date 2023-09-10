@@ -111,7 +111,7 @@ AEM 6提供以Apache Lucene為基礎的全文檢索器。
 
 如果未設定全文檢索索引，則具有全文檢索條件的查詢將無法如預期運作。
 
-由於索引是透過非同步背景執行緒來更新，因此在背景處理完成之前，某些全文檢索搜尋無法在很短的時間內完成。
+由於索引是透過非同步背景執行緒更新，因此在背景處理完成之前，某些全文檢索搜尋無法在很短的時間內完成。
 
 您可以依照以下程式設定Lucene全文索引：
 
@@ -224,8 +224,8 @@ select * from [nt:base] where [alias] = '/admin'
 
 若要為上述查詢定義Lucene屬性索引，您可以在下建立節點來新增以下定義 **oak:index:**
 
-* **名稱:** `LucenePropertyIndex`
-* **類型:** `oak:QueryIndexDefinition`
+* **名稱：**`LucenePropertyIndex`
+* **類型：**`oak:QueryIndexDefinition`
 
 建立節點後，請新增下列屬性：
 
@@ -283,24 +283,24 @@ select * from [nt:base] where [alias] = '/admin'
 
 1. 將屬性新增至具有下列屬性的預設節點：
 
-   * **名稱:** `class`
-   * **類型:** `String`
+   * **名稱：**`class`
+   * **類型：**`String`
    * **值:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
 
    值是您要使用的分析器類別名稱。
 
    您也可以使用選填，將分析器設定為與特定lucene版本搭配使用 `luceneMatchVersion` 字串屬性。 搭配Lucene 4.7使用的有效語法為：
 
-   * **名稱:** `luceneMatchVersion`
-   * **類型:** `String`
+   * **名稱：**`luceneMatchVersion`
+   * **類型：**`String`
    * **值:** `LUCENE_47`
 
    如果 `luceneMatchVersion` 未提供，Oak會使用隨附的Lucene版本。
 
 1. 如果您想要將停用字檔案新增至分析器設定，可在 `default` 一個具有下列屬性：
 
-   * **名稱:** `stopwords`
-   * **類型:** `nt:file`
+   * **名稱：**`stopwords`
+   * **類型：**`nt:file`
 
 #### 透過組合建立分析器 {#creating-analyzers-via-composition}
 
@@ -308,41 +308,41 @@ select * from [nt:base] where [alias] = '/admin'
 
 以這個節點結構為例：
 
-* **名稱:** `analyzers`
+* **名稱：**`analyzers`
 
-   * **名稱:** `default`
+   * **名稱：**`default`
 
-      * **名稱:** `charFilters`
-      * **類型:** `nt:unstructured`
+      * **名稱：**`charFilters`
+      * **類型：**`nt:unstructured`
 
-         * **名稱:** `HTMLStrip`
-         * **名稱:** `Mapping`
+         * **名稱：**`HTMLStrip`
+         * **名稱：**`Mapping`
 
-      * **名稱:** `tokenizer`
+      * **名稱：**`tokenizer`
 
          * **屬性名稱:** `name`
 
-            * **類型:** `String`
+            * **類型：**`String`
             * **值:** `Standard`
 
-      * **名稱:** `filters`
-      * **類型:** `nt:unstructured`
+      * **名稱：**`filters`
+      * **類型：**`nt:unstructured`
 
-         * **名稱:** `LowerCase`
-         * **名稱:** `Stop`
+         * **名稱：**`LowerCase`
+         * **名稱：**`Stop`
 
             * **屬性名稱:** `words`
 
-               * **類型:** `String`
+               * **類型：**`String`
                * **值:** `stop1.txt, stop2.txt`
 
-            * **名稱:** `stop1.txt`
+            * **名稱：**`stop1.txt`
 
-               * **類型:** `nt:file`
+               * **類型：**`nt:file`
 
-            * **名稱:** `stop2.txt`
+            * **名稱：**`stop2.txt`
 
-               * **類型:** `nt:file`
+               * **類型：**`nt:file`
 
 篩選器、charFilters和tokenizers的名稱是透過移除原廠尾碼所組成。 因此：
 

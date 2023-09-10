@@ -5,7 +5,7 @@ exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '726'
-ht-degree: 88%
+ht-degree: 95%
 
 ---
 
@@ -39,11 +39,11 @@ ht-degree: 88%
 
 ## 內容參考 {#content-references}
 
-內容參考可讓您參考任何其他內容。 這將會開啟一個瀏覽器，讓您選取內容專案。
+內容參考可讓您參考任何其他內容。 這會開啟瀏覽器，讓您選取內容項目。
 
 ## 資產/媒體參考 {#assets-media-references}
 
-可以使用&#x200B;**插入資產**&#x200B;選項，讓資產 (例如影像或媒體) 可在文字區塊內被參考。這將會開啟瀏覽器讓您選取資產。
+可以使用&#x200B;**插入資產**&#x200B;選項，讓資產 (例如影像或媒體) 可在文字區塊內被參考。這會開啟瀏覽器，讓您選取資產。
 
 ![內容片段 - 插入資產](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
 
@@ -75,7 +75,7 @@ ht-degree: 88%
 
 ### 如何編寫巢狀片段 {#author-nested-fragment}
 
-編寫片段參考非常簡單 (儘管欄位通常不會被標記為&#x200B;**片段參考**)。您可以直接在參考中輸入，或（更有可能的）選取資料夾圖示以開啟瀏覽器，讓您導覽並選取所需的片段。
+編寫片段參考非常簡單 (儘管欄位通常不會被標記為&#x200B;**片段參考**)。您可以直接輸入參考，或者 (更有可能) 選取資料夾圖示以開啟瀏覽器，讓您可瀏覽和選取所需片段。
 
 ![內容片段 - 參考](/help/journey-headless/author/assets/headless-journey-author-references-03.png)
 

@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # 設定Dynamic Media - Scene7模式{#configuring-dynamic-media-scene-mode}
 
-如果您針對不同環境（例如開發、測試和生產）使用Adobe Experience Manager設定，請針對其中每個環境設定Dynamic MediaCloud Services。
+如果您針對不同環境（例如開發、測試和生產）使用Adobe Experience Manager設定，請針對其中每個環境設定Dynamic MediaCloud Service。
 
 ## Dynamic Media - Scene7模式的架構圖 {#architecture-diagram-of-dynamic-media-scene-mode}
 
@@ -83,7 +83,7 @@ Feature Pack 18912可讓您透過FTP大量擷取資產，或在Experience Manage
 
 另請參閱 [安裝Feature Pack 18912以進行大量資產移轉](/help/assets/bulk-ingest-migrate.md) 以取得詳細資訊。
 
-## 在Cloud Services中建立Dynamic Media設定 {#configuring-dynamic-media-cloud-services}
+## 在Cloud Service中建立Dynamic Media設定 {#configuring-dynamic-media-cloud-services}
 
 <!-- **Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
 
@@ -91,7 +91,7 @@ Feature Pack 18912可讓您透過FTP大量擷取資產，或在Experience Manage
 
 **To create a Dynamic Media Configuration in Cloud Services:** -->
 
-1. 在Experience Manager作者模式中，選取Experience Manager標誌以存取全域導覽主控台，並選取「工具」圖示，然後前往 **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media設定]**.
+1. 在Experience Manager作者模式中，選取Experience Manager標誌以存取全域導覽主控台，並選取「工具」圖示，然後前往 **[!UICONTROL Cloud Service]** > **[!UICONTROL Dynamic Media設定]**.
 1. 在Dynamic Media設定瀏覽器頁面的左側窗格中，選取 **[!UICONTROL 全域]** (請勿選取左側的資料夾圖示 **[!UICONTROL 全域]**)，然後選取 **[!UICONTROL 建立]**.
 1. 在 **[!UICONTROL 建立Dynamic Media設定]** 頁面，輸入標題、Dynamic Media帳戶電子郵件地址、密碼，然後選取您的地區。 這些資訊會透過在布建電子郵件中Adobe來提供給您。 如果您沒有收到電子郵件，請聯絡Adobe客戶支援。
 
@@ -121,7 +121,7 @@ Feature Pack 18912可讓您透過FTP大量擷取資產，或在Experience Manage
    * **[!UICONTROL 公司]** - Dynamic Media帳戶的名稱。
      >[!IMPORTANT]
      >
-     Experience Manager的執行個體僅支援Cloud Services中的一個Dynamic Media設定；請勿新增多個設定。 一個Experience Manager執行個體上的多個Dynamic Media設定為 _非_ 受Adobe支援或建議。
+     Experience Manager的執行個體僅支援Cloud Service中的一個Dynamic Media設定；請勿新增多個設定。 一個Experience Manager執行個體上的多個Dynamic Media設定為 _非_ 受Adobe支援或建議。
 
      <!-- CQDOC-19579 and CQDOC-19612 -->
 
@@ -189,7 +189,7 @@ Dynamic Media中的密碼到期日設為目前系統日期起的100年。
 **若要變更Dynamic Media的密碼：**
 
 1. 在Experience Manager作者模式中，選取Experience Manager標誌以存取全域導覽主控台。
-1. 在主控台左側，選取「工具」圖示，然後前往 **[!UICONTROL Cloud Services] > [!UICONTROL Dynamic Media設定]**.
+1. 在主控台左側，選取「工具」圖示，然後前往 **[!UICONTROL Cloud Service] > [!UICONTROL Dynamic Media設定]**.
 1. 在Dynamic Media設定瀏覽器頁面的左側窗格中，選取 **[!UICONTROL 全域]**. 請勿選取左側的資料夾圖示 **[!UICONTROL 全域]**. 然後，選取 **[!UICONTROL 編輯]**.
 1. 在 **[!UICONTROL 編輯Dynamic Media設定]** 頁面，緊接在 **[!UICONTROL 密碼]** 欄位，選取 **[!UICONTROL 變更密碼]**.
 1. 在 **[!UICONTROL 變更密碼]** 對話方塊中，執行下列動作：

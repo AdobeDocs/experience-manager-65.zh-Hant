@@ -12,7 +12,7 @@ exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '843'
-ht-degree: 80%
+ht-degree: 82%
 
 ---
 
@@ -86,7 +86,7 @@ ht-degree: 80%
 * [建立巢狀啟動](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - 啟動中的啟動：
 
    * 來源是現有的啟動。
-   * 您可以[將巢狀啟動](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch) 提升到任何目標，這可以是父啟動或頂層來源頁面 (生產)。
+   * 您可以[將巢狀啟動](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch)提升到任何目標，這可以是父啟動或頂層來源頁面 (生產)。
 
   ![巢狀啟動概述](assets/chlimage_1-113.png)
 
@@ -109,7 +109,7 @@ ht-degree: 80%
 
 ### 啟動主控台 {#the-launches-console}
 
-「啟動」主控台提供啟動的總覽，並可讓您對列出的啟動執行動作。 主控台可透過以下方式存取：
+啟動主控台可提供對您的啟動的概觀，並讓您對清單上的執行動作。主控台可透過以下方式存取：
 
 * **工具**&#x200B;主控台：**工具**、**Sites**、**啟動**。
 

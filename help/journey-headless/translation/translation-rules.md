@@ -5,7 +5,7 @@ exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '871'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
@@ -61,7 +61,7 @@ ht-degree: 92%
 
 在&#x200B;**翻譯設定** UI 中，有許多選項可用於您的翻譯規則。在這裡，我們強調基本 Headless 本地化設定所需的最必要和典型的步驟。
 
-1. 點選或按一下 **新增內容**，可讓您新增路徑。 這是受規則影響的內容的路徑。
+1. 點選或按一下&#x200B;**新增內容**，您即可新增路徑。這是受規則影響的內容的路徑。
    ![新增內容](assets/add-translation-context.png)
 1. 使用路徑瀏覽器選擇所需路徑，並點選或按一下&#x200B;**確認**&#x200B;按鈕以儲存。請記住，內容片段 (其包含 Headless 內容) 通常位於 `/content/dam/<your-project>` 下。
    ![選取路徑](assets/select-context.png)

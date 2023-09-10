@@ -217,7 +217,7 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您想要上傳大
 | | PDF選項 | 您可以點陣化檔案、擷取搜尋字詞和連結、自動產生eCatalog、設定解析度，以及選擇色域。<br>不支援eCatalog [!DNL Experience Manager]. <br> 另請參閱 [設定PDF上傳選項](#setting-pdf-upload-options).<br>**注意**：用於擷取的PDF最大頁數在新上傳時為5000。 2022年12月31日，此限制將變更為100頁(適用於所有PDF)。 另請參閱 [Dynamic Media限制](/help/assets/limitations.md). |
 | | Illustrator選項 | 您可以點陣化Adobe Illustrator®檔案、維持透明背景、選擇解析度，以及選擇色域。<br> 另請參閱 [設定PostScript和Illustrator上傳選項](#setting-postscript-and-illustrator-upload-options). |
 | | EVideo選項 | 您可以透過選擇視訊預設集來轉碼視訊檔案。<br> 另請參閱 [設定eVideo上傳選項](#setting-evideo-upload-options). |
-| | 批次集預設集 | 若要從上傳的檔案建立「影像集」或「迴轉集」，請按一下您要使用之預設集的「作用中」欄。 您可以選取多個預設集。 您可以在Dynamic Media Classic的「應用程式設定/批次集預設集」頁面中建立預設集。<br> 另請參閱 [設定批次集預設集以自動生成影像集和迴轉集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 以進一步瞭解如何建立批次集預設集。<br> 另請參閱 [在上傳時設定批次集預設集](#setting-batch-set-presets-at-upload). |
+| | 大量集預設集 | 若要從上傳的檔案建立「影像集」或「迴轉集」，請按一下您要使用之預設集的「作用中」欄。 您可以選取多個預設集。 您可以在Dynamic Media Classic的「應用程式設定/批次集預設集」頁面中建立預設集。<br> 另請參閱 [設定批次集預設集以自動生成影像集和迴轉集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 以進一步瞭解如何建立批次集預設集。<br> 另請參閱 [在上傳時設定批次集預設集](#setting-batch-set-presets-at-upload). |
 
 #### 設定上傳時影像編輯的選項 {#setting-image-editing-options-at-upload}
 
@@ -251,7 +251,7 @@ Dynamic Media可透過FTP伺服器批次上傳資產。 如果您想要上傳大
 
 | 選項 | 次選項 | 說明 |
 |---|---|---|
-| 處理 | | 選擇 **[!UICONTROL 點陣化]** 將檔案中的向量圖形轉換為點陣圖格式。 |
+| 處理中 | | 選擇 **[!UICONTROL 點陣化]** 將檔案中的向量圖形轉換為點陣圖格式。 |
 | 在演算後的影像中維持透明背景 | | 維持檔案的背景透明度。 |
 | 解析度 | | 決定解析度設定。 此設定決定檔案中每英吋顯示的畫素數目。 |
 | 色彩空間 | | 選取「色域」選單，然後從下列色域選項中選擇： |
@@ -298,7 +298,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 
 | 選項 | 次選項 | 說明 |
 |---|---|---|
-| 處理 | 點陣化 | （預設）擷取PDF檔案中的頁面，並將向量影象轉換為點陣圖影像。 如果要建立eCatalog，請選擇此選項。 |
+| 處理中 | 點陣化 | （預設）擷取PDF檔案中的頁面，並將向量影象轉換為點陣圖影像。 如果要建立eCatalog，請選擇此選項。 |
 | 提取 | 搜尋字詞 | 從PDF檔案中擷取文字，以便在eCatalog檢視器中依關鍵字搜尋檔案。 |
 | | 連結 | 從PDF檔案中擷取連結，並將其轉換成eCatalog檢視器中使用的影像地圖。 |
 | 從多頁PDF自動產生eCatalog | | 自動從PDF檔案建立eCatalog。 eCatalog是以您上傳的PDF檔案命名。 (只有在您上傳時點陣化PDF檔案時，才能使用此選項。) |

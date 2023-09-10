@@ -5,7 +5,7 @@ exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1821'
-ht-degree: 94%
+ht-degree: 97%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 94%
 
 ## 到目前為止 {#story-so-far}
 
-一開始，[了解 CMS Headless 開發](learn-about.md)介紹 Headless 內容傳遞以及使用它的原因。然後[AEM Headless 快速入門](getting-started.md)以您自己的專案而言描述 AEM Headless 如何運作。
+一開始，[了解 CMS Headless 開發](learn-about.md)介紹 Headless 內容傳遞以及使用它的原因。然後 [AEM Headless 快速入門](getting-started.md)以您自己的專案而言描述 AEM Headless 如何運作。
 
 在 AEM Headless 歷程的上一個文件「[踏上首次使用 AEM Headless 之路](path-to-first-experience.md)」中，您接著了解實作第一個專案所需的步驟。閱讀本文件後，您應該：
 
@@ -147,7 +147,7 @@ AEM 使用內容片段來提供將內容 Headless 傳遞到應用程式所需的
 >
 >內容片段模型也作為 AEM GraphQL 結構描述的基礎，用於擷取您的內容 - 在後面的課程會詳細介紹。
 
-對內容的要求是使用 AEM GraphQL API 發出的，這是標準 GraphQL API 的自訂實作。AEM GraphQL API可讓您對內容片段執行（複雜）查詢，每個查詢都根據特定的模型型別。
+對內容的要求是使用 AEM GraphQL API 發出的，這是標準 GraphQL API 的自訂實作。AEM GraphQL API 可讓您對內容片段執行 (複雜) 查詢，每個查詢都根據特定的模型類型。
 
 然後，您的應用程式可以使用傳回的內容。
 
@@ -169,7 +169,7 @@ AEM 使用內容片段來提供將內容 Headless 傳遞到應用程式所需的
 1. **資料型別** 可讓您定義個別屬性。
 例如，將包含教師姓名的欄位定義為**文字** 並將他們的服務年限定義為&#x200B;**數字**。
 1. 資料型別 **內容參考** 和 **片段引用** 可讓您建立與AEM中其他內容的關聯。
-1. 此 **片段引用** 資料型別可讓您巢狀內嵌內容片段（根據模式型別），實現多個層級的結構。 這對建立內容模型很重要。
+1. **片段參考**&#x200B;資料類型可讓您將內容片段巢狀化 (根據模型類型)，以實現多層結構。這對建立內容模型很重要。
 
 例如：
 ![使用內容片段建立內容模型](assets/headless-modeling-01.png "使用內容片段建立內容模型")

@@ -660,7 +660,7 @@ Experience Platform標籤可能具有多個開發環境、一個測試環境及�
 
 ## 設定Adobe Experience Manager以進行整合 {#configuring-adobe-experience-manager-for-the-integration}
 
-必備條件:
+先決條件:
 
 * Experience Manager會執行作者和發佈執行個體。
 * Experience Manager作者節點設定於Dynamic Media - Scene7執行模式(dynamicmedia_s7)
@@ -795,7 +795,7 @@ Experience Manager設定包含下列兩個主要步驟：
 
 ## 設定Experience Platform標籤雲端以整合 {#configuring-adobe-launch-cloud-for-the-integration}
 
-1. 在Experience Manager author的左上角附近，選取 **[!UICONTROL 工具]** 圖示（槌子），然後前往 **[!UICONTROL Cloud Services]** > **[!UICONTROL Experience Platform標籤設定]**.
+1. 在Experience Manager author的左上角附近，選取 **[!UICONTROL 工具]** 圖示（槌子），然後前往 **[!UICONTROL Cloud Service]** > **[!UICONTROL Experience Platform標籤設定]**.
 
    ![2019-07-26_12-10-38](assets/2019-07-26_12-10-38.png)
 

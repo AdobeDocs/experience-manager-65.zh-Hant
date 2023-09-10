@@ -8,13 +8,13 @@ exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 source-git-commit: d0768679182567cc7cd618adaa78b6518f902f7c
 workflow-type: tm+mt
 source-wordcount: '1861'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
 # 使用JSON結構描述建立調適型表單 {#creating-adaptive-forms-using-json-schema}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
@@ -22,7 +22,7 @@ ht-degree: 5%
 | AEM 6.5 | 本文章 |
 
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 使用JSON結構描述作為自適應表單的表單模型編寫時，需要基本瞭解JSON結構描述。 建議您先閱讀下列內容，再閱讀本文。
 

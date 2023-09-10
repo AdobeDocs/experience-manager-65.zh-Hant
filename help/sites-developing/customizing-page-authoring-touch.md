@@ -243,7 +243,7 @@ GITHUB上的程式碼
 
 若要在這類啟動上自訂行為，您可以覆蓋「**要求啟動**」工作流程：
 
-1. 在 `/apps` 覆蓋 **網站** 精靈：
+1. 在 `/apps` 中，覆蓋 **Sites** 精靈:
 
    `/libs/wcm/core/content/common/managepublicationwizard`
 

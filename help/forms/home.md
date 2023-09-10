@@ -49,7 +49,7 @@ ht-degree: 30%
 ## 重要AEM資源
 
 * [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html)
-* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
+* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用手冊](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)

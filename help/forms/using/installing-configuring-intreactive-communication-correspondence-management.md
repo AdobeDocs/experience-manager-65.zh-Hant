@@ -1,7 +1,7 @@
 ---
-title: 安裝和設定互動式通訊
+title: 安裝和配置 互動式 通信
 seo-title: Install and configure Interactive Communications
-description: 安裝並設定 AEM Forms 互動式通訊，以建立 business correspondences、檔、報表、福利通知、行銷郵件、帳單和歡迎工具組。
+description: 安裝和配置 AEM Forms 互動式 通信以創建業務通信、檔、報表、福利通知、行銷郵件、帳單和歡迎工具組。
 seo-description: Install and configure AEM Forms Interactive Communications to create business correspondences, documents, statements, benefit notices, marketing mails, bills, and welcome kits.
 uuid: 8acb7f68-0b52-4acd-97e2-af31c9408e8d
 topic-tags: installing
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 ---
 
-# 安裝和設定互動式通訊{#install-and-configure-interactive-communications}
+# 安裝和配置 互動式 通信{#install-and-configure-interactive-communications}
 
 ## 簡介 {#introduction}
 
@@ -52,7 +52,7 @@ AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作�
 
 * 符合記憶體需求。 AEM Forms附加元件套件需要：
 
-   * 適用于 Microsoft® Windows 安裝的 15 GB 臨時空間。
+   * 15 GB 的臨時空間，供基於 Microsoft® Windows 的安裝使用。
    * UNIX安裝需要6 GB的暫存空間。
 
 * UNIX系統的額外需求：如果您使用的是UNIX作業系統，請從個別作業系統的安裝媒體安裝下列套件。
@@ -67,7 +67,7 @@ AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作�
   </tr>
   <tr>
    <td>libSM</td>
-   <td>zlib</td>
+   <td>茲利布</td>
    <td>libICE</td>
    <td>libuuid</td>
   </tr>
@@ -92,16 +92,16 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
 1. 點一下頁首功能表中的 **[!UICONTROL Adobe Experience Manager]**。
-1. **[!UICONTROL 在「篩選]** 」區段中：
-   1. 從解決方案 ]**下拉式清單中**[!UICONTROL  選擇 **[!UICONTROL Forms]** 。
-   2. 選取封裝的版本和類型。 您也可以使用 **[!UICONTROL Search 下載]** 選項來篩選結果。
-1. 點擊適用于您的作業系統的封裝名稱，選擇 **[!UICONTROL 接受 EULA 條款]** ，然後點擊 **[!UICONTROL 下載]** 。
+1. 在「篩選器」 **** 部分中：
+   1. 從解決方案 **** 下拉式清單中選擇 **[!UICONTROL Forms]** 。
+   2. 選擇包的版本和類型。 您也可以使用「 **[!UICONTROL Search下載]** 」選項來篩選結果。
+1. 點擊適用于您的作業系統的套裝軟體名稱，選擇接受 **[!UICONTROL EULA 條款]** ，然後點擊 **[!UICONTROL 下載]** 。
 1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
-1. 選取封裝，然後按一下 **[!UICONTROL 安裝]** 。
+1. 選擇包，然後按一下安裝 **** 。
 
-   您也可以透過 AEM Forms 發行 ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) 文章中 [ 列出的直接連結下載封裝。
+   還可以通過AEM Forms版本 ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) 一文中 [ 列出的直接連結下載包。
 
-1. 安裝套裝軟體後，系統會提示您重新開機 AEM 執行個體。 **請勿立即重新開機伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等到 ServiceEvent 註冊和 ServiceEvent 未註冊的訊息停止出現在 AEM 安裝目錄 ] /crx-quickstart/logs/error.log 檔案中 [ ，且記錄穩定。
+1. 安裝包後，系統會提示您重新開機AEM 執行個體。 **不要立即重新開機伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出現在 AEM-Installation-Directory ] /crx-quickstart/logs/error.記錄檔 中 [ ，並且日誌穩定。
 1. 對所有Author和Publish執行個體重複步驟1至7。
 
 ## 安裝後設定 {#post-installation-configurations}
@@ -112,7 +112,7 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 #### 設定RSA和BouncyCastle資料庫  {#configure-rsa-and-bouncycastle-libraries}
 
-在所有作者和 Publish 例項上執行下列步驟，以引導委派資料庫：
+在所有作者和Publish實例上執行以下步驟以引導委派資料庫：
 
 1. 停止基礎AEM執行個體。
 1. 開啟 [AEM安裝目錄]\crx-quickstart\conf\sling.properties檔案進行編輯。
@@ -182,8 +182,8 @@ AEM forms與Adobe Experience Cloud解決方案Adobe Target整合，跨多個數�
 
 您已將環境設定為使用互動式通訊和通訊管理功能。 現在，使用功能的步驟如下：
 
-* [信件管理概述](/help/forms/using/interactive-communications-overview.md)
+* [通信管理概述](/help/forms/using/interactive-communications-overview.md)
 
 * [建立互動式通訊](../../forms/using/create-interactive-communication.md)
 
-* [建立對應信件](../../forms/using/create-letter.md)
+* [建立通信管理信函](../../forms/using/create-letter.md)

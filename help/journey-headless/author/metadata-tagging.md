@@ -5,7 +5,7 @@ exl-id: b4cc1311-1ef7-409a-bd41-0456519b3436
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '257'
-ht-degree: 83%
+ht-degree: 98%
 
 ---
 
@@ -32,11 +32,11 @@ ht-degree: 83%
 
   ![建立內容片段 - 提供名稱](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
-* 此 **變數** 內容片段編輯器的索引標籤可讓您新增預先定義的 **標籤** 從您的專案：
+* 內容片段編輯器的&#x200B;**變化**&#x200B;索引標籤可讓您新增專案中預先定義的&#x200B;**標記**：
 
   ![內容片段編輯器 - Alaska Spirits](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 
-* 此 **中繼資料** 內容片段編輯器的索引標籤可讓您新增中繼資料的各種欄位和預先定義的欄位 **標籤** 從您的專案：
+* 內容片段編輯器的&#x200B;**中繼資料**&#x200B;索引標籤可讓您同時新增專案的各種中繼資料欄位和預先定義的&#x200B;**標記**：
 
   ![內容片段編輯器 - 中繼資料](/help/journey-headless/author/assets/headless-journey-author-metadata-01.png)
 

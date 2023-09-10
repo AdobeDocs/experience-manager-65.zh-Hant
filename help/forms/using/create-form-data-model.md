@@ -55,40 +55,40 @@ AEM [!DNL Forms] 資料整合模組可讓您從不同的後端資料來源(例�
 
 執行以下動作來設定您的 [!DNL MySQL] 資料庫：
 
-1. 將資料庫的 [!DNL MySQL] JDBC 驅動程式安裝為 OSGi 束：
+1. 將資料庫的 [!DNL MySQL] JDBC 驅動程式作為 OSGi 捆綁包安裝：
 
-   1. 從 `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html` 下載 [!DNL MySQL] JDBC 驅動程式 OSGi 捆綁包。<!-- This URL is an insecure link but using https is not possible -->
+   1. [!DNL MySQL]從 下載 `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html` JDBC 驅動程式 OSGi 捆綁包。<!-- This URL is an insecure link but using https is not possible -->
    1. 登入AEM [!DNL Forms] 以管理員身分製作執行個體，並前往AEM網頁主控台套件組合。 預設URL為 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
 
    1. 點選 **[!UICONTROL 安裝/更新]**. 一個 [!UICONTROL 上傳/安裝套件組合] 對話方塊隨即顯示。
 
-   1. 點選 **[!UICONTROL 選擇檔案]** 以瀏覽並選取 [!DNL MySQL] JDBC驅動程式OSGi套件。 選取 **[!UICONTROL 開始套件組合]** 和 **[!UICONTROL 重新整理封裝]**，然後點選 **[!UICONTROL 安裝或更新]**. 確保 [!DNL Oracle Corporation's] 的JDBC驅動程式 [!DNL MySQL] 已啟用。 已安裝驅動程式。
+   1. 點選 **[!UICONTROL 選擇檔案]** 以瀏覽並選取 [!DNL MySQL] JDBC驅動程式OSGi套件。 選取 **[!UICONTROL 開始套件組合]** 和 **[!UICONTROL 重新整理封裝]**，然後點選 **[!UICONTROL 安裝或更新]**. 確保 [!DNL Oracle Corporation's] 的JDBC驅動程式 [!DNL MySQL] 已啟用。 驅動程式已安裝。
 
-1. 將資料庫設定 [!DNL MySQL] 為資料來源：
+1. 將資料庫配置為 [!DNL MySQL] 資料來源：
 
-   1. 前往 [https://localhost:4502/system/console/configMgr ](https://localhost:4502/system/console/configMgr) 的 [ AEM 網站控制台。
-   1. 尋找 **Apache Sling 連線的資料來源** 設定。 點擊以在編輯模式中開啟設定。
+   1. 前往位於 HTTPs://localhost:4502/system/console/configMgr AEM [ ](https://localhost:4502/system/console/configMgr) Web 主控台。
+   1. 找到 **Apache Sling 連線的池資料來源** 設定。 點選以在編輯模式中開啟設定。
    1. 在設定對話方塊中，指定下列詳細資訊：
 
       * **資料來源名稱：** 您可以指定任何名稱。 例如，指定 **WeRetailMySQL**.
       * **資料來源服務屬性名稱**：指定包含DataSource名稱的服務屬性名稱。 它是在將資料來源執行個體註冊為OSGi服務時指定。 例如， **資料來源。名稱**.
       * **JDBC驅動程式類別**：指定JDBC驅動程式的Java類別名稱。 的 [!DNL MySQL] 資料庫，指定 **com.mysql.jdbc.Driver**.
-      * **JDBC 連接 URI** ：指定資料庫的連線 URL。 對於 [!DNL MySQL] 在連接埠3306和綱要 weretail 上執行的資料庫，URL 為。。 `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **JDBC 連接 URI：** 指定資料庫的連接URL。 對於 [!DNL MySQL] 在 連接埠 3306 和 weRetail 上運行綱要資料庫，URL為： `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
 
       >[!NOTE]
       >
-      > [!DNL MySQL]當資料庫位於防火牆後面時，資料庫主機名稱不是公用 DNS。資料庫的 IP 位址需要新增至 AEM 主機電腦的/etc/hosts *檔案中* 。
+      > [!DNL MySQL]當資料庫位於防火牆後面時，資料庫主機名稱不是公共 DNS。資料庫的 IP 位址需要添加到 *AEM 主機電腦的 /etc/hosts* 檔中。
 
       * **使用者名稱：** 資料庫的使用者名稱。 必須啟用JDBC驅動程式才能與資料庫建立連線。
       * **密碼：** 資料庫的密碼。 必須啟用JDBC驅動程式才能與資料庫建立連線。
 
       >[!NOTE]
       >
-      >AEM Forms不支援NT驗證 [!DNL MySQL]. 前往 [https://localhost:4502/system/console/configMgr ](https://localhost:4502/system/console/configMgr) 的 [ AEM web console，並搜尋 &quot;Apache Sling Connection 彙集資料來源&quot;。對於「JDBC 連接 URI」屬性將「integratedSecurity」的值設定為 False，並使用建立的使用者名稱和密碼來與 [!DNL MySQL] 資料庫連接。
+      >AEM Forms不支援NT驗證 [!DNL MySQL]. 前往位於 HTTPs://localhost:4502/system/console/configMgr ](https://localhost:4502/system/console/configMgr) AEM [ Web 主控台並搜尋「Apache Sling 連線共用資料來源」。對於「JDBC 連接 URI」屬性將「integratedSecurity」的值設置為 False，並使用創建的使用者名和密碼與資料庫連接 [!DNL MySQL] 。
 
-      * **進行借用測試：** 啟用「借用 ]**中的**[!UICONTROL  測試」選項。
-      * **恢復測試：** 啟用 **[!UICONTROL 「返回]** 時測試」選項。
-      * **驗證查詢：** 指定 SQL SELECT 查詢以驗證來自池中的連線。 查詢至少必須傳回一列。 例如， **選取 &#42; 從customerdetails**.
+      * **借用測試：** 啟用借 **[!UICONTROL 用]** 測試選項。
+      * **返回時測試：** 啟用「 **[!UICONTROL 返回]** 時測試」選項。
+      * **驗證查詢：** 指定 SQL SELECT 查詢以驗證池中的連接。 查詢至少必須傳回一列。 例如， **選取 &#42; 從customerdetails**.
       * **交易隔離**：將值設為 **READ_COMMITTED**.
 
         保留其他屬性為預設值 [值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) 然後點選 **[!UICONTROL 儲存]**.
@@ -163,22 +163,22 @@ AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模�
 
       ![write-default](assets/write-default.png)
 
-      新增並設定 **id** 引數，如下所示。
+      按如下方式添加和配置 **id** 參數。
 
-      ![id-參數](assets/id-arg.png)
+      ![id-arg](assets/id-arg.png)
 
-   1. **[!UICONTROL 點按完成]** 以儲存資料模型物件屬性。然後，點擊 **[!UICONTROL 儲存]** 以儲存表單資料模型。
+   1. 點擊 **[!UICONTROL 完成]** 以保存資料模型物件屬性。 然後，點擊 **[!UICONTROL 儲存]** 以保存表單資料模型。
 
-      **[!UICONTROL Get]** 和 **[!UICONTROL update]** services 被新增為資料模型物件的預設服務。
+      **[!UICONTROL 獲取]** 和 **[!UICONTROL 更新]** 服務將添加為資料模型物件的預設服務。
 
       ![data-model-object](assets/data-model-object.png)
 
 1. 前往 **[!UICONTROL 服務]** 標籤並設定 **[!UICONTROL get]** 和 **[!UICONTROL 更新]** 服務。
 
-   1. **[!UICONTROL 選取「取得]** 服務」並點擊 **[!UICONTROL 編輯屬性]** 。「屬性」對話方塊開啟。
-   1. 在編輯屬性對話方塊中指定下列專案：
+   1. 選擇獲取 ]**服務，**[!UICONTROL  然後點擊 **[!UICONTROL 編輯 屬性]** 。「屬性」對話方塊開啟。
+   1. 在編輯 屬性對話方塊中指定以下內容：
 
-      * **標題** ：指定服務標題。 例如：檢索送貨位址。
+      * **標題** ：指定服務的標題。 例如：檢索送貨位址。
       * **說明** ：指定包含服務詳細功能的說明。 例如：
 
         此服務會從擷取送貨地址和其他客戶詳細資料 [!DNL MySQL] 資料庫

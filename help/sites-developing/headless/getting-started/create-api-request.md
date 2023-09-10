@@ -5,7 +5,7 @@ exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '555'
-ht-degree: 46%
+ht-degree: 48%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 * [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 可讓您建立存取和傳遞內容片段的要求。
    * 若要使用此， [端點必須在AEM中定義和啟用](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)，如有必要， [已安裝GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface).
-* [Assets REST API](/help/assets/assets-api-content-fragments.md) 可讓您建立和修改內容片段（和其他資產）。
+* [Assets REST API](/help/assets/assets-api-content-fragments.md) 可讓您建立及修改內容片段 (和其他資產)。
 
 本指南的其餘部分著重在 GraphQL 存取和內容片段傳遞。
 

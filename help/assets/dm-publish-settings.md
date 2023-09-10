@@ -21,7 +21,7 @@ ht-degree: 3%
 只有符合以下條件時，才可設定Dynamic Media發佈設定：
 
 * 您正在以Scene7模式執行Dynamic Media。 另請參閱 [在Scene7模式中啟用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
-* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5.11或更新版本中。 另請參閱 [在Cloud Services中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
+* 您有 *現有* **[!UICONTROL Dynamic Media設定]** (在 **[!UICONTROL Cloud Service]**)在Adobe Experience Manager 6.5.11或更新版本中。 另請參閱 [在Cloud Service中建立Dynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
 * 您是具有管理員許可權的Experience Manager系統管理員。
 
 Dynamic Media發佈設定適用於有經驗的網站開發人員和程式設計人員。 Adobe Dynamic Media建議變更這些發佈設定的使用者熟悉Adobe Dynamic Media、HTTP通訊協定標準和慣例，以及基本影像技術。
@@ -143,7 +143,7 @@ Dynamic Media發佈設定頁面會建立預設設定，用來決定如何從Adob
 
 ## 在公開資產之前先測試資產 {#test-assets-before-making-public}
 
-Secure Testing可協助您定義安全的測試環境，並根據可設定的IP位址和範圍集，建立健全的企業對企業解決方案。 此功能可讓您將AdobeDynamic Media部署與內容管理和業務系統的架構搭配起來。
+Secure Testing可協助您定義安全的測試環境，並根據可設定的IP位址和範圍組合，建立健全的企業對企業解決方案。 此功能可讓您將AdobeDynamic Media部署與內容管理和業務系統的架構搭配起來。
 
 使用Secure Testing，您可以預覽包含未發佈內容的網站測試版本。
 

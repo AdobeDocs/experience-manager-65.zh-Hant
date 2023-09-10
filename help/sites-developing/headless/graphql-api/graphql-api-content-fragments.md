@@ -6,7 +6,7 @@ exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 source-git-commit: 79fa58e63596301e1669903ce10dd8b2ba7d0a1b
 workflow-type: tm+mt
 source-wordcount: '4774'
-ht-degree: 54%
+ht-degree: 61%
 
 ---
 
@@ -118,7 +118,7 @@ AEM提供將查詢（兩種型別）轉換為 [持久查詢](/help/sites-develop
 
 雖然GraphQL也支援GET要求，但這些要求可能會達到限制（例如URL的長度），而使用持續性查詢可以避免這些限制。
 
-另請參閱 [啟用持續查詢的快取](#enable-caching-persisted-queries) 以取得更多詳細資料。
+如需更多的詳細資訊，請參閱[啟用持續性查詢的快取](#enable-caching-persisted-queries)。
 
 >[!NOTE]
 >
@@ -546,7 +546,7 @@ query GetAdventureByType($includePrice: Boolean!) {
 >
 >為獲得最佳效能，請考慮 [在GraphQL篩選中更新要分頁和排序的內容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
-此功能可讓您根據指定欄位來排序查詢結果。
+此功能可讓您根據指定的欄位將查詢結果進行排序。
 
 排序標準：
 
@@ -615,7 +615,7 @@ query {
 >
 >為獲得最佳效能，請考慮 [在GraphQL篩選中更新要分頁和排序的內容片段](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
-此功能可讓您對傳回清單的查詢型別執行分頁。 提供兩種方法：
+此功能可讓您針對傳回清單的查詢類型執行分頁。提供兩種方法：
 
 * 在 `List` 查詢中，`offset` 和 `limit`
 * 在 `Paginated` 查詢中，`first` 和 `after`
@@ -654,7 +654,7 @@ query {
 
 ### 已分頁查詢 - first 和 after {#paginated-first-after}
 
-`...Paginated` 查詢類型重複使用大部分的 `...List` 查詢類型功能 (篩選、排序)，但沒有使用 `offset`/`limit` 引數，而是使用 `first`/`after`，如 [GraphQL 游標連接規格](https://relay.dev/graphql/connections.htm) 所定義。您可以在 [GraphQL 簡介](https://graphql.org/learn/pagination/#pagination-and-edges)中找到不太正式的簡介。
+`...Paginated` 查詢類型重複使用大部分的 `...List` 查詢類型功能 (篩選、排序)，但沒有使用 `offset`/`limit` 引數，而是使用 `first`/`after`，如 [GraphQL 游標連接規格](https://relay.dev/graphql/connections.htm)所定義。您可以在 [GraphQL 簡介](https://graphql.org/learn/pagination/#pagination-and-edges)中找到不太正式的簡介。
 
 * `first`：要傳回的前 `n` 個項目。
 預設為 `50`。
@@ -689,25 +689,25 @@ query {
 >
 >* 由於內部技術限制，如果對巢狀欄位套用排序和篩選，效能會降低。 因此，請使用儲存在根層級的篩選/排序欄位。 如果要查詢大型分頁結果集，也建議使用此技巧。
 
-## GraphQL持續查詢 — 啟用Dispatcher中的快取 {#graphql-persisted-queries-enabling-caching-dispatcher}
+## GraphQL 持續性查詢 - 在 Dispatcher 中啟用快取 {#graphql-persisted-queries-enabling-caching-dispatcher}
 
 >[!CAUTION]
 >
->如果Dispatcher中的快取已啟用，則 [CORS篩選器](#cors-filter) 而不需要，因此可忽略區段。
+>如果啟用了 Dispatcher 的快取，就不需要 [CORS 篩選器](#cors-filter)，因此可以忽略該部分。
 
-Dispatcher中預設不會啟用持續查詢的快取。 無法啟用預設值，因為使用具有多種來源的CORS （跨來源資源共用）的客戶需要檢閱（並可能更新）其Dispatcher設定。
+根據預設，不啟用 Dispatcher 的持續性查詢快取。因為使用具有多個來源的 CORS (跨來源資源共用) 的客戶必須檢閱，且可能更新其 Dispatcher 設定，因此無法預設啟用。
 
 >[!NOTE]
 >
->Dispatcher不會快取 `Vary` 標頭。
+>Dispatcher 不會快取 `Vary` 標頭。
 >
->可以在Dispatcher中啟用其他CORS相關標頭的快取，但是當有多個CORS來源時，該功能可能還不夠。
+>在 Dispatcher 中可以啟用其他 CORS 相關標頭的快取，但在有多個 CORS 來源時可能不足。
 
-### 啟用持續查詢的快取 {#enable-caching-persisted-queries}
+### 啟用持續性查詢的快取 {#enable-caching-persisted-queries}
 
-若要啟用持續查詢的快取，請定義Dispatcher變數 `CACHE_GRAPHQL_PERSISTED_QUERIES`：
+若要啟用持續性查詢的快取，請定義 Dispatcher 變數 `CACHE_GRAPHQL_PERSISTED_QUERIES`：
 
-1. 將變數新增到Dispatcher檔案 `global.vars`：
+1. 將變數新增至 Dispatcher 檔案 `global.vars`：
 
    ```xml
    Define CACHE_GRAPHQL_PERSISTED_QUERIES
@@ -715,18 +715,18 @@ Dispatcher中預設不會啟用持續查詢的快取。 無法啟用預設值，
 
 >[!NOTE]
 >
->若要遵循 [Dispatcher對可快取檔案的需求](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)，Dispatcher會新增尾碼 `.json` 至所有儲存的查詢URL，以便可以快取結果。
+>為了符合 [Dispatcher 對可快取檔案的要求](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)，Dispatcher 會將後綴 `.json` 新增到所有持續性查詢 URL，以便快取結果。
 >
->在啟用持續查詢快取後，此尾碼會由重寫規則新增。
+>啟用持續性查詢快取後，就會重寫規則來新增此後綴。
 
-### Dispatcher中的CORS設定 {#cors-configuration-in-dispatcher}
+### Dispatcher 的 CORS 設定 {#cors-configuration-in-dispatcher}
 
-使用CORS請求的客戶可能需要在Dispatcher中檢閱和更新其CORS設定。
+使用 CORS 要求的客戶可能必須在 Dispatcher 中檢閱和更新其 CORS 設定。
 
-* 此 `Origin` 標題不能透過Dispatcher傳遞給AEM發佈：
+* `Origin` 標頭不得透過 Dispatcher 傳遞到 AEM 發佈：
    * 檢查 `clientheaders.any` 檔案。
-* 相反地，必須在Dispatcher層級評估CORS請求的可允許來源。 此方法也能確保CORS相關的標頭在任何情況下都能在同一位置正確設定。
-   * 此類設定應新增至 `vhost` 檔案。 以下提供設定範例；為簡化起見，僅提供CORS相關部分。 您可以根據特定使用案例進行調整。
+* 而是必須在 Dispatcher 級別評估 CORS 要求是否為許可的來源。此方法也能確保在所有情況下，CORS 相關標頭正確設定於一個位置。
+   * 如此的設定應該新增至 `vhost` 檔案。以下提供一個範例設定；為了簡單起見，僅提供了 CORS 相關部分。您可以根據特定使用案例進行調整。
 
   ```xml
   <VirtualHost *:80>
@@ -896,7 +896,7 @@ Dispatcher中預設不會啟用持續查詢的快取。 無法啟用預設值，
 
 >[!CAUTION]
 >
->如果 [Dispatcher中的快取已啟用](#graphql-persisted-queries-enabling-caching-dispatcher) 則不需要CORS篩選器，因此可忽略此區段。
+>如果已經啟用 Dispatcher 的[快取，](#graphql-persisted-queries-enabling-caching-dispatcher)就不需要 CORS 篩選器，因此可以忽略該部分。
 
 >[!NOTE]
 >
@@ -1006,4 +1006,4 @@ AEM計畫在未來投資AEM GraphQL API。*&quot;
 
 ## 教學課程 - AEM Headless 和 GraphQL 快速入門 {#tutorial}
 
-正在尋找實作教學課程？查看[AEM Headless 和 GraphQL 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)端對端教學課程，說明如何在 Headless CMS 情境下使用 AEM GraphQL API 建立和公開內容並供外部應用程式取用。
+正在尋找實作教學課程？查看 [AEM Headless 和 GraphQL 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)端對端教學課程，說明如何在 Headless CMS 情境下使用 AEM GraphQL API 建立和公開內容並供外部應用程式取用。

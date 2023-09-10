@@ -14,7 +14,7 @@ exl-id: 2a0bf59d-8829-4142-9cb4-dcef90f53ae9
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '2804'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -124,12 +124,12 @@ ht-degree: 4%
 
 1. 從下拉式清單中選取您想要的運運算元。
 1. 輸入要篩選的文字。
-1. 按一下 **套用**.
+1. 按一下「**套用**」。
 
 若要停用篩選：
 
 1. 移除篩選文字。
-1. 按一下 **套用**.
+1. 按一下「**套用**」。
 
 #### 彙總 {#aggregates}
 

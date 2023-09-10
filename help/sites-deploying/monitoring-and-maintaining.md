@@ -1,5 +1,5 @@
 ---
-title: 監控和維護您的 Adobe Experience Manager 執行個體
+title: 監控和維護您的Adobe Experience Manager 執行個體
 description: 瞭解如何監視 AEM。
 uuid: 14466552-5c92-4730-a427-85675a2b121c
 contentOwner: User
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ---
 
-# 監控和維護您的 Adobe Experience Manager 執行個體{#monitoring-and-maintaining-your-aem-instance}
+# 監控和維護您的Adobe Experience Manager 執行個體{#monitoring-and-maintaining-your-aem-instance}
 
 部署AEM執行個體後，您必須監視並維護其作業、效能和完整性。
 
@@ -61,13 +61,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需備份效能的詳細資訊，請閱讀 [ 「返回上績效 ](/help/sites-deploying/configuring-performance.md#backup-performance) 」一節。
+>有關備份性能的更多資訊，請閱讀 [ 返回性能 ](/help/sites-deploying/configuring-performance.md#backup-performance) 部分。
 
-### 備份您的軟體安裝 {#backing-up-your-software-installation}
+### 備份軟體安裝 {#backing-up-your-software-installation}
 
-安裝後，或在設定中出現重大變更後，建立您的軟體安裝備份。
+安裝或對配置進行重大更改後，請創建軟體安裝備份。
 
-若要完成此任務，請 [ 備份整個存放庫 ](#backing-up-your-repository) ，然後：
+若要完成此任務， [ 請備份整個存放庫 ](#backing-up-your-repository) 然後：
 
 1. 停止 AEM。
 1. 備份整個 `<cq-installation-dir>` 從您的檔案系統。
@@ -94,11 +94,11 @@ ht-degree: 0%
 
 此 **清除版本** 工具旨在永久刪除存放庫中節點的版本或節點階層。 其主要用途是協助您移除舊版節點，以縮小存放庫的大小。
 
-本節介紹與AEM版本設定功能相關的維護操作。 此 **清除版本** 工具旨在永久刪除存放庫中節點的版本或節點階層。 其主要作用是説明您透過移除舊版本節點來縮減存放庫的大小。
+本節介紹與AEM版本設定功能相關的維護操作。 此 **清除版本** 工具旨在永久刪除存放庫中節點的版本或節點階層。 其主要目的是通過刪除舊版本的節點來説明您減小存放庫的大小。
 
 ### 概觀 {#overview}
 
-**「清除版本** 」工具為每週維護任務。首次使用之前，必須先新增，然後再設定。 之後，可依請求或每週執行。
+清除 **版本** 工具可作為每週維護任務提供。 在首次使用之前，必須先添加它，然後進行配置。 之後，可依請求或每週執行。
 
 ### 清除網站的版本 {#purging-versions-of-a-web-site}
 
@@ -177,14 +177,14 @@ ht-degree: 0%
 
 此外，主控台還提供版本的實用資訊：
 
-* `V 1.0`：版本號。
-* `V 1.0.1`&#42;：星號表示版本為目前（基礎貨幣）版本，無法清除。
+* `V 1.0`：版本號碼。
+* `V 1.0.1`&#42;：星號表示該版本是當前（基本）版本，無法清除。
 
 * `Thu Mar 15 2012 08:37:32 GMT+0100`：版本的日期。
 
 在下一個範例中：
 
-* **[!DNL Shirts]**&#x200B;版本會被清除，因為其版本期限大於兩天。
+* **[!DNL Shirts]**&#x200B;版本將被清除，因為其版本存在時間大於兩天。
 * 此 **[!DNL Tonga Fashions!]** 會清除版本，因為其版本數大於5。
 
 ![global_version_screenshot](assets/global_version_screenshot.png)
@@ -207,11 +207,11 @@ AEM WCM會記錄詳細的記錄。 拆開包裝並開始快速入門後，您可
 
 * 此 `error.log` 檔案會根據模式重新命名 {original_filename} `.yyyy-MM-dd`. 例如，在2010年7月11日，目前的記錄檔已重新命名 `error.log-2010-07-10`，然後是新的 `error.og` 「 」已建立。
 
-* 不會刪除上一個記錄檔，因此，定期清除舊的記錄檔以限制磁片使用。
+* 上一個日誌檔不會被刪除，因此您有責任定期清理舊的日誌檔以限制磁片使用量。
 
 >[!NOTE]
 >
->如果您升級 AEM 安裝，AEM 中不再使用的任何現有記錄檔將保留在磁片上。 您可以移除而不會有風險。 所有新記錄專案都會寫入新的記錄檔。
+>如果升級 AEM 安裝，AEM不再使用的任何現有記錄檔都將保留在磁片上。 您可以毫無風險地刪除它們。 所有新的日誌條目都將寫入新的日誌檔中。
 
 ### 尋找記錄檔 {#finding-the-log-files}
 
@@ -292,7 +292,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 名稱：`org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
 
-     `<identifier>`您（必須）輸入的免費文字取代了該執行個體（您不能省略此資訊）。
+     其中 `<identifier>` 替換為您（必須）輸入以標識執行個體免費文本（不能省略此資訊）。
 
      例如 `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
@@ -300,9 +300,9 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    >[!NOTE]
    >
-   >儘管並不是技術要求，但建議 `<identifier>` 使用獨特的。
+   >雖然不是技術要求，但建議獨一無 `<identifier>` 二。
 
-1. 在此節點上設定下列屬性：
+1. 在此節點上設置以下屬性：
 
    * 名稱：`org.apache.sling.commons.log.file`
 
@@ -314,7 +314,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
      型別：字串[] （字串+多個）
 
-     值：指定記錄器為其記錄訊息的 OSGi 服務;例如，下列所有專案：
+     值：指定記錄器要記錄消息的OSGi服務;例如，以下所有內容：
 
       * `org.apache.sling`
       * `org.apache.felix`
@@ -332,7 +332,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
         類型：`String`
 
-        值：根據需要指定記錄檔的模式;例如，
+        值：根據需要指定日誌消息的模式;例如，
 
         `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
 
@@ -433,13 +433,13 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >指示何時建立新檔案（以及根據名稱模式重新命名現有檔案）。
    >
    >* 可使用數字指定大小限制。 如果未指定大小指示器，則會將其視為位元組數，或者您可以新增其中一個大小指示器 —  `KB`， `MB`，或 `GB` （忽略大小寫）。
-   >* 時間/日期排程可以指定為 `java.util.SimpleDateFormat` 模式。 它定義了在其後旋轉檔案的時段。 此外，還會附加至旋轉檔案（用於識別）的尾碼。
+   >* 可以將時間/日期計畫指定為模式 `java.util.SimpleDateFormat` 。 它定義了檔旋轉之後的時段。 此外，附加在旋轉檔的尾碼（用於識別）。
    >
-   >預設為「.」yyyy-mm-dd （適用于每日記錄輪替）。
+   >預設值為「」。yyyy-MM-dd （用於每日日誌輪換）。
    >
-   >例如，在2010年1月20日午夜（或此日期後的第一個記錄訊息精確到），.。。/logs/error.log 重新命名為。/logs/error.log.2010-01-20. 1月21日的記錄會輸出至（新和空白）。/logs/error.log，直到在下一天變更為止。
+   >例如，在 2010 年 1 月 20 日午夜（或在此日期之後出現的第一條日誌消息精確時），../logs/error.log 已重新命名為 ../logs/error.log.2010-01-20. 1 月 21 日的日誌記錄輸出到（新的和空的）../logs/error.log，直到在下一個更改日期時滾動。
    >
-   >| `'.'yyyy-MM` | 每月開始時的旋轉 |
+   >| `'.'yyyy-MM` | 每月月初輪換 |
    >|---|---|
    >| `'.'yyyy-ww` | 每週第一天的輪換（視地區設定而定）。 |
    >| `'.'yyyy-MM-dd` | 在每天的午夜輪換。 |
@@ -923,9 +923,9 @@ Percentage of the requests served within a certain time (ms)
 
    現在您可以選取其他選項。
 
-### 使用（J） VisualVM 監控效能 {#monitoring-performance-using-j-visualvm}
+### 使用 （J）VisualVM 監控性能 {#monitoring-performance-using-j-visualvm}
 
-對於 JDK 6-8，工具命令 `visualvm` 可用。 安裝JDK後，您可以執行下列動作：
+對於 JDK 6-8，可以使用 工具 命令 `visualvm` 。 安裝JDK後，您可以執行下列動作：
 
 1. 啟動您的AEM執行個體。
 
@@ -1037,9 +1037,9 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 #### 資產的平均大小是多少？ {#what-is-the-average-size-of-the-assets}
 
-若要確定資料夾的總大小 `/var/dam` ：
+要確定資料夾的總 `/var/dam` 大小，請執行以下操作：
 
-1. 使用 WebDAV 將存放庫映射至本機檔案系統。
+1. 使用 WebDAV 將存放庫映射到本地檔案系統。
 
 1. 使用命令列：
 
@@ -1134,13 +1134,13 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * 無論您是否已停用除錯資訊的收集，都可以在各種位置進行設定，包括：
 
    * [Apache Sling JSP指令碼處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjspscripthandler)
-   * [Apache Sling JavaScript 處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
-   * [Apache Sling 記錄設定](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
+   * [Apache Sling JavaScript處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
+   * [Apache Sling 記錄組態](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
    * [CQ HTML 庫管理員](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
    * [CQ WCM Debug 篩選](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
    * [伐木](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
 
-* 是否以及如何設定 [ 版本清除](/help/sites-deploying/version-purging.md)
+* 是否已以及如何配置 [ 版本清除](/help/sites-deploying/version-purging.md)
 * 知識庫：
 
    * [開啟的檔案過多](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=en)
@@ -1148,7 +1148,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 ### 定期效能降低 {#regular-performance-degradation}
 
-如果您在每次重新開機後（有時一周或稍後），您會看到執行個體 deteriorating 的效能，可以勾選下列專案：
+如果您在每次重新開機後（有時一周或更晚）看到執行個體的性能下降，則可以檢查以下內容：
 
 * [記憶體不足](#outofmemory)
 * 知識庫：
@@ -1159,7 +1159,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 Java™ Virtual Machine (JVM)在調整方面已有所改善(尤其是自Java™ 7以來)。 因此，指定合理的固定JVM大小並使用預設值通常是合適的。
 
-如果預設設定不合適，建立方法以監視並評估 GC 效能很重要。 在嘗試調整 JVM 之前進行此操作。 此過程可能涉及監控因素，包括堆大小、演算法和其他方面。
+如果預設設置不合適，那麼建立一種監視和評估氣相色譜性能的方法非常重要。 在嘗試調整 JVM 之前執行此操作。 此過程可能涉及監視因素，包括堆大小、演算法和其他方面。
 
 常見的選項包括：
 

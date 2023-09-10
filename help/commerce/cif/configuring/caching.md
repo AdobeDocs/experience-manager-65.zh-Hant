@@ -47,7 +47,7 @@ venia/components/structure/navigation:true:10:600
 
 ## Dispatcher快取 {#dispatcher}
 
-在中快取AEM頁面或片段 [AEM傳送器](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 是任何AEM專案的最佳實務。 通常，它仰賴失效技術，以確保在AEM中變更的任何內容在Dispatcher中正確更新。 這是AEM Dispatcher快取策略的核心功能。
+在中快取AEM頁面或片段 [AEM傳送器](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 是任何AEM專案的最佳實務。 通常，它仰賴失效技術，以確保在AEM中變更的任何內容在Dispatcher中正確更新。 這是AEM Dispatcher快取策略的核心功能。
 
 除了純AEM受管內容CIF之外，頁面通常還可以顯示透過GraphQL從Adobe Commerce動態擷取的商務資料。 雖然頁面結構本身可能不會變更，但如果部分產品資料（例如名稱或價格）在Adobe Commerce中有所變更，商業內容可能會有所不同。
 
@@ -63,4 +63,4 @@ venia/components/structure/navigation:true:10:600
 
 - [Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)
 - [GraphQL快取設定](https://github.com/adobe/commerce-cif-graphql-client#caching)
-- [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
+- [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

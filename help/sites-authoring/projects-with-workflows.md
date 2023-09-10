@@ -13,7 +13,7 @@ exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -69,7 +69,7 @@ ht-degree: 3%
 
    ![請求複製工作流程](assets/project-request-copy-workflow.png)
 
-1. 按一下 **提交**.
+1. 按一下「**提交**」。
 
 工作流程隨即開始。 任務會出現在 **任務** 卡片。
 
@@ -87,7 +87,7 @@ ht-degree: 3%
 
    ![專案核准工作流程](assets/project-approval-workflow.png)
 
-1. 按一下 **提交**.
+1. 按一下「**提交**」。
 
 工作流程隨即開始。 任務會出現在 **任務** 卡片。
 
@@ -101,7 +101,7 @@ ht-degree: 3%
 
    ![請求啟動工作流程](assets/project-request-launch-workflow.png)
 
-1. 按一下 **提交**.
+1. 按一下「**提交**」。
 
 工作流程隨即開始。 工作流程會顯示在 **工作流程** 清單。
 
@@ -115,7 +115,7 @@ ht-degree: 3%
 
    ![請求登入頁面工作流程](assets/project-request-landing-page-workflow.png)
 
-1. 按一下 **提交**.
+1. 按一下「**提交**」。
 
 工作流程隨即開始。 任務會出現在 **任務** 卡片。
 
@@ -129,7 +129,7 @@ ht-degree: 3%
 
    ![請求電子郵件工作流程](assets/project-request-email-workflow.png)
 
-1. 按一下 **提交**.
+1. 按一下「**提交**」。
 
 工作流程隨即開始。 任務會出現在 **任務** 卡片。
 

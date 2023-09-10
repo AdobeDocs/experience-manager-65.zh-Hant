@@ -5,7 +5,7 @@ exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1333'
-ht-degree: 93%
+ht-degree: 94%
 
 ---
 
@@ -133,7 +133,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 
 * 是在定義內容片段模型時可用的特定資料類型。
 * 可參考另一個片段，取決於特定的內容片段模型。
-* 可讓您建立並擷取結構化資料。
+* 可讓您建立並接著擷取結構化資料。
 
    * 當定義為 **multifeed** 時，主片段可以參考 (擷取) 多個子片段。
 
@@ -267,7 +267,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 * 在內容片段編輯器建立內容時
 * 產生您將查詢的 GraphQL 結構描述
 
-### 在哪裡測試你的查詢 {#where-to-test-your-queries}
+### 在哪裡測試您的查詢 {#where-to-test-your-queries}
 
 查詢可在 [GraphiQL介面](/help/sites-developing/headless/graphql-api/graphiql-ide.md)，例如：
 

@@ -74,7 +74,7 @@ Geometrixx網站中提供了此使用案例的說明範例：
   </tr>
   <tr>
    <td>根路徑</td>
-   <td>表示大量編輯器搜尋的根路徑。<br />例如 <code>/content/geometrixx/en</code>。「大量編輯器」會搜尋所有子節點。</td>
+   <td>表示大量編輯器搜尋的根路徑。<br />例如，<code>/content/geometrixx/en</code>。「大量編輯器」會搜尋所有子節點。</td>
   </tr>
   <tr>
    <td>查詢參數</td>
