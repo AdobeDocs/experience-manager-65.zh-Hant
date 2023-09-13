@@ -2,14 +2,17 @@
 title: Adobe Experience Manager 6.5版中已過時和已移除的功能。
 description: 特定於Adobe Experience Manager 6.5中已過時和已移除功能的發行說明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: c2e9b2f3ea2603766e4062229d8e5278feed8788
+source-git-commit: aec2eb3303ad9747f6f56ae2eb31c3c7ed7b0c24
 workflow-type: tm+mt
-source-wordcount: '1732'
-ht-degree: 11%
+source-wordcount: '1710'
+ht-degree: 12%
 
 ---
 
 # 過時和移除的功能 {#deprecated-and-removed-features}
+
+<!-- Search&Promote is end-of-life September 1, 2022 | Assets | If a user does not have sufficient (read and write) permissions on `/content/dam/collections`, the user cannot create a Collection. | Honor the access control setup of user and ensure appropriate permissions. ||
+|Adobe Search & Promote|The integration with Adobe Search & Promote is deprecated. Adobe does not plan to make further enhancements to the Search & Promote integration. Adobe Search & Promote integration remains fully supported while being deprecated.||| -->
 
 Adobe 持續評估產品功能，以更新或替代的方式來改善或取代舊功能，以提升客戶享有的整體價值，且隨時謹慎考慮是否回溯相容。
 
@@ -33,10 +36,26 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | [!DNL Sites] | 內容片段範本，用於建立簡單的內容片段。 | 現在[基於模型的結構化內容片段](/help/assets/content-fragments/content-fragments-models.md)。 | 6.5.11.0 |
 | Creative Cloud整合 | AEM 6.2引入了AEM至Creative Cloud資料夾共用功能。它提供一種方法，讓創意使用者可以存取AEM中的資產，以便在中開啟它們 [!DNL Creative Cloud] 應用程式並上傳新檔案或儲存變更至AEM。 Creative Cloud應用程式推出的新功能Adobe Asset Link提供更優異的使用者體驗，以及更強大的存取功能，可直接從Photoshop、InDesign和Illustrator內從AEM存取資產。 Adobe不打算進一步增強AEM的「Creative Cloud資料夾共用」整合。 雖然此功能包含在AEM中，但建議使用替代解決方案。 | 建議客戶改用新的Creative Cloud整合功能，包括Adobe資產連結或AEM案頭應用程式。 |  |
 | Assets | `AssetDownloadServlet` 發佈執行個體預設為停用。 如需詳細資訊，請參閱 [AEM安全性檢查清單](/help/sites-administering/security-checklist.md). | 設定說明於 [AEM安全性檢查清單](/help/sites-administering/security-checklist.md). |  |
-<!-- Search&Promote is end-of-life September 1, 2022 | Assets | If a user does not have sufficient (read and write) permissions on `/content/dam/collections`, the user cannot create a Collection. | Honor the access control setup of user and ensure appropriate permissions. ||
-|Adobe Search & Promote|The integration with Adobe Search & Promote is deprecated. Adobe does not plan to make further enhancements to the Search & Promote integration. Adobe Search & Promote integration remains fully supported while being deprecated.||| -->
-|動態標籤管理員(DTM) |不建議使用DTM整合。 |切換以使用Adobe Experience Platform Launch作為標籤管理員。 || |Adobe Target|新增AEM連線Adobe Target服務的功能，使用 [!DNL Adobe I/O] 以AEM 6.5中的Adobe Target Standard API (Rest API)為基礎，Target Classic API (XML)方式已過時。|將整合重新設定為 [使用新API](/help/sites-administering/target.md). || |Adobe Target|使用 `mbox.js` 不建議使用AEM中與Adobe Target的整合方式。|切換以使用 `at.js` 1.x.|| |商務 | [CIF重設](https://github.com/adobe/commerce-cif-api) 在2018年提供的一組微服務，用於啟用AEM與商務引擎之間的整合。 在Adobe於2018年年中收購Adobe Commerce (前身為Magento)後，Adobe決定變更其作法，原因有二。 Commerce有自己的Commerce API集(REST和GraphQL)，維護兩組API是不好的做法。 市場趨勢顯示客戶正轉向GraphQL，因為這是查詢資料的更有效率。 2019年，Adobe已發佈新的Commerce Integration Framework，使用Commerce的GraphQL API作為真相來源。 Adobe不打算進一步投資CIF REST。 建議客戶使用替代解決方案。|若為AEM-Commerce整合，請切換至 [AEM CIF原型](https://github.com/adobe/aem-cif-project-archetype) 和 [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components). 請參閱AEM與Adobe Commerce整合 [使用Commerce整合框架](/help/commerce/cif/integrating/magento.md). Adobe的藍圖支援第三方（Commerce除外）與新方法整合。|| |元件(AEM Sites) |Adobe不打算進一步增強中儲存的大部分Foundation元件 `/libs/foundation/components`. 尋找 `cq:deprecated` 和 `cq:deprecatedReason` 屬性。 AEM 6.5包含基礎元件，而從舊版升級的客戶可繼續依原樣使用。 此外，即使已棄用，亦支援基礎元件。 |Adobe建議將核心元件用於未來的專案。 現有網站可維持原狀，或使用 [AEM Modernize Tools Suite](https://github.com/adobe/aem-modernize-tools) 以使用核心元件來重構網站。 || |元件(AEM Sites)|Design Importer元件 `/libs/wcm/designimporter/components` 從6.5開始標籤為已過時。Adobe不打算進一步增強「設計匯入工具」的實作。 |Adobe計畫在未來版本中提供使用案例的替代實施。 || |Foundation|Granite解除安裝架構。 Adobe不打算進一步增強CQ 5.6.1中匯入的解除安裝架構，以將資產處理外部化。|Adobe正在處理新一代的雲端原生解除安裝架構。||
-|開發人員|`Hobbes.js`. Adobe不打算進一步增強 `hobbes.js` 使用者介面測試架構。|Adobe建議客戶使用Selenium自動化。|| |開發人員|jQuery UI使用者端程式庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的jQuery UI使用者端程式庫。 |Adobe建議仍需要jQuery UI才能讓程式碼新增至專案程式碼基底的客戶。|| |開發人員|jQuery Animation使用者端程式庫(`granite.jquery.animation`)。 Adobe不打算進一步維護及更新隨配送（快速入門）提供的jQuery Animation使用者端程式庫。 | Adobe建議仍需要jQuery動畫才能讓其程式碼加入其專案程式碼基底的客戶。|| |開發人員|Handlebars使用者端程式庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的Handlebar使用者端程式庫。 |Adobe建議仍需要 `Handlebars` 將程式碼新增至專案程式碼庫中。|| |開發人員|Lawnchair使用者端資源庫。 Adobe不打算進一步維護及更新隨分送（快速入門）提供的Lawnchair使用者端程式庫。 | Adobe建議仍需使用Lawnchair作為其程式碼的客戶，將其新增至專案程式碼基底。|| |開發人員|`Granite.Sling.js` 使用者端資源庫。 Adobe不打算進一步增強做為發佈(Quickstart)一部分所提供的Granite.Sling.js使用者端資料庫。 | Adobe建議依賴程式庫功能的客戶將其程式碼重構為不再使用。|| |開發人員|使用YUI壓縮/縮制JavaScript使用者端程式庫。 Adobe不打算進一步更新YUI資料庫。 直到AEM 6.4之前，YUI預設會使用切換至Google Closure Compiler (GCC)的選項來縮制JavaScript。 從AEM 6.5開始，預設為GCC。|Adobe建議客戶升級至AEM 6.5，以切換至GCC進行實作|| |開發人員|CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強作為分送（快速入門）的一部分提供的傳統UI對話方塊編輯器|沒有可用的取代。 || |Forms|AEM Forms與AEM Mobile的整合已被取代。 |沒有可用的替代專案。 CRXDE Lite中的||Developers|Classic UI對話方塊編輯器。 Adobe不打算進一步增強作為分送（快速入門）的一部分提供的傳統UI對話方塊編輯器|沒有可用的取代。 || |開發人員|Lodash/Underscore使用者端資源庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的Lodash/underscore使用者端程式庫。 | Adobe建議仍需將程式碼加到底線的客戶，將其新增至專案程式碼基底。 || |Screens|Adobe不打算進一步維護和更新用於2Publishers設定的com.adobe.cq.screens.mq.activemq套件組合和相關設定。| Adobe建議仍需要2Publishers設定的客戶可以使用負載平衡器方法。 ||
+| 整合 | 畫面 **[!UICONTROL Experience Manager Cloud Service選擇加入]** 已過時，因為 [!DNL Experience Manager] 和 [!DNL Adobe Target] 整合已更新於 [!DNL Experience Manager] 6.5.整合支援Adobe Target Standard API。 API透過Adobe IMS和以下方式使用驗證 [!DNL Adobe I/O Runtime]. 它可支援AdobeLaunch在樂器方面日益增加的作用 [!DNL Experience Manager] 頁面對於analytics和個人化，選擇加入精靈在功能上無關。 | 設定系統連線、Adobe IMS驗證和 [!DNL Adobe I/O Runtime] 透過個別 [!DNL Experience Manager] 雲端服務。 | 6.5.7.0 |
+| 連接器 | Microsoft®SharePoint 2010和Microsoft® SharePoint 2013的JCR ConnectorAdobe已遭取代 [!DNL Experience Manager] 6.5. | N/A |  |
+| 動態標籤管理員(DTM) | 不建議使用DTM整合。 | 切換以使用Adobe Experience Platform Launch作為標籤管理員。 |   |
+| Adobe Target | 新增AEM連線Adobe Target服務的功能，使用 [!DNL Adobe I/O] 以AEM 6.5中的Adobe Target Standard API (Rest API)為基礎，Target Classic API (XML)方式已過時。 | 將整合重新設定至 [使用新API](/help/sites-administering/target.md). |  |
+| Adobe Target | 使用 `mbox.js` 不建議使用AEM中與Adobe Target的整合方式。 | 切換以使用 `at.js` 1.x. |  |
+| 商務 | [CIF重設](https://github.com/adobe/commerce-cif-api) 在2018年提供的一組微服務，用於啟用AEM與商務引擎之間的整合。 在Adobe於2018年年中收購Adobe Commerce (前身為Magento)後，Adobe決定變更其作法，原因有二。 Commerce有自己的Commerce API集(REST和GraphQL)，維護兩組API是不好的做法。 市場趨勢顯示客戶正轉向GraphQL，因為這是查詢資料的更有效率。 2019年，Adobe已發佈新的Commerce Integration Framework，使用Commerce的GraphQL API作為真相來源。 Adobe不打算進一步投資CIF REST。 建議客戶使用替代解決方案。 | 若為AEM-Commerce整合，請切換至 [AEM CIF原型](https://github.com/adobe/aem-cif-project-archetype) 和 [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components). 請參閱AEM與Adobe Commerce整合 [使用Commerce整合框架](/help/commerce/cif/integrating/magento.md). Adobe的藍圖支援第三方（Commerce除外）與新方法整合。 |  |
+| 元件(AEM Sites) | Adobe不打算進一步增強中儲存的大部分基礎元件 `/libs/foundation/components`. 尋找 `cq:deprecated` 和 `cq:deprecatedReason` 屬性。 AEM 6.5包含基礎元件，而從舊版升級的客戶可繼續依原樣使用。 此外，即使已棄用，亦支援基礎元件。 | Adobe建議將核心元件用於未來的專案。 現有網站可維持原狀，或使用 [AEM Modernize Tools Suite](https://github.com/adobe/aem-modernize-tools) 以使用核心元件來重構網站。 |  |
+| 元件(AEM Sites) | Design Importer元件 `/libs/wcm/designimporter/components` 從6.5開始標籤為已過時。Adobe不打算進一步增強「設計匯入工具」的實作。 | Adobe計畫在未來版本中提供使用案例的替代實施。 |  |
+| Foundation | Granite解除安裝架構。 Adobe不打算進一步增強CQ 5.6.1中匯入的解除安裝架構，以將資產處理外部化。 | Adobe正在開發新一代的雲端原生解除安裝架構。 |  |
+| 開發人員 | `Hobbes.js`。Adobe不打算進一步增強 `hobbes.js` 使用者介面測試架構。 | Adobe建議客戶使用Selenium自動化。 |  |
+| 開發人員 | jQuery UI使用者端資源庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的jQuery UI使用者端程式庫。 | Adobe建議仍需使用jQuery UI來取得程式碼的客戶，將其新增至專案程式碼基底。 |  |
+| 開發人員 | jQuery Animation使用者端程式庫(`granite.jquery.animation`)。 Adobe不打算進一步維護及更新隨配送（快速入門）提供的jQuery Animation使用者端程式庫。 | Adobe建議仍然需要jQuery動畫才能讓程式碼加入專案程式碼基底的客戶。 |  |
+| 開發人員 | Handlebars使用者端程式庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的Handlebar使用者端程式庫。 | Adobe建議客戶仍然需要 `Handlebars` 將程式碼新增至專案程式碼庫中。 |  |
+| 開發人員 | 草坪椅使用者端資源庫。 Adobe不打算進一步維護及更新隨分送（快速入門）提供的Lawnchair使用者端程式庫。 | Adobe建議仍在要求程式碼使用Lawnchair的客戶將其新增至專案程式碼基底。 |  |
+| 開發人員 | `Granite.Sling.js` 使用者端資源庫。 Adobe不打算進一步增強做為發佈(Quickstart)一部分所提供的Granite.Sling.js使用者端資料庫。 | Adobe建議依賴程式庫功能的客戶將其程式碼重構為不再使用。 |  |
+| 開發人員 | 使用YUI壓縮/縮制JavaScript使用者端程式庫。 Adobe不打算進一步更新YUI資料庫。 直到AEM 6.4之前，YUI預設會使用切換至Google Closure Compiler (GCC)的選項來縮制JavaScript。 從AEM 6.5開始，預設為GCC。 | Adobe建議客戶升級至AEM 6.5，以切換至GCC進行實作 |  |
+| 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
+| Forms | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替代專案。 |  | 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
+| 開發人員 | Lodash/underscore使用者端資源庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的Lodash/underscore使用者端程式庫。 | Adobe建議仍需將程式碼加到底線的客戶，將其新增至專案程式碼基底。 |  |
+| Screens | Adobe不打算進一步維護和更新2Publishers設定所使用的com.adobe.cq.screens.mq.activemq套件組合和相關設定。 | Adobe建議仍需要2Publishers設定的客戶可以使用負載平衡器方法。 |  |
 
 ## 移除的功能 {#removed-features}
 
@@ -58,10 +77,11 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | [!DNL Assets] | 資產解除安裝功能在中移除 [!DNL Adobe Experience Manager] 6.5. | 沒有可用的替代專案。 |  |
 | 快取 | `system/console/slingjsp` 「 」已移除，不再於AEM 6.5中使用。 | 類別和Slightly快取儲存在Apache Sling Commons FileSystem ClassLoader套件組合下。 您可以在AEM網頁主控台中檢查該套件組合編號，並直接從檔案系統移除快取資料夾(`crx-quickstart/launchpad/felix/bundle<ID>`)。 |  |
 
-## 下一版的預先公告 {#pre-announcement-for-next-release}
+<!-- ## Pre-announcement for next release {#pre-announcement-for-next-release}
 
-本節用於預先宣佈未來版本中的即將變更。 已宣佈的變更尚未生效，但將影響客戶。 例如，功能尚未淘汰，但在淘汰後會影響使用者。 提供這些更新是為了規劃目的。
+This section is used to pre-announce the upcoming changes in the future releases. The announced changes are not yet effective but will impact customers. For example, the features are not yet deprecated but impacts the users after deprecation. These updates are provided for planning purpose.
 
-| 區域 | 功能 | 宣告 |
+|Area|Feature|Announcement|
 |--- |--- |--- |
-| Foundation | UI框架 | Adobe計畫在2019年淘汰Coral UI 2元件。 Coral UI 3是在AEM 6.2中所引進，而AEM 6.5則是完全以Coral 3為基礎。 Adobe建議已使用Coral 2建立自訂UI的客戶和合作夥伴，將其重構為Coral 3。 Adobe提供將Coral 2對話方塊轉換為Coral 3的工具 —  [閱讀全文](/help/sites-developing/modernization-tools.md). |
+|Foundation|UI Framework|Adobe is planning to deprecate the Coral UI 2 components in 2019. Coral UI 3 was introduced with AEM 6.2, and AEM 6.5 is fully based on Coral 3. Adobe recommends customers and partners that have build custom UIs with Coral 2 to refactored them to Coral 3. Adobe is providing a tool to convert Coral 2 dialogs to Coral 3 - [Read more](/help/sites-developing/modernization-tools.md).|
+-->
