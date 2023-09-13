@@ -6,13 +6,14 @@ seo-description: Transform the validation error messages for adaptive forms into
 uuid: 0d1f9835-3e28-41d3-a3b1-e36d95384328
 contentOwner: anujkapo
 content-type: reference
+keywords: 新增自訂錯誤處理程式、新增預設錯誤處理程式、在表單中新增錯誤處理程式、使用規則編輯器的叫用服務來新增自訂錯誤處理程式、設定規則編輯器來新增自訂錯誤處理程式、使用規則編輯器新增自訂錯誤處理程式
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
 exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: fbc371e59c4f80195fe90da5f635267141c8849e
+source-git-commit: 2b1daa1dcd7b5d81c0012ca0de65e9e9043fd4dc
 workflow-type: tm+mt
-source-wordcount: '2346'
+source-wordcount: '2416'
 ht-degree: 4%
 
 ---
@@ -406,3 +407,10 @@ The `var som_map` lists the SOM expression of the Adaptive Form fields that you 
 Using this custom error handler, the adaptive form converts the fields listed in `var som_map` to standard error message format. As a result, the validation error messages display at field-level in the adaptive form.
 
  -->
+
+
+## 其他資訊 {#additional-information}
+
+* [建立獨立核心元件式最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [為您的表單建立樣式或主題](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
+* [建立或新增最適化表單至 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)

@@ -4,9 +4,9 @@ description: 探索如何輕鬆建立或無縫新增調適型表單至您的 AEM
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 3649df0e2a2672bc1742b3c02386f12ff6991935
+source-git-commit: 6d6e74c61b2ecb13e7cc352d5278c40d2677d44d
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2905'
 ht-degree: 24%
 
 ---
@@ -250,3 +250,8 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
    * 若要設定重新導向URL，請針對送出選項，選取重新導向至URL選項，並提供絕對位址、重新導向URL或AEM Sites頁面的相對路徑。
 
    * 若要設定自訂或感謝訊息，請在[送出]選項中選取[顯示訊息]選項，然後在[訊息內容]方塊中提供訊息。 它是RTF文字方塊，您可以使用全熒幕選項來檢視所有可用的RTF專案。
+
+## 另請參閱 {#see-also}
+
+* [建立獨立核心元件式最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [為您的表單建立樣式或主題](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
