@@ -5,16 +5,16 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 exl-id: 3fb069cf-d3ed-47b0-b6bf-82e110b3b059
-source-git-commit: f8643f6118e0bc6bfb2ee0e093155cf0907eb5d3
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '723'
 ht-degree: 5%
 
 ---
 
 # 建置AEM Forms Android應用程式 {#build-the-aem-forms-android-app}
 
-以建議的順序執行下列步驟，建置適用於AEM Forms的Android應用程式。
+若要建置適用於AEM Forms的Android應用程式，請依照建議順序執行下列步驟。
 
 1. [下載AEM Forms應用程式原始碼套件](#download-android-zip)
 1. [設定環境變數](#set-environment-variable-android)
@@ -24,7 +24,7 @@ ht-degree: 5%
 
 AEM Forms應用程式原始碼套件是指 `adobe-lc-mobileworkspace-src-<version>.zip` 封存。 此封存包含建置自訂AEM Forms應用程式所需的原始程式碼。 此封存包含在 `adobe-aemfd-forms-app-src-pkg-<version>.zip`軟體發佈上可用的套件。
 
-執行以下步驟以下載 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 檔案：
+若要下載 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 檔案，請執行下列步驟：
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
 1. 點一下頁首功能表中的 **[!UICONTROL Adobe Experience Manager]**。
@@ -51,14 +51,14 @@ AEM Forms應用程式原始碼套件是指 `adobe-lc-mobileworkspace-src-<versio
 
 ## 建置標準AEM Forms應用程式 {#set-up-the-xcode-project}
 
-儲存adobe-lc-mobileworkspace-src後&lt;version>.zip檔案並設定環境變數，請使用下列任一選項建置標準AEM Forms Android應用程式：
+儲存adobe-lc-mobileworkspace-src後 — &lt;version>.zip檔案並設定環境變數，請使用下列任一選項建置標準AEM Forms Android應用程式：
 
 * [使用Android Studio建置AEM Forms應用程式](#using-android-studio)
 * [使用Android Studio產生.apk檔案](#generate-apk-android-studio)
 
 ### 使用Android Studio建置AEM Forms應用程式 {#using-android-studio}
 
-執行以下步驟，使用Android Studio建置AEM Forms應用程式：
+若要使用Android Studio建置AEM Forms應用程式，請執行下列步驟：
 
 1. 在您的電腦上啟動Android Studio應用程式。
 1. 按一下 **開啟現有的Android Studio專案**. 如果用於開啟現有專案的對話方塊未自動顯示，請選取 **檔案** > **開啟**.
@@ -81,7 +81,7 @@ AEM Forms應用程式原始碼套件是指 `adobe-lc-mobileworkspace-src-<versio
 
 ### 使用Android Studio產生.apk檔案 {#generate-apk-android-studio}
 
-執行以下步驟，使用Android Studio產生.apk檔案：
+若要使用Android Studio產生.apk檔案，請執行下列動作：
 
 1. 在您的電腦上啟動Android Studio應用程式。
 1. 選取 **開啟現有的Android Studio專案**. 如果用於開啟現有專案的對話方塊未自動顯示，請選取 **檔案** > **開啟**.
@@ -89,7 +89,7 @@ AEM Forms應用程式原始碼套件是指 `adobe-lc-mobileworkspace-src-<versio
 
    Android選項會顯示在左窗格中。
 
-1. 選取 **建置** > **建置APK** 以產生.apk檔案。
+1. 若要產生.apk檔案，請選取 **建置** > **建置APK**.
 
    選擇性地選取 **建置** > **產生已簽署的APK** 產生 [已簽署的版本](https://developer.android.com/studio/publish/app-signing) ，屬於.apk檔案。
 

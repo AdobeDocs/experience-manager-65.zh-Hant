@@ -1,20 +1,16 @@
 ---
 title: 報表主控台
-seo-title: Reports Console
-description: 瞭解如何存取報告
-seo-description: Learn how to access reports
-uuid: 7bb15a15-077b-4bfb-aaf4-50fddc67f237
+description: 瞭解如何存取多種報告，而這些報告可以從Adobe Experience Manager作者環境以數種方式存取。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
 role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
-source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '405'
 ht-degree: 9%
 
 ---
@@ -29,13 +25,13 @@ ht-degree: 9%
 
 * [檢視報表](#views-report)
 
-   提供社群成員和網站訪客檢視任何社群網站內容的圖表。
+  提供社群成員和網站訪客針對任何社群網站檢視內容的圖表。
 
 * [貼文報表](#posts-report)
 
-   提供社群成員在任何社群網站的各種型別貼文的圖表。
+  提供社群成員在任何社群網站的各種型別貼文的圖表。
 
-表格報表可匯出為.csv格式，以供後續處理。
+表格式報表可以匯出為.csv格式，以供後續處理。
 
 ## 報告主控台 {#reporting-consoles}
 
@@ -43,25 +39,25 @@ ht-degree: 9%
 
 * 從全域導覽： **[!UICONTROL 導覽]** > **[!UICONTROL Communities]** >  **[!UICONTROL 報表]**
 
-* 選擇自：
+* 選擇來源：
 
    * **[!UICONTROL 指定任務報表]**
 
       * 為選取的社群網站、使用者或群組以及指派專案產生報告。
+
    * **[!UICONTROL 貼文報表]**
 
-      * 為選取的社群網站、內容型別和時段產生報表。
+      * 針對選取的社群網站、內容型別和時段產生報表。
+
    * **[!UICONTROL 檢視報表]**
 
       * 針對選取的社群網站、內容型別和時段產生報表。
 
-
-
-![報告](assets/reports1.png)
+![報表](assets/reports1.png)
 
 ## 檢視報表 {#views-report}
 
-「檢視」主控台可讓社群功能在指定時段內針對頁面檢視產生報表。
+檢視控制檯可讓社群功能在指定時段內針對頁面檢視產生報表。
 
 ![檢視報告](assets/view-report.png)
 
@@ -69,15 +65,15 @@ ht-degree: 9%
 
 * **[!UICONTROL 網站]**
 
-   選取社群網站。
+  選取社群網站。
 
 * **[!UICONTROL 內容類型]**
 
-   可以選擇「所有內容」或選取網站上提供的其中一項功能。
+  可以選擇「所有內容」或選取網站上存在的其中一個功能。
 
-* **[!UICONTROL 時間範圍]**
+* **[!UICONTROL 時間段]**
 
-   選取下列其中一項：
+  選取下列其中一項：
 
    * 過去 7 天
    * 過去 30 天
@@ -86,7 +82,7 @@ ht-degree: 9%
 
 選取 **[!UICONTROL 產生]** 以建立報表。
 
-![generate-view](assets/generate-views.png)
+![產生檢視](assets/generate-views.png)
 
 ## 貼文報表 {#posts-report}
 
@@ -98,15 +94,15 @@ ht-degree: 9%
 
 * **[!UICONTROL 網站]**
 
-   選取社群網站。
+  選取社群網站。
 
 * **[!UICONTROL 內容類型]**
 
-   可以選擇「所有內容」或選取網站上提供的其中一項功能。
+  可以選擇「所有內容」或選取網站上存在的其中一個功能。
 
-* **[!UICONTROL 時間範圍]**
+* **[!UICONTROL 時間段]**
 
-   選取下列其中一項：
+  選取下列其中一項：
 
    * 過去 7 天
    * 過去 30 天
@@ -121,10 +117,10 @@ ht-degree: 9%
 
 ### 未列出任何社群網站 {#no-community-sites-listed}
 
-如果未列出任何社群網站，請確認已為網站啟用Adobe Analytics。 如果選擇工作分派的報告，請確保工作分派功能在社群網站的結構中。
+如果未列出任何社群網站，請確定已針對網站啟用Adobe Analytics。 如果選擇工作分派報表，請確定工作分派功能在社群網站的結構中。
 
-### 報告未顯示在AEM作者執行個體中 {#reports-do-not-show-in-aem-author-instance}
+### 報告未顯示在AEM編寫執行個體中 {#reports-do-not-show-in-aem-author-instance}
 
-如果報表未顯示在AEM編寫執行個體中，請檢查是否有自訂，例如發佈執行個體上的URL對應。 如果URL對應僅在Communities網站的AEM Publish執行個體上完成，請確定已在AEM Author執行個體中設定相同的 **網站趨勢報表社交元件工廠** 設定。
+如果報表未顯示在AEM編寫執行個體中，請檢查自訂，例如發佈執行個體上的URL對應。 如果URL對應僅在Communities網站的AEM Publish例項上完成，請確保已在的AEM Author例項中設定相同的專案。 **網站趨勢報表社交元件工廠** 設定。
 
 ![AEM作者上的URL對應](assets/sitetrend.png)

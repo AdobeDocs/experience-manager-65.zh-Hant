@@ -1,39 +1,35 @@
 ---
-title: SharePoint Connector授權、版權注意事項和免責宣告
-seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
+title: SharePoint聯結器授權、版權注意事項和免責宣告
 description: 瞭解SharePoint聯結器授權、版權注意事項和免責宣告。
-seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
-uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 19%
+source-wordcount: '354'
+ht-degree: 20%
 
 ---
 
-# SharePoint Connector授權、版權注意事項和免責宣告{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
+# SharePoint聯結器授權、版權注意事項和免責宣告{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-本節列出與MS SharePoint適用的Day JCR Connector相關的所有授權、版權注意事項和免責宣告。
+本節列出MS® SharePoint適用的Day JCR Connector必須明確註明的所有授權、版權注意事項和免責宣告。
 
 ## Connector第三方程式庫概觀 {#overview-of-connector-rd-party-libraries}
 
-下表列出SharePoint Connector核心程式庫內使用的第三方程式庫，以及涵蓋這些程式庫的授權、版權宣告或免責宣告：
+下表列出SharePoint Connector核心程式庫內使用的協力廠商程式庫，以及其涵蓋的授權、版權注意事項或免責宣告：
 
 | 資料庫 | 授權類型 |
 |---|---|
-| annogen | [Apache](#apache) |
+| 註釋 | [Apache](#apache) |
 | axiom-api | [Apache](#apache) |
 | axiom-dom | [Apache](#apache) |
 | axiom-impl | [Apache](#apache) |
 | axis2-adb | [Apache](#apache) |
-| axis2-kernel | [Apache](#apache) |
+| axis2核心 | [Apache](#apache) |
 | Backport-util-concurrent | 公用網域 |
 | commons-codec | [Apache](#apache) |
 | commons-collections | [Apache](#apache) |
@@ -41,7 +37,7 @@ ht-degree: 19%
 | commons-httpclient | [Apache](#apache) |
 | commons-io | [Apache](#apache) |
 | commons-lang | [Apache](#apache) |
-| concurrent | [同時](#concurrent) （公用網域） |
+| 同時 | [同時](#concurrent) （公用網域） |
 | geronimo-activation_1.1_spec | [Apache](#apache) |
 | geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
@@ -65,7 +61,7 @@ ht-degree: 19%
 
 ## CRX第三方程式庫概觀 {#overview-of-crx-rd-party-libraries}
 
-下表列出CRX內使用的協力廠商程式庫，以及涵蓋這些程式庫的授權、著作權宣告或免責宣告：
+下表列出CRX內使用的協力廠商程式庫，以及涵蓋這些程式庫的授權、版權注意事項或免責宣告：
 
 <table>
  <colgroup>
@@ -114,7 +110,7 @@ ht-degree: 19%
   </tr>
   <tr>
    <td>jcr-1.0.jar</td>
-   <td><a href="#day-jcr">日JCR</a></td>
+   <td><a href="#day-jcr">Day JCR</a></td>
   </tr>
   <tr>
    <td>jdom-1.0.jar</td>
@@ -157,7 +153,7 @@ ht-degree: 19%
 
 ## CQSE第三方程式庫概觀 {#overview-of-cqse-rd-party-libraries}
 
-下表列出Communication Servlet Engine中使用的第三方程式庫，以及涵蓋這些程式庫的授權、著作權宣告或免責宣告：
+下表列出公報Servlet引擎中使用的協力廠商程式庫，以及涵蓋這些程式庫的授權、版權宣告或免責宣告：
 
 <table>
  <colgroup>
@@ -438,7 +434,7 @@ ht-degree: 19%
      <a href="https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf" TARGET="_blank" >https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf</a>
 ```
 
-## 日JCR {#day-jcr}
+## Day JCR {#day-jcr}
 
 ```xml
      Day Management AG ("Licensor") is willing to license this
@@ -1100,8 +1096,8 @@ ht-degree: 19%
      This license came from: https://www.w3.org/Consortium/Legal/
      copyright-documents-19990405
 
-     W3C® DOCUMENT NOTICE AND LICENSE
-     Copyright © 1994-2001 World
+     W3C&reg; DOCUMENT NOTICE AND LICENSE
+     Copyright &copy; 1994-2001 World
      Wide Web Consortium, World
      Wide Web Consortium, (Massachusetts Institute of
      Technology, Institut National de
@@ -1125,7 +1121,7 @@ ht-degree: 19%
      A link or URL to the original W3C document.
 
      The pre-existing copyright notice of the original author, or if
-     it doesn't exist, a notice of the form: "Copyright © [$date-of-document]
+     it doesn't exist, a notice of the form: "Copyright &copy; [$date-of-document]
      World Wide Web Consortium, (Massachusetts
      Institute of Technology, Institut National de Recherche en Informatique
      et en Automatique, Keio
@@ -1186,8 +1182,8 @@ ht-degree: 19%
      This license came from: <a href="https://www.w3.org/Consortium/Legal/" TARGET="_blank" >https://www.w3.org/Consortium/Legal/</a>
      copyright-software-19980720
 
-     W3C® SOFTWARE NOTICE AND LICENSE
-     Copyright © 1994-2001 World
+     W3C&reg; SOFTWARE NOTICE AND LICENSE
+     Copyright &copy; 1994-2001 World
      Wide Web Consortium, World
      Wide Web Consortium, (Massachusetts Institute of
      Technology, Institut National de
@@ -1213,7 +1209,7 @@ ht-degree: 19%
      terms and conditions. If none exist, a short notice of the
      following form (hypertext is preferred, text is permitted) should
      be used within the body of any redistributed or derivative code:
-     "Copyright © [$date-of-software] World Wide Web Consortium,
+     "Copyright &copy; [$date-of-software] World Wide Web Consortium,
      (Massachusetts Institute of Technology, Institut National de
      Recherche en Informatique et en Automatique, Keio University).
      All Rights Reserved.

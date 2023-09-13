@@ -1,22 +1,18 @@
 ---
-title: AEM Forms工作區中使用的API
-seo-title: APIs used in AEM Forms workspace
-description: 公開Java和JavaScript API以及LiveCycleAEM Forms工作區的方法，以供自訂和自動化使用。
-seo-description: Public Java and JavaScript APIs and methods of LiveCycle AEM Forms workspace, exposed for customization and automation.
-uuid: 9602990e-8ac7-42eb-b507-50b3594055ba
+title: 用於AEM Forms工作區的API
+description: 公用Java&Trade；和JavaScript API以及LiveCycleAEM Forms工作區的方法，公開用於自訂和自動化。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1059'
 ht-degree: 1%
 
 ---
 
-# AEM Forms工作區中使用的API {#apis-used-in-aem-forms-workspace}
+# 用於AEM Forms工作區的API {#apis-used-in-aem-forms-workspace}
 
 下列API用於AEM Forms工作區。
 
@@ -32,22 +28,22 @@ ht-degree: 1%
    <td>getGroups</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getGroups</td>
-   <td>搜尋群組。 如果未指定任何專案，則會傳回所有群組的清單，否則會傳回具有指定名稱的群組。</td>
+   <td>搜尋群組。 如果未指定任何專案，則會傳回所有群組的清單，否則會傳回指定名稱的群組。</td>
   </tr>
   <tr>
-   <td>getUsersAndGroups</td>
+   <td>getUsersAndGroup</td>
    <td>ProcessManagementUserProxyService</td>
-   <td>getUsersAndGroups</td>
+   <td>getUsersAndGroup</td>
    <td>搜尋使用者和群組。 如果未指定任何專案，則會傳回所有使用者和群組的清單，否則會傳回具有指定名稱的使用者和群組。</td>
   </tr>
   <tr>
    <td>prepareForSubmit</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>prepareForSubmit</td>
-   <td>在透過DocumentSubmitServlet提交表單之前呼叫它。 它會在工作階段變數中設定任務ID （連同到期時間），實際提交期間會擷取該工作ID。</td>
+   <td>在透過DocumentSubmitServlet提交表單之前呼叫它。 它會在工作階段變數中設定任務ID （連同到期時間），實際提交期間會擷取該變數。</td>
   </tr>
   <tr>
-   <td>submitTask</td>
+   <td>submittask</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>提交</td>
    <td>它會提交與任務相關聯的檔案物件（並依次提交流程）。</td>
@@ -74,13 +70,13 @@ ht-degree: 1%
    <td>invokeStartpoint</td>
    <td>ProcessManagementStartpointService</td>
    <td>invokeStartpoint</td>
-   <td>這會叫用起始點並建立與起始點對應的新任務</td>
+   <td>這會叫用起點，並建立與起點對應的任務</td>
   </tr>
   <tr>
    <td>getAllTasks</td>
    <td>ProcessManagementTaskService</td>
    <td>getAllActionableTasks</td>
-   <td>它會擷取已建立並轉送或諮詢、儲存、指派、指派和儲存的所有任務，以供登入使用者使用。</td>
+   <td>它會擷取為登入使用者建立和轉送或諮詢、儲存、指派、指派和儲存的所有任務。</td>
   </tr>
   <tr>
    <td>getTask</td>
@@ -92,31 +88,31 @@ ht-degree: 1%
    <td>renderTask</td>
    <td>ProcessManagementTaskService</td>
    <td>轉譯</td>
-   <td>它會轉譯任務並傳迴轉譯表單所需的資訊，例如表單URL、表單型別、資料URL （如果需要）等。</td>
+   <td>它會轉譯工作並傳迴轉譯表單所需的資訊，例如表單URL、表單型別、資料URL （如有需要）。</td>
   </tr>
   <tr>
    <td>submitWithPriorData</td>
    <td>ProcessManagementTaskService</td>
    <td>submitWithPriorData</td>
-   <td>它會使用結果金鑰傳回TaskManager的提交API的結果。</td>
+   <td>它會使用結果金鑰傳回TaskManager提交API的結果。</td>
   </tr>
   <tr>
    <td>submitWithData</td>
    <td>ProcessManagementTaskService</td>
    <td>submitWithData</td>
-   <td>它會使用TaskManager的提交API來提交與任務相關聯的表單資料（以字串形式傳遞）。 它用於未呼叫TaskManager的提交API的Flex表單。</td>
+   <td>它會使用TaskManager的提交API來提交與工作相關聯的表單資料（以字串形式傳遞）。 它用於不呼叫TaskManager的提交API的Flex表單。</td>
   </tr>
   <tr>
    <td>儲存</td>
    <td>ProcessManagementTaskService</td>
    <td>儲存</td>
-   <td>它會將工作儲存在伺服器上。</td>
+   <td>這會將工作儲存在伺服器上。</td>
   </tr>
   <tr>
    <td>complete</td>
    <td>ProcessManagementTaskService</td>
    <td>complete</td>
-   <td>它會完成任務，並根據流程設計將任務傳遞到下一個步驟。</td>
+   <td>它會完成一項任務，然後按照流程設計將該任務傳遞到下一個步驟。</td>
   </tr>
   <tr>
    <td>getAttachment</td>
@@ -140,37 +136,37 @@ ht-degree: 1%
    <td>前進</td>
    <td>ProcessManagementTaskService</td>
    <td>前進</td>
-   <td>它將任務轉送給另一個使用者。</td>
+   <td>它會轉送工作給其他使用者。</td>
   </tr>
   <tr>
    <td>consult</td>
    <td>ProcessManagementTaskService</td>
    <td>consult</td>
-   <td>它會諮詢另一個使用者的任務。</td>
+   <td>它會向其他使用者諮詢任務。</td>
   </tr>
   <tr>
-   <td>宣告</td>
+   <td>索賠</td>
    <td>ProcessManagementTaskService</td>
-   <td>宣告</td>
-   <td>它宣告共用佇列中有一個可用的任務。</td>
+   <td>索賠</td>
+   <td>它會宣告共用佇列中可用的工作。</td>
   </tr>
   <tr>
-   <td>解鎖</td>
+   <td>解除鎖定</td>
    <td>ProcessManagementTaskService</td>
-   <td>解鎖</td>
+   <td>解除鎖定</td>
    <td>它會解除鎖定任務。</td>
   </tr>
   <tr>
    <td>鎖定</td>
    <td>ProcessManagementTaskService</td>
    <td>鎖定</td>
-   <td>它會鎖定任務，如果共用，其他使用者就無法要求該任務。</td>
+   <td>它會鎖定任務，而且如果共用，其他使用者將無法要求該任務。</td>
   </tr>
   <tr>
    <td>拒絕</td>
    <td>ProcessManagementTaskService</td>
    <td>拒絕</td>
-   <td>它會傳回任務給任務的先前所有者。</td>
+   <td>它會傳回一個任務給該任務的先前擁有者。</td>
   </tr>
   <tr>
    <td>捨棄</td>
@@ -182,13 +178,13 @@ ht-degree: 1%
    <td>setVisibility</td>
    <td>ProcessManagementTaskService</td>
    <td>setVisibility</td>
-   <td>它會設定任務的可見度。 如果可見性設為false ，則使用者之後將無法看到任務。</td>
+   <td>它會設定任務的可見度。 如果可見性設定為false，則使用者之後不會看到任務。</td>
   </tr>
   <tr>
    <td>getUsers</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getUsers</td>
-   <td>它可用來搜尋使用者。 若未指定名稱，則傳回所有使用者，否則傳回指定名稱的使用者。</td>
+   <td>它可用來搜尋使用者。 若未指定名稱，則會傳回所有使用者，否則會傳回指定名稱的使用者。</td>
   </tr>
   <tr>
    <td>getUsersInGroup</td>
@@ -200,25 +196,25 @@ ht-degree: 1%
    <td>grantQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>grantQueueAccess</td>
-   <td>它會授予指定使用者對登入使用者佇列的存取權。 它基本上是和其他使用者共用自己的佇列。</td>
+   <td>它會授予指定使用者對登入使用者佇列的存取權。 基本上就是和其他使用者共用您自己的佇列。</td>
   </tr>
   <tr>
-   <td>requestQueueCess</td>
+   <td>requestQueueAccess</td>
    <td>ProcessManagementQueueService</td>
-   <td>requestQueueCess</td>
-   <td>它會針對登入使用者提出指定使用者佇列的存取要求。 如果使用者核准該請求，則會與登入使用者共用使用者的佇列。</td>
+   <td>requestQueueAccess</td>
+   <td>它會向登入使用者的指定使用者佇列發出存取要求。 如果使用者核准請求，則會與登入使用者共用使用者的佇列。</td>
   </tr>
   <tr>
    <td>getGrantedUsers</td>
    <td>ProcessManagementQueueService</td>
    <td>getGrantedUsers</td>
-   <td>它會傳回對登入使用者佇列具有存取權的所有使用者。</td>
+   <td>它會傳回對登入使用者之佇列具有存取權的所有使用者。</td>
   </tr>
   <tr>
    <td>getUsersForAccessibleQueues</td>
    <td>ProcessManagementQueueService</td>
    <td>getUsersForAccessibleQueues</td>
-   <td>它會傳回使用者可存取其佇列的所有使用者。</td>
+   <td>它會傳回使用者可存取佇列的所有使用者。</td>
   </tr>
   <tr>
    <td>revokeQueueAccess</td>
@@ -230,37 +226,37 @@ ht-degree: 1%
    <td>removeQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>removeQueueAccess</td>
-   <td>它會從使用者清單中移除其佇列可供登入使用者存取的使用者。</td>
+   <td>它會從登入使用者可存取其佇列的使用者清單中移除使用者。</td>
   </tr>
   <tr>
    <td>getAllQueues<br /> </td>
    <td>ProcessManagementQueueService<br /> </td>
    <td>getAllQueues<br /> </td>
-   <td>它可讓登入使用者存取所有佇列（自己的、共用和群組佇列）。<br /> </td>
+   <td>它可取得登入使用者可存取的所有佇列（擁有、共用和群組佇列）。<br /> </td>
   </tr>
   <tr>
    <td>getOutOfOfficeSettings</td>
    <td>ProcessManagementOutOfOfficeService</td>
    <td>getOutOfOfficeSettings</td>
-   <td>它會從使用者的辦公室設定中取出。</td>
+   <td>它可取得使用者的休假設定。</td>
   </tr>
   <tr>
    <td>saveOutOfOfficeSettingsJson</td>
    <td>ProcessManagementOutOfOfficeService</td>
    <td>saveOutOfOfficeSettingsJson</td>
-   <td>它可儲存使用者的辦公室外設定。</td>
+   <td>這可儲存使用者的休假設定。</td>
   </tr>
   <tr>
    <td>getAllProcesses</td>
    <td>ProcessManagementProcessService</td>
    <td>getAllProcesses</td>
-   <td>它會傳回所有程式的清單。</td>
+   <td>它會傳回所有流程的清單。</td>
   </tr>
   <tr>
    <td>getInteractivedProcesses</td>
    <td>ProcessManagementProcessService</td>
    <td>getInteractivedProcesses</td>
-   <td>它會傳回由登入使用者參與的所有程式名稱清單。</td>
+   <td>它會傳回由登入使用者參與的所有流程名稱清單。</td>
   </tr>
   <tr>
    <td>getProcessInstance<br /> </td>
@@ -278,13 +274,13 @@ ht-degree: 1%
    <td>getPendingTasksForProcessInstance</td>
    <td>ProcessManagementQueryService</td>
    <td>getPendingTasksForProcessInstance</td>
-   <td>它會取得處理序執行個體的擱置中工作。</td>
+   <td>它取得處理序執行個體的擱置中任務。</td>
   </tr>
   <tr>
    <td>getTasksForProcessInstance</td>
    <td>ProcessManagementQueryService</td>
    <td>getTasksForProcessInstance</td>
-   <td>它會取得一個程式執行個體的所有任務。</td>
+   <td>它會取得流程執行個體的所有任務。</td>
   </tr>
   <tr>
    <td>getAllSearchTemplates</td>
@@ -308,11 +304,11 @@ ht-degree: 1%
    <td>getAssignmentsForTask</td>
    <td>ProcessManagementTaskService</td>
    <td>getAssignmentsForTask</td>
-   <td>它會取得任務的所有指派。 例如， ： — 如果使用者轉送或諮詢另一個使用者的任務，則它是任務的指派。</td>
+   <td>它會取得任務的所有指派。 例如，如果使用者轉送或諮詢另一個使用者的任務，則它是任務的指派。</td>
   </tr>
   <tr>
    <td>deleteAttachment </td>
-   <td>任務管理員服務</td>
+   <td>工作管理員服務</td>
    <td>deleteAttachment</td>
    <td>它會刪除附件。</td>
   </tr>
@@ -323,10 +319,10 @@ ht-degree: 1%
    <td>如有必要，它會更新判斷提示。 驗證使用者。 設定伺服器/使用者端資訊的工作階段引數。 傳回使用者資訊和輪詢間隔。</td>
   </tr>
   <tr>
-   <td>getTasksForDirectReports</td>
+   <td>getTasksForDirectreports</td>
    <td>ProcessManagementTeamTasksService</td>
-   <td>getTasksForDirectReports</td>
-   <td>它會傳回登入管理員直接下屬的所有工作。</td>
+   <td>getTasksForDirectreports</td>
+   <td>它會傳回登入管理員直接下屬的所有任務。</td>
   </tr>
   <tr>
    <td>getTaskOfDirectReport<br /> </td>
@@ -344,7 +340,7 @@ ht-degree: 1%
    <td>rejectTaskOfDirectReport</td>
    <td>ProcessManagementTeamTasksService</td>
    <td>rejectTaskOfDirectReport</td>
-   <td>它會傳回直接報告的任務給先前的使用者。</td>
+   <td>它會傳回直接報告的任務給前一個使用者。</td>
   </tr>
   <tr>
    <td>getProperty</td>
@@ -374,28 +370,28 @@ ht-degree: 1%
    <td>getCurrentUserImageUrl</td>
    <td>ProcessManagementClientSessionService</td>
    <td>getCurrentUserImageUrl</td>
-   <td>它會取得登入使用者的影像url。</td>
+   <td>它會取得登入使用者的使用者影像URL。</td>
   </tr>
   <tr>
    <td>getUserImageUrl</td>
    <td>ProcessManagementClientSessionService</td>
    <td>getUserImageUrl</td>
-   <td>它會取得指定使用者的影像url。</td>
+   <td>它會取得指定之使用者的影像URL。</td>
   </tr>
   <tr>
    <td>uploadnote</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>uploadnote</td>
-   <td>它會為工作上傳伺服器上的備註。</td>
+   <td>它會為一項任務在伺服器上傳附註。</td>
   </tr>
   <tr>
    <td>uploadRMAToServer （也可以直接從html範本呼叫）<br /> </td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>uploadAttachment</td>
-   <td>它會為工作上傳伺服器上的附件。</td>
+   <td>它會為一項任務上傳伺服器上的附件。</td>
   </tr>
   <tr>
-   <td>getImageURL （也可以直接從html範本呼叫）</td>
+   <td>getImageURL (也直接從HTML範本呼叫)</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>getImage</td>
    <td>它會取得處理程式的影像。</td>
