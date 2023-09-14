@@ -2,9 +2,9 @@
 title: 使用IMS與Adobe Analytics整合
 description: 瞭解如何使用IMS整合AEM與Adobe Analytics
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1068'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 開始此程式之前：
 
-* [Adobe支援](https://helpx.adobe.com/tw/contact/enterprise-support.ec.html) 必須為以下專案布建您的帳戶：
+* [Adobe支援](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) 必須為以下專案布建您的帳戶：
 
    * Adobe主控台
    * Adobe Developer Console
@@ -38,7 +38,7 @@ ht-degree: 2%
 * 您組織的系統管理員應使用Admin Console，將您組織中所需的開發人員新增到相關的產品設定檔。
 
    * 這可讓特定開發人員在Adobe Developer Console中啟用整合。
-   * 如需詳細資訊，請參閱 [管理開發人員](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+   * 另請參閱 [管理開發人員](https://helpx.adobe.com/enterprise/using/manage-developers.html).
 
 
 ## 設定IMS設定 — 產生公開金鑰 {#configuring-an-ims-configuration-generating-a-public-key}
@@ -46,7 +46,7 @@ ht-degree: 2%
 設定的第一個階段是在AEM中建立IMS設定並產生公開金鑰。
 
 1. 在AEM中開啟 **工具** 功能表。
-1. 在 **安全性** 區段選取 **Adobe IMS設定**.
+1. 在 **安全性** 區段，選取 **Adobe IMS設定**.
 1. 選取 **建立** 以開啟 **Adobe IMS技術帳戶設定**.
 1. 使用下方的下拉式清單 **雲端設定**，選取 **Adobe Analytics**.
 1. 啟動 **建立新憑證** 並輸入新別名。
@@ -58,21 +58,21 @@ ht-degree: 2%
 
    >[!CAUTION]
    >
-   >將此設定保持開啟，則會在以下情況下再次需要： [在AEM中完成IMS設定](#completing-the-ims-configuration-in-aem).
+   >將此設定保持開啟；此設定在 [在AEM中完成IMS設定](#completing-the-ims-configuration-in-aem).
 
    ![新增金鑰至Adobe I/O的「資訊」對話方塊](assets/integrate-analytics-io-02.png)
 
 ## 為Adobe Analytics與AEM的整合設定IMS {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
-使用Adobe Developer Console時，您需要使用Adobe Analytics (供AEM使用)建立專案（整合），然後指派所需的許可權。
+使用Adobe Developer Console，建立與Adobe Analytics (供AEM使用)的專案（整合），然後指派所需的許可權。
 
 ### 建立專案 {#creating-the-project}
 
-開啟Adobe Developer Console，透過AEM將使用的Adobe Analytics建立專案：
+若要使用AEM能使用的Adobe Analytics建立專案，請開啟Adobe Developer Console：
 
 >[!CAUTION]
 >
->目前，我們僅支援Adobe Developer主控台的 **服務帳戶(JWT)** 認證型別。
+>目前，Adobe僅支援Adobe Developer主控台的 **服務帳戶(JWT)** 認證型別。
 >
 >請勿使用 **OAuth伺服器對伺服器** 未來將支援的認證型別。
 
@@ -80,11 +80,11 @@ ht-degree: 2%
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-1. 將會顯示您擁有的任何專案。 選取 **建立新專案**  — 位置和使用將取決於：
+1. 系統會顯示您擁有的任何專案。 選取 **建立新專案**  — 位置和使用情況取決於以下因素：
 
-   * 如果您還沒有任何專案， **建立新專案** 將會是中下。
+   * 如果您還沒有任何專案， **建立新專案** 是中下。
      ![建立新專案 — 第一個專案](assets/integration-analytics-io-02.png)
-   * 如果您已有專案，這些將會列出並 **建立新專案** 將位於右上方。
+   * 如果您已有現有的專案，則會列出和 **建立新專案** 位於右上角。
      ![建立新專案 — 多個專案](assets/integration-analytics-io-03.png)
 
 
@@ -96,7 +96,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >如果您已訂閱Adobe Analytics，但它並未列出，您應檢視 [先決條件](#prerequisites).
+   >如果您已訂閱Adobe Analytics，但它並未列出，您應檢視 [必要條件](#prerequisites).
 
    ![新增API](assets/integration-analytics-io-12.png)
 
@@ -116,11 +116,11 @@ ht-degree: 2%
 
    ![選取所需的產品設定檔](assets/integration-analytics-io-16.png)
 
-1. 將會確認設定。
+1. 設定已確認。
 
 ### 指派許可權給整合 {#assigning-privileges-to-the-integration}
 
-您現在必須將所需許可權指派給整合：
+現在將必要的許可權指派給整合：
 
 1. 開啟Adobe **Admin Console**：
 
@@ -137,7 +137,7 @@ ht-degree: 2%
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-選取特定專案專案以顯示有關設定的更多詳細資訊。 這些類別包括：
+若要顯示有關設定的進一步詳細資訊，請選取特定專案專案。 這些類別包括：
 
 * 專案概述
 * Insights
@@ -148,11 +148,11 @@ ht-degree: 2%
 * API
    * 例如，Adobe Analytics
 
-您需要其中的一些來完成AEM中Adobe Analytics的整合。
+您必須完成其中部分的整合，才能在AEM中整合Adobe Analytics。
 
 ## 在AEM中完成IMS設定 {#completing-the-ims-configuration-in-aem}
 
-返回AEM後，您可以新增Analytics整合專案中所需的值來完成IMS設定：
+返回AEM時，您可以新增Analytics整合專案中所需的值來完成IMS設定：
 
 1. 返回 [在AEM中開啟的IMS設定](#configuring-an-ims-configuration-generating-a-public-key).
 1. 選取 **下一個**.
@@ -169,7 +169,7 @@ ht-degree: 2%
 
 1. 使用&#x200B;**建立**&#x200B;確認。
 
-1. 您的Adobe Analytics設定將顯示在AEM主控台中。
+1. 您的Adobe Analytics設定會顯示在AEM主控台中。
 
    ![IMS 設定](assets/integrate-analytics-io-11.png)
 
@@ -190,7 +190,7 @@ ht-degree: 2%
 
    ![IMS設定 — 檢查健康狀態](assets/integrate-analytics-io-12.png)
 
-1. 如果成功，您將看到一則確認訊息。
+1. 如果成功，您會看到一則確認訊息。
 
 ## 設定Adobe Analytics Cloud服務 {#configuring-the-adobe-analytics-cloud-service}
 
@@ -199,15 +199,15 @@ ht-degree: 2%
 1. 開啟 **工具** 功能表。 然後，在 **Cloud Service** 區段，選取 **舊版Cloud Service**.
 1. 向下捲動至 **Adobe Analytics** 並選取 **立即設定**.
 
-   此 **建立設定** 對話方塊將會開啟。
+   此 **建立設定** 對話方塊開啟。
 
-1. 輸入 **標題** 如果您願意，也可以 **名稱** （如果留空，這將從標題產生）。
+1. 輸入 **標題** 如果您願意，也可以 **名稱** （如果保留為空白，則會從標題產生）。
 
    您也可以選取所需的範本（如果有多個範本可用）。
 
 1. 使用&#x200B;**建立**&#x200B;確認。
 
-   此 **編輯元件** 對話方塊將會開啟。
+   此 **編輯元件** 對話方塊開啟。
 
 1. 請在以下欄位中輸入詳細資料： **Analytics設定** 標籤：
 
@@ -215,12 +215,12 @@ ht-degree: 2%
 
    * **IMS設定**：選取IMS設定的名稱
 
-1. 按一下 **連線至Analytics** 以初始化與Adobe Analytics的連線。
+1. 若要初始化與Adobe Analytics的連線，請按一下 **連線至Analytics**.
 
    如果連線成功，則訊息會顯示 **連線成功** 隨即顯示。
 
 1. 選取 **確定** 在訊息上。
 
-1. 視需要完成其他引數，接著 **確定** ，以確認設定。
+1. 視需要完成其他引數，接著 **確定** ，以便您確認組態。
 
-1. 您現在可以繼續前往 [新增Analytics框架](/help/sites-administering/adobeanalytics-connect.md) 以設定將傳送至Adobe Analytics的引數。
+1. 您現在可以繼續前往 [新增Analytics框架](/help/sites-administering/adobeanalytics-connect.md) 以設定傳送至Adobe Analytics的引數。

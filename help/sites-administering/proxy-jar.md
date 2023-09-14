@@ -1,26 +1,22 @@
 ---
 title: Proxy伺服器工具(proxy.jar)
-seo-title: Proxy Server Tool (proxy.jar)
 description: 瞭解AEM中的Proxy伺服器工具。
-seo-description: Learn about the Proxy Server Tool in AEM.
-uuid: 2fc1df24-8d5a-4be7-83fa-238ae65591b0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: ca98dc3c-7056-4cdc-b4d3-23e471da5730
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
 
 # Proxy伺服器工具(proxy.jar){#proxy-server-tool-proxy-jar}
 
-Proxy伺服器會作為中繼伺服器，在使用者端與伺服器之間轉送請求。 Proxy伺服器會追蹤所有使用者端與伺服器之間的互動，並輸出整個TCP通訊的記錄。 這可讓您精確監控目前的狀況，無須存取主伺服器。
+Proxy伺服器會作為中繼伺服器，在使用者端與伺服器之間轉送請求。 Proxy伺服器會追蹤所有使用者端 — 伺服器互動，並輸出整個TCP通訊的記錄。 這可讓您精確監控目前的狀況，無須存取主伺服器。
 
 您可以在適當的安裝資料夾中找到代理伺服器：
 
@@ -47,10 +43,10 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 ### 選項 {#options}
 
 * **q （安靜模式）** 不要將要求寫入主控台視窗。 如果您不想減慢連線的速度，或是將輸出記錄到檔案中（請參閱 — logfile選項），請使用此選項。
-* **b （二進位模式）** 如果您要在流量中尋找特定的位元組組合，請啟用二進位模式。 然後，輸出將包含十六進位和字元輸出。
+* **b （二進位模式）** 如果您要在流量中尋找特定的位元組組合，請啟用二進位模式。 輸出包含十六進位和字元輸出。
 * **t （時間戳記記錄專案）** 新增時間戳記至每個記錄輸出。 時間戳記以秒為單位，因此可能不適合檢查單一請求。 如果您使用代理主機伺服器的時間較長，請使用它來找出特定時間發生的事件。
 * **logfile &lt;filename> （寫入記錄檔）** 將使用者端 — 伺服器交談寫入記錄檔。 此引數也可在安靜模式下運作。
-* **ì &lt;numindentions> （新增縮排）** 每個使用中的連線都會縮排，以提升可讀性。 預設為16個層級。 （proxy.jar 1.16版的新增功能）。
+* **ì &lt;numindentions> （新增縮排）** 每個使用中的連線都會縮排，以提升可讀性。 預設值為16個層級。 （proxy.jar 1.16版的新增功能）。
 
 ## 使用Proxy伺服器工具 {#uses-of-the-proxy-server-tool}
 
@@ -58,7 +54,7 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 
 **檢查Cookie及其值**
 
-下列記錄專案範例顯示自代理主機啟動後，使用者端在第6個開啟的連線中所傳送的所有Cookie及其值：
+下列記錄專案範例顯示自代理主機啟動後，使用者端在第六個開啟的連線上傳送的所有Cookie及其值：
 
 ```xml
 C-6-#000635 -> [Cookie: cq3session=7e39bc51-ac72-3f48-88a9-ed80dbac0693; Show=ShowMode; JSESSIONID=68d78874-cabf-9444-84a4-538d43f5064d ]
@@ -74,7 +70,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **正在檢查「保持連線」是否有效**
 
-**保持連線** 表示使用者端會重複使用伺服器連線，以傳輸多個檔案（頁面代碼、圖片、樣式表等）。 若沒有持續連線，使用者端必須為每個要求建立新連線。
+**保持連線** 表示使用者端會重複使用伺服器連線來傳輸多個檔案（頁面代碼、圖片、樣式表等）。 若沒有持續連線，使用者端必須為每個要求建立新連線。
 
 若要檢查保持連線是否有效：
 
@@ -86,7 +82,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **尋找遺失的請求**
 
-如果您在複雜的伺服器設定中遺失請求，例如防火牆和Dispatcher，您可以使用Proxy伺服器來找出請求遺失的位置。 若使用防火牆：
+如果您在複雜的伺服器設定中遺失請求，例如防火牆和Dispatcher，您可以使用Proxy伺服器來找出請求遺失的位置。 如果有防火牆：
 
 1. 在防火牆之前啟動Proxy
 1. 在防火牆之後啟動另一個Proxy
@@ -126,11 +122,11 @@ C-6-Finished: 758 bytes (1.0 kb/s)
 S-6-Finished: 665 bytes (1.0 kb/s)
 ```
 
-這會顯示第6個連線中，使用者端與伺服器之間以平均速度傳遞的位元組數目。
+這會顯示第六個連線中，使用者端與伺服器之間以平均速度傳遞的位元組數目。
 
 ## 記錄輸出的範例 {#an-example-of-log-output}
 
-我們將檢閱簡單範本，依請求產生下列程式碼：
+檢閱提出要求時產生下列程式碼的簡單範本：
 
 ```xml
 <html>
@@ -144,7 +140,7 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 </html>
 ```
 
-如果AEM在localhost：4303上執行，請以下列方式啟動Proxy伺服器：
+如果AEM在localhost：4303上執行，請依照以下步驟啟動Proxy伺服器：
 
 ```xml
 java -jar proxy.jar localhost 4303 4444 -logfile test.log
@@ -181,7 +177,7 @@ C-0-#000347 -> [Host: localhost:4444 ]
 C-0-#000369 -> [Connection: Keep-Alive ]
 ```
 
-Proxy伺服器是確認Cookie設定是否正確的理想工具。 我們在這裡看到：
+Proxy伺服器是確認Cookie設定是否正確的理想工具。 在這裡，您會看到下列內容：
 
 * AEM產生的cq3session Cookie
 * CFC產生的顯示模式切換Cookie
@@ -281,4 +277,4 @@ C-1-Finished: 403 bytes (0.0 kb/s)
 * 伺服器會先傳回HTML碼
 * 然後瀏覽器要求影像並開啟新連線
 
-實際上，頁面可能會產生許多對影像、樣式表、JavaScript檔案等的平行請求。 這表示記錄檔有平行開啟連線的重疊專案。 在這種情況下，我們建議使用選項 — i來改善可讀性。
+實際上，一個頁面可能會產生許多對影像、樣式表、JavaScript檔案等的平行請求。 這表示記錄檔有平行開啟連線的重疊專案。 在這種情況下，Adobe建議使用選項 — i來改善可讀性。

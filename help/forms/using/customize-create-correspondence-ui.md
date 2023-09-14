@@ -1,19 +1,15 @@
 ---
 title: 自訂建立通訊UI
-seo-title: Customize create correspondence UI
-description: 瞭解如何自訂建立通訊UI。
-seo-description: Learn how to customize create correspondence UI.
-uuid: 9dee9b6f-4129-4560-9bf8-db48110b76f7
+description: 瞭解如何自訂建立通訊使用者介面。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1084'
 ht-degree: 1%
 
 ---
@@ -42,20 +38,20 @@ ht-degree: 1%
 
 ## 建立所需的檔案夾結構 {#creatingfolderstructure}
 
-建立資料夾結構（如下所述），以裝載自訂標誌影像和樣式表。 具有根資料夾/apps的新資料夾結構類似於/libs資料夾的結構。
+建立檔案夾結構（如下所述），以託管自訂標誌影像和樣式表。 具有根資料夾/apps的新資料夾結構類似於/libs資料夾的結構。
 
 如有任何自訂內容，請在/apps分支中建立平行資料夾結構，如下所述。
 
-/apps分支（資料夾結構）：
+此 `/apps` 分支（資料夾結構）：
 
-* 在系統更新時，確保檔案的安全。 若是升級、Feature Pack或Hot Fix、/libs分支會更新，而若您在/libs分支中託管變更，則這些變更會被覆寫。
-* 協助您避免打擾目前的系統/分支，如果您使用預設位置來儲存自訂檔案，可能會意外解除干擾。
-* 協助您的資源在AEM搜尋資源時獲得更高的優先順序。 AEM設定為先搜尋/apps分支，然後搜尋/libs分支以尋找資源。 此機制表示系統使用您的覆蓋（以及其中定義的自訂）。
+* 如果系統有更新，請確保您的檔案是安全的。 若有升級、功能套件或Hot Fix， `/libs` 分支會更新，而如果您將變更託管於 `/libs` 分支，它們會被覆寫。
+* 協助您避免打擾現有的系統/分支，如果您使用預設位置來儲存自訂檔案，您可能會意外解除打擾。
+* 協助您的資源在AEM搜尋資源時獲得更高的優先順序。 AEM已設定為搜尋 `/apps` 先分支，然後分支 `/libs` 分支以尋找資源。 此機制表示系統使用您的覆蓋（以及其中定義的自訂）。
 
-使用以下步驟，在/apps分支中建立所需的資料夾結構：
+使用以下步驟，在中建立所需的檔案夾結構 `/apps` 分支：
 
 1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
-1. 在應用程式資料夾中，建立名為的資料夾 `css` 路徑/結構類似於css資料夾（位於ccrui資料夾）。
+1. 在應用程式資料夾中，建立名為的資料夾 `css` 路徑/結構類似於css資料夾（在ccrui資料夾中）。
 
    建立css資料夾的步驟：
 
@@ -65,9 +61,9 @@ ht-degree: 1%
 
    1. 請確定「覆蓋節點」對話方塊是否具備下列值：
 
-      **路徑：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/crui/css
+      **路徑：** `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
-      **覆蓋位置：** /apps/
+      **重疊位置:** `/apps/`
 
       **符合節點型別：** 已核取
 
@@ -75,7 +71,7 @@ ht-degree: 1%
 
       >[!NOTE]
       >
-      >請勿在/libs分支中進行變更。 您所做的任何變更都可能會遺失，因為每當您：
+      >請勿變更 `/libs` 分支。 您所做的任何變更都可能會遺失，因為每當您：
       >
       >    
       >    
@@ -87,7 +83,7 @@ ht-degree: 1%
 
    1. 按一下&#x200B;**「確定」**。css資料夾是在指定的路徑中建立。
 
-1. 在應用程式資料夾中，建立名為的資料夾 `imgs` 路徑/結構與imgs資料夾（位於ccrui資料夾）類似。
+1. 在應用程式資料夾中，建立名為的資料夾 `imgs` 路徑/結構類似於imgs資料夾（在ccrui資料夾中）。
 
    1. 用滑鼠右鍵按一下 **影像** 資料夾並選取「 」 **覆蓋節點**： `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 請確定「覆蓋節點」對話方塊是否具備下列值：
@@ -111,7 +107,7 @@ ht-degree: 1%
 將您的自訂標誌檔案上傳至CRX。 標準HTML規則控管標誌的呈現。 支援的影像檔案格式取決於您用來存取AEM Forms的瀏覽器。 所有瀏覽器都支援JPEG、GIF和PNG。 如需詳細資訊，請參閱瀏覽器特定的檔案，瞭解受支援的影像格式。
 
 * 標誌影像的預設尺寸為48畫素 &#42; 48畫素 確保影像類似於此大小或大於48畫素 &#42; 48畫素
-* 如果您的標誌影像高度超過50 px，建立通訊使用者介面會將影像縮放到最大高度50 px，因為這是標頭的高度。 縮小影像時，「建立對應」使用者介面會維持影像的外觀比例。
+* 如果您的標誌影像高度超過50畫素，則「建立通訊」使用者介面會將影像縮放至最大高度50畫素，因為這是標頭的高度。 縮小影像時，「建立對應」使用者介面會維持影像的外觀比例。
 * 建立通訊使用者介面不會將影像放大（如果影像太小），因此請確定您使用高度至少為48畫素的標誌影像，且寬度足以使影像清晰。
 
 使用以下步驟，將自訂標誌檔案上傳至CRX：
@@ -141,7 +137,7 @@ ht-degree: 1%
 
    「編輯jcr：data」對話方塊隨即顯示。
 
-   現在按一下newlogo.png資料夾，連按兩下jcr：content （dim選項）並設定型別nt：resource。 如果不存在，請建立名稱為jcr：content的屬性。
+   現在按一下newlogo.png資料夾，然後按兩下jcr：content （dim選項）並設定型別nt：resource。 如果不存在，請以名稱jcr：content建立屬性。
 
 1. 在「編輯jcr：data」對話方塊中，按一下 **瀏覽** 並選取您要做為標誌的影像檔案（此處CustomLogo.png）。
 
@@ -153,11 +149,11 @@ ht-degree: 1%
 
 1. 按一下&#x200B;**「儲存全部」**。
 
-## 建立CSS以將標誌與UI整合 {#createcss}
+## 建立CSS以使用UI呈現標誌 {#createcss}
 
 自訂標誌影像需要在內容內容內容中載入額外的樣式表。
 
-使用下列步驟來設定呈現標誌的樣式表：
+使用下列步驟來建立樣式表，以透過UI呈現標誌：
 
 1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`。如有必要，請以管理員身分登入。
 1. 在下列位置建立名為customcss.css的檔案（不能使用不同的檔案名稱）：
@@ -178,9 +174,9 @@ ht-degree: 1%
 
    1. 按一下&#x200B;**「儲存全部」**。
 
-## 重新整理建立通訊UI以檢視自訂標誌 {#refreshccrui}
+## 重新整理建立通訊UI，以便您可以檢視自訂標誌 {#refreshccrui}
 
-清除瀏覽器快取，然後在瀏覽器中開啟「建立通訊UI」執行個體。 您應該會看到自訂標誌。
+清除瀏覽器快取，然後在瀏覽器中開啟Create Correspondence UI執行個體，以便您檢視自訂標誌。
 
 ![使用自訂標誌建立通訊使用者介面](assets/0_1_introscreenshot-1.png)
 

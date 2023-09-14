@@ -1,26 +1,22 @@
 ---
 title: 工具主控台
-seo-title: Tools Consoles
 description: 了解 AEM 中各種不同的工具主控台。
-seo-description: Learn about the different tools consoles throughout AEM.
-uuid: 44439f8e-7c47-4ea9-afe1-a9a23489a20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 33%
+source-wordcount: '594'
+ht-degree: 30%
 
 ---
 
 # 工具主控台{#tools-consoles}
 
-**「工具」**&#x200B;主控台可供存取多種特殊工具，協助您管理網站、數位資產和內容存放庫的其他方面。目前有兩種風格的 **工具** 主控台依存於您使用的UI：
+此 **工具** 主控台可供存取數個專用工具，協助您管理網站、數位資產和內容存放庫的其他方面。 目前有兩種風格的 **工具** 主控台依存於您使用的UI：
 
 * [工具 — 觸控最佳化的UI](#tools-touch-optimized-ui)
 * [工具 — Classic UI](#tools-classic-ui)
@@ -374,11 +370,11 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>使用者端內容設定<br /> </td>
-   <td>Client Context代表動態組合的使用者資料集合。 預設和Marketing Cloud設定會保留在這裡。<br /> </td>
+   <td>Client Context代表動態組合的使用者資料集合。 預設和Experience Cloud設定會保留在這裡。<br /> </td>
   </tr>
   <tr>
    <td>Cloud Service設定<br /> </td>
-   <td>保留與與Adobe Marketing Cloud整合相關的設定。</td>
+   <td>保留與與Adobe Experience Cloud整合相關的設定。</td>
   </tr>
   <tr>
    <td>雲端設定<br /> </td>
@@ -390,11 +386,11 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>DAM </td>
-   <td>提供各種選項的存取權。</td>
+   <td>存取各種選項。</td>
   </tr>
   <tr>
    <td>控制面板</td>
-   <td>可讓您建立報告控制面板；這些控制面板提供可自訂的方式，讓您定義顯示合併資料的頁面。</td>
+   <td>建立報告控制面板；提供可自訂的方式，定義顯示合併資料的頁面。</td>
   </tr>
   <tr>
    <td>自訂檔案</td>
@@ -406,15 +402,15 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>表單提交</td>
-   <td>儲存已收到的表單提交清單。</td>
+   <td>已收到的表單提交清單。</td>
   </tr>
   <tr>
    <td>匯入工具 </td>
-   <td>提供各種選項的存取權。</td>
+   <td>存取各種選項。</td>
   </tr>
   <tr>
    <td>外部連結檢查程式</td>
-   <td>外部連結檢查程式。</td>
+   <td>外部連結檢查程式.</td>
   </tr>
   <tr>
    <td>行動</td>
@@ -426,11 +422,11 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>復寫 — 復寫代理</td>
-   <td>用於在發佈頁面時，將資料從作者複製到發佈，或使用反向復寫將使用者評論從發佈環境傳回給作者。</td>
+   <td>用於在發佈頁面時，將資料從作者執行個體復寫至發佈，或使用反向復寫將使用者評論從發佈環境傳回給作者。</td>
   </tr>
   <tr>
    <td>報告</td>
-   <td>AEM提供一系列自訂報表，讓您建立自訂報表及/或開發自己的報表。</td>
+   <td>AEM提供一系列自訂報表，讓您建立自訂報表或開發自己的報表。</td>
   </tr>
   <tr>
    <td>預設頁面支架</td>
@@ -438,7 +434,7 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>安全性 — 自助設定 </td>
-   <td>可讓您設定使用者在建立帳戶或重設密碼時自動收到的電子郵件，並確認已重設的密碼。</td>
+   <td>設定使用者在建立帳戶或重設密碼時自動收到的電子郵件，並確認已重設的密碼。</td>
   </tr>
   <tr>
    <td>Segmentation</td>
@@ -454,7 +450,7 @@ ht-degree: 33%
   </tr>
   <tr>
    <td>版本設定 — 永久刪除版本</td>
-   <td>可讓您視需要永久刪除頁面版本。</td>
+   <td>視需要清除頁面版本。</td>
   </tr>
   <tr>
    <td>工作流程</td>

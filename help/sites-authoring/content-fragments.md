@@ -1,18 +1,16 @@
 ---
 title: 使用內容片段編寫內容頁面
 description: AEM內容片段可讓您設計、建立、組織和使用獨立於頁面的內容。
-uuid: 987de428-8354-4b23-a552-3ea415122184
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 7%
+source-wordcount: '1132'
+ht-degree: 5%
 
 ---
 
@@ -35,7 +33,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 >[!CAUTION]
 >
->此頁面必須結合閱讀 [使用內容片段](/help/assets/content-fragments/content-fragments.md) （及相關頁面），其中介紹基本術語和概念，以及建立和管理片段。
+>此頁面必須透過以下方式讀取： [使用內容片段](/help/assets/content-fragments/content-fragments.md) （和相關頁面），因為它會介紹基本術語和概念，以及建立和管理片段。
 
 內容片段會啟用：
 
@@ -79,13 +77,13 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
    >
    >另一種方法是將特定的內容片段直接拖曳到頁面上。 這會自動建立關聯的元件（內容片段）。
 
-1. 最初，內容來自 **主要** 元素和 **主版** （變數）將會顯示。 您可以 [選取其他元素和/或變數](#selecting-the-element-or-variation) 視需要。
+1. 最初，內容來自 **主要** 元素和 **主版** （變數）會顯示。 您可以 [選取其他元素和/或變數](#selecting-the-element-or-variation) 視需要。
 
    ![cfm-6420-01](assets/cfm-6420-01.png)
 
    >[!NOTE]
    >
-   >如需進一步編輯功能的詳細資訊，另請參閱：
+   >如需進一步編輯功能的詳細資訊，請參閱下列內容：
    >
    >
    >
@@ -96,7 +94,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 ### 選取元素或變數 {#selecting-the-element-or-variation}
 
-開啟片段的 **設定** 對話方塊，以設定片段用於目前頁面。 此對話方塊取決於所使用的元件。
+開啟片段的 **設定** 對話方塊，讓您可以設定片段以在目前頁面上使用。 此對話方塊取決於所使用的元件。
 
 在適當的組態對話方塊中，您可以選取可用的引數，包括：
 
@@ -112,8 +110,8 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 * **元素**
 
-   * 預設 **主要** 將始終可用。
-   * 如果片段是以適當的範本建立的，將有可選擇的範本可用。
+   * 預設 **主要** 一律可用。
+   * 如果片段是以適當的範本建立的，則此選項可供選擇。
 
   >[!NOTE]
   >
@@ -121,8 +119,8 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 * **變異**
 
-   * 預設主 **版** (Master)將始終可用。
-   * 如果變數是為片段而建立的，將有可選擇的變數可用。
+   * 預設 **主版** 一律可用。
+   * 如果變數是為片段而建立，則可供選取。
 
 * **段落**：指定要包含的段落範圍：
 
@@ -139,7 +137,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 >[!CAUTION]
 >
->一如既往，編輯片段來源將會影響參照該內容片段的所有頁面。
+>一如既往，編輯片段來源可能會影響參照該內容片段的所有頁面。
 
 ### 新增中間內容 {#adding-in-between-content}
 
@@ -167,7 +165,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 >[!CAUTION]
 >
->將中間內容新增至頁面上的內容片段後，變更基礎內容片段的結構（例如在內容片段編輯器中）可能會導致錯誤/未預期的結果。
+>將中間內容新增至頁面上的內容片段後，變更基礎內容片段的結構（即在內容片段編輯器中）可能會導致錯誤/未預期的結果。
 >
 >發生此情況時，中間內容會維持不變：
 >
@@ -179,7 +177,7 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
 ### 使用關聯內容 {#using-associated-content}
 
-如果您有 [與內容片段](/help/assets/content-fragments/content-fragments-assoc-content.md)[相關的內容](/help/assets/content-fragments/content-fragments.md) ，這些資產將可從側面板使用 (在您將片段放在內容頁面後)。關聯內容實際上是中間內容的特 [殊內容來源](#adding-in-between-content)。
+如果您有 [關聯內容](/help/assets/content-fragments/content-fragments-assoc-content.md) 使用 [內容片段](/help/assets/content-fragments/content-fragments.md)，這些資產可從側面板使用（在您將片段放在內容頁面後）。 關聯內容實際上是中間內容的特 [殊內容來源](#adding-in-between-content)。
 
 >[!NOTE]
 >
@@ -189,9 +187,9 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 >
 >如果您在一個頁面上有多個內容片段，請 **關聯內容** 索引標籤會顯示適用於所有片段的資產。
 
-將具有關聯內容的片段新增到頁面後，就會顯示新索引標籤(**關聯內容**)即會在側面板中開啟。
+將具有關聯內容的片段新增到頁面後，會新增索引標籤(**關聯內容**)即會在側面板中開啟。
 
-從這裡，您可以將資產拖曳至所需位置（可拖曳至現有元件，也可拖曳至將建立適當元件的所需位置）：
+從這裡，您可以將資產拖曳至所需位置（可拖曳至現有元件，或拖曳至建立適當元件的所需位置）：
 
 ![cfm-6420-03](assets/cfm-6420-03.png)
 
@@ -213,4 +211,4 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 片段必須發佈，才能用於您已發佈的網頁：
 
 * 片段可以在以下時間後發佈： [在資產控制檯中建立片段](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment).
-* 如果 *未發佈的片段* 用於正在發佈的頁面，目前也可以發佈片段。
+* 如果 *未發佈的片段* 用於正在發佈的頁面，片段現在也可以發佈。

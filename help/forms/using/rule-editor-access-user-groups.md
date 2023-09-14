@@ -1,32 +1,28 @@
 ---
 title: 將規則編輯器存取權授予給所選的使用者群組
-seo-title: Grant rule editor access to select user groups
-description: 將受限制的存取權授與規則編輯器以選取使用者群組。
-seo-description: Grant restricted access to rule editor to select user groups.
-uuid: efa2570a-20ac-4b43-8a0e-38247f84d02f
+description: 將受限制的存取權授與規則編輯器，以選取使用者群組。
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: ab694a93-00d2-44d7-8ded-68ab2ad50693
 docset: aem65
 feature: Adaptive Forms
 exl-id: a1a2b277-3133-404b-a7fc-337cedddb12c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 20%
+source-wordcount: '378'
+ht-degree: 17%
 
 ---
 
 # 將規則編輯器存取權授予給所選的使用者群組{#grant-rule-editor-access-to-select-user-groups}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。 </span>
 
 ## 概觀 {#overview}
 
 您可能有不同型別的使用者，他們具有適用最適化Forms的各種技能。 雖然專家使用者可能擁有使用指令碼和複雜規則的正確知識，但可能有基本級使用者只需要使用最適化表單的版面和基本屬性。
 
-AEM Forms可讓您根據使用者的角色或職能，限制使用者的規則編輯器存取權。 在最適化Forms組態服務設定中，您可以指定 [使用者群組](/help/sites-administering/security.md) 可檢視和存取規則編輯器的使用者。
+AEM Forms可讓您根據使用者的角色或職能，限制使用者的規則編輯器存取權。 在最適化Forms組態服務設定中，您可以指定 [使用者群組](/help/sites-administering/security.md) 可檢視及存取規則編輯器的使用者。
 
 ## 指定可存取規則編輯器的使用者群組 {#specify-user-groups-that-can-access-rule-editor}
 
@@ -50,7 +46,7 @@ AEM Forms可讓您根據使用者的角色或職能，限制使用者的規則�
 
    ![建立使用者](assets/create_user_new.png)
 
-   現在，當不屬於指定使用者群組（在此為RuleEditorsUserGroup）的使用者點選欄位時，編輯規則圖示( ![edit-rules1](assets/edit-rules1.png))在元件工具列中無法使用：
+   現在，當不屬於指定使用者群組（此處RuleEditorsUserGroup）的使用者點選欄位時，編輯規則圖示( ![edit-rules1](assets/edit-rules1.png))在元件工具列中無法使用：
 
    ![componentstolbarwithre](assets/componentstoolbarwithre.png)
 
