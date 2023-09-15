@@ -1,35 +1,31 @@
 ---
 title: 版本清除
-seo-title: Version Purging
 description: 本文介紹版本清除的可用選項。
-seo-description: This article describes the available options for version purging.
-uuid: a9fa25c7-e60e-4665-a726-99af9aac8f70
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: fb4d7337-7b94-430b-80d2-f1754f823c2b
 docset: aem65
 feature: Configuring
 exl-id: 6f0b1951-bdda-475f-b6c0-bc18de082b7c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
 
 # 版本清除{#version-purging}
 
-在標準安裝中，當您在更新內容後啟動頁面時，AEM會建立新版本的頁面或節點。
+在標準安裝中，當您在更新內容後啟動頁面時，Adobe Experience Manager (AEM)會建立頁面或節點的版本。
 
 >[!NOTE]
 >
->如果未進行內容變更，您會看到指出頁面已啟用的訊息，但不會建立新版本
+>如果未進行任何內容變更，則會看到一則訊息，指出頁面已啟動，但未建立新版本。
 
 您可以使用來依請求建立其他版本 **版本設定** 索引標籤。 這些版本儲存在存放庫中，可視需要還原。
 
-這些版本永遠不會清除，因此存放庫大小會隨著時間增長，因此需要管理。
+這些版本永遠不會清除，因此存放庫大小會隨著時間增長，因此必須加以管理。
 
 AEM隨附多種機制，可協助您管理存放庫：
 
@@ -49,7 +45,7 @@ AEM隨附多種機制，可協助您管理存放庫：
 
 >[!CAUTION]
 >
->為了最佳化存放庫大小，您應該經常執行版本清除工作。 當流量有限時，應該將任務排程在營業時間以外。
+>若要最佳化存放庫大小，請經常執行版本清除工作。 當流量有限時，應該將任務排程在營業時間以外。
 
 ## 版本管理員 {#version-manager}
 
@@ -67,19 +63,19 @@ AEM隨附多種機制，可協助您管理存放庫：
 
 * `versionmanager.ivPaths`(字串[]，預設： `{"/"}`)指定在下列情況下，會在哪一個路徑上以隱含方式建立版本： `versionmanager.createVersionOnActivation` 設為true。
 
-* `versionmanager.purgingEnabled` （布林值，預設值： false）定義是否要在建立新版本時啟用清除。
+* `versionmanager.purgingEnabled` （布林值，預設值： false）定義在建立新版本時是否啟用清除。
 
 * `versionmanager.purgePaths` (字串[]，預設值： {&quot;/content&quot;})指定建立新版本時清除版本的路徑。
 
-* `versionmanager.maxAgeDays` （int，預設值： 30）在版本清除時，將移除設定值之前的任何版本。 如果值小於1，則不會根據版本的期限執行清除。
+* `versionmanager.maxAgeDays` （int，預設值： 30）在版本清除時，會移除設定值之前的任何版本。 如果值小於1，則不會根據版本的期限執行永久刪除。
 
-* `versionmanager.maxNumberVersions` （int，預設值5）在版本清除時，將移除任何早於第n個最新版本的版本。 如果值小於1，則不會根據版本數執行永久刪除。
+* `versionmanager.maxNumberVersions` （int，預設值5）在版本清除時，會移除任何早於第n個最新版本的版本。 如果值小於1，則不會根據版本數執行永久刪除。
 
-* `versionmanager.minNumberVersions` （int，預設為0）不論版本保留時間為何，都可保留的最小版本數。 如果該值設定為小於1的值，則不會保留版本的最小數量。
+* `versionmanager.minNumberVersions` （int，預設0）保留的最低版本數，無論保留時間長短。 如果該值設定為小於1的值，則不會保留版本的最小數量。
 
 >[!NOTE]
 >
->不建議在存放庫中保留大量版本。 因此，在設定版本清除操作時，請留意不要從清除中排除太多版本，否則存放庫大小將無法正確最佳化。 如果您因業務需求而保留大量版本，請聯絡Adobe支援以尋找其他方法以最佳化存放庫大小。
+>不建議在存放庫中保留許多版本。 因此，在設定版本清除操作時，請注意不要從清除中排除太多版本，否則存放庫大小未正確最佳化。 如果您因業務需求而保留大量版本，請聯絡Adobe支援以尋找其他方法以最佳化存放庫大小。
 
 ### 結合保留選項 {#combining-retention-options}
 
@@ -95,12 +91,12 @@ AEM隨附多種機制，可協助您管理存放庫：
 
 * 替換為：
 
-   * 過去60天內製作的10個版本
-   * 其中3個版本是在過去30天內建立
+   * 在過去60天內製作了10個版本
+   * 其中三個版本是在過去30天內建立的
 
-* 將表示：
+* 這表示：
 
-   * 將保留最後3個版本
+   * 會保留最後三個版本
 
 例如，在定義要保留的最大AND最小版本數以及要保留的最舊版本時：
 
@@ -112,11 +108,11 @@ AEM隨附多種機制，可協助您管理存放庫：
 
 * 替換為：
 
-   * 60天前製作的5個版本
+   * 有5個版本是60天前製作的
 
-* 將表示：
+* 這表示：
 
-   * 將保留3個版本
+   * 保留三個版本
 
 ## 清除版本工具 {#purge-versions-tool}
 
