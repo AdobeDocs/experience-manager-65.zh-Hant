@@ -5,7 +5,7 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 2%
@@ -22,28 +22,28 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->以下程式使用下列示範目錄來說明部署：
+>下列程式使用下列示範目錄來說明部署：
 >
 >`Geometrixx Outdoors Site English (US)`
 
-部署 [必要的電子商務套件](#packages-needed-for-ecommerce-with-hybris) 提供電子商務架構的完整功能，以及hybris實作所提供的電子商務功能參考實作（包括示範目錄）
+部署 [必要的電子商務套件](#packages-needed-for-ecommerce-with-hybris) 提供eCommerce架構的完整功能，以及hybris實作（包括示範目錄）隨附的電子商務功能參考實作
 
 這可在英文（美國）分支下取得( `/content/geometrixx-outdoors/en_US`)的Geometrixx Outdoors網站：
 
 * [產品資訊](#productinformationwithcolorvariants) （在適當時搭配顏色變體）
 
-* [購物車內容概觀](#shoppingcartcontentoverview)
+* [購物車內容總覽](#shoppingcartcontentoverview)
 * [客戶註冊](#customersignup) 和 [客戶登入](#customersignin)
 
-* [存取Hybris管理主控台](#accesstothehybrismanagementconsole)
+* [Hybris管理主控台的存取權](#accesstothehybrismanagementconsole)
 
-### 技術需求 — hybris伺服器 {#technical-requirements-hybris-server}
+### 技術需求 — hybris Server {#technical-requirements-hybris-server}
 
-更新eCommerce Integration Framework的hybris擴充功能，以支援Hybris 5 （作為預設值），同時維持與的回溯相容性 [Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris).
+已更新eCommerce Integration Framework的hybris擴充功能，以支援Hybris 5 （作為預設值），同時維持與的回溯相容性 [Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris).
 
 >[!NOTE]
 >
->* 支援18.11版及更高版本。
+>* 支援18.11版及更新版本。
 >* 您需要Java™ 7才能執行 [hybris 5伺服器。](https://www.sap.com/products/crm.html)
 * hybris附加元件， [Telco加速器](https://www.sap.com/products/crm.html)AEM擴充功能不支援。
 >
@@ -95,11 +95,11 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-適用於開發人員 [API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可供下載。
+對於開發人員而言， [API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可下載。
 
 ### 下載並建置您的hybris伺服器 {#download-and-build-your-hybris-server}
 
-此程式中的步驟會下載及建置hybris伺服器。 也會進行hybris和cq之間連線所需的初始設定。 擴充功能便會可與預設設定搭配使用。
+此程式中的步驟會下載及建置hybris伺服器。 也會進行hybris與cq之間連線所需的初始設定。 擴充功能就會與預設設定搭配使用。
 
 >[!CAUTION]
 >
@@ -113,9 +113,9 @@ ht-degree: 2%
 
    >[!CAUTION]
    >
-   您需要帳戶（來自Hybris）才能存取此專案。
+   您需要帳戶（來自hybris）才能存取此專案。
 
-1. 將散發檔案解壓縮至所需位置(稱為 &lt;hybris-root-directory>)。
+1. 將發佈檔案解壓縮至所需的位置(稱為 &lt;hybris-root-directory>)。
 1. 從命令列，執行下列動作：
 
    ```shell
@@ -133,7 +133,7 @@ ht-degree: 2%
    >
    按下 `Return` 必要時。
 
-1. 將下列檔案下載至解壓縮的hybris散佈的根資料夾，
+1. 將下列檔案下載到解壓縮的hybris散髮根資料夾，
 
    ```
        <hybris-root-directory>
@@ -153,7 +153,7 @@ ht-degree: 2%
 1. 從命令列，執行下列至：
 
    * 更新hybris伺服器的設定（根據擴充功能的要求）
-   * 使用修改後的設定重新建置hybris伺服器
+   * 使用修改的組態重新建置hybris伺服器
    * 啟動伺服器
 
    ```shell
@@ -165,15 +165,15 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   視您的系統而定，這些步驟中的數個可能需要幾分鐘才能完成。
+   視您的系統而定，其中數個步驟可能需要幾分鐘才能完成。
 
 1. 在您的瀏覽器中，導覽至 **hybris管理主控台** 於：
 
    [http://localhost:9002](http://localhost:9002)
 
-1. 按一下 **初始化** 然後確認初始化動作（因為它刪除現有資料）。
+1. 按一下 **初始化** 然後確認初始化動作（因為它會刪除現有資料）。
 
-   進度會顯示在主控台上，包含 `FINISHED` 表示完成。
+   進度會顯示在主控台上，包含 `FINISHED` 指示完成。
 
    >[!NOTE]
    >
@@ -181,7 +181,7 @@ ht-degree: 2%
 
 ### 設定Geometrixx Outdoors存放區 {#setup-the-geometrixx-outdoors-store}
 
-此程式會上傳並設定示範存放區 — 「線上Geometrixx」。
+此程式會上傳並設定示範存放區 — 線上Geometrixx。
 
 1. 啟動您的hybris執行個體。 從命令列，執行下列動作：
 
@@ -195,10 +195,10 @@ ht-degree: 2%
    [https://localhost:9002/backoffice](https://localhost:9002/backoffice)
 
    使用這些認證：
-   * 使用者名稱：管理員
+   * 使用者名稱：admin
    * 密碼： nimda
 
-1. 在側欄導覽中，展開 **系統** 和 **工具**. 然後選取 **匯入** 以開啟 **精靈：CSV匯入** 視窗。
+1. 在側邊欄導覽中，展開 **系統** 和 **工具**. 然後選取 **匯入** 以開啟 **精靈：CSV匯入** 視窗。
 1. 在 **設定** 標籤， **上傳** 下列專案 **匯入檔案**：
 
 [取得檔案](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
@@ -216,7 +216,7 @@ ht-degree: 2%
 
 1. 按一下 **完成** 以關閉匯入視窗。
 
-1. 從側邊欄中選取 **系統**，則 **工具**，則 **匯入**.
+1. 在側邊欄中，選取 **系統**，然後 **工具**，然後 **匯入**.
 
 1. **上傳** 下列專案 **匯入檔案**：
 

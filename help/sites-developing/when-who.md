@@ -1,25 +1,21 @@
 ---
 title: 測試 — 何時與誰？
-seo-title: Testing - when and with whom?
-description: 測試以及專案開發的不同階段可能會涉及各種角色
-seo-description: Various roles can be involved in testing and at various stages of project development
-uuid: 431e8f06-80eb-4fb3-a4c7-2580608b0a1c
+description: 測試以及專案開發的不同階段可能會涉及各種角色。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
-discoiquuid: 6148f8e6-ab62-4eb8-8a2d-c431b8318000
 exl-id: 5a16be40-eede-4a47-b03b-3993e285232e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
 
 # 測試 — 何時與誰？{#testing-when-and-with-whom}
 
-測試中以及專案開發的不同階段，可能會涉及各種角色。
+測試以及專案開發的不同階段可能會涉及各種角色。
 
 <table>
  <tbody>
@@ -30,23 +26,23 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>開發團隊</td>
-   <td>開發團隊負責您的單元測試和某些整合測試。</td>
-   <td>這些測試會先於鏈結中進行，但在開發期間將會重複/擴充。</td>
+   <td>開發團隊負責您的單元測試和一些整合測試。</td>
+   <td>這些測試會先出現在鏈中，但在開發期間會重複/延伸。</td>
   </tr>
   <tr>
    <td>品質保證團隊</td>
-   <td><p>您需要品質保證團隊（無論規模大小）才能進行功能和效能測試。</p> <p>這些是中立、專屬的測試者 — 軟體的金科玉律永遠規定開發人員永遠不應測試自己的工作。</p> <p>此團隊的成員可以來自Day專案團隊、合作夥伴和/或您的客戶團隊。</p> </td>
-   <td><p>測試人員應能使用第一個功能版本（儘可能真實地使用）。 雖然提早發佈臨時版本可能會產生許多錯誤，但此版本可就重大問題提供早期意見回饋。</p> </td>
+   <td><p>您需要品質保證團隊（無論大小）才能進行功能和效能測試。</p> <p>這些是中立、專屬的測試者 — 軟體的金科玉律永遠要求開發人員永遠不應測試自己的工作。</p> <p>此團隊的成員可來自「日」專案團隊、合作夥伴及/或您的客戶團隊。</p> </td>
+   <td><p>測試人員應能使用第一個函式版本（如有可能）。 雖然提早發佈臨時版本可能會產生許多錯誤，但它可以就關鍵問題提供早期意見回饋。</p> </td>
   </tr>
   <tr>
    <td>客戶測試團隊</td>
-   <td><p>根據所選的「專案模型」，客戶團隊成員可能會計畫參與測試，尤其是來自客戶地點的作者。</p> <p>有利之處在於：</p>
+   <td><p>根據選取的專案模型，可能會計畫讓客戶團隊成員參與測試，尤其是來自客戶網站的作者。</p> <p>這是有利的，因為它：</p>
     <ul>
-     <li><p>提供客戶開發專案的經驗。</p> </li>
+     <li><p>已提供客戶開發專案的經驗。</p> </li>
      <li><p>提供客戶的早期意見回饋。</p> </li>
-     <li><p>使用者通常以過去的經驗來表達他們的需求；儘早讓客戶參與測試，會提升他們對於新專案的經驗，例如 <i>實作</i> 體驗。</p> </li>
+     <li><p>使用者通常以先前的體驗來表達他們的需求；儘早讓客戶參與測試，會提升他們對於新專案的體驗，例如 <i>實作</i> 體驗。</p> </li>
     </ul> </td>
-   <td><p>同樣地，雖然客戶使用的任何版本都應該穩定、功能合理，但是及早參與也是好事。</p> <p>第一印象總是很重要的。</p> </td>
+   <td><p>同樣地，早期參與也是好事，但客戶使用的任何版本都應該穩定，並具備合理的功能。</p> <p>第一印象總是很重要的。</p> </td>
   </tr>
  </tbody>
 </table>

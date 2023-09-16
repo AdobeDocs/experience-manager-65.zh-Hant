@@ -1,23 +1,21 @@
 ---
 title: 管理一般電子商務
-seo-title: Administering generic eCommerce
 description: AEM一般解決方案提供管理存放庫中持有的商業資訊的方法。
-seo-description: The AEM generic solution provides methods of managing the commerce information held within the repository.
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
 workflow-type: tm+mt
-source-wordcount: '2977'
+source-wordcount: '2929'
 ht-degree: 2%
 
 ---
 
 # 管理一般電子商務 {#administering-generic-ecommerce}
 
-AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（與使用外部電子商務引擎相反）。 其中包括：
+Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲存之商務資訊的方法（與使用外部電子商務引擎相反）。 其中包括：
 
 * [產品](/help/commerce/cif-classic/administering/concepts.md#products)
 * [產品的系列品種](/help/commerce/cif-classic/administering/concepts.md#product-variants)
@@ -31,7 +29,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 >
 >標準AEM安裝包含通用AEM (JCR)電子商務實作。
 >
->這目前僅供示範之用，或根據您的需求作為自訂實作的基本基礎。
+>其目的是為了示範，或作為根據您需求自訂實作的基本基礎。
 
 ## 產品和產品變數 {#products-and-product-variations}
 
@@ -39,7 +37,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 >
 >下列程式同時適用於產品與產品變體。
 
-建立產品之前，您需要定義 [支架](/help/sites-authoring/scaffolding.md). 這會指定定義產品所需的欄位以及編輯產品的方式。
+在建立產品之前，請先定義 [支架](/help/sites-authoring/scaffolding.md). 這會指定您必須定義的欄位、產品及其編輯方式。
 
 每個不同的產品型別都需要支架。 適當的支架可透過以下任一方式與產品相關聯：
 
@@ -56,7 +54,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 >
 >`/etc/commerce/products/geometrixx-outdoors`
 >
->您無需任何額外設定，即可在任何地方建立新的產品定義。
+>您可在產品定義下的任何位置建立產品定義，而無需任何其他設定。
 
 ### 匯入產品 {#importing-products}
 
@@ -88,15 +86,15 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
    >
    >您可以定義自訂的匯入工具來視需要操作。
 
-1. 選取 **下一個** 若要匯入產品，將會顯示所採取動作的記錄。
+1. 選取 **下一個** 若要匯入產品，則會顯示所採取動作的記錄。
 
    >[!NOTE]
    >
-   >產品將會匯入至目前位置或相對於目前位置。
+   >產品會匯入至目前位置或相對於目前位置。
 
    >[!NOTE]
    >
-   >重複使用 **下一個** 和 **返回** 將重複匯入產品定義。 但是，由於它們的SKU相同，存放庫中存在的資訊只會被覆寫。
+   >重複使用 **下一個** 和 **返回** 重複匯入產品定義。 但是，由於它們的SKU相同，因此會覆寫存放庫中現有的資訊。
 
 1. 選取 **完成** 以關閉精靈。
 
@@ -111,7 +109,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    * **存放區名稱**
 
-     產品將匯入至：
+     產品會匯入至：
 
      `/etc/commerce/products/<*store name*>/`
 
@@ -145,7 +143,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    ![加號形狀建立圖示](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
-1. 精靈將會開啟。 使用 **基本** 和 **產品標籤** 以輸入 [產品屬性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 用於新產品或產品變體。
+1. 精靈隨即開啟。 使用 **基本** 和 **產品標籤** 以輸入 [產品屬性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 用於新產品或產品變體。
 
    >[!NOTE]
    >
@@ -167,7 +165,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 >
 >`/etc/commerce/products/...`
 >
->這表示預設會加以封鎖， [dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)，請視需要設定。
+>這表示預設會加以封鎖， [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)，請視需要設定。
 
 #### 編輯產品資訊 — 觸控最佳化UI {#editing-product-information-touch-optimized-ui}
 
@@ -181,7 +179,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    ![檢視產品資料圖示 — 資訊圖示](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
-1. 此 [產品屬性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 將會顯示。 使用 **編輯** 和 **完成** 進行變更。
+1. 此 [產品屬性](/help/commerce/cif-classic/administering/concepts.md#product-attributes) 「 」會顯示。 使用 **編輯** 和 **完成** 進行變更。
 
 ### 顯示產品引用 {#showing-product-references}
 
@@ -192,12 +190,12 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    ![雙箭頭圖示](/help/sites-administering/do-not-localize/chlimage_1-16.png)
 
-1. 選取您需要的產品 — 次要邊欄將會更新以顯示可用的參考型別：
+1. 選取您需要的產品 — 次要邊欄更新，顯示可用的參考型別：
 
    ![開啟參考資料的產品主控台](/help/sites-administering/assets/chlimage_1-88.png)
 
 1. 按一下/點選參考型別（例如「產品頁面」）以展開清單。
-1. 選取特定參照以顯示選項：
+1. 選取特定參照，以便顯示選項：
 
    * 導覽至產品頁面
    * 編輯產品頁面
@@ -211,7 +209,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    ![放大鏡圖示](/help/sites-administering/do-not-localize/chlimage_1-17.png)
 
-1. 有數個面向可供您搜尋產品。 搜尋時只能使用一或多個多面。 找到的產品將會出現：
+1. 有數個面向可供您搜尋產品。 搜尋時只能使用一或多個多面。 找到的產品會出現：
 
    ![產品控制檯中的產品資料](/help/sites-administering/assets/chlimage_1-90.png)
 
@@ -225,14 +223,14 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    `http://localhost:4502/crx/de/index.jsp#/libs/commerce/gui/content/products/aside/items/search/items/searchpanel/facets`
 
-1. 例如，您可以修改出現在產品搜尋頁面上的大小。 按一下 `sizegroup` 節點。
+1. 例如，您可以編輯出現在產品搜尋頁面上的大小。 按一下 `sizegroup` 節點。
 1. 按一下 `items` 節點，然後按一下 `propertypredicate` 節點。
-1. 您可以修改 `propertyValues`. 例如，您可以新增XS、XXL或移除大小。
+1. 您可以編輯 `propertyValues`. 例如，您可以新增XS、XXL或移除大小。
 1. 按一下 **全部儲存** 並導覽至「產品搜尋」頁面。 您的變更將會顯示。
 
 ### 多個資產 {#multiple-assets}
 
-您可以在產品元件中新增多個資產，然後指定要在產品頁面上顯示的資產。
+您可以在產品元件中新增多個資產，然後指定您要顯示在產品頁面上的資產。
 
 >[!NOTE]
 >
@@ -247,34 +245,34 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
    >
    >您必須處於產品層級，而不是變體層級。
 
-1. 點選/按一下 **檢視產品資料** 圖示與選取模式或快速動作。
-1. 點選/按一下「編輯」圖示。
+1. 選取 **檢視產品資料** 圖示與選取模式或快速動作。
+1. 選取編輯圖示。
 1. 捲動至 **新增**.
 
    ![新增產品資料熒幕擷圖](/help/sites-administering/assets/chlimage_1-91.png)
 
-1. 點選/按一下 **新增**. 新的資產預留位置隨即出現。
-1. 點選/按一下**變更**開啟對話方塊，讓您選擇資產。
+1. 選取 **新增**. 新的資產預留位置隨即出現。
+1. 選取 **變更** 開啟對話方塊，讓您選擇資產。
 1. 選取您要新增的資產。
 
    >[!NOTE]
    >
    >您可選取的資產來自 [資產](/help/assets/assets.md).
 
-1. 點選/按一下「完成」圖示。
+1. 選取完成圖示。
 
-產品元件現在儲存兩個資產。 您可以設定哪個要出現在產品頁面上。 這適用於類別系統。 首先，您需要將類別新增至個別資產：
+產品元件現在儲存兩個資產。 您可以設定哪個要顯示在產品頁面上。 這適用於類別系統。 首先，您必須將類別新增至個別資產：
 
-1. 點選/按一下 **檢視產品資料**.
+1. 選取 **檢視產品資料**.
 1. 輸入 **資產類別** 在資產底下，例如 `cat1` 和 `cat2`.
 
    >[!NOTE]
    >
    >您也可以使用類別的標籤。
 
-1. 點選/按一下「完成」圖示。 您現在必須 [轉出](#rolling-out-a-catalog) 您的變更。
+1. 選取完成圖示。 您現在必須 [轉出](#rolling-out-a-catalog) 您的變更。
 
-現在，您在產品元件中的資產有一個類別。 您可以設定將在三個不同層級顯示哪個類別：
+現在，您在產品元件中的資產有一個類別。 您可以設定在三個不同層級顯示哪個類別：
 
 * [產品頁面](#product-page)
 * [目錄](#catalog)
@@ -282,12 +280,12 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
 >[!NOTE]
 >
->如果您未設定類別，產品頁面上將顯示第一個資產。
+>如果您未設定類別，產品頁面上會顯示第一個資產。
 
 選取要顯示影像的機制如下：
 
-1. 驗證是否為「產品頁面」設定類別。
-1. 如果沒有，則驗證是否為「目錄」設定了類別。
+1. 驗證是否為產品頁面設定了類別。
+1. 如果沒有，請確認是否為目錄設定了類別。
 1. 如果沒有，請確認是否為產品主控台設定了類別。
 
 >[!NOTE]
@@ -298,26 +296,26 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
 1. 導覽至您的產品頁面。
 1. **編輯** 產品元件。
-1. 輸入 **影像類別** 您已選擇( `cat1` 例如)。
-1. 點選/按一下 **完成**. 頁面會重新整理，且應會顯示正確的資產。
+1. 輸入 **影像類別** 您所選擇的( `cat1` 例如)。
+1. 選取 **完成**. 頁面會重新整理，且應會顯示正確的資產。
 
 #### 目錄  {#catalog}
 
 1. 導覽至您的目錄。
-1. 點選/按一下 **檢視屬性**.
-1. 點選/按一下 **編輯**.
-1. 點選/按一下 **資產** 標籤。
+1. 選取 **檢視屬性**.
+1. 選取&#x200B;**編輯**。
+1. 選取 **資產** 標籤。
 1. 輸入所需的 **產品資產類別**.
-1. 點選/按一下 **完成**.
+1. 選取 **完成**.
 1. [轉出](#rolling-out-a-catalog) 您的變更。
 
 #### 產品主控台 {#products-console}
 
 1. 使用 **產品** 主控台，導覽至所需的產品。
-1. 點選/按一下 **檢視產品資料**.
-1. 點選/按一下 **編輯**.
+1. 選取 **檢視產品資料**.
+1. 選取&#x200B;**編輯**。
 1. 輸入a **預設資產類別**.
-1. 點選/按一下 **完成**.
+1. 選取 **完成**.
 1. [轉出](#rolling-out-a-catalog) 您的變更。
 
 ### 發佈/取消發佈產品資訊 {#publishing-unpublishing-product-information}
@@ -326,7 +324,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
 >[!NOTE]
 >
->通常產品資訊會透過參考它的頁面發佈。 例如，發佈參考產品Y的頁面X時，AEM會詢問您是否要同時發佈產品Y。
+>通常產品資訊會透過參考它的頁面發佈。 例如，發佈參考產品Y的頁面X時，AEM會詢問您是否要發佈產品Y。
 >
 >對於特殊情況，AEM也支援直接從產品資料發佈。
 
@@ -340,7 +338,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    ![世界圖示](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![帶有十字元號的世界圖示 — 無符號](/help/sites-administering/do-not-localize/chlimage_1-19.png)
 
-   產品資訊將視情況發佈或取消發佈。
+   視需要發佈或取消發佈產品資訊。
 
 <!-- Search&Promote is end of life as of September 1, 2022 ### Product Feed {#product-feed} -->
 
@@ -355,7 +353,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
 ### 產品更新的事件處理常式 {#event-handler-for-product-updates}
 
-有一個事件處理常式，可在新增、修改或刪除產品以及新增、修改或刪除產品頁面時記錄事件。 有以下OSGi事件：
+有一個「事件處理常式」，可在新增、編輯或刪除產品以及新增、編輯或刪除產品頁面時記錄事件。 有以下OSGi事件：
 
 * `com/adobe/cq/commerce/pim/PRODUCT_ADDED`
 * `com/adobe/cq/commerce/pim/PRODUCT_MODIFIED`
@@ -385,7 +383,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 1. 將元件中的影像從 [資產瀏覽器](/help/sites-authoring/author-environment-tools.md#assets-browser).
 1. 您可以執行下列兩個動作中的一個:
 
-   * 按一下元件，然後按一下「編輯」圖示
+   * 按一下元件，然後按一下編輯圖示
    * 進行緩慢連按兩下
 
 1. 按一下全熒幕圖示。
@@ -436,7 +434,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    ![加入購物車索引標籤](/help/sites-administering/assets/chlimage_1-97.png)
 
-1. 按一下 **加入購物車**. 有3個組態選項可供您使用。
+1. 按一下 **加入購物車**. 有三個組態選項可供您使用。
 
    ![設定選項](/help/sites-administering/assets/chlimage_1-98.png)
 
@@ -450,32 +448,32 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
 >[!NOTE]
 >
->目錄將參考您的產品資料。
+>目錄會參考您的產品資料。
 
 若要產生目錄：
 
 1. 開啟Sites主控台(例如 [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content))。
-1. 導覽至您要建立新頁面的位置。
+1. 導覽至您要建立頁面的位置。
 1. 若要開啟選項清單，請使用 **建立** 圖示：
 
    ![create-icon](/help/sites-administering/do-not-localize/chlimage_1-23.png)
 
-1. 從清單中選取 **建立目錄**，將會開啟建立目錄精靈。
+1. 從清單中選取 **建立目錄**. 「建立目錄」精靈隨即開啟。
 
    ![建立目錄精靈](/help/sites-administering/assets/chlimage_1-99.png)
 
 1. 導覽至所需的目錄Blueprint。
-1. 點選/按一下 **選取** 按鈕並點選/按一下所需的目錄Blueprint。
-1. 點選/按一下 **下一個**.
+1. 選取 **選取** 按鈕並點選/按一下所需的目錄Blueprint。
+1. 選取 **下一個**.
 
    ![目錄屬性精靈](/help/sites-administering/assets/chlimage_1-100.png)
 
 1. 輸入a **標題** 和 **名稱**.
-1. 點選/按一下 **建立** 按鈕。 目錄隨即建立，對話方塊隨即開啟。
+1. 選取 **建立** 按鈕。 目錄隨即建立，對話方塊隨即開啟。
 
    ![目錄已建立對話方塊](/help/sites-administering/assets/chlimage_1-101.png)
 
-1. 點選/按一下 **完成** 按鈕將您帶回Sites主控台，您會在這裡看到您的目錄。
+1. 選取 **完成** 按鈕將您帶回Sites主控台，讓您在其中檢視目錄。
 
    點選/按一下 **開啟目錄** 按鈕會開啟您的目錄(例如 `http://localhost:4502/editor.html/content/test-catalog.html`)。
 
@@ -483,7 +481,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
 >[!NOTE]
 >
->目錄將參考您的 [產品資料](#products-and-product-variants).
+>目錄會參考您的 [產品資料](#products-and-product-variants).
 
 1. 使用 **網站** 主控台，導覽至 **目錄Blueprint**，然後建立基礎目錄。
 
@@ -491,22 +489,22 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    `http://localhost:4502/siteadmin#/content/catalogs/geometrixx-outdoors/base-catalog`
 
-1. 使用建立新頁面 **區域Blueprint** 範本。
+1. 使用建立頁面 **區域Blueprint** 範本。
 
    例如，`Swimwear`。
 
-1. 開啟新的 `Swimwear` 頁面，然後按一下 **編輯Blueprint** 以開啟 **屬性** 對話方塊，您可以在此設定 **產品** 選取。
+1. 開啟新的 `Swimwear` 頁面，然後按一下 **編輯Blueprint**. 此 **屬性** 對話方塊開啟，以便您設定 **產品** 選取。
 
    例如，開啟 **標籤/關鍵字** 欄位以選取「活動」，然後從「Geometrixx — 戶外」區段選取「游泳」。
 
-1. 按一下 **確定** 以儲存屬性；範例產品會顯示在 **產品選擇標準** 在Blueprint頁面上。
-1. 按一下 **轉出變更……**，選取 **轉出頁面和所有子頁面**，然後按一下 **下一個** 則 **轉出**. 轉出成功完成後， **狀態** 指標將顯示為綠色。
+1. 按一下 **確定** 以便儲存您的屬性；範例產品顯示在 **產品選擇標準** 在Blueprint頁面上。
+1. 按一下 **轉出變更……**，選取 **轉出頁面和所有子頁面**，然後按一下 **下一個** 則 **轉出**. 成功完成轉出後， **狀態** 指標顯示為綠色。
 1. 您現在可以按一下 **關閉** 和勾選新目錄區段；例如，在和底下：
 
    `http://localhost:4502/cf#/content/geometrixx-outdoors/en/swimwear.html`
 
 1. 再次從藍圖頁面按一下 **編輯Blueprint** 和 **屬性** 對話方塊開啟 **產生的頁面** 標籤。 在「橫幅」清單欄位中，選取您要顯示的影像；例如， `summer.jpg`
-1. 按一下 **確定** 以儲存屬性；橫幅資訊會顯示在 **產品選擇標準** 在Blueprint頁面上。
+1. 按一下 **確定** 所以您的屬性會儲存；橫幅資訊會顯示在 **產品選擇標準** 在Blueprint頁面上。
 1. 轉出這些新變更。
 
 ### 轉出目錄 {#rolling-out-a-catalog}
@@ -527,7 +525,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
    ![轉出](/help/sites-administering/do-not-localize/chlimage_1-24.png)
 
 1. 在精靈中，視需要設定轉出，然後點選/按一下 **轉出變更**.
-1. 對話方塊隨即開啟。 點選/按一下 **完成** 程式完成時。
+1. 對話方塊開啟。 選取 **完成** 程式完成時。
 
 #### 轉出目錄 — Classic UI {#rolling-out-a-catalog-classic-ui}
 
@@ -547,7 +545,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
 1. 導覽至 **目錄** 主控台，透過 **商務**.
 1. 導覽至您要匯入目錄Blueprint的位置。
-1. 點選/按一下 **匯入Blueprint** 圖示。
+1. 選取 **匯入Blueprint** 圖示。
 
    ![匯入Blueprint圖示](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
@@ -555,7 +553,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    ![Blueprint精靈](/help/sites-administering/assets/chlimage_1-102.png)
 
-1. 點選/按一下 **完成** 匯入完成後。
+1. 選取 **完成** 匯入完成時。
 
 #### Blueprint Importer — 傳統UI {#blueprint-importer-classic-ui}
 
@@ -584,9 +582,9 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 >如需詳細資訊，請參閱 [促銷活動與憑單](#promotions-and-vouchers).
 
 1. 開啟 **網站** 作者執行個體的主控台。
-1. 在左窗格中選取所需的 **Campaign**.
+1. 在左窗格中，選取所需的 **Campaign**.
 1. 按一下 **新增**，選取 **促銷活動** 範本，然後指定 **標題** (和 **名稱** （若有需要）。
-1. 按一下「**建立**」。新的促銷活動頁面將顯示在右側窗格中。
+1. 按一下「**建立**」。新的促銷活動頁面會顯示在右側窗格中。
 
 1. 編輯 **屬性** 透過下列其中一項：
 
@@ -597,7 +595,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
 1. 按一下 **確定** 以儲存。
 
-1. 您現在可以啟動促銷活動，讓購物者可以在發佈例項上看到促銷活動。
+1. 您現在可以啟動促銷活動，讓購物者可以在發佈例項上檢視。
 
 ## 憑單 {#vouchers}
 
@@ -606,11 +604,11 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 #### 建立憑單 — 傳統UI {#creating-a-voucher-classic-ui}
 
 1. 開啟 **網站** 作者執行個體的主控台。
-1. 在左窗格中選取所需的 **Campaign**.
+1. 在左窗格中，選取所需的 **Campaign**.
 1. 按一下 **新增**，選取 **憑單** 範本，然後指定 **標題** (和 **名稱** （若有需要）。
-1. 按一下「**建立**」。新的憑單頁面將顯示在右側窗格中。
+1. 按一下「**建立**」。新的憑單頁面會顯示在右側窗格中。
 
-1. 按兩下以開啟您的新憑單頁面，然後按一下 **編輯** 以視需要設定資訊。
+1. 按兩下以開啟您的新憑單頁面，然後按一下 **編輯** 並視需要設定資訊。
 1. 按一下 **確定** 以儲存。
 
 1. 您現在可以啟用憑單，讓購物者可以在發佈執行個體的購物車中使用它。
@@ -621,7 +619,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
 若要讓憑單無法供客戶使用，您可以：
 
-* 停用憑單 — 它仍可在作者環境中使用，以便您稍後可以重新啟用。
+* 停用憑單 — 其仍可在作者環境中使用，以便您稍後重新啟用。
 * 將其完全刪除。
 
 這兩個動作都可以從 **網站** 主控台。
@@ -634,7 +632,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
 ### 新增憑單至購物車 {#adding-vouchers-to-a-cart}
 
-若要讓使用者將憑單新增至購物車，您可以使用內建的 **憑單** 元件（商務類別）。 您需要將此專案新增到顯示購物車的相同頁面（但非必要）。 憑單元件只是使用者可在其中輸入憑單代碼的表單，它是實際顯示套用憑單清單及其折扣的購物車元件。
+若要讓使用者將憑單新增至購物車，您可以使用內建的 **憑單** 元件（商務類別）。 將此專案新增到顯示購物車的相同頁面（但這並非強制性）。 憑單元件只是使用者可在其中輸入憑單代碼的表單，它是實際顯示套用憑單清單及其折扣的購物車元件。
 
 在示範網站(Geometrixx Outdoors文 — 英文)中，您可以在購物車頁面上實際購物車下方看到憑單表單。
 
@@ -644,7 +642,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 >
 >請記得，現成可用的AEM沒有訂單相關標準功能所需的動作，例如退回商品、更新訂單狀態、執行履行、產生包裝單。 它主要是作為技術預覽。
 >
->AEM中的一般訂單管理一直是基本的；精靈中可用的欄位取決於支架：
+>AEM中的通用Order Management一直是基本的；精靈中可用的欄位取決於架構：
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
 >
 >如果您建立自訂架構，則可儲存更多訂單資訊。
@@ -664,7 +662,7 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    ![加號形狀建立圖示](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
-1. 精靈將會開啟。 使用 **基本**， **內容**， **付款** 和 **履行** 標籤以輸入 [新訂單的相關資訊](/help/commerce/cif-classic/administering/concepts.md#order-information).
+1. 精靈隨即開啟。 使用 **基本**， **內容**， **付款**、和 **履行** 標籤以輸入 [新訂單的相關資訊](/help/commerce/cif-classic/administering/concepts.md#order-information).
 
 1. 選取 **建立** 以儲存資訊。
 
@@ -682,5 +680,5 @@ AEM一般解決方案提供管理存放庫內持有的商務資訊的方法（�
 
    ![資訊圖示](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
-1. 此 [訂單資訊](/help/commerce/cif-classic/administering/concepts.md#order-information) 將會顯示。 使用 **編輯** 和 **完成** 進行變更。
+1. 此 [訂單資訊](/help/commerce/cif-classic/administering/concepts.md#order-information) 「 」會顯示。 使用 **編輯** 和 **完成** 進行變更。
 
