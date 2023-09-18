@@ -1,18 +1,14 @@
 ---
 title: 搜尋Essentials
-seo-title: Search Essentials
 description: 在社群中搜尋
-seo-description: Search in Communities
-uuid: 5f35a033-2069-499e-9cdb-db25781312f0
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1170'
 ht-degree: 4%
 
 ---
@@ -21,35 +17,35 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-搜尋功能是AEM Communities的重要功能。 除了 [AEM平台搜尋](../../help/sites-deploying/queries-and-indexing.md) 功能，AEM Communities提供 [UGC搜尋API](#ugc-search-api) ，用於搜尋使用者產生的內容(UGC)。 UGC有唯一屬性，因為它與其他AEM內容和使用者資料分開輸入和儲存。
+搜尋功能是Adobe Experience Manager (AEM) Communities的重要功能。 除了 [AEM平台搜尋](../../help/sites-deploying/queries-and-indexing.md) 功能，AEM Communities提供 [UGC搜尋API](#ugc-search-api) 用於搜尋使用者產生的內容(UGC)。 UGC在輸入和儲存時，與其他AEM內容和使用者資料分開，因此有獨特的屬性。
 
-針對Communities，通常會搜尋兩個專案：
+針對Communities，通常會搜尋以下兩個專案：
 
 * 社群成員張貼的內容
 
-   * 使用AEM Communities的UGC搜尋API。
+   * 它使用AEM Communities的UGC搜尋API。
 
 * 使用者和使用者群組（使用者資料）
 
-   * 使用AEM平台搜尋功能。
+   * 它使用AEM平台搜尋功能。
 
-建立自訂元件以建立或管理UGC的開發人員可能會對說明檔案的此區段感興趣。
+建立自訂元件以建立或管理UGC的開發人員，可能會對說明檔案的此區段感興趣。
 
 ## 安全性與陰影節點 {#security-and-shadow-nodes}
 
-對於自訂元件，必須使用 [SocialResourceUtilities](socialutils.md#socialresourceutilities-package) 方法。 建立和搜尋UGC的公用程式方法將建立所需的 [陰影節點](srp.md#about-shadow-nodes-in-jcr) 並確保成員擁有請求的正確許可權。
+對於自訂元件，有必要使用 [SocialResourceUtilities](socialutils.md#socialresourceutilities-package) 方法。 建立和搜尋UGC的公用程式方法會建立必要的 [陰影節點](srp.md#about-shadow-nodes-in-jcr) 並確保成員擁有請求的正確許可權。
 
-不透過SRP公用程式管理的專案為與仲裁相關的屬性。
+不透過SRP公用程式管理的內容為與仲裁相關的屬性。
 
-另請參閱 [SRP和UGC Essentials](srp-and-ugc.md) 有關用於存取UGC和ACL陰影節點的公用程式方法的資訊。
+另請參閱 [srp和UGC Essentials](srp-and-ugc.md) 有關用來存取UGC和ACL陰影節點的公用程式方法的資訊。
 
 ## UGC搜尋API {#ugc-search-api}
 
-此 [UGC公用存放區](working-with-srp.md) 由各種儲存資源提供者(SRP)之一提供，每個提供者都可能有不同的原生查詢語言。 因此，無論選擇的SRP為何，自訂程式碼都應使用來自 [UGC API套件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*)會叫用適用於所選SRP的查詢語言。
+此 [UGC公用存放區](working-with-srp.md) 由各種儲存資源提供者(SRP)之一提供，每個提供者可能都有不同的原生查詢語言。 因此，無論選擇的SRP為何，自訂程式碼都應使用來自 [UGC API套件](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*)會叫用適合所選SRP的查詢語言。
 
 ### ASRP搜尋 {#asrp-searches}
 
-對象 [ASRP](asrp.md)，UGC會儲存在Adobe雲端。 雖然CRX中未顯示UGC， [稽核](moderate-ugc.md) 可在作者和發佈環境中使用。 使用 [UGC搜尋API](#ugc-search-api) ASRP的運作方式與其他SRP相同。
+的 [ASRP](asrp.md)，UGC儲存在Adobe雲端。 雖然UGC在CRX中不可見， [稽核](moderate-ugc.md) 可在製作和發佈環境中使用。 使用 [UGC搜尋API](#ugc-search-api) ASRP的運作方式與其他SRP相同。
 
 目前沒有管理ASRP搜尋的工具。
 
@@ -57,12 +53,12 @@ ht-degree: 4%
 
 ### MSRP搜尋 {#msrp-searches}
 
-對象 [MSRP](msrp.md)，UGC儲存在MongoDB中，且已設定為使用Solr進行搜尋。 CRX中不會顯示UGC，但 [稽核](moderate-ugc.md) 可在作者和發佈環境中使用。
+的 [MSRP](msrp.md)，UGC儲存在MongoDB中，已設定為使用Solr進行搜尋。 CRX中未顯示UGC，但 [稽核](moderate-ugc.md) 可在製作和發佈環境中使用。
 
 關於MSRP和Solr：
 
 * AEM平台的內嵌Solr不用於MSRP。
-* 如果為AEM平台使用遠端Solr，則可與MSRP共用，但應使用不同的集合。
+* 如果針對AEM平台使用遠端Solr，則可與MSRP共用，但應使用不同的集合。
 * Solr可設定為標準搜尋或多語言搜尋(MLS)。
 * 如需設定詳細資訊，請參閱 [Solr設定](msrp.md#solr-configuration) 用於MSRP。
 
@@ -72,19 +68,19 @@ ht-degree: 4%
 
 ### JSRP搜尋 {#jsrp-searches}
 
-對象 [JSRP](jsrp.md)，UGC儲存在 [Oak](../../help/sites-deploying/platform.md) 和僅會顯示在輸入它的AEM作者或發佈執行個體的存放庫中。
+的 [JSRP](jsrp.md)，UGC儲存在 [Oak](../../help/sites-deploying/platform.md) 而且只會顯示在輸入它的AEM作者或發佈執行個體的存放庫中。
 
-由於UGC通常輸入在發佈環境中，對於多發佈者生產系統，有必要配置 [發佈叢集](topologies.md)，而非發佈陣列，因此所有發佈者都能看到輸入的內容。
+由於UGC通常輸入在發佈環境中，因此對於多發佈者生產系統，必須設定 [發佈叢集](topologies.md)，而非發佈陣列，因此所有發佈者都能看見輸入的內容。
 
-對於JSRP，在發佈環境中輸入的UGC永遠不會顯示在製作環境中。 因此，所有 [稽核](moderate-ugc.md) 工作會在發佈環境中進行。
+對於JSRP，在發佈環境中輸入的UGC在製作環境中從不可見。 因此，所有 [稽核](moderate-ugc.md) 工作會在發佈環境中進行。
 
 自訂搜尋功能應使用 [UGC搜尋API](#ugc-search-api).
 
 #### Oak索引 {#oak-indexing}
 
-雖然系統不會自動為AEM平台搜尋建立Oak索引，但自AEM 6.2起，已為AEM Communities新增這些索引，以改善效能並在顯示UGC搜尋結果時支援分頁。
+雖然自AEM 6.2起，AEM平台搜尋不會自動建立Oak索引，但已為AEM Communities新增這些索引，以改進效能並在顯示UGC搜尋結果時支援分頁。
 
-如果使用自訂屬性且搜尋緩慢，則需要為自訂屬性建立其他索引，以提高其效能。 若要保持可攜性，請遵守 [命名需求](#naming-of-custom-properties) 建立可搜尋的自訂屬性時。
+如果使用自訂屬性且搜尋速度緩慢，則必須為自訂屬性建立其他索引，以提高其效能。 若要保持可攜性，請遵守 [命名需求](#naming-of-custom-properties) 建立可搜尋的自訂屬性時。
 
 若要修改現有索引或建立自訂索引，請參閱 [Oak查詢和索引](../../help/sites-deploying/queries-and-indexing.md).
 
@@ -93,7 +89,7 @@ ht-degree: 4%
 * 現有索引的檢視。
 * 啟動重新索引的功能。
 
-檢視現有Oak索引的方式 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)，位置為：
+若要檢視中的現有Oak索引 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)，位置為：
 
 * `/oak:index/socialLucene`
 
@@ -103,7 +99,7 @@ ht-degree: 4%
 
 ### 預設搜尋屬性 {#default-search-properties}
 
-以下是用於各種Communities功能的一些可搜尋屬性：
+以下是供各種Communities功能使用的一些可搜尋屬性：
 
 | **屬性** | **資料類型** |
 |---|---|
@@ -117,7 +113,7 @@ ht-degree: 4%
 | 已新增 | *日期* |
 | modifieddate | *日期* |
 | 狀態 | *字串* |
-| 使用者識別碼 | *字串* |
+| userId | *字串* |
 | 回覆 | *長整數* |
 | jcr:title | *字串* |
 | jcr：description | *字串* |
@@ -132,12 +128,12 @@ ht-degree: 4%
 | cq：Tag | *字串* |
 | author_display_name | *字串* |
 | location_t | *字串* |
-| 父路徑 | *字串* |
+| parentpath | *字串* |
 | parentTitle | *字串* |
 
 ### 命名自訂屬性 {#naming-of-custom-properties}
 
-新增自訂屬性時，為了讓使用「 」建立的排序和搜尋能夠看見這些屬性 [UGC搜尋API](#ugc-search-api)，它是 *必填* 以新增字尾至屬性名稱。
+新增自訂屬性時，這些屬性會顯示於使用 [UGC搜尋API](#ugc-search-api)，它是 *必填* 以新增尾碼至屬性名稱。
 
 尾碼適用於使用結構的查詢語言：
 
@@ -159,18 +155,18 @@ Solr是使用結構描述的查詢語言範例。
 
 * *文字* 是標籤字串， *字串* 不是。 使用 *文字* 用於模糊（類似於）搜尋。
 
-* 對於多值型別，請將&#39;s&#39;新增至尾碼，例如：
+* 對於多值型別，請在尾碼中新增&#39;s&#39;，例如：
 
    * `viewDate_dt`：單一日期屬性
    * `viewDates_dts`：日期屬性清單
 
 ## 篩選條件 {#filters}
 
-包含 [評論系統](essentials-comments.md) 支援將篩選引數新增至其端點。
+元件，包括 [註解系統](essentials-comments.md)中，除了其端點外，也支援篩選引數。
 
-AND和OR邏輯的篩選語法如下（在URL編碼前顯示）：
+AND和OR邏輯的篩選器語法如下（在URL編碼之前顯示）：
 
-* 若要指定OR或使用包含逗號分隔值的篩選引數：
+* 若要指定OR或使用帶有逗號分隔值的篩選器引數：
 
    * `filter=name eq 'Jennifer',name eq 'Jen'`
 
@@ -178,7 +174,7 @@ AND和OR邏輯的篩選語法如下（在URL編碼前顯示）：
 
    * `filter = name eq 'Jackson'&filter=message eq 'testing'`
 
-的預設實施 [搜尋元件](search.md) 會使用此語法，如同在下列位置開啟搜尋結果頁面的URL中所見： [社群元件指南](components-guide.md). 若要實驗，請瀏覽至 [http://localhost:4503/content/community-components/en/search.html](http://localhost:4503/content/community-components/en/search.html).
+的預設實作 [搜尋元件](search.md) 會使用此語法，如同在開啟搜尋結果頁面的URL中所見。 [社群元件指南](components-guide.md). 若要實驗，請瀏覽至 [http://localhost:4503/content/community-components/en/search.html](http://localhost:4503/content/community-components/en/search.html).
 
 篩選器運運算元包括：
 
@@ -191,7 +187,7 @@ AND和OR邏輯的篩選語法如下（在URL編碼前顯示）：
 | GTE | 大於或等於 |
 | 按讚 | 模糊比對 |
 
-URL務必參考Communities元件（資源），而非元件所在的頁面：
+重要的是，URL應參考Communities元件（資源），而非該元件所在的頁面：
 
 * 正確：論壇元件
    * `/content/community-components/en/forum/jcr:content/content/forum.social.json`
@@ -200,13 +196,13 @@ URL務必參考Communities元件（資源），而非元件所在的頁面：
 
 ## SRP工具 {#srp-tools}
 
-有一個Adobe Marketing Cloud GitHub專案，其中包含：
+有一個Adobe Experience Cloud GitHub專案，其中包含：
 
-[AEM Communities SRP工具](https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools)
+[AEM Communities SRP Tools](https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools)
 
 此存放庫包含用於管理SRP中資料的工具。
 
-目前，有一個servlet提供從任何SRP刪除所有UGC的功能。
+目前有一個servlet可從任何SRP刪除所有UGC。
 
 例如，若要刪除ASRP中的所有UGC：
 
@@ -218,20 +214,20 @@ curl -X POST http://localhost:4502/services/social/srp/cleanup?path=/content/use
 
 ### Solr查詢 {#solr-query}
 
-若要協助疑難排解Solr查詢的問題，請啟用DEBUG記錄
+若要協助疑難排解Solr查詢的問題，請為啟用DEBUG記錄
 
 `com.adobe.cq.social.srp.impl.SocialSolrConnector`。
 
-實際Solr查詢將顯示在偵錯記錄檔中編碼的URL：
+實際Solr查詢會在偵錯記錄檔中顯示編碼的URL：
 
-要查詢的solr為： `sort=timestamp+desc&bl=en&pl=en&start=0&rows=10 &q=%2Btitle_t:(hello)+%2Bprovider_id:\/content/usergenerated/asi/mongo/content/+%2Bresource_type_s:&df=provider_id&trf=verbatim&fq={!cost%3D100}report_suite:mongo`
+要搜尋的查詢為： `sort=timestamp+desc&bl=en&pl=en&start=0&rows=10 &q=%2Btitle_t:(hello)+%2Bprovider_id:\/content/usergenerated/asi/mongo/content/+%2Bresource_type_s:&df=provider_id&trf=verbatim&fq={!cost%3D100}report_suite:mongo`
 
 的值 `q` 引數為查詢。 解碼URL編碼後，即可將查詢傳遞到Solr管理查詢工具，以便進一步偵錯。
 
 ## 相關資源 {#related-resources}
 
-* [社群內容儲存](working-with-srp.md)  — 討論UGC一般存放區的可用SRP選擇。
+* [社群內容儲存](working-with-srp.md)  — 討論UGC公用存放區的可用SRP選擇。
 * [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
 * [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
 * [SocialUtils重構](socialutils.md)  — 取代SocialUtils的SRP公用程式方法。
-* [搜尋和搜尋結果元件](search.md)  — 將UGC搜尋功能新增至範本。
+* [搜尋和搜尋結果元件](search.md)  — 新增UGC搜尋功能至範本。

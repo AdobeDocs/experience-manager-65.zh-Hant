@@ -1,16 +1,12 @@
 ---
 title: 通訊管理設定屬性
-seo-title: Correspondence Management Configuration Properties
-description: 本主題說明如何使用解決方案特定設定來修改Asset Composer。 本主題詳細說明您可以編輯的屬性，以及其說明、預設值和可接受值。
-seo-description: This topic explains how you can modify Asset Composer with solution-specific configurations. This topic details the properties you can edit, with their description, default values, and acceptable values.
-uuid: 6b401d51-9332-459b-b751-42a9b5a1462d
+description: 本主題說明如何使用解決方案專屬的設定來修改Asset Composer。 本主題詳細說明您可以編輯的屬性、其說明、預設值以及可接受的值。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: f2955419-c680-44a7-9913-c594b4577551
 feature: Correspondence Management
 exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 3%
@@ -39,61 +35,61 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>數字最小寬度</td>
-   <td>使用羅馬數字以外的編號清單時，要套用至專案符號/數字欄位的最小寬度</td>
+   <td>使用羅馬數字以外的編號清單時，專案符號/數字欄位上要套用的最小寬度</td>
    <td>8.0mm</td>
    <td>任何數字</td>
   </tr>
   <tr>
    <td><p>羅馬數字最小寬度</p> </td>
-   <td><p>使用羅馬數字時，要套用至專案符號/數字欄位的最小寬度</p> </td>
+   <td><p>使用羅馬數字時要套用到專案符號/數字欄位的最小寬度</p> </td>
    <td><p>12.7mm</p> </td>
    <td><p>任何數字</p> </td>
   </tr>
   <tr>
    <td>轉譯型別</td>
-   <td>建立通訊應用程式用來呈現信件預覽的轉譯型別。 </td>
+   <td>「建立通訊」應用程式用來呈現信件預覽的轉譯型別。 </td>
    <td>HTML轉譯</td>
    <td>HTML轉譯/PDF轉譯</td>
   </tr>
   <tr>
-   <td><p>啟用CCRPDF反白顯示</p> </td>
-   <td><p>在建立通訊應用程式中啟用反白顯示PDF</p> </td>
+   <td><p>啟用CCRPDF醒目提示</p> </td>
+   <td><p>在建立通訊應用程式中啟用PDF的醒目提示</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
    <td><p>目標反白顯示型別</p> </td>
-   <td><p>建立對應應用程式中的目標反白顯示型別</p> </td>
+   <td><p>建立通訊應用程式中的目標反白顯示型別</p> </td>
    <td><p>邊框</p> </td>
    <td><p>邊框/填滿/無</p> </td>
   </tr>
   <tr>
    <td><p>目標反白顯示色彩</p> </td>
-   <td><p>建立對應應用程式中的目標反白顯示色彩</p> </td>
+   <td><p>建立通訊應用程式中的目標反白顯示色彩</p> </td>
    <td><p>90;155;245</p> </td>
    <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
    <td><p>內容反白顯示型別</p> </td>
-   <td><p>建立對應應用程式中的內容反白顯示型別</p> </td>
-   <td><p>填滿</p> </td>
+   <td><p>建立通訊應用程式中的內容反白顯示型別</p> </td>
+   <td><p>填寫</p> </td>
    <td><p>邊框/填滿/無</p> </td>
   </tr>
   <tr>
    <td><p>內容反白顯示色彩</p> </td>
-   <td><p>建立對應應用程式中的內容反白顯示色彩</p> </td>
+   <td><p>建立通訊應用程式中的內容反白顯示顏色</p> </td>
    <td><p>210;225;245</p> </td>
    <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
    <td><p>欄位反白顯示型別</p> </td>
-   <td><p>建立對應應用程式中的欄位反白顯示型別</p> </td>
+   <td><p>建立通訊應用程式中的欄位反白顯示型別</p> </td>
    <td><p>填滿</p> </td>
    <td><p>邊框/填滿/無</p> </td>
   </tr>
   <tr>
    <td><p>欄位反白顯示色彩</p> </td>
-   <td><p>建立對應應用程式中的欄位反白顯示色彩</p> </td>
+   <td><p>建立通訊應用程式中的欄位反白顏色</p> </td>
    <td><p>210;225;245</p> </td>
    <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
@@ -123,7 +119,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>重新導向URL引數名稱</p> </td>
-   <td><p>從後處理程式傳送之重新導向URL的引數名稱此值可以是任何字串變數名稱</p> </td>
+   <td><p>從發佈程式傳送之重新導向URL的引數名稱此值可以是任何字串變數名稱</p> </td>
    <td><p>redirectURL</p> </td>
    <td><p>任何字串變數名稱</p> </td>
   </tr>
@@ -135,13 +131,13 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>最佳化資料字典例項</p> </td>
-   <td><p>啟用最佳化資料字典執行個體傳輸（包含伺服器和使用者端）</p> </td>
+   <td><p>啟用最佳化資料字典例項（b/w伺服器和使用者端）傳輸</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>自動修正不一致之處 </p> </td>
-   <td><p>啟用時，會自動處理信件指派中可能發生的不一致情況</p> </td>
+   <td><p>自動更正不一致 </p> </td>
+   <td><p>啟用時，它會自動處理信件指派中可能發生的不一致情況</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -159,13 +155,13 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>資料編輯格式</p> </td>
-   <td><p>編輯資料的格式。 將資料寫入為String或從String剖析資料時，會使用此值</p> </td>
+   <td><p>編輯資料格式。 將資料寫入字串或從字串剖析資料時，會使用此方法</p> </td>
    <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
    <td>--<p> </p> </td>
   </tr>
   <tr>
    <td><p>管理發布時的信件例項</p> </td>
-   <td><p>啟用/停用「管理信件」功能（僅適用於發佈伺服器）</p> </td>
+   <td><p>啟用/停用管理信函功能（僅適用於發佈伺服器）</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -249,7 +245,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>字母快取大小</p> </td>
-   <td><p>指定快取中保留的最大字母數。</p> <p>變更此值將導致清理 <code>in-memory</code> 快取。</p> </td>
+   <td><p>指定快取中要保留的最大字母數。</p> <p>變更此值將導致清理 <code>in-memory</code> 快取。</p> </td>
    <td><p>100</p> </td>
    <td><p>任何數值</p> </td>
   </tr>
@@ -260,14 +256,14 @@ ht-degree: 3%
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>資料元素排序</p> </td>
-   <td><p>根據資料元素在Letter中的順序，保持建立通訊介面中的資料元素順序</p> </td>
+   <td><p>資料元素順序</p> </td>
+   <td><p>根據資料元素在Letter中的順序，保留建立通訊介面中的資料元素順序</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
   <tr>
    <td><p>支援重新載入</p> </td>
-   <td><p>啟用/停用伺服器端轉譯字母的重新載入支援。</p> <p>停用此專案將改善字母轉譯效能。</p> </td>
+   <td><p>啟用/停用伺服器端轉譯字母中的重新載入支援。</p> <p>停用此將改善字母轉譯效能。</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> <p> </p> </td>
   </tr>
@@ -285,7 +281,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>相容性選項</td>
-   <td>以逗號分隔的configname：configvalue格式的相容性選項。</td>
+   <td>configname：configvalue格式的相容性選項，以逗號分隔。</td>
    <td>acm.compatibilityOptions</td>
    <td> </td>
   </tr>

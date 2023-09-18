@@ -1,14 +1,14 @@
 ---
 title: 使用SAPCommerce Cloud開發
-description: SAPCommerce Cloud整合架構包含具有API的整合層
+description: SAPCommerce Cloud整合架構包含具有API的整合層。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2286'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 整合架構包含具有API的整合層。 這可讓您：
 
-* 插入電子商務系統，將產品資料提取至AEM
+* 外掛電子商務系統，並將產品資料提取至Adobe Experience Manager (AEM)
 
 * 建置AEM元件，用於獨立於特定電子商務引擎的商務功能
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 
 若要針對Hybris 4開發，需要下列專案：
 
-* 叫用maven時，請將以下命令列引數新增到命令中
+* 叫用maven時，將下列命令列引數新增到命令中
 
   `-P hybris4`
 
@@ -123,7 +123,7 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
 * 在第一個要求中，購物者的要求上不會設定Cookie，因此會傳送要求給hybris執行個體以建立工作階段。
 
-* 工作階段Cookie會從回應中擷取，並在新的Cookie中編碼(例如 `hybris-session-rest`)，並在對購物者的回應上設定。 新Cookie中的編碼為必填，因為原始Cookie僅對特定路徑有效，否則在後續請求中不會從瀏覽器傳回。 路徑資訊也必須新增至Cookie的值。
+* 工作階段Cookie會從回應中擷取，並在新的Cookie中編碼(例如 `hybris-session-rest`)，並在對購物者的回應上設定。 新Cookie中的編碼為必填，因為原始Cookie僅對特定路徑有效，否則在後續請求中不會從瀏覽器傳回。 必須將路徑資訊新增至Cookie的值。
 
 * 在後續的請求中，會將Cookie解碼自 `hybris-session-<*xxx*>` Cookie ，以及在用來向hybris要求資料的HTTP使用者端上設定。
 
@@ -145,9 +145,9 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
   `CommerceSession.getUserContext()`
 
-* 也擁有 **付款** 正在處理連線
+* 擁有 **付款** 正在處理連線
 
-* 也擁有 **履行** 連線
+* 擁有 **履行** 連線
 
 ### 產品同步與發佈 {#product-synchronization-and-publishing}
 
@@ -197,7 +197,7 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
 * 啟用的產品頁面必須存取產品資料的 **線上** 版本(d)。
 
-* AEM發佈執行個體需要存取hybris，以擷取產品和個人化資料(d)。
+* AEM Publish執行個體需要存取hybris，以擷取產品和個人化資料(d)。
 
 ### 架構 {#architecture}
 
@@ -209,7 +209,7 @@ hybris會使用使用者工作階段來儲存資訊，例如客戶的購物車�
 
 每個產品和/或變體由資源表示，因此將1:1對應到存放庫節點。 必然結果是，特定產品和/或變體可由其路徑唯一識別。
 
-產品/變體資源並非總是包含實際產品資料。 它可能是其他系統上所保留資料的表示法（例如hybris）。 例如，產品說明、定價等不會儲存在AEM中，而是從電子商務引擎即時擷取。
+產品/變體資源並非總是包含實際產品資料。 它可能是其他系統上所保留資料的表示法（例如hybris）。 例如，產品說明和定價不會儲存在AEM中，而是從電子商務引擎即時擷取。
 
 任何產品資源都可以以下列專案表示： `Product API`. 產品API中的大部分呼叫都是變異專用（雖然變異可能會繼承來自祖先的共用值），但也會有列出變異集合的呼叫( `getVariantAxes()`， `getVariants()`、等等)。
 
@@ -507,12 +507,12 @@ public class AxisFilter implements VariantFilter {
 
 * 此 `CommerceSession` 也擁有付款處理連線。
 
-* 實作者需要將特定呼叫（新增至其選擇的付款處理服務）新增至 `CommerceSession` 實作。
+* 實作者應將特定通話（至其選擇的付款處理服務）新增至 `CommerceSession` 實作。
 
 **訂單履行**
 
 * 此 `CommerceSession` 也擁有履行連線。
-* 實作者需要將特定呼叫（新增至其選擇的付款處理服務）新增至 `CommerceSession` 實作。
+* 實作者必須將特定通話（至其選擇的付款處理服務）新增至 `CommerceSession` 實作。
 
 ### 搜尋定義 {#search-definition}
 
@@ -524,13 +524,13 @@ public class AxisFilter implements VariantFilter {
 >
 >不過，搜尋API是通用的，可由每個CommerceService個別實作。
 
-電子商務專案包含預設的搜尋元件，位於下列位置：
+電子商務專案包含中的預設搜尋元件：
 
 `/libs/commerce/components/search`
 
 ![chlimage_1-14](/help/sites-developing/assets/chlimage_1-14a.png)
 
-這會利用搜尋API來查詢所選的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection))：
+這會使用搜尋API來查詢所選的商務引擎(請參閱 [電子商務引擎選擇](#ecommerce-engine-selection))：
 
 #### 搜尋API {#search-api}
 
@@ -538,11 +538,11 @@ public class AxisFilter implements VariantFilter {
 
 1. `CommerceQuery`
 
-   用於描述搜尋查詢（包含有關查詢文字、目前頁面、頁面大小、排序和所選多面的資訊）。 所有實作搜尋API的電子商務服務都會接收此類別的執行個體來執行其搜尋。 A `CommerceQuery` 可以從請求物件具現化( `HttpServletRequest`)。
+   說明搜尋查詢（包含有關查詢文字、目前頁面、頁面大小、排序和所選多面的資訊）。 所有實作搜尋API的電子商務服務都會收到此類別的執行個體，以執行其搜尋。 A `CommerceQuery` 可以從請求物件具現化( `HttpServletRequest`)。
 
 1. `FacetParamHelper`
 
-   是一個公用程式類別，提供一個靜態方法 —  `toParams`  — 用於產生 `GET` 多面清單的引數字串和一個切換值。 這在UI端很有用，因為您需要顯示每個Facet的每個值的超連結，所以當使用者按一下超連結時，個別值會切換（也就是說，如果選取它，則會從查詢中移除它，否則會新增）。 這會負責處理多個/單一值Facet、覆寫值等作業的所有邏輯。
+   是一個公用程式類別，提供一個靜態方法 —  `toParams`  — 用於產生 `GET` 多面清單的引數字串和一個切換值。 這在UI端相當實用，您必須針對每個Facet的每個值顯示超連結，如此一來，當使用者按一下超連結時，就會切換個別值。 也就是說，如果選取它，它會從查詢中移除，否則會新增。 這會負責處理多個/單一值Facet、覆寫值等作業的所有邏輯。
 
 搜尋API的進入點為 `CommerceService#search` 傳回 `CommerceResult` 物件。 請參閱 [API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 以取得有關本主題的詳細資訊。
 
@@ -566,7 +566,7 @@ AEM前端可放置在現有Hybris實作的前面。 您也可以將hybris引擎�
 
    * 登入Hybris時，如果AEM使用者不存在：
 
-      * 使用加密隨機密碼建立新的hybris使用者
+      * 使用密碼編譯隨機密碼建立hybris使用者
       * 將hybris使用者名稱儲存在AEM使用者的使用者目錄中
 
    * 請參閱: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
@@ -576,7 +576,7 @@ AEM前端可放置在現有Hybris實作的前面。 您也可以將hybris引擎�
    * 登入AEM時，如果系統辨識出使用者：
 
       * 嘗試使用提供的使用者名稱/密碼登入hybris
-      * 如果成功，請在AEM中以相同的密碼建立新使用者(AEM特定的salt將產生AEM特定的雜湊)
+      * 如果成功，請在AEM中使用相同的密碼建立使用者(AEM特定的salt會產生AEM特定的雜湊)
 
    * 上述演演算法是在Sling中實作 `AuthenticationInfoPostProcessor`
 

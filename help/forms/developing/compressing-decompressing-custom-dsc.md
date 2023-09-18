@@ -2,9 +2,9 @@
 title: 使用JEE自訂DSC上的AEM Forms壓縮和解壓縮檔案
 description: 瞭解如何在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
-source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,13 @@ Java™編輯器，例如 [Eclipse](https://www.eclipse.org/) 或 [Netbeans IDE]
 
 中級
 
-JEE上的AEM Forms可讓開發人員建立自訂DSC （檔案服務容器），以建立豐富的現成功能。 建立這類元件可插入JEE執行階段環境的AEM Forms，並達到預期目的。 本文會說明如何建立自訂ZIP服務，可用來將檔案清單壓縮成.zip檔案，並將.zip解壓縮成檔案清單。
+JEE上的AEM Forms可讓開發人員建立自訂ASC (Acrobat服務容器)，以建立豐富的現成功能。 建立這類元件可插入JEE執行階段環境的AEM Forms，並達到預期目的。 本文會說明如何建立自訂ZIP服務，可用來將檔案清單壓縮成.zip檔案，並將.zip解壓縮成檔案清單。
 
-## 建立自訂DSC元件 {#create-custom-dsc-component}
+## 建立自訂ASC元件 {#create-custom-dsc-component}
 
-使用兩個服務操作建立自訂DSC元件，以壓縮和解壓縮檔案清單。 此元件使用java.util.zip套件進行壓縮和解壓縮。 請依照下列步驟建立自訂元件：
+建立具有兩個服務作業的自訂ASC元件，以便您可以壓縮和解壓縮檔案清單。 此元件使用java.util.zip套件進行壓縮和解壓縮。
+
+若要建立自訂ASC元件：
 
 1. 將adobe-livecycle-client.jar檔案新增至程式庫
 1. 新增必要的圖示
@@ -215,8 +217,8 @@ component.xml檔案顯示於此處：
 
 * 提供包含若干PDF檔案的ZIP檔案，在解壓縮這些檔案後可延伸讀取器。 這需要JEEReader擴充功能模組上的AEM Forms。
 
-* 提供包含異質性檔案型別的ZIP檔案，這些檔案可使用產生PDF服務解壓縮並轉換成PDF檔案。
+* 提供包含異質性檔案型別的ZIP檔案，該檔案可使用產生PDF服務解壓縮並轉換成PDF檔案。
 
 * 原則會保護檔案清單，並以ZIP檔案傳回。
 
-* 允許使用者以單一ZIP檔案下載流程執行個體的所有附件。
+* 可讓使用者以單一ZIP檔案下載流程執行個體的所有附件。

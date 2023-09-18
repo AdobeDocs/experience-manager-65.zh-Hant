@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-除此之外，Adobe Experience Manager (AEM) Communities檔案的本節內容還有：
+除此之外，Adobe Experience Manager (AEM) Communities檔案的本節還有：
 
 * [使用Apache Maven建置AEM專案](../../help/sites-developing/ht-projects-maven.md).
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 >
 >掌握最新的Communities版本。
 >
->另請參閱 [最新版本](deploy-communities.md#latest-releases) 區段來識別最新版本。
+>請參閱 [最新版本](deploy-communities.md#latest-releases) 您可從中識別最新版本的區段。
 
 ## Maven相依性範例 {#maven-dependency-example}
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->另請參閱 [AEM Uber jar存放庫](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) 以識別最新的Uber jar成品。
+>請參閱 [AEM Uber jar存放庫](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) 您可在此識別最新的Uber jar成品。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:
