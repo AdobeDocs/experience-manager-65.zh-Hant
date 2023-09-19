@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 923ec028679031c9ef9ea6ae2cf827e7a4cd00d8
+source-git-commit: f41962faa0567ed99c1e2ab189e81fb978781af3
 workflow-type: tm+mt
-source-wordcount: '5517'
+source-wordcount: '5515'
 ht-degree: 1%
 
 ---
@@ -481,7 +481,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 
 ### （僅限Windows）設定HTML到PDF轉換的主要路由 {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-PDF Generator服務提供將HTML檔案轉換為PDF檔案的多種途徑：Webkit、Acrobat WebCapture （僅限Windows）和PhantomJS。 Adobe建議使用PhantomJS路由，因為它具有處理動態內容的功能，並且不依賴32位元程式庫、32位元JDK，或不需要額外字型。 此外，PhantomJS路由不需要sudo或root存取權即可執行轉換。
+PDF Generator服務提供將HTML檔案轉換為PDF檔案的多種途徑：Webkit、Acrobat WebCapture （僅限Windows）和PhantomJS。 Adobe建議使用PhantomJS路由，因為它具有處理動態內容的功能，並且不依賴32位元程式庫或不需要額外字型。 此外，PhantomJS路由不需要sudo或root存取權即可執行轉換。
 
 HTML至PDF轉換的預設主要路由為Webkit。 若要變更轉換路線：
 
