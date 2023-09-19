@@ -1,43 +1,39 @@
 ---
 title: 在外部網頁中內嵌適用性表單
-seo-title: Embed adaptive form in external web page
-description: 瞭解如何將最適化表單內嵌在外部網頁中
-seo-description: Learn how to embed an adaptive form in an external HTML web page
-uuid: d81032dd-af80-4f4b-a717-ee1b89fd3d3d
+description: 了解如何在外部網頁中嵌入調適型表單
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
-discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
-source-git-commit: f114456d5571620772341cba9bd8203d91d0b053
+source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 2%
+source-wordcount: '1039'
+ht-degree: 55%
 
 ---
 
 # 在外部網頁中內嵌適用性表單{#embed-adaptive-form-in-external-web-page}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立方面的重大進步，可確保令人印象深刻的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。 </span>
 
-您可以 [將調適型表單內嵌到AEM Sites頁面中](/help/forms/using/embed-adaptive-form-aem-sites.md) 或託管於AEM外部的網頁。 內嵌的最適化表單功能齊全，使用者無須離開頁面即可填寫並提交表單。 它有助於使用者停留在網頁上其他元素的內容中，同時與表單互動。
+你可以[在 AEM Sites 頁面嵌入調適型表單](/help/forms/using/embed-adaptive-form-aem-sites.md)或在 AEM 外部託管的網頁嵌入調適型表單。嵌入式調適型表單功能齊全，使用者無需離開頁面即可填寫並提交表單。此功能可幫助使用者在網頁維持相關的其他元素，並同時與表單進行互動。
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
-將最適化表單內嵌至外部網站之前，請先執行下列步驟
+將調適型表單嵌入外部網站之前執行以下步驟
 
 * 發佈要內嵌至AEM Forms伺服器發佈例項的最適化表單。
-* 在您的網站上建立或識別要託管最適化表單的網頁。 確保網頁可以 [從CDN讀取jQuery檔案](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) 或內嵌jQuery的本機副本。 需要jQuery才能演算最適化表單。
+* 在您的網站上建立或識別可託管最適化表單的網頁。 確保網頁可以 [從CDN讀取jQuery檔案](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) 或內嵌jQuery的本機副本。 必須有 jQuery 才可呈現調適型表單。
 * 當AEM伺服器和網頁位於不同的網域時，請執行區段中列出的步驟， [讓AEM Forms能夠為跨網域網站提供最適化表單](#cross-site).
 
-## 內嵌最適化表單 {#embed-adaptive-form}
+## 內嵌調適型表單 {#embed-adaptive-form}
 
-您可以在網頁中插入幾行JavaScript，以內嵌最適化表單。 程式碼中的API會傳送HTTP請求給AEM伺服器以取得調適型表單資源，並將調適型表單插入指定的表單容器中。
+您可以在網頁中插入幾行 JavaScript 來嵌入調適型表單。代碼中的 API 會向 AEM 伺服器發送 HTTP 請求以獲得調適型表單資源，並將調適型表單注入指定的表單容器中。
 
-若要內嵌調適型表單：
+內嵌調適型表單：
 
-1. 使用以下程式碼在您的網站上建立網頁：
+1. 使用以下代碼在您的網站上建立網頁：
 
    ```html
    <!doctype html>
@@ -98,45 +94,45 @@ ht-degree: 2%
    </html>
    ```
 
-1. 在內嵌程式碼中：
+1. 在嵌入代碼中：
 
-   * 變更的值 *options.路徑* 變數，搭配最適化表單的發佈URL路徑。 如果AEM伺服器是在內容路徑上執行，請確定URL包含內容路徑。 一律提及最適化表單的完整名稱，包括擴充功能。   例如，上述程式碼和調適型來自位於同一個AEM表單伺服器上，因此此範例使用調適型表單/content/forms/af/locbasic.html的內容路徑。
+   * 變更 *options.路徑* 變數，搭配最適化表單的發佈URL路徑。 如果 AEM 伺服器在上下文路徑上執行，請確保 URL 包含上下文路徑。一定要提及調適型表單的完整名稱，包括副檔名。例如，上述程式碼和調適型來自位於同一個AEM Forms伺服器，因此此範例使用調適型表單的內容路徑 `/content/forms/af/locbasic.html`.
    * 取代 *options.dataRef* 要與URL一併傳遞的屬性。 您可以使用dataref變數來 [預填最適化表單](/help/forms/using/prepopulate-adaptive-form-fields.md).
    * 取代 *options.themePath* 非最適化表單中設定的主題路徑。 或者，您可以使用請求屬性指定主題路徑。
-   * CSS_Selector為內嵌最適化表單之表單容器的CSS選取器。 例如，.customafsection css類別是上述範例中的CSS選取器。
+   * CSS_Selector 是所嵌入調適型表單的表單容器 CSS 選擇器。例如，.customafsection css 類是上面範例中的 CSS 選擇器。
 
-最適化表單已內嵌在網頁中。 在內嵌的最適化表單中觀察下列事項：
+調適型表單嵌入網頁中。在嵌入式調適型表單中觀察以下內容：
 
 * 內嵌表單中不包含原始最適化表單的頁首和頁尾。
-* 您可在Forms入口網站的「草稿與提交」索引標籤中取得草稿與已提交的表單。
+* 草稿和提交的表單列在表單入口網站的「草稿」和「提交」標籤中。
 * 在原始最適化表單上設定的提交動作會保留在內嵌表單中。
-* 最適化表單規則會保留，並完整發揮內嵌表單的功能。
+* 調適型表單規則保留在嵌入式表單中並完全發揮作用。
 * 在原始最適化表單中設定的體驗鎖定目標和A/B測試在內嵌表單中無法運作。
-* 如果在原始表單上設定Adobe Analytics，則會在Adobe Analytics伺服器中擷取分析資料。 但是，Forms分析報表中並未提供此函式。
+* 如果在原始表單上設定Adobe Analytics，則Adobe Analytics伺服器會擷取分析資料。 但是，在 Forms 分析報告中不能使用。
 
 ## 範例拓撲 {#sample-topology}
 
-內嵌最適化表單的外部網頁會將請求傳送至AEM伺服器，該伺服器通常位於私人網路的防火牆之後。 為確保將請求安全地導向至AEM伺服器，建議設定反向Proxy伺服器。
+嵌入式調適型表單的外部網頁會發送請求至 AEM 伺服器；伺服器通常位於私人網絡中的防火牆後面。為確保將請求安全導向 AEM 伺刷器，建議設定反向代理伺服器。
 
-讓我們來看一個範例，瞭解如何在不使用Dispatcher的情況下設定Apache 2.4反向Proxy伺服器。 在此範例中，您會以代管AEM伺服器 `/forms` 內容路徑與地圖 `/forms` 用於反向Proxy。 這可確保針對以下專案的任何請求： `/forms` Apache伺服器上的會導向至AEM執行個體。 此拓撲有助於減少Dispatcher層上的規則數量，因為所有請求都有前置詞 `/forms` 路由至AEM伺服器。
+讓我們來看一個範例，說明如何設定不含Dispatcher的Apache 2.4反向Proxy伺服器。 AEM在此範例中，您使用 `/forms` 內容路徑與地圖 `/forms` 用於反向Proxy。 這可確保針對以下專案的任何請求： `/forms` Apache伺服器上的會導向至AEM執行個體。 此拓撲有助於減少Dispatcher層的規則數量，因為所有請求都有前置詞 `/forms` 路由至AEM伺服器。
 
-1. 開啟 `httpd.conf` 設定檔案並取消註解下列幾行程式碼。 或者，您可以在檔案中新增這些行程式碼。
+1. 開啟 `httpd.conf` 設定檔案並取消註釋以下代碼行。或者，您可以將這些代碼行加入檔案中。
 
    ```text
    LoadModule proxy_html_module modules/mod_proxy_html.so
    LoadModule proxy_http_module modules/mod_proxy_http.so
    ```
 
-1. 將下列幾行程式碼新增至 `httpd-proxy.conf` 組態檔。
+1. 將以下代碼行加入 `httpd-proxy.conf` 設定檔案中，以設定代理規則。
 
    ```text
    ProxyPass /forms https://[AEM_Instance]/forms
    ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
 
-   取代 `[AEM_Instance]` 在規則中設定AEM伺服器發佈URL。
+   以規則中的 AEM 伺服器發佈 URL 取代 `[AEM_Instance]`。
 
-如果您未在內容路徑上掛載AEM伺服器，Apache層的Proxy規則將如下所示：
+如果您未在內容路徑上掛載AEM伺服器，則Apache層的Proxy規則如下：
 
 ```text
 ProxyPass /content https://<AEM_Instance>/content
@@ -155,18 +151,18 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 >
 >如果您設定任何其他拓撲，請確定您將提交、預填和其他URL新增到Dispatcher層的允許清單。
 
-## 最佳實務 {#best-practices}
+## 最佳做法 {#best-practices}
 
-將最適化表單內嵌在網頁中時，請考慮下列最佳實務：
+將調適型表單嵌入網頁時，請考慮以下最佳做法：
 
-* 請確保網頁CSS中定義的樣式規則不會與表單物件CSS衝突。 若要避免衝突，您可以使用AEM使用者端資料庫，重複使用最適化表單主題中的網頁CSS。 如需有關在最適化表單主題中使用使用者端資料庫的資訊，請參閱 [AEM Forms中的主題](../../forms/using/themes.md).
-* 讓網頁中的表單容器使用整個視窗寬度。 這可確保為行動裝置設定的CSS規則可在沒有任何變更的情況下運作。 如果表單容器未採用完整的視窗寬度，您需要撰寫自訂CSS，讓表單能適應不同的行動裝置。
-* 使用 `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 用於取得使用者端中表單資料的XML或JSON表示的API。
-* 使用 `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API可從HTMLDOM解除安裝調適型表單。
+* 確保網頁 CSS 定義的樣式規則與表單物件 CSS 不衝突。若要避免衝突，您可以使用AEM使用者端資料庫，重複使用最適化表單主題中的網頁CSS。 如需有關在最適化表單主題中使用使用者端資料庫的資訊，請參閱 [AEM Forms中的主題](../../forms/using/themes.md).
+* 讓網頁中的表單容器使用整個視窗寬度。這樣可確保為行動裝置設定的 CSS 規則可使用，而無需任何變更。如果表單容器未採用完整的視窗寬度，您必須撰寫自訂CSS，讓表單能適應不同的行動裝置。
+* 使用 `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API，取得用戶端以 XML 或 JSON 表示的表單資料。
+* 使用 `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API 從 HTML DOM 卸載調適型表單。
 * 設定從AEM伺服器傳送回應時的存取控制來源標頭。
 
 ## 啟用AEM Forms以向跨網域網站提供最適化表單 {#cross-site}
 
-1. 在AEM發佈執行個體上，前往AEM Web主控台設定管理員，位於 `https://'[server]:[port]'/system/console/configMgr`.
-1. 找到並開啟 **Apache Sling查閱者篩選器** 設定。
-1. 在允許的主機欄位中，指定網頁所在的網域。 這可讓主機向AEM伺服器發出POST要求。 您也可以使用規則運算式來指定一系列外部應用程式網域。
+1. 在 AEM 發佈執行個體上，前往 AEM Web 主控台的 Configuration Manager：`https://'[server]:[port]'/system/console/configMgr`。
+1. 找到並開啟 **Apache Sling 查閱者篩選器**&#x200B;設定。
+1. 在允許的主機欄位中，指定網頁所在的網域。這樣可讓主機向 AEM 伺服器發送 POST 請求。您還可以使用規則運算式來指定一系列的外部應用程式網域。
