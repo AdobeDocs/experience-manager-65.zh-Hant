@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 923ec028679031c9ef9ea6ae2cf827e7a4cd00d8
 workflow-type: tm+mt
-source-wordcount: '5529'
+source-wordcount: '5517'
 ht-degree: 1%
 
 ---
@@ -243,7 +243,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 >[!NOTE]
 >
 >* 所有環境變數和各自的路徑都區分大小寫。
->* JAVA_HOME、JAVA_HOME_32和Acrobat_PATH （僅限Windows）是強制環境變數。
+>* JAVA_HOME和Acrobat_PATH （僅限Windows）是強制的環境變數。
 >* 環境變數OpenOffice_PATH設定為安裝資料夾，而非可執行檔的路徑。
 >* 請勿為Microsoft® Office應用程式（例如Word、PowerPoint、Excel和Project）或AutoCAD設定環境變數。 如果這些應用程式已安裝在伺服器上，則產生PDF服務會自動啟動這些應用程式。
 >* 在UNIX平台上，以/root格式安裝OpenOffice。 如果OpenOffice未安裝為root，則PDF Generator服務無法將OpenOffice檔案轉換為PDF檔案。 如果您需要以非根使用者身分安裝及執行OpenOffice，請向非根使用者提供sudo許可權。
@@ -686,8 +686,6 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
   ```
   ldd phantomjs | grep not
   ```
-
-* 確保JAVA_HOME_32環境變數指向正確的位置。
 
 **Linux®和Solaris™ （WebKit轉換路由）**
 
