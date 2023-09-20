@@ -2,10 +2,10 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: aec2eb3303ad9747f6f56ae2eb31c3c7ed7b0c24
+source-git-commit: a15b9dae5cc4405122ee95e036a83fdfbf34f9bd
 workflow-type: tm+mt
-source-wordcount: '4417'
-ht-degree: 2%
+source-wordcount: '4490'
+ht-degree: 4%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 **重要功能**
 
-* 資產，Dynamic Media - [Dynamic Media中的影片支援多字幕與多音訊曲目](/help/assets/video.md#about-msma) — 您現在可以輕鬆地將多個字幕和多個音軌新增到主要視訊中。 此功能表示您的視訊可在全球對象中存取。 您可以透過多種語言，為全球觀眾自訂單一已發佈的主要影片，並遵守不同地理區域的協助工具准則。 作者也可以從使用者介面的單一標籤管理字幕和音軌。
+* 資產，Dynamic Media - [Dynamic Media中的影片支援多字幕與多音訊曲目](/help/assets/video.md#about-msma) — 您現在可以輕鬆地將多個字幕和多個音軌新增到主要視訊中。 此功能表示全球對象都可以存取您的影片。您可以以多種語言向全球對象自訂單一已發佈的主要影片，並遵守不同地理區域的輔助功能指南。作者還可以從使用者介面中的單個標籤管理字幕和音訊。
 
 * 資產 — 您現在可以從搜尋結果導覽至包含資產的檔案夾位置，因此可讓您執行各種資產管理工作。 (ASSETS-23182)
 
@@ -49,7 +49,7 @@ ht-degree: 2%
 
 * 內容片段中的Sites Polaris選取器已改善效能。 (SITES-14092)
 
-* 啟用Sites頁面編輯器/影像元件使用者，以參照遠端資產Cloud Service中的資產。 (SITES-13448， SITES-13433)
+* 啟用Sites頁面編輯器/影像元件使用者從遠端資產Cloud Service參照資產。 (SITES-13448， SITES-13433)
 
 * 為了在清單檢視中快速找到系統中可能有多個專案的專案，Adobe現在支援伺服器端排序。 專案節點會在使用者介面中呈現之前，根據使用者選取的欄在後端排序。 (NPR-41027)
 
@@ -65,19 +65,19 @@ ht-degree: 2%
 
 * **[增強的Adobe Sign工作流程步驟](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step)：** AEM工作流程中的Adobe Sign工作流程步驟提供下列增強功能。
 
-   * **Adobe Sign採用政府ID式驗證，具備更強的安全性：** Adobe Acrobat Sign的政府機關身分證件可讓使用者使用政府核發的ID （駕照、國民身分證、護照）進行身分驗證，提供額外的驗證層。 運用信任的身分識別檔案，這項增強功能為簽署程式增添了額外的信賴度，非常適合需要增強安全性、法規遵循及使用者驗證的案例。
+   * **Adobe Sign採用政府ID式驗證，具備更強的安全性：** Adobe Acrobat Sign的政府機關身分證件可讓使用者使用政府核發的ID （駕照、國民身分證、護照）進行身分驗證，提供額外的驗證層。 此增強功能使用信任的身分識別檔案，為簽署程式增添額外的信賴等級，非常適合需要增強安全性、法規遵循及使用者驗證的情況。
 
-   * **增強Adobe Sign檔案稽核軌跡的透明度：** 使用稽核軌跡功能，以針對Adobe Sign檔案的生命週期取得詳細深入分析。 使用「稽核軌跡」，您現在可以維護與檔案相關的所有動作與互動的完整記錄。 其中包括檢視、編輯或簽署檔案者的詳細資訊，以及每個事件的時間戳記。 此增強功能對於維護合規性、解決爭議及確保數位合約的完整性至關重要。
+   * **增強Adobe Sign檔案稽核軌跡的透明度：** 使用稽核軌跡功能，以針對Adobe Sign檔案的生命週期取得詳細深入分析。 透過稽核軌跡，您現在可以保留與文件相關的所有動作和互動的全面記錄。其中包括查看、編輯或簽署文件等人員的詳細資訊，以及每個事件的時間戳記。此加強功能對於維持合規性、解決爭議和確保數位協議的完整性至關重要。
 
 
-   * **擴充協定收件者的角色，而不只是簽署者：** Adobe Acrobat Sign可選擇擴充協定收件者的角色，而不只是簽署者，以便更符合其工作流程需求。 啟用後，協定中的每個收件者皆可個別設定其角色，預設值為「簽署者」。
+   * **擴充協定收件者的角色，而不只是簽署者：** Adobe Acrobat Sign可選擇擴充協定收件者的角色，而不只是簽署者，以便更符合其工作流程需求。 啟用後，每位協議收件人有其可設定的個別角色，且以簽署人為預設。
 
 
 * **[jee上的AEM Forms完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)**：此Service Pack為JEE上的AEM Forms提供完整安裝程式，可支援多種新軟體組合，包括：
-   * Microsoft Windows Server 2022
-   * Microsoft Active Directory 2022
+   * Microsoft® Windows Server 2022
+   * Microsoft® Active Directory 2022
    * 在Windows Server 2022上OracleWebLogic 14C
-   * redhat JBoss 7.4.10
+   * Red Hat® JBoss® 7.4.10
    * MongoDB 4.4
    * MySQL JDBC聯結器8
 
@@ -109,7 +109,7 @@ ht-degree: 2%
 
 #### 核心元件{#sites-core-components-6518}
 
-* 資產選擇器關閉並重新開啟時，不會擷取更新的資產清單。 如果新資產上傳到存放庫，在重新整理包含資產選擇器的頁面之前，它們不會顯示在資產選擇器中。 (SITES-14828)
+* 資產選擇器關閉並重新開啟時，不會擷取更新的資產清單。 如果新資產上傳到存放庫，則在重新整理包含資產選擇器的頁面之前，它們不會顯示在資產選擇器中。 (SITES-14828)
 * 整合在網站編輯器(CS)中的資產選擇器使用者介面在視窗縮小時沒有回應。 (SITES-14127)
 * 資產選擇器整合的Adobe IMS (Identity Management系統)設定接受不正確的值。 (SITES-13962)
 * 資產選取器若整合至網站影像元件，不應允許選取非影像資產。 (SITES-13879)
@@ -167,11 +167,11 @@ ht-degree: 2%
    * 如果伺服器在PDF檔案產生期間關閉，則會擲回伺服器啟動後工作處理錯誤。 伺服器啟動期間需要新增引數 — Dcom.adobe.livecycle.dsc.deferServiceStart=true。 (FORMS-9836)
    * 如果使用者嘗試使用AssemblerService.Invoke方法合併PDF，則組合器無法執行工作。 (FORMS-9550)
    * 當您在OSGI和JEE環境中升級至AEM 6.5.15.0 Service Pack時，使用特定範本的組合器服務會停止運作。 (FORMS-9355、FORMS-9445、FORMS-9408)
-   * Java記憶體回收無法清除AEM Forms OSGi伺服器上的舊程式碼棧積，因為XMLFormService的「全域逾時」未設定為適當的值。 (FORMS-9384、FORMS-9035)
-   * 呈現最適化表單的PDF預覽時，錯誤記錄中會出現不想要的Java棧疊傾印。 (FORMS-8865)
-   * 當使用者檢視檔案詳細資訊區段中檔案的檔案狀態時，其未正確顯示。 (FORMS-8946、FORMS-10424)
+   * Java™記憶體回收無法清除AEM Forms OSGi伺服器上的舊程式碼棧積，因為XMLFormService的「全域逾時」未設定為適當的值。 (FORMS-9384、FORMS-9035)
+   * 呈現最適化表單的PDF預覽時，錯誤記錄中會出現不想要的Java™棧疊傾印。 (FORMS-8865)
+   * 當使用者檢視檔案詳細資訊區段中檔案的檔案狀態時，其無法正確顯示。 (FORMS-8946、FORMS-10424)
    * 當使用者升級至AEM Forms並使用sendToPrinter服務時，棧積利用率會持續增加。 (FORMS-10148)
-   * 在JBoss 7.4 EAP伺服器上，電子郵件功能失敗的原因為 `java.io.IOException`. (FORMS-10138)
+   * 在JBoss® 7.4 EAP伺服器上，電子郵件功能失敗的原因為 `java.io.IOException`. (FORMS-10138)
    * 當使用者使用transformPDF服務時，它會失敗並出現錯誤： `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml`(FORMS-9957)
    * 升級至AEM Service Pack 6.5.14.0後，使用特定範本時，組裝程式服務會發生問題。 (FORMS-9445、FORMS-9408)
   <!-- *  When a user configures the watched folder endpoint for PDF Generator, it fails to pick documents on JDK 11. (FORMS-10152) -->
@@ -183,11 +183,11 @@ ht-degree: 2%
    * 表單 — 使用者群組無法在最適化表單中呼叫規則編輯器兩次。 (FORMS-9051)
    * 在視覺編輯器中，當使用者選取表單物件時，則會將整個欄位例項物件傳遞至自訂函式，而非僅傳遞欄位的值。 (FORMS-10015)
    * 當使用者建立核心元件型最適化表單並新增文字輸入元件時， `Is Empty` 和 `Is Not Empty` 無法在規則編輯器中運作。 (FORMS-10098)
-   * 如果欄位在核心元件型最適化表單中被標籤為無效，它會在欄位上啟動變更事件。 (FORMS-10087)
+   * 如果欄位在核心元件型最適化表單中標籤為無效，它會在欄位上啟動變更事件。 (FORMS-10087)
    * 當使用者嘗試使用複雜的JSON結構描述建立最適化表單時，它會失敗。 錯誤發生於：
      `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0`。(FORMS-9639)
-   * 在調適型表單中，當使用者停用「我同意條款與條件」核取方塊時，只要使用者向下捲動，就會再次啟用。 (FORMS-9458)
-   * 當使用者使用Google Chrome/Firefox在Android裝置上開啟最適化表單並在文字方塊中輸入允許的最大字元時，文字方塊中的值無法清除。 (FORMS-9354)
+   * 在調適型表單中，當使用者停用「我同意條款與條件」核取方塊時，當使用者向下捲動時，它會再次啟用。 (FORMS-9458)
+   * 當使用者使用Google Chrome/Firefox在Android™裝置上開啟最適化表單並在文字方塊中輸入允許的最大字元時，文字方塊中的值無法清除。 (FORMS-9354)
    * 當核取方塊的標籤包含&#39;，&#39;、&#39;/&#39;或&#39;.&#39;等特殊字元時，按一下文字/標籤不會選取個別核取方塊。 (FORMS-9313)
    * 當使用者嘗試驗證條款與條件元件時，它無法驗證元件是否不在焦點中，同時其他元件獲得驗證。 (FORMS-8725、FORMS-8913)
    * 如果最適化表單在升級至AEM 6.5.16.0 Service Pack後重新載入，檔案附件擷取會失敗。 (FORMS-8906)
@@ -195,6 +195,8 @@ ht-degree: 2%
    * 如果使用者嘗試為製作環境在內嵌於最適化表單中的片段實施延遲載入，為片段定義的規則/邏輯不會反映在表單中。 (FORMS-8554、FORMS-9182)
    * 當您嘗試在AEM 6.5.16.0 Service Pack中開啟任何Coral對話方塊時，它會產生 `error.log: cannot render resource` 例外。 (FORMS-8942)
    * 當使用者嘗試翻譯在最適化表單中包含單一選項的核取方塊時，它會失敗。 (FORMS-10181)
+   * 所有記錄檔案(DoR)範本都無法發佈。 只有以英文地區設定為基礎的DoR範本及其相關之Forms為基礎的DoR範本才會發佈。 (FORMS-10535)
+
 * **協助工具**
    * 在最適化表單中使用手寫簽名元件時，會發生下列錯誤：
       * 在「草寫簽名」元件之後，如果有更多元件，按下Tab鍵不會移到簽名對話方塊；而是移到下一個元件。 只有在遍歷所有元件後，它才會最終移至簽名對話方塊。
@@ -205,7 +207,7 @@ ht-degree: 2%
    * 當使用者提交最適化表單時，熒幕助讀程式無法讀取必填欄位的錯誤訊息。 (FORMS-9316)
    * 當熒幕助讀程式讀取HTML表單時，以字距微調（間距）讀取文字時發生問題。 (FORMS-9258)
    * 在最適化表單中，連結至文字的參考/註腳不會使用熒幕助讀程式來呼叫。 (FORMS-8920)
-   * 最新的設計工具無法正確辨識協助工具標籤。 (FORMS-10139)
+   * 最新的設計工具無法正確識別協助工具標籤。 (FORMS-10139)
 * **互動式通訊**
    * 在通訊管理中，本地化無法運作。 (FORMS-8926)
    * 使用publishAll服務時，草稿字母無法開啟。 (FORMS-8589)
@@ -297,7 +299,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->在安裝Service Pack期間，套件管理員UI上的對話方塊有時會退出。 Adobe建議您先等待錯誤記錄穩定下來，再存取部署。 等待與更新程式套件組合解除安裝相關的特定記錄，再確認安裝成功。 此問題通常發生在以下位置： [!DNL Safari] 瀏覽器，但可能間歇性地在任何瀏覽器上發生。
+>在安裝Service Pack期間，套件管理員UI上的對話方塊有時會退出。 Adobe建議您先等待錯誤記錄穩定下來，再存取部署。 等待與更新程式套件組合解除安裝相關的特定記錄，再確認安裝成功。 此問題通常發生在 [!DNL Safari] 瀏覽器，但可能間歇性地在任何瀏覽器上發生。
 
 **自動安裝**
 
@@ -395,7 +397,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    1. 安裝Service Pack，或重新啟動Experience Manageras a Cloud Service。
 的新資料夾 `cache` 和 `diff-cache` 都會自動建立，而您不會再遇到與相關的例外狀況 `mvstore` 在 `error.log`.
 
-* 將可能已使用您內容模型的自訂API名稱的GraphQL查詢更新為改用內容模型的預設名稱。
+* 更新可能已使用您內容模型的自訂API名稱的GraphQL查詢，以改用內容模型的預設名稱。
 
 * GraphQL查詢可能使用 `damAssetLucene` 索引而非 `fragments` 索引。 此動作可能會導致GraphQL查詢失敗或需要很長時間才能執行。
 
@@ -427,7 +429,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在granite/operations/maintenance找不到維護時段。
    * 使用彙總函式(例如SUM、MAX和MIN)時，Adaptive Form伺服器端驗證會失敗(CQ-4274424)。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`  — 在granite/operations/maintenance找不到維護時段。
-   * 透過Shoppable Banner檢視器預覽資產時，Dynamic Media互動影像中的熱點不可見。
+   * 透過Shoppable Banner檢視器預覽資產時，不會顯示Dynamic Media互動影像中的熱點。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` ：等待登入變更完成解除登入逾時。
 
 * 從AEM 6.5.15開始，Rhino JavaScript Engine由 ```org.apache.servicemix.bundles.rhino``` 捆綁有新的提升行為。 使用嚴格模式的指令碼(```use strict;```)必須正確宣告其變數，否則不會執行，而會擲回執行階段錯誤。
@@ -437,13 +439,13 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 #### 支援平台
 
 * WebLogic JEE伺服器不支援高於1.8.0_281的JDK版本。 (FORMS-8498、CQDOC-20383)
-* 作為 [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
+* 作為 [!DNL Microsoft®® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss®® EAP 7.1]， [!DNL Microsoft®® Windows Server 2019] 不支援全包安裝 [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
 * JDK 11.0.20不支援在JEE安裝程式上安裝AEM Forms。 僅支援JDK 11.0.19或較舊版本以在JEE安裝程式上安裝AEM Forms。 (FORMS-10659)
 
 #### 安裝
 
 * 在JBoss® 7.1.4平台上，當使用者安裝Experience Manager6.5.16.0或更新版Service Pack時， `adobe-livecycle-jboss.ear` 部署失敗。 (CQ-4351522、CQDOC-20159)
-* 安裝AEM Service Pack 6.5.18.0完整安裝程式後，EAR部署在使用JBoss Turnkey (CQDOC-20803)的JEE上失敗。
+* 安裝AEM Service Pack 6.5.18.0完整安裝程式後，EAR部署在使用JBoss® Turnkey (CQDOC-20803)的JEE上失敗。
 若要解決問題，請找到 `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` 檔案和更新 `Adobe_Adobe_JAVA_HOME` 至 `Adobe_JAVA_HOME` 執行configuration manager之前的所有事件。
 
 #### 最適化表單
@@ -451,6 +453,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * 發佈調適型表單時，其所有相依性（包括原則）都會重新發佈，即使未進行任何修改亦然。 (FORMS-10454)
 * 當使用者選擇在最適化表單中首次設定欄位時，儲存設定的選項未顯示在屬性瀏覽器中。 選擇在同一編輯器中設定最適化表單的其他欄位即可解決問題。
 * 在最適化表單的指南容器中設定重新導向URL時，內嵌簽署會停止運作。 (FORMS-10493)
+* 所有記錄檔案(DoR)範本都無法發佈。 只有以英文地區設定為基礎的DoR範本及其相關之Forms為基礎的DoR範本才會發佈。 (FORMS-10535)
 
 #### 互動式通訊
 
