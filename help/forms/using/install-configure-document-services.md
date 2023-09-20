@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: f41962faa0567ed99c1e2ab189e81fb978781af3
+source-git-commit: fbfe38e9d669cd506b687a3fb81ad4ce9e7d65da
 workflow-type: tm+mt
-source-wordcount: '5515'
+source-wordcount: '5513'
 ht-degree: 1%
 
 ---
@@ -83,7 +83,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 >[!NOTE]
 >
 >* 在Microsoft® Windows上，PDF Generator支援WebKit、Acrobat WebCapture和PhantomJS轉換路由，以將HTML檔案轉換為PDF檔案。
->* 在UNIX作業系統上，PDF Generator支援WebKit和PhantomJS轉換路由，以將HTML檔案轉換為PDF檔案。
+* 在UNIX作業系統上，PDF Generator支援WebKit和PhantomJS轉換路由，以將HTML檔案轉換為PDF檔案。
 >
 
 ### UNIX作業系統的額外需求 {#extrarequirements}
@@ -198,17 +198,17 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
 >[!NOTE]
 >
->* 如果您的AEM Forms伺服器處於離線或安全的環境，且網際網路無法啟動Adobe Acrobat，請參閱 [離線啟用](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) 以取得啟用此類Adobe Acrobat例項的指示。
->* Adobe Acrobat、Microsoft®Word、Excel和Powerpoint僅適用於Microsoft®Windows。 如果您使用UNIX作業系統，請安裝OpenOffice以將RTF檔案和支援的Microsoft® Office檔案轉換成PDF檔案。
->* 關閉在安裝Adobe Acrobat和協力廠商軟體後，針對所有設定為使用PDF Generator服務的使用者顯示的所有對話方塊。
->* 至少啟動一次所有已安裝的軟體。 關閉所有設定要使用PDF Generator服務的使用者之所有對話方塊。
->* [檢查Adobe Acrobat序號的到期日](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) 並設定日期以更新授權或 [移轉您的序號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 根據到期日。
+* 如果您的AEM Forms伺服器處於離線或安全的環境，且網際網路無法啟動Adobe Acrobat，請參閱 [離線啟用](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) 以取得啟用此類Adobe Acrobat例項的指示。
+* Adobe Acrobat、Microsoft®Word、Excel和Powerpoint僅適用於Microsoft®Windows。 如果您使用UNIX作業系統，請安裝OpenOffice以將RTF檔案和支援的Microsoft® Office檔案轉換成PDF檔案。
+* 關閉在安裝Adobe Acrobat和協力廠商軟體後，針對所有設定為使用PDF Generator服務的使用者顯示的所有對話方塊。
+* 至少啟動一次所有已安裝的軟體。 關閉所有設定要使用PDF Generator服務的使用者之所有對話方塊。
+* [檢查Adobe Acrobat序號的到期日](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) 並設定日期以更新授權或 [移轉您的序號](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 根據到期日。
 
 安裝Acrobat後，請開啟Microsoft® Word。 在 **Acrobat** 標籤，按一下 **建立PDF** 並將電腦上可用的.doc或.docx檔案轉換為PDF檔案。 如果轉換成功，AEM Forms就可以將Acrobat與PDF Generator服務搭配使用。
 
 ### 設定環境變數 {#setup-environment-variables}
 
-為32位元和64位元Java Development Kit、協力廠商應用程式和Adobe Acrobat設定環境變數。 環境變數應包含用來啟動對應應用程式之執行檔的絕對路徑，例如，下表列出一些應用程式的環境變數：
+為64位元Java Development Kit、協力廠商應用程式和Adobe Acrobat設定環境變數。 環境變數應包含用來啟動對應應用程式之執行檔的絕對路徑，例如，下表列出一些應用程式的環境變數：
 
 <table>
  <tbody>
@@ -242,14 +242,14 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
 >[!NOTE]
 >
->* 所有環境變數和各自的路徑都區分大小寫。
->* JAVA_HOME和Acrobat_PATH （僅限Windows）是強制的環境變數。
->* 環境變數OpenOffice_PATH設定為安裝資料夾，而非可執行檔的路徑。
->* 請勿為Microsoft® Office應用程式（例如Word、PowerPoint、Excel和Project）或AutoCAD設定環境變數。 如果這些應用程式已安裝在伺服器上，則產生PDF服務會自動啟動這些應用程式。
->* 在UNIX平台上，以/root格式安裝OpenOffice。 如果OpenOffice未安裝為root，則PDF Generator服務無法將OpenOffice檔案轉換為PDF檔案。 如果您需要以非根使用者身分安裝及執行OpenOffice，請向非根使用者提供sudo許可權。
->* 如果您在UNIX平台使用OpenOffice，請執行以下命令來設定路徑變數：
+* 所有環境變數和各自的路徑都區分大小寫。
+* JAVA_HOME和Acrobat_PATH （僅限Windows）是強制的環境變數。
+* 環境變數OpenOffice_PATH設定為安裝資料夾，而非可執行檔的路徑。
+* 請勿為Microsoft® Office應用程式（例如Word、PowerPoint、Excel和Project）或AutoCAD設定環境變數。 如果這些應用程式已安裝在伺服器上，則產生PDF服務會自動啟動這些應用程式。
+* 在UNIX平台上，以/root格式安裝OpenOffice。 如果OpenOffice未安裝為root，則PDF Generator服務無法將OpenOffice檔案轉換為PDF檔案。 如果您需要以非根使用者身分安裝及執行OpenOffice，請向非根使用者提供sudo許可權。
+* 如果您在UNIX平台使用OpenOffice，請執行以下命令來設定路徑變數：
 >
->  `export OpenOffice_PATH=/opt/openoffice.org4`
+`export OpenOffice_PATH=/opt/openoffice.org4`
 
 ### (僅適用於IBM® WebSphere®)設定IBM® SSL通訊端提供者 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
@@ -336,7 +336,7 @@ PDF Generator服務提供將HTML檔案轉換為PDF檔案的WebKit、WebCapture�
 
 >[!NOTE]
 >
->每當您將新字型安裝至字型資料夾時，請重新啟動AEM Forms例項。
+每當您將新字型安裝至字型資料夾時，請重新啟動AEM Forms例項。
 
 ### （僅限UNIX平台）HTML至PDF轉換的額外設定  {#extra-configurations-for-html-to-pdf-conversion}
 
@@ -356,12 +356,12 @@ PDF Generator服務提供將HTML檔案轉換為PDF檔案的WebKit、WebCapture�
 
 >[!NOTE]
 >
->* 在Red Hat® Enterprise Linux® 6.x和更新版本上，Courier字型無法使用。 若要安裝Courier字型，請下載font-ibm-type1-1.0.3.zip封存。 在/usr/share/fonts解壓縮封存。 從/usr/share/X11/fonts建立符號連結至/usr/share/fonts。
->* 刪除Html2PdfSvc/bin和/usr/share/fonts目錄中的所有.lst字型快取檔案。
->* 確定目錄/usr/lib/X11/fonts和/usr/share/fonts存在。 如果目錄不存在，請使用ln指令建立從/usr/share/X11/fonts到/usr/lib/X11/fonts的符號連結，以及從/usr/share/fonts到/usr/share/X11/fonts的另一個符號連結。 同時請確定在/usr/lib/X11/fonts中可以使用快遞。
->* 請確定/usr/share/fonts或/usr/share/X11/fonts目錄中的所有字型（Unicode和非Unicode）都可用。
->* 當您以非root使用者的身分執行PDF Generator服務時，請為非root使用者提供所有字型目錄的讀寫存取權。
->* 每當您將新字型安裝至字型資料夾時，請重新啟動AEM Forms例項。
+* 在Red Hat® Enterprise Linux® 6.x和更新版本上，Courier字型無法使用。 若要安裝Courier字型，請下載font-ibm-type1-1.0.3.zip封存。 在/usr/share/fonts解壓縮封存。 從/usr/share/X11/fonts建立符號連結至/usr/share/fonts。
+* 刪除Html2PdfSvc/bin和/usr/share/fonts目錄中的所有.lst字型快取檔案。
+* 確定目錄/usr/lib/X11/fonts和/usr/share/fonts存在。 如果目錄不存在，請使用ln指令建立從/usr/share/X11/fonts到/usr/lib/X11/fonts的符號連結，以及從/usr/share/fonts到/usr/share/X11/fonts的另一個符號連結。 同時請確定在/usr/lib/X11/fonts中可以使用快遞。
+* 請確定/usr/share/fonts或/usr/share/X11/fonts目錄中的所有字型（Unicode和非Unicode）都可用。
+* 當您以非root使用者的身分執行PDF Generator服務時，請為非root使用者提供所有字型目錄的讀寫存取權。
+* 每當您將新字型安裝至字型資料夾時，請重新啟動AEM Forms例項。
 >
 
 ## 安裝AEM Forms附加元件套件 {#install-aem-forms-add-on-package}
@@ -410,8 +410,8 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 
    >[!NOTE]
    >
-   >您使用Adobe以外的各方所提供的字型的權利受這些各方提供給您的授權合約所規範，且您使用Adobe軟體的授權不涵蓋這些字型。 Adobe建議您先檢閱並確保遵守所有適用的非Adobe授權合約，然後再將非Adobe字型與Adobe軟體搭配使用，尤其是在伺服器環境中使用字型方面。
-   >將新字型安裝至字型資料夾時，請重新啟動AEM Forms例項。
+   您使用Adobe以外的各方所提供的字型的權利受這些各方提供給您的授權合約所規範，且您使用Adobe軟體的授權不涵蓋這些字型。 Adobe建議您先檢閱並確保遵守所有適用的非Adobe授權合約，然後再將非Adobe字型與Adobe軟體搭配使用，尤其是在伺服器環境中使用字型方面。
+將新字型安裝至字型資料夾時，請重新啟動AEM Forms例項。
    >
 
 ### 設定本機使用者帳戶以執行PDF Generator服務  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
@@ -523,7 +523,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
    >[!NOTE]
    >
-   >在生產環境中，將評估認證取代為生產認證。 在更新過期或評估認證之前，請確定您刪除了舊的Reader延伸認證。
+   在生產環境中，將評估認證取代為生產認證。 在更新過期或評估認證之前，請確定您刪除了舊的Reader延伸認證。
 
 1. 按一下 **[!UICONTROL 儲存並關閉]** 於 **[!UICONTROL 編輯使用者設定]** 頁面。
 
@@ -583,7 +583,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
 此 [系統整備工具](#srt-configuration) 檢查電腦是否已正確設定為執行PDF Generator轉換。 工具會在指定的路徑產生報表。 若要執行工具：
 
-1. 開啟命令提示。 導覽至 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` 資料夾。
+1. 開啟命令提示。 導覽至 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` 檔案夾。
 
 1. 從命令提示字元執行下列命令：
 
@@ -593,7 +593,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
    >[!NOTE]
    >
-   >* 如果系統整備工具報告Acrobat外掛程式資料夾中不提供pdfgen.api檔案，請從 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目錄到 `[Acrobat_root]\Acrobat\plug_ins` 目錄。
+   * 如果系統整備工具報告Acrobat外掛程式資料夾中不提供pdfgen.api檔案，請從 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目錄到 `[Acrobat_root]\Acrobat\plug_ins` 目錄。
 
 1. 導覽至 `[Path_of_reports_folder]`。開啟SystemReadinessTool.html檔案。 驗證報告並修正上述問題。
 
