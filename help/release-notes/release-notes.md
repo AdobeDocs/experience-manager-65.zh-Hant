@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: a15b9dae5cc4405122ee95e036a83fdfbf34f9bd
+source-git-commit: 4f6ef1a6cddec307af64ca888307f19c0450467d
 workflow-type: tm+mt
-source-wordcount: '4490'
+source-wordcount: '4548'
 ht-degree: 4%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 4%
 
 * 資產，Dynamic Media - [Dynamic Media中的影片支援多字幕與多音訊曲目](/help/assets/video.md#about-msma) — 您現在可以輕鬆地將多個字幕和多個音軌新增到主要視訊中。 此功能表示全球對象都可以存取您的影片。您可以以多種語言向全球對象自訂單一已發佈的主要影片，並遵守不同地理區域的輔助功能指南。作者還可以從使用者介面中的單個標籤管理字幕和音訊。
 
-* 資產 — 您現在可以從搜尋結果導覽至包含資產的檔案夾位置，因此可讓您執行各種資產管理工作。 (ASSETS-23182)
+* 資產 — 您現在可以從搜尋結果導覽至包含資產的檔案夾位置，以讓您執行各種資產管理任務。 (ASSETS-23182)
 
 **重要增強功能**
 
@@ -51,7 +51,7 @@ ht-degree: 4%
 
 * 啟用Sites頁面編輯器/影像元件使用者從遠端資產Cloud Service參照資產。 (SITES-13448， SITES-13433)
 
-* 為了在清單檢視中快速找到系統中可能有多個專案的專案，Adobe現在支援伺服器端排序。 專案節點會在使用者介面中呈現之前，根據使用者選取的欄在後端排序。 (NPR-41027)
+* 若要在清單檢視中快速找到系統中可能有多個專案的專案，Adobe現在支援伺服器端排序。 專案節點會在使用者介面中呈現之前，根據使用者選取的欄在後端排序。 (NPR-41027)
 
 * AEM 6.5.18.0支援MongoDB 5.0至6.0。
 
@@ -61,19 +61,19 @@ ht-degree: 4%
 
 **Forms**
 
-* **[增強規則編輯器中使用自訂錯誤處理常式的錯誤處理功能](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html)：** 您現在可以叫用自訂函式（使用使用者端程式庫）來回應外部服務傳回的錯誤，並為一般使用者提供量身打造的回應。 或者，您可以針對服務傳回的錯誤採取特定動作。例如，您可以在後端叫用自訂工作流程來取得特定錯誤代碼，或通知客戶服務已停止服務
+* **[增強規則編輯器中使用自訂錯誤處理常式的錯誤處理功能](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html)**  — 您現在可以叫用自訂函式（使用使用者端程式庫）來回應外部服務傳回的錯誤。 此外，您也可以為使用者提供量身打造的回應。 或者，您可以針對服務傳回的錯誤採取特定動作。例如，您可以在後端叫用自訂工作流程來取得特定錯誤代碼，或通知客戶服務已停止服務
 
-* **[增強的Adobe Sign工作流程步驟](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step)：** AEM工作流程中的Adobe Sign工作流程步驟提供下列增強功能。
+* **[增強的Adobe Sign工作流程步驟](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step)** - AEM工作流程中的Adobe Sign工作流程步驟提供下列增強功能。
 
-   * **Adobe Sign採用政府ID式驗證，具備更強的安全性：** Adobe Acrobat Sign的政府機關身分證件可讓使用者使用政府核發的ID （駕照、國民身分證、護照）進行身分驗證，提供額外的驗證層。 此增強功能使用信任的身分識別檔案，為簽署程式增添額外的信賴等級，非常適合需要增強安全性、法規遵循及使用者驗證的情況。
+   * **使用Adobe Sign的政府機關身分證件驗證加強安全性** - Adobe Acrobat Sign的政府機關身分證件驗證提供額外的一層驗證。 它可讓使用者使用政府頒發的ID （駕照、國民身分證、護照）來驗證身分。 此增強功能使用信任的身分識別檔案，為簽署程式增添額外的信賴等級，非常適合需要增強安全性、法規遵循及使用者驗證的情況。
 
-   * **增強Adobe Sign檔案稽核軌跡的透明度：** 使用稽核軌跡功能，以針對Adobe Sign檔案的生命週期取得詳細深入分析。 透過稽核軌跡，您現在可以保留與文件相關的所有動作和互動的全面記錄。其中包括查看、編輯或簽署文件等人員的詳細資訊，以及每個事件的時間戳記。此加強功能對於維持合規性、解決爭議和確保數位協議的完整性至關重要。
-
-
-   * **擴充協定收件者的角色，而不只是簽署者：** Adobe Acrobat Sign可選擇擴充協定收件者的角色，而不只是簽署者，以便更符合其工作流程需求。 啟用後，每位協議收件人有其可設定的個別角色，且以簽署人為預設。
+   * **Adobe Sign檔案稽核軌跡的增強透明度**  — 使用稽核軌跡(Audit Trail)功能，以針對Adobe Sign檔案的生命週期取得詳細深入分析。 透過稽核軌跡，您現在可以保留與文件相關的所有動作和互動的全面記錄。其中包括查看、編輯或簽署文件等人員的詳細資訊，以及每個事件的時間戳記。此加強功能對於維持合規性、解決爭議和確保數位協議的完整性至關重要。
 
 
-* **[jee上的AEM Forms完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)**：此Service Pack為JEE上的AEM Forms提供完整安裝程式，可支援多種新軟體組合，包括：
+   * **擴充協定收件者的角色，而不只是簽署者** - Adobe Acrobat Sign可讓您擴充協定收件者的角色，而不只是簽署者，以便更符合其工作流程需求。 啟用後，協定中的每個收件者皆可個別設定其角色，預設為簽署者。
+
+
+* **[jee上的AEM Forms完整安裝程式](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)** - Service Pack為JEE上的AEM Forms提供完整安裝程式，支援多種新軟體組合，包括：
    * Microsoft® Windows Server 2022
    * Microsoft® Active Directory 2022
    * 在Windows Server 2022上OracleWebLogic 14C
@@ -81,7 +81,7 @@ ht-degree: 4%
    * MongoDB 4.4
    * MySQL JDBC聯結器8
 
-如果您要執行全新的安裝或打算在JEE環境中使用AEM 6.5 Forms的最新軟體，Adobe建議在JEE完整安裝程式上使用AEM 6.5.18.0 Forms 。 若要探索新增和淘汰的軟體的完整清單，請參閱JEE上的AEM Forms或OSGi上的AEM Forms檔案。
+如果您在JEE環境中安裝或計畫使用適用於您的AEM 6.5 Forms的最新軟體，Adobe建議在JEE完整安裝程式上使用AEM 6.5.18.0 Forms 。 若要探索新增和淘汰的軟體的完整清單，請參閱JEE上的AEM Forms或OSGi上的AEM Forms檔案。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
@@ -164,7 +164,7 @@ ht-degree: 4%
 
 * **文件服務**
    * 當使用者使用transformPDF服務時，它會因例外而失敗： `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml` (FORMS-9957)
-   * 如果伺服器在PDF檔案產生期間關閉，則會擲回伺服器啟動後工作處理錯誤。 伺服器啟動期間需要新增引數 — Dcom.adobe.livecycle.dsc.deferServiceStart=true。 (FORMS-9836)
+   * 如果伺服器在PDF檔案產生期間關閉，則會擲回伺服器啟動後工作處理錯誤。 在伺服器啟動期間必須新增引數 — Dcom.adobe.livecycle.dsc.deferServiceStart=true。 (FORMS-9836)
    * 如果使用者嘗試使用AssemblerService.Invoke方法合併PDF，則組合器無法執行工作。 (FORMS-9550)
    * 當您在OSGI和JEE環境中升級至AEM 6.5.15.0 Service Pack時，使用特定範本的組合器服務會停止運作。 (FORMS-9355、FORMS-9445、FORMS-9408)
    * Java™記憶體回收無法清除AEM Forms OSGi伺服器上的舊程式碼棧積，因為XMLFormService的「全域逾時」未設定為適當的值。 (FORMS-9384、FORMS-9035)
@@ -179,7 +179,7 @@ ht-degree: 4%
    * 當使用者嘗試在不修改欄位的情況下呼叫自訂函式時（例如設定另一個欄位的值），它會失敗。 (FORMS-9921)
    * 在最適化表單中使用規則編輯器的自訂錯誤函式時，會發生下列錯誤：
       * 當使用者嘗試使用時@param{boolean} 若使用函式，規則編輯器不允許布林值傳遞至函式。
-      * 當使用者嘗試使用時@param{string} 若使用函式，規則編輯器無法傳遞選用值，且會對不完整的規則發出警告。 (FORMS-9816、FORMS-9815)
+      * 當使用者嘗試使用時@param{string} 若使用函式，規則編輯器無法傳遞選用值，且系統會警告規則不完整。 (FORMS-9816、FORMS-9815)
    * 表單 — 使用者群組無法在最適化表單中呼叫規則編輯器兩次。 (FORMS-9051)
    * 在視覺編輯器中，當使用者選取表單物件時，則會將整個欄位例項物件傳遞至自訂函式，而非僅傳遞欄位的值。 (FORMS-10015)
    * 當使用者建立核心元件型最適化表單並新增文字輸入元件時， `Is Empty` 和 `Is Not Empty` 無法在規則編輯器中運作。 (FORMS-10098)
@@ -187,7 +187,7 @@ ht-degree: 4%
    * 當使用者嘗試使用複雜的JSON結構描述建立最適化表單時，它會失敗。 錯誤發生於：
      `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0`。(FORMS-9639)
    * 在調適型表單中，當使用者停用「我同意條款與條件」核取方塊時，當使用者向下捲動時，它會再次啟用。 (FORMS-9458)
-   * 當使用者使用Google Chrome/Firefox在Android™裝置上開啟最適化表單並在文字方塊中輸入允許的最大字元時，文字方塊中的值無法清除。 (FORMS-9354)
+   * 當使用者使用Google Chrome/Firefox在Android™裝置上開啟調適型表單，並在文字方塊中輸入允許的最大字元時，文字方塊中的值無法清除。 (FORMS-9354)
    * 當核取方塊的標籤包含&#39;，&#39;、&#39;/&#39;或&#39;.&#39;等特殊字元時，按一下文字/標籤不會選取個別核取方塊。 (FORMS-9313)
    * 當使用者嘗試驗證條款與條件元件時，它無法驗證元件是否不在焦點中，同時其他元件獲得驗證。 (FORMS-8725、FORMS-8913)
    * 如果最適化表單在升級至AEM 6.5.16.0 Service Pack後重新載入，檔案附件擷取會失敗。 (FORMS-8906)
@@ -203,7 +203,7 @@ ht-degree: 4%
       * 當使用者使用筆刷或鍵盤登入簽名對話方塊時，按Enter鍵不會關閉對話方塊。
       * 無法使用鍵盤存取清除簽章確認對話方塊。
       * 熒幕助讀程式無法讀取在對話方塊中輸入的資訊。
-      * 若不使用滑鼠則無法清除簽名。  (FORMS-9317)
+      * 若不使用滑鼠則無法清除簽名。 (FORMS-9317)
    * 當使用者提交最適化表單時，熒幕助讀程式無法讀取必填欄位的錯誤訊息。 (FORMS-9316)
    * 當熒幕助讀程式讀取HTML表單時，以字距微調（間距）讀取文字時發生問題。 (FORMS-9258)
    * 在最適化表單中，連結至文字的參考/註腳不會使用熒幕助讀程式來呼叫。 (FORMS-8920)
@@ -369,7 +369,24 @@ The UberJar for [!DNL Experience Manager] 6.5.18.0可在以下網址取得： [M
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
 
-* 與來自Service Pack 13及更高版本的Oak相關，以下錯誤記錄已開始出現，這會影響持續性快取：
+* **升級至Service Pack 18 (6.5.18.0)後，頁面發佈在頁面編輯器中無法運作**
+
+  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> 將AEM 6.5.0.0—6.5.17.0的例項升級為AEM 6.5.18.0之後，當您按一下 **[!UICONTROL 發佈頁面]** 在頁面編輯器中，系統會將您重新導向至不存在的URL。
+
+  若要解決此問題，請執行下列任一項作業：
+
+   * 移除下列「path」屬性。
+
+     `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
+
+   * 將正確的URL直接貼到瀏覽器中。
+
+     `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html`
+
+
+
+* **與Oak相關**
+從Service Pack 13及更高版本開始，下列錯誤記錄檔開始出現，這會影響持續性快取：
 
   ```shell
   org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
@@ -439,7 +456,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 #### 支援平台
 
 * WebLogic JEE伺服器不支援高於1.8.0_281的JDK版本。 (FORMS-8498、CQDOC-20383)
-* 作為 [!DNL Microsoft®® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss®® EAP 7.1]， [!DNL Microsoft®® Windows Server 2019] 不支援全包安裝 [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
+* 作為 [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
 * JDK 11.0.20不支援在JEE安裝程式上安裝AEM Forms。 僅支援JDK 11.0.19或較舊版本以在JEE安裝程式上安裝AEM Forms。 (FORMS-10659)
 
 #### 安裝
@@ -460,7 +477,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * 升級至AEM Service Pack 18後，無法編輯互動式通訊信件。 (FORMS-10578)若要解決此問題，請執行以下步驟：
 
    1. 下載 [Hotfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 從SD連結。
-   1. 解壓縮Hotfix封存檔案以取得Experience Manager套件(.zip)和套件(.jar)檔案。
+   1. 解壓縮Hotfix封存檔案，以便取得Experience Manager套件(.zip)和套件(.jar)檔案。
    1. 透過封裝管理員上傳並安裝封裝(.zip)。
    1. 開啟Configuration Manager組合 `https://server:host/system/console/bundles`，上傳並安裝套件組合(.jar)。
 
