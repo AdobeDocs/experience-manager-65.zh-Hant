@@ -1,19 +1,15 @@
 ---
 title: MSM 推出衝突
-seo-title: MSM Rollout Conflicts
 description: 瞭解如何處理「多網站管理員」轉出衝突。
-seo-description: Learn how to deal with Multi Site Manager rollout conflicts.
-uuid: 7a640905-aae2-498e-b95c-2c73008fa1cd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
-discoiquuid: 16db5334-604f-44e2-9993-10d683dee5bb
 feature: Multi Site Manager
 exl-id: e145e79a-c363-4a33-b9f9-99502ed20563
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '905'
 ht-degree: 1%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 1%
 
 如果在Blueprint分支和相依即時副本分支中同時建立具有相同頁面名稱的新頁面，則可能會發生衝突。
 
-轉出時需要處理和解決這類衝突。
+轉出時必須處理和解決此類衝突。
 
 ## 衝突處理 {#conflict-handling}
 
@@ -31,24 +27,24 @@ ht-degree: 1%
 為確保轉出不被封鎖，可能的定義可以包括：
 
 * 轉出時哪個頁面（Blueprint或即時副本）優先，
-* 將重新命名哪些頁面（以及重新命名方式），
+* 哪些頁面會重新命名（以及重新命名方式），
 * 這會如何影響任何已發佈的內容。
 
-  AEM的預設行為（現成可用）是發佈內容將不會受到影響。 因此，如果在即時副本分支中手動建立的頁面已發佈，在衝突處理和轉出後，該內容仍會發佈。
+  Adobe Experience Manager (AEM) （現成可用）的預設行為是發佈內容不受影響。 因此，如果在即時副本分支中手動建立的頁面已發佈，該內容在衝突處理和轉出後仍會發佈。
 
 除了標準功能外，您也可以新增自訂的衝突處理常式，以實作不同的規則。 這些功能也可以允許將動作發佈為個別程式。
 
 ### 範例情境 {#example-scenario}
 
-在以下各節中，我們使用新頁面的範例 `b`，同時在Blueprint和即時副本分支中建立（手動建立），以說明解決衝突的各種方法：
+在下列段落中，您必須使用新頁面的範例 `b`，同時在Blueprint和即時副本分支中建立（手動建立），以說明解決衝突的各種方法：
 
 * Blueprint： `/b`
 
-  主版頁面；有1個子頁面，bp-level-1。
+  主版頁面；具有一個子頁面bp-level-1。
 
 * 即時副本： `/b`
 
-  在即時副本分支中手動建立的頁面；有1個子頁面、 `lc-level-1`.
+  在即時副本分支中手動建立的頁面；具有一個子頁面、 `lc-level-1`.
 
    * 發佈時啟用為 `/b`，以及子頁面。
 
@@ -108,7 +104,7 @@ AEM提供：
 * 已呼叫 `ResourceNameRolloutConflictHandler`
 
 * 使用此處理常式，Blueprint頁面會獲得優先權。
-* 此處理常式的服務排名設定為低(「即低於 `service.ranking` 屬性)，因為假設自訂處理常式需要較高的排名。 不過，排名並非在需要時確保彈性的絕對最低值。
+* 此處理常式的服務排名設定為低(即低於 `service.ranking` 屬性)，因為假設自訂處理常式需要較高的排名。 不過，排名並非在需要時確保彈性的絕對最低值。
 
 此衝突處理常式會賦予Blueprint優先權。 即時副本頁面 `/b` （在即時副本分支中）移至 `/b_msm_moved`.
 
@@ -122,7 +118,7 @@ AEM提供：
 
   轉出到即時副本頁面 `/b`.
 
-   * `bp-level-1` 轉出到livecopy。
+   * `bp-level-1` 轉出至即時副本。
 
 **轉出後**
 
@@ -156,11 +152,11 @@ AEM提供：
 
 自訂衝突處理常式可讓您實作自己的規則。 使用服務排名機制，您也可以定義它們如何與其他處理常式互動。
 
-自訂的衝突處理常式可以：
+自訂的衝突處理常式可以有以下內容：
 
 * 根據您的需求命名。
-* 根據您的需求開發/設定；例如，您可以開發處理常式，讓即時副本頁面獲得優先權。
-* 可設計成使用進行設定 [OSGi設定](/help/sites-deploying/configuring-osgi.md)；尤其是：
+* 根據您的需求開發/設定；例如，您可以開發處理常式，好讓即時副本頁面獲得優先權。
+* 設計為使用 [OSGi設定](/help/sites-deploying/configuring-osgi.md)；尤其是：
 
    * **服務排名**：
 
@@ -170,7 +166,7 @@ AEM提供：
 
 ### 衝突處理停用時的行為 {#behavior-when-conflict-handling-deactivated}
 
-如果您手動 [停用衝突處理](#rollout-manager-and-conflict-handling) 則AEM不會對任何衝突頁面採取任何動作（非衝突頁面會如預期般轉出）。
+如果您手動 [停用衝突處理](#rollout-manager-and-conflict-handling)，則AEM不會對任何衝突頁面採取任何動作（非衝突頁面會如預期般轉出）。
 
 >[!CAUTION]
 >
@@ -184,7 +180,7 @@ AEM提供：
 
 * 即時副本： `/b`
 
-  保持不變。
+  相同。
 
 <table>
  <caption>
