@@ -2,7 +2,7 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 4f6ef1a6cddec307af64ca888307f19c0450467d
+source-git-commit: ffda4927ddc8555564f33697fa81d1f8a0cd2cdc
 workflow-type: tm+mt
 source-wordcount: '4548'
 ht-degree: 4%
@@ -371,7 +371,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * **升級至Service Pack 18 (6.5.18.0)後，頁面發佈在頁面編輯器中無法運作**
 
-  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> 將AEM 6.5.0.0—6.5.17.0的例項升級為AEM 6.5.18.0之後，當您按一下 **[!UICONTROL 發佈頁面]** 在頁面編輯器中，系統會將您重新導向至不存在的URL。
+  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> 將AEM 6.5.0.0—6.5.17.0的例項升級為AEM 6.5.18.0之後，當您按一下 **發佈頁面** 在頁面編輯器中，系統會將您重新導向至不存在的URL。
 
   若要解決此問題，請執行下列任一項作業：
 
