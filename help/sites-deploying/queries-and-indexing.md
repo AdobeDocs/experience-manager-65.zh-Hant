@@ -1,6 +1,6 @@
 ---
 title: Oak查詢和索引
-description: 瞭解如何在AEM中設定索引。
+description: 瞭解如何在Adobe Experience Manager中設定索引。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,7 +8,7 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: 2adc33b5f3ecb2a88f7ed2c5ac5cc31f98506989
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
 source-wordcount: '3033'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ## 簡介 {#introduction}
 
-不同於Jackrabbit 2，Oak預設不會索引內容。 必要時必須建立自訂索引，就像傳統關聯式資料庫一樣。 如果特定查詢沒有索引，則可能會遍歷許多節點。 查詢可能仍然有效，但速度可能相當慢。
+不同於Jackrabbit 2，Oak預設不會索引內容。 必要時必須建立自訂索引，就像傳統關聯式資料庫一樣。 如果特定查詢沒有索引，則可能會遍歷許多節點。 查詢可能仍然有效，但速度可能很慢。
 
 如果Oak遇到沒有索引的查詢，則會列印WARN層級的記錄訊息：
 
@@ -84,7 +84,7 @@ Oak查詢引擎支援下列語言：
    * **型別：**  `property` （型別為String）
    * **屬性名稱：**  `jcr:uuid` （型別為「名稱」）
 
-   此特定範例會將 `jcr:uuid` 屬性，其工作是公開其所附加節點的通用唯一識別碼(UUID)。
+   此特定範例會索引 `jcr:uuid` 屬性，其工作是公開其所附加節點的通用唯一識別碼(UUID)。
 
 1. 儲存變更。
 
@@ -92,7 +92,7 @@ Oak查詢引擎支援下列語言：
 
 * 此 **type** 屬性指定索引的型別，在此情況下，必須將其設為 **屬性**
 
-* 此 **屬性名稱** property指示要儲存在索引中的屬性清單。 如果遺失該節點，則會使用節點名稱作為屬性名稱參考值。 在此範例中， **jcr：uuid** 其工作是公開其節點唯一識別碼(UUID)的屬性會新增至索引。
+* 此 **屬性名稱** 屬性指出儲存在索引中的屬性清單。 如果遺失該節點，則會使用節點名稱作為屬性名稱參考值。 在此範例中， **jcr：uuid** 其工作是公開其節點唯一識別碼(UUID)的屬性會新增至索引。
 
 * 此 **獨特** 若設為，則標示為 **true** 在屬性索引上新增唯一性限制。
 
@@ -107,11 +107,11 @@ Ordered索引是Property索引的延伸。 但是，它已被取代。 必須將
 
 AEM 6提供以Apache Lucene為基礎的全文檢索器。
 
-如果已設定全文檢索索引，則無論是否有其他條件已編制索引，也無論是否有路徑限制，所有具有全文檢索條件的查詢都會使用全文檢索索引。
+如果設定了全文檢索索引，則無論是否有其他條件已編制索引，也無論是否有路徑限制，所有具有全文檢索條件的查詢都會使用全文檢索索引。
 
 如果未設定全文檢索索引，則具有全文檢索條件的查詢將無法如預期運作。
 
-由於索引是透過非同步背景執行緒更新，因此在背景處理完成之前，某些全文檢索搜尋無法在很短的時間內完成。
+由於索引是以非同步背景執行緒的方式更新，因此在背景處理完成之前，某些全文檢索搜尋無法在很短的時間內完成。
 
 您可以依照以下程式設定Lucene全文索引：
 
@@ -134,11 +134,11 @@ Lucene索引有下列設定選項：
 
 ### 瞭解全文搜尋 {#understanding-fulltext-search}
 
-本節中的檔案適用於Apache Lucene、Elasticsearch，以及PostgreSQL、SQLite、MySQL等的全文索引。 以下範例適用於AEM / Oak / Lucene。
+例如，本節中的檔案適用於PostgreSQL、SQLite和MySQL的Apache Lucene、Elasticsearch和全文索引。 以下範例適用於AEM / Oak / Lucene。
 
 <b>要編制索引的資料</b>
 
-起點是需要編制索引的資料。 以下列檔案為例：
+起點是必須編制索引的資料。 以下列檔案為例：
 
 | <b>檔案ID</b> | <b>路徑</b> | <b>全文</b> |
 | --- | --- | --- |
@@ -149,11 +149,11 @@ Lucene索引有下列設定選項：
 
 <b>反轉索引</b>
 
-索引機制會將全文分割成名為「Token」的字詞，並建置名為「inverted index」的索引。 此索引包含檔案清單，其中會針對每個字顯示索引。
+索引機制會將全文分割成名為「Token」的字詞，並建置名為「inverted index」的索引。 此索引包含檔案清單，其中會針對每個單字顯示該索引。
 
-非常簡短的一般字詞（也稱為「停用詞」）不會編制索引。 所有代號都會轉換為小寫，並套用字乾處理。
+簡短的一般字詞（也稱為「停用詞」）不會編制索引。 所有代號都會轉換為小寫，並套用字乾處理。
 
-注意特殊字元，例如 *&quot;-&quot;* 未編列索引。
+特殊字元，例如 *&quot;-&quot;* 未編列索引。
 
 | <b>Token</b> | <b>檔案ID</b> |
 | --- | --- |
@@ -161,12 +161,12 @@ Lucene索引有下列設定選項：
 | 品牌 | ..., 100,... |
 | 立方體 | ..., 200, 300,... |
 | 維度 | 300 |
-| 芬蘭文 | ..., 100,... |
+| 完成 | ..., 100,... |
 | invent | 200 |
 | 物件 | ..., 300,... |
-| rubik | .., 100, 200,... |
+| rubik | ..., 100, 200,... |
 
-檔案清單已排序。 這在查詢時會變得很方便。
+檔案清單已排序。 這在查詢時很方便。
 
 <b>正在搜尋</b>
 
@@ -182,7 +182,7 @@ Lucene索引有下列設定選項：
 +:fulltext:rubik +:fulltext:cube
 ```
 
-然後，索引會查詢這些字的檔案清單。 如果檔案很多，清單可能會非常大。 例如，我們假設它們包含下列內容：
+索引會參考這些字的檔案清單。 如果檔案很多，清單可能會很大。 例如，假設它們包含下列內容：
 
 
 | <b>Token</b> | <b>檔案ID</b> |
@@ -191,7 +191,7 @@ Lucene索引有下列設定選項：
 | 立方體 | 30, 200, 300, 2000 |
 
 
-Lucene將會在兩個清單（或循環配置資源）之間來回切換 `n` 清單，搜尋 `n` 字數)：
+Lucene在兩個清單（或循環配置資源）之間來回切換 `n` 清單，搜尋 `n` 字數)：
 
 * 在「rubik」中讀取會取得第一個專案：它找到10
 * 在「立方體」中讀取會取得第一個專案 `>` = 10. 找不到10，則下一個是30。
@@ -201,7 +201,7 @@ Lucene將會在兩個清單（或循環配置資源）之間來回切換 `n` 清
 * 在「rubik」中讀取會取得下一個專案： 1000。
 * 在「立方體」中讀取會取得第一個專案 `>` = 1000：它找到2000。
 * 在「rubik」中讀取會取得第一個專案 `>` = 2000：清單結尾。
-* 最後，我們可以停止搜尋。
+* 最後，您可以停止搜尋。
 
 唯一包含這兩個詞的檔案是200，如下例所示：
 
@@ -263,7 +263,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 分析器在檔案編制索引時和查詢時都使用。 分析器會檢查欄位文字並產生權杖資料流。 Lucene分析器由一系列Tokenizer和篩選類別組成。
 
-分析器可透過以下方式設定： `analyzers` 節點（型別） `nt:unstructured`)內部 `oak:index` 定義。
+分析器的設定方式如下 `analyzers` 節點（型別） `nt:unstructured`)內部 `oak:index` 定義。
 
 索引的預設分析器設定於 `default` 分析器節點的子系。
 
@@ -297,14 +297,14 @@ select * from [nt:base] where [alias] = '/admin'
 
    如果 `luceneMatchVersion` 未提供，Oak會使用隨附的Lucene版本。
 
-1. 如果您想要將停用字檔案新增至分析器設定，可在 `default` 一個具有下列屬性：
+1. 如果要將停用字檔案新增至分析器組態，可在 `default` 一個具有下列屬性：
 
    * **名稱：**`stopwords`
    * **類型：**`nt:file`
 
-#### 透過組合建立分析器 {#creating-analyzers-via-composition}
+#### 透過構成建立分析器 {#creating-analyzers-via-composition}
 
-分析器也可以根據以下專案構成： `Tokenizers`， `TokenFilters` 和 `CharFilters`. 您可以指定分析器並建立其選擇性代碼化工具與篩選器的子項節點（將依列出的順序套用），以執行此操作。 另請參閱 [https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
+分析器也可以根據以下專案構成： `Tokenizers`， `TokenFilters`、和 `CharFilters`. 您可以指定分析器並建立其選擇性代碼化工具的子節點，以及依列出的順序套用的篩選器，以達成此目的。 另請參閱 [https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
 
 以這個節點結構為例：
 
@@ -344,7 +344,7 @@ select * from [nt:base] where [alias] = '/admin'
 
                * **類型：**`nt:file`
 
-篩選器、charFilters和tokenizers的名稱是透過移除原廠尾碼所組成。 因此：
+濾鏡、charFilters和tokenizers的名稱是透過移除原廠尾碼所組成。 因此：
 
 * `org.apache.lucene.analysis.standard.StandardTokenizerFactory` 變為 `standard`
 
@@ -354,7 +354,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 工廠所需的任何組態引數都會指定為相關節點的屬性。
 
-若是需要載入外部檔案內容的載入停用詞，可透過建立的子節點來提供內容 `nt:file` 輸入相關檔案。
+在必須載入外部檔案中的內容的情況下（例如載入停用詞），可以透過建立的子節點來提供內容 `nt:file` 輸入相關檔案。
 
 ### Solr索引 {#the-solr-index}
 
@@ -368,7 +368,7 @@ AEM中的整合會在存放庫層級進行，因此Solr是AEM隨附的新存放�
 
 AEM也可以設定為與遠端Solr伺服器執行處理搭配使用：
 
-1. 下載並解壓縮最新版的Solr。 如需如何執行此動作的詳細資訊，請參閱 [Apache Solr安裝檔案](https://cwiki.apache.org/confluence/display/solr/Installing+Solr).
+1. 下載並解壓縮最新版的Solr。 如需如何執行此動作的詳細資訊，請參閱 [Apache Solr安裝檔案](https://solr.apache.org/guide/6_6/installing-solr.html).
 1. 現在，建立兩個Solr分片。 您可以透過在解壓縮Solr的資料夾中為每個分割槽建立資料夾來執行此操作：
 
    * 針對第一個分片，建立資料夾：
@@ -396,7 +396,7 @@ AEM也可以設定為與遠端Solr伺服器執行處理搭配使用：
 
    >[!NOTE]
    >
-   >如需Solr和ZooKeeper組態的詳細資訊，請參閱 [Solr設定檔案](https://wiki.apache.org/solr/ConfiguringSolr) 和 [ZooKeeper快速入門手冊](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html).
+   >如需Solr和ZooKeeper組態的詳細資訊，請參閱 [Solr設定檔案](https://cwiki.apache.org/confluence/display/solr/ConfiguringSolr) 和 [ZooKeeper快速入門手冊](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html).
 
 1. 前往「 」，開始支援ZooKeeper的第一個分片 `aemsolr1\node1` 並執行下列指令：
 
@@ -431,7 +431,7 @@ AEM也可以設定為與遠端Solr伺服器執行處理搭配使用：
 
 以下是可搭配本文所述所有三個Solr部署使用的基本設定範例。 它可容納已存在於AEM中且不應與其他應用程式搭配使用的專用屬性索引。
 
-若要正確使用它，您必須將歸檔的內容直接置於Solr主目錄中。 若是多節點部署，則應直接放置在每個節點的根資料夾下。
+若要正確使用它，您必須將歸檔的內容直接置於Solr主目錄中。 如果有多節點部署，應直接放置在每個節點的根資料夾下。
 
 建議的Solr組態檔
 
@@ -464,7 +464,7 @@ ACS Commons套件也會公開可用於建立屬性索引的OSGi設定。
 
 #### 正在準備偵錯資訊以供分析 {#preparing-debugging-info-for-analysis}
 
-要取得所執行查詢的必要資訊，最簡單的方式是透過 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query). 這可讓您收集對緩慢查詢進行偵錯所需的精確資訊，而無需查閱記錄層級資訊。 如果您知道正在偵錯的查詢，這是您想要的。
+要取得正在執行之查詢的必要資訊，最簡單的方式是透過 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query). 這可讓您收集對緩慢查詢進行偵錯所需的精確資訊，而無需查閱記錄層級資訊。 如果您知道正在偵錯的查詢，這是您想要的。
 
 如果由於任何原因而無法執行此操作，您可以將索引記錄收集到單一檔案中，並使用它來疑難排解您的特定問題。
 
@@ -480,7 +480,7 @@ ACS Commons套件也會公開可用於建立屬性索引的OSGi設定。
 
 >[!NOTE]
 >
->請務必僅在您要進行疑難排解的查詢執行期間，將記錄檔設為DEBUG。 否則，會隨著時間推移在記錄中產生大量事件。 因此，在收集到所需的記錄後，請切換回上述類別的INFO層級記錄。
+>請務必僅在您要進行疑難排解的查詢執行期間，將記錄檔設為DEBUG。 否則，許多事件會隨著時間在記錄中產生。 因此，在收集到所需的記錄後，請切換回上述類別的INFO層級記錄。
 
 您可以依照下列程式來啟用記錄功能：
 
@@ -516,7 +516,7 @@ ACS Commons套件也會公開可用於建立屬性索引的OSGi設定。
    * Oak查詢統計資料
    * 索引統計資料
 
-1. 按一下每個MBean以取得效能統計資料。 建立熒幕擷圖，或記下這些熒幕擷圖以備需要提交支援時使用。
+1. 按一下每個MBean，即可取得效能統計資料。 建立熒幕擷圖或記下它們，以備需要提交支援時使用。
 
 您也可以在下列URL取得這些統計資料的JSON變體：
 

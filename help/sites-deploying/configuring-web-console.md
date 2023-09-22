@@ -1,26 +1,24 @@
 ---
 title: AEM中的網頁主控台
-description: 瞭解如何使用AEM中的網頁主控台。
-uuid: 047274ff-4d7d-4c7d-95be-06f363beae2e
+description: 瞭解如何使用Adobe Experience Manager中的網頁主控台。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
-discoiquuid: f934eb02-1f84-44f2-9f14-3f17250c9a90
 exl-id: bdfeaf85-e832-40c1-8769-7d027cdb021e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
 
 # Web 主控台{#web-console}
 
-AEM (Adobe Experience Manager)中的Web主控台是根據 [Apache Felix Web管理主控台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社群努力實施OSGi R4服務平台，其中包括OSGi架構和標準服務。
+Adobe Experience Manager (AEM)中的Web主控台是根據 [Apache Felix Web管理主控台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社群努力實施OSGi R4服務平台，其中包括OSGi架構和標準服務。
 
 >[!NOTE]
 >
->在Web主控台上，任何提及預設設定的說明都會與Sling預設值相關。
+>在Web主控台上，提及預設設定的任何說明都與Sling預設值有關。
 >
 >AEM有其本身的預設值，因此預設集可能會與主控台上的記錄不同。
 
@@ -54,7 +52,7 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
   `http://localhost:4502/system/console/configMgr`
 
-將會顯示設定清單：
+隨即顯示設定清單：
 
 ![screen_shot_2012-02-15at52308pm-1](assets/screen_shot_2012-02-15at52308pm-1.png)
 
@@ -69,11 +67,11 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 * **工廠組態**
 
-  可讓您建立所需功能物件的例項。
+  建立所需功能物件的例項。
 
-  這將會被分配一個持續性身分，然後列在設定下拉式清單中。
+  這會配置給「持續性身分」，並列在「組態」下拉式清單中。
 
-從清單中選取任何專案，都會顯示與該組態相關的引數：
+從清單中選取任何專案時，會顯示與該組態相關的引數：
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
@@ -83,7 +81,7 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
   儲存所做的變更。
 
-  對於Factory Configuration，這會建立具有永久識別的新執行個體。 然後，新執行個體將列在Configurations下。
+  對於「工廠組態」，這會建立具有持續識別的執行個體。 新執行個體會列在「設定」底下。
 
 * **重設**
 
@@ -129,9 +127,9 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 * **重新整理封裝**
 
-  這將檢查所有套件的參考，並在必要時重新整理。
+  這會檢查所有套件的參考，並在必要時重新整理。
 
-  例如，在更新後，由於先前的參照，舊版本和新版本可能仍在執行。 此選項會檢查並移動新版本的所有參考，讓舊版本停止。
+  例如，在更新後，由於先前的參照，舊版本和新版本可能仍在執行。 此選項會檢查並移動新版本的所有參照，讓舊版本停止。
 
 * **啟動**
 
@@ -147,11 +145,11 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 * **檢視狀態**
 
-  清單指定束的目前狀態；按一下特定束的名稱會顯示進一步的資訊。
+  清單會指定束的狀態；按一下包含進一步資訊的特定束名稱。
 
 >[!NOTE]
 >
->晚於 **更新** 建議執行 **重新整理封裝**.
+>晚於 **更新**，Adobe建議您執行 **重新整理封裝**.
 
 ## 元件 {#components}
 
@@ -165,7 +163,7 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
   `http://localhost:4502/system/console/components`
 
-元件清單隨即顯示。 有各種圖示可讓您啟用、停用或（在適當時）開啟特定元件的組態詳細資訊。
+隨即顯示元件清單。 有各種圖示可讓您啟用、停用或（在適當時）開啟特定元件的組態詳細資訊。
 
 ![screen_shot_2012-02-15at52144pm-1](assets/screen_shot_2012-02-15at52144pm-1.png)
 
@@ -175,6 +173,6 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 >[!NOTE]
 >
->啟用或停用元件只適用於AEM/CRX重新啟動。
+>啟用或停用元件只適用於AEM/CRX重新啟動之前。
 >
 >開始狀態是在元件描述項中定義，在開發期間產生並在套件建立時儲存在套件中。

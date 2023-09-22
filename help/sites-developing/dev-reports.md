@@ -1,18 +1,14 @@
 ---
 title: 開發報表
-seo-title: Developing Reports
-description: AEM根據報告架構提供多種標準報告
-seo-description: AEM provides a selection of standard reports based on a reporting framework
-uuid: 1b406d15-bd77-4531-84c0-377dbff5cab2
+description: Adobe Experience Manager (AEM)根據報告架構提供多種標準報告
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '5239'
+source-wordcount: '5182'
 ht-degree: 0%
 
 ---
@@ -20,9 +16,9 @@ ht-degree: 0%
 
 # 開發報表 {#developing-reports}
 
-AEM提供 [標準報表](/help/sites-administering/reporting.md) 其中大部分都以報告架構為基礎。
+Adobe Experience Manager (AEM)提供了一系列 [標準報表](/help/sites-administering/reporting.md) 其中大部分都以報告架構為基礎。
 
-使用框架，您可以擴充這些標準報表，或開發您自己的全新報表。 報告架構與現有的CQ5概念和原則緊密整合，因此開發人員可以利用他們對CQ5的現有知識作為開發報告的跳板。
+使用框架，您可以擴充這些標準報表，或開發您自己的新報表。 報告架構與現有的CQ5概念和原則緊密整合，因此開發人員可以利用他們對CQ5的現有知識作為開發報告的跳板。
 
 對於透過AEM傳送的標準報表：
 
@@ -81,35 +77,35 @@ AEM提供 [標準報表](/help/sites-administering/reporting.md) 其中大部分
 
 ### 報告頁面 {#report-page}
 
-報告頁面：
+報告頁面為：
 
-* 是標準CQ5頁面。
+* 標準CQ5頁面。
 * 根據 [為報告設定的標準CQ5範本](#report-template).
 
 ### 報表基礎 {#report-base}
 
-此 [`reportbase` 元件](#report-base-component) 構成任何報表的基礎，如下所示：
+此 [`reportbase` 元件](#report-base-component) 構成任何報表的基礎，因為它：
 
-* 儲存定義 [查詢](#the-query-and-data-retrieval) 會提供基礎的結果資料集。
+* 保留 [查詢](#the-query-and-data-retrieval) 會提供基礎的結果資料集。
 
-* 是經過調整的段落系統，將包含所有欄( `columnbase`)已新增至報表。
+* 它是經過調整的段落系統，包含所有欄( `columnbase`)已新增至報表。
 * 定義哪些圖表型別可用以及哪些目前作用中。
-* 定義「編輯」對話方塊，讓使用者可設定報表的某些層面。
+* 定義「編輯」對話方塊，使用者可在此對話方塊中設定報表的某些方面。
 
 ### 欄基底 {#column-base}
 
 每一欄都是 [`columnbase` 元件](#column-base-component) 即：
 
 * 是一個段落，由parsys ( `reportbase`)。
-* 定義連結至 [基礎結果集](#the-query-and-data-retrieval)；亦即定義此結果集中參考的特定資料，以及處理方式。
-* 保留其他定義；例如可用的彙總和篩選器，以及任何預設值。
+* 定義連結至 [基礎結果集](#the-query-and-data-retrieval). 也就是說，它定義了此結果集中參照的特定資料，以及處理方式。
+* 保留其他定義；例如可用的彙總和篩選以及任何預設值。
 
 ### 查詢與資料擷取 {#the-query-and-data-retrieval}
 
 查詢：
 
 * 定義為 [`reportbase`](#report-base) 元件。
-* 根據 [CQ QueryBuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html).
+* 根據 [CQ QueryBuilder](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/QueryBuilder.html).
 * 擷取用作報表基礎的資料。 結果集（表格）的每一列都會繫結至查詢傳回的節點。 的特定資訊 [個別欄](#column-base-component) 然後會從此資料集中擷取。
 
 * 通常包含：
@@ -138,7 +134,7 @@ AEM提供 [標準報表](/help/sites-administering/reporting.md) 其中大部分
 
   例如，它可讓您計算兩個屬性值之間的差異，將兩個屬性值處理為單一值。
 
-* 解析擷取的值；這可以透過多種方式完成。
+* 解析擷取的值；這可以用多種方式完成。
 
   例如，路徑可以對應到標題（如在對應內容中人類看得懂的內容） *jcr：title* 屬性)。
 
@@ -201,7 +197,7 @@ AEM提供 [標準報表](/help/sites-administering/reporting.md) 其中大部分
 
 預設報告元件儲存在 `/libs/cq/reporting/components`.
 
-不過，強烈建議您不要更新這些節點，而是在下建立自己的元件節點 `/apps/cq/reporting/components` 或者，如果更適合 `/apps/<yourProject>/reports/components`.
+不過，建議您不要更新這些節點，而是在下建立自己的元件節點 `/apps/cq/reporting/components` 或者，如果更適合 `/apps/<yourProject>/reports/components`.
 
 其中（例如）：
 
@@ -228,7 +224,7 @@ N:apps
 
 報告頁面必須使用 `sling:resourceType` 之 `/libs/cq/reporting/components/reportpage`.
 
-在大多數情況下，不需要自訂頁面元件。
+自訂的頁面元件不是必要專案（通常是）。
 
 ## 報表基礎元件 {#report-base-component}
 
@@ -238,7 +234,7 @@ N:apps
 
 * 此 [查詢定義](#query-definition).
 * 一個 [（選擇性）對話方塊](#configuration-dialog) 以設定報表。
-* 任何 [圖表](#chart-definitions) 已整合至報表。
+* 任何 [圖表](#chart-definitions) 與報告整合的專案。
 
 ```
 N:<reportname> [cq:Component]
@@ -265,7 +261,7 @@ N:queryBuilder
 
 * `propertyConstraints`
 
-  可用來將結果集限制在具有特定值的特定屬性的節點內。 如果指定了多個限制，則節點必須滿足所有限制（AND作業）。
+  將結果集限制在具有特定值的特定屬性的節點中。 如果指定了多個限制，則節點必須滿足所有限制（AND作業）。
 
   例如：
 
@@ -289,7 +285,7 @@ N:queryBuilder
 
 * `mandatoryProperties`
 
-  可用來將結果集限製為具有 *全部* 指定的屬性。 未考慮屬性的值。
+  將結果集限製為具有 *全部* 指定的屬性。 未說明屬性的值。
 
 全部都是選用專案，可視需要加以合併，但您至少必須定義其中一個。
 
@@ -326,13 +322,13 @@ N:charting
 
 * `definitions`
 
-  定義報表可能可用的圖表型別。 此 `definitions` 要使用的將由 `active` 設定。
+  定義報表可能可用的圖表型別。 此 `definitions` 要使用的由 `active` 設定。
 
   定義是使用節點陣列來指定(通常也命名為 `0`， `1`.. `x`)，則每個檔案都有以下屬性：
 
    * `id`
 
-     圖表識別。
+     圖表的識別。
 
    * `type`
 
@@ -372,17 +368,17 @@ N:charting
 
          * `hoverLimit` ( `Long`)
 
-           要顯示快顯視窗的彙總快照數上限（在每個水平線上顯示的點，代表不同的值），亦即當使用者將滑鼠移到圖表圖例中的不同值或對應標籤上時。
+           要顯示快顯視窗的彙總快照的最大數量（在每個水平線上顯示的點，代表不同的值）。 也就是說，當使用者確實將滑鼠移至圖表圖例中的不重複值或對應標籤上時。
 
            預設： `35` （也就是說，如果超過35個不同的值適用於目前的圖表設定，則完全不會顯示快顯視窗）。
 
-           此外還有10個可平行顯示的快顯視窗限制（當滑鼠移到圖例文字上方時，會顯示多個快顯視窗）。
+           此外還有10個可平行顯示的快顯視窗限制（將滑鼠移到圖例文字上方時，會顯示多個快顯視窗）。
 
 ### 設定對話方塊 {#configuration-dialog}
 
 每個報告都可以有一個設定對話方塊，允許使用者為報告指定各種引數。 此對話方塊可透過 **編輯** 按鈕。
 
-此對話方塊為標準CQ [對話方塊](/help/sites-developing/components-basics.md#dialogs) 且可依此設定(請參閱 [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog) 以取得詳細資訊)。
+此對話方塊為標準CQ [對話方塊](/help/sites-developing/components-basics.md#dialogs) 且可依此設定(請參閱 [CQ.Dialog](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Dialog) 以取得詳細資訊)。
 
 範例對話方塊如下所示：
 
@@ -429,13 +425,13 @@ N:charting
 
   `/libs/cq/reporting/components/commons/title`
 
-  用於定義報表標題的文字欄位。
+  用於定義報告標題的文字欄位。
 
 * **`description`**
 
   `/libs/cq/reporting/components/commons/description`
 
-  用於定義報表說明的文字區域。
+  定義報表說明的文字區域。
 
 * **`processing`**
 
@@ -455,7 +451,7 @@ N:charting
 
 ### 根路徑 {#root-path}
 
-此外，可以為報告定義根路徑：
+此外，您也可以為報表定義根路徑：
 
 * **`rootPath`**
 
@@ -476,7 +472,7 @@ N:charting
 * 此 [解析器與預先處理](#resolvers-and-preprocessing).
 * 此 [欄特定定義](#column-specific-definitions) (例如篩選和彙總； `definitions` 子節點)。
 * [欄預設值](#column-default-values).
-* 此 [使用者端篩選器](#client-filter) 以從伺服器傳回的資料中擷取要顯示的資訊。
+* 此 [使用者端篩選器](#client-filter) 從伺服器傳回的資料擷取資訊以供顯示。
 * 此外，欄元件必須提供適當的例項 `cq:editConfig`. 以定義 [事件與動作](#events-and-actions) 必填。
 * 的設定 [泛型欄](#generic-columns).
 
@@ -523,32 +519,32 @@ N:definitions
 
   定義用於計算實際儲存格值的屬性。
 
-  如果屬性定義為字串[] 系統會依序掃描多個屬性以找出實際值。
+  如果屬性定義為String[]，系統會依序掃描多個屬性以找出實際值。
 
-  例如，在下列情況下：
+  例如，如果有：
 
   `property = [ "jcr:lastModified", "jcr:created" ]`
 
-  對應的值擷取器（在這裡是控制對象）將：
+  對應的值擷取器（在這裡是控制對象）：
 
-   * 檢查是否有可用的jcr：lastModified屬性，如果有的話，請使用該屬性。
-   * 如果沒有jcr：lastModified屬性可用，則會改用jcr：created的內容。
+   * 檢查是否有可用的jcr：lastModified屬性，如果有，請使用它。
+   * 如果沒有可用的jcr：lastModified屬性，則改用jcr：created的內容。
 
 * `subPath`
 
-  如果結果不在查詢傳回的節點上， `subPath` 會定義屬性的實際位置。
+  如果結果不在查詢傳回的節點上， `subPath` 會定義屬性所在的位置。
 
 * `secondaryProperty`
 
-  定義另一個屬性，該屬性也必須用於計算實際儲存格值；這僅用於特定欄型別（diff和sortable）。
+  第二個屬性，必須用來計算實際儲存格值。 此定義僅用於特定欄型別（差異和可排序）。
 
-  例如，在工作流程例項報表中，指定的屬性是用來儲存開始和結束時間之間時間差的實際值（以毫秒為單位）。
+  例如，如果有「工作流程例項報表」，則指定的屬性會用於儲存開始與結束時間之間時間差的實際值（以毫秒為單位）。
 
 * `secondarySubPath`
 
   與subPath類似，當 `secondaryProperty` 已使用。
 
-在大多數情況下，只會 `property` 將會使用。
+通常只有 `property` 已使用。
 
 ### 使用者端篩選器 {#client-filter}
 
@@ -556,7 +552,7 @@ N:definitions
 
 >[!NOTE]
 >
->套用整個伺服器端處理之後，會在使用者端執行此篩選。
+>此篩選器會在套用整個伺服器端處理作業之後在使用者端執行。
 
 ```xml
 N:definitions
@@ -564,7 +560,7 @@ N:definitions
         P:clientFilter [String]
 ```
 
-`clientFilter` 定義為具有以下功能的JavaScript函式：
+此 `clientFilter` 是JavaScript函式，具備以下功能：
 
 * 作為輸入，會接收一個引數；資料會從伺服器傳回（如此已完成預先處理）
 * 作為輸出，傳回篩選（已處理）值；從輸入資訊擷取或衍生的資料
@@ -621,13 +617,13 @@ N:definitions
 
 * `resolverConfig`
 
-  提供解析程式的定義；可用的選項取決於 `resolver` 已選取：
+  提供解析程式的定義。 可用的選項取決於 `resolver` 已選取：
 
    * `const`
 
      使用屬性來指定要解析的常數。 屬性的名稱會定義要解析的常數；屬性的值會定義解析的值。
 
-     例如，屬性具有 **名稱**= `1` 和 **值** `=One` 將解析1到1。
+     例如，屬性具有 **名稱**= `1` 和 **值** `=One` 從1解析為1。
 
    * `default`
 
@@ -661,7 +657,7 @@ N:definitions
 
       * `i18n` （選擇性；輸入布林值）
 
-        決定是否應解析值 *國際化* (即使用 [CQ5的國際化服務](/help/sites-administering/tc-manage.md))。
+        決定是否應解析值 *國際化* (也就是使用 [CQ5的國際化服務](/help/sites-administering/tc-manage.md))。
 
 * `preprocessing`
 
@@ -681,7 +677,7 @@ N:definitions
 
 **常數**
 
-以下內容將解析下列內容的常數值 `VersionCreated` 至字串 `New version created`.
+以下解析的常數值 `VersionCreated` 至字串 `New version created`.
 
 請參閱 `/libs/cq/reporting/components/auditreport/typecol/definitions/data`.
 
@@ -754,7 +750,7 @@ N:data
 
 * [資料型別格式化程式](#preprocessing-data-type-formatters)
 
-  將數值轉換為相對字串；例如，「代表1小時時間差的值」會解析為字串，例如 `1:24PM (1 hour ago)`.
+  將數值轉換為相對字串；例如，「代表一小時時間差異的值」會解析為字串，例如 `1:24PM (1 hour ago)`.
 
 例如：
 
@@ -779,7 +775,7 @@ N:definitions
 
 * `replace`
 
-  將用來取代原始字串的字串或字串表示法。 這通常代表規則運算式所在字串的子字串 `pattern`.
+  用來取代原始字串的字串或字串表示法。 這通常代表規則運算式所在字串的子字串 `pattern`.
 
 範例取代可劃分為：
 
@@ -792,7 +788,7 @@ N:definitions
 
    * `/content/geometrixx/en/services/jcr:content/par/text`
 
-* 將分成四個區段：
+* 分為四個區段：
 
    * `$1` - `(.*)` - `/content/geometrixx/en/services`
    * `$2` - `(/jcr:content)` - `/jcr:content`
@@ -807,7 +803,7 @@ N:definitions
 
 這些格式化程式會將數值轉換為相對字串。
 
-例如，這可用於時間欄，其允許 `min`， `avg` 和 `max` 彙總。 作為 `min`/ `avg`/ `max` 彙總會顯示為 *時間差異* (例如， `10 days ago`)，則需要資料格式器。 對此， `datedelta` 格式化程式已套用至 `min`/ `avg`/ `max` 彙總值。 如果 `count` 彙總也可使用，如此就不需要格式子，原始值也不需要。
+例如，這可用於時間欄，其允許 `min`， `avg` 和 `max` 彙總。 作為 `min`/ `avg`/ `max` 彙總會顯示為 *時間差異* (例如， `10 days ago`)，則需要資料格式器。 對此， `datedelta` 格式化程式已套用至 `min`/ `avg`/ `max` 彙總值。 如果 `count` 彙總也可使用，這並不需要格式子，原始值也不需要。
 
 目前可用的資料型別格式化程式包括：
 
@@ -817,15 +813,15 @@ N:definitions
 
    * `duration`
 
-     期間是兩個已定義日期之間的時間範圍。 例如，工作流程動作的開始和結束時間為1小時，從2/13/11 11:23h開始，1小時後於2/13/11 12:23h結束。
+     期間是兩個已定義日期之間的時間範圍。 例如，一小時工作流程動作的開始和結束，從2/13/11 11:23h開始，並在一小時後於2/13/11 12:23h結束。
 
      它會將數值（解譯為毫秒）轉換為持續時間字串；例如 `30000` 格式為* `30s`.*
 
    * `datedelta`
 
-     Datadelta是過去某個日期到「現在」之間的時間範圍（因此，如果在稍後的某個時間點檢視報表，會有不同的結果）。
+     Datadelta是指過去某個日期到「現在」之間的時間範圍（因此，如果在之後的某個時間點檢視報表，會有不同的結果）。
 
-     它會將此數值（解譯為以天為單位的時間差異）轉換為相對日期字串。 例如，1的格式為1天前。
+     它會將此數值（解譯為以天為單位的時間差異）轉換為相對日期字串。 例如，1的格式為一天前。
 
 以下範例定義 `datedelta` 格式設定 `min` 和 `max` 彙總：
 
@@ -881,13 +877,13 @@ N:definitions
 
      用於使用不同值（從不同屬性取得）進行排序和顯示的值。
 
-  此外， 以上任何專案皆可定義為多個值，例如， `string[]` 會定義字串陣列。
+  此外，上述任何專案均可定義為多個值，例如 `string[]` 會定義字串陣列。
 
   值擷取器是由欄型別所選擇。 如果值擷取器可用於欄型別，則會使用此擷取器。 否則，會使用預設值擷取器。
 
   型別可以（選擇性）接受引數。 例如， `timeslot:year` 從日期欄位中擷取年份。 型別及其引數：
 
-   * `timeslot`  — 值與對應的常數比較， `java.utils.Calendar`.
+   * `timeslot`  — 這些值可與 `java.utils.Calendar`.
 
       * `timeslot:year` - `Calendar.YEAR`
       * `timeslot:month-of-year` - `Calendar.MONTH`
@@ -924,15 +920,15 @@ N:definitions
 
       * `raw`
 
-        篩選器已套用到原始資料。
+        篩選器套用至原始資料。
 
       * `preprocessed`
 
-        篩選器套用於預先處理的資料。
+        篩選條件會套用到已預先處理的資料。
 
       * `resolved`
 
-        篩選器套用於已解析的資料。
+        篩選器會套用至已解析的資料。
 
 * `aggregates`
 
@@ -940,7 +936,7 @@ N:definitions
 
    * `text`
 
-     彙總的文字名稱。 如果 `text` 未指定，則會採用彙總的預設說明；例如 `minimum` 將用於 `min` 彙總。
+     彙總的文字名稱。 如果 `text` 未指定，則會採用彙總的預設說明。 例如， `minimum` 用於 `min` 彙總。
 
    * `type`
 
@@ -956,31 +952,31 @@ N:definitions
 
       * `min`
 
-        提供最小值。
+        它提供最小值。
 
       * `max`
 
-        提供最大值。
+        它提供最大值。
 
       * `average`
 
-        提供平均值。
+        它提供平均值。
 
       * `sum`
 
-        提供所有值的總和。
+        它會提供所有值的總和。
 
       * `median`
 
-        提供中間值。
+        它提供中間值。
 
       * `percentile95`
 
-        採用所有值的第95個百分位數。
+        使用所有值的第95個百分位數。
 
 ### 欄預設值 {#column-default-values}
 
-這可用來定義欄的預設值：
+定義欄的預設值：
 
 ```xml
 N:defaults
@@ -1015,9 +1011,9 @@ N:cq:editConfig [cq:EditConfig]
 
 Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的例項（而非元件節點）上。
 
-它們會針對個別類屬元件使用您自訂的（標準）對話方塊。 此對話方塊可讓報告使用者定義報告頁面上一般欄的欄屬性（使用功能表選項） **欄屬性……**)。
+它們使用（標準）對話方塊，您可以針對個別類屬元件自訂該對話方塊。 此對話方塊可讓報告使用者定義報告頁面上一般欄的欄屬性（使用功能表選項） **欄屬性……**)。
 
-範例為 **通用** 的欄 **使用者報告**；請參閱 `/libs/cq/reporting/components/userreport/genericcol`.
+範例為 **通用** 的欄 **使用者報告**. 請參閱 `/libs/cq/reporting/components/userreport/genericcol`.
 
 若要將欄設為類屬：
 
@@ -1029,7 +1025,7 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 
   請參閱 `/libs/cq/reporting/components/userreport/genericcol/definitions/dialog`
 
-   * 對話方塊的欄位必須參照與對應元件屬性（包括其路徑）相同的名稱。
+   * 對話方塊的欄位必須參照與對應元件屬性相同的名稱，包括其路徑。
 
      例如，如果要使類屬欄的型別可透過對話方塊配置，請使用名稱為的欄位 `./definitions/type`.
 
@@ -1041,7 +1037,7 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 
 * 使用標準AEM方法來定義（其他）欄屬性。
 
-  請注意，對於元件和欄例證上定義的屬性，優先使用欄例證上的值。
+  對於在元件和欄實體上定義的屬性，優先使用欄實體上的值。
 
   一般資料行可用的屬性包括：
 
@@ -1053,7 +1049,7 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
    * `definitions/queryBuilder`  — 查詢產生器設定
    * `defaults/aggregate`  — 預設彙總
 
-  如果是Graph上類屬欄的新例項 **使用者報告** 使用對話方塊定義的屬性會儲存在：
+  如果「 」上有類屬欄的新例項 **使用者報告**，與對話方塊一起定義的屬性會儲存在：
 
   `/etc/reports/userreport/jcr:content/report/columns/genericcol/settings/generic`
 
@@ -1061,13 +1057,13 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 
 設計會定義哪些欄型別可用於建立報告。 它也會定義要新增欄的段落系統。
 
-強烈建議您為每個報告建立個別設計。 這可確保完全的彈性。 另請參閱 [定義您的新報告](#defining-your-new-report).
+Adobe建議您為每個報告建立個別設計。 這麼做可確保完全的彈性。 另請參閱 [定義您的新報告](#defining-your-new-report).
 
 預設報告元件儲存在 `/etc/designs/reports`.
 
-報告的位置取決於元件的位置：
+報表的位置取決於元件所在的位置：
 
-* `/etc/designs/reports/<yourReport>` 適用於報表位於下方的情況 `/apps/cq/reporting`
+* `/etc/designs/reports/<yourReport>` 適用於報表位於 `/apps/cq/reporting`
 
 * `/etc/designs/<yourProject>/reports/<*yourReport*>` 針對使用下列專案的報表： `/apps/<yourProject>/reports` 圖樣
 
@@ -1105,7 +1101,7 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 
 >[!NOTE]
 >
->建議您不要對標準報表設計進行任何變更。 這是為了確保您在升級或安裝Hotfix時不會遺失任何變更。
+>Adobe建議您不要變更標準報表設計。 這是為了確保您在升級或安裝Hotfix時不會遺失任何變更。
 >
 >如果您想要自訂標準報表，請複製報表及其設計。
 
@@ -1122,7 +1118,7 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 * 設定 `sling:resourceType` 至 `cq/reporting/components/reportpage`
 
 * 指示要使用的設計
-* 建立 `report` 參考容器的子節點( `reportbase`)元件，借助於 `sling:resourceType` 屬性
+* 建立 `report` 參考容器的子節點( `reportbase`)元件 `sling:resourceType` 屬性
 
 範本片段範例（取自元件報表範本）為：
 
@@ -1157,7 +1153,7 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 
 預設報表範本儲存在 `/libs/cq/reporting/templates`.
 
-不過，強烈建議您不要更新這些節點，而是在下建立自己的元件節點 `/apps/cq/reporting/templates` 或者，如果更適合 `/apps/<yourProject>/reports/templates`.
+不過，Adobe建議您不要更新這些節點。 請改為在下建立您自己的元件節點 `/apps/cq/reporting/templates` 或者，如果更適合 `/apps/<yourProject>/reports/templates`.
 
 其中，作為範例(另請參閱 [報表元件的位置](#location-of-report-components))：
 
@@ -1168,7 +1164,7 @@ N:apps
             N:templates [sling:Folder]
 ```
 
-您可以在此下建立範本的根：
+在此底下，建立範本的根：
 
 ```xml
 N:apps
@@ -1182,7 +1178,7 @@ N:apps
 
 ### 定義您的新報告 {#defining-your-new-report}
 
-若要定義新報表，您必須建立並設定：
+若要定義報表，請建立並設定：
 
 1. 報表元件的根目錄。
 1. 報表基礎元件。
@@ -1191,7 +1187,7 @@ N:apps
 1. 報表範本的根目錄。
 1. 報表範本。
 
-為了說明這些步驟，以下範例會定義一個報表，其中列出存放庫中的所有OSGi設定；即 `sling:OsgiConfig` 節點。
+為了說明這些步驟，以下範例會定義一個報表，其中列出存放庫內的所有OSGi設定。 也就是說，所有的 `sling:OsgiConfig` 節點。
 
 >[!NOTE]
 >
@@ -1208,7 +1204,7 @@ N:apps
                N:osgireport [sling:Folder]
    ```
 
-1. 定義您的報表基礎。 例如 `osgireport[cq:Component]` 在 `/apps/cq/reporting/components/osgireport`.
+1. 定義您的報表基礎。 例如， `osgireport[cq:Component]` 在 `/apps/cq/reporting/components/osgireport`.
 
    ```xml
    N:osgireport [sling:Folder]
@@ -1260,7 +1256,7 @@ N:apps
    * 顯示兩者 `pie` 和 `lineseries` 圖表
    * 提供對話方塊，供使用者設定報表
 
-1. 定義您的第一欄（欄基底）元件。 例如 `bundlecol[cq:Component]` 在 `/apps/cq/reporting/components/osgireport`.
+1. 定義您的第一欄（欄基底）元件。 例如， `bundlecol[cq:Component]` 在 `/apps/cq/reporting/components/osgireport`.
 
    ```xml
    N:osgireport [sling:Folder]
@@ -1288,7 +1284,7 @@ N:apps
                    P:property [String] = "jcr:path"
    ```
 
-   這會定義一個資料行基礎元件，該元件：
+   這會定義一個資料行基本元件，該元件：
 
    * 會搜尋並傳回從伺服器收到的值；在此案例中是屬性 `jcr:path` 代表每 `sling:OsgiConfig` 節點
    * 提供 `count` 彙總
@@ -1310,7 +1306,7 @@ N:apps
    >
    >其中函式只會傳回收到的值。
 
-1. 定義您的報告設計。 例如 `osgireport[cq:Page]` 在 `/etc/designs/reports`.
+1. 定義您的報告設計。 例如， `osgireport[cq:Page]` 在 `/etc/designs/reports`.
 
    ```xml
    N:osgireport [cq:Page]
@@ -1335,7 +1331,7 @@ N:apps
                N:osgireport [cq:Template]
    ```
 
-1. 定義您的報表範本。 例如 `osgireport[cq:Template]` 在 `/apps/cq/reporting/templates`.
+1. 定義您的報表範本。 例如， `osgireport[cq:Template]` 在 `/apps/cq/reporting/templates`.
 
    ```xml
    N:osgireport [cq:Template]
@@ -1367,12 +1363,12 @@ N:apps
 
 1. 選取 **報表** 在左窗格中。
 1. 則 **新增……** 工具列中的。 定義 **標題** 和 **名稱**，選取您的新報表型別( **OSGi報表範本**)，然後按一下「 **建立**.
-1. 您的新報告例項會出現在清單中。 連按兩下以開啟。
+1. 您的新報表例項會出現在清單中。 連按兩下以開啟。
 1. 拖曳元件(例如， **組合** 在 **OSGi報表** 群組)來建立第一欄及 [啟動報表定義](/help/sites-administering/reporting.md#the-basics-of-report-customization).
 
    >[!NOTE]
    >
-   >由於此範例沒有任何可分組的欄，因此將無法使用圖表。 若要檢視圖表，請設定 `groupable` 至 `true`：
+   >由於此範例沒有任何可分組的欄，因此無法使用圖表。 若要檢視圖表，請設定 `groupable` 至 `true`：
    >
    >```
    >N:osgireport [sling:Folder]
@@ -1386,7 +1382,7 @@ N:apps
 
 本節說明實作報表架構之OSGi服務的進階設定選項。
 
-您可以使用網頁主控台的「設定」功能表來檢視這些專案(例如 `http://localhost:4502/system/console/configMgr`)。 使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
+您可以使用網頁主控台的「設定」功能表(位於 `http://localhost:4502/system/console/configMgr`，例如)。 使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
 
 ### 基本服務（Day CQ報告設定） {#basic-service-day-cq-reporting-configuration}
 
@@ -1397,25 +1393,25 @@ N:apps
 * **報表路徑** 會定義報表所在的路徑。 這由快照服務用來決定要實際製作快照的報表。
 * **每日快照** 會定義每天拍攝每日快照的時間。 指定的小時在伺服器的本機時區中。
 * **每小時快照** 會定義每小時擷取快照時每小時的分鐘數。
-* **列（最大值）** 會定義每個快照所儲存的最大列數。 此值應合理選擇；如果太高，這將影響存放庫的大小；如果太低，資料可能會因為歷史資料的處理方式而不準確。
-* **偽造資料**，如果已啟用，則可以使用建立虛假歷史資料 `fakedata` 選擇器；如果停用，則使用 `fakedata` 選取器會擲回例外狀況。
+* **列（最大值）** 會定義每個快照所儲存的最大列數。 您應合理選擇此值。 如果太高，會影響存放庫的大小；如果太低，資料可能會因為歷史資料的處理方式而無法精確處理。
+* **偽造資料**，如果已啟用，則可以使用建立虛假歷史資料 `fakedata` 選擇器；如果停用，則使用 `fakedata` 選擇器擲回例外狀況。
 
-  由於資料是假的，因此它必須 *僅限* 用於測試和偵錯。
+  因為資料是假的，所以必須 *僅限* 用於測試和偵錯。
 
-  使用 `fakedata` 選擇器將會以隱含的方式完成報表，因此所有現有資料都會遺失；資料可以手動還原，但此程式可能會相當耗時。
+  使用 `fakedata` 選擇器會以隱含方式完成報表，因此所有現有資料都會遺失。 資料可以手動還原，但此程式可能相當耗時。
 
 * **快照使用者** 定義可用來建立快照的選用使用者。
 
-  基本上，系統會為完成報表的使用者拍攝快照。 在某些情況下（例如在發佈系統上，由於尚未復寫此使用者的帳戶，因此該使用者並不存在），您可能會想要指定改用的遞補使用者。
+  基本上，系統會為完成報表的使用者拍攝快照。 在某些情況下（例如，在發佈系統上，由於尚未復寫此使用者的帳戶，因此該使用者並不存在），您可能會想要指定改用的遞補使用者。
 
   此外，指定使用者可能會帶來安全性風險。
 
-* **強制快照使用者**，如果已啟用，則會使用下列指定的使用者拍攝所有快照： *快照使用者*. 若未正確處理，可能會對安全性造成嚴重影響。
+* **強制快照使用者**，如果已啟用，則會使用下列指定的使用者拍攝所有快照： *快照使用者*. 若未正確處理，可能會嚴重影響安全性。
 
 ### 快取設定（Day CQ報表快取） {#cache-settings-day-cq-reporting-cache}
 
-* **啟用** 可讓您啟用或停用報表資料的快取。 啟用報表快取會在數個請求期間將報表資料保留在記憶體中。 這可能會提高效能，但會導致記憶體耗用量增加，在極端情況下可能會導致記憶體不足。
-* **TTL** 會定義報表資料的快取時間（以秒為單位）。 較高的數字會提升效能，但如果資料在時段內變更，也可能傳回不正確的資料。
+* **啟用** 可讓您啟用或停用報表資料的快取。 啟用報表快取可讓報表資料在數個請求期間保留在記憶體中。 這樣可能會提高效能，但會導致記憶體耗用率較高，在極端情況下可能會導致記憶體不足的情況。
+* **TTL** 會定義報表資料的快取時間（以秒為單位）。 較高的數字可提升效能，但如果資料在時段內變更，也可能傳回不正確的資料。
 * **專案上限** 會定義一次要快取的報告數上限。
 
 >[!NOTE]
