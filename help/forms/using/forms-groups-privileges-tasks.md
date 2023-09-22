@@ -1,20 +1,16 @@
 ---
 title: OSGi群組和許可權上的AEM Forms
-seo-title: AEM Forms on OSGi Groups and Privileges
-description: 將使用者指派給群組，以便在OSGi上管理AEM Forms
-seo-description: Assign users to the groups to manage AEM Forms on OSGi
-uuid: f269a206-356d-4cee-b449-05c5da87121a
+description: 將使用者指派給群組，以便在OSGi上管理Adobe Experience Manager (AEM) Forms
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 topic-tags: Configuration
-discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 role: Admin
 exl-id: d802ac53-e3db-45ca-afcb-7e99d0bb7877
-source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
+source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '293'
 ht-degree: 6%
 
 ---
@@ -26,9 +22,9 @@ ht-degree: 6%
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/forms-groups-privileges-tasks.html) |
 | AEM 6.5 | 本文章 |
 
-您可以 [建立群組](/help/sites-administering/user-group-ac-admin.md#group-administration) 並指派原則和 [使用者](/help/sites-administering/user-group-ac-admin.md#user-administration) 到AEM中的群組。 這些原則控制屬於群組之使用者的許可權。
+您可以 [建立群組](/help/sites-administering/user-group-ac-admin.md#group-administration) 並指派原則和 [使用者](/help/sites-administering/user-group-ac-admin.md#user-administration) Adobe Experience Manager (AEM)中的群組。 這些原則控制屬於群組之使用者的許可權。
 
-安裝之後 [AEM Forms附加元件套件](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提到的群組（例如forms-users和forms-power-user）可自動用於指派。 下表列出使用者可以根據群組指派在OSGi上為AEM Forms執行的工作：
+安裝之後 [AEM Forms附加元件套件](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提到的群組（例如forms-users和forms-power-user）可自動用於指派。 下表列出使用者可以根據群組指派在OSGi上執行AEM Forms的工作：
 
 <table>
  <tbody>
@@ -99,7 +95,7 @@ ht-degree: 6%
    <td>workflow-users</td> 
    <td>
     <ul> 
-     <li>使用AEM收件匣應用計畫<br /> <strong>注意： </strong>您必須有cm-agent-users和workflow-users群組指派，才能存取AEM收件匣中的互動式通訊代理程式UI。</li> 
+     <li>使用AEM收件匣應用程式<br /> <strong>注意： </strong>您必須有cm-agent-users和workflow-users群組指派，才能存取AEM收件匣中的互動式通訊代理程式UI。</li> 
      <li>管理工作流程例項</li> 
     </ul> </td> 
   </tr>
