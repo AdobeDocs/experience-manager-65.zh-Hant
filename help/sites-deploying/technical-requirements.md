@@ -3,9 +3,9 @@ title: 技術需求
 description: Adobe Experience Manager支援的使用者端和伺服器平台清單。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 8336a7257d3c5e75cd37381b0124c227c2d55dca
+source-git-commit: 0dd6e3fc2fa9539e5c3ce4e99ab367752dfeaad6
 workflow-type: tm+mt
-source-wordcount: '3544'
+source-wordcount: '3597'
 ht-degree: 1%
 
 ---
@@ -24,8 +24,8 @@ Adobe在平台上支援(AEM) Adobe Experience Manager，詳情請參閱本檔案
 
 安裝Adobe Experience Manager的最低需求：
 
-* 已安裝的 JAVA Platform、Standard Edition JDK 或其他受支援的 [ JAVA™™ 虛擬機器](#java-virtual-machines)
-* Experience Manager快速入門檔（獨立 JAR 或網路應用程式 部署 WAR）
+* 已安裝的Java™ Platform、Standard Edition JDK或其他支援的 [Java™虛擬機器器](#java-virtual-machines)
+* Experience Manager快速入門檔案（獨立JAR或Web應用程式部署WAR）
 
 ### 大小需求下限 {#minimum-sizing-requirements}
 
@@ -75,15 +75,15 @@ Adobe會推薦這些設定，並在標準軟體維護合約中提供完整支援
 
 ## 支援平台 {#supported-platforms}
 
-### JAVA™ 虛擬機器 {#java-virtual-machines}
+### Java™虛擬機器器 {#java-virtual-machines}
 
-該應用程式需要 JAVA 虛擬機器才能運行，該虛擬機器由 JAVA™™ 開發工具組 （JDK） 發行版本提供。
+應用程式需要由Java™開發套件(JDK)散發提供的Java™虛擬機器器才能執行。
 
-Adobe Experience Manager 可與以下版本的 JAVA™ 虛擬機器配合使用：
+Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 
 >[!CAUTION]
 >
->追蹤 JAVA™ 供應商提供的安全性公告。 這樣做可確保生產環境的安全性。 此外，請始終安裝最新的 JAVA™ 更新。
+>追蹤Java™廠商的安全性公告。 這麼做可確保生產環境的安全與保障。 此外，請務必安裝最新的Java™更新。
 
 | **Platform** | **支援程度** | **連結** |
 |---|---|---|
@@ -100,7 +100,7 @@ Adobe Experience Manager 可與以下版本的 JAVA™ 虛擬機器配合使用�
 1. oracle已移至OracleJava™ SE產品的「長期支援」(LTS)模型。 Java™ 9、Java™ 10和Java™ 12是依Oracle區分的非LTS版本(請參閱 [oracle Java™ SE支援藍圖](https://www.oracle.com/technetwork/java/eol-135779.html))。 若要在生產環境中部署AEM，Adobe僅支援Java™的LTS版本。 所有使用OracleJava™ SE技術的AEM客戶，可直接透過Adobe支援並發佈OracleJava™ SE JDK，包括公開更新結尾以外的LTS版本所有維護更新。 請參閱 [適用於Adobe Experience Manager的Java™支援政策](assets/Java_Policy_for_Adobe_Experience_Manager.pdf).
    **重要：至少支援OracleJava™ 11到2026年9月。 正在準備支援OracleJava™ 17。**
 
-1. IBM® JRE 僅與 WebSphere® Application Server 一起受支援。
+1. IBM® JRE僅與WebSphere®應用程式伺服器一起受支援。
 
 1. 從6.5 SP9版開始的內部部署AEM支援Azul Zulu OpenJDK LTS版本。 Azul Zulu JDK LTS版本的支援和發佈必須由Adobe客戶直接從Azul授權。
 
@@ -132,16 +132,19 @@ Adobe Experience Manager 可與以下版本的 JAVA™ 虛擬機器配合使用�
 1. AEM不支援MongoDB Sharding。
 1. 僅支援MongoDB Storage Engine WiredTiger。
 1. 支援AEM Forms升級客戶。 新安裝不支援。
+1. 僅適用AEM Forms：
+   * 移除對Oracle資料庫12c的支援，並新增對Oracle資料庫19c的支援。
+   * 移除對Microsoft® SQL Server 2016的支援，並新增對Microsoft® SQL Server 2019的支援。
 
 >[!NOTE]
 >
-有關AEM Communities功能的其他資訊，請參閱 [ 部署Communities ](/help/communities/deploy-communities.md) 。
+另請參閱 [部署社群](/help/communities/deploy-communities.md) 以取得有關AEM Communities功能的其他資訊。
 
 >[!NOTE]
 >
 MongoDB是協力廠商軟體程式，不包含在AEM授權套件中。 如需詳細資訊，請參閱 [MongoDB授權原則](https://www.mongodb.com/licensing/server-side-public-license/faq) 頁面。
 >
-為了充分利用MongoDB的AEM 部署，Adobe Systems建議許可MongoDB Enterprise版本以受益于專業支援。 有關詳細資訊，請參閱 [ 建議的 ](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) 部署。
+若要透過MongoDB充分利用AEM部署，Adobe建議授權MongoDB Enterprise版本，以享受專業支援。 另請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) 以取得詳細資訊。
 >
 許可證包括一個標準複本集，該複本集由一個主實例和兩個輔助實例組成，可用於創作或發佈部署。
 >
@@ -149,11 +152,11 @@ MongoDB是協力廠商軟體程式，不包含在AEM授權套件中。 如需詳
 >
 Adobe Systems Customer Care 協助與 AEM 搭配使用 MongoDB 的相關資格問題。
 >
-如需詳細資訊，請參閱 [適用於Adobe Experience Manager的MongoDB頁面](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
+有關更多資訊，請參閱 [ MongoDB for Adobe Experience Manager 頁面 ](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager) 。
 
 >[!NOTE]
 >
-如上所列的支援關聯式資料庫是協力廠商軟體，未包含在AEM授權套件中。
+上面列出的受支援的關係資料庫是協力廠商軟體，不包含在AEM許可包中。
 >
 若要使用支援的關聯式資料庫執行AEM 6.5，需要與資料庫廠商訂立個別的支援合約。 Adobe客戶服務可協助解決與AEM 6.5使用關聯式資料庫相關的資格確認問題。
 >
@@ -173,11 +176,13 @@ Adobe Experience Manager能以獨立伺服器（快速入門JAR檔案）或協�
 | IBM® WebSphere® Application Server 9.0和IBM® JRE 1.8 | R：新合約的有限支援 `[1]` `[2]` |
 | Apache Tomcat 8.5.x | R：新合約的有限支援 `[2]` |
 | JBoss® EAP 7.2.x (含JBoss®應用程式伺服器) | Z：不支援 |
-| JBoss EAP 7.1.4 搭配 JBoss®® Application Server | R：對新合同 `[1]` 的有限支援 `[2]` |
-| JBoss EAP 7.0.x 搭配 JBoss®® Application Server | Z：不支援 |
+| JBoss® EAP 7.1.4含JBoss®應用程式伺服器 | R：新合約的有限支援 `[1]` `[2]` |
+| JBoss® EAP 7.0.x (含JBoss®應用程式伺服器) | Z：不支援 |
 
-1. 建議用於具有 AEM Forms 的部署。
+1. 建議使用AEM Forms進行部署。
 1. 在應用程式伺服器上啟動AEM 6.5部署後，系統會移至「有限支援」。 現有客戶可升級至AEM 6.5，並繼續使用應用程式伺服器。 對於新客戶，如上方Level-R說明所述，隨附支援條件和支援計畫。
+1. 僅適用AEM Forms：
+   * 移除對JBoss® EAP 7.1.4的支援，並新增對JBoss® EAP 7.4.10的支援。
 
 ### 伺服器作業系統 {#server-operating-systems}
 
@@ -194,18 +199,19 @@ Adobe Experience Manager可與下列伺服器平台搭配使用以用於生產�
 | oracleSolaris™ 11 | Z：不支援 |
 | IBM® AIX® 7.2 | Z：不支援 |
 
-1. Linux® Kernel 2.6、3。 x， 4. x和5. x包含來自Red Hat®發行版本的衍生工具，包括Red Hat® Enterprise Linux®、CentOS、Oracle Linux®和Amazon Linux®。 只有CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8和Red Hat® Enterprise Linux® 9支援AEM Forms附加元件功能。
+1. Linux® Kernel 2.6、3。 x， 4. x 和 5。 x包含來自Red Hat®發行版本的衍生工具，包括Red Hat® Enterprise Linux®、CentOS、Oracle Linux®和Amazon Linux®。 只有CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8和Red Hat® Enterprise Linux® 9支援AEM Forms附加元件功能。
 1. Ubuntu 20.04 LTS支援AEM Forms。
 1. Adobe Managed Services支援的Linux®發行版本。
-1. Microsoft® Windows生產部署支援客戶升級至6.5版本及用於非生產用途。 新部署請求針對AEM Sites和Assets。
+1. Microsoft® Windows生產部署支援客戶升級至6.5版本及用於非生產用途。 AEM Sites和Assets會隨選新部署。
 1. Microsoft® Window Server 支援AEM Forms，沒有支援級別 R 限制。
+1. AEM Forms刪除了對 Microsoft® Windows Server 2016 的支援。
 
 >[!NOTE]
 >
 如果要安裝 AEM Forms 6.5，請確保已安裝以下 32 位 Microsoft® Visual C++ 可轉散發元件。
 >
 * Microsoft® Visual C++ 2008 可轉散發元件
-* Microsoft® Visual C++ 2010 可轉散發元件
+* Microsoft® Visual C++ 2010可轉散發套件
 * Microsoft® Visual C++ 2012可轉散發套件
 * Microsoft® Visual C++ 2013可轉散發套件
 * Microsoft® Visual C++ 2019 （VC14.28或更新版本）可轉散發套件
@@ -233,10 +239,10 @@ Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](ht
 | Platform | 支援程度 |
 |---|---|
 | **Apache httpd 2.4.x** `[1,2]` | 答：支援 |
-| Microsoft® IIS 10 （Internet Information Server） | 答：支援 |
-| Microsoft® IIS 8.5 （Internet Information Server） | Z：不支援 |
+| Microsoft® IIS 10 (Internet Information Server) | 答：支援 |
+| Microsoft® IIS 8.5 (Internet Information Server) | Z：不支援 |
 
-1. 基於 Apache HTTPd 原始程式碼構建的 Web 服務器具有與其所基於的 HTTPd 版本一樣多的支援。 如有疑問，請要求Adobe確認與個別伺服器產品相關的支援等級。 下列情況：
+1. 以Apache httpd原始程式碼為基礎建立的Web伺服器，與其所根據的httpd版本同樣具備支援。 如有疑問，請要求Adobe確認與個別伺服器產品相關的支援等級。 下列情況：
 
    1. HTTP伺服器是僅使用官方Apache來源發佈所建置，或
    1. HTTP伺服器是作為執行伺服器之作業系統的一部分所提供。 範例： IBM® HTTP伺服器、OracleHTTP伺服器
@@ -249,7 +255,7 @@ Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](ht
 
 Adobe Experience Manager使用者介面可與下列使用者端平台搭配使用。 所有瀏覽器都透過一組預設的外掛程式和附加元件進行測試。
 
-AEM使用者介面已針對大型熒幕（通常是筆記型電腦和桌上型電腦）和平板電腦外形規格(例如Apple iPad或Microsoft® Surface)進行最佳化。 不支援電話外形規格。
+AEM 用戶介面針對較大的螢幕（通常是筆記本電腦和桌上型電腦）和平板電腦外形規格（如 Apple iPad 或 Microsoft® Surface）進行了優化。 不支援電話外形規格。
 
 >[!NOTE]
 >
@@ -295,7 +301,7 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
    <td>答：支援</td>
   </tr>
   <tr>
-   <td>macOS 上的 Apple Safari 11.x</td>
+   <td>macOS上的Apple Safari 11.x</td>
    <td>Z：不支援</td>
    <td>Z：不支援</td>
   </tr>
@@ -331,11 +337,11 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
 
 1. 使用2或以上的值將BasicAuthLevel登入專案新增至此子機碼。
 
-## 其他平台注意事項 {#additional-platform-notes}
+## 其他Platform說明 {#additional-platform-notes}
 
-本節提供執行Adobe Experience Manager及其附加元件相關的特殊附註和更多詳細資訊。
+本節提供有關運行 Adobe Experience Manager 及其載入項的特殊說明和更多詳細資訊。
 
-### IPv4和IPv6 {#ipv-and-ipv}
+### IPv4 和 IPv6 {#ipv-and-ipv}
 
 Adobe Experience Manager的所有元素（實例、Dispatcher）都可以安裝在 IPv4 和 IPv6 網路中。
 
@@ -343,9 +349,9 @@ Adobe Experience Manager的所有元素（實例、Dispatcher）都可以安裝�
 
 當必須指定 IP 位址時，您可以（根據需要）從以下選項中選擇：
 
-* ipv6位址。 例如 `https://[ab12::34c5:6d7:8e90:1234]:4502`
+* 一個 IPv6 位址。 例如 `https://[ab12::34c5:6d7:8e90:1234]:4502`
 
-* ipv4位址。 例如 `https://123.1.1.4:4502`
+* 一個 IPv4 位址。 例如 `https://123.1.1.4:4502`
 
 * 伺服器名稱。 例如 `https://www.yourserver.com:4502`
 
@@ -355,13 +361,13 @@ Adobe Experience Manager的所有元素（實例、Dispatcher）都可以安裝�
 
 AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
-啟用Dynamic Media後，將適用下列其他技術要求。
+啟用 動態媒體 後，以下附加技術要求適用。
 
 >[!NOTE]
 >
-這些系統需求 **僅限** 套用如果您使用Dynamic Media — 混合模式；Dynamic Media — 混合模式具有內嵌影像伺服器，此伺服器僅在某些作業系統上通過認證。
+這些系統要求 **僅適用于** 使用 動態媒體 - 混合模式;動態媒體 - 混合模式具有內嵌影像伺服器，該伺服器僅在某些作業系統上通過認證。
 >
-適用於執行Dynamic Media - Scene7模式的Dynamic Media客戶(即 **dynamicmedia_scene7** 執行模式)，沒有額外的系統需求；只有與AEM相同的系統需求。 Dynamic Media - Scene7模式架構使用雲端型影像服務，而非內嵌於AEM中的服務。
+對於運行動態媒體-Scene7模式（即 **dynamicmedia_scene7** 運行模式）的動態媒體客戶，沒有其他系統要求;只有與AEM相同的系統要求。 Dynamic Media - Scene7模式架構使用雲端型影像服務，而非內嵌於AEM中的服務。
 
 #### 硬體 {#hardware}
 
@@ -385,7 +391,7 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/
 
 >[!NOTE]
 >
-**停用SELinux：** 開啟SELinux時，「影像伺服」無法運作。 此選項預設為啟用。 若要解決此問題，請編輯 **/etc/selinux/config** 檔案並將SELinux值從下列位置變更：
+**禁用 SELinux：** 影像 服務在 SELinux 打開時不起作用。 此選項預設為啟用。 要解決此問題，請編輯 **/etc/selinux/config** 檔並將 SELinux 值從：
 >
 `SELINUX=enforcing` **至** `SELINUX=disabled`
 
@@ -395,18 +401,18 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/
 >
 多節點結構可能會導致一或多個節點的記憶體耗盡，之後其他節點就會耗盡。 當記憶體用盡時，即使有可用的記憶體，核心仍可以決定終止處理序（例如，影像伺服器或平台伺服器）。
 >
-因此，Adobe建議，如果您要執行這樣的系統以使用 **numa=off** 開機選項，以避免核心終止這些處理程式。
+因此，Adobe Systems建議，如果您正在運行這樣的系統，請使用 numa=off **引導選項關閉** NUMA，以避免內核終止這些進程。
 
 >[!NOTE]
 >
-**伺服器主機名稱必須解析：** 請確定伺服器的主機名稱可解析為IP位址。 如果無法做到這一點，請將完全限定的 主機 名稱和 IP 位址 **添加到 /etc/hosts** ：
+**伺服器主機名稱必須解析：** 確保伺服器的主機名稱可解析為 IP 位址。 如果無法做到這一點，請將完全限定的 主機 名稱和 IP 位址 **添加到 /etc/hosts** ：
 >
 `<ip address> <fully qualified hostname>`
 
 #### Windows {#windows}
 
 * Microsoft® Windows Server 2016
-* 交換空間至少等於實體記憶體量 （RAM） 的兩倍
+* 交換空間至少相當於實體記憶體(RAM)容量的兩倍
 
 若要在Windows上使用Dynamic Media，請安裝Microsoft®適用於x64和x86的Visual Studio 2010、2013和2015可轉散發套件。
 
@@ -439,19 +445,19 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic路線</a> 最新版本</td>
-   <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
+   <td>XPS、影像格式 （BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF 和 DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic路線</a> 最新版本（已棄用）</td>
-   <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 經典曲目 </a> 最新版本（已棄用）</td>
+   <td>XPS、影像格式 （BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF 和 DWF</td>
   </tr>
   <tr>
    <td>Microsoft® Office 2019</td>
-   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
   </tr>
   <tr>
    <td>Microsoft® Office 2016 （已棄用）</td>
-   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
   </tr>
   <tr>
    <td>WordPerfect 2020<br /> </td>
@@ -467,10 +473,10 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/
   </tr>
   <tr>
    <td>Microsoft® Publisher 2016 （已棄用）<br /> </td>
-   <td>公共</td>
+   <td>酒吧</td>
   </tr>
   <tr>
-   <td>Microsoft®專案2016 （已棄用）<br /> </td>
+   <td>Microsoft® Project 2016 （已棄用）<br /> </td>
    <td>MPP</td>
   </tr>
   <tr>
@@ -496,7 +502,7 @@ PDF Generator僅支援英文、法文、德文和日文版本的支援作業系�
 * PDF Generator支援Linux®作業系統上的32位元和64位元版本OpenOffice。
 * PDF Generator不支援Microsoft® Office 365。
 * 只有Windows支援OCRPDF、Optimize PDF和Export PDF功能。
-* Acrobat版本與AEM Forms搭配，可啟用PDF Generator功能。 在AEM Forms授權期間，僅以程式設計方式存取AEM Forms隨附的版本，以用於AEM Forms PDF Generator。 如需詳細資訊，請參閱根據您的部署說明的AEM Forms產品說明([內部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
+* Acrobat版本與AEM Forms搭配，可啟用PDF Generator功能。 在 AEM Forms 許可證期限內，僅使用 AEM Forms 以程式設計方式訪問捆綁版本，以便與 PDF 產生器一起使用AEM Forms。 有關詳細資訊，請參閱根據您的部署（內部部署 ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [ Managed Services ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html) AEM Forms [ 產品說明
 * PDF Generator服務不支援Microsoft® Windows 10。
 * PDF Generator無法使用Microsoft® Visio 2019轉換檔案。 您可繼續使用Microsoft® Visio 2016來轉換 `.VSD` 和 `.VSDX` 檔案。
 * PDF Generator無法使用Microsoft® Project 2019轉換檔案。 您可繼續使用Microsoft® Project 2016來轉換 `.VSD` 和 `.VSDX` 檔案。
@@ -504,11 +510,11 @@ PDF Generator僅支援英文、法文、德文和日文版本的支援作業系�
 
 ### AEM Forms Designer的需求 {#requirements-for-aem-forms-designer}
 
-* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server或Microsoft® Windows® 10
-* 1 GHz或更快的處理器，支援PAE、NX和SSE2。
+* Microsoft Windows 2016 Server、Microsoft Windows 2019 Server 或 Microsoft®®® Windows®®® 10
+* 1 GHz 或更快的處理器，支援 PAE、NX 和 SSE2。
 * 32 位為 1 GB RAM，64 位作業系統為 2 GB RAM
-* 32 位為 16 GB 磁碟空間，64 位作業系統為 20 GB 磁碟空間
-* 顯存 - 128 MB GPU（建議 256 MB）
+* 16 GB磁碟空間，適用於32位元或20 GB磁碟空間，適用於64位元作業系統
+* 顯示卡記憶體 — 128 MB的GPU （建議使用256 MB）
 * 2.35 GB的可用硬碟空間
 * 1024 X 768畫素或更高的熒幕解析度
 * 視訊硬體加速（選購）
