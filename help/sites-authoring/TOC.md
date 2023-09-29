@@ -18,7 +18,7 @@ ht-degree: 48%
 
 # AEM 6.5 Authoring 使用指南 {#authoring}
 
-+ [製作使用手冊總覽](home.md)
++ [製作使用手冊概覽](home.md)
 + AEM Authoring的基本工作、工具和概念 {#essentials}
    + [作者的首要步驟](first-steps.md)
    + [頁面製作](page-authoring.md)
@@ -57,7 +57,7 @@ ht-degree: 48%
    + [內容分析](content-insights.md)
    + [建立可存取的內容 (符合 WCAG 2.1)](creating-accessible-content.md)
    + [在設計模式中設定元件](default-components-designmode.md)
-   + [基礎元件](default-components-foundation.md)
+   + [Foundation 元件](default-components-foundation.md)
    + [支架](scaffolding.md)
    + [檢視頁面分析資料](page-analytics-using.md)
 + 專案 {#projects}
@@ -67,9 +67,9 @@ ht-degree: 48%
    + [Creative Project與PIM整合](managing-product-information.md)
    + [使用專案工作流程](projects-with-workflows.md)
 + 啟動 {#launches}
-   + [Launch](launches.md)
-   + [建立 Launch](launches-creating.md)
-   + [編輯 Launch](launches-editing.md)
+   + [啟動](launches.md)
+   + [建立啟動](launches-creating.md)
+   + [編輯啟動](launches-editing.md)
    + [提升啟動](launches-promoting.md)
 + 工作流程 {#workflows}
    + [使用工作流程](workflows.md)
@@ -92,7 +92,7 @@ ht-degree: 48%
    + [了解分段](segmentation-overview.md)
 + AEM和Adobe Campaign {#aem-adobe-campaign}
    + [使用Adobe Campaign](adobe-campaign.md)
-   + [使用Adobe Campaign Classic和Adobe Campaign Standard](campaign.md)
+   + [合作使用Adobe Campaign Classic與Adobe Campaign Standard](campaign.md)
    + [鎖定您的Adobe Campaign](target-adobe-campaign.md)
    + [在AEM中建立Adobe Campaign Forms](adobe-campaign-forms.md)
-   + [Adobe Campaign Components](adobe-campaign-components.md)
+   + [Adobe Campaign元件](adobe-campaign-components.md)

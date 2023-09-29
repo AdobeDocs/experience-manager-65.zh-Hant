@@ -8,7 +8,7 @@ user-guide-description: 了解如何使用及管理 AEM 內容與商務。
 source-git-commit: b3c44f93c235b5daa7b6385a0c12841fcba767ff
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 69%
+ht-degree: 70%
 
 ---
 
@@ -60,4 +60,4 @@ ht-degree: 69%
    + 開發 {#developing}
       + [電子商務](/help/commerce/cif-classic/developing/ecommerce.md)
       + [開發（一般）](/help/commerce/cif-classic/developing/generic.md)
-      + [使用SAPCommerce Cloud進行開發](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
+      + [使用SAPCommerce Cloud開發](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)

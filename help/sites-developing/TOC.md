@@ -11,7 +11,7 @@ role: Developer
 source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
 workflow-type: tm+mt
 source-wordcount: '1296'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 35%
    + [AEM觸控式UI的結構](touch-ui-structure.md)
    + [AEM觸控式UI的概念](touch-ui-concepts.md)
    + [AEM開發 — 指導方針與最佳作法](dev-guidelines-bestpractices.md)
-   + [使用用戶端程式庫](clientlibs.md)
+   + [使用用戶端資料庫](clientlibs.md)
    + [開發和頁面差異](pagediff.md)
    + [編輯器限制](editor-limitations.md)
    + [CSRF保護架構](csrf-protection.md)
@@ -34,7 +34,7 @@ ht-degree: 35%
    + [安全性](security.md)
    + [參考資料](reference-materials.md)
    + [建立功能完整的網站（傳統UI）](website.md)
-   + [設計及設計工具（傳統UI）](designer.md)
+   + [設計和設計工具（傳統UI）](designer.md)
    + [移轉至Touch UI](/help/sites-developing/touch-ui-migration.md)
 + 平台{#platform}
    + [Sling 速查表](sling-cheatsheet.md)
@@ -42,7 +42,7 @@ ht-degree: 35%
    + [標籤庫](taglib.md)
    + 範本{#templates}
       + [範本](templates.md)
-      + [頁面範本 — 可編輯 ](page-templates-editable.md)
+      + [頁面範本 — 可編輯](page-templates-editable.md)
       + [頁面範本 — 靜態](page-templates-static.md)
       + [內容片段範本](content-fragment-templates.md)
       + [最適化範本演算](templates-adaptive-rendering.md)
@@ -60,10 +60,10 @@ ht-degree: 35%
       + [將標籤建置到AEM應用程式中](building.md)
    + [自訂錯誤處理常式顯示的頁面](customizing-errorhandler-pages.md)
    + [自訂節點型別](custom-nodetypes.md)
-   + [新增用於圖形演算的字型](adding-fonts.md)
+   + [新增圖形演算的字型](adding-fonts.md)
    + [連線到SQL資料庫](jdbc.md)
-   + [將URL外部化](externalizer.md)
-   + [建立與使用解除安裝工單](dev-offloading.md)
+   + [外部化URL](externalizer.md)
+   + [建立及使用解除安裝工作](dev-offloading.md)
    + [設定Cookie使用方式](cookie-optout.md)
    + [如何以程式設計方式存取AEM JCR](access-jcr.md)
    + [將服務與JMX主控台整合](jmx-integration.md)
@@ -73,7 +73,7 @@ ht-degree: 35%
    + [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
    + [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
    + [元件概觀](components.md)
-   + [AEM元件 — 基本知識](components-basics.md)
+   + [AEM元件 — 基本需知](components-basics.md)
    + [開發AEM元件](developing-components.md)
    + [開發AEM元件 — 程式碼範例](developing-components-samples.md)
    + [內容服務的 JSON 匯出工具](json-exporter.md)
@@ -89,7 +89,7 @@ ht-degree: 35%
    + 國際化{#internationalization}
       + [國際化元件](i18n.md)
       + [國際化UI字串](i18n-dev.md)
-      + [使用翻譯工具管理字典](i18n-translator.md)
+      + [使用Translator管理字典](i18n-translator.md)
       + [擷取要轉譯的字串](i18n-extract.md)
    + 傳統UI元件{#classic-ui-components}
       + [開發AEM元件（傳統UI）](developing-components-classic.md)
@@ -109,7 +109,7 @@ ht-degree: 35%
          + [如何透過 AEM Delivery API 存取您的內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
          + [如何透過 AEM Assets API 更新您的內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
          + [如何整合一切](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
-         + [如何將無周邊應用程式上線](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
+         + [如何將 Headless 應用程式上線](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
          + [選擇性 - 如何使用 AEM 建立單頁應用程式](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
       + Headless 內容架構者歷程 {#architect}
          + [AEM Headless 內容架構者歷程概觀](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
@@ -146,7 +146,7 @@ ht-degree: 35%
       + [更新您的內容片段，以達到最佳化 GraphQL 篩選](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md)
       + [針對內容片段之遠端 AEM GraphQL 查詢的驗證](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md)
       + [包含內容片段的AEM GraphQL API — 範例內容和查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
-+ 混合式和SPA AEM開發{#spas}
++ 混合式與SPA AEM開發{#spas}
    + [使用 AEM 的混合式和 SPA](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [SPA 簡介和逐步解說](spa-walkthrough.md)
    + [SPA WKND 教學課程](spa-wknd.md)
@@ -159,13 +159,13 @@ ht-degree: 35%
    + [SPA 藍圖](spa-blueprint.md)
    + [SPA 頁面元件](spa-page-component.md)
    + [動態模型到元件對應 適用於SPA](spa-dynamic-model-to-component-mapping.md)
-   + [SPA模型製程](spa-routing.md)
+   + [SPA模型路由](spa-routing.md)
    + [RemotePage 元件](spa-remote-page.md)
    + [在 AEM 中編輯外部 SPA](spa-edit-external.md)
    + [SPA 中的複合元件](spa-composite-component.md)
    + [SPA和伺服器端轉譯](spa-ssr.md)
    + [為元件啟用 JSON 匯出](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
-   + [Launch 整合](spa-launch.md)
+   + [啟動整合](spa-launch.md)
    + [SPA參考資料](spa-reference-materials.md)
 + 開發工具{#devtools}
    + [開發工具](dev-tools.md)
@@ -184,10 +184,10 @@ ht-degree: 35%
    + [AEM Repo Tool](aem-repo-tool.md)
 + 個人化{#personlization}
    + [ContextHub](contexthub.md)
-   + [設定內容中心](ch-configuring.md)
+   + [設定Context中心](ch-configuring.md)
    + [將ContextHub新增至頁面並存取存放區](ch-adding.md)
    + [延伸 ContextHub](ch-extend.md)
-   + [範例ContextHub存放區候選者](ch-samplestores.md)
+   + [ContextHub存放區候選範例](ch-samplestores.md)
    + [ContextHub UI模組型別範例](ch-samplemodules.md)
    + [ContextHub 診斷](ch-diagnostics.md)
    + [針對目標內容開發](target.md)
@@ -197,9 +197,9 @@ ht-degree: 35%
       + [Client Context JavaScript API](ccjsapi.md)
 + 擴充AEM{#extending-aem}
    + [使用 Adobe Developer App Builder 延伸 AEM](app-builder.md)
-   + [自訂頁面製作](customizing-page-authoring-touch.md)
+   + [自訂頁面編寫](customizing-page-authoring-touch.md)
    + [自訂主控台](customizing-consoles-touch.md)
-   + [自訂頁面屬性檢視](page-properties-views.md)
+   + [自訂頁面屬性的檢視](page-properties-views.md)
    + [設定頁面以大量編輯頁面屬性](bulk-editing.md)
    + [自訂和擴充內容片段](customizing-content-fragments.md)
    + [轉譯專用內容片段設定元件](content-fragments-config-components-rendering.md)
@@ -213,12 +213,12 @@ ht-degree: 35%
       + [工作流程最佳實務](workflows-best-practices.md)
       + [工作流程處理序參考](workflows-process-ref.md)
       + [AEM工作流程中的變數](/help/sites-developing/using-variables-in-aem-workflows.md)
-   + [擴充多站點管理員](extending-msm.md)
+   + [擴充多網站管理員](extending-msm.md)
    + Tracking and Analytics{#extending-analytics}
       + [擴充事件追蹤](extending-analytics.md)
       + [將Adobe Analytics追蹤新增至元件](extending-analytics-components.md)
-      + [自訂Adobe Analytics架構](extending-analytics-framework.md)
-      + [實作Analytics的伺服器端頁面命名](extending-analytics-pa-naming.md)
+      + [自訂Adobe Analytics框架](extending-analytics-framework.md)
+      + [為Analytics實作伺服器端頁面命名](extending-analytics-pa-naming.md)
    + 雲端服務{#extending-cloud-services}
       + [雲端服務設定](extending-cloud-config.md)
       + [建立自訂Cloud Service](extending-cloud-config-custom-cloud.md)
@@ -226,7 +226,7 @@ ht-degree: 35%
    + Forms{#extending-forms}
       + [建立自訂表單對應](extending-campaign-form-mapping.md)
       + [使用Adobe Campaign表單元件建立自訂AEM頁面範本](extending-campaign-custom-template.md)
-      + [Request Analysis指令碼](analyze-request.md)
+      + [要求分析指令碼](analyze-request.md)
    + [將服務與JMX主控台整合](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/jmx-integration.html)
    + [開發大量編輯器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-bulk-editor.html)
    + 擴充傳統UI{#extending-classic-ui}
@@ -244,11 +244,11 @@ ht-degree: 35%
    + [接受與簽核](acceptance-signoff.md)
    + [下一個版本……](the-next-release.md)
    + [檢查清單](checklists.md)
-   + [艱難的一天](tough-day.md)
+   + [艱苦的一天](tough-day.md)
    + [測試您的UI](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/hobbes.html)
 + 最佳作法{#bestpractices}
-   + [最佳作法概觀](best-practices.md)
-   + [AEM開發指導方針與最佳作法](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html)
+   + [最佳實務概述](best-practices.md)
+   + [AEM開發指導方針與最佳作法](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html?lang=zh-Hant)
    + [開發最佳實務](development-practices.md)
    + [內容架構](content-architecture.md)
    + [軟體架構](software-architecture.md)
@@ -257,12 +257,12 @@ ht-degree: 35%
       + [在We.Retail中試用內容片段](we-retail-content-fragments.md)
       + [在We.Retail中試用核心元件](we-retail-core-components.md)
       + [在We.Retail中嘗試可編輯的範本](we-retail-editable-templates.md)
-      + [在We.Retail中嘗試回應式版面](we-retail-responsive-layout.md)
-      + [在We.Retail中嘗試全球化網站結構](we-retail-globalized-site-structure.md)
+      + [在We.Retail中試用回應式版面](we-retail-responsive-layout.md)
+      + [在We.Retail中試用全域化網站結構](we-retail-globalized-site-structure.md)
       + [在We.Retail中試用體驗片段](we-retail-experience-fragments.md)
    + [編碼提示](coding-tips.md)
    + [程式碼陷阱](code-pitfalls.md)
-   + [OSGI組合](osgi-bundles.md)
+   + [OSGI套件組合](osgi-bundles.md)
    + [JCR整合](jcr-integration.md)
    + [程式碼範例](code-samples.md)
    + [疑難排解緩慢查詢](troubleshooting-slow-queries.md)
@@ -270,5 +270,5 @@ ht-degree: 35%
    + [行動網頁](mobile-web.md)
    + [建立裝置群組篩選器](groupfilters.md)
    + [網頁的回應式設計](responsive.md)
-   + [建立行動裝置的網站](mobile.md)
+   + [建立行動裝置網站](mobile.md)
    + [模擬器](emulators.md)
