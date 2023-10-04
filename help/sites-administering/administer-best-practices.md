@@ -1,6 +1,6 @@
 ---
-title: 協助管理員快速上手並執行的最佳實務
-description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助管理員開始運作。
+title: 協助管理員啟動並執行的最佳實務
+description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，以協助管理員啟動並執行。
 uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '529'
 ht-degree: 7%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 7%
 
 最佳實務說明如何以最有效率且最有效的方式開發、管理或使用AEM。 這份不斷增加的主題清單包括AEM中的各種領域。
 
-下列區域已提供有關最佳實務的檔案：
+下列區域有與最佳實務相關的檔案：
 
 * [Assets](#assets)
 * [Sites](#sites)
@@ -30,7 +30,7 @@ ht-degree: 7%
 * [開發最佳實務](/help/sites-developing/best-practices.md)
 * [部署最佳實務](/help/sites-deploying/best-practices.md)
 
-以下表格中會說明並連結特定檔案。
+以下表格會說明並連結特定檔案。
 
 ## Assets {#assets}
 
@@ -39,14 +39,14 @@ ht-degree: 7%
 <table>
  <tbody>
   <tr>
-   <td>Assets周圍不同區域的最佳實務，可增強負載下的系統穩定性和效能</td>
+   <td>Assets周圍不同區域的最佳實務，可增強負載時的系統穩定性和效能</td>
    <td><a href="/help/assets/best-practices-for-assets.md">Assets 最佳實務</a></td>
-   <td>包含資產周圍不同區域最佳實務指南的連結。 檢閱這些說明後，您將擁有建置和管理企業資產管理系統的知識和工具。</td>
+   <td>包含資產周圍不同區域最佳實務指南的連結。 檢閱這些文章後，您將擁有建置和管理企業資產管理系統的知識和工具。</td>
   </tr>
   <tr>
    <td>如何組織您的內容（資料夾階層）</td>
    <td><a href="/help/assets/organize-assets.md">檔案管理最佳作法</a></td>
-   <td>許多處理設定檔是以資料夾為基礎，因為視訊、中繼資料、影像處理一律會套用至資料夾。 此最佳實務檔案說明如何定義及設定資料夾階層，因為階層對內容的處理方式有重大影響。 </td>
+   <td>大部分的處理設定檔都是以資料夾為基礎，因為視訊、中繼資料、影像處理一律會套用至資料夾。 此最佳實務檔案說明如何定義及設定檔案夾階層，因為階層對內容的處理方式有重大影響。 </td>
   </tr>
   <tr>
    <td>整合Scene7和AEM</td>
@@ -56,10 +56,10 @@ ht-degree: 7%
   <tr>
    <td>影像預設集選項</td>
    <td>瞭解 <a href="/help/assets/managing-image-presets.md#understanding-image-presets">影像預設集</a> 和 <a href="/help/assets/managing-image-presets.md#image-preset-options">影像預設集最佳作法</a></td>
-   <td>作為檔案的一部分，於 <a href="/help/assets/managing-image-presets.md">管理影像預設集</a>，這些主題說明什麼是影像預設集，以及選取影像預設集選項的最佳作法。</td>
+   <td>作為的相關檔案的一部分， <a href="/help/assets/managing-image-presets.md">管理影像預設集</a>，這些主題說明什麼是影像預設集，以及選取影像預設集選項的最佳作法。</td>
   </tr>
   <tr>
-   <td>Dynamic Media與Scene7的直接整合</td>
+   <td>Dynamic Media與Scene7直接整合的比較</td>
    <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Scene7/AEM整合與Dynamic Media</a></td>
    <td>說明何時最好使用Dynamic Media解決方案、何時將S7與AEM整合，或何時同時使用兩者。</td>
   </tr>
@@ -75,12 +75,12 @@ ht-degree: 7%
   <tr>
    <td>GDPR法規遵循</td>
    <td><a href="/help/sites-administering/gdpr-compliance-sites.md">AEM Sites GDPR法規遵循</a></td>
-   <td>歐盟資料隱私權的一般資料保護規範於2018年5月起生效。 AEM Sites符合GDPR。 本頁面將引導客戶完成在AEM Sites中處理GDPR請求的程式。 它描述了儲存私人資料的位置，以及如何以手動方式或使用程式碼移除它們。</td>
+   <td>歐盟資料隱私權的一般資料保護規範於2018年5月起生效。 AEM Sites符合GDPR。 本頁將指導客戶完成在AEM Sites中處理GDPR請求的程式。 它描述了儲存私人資料的位置，以及如何以手動方式或使用程式碼移除它們。</td>
   </tr>
   <tr>
    <td>為您的執行個體定義預設UI。</td>
    <td><p><a href="/help/sites-authoring/select-ui.md#configuring-the-default-ui-for-your-instance">為您的執行個體設定預設使用者介面</a></p> </td>
-   <td>AEM有兩種UI：觸控最佳化和classic。 本節詳細說明如何為您的執行個體定義預設UI。</td>
+   <td>AEM有兩種UI：觸控最佳化和傳統。 本節詳細說明如何定義執行個體的預設UI。</td>
   </tr>
   <tr>
    <td>多網站管理</td>
@@ -89,7 +89,7 @@ ht-degree: 7%
   </tr>
   <tr>
    <td>翻譯內容</td>
-   <td><a href="/help/sites-administering/tc-bp.md">翻譯最佳實務</a></td>
+   <td><a href="/help/sites-administering/tc-bp.md">翻譯最佳做法</a></td>
    <td>規劃及實作多語言網站的最佳作法。</td>
   </tr>
   <tr>
@@ -100,7 +100,7 @@ ht-degree: 7%
   <tr>
    <td>工作流程</td>
    <td><a href="/help/sites-developing/workflows-best-practices.md#configuration">工作流程最佳實務 — 設定</a></td>
-   <td>工作流程可讓您自動化Adobe Experience Manager (AEM)活動，並可代表AEM環境中發生的大量處理，因此強烈建議您仔細計畫和設定工作流程實作。</td>
+   <td>工作流程可讓您自動化Adobe Experience Manager (AEM)活動，並可呈現AEM環境中發生的大量處理，因此強烈建議您仔細計畫和設定工作流程實作。</td>
   </tr>
  </tbody>
 </table>

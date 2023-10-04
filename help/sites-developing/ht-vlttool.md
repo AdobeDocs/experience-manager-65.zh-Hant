@@ -1,16 +1,12 @@
 ---
 title: 如何使用VLT工具
-seo-title: How to use the VLT Tool
 description: Jackrabbit FileVault工具(VLT)由Apache Foundation開發，可將Jackrabbit/AEM例項的內容對應至您的檔案系統
-seo-description: The Jackrabbit FileVault tool (VLT) is developed by The Apache Foundation that maps the content of a Jackrabbit/AEM instance to your file system
-uuid: 579e7785-8b50-4366-b562-8e79b6451464
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2715'
 ht-degree: 1%
@@ -333,7 +329,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 | `diff` | `di` | 顯示兩個路徑之間的差異。 |
 | `console` |  | 執行互動式主控台。 |
 | `rcp` |  | 將節點樹從一個遠端存放庫複製到另一個存放庫。 |
-| `sync` |  | 允許控制儲存庫同步服務。 |
+| `sync` |  | 可讓您控制儲存庫同步服務。 |
 
 ### 匯出 {#export}
 
@@ -746,7 +742,7 @@ vlt rcp http://localhost:4502/crx/-/jcr:root/content  https://admin:admin@localh
 
 ### 同步 {#sync}
 
-允許控制儲存庫同步服務。 這個命令會嘗試將目前的工作目錄置於同步控制之下，而不使用任何引數。 若在vlt結帳中執行，它會使用個別篩選器和主機來設定同步化。 如果在vlt出庫之外執行，則只有在目錄為空時，它才會註冊目前的資料夾以進行同步處理。
+可讓您控制儲存庫同步服務。 這個命令會嘗試將目前的工作目錄置於同步控制之下，而不使用任何引數。 如果在vlt簽出內執行，它會使用個別篩選器和主機來設定同步。 如果在vlt出庫之外執行，則只有在目錄為空時，它才會註冊目前的資料夾以進行同步處理。
 
 #### 語法 {#syntax-18}
 

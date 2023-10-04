@@ -1,20 +1,16 @@
 ---
 title: 支援最適化表單本地化的全新地區設定
-seo-title: Supporting new locales for adaptive forms localization
 description: AEM Forms可讓您新增本地化最適化表單的地區設定。 支援的地區設定預設為英文、法文、德文和日文。
-seo-description: AEM Forms lets you add new locales for localizing adaptive forms. The supported locales by default are English, French, German, and Japanese.
-uuid: 7f9fab6b-8d93-46bb-8c7c-7b723d5159ea
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 feature: Adaptive Forms
 role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '813'
 ht-degree: 2%
 
 ---
@@ -43,7 +39,7 @@ ht-degree: 2%
 * 依指定順序檢視下列引數：
 
    * 要求引數 `afAcceptLang`
-若要覆寫使用者的瀏覽器地區設定，您可以傳遞 `afAcceptLang` 要求引數以強制地區設定。 例如，下列URL將強制以日文地區設定呈現表單：
+若要覆寫使用者的瀏覽器地區設定，您可以傳遞 `afAcceptLang` 要求引數以強制地區設定。 例如，以下URL被強制以日文地區設定呈現表單：
      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
    * 為使用者設定的瀏覽器地區設定，該設定是在使用 `Accept-Language` 標頭。

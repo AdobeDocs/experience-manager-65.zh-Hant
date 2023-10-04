@@ -10,9 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: 445e24af-cd1a-414d-bd01-9feb6631bbef
 feature: Mobile Forms
 exl-id: a9879445-d626-4279-8a95-a9009294b483
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '299'
 ht-degree: 5%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 5%
 
 ## 允許另存為草稿功能的自訂設定檔 {#custom-profile-to-allow-save-as-draft-feature}
 
-AEM Forms可立即提供 **另存為草稿** 設定檔。 您可以使用另存為草稿設定檔來轉譯表單，以啟用HTML5表單的草稿功能。 您可以在下列位置為表單指定HTML轉譯器設定檔： [Forms Manager](/help/forms/using/introduction-managing-forms.md).
+AEM Forms可立即提供 **另存為草稿** 設定檔。 您可以使用另存為草稿設定檔來轉譯表單，以啟用HTML5表單的草稿功能。 您可以在下列位置為表單指定HTML轉譯設定檔： [Forms Manager](/help/forms/using/introduction-managing-forms.md).
 
-若要為您現有的「 」啟用「另存為草稿」功能 [自訂設定檔](/help/forms/using/custom-profile.md)，新增下列屬性至您的自訂設定檔節點：
+若要為您現有的專案啟用「另存為草稿」功能 [自訂設定檔](/help/forms/using/custom-profile.md)，新增下列屬性至您的自訂設定檔節點：
 
 <table>
  <tbody>
@@ -52,7 +52,7 @@ AEM Forms可立即提供 **另存為草稿** 設定檔。 您可以使用另存�
 
 ## 草稿儲存和清單 {#drafts-storage-and-listing}
 
-為表單啟用「另存為草稿」功能後；儲存表單時，它會列在 [草稿與提交元件](/help/forms/using/draft-submission-component.md). 您可以從「草稿和提交」元件中擷取並開始填寫已儲存的表單。
+為表單啟用「另存為草稿」功能後；儲存表單時，表單會列在 [草稿與提交元件](/help/forms/using/draft-submission-component.md). 您可以擷取並開始填寫從「草稿和提交」元件中儲存的。
 
 若要為「草稿和提交」元件啟用表單清單，請將下列屬性新增至設定檔節點：
 
@@ -68,7 +68,7 @@ AEM Forms可立即提供 **另存為草稿** 設定檔。 您可以使用另存�
    <td>fp.enablePortalSubmit</td>
    <td>字串</td>
    <td>true</td>
-   <td>若要啟用草稿和表單以列於<br /> 提交後Forms Portal草稿和提交元件</td>
+   <td>若要啟用草稿與表單以列於<br /> 提交後Forms Portal草稿和提交元件</td>
   </tr>
  </tbody>
 </table>

@@ -1,7 +1,7 @@
 ---
 title: 建立裝置群組篩選器
 seo-title: Creating Device Group Filters
-description: 建立裝置群組篩選器，以定義一組裝置功能需求
+description: 建立裝置群組篩選器以定義一組裝置功能需求
 seo-description: Create a device group filter to define a set of device capability requirements
 uuid: 30c0699d-2388-41b5-a062-f5ea9d6f08bc
 contentOwner: Guillaume Carlino
@@ -12,9 +12,9 @@ discoiquuid: 9fef1f91-a222-424a-8e20-3599bedb8b41
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
@@ -23,19 +23,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
 
-建立裝置群組篩選器，以定義一組裝置功能需求。 建立您需要的篩選器，以鎖定所需的裝置功能群組。
+建立裝置群組篩選器，以定義一組裝置功能需求。 建立您需要的篩選器數，以鎖定所需的裝置功能群組。
 
-設計篩選器以便使用它們的組合來定義功能群組。 通常，不同裝置群組的功能會重疊。 因此，您可能會使用具有多個裝置群組定義的篩選器。
+設計您的篩選器，以便使用它們的組合來定義功能群組。 通常，不同裝置群組的功能會重疊。 因此，您可能會使用具有多個裝置群組定義的篩選器。
 
 建立篩選器後，您可在以下位置使用它： [群組設定。](/help/sites-developing/mobile.md#creating-a-device-group)
 
 ## 篩選器Java類別 {#the-filter-java-class}
 
-裝置群組篩選器是實作的OSGi元件 [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) 介面。 部署後，實作類別會提供裝置群組設定可用的篩選服務。
+裝置群組篩選器是實作的OSGi元件 [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) 介面。 部署時，實作類別會提供篩選服務，可供裝置群組設定使用。
 
-本文所述的解決方案使用Apache Felix Maven SCR外掛程式來促進元件和服務的開發。 因此，範例Java類別會使用 `@Component`和 `@Service` 註解。 類別具有下列結構：
+本文所述的解決方案使用Apache Felix Maven SCR外掛程式來促進元件和服務的開發。 因此，範例Java類別會使用 `@Component`和 `@Service` 註解。 類別的結構如下：
 
 ```java
 package com.adobe.example.myapp;
@@ -69,8 +69,8 @@ public class myDeviceGroupFilter implements DeviceGroupFilter {
 
 您必須提供下列方法的程式碼：
 
-* `getDescription`：傳回篩選器說明。 說明會顯示在「裝置群組設定」對話方塊中。
-* `getTitle`：傳回篩選的名稱。 選取裝置群組的篩選器時，名稱就會出現。
+* `getDescription`：傳回篩選器說明。 說明會顯示在「裝置群組組態」對話方塊中。
+* `getTitle`：傳回篩選的名稱。 為裝置群組選取篩選器時，名稱會出現。
 * `matches`：判斷裝置是否具備必要的功能。
 
 ### 提供篩選器名稱和說明 {#providing-the-filter-name-and-description}
@@ -87,7 +87,7 @@ public String getTitle() {
 }
 ```
 
-以硬式編碼撰寫名稱和說明文字，已足以用於單一語言的撰寫環境。 請考慮將字串外部化以供多語言使用，或啟用變更字串而不重新編譯原始程式碼。
+以硬式編碼撰寫名稱和說明文字，已足以應付多語言撰寫環境。 請考慮將字串外部化以供多語言使用，或啟用變更字串而不重新編譯原始程式碼。
 
 ### 根據篩選條件進行評估 {#evaluating-against-filter-criteria}
 
@@ -95,9 +95,9 @@ public String getTitle() {
 
 * devicegroup物件
 * 使用者代理程式的名稱
-* 包含裝置功能的對映物件。 Map索引鍵是WURFL™功能名稱，值是WURFL™資料庫的對應值。
+* 包含裝置功能的對映物件。 Map鍵是WURFL™功能名稱，值是WURFL™資料庫的對應值。
 
-此 [com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) 介麵包含靜態欄位中WURFL™功能名稱的子集。 從裝置功能對應擷取值時，使用這些欄位常數作為索引鍵。
+此 [com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) 介麵包含靜態欄位中WURFL™功能名稱的子集。 從裝置功能地圖擷取值時，使用這些欄位常數作為索引鍵。
 
 例如，下列程式碼範例會判斷裝置是否支援CSS：
 
@@ -110,13 +110,13 @@ cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML
 
 >[!NOTE]
 >
->確保部署到AEM的WURFL™資料庫包含您用作篩選條件的功能。 (請參閱 [裝置偵測](/help/sites-developing/mobile.md#server-side-device-detection).)
+>請確定部署至AEM的WURFL™資料庫包含您用來作為篩選條件的功能。 (請參閱 [裝置偵測](/help/sites-developing/mobile.md#server-side-device-detection).)
 
-### 熒幕大小篩選範例 {#example-filter-for-screen-size}
+### 熒幕大小的篩選範例 {#example-filter-for-screen-size}
 
-後續的範例DeviceGroupFilter實作會決定裝置的實體大小是否符合最低需求。 此篩選器的用途是新增詳細程度至觸控裝置群組。 無論實體熒幕大小為何，應用程式UI中的按鈕大小都應相同。 其他專案（例如文字）的大小會有所不同。 此篩選器可讓您動態選取特定CSS，以控制UI元素的大小。
+後續的範例DeviceGroupFilter實作會決定裝置的實體大小是否符合最低需求。 此篩選器的目的在於將粒度新增至觸控裝置群組。 無論實體熒幕大小為何，應用程式UI中的按鈕大小都應相同。 其他專案（例如文字）的大小會有所不同。 此篩選器可讓您動態選取特定CSS，以控制UI元素的大小。
 
-此篩選器會將大小條件套用至 `physical_screen_height` 和 `physical_screen_width` WURFL™屬性名稱。
+此篩選器會將大小條件套用至 `physical_screen_height` 和 `physical_screen_width` wurfl™屬性名稱。
 
 ```java
 package com.adobe.example.myapp;
@@ -175,13 +175,13 @@ getTitle和getDescription方法傳回的String值會包含在裝置群組摘要�
 
 ### Maven POM檔案 {#the-maven-pom-file}
 
-如果您使用Maven建置應用程式，以下POM程式碼會很實用。 POM會參照數個必要的外掛程式和相依性。
+如果您使用Maven建置應用程式，以下POM程式碼將相當實用。 POM會參照數個必要的外掛程式和相依性。
 
 **外掛程式:**
 
 * Apache Maven編譯器外掛程式：從原始程式碼編譯Java類別。
 * Apache Felix Maven套件組合外掛程式：建立套件組合和資訊清單
-* Apache Felix Maven SCR外掛程式：建立元件描述項檔案並設定服務元件資訊清單標頭。
+* Apache Felix Maven SCR外掛程式：建立元件描述元檔案並設定服務元件資訊清單標頭。
 
 **相依性:**
 
@@ -189,9 +189,9 @@ getTitle和getDescription方法傳回的String值會包含在裝置群組摘要�
 
 * `org.apache.felix.scr.annotations.jar`：提供元件和服務註解。
 
-DeviceGroup和DeviceGroupFilter介面包含在Day Communique 5 WCM Mobile API套件組合中。 Felix註解包含在Apache Felix宣告式服務套件組合中。 您可以從公用Adobe存放庫取得此JAR檔案。
+DeviceGroup和DeviceGroupFilter介面包含在Day Communique 5 WCM Mobile API套件組合中。 Felix註解包含在Apache Felix Declarative Services套件組合中。 您可以從公用Adobe存放庫取得此JAR檔案。
 
-編寫時，5.5.2是AEM最新版本中的WCM Mobile API套件組合版本。 使用AdobeWeb主控台([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles))以確保這是部署在您的環境中的套件組合版本。
+編寫時，5.5.2是AEM最新版本中的WCM Mobile API套件組合版本。 使用AdobeWeb主控台([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles))，以確保這是部署在您的環境中的套件組合版本。
 
 **POM：** （您的POM將使用不同的groupId和版本。）
 
@@ -258,4 +258,4 @@ DeviceGroup和DeviceGroupFilter介面包含在Day Communique 5 WCM Mobile API套
 </project>
 ```
 
-新增設定檔， [取得內容套件Maven外掛程式](/help/sites-developing/vlt-mavenplugin.md) 一節會提供您的maven設定檔案來使用公共Adobe存放庫。
+新增設定檔， [取得內容套件Maven外掛程式](/help/sites-developing/vlt-mavenplugin.md) 一節提供您的maven設定檔案來使用公共Adobe存放庫。

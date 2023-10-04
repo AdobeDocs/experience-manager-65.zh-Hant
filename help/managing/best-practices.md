@@ -1,22 +1,22 @@
 ---
 title: 管理專案 — 最佳實務檢查清單
-description: 管理專案以實施Adobe Experience Manager (AEM)需要計畫和瞭解。 專案檢查清單旨在作為專案傳送的一組最佳實務。 它們會引導您完成專案生命週期的所有階段，並提供您目前狀態的高層級監控。
+description: 管理專案以實施Adobe Experience Manager (AEM)需要計畫和瞭解。 專案檢查清單旨在作為專案傳送的一組最佳實務。 它們會引導您完成專案生命週期的所有階段，並提供您狀態的高層級監控。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist, introduction
 content-type: reference
 docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '3251'
+source-wordcount: '3240'
 ht-degree: 1%
 
 ---
 
 # 管理專案 — 最佳實務檢查清單{#managing-projects-best-practices-checklist}
 
-管理專案以實作Adobe Experience Manager (AEM)需要計畫和瞭解，以確保您在實作專案之前和期間瞭解必須作出的問題和（相關）決策。
+管理專案以實施Adobe Experience Manager (AEM)需要規劃和瞭解，以便於在實施專案之前和期間瞭解您必須所做的問題和（相關）決策。
 
 為協助您，最佳實務包括：
 
@@ -25,7 +25,7 @@ ht-degree: 1%
    * 根據階段、里程碑和角色定義輸入和交付專案。
    * 提供自動概覽（品質、健全和完整性）來指示進度和專案健全狀態。
 
-* 檔案，根據 [檢查清單](/help/managing/best-practices-checklist.md)，其詳細說明了：
+* 檔案根據 [檢查清單](/help/managing/best-practices-checklist.md) 詳細資訊：
 
    * [專案心率](#projectheartbeat) 分析。
    * [按角色顯示狀態](#status-by-role) 概述。
@@ -117,7 +117,7 @@ ht-degree: 1%
 
 ### 規劃 {#planning}
 
-計畫您的專案會整合準備工作。 在此，您需要開始將目標和期望轉換為由具體任務組成的定義明確的藍圖，並以明確的溝通和嚴格的評審來衡量進度。
+計畫您的專案會整合準備工作。 您應該在此開始將目標與期望轉換成由具體任務所組成的定義良好的藍圖，並以明確的溝通和嚴格的審查來衡量進度。
 
 #### 里程碑 {#milestones-1}
 
@@ -135,7 +135,7 @@ ht-degree: 1%
 
 * **通訊**
 
-  溝通永遠是任何專案成功的關鍵。 您需要清楚且有效率的溝通，以確保每個人：
+  溝通永遠是任何專案成功的關鍵。 清楚有效率地溝通，確保每個人都能：
 
    * 致力於相同的基本目標
    * 來自相同資訊庫
@@ -211,8 +211,8 @@ ht-degree: 1%
 
   系統整合需要您規劃（然後實作）：
 
-   * 所有子系統和 [解決方案整合](/help/sites-administering/integration.md) 將彙集在一起，以一個連貫的系統運作
-   * 如何整合任何協力廠商系統；以及任何特殊考量，例如離線/線上、使用者端/瀏覽器端，或在協力廠商系統故障時的容錯移轉處理
+   * 所有子系統和 [解決方案整合](/help/sites-administering/integration.md) 整合在一起，以一個連貫的系統運作
+   * 任何協力廠商系統如何整合；以及任何特殊考量，例如離線/線上、使用者端/瀏覽器端，或在協力廠商系統故障時進行遞減處理
 
 * **測試概念**
 
@@ -570,7 +570,7 @@ ht-degree: 1%
 
 * 作者與一般使用者
 
-   * 將使用系統建立和維護您的網站內容的人員。
+   * 使用系統建立及維護您網站內容的人員。
 
 ## 必要檔案與交付專案 {#required-documents-and-deliverables}
 

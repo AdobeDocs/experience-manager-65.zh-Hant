@@ -1,16 +1,14 @@
 ---
 title: 建立及組織頁面
 description: 本節說明如何使用AEM建立和管理頁面，以便您接著在這些頁面上建立內容。
-uuid: 47ce137a-7a85-4b79-b4e0-fdf08a9e77bd
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
 exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1906'
 ht-degree: 3%
 
 ---
@@ -323,7 +321,7 @@ AEM提供更新要重新命名或移動之頁面的內部連結的功能。 您�
 
 ### 鎖定頁面 {#locking-a-page}
 
-您可以 [鎖定/解鎖頁面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page) 從主控台或編輯個別頁面時。 有關頁面是否已鎖定的資訊也會顯示在這兩個位置。
+您可以 [鎖定/解鎖頁面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page) 從主控台或編輯個別頁面時。 有關鎖定頁面的資訊也會顯示在這兩個位置。
 
 ### 建立新資料夾 {#creating-a-new-folder}
 

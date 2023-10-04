@@ -1,26 +1,24 @@
 ---
 title: 將AEM 6.5與Adobe Campaign Classic整合
 description: 瞭解如何將AEM 6.5與Adobe Campaign Classic整合
-uuid: 3c998b0e-a885-4aa9-b2a4-81b86f9327d3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 8db2cadc83b26e04f9931e18c53db3bf0be03796
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '1583'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # 將AEM 6.5與Adobe Campaign Classic整合 {#integrating-campaign-classic}
 
-將AEM與Adobe Campaign Classic (ACC)整合後，您可以直接在AEM中管理電子郵件傳送、內容和表單。 需要同時執行Adobe Campaign Classic和AEM中的設定步驟，才能在解決方案之間啟用雙向通訊。
+將AEM與Adobe Campaign Classic (ACC)整合後，您可以直接在AEM中管理電子郵件傳送、內容和表單。 需要同時執行Adobe Campaign Classic和AEM的設定步驟，才能在解決方案之間啟用雙向通訊。
 
-此整合可讓AEM和Adobe Campaign Classic獨立使用。 行銷人員可以在Adobe Campaign中建立行銷活動並使用目標定位，而內容建立者則可以同時在AEM中設計內容。 透過整合，Adobe Campaign可鎖定在AEM中建立之行銷活動的內容和設計，並加以傳遞。
+此整合可讓AEM和Adobe Campaign Classic獨立使用。 行銷人員可以在Adobe Campaign中建立行銷活動並使用目標定位，而內容建立人員則可以同時在AEM中設計內容。 透過整合，Adobe Campaign可針對在AEM中建立的行銷活動內容和設計進行目標定位和傳遞。
 
 >[!INFO]
 >
@@ -28,7 +26,7 @@ ht-degree: 0%
 
 ## 整合步驟 {#integration-steps}
 
-AEM與Campaign的整合需要在這兩個解決方案中執行許多步驟。
+AEM與Campaign的整合需要在這兩種解決方案中執行數個步驟。
 
 1. [在Campaign中安裝AEM整合套件。](#install-package)
 1. [在Campaign中為AEM建立運運算元](#create-operator)
@@ -37,13 +35,13 @@ AEM與Campaign的整合需要在這兩個解決方案中執行許多步驟。
 1. [在AEM中設定行銷活動 — 遠端使用者](#configure-user)
 1. [在Campaign中設定AEM外部帳戶](#acc-setup)
 
-本檔案將詳細引導您完成每個步驟。
+本檔案將詳細介紹每一個步驟。
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 * Adobe Campaign Classic的管理員存取權
    * 若要執行整合，您需要運作中的Adobe Campaign Classic執行個體，包括已設定的資料庫。
-   * 如果您需要有關如何設定和配置Adobe Campaign Classic的更多詳細資訊，請參閱 [Adobe Campaign Classic檔案，](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html) 尤其是安裝及設定指南。
+   * 如果您需要更多有關如何設定Adobe Campaign Classic的詳細資訊，請參閱 [Adobe Campaign Classic檔案，](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html) 尤其是安裝及設定指南。
 * AEM的管理員存取權
 
 ## 在Campaign中安裝AEM整合套件 {#install-package}
@@ -70,19 +68,19 @@ AEM與Campaign的整合需要在這兩個解決方案中執行許多步驟。
 
 整合套件現已安裝。
 
-## 在Campaign中為AEM建立運運算元 {#create-operator}
+## 在Campaign中建立AEM的運運算元 {#create-operator}
 
 整合套件會自動建立 `aemserver` AEM用來連線至Adobe Campaign的運運算元。 您必須為此運運算元定義安全區域並設定其密碼。
 
 1. 使用使用者端主控台，以管理員身分登入Adobe Campaign。
 
-1. 選取 **工具** -> **總管** 功能表列中的。
+1. 選取 **工具** -> **瀏覽器** 功能表列中的。
 
 1. 在總管中，導覽至 **管理** > **存取管理** > **運運算元** 節點。
 
 1. 選取 `aemserver` 運運算元。
 
-1. 於 **編輯** 標籤中，選取 **存取許可權** 子標籤，然後按一下 **編輯存取引數……** 連結。
+1. 在 **編輯** 標籤中，選取 **存取許可權** 子標籤，然後按一下 **編輯存取引數……** 連結。
 
    ![設定安全區域](assets/access-rights.png)
 
@@ -104,25 +102,25 @@ AEM與Campaign的整合需要在這兩個解決方案中執行許多步驟。
 
 1. 儲存檔案。
 
-1. 確保安全性區域不會被中的個別設定覆寫 `config-<server name>.xml` 檔案。
+1. 請確定安全區域不會被 `config-<server name>.xml` 檔案。
 
-   * 如果組態檔包含單獨的安全區域設定，則變更 `allowUserPassword` 屬性至 `true`.
+   * 如果組態檔包含個別的安全區域設定，則變更 `allowUserPassword` 歸因至 `true`.
 
-1. 如果您想要變更Adobe Campaign Classic伺服器連線埠，請取代 `8080` 使用所需的連線埠。
+1. 如果您想要變更Adobe Campaign Classic伺服器連線埠，請取代 `8080` 與所需的連線埠。
 
    >[!CAUTION]
    >
-   >依預設，運運算元沒有設定安全性區域。 若要讓AEM連線到Adobe Campaign，您必須選取區域，如先前步驟所述。
+   >依預設，運運算元沒有設定安全性區域。 若要讓AEM連線至Adobe Campaign，您必須選取區域，如先前步驟所述。
    >
-   >Adobe強烈建議建立專用於AEM的安全區域，以避免任何安全問題。 如需有關本主題的詳細資訊，請參閱 [Adobe Campaign Classic檔案。](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html)
+   >Adobe強烈建議建立AEM專屬的安全區域，以避免任何安全性問題。 如需有關本主題的詳細資訊，請參閱 [Adobe Campaign Classic檔案。](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html)
 
 1. 在Campaign使用者端中，返回 `aemserver` 運運算元並選取 **一般** 標籤。
 
 1. 按一下 **重設密碼……** 連結。
 
-1. 指定密碼並將其儲存在安全位置以供日後使用。
+1. 指定密碼並將其儲存在安全位置以供將來使用。
 
-1. 按一下 **確定** 儲存密碼給 `aemserver` 運運算元。
+1. 按一下 **確定** 儲存的密碼 `aemserver` 運運算元。
 
 ## 在AEM中設定Campaign整合 {#campaign-integration}
 
@@ -130,15 +128,15 @@ AEM使用 [您已在Campaign中設定的運運算元](#create-operator) 以便�
 
 1. 以管理員身分登入您的AEM編寫執行個體。
 
-1. 從全域導覽側邊欄中，選取 **工具** > **Cloud Services** > **舊版Cloud Services** > **Adobe Campaign**，然後按一下 **立即設定**.
+1. 從全域導覽側邊欄中，選取 **工具** > **Cloud Service** > **舊版Cloud Service** > **Adobe Campaign**，然後按一下 **立即設定**.
 
    ![設定Adobe Campaign](assets/configure-campaign-service.png)
 
-1. 在對話方塊中，輸入「 」，建立Campaign服務設定 **標題** 並按一下 **建立**.
+1. 在對話方塊中，輸入 **標題** 並按一下 **建立**.
 
    ![設定Campaign對話方塊](assets/configure-campaign-dialog.png)
 
-1. 新視窗和對話方塊會開啟以編輯設定。 提供必要資訊。
+1. 新視窗和對話方塊會開啟以編輯配置。 提供必要資訊。
 
    * **使用者名稱**  — 這是 [在上一步建立的Adobe Campaign AEM整合套件運運算元。](#create-operator) 預設為 `aemserver`.
    * **密碼**  — 這是的密碼 [在上一步建立的Adobe Campaign AEM整合套件運運算元。](#create-operator)
@@ -146,7 +144,7 @@ AEM使用 [您已在Campaign中設定的運運算元](#create-operator) 以便�
 
    ![在AEM中設定Adobe Campaign](assets/configure-campaign.png)
 
-1. 選取 **連線至Adobe Campaign** 驗證連線，然後按一下 **確定**.
+1. 選取 **連線至Adobe Campaign** 以驗證連線，然後按一下 **確定**.
 
 AEM現在可以與Adobe Campaign通訊。
 
@@ -154,29 +152,29 @@ AEM現在可以與Adobe Campaign通訊。
 >
 >請確定您的Adobe Campaign伺服器可透過網際網路連線。 AEM無法存取私人網路。
 
-## 設定復寫至AEM發佈執行個體的設定 {#replication}
+## 設定復寫至AEM發佈執行個體 {#replication}
 
-Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項通常僅供貴組織內部使用。 為了讓行銷活動的收件者能夠存取影像和資產等內容，您需要發佈該內容。
+Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項通常僅供貴組織內部使用。 為了讓行銷活動的收件者可存取影像和資產等內容，您需要發佈該內容。
 
-復寫代理程式負責將您的內容從AEM製作執行個體發佈到發佈執行個體，且必須設定復寫代理程式，整合才能正常運作。 此步驟也是將某些編寫執行個體設定復寫到發佈執行個體所必需的。
+復寫代理程式負責將您的內容從AEM製作執行個體發佈至發佈執行個體，且必須設定為讓整合正常運作。 此步驟也是將某些編寫執行個體設定復寫至發佈執行個體所必需的。
 
-若要設定從AEM編寫執行個體到發佈執行個體的復寫：
+若要設定從您的AEM編寫執行個體到發佈執行個體的復寫：
 
 1. 以管理員身分登入您的AEM編寫執行個體。
 
-1. 從全域導覽側邊欄中，選取 **工具** > **部署** > **復寫** > **作者上的代理**，然後點選或按一下 **預設代理程式（發佈）**.
+1. 從全域導覽側邊欄中，選取 **工具** > **部署** > **復寫** > **作者上的代理程式**，然後點選或按一下 **預設代理程式（發佈）**.
 
-   ![設定復寫代理程式](assets/acc-replication-config.png)
+   ![設定復寫代理](assets/acc-replication-config.png)
 
 1. 點選或按一下 **編輯** 然後選取 **傳輸** 標籤。
 
-1. 設定 **URI** 欄位，取代預設值 `localhost` 值為AEM發佈執行個體的IP位址。
+1. 設定 **URI** 欄位，取代預設值 `localhost` 具有AEM發佈執行個體IP位址的值。
 
-   ![傳輸標籤](assets/acc-transport-tab.png)
+   ![傳輸頁簽](assets/acc-transport-tab.png)
 
-1. 點選或按一下 **確定** 以儲存代理程式設定的變更。
+1. 點選或按一下 **確定** 儲存代理程式設定的變更。
 
-您已設定復寫至AEM發佈執行個體，讓您的行銷活動收件者可以存取您的內容。
+您已設定復寫至AEM發佈執行個體，以便行銷活動收件者可以存取您的內容。
 
 >[!NOTE]
 >
@@ -189,22 +187,22 @@ Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項�
 [外部化程式](/help/sites-developing/externalizer.md) 是AEM中的OSGi服務，可將資源路徑轉換為外部和絕對URL，這是AEM提供Campaign可使用的內容所必需的。 您必須加以設定，Campaign整合才能運作。
 
 1. 以管理員身分登入AEM編寫執行個體。
-1. 從全域導覽側邊欄中，選取 **工具** > **作業** > **網頁主控台** > **OSGi設定** 並搜尋 **Day CQ連結外部化器**.
-1. 根據預設，最後一個專案位於 **網域** 欄位適用於發佈執行個體。 變更URL的預設值 `http://localhost:4503` 至公開可用的發佈執行個體。
+1. 從全域導覽側邊欄中，選取 **工具** > **作業** > **網頁主控台** > **OSGi設定** 並搜尋 **Day CQ連結外部器**.
+1. 根據預設，此欄位的最後一個專案 **網域** 欄位適用於發佈執行個體。 變更URL的預設值 `http://localhost:4503` 至您公開可用的發佈執行個體。
 
    ![設定外部化程式](assets/acc-externalizer-config.png)
 
 1. 點選或按一下&#x200B;**儲存**。
 
-您已設定Externalizer，Adobe Campaign現在可以存取您的內容。
+您已設定Externalizer，且Adobe Campaign現在可以存取您的內容。
 
 >[!NOTE]
 >
-發佈執行個體必須可以從Adobe Campaign伺服器連線。 如果它指向 `localhost:4503` 或Adobe Campaign無法存取的其他伺服器，來自AEM的影像將不會顯示在Adobe Campaign主控台中。
+發佈執行個體必須可以從Adobe Campaign伺服器存取。 如果它指向 `localhost:4503` 或Adobe Campaign無法連線的其他伺服器，來自AEM的影像將不會顯示在Adobe Campaign主控台中。
 
-## 在AEM中設定行銷活動 — 遠端使用者 {#configure-user}
+## 在AEM中設定行銷活動遠端使用者 {#configure-user}
 
-為了讓Campaign與AEM通訊，您需要為 `campaign-remote` AEM中的使用者。
+為了讓Campaign能夠與AEM通訊，您必須為 `campaign-remote` AEM位使用者。
 
 1. 以管理員身分登入AEM。
 1. 在主要導覽主控台上，按一下 **工具** 在左側邊欄中。
@@ -212,33 +210,33 @@ Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項�
 1. 找到 `campaign-remote` 使用者。
 1. 選取 `campaign-remote` 使用者和點按 **屬性** 以編輯使用者。
 1. 在 **編輯使用者設定** 視窗，按一下 **變更密碼**.
-1. 為使用者提供新密碼，並將密碼記在安全位置以供日後使用。
+1. 為使用者提供新密碼，並將密碼記在安全位置以備將來使用。
 1. 按一下 **儲存** 以儲存密碼變更。
 1. 按一下 **儲存並關閉** 將變更儲存至 `campaign-remote` 使用者。
 
 ## 在Campaign中設定AEM外部帳戶 {#acc-setup}
 
-時間 [安裝 **AEM整合** 在Campaign中封裝，](#install-package) 已為AEM建立外部帳戶。 透過設定此外部帳戶，Adobe Campaign可以連線至AEM，啟用解決方案之間的雙向通訊。
+時間 [安裝 **AEM整合** Campaign中的套件，](#install-package) 會為AEM建立外部帳戶。 透過設定此外部帳戶，Adobe Campaign可以連線至AEM，啟用解決方案之間的雙向通訊。
 
 1. 使用使用者端主控台，以管理員身分登入Adobe Campaign。
 
-1. 選取 **工具** -> **總管** 功能表列中的。
+1. 選取 **工具** -> **瀏覽器** 功能表列中的。
 
 1. 在總管中，導覽至 **管理** > **Platform** > **外部帳戶** 節點。
 
    ![外部帳戶](assets/external-accounts.png)
 
-1. 找到外部AEM帳戶。 依預設，其值為：
+1. 找到外部AEM帳戶。 預設為包含下列值：
 
    * **型別** - `AEM`
    * **標籤** - `AEM Instance`
    * **內部名稱** - `aemInstance`
 
-1. 於 **一般** 標籤中，輸入您在 [設定行銷活動遠端使用者密碼](#set-campaign-remote-password) 步驟。
+1. 在 **一般** 標籤中，輸入您在 [設定行銷活動遠端使用者密碼](#set-campaign-remote-password) 步驟。
 
    * **伺服器** - AEM作者伺服器位址
-      * AEM作者伺服器必須可從Adobe Campaign Classic伺服器執行個體連線。
-      * 確定伺服器位址 **not** 以尾隨斜線結尾。
+      * AEM作者伺服器必須可從Adobe Campaign Classic伺服器例項存取。
+      * 確定伺服器位址可以 **非** 以尾隨斜線結尾。
    * **帳戶**  — 根據預設，這是 `campaign-remote` 您在AEM中設定的使用者 [設定行銷活動遠端使用者密碼](#set-campaign-remote-password) 步驟。
    * **密碼**  — 此密碼與 `campaign-remote` 您在AEM中設定的使用者 [設定行銷活動遠端使用者密碼](#set-campaign-remote-password) 步驟。
 
@@ -250,6 +248,6 @@ Adobe Campaign現在可以與AEM通訊。
 
 ## 後續步驟 {#next-steps}
 
-Adobe Campaign Classic和AEM都已設定完成，整合即可完成。
+在設定Adobe Campaign Classic和AEM後，整合現已完成。
 
 您現在可以繼續使用，瞭解如何在Adobe Experience Manager中建立電子報 [本檔案。](/help/sites-authoring/campaign.md)

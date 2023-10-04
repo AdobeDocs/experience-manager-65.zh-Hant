@@ -1,15 +1,11 @@
 ---
 title: 使用最適化表單的最佳作法
-seo-title: Best practices for working with adaptive forms
 description: 說明設定AEM Forms專案、開發最適化表單及最佳化AEM Forms系統效能的最佳實務。
-seo-description: Explains best practices for setting up an AEM Forms project, developing adaptive forms, and optimizing the performance for AEM Forms system.
-uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '4734'
 ht-degree: 1%
@@ -293,7 +289,7 @@ AEM提供翻譯工作流程，您可用來將最適化表單當地語系化。 �
 
 * 針對各表單的共同元素使用最適化表單片段，並將片段本地化。 它可確保您將片段本地化一次，並反映在使用本地化片段的所有表單中。
 * 任何修改，例如新增元件或以當地語系化表單套用指令碼，都不會自動當地語系化。 因此，您必須先完成表單，再進行當地語系化，以避免多個本地化週期。
-* 使用 `afAcceptLang` 要求引數以覆寫瀏覽器地區設定並以指定地區設定轉譯表單。 例如，無論瀏覽器設定中指定的地區設定為何，下列URL都將強制以日文地區設定呈現表單：
+* 使用 `afAcceptLang` 要求引數以覆寫瀏覽器地區設定並以指定地區設定轉譯表單。 例如，無論瀏覽器設定中指定的地區設定為何，下列URL都會強制以日文地區設定轉譯表單：
 
   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 

@@ -5,9 +5,9 @@ content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -59,13 +59,13 @@ ht-degree: 0%
 
    * `less` 資料夾：包含 `less` 變數檔案，您可在其中定義 `less` 變數和 `less mixins` 用來管理.css樣式的物件。
 
-     此資料夾包含 `less` 變數檔案， `less` mixin檔案， `less` 使用mixin和變數定義樣式的檔案。 然後這些較少的檔案會以樣式匯入.less.
+     此資料夾包含 `less` 變數檔案， `less` mixin檔案， `less` 使用mixin和變數定義樣式的檔案。 以及所有這些 `less` 然後檔案會以styles.less匯入。
 
    * `css`資料夾：包含.css檔案，您可以在其中定義主題中使用的靜態樣式。
 
    **較少的變數檔案**：這些是您定義或覆寫用於定義CSS樣式的變數的檔案。
 
-   調適型表單提供下列.less檔案中定義的OOTB變數：
+   調適型表單提供以下定義的OOTB變數 `.less` 檔案：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
@@ -74,7 +74,7 @@ ht-degree: 0%
 
    `/apps/clientlibs/fd/af/third-party/less/variables.less`
 
-   您可以使用最適化表單隨附的變數較少，也可以覆寫這些變數，或建立新的變數較少。
+   您可以使用 `less` 最適化表單隨附的變數，您可以覆寫這些變數，或建立新的變數 `less` 變數。
 
    >[!NOTE]
    >
@@ -131,11 +131,11 @@ ht-degree: 0%
    }
    ```
 
-   **Styles.less檔案：** 使用此檔案來包含您必須在使用者端資料庫中使用的所有較少檔案（變數、mixin、樣式）。
+   **Styles.less檔案：** 使用此檔案來包含所有 `less` 您必須在使用者端資料庫中使用的檔案（變數、mixin、樣式）。
 
    在下列範例中 `styles.less` 檔案中，匯入陳述式可以任意順序放置。
 
-   匯入下列.less檔案的陳述式是強制性的：
+   匯入下列專案的陳述式 `.less` 檔案是強制性的：
 
    * `globalvariables.less`
    * `layoutvariables.less`

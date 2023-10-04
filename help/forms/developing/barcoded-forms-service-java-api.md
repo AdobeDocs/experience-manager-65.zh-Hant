@@ -1,16 +1,13 @@
 ---
-title: 條碼式Forms服務Java ApiqUick啟動(SOAP)
-seo-title: Barcoded Forms Service Java APIQuick Start(SOAP)
-description: 條碼式Forms服務Java ApiqUick啟動(SOAP)
-uuid: a6739695-ee0b-4480-8cef-0f91a72deaad
+title: 條碼式Forms服務Java APIQuick啟動(SOAP)
+description: 條碼式Forms服務Java APIQuick啟動(SOAP)
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 245b9cc4-5837-4a22-b5f4-a1d4c5d66918
 role: Developer
 exl-id: 907c12be-dab4-48b5-9da1-a76b711f49f2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
@@ -21,17 +18,17 @@ ht-degree: 0%
 
 條碼式Forms服務可使用Java API快速入門(SOAP)：
 
-[快速入門（SOAP模式）：使用Java API解碼條碼式表單資料](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API將條碼式表單資料解碼](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
 
 AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
 >[!NOTE]
 >
->「使用AEM Forms進行程式設計」中的「快速入門」是根據部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server。 不過，如果您使用其他作業系統（例如UNIX），請以適用的作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「使用AEM Forms進行程式設計」中的「快速入門」是根據部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器所設計。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）：使用Java API解碼條碼式表單資料 {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java API將條碼式表單資料解碼 {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
 
-下列Java程式碼會解碼儲存為Loan.pdf之PDF表單中的表單資料。 解碼的資料會儲存為名為extractedData.xml的XML檔案。 此程式碼範例會將 `org.w3c.dom.Document` 物件放入 `com.adobe.idp.Document` 物件。 (請參閱 [解碼條碼式表單資料](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data).)
+下列Java程式碼會解碼儲存為Loan.pdf之PDF表單中的表單資料。 解碼的資料會儲存為名為extractedData.xml的XML檔案。 此程式碼範例將 `org.w3c.dom.Document` 將物件放入 `com.adobe.idp.Document` 物件。 (請參閱 [解碼條碼式表單資料](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data).)
 
 ```java
  /*
@@ -114,7 +111,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
          ServiceClientFactory myFactory = ServiceClientFactory.createInstance(connectionProps);
          BarcodedFormsServiceClient barClient = new BarcodedFormsServiceClient(myFactory);
  
-         //Specify a PDF document to convert to a XDP file
+         //Specify a PDF document to convert to an XDP file
          FileInputStream fileInputStream = new FileInputStream("C:\\Adobe\LoanBarForms.pdf");
          Document inDoc = new Document (fileInputStream);
  
@@ -220,4 +217,4 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->同時使用 `org.w3c.dom.Document` 物件和 `com.adobe.idp.Document` 物件在相同應用程式邏輯中，讓兩個物件都完全符合資格是很好的做法。
+>同時使用 `org.w3c.dom.Document` 物件與 `com.adobe.idp.Document` 物件在相同的應用程式邏輯中，完全限定兩個物件是很好的做法。

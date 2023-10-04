@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 前往 **頁面屬性** ，並將 *標題文字*， *說明*， *目標範本*、和 *目標路徑*，如上所述。
 
-接下來，您必須定義此支架將建立的頁面結構。 若要這麼做，請前往 **[設計模式](/help/sites-authoring/page-authoring.md#sidekick)** 在支架頁面上。 隨後會出現一個連結，讓您編輯 **對話方塊編輯器**.
+接下來，您必須定義此支架將建立的頁面結構。 若要這麼做，請前往 **[設計模式](/help/sites-authoring/page-authoring.md#sidekick)** 在支架頁面上。 隨即顯示連結，讓您編輯 **對話方塊編輯器**.
 
 ![cq5_dialog_editor](assets/cq5_dialog_editor.png)
 
