@@ -7,7 +7,7 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: d76fce58973bd011b53a5da41578b57a8e10912e
+source-git-commit: c7e30587a37b8bf20932b43549ab38c668bd75af
 workflow-type: tm+mt
 source-wordcount: '3694'
 ht-degree: 1%
@@ -707,8 +707,7 @@ Adobe保留在任何指定時間點變更AEM Forms on JEE版本支援的第三�
 - Microsoft® Windows Server 2019 （64位元）
 - Microsoft® Active Directory 2016
 
-下列平台在2022年6月2日發行的AEM Forms 6.5.17.0中標示為已過時：
-
+下列平台在2022年6月2日發行的AEM Forms 6.5.13.0中標示為已過時：
 - Microsoft®SharePoint 2016
 
 下列平台於2022年3月3日發行的AEM Forms 6.5.12.0版本中已標示為淘汰：
