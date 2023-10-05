@@ -1,8 +1,8 @@
 ---
 title: 持續性 GraphQL 查詢
-description: 瞭解如何在Adobe Experience Manager中保留GraphQL查詢，以最佳化效能。 持續性查詢可以由使用者端應用程式使用HTTPGET方法請求，並且回應可以快取在Dispatcher和CDN層，最終提高使用者端應用程式的效能。
+description: 瞭解如何在Adobe Experience Manager中保留GraphQL查詢，以將效能最佳化。 持久查詢可以由使用者端應用程式使用HTTPGET方法請求，響應可以快取在Dispatcher和CDN層，最終提高使用者端應用程式的效能。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '1423'
 ht-degree: 90%
@@ -11,7 +11,7 @@ ht-degree: 90%
 
 # 持續性 GraphQL 查詢 {#persisted-queries-caching}
 
-持續查詢是建立並儲存在Adobe Experience Manager (AEM)伺服器上的GraphQL查詢。 用戶端應用程式可以透過 GET 要求來要求它們。GET請求的回應可以快取在Dispatcher和內容傳遞網路(CDN)層，最終提高請求使用者端應用程式的效能。 這與標準的 GraphQL 查詢不同，後者使用 POST 要求執行，其回應無法輕鬆快取。
+持續查詢是建立並儲存在GraphQL (AEM)伺服器上的Adobe Experience Manager查詢。 用戶端應用程式可以透過 GET 要求來要求它們。GET請求的回應可以在Dispatcher和內容傳遞網路(CDN)層進行快取，最終提高請求使用者端應用程式的效能。 這與標準的 GraphQL 查詢不同，後者使用 POST 要求執行，其回應無法輕鬆快取。
 
 <!--
 >[!NOTE]
@@ -60,7 +60,7 @@ AEM 有提供 [GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiq
 * cURL - 請參閱以下範例
 * 其他工具，包括 [Postman](https://www.postman.com/)
 
-GraphiQL IDE 是保留查詢的&#x200B;**首選**&#x200B;方法。若要使用 **cURL** 命令列工具保留給定查詢：
+GraphiQL IDE 是保留查詢的&#x200B;**首選**&#x200B;方法。若要使用 **cURL** 命令列工具保留特定查詢：
 
 1. 透過將查詢放入新端點 URL `/graphql/persist.json/<config>/<persisted-label>` 來準備查詢。
 
@@ -279,7 +279,7 @@ query getAdventuresByActivity($activity: String!) {
 
 對於編寫執行個體，預設值為：
 
-* `max-age`  : 60
+* `max-age`：60
 * `s-maxage` : 60
 * `stale-while-revalidate` : 86400
 * `stale-if-error` : 86400
@@ -287,7 +287,7 @@ query getAdventuresByActivity($activity: String!) {
 這些：
 
 * 無法以OSGi設定覆寫
-* 可透過使用cURL定義HTTP標頭設定的請求覆寫；它應包含適合的設定 `cache-control` 和/或 `surrogate-control`；如需範例，請參閱 [管理持續查詢層級的快取](#cache-persisted-query-level)
+* 限定使用cURL之HTTP標頭設定的要求可覆寫；它應包含適合的設定 `cache-control` 和/或 `surrogate-control`；如需範例，請參閱 [在持續查詢層級管理快取](#cache-persisted-query-level)
 
 <!-- CQDOC-20186 -->
 <!-- following entry is only when the GraphiQL IDE is ready; add cross-reference too -->
@@ -299,7 +299,7 @@ query getAdventuresByActivity($activity: String!) {
 
 對於發佈執行個體，預設值為：
 
-* `max-age`  : 60
+* `max-age`：60
 * `s-maxage` : 7200
 * `stale-while-revalidate` : 86400
 * `stale-if-error` : 86400
@@ -415,5 +415,5 @@ URL 可以分解成以下幾個部分：
    1. Select tree activation for the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
 
 * Using a workflow (via workflow launcher configuration):
-  1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, amongst others).
+  1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, among others).
 -->
