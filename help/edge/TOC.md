@@ -8,7 +8,7 @@ breadcrumb-title: Edge遞送服務
 user-guide-description: 深入瞭解Edge Delivery服務，這是一組可撰寫的服務，可啟用快速開發環境，讓作者可以快速更新及發佈，並快速啟動新網站。
 feature: Edge Delivery Services
 role: User
-source-git-commit: ded523dbdcb56fb9870565b8bb5cf9e060b5f978
+source-git-commit: 912ae69a03a30822edbe58ebd1e530b44d182744
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 10%
@@ -18,6 +18,6 @@ ht-degree: 10%
 
 # Edge遞送服務 {#edge-delivery-services}
 
-+ [開始使用 Edge Delivery](/help/edge/overview.md)
 + Edge遞送服務 {#edge-delivery}
+   + [開始使用 Edge Delivery](/help/edge/overview.md)
    + [使用邊緣傳送](/help/edge/using.md)
