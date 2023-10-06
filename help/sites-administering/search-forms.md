@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 11%
@@ -18,7 +18,7 @@ ht-degree: 11%
 
 使用 **搜尋Forms** 自訂在製作環境的各種AEM主控台及/或面板中可用的搜尋面板中使用的搜尋述詞選擇。 自訂這些面板可讓搜尋功能根據您的特定需求而通用。
 
-A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增多個述詞，包括（其中包括）「屬性」述詞以搜尋符合您指定之單一屬性的資產，或「選項」述詞以搜尋符合您指定之特定屬性的一或多個值的資產。
+A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增多個述詞，其中包括（其中包括）「屬性」述詞，以搜尋符合您指定的單一屬性的資產，或「選項」述詞，以搜尋符合您為特定屬性指定的一或多個值的資產。
 
 您可以 [設定搜尋表單](#configuring-your-search-forms) 用於各種主控台和資產瀏覽器（編輯頁面時）。 此 [用於設定這些表單的對話方塊](#configuring-your-search-forms) 可透過以下方式存取：
 
