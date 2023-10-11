@@ -2,9 +2,9 @@
 title: 最佳化 GraphQL 查詢
 description: 瞭解如何在Adobe Experience Manager as a Cloud Service中篩選、分頁和排序內容片段時最佳化GraphQL查詢，以進行Headless內容傳送。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: c0570d6c0d624d950ddbb5c0d2ce38ff7c3756a4
+source-git-commit: 3ec34efc14cc49d0f45cb4b175573c33c1cc232e
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1966'
 ht-degree: 60%
 
 ---
@@ -91,6 +91,17 @@ ht-degree: 60%
 
 每個持續性查詢可以有自己一組特定的快取控制標頭。 標題可設定在 [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md).
 
+您也可以使用設定 **cURL** 命令列工具。 例如，使用 `PUT` 要求使用快取控制項建立包裝的簡單查詢。
+
+```shell
+$ curl -X PUT \
+    -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+    -H "Content-Type: application/json" \
+    "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
+    -d \
+'{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
+```
+
 <!-- or the [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache). 
 -->
 
@@ -99,6 +110,7 @@ ht-degree: 60%
 請參閱：
 
 * [快取持續性查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md#caching-persisted-queries)
+* [如何保留 GraphQL 查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md#how-to-persist-query)
 <!--
 * [Managing cache for your persisted queries](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache)
 -->
