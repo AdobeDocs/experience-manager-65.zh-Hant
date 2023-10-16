@@ -1,13 +1,13 @@
 ---
-title: 使用AEM搭配SAPCommerce Cloud
-description: 瞭解如何搭配SAPCommerce Cloud使用AEM。
+title: 搭配SAPCommerce Cloud使用AEM
+description: 瞭解如何搭配SAPCommerce Cloud使用Adobe Experience Manager。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1704'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 安裝後，您可以設定執行個體：
 
-1. [設定Geometrixx Outdoors的面向搜尋](#configure-the-facetted-search-for-geometrixx-outdoors).
+1. [設定Geometrixx Outdoors的多面搜尋](#configure-the-facetted-search-for-geometrixx-outdoors).
 1. [設定目錄版本](#configure-the-catalog-version).
 1. [設定匯入結構](#configure-the-import-structure).
 1. [設定產品屬性以載入](#configure-the-product-attributes-to-load).
@@ -24,7 +24,7 @@ ht-degree: 2%
 1. [設定目錄匯入工具](#configure-the-catalog-importer).
 1. 使用 [匯入工具匯入目錄](#catalog-import) 到AEM中的特定位置。
 
-## 設定Geometrixx Outdoors的面向搜尋 {#configure-the-facetted-search-for-geometrixx-outdoors}
+## 設定Geometrixx Outdoors的多面搜尋 {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
@@ -34,28 +34,28 @@ ht-degree: 2%
 
    [http://localhost:9001/hmc/hybris](http://localhost:9001/hmc/hybris)
 
-1. 從側邊欄中選取 **系統**，則 **Facet搜尋**，則 **Facet搜尋設定**.
-1. **開啟編輯器** 的 **clothescatalog的Solr設定範例**.
+1. 在側邊欄中，選取 **系統**，然後 **Facet搜尋**，然後 **Facet搜尋設定**.
+1. **開啟編輯器** 針對 **clothescatalog的Solr設定範例**.
 
-1. 下 **目錄版本** use **新增目錄版本** 新增 `outdoors-Staged` 和 `outdoors-Online` 至清單。
+1. 在 **目錄版本** 使用 **新增目錄版本** 以新增 `outdoors-Staged` 和 `outdoors-Online` 至清單。
 1. **儲存設定。**
-1. 開啟 **SOLR專案型別** 新增 **SOLR排序** 至 `ClothesVariantProduct`：
+1. 開啟 **SOLR專案型別** 以新增 **SOLR排序** 至 `ClothesVariantProduct`：
 
    * 關聯性（「關聯性」，分數）
-   * name-asc (「名稱（升序）」，名稱)
+   * name-asc (&quot;Name (ascending)&quot;， name)
    * name-desc (&quot;Name (descending)&quot;， name)
-   * price-asc (「Price (ascending)」， priceValue)
+   * price-asc (「價格（升序）」， priceValue)
    * price-desc (&quot;Price (descending)&quot;， priceValue)
 
    >[!NOTE]
    >
-   >使用快顯選單（通常是按一下滑鼠右鍵）來選取 `Create Solr sort`.
+   >使用內容功能表（通常是按一下滑鼠右鍵）來選取 `Create Solr sort`.
    >
-   >若為Hybris 5.0.0，請開啟 `Indexed Types` 標籤，按兩下 `ClothesVariantProduct`，然後按一下索引標籤 `SOLR Sort`.
+   >若為Hybris 5.0.0，請開啟 `Indexed Types` 標籤，按兩下 `ClothesVariantProduct`，然後標籤 `SOLR Sort`.
 
    ![chlimage_1-36](/help/sites-administering/assets/chlimage_1-36a.png)
 
-1. 在 **索引型別** 標籤，設定 **構成型別** 至：
+1. 在 **索引型別** 標籤，設定 **撰寫型別** 至：
 
    `Product - Product`
 
@@ -71,7 +71,7 @@ ht-degree: 2%
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}}) AND {modifiedtime} <= ?lastIndexTime
    ```
 
-1. 在 **索引型別** 標籤，調整 `category` Facet。 連按兩下類別清單中的最後一個專案，以開啟 **索引屬性** 標籤：
+1. 在 **索引型別** 標籤，調整 `category` Facet. 連按兩下類別清單中的最後一個專案，以開啟 **索引屬性** 標籤：
 
    >[!NOTE]
    >
@@ -84,7 +84,7 @@ ht-degree: 2%
    ![chlimage_1-39](/help/sites-administering/assets/chlimage_1-39a.png)
 
 1. **儲存變更。**
-1. 再次從 **SOLR專案型別**，調整 `price` facet的設定如下。 與 `category`，按兩下 `price` 以開啟 **索引屬性** 標籤：
+1. 再次從 **SOLR專案型別**，調整 `price` facet根據下列熒幕擷取畫面。 如同 `category`，按兩下 `price` 以開啟 **索引屬性** 標籤：
 
    ![chlimage_1-40](/help/sites-administering/assets/chlimage_1-40a.png)
 
@@ -93,14 +93,14 @@ ht-degree: 2%
    ![chlimage_1-41](/help/sites-administering/assets/chlimage_1-41a.png)
 
 1. **儲存變更。**
-1. 開啟 **系統**， **Facet搜尋**，則 **索引器操作精靈**. 啟動cronjob：
+1. 開啟 **系統**， **Facet搜尋**，然後 **索引器操作精靈**. 啟動cronjob：
 
    * **索引器作業**： `full`
    * **Solr設定**： `Sample Solr Config for Clothes`
 
 ## 設定目錄版本 {#configure-the-catalog-version}
 
-此 **目錄版本** ( `hybris.catalog.version`)時，可透過OSGi服務進行設定：
+此 **目錄版本** ( `hybris.catalog.version`)可針對OSGi服務設定匯入的：
 
 **Day CQ Commerce Hybris設定**
 ( `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
@@ -111,7 +111,7 @@ ht-degree: 2%
 >
 >使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
-記錄輸出提供已建立頁面和元件的意見回饋，並報告潛在的錯誤。
+記錄輸出提供已建立頁面和元件的意見回饋，並報告潛在錯誤。
 
 ## 設定匯入結構 {#configure-the-import-structure}
 
@@ -154,9 +154,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->您可以 [實作您自己的匯入處理常式來自訂此程式](#configure-the-import-structure).
+>您可以 [實作您自己的匯入處理常式，以自訂此程式](#configure-the-import-structure).
 
-匯入時要產生的結構可設定為：
+匯入時要產生的結構可以設定為：
 
 &quot;**Day CQ Commerce Hybris預設匯入處理常式**
 `(com.adobe.cq.commerce.hybris.importer.DefaultImportHandler`)
@@ -172,7 +172,7 @@ ht-degree: 2%
    **Day CQ Commerce Hybris預設回應剖析器**
 (`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
 
-   您可以在此處定義載入和對映所需的各種選項和屬性。
+   您可以在此定義載入和對映所需的各種選項和屬性。
 
    >[!NOTE]
    >
@@ -186,7 +186,7 @@ ht-degree: 2%
 * [增量匯入](#incremental-import)
 * [快速更新](#express-update)
 
-從Hybris匯入的實際產品資訊會儲存在儲存庫中，位於：
+從Hybris匯入的實際產品資訊會儲存在下列位置的存放庫中：
 
 `/etc/commerce/products`
 
@@ -200,7 +200,7 @@ ht-degree: 2%
 >
 >hybris實作(即 `geometrixx-outdoors/en_US`)只會將產品ID和其他基本資訊儲存在 `/etc/commerce`.
 >
->每次請求產品的相關資訊時，都會參考hybris伺服器。
+>每次請求產品的相關資訊時，都會參考Hybris伺服器。
 
 ### 完全匯入 {#full-import}
 
@@ -237,7 +237,7 @@ ht-degree: 2%
        /etc/commerce/products/outdoors
    ```
 
-   您可以使用CRXDE Lite開啟此專案；例如：
+   您可以以CRXDE Lite開啟此專案；例如：
 
    `[http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)`
 
@@ -247,7 +247,7 @@ ht-degree: 2%
 
    `/etc/commerce/products`
 
-   您可以使用CRXDE Lite開啟此專案；例如：
+   您可以以CRXDE Lite開啟此專案；例如：
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -264,7 +264,7 @@ ht-degree: 2%
 1. 選取核取方塊 **增量匯入**.
 1. 按一下 **匯入目錄** 以開始匯入。
 
-   完成後，您可以在下方驗證AEM中更新的資料：
+   完成後，您可以驗證下AEM中更新的資料：
 
    ```
        /etc/commerce/products
@@ -273,13 +273,13 @@ ht-degree: 2%
 
 ### 快速更新 {#express-update}
 
-匯入程式可能需要很長的時間，因此，作為「產品同步化」的延伸，您可以為手動觸發的快速更新選取目錄的特定區域。 這會使用匯出摘要與標準屬性設定。
+匯入程式可能需要很長的時間，因此，作為「產品同步化」的延伸，您可以選取目錄的特定區域，以進行手動觸發的快速更新。 這會使用匯出摘要與標準屬性組態。
 
 1. 檢查AEM中相關產品的相關資訊（在適當的子樹狀結構下）：
 
    `/etc/commerce/products`
 
-   您可以使用CRXDE Lite開啟此專案；例如：
+   您可以以CRXDE Lite開啟此專案；例如：
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -300,7 +300,7 @@ ht-degree: 2%
 1. 選取核取方塊 **快速更新**.
 1. 按一下 **匯入目錄** 以開始匯入。
 
-   完成後，您可以在下方驗證AEM中更新的資料：
+   完成後，您可以驗證下AEM中更新的資料：
 
    ```
        /etc/commerce/products
@@ -308,7 +308,7 @@ ht-degree: 2%
 
 ## 設定目錄匯入工具 {#configure-the-catalog-importer}
 
-您可以使用hybris目錄、類別和產品的批次匯入工具，將hybris目錄匯入至AEM。
+Hybris目錄可以使用Hybris目錄、類別和產品的批次匯入工具，匯入AEM。
 
 匯入工具使用的引數可以設定為：
 
@@ -319,9 +319,9 @@ ht-degree: 2%
 
 ## 目錄匯入 {#catalog-import}
 
-Hybris套件隨附目錄匯入工具，可用於設定初始頁面結構。
+hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
 
-可從以下網址取得：
+可從下列位置取得此值：
 
 `http://localhost:4502/etc/importers/hybris.html`
 
@@ -342,9 +342,9 @@ Hybris套件隨附目錄匯入工具，可用於設定初始頁面結構。
 
 若要從目錄中移除一或多個產品：
 
-1. [設定OSGi服務的](/help/sites-deploying/configuring-osgi.md) **Day CQ Commerce Hybris目錄匯入工具**；另請參閱 [設定目錄匯入工具](#configure-the-catalog-importer).
+1. [為OSGi服務設定](/help/sites-deploying/configuring-osgi.md) **Day CQ Commerce Hybris目錄匯入工具**；另請參閱 [設定目錄匯入工具](#configure-the-catalog-importer).
 
-   啟用下列屬性：
+   啟動下列屬性：
 
    * **啟用產品移除**
    * **啟用產品資產移除**
@@ -353,22 +353,22 @@ Hybris套件隨附目錄匯入工具，可用於設定初始頁面結構。
    >
    >使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得完整詳細資訊。 如需可設定引數及其預設值的完整清單，另請參閱主控台。
 
-1. 透過執行兩個增量更新來初始化匯入工具(請參閱 [目錄匯入](#catalog-import))：
+1. 執行兩次增量更新來初始化Importer (請參閱 [目錄匯入](#catalog-import))：
 
    * 第一次執行會產生一組已變更的產品 — 如記錄清單中所示。
-   * 這已是第二次不更新任何產品。
+   * 這是第一次不應更新任何產品。
 
    >[!NOTE]
    >
-   >第一個匯入是初始化產品資訊。 第二次匯入會驗證一切正常運作，且產品集已準備就緒。
+   >第一個匯入是初始化產品資訊。 第二次匯入會驗證是否已一切正常運作，且產品集是否已準備就緒。
 
-1. 檢查包含您要移除之產品的類別頁面。 應會顯示產品詳細資料。
+1. 勾選包含您要移除之產品的類別頁面。 應會顯示產品詳細資料。
 
-   例如，以下類別顯示Cajamara產品的詳細資料：
+   例如，下列類別顯示Cajamara產品的詳細資料：
 
    [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-1. 移除hybris主控台中的產品。 使用選項 **變更核准狀態** 若要將狀態設定為 `unapproved`. 產品會從即時摘要中移除。
+1. 移除hybris主控台中的產品。 使用選項 **變更核准狀態** 若要將狀態設為 `unapproved`. 產品會從即時摘要中移除。
 
    例如：
 
@@ -377,7 +377,7 @@ Hybris套件隨附目錄匯入工具，可用於設定初始頁面結構。
    * 搜尋 `Cajamara`
    * 選取此產品並將核准狀態變更為 `unapproved`
 
-1. 執行另一個增量更新(請參閱 [目錄匯入](#catalog-import))。 記錄會列出已刪除的產品。
+1. 執行另一次增量更新(請參閱 [目錄匯入](#catalog-import))。 記錄會列出已刪除的產品。
 1. [轉出](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog) 適當的目錄。 產品和產品頁面已從AEM中移除。
 
    例如：
@@ -393,9 +393,9 @@ Hybris套件隨附目錄匯入工具，可用於設定初始頁面結構。
 
    * 此 `Cajamara` 產品已從中移除 `Bike` 類別
 
-1. 若要恢復產品：
+1. 若要復原產品：
 
-   1. 在Hybris中，將核准狀態設定回 **已核准**
+   1. 在Hybris中，將核准狀態設回 **已核准**
    1. 在AEM中：
 
       1. 執行增量更新
@@ -404,7 +404,7 @@ Hybris套件隨附目錄匯入工具，可用於設定初始頁面結構。
 
 ## 將訂單歷史記錄特徵新增至使用者端內容 {#add-order-history-trait-to-the-client-context}
 
-若要將訂單歷史記錄新增至 [使用者端內容](/help/sites-developing/client-context.md)：
+若要新增訂單歷史記錄至 [使用者端內容](/help/sites-developing/client-context.md)：
 
 1. 開啟 [使用者端內容設計頁面](/help/sites-administering/client-context.md)，方法是：
 
@@ -416,7 +416,7 @@ Hybris套件隨附目錄匯入工具，可用於設定初始頁面結構。
 
    1. 開啟 [使用者端內容](/help/sites-administering/client-context.md).
    1. 新增專案至購物車。
-   1. 完成結帳。
+   1. 完成簽出。
    1. 檢查使用者端內容。
    1. 新增其他專案至購物車。
    1. 導覽至結帳頁面：
@@ -428,10 +428,10 @@ Hybris套件隨附目錄匯入工具，可用於設定初始頁面結構。
    >
    >此訊息的實現方式：
    >
-   >* 導覽至 [http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html](http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html)
+   >* 瀏覽至 [http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html](http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html)
    >
    >  行銷活動包含一個體驗。
    >
    >* 按一下區段([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))
    >
-   >* 區段是使用 **訂單歷史記錄屬性** 特徵。
+   >* 區段是使用 **訂單歷程記錄屬性** 特徵。

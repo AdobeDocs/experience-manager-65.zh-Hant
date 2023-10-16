@@ -1,13 +1,13 @@
 ---
 title: 使用頁面版本
-description: 瞭解版本設定，以及如何在特定的時間點建立頁面的「快照」。
+description: 瞭解版本設定，以及如何在特定的時間點建立頁面的快照。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 4eb0de5e-0306-4166-9cee-1297a5cd14ce
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 0%

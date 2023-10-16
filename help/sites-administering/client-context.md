@@ -1,7 +1,7 @@
 ---
 title: ClientContext
 seo-title: Client Context
-description: 瞭解如何在AEM中使用Client Context。
+description: 瞭解如何使用Client Context來檢視有關Adobe Experience Manager中目前頁面和訪客的資訊。
 seo-description: Learn how to use the Client Context in AEM.
 uuid: 82b2f976-cb41-42f8-ad4b-3a5cd23cc5f5
 contentOwner: msm-service
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
 workflow-type: tm+mt
-source-wordcount: '1969'
+source-wordcount: '1980'
 ht-degree: 0%
 
 ---
