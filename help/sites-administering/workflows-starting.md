@@ -1,25 +1,21 @@
 ---
 title: 開始工作流程
-seo-title: Starting Workflows
-description: 瞭解如何在AEM中啟動工作流程。
-seo-description: Learn how to start Workflows in AEM.
-uuid: 0648d335-ecce-459d-95fd-3d4d76181b32
+description: 瞭解如何在Adobe Experience Manager中管理工作流程，以便使用各種方法手動或自動啟動工作流程。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 exl-id: 84a1964c-4121-4763-b946-9eee6093747d
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '799'
 ht-degree: 4%
 
 ---
 
 # 開始工作流程{#starting-workflows}
 
-管理工作流程時，您可以使用多種方法來啟動工作流程：
+管理工作流程時，您可以使用各種方法來啟動工作流程：
 
 * 手動：
 
@@ -93,10 +89,10 @@ ht-degree: 4%
 
    >[!NOTE]
    >
-   >此 **[暫時性](/help/sites-developing/workflows.md#transient-workflows)** 指標顯示不會保留工作流程歷史記錄的工作流程。
+   >此 **[暫時性](/help/sites-developing/workflows.md#transient-workflows)** 指標顯示未保留工作流程歷史記錄的工作流程。
 
 1. 選取 **開始工作流程** 工具列中的。
-1. 將會開啟「執行工作流程」對話方塊，讓您指定：
+1. 「執行工作流程」對話方塊開啟，讓您指定：
 
    * **裝載**
 
@@ -121,7 +117,7 @@ ht-degree: 4%
 
    * **事件類型**
 
-     將啟動工作流程的事件型別：
+     啟動工作流程的事件型別：
 
       * 建立日期
       * 修改時間
@@ -172,10 +168,10 @@ ht-degree: 4%
 
      這會指定在決定是否應觸發工作流程時，要排除的任何JCR事件（即忽略）。
 
-     此啟動器屬性是專案清單（以逗號分隔）： &quot;
+     此啟動器屬性是以逗號分隔的專案清單： &quot;
 
       * `property-name` 忽略任何 `jcr` 在指定的屬性名稱上觸發的事件。&quot;
-      * `event-user-data:<*someValue*>` 忽略任何包含 `*<someValue*`> `user-data` 透過 [`ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String.
+      * `event-user-data:<*someValue*>` 忽略任何包含 `*<someValue*`> `user-data` 透過 [`ObservationManager` API](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String).
 
      例如：
 
@@ -187,7 +183,7 @@ ht-degree: 4%
 
 1. 選取 **建立**，以建立啟動器並返回主控台。
 
-   一旦發生適當的事件，就會觸發啟動器，並啟動工作流程。
+   發生適當的事件時，就會觸發啟動器，並啟動工作流程。
 
 ## 管理啟動器設定 {#managing-a-launcher-configuration}
 

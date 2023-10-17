@@ -1,14 +1,14 @@
 ---
 title: 設定搜尋表單
-description: 瞭解如何設定搜尋Forms。
+description: 瞭解如何使用搜尋Forms來自訂用於搜尋面板的搜尋述詞選擇，這些面板可在製作環境的AEM主控台和面板中使用。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2073'
 ht-degree: 11%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 11%
 
 使用 **搜尋Forms** 自訂在製作環境的各種AEM主控台及/或面板中可用的搜尋面板中使用的搜尋述詞選擇。 自訂這些面板可讓搜尋功能根據您的特定需求而通用。
 
-A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增多個述詞，其中包括（其中包括）「屬性」述詞，以搜尋符合您指定的單一屬性的資產，或「選項」述詞，以搜尋符合您為特定屬性指定的一或多個值的資產。
+A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增多個述詞，包括（其中包括）屬性述詞，以搜尋符合您指定之單一屬性的資產。 或者，使用「選項」述詞來搜尋符合您為特定屬性指定的一或多個值的資產。
 
 您可以 [設定搜尋表單](#configuring-your-search-forms) 用於各種主控台和資產瀏覽器（編輯頁面時）。 此 [用於設定這些表單的對話方塊](#configuring-your-search-forms) 可透過以下方式存取：
 
@@ -28,7 +28,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
       * **搜尋表單**
 
-第一次存取此主控台時，您可以看到所有組態都有掛鎖符號。 這表示適當的設定是預設（現成）設定，且無法刪除。 一旦您自訂了組態，鎖定就會消失 — 除非您 [刪除您的自訂設定](#deleting-a-configuration-to-reinstate-the-default)，則系統會恢復預設值（以及掛鎖指示器）。
+第一次存取此主控台時，您可以看到所有組態都有掛鎖符號。 這表示適當的設定是預設（現成）設定，且無法刪除。 自訂組態後，鎖定會消失，除非您 [刪除您的自訂設定](#deleting-a-configuration-to-reinstate-the-default). 在這種情況下，會恢復預設值（和掛鎖指示器）。
 
 ![搜尋表單視窗](assets/chlimage_1-374.png)
 
@@ -125,7 +125,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
   </tr>
   <tr>
    <td>元件 </td>
-   <td>允許作者搜尋/篩選上面有特定元件的頁面。 例如影像庫。<br /> </td>
+   <td>允許作者搜尋/篩選上面有特定元件的頁面。 例如，影像庫。<br /> </td>
    <td>
     <ul>
      <li>欄位標籤</li>
@@ -336,7 +336,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 >  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
 >   * 這些功能已過時，僅供回溯相容性使用。
 >
->此資訊僅供參考，您不得變更 `/libs`.
+>此資訊僅供參考。 不要變更 `/libs`.
 
 ### 述詞設定 {#predicate-settings}
 
@@ -344,7 +344,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
 * **欄位標籤**
 
-  將顯示為可摺疊標題或述詞欄位標籤的標籤。
+  顯示為可摺疊標題或述詞欄位標籤的標籤。
 
 * **說明**
 
@@ -358,7 +358,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
   要搜尋的屬性。 它使用相對路徑和萬用字元 `*/*/*` 指定屬性相對於 `jcr:content` 節點（每個星號代表一個節點層級）。
 
-  如果您只想搜尋具有下列專案的資源之第一層子節點： `x` 上的屬性 `jcr:content` 節點使用 `*/jcr:content/x`
+  如果您只想在資源的第一層子節點上搜尋，而該資源具有 `x` 上的屬性 `jcr:content` 節點使用 `*/jcr:content/x`
 
 * **屬性深度**
 
@@ -376,7 +376,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
 * **選項路徑**
 
-  使用者可以使用述詞設定索引標籤中的路徑瀏覽器來選取路徑。 選取 **+** 圖示可用來將選取專案新增至有效選項清單(接著 **-** 圖示以視需要移除)。
+  使用者可以使用述詞設定索引標籤中的路徑瀏覽器來選取路徑。 選取後 **+**，圖示可用來將選取專案新增至有效選項清單(接著 **-** 圖示加以移除（如有必要）。
 
   選項是使用者建立的內容節點，結構如下：
 
@@ -391,7 +391,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 * **發佈和即時副本屬性名稱**
 網站特定述詞的發佈和即時副本核取方塊的標籤。
 
-* 欄位標籤上的&amp;ast； **設定** tab表示必填欄位，如果留空，將顯示錯誤訊息
+* 欄位標籤上的&amp;ast； **設定** 定位字元表示欄位為必填，若保留為空白，則會出現錯誤訊息。
 
 ## 設定搜尋Forms {#configuring-your-search-forms}
 
@@ -401,7 +401,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
 1. 選取您要自訂的設定。
 1. 使用 **編輯** 圖示開啟設定以進行更新。
-1. 如果新的自訂專案，您可能想要 [新增述詞欄位並定義設定](#add-edit-a-predicate-field-and-define-field-settings) 視需要。 如果已有自訂，您可以選取現有欄位並 [更新設定](#add-edit-a-predicate-field-and-define-field-settings).
+1. 如果是新的自訂，您可能會想 [新增述詞欄位並定義設定](#add-edit-a-predicate-field-and-define-field-settings) 視需要。 如果已有自訂，您可以選取現有欄位並 [更新設定](#add-edit-a-predicate-field-and-define-field-settings).
 1. 選取 **完成** 以儲存組態。
 
    >[!NOTE]
@@ -424,7 +424,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
    * 您正在新增欄位：
 
-     新增述詞後 **設定** 標籤會開啟並顯示可定義的屬性。
+     新增述詞後， **設定** 標籤會開啟並顯示可定義的屬性。
 
    * 您要更新現有的述詞：
 
@@ -446,7 +446,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
    ![預覽搜尋表單](assets/chlimage_1-377.png)
 
-1. **關閉** 預覽以傳回並完成設定。
+1. **關閉** 預覽，讓您能夠返回並完成設定。
 
 ### 刪除述詞欄位 {#deleting-a-predicate-field}
 
@@ -461,7 +461,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
 ### 刪除組態（恢復預設值） {#deleting-a-configuration-to-reinstate-the-default}
 
-一旦自訂了設定，就會覆寫預設值。 您可以刪除自訂的組態，以重新指定預設組態。
+自訂組態之後，這會覆寫預設值。 您可以刪除自訂的組態，以恢復預設組態。
 
 >[!NOTE]
 >
@@ -473,11 +473,11 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
    ![刪除表單](assets/chlimage_1-378.png)
 
-1. 自訂的組態將會刪除並恢復預設值（這由主控台中掛鎖符號的重新出現表示）。
+1. 自訂的組態會遭到刪除，而預設值會恢復（由主控台中掛鎖符號的重新顯示所指示）。
 
 ### 新增選項述詞 {#adding-options-predicates}
 
-選項述詞（選項、選項屬性）可讓您設定要搜尋的專案。 它們通常用於直接在頁面下方搜尋某專案，例如頁面節點上的屬性。
+選項述詞（選項、選項屬性）可讓您設定要搜尋的專案。 它們可用來搜尋頁面正下方的內容，例如頁面節點上的屬性。
 
 以下範例（根據用來建立頁面的範本進行搜尋）說明了相關步驟：
 
@@ -494,7 +494,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
    >[!NOTE]
    >
-   >您 ***必須*** 不會變更中的任何專案 `/libs` 路徑。
+   >執行 ***非*** 變更 `/libs` 路徑。
    >
    >這是因為 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
    >
@@ -508,7 +508,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
 
    然後按一下/點選 **編輯搜尋表單** 圖示。
 
-1. 視設定而定，請新增 **選項** 或 **選項屬性** 至組態。
+1. 根據設定，新增 **選項** 或 **選項屬性** 至組態。
 1. 更新欄位，特別是：
 
    * **屬性名稱**
@@ -526,7 +526,7 @@ A [述詞範圍](#predicates-and-their-settings)s現成可用。 您可以新增
    ![正在新增屬性路徑](assets/chlimage_1-380.png)
 
 1. 選取 **完成** 以儲存您的設定。
-1. 導覽至適當的主控台(在此範例中， **網站**)並開啟 **搜尋** 邊欄。 將顯示新定義的搜尋表單以及各種選項。 選取必要選項以檢視搜尋結果：
+1. 導覽至適當的主控台(在此範例中， **網站**)並開啟 **搜尋** 邊欄。 會顯示新定義的搜尋表單以及各種選項。 選取必要選項，即可檢視搜尋結果：
 
    ![最終結果](assets/chlimage_1-381.png)
 

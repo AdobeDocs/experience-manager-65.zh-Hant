@@ -1,15 +1,15 @@
 ---
 title: 大量編輯器
-description: 瞭解如何使用大量編輯器。
+description: 瞭解如何在不需要視覺化頁面內容時，使用大量編輯器來有效編輯。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1159'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ Geometrixx網站中提供了此使用案例的說明範例：
 若要使用「大量編輯器」同時編輯多個專案：
 
 1. 在 **工具** 主控台，按一下 **匯入工具** 資料夾以展開它。
-1. 按兩下 **大量編輯器** 以開啟它。
+1. 按兩下 **大量編輯器**.
 1. 輸入您的選取需求：
 
 <table>
@@ -78,11 +78,11 @@ Geometrixx網站中提供了此使用案例的說明範例：
   </tr>
   <tr>
    <td>查詢參數</td>
-   <td>使用GQL引數，輸入您希望「大量編輯器」在存放庫中尋找的搜尋字串；例如， <code>type:Page</code> 會尋找根路徑中的所有頁面， <code>text:professional</code> 會尋找所有含有「專業」字樣的頁面，並且 <code>"jcr:title":English</code> 會尋找所有以「英文」為標題的頁面。 您只能搜尋字串。</td>
+   <td>使用GQL引數，輸入您希望「大量編輯器」在存放庫中尋找的搜尋字串。 例如， <code>type:Page</code> 會尋找根路徑中的所有頁面， <code>text:professional</code> 會尋找所有含有「專業」字樣的頁面，並且 <code>"jcr:title":English</code> 會尋找所有以「英文」為標題的頁面。 您只能搜尋字串。</td>
   </tr>
   <tr>
    <td>內容模式核取方塊</td>
-   <td>選取此核取方塊可讀取 <code>jcr:content</code> 搜尋結果的子節點（如果存在）。 僅用於頁面。 屬性名稱的前置詞為 <code>"jcr:content/"</code></td>
+   <td>選取此核取方塊，即可讀取 <code>jcr:content</code> 搜尋結果的子節點（如果存在）。 僅用於頁面。 屬性名稱的前置詞為 <code>"jcr:content/"</code></td>
   </tr>
   <tr>
    <td>屬性/欄</td>
@@ -104,7 +104,7 @@ Geometrixx網站中提供了此使用案例的說明範例：
 
    ![大量編輯器結果](assets/chlimage_1-39.png)
 
-1. 在儲存格中按兩下以進行所需的任何變更。
+1. 按兩下儲存格，以便進行任何變更。
 
    ![大量編輯](assets/srchresultedit.png)
 
@@ -117,18 +117,18 @@ Geometrixx網站中提供了此使用案例的說明範例：
 #### 其他GQL查詢引數 {#additional-gql-query-parameters}
 
 * **路徑：** 僅搜尋此路徑下的節點。 如果您指定多個具有路徑首碼的字詞，則只會考慮最後一個字詞。
-* **型別：** 僅傳回指定節點型別的節點。 這包括主要和mixin型別。 您可以指定多個逗號分隔的節點型別。 GQL會傳回任何指定型別的節點。
+* **型別：** 僅傳回給定節點型別的節點。 這包括主要和mixin型別。 您可以指定多個逗號分隔的節點型別。 GQL會傳回任何指定型別的節點。
 * **訂購：** 依指定的屬性排序結果。 您可以指定多個以逗號分隔的屬性名稱。 若要以遞減順序排序結果，只需在屬性名稱前面加上減號即可。 例如，order：-name。 使用加號會以遞增順序傳回結果，這也是預設值。
-* **限制：** 使用間隔來限制結果的數量。 例如，limit：10..20間隔以零為基準，開始為包含值，結束為排除值。 您也可以指定開啟間隔:limit:10.. 或限制：...20如果省略這些點並且只指定一個值，則GQL最多會傳回此數量的結果。 例如，limit：10 （傳回前十個結果）。
+* **限制：** 使用間隔來限制結果的數量。 例如，limit：10..20間隔以零為基準，開始為包含範圍，結束為排除範圍。 您也可以指定開啟間隔:limit:10.. 或限制：...20如果省略這些點並且只指定了一個值，則GQL最多會傳回此數量的結果。 例如，limit：10 （傳回前十個結果）。
 
 ### 匯出內容 {#exporting-content}
 
-您可能需要匯出內容，並在Excel試算表中進行變更。 例如，您可能想要匯出郵寄清單，並直接在Excel中變更所有列出電話號碼的區號，或新增其他行等等。
+如有必要，請將內容匯出至Excel試算表以進行任何變更。 例如，您可能想要匯出郵寄清單，並直接在Excel中變更所有列出電話號碼的區號，或新增其他行。
 
 若要匯出內容：
 
 1. 依照中的說明搜尋內容 [搜尋和編輯內容](#searching-and-editing-content).
-1. 按一下 **匯出** 將變更匯出至以定位點分隔的Excel試算表。 AEM WCM會詢問您要下載檔案的位置。
+1. 按一下 **匯出** 以便您將變更匯出至以定位點分隔的Excel試算表。 AEM WCM會詢問您要下載檔案的位置。
 
    >[!NOTE]
    >

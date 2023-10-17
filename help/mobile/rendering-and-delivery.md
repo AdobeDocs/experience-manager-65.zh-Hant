@@ -1,14 +1,14 @@
 ---
 title: 呈現和傳遞
-description: 呈現和傳遞
+description: 瞭解如何透過Sling預設Servlet呈現Adobe Experience Manager內容以呈現JSON和其他格式。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 7%
+source-wordcount: '596'
+ht-degree: 6%
 
 ---
 
@@ -16,23 +16,23 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
 
-Adobe Experience Manager (AEM)內容可透過以下方式輕鬆呈現： [Sling預設Servlet](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) 要轉譯 [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) 和其他格式。
+Adobe Experience Manager (AEM)內容可透過以下方式輕鬆轉譯： [Sling預設Servlet](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) 要轉譯 [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) 和其他格式。
 
-這些現成可用的轉譯器通常會導覽存放庫並依原樣傳回內容。
+這些現成可用的轉譯通常會在存放庫中移動並按原樣傳回內容。
 
-AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉譯的結構描述和內容。
+AEM也透過Sling支援開發和部署自訂Sling轉譯器，以完全控制轉譯的結構與內容。
 
-Content Services Default Renderer可填補現成可用的Sling Defaults和自訂開發之間的空白，以便在不開發的情況下自訂和控制呈現內容的許多方面。
+Content Services Default Renderer可填補現成Sling預設和自訂開發之間的空白，讓您無需開發即可自訂和控制呈現內容的許多方面。
 
-下圖顯示內容服務的呈現方式。
+下圖顯示內容服務的轉譯。
 
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
 ## 請求JSON {#requesting-json}
 
-使用 **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** 以請求JSON。]
+使用 **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** 以要求JSON。]
 
 <table>
  <tbody>
@@ -42,10 +42,10 @@ Content Services Default Renderer可填補現成可用的Sling Defaults和自訂
   </tr>
   <tr>
    <td>EXPORT-CONFIG</td>
-   <td><p><strong>可選</strong><br /> </p> <p>在/apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG下找到的匯出設定<br /> <br /> 如果省略，將會套用預設匯出設定 </p> </td>
+   <td><p><strong>可選</strong><br /> </p> <p>在/apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG下找到的匯出設定<br /> <br /> 如果省略，則會套用預設匯出設定 </p> </td>
   </tr>
   <tr>
-   <td>DEPTH-INT</td>
+   <td>深度 — 整數</td>
    <td><strong>可選</strong><br /> <br /> 呈現子項的深度遞回，如Sling呈現中所用</td>
   </tr>
  </tbody>
@@ -53,9 +53,9 @@ Content Services Default Renderer可填補現成可用的Sling Defaults和自訂
 
 ## 建立匯出設定 {#creating-export-configs}
 
-可建立匯出設定來自訂JSON轉譯。
+可建立匯出設定來自訂JSON演算。
 
-您可以在下方建立設定節點 */apps/mobileapps/caas/exportConfigs。*
+您可以在下方建立設定節點 */apps/mobileapps/caas/exportConfigs.*
 
 | 節點名稱 | 設定的名稱（用於呈現選擇器） |
 |---|---|
@@ -80,14 +80,14 @@ Content Services Default Renderer可填補現成可用的Sling Defaults和自訂
    <td>從JSON匯出排除具有指定sling：resourceType的節點的詳細資料</td>
   </tr>
   <tr>
-   <td>excludecomponents</td>
+   <td>excludeComponents</td>
    <td>字串[]</td>
    <td>不排除任何專案</td>
    <td>sling:resourceType</td>
-   <td>僅包含具有來自JSON匯出的指定sling：resourceType的節點的詳細資料</td>
+   <td>僅包含具有來自JSON匯出之指定sling：resourceType的節點的詳細資料</td>
   </tr>
   <tr>
-   <td>excludePropertyPrefixes</td>
+   <td>excludePropertyPrefix</td>
    <td>字串[]</td>
    <td>不排除任何專案</td>
    <td>屬性首碼</td>
@@ -101,11 +101,11 @@ Content Services Default Renderer可填補現成可用的Sling Defaults和自訂
    <td>從JSON匯出排除指定的屬性</td>
   </tr>
   <tr>
-   <td>includeproperties</td>
+   <td>includeProperties</td>
    <td>字串[]</td>
    <td>包含所有內容</td>
    <td>屬性名稱</td>
-   <td><p>如果設定了excludePropertyPrefixes<br /> 這包括指定的屬性，儘管前置詞是被排除的，</p> <p>否則（排除忽略的屬性）只會包含這些屬性</p> </td>
+   <td><p>如果設定了excludePropertyPrefixes<br /> 這包括指定的屬性，儘管前置詞已被排除，</p> <p>否則（忽略排除屬性）僅包含這些屬性</p> </td>
   </tr>
   <tr>
    <td>includeChildren</td>
@@ -124,16 +124,16 @@ Content Services Default Renderer可填補現成可用的Sling Defaults和自訂
   <tr>
    <td>renameProperties</td>
    <td>String[]<br /> <br /> </td>
-   <td>不重新命名任何內容</td>
+   <td>不重新命名任何專案</td>
    <td>&lt;actual_property_name&gt;，&lt;replacement_property_name&gt;</td>
-   <td>使用取代物重新命名屬性</td>
+   <td>使用取代重新命名屬性</td>
   </tr>
  </tbody>
 </table>
 
 ### 資源型別匯出覆寫 {#resource-type-export-overrides}
 
-在下建立設定節點 */apps/mobileapps/caas/exportConfigs。*
+在下建立設定節點 */apps/mobileapps/caas/exportConfigs.*
 
 | 名稱 | resourceTypeOverrides |
 |---|---|
@@ -155,7 +155,7 @@ Content Services Default Renderer可填補現成可用的Sling Defaults和自訂
    <td>字串[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>對於以下sling資源型別，請勿傳回預設的CaaS json匯出。<br /> 將資源呈現為，以傳回客戶json匯出；<br /> &lt;resource&gt;.&lt;selector_to_inc&gt;.json </td>
+   <td>對於下列sling資源型別，請勿傳回預設的CaaS json匯出。<br /> 將資源轉譯為，以傳回客戶json匯出；<br /> &lt;resource&gt;.&lt;selector_to_inc&gt;.json </td>
   </tr>
  </tbody>
 </table>
@@ -169,7 +169,7 @@ Content Services包含兩個匯出設定：
 
 #### 預設匯出設定 {#default-export-configuration}
 
-如果在請求的URI中指定了配置，則會套用Content Services預設匯出配置。
+如果在要求的URI中指定了設定，則會套用Content Services預設匯出設定。
 
 &lt;resource>.caas[.&lt;depth-int>].json
 
@@ -184,11 +184,11 @@ Content Services包含兩個匯出設定：
    <td> </td>
   </tr>
   <tr>
-   <td>excludePropertyPrefixes</td>
+   <td>excludePropertyPrefix</td>
    <td>jcr：，sling：，cq：，oak：，pge-</td>
   </tr>
   <tr>
-   <td>includeproperties</td>
+   <td>includeProperties</td>
    <td>jcr：text，text<br /> jcr：title，title<br /> jcr：description，description<br /> jcr：lastModified，lastModified<br /> cq：tags，tags<br /> cq：lastModified，lastModified</td>
   </tr>
   <tr>
@@ -196,7 +196,7 @@ Content Services包含兩個匯出設定：
    <td> </td>
   </tr>
   <tr>
-   <td>excludecomponents</td>
+   <td>excludeComponents</td>
    <td> </td>
   </tr>
   <tr>
@@ -216,7 +216,7 @@ Content Services包含兩個匯出設定：
 
 #### 頁面匯出設定 {#page-export-configuration}
 
-此設定會擴充預設值，以包含子節點下的群組子項。
+此組態會延伸預設值，以包含子節點下的群組子項。
 
 &lt;site_page>.caas.page[.&lt;depth-int>].json
 

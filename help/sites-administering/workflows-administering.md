@@ -1,18 +1,14 @@
 ---
 title: 管理工作流程例項
-seo-title: Administering Workflow Instances
-description: 瞭解如何管理工作流程例項。
-seo-description: Lear how to administer Workflow Instances.
-uuid: 81e53ef5-fe62-4ed4-b2d4-132aa986d5aa
+description: 瞭解工作流程主控台如何提供數個工具來管理工作流程例項，以確保其如預期般執行。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1003'
 ht-degree: 1%
 
 ---
@@ -37,7 +33,7 @@ ht-degree: 1%
 ## 監控工作流程例項狀態 {#monitoring-the-status-of-workflow-instances}
 
 1. 使用導覽選取 **工具**，然後 **工作流程**.
-1. 選取 **例項** 顯示目前進行中的工作流程例項清單。
+1. 選取 **例項** 以便顯示目前進行中的工作流程例項清單。
 
    ![wf-96](assets/wf-96.png)
 
@@ -66,7 +62,7 @@ ht-degree: 1%
 ## 暫停、恢復和終止工作流程例項 {#suspending-resuming-and-terminating-a-workflow-instance}
 
 1. 使用導覽選取 **工具**，然後 **工作流程**.
-1. 選取 **例項** 顯示目前進行中的工作流程例項清單。
+1. 選取 **例項** 以便顯示目前進行中的工作流程例項清單。
 
    ![wf-96-1](assets/wf-96-1.png)
 
@@ -77,7 +73,7 @@ ht-degree: 1%
 ## 檢視已封存的工作流程 {#viewing-archived-workflows}
 
 1. 使用導覽選取 **工具**，然後 **工作流程**.
-1. 選取 **封存** 顯示已成功完成的工作流程例項清單。
+1. 選取 **封存** 以便顯示已成功完成的工作流程例項清單。
 
    ![wf-98](assets/wf-98.png)
 
@@ -86,7 +82,7 @@ ht-degree: 1%
    >中止狀態會被視為成功終止，因為它是使用者動作的結果；例如：
    >
    >* 使用 **終止** 動作
-   >* 當受工作流程約束的頁面被（強制）刪除時，工作流程將終止
+   >* 當受工作流程約束的頁面被（強制）刪除時，工作流程會終止
 
 1. 選取特定專案，然後 **開啟歷史記錄** 若要檢視更多詳細資料：
 
@@ -102,14 +98,14 @@ ht-degree: 1%
 * **開啟歷史記錄**
 顯示工作流程記錄的詳細資料。
 
-* **重試步驟** 再次執行指令碼步驟元件例項。 修復原始錯誤的原因後，使用「重試步驟」指令。 例如，修正程式步驟所執行指令碼中的錯誤後，請重試該步驟。
-* **終止** 如果錯誤導致工作流程出現無法調解的情況，則終止工作流程。 例如，工作流程可以仰賴環境條件，例如存放庫中對工作流程例項不再有效的資訊。
-* **終止並重試** 類似於 **終止** 但新工作流程例項是使用原始裝載、標題和說明啟動。
+* **重試步驟**  — 再次執行指令碼步驟元件例項。 修復原始錯誤的原因後，使用「重試步驟」指令。 例如，修正程式步驟所執行指令碼中的錯誤後，請重試該步驟。
+* **終止**  — 如果錯誤導致工作流程出現無法調解的情況，則終止工作流程。 例如，工作流程可以仰賴環境條件，例如存放庫中對工作流程例項不再有效的資訊。
+* **終止並重試**  — 類似於 **終止** 但新工作流程例項是使用原始裝載、標題和說明啟動。
 
 若要調查失敗，然後恢復或終止工作流程，請使用下列步驟：
 
 1. 使用導覽選取 **工具**，然後 **工作流程**.
-1. 選取 **失敗** 以顯示未成功完成的工作流程例項清單。
+1. 選取 **失敗** 以便顯示未成功完成的工作流程例項清單。
 1. 選取特定專案，然後選取適當的動作：
 
    ![wf-47](assets/wf-47.png)
@@ -120,9 +116,9 @@ ht-degree: 1%
 
 設定 **AdobeGranite工作流程清除設定** 根據工作流程例項的年齡和狀態來永久刪除工作流程例項。 您也可以清除所有模型或特定模型的工作流程例項。
 
-您也可以建立多個服務組態，以永久刪除滿足不同條件的工作流程例項。 例如，建立一個設定，當特定工作流程模型的執行個體執行的時間遠超過預期時間時，該設定會清除這些執行個體。 建立另一個設定，以在特定天數後清除所有已完成的工作流程，將存放庫的大小降至最低。
+您也可以建立多個服務組態，以永久刪除滿足不同條件的工作流程例項。 例如，建立一個設定，當特定工作流程模型的執行個體執行時間超過預期時間時，該設定會清除這些執行個體。 建立另一個設定，以在特定天數後清除所有已完成的工作流程，將存放庫的大小降至最低。
 
-若要設定服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [將OSGi設定新增到存放庫](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表說明任一方法所需的屬性。
+若要設定服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [將OSGi設定新增到存放庫](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 下表說明任一方法所需的特性。
 
 >[!NOTE]
 >
@@ -188,9 +184,9 @@ ht-degree: 1%
 
 ### 設定模型以使用中繼資料的外部儲存 {#set-model-for-external-storage}
 
-在工作流程模型的層級，會提供旗標，指出模型（及其執行階段執行個體）具有中繼資料的外部儲存。 對於標籤為外部儲存的模型的工作流程例項，工作流程變數將不會儲存在JCR中。
+在工作流程模型的層級，會提供旗標，指出模型（及其執行階段執行個體）具有中繼資料的外部儲存。 針對標籤為外部儲存的模型的工作流程例項，工作流程變數不會儲存在JCR中。
 
-屬性 *userMetadataPersistenceEnable* 將會儲存在 *jcr：content節點* 的工作流程模型的。 此旗標將保留在工作流程中繼資料中，做為 *cq：userMetaDataCustomPersistenceEnabled*.
+屬性 *userMetadataPersistenceEnable* 儲存在 *jcr：content節點* 的工作流程模型的。 此旗標會持續保留在工作流程中繼資料中，做為 *cq：userMetaDataCustomPersistenceEnabled*.
 
 下圖說明如何在工作流程上設定標幟。
 
@@ -198,7 +194,7 @@ ht-degree: 1%
 
 ### 外部儲存空間中中繼資料的API {#apis-for-metadata-external-storage}
 
-若要在外部儲存變數，您必須實作工作流程公開的API。
+若要在外部儲存變數，請實作工作流程公開的API。
 
 UserMetaDataPersistenceContext
 

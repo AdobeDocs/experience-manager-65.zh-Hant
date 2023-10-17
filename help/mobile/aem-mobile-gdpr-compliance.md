@@ -1,12 +1,12 @@
 ---
 title: Adobe Experience Manager Mobile - GDPR整備
-description: Adobe Experience Manager Mobile - GDPR整備
+description: 瞭解Adobe Experience Manager如何準備好協助您履行GDPR法規遵循義務。
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '694'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## AEM Mobile GDPR支援 {#aem-mobile-gdpr-support}
 
-AEM Mobile已準備好協助客戶履行GDPR法規遵循義務。 AEM Mobile中未儲存任何個人資料。 如果已布建您，您可以使用Adobe ID登入Adobe Experience Mobile 。
+AEM Mobile已準備好協助客戶履行GDPR法規遵循義務。 AEM Mobile中未儲存任何個人資料。 如果已布建您，您可以使用您的Adobe ID登入AdobeExperience Mobile 。
 
 <!-- [https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html) -->
 
@@ -27,21 +27,21 @@ AEM Mobile已準備好協助客戶履行GDPR法規遵循義務。 AEM Mobile中�
 
 Adobe的數位發佈產品(在AEM Mobile之前)支援Adobe的GDPR整備計畫。 另請參閱 [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html). 以下提供Digital Publishing Suite產品中GDPR相關功能支援的詳細資訊，包括如何與Adobe合作以起始GDPR請求。
 
-為確保您不會將AEM Mobile與舊版Digital Publishing Suite產品混淆，您可以在此處登入Digital Publishing Suite產品：
+為避免混淆AEM Mobile與舊版的Digital Publishing Suite產品，您可以在此處登入Digital Publishing Suite產品：
 
 [https://acrobat.adobe.com/us/en/](https://acrobat.adobe.com/us/en/)
 
 ### 起始GDPR請求 {#initiating-a-gdpr-request}
 
-請聯絡Adobe客戶服務，以便您為Digital Publishing Suite起始GDPR請求。
+請聯絡Adobe客戶服務，以便針對Digital Publishing Suite起始GDPR請求。
 
-需使用下列ID才能找到客戶資料。 收到的所有子集都表示其他ID不適用於此使用者。
+需使用下列ID才能找到客戶資料。 收到的任何子集表示其他ID不適用於此使用者。
 
 必要:
 
 * 客戶的合約ID： *dpsc-contractId*
 
-提供以下至少1項：
+提供下列至少一項內容：
 
 * 一般使用者客戶提供的OAuth ID （用於客戶直接權益系統的ID）： *dpsc-directEntitlementId*
 * 若為Windows應用程式使用者，則為一般使用者的App Store ID： *dpsc-windowsAppStoreId*
@@ -49,35 +49,35 @@ Adobe的數位發佈產品(在AEM Mobile之前)支援Adobe的GDPR整備計畫。
 
 ### 常見問題集(FAQ) {#frequently-asked-questions-faq}
 
-**起始Adobe請求時，DELETE是否會刪除我的App Store購買？**
+**起始Adobe請求時，DELETE是否會刪除我的App Store購買專案？**
 
-Adobe會刪除其擁有的應用程式商店購買次數（訂閱等）的資訊，但購買次數仍會記錄在應用程式商店中。 如果應用程式（一般使用者）登入應用程式商店，系統便會再次擷取這些回條，並傳送給Adobe及更新版本，而系統會將回條視為新的購買專案，應用程式會還原回條，以便再次存取。
+Adobe會刪除其擁有的應用程式商店購買次數（訂閱等）的資訊，但購買次數仍會記錄在應用程式商店中。 如果應用程式（一般使用者）登入應用程式商店，系統會再次擷取這些回條，並傳送給Adobe。 稍後，這些會視為新的購買專案，由應用程式還原，且可再次存取。
 
 **起始Adobe請求時，DELETE是否會刪除客戶提供的權益？**
 
-Adobe會刪除它所擁有的客戶額外直接權益津貼的資訊。 如果應用程式（一般使用者）登入客戶已使用的OAuth機制，它會傳送資訊給Adobe，而服務會再次擷取額外的權益。
+Adobe會刪除它所擁有的客戶額外直接權益津貼資訊。 如果應用程式（一般使用者）登入客戶已使用的OAuth機制，就會傳送資訊給Adobe，而服務會再次擷取額外權益。
 
 **一般使用者的期望是什麼？**
 
-由於指派應用程式許可權的金鑰是檢視器軟體的一部分，位於裝置上，因此使用者應解除安裝應用程式。 一般使用者應瞭解，如果他們重新安裝應用程式，則現有的購買（與應用程式商店使用者相關）和直接權益津貼（與客戶的OAuth使用者相關）仍會還原。
+由於指派應用程式許可權的索引鍵屬於檢視器軟體，位於裝置上，因此使用者應解除安裝應用程式。 一般使用者應瞭解，如果他們重新安裝應用程式，則現有的購買（與應用程式商店使用者相關）和直接權益津貼（與客戶的OAuth使用者相關）仍會還原。
 
-**當應用程式在裝置上的使用者之間共用時，會發生什麼情況？**
+**當應用程式在裝置上的使用者之間共用時，會發生什麼事？**
 
-Adobe具有直接與特定使用者建立關聯的最低資訊。 它會使用隨機建立的UUID來關聯資料，該UUID會保留在應用程式資料中，並在應用程式起始的每個請求中傳遞。 這表示在相同裝置上共用應用程式的一般使用者會使用相同的UUID，而且所有資料都被視為擁有GDPR請求的人。 對於存取和刪除請求，DPSC會將共用應用程式的使用者視為一個人。
+Adobe具有直接與特定使用者建立關聯的最低資訊。 這會使用隨機建立的UUID來關聯資料，該UUID會保留在應用程式資料中，並在應用程式起始的每個請求中傳遞。 這表示在相同裝置上共用應用程式的一般使用者使用相同的UUID，且所有資料都被視為擁有GDPR請求的人。 對於存取和刪除請求，DPSC會將共用應用程式的使用者視為一個人。
 
 **Analytics會追蹤哪些個人資料？**
 
-無。有資料受到追蹤，但位於應用程式層級（非個人）。 這包括啟動、當機、關閉、活動、購買或Folio覆蓋等事件。 系統不會追蹤地理位置、名稱、裝置ID或IP位址。
+無。有正在追蹤的資料，但是在應用程式層級（非個人）。 這包括啟動、當機、關閉、活動、購買或Folio覆蓋等事件。 系統不會追蹤地理位置、名稱、裝置ID或IP位址。
 
-**一般使用者已提供其資訊，但找不到任何內容。 為什麼不行？**
+**一般使用者提供了他們的資訊，但找不到任何內容。 為什麼不呢？**
 
-隨著Digital Publishing Suite產品的演化，服務實作也有所變更，且有更多資料變得模糊不清。 如果使用使用者提供的資料找不到任何資料，則表示使用者的資料無法追蹤回該人員。
+隨著Digital Publishing Suite產品的演化，服務實作也有所變更，而更多資料變得模糊不清。 如果使用使用者提供的資料找不到任何資料，則表示使用者的資料無法追蹤回該人員。
 
 ### 範例 {#example}
 
 請聯絡Adobe客戶服務，以便您提出GDPR請求。
 
-以下是Digital Publishing SuiteGDPR請求的輸入和結果輸出範例：
+以下是Digital Publishing Suite GDPR請求的輸入和結果輸出範例：
 
 #### 輸入： {#inputs}
 

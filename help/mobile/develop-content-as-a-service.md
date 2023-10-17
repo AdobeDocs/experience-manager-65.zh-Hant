@@ -1,13 +1,13 @@
 ---
 title: 內容傳送
-description: 內容傳送
+description: 瞭解如何使用Adobe Experience Manager中的所有內容來提供鎖定目標的應用程式體驗。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '978'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,7 @@ Content Services可讓您存取無法透過其他AEM內容參考的AEM管理的�
 
 #### 現有的受管理資產 {#existing-managed-assets}
 
-AEM Sites和Assets的使用者正使用AEM Assets來管理其所有頻道的所有數位資料。 他們正在開發原生行動應用程式，且需要使用AEM Assets管理的數個資產。 例如標誌、背景影像和按鈕圖示。
+AEM Sites和Assets的使用者正使用AEM Assets來管理其所有頻道的所有數位資料。 他們正在開發原生行動應用程式，且必須使用AEM Assets管理的數個資產。 例如標誌、背景影像和按鈕圖示。
 
 目前，這些功能會分散在資產存放庫中。 應用程式必須參考的檔案如下：
 
@@ -106,7 +106,7 @@ JSON會為Content Services產生的每個影像提供一個URL至影像。
 
 ## 封裝的HTML內容 {#packaged-html-content}
 
-需要維護內容配置的客戶需要HTML內容。 這對於使用Web容器（例如Cordova Webview）顯示內容的原生應用程式非常有用。
+必須維護內容配置的客戶需要HTML內容。 這對於使用Web容器（例如Cordova Webview）顯示內容的原生應用程式非常有用。
 
 AEM Content Services會透過API將HTML內容提供給行動應用程式。 想要將AEM內容公開為HTML的客戶可以建立指向AEM內容來源的HTML頁面實體。
 
@@ -135,7 +135,7 @@ AEM Content Services會透過API將HTML內容提供給行動應用程式。 想�
       * AEM處理常式
       * 自訂處理常式
 
-1. 直接透過內容轉譯器GET內容
+1. 透過內容轉譯器直接GET內容
 
    * 現成可用的預設Sling轉譯器
    * AEM Mobile/Content Services內容轉譯器
