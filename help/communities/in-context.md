@@ -1,19 +1,15 @@
 ---
 title: 內文中稽核
-seo-title: In-Context Moderation
-description: 如何執行版主動作
-seo-description: How to perform moderator actions
-uuid: 282a8bea-2822-4e5c-b9f4-4d9a5380d895
+description: 瞭解管理員和受信任的社群成員如何在Adobe Experience Manager社群中執行版主動作。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
@@ -40,11 +36,11 @@ ht-degree: 1%
 
 ## 範例 {#example}
 
-使用 [Geometrixx參與](http://localhost:4503/content/sites/engage/en.html) 網站建立時間 [AEM Communities快速入門](getting-started.md)，您可以在論壇中快速設定對話串，在發佈環境中體驗各種協調活動，如下所示。
+使用 [Geometrixx參與](http://localhost:4503/content/sites/engage/en.html) 網站建立時間 [AEM Communities快速入門](getting-started.md)，您可在論壇中設定對話串，在發佈環境中體驗各種協調活動。 請參閱下文。
 
-Aaron McDonald (aaron.mcdonald@mailinator.com)在建立網站時將其新增至community-engage-moderators群組，因此被識別為信任的社群成員。
+艾倫·麥當勞(`aaron.mcdonald@mailinator.com`)建立網站時將其新增至community-engage-moderators群組，識別為信任的社群成員。
 
-Rebekah Larsen (rebekah.larsen@trashymail.com)可透過 [成員主控台](members.md).
+麗貝卡·拉森(`rebekah.larsen@trashymail.com`)可使用新增為community-engage-members群組的成員 [成員主控台](members.md).
 
 如需社群使用者群組的詳細資訊，請造訪 [管理使用者和使用者群組](users.md).
 
@@ -60,7 +56,7 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可透過 [成員主控台](member
 
    * 輸入內文
 
-     我每年都掛一隻蜂鳥餵食器，可不太成功。 他們好像來了一兩天，就是這樣。 我每週變更一次會太長嗎？ 我是否需要更早進行變更？
+     我每年都掛一隻蜂鳥餵食器，可不太成功。 他們好像來了一兩天，就是這樣。 我每週變更一次會太長嗎？ 我是否必須更早進行變更？
 
    * 選取貼文
    * 選取登出
@@ -91,7 +87,7 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可透過 [成員主控台](member
 
 以下是未登入的網站訪客所看到的論壇檢視(5)。
 
-匿名網站訪客僅可檢視論壇，但不得發佈任何內容或執行任何稽核動作。
+匿名網站訪客僅可檢視論壇，但不得發佈任何內容，或執行任何稽核動作。
 
 ![社群 — 論壇 — 訪客](assets/community-forum-visitor.png)
 
@@ -124,11 +120,11 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可透過 [成員主控台](member
 
 ![community-admin-forum](assets/community-admin-forum.png)
 
-選取管理功能表專案以存取 [稽核主控台](moderation.md) 從發佈環境。
+選取管理功能表專案，以便您可以存取 [稽核主控台](moderation.md) 從發佈環境。
 
 請注意，對於管理員而言，所有可稽核內容皆可見，而不僅僅是GeometrixxEngage社群網站的內容。
 
-搜尋篩選器是切換開啟或關閉的側面板。
+搜尋篩選是可切換開啟或關閉的側面板。
 
 登出.
 
@@ -136,7 +132,7 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可透過 [成員主控台](member
 
 ### 社群版主(#2) {#community-moderator}
 
-以社群版主Aaron McDonald (aaron.mcdonal@mailinator.com)身分登入，並選取「論壇」，然後選取「瞭解更多」以存取對話串，瞭解蜂鳥貼文的內容。
+以Aaron McDonald (`aaron.mcdonal@mailinator.com`)、社群版主，並透過選取「論壇」來存取對話串，然後選取「瞭解更多」以檢視蜂鳥貼文。
 
 注意:
 
@@ -147,11 +143,11 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可透過 [成員主控台](member
 
 ![社群 — 論壇 — 版主](assets/community-forum-moderator.png)
 
-選取管理功能表專案以存取 [稽核主控台](moderation.md) 從發佈環境。
+選取管理功能表專案，以便您可以存取 [稽核主控台](moderation.md) 從發佈環境。
 
 請注意，對於社群版主，只會顯示來自GeometrixxEngage社群網站的可稽核內容。
 
-請注意，社群版主的選項與管理員相同（影像已關閉搜尋側欄），但無法存取其他AEM主控台。
+請注意，社群版主的選項與管理員相同（影像已關閉搜尋側邊欄），但無法存取其他AEM主控台。
 
 登出.
 
@@ -159,7 +155,7 @@ Rebekah Larsen (rebekah.larsen@trashymail.com)可透過 [成員主控台](member
 
 ### 內容作者(#1) {#content-author}
 
-以Rebekah Larsen (rebekah.larsen@mailinator.com)身分登入，此社群成員是啟動對話串，並選取「論壇」，接著選取Hummingbird貼文的「瞭解詳情」以存取對話串。
+以Rebekah Larsen的身份登入(`rebekah.larsen@mailinator.com`)，此社群成員已開始執行緒，並選取「論壇」來存取執行緒，然後選取「瞭解更多」以取得蜂鳥貼文。
 
 注意:
 
