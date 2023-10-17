@@ -1,8 +1,8 @@
 ---
-title: 移轉至AEM Commerce Integration Framework (CIF)附加元件
-description: 如何從舊版本移轉至AEM Commerce Integration Framework (CIF)附加元件
+title: 移轉至AEMCommerce integration framework(CIF)附加元件
+description: 如何從舊版移轉至AEMCommerce integration framework(CIF)附加元件。
 exl-id: c6c0c2fc-6cfa-4c64-b3d8-7e428b2a4b2e
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 4%
@@ -11,19 +11,19 @@ ht-degree: 4%
 
 # Experience Manager附加元件的移轉指南 {#cif-migration}
 
-本指南可協助您識別需要更新Experience Manager附加元件移轉的區域。
+本指南協助識別您需要為Experience Manager附加元件移轉更新的區域。
 
 ## CIF附加元件
 
-CIF附加元件可透過AEM 6.5取得 [軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 它是相容的，並提供與Experience Manageras a Cloud Service的CIF附加元件相同的功能。
+AEM 6.5的CIF附加元件可透過以下方式取得： [軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 它是相容的，提供和適用於Experience Manageras a Cloud Service的CIF附加元件相同的功能。
 
-另請參閱 [AEM Content and Commerce入門](getting-started.md).
+另請參閱 [AEM內容與商務快速入門](getting-started.md).
 
 為了支援部署CIF的專案，Adobe提供 [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components).
 
 ## 產品目錄
 
-CIF附加元件不支援匯入產品目錄資料。 使用CIF附加元件主體，產品和目錄請求是透過對外部商業解決方案的即時呼叫隨選的。 前往整合一章，進一步瞭解整合商務解決方案。
+CIF附加元件不支援匯入產品目錄資料。 使用CIF附加元件主體，產品與目錄請求是透過對外部商務解決方案的即時呼叫隨選的。 前往整合一章以進一步瞭解整合商務解決方案。
 
 >[!TIP]
 >
@@ -35,4 +35,4 @@ CIF附加元件不支援匯入產品目錄資料。 使用CIF附加元件主體�
 
 ## 無法快取的資料與購物互動
 
-不可快取資料和互動的使用者端請求（例如加入購物車、搜尋）應透過CDN / Dispatcher直接前往商務端點（商務解決方案或整合層）。 移除AEM只是Proxy的任何呼叫。
+對不可快取資料和互動的使用者端請求（例如加入購物車、搜尋）應透過CDN / Dispatcher直接前往商務端點（商務解決方案或整合層）。 移除AEM只是Proxy的任何呼叫。

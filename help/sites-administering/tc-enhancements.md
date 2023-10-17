@@ -1,29 +1,24 @@
 ---
 title: 翻譯增強功能
-seo-title: Translation Enhancements
-description: AEM中的翻譯增強功能。
-seo-description: Translation enhancements in AEM.
-uuid: 0563603f-327b-48f1-ac14-6777c06734b9
-products: SG_EXPERIENCEMANAGER/6.5/SITES
+description: AEM翻譯管理功能的漸進式增強和細化。
 topic-tags: site-features
 content-type: reference
-discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: 1be3d394283493f7c282ea4c3d794458d88e1ac3
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '686'
 ht-degree: 0%
 
 ---
 
 # 翻譯增強功能{#translation-enhancements}
 
-此頁面提供AEM翻譯管理功能的增量增強和細化。
+此頁面顯示AEM翻譯管理功能的遞增增強功能和細化。
 
 ## 翻譯專案自動化 {#translation-project-automation}
 
-已新增選項，以改善使用翻譯專案的生產力，例如自動提升和刪除翻譯啟動，以及排程翻譯專案的重複執行。
+已新增選項，以提升使用翻譯專案的生產力，例如自動提升和刪除翻譯啟動，以及排程翻譯專案的週期性執行。
 
 1. 在您的翻譯專案中，按一下或點選「 」底部的省略符號 **翻譯摘要** 圖磚。
 
@@ -37,7 +32,7 @@ ht-degree: 0%
 
    ![screen_shot_2018-04-19at224033](assets/screen_shot_2018-04-19at224033.jpg)
 
-1. 若要選取翻譯專案的循環執行，請選取頻率，下拉式清單位於 **重複翻譯**. 循環專案執行將在指定的間隔內自動建立和執行翻譯工作。
+1. 若要選取翻譯專案的循環執行，請選取頻率（在下方下拉式清單中） **重複翻譯**. 週期性專案執行將在指定的時間間隔內自動建立和執行翻譯工作。
 
    ![screen_shot_2018-04-19at223820](assets/screen_shot_2018-04-19at223820.jpg)
 
@@ -53,15 +48,15 @@ ht-degree: 0%
 
    ![screen_shot_2018-04-22at212601](assets/screen_shot_2018-04-22at212601.jpg)
 
-1. 或者，如果您要透過Sites中的參考邊欄啟動翻譯，請新增您的語言並選取 **建立多語言翻譯專案**.
+1. 或者，如果您要透過Sites中的參照邊欄啟動翻譯，請新增您的語言並選取 **建立多語言翻譯專案**.
 
    ![screen_shot_2018-04-22at212941](assets/screen_shot_2018-04-22at212941.jpg)
 
-1. 翻譯工作將在專案中針對每種目標語言建立。 您可以在專案中逐一啟動，或在「專案管理員」中全域執行專案來一次啟動。
+1. 翻譯工作將在專案中針對每種目標語言建立。 您可以在專案中逐一啟動，或透過在專案管理員中全域執行專案來一次啟動。
 
    ![screen_shot_2018-04-22at213854](assets/screen_shot_2018-04-22at213854.jpg)
 
-## 翻譯記憶庫更新 {#translation-memory-updates}
+## 翻譯記憶更新 {#translation-memory-updates}
 
 翻譯內容的手動編輯可以同步回翻譯管理系統(TMS)，以訓練其翻譯記憶庫。
 
@@ -73,7 +68,7 @@ ht-degree: 0%
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
-AEM會更新已設定TMS之翻譯記憶庫中現有字串的翻譯。
+AEM會更新已設定TMS的翻譯記憶庫中現有字串的翻譯。
 
 * 動作會更新已設定TMS的翻譯記憶庫中現有字串的翻譯。
 * 它不會建立新的翻譯工作。
@@ -83,10 +78,10 @@ AEM會更新已設定TMS之翻譯記憶庫中現有字串的翻譯。
 
 * TMS必須設定為可與AEM搭配使用。
 * 聯結器需要實作方法 [`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html).
-   * 此方法中的程式碼會決定翻譯記憶庫更新請求會發生什麼情況。
+   * 此方法中的程式碼會決定翻譯記憶體更新請求的情況。
    * AEM翻譯架構會透過此方法實作，將字串值配對（原始和更新的翻譯）傳送回TMS。
 
-對於使用專有翻譯記憶庫的情況，可以攔截翻譯記憶庫更新並傳送到自訂目的地。
+在使用專有翻譯記憶庫的情況下，可以攔截翻譯記憶庫更新並傳送到自訂目的地。
 
 ## 多個層級的語言副本 {#language-copies-on-multiple-levels}
 
@@ -101,13 +96,13 @@ AEM會更新已設定TMS之翻譯記憶庫中現有字串的翻譯。
 >* `/content/we-retail/language-masters/en`
 >* `/content/we-retail/language-masters/americas/central-america/es`
 >
->此 `es` 無法偵測到語言副本，因為它位於2個層級（美洲/中美洲）之外 `en` 節點。
+>這個 `es` 系統不會偵測到語言副本，因為它位於2個層級（美洲/中美洲） `en` 節點。
 
 >[!NOTE]
 >
 >語言根可以有任何頁面名稱，而不僅僅是語言的ISO程式碼。 AEM一律會先檢查路徑和名稱，但如果頁面名稱未識別語言，AEM會檢查頁面的cq：language屬性以取得語言識別。
 
-## 翻譯狀態報告 {#translation-status-reporting}
+## 翻譯狀態報表 {#translation-status-reporting}
 
 現在，您可以在網站清單檢視中選取屬性，以顯示頁面是否已翻譯、正在翻譯或尚未翻譯。 若要顯示它：
 
@@ -119,7 +114,7 @@ AEM會更新已設定TMS之翻譯記憶庫中現有字串的翻譯。
 
    ![screen_shot_2018-04-23at130844](assets/screen_shot_2018-04-23at130844.jpg)
 
-1. Check **已翻譯** 核取方塊於 **翻譯** 然後點選/按一下 **更新**.
+1. 檢查 **已翻譯** 核取方塊於 **翻譯** 然後點選/按一下 **更新**.
 
    ![screen_shot_2018-04-23at130955](assets/screen_shot_2018-04-23at130955.jpg)
 

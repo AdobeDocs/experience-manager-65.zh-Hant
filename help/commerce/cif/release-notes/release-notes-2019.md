@@ -1,10 +1,10 @@
 ---
 title: AEM Content and Commerce 2019年發行說明
-description: AEM Content and Commerce 2019年發行說明
+description: Adobe Experience Manager Content and Commerce發行說明2019年。
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '992'
 ht-degree: 7%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 7%
 
 * 產品詳細資料頁面和產品清單頁面的完全可編寫範本。 作者現在可以建立範本，並將產品清單和產品詳細資料元件拖放至這些範本上。 除了新增其他元件外，作者現在也可以變更這些範本的版面，為他們提供無限制的自由，以建立結合行銷和商務內容的令人驚豔體驗。
 
-* 所有方便作者使用的CIF核心元件已增強，可支援 [AEM樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). 已為產品清單元件提供範例樣式。
+* 所有對作者友善的CIF核心元件均已增強以支援 [AEM樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en). 已為產品清單元件提供範例樣式。
 
 * 用於帳戶管理的React型使用者端元件。 此版本支援下列功能：登入、忘記密碼和建立帳戶。
 
@@ -93,7 +93,7 @@ ht-degree: 7%
 
 * 在CIF原型中內嵌CIF Connector是選用專案，可讓開發人員獲得更多彈性。
 
-* CIF元件與「Venia」特定的CSS樣式脫離，讓開發人員可套用他們選擇的CSS樣式。
+* CIF元件與「Venia」特定的CSS樣式脫鉤，讓開發人員可套用他們選擇的CSS樣式。
 
 * 多商店/網站功能，可讓您在多個AEM網站結構上使用CIF核心元件，並讓底層GraphQL使用者端實作連線至不同的Adobe Commerce商店/商店檢視。
 
@@ -148,7 +148,7 @@ ht-degree: 7%
 
 * CIF聯結器和撰寫工具（產品主控台、產品選擇器和類別選擇器）可讓作者在AEM中建立具有商務內容的體驗。
 
-* 與Adobe Commerce 2.3.1相容的第一版CIF Core Components：
+* 與Adobe Commerce 2.3.1相容的CIF Core Components第一版：
    * 產品詳細資料
    * 產品清單
    * 產品Teaser

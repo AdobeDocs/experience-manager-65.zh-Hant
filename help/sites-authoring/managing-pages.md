@@ -1,10 +1,10 @@
 ---
 title: 使用AEM建立及組織頁面
-description: 如何使用AEM建立和管理頁面
+description: 瞭解如何使用Adobe Experience Manager建立和管理頁面。
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '2523'
+source-wordcount: '2526'
 ht-degree: 4%
 
 ---

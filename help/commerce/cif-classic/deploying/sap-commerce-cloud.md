@@ -1,13 +1,13 @@
 ---
 title: 使用SAPCommerce Cloud部署電子商務
-description: 瞭解如何使用SAPCommerce Cloud部署電子商務。
+description: 瞭解如何使用SAPCommerce Cloud部署Adobe Experience Manager eCommerce。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
-source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '717'
 ht-degree: 2%
 
 ---

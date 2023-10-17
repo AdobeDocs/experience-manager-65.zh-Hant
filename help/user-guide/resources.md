@@ -1,12 +1,10 @@
 ---
 title: AEM 6.5其他資源
-seo-title: AEM 6.5 Additional Resources
-description: AEM 6.5發行說明、認證及其他資源
-seo-description: AEM 6.5 release notes, certifications, and additional resources
+description: Adobe Experience Manager 6.5發行說明、認證及其他資源。
 exl-id: d254d976-f547-4074-b8ad-fe4814184f30
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '93'
 ht-degree: 6%
 
 ---
@@ -22,9 +20,9 @@ ht-degree: 6%
 * [AEM 6.5訓練影片](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
 * [AEM 教學課程](https://helpx.adobe.com/experience-manager/tutorials.html)
 
-## 類別與認證 {#classes-and-certification}
+## 課程與認證 {#classes-and-certification}
 
-[透過面對面和虛擬課程方案來擴展您的學習。](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
+[透過面對面和虛擬課程方案，擴大您的學習範圍。](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
 
 ## GDPR 整備 {#gdpr-readiness}
 

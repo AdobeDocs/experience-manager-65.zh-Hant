@@ -6,10 +6,8 @@ doc-type: technical-video
 activity: setup
 audience: administrator
 feature: Commerce Integration Framework
-kt: 3046
-thumbnail: 28952.jpg
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 2%
@@ -24,7 +22,7 @@ AEM CIF核心元件可用於多個AEM網站結構，而基礎的GraphQL使用者
 
 >[!VIDEO](https://video.tv.adobe.com/v/28952/?quality=12)
 
-Live Copy和Language Copy的AEM多網站管理功能可與Commerce Integration Framework搭配使用，以便全域管理跨區域和區域設定的網站。
+即時副本和語言副本的AEM多網站管理功能可與Commerce integration framework搭配使用，以全域方式管理跨地區和地區的網站。
 
 建議的設定是使用AEM網站與Adobe Commerce商店檢視之間的1:1關係。
 
@@ -36,7 +34,7 @@ Live Copy和Language Copy的AEM多網站管理功能可與Commerce Integration F
 
 2. 請確定AEM與Adobe Commerce之間的連線正常運作。
 
-3. 按照以下步驟建立CIFCloud Service設定的子設定：
+3. 依照下列步驟建立CIFCloud Service設定的子設定：
 
    * 在AEM中，前往「工具」 — >「一般」 — > [設定瀏覽器](/help/sites-administering/configurations.md#using-configuration-browser)
    * 選取您建立的基本組態

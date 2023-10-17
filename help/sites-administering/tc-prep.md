@@ -1,26 +1,19 @@
 ---
 title: 準備翻譯內容
-seo-title: Preparing Content for Translation
-description: 瞭解如何準備內容以進行翻譯。
-seo-description: Learn how to prepare content for translation.
-uuid: 369630a8-2ed7-48db-973e-bd8213231d49
+description: 瞭解如何準備內容以在Adobe Experience Manager中翻譯。
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '685'
 ht-degree: 1%
 
 ---
 
 # 準備翻譯內容{#preparing-content-for-translation}
 
-多語言網站通常提供多種語言的部分內容。 網站是以一種語言撰寫，然後翻譯成其他語言。 通常，多語言網站是由頁面分支所組成，每個分支都包含不同語言的網站頁面。
+多語言網站通常以多種語言提供一定數量的內容。 網站是以一種語言撰寫，然後翻譯成其他語言。 通常，多語言網站是由頁面分支組成，每個分支都包含不同語言的網站頁面。
 
 範例Geometrixx示範網站包含數個語言分支，並使用下列結構：
 
@@ -38,27 +31,27 @@ ht-degree: 1%
 
 網站的每個語言分支都稱為語言副本。 語言副本的根頁面（稱為語言根）可識別語言副本中的內容語言。 例如， `/content/geometrixx/fr` 是法語副本的語言根。 語言副本必須使用 [已正確設定的語言根目錄](/help/sites-administering/tc-prep.md#creating-a-language-root) 以便在翻譯來源網站時鎖定正確的語言。
 
-您最初為其創作網站內容的語言副本是語言母版。 語言母版是翻譯成其他語言的來源。
+您最初為其創作網站內容的語言副本是語言主要版本。 語言母版是翻譯成其他語言的來源。
 
-使用以下步驟來準備您的網站以進行翻譯：
+使用下列步驟來準備您的網站以進行翻譯：
 
-1. 建立語言主版的語言根。 例如，英文Geometrixx示範網站的語言根目錄為/content/geometrixx/en。 請確定已根據中的資訊正確設定語言根 [建立語言根目錄](/help/sites-administering/tc-prep.md#creating-a-language-root).
-1. 編寫您的語言母版的內容。
-1. 為您的網站建立每個語言副本的語言根。 例如，Geometrixx範例網站的法文副本為/content/geometrixx/fr。
+1. 建立語言主版的語言根。 例如，英文Geometrixx示範網站的語言根為/content/geometrixx/en。 請確定已根據中的資訊正確設定語言根 [建立語言根目錄](/help/sites-administering/tc-prep.md#creating-a-language-root).
+1. 編寫語言主版的內容。
+1. 建立網站每個語言副本的語言根。 例如，Geometrixx範例網站的法文副本為/content/geometrixx/fr。
 
-準備翻譯內容後，您可以在語言副本和相關翻譯專案中自動建立遺失的頁面。 (請參閱 [建立翻譯專案](/help/sites-administering/tc-manage.md).) 如需AEM內容翻譯流程的概觀，請參閱 [翻譯多語言網站的內容](/help/sites-administering/translation.md).
+準備要翻譯的內容後，您可以在語言副本和相關翻譯專案中自動建立遺失的頁面。 (請參閱 [建立翻譯專案](/help/sites-administering/tc-manage.md).) 如需AEM內容翻譯流程的概觀，請參閱 [翻譯多語言網站的內容](/help/sites-administering/translation.md).
 
 ## 建立語言根目錄 {#creating-a-language-root}
 
-建立語言根目錄作為識別內容語言的語言副本的根目錄頁面。 建立語言根後，您可以建立包含語言副本的翻譯專案。
+建立語言根作為識別內容語言的語言副本的根頁面。 建立語言根之後，您可以建立包含語言副本的翻譯專案。
 
-若要建立語言根，請建立頁面並使用ISO語言代碼作為Name屬性的值。 語言程式碼必須是下列格式之一：
+若要建立語言根，請建立頁面並使用ISO語言代碼作為Name屬性的值。 語言程式碼必須是下列其中一種格式：
 
 * `<language-code>`支援的語言代碼是由ISO-639-1定義的兩字母代碼，例如 `en`.
 
-* `<language-code>_<country-code>` 或 `<language-code>-<country-code>`支援的國家代碼是如ISO 3166定義的小寫或大寫兩字母代碼，例如 `en_US`， `en_us`， `en_GB`， `en-gb`.
+* `<language-code>_<country-code>` 或 `<language-code>-<country-code>`支援的國家/地區代碼是由ISO 3166定義的小寫或大寫兩字母代碼，例如 `en_US`， `en_us`， `en_GB`， `en-gb`.
 
-您可以根據您為全域網站選擇的結構，使用任一格式。  例如，Geometrixx網站的法文副本的根頁面有 `fr` 作為Name屬性。 請注意，Name屬性會用作存放庫中頁面節點的名稱，從而決定頁面的路徑。 (http://localhost:4502/content/geometrixx/fr.html)
+根據您為全域網站選擇的結構，您可以使用任一格式。  例如，Geometrixx網站法文副本的根頁面有 `fr` 作為Name屬性。 請注意，Name屬性會用作存放庫中頁面節點的名稱，從而決定頁面的路徑。 (http://localhost:4502/content/geometrixx/fr.html)
 
 下列程式使用觸控最佳化UI來建立網站的語言副本。 如需使用傳統UI的說明，請參閱 [使用Classic UI建立語言根](/help/sites-administering/tc-lroot-classic.md).
 
@@ -80,7 +73,7 @@ ht-degree: 1%
 
 ## 檢視語言根的狀態 {#seeing-the-status-of-language-roots}
 
-觸控最佳化的UI提供「參考」面板，顯示已建立的語言根的清單。
+觸控最佳化的UI提供「參考」面板，顯示已建立的語言根清單。
 
 ![chlimage_1-23](assets/chlimage_1-23a.png)
 

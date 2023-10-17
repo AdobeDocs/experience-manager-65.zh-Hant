@@ -1,10 +1,10 @@
 ---
 title: AEM Content and Commerce 2020年發行說明
-description: AEM Content and Commerce 2020年發行說明
+description: Adobe Experience Manager Content and Commerce 2020年發行說明。
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1354'
 ht-degree: 11%
 
 ---
@@ -111,7 +111,7 @@ ht-degree: 11%
 
 ### 新增功能 {#what-is-new-july}
 
-* CIF Venia Reference Site是從CIF Archetype存放庫擷取的，現在是一個獨立的GitHub存放庫。
+* CIF Venia參考網站是從CIF Archetype存放庫擷取，現在是獨立的GitHub存放庫。
 
 * CIF原型與AEM專案原型合併。 若為新專案，請使用 [AEM專案原型](https://github.com/adobe/aem-project-archetype) 作為起點。
 

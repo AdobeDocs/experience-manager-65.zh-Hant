@@ -1,13 +1,11 @@
 ---
 title: AEM 6.5實作使用指南
-seo-title: AEM 6.5 Implementation User Guide
-description: 如何實作AEM 6.5的概觀
-seo-description: An overview of how to implement AEM 6.5
+description: 概述如何使用Adobe Experience Manager 6.5實作及開發。
 exl-id: 33404f0d-c04c-4720-8a24-ded6738ec7d4
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 35%
+source-wordcount: '105'
+ht-degree: 33%
 
 ---
 
@@ -17,7 +15,7 @@ ht-degree: 35%
 
 您是AEM開發人員嗎？ [開始在AEM上開發。](/help/sites-developing/home.md)
 
-## AEM核心元件 {#core-components-for-aem}
+## 適用於AEM的核心元件 {#core-components-for-aem}
 
 [使用可擴充的核心元件，讓作者輕鬆建立內容。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
@@ -31,4 +29,4 @@ ht-degree: 35%
 
 ## Dispatcher設定 {#dispatcher-configuration}
 
-[使用AEM設定您的Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
+[使用AEM設定您的Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
