@@ -1,20 +1,16 @@
 ---
 title: 仲裁社群內容
-seo-title: Moderating Community Content
-description: 稽核概念和動作
-seo-description: Moderation concepts and actions
-uuid: 5c991d3a-0037-4d78-8f91-bb62e44441fa
+description: 瞭解如何稽核使用者產生的內容，以便您識別正面貢獻並限制負面貢獻，例如垃圾郵件和辱罵性語言。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
 role: Admin
 exl-id: 22276580-e6bc-41c5-9ac3-e8f291f676b7
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '1515'
+source-wordcount: '1516'
 ht-degree: 2%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-社群內容(也稱為使用者產生的內容(UGC))是在成員（已登入網站訪客）透過與下列社群元件之一的互動從已發佈的社群網站張貼內容時建立的：
+社群內容(也稱為使用者產生的內容(UGC))是在成員（登入網站訪客）透過與下列社群元件之一的互動從已發佈的社群網站張貼內容時建立的：
 
 * [部落格](/help/communities/blog-feature.md)：成員發表部落格或評論。
 * [行事曆](/help/communities/calendar.md)：成員張貼日曆事件或評論。
@@ -34,13 +30,13 @@ ht-degree: 2%
 * [QnA](/help/communities/working-with-qna.md)：成員會建立問題或回答問題。
 * [評論](/help/communities/reviews.md)：成員在對專案進行評等時發表評論。
 
-稽核UGC對於識別正面貢獻以及限制負面貢獻（例如垃圾郵件和辱罵語言）很有用。 UGC可從數個環境中稽核：
+UGC的稽核對於識別正面貢獻和限制負面貢獻很有用（例如垃圾郵件和辱罵語言）。 UGC可從數個環境中稽核：
 
 * [社群內容儲存](working-with-srp.md)
 
 * [大量仲裁主控台](moderation.md)
 
-  管理員可存取「協調」主控台，以及 [社群版主](/help/communities/users.md) 以及作者環境中的管理員。 當社群內容儲存在 [公用存放區](/help/communities/working-with-srp.md).
+  管理員可存取「協調」主控台，以及 [社群版主](/help/communities/users.md) 由製作環境中的管理員執行。 當社群內容儲存在 [公用存放區](/help/communities/working-with-srp.md).
 
 * [內容中稽核](in-context.md)
 
@@ -187,17 +183,17 @@ ht-degree: 2%
 
 內容內稽核可設定為允許成員在標幟貼文時選取原因。 可選擇的旗標原因清單是可設定的，包括是否可以輸入自訂原因。 標幟原因會與UGC一併儲存，但原因不會觸發任何特定動作。 僅觸發通知的旗標數。 已標幟的內容會依此進行註解，以便版主可對其採取行動。
 
-系統會追蹤所有已標幟的標幟以及標幟原因，並在達到臨界值時傳送事件。 如果社群版主允許UGC，則會封存這些標幟。 允許並封存之後，如果有後續標幟，則會封存這些標幟，就像之前沒有標幟一樣。
+系統會追蹤所有標幟及標幟原因，並在達到臨界值時傳送事件。 如果社群版主允許UGC，則會封存這些標幟。 允許並封存之後，如果有後續標幟，則會封存這些標幟，就像之前沒有標幟一樣。
 
 ### 允許 {#allow}
 
-此允許動作是已標幟、已拒絕或未在預先稽核系統中核准的UGC選項。 允許動作將清除任何存在的已標幟或已拒絕/垃圾郵件狀態，並封存任何已標幟的資料。
+對於已標幟、已拒絕或未在預先稽核系統中核准的UGC，允許動作是一個選項。 允許動作會清除任何存在的已標幟或已拒絕/垃圾郵件狀態，並封存任何已標幟的資料。
 
 ## 常見的稽核概念 {#common-moderation-concepts}
 
 ### 預先稽核 {#premoderation}
 
-UGC預先稽核後，文章必須經由稽核動作核准後才會出現在已發佈的網站上。 在建立期間 [社群網站](/help/communities/sites-console.md)，核取方塊 [內容已預先稽核](sites-console.md#moderation) 將會啟用整個網站的預先稽核。 將元件放置到頁面上後，可以使用編輯對話方塊中的設定來設定支援稽核的元件以進行預審：
+UGC預先稽核時，帖子要等到稽核動作核准後才會出現在已發佈的網站上。 在建立期間 [社群網站](/help/communities/sites-console.md)，核取方塊 [內容已預先稽核](sites-console.md#moderation) 會啟用整個網站的預先稽核。 將元件放置在頁面上時，可使用編輯對話方塊中的設定，將支援稽核的元件設定為可預先稽核：
 
 * [註解](comments.md) 和 [評論](reviews.md)
 在 **[!UICONTROL 使用者稽核]** > **[!UICONTROL 預先稽核]**.
@@ -207,13 +203,13 @@ UGC預先稽核後，文章必須經由稽核動作核准後才會出現在已�
 
 ### 垃圾郵件偵測 {#spam-detection}
 
-垃圾郵件偵測是一種自動仲裁功能，可透過將提交的使用者產生的內容標籤為垃圾郵件來篩選掉不需要的片段。 一旦啟用，它會根據預先設定的垃圾郵件字詞集合來識別使用者產生的內容是否為垃圾郵件。 預設垃圾訊息字詞提供於
+垃圾郵件偵測是一種自動稽核功能，會透過將提交的使用者產生的內容標籤為垃圾郵件來篩選掉不需要的片段。 一旦啟用，它會根據預先設定的垃圾郵件字詞集合來識別使用者產生的內容是否為垃圾郵件。 預設垃圾訊息字詞提供於
 
 `/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`。
 
-但是，若要自訂或擴充預設垃圾郵件，請以下列方式在/apps目錄中建立一組文字，並遵循預設垃圾郵件的結構 [覆蓋](/help/communities/overlay-comments.md).
+不過，若要自訂或延伸預設的垃圾文字，請在/apps目錄中建立一組文字，並遵循預設垃圾文字的結構，使用 [覆蓋](/help/communities/overlay-comments.md).
 
-使用者產生的貼文（涵蓋所有內容型別，例如部落格、論壇和評論）若包含垃圾郵件字詞，會在貼文上方標示「此貼文被分類為垃圾郵件」文字。
+使用者產生的貼文（涵蓋所有內容型別，例如部落格、論壇和評論）若包含垃圾訊息，會在貼文上方標示「此貼文被分類為垃圾訊息」文字。
 
 版主可以看到這類貼文，並加以標示，以允許或拒絕出現在網站上。 這些貼文上的稽核動作可在內容中或透過大量稽核UI執行。
 
@@ -236,7 +232,7 @@ UGC預先稽核後，文章必須經由稽核動作核准後才會出現在已�
 
 情緒是根據正面和負面關鍵字的數量計算的([關注字詞](#configuringwatchwords))出現在貼文(UGC)中。
 
-情緒分析使用一組預先設定的規則，並計算UGC的情緒。 預設規則位於： `/libs/cq/workflow/components/workflow/social/sentiments/rules.`
+情緒分析使用一組預先設定的規則，並計算UGC的情緒。 預設規則為 `/libs/cq/workflow/components/workflow/social/sentiments/rules`.
 
 規則產生的值介於1 （全是負值，沒有正字）到10 （全是正值，沒有負值）之間。 情緒值5是中性情緒，且為預設值。
 
@@ -247,7 +243,7 @@ UGC預先稽核後，文章必須經由稽核動作核准後才會出現在已�
 * 規則3：如果負面字數多於正面字數，則將值設為3。
 * 規則4：如果正面字數多於負面字數，則將值設為8。
 
-若要覆寫或新增規則，請依照預設規則的結構在/apps目錄中建立一組規則。 編輯情緒設定以識別規則的位置。
+若要覆寫或新增規則，請依照預設規則的結構在/apps目錄中建立一組規則。 編輯情緒設定，以便識別規則的位置。
 
 分析後，該情緒會與UGC一併儲存。
 
@@ -255,13 +251,13 @@ UGC預先稽核後，文章必須經由稽核動作核准後才會出現在已�
 
 #### 關注字詞 {#watchwords}
 
-AEM社群提供 *關注字詞分析器* 作為評估程式中的一個步驟 [情緒](#sentiment). 關注字詞對人氣值的貢獻來自於對張貼內容中使用的負面和正面關注字詞以及禁止字詞的比較。
+AEM Communities提供 *關注字詞分析器* 作為評估程式中的步驟 [情緒](#sentiment). 關注字詞對人氣值的貢獻來自於對張貼內容中使用的負面和正面關注字詞與禁止字詞的比較。
 
 #### 設定情緒和關注字詞 {#configure-sentiment-and-watchwords}
 
 正面和負面標語清單可自訂，如同情緒規則一樣。
 
-預設的關注字清單可輸入為存放庫中節點的屬性，類似於預設值，或透過設定OSGi服務來覆寫預設值 `sentimentprocess.name` 文字清單。
+預設的關注字清單可以輸入為存放庫中節點的屬性，類似於預設值，或透過設定OSGi服務來覆寫預設值 `sentimentprocess.name` 文字清單。
 
 此 **sentimentprocess.name** 您也可以修改以參考自訂情緒規則集的位置。
 
@@ -270,13 +266,13 @@ AEM社群提供 *關注字詞分析器* 作為評估程式中的一個步驟 [�
 * 以管理員身分登入您的作者執行個體。
 * 開啟 [網頁主控台](https://localhost:4502/system/console/configMgr).
 * 尋找 `sentimentprocess.name`.
-* 選取要在編輯模式中開啟的設定。
+* 選取設定，以便您可以在編輯模式中開啟它。
 
 ![情緒過程](assets/sentimentprocess.png)
 
 * **正面標語**
 
-  以逗號分隔的單詞清單，構成可覆寫預設值的正面情緒。 預設為空白清單。
+  以逗號分隔的單詞清單，可形成正面情緒，並覆寫預設值。 預設為空白清單。
 
 * **負面標語**
 

@@ -1,20 +1,16 @@
 ---
 title: Communities使用者同步
-seo-title: Communities User Synchronization
-description: 使用者同步如何運作
-seo-description: How user synchronization works
-uuid: 772b82bd-a66c-4c1d-b80b-dcff77c873a3
+description: 瞭解使用者同步如何在Adobe Experience Manager社群中運作。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '2481'
+source-wordcount: '2471'
 ht-degree: 2%
 
 ---
@@ -23,11 +19,11 @@ ht-degree: 2%
 
 ## 簡介 {#introduction}
 
-在AEM Communities中，從發佈環境（取決於設定的許可權）， *網站訪客* 可能會變成 *成員*，建立 *使用者群組*，並編輯其 *成員設定檔* .
+在Adobe Experience Manager (AEM) Communities中，從發佈環境（取決於設定的許可權）， *網站訪客* 可能會變成 *成員*，建立 *使用者群組*，並編輯其 *成員設定檔* .
 
-*使用者資料* 是用來指稱的術語 *使用者*， *使用者設定檔* 和 *使用者群組*.
+*使用者資料* 參考 *使用者*， *使用者設定檔*、和 *使用者群組*.
 
-*成員* 是用來指稱的術語 *使用者* 在發佈環境中註冊，與在作者環境中註冊的使用者相反。
+*成員* 請參閱 *使用者* 在發佈環境中註冊的使用者，與在作者環境中註冊的使用者相反。
 
 如需關於使用者資料的詳細資訊，請造訪 [管理使用者和使用者群組](/help/communities/users.md).
 
@@ -35,47 +31,45 @@ ht-degree: 2%
 
 依設計，在發佈環境中建立的使用者資料不會出現在製作環境中。
 
-在製作環境中建立的大多數使用者資料旨在保留在製作環境中，不會同步也不會複製到發佈執行個體。
+在製作環境中建立的大多數使用者資料旨在保留在製作環境中，不會同步也不會復寫到發佈執行個體。
 
-當 [拓撲](/help/communities/topologies.md) 是 [發佈陣列](/help/sites-deploying/recommended-deploys.md#tarmk-farm)，對一個發佈執行個體進行的註冊和修改需要與其他發佈執行個體同步。 成員必須能夠登入並在任何發佈節點上檢視其資料。
+當 [拓撲](/help/communities/topologies.md) 是 [發佈陣列](/help/sites-deploying/recommended-deploys.md#tarmk-farm)，對一個發佈執行個體進行的註冊和修改必須與其他發佈執行個體同步。 成員必須能夠登入並在任何發佈節點上檢視其資料。
 
 啟用使用者同步時，系統會自動在伺服器陣列中的發佈執行個體間同步使用者資料。
 
 ### 使用者同步設定指示 {#user-sync-setup-instructions}
 
-如需如何在發佈伺服器陣列間啟用同步化的詳細逐步指示，請參閱：
+如需有關如何啟用發佈伺服器陣列間同步化的詳細逐步指示，請參閱 [使用者同步](/help/sites-administering/sync.md).
 
-* [使用者同步](/help/sites-administering/sync.md)
-
-## 使用者在背景同步  {#user-sync-in-the-background}
+## 使用者在背景同步 {#user-sync-in-the-background}
 
 ![sling-dist-workflow](assets/sling-dist-workflow.png)
 
 * **vlt封裝**
 
-  此為包含發佈者所做所有變更的zip檔案，這些變更必須分發給發佈者。 發行者上的變更會產生由變更事件接聽程式挑選的事件。 這會建立包含所有變更的vlt套裝程式。
+  這是包含對發佈者所做所有變更的zip檔案，必須分發給各個發佈者。 發行者上的變更會產生由變更事件接聽程式挑選的事件。 這會建立包含所有變更的vlt套裝程式。
 
 * **發佈套件**
 
-  它包含Sling的分發資訊。 這是需要發佈內容的位置以及最後發佈內容的時間的相關資訊。
+  它包含Sling的分發資訊。 這是必須發佈內容的位置以及最後發佈內容的時間的相關資訊。
 
 ## 當……發生什麼情況？ {#what-happens-when}
 
 ### 從社群網站主控台發佈網站 {#publish-site-from-communities-sites-console}
 
-對作者而言，當社群網站從發佈時 [社群網站主控台](/help/communities/sites-console.md)，效果為 [復寫](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents) 關聯的頁面和Sling會散發動態建立的社群使用者群組，包括其成員資格。
+在Author上，當社群網站從發佈時 [社群網站主控台](/help/communities/sites-console.md)，效果為 [復寫](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents) 關聯的頁面和Sling會散發動態建立的社群使用者群組，包括其成員資格。
 
 ### 在發佈時建立或編輯使用者設定檔 {#user-is-created-or-edits-profile-on-publish}
 
-依設計，在發佈環境中建立的使用者和設定檔（例如透過自助註冊、社交登入、LDAP驗證）不會出現在製作環境中。
+依設計，在發佈環境中建立的使用者和設定檔（例如透過自我註冊、社交登入、LDAP驗證）不會出現在作者環境中。
 
 當拓撲為 [發佈陣列](/help/communities/topologies.md) 且使用者同步已正確設定， *使用者* 和 *使用者設定檔* 會使用Sling散發跨發佈伺服器陣列進行同步。
 
 ### 新社群群組已建立在發佈上 {#new-community-group-is-created-on-publish}
 
-社群群組的建立雖然是從發佈例項開始的，但實際上會在作者例項上發生，這會產生新的網站頁面和新的使用者群組。
+社群群組的建立雖然是從發佈例項開始的，但實際上會在Author例項上發生，這會導致新的網站頁面和新的使用者群組。
 
-作為程式的一部分，新網站頁面將複製到所有發佈執行個體。 動態建立的社群使用者群組及其成員資格會由Sling散發至所有發佈執行個體。
+作為程式的一部分，新網站頁面將複製到所有發佈執行個體。 動態建立的社群使用者群組及其成員資格會分散到所有Publish例項。
 
 ### 使用者或使用者群組是使用「安全性主控台」建立的 {#users-or-user-groups-are-created-using-security-console}
 
@@ -87,11 +81,11 @@ ht-degree: 2%
 
 對於使用者產生的內容(UGC)，透過以下存取在發佈執行個體上輸入的資料： [已設定的SRP](/help/communities/srp-config.md).
 
-## 最佳實務 {#bestpractices}
+## 最佳做法 {#bestpractices}
 
 依預設，使用者同步為 **已停用**. 啟用使用者同步涉及修改 *現有* OSGi設定。 啟用使用者同步後，不應新增任何設定。
 
-即使使用者資料並非建立於作者，使用者同步仍仰賴作者環境管理使用者資料分佈。
+使用者同步需仰賴作者環境管理使用者資料分佈，即使使用者資料並非建立於作者。
 
 **必備條件**
 
@@ -207,7 +201,7 @@ ht-degree: 2%
 
 此設定可讓您設定輪詢間隔（過了輪詢間隔後，發佈者就會被釘選而且作者會提取變更），以便在發佈者之間同步變更。
 
-作者每30秒輪詢發佈者（預設）。 如果資料夾中存在任何套件 `/var/sling/distribution/packages/  socialpubsync -  vlt /shared`，然後它會擷取這些套件，並安裝在其他發行者上。
+作者每30秒輪詢發佈者（預設）。 如果資料夾中存在任何套件 `/var/sling/distribution/packages/  socialpubsync -  vlt /shared`，接著會擷取這些套件，並安裝在其他發佈程式上。
 
 變更輪詢間隔：
 
@@ -257,7 +251,7 @@ ht-degree: 2%
 
    `sling:OrderedFolder`
 
-   此屬性中指定的節點型別將會同步，而且通知資訊（後續的部落格和設定）會在不同的發佈者之間同步。
+   此屬性中指定的節點型別會同步，而且通知資訊（後續的部落格和設定）會在不同發行者之間同步。
 
 1. 新增要在其中同步處理的所有資料夾 **DistributedFolders**. 例如，
 
@@ -281,7 +275,7 @@ ht-degree: 2%
 
 AEM作者執行個體會使用Sling ID來識別資料來自何處，以及需要（或不需要）將套件傳回至哪些發佈者。
 
-請確定發佈伺服器陣列中的所有發佈者都有唯一的Sling ID。 如果發佈伺服器陣列中的多個發佈執行個體的Sling ID相同，則使用者同步將會失敗。 由於作者不知道從何處擷取套件以及在何處安裝套件。
+請確定發佈伺服器陣列中的所有發佈者都有唯一的Sling ID。 如果發佈伺服器陣列中的多個發佈執行個體的Sling ID相同，則使用者同步會失敗。 由於作者不知道從何處擷取套件以及在何處安裝套件。
 
 若要確保發佈伺服器陣列中發佈者的唯一Sling ID，請在每個發佈執行個體上：
 
@@ -292,7 +286,7 @@ AEM作者執行個體會使用Sling ID來識別資料來自何處，以及需要
 
    如果發佈執行個體的Sling ID符合任何其他發佈執行個體的Sling ID，則：
 
-1. 停止其中一個具有相符Sling ID的發佈執行個體。
+1. 停止具有相符Sling ID的其中一個發佈執行個體。
 1. 在 `crx-quickstart/launchpad/felix` 目錄，搜尋並刪除名為的檔案 *sling.id.file.*
 
    例如，在Linux系統上：
@@ -303,7 +297,7 @@ AEM作者執行個體會使用Sling ID來識別資料來自何處，以及需要
 
    使用Windows檔案總管並搜尋 `sling.id.file`
 
-1. 啟動發佈執行個體。 啟動時，系統會為其指派新的Sling ID。
+1. 啟動發佈執行個體。 啟動時，系統會為其指派一個新的Sling ID。
 1. 驗證 **Sling ID** 現在是唯一的。
 
 重複這些步驟，直到所有發佈執行個體都具備唯一的Sling ID為止。
@@ -315,7 +309,7 @@ AEM作者執行個體會使用Sling ID來識別資料來自何處，以及需要
 
 使用者同步可以停止，如果 `rep :cache` 節點會在發佈者之間同步。
 
-若要確保跨發佈者正確同步更新，請在每個AEM發佈執行個體上：
+為確保更新在發佈者之間正確同步，請在每個AEM Publish執行個體上：
 
 1. 存取 [網頁主控台](/help/sites-deploying/configuring-osgi.md)
 
@@ -388,13 +382,13 @@ AEM作者執行個體會使用Sling ID來識別資料來自何處，以及需要
    1. 找到設定 **Apache Sling散發代理程式 — 同步代理程式工廠**.
    1. 取消選取 **已啟用** 核取方塊。
 
-      在製作執行個體上停用使用者同步時，（匯出工具和匯入工具）端點會停用，而且製作執行個體是靜態的。 此 **vlt** 作者不會擷取或擷取套件。
+      在停用製作執行個體（匯出工具和匯入工具）端點的使用者同步時，會停用且製作執行個體是靜態的。 此 **vlt** 作者不會擷取或擷取套件。
 
       現在，如果在發佈執行個體上建立使用者， **vlt** 封裝建立於 */var/sling/distribution/packages/ socialpubsync - vlt /data* 節點。 以及作者是否將這些套件推送至其他服務。 您可以下載並解壓縮此資料，以檢查所有屬性會推送至其他服務。
 
 1. 移至發行者，並在發行者上建立使用者。 因此，會建立事件。
-1. 檢查 [記錄順序](/help/communities/sync.md#troubleshoot-sling-distribution-in-aem-communities)，於建立使用者時建立。
+1. 檢查 [記錄順序](/help/communities/sync.md#troubleshoot-sling-distribution-in-aem-communities) 建立使用者時建立。
 1. 檢查是否 **vlt** 封裝建立於 **/var/sling/distribution/packages/socialpubsync-vlt/data**.
-1. 現在，請在AEM編寫執行個體上啟用使用者同步。
+1. 現在，請在AEM Author例項上啟用使用者同步。
 1. 在發佈者上，變更中的匯出工具或匯入工具端點 **Apache Sling散發代理程式 — 同步代理程式工廠**.
 我們可以下載並擷取套件資料，以檢查推送至其他發佈者的所有屬性，以及遺失哪些資料。

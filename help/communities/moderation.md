@@ -1,33 +1,29 @@
 ---
 title: 稽核主控台
-seo-title: Moderation Console
-description: 如何存取稽核主控台
-seo-description: How to access the Moderation console
-uuid: d3b8a160-85b2-43f4-9891-5fafa8c48c5f
+description: 瞭解管理員和社群版主如何使用「稽核」主控台來存取他們有權稽核的所有UGC。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 role: Admin
 exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '2041'
+source-wordcount: '2038'
 ht-degree: 4%
 
 ---
 
 # 稽核主控台 {#moderation-console}
 
-在AEM Communities中，大量 [社群內容的稽核](/help/communities/moderate-ugc.md) 管理員和社群版主（指派為版主的受信任社群成員）可在作者和發佈環境中使用。
+在AEM Communities中，大量 [社群內容的稽核](/help/communities/moderate-ugc.md) 管理員和社群版主（指派為版主的受信任社群成員）可同時在「作者」和「發佈」環境中使用。
 
 管理員和社群版主也可執行 [內容內稽核](/help/communities/in-context.md) 在發佈環境中。
 
 一項完整的功能 [社群網站](/help/communities/sites-console.md) 是 `Administration` 以管理許可權登入的使用者可用的功能表專案。 此 `Administration` 連結提供對「稽核」主控台的存取權。
 
-在「稽核」控制檯中，管理員和社群版主將可存取其有權稽核的所有使用者產生內容(UGC)。 如果允許稽核多個網站，則可檢視所有網站的貼文，或依選取的社群網站進行篩選。
+在「調節」控制檯中，管理員和社群調節者有權存取所有他們有權調節的使用者產生內容(UGC)。 如果允許稽核多個網站，則可檢視所有網站的貼文，或依選取的社群網站進行篩選。
 
 如需詳細資訊，請造訪 [管理使用者和使用者群組](/help/communities/users.md).
 
@@ -60,7 +56,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->只有當所選的SRP實作通用存放區時，發佈環境的UGC才可顯示於作者。 例如，預設的儲存體為JSRP，這不是製作和發佈的常見儲存體。 另請參閱 [社群內容儲存](/help/communities/working-with-srp.md).
+>只有當所選的SRP實作通用存放區時，發佈環境的UGC才會顯示在Author上。 例如，預設的儲存體為JSRP，這不是Author和Publish的常見儲存體。 另請參閱 [社群內容儲存](/help/communities/working-with-srp.md).
 
 ![moderationconsoleauthor](assets/moderationconsoleauthor.png)
 
@@ -99,12 +95,12 @@ ht-degree: 4%
 * UGC已張貼
 * 成員名稱
 * 成員頭像
-* 貼文的位置。
-* 張貼時間。
-* 回覆貼文的次數。
+* 貼文的位置
+* 張貼時間
+* 回覆貼文的次數
 * [情緒](/help/communities/moderate-ugc.md#sentiment) 與貼文相關聯
-* 如果核准，會顯示核取記號。
-* 如果有附件，則會顯示迴紋針。
+* 如果核准，會顯示核取記號
+* 如果有附件，則會顯示回形針
 
 >[!NOTE]
 > 
@@ -118,9 +114,9 @@ ht-degree: 4%
 
 每個類別中的篩選器為 **或**&#39;d在一起，不同類別中的篩選器為 **和**&#39;d在一起。
 
-例如，如果您同時核取 **問題** 和 **回答**，您會看到內容為 **問題** *或* 一個 **回答**.
+例如，如果您同時核取 **問題** 和 **回答**，您會看到以下其中一種內容： **問題** *或* 一個 **回答**.
 
-不過，如果您檢查 **問題** 和 **擱置中**，您只會看到 **問題** 和 **擱置中**.
+不過，如果您勾選 **問題** 和 **擱置中**，您只會看到 **問題** 和 **擱置中**.
 
 >[!NOTE]
 >
@@ -128,7 +124,7 @@ ht-degree: 4%
 
 ![搜尋圖示](assets/searchicon.png)
 
-當篩選邊欄開啟時，搜尋圖示會切換關閉的側面板。 但若要關閉篩選邊欄並僅檢視使用者產生的內容，請按一下「搜尋」圖示並選取「僅限內容」選項。
+當篩選邊欄開啟時，搜尋圖示會切換關閉的側面板。 但若要關閉篩選邊欄並僅檢視使用者產生的內容，請按一下「搜尋」圖示，然後選取「僅限內容」選項。
 
 #### 內容路徑 {#content-path}
 
@@ -152,7 +148,7 @@ ht-degree: 4%
 >
 >當管理員存取大量仲裁控制檯時，所有對UGC的參考皆會顯示，包括未使用建立的網站 [網站建立精靈](/help/communities/sites-console.md)，例如Geometrixx範例。
 >
->當信任的社群成員在發佈時存取大量稽核主控台時，則只會顯示對該成員有權稽核的社群網站所建立的UGC參考，並且可以使用網站篩選條件進行篩選。
+>當信任的社群成員在「發佈」上存取大量稽核主控台時，只會顯示對該成員有權稽核的社群網站所建立的UGC參照。 此外，也可使用「網站」篩選條件來篩選。
 
 #### 內容類型 {#content-type}
 
@@ -181,7 +177,7 @@ ht-degree: 4%
 * 以管理員身分登入您的作者執行個體。
 * 開啟 [網頁主控台](https://localhost:4502/system/console/configMgr).
 * 尋找 `AEM Communities Moderation Dashboard Filters`.
-* 選取要在編輯模式中開啟的設定。
+* 選取設定，以便您可以在編輯模式中開啟。
 * 輸入要篩選之元件的ResourceType：
 
    * 例如，若要篩選包含的投票元件，請輸入：
@@ -199,11 +195,11 @@ ht-degree: 4%
 
 #### 狀態 {#status}
 
-狀態會將參照的UGC顯示限制在選定狀態的貼文，可能為擱置中、已核准、已拒絕或已關閉的一或多個，以及草稿或已排程的部落格，以及已回答或未回答問題的一或多個。 如果未選取任何專案，則會顯示所有專案。
+狀態會將參照的UGC顯示限製為所選狀態的文章，這些狀態可能為擱置中、已核准、已拒絕或已關閉的一或多個，以及草稿或已排程的部落格，以及已回答或未回答的QnA問題。 如果未選取任何專案，則會顯示所有專案。
 
 >[!NOTE]
 >
->如果只選取「未回答」狀態，則版主會看到所有內容（針對所有內容型別），但已回答的問題除外。 這是因為在未回答的問題和其他內容（例如論壇主題、部落格或評論）的情況下，負責「已回答的問題」的屬性不存在。
+>如果只選取「未回答」狀態，版主會看到已回答問題以外的所有內容（適用於所有內容型別）。 這是因為如果沒有已回答的問題和其他內容（例如論壇主題、部落格或評論），則負責已回答問題的屬性不存在。
 
 ![狀態](assets/statuses.png)
 
@@ -211,7 +207,7 @@ ht-degree: 4%
 
 標幟會將參照的UGC顯示限製為已標幟或隱藏的貼文。
 
-標幟內容之後，該內容會保持已標幟狀態，直到您透過選取 **標幟** 按鈕一次。 請注意，沒有標幟層級，例如重要或後續追蹤。
+標幟內容之後，該內容會保持已標幟狀態，直到您透過選取 **標幟** 按鈕一次。 沒有標幟層級，例如重要或後續追蹤。
 
 ![標幟](assets/flagging.png)
 
@@ -235,16 +231,16 @@ ht-degree: 4%
 
 ## 自訂篩選器 {#custom-filters}
 
-除了中的現成可用篩選器 [篩選邊欄](/help/communities/moderation.md#ootbfilters)，可將中繼資料上的其他自訂篩選器新增至稽核UI。 開發人員可以在Github中使用範常式式碼，擴充現有的稽核UI篩選器。
+除了中的現成可用篩選器 [篩選邊欄](/help/communities/moderation.md#ootbfilters)，可將中繼資料上的其他自訂篩選器新增至稽核UI。 開發人員可以在GitHub中使用範常式式碼，擴充現有的稽核UI篩選器。
 
 ![custom-tag-filter](assets/custom-tag-filter.png)
 
-此 [範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) 在Github上實作標籤篩選，以根據特定標籤是否已套用至使用者產生的內容來篩選UGC清單。 您可以遵循範常式式碼，並為其他類似的UGC中繼資料欄位建立類似篩選器。
+此 [範例專案](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) 在GitHub上實作標籤篩選，以根據特定標籤是否已套用至使用者產生的內容來篩選UGC清單。 您可以遵循範常式式碼，並為其他類似的UGC中繼資料欄位建立類似篩選器。
 
 安裝「標籤」篩選器的範例：
 
 1. 在AEM Author上開啟封裝管理員(`https://[aem-author]:4502/crx/packmgr/index.jsp`)例項和AEM發佈(`https://[aem-publish]:4503/crx/packmgr/index.jsp`)例項。
-1. 建置套件 `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` ，並安裝和啟用相同程式。
+1. 建置套件 `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` 並安裝及啟用相同程式碼。
 1. 開啟AEM Author上的套件組合主控台( `https://[aem-author]:4502/system/console/bundles`)例項和AEM發佈( `https://[aem-publish]:4503/system/console/bundles`)例項。
 1. 建置套件(`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`)，並安裝和啟用相同專案。
 1. 前往 **/apps/social/moderation/facets** AEM作者上的節點(`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)和AEM發佈(`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)例項。
@@ -268,7 +264,7 @@ ht-degree: 4%
 
 [稽核動作](/help/communities/moderate-ugc.md#moderation-actions) 可以在內容區域或檢視內容詳細資料時執行一個或多個選擇。
 
-若要大量稽核貼文，請在內容區域中按一下選取(![選取](assets/selecticon.png))圖示，以滑鼠（案頭）懸停在張貼上，或按住手指並握住張貼（行動裝置）時便會顯示。 這樣，您就可以進入多選模式，現在只需按一下，即可選取後續的貼文，以進行大量稽核。 使用工具列上顯示的按鈕，對選取的貼文執行稽核動作。 所有動作都會提示確認。
+若要大量稽核貼文，請在內容區域中按一下選取(![選取](assets/selecticon.png))圖示，以滑鼠（案頭）懸停在張貼上，或按住手指並握住張貼（行動裝置）時便會顯示。 這樣，您就可以進入多選模式，現在只需按一下，即可選取後續的貼文，以進行大量稽核。 使用工具列上顯示的按鈕，以便您可以對選取的貼文執行稽核動作。 所有動作會提示確認。
 
 若要稽核內容區域中的單一貼文，請使用滑鼠（桌上型電腦）將滑鼠游標停留在貼文上，或用手指按住貼文（行動裝置），讓按鈕顯示在貼文上。 在單一內容詳細資料上操作時，只有刪除動作會提示確認。
 
@@ -306,10 +302,10 @@ ht-degree: 4%
 
 在卡片檢視中，稽核動作圖示上方顯示的是貼文的文字，下方顯示的是表示下列內容的資料：
 
-* 如果有回覆，則會在回覆前加上回複數。
-* 是否已標幟。
-* 是否已核准。
-* 發佈UGC的時間。
+* 如果有回覆，則會在回覆前加上回複數
+* 如果已標幟
+* 若已核准
+* 發佈UGC的時間
 
 ![singleselectmode](assets/singleselectmode.png)
 
@@ -323,7 +319,7 @@ ht-degree: 4%
 
 ![允許](assets/allow.png)
 
-處理單一貼文時，當貼文被標幟或拒絕時，允許圖示就會出現。 如果已標幟，則選取「允許」將清除所有標幟。
+處理單一貼文時，當貼文被標幟或拒絕時，允許圖示就會顯示。 如果已標幟，選取「允許」會清除所有標幟。
 
 #### 拒絕 {#deny}
 
@@ -333,7 +329,7 @@ ht-degree: 4%
 
 未經稽核的內容一律會獲得核准。
 
-經過稽核的內容最初會進入「擱置中」狀態，日後可修改為核准或拒絕。
+稽核的內容最初會進入「待處理」狀態，並可在稍後修改以供核准或拒絕。
 
 離開擱置狀態的內容永遠無法回到擱置狀態。 標示為已核准或拒絕的內容可隨時變更為其他狀態。
 

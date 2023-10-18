@@ -1,6 +1,6 @@
 ---
 title: 報表主控台
-description: 瞭解如何存取多種報告，而這些報告可以從Adobe Experience Manager作者環境以數種方式存取。
+description: 瞭解如何使用各種可從Adobe Experience Manager作者環境以數種方式存取的報告。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 9%

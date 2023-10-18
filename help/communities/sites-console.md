@@ -1,6 +1,6 @@
 ---
 title: 社群網站主控台
-description: 如何存取社群網站主控台
+description: 瞭解如何存取Communities Sites主控台，以進行網站建立、編輯和管理。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 426e3adf-3723-4d17-a988-6eb050939e68
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3089'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 在建立社群網站之前，請依 *必填* 至：
 
-* 確認一或多個發佈執行個體正在執行。
+* 確認一或多個Publish執行個體正在執行。
 * 啟用 [通道服務](/help/communities/deploy-communities.md#tunnel-service-on-author) 管理成員和成員群組。
 * 識別 [主要發行者](/help/communities/deploy-communities.md#primary-publisher).
 * [設定復寫](/help/communities/deploy-communities.md#replication-agents-on-author) 當主要發行者連線埠不是預設值(4503)時。
@@ -450,7 +450,7 @@ DESIGN面板允許套用新的主題：
 
 ### 修改設定 {#modify-settings}
 
-「設定」面板可讓您存取子面板底下的大部分設定，以用於建立社群網站的步驟3：
+「設定」面板可讓您存取子面板下的大部分設定，以用於建立社群網站的步驟3：
 
 * [使用者管理](#user-management)
 * [標記](#tagging)
