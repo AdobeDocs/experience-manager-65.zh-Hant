@@ -1,20 +1,16 @@
 ---
 title: 排行榜功能
-seo-title: Leaderboard Feature
-description: 新增排行榜元件至頁面
-seo-description: Adding a Leaderboard component to a page
-uuid: c4633919-75d3-4bc7-830c-ef9c28cc1cba
+description: 瞭解排行榜元件如何讓您檢視成員如何透過根據獲得的點數和專業知識對成員進行排名在社群內互動。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 exl-id: 8b4d56d9-ba73-4eda-9773-3daaa9237abe
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 10%
+source-wordcount: '417'
+ht-degree: 9%
 
 ---
 
@@ -22,7 +18,7 @@ ht-degree: 10%
 
 ## 簡介 {#introduction}
 
-此 `Leaderboard` 元件可讓使用者根據獲得的點數（基本評分）或專長（進階評分）來排名成員，藉此瞭解成員在社群內的互動方式。
+此 `Leaderboard` 元件可協助您根據獲得的點數（基本分數）或其專業知識（進階分數）來排名成員，以瞭解成員在社群內互動的方式。
 
 在頁面上加入排行榜元件之前，必須先設定 [社群評分和預算](/help/communities/implementing-scoring.md).
 
@@ -41,40 +37,40 @@ ht-degree: 10%
 
 如需必要資訊，請造訪 [Communities元件基本知識](/help/communities/basics.md).
 
-當元件首次放置於社群網站的頁面時，以下是元件的顯示方式：
+當元件首次置於社群網站頁面時，以下是元件的顯示方式：
 
 ![排行榜](assets/leaderboard.png)
 
 ### 設定排行榜 {#configuring-leaderboard}
 
-選取已放置的 `Leaderboard` 元件以存取及選取 `Configure` 圖示來開啟「編輯」對話方塊。
+選取已放置的 `Leaderboard` 元件供您存取及選取 `Configure` 圖示可開啟編輯對話方塊。
 
 ![configure-new](assets/configure-new.png)
 
 ![configure-leaderboard](assets/configure-leaderboard.png)
 
-#### 設定索引標籤 {#settings-tab}
+#### 設定標籤 {#settings-tab}
 
-在 **[!UICONTROL 設定]** 索引標籤中，指定與顯示之成員相關的資訊：
+在 **[!UICONTROL 設定]** 標籤，指定與成員相關的顯示資訊：
 
 * **顯示名稱**
 
-   為展示板顯示的描述性名稱，反映為顯示徽章和分數而選取的規則。
-預設為 `Leaderboard`，則不會輸入任何內容。
+  為展示板顯示的描述性名稱，反映為顯示徽章和分數而選取的規則。
+預設為 `Leaderboard` 如果未輸入任何專案。
 
 * **徽章**
 
-   如果勾選，則排行榜會包含徽章圖示欄。
+  如果勾選，則排行榜會包含徽章圖示欄。
 預設為未勾選。
 
 * **徽章名稱**
 
-   如果勾選，則排行榜會包含徽章名稱的欄。
+  如果勾選，則排行榜會包含徽章名稱的欄。
 預設為未勾選。
 
 * **使用頭像**
 
-   如果勾選，成員的頭像影像會包含在排行榜中，位於其名稱連結至成員個人檔案的旁邊。
+  如果勾選，成員的頭像影像會包含在排行榜中，位於其名稱連結旁邊，指向其成員設定檔。
 預設為未勾選。
 
 #### 規則標籤 {#rules-tab}
@@ -83,30 +79,30 @@ ht-degree: 10%
 
 * **規則位置**
 
-   （必要）評分/徽章規則的設定位置。
+  （必要）設定評分/徽章規則的位置。
 
 * **得分規則**
 
-   （必要）產生要顯示之分數的特定規則。
+  （必要）產生分數以顯示的特定規則。
 
 * **徽章規則**
 
-   （必要）產生要顯示之徽章的特定規則。
+  （必要）產生要顯示之徽章的特定規則。
 
 * **顯示限制**
 
-   每頁顯示的成員數目。預設為10。
+  每頁顯示的成員數目。 預設值為10。
 
 ### 範例：參與者排行榜 {#example-participants-leaderboard}
 
 此排行榜會報告套用基本評分規則的結果。
 
-排行榜元件設定：
+排行榜元件組態：
 
 * 設定標籤：
 
    * 顯示名稱 = `Participation Board`
-   * `checked`:
+   * `checked`：
 
       * 徽章
       * 徽章名稱
@@ -125,7 +121,7 @@ ht-degree: 10%
 
 此排行榜會報告套用進階評分規則的結果。
 
-排行榜元件設定：
+排行榜元件組態：
 
 * 設定標籤：
 
@@ -146,6 +142,6 @@ ht-degree: 10%
 
 ### 其他資訊 {#additional-information}
 
-如需詳細資訊，請參閱 [排行榜要點](/help/communities/leaderboard.md) 適用於開發人員的頁面。
+如需詳細資訊，請參閱 [排行榜要點](/help/communities/leaderboard.md) 開發人員頁面。
 
-建立規則的指示見 [社群評分和預算](/help/communities/implementing-scoring.md) 管理員頁面。
+建立規則的指示請參閱 [社群評分和預算](/help/communities/implementing-scoring.md) 管理員頁面。

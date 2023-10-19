@@ -1,15 +1,15 @@
 ---
 title: 社群群組
-description: 建立社群群組
+description: 瞭解社群群組功能如何讓您在「發佈」和「作者」中，由授權使用者在社群網站中以動態方式建立子社群。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: edcda6cb-df47-4afe-8a9a-82d8e386fe05
-source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
+source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '555'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ A [社群群組範本](/help/communities/tools-groups.md) 動態建立社群群�
 
 ![new-group](assets/new-group.png)
 
-當您選取 **新增群組** 圖示時，編輯對話方塊隨即開啟。
+當您選取 **新增群組** 圖示時，編輯對話方塊開啟。
 
 在 **設定** 標籤上，您會提供群組的基本功能：
 
@@ -74,7 +74,7 @@ A [社群群組範本](/help/communities/tools-groups.md) 動態建立社群群�
 
 藉由選取 **建立群組**，群組的頁面會根據所選的範本建立，且會為成員資格建立使用者群組，且「群組」頁面會更新，以顯示新的子社群。
 
-例如，標題為「焦點群組」且已為其上傳影像縮圖的新子社群之「群組」頁面會顯示如下（仍以社群群組管理員身分登入）：
+例如，具有新子社群「焦點群組」（其影像縮圖已上傳）的「群組」頁面會顯示如下（仍以社群群組管理員身分登入）：
 
 ![group-page](assets/group-page.png)
 
