@@ -1,25 +1,25 @@
 ---
-title: 社群群組Essentials
-description: 動態建立社群網站
+title: 社群群組要點
+description: 瞭解獲授權的使用者如何使用社群群組功能，在社群網站中動態建立子社群。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: f45ae7be-a500-463a-ab3e-81f281651a9d
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '427'
 ht-degree: 1%
 
 ---
 
-# 社群群組Essentials  {#community-group-essentials}
+# 社群群組要點  {#community-group-essentials}
 
 社群群組功能可讓發佈和作者環境中的授權使用者在社群網站中動態建立子社群。
 
-截至社群 [feature pack 1](deploy-communities.md#latestfeaturepack)，群組可巢狀內嵌於其他群組中
+社群起始 [feature pack 1](deploy-communities.md#latestfeaturepack)，群組可巢狀內嵌於其他群組中。
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 使用者端的Essentials {#essentials-for-client-side}
 
 ### 社群群組成員清單 {#community-groups-member-list}
 
@@ -83,23 +83,23 @@ ht-degree: 1%
 
 ### 群組功能 {#groups-function}
 
-社群網站結構包含 [群組功能](functions.md#groups-function) 支援建立新的 `community groups` 從發佈和作者環境。 建立的社群群組包括 `community groups member list` 列出群組成員的元件。
+社群網站結構包含 [群組功能](functions.md#groups-function) 支援建立新的 `community groups` 來自發佈和作者環境。 建立的社群群組包括 `community groups member list` 列出群組成員的元件。
 
-一或多個 [社群群組範本](tools-groups.md)（提供社群群組頁面設計）可在將函式新增至時針對「群組」功能進行設定 [社群網站範本](sites.md) 或巢狀內嵌在社群群組範本中。
+一或多個 [社群群組範本](tools-groups.md)（提供社群群組頁面設計）可針對「群組」功能進行設定。 若要將函式新增至 [社群網站範本](sites.md) 或巢狀內嵌在社群群組範本中。
 
-納入多個社群群組範本後，授權使用者可選擇在為社群網站建立新社群群組時看到的設計，如以下章節所示： [社群群組](creating-groups.md) 適用於作者。
+納入多個社群群組範本後即可供選擇。 亦即，在為社群網站建立社群群組時，向授權使用者呈現的設計選擇。 請參閱以下小節： [社群群組](creating-groups.md) 適用於作者。
 
 ### 巢狀群組 {#nested-groups}
 
-截至社群 [FP1](deploy-communities.md#latestfeaturepack)，群組功能可包含在群組範本中，以便巢狀群組（子社群）。
+社群起始 [FP1](deploy-communities.md#latestfeaturepack)，群組功能可包含在群組範本中，以便巢狀群組（子社群）。
 
 當社群網站或群組範本包含「群組」功能時，可以：
 
-* 在作者環境中建立子社群。
+* 在製作環境中建立子社群。
 
 * 設定為允許時，在發佈環境中建立群組。
 
-在作者環境中建立群組時，必須先發佈社群網站，然後再發佈群組。 發佈社群網站會發佈群組的頁面，而不會建立設定ACL的子社群成員群組。 因此，在群組明確發佈之前，受限制的（秘密）群組可能一直可見。
+在作者環境中建立群組時，必須先發佈社群網站，然後再發佈群組。 發佈社群網站會發佈群組的頁面，而不需建立ACL所設定的子社群成員群組。 因此，在群組明確發佈之前，受限制的（秘密）群組可能一直可見。
 
 ## 連結和相關資訊 {#links-and-related-information}
 

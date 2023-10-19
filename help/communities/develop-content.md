@@ -1,16 +1,14 @@
 ---
 title: 開發沙箱內容
-description: 開發內容
-uuid: ca046cf8-f6cd-41a1-97c8-74a86fbe9cd2
+description: 瞭解如何在沙箱中探索社群功能、社群元件指南和功能要件以作參考。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: b97abfc9-62e6-470c-bb86-086e662c8091
 exl-id: d25c243c-257b-4ba8-b1c5-e306906812ea
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
@@ -19,4 +17,4 @@ ht-degree: 0%
 
 **[新增Clientlibs](add-clientlibs.md)**
 
-此時，您可以探索沙箱中的社群功能，並搭配使用 [We-Retail社群](../../help/sites-developing/we-retail.md)，則 [社群元件指南](components-guide.md)、和 [功能要點](essentials.md) 以供參考。
+此時，您可以連同使用探索沙箱中的社群功能 [We-Retail社群](../../help/sites-developing/we-retail.md)，則 [社群元件指南](components-guide.md)、和 [功能要點](essentials.md) 以供參考。

@@ -1,28 +1,24 @@
 ---
 title: 傳訊要點
-seo-title: Messaging Essentials
-description: 傳訊元件概觀
-seo-description: Messaging component overview
-uuid: e0dad45e-d84d-4b28-b357-aded1c5d2605
+description: 瞭解使用和使用傳訊元件，在網站上加入傳訊功能的詳細資訊。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 98f70093-e786-4555-8aaa-d0df4c977dc0
 docset: aem65
 exl-id: b941b5e0-f768-4393-9a9d-ded2cd7d10c4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 2%
+source-wordcount: '397'
+ht-degree: 3%
 
 ---
 
 # 傳訊要點 {#messaging-essentials}
 
-本頁會記錄使用傳訊元件的詳細資訊，以便在網站上包含傳訊功能。
+本頁會記錄有關使用傳訊元件的詳細資訊，以在網站上包含傳訊功能。
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 使用者端的Essentials {#essentials-for-client-side}
 
 **撰寫訊息**
 
@@ -57,7 +53,7 @@ ht-degree: 2%
 
 **訊息清單**
 
-（收件匣、已傳送和垃圾桶）
+（收件匣、已傳送及垃圾桶）
 
 <table>
  <tbody>
@@ -93,55 +89,54 @@ ht-degree: 2%
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
 * [設定傳訊](/help/communities/configure-messaging.md)
-* [傳訊使用者端API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) 適用於SCF元件
-* [傳訊API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) 服務
-* [傳訊端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
+* [傳訊使用者端API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) 適用於SCF元件
+* [傳訊API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) 適用於此服務
+* [傳訊端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
 * [伺服器端自訂](/help/communities/server-customize.md)
 
 >[!CAUTION]
 >
->字串引數必須 *not* 包含下列MessageBuilder方法的結尾斜線「/」：
+>字串引數必須 *非* 包含下列MessageBuilder方法的結尾斜線「/」：
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
 >
 >例如：
 >
->
-```
+>```
 >valid: mb.setInboxPath( "/mail/inbox" );
 > not valid: mb.setInboxPath( "/mail/inbox/" );
 >```
 
 ### 社群網站 {#community-site}
 
-使用精靈建立的社群網站結構，在選取時包含傳訊功能。 另請參閱 `User Management` 設定 [社群網站主控台](/help/communities/sites-console.md#user-management).
+使用精靈建立的社群網站結構包含訊息功能（選取時）。 另請參閱 `User Management` 設定 [社群網站主控台](/help/communities/sites-console.md#user-management).
 
 ### 範常式式碼：訊息已接收通知 {#sample-code-message-received-notification}
 
 社交訊息功能會擲回作業事件，例如 `send`， `marking read`， `marking delete`. 您可以擷取這些事件，並對事件中包含的資料採取動作。
 
-以下範例是事件處理常式的範例，它會偵聽 `message sent` 事件並傳送電子郵件給所有郵件收件者，使用 `Day CQ Mail Service`.
+以下範例為監聽 `message sent` 事件並使用，向所有郵件收件者傳送電子郵件 `Day CQ Mail Service`.
 
 若要嘗試伺服器端範例指令碼，您需要開發環境和建置OSGi套件的功能：
 
 1. 以管理員身分登入 ` [CRXDE|Lite](https://localhost:4502/crx/de)`.
-1. 建立 `bundle node`在 `/apps/engage/install` 具有任意名稱，例如：
+1. 建立 `bundle node`在 `/apps/engage/install` 任選名稱，例如：
 
    * 符號名稱: `com.engage.media.social.messaging.MessagingNotification`
    * 名稱：快速入門教學課程訊息通知
-   * 說明：當使用者收到訊息時，傳送電子郵件通知給使用者的範例服務
+   * 說明：當使用者收到訊息時，傳送電子郵件通知給他們的範例服務
    * 封裝: `com.engage.media.social.messaging.notification`
 
-1. 導覽至 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`，然後：
+1. 瀏覽至 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`，然後：
 
    1. 刪除 `Activator.java` 類別已自動建立。
    1. 建立類別 `MessageEventHandler.java`.
    1. 將下列程式碼複製並貼到 `MessageEventHandler.java`.
 
-1. 按一下 **全部儲存**.
-1. 導覽至 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`，並新增所有匯入陳述式，如中所寫入 `MessageEventHandler.java` 程式碼。
-1. 建置套件組合。
+1. 按一下&#x200B;**「儲存全部」**。
+1. 瀏覽至 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`，並新增所有匯入陳述式，如在 `MessageEventHandler.java` 程式碼。
+1. 建立套件組合。
 1. 確定 `Day CQ Mail Service`OSGi服務已設定。
 1. 以示範使用者身分登入，並傳送電子郵件給其他使用者。
 1. 收件者會收到有關新訊息的電子郵件。

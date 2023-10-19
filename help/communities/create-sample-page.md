@@ -1,14 +1,14 @@
 ---
 title: 建立範例頁面
-description: 建立範例社群網站
+description: 瞭解如何建立僅包含「頁面」功能的社群網站範本，協助您建立簡單的社群網站。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: developing
 exl-id: d66fc1ff-a669-4a2c-b45a-093060facd97
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '426'
 ht-degree: 2%
 
 ---

@@ -1,38 +1,34 @@
 ---
 title: 部落格要點
-seo-title: Blog Essentials
-description: 部落格概觀
-seo-description: Blog overview
-uuid: 714cf70c-76a0-4be6-9163-a31ac6bd1643
+description: 瞭解如何將部落格功能新增到頁面，以便登入的社群成員可以發表部落格。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 exl-id: 51f616e8-4aba-47f6-b948-d5147d84bbb6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 2%
+source-wordcount: '451'
+ht-degree: 1%
 
 ---
 
 # 部落格要點 {#blog-essentials}
 
-自AEM 6.1 Communities起，部落格就是社群活動。 部落格現在從發佈環境發佈，而之前，部落格只能在作者環境中建立並發佈。
+截至AEM 6.1 Communities，部落格是社群活動。 部落格現在從發佈環境發佈，而以前只能在作者環境中建立並發佈部落格。
 
-部落格現在可由任何社群成員建立，除非僅限於擁有特殊許可權的成員。
+部落格現在可由任何社群成員建立，除非僅限於有特殊許可權的成員。
 
 本頁提供使用部落格功能的基本資訊。
 
 >[!NOTE]
 >
->日誌功能是部落格功能的基礎結構。
+>部落格功能的基礎架構是日誌功能。
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 使用者端的Essentials {#essentials-for-client-side}
 
-部落格功能由兩個主要元件組成，您可以透過新增 [部落格功能](/help/communities/functions.md#blog-function) 或透過在作者編輯模式下將元件新增至頁面。
+部落格功能由兩個主要元件組成，這些元件可透過新增 [部落格功能](/help/communities/functions.md#blog-function) 或透過在作者編輯模式下將元件新增至頁面。
 
 ### 部落格 {#blog}
 
@@ -79,35 +75,35 @@ ht-degree: 2%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [部落格API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/journal/client/api/package-summary.html)
+* [部落格API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/journal/client/api/package-summary.html)
 
-* [部落格端點](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/journal/client/endpoints/package-summary.html)
+* [部落格端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/journal/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](/help/communities/server-customize.md)
 
 ### 部落格功能 {#blog-function}
 
-社群網站結構包含 [部落格功能](/help/communities/functions.md#blog-function) 將已設定 `Blog` 和 `Blog Sidebar` 元件。 Blog功能支援識別 [有特殊許可權的成員使用者群組](/help/communities/users.md#privileged-members-group).
+社群網站結構包含 [部落格功能](/help/communities/functions.md#blog-function) 有 `Blog` 和 `Blog Sidebar` 元件已設定。 Blog功能支援識別 [有特殊許可權的成員使用者群組](/help/communities/users.md#privileged-members-group).
 
 ### 存取部落格專案(UGC) {#accessing-blog-entries-ugc}
 
-UGC應使用其中一個標準仲裁方法來仲裁。
+UGC應使用其中一種標準仲裁方法進行仲裁。
 另請參閱 [稽核使用者產生的內容](/help/communities/moderate-ugc.md).
 
-自AEM 6.1 Communities起，使用 [公用存放區](/help/communities/working-with-srp.md) for UGC包含程式化存取UGC，無論選擇的儲存選項為何（例如ASRP、MSRP或JSRP）。
+自AEM 6.1社群起，使用 [公用存放區](/help/communities/working-with-srp.md) for UGC包含對UGC的程式化存取，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何。
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不發出警告**.
+**UGC在存放庫中的位置和格式可能會有所變更，恕不另行警告**.
 
 請參閱：
 
 * [儲存資源提供者概觀](/help/communities/srp.md)  — 簡介和存放庫使用概述。
-* [SRP和UGC Essentials](/help/communities/srp-and-ugc.md) - SRP公用程式方法與範例。
+* [srp和UGC Essentials](/help/communities/srp-and-ugc.md) - SRP公用程式方法與範例。
 * [使用SRP存取UGC](/help/communities/accessing-ugc-with-srp.md)  — 程式碼指南。
 * [SocialUtils重構](/help/communities/socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。
 
 ## 主要發行者 {#primary-publisher}
 
-當部署為發佈伺服器陣列時，必須識別將輪詢排定發佈之文章的主要發佈者。
+當部署為發佈伺服器陣列時，必須識別輪詢排定發佈之文章的主要發佈者。
 
 另請參閱 [主要發行者](/help/communities/deploy-communities.md#primary-publisher) 以取得更多詳細資料。
 

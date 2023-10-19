@@ -1,18 +1,14 @@
 ---
 title: 使用稽核和稽核摘要（顯示）
-seo-title: Using Reviews and Reviews Summary (Display)
-description: 新增複查和複查摘要元件至頁面
-seo-description: Adding the Reviews and Reviews Summary components to a page
-uuid: bd1ccee7-b26b-4a27-b1ea-89609f5080af
+description: 瞭解如何將檢閱和檢閱摘要元件新增到頁面。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 exl-id: 170414a6-c40b-4ad2-9294-7c2266850c3d
-source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1285'
 ht-degree: 2%
 
 ---
@@ -33,13 +29,13 @@ ht-degree: 2%
 
 如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
 
-當 [必要的使用者端程式庫](reviews-basics.md#essentials-for-client-side) 包含，這就是 `Reviews` 元件隨即出現。
+當 [必要的使用者端程式庫](reviews-basics.md#essentials-for-client-side) 包含，這就是 `Reviews` 元件出現。
 
 ![create-review](assets/create-review.png)
 
 ## 設定稽核 {#configuring-reviews}
 
-選取已放置的 `Reviews` 元件以存取和選取 `Configure` 圖示可開啟編輯對話方塊。
+選取已放置的 `Reviews` 元件供您存取及選取 `Configure` 圖示可開啟編輯對話方塊。
 
 ![configure-new](assets/configure-new.png)
 
@@ -55,9 +51,9 @@ ht-degree: 2%
 
   按一下 **[!UICONTROL 新增專案]** 以新增另一個評等選擇。
 
-在 **[!UICONTROL 必要的評等]** 標籤，從清單中重新輸入專案 **[!UICONTROL 允許的評等]** 需要評等的。 如果專案僅在「允許的評等」標籤上指定，則成員提交時可能會保留未標示的專案。
+在 **[!UICONTROL 必要的評等]** 標籤，從清單中重新輸入專案 **[!UICONTROL 允許的評等]** 進行評等所需的專案。 如果專案僅在「允許的評等」標籤上指定，則成員提交時可能會保留未標示的專案。
 
-在網站上，必要評等會以星號標示。 如果專案為必要專案且未標示，則會向成員顯示訊息，並拒絕提交，直到標示所有必要的評等為止。
+在網站上，必要評等會以星號標示。 如果專案是必要專案且未標籤，則會向成員顯示訊息，並在標籤所有必要評等之前拒絕提交。
 
 ![required-rating](assets/configure-review2.png)
 
@@ -99,7 +95,7 @@ ht-degree: 2%
 
 * **[!UICONTROL 允許的檔案類型]**
 
-  只有在 **[!UICONTROL 允許檔案上傳]** 已勾選。 以逗號分隔的副檔名清單，其中包含「點」分隔符號。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 預設為「無」，因此允許所有檔案型別。
+  只有在 **[!UICONTROL 允許檔案上傳]** 已勾選。 以「點」分隔符號的副檔名清單（以逗號分隔）。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 預設為「無」，因此允許所有檔案型別。
 
 * **[!UICONTROL RTF 編輯器]**
 
@@ -115,11 +111,11 @@ ht-degree: 2%
 
 * **[!UICONTROL 事先審核]**
 
-  如果勾選，則必須先核准稽核，評論才會出現在發佈網站上。 預設為未勾選。
+  如果勾選，則必須先核准稽核，才能將其顯示在發佈網站上。 預設為未勾選。
 
 * **[!UICONTROL 刪除評論]**
 
-  如果勾選，發表評論的成員將獲得刪除的能力。 預設為未勾選。
+  如果勾選，則發佈評論的成員可以將其刪除。 預設為未勾選。
 
 * **[!UICONTROL 拒絕評論]**
 
@@ -155,11 +151,11 @@ ht-degree: 2%
 
 * `Communities / Reviews Summary (Display)`
 
-並將其拖曳至顯示進行中或已關閉稽核摘要的頁面上。
+並將其拖曳至將顯示進行中或已關閉稽核摘要的頁面上。
 
 如需必要資訊，請造訪 [Communities元件基本知識](basics.md).
 
-當 [必要的使用者端程式庫](reviews-basics.md#essentials-for-client-side) 包含，這就是 `Reviews Summary (Display)`元件隨即出現。
+當 [必要的使用者端程式庫](reviews-basics.md#essentials-for-client-side) 包含，這就是 `Reviews Summary (Display)`元件出現。
 
 ![review — 摘要](assets/configure-review5.png)
 
@@ -169,7 +165,7 @@ ht-degree: 2%
 
 ### 設定稽核摘要（顯示） {#configuring-reviews-summary-display}
 
-選取已放置的 `Reviews Summary (Display)` 元件以存取和選取 `Configure` 圖示可開啟編輯對話方塊。
+選取已放置的 `Reviews Summary (Display)` 元件供您存取及選取 `Configure` 圖示可開啟編輯對話方塊。
 
 ![設定](assets/configure-new.png)
 
@@ -179,21 +175,21 @@ ht-degree: 2%
 
 * `Review Path`
 
-  輸入或瀏覽至放置的執行個體 `reviews`要摘要的元件，例如，如果新增至 [Geometrixx參與網站，](getting-started.md) 路徑會是：
+  輸入或瀏覽至放置的執行個體 `reviews` 元件以供您摘要，例如，如果新增至 [Geometrixx參與網站，](getting-started.md) 路徑會是：
 
   `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
 * `Include histogram`
 
-  如果勾選，納入橫條圖的顯示，表示在摘要的評論中有多少個星級評等。 預設為未勾選。
+  如果勾選，納入橫條圖的顯示，指出正在摘要的評論中有多少星級評等。 預設為未勾選。
 
 ### 變更為自訂稽核型別 {#changing-to-a-custom-review-type}
 
 「稽核」元件使用「註解系統」。
 
-透過變更「註解資源型別」，註解系統將不再使用預設值產生註解的執行個體，而是由開發人員自訂（延伸）的執行個體。
+透過變更註解資源型別，註解系統不再使用預設值產生註解的執行個體，而是由開發人員自訂（延伸）的執行個體。
 
-在已知自訂資源型別後，輸入 [設計模式](../../help/sites-authoring/default-components-designmode.md) 並連按兩下已放置的 `Comments` 元件以開啟具有額外索引標籤的對話方塊。
+已知自訂資源型別時，輸入 [設計模式](../../help/sites-authoring/default-components-designmode.md) 並連按兩下置入的 `Comments` 元件以開啟具有額外索引標籤的對話方塊。
 
 在 **[!UICONTROL 資源型別]** 頁簽，為的新執行個體指定自訂resourceType `Comments or Voting` 元件：
 
@@ -203,13 +199,13 @@ ht-degree: 2%
 
   導覽至擴充功能的resourceType `comment`/apps中的元件（單一註釋）。 例如，`/apps/social/commons/components/hbs/comments/comment`。
 
-  此資源將識別訪客發表評論時建立的UGC的resourceType。
+  此資源可識別訪客發表評論時建立的UGC的resourceType。
 
 * **[!UICONTROL 投票資源類型]**
 
   導覽至擴充功能的resourceType `voting`/apps中的元件。 例如，`/apps/social/components/hbs/voting`。
 
-  此資源將識別訪客張貼投票時建立的UGC資源型別。
+  此資源會識別訪客張貼投票時建立的UGC資源型別。
 
 * **[!UICONTROL 註解系統資源型別]**
 

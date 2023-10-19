@@ -1,26 +1,22 @@
 ---
 title: 評分和徽章要點
-seo-title: Scoring and Badges Essentials
-description: 評分和徽章功能概述
-seo-description: Scoring and Badges feature overview
-uuid: 6e3af071-04e8-4dc1-977a-0da711b72961
+description: 瞭解Adobe Experience Manager社群評分和徽章功能如何識別和獎勵社群成員。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 exl-id: 470a382a-2aa7-449e-bf48-b5a804c5b114
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '946'
 ht-degree: 1%
 
 ---
 
 # 評分和徽章要點 {#scoring-and-badges-essentials}
 
-AEM Communities評分和徽章功能可識別並獎勵社群成員。
+AEM Communities評分和徽章功能可識別和獎勵社群成員。
 
 有關設定功能的詳細資訊，請參閱
 
@@ -38,7 +34,7 @@ AEM Communities評分和徽章功能可識別並獎勵社群成員。
 
 ## 顯示徽章 {#displaying-badges}
 
-徽章是以文字還是影像顯示，都是由HBS範本的使用者端控制。
+徽章是以文字還是影像的形式顯示，需在HBS範本的使用者端加以控制。
 
 例如，搜尋 `this.isAssigned` 在 `/libs/social/forum/components/hbs/topic/list-item.hbs`：
 
@@ -68,21 +64,21 @@ AEM Communities評分和徽章功能可識別並獎勵社群成員。
 {{/each}}
 ```
 
-如果為true，則isAssigned表示該徽章已指派給角色，並且該徽章應顯示為文字。
+如果為True， `isAssigned` 表示此徽章已指派給角色，且此徽章應顯示為文字。
 
-若為false，isAssigned會指出該徽章已獲得贏取的分數，且該徽章應顯示為影像。
+如果為false， `isAssigned` 表示該徽章已獲得贏取分數，且應顯示為影像。
 
 對此行為的任何變更都應在自訂指令碼中進行（覆寫或覆蓋）。 另請參閱 [使用者端自訂](/help/communities/client-customize.md).
 
 ## 評分和徽章的偵錯記錄 {#debug-log-for-scoring-and-badging}
 
-為協助偵錯評分和徽章，可以設定自訂記錄檔案。 如果功能發生問題，可將此記錄檔的內容提供給客戶支援。
+為協助偵錯評分和徽章，可以設定自訂記錄檔。 如果功能發生問題，可將此記錄檔的內容提供給客戶支援。
 
 如需詳細指示，請造訪 [建立自訂記錄檔](/help/sites-deploying/monitoring-and-maintaining.md#create-a-custom-log-file).
 
 若要快速設定slinglog檔案：
 
-1. 存取 **Adobe Experience Manager Web主控台記錄檔支援**，例如
+1. 存取 **Adobe Experience Manager網頁主控台記錄檔支援**，例如
 
    * https://localhost:4502/system/console/slinglog
 
@@ -93,23 +89,23 @@ AEM Communities評分和徽章功能可識別並獎勵社群成員。
    1. 輸入名稱 **記錄檔**，例如
 
       * logs/scoring-debug.log
+
    1. 輸入兩個 **Logger** （類別）專案(使用 `+` 圖示)
 
       * `com.adobe.cq.social.scoring`
       * `com.adobe.cq.social.badging`
+
    1. 選取 **儲存**
-
-
 
 ![debug-scoring-log](assets/debug-scoring-log.png)
 
 若要檢視記錄專案，請執行下列動作：
 
-* 從Web主控台
+* 從Web控制檯
 
    * 在 **狀態** 功能表
    * 選取 **記錄檔**
-   * 搜尋記錄檔名稱，例如 `scoring-debug`
+   * 搜尋您的記錄檔名稱，例如 `scoring-debug`
 
 * 在伺服器的本機磁碟上
 
@@ -117,17 +113,17 @@ AEM Communities評分和徽章功能可識別並獎勵社群成員。
 
    * 例如 `.../crx-quickstart/logs/scoring-debug.log`
 
-![評分記錄](assets/scoring-log.png)
+![scoring-log](assets/scoring-log.png)
 
 ## 評分和徽章的UGC {#ugc-for-scoring-and-badging}
 
 當所選的SRP是JSRP或MSRP，而不是ASRP時，可以檢視與評分和徽章相關的UGC。 (若不熟悉這些詞語，請參閱 [社群內容儲存](/help/communities/working-with-srp.md) 和 [儲存資源提供者概觀](/help/communities/srp.md).)
 
-存取評分和徽章資料的說明使用JSRP，因為使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+使用JSRP存取評分和徽章資料的說明，因為使用UGC可輕鬆存取 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
-**作者上的JSRP**：在製作環境中實驗會產生只能從製作環境看到的UGC。
+**作者上的JSRP**：在製作環境中實驗會產生只可從製作環境看到的UGC。
 
-**發佈時的JSRP**：同樣地，如果在發佈環境中進行測試，就必須在發佈執行個體上使用管理許可權來存取CRXDE Lite。 如果發佈執行個體執行於 [生產模式](/help/sites-administering/production-ready.md) (nosamplecontent runmode)，必須 [啟用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+**發佈上的JSRP**：同樣地，如果在發佈環境中測試，必須在發佈執行個體上使用管理許可權存取CRXDE Lite。 如果發佈執行個體執行於 [生產模式](/help/sites-administering/production-ready.md) （nosamplecontent執行模式），必須 [啟用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
 JSRP上UGC的基本位置為 `/content/usergenerated/asi/jcr/`.
 
@@ -138,9 +134,9 @@ JSRP上UGC的基本位置為 `/content/usergenerated/asi/jcr/`.
 * [6.3中的com.adobe.cq.social.scoring.api](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
 * [6.3中的com.adobe.cq.social.badging.api](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
 
-開發人員可從Adobe存放庫取得已安裝功能套件的最新Javadoc。 另請參閱 [使用Maven for Communities ： Javadocs](/help/communities/maven.md#javadocs).
+已安裝Feature Pack的最新Javadoc可供Adobe存放庫中的開發人員使用。 另請參閱 [使用Maven for Communities ：Javadocs](/help/communities/maven.md#javadocs).
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不發出警告**.
+**UGC在存放庫中的位置和格式可能會有所變更，恕不另行警告**.
 
 ### 範例設定 {#example-setup}
 
@@ -148,10 +144,10 @@ JSRP上UGC的基本位置為 `/content/usergenerated/asi/jcr/`.
 
 1. AEM網站 *替換為* 唯一id （使用精靈建立的社群網站） ：
 
-   * 使用快速入門教學課程（參與）網站(建立於 [快速入門教學課程](/help/communities/getting-started.md)
-   * 找到論壇頁面節點
+   * 使用期間建立的快速入門教學課程（參與）網站 [快速入門教學課程](/help/communities/getting-started.md)
+   * 找出論壇頁面節點
 
-      `/content/sites/engage/en/forum/jcr:content`
+     `/content/sites/engage/en/forum/jcr:content`
 
    * 新增評分和徽章屬性
 
@@ -165,24 +161,23 @@ JSRP上UGC的基本位置為 `/content/usergenerated/asi/jcr/`.
    /libs/settings/community/badging/rules/forums-scoring]
    ```
 
-   * 找到論壇元件節點
+   * 找出論壇元件節點
 
-      `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
+     `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
    * 若要顯示徽章，請新增屬性
 
-      `allowBadges = true`
+     `allowBadges = true`
 
-   * 使用者登入、建立論壇主題，並獲得銅級徽章
+   * 使用者登入、建立論壇主題，並獲頒銅級徽章
 
-
-1. AEM網站 *不含* 唯一ID ：
+1. AEM網站 *不含* 唯一識別碼：
 
    * 使用 [社群元件指南](/help/communities/components-guide.md)
-   * 找到論壇頁面節點
+   * 找出論壇頁面節點
 
-      `/content/community-components/en/forum/jcr:content`
+     `/content/community-components/en/forum/jcr:content`
 
    * 新增評分和徽章屬性
 
@@ -196,17 +191,16 @@ JSRP上UGC的基本位置為 `/content/usergenerated/asi/jcr/`.
    /libs/settings/community/badging/rules/forums-badging]
    ```
 
-   * 找到論壇元件節點
+   * 找出論壇元件節點
 
-      `/content/community-components/en/forum/jcr:content/content/forum`
+     `/content/community-components/en/forum/jcr:content/content/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
    * 若要顯示徽章，請新增屬性
 
-      `allowBadges = true`
+     `allowBadges = true`
 
-   * 使用者登入、建立論壇主題，並獲得銅級徽章
-
+   * 使用者登入、建立論壇主題，並獲頒銅級徽章
 
 1. 已使用cURL為使用者指派版主徽章：
 
@@ -214,7 +208,7 @@ JSRP上UGC的基本位置為 `/content/usergenerated/asi/jcr/`.
    curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
    ```
 
-   由於使用者已獲得兩個銅級徽章並獲得了版主徽章，因此該使用者與其論壇條目出現如下：
+   由於使用者已獲得兩個銅級徽章並獲得了版主徽章，因此該使用者與其論壇條目一起出現如下：
 
    ![版主](assets/moderator.png)
 
@@ -222,15 +216,14 @@ JSRP上UGC的基本位置為 `/content/usergenerated/asi/jcr/`.
 >
 >此範例未遵循下列最佳實務：
 >
->* 評分規則名稱應在全域內是唯一的；不應以相同名稱結尾。
+>* 評分規則名稱應為全域唯一名稱，且不得以相同名稱結尾。
 >
->  以下專案的範例： *not* 待辦事項：
+>  的範例 *非* 待辦事項：
 >
 >  /libs/settings/community/scoring/rules/site1/forums-scoring
 >  /libs/settings/community/scoring/rules/site2/forums-scoring
 >
 >* 為不同的AEM網站建立唯一的徽章影像
-
 
 ### 存取評分UGC {#access-scoring-ugc}
 
@@ -240,9 +233,9 @@ JSRP上UGC的基本位置為 `/content/usergenerated/asi/jcr/`.
 
 * `/content/usergenerated/asi/jcr/scoring`
 
-的子節點： `scoring` 是評分規則名稱。 因此，最佳實務是伺服器上的評分規則名稱必須是全域唯一的。
+的子節點： `scoring` 是評分規則名稱。 因此，最佳做法是伺服器上的評分規則名稱是全球唯一的。
 
-對於GeometrixxEngage網站，使用者及其分數位於使用評分規則名稱、社群網站的網站ID ( `engage-ba81p`)、唯一id和使用者id ：
+對於Geometrixx參與網站，使用者和他們的分數在使用評分規則名稱，社群網站的網站ID ( `engage-ba81p`)、唯一id和使用者id ：
 
 * `.../scoring/forums-scoring/engage-ba81p/6d179715c0e93cb2b20886aa0434ca9b5a540401/riley`
 
@@ -258,7 +251,7 @@ JSRP上UGC的基本位置為 `/content/usergenerated/asi/jcr/`.
 
 使用 [API](#scoring-and-badging-apis) 建議使用。
 
-為了調查目的，以JSRP為例，包含指派或獎勵徽章相關資訊的基本資料夾為
+在調查用途中，以JSRP為例，包含指派或獎勵徽章相關資訊的基本資料夾為
 
 * `/content/usergenerated/asi/jcr`
 
@@ -278,5 +271,5 @@ JSRP上UGC的基本位置為 `/content/usergenerated/asi/jcr/`.
 
 若要根據點顯示已排序的成員清單，請執行下列動作：
 
-* [排行榜功能](/help/communities/functions.md#leaderboard-function) 以包含在社群網站或群組範本中。
-* [排行榜元件](/help/communities/enabling-leaderboard.md)，排行榜功能的精選元件，用於編寫頁面。
+* [排行榜功能](/help/communities/functions.md#leaderboard-function) 包含在社群網站或群組範本中。
+* [排行榜元件](/help/communities/enabling-leaderboard.md)，排行榜功能的精選元件，用於頁面製作。

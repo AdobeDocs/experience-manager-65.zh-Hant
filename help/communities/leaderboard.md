@@ -1,19 +1,15 @@
 ---
 title: 排行榜要點
-seo-title: Leaderboard Essentials
-description: 排行榜功能概觀
-seo-description: Leaderboard feature overview
-uuid: 815a6928-b147-496d-9751-13159ad1304d
+description: 瞭解如何設定社群評分和徽章，讓您能夠在Adobe Experience Manager社群中使用排行榜元件。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 7449f99e-77d7-4c0f-96d5-b67d5e1f124a
 exl-id: fd1b1749-13f9-4079-ae39-348676105852
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 5%
+source-wordcount: '112'
+ht-degree: 4%
 
 ---
 
@@ -25,13 +21,13 @@ ht-degree: 5%
 
 另請參閱 [評分和徽章要點](configure-scoring.md).
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 使用者端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>社交/遊戲化/元件/hbs/排行榜</td>
+   <td>social/gamification/components/hbs/leaderboard</td>
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含</strong></a></td>

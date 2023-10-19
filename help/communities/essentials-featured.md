@@ -1,18 +1,14 @@
 ---
 title: 精選內容要點
-seo-title: Featured Content Essentials
-description: 使用功能內容
-seo-description: Working with feature content
-uuid: b376828a-1431-4d16-ad6b-b23a3ea62a75
+description: 瞭解使用您想要在社群網站任何地方反白顯示的精選內容的基礎知識。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
 exl-id: 70b0ad6a-c891-4588-8515-449aed206805
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '120'
 ht-degree: 5%
 
 ---
@@ -24,7 +20,7 @@ ht-degree: 5%
 相較於將貼文釘在論壇頂端，此功能允許在社群網站內的任何位置反白顯示內容。
 
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 使用者端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -59,4 +55,4 @@ ht-degree: 5%
 
 ### 檔案庫功能 {#file-library-function}
 
-社群網站結構包含 [精選內容功能](functions.md#featured-content-function)，包括已設定的 `featured content` 元件。
+社群網站結構包含 [主要內容功能](functions.md#featured-content-function)，包括已設定的 `featured content` 元件。

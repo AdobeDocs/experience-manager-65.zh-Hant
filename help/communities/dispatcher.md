@@ -1,14 +1,14 @@
 ---
 title: 為社群設定Dispatcher
-description: 設定AEM Communities的Dispatcher
+description: 瞭解如何為AEM Communities設定Dispatcher，以確保社群網站正常運作。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '653'
 ht-degree: 11%
 
 ---
@@ -19,23 +19,23 @@ ht-degree: 11%
 
 對於AEM Communities，必須設定Dispatcher以確保的正常運作 [社群網站](overview.md#community-sites). 包含社交登入等功能時，需要其他設定。
 
-瞭解您的特定部署和網站設計所需的專案
+瞭解您的特定部署和網站設計所需的內容
 
 * 聯絡[客戶服務](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
 
-另請參閱主要 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant).
+另請參閱主要的 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant).
 
 ## Dispatcher快取 {#dispatcher-caching}
 
 ### 概觀 {#overview}
 
-AEM Communities的Dispatcher快取可讓Dispatcher提供社群網站頁面的完整快取版本。
+AEM Communities適用的Dispatcher快取可讓Dispatcher提供社群網站頁面的完整快取版本。
 
-目前，它僅支援匿名網站訪客，例如瀏覽社群網站或因搜尋而登陸社群頁面的使用者，以及索引頁面的搜尋引擎。 其好處是匿名使用者和搜尋引擎體驗到更好的效能。
+目前，它僅支援匿名網站訪客，例如瀏覽社群網站或因搜尋而登陸社群頁面的使用者，以及索引頁面的搜尋引擎。 其好處是匿名使用者和搜尋引擎體驗到效能的提升。
 
 對於已登入的成員，Dispatcher會略過快取，直接將請求轉送給發佈者，以便動態產生並傳送所有頁面。
 
-設定為支援Dispatcher快取時，會將TTL型「最大期限」到期日新增到標頭，以確保Dispatcher快取頁面為最新版本。
+在設定為支援Dispatcher快取時，會將TTL式的「最大期限」到期日新增到標頭，以確保Dispatcher快取頁面為最新版本。
 
 ### 要求 {#requirements}
 
@@ -47,7 +47,7 @@ AEM Communities的Dispatcher快取可讓Dispatcher提供社群網站頁面的完
 
 ### 設定 {#configuration}
 
-OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定出現在指定路徑下的快取頁面的到期日。
+OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — 最長存留期** 設定出現在指定路徑下的快取頁面的到期日。
 
 * 從 [網頁主控台](../../help/sites-deploying/configuring-osgi.md).
 
@@ -61,8 +61,8 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定
 * **篩選模式**
   *（必要）* 社群頁面的一或多個路徑。 例如，`/content/sites/engage/(.*)`。
 
-* **Cache-Control Max Age**
-  *（必要）* 要新增至Cache Control標頭的最長時間（以秒為單位）。 值必須大於零(0)。
+* **Cache-Control最長使用時間**
+  *（必要）* 要新增至「快取控制」標頭的最長時間（以秒為單位）。 值必須大於零(0)。
 
 ## Dispatcher篩選器 {#dispatcher-filters}
 
@@ -70,9 +70,9 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定
 
 本節說明Communities功能正常運作可能需要的專案。
 
-篩選屬性名稱會遵循使用四位數字來指示套用篩選模式的順序的慣例。 當一個請求套用多個篩選模式時，最後一個套用的篩選模式會生效。 因此，第一個篩選模式通常用於拒絕所有內容，使得以下模式用於以受控方式恢復存取。
+篩選屬性名稱遵循使用四位數字來指示套用篩選模式的順序的慣例。 將多個篩選模式套用到一個請求時，最後一個套用的篩選模式會生效。 因此，第一個篩選模式通常用於拒絕所有內容，使得以下模式用於以可控方式恢復存取。
 
-以下範例使用屬性名稱，這些名稱可能必須修改以適合任何特定情況 `dispatcher.any` 檔案。
+以下範例使用屬性名稱，這些名稱可能必須修改以符合任何特定要求 `dispatcher.any` 檔案。
 
 另請參閱:
 
@@ -81,7 +81,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定
 >[!NOTE]
 >
 >**屬性名稱範例**
->所有顯示的屬性名稱，例如 **/0050** 和 **/0170**，應加以調整以符合現有的 `dispatcher.any` 設定檔。
+>所有顯示的屬性名稱，例如 **/0050** 和 **/0170**，應加以調整以符合現有的 `dispatcher.any` 組態檔。
 >
 
 >[!CAUTION]
@@ -89,7 +89,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定
 >請參閱 [Dispatcher 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)，了解使用 Dispatcher 限制存取時的更多考量事項。此外，也請閱讀 [AEM 安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)，了解有關 AEM 安裝的更多安全性細節。
 >
 
-下列專案應新增至/filter區段的結尾，尤其是在所有拒絕專案之後。
+下列專案應新增至/filter區段的結尾，尤其是在所有被拒絕的專案之後。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -269,11 +269,11 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — Max Age** 設定
 
 ## 疑難排解 {#troubleshooting}
 
-問題的一個主要來源是在未注意對先前規則的影響的情況下插入篩選規則，尤其是新增拒絕存取的規則時。
+問題的一個主要原因是插入篩選規則時沒有注意對先前規則的影響，尤其是在新增規則以拒絕存取時。
 
-第一個篩選模式通常用於拒絕所有內容，以便以下列篩選恢復以受控方式存取。 當一個請求套用多個篩選器時，最後一個套用的篩選器是生效的篩選器。
+第一個篩選模式通常用於拒絕所有內容，以便以下列篩選以可控方式恢復存取。 將多個篩選器套用至一個請求時，最後一個套用的篩選器是生效的篩選器。
 
-## 範例dispatcher.any {#sample-dispatcher-any}
+## dispatcher.any範例 {#sample-dispatcher-any}
 
 以下是範例 `dispatcher.any` 包含Communities /filters和/rules的檔案。
 

@@ -1,15 +1,15 @@
 ---
 title: 部署社群
-description: 如何部署AEM Communities
+description: 瞭解如何在Adobe Experience Manager中部署社群和社群功能。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
-source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1712'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 * [啟用通道服務](#tunnel-service-on-author)
 * [啟用社交登入](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
-* [設定Adobe Analytics](/help/communities/analytics.md)
+* [設定 Adobe Analytics](/help/communities/analytics.md)
 * 設定 [預設電子郵件服務](/help/communities/email.md)
 * 識別 [共用的UGC儲存體](/help/communities/working-with-srp.md) (**SRP**)
 
@@ -84,7 +84,7 @@ AEM 6.5 Communities GA包含Communities套件。 進一步瞭解AEM 6.5的更新
 
 從AEM 6.4開始，Communities的更新屬於AEM Cumulative Fix Pack和Service Pack的一部分。
 
-如需AEM 6.5的最新更新，請參閱 [Adobe Experience Manager 6.4 Cumulative Fix Pack和Service Pack](https://helpx.adobe.com/tw/experience-manager/aem-releases-updates.html).
+如需AEM 6.5的最新更新，請參閱 [Adobe Experience Manager 6.4 Cumulative Fix Pack和Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant).
 
 ### 版本記錄 {#version-history}
 
@@ -132,7 +132,7 @@ AEM 6.5 Communities GA包含Communities套件。 進一步瞭解AEM 6.5的更新
 
 若要讓SRP集合（MSRP或DSRP）支援進階多語言搜尋(MLS)，除了自訂結構描述和Solr設定外，還需要新的Solr外掛程式。 所有必要專案都會封裝成可下載的zip檔案。
 
-進階MLS下載（也稱為「phasetwo」）可從Adobe存放庫取得：
+進階MLS下載(也稱為 `phasetwo`)可從Adobe存放庫取得：
 
 * AEM-SOLR-MLS-phasetwo
 
@@ -298,13 +298,11 @@ AEM Communities有兩個功能，需要所有AEM伺服器執行個體使用相�
 
 #### 存放庫復寫 {#repository-replication}
 
-將關鍵資料儲存在存放庫中(例如AEM 6.2和更早版本)可以保留。 在每個AEM執行個體的首次啟動（建立初始存放庫）時，指定下列系統屬性：
-
-* `-Dcom.adobe.granite.crypto.file.disable=true`
+將關鍵資料儲存在存放庫中(例如AEM 6.2和更早版本)可以保留。 指定系統屬性 `-Dcom.adobe.granite.crypto.file.disable=true` 在每個AEM執行個體（建立初始存放庫）的第一次啟動時。
 
 >[!NOTE]
 >
->務必確認 [作者上的復寫代理](#replication-agents-on-author) 已正確設定。
+>確認 [作者上的復寫代理](#replication-agents-on-author) 已正確設定。
 
 將金鑰資料儲存在存放庫後，將密碼編譯金鑰從製作例項複製到其他例項的方式如下：
 

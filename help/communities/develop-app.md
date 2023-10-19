@@ -1,29 +1,25 @@
 ---
 title: 開發沙箱應用程式
-seo-title: Develop Sandbox Application
-description: 使用基礎指令碼開發應用程式
-seo-description: Develop application using foundation scripts
-uuid: 572f68cd-9ecb-4b43-a7f8-4aa8feb6c64e
+description: 瞭解如何開發沙箱應用程式，該應用程式使用基礎指令碼，並包含啟用使用Communities元件編寫的功能。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '593'
 ht-degree: 5%
 
 ---
 
 # 開發沙箱應用程式  {#develop-sandbox-application}
 
-在本節中，範本已設定在 [初始應用計畫](initial-app.md) 區段，以及在中建立的初始頁面 [初始內容](initial-content.md) 區段，您可使用基礎指令碼來開發應用程式，包括啟用使用Communities元件進行編寫的功能。 在本節結束時，網站將可正常運作。
+在本節中，範本已設定在 [初始應用計畫](initial-app.md) 區段，以及在中建立的初始頁面 [初始內容](initial-content.md) 區段，您可以開發應用程式。 若要這麼做，請使用基礎指令碼，其中包括啟用使用Communities元件編寫的功能。 在本節的結尾，您會看到功能完整的網站。
 
 ## 使用基礎頁面命令檔 {#using-foundation-page-scripts}
 
-預設指令碼（在新增呈現播放頁面範本的元件時建立）會修改為包含基礎頁面的head.jsp和本機body.jsp。
+預設指令碼是在新增轉譯播放頁面範本的元件時建立的，經過修改後會包含基礎頁面的head.jsp和本機body.jsp。
 
 ### 超級資源型別 {#super-resource-type}
 
@@ -66,9 +62,9 @@ ht-degree: 5%
    %>
    ```
 
-1. 注意開啟/關閉指令碼標籤，將「 // TODO ...」取代為「 」標題和內文部分的指令碼包含 &lt;html>.
+1. 注意開啟/關閉指令碼標籤，將「 // TODO ...」取代為 `includes` 的標題和正文部分的指令碼 &lt;html>.
 
-   具有超級型別的 `foundation/components/page`，此資料夾中未定義的任何指令碼都會解析為中的指令碼 `/apps/foundation/components/page` 資料夾（如果存在），則新增至中的指令碼 `/libs/foundation/components/page` 資料夾。
+   具有超級型別的 `foundation/components/page`，未在此相同資料夾中定義的任何指令碼都會解析為中的指令碼 `/apps/foundation/components/page` 資料夾（如果有的話），或是中的指令碼 `/libs/foundation/components/page` 資料夾。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -88,9 +84,9 @@ ht-degree: 5%
    </html>
    ```
 
-1. 基礎指令碼 `head.jsp` 不需要重疊，但基礎指令碼 `body.jsp` 空白。
+1. 覆蓋基礎指令碼 `head.jsp` 不是必要專案，但基礎指令碼 `body.jsp` 空白。
 
-   若要設定製作，請覆蓋 `body.jsp` 使用本機指令碼，並在內文中加入段落系統(parsys)：
+   若要設定進行製作，請覆蓋 `body.jsp` 使用本機指令碼，並在內文中加入段落系統(parsys)：
 
    1. 導覽至 `/apps/an-scf-sandbox/components`。
    1. 選取 `playpage` 節點。
@@ -162,13 +158,13 @@ ht-degree: 5%
 >
 >為頁面部分啟用的元件會儲存於儲存庫中，作為 `components` 的屬性
 >
->`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` 節點。
+>節點 `/etc/designs/an-scf-sandbox/jcr:content/playpage/par`.
 
 ## 登陸頁面 {#landing-page}
 
 在多語言環境中，根頁面會包含指令碼，此指令碼會剖析使用者端的請求，以決定偏好的語言。
 
-在這個簡單範例中，根頁面以靜態方式設定為重新導向至英文頁面，這在未來可能會發展為具有播放頁面連結的主要登陸頁面。
+在此範例中，會將根頁面以靜態方式設定為重新導向至英文頁面，而英文頁面可能會在日後發展為具有播放頁面連結的主要登陸頁面。
 
 將瀏覽器URL變更為根頁面： `http://localhost:4502/editor.html/content/an-scf-sandbox.html`
 
@@ -181,6 +177,6 @@ ht-degree: 5%
 
 * 按一下 **[!UICONTROL 確定]**
 
-發佈網站後，在發佈執行個體上瀏覽至根頁面時，將會重新導向至英文頁面。
+發佈網站後，在發佈執行個體上瀏覽至根頁面時，會重新導向至英文頁面。
 
-播放communities SCF元件之前的最後一步是新增使用者端資料庫資料夾(clientlibs) .... [新增Clienlibs](add-clientlibs.md)
+播放Communities SCF元件之前的最後一步是新增使用者端程式庫資料夾(clientlibs) .... [新增Clientlibs](add-clientlibs.md)

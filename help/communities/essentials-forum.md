@@ -1,15 +1,15 @@
 ---
 title: 論壇要點
-description: 論壇概觀
+description: 瞭解在Adobe Experience Manager社群中使用論壇功能的基礎知識。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 622cf6ca-f119-4310-ad14-537576bd6f6d
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 2%
+source-wordcount: '259'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 本頁提供使用論壇功能的基本資訊。
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 使用者端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -26,7 +26,7 @@ ht-degree: 2%
    <td>social/forum/components/hbs/forum<br /> social/forum/components/hbs/topic<br /> social/forum/components/hbs/post</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>includible</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
    <td>否</td>
   </tr>
   <tr>
@@ -64,16 +64,16 @@ ht-degree: 2%
 
 ### 存取論壇貼文(UGC) {#accessing-forum-posts-ugc}
 
-UGC應使用其中一個標準仲裁方法來仲裁。
+UGC應使用其中一種標準仲裁方法進行仲裁。
 另請參閱 [稽核使用者產生的內容](moderate-ugc.md).
 
-自Adobe Experience Manager 6.1社群起，使用 [公用存放區](working-with-srp.md) for UGC包含程式化存取UGC，無論選擇的儲存選項為何（例如ASRP、MSRP或JSRP）。
+截至Adobe Experience Manager 6.1社群，使用 [公用存放區](working-with-srp.md) for UGC包含對UGC的程式化存取，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何。
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不發出警告**.
+**UGC在存放庫中的位置和格式可能會有所變更，恕不另行警告**.
 
 請參閱：
 
 * [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
+* [srp和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
 * [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
 * [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。

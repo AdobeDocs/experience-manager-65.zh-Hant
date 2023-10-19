@@ -1,14 +1,14 @@
 ---
 title: 社交圖基本資訊
-description: 瞭解以下元件和以下元件。
+description: 在社群網站上使用下列和追蹤元件，瞭解Social Graph的基礎知識。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: c037a788-c943-4f95-a028-1fcb0ef48f86
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '249'
 ht-degree: 2%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 2%
        <li><i>真 </i>- <code>following</code> 元件會列出登入的成員 <code>follows</code></li>
        <li><i>假 </i>- <code>following</code> 元件會列出符合以下條件的成員 <code>follow </code>登入會員</li>
       </ul> </li>
-    </ul> <p>預設為 <i>true</i> 如果屬性遺失。 無法在作者模式中使用編輯對話方塊設定此屬性。 必須將屬性新增至 <code>following</code> 節點使用 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
+    </ul> <p>預設為 <i>true</i> 如果屬性遺失。 無法在作者模式中使用編輯對話方塊設定此屬性。 必須將屬性新增至 <code>following</code> 節點，使用 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
   </tr>
  </tbody>
 </table>

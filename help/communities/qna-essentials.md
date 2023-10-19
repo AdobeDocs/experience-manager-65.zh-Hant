@@ -1,25 +1,23 @@
 ---
-title: QnA Essentials
-description: 問題與解答論壇功能
-uuid: c718a8e3-b3bd-4db9-8c0f-6dd973d40583
+title: QnA要點
+description: 瞭解在Adobe Experience Manager社群中使用問答(QnA)論壇功能的基礎知識。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
 exl-id: a7b295c1-cc9d-4881-8016-804b21fc1098
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '252'
 ht-degree: 2%
 
 ---
 
-# QnA Essentials {#qna-essentials}
+# QnA要點 {#qna-essentials}
 
 本頁提供使用問答(QnA)論壇功能的基本資訊。
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 使用者端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -45,7 +43,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td> 屬性</td>
-   <td>另請參閱 <a href="working-with-qna.md">Q&amp;A論壇功能</a></td>
+   <td>另請參閱 <a href="working-with-qna.md">問答論壇功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -56,26 +54,26 @@ ht-degree: 2%
 
 * [QnA API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
 
-* [QnA端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/endpoints/package-summary.html)
+* [qna端點](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/endpoints/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 
 ### QnA 功能 {#qna-function}
 
-社群網站結構包含 [QnA函式](functions.md#qna-function) 已設定 `QnA` 元件以及影響稽核和標籤的設定。 QnA函式支援識別 [有特殊許可權的成員使用者群組](users.md#privileged-members-group).
+社群網站結構包含 [QnA函式](functions.md#qna-function) 已設定 `QnA` 以及影響稽核和標籤的設定。 QnA函式支援識別 [有特殊許可權的成員使用者群組](users.md#privileged-members-group).
 
 ### 存取QnA論壇貼文(UGC) {#accessing-qna-forum-posts-ugc}
 
-UGC應使用其中一個標準仲裁方法來仲裁。
+UGC應使用其中一種標準仲裁方法進行仲裁。
 另請參閱 [稽核使用者產生的內容](moderate-ugc.md).
 
-自AEM 6.1 Communities起，使用 [公用存放區](working-with-srp.md) for UGC包含程式化存取UGC，無論選擇的儲存選項為何（例如ASRP、MSRP或JSRP）。
+自AEM 6.1社群起，使用 [公用存放區](working-with-srp.md) for UGC包含對UGC的程式化存取，無論選擇的儲存選項（例如ASRP、MSRP或JSRP）為何。
 
-**UGC在存放庫中的位置和格式可能會有所變更，恕不發出警告**.
+**UGC在存放庫中的位置和格式可能會有所變更，恕不另行警告**.
 
 請參閱：
 
 * [儲存資源提供者概觀](srp.md)  — 簡介和存放庫使用概述。
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
+* [srp和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
 * [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。
 * [SocialUtils重構](socialutils.md)  — 將已棄用的公用程式方法對應到目前的SRP公用程式方法。

@@ -1,18 +1,14 @@
 ---
 title: 初始沙箱應用程式
-seo-title: Initial Sandbox Application
-description: 建立範本、元件和指令碼
-seo-description: Create template, component, and script
-uuid: b0d03376-d8bc-4e98-aea2-a01744c64ccd
+description: 瞭解如何使用用來建立內容頁面的內容範本，以及用於呈現網站頁面的元件和指令碼。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 exl-id: cbf9ce36-53a2-4f4b-a96f-3b05743f6217
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '626'
 ht-degree: 2%
 
 ---
@@ -21,8 +17,8 @@ ht-degree: 2%
 
 在本節中，您將建立下列專案：
 
-* 此 **[範本](#createthepagetemplate)** 這些內容將用於建立範例網站中的內容頁面。
-* 此 **[元件和指令碼](#create-the-template-s-rendering-component)** 將用於轉譯網站頁面。
+* 此 **[範本](#createthepagetemplate)** 用來在範例網站中建立內容頁面的物件。
+* 此 **[元件和指令碼](#create-the-template-s-rendering-component)** 用於呈現網站頁面的屬性。
 
 ## 建立內容範本 {#create-the-content-template}
 
@@ -30,7 +26,7 @@ ht-degree: 2%
 
 在本練習中，所有頁面都以一個簡單範本為基礎。
 
-1. 在CRXDE Lite的瀏覽器窗格中：
+1. 在CRXDE Lite的總管窗格中：
 
    * 選取 `/apps/an-scf-sandbox/templates`
    * **[!UICONTROL 建立]** > **[!UICONTROL 建立範本]**
@@ -43,19 +39,19 @@ ht-degree: 2%
    * 資源類型: `an-scf-sandbox/components/playpage`
    * 排名： &lt;leave as=&quot;&quot; default=&quot;&quot;>
 
-   「標籤」用於節點名稱。
+   標籤會用於節點名稱。
 
-   「資源型別」會顯示在 `playpage`的jcr：content節點作為屬性 `sling:resourceType`. 它可識別在瀏覽器要求時呈現內容的元件（資源）。
+   「資源型別」會顯示在 `playpage`的 `jcr:content` 節點，做為屬性 `sling:resourceType`. 它會識別在瀏覽器要求時呈現內容的元件（資源）。
 
-   在此案例中，所有使用建立的頁面 `playpage` 範本由 `an-scf-sandbox/components/playpage` 元件。 依照慣例，元件的路徑是相對路徑，允許Sling先在中搜尋資源 `/apps` 資料夾，如果找不到，則在 `/libs` 資料夾。
+   在此案例中，所有使用建立的頁面 `playpage` 範本由 `an-scf-sandbox/components/playpage` 元件。 依照慣例，元件的路徑為相對路徑，允許Sling先在 `/apps` 資料夾，如果找不到，則在 `/libs` 資料夾。
 
    ![create-content-template](assets/create-content-template-1.png)
 
-1. 如果使用複製/貼上，請確定「資源型別」值沒有前置或後置空格。
+1. 如果使用複製/貼上，請確定Resource Type值沒有前置或後置空格。
 
-   按一下&#x200B;**[!UICONTROL 下一步]**。
+   按一下「**[!UICONTROL 下一步]**」。
 
-1. 「允許的路徑」是指使用此範本的頁面的路徑，因此會為下列專案列出範本 **[!UICONTROL 新頁面]** 對話方塊。
+1. 「允許的路徑」是指使用此範本的頁面的路徑，因此會為列出範本 **[!UICONTROL 新頁面]** 對話方塊。
 
    若要新增路徑，請按一下加號按鈕 `+` 和型別 `/content(/.&ast;)?` 在出現的文字方塊中。 如果使用複製/貼上，請確定沒有前置或後置空格。
 
@@ -63,13 +59,13 @@ ht-degree: 2%
 
    當作者建立以下頁面時 `/content`，則 `playpage` 標題為「SCF沙箱頁面範本」的範本會出現在可用的範本清單中。
 
-   從範本建立根頁面後，可以修改屬性，將根路徑納入規則運算式中，藉此限制此網站對範本的存取。
+   從範本建立根頁面後，可以編輯屬性以將根路徑納入規則運算式中，藉此限制此網站對範本的存取。
 
    `/content/an-scf-sandbox(/.&ast;)?`
 
    ![configure-template-path](assets/configure-template-path.png)
 
-1. 按一下&#x200B;**[!UICONTROL 下一步]**。
+1. 按一下「**[!UICONTROL 下一步]**」。
 
    按一下 **[!UICONTROL 下一個]** 在 **[!UICONTROL 允許的父項]** 面板。
 
@@ -77,7 +73,7 @@ ht-degree: 2%
 
    按一下&#x200B;**[!UICONTROL 「確定」]**。
 
-1. 按一下「確定」並完成範本建立後，您會注意到新的「屬性」標籤值的角落顯示紅色三角形 `playpage` 範本。 這些紅色三角形表示尚未儲存的編輯。
+1. 按一下「確定」並完成範本建立後，請注意新範本的「屬性」標籤值角落中顯示的紅色三角形 `playpage` 範本。 這些紅色三角形表示尚未儲存的編輯。
 
    按一下 **[!UICONTROL 全部儲存]** 將新範本儲存至存放庫。
 
@@ -88,11 +84,11 @@ ht-degree: 2%
 建立 *元件* 會定義內容並轉譯根據 [播放頁面範本](#createthepagetemplate).
 
 1. 在CRXDE Lite中按一下滑鼠右鍵 **`/apps/an-scf-sandbox/components`** 並按一下 **[!UICONTROL 「建立」>「元件」]**.
-1. 將節點名稱（標籤）設定為 *playpage*，元件的路徑為
+1. 藉由將節點名稱（標籤）設定為 *playpage*，元件的路徑為
 
    `/apps/an-scf-sandbox/components/playpage`
 
-   與播放頁面範本的資源型別相對應（可選擇性地減去初始值） **`/apps/`** 路徑的一部分)。
+   此專案對應至播放頁面範本的資源型別（可選擇減去初始值） **`/apps/`** 路徑的一部分)。
 
    在 **[!UICONTROL 建立元件]** 對話方塊中，輸入下列屬性值：
 
@@ -104,15 +100,15 @@ ht-degree: 2%
 
    ![create-template-component](assets/create-template-component.png)
 
-1. 按一下 **[!UICONTROL 下一個]** 直到 **[!UICONTROL 允許的子項]** 對話方塊的面板隨即顯示：
+1. 按一下 **[!UICONTROL 下一個]** 直到 **[!UICONTROL 允許的子項]** 對話方塊面板隨即顯示：
 
    * 按一下&#x200B;**[!UICONTROL 「確定」]**。
-   * 按一下 **[!UICONTROL 全部儲存]**.
+   * 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
 
-1. 確認元件的路徑與範本的resourceType相符。
+1. 驗證元件的路徑與範本的resourceType相符。
 
    >[!CAUTION]
    >
-   >播放頁面元件的路徑與播放頁面範本的sling：resourceType屬性之間的對應關係是網站正常運作的關鍵。
+   >播放頁面元件的路徑與 `sling:resourceType` 播放頁面範本的屬性是網站正常運作的關鍵。
 
    ![verify-template-component](assets/verify-template-component.png)
