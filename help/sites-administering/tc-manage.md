@@ -2,7 +2,7 @@
 title: 管理翻譯專案
 description: 瞭解如何在Adobe Experience Manager中管理翻譯專案。
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 9438868191961404e9e18cb0dd2e844985ac9db0
 workflow-type: tm+mt
 source-wordcount: '3588'
 ht-degree: 2%
@@ -433,7 +433,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 >[!NOTE]
 >
->若要建立專案，您的帳戶必須是 `project-administrators` 群組。
+>若要建立專案，您的帳戶必須是 `projects-administrators` 群組。
 
 手動建立翻譯專案時，除了下列翻譯相關屬性外，您還必須提供下列翻譯相關屬性的值 [基本屬性](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)：
 

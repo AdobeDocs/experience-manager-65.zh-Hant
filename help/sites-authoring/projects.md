@@ -1,16 +1,8 @@
 ---
 title: 專案
-seo-title: Projects
 description: 專案可讓您將資源群組到一個實體中，其共同的共用環境使您的專案容易管理.
-seo-description: Projects let you group resources into one entity whose common, shared environment makes it easy to manage your projects
-uuid: 4b5b9d78-d515-46af-abe2-882da0a1c8ae
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: projects
-content-type: reference
-discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
-docset: aem65
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1d64a9a6d6dfbc7606d7c222ef50a21bf9b902d6
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 32%
@@ -223,7 +215,7 @@ ht-degree: 32%
 |---|---|---|---|
 | 觀察者 | 擁有此角色的使用者可以檢視專案詳細資料，包括專案狀態。 | 專案的唯讀權限 | `workflow-users` 群組 |
 | 編輯者 | 擁有此角色的使用者可以上傳和編輯專案的內容。 | 對專案、關聯中繼資料和相關資產的讀寫存取權<br>上傳快照清單、拍照以及檢閱和核准資產的許可權<br>的寫入許可權 `/etc/commerce`<br>修改特定專案的許可權 | `workflow-users` 群組 |
-| 所有者 | 具有此角色的使用者可以建立專案、在專案中起始工作，並將核准的資產移至生產資料夾。 擁有者也可以檢視及執行專案中的所有其他任務。 | `/etc/commerce` 的寫入權限 | `dam-users` 群組以建立專案<br>`project-administrators` 群組，以便建立專案和移動資產 |
+| 所有者 | 具有此角色的使用者可以建立專案、在專案中起始工作，並將核准的資產移至生產資料夾。 擁有者也可以檢視及執行專案中的所有其他任務。 | `/etc/commerce` 的寫入權限 | `dam-users` 群組以建立專案<br>`projects-administrators` 群組，以便建立專案和移動資產 |
 
 對於創意專案，也會提供其他角色，例如攝影師。 您可以使用這些角色來衍生特定專案的自訂角色。
 

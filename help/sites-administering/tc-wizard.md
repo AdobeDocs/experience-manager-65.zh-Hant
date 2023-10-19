@@ -3,7 +3,7 @@ title: 語言複製精靈
 description: 瞭解如何在AdobeExperience Manager中使用語言複製精靈。
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 2d87022aa2223df261e245fba65df054c041cd69
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 5%
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->使用者必須是專案管理員群組的成員，才能建立網站的語言副本。
+>使用者必須是專案 — 管理員群組的成員，才能建立網站的語言副本。
 
 若要存取此精靈：
 

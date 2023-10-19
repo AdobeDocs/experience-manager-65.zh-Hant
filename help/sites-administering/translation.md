@@ -1,19 +1,10 @@
 ---
 title: 翻譯多語言網站的內容
-seo-title: Translating Content for Multilingual Sites
 description: 瞭解如何翻譯多語言網站的內容。
-seo-description: Learn how to translate content for multilingual sites.
-uuid: 69b3e3a9-6773-4759-8178-aaa612e4c170
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: 1e0a68c5-1583-4103-9dbb-7a53faa03c06
-docset: aem65
-legacypath: /content/docs/en/aem/6-0/administer/integration/third-party-services/machine-translation
 feature: Language Copy
 exl-id: 6ccfe612-8cfd-4ca2-ad01-8e4af36d44fa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3f5173c0c2b17e8cf560753088451f78c6529f5c
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 83%
@@ -40,7 +31,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->您的使用者必須是專案管理員群組的成員，才能使用語言複製功能。
+>您的使用者必須是專案 — 管理員群組的成員，才能使用語言複製功能。
 
 ## 最佳做法 {#best-practices}
 
