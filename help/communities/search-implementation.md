@@ -1,14 +1,14 @@
 ---
 title: 搜尋Essentials
-description: 在社群中搜尋
+description: 瞭解搜尋功能，這是AEM Communities的重要功能。 Communities也為使用者產生的內容提供搜尋API。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1189'
 ht-degree: 4%
 
 ---
@@ -68,9 +68,9 @@ ht-degree: 4%
 
 ### JSRP搜尋 {#jsrp-searches}
 
-的 [JSRP](jsrp.md)，UGC儲存在 [Oak](../../help/sites-deploying/platform.md) 而且只會顯示在輸入它的AEM作者或發佈執行個體的存放庫中。
+的 [JSRP](jsrp.md)，UGC儲存在 [Oak](../../help/sites-deploying/platform.md) 而且只會顯示在輸入它的AEM Author或Publish例項的存放庫中。
 
-由於UGC通常輸入在發佈環境中，因此對於多發佈者生產系統，必須設定 [發佈叢集](topologies.md)，而非發佈陣列，因此所有發佈者都能看見輸入的內容。
+由於UGC通常輸入在發佈環境中，對於多發佈者生產系統，必須設定 [發佈叢集](topologies.md)，而非發佈陣列，因此所有發佈者都能看見輸入的內容。
 
 對於JSRP，在發佈環境中輸入的UGC在製作環境中從不可見。 因此，所有 [稽核](moderate-ugc.md) 工作會在發佈環境中進行。
 

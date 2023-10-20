@@ -1,35 +1,31 @@
 ---
 title: 標籤Essentials
-seo-title: Tag Essentials
-description: 標籤總覽
-seo-description: Tag overview
-uuid: a5d52319-f821-4608-b0ab-abc8a1374343
+description: 瞭解Communities元件設定為啟用標籤時，社群成員可標籤其在發佈環境中發佈的內容。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: d355a3ee-c8a8-4a07-8d28-d1a99bda315c
 exl-id: 6e8af8cf-1239-46f9-b2fe-4aa80abc86ea
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '262'
 ht-degree: 2%
 
 ---
 
 # 標籤Essentials {#tag-essentials}
 
-當AEM Communities元件設定為啟用標籤時，社群成員將可標籤他們發佈在發佈環境中的內容。
+設定AEM Communities元件並啟用標籤後，社群成員將可標籤他們在發佈環境中張貼的內容。
 
 發佈環境中套用標籤的基礎基礎結構與製作環境中套用至內容（例如頁面和資產）的標籤基礎基礎結構相同：
 
-* 另請參閱 [管理標籤](../../help/sites-administering/tags.md) 和 [標籤使用者產生的內容](tag-ugc.md) (UGC)，以瞭解建立和管理標籤的相關資訊。
+* 另請參閱 [管理標籤](../../help/sites-administering/tags.md) 和 [標籤使用者產生的內容](tag-ugc.md) (UGC)，以取得建立和管理標籤的相關資訊。
 
 * 另請參閱 [為開發人員加上標籤](../../help/sites-developing/tags.md) 以取得關於 [標籤框架](../../help/sites-developing/framework.md) 以及在中包含和擴充標籤 [自訂應用程式](../../help/sites-developing/building.md).
 
-* 另請參閱 [使用社交標籤雲](tagcloud.md) 供作者瞭解如何新增 `social tag cloud` 元件至頁面，醒目提示發佈環境中套用至UGC的標籤。
+* 另請參閱 [使用社交標籤雲](tagcloud.md) 供作者瞭解如何新增 `social tag cloud` 元件至頁面，以反白顯示發佈環境中套用至UGC的標籤。
 
-設定時可啟用UGC標籤 [社群網站](sites-console.md#tagging) 或下列其中一項功能：
+設定時可啟用UGC的標籤 [社群網站](sites-console.md#tagging) 或下列其中一項功能：
 
 * [部落格](blog-feature.md)
 * [日曆](calendar.md)
@@ -37,7 +33,7 @@ ht-degree: 2%
 * [論壇](forum.md)
 * [QnA](working-with-qna.md)
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 使用者端的Essentials {#essentials-for-client-side}
 
 ### 社交標籤雲 {#social-tag-cloud}
 
@@ -74,9 +70,9 @@ ht-degree: 2%
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [社交標籤雲端API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
+* [社交標籤雲API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
 
-* [社交標籤管理員](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
+* [社交標籤管理員](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
 
 * [伺服器端自訂](server-customize.md)
 

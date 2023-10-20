@@ -1,15 +1,15 @@
 ---
 title: 製作巢狀群組
-description: 建立巢狀群組
+description: 瞭解如何為Adobe Experience Manager Communities網站建立巢狀群組。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '600'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 ## 建立主要藝術群組 {#create-main-arts-group}
 
-可建立此群組，因為用於參與的網站結構包含群組功能。 網站中函式的設定 `Reference Template` 預設為允許選取任何已啟用的群組範本。 因此，為此新群組選擇的範本為 `Reference Group`.
+可建立此群組，因為用於參與的網站結構包含群組的功能。 網站中函式的設定 `Reference Template` 預設為允許選取任何已啟用的群組範本。 因此，為此新群組選擇的範本為 `Reference Group`.
 
 這些主控台與社群網站主控台類似。
 

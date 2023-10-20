@@ -1,35 +1,31 @@
 ---
-title: RTF編輯器程式集
-seo-title: Rich Text Editor Essentials
-description: RTF編輯器功能概觀
-seo-description: Rich text Editor feature overview
-uuid: f96015cc-114b-431a-a5ba-dc195c2a0b83
+title: RTF編輯器基本知識
+description: 瞭解RTF編輯器的基礎和功能，此編輯器可讓您輸入含有標示的文字。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 0225a543-0fad-488b-8b0b-8b3512d44fbe
 exl-id: 821e32f4-da8d-4bbb-936a-0844b8a24cdd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '238'
 ht-degree: 3%
 
 ---
 
-# RTF編輯器程式集 {#rich-text-editor-essentials}
+# RTF編輯器基本知識 {#rich-text-editor-essentials}
 
 ## 概觀 {#overview}
 
-RTF編輯器(RTE)提供輸入含標示文字的功能。
+RTF編輯器(RTE)可讓您輸入含有標示的文字。
 
-若為Communities元件，則類似於 [作者環境中的RTF編輯器](../../help/sites-authoring/rich-text-editor.md)，它會影響在發佈環境中輸入的文字。
+針對Communities元件，而與 [作者環境中的RTF編輯器](../../help/sites-authoring/rich-text-editor.md)，它會影響在發佈環境中輸入的文字。
 
 ![RTF編輯器](assets/rich-text-editor.png)
 
 ## 啟用RTF編輯器 {#enabling-rich-text-editor}
 
-允許使用者產生內容(UGC)的Communities元件可啟用以允許RTE。 根據元件是新增至頁面還是包含在 [函式](functions.md)，RTE依預設可能會啟用，也可能不會啟用。
+允許使用者產生內容(UGC)的Communities元件可啟用以允許RTE。 將元件新增至頁面或包含在 [函式](functions.md)，預設情況下可能會啟用，也可能不會啟用RTE。
 
 如果未啟用，只要輸入 [作者編輯模式](sites-console.md#authoring-site-content)，選取要編輯的元件，然後選取 `Rich Text Editor` 核取方塊。
 
@@ -46,17 +42,17 @@ RTE適用於下列Communities元件：
 
 ## 自訂 {#customization}
 
-RTF編輯器可以自訂，因為實作是根據 [CKEditor](https://www.ckeditor.com/).
+RTF編輯器可以自訂，因為實作是根據 [複製器](https://ckeditor.com/).
 
-Communities元件的目前設定位於 `cq.social.  scf   clientlib`，位於存放庫中的
+Communities元件的目前設定在 `cq.social.  scf   clientlib`，在存放庫中的
 
 `/libs/clientlibs/social/commons/scf/ckrte.js`
 
-不建議修改cq.social.scf clientlib，因為未來的升級可能會覆寫任何編輯。
+不建議修改cq.social.scf clientlib，因為日後的升級可能會覆寫任何編輯。
 
 ### 自訂範例：內嵌連結 {#example-customization-inline-links}
 
-基於安全性考量，超連結選項不會包含在預設提供給成員的RTF圖示集中。 當UGC中允許href時，惡意連結的能力很強。
+基於安全性考量，預設情況下顯示給成員的RTF圖示集中不包含超連結選項。 在UGC中允許href時，惡意轉換的能力很強。
 
 若要將超連結選項新增至工具列：
 

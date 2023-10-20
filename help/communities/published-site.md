@@ -1,19 +1,15 @@
 ---
 title: 體驗已發佈的網站
-seo-title: Experience the Published Site
-description: 瀏覽至已發佈的網站
-seo-description: Browse to a published site
-uuid: 44594e9e-27ad-475d-953d-3611b04f0df8
+description: 瞭解如何瀏覽至建立網站時顯示的URL，但在發佈伺服器上。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
-discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1205'
 ht-degree: 1%
 
 ---
@@ -29,7 +25,7 @@ ht-degree: 1%
 
 為了將有關哪些成員已登入作者和發佈的混淆降至最低，建議對每個執行個體使用不同的瀏覽器。
 
-初次到達已發佈的網站時，網站訪客通常尚未登入，且不會姓名。
+初次到達已發佈的網站時，網站訪客通常不會登入，且會匿名。
 
 `https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}`
 
@@ -86,10 +82,10 @@ ht-degree: 1%
 以已註冊的社群成員身分登入後，請注意下列選單專案，以便按一下並探索您的社群網站：
 
 * **個人資料** 選項可讓您檢視及編輯您的設定檔。
-* [訊息](/help/communities/configure-messaging.md) 選項會將您導向直接傳訊區段，您可在其中執行以下操作：
+* [訊息](/help/communities/configure-messaging.md) 選項會將您導向直接傳訊區段，您可以在其中進行下列作業：
 
    1. 檢視您已收到（收件匣）、已傳送（已傳送專案）及已刪除（垃圾桶）的直接訊息。
-   1. 撰寫要傳送給個人和群組的新直接訊息。
+   1. 撰寫新的直接訊息，以便傳送給個人和群組。
 
 * [通知](/help/communities/notifications.md) 選項會將您導向通知區段，您可以在其中檢視您感興趣的事件並編輯通知設定。
 * [管理](/help/communities/published-site.md#moderationlink) 如果您擁有協調許可權，系統會將您導向AEM Communities協調頁面。
@@ -119,7 +115,7 @@ ht-degree: 1%
 
 ### 群組連結 {#groups-link}
 
-由於Aaron是群組管理員，選取「群組」連結將允許Aaron透過選取群組範本、影像、群組是否開啟以及邀請成員來建立新的社群群組。
+由於Aaron是群組管理員，選取「群組」連結可讓Aaron透過選取群組範本、影像、群組（無論群組是否開啟）以及邀請成員來建立社群群組。
 
 這是在發佈環境中建立群組的範例。
 
@@ -145,7 +141,7 @@ ht-degree: 1%
 
    ![creategroup](assets/creategroup.png)
 
-建立新群組後， **選取新的運動群組** 以在其內部建立兩個群組（巢狀）。 由於場地結構無法從群組功能開始，因此開啟「運動」群組後，必須選取「群組」連結：
+建立新群組後， **選取新的運動群組** 以在其內建立兩個群組（巢狀）。 由於場地結構無法從群組功能開始，因此開啟「運動」群組後，必須選取「群組」連結：
 
 ![grouplink1](assets/grouplink1.png)
 
@@ -196,13 +192,13 @@ ht-degree: 1%
 
 選取網頁連結，檢視網站中包含的基本網頁。 標準AEM編寫工具可用於在編寫環境中將內容新增到此頁面。
 
-例如，前往 **作者** 執行個體，開啟 `engage` 中的資料夾 [社群網站主控台](/help/communities/sites-console.md)，選取 **開啟網站** 圖示以進入作者編輯模式。 然後選取預覽模式以選取 `Web Page` 連結，然後選取編輯模式以新增標題和文字元件。 最後，僅重新發佈頁面或整個網站。
+例如，前往 **作者** 執行個體，開啟 `engage` 中的資料夾 [社群網站主控台](/help/communities/sites-console.md)，選取 **開啟網站** 圖示以進入作者編輯模式。 然後選取預覽模式，如此您便可以選取 `Web Page` 連結，然後選取編輯模式以新增標題和文字元件。 最後，僅重新發佈頁面或整個網站。
 
 ![webpagelink](assets/webpagelink.png)
 
 ### 稽核連結 {#moderationlink}
 
-當社群成員具有仲裁許可權時，將會顯示仲裁連結並選取它，將顯示張貼的社群內容並允許它 [已稽核](/help/communities/moderate-ugc.md) 採用類似於 [稽核主控台](/help/communities/moderation.md) 在作者環境中。
+當社群成員具有稽核許可權時，則會顯示稽核連結。 選取連結會顯示張貼的社群內容，並可讓它 [已稽核](/help/communities/moderate-ugc.md) 採用類似於 [稽核主控台](/help/communities/moderation.md) 在作者環境中。
 
 使用瀏覽器的返回按鈕以返回已發佈的網站。 大部分的主控台無法透過發佈環境中的全域導覽存取。
 
@@ -210,7 +206,7 @@ ht-degree: 1%
 
 ## 自助註冊 {#self-registration}
 
-登出後，可以建立新的使用者註冊。
+登出後，即可建立使用者註冊。
 
 * 選取 `Log In`
 * 選取 `Sign up for a new account`
@@ -221,7 +217,7 @@ ht-degree: 1%
 
 依預設，電子郵件地址是登入ID。 如果未勾選，訪客將能夠輸入自己的登入ID （使用者名稱）。 使用者名稱在發佈環境中必須是唯一的。
 
-指定使用者的名稱、電子郵件和密碼後，選取 `Sign Up` 將會建立使用者並啟用他們進行簽署。
+指定使用者的名稱、電子郵件和密碼後，選取 `Sign Up` 建立使用者並讓他們簽署。
 
 登入後，第一個顯示的頁面為其 `Profile` 頁面進行個人化。
 
