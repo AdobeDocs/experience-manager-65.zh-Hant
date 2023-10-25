@@ -1,7 +1,7 @@
 ---
 title: 在AEM中啟用CRXDE Lite
 seo-title: Enabling CRXDE Lite in AEM
-description: 瞭解如何在AEM中啟用CRXDE Lite。
+description: 瞭解如何啟用Adobe Experience Manager中的CRXDE Lite。
 seo-description: Learn how to enable CRXDE Lite in AEM.
 uuid: d7a3db67-6384-463b-9aa9-f08ecc6c99c6
 contentOwner: Guillaume Carlino
@@ -10,45 +10,45 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: a4183bb9d72763ebea3b464c77fce978c723e053
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '260'
 ht-degree: 1%
 
 ---
 
 # 在AEM中啟用CRXDE Lite{#enabling-crxde-lite-in-aem}
 
-為了確保儘可能確保AEM安裝的安全性，安全性檢查清單建議 [停用WebDAV](/help/sites-administering/security-checklist.md#disable-webdav) 在生產環境中。
+為了確保AEM安裝儘可能安全，安全性檢查清單建議 [正在停用WebDAV](/help/sites-administering/security-checklist.md#disable-webdav) 在生產環境中。
 
 不過，CRXDE Lite取決於 `org.apache.sling.jcr.davex` 套件組合以正常運作，因此停用WebDAV也會有效地停用CRXDE Lite。
 
-發生此情況時，瀏覽至 `https://serveraddress:4502/crx/de/index.jsp` 將顯示一個空的根節點，對CRXDE Lite資源的所有HTTP請求都將失敗：
+發生此情況時，瀏覽至 `https://serveraddress:4502/crx/de/index.jsp` 將顯示一個空的根節點，並且對CRXDE Lite資源的所有HTTP請求都將失敗：
 
 ```xml
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
 ```
 
-雖然此建議的目的是為了儘可能減少攻擊面，但系統管理員有時可能需要存取CRXDE Lite，才能瀏覽內容或在生產執行個體上偵錯問題。
+雖然此建議的目的是為了儘可能減少攻擊面，但系統管理員有時可能需要存取CRXDE Lite，才能瀏覽內容或偵錯生產執行個體上的問題。
 
 您可以透過以下任一方式啟用CRXDE Lite： [OSGi設定](#enabling-crxde-lite-osgi) 或使用 [cURL命令](#enabling-crxde-lite-curl).
 
 >[!WARNING]
 >
->由於這些方法的操作方式略有差異，您應該使用 ***兩者之一*** OSGI ***或*** cURL.
+>由於這些方法的操作方式略有差異，您應該使用 ***兩者之一*** OSGI ***或*** cURL。
 >
->兩種方法為 ***not*** 可互換。
+>兩種方法為 ***非*** 可互換。
 
 ## 使用OSGI啟用CRXDE Lite {#enabling-crxde-lite-osgi}
 
 如果停用，您可以依照下列程式開啟CRXDE Lite：
 
-1. 前往OSGi元件主控台，網址為 `http://localhost:4502/system/console/components`
+1. 前往位於的OSGi元件主控台 `http://localhost:4502/system/console/components`
 1. 搜尋下列元件：
 
    * `org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`
 
-1. 按一下它旁邊的扳手圖示以檢視其設定選項：
+1. 按一下旁邊的扳手圖示以檢視其設定選項：
 
    ![chlimage_1-80](assets/chlimage_1-80a.png)
 
@@ -57,11 +57,11 @@ ht-degree: 1%
    * **根路徑:** `/crx/server`
    * 勾選下方的方塊 **使用絕對URI**.
 
-1. 完成CRXDE Lite使用後，請確定您再次停用WebDAV。
+1. 完成使用CRXDE Lite時，請確定您再次停用WebDAV。
 
 ## 使用cURL啟用CRXDE Lite {#enabling-crxde-lite-curl}
 
-您也可以透過執行此命令來啟用透過cURL的CRXDE Lite：
+您也可以執行此命令，透過cURL啟用CRXDE Lite：
 
 ```shell
 curl -u admin:admin -F "jcr:primaryType=sling:OsgiConfig" -F "alias=/crx/server" -F "dav.create-absolute-uri=true" -F "dav.create-absolute-uri@TypeHint=Boolean" http://localhost:4502/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
