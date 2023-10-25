@@ -1,6 +1,6 @@
 ---
 title: Oak查詢和索引
-description: 瞭解如何在Adobe Experience Manager中設定索引。
+description: 瞭解如何在Adobe Experience Manager (AEM) 6.5中設定索引。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,9 +8,9 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3034'
 ht-degree: 2%
 
 ---
@@ -224,7 +224,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 若要為上述查詢定義Lucene屬性索引，您可以在下建立節點來新增以下定義 **oak:index:**
 
-* **名稱：**`LucenePropertyIndex`
+* **名稱:** `LucenePropertyIndex`
 * **類型：**`oak:QueryIndexDefinition`
 
 建立節點後，請新增下列屬性：
@@ -283,7 +283,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 1. 將屬性新增至具有下列屬性的預設節點：
 
-   * **名稱：**`class`
+   * **名稱:** `class`
    * **類型：**`String`
    * **值:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
 
@@ -291,7 +291,7 @@ select * from [nt:base] where [alias] = '/admin'
 
    您也可以使用選填，將分析器設定為與特定lucene版本搭配使用 `luceneMatchVersion` 字串屬性。 搭配Lucene 4.7使用的有效語法為：
 
-   * **名稱：**`luceneMatchVersion`
+   * **名稱:** `luceneMatchVersion`
    * **類型：**`String`
    * **值:** `LUCENE_47`
 
@@ -299,7 +299,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 1. 如果要將停用字檔案新增至分析器組態，可在 `default` 一個具有下列屬性：
 
-   * **名稱：**`stopwords`
+   * **名稱:** `stopwords`
    * **類型：**`nt:file`
 
 #### 透過構成建立分析器 {#creating-analyzers-via-composition}
@@ -308,39 +308,39 @@ select * from [nt:base] where [alias] = '/admin'
 
 以這個節點結構為例：
 
-* **名稱：**`analyzers`
+* **名稱:** `analyzers`
 
-   * **名稱：**`default`
+   * **名稱:** `default`
 
-      * **名稱：**`charFilters`
+      * **名稱:** `charFilters`
       * **類型：**`nt:unstructured`
 
-         * **名稱：**`HTMLStrip`
-         * **名稱：**`Mapping`
+         * **名稱:** `HTMLStrip`
+         * **名稱:** `Mapping`
 
-      * **名稱：**`tokenizer`
+      * **名稱:** `tokenizer`
 
          * **屬性名稱:** `name`
 
             * **類型：**`String`
             * **值:** `Standard`
 
-      * **名稱：**`filters`
+      * **名稱:** `filters`
       * **類型：**`nt:unstructured`
 
-         * **名稱：**`LowerCase`
-         * **名稱：**`Stop`
+         * **名稱:** `LowerCase`
+         * **名稱:** `Stop`
 
             * **屬性名稱:** `words`
 
                * **類型：**`String`
                * **值:** `stop1.txt, stop2.txt`
 
-            * **名稱：**`stop1.txt`
+            * **名稱:** `stop1.txt`
 
                * **類型：**`nt:file`
 
-            * **名稱：**`stop2.txt`
+            * **名稱:** `stop2.txt`
 
                * **類型：**`nt:file`
 

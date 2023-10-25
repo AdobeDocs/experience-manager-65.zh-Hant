@@ -1,8 +1,8 @@
 ---
 title: Adobe分類
 seo-title: Adobe Classifications
-description: 瞭解Adobe分類。
-seo-description: Learn about Adobe Classifications.
+description: 瞭解如何使用Adobe分類，將分類資料匯出至Adobe Analytics。
+seo-description: Learn how to use Adobe Classifications to export classifications data to Adobe Analytics.
 uuid: 57fb59f4-da90-4fe7-a5b1-c3bd51159a16
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,27 +10,27 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
 exl-id: 0e675ce8-ba3b-481d-949e-0c85c97054d2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '609'
 ht-degree: 5%
 
 ---
 
 # Adobe分類{#adobe-classifications}
 
-Adobe分類會將分類資料匯出至 [Adobe Analytics](/help/sites-administering/adobeanalytics.md) 以排程方式進行。 匯出程式是 **com.adobe.cq.scheduled.exporter.Exporter**.
+Adobe分類會將分類資料匯出至 [Adobe Analytics](/help/sites-administering/adobeanalytics.md) 依排程方式。 匯出程式是 **com.adobe.cq.scheduled.exporter.Exporter**.
 
 若要設定此專案：
 
-1. 使用 **導覽**，選取 **工具**， **Cloud Services**，則 **舊版Cloud Services**.
+1. 使用 **導覽**，選取 **工具**， **Cloud Service**，然後 **舊版Cloud Service**.
 1. 捲動至 **Adobe Analytics** 並選取 **顯示設定**.
-1. 按一下 **[+]** Adobe Analytics設定旁的連結。
+1. 按一下 **[+]** 連結至您的Adobe Analytics設定。
 
 1. 在 **建立框架** 對話方塊：
 
    * 指定 **標題**.
-   * 您可選擇指定 **名稱**，適用於將架構詳細資料儲存在存放庫中的節點。
+   * 您可以選擇指定 **名稱**，適用於儲存存放庫中的架構詳細資料的節點。
    * 選取 **Adobe Analytics分類**
 
    然後按一下 **建立**.
@@ -47,12 +47,12 @@ Adobe分類會將分類資料匯出至 [Adobe Analytics](/help/sites-administeri
    |---|---|
    | 已啟用 | 選取 **是** 以啟用「Adobe分類」設定。 |
    | 發生衝突時覆寫 | 選取 **是** 覆寫任何資料衝突。 根據預設，此設定為 **否**. |
-   | 刪除已處理的項目 | 若設為 **是**，會在匯出處理後刪除節點。 預設值為 **False**. |
+   | 刪除已處理的項目 | 如果設為 **是**，會在匯出處理後刪除節點。 預設值為 **假**. |
    | 匯出工作說明 | 輸入「Adobe分類」工作的說明。 |
    | 通知電子郵件 | 輸入Adobe分類通知的電子郵件地址。 |
    | 報表套裝 | 輸入要執行匯入工作的報表套裝。 |
    | 資料集 | 輸入要執行匯入作業的資料集關係ID。 |
-   | 轉換程式 | 從下拉式功能表中，選取轉換器實作。 |
+   | 轉換程式 | 從下拉式功能表中，選取轉換器實施。 |
    | 資料來源 | 導覽至資料容器的路徑。 |
    | 匯出排程 | 選取匯出的排程。 預設為每30分鐘。 |
 
@@ -60,17 +60,17 @@ Adobe分類會將分類資料匯出至 [Adobe Analytics](/help/sites-administeri
 
 ## 修改頁面大小 {#modifying-page-size}
 
-系統會在頁面中處理記錄。 根據預設，「Adobe分類」會建立頁面大小為1000的頁面。
+以頁面處理記錄。 根據預設，「Adobe分類」會建立頁面大小為1000的頁面。
 
-根據Adobe分類中的定義，頁面大小上限可25000，並可從Felix主控台修改。 在匯出期間，「Adobe分類」會鎖定來源節點，以防止同時進行修改。 節點會在匯出後、發生錯誤時或工作階段關閉時解除鎖定。
+根據Adobe分類中的定義，頁面的大小上限可25000為，並可從Felix主控台進行修改。 在匯出期間，「Adobe分類」會鎖定來源節點，以防止同時進行修改。 節點會在匯出後、發生錯誤時或作業階段關閉時解除鎖定。
 
 若要變更頁面大小：
 
-1. 瀏覽至OSGI主控台，網址為 **https://&lt;host>：&lt;port>/system/console/configMgr** 並選取 **AdobeAEM分類匯出程式**.
+1. 導覽至OSGI主控台，網址為 **https://&lt;host>：&lt;port>/system/console/configMgr** 並選取 **AdobeAEM分類匯出工具**.
 
    ![aa-26](assets/aa-26.png)
 
-1. 更新 **匯出頁面大小** 視需要，然後按一下 **儲存**.
+1. 更新 **匯出頁面大小** 視需要而定，然後按一下 **儲存**.
 
 ## SAINTDefaultTransformer {#saintdefaulttransformer}
 
@@ -78,9 +78,9 @@ Adobe分類會將分類資料匯出至 [Adobe Analytics](/help/sites-administeri
 >
 >「Adobe分類」先前稱為「SAINT匯出工具」。
 
-匯出工具可使用轉換器將匯出資料轉換為特定格式。 對於「Adobe分類」，為子介面 `SAINTTransformer<String[]>` 已提供實作轉換器介面。 此介面用於將資料型別限製為 `String[]` 供SAINTAPI使用，並具有標籤介面來尋找可供選取的此類服務。
+匯出工具可使用轉換器將匯出資料轉換為特定格式。 對於「Adobe分類」，為子介面 `SAINTTransformer<String[]>` 提供了實作轉換器介面。 此介面用來限制資料型別 `String[]` 供SAINTAPI使用，並具有標籤介面來尋找要選取的此類服務。
 
-在預設實作SAINTDefaultTransformer中，匯出程式來源的子資源會被視為記錄，而屬性名稱會被視為索引鍵，而屬性值則會被視為值。 此 **金鑰** 欄會自動新增為第一欄 — 其值將是節點名稱。 名稱空間屬性(包含 `:`)會被忽略。
+在預設實作SAINTDefaultTransformer中，匯出程式來源的子項資源會被視為記錄，其屬性名稱為索引鍵，而屬性值為值。 此 **索引鍵** 欄會自動新增為第一欄 — 其值將是節點名稱。 名稱空間屬性(包含 `:`)會被忽略。
 
 *節點結構：*
 
@@ -118,7 +118,7 @@ Adobe分類會將分類資料匯出至 [Adobe Analytics](/help/sites-administeri
   </tr>
   <tr>
    <td>報告套裝</td>
-   <td>執行匯入作業的報表套裝ID。 </td>
+   <td>執行匯入工作的報表套裝ID。 </td>
   </tr>
   <tr>
    <td>資料集</td>
@@ -134,7 +134,7 @@ Adobe分類會將分類資料匯出至 [Adobe Analytics](/help/sites-administeri
   </tr>
   <tr>
    <td>checkdivision</td>
-   <td>用於檢查報表套裝相容性的旗標。 預設為 <strong>true</strong>.</td>
+   <td>用於檢查報表套裝相容性的標幟。 預設為 <strong>true</strong>.</td>
   </tr>
   <tr>
    <td>deleteprocessed</td>
@@ -145,4 +145,4 @@ Adobe分類會將分類資料匯出至 [Adobe Analytics](/help/sites-administeri
 
 ## 自動化Adobe分類匯出 {#automating-adobe-classifications-export}
 
-您可以建立自己的工作流程，讓任何新的匯入都能啟動工作流程，以在中建立適當且結構正確的資料 **/var/export/** 以便將其匯出至「Adobe分類」。
+您可以建立自己的工作流程，如此一來，任何新的匯入專案都會啟動工作流程，以在中建立適當且結構正確的資料 **/var/export/** 以便將其匯出至「Adobe分類」。

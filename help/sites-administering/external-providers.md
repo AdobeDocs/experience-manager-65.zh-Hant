@@ -1,15 +1,15 @@
 ---
 title: Analytics與外部提供者
-description: 瞭解使用外部提供者的Analytics。
+description: 瞭解如何設定您自己的Generic Analytics程式碼片段例項，以定義新的服務設定。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '446'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ _gaq.push(['_trackPageview']);
 
 * 一段時間內有多少訪客
 * 造訪了多少頁面
-* 使用的搜尋字詞
+* 使用的搜尋辭彙
 * 登陸頁面
 
 >[!CAUTION]
@@ -57,23 +57,23 @@ _gaq.push(['_trackPageview']);
 >
 >如果您自己的 `/apps` 不要繼承自預設頁面元件( `/libs/foundation/components/page`)您（或您的開發人員）必須確認 `js` 包含指令碼，例如，透過包含 `cq/cloudserviceconfigs/components/servicescomponents`，或使用類似機制。
 >
->若沒有此專案，任何服務（一般、Analytics、Target等）都無法運作。
+>如果沒有此專案，任何服務（一般、Analytics、Target等）都無法運作。
 
-## 使用通用程式碼片段建立服務 {#creating-a-new-service-with-a-generic-snippet}
+## 使用一般程式碼片段建立服務 {#creating-a-new-service-with-a-generic-snippet}
 
 對於基本設定：
 
 1. 開啟 **工具** 主控台。
-1. 從左窗格，展開 **Cloud Services設定**.
+1. 從左窗格，展開 **Cloud Service設定**.
 1. 按兩下 **一般Analytics程式碼片段** 若要開啟頁面：
 
    ![一般Analytics程式碼片段](assets/analytics_genericoverview.png)
 
-1. 按一下+即可使用對話方塊新增設定。 至少要指定一個名稱，例如Google Analytics：
+1. 按一下+即可使用對話方塊新增組態。 至少要指定一個名稱，例如Google Analytics：
 
    ![建立設定](assets/analytics_addconfig.png)
 
-1. 按一下 **建立**，會立即開啟程式碼片段對話方塊 — 將適當的JavaScript程式碼片段貼入欄位：
+1. 按一下 **建立**，程式碼片段對話方塊會立即開啟 — 將適當的JavaScript程式碼片段貼入欄位：
 
    ![編輯元件](assets/analytics_snippet.png)
 
@@ -81,25 +81,25 @@ _gaq.push(['_trackPageview']);
 
 ## 在頁面上使用您的新服務 {#using-your-new-service-on-pages}
 
-建立服務組態後，您現在必須設定必要的頁面才能使用它：
+建立服務組態之後，您現在必須設定必要的頁面才能使用它：
 
 1. 導覽至頁面。
-1. 開啟 **頁面屬性** 從sidekick，然後 **Cloud Services** 標籤。
+1. 開啟 **頁面屬性** 從sidekick，然後 **Cloud Service** 標籤。
 1. 按一下 **新增服務**，然後選取所需的服務。 例如， **一般Analytics程式碼片段**：
 
    ![新增雲端服務](assets/analytics_selectservice.png)
 
 1. 按一下 **確定** 以儲存。
-1. 您會返回 **Cloud Services** 標籤。 此 **一般Analytics程式碼片段** 現在會與訊息一併列出 `Configuration reference missing`. 使用下拉式清單來選取您的特定服務執行個體。 例如，google-analytics：
+1. 您將返回 **Cloud Service** 標籤。 此 **一般Analytics程式碼片段** 現在會與訊息一併列出 `Configuration reference missing`. 使用下拉式清單來選取您的特定服務執行個體。 例如，google-analytics：
 
-   ![新增雲端服務設定](assets/analytics_selectspecificservice.png)
+   ![正在新增雲端服務設定](assets/analytics_selectspecificservice.png)
 
 1. 按一下 **確定** 以儲存。
 
-   如果您檢視頁面的「頁面來源」，現在可以看到程式碼片段。
+   現在如果您檢視頁面的頁面來源，就可以看到程式碼片段。
 
    經過一段時間後，您可以檢視收集的統計資料。
 
    >[!NOTE]
    >
-   >如果設定附加至具有子頁面的頁面，則服務也會被這些頁面繼承。
+   >如果設定附加至具有子頁面的頁面，則這些頁面也會繼承服務。
