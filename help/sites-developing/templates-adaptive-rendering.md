@@ -1,14 +1,14 @@
 ---
 title: 最適化範本演算
-description: 最適化範本演算
+description: 瞭解Adobe Experience Manager中的調適型範本演算。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 58cac3b1-b7cd-44b2-b89b-f5ee8811c198
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '486'
 ht-degree: 1%
 
 ---
@@ -19,26 +19,26 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-範本是圍繞回應式格線建立的，根據這些範本建立的頁面會完全回應，並自動調整為使用者端裝置的檢視區。 作者可以使用頁面編輯器中的模擬器工具列，將版面鎖定在特定裝置。
+範本是圍繞回應式格線建立，根據這些範本建立的頁面會完全回應式，並自動調整至使用者端裝置的檢視區。 作者可使用頁面編輯器中的模擬器工具列，將配置鎖定在特定裝置。
 
-也可以設定範本以支援最適化轉譯。 若裝置群組已正確設定，則在模擬器模式下選取裝置時，頁面會以URL中的不同選取器呈現。 使用選取器，您可以透過URL直接呼叫特定頁面呈現。
+也可以設定範本以支援最適化轉譯。 若裝置群組已正確設定，則在模擬器模式下選取裝置時，頁面會以URL中的不同選取器呈現。 使用選取器，可以透過URL直接呼叫特定頁面呈現。
 
 設定裝置群組時請記住：
 
 * 每個裝置至少必須位於一個裝置群組中。
 * 一個裝置可以位於多個裝置群組中。
 * 由於裝置可以位於多個裝置群組中，因此可組合選取器。
-* 系統會自上而下評估選取器組合，因為會將其保留在存放庫中。
+* 系統會從上到下評估選取器組合，因為系統會將它們儲存在存放庫中。
 
 >[!NOTE]
 >
->裝置群組**回應式裝置永遠沒有選擇器，因為系統假設被識別為支援回應式設計的裝置不需要最適化配置
+>裝置群組**回應式裝置永遠沒有選擇器，因為系統假設被辨識為支援回應式設計的裝置不需要最適化配置
 
 ## 設定 {#configuration}
 
 最適化演算選擇器可針對現有裝置群組進行設定，或設定為 [您自己建立的群組。](/help/sites-developing/mobile.md#device-groups)
 
-在此範例中，您即將設定現有的裝置群組 **智慧型手機** 將最適化轉譯選擇器作為 **體驗頁面** We.Retail中的範本。
+在此範例中，您即將設定現有的裝置群組 **智慧型手機** 將最適化演算選擇器作為 **體驗頁面** We.Retail中的範本。
 
 1. 編輯中需要最適化選擇器的裝置群組 `http://localhost:4502/miscadmin#/etc/mobile/groups`
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
-1. 使用CRXDE Lite，將裝置群組新增至多值字串屬性，以便用於範本 `cq:deviceGroups` 範本的結構。
+1. 使用CRXDE Lite，將裝置群組新增至多值字串屬性，以在範本上使用該裝置群組 `cq:deviceGroups` 在範本的結構上。
 
    `/conf/<your-site>/settings/wcm/templates/<your-template>/structure/jcr:content`
 
@@ -60,7 +60,7 @@ ht-degree: 1%
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. 使用CRXDE Lite，將裝置群組新增至多值字串屬性，讓該裝置群組可在您的網站上使用 `cq:deviceGroups` 您的網站結構。
+1. 使用CRXDE Lite，將裝置群組新增至多值字串屬性，以在您的網站上使用該裝置群組 `cq:deviceGroups` 您的網站結構。
 
    `/content/<your-site>/jcr:content`
 
@@ -70,9 +70,9 @@ ht-degree: 1%
 
    ![chlimage_1-160](assets/chlimage_1-160.png)
 
-現在使用 [模擬器](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) (例如： [修改版面](/help/sites-authoring/responsive-layout.md))且選擇已設定裝置群組的裝置時，頁面會以選取器呈現為URL的一部分。
+現在使用 [模擬器](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) (例如： [修改版面](/help/sites-authoring/responsive-layout.md))且您選擇已設定裝置群組的裝置，頁面會以URL中的選取器呈現。
 
-在此範例中，當根據以下範例編輯頁面時： **體驗頁面** 範本，並在模擬器中選擇iPhone 4，則會呈現包含選取器的頁面，如下所示 `arctic-surfing-in-lofoten.smart.html` 而非 `arctic-surfing-in-lofoten.html`
+在此範例中，根據以下範例編輯頁面時： **體驗頁面** 範本，並在模擬器中選擇iPhone 4，則會呈現包含選取器的頁面，如下所示 `arctic-surfing-in-lofoten.smart.html` 而非 `arctic-surfing-in-lofoten.html`
 
 也可以使用此選取器直接呼叫頁面。
 

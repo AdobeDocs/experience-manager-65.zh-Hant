@@ -1,7 +1,7 @@
 ---
 title: 設定電子郵件通知
 seo-title: Configuring Email Notification
-description: 瞭解如何在AEM中設定電子郵件通知。
+description: 瞭解如何在Adobe Experience Manager中設定電子郵件通知。
 seo-description: Learn how to configure Email Notification in AEM.
 uuid: 6cbdc312-860b-4a69-8bbe-2feb32204a27
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2071'
 ht-degree: 12%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 12%
 
 # 設定電子郵件通知{#configuring-email-notification}
 
-AEM傳送電子郵件通知給使用者：
+AEM傳送電子郵件通知給使用者，符合以下條件：
 
 * 已訂閱頁面事件，例如修改或復寫。 此 [通知收件匣](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) 一節說明如何訂閱這類事件。
 
-* 已訂閱論壇事件。
+* 已訂閱論壇活動。
 * 必須在工作流程中執行步驟。 此 [參與者步驟](/help/sites-developing/workflows-step-ref.md#participant-step) 一節說明如何在工作流程中觸發電子郵件通知。
 
 先決條件：
@@ -32,7 +32,7 @@ AEM傳送電子郵件通知給使用者：
 * 使用者需要在其設定檔中定義有效的電子郵件地址。
 * 此 **Day CQ郵件服務** 需要正確設定。
 
-當使用者收到通知時，他將會收到在其設定檔中定義的語言電子郵件。 每種語言都有各自的範本可供自訂。 可以為新語言新增新的電子郵件範本。
+當使用者收到通知時，他將會收到在其設定檔中定義之語言的電子郵件。 每種語言都有各自的範本可供自訂。 可以為新語言新增新的電子郵件範本。
 
 >[!NOTE]
 >
@@ -40,26 +40,26 @@ AEM傳送電子郵件通知給使用者：
 
 ## 設定郵件服務 {#configuring-the-mail-service}
 
-為了讓AEM能夠傳送電子郵件， **Day CQ郵件服務** 需要正確設定。 您可以在Web主控台中檢視設定。 使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
+為了讓AEM能夠傳送電子郵件， **Day CQ郵件服務** 需要正確設定。 您可以在Web主控台中檢視組態。 使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
 
 下列限制適用：
 
-* 此 **SMTP伺服器連線埠** 「 」必須為25或更高。
+* 此 **SMTP伺服器連線埠** 必須為25或更高。
 
 * 此 **smtp伺服器主機名稱** 不得為空白。
 * 此 **「寄件者」地址** 不得為空白。
 
-為協助您對問題進行偵錯 **Day CQ郵件服務**，您可以檢視服務的記錄：
+為協助您針對相關問題進行偵錯 **Day CQ郵件服務**，您可以觀看服務的記錄：
 
 `com.day.cq.mailer.DefaultMailService`
 
-在Web主控台中，設定如下所示：
+在Web主控台中的設定如下所示：
 
 ![Day CQ Mail Service OSGi設定視窗](assets/chlimage_1-276.png)
 
 ## 設定電子郵件通知通道 {#configuring-the-email-notification-channel}
 
-當您訂閱頁面或論壇事件通知時，寄件者電子郵件地址會設為 `no-reply@acme.com` 根據預設。 您可以透過設定 **通知電子郵件頻道** Web控制檯中的服務。
+當您訂閱頁面或論壇事件通知時，寄件者電子郵件地址會設為 `no-reply@acme.com` 根據預設。 您可透過設定 **通知電子郵件頻道** Web控制檯中的服務。
 
 若要設定寄件者電子郵件地址，請新增 `sling:OsgiConfig` 節點至存放庫。 使用以下程式，透過CRXDE Lite直接新增節點：
 
@@ -68,11 +68,11 @@ AEM傳送電子郵件通知給使用者：
 
    `com.day.cq.wcm.notification.email.impl.EmailChannel` 型別 `sling:OsgiConfig`
 
-1. 新增 `String` 屬性至名為的節點 `email.from`. 對於值，指定您要使用的電子郵件地址。
+1. 新增 `String` 屬性至指定的節點 `email.from`. 針對值，指定您要使用的電子郵件地址。
 
-1. 按一下 **全部儲存**.
+1. 按一下&#x200B;**「儲存全部」**。
 
-使用以下程式來定義內容套件來源資料夾中的節點：
+請使用下列程式來定義內容封裝來源資料夾中的節點：
 
 1. 在您的 `jcr_root/apps/*app_name*/config folder`，建立名為的檔案 `com.day.cq.wcm.notification.email.impl.EmailChannel.xml`
 
@@ -85,7 +85,7 @@ AEM傳送電子郵件通知給使用者：
 
 ## 設定工作流程電子郵件通知服務 {#configuring-the-workflow-email-notification-service}
 
-當您收到工作流程電子郵件通知時，寄件者電子郵件地址和主機URL首碼都會設為預設值。 您可以透過設定 **Day CQ工作流程電子郵件通知服務** 在Web主控台中。 若您這麼做，建議您將變更保留在存放庫中。
+當您收到工作流程電子郵件通知時，寄件者電子郵件地址和主機URL首碼都會設定為預設值。 您可以透過設定 **Day CQ工作流程電子郵件通知服務** 在Web主控台中。 如果這樣做，建議將變更保留在存放庫中。
 
 在Web主控台中，預設設定如下所示：
 
@@ -142,8 +142,8 @@ This is an automatically generated message. Please do not reply.
 
 * `${userFullName}`，觸發事件的使用者全名。
 
-* `${userId}`，觸發事件的使用者的ID。
-* `${modifications}`，說明頁面事件的型別和格式的頁面路徑：
+* `${userId}`，觸發事件的使用者ID。
+* `${modifications}`，說明頁面事件的型別和頁面路徑，格式為：
 
   &lt;page event=&quot;&quot; type=&quot;&quot;> => &lt;page path=&quot;&quot;>
 
@@ -200,11 +200,11 @@ subject=<text_1>
 
 >[!NOTE]
 >
->位置 `<text_x>` 可以是靜態文字和動態字串變數的組合。 每行 `<text_x>` 專案必須以反斜線( `\`)，但最後一個例項除外，因為缺少反斜線代表 `<text_x>` 字串變數。
+>位置 `<text_x>` 可以是靜態文字和動態字串變數的組合。 每行 `<text_x>` 專案必須以反斜線( `\`)，但最後一個例項除外，當缺少反斜線表示 `<text_x>` 字串變數。
 >
->有關範本格式的更多資訊，請參閱 [Properties.load()的javadocs](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) 方法。
+>關於範本格式的更多資訊可在以下連結中找到： [Properties.load()的javadocs](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) 方法。
 
-方法 `${payload.path.open}` 顯示工作專案裝載的路徑。 例如，若為Sites中的頁面，則 `payload.path.open` 會類似於 `/bin/wcmcommand?cmd=open&path=…`.；這沒有伺服器名稱，因此範本會在前面加上 `${host.prefix}`.
+方法 `${payload.path.open}` 顯示工作專案裝載的路徑。 例如，如果是Sites中的頁面，則 `payload.path.open` 會類似於 `/bin/wcmcommand?cmd=open&path=…`.；這沒有伺服器名稱，因此範本會在前面加上 `${host.prefix}`.
 
 下列變數可用於電子郵件範本中：
 
@@ -217,10 +217,10 @@ subject=<text_1>
 
 * `${initiator.email}`，發起人的電子郵件地址
 * `${item.id}`，工作專案的id
-* `${item.node.id}`，此工作專案相關之工作流程模型中的節點id
+* `${item.node.id}`，與此工作專案相關聯之工作流程模型中的節點的id
 * `${item.node.title}`，工作專案的標題
 * `${participant.email}`，參與者的電子郵件地址
-* `${participant.name}`，參與者名稱
+* `${participant.name}`，參與者姓名
 * `${participant.familyName}`，參與者的姓氏
 * `${participant.id}`，參與者的id
 * `${participant.language}`，參與者語言
@@ -238,7 +238,7 @@ subject=<text_1>
 
 ### 新增新語言的電子郵件範本 {#adding-an-email-template-for-a-new-language}
 
-若要新增新語言的範本：
+新增新語言的範本：
 
 1. 在CRXDE中，新增檔案 `<language-code>.txt` 下：
 
@@ -250,11 +250,11 @@ subject=<text_1>
 
 >[!NOTE]
 >
->此 `<language-code>` 用作電子郵件範本的檔案名稱時，必須使用AEM可辨識的雙字母小寫語言代碼。 對於語言代碼，AEM依賴ISO-639-1。
+>此 `<language-code>` 電子郵件範本的檔案名稱必須是AEM可辨識的雙字母小寫語言代碼。 對於語言程式碼，AEM依賴ISO-639-1。
 
 ## 設定AEM Assets電子郵件通知 {#assetsconfig}
 
-共用或取消共用AEM Assets中的集合時，使用者可以收到來自AEM的電子郵件通知。 若要設定電子郵件通知，請遵循下列步驟。
+共用或取消共用AEM Assets中的集合時，使用者可以接收來自AEM的電子郵件通知。 若要設定電子郵件通知，請依照下列步驟執行。
 
 1. 設定電子郵件服務，如上所述 [設定郵件服務](/help/sites-administering/notification.md#configuring-the-mail-service).
 1. 以管理員身分登入AEM。 按一下 **工具** >  **作業** >  **網頁主控台** 以開啟Web主控台組態。
@@ -273,7 +273,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 ### Gmail {#gmail}
 
 1. 建立您的專案於 `https://console.developers.google.com/projectcreate`
-1. 選取您的專案，然後前往 **API和服務** - **儀表板 — 認證**
+1. 選取您的專案，然後前往 **API與服務** - **控制面板 — 認證**
 1. 根據您的要求設定OAuth同意畫面
 1. 在隨後的「更新畫面」中，新增這兩個範圍：
    * `https://mail.google.com/`
@@ -286,7 +286,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 
 >[!NOTE]
 >
->Adobe Managed Service客戶可與客戶服務工程師合作，對生產環境進行這些變更。
+>「Adobe受管服務」客戶可與他們的客戶服務工程師合作，對生產環境進行這些變更。
 
 首先，設定郵件服務：
 
@@ -296,7 +296,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
    * SMTP 伺服器主機名稱: `smtp.gmail.com`
    * SMTP伺服器連線埠： `25` 或 `587`，視需求而定
    * 勾選勾選方塊 **SMPT使用StarTLS** 和 **SMTP需要StarTLS**
-   * Check **OAuth流程** 並按一下 **儲存**.
+   * 檢查 **OAuth流程** 並按一下 **儲存**.
 
 接下來，請依照下列程式設定您的SMTP OAuth提供者：
 
@@ -305,21 +305,21 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 1. 請依照以下說明填寫必要資訊：
    * 授權URL： `https://accounts.google.com/o/oauth2/auth`
    * 權杖URL： `https://accounts.google.com/o/oauth2/token`
-   * 範圍： `https://www.googleapis.com/auth/gmail.send` 和 `https://mail.google.com/`. 您可以按下 **+** 按鈕來設定每個已設定範圍的右側。
-   * 使用者端ID和使用者端密碼：依照上段所述，以您擷取的值來設定這些欄位。
+   * 範圍： `https://www.googleapis.com/auth/gmail.send` 和 `https://mail.google.com/`. 您可以按下 **+** 按鈕位於每個已設定範圍的右側。
+   * 使用者端ID和使用者端密碼：使用您擷取的值（如上段所述）設定這些欄位。
    * 重新整理記號 URL: `https://accounts.google.com/o/oauth2/token`
    * 重新整理Token到期日：永不
 1. 按一下「**儲存**」。
 
 <!-- clarify refresh token expiry, currently not present in the UI -->
 
-設定完成後，設定應如下所示：
+設定完成後，設定應該如下所示：
 
-![CQ Mailer SMTP Oauth2 Provider設定視窗](assets/oauth-smtpprov2.png)
+![CQ Mailer SMTP Oauth2提供者設定視窗](assets/oauth-smtpprov2.png)
 
 現在啟動OAuth元件。 您可以透過以下方式進行：
 
-1. 請造訪此URL前往「元件主控台」： `http://serveraddress:serverport/system/console/components`
+1. 請造訪此URL，前往「元件主控台」： `http://serveraddress:serverport/system/console/components`
 1. 尋找下列元件
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeGenerateServlet`
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
@@ -330,8 +330,8 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 最後，透過以下方式確認設定：
 
 1. 前往發佈執行個體的位址，並以管理員身分登入。
-1. 在瀏覽器中開啟新標籤，然後前往 `http://serveraddress:serverport/services/mailer/oauth2/authorize`. 這會將您重新導向至SMTP提供者的頁面，在此案例中為Gmail。
-1. 登入並同意授予必要許可權
+1. 在瀏覽器中開啟新標籤，並前往 `http://serveraddress:serverport/services/mailer/oauth2/authorize`. 這會將您重新導向至SMTP提供者的頁面，在此案例中是Gmail。
+1. 登入並同意提供必要許可權
 1. 在同意後，權杖將會儲存在存放庫中。 您可以在下列位置存取它： `accessToken` 直接存取發佈執行個體上的此URL： `http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
 1. 對每個發佈執行個體重複上述步驟
 
@@ -354,7 +354,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
    * `Mail.Send`
    * `openid`
    * `offline_access`
-1. 前往 **驗證** - **新增平台** - **Web**，以及 **重新導向Url** 區段，新增下列URL以重新導向OAuth程式碼，然後按下 **設定**：
+1. 前往 **驗證** - **新增平台** - **Web**，以及 **重新導向Url** 區段，新增下列URL以重新導向OAuth程式碼，然後按 **設定**：
    * `http://localhost:4503/services/mailer/oauth2/token`
 1. 對每個發佈執行個體重複上述步驟
 1. 根據您的需求進行設定
@@ -377,14 +377,14 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 1. 尋找並按一下 **Day CQ郵件服務**
 1. 新增下列設定：
    * SMTP 伺服器主機名稱: `smtp.office365.com`
-   * SMTP使用者：您的電子郵件格式使用者名稱
+   * SMTP使用者：您的使用者名稱（電子郵件格式）
    * 「寄件者」地址：郵件程式所傳送訊息的「寄件者：」欄位中使用的電子郵件地址
    * SMTP伺服器連線埠： `25` 或 `587` 視需求而定
    * 勾選勾選方塊 **SMPT使用StarTLS** 和 **SMTP需要StarTLS**
-   * Check **OAuth流程** 並按一下 **儲存**.
+   * 檢查 **OAuth流程** 並按一下 **儲存**.
 1. 尋找，然後按一下 **CQ郵件程式SMTP OAuth2提供者**
 1. 請依照以下說明填寫必要資訊：
-   * 填寫「授權URL」、「權杖URL」和「重新整理權杖URL」，方法為依照下列說明建構它們： [此程式的結尾](#microsoft-outlook)
+   * 填入授權URL、權杖URL和重新整理權杖URL，方法為依照以下說明建構它們： [此程式的結尾](#microsoft-outlook)
    * 使用者端ID和使用者端密碼：使用上述擷取的值來設定這些欄位。
    * 將以下範圍新增到設定中：
       * openid
@@ -396,13 +396,13 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
    * 重新整理記號URL：這應該與上述記號URL的值相同
 1. 按一下「**儲存**」。
 
-設定完成後，設定應如下所示：
+設定完成後，設定應該如下所示：
 
-![已完成的CQ Mailer SMTP OAuth2設定](assets/oauth-outlook-smptconfig.png)
+![完成的CQ Mailer SMTP OAuth2設定](assets/oauth-outlook-smptconfig.png)
 
 現在啟動OAuth元件。 您可以透過以下方式進行：
 
-1. 請造訪此URL前往「元件主控台」： `http://serveraddress:serverport/system/console/components`
+1. 請造訪此URL，前往「元件主控台」： `http://serveraddress:serverport/system/console/components`
 1. 尋找下列元件
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeGenerateServlet`
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
@@ -413,6 +413,6 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 最後，透過以下方式確認設定：
 
 1. 前往發佈執行個體的位址，並以管理員身分登入。
-1. 在瀏覽器中開啟新標籤，然後前往 `http://serveraddress:serverport/services/mailer/oauth2/authorize`. 這會將您重新導向至SMTP提供者的頁面，在此例中是Outlook。
-1. 登入並同意授予必要許可權
+1. 在瀏覽器中開啟新標籤，並前往 `http://serveraddress:serverport/services/mailer/oauth2/authorize`. 這會將您重新導向至SMTP提供者的頁面，在此案例中是Outlook。
+1. 登入並同意提供必要許可權
 1. 在同意後，權杖將會儲存在存放庫中。 您可以在下列位置存取它： `accessToken` 直接存取發佈執行個體上的此URL： `http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
