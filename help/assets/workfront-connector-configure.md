@@ -5,9 +5,9 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: a07765f95f01f05a30dce14138f75e7edbe94ae2
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1740'
 ht-degree: 1%
 
 ---
@@ -77,6 +77,7 @@ Workfront專案與AEM資料夾之間的中繼資料對應是在AEM資料夾中�
 
 若要設定對應，請遵循下列步驟：
 
+1. 新增 `jcr:read` 許可權： `/conf/global/settings/dam/adminui-extension/foldermetadataschema` 的 `wf-workfront-users` 群組。
 1. 瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 資料夾中繼資料結構]**.
 1. 選取您要編輯的資料夾中繼資料結構表單，然後按一下編輯。
 1. 選取您要編輯的資料夾中繼資料結構表單欄位，然後在右側面板上選取設定索引標籤。
