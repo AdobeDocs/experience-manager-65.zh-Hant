@@ -1,19 +1,15 @@
 ---
 title: 使用CRX2Oak移轉工具
-seo-title: Using the CRX2Oak Migration Tool
-description: 瞭解如何搭配AEM使用CRX2Oak移轉工具。
-seo-description: Learn how to use the CRX2Oak migration tool.
-uuid: 9b788981-4ef0-446e-81f0-c327cdd3214b
+description: 瞭解如何將CRX2Oak移轉工具與Adobe Experience Manager搭配使用。 此工具旨在協助您在不同的存放庫之間移轉資料。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
-discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
 feature: Upgrading
 exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: ee1134be6ad81cc6638ee9004f7dad475a6cc67d
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -31,7 +27,7 @@ CRX2Oak工具專為在不同存放庫之間移轉資料所設計。
 
 >[!NOTE]
 >
->有關Apache Oak和AEM永續性的重要概念的詳細資訊，請參閱 [AEM平台簡介](/help/sites-deploying/platform.md).
+>如需Apache Oak和Adobe Experience Manager (AEM)持續性的重要概念的詳細資訊，請參閱 [AEM平台簡介](/help/sites-deploying/platform.md).
 
 ## 移轉使用案例 {#migration-use-cases}
 
@@ -51,7 +47,7 @@ CRX2Oak工具專為在不同存放庫之間移轉資料所設計。
 
 CRX2Oak在AEM升級期間以使用者可以指定預先定義的移轉設定檔的方式來呼叫，以自動重新設定持續性模式。 這稱為快速入門模式。
 
-它也可以單獨執行，以備需要更多自訂時使用。 不過，請注意，在此模式中，僅會變更存放庫，而且需要手動執行任何額外的AEM重新配置。 這稱為獨立模式。
+它也可以單獨執行，以備需要更多自訂時使用。 不過，在此模式中，僅會對存放庫進行變更，而且必須手動執行AEM的任何其他重新配置。 這稱為獨立模式。
 
 另外請注意，使用獨立模式中的預設設定，只會移轉節點存放區，而新的存放庫會重複使用舊的二進位存放區。
 
@@ -59,7 +55,7 @@ CRX2Oak在AEM升級期間以使用者可以指定預先定義的移轉設定檔�
 
 自AEM 6.3起，CRX2Oak就能夠處理使用者定義的移轉設定檔，這些設定檔可配置所有可用的移轉選項。 這樣可擁有更高的彈性和自動設定AEM的能力，而如果您在獨立模式下使用工具，則無法使用這些功能。
 
-為了將CRX2Oak切換為快速啟動模式，您需要透過此作業系統環境變數在AEM安裝目錄中定義crx-quickstart資料夾的路徑：
+若要將CRX2Oak切換為quickstart模式，請透過此作業系統環境變數在AEM安裝目錄中定義crx-quickstart資料夾的路徑：
 
 **對於基於UNIX的系統和macOS：**
 
@@ -79,7 +75,7 @@ SET "SLING_HOME=/path/to/crx-quickstart"
 
 #### 可自訂的升級邏輯 {#customizable-upgrade-logic}
 
-自訂Java邏輯也可以使用來實作 `CommitHooks`. 自訂 `RepositoryInitializer` 可以實作類別，以便使用自訂值初始化存放庫。
+自訂Java™邏輯可使用 `CommitHooks`. 自訂 `RepositoryInitializer` 類別可以實作以使用自訂值初始化存放庫。
 
 #### 支援記憶體對應作業 {#support-for-memory-mapped-operations}
 
@@ -97,15 +93,15 @@ SET "SLING_HOME=/path/to/crx-quickstart"
 
 #### 路徑合併 {#path-merging}
 
-如需在兩個存放庫之間複製資料，且您的內容路徑在兩個執行個體上不同，您可以在下列位置定義資料： `--merge-path` 引數。 一旦完成，CRX2Oak只會將新節點複製到目的地存放庫，並保留舊節點。
+如果資料必須在兩個存放庫之間複製，且您的內容路徑在兩個執行個體上不同，則您可以在以下專案中定義該資料： `--merge-path` 引數。 若您這麼做，CRX2Oak只會將新節點複製到目的地存放庫，並保持舊節點不變。
 
 ![chlimage_1-152](assets/chlimage_1-152.png)
 
 #### 版本支援 {#version-support}
 
-依預設，AEM會為每個要修改的節點或頁面建立一個版本，並將其儲存在存放庫中。 然後可以使用版本將頁面還原成先前的狀態。
+依預設，AEM會為每個要修改的節點或頁面建立版本，並將其儲存在存放庫中。 然後可以使用版本將頁面還原成先前的狀態。
 
-不過，即使刪除原始頁面，系統也不會清除這些版本。 處理已運作很久的存放庫時，移轉可能需要處理大量由孤立版本造成的備援資料。
+不過，即使刪除原始頁面，系統也不會清除這些版本。 處理已運作很久的存放庫時，移轉可能會重新處理孤立版本所導致的冗餘資料。
 
 對於這些型別的情況，有用的功能是新增 `--copy-versions` 引數。 它可用來在移轉期間略過版本節點或複製存放庫。
 
@@ -136,7 +132,7 @@ CRX2Oak的開放原始碼版本以Oak-upgrade的形式提供。 支援所有功�
 
 * `--src-user:` 來源RDB的使用者
 
-* `--user`：目標RDB的使用者
+* `--user`：目標RDB
 
 * `--password`：目標RDB的密碼。
 
@@ -146,11 +142,11 @@ CRX2Oak的開放原始碼版本以Oak-upgrade的形式提供。 支援所有功�
 * `--fail-on-error`：如果無法從來源存放庫讀取節點，則強制移轉失敗。
 * `--ldap`：將LDAP使用者從CQ 5.x執行個體移轉至Oak型執行個體。 為了使其運作，Oak設定中的身分提供者必須命名為ldap。 如需詳細資訊，請參閱 [LDAP檔案](/help/sites-administering/ldap-config.md).
 
-* `--ldap-config:` 請將此與 `--ldap` 使用多個LDAP伺服器進行驗證的CQ 5.x存放庫引數。 您可以使用它指向CQ 5.x `ldap_login.conf` 或 `jaas.conf` 組態檔。 格式為 `--ldapconfig=path/to/ldap_login.conf`.
+* `--ldap-config:` 將此用於 `--ldap` 使用多個LDAP伺服器進行驗證的CQ 5.x存放庫引數。 您可以使用它指向CQ 5.x `ldap_login.conf` 或 `jaas.conf` 組態檔。 格式為 `--ldapconfig=path/to/ldap_login.conf`.
 
 ### 版本存放區選項 {#version-store-options}
 
-* `--copy-orphaned-versions`：略過複製孤立版本。 支援的引數包括： `true`， `false` 和 `yyyy-mm-dd`. 預設為 `true`.
+* `--copy-orphaned-versions`：略過複製孤立版本。 支援的引數包括： `true`， `false`、和 `yyyy-mm-dd`. 預設為 `true`.
 
 * `--copy-versions:` 復製版本儲存體。 引數： `true`， `false`， `yyyy-mm-dd`. 預設為 `true`.
 
@@ -200,7 +196,7 @@ CRX2Oak的開放原始碼版本以Oak-upgrade的形式提供。 支援所有功�
   </tr>
   <tr>
    <td>獨立模式</td>
-   <td><p>新增 <strong>—trace</strong> CRX2Oak命令列的選項，以在標準輸出上顯示TRACE事件（您需要使用重新導向字元來重新導向記錄本身：'&gt;'或'tee'命令以供稍後檢查）。</p> </td>
+   <td><p>新增 <strong>—trace</strong> 選項至CRX2Oak命令列，以便在標準輸出上顯示TRACE事件（您必須使用重新導向字元： '&gt;'或'tee'命令自行重新導向記錄，以供稍後檢查）。</p> </td>
   </tr>
  </tbody>
 </table>
