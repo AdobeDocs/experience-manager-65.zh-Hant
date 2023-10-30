@@ -1,7 +1,6 @@
 ---
-title: 元件與服務Java ApiqUick啟動(SOAP)
-seo-title: Components and Services Java APIQuick Start(SOAP)
-description: 元件與服務Java ApiqUick啟動(SOAP)
+title: 元件和服務Java API快速啟動(SOAP)
+description: 使用Java API快速入門(SOAP)以程式設計方式操控AEM Forms元件和服務。
 uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 role: Developer
 exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
@@ -43,11 +42,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->「使用AEM表單進行程式設計」中的快速入門，是以部署在JBoss和Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統（例如Unix），請以適用作業系統支援的路徑來取代視窗特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM表單進行程式設計中的快速入門，是以部署在JBoss和Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統（例如Unix），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 >[!NOTE]
 >
->如果您有自訂元件，且使用SOAP或EJB通訊協定來叫用相同本機伺服器上的DSC，而這些叫用會在升級後停止運作，則使用VM內叫用策略。 使用具有預設ServiceClientFactory的in-VM DSC呼叫方法，且不要使用SOAP或EJB通訊協定建構ServiceClientFactory。
+>如果您有自訂元件，且使用SOAP或EJB通訊協定來叫用相同本機伺服器上的DSC，且這些叫用會在升級後停止運作，則使用VM內叫用策略。 使用具有預設ServiceClientFactory的in-VM DSC呼叫方法，且不要使用SOAP或EJB通訊協定來建構ServiceClientFactory。
 
 ## 快速入門（SOAP模式）：使用Java API部署元件 {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
@@ -153,7 +152,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API設定服務的執行內容 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
 
-以下Java程式碼範例將Run-As Invoker執行內容設定為名為的範例服務 *EncryDocument*.
+以下Java程式碼範例將執行身分呼叫器執行內容設定為名為的範例服務 *Encryptdocument*.
 
 ```java
  /* 
@@ -245,7 +244,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API停用服務安全性 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
 
-以下Java程式碼範例會停用範例EncryptDocument服務以及在此服務中叫用的服務（設定值和加密服務）的安全性。
+以下Java程式碼範例會停用範例EncryptDocument服務以及從此服務內叫用的服務（設定值和加密服務）的安全性。
 
 ```java
  /* 
@@ -416,7 +415,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API修改服務設定值 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
-以下Java範例會修改屬於SendEmail Service的設定值。
+以下Java範例會修改屬於SendEmail服務的設定值。
 
 ```java
  /* 

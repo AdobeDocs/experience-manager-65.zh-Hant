@@ -1,8 +1,6 @@
 ---
 title: 正在設定檔案型別設定
-seo-title: Configuring file type settings
-description: 瞭解如何設定檔案型別設定。
-seo-description: Learn how to configure file type settings.
+description: 瞭解如何設定檔案型別設定。 在PDF Generator中，您可以為支援的檔案型別設定應用程式設定，以配置檔案型別設定。
 uuid: ab037659-c6ff-4de9-9417-f5a6fc8122cb
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +8,9 @@ content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 feature: PDF Generator
 exl-id: 1a6640cc-22ef-41d5-a0c6-7a2c2dabcef1
-source-git-commit: 5f4bbad87768cf6bd73771f9eac6e01ab3bf3309
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '6158'
+source-wordcount: '6177'
 ht-degree: 0%
 
 ---
@@ -253,7 +251,7 @@ PDF Generator支援縮小PDF檔案大小的功能。 是否使用這些設定或
 
    * 如有必要，請從 **字型來源** 下拉式功能表。 此下拉式功能表會列出中指定的字型目錄。 **首頁>設定>核心系統>核心設定**.
    * 從「 」中選取一個或多個字型 **可用的字型** 清單並按一下 **新增**. 這些字型會新增至 **要取消嵌入的字型** 清單。
-   * 如果要取消嵌入表單伺服器上不存在的某些字型，請在 **新增字型以取消嵌入** 方塊。 按一下 **新增**.
+   * 如果要取消嵌入表單伺服器上不存在的某些字型，請在 **新增字型以取消嵌入** 方塊。 按一下&#x200B;**「新增」**。
 
    >[!NOTE]
    >

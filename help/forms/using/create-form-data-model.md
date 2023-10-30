@@ -1,17 +1,15 @@
 ---
 title: 「教學課程：建立表單資料模型」
-seo-title: Create Form Data Model Tutorial
-description: 建立表單資料模型
-seo-description: Create form data model
+description: 設定MySQL作為資料來源、建立表單資料模型(FDM)、進行設定，以及測試AEM Forms。
 uuid: b9d2bb1b-90f0-44f4-b1e3-0603cdf5f5b8
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1524'
 ht-degree: 1%
 
 ---
@@ -66,7 +64,7 @@ AEM [!DNL Forms] 資料整合模組可讓您從不同的後端資料來源(例�
 
 1. 將資料庫配置為 [!DNL MySQL] 資料來源：
 
-   1. 前往位於 https://localhost:4502/system/console/configMgr AEM [ ](https://localhost:4502/system/console/configMgr) Web 主控台。
+   1. 前往位於 HTTPs://localhost:4502/system/console/configMgr AEM [ ](https://localhost:4502/system/console/configMgr) Web 主控台。
    1. 找到 **Apache Sling 連線的池資料來源** 設定。 點選以在編輯模式中開啟設定。
    1. 在設定對話方塊中，指定下列詳細資訊：
 
@@ -84,7 +82,7 @@ AEM [!DNL Forms] 資料整合模組可讓您從不同的後端資料來源(例�
 
       >[!NOTE]
       >
-      >AEM Forms不支援NT驗證 [!DNL MySQL]. 前往位於 https://localhost:4502/system/console/configMgr ](https://localhost:4502/system/console/configMgr) AEM [ Web 主控台並搜尋「Apache Sling 連線共用資料來源」。對於「JDBC 連接 URI」屬性將「integratedSecurity」的值設置為 False，並使用創建的使用者名和密碼與資料庫連接 [!DNL MySQL] 。
+      >AEM Forms不支援NT驗證 [!DNL MySQL]. 前往位於 HTTPs://localhost:4502/system/console/configMgr ](https://localhost:4502/system/console/configMgr) AEM [ Web 主控台並搜尋「Apache Sling 連線共用資料來源」。對於「JDBC 連接 URI」屬性將「integratedSecurity」的值設置為 False，並使用創建的使用者名和密碼與資料庫連接 [!DNL MySQL] 。
 
       * **借用測試：** 啟用借 **[!UICONTROL 用]** 測試選項。
       * **返回時測試：** 啟用「 **[!UICONTROL 返回]** 時測試」選項。

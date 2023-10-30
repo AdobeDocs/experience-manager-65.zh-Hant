@@ -1,14 +1,14 @@
 ---
 title: Forms入口網站 |處理使用者資料
-description: Forms入口網站 |處理使用者資料
+description: 管理AEM Forms入口網站上的使用者資料，例如存取、刪除和資料儲存。
 contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin
 exl-id: 791524a4-a8bb-4632-a68d-e96864e139a9
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: bb1e1790b8b9e6d6224c62b1f51d8af50a82e975
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---

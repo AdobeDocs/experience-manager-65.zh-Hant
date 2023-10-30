@@ -1,38 +1,37 @@
 ---
 title: 代表其他使用者Protect檔案
-seo-title: Protect a document on behalf of another user
-description: 代表其他使用者Protect檔案
+description: AEM Forms Document Security Java SDK為使用者帳戶提供API，以代表其他使用者保護檔案，不需要編輯許可權。
 uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
 feature: Document Security
 exl-id: e5c80569-d3c0-4358-9b91-b98a64d1c004
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '385'
 ht-degree: 1%
 
 ---
 
 # 代表其他使用者Protect檔案 {#protect-a-document-on-behalf-of-another-user}
 
-AEM Forms Document Security Java SDK提供的API可讓使用者帳戶代表其他使用者保護檔案，而不會獲得編輯檔案的許可權。 您可以在工作流程流程中使用API，或以程式設計方式將API用作檔案服務。 新API包括：
+AEM Forms Document Security Java SDK提供的API可允許使用者帳戶代表其他使用者保護檔案，而不會獲得編輯檔案的許可權。 您可以在工作流程流程中使用API，或以程式設計方式將其用作檔案服務。 新的API包括：
 
-* **protectDocumentUse** ProtectDocument API可代表以下人員將原則套用至檔案：
+* **protectDocumentUse** ProtectDocument API可代表以下人員將原則套用至檔案
 
-   另一個使用者帳戶。 用於套用原則的使用者帳戶的許可權仍限於保護檔案。 無法取得開啟和檢視檔案的許可權。 RMSecureDocumentResult protectDocument(Document inDoc， String documentName， String policySetName， String policyName， RMLocale locale， boolean bExactMatchForNames)
+  另一個使用者帳戶。 用於套用原則的使用者帳戶的許可權仍限於保護檔案。 無法取得開啟和檢視檔案的許可權。 RMSecureDocumentResult protectDocument(Document inDoc， String documentName， String policySetName， String policyName， RMLocale locale， boolean bExactMatchForNames)
 
 * **createLicenseUse** CreateLicense API可代表其他使用者帳戶為原則建立授權。 PublishLicenseDTO createLicense(String policyId， String documentName， boolean logSecureDocEvent)
-* **protectDocumentWithCoverPageUse** ProtectDocumentWithCoverPage API可代表其他使用者套用原則並將封面頁新增至檔案。 用於套用原則的使用者帳戶的許可權仍限於保護檔案。 無法取得開啟和檢視檔案的權利。 RMSecureDocumentResult protectDocumentWithCoverPage（檔案inDoc、字串documentName、字串policySetName、字串policyName、檔案coverDoc、布林值bExactMatchForNames）
+* **protectDocumentWithCoverPageUse** ProtectDocumentWithCoverPage API可代表其他使用者套用原則並將封面頁新增至檔案。 用於套用原則的使用者帳戶的許可權仍限於保護檔案。 無法取得開啟和檢視檔案的許可權。 RMSecureDocumentResult protectDocumentWithCoverPage（檔案inDoc，字串documentName，字串policySetName，字串policyName，檔案封面doc，布林值bExactMatchForNames）
 
 ## 使用API代表其他使用者保護檔案 {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
 
-執行以下步驟以代表其他使用者保護檔案，並且不取得編輯檔案的許可權：
+執行以下步驟來代表其他使用者保護檔案，並且不取得編輯檔案的許可權：
 
 1. 建立原則集。 例如，PolicySet1。
 1. 在新建立的原則集中建立原則。 例如，PolicySet1中的Policy1。
-1. 建立具有角色Rights Management一般使用者的使用者。 例如，User1。 向新建立的使用者提供檢視使用Policy1保護的檔案的許可權。
-1. 建立新角色. 例如，Role1。 為新建立的角色提供「服務叫用」許可權。 建立具有新建立角色的使用者。 例如，User2。您可以使用User2或管理員來建立SDK連線並叫用protectDocument服務。
+1. 建立具有「一般使用者」角色Rights Management的使用者。 例如User1。 為新建立的使用者提供許可權以檢視使用Policy1保護的檔案。
+1. 建立新角色. 例如，Role1。 為新建立的角色提供「服務叫用」許可權。 建立具有新建立角色的使用者。 例如User2。您可以使用User2或管理員來建立SDK連線並叫用protectDocument服務。
 
    現在，您可以執行以下範常式式碼以保護檔案，而不向保護檔案的使用者提供編輯檔案的許可權：
 

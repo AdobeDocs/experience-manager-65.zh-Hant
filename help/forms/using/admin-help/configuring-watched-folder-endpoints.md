@@ -1,14 +1,14 @@
 ---
 title: 正在設定watched資料夾端點
-description: 瞭解如何設定watched資料夾端點。
+description: 瞭解如何設定watched資料夾端點。 如果檔案置於watched資料夾中，則會叫用已設定的服務操作並操作檔案。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 22d9b22a0fc0bc5f753f2e11ca66e2627e1a8405
 workflow-type: tm+mt
-source-wordcount: '7163'
+source-wordcount: '7181'
 ht-degree: 0%
 
 ---

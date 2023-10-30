@@ -1,8 +1,6 @@
 ---
 title: 指定輸出的檔案位置
-seo-title: Specify file locations for Output
-description: 瞭解如何指定輸出的檔案位置。
-seo-description: Learn how to specify file locations for Output.
+description: 瞭解如何為特定型別的檔案（例如內容根URI、XCI設定檔案、快取和預設）指定輸出的檔案位置。
 uuid: 3287274f-85b5-4811-8abb-d347a9b80947
 contentOwner: admin
 content-type: reference
@@ -10,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 460bbb31-8187-469c-8102-b310093b6c03
 exl-id: 620c69d6-4fe1-46d6-b5d4-3b562142e547
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '330'
 ht-degree: 1%
 
 ---
@@ -31,7 +29,7 @@ ht-degree: 1%
 
 預設值為空字串。
 
-**XCI組態檔：** 輸出服務用於呈現的XCI組態檔的相對或絕對位置。 若為相對值，則假設XCI檔案位於AEM Forms可部署EAR檔案中。
+**XCI設定檔：** 輸出服務用於呈現的XCI組態檔的相對或絕對位置。 若為相對值，則假設XCI檔案位在AEM表單可部署EAR檔案中。
 
 預設值為 `com/adobe/formServer/PA/pa_output.xci`。
 
@@ -43,8 +41,8 @@ ht-degree: 1%
 * **WebLogic：** `[WebLogic Home]\user_projects\domains\[aem-forms domain Name]\adobe\[forms server name]\Output\Cache`
 * **WebSphere：** `[IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\Output\Cache`
 
-**LC暫存目錄：** 快取是在AEM forms暫存目錄的子目錄中建立的，該子目錄在「設定」>「核心系統設定」>「設定」>「暫存目錄的位置」下的管理控制檯中指定。 子目錄已命名 `adobeoutput_[servername]`.
+**LC暫存目錄：** 快取是在AEM forms暫存目錄的子目錄中建立的，該子目錄在「設定」>「核心系統設定」>「設定」>「暫存目錄位置」下的管理控制檯中指定。 子目錄已命名 `adobeoutput_[servername]`.
 
 >[!NOTE]
 >
->如果您使用暫時清除公用程式，請注意，刪除這些目錄不會影響功能，但在建立新快取之前，可能會在短時間內顯著影響效能。 為避免此問題，在清除AEM表單臨時目錄時，請勿刪除這些目錄。
+>如果您使用暫時清除公用程式，請注意，刪除這些目錄不會影響功能，但可能會暫時對效能造成重大影響，直到建立新快取為止。 為避免此問題，在清除AEM表單臨時目錄時，請勿刪除這些目錄。

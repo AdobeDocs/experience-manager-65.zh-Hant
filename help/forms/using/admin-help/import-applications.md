@@ -1,14 +1,14 @@
 ---
 title: 匯入和管理應用程式
-description: 瞭解如何匯入和管理應用程式。
+description: 瞭解如何匯入和管理應用程式。 應用程式是一種容器，用於儲存實作AEM表單解決方案所需的資產。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: f17726c0-3591-4d25-a8b5-3a7024249a56
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 當應用程式完成並準備好要部署到生產伺服器時，Workbench使用者會將應用程式封裝到 *AEM forms應用程式檔案* (.lca)。 然後，管理員會使用「應用程式管理」頁面上的「應用程式」頁簽，使用管理主控台來匯入及建置應用程式檔案。
 
-您也可以使用「應用程式管理」頁面上的「封存」標籤，匯入使用Workbench 8.x建立的LCA。
+您也可以使用「應用程式管理」頁面上的「封存」頁簽，匯入使用Workbench 8.x建立的LCA。
 
 >[!NOTE]
 >

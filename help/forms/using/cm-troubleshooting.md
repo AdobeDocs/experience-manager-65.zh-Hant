@@ -1,8 +1,6 @@
 ---
 title: 「通訊管理：疑難排解」
-seo-title: Correspondence Management Troubleshooting
-description: 通訊管理疑難排解
-seo-description: Correspondence Management Troubleshooting
+description: 處理在AEM Forms環境中儲存信函的過程中可能發生的錯誤。
 uuid: 25828cdd-110e-4a84-8f31-d82cd610a54f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +8,9 @@ topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 feature: Correspondence Management
 exl-id: cf06796b-bb8c-4a65-8f42-02fb0cfa3ebd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '213'
 ht-degree: 1%
 
 ---
@@ -23,7 +21,7 @@ ht-degree: 1%
 
 ### 問題 {#issue}
 
-儲存信件時會顯示下列其中一個錯誤：
+儲存信函時會顯示下列其中一個錯誤：
 
 * 文字模組沒有資料繫結
 * 請提供以下專案所需的屬性資訊
@@ -33,13 +31,13 @@ ht-degree: 1%
 發生這些錯誤可能是因為下列原因之一：
 
 * 資料字典已繫結至信件，但伺服器上不存在。
-* 資料字典已繫結至字母，但名稱中有底線(_)。
+* 資料字典已繫結至字母，但名稱有底線(_)。
 
 ### 因應措施 {#workaround}
 
-確定您在信件中使用的資料字典位於伺服器上，且名稱中沒有底線(_)。
+確認您在信函中使用的資料字典位於伺服器上，且名稱不含底線(_)。
 
-## 預覽信件時發生錯誤 {#error-when-previewing-a-letter}
+## 預覽信函時發生錯誤 {#error-when-previewing-a-letter}
 
 ### 問題 {#issue-1}
 

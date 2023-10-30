@@ -1,17 +1,17 @@
 ---
 title: 取得含附件的電子郵件的其他步驟
-description: 取得含附件的電子郵件的其他步驟
+description: 修正您無法在JEE平台上擷取AEM Forms之附件的電子郵件時的錯誤。
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
 
 # 無法取得JEE平台上AEM Forms的電子郵件（含附件）{#unable-to-get-email-with-attachments}
 
-此問題適用於以下版本：
+此問題適用於下列版本：
 * Experience Manager6.5 Forms
 
 ## 問題 {#issue}
@@ -26,16 +26,16 @@ ht-degree: 0%
 
 1. 開啟資訊清單檔案並取代所有出現的 `1.5.0` 替換為 `1.5.6` 和 `Bundle-Version: 1.0` 替換為 `Bundle-Version:1.5`
 
-1. 建立自訂jar (`java.mail-1.5.jar`)檔案，使用下列指令於 `C:\Adobe\Adobe_Experience_Manager_Forms\java\jdk\bin` 資料夾為：
+1. 建立自訂jar (`java.mail-1.5.jar`)檔案，使用下列指令 `C:\Adobe\Adobe_Experience_Manager_Forms\java\jdk\bin` 資料夾為：
    `jar -cfm java.mail-1.5.jar manifest.mf`
 
    在上述命令中， *manifest.mf* 是資訊清單檔案的名稱，並且 *java.mail-1.5.jar* 是在執行上述命令後建立的檔案名稱。
 
 1. 下載 [javax.mail-1.5.6.redhat-1.jar](https://mvnrepository.com/artifact/com.sun.mail/javax.mail/1.5.6.redhat-1).
 
-1. 導覽至 `http://<server name>:<port>/lc/system/console/bundles`並刪除名稱為的組合 `JavaMail API (com.sun.mail.javax.mail) version 1.6.2`.
+1. 瀏覽至 `http://<server name>:<port>/lc/system/console/bundles`並刪除名稱為 `JavaMail API (com.sun.mail.javax.mail) version 1.6.2`.
 
-1. 安裝 `java.mail-1.5.jar` 取得自步驟3。 此步驟會重新啟動JEE部署的sling屬性。 等候已安裝的套件組合在 `http://<server name>:<port>/lc/system/console/bundles` 將狀態顯示為 **作用中**.
+1. 安裝 `java.mail-1.5.jar` 取得自步驟3。 此步驟會重新啟動JEE部署的sling屬性。 等待已安裝的套件組合： `http://<server name>:<port>/lc/system/console/bundles` 將狀態顯示為 **作用中**.
 
    >注意：如果是，狀態仍為 **非作用中**，重新啟動   **JBoss®** 從 **服務主控台**.
 
