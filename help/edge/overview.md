@@ -37,19 +37,19 @@ Edge Delivery 運用 GitHub，因此客戶可以直接從其 GitHub 存放庫管
 * 若要了解如何使用 Edge Delivery 編寫和發佈內容，請參閱[「發佈」部份](https://www.hlx.live/docs/authoring)。
 * 若要了解如何正確啟動您的網站項目，請參閱[「啟動」部分](https://www.hlx.live/docs/#launch)。
 
-## Edge Delivery Services 和其他 Adob&#x200B;&#x200B;e Experience Cloud 產品 {#edge-other-products}
+## Edge Delivery Services 和其他 Adobe Experience Cloud 產品 {#edge-other-products}
 
-Edge Delivery Services 屬於 Adob&#x200B;&#x200B;e Experience Manager 一部份，因此 Edge Delivery 和 AEM 網站可以在相同網域中共存。這是大型網站的常見使用案例。最重要的是，可以在 AEM Sites 頁面中輕鬆使用來自 Edge Delivery 的內容，反之亦然。
+Edge Delivery Services 屬於 Adobe Experience Manager 一部份，因此 Edge Delivery 和 AEM 網站可以在相同網域中共存。這是大型網站的常見使用案例。最重要的是，可以在 AEM Sites 頁面中輕鬆使用來自 Edge Delivery 的內容，反之亦然。
 
-您也可以將 Edge Delivery Services 與 Adob&#x200B;&#x200B;e Target、Analytics 和 Launch 結合使用。
+您也可以將 Edge Delivery Services 與 Adobe Target、Analytics 和 Launch 結合使用。
 
 ## 取得 Edge Delivery Services 存取權 {#getting-access}
 
 開始使用 Edge Delivery Services 很容易。請依照「[開始使用 - 開發人員教學課程](https://www.hlx.live/developer/tutorial)」步驟開始使用。
 
-## 取得 Adob&#x200B;&#x200B;e 的協助 {#adobe-gethelp}
+## 取得 Adobe 的協助 {#adobe-gethelp}
 
-您可以透過預先被分配的產品協作頻道 (請參閱下文取得存取詳情) 與 Adob&#x200B;&#x200B;e 產品團隊互動，回答有關產品使用或最佳實務的問題。請注意，沒有與透過產品協作頻道進行對話相關的服務層級條款 (SLT)。如果產品問題需要額外調查和故障排除，並且需要符合回應 SLT，您可以按照[支援流程](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support)來提交支援服務單。
+您可以透過預先被分配的產品協作頻道 (請參閱下文取得存取詳情) 與 Adobe 產品團隊互動，回答有關產品使用或最佳實務的問題。請注意，沒有與透過產品協作頻道進行對話相關的服務層級條款 (SLT)。如果產品問題需要額外調查和故障排除，並且需要符合回應 SLT，您可以按照[支援流程](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support)來提交支援服務單。
 
 Adobe 提供三個頻道來幫助您使用 Edge Delivery Services：
 
@@ -63,7 +63,7 @@ Adobe致力於為您提供最佳社群參與度，以及對Edge Delivery Service
 
 ### 如何存取您的產品協作頻道 {#collab-channel}
 
-鑑於與客戶直接溝通管道的重要性，所有 AEM 客戶在發佈時都將建立一個 Slack 頻道，以實現速度、重要更新和體驗品質的大規模報告。您將獲得 Adob&#x200B;&#x200B;e 邀請您加入針對您組織的 Slack 頻道。
+鑑於與客戶直接溝通管道的重要性，所有 AEM 客戶在發佈時都將建立一個 Slack 頻道，以實現速度、重要更新和體驗品質的大規模報告。您將獲得 Adobe 邀請您加入針對您組織的 Slack 頻道。
 
 若要了解更多資訊，請參閱「[使用 Slack 機器人](https://www.hlx.live/docs/slack)」文件取得更多詳細資訊。
 

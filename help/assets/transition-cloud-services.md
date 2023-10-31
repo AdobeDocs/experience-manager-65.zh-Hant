@@ -6,8 +6,8 @@ feature: Translation
 exl-id: f17a33d7-eb2f-406b-8d6c-a3bf564c8702
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 44%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
