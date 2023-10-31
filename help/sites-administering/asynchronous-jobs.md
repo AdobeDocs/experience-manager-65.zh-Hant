@@ -2,10 +2,10 @@
 title: 非同步作業
 description: Adobe Experience Manager 能以非同步方式完成部分耗用大量資源的工作，實現效能最佳化。
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: cc63291c32f7a234398ebe8bf67ab53aaf8fa90f
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 96%
+source-wordcount: '800'
+ht-degree: 97%
 
 ---
 
@@ -19,7 +19,6 @@ ht-degree: 96%
 * 移動多項資產或參照眾多的資產
 * 大量匯出/匯入資產的中繼資料
 * 從 Experience Manager 的遠端部署作業中擷取高於臨界值限制設定的資產
-* 移動頁面
 * 轉出即時副本
 
 您可以從&#x200B;**[!UICONTROL 「非同步作業狀態」]**&#x200B;儀表板的&#x200B;**「全域導覽** -> **工具** -> **操作** -> **作業」**，檢視非同步作業的狀態。
@@ -101,7 +100,7 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 
    ![資產刪除臨界值](assets/async-delete-threshold.png)
 
-1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如success、failed。
+1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如，成功、失敗。
 1. 儲存變更。
 
 ### 設定非同步資產移動操作 {#configuring-asynchronous-move-operations}
@@ -114,27 +113,14 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 
    ![資產移動臨界值](assets/async-move-threshold.png)
 
-1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如success、failed。
-1. 儲存變更。
-
-### 設定非同步頁面移動操作 {#configuring-asynchronous-page-move-operations}
-
-如果要移動的頁面參照數量超過上限，系統就會以非同步方式執行移動操作。
-
-1. 在「全域導覽」中，按一下&#x200B;**[!UICONTROL 「工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web 主控台」]**。
-1. 在 Web 主控台中，開啟&#x200B;**[!UICONTROL 「非同步頁面移動操作作業處理設定」]**。
-1. 在&#x200B;**[!UICONTROL 「參照數上限」]**&#x200B;欄位中，指定非同步處理頁面移動操作的參照數量上限。
-
-   ![頁面移動臨界值](assets/async-page-move.png)
-
-1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如success、failed。
+1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如，成功、失敗。
 1. 儲存變更。
 
 ### 設定非同步 MSM 操作 {#configuring-asynchronous-msm-operations}
 
 1. 在「全域導覽」中，按一下&#x200B;**[!UICONTROL 「工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web 主控台」]**。
 1. 在 Web 主控台中，開啟&#x200B;**[!UICONTROL 「非同步頁面移動操作作業處理設定」]**。
-1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如success、failed。
+1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如，成功、失敗。
 
    ![MSM 設定](assets/async-msm.png)
 
@@ -143,7 +129,7 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 >[!MORELIKETHIS]
 >
 >* [建立及組織頁面](/help/sites-authoring/managing-pages.md)
->* [建立和同步 Live Copy](/help/sites-administering/msm-livecopy.md)
+>* [建立和同步 Live Copies](/help/sites-administering/msm-livecopy.md)
 >* [在Experience Manager中設定電子郵件](/help/sites-administering/notification.md).
 >* [匯入資產中繼資料](/help/assets/metadata.md#import-metadata).
 >* [匯出資產中繼資料](/help/assets/metadata.md#export-metadata).
