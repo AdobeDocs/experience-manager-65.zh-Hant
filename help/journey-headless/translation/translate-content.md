@@ -2,16 +2,16 @@
 title: 翻譯內容
 description: 使用翻譯連接器和規則來翻譯您的 Headless 內容。
 exl-id: a2c2bb9f-97b9-42fd-9bd1-e75c113fb514
-source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
+source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
 workflow-type: tm+mt
 source-wordcount: '2163'
-ht-degree: 81%
+ht-degree: 80%
 
 ---
 
 # 翻譯內容 {#translate-content}
 
-使用翻譯連接器和規則來翻譯您的 Headless 內容。
+使用翻譯整合和規則來翻譯Headless內容。
 
 ## 到目前為止 {#story-so-far}
 

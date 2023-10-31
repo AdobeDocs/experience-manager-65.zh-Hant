@@ -2,7 +2,7 @@
 title: AEM Headless 翻譯歷程
 description: 從這裡開始，此歷程會逐步引導您了解如何使用 AEM 強大的翻譯工具來翻譯您的 Headless 內容。
 exl-id: 1a9d4c88-b676-4168-a9ef-7d218b39129f
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 96%
@@ -34,7 +34,7 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 
 [文件歷程](/help/journey-documentation/home.md)提供敘述來協助剛開始使用 AEM 的讀者，讓他們能從頭到尾理解和解決業務問題，同時將採用的先前主題或 AEM 知識降至最低，藉以連結許多不同且複雜的主題和功能。
 
-文件歷程根據最佳實務原則而設計，其中包含 Adobe 的最新研究、Adobe 顧問的成熟實作經驗以及客戶專案的意見回饋。
+文件歷程根據最佳做法原則而設計，其中包含 Adobe 的最新研究、Adobe 顧問的成熟實作經驗以及客戶專案的意見回饋。
 
 如果您想了解 Adobe 如何建議如何使用 AEM 解決 Headless 商務案例，[AEM Headless 歷程](/help/journey-headless/home.md)是理想起點。
 
@@ -66,9 +66,9 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 | 0 | AEM Headless 翻譯歷程 | 本文件 |
 | 1 | [了解 Headless 內容以及如何在 AEM 中翻譯](learn-about.md) | 了解 Headless 概念、它們如何對應到 AEM 以及 AEM 翻譯理論。 |
 | 2 | [AEM Headless 翻譯快速入門](getting-started.md) | 了解如何組織 Headless 內容以及 AEM 翻譯工具的運作原理。 |
-| 3 | [設定翻譯連接器](configure-connector.md) | 了解如何將 AEM 連接到翻譯服務。 |
+| 3 | [設定翻譯整合](configure-connector.md) | 了解如何將 AEM 連接到翻譯服務。 |
 | 4 | [設定翻譯規則](translation-rules.md) | 了解如何定義翻譯規則以識別要翻譯的內容。 |
-| 5 | [翻譯內容](translate-content.md) | 使用翻譯連接器和規則來翻譯您的 Headless 內容。 |
+| 5 | [翻譯內容](translate-content.md) | 使用翻譯整合和規則來翻譯Headless內容。 |
 | 6 | [發佈翻譯內容](publish-content.md) | 了解如何發佈翻譯後的內容，並在基礎內容更新時更新翻譯。 |
 
 ## 下一步 {#what-is-next}
@@ -85,6 +85,6 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 * [Headless架構者歷程](/help/journey-headless/architect/overview.md)  — 從這裡開始瞭解Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案建立內容的模型。
 * [AEM Headless 開發人員歷程](/help/journey-headless/developer/overview.md) - 從這裡開始，此歷程會逐步引導您了解 AEM 強大且靈活的無周邊特性、其功能，以及如何在您的第一個開發專案中運用這些功能。
 * [AEM 技術文件](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant) - 如果您已經對 AEM 和 Headless 技術有深入的了解，您可能想要直接查閱我們深入的技術文件。
-   * 一個 [AEM as a Headless CMS簡介](/help/sites-developing/headless/introduction.md)
+   * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
 * [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 如果您偏好做中學並為傾向技術，請加入我們的由 API 和框架組織的實作教學課程，其在探究如何建立和使用 AEM Headless 應用程式。
-* 此 [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

@@ -2,10 +2,10 @@
 title: 設定翻譯規則
 description: 了解如何定義翻譯規則以識別要翻譯的內容。
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
 workflow-type: tm+mt
 source-wordcount: '871'
-ht-degree: 93%
+ht-degree: 84%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 93%
 
 ## 到目前為止 {#story-so-far}
 
-在 AEM Headless 翻譯歷程的上一個文件「[設定翻譯連接器](configure-connector.md)」中，您已了解如何安裝和設定翻譯連接器，您現在應該：
+在AEM Headless翻譯歷程的上一個檔案中， [設定翻譯整合](configure-connector.md) 您已瞭解如何安裝和設定翻譯整合，現在應：
 
 * 了解 AEM 中翻譯整合框架的重要參數。
 * 能夠為您的翻譯服務設定您自己的連接。
 
-現在您的連接器已設定，本文將帶您完成下一步，確定您需要翻譯的內容。
+現在您的整合已設定完成，本文將引導您進行下一個步驟，即識別您需要翻譯的內容。
 
 ## 目標 {#objective}
 
@@ -92,7 +92,7 @@ ht-degree: 93%
 * 了解翻譯規則的作用。
 * 能夠定義您自己的翻譯規則。
 
-以這些知識為基礎，接下來查看文件[翻譯內容](translate-content.md)以繼續您的 AEM Headless 翻譯歷程，您將在此文件了解如何連接器和規則如何搭配運作以翻譯 Headless 內容。
+在此基礎上繼續您的AEM Headless翻譯歷程，接下來檢閱檔案 [翻譯內容](translate-content.md) 您將瞭解整合和規則如何共同運作以翻譯Headless內容。
 
 ## 其他資源 {#additional-resources}
 

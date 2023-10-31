@@ -1,31 +1,31 @@
 ---
-title: 設定翻譯連接器
+title: 設定翻譯整合
 description: 了解如何將 AEM 連接到翻譯服務。
 exl-id: a1a4b1ca-d353-46e2-a992-f38be6be338e
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 97%
+ht-degree: 95%
 
 ---
 
-# 設定翻譯連接器 {#configure-connector}
+# 設定翻譯整合 {#configure-integration}
 
 了解如何將 AEM 連接到翻譯服務。
 
 ## 到目前為止 {#story-so-far}
 
-在 AEM Headless 翻譯歷程的上一個文件「[AEM Headless 翻譯快速入門](learn-about.md)」中，您已了解如何組織無周邊內容和 AEM 翻譯工具運作方式，現在您應該：
+在 AEM Headless 翻譯歷程的上一個文件「[AEM Headless 翻譯快速入門](learn-about.md)」中，您已了解如何組織 Headless 內容和 AEM 翻譯工具運作方式，現在您應該：
 
 * 了解內容結構對翻譯的重要性。
-* 了解 AEM 如何儲存無周邊內容。
+* 了解 AEM 如何儲存 Headless 內容。
 * 熟悉 AEM 的翻譯工具。
 
 本文章以這些基礎知識為基礎，因此您可以採取第一個設定步驟並設定翻譯服務，您將在稍後的歷程中使用該翻譯服務來翻譯您的內容。
 
 ## 目標 {#objective}
 
-本文件可協助您了解如何為您選擇的翻譯服務設定 AEM 連接器。閱讀本文件後，您應該：
+本檔案可協助您瞭解如何將AEM整合設定至您選擇的翻譯服務。 閱讀本文件後，您應該：
 
 * 了解 AEM 中翻譯整合框架的重要參數。
 * 能夠為您的翻譯服務設定您自己的連接。
@@ -125,16 +125,16 @@ AEM 是一種靈活而強大的工具，透過多個連接器和多個設定，�
 
 ## 下一步 {#what-is-next}
 
-您已完成無周邊翻譯歷程的此部分，您應該：
+您已完成 Headless 翻譯歷程的此部分，您應該：
 
 * 了解 AEM 中翻譯整合框架的重要參數。
 * 能夠為您的翻譯服務設定您自己的連接。
 
-在此知識的基礎上繼續您的AEM Headless翻譯歷程，接下來檢視檔案 [設定翻譯規則，](translation-rules.md) 您將在其中學習如何定義要翻譯的內容。
+在此基礎上繼續您的AEM Headless翻譯歷程，接下來檢閱檔案 [設定翻譯規則，](translation-rules.md) 您將在其中學習如何定義要翻譯的內容。
 
 ## 其他資源 {#additional-resources}
 
-雖然建議您查閱文件[設定翻譯規則](translation-rules.md)來繼續無周邊翻譯歷程的下個部分，以下也有一些其他選擇性資源，在深入探究本文件提到的一些概念，但不是繼續無周邊歷程的必要條件。
+雖然建議您查閱文件[設定翻譯規則](translation-rules.md)來繼續 Headless 翻譯歷程的下個部分，以下也有一些其他選擇性資源，在深入探究本文件提到的一些概念，但不是繼續 Headless 歷程的必要條件。
 
 * [設定翻譯整合框架](/help/sites-administering/tc-tic.md) - 檢視所選翻譯連接器清單，了解如何設定翻譯整合框架以與協力廠商翻譯服務整合。
 * [連接到 Microsoft Translator](/help/sites-administering/tc-msconf.md) - AEM 提供 Microsoft Translator 試用版帳戶用於測試目的。
