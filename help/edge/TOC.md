@@ -5,13 +5,13 @@ sub-product: Edge Delivery Services
 audience: end-user
 user-guide-title: Edge Delivery Services
 breadcrumb-title: Edge Delivery Services
-user-guide-description: 進一步了解 Edge Delivery Services，這是一組有助於快速建立開發環境的可組合服務，作者可以利用此服務快速更新和發佈，並且快速推出新網站。
+user-guide-description: 深入瞭解Edge Delivery Services (EDS)，這是一組可撰寫的服務，可啟用快速開發環境，讓作者可快速更新及發佈，並快速啟動新網站。
 feature: Edge Delivery Services
 role: User
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 6a1d96125ca6647770718fff74ec21afb5c91a68
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 100%
+source-wordcount: '48'
+ht-degree: 35%
 
 ---
 

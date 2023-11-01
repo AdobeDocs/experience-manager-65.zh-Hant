@@ -1,59 +1,60 @@
 ---
-title: 使用Edge Delivery Services
-description: 使用Edge Delivery Services
-source-git-commit: 0c0e14ec3d022b7e9efd17edf2997990f5ac3dc2
+title: 使用 Edge Delivery Services
+description: 使用 Edge Delivery Services (EDS)
+exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
+source-git-commit: 6a1d96125ca6647770718fff74ec21afb5c91a68
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 1%
+source-wordcount: '609'
+ht-degree: 99%
 
 ---
 
-# 使用Edge Delivery Services {#usingedge}
+# 使用 Edge Delivery Services {#usingedge}
 
-有了Edge Delivery，您可以建立快速開發環境，讓作者能夠快速更新及發佈內容，並快速啟動新網站。 為此，您可以在相同網站上使用多個內容來源，無論您選擇什麼來源，發佈作業都會順暢且有效簡化。 因此，從編輯到在網際網路上即時檢視內容，只需要幾秒鐘的時間。
+Edge Delivery 能讓您建立快速開發的環境，作者可以在其中快速更新和發佈內容，並且可以快速啟動新網站。為此，您可以在同一網站上使用多個內容來源，並且無論您選擇何種來源，都可採用無縫且簡化的方式來發佈。因此，從編輯到在網路上查看內容只需幾秒鐘。
 
 ## 編寫 {#authoring-edge}
 
-有了Edge Delivery，製作過程便捷、快速、靈活。 您可以在Edge Delivery Services的上下文中採用兩個不同的編寫路徑：
+透過 Edge Delivery，編寫變得簡單、快速且靈活。您可以在 Edge Delivery Services 的環境中採用兩種不同的路徑進行編寫：
 
-* 檔案式撰寫(例如Microsoft Word或Google Docs) - [如需詳細資訊，請參閱此連結](https://www.hlx.live/docs/authoring).
-* 頁面編輯器/通用編輯器 — 請聯絡您的Adobe銷售代表。
+* 以文件為主的編寫 (例如 Microsoft Word 或 Google Docs) - [請參考此連結以了解更多詳情](https://www.hlx.live/docs/authoring)。
+* 頁面編輯器/Universal Editor - 請聯絡您的 Adobe 銷售代表。
 
-若是檔案式撰寫，您可以使用各種來源，例如Microsoft Word和Google Docs。 來自這些來源的檔案會成為您網站上的頁面。 標題、清單、影像、字型元素和視訊都可從初始來源傳輸至您的網站。 您可以新增中繼資料以用於SEO目的，或使用區塊來搭配結構化內容並新增功能。
+在以文件為主編寫情況中，您可以使用各種來源，例如 Microsoft Word 和 Google Docs。來自這些來源的文件會成為您網站上的頁面。標題、清單、影像、字體元素、影片都可以從初始來源傳輸到您的網站。您可以為 SEO 目的新增中繼資料，或者使用塊處理結構化內容並新增功能。
 
 ## 發佈 {#publishing-edge}
 
-有了Edge Delivery，無論內容來源為何，發佈內容都能順暢無礙。 程式如下：您使用 [sidekick延伸模組](#using-sidekick) 以觸發發佈機制，您的內容將於數秒後於您的網站上線。
+使用 Edge Delivery 時，無論內容來源為何，都可以無縫發佈內容。程序如下：您使用 [Sidekick 擴充功能](#using-sidekick)來觸發發佈機制，您的內容幾秒鐘內將出現在您的網站上。
 
-## Edge Delivery Services和GitHub {#github-edge}
+## Edge Delivery Services 和 GitHub {#github-edge}
 
-Edge Delivery運用GitHub，讓客戶可直接從GitHub存放庫管理和部署程式碼。 例如，您可以在Google檔案或Microsoft Word中撰寫內容，並在GitHub中使用CSS和JavaScript開發網站功能。 系統會自動為您從內容預覽到生產環境的每個分支建立網站。 您放入GitHub存放庫中的每個資源都可在您的網站上取得，無需建置程式。
+Edge Delivery 運用 GitHub，因此客戶可以直接從其 GitHub 存放庫管理和部署程式碼。例如，您可以在 Google Docs 或 Microsoft Word 中編寫內容，並使用 GitHub 中的 CSS 和 JavaScript 開發網站功能。系統會自動為您的每個分部建立網站，從內容預覽到生產都包括在內。您放入 GitHub 存放庫的每個資源都可以在您的網站上使用，無需任何建置程序。
 
-## 使用Sidekick {#using-sidekick}
+## 使用 Sidekick {#using-sidekick}
 
-AEM Sidekick提供上下文感知選項的工具列，讓您可輕鬆編輯、預覽和發佈內容。 晚於 [安裝](https://www.hlx.live/docs/sidekick-extension) AEM sidekick擴充功能可用於專案環境或編輯內容時(例如，在Google檔案中)。 視環境而定，它有數個可用的動作，例如：預覽、重新載入、編輯和發佈。 在使用Sidekick時，您也可以將環境從預覽切換到生產，反之亦然。
+AEM sidekick 提供一個有感知選項的工具列，讓您可以輕鬆編輯、預覽和發佈內容。[安裝](https://www.hlx.live/docs/sidekick-extension) AEM sidekick 擴充功能後，可以在專案環境中或編輯內容時使用 (例如，在 Google Docs 中)。根據環境的不同，此工具有多種可用操作，例如：預覽、重新載入、編輯和發佈。您也可以在使用 Sidekick 時切換環境，從預覽切換到生產，反之亦然。
 
-**若要發佈**，在預覽頁面上開啟Sidekick並使用Publish動作。 在您按一下「發佈」後，即可在即時和生產環境中使用頁面的目前預覽版本。
+**若要發佈**，在預覽頁面上開啟 Sidekick 並使用「發佈」操作。按一下「發佈」後，目前的頁面預覽版本將可供您在即時和生產環境中使用。
 
-## 將AEM Assets與檔案式製作整合 {#integrate-assets-edge}
+## 將 AEM Assets 與文件型撰寫整合 {#integrate-assets-edge}
 
-「邊緣傳送」可讓您在Microsoft Word或Google檔案中編寫檔案時，使用AEM Assets存放庫中的可用影像。
+當您在 Microsoft Word 或 Google Docs 中編寫文件時，Edge Delivery 可讓您使用 AEM Assets 存放庫內的可用影像。
 
-若要在檔案中使用影像，必須滿足以下條件 [設定AEM Assets sidekick外掛程式](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin).
+只有在[設定 AEM Assets Sidekick 外掛程式](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin)後，系統才會提供使用文件中影像的選項。
 
-適用於AEM Assets的sidekick外掛程式支援對以下專案的存取：
+AEM Assets 的 Sidekick 外掛程式支援存取：
 
 * AEM Assets as a Cloud Service 
 
 * AEM Assets Essentials
 
-設定AEM Assets Sidekick外掛程式後，您可以 [開始在Google檔案或Microsoft Word檔案中使用影像](https://www.hlx.live/docs/aem-assets-sidekick-plugin).
+設定 AEM Assets Sidekick 插件後，您可以[開始在 Google Docs 或 Microsoft Word 文件中使用影像](https://www.hlx.live/docs/aem-assets-sidekick-plugin)。
 
-## 進一步閱讀 {#further-reading}
+## 延伸閱讀： {#further-reading}
 
-如需詳細資訊，請參閱下列頁面：
+有關更多詳細資訊，請參閱以下頁面：
 
-* 如需開始使用Edge Delivery的詳細資訊，請參閱 [建置](https://www.hlx.live/docs/#build) Edge傳遞檔案的區段。
-* 若要瞭解如何使用Edge Delivery製作和發佈內容，請參閱 [發佈區段](https://www.hlx.live/docs/authoring).
-* 若要瞭解如何使用sidekick擴充功能，請參閱 [使用sidekick](https://www.hlx.live/docs/sidekick) 頁面。
-* 如需AEM編寫的相關資訊，請參閱 [製作概念頁面](/help/sites-authoring/author.md))
+* 有關如何開始使用 Edge Delivery 詳細資訊，請參閱 Edge Delivery 文件中的「[建置](https://www.hlx.live/docs/#build)」部份。 
+* 若要了解如何使用 Edge Delivery 編寫和發佈內容，請參閱[「發佈」部份](https://www.hlx.live/docs/authoring)。
+* 若要了解如何使用 Sidekick 擴充功能，請參閱「[使用 Sidekick](https://www.hlx.live/docs/sidekick)」頁面。
+* 有關 AEM 編寫，請參閱[「編寫概念」頁面](/help/sites-authoring/author.md))
