@@ -1,20 +1,20 @@
 ---
-title: 組合器服務Java API快速入門(SOAP)
-description: 使用Assembler Service Java API QuickStart(SOAP)來組合、分解及動態建立PDF檔案。
+title: 組合器服務Java&trade； API QuickStart(SOAP)
+description: 瞭解如何使用組合器服務Java&trade； API QuickStart (SOAP)組合、分解及動態建立PDF檔案。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 306cd40b-1831-45aa-9f58-3ab1983a68c5
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
 
-# 組合器服務Java API快速入門(SOAP) {#assembler-service-java-api-quickstart-soap}
+# 組合器服務Java™ API快速入門(SOAP) {#assembler-service-java-api-quickstart-soap}
 
 Java API快速入門(SOAP)適用於組合器服務
 
@@ -44,7 +44,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->「使用AEM Forms進行程式設計」中的「快速入門」，是根據部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器所撰寫。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+>使用AEM Forms進行程式設計的快速入門是以部署在JBoss®應用程式伺服器和Microsoft® Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統(例如UNIX®)，請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 快速入門（SOAP模式）：使用Java API組合PDF檔案 {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
@@ -736,7 +736,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API判斷檔案是否符合PDF/A標準 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
-下列Java程式碼範例會判斷輸入PDF檔案是否符合PDF/A規範。 傳遞至組合器服務的輸入PDF檔案已命名 *Loan.pdf*. DDX檔案的名稱為shell_PDFA.xml。 從Assembler服務傳回並指定輸入PDF檔案是否符合PDF/A的XML檔案會儲存為名為result.xml的XML檔案。 如需關於的資訊， *shell_PDFA.xml* 此程式碼範例中使用的DDX檔案，請參閱 [判斷檔案是否符合PDF/A規範](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
+下列Java程式碼範例會判斷輸入PDF檔案是否符合PDF/A規範。 傳遞至組合器服務的輸入PDF檔案已命名 *Loan.pdf*. DDX檔案的名稱為shell_PDFA.xml。 從Assembler服務傳回並指定輸入PDF檔案是否符合PDF/A標準的XML檔案，會儲存為名為result.xml的XML檔案。 如需關於的資訊， *shell_PDFA.xml* 此程式碼範例中使用的DDX檔案，請參閱 [判斷檔案是否符合PDF/A規範](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
 
 ```java
  /*
@@ -1683,11 +1683,11 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 ## 快速入門（SOAP模式）：使用Java API編輯PDF檔案 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
 
-下列程式碼範例會使用編輯PDF檔案 `PDFUtility`.
+PDF下列程式碼範例會使用 `PDFUtility`.
 
 >[!NOTE]
 >
->`PDFUtility` 只能密文那些使用Acrobat標示為要密文的PDF。
+此 `PDFUtility` 只能密文那些使用Acrobat標示為要密文的PDF。
 
 ```java
 /*

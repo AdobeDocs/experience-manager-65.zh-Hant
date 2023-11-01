@@ -1,37 +1,35 @@
 ---
-title: 元件和服務Java API快速啟動(SOAP)
-description: 使用Java API快速入門(SOAP)以程式設計方式操控AEM Forms元件和服務。
-uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
+title: 元件與服務Java&trade；APIQuick啟動(SOAP)
+description: 瞭解如何使用Java&trade； API快速入門(SOAP)以程式設計方式控制AEM Forms元件和服務。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
-discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 role: Developer
 exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
-# 元件和服務Java API快速入門(SOAP) {#components-and-services-java-apiquick-start-soap}
+# 元件和服務Java™ API快速入門(SOAP) {#components-and-services-java-apiquick-start-soap}
 
-Java API快速入門(SOAP)適用於元件和服務。
+Java™ API快速入門(SOAP)適用於元件和服務。
 
 
-[快速入門（SOAP模式）：使用Java API部署元件](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
+[快速入門（SOAP模式）：使用Java部署元件](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API設定服務的執行內容](components-services-java-api-quick.md#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api)
+[快速入門（SOAP模式）：使用Java設定服務的執行內容](components-services-java-api-quick.md#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API停用服務安全性](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
+[快速入門（SOAP模式）：使用Java停用服務安全性](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API啟動服務](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
+[快速入門（SOAP模式）：使用Java啟動服務](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API修改服務設定值](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
+[快速入門（SOAP模式）：使用Java修改服務組態值](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API移除元件](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
+[快速入門（SOAP模式）：使用Java移除元件](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
 
 
 AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
@@ -42,15 +40,15 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計中的快速入門，是以部署在JBoss和Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統（例如Unix），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM表單進行程式設計的快速入門是根據在JBoss®和Windows作業系統上部署的Forms伺服器。 不過，如果您使用其他作業系統(例如UNIX®)，請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 >[!NOTE]
 >
->如果您有自訂元件，且使用SOAP或EJB通訊協定來叫用相同本機伺服器上的DSC，且這些叫用會在升級後停止運作，則使用VM內叫用策略。 使用具有預設ServiceClientFactory的in-VM DSC呼叫方法，且不要使用SOAP或EJB通訊協定來建構ServiceClientFactory。
+如果您有自訂元件，且使用SOAP或EJB通訊協定來叫用相同本機伺服器上的DSC，且這些叫用會在升級後停止運作，則使用VM內叫用策略。 使用具有預設ServiceClientFactory的in-VM DSC呼叫方法，且不要使用SOAP或EJB通訊協定來建構ServiceClientFactory。
 
-## 快速入門（SOAP模式）：使用Java API部署元件 {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java™ API部署元件 {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
-以下Java範例部署以名為的JAR檔案為基礎的元件 *adobe-emailSample-dsc.jar*.
+以下Java™範例部署以名為的JAR檔案為基礎的元件 *adobe-emailSample-dsc.jar*.
 
 ```java
  /* 
@@ -150,9 +148,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API設定服務的執行內容 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java™ API設定服務的執行內容 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
 
-以下Java程式碼範例將執行身分呼叫器執行內容設定為名為的範例服務 *Encryptdocument*.
+以下Java™程式碼範例將「執行身分」呼叫器執行內容設定為名為的範例服務 *Encryptdocument*.
 
 ```java
  /* 
@@ -242,9 +240,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API停用服務安全性 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java™ API停用服務安全性 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
 
-以下Java程式碼範例會停用範例EncryptDocument服務以及從此服務內叫用的服務（設定值和加密服務）的安全性。
+下列Java™程式碼範例會停用範例EncryptDocument服務以及從此服務內叫用的服務（設定值和加密服務）的安全性。
 
 ```java
  /* 
@@ -355,9 +353,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API啟動服務 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java™ API啟動服務 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
 
-以下Java程式碼範例會啟動名為的服務 *SendEmailService*.
+以下Java™程式碼範例會啟動名為的服務 *SendEmailService*.
 
 ```java
  package com.adobe.sample.servicemanager; 
@@ -413,9 +411,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API修改服務設定值 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java™ API修改服務設定值 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
-以下Java範例會修改屬於SendEmail服務的設定值。
+以下Java™範例會修改屬於SendEmail Service的設定值。
 
 ```java
  /* 
@@ -504,7 +502,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
              modService.setConfigParameterAsText("smtpUser","smyUserName");     
              modService.setConfigParameterAsText("smtpPassword","myPassword");     
                       
-             //Modify the service’s configuration values 
+             //Modify the service's configuration values 
              serviceReg.modifyConfiguration(modService); 
                           
              //Conform the new configuration values 
@@ -525,9 +523,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API移除元件 {#quick-start-soap-mode-removing-components-using-the-java-api}
+## 快速入門（SOAP模式）：使用Java™ API移除元件 {#quick-start-soap-mode-removing-components-using-the-java-api}
 
-以下Java程式碼範例會使用Java API移除元件。
+以下Java™程式碼範例會使用Java™ API移除元件。
 
 ```java
  /* 

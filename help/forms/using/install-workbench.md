@@ -1,13 +1,13 @@
 ---
 title: 安裝Workbench
-description: 安裝、解除安裝、設定、管理或部署AEM Forms Workbench。
+description: 瞭解如何安裝、解除安裝、設定、管理或部署AEM Forms Workbench。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: ad5d98c5519cda29cecde54a880958bae81c4764
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '2238'
+source-wordcount: '2242'
 ht-degree: 0%
 
 ---
@@ -84,9 +84,9 @@ Workbench是整合式開發環境(IDE)，開發人員和表單作者可使用它
 >
 >如果所有這些位置都位於單一磁碟機上，則安裝期間必須有1.5 GB的可用空間。 安裝完成時，會刪除複製到暫存目錄的檔案。
 
-* 硬體需求：Intel® Pentium® 4或AMD®同等處理器，1 GHz處理器。
+* 硬體需求：Intel® Pentium® 4或AMD®同等處理器，1-GHz處理器。
 * Java™ Runtime Environment (JRE) 7.0將51或更新版本更新至7.0。
-* 最低1024 X 768畫素或更高的熒幕解析度，使用16位元色彩或更高。
+* 最低1024 X 768畫素或更高的熒幕解析度，使用16位元或更高的色彩。
 * 到AEM Forms伺服器的TCP/IPv4或TCP/IPv6網路連線。
 * 安裝Visual C++可轉散發執行階段套件2012 32位元。
 * 安裝Visual C++可轉散發執行階段套件2013 32位元。
@@ -119,7 +119,7 @@ Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended一起安�
   </tr>
   <tr>
    <td><p>Designer （獨立）</p> </td>
-   <td><p>無。<br />Workbench隨附的Designer版本僅限英文。 <br />Workbench安裝程式不會重新安裝新版的Designer。 而是將修補與Workbench安裝程式隨附的更新版本。 這也可讓您在Workbench中使用本地化版本的Designer。<br /> </p> </td>
+   <td><p>無。<br />Workbench隨附的Designer版本僅限英文。 <br />Workbench安裝程式不會重新安裝新版的Designer。 而是會修補與Workbench安裝程式隨附的更新版本。 這也可讓您在Workbench中使用本地化版本的Designer。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -167,7 +167,7 @@ Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended一起安�
    安裝目錄路徑不應包含# （井號）和$ （美元）字元。
 
 1. 檢閱安裝前摘要，然後按一下安裝。 安裝程式會顯示安裝進度。
-1. 檢閱安裝摘要。 選取「啟動AEM Forms Workbench」以啟動Workbench，然後按一下「下一步」。
+1. 檢閱安裝摘要。 選取「啟動AEM Forms Workbench」 ，以啟動Workbench，然後按一下「下一步」 。
 1. 檢閱發行說明，然後按一下「完成」。
 1. 下列專案現在已安裝在您的電腦上：
    * **Workbench**：若要從「開始」功能表執行Workbench，請選取「所有程式> AEM Forms > Workbench」 （如果您選擇儲存捷徑檔案夾）。 如需詳細資訊，請參閱 <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">使用Workbench</a> 檔案。
@@ -184,7 +184,7 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
 >[!NOTE]
 >
-如果您已將AEM Forms設定為使用EMC Documentum®或IBM® FileNet存放庫提供者，而您想要登入存放庫(AEM Forms管理控制檯中已設定為預設的存放庫除外)，請以username@Repository提供使用者名稱。
+如果您已將AEM Forms設定為使用EMC Documentum®或IBM® FileNet Repository Provider ，而且您想登入儲存區域(AEM Forms管理主控台中設定為預設儲存區域以外的儲存區域)，請以username@Repository格式提供使用者名稱。
 
 ### 設定逾時設定 {#configuring-timeout-settings}
 
@@ -205,7 +205,7 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
    >[!NOTE]
    >
-   若要匯出憑證，請開啟網頁瀏覽器並登入管理主控台，在瀏覽器中安裝憑證，然後從瀏覽器將憑證匯出至暫存位置(或直接匯入 [Workbench_HOME]/workbench/jre/lib/security directory)。
+   若要匯出憑證，請開啟網頁瀏覽器並登入管理主控台。 在瀏覽器中安裝憑證，然後從瀏覽器將憑證匯出至暫存位置(或直接匯出至 [Workbench_HOME]/workbench/jre/lib/security directory)。
 
 1. 將憑證複製到 [Workbench_HOME]/workbench/jre/lib/security目錄。
 
@@ -223,7 +223,7 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
 如果您的應用程式透過自動更新XFA內容來即時產生唯一的範本，則應考慮快取作業的下列方面。 實際上，每個交易都使用新的唯一範本。
 
-當表單產生器或輸出搜尋或更新特定表單範本之快取中的專案時，它會使用數個索引鍵值來找出將存取的特定快取專案。
+當表單產生器或輸出搜尋或更新特定表單範本之快取中的專案時，它會使用數個索引鍵值來找出存取的特定快取專案。
 
 * **範本檔案名稱**：用作快取表單主要唯一識別碼的範本的位置和檔案名稱。
 * **時間戳記**：範本檔案包含用於判斷表單上次更新時間的時間戳記。
@@ -236,18 +236,21 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
 
 Forms服務會參考檔案名稱或存放庫位置來接收範本，或是以記憶體中的XML物件形式來接收範本。
+
 * **參考傳遞的範本**：使用內容根和表單名稱。 如果使用此方法在所有要求中傳遞不同檔案名稱的不重複範本，磁碟快取會無限成長，且永遠不會重複使用。 為了避免此問題，必須使用相同的檔案名稱傳遞唯一範本，以確保為所有請求更新相同的快取。
-* **依據值傳遞的範本**：使用範本位元組，以及使用inDataDoc引數的資料。 如果使用此方法傳遞具有不同UUID的不重複範本，磁碟快取會無限成長，且永遠不會重複使用。 為避免發生此問題，應從所有範本中移除UUID屬性，以確保未建立範本的快取。 或者，傳遞相同的非Null UUID可讓您建立快取物件，但會確保隨著每個請求更新相同的快取。
+* **依據值傳遞的範本**：使用範本位元組，以及使用inDataDoc引數的資料。 如果使用此方法傳遞具有不同UUID的不重複範本，磁碟快取會無限成長，而且永遠不會重複使用。 為避免發生此問題，應從所有範本中移除UUID屬性，以確保未建立範本的快取。 或者，傳遞相同的非Null UUID可讓您建立快取物件，但會確保隨著每個請求更新相同的快取。
 
 為避免快取無限成長，請考慮以下因素，以使用新的AEM Forms API （即renderHTMLForm2和renderPDFForm2）呈現動態產生的範本。
 
 使用新API時，範本會作為檔案物件傳遞，並根據是否被鈍化，在Forms服務中處理。
 
 對於以UUID和內容根目錄作為快取索引鍵的鈍化檔案，請考慮以下方面：
+
 * 系統不會為沒有UUID的被動式輸入範本建立快取。
 * 如果傳遞了超過一個具有相同UUID和內容根目錄的被動式輸入範本，則會覆寫相同的快取。
 
 對於檔案名稱和內容根目錄作為快取鍵的非鈍化檔案，請考慮以下方面：
+
 * 對於非被動式輸入範本，快取取決於產生檔案的內容根目錄和檔案名稱。
 相同的快取只會用於內容根目錄和範本檔案名稱相同的請求。
 下列最佳實務可確保將動態產生的範本傳遞至Forms服務時，快取不會無休止地增加：
@@ -256,7 +259,7 @@ Forms服務會參考檔案名稱或存放庫位置來接收範本，或是以記
 
 ### 解除安裝Workbench {#uninstalling-workbench}
 
-使用[控制檯]中的[新增或移除程式]功能來啟動解除安裝程式。 Workbench和Designer應用程式有不同的解除安裝程式。
+使用[控制檯]中的[新增或移除程式]功能，您可以啟動[解除安裝程式]。 Workbench和Designer應用程式有不同的解除安裝程式。
 
 ## 設定AEM Forms XDC編輯器 {#configuring-aem-forms-xdc-editor}
 
@@ -265,9 +268,11 @@ Forms服務會參考檔案名稱或存放庫位置來接收範本，或是以記
 在網路印表機管理員使用XDC編輯器之前，重新定位範例XDC檔案，並參閱使用XDC編輯器建立裝置設定檔。
 
 **取得範例XDC檔案**：
+
 1. 在AEM Forms伺服器上，找到XDC資料夾，位於 [AEM Forms根目錄]\sdk\samples\Output\IVS.
 1. 將此資料夾的內容複製到可從Workbench或Eclipse系統存取的目錄中。
 
 **取得XDC編輯器說明**：
+
 1. 前往AEM Forms檔案網站。
 1. 按一下 **開發** 標籤並導覽至使用XDC編輯器建立裝置設定檔。 下載xdc_editor_help_web.zip檔案，並按照Readme檔案提供的指示來安裝說明檔案。

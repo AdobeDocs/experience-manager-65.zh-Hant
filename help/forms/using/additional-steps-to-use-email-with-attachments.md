@@ -1,10 +1,10 @@
 ---
 title: 取得含附件的電子郵件的其他步驟
-description: 修正您無法在JEE平台上擷取AEM Forms之附件的電子郵件時的錯誤。
+description: 瞭解當您無法在JEE平台上擷取AEM Forms的電子郵件附件時，如何修正錯誤。
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,7 @@ ht-degree: 0%
 # 無法取得JEE平台上AEM Forms的電子郵件（含附件）{#unable-to-get-email-with-attachments}
 
 此問題適用於下列版本：
+
 * Experience Manager6.5 Forms
 
 ## 問題 {#issue}
@@ -37,7 +38,7 @@ ht-degree: 0%
 
 1. 安裝 `java.mail-1.5.jar` 取得自步驟3。 此步驟會重新啟動JEE部署的sling屬性。 等待已安裝的套件組合： `http://<server name>:<port>/lc/system/console/bundles` 將狀態顯示為 **作用中**.
 
-   >注意：如果是，狀態仍為 **非作用中**，重新啟動   **JBoss®** 從 **服務主控台**.
+   >如果狀態仍為 **非作用中**，重新啟動   **JBoss®** 從 **服務主控台**.
 
 
 1. 安裝 `javax.mail-1.5.6.redhat-1.jar`使用步驟5下載的檔案。

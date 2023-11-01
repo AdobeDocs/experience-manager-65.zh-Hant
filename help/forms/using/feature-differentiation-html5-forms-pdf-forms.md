@@ -1,18 +1,16 @@
 ---
 title: HTML5表單與PDF forms之間的功能差異
-description: 瞭解HTML5表單與PDF forms之間的差異。
-uuid: 6ddee197-d108-4897-9976-77d115a06504
+description: 瞭解HTML5表單與PDF forms之間的功能差異。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: bdd97c20-d1f2-4898-9862-1a6a8071be88
 docset: aem65
 feature: Mobile Forms
 exl-id: 3150f95f-7150-4eee-b5a9-121422dec2a1
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '447'
 ht-degree: 2%
 
 ---
@@ -50,7 +48,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>分頁<br /> </td>
-   <td><p>HTML5表單會分成面板和方塊，以提供類似於PDF forms的外觀。 頁面大小會以動態方式計算。 如果HTML5表單中頁面的所有內容都刪除或標籤為隱藏，則會隱藏空白頁面，且空白頁面上方和下方頁面之間不會顯示空白空間（空格）。</p> <p>如果資料合併或指令碼新增內容至頁面，則頁面長度會展開以容納新新增的內容。 不會將任何新頁面新增至表單，以容納新新增的內容。 </p> <p><strong>注意：</strong> 當HTML5表單中頁面的所有內容都刪除或標籤為隱藏時，空白頁面（空格）在第一頁和第二頁之間保持可見，但在任何其他頁面之間則不會顯示。</p> </td>
+   <td><p>HTML5表單會分成面板和方塊，以提供類似於PDF forms的外觀。 頁面大小會以動態方式計算。 如果HTML5表單中頁面的所有內容已刪除或標籤為隱藏，則會隱藏空白頁面。 空白頁面上方和下方頁面之間不會顯示空白字元（空格）。</p> <p>如果資料合併或指令碼新增內容至頁面，則頁面長度會展開以容納新新增的內容。 不會將任何新頁面新增至表單，以容納新新增的內容。 </p> <p><strong>注意：</strong> 當HTML5表單中頁面的所有內容都刪除或標籤為隱藏時，空白頁面（空格）在第一頁和第二頁之間保持可見，但在任何其他頁面之間則不會顯示。</p> </td>
    <td>PDF中的分頁取決於合併的資料內容或使用者內容，而頁面計數會據此增加/減少。</td>
   </tr>
   <tr>
@@ -65,7 +63,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>XFA指令碼API</td>
-   <td>支援最常用的XFA指令碼建構。 如需支援的建構的詳細資訊清單，請參閱 <a href="/help/forms/using/scripting-support.md">指令碼支援</a>.</td>
+   <td>支援最常用的XFA指令碼建構。 如需支援的建構的詳細清單，請參閱 <a href="/help/forms/using/scripting-support.md">指令碼支援</a>.</td>
    <td>支援所有XFA指令碼建構。</td>
   </tr>
   <tr>

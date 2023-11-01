@@ -1,8 +1,8 @@
 ---
 title: 無法還原適用於JEE叢集伺服器的損毀CRX存放庫
-description: 還原損毀CRX存放庫的步驟。
+description: 瞭解如何還原已損壞的CRX存放庫的步驟。
 exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 2%
@@ -21,7 +21,6 @@ ht-degree: 2%
 
 ## 解決方案 {#solution}
 
-執行以下步驟以解決問題：
 1. 前往 `https://[AEM Forms Server]:[port]/system/console/bundles`。
 
 1. 找到 `oak-core` 套件組合併檢查其是否正在執行。
@@ -33,6 +32,4 @@ ht-degree: 2%
 
 ## 套用至 {#applies-to}
 
-此解決方案適用於：
-
-* JEE叢集上的AEM Forms
+此解決方案適用於JEE叢集上的AEM Forms 。

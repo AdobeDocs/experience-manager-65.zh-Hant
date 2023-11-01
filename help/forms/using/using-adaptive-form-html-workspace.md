@@ -1,14 +1,12 @@
 ---
 title: 在HTML Workspace中使用最適化表單
-description: 瞭解如何在HTML Workspace中使用最適化表單，以讓現場工作人員可存取其裝置上的表單。
-uuid: 473d5daf-a3ed-449f-9136-585755b59922
+description: 瞭解如何在HTML Workspace中使用最適化表單，讓現場工作人員存取其裝置上的表單。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 2b6875cd-2ee7-4aa8-90c7-d33583dc2f0e
 docset: aem65
 exl-id: 15b9ae98-059f-4bf7-bfdd-9cfeb8eb30a4
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '704'
 ht-degree: 0%
@@ -19,7 +17,7 @@ ht-degree: 0%
 
 JEE上的AEM Forms提供在HTML Workspace中使用最適化表單的功能。
 
-由於可以在流程設計期間選擇XDP，因此新增了從現有的最適化表單AEM存放庫瀏覽的功能。 此功能讓流程設計人員能夠在「起點」和「任務」中設定最適化表單。
+由於可以在流程設計期間選擇XDP，因此新增了從現有的最適化表單AEM存放庫瀏覽的功能。 此功能可讓流程設計人員在「起點」和「工作」中設定最適化表單。
 
 ## 流程設計體驗 {#process-design-experience}
 
@@ -43,11 +41,11 @@ JEE上的AEM Forms提供在HTML Workspace中使用最適化表單的功能。
 
 1. 若要提交最適化表單，請使用 **提交** 按鈕或路由動作可使用，就像行動Forms中的情況。 最適化表單的任何提交型別按鈕都會隱藏。
 
-1. **最適化表單全域工具列可見性**：如果流程設計工具隱藏全域/最上層工具列，則工具列和按鈕不會出現在調適型表單上。
+1. **最適化表單全域工具列可見性**：如果Process Designer隱藏全域/最上層工具列，工具列和按鈕不會顯示在調適型表單上。
 
-1. **最適化Forms的工作區導覽控制項**：下一頁/上一頁按鈕與HTML Workspace中適用性表單的儲存、提交和路由動作按鈕一起提供。 按一下「下一個/上一個」按鈕，在HTML Workspace中導覽最適化表單的面板。 「下一個/上一個」按鈕提供深層導覽，類似於最適化表單之「行動」檢視中的導覽控制項。
+1. **最適化Forms的工作區導覽控制項**：下一頁/上一頁按鈕與HTML Workspace中適用性表單的儲存、提交和路由動作按鈕一起提供。 按一下「下一步/上一個」按鈕，即可在HTML Workspace中導覽最適化表單的面板。 「下一個/上一個」按鈕提供深層導覽，類似於最適化表單之「行動」檢視中的導覽控制項。
 
-1. **Adaptive Form的eSign Services和摘要元件**：摘要元件在HTML Workspace中無法運作。 換言之，如果最適化表單有摘要元件，則不會在工作區中顯示。 工作區使用者按一下HTML Workspace中的提交或路由動作，而不是設計元件中的自動提交。 檔案簽署後，會顯示為平面簽署的檔案。 按一下 **提交** 或路由動作，以關閉/完成任務或「起點」。\
+1. **Adaptive Form的eSign Services和摘要元件**：摘要元件在HTML Workspace中無法運作。 換言之，如果最適化表單有摘要元件，則不會在工作區中顯示。 工作區使用者按一下HTML Workspace中的提交或路由動作，而不是電子簽章元件中的自動提交。 檔案簽署後，會顯示為平面簽署的檔案。 按一下 **提交** 或路由動作，讓您能夠關閉/完成任務或「起點」。\
    已簽署的檔案會從eSign服務伺服器收集，而資料xml檔案會轉送至程式中的下一個步驟。
 
 ## 在流程設計中使用調適型表單的步驟 {#steps-to-use-adaptive-forms-in-process-design}
@@ -58,13 +56,13 @@ JEE上的AEM Forms提供在HTML Workspace中使用最適化表單的功能。
 
    ![建立新的應用程式](assets/create_new_appl.png)
 
-   建立新的應用程式
+   建立應用程式
 
 1. 建立程式，或使用應用程式中的現有程式。
 
    ![建立新程式](assets/create_new_process.png)
 
-   建立新程式
+   建立程式
 
 1. 建立「起點」或「指派任務」，然後按兩下它。
 1. 在 **[!UICONTROL 簡報與資料]** 區段，選取 **[!UICONTROL 使用CRX資產]** 並按一下資產前的省略符號。

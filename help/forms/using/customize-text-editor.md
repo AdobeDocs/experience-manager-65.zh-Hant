@@ -1,17 +1,15 @@
 ---
 title: 自訂文字編輯器
-description: 瞭解如何在AEM Forms環境中自訂文字編輯器。
-uuid: 598246fe-8f15-49b6-b6d3-9154bebcd27e
+description: 瞭解如何在Adobe Experience Manager Forms環境中自訂文字編輯器。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 666fee78-a103-44dc-afe7-71b90ce219b7
 docset: aem65
 feature: Correspondence Management
 exl-id: 1dd3f55c-24f7-4331-a9a3-c9223e613fec
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '604'
 ht-degree: 1%
 
 ---
@@ -29,7 +27,7 @@ ht-degree: 1%
 * 字型系列與大小、高度、字母間距及日期格式的預設值
 * 專案符號縮排
 
-若要這麼做，您需要：
+請執行下列動作：
 
 1. [在CRX中編輯tbxeditor-config.xml檔案來自訂字型](#customizefonts)
 1. [新增自訂字型至使用者端電腦](#addcustomfonts)
@@ -159,14 +157,14 @@ ht-degree: 1%
       </editorConfig>
       ```
 
-   1. 在檔案中進行必要的變更，以變更字型設定中的下列專案：
+   1. 在檔案中進行必要的變更，以便變更字型設定中的下列專案：
 
       * 新增或移除字型系列與大小
       * 高度和字母間距等屬性
       * 字型系列與大小、高度、字母間距及日期格式的預設值
       * 專案符號縮排
 
-      例如，若要新增名為Sazanami Mincho Medium的日文字型，您需要在XML檔案中建立下列專案： `<font>Sazanami Mincho Medium</font>`. 您還需要在使用者端電腦上安裝此字型，以存取及使用字型自訂。 如需詳細資訊，請參閱 [新增自訂字型至使用者端電腦](#addcustomfonts).
+      例如，若要新增名為Sazanami Mincho Medium的日文字型，您必須在XML檔案中建立下列專案： `<font>Sazanami Mincho Medium</font>`. 您也必須將此字型安裝在使用者端電腦上，以用來存取及使用字型自訂。 如需詳細資訊，請參閱 [新增自訂字型至使用者端電腦](#addcustomfonts).
 
       您也可以變更文字各方面的預設值，並藉由移除專案，從文字編輯器中移除字型。
 
@@ -174,7 +172,7 @@ ht-degree: 1%
 
 ## 新增自訂字型至使用者端電腦 {#addcustomfonts}
 
-當您在「通訊管理」文字編輯器中存取字型時，它必須出現在您用來存取「通訊管理」的使用者端機器中。 若要能夠在文字編輯器中使用自訂字型，您必須先在使用者端電腦上安裝相同的字型。
+當您在「通訊管理」文字編輯器中存取字型時，它必須存在於您用來存取「通訊管理」的使用者端機器中。 若要能夠在文字編輯器中使用自訂字型，您必須先在使用者端電腦上安裝相同的字型。
 
 如需有關安裝字型的詳細資訊，請參閱下列內容：
 
@@ -183,7 +181,7 @@ ht-degree: 1%
 
 ## 存取字型自訂 {#access-font-customizations}
 
-在CRX的tbxeditor-config.xml檔案中變更字型，並在用於存取AEM Forms的使用者端電腦上安裝所需字型後，變更會出現在文字編輯器中。
+在您變更中的字型之後 `tbxeditor-config.xml` 在CRX中建立檔案並在用來存取AEM Forms的使用者端電腦上安裝所需字型，則變更會顯示在文字編輯器中。
 
 例如，Sazanami Mincho Medium字型已新增至 [在CRX中編輯tbxeditor-config.xml檔案來自訂字型](#customizefonts) 文字編輯器UI中顯示的程式如下：
 

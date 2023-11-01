@@ -1,15 +1,13 @@
 ---
 title: 「教學課程：建立表單資料模型」
-description: 設定MySQL作為資料來源、建立表單資料模型(FDM)、進行設定，以及測試AEM Forms。
-uuid: b9d2bb1b-90f0-44f4-b1e3-0603cdf5f5b8
+description: 瞭解如何設定MySQL作為資料來源、建立表單資料模型(FDM)、設定它，以及測試AEM Forms。
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
-discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
@@ -18,7 +16,7 @@ ht-degree: 1%
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-本教學課程是 [建立第一個最適化表單](../../forms/using/create-your-first-adaptive-form.md) 數列。 建議您依照序列時間順序來瞭解、執行和示範完整的教學課程使用案例。
+本教學課程是 [建立第一個最適化表單](../../forms/using/create-your-first-adaptive-form.md) 數列。 Adobe建議您依照時間順序來瞭解、執行和示範完整的教學課程使用案例。
 
 ## 關於教學課程 {#about-the-tutorial}
 
@@ -49,7 +47,7 @@ AEM [!DNL Forms] 資料整合模組可讓您從不同的後端資料來源(例�
 
 ## 步驟1：將MySQL資料庫設定為資料來源 {#config-database}
 
-您可以設定不同型別的資料來源，以建立表單資料模型。 在本教學課程中，我們將設定您設定並填入範例資料的MySQL資料庫。 如需其他支援的資料來源以及如何設定這些來源的相關資訊，請參閱 [AEM Forms資料整合](../../forms/using/data-integration.md).
+您可以設定不同型別的資料來源，以建立表單資料模型。 在本教學課程中，您會設定您已設定並填入範例資料的MySQL資料庫。 如需其他支援的資料來源以及如何設定這些來源的相關資訊，請參閱 [AEM Forms資料整合](../../forms/using/data-integration.md).
 
 執行以下動作來設定您的 [!DNL MySQL] 資料庫：
 
@@ -60,7 +58,7 @@ AEM [!DNL Forms] 資料整合模組可讓您從不同的後端資料來源(例�
 
    1. 點選 **[!UICONTROL 安裝/更新]**. 一個 [!UICONTROL 上傳/安裝套件組合] 對話方塊隨即顯示。
 
-   1. 點選 **[!UICONTROL 選擇檔案]** 以瀏覽並選取 [!DNL MySQL] JDBC驅動程式OSGi套件。 選取 **[!UICONTROL 開始套件組合]** 和 **[!UICONTROL 重新整理封裝]**，然後點選 **[!UICONTROL 安裝或更新]**. 確保 [!DNL Oracle Corporation's] 的JDBC驅動程式 [!DNL MySQL] 已啟用。 驅動程式已安裝。
+   1. 點選 **[!UICONTROL 選擇檔案]** 以瀏覽並選取 [!DNL MySQL] JDBC驅動程式OSGi套件。 選取 **[!UICONTROL 開始套件組合]** 和 **[!UICONTROL 重新整理封裝]**，然後點選 **[!UICONTROL 安裝或更新]**. [!DNL Oracle Corporation's]確保 的 [!DNL MySQL] JDBC 驅動程式處於活動狀態。驅動程式已安裝。
 
 1. 將資料庫配置為 [!DNL MySQL] 資料來源：
 
@@ -70,23 +68,23 @@ AEM [!DNL Forms] 資料整合模組可讓您從不同的後端資料來源(例�
 
       * **資料來源名稱：** 您可以指定任何名稱。 例如，指定 **WeRetailMySQL**.
       * **資料來源服務屬性名稱**：指定包含DataSource名稱的服務屬性名稱。 它是在將資料來源執行個體註冊為OSGi服務時指定。 例如， **資料來源。名稱**.
-      * **JDBC驅動程式類別**：指定JDBC驅動程式的Java類別名稱。 的 [!DNL MySQL] 資料庫，指定 **com.mysql.jdbc.Driver**.
-      * **JDBC 連接 URI：** 指定資料庫的連接URL。 對於 [!DNL MySQL] 在 連接埠 3306 和 weRetail 上運行綱要資料庫，URL為： `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **JDBC驅動程式類別**：指定JDBC驅動程式的Java™類別名稱。 的 [!DNL MySQL] 資料庫，指定 **com.mysql.jdbc.Driver**.
+      * **JDBC 連接 URI：** 指定資料庫的連接URL。 對於 [!DNL MySQL] 在 連接埠 3306 和 綱要 `weretail` 上運行的資料庫，URL為： `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
 
       >[!NOTE]
       >
-      > [!DNL MySQL]當資料庫位於防火牆後面時，資料庫主機名稱不是公共 DNS。資料庫的 IP 位址需要添加到 *AEM 主機電腦的 /etc/hosts* 檔中。
+      > [!DNL MySQL]當資料庫位於防火牆後面時，資料庫主機名稱不是公共 DNS。資料庫的 IP 位址必須添加到 *AEM 主機電腦的 /etc/hosts* 檔中。
 
-      * **使用者名稱：** 資料庫的使用者名稱。 必須啟用JDBC驅動程式才能與資料庫建立連線。
+      * **使用者名稱：** 資料庫的使用者名稱。 需要啟用 JDBC 驅動程式才能與資料庫建立連接。
       * **密碼：** 資料庫的密碼。 必須啟用JDBC驅動程式才能與資料庫建立連線。
 
       >[!NOTE]
       >
-      >AEM Forms不支援NT驗證 [!DNL MySQL]. 前往位於 HTTPs://localhost:4502/system/console/configMgr ](https://localhost:4502/system/console/configMgr) AEM [ Web 主控台並搜尋「Apache Sling 連線共用資料來源」。對於「JDBC 連接 URI」屬性將「integratedSecurity」的值設置為 False，並使用創建的使用者名和密碼與資料庫連接 [!DNL MySQL] 。
+      >AEM Forms不支援NT驗證 [!DNL MySQL]. 前往位於 HTTPs://localhost:4502/system/console/configMgr ](https://localhost:4502/system/console/configMgr) AEM [ Web 主控台並搜尋「Apache Sling 連線共用資料來源」。對於「JDBC 連接 URI」屬性，將「集成安全」的值設置為 False，並使用創建的使用者名和密碼與資料庫連接 [!DNL MySQL] 。
 
       * **借用測試：** 啟用借 **[!UICONTROL 用]** 測試選項。
       * **返回時測試：** 啟用「 **[!UICONTROL 返回]** 時測試」選項。
-      * **驗證查詢：** 指定 SQL SELECT 查詢以驗證池中的連接。 查詢至少必須傳回一列。 例如， **選取 &#42; 從customerdetails**.
+      * **驗證查詢：** 指定SQL SELECT查詢來驗證集區的連線。 查詢至少必須傳回一列。 例如， **選取 &#42; 從customerdetails**.
       * **交易隔離**：將值設為 **READ_COMMITTED**.
 
         保留其他屬性為預設值 [值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) 然後點選 **[!UICONTROL 儲存]**.
@@ -97,7 +95,7 @@ AEM [!DNL Forms] 資料整合模組可讓您從不同的後端資料來源(例�
 
 ## 步驟2：建立表單資料模型 {#create-fdm}
 
-AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模型](data-integration.md) 來自已設定的資料來源。 您可以在表單資料模型中使用多個資料來源。 在我們的使用案例中，我們將使用已設定的 [!DNL MySQL] 資料來源。
+AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模型](data-integration.md) 來自已設定的資料來源。 您可以在表單資料模型中使用多個資料來源。 對於此使用案例，您可以使用已設定的 [!DNL MySQL] 資料來源。
 
 執行下列操作以建立表單資料模型：
 
@@ -126,7 +124,7 @@ AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模�
 
    ![default-fdm](assets/default-fdm.png)
 
-1. 展開WeRailMySQL資料來源樹狀結構。 從以下資料模型物件和服務中選取 **Weretail** > **customerdetails** 要建立資料模型的結構描述：
+1. 展開WeRailMySQL資料來源樹狀結構。 從以下資料模型物件和服務中選取 **Weretail** > **customerdetails** 結構描述以便建立資料模型：
 
    * **資料模型物件**：
 
@@ -167,19 +165,19 @@ AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模�
 
    1. 點擊 **[!UICONTROL 完成]** 以保存資料模型物件屬性。 然後，點擊 **[!UICONTROL 儲存]** 以保存表單資料模型。
 
-      **[!UICONTROL 獲取]** 和 **[!UICONTROL 更新]** 服務將添加為資料模型物件的預設服務。
+      此 **[!UICONTROL get]** 和 **[!UICONTROL 更新]** 服務會新增為資料模型物件的預設服務。
 
       ![data-model-object](assets/data-model-object.png)
 
 1. 前往 **[!UICONTROL 服務]** 標籤並設定 **[!UICONTROL get]** 和 **[!UICONTROL 更新]** 服務。
 
-   1. 選擇獲取 ]**服務，**[!UICONTROL  然後點擊 **[!UICONTROL 編輯 屬性]** 。「屬性」對話方塊開啟。
+   1. 選取 **[!UICONTROL get]** 服務並點選 **[!UICONTROL 編輯屬性]**. 將打開屬性對話方塊。
    1. 在編輯 屬性對話方塊中指定以下內容：
 
       * **標題** ：指定服務的標題。 例如：檢索送貨位址。
-      * **說明** ：指定包含服務詳細功能的說明。 例如：
+      * **說明**：指定包含服務詳細功能的說明。 例如：
 
-        此服務會從擷取送貨地址和其他客戶詳細資料 [!DNL MySQL] 資料庫
+        此服務會從以下位置擷取送貨地址和其他客戶詳細資料： [!DNL MySQL] 資料庫
 
       * **輸出模型物件**：選取包含客戶資料的結構描述。 例如：
 
@@ -207,7 +205,7 @@ AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模�
 
       * **輸出型別**：選取 **布林值**.
 
-      * **引數**：選取名為的引數 **ID** 和 **customerdetails**.
+      * **引數**：選取引數名稱 **ID** 和 **customerdetails**.
 
       點選 **[!UICONTROL 完成]**. 此 **[!UICONTROL 更新]** 更新客戶詳細資料的服務 [!DNL MySQL] 資料庫已設定。
 
@@ -235,6 +233,6 @@ AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模�
 
    ![test-write-model](assets/test-write-model.png)
 
-   現在，如果您再次測試id 7107215的讀取模式服務，它將擷取並顯示更新的客戶詳細資訊，如下所示。
+   現在，如果您再次測試id 7107215的讀取模型服務，它會擷取並顯示更新的客戶詳細資訊，如下所示。
 
    ![已讀取 — 已更新](assets/read-updated.png)

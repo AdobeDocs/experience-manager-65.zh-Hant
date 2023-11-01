@@ -1,32 +1,32 @@
 ---
 title: Forms入口網站 |處理使用者資料
-description: 管理AEM Forms入口網站上的使用者資料，例如存取、刪除和資料儲存。
+description: 瞭解如何管理AEM Forms Portal上的使用者資料，例如存取、刪除和資料存放區。
 contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin
 exl-id: 791524a4-a8bb-4632-a68d-e96864e139a9
-source-git-commit: bb1e1790b8b9e6d6224c62b1f51d8af50a82e975
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
 
 # Forms入口網站 |處理使用者資料 {#forms-portal-handling-user-data}
 
-[!DNL AEM Forms] Portal提供的元件可用於列出最適化表單、HTML5表單以及上的其他Forms資產 [!DNL AEM Sites] 頁面。 此外，您可以將其設定為顯示草稿並向登入使用者提交最適化表單和HTML5表單。 如需表單入口網站的詳細資訊，請參閱 [在入口網站上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md).
+[!DNL AEM Forms] Portal提供的元件可用於列出最適化表單、HTML5表單以及上的其他Forms資產 [!DNL AEM Sites] 頁面。 此外，您可以將其設定為顯示草稿並向登入使用者提交最適化表單和HTML5表單。 如需Forms入口網站的詳細資訊，請參閱 [在入口網站上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md).
 
-當登入的使用者將最適化表單儲存為草稿或提交時，他們顯示在表單入口網站上的草稿和提交索引標籤中。 草擬或提交表單的資料會儲存在為AEM部署設定的資料存放區中。 匿名使用者的草稿和提交內容不會顯示在表單入口網站頁面上，但資料會儲存在已設定的資料存放區中。 另請參閱 [為草稿和提交設定儲存服務](/help/forms/using/configuring-draft-submission-storage.md).
+當登入的使用者將最適化表單儲存為草稿或提交時，他們會顯示在Forms入口網站上的草稿和提交索引標籤中。 草擬或提交表單的資料會儲存在為AEM部署設定的資料存放區中。 匿名使用者的草稿和提交內容不會顯示在Forms入口網站頁面上，但資料會儲存在已設定的資料存放區中。 另請參閱 [為草稿和提交設定儲存服務](/help/forms/using/configuring-draft-submission-storage.md).
 
 ## 使用者資料和資料存放區 {#user-data-and-data-stores}
 
 Forms入口網站會在下列情況下儲存草稿與已提交表單的資料：
 
 * 在最適化表單中設定的提交動作為 **Forms Portal提交動作**.
-* 用於提交動作，而不是 **Forms Portal提交動作**，則 **[!UICONTROL 將資料儲存在表單入口網站中]** 選項已啟用於 **[!UICONTROL 提交]** 最適化表單容器的屬性。
+* 用於提交動作，而不是 **Forms Portal提交動作**，則 **[!UICONTROL 在Forms入口網站中儲存資料]** 選項已啟用於 **[!UICONTROL 提交]** 最適化表單容器的屬性。
 
-針對每個已登入及匿名使用者的草稿與已提交表單，表單入口網站會儲存下列資料：
+對於登入和匿名使用者的每個草稿和提交表單，Forms入口網站都會儲存下列資料：
 
 * 表單中繼資料，例如，表單名稱、表單路徑、草稿或提交ID、附件路徑和使用者資料ID
 * 表單附件為資料位元組
@@ -48,7 +48,7 @@ Forms入口網站會在下列情況下儲存草稿與已提交表單的資料：
   </tr>
   <tr>
    <td><p>遠端</p> </td>
-   <td><p>製作和遠端AEM例項的AEM存放庫</p> </td>
+   <td><p>作者和遠端AEM例項的AEM存放庫</p> </td>
    <td><p><code>/content/forms/fp/</code></p> </td>
   </tr>
   <tr>
@@ -69,7 +69,7 @@ AEM例項（作者、發佈或遠端）中針對已登入及匿名使用者的�
 
 #### 存取使用者資料 {#access-user-data}
 
-當登入的使用者儲存草稿或提交表單時，會使用她的使用者ID建立子節點。 例如，使用者ID為「 」的Sarah Rose的草稿和提交資料 `srose` 儲存在 `/content/forms/fp/srose/` AEM存放庫中的節點。 在使用者ID節點中，資料會以階層結構組織。
+當登入的使用者儲存草稿或提交表單時，會使用其使用者ID建立子節點。 例如，使用者ID為「 」的Sarah Rose的草稿和提交資料 `srose` 儲存在 `/content/forms/fp/srose/` AEM存放庫中的節點。 在使用者ID節點中，資料會以階層結構組織。
 
 下表說明所有草稿的資料如何依據於 `srose` 儲存在AEM存放庫中。
 

@@ -1,23 +1,21 @@
 ---
 title: 登入AEM Forms工作流程
-description: 偵錯AEM Forms工作流程問題並啟用AEM Forms工作流程的偵錯記錄以檢視記錄。
-uuid: 869d0271-c7e3-4b6d-8e63-893dc6af8b8a
+description: 瞭解如何偵錯AEM Forms工作流程問題並啟用AEM Forms工作流程的偵錯記錄以檢視記錄。
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '292'
 ht-degree: 5%
 
 ---
 
 # 登入AEM Forms工作流程{#logging-in-aem-forms-workflows}
 
-Forms工作流程步驟提供詳細的記錄，以便您輕鬆偵錯工作流程相關問題。 啟用AEM Forms工作流程的偵錯記錄以檢視記錄。
+Forms Workflow步驟提供詳細的記錄檔，以便您輕鬆偵錯工作流程相關問題。 啟用AEM Forms工作流程的偵錯記錄以檢視記錄。
 
 依預設，所有記錄資訊都可在 **error.log** 檔案位於 */crx-repository/logs/* 目錄。
 
@@ -76,7 +74,7 @@ Forms工作流程步驟提供詳細的記錄，以便您輕鬆偵錯工作流程
 
 ## 啟用AEM Forms工作流程的偵錯記錄 {#enable-debug-logging-for-aem-forms-workflows}
 
-執行以下步驟，為AEM Forms工作流程啟用偵錯記錄：
+請執行以下動作，以啟用AEM Forms工作流程的偵錯記錄：
 
 1. 請前往AEM Web主控台組態管理員：
 

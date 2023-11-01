@@ -1,15 +1,13 @@
 ---
 title: 通訊管理 |處理使用者資料
-description: AEM Forms環境中的通訊管理和處理使用者資料。
-uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
+description: 瞭解在Adobe Experience Manager Forms環境中通訊管理和處理使用者資料。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 role: Admin
 exl-id: a0c6a02c-47a3-4e70-a14c-953ee016b8e4
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -73,7 +71,7 @@ AEM Forms Correspondence Management可讓您建立、管理及簡化安全且個
 
 通訊管理提供API，您可以使用這些API來尋找和存取草稿與已提交的信件例項。 使用API，您可以使用信件例項ID或儲存或提交信件的使用者來尋找和開啟信件例項。 如需詳細資訊，請參閱 [存取信件例項的API](/help/forms/using/cm-apis-to-access-letter-instances.md).
 
-或者，您可以使用CRX DELite導覽至AEM存放庫中的信件例項。 另請參閱 [使用者資料和資料存放區](/help/forms/using/correspondence-management-handling-user-data.md#data) 以取得有關儲存資料和存放庫位置的資訊。
+或者，您可以使用CRXDE Lite導覽至AEM存放庫中的信件例項。 另請參閱 [使用者資料和資料存放區](/help/forms/using/correspondence-management-handling-user-data.md#data) 以取得有關儲存資料和存放庫位置的資訊。
 
 ### 刪除使用者資料 {#delete-user-data}
 

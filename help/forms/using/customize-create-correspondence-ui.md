@@ -7,7 +7,7 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 1%
@@ -83,7 +83,7 @@ ht-degree: 1%
 
    1. 按一下&#x200B;**「確定」**。css資料夾是在指定的路徑中建立。
 
-1. 在應用程式資料夾中，建立名為的資料夾 `imgs` 路徑/結構類似於imgs資料夾（在ccrui資料夾中）。
+1. 在應用程式資料夾中，建立名為的資料夾 `imgs` 路徑/結構類似於 `imgs` 資料夾（在ccrui資料夾中）。
 
    1. 用滑鼠右鍵按一下 **影像** 資料夾並選取「 」 **覆蓋節點**： `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 請確定「覆蓋節點」對話方塊是否具備下列值：

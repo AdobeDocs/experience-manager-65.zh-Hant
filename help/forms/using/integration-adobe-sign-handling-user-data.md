@@ -1,14 +1,14 @@
 ---
 title: 與Adobe Sign整合 |處理使用者資料
-description: AEM Forms整合Adobe Sign，以便在最適化表單中提供電子簽章。 它支援各種工作流程的多個簽署選項。
+description: 瞭解AEM Forms與Adobe Sign的整合，以在適用性表單中提供電子簽章。 它支援各種工作流程的多個簽署選項。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Acrobat Sign
 role: Admin
 exl-id: b43ed9b7-b1ef-4878-ae3b-643b558eed7b
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---

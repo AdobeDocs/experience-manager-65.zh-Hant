@@ -1,13 +1,13 @@
 ---
 title: AEM Forms JEE修補程式安裝程式
-description: AEM Forms JEE修補程式安裝程式，用於修正AEM 6.5 Forms元件中的問題。
+description: 瞭解如何使用AEM Forms JEE修補程式安裝程式來修正AEM 6.5 Forms元件中的問題。
 uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '535'
 ht-degree: 20%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->[聯絡支援人員](https://www.adobe.com/tw/account/sign-in.supportportal.html) 以取得詳細資訊或修正程式。
+>[聯絡支援人員](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) 以取得詳細資訊或修正程式。
 
 ## 關於修補程式安裝程式 {#about-the-patch-installer}
 
@@ -39,10 +39,10 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
       * （Windows 32位元） `Windows\Disk1\InstData\VM`
       * （Windows 64位元） `Windows_64Bit`\ `Disk1\InstData\VM`
 
-   * **Linux**
+   * **Linux®**
 導覽至適當的目錄，然後在命令提示字元中輸入 `./aem65_cfp_install.bin`.
 
-      * (Linux) `Linux/Disk1/InstData/NoVM`
+      * (Linux®) `Linux/Disk1/InstData/NoVM`
 
    這會啟動安裝精靈，引導您完成安裝。
 
@@ -52,8 +52,8 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 1. 閱讀 Pre-Installation Summary 資訊，然後按一下 **[!UICONTROL Install]**。
 1. 安裝後，按一下 **[!UICONTROL Next]**，將快速修正更新套用至已安裝的檔案。
 
-1. **[僅適用於Windows]：** 執行下列其中一個步驟：
-   * 取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行 **組態管理員** 藉由使用 **ConfigurationManager.bat** 檔案位於 `[aem-forms root]\configurationManager\bin`.
+1. **[僅適用於Windows]：** 執行下列動作：
+   * 取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行 **組態管理員** 藉由使用 **ConfigurationManager.bat** 中的檔案 `[aem-forms root]\configurationManager\bin`.
 
    * 或取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行前 **組態管理員** 使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，導覽至 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目錄和取代 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 檔案。
 
@@ -69,10 +69,10 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 
 1. 視您的應用程式伺服器而定，選擇下列其中一份檔案，然後依照 *設定和部署AEM表單* 區段。
 
-   * [安裝和部署AEM forms for JBoss](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
-   * [安裝和部署AEM forms for WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+   * [安裝和部署AEM forms for JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [安裝和部署AEM forms for WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
-1. （僅限JBoss）安裝修補程式並設定伺服器後，刪除JBoss應用程式伺服器的臨時和工作目錄。
+1. (僅限JBoss®)安裝修補程式並設定伺服器後，刪除JBoss®應用程式伺服器的tmp和工作目錄。
 
 ## 部署後設定 {#post-deployment-configurations}
 
@@ -91,4 +91,4 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 * 文件安全性
 * Foundation JEE
 
-[聯絡支援人員](https://www.adobe.com/tw/account/sign-in.supportportal.html)
+[聯絡支援人員](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)

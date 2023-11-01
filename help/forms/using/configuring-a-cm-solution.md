@@ -1,16 +1,14 @@
 ---
 title: 設定通訊管理解決方案
-description: 在AEM Forms環境中設定通訊管理解決方案。
-uuid: 76b25004-fe47-44d7-9bed-7c0fd963306b
+description: 瞭解如何在AEM Forms環境中設定通訊管理解決方案。
 topic-tags: correspondence-management
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
-discoiquuid: 186ca75c-638b-4057-826e-cd5d56aa0397
 feature: Correspondence Management
 exl-id: f7f5eb0d-a283-45ea-84d3-d6375d2bb95b
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '301'
 ht-degree: 1%
 
 ---
@@ -44,7 +42,7 @@ ht-degree: 1%
 1. 在 **[!UICONTROL ActivationManager發佈URL]** 欄位，指定用於存取發佈執行個體ActivationManager的URL。 您可以提供下列URL。
 
    * **負載平衡器URL （建議使用）**：提供負載平衡器URL (如果您的Web伺服器是發佈伺服器陣列前面的負載平衡器（多個非叢集發佈執行個體）。
-   * **發佈執行個體URL**：提供任意發佈執行個體URL，如果您有單一發佈執行個體，或由於任何限制而無法從製作環境存取發佈伺服器陣列前端的Web伺服器。 如果指定的發佈執行個體發生問題，作者端會處理一個遞補機制。
+   * **發佈執行個體URL**：提供任意發佈執行個體URL，如果您有單一發佈執行個體，或由於任何限制而無法從製作環境存取發佈伺服器陣列前端的Web伺服器。 如果指定的發佈執行個體停止運作，作者端會有一個要處理的遞補機制。
    * **URL字串**：
 
      `https://<hostname>:<port>:/libs/fd/fdm/content/crud/lc.content.remote.activate.activationManager`

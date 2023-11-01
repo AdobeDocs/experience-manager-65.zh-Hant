@@ -1,15 +1,13 @@
 ---
 title: Forms JEE工作流程 |處理使用者資料
-description: AEM Forms JEE設計、建立和管理業務流程的工作流程。
-uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
+description: 瞭解如何使用AEM Forms JEE工作流程來設計、建立和管理業務流程。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 role: Admin
 exl-id: 847fa303-8d1e-4a17-b90d-5f9da5ca2d77
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1388'
 ht-degree: 0%
 
 ---
@@ -42,7 +40,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 
 ### 在已知工作流程發起人或參與者時，識別流程執行個體ID {#initiator-participant}
 
-執行以下步驟來識別工作流程發起人或參與者的流程執行處理ID：
+執行下列步驟，以便您識別工作流程發起人或參與者的流程執行處理ID：
 
 1. 在AEM Forms伺服器資料庫中執行以下命令，以從擷取工作流程發起人或參與者的主體ID `edcprincipalentity` 資料庫表格。
 
@@ -75,7 +73,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 
    對於孤立任務或任務，如果 `process_instance_id` 為0 （零），記下對應的任務ID並檢視 [處理孤立任務](#orphan).
 
-1. 請依照中的指示操作 [根據流程執行個體ID從工作流程執行個體中清除使用者資料](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 區段來刪除已識別程式執行個體ID的使用者資料。
+1. 請依照中的指示操作 [根據流程執行個體ID從工作流程執行個體中清除使用者資料](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 區段，以便刪除已識別程式執行個體ID的使用者資料。
 
 ### 當使用者資料儲存在原始變數中時，識別程式執行個體ID {#primitive}
 
@@ -85,7 +83,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 * **數值**：直接包含使用者ID。
 * **XML**：包含使用者ID，作為儲存為資料庫中文字欄的文字中的子字串，且可像字串一樣進行查詢。
 
-執行以下步驟，判斷以基本型別變數儲存資料的工作流程是否包含使用者的資料：
+執行以下步驟，以便您可以確定在基本型別變數中儲存資料的工作流程是否包含使用者的資料：
 
 1. 執行以下資料庫命令：
 
@@ -111,13 +109,13 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 
    查詢會傳回與指定之關聯的所有處理序執行個體ID `user_ID`.
 
-1. 請依照中的指示操作 [根據流程執行個體ID從工作流程執行個體中清除使用者資料](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 區段來刪除已識別程式執行個體ID的使用者資料。
+1. 請依照中的指示操作 [根據流程執行個體ID從工作流程執行個體中清除使用者資料](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 區段，以便刪除已識別程式執行個體ID的使用者資料。
 
 ### 根據流程執行個體ID從工作流程執行個體中清除使用者資料 {#purge}
 
 現在您已識別與使用者關聯的程式執行個體ID，請執行以下動作以從個別程式執行個體中刪除使用者資料。
 
-1. 執行以下命令，從擷取處理序執行個體的長期引動識別碼和狀態 `tb_process_instance` 表格。
+1. 執行以下命令，您便可以從擷取處理序執行個體的長期引動識別碼和狀態 `tb_process_instance` 表格。
 
    ```sql
    select long_lived_invocation_id, status from tb_process_instance where id='process_instance_id'
@@ -127,7 +125,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 
 1. 建立公開的執行個體 `ProcessManager` 使用者端( `com.adobe.idp.workflow.client.ProcessManager`)使用 `ServiceClientFactory` 具有正確連線設定的執行個體。
 
-   如需詳細資訊，請參閱以下專案的Java API參考： [類別ProcessManager](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html).
+   如需詳細資訊，請參閱以下專案的Java™ API參考： [類別ProcessManager](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html).
 
 1. 檢查工作流程例項的狀態。 如果狀態不是2 (COMPLETE)或4 (TERMINATED)，請先呼叫下列方法來終止執行個體：
 
@@ -137,7 +135,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 
    `ProcessManager.purgeProcessInstance(<long_lived_invocation_id>)`
 
-   此 `purgeProcessInstance` 如果已設定，方法會從AEM Forms伺服器資料庫和GDS中完全刪除指定之叫用ID的所有資料。
+   此 `purgeProcessInstance` 如果已設定，方法會從AEM Forms Server資料庫和GDS中完全刪除指定之叫用ID的所有資料。
 
 ### 處理孤立任務 {#orphan}
 
@@ -145,7 +143,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
 
 取得工作ID後，請執行以下作業從GDS和資料庫中清除具有孤立工作的相關檔案和資料。
 
-1. 在AEM Forms伺服器資料庫上執行以下命令，以擷取已識別工作ID的ID。
+1. 在AEM Forms伺服器資料庫上執行下列命令，以便擷取已識別工作ID的ID。
 
    ```sql
    select id from tb_form_data where task_id=<task_id>
@@ -185,7 +183,7 @@ AEM Forms JEE工作流程提供設計、建立和管理業務流程的工具。 
       delete from tb_dm_deletion where sessionid=<session_id>
       ```
 
-1. 執行以下命令，從AEM Forms伺服器資料庫刪除工作ID的資料：
+1. 執行以下命令，以便從AEM Forms伺服器資料庫刪除工作ID的資料：
 
    ```sql
    delete from tb_task_acl where task_id=<task_id>

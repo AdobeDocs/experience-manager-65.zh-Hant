@@ -1,17 +1,15 @@
 ---
 title: 自訂Forms Portal元件的範本
-description: AEM Forms使用者介面可讓使用者將中繼資料新增至表單。 自訂中繼資料可強化使用者在表單清單和搜尋貴組織時的體驗。
-uuid: 212109ca-85c8-4915-82e5-a18a0443be1b
+description: 瞭解AEM Forms使用者介面如何讓使用者將中繼資料新增至表單。 自訂中繼資料可強化使用者在表單列出和搜尋時的體驗。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
@@ -30,7 +28,7 @@ AEM Forms使用者介面可讓您將中繼資料新增至任何表單。 自訂�
 
 Forms入口網站可讓您在表單清單中使用自訂中繼資料。 為資產建立自訂範本時，您可以修改其版面，並在CSS樣式集中使用自訂中繼資料。
 
-執行以下步驟，為各種Forms Portal元件建立自訂範本。
+請務必遵守下列步驟，以建立各種Forms Portal元件的自訂範本。
 
 ## 建立自訂範本 {#creating-a-nbsp-custom-template}
 
@@ -55,7 +53,7 @@ Forms入口網站可讓您在表單清單中使用自訂中繼資料。 為資�
    以下影像說明「搜尋和製表器」元件的組態。
    ![建立sling：Folder](assets/1.png)
 
-1. 在此資料夾中建立檔案template.html作為自訂範本。
+1. 在此資料夾中建立檔案template.html，以便用作自訂範本。
 1. 寫入自訂範本並使用如下所述的自訂中繼資料。
 
 ## 工作範例 {#working-example}
@@ -105,7 +103,7 @@ Forms Portal提供預留位置語法，可顯示自訂/OOTB中繼資料。 顯�
 * **說明**：表單說明
 * **formUrl**：將表單轉譯為HTML的URL
 * **pdfUrl**：將表單轉譯為PDF的URL
-* **assetType**：資產型別。 有效值包括 **表單**，**PDF表單**， **列印表單**、和 **最適化表單**
+* **assetType**：資產型別。 有效值包括 **表單**， **PDF表單**， **列印表單**、和 **最適化表單**
 
 * **htmlStyle**&amp; **pdf樣式**：顯示呈現時分別使用的HTML圖示和PDF圖示樣式。 有效值為&quot;**__FP_display_none**」或空白。
 
@@ -121,7 +119,7 @@ Forms Portal提供預留位置語法，可顯示自訂/OOTB中繼資料。 顯�
    *在所討論的範例中，屬性 `${localize-Apply}` 和 `${localize-Download}` 用於將套用和下載文字當地語系化。*
 
 1. **排序支援**：按一下HTML元素來排序搜尋結果。 若要在表格配置中實施排序，請在特定表格標頭上新增「data-sortKey」屬性。 此外，將其值新增為您要排序的中繼資料。
-例如，對於格線檢視中的「Title」標頭，「data-sortKey」標頭的值為「title」。 按一下標題可對特定欄中的值進行排序。
+例如，對於格線檢視中的「Title」標頭，「data-sortKey」標頭的值為「title」。 按一下標題，以便排序特定欄中的值。
 
 1. **使用設定屬性**：搜尋與清單元件具有數個可在使用者介面上使用的設定。 例如，若要顯示透過編輯對話方塊儲存的HTML工具提示文字，請使用 `${config-htmlLinkText}` 屬性。 **同樣地，對於PDF工具提示文字，請使用** `${config-pdfLinkText}` 屬性。
 
@@ -134,7 +132,7 @@ Forms Portal提供預留位置語法，可顯示自訂/OOTB中繼資料。 顯�
 
 ### 草稿和提交元件 {#drafts-amp-submissions-component}
 
-* **路徑**：草稿/提交中繼資料節點的路徑。 將其與。HTML副檔名搭配使用，作為URL以開啟草稿或提交。
+* **路徑**：草稿/提交中繼資料節點的路徑。 將其與。HTML副檔名用作URL，以便您開啟草稿或提交。
 * **contextPath**：AEM執行個體的內容路徑
 * **第一字母**：最適化表單標題的第一個字母（大寫），已儲存為草稿或提交。
 * **formName**：最適化表單的標題，已儲存為草稿或已提交。
@@ -142,7 +140,7 @@ Forms Portal提供預留位置語法，可顯示自訂/OOTB中繼資料。 顯�
 * **submitID**：列出之提交的ID （僅用於提交區段的範本中）。
 * **狀態**：已提交表單的狀態。 （僅用於「提交」區段的範本）。
 * **說明**：與草稿或提交專案相關的最適化表單說明。
-* **diffTime**：目前時間和草稿的最後儲存動作之間的差異。 或者，也可以比較目前時間與提交的最後一次提交動作之間的差異。
+* **diffTime**：目前時間和草稿的最後儲存動作之間的差異。 或者，也可以選擇目前時間與上次提交之提交動作之間的差異。
 * **iconclass**：用於顯示草稿/提交內容的第一字母的CSS類別。 Forms Portal包含下列類別，提供各種不同色彩的背景。
 * **所有者**：建立草稿/提交的使用者。
 * **今天**：在DD中建立草稿或提交的日期:MM:yyyy格式。
@@ -162,7 +160,7 @@ Forms Portal提供預留位置語法，可顯示自訂/OOTB中繼資料。 顯�
 
 **C.** 用於每個表單的範本區段的可重複資料屬性
 
-**D.** 將「套用」字串當地語系化
+**D.** 本地化「套用」字串
 
 **E.** 使用設定屬性pdfLinkText
 
@@ -177,8 +175,8 @@ Forms Portal提供預留位置語法，可顯示自訂/OOTB中繼資料。 顯�
 
 ## 相關文章
 
-* [啟用表單入口網站元件](/help/forms/using/enabling-forms-portal-components.md)
-* [建立表單入口網站頁面](/help/forms/using/creating-form-portal-page.md)
+* [啟用Forms Portal元件](/help/forms/using/enabling-forms-portal-components.md)
+* [建立Forms入口網站頁面](/help/forms/using/creating-form-portal-page.md)
 * [使用API的網頁上列出表單](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [使用草稿和提交元件](/help/forms/using/draft-submission-component.md)
 * [自訂草稿和已提交表單的儲存](/help/forms/using/draft-submission-component.md)

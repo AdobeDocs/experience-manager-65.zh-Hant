@@ -1,14 +1,14 @@
 ---
 title: 存取信件例項的API
-description: 探索API，並使用它們在AEM Forms環境中以程式設計方式存取信件例項。
+description: 探索API，並使用它們以程式設計方式存取AEM Forms環境中的信件例項。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -134,8 +134,8 @@ Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName )
 
 信件例項可以是已提交或草稿型別。 開啟兩種信件例項型別會顯示不同的行為：
 
-* 在「已提交信件」例項的情況下，會開啟代表該信件例項的PDF。 儲存在伺服器上的提交信件例項也包含dataXML和已處理的XDP，這可用於完成並進一步自訂使用案例，例如建立PDF/A。
-* 如果是「草稿」信函例項，則建立通訊UI會重新載入到與建立草稿時完全相同的先前狀態
+* 如果存在「已提交」信件例項，則會開啟代表該信件例項的PDF。 儲存在伺服器上的提交信件例項也包含dataXML和已處理的XDP，這可用於完成並進一步自訂使用案例，例如建立PDF/A。
+* 如果存在「草稿」信件例項，則建立通訊UI會重新載入到與建立草稿時完全相同的先前狀態
 
 ### 開啟草稿字母例項  {#opening-draft-letter-instance-nbsp}
 

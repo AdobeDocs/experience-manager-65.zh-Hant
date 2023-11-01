@@ -1,16 +1,14 @@
 ---
 title: 「通訊管理：疑難排解」
-description: 處理在AEM Forms環境中儲存信函的過程中可能發生的錯誤。
-uuid: 25828cdd-110e-4a84-8f31-d82cd610a54f
+description: 瞭解如何處理在AEM Forms環境中儲存信函的過程中發生的錯誤。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 feature: Correspondence Management
 exl-id: cf06796b-bb8c-4a65-8f42-02fb0cfa3ebd
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '215'
 ht-degree: 1%
 
 ---
@@ -24,7 +22,7 @@ ht-degree: 1%
 儲存信函時會顯示下列其中一個錯誤：
 
 * 文字模組沒有資料繫結
-* 請提供以下專案所需的屬性資訊
+* 提供下列專案所需的屬性資訊
 
 ### 原因 {#reason}
 
@@ -50,5 +48,5 @@ ht-degree: 1%
 1. 前往 **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** 並以管理員身分登入。
 1. 選取 **通訊管理設定**.
 1. 在 **通訊管理設定**，停用 **啟用字母快取**&#x200B;然後按一下&#x200B;**儲存。**
-1. 啟用 **啟用字母快取** 然後按一下 **儲存**.
+1. 檢查 **啟用字母快取** 然後按一下 **儲存**.
 1. 重試檢視信件。

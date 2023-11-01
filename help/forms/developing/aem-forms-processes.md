@@ -1,17 +1,15 @@
 ---
 title: 瞭解AEM Forms流程
-description: AEM Forms程式包含表單建立、提交、資料處理、驗證、整合、工作流程自動化和輸出管理。
-uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
+description: 瞭解AEM Forms的流程包含表單建立、提交、資料處理、驗證、整合、工作流程自動化和輸出管理。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: development-tools, coding
-discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 role: Developer
 exl-id: 434ac316-8a01-43a6-844b-1b792f60fa21
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -60,10 +58,10 @@ ht-degree: 0%
    >
    >通常一個短暫的流程包含三個以上的動作。 您可以使用「維護作業」來建立處理。 (請參閱 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
-   *使用AEM表單進行程式設計*&#x200B;說明您以程式設計方式叫用此短期流程時所用的下列方式：
+   *使用AEM表單進行程式設計* 說明您以程式設計方式叫用此短期流程時所用的下列方式：
 
    * [使用AEM Forms Remoting傳遞不安全的檔案，以叫用短暫的程式](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (使用Flex應用程式)
-   * [使用叫用API叫用短期程式](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) （Java叫用API）
+   * [使用叫用API叫用短期程式](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java™引動API)
    * [使用Base64編碼叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （網站服務範例）
    * [使用MTOM叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （網站服務範例）
    * [使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) （網站服務範例）
