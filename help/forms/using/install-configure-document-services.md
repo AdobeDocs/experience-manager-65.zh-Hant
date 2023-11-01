@@ -767,6 +767,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
          adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;leid>] [—regsuppress=ss] [—eulasuppress] [—locales=受限的xx_XX格式或ALL>語言環境清單] [—provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
          
          ```
+
      
    * 磁碟區序列化套件（使用prov.xml檔案和新的序列重新序列化現有的安裝）：以管理員身分從PRTK安裝資料夾執行下列命令，以序列化並啟動使用者端機器上已部署的套件：
 
@@ -774,6 +775,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
          adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
          
          ```
+
      
 * 若為大型安裝，請使用 [AcrobatCustomization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) 以移除舊版Reader和Acrobat。 自訂安裝程式，並將其部署至組織的所有電腦。
 

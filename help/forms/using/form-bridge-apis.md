@@ -119,6 +119,7 @@ window.addEventListener("FormBridgeInitialized",
          "submitUrl" : "`<submitUrl>`"
          });
          ```
+
    * **設定：** 設定的值
 
 
