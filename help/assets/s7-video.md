@@ -134,7 +134,7 @@ Scene7視訊元件僅適用於Scene7視訊。 基礎元件可處理從Experience
 |   | Experience Manager Foundation影片 | Scene7影片 |
 |---|---|---|
 | 方針 | HTML5優先方法。 Flash僅用於非HTML5遞補。 | 在大部分的桌上型電腦上Flash。 HTML5適用於行動裝置和平板電腦。 |
-| 傳送 | 漸進式 | 最適化串流 |
+| 傳遞 | 漸進式 | 最適化串流 |
 | 追蹤 | 是 | 是 |
 | 擴充性 | 是 | 否 |
 | 行動視訊 | 是 | 是 |

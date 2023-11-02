@@ -130,7 +130,7 @@ Dynamic Media Classic視訊元件僅適用於Dynamic Media Classic視訊。 基�
 |   | Experience Manager Foundation影片 | Dynamic Media Classic影片 |
 |---|---|---|
 | 方針 | HTML5優先方法。 Flash僅用於非HTML5遞補。 | 在大部分的桌上型電腦上Flash。 HTML5適用於行動裝置和平板電腦。 |
-| 傳送 | 漸進式 | 最適化串流 |
+| 傳遞 | 漸進式 | 最適化串流 |
 | 追蹤 | 是 | 是 |
 | 擴充性 | 是 | 否 |
 | 行動視訊 | 是 | 是 |

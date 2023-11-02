@@ -29,7 +29,7 @@ ht-degree: 0%
 >
 >**自訂元件**：針對AEM Communities的授權客戶，自訂元件的開發人員可將SRP API用於存取UGC，而不考慮基礎拓撲。 另請參閱 [srp和UGC Essentials](srp-and-ugc.md).
 
-另請參閱:
+另請參閱：
 
 * [srp和UGC Essentials](srp-and-ugc.md) - SRP公用程式方法與範例。
 * [使用SRP存取UGC](accessing-ugc-with-srp.md)  — 程式碼指南。

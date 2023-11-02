@@ -1,79 +1,73 @@
 ---
-title: 正在連線到Microsoft&Reg； Translator
-description: 瞭解如何將Adobe Experience Manager連結至Microsoft&reg； Translator。
-contentOwner: Guillaume Carlino
+title: 連線到 Microsoft Translator
+description: 瞭解如何將AEM連線至現成的Microsoft Translator，以自動化您的翻譯工作流程。
 feature: Language Copy
+role: Admin
 exl-id: ca575a30-fc3e-4f38-9aa7-dbecbc089f87
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: f6e94d215a49683efe87254ccc1600fefcb369bc
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 1%
+source-wordcount: '477'
+ht-degree: 4%
 
 ---
 
-# 正在連線到Microsoft® Translator{#connecting-to-microsoft-translator}
+# 連線到 Microsoft Translator {#connecting-to-microsoft-translator}
 
-建立Microsoft® Translator雲端服務的設定，以使用您的Microsoft® Translation帳戶來翻譯AEM頁面內容、社群內容或資產。
+建立「 」的設定 [Microsoft Translator](https://www.microsoft.com/en-us/translator/business/) 雲端服務，使用您的Microsoft翻譯帳戶來翻譯AEM頁面內容或資產。
+
+>[!NOTE]
+>
+>AEM提供試用的Microsoft翻譯帳戶，每月最多允許200萬個免費翻譯的字元。 若要取得足以用於生產系統的帳戶訂閱，請參閱 [升級Microsoft Translator試用授權設定](#upgrading-the-microsoft-translator-trial-license-configuration).
 
 | 屬性 | 說明 |
 |---|---|
-| 翻譯標籤 | 翻譯服務的顯示名稱。 |
-| 翻譯歸因 | （選用）對於使用者產生的內容，為已翻譯文字旁邊顯示的屬性，例如 `Translations by Microsoft`. |
-| 工作區ID | （選用）要使用的自訂Microsoft® Translator引擎ID。 |
-| 訂閱金鑰 | 您的Microsoft® Translator Microsoft®訂閱金鑰。 |
+| 翻譯標籤 | 翻譯服務的顯示名稱 |
+| 翻譯歸因 | （選用）對於使用者產生的內容，為已翻譯文字旁邊顯示的屬性，例如 `Translations by Microsoft` |
+| 工作區ID | （選用）要使用的自訂Microsoft Translator引擎識別碼 |
+| 訂閱金鑰 | 您的Microsoft Translator Microsoft訂閱金鑰 |
 
-建立設定後，您必須 [啟用它](/help/sites-administering/tc-msconf.md#activating-the-translator-service-configurations).
+建立設定後，您需要 [啟用它](#activating-the-translator-service-configurations).
 
-下列程式使用觸控最佳化UI來建立Microsoft® Translator設定。
+下列程式會建立Microsoft Translator設定。
 
-1. 在邊欄上，按一下或點選「工具>Cloud Service」。
-1. 在Microsoft® Translator區域中，選取「顯示組態」。
-1. 按一下「可用設定」旁的+連結。
+1. 在 [導覽面板，](/help/sites-authoring/basic-handling.md#first-steps) 按一下或點選 **工具** -> **Cloud Service** -> **翻譯Cloud Service**.
+1. 導覽至您要建立設定的位置。 這通常位於您的網站根目錄中，或可為全域預設設定。
+1. 點選或按一下 **建立** 按鈕。
+1. 定義您的設定。
+   1. 選取 **Microsoft Translator** 位於下拉式清單中。
+   1. 輸入設定的標題。 標題可識別Cloud Service控制檯和頁面屬性下拉式清單中的設定。
+   1. 選擇性地輸入儲存組態之儲存庫節點的名稱。
 
-   ![chlimage_1-382](assets/chlimage_1-382.png)
+   ![建立翻譯設定](assets/create-translation-config.png)
 
-1. 輸入設定的標題。 標題可識別Cloud Service控制檯和頁面屬性下拉式清單中的設定。 預設名稱是根據標題。 選擇性地輸入儲存組態之儲存庫節點的名稱。 使用存放庫節點路徑的Parent Configuration屬性的預設值。
-1. 按一下「建立」。
-1. 在出現的對話方塊中，輸入屬性的值，然後按一下「確定」。
+1. 按一下&#x200B;**建立**。
+1. 在 **編輯設定** 視窗中，提供上表所述之翻譯服務的值。
 
-## Microsoft® TranslatorCloud Service設定範例 {#sample-microsoft-translator-cloud-service-configurations}
+   ![編輯翻譯設定](assets/edit-translation-config.png)
 
-下列Microsoft® Translator雲端服務設定會與Geometrixx範例一起安裝。 有些設定範例使用試用的Microsoft®翻譯帳戶，每月最多允許200萬個免費翻譯的字元。
+1. 點選或按一下 **連線** 以驗證連線。
+1. 點選或按一下&#x200B;**儲存並關閉**。
 
-### Microsoft® Translator試用授權 {#microsoft-translator-trial-license}
+## 升級Microsoft Translator試用授權設定 {#upgrading-the-microsoft-translator-trial-license-configuration}
 
-Microsoft® Translator試用版授權設定是隨Geometrixx Outdoors範例套件一起安裝的範例設定。 此設定使用Microsoft® Translator帳戶，該帳戶具有每月允許2,000,000個已翻譯字元的免費訂閱。
+Microsoft翻譯設定頁面提供指向Microsoft網站的便利連結，以取得足以用於生產系統的帳戶訂閱。
 
-### Microsoft® Translator試用版授權 — Geometrixx-outdoors {#microsoft-translator-trial-license-geometrixx-outdoors}
+1. 在 [導覽面板，](/help/sites-authoring/basic-handling.md#first-steps) 點選或按一下 **工具** -> **Cloud Service** -> **翻譯Cloud Service**.
+1. 點選或按一下您現有的Microsoft Translator設定。
+1. 點選或按一下 **編輯**.
+1. 在 **編輯設定** 視窗，點選或按一下 **升級訂閱**. 隨即開啟一個包含服務詳細資訊的Microsoft網頁。
 
-Microsoft® Translator試用版授權 — Geometrixx-outdoors設定是隨Geometrixx Outdoors一起安裝的設定範例。 此設定使用與Microsoft® Translator試用授權設定相同的免費Microsoft® Translator帳戶。 此帳戶提供免費訂閱，每月可允許2,000,000個已翻譯字元。
+## 自訂Microsoft Translator引擎 {#customizing-your-microsoft-translator-engine}
 
-此Microsoft® Translator設定已針對與Geometrixx Outdoors範例網站的內容型別搭配使用而最佳化。
+Microsoft翻譯設定頁面提供Microsoft網站的便利連結，讓您自訂Microsoft Translator引擎。
 
-### 升級Microsoft® Translator試用授權設定 {#upgrading-the-microsoft-translator-trial-license-configuration}
-
-Microsoft®翻譯設定頁面提供指向Microsoft®網站的便利連結，以取得足以用於生產系統的帳戶訂閱。
-
-1. 在導軌上，按一下或點選「工具>作業>雲端>Cloud Service」。
-1. 在Microsoft® Translator區域中，按一下或點選「顯示設定」，然後按一下或點選「Microsoft® Translator試用版授權(Microsoft® Translation Configuration)」。
-
-   ![chlimage_1-383](assets/chlimage_1-383.png)
-
-1. 在設定頁面上，按一下升級訂閱。 使用開啟的Microsoft®網頁來設定您的帳戶。
-
-   ![chlimage_1-384](assets/chlimage_1-384.png)
-
-### 自訂Microsoft® Translator引擎 {#customizing-your-microsoft-translator-engine}
-
-Microsoft®翻譯設定頁面提供指向Microsoft®網站的便利連結，以便自訂Microsoft® Translator引擎。 ([https://www.microsoft.com/en-us/research/project/microsoft-translator-hub/](https://www.microsoft.com/en-us/research/project/microsoft-translator-hub/))
-
-1. 在導軌上，按一下或點選「工具>作業>雲端>Cloud Service」。
-1. 在Microsoft® Translator區域中，按一下或點選「顯示設定」，然後按一下或點選您要自訂的設定。
-1. 在設定頁面上，按一下「自訂Translator」。 使用開啟的Microsoft®網頁來自訂您的服務。
+1. 在 [導覽面板，](/help/sites-authoring/basic-handling.md#first-steps) 點選或按一下 **工具** -> **Cloud Service** -> **翻譯Cloud Service**.
+1. 點選或按一下您現有的Microsoft Translator設定。
+1. 點選或按一下 **編輯**.
+1. 在 **編輯設定** 視窗，點選或按一下 **自訂Translator**. 使用開啟的Microsoft網頁來自訂您的服務。
 
 ## 啟用Translator服務設定 {#activating-the-translator-service-configurations}
 
-若要支援復寫至發佈執行個體的翻譯內容，請啟用您的雲端服務設定。 若要啟用儲存Microsoft® Translator或協力廠商雲端服務設定的存放庫節點，請使用以下方法 [啟動完整截面（樹狀結構）](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree). 這些節點位於下列父節點的下方：
+您需要啟動雲端服務設定，以支援復寫至發佈執行個體的翻譯內容。 使用方法 [發佈樹狀結構](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree) 啟用儲存Microsoft Translator設定的存放庫節點。 這些節點位於下列父節點的下方：
 
-* Microsoft®翻譯服務： /libs/settings/cloudconfigs/translation/msft-translation
-* 協力廠商翻譯： /etc/cloudservices/machine-translation
+* `/libs/settings/cloudconfigs/translation/msft-translation`

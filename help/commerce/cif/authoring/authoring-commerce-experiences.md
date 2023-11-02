@@ -4,8 +4,8 @@ description: CIF附加元件以特定於Commerce的功能擴充Adobe Experience 
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '713'
+ht-degree: 1%
 
 ---
 

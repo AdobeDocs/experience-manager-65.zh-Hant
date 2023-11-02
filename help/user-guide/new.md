@@ -16,7 +16,7 @@ ht-degree: 10%
 Adobe Experience Manager (AEM)是網頁式使用者端伺服器系統，用於建立、管理和部署商業網站及相關服務。 它將數個基礎架構層級和應用程式層級的功能合併為單一整合套件。
 
 * [如需更多詳細資訊，請瀏覽檔案](/help/sites-deploying/home.md)
-* [AEM近期檔案更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=en)
+* [AEM近期檔案更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=zh-Hant)
 
 ## AEM軟體下載位置 {#download}
 

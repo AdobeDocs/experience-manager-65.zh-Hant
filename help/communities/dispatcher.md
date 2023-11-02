@@ -74,7 +74,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — 最長存留期*
 
 以下範例使用屬性名稱，這些名稱可能必須修改以符合任何特定要求 `dispatcher.any` 檔案。
 
-另請參閱:
+另請參閱：
 
 * [Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)
 

@@ -94,7 +94,7 @@ ht-degree: 0%
 
   設定 `allowedorigin` 屬性至您的PWA應用程式完整主機名稱。
 
-  範例:  `<https://pwa-studio-test-vflyn.local.pwadev:9366>`
+  例如:  `<https://pwa-studio-test-vflyn.local.pwadev:9366>`
 
 * Apache Sling反向連結篩選器(org.apache.sling.security.impl.ReferrerFilter.cfg.json)
 
