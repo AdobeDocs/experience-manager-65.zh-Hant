@@ -2,10 +2,10 @@
 title: AEM Headless 翻譯快速入門
 description: 了解如何組織 Headless 內容以及 AEM 翻譯工具的運作原理。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 90%
+source-wordcount: '1493'
+ht-degree: 89%
 
 ---
 
@@ -64,7 +64,7 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 
 ## AEM 如何儲存 Headless 內容 {#headless-content-in-aem}
 
-對於翻譯專家來說，深入了解 AEM 如何管理無周邊內容並不重要。但是，熟悉基本概念和術語將有助於您以後使用 AEM 的翻譯工具。最重要的是，您需要了解自己的內容及其結構，以便有效地翻譯內容。
+對於翻譯專家來說，深入了解 AEM 如何管理無周邊內容並不重要。但是，熟悉基本概念和術語將有助於您以後使用 AEM 的翻譯工具。最重要的是，您需要瞭解自己的內容，以及它是如何建構以有效地翻譯它。
 
 ### 內容模型 {#content-models}
 

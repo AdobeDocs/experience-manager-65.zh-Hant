@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '17047'
+source-wordcount: '17045'
 ht-degree: 0%
 
 ---
@@ -597,7 +597,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 **簽章不受信任**
 
-在認證和簽署相同的PDF檔案時，如果認證簽名不受信任，則在Acrobat或Adobe Reader中開啟PDF檔案時，第一個簽名旁邊會出現一個黃色三角形。 為了避免這種情況，必須信任憑證簽章。
+在認證和簽署相同的PDF檔案時，如果認證簽名不受信任，則在Acrobat或Adobe Reader中開啟PDF檔案時，第一個簽名旁邊會出現一個黃色三角形。 必須信任憑證簽章以避免這種情況。
 
 **簽署以XFA為基礎的表格**
 

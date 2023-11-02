@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2860'
+source-wordcount: '2856'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 * `categories`：識別這個JS和/或CSS檔案集所屬的類別 `cq:ClientLibraryFolder` 秋天。 此 `categories` 屬性是多值屬性，可讓程式庫資料夾屬於多個類別（請參閱下方以瞭解其用處）。
 
-* `dependencies`：此為此程式庫資料夾所依存之其他使用者端程式庫類別的清單。 例如，假定 `cq:ClientLibraryFolder` 節點 `F` 和 `G`，如果檔案位於 `F` 需要另一個檔案(位於 `G` 若想正常運作，則至少需下列其中一項： `categories` 之 `G` 應該屬於 `dependencies` 之 `F`.
+* `dependencies`：此為此程式庫資料夾所依存之其他使用者端程式庫類別的清單。 例如，假定 `cq:ClientLibraryFolder` 節點 `F` 和 `G`，如果檔案位於 `F` 需要另一個檔案(位於 `G` 若想正常運作，則至少需下列其中一項 `categories` 之 `G` 應該屬於 `dependencies` 之 `F`.
 
 * `embed`：用來內嵌其他程式庫中的程式碼。 如果節點F嵌入節點G和H，則產生的HTML將是來自節點G和H的內容集。
 * `allowProxy`：如果使用者端程式庫位於 `/apps`，此屬性可讓您透過Proxy servlet存取它。 另請參閱 [找到使用者端程式庫資料夾並使用Proxy使用者端程式庫Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) 底下。
@@ -134,7 +134,7 @@ Web使用者端必須擁有許可權才能存取 `cq:ClientLibraryFolder` 節點
 
 >[!NOTE]
 >
->為了更妥善地將程式碼與內容和設定隔離開，建議在下方找到使用者端程式庫 `/apps` 並透過以下方式公開 `/etc.clientlibs` 善用 `allowProxy` 屬性。
+>若要更妥善地將程式碼與內容和設定隔離開，建議在下方找到使用者端程式庫 `/apps` 並透過以下方式公開 `/etc.clientlibs` 善用 `allowProxy` 屬性。
 
 為了以下使用者端程式庫： `/apps` 為了能夠存取，使用proxy servelt。 ACL仍強制在使用者端資料庫資料夾上，但servlet允許透過讀取內容 `/etc.clientlibs/` 如果 `allowProxy` 屬性已設為 `true`.
 

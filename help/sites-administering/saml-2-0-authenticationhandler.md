@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 6fa3679429527e026313b22d953267503598d1a9
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 95%
+source-wordcount: '844'
+ht-degree: 91%
 
 ---
 
@@ -40,12 +40,11 @@ AEM 隨附 [SAML](https://saml.xml.org/saml-specifications) 驗證處理常式�
 
 >[!NOTE]
 >
->SAML 2.0 驗證處理常式會依預設停用。您必須至少設定下列其中一個屬性，才能啟用此處理常式：
+>SAML 2.0 驗證處理常式會依預設停用。您必須至少設定下列其中一個屬性，才能啟用處理常式：
 >
 >* 身分提供者 POST URL，或 IDP URL。
 >* 服務提供者實體 ID。
 >
-
 
 >[!NOTE]
 >
@@ -92,7 +91,7 @@ AEM 隨附 [SAML](https://saml.xml.org/saml-specifications) 驗證處理常式�
 
 ## 將 IdP 憑證新增至 AEM TrustStore {#add-the-idp-certificate-to-the-aem-truststore}
 
-SAML 聲明已經過簽署，並可選擇進行加密。為了使其運作，您必須至少在存放庫中提供 IdP 的公開憑證。若要進行這項作業，您必須：
+SAML 聲明已經過簽署，並可選擇進行加密。為了使其運作，您必須至少在存放庫中提供 IdP 的公開憑證。若要這麼做，您需要：
 
 1. 前往 *http:/serveraddress:serverport/libs/granite/security/content/truststore.html*
 1. 按下「**[!UICONTROL 建立 TrustStore 連結]**」
@@ -121,7 +120,7 @@ SAML 聲明已經過簽署，並可選擇進行加密。為了使其運作，您
 
    `openssl req -newkey rsa:2048 -new -x509 -days 3652 -nodes -out certificate.crt -keyout key.pem`
 
-1. 使用DER編碼將金鑰轉換為PKCS#8格式。 這是AEM金鑰存放區所需的格式。
+1. 將金鑰轉換為具有DER編碼的PKCS#8格式。 這是AEM金鑰存放區所需的格式。
 
    `openssl pkcs8 -topk8 -inform PEM -outform DER -in key.pem -out key.der -nocrypt`
 
@@ -133,7 +132,7 @@ SAML 聲明已經過簽署，並可選擇進行加密。為了使其運作，您
 
 ## 為 SAML 設定記錄器 {#configure-a-logger-for-saml}
 
-您可以設定記錄器，以偵錯任何可能因錯誤設定 SAML 而產生的問題。您可以透過以下方式進行：
+您可以設定記錄器來偵錯任何可能因錯誤設定SAML而產生的問題。 您可以透過以下方式進行：
 
 1. 前往網頁主控台：*http://localhost:4502/system/console/configMgr*
 1. 搜尋並按一下稱為「**Apache Sling 記錄記錄器設定**」的項目

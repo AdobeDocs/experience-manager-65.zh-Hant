@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->和AEM Forms實作的任何其他方面一樣，您的備份與復原策略必須在開發或中繼環境中開發與測試，之後才用於生產環境，以確保整個解決方案如預期般運作且不會遺失資料。
+>與AEM Forms實作的任何其他方面一樣，您的備份與復原策略必須在開發或中繼環境中開發與測試，之後才用於生產環境，以確保整個解決方案如預期般運作且不會遺失資料。
 
 Adobe Experience Manager (AEM)是AEM表單不可或缺的一部分。 因此，您需要備份AEM以及與AEM表單備份同步，因為通訊管理解決方案和服務（例如表單管理員）都是以AEM表單中AEM部分所儲存的資料為基礎。為了防止任何資料遺失，AEM表單特定資料必須以確保GDS和AEM （儲存庫）與資料庫參考相互關聯的方式進行備份。資料庫、GDS、AEM和內容儲存根目錄必須還原到與原始資料具有相同DNS名稱的電腦。
 

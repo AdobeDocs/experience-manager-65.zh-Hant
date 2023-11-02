@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2483'
 ht-degree: 0%
 
 ---
@@ -194,7 +194,7 @@ Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是網頁
    * 建立 `URLSpec` 物件，使用它的建構函式儲存URI值。
    * 叫用 `URLSpec` 物件的 `setApplicationWebRoot` 方法，並傳遞代表應用程式網頁根目錄的字串值。
    * 叫用 `URLSpec` 物件的 `setContentRootURI` 方法並傳遞字串值，該值會指定內容根URI值。 請確認表單設計位於內容根URI中。 否則，Forms服務會擲回例外狀況。 若要參考存放庫，請指定 `repository:///`.
-   * 叫用 `URLSpec` 物件的 `setTargetURL` 方法並傳遞字串值，該值會指定將表單資料發佈到的目標URL值。 如果您在表單設計中定義目標URL，您可以傳遞空字串。 您也可以指定傳送表單的URL，以執行計算。
+   * 叫用 `URLSpec` 物件的 `setTargetURL` 方法並傳遞字串值，該值會指定將表單資料發佈到的目標URL值。 如果您在表單設計中定義目標URL，您可以傳遞空字串。 您也可以指定傳送表單以執行計算的URL。
 
 1. 將檔案附加至表單
 
@@ -249,7 +249,7 @@ Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是網頁
    * 建立 `URLSpec` 物件，使用它的建構函式儲存URI值。
    * 叫用 `URLSpec` 物件的 `setApplicationWebRoot` 方法，並傳遞代表應用程式網頁根目錄的字串值。
    * 叫用 `URLSpec` 物件的 `setContentRootURI` 方法並傳遞字串值，該值會指定內容根URI值。 請確認表單設計位於內容根URI中。 否則，Forms服務會擲回例外狀況。 若要參考存放庫，請指定 `repository:///`.
-   * 叫用 `URLSpec` 物件的 `setTargetURL` 方法並傳遞字串值，該值會指定將表單資料發佈到的目標URL值。 如果您在表單設計中定義目標URL，您可以傳遞空字串。 您也可以指定傳送表單的URL，以執行計算。
+   * 叫用 `URLSpec` 物件的 `setTargetURL` 方法並傳遞字串值，該值會指定將表單資料發佈到的目標URL值。 如果您在表單設計中定義目標URL，您可以傳遞空字串。 您也可以指定傳送表單以執行計算的URL。
 
 1. 將檔案附加至表單
 

@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2009'
 ht-degree: 0%
 
 ---
@@ -248,7 +248,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>DELETE</code></td>
-   <td>刪除模型。 為了解決防火牆/Proxy問題， <code>POST</code> 包含 <code>X-HTTP-Method-Override</code> 含有值的標頭專案 <code>DELETE</code> 也將被接受為 <code>DELETE</code> 要求。</td>
+   <td>刪除模型。 若要解決防火牆/Proxy問題， <code>POST</code> 包含 <code>X-HTTP-Method-Override</code> 含有值的標頭專案 <code>DELETE</code> 也將被接受為 <code>DELETE</code> 要求。</td>
   </tr>
  </tbody>
 </table>

@@ -2,9 +2,9 @@
 title: 使用AEM建立及組織頁面
 description: 瞭解如何使用Adobe Experience Manager建立和管理頁面。
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: cc63291c32f7a234398ebe8bf67ab53aaf8fa90f
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2434'
 ht-degree: 4%
 
 ---
@@ -94,7 +94,7 @@ ht-degree: 4%
 
 頁面 **標題****和名稱可以單獨建立** ，但是是相關的：
 
-* 建立頁面時，僅 **標題** 欄位為必填。 若否 **名稱** 在建立頁面時提供，AEM會從標題的前64個字元產生名稱（觀察以下列出的驗證）。 僅使用前64個字元是為了支援短頁面名稱的最佳實務。
+* 建立頁面時，僅 **標題** 欄位為必填。 若否 **名稱** 在建立頁面時提供，AEM會從標題的前64個字元產生名稱（觀察以下列出的驗證）。 僅前64個字元用於支援短頁面名稱的最佳做法。
 
 * 如果作者手動指定頁面名稱，64字元限制不適用，但頁面名稱長度的其他技術限制可能適用。
 

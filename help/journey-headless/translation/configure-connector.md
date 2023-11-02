@@ -2,10 +2,10 @@
 title: 設定翻譯整合
 description: 了解如何將 AEM 連接到翻譯服務。
 exl-id: a1a4b1ca-d353-46e2-a992-f38be6be338e
-source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 95%
+source-wordcount: '1162'
+ht-degree: 91%
 
 ---
 
@@ -58,7 +58,7 @@ AEM 的翻譯整合框架 (TIF) 整合協力廠商翻譯服務以協調 AEM 內�
 >
 >如果您選擇使用 Microsoft Translator 連接器進行測試，則無需執行接下來兩章節中的步驟：[建立翻譯整合設定](#create-config)和[將設定與您的內容相關聯。](#associate)但是，建議您閱讀這兩個章節，以便熟悉相關步驟，在您需要設定偏好的連接器時就能派上用場。
 >
->Microsoft Translator 連接器的試用版授權不適用於生產目的，如果您決定授權，系統管理員必須按照本文件結尾的[其他資源](#additional-resources)章節中詳述的步驟操作以設定該授權。
+>Microsoft Translator聯結器的試用授權並非用於生產目的，如果您決定授權此聯結器，系統管理員必須遵循中詳述的步驟 [其他資源](#additional-resources) 本檔案結尾的區段來設定該授權。
 
 ## 建立翻譯整合設定 {#create-config}
 

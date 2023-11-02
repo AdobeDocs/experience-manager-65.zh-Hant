@@ -5,9 +5,9 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: a07765f95f01f05a30dce14138f75e7edbe94ae2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1727'
 ht-degree: 1%
 
 ---
@@ -62,9 +62,9 @@ ht-degree: 1%
 1. 連結的資料夾結構：輸入逗號分隔值。 每個值都應 `DE:<some-project-custom-form-field>`、Portfolio、方案、年份、名稱或某些「常值字串值」（最後一項帶有引號）。 目前設為Portfolio、方案、年、DE：專案型別、名稱。
 1. 如果Workfront中的資料夾標題應包含結構中的所有資料夾，則應核取使用資料夾結構名稱在Workfront中建立連結資料夾標題。 否則，它將是最後一個資料夾的標題。
 1. 子資料夾多欄位可讓您指定應建立為連結資料夾的子資料夾的資料夾清單。
-1. 專案狀態：選取專案必須設定為的狀態，才能建立連結的資料夾。
-1. 在具有投資組合的專案中建立連結資料夾：專案必須屬於的Portfolio清單以便建立連結資料夾。 將此清單保留為空白可為所有專案組合建立連結資料夾。
-1. 使用自訂表單欄位在專案中建立連結資料夾：自訂表單欄位及其專案必須具有的對應值才能建立連結資料夾。 如果留空，將忽略此設定。 選取 `CUSTOM FORMS: Create DAM Linked Folder` 欄位和輸入 `Yes` ，以取得值。
+1. 專案狀態：選取專案狀態以建立連結的資料夾。
+1. 在具有投資組合的專案中建立連結資料夾：專案必須屬於其中建立連結資料夾的Portfolio清單。 將此清單保留為空白可為所有專案組合建立連結資料夾。
+1. 使用自訂表單欄位在專案中建立連結資料夾：自訂表單欄位及其對應的值，專案必須建立連結資料夾。 如果留空，將忽略此設定。 選取 `CUSTOM FORMS: Create DAM Linked Folder` 欄位和輸入 `Yes` ，以取得值。
 1. 按一下啟用自動建立連結資料夾。 如果您返回「事件訂閱」標籤，現在會看到有一個建立事件。
 
 ![連結的資料夾組態](/help/assets/assets/wf-linked-folder-config.png)

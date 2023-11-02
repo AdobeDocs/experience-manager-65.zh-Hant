@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '7850'
+source-wordcount: '7848'
 ht-degree: 0%
 
 ---
@@ -592,7 +592,7 @@ ht-degree: 0%
 1. 透過選取「檔案」>「列印」來開啟「列印」對話方塊
 1. 確定顯示列印對話方塊
 
-AppMon使用標準的Win32 API來與協力廠商應用程式互動，以傳輸按鍵和滑鼠點按等UI事件，這有助於控制這些應用程式以從中產生PDF檔案。
+AppMon使用標準的Win32 API與協力廠商應用程式互動，以傳輸UI事件（例如按鍵與滑鼠點按），這有助於控制這些應用程式以從中產生PDF檔案。
 
 由於這些Win32 API的限制，AppMon無法將這些UI事件分派到某些特定型別的視窗，例如浮動選單列（可在某些應用程式如TextPad中找到）以及某些型別的對話方塊，無法使用Win32 API擷取其內容。
 
@@ -982,7 +982,7 @@ AEM Forms包含範例XML檔案，可讓「產生PDF」服務使用「記事本�
 * from Adobe Systems Incorporated.
 *-->
 
-<!-- This file automates printing of text files via notepad to Adobe PDF printer. In order to see the complete hierarchy Adobe recommends using the Microsoft Spy++ which details the properties of windows necessary to write scripts. In this sample there are total of eight steps-->
+<!-- This file automates printing of text files via notepad to Adobe PDF printer. To see the complete hierarchy Adobe recommends using the Microsoft Spy++ which details the properties of windows necessary to write scripts. In this sample there are total of eight steps-->
 
 <application name="Notepad" version="9.0" locale="en_US" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="scripts.xsd">
 

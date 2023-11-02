@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1978'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Generic Store必須設定有JS轉譯器，以便以自訂方式顯示資料。
 
 **JSONP存放區** 顯示與您的安裝相依之內容的元件。
 
-JSONP標準是JSON的補充功能，可讓您規避相同原始原則（使網頁應用程式無法與另一個網域上的伺服器通訊）。 其包含於包裝JSON物件於函式呼叫中，以便能夠將其載入為 `<script>` 來自其他網域（這是相同來源原則的允許例外）。
+JSONP標準是JSON的補充功能，可讓您規避相同原始原則（使網頁應用程式無法與另一個網域上的伺服器通訊）。 其包含於包裝JSON物件於函式呼叫中，以便將其載入為 `<script>` 來自其他網域（這是相同來源原則的允許例外）。
 
 JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他網域的資訊，而不需要在目前網域上為該資訊擁有Proxy。 請參閱中的範例 [透過JSONP在Client Context中儲存資料](/help/sites-administering/client-context.md#storing-data-in-client-context-via-jsonp).
 

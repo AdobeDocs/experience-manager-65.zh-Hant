@@ -2,13 +2,13 @@
 sub-product: AEM Documentation Journeys
 user-guide-title: AEM 文件歷程
 breadcrumb-title: AEM 文件歷程
-user-guide-description: 文件歷程透過將複雜和不同的功能繫結在一起，在 AEM 文件中提供敘述結構，以便以最佳實務的方式解決業務目標。專為 AEM 初學者而設計，該歷程介紹了從頭到尾實現目標的概念和功能。
+user-guide-description: 檔案歷程透過將複雜和不同的功能繫結在一起，以最佳實務的方式解決業務目標，從而在AEM檔案中提供敘述結構。 專為 AEM 初學者而設計，該歷程介紹了從頭到尾實現目標的概念和功能。
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: 0b8b517607f305ad82caf6ba766cad5a46021439
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 53%
+source-wordcount: '527'
+ht-degree: 48%
 
 ---
 
@@ -33,7 +33,7 @@ Please note that all links to other guides need to be absolute references with l
       + [如何透過 AEM Delivery API 存取您的內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
       + [如何透過 AEM Assets API 更新您的內容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
       + [如何整合一切](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
-      + [如何將無周邊應用程式上線](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
+      + [如何將 Headless 應用程式上線](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
       + [選擇性 - 如何使用 AEM 建立單頁應用程式](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
    + Headless 翻譯歷程 {#translation}
       + [了解 AEM 中的 Headless 翻譯](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/overview.html)

@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '837'
 ht-degree: 4%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->AEM控制面板是根據使用者建立的，因此使用者只能存取自己的控制面板。
+>AEM控制面板是按使用者建立，因此使用者只能存取自己的控制面板。
 >
->不過， [儀表板範本](#creating-a-dashboard-template) 可用來共用一般設定和控制面板配置。
+>不過， [控制面板範本](#creating-a-dashboard-template) 可用於共用一般設定和儀表板配置。
 
 ![chlimage_1-22](assets/chlimage_1-22.jpeg)
 
@@ -33,7 +33,7 @@ ht-degree: 4%
 
 ### 建立控制面板 {#creating-a-dashboard}
 
-若要建立新的控制面板，請依照下列步驟進行：
+若要建立新的儀表板，請依照下列步驟進行：
 
 1. 在 **工具** 區段，按一下 **設定主控台**.
 1. 在樹狀結構中，按兩下 **儀表板**.
@@ -59,17 +59,17 @@ ht-degree: 4%
 1. 在 **工具** 區段，按一下 **設定主控台**.
 
 1. 在樹狀結構中，按一下 **儀表板**.
-1. 按一下要刪除的控制面板。
+1. 按一下您要刪除的控制面板。
 
 1. 按一下&#x200B;**移除**。
 
 1. 按一下「**是**」確認。
 
-## 儀表板元件 {#dashboard-components}
+## 控制面板元件 {#dashboard-components}
 
 ### 概觀 {#overview}
 
-儀表板元件只是一般元件 [AEM元件](/help/sites-developing/developing-components-samples.md). 本節說明AEM隨附的報告元件。
+控制面板元件不過是規則元件 [AEM元件](/help/sites-developing/developing-components-samples.md). 本節說明AEM隨附的報告元件。
 
 ### 網站分析報表元件 {#web-analytics-reporting-components}
 
@@ -82,39 +82,39 @@ AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-a
 * **報告：** 包含每個報表的特定設定。
 * **樣式**：包含樣式設定，例如圖表大小和邊界。
 
-報表元件會以預設設定進行初始化，以協助您快速設定儀表板。
+報表元件會以預設設定進行初始化，協助您快速設定儀表板。
 
 #### 基本設定 {#basic-configuration}
 
-此 **基本** 索引標籤提供對下列設定專案的存取：
+此 **基本** 索引標籤提供對下列設定專案的存取權：
 
 **標題** 控制面板上顯示的標題。
 
 **請求型別** 要求資料的方式。
 
-**SiteCatalyst設定（選擇性）** 您要用來連線至SiteCatalyst的設定。 若未提供，則會假設已在儀表板頁面（透過頁面屬性）上設定設定。
+**SiteCatalyst設定（選擇性）** 您要用來連線至SiteCatalyst的設定。 若未提供，則會假設設定是在「控制面板」頁面（透過頁面屬性）上進行。
 
-**報表套裝ID （選用）** 您要用來產生圖表的SiteCatalyst報表套裝。
+**報表套裝ID （選用）** 您要用來產生圖形的SiteCatalyst報表套裝。
 
 #### 報告設定 {#report-configuration}
 
-若要顯示網頁統計資料，您必須定義要收集的資料日期範圍。 此 **報告** tab提供兩個欄位來定義該範圍。
+若要顯示網頁統計資料，您必須定義要收集的資料日期範圍。 此 **報告** 定位字元提供兩個欄位來定義該範圍。
 
 >[!NOTE]
 >
 >設定較大的日期範圍可能會降低儀表板的回應能力。
 
-**起始日期** 擷取資料的絕對或相對日期。
+**起始日期** 從中擷取資料的絕對或相對日期。
 
 **結束日期** 擷取資料的絕對或相對日期。
 
-每個元件也會定義特定設定。
+每個元件也會定義特定的設定。
 
 #### 超時報表 {#overtime-report}
 
 ![chlimage_1-26](assets/chlimage_1-26a.png)
 
-**日期詳細程度** X軸的時間單位（例如，天、小時）。
+**日期粒度** X軸的時間單位（例如，天、小時）。
 
 **量度** 您要顯示的事件清單。
 
@@ -124,7 +124,7 @@ AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-a
 
 ![chlimage_1-27](assets/chlimage_1-27a.png)
 
-**元素** 劃分圖形中量度資料的元素。
+**元素** 可劃分圖形中量度資料的元素。
 
 **量度** 您要顯示的事件。
 
@@ -136,11 +136,11 @@ AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-a
 
 **量度** 您要顯示的事件。
 
-**元素** 劃分圖形中量度資料的元素。
+**元素** 可劃分圖形中量度資料的元素。
 
 #### 主要網站區域報表 {#top-site-section-report}
 
-此元件會根據下列設定，顯示網站中造訪次數較多的區段的圖表。
+此元件會根據下列設定，顯示一個圖形，其中顯示網站中造訪次數最多的區域。
 
 ![chlimage_1-29](assets/chlimage_1-29a.png)
 
@@ -150,17 +150,17 @@ AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-a
 
 ![chlimage_1-30](assets/chlimage_1-30a.png)
 
-**日期詳細程度** X軸的時間單位（例如，天、小時）。
+**日期粒度** X軸的時間單位（例如，天、小時）。
 
 **量度** 您要顯示的事件。
 
-**元素** 劃分圖形中量度資料的元素。
+**元素** 可劃分圖形中量度資料的元素。
 
-## 延伸控制面板 {#extending-dashboard}
+## 擴充控制面板 {#extending-dashboard}
 
 ### 概觀 {#overview-1}
 
-儀表板是一般頁面( `cq:Page`)，因此任何元件都可用於組裝儀表板。
+控制面板是正常頁面( `cq:Page`)，因此任何元件都可用於組裝儀表板。
 
 有一個預設元件群組 `Dashboard` 包含依預設在範本上啟用的analytics報表元件。
 
@@ -168,7 +168,7 @@ AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-a
 
 範本會定義新控制面板的預設內容。 您可以使用數個範本來建立不同型別的儀表板。
 
-控制面板範本的建立方式與其他頁面範本相同，只是這些範本會儲存在 `/libs/cq/dashboards/templates/`. 請參閱 [建立Contentpage範本](/help/sites-developing/website.md#creating-the-contentpage-template) 區段。
+控制面板範本的建立方式與其他頁面範本相同，只是這些範本儲存在 `/libs/cq/dashboards/templates/`. 請參閱 [建立Contentpage範本](/help/sites-developing/website.md#creating-the-contentpage-template) 區段。
 
 >[!NOTE]
 >
@@ -176,11 +176,11 @@ AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-a
 
 ### 開發儀表板元件 {#developing-a-dashboard-component}
 
-開發Dashboard元件包含建立一般AEM元件。 本節說明顯示前10名貢獻者的元件範例。
+開發儀表板元件包含建立一般AEM元件。 本節說明顯示前10名貢獻者的元件範例。
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
-主要作者元件儲存在存放庫中，位於 `/apps/geometrixx-outdoors/components/reporting` 和由：
+主要作者元件儲存在存放庫中的 `/apps/geometrixx-outdoors/components/reporting` 並由：
 
 1. a `jsp` 讀取jcr資料並定義 `html` 預留位置。
 
@@ -188,7 +188,7 @@ AEM隨附一組元件，可轉譯您的多個量度 [SiteCatalyst](/help/sites-a
 
 ![chlimage_1-32](assets/chlimage_1-32a.png)
 
-下列JavaScript檔案定義於 `geout.reporting.topauthors` [使用者端資源庫](/help/sites-developing/clientlibs.md) 作為元件本身的子項。
+下列JavaScript檔案定義於 `geout.reporting.topauthors` [客戶庫](/help/sites-developing/clientlibs.md) 作為元件本身的子項。
 
 此 [Querybuilder](/help/sites-developing/querybuilder-api.md) 用於查詢要讀取的存放庫 `cq:AuditEvent` 節點。 查詢結果是JSON物件，系統會從中擷取作者貢獻。
 

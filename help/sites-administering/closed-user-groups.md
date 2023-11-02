@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '6854'
+source-wordcount: '6836'
 ht-degree: 1%
 
 ---
@@ -96,7 +96,7 @@ CUG原則的許可權評估以及與預設或任何其他授權模型的互動�
 在透過CUG定義受限讀取存取權時，應考量下列最佳實務：
 
 * 針對您對CUG的需求是否與限制讀取存取權或驗證需求相關，做出清醒的決定。 如果是後者，或同時需要兩者，請參閱最佳實務區段，以取得驗證需求的詳細資訊
-* 為需要保護的資料或內容建立威脅模型，以識別威脅範圍，並清楚瞭解資料的敏感度以及與授權存取相關的角色
+* 為需要保護的資料或內容建立威脅模型，以識別威脅邊界，並清楚瞭解資料的敏感度以及與授權存取相關的角色
 * 為存放庫內容和CUG建模，以掌握一般授權相關層面和最佳實務：
 
    * 請記住，只有在特定CUG和設定授權中部署的其他模組評估允許特定主題讀取特定存放庫專案時，才會授予讀取許可權
@@ -129,7 +129,7 @@ CUG功能的認證相關部分可讓您標籤需要認證的樹狀結構，並�
 
 預設AEM設定現在會使用此設定，允許以製作執行模式設定mixin，但只有在複製到發佈執行個體時才會生效。 另請參閱 [此頁面](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html) 以瞭解Sling如何執行驗證要求的詳細資訊。
 
-新增 `granite:AuthenticationRequired` 在設定的支援路徑中的mixin型別將導致負責處理常式的OSGi註冊被更新，包含新的附加專案，帶有 `sling.auth.requirements` 屬性。 如果指定的驗證需求指定了選擇性 `granite:loginPath` 屬性，值另外會以&#39;-&#39;首碼向驗證器註冊，以便從驗證需求中排除。
+新增 `granite:AuthenticationRequired` 在設定的支援路徑中的mixin型別將導致負責處理常式的OSGi註冊被更新，包含新的附加專案，帶有 `sling.auth.requirements` 屬性。 如果指定的驗證需求指定了選擇性 `granite:loginPath` 屬性，則值會額外向驗證器註冊，且具有&#39;-&#39;前置詞，以排除在驗證需求之外。
 
 #### 驗證需求的評估與繼承 {#evaluation-and-inheritance-of-the-authentication-requirement}
 
@@ -718,7 +718,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 ### 停用驗證需求 {#disable-the-authentication-requirement}
 
-為了停用對驗證需求的支援，請參閱 `granite.auth.authhandler` 模組足以移除與關聯的組態 **AdobeGranite驗證需求和登入路徑處理常式**.
+若要停用對驗證需求的支援，請參閱 `granite.auth.authhandler` 模組足以移除與關聯的組態 **AdobeGranite驗證需求和登入路徑處理常式**.
 
 >[!NOTE]
 >
@@ -728,7 +728,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 ### Apache Jackrabbit API {#apache-jackrabbit-api}
 
-為了反映CUG授權模型使用的新型別存取控制原則，Apache Jackrabbit定義的API已擴充。 自2.11.0版的 `jackrabbit-api` 模組會定義名為的新介面 `org.apache.jackrabbit.api.security.authorization.PrincipalSetPolicy`，會從 `javax.jcr.security.AccessControlPolicy`.
+為了反映CUG授權模型使用的新型別的存取控制政策，Apache Jackrabbit定義的API已擴充。 自2.11.0版的 `jackrabbit-api` 模組會定義名為的新介面 `org.apache.jackrabbit.api.security.authorization.PrincipalSetPolicy`，會從 `javax.jcr.security.AccessControlPolicy`.
 
 ### Apache Jackrabbit FileVault {#apache-jackrabbit-filevault}
 
@@ -753,7 +753,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 驗證處理常式 **AdobeGranite HTTP標頭驗證處理常式** 隨附於 `com.adobe.granite.auth.authhandler` 束儲存參照 `CugSupport` 由相同模組定義的介面。 在特定情況下，它可用來計算「範圍」，並歸入使用處理常式設定的範圍。
 
-這已經過調整，以做為參考 `CugSupport` 選擇性，以便在指定設定決定重新啟用已棄用的實作時，確保最大限度的回溯相容性。 使用實作的安裝將不會再從CUG實作中擷取領域，但會一律顯示領域，如使用所定義 **AdobeGranite HTTP標頭驗證處理常式**.
+這已經過調整，以做為參考 `CugSupport` 選擇性，可在指定設定決定重新啟用已棄用的實作時，確保最大限度的回溯相容性。 使用實作的安裝將不會再從CUG實作中擷取領域，但會一律顯示領域，如使用所定義 **AdobeGranite HTTP標頭驗證處理常式**.
 
 >[!NOTE]
 >
@@ -794,7 +794,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 **在存取控制管理中編輯CUG原則**
 
-這種從剩餘JCR屬性到專用存取控制政策的移動會影響建立或修改CUG功能的授權部分所需的許可權。 由於這被視為存取控制內容的修改，因此需要 `jcr:readAccessControl` 和 `jcr:modifyAccessControl` 許可權，以便寫入存放庫。 因此，只有有權修改頁面存取控制內容的內容作者才能設定或修改此內容。 這與舊版實作形成對比，舊版實作中寫入一般JCR屬性的能力已足夠，導致許可權提升。
+這種從剩餘JCR屬性到專用存取控制政策的移動會影響建立或修改CUG功能的授權部分所需的許可權。 由於這被視為存取控制內容的修改，因此需要 `jcr:readAccessControl` 和 `jcr:modifyAccessControl` 要寫入存放庫的許可權。 因此，只有有權修改頁面存取控制內容的內容作者才能設定或修改此內容。 這與舊版實作形成對比，舊版實作中寫入一般JCR屬性的能力已足夠，導致許可權提升。
 
 **原則定義的目標節點**
 

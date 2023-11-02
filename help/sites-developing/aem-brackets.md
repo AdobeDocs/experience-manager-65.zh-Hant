@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '936'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ AEM Brackets擴充功能支援Brackets 1.0或更新版本。
 
 ### 專案設定 {#project-settings}
 
-為了將您的內容同步到AEM開發執行個體以及從中同步內容，您需要定義您的專案設定。 您可以前往 **AEM** 功能表並選取 **專案設定……**
+若要將您的內容同步到AEM開發執行個體或從中同步內容，您需要定義您的專案設定。 您可以前往 **AEM** 功能表並選取 **專案設定……**
 
 ![chlimage_1-55](assets/chlimage_1-55a.png)
 

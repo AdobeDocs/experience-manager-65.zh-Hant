@@ -2,10 +2,10 @@
 title: 設定翻譯規則
 description: 了解如何定義翻譯規則以識別要翻譯的內容。
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 84%
+source-wordcount: '869'
+ht-degree: 83%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 84%
 1. AEM 儲存設定。
 1. 您必須選取剛剛建立的內容，然後點選或單一下&#x200B;**編輯**。這將開啟&#x200B;**翻譯規則編輯器** 以設定屬性。
    ![翻譯規則編輯器](assets/translation-rules-editor.png)
-1. 依預設，所有設定都繼承自父路徑，在此案例中為 `/content/dam`。取消勾選&#x200B;**繼承自`/content/dam`** 選項，以新增其他欄位至設定。
+1. 依預設，所有設定都繼承自父路徑，在此案例中為 `/content/dam`。取消核取選項 **繼承自`/content/dam`** 以新增其他欄位至設定。
 1. 取消勾選後，在清單的&#x200B;**一般**&#x200B;部分下，新增您[先前識別為翻譯欄位](getting-started.md#content-models)之內容片段模型的屬性名稱。
    1. 在&#x200B;**新屬性**&#x200B;欄位中輸入屬性名稱。
    1. 選項&#x200B;**翻譯**&#x200B;和&#x200B;**繼承**&#x200B;會自動勾選。

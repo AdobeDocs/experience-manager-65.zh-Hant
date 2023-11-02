@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '10243'
+source-wordcount: '10239'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 您的AEM表單環境包含一或多個具有建立使用者和群組適當許可權的管理員使用者。 如果您的組織正在使用Document Security，則必須至少指派一位管理員來管理受邀和本機使用者。
 
-管理員也必須具有管理控制檯使用者角色，才能存取管理控制檯。 (請參閱 [建立和設定角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
+管理員也必須具有管理主控台使用者角色，才能存取管理主控台。 (請參閱 [建立和設定角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
 
 ### 設定可見的使用者和群組 {#configuring-visible-users-and-groups}
 

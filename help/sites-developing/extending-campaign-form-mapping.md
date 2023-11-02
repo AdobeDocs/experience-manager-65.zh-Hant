@@ -1,7 +1,7 @@
 ---
 title: 建立自訂表單對應
 seo-title: Creating Custom Form Mappings
-description: 在Adobe Campaign中建立自訂表格時，您可能想要在AEM中建立對應至該自訂表格的表單
+description: 當您在Adobe Campaign中建立自訂表格時，可能會想要在AEM中建立對應至該自訂表格的表單
 seo-description: When you create a custom table in Adobe Campaign, you may want to build a form in AEM that maps to that custom table
 uuid: f3bde513-6edb-4eb6-9048-40045ee08c4a
 contentOwner: User
@@ -10,20 +10,20 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: d5dac1db-2dde-4b75-a31b-e057b447f6e2
 exl-id: bce6c586-9962-4217-82cb-c837e479abc0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '528'
 ht-degree: 2%
 
 ---
 
 # 建立自訂表單對應{#creating-custom-form-mappings}
 
-在Adobe Campaign中建立自訂表格時，您可能想要在AEM中建立對應至該自訂表格的表單。
+當您在Adobe Campaign中建立自訂表格時，可能會想要在AEM中建立對應至該自訂表格的表單。
 
-本檔案說明如何建立自訂表單對應。 完成本檔案中的步驟後，您將會為使用者提供事件頁面，讓他們註冊即將舉行的事件。 然後您可以透過Adobe Campaign跟進這些使用者。
+本檔案說明如何建立自訂表單對應。 當您完成本檔案中的步驟時，將為使用者提供事件頁面，讓他們註冊即將舉行的事件。 然後您透過Adobe Campaign跟進這些使用者。
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 您必須安裝下列專案：
 
@@ -40,7 +40,7 @@ ht-degree: 2%
 1. 擴充 **種子** 表格。
 1. 建立自訂對應。
 1. 根據自訂對應建立傳遞。
-1. 在AEM中建立表單，此表單將使用建立的傳送。
+1. 在AEM中建立表單，此表單將使用建立的傳遞。
 1. 提交表單以進行測試。
 
 ### 在Adobe Campaign中建立自訂表格 {#creating-the-custom-table-in-adobe-campaign}
@@ -56,9 +56,9 @@ ht-degree: 2%
 </element>
 ```
 
-建立事件表格後，請執行 **更新資料庫結構精靈** 以建立表格。
+建立事件表格之後，請執行 **更新資料庫結構精靈** 以建立表格。
 
-### 延伸種子表 {#extending-the-seed-table}
+### 擴充種子表格 {#extending-the-seed-table}
 
 在Adobe Campaign中，點選/按一下 **新增** 若要建立 **種子地址(nms)** 表格。
 
@@ -97,7 +97,7 @@ ht-degree: 2%
 
 ### 在AEM中建立表單 {#building-the-form-in-aem}
 
-在AEM中，確定您已設定Cloud Service於 **頁面屬性**.
+在AEMCloud Service中，確定您已在 **頁面屬性**.
 
 然後，在 **Adobe Campaign** 索引標籤中，選取在中建立的傳遞 [建立自訂傳遞範本](#creating-a-custom-delivery-template).
 
@@ -107,11 +107,11 @@ ht-degree: 2%
 
 設定欄位後，您需要手動變更對應。
 
-在CRXDE-lite中，移至 **jcr：content** （頁面）節點並變更 **acMapping** 的內部名稱的值 **目標對應**.
+在CRXDE-LITE中，移至 **jcr：content** （頁面的）節點並變更 **acMapping** 的內部名稱的value **目標對應**.
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
-在表單的設定中，確定勾選核取方塊以建立（如果不存在）
+在表單的設定中，如果不存在要建立的核取方塊，請務必勾選
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 

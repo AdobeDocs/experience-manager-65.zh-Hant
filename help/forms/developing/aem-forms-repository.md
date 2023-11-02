@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '9113'
+source-wordcount: '9109'
 ht-degree: 0%
 
 ---
@@ -474,7 +474,7 @@ ht-degree: 0%
 
 ## 正在讀取資源 {#reading-resources}
 
-您可以從存放庫中的指定位置擷取資源，以讀取其內容和中繼資料。 工作流程會以初始化表單作為前端。 此程式具有讀取表單所需的所有許可權。 系統會擷取資料表單，並從存放庫讀取內容。 存放庫會授予內容和中繼資料的存取權（甚至知道資源存在的能力）。
+您可以從儲存庫中的指定位置擷取資源，以讀取其內容和中繼資料。 工作流程會以初始化表單作為前端。 此程式具有讀取表單所需的所有許可權。 系統會擷取資料表單，並從存放庫讀取內容。 存放庫會授予內容和中繼資料的存取權（甚至知道資源存在的能力）。
 
 存放庫有以下四種許可權型別：
 

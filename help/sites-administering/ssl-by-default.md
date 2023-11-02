@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
@@ -202,7 +202,7 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out loca
 
 *https://&lt;serveraddress>：&lt;serverport>/libs/granite/security/post/sslSetup.html*
 
-以下是您可以用來變更設定精靈中各種設定的引數：
+以下是您可以在設定精靈中用來變更各種設定的引數：
 
 * `-F "keystorePassword=password"`  — 金鑰庫密碼；
 
@@ -223,7 +223,7 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out loca
 >
 >執行cURL以自動化SSL/TLS設定的最快方式是來自DER和CRT檔案所在的資料夾。 或者，您可以在 `privatekeyFile` 和certificateFile引數。
 >
->您也需要通過驗證才能執行更新，因此請務必將cURL命令附加 `-u user:passeword` 引數。
+>您也需要驗證才能執行更新，因此請務必附加cURL命令和 `-u user:passeword` 引數。
 >
 >正確的cURL post命令應如下所示：
 

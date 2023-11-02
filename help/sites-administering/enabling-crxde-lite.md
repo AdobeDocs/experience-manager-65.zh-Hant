@@ -1,25 +1,21 @@
 ---
 title: 在AEM中啟用CRXDE Lite
-seo-title: Enabling CRXDE Lite in AEM
 description: 瞭解如何啟用Adobe Experience Manager中的CRXDE Lite。
-seo-description: Learn how to enable CRXDE Lite in AEM.
-uuid: d7a3db67-6384-463b-9aa9-f08ecc6c99c6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---
 
 # 在AEM中啟用CRXDE Lite{#enabling-crxde-lite-in-aem}
 
-為了確保AEM安裝儘可能安全，安全性檢查清單建議 [正在停用WebDAV](/help/sites-administering/security-checklist.md#disable-webdav) 在生產環境中。
+為確保AEM安裝儘可能安全，安全性檢查清單建議 [正在停用WebDAV](/help/sites-administering/security-checklist.md#disable-webdav) 在生產環境中。
 
 不過，CRXDE Lite取決於 `org.apache.sling.jcr.davex` 套件組合以正常運作，因此停用WebDAV也會有效地停用CRXDE Lite。
 
@@ -29,7 +25,7 @@ ht-degree: 1%
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
 ```
 
-雖然此建議的目的是為了儘可能減少攻擊面，但系統管理員有時可能需要存取CRXDE Lite，才能瀏覽內容或偵錯生產執行個體上的問題。
+雖然此建議的目的是為了儘可能減少攻擊面，但系統管理員有時可能需要存取CRXDE Lite來瀏覽內容或偵錯生產執行個體上的問題。
 
 您可以透過以下任一方式啟用CRXDE Lite： [OSGi設定](#enabling-crxde-lite-osgi) 或使用 [cURL命令](#enabling-crxde-lite-curl).
 

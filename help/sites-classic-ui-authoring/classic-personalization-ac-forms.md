@@ -8,9 +8,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
 exl-id: 3f9ed24e-c54b-4bd4-9212-eabc67bb540e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ Adobe Campaign專用的Forms具有特定元件。 這些元件有選項可讓您
    >
    >此 **元素名稱** 每個表單欄位都必須不同。 如有需要，請加以變更。
    >
-   >每個表單都必須包含 **加密的主要金鑰** 元件，以正確管理Adobe Campaign資料庫中的收件者。
+   >每個表單都必須包含 **加密的主要金鑰** 元件來正確管理Adobe Campaign資料庫中的收件者。
 
 1. 選取以啟動頁面 **頁面** > **啟動頁面** 在工具箱中。 頁面已在您的網站上啟動。 您可以前往AEM發佈執行個體來檢視它。 在驗證表單後，Adobe Campaign資料庫中的資料就會更新。
 

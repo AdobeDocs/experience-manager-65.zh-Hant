@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
 exl-id: 1e05faf5-619a-4ea3-acbf-2fd37c71e6d2
 feature: Operations
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ## 設定頁面稽核記錄清除 {#configure-page-audit-log-purging}
 
-若要設定「稽核記錄永久刪除」，請依照下列步驟執行：
+請依照下列步驟設定「稽核記錄清除」：
 
 1. 將瀏覽器指向，前往Web主控台管理員 `http://localhost:4502/system/console/configMgr/`
 

@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: security
 discoiquuid: 4e08c297-aa4b-44cf-84c8-1e11582d9ebb
 exl-id: 3c3db1c8-5b22-45dd-aeaf-5cf830a9486b
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 此功能允許所有OSGi設定屬性以受保護的加密格式儲存，而非純文字。 Web主控台UI中的表單是用來使用全系統加密主金鑰，從純文字建立加密文字。
 
-已新增OSGi設定外掛程式支援，以便在服務使用屬性之前將其解密。
+已新增OSGi設定外掛程式支援，以在服務使用屬性之前將其解密。
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: 自訂 HTTP 標頭
 description: 瞭解如何在Adobe Experience Manager Commerce中設定自訂HTTP標題。
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '276'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 ## 設定 {#configuration}
 
-為了設定自訂HTTP標頭，首先必須定義它們。 自訂HTTP標頭必須先透過將其新增到以下專案來定義： `com.adobe.cq.cif.http.internal.HttpHeadersConfigProviderImpl` 使用OSGi設定的服務設定。
+若要設定自訂HTTP標頭，首先必須定義它們。 自訂HTTP標頭必須先透過將其新增到以下專案來定義： `com.adobe.cq.cif.http.internal.HttpHeadersConfigProviderImpl` 使用OSGi設定的服務設定。
 
 您可以在專案的「Cloud Service設定」頁面中設定HTTP標頭的值：
 

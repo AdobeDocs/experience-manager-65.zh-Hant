@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '4613'
+source-wordcount: '4609'
 ht-degree: 0%
 
 ---
@@ -105,13 +105,13 @@ Lucene會註冊一個JMX Bean，以提供索引內容的詳細資訊，包括每
 
 您可以透過以下網址存取JMX主控台來存取該網站： `https://server:port/system/console/jmx`
 
-登入JMX主控台後，請搜尋 **Lucene索引統計資料** 以便找到它。 其他索引統計資料可在以下連結中找到： **索引統計資料** MBean。
+登入JMX主控台後，請搜尋 **Lucene索引統計資料** 以找到它。 其他索引統計資料可在以下連結中找到： **索引統計資料** MBean。
 
 如需查詢統計資料，請檢視命名的MBean **Oak查詢統計資料**.
 
 如果您想要使用類似以下的工具深入瞭解您的索引 [Luke](https://code.google.com/archive/p/luke/)，您必須使用Oak主控台從傾印索引 `NodeStore` 檔案系統目錄。 如需操作說明，請參閱 [Lucene檔案](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
-您也可以以JSON格式擷取系統中的索引。 若要這麼做，您需要存取 `https://server:port/oak:index.tidy.-1.json`
+您也可以以JSON格式擷取系統中的索引。 若要這麼做，您必須存取 `https://server:port/oak:index.tidy.-1.json`
 
 ### 查詢限制 {#query-limits}
 

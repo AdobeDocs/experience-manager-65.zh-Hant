@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: a08cee9c-e981-4483-8bdc-e6353977f854
 feature: Upgrading
 exl-id: 797bbdf9-917a-4537-a5f9-bf2682db968b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1683'
 ht-degree: 3%
 
 ---
 
 # 升級自訂搜尋Forms{#upgrading-custom-search-forms}
 
-在AEM 6.2中，自訂搜尋Forms在存放庫中的儲存位置已變更。 升級後，它們會從6.1中的位置移至：
+在AEM 6.2中，存放庫內儲存自訂搜尋Forms的位置已變更。 升級後，這些檔案會從6.1中的位置移至：
 
 * /apps/cq/gui/content/facets
 
-至下的新位置：
+移至下的新位置：
 
 * /conf/global/settings/cq/search/facets
 
@@ -36,18 +36,18 @@ ht-degree: 3%
 
 ## 變更resourceType屬性 {#changing-the-resourcetype-property}
 
-除非另有說明，否則升級後需要完成的大部分調整都需要變更 `sling:resourceType` 已設定自訂搜尋Forms的屬性。 這需要此屬性才能指向轉譯指令碼的正確位置。
+除非另有說明，否則升級後需要完成的大部分調整都需要變更 `sling:resourceType` 屬性來搜尋已設定的自訂搜尋Forms。 此屬性是必要的，這樣屬性才能指向轉譯指令碼的正確位置。
 
 您可以執行下列動作來變更屬性：
 
-1. 開啟CRXDE Lite，方法是前往 `https://server:port/crx/de/index.jsp`
-1. 瀏覽至需要調整的節點位置，如下列清單中所指定： [自訂搜尋Forms](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms) 下方的。
+1. 前往以下位置開啟CRXDE Lite： `https://server:port/crx/de/index.jsp`
+1. 瀏覽到需要調整的節點位置，如清單中的指定 [自訂搜尋Forms](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms) 底下。
 1. 按一下節點。 在右側屬性窗格中，按一下並修改 **sling：resourceType** 屬性。
 1. 最後，按下 **全部儲存** 按鈕。
 
 ## 自訂搜尋Forms清單 {#list-of-custom-search-forms}
 
-下方提供所有自訂Search Forms的清單，以及升級後所需的修改。 這些名稱是指以下專案的名稱： `/conf/global/settings/cq/search/facets/sites/items`.
+在下方，您會找到所有自訂Search Forms的清單，以及升級後所需的修改。 它們是指中的名稱 `/conf/global/settings/cq/search/facets/sites/items`.
 
 ### 節點名稱為「全文」的全文述詞 {#fulltext-predicate-with-node-name-fulltext}
 
@@ -68,7 +68,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-在AEM 6.1中，標準全文檢索述詞是搜尋表單的一部分。 在6.2中，全文檢索欄位已由OmniSearch取代。 此述詞會以程式設計方式略過，而且可以移除。
+在AEM 6.1中，標準全文檢索述詞是搜尋表單的一部分。 在6.2中，全文欄位已由OmniSearch取代。 這個述詞會以程式設計方式略過，而且可以移除。
 
 **動作：** 完全移除節點。
 
@@ -77,7 +77,7 @@ ht-degree: 3%
 <table>
  <tbody>
   <tr>
-   <td>在6.1中的預設「搜尋來源」中的節點</td>
+   <td>6.1中預設搜尋來源中的節點</td>
    <td>N/A</td>
   </tr>
   <tr>
@@ -91,7 +91,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### 路徑瀏覽器述詞 {#path-browser-predicates}
 
@@ -99,7 +99,7 @@ ht-degree: 3%
  <tbody>
   <tr>
    <td>6.1中預設搜尋表單中的節點<br /> <br /> </td>
-   <td>路徑</td>
+   <td>path</td>
   </tr>
   <tr>
    <td><p>6.1中的資源型別</p> </td>
@@ -112,7 +112,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### 標籤述詞 {#tags-predicates}
 
@@ -133,7 +133,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-**動作：** 調整 **resourceType** 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 **resourceType** 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### 頁面狀態述詞 {#page-status-predicate}
 
@@ -169,7 +169,7 @@ ht-degree: 3%
    * `/libs/settings/cq/search/facets/sites/jcr:content/items/livecopystatuspredicate`
    * 至 `/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
-* 請確定您已設定 `listOrder` 的屬性 `analyticspredicate` 節點至&quot;**8**「。 這是避免衝突所需。
+* 請務必設定 `listOrder` 的屬性 `analyticspredicate` 節點至&quot;**8**「。 這是避免衝突所需。
 
 ### 日期範圍述詞 {#date-range-predicates}
 
@@ -190,7 +190,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### 隱藏的篩選器 {#hidden-filter}
 
@@ -219,20 +219,20 @@ ht-degree: 3%
  <tbody>
   <tr>
    <td>6.1中預設搜尋表單中的節點<br /> <br /> </td>
-   <td>analyticspredicate</td>
+   <td>analyticsspredicate</td>
   </tr>
   <tr>
    <td><p>6.1中的資源型別</p> </td>
-   <td><p>cq/gui/components/siteadmin/admin/searchpanel/searchpredicates/analyticspredicate</p> </td>
+   <td><p>cq/gui/components/siteadmin/admin/searchpanel/searchpredicates/analyticsspredicate</p> </td>
   </tr>
   <tr>
    <td>6.2中的資源型別</td>
-   <td><p>cq/gui/components<strong>/coral/</strong>siteadmin/admin/searchpanel/searchpredicates/analyticspredicate</p> </td>
+   <td><p>cq/gui/components<strong>/coral/</strong>siteadmin/admin/searchpanel/searchpredicates/analyticsspredicate</p> </td>
   </tr>
  </tbody>
 </table>
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### 範圍述詞 {#range-predicate}
 
@@ -253,11 +253,11 @@ ht-degree: 3%
  </tbody>
 </table>
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 >[!NOTE]
 >
->注意：相對於6.1，範圍述詞不再在搜尋列中轉譯標籤。
+>注意：相對於6.1，範圍述詞不再在搜尋列中呈現標籤。
 
 ### 選項屬性述詞 {#options-property-predicate}
 
@@ -278,7 +278,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### 滑桿範圍述詞 {#slider-range-predicate}
 
@@ -299,7 +299,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### 元件述詞 {#components-predicate}
 
@@ -320,7 +320,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### 作者述詞 {#author-predicate}
 
@@ -341,7 +341,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### 範本述詞 {#templates-predicate}
 
@@ -353,7 +353,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>6.1中的資源型別</p> </td>
-   <td><p>cq/gui/components/siteadmin/admin/searchpanel/searchpredicates/templatesspredicate</p> </td>
+   <td><p>cq/gui/components/siteadmin/admin/searchpanel/searchpredicates/templatespredicate</p> </td>
   </tr>
   <tr>
    <td>6.2中的資源型別</td>
@@ -362,11 +362,11 @@ ht-degree: 3%
  </tbody>
 </table>
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ## 資產管理搜尋邊欄 {#assets-admin-search-rail}
 
-以下節點是指中的名稱 `/conf/global/settings/dam/search/facets/assets/items`
+以下節點代表中的名稱 `/conf/global/settings/dam/search/facets/assets/items`
 
 ### 節點名稱為「全文」的全文述詞 {#fulltext-predicate-with-node-name-fulltext-1}
 
@@ -375,7 +375,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/fulltextpredicate |
 | 6.2中的資源型別 | N/A |
 
-在6.1中，標準全文檢索述詞是搜尋表單的一部分。 在6.2中，全文檢索欄位已由OmniSearch取代。 此述詞會以程式設計方式略過，而且可以移除。
+在6.1中，標準全文檢索述詞是搜尋表單的一部分。 在6.2中，全文欄位已由OmniSearch取代。 這個述詞會以程式設計方式略過，而且可以移除。
 
 **動作：** 移除上述節點。
 
@@ -386,7 +386,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/pathbrowserpredicate |
 | 6.2中的資源型別 | dam/gui/coral/components/admin/customsearch/searchpredicates/pathbrowserpredicate |
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### Mime型別述詞 {#mime-type-predicates}
 
@@ -395,7 +395,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2中的資源型別 | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)。
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面指示的6.2位置中)。
 
 ### 檔案大小述詞 {#file-size-predicates}
 
@@ -413,7 +413,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/assetlastmodifiedpredicate |
 | 6.2中的資源型別 | dam/gui/coral/components/admin/customsearch/searchpredicates/assetlastmodifiedpredicate |
 
-動作：調整resourceType屬性（在上面所示的6.2位置中新增「/coral」）。
+動作：調整resourceType屬性（新增「/coral」，如上方所示的6.2位置）。
 
 ### 發佈述詞 {#publish-predicate}
 
@@ -424,11 +424,11 @@ ht-degree: 3%
 
 **動作:**
 
-* 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)
+* 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 
 * 新增 `optionPaths` （型別為String）屬性，其值為： `/libs/dam/options/predicates/publish`
 
-* 新增 `singleSelect` 具有布林值的屬性 `true`.
+* 新增 `singleSelect` 含布林值的屬性 `true`.
 
 ### 狀態述詞 {#status-predicates}
 
@@ -437,7 +437,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2中的資源型別 | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 
 ### 到期狀態述詞 {#expiry-status-predicates}
 
@@ -446,7 +446,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/expiredassetpredicate |
 | 6.2中的資源型別 | dam/gui/coral/components/admin/customsearch/searchpredicates/expiredassetpredicate |
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 
 ### 中繼資料有效性述詞 {#metadata-validity-predicates}
 
@@ -455,7 +455,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2中的資源型別 | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 
 ### 評等述詞 {#rating-predicates}
 
@@ -464,7 +464,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/ratingpredicate |
 | 6.2中的資源型別 | dam/gui/coral/components/admin/customsearch/searchpredicates/sliderangepredicate |
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 
 ### 方向述詞 {#orientation-predicate}
 
@@ -475,11 +475,11 @@ ht-degree: 3%
 
 **動作:**
 
-* 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)
+* 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 
-* 新增 `fieldLabel` 與具有相同值的屬性 `text` 屬性。
+* 新增 `fieldLabel` 與的值相同的屬性 `text` 屬性。
 
-* 新增 `emptyText` 與具有相同值的屬性 `text` 屬性。
+* 新增 `emptyText` 屬性的值與 `text` 屬性。
 
 * 新增 `rootPath` 與具有相同值的屬性 `optionPaths` 屬性。
 
@@ -492,11 +492,11 @@ ht-degree: 3%
 
 **動作:**
 
-* 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)
+* 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 
-* 新增 `fieldLabel` 與具有相同值的屬性 `text` 屬性。
+* 新增 `fieldLabel` 與的值相同的屬性 `text` 屬性。
 
-* 新增 `emptyText` 與具有相同值的屬性 `text` 屬性。
+* 新增 `emptyText` 屬性的值與 `text` 屬性。
 
 * 新增 `rootPath` 與具有相同值的屬性 `optionPaths` 屬性。
 
@@ -507,13 +507,13 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2中的資源型別 | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 
 ### Mainasset述詞 {#mainasset-predicate}
 
-| 6.1中預設搜尋表單中的節點 | mainasset |
+| 6.1中預設搜尋表單中的節點 | 主要資產 |
 |---|---|
 | 6.1中的資源型別 | granite/ui/components/foundation/form/hidden |
 | 6.2中的資源型別 | granite/ui/components/coral/foundation/form/hidden |
 
-**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上面所示的6.2位置)
+**動作：** 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)

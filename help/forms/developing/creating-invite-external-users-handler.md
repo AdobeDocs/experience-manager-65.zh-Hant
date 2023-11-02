@@ -3,9 +3,9 @@ title: 建立邀請外部使用者處理常式
 description: 瞭解如何建立邀請外部使用者處理常式。 這可讓Rights Management服務邀請外部使用者成為Rights Management使用者。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1133'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 定義授權處理常式的元件XML檔案 {#define-component-xml-authorization-handler}
 
-您必須定義元件XML檔案，才能部署邀請外部使用者處理常式元件。 每個元件都有元件XML檔案，並提供有關元件的中繼資料。
+您必須定義元件XML檔案，才能部署Invite外部使用者處理常式元件。 每個元件都有元件XML檔案，並提供有關元件的中繼資料。
 
 下列專案 `component.xml` 檔案用於「邀請外部使用者」處理常式。 請注意，服務名稱為 `InviteExternalUsersSample` 而此服務公開的作業已命名 `invitedUser`. 輸入引數為 `java.util.List` 例項，而輸出值為陣列 `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` 執行個體。
 

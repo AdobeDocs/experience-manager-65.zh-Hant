@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 簡介 {#introduction}
 
-依預設，AEM會使用權杖驗證處理常式來驗證每個請求。 但是，為了服務驗證請求，「權杖驗證處理常式」需要存取存放庫的每個請求。 發生這種情況是因為會使用Cookie來維持驗證狀態。 從邏輯上來說，狀態需要儲存在存放庫中，才能驗證後續請求。 實際上，這表示驗證機制是有狀態的。
+依預設，AEM會使用權杖驗證處理常式來驗證每個請求。 不過，若要處理驗證請求，「權杖驗證處理常式」需要存取每個請求的存放庫。 發生這種情況是因為會使用Cookie來維持驗證狀態。 邏輯上，狀態需要儲存在存放庫中，才能驗證後續請求。 實際上，這表示驗證機制是有狀態的。
 
 這對於水準擴充性特別重要。 在像下面描述的發佈伺服器陣列那樣的多重執行個體設定中，無法以最佳方式實現負載平衡。 透過狀態式驗證，持續驗證狀態將僅適用於使用者首次驗證的執行個體。
 

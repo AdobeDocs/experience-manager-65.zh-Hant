@@ -3,10 +3,10 @@ title: AEM 6.5的同網站Cookie支援
 description: 瞭解AEM 6.5的同網站Cookie支援。
 topic-tags: security
 exl-id: e1616385-0855-4f70-b787-b01701929bbc
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 73%
+source-wordcount: '220'
+ht-degree: 74%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 73%
 
 此設定的預設值 (`SameSite=Lax`) 可能會導致 AEM 執行個體或服務之間的驗證無法運作。這是因為這些服務的網域或 URL 結構可能不受此 cookie 原則的約束。
 
-為了解決這個問題，您需要設定 `SameSite` Cookie屬性至 `None` 用於登入權杖。
+若要解決此問題，您需要將 `SameSite` Cookie屬性至 `None` 用於登入權杖。
 
 >[!CAUTION]
 >
