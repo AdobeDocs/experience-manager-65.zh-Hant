@@ -1,18 +1,14 @@
 ---
 title: 設定商務行事曆
-seo-title: Configuring Business Calendars
 description: 商務行事曆定義貴組織的商務日與非商務日。 瞭解如何設定企業行事曆。
-seo-description: Business calendars define business and non-business days for your organization. Learn how to configure the business calendars.
-uuid: 0ba610b8-72a8-480c-8783-70d98cbe890a
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 7a85e13d-4800-47c4-812a-5c6e2355298a
 exl-id: 4282718a-41f1-411a-9cd7-8c470005107d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -128,7 +124,7 @@ AEM表單可讓您匯出業務行事曆並將其匯入為XML檔案。 您可以�
 
 >[!NOTE]
 >
->此功能會匯出和匯入所有已定義的商務行事曆，包括AEM表單提供的預設商務行事曆。 與現有行事曆同名的匯入商務行事曆將會覆寫現有行事曆。
+>此功能會匯出和匯入所有已定義的商務行事曆，包括AEM表單提供的預設商務行事曆。 與現有行事曆同名的匯入業務行事曆會覆寫現有行事曆。
 
 ### 匯出商務行事曆 {#export-business-calendars}
 

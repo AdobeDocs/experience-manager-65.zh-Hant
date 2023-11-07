@@ -3,12 +3,12 @@ cloud: Experience Cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5使用手冊
-user-guide-description: 瞭解、安裝、管理和使用AEM 6.5的所有基本資源概觀
+user-guide-description: 瞭解、安裝、管理和使用AEM 6.5的所有基本資源概述
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '60'
+source-wordcount: '59'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,6 @@ ht-degree: 1%
 + 疑難排解和說明{#troubleshooting}
    + [新AEM使用者的資源](new.md)
    + [瞭解AEM功能](learn.md)
-   + [最佳實務、作法和培訓](best-practice.md)
+   + [最佳作法、作法和培訓](best-practice.md)
    + [AEM社群](community.md)
    + [疑難排解](troubleshooting.md)

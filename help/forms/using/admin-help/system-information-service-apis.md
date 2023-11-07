@@ -1,7 +1,7 @@
 ---
 title: 系統資訊服務API
 seo-title: System information Service APIs
-description: 本檔案提供System Information Service所提供API的詳細資訊。
+description: 本檔案提供系統資訊服務所提供API的詳細資訊。
 seo-description: This document provides detailed information about the APIs provided bythesystem information service.
 uuid: 7f624216-56e6-4d49-b9a1-3c9af045dabe
 contentOwner: admin
@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/system_information_service
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
 exl-id: 4da96c8f-8bd0-4cad-9087-18e324f084e7
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 0%
   <tr>
    <td><p>SystemInfo.logs</p></td>
    <td><p>https://'[server]：[port]'/rest/services/ SystemInfo.logs</p></td>
-   <td><p>下載包含應用程式伺服器記錄檔的zip檔案。 </p></td>
+   <td><p>下載包含應用程式伺服器記錄的zip檔案。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.config</p></td>
@@ -58,7 +58,7 @@ ht-degree: 0%
   <tr>
    <td><p>SystemInfo.vitalDetails</p></td>
    <td><p>https://'[server]：[port]'/rest/services/ SystemInfo.vitalDetails</p></td>
-   <td><p>擷取伺服器運作時間、JVM引數、系統記憶體、棧積大小、作業系統名稱、作用中執行緒數目和執行緒計數。 </p></td>
+   <td><p>擷取伺服器運作時間、JVM引數、系統記憶體、棧積大小、作業系統名稱、作用中執行緒的數目以及執行緒計數。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.coreSettings</p></td>
@@ -74,8 +74,8 @@ ht-degree: 0%
      <li><p>EnableDocumentDBStorage</p></li>
      <li><p>GlobalDocumentStorageUseNetworkShare</p></li>
      <li><p>EnableFIPS</p></li>
-     <li><p>EnableWSDL</p></li>
-     <li><p>DataServicesConfigFile </p></li>
+     <li><p>啟用WSDL</p></li>
+     <li><p>資料服務組態檔 </p></li>
      <li><p>EnableRDS</p></li>
     </ul><p></p></td>
   </tr>
@@ -100,13 +100,13 @@ ht-degree: 0%
    <td><p>擷取作用中執行緒的計數和棧疊追蹤。 它接受下列引數：</p>
     <ul>
      <li><p>反複專案= [n]：指定反複專案的計數。 以數字取代n。 </p></li>
-     <li><p>Delay= [n]：指定在開始下一個反複專案之前等待的毫秒數。 </p></li>
+     <li><p>Delay= [n]：指定在開始下一個反複專案之前要等待的毫秒數。 </p></li>
     </ul><p></p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.info</p></td>
    <td><p>https://'[server]：[port]'/rest/services/ SystemInfo.info</p></td>
-   <td><p>此API是所有系統資訊服務API的包裝函式。 在內部，它會執行所有系統資訊API，並以zip格式下載資訊。 </p><p><i><strong>注意</strong>： SystemInfo.info不提供作用中執行緒的計數和棧疊追蹤。 </i></p></td>
+   <td><p>此API是所有系統資訊服務API的包裝函式。 在內部，它會執行所有系統資訊API並以zip格式下載資訊。 </p><p><i><strong>注意</strong>： SystemInfo.info不提供作用中執行緒的計數和棧疊追蹤。 </i></p></td>
   </tr>
  </tbody>
 </table>

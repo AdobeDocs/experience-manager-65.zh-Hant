@@ -2,10 +2,10 @@
 title: 了解 CMS Headless 開發
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解 Headless 技術和使用原因。
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 89%
+source-wordcount: '1611'
+ht-degree: 88%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 89%
 
 ![傳統的全堆疊 CMS](assets/full-stack.png)
 
-在全堆疊 CMS 中，用於操控內容的所有功能都在 CMS 中。系統的功能構成了 CMS 堆疊的不同元件。全堆疊解決方案有很多優點。
+在全棧疊CMS中，操控內容的所有功能都在CMS中。 系統的功能構成了 CMS 堆疊的不同元件。全堆疊解決方案有很多優點。
 
 * 只需維護一個系統。
 * 內容集中管理。

@@ -2,16 +2,16 @@
 title: 翻譯內容
 description: 使用翻譯連接器和規則來翻譯您的 Headless 內容。
 exl-id: a2c2bb9f-97b9-42fd-9bd1-e75c113fb514
-source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2163'
+source-wordcount: '2162'
 ht-degree: 80%
 
 ---
 
 # 翻譯內容 {#translate-content}
 
-使用翻譯整合和規則來翻譯Headless內容。
+使用翻譯整合和規則來翻譯您的 Headless 內容。
 
 ## 到目前為止 {#story-so-far}
 
@@ -105,7 +105,7 @@ ht-degree: 80%
 
 ## 使用翻譯專案 {#using-translation-project}
 
-翻譯專案旨在將與翻譯工作相關的所有內容和任務集中在一個地方，使您的翻譯變得簡單且易於管理。
+翻譯專案旨在將與翻譯工作相關的所有內容和工作集中於一處，讓您的翻譯變得簡單且易於管理。
 
 若要檢視翻譯專案：
 

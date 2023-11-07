@@ -4,9 +4,9 @@ description: 「艱難日」測試可在所有作業同時進行的情況下，�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1822'
 ht-degree: 2%
 
 ---

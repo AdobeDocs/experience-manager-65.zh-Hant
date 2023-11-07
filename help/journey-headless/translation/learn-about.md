@@ -2,10 +2,10 @@
 title: 了解 Headless 內容以及如何在 AEM 中翻譯
 description: 了解 Headless 概念、它們如何對應到 AEM 以及 AEM 翻譯理論。
 exl-id: cb2e2d89-e2d2-462f-8fff-b201847d0641
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 95%
+source-wordcount: '757'
+ht-degree: 94%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 95%
 
 ![傳統的全堆疊 CMS](/help/journey-headless/developer/assets/full-stack.png)
 
-在全堆疊 CMS 中，所有操控內容的功能都在 CMS 中。系統的功能構成了 CMS 堆疊的不同元件。全堆疊解決方案有很多優點。
+在全棧疊CMS中，所有用於操作內容的功能都在CMS中。 系統的功能構成了 CMS 堆疊的不同元件。全堆疊解決方案有很多優點。
 
 * 只需維護一個系統。
 * 內容集中管理。

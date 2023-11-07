@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '10229'
+source-wordcount: '10228'
 ht-degree: 0%
 
 ---
@@ -772,7 +772,7 @@ Document Security可讓使用者在未連線至Document Security伺服器時，�
 
 當使用者端應用程式嘗試與Document Security建立連結時，會提供應用程式、版本和平台資訊。 Document Security會將此資訊與從Document Security設定檔案中取得的「拒絕」設定進行比較。
 
-[拒絕]設定可包含陣列拒絕條件。 如果任一組的所有屬性相符，則拒絕請求應用程式存取Document Security服務。
+[拒絕]設定可包含陣列拒絕條件。 如果任一組的所有屬性相符，則拒絕請求應用程式存取Document Security Services。
 
 阻斷服務功能要求使用者端應用程式使用Document Security C++使用者端SDK 8.2版或更新版本。 下列Adobe產品在要求Document Security服務時提供產品資訊：
 

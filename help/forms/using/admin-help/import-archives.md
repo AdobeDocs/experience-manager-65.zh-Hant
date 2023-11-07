@@ -1,16 +1,14 @@
 ---
 title: 匯入及管理封存
 description: 瞭解如何匯入及管理封存。 封存匯入並管理在Workbench中建立的LCA。 您可以匯入、設定、使用和刪除封存。
-uuid: aa1613dd-6350-49a7-9643-44365e2acdcc
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: b6f6463a-2ae4-43d2-8d16-cc20a954e50e
 exl-id: 0c15677a-ee17-425e-a261-fb3ae8688eb2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -26,7 +24,7 @@ ht-degree: 0%
 1. 按一下「瀏覽」以找出要匯入的封存，然後按一下「預覽」。
 1. 檢閱將隨歸檔一起安裝的資源和物件清單。 確保與現有資源、物件和服務組態沒有衝突，因為沒有可用的復原功能。
 
-   如果您選取匯入服務組態，AEM Forms會匯入LCA中處理程式使用的所有處理程式組態檔（端點、安全性設定檔及服務組態引數）。
+   如果您選取匯入服務組態，AEM表單會匯入LCA中處理程式使用的所有處理程式組態檔（端點、安全性設定檔及服務組態引數）。
 
 1. 按一下「匯入」。
 1. 檢閱匯入結果，然後按一下「略過組態」完成匯入程式，或按一下「組態」設定歸檔。

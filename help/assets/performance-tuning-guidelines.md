@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2740'
+source-wordcount: '2739'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ Adobe建議啟用HTTPS，因為許多公司都有會偵聽HTTP流量的防火牆
 
 ### 最大平行作業數 {#maximum-parallel-jobs}
 
-根據預設， [!DNL Experience Manager] 執行的最大平行作業數等於伺服器上的處理器數。 此設定的問題是當負載很重時，所有的處理器都被 [!UICONTROL DAM更新資產] 工作流程，降低UI回應速度並防止 [!DNL Experience Manager] 執行其他可保護伺服器效能與穩定性的程式。 若要將此值設為伺服器上可用處理器的一半，請執行下列步驟：
+根據預設， [!DNL Experience Manager] 執行的最大平行作業數等於伺服器上的處理器數。 此設定的問題是當負載很重時，所有處理器都被 [!UICONTROL DAM更新資產] 工作流程，降低UI回應速度並防止 [!DNL Experience Manager] 執行其他可保護伺服器效能與穩定性的程式。 若要將此值設為伺服器上可用處理器的一半，請執行下列步驟：
 
 1. 開啟 [!DNL Experience Manager] 作者，存取 `https://[aem_server]:[port]/system/console/slingevent`.
 

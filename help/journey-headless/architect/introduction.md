@@ -2,10 +2,10 @@
 title: Adobe Experience Manager Headless內容架構者歷程
 description: 介紹Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案建立內容的模型。
 exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 81%
+source-wordcount: '730'
+ht-degree: 79%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 81%
 
 ![傳統的全堆疊 CMS](/help/journey-headless/developer/assets/full-stack.png)
 
-在全堆疊 CMS 中，所有操控內容的功能都在 CMS 中。系統的功能構成了 CMS 堆疊的不同元件。全堆疊解決方案有很多優點。
+在全棧疊CMS中，所有用於操作內容的功能都在CMS中。 系統的功能構成了 CMS 堆疊的不同元件。全堆疊解決方案有很多優點。
 
 * 只需維護一個系統。
 * 內容集中管理。

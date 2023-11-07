@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2578'
-ht-degree: 61%
+source-wordcount: '2577'
+ht-degree: 60%
 
 ---
 
@@ -149,7 +149,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 * 重設值表示轉出重設模式。
 
-從這些物件中您可以獲取 `LiveCopy` 的所有資訊。您還可以使用 `Resource` 物件獲取 `ResourceResolver`、`Session` 和 `Node` 物件。這些物件對於操作存放庫內容非常有用：
+您可以透過這些物件取得 `LiveCopy`. 您還可以使用 `Resource` 物件獲取 `ResourceResolver`、`Session` 和 `Node` 物件。這些物件對於操作存放庫內容非常有用：
 
 在以下程式碼的第一行中，來源是指來源頁面的 `Resource` 物件：
 

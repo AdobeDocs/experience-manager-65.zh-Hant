@@ -7,9 +7,9 @@ role: User, Admin
 feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '3264'
+source-wordcount: '3263'
 ht-degree: 14%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 14%
 
 | 相關角色的價值主張 | Adobe產品 | 相關曲面 |
 |---|---|---|
-| 創意使用者可從發現資產 [!DNL Experience Manager]，開啟並使用這些專案，編輯並上傳變更至 [!DNL Experience Manager]，並將新檔案上傳至 [!DNL Experience Manager]，不離開 [!DNL Creative Cloud] 應用程式。 | [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、[!DNL Adobe Illustrator] 和 [!DNL Adobe InDesign]。 |
+| 創意使用者可從發現資產 [!DNL Experience Manager]，開啟並使用它們、編輯和上傳變更至 [!DNL Experience Manager]，並將新檔案上傳至 [!DNL Experience Manager]，不離開 [!DNL Creative Cloud] 應用程式。 | [Adobe Asset Link](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、[!DNL Adobe Illustrator] 和 [!DNL Adobe InDesign]。 |
 | 業務使用者簡化開啟和使用資產、編輯及上傳變更至 [!DNL Experience Manager]，並將新檔案上傳至 [!DNL Experience Manager] 從案頭環境。 他們使用一般整合，在原生案頭應用程式中開啟任何資產型別，包括非Adobe資產型別。 | [Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] Win和Mac案頭上的案頭應用程式 |
 | 行銷人員和商務使用者可探索、預覽、授權及儲存，並管理 [!DNL Adobe Stock] 中的資產 [!DNL Experience Manager]. 授權和儲存的資產提供選擇 [!DNL Adobe Stock] 中繼資料，以提升控管能力。 | [Experience Manager與Adobe Stock整合](aem-assets-adobe-stock.md) | [!DNL Experience Manager] 網頁介面 |
 

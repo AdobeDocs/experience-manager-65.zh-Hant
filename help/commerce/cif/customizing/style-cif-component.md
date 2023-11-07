@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2533'
+source-wordcount: '2531'
 ht-degree: 2%
 
 ---
@@ -280,7 +280,7 @@ ht-degree: 2%
    * `venia.dependencies`  — 提供符合下列條件的任何廠商程式庫： `venia.site` 取決於。
    * `venia.site`  — 這是 `clientlib-site` 該 `ui.frontend` 模組會產生。
 
-   請注意，其他範本使用相同的原則， **內容頁面**， **登陸頁面**、等等。 透過重複使用相同的原則，我們可以確保在所有頁面上都包含相同的使用者端程式庫。
+   請注意，其他範本使用相同的原則， **內容頁面**， **登陸頁面**、等等。 透過重複使用相同的原則，我們可以確保在所有頁面上包含相同的使用者端程式庫。
 
    使用範本和頁面原則來管理使用者端資料庫之包含專案的優點在於，您可以根據範本變更原則。 例如，您可能在同一個AEM執行個體中管理兩個不同的品牌。 每個品牌都有其獨特風格或 *主題* 但基礎程式庫和程式碼將會相同。 另一個範例，如果您有一個大型使用者端程式庫，您只想讓它出現在某些頁面上，您可以為該範本制定唯一的頁面原則。
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1946'
 ht-degree: 1%
 
 ---
@@ -253,7 +253,7 @@ ht-degree: 1%
 使用對話方塊頂端的欄位來指定下列資訊：
 
 * 指定隱藏或顯示元件的條件。
-* 無論任何或所有條件是否都必須為true，才能顯示或隱藏元件。
+* 是否需有任何或所有條件必須為true才能顯示或隱藏元件。
 
 一或多個條件會顯示在這些欄位下方。 條件會將另一個表單元件（位於相同表單）的值與一個值比較。 如果欄位中的實際值符合條件，則條件的評估結果為true。 條件包括下列資訊：
 

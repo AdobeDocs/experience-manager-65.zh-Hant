@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2206'
+source-wordcount: '2205'
 ht-degree: 1%
 
 ---
@@ -260,7 +260,7 @@ AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
 
 1. 使用Dynamic Tag Management下拉式功能表選取您的設定，然後按一下「確定」。
 
-請使用下列程式來覆寫頁面的繼承組態關聯。 覆寫會影響頁面及所有頁面子代。
+請使用下列程式來覆寫頁面的繼承組態關聯。 覆寫會影響頁面和所有頁面子代。
 
 1. 在傳統UI中開啟頁面。
 1. 使用Sidekick開啟頁面屬性。

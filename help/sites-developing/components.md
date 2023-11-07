@@ -10,10 +10,10 @@ topic-tags: components
 content-type: reference
 discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 53%
+source-wordcount: '589'
+ht-degree: 50%
 
 ---
 
@@ -79,7 +79,7 @@ AEM隨附多種多樣的 [現成可用的元件](/help/sites-authoring/default-c
 
 ### 檢視可用元件 {#viewing-available-components}
 
-如需 AEM 執行個體中所有可用元件的概觀，請使用[元件主控台](/help/sites-authoring/default-components-console.md)。
+如需AEM執行個體中所有可用元件的總覽，請使用 [元件主控台](/help/sites-authoring/default-components-console.md).
 
 或者，您也可以使用 CRXDE Lite 取得存放庫中所有可用元件的清單。
 
