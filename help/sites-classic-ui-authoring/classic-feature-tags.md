@@ -1,14 +1,12 @@
 ---
 title: 使用標籤
 description: 標籤是一種將網站內容分類的快速輕鬆方法。 標籤可視為可以附加至頁面、資產或其他內容的關鍵字或標籤，以啟用搜尋來尋找該內容和相關內容。
-uuid: 9799131f-4043-4022-a401-af8be93a1bf6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: c117b9d1-e4ae-403f-8619-6e48d424a761
 exl-id: 4b6c273c-560e-4330-b886-a02825d5aaa1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 27e5c7fea4e90873bf80f976e179b5af0088f550
 workflow-type: tm+mt
 source-wordcount: '706'
 ht-degree: 1%

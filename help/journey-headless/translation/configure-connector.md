@@ -5,7 +5,7 @@ exl-id: a1a4b1ca-d353-46e2-a992-f38be6be338e
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1159'
-ht-degree: 91%
+ht-degree: 93%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 91%
 
 ## 目標 {#objective}
 
-本檔案可協助您瞭解如何將AEM整合設定至您選擇的翻譯服務。 閱讀本文件後，您應該：
+本文件可協助您了解如何為您選擇的翻譯服務設定 AEM 整合。 閱讀本文件後，您應該：
 
 * 了解 AEM 中翻譯整合框架的重要參數。
 * 能夠為您的翻譯服務設定您自己的連接。
