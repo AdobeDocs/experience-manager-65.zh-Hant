@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5aa69b10-2cd0-4d34-8104-8c3b88405926
 feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
@@ -135,13 +135,13 @@ AEM會使用以下專案將記錄訊息寫入檔案：
 
 您可以定義自己的記錄器/寫入器配對：
 
-1. 建立工廠組態的新執行個體 [Apache Sling記錄記錄器設定](/help/sites-deploying/osgi-configuration-settings.md).
+1. 建立工廠組態的執行個體 [Apache Sling記錄記錄器設定](/help/sites-deploying/osgi-configuration-settings.md).
 
    1. 指定記錄檔。
    1. 指定記錄器。
    1. 視需要設定其他引數。
 
-1. 建立工廠組態的新執行個體 [Apache Sling記錄寫入器設定](/help/sites-deploying/osgi-configuration-settings.md).
+1. 建立工廠組態的執行個體 [Apache Sling記錄寫入器設定](/help/sites-deploying/osgi-configuration-settings.md).
 
    1. 指定記錄檔 — 這必須符合為記錄器指定的記錄檔。
    1. 視需要設定其他引數。

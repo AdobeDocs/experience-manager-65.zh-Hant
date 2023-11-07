@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1795'
 ht-degree: 8%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 8%
 
 ### 擷取資產 {#ingesting-assets}
 
-將資產擷取至系統時，效能和穩定性是重要考量。 由於您要將大量資料載入系統，因此您想要確保系統儘可能發揮效能，將所需的時間減至最少，並避免系統超載，這可能會導致系統當機，尤其是在已投入生產的系統中。
+將資產擷取至系統時，效能和穩定性是重要考量。 由於您要將大量資料載入系統，因此您想要確保系統執行，並且可以將所需的時間減至最少，並避免系統超載，這可能會導致系統當機，尤其是在已經處於生產狀態的系統中。
 
 將資產載入系統有兩種方法：使用HTTP的推播式方法，或使用JCR API的拉取式方法。
 

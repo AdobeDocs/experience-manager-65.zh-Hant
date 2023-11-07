@@ -1,18 +1,14 @@
 ---
 title: 使用Adobe Campaign 6.1和Adobe Campaign Standard
-seo-title: Working with Adobe Campaign 6.1 and Adobe Campaign Standard
 description: 您可以在AEM中建立電子郵件內容，並在Adobe Campaign電子郵件中處理。
-seo-description: You can create email content in AEM and process it in Adobe Campaign emails.
-uuid: 439df7fb-590b-45b8-9768-565b022a808b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 61b2bd47-dcef-4107-87b1-6bf7bfd3043b
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1163'
 ht-degree: 1%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 1%
 
 您可以在AEM中建立電子郵件內容，並在Adobe Campaign電子郵件中處理。 若要這麼做，您必須：
 
-1. 從Adobe Campaign專屬的範本在AEM中建立新的電子報。
+1. 從Adobe Campaign專用的範本在AEM中建立Newsletter。
 1. 選取 [Adobe Campaign服務](#selectingtheadobecampaigncloudservice) 編輯內容以存取所有功能之前。
 1. 編輯內容。
 1. 驗證內容。
@@ -56,7 +52,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >[電子郵件範例僅適用於Geometrixx](/help/sites-developing/we-retail.md#weretail). 請從「封裝共用」下載範例Geometrixx內容。
+   >[電子郵件範例僅適用於Geometrixx](/help/sites-developing/we-retail.md#weretail). 從封裝共用下載範例Geometrixx內容。
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
@@ -147,7 +143,7 @@ ht-degree: 1%
 
 ### 預覽電子報 {#previewing-a-newsletter}
 
-您可以預覽Newsletter的外觀以及預覽個人化。
+您可以預覽Newsletter的外觀並預覽個人化。
 
 1. 開啟您要預覽的Newsletter，然後按一下「預覽」（放大鏡）以縮小Sidekick。
 1. 按一下其中一個電子郵件使用者端圖示，即可檢視您的電子報在每個電子郵件使用者端中的面貌。

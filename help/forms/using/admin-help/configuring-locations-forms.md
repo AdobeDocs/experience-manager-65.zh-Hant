@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3d2b7cfb-228c-4cc2-8fcd-d500f0010010
 exl-id: 0d9eb7fe-28a6-444e-957d-023687158c61
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '825'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 `(BaseURL)/subdir/image1.jpg`
 
-**FS Web根URI：** Forms網頁應用程式的URL。 如果將Forms Web應用程式和使用者端應用程式部署在相同的應用程式伺服器上，您可以將此方塊保留為空白；將會使用Forms API Web根URL。
+**FS Web根URI：** Forms網頁應用程式的URL。 如果將Forms Web應用程式和使用者端應用程式部署在相同的應用程式伺服器上；系統會使用Forms API Web根URL，您可以將此方塊保留空白。
 
 如果Forms Web應用程式和使用者端應用程式未部署至相同的應用程式伺服器，請在此方塊中提供Forms Web應用程式的URL，如下列範例所示：
 

@@ -1,19 +1,15 @@
 ---
 title: 傳統UI標籤主控台
-seo-title: Classic UI Tagging Console
 description: 瞭解Adobe Experience Manager Classic UI標籤主控台。
-seo-description: Learn about the Classic UI Tagging Console.
-uuid: 51e29422-f967-424b-a7fd-4ca2ddc6b8a3
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
 exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -41,7 +37,7 @@ ht-degree: 2%
 
    ![建立名稱空間對話方塊](assets/creating_tags_andnamespaces.png)
 
-   如果您選取名稱空間(例如 **示範**)您可以在該名稱空間中建立標籤：
+   如果您選取名稱空間(例如， **示範**)您可以在該名稱空間中建立標籤：
 
    ![建立標籤對話方塊](assets/creating_tags_andnamespacesinnewnamespace.png)
 
@@ -159,7 +155,7 @@ ht-degree: 2%
 
 「標籤」主控台使用使用者語言設定，因此對於Animal標籤，會針對在使用者屬性中將語言設定為法文的使用者顯示「Animaux」。
 
-若要新增語言至對話方塊，請參閱區段 [新增語言至編輯標籤對話方塊](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) 在 **為開發人員加上標籤** 區段。
+若要在對話方塊中新增語言，請參閱區段 [新增語言至編輯標籤對話方塊](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) 在 **為開發人員加上標籤** 區段。
 
 ### 以指定語言在頁面屬性中顯示標籤標題 {#displaying-tag-titles-in-page-properties-in-a-specified-language}
 

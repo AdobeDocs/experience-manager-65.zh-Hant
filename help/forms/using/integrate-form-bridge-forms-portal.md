@@ -11,9 +11,9 @@ discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 feature: Mobile Forms
 exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ FormBridge是HTML5 Forms Bridge API，可讓您與表單互動。 如需FormBrid
 
 您可以使用FormBridge API從HTML頁面取得或設定表單欄位的值，並提交表單。 例如，您可以使用API來建置精靈般的體驗。
 
-現有的HTML應用程式可運用FormBridge API與表單互動，並將其內嵌於HTML頁面中。 您可以使用下列步驟，透過Form Bridge API設定欄位的值。
+現有的HTML應用程式可使用FormBridge API與表單互動，並將其內嵌於HTML頁面中。 您可以使用下列步驟，透過Form Bridge API設定欄位的值。
 
 ## 將HTML5表單整合至網頁 {#integrating-html-forms-to-a-web-page}
 
@@ -34,7 +34,7 @@ FormBridge是HTML5 Forms Bridge API，可讓您與表單互動。 如需FormBrid
    1. 使用系統管理員認證登入。
    1. 建立設定檔或選擇現有的設定檔。
 
-      如需如何建立設定檔的詳細資訊，請參閱 [建立新的設定檔](/help/forms/using/custom-profile.md).
+      如需如何建立設定檔的詳細資訊，請參閱 [建立設定檔](/help/forms/using/custom-profile.md).
 
 1. **修改HTML設定檔**
 

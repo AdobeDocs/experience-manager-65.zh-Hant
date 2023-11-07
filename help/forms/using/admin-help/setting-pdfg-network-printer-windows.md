@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: PDF Generator
 exl-id: c3fc159e-2677-4b71-b0b2-2feaf69e1a32
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ PDFG網路印表機可讓使用者從任何支援列印的應用程式產生PDF�
 
    * 要叫用的服務名稱
    * 要叫用的服務之作業的名稱
-   * 輸入引數的名稱，如服務或程式的component.xml檔案中所指定。 PDF檔案將用作該輸入引數的值。
+   * 輸入引數的名稱，如服務或程式的component.xml檔案中所指定。 PDF檔案會作為該輸入引數的值使用。
 
 1. 按一下「儲存」。
 
@@ -63,6 +63,6 @@ PDFG網路印表機可讓使用者從任何支援列印的應用程式產生PDF�
 
 1. 在「PDFG網路印表機安裝」下，按一下連結。 提示輸入使用者帳戶資訊時，請指定您在步驟1用來登入的使用者名稱和密碼。 會出現訊息，指出印表機已成功安裝。
 
-   ***注意&#x200B;**：如果使用者密碼變更，則使用者需要在其電腦上重新安裝PDFG網路印表機。 您無法從管理控制檯更新密碼。*
+   ***注意&#x200B;**：如果使用者密碼變更，使用者必須在電腦上重新安裝PDFG網路印表機。 您無法從管理控制檯更新密碼。*
 
 1. 按一下「確定」。

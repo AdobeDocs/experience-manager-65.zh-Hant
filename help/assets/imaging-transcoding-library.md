@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執
 * JPEG品質壓縮
 * 調整影像大小
 
-影像轉碼資料庫提供CMYK支援和完整Alpha支援，但CMYK -Alpha除外。
+影像轉碼程式庫提供CMYK支援和完整Alpha支援(CMYKAlpha除外)。
 
 除了支援各式各樣的檔案格式與設定檔外，影像轉碼程式庫在效能、擴充能力及品質方面，較其他協力廠商解決方案都具備顯著優勢。 以下是使用「影像轉碼程式庫」的一些主要優點：
 
@@ -56,10 +56,10 @@ Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執
 
 您可以為以下專案設定下列選項： `-resize` 引數：
 
-* `X`：作用類似於 [!DNL Experience Manager]. 例如 — resize 319。
-* `WxH`：未維護外觀比例，例如 `-resize 319x319`.
-* `Wx`：修正寬度並計算高度，以維持外觀比例。 例如 `-resize 319x`。
-* `xH`：修正高度並計算寬度，以維持外觀比例。 例如 `-resize x319`。
+* `X`：作用類似於 [!DNL Experience Manager]. 例如，-resize 319。
+* `WxH`：不維持外觀比例，例如 `-resize 319x319`.
+* `Wx`：修正寬度並計算高度，以維持外觀比例。 例如，`-resize 319x`。
+* `xH`：修正高度並計算寬度，以維持外觀比例。 例如，`-resize x319`。
 
 ```shell
  -AllowUpsampling (Resizes smaller images)

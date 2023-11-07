@@ -1,17 +1,15 @@
 ---
 title: 與Adobe Campaign元件整合
 description: 與Adobe Campaign整合時，您擁有可在使用電子報和表單時使用的元件。
-uuid: a858d5ca-aa6e-4bde-92db-a6dcd8b48ae6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2836'
+source-wordcount: '2835'
 ht-degree: 5%
 
 ---
@@ -24,7 +22,7 @@ ht-degree: 5%
 >
 >已棄用AEM電子郵件元件。 由於電子郵件結合了內容和樣式，因此由AEM提供的現成可用電子郵件元件對於客戶的重複使用有限，因為需要將自訂樣式實作到專案所需的任何元件中。
 >
->電子郵件元件可在專案層級實作，而過時的AEM電子郵件元件會說明如何實作。 不過，這些已棄用的元件不應在專案中使用。
+>電子郵件元件可在專案層級實作，而過時的AEM電子郵件元件會說明如何實作。 不過，請勿在專案上使用這些已棄用的元件。
 
 ## Adobe Campaign Newsletter元件 {#adobe-campaign-newsletter-components}
 
@@ -216,7 +214,7 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
 * **影像屬性** (**進階影像屬性**)可讓您指定下列專案：
 
    * **標題**
-區塊的標題；將顯示於滑鼠懸停處。
+區塊標題，由mouseover顯示。
 
    * **替代文字**
 如果影像無法顯示，則會顯示替代文字。

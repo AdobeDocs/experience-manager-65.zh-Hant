@@ -1,18 +1,14 @@
 ---
 title: 使用Translator管理字典
-seo-title: Using Translator to Manage Dictionaries
 description: AEM提供了一個主控台，用於管理元件UI中使用的各種文字翻譯
-seo-description: AEM provides a console for managing the various translations of texts used in component UI
-uuid: 4eea3110-e958-473e-8d22-c84fa435edbd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
-discoiquuid: adf3364c-11f1-45c6-b41d-2c7d48b626f9
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2327'
+source-wordcount: '2320'
 ht-degree: 1%
 
 ---
@@ -23,9 +19,9 @@ AEM提供了一個主控台，用於管理元件UI中使用的各種文字翻譯
 
 `https://<hostname>:<port-number>/libs/cq/i18n/translator.html`
 
-使用翻譯工具來管理英文字串及其翻譯。 字典在存放庫中建立，例如/apps/myproject/i18n。
+使用翻譯工具來管理英文字串及其翻譯。 字典建立於存放庫中，例如/apps/myproject/i18n。
 
-請注意，您管理的翻譯工具與字典用於以不同語言呈現元件UI。 如果要翻譯頁面或使用者產生的內容，請參閱 [翻譯多語言網站的內容](/help/sites-administering/translation.md) 和 [翻譯使用者產生的內容](/help/communities/translate-ugc.md).
+您管理的翻譯工具與字典用於以不同語言呈現元件UI。 如果要翻譯頁面或使用者產生的內容，請參閱 [翻譯多語言網站的內容](/help/sites-administering/translation.md) 和 [翻譯使用者產生的內容](/help/communities/translate-ugc.md).
 
 >[!CAUTION]
 >
@@ -43,7 +39,7 @@ AEM提供了一個主控台，用於管理元件UI中使用的各種文字翻譯
 
 您可以搜尋、篩選及編輯英文與翻譯過的文字。 您也可以將字典匯出為XLIFF格式進行翻譯，然後將翻譯匯回字典。
 
-您也可以從此主控台將i18n字典新增至翻譯專案。 您可以建立新專案或新增至現有專案。
+您也可以從此主控台將i18n字典新增至翻譯專案。 您可以建立一個或新增到現有專案。
 
 1. 按一下 **翻譯字典**.
 
@@ -113,7 +109,7 @@ AEM提供了一個主控台，用於管理元件UI中使用的各種文字翻譯
 
 使用字典字串的Commenet屬性，為翻譯人員提供資訊以釐清字串的含義。 通常UI會協助使用者判斷模糊字詞的含義。 不過，翻譯人員不會在UI的內容中看到字串。 翻譯提示會移除模稜兩可之處。 例如，註解可協助翻譯人員瞭解英文單詞Request是用作名詞，而非動詞。
 
-翻譯提示也可區分相同且具有不同含義的字串。 例如，「搜尋」一詞可以是名詞或動詞，在字典中需要兩個「搜尋」專案以及兩個不同的翻譯提示。 要求字串的程式碼也包含翻譯提示，以便在UI中使用正確的字串。
+翻譯提示也可區分相同且具有不同含義的字串。 例如，Search一詞可以是名詞或動詞，在字典中需要兩個「Search」條目以及兩個不同的翻譯提示。 要求字串的程式碼也包含翻譯提示，以便在UI中使用正確的字串。
 
 **包含索引變數**
 
@@ -283,7 +279,7 @@ Translator工具底部的搜尋列提供字串選取選項：
 
 請使用下列程式來新增或移除語言。
 
-1. 使用CRXDE Lite建立新節點：
+1. 使用CRXDE Lite建立節點：
 
    `/etc/languages`
 
@@ -382,7 +378,7 @@ Translator工具底部的搜尋列提供字串選取選項：
 
 >[!NOTE]
 >
->不應將一般發佈功能或復寫用於字典。 相反地，字典處理方式應與程式碼和設定相同。 這包括使用原始檔控制來追蹤變更，以及使用內容套件將變更套用至作者和發佈。
+>請勿對字典使用一般發佈功能或復寫。 相反地，字典處理方式應與程式碼和設定相同。 這包括使用原始檔控制來追蹤變更，以及使用內容套件將變更套用至作者和發佈。
 
 >[!NOTE]
 >

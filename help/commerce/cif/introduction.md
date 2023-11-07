@@ -3,9 +3,9 @@ title: 簡介和概觀
 description: Content and Commerce 簡介和概觀。在透過 Experience Cloud 整合和擴充 Adobe Commerce 和其他第三方商務解決方案的商務服務時，Adobe 建議使用 Experience Manager 商務整合框架 (CIF) 作為模式。
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '869'
 ht-degree: 94%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 94%
 
 ## 引入 AEM 商務整合框架 (CIF) {#cif-intro}
 
-因為這些專案必須處理整合商務解決方案的複雜性。商務解決方案可以是任何商業解決方案，例如Adobe Commerce或一組自訂商務服務。 整合高度取決於使用案例和生態系統。它通常涉及各種不同地方並有許多不同型式：
+因為這些專案必須處理整合商務解決方案的複雜性。商務解決方案可以是商業解決方案(例如Adobe Commerce)或一組自訂商務服務。 整合高度取決於使用案例和生態系統。它通常涉及各種不同地方並有許多不同型式：
 
 * 整合複雜且動態的生態系統 (範例產品目錄)
 * 企業需要以有效率和全管道的方式管理具有自己生命週期的產品內容

@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1795'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ AEM可讓您透過使用 **配置容器** 元件。
 配置容器：
 
 * 提供水準貼齊格點，以及可並排將元件置入格點，並定義它們何時應摺疊/重排。
-* 使用預先定義的中斷點（例如，手機、平板電腦等） 可讓您定義相關裝置/方向的必要內容行為。
+* 使用預先定義的中斷點（例如，手機、平板電腦等），讓您為相關裝置/方向定義內容的必要行為。
 
    * 例如，您可以自訂元件大小，或是否在特定裝置上可看見元件。
 
@@ -61,7 +61,7 @@ AEM使用一組機製為頁面實現回應式佈局：
 
 >[!NOTE]
 >
->Adobe提供 [GitHub檔案](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) 回應式版面作為參考，可提供給前端開發人員使用AEM以外的AEM格線，例如建立未來AEM網站的靜態HTML模型時。
+>Adobe提供 [GitHub檔案](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) 回應式版面作為參考，前端開發人員可以參考該參考，以便在AEM之外使用AEM格線，例如在為未來的AEM網站建立靜態HTML模型時。
 
 >[!NOTE]
 >
@@ -103,7 +103,7 @@ AEM可讓您根據裝置的寬度定義版面：
 
    ![模擬器](do-not-localize/screen_shot_2018-03-23at084256.png)
 
-1. 模擬器工具列將會開啟。
+1. 模擬器工具列隨即開啟。
 
    ![screen_shot_2018-03-23at084551](assets/screen_shot_2018-03-23at084551.png)
 
@@ -182,7 +182,7 @@ A **配置容器** 是段落系統：
 
    ![screen_shot_2018-03-23at085636](assets/screen_shot_2018-03-23at085636.png)
 
-1. 這將會反白顯示整個格線及其內容。 畫面會顯示動作工具列，您可於其中選取動作，例如 **刪除。**
+1. 這將會反白顯示整個格線及其內容。 畫面會顯示動作工具列，您可在其中選取動作，例如 **刪除。**
 
    ![screen_shot_2018-03-23at085724](assets/screen_shot_2018-03-23at085724.png)
 
@@ -208,7 +208,7 @@ A **配置容器** 是段落系統：
 
 在版面模式中，您可以在格線上執行各種動作：
 
-* 使用藍點調整內容元件的大小。 調整大小永遠靠齊格點。 當調整背景格點的大小時，將顯示以輔助對齊：
+* 使用藍點調整內容元件的大小。 調整大小永遠靠齊格點。 調整大小時，背景格點會顯示，以協助對齊：
 
   ![screen_shot_2018-03-23at090140](assets/screen_shot_2018-03-23at090140.png)
 

@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3588'
 ht-degree: 1%
@@ -467,7 +467,7 @@ public class MyProcess implements WorkflowProcess {
 
 ### 使用ECMAScript {#using-ecmascript}
 
-ECMA指令碼可讓指令碼開發人員實作程式步驟。 指令碼位於JCR存放庫中，並從那裡執行。
+ECMA指令碼可讓指令碼開發人員實作程式步驟。 這些指令碼位於JCR存放庫中，並從那裡執行。
 
 下表列出可立即用於處理指令碼的變數，提供工作流程Java API物件的存取權。
 
@@ -528,7 +528,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 若要使用指令碼：
 
-1. 建立指令碼(例如使用CRXDE Lite)並將其儲存在下面的存放庫中 `//apps/workflow/scripts/`
+1. 建立指令碼(例如，使用CRXDE Lite)並將其儲存在下面的存放庫中 `//apps/workflow/scripts/`
 1. 若要指定標題來識別中的指令碼 **程式步驟** 編輯對話方塊，將下列屬性新增至 `jcr:content` 指令碼的節點：
 
    | 名稱 | 類型 | 值 |
@@ -645,7 +645,7 @@ function getParticipant() {
 }
 ```
 
-1. 建立指令碼(例如使用CRXDE Lite)並將其儲存在下面的存放庫中 `//apps/workflow/scripts`
+1. 建立指令碼(例如，使用CRXDE Lite)並將其儲存在下面的存放庫中 `//apps/workflow/scripts`
 1. 若要指定標題來識別中的指令碼 **程式步驟** 編輯對話方塊，將下列屬性新增至 `jcr:content` 指令碼的節點：
 
    | 名稱 | 類型 | 值 |
@@ -803,7 +803,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
    >
    >此步驟不適用於傳統UI模型編輯器。
 
-1. 然後將複製的步驟放置到/apps資料夾中；例如：
+1. 然後將複製的步驟放置到/apps資料夾中；例如，如下所示：
 
    `/apps/cq/workflow/components/model/myCustomStep`
 
@@ -825,7 +825,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
      必須繼承自現有步驟。
 
-     在此範例中，我們繼承自下列位置的基本步驟 `cq/workflow/components/model/step`，但您可以使用其他超級型別，例如 `participant`， `process`等
+     在此範例中，我們繼承自下列位置的基本步驟 `cq/workflow/components/model/step`，但您可以使用其他超級型別，例如 `participant`， `process`、等等。
 
    * `jcr:title`
 
@@ -1042,4 +1042,4 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
 >
->  您不得修改中的任何專案 `/libs`，僅以範例使用。 如果您想利用任何現有步驟，請將其複製到 `/apps` 並在那裡修改它們。
+>  您不得修改中的任何專案 `/libs`，僅以範例使用。 如果要使用任何現有步驟，請將其複製到 `/apps` 並在那裡修改它們。

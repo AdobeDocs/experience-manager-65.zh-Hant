@@ -1,16 +1,12 @@
 ---
 title: 設定資料來源
-seo-title: Configure data sources
-description: 瞭解如何設定不同型別的資料來源，並善用建立表單資料模型。
-seo-description: Learn how to configure different types of data sources and leverage to create form data models.
-uuid: 12360c8c-b596-4f9b-837a-10a8ff5c7448
+description: 瞭解如何設定不同型別的資料來源，以便建立表單資料模型。
 topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2111'
 ht-degree: 3%
@@ -103,7 +99,7 @@ AEM中的所有雲端服務設定都會整合至 `/conf` AEM存放庫中的資�
 
 若要設定雲端服務設定的資料夾：
 
-1. 前往 **[!UICONTROL 「工具」>「一般」>「設定瀏覽器」]**.
+1. 前往&#x200B;**[!UICONTROL 工具 > 一般 > 設定瀏覽器]**。
    * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 檔案以取得詳細資訊。
 1. 請執行以下操作來啟用雲端設定的全域資料夾，或跳過此步驟來建立和設定雲端服務設定的另一個資料夾。
 
@@ -111,7 +107,7 @@ AEM中的所有雲端服務設定都會整合至 `/conf` AEM存放庫中的資�
 
    1. 在 **[!UICONTROL 設定屬性]** 對話方塊，啟用 **[!UICONTROL 雲端設定]**.
 
-   1. 點選 **[!UICONTROL 儲存並關閉]** 以儲存組態並結束對話方塊。
+   1. 點選&#x200B;**[!UICONTROL 儲存並關閉]**&#x200B;以儲存設定並退出對話框。
 
 1. 在 **[!UICONTROL 設定瀏覽器]**，點選 **[!UICONTROL 建立]**.
 1. 在 **[!UICONTROL 建立設定]** 對話方塊，指定資料夾的標題並啟用 **[!UICONTROL 雲端設定]**.

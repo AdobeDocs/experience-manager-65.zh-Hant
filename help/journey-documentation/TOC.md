@@ -5,7 +5,7 @@ breadcrumb-title: AEM 文件歷程
 user-guide-description: 檔案歷程透過將複雜和不同的功能繫結在一起，以最佳實務的方式解決業務目標，從而在AEM檔案中提供敘述結構。 專為 AEM 初學者而設計，該歷程介紹了從頭到尾實現目標的概念和功能。
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 48%
@@ -16,7 +16,7 @@ ht-degree: 48%
 # AEM 文件歷程 {#documentation-journeys}
 
 <!--
-Please note that all links to other guides need to be absolute references with leading protocol and domain since SCCM does not allow pages to be referenced with relative links in multiple ToCs.
+All links to other guides need to be absolute references with leading protocol and domain since SCCM does not allow pages to be referenced with relative links in multiple ToCs.
 -->
 
 + AEM 文件歷程 {#overview}

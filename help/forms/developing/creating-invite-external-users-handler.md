@@ -3,9 +3,9 @@ title: 建立邀請外部使用者處理常式
 description: 瞭解如何建立邀請外部使用者處理常式。 這可讓Rights Management服務邀請外部使用者成為Rights Management使用者。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 設定您的開發環境 {#setting-up-development-environment}
 
-若要設定開發環境，您必須建立新的Java專案，例如Eclipse專案。 支援的Eclipse版本為 `3.2.1` 或更新版本。
+若要設定開發環境，您必須建立Java專案，例如Eclipse專案。 支援的Eclipse版本為 `3.2.1` 或更新版本。
 
 Rights ManagementSPI需要 `edc-server-spi.jar` 要在專案的類別路徑中設定的檔案。 如果您未參考此JAR檔案，則無法在Java專案中使用Rights ManagementSPI。 此JAR檔案會與AEM Forms SDK安裝在中 `[install directory]\Adobe\Adobe_Experience_Manager_forms\sdk\spi` 資料夾。
 

@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management
 role: Leader, Architect, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
-source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '873'
 ht-degree: 0%
@@ -18,7 +18,7 @@ AEM [!DNL Assets] 是數位資產管理(DAM)工具，屬於 [!DNL Experience Man
 
 ## 什麼是數位資產管理？ {#what-is-digital-asset-management}
 
-[!DNL Assets] 在企業範圍內共用和發佈組織的重要數位資產。 組織的使用者可以透過Web介面（或CIFS或WebDAV資料夾）儲存、管理和存取數位資產，例如影像、圖形、音訊、視訊和檔案。
+[!DNL Assets] 在企業範圍內共用和發佈組織的重要數位資產。 組織的使用者可以透過Web介面(或CIF或WebDAV資料夾)儲存、管理和存取數位資產，例如影像、圖形、音訊、視訊和檔案。
 
 [!DNL Assets] 功能 [!DNL Experience Manager] 可讓您進行下列工作：
 
@@ -26,7 +26,7 @@ AEM [!DNL Assets] 是數位資產管理(DAM)工具，屬於 [!DNL Experience Man
 * 依標籤、燈箱或星星（您的最愛）分組來管理資產。 新增註解至資產。
 * 透過搜尋檔案名稱、檔案全文以及搜尋日期、檔案型別和標籤來尋找資產。
 * 新增或編輯資產的中繼資料資訊。 中繼資料會自動與對應的資產一起建立版本。 您可以匯入或匯出資產中繼資料。
-* 執行影像編輯功能，例如縮放和新增影像濾鏡。 使用WebDAV或CIFS資料夾同時匯入和匯出多個數位資產。
+* 執行影像編輯功能，例如縮放和新增影像濾鏡。 使用WebDAV或CIF資料夾同時匯入和匯出多個數位資產。
 * 使用工作流程和通知以允許共同處理和下載任何資產集，並管理資產的存取許可權。
 
 ### [!DNL Experience Manager Assets] 與整合 [!DNL Experience Manager Sites] {#aem-assets-fully-integrated-in-cq-wcm}
@@ -66,7 +66,7 @@ AEM [!DNL Assets] 是數位資產管理(DAM)工具，屬於 [!DNL Experience Man
 
 * **標籤**： [!DNL Assets] 可以進行標籤和分類。 另請參閱 [組織資產](/help/assets/organize-assets.md).
 
-* **轉譯**：轉譯是資產的二進位表示法。 [!DNL Assets] 永遠會有主要表示法 — 也就是上傳檔案的主要表示法。 他們可以建立任何數量的其他表示法，例如透過自訂工作流程步驟或上傳資產時建立。 轉譯可能具有不同的大小、不同的解析度、新增的浮水印或某些其他已變更的特徵。
+* **轉譯**：轉譯是資產的二進位表示法。 [!DNL Assets] 永遠會有主要表示法 — 也就是上傳檔案的主要表示法。 它們可以建立任意數量的其他表示法，例如，透過自訂工作流程步驟或資產上傳時建立的表示法。 轉譯可能具有不同的大小、不同的解析度、新增的浮水印或某些其他已變更的特徵。
 
 * **版本**：版本設定功能會在特定時間點建立數位資產的快照。 您可以將資產還原到先前的版本。 另請參閱 [中的版本設定 [!DNL Assets]](manage-assets.md#asset-versioning).
 

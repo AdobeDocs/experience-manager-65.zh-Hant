@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 6ce6a204-db59-4ed2-8383-00c6afba82b4
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1775'
 ht-degree: 0%
@@ -53,7 +53,7 @@ David是Day Software AG的聯合創始人和CTO，該公司是全球內容管理
 
 #### 範例 {#example-1}
 
-上述使用 `lastModified` 上的日期屬性（例如「部落格」節點），並不表示需要特殊的節點型別。 我一定會使用 `nt:unstructured` 至少剛開始是針對我的部落格節點。 由於在我的部落格應用程式中，我只要顯示lastModified日期即可（可能會「排序依據」），因此我一點也不在乎它是否為Date。 由於我隱含信任我的部落格撰寫應用程式，所以不需要宣告存在 `lastModified` 日期，採用節點型別的形式。
+上述使用 `lastModified` 日期屬性（例如「部落格」節點）並不表示需要特殊的節點型別。 我一定會使用 `nt:unstructured` 至少剛開始是針對我的部落格節點。 由於在我的部落格應用程式中，我只要顯示lastModified日期即可（可能會「排序依據」），因此我一點也不在乎它是否為Date。 由於我隱含信任我的部落格撰寫應用程式，所以不需要宣告存在 `lastModified` 日期，採用節點型別的形式。
 
 ### 規則#2：驅動內容階層；不要讓它發生。 {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 

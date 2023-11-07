@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1745'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->若為新實作，建議您 **不要使用** 視訊追蹤的舊版選項。 請使用 **里程碑** 方法。
+>若為新實作，建議您 **不要使用** 視訊追蹤的舊版選項。 使用 **里程碑** 方法。
 
 ## 常見步驟 {#common-steps}
 

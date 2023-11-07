@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 4dda6a03-d3ad-4e65-8b37-cee030fa4f7f
 exl-id: 5e345ffd-4e9c-467f-8ebb-c798eeb61dea
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2869'
+source-wordcount: '2855'
 ht-degree: 5%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 5%
 
 若要設定網站共用個人化內容的方式，您必須執行下列步驟：
 
-1. [建立新區域](#creating-new-areas) 或 [建立新區域作為即時副本](#creating-new-areas). 區域包含可用於的所有活動 *區域* ，也就是元件在頁面上的目標位置。 建立新區域會建立空白區域，而建立新區域作為即時副本可讓您跨網站結構繼承內容。
+1. [建立區域](#creating-new-areas) 或 [建立區域作為即時副本](#creating-new-areas). 區域包含可用於的所有活動 *區域* ，也就是元件在頁面上的目標位置。 建立區域會建立空白區域，而建立區域作為即時副本可讓您跨網站結構繼承內容。
 
 1. [連結您的網站或頁面](#linking-sites-to-an-area) 至某個區域。
 
@@ -130,11 +130,11 @@ ht-degree: 5%
 >
 >如需此功能的詳細技術資訊，請參閱 [如何架構目標內容的多網站管理](/help/sites-authoring/technical-multisite-targeted.md).
 
-### 建立新區域與建立新區域作為LiveCopy {#creating-a-new-area-versus-creating-a-new-area-as-livecopy}
+### 建立區域與將區域建立為LiveCopy {#creating-a-new-area-versus-creating-a-new-area-as-livecopy}
 
-在AEM中，您可以選擇建立新區域或建立新區域作為LiveCopy。 建立新區域會將活動及屬於這些活動的任何專案（例如選件、體驗等）分組。 當您想要建立完全不同的目標內容集，或想要共用目標內容集時，您可以建立新區域。
+在AEM中，您可以選擇建立區域或建立區域作為LiveCopy。 建立區域會將活動及屬於這些活動的任何專案（例如選件、體驗等）分組。 當您想要建立完全不同的目標內容集，或想要共用目標內容集時，您可以建立區域。
 
-不過，如果您已透過MSM在兩個網站之間設定繼承，則您可能想要繼承活動。 在這種情況下，您會建立一個新區域作為即時副本，其中Y是X的即時副本，因此也會繼承所有活動。
+不過，如果您已透過MSM在兩個網站之間設定繼承，則您可能想要繼承活動。 在這種情況下，您會建立一個區域作為即時副本，其中Y是X的即時副本，因此也會繼承所有活動。
 
 >[!NOTE]
 >
@@ -159,7 +159,7 @@ ht-degree: 5%
 >
 >當您點選或按一下品牌名稱，直到您建立其他區域為止，預設會收合名為「主版區域」 **的** 「預設區域」。然後，當您在「活動」或「選件」控制台中選 **取品牌** 時，您會看到「 **區域****** 」控制台。
 
-若要建立新區域：
+若要建立區域：
 
 1. 導覽至「 **個人化** >活動 **** 」或「選 **件** 」，然後導覽至您的品牌。
 1. 點選或按一下 **建立區域**.

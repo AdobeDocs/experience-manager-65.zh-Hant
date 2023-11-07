@@ -2,10 +2,10 @@
 title: 使用 Edge Delivery Services
 description: 使用 Edge Delivery Services (EDS)
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: 6a1d96125ca6647770718fff74ec21afb5c91a68
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '609'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 
@@ -28,7 +28,7 @@ Edge Delivery 能讓您建立快速開發的環境，作者可以在其中快速
 
 ## Edge Delivery Services 和 GitHub {#github-edge}
 
-Edge Delivery 運用 GitHub，因此客戶可以直接從其 GitHub 存放庫管理和部署程式碼。例如，您可以在 Google Docs 或 Microsoft Word 中編寫內容，並使用 GitHub 中的 CSS 和 JavaScript 開發網站功能。系統會自動為您的每個分部建立網站，從內容預覽到生產都包括在內。您放入 GitHub 存放庫的每個資源都可以在您的網站上使用，無需任何建置程序。
+Edge Delivery使用GitHub，因此客戶可以直接從其GitHub存放庫管理和部署程式碼。 例如，您可以在 Google Docs 或 Microsoft Word 中編寫內容，並使用 GitHub 中的 CSS 和 JavaScript 開發網站功能。系統會自動為您的每個分部建立網站，從內容預覽到生產都包括在內。您放入 GitHub 存放庫的每個資源都可以在您的網站上使用，無需任何建置程序。
 
 ## 使用 Sidekick {#using-sidekick}
 

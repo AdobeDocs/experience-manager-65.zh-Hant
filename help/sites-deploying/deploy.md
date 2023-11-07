@@ -1,15 +1,15 @@
 ---
 title: 部署和維護
-description: 瞭解如何開始安裝AEM。
+description: 瞭解如何開始使用AEM安裝。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1765'
 ht-degree: 3%
 
 ---
@@ -28,10 +28,10 @@ ht-degree: 3%
 
 * [快速入門](#getting-started)
 
-   * [必備條件](#prerequisites)
+   * [先決條件](#prerequisites)
    * [取得軟體](#getting-the-software)
    * [預設本機安裝](#default-local-install)
-   * [Author和Publish安裝](#author-and-publish-installs)
+   * [製作和發佈安裝](#author-and-publish-installs)
    * [解壓縮的安裝目錄](#unpacked-install-directory)
    * [啟動和停止](#starting-and-stopping)
 
@@ -46,7 +46,7 @@ ht-degree: 3%
 * [設定](/help/sites-deploying/configuring.md)
 * [升級至AEM 6.5](/help/sites-deploying/upgrade.md)
 * [電子商務](/help/commerce/cif-classic/deploying/ecommerce.md)
-* [設定操作說明文章](/help/sites-deploying/ht-deploy.md)
+* [設定作法文章](/help/sites-deploying/ht-deploy.md)
 * [Web 主控台](/help/sites-deploying/web-console.md)
 * [疑難排解復寫](/help/sites-deploying/troubleshoot-rep.md)
 * [最佳做法](/help/sites-deploying/best-practices.md)
@@ -64,11 +64,11 @@ Adobe Experience Manager是網頁式使用者端伺服器系統，用於建立�
 
 在基礎架構層級，AEM提供下列功能：
 
-* **Web應用程式伺服器**：AEM可以獨立模式部署（包含整合式Jetty Web伺服器），或部署為協力廠商應用程式伺服器內的Web應用程式。
-* **Web應用程式架構**：AEM納入Sling Web應用程式架構，簡化RESTful內容導向Web應用程式的撰寫。
-* **內容存放庫**： AEM包含Java™ Content Repository (JCR)，這是一種專為非結構化與半結構化資料而設計的階層式資料庫型別。 存放庫不僅儲存面向使用者的內容，也儲存應用程式使用的所有程式碼、範本和內部資料。
+* **Web應用程式伺服器**：AEM能以獨立模式部署（其中包含整合的Jetty Web伺服器），或作為協力廠商應用程式伺服器內的Web應用程式。
+* **Web應用程式架構**：AEM整合Sling Web應用程式架構，簡化RESTful內容導向Web應用程式的撰寫。
+* **內容存放庫**： AEM包括Java™ Content Repository (JCR)，這是一種專為非結構化與半結構化資料而設計的階層式資料庫。 存放庫不僅儲存面向使用者的內容，也儲存應用程式使用的所有程式碼、範本和內部資料。
 
-在此基礎之上，AEM還提供幾個應用程式層級的功能，用於管理：
+在此基礎上再接再厲，AEM也提供數種應用程式層級功能，以管理下列專案：
 
 * **網站**
 * **行動應用計畫**
@@ -78,74 +78,74 @@ Adobe Experience Manager是網頁式使用者端伺服器系統，用於建立�
 * **社群**
 * **線上商務**
 
-最後，客戶可利用這些基礎結構和應用程式層級的建置組塊，自行建置應用程式以建立自訂解決方案。
+最後，客戶可以利用這些基礎結構和應用程式層級的建置組塊，透過建置自己的應用程式來建立自訂解決方案。
 
-AEM伺服器是 **以Java為基礎** 並會在大多數支援該平台的作業系統上執行。 所有使用者端與AEM的互動均透過 **網頁瀏覽器**.
+AEM伺服器為 **Java式** 並會在大多數支援該平台的作業系統上執行。 所有使用者端與AEM的互動均透過 **網頁瀏覽器**.
 
 ### 典型部署案例 {#typical-deployment-scenarios}
 
 在AEM術語中，「例項」是在伺服器上執行的AEM的副本。 AEM安裝通常至少涉及兩個執行個體，通常在不同電腦上執行：
 
-* **作者**：AEM執行個體，用來建立、上傳和編輯內容以及管理網站。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
-* **發佈**：為公眾提供已發佈內容的AEM例項。
+* **作者**：用來建立、上傳和編輯內容以及管理網站的AEM執行個體。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
+* **發佈**：向公眾提供已發佈內容的AEM例項。
 
-這些例項在安裝軟體方面完全相同。 它們僅能透過設定來區分。 此外，大部分安裝都使用Dispatcher：
+這些例項在安裝軟體方面是相同的。 它們僅能透過設定來區分。 此外，大部分安裝都使用Dispatcher：
 
-* **Dispatcher**：靜態網頁伺服器(Apache httpd、Microsoft®IIS等)以AEM Dispatcher模組擴充。 它快取發佈執行個體產生的網頁以提升效能。
+* **Dispatcher**：靜態網頁伺服器(Apache httpd、Microsoft®IIS等)以AEM Dispatcher模組增強。 它快取發佈執行個體產生的網頁以提升效能。
 
-此設定有許多進階選項和詳細說明，但作者、發佈和Dispatcher的基本模式是大多數部署的核心。 首先，我們來關注簡單的設定。 隨後將討論進階部署選項。
+此設定有許多進階選項和詳細說明，但作者、發佈和Dispatcher的基本模式是大多數部署的核心。 讓我們從簡單的設定開始。 接著會討論進階部署選項。
 
-以下小節說明這兩種情況：
+以下各節將說明這兩種情況：
 
 * **內部部署**：在您的企業環境中部署及管理AEM。
 
-* **Managed Services - Adobe Experience Manager的Cloud Manager**：由Adobe Managed Services部署和管理的AEM。
+* **Managed Services - Adobe Experience Manager的Cloud Manager**：AEM由AdobeManaged Services部署和管理。
 
 ### 內部部署 {#on-premise}
 
-您可以在公司環境中的伺服器上安裝AEM。 典型安裝例項包括：開發、測試和發佈環境。 另請參閱 [快速入門](/help/sites-deploying/deploy.md#getting%20started) 取得有關如何取得AEM軟體以在本機安裝的基本詳細資訊。
+您可以在公司環境中的伺服器上安裝AEM。 典型的安裝例項包括：開發、測試和發佈環境。 另請參閱 [快速入門](/help/sites-deploying/deploy.md#getting%20started) 以取得有關如何取得AEM軟體以在本機安裝的基本詳細資訊。
 
-若要進一步瞭解典型內部部署，請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md).
+若要進一步瞭解一般內部部署，請參閱 [建議的部署](/help/sites-deploying/recommended-deploys.md).
 
 ### 使用Cloud Manager的Managed Services {#managed-services-using-cloud-manager}
 
-AEM Managed Services是數位體驗管理的完整解決方案。 它提供雲端體驗傳送解決方案的優點，同時保留內部部署的所有控制、安全性和自訂優點。 AEM Managed Services可讓客戶在雲端部署，並依賴Adobe的最佳實務和支援，以更快啟動。 組織和企業使用者只需最少的時間即可與客戶互動、提高市場份額，並專注於建立創新的行銷活動，同時減輕IT負擔。
+AEM Managed Services是數位體驗管理的完整解決方案。 它提供雲端體驗傳送解決方案的優點，同時保留內部部署的所有控制、安全性和自訂優點。 AEM Managed Services可讓客戶透過在雲端部署，以及借鑑Adobe的最佳實務和支援，以更快的速度啟動。 組織和業務使用者可在最短的時間內與客戶互動、提高市場份額，並專注於建立創新的行銷活動，同時減輕IT負擔。
 
 透過AEM Managed Services，客戶可獲得下列優點：
 
-**加快上市時間：** 藉由Adobe Managed Services的彈性雲端基礎結構，組織可以快速規劃、啟動和最佳化成功的數位體驗。 Adobe可管理雲端架構，不需要額外的資金、硬體或軟體，而Adobe的客戶解決方案工程師可協助AEM架構、布建、連線後端應用程式的自訂以及上線最佳實務。
+**加快上市時間：** 藉由AdobeManaged Services的彈性雲端基礎結構，組織可以快速規劃、推出及最佳化成功的數位體驗。 Adobe無需額外資金、硬體或軟體即可管理雲端架構，而Adobe的客戶解決方案工程師可協助進行AEM架構、布建、連線後端應用程式的自訂以及上線最佳實務。
 
 **更高的效能：** 提供99.5%、99.9%、99.95%和99.99%四種服務可用性選項，為您的企業提供可靠的數位體驗。 此外，它還可提供自動備份和多模式災難回覆模式，協助確保可靠性和應急管理。
 
-**最佳化的IT成本：** 主動式指引和專業知識可幫助組織隨時掌握最新版本的AEM。 AMS Enterprise/Basic的新部署會自動包含Adobe白金級維護和支援，提供技術專業知識和營運經驗，以協助組織維護其關鍵任務應用程式。 免費基本Analytics或Target功能提供額外價值，特別適用於對分析和個人化需求有限的中端市場組織。
+**最佳化的IT成本：** 主動式指引和專業知識協助組織取得最新版本的AEM。 AMS Enterprise/Basic的全新部署會自動包含Adobe白金級維護和支援，提供技術專業知識和營運經驗，以協助組織維護其關鍵任務應用程式。 免費基本Analytics或Target功能提供額外價值，特別適用於對分析和個人化需求有限的中端市場組織。
 
 **最高安全性：** 將客戶應用程式託管於受限制的存取設施、防火牆系統後面或虛擬私人雲端，確保企業級實體、網路和資料安全性。 它包含單一租使用者虛擬機器器，提供強大的資料儲存加密、防毒軟體和資料隔離功能。
 
-**Cloud Manager**： Cloud Manager是Adobe Experience Manager Managed Services產品的一部分，是一個自助服務入口網站，可進一步讓組織在雲端中自行管理Adobe Experience Manager。 其包含一流的持續整合和持續傳遞(CI/CD)管道，可讓IT團隊和實作合作夥伴加速自訂或更新的傳遞，而不會影響效能或安全性。 Cloud Manager僅適用於Adobe Managed Service客戶。
+**Cloud Manager**：Cloud Manager是Adobe Experience Manager Managed Services產品的一部分，也是一個自助服務入口網站，可進一步讓組織在雲端中自助管理Adobe Experience Manager。 其中包括最先進的持續整合和持續傳遞(CI/CD)管道，可讓IT團隊與實作合作夥伴加速自訂或更新的傳遞，而不會影響效能或安全性。 Cloud Manager僅適用於Adobe Managed Service客戶。
 
-若要進一步瞭解Cloud Manger及其資源，請參閱 [**Cloud Manager使用手冊**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
+若要瞭解有關Cloud Manger及其資源的詳細資訊，請參閱 [**Cloud Manager使用手冊**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
 
 ## 快速入門 {#getting-started}
 
-### 必備條件 {#prerequisites}
+### 先決條件 {#prerequisites}
 
-雖然生產執行個體是在執行官方支援之作業系統的專用電腦上執行(請參閱 [技術需求](/help/sites-deploying/technical-requirements.md))，則Experience Manager伺服器實際上會在任何支援 [**Java™ Standard Edition 8**](https://www.oracle.com/java/technologies/downloads/#java8).
+雖然生產執行個體是在執行官方支援作業系統的專用電腦上執行(請參閱 [技術需求](/help/sites-deploying/technical-requirements.md))，則Experience Manager伺服器實際上會在任何支援 [**Java™ Standard Edition 8**](https://www.oracle.com/java/technologies/downloads/#java8).
 
-為了熟悉和開發AEM，通常使用安裝在執行Apple OS X或Microsoft® Windows或Linux®案頭版本的本機電腦上的執行個體。
+為了熟悉和開發AEM，通常會使用安裝在執行Apple OS X或Microsoft®Windows或Linux®案頭版本的本機電腦上的執行個體。
 
-在使用者端，AEM可與所有現代化瀏覽器搭配使用(**Microsoft® Edge**， **Internet Explorer** 11， **Chrome **51+** **、**Firefox **47+、 **Safari** 8+)。 另請參閱 [支援的使用者端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms) 以取得詳細資訊。
+在使用者端，AEM可與所有新型瀏覽器搭配使用(**Microsoft® Edge**， **Internet Explorer** 11， **Chrome **51+** **， **Firefox **47+， **Safari** 8+)。 另請參閱 [支援的使用者端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms) 以取得詳細資訊。
 
 ### 取得軟體 {#getting-the-software}
 
-AEM持有有效維護與支援合約的客戶應已收到內含程式碼的郵件通知，並可從 [**Adobe授權網站**](https://licensing.adobe.com/). 業務合作夥伴可從以下位置請求下載存取權： [**spphelp@adobe.com**](mailto:spphelp@adobe.com).
+AEM持有有效維護和支援合約的客戶應會收到內含程式碼的郵件通知，並可從 [**Adobe授權網站**](https://licensing.adobe.com/). 業務合作夥伴可從以下位置請求下載存取權： [**spphelp@adobe.com**](mailto:spphelp@adobe.com).
 
 AEM軟體套件有兩種形式：
 
-* **cq-quickstart-6.5.0.jar：** 獨立可執行檔 *jar* 包含您執行所需一切的檔案。
+* **cq-quickstart-6.5.0.jar：** 獨立可執行檔 *jar* 檔案包含您執行所需的一切。
 
 * **cq-quickstart-6.5.0.war：** A *戰爭* 供部署至協力廠商應用程式伺服器的檔案。
 
-在以下小節中，我們將說明 **獨立安裝**. 如需在應用程式伺服器中安裝AEM的詳細資訊，請參閱 [應用程式伺服器安裝](/help/sites-deploying/application-server-install.md).
+在下節中，我們將說明 **獨立安裝**. 如需在應用程式伺服器中安裝AEM的詳細資訊，請參閱 [應用程式伺服器安裝](/help/sites-deploying/application-server-install.md).
 
 ### 預設本機安裝 {#default-local-install}
 
@@ -155,7 +155,7 @@ AEM軟體套件有兩種形式：
 
    Windows安裝位置： **`C:\Program Files\aem`**
 
-   同樣地，將範例執行個體直接安裝在案頭上的資料夾中也很常見。 無論如何，我們一般會將此位置稱為：
+   同樣地，將範例執行個體直接安裝在案頭上的資料夾中也是很常見的做法。 無論如何，Adobe一般會將此位置稱為：
 
    `<aem-install>`
 
@@ -169,9 +169,9 @@ AEM軟體套件有兩種形式：
        license.properties
    ```
 
-   如果您不提供 `license.properties` 檔案時，AEM會將您的瀏覽器重新導向至 **歡迎** 啟動時畫面，您可在此輸入授權金鑰。 如果您尚未取得有效的授權金鑰，則需要向Adobe索取此金鑰。
+   如果您未提供 `license.properties` 檔案時，AEM會將您的瀏覽器重新導向至 **歡迎** 啟動時的畫面，您可以在此輸入授權金鑰。 如果您還沒有授權金鑰，則需要向Adobe索取有效的授權金鑰。
 
-1. 若要在GUI環境中啟動執行處理，請連按兩下 **`cq-quickstart-6.5.0.jar`** 檔案。
+1. 若要在GUI環境中啟動執行個體，請連按兩下 **`cq-quickstart-6.5.0.jar`** 檔案。
 
    或者，您可以從命令列啟動AEM：
 
@@ -183,17 +183,17 @@ AEM需要幾分鐘的時間來解壓縮jar檔案、自行安裝並啟動。 上�
 
 * 一個 **AEM作者** 例項
 * 執行於 **localhost**
-* 在連線埠上 **4502**
+* 在連線埠 **4502**
 
 若要存取執行個體，請將瀏覽器指向：
 
 **`https://localhost:4502`**
 
-製作執行個體中的結果會自動設定為連線至 **發佈執行個體** 於 **`localhost:4503`**.
+作者執行個體中的結果會自動設定為連線至 **發佈執行個體** 於 **`localhost:4503`**.
 
-### Author和Publish安裝 {#author-and-publish-installs}
+### 製作和發佈安裝 {#author-and-publish-installs}
 
-預設安裝(一個 **作者** 執行個體於 **`localhost:4502`**)的變數，只要重新命名 `jar` 首次啟動之前的檔案。 命名模式為：
+預設安裝(一個 **作者** 執行個體於 **`localhost:4502`**)的變更，只需重新命名 `jar` 首次啟動之前的檔案。 命名模式為：
 
 **`cq-<instance-type>-p<port-number>.jar`**
 
@@ -201,15 +201,15 @@ AEM需要幾分鐘的時間來解壓縮jar檔案、自行安裝並啟動。 上�
 
 **`cq-author-p4502.jar`**
 
-然後啟動它，就會產生一個編寫執行個體，執行於 **`localhost:4502`**.
+然後啟動它，就會產生一個在上執行的製作例項 **`localhost:4502`**.
 
 同樣地，重新命名和啟動檔案
 
 **`cq-publish-p4503.jar`**
 
-導致發佈執行個體執行於 **`localhost:4503`**.
+結果發佈執行個體在 **`localhost:4503`**.
 
-舉例來說，您可以將這兩個例項安裝在中
+例如，您可將這兩個例項安裝在中
 
 `<aem-install>/author`和
 
@@ -256,11 +256,11 @@ AEM需要幾分鐘的時間來解壓縮jar檔案、自行安裝並啟動。 上�
 
 ### 啟動和停止 {#starting-and-stopping}
 
-在AEM自行解壓縮並首次啟動後，連按兩下安裝目錄中的jar檔案只會啟動執行個體，不會重新安裝。
+在AEM自行解壓縮並首次啟動後，連按兩下安裝目錄中的jar檔案即可啟動執行個體，但不會重新安裝。
 
-若要從GUI停止執行處理，請按一下 **開啟/關閉** 開啟[案頭應用程式]視窗。
+若要從GUI停止執行處理，請按一下 **開啟/關閉** 切換案頭應用程式視窗。
 
-您也可以從命令列停止和啟動AEM。 假設您第一次安裝執行個體時， **命令列指令碼** 在此：
+您也可以從命令列停止和啟動AEM。 假設您已首次安裝執行個體，則 **命令列指令碼** 在此：
 
 **`<aem-install>/crx-quickstart/bin/`**
 
@@ -275,13 +275,13 @@ AEM需要幾分鐘的時間來解壓縮jar檔案、自行安裝並啟動。 上�
 
 * [命令列啟動和停止](/help/sites-deploying/command-line-start-and-stop.md)
 
-AEM會啟動，並自動將您的網頁瀏覽器重新導向至適當的頁面，通常是登入頁面；例如：
+AEM會啟動，並自動將您的網頁瀏覽器重新導向適當的頁面，通常是登入頁面；例如：
 
 `https://localhost:4502/`
 
 ![登入畫面](assets/screen_shot_2019-04-08at83533am.png)
 
-登入後，您就可以存取AEM。 如需詳細資訊，請根據您的角色，參閱下列內容：
+登入後，您就可以存取AEM。 如需詳細資訊，請參閱下列內容（視您的角色而定）：
 
 * [編寫](/help/sites-authoring/home.md)
 * [管理](/help/sites-administering/home.md)
@@ -290,7 +290,7 @@ AEM會啟動，並自動將您的網頁瀏覽器重新導向至適當的頁面�
 
 ## 進階部署 {#advanced-deployment}
 
-上節應能讓您充分瞭解AEM安裝的基本概念。 不過，安裝AEM完整生產系統可能會涉及相當大的複雜性。 如需進階安裝的完整涵蓋範圍，請參閱下列子頁面：
+上節應能讓您充分瞭解AEM安裝的基本概念。 不過，安裝AEM的完整生產系統可能會相當複雜。 如需進階安裝的完整涵蓋範圍，請參閱下列子頁面：
 
 * [技術需求](/help/sites-deploying/technical-requirements.md)
 * [建議的部署](/help/sites-deploying/recommended-deploys.md)
@@ -301,7 +301,7 @@ AEM會啟動，並自動將您的網頁瀏覽器重新導向至適當的頁面�
 * [設定](/help/sites-deploying/configuring.md)
 * [升級至AEM 6.5](/help/sites-deploying/upgrade.md)
 * [電子商務](/help/commerce/cif-classic/deploying/ecommerce.md)
-* [設定操作說明文章](/help/sites-deploying/ht-deploy.md)
+* [設定作法文章](/help/sites-deploying/ht-deploy.md)
 * [Web 主控台](/help/sites-deploying/web-console.md)
 * [疑難排解復寫](/help/sites-deploying/troubleshoot-rep.md)
 * [最佳做法](/help/sites-deploying/best-practices.md)

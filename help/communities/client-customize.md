@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 覆蓋是藉由修改/中預設元件的復本來完成&#x200B;**應用程式** 目錄，而非修改/中的原始元件&#x200B;**程式庫** 目錄。 元件是使用相同的相對路徑建構，但「libs」會取代為「apps」。
 
-/apps目錄是第一個搜尋以解決請求的位置，如果找不到，則會使用位於/libs目錄中的預設版本。
+/apps目錄是第一個搜尋以解決請求的位置，如果未找到，則會使用/libs目錄中的預設版本。
 
 /libs目錄中的預設元件絕不可修改，因為未來的修補程式和升級可以自由地以任何必要的方式變更/libs目錄，同時維護公用介面。
 

@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2072'
+source-wordcount: '2065'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ log-bin=logname
 
 內容儲存根目錄的預設位置為 `[aem-forms root]/lccs_data`.
 
-備份下列位於內容儲存根目錄的目錄：
+備份內容儲存根目錄中的下列目錄：
 
 /audit.contentstore
 
@@ -163,7 +163,7 @@ log-bin=logname
 
 /backup-lucene-index
 
-如果/backup-lucene-indexes目錄不存在，請備份/lucene-indexes目錄（也位於內容儲存根目錄中）。 如果/backup-lucene-indexes目錄存在，請勿備份/lucene-indexes目錄，因為它可能會導致錯誤。
+如果/backup-lucene-indexes目錄不存在，請備份/lucene-indexes目錄，也在「內容儲存根目錄」中。 如果/backup-lucene-indexes目錄存在，請勿備份/lucene-indexes目錄，因為它可能會導致錯誤。
 
 ### 內容儲存根目錄位置（叢集環境） {#content-storage-root-location-clustered-environment}
 
@@ -173,7 +173,7 @@ log-bin=logname
 
 **索引根目錄：** 在叢集中的每個節點上建立的目錄，其路徑和目錄名稱一律相同
 
-內容儲存根目錄的預設位置為 `[GDS root]/lccs_data`，其中 `[GDS root]` 是中說明的位置 [GDS位置](files-back-recover.md#gds-location). 備份下列位於內容儲存根目錄的目錄：
+內容儲存根目錄的預設位置為 `[GDS root]/lccs_data`，其中 `[GDS root]` 是中說明的位置 [GDS位置](files-back-recover.md#gds-location). 備份內容儲存根目錄中的下列目錄：
 
 /audit.contentstore
 
@@ -183,7 +183,7 @@ log-bin=logname
 
 /backup-lucene-index
 
-如果/backup-lucene-indexes目錄不存在，請備份/lucene-indexes目錄（也位於內容儲存根目錄中）。 如果/backup-lucene-indexes目錄存在，請勿備份/lucene-indexes目錄，因為它可能會導致錯誤。
+如果/backup-lucene-indexes目錄不存在，請備份/lucene-indexes目錄，也在「內容儲存根目錄」中。 如果/backup-lucene-indexes目錄存在，請勿備份/lucene-indexes目錄，因為它可能會導致錯誤。
 
 「索引根目錄」的預設位置為 `[aem-forms root]/lucene-indexes` 在每個節點上。
 

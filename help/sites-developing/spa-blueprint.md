@@ -6,7 +6,7 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 1%
@@ -71,11 +71,11 @@ ht-degree: 1%
 
 頁面的內容結構儲存在AEM中。 頁面模型可用來對應及例項化SPA元件。 SPA開發人員建立對應至SPA元件的AEM元件。 為此，它們使用資源型別(或AEM元件的路徑)作為唯一索引鍵。
 
-SPA元件必須和頁面模型同步，並更新以相應地變更其內容。 運用動態元件的模式必須用於按照提供的頁面模型結構即時例項化元件。
+SPA元件必須和頁面模型同步，並更新以相應地變更其內容。 使用動態元件的陣列必須用來按照提供的頁面模型結構即時例項化元件。
 
 ### 中繼欄位 {#meta-fields}
 
-頁面模型會利用JSON模型匯出程式，其本身會根據 [Sling模型](https://sling.apache.org/documentation/bundles/models.html) API。 可匯出的Sling模型會顯示下列欄位清單，以啟用基礎程式庫來解譯資料模型：
+頁面模型使用JSON模型匯出程式，其本身以 [Sling模型](https://sling.apache.org/documentation/bundles/models.html) API。 可匯出的Sling模型會顯示下列欄位清單，以啟用基礎程式庫來解譯資料模型：
 
 * `:type`：AEM資源的型別（預設=資源型別）
 * `:children`：目前資源的階層子系。 子系不屬於目前資源的內部內容（可在代表頁面的專案上找到）

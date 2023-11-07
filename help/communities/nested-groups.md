@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '599'
 ht-degree: 3%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 3%
    * **[!UICONTROL 社群群組根目錄]**： *保留為預設值*
    * **[!UICONTROL 其他可用的社群群組語言]**：使用下拉式功能表選取可用的社群群組語言。 功能表會顯示建立上層社群網站的所有語言。 使用者可以選取這些語言之一，以在此單一步驟中建立多個地區設定的群組。 相同的群組會在個別社群網站的「群組」主控台中，以多種指定語言建立。
    * **[!UICONTROL 社群群組名稱]**：藝術
-   * **[!UICONTROL 範本]**：下拉式選單以選取 `Reference Group`
+   * **[!UICONTROL 範本]**：下拉式選單 `Reference Group`
    * 選取 **[!UICONTROL 下一個]**
 
 ![巢狀社群群組](assets/parent-to-nestedgroup.png)
@@ -148,7 +148,7 @@ ht-degree: 3%
 
 ## 發佈時的體驗 {#experience-on-publish}
 
-可在登入時體驗不同的群組，例如 [示範使用者](/help/communities/tutorials.md#demo-users) 用於：
+登入時可能會體驗不同的群組，例如 [示範使用者](/help/communities/tutorials.md#demo-users) 用於：
 
 * 藝術/歷史群組成員： `emily.andrews@mailinator.com/password`
    * 受限制的（秘密）群組（藝術/歷史）是可見的：

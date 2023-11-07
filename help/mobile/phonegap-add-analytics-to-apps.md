@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ AEM Mobile需要Adobe Analytics帳戶，才能在您的應用程式中收集和�
 
 設定Analytics帳戶後，請建立Content Sync設定，將內容提取至您的行動應用程式。
 
-如需其他詳細資訊，請參閱設定內容同步內容。 此設定需要指示Content Sync將ADBMobileConfig放入/www目錄。 例如，在Geometrixx Outdoors應用程式中，內容同步設定為： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*. 也有用於開發的設定；但在使用Geometrixx Outdoors的情況下，它與非開發設定相同。
+如需其他詳細資訊，請參閱「設定內容同步內容」。 設定必須指示Content Sync將ADBMobileConfig放入/www目錄。 例如，在Geometrixx Outdoors應用程式中，內容同步設定為： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*. 也有用於開發的設定；但在使用Geometrixx Outdoors的情況下，它與非開發設定相同。
 
-如需如何從行動應用程式AEM應用程式儀表板下載ADBMobileConfig的詳細資訊，請參閱Analytics - Mobile Services - Adobe Mobile Services SDK設定檔案。
+如需如何從行動應用程式AEM應用程式儀表板下載ADBMobileConfig的詳細資訊，請參閱Analytics - Mobile Services -AdobeMobile Services SDK設定檔案。
 
 ```xml
 <jcr:root xmlns:jcr="https://www.jcp.org/jcr/1.0" xmlns:nt="https://www.jcp.org/jcr/nt/1.0"
@@ -63,7 +63,7 @@ AEM Mobile需要Adobe Analytics帳戶，才能在您的應用程式中收集和�
 
 如果使用PhoneGap CLI建置，則可使用cordova建置勾點指令碼來完成。 您可以在Geometrixx Outdoors應用程式中看到以下內容：*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*
 
-若為iOS，該檔案需複製到Xcode專案的 **資源** 目錄(例如「platforms/ios/Geometrixx/Resources/ADBMobileConfig.json」)。 如果應用程式的目標為Android™，則複製的目的地路徑為「platforms/android/assets/ADBMobileConfig.json」。 如需在PhoneGap CLI建置期間使用鉤點的詳細資訊，請參閱 [勾選您的Cordova/PhoneGap專案需求](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
+針對iOS，檔案必須複製到XCode專案的 **資源** 目錄(例如「platforms/ios/Geometrixx/Resources/ADBMobileConfig.json」)。 如果應用程式的目標為Android™，則複製的目的地路徑為「platforms/android/assets/ADBMobileConfig.json」。 如需在PhoneGap CLI建置期間使用鉤點的詳細資訊，請參閱 [勾選您的Cordova/PhoneGap專案需求](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
 
 ```xml
 ///////////////////////////

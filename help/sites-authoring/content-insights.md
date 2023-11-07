@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
 exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
-source-git-commit: 245d501d4124d9aaa3f2b12bdb06a5bdd1661e8c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 2%
@@ -48,7 +48,7 @@ ht-degree: 2%
 >
 >內容深入分析控制面板的時間表位於 `GMT`.
 
-您也可以指定報告資料的詳細程度，例如可檢視每日、每週、每月或每年資料。
+您也可以指定報告資料的詳細程度，例如，您可以檢視每日、每週、每月或每年資料。
 
 另請參閱 [變更報告期間](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
 

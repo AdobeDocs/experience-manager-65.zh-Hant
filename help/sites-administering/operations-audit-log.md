@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
 exl-id: 1e05faf5-619a-4ea3-acbf-2fd37c71e6d2
 feature: Operations
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 0%
+source-wordcount: '600'
+ht-degree: 1%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 0%
    >內容路徑僅適用於 `/var/audit/com.day.cq.wcm.core.page` 存放庫中的節點。
 
 1. 儲存規則。
-1. 您剛才建立的規則必須顯示在「操作控制面板」中，才能執行。 若要這麼做，請前往 **工具 — 作業 — 維護** 從AEM歡迎畫面。
+1. 您建立的規則必須顯示在「操作控制面板」中，才能執行。 若要這麼做，請前往 **工具 — 作業 — 維護** 從AEM歡迎畫面。
 
 1. 按下 **每週維護期間** 卡片。
 

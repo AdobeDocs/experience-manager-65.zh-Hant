@@ -2,10 +2,10 @@
 title: AEM Headless 快速入門
 description: 在 AEM Headless 開發人員歷程的這一部分，了解 AEM Headless 先決條件。
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3038'
-ht-degree: 96%
+source-wordcount: '3032'
+ht-degree: 94%
 
 ---
 
@@ -81,7 +81,7 @@ AEM 的 Headless 功能以幾個關鍵功能為基礎。這些將在歷程的後
 * GraphQL API 可讓您建立存取和傳遞內容片段的要求。
 * Assets REST API 可讓您建立及修改內容片段 (和其他資產)。
 
-您將在 AEM 無周邊歷程的後續部分，了解這些 API 以及如何使用它們。或者參閱下面的[其他資源](#additional-resources)章節，以取得其他文件。
+您將在 AEM Headless 歷程的後續部分，了解這些 API 以及如何使用它們。或者，請參閱 [其他資源](#additional-resources) 區段以取得其他檔案。
 
 ## Headless 整合層級 {#integration-levels}
 
@@ -113,13 +113,13 @@ AEM 支援 CMS 的全 Headless 模型和傳統的全堆疊或 Headful 模型。�
 
 ### 您沒有 Headless 內容的外部取用者，例如單頁應用程式 (SPA)。 {#do-not-have-a-spa}
 
-如果您的目標是建立一個新的 SPA 以 Headless 方式取用來自 AEM 的內容，您可以使用內容片段等功能來管理您的 Headless 內容，也可以使用 AEM 的 SPA 編輯器架構建置 SPA。
+如果您的目標是建立一個SPA以從AEM中無頭使用內容，您可以使用內容片段等功能來管理您的Headless內容，也可以使用AEM SPA Editor框架建置SPA。
 
 使用 SPA 編輯器，SPA 不僅可以取用來自 AEM 的內容，還可以由您的內容作者在 AEM 中進行完全編輯，從而為您提供在 AEM 中進行 Headless 傳遞和在情境中編輯的靈活性。
 
 ## 要求和先決條件 {#requirements-prerequisites}
 
-有許多要求必須符合，才能開始 Headless AEM 專案。
+開始Headless AEM專案前，有幾項需求。
 
 ### 知識 {#knowledge}
 
@@ -175,9 +175,9 @@ AEM 支援 CMS 的全 Headless 模型和傳統的全堆疊或 Headful 模型。�
 * 您需要不同的語言還是需要不同的語言來適應地區的具體情況？
 * 您是否需要圖像或影片等多媒體內容依不同地區設定而有所不同？
 
-清楚您的內容更新工作流程。系統必須支援的核准流程是什麼？是否可以利用 AEM 工作流程來自動化此流程？
+清楚您的內容更新工作流程。系統必須支援的核准流程是什麼？是否可以使用 AEM 工作流程來自動化此流程？
 
-請注意，可以利用您的[內容階層](#content-hierarchy)讓翻譯變輕鬆。
+請注意，可以使用您的[內容階層](#content-hierarchy)讓翻譯變輕鬆。
 
 請參閱[其他資源](#additional-resources)章節，了解有關 AEM 工作流程和翻譯工具的其他文件，包括指向 AEM Headless 翻譯歷程的連結。
 
@@ -186,7 +186,7 @@ AEM 支援 CMS 的全 Headless 模型和傳統的全堆疊或 Headful 模型。�
 資料夾階層可以解決與內容管理有關的兩個主要問題：
 
 * [翻譯](#translation) - AEM 透過在地區設定資料夾中維護內容副本，來管理內容翻譯。
-* 組織 - 資料夾用於定義支援翻譯需求以及邏輯管理內容片段所需的內容階層。
+* 組織 - 資料夾用於定義支援翻譯需求和邏輯管理內容片段所需的內容階層。
 
 AEM 允許靈活的內容結構，階層可以任意擴大。但是，重要的是要認識到，資料夾結構的任何變更都可能對[依賴於內容路徑的現有查詢造成未預期的後果。](#developer)因此，事先明確設定的定義完善的階層可能對您的內容作者有所幫助。
 

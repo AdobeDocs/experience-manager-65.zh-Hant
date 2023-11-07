@@ -3,9 +3,9 @@ title: 處理Adobe Experience Manager Foundation的GDPR請求
 description: 處理Adobe Experience Manager Foundation的GDPR請求
 contentOwner: sarchiz
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 45%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 45%
 
 ## AEM Foundation GDPR支援 {#aem-foundation-gdpr-support}
 
-在AEM Foundation層級，儲存的個人資料是使用者設定檔。 因此，本文資訊主要說明如何存取和刪除使用者設定檔，以及分別說明GDPR存取和刪除請求。
+在AEM Foundation層級，儲存的個人資料是使用者設定檔。 因此，本文資訊主要是解決如何存取和刪除使用者設定檔，以及分別處理GDPR存取和刪除請求。
 
 ## 存取使用者個人資料 {#accessing-a-user-profile}
 
 ### 手動步驟 {#manual-steps}
 
-1. 瀏覽至，開啟「使用者管理」主控台 **[!UICONTROL 設定 — 安全性 — 使用者]** 或直接瀏覽至 `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
+1. 瀏覽至以下位置，開啟「使用者管理」主控台： **[!UICONTROL 設定 — 安全性 — 使用者]** 或直接瀏覽至 `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
 
    ![useradmin2](assets/useradmin2.png)
 
@@ -82,7 +82,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   使用者介面會將設定檔卡片變灰並新增鎖定，藉此指出使用者已停用：
+   使用者介面會透過變灰並在設定檔卡新增鎖定來指示使用者已停用：
 
    ![disableduser](assets/disableduser.png)
 
@@ -92,7 +92,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-57-11](assets/image2018-2-6_1-57-11.png)
 
-1. 開啟位於下的使用者節點 `[!UICONTROL /home/users]` 依預設：
+1. 開啟位於下的使用者節點 `[!UICONTROL /home/users]` 根據預設：
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 

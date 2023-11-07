@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
 exl-id: b27ffe92-8491-43a0-bf42-613eb39a606e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 流程例項清單會顯示在AEM Forms工作區的「追蹤」標籤中。
 
-在程式執行個體清單中，AEM Forms工作區會針對每個程式執行個體顯示該執行個體的某些屬性。 下列屬性適用於每個程式執行個體。 這些屬性作為屬性儲存在流程例項元件模型中，並可用於其檢視和範本。
+在流程例項清單中，AEM Forms工作區會針對每個流程例項顯示該例項的一些屬性。 下列屬性適用於每個程式執行個體。 這些屬性作為屬性儲存在流程例項元件模型中，並可用於其檢視和範本。
 
 <table>
  <tbody>
@@ -34,11 +34,11 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>發起人</td>
-   <td>處理序執行個體的啟動器名稱。</td>
+   <td>程式執行個體的啟動器名稱。</td>
   </tr>
   <tr>
    <td>initiatorId</td>
-   <td>處理序執行個體的發起者ID。</td>
+   <td>程式執行個體啟動器的ID。</td>
   </tr>
   <tr>
    <td>processCompleteTime</td>
@@ -58,11 +58,11 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>processStartTime</td>
-   <td>程式啟動時的時間戳記。</td>
+   <td>處理序啟動時的時間戳記。</td>
   </tr>
   <tr>
    <td>processVariables</td>
-   <td>程式變數的物件陣列。 每個處理序變數物件包含 <strong>名稱</strong> （程式變數的名稱）， <strong>值</strong> （程式變數的值），以及<strong> type</strong> （程式變數的型別）。</td>
+   <td>程式變數的物件陣列。 每個流程變數物件包含 <strong>名稱</strong> （程式變數的名稱）、 <strong>值</strong> （流程變數的值），以及<strong> type</strong> （程式變數的型別）。</td>
   </tr>
  </tbody>
 </table>
@@ -74,7 +74,7 @@ ht-degree: 3%
 1. 請遵循 [AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md).
 1. 請執行下列動作：
 
-   1. 將/libs/ws/js/runtime/templates/processinstance.html複製到/apps/ws/js/runtime/templates/ （如果它不存在）。 按一下 **全部儲存**.
+   1. 將/libs/ws/js/runtime/templates/processinstance.html複製到/apps/ws/js/runtime/templates/ （如果它不存在）。 按一下&#x200B;**「儲存全部」**。
    1. 以class = &#39;processDescription&#39; inprocessinstance.html新增處理序描述div。
 
    ```jsp
@@ -86,11 +86,11 @@ ht-degree: 3%
    1. 開啟/apps/ws/js/registry.js進行編輯。
    1. 搜尋和取代 `text!/lc/libs/ws/js/runtime/templates/processinstance.html`替換為 `text!/lc/`**應用程式**/ws/js/runtime/templates/processinstance.html.
 
-1. 上述變更可能需要透過下列方式在樣式表/apps/ws/css/newStyle.css中新增專案，以更新CSS檔案：
+1. 若要進行上述變更，請以下列方式在樣式表/apps/ws/css/newStyle.css中新增專案，以更新CSS檔案：
 
    ```css
    .processinstance .processDescription {
-    <!--Dummy values, need to be configured by user as per requirement as well as user can add or delete any property depending upon requirement-->
+    <!--Dummy values, need to be configured by user as per requirement and user can add or delete any property depending upon requirement-->
        width : 250px;
        font-size : 11pt;
        padding : 2px;

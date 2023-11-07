@@ -4,9 +4,9 @@ description: 安裝、設定和自訂AEM Forms示範套件。
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4622'
+source-wordcount: '4619'
 ht-degree: 2%
 
 ---
@@ -362,7 +362,7 @@ ht-degree: 2%
 
    ![Analytics雲端服務設定](assets/analytics_config.jpg)
 
-1. 按一下「編輯」按鈕以更新Adobe Analytics設定（您需要提供共用機密）。 按一下「連線至Analytics」以連線，並按一下「確定」完成。
+1. 按一下「編輯」按鈕以更新Adobe Analytics設定（您必須提供共用機密）。 按一下「連線至Analytics」以連線，並按一下「確定」完成。
 
    ![We.Gov Adobe Analytics](assets/wegov_adobe_analytics.jpg)
 
@@ -700,7 +700,7 @@ automated forms conversion服務包含 [最佳實務，已知的複雜模式](ht
 
 [樣式系統](../../sites-authoring/style-system.md)
 
-您也可以參閱 [範本自訂樣式系統](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) 以取得支援樣式的說明檔案。
+您也可以看到 [範本自訂樣式系統](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) 以取得支援樣式的說明檔案。
 
 ### 最適化表單自訂 {#adaptive-forms-customization}
 
@@ -749,7 +749,7 @@ automated forms conversion服務包含 [最佳實務，已知的複雜模式](ht
 
 ### 啟用協助工具測試Chrome附加元件 {#enable-chrome-add-on}
 
-若要執行協助工具測試，請安裝此處提供的Chrome外掛程式 `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
+若要執行協助工具測試，請安裝此處提供的Chrome外掛程式 `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
 
 安裝後，在Chrome瀏覽器中載入您要測試的頁面（注意：開啟多個分頁可能會影響您的分數，最好只開啟一個分頁）。 載入頁面後， **按一下右鍵** ，然後選取 **稽核** 標籤。 開發人員可以選取協助工具外掛程式要執行的稽核型別。 選取所有需要的選項後，使用者可以按一下產生報表按鈕。 這會產生一個PDF檔案，顯示整體的協助工具評等，以及可用來提升整體協助工具評等的專案。
 

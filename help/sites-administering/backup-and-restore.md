@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: eb8bbb85-ca2f-4877-8ee0-bb1ee8b7d8de
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2285'
+source-wordcount: '2283'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ ht-degree: 0%
 1. 以管理員身分登入AEM。
 
 1. 前往 **工具 — 作業 — 備份。**
-1. 按一下「**建立**」。備份主控台將會開啟。
+1. 按一下「**建立**」。備份主控台隨即開啟。
 
    ![chlimage_1-1](assets/chlimage_1-1a.png)
 
@@ -216,7 +216,7 @@ AEM Online Backup由一系列內部動作組成，以確保要備份的資料與
 
 1. 建立zip檔案時，第一步是建立或尋找目標目錄。
 
-   * 如果備份至zip檔案，則會建立暫存目錄。 目錄名稱開頭為 `backup.` 結束於 `.temp`；例如 `backup.f4d3.temp`.
+   * 如果備份至zip檔案，則會建立暫存目錄。 目錄名稱開頭為 `backup.` 結束於 `.temp`；例如， `backup.f4d3.temp`.
    * 如果備份到目錄，則會使用目標路徑中指定的名稱。 可以使用現有的目錄，否則將會建立新目錄。
 
      名為的空白檔案 `backupInProgress.txt` 會在備份啟動時，在目標目錄中建立。 備份完成時會刪除此檔案。

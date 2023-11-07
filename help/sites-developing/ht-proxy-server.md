@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Proxy伺服器會作為中繼伺服器，在使用者端與伺服器之間轉送
 
 每個使用中的連線都會縮排，以提升可讀性。 預設為16個層級。 此功能是透過以下網站引入： `proxy.jar version 1.16`.
 
-### 紀錄格式 {#log-format}
+### 記錄格式 {#log-format}
 
 proxy-2.1.jar產生的記錄專案都具有下列格式：
 
@@ -215,7 +215,7 @@ Keep-alive是HTTP的一項功能，可讓使用者端重複使用伺服器的TCP
 
 **尋找遺失的請求**
 
-如果您在複雜的伺服器設定中遺失請求，例如防火牆和Dispatcher，您可以使用Proxy伺服器來找出請求遺失的位置。 如果有防火牆：
+如果您在複雜的伺服器設定中遺失要求（例如，在防火牆和Dispatcher中），您可以使用Proxy伺服器來找出遺失要求的位置。 如果有防火牆：
 
 * 在防火牆之前啟動Proxy
 * 在防火牆之後啟動另一個Proxy

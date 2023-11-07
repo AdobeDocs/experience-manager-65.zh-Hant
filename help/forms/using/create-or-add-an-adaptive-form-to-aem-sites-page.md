@@ -3,10 +3,10 @@ title: 建立或新增調適型表單至 AEM Sites 頁面
 description: 探索如何輕鬆建立或無縫新增調適型表單至您的 AEM Sites 頁面。 了解整合動態和可自訂表單至網站中的步驟式技術和最佳實務，最佳化您的數位體驗以達到最大影響。
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 feature: Adaptive Forms
-exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 6d6e74c61b2ecb13e7cc352d5278c40d2677d44d
+exl-id: dcf023a1-8735-48cb-b3ea-d17357eeedaf
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2905'
+source-wordcount: '2901'
 ht-degree: 24%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 24%
 
 您可以使用AEM頁面編輯器快速建立多個表單並新增到您的AEM Sites頁面。 使用AEM頁面編輯器，內容作者就能利用調適型表單元件的功能（包括動態行為、驗證、資料整合、產生記錄檔案和業務流程自動化），在Sites頁面內建立順暢的資料擷取體驗。 它也可讓您使用AEM Sites頁面的各種功能，例如，版本設定、目標定位、翻譯和多網站管理員。
 
-AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 您可以使用調適型表單容器在體驗片段或AEM Sites頁面中建立新表單，而調適型Forms — 內嵌元件可讓您新增現有調適型表單或使用調適型Forms編輯器建立新表單。
+AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 您可以使用調適型表單容器在體驗片段或AEM Sites頁面中建立表單，而調適型Forms — 內嵌元件可讓您新增現有的調適型表單或使用調適型Forms編輯器建立表單。
 
 ![網站頁面中的最適化表單](/help/forms/using/assets/adaptive-form-in-sites-page.png)
 
@@ -33,7 +33,7 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
 在AEM頁面編輯器中使用調適型表單容器，可讓您使用調適型Forms元件的功能（包括動態行為、驗證、資料整合、產生記錄檔案和業務流程自動化），在Sites頁面中建立順暢的資料擷取體驗。 它也可讓您使用AEM Sites頁面的各種功能，例如、版本設定、目標定位、翻譯和多網站管理員，加強整體表單建立和管理體驗。 讓我們來探索其中的部分功能：
 
 * **版本設定：** AEM Sites頁面選件 [強大的版本設定功能](/help/sites-authoring/working-with-page-versions.md)，可讓您追蹤及管理不同版本的表單。 這可讓您變更和增強表單，同時維持必要時回覆至先前版本的能力。 版本設定可確保採用受控且有條理的方式來形成開發和演化。
-* **鎖定目標(與Adobe Target整合)：** 透過AEM Sites頁面鎖定目標功能，您也可以 [為不同受眾個人化表單體驗](/help/sites-administering/target.md). 運用使用者區段和目標定位條件，您可以針對特定使用者群組量身打造表單的內容、設計或行為。 這可讓您提供個人化和相關的表單體驗，提高參與度和轉換率。
+* **鎖定目標(與Adobe Target整合)：** 透過AEM Sites頁面鎖定目標功能，您也可以 [為不同受眾個人化表單體驗](/help/sites-administering/target.md). 透過使用使用者區段和目標定位條件，您可以針對特定使用者群組量身打造表單的內容、設計或行為。 這可讓您提供個人化和相關的表單體驗，提高參與度和轉換率。
 * **翻譯：** AEM Sites [與翻譯服務緊密整合](/help/sites-administering/translation.md)，讓您輕鬆地將表單翻譯成多種語言。 此功能可簡化本地化程式，確保全球受眾可存取您的表單。 您可以在AEM翻譯專案中有效率地管理翻譯，減少支援多語言表單所需的時間與精力。 如需翻譯的詳細資訊，請參閱考量事項一節。
 * **多網站管理和即時副本：** AEM Sites提供強大的 [多網站管理和即時複製功能](/help/sites-administering/msm.md)，讓您在單一環境中建立和管理多個網站。 此功能現在可讓您跨不同網站重複使用表單，確保一致性並減少重複工作。 透過集中化控制及管理，您可以有效維護及更新多個網站的表單。
 * **主題：** AEM Sites頁面提供跨多個網頁設計和維護一致視覺樣式的架構。 這些會定義顏色、字型、樣式表及其他視覺元素，這些元素有助於網站的整體外觀和風格。 [您可以將為AEM Sites頁面設計的主題用於最適化表單，以節省時間和精力](/help/sites-authoring/style-system.md).
@@ -181,8 +181,8 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
    會出現對話方塊，將最適化表單容器轉換為新的體驗片段或新增到現有的體驗片段
 1. 在轉換為體驗片段變數對話方塊中，設定以下選項的值：
 
-   * **動作：** 選取以建立新的體驗片段或新增到現有的體驗片段。
-   * **父路徑：** 指定要託管體驗片段的資料夾路徑。 選項僅適用於建立新的體驗片段。
+   * **動作：** 選取以建立體驗片段或新增到現有的體驗片段。
+   * **父路徑：** 指定要託管體驗片段的資料夾路徑。 選項僅適用於建立體驗片段。
    * **範本：** 指定體驗片段範本的路徑。 如果您沒有體驗片段範本， [建立它](/help/sites-developing/experience-fragments.md). 該選項僅可用於將最適化表單新增到現有的體驗片段。
    * **片段標題：** 指定體驗片段的標題。 標題可唯一識別體驗片段
 
@@ -253,5 +253,5 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
 
 ## 另請參閱 {#see-also}
 
-* [建立獨立核心元件式最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [建立獨立的以核心元件為主的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)
 * [為您的表單建立樣式或主題](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)

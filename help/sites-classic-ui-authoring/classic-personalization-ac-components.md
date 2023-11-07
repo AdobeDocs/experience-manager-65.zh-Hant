@@ -1,17 +1,15 @@
 ---
 title: Adobe Campaign元件
 description: 與Adobe Campaign整合時，您擁有可在使用電子報和表單時使用的元件。
-uuid: cc9417c9-4cc1-4554-858e-2ecd682dc92f
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 5afe864d-5794-4ffa-99e7-a3233f982aff
 docset: aem65
 exl-id: eeff89c1-41b3-403d-b4bf-c79b09b24d4a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2531'
+source-wordcount: '2530'
 ht-degree: 6%
 
 ---
@@ -24,7 +22,7 @@ ht-degree: 6%
 >
 >已棄用AEM電子郵件元件。 由於電子郵件結合了內容和樣式，因此由AEM提供的現成可用電子郵件元件對於客戶的重複使用有限，因為需要將自訂樣式實作到專案所需的任何元件中。
 >
->電子郵件元件可在專案層級實作，而過時的AEM電子郵件元件會說明如何實作。 不過，這些已棄用的元件不應在專案中使用。
+>電子郵件元件可在專案層級實作，而過時的AEM電子郵件元件會說明如何實作。 不過，請勿在專案上使用這些已棄用的元件。
 
 ## Adobe Campaign Newsletter元件 {#adobe-campaign-newsletter-components}
 
@@ -73,7 +71,7 @@ ht-degree: 6%
 
 您可以上傳影像，然後編輯和處理影像（例如，裁切、旋轉、新增連結/標題/文字）。
 
-您可以上傳影像，然後編輯和處理影像（例如裁切、旋轉、新增連結/標題/文字）。 您可以從「 」拖放影像 [內容尋找器](/help/sites-authoring/author-environment-tools.md#thecontentfinderclassicui) 直接放到元件或其「編輯」對話方塊上。 您也可以連按兩下「編輯」對話方塊的中央區域，以瀏覽本機檔案系統並上傳影像。 「編輯」對話方塊中的兩個標籤也會控制影像的所有定義與操作：
+您可以上傳影像，然後編輯和處理影像（例如，裁切、旋轉、新增連結/標題/文字）。 您可以從「 」拖放影像 [內容尋找器](/help/sites-authoring/author-environment-tools.md#thecontentfinderclassicui) 直接放到元件或其「編輯」對話方塊上。 您也可以連按兩下「編輯」對話方塊的中央區域，以瀏覽本機檔案系統並上傳影像。 「編輯」對話方塊中的兩個標籤也會控制影像的所有定義與操作：
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -174,7 +172,7 @@ ht-degree: 6%
 * **影像屬性** (**進階影像屬性**)可讓您指定下列專案：
 
    * **標題**
-區塊的標題；將顯示於滑鼠懸停處。
+區塊標題，由mouseover顯示。
 
    * **替代文字**
 如果影像無法顯示，則會顯示替代文字。

@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3221'
+source-wordcount: '3219'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 2%
 
 如需如何在AEM專案中使用可編輯範本的詳細資訊，請參閱 [使用Lazybones建立AEM專案](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478).
 
-建立新的可編輯範本時，您可以：
+建立可編輯的範本時，您可以：
 
 1. 建立 [範本的資料夾](#template-folders). 此資料夾並非強制性，但建議使用最佳實務。
 1. 選取 [範本型別](#template-type). 此型別會被複製以建立 [範本定義](#template-definitions).
@@ -102,7 +102,7 @@ ht-degree: 2%
 
    如需初始內容的技術細節，請參閱 [初始內容](/help/sites-developing/page-templates-editable.md#initial-content) （在此檔案中）。
 
-   **配置**
+   **版面配置**
 
    * 您可以為一系列裝置定義範本配置。
    * 範本的回應式版面運作方式與頁面製作相同。
@@ -416,7 +416,7 @@ ht-degree: 2%
 * 在可編輯的範本型別上
 * 在可編輯的範本上
 
-建立新的可編輯範本時，值會從範本型別複製到個別範本。 如果型別上未設定值，則可在範本上設定值。 建立範本後，就沒有任何型別繼承到範本。
+建立可編輯的範本時，值會從範本型別複製到個別範本。 如果型別上未設定值，則可在範本上設定值。 建立範本後，就沒有任何型別繼承到範本。
 
 >[!CAUTION]
 >
@@ -533,7 +533,7 @@ GITHUB上的程式碼
 * 此 `root` 節點會儲存元件清單，以定義結果頁面中可用的元件。
 * 如果在結構模式中將內容新增到元件，而該元件之後已解鎖（或反之），則此內容會用作初始內容。
 
-### 配置 {#layout}
+### 版面配置 {#layout}
 
 時間 [編輯範本，您可以定義版面](/help/sites-authoring/templates.md)，此實務會使用 [標準回應式佈局](/help/sites-authoring/responsive-layout.md) 也可以 [已設定](/help/sites-administering/configuring-responsive-layout.md).
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1553'
 ht-degree: 5%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 5%
 [快速動作](/help/sites-authoring/basic-handling.md#quick-actions) 可用：
 
 1. [導覽至頁面](#finding-your-page) 您要對其執行動作。
-1. 將滑鼠指標停留在代表您所需資源的卡片上；將會顯示快速動作：
+1. 將滑鼠指標停留在代表所需資源的卡片上；會顯示快速動作：
 
    ![screen_shot_2018-03-21at160503-1](assets/screen_shot_2018-03-21at160503-1.png)
 
@@ -215,7 +215,7 @@ ht-degree: 5%
 
   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
-   1. 畫面會顯示頁面屬性。 您可以視需要進行更新，然後使用「儲存」來儲存這些專案
+   1. 畫面隨即顯示頁面屬性。 您可以視需要進行更新，然後使用「儲存」來儲存這些專案
 
 * 時間 [編輯您的頁面](#editing-your-page-content)：
 

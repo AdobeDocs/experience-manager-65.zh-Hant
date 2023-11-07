@@ -3,9 +3,9 @@ title: OSGi和AEM Forms JEE工作流程中表單中心AEM工作流程的動作�
 description: OSGi和AEM Forms JEE工作流程中表單中心AEM工作流程的動作和功能
 contentOwner: khsingh
 exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '925'
 ht-degree: 22%
 
 ---
@@ -396,7 +396,7 @@ OSGi和AEM Forms JEE Workflows (JEE流程管理上的AEM Forms)以表單為中�
 
 ## AEM收件匣與AEM Forms應用程式功能之間的差異 {#differences-between-aem-inbox-and-aem-forms-app-features}
 
-啟動以Forms為中心的工作流程的兩個顯著方法是使用 [AEM收件匣](../../forms/using/manage-applications-inbox.md) 和AEM Forms應用程式。 不過，AEM收件匣和AEM Forms應用程式的功能有所不同。 AEM收件匣僅適用於 [以Forms為中心的工作流程](../../forms/using/aem-forms-workflow.md) 而AEM Forms應用程式可搭配以Forms為中心的工作流程以及程式管理。
+啟動以Forms為中心的工作流程的兩個顯著方法是使用 [AEM收件匣](../../forms/using/manage-applications-inbox.md) 和AEM Forms應用程式。 不過，AEM收件匣和AEM Forms應用程式的功能有所不同。 AEM收件匣僅適用於 [以Forms為中心的工作流程](../../forms/using/aem-forms-workflow.md) 而AEM Forms應用程式可搭配以Forms為中心的工作流程與程式管理運作。
 
 下表列出AEM收件匣和AEM Forms應用程式的功能：
 

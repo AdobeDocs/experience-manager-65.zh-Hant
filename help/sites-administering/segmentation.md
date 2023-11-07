@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1774'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 4%
 
 細分是建立行銷活動時的關鍵考量。 另請參閱 [管理對象](/help/sites-authoring/managing-audiences.md) 區段運作方式和主要術語的相關資訊。
 
-根據您已收集到的網站訪客相關資訊以及您想要達成的目標，您將需要定義目標內容所需的區段和策略。
+根據您已收集到的網站訪客相關資訊以及您想要達成的目標，您必須定義目標內容所需的區段和策略。
 
 接著，這些區段可用來向訪客提供明確鎖定的目標內容。 此內容維護於 [個人化](/help/sites-authoring/personalization.md) 網站區段。 [活動](/help/sites-authoring/activitylib.md) 此處定義可包含在任何頁面上，並定義專用內容適用於的訪客區段。
 
@@ -34,7 +34,7 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
 
 ## 存取區段 {#accessing-segments}
 
-此 [受眾](/help/sites-authoring/managing-audiences.md) console可用來管理ContextHub或Client Context的區段，以及Adobe Target帳戶的對象。 本檔案說明如何管理ContextHub的區段。 的 [Client Context區段](/help/sites-administering/campaign-segmentation.md) 和Adobe Target區段，請參閱相關檔案。
+此 [受眾](/help/sites-authoring/managing-audiences.md) 主控台可用來管理ContextHub或Client Context的區段，以及Adobe Target帳戶的受眾。 本檔案說明如何管理ContextHub的區段。 的 [Client Context區段](/help/sites-administering/campaign-segmentation.md) 和Adobe Target區段，請參閱相關檔案。
 
 若要存取區段，您必須選取設定。 在全域導覽中選取 **導覽>個人化>對象**. 您將會看到可用的設定：
 
@@ -141,7 +141,7 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
-1. 在 **新ContextHub區段**，輸入區段的標題及boost值（如有需要），然後點選或按一下 **建立**.
+1. 在 **新ContextHub區段**，輸入區段的標題及提升值（如有需要），然後點選或按一下 **建立**.
 
    ![chlimage_1-312](assets/chlimage_1-312.png)
 

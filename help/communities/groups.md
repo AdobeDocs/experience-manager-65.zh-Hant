@@ -9,7 +9,7 @@ docset: aem65
 pagetitle: Community Groups Console
 role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 2%
@@ -32,7 +32,7 @@ ht-degree: 2%
 * **控制**：群組可以是開啟或秘密的。
 * **巢狀**：群組可包含零個或多個群組。
 
-<!-- This is a 404 on helpx. Please update or remove.
+<!-- This is a 404 on helpx. Update or remove.
 >[!NOTE]
 >
 >Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), is not listed in the Community Groups console, and thus, are not modifiable using the console.
@@ -304,4 +304,4 @@ DESIGN面板允許修改主題：
 
 選取「刪除群組」圖示（將滑鼠懸停在群組上時顯示），從社群群組主控台中刪除群組。
 
-這會移除與群組相關聯的所有專案，例如，群組的所有內容都會永久刪除，而使用者成員資格也會從系統中移除。
+這會移除與群組相關的所有專案，例如，群組的所有內容會永久刪除，而使用者成員資格會從系統中移除。

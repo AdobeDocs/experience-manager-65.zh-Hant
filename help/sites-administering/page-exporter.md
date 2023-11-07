@@ -2,7 +2,7 @@
 title: 頁面匯出工具
 description: 瞭解如何使用Adobe Experience Manager (AEM)頁面匯出工具。
 exl-id: 15d08758-cf75-43c0-9818-98a579d64183
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -107,7 +107,7 @@ Adobe Experience Manager (AEM)可讓您將頁面匯出為包含影像的完整�
 
 範本由節點結構組成，因為它使用 [內容同步架構](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/package-summary.html). 每個節點都有 `type` 屬性，可定義zip檔案建立程式中的特定動作。
 
-<!-- For more details about the type property, refer to the Overview of configuration types section in the Content Sync framework page.
+<!-- For more details about the type property, see the Overview of configuration types section in the Content Sync framework page.
 -->
 
 下列節點可用來建置匯出範本：
@@ -131,7 +131,7 @@ Adobe Experience Manager (AEM)可讓您將頁面匯出為包含影像的完整�
 
 * `rewrite`
 重新寫入節點會定義在匯出頁面中重新寫入連結的方式。 重寫的連結可以指向zip檔案中包含的檔案或伺服器上的資源。
-  <!-- Please refer to the Content Sync page for a complete description of the `rewrite` node. -->
+  <!-- See the Content Sync page for a complete description of the `rewrite` node. -->
 
 * `design`
 設計節點用於複製用於匯出頁面的設計。 它具有下列特性：
@@ -177,7 +177,7 @@ As you may have noticed in the node structure, the **Geometrixx** page export te
 
 若要符合某些特定需求，請實作 [自訂更新處理常式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/handler/package-summary.html).
 
-<!-- To meet some specific requirements, you may need to implement a custom `type` property: to do so, refer to the Implementing a custom update handler section in the Content Sync page.
+<!-- To meet some specific requirements, you may need to implement a custom `type` property. To do so, see the Implementing a custom update handler section in the Content Sync page.
 -->
 
 ## 以程式匯出頁面 {#programmatically-exporting-a-page}

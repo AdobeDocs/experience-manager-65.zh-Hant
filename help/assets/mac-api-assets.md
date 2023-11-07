@@ -6,9 +6,9 @@ role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 hide: true
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1743'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 1. 開啟API服務檔案，位於 `https://[hostname]:[port]/api.json`.
 1. 請遵循 [!DNL Assets] 服務連結前往 `https://[hostname]:[server]/api/assets.json`.
 
-API回應是部分MIME型別的JSON檔案，以及所有MIME型別的回應代碼。 JSON回應為選用專案，且可能無法使用(例如PDF檔案)。 仰賴回應程式碼進行進一步分析或動作。
+API回應是部分MIME型別的JSON檔案，以及所有MIME型別的回應代碼。 JSON回應為選用專案，可能無法用於PDF檔案等用途。 仰賴回應程式碼進行進一步分析或動作。
 
 在 [!UICONTROL 關閉時間]，資產及其轉譯無法透過 [!DNL Assets] 網頁介面以及透過HTTP API。 如果 [!UICONTROL 準時] 是未來或 [!UICONTROL 關閉時間] 是過去的。
 
@@ -211,7 +211,7 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 
 ## 建立資產轉譯 {#create-an-asset-rendition}
 
-為資產建立新的資產轉譯。 如果未提供請求引數名稱，則會使用檔案名稱作為轉譯名稱。
+為資產建立資產轉譯。 如果未提供請求引數名稱，則會使用檔案名稱作為轉譯名稱。
 
 **引數**：引數為 `name` 代表轉譯的名稱和 `file` 作為檔案參照。
 

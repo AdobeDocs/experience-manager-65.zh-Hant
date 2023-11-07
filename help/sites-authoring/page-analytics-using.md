@@ -8,9 +8,9 @@ topic-tags: site-features
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '445'
 ht-degree: 11%
 
 ---
@@ -35,10 +35,10 @@ ht-degree: 11%
 >
 >若要變更更新期間， [設定匯入間隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
 
-1. 開啟 **網站** 主控台；例如 [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
+1. 開啟 **網站** 主控台；例如， [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
 1. 在工具列的最右側（右上角），按一下或點選圖示以選取 **清單檢視** (顯示的圖示取決於 [目前檢視](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
 
-1. 同樣地，在工具列的最右側（右上角），按一下或點選圖示，然後選取 **檢視設定**. 此 **設定欄** 對話方塊將會開啟。 進行任何必要的變更，並確認： **更新**.
+1. 同樣地，在工具列的最右側（右上角），按一下或點選圖示，然後選取 **檢視設定**. 此 **設定欄** 對話方塊開啟。 進行任何必要的變更，並確認： **更新**.
 
    ![spad-02](assets/spad-02.png)
 

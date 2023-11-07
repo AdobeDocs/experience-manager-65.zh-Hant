@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2856'
+source-wordcount: '2853'
 ht-degree: 1%
 
 ---
@@ -122,7 +122,7 @@ Web使用者端必須擁有許可權才能存取 `cq:ClientLibraryFolder` 節點
 
 ### 覆寫/lib中的程式庫 {#overriding-libraries-in-lib}
 
-位於下方的使用者端程式庫資料夾 `/apps` 優先於位置相似但名稱相同的資料夾 `/libs`. 例如， `/apps/cq/ui/widgets` 優先於 `/libs/cq/ui/widgets`. 當這些程式庫屬於相同類別時，底下的程式庫 `/apps` 已使用。
+位於下方的使用者端程式庫資料夾 `/apps` 優先於中的相同名稱資料夾 `/libs`. 例如， `/apps/cq/ui/widgets` 優先於 `/libs/cq/ui/widgets`. 當這些程式庫屬於相同類別時，底下的程式庫 `/apps` 已使用。
 
 ### 找到使用者端程式庫資料夾並使用Proxy使用者端程式庫Servlet {#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet}
 
@@ -134,7 +134,7 @@ Web使用者端必須擁有許可權才能存取 `cq:ClientLibraryFolder` 節點
 
 >[!NOTE]
 >
->若要更妥善地將程式碼與內容和設定隔離開，建議在下方找到使用者端程式庫 `/apps` 並透過以下方式公開 `/etc.clientlibs` 善用 `allowProxy` 屬性。
+>若要更妥善地將程式碼與內容和設定隔離開，建議在下方找到使用者端程式庫 `/apps` 並透過以下方式公開 `/etc.clientlibs` 藉由使用 `allowProxy` 屬性。
 
 為了以下使用者端程式庫： `/apps` 為了能夠存取，使用proxy servelt。 ACL仍強制在使用者端資料庫資料夾上，但servlet允許透過讀取內容 `/etc.clientlibs/` 如果 `allowProxy` 屬性已設為 `true`.
 
@@ -197,7 +197,7 @@ Web使用者端必須擁有許可權才能存取 `cq:ClientLibraryFolder` 節點
 
 ### 連結至相依性 {#linking-to-dependencies}
 
-當使用者端程式庫資料夾中的程式碼參考其他程式庫時，請將其他程式庫識別為相依性。 在JSP中， `ui:includeClientLib` 參照使用者端程式庫資料夾的標籤會讓HTML程式碼包含所產生程式庫檔案的連結以及相依性。
+當使用者端程式庫資料夾中的程式碼參考其他程式庫時，請將其他程式庫識別為相依性。 在JSP中， `ui:includeClientLib` 引用使用者端程式庫資料夾的標籤會讓HTML程式碼包含您產生的程式庫檔案和相依性的連結。
 
 相依性必須是另一個 `cq:ClientLibraryFolder`. 若要識別相依性，請將屬性新增至 `cq:ClientLibraryFolder` 具有下列屬性的節點：
 

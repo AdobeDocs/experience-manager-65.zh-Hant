@@ -6,10 +6,10 @@ role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2416'
-ht-degree: 17%
+ht-degree: 16%
 
 ---
 
@@ -113,7 +113,7 @@ ht-degree: 17%
 1. 按一下 [!DNL Experience Manager] 標誌，然後前往 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**.
 1. 從 **[!UICONTROL 搜尋Forms]** 頁面，選取 **[!UICONTROL 資產管理搜尋邊欄]**，然後按一下 **[!UICONTROL 編輯]**.
 1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **** 」頁籤拖到主窗格。
-1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如「檔案類 **[!UICONTROL 型」]**。指定在屬性欄位中根據其執行搜索的屬性，例如 `jcr:content/metadata/dc:format.`
+1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如 **[!UICONTROL 檔案型別]**. 指定在屬性欄位中根據其執行搜索的屬性，例如, `jcr:content/metadata/dc:format.`
 1. 執行下列任一項作業：
 
    * 在 **[!UICONTROL 屬性名稱]** 欄位，提及JSON檔案的路徑，您可在此定義選項的節點，並指定對應的索引鍵值配對。
@@ -135,7 +135,7 @@ ht-degree: 17%
 1. 按一下 [!DNL Experience Manager] 標誌，然後前往 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**.
 1. 在「搜尋Forms」頁面上，選取 **[!UICONTROL 資產管理搜尋邊欄]**，然後按一下 **[!UICONTROL 編輯]** ![編輯圖示](assets/do-not-localize/aemassets_edit.png).
 1. 在「編輯搜索表單」頁中，將「 **[!UICONTROL Multi Value Property Predicate]** 」從「 **[!UICONTROL Select Predicate]** 」頁籤拖動到主窗格。
-1. 在 **[!UICONTROL 設定]** 標籤，輸入述詞的標籤和預留位置文字。 指定在屬性欄位中根據其執行搜尋的屬性名稱，例如 `jcr:content/metadata/dc:value`. 您也可以使用選取對話方塊來選取節點。
+1. 在 **[!UICONTROL 設定]** 標籤，輸入述詞的標籤和預留位置文字。 指定在屬性欄位中根據其執行搜尋的屬性名稱，例如， `jcr:content/metadata/dc:value`. 您也可以使用選取對話方塊來選取節點。
 1. 請確定已 **[!UICONTROL 選取「分隔字元]** 」支援。在「輸入 **[!UICONTROL 分隔字元]** 」欄位中，指定分隔字元以分隔個別值。依預設，逗號會指定為分隔字元。您可以指定不同的分隔字元。
 1. 在 **說明** 欄位，輸入選填的說明，然後按一下 **[!UICONTROL 完成]**.
 1. 導覽至「 」中的「篩選器」面板 [!DNL Assets] 使用者介面。 The **[!UICONTROL Multi Value Property]** predicate is added to the panel.
@@ -148,7 +148,7 @@ ht-degree: 17%
 1. 按一下 [!DNL Experience Manager] 標誌，然後前往 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**.
 1. 在搜尋Forms頁面中，選取 **[!UICONTROL 資產管理搜尋邊欄]** 然後按一下 **[!UICONTROL 編輯]** ![編輯圖示](assets/do-not-localize/aemassets_edit.png).
 1. 在「編輯搜尋表單」頁面中，拖曳 **[!UICONTROL 標籤述詞]** 從「選取述詞」標籤移至主窗格。
-1. 在「設定」標籤中，輸入述詞的預留位置文字。 指定在屬性欄位中根據其執行搜尋的屬性名稱，例如 *jcr：content/metadata/cq：tags*. 或者，您可以從選取對話方塊中選取CRXDE中的節點。
+1. 在「設定」標籤中，輸入述詞的預留位置文字。 指定在屬性欄位中根據其執行搜尋的屬性名稱，例如， *jcr：content/metadata/cq：tags*. 或者，您可以從選取對話方塊中選取CRXDE中的節點。
 1. 設定此述詞的根標籤路徑屬性，以填入標籤清單中的各種標籤。
 1. 選取 **[!UICONTROL 「顯示符合所有標籤」選項]** ，以搜尋包含您所指定之所有標籤的資產。
 

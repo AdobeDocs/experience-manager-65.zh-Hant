@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '9109'
+source-wordcount: '9095'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 >
 >如需使用Workbench建立Forms應用程式的詳細資訊，請參閱 [Workbench說明](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
-位於AEM Forms存放庫中的資源路徑為：
+AEM Forms存放庫中的資源路徑為：
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 >
 >您可以使用網頁瀏覽器瀏覽AEM Forms存放庫。 若要瀏覽存放庫，請在網頁瀏覽器中輸入下列URL `https://[server name]:[server port]/repository`. 您可以使用網頁瀏覽器來驗證與「使用AEM Forms存放庫」區段關聯的快速入門結果。 例如，如果您將內容新增至AEM Forms存放庫，即可在網頁瀏覽器中檢視內容。 (請參閱 [快速入門（SOAP模式）：使用Java API編寫資源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
 
-存放庫API提供一些操作，可用於儲存和擷取存放庫中的資訊。 例如，當處理應用程式時需要資源時，您可以取得資源清單或擷取儲存於儲存庫中的特定資源。
+存放庫API提供數個操作，可用於儲存和擷取存放庫中的資訊。 例如，當處理應用程式時需要資源時，您可以取得資源清單或擷取儲存於儲存庫中的特定資源。
 
 >[!NOTE]
 >
@@ -305,7 +305,7 @@ ht-degree: 0%
 
 1. 將資源寫入目標資料夾
 
-   叫用 `ResourceRepositoryClient` 物件的 `writeResource` 方法並傳入資料夾的URI，以及 `Resource` 物件。
+   叫用 `ResourceRepositoryClient` 物件的 `writeResource` 方法，並在資料夾的URI中傳遞，以及 `Resource` 物件。
 
 **另請參閱**
 
@@ -354,7 +354,7 @@ ht-degree: 0%
 
 1. 將資源寫入目標資料夾
 
-   叫用 `RepositoryServiceService` 物件的 `writeResource` 方法並傳入資料夾的URI，以及 `Resource` 物件。 通過 `null` 其他兩個引數的。
+   叫用 `RepositoryServiceService` 物件的 `writeResource` 方法，並在資料夾的URI中傳遞，以及 `Resource` 物件。 通過 `null` 其他兩個引數的。
 
 **另請參閱**
 
@@ -542,7 +542,7 @@ ht-degree: 0%
 
 1. 指定要讀取的資源的URI
 
-   指定代表要擷取之資源URI的字串值。 例如，假設資源名為 *testResource* 位在名為的資料夾中 *testFolder*，指定 `/testFolder/testResource`.
+   指定代表要擷取之資源URI的字串值。 例如，假設資源名為 *testResource* 位於名為的資料夾中 *testFolder*，指定 `/testFolder/testResource`.
 
 1. 讀取資源
 
@@ -999,7 +999,7 @@ A *查詢* 包含一或多個邏輯上以條件聯結的陳述式。 A *陳述�
 
 您可以鎖定資源或資源集，以供特定使用者獨佔使用，或供多個使用者共用。 共用鎖定表示資源會發生狀況，但不會防止其他人員對該資源採取動作。 共用鎖定應視為訊號機制。 專屬鎖定表示鎖定資源的使用者將會變更資源，而鎖定可確保除非使用者不再需要存取資源且已解除鎖定，否則其他人都無法變更。 如果存放庫管理員解除鎖定資源，該資源的所有專屬和共用鎖定都會自動移除。 這類動作適用於使用者不再可用且尚未解除鎖定資源的情況。
 
-鎖定資源時，當您檢視位於Workbench中的「資源」標籤時，會出現鎖定圖示，如下圖所示。
+鎖定資源時，當您在Workbench中檢視「資源」標籤時，會出現鎖定圖示，如下圖所示。
 
 ![lr_lr_lockrepository](assets/lr_lr_lockrepository.png)
 

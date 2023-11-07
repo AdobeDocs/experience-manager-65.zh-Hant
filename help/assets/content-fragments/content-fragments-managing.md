@@ -4,9 +4,9 @@ description: 瞭解如何使用Assets主控台來管理您的AEM內容片段，�
 feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1714'
 ht-degree: 9%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 9%
 
       * **名稱**
 
-        名稱；將用於組成URL。
+        名稱；用於組成URL。
 
         必要；將自動從標題衍生，但可以更新。
 
@@ -142,7 +142,7 @@ ht-degree: 9%
    * 按一下/點選片段或片段連結（這取決於主控台檢視）。
    * 選取片段，然後 **編輯** 工具列中的。
 
-1. 片段編輯器將會開啟。 視需要進行變更：
+1. 片段編輯器隨即開啟。 視需要進行變更：
 
    ![片段編輯器](assets/cfm-managing-03.png)
 
@@ -180,13 +180,13 @@ ht-degree: 9%
 
 ![模式](assets/cfm-managing-top-toolbar.png)
 
-* 當內容頁面上已參考片段時，將顯示訊息。 您可以 **關閉** 訊息。
+* 當內容頁面上已參考片段時，會顯示訊息。 您可以 **關閉** 訊息。
 
 * 您可以使用來隱藏/顯示側面板 **切換側面板** 圖示。
 
 * 在片段名稱下方，您可以看到 [內容片段模型](/help/assets/content-fragments/content-fragments-models.md) 用於建立目前的片段：
 
-   * 此名稱也是將開啟模型編輯器的連結。
+   * 該名稱也是開啟模型編輯器的連結。
 
 * 檢視片段的狀態；例如，建立、修改或發佈時間的相關資訊。
 
@@ -237,7 +237,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
   >
   >除了僅儲存您的變更，這些動作也會更新任何參考，並確保Dispatcher會依需求排清。 這些變更可能需要一些時間才能處理。 因此，大型/複雜/過載系統可能會受到效能影響。
   >
-  >使用時，請謹記這一點 **儲存並關閉** 然後快速重新進入片段編輯器以進行並儲存進一步的變更。
+  >使用時，請牢記這一點 **儲存並關閉** 然後快速重新進入片段編輯器以進行並儲存進一步的變更。
 
 * **關閉**
 

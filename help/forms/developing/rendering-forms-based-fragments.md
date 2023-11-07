@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: a65c5303-0ebd-43a9-a777-401042d8fcad
 role: Developer
 exl-id: febf5350-3fc5-48c0-8bc5-198daff15936
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2199'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Forms服務可以轉譯以您使用Designer建立的片段為基礎的表單。 A *片段* 是可重複使用的表單部分，並另存為可插入多個表單設計的個別XDP檔案。 例如，片段可以包含位址區塊或合法文字。
 
-使用片段可簡化並加速大量表單的建立與維護。 建立新表單時，插入所需片段的參考，片段就會顯示在表單中。 片段參考包含指向實體XDP檔案的子表單。 如需有關根據片段建立表單設計的資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_tw)
+使用片段可簡化並加速大量表單的建立與維護。 建立表單時，插入所需片段的參考，片段就會顯示在表單中。 片段參考包含指向實體XDP檔案的子表單。 如需有關根據片段建立表單設計的資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_tw)
 
 片段可以包含數個包在選擇子表單集中的子表單。 選擇子表單集根據資料連線的資料流程控制子表單的顯示。 您可以使用條件陳述式來決定集合中哪個子表單會出現在傳遞的表單中。 例如，集合中的每個子表單可以包含特定地理位置的資訊，而顯示的子表單可以根據使用者的位置來決定。
 
@@ -77,7 +77,7 @@ A *指令碼片段* 包含可重複使用的JavaScript函式或值，這些函�
 
 若要成功根據片段轉譯表單，您必須確保Forms服務同時找到表單和表單設計參考的片段（XDP檔案）。 例如，假設表單名為PO.xdp，此表單使用名為FooterUS.xdp和FooterCanada.xdp的兩個片段。 在這種情況下，Forms服務必須能夠找到所有三個XDP檔案。
 
-您可以將表單放在某個位置，並將片段放在另一個位置，以組織表單及其片段，或將所有XDP檔案放在同一個位置。 就本節而言，假設所有XDP檔案都位於AEM Forms存放庫中。 如需有關將XDP檔案放入AEM Forms存放庫的資訊，請參閱 [寫入資源](/help/forms/developing/aem-forms-repository.md#writing-resources).
+您可以將表單放在某個位置，並將片段放在另一個位置，以組織表單及其片段，或將所有XDP檔案放在同一個位置。 就本節而言，假設所有XDP檔案都在AEM Forms存放庫中。 如需有關將XDP檔案放入AEM Forms存放庫的資訊，請參閱 [寫入資源](/help/forms/developing/aem-forms-repository.md#writing-resources).
 
 根據片段呈現表單時，您必須僅參考表單本身，而非片段。 例如，您必須參考PO.xdp，而非FooterUS.xdp或FooterCanada.xdp。 請確定您將片段放置在Forms服務可找到它們的位置。
 
@@ -174,7 +174,7 @@ Forms服務轉譯表單時，會傳回您必須寫入使用者端網頁瀏覽器
 
    * 建立 `URLSpec` 使用建構函式儲存URI值的物件。
    * 叫用 `URLSpec` 物件的 `setApplicationWebRoot` 方法，並傳遞代表應用程式網頁根目錄的字串值。
-   * 叫用 `URLSpec` 物件的 `setContentRootURI` 方法並傳遞字串值，該值會指定內容根URI值。 請確認表單設計位於內容根URI中。 否則，Forms服務會擲回例外狀況。 若要參考存放庫，請指定 `repository://`.
+   * 叫用 `URLSpec` 物件的 `setContentRootURI` 方法並傳遞字串值，該值會指定內容根URI值。 確認表單設計位於內容根URI中。 否則，Forms服務會擲回例外狀況。 若要參考存放庫，請指定 `repository://`.
    * 叫用 `URLSpec` 物件的 `setTargetURL` 方法並傳遞字串值，該值會指定將表單資料發佈到的目標URL值。 如果您在表單設計中定義目標URL，您可以傳遞空字串。 您也可以指定傳送表單以執行計算的URL。
 
 1. 演算表單
@@ -183,7 +183,7 @@ Forms服務轉譯表單時，會傳回您必須寫入使用者端網頁瀏覽器
 
    * 字串值，指定表單設計名稱，包括副檔名。 如果您參照的表單設計屬於Forms應用程式的一部分，請務必指定完整路徑，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
    * A `BLOB` 包含要與表單合併之資料的物件。 如果您不想合併資料，請傳遞 `null`.
-   * A `PDFFormRenderSpec` 儲存執行階段選項的物件。 請注意，如果輸入檔案是PDF檔案，則無法設定標籤PDF選項。 如果輸入檔案是XDP檔案，則可以設定標籤的PDF選項。
+   * A `PDFFormRenderSpec` 儲存執行階段選項的物件。 如果輸入檔案是PDF檔案，則無法設定標籤的PDF選項。 如果輸入檔案是XDP檔案，則可以設定標籤的PDF選項。
    * A `URLSpec` 包含Forms服務所需URI值的物件。
    * A `java.util.HashMap` 儲存檔案附件的物件。 此為選用引數，您可以指定 `null` 如果您不想將檔案附加至表單。
    * 空白 `com.adobe.idp.services.holders.BLOBHolder` 由方法填入的物件。 此引數用於儲存演算後的表單。

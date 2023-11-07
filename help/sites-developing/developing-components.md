@@ -12,9 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 823e756f470b0599f7d53a3e08fdf650b4e892d1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3454'
+source-wordcount: '3446'
 ht-degree: 1%
 
 ---
@@ -206,13 +206,13 @@ newComponent (cq:Component)
 
 觸控式UI的Widget會實作為Granite UI元件。
 
-若要建立新的Widget以用於觸控式UI的元件對話方塊，需要您 [建立新的Granite UI欄位元件](/help/sites-developing/granite-ui-component.md).
+若要建立Widget以用於觸控式UI的元件對話方塊，需要您 [建立Granite UI欄位元件](/help/sites-developing/granite-ui-component.md).
 
 >[!NOTE]
 >
 >如需Granite UI的完整詳細資訊，請參閱 [Granite UI檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
-如果您將對話方塊視為表單元素的簡單容器，則也可以將對話方塊內容的主要內容視為表單欄位。 建立新表單欄位需要您建立資源型別；這等同於建立新元件。 為協助您完成該工作，Granite UI提供了可供繼承的通用欄位元件(使用 `sling:resourceSuperType`)：
+如果您將對話方塊視為表單元素的簡單容器，則也可以將對話方塊內容的主要內容視為表單欄位。 建立表單欄位需要您建立資源型別；這等同於建立元件。 為協助您完成該工作，Granite UI提供了可供繼承的通用欄位元件(使用 `sling:resourceSuperType`)：
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
@@ -228,7 +228,7 @@ newComponent (cq:Component)
 
 如果您想要定義元件的樣式和行為，可以建立專用的 [使用者端資料庫](/help/sites-developing/clientlibs.md) 會定義您的自訂CSS/LESS和JS。
 
-若要讓您的使用者端程式庫僅為您的元件對話方塊載入（即它不會為另一個元件載入），您需要設定屬性 `extraClientlibs` 對話方塊的類別名稱新增至您剛建立的使用者端程式庫的類別名稱。 如果您的使用者端程式庫相當大和/或您的欄位專屬於該對話方塊，且不需要在其他對話方塊中使用，建議您這麼做。
+若要讓您的使用者端程式庫僅為您的元件對話方塊載入（即它不會為另一個元件載入），您需要設定屬性 `extraClientlibs` 對話方塊的類別名稱切換至您已建立的使用者端程式庫的類別名稱。 如果您的使用者端程式庫相當大和/或您的欄位專屬於該對話方塊，且不需要在其他對話方塊中使用，建議您這麼做。
 
 若要讓您的使用者端程式庫載入所有對話方塊，請將使用者端程式庫的類別屬性設定為 `cq.authoring.dialog`. 這是呈現所有對話方塊時預設包含的使用者端程式庫的類別名稱。 如果您使用者端資料庫較小且/或您的欄位是通用的，且可在其他對話方塊中重複使用，則您想要執行此動作。
 
@@ -346,7 +346,7 @@ Granite UI和Granite UI元件（等同於Widget）中的欄位驗證是使用 `f
 
 現成可用的AEM只會檢查「參照」元件。 若要新增元件，您需要設定OSGi套件組合 **WCM製作內容參考設定**.
 
-在定義中建立新專案，指定元件以及要檢查的屬性。 例如：
+在定義中建立專案，指定元件以及要檢查的屬性。 例如：
 
 `/apps/<*your-Project*>/components/reference@parentPath`
 
@@ -373,12 +373,12 @@ AEM可讓您在頁面上設定段落系統，以便 [當使用者將資產拖曳
 
    * `/etc/designs/<myApp>/page/par`
 
-   建立新節點：
+   建立節點：
 
    * 名稱：`cq:authoring`
    * 類型：`nt:unstructured`
 
-1. 在此底下建立新節點以儲存所有資產對元件對應：
+1. 在此底下，建立節點以儲存所有資產對元件對應：
 
    * 名稱：`assetToComponentMapping`
    * 類型：`nt:unstructured`
@@ -398,7 +398,7 @@ AEM可讓您在頁面上設定段落系統，以便 [當使用者將資產拖曳
    * `assetMimetype`:
 
       * 類型：`String`
-      * 值：相關資產的mime型別；例如 `image/*`
+      * 值：相關資產的mime型別；例如， `image/*`
 
    * `droptarget`:
 

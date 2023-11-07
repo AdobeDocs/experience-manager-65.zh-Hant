@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ REST API支援下列動作：
 
 >[!NOTE]
 >
->透過使用適用於Web開發的Firefox擴充功能Firebug，您可以在操作主控台時追蹤HTTP流量。 例如，您可以使用檢查引數以及傳送至AEM伺服器的值 `POST` 要求。
+>透過使用適用於Web開發的Firefox擴充功能Firebug，您可以在操作主控台時追蹤HTTP流量。 例如，您可以使用檢查引數及傳送至AEM伺服器的值 `POST` 要求。
 
 在此頁面中，假設AEM會在連線埠的localhost上執行 `4502` 而且安裝內容為&quot; `/`「 （根）。 如果不是安裝，則需要相應地調整HTTP請求適用的URI。
 
@@ -99,7 +99,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td><p>建立新的工作流程例項。 引數包括：<br /> - <code>model</code>：個別工作流程模型的ID (URI)<br /> - <code>payloadType</code>：包含裝載的型別(例如 <code>JCR_PATH</code> 或URL)。<br /> 裝載會以引數形式傳送 <code>payload</code>. A <code>201</code> (<code>CREATED</code>)回應會以包含新工作流程例項資源URL的location標頭傳回。</p> </td>
+   <td><p>建立新的工作流程例項。 引數包括：<br /> - <code>model</code>：個別工作流程模型的ID (URI)<br /> - <code>payloadType</code>：包含裝載的型別(例如， <code>JCR_PATH</code> 或URL)。<br /> 裝載會以引數形式傳送 <code>payload</code>. A <code>201</code> (<code>CREATED</code>)回應會以包含新工作流程例項資源URL的location標頭傳回。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -132,7 +132,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>變更執行個體的狀態。 新狀態會以引數的形式傳送 <code>state</code> 和必須具有下列其中一個值： <code>RUNNING</code>， <code>SUSPENDED</code>，或 <code>ABORTED</code>.<br /> 如果無法連線到新狀態（例如暫停終止的執行個體時），則 <code>409</code> (<code>CONFLICT</code>)回應會傳回給使用者端。</td>
+   <td>變更執行個體的狀態。 新狀態會以引數的形式傳送 <code>state</code> 和必須具有下列其中一個值： <code>RUNNING</code>， <code>SUSPENDED</code>，或 <code>ABORTED</code>.<br /> 如果無法連線到新狀態（例如，暫停已終止的執行個體時）， <code>409</code> (<code>CONFLICT</code>)回應會傳回給使用者端。</td>
   </tr>
  </tbody>
 </table>
@@ -488,7 +488,7 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 >
 >刪除不會移除模型節點。
 
-建立新模型時：
+建立模型時：
 
 * 工作流程模型編輯器要求模型使用以下的特定節點結構 `/var/workflow/models`. 模型的父節點必須是型別 `cq:Page` 具有 `jcr:content` 具有下列屬性值的節點：
 

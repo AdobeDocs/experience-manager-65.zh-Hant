@@ -1,19 +1,15 @@
 ---
 title: 建立已關閉的使用者群組
-seo-title: Creating a Closed User Group
 description: 瞭解如何建立「已關閉的使用者群組」。
-seo-description: Learn how to work with Closed User Groups in Adobe Experience Manager.
-uuid: dc3c7dbd-2e86-43f9-9377-3b75053203b3
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
 exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
@@ -54,7 +50,7 @@ ht-degree: 0%
 
    ![screenshot_2018-10-30at145502](assets/screenshot_2018-10-30at145502.png)
 
-1. 按下 **建立** 按鈕來建立新群組。
+1. 按下 **建立** 按鈕來建立群組。
 1. 為新的群組命名，例如， `cug_access`.
 
    ![screenshot_2018-10-30at151459](assets/screenshot_2018-10-30at151459.png)
@@ -82,7 +78,7 @@ ht-degree: 0%
    1. 啟動 **啟用** 勾選方塊。
 
    1. 將路徑新增至 **登入頁面**.
-這是選擇性的，如果保留為空白，將會使用標準登入頁面。
+這是選用專案，如果保留為空白，系統會使用標準登入頁面。
 
    ![已新增CUG](assets/cug-authentication-requirement.png)
 
@@ -92,11 +88,11 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >許可權索引標籤中的CUG無法從Blueprint轉出至即時副本。 設定即時副本時，請針對此進行規劃。
+   >許可權索引標籤中的CUG無法從Blueprint轉出至即時副本。 設定即時副本時，請對此進行規劃。
    >
    >如需詳細資訊，請參閱 [此頁面](closed-user-groups.md#aem-livecopy).
 
-1. 此 **編輯已關閉的使用者群組** 對話方塊將會開啟。 您可以在此處搜尋並選取您的CUG，然後確認群組選取專案 **儲存**.
+1. 此 **編輯已關閉的使用者群組** 對話方塊開啟。 您可以在此處搜尋並選取您的CUG，然後確認群組選取專案 **儲存**.
 
    群組將新增至清單中；例如，群組 **cug_access**.
 

@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2699'
+source-wordcount: '2695'
 ht-degree: 5%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 5%
 
 ### 已安裝的轉出設定 {#installed-rollout-configurations}
 
-下表列出與AEM一起安裝的轉出設定。 此表格包含每個轉出設定的觸發器和同步動作。 如果安裝的轉出組態動作不符合您的需求，您可以 [建立新的轉出設定](#creating-a-rollout-configuration).
+下表列出與AEM一起安裝的轉出設定。 此表格包含每個轉出設定的觸發器和同步動作。 如果安裝的轉出組態動作不符合您的需求，您可以 [建立轉出設定](#creating-a-rollout-configuration).
 
 <table>
  <tbody>
@@ -400,7 +400,7 @@ MSM可讓您指定一般使用的轉出設定集，並視需要覆寫特定即�
 
 使用轉出設定來設定Blueprint頁面，以便在轉出Blueprint頁面時使用。
 
-請注意，Blueprint頁面的子頁面會繼承設定。 當您設定要使用的轉出設定時，可能會覆寫頁面從其父項繼承的設定。
+Blueprint頁面的子頁面會繼承設定。 當您設定要使用的轉出設定時，可能會覆寫頁面從其父項繼承的設定。
 
 1. 使用 **網站** 控制檯以選取Blueprint的根頁面。
 1. 選取 **屬性** 工具列中的。

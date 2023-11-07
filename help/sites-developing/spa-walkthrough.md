@@ -4,10 +4,10 @@ description: 本文章介紹 SPA 的概念，並逐步解說如何使用基本 S
 topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1965'
-ht-degree: 71%
+source-wordcount: '1950'
+ht-degree: 67%
 
 ---
 
@@ -44,9 +44,9 @@ SPA 編輯器提供了一個全面的解決方案來支援在 AEM 中使用 SPA�
 
 >[!CAUTION]
 >
->本檔案使用 [WKND Spa專案應用程式](https://github.com/adobe/aem-guides-wknd-spa) 僅供示範之用。 它不應用於任何專案。
+>本檔案使用 [WKND Spa專案應用程式](https://github.com/adobe/aem-guides-wknd-spa) 僅供示範之用。 請勿用於任何專案工作。
 >
->任何AEM專案都應利用 [AEM專案原型，](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant) 可支援使用React或Angular的SPA專案，並運用SPA SDK。
+>任何AEM專案都應該使用 [AEM專案原型，](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant) 使用React或Angular支援SPA專案，並使用SPA SDK。
 
 ### 什麼是 SPA？ {#what-is-a-spa}
 
@@ -75,7 +75,7 @@ AEM SPA 編輯器允許前端開發人員建立可整合到 AEM 網站的 SPA，
 **開發人員**
 
 * 開發人員希望清楚分開內容和展示之間的考量點。
-* 清楚分開使系統更具可擴展性，並允許獨立的前端開發。
+* 乾淨的分隔讓系統可延伸性更高，並允許獨立的前端開發。
 
 ### SPA 如何運作？ {#how-does-a-spa-work}
 
@@ -97,7 +97,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
 ## SPA 的內容編輯體驗 {#content-editing-experience-with-spa}
 
-當建置SPA以利用AEM SPA編輯器時，內容作者會注意到編輯和建立內容時沒有差異。 可以使用常用的 AEM 功能，作者的工作流程無需變更。
+當SPA建置為使用AEM SPA編輯器時，內容作者會注意到編輯和建立內容時沒有差異。 可以使用常用的 AEM 功能，作者的工作流程無需變更。
 
 1. 在 AEM 編輯 WKND SPA 專案應用程式。
 
@@ -109,7 +109,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
    ![步驟2](assets/spa-walkthrough-step-2.png)
 
-1. 在 AEM 中正常編輯內容，並注意變更已保留。
+1. 在AEM中正常編輯內容。變更會持續存在。
 
    ![步驟3](assets/spa-walkthrough-step-3.png)
 
@@ -172,7 +172,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
    ![步驟 1](assets/spa-walkthrough-step-1-1.png)
 
 1. 使用瀏覽器的內建工具檢視頁面的來源。
-1. 請注意，來源的內容極為有限。
+1. 來源的內容極為有限。
 
    * 頁面的內文中沒有任何內容。它主要由樣式表和對各種指令碼 (例如 `clientlib-react.min.js`) 的呼叫所組成。
    * 這些指令碼是此應用程式的主要驅動程式，負責呈現所有內容。
@@ -183,7 +183,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
 1. 切換至 **網路** 工具的「 」標籤並重新載入頁面。
 
-   忽略影像要求，請注意，為頁面載入的主要資源為頁面本身、CSS、React JavaScript、其相依性，以及頁面的JSON資料。
+   忽略影像要求時，為頁面載入的主要資源為頁面本身、CSS、React JavaScript、其相依性以及頁面的JSON資料。
 
    ![步驟5](assets/spa-walkthrough-step-1-5.png)
 
@@ -193,7 +193,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
    ![步驟6](assets/spa-walkthrough-step-1-6.png)
 
-   AEM SPA 編輯器利用 [AEM 內容服務](/help/assets/content-fragments/content-fragments.md)將頁面的全部內容以 JSON 模型傳遞。
+   AEM SPA 編輯器使用 [AEM 內容服務](/help/assets/content-fragments/content-fragments.md)將頁面的全部內容以 JSON 模型傳遞。
 
    透過實作特定的介面，Sling 模型為 SPA 提供必要的資訊。JSON 資料的傳遞工作向下委派給每個元件 (從頁面到段落到元件等)。
 
@@ -213,7 +213,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
 ### 與 SPA 編輯器的互動 {#interaction-with-the-spa-editor}
 
-使用範例 WKND SPA 專案應用程式，可以清楚地了解應用程式在發佈時的行為和載入方式，利用內容服務進行 JSON 內容傳遞，以及非同步載入資源。
+使用範例WKND SPA Project應用程式，可清楚瞭解應用程式在發佈時的行為和載入方式，使用內容服務進行JSON內容傳送和非同步載入資源。
 
 此外，內容作者可在 AEM 中使用 SPA 編輯器順暢地建立內容。
 
@@ -225,7 +225,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
 1. 使用瀏覽器的內建開發人員工具，檢查頁面的內容。使用選取工具，在頁面上選取一個可編輯的元件並查看元素詳細資料。
 
-   請注意，該元件有新的資料屬性 `data-cq-data-path`。
+   元件具有新的資料屬性 `data-cq-data-path`.
 
    ![步驟2](assets/spa-walkthrough-step-2-2.png)
 
@@ -235,7 +235,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
    此路徑允許擷取和關聯每個元件的編輯情境設定物件。
 
-   這是編輯器將其識別為 SPA 中的可編輯元件所需的唯一標記屬性。根據此屬性，SPA 編輯器將確定哪個可編輯設定與元件關聯，以便載入正確的框架、工具列等。
+   這是編輯器將其識別為 SPA 中的可編輯元件所需的唯一標記屬性。根據此屬性，SPA編輯器將決定與元件相關聯的可編輯組態，以便載入正確的框架、工具列等。
 
    也會新增一些特定類別名稱，用於標記預留位置和資產拖放功能。
 

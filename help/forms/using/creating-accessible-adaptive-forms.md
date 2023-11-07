@@ -10,9 +10,9 @@ discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 feature: Adaptive Forms
 exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2111'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## 簡介 {#introduction}
 
-可存取的表單是所有人都能使用的表單，包括有特殊需求的使用者。 最適化Forms包含許多功能，可增強具有不同能力之使用者的可用性。 將協助工具建置到調適型表單中，不僅可讓內容有儘可能廣泛的閱聽眾，而且在必須遵循協助工具標準的地理位置提供檔案時，這也是必要條件。 AEM Forms可協助表單開發人員遵守協助工具標準。
+可存取的表單是所有人都能使用的表單，包括有特殊需求的使用者。 最適化Forms包含多項功能，可提升不同功能使用者的可用性。 將協助工具建置到調適型表單中，不僅可讓內容有儘可能廣泛的閱聽眾，而且在必須遵循協助工具標準的地理位置提供檔案時，這也是必要條件。 AEM Forms可協助表單開發人員遵守協助工具標準。
 
 製作最適化表單時，作者應考量下列幾點，以建立無障礙的最適化表單：
 

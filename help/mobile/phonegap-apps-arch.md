@@ -5,9 +5,9 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: ab4f1c61-be83-420e-a339-02cf1f33efed
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2682'
 ht-degree: 0%
 
 ---
@@ -58,9 +58,9 @@ angular根據是否偵測到wcmMode (！= WCMMode.DISABLED)，以判斷頁面是
 
 在製作模式中，每個個別頁面會個別呈現。 angular不會處理頁面之間的路由，也不會使用ng-view載入包含頁面元件的部分範本。 而是透過將頁面範本(template.jsp)的內容包含在伺服器端 `cq:include` 標籤之間。
 
-此策略可啟用作者功能(例如在段落系統、Sidekick、設計模式等中新增及編輯元件) 在不修改的情況下運作。 依賴使用者端轉譯的頁面（例如應用程式的頁面）在AEM編寫模式中無法正常運作。
+此策略可讓作者功能(例如在段落系統、Sidekick、設計模式等中新增及編輯元件)在不修改的情況下運作。 依賴使用者端轉譯的頁面（例如應用程式的頁面）在AEM編寫模式中無法正常運作。
 
-請注意，template.jsp include會包裝在 `div` 元素包含 `ng-controller` 指令。 此結構可啟用DOM內容與控制器的連結。 因此，雖然在使用者端轉譯的頁面會失敗，但可正常運作的個別元件（請參閱底下「元件」一節）。
+template.jsp包含檔案包裝在 `div` 元素包含 `ng-controller` 指令。 此結構可啟用DOM內容與控制器的連結。 因此，雖然在使用者端轉譯的頁面會失敗，但可正常運作的個別元件（請參閱底下「元件」一節）。
 
 ```xml
 <div ng-controller="<c:out value="${controllerNameStripped}"/>">
@@ -143,7 +143,7 @@ controller.js.jsp指令碼會產生每個頁面的控制器片段。 此控制�
 ])
 ```
 
-請注意 `data` 變數會獲派Angular傳回的promise `$http.get` 方法。 如果需要，此頁面中包含的每個元件都可以提供一些.json內容(透過其angular.json.jsp指令碼)，並在解析時對此請求的內容採取行動。 在行動裝置上，要求非常快速，因為它只會存取檔案系統。
+此 `data` 變數會獲派Angular傳回的promise `$http.get` 方法。 如果需要，此頁面中包含的每個元件都可以提供一些.json內容(透過其angular.json.jsp指令碼)，並在解析時對此請求的內容採取行動。 在行動裝置上，要求非常快速，因為它只會存取檔案系統。
 
 若要讓元件以這種方式成為控制器的一部分，應擴充/libs/mobileapps/components/angular/ng-component元件並包含 `frameworkType: angular` 屬性。
 

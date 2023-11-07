@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Classic UI已透過AEM 6.4棄用，Adobe不打算進一步增強Classic UI。 �
     </ol> <p>然後，在第二階段：</p>
     <ol>
      <li>更新您的元件對話方塊，以使用Coral 3對話方塊格式。 Adobe建議使用 <a href="/help/sites-developing/modernization-tools.md">AEM現代化工具</a> 以更新元件。</li>
-     <li>設定ContextHub (取代ClientContext)並更新頁面範本，以使用ContextHub。 請注意，ContextHub具有相容性模式，可載入自訂ClientContext存放區。</li>
+     <li>設定ContextHub (取代ClientContext)並更新頁面範本，以使用ContextHub。 ContextHub的相容性模式允許載入自訂ClientContext存放區。</li>
     </ol> </td>
   </tr>
   <tr>

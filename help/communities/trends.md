@@ -7,9 +7,9 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 2a4297e4-2d88-4fa6-8fea-3fea06753605
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '342'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 ## 簡介 {#introduction}
 
-此 `Community Activity List` 元件可讓您新增關於成員的貼文和檢視的趨勢資訊，以及內容的貼文和檢視。
+此 `Community Activity List` 元件可讓您新增成員貼文和檢視的趨勢資訊，以及內容的貼文和檢視。
 
 本檔案說明：
 

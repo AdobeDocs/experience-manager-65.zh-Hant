@@ -5,7 +5,7 @@ topic-tags: site-features
 content-type: reference
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '686'
 ht-degree: 0%
@@ -85,7 +85,7 @@ AEM會更新已設定TMS的翻譯記憶庫中現有字串的翻譯。
 
 ## 多個層級的語言副本 {#language-copies-on-multiple-levels}
 
-語言根現在可以在節點下分組（例如按區域），同時仍被識別為語言副本的根。
+語言根現在可以在節點下分組（例如，按區域），同時仍被識別為語言副本的根。
 
 ![screen_shot_2018-04-23at144012](assets/screen_shot_2018-04-23at144012.jpg)
 

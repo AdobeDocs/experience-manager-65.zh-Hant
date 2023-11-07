@@ -5,7 +5,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2242'
 ht-degree: 0%
@@ -114,7 +114,7 @@ Workbench是整合式開發環境(IDE)，開發人員和表單作者可使用它
    <td><p>Acrobat Pro或Acrobat Pro Extended （包含設計工具）</p> </td>
    <td><p>無。<br /> 
 Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended一起安裝的Designer例項。<br />
-不同版本的Designer可以並存於相同系統中，例如Workbench 6.4的Designer 6.4.x與Workbench 6.5的Designer 6.5.0.x。不需要解除安裝隨Acrobat 10 Pro或Acrobat 10 Pro Extended （含）以上版本安裝的Designer版本。
+不同版本的Designer可以並存於相同系統中，例如，適用於Workbench 6.4的Designer 6.4.x以及適用於Workbench 6.5的Designer 6.5.0.x。不需要解除安裝隨Acrobat 10 Pro或Acrobat 10 Pro Extended （含）以上版本安裝的Designer版本。
 <br /></p> </td>
   </tr>
   <tr>

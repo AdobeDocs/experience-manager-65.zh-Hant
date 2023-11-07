@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1923'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 若要最佳化高擷取負載，您可以定義 [暫時性工作流程](/help/sites-developing/workflows.md#transient-workflows).
 
-當工作流程為暫時性時，與中間工作步驟相關的執行階段資料在執行時不會儲存在JCR中（當然，輸出轉譯會儲存在）。
+當工作流程為暫時性時，與中間工作步驟相關的執行階段資料在執行時不會儲存在JCR中（會儲存輸出轉譯）。
 
 優點包括：
 
@@ -255,7 +255,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 >[!CAUTION]
 >
->儘管有此處的建議，如果您確實建立了自己的jcr工作階段，則需要儲存。
+>儘管有此處提供的建議，但如果您確實建立了自己的jcr工作階段，則必須將其儲存。
 
 ### 將啟動器的數量/範圍最小化 {#minimize-the-number-scope-of-launchers}
 
@@ -285,7 +285,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 此情況的範例是在一組內容上實作業務流程，然後啟用該內容的工作流程。 最好建立自訂工作流程流程來啟動每個節點，而不是啟動 **啟用內容** 需要發佈的每個內容節點的模型。 此方法需要額外的開發工作，但在執行時比為每個啟用啟動個別的工作流程例項更有效率。
 
-另一個範例是處理許多節點的工作流程，建立工作流程封裝，然後啟動所述封裝。 與其建立封裝，然後以封裝作為裝載啟動單獨的工作流程，您可以在建立封裝的步驟中變更工作流程的裝載，然後呼叫步驟以在相同工作流程模型中啟動封裝。
+另一個範例是處理數個節點的工作流程，建立工作流程封裝，然後啟動所述封裝。 與其建立封裝，然後以封裝作為裝載啟動單獨的工作流程，您可以在建立封裝的步驟中變更工作流程的裝載，然後呼叫步驟以在相同工作流程模型中啟動封裝。
 
 ### 處理常式前進 {#handler-advance}
 

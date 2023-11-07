@@ -7,7 +7,7 @@ topic-tags: Security
 content-type: reference
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Security
-source-git-commit: f317783f3320e3987c7468aa0b2471e525b0387a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1797'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 * **調整內容結構**
 
-   * 將其移至其他位置，例如存取控制與可用的請求工作階段相符的位置；
+   * 將其移至其他位置，例如，存取控制與可用的請求工作階段相符的位置；
    * 變更內容粒度；
 
 * **重構您的程式碼以成為適當的服務**

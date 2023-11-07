@@ -2,9 +2,9 @@
 title: 適用於AEM Forms的AEM Forms修補程式安裝指示
 description: OSGi和JEE環境的AEM Forms Service Pack安裝指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 692193326e0623036ee3834985cfa9dc8d7076d9
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1732'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 |---|---|
 | 版本 | 6.5.18.0 |
 | 類型 | Service Pack發行 |
-| 日期 | 2023年8月31日 |
+| 日期 | 2023 年 8 月 30 日 |
 | 下載 URL | [最新AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -84,7 +84,7 @@ Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能�
 1. 安裝後，按一下 **[!UICONTROL Next]**，將快速修正更新套用至已安裝的檔案。
 1. **[僅適用於Windows]：** 執行下列其中一個步驟：
 
-   * 取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行 **組態管理員** 藉由使用 **ConfigurationManager.bat** 檔案位於 `[aem-forms root]\configurationManager\bin`.
+   * 取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行 **組態管理員** 藉由使用 **ConfigurationManager.bat** 中的檔案 `[aem-forms root]\configurationManager\bin`.
 
    * 或取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行前 **組態管理員** 使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，導覽至 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目錄和取代 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 檔案。
 

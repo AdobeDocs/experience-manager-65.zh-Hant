@@ -1,18 +1,14 @@
 ---
 title: 管理標記
-seo-title: Administering Tags
 description: 瞭解如何管理Adobe Experience Manager中的標籤。
-seo-description: Learn how to administer Tags in AEM.
-uuid: 77e1280a-feea-4edd-94b6-4fb825566c42
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: 69253ee9-8c28-436b-9331-6fb875f64cba
 exl-id: ff041ef0-e566-4373-818e-76680ff668d8
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1764'
+source-wordcount: '1761'
 ht-degree: 12%
 
 ---
@@ -78,7 +74,7 @@ AEM中的部分標籤功能包括：
 
 ### 建立命名空間 {#creating-a-namespace}
 
-若要建立新的名稱空間，請選取 **`Create Namespace`** 圖示。
+若要建立名稱空間，請選取 **`Create Namespace`** 圖示。
 
 名稱空間本身是標籤，不需要包含任何子標籤。 不過，若要繼續建立分類法， [建立子標籤](#creating-tags)，這又可能是葉標籤或容器標籤。
 
@@ -310,6 +306,6 @@ AEM中的部分標籤功能包括：
 
 * [為開發人員加上標籤](/help/sites-developing/tags.md)
 
-  有關標籤架構以及延伸和納入自訂應用程式中的標籤的資訊。
+  有關標籤架構和延伸並在自訂應用程式中包含標籤的資訊。
 
 * [傳統UI標籤主控台](/help/sites-administering/classic-console.md)

@@ -9,9 +9,9 @@ docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2852'
+source-wordcount: '2851'
 ht-degree: 2%
 
 ---
@@ -285,7 +285,7 @@ AEM Communities評分和徽章功能提供識別及獎勵社群成員的能力�
 * `subRules` 是String型別的屬性[] 在規則的 `jcr:content` 節點。
 
 * `sub-rules` 可以在各種評分規則之間共用。
-* `rules` 應位於具有每個人讀取許可權的存放庫位置。
+* `rules` 應該位在儲存庫位置，且每個人都有讀取許可權。
 
    * 無論位置為何，規則名稱必須是唯一的。
 
@@ -385,15 +385,15 @@ cURL -i -XPOST-H *頁首* -u *登入* -F *操作* -F *徽章* *member-profile-ur
 
 *頁首* = &quot;Accept：application/json&quot;自訂標題以傳遞至伺服器（必填）
 
-*登入* = administrator-id：password例如： admin：admin
+*登入* = administrator-id：password，例如admin：admin
 
 *操作* = &quot;：operation=social：assignBadge&quot;或&quot;：operation=social：deleteBadge&quot;
 
 *徽章* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* =徽章影像檔案在存放庫中的位置，例如： /libs/settings/community/badging/images/moderator/jcr：content/moderator.png
+*badge-image-file* =徽章影像檔案在存放庫中的位置，例如/libs/settings/community/badging/images/moderator/jcr：content/moderator.png
 
-*member-profile-url* =發佈時成員設定檔的端點，例如：https://&lt;server>：&lt;port>/home/users/community/riley/profile.social.json
+*member-profile-url* =發佈時成員設定檔的端點，例如https://&lt;server>：&lt;port>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
@@ -616,7 +616,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 最後，
 
 * 瀏覽至發佈執行個體上的元件。
-* 以社群成員身分登入(例如：weston.mccall@dodgit.com /密碼)。
+* 以社群成員身分登入(例如，weston.mccall@dodgit.com /密碼)。
 * 發表新論壇主題。
 * 頁面必須重新整理才能顯示徽章。
 

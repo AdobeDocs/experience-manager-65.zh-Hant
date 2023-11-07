@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Asset Management
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1611'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 考量這些因素，您需要一種方法來計算儲存使用者資產，且儲存空間精確到可以接受的程度。
 
-1. 決定要載入系統的資產大小和數量。
+1. 決定載入系統的資產大小和數量。
 1. 取得要上傳到的資產的代表性範例 [!DNL Experience Manager]. 例如，如果您計畫將PSD、JPG、AI和PDF檔案載入系統，則需要每種檔案格式的多個範例影像。 此外，這些範例應能代表不同檔案大小和影像的複雜程度。
 1. 定義要使用的轉譯。
 1. 在中建立轉譯 [!DNL Experience Manager] 使用 [!DNL ImageMagick] 或 [!DNL Adobe Creative Cloud] 應用程式。 除了使用者指定的轉譯外，請建立立即可用的轉譯。 對於實作Dynamic Media的使用者，您可以使用IC二進位檔來產生PTIFF轉譯，以儲存在Experience Manager中。
@@ -103,7 +103,7 @@ S3實施中的延遲是由背景寫入對話串所引入。 備份程式必須�
 
 ## 網路 {#network}
 
-[!DNL Assets] 有許多使用案例，讓網路效能比我們的許多應用程式更重要 [!DNL Experience Manager] 專案。 客戶可以擁有快速伺服器，但如果網路連線不夠大，無法支援從系統上傳和下載資產的使用者負載，則速度仍會顯得緩慢。 判斷使用者網路連線中的咽喉栓塞點的方法很好。 [!DNL Experience Manager] 在 [使用者體驗、執行個體大小調整、工作流程評估和網路拓撲的資產考量事項](/help/assets/assets-network-considerations.md).
+[!DNL Assets] 有數種使用案例，讓網路效能比我們的許多應用程式更重要 [!DNL Experience Manager] 專案。 客戶可以擁有快速伺服器，但如果網路連線不夠大，無法支援從系統上傳和下載資產的使用者負載，則速度仍會顯得緩慢。 判斷使用者網路連線中的咽喉栓塞點的方法很好。 [!DNL Experience Manager] 在 [使用者體驗、執行個體大小調整、工作流程評估和網路拓撲的資產考量事項](/help/assets/assets-network-considerations.md).
 
 ## 限制 {#limitations}
 

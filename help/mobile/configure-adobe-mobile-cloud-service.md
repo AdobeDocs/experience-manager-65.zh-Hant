@@ -11,9 +11,9 @@ topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 962e9e98-a303-435b-a938-31319282e022
 legacypath: /content/docs/en/aem/6-1/develop/mobile-apps/apps/managing-aem-mobile-apps/configure-your-adobe-phonegap-build-cloud-service1
 exl-id: 209c36f9-1a4b-4eea-8dde-22e0fc9718c1
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '447'
 ht-degree: 2%
 
 ---
@@ -57,7 +57,7 @@ AEM Command Center度量圖磚
 
    ![chlimage_1-24](assets/chlimage_1-24.png)
 
-1. 從中選擇現有設定 **行動服務** 或選擇 **建立設定** 以建立新檔案。
+1. 從中選擇現有設定 **行動服務** 或選擇 **建立設定** 以建立一個。
 
    若為新組態，請輸入 **行動服務屬性**&#x200B;並按一下&#x200B;**驗證。**
 

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '9901'
+source-wordcount: '9888'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ AEM Forms支援下列Web服務標準：
 
 **AEM Forms程式WSDL定義**
 
-您必須在WSDL定義中指定「應用程式」名稱和「處理序」名稱，才能存取屬於在Workbench中建立的處理序的WSDL。 假設應用程式的名稱為 `MyApplication` 而流程的名稱為 `EncryptDocument`. 在此情況下，請指定下列WSDL定義：
+在WSDL定義中指定「應用程式」名稱和「處理序」名稱，以存取屬於在Workbench中建立之處理序的WSDL。 假設應用程式的名稱為 `MyApplication` 而流程的名稱為 `EncryptDocument`. 在此情況下，請指定下列WSDL定義：
 
 ```java
  http://localhost:8080/soap/services/MyApplication/EncryptDocument?wsdl
@@ -208,7 +208,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 
 **在服務要求中提供BLOB物件**
 
-如果AEM Forms服務操作需要 `BLOB` 輸入作為輸入值，建立 `BLOB` 輸入您的應用程式邏輯。 (許多Web服務快速啟動位於 *使用AEM表單進行程式設計* 顯示如何使用BLOB資料型別。)
+如果AEM Forms服務操作需要 `BLOB` 輸入作為輸入值，建立 `BLOB` 輸入您的應用程式邏輯。 (許多Web服務都可快速啟動，位於 *使用AEM表單進行程式設計* 顯示如何使用BLOB資料型別。)
 
 將值指派給屬於 `BLOB` 執行個體，如下所示：
 
@@ -431,7 +431,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 
 1. 將JAVA檔案封裝成JAR檔案。 如果您正在使用Eclipse，請遵循下列步驟：
 
-   * 建立新的Java專案，用來將Proxy JAVA檔案封裝到JAR檔案中。
+   * 建立用來將Proxy JAVA檔案封裝到JAR檔案中的Java專案。
    * 在專案中建立來源資料夾。
    * 建立 `com.adobe.idp.services` 封裝在來源資料夾。
    * 選取 `com.adobe.idp.services` 封裝，然後從adobe/idp/services資料夾將JAVA檔案匯入封裝。
@@ -440,11 +440,11 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
    * 將Java編譯器的相容性等級設定為5.0或更高。
    * 建立專案。
    * 將專案匯出為JAR檔案。
-   * 在使用者端專案的類別路徑中匯入此JAR檔案。 此外，請匯入位於中的所有JAR檔案 &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty.
+   * 在使用者端專案的類別路徑中匯入此JAR檔案。 此外，將所有JAR檔案匯入 &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty.
 
    >[!NOTE]
    >
-   >位於「使用AEM表單程式設計」中的所有Java Web服務快速啟動(Forms服務除外)，都會使用JAX-WS建立Java Proxy檔案。 此外，所有Java Web服務都會快速啟動，請使用SwaRef。 (請參閱 [使用SwaRef叫用AEM Forms](#invoking-aem-forms-using-swaref).)
+   >使用AEM表單進行程式設計中的所有Java Web服務快速啟動(Forms服務除外)都會使用JAX-WS建立Java Proxy檔案。 此外，所有Java Web服務都會快速啟動，請使用SwaRef。 (請參閱 [使用SwaRef叫用AEM Forms](#invoking-aem-forms-using-swaref).)
 
 **另請參閱**
 
@@ -669,7 +669,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
    >取代 `hiro-xp` *，並使用託管AEM Forms的J2EE應用程式伺服器的IP位址。*
 
 1. 將使用JAX-WS建立的Java Proxy類別封裝到JAR檔案中。
-1. 在下列路徑中加入Java Proxy JAR檔案和JAR檔案：
+1. 請將Java Proxy JAR檔案和JAR檔案加入以下路徑中：
 
    &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -864,7 +864,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
    >取代 `hiro-xp` *IP位址設定為託管AEM Forms的J2EE應用程式伺服器。*
 
 1. 將使用JAX-WS建立的Java Proxy類別封裝到JAR檔案中。
-1. 在下列路徑中加入Java Proxy JAR檔案和JAR檔案：
+1. 請將Java Proxy JAR檔案和JAR檔案加入以下路徑中：
 
    &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -966,7 +966,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 1. 叫用 `MyApplication/EncryptDocument` 透過叫用 `MyApplication_EncryptDocumentService` 物件的 `invoke` 方法並傳遞 `BLOB` 物件。 此程式會傳回內的加密PDF檔案 `BLOB` 物件。
 1. 建立 `System.UriBuilder` 物件，使用它的建構函式並傳遞傳回的值 `BLOB` 物件的 `remoteURL` 資料成員。
 1. 轉換 `System.UriBuilder` 物件至 `System.IO.Stream` 物件。 （此清單後面的C#快速入門說明如何執行此工作。）
-1. 建立位元組陣列，並以 `System.IO.Stream` 物件。
+1. 建立位元組陣列，並在 `System.IO.Stream` 物件。
 1. 建立 `System.IO.BinaryWriter` 物件，方法是叫用其建構函式，然後傳遞 `System.IO.FileStream` 物件。
 1. 透過叫用將位元組陣列內容寫入PDF檔案 `System.IO.BinaryWriter` 物件的 `Write` 方法並傳遞位元組陣列。
 
@@ -987,7 +987,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
    >取代 `hiro-xp` *IP位址設定為託管AEM Forms的J2EE應用程式伺服器。*
 
 1. 將使用JAX-WS建立的Java Proxy類別封裝到JAR檔案中。
-1. 在下列路徑中加入Java Proxy JAR檔案和JAR檔案：
+1. 請將Java Proxy JAR檔案和JAR檔案加入以下路徑中：
 
    &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -1106,7 +1106,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 1. 叫用 `EncryptDocumentServiceWse.RequestSoapContext.Attachments.Add` 方法並傳遞 `Microsoft.Web.Services2.Dime.DimeAttachment` 物件。
 1. 叫用 `MyApplication/EncryptDocument` 透過叫用 `EncryptDocumentServiceWse` 物件的 `invoke` 方法並傳遞 `BLOB` 包含DIME附件的物件。 此程式會傳回內的加密PDF檔案 `BLOB` 物件。
 1. 透過取得傳回的值來取得附件識別碼值 `BLOB` 物件的 `attachmentID` 資料成員。
-1. 逐一檢視位於中的附件 `EncryptDocumentServiceWse.ResponseSoapContext.Attachments` 並使用附件識別碼值來取得加密的PDF檔案。
+1. 在中反複檢查附件 `EncryptDocumentServiceWse.ResponseSoapContext.Attachments` 並使用附件識別碼值來取得加密的PDF檔案。
 1. 取得 `System.IO.Stream` 物件，方法是取得 `Attachment` 物件的 `Stream` 資料成員。
 1. 建立位元組陣列，並將該位元組陣列傳遞至 `System.IO.Stream` 物件的 `Read` 方法。 此方法會以代表加密PDF檔案的資料流填入位元組陣列。
 1. 建立 `System.IO.FileStream` 物件，方法是叫用其建構函式，並傳遞代表PDF檔案位置的字串值。 此物件代表加密的PDF檔案。

@@ -1,18 +1,14 @@
 ---
 title: 設定電子郵件通知
-seo-title: Configuring Email Notification
 description: 瞭解如何在Adobe Experience Manager中設定電子郵件通知。
-seo-description: Learn how to configure Email Notification in AEM.
-uuid: 6cbdc312-860b-4a69-8bbe-2feb32204a27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2067'
 ht-degree: 12%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 12%
 
 AEM傳送電子郵件通知給使用者，符合以下條件：
 
-* 已訂閱頁面事件，例如修改或復寫。 此 [通知收件匣](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) 一節說明如何訂閱這類事件。
+* 已訂閱頁面事件，例如，修改或復寫。 此 [通知收件匣](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) 一節說明如何訂閱這類事件。
 
 * 已訂閱論壇活動。
 * 必須在工作流程中執行步驟。 此 [參與者步驟](/help/sites-developing/workflows-step-ref.md#participant-step) 一節說明如何在工作流程中觸發電子郵件通知。
@@ -279,7 +275,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
    * `https://mail.google.com/`
    * `https://www.googleapis.com//auth/gmail.send`
 1. 新增範圍後，請返回 **認證** 在左側功能表中，然後前往 **建立認證** - **OAuth使用者端ID** - **案頭應用程式**
-1. 將會開啟一個包含使用者端ID和使用者端密碼的新視窗。
+1. 隨即開啟新視窗，其中包含「使用者端ID」和「使用者端密碼」。
 1. 儲存這些認證。
 
 **AEM Side設定**
@@ -361,7 +357,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 1. 接下來，移至「**憑證和密碼**」，按一下「**新增用戶端密碼**」，並按照畫面上的步驟建立密碼。請務必記下此密碼以備稍後使用
 1. 在左側窗格中按「**概觀**」並複製「**應用程式 (用戶端) ID**」和「**目錄 (租用戶) ID**」的值以供稍後使用
 
-回顧一下，您需要以下資訊為AEM端的郵件程式服務設定OAuth2：
+回顧一下，您必須擁有下列資訊才能為AEM端的郵件程式服務設定OAuth2：
 
 * 驗證 URL，將使用租用戶 ID 建構。 它將具有此形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
 * 權杖 URL，將使用租用戶 ID 建構。 它將具有此形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`

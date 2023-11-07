@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4734'
+source-wordcount: '4725'
 ht-degree: 1%
 
 ---
@@ -68,7 +68,7 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
    * **XFA表單範本**：如果您有XFA型HTML5表單的投資，這是理想的表單模型。 它可讓您直接將XFA式表單轉換為最適化表單。 任何現有的XFA規則都會保留在關聯的調適型表單中。 產生的調適型表單支援XFA建構，例如驗證、事件、屬性和模式。
    * **表單資料模型**：如果您想要整合後端系統(例如資料庫、Web服務和AEM使用者設定檔)，以預先填入最適化表單並將提交的表單資料寫入回後端系統，建議使用此表單模型。 表單資料模型編輯器可讓您在可用來建立調適型表單的表單資料模型中定義及設定實體和服務。 如需詳細資訊，請參閱 [AEM Forms資料整合](/help/forms/using/data-integration.md).
 
-請務必謹慎選擇資料模型，不僅要符合您的需求，還要擴大您對XFA和XSD資產（如果有的話）的現有投資。 建議您使用XSD模型來建立表單範本，因為產生的XML包含結構描述所定義的每個XPATH的資料。 使用XSD模型作為表單資料模型的預設選擇也有幫助，因為它將表單設計從處理和使用資料的後端系統分離開來，並且由於表單欄位的一對一對應而改善了表單的效能。 此外，欄位的BindRef可以設為其資料值的XML格式XPATH。
+請務必謹慎選擇資料模型，不僅要符合您的需求，還要擴大您對XFA和XSD資產（如果有的話）的現有投資。 使用XSD模型建立表單範本，因為產生的XML包含結構描述所定義的每個XPATH的資料。 使用XSD模型作為表單資料模型的預設選擇也有幫助，因為它將表單設計從處理和使用資料的後端系統分離開來，並且由於表單欄位的一對一對應而改善了表單的效能。 此外，欄位的BindRef可以設為其資料值的XML格式XPATH。
 
 如需詳細資訊，請參閱 [建立最適化表單](/help/forms/using/creating-adaptive-form.md).
 
@@ -103,7 +103,7 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
 * 此 **nosamplecontent** 僅作者才建議使用執行模式，不建議發佈節點使用。
 * 製作資產（例如最適化表單、主題、範本或雲端設定）作業只會透過製作節點執行，其可在已設定的發佈節點發佈。
 如需詳細資訊，請參閱 [發佈和取消發佈表單和檔案](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
-* 製作和發佈都需要使用Forms附加元件套件來支援檔案服務操作；因此可將其視為相依性。
+* 製作和發佈需要Forms附加元件套件來支援檔案服務操作；因此，可將其視為相依性。
 如果您只想要Forms相關的範例範本、主題和DOR套件，可以從以下來源下載 [aemforms-references-*套件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en).
 
 如需詳細資訊，請參閱以下連結中的最佳實務： [製作調適型表單簡介](/help/forms/using/introduction-forms-authoring.md).
@@ -187,7 +187,7 @@ AEM Forms提供 [規則編輯器](/help/forms/using/rule-editor.md) 可讓您建
 
 ### 使用主題 {#working-with-themes}
 
-主題適用性可讓您建立可重複使用的樣式，這些樣式可套用至各個表單，以獲得一致的外觀和樣式。 建議使用主題來定義表單元件和面板的樣式。 主題相關的最佳實務如下：
+主題適用性可讓您建立可重複使用的樣式，這些樣式可套用至各個表單，以獲得一致的外觀和樣式。 使用主題來定義表單元件和面板的樣式。 主題相關的最佳實務如下：
 
 * 使用資產庫快速應用文字樣式、背景和影像。 將樣式新增至資產庫時，該樣式便可用於其他主題及表單編輯器的樣式模式。
 * 使用頁面層級選取器套用字型和頁面背景等全域設定。
@@ -241,7 +241,7 @@ AEM Forms提供 [規則編輯器](/help/forms/using/rule-editor.md) 可讓您建
 * 如果預設提交動作不符合您的使用案例，您可以編寫自訂提交動作。 如需詳細資訊，請參閱 [撰寫最適化表單的自訂提交動作](/help/forms/using/custom-submit-action-form.md).
 * 包含伺服器端驗證，以防止提交無效的資料。
 
-您可以在調適型表單中利用Adobe Sign的多重簽署體驗。 在調適型表單中設定Adobe Sign時，請考量下列事項。 如需詳細資訊，請參閱 [在最適化表單中使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md).
+您可以在適用性表單中使用Adobe Sign的多重登入體驗。 在調適型表單中設定Adobe Sign時，請考量下列事項。 如需詳細資訊，請參閱 [在最適化表單中使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md).
 
 * 啟用Adobe Sign的最適化表單只會在所有簽名者簽署表單後提交。 Forms會一直顯示於等待簽署狀態，直到所有簽署者簽署表單為止。
 * 您可以設定表格中的簽名體驗，或在提交時將簽署者重新導向至簽名頁面。

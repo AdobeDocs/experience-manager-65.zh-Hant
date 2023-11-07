@@ -2,9 +2,9 @@
 title: 專案
 description: 專案可讓您將資源群組到一個實體中，其共同的共用環境使您的專案容易管理.
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
-source-git-commit: 1d64a9a6d6dfbc7606d7c222ef50a21bf9b902d6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1359'
 ht-degree: 32%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 32%
 
 ![專案主控台](assets/screen-shot_2019-03-05at125110.png)
 
-「專案」主控台類似AEM中的其他主控台，可在個別專案上執行許多動作，並調整您的專案檢視。
+專案主控台類似於AEM中的其他主控台，可在個別專案上執行數個動作，並調整您的專案檢視。
 
 ### 切換您的模式 {#modes}
 

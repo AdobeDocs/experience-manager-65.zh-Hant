@@ -8,10 +8,10 @@ topic-tags: configuring
 docset: aem65
 feature: Configuring
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3389'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -111,7 +111,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 用於從發佈復寫至作者。 反向復寫不適用於Communities功能，例如論壇、部落格和評論。 由於未啟用寄件匣，因此此功能實際上已停用。 使用反向復寫需要自訂設定。
 
 * 靜態代理程式這是將節點的靜態表示儲存到檔案系統中的代理程式。
-例如，若使用預設設定，內容頁面和DAM資產會儲存在 `/tmp`，以HTML或適當的資產格式顯示。 請參閱 `Settings` 和 `Rules` 用於設定的標籤。
+例如，使用預設設定時，內容頁面和DAM資產會儲存在 `/tmp`，以HTML或適當的資產格式顯示。 請參閱 `Settings` 和 `Rules` 用於設定的標籤。
 已要求此專案，以便當直接從應用程式伺服器要求頁面時，可以看到內容。 這是專門的代理程式，（可能）在大多數執行個體中並非必要。
 
 ## 復寫代理程式 — 設定引數 {#replication-agents-configuration-parameters}
@@ -528,7 +528,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-   您可以在此處執行下列動作：
+   您可以在這裡進行以下作業︰
 
    * 檢視代理程式是否已啟用。
    * 檢視任何復寫的目標。

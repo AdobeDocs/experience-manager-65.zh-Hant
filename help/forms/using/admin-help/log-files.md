@@ -10,18 +10,18 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: cf140483-470f-4bff-8870-304207508aab
 exl-id: 23a65be4-3277-4c73-9189-a9b4d7be73cd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
 # 記錄檔 {#log-files}
 
-執行階段或啟動錯誤等事件會記錄到應用程式伺服器記錄檔中。 如果您在部署至應用程式伺服器時發生任何問題，可以使用記錄檔來協助您找出問題。 您可以使用任何文字編輯器開啟記錄檔。
+執行階段或啟動錯誤等事件會記錄到應用程式伺服器記錄檔中。 如果部署到應用程式伺服器時發生任何問題，您可以使用記錄檔來協助您尋找問題。 您可以使用任何文字編輯器開啟記錄檔。
 
-(JBoss)下列記錄檔位於 `[appserver root]/server/'server'/log` 目錄：
+(JBoss)以下記錄檔位於 `[appserver root]/server/'server'/log` 目錄：
 
 * boot.log
 * server.log.*[yyyy-mm-dd]*

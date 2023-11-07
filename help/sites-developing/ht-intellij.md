@@ -8,7 +8,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 1%
@@ -118,7 +118,7 @@ IntelliJ IDEA必須瞭解在哪裡可以找到JSP以進行偵錯。 因為IDEA�
 
 最後一個必要步驟是使用IntelliJ IDEA建議的JVM選項啟動AEM。
 
-直接啟動AEM jar檔案並新增這些選項，例如使用下列命令列：
+直接啟動AEM jar檔案並新增這些選項，例如，使用下列命令列：
 
 `java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -jar cq-quickstart-6.5.0.jar`
 

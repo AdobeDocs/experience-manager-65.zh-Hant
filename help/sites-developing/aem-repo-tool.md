@@ -1,41 +1,37 @@
 ---
 title: AEM Repo Tool
-seo-title: AEM Repo Tool
-description: AEM Repo Tool是一種簡單的解決方案，可透過類似FTP的命令列，在本機檔案系統和AEM伺服器之間傳輸JCR內容。 AEM Repo工具類似於Jackrabbit FileVault工具，但速度更快、相依性最低，而且是簡單的bash指令碼。
-seo-description: The AEM Repo Tool is a simple solution to transfer JCR content between your local filesystem and the AEM server via the command line comparable to FTP. The AEM Repo Tool is similar to the Jackrabbit FileVault tool, but is faster, has minimal dependencies, and is a simple bash script.
-uuid: 6c4a3504-e8e8-46c0-83cb-c18d9791f93e
+description: AEM Repo Tool是簡單的解決方案，可透過類似FTP的命令列，在本機檔案系統與AEM伺服器之間傳輸JCR內容。 AEM Repo工具類似於Jackrabbit FileVault工具，但速度更快、相依性最低，而且是簡單的bash指令碼。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: 7de7b2f9-770e-4af3-8a31-c7b4de64fd43
 exl-id: c46c9f0c-b0d2-4f2f-b95c-90fd3ced32a9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '281'
 ht-degree: 2%
 
 ---
 
 # AEM Repo Tool{#aem-repo-tool}
 
-AEM Repo Tool是一種簡單的解決方案，可透過類似FTP的命令列，在本機檔案系統和AEM伺服器之間傳輸JCR內容。 AEM Repo工具類似於 [Jackrabbit FileVault工具](/help/sites-developing/ht-vlttool.md)，但速度更快、相依性最低，且為簡單的bash指令碼。
+AEM Repo Tool是簡單的解決方案，可透過類似FTP的命令列，在本機檔案系統與AEM伺服器之間傳輸JCR內容。 AEM Repo工具類似於 [Jackrabbit FileVault工具](/help/sites-developing/ht-vlttool.md)，但速度更快、相依性最低，而且是簡單的bash指令碼。
 
-此工具可簡化開發人員檔案的傳輸，並可整合至IntelliJ和Eclipse，讓開發更有效率。
+此工具可為開發人員簡化檔案傳輸，也可整合至IntelliJ和Eclipse，讓開發更有效率。
 
 ## 概觀 {#overview}
 
-針對內的指定路徑 `jcr_root` filevault結構在檔案系統上，AEM Repo工具會為整個子樹狀結構建立具有單一篩選器的套件，並將其推送到伺服器（類似FTP） `put`)，會從伺服器擷取( `get`)或比較兩者之間的差異( `status` 和 `diff`)。
+針對內的指定路徑 `jcr_root` filevault結構在檔案系統上，AEM Repo Tool會建立包含整個子樹狀結構的單一篩選器的套件，並將其推送到伺服器（類似FTP） `put`)，從伺服器擷取( `get`)或比較兩者之間的差異( `status` 和 `diff`)。
 
 此工具不支援多個篩選路徑或FileVault的 `filter.xml`.
 
 >[!CAUTION]
 >
->請注意，AEM Repo Tool一律會覆寫指定的整個檔案或目錄。
+>AEM Repo Tool一律會覆寫指定的整個檔案或目錄。
 
 ## 下載和檔案 {#download-and-documentation}
 
-此 [AEM Repo Tool可透過此連結在GitHub上取得](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) 以及詳細的安裝和使用說明。
+此 [GitHub提供透過此連結使用的AEM Repo工具](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) 以及詳細的安裝和使用說明。
 
 如果您想要下載AEM Repo工具的來源，請參閱下方連結的GitHub專案。
 

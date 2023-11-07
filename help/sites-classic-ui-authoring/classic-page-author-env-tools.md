@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
@@ -182,7 +182,7 @@ AEM可讓您檢視哪些頁面連結至您目前工作的頁面。
 
 ## 頁面資訊 {#page-information}
 
-網站主控台也 [提供頁面目前狀態的相關資訊](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) 例如發佈、修改、鎖定、即時副本等。
+網站主控台也 [提供頁面目前狀態的相關資訊](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) 例如，發佈、修改、鎖定、即時副本等。
 
 ## 頁面模式 {#page-modes}
 
@@ -207,7 +207,7 @@ Sidekick底部的圖示列可用來切換處理頁面的模式：
 >
 >* [支架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
 >* [ClientContext](/help/sites-administering/client-context.md)
->* 網站 — 將開啟網站主控台。
+>* 網站 — 開啟網站主控台。
 >* 重新載入 — 將重新整理頁面。
 
 ## 鍵盤快速鍵 {#keyboard-shortcuts}

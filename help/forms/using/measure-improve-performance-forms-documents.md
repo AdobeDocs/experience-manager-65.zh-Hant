@@ -10,9 +10,9 @@ topic-tags: integrations
 discoiquuid: a128877d-239c-4272-99c2-72d6486d5703
 docset: aem65
 exl-id: 4f45ad22-611b-4b4f-8e89-cb64a122b70a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -139,7 +139,7 @@ AEM Forms與Target的整合可建立最適化表單的A/B測試。 在A/B測試�
 
 ![最適化表單的A/B測試摘要報告範例](assets/ab-test-report-4.png)
 
-## 最佳實務 {#best-practices}
+## 最佳做法 {#best-practices}
 
 真正的最佳實務是您在執行此工作流程時自我識別的最佳實務。 它們是您的環境和需求所特有的。 透過工作流程擷取您的學習，並將其記錄為最佳實務。
 
@@ -151,7 +151,7 @@ AEM Forms與Target的整合可建立最適化表單的A/B測試。 在A/B測試�
 * 使用表單欄位的標準或常用術語。
 * 透過範例或說明說明說明欄位和所需的輸入，使用者可能會對此感到困惑。
 * 儘可能驗證輸入的使用者輸入，以避免表單提交錯誤。
-* 最佳化案頭及行動裝置的版面配置。
+* 最佳化桌上型電腦和行動裝置的版面配置。
 * 自動填入已知使用者的資訊。
 
 **A/B測試**

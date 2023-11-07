@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 27%
+source-wordcount: '550'
+ht-degree: 24%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 27%
 **Live Copy 概觀**&#x200B;可以在檢視藍圖頁面的屬性時開啟：
 
 1. 開啟相關藍圖頁面的&#x200B;**屬性**。
-1. 開啟&#x200B;**藍圖**&#x200B;索引標籤 - **Live Copy 概觀** 選項將顯示在頂端工具列中：
+1. 開啟 **Blueprint** 標籤 —  **即時副本概觀** 選項會顯示在頂端工具列中：
 
    ![Blueprint標籤 — 即時副本概觀](assets/chlimage_1-360.png)
 

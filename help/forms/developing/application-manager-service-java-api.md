@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 12da2a9b-4009-496e-953f-c2ae0352f59f
 role: Developer
 exl-id: 1d2d6d64-f16e-4381-8691-f3c2744481ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->如果您使用其他作業系統（例如Unix），以適用作業系統支援的路徑取代windows特定路徑，則「使用AEM表單進行程式設計」中的Java API(SOAP)快速入門會以Forms為基礎。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM表單進行程式設計中的Java API(SOAP) Quick Start是以Forms為基礎（如果您使用其他作業系統，例如Unix），以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入門（SOAP模式）：使用Java API部署應用程式 {#quick-start-soap-mode-deploying-applications-using-the-java-api}
 
@@ -67,7 +67,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -76,7 +76,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -139,7 +139,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API移除應用程式 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
 
-以下Java程式碼範例會移除名為的應用程式 *EncryDocument*.
+以下Java程式碼範例會移除名為的應用程式 *Encryptdocument*.
 
 ```java
  /*
@@ -169,7 +169,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -178,7 +178,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *

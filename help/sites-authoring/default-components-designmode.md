@@ -2,9 +2,9 @@
 title: 在設計模式中設定預設元件
 description: 在設計模式中設定Adobe Experience Manager元件。
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '914'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 1%
 >
 >若要定義靜態範本的設計，建議使用本文所述的「設計模式」編輯設計
 >
->例如，在CRX DE中修改設計不是最佳做法，此類設計的應用可能會與預期行為不同。 檢視開發人員檔案 [頁面範本 — 靜態](/help/sites-developing/page-templates-static.md#how-template-designs-are-applied) 以取得詳細資訊。
+>例如，在CRX DE中修改設計並非最佳實務，且這類設計的應用可能會與預期行為有所差異。 檢視開發人員檔案 [頁面範本 — 靜態](/help/sites-developing/page-templates-static.md#how-template-designs-are-applied) 以取得詳細資訊。
 
 ## 啟用/停用元件 {#enable-disable-components}
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
    這將會選取包含目前元件的段落系統。
 
-1. 此 **設定** 段落系統的圖示將顯示在父項的動作列中。
+1. 此 **設定** 段落系統的圖示會顯示在父項的動作列中。
 
    ![設定](do-not-localize/screen_shot_2018-03-22at103256.png)
 
@@ -95,7 +95,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >最適化表單元件可在最適化表單容器內運作，以運用Forms生態系統。 因此，這些元件必須僅在最適化表單編輯器中使用，在網站頁面編輯器中無法運作。
+   >調適型表單元件可在調適型表單容器內運作，以使用Forms生態系統。 因此，這些元件必須僅在最適化表單編輯器中使用，在網站頁面編輯器中無法運作。
 
    **設定**
 

@@ -4,9 +4,9 @@ description: 瞭解如何在Adobe Experience Manager中設定翻譯整合架構�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1571'
 ht-degree: 5%
 
 ---
@@ -196,7 +196,7 @@ Communities屬性可控制如何執行使用者產生的內容翻譯。 翻譯�
 * 用於將AEM連線到您的翻譯提供商的雲端設定。
 * 可設定翻譯詳細資訊的翻譯整合架構。
 
-請注意，翻譯整合框架雲端設定會識別要用於連線至服務提供者的雲端設定。 將來源頁面與框架雲端設定建立關聯時，該頁面必須與框架雲端設定使用的服務提供者雲端設定建立關聯。
+翻譯整合框架雲端設定會識別要用於連線至服務提供者的雲端設定。 將來源頁面與框架雲端設定建立關聯時，該頁面必須與框架雲端設定使用的服務提供者雲端設定建立關聯。
 
 將頁面與雲端設定建立關聯時，該頁面的子系會繼承該關聯。 例如，如果您將/content/geometrixx/en/products頁面與翻譯整合框架建立關聯，產品頁面及其下方的所有頁面就會根據該框架進行翻譯。
 

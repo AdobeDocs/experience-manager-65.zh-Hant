@@ -1,7 +1,7 @@
 ---
 title: Communities元件基本知識
 seo-title: Communities Components Basics
-description: 在編輯模式下將Communities功能新增至AEM網站並設定元件
+description: 在編輯模式下將社群功能新增至AEM網站並設定元件
 seo-description: Add Communities features to AEM sites in edit mode and configure components
 uuid: c017a7c5-40d1-4592-9317-96fd727dac86
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '359'
 ht-degree: 2%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-本檔案的製作區段會說明如何在作者編輯模式下將Communities功能新增至AEM網站，並說明元件設定。
+檔案的製作區段說明如何在作者編輯模式中將Communities功能新增至AEM網站，以及說明元件設定。
 
 您可以使用AEM例項和互動式來探索元件 [社群元件指南](components-guide.md).
 
 ## 存取Communities元件 {#accessing-communities-components}
 
-編寫頁面內容時，如果基礎範本允許對頁面設計進行變更，則可以啟用元件瀏覽器中尚未提供的元件，作為網站設計的一部分。
+編寫頁面內容時，如果基礎範本允許變更頁面設計，則有可能啟用元件瀏覽器中尚未提供的元件，做為網站設計的一部分。
 
 列出可用的Communities元件 [此處](author-communities.md#available-communities-components).
 
@@ -35,11 +35,11 @@ ht-degree: 2%
 >
 >如需一般撰寫資訊，請檢視 [製作頁面的快速指南](../../help/sites-authoring/qg-page-authoring.md).
 >
->若不熟悉AEM，請檢視以下說明檔案： [基本處理](../../help/sites-authoring/basic-handling.md).
+>若不熟悉AEM，請檢視相關的檔案： [基本處理](../../help/sites-authoring/basic-handling.md).
 
 ### 進入設計模式 {#entering-design-mode}
 
-若為 **Communities** 元件瀏覽器(sidekick)中找不到元件，必須輸入 `Design Mode` 以新增其他Communities元件。 [必要的使用者端程式庫](#required-clientlibs) (clientlibs)可能也需要新增。
+如果 **Communities** 在元件瀏覽器(sidekick)中找不到元件，需要輸入 `Design Mode` 以新增其他Communities元件。 [必要的使用者端程式庫](#required-clientlibs) (clientlibs)可能也需要新增。
 
 如需詳細資訊，請參閱 [在設計模式中設定元件](../../help/sites-authoring/default-components-designmode.md).
 
@@ -53,9 +53,9 @@ ht-degree: 2%
 
 ## 必要的Clientlibs {#required-clientlibs}
 
-[使用者端程式庫](../../help/sites-developing/clientlibs.md) 元件的正常運作(JavaScript)和樣式(CSS)需要(clientlibs)。
+[使用者端程式庫](../../help/sites-developing/clientlibs.md) 元件的正常功能(JavaScript)和樣式(CSS)需要(clientlibs)。
 
-將Communities元件新增至頁面時，如果結果為錯誤或意外外觀，首先要嘗試為Communities元件新增必要的clientlibs。 如需詳細資訊，請參閱 [Communities元件的Clientlibs](clientlibs.md).
+將Communities元件新增至頁面時，如果結果為錯誤或意外外觀，首先要嘗試為Communities元件新增必要的clientlibs。 如需詳細資訊，請參閱 [適用於社群元件的Clientlibs](clientlibs.md).
 
 ### 範例：最初放置的檢閱沒有使用者端資料庫…… {#example-initially-placed-reviews-without-client-libraries}
 
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 ## 標記 {#tagging}
 
-許多Communities功能可設定為允許成員標籤在發佈環境中輸入（發佈）的內容。
+許多Communities功能皆可設定為允許成員標籤在發佈環境中輸入（張貼）的內容。
 
 如果允許標籤，則可設定社群網站的設定，以限制向發佈環境中的成員顯示的名稱空間。 請參閱 [社群網站主控台](sites-console.md#tagging).
 

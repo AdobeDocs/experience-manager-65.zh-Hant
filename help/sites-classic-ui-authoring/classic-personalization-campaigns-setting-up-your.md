@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2223'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,10 @@ ht-degree: 0%
 
 1. [建立品牌](#creating-a-new-brand) 以舉辦您的行銷活動。
 1. 如有需要，您可以 [為您的新品牌定義屬性](#defining-the-properties-for-your-new-brand).
-1. [建立行銷活動](#creating-a-new-campaign) 以保留體驗；例如Teaser頁面或電子報。
+1. [建立行銷活動](#creating-a-new-campaign) 以保留體驗；例如，Teaser頁面或電子報。
 1. 如有需要，您可以 [為您的新行銷活動定義屬性](#defining-the-properties-for-your-new-campaign).
 
-接著，視您要建立的體驗型別而定，您需要 [建立體驗](#creating-a-new-experience). 體驗的詳細資訊及其建立後的動作取決於您要建立的體驗型別：
+接著，視您建立的體驗型別而定，您必須 [建立體驗](#creating-a-new-experience). 體驗的詳細資訊及其建立後的動作取決於您要建立的體驗型別：
 
 * 如果建立Teaser：
 
@@ -50,15 +50,13 @@ ht-degree: 0%
 
 ## 建立新品牌 {#creating-a-new-brand}
 
-若要建立新品牌：
-
 1. 開啟 **MCM** 並選取 **行銷活動** 在左窗格中。
 
 1. 選取 **新增……** 以輸入 **標題** 和 **名稱** 和用於新品牌的範本：
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
-1. 按一下「**建立**」。您的新品牌將顯示在MCM中（具有預設圖示）。
+1. 按一下「**建立**」。您的新品牌會顯示在MCM中（具有預設圖示）。
 
 ### 定義新品牌的屬性 {#defining-the-properties-for-your-new-brand}
 
@@ -72,17 +70,15 @@ ht-degree: 0%
 
 ### 建立新行銷活動 {#creating-a-new-campaign}
 
-若要建立新的行銷活動：
-
 1. 從 **行銷活動**，在左窗格中選取您的新品牌，或按兩下右窗格中的圖示。
 
-   將會顯示概覽（如果品牌是新的，則為空白）。
+   概覽隨即顯示（如果品牌是新的，則為空白）。
 
 1. 按一下 **新增……** 並指定 **標題**， **名稱** 和用於新行銷活動的範本。
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
-1. 按一下「**建立**」。您的新行銷活動將顯示在MCM中。
+1. 按一下「**建立**」。您的新行銷活動會顯示在MCM中。
 
 ### 定義新行銷活動的屬性 {#defining-the-properties-for-your-new-campaign}
 
@@ -105,7 +101,7 @@ ht-degree: 0%
 
 ### 建立新體驗 {#creating-a-new-experience}
 
-建立新體驗的程式取決於體驗型別：
+建立體驗的程式取決於體驗型別：
 
 * [建立Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaser)
 * [建立Newsletter](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletter)
@@ -154,7 +150,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe不打算進一步增強此功能（管理銷售機會）。
->建議為 [善用Adobe Campaign以及與AEM的整合](/help/sites-administering/campaign.md).
+>建議使用 [Adobe Campaign與AEM的整合](/help/sites-administering/campaign.md).
 
 在AEM MCM中，您可以手動輸入潛在客戶或匯入逗號分隔的清單（例如郵寄清單）來整理和新增潛在客戶。 產生銷售機會的其他方法來自電子報註冊或社群註冊（如果設定，這些方法可以觸發工作流程填入銷售機會）。
 
@@ -172,7 +168,7 @@ ht-degree: 0%
 
 建立新的銷售機會後，請確定 [啟用它們](#activating-or-deactivating-leads) 以便您可以追蹤其在發佈例項上的活動並個人化其體驗。
 
-若要手動建立新的銷售機會，請執行下列步驟：
+若要手動建立銷售機會，請執行下列步驟：
 
 1. 在AEM中，導覽至MCM。 在控制面板中，按一下 **銷售機會**.
 1. 按一下 **新增**. 此 **新建** 視窗會開啟。
@@ -207,7 +203,7 @@ ht-degree: 0%
 
 ### 匯入新的銷售機會 {#importing-new-leads}
 
-當您匯入新的銷售機會時，您可以自動將其新增到現有清單或建立新清單以包含這些銷售機會。
+當您匯入新的銷售機會時，您可以自動將其新增到現有清單或建立清單以包含這些銷售機會。
 
 若要從逗號分隔的清單匯入銷售機會：
 
@@ -302,7 +298,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe不打算進一步增強此功能（管理清單）。
->建議為 [善用Adobe Campaign以及與AEM的整合](/help/sites-administering/campaign.md).
+>建議使用 [Adobe Campaign與AEM的整合](/help/sites-administering/campaign.md).
 
 清單可讓您將銷售機會整理到群組中。 透過清單，您可以將行銷活動目標定位為特定一群人員，例如，您可以傳送目標定位電子報至清單。 清單會顯示在MCM中，位於「控制面板」中或按一下 **清單**. 兩者都會提供清單的名稱和成員數目。
 
@@ -314,8 +310,6 @@ ht-degree: 0%
 
 ### 建立新清單 {#creating-new-lists}
 
-若要建立新清單（群組）：
-
 1. 在MCM控制面板中，按一下 **新增清單……** 或 **清單**，按一下 **新增** ...「建立清單」視窗隨即開啟。
 
    ![screen_shot_2012-02-21at125147pm](assets/screen_shot_2012-02-21at125147pm.png)
@@ -325,8 +319,6 @@ ht-degree: 0%
    ![screen_shot_2012-02-21at125320pm](assets/screen_shot_2012-02-21at125320pm.png)
 
 ### 修改現有清單 {#modifying-existing-lists}
-
-若要修改現有清單，請執行下列動作：
 
 1. 在MCM中，按一下 **清單**.
 
@@ -384,7 +376,7 @@ ht-degree: 0%
 
 您可以隨時透過瀏覽或搜尋成員來檢視哪些潛在客戶屬於特定清單。
 
-若要檢視屬於清單的銷售機會，請執行下列步驟：
+若要檢視清單中的銷售機會，請執行下列步驟：
 
 1. 在MCM中，按一下 **清單**.
 

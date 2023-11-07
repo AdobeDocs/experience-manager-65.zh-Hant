@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '5182'
 ht-degree: 0%
@@ -741,7 +741,7 @@ N:data
 
   如有必要，可以為每個彙總提供個別的定義。
 
-  若要指定聚總值的明確前置處理，前置處理定義必須位於個別的 `aggregated` 子節點( `apply/aggregated`， `applyAfter/aggregated`)。 如果需要明確預先處理不同的彙總，則預先處理定義會位於具有個別彙總名稱的子節點上(例如 `apply/aggregated/min/max` 或其他彙總)。
+  若要指定聚總值的明確前置處理，前置處理定義必須位於個別的 `aggregated` 子節點( `apply/aggregated`， `applyAfter/aggregated`)。 如果需要明確預先處理不同的彙總，則預先處理定義會位於具有個別彙總名稱的子節點上(例如， `apply/aggregated/min/max` 或其他彙總)。
 
 您可以指定下列任一項在預先處理期間使用：
 
@@ -1336,7 +1336,7 @@ N:apps
    ```xml
    N:osgireport [cq:Template]
        P:allowedPaths [String[]] = "/etc/reports(/.*)?"
-       P:jcr:description [String] = "Use this report generator to create a new OSGi report."
+       P:jcr:description [String] = "Use this report generator to create an OSGi report."
        P:jcr:title [String] = "OSGi Report Template"
        P:ranking [Long] = 100
        P:shortTitle [String] = "OSGi Report"

@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3570'
+source-wordcount: '3568'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 2%
 * **活動記錄**  — 此面板一開始會最小化，並展開以詳細說明「封裝管理員」的活動，例如建置或安裝封裝時。 「活動記錄」標籤中還有額外的按鈕可執行下列動作：
    * **清除記錄**
    * **顯示/隱藏**
-* **工具列**  — 工具列包含左側導覽面板和封裝清單的重新整理按鈕，以及用於搜尋、建立和上傳封裝的按鈕。
+* **工具列**  — 工具列包含[左側導覽面板]和[封裝]清單的重新整理按鈕，以及用於搜尋、建立和上傳封裝的按鈕。
 
 ![封裝管理員UI](assets/package-manager-ui.png)
 

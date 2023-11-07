@@ -7,7 +7,7 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 8737c989927b1be148d440aa1944cf4cfb216b69
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2226'
 ht-degree: 6%
@@ -236,7 +236,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 * **傳入連結** 提供參照頁面的頁面清單，以及直接存取 **編輯** 其中一個頁面。
 
-   * 這只能顯示靜態連結，而不能顯示動態產生的連結；例如來自清單元件的連結。
+   * 這只能顯示靜態連結，而不能顯示動態產生的連結；例如，來自清單元件的連結。
 
 * 借入和借出內容的例項，使用 **參考** 元件，您可從此處導覽至參照/參照頁面
 

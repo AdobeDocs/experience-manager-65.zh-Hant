@@ -10,9 +10,9 @@ discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 feature: Interactive Communication
 exl-id: b8e84c5d-2ec8-4575-9eed-6b37b04e5d66
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2477'
+source-wordcount: '2475'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 您可以插入表單資料模型屬性，以個人化文字檔案片段。 透過在文字中插入表單資料模型屬性，您可以在預覽互動式通訊時，從關聯的資料來源擷取並填入收件者特定資料。 如需表單資料模型的詳細資訊，請參閱 [AEM Forms資料整合](/help/forms/using/data-integration.md).
 
-如果您在建立文字時指定了表單資料模型，則表單資料模型中的屬性會出現在文字編輯器的左窗格中。 文字檔案片段以及包含該片段的互動式通訊中，指定的表單資料模型應該相同。
+如果您在建立文字時指定了表單資料模型，則表單資料模型中的屬性會出現在文字編輯器的左窗格中。 文字檔案片段及包含該片段的互動式通訊中，指定的表單資料模型應相同。
 
 ![insertfdmelementtext](assets/insertfdmelementtext.png)
 

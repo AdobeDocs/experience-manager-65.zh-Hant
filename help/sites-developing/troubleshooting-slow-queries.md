@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2269'
+source-wordcount: '2268'
 ht-degree: 0%
 
 ---
@@ -321,7 +321,7 @@ AEM支援下列查詢語言：
 ## 現有的索引調整 {#existing-index-tuning}
 
 1. 如果最佳查詢解析為屬性索引，則沒有剩餘要做的事，因為屬性索引最低限度可以調整。
-1. 否則，查詢應該解析為Lucene屬性索引。 如果無法解析任何索引，請跳至建立新索引。
+1. 否則，查詢應該解析為Lucene屬性索引。 如果無法解析索引，請跳至建立索引。
 1. 視需要將查詢轉換為XPath或JCR-SQL2。
 
    * **查詢產生器查詢**

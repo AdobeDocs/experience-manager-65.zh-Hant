@@ -11,9 +11,9 @@ discoiquuid: 5855d21b-340c-4139-aabe-c3a534cedb98
 docset: aem65
 feature: Interactive Communication
 exl-id: 3d15a723-df6c-4b4a-992e-a6636f4cf3dc
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1310'
 ht-degree: 14%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 14%
 * 所見即所得拖放檔案編輯器
 * 整合式資產存放庫 — 您可透過互動式通訊編寫介面的資產瀏覽器，使用上傳至伺服器並在其上建立的資產
 
-當您 [建立新的互動式通訊或編輯現有的互動式通訊](../../forms/using/create-interactive-communication.md)，則您會使用下列使用者介面元素：
+當您 [建立或編輯現有的互動式通訊](../../forms/using/create-interactive-communication.md)，則您會使用下列使用者介面元素：
 
 * [側邊欄](#sidebar)
 * [頁面工具列](#page-toolbar)

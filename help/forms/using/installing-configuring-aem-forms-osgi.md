@@ -10,9 +10,9 @@ discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1879'
 ht-degree: 9%
 
 ---
@@ -223,7 +223,7 @@ Adobe Sign可啟用最適化表單的電子簽章工作流程。 電子簽名有
 
 若要搭配AEM Forms使用Adobe Sign， [將Adobe Sign與AEM Forms整合](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
 
-#### 設定Adobe Analytics {#configure-adobe-analytics}
+#### 設定 Adobe Analytics {#configure-adobe-analytics}
 
 AEM Forms與Adobe Analytics整合，可讓您擷取及追蹤已發佈表單和檔案的績效量度。 分析這些指標背後的目標是根據有關使表單或文件更有用所需的變更資料做出明智的決策。
 
@@ -231,7 +231,7 @@ AEM Forms與Adobe Analytics整合，可讓您擷取及追蹤已發佈表單和�
 
 #### 整合Adobe Target {#integrate-adobe-target}
 
-如果表單提供的體驗不吸引人，您的客戶可能會捨棄表單。 雖然這會讓客戶感到挫折，但也可以提升貴組織的支援數量和成本。 識別並提供適當的客戶體驗以提高轉換率，這既關鍵又具有挑戰性。 AEM表單擁有此問題的關鍵所在。
+如果表單提供的體驗不吸引人，您的客戶可能會捨棄表單。 雖然這會讓客戶感到挫折，但也可以提升貴組織的支援數量和成本。 識別並提供適當的客戶體驗以提高轉換率，這既重要又具有挑戰性。 AEM表單擁有此問題的關鍵所在。
 
 AEM forms與Adobe Marketing Cloud解決方案Adobe Target整合，跨多個數位頻道提供個人化及吸引人的客戶體驗。 若要使用Adobe Target來A/B測試調適型表單， [將Adobe Target與AEM Forms整合](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
 

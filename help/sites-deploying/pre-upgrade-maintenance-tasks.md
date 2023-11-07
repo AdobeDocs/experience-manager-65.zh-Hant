@@ -12,9 +12,9 @@ discoiquuid: 291c91e5-65ff-473d-ac11-3da480239e76
 docset: aem65
 feature: Upgrading
 exl-id: 37d4aee4-15eb-41ab-ad71-dfbd5c7910f8
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2031'
+source-wordcount: '2029'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 此 `WorkflowPurgeTask` 和 `com.day.cq.audit.impl.AuditLogMaintenanceTask` 任務需要單獨的OSGi設定，沒有它們就無法運作。 如果它們在升級前工作執行期間失敗，遺失設定是最可能的原因。 因此，如果您不想執行OSGi設定，請務必為這些工作新增OSGi設定，或將其從升級前最佳化工作清單中完全移除。 有關設定工作流程清除任務的檔案，請參閱 [管理工作流程例項](/help/sites-administering/workflows-administering.md) 和稽核記錄維護任務設定可在以下網址找到： [AEM 6中的稽核記錄維護](/help/sites-administering/operations-audit-log.md).
 
-如需CQ 5.6的工作流程與稽核記錄清除，以及AEM 6.0的稽核記錄清除，請參閱 [清除工作流程和稽核節點](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html).
+如需在CQ 5.6上清除工作流程和稽核記錄，以及在AEM 6.0上清除稽核記錄，請參閱 [清除工作流程和稽核節點](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html).
 
 ## 安裝、設定及執行升級前工作 {#install-configure-run-pre-upgrade-tasks}
 

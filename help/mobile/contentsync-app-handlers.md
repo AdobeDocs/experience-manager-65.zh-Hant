@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fec86f03-f81e-460a-9f84-d6304c95128c
 exl-id: e2ddf5d1-0f5b-4f3b-9666-0f388915730e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ ht-degree: 0%
 }
 ```
 
-**mobilecontentpackageslisting** 列出指定應用程式中的AEM內容套件，以及提出更新請求的serverURL。 這會用於裝置上的使用者端js來請求內容更新
+**mobilecontentpackageslisting** 列出指定應用程式中的AEM內容套件，以及要向其提出更新請求的serverURL。 這會用於裝置上的使用者端js來請求內容更新
 
 該處理常式應該用於AEM應用程式殼層ContentSync設定（具有pge-type=app-instance的節點）
 

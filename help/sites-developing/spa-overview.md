@@ -1,20 +1,16 @@
 ---
 title: SPA 編輯器概觀
-seo-title: SPA Editor Overview
 description: 本文全面概述了 SPA 編輯器及其運作原理，包括 SPA 編輯器在 AEM 中互動的詳細工作流程。
-seo-description: This article gives a comprehensive overview of the SPA Editor and how it works included detailed workflows of interaction of the SPA Editor within AEM.
-uuid: c283abab-f5bc-414a-bc81-bf3bdce38534
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 86%
+source-wordcount: '1651'
+ht-degree: 85%
 
 ---
 
@@ -158,7 +154,7 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 
 ## 要求和限制 {#requirements-limitations}
 
-若要使作者能夠使用頁面編輯器編輯 SPA 的內容，必須實作 SPA 應用程式以與 AEM SPA Editor SDK 互動。請參閱 [AEM SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 最少的檔案，讓您瞭解如何讓自己的檔案執行。
+若要使作者能夠使用頁面編輯器編輯 SPA 的內容，必須實作 SPA 應用程式以與 AEM SPA Editor SDK 互動。另請參閱 [AEM SPA快速入門](/help/sites-developing/spa-getting-started-react.md) 以最少的需求協助您執行工作。
 
 ### 支援的框架 {#supported-frameworks}
 
@@ -171,7 +167,7 @@ SPA Editor SDK 支援以下最低版本：
 
 ### 其他的框架 {#additional-frameworks}
 
-可以實作其他 SPA 框架以與 AEM SPA Editor SDK 搭配運作。請參閱 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 檔案說明架構必須滿足的需求，才能建立架構特定層，其中包含使用AEM SPA編輯器的模組、元件和服務。
+可以實作其他 SPA 框架以與 AEM SPA Editor SDK 搭配運作。請參閱 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 適用於架構必須滿足的需求，才能建立架構特定層，其中包含可與AEM SPA編輯器搭配使用的模組、元件和服務。
 
 ### 使用多個選擇器 {#multiple-selectors}
 
@@ -198,6 +194,6 @@ AEM SPA Editor SDK是隨AEM 6.4 Service Pack 2推出的。 Adobe完全支援此�
 * 編輯設定 (例如接聽程式)
 * 還原/取消復原
 * 頁面差異和時間彎曲
-* 執行 HTML 重寫伺服器端的功能，例如連結檢查程式、CDN 重寫程式服務、URL 縮短等。
+* 執行HTML重寫伺服器端的功能，例如連結檢查器、CDN重寫器服務、URL縮短等。
 * 開發人員模式
 * AEM 啟動

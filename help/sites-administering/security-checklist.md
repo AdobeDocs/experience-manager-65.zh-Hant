@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 465d3e956ecdd36eea5fe095e250652eedd4b3c5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3005'
+source-wordcount: '3004'
 ht-degree: 1%
 
 ---
@@ -393,7 +393,7 @@ Sling是 *以內容為中心*. 處理著重於內容，因為每個(HTTP)請求�
 
 ### 匿名許可權強化套件 {#anonymous-permission-hardening-package}
 
-依預設，AEM會儲存系統中繼資料，例如 `jcr:createdBy` 或 `jcr:lastModifiedBy` 作為節點屬性（在存放庫中的一般內容旁）。 視設定和存取控制設定而定，在某些情況下，這可能會導致個人識別資訊(PII)的洩漏，例如當這類節點轉譯為原始JSON或XML時。
+依預設，AEM會儲存系統中繼資料，例如 `jcr:createdBy` 或 `jcr:lastModifiedBy` 作為節點屬性（在存放庫中的一般內容旁）。 根據設定和存取控制設定，在某些情況下，這可能會導致個人識別資訊(PII)的洩漏，例如，當這類節點轉譯為原始JSON或XML時。
 
 如同所有存放庫資料，這些屬性由Oak授權棧疊中介。 應根據最低許可權原則限制存取這些許可權。
 

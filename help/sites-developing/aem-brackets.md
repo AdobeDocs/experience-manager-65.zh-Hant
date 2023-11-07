@@ -1,18 +1,14 @@
 ---
 title: AEM Brackets擴充功能
-seo-title: AEM Brackets Extension
 description: 瞭解如何針對Brackets使用Adobe Experience Manager擴充功能。
-seo-description: null
-uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '935'
 ht-degree: 2%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-AEM Brackets擴充功能提供流暢的工作流程，讓您輕鬆編輯AEM元件和使用者端程式庫，並運用 [括弧](https://brackets.io/) 程式碼編輯器，可讓您從程式碼編輯器存取Photoshop檔案和圖層。 擴充功能提供的簡易同步功能（不需要Maven或檔案儲存庫）可提升開發人員效率，也可協助具備有限AEM知識的前端開發人員參與專案。 此擴充功能也提供以下支援： [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，可降低JSP的複雜性，讓元件開發更容易、更安全。
+AEM Brackets擴充功能提供流暢的工作流程，讓您可編輯AEM元件和使用者端程式庫，並利用的強大功能 [括弧](https://brackets.io/) 程式碼編輯器，可讓您從程式碼編輯器存取Photoshop檔案和圖層。 擴充功能提供的簡易同步功能（不需要Maven或檔案儲存庫）可提升開發人員效率，也可協助具備有限AEM知識的前端開發人員參與專案。 此擴充功能也提供以下支援： [HTML範本語言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，可降低JSP的複雜性，讓元件開發更容易、更安全。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
@@ -127,7 +123,7 @@ AEM Brackets擴充功能在Brackets視窗右側的工具列中有一個通知圖
 * 黃色 — 部分檔案未同步
 * 紅色 — 未同步處理任何檔案
 
-按一下通知圖示會開啟同步化狀態報告對話方塊，其中列出每個已同步檔案的所有狀態。
+按一下通知圖示會開啟「同步化狀態報告」對話方塊，其中列出每個已同步檔案的所有狀態。
 
 ![chlimage_1-58](assets/chlimage_1-58a.png)
 

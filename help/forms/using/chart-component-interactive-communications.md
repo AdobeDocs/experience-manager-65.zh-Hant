@@ -11,9 +11,9 @@ discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2612'
+source-wordcount: '2608'
 ht-degree: 2%
 
 ---
@@ -161,7 +161,7 @@ ht-degree: 2%
    <td><p>除了常用組態外，還提供下列圖表專用組態：</p>
     <ul>
      <li><strong>顯示圖例： </strong>啟用時顯示圓形圖或環圈圖的圖例。</li>
-     <li><strong>圖例位置： </strong>指定圖例相對於圖表的位置。 可用的選項有「右」、「左」、「上」和「下」。 建議在列印管道中使用右側圖例。</li>
+     <li><strong>圖例位置： </strong>指定圖例相對於圖表的位置。 可用的選項有「右」、「左」、「上」和「下」。 在列印管道中使用右邊的圖例。</li>
      <li><strong>內徑</strong>：適用於環形圖，以指定圖表中內圓的半徑（畫素）。</li>
      <li><strong>線條顏色</strong>：適用於線圖、線圖和點圖以及面積圖，以指定圖表中線條的顏色。</li>
      <li><strong>點色彩</strong>：適用於點、線和點圖表，以指定圖表中的點顏色。<br /> </li>

@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ### 透過匯出ZIP檔案來建立資產的參考 {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
-1. 執行中的步驟 [建立工作流程模型](/help/sites-developing/workflows-models.md) 以建立新的工作流程。
+1. 執行中的步驟 [建立工作流程模型](/help/sites-developing/workflows-models.md) 以建立工作流程。
 1. 使用 [封裝功能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html) 之 [!DNL Adobe InDesign] 以匯出檔案。 [!DNL Adobe InDesign] 可將檔案和連結的資產匯出為套件。 在此案例中，匯出的資料夾包含 `Links` 包含子資產的資料夾 [!DNL InDesign] 檔案。 此 `Links` 資料夾與INDD檔案位於相同的資料夾中。
 1. 建立ZIP檔案並上傳至 [!DNL Experience Manager] 存放庫。
 1. 開始 `Unarchiver` 工作流程。

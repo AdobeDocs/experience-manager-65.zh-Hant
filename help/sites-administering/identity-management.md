@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1250'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ A [表單](/help/sites-authoring/default-components.md#form-component) 可用來
 
 這會為訪客提供以下標準欄位： **使用者名稱** 和 **密碼**，具有 **登入** 按鈕以在輸入認證時啟動登入程式。
 
-例如，使用者可以登入，也可以使用 **登入** Geometrixx工具列上的選項，它會使用頁面：
+例如，使用者可以使用「 」登入或建立帳戶 **登入** Geometrixx工具列上的選項，它會使用頁面：
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
@@ -94,16 +94,16 @@ A [表單](/help/sites-authoring/default-components.md#form-component) 可用來
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 ```
 
-若要檢視設定檔的詳細資料，請按一下 **我的設定檔** （在任何頁面的右上角），例如 `admin` 帳戶：
+若要檢視設定檔的詳細資料，請按一下 **我的設定檔** 位於任何頁面的右上角；例如，使用 `admin` 帳戶：
 `http://localhost:4502/home/users/a/admin/profile.form.html/content/geometrixx-outdoors/en/user/profile.html.`
 
 您可以使用檢視其他設定檔 [使用者端內容](/help/sites-administering/client-context.md) （在作者環境中，並具有足夠的許可權）：
 
-1. 開啟頁面；例如Geometrixx頁面：
+1. 開啟頁面；例如，Geometrixx頁面：
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
-1. 按一下 **我的設定檔** 在右上角。 您將會看到目前帳戶的設定檔；例如管理員。
+1. 按一下 **我的設定檔** 在右上角。 您將會看到目前帳戶的設定檔；例如，管理員。
 1. 按下 **control-alt-C** 以開啟使用者端內容。
 1. 在使用者端內容的左上角，按一下 **載入設定檔** 按鈕。
 
@@ -145,7 +145,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 ## 設定檔狀態 {#profile-states}
 
-有許多使用案例需要知道使用者（或其設定檔）是否在 *特定狀態* 也可能不會。
+有些使用案例需要知道使用者（或其設定檔）是否在 *特定狀態* 也可能不會。
 
 這涉及在使用者設定檔中定義適當的屬性，其方式如下：
 
@@ -163,7 +163,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
   管理與狀態相關的動作。
 
-可以定義多個狀態；例如在Geometrixx中，這些狀態包括：
+可以定義多個狀態；例如，在Geometrixx中，這些狀態包括：
 
 * 訂閱（或取消訂閱）電子報或評論對話串上的通知
 * 新增和移除朋友的連線

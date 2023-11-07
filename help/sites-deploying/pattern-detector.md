@@ -1,20 +1,16 @@
 ---
 title: 使用模式偵測器評估升級複雜性
-seo-title: Assessing the Upgrade Complexity with the Pattern Detector
 description: 瞭解如何使用模式偵測器來評估升級的複雜性。
-seo-description: Learn how to use the Pattern Detector to assess the complexity of your upgrade.
-uuid: 84d0add9-3123-4188-9877-758911b1899f
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
-discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
@@ -224,4 +220,4 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 >[!NOTE]
 >
->請注意，模式偵測器會嘗試準確預測升級警告。 但是，在某些情況下，它可能會產生誤報。
+>模式偵測器會嘗試準確地預測升級警告。 但是，在某些情況下，它可能會產生誤報。

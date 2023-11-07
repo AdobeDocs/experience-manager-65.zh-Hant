@@ -1,14 +1,12 @@
 ---
 title: 自訂獨立安裝
-seo-title: Custom Standalone Install
 description: 瞭解安裝獨立AEM執行個體時可用的選項。
-seo-description: Learn about the options available when installing a standalone AEM instance.
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -45,7 +43,7 @@ AEM的預設連線埠為4502。 如果該連線埠無法使用或已使用，Qui
 
 ### Java 11考量事項 {#java-considerations}
 
-如果您正在執行OracleJava 11 （或通常是8版以上的Java），則啟動AEM時需要在命令列中新增其他引數。
+如果您執行OracleJava 11 （或通常是8以上的Java版本），啟動AEM時必須在命令列新增其他引數。
 
 * 下列專案 —  `-add-opens` 需要新增引數，以防止相關的反射存取中的警告訊息 `stdout.log`
 
@@ -143,7 +141,7 @@ AEM的預設連線埠為4502。 如果該連線埠無法使用或已使用，Qui
 
 ## 重新定義臨時工作目錄的位置 {#redefining-the-location-of-the-temporary-work-directory}
 
-Java機器之暫存資料夾的預設位置為 `/tmp`. AEM也會使用此資料夾，例如在建置套件時。
+Java機器之暫存資料夾的預設位置為 `/tmp`. 例如，AEM在建置套件時也會使用此資料夾。
 
 如果您想要變更暫存資料夾的位置（例如，如果您需要具有更多可用空間的目錄），請定義* `<new-tmp-path>`*新增JVM引數：
 

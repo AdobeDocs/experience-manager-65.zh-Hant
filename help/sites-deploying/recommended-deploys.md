@@ -1,19 +1,15 @@
 ---
 title: 建議的部署
-seo-title: Recommended Deployments
 description: 本文說明AEM的建議拓撲。
-seo-description: This article describes the recommended topologies for AEM.
-uuid: bc638121-c531-43eb-9ec6-3283a33519f8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 66d351e1-87f1-4006-bf8a-3cbbd33db9ed
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1780'
 ht-degree: 0%
 
 ---
@@ -191,7 +187,7 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM製作和發佈執行
 
 >[!NOTE]
 >
->如需這些指引、先決條件和建議的所有其他問題，請聯絡 [Adobe客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html).
+>如需這些指引、必要條件和Recommendations相關的所有其他問題，請聯絡我們 [Adobe客戶服務](https://helpx.adobe.com/tw/marketing-cloud/contact-support.html).
 
 ### AEM Communities的考量事項 {#considerations-for-aem-communities}
 

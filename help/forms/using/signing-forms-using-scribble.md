@@ -8,9 +8,9 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '738'
 ht-degree: 9%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 9%
    * **範本訊息：** 指定載入簽章PDF時要顯示的訊息。 Adobe Sign服務需要一些時間準備和載入簽名PDF。
    * **簽署服務：** 選取 **草寫簽名** 選項。
 
-   * **CSS類別**：指定使用者端程式庫的CSS類別（如有）。 建議使用 [主題](../../forms/using/themes.md) 和 [內嵌樣式](../../forms/using/inline-style-adaptive-forms.md) 而非CSS類別。
+   * **CSS類別**：指定使用者端程式庫的CSS類別（如有）。 使用 [主題](../../forms/using/themes.md) 和 [內嵌樣式](../../forms/using/inline-style-adaptive-forms.md) 而非CSS類別。
 
    點選「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。 簽章設定成功。
 

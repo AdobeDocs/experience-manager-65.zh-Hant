@@ -7,7 +7,7 @@ topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 0%
@@ -82,7 +82,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **尋找遺失的請求**
 
-如果您在複雜的伺服器設定中遺失請求，例如防火牆和Dispatcher，您可以使用Proxy伺服器來找出請求遺失的位置。 如果有防火牆：
+如果您在複雜的伺服器設定中遺失要求（例如，在防火牆和Dispatcher中），您可以使用Proxy伺服器來找出遺失要求的位置。 如果有防火牆：
 
 1. 在防火牆之前啟動Proxy
 1. 在防火牆之後啟動另一個Proxy

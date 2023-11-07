@@ -2,7 +2,7 @@
 title: 移轉至AEMCommerce integration framework(CIF)附加元件
 description: 如何從舊版移轉至AEMCommerce integration framework(CIF)附加元件。
 exl-id: c6c0c2fc-6cfa-4c64-b3d8-7e428b2a4b2e
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 4%
@@ -35,4 +35,4 @@ CIF附加元件不支援匯入產品目錄資料。 使用CIF附加元件主體�
 
 ## 無法快取的資料與購物互動
 
-對不可快取資料和互動的使用者端請求（例如加入購物車、搜尋）應透過CDN / Dispatcher直接前往商務端點（商務解決方案或整合層）。 移除AEM只是Proxy的任何呼叫。
+對不可快取的資料和互動（例如，加入購物車、搜尋）的使用者端請求應透過CDN / Dispatcher直接進入商務端點（商務解決方案或整合層）。 移除AEM只是Proxy的任何呼叫。

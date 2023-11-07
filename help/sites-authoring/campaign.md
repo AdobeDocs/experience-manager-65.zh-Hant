@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2753'
+source-wordcount: '2749'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 您可以在AEM中建立電子郵件內容，並在Adobe Campaign電子郵件中處理。 若要這麼做，您必須：
 
-1. 從Adobe Campaign專屬的範本在AEM中建立新的電子報。
+1. 從Adobe Campaign專用的範本在AEM中建立Newsletter。
 1. 選取 [Adobe Campaign服務](#selecting-the-adobe-campaign-cloud-service-and-template) 編輯內容以存取所有功能之前。
 1. 編輯內容。
 1. 驗證內容。
@@ -55,7 +55,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >[電子郵件範例僅適用於Geometrixx](/help/sites-developing/we-retail.md). 請從「封裝共用」下載範例Geometrixx內容。
+   >[電子郵件範例僅適用於Geometrixx](/help/sites-developing/we-retail.md). 從封裝共用下載範例Geometrixx內容。
 
    ![chlimage_1-15](assets/chlimage_1-15a.png)
 
@@ -187,7 +187,7 @@ ht-degree: 1%
 
 ### 預覽電子報 {#previewing-a-newsletter}
 
-您可以預覽Newsletter的外觀以及預覽個人化。
+您可以預覽Newsletter的外觀並預覽個人化。
 
 1. 在Newsletter開啟的狀態下，按一下 **預覽** 在AEM的右上角。 AEM會顯示使用者收到Newsletter時的外觀。
 
@@ -257,7 +257,7 @@ Adobe Campaign Standard可讓您復原和連結在AEM中建立的內容，包含
 
 若要將AEM中建立的頁面連結至Adobe Campaign的電子郵件：
 
-1. 根據AEM專屬的電子郵件範本建立新電子郵件。 請參閱 [在Adobe Campaign Standard中建立電子郵件](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html) 以取得詳細資訊。
+1. 根據AEM專屬電子郵件範本建立電子郵件。 請參閱 [在Adobe Campaign Standard中建立電子郵件](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html) 以取得詳細資訊。
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 

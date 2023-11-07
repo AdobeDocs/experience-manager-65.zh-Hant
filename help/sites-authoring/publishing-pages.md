@@ -2,9 +2,9 @@
 title: 發佈內容頁面
 description: 瞭解如何在Adobe Experience Manager 6.5中發佈內容頁面。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1660'
 ht-degree: 7%
 
 ---
@@ -60,13 +60,13 @@ ht-degree: 7%
    * 如果沒有要發佈的引用，則會直接發佈頁面。
    * 如果頁面含有需要發佈的引用，這些引用將會列在 **發佈** 精靈，您可在其中執行以下其中一項作業：
 
-      * 指定哪些資產/標籤/等 您要與頁面一起發佈，然後使用 **發佈** 以完成程式。
+      * 指定要與頁面一起發佈的資產/標籤/等等，然後使用 **發佈** 以完成程式。
 
       * 使用 **取消** 以中止動作。
 
    ![chlimage_1](assets/chlimage_1.png)
 
-1. 選取 **發佈** 會將頁面復寫至發佈環境。 在頁面編輯器中，將顯示確認發佈動作的資訊橫幅。
+1. 選取 **發佈** 會將頁面復寫至發佈環境。 在頁面編輯器中，會顯示確認發佈動作的資訊橫幅。
 
    ![screen_shot_2018-03-21at152840](assets/screen_shot_2018-03-21at152840.png)
 
@@ -182,7 +182,7 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   >此 **工作流程** 將根據使用者可能擁有也可能沒有的許可權顯示步驟。 請參閱 [此頁面上的上一個附註](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 關於發佈許可權以及 [管理工作流程存取許可權](/help/sites-administering/workflows-managing.md) 和 [將工作流程套用至頁面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 以取得詳細資訊。
+   >此 **工作流程** 根據使用者可能擁有也可能沒有的許可權顯示步驟。 請參閱 [此頁面上的上一個附註](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 關於發佈許可權和 [管理工作流程存取許可權](/help/sites-administering/workflows-managing.md) 和 [將工作流程套用至頁面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 以取得詳細資訊。
 
    資源會依觸發的工作流程分組，每個指定選項用於：
 

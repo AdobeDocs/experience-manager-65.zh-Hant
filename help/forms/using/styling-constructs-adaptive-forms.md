@@ -1,5 +1,5 @@
 ---
-title: 調適型表單的樣式結構
+title: 調適型表單的樣式建構
 seo-title: Styling constructs for adaptive forms
 description: 使用LESS框架來自訂最適化表單的外觀。
 seo-description: Use LESS framework to customize appearance of adaptive forms.
@@ -10,28 +10,28 @@ discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2365'
-ht-degree: 4%
+source-wordcount: '2363'
+ht-degree: 6%
 
 ---
 
-# 調適型表單的樣式結構{#styling-constructs-for-adaptive-forms}
+# 調適型表單的樣式建構{#styling-constructs-for-adaptive-forms}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
-CSS和LESS架構的知識。
+CSS和LESS架構的相關知識。
 
 ## 可自訂的專案 {#what-can-be-customized}
 
-本文列出可公開使用的調適型表單css類別。 您可以利用這些類別來設定最適化表單各種元件的樣式。 製作元件（例如顯示警告的對話方塊和狀態列）的樣式超出本文章的範圍。 只有在您無法使用下列專案來樣式元件時，才使用這些樣式建構來建立樣式（使用CSS或更少）： [主題編輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html).
+本文列出可公開使用的調適型表單css類別。 您可以使用這些類別來設定最適化表單中各種元件的樣式。 製作元件的樣式（例如顯示警告的對話方塊和狀態列）超出本文範圍。 只有在您無法使用來樣式化元件時，才使用這些樣式建構來建立樣式（使用CSS或更少）。 [主題編輯器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html).
 
 ## 在調適型表單中自訂樣式 {#customizing-styles-in-adaptive-forms}
 
-LESS架構簡化了使用案例，進而可在調適型表單中自訂樣式。 此框架可讓您使用一組變數和函式(mixin)來定義樣式。 LESS架構有助於減少套件程式碼的大小，並提高其重複使用性。
+LESS框架簡化了使用案例，進而能夠在最適化表單中自訂樣式。 此框架可讓您使用一組變數和函式(mixin)來定義樣式。 LESS架構有助於減少套件程式碼的大小，並提高其重複使用性。
 
 您可以透過下列方式自訂最適化表單樣式：
 
@@ -42,9 +42,9 @@ LESS架構簡化了使用案例，進而可在調適型表單中自訂樣式。 
 
 您可以變更最適化表單的主題，以確保其外觀與內嵌最適化表單的網頁一致。
 
-使用CSS屬性的最適化表單的整體外觀變更通常是主題變更的一部分。 最適化表單的lo &quot;ok和feel的重大變更（例如元件版面配置和位置的變更）不被視為主題變更。
+使用CSS屬性的最適化表單的整體外觀變更通常是主題變更的一部分。 最適化表單的「確定和感覺」的重大變更，例如元件版面配置和位置的變更，不被視為主題變更。
 
-根據啟動程式，以下一組CSS屬性會定義網頁的主題：
+根據啟動程式，以下幾組CSS屬性會定義網頁的主題：
 
 * 背景色彩
 * 邊框（文字、顏色、粗細）
@@ -54,17 +54,17 @@ LESS架構簡化了使用案例，進而可在調適型表單中自訂樣式。 
 * 字型大小
 * 行高
 
-目前，LESS變數的定義僅適用於最適化表單中各種元素的這些屬性。
+目前，LESS變數僅針對最適化表單中各種元素的這些屬性而定義。
 
 ## 變更元件樣式 {#changing-component-style}
 
-您可以變更元素的外觀、配置、位置和可見度。 若要完成此工作，請建立或更新您的自訂.css檔案，以包含本文中列出的樣式建構。
+您可以變更元素的外觀、配置、位置和可見度。 若要完成這項工作，請建立或更新您的自訂.css檔案，以包含本文列出的樣式建構。
 
-若要將樣式套用至最適化表單，請在中開啟最適化表單進行編輯、開啟最適化表單容器的屬性，以及在基本索引標籤中指定自訂CSS檔案的路徑。 預設最適化表單的樣式建構，並以自訂.css檔案中所列的建構加以覆寫。
+若要將樣式套用至最適化表單，請在中開啟最適化表單以進行編輯，開啟最適化表單容器的屬性，在基本索引標籤中指定自訂CSS檔案的路徑。 預設最適化表單的樣式建構，並以自訂.css檔案中所列的建構覆寫。
 
 ## 元件 {#components}
 
-本文討論的元件具有預先定義的CSS類別。 您可以編輯變數來修改CSS類別中的樣式。 或者，您也可以重寫整個類別。 本節說明可使用變數修改的元件和樣式中的類別。
+本文討論的元件具有其預先定義的CSS類別。 您可以編輯變數來修改CSS類別中的樣式。 或者，您可以重寫整個類別。 本節說明可以使用變數修改的元件和樣式中的類別。
 
 ## 容器樣式 {#container-styling}
 
@@ -106,9 +106,9 @@ LESS架構簡化了使用案例，進而可在調適型表單中自訂樣式。 
 
 ## 欄位樣式 {#field-styling}
 
-調適型表單包含各種型別的欄位。 每個欄位都有唯一的類別名稱，即欄位名稱。 欄位也有常見的類別名稱 `guideFieldNode`.
+調適型表單包含各種欄位型別。 每個欄位都有唯一的類別名稱，即欄位名稱。 欄位也有常見的類別名稱 `guideFieldNode`.
 
-欄位包含標籤、Widget、說明說明（長說明和短說明）以及欄位說明圖示（問號）。
+欄位包含標籤、Widget、說明說明（完整和簡短說明）以及欄位說明圖示（問號）。
 
 <table>
  <tbody>
@@ -131,7 +131,7 @@ LESS架構簡化了使用案例，進而可在調適型表單中自訂樣式。 
   </tr>
   <tr>
    <td><p><code>field-error-font-color</code></p> </td>
-   <td><p>欄位錯誤訊息的字型色彩</p> </td>
+   <td><p>欄位錯誤訊息的字型顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>field-error-font-size</code></p> </td>
@@ -142,7 +142,7 @@ LESS架構簡化了使用案例，進而可在調適型表單中自訂樣式。 
 
 ## 標籤樣式 {#label-styling}
 
-HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位於頂端還是左側。
+HTML元素 **標籤** 用於欄位包括類別 **左側** 或 **top** 標籤位於頂端還是左側。
 
 <table>
  <tbody>
@@ -161,7 +161,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>label-font-color</code></p> </td>
-   <td><p>欄位標籤的字型色彩</p> </td>
+   <td><p>欄位標籤的字型顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>label-font-size</code></p> </td>
@@ -182,11 +182,11 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
  </tbody>
 </table>
 
-標籤的CSS規則是使用 **guideFieldLabel** 標籤。 如果您是作者，請覆寫此規則，使自訂變更可見。
+標籤的CSS規則是使用 **Guidelfiellabel** 標籤。 如果您是作者，請覆寫此規則以顯示自訂變更。
 
 ## Widget樣式 {#widgets-styling}
 
-視其型別而定，Widget也包含類別。 通常，Widget包含 `guideFieldWidget` 類別。 HTML隨附的Widget通常使用標準HTML元素輸入並選取。 樣式設定會據此進行。 您無法藉由變更變數來設定自訂Widget的樣式。
+視其型別而定，Widget也包含類別。 通常Widget包含 `guideFieldWidget` 類別。 附帶HTML的Widget通常使用標準HTML元素輸入並選取。 樣式會據此來設定。 您無法藉由變更變數來設定自訂Widget的樣式。
 
 <table>
  <tbody>
@@ -261,15 +261,15 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>widgets-disabled-bg-color</code></p> </td>
-   <td><p>欄位停用時Widget的背景顏色</p> </td>
+   <td><p>欄位停用時小工具的背景顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>widgets-disabled-font-color</code></p> </td>
-   <td><p>欄位停用時Widget的字型顏色</p> </td>
+   <td><p>停用欄位時Widget的字型顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>widgets-disabled-border-color</code></p> </td>
-   <td><p>欄位停用時Widget的邊框顏色</p> </td>
+   <td><p>欄位停用時之Widget的邊框顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>widget-height</code></p> </td>
@@ -288,11 +288,11 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
 
 ### Widget樣式限制 {#limitations-in-widget-styling}
 
-焦點、強制和停用欄位的樣式受到變數的限制。 不過，您可以覆寫樣式來變更它。 提供使用變數的限制主要是為了控制變數的數量。 如果欄位處於先前討論的任何狀態，因此其外觀會大幅變更，則可放寬限制。
+焦點、強制和停用欄位的樣式會使用變數加以限制。 不過，您可以覆寫樣式來變更它。 提供使用變數的限制主要是為了控制變數的數量。 如果欄位處於先前討論的任何狀態，因此其外觀會大幅變更，則可放寬限制。
 
 ## 說明說明 {#help-description}
 
-作者可以使用簡短和長篇說明元件在欄位中指定說明內容。 兩個元件都有共同類別 `.guideHelpDescription` 和另一個類別 `.long`/ `.short`，視說明型別而定。 說明內容會包含在段落元素中，以覆寫說明的樣式。 說明說明（長與短）會使用以widgetshelp開頭的變數加以修改，如下表所述：
+作者可以使用簡短和完整說明元件，在欄位中指定說明內容。 兩個元件都有共同類別 `.guideHelpDescription` 和另一個類別 `.long`/ `.short`，視說明型別而定。 說明內容會包含在段落元素中，以覆寫說明的樣式。 說明說明（長與短）會使用以widgetshelp開頭的變數加以修改，如下表所述：
 
 <table>
  <tbody>
@@ -302,15 +302,15 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>widgets-help-long-bg-color</code></p> </td>
-   <td><p>Widget詳細說明的背景色彩</p> </td>
+   <td><p>Widget長說明的背景顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>widgets-help-long-border-color</code></p> </td>
-   <td><p>Widget長說明的邊框色彩</p> </td>
+   <td><p>Widget長說明的邊框顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>widgets-help-long-border-indicator-color</code></p> </td>
-   <td><p>Widget長說明的左側指示器邊框顏色</p> </td>
+   <td><p>Widget長說明的左側指標邊框顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>widgets-help-short-bg-color</code></p> </td>
@@ -318,15 +318,15 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>widgets-help-short-color</code></p> </td>
-   <td><p>Widget簡短說明的字型色彩</p> </td>
+   <td><p>Widget簡短說明的字型顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>widgets-help-short-tooltip-bg-color</code></p> </td>
-   <td><p>Widget簡短工具提示的背景顏色說明</p> </td>
+   <td><p>Widget簡短工具提示的背景色彩說明</p> </td>
   </tr>
   <tr>
    <td><p><code>widgets-help-short-tooltip-color</code></p> </td>
-   <td><p>Widget簡短工具提示的字型顏色說明</p> </td>
+   <td><p>Widget簡短工具提示說明的字型顏色</p> </td>
   </tr>
  </tbody>
 </table>
@@ -343,7 +343,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><code>tnc-unvisited</code></td>
-   <td>未造訪的tnc連結的字型色彩。</td>
+   <td>未造訪的Tnc連結的字型顏色。</td>
   </tr>
   <tr>
    <td><code>tnc-visited</code></td>
@@ -354,11 +354,11 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
 
 ## 按鈕 {#button}
 
-按鈕也是Widget。 不過，它們的樣式與Widget稍有不同。 在最適化表單中，下列任何一項都會構成按鈕：
+按鈕也是Widget。 不過，它們的樣式與Widget稍有不同。 在調適型表單中，下列任一項構成按鈕：
 
-* 輸入[type =文字]
+* 輸入[型別=文字]
 * 按鈕
-* 具有類別的元素.button
+* 具有類別.button的元素
 
 按鈕的HTML代碼：
 
@@ -386,7 +386,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>iconButton-label</code></p> </td>
-   <td><p>樣式按鈕標籤/註解</p> </td>
+   <td><p>樣式按鈕標籤/標題</p> </td>
   </tr>
  </tbody>
 </table>
@@ -407,7 +407,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>button-padding</code></p> </td>
-   <td><p>按鈕的CSS填補屬性</p> </td>
+   <td><p>按鈕的CSS邊框間距屬性</p> </td>
   </tr>
   <tr>
    <td><p><code>button-font-size</code></p> </td>
@@ -419,7 +419,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>button-font-color</code></p> </td>
-   <td><p>按鈕的字型色彩</p> </td>
+   <td><p>按鈕的字型顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>button-border-color</code></p> </td>
@@ -427,7 +427,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>button-large-padding</code></p> </td>
-   <td><p>大型按鈕（具有.buttonlarge類別的按鈕）的內距</p> </td>
+   <td><p>大型按鈕（類別為.buttonlarge的按鈕）的邊距</p> </td>
   </tr>
   <tr>
    <td><p><code>button-large-font-size</code></p> </td>
@@ -435,19 +435,19 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>button-small-padding</code></p> </td>
-   <td><p>小型按鈕（具有.buttonsmall類別的按鈕）的內距</p> </td>
+   <td><p>小型按鈕（類別為.buttonsmall的按鈕）的邊距</p> </td>
   </tr>
   <tr>
    <td><p><code>button-small-font-size</code></p> </td>
-   <td><p>小按鈕的字型大小</p> </td>
+   <td><p>小型按鈕的字型大小</p> </td>
   </tr>
   <tr>
    <td><p><code>button-info-background-color</code></p> </td>
-   <td><p>資訊按鈕（具有.buttoninformative類別的按鈕）的背景顏色</p> </td>
+   <td><p>資訊按鈕（類別為.buttoninformative的按鈕）的背景顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>button-info-font-color</code></p> </td>
-   <td><p>資訊按鈕的字型色彩</p> </td>
+   <td><p>資訊按鈕的字型顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>button-info-border-color</code></p> </td>
@@ -471,7 +471,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>button-alert-font-color</code></p> </td>
-   <td><p>警示按鈕的字型色彩</p> </td>
+   <td><p>警示按鈕的字型顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>button-alert-border-color</code></p> </td>
@@ -482,7 +482,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
 
 ## 問號 {#question-mark}
 
-對於Widget，當作者在說明內容中新增詳細說明，會顯示問號。 會使用啟動程式中提供的預設圖示。 若要使用自訂圖示，您可以自訂啟動載入圖示。
+對於Widget，當作者在說明內容中新增詳細說明，會顯示問號。 系統會使用bootstrap中提供的預設圖示。 若要使用自訂圖示，您可以自訂啟動程式圖示。
 
 <table>
  <tbody>
@@ -505,14 +505,14 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>questionmark-hover-font-color</code></p> </td>
-   <td><p>將滑鼠游標停留在圖示上時圖示的顏色</p> </td>
+   <td><p>當滑鼠停留在圖示上時的圖示顏色</p> </td>
   </tr>
  </tbody>
 </table>
 
 ## 表格 {#table}
 
-您可以使用下列變數來變更表格中標題和本文列的顏色主題。
+您可以使用下列變數來變更表格中標題列和本文列的顏色主題。
 
 <table>
  <tbody>
@@ -559,11 +559,11 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>fileItemColor</code></p> </td>
-   <td><p>檔案專案的字型色彩</p> </td>
+   <td><p>檔案專案的字型顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>filePreviewIconColor</code></p> </td>
-   <td><p>Widget中預覽圖示(Bootstrap圖示)的顏色</p> </td>
+   <td><p>小工具中預覽圖示(Bootstrap圖示)的顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>fileItemCommentHeight</code></p> </td>
@@ -574,7 +574,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
 
 ## 瀏覽器樣式 {#navigator-styles}
 
-有四種型別的導覽器標籤。 這些標籤包括左側、頂部、精靈和摺疊式功能表中的標籤。 每個瀏覽器都有不同的類別。
+有四種型別的導覽器標籤。 這些標籤包括左側、頂部、精靈和摺疊式功能表。 每個瀏覽器都有不同的類別。
 
 <table>
  <tbody>
@@ -584,7 +584,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>Accordion</code></p> </td>
-   <td><p>.accordion-navigator</p> </td>
+   <td><p>.accordion-navigators</p> </td>
   </tr>
   <tr>
    <td><p><code>tabs on the left</code></p> </td>
@@ -601,7 +601,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
  </tbody>
 </table>
 
-以下是Tab鍵瀏覽元素的HTML代碼（類似於Bootstrap標籤）：
+以下是Tab鍵瀏覽器元素的HTML代碼（類似於Bootstrap標籤）：
 
 `<li>`
 
@@ -643,7 +643,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
 
 `</div>`
 
-您可以使用CSS規則來變更導覽器的樣式，該規則會使用以下方式選取元素 **下級** 選取器。 例如，若要將文字裝飾樣式新增至錨點標籤：
+您可以使用CSS規則變更導覽器的樣式，CSS規則會使用以下方式選取元素 **下級** 選擇器。 例如，若要將文字裝飾樣式新增至錨點標籤：
 
 頂端的Tab導覽器：
 
@@ -691,7 +691,7 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
 
 `}`
 
-此外，根據索引標籤導覽器是否有巢狀/子項/子項導覽器，也有類別可設定索引標籤導覽器的樣式（左側和頂部）。
+此外，根據標籤導覽器是否有巢狀/子項/子項導覽器，有類別可設定標籤導覽器的樣式（左側和頂部）。
 
 <table>
  <tbody>
@@ -701,16 +701,16 @@ HTML元素 **標籤** 用於欄位，包括類別 **left** 或 **top** 標籤位
   </tr>
   <tr>
    <td><p><code>nested_true</code></p> </td>
-   <td><p>具有巢狀/子項/子項導覽器的索引標籤導覽器（左側和頂部）</p> </td>
+   <td><p>具有巢狀/子項/子項導覽器的標籤導覽器（左側和頂部）</p> </td>
   </tr>
   <tr>
    <td><p><code>nested_false</code></p> </td>
-   <td><p>沒有巢狀/子項/子項導覽器的索引標籤導覽器（左側和頂部）</p> </td>
+   <td><p>沒有巢狀/子項/子項導覽器的索引標籤導覽器（左和上）</p> </td>
   </tr>
  </tbody>
 </table>
 
-guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導覽器的預設圖示。
+guideNavIcon類別會提供預設圖示，供定位點導覽器（左側和頂部）和精靈導覽器使用。
 
 <table>
  <tbody>
@@ -723,7 +723,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
 
 >[!NOTE]
 >
->您可以在編寫表單範例的面板上提供CSS類別，以變更特定導覽器的圖示 &lt;class_name>. 您新增 **&lt;class_name>_nav** 以取得瀏覽器的圖示。
+>您可以在編寫表單範例的面板上提供CSS類別，以變更特定導覽器的圖示 &lt;class_name>. 您新增 **&lt;class_name>_nav** 用於導覽器的圖示。
 
 <table>
  <tbody>
@@ -749,11 +749,11 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>tabs-hover-bg-color</code></p> </td>
-   <td><p>暫留時索引標籤的背景顏色</p> </td>
+   <td><p>游標停留時索引標籤的背景顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>tabs-hover-font-color</code></p> </td>
-   <td><p>暫留時索引標籤的字型顏色</p> </td>
+   <td><p>游標停留時索引標籤的字型顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>tabs-active-bg-color</code></p> </td>
@@ -845,7 +845,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>wizard-tabs-stepped-bg-color</code></p> </td>
-   <td>面板成為焦點一次但完成運算式傳回false時的背景顏色</td>
+   <td>面板成為焦點一次，但完成運算式傳回false時的背景顏色</td>
   </tr>
   <tr>
    <td><p><code>wizard-tabs-stepped-font-color</code></p> </td>
@@ -853,7 +853,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>wizard-tabs-border-color</code></p> </td>
-   <td><p>精靈的色彩</p> </td>
+   <td><p>精靈的顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>wizard-tabs-font-size</code></p> </td>
@@ -869,18 +869,18 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>wizard-nav-bullet-border</code></p> </td>
-   <td><p>精靈導覽器專案符號的邊框顏色（註解/標籤的前置詞）</p> </td>
+   <td><p>精靈導覽器專案符號的邊框顏色（在標題/標籤前置）</p> </td>
   </tr>
   <tr>
    <td><p><code>wizard-progress-bg-color</code></p> </td>
-   <td><p>精靈導覽器進度列的背景色彩</p> </td>
+   <td><p>精靈導覽器進度列的背景顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>wizard-progress-color</code></p> </td>
    <td><p>進度列的填色色彩</p> </td>
   </tr>
   <tr>
-   <td><p><strong>收合式選單導覽器</strong></p> </td>
+   <td><p><strong>摺疊式導覽器</strong></p> </td>
    <td><p> </p> </td>
   </tr>
   <tr>
@@ -919,7 +919,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>panel-font-color</code></p> </td>
-   <td><p>面板文字的字型色彩<br /> </p> </td>
+   <td><p>面板文字的字型顏色<br /> </p> </td>
   </tr>
   <tr>
    <td><p><code>panel-padding</code></p> </td>
@@ -931,7 +931,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>panel-description-padding</code></p> </td>
-   <td><p>面板說明的內邊距</p> </td>
+   <td><p>面板說明的內距</p> </td>
   </tr>
   <tr>
    <td><p><code>panel-help-bg-color</code></p> </td>
@@ -944,9 +944,9 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
  </tbody>
 </table>
 
-面板節點分為導覽器和內容。 那裡 `` `` 內容沒有獨立的樣式元件。 所描述的變數會套用至導覽器及內容。
+面板節點分為導覽器和內容。 那裡 `` `` 內容沒有獨立的樣式元件。 所描述的變數會套用至導覽器和內容。
 
-最上方的面板(RootPanel)沒有此類別。
+最上層的面板(RootPanel)沒有這個類別。
 
 ## 行動樣式 {#mobile-styling}
 
@@ -975,7 +975,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>headerbar-font-color</code></p> </td>
-   <td><p>標頭列中文字的字型色彩</p> </td>
+   <td><p>標頭列中文字的字型顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>headerbar-padding</code></p> </td>
@@ -986,7 +986,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
 
 ## 捲動指示器 {#scroll-indicator}
 
-這些變數會影響捲動指示器，也就是出現在行動裝置或小熒幕裝置上的橘色箭頭。 捲動指示器表示畫面可見部分以外的內容存在。 您可以向下捲動來檢視。 當您按下內容的結尾時，箭頭會消失。
+這些變數會影響捲動指示器，也就是出現在行動裝置或小熒幕裝置上的橘色箭頭。 捲動指示器表示畫面可見部分以外的內容存在。 您可以向下捲動以檢視它。 當您按下內容的結尾時，箭頭會消失。
 
 <table>
  <tbody>
@@ -1024,7 +1024,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
 
 ## 行動固定工具列配置特定變數 {#mobile-fixed-toolbar-layout-specific-variables}
 
-下表中的這些變數會影響行動固定工具列版面配置。
+下表中的這些變數會影響行動固定工具列的配置。
 
 <table>
  <tbody>
@@ -1047,7 +1047,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>mobileToolbarTop</code></p> </td>
-   <td><p>固定工具列位置，在行動裝置上，從上方</p> </td>
+   <td><p>在行動裝置上從頂端固定工具列位置</p> </td>
   </tr>
   <tr>
    <td><p><code>mobileToolbarLeft</code></p> </td>
@@ -1055,11 +1055,11 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>mobileToolbarRight</code></p> </td>
-   <td><p>固定工具列位置，在行動裝置上，從右側</p> </td>
+   <td><p>在行動裝置上從右固定工具列位置</p> </td>
   </tr>
   <tr>
    <td><p><code>mobileButtonIconTopMargin</code></p> </td>
-   <td><p>固定工具列按鈕圖示的位置（從頂端）</p> </td>
+   <td><p>從頂端修正工具列按鈕圖示的位置</p> </td>
   </tr>
   <tr>
    <td><p><code>mobileButtonIconWidth</code></p> </td>
@@ -1092,7 +1092,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>button-hover-bg-color</code></p> </td>
-   <td><p>暫留時按鈕的背景顏色</p> </td>
+   <td><p>游標停留時按鈕的背景顏色</p> </td>
   </tr>
   <tr>
    <td><p><code>button-radius</code></p> </td>
@@ -1100,15 +1100,15 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>navigation-button-bg-color</code></p> </td>
-   <td><p>導覽按鈕的背景顏色（上一頁/下一頁）</p> </td>
+   <td><p>導覽按鈕的背景顏色（上一步/下一步）</p> </td>
   </tr>
   <tr>
    <td><p><code>navigation-button-bg-hover-color</code></p> </td>
-   <td><p>暫留時導覽按鈕的背景顏色（上一頁/下一頁）</p> </td>
+   <td><p>暫留時導覽按鈕的背景顏色（上一步/下一步）</p> </td>
   </tr>
   <tr>
    <td><p><code>initial-nav-color</code></p> </td>
-   <td><p>第一次呈現精靈導覽器和對應進度列的背景顏色。</p> </td>
+   <td><p>第一次轉譯時精靈導覽器和對應進度列的背景顏色。</p> </td>
   </tr>
   <tr>
    <td><p><code>active-nav-color</code></p> </td>
@@ -1116,7 +1116,7 @@ guideNavIcon類別會提供定位點導覽器（左側和頂部）和精靈導�
   </tr>
   <tr>
    <td><p><code>visited-nav-color</code></p> </td>
-   <td><p>已造訪的精靈導覽器和對應進度列的背景顏色。</p> </td>
+   <td><p>精靈導覽器的背景顏色和對應的進度列（已瀏覽）。</p> </td>
   </tr>
   <tr>
    <td><p><code>tabs-bifercating-border-color</code></p> </td>

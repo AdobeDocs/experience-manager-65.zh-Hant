@@ -11,9 +11,9 @@ discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 feature: Adaptive Forms
 exl-id: 935b734c-6fb1-45e8-8515-e98c8b85286c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3154'
 ht-degree: 56%
 
 ---
@@ -52,7 +52,7 @@ XML 和 JSON 結構描述表示組織的後端系統產生或使用資料的結�
 * 標準表單元件
 * 整合式資產存放庫
 
-當您建立新的或編輯現有的最適化表單時，會使用下列UI元素：
+當您建立或編輯現有的最適化表單時，會使用下列UI元素：
 
 * [側邊欄](#sidebar)
 * [頁面工具列](#page-toolbar)
@@ -154,7 +154,7 @@ XML 和 JSON 結構描述表示組織的後端系統產生或使用資料的結�
   </tr>
   <tr>
    <td>電子郵件</td>
-   <td><p>新增欄位以擷取電子郵件地址。電子郵件元件預設會使用以下規則運算式驗證電子郵件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
+   <td><p>新增欄位以擷取電子郵件地址。電子郵件元件預設會使用以下規則運算式驗證電子郵件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
   </tr>
   <tr>
    <td>檔案附件</td>

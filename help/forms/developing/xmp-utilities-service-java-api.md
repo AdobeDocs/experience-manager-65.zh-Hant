@@ -1,7 +1,7 @@
 ---
 title: XMP公用程式服務Java APIQuick啟動(SOAP)
 seo-title: XMP Utilities Service Java APIQuick Start(SOAP)
-description: 使用XMP Utilities服務匯出和匯入XMP中繼資料。
+description: 使用「XMP公用程式」服務來匯出和匯入XMP中繼資料。
 seo-description: Use the XMP Utilities service to export and import XMP metadata.
 uuid: 5db4c623-75db-4a34-9ad2-3c917619e296
 contentOwner: admin
@@ -11,9 +11,9 @@ topic-tags: develop
 discoiquuid: 1b229ddf-9350-40b6-8056-dcbe0c5afd5b
 role: Developer
 exl-id: 699a7309-a976-480e-886f-2e466a477348
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->若您使用其他作業系統（例如UNIX），以Forms伺服器為基礎，使用AEM Forms程式設計中的快速入門功能會以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>如果使用UNIX等其他作業系統，請將Windows專用的路徑取代為適用作業系統支援的路徑，則「使用AEM表單進行程式設計」中的快速入門是以Forms伺服器為基礎。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入門（SOAP模式）：使用Java API匯出XMP中繼資料 {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
 
-下列程式碼範例會擷取、檢查並儲存XMP中繼資料。 (請參閱 [從PDF檔案匯出中繼資料](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents).)
+下列程式碼範例會擷取、檢查及儲存XMP中繼資料。 (請參閱 [從PDF檔案匯出中繼資料](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents).)
 
 ```java
  /*
@@ -62,7 +62,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -71,7 +71,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -139,7 +139,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API匯入XMP中繼資料 {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
 
-下列程式碼範例會匯入XMP中繼資料，並將新的PDF檔案儲存至磁碟。 PDF檔案是以名為Loan.pdf的PDF檔案為基礎。 包含要匯入至PDF檔案之中繼資料的XML檔案，是以名為的XML檔案為基礎 *LoanMetaData.xml*. 如需有關此XML檔案的資訊，請參閱 [將中繼資料匯入PDF檔案](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
+下列程式碼範例會匯入XMP中繼資料，並將新的PDF檔案儲存至磁碟。 PDF檔案是以名為Loan.pdf的PDF檔案為基礎。 包含要匯入至PDF檔案之中繼資料的XML檔案是以名為的XML檔案為基礎 *LoanMetaData.xml*. 如需有關此XML檔案的資訊，請參閱 [將中繼資料匯入PDF檔案](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
 
 ```java
  /*
@@ -167,7 +167,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -176,7 +176,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *

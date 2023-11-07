@@ -9,9 +9,9 @@ topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '485'
 ht-degree: 7%
 
 ---
@@ -23,18 +23,18 @@ ht-degree: 7%
 
 ![hero-image](do-not-localize/correspondence-management.png)
 
-互動式通訊可集中處理及管理安全、個人化與互動式通訊的建立、集合與傳遞，例如商務信函、檔案、對帳單、利益通知、行銷郵件、帳單和歡迎套件。
+「互動式通訊」可集中處理及管理安全、個人化與互動式通訊的建立、集合與傳遞，例如商務信函、檔案、對帳單、福利通知、行銷郵件、帳單和歡迎套件。
 
-## 重要功能 {#key-capabilities}
+## 主要功能 {#key-capabilities}
 
 以下是互動式通訊的主要功能：
 
-- 與表單資料模型開箱即用的整合，讓您輕鬆且簡化存取後端資料庫和其他CRM系統，例如MS® Dynamics
-- 適用於列印與網頁頻道的整合式撰寫介面，可自動從列印頻道產生網頁頻道
+- 與表單資料模型開箱即用的整合，可輕鬆且簡化後端資料庫和其他CRM系統(例如MS® Dynamics)的存取
+- 適用於列印與網路頻道的整合式撰寫介面，可自動從列印頻道產生網路頻道
 - 以易於理解的視覺格式在列印和網頁中顯示資訊的圖表
 - 檔案片段支援規則編輯器和表單資料模型
-- 代理使用者介面會顯示互動式通訊的列印與網頁預覽
-- 拖放元件以快速建構列印和網路頻道
+- 代理程式使用者介面會顯示互動式通訊的列印與網頁預覽
+- 拖放元件，以快速建構列印和網路頻道
 
 ## 建立互動式通訊 {#interactive-communication-creation}
 
@@ -46,9 +46,9 @@ ht-degree: 7%
 
 1. 選擇以 [建立互動式通訊](/help/forms/using/create-interactive-communication.md).
 
-1. 指定 [表單資料模型](/help/forms/using/data-integration.md)，預填服務，以及 [列印和Web Channel範本](/help/forms/using/web-channel-print-channel.md). 您可以選擇從列印管道產生Web Channel。
+1. 指定 [表單資料模型](/help/forms/using/data-integration.md)，預填服務，以及 [列印和web channel範本](/help/forms/using/web-channel-print-channel.md). 您可以選擇從列印管道產生Web Channel。
 
-1. 使用 [拖放介面](/help/forms/using/introduction-interactive-communication-authoring.md)，視需要新增檔案片段、影像、要列印的元件以及互動式通訊的Web頻道。
+1. 使用 [拖放介面](/help/forms/using/introduction-interactive-communication-authoring.md)，視需要新增檔案片段、影像、元件以列印互動式通訊的Web管道。
 1. 為插入的元件設定屬性，如下所示：
 
    1. [影像](/help/forms/using/create-interactive-communication.md#step2)
@@ -56,18 +56,18 @@ ht-degree: 7%
    1. [圖表](/help/forms/using/chart-component-interactive-communications.md)
    1. [檔案片段](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
-1. 預覽列印和Web通道，並視需要編輯互動式通訊。
+1. 預覽列印和Web管道，並視需要編輯互動式通訊。
 1. 代理程式會使用Agent UI來 [準備互動式通訊](/help/forms/using/prepare-send-interactive-communication.md) 以傳送給收件者/貼文程式。
 
 ### 建置區塊 {#buildingblocks}
 
-以下是建立互動式通訊所需的建置組塊：
+以下是建立互動式通訊所需的建置區塊：
 
 - [表單資料模型](/help/forms/using/data-integration.md)
 - [列印和Web Channel範本](/help/forms/using/web-channel-print-channel.md)
 - [檔案片段](/help/forms/using/document-fragments.md)
 - 影像
-- [主題](/help/forms/using/themes.md) 網路頻道
+- [主題](/help/forms/using/themes.md) 針對Web channel
 
 ## 互動式通訊與通訊管理 {#interactive-communications-vs-correspondence-management}
 
@@ -82,7 +82,7 @@ ht-degree: 7%
   </tr>
   <tr>
    <td>輸出</td>
-   <td>列印與網頁</td>
+   <td>列印和網頁</td>
    <td>列印</td>
   </tr>
   <tr>
@@ -91,7 +91,7 @@ ht-degree: 7%
    <td>資料字典 </td>
   </tr>
   <tr>
-   <td>本土化</td>
+   <td>本地化</td>
    <td>不支援表單資料模型</td>
    <td>在資料字典中支援</td>
   </tr>
@@ -106,12 +106,12 @@ ht-degree: 7%
   </tr>
   <tr>
    <td>編寫</td>
-   <td>用於建構列印和網頁通道的拖放介面</td>
+   <td>用於建構列印和Web Channel的拖放介面</td>
    <td>無拖放機制 </td>
   </tr>
   <tr>
    <td>圖表</td>
-   <td>列印及Web Channel中支援的圖表</td>
+   <td>列印和Web Channel支援的圖表</td>
    <td>不支援</td>
   </tr>
   <tr>

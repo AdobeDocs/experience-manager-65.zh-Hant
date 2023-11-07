@@ -7,7 +7,7 @@ activity: setup
 audience: administrator
 feature: Commerce Integration Framework
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 2%
@@ -49,7 +49,7 @@ AEM CIF核心元件可用於多個AEM網站結構，而基礎的GraphQL使用者
 4. 將子組態指派至AEM站台
 
    * 前往AEM Sites主控台
-   * 導覽至您網站結構的區域或語言根目錄，例如/content/venia/us _或_ /content/venia/us/en代表Venia範例頁面
+   * 導覽至您網站結構的區域或語言根，例如/content/venia/us _或_ /content/venia/us/en代表Venia範例頁面
    * 選取頁面並開啟頁面屬性
    * 選取「進階」標籤
    * 在 `Configuration` 區段，選取您在步驟中建立的組態

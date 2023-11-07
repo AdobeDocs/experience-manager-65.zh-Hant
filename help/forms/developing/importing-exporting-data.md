@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
 role: Developer
 exl-id: 96310e0a-8e95-4a55-9508-5298b8d67f83
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2774'
+source-wordcount: '2771'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ ht-degree: 0%
 
 **參考XML資料來源**
 
-若要匯入表單資料，您必須參考有效的資料來源。 若要將資料匯入在Designer中建立的XFA XML表單，您必須使用XDP XML資料來源。 如果您參照Acrobat表單，則必須使用XFDF資料來源。 對於您想要匯入資料的每個欄位，必須指定值。 如果位於XML資料來源中的元素未對應至表單中的欄位，則會忽略該元素。
+若要匯入表單資料，您必須參考有效的資料來源。 若要將資料匯入在Designer中建立的XFA XML表單，您必須使用XDP XML資料來源。 如果您參照Acrobat表單，則必須使用XFDF資料來源。 對於您想要匯入資料的每個欄位，必須指定值。 如果XML資料來源中的元素未對應至表單中的欄位，則會忽略該元素。
 
 **將資料匯入PDF表單**
 
@@ -177,7 +177,7 @@ ht-degree: 0%
    * 此 `com.adobe.idp.Document` 儲存PDF表單的物件。
    * 此 `com.adobe.idp.Document` 儲存表單資料的物件。
 
-   此 `importData` 方法傳回 `com.adobe.idp.Document` 此物件會儲存PDF表單，其中包含位於XML資料來源中的資料。
+   此 `importData` 方法傳回 `com.adobe.idp.Document` 物件，用來儲存XML資料來源中包含PDF資料的表單。
 
 1. 將PDF表單儲存為PDF檔案。
 
@@ -242,7 +242,7 @@ ht-degree: 0%
    * 此 `BLOB` 儲存PDF表單的物件。
    * 此 `BLOB` 儲存表單資料的物件。
 
-   此 `importData` 方法傳回 `BLOB` 此物件會儲存PDF表單，其中包含位於XML資料來源中的資料。
+   此 `importData` 方法傳回 `BLOB` 物件，用來儲存XML資料來源中包含PDF資料的表單。
 
 1. 將PDF表單儲存為PDF檔案。
 

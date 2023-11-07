@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '7667'
+source-wordcount: '7665'
 ht-degree: 1%
 
 ---
@@ -430,7 +430,7 @@ AEM Forms on JEE通常會使用輕量型目錄存取協定(LDAP)目錄作為企�
 
 ### 稽核與記錄 {#auditing-and-logging}
 
-正確且安全地使用應用程式稽核和記錄，有助於確保儘快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能包括追蹤成功和失敗登入等專案，以及建立或刪除關鍵記錄等重要應用程式事件。
+正確且安全地使用應用程式稽核和記錄，有助於確保儘快追蹤和偵測安全性和其他異常事件。 在應用程式中有效使用稽核和記錄功能包括追蹤成功和失敗的登入等專案，以及建立或刪除關鍵記錄等重要應用程式事件。
 
 您可以使用稽核來偵測許多型別的攻擊，包括：
 
@@ -662,7 +662,7 @@ A *反向Proxy* 可用來確保外部和內部使用者均可使用JEE網頁應�
 
 跨網站請求偽造(CSRF)攻擊會利用網站對使用者的信任，傳輸未經授權且使用者未預期的命令。 將連結或指令碼包含在網頁中，或將URL包含在電子郵件訊息中，以存取使用者已驗證的其他網站，藉此設定攻擊。
 
-例如，您可能在瀏覽其他網站的同時登入Administration Console。 其中一個網頁可能包含帶有的HTML影像標籤 `src` 鎖定受害者網站上伺服器端指令碼的屬性。 利用網頁瀏覽器提供的Cookie式工作階段驗證機制，攻擊網站就可以傳送惡意請求給這個受到傷害的伺服器端指令碼，偽裝成合法使用者。 如需更多範例，請參閱 [https://owasp.org/www-community/attacks/csrf#Examples](https://owasp.org/www-community/attacks/csrf#Examples).
+例如，您可能在瀏覽其他網站的同時登入Administration Console。 其中一個網頁可能包含帶有的HTML影像標籤 `src` 鎖定受害者網站上伺服器端指令碼的屬性。 使用網頁瀏覽器提供的Cookie型工作階段驗證機制，攻擊網站可以傳送惡意要求給這個受到傷害的伺服器端指令碼，偽裝成合法使用者。 如需更多範例，請參閱 [https://owasp.org/www-community/attacks/csrf#Examples](https://owasp.org/www-community/attacks/csrf#Examples).
 
 CSRF的通用特性如下：
 

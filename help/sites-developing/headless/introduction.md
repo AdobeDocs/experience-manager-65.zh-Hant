@@ -2,10 +2,10 @@
 title: 適用於AEM 6.5 Sites的Headless開發
 description: 瞭解AEM 6.5強大的Headless功能(例如內容模型、內容片段和GraphQL API)如何搭配運作，讓您集中管理您的體驗並跨管道提供這些體驗。
 exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 37%
+source-wordcount: '518'
+ht-degree: 38%
 
 ---
 
@@ -48,11 +48,11 @@ AEM 6.5是適用於Headless實作模式的彈性工具，提供三種強大的�
 
 ## 使用 AEM Headless 的第一步 {#first-steps}
 
-有許多資源可供您開始使用AEM Headless功能。 這些範本適用於不同的使用案例，但都能為AEM Headless功能提供可靠的概覽。
+您有數個資源可開始使用AEM Headless功能。 這些範本適用於不同的使用案例，但都能為AEM Headless功能提供可靠的概覽。
 
 | 資源 | 說明 | 類型 | 對象 | 預估時間 |
 |---|---|---|---|---|
 | [Headless 開發人員歷程](/help/journey-headless/developer/overview.md) | **適用於不熟悉AEM和Headless的使用者** 技術，從這裡開始全面介紹AEM及其Headless功能，從Headless的理論直到您的第一個Headless專案。 | 指南 | **剛接觸 AEM 和無周邊技術** 的開發人員 | 1 小時 |
 | [Headless快速入門手冊](/help/sites-developing/headless/getting-started/introduction.md) | 對於需要扼要介紹關鍵 AEM 無周邊功能的&#x200B;**有經驗 AEM 使用者**，請查看此快速入門概述。 | 快速入門 | **具有 AEM 經驗**&#x200B;的開發人員、管理員 | 20 分鐘 |
 | [AEM Headless實作教學課程快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **如果您偏好實作方法並且熟悉AEM**，本教學課程將直接說明如何建立簡單的Headless專案。 | 教學課程 | 開發人員 | 2 小時 |
-| [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html) | 此資源集合是為兩者提供 **新** 和 **經驗豐富** 開發人員。 | 資源集合 | 開發人員 | |
+| [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html) | 此資源集合是為兩者提供 **新** 和 **經驗豐富** 開發人員。 | 資源集合 | 開發人員 | |

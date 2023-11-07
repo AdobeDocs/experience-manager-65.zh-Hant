@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c68d5853-684f-42f2-a215-c1eaee06f58a
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1132'
 ht-degree: 1%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->本文介紹與Client Context搭配使用之區段的設定。 若要使用觸控式UI透過ContextHub設定區段，請參閱 [使用ContextHub設定分段](/help/sites-administering/segmentation.md).
+>本文介紹與Client Context搭配使用之區段的設定。 若要使用觸控式UI以ContextHub設定區段，請參閱 [使用ContextHub設定分段](/help/sites-administering/segmentation.md).
 
 細分是建立行銷活動時的關鍵考量。 另請參閱 [區段字彙表](/help/sites-authoring/segmentation-overview.md) 區段運作方式和主要術語的相關資訊。
 
-根據您已收集到的網站訪客相關資訊以及您想要達成的目標，您將需要定義目標內容所需的區段和策略。
+根據您已收集到的網站訪客相關資訊以及您想要達成的目標，您必須定義目標內容所需的區段和策略。
 
 接著，這些區段可用來向訪客提供明確鎖定的目標內容。 此內容維護於 [行銷活動](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md) 網站區段。 此處定義的Teaser頁面可包含在任何頁面上作為Teaser段落，並定義專用內容適用的訪客區段。
 
@@ -131,7 +131,7 @@ AEM可讓您輕鬆建立和更新區段、Teaser和促銷活動。 它也可讓�
 1. 建立 [新頁面](/help/sites-authoring/editing-content.md#creatinganewpage) 使用 **區段** 範本。
 1. 開啟新頁面以檢視區段編輯器：
 
-   ![在區段編輯器中建立新區段的第一步](assets/screen_shot_2012-02-02at101726am.png)
+   ![在區段編輯器中建立區段的第一步](assets/screen_shot_2012-02-02at101726am.png)
 
 1. 使用sidekick或內容功能表(通常是按一下滑鼠右鍵，然後選取 **新增……** 以開啟「插入新元件」視窗)來尋找所需的區段特徵。 然後將其拖曳至 **區段編輯器** 它將顯示在預設值 **和** 容器。
 1. 按兩下新特徵以編輯特定引數；例如滑鼠位置：

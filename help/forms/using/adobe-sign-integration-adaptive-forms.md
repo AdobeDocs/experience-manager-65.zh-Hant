@@ -10,9 +10,9 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2073'
 ht-degree: 21%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 21%
 
    >[!NOTE]
    >
-   >您可以執行步驟1至4以建立新的設定容器並建立 [!DNL Adobe Sign] 在容器中設定或使用現有的 `global` 資料夾位置 **工具** ![錘子](assets/hammer.png) > **[!UICONTROL Cloud Service]** > **[!UICONTROL Adobe Sign]**. 如果您在新設定容器中建立設定，請務必在 **[!UICONTROL 設定容器]** 欄位建立最適化表單時。
+   >您可以執行步驟1至4來建立設定容器並建立 [!DNL Adobe Sign] 在容器中設定或使用現有的 `global` 資料夾位置 **工具** ![錘子](assets/hammer.png) > **[!UICONTROL Cloud Service]** > **[!UICONTROL Adobe Sign]**. 如果您在新設定容器中建立設定，請務必在 **[!UICONTROL 設定容器]** 欄位建立最適化表單時。
 
    >[!NOTE]
    >

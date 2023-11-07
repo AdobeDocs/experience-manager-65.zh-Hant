@@ -3,7 +3,7 @@ title: 設定RTF編輯器外掛程式
 description: 瞭解如何設定Adobe Experience Manager RTF編輯器外掛程式，以啟用個別功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '4395'
 ht-degree: 2%
@@ -95,7 +95,7 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 
 若要設定RTE以顯示必要的圖示，請按照下列步驟操作。
 
-1. 導覽至您的元件，例如 `/apps/<myProject>/components/text`.
+1. 導覽至您的元件，例如， `/apps/<myProject>/components/text`.
 1. 導覽至節點 `rtePlugins/edit`. 另請參閱 [啟動外掛程式](#activateplugin) 如果節點不存在。
 1. 建立 `features` 上的屬性 `edit` 節點並新增一或多個功能。 儲存所有變更。
 
@@ -226,7 +226,7 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 
 然後，指定要參照的樣式表位置：
 
-1. 導覽至文字元件的根節點，例如 `/apps/<myProject>/components/text`.
+1. 導覽至文字元件的根節點，例如， `/apps/<myProject>/components/text`.
 1. 新增屬性 `externalStyleSheets` 至的父節點 `<rtePlugins-node>`：
 
    * **名稱** `externalStyleSheets`

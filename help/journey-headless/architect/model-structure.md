@@ -2,7 +2,7 @@
 title: 了解如何在 AEM 中建立內容片段模型
 description: 了解使用內容片段模型建立 Headless CMS 內容模型的概念和機制。
 exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 92%
@@ -13,9 +13,9 @@ ht-degree: 92%
 
 ## 到目前為止 {#story-so-far}
 
-在[AEM Headless 內容作者歷程](overview.md)的一開始，[AEM Headless 內容模型基本知識](basics.md)介紹了和無周邊內容編寫相關的基本概念和術語。
+在[AEM Headless 內容作者歷程](overview.md)的一開始，[AEM Headless 內容模型基本知識](basics.md)介紹了和 Headless 內容編寫相關的基本概念和術語。
 
-本文以這些內容為基礎，以便您了解如何為 AEM 無周邊專案建立您自己的內容片段模型。
+本文以這些內容為基礎，以便您了解如何為 AEM Headless 專案建立您自己的內容片段模型。
 
 ## 目標 {#objective}
 
@@ -28,7 +28,7 @@ ht-degree: 92%
 <!--
 ## Enabling Content Fragment Models {#enabling-content-fragment-models}
 
-At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools -> General -> Configuration Browser. You can either select to configure the global entry, or create a new configuration. For example:
+At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools -> General -> Configuration Browser. You can either select to configure the global entry, or create a configuration. For example:
 
 ![Define configuration](/help/assets/content-fragments/assets/cfm-conf-01.png)
 
@@ -39,7 +39,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ## 建立內容片段模型 {#creating-content-fragment-models}
 
-然後可以建立內容片段模型並定義結構。這可以在「工具 — >資產 — >內容片段模型」下完成。
+然後可以建立內容片段模型並定義結構。您可以在「工具 — >資產 — >內容片段模型」底下執行此操作。
 
 ![工具中的內容片段模型](assets/cfm-tools.png)
 
@@ -110,7 +110,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 * [編寫概念](/help/sites-authoring/author.md)
 
-* [基本處理](/help/sites-authoring/basic-handling.md)  — 此頁面主要根據 **網站** 主控台，但許多/大多數功能也與導覽至和執行動作相關， **內容片段模型** 在 **資產** 主控台。
+* [基本處理](/help/sites-authoring/basic-handling.md)  — 此頁面主要根據 **網站** 主控台，但許多/大多數功能也與導覽至和針對執行動作有關， **內容片段模型** 在 **資產** 主控台。
 
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)
 

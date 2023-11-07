@@ -7,9 +7,9 @@ topic-tags: managing-checklist, introduction
 content-type: reference
 docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3240'
+source-wordcount: '3238'
 ht-degree: 1%
 
 ---
@@ -351,7 +351,7 @@ ht-degree: 1%
 
 ### 效能與測試 {#performance-and-testing}
 
-新應用程式推出後，需要經過嚴格的功能與測試 [績效](/help/sites-deploying/configuring-performance.md).
+新應用程式推出後，必須經過嚴格的功能與測試 [績效](/help/sites-deploying/configuring-performance.md).
 
 >[!NOTE]
 >

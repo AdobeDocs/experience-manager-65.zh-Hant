@@ -7,7 +7,7 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: bc6a97a55f392cba03131ee3ca7cad35b8c1e69b
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3949'
 ht-degree: 17%
@@ -145,7 +145,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線到多個Experien
 ## 使用Dynamic Media資產 {#dynamic-media-assets}
 
 
-使用「連線資產」，您可以使用透過以下方式處理的影像資產： [!DNL Dynamic Media] 從Sites頁面上的遠端DAM部署，並運用Dynamic Media功能，例如智慧型裁切和影像預設集。
+使用「連線資產」，您可以使用透過以下方式處理的影像資產： [!DNL Dynamic Media] 從Sites頁面上的遠端DAM部署，並使用Dynamic Media功能，例如智慧型裁切和影像預設集。
 
 使用 [!DNL Dynamic Media] 透過連線資產：
 

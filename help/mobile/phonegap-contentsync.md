@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 docset: aem65
 exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2959'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -287,7 +287,7 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 
 ### 實作自訂更新處理常式 {#implementing-a-custom-update-handler}
 
-每個We.Retail Mobile頁面左上角都有標誌，我們當然想要將其納入zip檔案中。 不過，針對快取最佳化，AEM不會參考影像檔案在存放庫中的實際位置，這可防止我們單純使用 **複製** 設定型別。 我們必須做的是提供我們自己的 **標誌** 設定型別，可在AEM要求的位置使用影像。 下列程式碼清單顯示完整實施的標誌更新處理常式：
+每個We.Retail Mobile頁面左上角都有一個標誌，我們想要將該標誌納入zip檔案中。 不過，針對快取最佳化，AEM不會參考影像檔案在存放庫中的實際位置，這可防止我們單純使用 **複製** 設定型別。 我們必須做的是提供我們自己的 **標誌** 設定型別，可在AEM要求的位置使用影像。 下列程式碼清單顯示完整實施的標誌更新處理常式：
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 

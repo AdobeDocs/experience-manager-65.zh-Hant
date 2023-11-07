@@ -1,18 +1,14 @@
 ---
 title: 管理訂閱
-seo-title: Managing Subscriptions
 description: 可要求使用者利用AEM網頁上使用的表單元件，訂閱電子郵件服務提供者的郵寄清單。 若要使用登錄檔單準備AEM頁面以訂閱您的電子郵件服務郵寄清單，您必須將對應的服務設定套用至潛在訂閱者將造訪的AEM頁面。
-seo-description: Users can be asked to subscribe to Email Service Provider's mailing lists with the help of the Form component used on an AEM web page. To prepare an AEM page with a sign-up form for subscription to your e-mail service mailing lists, you must apply the corresponding service configuration to the AEM page that the potential subscriber will visit.
-uuid: b2578a3d-dba1-4114-b21a-5f34c0cccc5a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 295cb0a6-29db-42aa-824e-9141b37b5086
 exl-id: add05d22-3a11-49e9-a554-2315962552d5
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '913'
 ht-degree: 1%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 1%
 >[!NOTE]
 >
 >Adobe不打算進一步增強此功能（管理銷售機會和清單）。
->建議善用 [Adobe Campaign及其AEM整合](/help/sites-administering/campaign.md).
+>建議使用 [Adobe Campaign及其AEM整合](/help/sites-administering/campaign.md).
 
 可要求使用者訂閱 **電子郵件服務提供者的** 郵寄清單，請參閱 **表單** 用於AEM網頁的元件。 若要使用登錄檔單準備AEM頁面以訂閱您的電子郵件服務郵寄清單，您必須將對應的服務設定套用至潛在訂閱者將造訪的AEM頁面。
 
@@ -72,7 +68,7 @@ ht-degree: 1%
 若要透過發佈執行個體上的登錄檔單來使用電子郵件服務訂閱和取消訂閱，您必須遵循下列步驟：
 
 1. 在作者執行個體上，瀏覽至「封裝管理員」。
-1. 建立新封裝。 將篩選器設為 `/etc/key`.
+1. 建立套件。 將篩選器設為 `/etc/key`.
 1. 建置並下載套件。
 1. 導覽至發佈執行個體上的封裝管理員，然後上傳此封裝。
 1. 導覽至發佈osgi主控台，然後重新啟動名為的套件組合 **Adobe Granite Crypto支援**.

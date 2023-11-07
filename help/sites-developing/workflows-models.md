@@ -1,19 +1,15 @@
 ---
 title: 建立工作流模型
-seo-title: Creating Workflow Models
 description: 您可以建立工作流程模型，以定義使用者啟動工作流程時所執行的一系列步驟。
-seo-description: You create a workflow model to define the series of steps executed when a user starts the workflow.
-uuid: 31071d3a-d6d5-4476-9ac0-7b335de406d9
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2463'
+source-wordcount: '2451'
 ht-degree: 2%
 
 ---
@@ -30,14 +26,14 @@ ht-degree: 2%
 
 ## 建立新工作流程 {#creating-a-new-workflow}
 
-第一次建立新的工作流程模型時，模型會包含：
+第一次建立工作流程模型時，模型會包含：
 
 * 步驟， **流程開始** 和 **流程結束**.
 這些代表工作流程的開始和結束。 這些步驟為必要步驟，無法編輯/移除。
 * 範例 **參與者** 步驟已命名 **步驟1**.
 此步驟設定為指派工作專案給工作流程發起人。 編輯或刪除此步驟，並視需要新增步驟。
 
-使用編輯器建立新工作流程：
+使用編輯器建立工作流程：
 
 1. 開啟 **工作流程模型** 主控台；透過 **工具**， **工作流程**， **模型** 或者，例如： [https://localhost:4502/aem/workflow](https://localhost:4502/aem/workflow)
 1. 選取 **建立**，然後 **建立模型**.
@@ -75,7 +71,7 @@ ht-degree: 2%
 
 當變更與執行階段（已儲存）模型同步化時， **已同步** 會改用。
 
-某些步驟具有必填欄位和/或內建驗證。 當不符合這些條件時，當您嘗試以下動作時，將會顯示錯誤 **同步** 模型。 例如，當尚未為定義參與者時 **參與者** 步驟：
+某些步驟具有必填欄位和/或內建驗證。 當這些條件不滿足時，會在您嘗試下列動作時顯示錯誤 **同步** 模型。 例如，當尚未為定義參與者時 **參與者** 步驟：
 
 ![wf-21](assets/wf-21.png)
 
@@ -101,7 +97,7 @@ ht-degree: 2%
 
 ### 將步驟新增至模型 {#adding-a-step-to-a-model}
 
-您需要將步驟新增至模型，以表示要執行的活動 — 每個步驟都會執行特定活動。 標準AEM例項中提供一組步驟元件。
+您必須將步驟新增至模型，以表示要執行的活動 — 每個步驟都會執行特定活動。 標準AEM例項中提供一組步驟元件。
 
 當您編輯模型時，可用的步驟會出現在 **步驟瀏覽器**. 例如：
 
@@ -167,7 +163,7 @@ ht-degree: 2%
 
 ### 建立暫時性工作流程 {#creating-a-transient-workflow}
 
-您可以建立 [暫時性](/help/sites-developing/workflows.md#transient-workflows) 建立新模型或編輯現有模型時的工作流程模型：
+您可以建立 [暫時性](/help/sites-developing/workflows.md#transient-workflows) 建立模型或編輯現有模型時的工作流程模型：
 
 1. 開啟的工作流程模型 [編輯](#editinganexistingworkflow).
 1. 選取 **工作流程模型屬性** 工具列中的。
@@ -207,7 +203,7 @@ ht-degree: 2%
 
 ### 設定多資源支援的工作流程 {#configuring-a-workflow-for-multi-resource-support}
 
-您可以為以下專案設定工作流程模型 [多重資源支援](/help/sites-developing/workflows.md#multi-resource-support) 建立新模型或編輯現有模型時：
+您可以為以下專案設定工作流程模型 [多重資源支援](/help/sites-developing/workflows.md#multi-resource-support) 建立模型或編輯現有模型時：
 
 1. 開啟的工作流程模型 [編輯](#editinganexistingworkflow).
 1. 選取 **工作流程模型屬性** 工具列中的。
@@ -264,7 +260,7 @@ ht-degree: 2%
 
 若要匯出封裝中的工作流程模型：
 
-1. 使用建立新套件 [封裝管理員](/help/sites-administering/package-manager.md#package-manager)：
+1. 使用建立套件 [封裝管理員](/help/sites-administering/package-manager.md#package-manager)：
 
    1. 透過以下方式瀏覽至封裝管理員： **工具**， **部署**， **封裝**.
 
@@ -299,7 +295,7 @@ ht-degree: 2%
 
 若要設定要與表單搭配使用的工作流程：
 
-1. 建立新頁面並開啟它以進行編輯。
+1. 建立頁面並開啟以進行編輯。
 1. 新增 **表單** 元件至頁面。
 1. **設定** 此 **表單開始** 出現在頁面中的元件。
 1. 使用 **開始工作流程** 若要從可用的工作流程中選取所需的工作流程：
@@ -328,7 +324,7 @@ ht-degree: 2%
 
 為了說明建立工作流程的一些可能性，以下範例建立 `Publish Example` 工作流程。
 
-1. [建立新的工作流程模型](#creating-a-new-workflow).
+1. [建立工作流程模型](#creating-a-new-workflow).
 
    新工作流程將包含：
 
@@ -402,7 +398,7 @@ ht-degree: 2%
 
 若要定義OR規則，請依照下列步驟進行：
 
-1. 建立兩個指令碼並將它們儲存在存放庫中，例如在底下：
+1. 建立兩個指令碼並將它們儲存在存放庫中，例如，在下方：
 
    `/apps/myapp/workflow/scripts`
 

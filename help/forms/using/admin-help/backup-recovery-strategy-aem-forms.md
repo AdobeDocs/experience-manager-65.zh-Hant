@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1487'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ AEM Forms備份策略包含兩種型別的備份：
 
 ### 變更AEM表單節點檔案系統路徑 {#changing-the-aem-forms-node-file-system-paths}
 
-如果您變更獨立節點的檔案系統路徑，則必須在偏好設定、其他系統組態、自訂應用程式和已部署的AEM表單應用程式中更新適當的參照。 另一方面，對於叢集，所有節點都必須使用相同的檔案系統路徑設定。 您必須設定Global Document Storage (GDS)根目錄，並確保它指向復原的GDS復本，該復本與復原的資料庫同步。 設定GDS路徑很重要，因為GDS可以包含要在應用程式伺服器重新啟動時持續存在的資料。
+如果您變更獨立節點的檔案系統路徑，則必須在偏好設定、其他系統組態、自訂應用程式和已部署的AEM表單應用程式中更新適當的參照。 另一方面，對於叢集，所有節點都必須使用相同的檔案系統路徑設定。 設定Global Document Storage (GDS)根目錄，並確保它指向復原的GDS復本，該復本與復原的資料庫同步。 設定GDS路徑很重要，因為GDS可以包含要在應用程式伺服器重新啟動時持續存在的資料。
 
 在叢集環境中，所有叢集節點在備份前和復原後的儲存庫檔案系統路徑設定應該相同。
 

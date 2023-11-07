@@ -2,10 +2,10 @@
 title: 設定翻譯規則
 description: 了解如何定義翻譯規則以識別要翻譯的內容。
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 83%
+source-wordcount: '864'
+ht-degree: 78%
 
 ---
 
@@ -59,14 +59,14 @@ ht-degree: 83%
 1. 導覽至&#x200B;**工具** -> **一般**。
 1. 點選或按一下&#x200B;**翻譯設定**。
 
-在&#x200B;**翻譯設定** UI 中，有許多選項可用於您的翻譯規則。在這裡，我們強調基本 Headless 本地化設定所需的最必要和典型的步驟。
+在 **翻譯設定** UI中，有數個選項可供您的翻譯規則使用。 在這裡，我們強調基本 Headless 本地化設定所需的最必要和典型的步驟。
 
 1. 點選或按一下&#x200B;**新增內容**，您即可新增路徑。這是受規則影響的內容的路徑。
    ![新增內容](assets/add-translation-context.png)
 1. 使用路徑瀏覽器選擇所需路徑，並點選或按一下&#x200B;**確認**&#x200B;按鈕以儲存。請記住，內容片段 (其包含 Headless 內容) 通常位於 `/content/dam/<your-project>` 下。
    ![選取路徑](assets/select-context.png)
 1. AEM 儲存設定。
-1. 您必須選取剛剛建立的內容，然後點選或單一下&#x200B;**編輯**。這將開啟&#x200B;**翻譯規則編輯器** 以設定屬性。
+1. 您必須選取您建立的前後關聯，然後點選或按一下 **編輯**. 這將開啟&#x200B;**翻譯規則編輯器** 以設定屬性。
    ![翻譯規則編輯器](assets/translation-rules-editor.png)
 1. 依預設，所有設定都繼承自父路徑，在此案例中為 `/content/dam`。取消核取選項 **繼承自`/content/dam`** 以新增其他欄位至設定。
 1. 取消勾選後，在清單的&#x200B;**一般**&#x200B;部分下，新增您[先前識別為翻譯欄位](getting-started.md#content-models)之內容片段模型的屬性名稱。
@@ -81,7 +81,7 @@ ht-degree: 83%
 
 ## 進階用法 {#advanced-usage}
 
-有許多其他屬性可以設定為翻譯規則的一部分。此外，您可以手動將您的規則指定為 XML，可提供更高的明確性和靈活性。
+您可在翻譯規則中設定數個其他屬性。 此外，您可以手動將您的規則指定為 XML，可提供更高的明確性和靈活性。
 
 開始本地化 Headless 內容通常不需要此類功能，但如果您有興趣，可以在[其他資源](#additional-resources)章節深入了解。
 

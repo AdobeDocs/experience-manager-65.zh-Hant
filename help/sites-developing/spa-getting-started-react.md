@@ -1,19 +1,15 @@
 ---
 title: AEM中的SPA快速入門 — React
-seo-title: Getting Started with SPAs in AEM - React
 description: 本文介紹了一個SPA應用計畫範例，說明它是如何組合在一起的，並可讓您使用React框架快速啟動並執行您自己的SPA。
-seo-description: This article presents a sample SPA application, explains how it is put together, and lets you get up-and-running with your own SPA quickly using the React framework.
-uuid: 2beca277-a381-4482-99f6-85005d826d06
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 exl-id: 552649e7-6054-4ae8-b570-5ba7230e6f19
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1161'
 ht-degree: 4%
 
 ---
@@ -52,7 +48,7 @@ SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 ## 相依性、設定和建置 {#dependencies-configuration-and-building}
 
-除了預期的React相依性之外，範例SPA還可以運用其他程式庫，以更有效率地建立SPA。
+除了預期的React相依性之外，範例SPA還可以使用其他程式庫，以更有效率地建立SPA。
 
 ### 相依性 {#dependencies}
 
@@ -73,7 +69,7 @@ react
  react-dom
 ```
 
-此 `aem-clientlib-generator` 用於隨著建置流程自動建立使用者端程式庫。
+此 `aem-clientlib-generator` 用於在建置流程中自動建立使用者端程式庫。
 
 `"aem-clientlib-generator": "^1.4.1",`
 
@@ -114,7 +110,7 @@ module.exports = {
 
 ### 正在建置 {#building}
 
-實際建立應用程式 [Webpack](https://webpack.js.org/) 用於整合，以及自動建立使用者端程式庫的aem-clientlib-generator。 因此， build指令將類似於：
+實際建立應用程式使用 [Webpack](https://webpack.js.org/) 用於整合，以及自動建立使用者端程式庫的aem-clientlib-generator。 因此， build指令將類似於：
 
 `"build": "webpack && clientlib --verbose"`
 
@@ -122,7 +118,7 @@ module.exports = {
 
 ### AEM 專案原型 {#aem-project-archetype}
 
-任何 AEM 專案都應利用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並利用 SPA SDK。
+任何 AEM 專案都應使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並使用 SPA SDK。
 
 ## 應用程式結構 {#application-structure}
 
@@ -134,7 +130,7 @@ module.exports = {
 
 ### index.js {#index-js}
 
-SPA的進入點當然是 `index.js` 此處顯示的檔案已簡化，以專注於重要內容。
+SPA的進入點為 `index.js` 此處顯示的檔案已簡化，以專注於重要內容。
 
 ```
 import ReactDOM from 'react-dom';
@@ -151,7 +147,7 @@ ReactDOM.render(
 });
 ```
 
-的主要功能 `index.js` 就是利用 `ReactDOM.render` 函式，可判斷DOM中要插入應用程式的位置。
+的主要功能 `index.js` 是使用 `ReactDOM.render` 函式，可判斷DOM中要插入應用程式的位置。
 
 這是此函式的標準用法，並非此範例應用程式所特有。
 
@@ -273,7 +269,7 @@ export default MapTo('my-react-app/react/components/structure/page')(PageClass, 
 
 單頁應用程式內的元件定期需要共用資訊。 有幾種建議的方法可以達成此目的，依複雜度遞增的順序列示如下。
 
-* **選項1：** 集中邏輯並廣播至必要的元件，例如透過使用React Context。
+* **選項1：** 集中邏輯並廣播至必要的元件，例如，透過使用React Context。
 * **選項2：** 使用狀態庫（例如Redux）共用元件狀態。
 * **選項3：** 透過自訂和擴充容器元件來利用物件階層。
 

@@ -1,26 +1,22 @@
 ---
 title: 執行模式
-seo-title: Run Modes
 description: 瞭解如何使用執行模式根據特定目的調整AEM執行個體。
-seo-description: Learn how to tune your AEM instance for specific purposes by using run modes.
-uuid: 8a0c6e5c-4fae-43e2-b745-eee58f346ceb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '744'
 ht-degree: 1%
 
 ---
 
 # 執行模式{#run-modes}
 
-執行模式可讓您針對特定目的調整AEM執行個體；例如製作或發佈、測試、開發、內部網路或其他。
+執行模式可讓您針對特定目的調整AEM執行個體；例如，製作或發佈、測試、開發、內部網路或其他。
 
 您可以：
 
@@ -153,7 +149,7 @@ java -jar cq-56-p4545.jar -r dev
 
 啟動指令碼中的系統屬性可用來指定執行模式。
 
-* 例如，使用以下專案將執行個體啟動為位於美國的生產發佈執行個體：
+* 例如，使用以下專案將執行個體啟動為美國的生產發佈執行個體：
 
   `-Dsling.run.modes=publish,prod,us`
 

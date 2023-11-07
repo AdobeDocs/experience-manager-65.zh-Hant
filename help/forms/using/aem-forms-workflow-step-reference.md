@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: 5675d69a5bdf296782339f02162db8068daf29e3
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '7690'
+source-wordcount: '7689'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,7 @@ Forms Workflow步驟會在AEM工作流程中執行AEM Forms專屬的操作。 �
 
 ## 傳送電子郵件步驟 {#send-email-step}
 
-使用電子郵件步驟來傳送電子郵件，例如含有記錄檔案的電子郵件、最適化表單的連結、互動式通訊的連結，或含有附加PDF檔案的電子郵件。 傳送電子郵件步驟支援 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). HTML電子郵件會迅速回應，並因應收件者的電子郵件使用者端和熒幕大小。 您可以使用HTML電子郵件範本來定義電子郵件的外觀、色彩配置和行為。
+使用電子郵件步驟來傳送電子郵件，例如，含有記錄檔案的電子郵件、最適化表單的連結、互動式通訊的連結，或含有附加PDF檔案的電子郵件。 傳送電子郵件步驟支援 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). HTML電子郵件會迅速回應，並因應收件者的電子郵件使用者端和熒幕大小。 您可以使用HTML電子郵件範本來定義電子郵件的外觀、色彩配置和行為。
 
 電子郵件步驟使用Day CQ Mail Service傳送電子郵件。 在使用電子郵件步驟之前，請確定 [電子郵件服務](../../forms/using/aem-forms-workflow.md) 已設定。 電子郵件步驟有下列屬性：
 
@@ -414,7 +414,7 @@ AEM Document Services是一組用於建立、組合和保護PDF檔案的服務�
 
 此步驟會產生PCL、PostScript、ZPL、IPL、TPCL或DPL輸出，並提供表單設計和資料檔案。 資料檔會與表單設計合併，並格式化以供列印。 此步驟產生的輸出可以直接傳送到印表機或另存為檔案。 當您想要使用表單設計或來自應用程式的資料時，建議您使用此步驟。 如果您的表單設計或表單設計位於網路、本機檔案系統或HTTP位置，請使用generatePrintedOutput操作。
 
-例如，您的應用程式要求您將表單設計與資料檔案合併。 資料包含數百筆記錄。 此外，它要求將輸出傳送到支援ZPL的印表機。 表單設計和您的輸入資料位於應用程式中。 使用generatePrintedOutput作業將每個記錄與表單設計合併，並將輸出傳送到支援ZPL的印表機。
+例如，您的應用程式要求您將表單設計與資料檔案合併。 資料包含數百筆記錄。 此外，它要求將輸出傳送到支援ZPL的印表機。 表單設計和您的輸入資料都在應用程式中。 使用generatePrintedOutput作業將每個記錄與表單設計合併，並將輸出傳送到支援ZPL的印表機。
 
 「產生列印輸出」步驟具有以下屬性：
 

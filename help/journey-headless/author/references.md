@@ -2,10 +2,10 @@
 title: 了解如何在內容片段中使用參考
 description: 了解如何在內容片段中使用內容、其他片段和其他資產 (媒體) 的參考。介紹巢狀片段對 Headless CMS 編寫的必要性和機制。
 exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 95%
+source-wordcount: '722'
+ht-degree: 90%
 
 ---
 
@@ -39,11 +39,11 @@ ht-degree: 95%
 
 ## 內容參考 {#content-references}
 
-內容參考可讓您參考任何其他內容。 這會開啟瀏覽器，讓您選取內容項目。
+內容參考可讓您參考任何其他內容。 這樣會開啟一個瀏覽器，讓您選取內容專案。
 
 ## 資產/媒體參考 {#assets-media-references}
 
-可以使用&#x200B;**插入資產**&#x200B;選項，讓資產 (例如影像或媒體) 可在文字區塊內被參考。這會開啟瀏覽器，讓您選取資產。
+可以使用&#x200B;**插入資產**&#x200B;選項，讓資產 (例如影像或媒體) 可在文字區塊內被參考。如此將可開啟瀏覽器，讓您選取資產。
 
 ![內容片段 - 插入資產](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
 
@@ -58,7 +58,7 @@ ht-degree: 95%
 * 人員
 * 獎項
 
-看起來很簡單，但當然一家公司既有 CEO 又有員工....這些都是人，每一個都被定義為人員。
+看似簡單明瞭，但公司同時有CEO和員工....這些都是人，每一個都被定義為人員。
 
 人員可以獲得一個獎項 (或兩個)。
 

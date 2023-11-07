@@ -5,9 +5,9 @@ feature: Content Fragments,Assets HTTP API
 role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1959'
 ht-degree: 24%
 
 ---
@@ -235,9 +235,9 @@ A [內容片段](/help/assets/content-fragments/content-fragments.md) 是一種�
 
 #### 內容模型和內容片段 {#content-models-and-content-fragments}
 
-目前，定義內容片段結構的模型不會透過HTTP API公開。 因此， *消費者* 需要瞭解片段的模式（至少是最低要求） — 儘管大多數資訊可以從承載中推斷；如資料型別等。 是定義的一部分。
+目前，定義內容片段結構的模型不會透過HTTP API公開。 因此， *消費者* 需要瞭解片段的模型（至少是最低要求） — 雖然大多數資訊可以從承載中推斷；以資料型別等。 是定義的一部分。
 
-若要建立新的內容片段，必須提供模型的（內部存放庫）路徑。
+若要建立內容片段，必須提供模型的（內部存放庫）路徑。
 
 #### 相關聯的內容 {#associated-content}
 
@@ -307,7 +307,7 @@ A [內容片段](/help/assets/content-fragments/content-fragments.md) 是一種�
 
 有幾項限制：
 
-* **目前不支援內容片段模型**：它們無法讀取或建立。 為了能夠建立新的或更新現有的內容片段，開發人員必須知道內容片段模型的正確路徑。 目前，取得這些內容的概觀的唯一方法就是透過管理UI。
+* **目前不支援內容片段模型**：它們無法讀取或建立。 為了能夠建立內容片段或更新現有片段，開發人員必須知道內容片段模式的正確路徑。 目前，取得這些內容的概觀的唯一方法就是透過管理UI。
 * **會忽略參照**. 目前沒有檢查是否參考了現有的內容片段。 因此，例如，刪除內容片段可能會導致包含已刪除內容片段參考的頁面發生問題。
 * **JSON資料型別** 的REST API輸出 *JSON資料型別* 目前為 *字串型輸出*.
 

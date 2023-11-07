@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: d8d9a799-3e30-442a-843b-d4d7ba70c557
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '468'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ContextHub提供數個您可在解決方案中使用的候選範例商店。 每
 
 >[!WARNING]
 >
->範例存放區候選專案將作為參考設定提供，以幫助您為專案建立自己的專用設定，因此不應直接使用。
+>範例存放區候選專案作為參考設定提供，以幫助您為專案建立自己的專用設定。 請勿直接使用，
 
 ## aem.segmentation範例存放區候選專案 {#aem-segmentation-sample-store-candidate}
 

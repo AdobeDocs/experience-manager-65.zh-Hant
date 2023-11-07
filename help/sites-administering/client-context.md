@@ -1,19 +1,15 @@
 ---
 title: ClientContext
-seo-title: Client Context
 description: 瞭解如何使用Client Context來檢視有關Adobe Experience Manager中目前頁面和訪客的資訊。
-seo-description: Learn how to use the Client Context in AEM.
-uuid: 82b2f976-cb41-42f8-ad4b-3a5cd23cc5f5
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1979'
 ht-degree: 0%
 
 ---
@@ -42,7 +38,7 @@ Client Context是一種機制，可提供有關目前頁面和訪客的特定資
 ![「從屬端前後關聯」視窗的「編輯」、「載入」和「重設」圖示](do-not-localize/clientcontext_icons.png)
 
 * **編輯**
-將會開啟一個新頁面，讓您可以 [編輯、新增或移除設定檔屬性](#editingprofiledetails).
+新頁面隨即開啟，讓您可以 [編輯、新增或移除設定檔屬性](#editingprofiledetails).
 
 * **載入**
 您可以 [從設定檔清單中選取並載入設定檔](#loading-a-new-user-profile) 您想要測試。
@@ -70,7 +66,7 @@ Client Context可顯示下列屬性([根據使用「編輯」選取的內容](#a
 
 行銷活動的解析通常以行銷活動的優先順序屬性為基礎。 通常會根據細分來選取體驗。
 
-**購物車** 顯示購物車資訊，包括產品專案（標題、數量、價格格式等）、已解決的促銷活動（標題、訊息等） 和憑單（代碼、說明等）。
+**購物車** 顯示購物車資訊，包括產品專案（標題、數量、價格格式等）、已解決的促銷活動（標題、訊息等）和憑單（代碼、說明等）。
 
 購物車工作階段存放區也會使用ClientContextCartServlet將已解決的促銷活動變更（根據分段變更）通知伺服器。
 
@@ -164,7 +160,7 @@ JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他
 
 您也可以使用選取項滑桿來選取設定檔：
 
-1. 連按兩下代表目前使用者的圖示。 選取器將會開啟、使用箭頭來導覽並檢視可用的設定檔：
+1. 連按兩下代表目前使用者的圖示。 選取器隨即開啟，使用箭頭導覽並檢視可用的設定檔：
 
    ![使用者選擇器](assets/clientcontext_profileselector.png)
 
@@ -178,7 +174,7 @@ JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他
 
 ### 變更瀏覽器平台 {#changing-the-browser-platform}
 
-1. 連按兩下代表瀏覽器平台的圖示。 選擇器將會開啟、使用箭頭來導覽並檢視可用的平台/瀏覽器：
+1. 連按兩下代表瀏覽器平台的圖示。 選取器隨即開啟，使用箭頭導覽並檢視可用的平台/瀏覽器：
 
    ![瀏覽器平台選擇器](assets/clientcontext_browserplatform.png)
 
@@ -186,7 +182,7 @@ JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他
 
 ### 變更地理位置 {#changing-the-geolocation}
 
-1. 按兩下地理位置圖示。 將會開啟展開的地圖，您可以在此處將標籤拖曳到新位置：
+1. 按兩下地理位置圖示。 展開的地圖隨即開啟，您可以在此處將標籤拖曳至新位置：
 
    ![地理位置詳細資料](assets/clientcontext_geomocationrelocate.png)
 
@@ -194,7 +190,7 @@ JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他
 
 ### 變更標籤選取範圍 {#changing-the-tag-selection}
 
-1. 連按兩下Client Context的Tag Cloud區段。 將會開啟對話方塊，您可以在此處選取標籤：
+1. 連按兩下Client Context的Tag Cloud區段。 對話方塊隨即開啟，您可以在此處選取標籤：
 
    ![標籤雲對話方塊](assets/clientcontext_tagselection.png)
 

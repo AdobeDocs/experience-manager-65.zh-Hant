@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b2c09e6b-a1d8-4b30-af2c-988442a3a986
 docset: aem65
 exl-id: bb812614-f4d8-4f57-bea2-8f7d31457039
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 0%
@@ -40,7 +40,7 @@ AEM Forms中的交易報表可讓您保留自AEM Forms部署上的指定日期�
 
 ## 支援的拓撲 {#supported-topology}
 
-交易報告只能在OSGi環境的AEM Forms上使用。 它支援author-publish、author-processing-publish並僅處理拓撲。 如需拓撲範例，請參閱 [AEM Forms的架構和部署拓撲](../../forms/using/transaction-reports-overview.md).
+交易報告只能在OSGi環境的AEM Forms上使用。 它支援author-publish、author-processing-publish並僅處理拓撲。 例如，拓撲，請參閱 [AEM Forms的架構和部署拓撲](../../forms/using/transaction-reports-overview.md).
 
 交易計數會從發佈執行個體反向復寫到製作或處理執行個體。 指示性的作者 — 發佈拓撲顯示如下：
 

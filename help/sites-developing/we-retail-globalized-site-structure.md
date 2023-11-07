@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '419'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,6 @@ We.Retail是藉由全球化網站結構所建置，可提供語言母版，且�
 >
 >此程式展示與Microsoft®機器翻譯的內建整合。 使用 [AEM翻譯整合框架](/help/sites-administering/translation.md)，您就可以整合許多標準翻譯服務，以協調AEM的翻譯。
 
-## 更多資訊 {#further-information}
+## 詳細資訊 {#further-information}
 
-如需詳細資訊，請參閱編寫檔案 [翻譯多語言網站的內容](/help/sites-administering/translation.md) 以取得完整的技術細節。
+如需詳細資訊，請參閱撰寫檔案 [翻譯多語言網站的內容](/help/sites-administering/translation.md) 以取得完整的技術細節。

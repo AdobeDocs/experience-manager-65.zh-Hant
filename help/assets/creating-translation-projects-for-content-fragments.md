@@ -8,9 +8,9 @@ content-type: reference
 feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '975'
 ht-degree: 2%
 
 ---
@@ -36,14 +36,14 @@ ht-degree: 2%
 建立與翻譯工作流程包含下列選項。 與每個選項相關的程式步驟與資產相應選項相關的程式步驟類似。
 
 * 僅建立結構：如需程式步驟，請參閱 [僅建立資產的結構](translation-projects.md#create-structure-only).
-* 建立新翻譯專案：如需程式步驟，請參閱 [建立資產的新翻譯專案](translation-projects.md#create-a-new-translation-project).
+* 建立翻譯專案：如需程式步驟，請參閱 [建立資產的翻譯專案](translation-projects.md#create-a-new-translation-project).
 * 新增至現有翻譯專案：如需程式步驟，請參閱 [新增至資產的現有翻譯專案](translation-projects.md#add-to-existing-translation-project).
 
 ## 更新語言副本工作流程 {#update-language-copies-workflow}
 
 更新語言副本工作流程包含以下選項。 與每個選項相關的程式步驟與資產相應選項相關的程式步驟類似。
 
-* 建立新翻譯專案：如需程式步驟，請參閱 [建立資產的新翻譯專案](translation-projects.md#create-a-new-translation-project) （更新工作流程）。
+* 建立翻譯專案：如需程式步驟，請參閱 [建立資產的翻譯專案](translation-projects.md#create-a-new-translation-project) （更新工作流程）。
 * 新增至現有翻譯專案：如需程式步驟，請參閱 [新增至資產的現有翻譯專案](translation-projects.md#add-to-existing-translation-project) （更新工作流程）。
 
 您也可以建立片段的臨時語言副本，其方式類似於建立資產的臨時副本。 如需詳細資訊，請參閱 [建立資產的暫時語言副本](translation-projects.md#creating-temporary-language-copies).

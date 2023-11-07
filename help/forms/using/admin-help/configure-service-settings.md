@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '10699'
+source-wordcount: '10694'
 ht-degree: 0%
 
 ---
@@ -326,7 +326,7 @@ FTP服務可使用下列設定。
 
 ### 在伺服器叢集中使用指南 {#using-guides-in-a-server-cluster}
 
-在不使用粘性工作階段的伺服器叢集中轉譯參考線失敗，並產生NullPointerException。 指南請求會運用安全URL，這些URL在預設情況下對於產生它們的伺服器而言是唯一的。 在使用粘性工作階段的叢集中，當請求點選叢集中的節點後，該工作階段或使用者的所有後續請求都只路由到該伺服器，一切正常。 在不使用粘性工作階段的叢集中，後續請求可能會點選叢集中的任何伺服器。 如果請求點選的伺服器不是原始伺服器，則無法解析安全URL。
+在不使用粘性工作階段的伺服器叢集中轉譯參考線失敗，並產生NullPointerException。 Guides請求會使用安全URL，這些URL在預設情況下在其產生所在的伺服器中是唯一的。 在使用粘性工作階段的叢集中，當請求點選叢集中的節點後，該工作階段或使用者的所有後續請求都只路由到該伺服器，一切正常。 在不使用粘性工作階段的叢集中，後續請求可能會點選叢集中的任何伺服器。 如果請求點選的伺服器不是原始伺服器，則無法解析安全URL。
 
 如果您在不使用粘性工作階段的伺服器叢集中使用Guides，請為GuidesUtility服務設定macKeySeed值，然後停止並啟動叢集。
 
@@ -826,7 +826,7 @@ forms伺服器可讓您為每個服務設定安全性設定，讓您依服務層
    * **監督員_PERM：** 若要檢視從處理建立之服務的處理序執行處理資料，請執行下列步驟：
    * **START_STOP_PERM：** 啟動和停止服務的方式
    * **ADD_REMOVE_ENDPOINTS_PERM：** 新增、移除和修改服務的端點
-   * **CREATE_VERSION_PERM：** 若要建立服務的新版本
+   * **CREATE_VERSION_PERM：** 建立服務的版本
    * **DELETE_版本_PERM：** 若要刪除服務的版本
    * **MODIFY_VERSION_PERM：** 修改服務的版本
    * **讀取_PERM：** 若要檢視服務

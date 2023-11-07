@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: 22d9b22a0fc0bc5f753f2e11ca66e2627e1a8405
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '7181'
+source-wordcount: '7177'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 * 在設定watched資料夾端點之前，先在檔案系統上建立資料夾，然後在[路徑]方塊中輸入完整路徑。
 
-在叢集環境中，要用作watched資料夾的資料夾必須在檔案系統或網路上可以存取、寫入和共用。 在此案例中，叢集的每個應用程式伺服器執行個體都必須擁有相同共用資料夾的存取權。
+在叢集環境中，用來當作watched資料夾的資料夾必須在檔案系統或網路上可以存取、寫入和共用。 在此案例中，叢集的每個應用程式伺服器執行個體都必須擁有相同共用資料夾的存取權。
 
 在Windows中，如果應用程式伺服器是以服務的形式執行，則必須透過下列其中一種方式，以適當的共用資料夾存取權來啟動應用程式伺服器：
 
@@ -62,7 +62,7 @@ Watched資料夾可以鏈結在一起，因此一個watched資料夾的結果檔
 
 ## Watched資料夾輸出 {#watched-folder-output}
 
-當輸入為資料夾且輸出包含多個檔案時，AEM forms會建立與輸入資料夾同名的輸出資料夾，並將輸出檔案複製到該資料夾中。 當輸出包含包含索引鍵/值組的檔案對映時（例如輸出程式的輸出），將使用索引鍵作為輸出檔案名稱。
+當輸入為資料夾且輸出包含多個檔案時，AEM forms會建立與輸入資料夾同名的輸出資料夾，並將輸出檔案複製到該資料夾中。 當輸出包含包含索引鍵/值組的檔案對映時（例如輸出程式的輸出），索引鍵會用作輸出檔案名稱。
 
 端點程式產生的輸出檔案名稱不能包含字母、數字和句點(.)以外的字元 在副檔名之前。 AEM表單會將其他字元轉換為十六進位值。
 
@@ -386,7 +386,7 @@ Watched Folder會在每次輪詢時執行以下三個主要工作：
    * 的 `java.lang.String`：管理員有兩個選項。 首先，管理員可以指定對應型別 `Literal` 並輸入對應值作為字串，例如 `hello.` Watched資料夾將使用字串叫用服務 `hello`. 其次，管理員可以將對應型別指定為 `Variable` 並輸入對應值，其模式如下 `*.txt`. 在後一種情況下，副檔名為.txt的檔案會讀取為檔案，並以字串形式強制來叫用服務。
    * Java基本型別：管理員可以指定對應型別 `Literal` 並提供值。 Watched資料夾會以指定的值叫用服務。
 
-* Watched資料夾用於處理檔案。 支援的輸出為 `com.adobe.idp.Document`， `org.w3c.Document`， `org.w3c.Node`以及這些型別的清單和地圖。 任何其他型別都會導致失敗資料夾中的失敗輸出。
+* Watched資料夾用於處理檔案。 支援的輸出為 `com.adobe.idp.Document`， `org.w3c.Document`， `org.w3c.Node`以及這些型別的清單與地圖。 任何其他型別都會導致失敗資料夾中的失敗輸出。
 * 如果結果不在結果資料夾中，請驗證失敗資料夾以檢視是否發生失敗。
 * Watched資料夾在非同步模式下使用時效果最佳。 在此模式中，Watched資料夾會將呼叫要求放入佇列並回撥。 然後會非同步處理佇列。 如果未設定「非同步」選項，Watched Folder會同步叫用目標服務，而Process Engine會等到服務完成要求並產生結果為止。 如果目標服務需要很長時間來處理請求，Watched資料夾可能會發生逾時錯誤。
 * 建立watched資料夾以進行匯入和匯出作業時，無法擷取副檔名。 使用watched資料夾叫用Form Data Integration Service時，輸出檔案的副檔名型別可能與檔案物件型別的預期輸出格式不符。 例如，如果呼叫匯出作業之watched資料夾的輸入檔案是包含資料的XFA表單，則輸出應該是XDP資料檔案。 若要取得具有正確副檔名的輸出檔案，您可以在輸出引數對應中指定它。 在此範例中，您可以使用%F.xdp作為輸出引數對應。

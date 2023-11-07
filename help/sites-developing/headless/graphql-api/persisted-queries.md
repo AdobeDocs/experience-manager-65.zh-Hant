@@ -2,10 +2,10 @@
 title: 持續性 GraphQL 查詢
 description: 瞭解如何在Adobe Experience Manager中保留GraphQL查詢，以將效能最佳化。 持久查詢可以由使用者端應用程式使用HTTPGET方法請求，響應可以快取在Dispatcher和CDN層，最終提高使用者端應用程式的效能。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1423'
-ht-degree: 90%
+source-wordcount: '1422'
+ht-degree: 88%
 
 ---
 
@@ -397,10 +397,10 @@ URL 可以分解成以下幾個部分：
 若要建立套件：
 
 1. 導覽至&#x200B;**工具** > **部署** > **套件**。
-1. 點選&#x200B;**建立套件**&#x200B;來建立新套件。這將開啟一個對話框來定義套件。
+1. 點選以建立套件 **建立封裝**. 這會開啟一個對話方塊來定義封裝。
 1. 在套件定義對話框中，在 **一般**&#x200B;下輸入&#x200B;**名稱**，例如「wknd-persistent-queries」。
 1. 輸入版本號碼，例如「1.0」。
-1. 在&#x200B;**篩選器**&#x200B;下加入新&#x200B;**篩選器**。使用路徑尋找工具選取設定下方的 `persistentQueries` 資料夾。例如，對於 `wknd` 設定，完整路徑將為 `/conf/wknd/settings/graphql/persistentQueries`。
+1. 在&#x200B;**篩選器**&#x200B;下加入新&#x200B;**篩選器**。使用路徑尋找工具選取設定下方的 `persistentQueries` 資料夾。例如，對於 `wknd` 設定完整路徑 `/conf/wknd/settings/graphql/persistentQueries`.
 1. 點選&#x200B;**儲存**&#x200B;以儲存新的套件定義並關閉對話框。
 1. 點選新建立之套件定義中的&#x200B;**建置**&#x200B;按鈕。
 

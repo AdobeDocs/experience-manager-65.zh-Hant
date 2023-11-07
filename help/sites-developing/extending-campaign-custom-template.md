@@ -1,29 +1,25 @@
 ---
 title: 使用Adobe Campaign表單元件建立自訂AEM頁面範本
-seo-title: Creating Custom AEM Page Template with Adobe Campaign Form Components
 description: 建立使用Adobe Campaign表單元件的自訂頁面範本
-seo-description: Build a custom page template that uses Adobe Campaign Form components
-uuid: 8162ace2-b661-4c39-b0fb-288e1c035b9c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: c3f6eed4-bbda-454a-88ce-c7f2041d4217
 exl-id: de5c634a-c0d7-4e69-b941-d2fbfe83117d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
 # 使用Adobe Campaign表單元件建立自訂AEM頁面範本{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-此頁面說明如何建立使用的自訂頁面範本 [Adobe Campaign表單](/help/sites-authoring/adobe-campaign-components.md) 元件檢查Geometrixx戶外範本( `/apps/geometrixx-outdoors/components/page_campaign_profile`)已實作，並引導您建立自己的自訂範本時可能需要的重要資訊。
+此頁面說明如何建置使用的自訂頁面範本 [Adobe Campaign表單](/help/sites-authoring/adobe-campaign-components.md) 藉由檢查Geometrixx — 戶外範本的方式( `/apps/geometrixx-outdoors/components/page_campaign_profile`)已實作，並導向到建立您自己的自訂範本時可能需要的重要資訊。
 
 >[!NOTE]
 >
->[電子郵件和表單範例僅適用於Geometrixx](/help/sites-developing/we-retail.md). 請從「封裝共用」下載範例Geometrixx內容。
+>[電子郵件和表單範例僅適用於Geometrixx](/help/sites-developing/we-retail.md). 從封裝共用下載範例Geometrixx內容。
 
 若要使用Adobe Campaign表單元件建立自訂AEM頁面範本，請確定您具備下列條件：
 
@@ -42,14 +38,14 @@ ht-degree: 1%
 
    當您檢視clientcontext設定時( `/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`)您會看到下列設定：
 
-   * ClientContext指向 `/etc/clientcontext/campaign`
+   * ClientContext點至 `/etc/clientcontext/campaign`
    * 另外還有額外的 *設定* 節點。
 
    ![chlimage_1-202](assets/chlimage_1-202.png)
 
 1. **head.jsp (/apps/geometrixx-outdoors/components/page_campaign_profile/head.jsp)**
 
-   在 **head.jsp**，您會看到以下使用 **clientcontext-config** 和 **cloudservice-hook**：
+   在 **head.jsp**，您會看到下列使用 **clientcontext-config** 和 **cloudservice-hook**：
 
    ```
    <cq:include path="config" resourceType="cq/personalization/components/clientcontext_optimized/config"/>

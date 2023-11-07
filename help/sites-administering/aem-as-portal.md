@@ -1,19 +1,15 @@
 ---
 title: AEM入口網站與入口網站
-seo-title: AEM Portals and Portlets
 description: 瞭解如何設定和管理AEM as a portal，以及如何設定和顯示portlet中的AEM內容。
-seo-description: Learn how to configure and administer AEM as a portal and how to configure and display AEM content in a portlet.
-uuid: 7f9e316d-277e-4a1e-b6f3-cd89addc897b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 99528fda-5c8c-4034-bcbe-a4cea42f694b
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6098'
+source-wordcount: '6093'
 ht-degree: 0%
 
 ---
@@ -130,7 +126,7 @@ Portlet可使用下列偏好設定進行設定：
   </tr>
   <tr>
    <td>偏好設定對話方塊</td>
-   <td>AEM中偏好設定對話方塊的路徑 — 如果留空，將會使用內建偏好設定對話方塊。 此預設為/libs/portal/content/prefs.html。</td>
+   <td>AEM中偏好設定對話方塊的路徑 — 如果留空，則使用內建偏好設定對話方塊。 此預設為/libs/portal/content/prefs.html。</td>
   </tr>
   <tr>
    <td>initialRedirect</td>
@@ -193,7 +189,7 @@ Portlet可以自行設定快取，以便顯示Portlet中的內容而不需要存
 
    ![screen_shot_2012-02-15at40817pm](assets/screen_shot_2012-02-15at40817pm.png)
 
-1. 按兩下您剛建立的復寫代理程式。 因為尚未設定，所以會顯示為無效。
+1. 連按兩下您建立的復寫代理程式。 因為尚未設定，所以會顯示為無效。
 
    ![screen_shot_2012-02-15at41001pm](assets/screen_shot_2012-02-15at41001pm.png)
 
@@ -616,7 +612,7 @@ AEM內容Portlet有內建的本地化功能，可確保AEM中的內容使用正�
 | **名稱** | **說明** | **預設行為** |
 |---|---|---|
 | 驗證者 | 提供驗證資訊給AEM | 對作者和發佈使用可設定的技術使用者。 或使用SSO。 |
-| htmlrewriter | 重寫連結、影像等。 | 將AEM連結重寫至入口網站連結，可由UrlMapper和TextMapper擴充 |
+| htmlrewriter | 重寫連結、影像等 | 將AEM連結重寫至入口網站連結，可由UrlMapper和TextMapper擴充 |
 | HttpClientService | 處理所有http連線 | 標準實作 |
 | LocaleHandler | 處理地區設定資訊 | 重寫與地區設定相關的內容連結。 |
 | LocaleDetector | 偵測使用者的地區設定。 | 使用入口網站提供的地區設定。 |
@@ -799,7 +795,7 @@ AEM Quickstart JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 若要將Portlet新增至入口網站頁面：
 
 1. 請確定您位於應用程式伺服器的管理視窗中，並導覽至您管理頁面的位置。 (例如，在WebSphere 6.1中，按一下 **管理頁面**)。
-1. 選取Portlet的名稱，然後選取現有頁面或建立新頁面。
+1. 選取Portlet的名稱，然後選取現有頁面或建立頁面。
 1. 編輯頁面配置。
 1. 選取Portlet並將其新增至容器。
 1. 儲存您的變更。

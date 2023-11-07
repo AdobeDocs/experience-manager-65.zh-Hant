@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4597'
+source-wordcount: '4593'
 ht-degree: 0%
 
 ---
@@ -550,7 +550,7 @@ AEM傳遞安全檔案時，請使用單一登入，並指定擁有 *檔案上傳
 
 >[!NOTE]
 >
-當您建立新角色且希望該角色的成員上傳安全檔案時，請確保您指定檔案上傳許可權。
+當您建立角色並希望該角色的成員上傳安全檔案時，請確保您指定檔案上傳許可權。
 
 AEM Forms支援名為的操作 `getFileUploadToken` 這會傳回傳遞至上傳servlet的Token。 此 `DocumentReference.constructRequestForUpload` 方法需要AEM Forms的URL以及傳回的權杖 `LC.FileUploadAuthenticator.getFileUploadToken` 方法。 此方法會傳回 `URLRequest` 用於叫用上傳servlet的物件。 下列程式碼會示範此應用程式邏輯。
 
@@ -889,7 +889,7 @@ AEM Forms支援名為的操作 `getFileUploadToken` 這會傳回傳遞至上傳s
 
 ## 使用遠端功能叫用自訂元件服務 {#invoking-custom-component-services-using-remoting}
 
-您可以使用遠端來叫用位於自訂元件中的服務。 例如，考慮包含客戶服務的Bank元件。 您可以使用在Flex中編寫的使用者端應用程式來叫用屬於客戶服務的操作。 您必須先建立Bank自訂元件，才能執行與此區段關聯的快速入門。
+您可以使用遠端在自訂元件中叫用服務。 例如，考慮包含客戶服務的Bank元件。 您可以使用在Flex中編寫的使用者端應用程式來叫用屬於客戶服務的操作。 您必須先建立Bank自訂元件，才能執行與此區段關聯的快速入門。
 
 客戶服務會公開名為的作業 `createCustomer`. 本討論說明如何建立叫用客戶服務並建立客戶的Flex使用者端應用程式。 此作業需要型別複雜的物件 `com.adobe.livecycle.sample.customer.Customer` 代表新客戶。 下圖顯示叫用客戶服務並建立新客戶的使用者端應用程式。 此 `createCustomer` 操作會傳回客戶識別碼值。 識別碼值會顯示在「客戶識別碼」文字方塊中。
 
@@ -969,7 +969,7 @@ AEM Forms支援名為的操作 `getFileUploadToken` 這會傳回傳遞至上傳s
 
 AEM Forms複雜型別的完整資料型別會指派給別名標籤。
 
-ActionScript類別的欄位與屬於AEM Forms複雜型別的欄位相符。 位於客戶ActionScript類別中的六個欄位與所屬的欄位相符 `com.adobe.livecycle.sample.customer.Customer`.
+ActionScript類別的欄位與屬於AEM Forms複雜型別的欄位相符。 「客戶」ActionScript類別中的六個欄位與所屬的欄位相符 `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
 >

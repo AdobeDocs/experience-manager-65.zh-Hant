@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 77e9b895-1313-4a5b-a2d5-cdb65bdc1966
 role: Developer
 exl-id: 2a4e21c4-f2f5-44cd-b8ed-7b572782a2f1
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1921'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 您可以使用Bates編號來組合包含唯一頁面識別碼的PDF檔案。 *Bates編號* 是一種將唯一識別套用至批次相關檔案的方法。 檔案（或檔案集）中的每一頁都會指定唯一識別該頁面的Bates編號。 例如，包含用料表資訊且與組裝料號生產相關聯的製造檔案可以包含識別碼。 Bates數字包含循序遞增的數值，以及選用的首碼和尾碼。 前置詞+數值+後置詞稱為 *bates圖樣*.
 
-下圖顯示的PDF檔案包含位於檔案標題中的唯一識別碼。
+下圖顯示的PDF檔案在檔案標題中包含唯一識別碼。
 
 ![au_au_batesnumber](assets/au_au_batesnumber.png)
 

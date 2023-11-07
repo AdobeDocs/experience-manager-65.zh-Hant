@@ -2,9 +2,9 @@
 title: 編輯內容頁面屬性
 description: 在Adobe Experience Manager中定義頁面的必要屬性。
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1871'
 ht-degree: 6%
 
 ---
@@ -257,7 +257,7 @@ ht-degree: 6%
 
 * 從 **網站** 主控台：
 
-   * [建立新頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page) （屬性的子集）
+   * [建立頁面](/help/sites-authoring/managing-pages.md#creating-a-new-page) （屬性的子集）
 
    * 按一下或點選 **屬性**
 

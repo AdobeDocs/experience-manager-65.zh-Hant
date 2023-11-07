@@ -6,18 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2713'
+source-wordcount: '2707'
 ht-degree: 1%
 
 ---
 
 # 如何使用VLT工具 {#how-to-use-the-vlt-tool}
 
-Jackrabbit FileVault工具(VLT)是由 [Apache Foundation](https://www.apache.org/) 將Jackrabbit/AEM例項的內容對應至您的檔案系統。 VLT工具具有類似原始檔控制系統使用者端(例如Subversion (SVN)使用者端)的功能，可提供一般簽入、簽出和管理操作，以及彈性表示專案內容的組態選項。
+Jackrabbit FileVault工具(VLT)是由 [Apache Foundation](https://www.apache.org/) 將Jackrabbit/AEM例項的內容對應至您的檔案系統。 VLT工具具有類似原始檔控制系統使用者端(例如Subversion (SVN)使用者端)的功能，可提供一般簽入、簽出和管理作業，以及彈性表示專案內容的組態選項。
 
-從命令列執行VLT工具。 本檔案說明如何使用該工具，包括如何開始使用及取得說明，以及所有專案的清單 [命令](#vlt-commands) 和可用 [選項](#vlt-global-options).
+從命令列執行VLT工具。 本檔案說明如何使用該工具，包括如何開始使用及取得說明，以及所有內容的清單 [命令](#vlt-commands) 和可用 [選項](#vlt-global-options).
 
 ## 概念和架構 {#concepts-and-architecture}
 
@@ -781,7 +781,7 @@ VLT使用的狀態代碼為：
 
 >[!NOTE]
 >
->儲存庫同步服務是一種開發工具，強烈建議不要將其用於生產系統。 另請注意，此服務只能與本機檔案系統同步，無法用於遠端開發。
+>儲存庫同步服務是一種開發工具，強烈建議不要將其用於生產系統。 此外，此服務只能與本機檔案系統同步，無法用於遠端開發。
 
 ### 使用vlt安裝服務 {#installing-the-service-using-vlt}
 

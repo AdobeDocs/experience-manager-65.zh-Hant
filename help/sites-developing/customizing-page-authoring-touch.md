@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1339'
-ht-degree: 43%
+ht-degree: 42%
 
 ---
 
@@ -220,7 +220,7 @@ GITHUB上的程式碼
 
 ## 新增「新頁面動作」。 {#add-a-new-page-action}
 
-若要將新頁面動作新增到頁面工具列，例如&#x200B;**返回 Sites** (主控台) 動作。
+若要在頁面工具列中新增頁面動作，例如 **返回網站** （主控台）動作。
 
 ### 程式碼範例 {#code-sample-3}
 

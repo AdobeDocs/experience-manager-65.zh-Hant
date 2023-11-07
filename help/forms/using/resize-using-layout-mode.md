@@ -3,7 +3,7 @@ title: 使用版面模式調整最適化表單元件的大小
 description: 使用版面配置模式中可用的回應式格線來定義元件位置
 feature: Adaptive Forms
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 7%
@@ -29,7 +29,7 @@ ht-degree: 7%
 選取 **版面** 從最適化表單製作介面頂端出現的下拉式清單， **預覽** 選項。 表單會以「版面」模式顯示。
 
 1. 登入AEM作者執行個體並導覽至 **Adobe Experience Manager** > **Forms** > **Forms與檔案**.
-1. 建立新的或開啟現有的 [最適化表單](../../forms/using/creating-adaptive-form.md).
+1. 建立 [最適化表單](../../forms/using/creating-adaptive-form.md) 或開啟現有的一個。
 1. 選取 **版面** 下拉式清單(顯示於頁面上方的 **預覽** 選項。 表單會以「版面」模式顯示。
 
    ![版面模式](assets/layout_mode_ic_new.png)

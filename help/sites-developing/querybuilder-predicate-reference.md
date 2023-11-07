@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2347'
 ht-degree: 3%
@@ -68,7 +68,7 @@ ht-degree: 3%
 #### 屬性 {#properties}
 
 * **布林屬性**
-屬性的相對路徑，例如 `myFeatureEnabled` 或 `jcr:content/myFeatureEnabled`.
+屬性的相對路徑，例如， `myFeatureEnabled` 或 `jcr:content/myFeatureEnabled`.
 
 * **值**
 要檢查屬性的值， &quot; `true`「或」 `false`「。
@@ -120,11 +120,11 @@ ht-degree: 3%
 
 * **屬性**
 
-  相對路徑 `DATE` 屬性，例如 `jcr:lastModified`.
+  相對路徑 `DATE` 屬性，例如， `jcr:lastModified`.
 
 * **下限**
 
-  用於檢查屬性的日期下限，例如 `2014-10-01`.
+  用於檢查屬性的日期下限，例如， `2014-10-01`.
 
 * **lowerOperation**
 
@@ -132,7 +132,7 @@ ht-degree: 3%
 
 * **上限**
 
-  檢查屬性的上限，例如 `2014-10-01T12:15:00`.
+  檢查屬性的上限，例如， `2014-10-01T12:15:00`.
 
 * **upperOperation**
 
@@ -247,7 +247,7 @@ group.2_group.type=dam:Asset
 
 * **語言**
 
-  ISO語言代碼，例如&quot; `de`&quot;
+  ISO語言代碼，例如「`de`&quot;
 
 ### 主要資產 {#mainasset}
 
@@ -313,7 +313,7 @@ group.2_group.type=dam:Asset
 
 * **orderby**
 
-  例如，JCR屬性名稱由前導@表示 `@jcr:lastModified` 或 `@jcr:content/jcr:title`，或查詢中的其他述詞，例如 `2_property`，依此排序。
+  JCR屬性名稱由前導@表示，例如， `@jcr:lastModified` 或 `@jcr:content/jcr:title`，或查詢中的其他述詞，例如， `2_property`，依此排序。
 
 * **排序**
 
@@ -357,7 +357,7 @@ group.2_group.type=dam:Asset
 
 * **屬性**
 
-  屬性的相對路徑，例如 `jcr:title`.
+  屬性的相對路徑，例如， `jcr:title`.
 
 * **值**
 

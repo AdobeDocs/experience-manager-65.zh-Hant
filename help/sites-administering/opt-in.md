@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: de466511-d82f-4ddb-8f6a-7ca9240fdeab
 exl-id: 3603e929-2aa1-4c25-ad9a-b10ff52a59f4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -21,26 +21,26 @@ ht-degree: 0%
 
 AEM有一個選擇加入程式，可協助您整合Adobe Analytics和Adobe Target。 這是現成可用的功能，可作為指派給管理員使用者群組的預先載入任務。
 
-當您以管理員身分登入時，此工作(**設定分析和定位**)可從取得。 [收件匣](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks). 它會根據您提供的認證，協助您設定和整合這些服務。
+當您以管理員身分登入時，此工作(**設定分析和定位**)可從取得。 [收件匣](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks). 系統會根據您提供的認證，協助您設定及整合這些服務。
 
-您有以下選項可設定整合：
+您可透過下列選項設定整合：
 
-* 透過任務設定整合。
+* 透過工作設定整合。
 
-   您可以立即執行或稍後執行，在執行某些動作之前，工作將保留在收件匣中。 無論哪種情況，設定都可直接在UI中完成，或使用預先定義的 `.properties` 檔案。
+  您可以立即執行或稍後執行，任務將保留在收件匣中，直到執行某些動作為止。 無論是哪種情況，都可直接在UI中完成設定，或使用預先定義的 `.properties` 檔案。
 
 * 選擇退出整合。
 
-   如果您偏好使用此選項 [手動設定整合](/help/sites-administering/marketing-cloud.md). 另請參閱 [使用DTM整合AEM與Adobe Target和Adobe Analytics](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
+  如果您希望 [手動設定整合](/help/sites-administering/marketing-cloud.md). 另請參閱 [使用DTM整合AEM與Adobe Target和Adobe Analytics](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
 
-* 使用指令碼來設定設定和布建。
+* 使用指令碼來設定設定及布建。
 
 ## 設定整合 {#configuring-the-integration}
 
-選擇加入與下列專案的整合：
+選擇加入整合，透過：
 
-* Analytics可讓您使用其頁面追蹤和分析功能。
-* Target以啟用其個人化功能。
+* Analytics啟用其頁面追蹤與分析功能。
+* Target啟用其個人化功能。
 
 無論是哪一個選項，您都需要提供使用者帳戶資訊，並指定追蹤的頁面。
 
@@ -56,9 +56,9 @@ AEM有一個選擇加入程式，可協助您整合Adobe Analytics和Adobe Targe
 
 >[!NOTE]
 >
->AT.js是預設的使用者端資料庫。 這是在「 」下設定的 [target cloud services設定](/help/sites-administering/target-configuring.md#creating-a-target-cloud-configuration).
+>AT.js是預設的使用者端資料庫。 這會在您的下設定 [target雲端服務設定](/help/sites-administering/target-configuring.md#creating-a-target-cloud-configuration).
 >
->Adobe建議您使用AT.js作為使用者端程式庫。
+>Adobe建議您使用AT.js作為使用者端資料庫。
 
 若要選擇加入預先載入的現成工作：
 
@@ -66,16 +66,16 @@ AEM有一個選擇加入程式，可協助您整合Adobe Analytics和Adobe Targe
 
    ![optin-01](assets/optin-01.png)
 
-1. 若為Analytics：
+1. 對於Analytics：
 
    1. 輸入Analytics的使用者帳戶資訊，然後按一下對應的 **新增** 按鈕。
    1. 已驗證適當的認證。
-   1. Analytics帳戶通過驗證後，請選取要使用的Analytics報表套裝。 AEM會擷取這些Analytics報表套裝。 狀態已更新至 **已新增**.
+   1. Analytics帳戶通過驗證後，請選取要使用的Analytics報表套裝。 AEM會擷取這些Analytics報表套裝。 狀態已更新為 **已新增**.
 
 1. 針對Target：
 
    1. 輸入Target的使用者帳戶資訊，然後按一下對應的 **新增** 按鈕。
-   1. 已驗證適當的認證。 狀態已更新至 **已新增**.
+   1. 已驗證適當的認證。 狀態已更新為 **已新增**.
 
 1. 選取 **下一個**.
 1. 選取應使用Analytics和/或Target的網站。
@@ -88,12 +88,12 @@ AEM有一個選擇加入程式，可協助您整合Adobe Analytics和Adobe Targe
 
 ## 選擇退出整合 {#opting-out-of-the-integration}
 
-符合下列任一條件時，請退出與Analytics和Target的整合：
+符合以下條件時，請選擇退出與Analytics和Target的整合：
 
 * 不想與這些產品整合。
 * 偏好手動設定整合。
 
-   如需手動設定整合的相關資訊，請參閱 [與Adobe Analytics整合](/help/sites-administering/adobeanalytics.md) 和 [與Adobe Target整合](/help/sites-administering/target.md).
+  如需手動設定整合的詳細資訊，請參閱 [與Adobe Analytics整合](/help/sites-administering/adobeanalytics.md) 和 [與Adobe Target整合](/help/sites-administering/target.md).
 
 若要選擇退出，您必須完成預先載入的工作：
 
@@ -101,9 +101,9 @@ AEM有一個選擇加入程式，可協助您整合Adobe Analytics和Adobe Targe
 
 ## 使用屬性檔案提供帳戶資訊 {#providing-account-information-using-a-properties-file}
 
-安裝AEM在伺服器啟動時讀取的屬性檔案，以設定帳戶屬性，與Analytics和Target整合。 當您使用屬性檔案時，選擇加入精靈會自動使用檔案中的屬性，並據此建立雲端設定。
+安裝AEM在伺服器啟動時讀取的屬性檔案，以設定帳戶屬性以便與Analytics和Target整合。 當您使用屬性檔案時，選擇加入精靈會自動使用檔案中的屬性，並據此建立雲端設定。
 
-屬性檔案是名為marketingcloud.properties的文字檔，您儲存在AEM處理序正在使用的工作目錄中（通常是與JAR檔案相同的目錄）。 檔案包含下列屬性：
+屬性檔案是名為marketingcloud.properties的文字檔，儲存在AEM處理序正在使用的工作目錄中（通常與JAR檔案相同的目錄）。 檔案包含下列屬性：
 
 * analytics.server：您使用的Analytics資料中心的URL。
 * analytics.company：與您的Analytics使用者帳戶相關聯的公司。
@@ -112,11 +112,11 @@ AEM有一個選擇加入程式，可協助您整合Adobe Analytics和Adobe Targe
 * analytics.reportsuite：要使用的Analytics報表套裝名稱。
 * target.clientcode：與您的Target帳戶相關聯的使用者端代碼。
 * target.email：用於驗證Target帳戶的電子郵件地址。
-* target.password：與您的電子郵件地址相關聯的密碼。
+* target.password：與您的電子郵件地址關聯的密碼。
 
-屬性和值以等號(=)分隔。 Analytics屬性會加上前置詞 `analytics`，且Target屬性會加上前置詞 `target`. 若要設定服務，請為該服務的所有屬性提供值。 如果您不想設定服務，則不要提供該服務的值。
+屬性和值會以等號(=)分隔。 Analytics屬性會加上前置詞 `analytics`，且Target屬性會加上前置詞 `target`. 若要設定服務，請為該服務的所有屬性提供值。 如果您不想設定服務，則不要為該服務提供值。
 
-以下範例 `.properties` 檔案包含用於建立Analytics雲端設定的屬性值：
+下列範例 `.properties` 檔案包含用於建立Analytics雲端設定的屬性值：
 
 ```xml
 analytics.server=https://test.omniture.com/login/
@@ -129,9 +129,9 @@ target.email=
 target.password=
 ```
 
-以下程式說明如何使用屬性檔案選擇加入整合。
+下列程式說明如何使用屬性檔案選擇加入整合。
 
-1. 建立 `marketingcloud.properties` 工作目錄中的AEM處理序所使用的檔案（製作例項）。
+1. 建立 `marketingcloud.properties` 工作目錄中的檔案，而AEM處理序正使用該檔案（製作例項）。
 
    >[!NOTE]
    >
@@ -153,49 +153,49 @@ target.password=
 
 當您設定與Analytics和Target的整合時，AEM會自動建立所需的雲端設定和架構。 例如，Analytics雲端設定稱為「已布建的Analytics帳戶」。
 
-您不需要變更雲端設定。 不過，您可以視需要設定架構。 (請參閱 [將元件資料與Adobe Analytics屬性對應](/help/sites-administering/adobeanalytics-mapping.md) 和 [新增目標框架](/help/sites-administering/target.md).)
+您不需要變更雲端設定。 不過，您可以視需要設定架構。 (請參閱 [使用Adobe Analytics屬性對應元件資料](/help/sites-administering/adobeanalytics-mapping.md) 和 [新增Target框架](/help/sites-administering/target.md).)
 
 >[!NOTE]
 >
->依預設，當您選擇加入Adobe Target設定精靈時，會啟用「準確定位」。
+>依預設，當您選擇加入Adobe Target設定精靈時，會啟用「準確定位」 。
 >
->準確定位意味著Cloud Service設定會等待內容載入後再載入內容。 因此，就效能而言，準確定位可能會在載入內容前造成幾毫秒的延遲。
+>準確定位表示雲端服務設定會等待內容載入後再載入內容。 因此，就效能而言，準確定位可能會在載入內容前造成幾毫秒的延遲。
 >
->作者例項上一律會啟用「準確定位」。 不過，在發佈執行個體上，您可以清除雲端服務設定中「準確定位」旁的勾號(**http://localhost:4502/etc/cloudservices.html**)。 無論您在雲端服務設定中的設定為何，您仍可開啟和關閉個別元件的準確定位。
+>作者例項上一律會啟用「準確定位」 。 不過在發佈執行個體上，您可以清除雲端服務設定中「準確定位」旁的核取記號，來選擇全域關閉準確定位(**http://localhost:4502/etc/cloudservices.html**)。 無論您在雲端服務設定中的設定為何，您仍可開啟和關閉個別元件的準確定位。
 >
 >如果您有 ***已經*** 已建立目標元件，而您變更此設定，您的變更不會影響這些元件。 您必須直接對這些元件進行任何變更。
 
 >[!CAUTION]
 >
->當您選擇加入Analytics設定和特定的 `reportsuite` ，則架構會限製為發佈執行模式。 這表示追蹤僅適用於發佈執行個體。
+>當您選擇加入Analytics設定和特定 `reportsuite` ，則架構會限製為發佈執行模式。 這表示追蹤僅適用於發佈例項。
 >
 >如果編寫執行個體上需要追蹤，則值應變更為 `all`.
 
 ## 透過Script設定設定和布建 {#configuring-the-setup-and-provisioning-via-script}
 
-作為管理員，您可能想要使用指令碼觸發設定和布建，而不是手動逐步執行精靈。 您可以透過以下方式達成此目的：
+身為管理員，您可能想要使用指令碼觸發設定和布建，而不是手動逐步執行精靈。 您可以透過以下方式達成此目的：
 
 * 傳送POST要求至 **/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json** ，並使用必要的引數。
 
-您傳送哪些引數取決於下列專案：
+您傳送的引數取決於下列專案：
 
 * 如果您想使用 **marketingcloud.properties** 填入所有必要認證的檔案，然後您必須傳送下列引數：
 
    * `automaticProvisioning`= `true`
    * `servicename`= `analytics|target`
-   * `path`=要附加已建立雲端服務設定的AEM頁面路徑
+   * `path`=路徑至AEM頁面，以附加已建立的雲端服務設定
 
-   例如，同時建立Analytics和Target設定，並將它們附加至we.retail頁面的curl請求將是：
+  例如，同時建立Analytics和Target設定，並將它們附加至we.retail頁面的curl請求將是：
 
-   ```shell
-   curl -v -u admin:admin -X POST -d"automaticProvisioning=true&servicename=target&servicename=analytics&path=/content/we-retail" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
-   ```
+  ```shell
+  curl -v -u admin:admin -X POST -d"automaticProvisioning=true&servicename=target&servicename=analytics&path=/content/we-retail" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
+  ```
 
-* 如果您不想使用 **marketingcloud.properties** 檔案之後，您必須傳送認證及引數；例如：
+* 如果您不想要使用 **marketingcloud.properties** 檔案之後，您必須傳送認證和引數；例如：
 
    * 自動布建= `true`
    * servicename= `analytics|target`
-   * path=路徑至AEM頁面，以附加已建立的雲端服務設定；可以定義多個路徑
+   * path=path to an AEM page to attach the created cloud services configurations；可以定義多個路徑
    * analytics.server= `https://servername`
    * analytics.company= `Name of company`
    * analytics.username= `me`
@@ -205,8 +205,8 @@ target.password=
    * target.email= `me@adobe.com`
    * target.password= `password`
 
-   在此情況下，同時建立Analytics和Target設定，並將它們附加至We-Retail頁面的curl要求將是：
+  在此情況下，同時建立Analytics和Target設定，並將它們附加至We-Retail頁面的curl要求將是：
 
-   ```shell
-   curl -v -u admin:admin -X POST -d"automaticProvisioning=false&servicename=target&servicename=analytics&path=/content/we-retail&analytics.server=https://servername/&analytics.company=Name of company&analytics.username=me&analytics.secret=secret&analytics.reportsuite=weretail&target.clientcode=mycompany&target.email=me@adobe.com&target.password=password" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
-   ```
+  ```shell
+  curl -v -u admin:admin -X POST -d"automaticProvisioning=false&servicename=target&servicename=analytics&path=/content/we-retail&analytics.server=https://servername/&analytics.company=Name of company&analytics.username=me&analytics.secret=secret&analytics.reportsuite=weretail&target.clientcode=mycompany&target.email=me@adobe.com&target.password=password" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
+  ```

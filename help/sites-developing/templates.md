@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 1%
@@ -130,7 +130,7 @@ AEM現在提供兩種基本型別的範本以用於建立頁面：
 
 #### 限制子頁面中使用的範本 {#limiting-templates-used-in-child-pages}
 
-若要限制哪些範本可用來在指定頁面下建立子頁面，請使用 `cq:allowedTemplates` 屬性 `jcr:content` 頁面節點，用來指定允許做為子頁面的範本清單。 例如，清單中的每個值都必須是允許的子頁面範本的絕對路徑 `/apps/geometrixx/templates/contentpage`.
+若要限制哪些範本可用來在指定頁面下建立子頁面，請使用 `cq:allowedTemplates` 屬性 `jcr:content` 頁面節點，用來指定允許做為子頁面的範本清單。 清單中的每個值都必須是允許的子頁面範本的絕對路徑，例如， `/apps/geometrixx/templates/contentpage`.
 
 您可以使用 `cq:allowedTemplates` 範本的屬性  `jcr:content` 節點，將此設定套用至使用此範本的所有新建立頁面。
 

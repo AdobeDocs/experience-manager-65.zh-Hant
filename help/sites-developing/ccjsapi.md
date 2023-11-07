@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 feature: Context Hub
 exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3159'
+source-wordcount: '3157'
 ht-degree: 2%
 
 ---
@@ -72,7 +72,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的工作階段存放區。 
 * 存放區已預先填入預設值（初始屬性），但請求失敗（逾時）。 只有一個預設值的初始化。
 * 系統會預先填入存放區。
 
-當延遲設定為 `true` 或毫秒數，方法會先等候再呼叫回呼方法。 如果在傳遞延遲之前觸發另一個初始化事件，則會等到超過延遲時間再觸發初始化事件。 這可讓等候觸發第二個初始化事件，並在最佳情況下呼叫回呼函式。
+當延遲設定為 `true` 或幾毫秒後，方法會先等候再呼叫回呼方法。 如果在傳遞延遲之前觸發另一個初始化事件，則會等到超過延遲時間再觸發初始化事件。 這可讓等候觸發第二個初始化事件，並在最佳情況下呼叫回呼函式。
 
 **參數**
 

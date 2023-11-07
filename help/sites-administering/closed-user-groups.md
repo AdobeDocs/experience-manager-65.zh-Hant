@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6836'
+source-wordcount: '6818'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了簡單起見，本檔案將使用CUG縮寫。
+>為了簡單起見，本檔案全程使用CUG縮寫。
 
 新實作的目標是在必要時涵蓋現有功能，同時解決舊版本的問題和設計限制。 結果會產生具有下列特性的新CUG設計：
 
@@ -104,7 +104,7 @@ CUG原則的許可權評估以及與預設或任何其他授權模型的互動�
    * 對巢狀CUG的過度需求可能會突顯內容設計中的問題
    * 對CUG的需求過度（例如，在每個頁面上）可能表示需要自訂授權模式，可能更適合比對現有應用程式和內容的特定安全性需求。
 
-* 將CUG原則支援的路徑限制在存放庫中的幾個樹狀結構，以便獲得最佳效能。 例如，僅允許自AEM 6.3起將/content節點底下的CUG作為預設值出貨。
+* 將CUG原則支援的路徑限制在存放庫中的幾個樹狀結構，以便獲得最佳效能。 例如，自AEM 6.3起，僅允許將/content節點底下的CUG作為預設值送出。
 * CUG原則的設計目的，是要授予一小部分主體的讀取存取權。 大量主體的需求可能會突顯內容或應用程式設計中的問題，因此應重新考慮。
 
 ### 驗證：定義驗證需求 {#authentication-defining-the-auth-requirement}
@@ -207,7 +207,7 @@ Oak檔案說明新CUG政策在存放庫內容中的反映方式。 如需詳細�
 
 #### 設定新的CUG政策 {#set-a-new-cug-policy}
 
-此程式碼可在之前未設定CUG的節點套用新的CUG原則。 請注意 `getApplicablePolicies` 只會傳回之前未設定的新原則。 最後，原則需要回寫，且變更需要保留。
+此程式碼可在之前未設定CUG的節點套用新的CUG原則。 請注意 `getApplicablePolicies` 只傳回之前未設定的新原則。 最後，原則需要回寫，且變更需要保留。
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -243,7 +243,7 @@ session.save();
 
 #### 編輯現有的CUG原則 {#edit-an-existing-cug-policy}
 
-編輯現有CUG原則需要下列步驟。 請注意，修改的原則需要回寫，變更需要透過保留 `javax.jcr.Session.save()`.
+編輯現有CUG原則需要下列步驟。 修改的原則需要回寫，而變更需要透過保留 `javax.jcr.Session.save()`.
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -281,7 +281,7 @@ JCR存取控制管理會定義最大努力方法，以擷取在指定路徑生�
 
 >[!NOTE]
 >
->請注意兩者之間的差異 `getEffectivePolicies` 以及後續的程式碼範例，此範例會向上檢視階層，以尋找特定路徑是否已是現有CUG的一部分。
+>兩者之間的差異 `getEffectivePolicies` 以及後續的程式碼範例，此範例會向上檢視階層，以尋找特定路徑是否已是現有CUG的一部分。
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -338,7 +338,7 @@ while (isSupportedPath(path)) {
 
 #### 新增驗證需求 {#adding-a-new-auth-requirement}
 
-建立新驗證需求的步驟詳述如下。 請注意，在以下情況下，系統只會向Apache Sling驗證器註冊要求： `RequirementHandler` 已為包含目標節點的樹狀結構設定。
+建立驗證需求的步驟詳述如下。 只有在符合以下條件時，此要求才會向Apache Sling Authenticator註冊： `RequirementHandler` 已為包含目標節點的樹狀結構設定。
 
 ```java
 Node targetNode = [...]
@@ -349,7 +349,7 @@ session.save();
 
 #### 使用登入路徑新增驗證需求 {#add-a-new-auth-requirement-with-login-path}
 
-建立包括登入路徑在內的新驗證要求的步驟。 請注意，如果符合以下條件，則登入路徑的要求和排除專案只會向Apache Sling驗證者註冊： `RequirementHandler` 已為包含目標節點的樹狀結構設定。
+建立包含登入路徑的驗證要求的步驟。 請注意，如果符合以下條件，則登入路徑的要求和排除專案只會向Apache Sling驗證者註冊： `RequirementHandler` 已為包含目標節點的樹狀結構設定。
 
 ```java
 Node targetNode = [...]
@@ -768,7 +768,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 這兩個元素都會建立在 `cq:Page`. 使用目前的設計時，MSM只會處理 `cq:PageContent` (`jcr:content`)節點。
 
-因此，CUG群組無法從Blueprint轉出至即時副本。 設定即時副本時，請針對此進行規劃。
+因此，CUG群組無法從Blueprint轉出至即時副本。 設定即時副本時，請對此進行規劃。
 
 ## 新CUG實作的變更 {#changes-with-the-new-cug-implementation}
 

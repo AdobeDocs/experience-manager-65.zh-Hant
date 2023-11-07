@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '6026'
 ht-degree: 7%
@@ -308,7 +308,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
    * **視窗模式**
 
-     視窗的顯示方式，例如不透明、透明或不同（實心）視窗。
+     視窗的顯示方式，例如，不透明、透明，或作為不同的（實心）視窗。
 
    * **背景色彩**
 

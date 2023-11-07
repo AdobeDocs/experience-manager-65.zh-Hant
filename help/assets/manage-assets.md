@@ -7,7 +7,7 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '10067'
 ht-degree: 3%
@@ -112,7 +112,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 如果您上傳的資產名稱與上傳資產位置已有可用的資產名稱相同，則會顯示警告對話方塊。
 
-您可以選擇重新命名上傳的新資產，以取代現有資產、建立其他版本或保留兩者。 如果您取代現有資產，則資產的中繼資料以及您先前對現有資產所做的任何修改（例如註釋或裁切）都會被刪除。 如果您選擇保留兩個資產，新資產將以數字重新命名 `1` 已附加至其名稱。
+您可以選擇重新命名上傳的新資產，以取代現有資產、建立其他版本或保留兩者。 如果您取代現有資產，則資產的中繼資料以及您先前對現有資產所作的任何修改（例如註解或裁切）都會被刪除。 如果您選擇保留兩個資產，新資產將以數字重新命名 `1` 已附加至其名稱。
 
 ![解決資產名稱衝突的名稱衝突對話方塊](assets/resolve-naming-conflict.png)
 
@@ -839,7 +839,7 @@ CUG是限制資產存取權的額外方式。 您也可以設定資料夾的登�
    >
    >如果資產有子資產，您可以列印所有子資產及其特定的頁面附註。
 
-   若要編輯彩現PDF檔案的外觀，例如字型顏色、大小和樣式，請開啟 **[!UICONTROL 註解PDF設定]** 從Configuration Manager中，修改所需的選項。 例如，若要變更已核准狀態的顯示顏色，請修改對應欄位中的顏色代碼。 如需有關變更註解字型顏色的資訊，請參閱 [註解](/help/assets/manage-assets.md#annotating).
+   若要編輯彩現PDF檔案的外觀（例如字型顏色、大小和樣式），請開啟 **[!UICONTROL 註解PDF設定]** 從Configuration Manager中，修改所需的選項。 例如，若要變更已核准狀態的顯示顏色，請修改對應欄位中的顏色代碼。 如需有關變更註解字型顏色的資訊，請參閱 [註解](/help/assets/manage-assets.md#annotating).
 
    ![在PDF檔案上列印資產註解的設定](assets/annotation-print-pdf-config.png)
 

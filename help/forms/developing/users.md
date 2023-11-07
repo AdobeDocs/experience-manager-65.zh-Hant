@@ -1,19 +1,15 @@
 ---
 title: 管理使用者
-seo-title: Managing Users
 description: 使用User Management API建立使用者端應用程式，以管理角色、許可權和主體（可以是使用者或群組），並驗證使用者。
-seo-description: Use the User Management API to create client applications that can manage roles, permissions, and principals (which can be users or groups), as well as authenticate users.
-uuid: 68d8a0bc-6e3d-4286-ba5c-534dcf58cb84
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 role: Developer
 exl-id: d7c5bb84-a988-4b2e-a587-f4e5b50fea58
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6226'
+source-wordcount: '6218'
 ht-degree: 0%
 
 ---
@@ -853,7 +849,7 @@ ht-degree: 0%
 
 ## 以程式設計方式同步使用者 {#programmatically-synchronizing-users}
 
-您可以使用使用者管理API，以程式設計方式同步使用者。 當您同步使用者時，會使用位於使用者存放庫中的使用者資料更新AEM Forms。 例如，假設您將新使用者新增至使用者存放庫。 執行同步化作業後，新使用者會成為AEM Forms使用者。 此外，您使用者存放庫中不再存在的使用者也會從AEM Forms中移除。
+您可以使用使用者管理API，以程式設計方式同步使用者。 當您同步使用者時，會使用使用者存放庫中的使用者資料更新AEM Forms。 例如，假設您將新使用者新增至使用者存放庫。 執行同步化作業後，新使用者會成為AEM Forms使用者。 此外，您使用者存放庫中不再存在的使用者也會從AEM Forms中移除。
 
 下圖顯示與使用者存放庫同步的AEM Forms。
 

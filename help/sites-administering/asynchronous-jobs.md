@@ -2,10 +2,10 @@
 title: 非同步作業
 description: Adobe Experience Manager 能以非同步方式完成部分耗用大量資源的工作，實現效能最佳化。
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: cc63291c32f7a234398ebe8bf67ab53aaf8fa90f
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 97%
+source-wordcount: '798'
+ht-degree: 91%
 
 ---
 
@@ -55,7 +55,7 @@ AEM 以非同步方式處理操作時，您會透過[收件匣](/help/sites-auth
 
    ![停止圖示](assets/async-stop-icon.png)
 
-1. 若要檢視額外詳細資訊 (例如說明和記錄)，請選取操作，然後按一下工具列中的&#x200B;**[!UICONTROL 「開啟」]**。
+1. 若要檢視額外詳細資訊（例如，說明和記錄），請選取操作，然後按一下 **[!UICONTROL 開啟]** 工具列中的。
 
    ![開啟圖示](assets/async-open-icon.png)
 
@@ -88,7 +88,7 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 
 ## 設定非同步處理 {#configuring-asynchronous-processing}
 
-您可以設定資產、頁面或參照等項目的數量上限，供 AEM 以非同步方式處理特定操作，也可以針對作業執行時間，切換電子郵件通知。
+您可以設定資產、頁面或參照等專案的數量上限，讓AEM以非同步方式處理特定操作，還可以針對作業處理時間，切換電子郵件通知。
 
 ### 設定非同步資產刪除操作 {#configuring-synchronous-delete-operations}
 

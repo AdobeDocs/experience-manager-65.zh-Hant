@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1869'
 ht-degree: 15%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 15%
 您可以使用建立和翻譯工作流程，首次產生特定語言的語言副本。 工作流程提供下列選項：
 
 * 僅建立結構.
-* 建立新的翻譯專案.
+* 建立翻譯專案.
 * 新增至現有翻譯專案.
 
 ### 僅建立結構 {#create-structure-only}
@@ -55,7 +55,7 @@ ht-degree: 15%
 
    ![reveal-in-assets](assets/reveal-in-assets.png)
 
-### 建立新的翻譯專案 {#create-a-new-translation-project}
+### 建立翻譯專案 {#create-a-new-translation-project}
 
 如果您使用此選項，要翻譯的資產會複製到您要翻譯的語言的語言根目錄。 系統會根據您選擇的選項，在「專案」主控台中為資產建立翻譯專案。 根據設定，翻譯專案可以手動啟動，或是在建立翻譯專案後立即自動執行。
 
@@ -164,10 +164,10 @@ ht-degree: 15%
 
 執行此工作流程以翻譯任何其他資產集，並將其納入特定地區設定的語言副本中。 在這種情況下，已翻譯的資產會新增至已包含先前已翻譯資產的目標資料夾。 根據選項選擇，會建立翻譯專案或更新新資產的現有翻譯專案。 更新語言副本工作流程包含以下選項：
 
-* 建立新的翻譯專案
+* 建立翻譯專案
 * 新增至現有翻譯專案
 
-### 建立新的翻譯專案 {#create-a-new-translation-project-1}
+### 建立翻譯專案 {#create-a-new-translation-project-1}
 
 如果您使用此選項，將會為您要更新語言副本的資產集建立翻譯專案。
 

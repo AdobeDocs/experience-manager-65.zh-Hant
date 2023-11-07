@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 9cdd7648-d67e-414d-aedf-a5687da39326
 docset: aem65
 exl-id: 9528d92b-0989-4e2d-83be-ba6c07c845e2
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1012'
 ht-degree: 5%
 
 ---
@@ -51,7 +51,7 @@ SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 
 ## 相依性、設定和建置 {#dependencies-configuration-and-building}
 
-除了預期的Angular相依性之外，範例SPA還可以運用其他程式庫，以更有效率地建立SPA。
+除了預期的Angular相依性之外，範例SPA還可以使用其他程式庫，以更有效率地建立SPA。
 
 ### 相依性 {#dependencies}
 
@@ -65,7 +65,7 @@ SPA編寫功能提供全方位的解決方案，可支援AEM中的SPA。 本文�
 }
 ```
 
-此 `aem-clientlib-generator` 用於隨著建置流程自動建立使用者端程式庫。
+此 `aem-clientlib-generator` 用於在建置流程中自動建立使用者端程式庫。
 
 `"aem-clientlib-generator": "^1.4.1",`
 
@@ -106,7 +106,7 @@ module.exports = {
 
 ### 正在建置 {#building}
 
-實際建立應用程式 [Webpack](https://webpack.js.org/) 用於整合，以及自動建立使用者端程式庫的aem-clientlib-generator。 因此， build指令將類似於：
+實際建立應用程式使用 [Webpack](https://webpack.js.org/) 用於整合，以及自動建立使用者端程式庫的aem-clientlib-generator。 因此， build指令將類似於：
 
 `"build": "ng build --build-optimizer=false && clientlib",`
 
@@ -114,7 +114,7 @@ module.exports = {
 
 ### AEM 專案原型 {#aem-project-archetype}
 
-任何 AEM 專案都應利用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並利用 SPA SDK。
+任何 AEM 專案都應使用 [AEM 專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支援使用 React 或 Angular 的 SPA 專案並使用 SPA SDK。
 
 ## 應用程式結構 {#application-structure}
 
@@ -282,7 +282,7 @@ AEM中SPA的核心構想是將該SPA元件對應至AEM元件，並在修改內�
 
 單頁應用程式內的元件定期需要共用資訊。 有幾種建議的方法可以達成此目的，依複雜度遞增的順序列示如下。
 
-* **選項1：** 例如，使用util類別作為純物件導向解決方案，將邏輯集中並廣播至必要元件。
+* **選項1：** 例如，使用util類別作為純物件導向的解決方案，將邏輯集中並廣播至必要的元件。
 * **選項2：** 使用NgRx等狀態庫共用元件狀態。
 * **選項3：** 透過自訂和擴充容器元件來利用物件階層。
 

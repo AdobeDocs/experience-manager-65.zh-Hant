@@ -1,19 +1,15 @@
 ---
 title: 建立可存取的內容 (符合 WCAG 2.0)
-seo-title: Creating Accessible Content (WCAG 2.0 Conformance)
 description: WCAG 2.0 包含一系列無需仰賴技術的指引和成功標準，有助身心障礙人士存取與使用網路內容。
-seo-description: WCAG 2.0 consists of a set of technology independent guidelines and success criteria to help make web content accessible to, and usable by, persons with disabilities.
 page-status-flag: de-activated
-uuid: c2c0cac0-2a9f-478d-8261-e8cc894aae34
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 378bc33d-ab6c-4651-9688-102c961561fc
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '9152'
+source-wordcount: '9151'
 ht-degree: 5%
 
 ---
@@ -34,7 +30,7 @@ WCAG 2.0 包含一系列無需仰賴技術的指引和成功標準，有助身�
 
 >[!NOTE]
 >
->另請參閱:
+>另請參閱：
 >
 >* [WCAG 2.0快速指南](/help/managing/qg-wcag.md)
 >* [設定RTF編輯器以產生無障礙內容](/help/sites-administering/rte-accessible-content.md)
@@ -396,7 +392,7 @@ AEM可讓您使用適當的HTML元素輕鬆建構網頁。 在RTE （文字元�
 
 下圖示範不同標題型別的範例。
 
-![下拉式選擇器（傳統UI）中顯示的標題H1到H3。](assets/chlimage_1-19a.png)
+![下拉式選取器（傳統UI）中顯示的標題H1到H3。](assets/chlimage_1-19a.png)
 
 * **強調的文字**：
 
@@ -528,13 +524,13 @@ ID屬性無法在現成安裝中使用。 可透過在RTE中設定HTML規則和�
 
 >[!NOTE]
 >
-有關替代顏色的需求，請參閱 [使用顏色](#use-of-color).
+如需有關替代色彩的需求，請參閱 [使用顏色](#use-of-color).
 
 #### 如何達到標準 — 感官特性(1.3.3) {#how-to-meet-sensory-characteristics}
 
 請確定任何依賴頁面內容視覺特性的資訊也會以替代格式呈現。
 
-* 不要依賴視覺位置來提供資訊。 例如，如果您想讓使用者參閱頁面右側的功能表以存取進一步資訊，請勿參閱 *右側的功能表*；請改為命名選單（例如透過標題），並在文字中參照該名稱。
+* 不要依賴視覺位置來提供資訊。 例如，如果您想讓使用者參閱頁面右側的功能表以存取進一步資訊，請勿參閱 *右側的功能表*；請改為命名選單（例如，透過標題），並在文字中參照該名稱。
 * 請勿依賴文字樣式（例如粗體或斜體文字）作為傳達資訊的唯一方式。
 
 >[!NOTE]
@@ -684,7 +680,7 @@ ID屬性無法在現成安裝中使用。 可透過在RTE中設定HTML規則和�
 
 需要注意的要點包括：
 
-1. 有關閃爍或閃爍內容的需求，請參閱 [切勿設計會導致癲癇發作的內容(2.3)](#seizures).
+1. 如需與閃爍或閃爍內容相關的需求，請參閱 [切勿設計會導致癲癇發作的內容(2.3)](#seizures).
 1. 由於任何不符合此成功標準的內容都可能干擾使用者使用整個頁面的能力，網頁上的所有內容（無論是否用於滿足其他成功標準）都必須符合此成功標準。 另請參閱 [一致性需求5：不干擾](https://www.w3.org/TR/WCAG20/#cc5).
 1. 軟體定期更新或串流至使用者代理程式的內容，不必保留或呈現暫停起始與繼續簡報之間產生或接收的資訊，因為這在技術上可能行不通，且在許多情況下這麼做可能會產生誤導。
 1. 如果在此階段中無法對所有使用者進行互動，而且如果未指出進度，可能會讓使用者感到困惑或導致他們認為內容已凍結或中斷，則作為預先載入階段的一部分或類似情況發生的動畫可視為必要。
@@ -965,7 +961,7 @@ John Smith's publications
 
 標籤會放置在欄位正上方或左側。
 
-在功能有限的簡單表單中，適當地標示 `Submit` 按鈕可作為相鄰欄位的標籤(例如 `Search`)。 當尋找標籤文字的空間可能困難時，這個用法很有用。
+在功能有限的簡單表單中，適當地標示 `Submit` 按鈕可作為相鄰欄位的標籤(例如， `Search`)。 當尋找標籤文字的空間可能困難時，這個用法很有用。
 
 #### 更多資訊 — 標籤或指示(3.3.2) {#more-information-labels-or-instructions}
 

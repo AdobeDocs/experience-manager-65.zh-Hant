@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1246'
 ht-degree: 2%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 2%
 
 **PhoneGap版本** 是您要使用PhoneGap編譯應用程式的版本。 最佳實務是與最新版本保持同步，以確保您取得最新和最大的功能和錯誤修正。
 
-**內容更新伺服器URL** 是您的應用程式用來呼叫ContentSync更新的URL。 您必須將其設定為您的Dispatcher URL，或者，如果不使用Dispatcher，則設定為將用於為應用程式提供ContentSync更新的其中一個發佈執行個體。
+**內容更新伺服器URL** 是您的應用程式用來呼叫ContentSync更新的URL。 您必須將其設定為您的Dispatcher URL，或者，如果未使用Dispatcher，則設定為用來為應用程式提供ContentSync更新的其中一個發佈執行個體。
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -130,7 +130,7 @@ AEM應用程式的一項重要功能是可讓行動應用程式透過ContentSync
 
 ### 外掛程式標籤 {#the-plugins-tab}
 
-此 **外掛程式** 標籤說明與應用程式相關聯的外掛程式。 在建置期間，此資訊將用於擷取適當的外掛程式。
+此 **外掛程式** 標籤說明與應用程式相關聯的外掛程式。 此資訊用於在建置期間擷取適當的外掛程式。
 
 ![chlimage_1-122](assets/chlimage_1-122.png)
 

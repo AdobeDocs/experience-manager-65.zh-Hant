@@ -2,10 +2,10 @@
 title: 了解 Headless 內容以及如何在 AEM 中翻譯
 description: 了解 Headless 概念、它們如何對應到 AEM 以及 AEM 翻譯理論。
 exl-id: cb2e2d89-e2d2-462f-8fff-b201847d0641
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 97%
+source-wordcount: '758'
+ht-degree: 95%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 97%
 
 ![ Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
-取用內容的服務，無論是 AR 體驗、網路商店、行動體驗、漸進式網頁應用程式 (PWA) 等，都從 Headless CMS 取用內容並提供自己的呈現操作。它們負責為您的內容提供自己的頭。
+消費服務，不論是AR體驗、網路商店、行動體驗、漸進式網頁應用程式(PWA)等，都會從Headless CMS擷取內容，並提供專屬的轉譯。 它們負責為您的內容提供自己的頭。
 
 省略頭可消除複雜性來簡化 CMS。這樣做也會將呈現內容的責任轉移到實際需要內容並且通常更適合執行呈現的服務。
 
@@ -71,13 +71,13 @@ AEM 的強大功能使其能夠以 Headless 方式、全堆疊方式或同時以
 * 了解 Headless 內容傳遞的基本概念。
 * 熟悉 AEM 如何支援 Headless 和翻譯。
 
-以這些知識為基礎，接下來查看文件[AEM Headless 翻譯快速入門](getting-started.md) 以繼續您的 AEM Headless 翻譯歷程，您將在此文件大致了解 AEM 如何管理 Headless 內容以及它的翻譯工具。
+以這些知識為基礎，接下來查看文件[AEM Headless 翻譯快速入門](getting-started.md)以繼續您的 AEM Headless 翻譯歷程，您將在此文件大致了解 AEM 如何管理 Headless 內容以及它的翻譯工具。
 
 ## 其他資源 {#additional-resources}
 
 雖然建議您查閱文件[AEM Headless 翻譯快速入門](getting-started.md)來繼續 Headless 翻譯歷程的下個部分，以下也有一些其他選擇性資源，在深入探究本文件提到的一些概念，但不是繼續 Headless 歷程的必要條件。
 
 * [MSM 和翻譯](/help/sites-administering/msm-and-translation.md) - 詳細說明 AEM 多網站管理員以及它如何與其翻譯工具一起工作
-* 一個 [AEM as a Headless CMS簡介](/help/sites-developing/headless/introduction.md)
-* 此 [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-* [AEM中Headless的Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

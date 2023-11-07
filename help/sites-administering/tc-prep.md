@@ -4,9 +4,9 @@ description: 瞭解如何準備內容以在Adobe Experience Manager中翻譯。
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '683'
 ht-degree: 1%
 
 ---
@@ -49,9 +49,9 @@ ht-degree: 1%
 
 * `<language-code>`支援的語言代碼是由ISO-639-1定義的兩字母代碼，例如 `en`.
 
-* `<language-code>_<country-code>` 或 `<language-code>-<country-code>`支援的國家/地區代碼是由ISO 3166定義的小寫或大寫兩字母代碼，例如 `en_US`， `en_us`， `en_GB`， `en-gb`.
+* `<language-code>_<country-code>` 或 `<language-code>-<country-code>`支援的國家代碼是由ISO 3166定義的小寫或大寫兩字母代碼，例如 `en_US`， `en_us`， `en_GB`， `en-gb`.
 
-根據您為全域網站選擇的結構，您可以使用任一格式。  例如，Geometrixx網站法文副本的根頁面有 `fr` 作為Name屬性。 請注意，Name屬性會用作存放庫中頁面節點的名稱，從而決定頁面的路徑。 (http://localhost:4502/content/geometrixx/fr.html)
+根據您為全域網站選擇的結構，您可以使用任一格式。  例如，Geometrixx網站法文副本的根頁面有 `fr` 作為Name屬性。 Name屬性會用作存放庫中頁面節點的名稱，從而決定頁面的路徑。 (http://localhost:4502/content/geometrixx/fr.html)
 
 下列程式使用觸控最佳化UI來建立網站的語言副本。 如需使用傳統UI的說明，請參閱 [使用Classic UI建立語言根](/help/sites-administering/tc-lroot-classic.md).
 
@@ -65,7 +65,7 @@ ht-degree: 1%
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
 1. 選取頁面範本，然後按一下或點選「下一步」。
-1. 在「名稱」欄位中，輸入國家/地區代碼，格式為 `<language-code>` 或 `<language-code>_<country-code>`，例如 `en`， `en_US`， `en_us`， `en_GB`， `en_gb`. 輸入頁面的標題。
+1. 在「名稱」欄位中，輸入國家/地區代碼，格式為 `<language-code>` 或 `<language-code>_<country-code>`例如， `en`， `en_US`， `en_us`， `en_GB`， `en_gb`. 輸入頁面的標題。
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 

@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 1%
@@ -19,15 +19,15 @@ ht-degree: 1%
 
 # 在待辦事項清單中顯示其他資料{#displaying-additional-data-in-todo-list}
 
-依預設，AEM Forms工作區的待辦事項清單會顯示任務顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期等。 您也可以新增圖示並變更顯示樣式。
+依預設，AEM Forms工作區的待辦事項清單會顯示任務顯示名稱和說明。 不過，您可以新增其他資訊，例如建立日期、截止日期。 您也可以新增圖示並變更顯示樣式。
 
-![檢視HTML工作區待辦事項索引標籤顯示預設設定](assets/html-todo-list.png)
+![檢視HTML工作區待辦事項索引標籤以顯示預設設定](assets/html-todo-list.png)
 
 本文詳細說明為ToDo清單中的每個任務新增資訊的步驟。
 
 ## 可新增內容 {#what-can-be-added}
 
-您可以新增以下專案中的可用資訊： `task.json` 由伺服器傳送。 資訊可以純文字形式新增，也可以使用樣式來格式化資訊。
+您可以新增下列專案中的可用資訊： `task.json` 由伺服器傳送。 資訊可以純文字形式新增，也可以使用樣式來格式化資訊。
 
 如需JSON物件說明的詳細資訊，請參閱 [此](/help/forms/using/html-workspace-json-object-description.md) 文章。
 
@@ -36,7 +36,7 @@ ht-degree: 1%
 1. 請遵循 [AEM Forms工作區自訂的一般步驟](../../forms/using/generic-steps-html-workspace-customization.md).
 1. 若要顯示工作的其他資訊，必須在的工作區塊中新增對應的索引鍵/值組 `translation.json`.
 
-   例如，變更 `/apps/ws/locales/en-US/translation.json` 若為英文：
+   例如，變更 `/apps/ws/locales/en-US/translation.json` 如果是英文：
 
    ```json
    "task" : {
@@ -137,7 +137,7 @@ ht-degree: 1%
 
 ## 在HTML範本中新增專案 {#adding-entry-in-the-html-template}
 
-最後，您必須在開發套件中針對您想要新增至工作的每個屬性包含一個專案。 若要建立工作區，請參閱建立AEM Forms工作區程式碼。
+最後，您必須在開發套件中，針對您想要新增至工作的每個屬性加入專案。 若要建立工作區程式碼，請參閱建立AEM Forms工作區程式碼。
 
 1. 複製 `task.html`:
 

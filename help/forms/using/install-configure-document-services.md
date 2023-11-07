@@ -1,16 +1,12 @@
 ---
 title: 安裝和設定檔案服務
-seo-title: Installing and configuring document services
 description: 安裝AEM Forms檔案服務，以建立、彙編、散佈、封存PDF檔案、新增數位簽名以限制對檔案的存取，以及解碼條碼式Forms。
-seo-description: Install AEM Forms document services to create, assemble, distribute, archive PDF documents, add digital signatures to limit access to documents, and decode barcoded forms.
-uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
-discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: fbfe38e9d669cd506b687a3fb81ad4ce9e7d65da
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '5513'
+source-wordcount: '5512'
 ht-degree: 1%
 
 ---
@@ -767,7 +763,6 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
          adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;leid>] [—regsuppress=ss] [—eulasuppress] [—locales=受限的xx_XX格式或ALL>語言環境清單] [—provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
          
          ```
-
      
    * 磁碟區序列化套件（使用prov.xml檔案和新的序列重新序列化現有的安裝）：以管理員身分從PRTK安裝資料夾執行下列命令，以序列化並啟動使用者端機器上已部署的套件：
 
@@ -775,7 +770,6 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
          adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
          
          ```
-
      
 * 若為大型安裝，請使用 [AcrobatCustomization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) 以移除舊版Reader和Acrobat。 自訂安裝程式，並將其部署至組織的所有電腦。
 
@@ -791,7 +785,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
 當使用者嘗試將Word或Excel檔案轉換成Microsoft Windows Server上的PDF時，會發生下列錯誤：
 
-*來自主要轉換器的錯誤訊息： ALC-PDG-015-003 — 系統無法開啟輸入檔案。 請再次提交檔案或連絡系統管理員。*
+*來自主要轉換器的錯誤訊息： ALC-PDG-015-003 — 系統無法開啟輸入檔案。 再次提交您的檔案或聯絡您的系統管理員。*
 
 若要解決問題，請參閱 [無法在Windows Server上將Word或Excel檔案轉換為PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
 

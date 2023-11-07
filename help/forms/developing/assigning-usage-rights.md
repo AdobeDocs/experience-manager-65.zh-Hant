@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 9e8db506-9ace-4e1f-8a7b-c4e9b15dde7e
 role: Developer
 exl-id: 6af148eb-427a-4b54-9c5f-8750736882d8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3918'
+source-wordcount: '3914'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Acrobat Reader DC擴充功能服務可擴充Adobe Reader的功能，讓您的組
 
 **擷取PDF檔案**
 
-您必須擷取PDF檔案才能套用使用許可權。 啟用許可權的PDF檔案包含使用許可權字典。 當Adobe Reader開啟包含這類字典的檔案時，它只會啟用字典中為該檔案指定的使用許可權。 如果檔案不含使用許可權字典，Acrobat Reader DC擴充功能服務會建立一個。 如果其中已包含字典，Acrobat Reader DC擴充功能服務會以您指定的使用許可權覆寫現有的使用許可權。 字典會指定已啟用哪些使用許可權。 當使用者在Adobe Reader中開啟檔案時，僅允許字典中指定的使用許可權。
+擷取PDF檔案以套用使用許可權。 啟用許可權的PDF檔案包含使用許可權字典。 當Adobe Reader開啟包含這類字典的檔案時，它只會啟用字典中為該檔案指定的使用許可權。 如果檔案不含使用許可權字典，Acrobat Reader DC擴充功能服務會建立一個。 如果其中已包含字典，Acrobat Reader DC擴充功能服務會以您指定的使用許可權覆寫現有的使用許可權。 字典會指定已啟用哪些使用許可權。 當使用者在Adobe Reader中開啟檔案時，僅允許字典中指定的使用許可權。
 
 **指定要套用的使用許可權**
 
@@ -388,7 +388,7 @@ Acrobat Reader DC擴充功能服務將使用許可權套用至PDF檔案後，您
 
 **擷取啟用許可權的PDF檔案**
 
-您必須擷取啟用許可權的PDF檔案，才能擷取認證的相關資訊。 您也可以指定認證的別名，以擷取認證的相關資訊；不過，如果您要擷取用於套用使用許可權至特定啟用許可權的PDF檔案的認證相關資訊，則必須擷取檔案。
+擷取啟用許可權的PDF檔案，以擷取有關認證的資訊。 您也可以指定認證的別名，以擷取認證的相關資訊；不過，如果您要擷取用於套用使用許可權至特定啟用許可權的PDF檔案的認證相關資訊，則必須擷取檔案。
 
 **擷取認證的相關資訊**
 

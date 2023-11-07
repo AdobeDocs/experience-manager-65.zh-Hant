@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3310'
+source-wordcount: '3306'
 ht-degree: 1%
 
 ---
@@ -349,7 +349,7 @@ OSGi定義用於開發和部署模組化應用程式和程式庫的架構(也稱
 
 currentNode是目前的節點物件。
 
-有關操作Node物件的詳細資訊，請參閱 [Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
+如需有關操作Node物件的詳細資訊，請參閱 [Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
 
 **Widget** 在AEM中，所有使用者輸入均由Widget管理。 這些通常用於控制內容的編輯。
 
@@ -388,7 +388,7 @@ AEM是使用Widget的ExtJS資料庫開發的。
 
 S`tring pageName = currentPage.getName();`
 
-TcurrentPage為目前頁面物件。 如需有關處理Page物件的詳細資訊，請參閱 [Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/Page.html).
+TcurrentPage為目前頁面物件。 如需有關操控頁面物件的詳細資訊，請參閱 [Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/Page.html).
 
 **頁面管理員** 頁面管理員是提供頁面層級作業方法的介面。
 
@@ -396,7 +396,7 @@ TcurrentPage為目前頁面物件。 如需有關處理Page物件的詳細資訊
 
 頁面myPage = pageManager.getContainingPage(myResource)；
 
-pageManager是頁面管理員物件，myResource是資源物件。 有關頁面管理員所提供方法的詳細資訊，請參閱 [Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/PageManager.html).
+pageManager是頁面管理員物件，myResource是資源物件。 如需頁面管理員所提供方法的詳細資訊，請參閱 [Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/PageManager.html).
 
 ## 存放庫內的結構 {#structure-within-the-repository}
 

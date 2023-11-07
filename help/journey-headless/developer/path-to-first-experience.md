@@ -2,10 +2,10 @@
 title: 踏上首次使用 AEM Headless 之路
 description: 在 AEM Headless 開發人員歷程的這一部分中，您將了解在 AEM 中實作您的第一個 Headless 體驗的步驟 (包括規劃考量事項)，並學習最佳做法以使您的操作過程盡可能順利。
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1992'
-ht-degree: 97%
+source-wordcount: '1988'
+ht-degree: 92%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 97%
 
 相反地，您應該根據組織原則，例如品牌和產品階層、商品或表面目錄或是客戶歷程中的步驟，來考慮不同表面上的內容如何相關。例如，如果您有一組表面可支援您製造的特定品牌汽車，您可能想要從內容模型開始，取得適用於整輛汽車的一般資訊，然後是較為特定項目，例如車輛啟動時到出現維修問題時所需的內容。這類模型會強制繼承一般汽車品牌內容，也允許根據所需特定情境進行變換。這也能協助在未來管理此內容的更新，因為您可以根據角色強制執行控制，例如整體行銷人員或整個汽車品牌的產品經理，對比負責「啟動汽車」體驗的作者。
 
-當您有了內容模型並清楚需要此內容的各種用戶端，您必須確保與存取各種內容模型關聯的 GraphQL/API 會發佈到需要此內容的所有用戶端。有不同方法可以存取特定內容。您可以要求一段特定的靜態內容，這樣可以快取內容並提高效能。您也可以要求動態產生的內容，這將需要更多處理。確保用戶端會利用最能滿足其業務需求的 API。
+當您有了內容模型並清楚需要此內容的各種用戶端，您必須確保與存取各種內容模型關聯的 GraphQL/API 會發佈到需要此內容的所有用戶端。有不同方法可以存取特定內容。您可以要求一段特定的靜態內容，這樣可以快取內容並提高效能。您也可以要求動態產生的內容，這將需要更多處理。確保客戶使用最符合其業務需求的API。
 
 ## 了解您的環境 {#understanding-environments}
 
@@ -68,15 +68,15 @@ Headless 專案的中繼環境用於在新的 AEM 產品版本推送到生產環
 
 ### 開發人員和內容作者協力合作 {#cooperation}
 
-開發人員需要的 AEM 開發環境是內含填入的內容模型。由於內容作者仍在建立內容，開發人員開發的用戶端將取用 AEM 的 Headless 內容。這就是 API 定義非常重要的原因。利用 AEM SDK，開發人員可以建立測試連結，以便建立用戶端和單元測試以確保用戶端能夠正確呈現內容。
+開發人員需要的 AEM 開發環境是內含填入的內容模型。由於內容作者仍在建立內容，開發人員開發的用戶端將取用 AEM 的 Headless 內容。這就是 API 定義非常重要的原因。透過使用AEM SDK，開發人員可以建立測試勾點，以便建立使用者端和單元測試，確保使用者端能夠正確轉譯內容。
 
-內容作者根據已在中繼環境定義的內容模型建立內容。使用內容片段編寫工具，作者可以建立新的內容片段或編輯現有的內容片段。在發佈之前，作者可以與開發人員合作將內容模型推送至開發環境，或僅為作者設定開發人員環境，來預覽它在用戶端中的外觀。
+內容作者根據已在中繼環境定義的內容模型建立內容。使用內容片段製作工具，作者會建立內容片段或編輯現有的內容片段。 在發佈之前，作者可以與開發人員合作將內容模型推送至開發環境，或僅為作者設定開發人員環境，來預覽它在用戶端中的外觀。
 
 ## 設定 {#setup}
 
 在 AEM 中開始使用 Headless 技術之前，您需要確保已啟用所有必要的功能。本章節概述相關要求。完成這些步驟的實際步驟將在 [AEM Headless 開發人員歷程](#overview.md)的後續部分詳細說明。
 
-您也可以選擇參考[其他資源](#additional-resources)以取得個別主題的詳細資訊。
+您也可以選擇檢視 [其他資源](#additional-resources) 以取得個別主題的詳細資訊。
 
 ### 設定 {#configuration}
 
@@ -94,7 +94,7 @@ Headless 專案的中繼環境用於在新的 AEM 產品版本推送到生產環
 
 ## 最佳做法 {#best-practices}
 
- Headless 專案的成功不僅在於實作的技術，還在於良好的規劃和專案管理。以下是內容作者和開發人員在規劃專案時要謹記的一些最佳做法。
+ Headless 專案的成功不僅在於實作的技術，還在於良好的規劃和專案管理。以下是內容作者和開發人員在規劃專案時應牢記的幾個最佳實務。
 
 ### 組織您的內容 {#organizing-content}
 
@@ -151,4 +151,4 @@ Headless 專案的中繼環境用於在新的 AEM 產品版本推送到生產環
 * [建立內容片段模型](/help/assets/content-fragments/content-fragments-models.md) - 內容片段模型的技術文件
 * [建立內容片段](/help/assets/content-fragments/content-fragments.md) - 內容片段的技術文件
 * [使用 GraphQL 查詢內容](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - GraphQL API 的技術文件
-* 此 [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

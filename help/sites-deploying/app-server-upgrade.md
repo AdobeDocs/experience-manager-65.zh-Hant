@@ -3,9 +3,9 @@ title: 應用程式伺服器安裝的升級步驟
 description: 瞭解如何升級透過應用程式伺服器部署的AEM執行個體。
 feature: Upgrading
 exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 0%
 
    * 移除 **sling.options.file** 藉由執行： `find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf`
 
-1. 現在，建立將與AEM 6.5搭配使用的節點存放區和資料存放區。您可以透過以下列名稱建立兩個檔案來執行此操作 `crx-quickstart\install`：
+1. 現在，建立與AEM 6.5搭配使用的節點存放區和資料存放區。您可以透過以下列名稱建立兩個檔案來執行此操作 `crx-quickstart\install`：
 
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`

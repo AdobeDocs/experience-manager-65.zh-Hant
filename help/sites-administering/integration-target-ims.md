@@ -2,10 +2,10 @@
 title: 使用IMS與Adobe Target整合
 description: 瞭解如何使用IMS整合AEM與Adobe Target。
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1557'
-ht-degree: 2%
+source-wordcount: '1556'
+ht-degree: 3%
 
 ---
 
@@ -105,7 +105,7 @@ ht-degree: 2%
 
 1. 檢閱認證，然後繼續進行 **下一個**：
 
-   ![建立新專案](assets/integration-target-io-15.png)
+   ![建立專案](assets/integration-target-io-15.png)
 
 1. 選取所需的產品設定檔，並繼續 **儲存已設定的API**：
 

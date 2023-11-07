@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '7848'
+source-wordcount: '7847'
 ht-degree: 0%
 
 ---
@@ -619,7 +619,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以傳輸UI事
   <tr>
    <td><p>指令碼 </p></td>
    <td><p>指定產生PDF服務與原生應用程式之間的互動。 這類互動通常會引導應用程式將檔案列印至Adobe PDF驅動程式。 </p><p>指令碼包含指示原生應用程式開啟特定對話方塊，以及針對這些對話方塊中的欄位和按鈕提供特定回應的指示。 </p></td>
-   <td><p>產生PDF服務包含所有支援原生應用程式的指令碼檔案。 您可以使用XML編輯應用程式來修改這些檔案。</p><p>若要新增對新的原生應用程式的支援，您必須建立新的指令碼檔案。 (請參閱 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">為原生應用程式建立或修改其他對話方塊XML檔案</a>.) </p></td>
+   <td><p>產生PDF服務包含所有支援原生應用程式的指令碼檔案。 您可以使用XML編輯應用程式來修改這些檔案。</p><p>若要新增新原生應用程式的支援，您必須建立指令碼檔案。 (請參閱 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">為原生應用程式建立或修改其他對話方塊XML檔案</a>.) </p></td>
   </tr>
   <tr>
    <td><p>一般對話方塊指示 </p></td>

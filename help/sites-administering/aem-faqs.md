@@ -2,9 +2,9 @@
 title: AEM常見問題集
 description: 使用這些常見問題集來瞭解、設定和疑難排解AEM中的常見工作流程或問題。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: f7bfbfab9fb9ec00304f2889735c70be924cc217
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ### 如何設定無二進位檔的分發？ {#how-do-i-configure-binary-less-distribution}
 
-無二進位散發支援在共用資料存放區上部署，並涉及利用儲存庫型散發套件匯出程式(原廠PID： `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`)封裝產生器。
+透過共用資料存放區進行部署時，支援無二進位分送，而且其中會涉及使用儲存庫型散發套件匯出程式(原廠PID： `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`)封裝產生器。
 
 啟用無二進位模式後，發佈的內容套件會包含對二進位檔的參照，而不是實際的二進位檔。
 
@@ -66,7 +66,7 @@ Adobe Experience Manager (AEM) 6.4隨附SSL精靈，並提供使用者介面以�
 
 若要瞭解如何從React應用程式使用AEM內容服務，請參閱 [開始使用AEM內容服務](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) 教學課程。
 
-此外，如果開發人員想要匯出元件的樹狀結構，也可以實作 `ComponentExporter` 和 `ContainerExporter` 介面以及使用 `ModelFactory` 反複子元件並傳回其模型表示。 請參閱下列資源：
+此外，如果開發人員想要匯出元件的樹狀結構，也可以實作 `ComponentExporter` 和 `ContainerExporter` 介面並使用 `ModelFactory` 反複子元件並傳回其模型表示。 請參閱下列資源：
 
 [1] [Adobe-Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
 
@@ -78,7 +78,7 @@ Adobe Experience Manager (AEM) 6.4隨附SSL精靈，並提供使用者介面以�
 
 #### 是否有重點說明要升級至AEM 6.4的主要功能的有用資源？ {#is-there-a-good-resource-that-highlights-the-key-features-for-upgrading-to-aem}
 
-請參閱 [瞭解升級AEM的原因](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html) 說明考慮升級至最新版Adobe Experience Manager之客戶的主要功能概要說明。
+另請參閱 [瞭解升級AEM的原因](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html) 說明考慮升級至最新版Adobe Experience Manager之客戶的主要功能概要說明。
 
 ## Assets {#assets}
 
@@ -107,7 +107,7 @@ AEM提供各種機制，讓您能夠自訂編寫執行個體的主控台和頁�
 
 #### CoralUI 2和CoralUI 3型元件有何不同？ {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-系統會為Coral3建立一組新的Granite UI Foundation Sling元件，其位於 [/libs/granite/ui/components/coral/foundation.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) 一組適用於CoralUI 2元件，另一組適用於CoralUI 3元件。 新集合不會只是複製貼上舊集合，而是會加以清除（例如精簡、移除已棄用的功能）。 因此，建議頁面僅使用以CoralUI 3為基礎或以CoralUI 2為基礎的組合。
+系統會為Coral3建立一組新的Granite UI Foundation Sling元件，其位於 [/libs/granite/ui/components/coral/foundation.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) 一組適用於CoralUI 2元件，另一組適用於CoralUI 3元件。 新集合不會只是複製貼上舊集合，而是會加以清除（例如，精簡、移除已棄用的功能）。 因此，建議頁面僅使用以CoralUI 3為基礎或以CoralUI 2為基礎的組合。
 
 若要深入瞭解，請參閱 [CoralUI 3型移轉指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
 

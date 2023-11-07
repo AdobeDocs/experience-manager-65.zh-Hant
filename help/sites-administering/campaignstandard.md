@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1825'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ Adobe Campaign Standard預設會提供 `aemserver` AEM用來連線至Adobe Campa
 
 您的 `aemserver` 使用者現在擁有必要許可權，可讓AEM使用該許可權與Adobe Campaign通訊。
 
-不過，在AEM可以使用之前 `aemserver` 使用者，必須設定其密碼。 這不能透過Adobe Campaign完成。 必須由Adobe支援工程師執行。 [請向Adobe客戶服務提出票證](https://experienceleague.adobe.com/?support-tab=home#support) 請求重設 `aemserver` 密碼。 取得Adobe客戶服務的密碼後，請妥善保管於安全位置。
+不過，在AEM可以使用之前 `aemserver` 使用者，必須設定其密碼。 這不能透過Adobe Campaign完成。 必須由Adobe支援工程師執行。 [向Adobe客戶服務提交票證](https://experienceleague.adobe.com/?support-tab=home#support) 請求重設 `aemserver` 密碼。 取得Adobe客戶服務的密碼後，請妥善儲存在安全位置。
 
 ## 驗證Campaign中的AEMResourceTypeFilter {#resource-type-filter}
 

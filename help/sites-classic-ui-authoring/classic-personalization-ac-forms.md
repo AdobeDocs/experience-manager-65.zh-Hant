@@ -8,9 +8,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
 exl-id: 3f9ed24e-c54b-4bd4-9212-eabc67bb540e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Adobe Campaign專用的Forms具有特定元件。 這些元件有選項可讓您
 
 1. 導覽至您要編輯的表單。
 1. 在工具箱中，選取 **頁面** > **頁面屬性……** 然後前往 **Cloud Service** 標籤中選取的視窗。
-1. 按一下「 」以新增Adobe Campaign服務 **新增服務**，然後在服務的下拉式清單中選取與您Adobe Campaign執行個體對應的設定。 此設定會在您設定執行個體之間的連線時執行。 如需詳細資訊，請參閱 [正在將AEM連線至Adobe Campaign](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign).
+1. 按一下「 」以新增Adobe Campaign服務 **新增服務**，然後在服務的下拉式清單中選取與您的Adobe Campaign執行個體對應的設定。 此設定會在您設定執行個體之間的連線時執行。 如需詳細資訊，請參閱 [正在將AEM連線至Adobe Campaign](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign).
 
    >[!NOTE]
    >

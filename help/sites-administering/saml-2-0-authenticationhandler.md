@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '842'
 ht-degree: 91%
 
 ---
@@ -40,7 +40,7 @@ AEM 隨附 [SAML](https://saml.xml.org/saml-specifications) 驗證處理常式�
 
 >[!NOTE]
 >
->SAML 2.0 驗證處理常式會依預設停用。您必須至少設定下列其中一個屬性，才能啟用處理常式：
+>SAML 2.0 驗證處理常式會依預設停用。請至少設定下列其中一個屬性，以啟用處理常式：
 >
 >* 身分提供者 POST URL，或 IDP URL。
 >* 服務提供者實體 ID。

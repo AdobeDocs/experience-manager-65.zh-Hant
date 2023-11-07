@@ -9,9 +9,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1304'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 ## 使用案例 {#use-case}
 
-範本作者不僅需要設定元件如何為內容作者運作，還需要設定元件的許多替代視覺變體。
+範本作者不僅需要為內容作者設定元件運作方式的能力，還需要設定元件的數個替代視覺變數。
 
 同樣地，內容作者不僅需要建構和排列其內容的能力，還需要選取視覺呈現的方式。
 
@@ -160,4 +160,4 @@ ht-degree: 2%
 
 這種定義樣式名稱的功能對於非常一般的元件（例如佈局容器或內容片段元件）非常有用，可為其提供額外的含義。
 
-例如，這可讓配置容器獲得如之類的語意 `<main>`， `<aside>`， `<nav>`等
+例如，這可讓配置容器獲得如之類的語意 `<main>`， `<aside>`， `<nav>`、等等。

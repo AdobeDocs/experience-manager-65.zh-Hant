@@ -10,9 +10,9 @@ discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 feature: Form Data Model
 exl-id: 16b76265-9ec4-4993-9ac0-b7aef1b1e5f1
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4184'
+source-wordcount: '4181'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 1. 登入AEM作者執行個體，導覽至 **[!UICONTROL Forms >資料整合]**，然後開啟您要建立資料模型物件或實體的表單資料模型。
 1. 點選 **[!UICONTROL 建立實體]**.
-1. 在「建立資料模型」對話方塊中，指定資料模型物件的名稱，然後點選 **[!UICONTROL 新增]**. 資料模型物件會新增至表單資料模型。 請注意，新加入的資料模型物件並未繫結至資料來源，因此不具有下圖所示的任何屬性。
+1. 在「建立資料模型」對話方塊中，指定資料模型物件的名稱，然後點選 **[!UICONTROL 新增]**. 資料模型物件會新增至表單資料模型。 新加入的資料模型物件未繫結至資料來源，且不具有下列影像所示的任何屬性。
 
    ![new-entity](assets/new-entity.png)
 
@@ -317,7 +317,7 @@ ht-degree: 0%
 
 例如，您可以建立計算屬性 **完整名稱** 其值是串連現有 **名字** 和 **姓氏** 屬性。 若要這麼做：
 
-1. 以名稱建立新屬性 `FullName` 其資料型別為String。
+1. 以名稱建立屬性 `FullName` 其資料型別為String。
 1. 啟用 **[!UICONTROL 已計算]** 然後點選 **[!UICONTROL 完成]** 以建立屬性。
 
    ![已計算](assets/computed.png)

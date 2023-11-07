@@ -7,9 +7,9 @@ topic-tags: development-tools
 content-type: reference
 docset: aem65
 exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2120'
+source-wordcount: '2119'
 ht-degree: 2%
 
 ---
@@ -241,7 +241,7 @@ CRXDE Lite提供下列功能：
 
 1. 在瀏覽器中開啟CRXDE Lite。
 1. 在「導覽」窗格中，選取您要新增屬性的節點。
-1. 在 **屬性** 標籤下，輸入 **名稱**，則 **型別**，以及 **值**. 按一下 **新增**.
+1. 在 **屬性** 標籤下，輸入 **名稱**，則 **型別**，以及 **值**. 按一下&#x200B;**「新增」**。
 
 1. 按一下 **全部儲存** 將變更儲存在伺服器上。
 

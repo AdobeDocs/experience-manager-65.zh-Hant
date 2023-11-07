@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2287'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->電子商務架構可與任何電子商務解決方案搭配使用。 在此處理的特定細節和範例，請參考 [hybris](https://www.sap.com/products/crm.html) 解決方案。
+>電子商務架構可與任何電子商務解決方案搭配使用。 在此處理的特定細節和範例請參閱 [hybris](https://www.sap.com/products/crm.html) 解決方案。
 
 整合架構包含具有API的整合層。 這可讓您：
 

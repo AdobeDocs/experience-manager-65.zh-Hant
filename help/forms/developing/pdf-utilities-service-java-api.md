@@ -1,5 +1,5 @@
 ---
-title: PDF公用程式服務Java API快速啟動(SOAP)
+title: PDF公用程式服務Java APIQuick Start(SOAP)
 seo-title: PDF Utilities Service Java APIQuick Start(SOAP)
 description: 使用「PDF公用程式」服務將PDF檔案轉換為XDP檔案、將XDP檔案轉換為PDF檔案、擷取PDF檔案屬性、設定PDF檔案的儲存樣式，以及整理PDF檔案。
 seo-description: Use the PDF Utilities service to convert a PDF document to an XDP document, convert an XDP document to a PDF document, retrieve PDF document properties, setting the save style for a PDF document, and sanitize PDF documents.
@@ -11,16 +11,16 @@ topic-tags: develop
 discoiquuid: 4ec4c674-d7d3-4988-9d77-78d274970672
 role: Developer
 exl-id: e861d848-b0b7-4ae9-a56d-c0957ec95730
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
 # PDF公用程式服務Java API快速入門(SOAP) {#pdf-utilities-service-java-apiquick-start-soap}
 
-下列「快速啟動」適用於「PDF公用程式」服務。
+「PDF公用程式」服務可使用下列「快速啟動」。
 
 [快速入門（SOAP模式）：使用Java API將PDF檔案轉換為XDP檔案](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
 
@@ -36,11 +36,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->「使用AEM表單進行程式設計」中的「快速入門」是以Forms Server作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請以適用的作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM表單進行程式設計的快速入門是以Forms伺服器作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入門（SOAP模式）：使用Java API將PDF檔案轉換為XDP檔案 {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
 
-下列程式碼範例會將PDF檔案轉換為XDP檔案。 (請參閱 [將PDF檔案轉換為XDP檔案](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents).
+下列程式碼範例將PDF檔案轉換為XDP檔案。 (請參閱 [將PDF檔案轉換為XDP檔案](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents).
 
 ```java
  /*
@@ -69,7 +69,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -78,7 +78,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -141,7 +141,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API將XDP檔案轉換為PDF檔案 {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}
 
-下列程式碼範例會將XDP檔案轉換為PDF檔案。 (請參閱 [將XDP檔案轉換為PDF檔案](/help/forms/developing/pdf-utilities.md#converting-xdp-documents-into-pdf-documents).)
+下列程式碼範例將XDP檔案轉換為PDF檔案。 (請參閱 [將XDP檔案轉換為PDF檔案](/help/forms/developing/pdf-utilities.md#converting-xdp-documents-into-pdf-documents).)
 
 ```java
  /*
@@ -170,7 +170,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -179,7 +179,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -241,7 +241,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API擷取PDF檔案屬性 {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
 
-下列程式碼範例會判斷檔案是否為PDF檔案，若是，則為能夠讀取該檔案的最早Acrobat版本。 (請參閱 [正在擷取PDF檔案屬性](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties).)
+下列程式碼範例會判斷檔案是否為PDF檔案，若是，則會判斷是否具有讀取該檔案的最早Acrobat版本。 (請參閱 [正在擷取PDF檔案屬性](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties).)
 
 ```java
  /*
@@ -270,7 +270,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -279,7 +279,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -327,7 +327,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
              PDFPropertiesOptionSpec optionsSpec = new PDFPropertiesOptionSpec();
  
              // Set the properties to be evaluated in the options specification.
-             // In this example, the options specification will be used to determine
+             // In this example, the options specification is used to determine
              // if the document is a PDF document, and if so,
              // which Acrobat version is required to read it.
              optionsSpec.setIsPDFDocument(true);
@@ -358,7 +358,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API設定PDF檔案的儲存樣式 {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
 
-下列程式碼範例會設定快速檢視Web的儲存模式，然後將PDF檔案傳遞給加密服務，並在其中進行加密。 為了快速檢視網頁而儲存的加密PDF檔案會儲存為名為* FastWebViewLoan.pdf*的PDF檔案。 (請參閱 [設定PDF檔案儲存模式](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes).)
+下列程式碼範例會設定快速網頁檢視的儲存模式，然後將PDF檔案傳遞給加密服務，並在其中進行加密。 為了快速網頁檢視而儲存的加密PDF檔案會儲存為名為* FastWebViewLoan.pdf*的PDF檔案。 (請參閱 [設定PDF檔案儲存模式](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes).)
 
 ```java
  /*
@@ -387,7 +387,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -396,7 +396,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -498,7 +498,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API將檔案轉換為PDF/A-2b檔案 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
 
-以下Java程式碼範例會轉換名為的PDF檔案 *Loan.pdf* 至儲存為名為之PDF檔案的PDF/A-2b檔案 *LoanArchive.pdf*. (請參閱 [將檔案轉換為PDF/A檔案](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
+以下Java程式碼範例會轉換名為的PDF檔案 *Loan.pdf* 至儲存為名為的PDF檔案的PDF/A-2b檔案 *LoanArchive.pdf*. (請參閱 [將檔案轉換為PDF/A檔案](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
 
 ```java
 /*
@@ -508,7 +508,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  * 2. adobe-livecycle-client.jar
  * 3. adobe-usermanager-client.jar
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
@@ -518,7 +518,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  * If you want to invoke a remote AEM Forms instance and there is a
  * firewall between the client application and AEM Forms, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
- * you have to include additional JAR files located in the following
+ * you have to include additional JAR files in the following
  * path
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
@@ -596,7 +596,7 @@ public class CreatePDFADocument {
  * 2. adobe-livecycle-client.jar
  * 3. adobe-usermanager-client.jar
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
@@ -606,7 +606,7 @@ public class CreatePDFADocument {
  * If you want to invoke a remote AEM Forms instance and there is a
  * firewall between the client application and AEM Forms, then it is
  * recommended that you use the SOAP mode. When using the SOAP mode,
- * you have to include additional JAR files located in the following
+ * you have to include additional JAR files in the following
  * path
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *

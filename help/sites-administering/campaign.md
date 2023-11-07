@@ -8,9 +8,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fd96f30c-0616-445e-adb9-050d52862ffc
 exl-id: ab41e540-1d43-4fc2-99d4-621ff2290e77
-source-git-commit: 6fe5e617ceac3c97a77de2d574ec370f30887330
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '335'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 瞭解AEM 6.5對Adobe Campaign整合的支援。
 
-Adobe Campaign是一組解決方案，可讓您跨所有線上和離線管道個人化並傳遞行銷活動。
+Adobe Campaign這一組解決方案可讓您跨所有線上及離線管道個人化並傳遞行銷活動。
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Adobe Campaign是一組解決方案，可讓您跨所有線上和離線管道個
 
 ## 與Adobe Campaign Classic整合 {#acc}
 
-Adobe Campaign Classic (ACC)有許多版本。 與AEM整合的支援取決於您實作的ACC版本，以及AEM是否安裝在Adobe管理服務(AMS)的內部部署中。
+有數個Adobe Campaign Classic (ACC)版本。 與AEM整合的支援取決於您已實作的ACC版本，以及AEM是否安裝在Adobe管理服務(AMS)的內部部署中。
 
 | ACC版本 | 與AEM 6.5整合 <br>內部部署 | 與AEM 6.5整合<br>AMS |
 |---|---|---|
@@ -44,14 +44,14 @@ Adobe Campaign Classic (ACC)有許多版本。 與AEM整合的支援取決於您
 
 * [與Adobe Campaign Classic整合](/help/sites-administering/campaignonpremise.md)  — 瞭解設定整合的逐步詳細資訊。
 
-以下額外檔案說明如何使用整合。
+下列其他檔案將說明如何使用整合。
 
 * [電子郵件核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)  — 瞭解在AEM中可用來編寫Campaign內容的標準電子郵件元件。
-* [疑難排解Adobe Campaign Classic整合](/help/sites-administering/troubleshooting-campaignintegration.md)  — 瞭解如何修正AEM-ACC整合的最常見問題。
+* [疑難排解您的Adobe Campaign Classic整合](/help/sites-administering/troubleshooting-campaignintegration.md)  — 瞭解如何修正AEM-ACC整合最常見的問題。
 
 ## 與Adobe Campaign Standard整合 {#acs}
 
-整合 [Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard.html) (ACS)搭配AEM取決於AEM是否安裝在Adobe管理服務(AMS)的內部部署中。
+整合 [Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard.html) 具有AEM的(ACS)取決於AEM是否安裝在Adobe管理服務(AMS)的內部部署中。
 
 | 與AEM 6.5整合 <br>內部部署 | 與AEM 6.5整合<br>AMS |
 |---|---|
@@ -62,6 +62,6 @@ Adobe Campaign Classic (ACC)有許多版本。 與AEM整合的支援取決於您
 
 * [與Adobe Campaign Standard整合](/help/sites-administering/campaignstandard.md)
 
-以下額外檔案說明如何使用整合。
+下列其他檔案將說明如何使用整合。
 
 * [電子郵件核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)

@@ -1,6 +1,6 @@
 ---
 title: AEM中主控台的鍵盤快速鍵
-description: 使用這些鍵盤快速鍵可節省製作時間。
+description: 使用這些鍵盤快速鍵可節省編寫時的時間。
 uuid: 3b90570f-e187-4f09-9ccf-838e5657de2f
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,9 +8,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '382'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於使用主控台，有些則適�
 
 >[!NOTE]
 >
->此 [修飾鍵值](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) AEM鍵盤快速鍵的必要性會因作業系統而異。
+>此 [修飾鍵](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) AEM鍵盤快速鍵的必要性會依作業系統而異。
 
 ## 鍵盤快速鍵 {#keyboard-shortcuts}
 
@@ -30,15 +30,15 @@ AEM提供各種鍵盤快速鍵。 有些適用於使用主控台，有些則適�
 | 位置 | 捷徑 | 說明 |
 |---|---|---|
 | 一般 | `Ctrl+Click` | 在桌上型電腦裝置上進行多選 |
-| 主控台 — 欄檢視與內容檢視 | `Right Arrow` | 向下導覽至網站結構/展開樹狀節點 |
-|  | `Left Arrow` | 向上瀏覽樹狀結構/摺疊樹狀結構節點 |
+| 主控台 — 欄檢視與內容檢視 | `Right Arrow` | 向下導覽至您網站的結構/展開樹狀節點 |
+|  | `Left Arrow` | 向上導覽樹狀結構/收合樹狀節點 |
 |  | `Down Arrow` | 在同一層級的頁面清單中向下移動 |
-|  | `Up Arrow` | 將相同層級的頁面清單上移 |
-| 主控台 — 欄檢視 | `Shift-Up/Down Arrow` | 將相同層級的頁面清單上移 |
-|  | `Esc` | 將相同層級的頁面清單上移 |
+|  | `Up Arrow` | 在同一層級的頁面清單中向上移動 |
+| 主控台 — 欄檢視 | `Shift-Up/Down Arrow` | 在同一層級的頁面清單中向上移動 |
+|  | `Esc` | 在同一層級的頁面清單中向上移動 |
 | 主控台 | `?` | 鍵盤快速鍵說明 |
 |  | `/` | 叫用 [搜尋](/help/sites-authoring/search.md) |
-|  | `Alt+`&lt;`Number`> | 切換哪個 [邊欄選擇器](/help/sites-authoring/basic-handling.md#rail-selector) 檢視選項 |
+|  | `Alt+`&lt;`Number`> | 切換目標 [邊欄選擇器](/help/sites-authoring/basic-handling.md#rail-selector) 檢視選項 |
 |  | ``` ` ``` | 隱藏邊欄 |
 |  | `e` | 編輯 |
 |  | `p` | 屬性 |
@@ -48,13 +48,13 @@ AEM提供各種鍵盤快速鍵。 有些適用於使用主控台，有些則適�
 |  | `Backspace` | 刪除 |
 | 屬性頁面 | `Ctrl+s` | 儲存 |
 
-按鍵組合會與Windows一起列出 [修飾鍵值](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys).
+按鍵組合會與Windows一起列出 [修飾鍵](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys).
 
-案頭使用者在使用時，也可以使用各種鍵盤快速鍵 [頁面編輯器](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) 以編寫頁面。
+案頭使用者在使用時，也可使用各種鍵盤快速鍵 [頁面編輯器](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) 以編寫頁面。
 
-## 作業系統特定修飾元索引鍵 {#os-specific-modifier-keys}
+## 作業系統特定修飾元鍵 {#os-specific-modifier-keys}
 
-用於鍵盤快速鍵的修改鍵會因使用者端使用的作業系統而異。
+用於鍵盤快速鍵的修改鍵會因使用者端使用的作業系統而有所不同。
 
 | Windows/Linux | macOS |
 |---|---|
@@ -63,15 +63,15 @@ AEM提供各種鍵盤快速鍵。 有些適用於使用主控台，有些則適�
 
 ## 瀏覽器和鍵盤快速鍵 {#browsers-and-keyboard-shortcuts}
 
-AEM會避免常用瀏覽器已使用的常見捷徑，但AEM捷徑不會覆寫預設瀏覽器行為。
+AEM會避免常用瀏覽器已使用的常用捷徑，但AEM捷徑不會覆寫預設瀏覽器行為。
 
-此外，所有區域設定和鍵盤配置都使用相同的鍵盤快速鍵。
+此外，鍵盤快速鍵在所有語言環境與鍵盤版面配置中都相同。
 
 >[!NOTE]
 >
 >AEM捷徑不會覆寫預設瀏覽器行為。
 >
->如果AEM和瀏覽器捷徑之間發生衝突，AEM捷徑將無法運作，而只能使用瀏覽器功能。
+>如果AEM和瀏覽器捷徑之間發生衝突，AEM捷徑將無法運作，讓位於瀏覽器功能。
 
 >[!CAUTION]
 >
@@ -83,7 +83,7 @@ AEM會避免常用瀏覽器已使用的常見捷徑，但AEM捷徑不會覆寫�
 
 AEM為一些常用功能（編輯、屬性、複製/貼上、顯示各種側邊欄功能表等）提供鍵盤快速鍵。
 
-對於未使用鍵盤快速鍵或有某些協助工具要求的使用者，可以停用所有鍵盤快速鍵。
+對於未使用鍵盤快速鍵或有某些協助工具需求的使用者，可以停用所有鍵盤快速鍵。
 
 您可以在兩個位置停用鍵盤快速鍵：
 
@@ -92,4 +92,4 @@ AEM為一些常用功能（編輯、屬性、複製/貼上、顯示各種側邊�
 
 >[!NOTE]
 >
->欄檢視和內容樹狀結構的導覽捷徑鍵一律為作用中。
+>欄檢視和內容樹狀結構的導覽捷徑鍵一律為使用中。

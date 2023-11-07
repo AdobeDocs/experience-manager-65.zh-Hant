@@ -1,7 +1,7 @@
 ---
 title: LiveCycleProcess Java API(SOAP)快速啟動
 seo-title: LiveCycleProcess Java API(SOAP)Quick Start
-description: 使用LiveCycleProcess Java API (SOAP) Quick Start來搜尋程式執行個體、暫停程式執行個體、啟動暫停的程式執行個體、終止程式執行個體、清除程式資料，以及擷取工作的狀態。
+description: 使用「LiveCycleProcess Java API (SOAP)快速入門」來搜尋處理作業執行處理、暫停處理作業執行處理、啟動暫停的處理作業執行處理、終止處理作業執行處理、清除處理作業資料，以及擷取工作的狀態。
 seo-description: Use the LiveCycleProcess Java API (SOAP) Quick Start to search for process instances, suspend process instances, start suspended process instances, terminate process instances, purge process data, and retrieve the status of a job.
 uuid: ad14fb50-8dd5-44e0-9e48-f0f0334e04d6
 contentOwner: admin
@@ -11,16 +11,16 @@ topic-tags: develop
 discoiquuid: 9c17fa2d-0337-4204-822e-dcdafebf0e4d
 role: Developer
 exl-id: 7b309743-10ea-4d10-adb6-be5ce9f03ce2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
 # LiveCycleProcess Java API (SOAP)快速啟動 {#livecycleprocess-java-api-soap-quick-start}
 
-Java API(SOAP)快速入門適用於程式。 A *程式執行個體* 是由叫用方法（例如Invocation API）或從Workspace內啟動的特定處理序的發生次數。
+Java API(SOAP)快速入門適用於程式。 A *程式執行個體* 是以叫用方法（例如Invocation API）或從Workspace內啟動的特定程式發生次數。
 
 [快速入門（SOAP模式）：使用Java API搜尋程式執行個體](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
@@ -38,7 +38,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->如果您使用其他作業系統（例如Unix），以Forms為基礎，使用AEM Forms程式設計中的快速入門會以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+>使用AEM Forms進行程式設計的快速入門是以Forms為基礎（如果您使用其他作業系統，例如Unix），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 
 ## 快速入門（SOAP模式）：使用Java API搜尋程式執行個體 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 
@@ -71,7 +71,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -80,7 +80,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -160,7 +160,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API暫停處理序執行個體 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
 
-以下Java程式碼範例會暫停程式例項。 若要成功暫停處理序執行個體，您需要使用叫用API叫用長效處理序時可取得的處理序叫用識別碼。
+下列Java程式碼範例會暫停處理序例項。 若要成功暫停處理序執行個體，您需要在使用叫用API叫用長效處理序時可取得的處理序叫用識別碼。
 
 ```java
  /*
@@ -189,7 +189,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -198,7 +198,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -281,7 +281,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -290,7 +290,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -340,7 +340,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API終止程式執行個體 {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
 
-下列Java程式碼範例會終止識別碼值為756c22860a242fb101ec7a5bc0977fd6的處理序執行個體。
+下列Java程式碼範例終止識別碼值為756c22860a242fb101ec7a5bc0977fd6的處理程式執行個體。
 
 ```java
  /*
@@ -369,7 +369,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -378,7 +378,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -431,7 +431,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API清除程式資料 {#quick-start-soap-mode-purging-process-data-using-the-java-api}
 
-以下Java程式碼會從名為的流程中清除資料 *安全檔案*. 篩選器用於指定清除流程變數命名的那些流程例項的資料 *inValue* 大於200。
+以下Java程式碼會從名為的流程中清除資料 *安全檔案*. 篩選器用於指定永久刪除流程變數命名的那些流程例項的資料 *inValue* 大於200。
 
 ```java
  /*
@@ -459,7 +459,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -468,7 +468,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -567,7 +567,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -576,7 +576,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *

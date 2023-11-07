@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: a6e59334-09e2-4bb8-b445-1868035da556
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2974'
+source-wordcount: '2973'
 ht-degree: 0%
 
 ---
@@ -215,7 +215,7 @@ AEM 5.5已新增此功能。
 
 **events.plist**  — 此專案有些特殊。 如簡介中所述，應用程式應提供包含事件位置標籤的地圖檢視。 必要的位置資訊將以PLIST格式作為單獨的檔案提供。 為了使此功能發揮作用，索引頁面上使用的事件清單元件具有一個名為plist.jsp的指令碼。 當以請求元件的資源時，執行此指令碼 `.plist` 副檔名。 和往常一樣，元件路徑在path屬性中給出，而型別設定為content，因為您想要使用 [Sling請求處理](/help/sites-developing/the-basics.md#sling-request-processing).
 
-**events.touch.html**  — 接下來是將顯示在應用程式中的實際頁面。 path屬性會設定為事件的根頁面。 該頁面下方的所有事件頁面也會包括在內，因為深層屬性預設為true。 您使用頁面作為設定型別，以便納入任何可從頁面上的影像或下載元件參照的影像或其他檔案。 此外，設定觸控選擇器也會提供頁面的行動版本。 Feature Pack中的設定包含更多此類專案，但為了簡單起見，這裡沒有包含這些專案。
+**events.touch.html**  — 接下來是應用程式中顯示的實際頁面。 path屬性會設定為事件的根頁面。 該頁面下方的所有事件頁面也會包括在內，因為深層屬性預設為true。 您使用頁面作為設定型別，以便納入任何可從頁面上的影像或下載元件參照的影像或其他檔案。 此外，設定觸控選擇器也會提供頁面的行動版本。 Feature Pack中的設定包含更多此類專案，但為了簡單起見，這裡沒有包含這些專案。
 
 **標誌**  — 目前尚未提及標誌設定型別，因此不屬於任何內建型別。 不過，Content Sync架構在某種程度上可以擴充，以下章節將說明相關範例。
 

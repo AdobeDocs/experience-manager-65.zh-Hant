@@ -1,15 +1,15 @@
 ---
 title: 數位簽署和認證檔案
-description: 使用簽名服務在PDF檔案中新增和刪除數位簽名欄位、擷取PDF檔案中的簽名欄位名稱、修改簽名欄位、數位簽署PDF檔案、認證PDF檔案、驗證PDF檔案中的數位簽名、驗證PDF檔案中的所有數位簽名，以及從簽名欄位中移除數位簽名。
+description: 使用簽名服務在PDF檔案中新增和刪除數位簽名欄位、擷取PDF檔案中簽名欄位的名稱、修改簽名欄位、數位簽署PDF檔案、認證PDF檔案、驗證PDF檔案中的數位簽名、驗證PDF檔案中的所有數位簽名，以及從簽名欄位中移除數位簽名。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '17045'
+source-wordcount: '17029'
 ht-degree: 0%
 
 ---
@@ -37,12 +37,12 @@ ht-degree: 0%
 您可以使用簽名服務完成這些工作：
 
 * 新增和刪除數位簽名欄位至PDF檔案。 (請參閱 [新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields).)
-* 擷取位於PDF檔案中的簽名欄位名稱。 (請參閱 [正在擷取簽章欄位名稱](digitally-signing-certifying-documents.md#retrieving-signature-field-names).)
+* 擷取PDF檔案中簽名欄位的名稱。 (請參閱 [正在擷取簽章欄位名稱](digitally-signing-certifying-documents.md#retrieving-signature-field-names).)
 * 修改簽名欄位。 (請參閱 [修改簽章欄位](digitally-signing-certifying-documents.md#modifying-signature-fields).)
 * 數位簽署PDF檔案。 (請參閱 [數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
 * 認證PDF檔案。 (請參閱 [認證PDF檔案](digitally-signing-certifying-documents.md#certifying-pdf-documents).)
-* 驗證PDF檔案中的數位簽名。 (請參閱 [驗證數位簽章](digitally-signing-certifying-documents.md#verifying-digital-signatures).)
-* 驗證PDF檔案中的所有數位簽名。 (請參閱 [驗證多個數位簽名](digitally-signing-certifying-documents.md#verifying-digital-signatures).)
+* 驗證PDF檔案中的數位簽章。 (請參閱 [驗證數位簽章](digitally-signing-certifying-documents.md#verifying-digital-signatures).)
+* 驗證PDF檔案中的所有數位簽章。 (請參閱 [驗證多個數位簽名](digitally-signing-certifying-documents.md#verifying-digital-signatures).)
 * 從簽名欄位中移除數位簽名。 (請參閱 [移除數位簽章](digitally-signing-certifying-documents.md#removing-digital-signatures).)
 
 >[!NOTE]
@@ -213,7 +213,7 @@ ht-degree: 0%
 
 ## 正在擷取簽章欄位名稱 {#retrieving-signature-field-names}
 
-您可以擷取位於要簽署或認證之PDF檔案中的所有簽名欄位名稱。 如果您不確定位於PDF檔案中的簽名欄位名稱，或者您想要驗證這些名稱，則可以使用程式擷取它們。 Signature服務會傳回簽名欄位的完整名稱，例如 `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+您可以擷取所有簽名欄位的名稱，這些欄位位於您要簽署或認證的PDF檔案中。 如果您不確定PDF檔案中的簽名欄位名稱，或者您想要驗證這些名稱，則可以使用程式擷取它們。 Signature服務會傳回簽名欄位的完整名稱，例如 `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
 >[!NOTE]
 >
@@ -347,7 +347,7 @@ ht-degree: 0%
 
 ## 修改簽章欄位 {#modifying-signature-fields}
 
-您可以使用Java API和Web服務API來修改位於PDF檔案中的簽名欄位。 修改簽章欄位涉及處理其簽章欄位鎖定字典值或種子值字典值。
+您可以使用Java API和Web服務API來修改PDF檔案中的簽名欄位。 修改簽章欄位涉及處理其簽章欄位鎖定字典值或種子值字典值。
 
 A *欄位鎖定字典* 指定簽名欄位簽署時鎖定的欄位清單。 鎖定的欄位可防止使用者變更欄位。 A *種子值字典* 包含套用簽章時使用的限制資訊。 例如，您可以變更在不使簽名失效的情況下控制可能發生的動作的許可權。
 
@@ -361,7 +361,7 @@ A *欄位鎖定字典* 指定簽名欄位簽署時鎖定的欄位清單。 鎖�
 
 ### 步驟摘要 {#summary_of_steps-2}
 
-若要修改位於PDF檔案中的簽名欄位，請執行下列工作：
+若要修改PDF檔案中的簽名欄位，請執行下列工作：
 
 1. 包含專案檔案。
 1. 建立簽章使用者端。
@@ -601,7 +601,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 **簽署以XFA為基礎的表格**
 
-如果您嘗試使用簽名服務API簽署以XFA為基礎的表單，則可能遺漏以下專案中的資料： `View` `Signed` `Version` 位於Acrobat。 例如，請考量下列工作流程：
+如果您嘗試使用簽名服務API簽署以XFA為基礎的表單，則可能遺漏以下專案中的資料： `View` `Signed` `Version` 在Acrobat中。 例如，請考量下列工作流程：
 
 * 使用使用Designer建立的XDP檔案，合併包含簽名欄位的表單設計以及包含表單資料的XML資料。 您可以使用Forms服務產生互動式PDF檔案。
 * 您使用簽名服務API簽署PDF檔案。
@@ -816,7 +816,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 您可以簽署Forms服務建立的互動式表單。 例如，請考量下列工作流程：
 
-* 您可以使用Designer建立的XFAPDF表單，與使用Forms服務位於XML檔案中的表單資料合併。 Forms伺服器會呈現互動式表單。
+* 您可以使用Designer建立的XFAPDF表單，與使用Forms服務在XML檔案中的表單資料合併。 Forms伺服器會呈現互動式表單。
 * 您可以使用Signature service API簽署互動式表單。
 
 結果會產生數位簽署的互動式PDF表單。 在簽署以XFA表單為基礎的PDF表單時，請確定您將PDF檔案儲存為Adobe靜態PDF表單。 如果您嘗試簽署儲存為「PDF動態PDF」表單的Adobe表單，會發生例外狀況。 由於您簽署的是從Forms服務傳回的表單，因此請確定表單包含簽名欄位。
@@ -1514,7 +1514,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 ## 驗證多個數位簽名 {#verifying-multiple-digital-signatures}
 
-AEM Forms提供可驗證位於PDF檔案中的所有數位簽名的方法。 假設PDF檔案包含多個數位簽名，因為業務流程需要來自多個簽名者的簽名。 例如，假設金融交易需要貸款專員和經理的簽名。 您可以使用簽名服務Java API或Web服務API來驗證PDF檔案中的所有簽名。 驗證多個數位簽名時，您可以檢查每個簽名的狀態和屬性。 在您信任數位簽名之前，建議您先驗證它。 建議您熟悉如何驗證單一數位簽名。
+AEM Forms提供驗證PDF檔案中所有數位簽名的方法。 假設PDF檔案包含多個數位簽名，因為業務流程需要來自多個簽名者的簽名。 例如，假設金融交易需要貸款專員和經理的簽名。 您可以使用簽名服務Java API或Web服務API來驗證PDF檔案中的所有簽名。 驗證多個數位簽名時，您可以檢查每個簽名的狀態和屬性。 在您信任數位簽名之前，建議您先驗證它。 建議您熟悉如何驗證單一數位簽名。
 
 >[!NOTE]
 >
@@ -1641,7 +1641,7 @@ AEM Forms提供可驗證位於PDF檔案中的所有數位簽名的方法。 假�
    * A `PKIOptions` 包含PKI執行階段選項的物件。
    * A `VerifySPIOptions` 包含SPI資訊的執行個體。 您可以指定 `null` 此引數的。
 
-   此 `verifyPDFDocument` 方法傳回 `PDFDocumentVerificationInfo` 包含位於PDF檔案中所有數位簽名相關資訊的物件。
+   此 `verifyPDFDocument` 方法傳回 `PDFDocumentVerificationInfo` 包含PDF檔案中所有數位簽名相關資訊的物件。
 
 1. 逐一檢視所有簽章
 
@@ -1707,7 +1707,7 @@ AEM Forms提供可驗證位於PDF檔案中的所有數位簽名的方法。 假�
    * A `PKIOptions` 包含PKI執行階段選項的物件。
    * A `VerifySPIOptions` 包含SPI資訊的執行個體。 您可以為此引數指定null。
 
-   此 `verifyPDFDocument` 方法傳回 `PDFDocumentVerificationInfo` 包含位於PDF檔案中所有數位簽名相關資訊的物件。
+   此 `verifyPDFDocument` 方法傳回 `PDFDocumentVerificationInfo` 包含PDF檔案中所有數位簽名相關資訊的物件。
 
 1. 逐一檢視所有簽章
 

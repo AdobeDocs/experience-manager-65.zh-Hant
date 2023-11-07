@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2462'
+source-wordcount: '2460'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ CQ標籤庫包含有用的函式。
 
 **tagName**  — 將包圍非空白輸出的元素名稱。 其預設值為DIV。
 
-**預留位置**  — 在編輯模式下用於空或空白文字的預設值，也就是預留位置。 請注意，預設檢查會在選擇性格式化和逸出之後執行，即會依原樣寫入輸出。 其預設值為：
+**預留位置**  — 在編輯模式下用於空或空白文字的預設值，也就是預留位置。 預設檢查會在選擇性格式化和逸出之後執行，即依照原樣寫入輸出。 其預設值為：
 
 `<div><span class="cq-text-placeholder">&para;</span></div>`
 
@@ -545,7 +545,7 @@ Sling標籤資料庫包含實用的Sling函式。
 
 >[!NOTE]
 >
->資源的解析度以及隨附的指令碼 `<sling:include>` 標籤與一般sling URL解析度相同。 依預設，也會將目前請求中的選取器、擴充功能等用於包含的指令碼。 可透過標籤屬性來修改它們：例如 `replaceSelectors="foo.bar"` 可讓您覆寫選擇器。
+>資源的解析度以及隨附的指令碼 `<sling:include>` 標籤與一般sling URL解析度相同。 依預設，也會將目前請求中的選取器、擴充功能等用於包含的指令碼。 可透過標籤屬性來修改它們：例如， `replaceSelectors="foo.bar"` 可讓您覆寫選擇器。
 
 範例：
 

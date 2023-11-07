@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1865'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Web應用程式使用的XML資料檔案已從Data資料夾移至 `C:\Adobe`(屬�
 
 若要建立根據片段轉譯表單的網頁型應用程式，請執行下列步驟：
 
-1. 建立新的網站專案。
+1. 建立網站專案。
 1. 建立代表Java Servlet的Java應用程式邏輯。
 1. 建立網頁應用程式的網頁。
 1. 將Web應用程式封裝成WAR檔案。
@@ -84,7 +84,7 @@ Web應用程式使用的XML資料檔案已從Data資料夾移至 `C:\Adobe`(屬�
 
 ### 建立網站專案 {#creating-a-web-project}
 
-建立包含可呼叫Forms服務的Java servlet的Web應用程式的第一個步驟是建立新的Web專案。 此檔案所根據的Java IDE為Eclipse 3.3。使用Eclipse IDE建立Web專案，並將必要的JAR檔案新增至專案。 最後，新增名為的HTML頁面 *index.html* 和專案的Java servlet。
+建立包含可呼叫Forms服務的Java servlet的Web應用程式的第一個步驟是建立Web專案。 此檔案所根據的Java IDE為Eclipse 3.3。使用Eclipse IDE建立Web專案，並將必要的JAR檔案新增至專案。 最後，新增名為的HTML頁面 *index.html* 和專案的Java servlet。
 
 下列清單指定您必須新增至Web專案的JAR檔案：
 
@@ -184,7 +184,7 @@ Web應用程式使用的XML資料檔案已從Data資料夾移至 `C:\Adobe`(屬�
      * that contains this quick start is exported as a WAR file which
      * is deployed to the J2EE application server)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs
      *
      * For complete details about the location of these JAR files,

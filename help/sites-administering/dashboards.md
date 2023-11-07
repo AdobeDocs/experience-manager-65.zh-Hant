@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '829'
 ht-degree: 4%
 
 ---
@@ -32,8 +32,6 @@ ht-degree: 4%
 ## 管理儀表板 {#administering-dashboards}
 
 ### 建立控制面板 {#creating-a-dashboard}
-
-若要建立新的儀表板，請依照下列步驟進行：
 
 1. 在 **工具** 區段，按一下 **設定主控台**.
 1. 在樹狀結構中，按兩下 **儀表板**.

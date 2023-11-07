@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1106'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 若要將電子郵件發佈至電子郵件服務提供者，您必須執行下列步驟：
 
-1. 建立電子郵件。
+1. 建立電子郵件.
 1. 將電子郵件服務設定套用至電子郵件。
 1. 發佈電子郵件。
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 您可以使用在行銷活動下建立您要發佈至電子郵件服務的電子郵件或電子報 **Geometrixx電子報** 範本。 您也可以使用 **Geometrixx Outdoors電子郵件** 範本。 範例電子郵件/電子報，根據 **Geometrixx Outdoors電子郵件** 範本位於 `https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html`.
 
-若要建立已發佈至已設定電子郵件服務的新電子郵件：
+若要建立已發佈至已設定電子郵件服務的電子郵件：
 
 1. 前往 **網站** 然後 **行銷活動**. 選取行銷活動。
 1. 按一下 **新增** 以開啟 **建立頁面** 視窗。

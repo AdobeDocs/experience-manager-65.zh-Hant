@@ -5,9 +5,9 @@ contentOwner: AG
 role: Developer
 feature: Developer Tools
 exl-id: 0271c528-23b0-4a3a-b5e8-5baf6cdeecc7
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Asset Editor是AdobeEnterprise Manager網站的使用者用來尋找、檢視及操控存放庫中數位資產的主要存取點。
 
-作為 [!DNL Experience Manager] 開發人員，您可以透過多種方式自訂和擴充Asset Editor，為使用者提供量身打造的介面和功能集。
+作為 [!DNL Experience Manager] 開發人員，您可以透過數種方式自訂和擴充Asset Editor，為使用者提供量身打造的介面和功能集。
 
 您可自訂或增強下列功能：
 

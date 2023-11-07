@@ -7,9 +7,9 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1338'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ java -jar oak-run.jar index <nodestore path> --fds-path=<datastore path> --index
 java -jar oak-run.jar tika --data-file text-extraction/oak-binary-stats.csv --store-path text-extraction/store --index-dir ./indexing-result/index-dumps/<oak-index-name>/data populate
 ```
 
-位置 `oak-index-name` 是全文檢索索引的名稱，例如&quot;lucene&quot;。
+位置 `oak-index-name` 是全文檢索索引的名稱，例如「lucene」。
 
 **3. 針對上述步驟中遺漏的二進位檔案，使用Tika資料庫執行文字擷取程式**
 

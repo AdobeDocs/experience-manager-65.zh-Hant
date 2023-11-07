@@ -4,9 +4,9 @@ description: 瞭解變數如何可讓您為片段編寫內容，然後根據用�
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2388'
 ht-degree: 7%
 
 ---
@@ -183,7 +183,7 @@ RTF編輯可讓您設定格式：
 選項 **編輯內容片段** 在新視窗標籤中開啟該片段。
 
 <!--
-The option **Edit Content Fragment** will open that fragment in a new editor tab (within the same browser tab).
+The option **Edit Content Fragment** opens that fragment in a new editor tab (within the same browser tab).
 
 Selecting the original tab again (for example, **Little Pony Inc.**), will close this secondary tab (in this case, **Adam Smith**).
 

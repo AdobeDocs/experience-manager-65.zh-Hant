@@ -4,9 +4,9 @@ description: 瞭解如何執行AEM 6.5的就地升級。
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1238'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 在執行升級之前，必須完成數個步驟。 另請參閱 [升級程式碼和自訂](/help/sites-deploying/upgrading-code-and-customizations.md) 和 [升級前維護任務](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) 以取得詳細資訊。 此外，請確認您的系統符合新版AEM的需求。 請參閱模式偵測器如何協助您評估升級的複雜性，另請參閱的升級範圍和需求一節 [規劃升級](/help/sites-deploying/upgrade-planning.md) 以取得詳細資訊。
 
-<!--Finally, note that the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
+<!--Finally, the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 
 ## 移轉必要條件 {#migration-prerequisites}
 
@@ -127,7 +127,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 ## 疑難排解移轉問題 {#troubleshooting-migration-issues}
 
-如果您是從6.3升級，請略過本節。雖然提供的crx2oak設定檔應符合大部分客戶的需求，但有時仍需要其他引數。 如果您在移轉期間發生錯誤，可能是環境的某些方面需要提供額外的設定選項。 若是如此，您可能會遇到下列錯誤：
+如果您從6.3升級，請略過本節。雖然提供的crx2oak設定檔應符合大部分客戶的需求，但有時仍需要其他引數。 如果您在移轉期間發生錯誤，可能是環境的某些方面需要提供額外的設定選項。 若是如此，您可能會遇到下列錯誤：
 
 **將不會複製查核點，因為未指定外部資料存放區。 這將導致在第一次啟動時完整的存放庫重新索引。 使用 — skip-checkpoints強制移轉，或參閱https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migration以取得詳細資訊。**
 
@@ -161,13 +161,13 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 ### 正在判斷正確的升級開始命令 {#determining-the-correct-upgrade-start-command}
 
-若要執行升級，重要的是使用jar檔案啟動AEM以啟動執行個體。 若要升級至6.5，另請參閱以下內容中的其他內容重組和移轉選項： [緩慢的內容移轉](/help/sites-deploying/lazy-content-migration.md) 可以使用upgrade指令進行選擇。
+若要執行升級，重要的是使用jar檔案啟動AEM以啟動執行個體。 如需升級至6.5版，請參閱以下內容中的其他內容重組和移轉選項： [緩慢的內容移轉](/help/sites-deploying/lazy-content-migration.md) 可以使用upgrade指令進行選擇。
 
 >[!IMPORTANT]
 >
->如果您正在執行OracleJava 11 （或通常是8版以上的Java），則啟動AEM時需要在命令列中新增其他引數。 如需詳細資訊，請參閱 [Java 11考量事項](/help/sites-deploying/custom-standalone-install.md#java-considerations).
+>如果您執行OracleJava 11 （或通常是8以上的Java版本），啟動AEM時必須在命令列新增其他引數。 如需詳細資訊，請參閱 [Java 11考量事項](/help/sites-deploying/custom-standalone-install.md#java-considerations).
 
-請注意，從啟動指令碼啟動AEM將不會啟動升級。 大部分客戶使用啟動指令碼啟動AEM，並已自訂此啟動指令碼，以包含環境設定（例如記憶體設定、安全性憑證等）的開關。 因此，Adobe建議依照此程式來決定正確的升級命令：
+請注意，從啟動指令碼啟動AEM將不會啟動升級。 大多數客戶使用啟動指令碼啟動AEM，並已自訂此啟動指令碼，以包含環境設定（例如記憶體設定、安全性憑證等）的開關。 因此，Adobe建議依照此程式來決定正確的升級命令：
 
 1. 在執行中的AEM執行個體上，從命令列執行下列動作：
 

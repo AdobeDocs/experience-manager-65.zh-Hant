@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3501'
+source-wordcount: '3498'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ ht-degree: 0%
 
 ### 不會保留套用至&amp;lt；body>標籤的任何屬性，例如類別或id {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
-例如，如果有任何屬性（如id或類別）套用至body標籤 `<body id="container">` 則在匯入後不會保留。 因此，匯入的設計不應與套用至 `<body>` 標籤之間。
+例如，如果有任何屬性（如id或類別）套用至body標籤， `<body id="container">` 則在匯入後不會保留。 因此，匯入的設計不應與套用至 `<body>` 標籤之間。
 
 ### 拖放zip {#drag-and-drop-zip}
 
@@ -438,9 +438,9 @@ AEM parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的
 
 ### 覆蓋範本 {#overlaying-template}
 
-您可以在下列位置建立新範本，以覆蓋「空白登陸頁面」範本： `/apps/<appName>/designimporter/templates/<templateName>`
+您可以在下列位置建立「空白登陸頁面」範本，以將其覆蓋： `/apps/<appName>/designimporter/templates/<templateName>`
 
-說明在AEM中建立新範本的步驟 [此處](/help/sites-developing/templates.md).
+說明在AEM中建立範本的步驟 [此處](/help/sites-developing/templates.md).
 
 ### 從登入頁面反向連結元件 {#referring-a-component-from-landing-page}
 

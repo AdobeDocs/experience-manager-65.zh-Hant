@@ -7,9 +7,9 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1880'
+source-wordcount: '1879'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 2%
 ### 將按鈕新增至「建立通訊」使用者介面 {#add-the-button-to-the-create-correspondence-user-interface}
 
 1. 前往 `https://'[server]:[port]'/[ContextPath]/crx/de` 並以管理員身分登入。
-1. 在應用程式資料夾中，建立名為的資料夾 `defaultApp` 路徑/結構類似於defaultApp資料夾（位於config資料夾）。 使用下列步驟建立資料夾：
+1. 在應用程式資料夾中，建立名為的資料夾 `defaultApp` 路徑/結構類似於defaultApp資料夾（在config資料夾中）。 使用下列步驟建立資料夾：
 
    1. 用滑鼠右鍵按一下 **defaultApp** 資料夾並選取「 」 **覆蓋節點**：
 

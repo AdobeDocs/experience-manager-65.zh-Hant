@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '19006'
+source-wordcount: '18965'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 以下小節說明如何在中傳遞表單設計 `com.adobe.idp.Document` 例項：
 
-* [將位於Content Services的檔案（已棄用）傳遞至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [將Content Services中的檔案傳遞（已棄用）至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [使用片段建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
 決定使用哪種技術時的一個考量是，如果您從其他AEM Forms服務取得表單設計，然後在內傳遞它 `com.adobe.idp.Document` 執行個體。 兩者 *將檔案傳遞至Output Service* 和 *使用片段建立PDF檔案* 部分說明如何從其他AEM Forms服務取得表單設計。 第一節　從內容服務擷取表單設計（已棄用）。 第二節　從組合器服務擷取表單設計。
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 * [建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents)
 * [建立PDF/A檔案](creating-document-output-streams.md#creating-pdf-a-documents)
-* [將位於Content Services的檔案（已棄用）傳遞至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [將Content Services中的檔案傳遞（已棄用）至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [使用片段建立PDF檔案](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 * [列印至檔案](creating-document-output-streams.md#printing-to-files)
 * [傳送列印資料流至印表機](creating-document-output-streams.md#sending-print-streams-to-printers)
@@ -105,7 +105,7 @@ ht-degree: 0%
 * adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果將AEM Forms部署在支援的J2EE應用程式伺服器（不是JBoss）上，則需將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。
+如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBoss）上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。
 
 **建立輸出使用者端物件**
 
@@ -265,7 +265,7 @@ Output服務執行作業之後，會傳回各種資料專案，例如指定作�
 
    >[!NOTE]
    >
-   >PDF您也可以透過叫用 `OutputClient` 物件的 `generatePDFOutput2` 方法。 (請參閱 [將位於Content Services的檔案（已棄用）傳遞至Output Service ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
+   >PDF您也可以透過叫用 `OutputClient` 物件的 `generatePDFOutput2` 方法。 (請參閱 [將Content Services中的檔案傳遞（已棄用）至Output Service ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
 
 1. 擷取作業的結果。
 
@@ -358,7 +358,7 @@ Output服務執行作業之後，會傳回各種資料專案，例如指定作�
 
    >[!NOTE]
    >
-   >PDF您也可以透過叫用 `OutputClient` 物件的 `generatePDFOutput2` 方法。 (請參閱 [將位於Content Services的檔案（已棄用）傳遞至Output Service ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
+   >PDF您也可以透過叫用 `OutputClient` 物件的 `generatePDFOutput2` 方法。 (請參閱 [將Content Services中的檔案傳遞（已棄用）至Output Service ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
 
 1. 擷取作業的結果。
 
@@ -427,7 +427,7 @@ PDF/檔案必須使用在表單設計中指定的字型，且字型不能被取�
 * adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果將AEM Forms部署在支援的J2EE應用程式伺服器（不是JBoss）上，則需將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。
+如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBoss）上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。
 
 **建立輸出使用者端物件**
 
@@ -523,7 +523,7 @@ Output服務執行作業之後，會傳回各種資料專案，例如指定作�
 
    >[!NOTE]
    >
-   >PDF您也可以透過叫用 `OutputClient` 物件的 `generatePDFOutput`2個方法。 (請參閱 [將位於Content Services的檔案（已棄用）傳遞至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
+   >PDF您也可以透過叫用 `OutputClient` 物件的 `generatePDFOutput`2個方法。 (請參閱 [將Content Services中的檔案傳遞（已棄用）至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 1. 擷取作業的結果。
 
@@ -609,7 +609,7 @@ Output服務執行作業之後，會傳回各種資料專案，例如指定作�
 
    >[!NOTE]
    >
-   >PDF您也可以透過叫用 `OutputClient` 物件的 `generatePDFOutput`2個方法。 (請參閱 [將位於Content Services的檔案（已棄用）傳遞至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
+   >PDF您也可以透過叫用 `OutputClient` 物件的 `generatePDFOutput`2個方法。 (請參閱 [將Content Services中的檔案傳遞（已棄用）至Output Service](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 1. 擷取作業的結果。
 
@@ -626,9 +626,9 @@ Output服務執行作業之後，會傳回各種資料專案，例如指定作�
 
 [使用SwaRef叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 將位於Content Services的檔案（已棄用）傳遞至Output Service {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
+## 將Content Services中的檔案傳遞（已棄用）至Output Service {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
-Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設計，呈現非互動式PDF表單。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的物件。 然後，Output服務會轉譯位於 `com.adobe.idp.Document` 物件。
+Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設計，呈現非互動式PDF表單。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的物件。 然後Output服務會在下列位置轉譯表單設計： `com.adobe.idp.Document` 物件。
 
 傳遞的優點 `com.adobe.idp.Document` 物件至Output服務，表示其他AEM Forms服務作業會傳回 `com.adobe.idp.Document` 執行個體。 也就是說，您可以取得 `com.adobe.idp.Document` 執行個體，並加以呈現。 例如，假設XDP檔案儲存在名為的內容服務（已棄用）節點中 `/Company Home/Form Designs`，如下圖所示。
 
@@ -817,13 +817,13 @@ Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設
 
 ## 將存放庫中的檔案傳遞至輸出服務 {#passing-documents-located-in-the-repository-to-the-output-service}
 
-Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設計，呈現非互動式PDF表單。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的物件。 然後，Output服務會轉譯位於 `com.adobe.idp.Document` 物件。
+Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設計，呈現非互動式PDF表單。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的物件。 然後Output服務會在下列位置轉譯表單設計： `com.adobe.idp.Document` 物件。
 
 傳遞的優點 `com.adobe.idp.Document` 物件至Output服務，表示其他AEM Forms服務作業會傳回 `com.adobe.idp.Document` 執行個體。 也就是說，您可以取得 `com.adobe.idp.Document` 執行個體，並加以呈現。 例如，假設XDP檔案儲存在AEM Forms存放庫中，如下圖所示。
 
 ![pd_pd_formrepository](assets/pd_pd_formrepository.png)
 
-此 *FormsFolder* 資料夾是AEM Forms存放庫中的使用者定義位置（此位置為範例，預設不存在）。 在此範例中，名為Loan.xdp的表單設計位於此資料夾中。 除了表單設計之外，其他表單附屬資料（例如影像）也可以儲存在此位置。 位於AEM Forms存放庫中的資源路徑為：
+此 *FormsFolder* 資料夾是AEM Forms存放庫中的使用者定義位置（此位置為範例，預設不存在）。 在此範例中，名為Loan.xdp的表單設計位於此資料夾中。 除了表單設計之外，其他表單附屬資料（例如影像）也可以儲存在此位置。 AEM Forms存放庫中的資源路徑為：
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
@@ -833,7 +833,7 @@ Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設
 
 [快速入門（EJB模式）：使用Java API根據應用程式XDP檔案建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) （顯示如何透過參考傳遞XDP檔案的位置）。
 
-[快速入門（EJB模式）：使用Java API將位於AEM Forms存放庫中的檔案傳遞到Output服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (說明如何以程式設計方式從AEM Forms存放庫擷取XDP檔案，並將其傳遞至內的輸出服務) `com.adobe.idp.Document` 執行個體)。 （本節將討論如何執行此工作）
+[快速入門（EJB模式）：使用Java API將AEM Forms儲存庫中的檔案傳遞至Output服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (說明如何以程式設計方式從AEM Forms存放庫擷取XDP檔案，並將其傳遞至內的輸出服務) `com.adobe.idp.Document` 執行個體)。 （本節將討論如何執行此工作）
 
 >[!NOTE]
 >
@@ -928,7 +928,7 @@ ResourceRepositoryClient
 
 [步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[快速入門（EJB模式）：使用Java API將位於AEM Forms存放庫中的檔案傳遞到Output服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[快速入門（EJB模式）：使用Java API將AEM Forms儲存庫中的檔案傳遞至Output服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -936,7 +936,7 @@ ResourceRepositoryClient
 
 ## 使用片段建立PDF檔案 {#creating-pdf-documents-using-fragments}
 
-您可以使用輸出和組合器服務來建立以片段為基礎的輸出資料流，例如PDF檔案。 組合器服務會根據位於多個XDP檔案中的片段來組合XDP檔案。 組裝的XDP檔案會傳遞給Output服務，該服務會建立PDF檔案。 雖然此工作流程會顯示正在產生的PDF檔案，但「輸出」服務可以為此工作流程產生其他輸出型別，例如ZPL。 PDF檔案僅供討論之用。
+您可以使用輸出和組合器服務來建立以片段為基礎的輸出資料流，例如PDF檔案。 組合器服務會根據多個XDP檔案中的片段來組合XDP檔案。 組裝的XDP檔案會傳遞給Output服務，該服務會建立PDF檔案。 雖然此工作流程會顯示正在產生的PDF檔案，但「輸出」服務可以為此工作流程產生其他輸出型別，例如ZPL。 PDF檔案僅供討論之用。
 
 下圖顯示此工作流程。
 
@@ -1182,7 +1182,7 @@ ResourceRepositoryClient
 * adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果將AEM Forms部署在支援的J2EE應用程式伺服器（不是JBoss）上，則需將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。 (請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).)
+如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBoss）上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。 (請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).)
 
 **建立輸出使用者端物件**
 
@@ -1241,7 +1241,7 @@ Output服務執行作業之後，會傳回指定作業是否成功的各種資�
 1. 設定列印至檔案所需的列印執行階段選項。
 
    * 建立 `PrintedOutputOptionsSpec` 物件（使用其建構函式）。
-   * 透過叫用PrintedOutputOptionsSpec物件的 `setFileURI` 方法，並傳遞代表檔案名稱和位置的字串值。 例如，如果您要讓Output服務列印至位於C:\Adobe中名為MortgageForm.ps的PostScript檔案，請指定C:\\Adobe\MortgageForm.ps。
+   * 透過叫用PrintedOutputOptionsSpec物件的 `setFileURI` 方法，並傳遞代表檔案名稱和位置的字串值。 例如，如果您希望輸出服務列印至C:\Adobe中名為MortgageForm.ps的PostScript檔案，請指定C:\\Adobe\MortgageForm.ps。
    * 透過叫用「 」，指定要列印的份數 `PrintedOutputOptionsSpec` 物件的 `setCopies` 方法，並傳遞代表份數的整數值。
 
 1. 將列印資料流列印到檔案。
@@ -1313,7 +1313,7 @@ Output服務執行作業之後，會傳回指定作業是否成功的各種資�
 1. 設定列印至檔案所需的列印執行階段選項。
 
    * 建立 `PrintedOutputOptionsSpec` 物件（使用其建構函式）。
-   * 指定字串值，代表檔案的位置和名稱，以指定檔案。 `PrintedOutputOptionsSpec` 物件的 `fileURI` 資料成員。 例如，如果您要輸出服務列印至名為的PostScript檔案 *MortgageForm.ps* 位於C:\Adobe，請指定C:\\Adobe\MortgageForm.ps。
+   * 指定字串值，代表檔案的位置和名稱，以指定檔案。 `PrintedOutputOptionsSpec` 物件的 `fileURI` 資料成員。 例如，如果您要輸出服務列印至名為的PostScript檔案 *MortgageForm.ps* 在C:\Adobe中指定C:\\Adobe\MortgageForm.ps。
    * 指定整數值來指定列印的份數，該值代表要列印的份數。 `PrintedOutputOptionsSpec` 物件的 `copies` 資料成員。
 
 1. 將列印資料流列印到檔案。
@@ -1387,7 +1387,7 @@ Output服務執行作業之後，會傳回指定作業是否成功的各種資�
 * adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果將AEM Forms部署在支援的J2EE應用程式伺服器（不是JBoss）上，則需將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。
+如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBoss）上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。
 
 **建立輸出使用者端物件**
 
@@ -1727,7 +1727,7 @@ Output服務可以為XML資料來源內的每個記錄建立個別的檔案，�
 * adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果將AEM Forms部署在支援的J2EE應用程式伺服器（不是JBoss）上，則需將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。
+如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBoss）上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。
 
 **建立輸出使用者端物件**
 
@@ -1741,7 +1741,7 @@ Output服務可以為XML資料來源內的每個記錄建立個別的檔案，�
 
 **設定PDF執行階段選項**
 
-您必須為輸出服務設定下列執行階段選項，才能根據XML資料來源成功建立多個檔案：
+設定Output服務的下列執行階段選項，以根據XML資料來源成功建立多個檔案：
 
 * **許多檔案**：指定Output服務是建立單一檔案，還是建立多個檔案。 您可以指定true或false。 若要為XML資料來源中的每個資料記錄建立個別的檔案，請指定true。
 * **檔案URI**：指定輸出服務產生的檔案位置。 例如，假設您指定C:\\Adobe\forms\Loan.pdf。 在此情況下，Output服務會建立名為Loan.pdf的檔案，並將該檔案放在C:\\Adobe\forms資料夾中。 如果有多個檔案，檔案名稱為Loan0001.pdf、Loan0002.pdf、Loan0003.pdf等。 如果您指定檔案位置，檔案會放置在伺服器上，而非使用者端電腦上。
@@ -1935,7 +1935,7 @@ Output服務執行作業之後，會傳回指定作業是否成功的XML資料�
 
 ## 建立搜尋規則 {#creating-search-rules}
 
-您可以建立搜尋規則，讓輸出服務檢查輸入資料，並根據資料內容使用不同的表單設計來產生輸出。 例如，如果文字 *按揭* 位在輸入資料中，然後Output服務就可以使用名為Mortgage.xdp的表單設計。 同樣地，如果文字 *汽車* 位在輸入資料中，則Output服務可使用儲存為AutomobileLoan.xdp的表單設計。 雖然Output服務可以產生不同的輸出型別，但本節假設了Output服務會產生PDF檔案。 下圖顯示透過處理XML資料檔案並使用許多表單設計之一來產生PDF檔案的Output服務。
+您可以建立搜尋規則，讓輸出服務檢查輸入資料，並根據資料內容使用不同的表單設計來產生輸出。 例如，如果文字 *按揭* 位在輸入資料中，然後Output服務就可以使用名為Mortgage.xdp的表單設計。 同樣地，如果文字 *汽車* 位於輸入資料中，則Output服務可使用儲存為AutomobileLoan.xdp的表單設計。 雖然Output服務可以產生不同的輸出型別，但本節假設了Output服務會產生PDF檔案。 下圖顯示透過處理XML資料檔案並使用許多表單設計之一來產生PDF檔案的Output服務。
 
 此外，Output服務能夠產生檔案套件，其中資料集中提供了多個記錄，每個記錄都與一個表單設計相符，並且由多個表單設計產生單個檔案。
 
@@ -1970,7 +1970,7 @@ Output服務執行作業之後，會傳回指定作業是否成功的XML資料�
 * adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBoss）上，則您需要將adobe-utilities.jar和jbossall-client.jar取代為特定於已部署AEM Forms之J2EE應用程式伺服器的JAR檔案。
+如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBoss）上，則您必須將adobe-utilities.jar和jbossall-client.jar取代為特定於已部署AEM Forms之J2EE應用程式伺服器的JAR檔案。
 
 **建立輸出使用者端物件**
 
@@ -2227,7 +2227,7 @@ Output服務執行作業之後，會傳回指定作業是否成功的XML資料�
 * adobe-utilities.jar (如果AEM Forms部署在JBoss上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss上，則為必要)
 
-如果將AEM Forms部署在支援的J2EE應用程式伺服器（不是JBoss）上，則需將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+如果將AEM Forms部署在受支援的J2EE應用程式伺服器（不是JBoss）上，則必須將adobe-utilities.jar和jbossall-client.jar檔案取代為特定於AEM Forms部署所在之J2EE應用程式伺服器的JAR檔案。 如需有關所有AEM Forms JAR檔案位置的資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **建立輸出使用者端物件**
 

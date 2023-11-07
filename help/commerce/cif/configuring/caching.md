@@ -2,7 +2,7 @@
 title: 快取與效能
 description: 瞭解各種可用設定，以啟用GraphQL和內容快取，將您的Commerce實作效能最佳化。
 exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 3%
@@ -27,7 +27,7 @@ AEM CIF核心元件已內建對快取個別元件的GraphQL回應的支援。 �
 
 ### 範例
 
-我們建議您為搜尋服務設定一些快取，以便擷取產品搜尋和類別頁面上顯示的所有可用彙總/多面向值。 這些值通常只有在新屬性（例如新增至產品）時才變更，因此，如果產品屬性集合不經常變更，則此快取專案的持續時間可能會「很大」。 雖然這是專案專屬的值，但Adobe建議在專案開發階段使用幾分鐘的值，並在穩定生產系統上使用幾小時。
+我們建議您為搜尋服務設定一些快取，以便擷取產品搜尋和類別頁面上顯示的所有可用彙總/多面向值。 這些值通常只有在新屬性（例如，新增至產品）時才會變更，因此，如果產品屬性集合不經常變更，則此快取專案的持續時間可能會「很大」。 雖然這是專案專屬的值，但Adobe建議在專案開發階段使用幾分鐘的值，並在穩定生產系統上使用幾小時。
 
 這通常會使用下列快取專案進行設定：
 
@@ -53,11 +53,11 @@ venia/components/structure/navigation:true:10:600
 
 為了確保CIF頁面可以在AEM Dispatcher中的有限時間內進行快取，我們因此建議使用 [基於時間的快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-time-based-cache-invalidation-enablettl) （也稱為TTL型快取）在AEM Dispatcher中快取CIF頁面時。 此功能可在AEM中使用「 」額外的 [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) 封裝。
 
-使用TTL型快取時，開發人員通常會為選取的AEM頁面定義一或多個快取持續時間。 這可確保AEM Dispatcher中僅快取CIF頁面，直到設定的持續時間為止，並且內容將經常更新。
+使用TTL型快取時，開發人員通常會為選取的AEM頁面定義一或多個快取持續時間。 這可確保在AEM Dispatcher中快取CIF頁面，直到設定的持續時間為止，並且內容將經常更新。
 
 >[!NOTE]
 >
->雖然AEM Dispatcher可能會快取伺服器端資料，但某些CIF元件(例如 `product`， `productlist`、和 `searchresults` 載入頁面時，元件通常會在使用者端瀏覽器請求中重新擷取產品價格。 這可確保在頁面載入時一律會擷取重要的動態內容。
+>雖然AEM Dispatcher可能會快取伺服器端資料，但部分CIF元件(例如 `product`， `productlist`、和 `searchresults` 載入頁面時，元件通常會在使用者端瀏覽器請求中重新擷取產品價格。 這可確保在頁面載入時一律會擷取重要的動態內容。
 
 ## 其他資源
 

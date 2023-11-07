@@ -1,18 +1,14 @@
 ---
 title: 規劃
-seo-title: Planning
 description: 瞭解規劃Adobe Experience Manager測試所需的資訊。
-seo-description: What you need to know to plan for your test
-uuid: 29b1127a-da85-46ed-98e7-1c983eb40cfe
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
-discoiquuid: 12268c43-93f9-42c1-8dd7-f17f9ae2219b
 exl-id: ed662279-0679-4ba3-b744-6649fb8dda17
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -37,7 +33,7 @@ ht-degree: 0%
 
 有許多網站、書籍和課程會處理這類原則，因此本檔案不會詳細討論這些內容。
 
-**要避免的假設**  — 最大的假設（定期進行）是您的網站每天需要服務數百萬個請求。 在某些情況下，這可能為真，但無法假設。
+**要避免的假設**  — 最大的假設是您的網站每天必須服務數百萬個請求。 在某些情況下，這可能為真，但無法假設。
 
 雖然以100%的正確性無法預測未來的數字，但觀察您現有的網站和體驗的流量將可提供良好的指示。 然後，您可以根據您預期/希望流量增加的因素進行估計。
 

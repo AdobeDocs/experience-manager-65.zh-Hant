@@ -2,9 +2,9 @@
 title: 管理翻譯專案
 description: 瞭解如何在Adobe Experience Manager中管理翻譯專案。
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: 9438868191961404e9e18cb0dd2e844985ac9db0
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3578'
 ht-degree: 2%
 
 ---
@@ -123,7 +123,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 當您將頁面新增到翻譯專案時，這些頁面會包含在新的翻譯工作中。 您也可以 [將頁面新增至現有工作](#adding-pages-assets-to-a-translation-job).
 
-如同建立新專案一樣，新增頁面時，頁面副本會在必要時新增至啟動項，以避免覆寫現有語言副本。 (請參閱 [建立現有語言副本的翻譯專案](#performing-initial-translations-and-updating-existing-translations).)
+如同建立專案一樣，新增頁面時，頁面副本會在必要時新增至啟動項，以避免覆寫現有語言副本。 (請參閱 [建立現有語言副本的翻譯專案](#performing-initial-translations-and-updating-existing-translations).)
 
 1. 使用Sites Console來選取您要新增至翻譯專案的頁面。
 
@@ -412,7 +412,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 ## 移動或重新命名來源頁面 {#move-source}
 
-如果需要已翻譯的來源頁面 [已重新命名或已移動](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)，在移動後再次翻譯頁面將根據新頁面名稱/位置建立新的語言副本。 根據先前名稱/位置的舊語言副本仍會存在。 為避免此問題，您可以在移動後使用更新語言複製功能：
+如果需要已翻譯的來源頁面 [已重新命名或已移動](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)，在移動後再次翻譯頁面時，會根據新頁面名稱/位置建立語言副本。 根據先前名稱/位置的舊語言副本仍然存在。 為避免此問題，您可以在移動後使用更新語言複製功能：
 
 1. 移動有語言副本的頁面。
 1. 選取語言副本根目錄。
@@ -423,9 +423,9 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 1. 按一下&#x200B;**更新**。A [Launch](/help/sites-authoring/launches-promoting.md) 將會建立。
 1. 導覽至所需的語言根並加以選取。
 1. 使用 **引用** 面板，選取 **啟動**.
-1. 按一下剛建立的Launch，然後按一下 **提升啟動**.
+1. 按一下已建立的Launch，然後按一下 **提升啟動**.
 
-現在來源頁面及關聯的語言副本已移動。
+現在，來源頁面已移動，且相關的語言副本也已移動。
 
 ## 使用專案控制檯建立翻譯專案 {#creating-a-translation-project-using-the-projects-console}
 
@@ -450,7 +450,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 ## 匯出翻譯工作 {#exporting-a-translation-job}
 
-您可以下載翻譯工作的內容，例如透過聯結器傳送給未與AEM整合的翻譯提供者，或檢閱內容。
+例如，您可以下載翻譯工作的內容，透過聯結器傳送給未與AEM整合的翻譯提供者，或檢閱內容。
 
 1. 從「翻譯工作」圖磚的下拉式功能表中，按一下或點選「匯出」。
 1. 在「匯出」對話方塊中，按一下或點選「下載匯出的檔案」，並視需要使用Web瀏覽器對話方塊來儲存檔案。
@@ -458,7 +458,7 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 
 ## 匯入翻譯工作 {#importing-a-translation-job}
 
-您可以將已翻譯內容匯入至AEM，例如當翻譯提供者將內容傳送給您時，因為它們未透過聯結器與AEM整合。
+例如，當您的翻譯提供者將翻譯內容傳送給您時，您可將翻譯內容匯入至AEM，因為它們未透過聯結器與AEM整合。
 
 1. 從「翻譯工作」圖磚的下拉式功能表中，按一下或點選「匯入」。
 1. 使用網頁瀏覽器的對話方塊來選取要匯入的檔案。

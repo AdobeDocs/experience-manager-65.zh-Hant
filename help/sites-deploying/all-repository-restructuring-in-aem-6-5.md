@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2689'
 ht-degree: 2%
@@ -578,7 +578,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td><p>重新啟動Day Communique Tagging OSGi套件組合時，如果「先前位置」空白，系統只會將「新位置」註冊為標籤根。</p> <p>移轉至新位置後，針對所有運用AEM TagManager API進行標籤解析的功能而言，對「先前位置」的參照仍會繼續運作。</p> <p>明確參考路徑的任何自訂程式碼 <code>/etc/tags</code> 必須更新至 <span class="code">/content/
+   <td><p>重新啟動Day Communique Tagging OSGi套件組合時，如果「先前位置」空白，系統只會將「新位置」註冊為標籤根。</p> <p>針對使用AEM TagManager API進行標籤解析的所有功能，移轉至新位置後，「先前位置」的參照仍會繼續運作。</p> <p>明確參考路徑的任何自訂程式碼 <code>/etc/tags</code> 必須更新至 <span class="code">/content/
       <code>
        cq
       </code>

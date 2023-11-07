@@ -11,21 +11,21 @@ content-type: reference
 discoiquuid: 2d0835e0-5602-49a9-b9ad-636ce5a8ad2a
 feature: Tagging
 exl-id: 6db75405-d957-4714-b75a-9b71c17c89d6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '98'
 ht-degree: 2%
 
 ---
 
 # 標記{#tagging}
 
-標籤可讓內容分類並整理。 標籤可依名稱空間和分類法來分類。
+標籤可讓內容分類並整理。 標籤可以依名稱空間和分類法來分類。
 
-* 另請參閱 [管理標籤](/help/sites-administering/tags.md) 以取得關於建立和管理標籤以及已對哪些內容標籤套用的資訊。
+* 另請參閱 [管理標籤](/help/sites-administering/tags.md) 以取得關於建立和管理標籤，以及已對哪些內容標籤套用的資訊。
 * 另請參閱 [使用標籤](/help/sites-authoring/tags.md) 以取得關於標籤內容的資訊。
 
-開發人員可使用下列資訊：
+以下資訊可供開發人員使用：
 
 * [AEM標籤架構](/help/sites-developing/framework.md)  — 用於標籤的節點和屬性的說明
 

@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7a85e13d-4800-47c4-812a-5c6e2355298a
 exl-id: 4282718a-41f1-411a-9cd7-8c470005107d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1901'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ AEM forms提供預設的商業行事曆(名為 *內建行事曆*)將星期六和
 
 >[!NOTE]
 >
->如果您未建立新的商務行事曆，則會使用預設行事曆。
+>如果您未建立商務行事曆，則會使用預設行事曆。
 
 1. 在管理控制檯中，按一下「服務> Forms工作流程>企業行事曆」。
 1. 若要新增商務行事曆，請按一下 ![bus_cal_plus](assets/bus_cal_plus.png). 文字 *新行事曆* 會出現在下拉式清單中。 選取文字，然後為您的行事曆輸入其他名稱。
@@ -90,7 +90,7 @@ AEM forms提供預設的商業行事曆(名為 *內建行事曆*)將星期六和
 
    >[!NOTE]
    >
-   >如果您未啟用行事曆，將會使用預設行事曆。
+   >如果您未啟用行事曆，則會使用預設行事曆。
 
 ## 將使用者和群組對應至商務行事曆 {#mapping-users-and-groups-to-a-business-calendar}
 
@@ -143,7 +143,7 @@ AEM表單可讓您匯出業務行事曆並將其匯入為XML檔案。 您可以�
 
 ## 刪除商務行事曆 {#delete-a-business-calendar}
 
-您可以移除貴組織不再需要的任何企業行事曆。 如果您刪除仍對應至使用者和群組的商務行事曆，將會使用預設行事曆。
+您可以移除貴組織不再需要的任何企業行事曆。 如果您刪除仍對應至使用者和群組的商務行事曆，則會使用預設行事曆。
 
 1. 在管理控制檯中，按一下「服務> Forms工作流程>企業行事曆」。
 1. 選取行事曆。

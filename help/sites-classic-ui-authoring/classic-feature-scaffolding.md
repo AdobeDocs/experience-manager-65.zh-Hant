@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ### 建立支架 {#creating-a-scaffold}
 
-若要建立新的支架，請前往 **工具** 主控台，然後 **預設頁面支架** 並建立頁面。 單一頁面範本型別可供使用， *支架範本。*
+若要建立支架，請前往 **工具** 主控台，然後 **預設頁面支架** 並建立頁面。 單一頁面範本型別可供使用， *支架範本。*
 
 前往 **頁面屬性** ，並將 *標題文字*， *說明*， *目標範本*、和 *目標路徑*，如上所述。
 
@@ -163,4 +163,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果在頁面層級取消繼承（從「頁面屬性」的「即時副本」索引標籤），則所有元件都可以在中編輯 **支架** 模式（會以解除鎖定狀態顯示）。
+>如果在頁面層級取消繼承（從「頁面屬性」的「即時副本」索引標籤），則所有元件都可在以下位置編輯： **支架** 模式（會以解除鎖定狀態顯示）。

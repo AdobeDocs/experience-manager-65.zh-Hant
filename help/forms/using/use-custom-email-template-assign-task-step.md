@@ -8,24 +8,24 @@ topic-tags: publish
 discoiquuid: 2ad4b7b5-2162-4599-af3f-9476f1256de6
 docset: aem65
 exl-id: d4035c91-ee8d-4f12-bdac-e3912be732d7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '521'
 ht-degree: 1%
 
 ---
 
 # 在指派任務步驟中使用自訂電子郵件範本{#use-custom-email-templates-in-an-assign-task-step}
 
-您可以使用「指派任務」步驟來建立任務並指派給使用者或群組。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或已定義群組的每個成員。 典型的電子郵件通知包含指派任務的連結以及與該任務相關的資訊。 下列影像顯示範例電子郵件通知：
+您可以使用「指派工作」步驟來建立工作並指派給使用者或群組。 當任務指派給使用者或群組時，會傳送電子郵件通知給已定義的使用者或已定義群組的每個成員。 典型的電子郵件通知包含指派任務的連結以及與任務相關的資訊。 下列影像顯示範例電子郵件通知：
 
 ![使用現成可用範本的電子郵件通知](do-not-localize/default_email_template_new.png)
 
-您可以自訂外觀，並在電子郵件通知中使用自訂中繼資料。 AEM Forms提供立即可用的電子郵件通知範本。 您可以自訂現成可用的範本或從頭開始建立新範本。
+您可以自訂外觀，並在電子郵件通知中使用自訂中繼資料。 AEM Forms提供立即可用的電子郵件通知範本。 您可以自訂現成可用的範本，或從頭開始建立範本。
 
 電子郵件通知範本是根據 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 這些電子郵件會因應不同的電子郵件使用者端和熒幕大小。 此外，電子郵件的樣式會在範本中定義。
 
-以下影像顯示自訂的電子郵件通知：
+下列影像顯示自訂的電子郵件通知：
 
 ![使用自訂範本的電子郵件通知](do-not-localize/customized-email.png)
 
@@ -57,11 +57,11 @@ AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任�
 
 1. 將自訂HTML程式碼新增至檔案。
 
-   電子郵件通知範本是 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 您可以將自訂HTML程式碼新增至檔案以建立新範本。
+   電子郵件通知範本是 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 您可以將自訂HTML程式碼新增到檔案中來建立範本。
 
-1. 儲存檔案。範本已準備好用於指派任務步驟。
+1. 儲存檔案。範本已準備好用於指派工作步驟。
 
-## 在指派任務步驟中使用電子郵件範本 {#use-an-email-template-in-an-assign-task-step}
+## 在指派工作步驟中使用電子郵件範本 {#use-an-email-template-in-an-assign-task-step}
 
 現成可用的指派工作步驟已設定為使用預設範本htmlEmailTemplate.txt。 您可以選擇使用自訂範本。 若要變更範本：
 

@@ -1,23 +1,23 @@
 ---
 title: ContextHub UI模組型別範例
 seo-title: Sample ContextHub UI Module Types
-description: ContextHub提供幾個範例UI模組，您可以在解決方案中使用
+description: ContextHub提供數個範例UI模組，供您在解決方案中使用
 seo-description: ContextHub provides several sample UI modules that you can use in your solutions
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: df28180f-7af4-437d-8e91-bfd305f73113
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1174'
 ht-degree: 1%
 
 ---
 
 # ContextHub UI模組型別範例 {#sample-contexthub-ui-module-types}
 
-ContextHub提供幾個範例UI模組，您可以在解決方案中使用。 提供下列資訊：
+ContextHub提供數個範例UI模組，供您在解決方案中使用。 下列資訊已提供：
 
 * UI模組的主要功能。
 * 在何處尋找原始程式碼，以方便您開啟它以供學習。
@@ -27,12 +27,12 @@ ContextHub提供幾個範例UI模組，您可以在解決方案中使用。 提�
 
 ## contexthub.base UI模組型別 {#contexthub-base-ui-module-type}
 
-contexthub.base UI模組型別是所有其他UI模組型別的基底型別。 因此，它提供轉譯存放區資料的一般功能。
+contexthub.base UI模組型別是其他所有UI模組型別的基底型別。 因此，它為呈現存放區資料提供了一般功能。
 
 下列功能可供使用：
 
-* **標題和圖示：** 指定UI模組的標題和圖示。 您可以使用URL或從Coral UI圖示資料庫來參照該圖示。
-* **儲存資料：** 識別要擷取資料的一或多個存放區。
+* **標題和圖示：** 指定UI模組的標題和圖示。 可使用URL或從Coral UI圖示資料庫參照圖示。
+* **儲存資料：** 識別一或多個要擷取資料的存放區。
 * **內容：** 指定UI模組在ContextHub工具列中顯示的內容。
 * **彈出視窗內容：** 指定點選或點選UI模組時彈出視窗中顯示的內容。
 * **全熒幕模式：** 控制是否允許全熒幕模式。
@@ -41,23 +41,23 @@ contexthub.base UI模組型別是所有其他UI模組型別的基底型別。 �
 
 ### 設定 {#configuration}
 
-使用JSON格式的JavaScript物件設定contexthub.base UI模組。 納入以下任何屬性以設定UI模組功能：
+使用JSON格式的JavaScript物件來設定contexthub.base UI模組。 納入以下任何屬性以設定UI模組功能：
 
 * **影像：** 要顯示為圖示之影像的URL。
 * **圖示：** 的名稱 [Coral UI圖示](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) 類別。 如果您同時指定圖示和影像屬性的值，則會使用影像。
 
-* **標題：** UI模組的標題。 當指標暫停在UI模組圖示上時，標題就會顯示。
-* **全熒幕：** 布林值，指出UI模組是否支援全熒幕模式。 使用 `true` 支援全熒幕和 `false` 以防止全熒幕模式。
+* **標題：** UI模組的標題。 當指標暫停在UI模組圖示上方時，標題就會顯示。
+* **全熒幕：** 布林值，指出UI模組是否支援全熒幕模式。 使用 `true` 以支援全熒幕和 `false` 以防止全熒幕模式。
 
 * **範本：** A [Handlebars](https://handlebarsjs.com/) 指定要在ContextHub工具列中轉譯之內容的範本。 最多使用兩個 `<p>` 標籤之間。
 
-* **storeMapping：** 金鑰/存放區對應。 使用Handlebar範本中的索引鍵來存取相關聯的ContextHub存放區資料。
+* **storeMapping：** 金鑰/存放區對應。 使用把手範本中的索引鍵來存取相關聯的ContextHub存放區資料。
 * **清單：** 按一下UI模組時顯示在彈出視窗中的專案陣列。 如果您包含此專案，請勿包含poverTemplate。 值是一個物件陣列，內含下列索引鍵：
 
    * title：為此專案顯示的文字
    * 影像： （選用）應在左側顯示的影像URL
-   * 圖示： （選擇性）應顯示在左側的CUI圖示類別；如果指定影像，則會略過
-   * selected： （選用）布林值，指定此專案是否應顯示為已選取(true=selected)。 依預設，選取的專案會以粗體字型顯示。 使用 `listType` 屬性來設定其他外觀（請參閱下文）。
+   * 圖示： （選用）應在左側顯示的CUI圖示類別；如果已指定影像，則會忽略此類別
+   * selected： （選用）布林值，指定此專案是否應顯示為selected (true=selected)。 依預設，選取的專案會以粗體字型顯示。 使用 `listType` 屬性來設定其他外觀（請參閱下文）。
 
 * **listType：** 用於彈出視窗清單專案的樣式。 使用下列其中一個值：
 
@@ -65,11 +65,11 @@ contexthub.base UI模組型別是所有其他UI模組型別的基底型別。 �
    * 核取方塊
    * 無線電
 
-* **popoverTemplate：** Handlebars範本，指定在按一下UI模組時，在彈出視窗中轉譯的內容。 如果您包含此專案，請勿包含 `list` 個專案。
+* **popoverTemplate：** Handlebars範本，指定在按一下UI模組時，於彈出視窗中轉譯的內容。 如果您包含此專案，請勿包含 `list` 個專案。
 
 ### 範例 {#example}
 
-以下範例會設定contexthub.base UI模組，以顯示來自 [contexthub.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) 商店。 此 `template` item示範如何透過下列鍵從存放區取得資料： `storeMapping` 專案建立。
+以下範例會設定contexthub.base UI模組，以顯示來自的資訊 [contexthub.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) 商店。 此 `template` 專案會示範如何使用下列鍵從存放區取得資料 `storeMapping` 專案建立。
 
 ```xml
 {
@@ -86,7 +86,7 @@ contexthub.base UI模組型別是所有其他UI模組型別的基底型別。 �
 
 ## contexthub.browserinfo UI模組型別 {#contexthub-browserinfo-ui-module-type}
 
-contexthub.browserinfo UI模組會顯示使用者端網頁瀏覽器和作業系統的相關資訊。 資訊取自surferinfo存放區，依據為 [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) 存放區候選者。
+contexthub.browserinfo UI模組會顯示使用者端網頁瀏覽器和作業系統的相關資訊。 資訊取自surferinfo商店，依據為 [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) 商店候選者。
 
 ![chlimage_1-77](assets/chlimage_1-77a.png)
 
@@ -94,7 +94,7 @@ UI模組的原始碼位於/libs/granite/contexthub/components/modules/browserinf
 
 ### 設定 {#configuration-1}
 
-contexthub.browserinfo UI模組的執行個體不需要詳細設定的值。 以下JSON文字代表模組的預設設定。
+contexthub.browserinfo UI模組的執行個體不需要詳細資料設定的值。 以下JSON文字代表模組的預設設定。
 
 ```xml
 {
@@ -107,7 +107,7 @@ contexthub.browserinfo UI模組的執行個體不需要詳細設定的值。 以
 
 ## contexthub.datetime UI模組型別 {#contexthub-datetime-ui-module-type}
 
-contexthub.datetime UI模組顯示儲存在名為datetime的存放區中的日期和時間，該存放區是根據 [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) 存放區候選者。
+contexthub.datetime UI模組會顯示儲存在名為datetime的存放區中的日期和時間，該存放區是根據 [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) 商店候選者。
 
 ![chlimage_1-78](assets/chlimage_1-78a.png)
 
@@ -117,7 +117,7 @@ contexthub.datetime UI模組的來源位於/libs/granite/contexthub/components/m
 
 ### 設定 {#configuration-2}
 
-contexthub.datetime UI模組的執行個體不需要詳細資料設定的值。 以下JSON文字代表模組的預設設定。
+contexthub.datetime UI模組的例項不需要詳細資料設定的值。 以下JSON文字代表模組的預設設定。
 
 ```xml
 {
@@ -132,7 +132,7 @@ contexthub.datetime UI模組的執行個體不需要詳細資料設定的值。 
 
 ## contexthub.location UI模組型別 {#contexthub-location-ui-module-type}
 
-contexthub.location UI模組會顯示使用者端的經度和緯度。 此模組會提供一個彈出視窗，其中顯示Google地圖，您可以按一下以變更目前位置。 模組會從名為geolocation的ContextHub存放區取得資訊，該存放區是根據 [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) 存放區候選者。
+contexthub.location UI模組會顯示使用者端的經度和緯度。 此模組會提供一個彈出視窗，其中顯示Google地圖，您可以按一下該視窗來變更目前位置。 模組會從名為geolocation的ContextHub存放區取得資訊，該存放區是根據 [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) 商店候選者。
 
 ![chlimage_1-80](assets/chlimage_1-80a.png)
 
@@ -175,7 +175,7 @@ contexthub.location UI模組的例項不需要詳細資料設定的值。 以下
 
 ## contexthub.screen-orientation UI模組型別 {#contexthub-screen-orientation-ui-module-type}
 
-contexthub.screen-orientation UI模組會顯示使用者端目前的熒幕方向。 雖然預設為停用，但模組會提供一個彈出視窗，讓您選取方向。 此模組會從名為模擬器的ContextHub存放區取得資訊，其基礎為 [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) 存放區候選者。
+contexthub.screen-orientation UI模組會顯示使用者端目前的畫面方向。 雖然預設為停用，但模組會提供一個彈出視窗，讓您選取方向。 此模組會從名為模擬器的ContextHub存放區取得資訊，該模擬器是根據 [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) 商店候選者。
 
 ![chlimage_1-81](assets/chlimage_1-81a.png)
 
@@ -183,7 +183,7 @@ UI模組的來源位於/libs/granite/contexthub/components/modules/screen-orient
 
 ### 設定 {#configuration-5}
 
-contexthub.screen-orientation UI模組的例項不需要「詳細設定」的值。 以下JSON文字代表模組的預設設定。 請注意 `clickable` 屬性為 `false` 依預設。 如果您覆寫要設定的預設設定 `clickable` 至 `true`，按一下模組會顯示快顯視窗，供您選取方向。
+contexthub.screen-orientation UI模組的例項不需要「詳細設定」的值。 以下JSON文字代表模組的預設設定。 此 `clickable` 屬性為 `false` 依預設。 如果您覆寫要設定的預設設定 `clickable` 至 `true`，按一下模組會顯示快顯視窗，讓您選取方向。
 
 ```xml
 {
@@ -199,7 +199,7 @@ contexthub.screen-orientation UI模組的例項不需要「詳細設定」的值
 
 ## contexthub.tagcloud UI模組型別 {#contexthub-tagcloud-ui-module-type}
 
-contexthub.tagcloud UI模組會顯示標籤的相關資訊。 在工具列上，UI模組顯示標籤數量。 快顯視窗會顯示tagcloud和用於新增標籤的文字方塊。 UI模組會從名為tagcloud的ContextHub存放區取得資訊，該存放區是根據 [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) 存放區候選者。
+contexthub.tagcloud UI模組會顯示標籤的相關資訊。 在工具列上，UI模組顯示標籤數量。 快顯視窗會顯示Tagcloud和用於新增標籤的文字方塊。 UI模組會從名為tagcloud的ContextHub存放區取得資訊，該存放區是根據 [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) 商店候選者。
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
 
@@ -223,7 +223,7 @@ contexthub.tagcloud UI模組的例項不需要詳細資料設定的值。 以下
 
 ## granite.profile UI模組型別 {#granite-profile-ui-module-type}
 
-granite.profile ContextHub UI模組會顯示目前使用者的顯示名稱。 快顯視窗會顯示使用者的登入名稱，並可讓您變更顯示名稱的值。 UI模組會從名為profile的ContextHub存放區取得資訊，該存放區是根據 [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) 存放區候選者。
+granite.profile ContextHub UI模組會顯示目前使用者的顯示名稱。 快顯視窗會顯示使用者的登入名稱，並可讓您變更顯示名稱的值。 UI模組會從名為profile的ContextHub存放區取得資訊，該存放區是根據 [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) 商店候選者。
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 

@@ -1,19 +1,15 @@
 ---
 title: 產生最適化表單的記錄檔案
-seo-title: Generate Document of Record for adaptive forms
 description: 說明如何為最適化表單的記錄檔案(DoR)產生範本。
-seo-description: Explains how you can generate a template for a document of record (DoR) for adaptive forms.
-uuid: 2dc7e0de-fff9-43fa-9426-e9b047eb2595
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3544'
+source-wordcount: '3545'
 ht-degree: 5%
 
 ---
@@ -218,7 +214,7 @@ ht-degree: 5%
 
 基礎範本為記錄檔案提供樣式和外觀資訊。 它可讓您自訂自動產生記錄檔案的預設外觀。 例如，您想要在檔案的頁首中新增公司標誌，並在頁尾中新增版權資訊。 基礎範本的主版頁面會作為記錄檔案範本的主版頁面。 主版頁面可以包含頁首、頁尾和頁碼等資訊，您可以將這些資訊套用至記錄檔案。 您可以使用基礎範本將此類資訊套用至記錄檔案，以自動產生記錄檔案。 使用基礎範本可讓您變更欄位的預設屬性。
 
-請關注 [基礎範本慣例](#base-template-conventions) 當您設計基礎範本時。
+請務必遵循 [基礎範本慣例](#base-template-conventions) 當您設計基礎範本時。
 
 ## 基礎範本慣例 {#base-template-conventions}
 
@@ -234,7 +230,7 @@ ht-degree: 5%
 
 **欄位的樣式慣例**
 
-* 若要在記錄檔案中的欄位上套用樣式，基礎範本會提供位於 `AF_FIELDSSUBFORM` subfrom在 `AF_METATEMPLATE` 根子表單。
+* 若要在記錄檔案中的欄位套用樣式，基礎範本會提供 `AF_FIELDSSUBFORM` subfrom在 `AF_METATEMPLATE` 根子表單。
 
 * 這些欄位的屬性會套用至記錄檔案中的欄位。 這些欄位應遵循 `AF_<name of field in all caps>_XFO` 命名慣例。 例如，核取方塊的欄位名稱應為 `AF_CHECKBOX_XFO`.
 

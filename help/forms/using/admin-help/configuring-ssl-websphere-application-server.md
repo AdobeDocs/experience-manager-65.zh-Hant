@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: b0786b52-879e-4a24-9cc9-bd9dcb2473cc
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1222'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 若要啟用SSL，WebSphere需要存取本機作業系統使用者登入中具有系統管理許可權的使用者帳戶：
 
-* (Windows)建立新的Windows使用者，使其隸屬於Administrators群組並擁有作為作業系統一部分的許可權。 (請參閱 [為WebSphere建立Windows使用者](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
+* (Windows)建立屬於Administrators群組，並擁有做為作業系統一部分之許可權的Windows使用者。 (請參閱 [為WebSphere建立Windows使用者](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
 * (Linux、UNIX)使用者可以是root使用者或其他具有root許可權的使用者。 當您在WebSphere上啟用SSL時，請使用這個使用者的伺服器識別碼和密碼。
 
 ### 為WebSphere建立Linux或UNIX使用者 {#create-a-linux-or-unix-user-for-websphere}
@@ -51,7 +51,7 @@ ht-degree: 1%
 1. 以滑鼠右鍵按一下使用者並選取「 」 **新使用者**.
 1. 在適當的方塊中輸入使用者名稱和密碼，並在其他方塊中輸入您需要的任何其他資訊。
 1. 取消選取 **使用者下次登入時必須變更密碼**，按一下 **建立**，然後按一下 **關閉**.
-1. 按一下 **使用者**，以滑鼠右鍵按一下您剛建立的使用者並選取 **屬性**.
+1. 按一下 **使用者**，以滑鼠右鍵按一下您建立的使用者並選取 **屬性**.
 1. 按一下 **成員隸屬於** 標籤，然後按一下 **新增**.
 1. 在「輸入要選取的物件名稱」方塊中，鍵入 `Administrators`，按一下「檢查名稱」以確保群組名稱正確無誤。
 1. 按一下 **確定** 然後按一下 **確定** 再來一次。

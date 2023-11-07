@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4950'
+source-wordcount: '4962'
 ht-degree: 2%
 
 ---
@@ -428,7 +428,7 @@ CRX存放庫的相關資訊
   </tr>
   <tr>
    <td>node.type.management.same.name.siblings.supported</td>
-   <td>true表示存放庫支援同層級節點（具有相同父項的節點）具有相同名稱。</td>
+   <td>true表示存放庫支援同層級節點（具有相同父系的節點）具有相同名稱。</td>
   </tr>
   <tr>
    <td>node.type.management.residual.definitions.supported</td>
@@ -484,7 +484,7 @@ CRX存放庫的相關資訊
   </tr>
   <tr>
    <td>option.lifecycle.supported</td>
-   <td>true表示存放庫支援生命週期管理。</td>
+   <td>true表示儲存庫支援生命週期管理。</td>
   </tr>
  </tbody>
 </table>
@@ -944,7 +944,7 @@ $ java
 
 ![screen_shot_2012-03-26at115056am](assets/screen_shot_2012-03-26at115056am.png)
 
-若要存取CRX的內部監控和設定選項，請移至MBeans標籤，然後從左側的階層式內容樹狀結構中，選取您感興趣的「屬性」或「作業」區段。 例如com.adobe.granite/Repository/Operations區段。
+若要存取CRX的內部監控和設定選項，請移至MBeans標籤，然後從左側的階層式內容樹狀結構中，選取您感興趣的「屬性」或「作業」區段。 例如，com.adobe.granite/Repository/Operations區段。
 
 在該區段中，在左窗格中選取所需的屬性或作業。
 

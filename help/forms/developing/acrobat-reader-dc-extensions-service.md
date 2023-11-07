@@ -1,7 +1,7 @@
 ---
 title: Acrobat Reader DC擴充功能ServiceJava API快速入門(SOAP)
 seo-title: Acrobat Reader DC extensions ServiceJava API Quick Start(SOAP)
-description: 使用Acrobat Reader DC Extensions服務將使用許可權套用至PDF檔案、從PDF檔案移除使用許可權，以及擷取用來將使用許可權套用至名為LoanUsageRights.pdf且已啟用許可權的PDF檔案的認證相關資訊。
+description: 使用Acrobat Reader DC擴充功能服務，將使用許可權套用至PDF檔案、從PDF檔案中移除使用許可權，以及擷取用於套用使用許可權至名為LoanUsageRights.pdf且已啟用許可權的PDF檔案之認證的相關資訊。
 seo-description: Use the  Acrobat Reader DC Extensions service to apply usage rights to a PDF document, remove usage rights from PDF documents, and retrieve  information about the credential that is used to apply usage-rights to a rights-enabled PDF document named LoanUsageRights.pdf.
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
 contentOwner: admin
@@ -10,16 +10,16 @@ topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 role: Developer
 exl-id: 82f0b6c1-ca0c-48c7-b7f6-b54704ac0830
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
 
 # Acrobat Reader DC擴充功能ServiceJava API快速入門(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-Acrobat Reader DC擴充功能服務提供下列快速入門功能。
+下列快速入門適用於Acrobat Reader DC擴充功能服務。
 
 [快速入門（SOAP模式）：使用Java API套用使用許可權](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
@@ -31,11 +31,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->「使用AEM Forms進行程式設計」中的「快速入門」是以Forms伺服器作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請以適用的作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM Forms進行程式設計的快速入門是以Forms伺服器作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入門（SOAP模式）：使用Java API套用使用許可權 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-以下Java程式碼範例會將使用許可權套用至名為的PDF檔案 *Loan.pdf*. 啟用許可權的PDF檔案會儲存為名為的PDF檔案 *LoanUsageRights.pdf*. 以下使用許可權已套用至此PDF檔案： `enabledComments`， `enabledFormFillIn`、和 `enabledDigitalSignatures`. (請參閱 [將使用許可權套用至PDF檔案](/help/forms/developing/assigning-usage-rights.md).)
+以下Java程式碼範例將使用許可權套用至名為的PDF檔案 *Loan.pdf*. 啟用許可權的PDF檔案會儲存為名為的PDF檔案 *LoanUsageRights.pdf*. 下列使用許可權已套用至此PDF檔案： `enabledComments`， `enabledFormFillIn`、和 `enabledDigitalSignatures`. (請參閱 [將使用許可權套用至PDF檔案](/help/forms/developing/assigning-usage-rights.md).)
 
 
 ```java
@@ -62,13 +62,13 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 18. xbean.jar (required for SOAP mode) 
      * 19. xercesImpl.jar (required for SOAP mode) 
      * 
-     * These JAR files are located in the following path: 
+     * These JAR files are in the following path: 
      * <install directory>/sdk/client-libs/common 
      * 
      * 
      * <install directory>/jboss/bin/client 
      * 
-     * SOAP required JAR files are located in the following path: 
+     * SOAP required JAR files are in the following path: 
      * <install directory>/sdk/client-libs/thirdparty 
      * 
      * If you want to invoke a remote forms server instance and there is a 
@@ -132,7 +132,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
              null, 
              reOptions);  
           
-           //Create a new PDF file that represents the rights-enabled PDF document 
+           //Create a PDF file that represents the rights-enabled PDF document 
            File resultFile = new File("C:\\Adobe\LoanUsageRights.pdf");  
            rightsEnabledPDF.copyToFile(resultFile); 
                           
@@ -147,7 +147,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API從PDF檔案中移除使用許可權 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例會從名為的已啟用許可權的PDF檔案中移除使用許可權 *LoanUsageRights.pdf*. (請參閱 [從PDF檔案中移除使用許可權](/help/forms/developing/assigning-usage-rights.md).)
+以下Java程式碼範例會從名為的許可權啟用PDF檔案中移除使用許可權 *LoanUsageRights.pdf*. (請參閱 [從PDF檔案中移除使用許可權](/help/forms/developing/assigning-usage-rights.md).)
 
 ```java
  /* 
@@ -176,7 +176,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to  
      * your local development environment and then include the 3 JBoss JAR files in your class path 
      * 
-     * These JAR files are located in the following path: 
+     * These JAR files are in the following path: 
      * <install directory>/sdk/client-libs/common 
      * 
      * 
@@ -185,7 +185,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a 
      * firewall between the client application and the server, then it is  
      * recommended that you use the SOAP mode. When using the SOAP mode,  
-     * you have to include additional JAR files located in the following  
+     * you have to include additional JAR files in the following  
      * path 
      * <install directory>/sdk/client-libs/thirdparty 
      * 
@@ -247,7 +247,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API擷取認證資訊 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-以下Java程式碼範例會擷取用來將使用許可權套用至名為的已啟用許可權的PDF檔案的認證相關資訊 *LoanUsageRights.pdf*. (請參閱 [正在擷取認證資訊](/help/forms/developing/assigning-usage-rights.md).)
+以下Java程式碼範例會擷取用來將使用許可權套用至名為的已啟用許可權之PDF檔案的認證相關資訊 *LoanUsageRights.pdf*. (請參閱 [正在擷取認證資訊](/help/forms/developing/assigning-usage-rights.md).)
 
 ```java
  /* 
@@ -276,7 +276,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to  
      * your local development environment and then include the 3 JBoss JAR files in your class path 
      * 
-     * These JAR files are located in the following path: 
+     * These JAR files are in the following path: 
      * <install directory>/sdk/client-libs/common 
      * 
      * 
@@ -285,7 +285,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a 
      * firewall between the client application and the server, then it is  
      * recommended that you use the SOAP mode. When using the SOAP mode,  
-     * you have to include additional JAR files located in the following  
+     * you have to include additional JAR files in the following  
      * path 
      * <install directory>/sdk/client-libs/thirdparty 
      * 

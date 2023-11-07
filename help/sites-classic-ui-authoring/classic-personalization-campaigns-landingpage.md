@@ -1,19 +1,15 @@
 ---
 title: 登陸頁面
-seo-title: Landing Pages
 description: 登入頁面功能可讓您將設計和內容快速輕鬆地直接匯入AEM頁面。 網頁開發人員可以準備HTML和其他資產，這些資產可以匯入為完整頁面或僅頁面的一部分。
-seo-description: The landing pages feature allows quick and easy importing of a design and content right into an AEM page. A web developer can prepare the HTML and additional assets that can be imported as a full page or only a part of a page.
-uuid: b294c43f-63ae-4b5b-bef0-04566e350b63
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 061dee36-a3bb-4166-a9c1-3ab7e4de1d1d
 docset: aem65
 exl-id: 0f1014a7-b0ba-4455-b3a4-5023bcd4c5a1
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3329'
+source-wordcount: '3323'
 ht-degree: 2%
 
 ---
@@ -41,7 +37,7 @@ ht-degree: 2%
 
 ## 什麼是登陸頁面？ {#what-are-landing-pages}
 
-登入頁面是作為行銷外展「端點」的單頁或多頁網站 — 例如電子郵件、廣告字/橫幅、社群媒體。 登陸頁面可能有不同的用途，但都有一項共同點：訪客應完成一項任務，且這會定義登陸頁面的成功。
+登入頁面是單一或多頁網站，是行銷外聯的「端點」 — 例如，電子郵件、廣告詞/橫幅、社群媒體。 登陸頁面可能有不同的用途，但都有一項共同點：訪客應完成一項任務，且這會定義登陸頁面的成功。
 
 AEM中的登陸頁面功能可讓行銷人員與代理商或內部創意團隊的網頁設計人員合作，建立可輕鬆匯入AEM中，且行銷人員仍可編輯的頁面設計，並依照與其他AEM支援網站的相同治理方式發佈。
 
@@ -351,13 +347,13 @@ Adobe建議在中繼執行個體上使用設計匯入工具。 在測試執行�
 
 ### 建立匯入工具頁面 {#creating-an-importer-page}
 
-您必須先建立匯入工具頁面，才能匯入登入頁面設計，例如在行銷活動底下。 「匯入者頁面」範本可讓您匯入完整的HTML登陸頁面。 此頁面包含一個放置方塊，您可在其中使用拖放功能匯入登入頁面設計套件。
+在匯入登入頁面設計之前，您需要先建立匯入工具頁面，例如在行銷活動底下。 「匯入者頁面」範本可讓您匯入完整的HTML登陸頁面。 此頁面包含一個放置方塊，您可在其中使用拖放功能匯入登入頁面設計套件。
 
 >[!NOTE]
 >
 >依預設，您只能在行銷活動底下建立Importer頁面，但您也可以覆蓋此範本，在下建立登入頁面 `/content/mysite`.
 
-若要建立新的登入頁面：
+若要建立登入頁面：
 
 1. 前往 **網站** 主控台。
 1. 在左窗格中選取您的行銷活動。
@@ -417,7 +413,7 @@ Adobe建議在中繼執行個體上使用設計匯入工具。 在測試執行�
 
 ### 下載匯入的設計封裝 {#downloading-the-imported-design-package}
 
-下載zip檔案可讓您記錄哪個zip檔案已使用特定登陸頁面匯入。 請注意，在頁面上進行的變更不會新增至郵遞區號。
+下載zip檔案可讓您記錄哪個zip檔案已使用特定登陸頁面匯入。 在頁面上進行的變更不會新增至zip。
 
 若要下載匯入的設計封裝，請按一下 **下載Zip** （在登陸頁面工具列中）。
 

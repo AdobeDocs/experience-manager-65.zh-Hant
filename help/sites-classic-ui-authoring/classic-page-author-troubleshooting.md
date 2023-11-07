@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
 exl-id: 27a6b012-576e-40bc-9b50-c310b3c56c9e
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '429'
 ht-degree: 6%
 
 ---
@@ -21,32 +21,32 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->遇到問題時，也值得檢查 [已知問題](/help/release-notes/release-notes.md) （發行版本和Service Pack）。
+>如果發生問題，也值得檢查清單 [已知問題](/help/release-notes/release-notes.md) 針對您的執行個體（發行版本和Service Pack）。
 
 >[!NOTE]
 >
->具有管理員許可權的使用者以及想要疑難排解AEM問題的使用者，可以使用中所述的疑難排解方法 [疑難排解AEM （適用於管理員）](/help/sites-administering/troubleshoot.md). 如果您沒有足夠的許可權，請向系統管理員洽詢AEM疑難排解的相關資訊。
+>具有管理員許可權的使用者以及想要疑難排解AEM問題的使用者，可以使用中所述的疑難排解方法 [疑難排解AEM （適用於管理員）](/help/sites-administering/troubleshoot.md). 如果您沒有足夠的許可權，請聯絡您的系統管理員，瞭解如何疑難排解AEM。
 
 ## 發佈網站上仍顯示舊的頁面版本 {#old-page-version-still-on-published-site}
 
 * **問題**:
 
-   * 您已對頁面進行變更，並將頁面復寫至發佈站台，但 *舊* 頁面版本仍會顯示在發佈網站上。
+   * 您已變更頁面並將頁面復寫至發佈站台，但 *舊* 頁面版本仍顯示在發佈網站上。
 
 * **原因**:
 
-   * 這可能有多種原因，最常見的是快取（本機瀏覽器或Dispatcher），不過有時復寫佇列可能會出現問題。
+   * 這可能有多種原因，通常是快取（本機瀏覽器或Dispatcher），不過有時復寫佇列可能會發生問題。
 
 * **解決方案**:
 
    * 這裡有多種可能性：
-   * 確認頁面已正確復寫。 檢查頁面狀態，並視需要檢查復寫佇列的狀態。
+   * 確認已正確復寫頁面。 檢查頁面狀態，並視需要檢查復寫佇列的狀態。
    * 清除本機瀏覽器中的快取，然後再次存取您的頁面。
    * 新增 `?` 到頁面URL的結尾。 例如：
 
-      `http://localhost:4502/sites.html/content?`
+     `http://localhost:4502/sites.html/content?`
 
-      這會直接向AEM要求頁面，並略過Dispatcher。 如果您收到更新的頁面，表示您應清除Dispatcher快取。
+     這會直接向AEM要求頁面，並略過Dispatcher。 如果您收到更新的頁面，表示您應清除Dispatcher快取。
 
    * 如果復寫佇列發生問題，請聯絡您的系統管理員。
 
@@ -54,21 +54,21 @@ ht-degree: 6%
 
 * **問題**:
 
-   * 在作者環境中編輯內容頁面時看不到Sidekick。
+   * 在作者環境中編輯內容頁面時，Sidekick不可見。
 
 * **原因**:
 
-   * 在極少數的情況下，您可能會將sidekick的標題放在目前視窗的範圍之外。 這表示您無法再次重新調整其位置。
+   * 在極少數情況下，您可能會將sidekick的標題放在目前視窗的範圍之外。 這表示您無法再次重新調整其位置。
 
 * **解決方案**:
 
    * 從目前的工作階段登出，然後重新登入。 Sidekick將返回預設位置。
 
-## 尋找和取代 — 並非所有例項都會被取代 {#find-replace-not-all-instances-are-replaced}
+## 尋找和取代 — 並非所有執行個體都會被取代 {#find-replace-not-all-instances-are-replaced}
 
 * **問題:**
 
-   * 使用時 **尋找和取代** 選項，並非所有的 `find` 字詞會替換在頁面上。
+   * 使用時 **尋找和取代** 選項，並非所有的 `find` 會取代頁面上的字詞。
 
 * **原因**:
 
@@ -83,4 +83,4 @@ ht-degree: 6%
 
    * 這些定義可透過以下設定進行變更： **Day CQ WCM尋找取代Servlet** 使用 **網頁主控台**；例如，
 
-      `http://localhost:4502/system/console/configMgr`
+     `http://localhost:4502/system/console/configMgr`

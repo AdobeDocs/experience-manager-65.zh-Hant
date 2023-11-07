@@ -3,9 +3,9 @@ title: 電子商務概觀
 description: AEM一般電子商務是作為標準安裝的一部分提供，為您提供電子商務框架的完整功能。
 feature: Commerce Integration Framework
 exl-id: 3567bd28-73aa-401a-8aa9-a62a99d2a613
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '260'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Adobe提供兩個版本的Commerce integration framework：
 
 ## 部署其他實作 {#deploying-other-implementations}
 
-若為AEM和Adobe Commerce，請參閱 [AEM與Adobe Commerce整合](/help/commerce/cif/integrating/magento.md) 使用 [Commerce integration framework](/help/commerce/cif/introduction.md).
+如需AEM和Adobe Commerce的相關資訊，請參閱 [AEM與Adobe Commerce整合](/help/commerce/cif/integrating/magento.md) 使用 [Commerce integration framework](/help/commerce/cif/introduction.md).
 
 >[!NOTE]
 >

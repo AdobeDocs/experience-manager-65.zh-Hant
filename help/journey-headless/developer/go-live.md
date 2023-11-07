@@ -2,7 +2,7 @@
 title: 如何將 Headless 應用程式上線
 description: 在AEM Headless開發人員歷程的這一部分，瞭解如何即時部署Headless應用程式。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1873'
 ht-degree: 51%
@@ -151,7 +151,7 @@ Node.js是JavaScript執行階段環境，用來處理AEM專案的 `ui.frontend` 
 
 <!-- Can't find a parallel link -->
 <!--
-You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline, which is covered extensively [here](/help/implementing/deploying/overview.md).
+You can start deploying your code by using the Cloud Manager CI/CD pipeline, which is covered extensively [here](/help/implementing/deploying/overview.md).
 -->
 
 ## 效能監控 {#performance-monitoring}
@@ -167,7 +167,7 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
       * 檢查使用者、請求和載入的數量
 * 存取應用程式和空間特定的效能報表
    * 伺服器啟動後，檢查一般量度是否為綠色/橘色/紅色，然後識別特定的應用程式問題
-   * 開啟上面篩選到應用程式或空間 (例如 Photoshop 桌面、付費牆) 的相同報告
+   * 開啟上方經篩選以至應用程式或空間的相同報表(例如Photoshop案頭版、付費牆版)
    * 使用 Splunk log API 存取服務和應用程式效能
    * 如果還有其他問題，請聯絡客戶支援。
 
@@ -226,6 +226,6 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 
    * 設定 [CDN重寫程式](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*搜尋CDN重寫程式*)
 
-* [AEM as a Headless CMS簡介](/help/sites-developing/headless/introduction.md)
-* [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-* [AEM中Headless的Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM 中的 Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

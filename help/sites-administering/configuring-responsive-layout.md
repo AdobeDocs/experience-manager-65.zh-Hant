@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1283'
 ht-degree: 1%
 
 ---
@@ -269,7 +269,7 @@ AEM使用LESS來產生必要CSS的部分，這些需要包含在您的專案中�
 
 >[!CAUTION]
 >
->自訂樣式表clientlibs必須載入為標頭的一部分，才能在製作及發佈上正確運作。
+>自訂樣式表clientlibs必須載入為標頭的一部分，才能在製作和發佈上正確運作。
 
 ## 啟用頁面的配置容器元件 {#enable-the-layout-container-component-for-page}
 

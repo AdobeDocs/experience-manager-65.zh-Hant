@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '669'
 ht-degree: 24%
 
 ---
@@ -158,6 +158,6 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
 ### 篩選資源 {#filtering-resources}
 
-使用主控台時，常見的使用案例是使用者必須從資源（例如頁面、元件、資產等）中進行選擇時。 這可以採用清單的形式，例如，作者必須從中選擇專案。
+使用主控台時，常見的使用案例是使用者必須從資源（例如頁面、元件、資產等）中進行選取時。 例如，這可以採用清單的形式，作者必須從中選擇專案。
 
 若要將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。另請參閱 [本文](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 以取得詳細資訊。

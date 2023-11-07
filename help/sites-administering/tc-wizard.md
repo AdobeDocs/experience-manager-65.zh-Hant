@@ -3,9 +3,9 @@ title: 語言複製精靈
 description: 瞭解如何在AdobeExperience Manager中使用語言複製精靈。
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: 2d87022aa2223df261e245fba65df054c041cd69
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '214'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 5%
    >
    >依預設，只有一個翻譯設定。 若要能夠選取其他設定，您必須先設定雲端設定。 另請參閱 [設定翻譯整合框架](/help/sites-administering/tc-tic.md).
 
-1. 此 **下一個** 按鈕帶您前往 **Translate** 精靈的步驟。 在此，您可以選擇僅建立結構、建立新翻譯專案或新增至現有翻譯專案。
+1. 此 **下一個** 按鈕帶您前往 **Translate** 精靈的步驟。 您可以在此處選擇僅建立結構、建立翻譯專案或新增到現有翻譯專案。
 
    >[!NOTE]
    >

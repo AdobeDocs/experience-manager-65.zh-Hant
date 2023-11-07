@@ -3,9 +3,9 @@ title: 概念
 description: 透過Adobe Experience Manager瞭解電子商務的一般概念。
 contentOwner: Guillaume Carlino
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4480'
+source-wordcount: '4481'
 ht-degree: 2%
 
 ---
@@ -486,7 +486,7 @@ Proxy頁面可用來簡化存放庫結構，以及將大型目錄的儲存空間
 
 Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何實際產品內容。 內容是在請求時透過參考產品資料和範本頁面產生的。
 
-不過，還是需要權衡取捨。 您將無法在AEM內自訂您的產品資訊，系統將使用標準範本（針對您的網站所定義）。
+不過，還是需要權衡取捨。 您將無法在AEM內自訂您的產品資訊，將使用標準範本（為您的網站定義）。
 
 >[!NOTE]
 >
@@ -574,7 +574,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
 >[!NOTE]
 >
->[hybris促銷活動](https://www.hybris.com/modules/promotion) 和 [hybris憑單](https://www.hybris.com/en/modules/voucher) 涵蓋所有影響購物車及與定價相關的專案。 促銷特定行銷內容（例如橫幅等） 不是hybris促銷活動的一部分。
+>[hybris促銷活動](https://www.hybris.com/modules/promotion) 和 [hybris憑單](https://www.hybris.com/en/modules/voucher) 涵蓋所有影響購物車及與定價相關的專案。 促銷特定行銷內容（例如橫幅等）。 不是hybris促銷活動的一部分。
 
 ## 個人化 {#personalization}
 

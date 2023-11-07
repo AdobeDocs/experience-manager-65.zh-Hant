@@ -8,7 +8,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 2%
@@ -17,15 +17,15 @@ ht-degree: 2%
 
 # SCF Handlebars協助程式 {#scf-handlebars-helpers}
 
-| **[⇐ Feature Essentials](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
+| **[⇐功能要點](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
 |---|---|
 |   | **[使用者端自訂⇒](client-customize.md)** |
 
-Handlebars Helpers (helpers)是可從Handlebars指令碼呼叫的方法，以方便使用SCF元件。
+Handlebars Helpers （協助程式）是可從Handlebars指令碼呼叫的方法，以方便使用SCF元件。
 
 實施包含使用者端和伺服器端定義。 開發人員也可以建立自訂協助程式。
 
-AEM Communities提供的自訂SCF協助程式定義於 [使用者端資源庫](../../help/sites-developing/clientlibs.md)：
+AEM Communities提供的自訂SCF協助程式定義於 [使用者端資料庫](../../help/sites-developing/clientlibs.md)：
 
 * `/etc/clientlibs/social/commons/scf/helpers.js`
 
@@ -35,13 +35,13 @@ AEM Communities提供的自訂SCF協助程式定義於 [使用者端資源庫](.
 
 ## 縮寫 {#abbreviate}
 
-協助程式可傳回符合maxWords和maxLength屬性的縮寫字串。
+協助程式傳回符合maxWords和maxLength屬性的縮寫字串。
 
 提供要縮寫的字串作為內容。 如果未提供任何內容，則會傳回空字串。
 
-首先，將前後關聯裁剪為maxLength，然後將前後關聯分割為單字並縮減為maxWords。
+首先，將前後關聯裁剪為maxLength，然後將前後關聯分割為單字並縮小為maxWords。
 
-如果safeString設為true，則傳回的字串是SafeString。
+如果safeString設為true，則傳回的字串為SafeString。
 
 ### 參數 {#parameters}
 
@@ -89,7 +89,7 @@ Then abbreviate would return
 
 ## Content-loadmore {#content-loadmore}
 
-協助程式可在div下新增兩個範圍，一個用於完整文字，另一個用於較少文字，並能在兩個檢視之間切換。
+協助程式可在div下新增兩個跨頁，一個用於全文，另一個用於較少文字，並能在兩個檢視之間切換。
 
 ### 參數 {#parameters-1}
 
@@ -99,13 +99,13 @@ Then abbreviate would return
 
 * **numChars**：數字
 
-  （選用）未顯示全文字時要顯示的字元數。 預設值為100。
+  （選用）不顯示全文時顯示的字元數。 預設值為100。
 
 * **更多文字**：字串
 
   （選用）要顯示的文字，表示還有更多文字要顯示。 預設值為「更多」。
 
-* **省略符號文字**：字串
+* **省略文字**：字串
 
   （選用）要顯示的文字，表示有隱藏的文字。 預設值為「……」。
 
@@ -129,7 +129,7 @@ Then content-loadmore would return
 
 ## DateUtil {#dateutil}
 
-傳回格式化日期字串的協助程式。
+協助程式可傳回格式化的日期字串。
 
 ### 參數 {#parameters-2}
 
@@ -157,7 +157,7 @@ Then content-loadmore would return
 
 ## 等於 {#equals}
 
-根據相等條件傳回內容的協助程式。
+根據等式條件傳回內容的協助程式。
 
 ### 參數 {#parameters-3}
 
@@ -165,7 +165,7 @@ Then content-loadmore would return
 
   要比較的左側值。
 
-* **rvalue**：字串
+* **值**：字串
 
   要比較的右側值。
 
@@ -181,7 +181,7 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-測試目前值的區塊輔助程式 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 以字串分隔的模式清單。
+區塊協助程式會測試目前的值， [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 針對以字串分隔的模式清單。
 
 ### 參數 {#parameters-4}
 
@@ -191,7 +191,7 @@ Then content-loadmore would return
 
 * **模式**：字串
 
-  （選用）以逗號分隔的 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 以測試是否設定。
+  （選用）逗號分隔清單 [WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 以測試是否設定。
 
 ### 範例 {#example-2}
 
@@ -207,7 +207,7 @@ Then content-loadmore would return
 
 此協助程式會覆寫Handlebars協助程式&#39;i18n&#39;。
 
-另請參閱 [國際化JavaScript程式碼中的字串](../../help/sites-developing/i18n-dev.md#internationalizing-strings-in-javascript-code).
+另請參閱 [在JavaScript程式碼中國際化字串](../../help/sites-developing/i18n-dev.md#internationalizing-strings-in-javascript-code).
 
 ### 參數 {#parameters-5}
 
@@ -234,9 +234,9 @@ Then content-loadmore would return
 
 將元件加入為範本中不存在資源的協助程式。
 
-與新增為JCR節點的資源相比，此方法可讓您更輕鬆地以程式設計方式自訂資源。 另請參閱 [新增或包含Communities元件](scf.md#add-or-include-a-communities-component).
+與新增為JCR節點的資源相比，此方法讓資源更容易以程式設計方式自訂。 另請參閱 [新增或包含Communities元件](scf.md#add-or-include-a-communities-component).
 
-只有為數不多的幾個社群元件可供納入。 <!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
+只有少數幾個社群元件可供包含。 <!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
 
 此協助程式僅適用於伺服器端，可提供類似以下的功能 [cq：include](../../help/sites-developing/taglib.md) 用於JSP指令碼。
 
@@ -252,7 +252,7 @@ Then content-loadmore would return
 
 * **resourceType**：字串
 
-  （選擇性）資源型別預設為上下文中的資源型別。
+  （選擇性）資源型別預設為來自前後關聯的資源型別。
 
 * **範本**：字串
 
@@ -264,7 +264,7 @@ Then content-loadmore would return
 
 * **authoringDisabled**：布林值
 
-  （選用）預設值為false。 僅供內部使用。
+  （選用）預設為false。 僅供內部使用。
 
 ### 範例 {#example-4}
 
@@ -272,7 +272,7 @@ Then content-loadmore would return
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-在加入新的註解元件 `this.id` + /comments。
+在包含新的註釋元件 `this.id` + /comments。
 
 ## IncludeClientLib {#includeclientlib}
 
@@ -284,11 +284,11 @@ Then content-loadmore would return
 
 * **類別**：字串
 
-  （選用）以逗號分隔的使用者端程式庫類別清單。 納入指定類別的所有JavaScript和CSS程式庫。 主題名稱是從請求中擷取。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 納入指定類別的所有JavaScript和CSS資料庫。 主題名稱會從請求中擷取。
 
 * **主題**：字串
 
-  （選用）以逗號分隔的使用者端程式庫類別清單。 包含指定類別的所有主題相關資料庫（CSS和JS）。 主題名稱是從請求中擷取。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 包含指定類別的所有主題相關資料庫（CSS和JS）。 主題名稱會從請求中擷取。
 
 * **js**：字串
 
@@ -296,7 +296,7 @@ Then content-loadmore would return
 
 * **css**：字串
 
-  （選用）以逗號分隔的使用者端程式庫類別清單。 包含指定類別的所有CSS程式庫。
+  （選用）以逗號分隔的使用者端程式庫類別清單。 包含指定類別的所有CSS資料庫。
 
 ### 範例 {#examples-2}
 
@@ -340,7 +340,7 @@ Then content-loadmore would return
 
 ## 美化時間 {#pretty-time}
 
-協助程式可顯示多少時間已到達截止點，之後會顯示一般日期格式。
+協助程式會顯示到達截止點之前經過的時間，之後會顯示一般日期格式。
 
 例如：
 
@@ -351,11 +351,11 @@ Then content-loadmore would return
 
 * **內容**：數字
 
-  與「現在」進行比較的過去時間。 時間以從1970年1月1日起（紀元）偏移的毫秒值表示。
+  與「現在」進行比較的過去時間。 時間以自1970年1月1日起位移的毫秒值表示（紀元）。
 
 * **daysCutoff**：數字
 
-  切換至實際日期之前的天數。 預設值為60。
+  切換到實際日期之前的天數。 預設值為60。
 
 ### 範例 {#example-5}
 
@@ -375,7 +375,7 @@ Depending on how long in the past, may return
 
 ## Xss-html {#xss-html}
 
-協助程式會編碼HTML元素內容的來源字串，以協助防範XSS。
+協助程式會為HTML元素內容編碼來源字串，以協助抵禦XSS。
 
 注意：此協助程式不是驗證器，且不可用於寫入屬性值。
 
@@ -411,9 +411,9 @@ Depending on how long in the past, may return
 
 ## Xss-jsString {#xss-jsstring}
 
-協助程式會編碼原始字串，以寫入JavaScript字串內容以協助防範XSS。
+協助程式會編碼來源字串，以寫入JavaScript字串內容來協助防範XSS。
 
-注意：此Helper不是驗證器，且不可用來寫入任意JavaScript。
+注意：此協助程式不是驗證器，且不可用來寫入任意JavaScript。
 
 ### 參數 {#parameters-11}
 
@@ -431,7 +431,7 @@ var input = {{xss-jsString topic-title}}
 
 協助程式會清理要當作HTMLhref或srce屬性值寫入的URL，以協助防範XSS。
 
-注意：此協助程式可能傳回空字串。
+注意：此協助程式可能會傳回空字串。
 
 ### 參數 {#parameters-12}
 
@@ -447,22 +447,22 @@ var input = {{xss-jsString topic-title}}
 
 ## Handlebars.js基本概述 {#handlebars-js-basic-overview}
 
-* Handlebars協助程式呼叫是簡單識別碼(即 *名稱* 後接零個或多個以空格分隔的引數。
-* 引數可以是簡單字串、數字、布林值或JSON物件，以及作為最後一個引數的機碼值組（雜湊引數）選用順序。
+* Handlebars協助程式呼叫是簡單的識別碼(識別碼 *名稱* 後接零個或多個以空格分隔的引數。
+* 引數可以是簡單字串、數字、布林值或JSON物件，以及作為最後一個引數的鍵值值配對（雜湊引數）選用序列。
 * 雜湊引數中的索引鍵必須是簡單識別碼。
 * 雜湊引數中的值是Handlebars運算式：簡單識別碼、路徑或字串。
-* 目前內容， `this`，可隨時供Handlebars協助程式使用。
+* 目前的內容， `this`，Handlebars協助程式一律可使用。
 * 內容可以是字串、數字、布林值或JSON資料物件。
-* 可以將目前前後關聯內巢狀的物件作為前後關聯傳遞，例如 `this.url` 或 `this.id` （請參閱下列簡單和區塊協助程式的範例）。
+* 可以將目前前後關聯內的巢狀物件作為前後關聯傳遞，例如 `this.url` 或 `this.id` （請參閱下列簡單和區塊協助程式的範例）。
 
-* 區塊協助程式是可從範本中任何位置呼叫的函式。 他們每次可使用不同的內容呼叫範本區塊零次或多次。 它們包含介於以下兩點之間的內容： `{{#*name*}}` 和 `{{/*name*}}`.
+* 區塊協助程式是可從範本中任何位置呼叫的函式。 他們每次可使用不同的內容呼叫範本區塊零次或多次。 它們包含介於以下兩者之間的內容： `{{#*name*}}` 和 `{{/*name*}}`.
 
-* Handlebars為名為&#39;options&#39;的協助程式提供最終引數。 特殊物件&#39;options&#39;包含
+* Handlebars為名為&#39;options&#39;的協助程式提供最終引數。 特殊物件&#39;options&#39;包括
 
    * 選擇性私人資料(options.data)
-   * 來自呼叫的選用機碼值屬性(options.hash)
-   * 可自我叫用(options.fn())
-   * 可叫用本身的逆函式(options.inverse())
+   * 呼叫的選用機碼值屬性(options.hash)
+   * 啟動本身的功能(options.fn())
+   * 可叫用本身的反函式(options.inverse())
 
 * 建議從協助程式傳回的HTML字串內容為SafeString。
 
@@ -520,11 +520,11 @@ template(data);
 
 ## 自訂SCF協助程式 {#custom-scf-helpers}
 
-必須在伺服器端和使用者端實作自訂協助程式，尤其是在傳遞資料時。 對於SCF，當伺服器產生特定元件的HTML時，大多數範本會在伺服器端編譯和轉譯。
+必須在伺服器端和使用者端實作自訂協助程式，尤其是在傳遞資料時。 對於SCF，大多數範本會在伺服器端編譯並轉譯，因為伺服器會在要求頁面時產生指定元件的HTML。
 
 ### 伺服器端自訂協助程式 {#server-side-custom-helpers}
 
-若要在伺服器端實作和註冊自訂SCF helper，只需實作Java™介面即可 [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，使其成為 [OSGi服務](../../help/sites-developing/the-basics.md#osgi) 並將其安裝為OSGi套件組合的一部分。
+若要在伺服器端實作並註冊自訂SCF Helper，只需實作Java™介面即可 [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，使其成為 [OSGi服務](../../help/sites-developing/the-basics.md#osgi) 並將其安裝為OSGi套件組合的一部分。
 
 例如：
 
@@ -568,7 +568,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >也必須為使用者端建立為伺服器端建立的協助程式。
 >
->元件會在登入使用者的使用者端上重新呈現，如果找不到使用者端協助程式，元件會消失。
+>元件會在登入使用者的使用者端重新呈現，如果找不到使用者端協助程式，元件會消失。
 
 ### 使用者端自訂協助程式 {#client-side-custom-helpers}
 
@@ -590,7 +590,7 @@ function(Handlebars, SCF, $CQ) {
 })(Handlebars, SCF, $CQ);
 ```
 
-自訂使用者端協助程式必須新增到自訂使用者端程式庫。
+自訂使用者端協助程式必須新增至自訂使用者端資料庫。
 clientlib必須：
 
 * 包含相依於 `cq.social.scf`.
@@ -599,6 +599,6 @@ clientlib必須：
 
 注意：SCF協助程式定義於 `/etc/clientlibs/social/commons/scf/helpers.js`.
 
-| **[⇐ Feature Essentials](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
+| **[⇐功能要點](essentials.md)** | **[伺服器端自訂⇒](server-customize.md)** |
 |---|---|
 |   | **[使用者端自訂⇒](client-customize.md)** |

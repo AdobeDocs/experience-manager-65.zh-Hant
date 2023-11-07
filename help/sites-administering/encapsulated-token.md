@@ -1,18 +1,14 @@
 ---
 title: 封裝Token支援
-seo-title: Encapsulated Token Support
 description: 瞭解AEM中的封裝權杖支援。
-seo-description: Learn about the Encapsulated Token support in AEM.
-uuid: a7c6f269-bb5a-49ba-abef-ea029202ab6d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -47,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->請注意，封裝權杖與驗證有關。 這可確保無需存取存放庫即可驗證Cookie。 不過，使用者仍必須存在於所有執行個體上，而且該使用者下儲存的資訊可供每個執行個體存取。
+>「封裝的Token」是關於驗證的。 這可確保無需存取存放庫即可驗證Cookie。 不過，使用者仍必須存在於所有執行個體上，而且該使用者下儲存的資訊可供每個執行個體存取。
 >
 >例如，如果在第一個發佈執行個體上建立新使用者，則由於封裝Token的運作方式，它將在第二個發佈執行個體上成功驗證。 如果使用者不存在於第二個發佈執行個體上，請求仍不會成功。
 >

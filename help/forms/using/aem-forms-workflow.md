@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3681'
 ht-degree: 1%
@@ -95,7 +95,7 @@ AEM提供直覺式使用者介面，讓您使用提供的工作流程步驟建�
 
    以按揭應用程式為例，設定指派工作步驟以使用唯讀調適型表單，並在工作完成後顯示PDF檔案。 此外，選取允許核准貸款請求的使用者群組。 在 **動作** 標籤，停用 **提交** 選項。 建立 **actionTaked** 變數，並將變數指定為 **路由變數**. 例如，actionTaken。 此外，請新增核准與拒絕路由。 路由會在AEM收件匣中顯示為個別的動作（按鈕）。 工作流程會根據使用者點選的動作（按鈕）選取分支。
 
-   您可以針對設定為例如Mortgage Application之指派工作步驟的所有欄位之完整值集，匯入範例套件（可在區段開頭下載）。
+   您可以為設定的指派工作步驟的所有欄位（例如，抵押應用程式）匯入範例套件（可在區段開頭下載）。
 
 1. 將OR拆分元件從步驟瀏覽器拖放至工作流程模型。 「OR分割」會在工作流程中建立分割，之後只有一個分支處於作用中狀態。 此步驟可讓您將條件式處理路徑匯入工作流程中。 您可以視需要將工作流程步驟新增到每個分支。
 
@@ -121,7 +121,7 @@ AEM提供直覺式使用者介面，讓您使用提供的工作流程步驟建�
 
    在抵押範例中，新增產生記錄檔案、兩個指派工作步驟，以及一個簽署檔案步驟至模型的「分支1」，如下圖所示。 一個指派工作步驟是顯示並傳送 **將簽署給申請者的貸款檔案** 另一個指派工作元件為 **顯示已簽署的檔案**. 此外，新增指派工作元件至分支2。 當使用者點選AEM收件匣中的拒絕時，它會啟動。
 
-   針對指派任務步驟、記錄檔案步驟和簽署檔案步驟的所有欄位（例如按揭應用程式）的完整值集，匯入範例套件，可於本節開頭下載。
+   針對指派任務步驟、記錄檔案步驟和簽署檔案步驟的所有欄位（例如，抵押應用程式）的完整值集，匯入範例套件，可於本節開頭下載。
 
    工作流程模型已準備就緒。 您可以透過各種方法啟動工作流程。 如需詳細資訊，請參閱 [在OSGi上啟動以Forms為中心的工作流程](#launch).
 
@@ -277,7 +277,7 @@ AEM Forms應用程式會與AEM Forms伺服器同步，可讓您變更帳戶中�
 
 ## 將工作流程變數的敏感資料引數化，並儲存在外部資料存放區中 {#externalize-wf-variables}
 
-從調適型表單提交到的任何資料 [!DNL Experience Manager] 工作流程可以包含您企業一般使用者的PII （個人識別資訊）或SPD （敏感個人資料）。 不過，不需要強制將您的資料儲存在 [!DNL Adobe Experience Manager] [JCR存放庫](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html). 您可以將資訊引數化，將一般使用者資料的儲存區外部化至您的受管理資料儲存區（例如Azure blob儲存區） [工作流程變數](/help/forms/using/variable-in-aem-workflows.md).
+從調適型表單提交到的任何資料 [!DNL Experience Manager] 工作流程可以包含您企業一般使用者的PII （個人識別資訊）或SPD （敏感個人資料）。 不過，不需要強制將您的資料儲存在 [!DNL Adobe Experience Manager] [JCR存放庫](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html). 您可以將資訊引數化，將一般使用者資料的儲存空間外部化至您的受管理資料儲存空間（例如Azure blob儲存空間） [工作流程變數](/help/forms/using/variable-in-aem-workflows.md).
 
 在 [!DNL Adobe Experience Manager] Forms工作流程中，會透過工作流程變數，透過一系列工作流程步驟處理和傳遞資料。 這些變數是儲存在工作流程例項中繼資料節點中的已命名屬性或機碼值組；例如 `/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`. 這些工作流程變數可以外部化到JCR以外的獨立存放庫，然後由處理 [!DNL Adobe Experience Manager] 工作流程。 [!DNL Adobe Experience Manager] 提供API `[!UICONTROL UserMetaDataPersistenceProvider]` 以將工作流程變數儲存在您的受管理外部儲存空間中。 若要進一步瞭解在中針對客戶擁有的資料存放區使用工作流程變數 [!DNL Adobe Experience Manager]，請參閱 [管理外部資料存放區的工作流程變數](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
 [!DNL Adobe] 提供下列內容 [範例](https://github.com/adobe/workflow-variable-externalizer) 若要使用API將變數從工作流程中繼資料對應儲存至Azure blob儲存體 [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md). 在類似的行上，您可以使用範例作為使用指南 [UserMetaDataPersistenceProvider] API可將任何外部資料儲存中的工作流程變數外部化 [!DNL Adobe Experience Manager] 並管理相同專案。
@@ -313,11 +313,11 @@ AEM Forms應用程式會與AEM Forms伺服器同步，可讓您變更帳戶中�
 
 * **帳戶名稱** 是必須儲存資料的azure帳戶。
 
-* **端點尾碼**，例如 `core.windows.net`.
+* **端點尾碼**&#x200B;例如， `core.windows.net`.
 
 * **containername** 是帳戶中需要儲存資料的容器。 範例假設容器存在。
 
-* **通訊協定**，例如 `https` 或 `http`.
+* **通訊協定**&#x200B;例如， `https` 或 `http`.
 
 1. 在中設定工作流程模型 [!DNL Adobe Experience Manager]. 若要瞭解如何設定外部儲存的工作流程模型，請參閱 [設定工作流程模型](#configure-aem-wf-model).
 

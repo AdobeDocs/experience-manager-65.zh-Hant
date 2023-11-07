@@ -2,9 +2,9 @@
 title: 管理任務的收件匣
 description: 使用Adobe Experience Manager 6.5中的收件匣管理您的工作。
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1144'
 ht-degree: 11%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 11%
 
 1. 按一下/點選工具列中的指示器。
 
-1. 選擇「 **全部查看**」。「 **AEM收件匣** 」將會開啟。收件匣會顯示工作流程、專案和工作中的項目。
+1. 選擇「 **全部查看**」。此 **AEM收件匣** 隨即開啟。 收件匣會顯示工作流程、專案和工作中的項目。
 1. 預設視圖是「列 [表視圖](#inbox-list-view)」，但您也可以切換到「日 [歷視圖」](#inbox-calendar-view)。這是使用檢視選取器 (工具列，右上方) 完成。
 
    對於這兩個檢視，您也可以定義 [檢視設定](#inbox-view-settings)；可用的選項取決於目前檢視。
@@ -191,7 +191,7 @@ ht-degree: 11%
    * 將會啟動動作精靈。
    * 將會開啟檔案頁面。
 
-   例如， **重新指派** 將會開啟對話方塊：
+   例如， **重新指派** 開啟對話方塊：
 
    ![wf-85](assets/wf-85.png)
 
@@ -223,7 +223,7 @@ ht-degree: 11%
 
    * **進階**
 
-      * **名稱**：這將用於組成URL；如果留空，則會根據 **標題**.
+      * **名稱**：這會用來組成URL；如果留空，則會根據 **標題**.
 
    ![wf-87](assets/wf-87.png)
 

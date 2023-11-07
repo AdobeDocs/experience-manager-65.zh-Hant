@@ -1,7 +1,7 @@
 ---
 title: 表單資料整合服務JavaAPI快速入門(SOAP)
 seo-title: Form Data Integration Service JavaAPI Quick Start(SOAP)
-description: 使用Form Data Integration Service將資料匯入PDF表單，並使用Java API從PDF表單匯出資料。
+description: 使用表單資料整合服務將資料匯入PDF表單，並使用Java API從PDF表單匯出資料。
 seo-description: Use the Form Data Integration service to import data into a PDF form and export data from a PDF form using the Java API.
 uuid: bde8e83d-56d3-4331-a025-82b327c219b7
 contentOwner: admin
@@ -11,16 +11,16 @@ topic-tags: develop
 discoiquuid: 91b738ec-aa00-4f05-bf42-2574ced8d993
 role: Developer
 exl-id: a2560c87-ae95-4d65-869a-8cba177a1cd6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
 
 # 表單資料整合服務Java API快速入門(SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
 
-表單資料整合服務可使用下列快速入門。
+下列快速入門適用於表單資料整合服務。
 
 [快速入門（SOAP模式）：使用Java API匯入表單資料](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
@@ -30,11 +30,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->「使用AEM表單進行程式設計」中的「快速入門」是根據部署在JBoss Application Server和Microsoft Windows作業系統上的Forms Server。 不過，如果您使用其他作業系統（例如UNIX），請以適用的作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「使用AEM表單進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入門（SOAP模式）：使用Java API匯入表單資料 {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-以下Java程式碼範例會將資料匯入PDF表單。 資料位於名為的XML檔案中 *Loan_data.xml* 而PDF表單會儲存為名為的PDF檔案 *ResultLoanForm.pdf*. (請參閱 [匯入表單資料](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
+以下Java程式碼範例將資料匯入PDF表單。 資料位於名為的XML檔案中 *Loan_data.xml* 而且PDF表單會儲存為名為的PDF檔案 *ResultLoanForm.pdf*. (請參閱 [匯入表單資料](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
 
 ```java
  /*
@@ -63,16 +63,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -165,16 +165,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a

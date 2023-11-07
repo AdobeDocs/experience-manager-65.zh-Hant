@@ -10,7 +10,7 @@ discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2802'
 ht-degree: 2%
@@ -284,7 +284,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 1. 開啟已建立節點的「屬性」標籤。 例如，開啟的「屬性」標籤 `textboxpatterns`. 新增 `guideComponentType` 屬性並設定其值為 *fd/af/components/formatter/guideTextBox*.
 
 1. 此屬性的值會依您要定義模式的欄位而有所不同。 數值欄位中， `guideComponentType` 屬性為 *fd/af/components/formatter/guideNumericBox*. 「日期挑選器」欄位的值為 *fd/af/components/formatter/guideDatepicker*.&quot;
-1. 您可以將屬性指派給，以新增自訂模式 `textboxpatterns` 節點。 以名稱新增屬性(例如 `pattern1`)，並將其值設為您要新增的模式。 例如，新增屬性 `pattern1` 值為Fax=text{99-999-9999999}. 此模式適用於您在Adaptive Forms中使用的所有文字方塊。
+1. 您可以將屬性指派給，以新增自訂模式 `textboxpatterns` 節點。 以名稱新增屬性(例如， `pattern1`)，並將其值設為您要新增的模式。 例如，新增屬性 `pattern1` 值為Fax=text{99-999-9999999}. 此模式適用於您在Adaptive Forms中使用的所有文字方塊。
 
    ![在CrxDe中建立欄位的自訂模式](assets/creating-custom-patterns.png)
 

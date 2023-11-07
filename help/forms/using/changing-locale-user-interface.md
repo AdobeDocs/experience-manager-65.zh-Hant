@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: 9a069486-02a8-4058-adfb-4e0e49d8c0cf
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ AEM Forms工作區提供英文、法文、德文和日文的立即可用支援�
 
 >[!NOTE]
 >
->若要變更AEM Forms工作區的登入畫面語言，請參閱 [建立新的登入畫面](../../forms/using/creating-new-login-screen.md).
+>若要變更AEM Forms工作區的登入畫面語言，請參閱 [建立登入畫面](../../forms/using/creating-new-login-screen.md).
 
 ## 本地化文字 {#localizing-text}
 
@@ -52,7 +52,7 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
 
 >[!NOTE]
 >
->尋找瀏覽器的瀏覽器語言地區設定代碼。 開啟 `https://'[server]:[port]'/lc/libs/ws/Locale.html`.
+>尋找瀏覽器的瀏覽器語言地區設定代碼。 開啟 `https://'[server]:[port]'/lc/libs/ws/Locale.html`。
 
 ![collapsing_panels_image](assets/collapsing_panels_image.png)
 

@@ -1,8 +1,8 @@
 ---
 title: 輸出服務Java API快速入門(SOAP)
 seo-title: Output Service Java API Quick Start(SOAP)
-description: 使用輸出服務Java API快速入門(SOAP)來建立PDF檔案、根據應用程式XDP檔案建立PDF檔案、建立PDF/A檔案、將檔案傳遞至輸出服務、傳遞位於AEM Forms存放庫中的檔案至輸出服務、根據片段建立PDF檔案、列印至檔案、傳送列印資料流至網路印表機、建立多個PDF檔案、建立搜尋規則、轉換PDF檔案。
-seo-description: Use the Output service Java API Quick Start (SOAP) to create a PDF document, create a PDF document based on application XDP file, create a PDF/A document, pass documents to the Output service, pass a document located in the AEM Forms repository to the Output service, create a PDF document based on fragments, printing to a file, sending a print stream to a network printer, create multiple PDF files, create search rules, transform a PDF document.
+description: 使用輸出服務Java API快速入門(SOAP)來建立PDF檔案、根據應用程式XDP檔案建立PDF檔案、建立PDF/A檔案、將檔案傳遞至輸出服務、將AEM Forms存放庫中的檔案傳遞至輸出服務、根據片段建立PDF檔案、列印至檔案、將列印資料流傳送至網路印表機、建立多個PDF檔案、建立搜尋規則、轉換PDF檔案。
+seo-description: Use the Output service Java API Quick Start (SOAP) to create a PDF document, create a PDF document based on application XDP file, create a PDF/A document, pass documents to the Output service, pass a document in the AEM Forms repository to the Output service, create a PDF document based on fragments, printing to a file, sending a print stream to a network printer, create multiple PDF files, create search rules, transform a PDF document.
 uuid: 34cb1fc7-50a9-4db8-aed1-dbd3480d1323
 contentOwner: admin
 content-type: reference
@@ -11,16 +11,16 @@ topic-tags: develop
 discoiquuid: f4415aeb-5c1b-4087-b60f-b2ea952c52b5
 role: Developer
 exl-id: dc99dd4d-fce9-4ec5-9b51-661d37a21559
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
 
 # 輸出服務Java API快速入門(SOAP) {#output-service-java-api-quick-start-soap}
 
-輸出服務可使用Java API快速入門(SOAP)。
+Java API快速入門(SOAP)可用於輸出服務。
 
 [快速入門（SOAP模式）：使用Java API建立PDF檔案](output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 [快速入門（SOAP模式）：使用Java API將檔案傳遞至輸出服務](output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API將位於AEM Forms存放庫中的檔案傳遞至輸出服務](output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[快速入門（SOAP模式）：使用Java API將AEM Forms存放庫中的檔案傳遞至輸出服務](output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
 [快速入門（SOAP模式）：使用Java API根據片段建立PDF檔案](#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
@@ -48,11 +48,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->「使用AEM表單進行程式設計」中的「快速入門」是以Forms Server作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請以適用的作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM表單進行程式設計的快速入門是以Forms伺服器作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## 快速入門（SOAP模式）：使用Java API建立PDF檔案 {#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api}
 
-以下Java程式碼範例會建立名為的PDF檔案 *Loan.pdf*. 此PDF檔案以名為的表單設計為基礎 *Loan.xdp* 和名為的XML資料檔案 *Loan.xml*. 此 *Loan.pdf* 會寫入C:\Adobe資料夾，此資料夾位於裝載AEM Forms的J2EE應用程式伺服器上，而非使用者端電腦上。 (請參閱 [建立PDF檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
+以下Java程式碼範例會建立名為的PDF檔案 *Loan.pdf*. 此PDF檔案是以名為的表單設計為基礎 *Loan.xdp* 和名為的XML資料檔案 *Loan.xml*. 此 *Loan.pdf* 會寫入到裝載AEM Forms的J2EE應用程式伺服器上的C:\Adobe資料夾，而非使用者端電腦。 (請參閱 [建立PDF檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
 
 ```java
  /*
@@ -81,7 +81,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -90,7 +90,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -170,7 +170,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API根據應用程式XDP檔案建立PDF檔案 {#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api}
 
-以下Java程式碼範例會建立名為的PDF檔案 *Loan.pdf*. 此PDF檔案以名為的表單設計為基礎 *Loan.xdp* 和名為的XML資料檔案 *Loan.xml*. XDP檔案會部署為名為的AEM Forms應用程式的一部分 `Applications/FormsApplication`. 請注意，URI路徑為 `repository:///Applications/FormsApplication/1.0/FormsFolder/`. 此 *Loan.pdf* 會寫入C:\Adobe資料夾，此資料夾位於裝載AEM Forms的J2EE應用程式伺服器上，而非使用者端電腦上。 (請參閱 [建立PDF檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
+以下Java程式碼範例會建立名為的PDF檔案 *Loan.pdf*. 此PDF檔案是以名為的表單設計為基礎 *Loan.xdp* 和名為的XML資料檔案 *Loan.xml*. XDP檔案會部署為名為的AEM Forms應用程式的一部分 `Applications/FormsApplication`. 請注意，URI路徑為 `repository:///Applications/FormsApplication/1.0/FormsFolder/`. 此 *Loan.pdf* 會寫入到裝載AEM Forms的J2EE應用程式伺服器上的C:\Adobe資料夾，而非使用者端電腦。 (請參閱 [建立PDF檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
 
 >[!NOTE]
 >
@@ -200,7 +200,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/Adobe/adobe_experience_manager_forms/SDK/client-libs/common
      *
      * <install directory>/Adobe/adobe_experience_manager_forms/SDK/client-libs/jboss
@@ -210,7 +210,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote AEM Forms instance and there is a
      * firewall between the client application and AEM Forms, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/Adobe/adobe_experience_manager_forms/SDK/client-libs/thirdparty
      *
@@ -299,11 +299,11 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 >
 >存放庫API用於從這個位置擷取XDP檔案。 (請參閱 [正在讀取資源](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
-也請注意內容根目錄值 `repository:///Applications/FormsApplication/1.0/FormsFolder/` 傳遞至 `OutputClient` 物件的 `generatePDFOutput2` 方法（第二個引數）。 此值會傳遞至Output服務，通知Output服務表單附屬品（例如影像）儲存在此位置。
+也請注意內容根值 `repository:///Applications/FormsApplication/1.0/FormsFolder/` 傳遞至 `OutputClient` 物件的 `generatePDFOutput2` 方法（第二個引數）。 此值會傳遞至Output服務，通知Output服務表單附屬資料（例如影像）儲存在此位置。
 
 >[!NOTE]
 >
->您可以透過叫用時相同的方式設定內容根目錄值 `generatePrintedOutput2` 方法。
+>您可以透過叫用相同方式設定內容根目錄值 `generatePrintedOutput2` 方法。
 
 此 *Loan.pdf* 會寫入至裝載AEM Forms之J2EE應用程式伺服器上的C:\Adobe資料夾。 (請參閱 [將存放庫中的檔案傳遞至輸出服務](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-the-repository-to-the-output-service).)
 
@@ -323,7 +323,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -332,7 +332,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -445,7 +445,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API建立PDF檔案 {#quick_start_soap_mode_creating_a_pdf_document_using_the_java_api-1}
 
-以下Java程式碼範例會建立名為的PDF檔案 *Loan.pdf*. 此PDF檔案以名為的表單設計為基礎 *Loan.xdp* 和名為的XML資料檔案 *Loan.xml*. 此 *Loan.pdf* 會寫入C:\Adobe資料夾，此資料夾位於裝載AEM Forms的J2EE應用程式伺服器上，而非使用者端電腦上。 (請參閱 [建立PDF檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
+以下Java程式碼範例會建立名為的PDF檔案 *Loan.pdf*. 此PDF檔案是以名為的表單設計為基礎 *Loan.xdp* 和名為的XML資料檔案 *Loan.xml*. 此 *Loan.pdf* 會寫入到裝載AEM Forms的J2EE應用程式伺服器上的C:\Adobe資料夾，而非使用者端電腦。 (請參閱 [建立PDF檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
 
 ```java
  /*
@@ -471,13 +471,13 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -555,7 +555,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API建立PDF/檔案 {#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api}
 
-以下Java程式碼範例會建立名為的PDF/A檔案 *LoanArchive.pdf*. 此PDF檔案以名為的表單設計為基礎 *Loan.xdp* 和名為的XML資料檔案 *Loan.xml*. 此 *LoanArchive.pdf* 會寫入C:\Adobe資料夾，此資料夾位於裝載AEM Forms的J2EE應用程式伺服器上，而非使用者端電腦上。 (請參閱 [建立PDF/A檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-a-documents).)
+以下Java程式碼範例會建立名為的PDF/A檔案 *LoanArchive.pdf*. 此PDF檔案是以名為的表單設計為基礎 *Loan.xdp* 和名為的XML資料檔案 *Loan.xml*. 此 *LoanArchive.pdf* 會寫入到裝載AEM Forms的J2EE應用程式伺服器上的C:\Adobe資料夾，而非使用者端電腦。 (請參閱 [建立PDF/A檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-a-documents).)
 
 ```java
  /*
@@ -584,7 +584,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -593,7 +593,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -673,7 +673,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API將檔案傳遞至輸出服務 {#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api}
 
-下列Java快速入門會擷取檔案 *Loan.xdp* 來自Content Services。 此XDP檔案位於 `space /Company Home/Form Designs`. XDP檔案會傳回 `com.adobe.idp.Document` 執行個體。 此 `com.adobe.idp.Document` 執行個體會傳遞至Output服務。 非互動式表單會在使用者端電腦上儲存為名為*Loan.pdf *的PDF檔案。 由於已設定「檔案URI」選項，因此PDF檔案*Loan.pdf *也會儲存在託管AEM Forms的J2EE應用程式伺服器上。 (請參閱 [將Content Services ES2中的檔案傳遞至Output Service](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
+下列Java快速入門會擷取檔案 *Loan.xdp* 從Content Services取得。 此XDP檔案位於 `space /Company Home/Form Designs`. XDP檔案會傳回 `com.adobe.idp.Document` 執行個體。 此 `com.adobe.idp.Document` 執行個體會傳遞至Output服務。 非互動式表單會在使用者端電腦上儲存為名為*Loan.pdf *的PDF檔案。 由於已設定「檔案URI」選項，因此PDF檔案*Loan.pdf *也會儲存在託管AEM Forms的J2EE應用程式伺服器上。 (請參閱 [將Content Services ES2中的檔案傳遞至Output Service](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 ```java
  /*
@@ -687,7 +687,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -696,7 +696,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -812,7 +812,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API根據片段建立PDF檔案 {#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api}
 
-以下Java程式碼範例會建立以Assembler服務組裝的表單設計為基礎的PDF檔案。 Assembler服務會將位於多個XDP檔案中的片段組合成單一表單設計。 叫用Assembler服務的應用程式邏輯位於名為的使用者定義方法中 `GetFormDesign`. 非互動式表單會在使用者端電腦上儲存為名為*Loan.pdf *的PDF檔案。 (請參閱 [使用片段建立PDF檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments).)
+下列Java程式碼範例會建立以Assembler服務組裝的表單設計為基礎的PDF檔案。 組合器服務將多個XDP檔案中的片段組合成單一表單設計。 叫用Assembler服務的應用程式邏輯位於名為的使用者定義方法中 `GetFormDesign`. 非互動式表單會在使用者端電腦上儲存為名為*Loan.pdf *的PDF檔案。 (請參閱 [使用片段建立PDF檔案](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments).)
 
 ```java
  /*
@@ -842,7 +842,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -851,7 +851,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1049,7 +1049,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1058,7 +1058,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1132,7 +1132,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API傳送列印資料流至網路印表機 {#quick-start-soap-mode-sending-a-print-stream-to-a-network-printer-using-the-java-api}
 
-以下Java程式碼範例會將PostScript列印資料流傳送至名為的網路印表機 *\\印表機1\印表機*. 會將兩份資料傳送至印表機。 (請參閱 [傳送列印資料流至印表機](/help/forms/developing/creating-document-output-streams.md#sending-print-streams-to-printers).)
+以下Java程式碼範例將PostScript列印資料流傳送至名為的網路印表機 *\\Printer1\Printer*. 會將兩份資料傳送至印表機。 (請參閱 [傳送列印資料流至印表機](/help/forms/developing/creating-document-output-streams.md#sending-print-streams-to-printers).)
 
 ```java
  /*
@@ -1161,7 +1161,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1170,7 +1170,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1223,7 +1223,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
              printOptions.setStaple(Staple.on);
  
              //Create a PostScript output stream based on the form design named Loan.xdp and
-             //the data located in the XML file
+             //the data in the XML file
              OutputResult outputDocument = outClient.generatePrintedOutput(
                      PrintFormat.PostScript,
                      "Loan.xdp",
@@ -1257,7 +1257,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API建立多個PDF檔案 {#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api}
 
-下列Java程式碼會為位於名為的XML資料檔案中的每個資料記錄建立多個PDF檔案 *Loan_data_batch.xml*. 檔案會寫入C:\Adobe目錄。 PDF檔案會寫入位於託管AEM Forms的J2EE應用程式伺服器上的C:\Adobe資料夾，而非使用者端電腦。 (請參閱 [建立多個輸出檔案](/help/forms/developing/creating-document-output-streams.md#creating-multiple-output-files).)
+下列Java程式碼會針對名為的XML資料檔案中的每個資料記錄，建立多個PDF檔案 *Loan_data_batch.xml*. 檔案會寫入C:\Adobe目錄。 PDF檔案會寫入位於裝載AEM Forms之J2EE應用程式伺服器上的C:\Adobe資料夾，而非使用者端電腦。 (請參閱 [建立多個輸出檔案](/help/forms/developing/creating-document-output-streams.md#creating-multiple-output-files).)
 
 ```java
  /*
@@ -1286,7 +1286,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1295,7 +1295,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1378,7 +1378,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API建立搜尋規則 {#quick-start-soap-mode-creating-search-rules-using-the-java-api}
 
-以下Java程式碼範例會建立Output服務搜尋的兩個文字模式。 第一個文字模式為「按揭」。 如果找到，Output服務會使用名為的表單設計 *Mortgage.xdp*. 第二個文字模式是Automobile。 如果找到，Output服務會使用名為的表單設計 *AutomobileLoan.xdp*. 如果找不到文字模式，Output服務會使用名為* Loan.xdp的預設表單設計。 *(請參閱 [建立搜尋規則](/help/forms/developing/creating-document-output-streams.md#creating-search-rules).)
+以下Java程式碼範例會建立兩個文字模式，供Output服務搜尋。 第一個文字模式為「按揭」。 如果找到，Output服務會使用名為的表單設計 *Mortgage.xdp*. 第二個文字模式是Automobile。 如果找到，Output服務會使用名為的表單設計 *汽車貸款.xdp*. 如果找不到文字模式，Output服務會使用名為* Loan.xdp的預設表單設計。 *(請參閱 [建立搜尋規則](/help/forms/developing/creating-document-output-streams.md#creating-search-rules).)
 
 ```java
  /*
@@ -1407,7 +1407,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1416,7 +1416,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1539,7 +1539,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1548,7 +1548,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *

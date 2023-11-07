@@ -7,9 +7,9 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2384'
 ht-degree: 1%
 
 ---
@@ -91,13 +91,13 @@ JSP指令碼檔案 `global.jsp` 可用來讓使用者快速存取用來呈現元
 
   此 `currentPage` 物件是頁面的例項(請參閱 [AEM API](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html))。 Page類別提供一些存取內容的方法。
 
-  範例: `String pageTitle = currentPage.getTitle();`
+  例如: `String pageTitle = currentPage.getTitle();`
 
 * Via `currentNode` 在中引入的物件 `global.jsp`：
 
   此 `currentNode` 物件是節點的例項(請參閱 [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html))。 節點屬性可由以下專案存取： `getProperty()` 方法。
 
-  範例: `String pageTitle = currentNode.getProperty("jcr:title");`
+  例如: `String pageTitle = currentNode.getProperty("jcr:title");`
 
 ## JSP標籤庫 {#jsp-tag-libraries}
 
@@ -196,7 +196,7 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
    * 使用CRXDE Lite來新增值 `<path-to-component>` (例如， `/apps/geometrixx/components/myComponent`)至節點的屬性元件 `/etc/designs/geometrixx/jcr:content/contentpage/par`
    * 請依照中的指示 [將新元件加入段落系統](#adding-a-new-component-to-the-paragraph-system-design-mode)
 
-1. 在AEM WCM中，開啟網站中的頁面並插入您剛建立型別的段落，以確保元件正常運作。
+1. 在AEM WCM中，開啟網站中的頁面並插入您建立型別的段落，以確保元件正常運作。
 
 >[!NOTE]
 >
@@ -206,7 +206,7 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
 開發元件後，您將其新增至段落系統，讓作者在編輯頁面時可選取並使用元件。
 
-1. 例如，存取編寫環境中使用段落系統的頁面 `<contentPath>/Test.html`.
+1. 存取創作環境中使用段落系統的頁面，例如， `<contentPath>/Test.html`.
 1. 透過以下任一方式切換到設計模式：
 
    * 新增 `?wcmmode=design` 移至URL結尾，然後再次存取，例如：

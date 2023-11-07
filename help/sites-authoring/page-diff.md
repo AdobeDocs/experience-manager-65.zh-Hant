@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '571'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 1%
 * 開始差異時選取的內容會顯示在左側（差異進入點）。
 * 比較對象內容會顯示在右側（與所選內容進行比較的內容）。
 
-例如，如果比較版本，目前版本會顯示在左側，而先前版本會顯示在右側。
+例如，如果比較版本，目前版本會顯示在左側，而先前版本則會顯示在右側。
 
 兩個頁面的來源會清楚顯示在瀏覽器視窗頂端的標題列中。
 
@@ -102,4 +102,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如需有關頁面差異機制的操作，以及可能影響頁面差異的限制的詳細資訊，請參閱 [開發人員檔案](/help/sites-developing/pagediff.md) 此功能的設定檔。
+>如需有關頁面差異機制的操作以及可能影響頁面差異的限制的詳細資訊，請參閱 [開發人員檔案](/help/sites-developing/pagediff.md) 此功能的設定檔。

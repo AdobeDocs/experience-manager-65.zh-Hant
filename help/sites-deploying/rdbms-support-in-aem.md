@@ -1,20 +1,16 @@
 ---
 title: AEM 6.4中的RDBMS支援
-seo-title: RDBMS Support in AEM 6.4
 description: 瞭解AEM 6.4中的關聯式資料庫持續性支援和可用的設定選項。
-seo-description: Learn about the relational database persistence support in AEM 6.4 and the available configuration options.
-uuid: c8422b0d-c6df-488d-bb6a-af92c9afda50
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 6a754d42-da30-4c2f-8b9c-369e1f1f92b5
 docset: aem65
 feature: Configuring
 exl-id: 1e34c5ca-9e08-4b2a-901c-ab28aeb4a807
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -43,7 +39,7 @@ AEM對關聯式資料庫持續性的支援是使用Document Microkernel來實作
 
 資料來源必須設定為AEM才能運作。 這可透過以下方式完成 `org.apache.sling.datasource.DataSourceFactory.config` 檔案。 個別資料庫的JDBC驅動程式需要在本機設定中單獨提供為OSGi套件組合。
 
-如需建立JDBC驅動程式OSGi套件組合的相關步驟，請參閱此 [檔案](https://sling.apache.org/documentation/bundles/datasource-providers.html#convert-driver-jars-to-bundle) 在Apache Sling網站上。
+如需為JDBC驅動程式建立OSGi套件組合的相關步驟，請參閱此 [檔案](https://sling.apache.org/documentation/bundles/datasource-providers.html#convert-driver-jars-to-bundle) 在Apache Sling網站上。
 
 組合準備就緒後，請按照以下步驟使用RDB持續性設定AEM：
 

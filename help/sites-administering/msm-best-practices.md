@@ -4,9 +4,9 @@ description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，協助�
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1609'
 ht-degree: 2%
 
 ---
@@ -52,11 +52,11 @@ MSM是可設定的架構，用於自動化內容部署。 實作通常涉及網�
 
 在Blueprint設定未參考的情況下，轉出只能從即時副本本身啟動，基本上從來源提取內容。
 
-使用即時副本建立新網站時，建立Blueprint設定以確保完整MSM功能集的可用性是有利的。
+使用Live Copy建立網站時，建立Blueprint設定以確保完整MSM功能集的可用性是有利的。
 
 >[!NOTE]
 >
->請注意，許可權索引標籤中的CUG無法從Blueprint轉出至即時副本。 設定即時副本時，請針對此進行規劃。
+>請注意，許可權索引標籤中的CUG無法從Blueprint轉出至即時副本。 設定即時副本時，請對此進行規劃。
 
 ## 元件與容器同步 {#components-and-container-synchronization}
 
@@ -87,7 +87,7 @@ MSM是可設定的架構，用於自動化內容部署。 實作通常涉及網�
 
 建立網站時請謹記以下一些考量事項：
 
-* 若要建立新網站，您需要 [Blueprint設定](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations).
+* 若要建立網站，您需要 [Blueprint設定](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations).
 * 若要允許選取在新網站中建立的語言路徑，對應的語言根必須存在於Blueprint （來源）中。
 * 一次a [新網站已建立為即時副本](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (使用 **建立**，然後 **網站**)，此即時副本的前兩個層級為 *淺層*. 頁面的子系不屬於即時關係，但如果找到符合觸發器的即時關係，轉出仍會下降。
 
@@ -108,7 +108,7 @@ MSM可以透過兩種方式協助建立多語言網站：
       * MSM可讓您取消頁面和/或元件層級的繼承。 這有助於防止在下一次轉出時覆寫已翻譯內容（來自即時副本，以及來自Blueprint的尚未翻譯內容）。
       * 有些協力廠商翻譯聯結器會將MSM繼承的管理作業自動化。
 
-        如需詳細資訊，請洽詢您的翻譯服務提供者。
+        請洽詢您的翻譯服務提供者，以取得詳細資訊。
 
       * 建立及翻譯語言主版的替代方法是將語言副本與AEM現成的翻譯整合架構搭配使用。
 

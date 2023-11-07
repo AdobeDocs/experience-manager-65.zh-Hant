@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2784'
+source-wordcount: '2793'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 2%
    * 內容片段模型會在建立內容片段時定義其結構。
    * 片段會參考模型；因此對模型的變更可能會/將會影響任何相依片段。
    * 模型是由資料型別建立而成。
-   * 新增新變數的函式等必須相應地更新片段。
+   * 新增新變數的函式等，必須據此更新片段。
 
   >[!CAUTION]
   >
@@ -62,7 +62,7 @@ ht-degree: 2%
    * 用於定義簡單內容片段。
    * 範本會在建立內容片段時定義內容片段的（基本、僅限文字）結構。
    * 範本在建立時會複製到片段，因此對範本的進一步變更將不會反映在現有片段中。
-   * 新增新變數的函式等必須相應地更新片段。
+   * 新增新變數的函式等，必須據此更新片段。
    * [內容片段範本](/help/sites-developing/content-fragment-templates.md) 以與AEM生態系統內其他範本機制（例如頁面範本等）不同的方式運作。 因此，應單獨考慮這些事件。
    * 根據範本時，內容的MIME型別是根據實際內容管理的；這表示每個元素和變數可以有不同的MIME型別。
 
@@ -138,7 +138,7 @@ ht-degree: 2%
 * 此外，可以選取段落範圍來限制輸出；例如，這可用於多欄輸出。
 * 元件允許 [中間內容](/help/sites-developing/components-content-fragments.md#in-between-content)：
 
-   * 元件可讓您在此處放置其他資產（影像等） 在所參考片段的段落之間。
+   * 在這裡，元件可讓您在參照片段的段落之間放置其他資產（影像等）。
    * 對於中間內容，您需要：
 
       * 請注意參考不穩定的可能性；中間內容（製作頁面時新增）與其旁邊的段落沒有固定的關係，在內容片段編輯器中，中間內容的位置會失去相對位置之前插入新的段落
@@ -182,7 +182,7 @@ ht-degree: 2%
 
 * 如果支援多個元素的輸出(使用 `elementNames` 指定多個元素)，實際顯示模式由屬性定義 `displayMode`：
 
-   * 如果值為 `singleText` （而且只設定了一個元素），則該元素會呈現為具有中間內容、版面配置支援等的文字。 這是僅呈現一個元素的片段的預設值。
+   * 如果值為 `singleText` （而且只會設定一個元素），然後元素會呈現為具有中間內容、版面配置支援等的文字。 這是僅呈現一個元素的片段的預設值。
    * 否則，會使用更簡單的方法（可以稱為「表單檢視」），其中不支援中間內容，而片段內容會依「原樣」呈現。
 
 * 如果呈現片段給 `displayMode` == `singleText` （隱含或明確）下列其他屬性也會生效：
@@ -254,7 +254,7 @@ ht-degree: 2%
 
 * **片段範本** ([Fragmenttemplate](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
-  使用 `FragmentTemplate.createFragment()` 用於建立新片段。
+  使用 `FragmentTemplate.createFragment()` 用於建立片段。
 
   ```
   Resource templateOrModelRsc = resourceResolver.getResource("...");
@@ -492,9 +492,9 @@ if (fragmentResource != null) {
 }
 ```
 
-### 範例：建立新內容片段 {#example-creating-a-new-content-fragment}
+### 範例：建立內容片段 {#example-creating-a-new-content-fragment}
 
-若要以程式設計方式建立新的內容片段，您需要使用：
+若要以程式設計方式建立內容片段，您需要使用：
 
 `com.adobe.cq.dam.cfm.ContentFragmentManager#create`
 

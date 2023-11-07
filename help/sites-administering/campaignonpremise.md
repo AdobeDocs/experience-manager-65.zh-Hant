@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1573'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 整合步驟 {#integration-steps}
 
-AEM與Campaign的整合需要在這兩種解決方案中執行數個步驟。
+AEM與Campaign的整合需要在這兩個解決方案中執行數個步驟。
 
 1. [在Campaign中安裝AEM整合套件。](#install-package)
 1. [在Campaign中為AEM建立運運算元](#create-operator)
@@ -46,7 +46,7 @@ AEM與Campaign的整合需要在這兩種解決方案中執行數個步驟。
 
 ## 在Campaign中安裝AEM整合套件 {#install-package}
 
-此 **AEM整合** Adobe Campaign中的套件包含連線至AEM所需的許多標準設定。
+此 **AEM整合** Adobe Campaign中的套件包含連線至AEM所需的數個標準設定。
 
 1. 以管理員身分，使用使用者端主控台登入Adobe Campaign執行個體。
 

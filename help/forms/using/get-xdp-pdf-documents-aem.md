@@ -11,7 +11,7 @@ discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 0%
@@ -81,7 +81,7 @@ AEM Forms伺服器可讓您執行JavaScript程式碼。 惡意的JavaScript程�
 移除表單範本會損毀相依的最適化表單或表單範本。 這類最適化表單有時非正式地稱為「已變更表單」。 在AEM Forms使用者介面中，您可以透過以下兩種方式找到已變更的表單。
 
 * 資產清單中的調適型表單縮圖上會顯示警告圖示，而當您將指標停留在警告圖示上時，會顯示下列訊息。\
-  `Schema/Form Template for this adaptive form has been updated so please go to Authoring mode and rebase it with new version.`
+  `Schema/Form Template for this adaptive form has been updated so go to Authoring mode and rebase it with new version.`
 
 ![更新相關XFA後出現不同步調適用性表單的警告](assets/dirtyaf.png)
 

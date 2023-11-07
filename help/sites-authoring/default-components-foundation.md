@@ -2,7 +2,7 @@
 title: Foundation 元件
 description: 瞭解Adobe Experience Manager 6.5中的基礎元件。
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '7204'
 ht-degree: 8%
@@ -347,7 +347,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
    * **視窗模式**
 
-     視窗的顯示方式，例如不透明、透明或不同（實心）視窗。
+     視窗的顯示方式，例如，不透明、透明，或作為不同的（實心）視窗。
 
    * **背景色彩**
 

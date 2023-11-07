@@ -10,26 +10,26 @@ topic-tags: develop
 discoiquuid: 9cffdb77-c8a4-4a15-b64f-1d3aadaa60c7
 role: Developer
 exl-id: 38a90957-bdde-4f38-9edd-c59522e5f525
-source-git-commit: 5910b0e64a579998bc9cd79cf4e95f5e6f459c5a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
 
 # 檔案管理服務（已棄用） Java API快速入門(SOAP) {#document-management-service-deprecated-java-api-quick-start-soap}
 
-以下快速入門適用於Document Management服務（已棄用）。
+下列快速入門適用於Document Management服務（已過時）。
 
 >[!NOTE]
 >
->自2011年8月5日起，Adobe正在將Content Services ES客戶移轉至Adobe Digital Enterprise Platform Experience Services。 使用內容服務的客戶適用的產品藍圖是改用新的ADEP Experience Services - Core，其中包括以現代、模組化CRX架構為基礎的原生內容存放庫，該架構是於Adobe收購Day Software期間所取得。
+>自2011年8月5日起，Adobe正在將Content Services ES客戶移轉至Adobe Digital Enterprise Platform Experience Services。 使用內容服務的客戶適用的產品藍圖是改用新的ADEP Experience Services — 核心，其中包括建構在現代、模組化CRX架構上的原生內容存放庫，此存放庫在Adobe收購Day Software期間獲得。
 
 [快速入門（SOAP模式）：使用Java API建立內容服務空間](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 
 [快速入門（SOAP模式）：使用Java API刪除內容服務內容](document-management-service-deprecated-java.md#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated)
 
-[快速入門（SOAP模式）：使用Java API新增內容至內容服務](document-management-service-deprecated-java.md#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated)
+[快速入門（SOAP模式）：使用Java API將內容新增至Content Services](document-management-service-deprecated-java.md#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated)
 
 [快速入門（SOAP模式）：使用Java API從Content Services擷取內容](document-management-service-deprecated-java.md#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated)
 
@@ -45,9 +45,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計中的快速入門是根據部署在JBoss和Windows作業系統上的Forms Server。 不過，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請務必指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM表單進行程式設計的快速入門是根據在JBoss和Windows作業系統上部署的Forms Server。 不過，如果您使用其他作業系統（例如UNIX），請以適用作業系統支援的路徑取代windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）：使用Java API建立內容服務空間（已棄用） {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API建立Content Services空間（已過時） {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
 以下Java程式碼範例會建立名為的新空間 *測試目錄* 位於公司首頁。 新空間的識別值會寫入主控台。
 
@@ -78,16 +78,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -129,7 +129,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
              String storeName ="SpacesStore";
              String nodeName = "/Company Home/Test Directory" ;
  
-             //Create a new space
+             //Create a space
              String spaceId = docManager.createSpace(storeName,nodeName);
              System.out.println("The identifier value of the new space is " +spaceId);
          }
@@ -174,16 +174,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -243,7 +243,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API新增內容至內容服務（已棄用） {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API將內容新增至內容服務（已棄用） {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
 
 以下Java程式碼範例新增名為的PDF檔案 *MortgageForm.pdf* 至名為/Company Home/Test Directory的資料夾。 建立者和說明屬性已設定。 新內容的識別值會寫入主控台。
 
@@ -274,16 +274,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -397,16 +397,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -474,7 +474,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API移動內容服務內容（已棄用） {#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated}
 
-以下Java程式碼範例會移動名為的PDF檔案 *MortgageForm.pdf* 從/Company Home/Test Directory到/Company Home。 已移動內容的識別值會寫入主控台。
+以下Java程式碼範例移動名為的PDF檔案 *MortgageForm.pdf* 從/Company Home/Test Directory到/Company Home。 已移動內容的識別值會寫入主控台。
 
 ```java
  /*
@@ -503,16 +503,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -573,9 +573,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API列出Content Services內容（已過時） {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API列出Content Services內容（已棄用） {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
 
-以下Java程式碼範例列出位於/Company Home中的內容。 每個節點型別和節點名稱都會顯示。
+以下Java程式碼範例列出/Company Home中的內容。 每個節點型別和節點名稱都會顯示。
 
 ```java
  /*
@@ -604,16 +604,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -686,7 +686,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API搜尋內容服務內容（已棄用） {#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated}
+## 快速入門（SOAP模式）：使用Java API搜尋Content Services內容（已過時） {#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated}
 
 下列Java程式碼在/Company Home中搜尋包含文字MortgageForm的檔案。 也會搜尋子資料夾。
 
@@ -717,16 +717,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -780,10 +780,10 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
              ResultSet rs = docManager.searchRepository(storeName, path, true, qImpl, 200);
              long resultSize = rs.getResultSize();
  
-             //Determine if the document is located in Content space
+             //Determine if the document is in Content space
              if (resultSize > 0)
              {
-                 System.out.println("MortgageForm is located in the Repository");
+                 System.out.println("MortgageForm is in the Repository");
              }
          }
      catch(Exception e)
@@ -798,7 +798,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API設定內容服務許可權（已棄用） {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
 
-以下Java程式碼範例會設定名為tony blue之使用者的許可權。 指定的網域是預設網域。 指定消費者許可權，且節點為 `/Company Home/Test Directory`.
+以下Java程式碼範例會為名為tony blue的使用者設定許可權。 指定的網域是預設網域。 已指定消費者許可權，且節點為 `/Company Home/Test Directory`.
 
 ```java
  /*
@@ -827,16 +827,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -880,7 +880,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
              String storeName ="SpacesStore";
              String nodeName = "/Company Home/Test Directory/";
  
-              //Create a new permission
+              //Create a permission
              ContentAccessPermission permission = new ContentAccessPermission();
              permission.setAuthority("tblue/DefaultDom");
              permission.setIsAllowed(false);
@@ -908,7 +908,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 ## 快速入門（SOAP模式）：使用Java API建立關聯（已棄用） {#quick-start-soap-mode-creating-associations-using-the-java-api-deprecated}
 
-下列Java程式碼會建立XML資料檔案與PDF表單的關聯。 這種關聯型別名為LinkedBy。PDF檔案必須套用外觀可連結。
+下列Java程式碼會建立XML資料檔案與PDF表單的關聯。 這種關聯型別命名為LinkedBy。PDF檔案必須套用可連結的外觀。
 
 ```java
  /*
@@ -937,16 +937,16 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a

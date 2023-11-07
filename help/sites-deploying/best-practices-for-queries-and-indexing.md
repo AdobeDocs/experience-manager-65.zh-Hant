@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4609'
+source-wordcount: '4602'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ AEM允許以下列三種方式之一寫入查詢：
 
 ### 說明查詢工具 {#the-explain-query-tool}
 
-和任何查詢語言一樣，最佳化查詢的第一步是瞭解它將如何執行。 若要啟用此活動，您可以使用 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query) 它是「操作儀表板」的一部分。 使用此工具，可以插入查詢並加以說明。 如果查詢會導致大型存放庫和執行時間以及將要使用的索引發生問題，則會顯示警告。 此工具也可以載入緩慢和熱門查詢的清單，然後加以說明和最佳化。
+和任何查詢語言一樣，最佳化查詢的第一步是瞭解它將如何執行。 若要啟用此活動，您可以使用 [說明查詢工具](/help/sites-administering/operations-dashboard.md#explain-query) 它是「操作儀表板」的一部分。 使用此工具，可以插入查詢並加以說明。 如果查詢會導致大型存放庫和執行時間以及使用的索引發生問題，則會顯示警告。 此工具也可以載入緩慢和熱門查詢的清單，然後加以說明和最佳化。
 
 ### 查詢的DEBUG記錄 {#debug-logging-for-queries}
 
@@ -109,7 +109,7 @@ Lucene會註冊一個JMX Bean，以提供索引內容的詳細資訊，包括每
 
 如需查詢統計資料，請檢視命名的MBean **Oak查詢統計資料**.
 
-如果您想要使用類似以下的工具深入瞭解您的索引 [Luke](https://code.google.com/archive/p/luke/)，您必須使用Oak主控台從傾印索引 `NodeStore` 檔案系統目錄。 如需操作說明，請參閱 [Lucene檔案](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
+如果您想要使用類似以下的工具深入瞭解您的索引 [Luke](https://code.google.com/archive/p/luke/)，您必須使用Oak主控台從傾印索引 `NodeStore` 檔案系統目錄。 如需操作說明，請閱讀 [Lucene檔案](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
 您也可以以JSON格式擷取系統中的索引。 若要這麼做，您必須存取 `https://server:port/oak:index.tidy.-1.json`
 
@@ -166,7 +166,7 @@ Lucene索引在Oak 1.0.9中引入，並針對AEM 6首次推出時引入的屬性
 
 ### Solr索引 {#solr-indexing}
 
-依預設，AEM也支援Solr索引。 這會用於支援全文檢索，但也可用來支援任何型別的JCR查詢。 當AEM執行個體沒有足夠的CPU容量來處理大量搜尋部署（例如同時擁有大量使用者的搜尋驅動網站）所需的查詢數時，應該考慮Solr。 或者，Solr也可以以爬行者程式為基礎的方法實作，以使用平台的一些更進階的功能。
+依預設，AEM也支援Solr索引。 這可用來支援全文檢索搜尋，但也可用來支援任何型別的JCR查詢。 當AEM執行個體沒有足夠的CPU容量來處理大量搜尋部署（例如同時擁有大量使用者的搜尋驅動網站）所需的查詢數時，應該考慮Solr。 或者，Solr也可以以爬行者程式為基礎的方法實作，以使用平台的一些更進階的功能。
 
 Solr索引可以設定為針對開發環境在AEM伺服器上執行內嵌，也可以解除安裝到遠端執行個體，以改善生產和中繼環境的搜尋擴充性。 雖然解除安裝搜尋可改善擴充性，但會導致延遲，因此除非有需要，否則不建議使用。 如需有關如何設定Solr整合以及如何建立Solr索引的詳細資訊，請參閱 [Oak查詢和索引檔案](/help/sites-deploying/queries-and-indexing.md#the-solr-index).
 
@@ -189,7 +189,7 @@ Lucene索引的Oak檔案列出在設計索引時要考慮的幾個事項：
 * 在屬性索引中，擁有唯一的屬性名稱有助於減少索引的大小，但是對於Lucene索引，請使用 `nodeTypes` 和 `mixins` 應該達到有凝聚力的索引。 查詢特定 `nodeType` 或 `mixin` 會比查詢更有效率 `nt:base`. 使用此方法時，定義 `indexRules` 針對 `nodeTypes` 有疑問。
 
 * 如果您的查詢只在某些路徑下執行，則在這些路徑下建立這些索引。 索引不需要位於存放庫的根目錄。
-* 當所有要編制索引的屬性都相關時，建議使用單一索引，以允許Lucene儘可能在本機評估最多的屬性限制。 此外，即使執行聯結，查詢也只使用一個索引。
+* 當所有要編制索引的屬性都相關時，請使用單一索引，以允許Lucene儘可能以原生方式評估更多屬性限制。 此外，即使執行聯結，查詢也只使用一個索引。
 
 ### CopyonRead {#copyonread}
 
@@ -297,7 +297,7 @@ Lucene索引的Oak檔案列出在設計索引時要考慮的幾個事項：
 
       * 否則， [重新索引](#how-to-re-index) lucene索引
 
-         * 注意：將會使用上次良好重新索引（或初始索引）的索引狀態，直到觸發新的重新索引為止
+         * 注意：會使用上次良好重新索引（或初始索引）的索引狀態，直到觸發新的重新索引為止
 
 ### 錯誤和特殊情況 {#erring-and-exceptional-situations}
 
@@ -426,7 +426,7 @@ Lucene索引的Oak檔案列出在設計索引時要考慮的幾個事項：
 
 新內容新增到存放庫時，將透過非同步全文檢索索引程式（預設為每5秒一次）以自然和遞增方式索引。
 
-在AEM的正常運作中（例如透過網頁UI上傳資產或以程式設計方式擷取資產），AEM會自動以增量方式為新的二進位內容建立全文索引。 由於資料量是遞增的，而且相對較少（大約是可在5秒內保留到存放庫的資料量），AEM可以在索引期間從二進位檔執行全文擷取，而不會影響整體系統效能。
+在AEM的正常運作中（例如透過網頁UI上傳資產，或透過資產進行程式化內嵌），AEM會自動以漸進方式為新的二進位內容編制全文索引。 由於資料量是遞增的，而且相對較少（大約是可在5秒內保留到存放庫的資料量），AEM可以在索引期間從二進位檔執行全文擷取，而不會影響整體系統效能。
 
 #### 使用文字預先擷取的先決條件 {#prerequisites-to-using-text-pre-extraction}
 

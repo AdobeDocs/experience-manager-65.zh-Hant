@@ -1,19 +1,15 @@
 ---
 title: 開發 AEM Sites 快速入門 - WKND 教學課程
-seo-title: Getting Started Developing AEM Sites - WKND Tutorial
 description: 第一次開發 AEM？需要複習最佳做法？這是開始的地方！這個由多個部分組成的教學課程的目標是指導 AEM 新手開發人員如何使用最新的標準和技術在 AEM 中實作網站。
-seo-description: New to developing AEM? Need a refresher on best practices? This is the place to start! The goal for this multi-part tutorial is to teach a developer who is new to AEM how to implement a website in AEM using the latest standards and technologies.
-uuid: 12861ca8-b5b9-404e-9788-9d13aa7c5a68
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
-discoiquuid: 95346ce1-84b7-4bd1-a1e2-6a803139dc69
 docset: aem65
 exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '258'
 ht-degree: 81%
 
 ---
@@ -34,7 +30,7 @@ ht-degree: 81%
 
 ## 核心概念 {#core-concepts}
 
-教學課程實作利用 AEM 的許多強大功能。此網站將使用以下項目實作：
+教學課程實作使用 AEM 的許多強大功能。此網站將使用以下項目實作：
 
 * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
@@ -42,8 +38,8 @@ ht-degree: 81%
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [可編輯的範本](/help/sites-developing/page-templates-editable.md)
 
-在深入瞭解上述概念之前，請先完成本教學課程。
+請先詳閱教學課程，再深入瞭解上述概念。
 
 ## 後續步驟 {#next-steps}
 
-當您完成 [教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)，請考慮檢閱檔案 [AEM核心概念](/help/sites-developing/the-basics.md) 以更進一步瞭解AEM的一些基礎技術和開發範例。
+當您完成 [教學課程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)，考慮檢閱檔案 [AEM核心概念](/help/sites-developing/the-basics.md) 以更深入瞭解AEM的一些基礎技術和開發範例。

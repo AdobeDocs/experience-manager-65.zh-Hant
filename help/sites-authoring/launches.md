@@ -1,17 +1,15 @@
 ---
 title: 使用Launches開發未來版本的內容
 description: 啟動可讓您有效率地開發未來版本的內容。 它們可讓您進行變更，以供未來發佈，同時維護您目前的頁面。
-uuid: 4bbd9865-735d-4232-b69c-b64193ac5d83
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '842'
 ht-degree: 82%
 
 ---
@@ -96,7 +94,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->建立和編輯 Launch 需要 `/content/launches` 的存取權 - 與預設群組 `content-authors` 相同。
+>建立和編輯啟動需要 `/content/launches` 的存取權 - 與預設群組 `content-authors` 相同。
 >
 >如果您遇到任何問題，請聯絡您的系統管理員。
 

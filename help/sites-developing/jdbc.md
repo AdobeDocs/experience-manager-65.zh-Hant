@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
-source-git-commit: 061af6f3318d68b50c5f606ad50db7a39da0f4fd
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 整合JDBC資料庫驅動程式 {#bundling-the-jdbc-database-driver}
 
-某些資料庫廠商以OSGi套件提供JDBC驅動程式，例如 [MySQL](https://dev.mysql.com/downloads/connector/j/). 如果資料庫的JDBC驅動程式無法做為OSGi套件組合使用，請取得驅動程式JAR並將其包裝在OSGi套件組合中。 組合必須匯出與資料庫伺服器互動所需的套件。 組合也必須匯入它參照的套件。
+某些資料庫廠商以OSGi套件組合提供JDBC驅動程式，例如 [MySQL](https://dev.mysql.com/downloads/connector/j/). 如果資料庫的JDBC驅動程式無法做為OSGi套件組合使用，請取得驅動程式JAR並將其包裝在OSGi套件組合中。 組合必須匯出與資料庫伺服器互動所需的套件。 組合也必須匯入它參照的套件。
 
 以下範例使用 [適用於Maven的套裝外掛程式](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html) 將HSQLDB驅動程式包裝在OSGi套件組合中。 POM會指示外掛程式內嵌識別為相依性的hsqldb.jar檔案。 所有org.hsqldb套裝軟體都會匯出。
 
@@ -100,15 +100,15 @@ JDBC連線集區( `com.day.commons.datasource.jdbcpool.JdbcPoolService`)為工�
 
 下列屬性可用於設定集區連線服務。 屬性名稱會在Web主控台中顯示。 的對應名稱 `sling:OsgiConfig` 節點會顯示在括弧中。 HSQLDB伺服器和別名為 `mydb`：
 
-* JDBC驅動程式類別( `jdbc.driver.class`)：用來實作java.sql.Driver介面的Java™類別，例如 `org.hsqldb.jdbc.JDBCDriver`. 資料型別為 `String`.
+* JDBC驅動程式類別( `jdbc.driver.class`)：用來實作java.sql.Driver介面的Java™類別，例如， `org.hsqldb.jdbc.JDBCDriver`. 資料型別為 `String`.
 
-* JDBC連線URI ( `jdbc.connection.uri`)：用來建立連線的資料庫URL，例如 `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL的格式必須適用於java.sql.DriverManager類別的getConnection方法。 資料型別為 `String`.
+* JDBC連線URI ( `jdbc.connection.uri`)：用來建立連線的資料庫URL，例如， `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL的格式必須適用於java.sql.DriverManager類別的getConnection方法。 資料型別為 `String`.
 
 * 使用者名稱( `jdbc.username`)：用來向資料庫伺服器驗證的使用者名稱。 資料型別為 `String`.
 
 * 密碼( `jdbc.password`)：用於驗證使用者的密碼。 資料型別為 `String`.
 
-* 驗證查詢( `jdbc.validation.query`)：用來驗證連線是否成功的SQL陳述式，例如 `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. 資料型別為 `String`.
+* 驗證查詢( `jdbc.validation.query`)：用來驗證連線是否成功的SQL陳述式，例如， `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. 資料型別為 `String`.
 
 * 預設為唯讀(default.readonly)：當您希望連線提供唯讀存取權時，請選取此選項。 資料型別為 `Boolean`.
 * 依預設自動提交( `default.autocommit`)：選取此選項可針對傳送至資料庫的每個SQL命令建立個別的交易，而且會自動認可每個交易。 當您在程式碼中明確確認交易時，請勿選取此選項。 資料型別為 `Boolean`.

@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 0%
+source-wordcount: '1947'
+ht-degree: 1%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本檔案著重於使用開發表單 [基礎元件](/help/sites-authoring/default-components-foundation.md) 在傳統UI中。 Adobe建議善用新的 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [隱藏條件](/help/sites-developing/hide-conditions.md) 用於觸控式UI中的表單開發。
+>本檔案著重於使用開發表單 [基礎元件](/help/sites-authoring/default-components-foundation.md) 在傳統UI中。 Adobe建議使用新的 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和 [隱藏條件](/help/sites-developing/hide-conditions.md) 用於觸控式UI中的表單開發。
 
 ## 預先載入表單值 {#preloading-form-values}
 
@@ -64,13 +64,13 @@ ht-degree: 0%
 
 #### 範例 — 預先載入含有多個值的下拉式清單 {#example-preloading-a-dropdown-list-with-multiple-values}
 
-下拉式清單可設定您的選取值範圍。
+下拉式清單可以設定您選取的值範圍。
 
 此 **專案載入路徑** 可用來從存放庫中的資料夾存取清單，並將這些檔案預先載入欄位中：
 
-1. 建立新的sling資料夾( `sling:Folder`)例如， `/etc/designs/<myDesign>/formlistvalues`
+1. 建立sling資料夾( `sling:Folder`)例如， `/etc/designs/<myDesign>/formlistvalues`
 
-1. 新增屬性(例如， `myList`)的字串( `String[]`)以包含下拉式清單專案的清單。 也可以使用指令碼匯入內容，例如使用JSP指令碼或shell指令碼中的cURL。
+1. 新增屬性(例如， `myList`)的字串( `String[]`)，以包含下拉式專案清單。 也可以使用指令碼匯入內容，例如使用JSP指令碼或shell指令碼中的cURL。
 
 1. 使用中的完整路徑 **專案載入路徑** 欄位：例如 `/etc/designs/geometrixx/formlistvalues/myList`
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 * `AL=Alabama`
 * `AK=Alaska`
-* 等等。
+* 以此類推
 
 然後AEM將產生清單為：
 
@@ -208,7 +208,7 @@ ht-degree: 0%
 
    * `sling:resourceType`  — 設為 `foundation/components/form/constraint`
 
-   * `constraintMessage`  — 提交表單時，如果欄位無效，根據限制，將顯示自訂訊息
+   * `constraintMessage`  — 提交表單時，如果欄位無效，根據限制顯示的自訂訊息
 
    * 選擇性：
 
@@ -277,7 +277,7 @@ ht-degree: 0%
 
    * 在第一個下拉式清單中選取 **顯示** 或 **隱藏** 以指定條件是否決定要顯示或隱藏元件。
 
-   * 在頂端行尾的下拉式清單中選取：
+   * 在上行末端的下拉式清單中選取：
 
       * **全部**  — 如果所有條件都必須為true才能顯示或隱藏元件
       * **任何**  — 如果只有一個或多個條件必須為true才能顯示或隱藏元件

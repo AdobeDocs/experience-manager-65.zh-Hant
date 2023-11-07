@@ -2,10 +2,10 @@
 title: 了解 CMS Headless 開發
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解 Headless 技術和使用原因。
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1612'
-ht-degree: 93%
+ht-degree: 89%
 
 ---
 
@@ -56,13 +56,13 @@ ht-degree: 93%
 
 任何系統的頭部通常是該系統的輸出呈現器，通常採 GUI 或其他圖形輸出的形式。
 
-例如， Headless 伺服器就像位於伺服器機房某處的機架中，並且沒有連接顯示器。若要存取它，您必須遠端連接它。在此情況下顯示器是頭部，因為它負責呈現伺服器的輸出。您作為服務的取用者，在遠端連接它時提供自己的頭部 (顯示器)。
+例如，Headless伺服器可能位於某處伺服器機房的機架中，且未連線顯示器。 若要存取它，您必須遠端連接它。在此情況下顯示器是頭部，因為它負責呈現伺服器的輸出。您作為服務的取用者，在遠端連接它時提供自己的頭部 (顯示器)。
 
 當我們談論 Headless CMS 時，CMS 管理內容並繼續將其傳遞給取用者。然而，透過僅將&#x200B;**內容**&#x200B;以標準方式傳遞，Headless CMS 會省略最後輸出呈現作業，將內容的&#x200B;**展示**&#x200B;作業留給取用內容的服務執行。
 
 ![ Headless CMS](assets/headless-cms.png)
 
-取用內容的服務，無論是 AR 體驗、網路商店、行動體驗、漸進式網頁應用程式 (PWA) 等，都從 Headless CMS 取用內容並提供自己的呈現操作。它們負責為您的內容提供自己的頭。
+消費服務，不論是AR體驗、網路商店、行動體驗、漸進式網頁應用程式(PWA)等，都會從Headless CMS擷取內容，並提供各自專屬的轉譯。 它們負責為您的內容提供自己的頭。
 
 省略頭可消除複雜性來簡化 CMS。這樣做也會將呈現內容的責任轉移到實際需要內容並且通常更適合執行呈現的服務。
 
@@ -84,7 +84,7 @@ Headless 方法可讓您建置技術堆疊，可以輕鬆快速地適應未來�
 
 Headless 內容傳遞通常使用 GraphQL API。GraphQL 允許類似的無狀態傳輸，但允許更有目標的查詢，減少所需查詢的總數，並提高效能。經常看到混合使用 REST 和 GraphQL 的解決方案，本質上是選擇最適合手頭工作的工具。
 
-無論您選擇哪個 API，定義基於通用 API 的無周邊系統，就可以利用最新的瀏覽器和其他網頁技術，例如漸進式網頁應用程式 (PWA)。API 建立了一個易於擴展和適應的標準介面。
+無論您選擇哪個 API，定義基於通用 API 的 Headless 系統，就可以使用最新的瀏覽器和其他網頁技術，例如漸進式網頁應用程式 (PWA)。API 建立了一個易於擴展和適應的標準介面。
 
 通常，內容是在用戶端呈現。這通常表示有人在行動裝置上呼叫您的內容，您的CMS傳送內容，然後行動裝置（使用者端）負責轉譯您提供的內容。 如果裝置陳舊或速度慢，您的數位體驗同樣會很慢。
 
@@ -96,7 +96,7 @@ Headless 為傳遞數位體驗帶來了靈活性。但這種靈活性本身也�
 
 擁有許多不同的管道代表們每個管道都有自己的展示系統。儘管它們都透過相同的 API 取用相同的內容，但由於展示方式不同，體驗可能會有所不同。必須加以考量和關注以確保客戶體驗的一致性。
 
-透過實作精心設計的系統、共用模式庫、利用可重複使用的設計元件以及已建立的開放式用戶端框架，可以確保一致的體驗，但這必須進行計劃。
+透過實作仔細的設計系統、共用模式程式庫，以及使用可重複使用的設計元件和已建立且開放的使用者端架構，可確保一致的體驗，但這是必須規劃好的。
 
 ## 未來是 Headless，未來就是現在 {#future}
 
@@ -110,7 +110,7 @@ Headless 為傳遞數位體驗帶來了靈活性。但這種靈活性本身也�
 
 作為數位體驗管理領域的產業領導者，Adobe 意識到在解決體驗創作者面臨的現實挑戰方面，理想的解決方案很少是二選一的選擇。這就是為什麼 AEM 不僅支援這兩種模型，而且還獨特地允許將兩者無縫結合，藉此融合 Headless 和全堆疊的優勢，以協助您為內容取用者提供最好服務，無論他們身在何處。
 
-此歷程的重點是放在僅無周邊的內容傳遞模型。然而，一旦您掌握了這些基本知識，您就可以進一步探索如何利用這兩種模型的優勢。
+此歷程的重點是放在僅 Headless 的內容傳遞模型。然而，一旦您掌握了這些基本知識，您就可以進一步探索如何使用這兩種模型的優勢。
 
 ## 下一步 {#what-is-next}
 
@@ -126,6 +126,6 @@ Headless 為傳遞數位體驗帶來了靈活性。但這種靈活性本身也�
 
 我們建議您檢閱檔案，以繼續進行Headless開發歷程的下一部分 [AEM Headless快速入門](getting-started.md)，以下是一些其他可選資源，這些資源對檔案中提到的一些概念進行了更深入的探究，但並非繼續無頭之旅所必需的。
 
-* 一個 [AEM as a Headless CMS簡介](/help/sites-developing/headless/introduction.md)
-* 此 [AEM開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 * [AEM Headless 教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - 利用這些實作教學課程來探索如何運用各種不同方式使用 AEM 將內容傳遞到 Headless 端點，並選擇適合您的方式。

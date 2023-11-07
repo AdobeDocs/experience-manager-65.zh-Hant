@@ -2,9 +2,9 @@
 title: 在 AEM 中使用 GraphiQL IDE
 description: 了解如何在 Adobe Experience Manager 中使用 GraphiQL IDE。
 exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 93%
 
 ---
@@ -74,11 +74,11 @@ ht-degree: 93%
 
 從&#x200B;**[持續性查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md)**&#x200B;面板 (最左側) 的清單中選取要更新的查詢。
 
-查詢將顯示在編輯器面板中。視需要進行變更，然後使用&#x200B;**儲存**&#x200B;將更新提交到持續性查詢。
+查詢會顯示在編輯器面板中。視需要進行變更，然後使用&#x200B;**儲存**&#x200B;將更新提交到持續性查詢。
 
 ## 執行查詢 {#running-queries}
 
-您可以立即執行新查詢，也可以載入並執行持續性查詢。若要載入持續性查詢，請從清單中選取 - 查詢將顯示在編輯器面板中。
+您可以立即執行新查詢，也可以載入並執行持續性查詢。若要載入持續性查詢，請從清單中選取 - 查詢會顯示在編輯器面板中。
 
 在任何一種情況下，編輯器面板顯示的查詢，都是在您執行以下操作時會執行的查詢：
 
@@ -112,7 +112,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
    ![Persisted Query HTTP Cache Headers](assets/cfm-graphqlapi-headers-01.png "Persisted Query HTTP Cache Headers")
 
-1. Selecting this will open the **Cache Configuration** dialog:
+1. Selecting this opens the **Cache Configuration** dialog box:
 
    ![Persisted Query HTTP Cache Header Settings](assets/cfm-graphqlapi-headers-02.png "Persisted Query HTTP Cache Header Settings")
 

@@ -3,7 +3,7 @@ title: 部署社群
 description: 如何部署AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1761'
 ht-degree: 2%
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 * [啟用通道服務](#tunnel-service-on-author)
 * [啟用社交登入](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
-* [設定Adobe Analytics](/help/communities/analytics.md)
+* [設定 Adobe Analytics](/help/communities/analytics.md)
 * 設定 [預設電子郵件服務](/help/communities/email.md)
 * 識別 [共用的UGC儲存體](/help/communities/working-with-srp.md) (**SRP**)
 
@@ -150,7 +150,7 @@ AEM 6.5 Communities GA包含Communities套件。 進一步瞭解AEM 6.5的更新
 * 選取 **資產** 標籤
 * 選取 **下載至磁碟**
 
-在本機AEM執行個體上，使用封裝管理員(例如 [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/))，以上傳至本機AEM套件存放庫。
+在本機AEM執行個體上，使用封裝管理員(例如， [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/))，以上傳至本機AEM套件存放庫。
 
 或者，您也可以從本機AEM執行個體使用「封裝共用」來存取套件(例如， [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/))， `Download` 按鈕會下載至本機AEM執行個體的封裝存放庫。
 

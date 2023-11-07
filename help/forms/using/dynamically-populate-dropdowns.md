@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
 exl-id: 64b88423-aaae-4258-bf48-73df5c9353ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 動態填入下拉式清單 {#dynamically-populating-drop-down-lists}
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 * [建立OSGI套件組合](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
 * [開發AEM元件](/help/sites-developing/components.md)
@@ -28,14 +28,14 @@ ht-degree: 0%
 
 ## 動態填入下拉式清單的程式 {#procedure-to-dynamically-populate-drop-down-lists}
 
-請考量您希望填入 **州** 下拉式清單的下拉式清單中，您所選取的 **國家** 下拉式清單。 如果您在「 」中選取「澳洲」 **國家** 下拉式清單、 **州** 下拉式清單會顯示澳洲境內的州。 下列程式說明如何完成此工作。
+假設您想在某個案例中填入 **狀態** 下拉式清單的選取值 **國家** 下拉式清單。 如果您在「 」中選取「澳洲」 **國家** 下拉式清單， **狀態** 下拉式清單會顯示澳洲境內的州。 下列程式說明如何完成此工作。
 
-1. 建立專案並搭配下列模組：
+1. 建立包含下列模組的專案：
 
-   * 包含用來填入下拉式清單之邏輯的套件組合，在此例中為servlet。
+   * 包含邏輯以填入下拉式清單（在此例中為servlet）的套件組合。
    * 內嵌.jar檔案且具有下拉式資源的內容。 此servlet指向此資源。
 
-1. 根據請求引數Country編寫servlet，這會傳回包含國家/地區內州名的陣列。
+1. 根據請求引數Country編寫servlet，該引數會傳回包含該國家/地區內州名的陣列。
 
    ```java
    @Component(metatype = false)
@@ -153,7 +153,7 @@ ht-degree: 0%
 1. 封裝內容節點並將.jar檔案內嵌於特定位置（例如/apps/myfolder/demo/install/）。 在伺服器上部署相同的檔案。
 1. 建立最適化表單，並在其中新增兩個下拉式清單：國家/地區和州。 國家/地區清單可包含國家/地區的名稱。 「州」清單可動態填入您在第一個清單中所選國家/地區的州名。
 
-   新增要在「國家/地區」清單中顯示的國家/地區名稱。 在「州」清單中，新增指令碼，以根據「國家/地區」清單中的國家/地區名稱填入。
+   新增要在國家/地區清單中顯示的國家/地區名稱。 在「州」清單中，新增指令碼，以根據「國家/地區」清單中的國家/地區名稱填入指令碼。
 
    ![新增國家/地區名稱](assets/country-dropdown.png) ![新增指令碼以填入狀態名稱](assets/state-dropdown.png) ![收集國家/地區和州別下拉式清單](assets/2dropdowns.png)
 
@@ -173,6 +173,6 @@ ht-degree: 0%
    .responseText);
    ```
 
-內容套件，其中包含已實作上述程式碼的範例最適化表單（示範/AFdemo）。
+內容套件包含實施上述程式碼的範例最適化表單（示範/AFdemo）。
 
 [取得檔案](assets/dropdown-demo-content-1.0.1-snapshot.zip)

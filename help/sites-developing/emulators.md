@@ -1,7 +1,7 @@
 ---
 title: 模擬器
 seo-title: Emulators
-description: AEM可讓作者在模擬一般使用者將檢視頁面的環境的模擬器中檢視頁面
+description: AEM可讓作者在模擬一般使用者檢視頁面環境的模擬器中檢視頁面
 seo-description: AEM enables authors to view a page in an emulator that simulates the environment in which an end-user will view the page
 uuid: ee1496a5-be68-4318-b5ce-b11c41e4485c
 contentOwner: Guillaume Carlino
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 0%
@@ -22,34 +22,34 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
 
-Adobe Experience Manager (AEM)可讓作者在模擬一般使用者將檢視頁面之環境的模擬器中，檢視頁面，例如在行動裝置或電子郵件使用者端中。
+Adobe Experience Manager (AEM)可讓作者在模擬一般使用者檢視頁面環境的模擬器中，檢視頁面，例如在行動裝置或電子郵件使用者端中。
 
 AEM模擬器架構：
 
-* 在模擬的使用者介面(UI)中提供內容製作，例如行動裝置或電子郵件使用者端（用於製作電子報）。
+* 在模擬使用者介面(UI)中提供內容製作，例如行動裝置或電子郵件使用者端（用於製作電子報）。
 * 根據模擬的UI調整頁面內容。
 * 允許建立自訂模擬器。
 
 >[!CAUTION]
 >
->這項功能僅支援傳統UI。
+>此功能僅支援傳統UI。
 
 ## 模擬器特性 {#emulators-characteristics}
 
 模擬器：
 
 * 是以ExtJS為基礎。
-* 在頁面DOM上操作。
-* 其外觀會透過CSS加以規範。
+* 在頁面DOM上運作。
+* 其外觀會透過CSS受到規範。
 * 支援外掛程式（例如行動裝置旋轉外掛程式）。
 * 僅對作者有效。
 * 其基本元件位於 `/libs/wcm/emulator/components/base`.
 
 ### 模擬器如何轉換內容 {#how-the-emulator-transforms-the-content}
 
-模擬器的運作方式是將內部HTML內容包裝在模擬器DIV中。 例如，下列html程式碼：
+模擬器的運作方式是將HTML內文內容包裝到模擬器DIV中。 例如，下列html程式碼：
 
 ```xml
 <body>
@@ -89,7 +89,7 @@ AEM模擬器架構：
 
 已新增兩個div標籤：
 
-* 具有id的div `cq-emulator` 保持模擬器為整體和
+* 具有id的div `cq-emulator` 保持整個模擬器並且
 
 * 具有id的div `cq-emulator-content` 代表頁面內容所在的裝置檢視區/畫面/內容區域。
 
@@ -107,25 +107,25 @@ AEM模擬器架構：
 
 現有的行動模擬器：
 
-* 在/libs/wcm/mobile/components/emulators之下。
+* 在/libs/wcm/mobile/components/emulator之下。
 * 可透過JSON servlet在以下網址取得：
 
   http://localhost:4502/bin/wcm/mobile/emulators.json
 
 當頁面元件依賴行動頁面元件時( `/libs/wcm/mobile/components/page`)，則模擬器功能會透過下列機制自動整合到頁面中：
 
-* 行動頁面元件 `head.jsp` 包含裝置群組相關的模擬器初始元件（僅在製作模式下）以及裝置群組的轉譯CSS，透過：
+* 行動頁面元件 `head.jsp` 包含裝置群組相關的模擬器初始元件（僅於製作模式中）以及裝置群組透過以下方式轉譯CSS：
 
   `deviceGroup.drawHead(pageContext);`
 
-* 方法 `DeviceGroup.drawHead(pageContext)` 包含模擬器的init元件，也就是呼叫 `init.html.jsp` 模擬器元件的。 如果模擬器元件沒有自己的 `init.html.jsp` 並仰賴行動裝置基礎模擬器( `wcm/mobile/components/emulators/base)`，行動基本模擬器的init指令碼稱為( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
+* 方法 `DeviceGroup.drawHead(pageContext)` 包含模擬器的init元件，即呼叫 `init.html.jsp` 模擬器元件的。 如果模擬器元件沒有自己的 `init.html.jsp` 並仰賴行動裝置基礎模擬器( `wcm/mobile/components/emulators/base)`，行動基本模擬器的初始指令碼稱為( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
 
 * 行動基本模擬器的初始指令碼透過JavaScript定義：
 
    * 為頁面定義的所有模擬器的設定(emulatorConfigs)
-   * 模擬器管理員透過以下方式將模擬器的功能整合到頁面中：
+   * 模擬器管理員透過以下方式整合頁面中的模擬器功能：
 
-     `emulatorMgr.launch(config)`;
+     `emulatorMgr.launch(config)`；
 
      模擬器管理員的定義如下：
 
@@ -143,7 +143,7 @@ AEM模擬器架構：
 
    例如，您可以參照節點 `/libs/wcm/mobile/components/emulators/iPhone/css`
 
-1. 如有需要，請定義JS使用者端程式庫，例如定義特定外掛程式：名稱= js，節點型別= cq：ClientLibrary
+1. 如有需要，請定義JS使用者端程式庫，以定義特定外掛程式：名稱= js，節點型別= cq：ClientLibrary
 
    例如，您可以參照節點 `/libs/wcm/mobile/components/emulators/base/js`
 
@@ -151,6 +151,6 @@ AEM模擬器架構：
 
    * 名稱= `canRotate`，型別= `Boolean`，值= `true`：包含旋轉功能。
 
-   * 名稱= `touchScrolling`，型別= `Boolean`，值= `true`：包含觸控捲動功能。
+   * 名稱= `touchScrolling`，型別= `Boolean`，值= `true`：加入觸控捲動功能。
 
    您可以定義自己的外掛程式，以新增更多功能。

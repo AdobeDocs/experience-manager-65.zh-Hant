@@ -10,9 +10,9 @@ topic-tags: projects
 content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '981'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 ## 建立專案 {#creating-a-project}
 
-請依照下列步驟建立新專案。
+請依照下列步驟建立專案。
 
 1. 在 **專案** 主控台，點選或按一下 **建立** 以開啟 **建立專案** 精靈。
 1. 選取範本並按一下 **下一個**. 您可以進一步瞭解標準專案範本 [此處。](/help/sites-authoring/projects.md#project-templates)
@@ -72,15 +72,15 @@ ht-degree: 1%
 
 1. 在 **專案**，導覽至專案，並按一下您要新增專案的圖磚右上方的向下>形圖示，然後選取適當的選項。
 
-   * 選項檢視磚型別而定。 例如，它可能是 **建立任務** 針對 **任務** 圖磚或 **開始工作流程** 針對 **工作流程** 圖磚。
+   * 選項檢視磚型別而定。 例如，可能是 **建立任務** 針對 **任務** 圖磚或 **開始工作流程** 針對 **工作流程** 圖磚。
 
    ![平鋪>形箭號](assets/project-tile-create-task.png)
 
-1. 新增專案至圖磚，就像建立新圖磚時一樣。 專案拼貼已說明 [此處。](/help/sites-authoring/projects.md#project-tiles)
+1. 新增專案至圖磚，就像建立圖磚時一樣。 專案拼貼已說明 [此處。](/help/sites-authoring/projects.md#project-tiles)
 
 ## 檢視專案資訊 {#viewing-project-info}
 
-專案的主要用途是將相關資訊分組到一個位置，使其更易於存取及操作。 您可以透過多種方式存取此資訊。
+專案的主要用途是將相關資訊分組到一個位置，使其更易於存取及操作。 您有數種方式可以存取此資訊。
 
 ### 開啟拼貼 {#opening-a-tile}
 

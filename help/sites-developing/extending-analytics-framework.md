@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
@@ -92,9 +92,9 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 1. 在您的Adobe Analytics架構頁面上，展開 **一般Analytics設定** 區域。
 1. 在變數清單底下，按一下「新增專案」以新增變數至清單。
-1. 在左側儲存格中輸入變數的名稱，例如 `prop10`.
+1. 在左側儲存格中輸入變數的名稱，例如， `prop10`.
 
-1. 在右欄中輸入變數的值，例如 `CONSTANT`.
+1. 在右欄中輸入變數的值，例如， `CONSTANT`.
 
 1. 若要移除變數，請按一下變數旁的(-)按鈕。
 
@@ -199,7 +199,7 @@ analytics.sitecatalyst.js檔案中的程式碼(包括Adobe Analytics s_code.js�
    1. 指定 `cq` 作為資料夾名稱，然後按一下確定。
    1. 同樣地，建立 `analytics` 和 `components` 資料夾。
 
-1. 用滑鼠右鍵按一下 `components` 您剛建立的資料夾，然後按一下「建立>建立元件」。 指定下列屬性值：
+1. 用滑鼠右鍵按一下 `components` 資料夾，然後按一下「建立>建立元件」。 指定下列屬性值：
 
    * 標籤: `sitecatalyst`
    * 標題: `sitecatalyst`

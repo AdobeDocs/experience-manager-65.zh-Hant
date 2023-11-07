@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '5396'
+source-wordcount: '5393'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 AEM Forms可透過使用AEM Forms Java API來叫用。 使用AEM Forms Java API時，您可以使用叫用API或Java使用者端資料庫。 Java使用者端程式庫可用於Rights Management服務之類的服務。 這些強型別API可讓您開發叫用AEM Forms的Java應用程式。
 
-叫用API是位於 `com.adobe.idp.dsc` 封裝。 使用這些類別，您可以直接傳送呼叫要求給服務，並處理傳回的呼叫回應。 使用叫用API來叫用使用Workbench建立的短期或長期程式。
+叫用API是位在 `com.adobe.idp.dsc` 封裝。 使用這些類別，您可以直接傳送呼叫要求給服務，並處理傳回的呼叫回應。 使用叫用API來叫用使用Workbench建立的短期或長期程式。
 
 以程式設計方式叫用服務的建議方法是使用與服務相對應的Java使用者端程式庫，而不是叫用API。 例如，若要叫用加密服務，請使用加密服務使用者端程式庫。 若要執行「加密」服務作業，請叫用屬於「加密」服務使用者端物件的方法。 PDF您可以透過叫用 `EncryptionServiceClient` 物件的 `encryptPDFUsingPassword` 方法。
 
@@ -632,7 +632,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 ### 叫用叢集AEM Forms執行個體的使用者端應用程式 {#client-application-invoking-clustered-aem-forms-instances}
 
-下圖顯示在其本身JVM中執行並叫用位於叢集中的AEM Forms執行個體的使用者端應用程式。
+下圖顯示在其自己的JVM中執行並叫用叢集中的AEM Forms執行個體的使用者端應用程式。
 
 此案例類似於叫用獨立AEM Forms例項的使用者端應用程式。 不過，提供者URL不同。 如果從屬端應用程式想要連線到特定的J2EE應用程式伺服器，應用程式必須將URL變更為參照特定的J2EE應用程式伺服器。
 

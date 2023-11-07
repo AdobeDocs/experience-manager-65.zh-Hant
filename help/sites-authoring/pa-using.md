@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '633'
 ht-degree: 4%
 
 ---
@@ -33,10 +33,10 @@ ht-degree: 4%
 >
 >若要變更更新期間， [設定匯入間隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
 
-1. 開啟 **網站** 主控台；例如 [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
+1. 開啟 **網站** 主控台；例如， [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
 1. 在工具列的最右側（右上角），按一下或點選圖示以選取 **清單檢視** (顯示的圖示取決於 [目前檢視](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources))。
 
-1. 同樣地，在工具列的最右側（右上角），按一下或點選圖示，然後選取 **檢視設定**. 此 **設定欄** 對話方塊將會開啟。 進行任何必要的變更，並確認： **更新**.
+1. 同樣地，在工具列的最右側（右上角），按一下或點選圖示，然後選取 **檢視設定**. 此 **設定欄** 對話方塊開啟。 進行任何必要的變更，並確認： **更新**.
 
    ![aa-04](assets/aa-04.png)
 
@@ -82,7 +82,7 @@ analytics-administrators使用者群組的成員可以設定Sites主控台，讓
 
 >[!NOTE]
 >
->如果符合下列條件，則會顯示此訊息： [已設定Activity Map](/help/sites-administering/adobeanalytics-connect.md#configuring-for-the-activity-map) 您的網站。
+>如果符合下列條件，則會顯示此方法： [已設定Activity Map](/help/sites-administering/adobeanalytics-connect.md#configuring-for-the-activity-map) 您的網站。
 
 >[!NOTE]
 >

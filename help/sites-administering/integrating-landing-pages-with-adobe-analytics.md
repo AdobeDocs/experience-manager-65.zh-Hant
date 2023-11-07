@@ -10,38 +10,38 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 8ae7ccec-489b-4d20-ac56-6101402fb18a
 exl-id: da3f7b7e-87e5-446a-9a77-4b12b850a381
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 0%
+source-wordcount: '374'
+ht-degree: 1%
 
 ---
 
 # 將登入頁面與Adobe Analytics整合{#integrating-landing-pages-with-adobe-analytics}
 
-AEM已將登入頁面解決方案與 [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) 使用下列號召性用語(CTA)元件：
+AEM已整合登入頁面解決方案與 [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) 使用下列行動號召(CTA)元件：
 
 1. 點進元件
 1. 圖形連結元件
 
-這些元件會公開某些可透過Adobe Analytics變數（流量、轉換變數）和成功事件對應的屬性，以將資訊傳送至Adobe Analytics。
+這些元件會公開可透過Adobe Analytics變數（流量、轉換變數）和成功事件對應的特定屬性，以將資訊傳送至Adobe Analytics。
 
-## 必備條件 {#prerequisites}
+## 先決條件 {#prerequisites}
 
-Adobe建議您透過 [現有AEM-Adobe Analytics整合](/help/sites-administering/adobeanalytics.md) 以瞭解此整合的運作方式。
+Adobe建議您透過 [現有的AEM-Adobe Analytics整合](/help/sites-administering/adobeanalytics.md) 以瞭解此整合的運作方式。
 
 ## 可用於對應的元件 {#components-available-for-mapping}
 
-在AEM中， **行動號召** 元件 —  **點進連結** 和 **GraphicalLink**  — 顯示在sidekick中，可對映至Adobe Analytics變數。
+在AEM中 **行動號召** 元件 —  **點進連結** 和 **GraphicalLink**  — 在sidekick中在此處顯示，可以對應至Adobe Analytics變數。
 
 ![chlimage_1-21](assets/chlimage_1-21a.jpeg)
 
-### 將登入頁面元件對應至Adobe Analytics {#mapping-landing-page-components-to-adobe-analytics}
+### 將登陸頁面元件對應至Adobe Analytics {#mapping-landing-page-components-to-adobe-analytics}
 
 若要將登入頁面元件對應至Adobe Analytics：
 
-1. 建立Adobe Analytics設定和建立新框架後，請從下拉式選單中選取適當的報表套裝。 這會擷取Adobe Analytics變數，並在內容尋找器中顯示它們。
-1. 視情況將Call to Action (CTA)元件從Sidekick拖放至頁面中間的對應區域。
+1. 建立Adobe Analytics設定和建立框架後，請從下拉式選單中選取適當的報表套裝。 這會擷取Adobe Analytics變數，並在內容尋找器中顯示它們。
+1. 視需要將行動號召(CTA)元件從Sidekick拖放到頁面中間的對應區域。
 
 <table>
  <tbody>
@@ -63,11 +63,11 @@ Adobe建議您透過 [現有AEM-Adobe Analytics整合](/help/sites-administering
   <tr>
    <td><br type="_moz" /> </td>
    <td><i>eventdata.events.clickthroughLinkClick</i> <br /> </td>
-   <td>點選事件 </td>
+   <td>點按事件 </td>
   </tr>
   <tr>
    <td><strong>CTA圖形連結</strong></td>
-   <td><i>eventdata.clickgroughImageLabel</i> <br /> </td>
+   <td><i>eventdata.clickthroughImageLabel</i> <br /> </td>
    <td>CTA影像的標題 </td>
   </tr>
   <tr>
@@ -77,19 +77,19 @@ Adobe建議您透過 [現有AEM-Adobe Analytics整合](/help/sites-administering
   </tr>
   <tr>
    <td><br type="_moz" /> </td>
-   <td><i>eventdata.clickgroughImageAsset</i> <br /> </td>
+   <td><i>eventdata.clickthroughImageAsset</i> <br /> </td>
    <td>存放庫中影像資產的路徑 </td>
   </tr>
   <tr>
    <td><br type="_moz" /> </td>
-   <td><i>eventdata.events.clickgroughImageClick</i> <br /> </td>
-   <td>點選事件</td>
+   <td><i>eventdata.events.clickthroughImageClick</i> <br /> </td>
+   <td>點按事件</td>
   </tr>
  </tbody>
 </table>
 
 1. 從內容尋找器將這些公開的屬性與任何Adobe Analytics變數對應。 架構現已準備就緒，可供使用。
-1. 您現在可以建立新登陸頁面，或使用現有CTA元件開啟現有登陸頁面，然後按一下 **Cloud Services** 定位於 **頁面屬性** 從sidekick (在觸控最佳化UI中，選取 **開啟屬性** 並按一下 **Cloud Services**)並設定框架以搭配登陸頁面使用。 從下拉式清單中選取架構。
+1. 您現在可以建立登入頁面，或使用現有CTA元件開啟現有登入頁面，然後按一下 **Cloud Service** 定位於 **頁面屬性** 從sidekick (在觸控最佳化UI中，選取 **開啟屬性** 並按一下 **Cloud Service**)並設定框架以搭配登陸頁面使用。 從下拉式清單中選取架構。
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
 

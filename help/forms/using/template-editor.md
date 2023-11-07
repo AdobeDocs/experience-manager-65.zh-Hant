@@ -1,19 +1,15 @@
 ---
 title: 最適化表單範本
-seo-title: Adaptive Form Templates
 description: 使用範本編輯器定義基本結構和初始表單內容，以建立最適化表單範本。
-seo-description: Create adaptive form templates by defining the basic structure and initial form content using the Template Editor.
-uuid: 317ca3ab-f809-49a7-a063-9d0c17a35fe4
 contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
 feature: Adaptive Forms
 exl-id: d7287ee7-fb4e-4d47-b37e-0a9260344070
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2040'
 ht-degree: 4%
 
 ---
@@ -39,9 +35,9 @@ ht-degree: 4%
 
 ## 使用範本 {#working-with-templates}
 
-您可以導覽至「 」，從「工具」選單存取範本編輯器 **Adobe Experience Manager >工具>範本**. 範本會整理在啟用可編輯範本的資料夾中。 AEM提供可組織範本的全域資料夾。 但預設不會啟用。 您可以要求管理員啟用全域資料夾，或建立範本的新資料夾。 如需有關如何建立資料夾的詳細資訊，請參閱 [範本資料夾](/help/sites-developing/page-templates-editable.md).
+您可以導覽至「 」，從「工具」選單存取範本編輯器 **Adobe Experience Manager >工具>範本**. 範本會整理在啟用可編輯範本的資料夾中。 AEM提供可組織範本的全域資料夾。 但預設不會啟用。 您可以要求管理員啟用全域資料夾或建立範本資料夾。 如需有關如何建立資料夾的詳細資訊，請參閱 [範本資料夾](/help/sites-developing/page-templates-editable.md).
 
-點選以開啟資料夾後，您會找到「建立」按鈕，可讓您為最適化表單建立新範本。
+點選以開啟資料夾後，您會看到「建立」按鈕，讓您為最適化表單建立範本。
 
 ### 建立範本 {#create-template}
 

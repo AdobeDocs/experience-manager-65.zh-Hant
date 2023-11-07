@@ -2,10 +2,10 @@
 title: 體驗片段
 description: Adobe Experience Manager Sites製作中的體驗片段。
 exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1444'
-ht-degree: 7%
+source-wordcount: '1440'
+ht-degree: 6%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 7%
 * 如果您有具有不同變數或轉譯的體驗。
 
    * 管道或內容特定變數
-   * 適合群組的體驗（例如跨頻道具有不同體驗的行銷活動）
+   * 適合群組的體驗（例如，跨頻道具有不同體驗的行銷活動）
 
 * 當您使用全通路商務時。
 
@@ -135,7 +135,7 @@ WKND專案會根據以下規則建構一些體驗片段 `Contributors`. 使用�
 >
 不建議變更 **允許的範本** 此方法可在升級時覆寫指定的範本。
 >
-請使用此對話方塊僅供參考。
+使用此對話方塊僅供參考。
 
 1. 導覽至所需的 **體驗片段** 主控台。
 
@@ -234,7 +234,7 @@ WKND專案會根據以下規則建構一些體驗片段 `Contributors`. 使用�
 
    ![xf-06](assets/xf-06.png)
 
-1. 確認 **完成** （勾選圖示），新的變數將顯示在面板中：
+1. 確認 **完成** （勾選圖示），新的變數會顯示在面板中：
 
    ![xf-07](assets/xf-07.png)
 
@@ -267,7 +267,7 @@ WKND專案會根據以下規則建構一些體驗片段 `Contributors`. 使用�
 
 ### 建立建置區塊 {#creating-a-building-block}
 
-若要建立新的建置區塊：
+若要建立建置區塊：
 
 1. 在體驗片段編輯器中，選取您要重複使用的元件：
 
@@ -281,7 +281,7 @@ WKND專案會根據以下規則建構一些體驗片段 `Contributors`. 使用�
 
    ![xf-11](assets/xf-11.png)
 
-1. 建 **立區塊** (Building Block)將顯示在頁籤中，並可在段落系統中選擇：
+1. 此 **建置區塊** 顯示在標籤中，並可在段落系統中選取：
 
    ![xf-12](assets/xf-12.png)
 
