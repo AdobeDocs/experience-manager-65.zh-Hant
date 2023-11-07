@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 61f3079a88e39c02b29bfafc7b2b9d4d098cef6b
 workflow-type: tm+mt
-source-wordcount: '4632'
+source-wordcount: '4640'
 ht-degree: 4%
 
 ---
@@ -492,7 +492,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 #### 互動式通訊
 
-* 升級至AEM Service Pack 18後，無法編輯互動式通訊信件。 (FORMS-10578)若要解決此問題，請執行以下步驟：
+* 升級至AEM Service Pack 18後，無法在編輯模式中開啟具有大型內嵌影像的互動式通訊。 (FORMS-10578)若要解決此問題，請執行以下步驟：
 
    1. 下載 [Hotfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 從SD連結。
    1. 解壓縮Hotfix封存檔案，以便取得Experience Manager套件(.zip)和套件(.jar)檔案。
