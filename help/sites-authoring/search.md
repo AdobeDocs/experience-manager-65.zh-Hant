@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 4ec15013-f7ab-44d6-8053-ed28b14f95e2
 docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 7%
@@ -52,7 +52,7 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 
    ![screen_shot_2018-03-23at101445](assets/screen_shot_2018-03-23at101445.png)
 
-1. 如有需要，您可以移除位置篩選器(選取 **X** ，以搜尋所有主控台/資源型別。
+1. 如有必要，您可以移除位置篩選器(選取 **X** ，以搜尋所有主控台/資源型別。
 1. 將顯示結果，並根據控制檯和相關資源型別分組。
 
    您可以選取特定資源（以供後續動作），或透過選取所需的資源型別向下展開；例如， **檢視所有網站**：

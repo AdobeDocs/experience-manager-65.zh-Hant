@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e3a3511a5854432b9c01748f7f5ffaf9182180f8
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1523'
 ht-degree: 6%
 
 ---
@@ -195,14 +195,19 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 
 ### 設定匯入間隔 {#configuring-the-import-interval}
 
-設定適當的例項 **AdobeAEM受管理的輪詢設定** 服務：
+設定適當的例項 **AdobeAEM Analytics報表Sling匯入工具** 服務：
 
-* **輪詢間隔**：服務從Adobe Analytics擷取頁面檢視資料的間隔，以秒為單位。
-預設間隔為43200000毫秒（12小時）。
+* **擷取嘗試**：嘗試擷取已加入佇列的報表的次數。
+預設為 `6`。
 
-* **啟用**：啟用或停用服務。 依預設，會啟用服務。
+* **擷取延遲**：嘗試擷取已排入佇列的報表之間的毫秒數。
+預設為 `10000`。
+由於是以毫秒為單位，因此會對10秒。
 
-若要設定此OSGi服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [存放庫中的osgiConfig節點](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (服務PID為 `com.day.cq.polling.importer.impl.ManagedPollConfigImpl`)。
+* **擷取頻率**：A `cron` 決定擷取Analytics報表頻率的運算式。
+預設值為 `0 0 0/12 * * ?`；這相當於每小時12次擷取。
+
+若要設定此OSGi服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [存放庫中的osgiConfig節點](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (服務PID為 `com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`)。
 
 ## 編輯Adobe Analytics設定和/或架構 {#editing-adobe-analytics-configurations-and-or-frameworks}
 

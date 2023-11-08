@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 8eb4f691-a66b-498e-8114-307221f63718
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 0%

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ### 相依性 {#dependencies}
 
-任何依賴 `granite.jquery` 相依性會自動受益於CSRF Protection Framework。 若您的任何元件不是這種情況，您必須將相依性宣告至 `granite.csrf.standalone` 之後才能使用架構。
+任何依賴 `granite.jquery` 相依性可以自動受益於CSRF Protection Framework。 如果不是，則對於任何元件，您必須將相依性宣告至 `granite.csrf.standalone` 之後才能使用架構。
 
 ### 復寫加密金鑰 {#replicating-crypto-keys}
 

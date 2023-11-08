@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 15%
@@ -135,6 +135,6 @@ ht-degree: 15%
 
 ## 從頁面編輯器啟動工作流程 {#starting-a-workflow-from-the-page-editor}
 
-編輯頁面時，您可以選取 **頁面資訊** 工具列中的。 下拉式選單具有選項 **在工作流程中開始**. 這會開啟一個對話方塊，您可以在其中指定所需的工作流程，以及標題（如有需要）：
+編輯頁面時，您可以選取 **頁面資訊** 工具列中的。 下拉式選單具有選項 **在工作流程中開始**. 這會開啟一個對話方塊，您可以在其中指定所需的工作流程，並視需要指定標題：
 
 ![wf-54](assets/wf-54.png)

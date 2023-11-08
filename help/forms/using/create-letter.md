@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '3979'
 ht-degree: 2%
@@ -475,5 +475,5 @@ ht-degree: 2%
 1. 在「字母」頁面中，選取一或多個字母。 UI會顯示「複製」圖示。
 1. 點選「 複製」。UI會顯示「貼上」圖示。 您也可以選擇在貼上之前先移至資料夾內。 不同的資料夾可以包含名稱相同的資產。 如需檔案夾的詳細資訊，請參閱 [資料夾和組織資產](/help/forms/using/import-export-forms-templates.md#folders-and-organizing-assets).
 1. 點選「貼上」。 「貼上」對話方塊隨即顯示。 如果您要在相同位置複製和貼上字母，系統會自動將名稱和標題指定給新的字母副本，但您可以編輯字母的標題和名稱。
-1. 必要時，請編輯您要用來儲存信函副本的標題和名稱。
+1. 如有必要，請編輯您想要用來儲存信函副本的標題和名稱。
 1. 點選「貼上」。 信函的復本已建立。 現在，您可以在新建的信件中進行必要的變更。

@@ -1,18 +1,14 @@
 ---
 title: 備份和還原
-seo-title: Backup and Restore
 description: 瞭解如何備份及還原您的AEM內容和設定。
-seo-description: Learn how to backup and restore your AEM content.
-uuid: 446a466f-f508-4430-9e50-42cd4463760e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: eb8bbb85-ca2f-4877-8ee0-bb1ee8b7d8de
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2282'
 ht-degree: 0%
 
 ---
@@ -232,7 +228,7 @@ AEM Online Backup由一系列內部動作組成，以確保要備份的資料與
    * 階段A — 除了資料存放區以外會複製所有專案（延遲）。
    * 階段B — 僅複製資料存放區（延遲）。
 
-1. 在第二個複製階段中（建立zip檔案時進度指示器為63% - 65.8%，若未建立zip檔案，則為90% - 94%），只會複製自第一個複製階段開始後在來源目錄中建立或修改的檔案。 根據存放庫的活動，這可能從完全沒有檔案到大量檔案不等（因為第一個檔案複製階段通常需要大量時間）。 復製程式與第一階段（階段A和階段B有延遲）類似。
+1. 在第二個複製階段中（建立zip檔案時進度指示器為63% - 65.8%，若未建立zip檔案，則為90% - 94%），只會複製自第一個複製階段開始後在來源目錄中建立或修改的檔案。 根據存放庫的活動，這可能從完全沒有檔案到大量檔案不等（因為第一個檔案複製階段通常需要的時間最長）。 復製程式與第一階段（階段A和階段B有延遲）類似。
 1. 在第三個複製階段（建立zip檔案時進度指示器65.8% - 68.6%，或若未建立zip檔案，則進度指示器94% - 98%）只會複製第二個複製階段開始後在來源目錄中建立或修改的檔案。 根據存放庫的活動，可能沒有要複製的檔案或檔案數量非常少（因為第二個檔案複製階段通常很快）。 復製程式類似於第二個階段 — 階段A和階段B，但不會延遲。
 1. 儲存庫執行時，檔案複製階段一到三都會同時完成。 只會複製自第三個複製階段啟動後在來源目錄中建立或修改的檔案。 根據存放庫的活動，可能沒有要複製的檔案，或者檔案數量非常少（因為第二個檔案複製階段通常非常快）。 進度指示器68.6% - 70% （建立zip檔案時）或98% - 100% （未建立zip檔案時）。 復製程式類似於第三個階段。
 1. 視目標而定：

@@ -8,7 +8,7 @@ discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '6911'
 ht-degree: 0%
@@ -96,7 +96,7 @@ ht-degree: 0%
    >
    >不過，貼上文字的格式有些 [限制](https://helpx.adobe.com/aem-forms/kb/cm-copy-paste-text-limitations.html).
 
-1. 如果需要，請在檔案片段中插入特殊字元。 例如，您可以使用「特殊字元」浮動視窗來插入：
+1. 如有必要，請在檔案片段中插入特殊字元。 例如，您可以使用「特殊字元」浮動視窗來插入：
 
    * 幣別符號，例如€、¥和£
    * 數學符號，例如∑、√、∂和^
@@ -550,5 +550,5 @@ DD具有收集元素Nominied_details，其具有三個原始元素的複合元�
 1. 從檔案片段清單中，選取一或多個檔案片段。 UI會顯示「複製」圖示。
 1. 點選「 複製」。UI會顯示「貼上」圖示。 您也可以選擇在貼上之前先移至資料夾內。 不同的資料夾可以包含名稱相同的資產。 如需檔案夾的詳細資訊，請參閱 [資料夾和組織資產](/help/forms/using/import-export-forms-templates.md#folders-and-organizing-assets).
 1. 點選「貼上」。 「貼上」對話方塊隨即顯示。 如果您要在相同位置複製和貼上檔案片段，系統會自動為信函的新副本指定名稱和標題，但您可以編輯信函的標題和名稱。
-1. 如果需要，請編輯您想要用來儲存檔案片段副本的「標題」和「名稱」。
+1. 如有必要，請編輯您想要用來儲存檔案片段副本的「標題」和「名稱」。
 1. 點選「貼上」。 檔案片段的副本隨即建立。

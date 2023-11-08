@@ -1,18 +1,14 @@
 ---
 title: 個人化
-seo-title: Personalization
 description: 瞭解Adobe Experience Manager中的個人化，為使用者提供顯示動態內容的自訂環境。
-seo-description: Learn about personalization in AEM.
-uuid: 5790a3e0-f0ec-4785-b915-330a10dea30c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1696'
 ht-degree: 2%
 
 ---
@@ -115,7 +111,7 @@ ht-degree: 2%
 
 * 透過追蹤使用者的行為或根據使用者的設定檔設定規則而實現的個人化，必須準確且符合邏輯。
 * 最讓使用者感到沮喪的，莫過於因為規則的邏輯錯誤而強制或拒絕他們的內容。
-* 因此，規則必須經過深思熟慮 — 將使用者的需求放在前台。 這可能需要花很多時間，切勿低估程度；在實作個人化時，定義商業規則通常比技術上的努力更重要。
+* 因此，規則必須經過深思熟慮 — 將使用者的需求放在前台。 這可能需要花很多時間，切勿低估程度；定義商業規則通常比實作個人化的技術努力更重要。
 
 #### 使用時機 {#when-to-use}
 
@@ -157,7 +153,7 @@ AEM提供各種元件供個人化使用。 有些專案可讓使用者登入並�
 | Forms文字欄位 | 允許使用者輸入資訊的文字欄位。 |
 | My Gadgets | 可讓您納入可用小工具的選擇之一。 |
 | 設定檔頭像相片 | 允許輸入顯示圖片像片。 |
-| 設定檔詳細名稱 | 輸入名稱詳細資訊，包括標題、中間名和尾碼等元素（如有需要）。 |
+| 設定檔詳細名稱 | 輸入名稱詳細資訊，包括標題、中間名和尾碼等元素（如有必要）。 |
 | 設定檔顯示名稱 | 要顯示的名稱。 |
 | 設定檔電子郵件 | 電子郵件地址的輸入。 |
 | 設定檔性別 | 允許輸入性別。 |

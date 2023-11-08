@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 1%
@@ -114,7 +114,7 @@ RTF編輯器提供了一系列功能，包括 [視設定而定](/help/sites-admi
 
 ![復原，重做工具列](do-not-localize/cq55_rte_undoredo.png)
 
-AEM會保留目前元件中最後50個動作的記錄，且以時間順序保留。 如有需要，可依嚴格順序復原這些動作（然後再重做）。
+AEM會保留目前元件中最後50個動作的記錄，且以時間順序保留。 如有必要，您可以依照嚴格的順序復原（然後重新完成）這些動作。
 
 >[!CAUTION]
 >

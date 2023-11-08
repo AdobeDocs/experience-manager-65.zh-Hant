@@ -6,9 +6,9 @@ content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: b4531792-06dd-4545-9dbb-57224be20dc7
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1457'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指南</strong></td>
-   <td><p>如果任何新的或修改過的ContextHub區段打算在原始檔控制中編輯，而不是在AEM中編輯，則必須將其移轉到新位置：</p>
+   <td><p>如果有任何新或修改過的ContextHub區段是在原始檔控制中編輯，而非在AEM中編輯，則必須將其移轉至新位置：</p>
     <ol>
      <li>將先前位置的任何新或修改ContextHub區段複製到適當的新位置(/<code>apps</code>， <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)</li>
      <li>將先前位置中ContextHub區段的參考更新為新位置中已移轉的ContextHub區段(<code>/apps</code>， <code>/conf/global</code>， <code>/conf/&lt;tenant&gt;</code>)。</li>

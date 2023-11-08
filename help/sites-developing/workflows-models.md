@@ -7,7 +7,7 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2451'
 ht-degree: 2%

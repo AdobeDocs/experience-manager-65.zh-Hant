@@ -11,7 +11,7 @@ discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
 feature: Correspondence Management
 exl-id: bc5d6c5b-c833-4849-aace-e07f8a522b32
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1657'
 ht-degree: 0%

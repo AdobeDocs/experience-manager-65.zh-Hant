@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Workflow, Renditions
 role: User, Admin
 exl-id: e7c84385-efb3-4997-83ff-7a7f31582469
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 3%
+source-wordcount: '959'
+ht-degree: 2%
 
 ---
 
@@ -98,7 +98,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 最佳作法和限制 {#best-practices-limitations-tips}
 
-* 設計工作流程時，請考慮您對所有型別轉譯的需求。 如果您預計未來不需要轉譯，請從工作流程中移除其建立步驟。 之後無法大量刪除轉譯。 長時間使用後，不需要的轉譯可能會佔用大量儲存空間 [!DNL Experience Manager]. 若為個別資產，您可以從使用者介面手動移除轉譯。 對於多個資產，您可以進行自訂 [!DNL Experience Manager] 以刪除特定轉譯或刪除資產，然後再次上傳這些資產。
+* 設計工作流程時，請考慮您對所有型別轉譯的需求。 如果您預計未來不需要轉譯，請從工作流程中移除其建立步驟。 之後無法大量刪除轉譯。 長期使用後，不需要的轉譯可能會佔用儲存空間 [!DNL Experience Manager]. 若為個別資產，您可以從使用者介面手動移除轉譯。 對於多個資產，您可以進行自訂 [!DNL Experience Manager] 以刪除特定轉譯或刪除資產，然後再次上傳這些資產。
 * 根據預設， [!UICONTROL DAM更新資產] 工作流程包括建立縮圖和Web轉譯的部分步驟。 如果從工作流程中移除任何預設轉譯， [!DNL Assets] 無法正確轉譯。
 
 >[!MORELIKETHIS]

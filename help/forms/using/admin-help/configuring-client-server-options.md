@@ -7,7 +7,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '10221'
 ht-degree: 0%
@@ -585,7 +585,7 @@ Document Security可追蹤在受保護檔案上可能執行的各種自訂事件
 
 **SMTP主機：** SMTP伺服器的主機名稱。 SMTP伺服器會管理外寄電子郵件通知，以註冊及啟用受邀使用者帳戶。
 
-若您的SMTP主機需要，請在「SMTP伺服器帳戶名稱」和「SMTP伺服器帳戶密碼」方塊中輸入所需的資訊，以連線到SMTP伺服器。 有些組織不強制此要求。 如果您需要資訊，請洽詢系統管理員。
+若您的SMTP主機需要，請在「SMTP伺服器帳戶名稱」和「SMTP伺服器帳戶密碼」方塊中輸入必要的資訊，以連線到SMTP伺服器。 有些組織不強制此要求。 如果您需要資訊，請洽詢系統管理員。
 
 **SMTP伺服器通訊端類別名稱：** SMTP伺服器的通訊端類別名稱。 例如，javax.net.ssl.SSLSocketFactory。
 

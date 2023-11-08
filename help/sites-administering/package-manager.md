@@ -3,16 +3,14 @@ title: 封裝管理員
 description: 瞭解使用封裝管理程式進行AEM封裝管理的基本知識。
 feature: Administering
 role: Admin
-uuid: cba76a5f-5d75-4d63-a0f4-44c13fa1baf2
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '3570'
+source-wordcount: '3568'
 ht-degree: 2%
 
 ---
@@ -223,7 +221,7 @@ Official Service Pack
 
    >[!TIP]
    >
-   >如果您的執行個體有許多套件，可能有檔案夾結構。 在這種情況下，在建立新封裝之前可以更輕鬆地導覽到所需的目標資料夾。
+   >如果您的執行個體有許多套件，可能會有資料夾結構。 在這種情況下，在建立新封裝之前可以更輕鬆地導覽到所需的目標資料夾。
 
 1. 在 **新封裝** 對話方塊中，輸入下列欄位：
 

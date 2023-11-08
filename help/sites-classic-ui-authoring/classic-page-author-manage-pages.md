@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1892'
 ht-degree: 1%
@@ -279,7 +279,7 @@ AEM提供更新要重新命名或移動之頁面的內部連結的功能。 您�
 
    * **重新命名為**
 
-     依預設，目前頁面標籤會顯示。 視需要指定新頁面標籤。
+     依預設，目前頁面標籤會顯示。 如有需要，請指定新頁面標籤。
 
    * **調整**
 

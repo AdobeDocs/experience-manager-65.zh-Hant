@@ -4,9 +4,9 @@ description: 安裝、設定和自訂AEM Forms示範套件。
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '4611'
+source-wordcount: '4603'
 ht-degree: 2%
 
 ---
@@ -34,8 +34,8 @@ ht-degree: 2%
 | Adobe Analytics | v1.4 Rest API | **支援** |
 **封裝安裝考量事項：**
 
-* 套件應安裝在乾淨的伺服器上，且不含其他示範套件或較舊的示範套件版本
-* 套件應安裝在OSGI伺服器上，以製作模式執行
+* 將套件安裝在乾淨的伺服器上，無需其他示範套件或較舊的示範套件版本。
+* 在OSGI伺服器上安裝套件，以製作模式執行。
 
 ### 此套件包含哪些內容 {#what-does-this-package-include}
 

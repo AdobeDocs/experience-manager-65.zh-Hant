@@ -7,7 +7,7 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2582'
 ht-degree: 58%
@@ -614,7 +614,7 @@ AEM 會使用一組預設的語言和國家/地區代碼。
 * 預設的語言代碼根據 ISO-639-1 定義的兩個字母小寫代碼。
 * 預設的國家/地區代碼是根據 ISO 3166 定義的兩個字母小寫或大寫代碼。
 
-MSM 會使用儲存的語言和國家/地區代碼清單來確定和頁面語言版本名稱相關聯的國家/地區名稱。如有需要，您可以變更清單的以下部分：
+MSM 會使用儲存的語言和國家/地區代碼清單來確定和頁面語言版本名稱相關聯的國家/地區名稱。您可以視需要變更清單的下列方面：
 
 * 語言標題
 * 國家/地區名稱

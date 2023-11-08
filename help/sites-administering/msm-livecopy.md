@@ -3,7 +3,7 @@ title: 建立和同步 Live Copies
 description: 瞭解如何在Adobe Experience Manager中建立和同步即時副本。
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '4227'
 ht-degree: 2%
@@ -462,7 +462,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 ### 取消元件的繼承 {#cancelling-inheritance-for-a-component}
 
-取消元件的即時副本繼承，使元件不再與來源元件同步。 如有需要，您稍後可以啟用繼承。
+取消元件的即時副本繼承，使元件不再與來源元件同步。 如有需要，您可在稍後啟用繼承。
 
 >[!NOTE]
 >
@@ -522,7 +522,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 ![繼承中斷時變更屬性](assets/chlimage_1-232.png)
 
-如有需要，您稍後可以重新啟用屬性的繼承。
+您稍後可視需要重新啟用屬性的繼承。
 
 >[!NOTE]
 >

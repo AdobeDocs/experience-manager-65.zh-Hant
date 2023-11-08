@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1823'
 ht-degree: 1%
 
 ---
@@ -67,7 +67,7 @@ Adobe Campaign Standard預設會提供 `aemserver` AEM用來連線至Adobe Campa
 
 ## 驗證Campaign中的AEMResourceTypeFilter {#resource-type-filter}
 
-此 `AEMResourceTypeFilter` 是Adobe Campaign中的選項，用來篩選可以在Adobe Campaign中使用的AEM資源。 由於AEM包含許多內容，此選項可作為篩選條件，允許Adobe Campaign僅擷取專為Adobe Campaign使用而設計的型別AEM內容。
+此 `AEMResourceTypeFilter` 是Adobe Campaign中的選項，用來篩選可以在Adobe Campaign中使用的AEM資源。 由於AEM包含許多內容，此選項可作為篩選器，允許Adobe Campaign僅擷取特別設計用於Adobe Campaign之型別的AEM內容。
 
 此選項已預先設定。 不過，如果您已自訂AEM的Campaign元件，則可能需要更新。 若要驗證 `AEMResourceTypeFilter` 選項時，請按照以下步驟操作。
 

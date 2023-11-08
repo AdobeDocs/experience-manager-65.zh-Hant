@@ -2,16 +2,16 @@
 title: 如何在AEM Forms on JEE Workbench中使用執行指令碼服務來建置XML資料？
 description: 使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
 
 # 使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料 {#using-execute-script-service-forms-jee-workbench}
 
-JEE流程管理工作流程中AEM Forms涉及許多XML，例如：XML資訊可在流程中建立並傳送至JEE Workspace上AEM Forms的Flex應用程式，用於系統設定，或傳遞資訊至表單。 在許多情況下，JEE上的AEM Forms開發人員需要管理XML，而且在許多情況下，這要求透過JEE上的AEM Forms管理XML。
+JEE程式管理工作流程中AEM Forms涉及許多XML，例如：XML資訊可在程式中建置並傳送至JEE Workspace上AEM Forms的Flex應用程式，用於系統設定，或傳遞資訊至表單或從表單傳送。 在許多情況下，JEE上的AEM Forms開發人員需要管理XML，而且在許多情況下，這要求透過JEE上的AEM Forms管理XML。
 
 處理簡單的XML設定時，您可以使用 `Set Value` 服務，這是JEE服務上的預設AEM Forms。 此服務會設定流程資料模型中一或多個資料專案的值。 對於簡單的條件邏輯「如果是，則是」情況，此服務可符合其目的。
 

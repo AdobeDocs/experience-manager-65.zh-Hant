@@ -7,7 +7,7 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1129'
 ht-degree: 1%
@@ -139,7 +139,7 @@ AEM可讓您輕鬆建立和更新區段、Teaser和促銷活動。 它也可讓�
 
    ![在區段編輯器中編輯區段設定](assets/screen_shot_2012-02-02at103547am.png)
 
-1. 如有需要，可新增更多特徵。 您可以使用來制定布林運算式 **AND容器** 和 **OR容器** 在「 」下找到的元件 **區段邏輯**. 使用區段編輯器，您可以刪除不再需要的特徵或容器，或將它們拖曳至陳述式中的新位置。
+1. 如有必要，請新增更多特徵。 您可以使用來制定布林運算式 **AND容器** 和 **OR容器** 在「 」下找到的元件 **區段邏輯**. 使用區段編輯器，您可以刪除不再需要的特徵或容器，或將它們拖曳至陳述式中的新位置。
 
 ### 使用AND和OR容器 {#using-and-and-or-containers}
 

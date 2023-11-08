@@ -12,7 +12,7 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2694'
 ht-degree: 5%
@@ -28,7 +28,7 @@ ht-degree: 5%
 
 ## 已安裝及自訂轉出設定 {#installed-and-custom-rollout-configurations}
 
-本節提供有關已安裝轉出設定及其使用的同步化動作，以及如何視需要建立自訂設定的資訊。
+本節提供有關已安裝轉出設定及其使用的同步化動作，以及如何在必要時建立自訂設定的資訊。
 
 >[!CAUTION]
 >
@@ -386,7 +386,7 @@ MSM可讓您指定一般使用的轉出設定集，並視需要覆寫特定即�
 
    ![設定](assets/chlimage_1-1.png)
 
-1. 如有需要，請調整 **即時副本繼承** 標幟。 如果勾選，即時副本設定將在所有子項上都有效。
+1. 如有必要，請調整 **即時副本繼承** 標幟。 如果勾選，即時副本設定將在所有子項上都有效。
 
 1. 清除 **從父項繼承轉出設定** 屬性，然後從清單中選取一或多個轉出設定。
 

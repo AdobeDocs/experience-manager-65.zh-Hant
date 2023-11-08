@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '6163'
 ht-degree: 1%
@@ -552,7 +552,7 @@ ht-degree: 1%
 
 ![還原繼承](assets/revertinheritance.png)
 
-必要時，選取 **[!UICONTROL 在恢復繼承後同步頁面]**. 選取此選項可同步處理整個互動式通訊。 如果您未選取此選項，恢復繼承時只會同步相關的目標區域。
+如有必要，請選取 **[!UICONTROL 在恢復繼承後同步頁面]**. 選取此選項可同步處理整個互動式通訊。 如果您未選取此選項，恢復繼承時只會同步相關的目標區域。
 
 點選 **[!UICONTROL 是]**.
 

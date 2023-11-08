@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '6816'
+source-wordcount: '6808'
 ht-degree: 1%
 
 ---
@@ -798,7 +798,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 **原則定義的目標節點**
 
-CUG原則應建立在JCR節點上，定義子樹狀結構須受限制的讀取存取限制。 這可能是個AEM頁面，以防CUG可能影響整個樹狀結構。
+在JCR節點建立CUG原則，定義要接受受限讀取存取的子樹狀結構。 這可能是個AEM頁面，以防CUG可能影響整個樹狀結構。
 
 請注意，僅將CUG原則放在位於指定頁面下方的jcr：content節點上，只會限制對指定頁面內容s.str的存取，而不會對任何同級頁面或子頁面生效。 這可能是有效的使用案例，並且有可能使用允許套用微調存取內容的存放庫編輯器來達成。 然而，它與以前的實作不同，在以前的實作中，在jcr：content節點上放置cq：cugEnabled屬性會在內部重新對應至頁面節點。 不再執行此對應。
 
@@ -839,7 +839,7 @@ mixin型別會定義單一、選用的屬性，稱為 `granite:loginPath`，基�
 
 #### 由Mixin型別定義的目標節點 {#target-node-defined-by-mixin-type}
 
-必須在JCR節點建立驗證需求，定義要強制登入的子樹狀結構。 這可能是個AEM頁面，以防CUG預計會影響整個樹狀結構，且新實作的UI隨後會在頁面節點上新增驗證需求mixin型別。
+在JCR節點建立驗證需求，定義要強制登入的子樹狀結構。 這可能是個AEM頁面，以防CUG預計會影響整個樹狀結構，且新實作的UI隨後會在頁面節點上新增驗證需求mixin型別。
 
 將CUG原則僅放置在位於指定頁面下方的jcr：content節點會限制內容的存取權，但不會影響頁面節點本身或任何子頁面。
 

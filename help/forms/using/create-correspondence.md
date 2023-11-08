@@ -6,7 +6,7 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '3849'
 ht-degree: 0%
@@ -121,7 +121,7 @@ ht-degree: 0%
    >
    >如需有關設定文字模組和字母的定位鍵間距的詳細資訊，請參閱 [有關使用定位點間距排列文字的更多資訊](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html).
 
-1. 如有需要，請在通訊中插入特殊字元。 例如，您可以使用「特殊字元」浮動視窗來插入：
+1. 如有必要，請在通訊中插入特殊字元。 例如，您可以使用「特殊字元」浮動視窗來插入：
 
    * 幣別符號，例如€、¥和£
    * 數學符號，例如∑、√、∂和^

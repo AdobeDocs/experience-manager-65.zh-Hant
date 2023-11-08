@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2205'
 ht-degree: 1%
@@ -248,7 +248,7 @@ AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
 
 ## 將動態Tag Management設定與您的網站建立關聯 {#associating-a-dynamic-tag-management-configuration-with-your-site}
 
-將您的動態Tag Management設定與網站頁面建立關聯，以便AEM將所需指令碼新增至頁面。 將網站的根頁面與設定建立關聯。 該頁面的所有子系都會繼承關聯。 如有需要，您可以覆寫下級頁面上的關聯。
+將您的動態Tag Management設定與網站頁面建立關聯，以便AEM將所需指令碼新增至頁面。 將網站的根頁面與設定建立關聯。 該頁面的所有子系都會繼承關聯。 如有必要，您可以在子項頁面上覆寫關聯。
 
 使用以下程式，將頁面及其子系與Dynamic Tag Management設定建立關聯。
 

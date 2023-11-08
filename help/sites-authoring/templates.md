@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '4834'
 ht-degree: 9%
@@ -125,7 +125,7 @@ AEM現在提供兩種基本型別的範本：
 * 可以 [建立範本的資料夾](#creating-a-template-folder-admin) 如有需要
 * [建立範本](#creatinganewtemplateauthor)，一開始是空的
 
-* [定義其他屬性](#definingtemplatepropertiesauthor) 範本（若有需要）
+* [定義其他屬性](#definingtemplatepropertiesauthor) 範本（如有需要）
 * [編輯範本](#editingtemplates) 若要定義：
 
    * [結構](#editingatemplatestructureauthor)  — 使用範本建立的頁面上無法變更的預定義內容。

@@ -5,7 +5,7 @@ contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 1%
@@ -160,7 +160,7 @@ ht-degree: 1%
    您可以套用各種篩選器來搜尋所需的範本。 例如，您可以根據檔案型別或標籤來搜尋範本。
 
 1. 按一下 **[!UICONTROL 下一個]** 工具列中的。
-1. 在 **[!UICONTROL 預覽與重新排序]** 必要時，重新排列範本，並預覽要合併的範本選擇。 然後，按一下 **[!UICONTROL 下一個]** 工具列中的。
+1. 在 **[!UICONTROL 預覽與重新排序]** 熒幕，視需要重新排列範本，並預覽要合併的範本選擇。 然後，按一下 **[!UICONTROL 下一個]** 工具列中的。
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 

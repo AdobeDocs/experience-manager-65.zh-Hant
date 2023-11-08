@@ -7,9 +7,9 @@ role: User, Admin
 feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '3263'
+source-wordcount: '3260'
 ht-degree: 14%
 
 ---
@@ -199,7 +199,7 @@ Adobe Asset Link針對此使用案例提供良好的支援：
 * 此外，由於資產位於Creative Cloud帳戶中，因此該資產也可在使用者可能擁有的其他裝置上使用(例如，可在專用的Creative Cloud行動應用程式中開啟或編輯)，並可與其他Creative Cloud使用者共用，以進行共同作業。
 * 當創意使用者完成變更時，他們可以在其Creative Cloud應用程式中對該檔案執行簽入操作，並附上可選註釋。 中的對應資產 [!DNL Experience Manager] 會建立版本，並使用新的二進位檔更新為。 [!DNL Experience Manager] 行銷人員或LOB使用者等使用者可以透過存取重大資產變更或里程碑 [!DNL Experience Manager] 資產時間軸UI。
 
-[!DNL Experience Manager] 案頭應用程式為在原生應用程式中開啟的資產提供網路共用。 依預設，所有在本機完成的變更都會上傳至 [!DNL Experience Manager] 在一段短暫的時間後自動完成。 透過這種設定，進行中階段期間的頻繁儲存將全部上傳到 [!DNL Experience Manager] 和版本化，造成許多網路流量和潛在的可擴充性挑戰 — 更不用說不必要的版本 [!DNL Experience Manager].
+[!DNL Experience Manager] 案頭應用程式為在原生應用程式中開啟的資產提供網路共用。 依預設，所有在本機完成的變更都會上傳至 [!DNL Experience Manager] 在一段短暫的時間後自動完成。 透過這種設定，進行中階段期間的頻繁儲存將全部上傳到 [!DNL Experience Manager] 和版本化，創造無數網路流量和潛在的可擴充性挑戰 — 更不用說不必要的版本 [!DNL Experience Manager].
 
 建議在此使用中的選項 [!DNL Experience Manager] 案頭應用程式關閉自動更新，並將資產變更上傳至 [!DNL Experience Manager] 手動，使用應用程式資產狀態UI中的上傳變更動作。
 

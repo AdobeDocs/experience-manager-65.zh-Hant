@@ -10,7 +10,7 @@ discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 feature: Interactive Communication
 exl-id: b8e84c5d-2ec8-4575-9eed-6b37b04e5d66
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2475'
 ht-degree: 0%
@@ -247,7 +247,7 @@ ht-degree: 0%
 
 ## 在文字中插入特殊字元 {#special}
 
-如果需要，請在檔案片段中插入特殊字元。 例如，您可以使用「特殊字元」浮動視窗來插入：
+如有必要，請在檔案片段中插入特殊字元。 例如，您可以使用「特殊字元」浮動視窗來插入：
 
 * 幣別符號，例如€、¥和£
 * 數學符號，例如∑、√、∂和^

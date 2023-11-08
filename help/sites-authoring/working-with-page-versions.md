@@ -2,7 +2,7 @@
 title: 使用內容頁面版本
 description: 在Adobe Experience Manager中建立、比較和還原頁面版本。
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1501'
 ht-degree: 3%
@@ -36,7 +36,7 @@ ht-degree: 3%
    ![時間軸 — 另存新版本](assets/screen-shot_2019-03-05at112335.png)
 
 1. 選取 **另存為版本**.
-1. 輸入 **標籤** 和 **註解** 若有需要。
+1. 輸入 **標籤** 和 **註解** 如有需要。
 
    ![建立版本 — 新增標籤和註解](assets/chlimage_1-42.png)
 
@@ -49,7 +49,7 @@ ht-degree: 3%
 1. 瀏覽以顯示您要建立版本的頁面。
 1. 選取中的頁面 [選擇模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 1. 選取 **建立** 工具列中的選項，以開啟對話方塊。
-1. 在對話方塊中，您可以輸入 **標籤** 和 **註解**，如有需要：
+1. 在對話方塊中，您可以輸入 **標籤** 和 **註解**，如有必要：
 
    ![輸入標籤和註解](assets/screen_shot_2012-02-15at105050am.png)
 

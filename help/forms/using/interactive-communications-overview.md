@@ -9,7 +9,7 @@ topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 7%
@@ -56,7 +56,7 @@ ht-degree: 7%
    1. [圖表](/help/forms/using/chart-component-interactive-communications.md)
    1. [檔案片段](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
-1. 預覽列印和Web管道，並視需要編輯互動式通訊。
+1. 預覽列印和Web管道，並在必要時編輯互動式通訊。
 1. 代理程式會使用Agent UI來 [準備互動式通訊](/help/forms/using/prepare-send-interactive-communication.md) 以傳送給收件者/貼文程式。
 
 ### 建置區塊 {#buildingblocks}

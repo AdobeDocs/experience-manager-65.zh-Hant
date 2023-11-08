@@ -1,17 +1,15 @@
 ---
 title: 編輯頁面內容
 description: 使用可拖曳至頁面的元件來新增內容。 接著，您就可以就地編輯、移動或刪除這些專案。
-uuid: e7b65ceb-263c-46f2-91e3-11dec3a016fa
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1831'
 ht-degree: 1%
 
 ---
@@ -227,7 +225,7 @@ Sidekick的底部邊框中有兩個圖示對預覽頁面很重要：
 
 ## 鎖定頁面 {#locking-a-page}
 
-AEM可讓您鎖定頁面，不讓其他人修改內容。 當您對某個特定頁面進行大量編輯，或需要凍結頁面一段時間時，此功能會很有用。
+AEM可讓您鎖定頁面，不讓其他人變更內容。 當您對某個特定頁面進行大量編輯，或需要凍結頁面一段時間時，此功能會很有用。
 
 >[!CAUTION]
 >

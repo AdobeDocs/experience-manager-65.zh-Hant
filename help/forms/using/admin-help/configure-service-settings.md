@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '10692'
 ht-degree: 0%
@@ -610,9 +610,9 @@ PDFG清理掃描秒數的預設值為 `43200` （12小時）。 「工作到期�
 
 **TSP伺服器網址：** 預設時間戳記提供者的URL。 僅在提供某些有效值時使用。 無預設值。
 
-**TSP伺服器使用者名稱：** 使用者名稱（如果時間戳記提供者要求）。 只有在為URL提供某些有效值時才使用。 無預設值。
+**TSP伺服器使用者名稱：** 使用者名稱（如果時間戳記提供者需要）。 只有在為URL提供某些有效值時才使用。 無預設值。
 
-**TSP伺服器密碼：** 上述使用者名稱的密碼（如果時間戳記提供者要求）。 只有在為URL和使用者名稱提供某些有效值時才使用。 無預設值。
+**TSP伺服器密碼：** 時間戳記提供者需要上述使用者名稱的密碼。 只有在為URL和使用者名稱提供某些有效值時才使用。 無預設值。
 
 **要求雜湊演演算法：** 指定在建立時間戳記提供者的要求時要使用的雜湊演演算法。 預設值為SHA1。
 

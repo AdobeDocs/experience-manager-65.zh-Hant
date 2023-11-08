@@ -12,9 +12,9 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '2005'
+source-wordcount: '2003'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 1. 為何HTML表單的大小比PDF forms大？
 
-   答案：許多中繼資料結構和物件（例如表單dom、資料dom和版面dom）都是將XDP轉譯為HTML表單所必需。
+   回答：許多中繼資料結構和物件（例如表單dom、資料dom和版面dom）都是將XDP轉譯為HTML表單所必需。
 
    對於PDF forms，Adobe Acrobat有內建的XTG引擎可建立中繼資料結構和物件。 Acrobat也會處理版面和指令碼。
 
