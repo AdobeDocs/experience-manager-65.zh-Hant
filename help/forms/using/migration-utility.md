@@ -9,9 +9,9 @@ content-strategy: max-2018
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1734'
 ht-degree: 2%
 
 ---
@@ -27,19 +27,19 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果升級的位置移位，則對於「通訊管理」資產，您可以在每次匯入資產時執行移轉。 若要進行Correspondence Management移轉，您必須安裝Forms相容性套件。
+>如果異地升級，則對應管理資產可於每次匯入資產時執行移轉。 若要進行Correspondence Management移轉，您必須安裝Forms相容性套件。
 
 ## 移轉方法 {#approach-to-migration}
 
 您可以 [升級](../../forms/using/upgrade.md) 至最新版的AEM Forms 6.5 (從AEM Forms 6.4、6.3或6.2)，或全新安裝。 根據您是升級先前的安裝還是執行全新安裝，您必須執行下列其中一項操作：
 
-**若為就地升級**
+**如果有就地升級**
 
 如果您執行就地升級，則升級的執行個體已有資產和檔案。 不過，您必須先安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) （包含Correspondence Management相容性套件）
 
 然後，您必須透過以下方式更新資產和檔案 [執行移轉公用程式](#runningmigrationutility).
 
-**在異地安裝的情況下**
+**如果有異地安裝**
 
 如果是非適當（全新）安裝，您必須先安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) （包含通訊管理相容性套件）。
 

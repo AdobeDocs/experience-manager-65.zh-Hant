@@ -12,7 +12,7 @@ discoiquuid: db22f775-fab1-4a78-b334-a9c4fa613e43
 docset: aem65
 feature: Mobile Forms
 exl-id: 62ff6306-9989-43b0-abaf-b0a811f0a6a4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 0%
@@ -46,7 +46,7 @@ HTML5表單可包含多個外部資源，例如影像、JavaScript和CSS檔案�
 
 * 使用 [壓縮影像](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md). 它可減少呈現表單所需的網路活動和記憶體量。 因此，表單載入時間會大幅減少。
 * 使用AEM Configuration Manager (Day CQHTML庫管理員)中的「縮制」選項來壓縮JavaScript和CSS檔案。 如需詳細資訊，請參閱 [OSGi組態設定](/help/sites-deploying/osgi-configuration-settings.md).
-* 啟用Web壓縮。 這會減少源自表單的請求和回應大小。 如需詳細資訊，請參閱 [AEM表單伺服器的效能調整](https://helpx.adobe.com/aem-forms/6-3/performance-tuning-aem-forms.html).
+* 啟用Web壓縮。 這會減少源自表單的請求和回應大小。 如需詳細資訊，請參閱 [AEM Forms伺服器的效能調整](https://helpx.adobe.com/aem-forms/6-3/performance-tuning-aem-forms.html).
 
 ## 保持興趣不變，僅顯示必要欄位  {#keep-the-interest-alive-show-only-required-fields}
 

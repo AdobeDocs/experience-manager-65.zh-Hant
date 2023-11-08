@@ -9,9 +9,9 @@ docset: aem65
 feature: Interactive Videos
 role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6036'
+source-wordcount: '6035'
 ht-degree: 3%
 
 ---
@@ -533,7 +533,7 @@ Dynamic Media中的「互動式視訊」尚不支援MXF視訊格式。
 >
 此時，如果您只新增超連結網頁的互動功能，也就完成了。
 >
-不過，如果您新增任何互動來觸發快速檢視，互動視訊旁的縮圖僅供顯示，尚未與您現有的快速檢視整合。 在這種情況下，您現在必須將互動式視訊與網站上的現有快速檢視整合。
+不過，如果您新增任何互動來觸發快速檢視，互動視訊旁的縮圖僅供顯示，尚未與您現有的快速檢視整合。 在這種情況下，您必須將互動式視訊與網站上的現有快速檢視整合。
 
 **範例**
 

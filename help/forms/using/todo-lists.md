@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 exl-id: c80bf347-d1ed-488f-a41a-ceb05a6df9e4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '4031'
 ht-degree: 0%
@@ -194,7 +194,7 @@ AEM Forms工作區有下列三種型別的待辦事項清單：
 
    >[!NOTE]
    >
-   >您可以設定工作區以定期自動儲存使用者輸入的資訊作為草稿。 如果啟用了自動儲存且使用者正在處理草稿，則會定期儲存草稿。 如果自動儲存，則會自動採用任務的預設名稱。
+   >您可以設定工作區以定期自動儲存使用者輸入的資訊作為草稿。 如果啟用了自動儲存且使用者正在處理草稿，則會定期儲存草稿。 如果有自動儲存，則會自動採用任務的預設名稱。
    >
    >
    >如需詳細資訊，請參閱以下的「定期儲存草稿」： [管理偏好設定](/help/forms/using/getting-started-livecycle-html-workspace.md).

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '15468'
+source-wordcount: '15464'
 ht-degree: 0%
 
 ---
@@ -323,7 +323,7 @@ Document Security服務也會保護其他檔案型別，例如Microsoft Word檔�
 
 ## 修改原則 {#modifying-policies}
 
-您可以使用Document Security Java API或Web服務API修改現有原則。 若要變更現有原則，您可以擷取並修改原則，然後在伺服器上更新原則。 例如，假設您擷取現有原則並延長其有效期。 在變更生效之前，您必須更新原則。
+您可以使用Document Security Java API或Web服務API修改現有原則。 若要變更現有原則，您可以擷取並修改它，然後在伺服器上更新原則。 例如，假設您擷取現有原則並延長其有效期。 在變更生效之前，您必須更新原則。
 
 當業務需求變更且原則不再反映這些需求時，您可以修改原則。 您可以更新現有的原則，而不需要建立原則。
 

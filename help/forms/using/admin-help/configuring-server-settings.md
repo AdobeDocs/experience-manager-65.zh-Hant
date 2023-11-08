@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '2623'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 正在設定電子郵件設定 {#configuring-email-settings}
 
-您可以指定表單伺服器的電子郵件帳戶，表單伺服器會透過該帳戶傳送電子郵件訊息給AEM表單使用者和管理員。 這些電子郵件訊息用於通知和提醒使用者他們必須完成的工作、通知使用者任務已達到截止日期，以及通知管理員發生的任何程式錯誤。
+您可以為Forms伺服器指定電子郵件帳戶，透過該帳戶傳送電子郵件訊息給AEM表單使用者和管理員。 這些電子郵件訊息用於通知和提醒使用者他們必須完成的工作、通知使用者任務已達到截止日期，以及通知管理員發生的任何程式錯誤。
 
 若要在AEM表單和使用者之間啟用電子郵件訊息的傳送，請在「電子郵件設定」頁面上設定寄出電子郵件設定。 寄出電子郵件必須使用SMTP伺服器。
 
@@ -288,7 +288,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 1. 在管理控制檯中，按一下「服務> Forms工作流程>伺服器設定> BAM組態設定」。
 1. 在「BAM主機」方塊中，輸入執行BAM的伺服器名稱。 預設值為localhost。
 1. 在「BAM連線埠」方塊中，輸入用來連線至執行BAM之伺服器的連線埠。 JBoss的預設BAM連線埠是8080、WebLogic是7001、WebSphere是9080。
-1. 在伺服器主機方塊中，輸入主機表單伺服器的名稱或IP位址。 預設值為localhost。
-1. 在「伺服器連線埠」方塊中，輸入表單伺服器使用的連線埠號碼。
+1. 在「伺服器主機」方塊中，輸入主機Forms伺服器的名稱或IP位址。 預設值為localhost。
+1. 在「伺服器連線埠」方塊中，輸入Forms伺服器使用的連線埠號碼。
 1. 在「使用者名稱」與「密碼」方塊中，輸入適當的使用者ID與密碼以存取「BAM伺服器」。 預設使用者名稱為CognosNowAdmin，預設密碼為manager。
 1. 按一下「儲存」。

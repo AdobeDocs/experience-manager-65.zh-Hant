@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '9887'
 ht-degree: 0%
@@ -1735,4 +1735,4 @@ WSE架構使用原則、判斷提示和SecurityToken資料型別。 簡而言之
 
 ### 以字母開頭的服務會產生無效的Proxy檔案 {#services-starting-with-the-letter-i-produce-invalid-proxy-files}
 
-使用Microsoft .Net 3.5和WCF時，某些AEM Forms產生的Proxy類別名稱不正確。 為IBMFilenetContentRepositoryConnector、IDPchedulerService或其名稱以字母I開頭的任何其他服務建立Proxy類別時，就會發生此問題。例如，在IBMFileNetContentRepositoryConnector的情況下，產生的使用者端名稱是 `BMFileNetContentRepositoryConnectorClient`. 產生的Proxy類別中缺少字母I。
+使用Microsoft .Net 3.5和WCF時，某些AEM Forms產生的Proxy類別名稱不正確。 為IBMFilenetContentRepositoryConnector、IDPchedulerService或其名稱以字母I開頭的任何其他服務建立Proxy類別時，就會發生此問題。例如，如果有IBMFileNetContentRepositoryConnector，則產生的使用者端名稱是 `BMFileNetContentRepositoryConnectorClient`. 產生的Proxy類別中缺少字母I。

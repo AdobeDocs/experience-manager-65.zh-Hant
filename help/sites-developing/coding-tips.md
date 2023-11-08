@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ AEM提供的XSS API可輕鬆清除引數，並確保安全性不受跨網站指�
 * DEBUG：處理的低階資訊。 對具有支援的問題進行偵錯時很有用。
 * TRACE：最低層級的資訊，例如輸入/結束方法。 這通常僅供開發人員使用。
 
-以JavaScript為例， *console.log* 應僅在開發期間使用，且應在發行之前移除所有記錄陳述式。
+如果有JavaScript， *console.log* 應僅在開發期間使用，且應在發行之前移除所有記錄陳述式。
 
 ### 避免狂熱的貨運程式設計 {#avoid-cargo-cult-programming}
 

@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 31dd8db3-ddac-429e-82f8-8c5dc4ffc186
 exl-id: d72a3977-1423-49e0-899b-234bb76be378
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1575'
 ht-degree: 0%
@@ -147,7 +147,7 @@ ht-degree: 0%
 ### 為網域啟用即時布建 {#enable-just-in-time-provisioning-for-a-domain}
 
 1. 編寫實作IdentityCreator和AssignmentProvider介面的服務容器。 (請參閱 [使用AEM表單進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_63).)
-1. 將服務容器部署至表單伺服器。
+1. 將服務容器部署至Forms伺服器。
 1. 在管理控制檯中，按一下「設定>使用者管理>網域管理」。
 
    選取現有的網域，或按一下「新增企業網域」。

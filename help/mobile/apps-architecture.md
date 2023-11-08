@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '2663'
+source-wordcount: '2658'
 ht-degree: 0%
 
 ---
@@ -191,7 +191,7 @@ PhoneGap應用程式中任何指定資產的URI不僅會因平台而異，在應
 
 身為PhoneGap開發人員，您關注的內容位於www目錄下方。 若要存取應用程式資產，請使用相對路徑。
 
-為了解決複雜的問題，您的PhoneGap應用程式會使用單頁應用程式(SPA)模式，讓基本URI （雜湊除外）永不變更。 因此，您參考的每個資產、範本或指令碼 **必須相對於您的頂層頁面。** 最上層頁面會藉由下列方式初始化Angular路由及控制器 `*<name>*.angular-app-module.js` 和 `*<name>*.angular-app-controllers.js`. 此頁面應該是*不會*延伸sling：redirect的最接近存放庫根目錄的頁面。
+為了解決複雜的問題，您的PhoneGap應用程式會使用單頁應用程式(SPA)模式，讓基本URI （雜湊除外）永不變更。 因此，您參考的每個資產、範本或指令碼 **必須相對於您的頂層頁面。** 最上層頁面會藉由下列方式初始化Angular路由及控制器： `*<name>*.angular-app-module.js` 和 `*<name>*.angular-app-controllers.js`. 此頁面應該是*不會*延伸sling：redirect的最接近存放庫根目錄的頁面。
 
 有數種協助程式方法可用於處理相對路徑：
 

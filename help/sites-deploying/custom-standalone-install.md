@@ -4,9 +4,9 @@ description: 瞭解安裝獨立AEM執行個體時可用的選項。
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ AEM的預設連線埠為4502。 如果該連線埠無法使用或已使用，Qui
 --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning
 ```
 
-* 此外，您需要使用 `-XX:+UseParallelGC` 切換以緩解任何潛在的效能問題。
+* 此外，您還需要使用 `-XX:+UseParallelGC` 切換以緩解任何潛在的效能問題。
 
 以下範例說明在Java 11上啟動AEM時，其他JVM引數的外觀：
 

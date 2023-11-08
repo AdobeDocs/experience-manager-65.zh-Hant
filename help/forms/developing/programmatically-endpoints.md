@@ -1,19 +1,15 @@
 ---
 title: 以程式管理端點
-seo-title: Programmatically Managing Endpoints
 description: 使用「端點登入」服務來新增EJB端點、新增SOAP端點、新增Watched資料夾端點、新增電子郵件端點、新增遠端端點、新增工作管理員端點、修改端點、移除端點，以及擷取端點聯結器資訊。
-seo-description: Use the Endpoint Registry service to add EJB endpoints, add SOAP endpoint, add Watched Folder endpoints, add Email endpoints, add  Remoting endpoints, add Task Manager endpoints, modify endpoints, remove endpoints, and retrieve endpoint connector information.
-uuid: 5dc50946-3323-4c5d-a43b-31c1c980bd04
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '10790'
+source-wordcount: '10791'
 ht-degree: 0%
 
 ---
@@ -339,7 +335,7 @@ ht-degree: 0%
 * **resultFolderName**：儲儲存存結果的資料夾。 此位置可以是絕對或相對目錄路徑。 如果結果未出現在此資料夾中，請檢查失敗資料夾。 唯讀檔案不會處理，且會儲存在失敗資料夾中。 預設值為 `result/%Y/%M/%D/`。這是watched資料夾內的結果資料夾。
 * **preserveFolderName**：成功掃描和擷取後，檔案的儲存位置。 此位置可以是絕對、相對或Null目錄路徑。 預設值為 `preserve/%Y/%M/%D/`。
 * **failureFolderName**：儲存失敗檔案的資料夾。 此位置永遠是相對於watched資料夾。 唯讀檔案不會處理，且會儲存在失敗資料夾中。 預設值為 `failure/%Y/%M/%D/`。
-* **preserveOnFailure**：保留輸入檔案，以防無法對服務執行操作。 預設值為true。
+* **preserveOnFailure**：如果對服務執行作業失敗，則保留輸入檔案。 預設值為true。
 * **overwriteDuplicateFilename**：設為true時，會覆寫結果資料夾和保留資料夾中的檔案。 設定為false時，名稱會使用具有數值索引尾碼的檔案和資料夾。 預設值為false。
 
 **定義輸入引數值**

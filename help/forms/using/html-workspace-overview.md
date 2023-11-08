@@ -1,18 +1,14 @@
 ---
 title: 使用AEM Forms工作區
-seo-title: Working with AEM Forms workspace
 description: 開始使用AEM Forms工作區，並透過此程式工作流程的快速概觀。
-seo-description: Get started with AEM Forms workspace with this quick overview of the process workflows.
-uuid: 36381e7b-1533-459c-80de-92e806a49cd5
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 866cd9cb-6661-4b0f-a3af-e39453e6e51b
 docset: aem65
 exl-id: 0bedcbd9-2cf8-47da-9440-c773982e550c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -51,7 +47,7 @@ AEM Forms工作區是AEM Forms的一部分。 除了PDF forms之外，工作區�
 
 AEM Forms客戶不支援Flex工作區。 所有使用Flex工作區的客戶應該改用AEM Forms工作區。
 
-在AEM Forms工作區中，與XDP表單相關的預設動作設定檔中的預設轉譯和提交服務已變更，並且已引入新服務。 如需詳細資訊，請參閱 [新的轉譯與提交服務](/help/forms/using/new-render-submit-service.md). 若要移轉與XDP表單搭配使用的現有流程，以便利用這些服務，您可以遵循 [這些步驟](new-render-submit-service.md).
+在AEM Forms工作區中，與XDP表單相關的預設動作設定檔中的預設轉譯和提交服務已變更，並且已引入新服務。 如需詳細資訊，請參閱 [新的轉譯與提交服務](/help/forms/using/new-render-submit-service.md). 若要移轉與XDP表單搭配使用的現有流程，若要使用這些服務，您可以遵循 [這些步驟](new-render-submit-service.md).
 
 **將Flex工作區自訂與AEM Forms工作區對應**
 

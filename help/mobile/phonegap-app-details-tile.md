@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1244'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 2%
 </widget>
 ```
 
-每個廠商應用程式商店(例如Apple App Store或Google Play Store)都需要一或多個行動應用程式的熒幕擷取畫面，才能向客戶顯示您的應用程式詳細資料。 這些熒幕擷取畫面可能會對維度和內容有嚴格的要求（基本上必須真正代表應用程式）。 AEM Apps可支援針對支援的平台選取和管理這些熒幕擷取畫面，並依各供應商應用程式商店的需求檢視連線埠維度。
+每個廠商應用程式商店(例如Apple App Store或Google Play Store)都需要一或多個行動應用程式的熒幕擷取畫面，才能向客戶顯示您的應用程式詳細資料。 這些熒幕擷取畫面可能會對維度和內容有嚴格的要求（基本上必須真正代表應用程式）。 AEM應用程式可支援針對支援的平台選取和管理這些熒幕擷取畫面，並依各供應商應用程式商店的需求檢視連線埠維度。
 
 >[!NOTE]
 >

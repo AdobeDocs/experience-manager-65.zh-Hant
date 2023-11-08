@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 0%
@@ -65,7 +65,7 @@ AEM Forms備份策略包含兩種型別的備份：
 * 變更磁碟機代號或目錄路徑
 * 變更為其他資料庫主機、連線埠或名稱
 
-一般而言，這類復原情況是由裝載應用程式伺服器、資料庫伺服器或表單伺服器的伺服器硬體故障所造成。 除了本節所述的AEM表單特定設定外，如果AEM表單伺服器的主機名稱或IP位址變更，您也應該對AEM表單部署的其他部分（例如負載平衡器和防火牆）進行必要的變更。
+一般而言，這類復原情況是由裝載應用程式伺服器、資料庫伺服器或Forms伺服器的伺服器硬體故障所造成。 除了本節所述的AEM表單特定設定外，如果AEM Forms伺服器的主機名稱或IP位址變更，您也應該對AEM表單部署的其他部分（例如負載平衡器和防火牆）進行必要的變更。
 
 ### 無法變更的專案 {#what-cannot-be-changed}
 
@@ -73,7 +73,7 @@ AEM Forms備份策略包含兩種型別的備份：
 
 ### 復原後重新啟動 {#restarting-after-a-recovery}
 
-復原後重新啟動表單伺服器之前，請先執行下列動作：
+復原後，重新啟動Forms伺服器之前，請先執行下列動作：
 
 1. 以維護模式啟動系統。
 1. 請務必在維護模式下將表單管理員與AEM表單同步：
@@ -104,4 +104,4 @@ AEM Forms備份策略包含兩種型別的備份：
 >
 >只有在這種情況下，您才應該使用此指令碼來變更GDS位置。 若要在AEM表單執行時變更GDS位置，請使用管理主控台。 (請參閱 [設定一般AEM表單設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)*.) *
 
-設定GDS路徑之後，以維護模式啟動Forms伺服器，然後使用管理主控台更新新節點的剩餘檔案系統路徑。 確認所有必要的設定均已更新後，請重新啟動並測試AEM表單。
+設定GDS路徑後，請以維護模式啟動Forms伺服器，然後使用管理主控台更新新節點的剩餘檔案系統路徑。 確認所有必要的設定均已更新後，請重新啟動並測試AEM表單。

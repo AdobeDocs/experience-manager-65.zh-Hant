@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 60%
+source-wordcount: '2582'
+ht-degree: 58%
 
 ---
 
@@ -195,7 +195,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
    >這是因為 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
    >設定和其他變更的建議方法是：
    >
-   >* 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
+   >* 重新建立所需專案（即存在於中的專案） `/libs`)下 `/apps`
    >* 進行任何變更 `/apps`
 
 1. 在此底下 **建立** 具有下列屬性的節點：
@@ -655,11 +655,11 @@ MSM 會使用儲存的語言和國家/地區代碼清單來確定和頁面語言
 
 * 連絡人電子郵件：
 
-   * 不需要推出此屬性，因為在每個國家 (或品牌等) 都會有所不同。
+   * 此屬性不需要推出，因為每個國家/地區（或品牌等）都有不同。
 
 * 索引鍵視覺樣式：
 
-   * 專案需求為要推出此屬性，因為它 (通常) 對所有國家/地區 (或品牌等) 都是通用的。
+   * 專案要求是推出此屬性，因為此屬性（通常）對所有國家/地區（或品牌等）都是通用的。
 
 那麼您需要確保：
 

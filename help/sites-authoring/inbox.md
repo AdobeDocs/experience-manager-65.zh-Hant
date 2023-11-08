@@ -2,9 +2,9 @@
 title: 管理任務的收件匣
 description: 使用Adobe Experience Manager 6.5中的收件匣管理您的工作。
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1143'
 ht-degree: 11%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 11%
 
 ## 標題中的收件匣 {#inbox-in-the-header}
 
-在任一控制檯中，收件匣中目前的專案數量會顯示在標題中。 指標也可以開啟，以提供對需要動作的頁面的快速存取權或收件匣的存取權：
+在任一控制檯中，收件匣中目前的專案數量會顯示在標題中。 也可以開啟指示器，提供對需要動作的頁面的快速存取許可權或收件匣的存取許可權：
 
 ![wf-80](assets/wf-80.png)
 

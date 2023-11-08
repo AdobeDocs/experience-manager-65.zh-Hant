@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ AEM Mobile需要Adobe Analytics帳戶，才能在您的應用程式中收集和�
 
 設定Analytics帳戶後，請建立Content Sync設定，將內容提取至您的行動應用程式。
 
-如需其他詳細資訊，請參閱「設定內容同步內容」。 設定必須指示Content Sync將ADBMobileConfig放入/www目錄。 例如，在Geometrixx Outdoors應用程式中，內容同步設定為： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*. 也有用於開發的設定；但在使用Geometrixx Outdoors的情況下，它與非開發設定相同。
+如需其他詳細資訊，請參閱「設定內容同步內容」。 設定必須指示Content Sync將ADBMobileConfig放入/www目錄。 例如，在Geometrixx Outdoors應用程式中，內容同步設定為： */content/phonegap/geometrixx-outdoors/shell/jcr：content/pge-app/app-config/ams-ADBMobileConfig*. 也有開發設定。 不過，如果有Geometrixx Outdoors，則與非開發設定相同。
 
 如需如何從行動應用程式AEM應用程式儀表板下載ADBMobileConfig的詳細資訊，請參閱Analytics - Mobile Services -AdobeMobile Services SDK設定檔案。
 

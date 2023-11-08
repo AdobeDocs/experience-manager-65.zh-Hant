@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '10228'
+source-wordcount: '10221'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 **允許延伸驗證** 選取以啟用延伸驗證，然後輸入延伸驗證登陸URL。
 
-選取此選項可讓使用者端應用程式使用延伸驗證。 延伸驗證可提供自訂的驗證程式，以及在AEM Forms伺服器上設定的不同驗證選項。 例如，使用者現在可以從Acrobat和Reader使用者端體驗SAML型驗證，而非AEM表單使用者名稱/密碼。 根據預設，登陸URL包含 *localhost* 作為伺服器名稱。 以完整主機名稱取代伺服器名稱。 如果尚未啟用延伸驗證，登陸URL中的主機名稱會自動從基礎URL填入。 另請參閱 [新增延伸驗證提供者](configuring-client-server-options.md#add-the-extended-authentication-provider).
+選取此選項可讓使用者端應用程式使用延伸驗證。 延伸驗證可提供自訂驗證程式，以及在AEM Forms伺服器上設定的不同驗證選項。 例如，使用者現在可以從Acrobat和Reader使用者端體驗SAML型驗證，而非AEM表單使用者名稱/密碼。 根據預設，登陸URL包含 *localhost* 作為伺服器名稱。 以完整主機名稱取代伺服器名稱。 如果尚未啟用延伸驗證，登陸URL中的主機名稱會自動從基礎URL填入。 另請參閱 [新增延伸驗證提供者](configuring-client-server-options.md#add-the-extended-authentication-provider).
 
 ***注意&#x200B;**：Apple Mac OS X搭配Adobe Acrobat 11.0.6版及更新版本均支援延伸驗證。*
 
@@ -99,7 +99,7 @@ AEM forms提供您可針對環境自訂的設定範例。 執行下列步驟：
 >Apple Mac OS X搭配Adobe Acrobat 11.0.6版及更新版本均支援延伸驗證。
 
 1. 取得部署它的範例WAR檔案。 請參閱適合您應用程式伺服器的安裝指南。
-1. 確保表單伺服器具有完整名稱（而非IP位址）做為基底URL，並且是HTTPS URL。 另請參閱 [伺服器組態設定](configuring-client-server-options.md#server-configuration-settings).
+1. 請確定Forms伺服器具有完整名稱（而非IP位址）作為基底URL，並且是HTTPS URL。 另請參閱 [伺服器組態設定](configuring-client-server-options.md#server-configuration-settings).
 1. 從「伺服器組態」頁面啟用「延伸驗證」。 另請參閱 [伺服器組態設定](configuring-client-server-options.md#server-configuration-settings).
 1. 在「使用者管理」設定檔案中新增必要的SSO重新導向URL。 另請參閱 [新增延伸驗證的SSO重新導向URL](configuring-client-server-options.md#add-sso-redirect-urls-for-extended-authentication).
 
@@ -154,7 +154,7 @@ Document Security使用加密演演算法和授權來保護檔案。 當加密�
 
 減少離線檔案威脅的一種方式是避免允許離線存取特別敏感的檔案。 另一種方法是定期捲動主要金鑰。 當Document Security變換金鑰時，任何現有的金鑰都無法再存取受原則保護的檔案。 例如，如果肇事者從被盜的筆記型電腦取得主要金鑰，則該金鑰無法在變換影像發生後用於存取受保護的檔案。 如果您懷疑特定主要金鑰已遭破壞，可以手動將金鑰翻轉過來。
 
-不過，您也必須注意，金鑰變換會影響所有主要金鑰，而不僅僅是金鑰。 它也會降低系統的擴充性，因為使用者端必須儲存更多金鑰才能進行離線存取。 預設金鑰變換頻率是20天。 建議不要將此值設定在14天以下，因為可能會阻止人員檢視離線檔案，且系統效能可能會受到影響。
+但是，金鑰變換會影響所有主要金鑰，而不僅僅是金鑰。 它也會降低系統的擴充性，因為使用者端必須儲存更多金鑰才能進行離線存取。 預設金鑰變換頻率是20天。 建議不要將此值設定在14天以下，因為可能會阻止人員檢視離線檔案，且系統效能可能會受到影響。
 
 在下列範例中，Key1是兩個主要金鑰中較舊的金鑰，而Key2是較新的金鑰。 當您第一次按一下「立即變換金鑰」按鈕時，Key1會變成無效，並產生較新的有效主體金鑰(Key3)。 當使用者與Document Security同步時，通常會透過線上上開啟受保護的檔案來取得金鑰3。 但是，在達到原則中指定的最大離線租期之前，不會強制使用者與Document Security同步。 在第一次金鑰變換後，保持離線狀態的使用者仍可開啟離線檔案，包括受金鑰3保護的檔案，直到他們達到最大離線租期為止。 當您再次按一下「立即變換金鑰」按鈕時，Key2會變成無效，且會建立Key4。 在兩個金鑰變換期間保持離線狀態的使用者無法開啟受金鑰3或金鑰4保護的檔案，直到他們與Document Security同步為止。
 
@@ -258,7 +258,7 @@ Document Security可稽核並記錄與受原則保護檔案、原則、管理員
 
    * 要匯出之稽核事件的最小年齡
    * 單一檔案中可包含的最大稽核事件數。 伺服器會根據此值產生一或多個檔案。
-   * 要建立檔案的資料夾。 此資料夾位於表單伺服器上。 如果資料夾路徑是相對的，則它是相對於應用程式伺服器根目錄的。
+   * 要建立檔案的資料夾。 此資料夾位於Forms伺服器上。 如果資料夾路徑是相對的，則它是相對於應用程式伺服器根目錄的。
    * 用於稽核事件檔案的檔案前置詞
    * 檔案的格式，可以是與Microsoft Excel相容的逗號分隔值(CSV)檔案，也可以是XML檔案。
 

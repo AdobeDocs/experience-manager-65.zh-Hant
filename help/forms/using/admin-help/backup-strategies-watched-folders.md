@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 exl-id: 0d36160a-29fa-4cc4-a0ff-fc681d3e040e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 2%
@@ -174,4 +174,4 @@ ht-degree: 2%
 
 ## 結論 {#conclusion}
 
-由於Watched資料夾的動態且不斷變更的性質，應使用在一天內備份的檔案來還原Watched資料夾。 最佳實務建議備份結果、將輸入資料夾儲存在伺服器上，以及追蹤輸入檔案，以便在失敗時可以重新提交工作。
+由於Watched資料夾的動態且不斷變更的性質，應使用在一天內備份的檔案來還原Watched資料夾。 最佳實務建議備份結果、將輸入資料夾儲存在伺服器上，以及追蹤輸入檔案，以便在發生失敗時可以重新提交工作。

@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 0%
@@ -359,7 +359,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>完成URI作為引數傳送的工作專案 <code>item</code> 和根據工作流程例項前進到下一個節點（由引數定義） <code>route</code> 或 <code>backroute</code> 如果後退一步。<br /> 若引數 <code>delegatee</code> 即會傳送，而工作專案由引數識別 <code>item</code> 已委派給指定的參與者。</td>
+   <td>完成URI作為引數傳送的工作專案 <code>item</code> 和根據工作流程例項前進到下一個節點（由引數定義） <code>route</code> 或 <code>backroute</code> 如果有退一步。<br /> 若引數 <code>delegatee</code> 即會傳送，而工作專案由引數識別 <code>item</code> 已委派給指定的參與者。</td>
   </tr>
  </tbody>
 </table>

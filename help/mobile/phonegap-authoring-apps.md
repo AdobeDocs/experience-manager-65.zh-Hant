@@ -1,16 +1,14 @@
 ---
 title: 編寫行動應用程式
 description: AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立、刪除和編輯應用程式中繼資料。 請依照此頁面瞭解更多資訊。
-uuid: 293b5d29-df7e-42dd-ae64-8c677317e7a5
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
-discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -67,7 +65,7 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 
 透過「管理頁面內容」方塊新增或修改內容後，您就可以透過「內容版本」更新，將這些變更推送給客戶。
 
-內容套件可讓AEM App Author管理AEM中的頁面內容，並要求開發團隊變更您的PhoneGap Shell應用程式（即應用程式架構或基礎架構），然後快速將這些變更推送給您的客戶，而不需要徵詢開發人員以重新提交至各種商店進行發佈。
+內容套件可讓AEM App Author管理AEM中的頁面內容，且讓開發團隊變更您的PhoneGap Shell應用程式（即應用程式架構或基礎架構），然後快速將這些變更推送給您的客戶，而不需要徵詢開發人員以重新提交至各種商店進行發佈。
 
 「內容套件」會為每次更新建立ZIP檔案（視為內容發行套件）。 這些套件包含轉譯應用程式時產生的html資源和html頁面，而且具備足夠的智慧，可僅封裝自上次更新以來已修改的檔案。
 

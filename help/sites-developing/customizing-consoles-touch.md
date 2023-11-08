@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '670'
 ht-degree: 24%
 
 ---
@@ -50,7 +50,7 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 >
 >設定和其他變更的建議方法是：
 >
->1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
+>1. 重新建立所需專案（即存在於中的專案） `/libs`)下 `/apps`
 >
 >1. 進行任何變更 `/apps`
 >

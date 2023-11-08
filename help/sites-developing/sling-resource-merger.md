@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1255'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Sling Resource Merger提供存取及合併資源的服務。 它為兩者提供�
 
 透過Sling Resource Merger，覆蓋/覆寫資源和/或屬性會與原始資源/屬性合併：
 
-* 自訂定義的內容優先順序高於原始定義(亦即 *覆蓋* 或 *覆寫* it)。
+* 自訂定義內容的優先順序高於原始內容(亦即 *覆蓋* 或 *覆寫* it)。
 
 * 必要時， [屬性](#properties) 在自訂中定義，指示如何使用從原始內容合併的內容。
 
@@ -62,7 +62,7 @@ Sling Resource Merger提供存取及合併資源的服務。 它為兩者提供�
 >
 >設定和其他變更的建議方法是：
 >
->1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
+>1. 重新建立所需專案（即存在於中的專案） `/libs`)下 `/apps`
 >
 >1. 進行任何變更 `/apps`
 >
@@ -134,7 +134,7 @@ Sling Resource Merger提供存取及合併資源的服務。 它為兩者提供�
 
 >[!NOTE]
 >
->在使用Sling Resource Merger時（亦即在處理標準觸控式UI時），不建議從複製整個結構 `/libs` 因為這會導致過多資訊保留在 `/apps`. 當系統以任何方式升級時，這可能會導致問題。
+>在使用Sling Resource Merger時（也就是說，在處理標準觸控式UI時），不建議從複製整個結構 `/libs` 因為這會導致過多資訊保留在 `/apps`. 當系統以任何方式升級時，這可能會導致問題。
 
 ### 使用案例 {#use-cases}
 

@@ -6,9 +6,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2075'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-本檔案說明任何SPA架構應履行的一般合約(即AEM支援層的型別)，以在AEM內實作可編輯的SPA元件。
+本檔案說明任何SPA架構都應該履行的一般合約(即AEM支援層的型別)，以便在AEM內實作可編輯的SPA元件。
 
 >[!NOTE]
 >

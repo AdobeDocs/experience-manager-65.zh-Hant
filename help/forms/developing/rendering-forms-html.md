@@ -12,7 +12,7 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '4143'
 ht-degree: 0%
@@ -69,11 +69,11 @@ Forms服務會根據網頁瀏覽器的HTTP要求，將表單轉譯為HTML。 將
 
 **.fsc-ds-ssb**：此樣式表適用於空白符號欄位的情況。
 
-**.fsc-ds-ssv**：此樣式表適用於有效符號欄位的情況。
+**.fsc-ds-ssv**：此樣式表適用於有有效符號欄位的情況。
 
-**.fsc-ds-ssc**：此樣式表適用於有效符號欄位但資料已變更的情況。
+**.fsc-ds-ssc**：此樣式表適用於有「有效符號」欄位但資料已變更的情況。
 
-**.fsc-ds-ssi**：此樣式表適用於無效符號欄位的情況。
+**.fsc-ds-ssi**：此樣式表適用於有無效符號欄位的情況。
 
 **.fsc-ds-popup-bg**：未使用此樣式表屬性。
 

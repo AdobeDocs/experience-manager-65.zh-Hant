@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: facbeab2-de95-4778-894c-faa771d3391e
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1323'
 ht-degree: 0%
@@ -23,7 +23,7 @@ AEM Forms數位簽名可使用儲存在HSM上的憑證來套用伺服器端數�
 
 >[!NOTE]
 >
->變更HSM組態後，請重新啟動AEM表單伺服器。
+>變更HSM組態後，請重新啟動AEM Forms伺服器。
 
 ## 當HSM裝置上線時，建立HSM認證的別名 {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-online}
 
@@ -50,7 +50,7 @@ AEM Forms數位簽名可使用儲存在HSM上的憑證來套用伺服器端數�
 1. 在「槽型別」清單中，選取「槽標識」、「槽索引」或「Token名稱」，並在「槽資訊」方塊中指定一個值。 AEM Forms使用這些設定來決定認證儲存在HSM上的位置。
 
    * **Token名稱：** 對應至分割區名稱（例如HSMPART1）。
-   * **位置識別碼：** 插槽ID是與插槽相對應的整數，而插槽又與分割區相對應。 例如，使用者端（表單伺服器）會先向HSMPART1資料分割註冊。 這會將插槽1對應至此使用者端的HSMPART1磁碟分割。 由於HSMPART1是第一個登入的磁碟分割，因此插槽ID為1，而您會將Slot Info設為1。
+   * **位置識別碼：** 插槽ID是與插槽相對應的整數，而插槽又與分割區相對應。 例如，使用者端(Forms伺服器)會先在HSMPART1資料分割中註冊。 這會將插槽1對應至此使用者端的HSMPART1磁碟分割。 由於HSMPART1是第一個登入的磁碟分割，因此插槽ID為1，而您會將Slot Info設為1。
 
      插槽ID是依使用者端而設定。 如果您將第二部電腦註冊到不同的磁碟分割（例如，同一個HSM裝置上的HSMPART2），則插槽1會與該使用者端的HSMPART2磁碟分割相關聯。
 
@@ -83,7 +83,7 @@ AEM Forms數位簽名可使用儲存在HSM上的憑證來套用伺服器端數�
 
 ## 重設所有HSM連線 {#reset-all-hsm-connections}
 
-在Forms伺服器與HSM裝置之間的網路工作階段發生任何中斷後，重設與HSM裝置的開啟連線。 例如，網路中斷或HSM裝置因軟體更新而離線都會造成中斷。 中斷後，現有連線會過時，針對這些連線提出的任何簽署請求都會失敗。 使用「重設所有HSM連線」選項可清除舊連線。
+在Forms伺服器與HSM裝置之間的網路工作階段中斷後，重設與HSM裝置的開啟連線。 例如，網路中斷或HSM裝置因軟體更新而離線都會造成中斷。 中斷後，現有連線會過時，針對這些連線提出的任何簽署請求都會失敗。 使用「重設所有HSM連線」選項可清除舊連線。
 
 1. 在管理控制檯中，按一下「設定」>「信任存放區管理」>「HSM認證」。
 1. 按一下「重設所有HSM連線」。

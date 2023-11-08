@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 exl-id: b598ef47-49ff-4806-8cc7-4394aa068eaa
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '940'
 ht-degree: 0%
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # 適用於HTML5表單的Form Bridge API {#form-bridge-apis-for-html-forms}
 
-您可以使用Form Bridge API來開啟XFA型HTML5表單與您的應用程式之間的通訊通道。 Form Bridge API提供 **connect** 用於建立連線的API。
+您可以使用Form Bridge API開啟XFA型HTML5表單與應用程式之間的通訊通道。 Form Bridge API提供 **connect** 用於建立連線的API。
 
-此 **connect** API接受處理常式作為引數。 在XFA型HTML5表單與表單橋接器之間成功建立連線後，就會叫用控制代碼。
+此 **connect** API接受處理常式作為引數。 在XFA型HTML5表單與Form Bridge之間建立成功連線後，就會叫用控制代碼。
 
 您可以使用以下範常式式碼來建立連線。
 
@@ -52,21 +52,21 @@ window.addEventListener("FormBridgeInitialized",
 **isConnected()** 檢查表單狀態是否已初始化
 
 * **輸入**：無
-* **輸出**： **True** 如果XFA表單狀態已初始化
+* **輸出**： **真** 如果XFA表單狀態已初始化
 
 * **錯誤**：無
 
-**connect(handler， context)** 連線至FormBridge並在連線完成且表單狀態初始化後執行函式
+**connect(handler， context)** 連線至FormBridge，並在連線完成且表單狀態初始化後執行函式
 
 * **輸入**:
 
    * **處理常式**：連線Form Bridge後要執行的函式
-   * **內容**：前後關聯（這個）的目標物件 *處理常式* 函式已設定。
+   * **內容**：此物件的前後關聯（這個） *處理常式* 函式已設定。
 
 * **輸出**：無
 * **錯誤**：無
 
-**getDataXML(options)** 以XML格式傳回目前的表單資料
+**getdataxml(options)** 以XML格式傳回目前的表單資料
 
 * **輸入:**
 
@@ -74,14 +74,14 @@ window.addEventListener("FormBridgeInitialized",
 
       * **錯誤**：錯誤處理常式函式
       * **成功**：成功處理常式函式。 此函式傳遞一個包含XML的物件 *資料* 屬性。
-      * **內容**：前後關聯（這個）的目標物件 *成功* 函式已設定
-      * **validationChecker**：呼叫以檢查從伺服器收到的驗證錯誤的函式。 驗證函式傳遞了錯誤字串陣列。
-      * **formState**：必須傳回資料XML之XFA表單的JSON狀態。 如果未指定，則會傳回目前轉譯之表單的資料XML。
+      * **內容**：此物件的前後關聯（這個） *成功* 函式已設定
+      * **validationChecker**：呼叫以檢查從伺服器收到的驗證錯誤的函式。 驗證函式傳遞錯誤字串的陣列。
+      * **formState**：必須傳回資料XML的XFA表單的JSON狀態。 如果未指定，它會傳回目前轉譯之表單的資料XML。
 
 * **輸出：** 無
 * **錯誤：** 無
 
-**registerConfig(configName， config)** 向FormBridge註冊使用者/入口網站的特定設定。 這些設定會覆寫預設設定。 在設定區段中指定支援的設定。
+**registerConfig(configName， config)** 向FormBridge註冊使用者/入口網站的特定設定。 這些設定會覆寫預設設定。 支援的設定會在設定區段中指定。
 
 * **輸入:**
 
@@ -89,42 +89,40 @@ window.addEventListener("FormBridgeInitialized",
 
       * **widgetConfig：** 允許使用者以自訂Widget覆寫表單中的預設Widget。 設定會覆寫，如下所示：
 
-         *formBridge.registerConfig(&quot;widgetConfig&quot;：{/&amp;ast；configuration&amp;ast；/})*
+        *formBridge.registerConfig(&quot;widgetConfig&quot;：{/&amp;ast；configuration&amp;ast；/})*
 
       * **pagingConfig：** 允許使用者覆寫僅轉譯第一頁的預設行為。 設定會覆寫，如下所示：
 
-         *window.formBridge.registerConfig(&quot;pagingConfig&quot;：{pagingDisabled： &lt;true false=&quot;&quot;>，shrinkPageDisabled： &lt;true false=&quot;&quot;> })。*
+        *window.formBridge.registerConfig(&quot;pagingConfig&quot;：{pagingDisabled： &lt;true false=&quot;&quot;>，shrinkPageDisabled： &lt;true false=&quot;&quot;> })。*
 
-      * **Loggingconfig：** 允許使用者覆寫記錄層級、停用類別的記錄，或是否要顯示記錄主控台或傳送至伺服器。 設定可以覆寫，如下所示：
+      * **記錄組態：** 允許使用者覆寫記錄層級、停用類別的記錄，或者是否要顯示記錄主控台或傳送至伺服器。 設定可以覆寫，如下所示：
 
-      ```javascript
-      formBridge.registerConfig{
-        "LoggerConfig" : {
-      {
-      "on":`<true *| *false>`,
-      "category":`<array of categories>`,
-      "level":`<level of categories>`, "
-      type":`<"console"/"server"/"both">`
-      }
-        }
-      ```
+     ```javascript
+     formBridge.registerConfig{
+       "LoggerConfig" : {
+     {
+     "on":`<true *| *false>`,
+     "category":`<array of categories>`,
+     "level":`<level of categories>`, "
+     type":`<"console"/"server"/"both">`
+     }
+       }
+     ```
 
       * **SubmitServiceProxyConfig：** 允許使用者註冊提交和記錄器Proxy服務。
 
-         ```javascript
-         window.formBridge.registerConfig("submitServiceProxyConfig",
-         {
-         "submitServiceProxy" : "`<submitServiceProxy>`",
-         "logServiceProxy": "`<logServiceProxy>`",
-         "submitUrl" : "`<submitUrl>`"
-         });
-         ```
+        ```javascript
+        window.formBridge.registerConfig("submitServiceProxyConfig",
+        {
+        "submitServiceProxy" : "`<submitServiceProxy>`",
+        "logServiceProxy": "`<logServiceProxy>`",
+        "submitUrl" : "`<submitUrl>`"
+        });
+        ```
 
    * **設定：** 設定的值
 
-
-
-* **輸出：** 包含中組態原始值的物件 *資料* 屬性。
+* **輸出：** 包含原始組態值的物件 *資料* 屬性。
 
 * **錯誤：** 無
 
@@ -137,7 +135,7 @@ window.addEventListener("FormBridgeInitialized",
 * **輸出：** 無
 * **錯誤：** 無
 
-**showFields(fieldArray)** 顯示fieldArray中提供Som運算式的欄位。 將所提供欄位的presence屬性設定為可見
+**showFields(fieldArray)** 顯示其Som運算式在fieldArray中提供的欄位。 將所提供欄位的presence屬性設定為可見
 
 * **輸入:**
 
@@ -150,12 +148,12 @@ window.addEventListener("FormBridgeInitialized",
 
 * **輸入**：無
 * **輸出**：無
-* **錯誤**：如果未初始化表單狀態，則會擲回例外狀況
+* **錯誤**：如果表單狀態未初始化，則擲回例外狀況
 
 **getFormState()** 傳回代表表單狀態的JSON
 
 * **輸入：** 無
-* **輸出：** 物件，內含代表下列專案之目前表單狀態的JSON： *資料* 屬性。
+* **輸出：** 物件，其中包含代表中目前表單狀態的JSON *資料* 屬性。
 
 * **錯誤：** 無
 
@@ -167,7 +165,7 @@ window.addEventListener("FormBridgeInitialized",
 
       * **錯誤**：錯誤處理常式函式
       * **成功**：成功處理常式函式
-      * **內容**：前後關聯（這個）的目標物件 *成功* 函式已設定
+      * **內容**：此物件的前後關聯（這個） *成功* 函式已設定
       * **formState**：表單的JSON狀態。 表單會還原為JSON狀態。
 
 * **輸出：** 無
@@ -175,23 +173,23 @@ window.addEventListener("FormBridgeInitialized",
 
 **setFocus (som)** 將焦點設定在Som運算式中指定的欄位
 
-* **輸入：** 要設定焦點的欄位的一些運算式
+* **輸入：** 要設定焦點的欄位的SOM運算式
 * **輸出：** 無
-* **錯誤：** Som運算式不正確時擲回例外狀況
+* **錯誤：** 如果Som運算式不正確，則擲回例外狀況
 
 **setFieldValue (som， value)** 設定指定Som運算式的欄位值
 
 * **輸入:**
 
-   * **som：** 包含欄位的Som運算式的陣列。 用來設定欄位值的som運算式。
+   * **som：** 包含欄位Som運算式的陣列。 用來設定欄位值的som運算式。
    * **值：** 陣列包含對應至中提供的Som運算式的值 **som**&#x200B;陣列。 如果值的資料型別與fieldType不同，則不會修改值。
 
 * **輸出：** 無
-* **錯誤：** Som運算式不正確時擲回例外狀況
+* **錯誤：** 如果Som運算式不正確，則擲回例外狀況
 
 **getFieldValue (som)** 傳回指定Som運算式的欄位值
 
-* **輸入：** 包含必須擷取其值之欄位的Som運算式的陣列
+* **輸入：** 包含必須擷取其值的欄位之Som運算式的陣列
 * **輸出：** 包含結果為Array的物件 **資料** 屬性。
 
 * **錯誤：** 無
@@ -213,20 +211,20 @@ if(a.errors) {
 
 * **輸入:**
 
-   * **som：** 包含欄位的Som運算式的陣列
+   * **som：** 包含欄位Som運算式的陣列
    * **屬性**：需要其值的屬性名稱
 
 * **輸出：** 包含結果為Array的物件 *資料* 屬性
 
 * **錯誤：** 無
 
-**setFieldProperties（som，屬性，值）** 為Som運算式中指定的所有欄位設定指定屬性的值
+**setFieldProperties（som，屬性，值）** 為Som運算式中指定的所有欄位設定給定屬性的值
 
 * **輸入:**
 
    * **som：** 包含必須設定其值的欄位之Som運算式的陣列
    * **屬性**：必須設定值的屬性
-   * **值：** 包含Som運算式中所指定欄位之指定屬性的值的陣列
+   * **值：** 陣列包含Som運算式中所指定欄位之指定屬性的值
 
 * **輸出：** 無
 * **錯誤：** 無

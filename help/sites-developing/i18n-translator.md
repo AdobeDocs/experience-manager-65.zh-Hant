@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2319'
 ht-degree: 1%
 
 ---
@@ -300,7 +300,7 @@ Translator工具底部的搜尋列提供字串選取選項：
 
    >[!NOTE]
    >
-   >翻譯人員只會儲存實際語言的翻譯 [出現在字典中](#creating-a-dictionary) (亦即，位於字典路徑下方，例如 `/apps/myProject/i18n`)。
+   >翻譯人員只會儲存實際語言的翻譯 [出現在字典中](#creating-a-dictionary) (也就是說，在字典路徑底下，例如 `/apps/myProject/i18n`)。
    >
    >請確定這些對應至格線中所顯示的語言。
 

@@ -4,7 +4,7 @@ description: 瞭解如何部署AEM內容與商務專案。
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 7%
@@ -57,7 +57,7 @@ CIF附加元件提供GraphQL Proxy servlet，位於 `/api/graphql` 可選擇性�
 
 您可以按照以下步驟，透過CIFCloud Service設定來針對專案調整此設定：
 
-1. 在AEM中，前往「工具」 — >「Cloud Service」 — >「CIF設定」
+1. 在AEM中，前往「工具>Cloud Service> CIF設定」
 
 2. 選取您要變更的商務設定
 

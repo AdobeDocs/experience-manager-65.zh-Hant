@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '7661'
+source-wordcount: '7662'
 ht-degree: 1%
 
 ---
@@ -153,7 +153,7 @@ JEE上的AEM Forms可高度自訂，可在許多不同的環境中運作。 部�
 
 在JEE上成功安裝AEM Forms後，請務必從安全性角度定期維護環境。
 
-下節詳細說明了建議用來保護已部署表單伺服器的不同工作。
+下節將詳細描述建議用來保護已部署Forms伺服器的各種工作。
 
 ### AEM Forms安全性 {#aem-forms-security}
 
@@ -169,7 +169,7 @@ JEE上的AEM Forms預設會使用LocalSystem帳戶安裝服務。 內建的Local
 
 若要使用特定的非管理帳戶，執行已部署AEM Forms on JEE的應用程式伺服器，請遵循下列指示：
 
-1. 在Microsoft Management Console (MMC)中，建立表單伺服器服務的本機使用者，以下列身分登入：
+1. 在Microsoft管理主控台(MMC)中，建立Forms伺服器服務的本機使用者，以以下身分登入：
 
    * 選取 **使用者無法變更密碼**.
    * 在 **成員隸屬於** 標籤，確認 **使用者** 群組已列出。
@@ -182,7 +182,7 @@ JEE上的AEM Forms預設會使用LocalSystem帳戶安裝服務。 內建的Local
 1. 在JEE上連按兩下AEM Forms的JBoss並停止服務。
 1. 在 **登入** 索引標籤，選取 **此帳戶**，瀏覽您建立的使用者帳戶，然後輸入帳戶的密碼。
 1. 在MMC中，開啟 **本機安全性設定** 並選取 **本機原則** > **使用者許可權指派**.
-1. 將下列許可權指派給表單伺服器執行所在的使用者帳戶：
+1. 將下列許可權指派給Forms伺服器執行所在的使用者帳戶：
 
    * 拒絕透過終端機服務登入
    * 拒絕本機登入
@@ -273,7 +273,7 @@ Configuration Manager可讓您將Acrobat Reader DC擴充功能認證上傳至JEE
 
 **停用所有非必要的匿名存取**
 
-某些表單伺服器服務具有匿名呼叫者可叫用的操作。 如果不需要匿名存取這些服務，請依照中的步驟加以停用 [停用對服務的非必要匿名存取](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services).
+有些Forms Server服務具有可由匿名呼叫者叫用的操作。 如果不需要匿名存取這些服務，請依照中的步驟加以停用 [停用對服務的非必要匿名存取](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services).
 
 #### 變更預設的管理員密碼 {#change-the-default-administrator-password}
 
@@ -401,7 +401,7 @@ Web服務定義語言(WSDL)產生應該只針對開發環境啟用，在這些�
 
 ### 保護對資料庫中敏感內容的存取 {#protecting-access-to-sensitive-content-in-the-database}
 
-AEM Forms資料庫結構描述包含有關系統設定和業務流程的敏感資訊，應隱藏在防火牆之後。 資料庫應視為與表單伺服器位於相同的信任界限內。 為了防止資訊洩漏及商業資料遭竊，資料庫必須由資料庫管理員(DBA)設定為僅允許授權管理員存取。
+AEM Forms資料庫結構描述包含有關系統設定和業務流程的敏感資訊，應隱藏在防火牆之後。 系統應將資料庫視為與Forms伺服器位於相同的信任界限內。 為了防止資訊洩漏及商業資料遭竊，資料庫必須由資料庫管理員(DBA)設定為僅允許授權管理員存取。
 
 作為新增的預防措施，您應該考慮使用資料庫廠商專用的工具，對包含以下資料的表格中的欄進行加密：
 
@@ -537,13 +537,13 @@ A *反向Proxy* 可用來確保外部和內部使用者均可使用JEE網頁應�
   </tr> 
   <tr> 
    <td><p>/soap/*</p> </td> 
-   <td><p>表單伺服器Web服務的資訊頁</p> </td> 
+   <td><p>Forms Server Web服務的資訊頁</p> </td> 
    <td><p>否</p> </td> 
    <td><p>否</p> </td> 
   </tr> 
   <tr> 
    <td><p>/soap/services/*</p> </td> 
-   <td><p>所有表單伺服器服務的網頁服務URL</p> </td> 
+   <td><p>所有Forms Server服務的Web服務URL</p> </td> 
    <td><p>否</p> </td> 
    <td><p>否</p> </td> 
   </tr> 
@@ -674,7 +674,7 @@ CSRF的通用特性如下：
 JEE上的AEM Forms使用反向連結篩選功能來封鎖CSRF攻擊。 本節會使用下列辭彙來說明反向連結篩選機制：
 
 * **允許的反向連結：** 反向連結是傳送請求至伺服器的來源頁面位址。 對於JSP頁面或表單，反向連結通常是瀏覽歷史記錄中的上一頁。 影像的反向連結通常是顯示影像的頁面。 您可以識別允許存取您伺服器資源的反向連結，方法是將其新增至允許的反向連結清單。
-* **允許的反向連結例外：** 您可能想要限制允許的反向連結清單中特定反向連結的存取範圍。 若要強制執行此限制，您可以將該反向連結的個別路徑新增至「允許的反向連結例外」清單。 源自允許的反向連結例外清單中路徑的請求無法叫用表單伺服器上的任何資源。 您可以為特定應用程式定義「允許的反向連結例外」，也可以使用適用於所有應用程式的例外全域清單。
+* **允許的反向連結例外：** 您可能想要限制允許的反向連結清單中特定反向連結的存取範圍。 若要強制執行此限制，您可以將該反向連結的個別路徑新增至「允許的反向連結例外」清單。 源自允許的反向連結例外清單中路徑的請求無法叫用Forms伺服器上的任何資源。 您可以為特定應用程式定義「允許的反向連結例外」，也可以使用適用於所有應用程式的例外全域清單。
 * **允許的URI：** 這是在不勾選Referrer Header的情況下提供的資源清單。 可以將資源（例如說明頁面）新增至此清單，這些資源不會導致伺服器上的狀態變更。 無論反向連結為何，反向連結篩選器都不會封鎖允許URI清單中的資源。
 * **Null查閱者：** 未關聯或並非源自上層網頁的伺服器要求會被視為來自Null反向連結的要求。 例如，當您開啟新的瀏覽器視窗、輸入位址並按Enter鍵時，傳送至伺服器的反向連結為Null。 案頭應用程式（.NET或SWING）向Web伺服器發出HTTP要求，也會將Null反向連結傳送至伺服器。
 
@@ -682,12 +682,12 @@ JEE上的AEM Forms使用反向連結篩選功能來封鎖CSRF攻擊。 本節會
 
 「反向連結篩選」程式的說明如下：
 
-1. 表單伺服器會檢查用於叫用的HTTP方法：
+1. Forms伺服器會檢查用於叫用的HTTP方法：
 
-   1. 如果是POST，表單伺服器會執行反向連結標題檢查。
-   1. 如果是GET，則表單伺服器會略過反向連結檢查，除非 *CSRF_CHECK_GETS* 設為true，則會執行Referrer標題檢查。 *CSRF_CHECK_GETS* 指定於 *web.xml* 應用程式的檔案。
+   1. 如果是POST，Forms伺服器會執行反向連結標題檢查。
+   1. 如果是GET，則Forms伺服器會略過反向連結檢查，除非 *CSRF_CHECK_GETS* 設為true，則會執行Referrer標題檢查。 *CSRF_CHECK_GETS* 指定於 *web.xml* 應用程式的檔案。
 
-1. 表單伺服器會檢查要求的URI是否存在於允許清單中：
+1. Forms伺服器會檢查要求的URI是否存在於允許清單中：
 
    1. 如果URI已加入允許清單，則伺服器會接受要求。
    1. 如果請求的URI未被加入允許清單，則伺服器會擷取請求的反向連結。
@@ -706,7 +706,7 @@ JEE上的AEM Forms使用反向連結篩選功能來封鎖CSRF攻擊。 本節會
 
 JEE上的AEM Forms提供反向連結篩選條件，用以指定可存取您伺服器資源的反向連結。 依預設，反向連結篩選器不會篩選使用安全HTTP方法(例如GET)的請求，除非 *CSRF_CHECK_GETS* 設為true。 如果「允許的反向連結」專案的連線埠號碼設為0，則無論連線埠號碼為何，JEE上的AEM Forms都將允許從該主機傳送帶有「反向連結」的所有要求。 如果未指定連線埠號碼，則只允許來自預設連線埠80 (HTTP)或連線埠443 (HTTPS)的請求。 如果刪除「允許的反向連結」清單中的所有專案，則會停用反向連結篩選。
 
-第一次安裝Document Services時，「允許的反向連結」清單會以安裝Document Services的伺服器位址更新。 伺服器的專案包括伺服器名稱、IPv4位址、啟用IPv6時的IPv6位址、回送位址以及localhost專案。 主機作業系統會傳回新增至「允許的反向連結」清單的名稱。 例如，IP位址為10.40.54.187的伺服器將包含下列專案： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. 對於主機作業系統傳回的任何未限定名稱（沒有IPv4位址、IPv6位址或限定網域名稱的名稱），允許清單不會更新。 修改允許的反向連結清單以符合您的業務環境。 請勿使用預設的允許反向連結清單在生產環境中部署表單伺服器。 修改任何「允許的反向連結」、「反向連結例外」或URI後，請確定您重新啟動伺服器，變更才會生效。
+第一次安裝Document Services時，「允許的反向連結」清單會以安裝Document Services的伺服器位址更新。 伺服器的專案包括伺服器名稱、IPv4位址、啟用IPv6時的IPv6位址、回送位址以及localhost專案。 主機作業系統會傳回新增至「允許的反向連結」清單的名稱。 例如，IP位址為10.40.54.187的伺服器將包含下列專案： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. 對於主機作業系統傳回的任何未限定名稱（沒有IPv4位址、IPv6位址或限定網域名稱的名稱），允許清單不會更新。 修改允許的反向連結清單以符合您的業務環境。 請勿使用預設的「允許的反向連結」清單，在生產環境中部署Forms伺服器。 修改任何「允許的反向連結」、「反向連結例外」或URI後，請確定您重新啟動伺服器，變更才會生效。
 
 **管理允許的反向連結清單**
 
@@ -727,7 +727,7 @@ JEE上的AEM Forms提供API來管理允許的反向連結例外清單和允許�
 
 如需API的詳細資訊，請參閱* AEM Forms on JEE API參考資料* 。
 
-使用 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** 全域層次的「允許的反向連結例外」清單，亦即定義適用於所有應用程式的例外。 此清單僅包含具有絕對路徑的URI (例如 `/index.html`)或相對路徑(例如， `/sample/`)。 您也可以將規則運算式附加至相對URI的結尾，例如， `/sample/(.)*`.
+使用 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** 全域層次的「允許的反向連結例外」清單，也就是定義適用於所有應用程式的例外。 此清單僅包含具有絕對路徑的URI (例如 `/index.html`)或相對路徑(例如， `/sample/`)。 您也可以將規則運算式附加至相對URI的結尾，例如， `/sample/(.)*`.
 
 此 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** 清單ID在 `UMConstants` 的類別 `com.adobe.idp.um.api` 名稱空間，可在 `adobe-usermanager-client.jar`. 您可以使用AEM Forms API來建立、修改或編輯此清單。 例如，若要建立「允許的全域反向連結例外」清單，請使用：
 
@@ -739,7 +739,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 **停用反向連結篩選**
 
-如果反向連結篩選完全封鎖對表單伺服器的存取，且您無法編輯允許的反向連結清單，您可以更新伺服器啟動指令碼並停用反向連結篩選。
+如果反向連結篩選完全封鎖對Forms伺服器的存取，且您無法編輯允許的反向連結清單，您可以更新伺服器啟動指令碼並停用反向連結篩選。
 
 包含 `-Dlc.um.csrffilter.disabled=true` 啟動指令碼中的JAVA引數並重新啟動伺服器。 請務必在適當重新設定「允許的反向連結」清單後，刪除JAVA引數。
 
@@ -749,7 +749,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 **CSRF_CHECK_GETS** 控制GET請求的反向連結檢查。 如果未定義此引數，預設值會設為false。 僅當您要篩選GET請求時才包含此引數。
 
-**CSRF_ALLOWED_REFERER_EXCEPTIONS** 是「允許的反向連結例外」清單的ID。 反向連結篩選可防止來自清單ID所識別清單中反向連結的請求，在表單伺服器上叫用任何資源。
+**CSRF_ALLOWED_REFERER_EXCEPTIONS** 是「允許的反向連結例外」清單的ID。 反向連結篩選器可防止來自清單ID所識別清單中反向連結的請求，從Forms伺服器上叫用任何資源。
 
 **CSRF_ALLOWED_URIS_LIST_NAME** 是「允許的URI」清單的ID。 無論請求中的Referrer標頭值為何， Referrer Filter都不會封鎖針對清單ID所識別清單中任何資源的請求。
 
@@ -835,7 +835,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
     <ul> 
      <li><p>Web服務使用者端應用程式，例如.NET應用程式</p> </li> 
      <li><p>Adobe Reader®針對JEE伺服器Web服務上的AEM Forms使用SOAP</p> </li> 
-     <li><p>AdobeFlash®應用程式會將SOAP用於表單伺服器Web服務</p> </li> 
+     <li><p>AdobeFlash®應用程式使用SOAP進行Forms Server Web服務</p> </li> 
      <li><p>在SOAP模式中使用時，針對JEE SDK呼叫進行AEM Forms</p> </li> 
      <li><p>Workbench設計環境</p> </li> 
     </ul> </td> 
@@ -995,7 +995,7 @@ JEE上的AEM Forms整套金鑰安裝依預設會使用「本機系統」帳戶�
 
 #### 使用非管理帳戶執行應用程式伺服器 {#run-the-application-server-using-a-non-administrative-account}
 
-1. 在Microsoft Management Console (MMC)中，建立表單伺服器服務的本機使用者，以下列身分登入：
+1. 在Microsoft管理主控台(MMC)中，建立Forms伺服器服務的本機使用者，以以下身分登入：
 
    * 選取 **使用者無法變更密碼**.
    * 在 **成員隸屬於** 索引標籤中，確定已列出「使用者」群組。
@@ -1003,7 +1003,7 @@ JEE上的AEM Forms整套金鑰安裝依預設會使用「本機系統」帳戶�
 1. 選取 **設定** > **管理工具** > **服務**.
 1. 按兩下應用程式伺服器服務並停止該服務。
 1. 在 **登入** 索引標籤，選取 **此帳戶**，瀏覽您建立的使用者帳戶，然後輸入帳戶的密碼。
-1. 在「本機安全性設定」視窗的「使用者許可權指派」下，將下列許可權授與表單伺服器執行所在的使用者帳戶：
+1. 在「本機安全性設定」視窗的「使用者許可權指派」下，將下列許可權授與執行Forms伺服器的使用者帳戶：
 
    * 拒絕透過終端機服務登入
    * 拒絕登入locallyxx
@@ -1040,7 +1040,7 @@ JEE上的AEM Forms透過下列方式使用檔案系統：
 * 將用來支援所安裝解決方案元件的檔案儲存在全域封存存放區
 * Watched資料夾存放區會從檔案系統資料夾位置將用作服務輸入的捨棄檔案
 
-當使用watched資料夾作為透過表單伺服器服務傳送和接收檔案的方式時，應採取額外的檔案系統安全性預防措施。 當使用者將內容放入watched資料夾中時，該內容會透過watched資料夾公開。 在此情況下，服務不會驗證實際的一般使用者。 相反，它依賴在檔案夾層級設定的ACL和共用層級安全性，以確定誰能夠有效地叫用服務。
+當使用watched資料夾作為Forms伺服器服務傳送和接收檔案的方式時，應採取檔案系統安全性的額外預防措施。 當使用者將內容放入watched資料夾中時，該內容會透過watched資料夾公開。 在此情況下，服務不會驗證實際的一般使用者。 相反，它依賴在檔案夾層級設定的ACL和共用層級安全性，以確定誰能夠有效地叫用服務。
 
 ## JBoss專屬安全性建議 {#jboss-specific-security-recommendations}
 

@@ -1,16 +1,14 @@
 ---
 title: 編輯啟動
 description: 為您的頁面（或一組頁面）建立啟動後，您可以在頁面的啟動副本中編輯內容。
-uuid: 1f2c2e53-73a3-4bd7-b2c7-425491bc0118
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 18%
@@ -82,7 +80,7 @@ livecopy可用來將來源 *分支的內容*** 同步到啟動分支 (以便讓�
 
    >[!NOTE]
    >
-   >若要將頁面新增至啟動項，這些頁面必須位於共同語言根目錄下；亦即，在單一網站內。
+   >若要將頁面新增至啟動，這些頁面必須位於共同語言根目錄下；也就是說，在單一網站內。
 
 ## 編輯啟動設定 {#editing-a-launch-configuration}
 

@@ -2,10 +2,10 @@
 title: 使用 Edge Delivery Services
 description: 使用 Edge Delivery Services (EDS)
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 97%
+source-wordcount: '608'
+ht-degree: 93%
 
 ---
 
@@ -20,7 +20,7 @@ Edge Delivery 能讓您建立快速開發的環境，作者可以在其中快速
 * 以文件為主的編寫 (例如 Microsoft Word 或 Google Docs) - [請參考此連結以了解更多詳情](https://www.hlx.live/docs/authoring)。
 * 頁面編輯器/Universal Editor - 請聯絡您的 Adobe 銷售代表。
 
-在以文件為主編寫情況中，您可以使用各種來源，例如 Microsoft Word 和 Google Docs。來自這些來源的文件會成為您網站上的頁面。標題、清單、影像、字體元素、影片都可以從初始來源傳輸到您的網站。您可以為 SEO 目的新增中繼資料，或者使用塊處理結構化內容並新增功能。
+如果有檔案式撰寫，您可以使用各種來源，例如Microsoft Word和Google Docs。 來自這些來源的文件會成為您網站上的頁面。標題、清單、影像、字體元素、影片都可以從初始來源傳輸到您的網站。您可以為 SEO 目的新增中繼資料，或者使用塊處理結構化內容並新增功能。
 
 ## 發佈 {#publishing-edge}
 

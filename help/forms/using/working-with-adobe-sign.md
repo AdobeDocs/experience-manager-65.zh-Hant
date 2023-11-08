@@ -11,9 +11,9 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3935'
+source-wordcount: '3936'
 ht-degree: 2%
 
 ---
@@ -201,7 +201,7 @@ ht-degree: 2%
 
    * **[!UICONTROL 簽署者和人員在填寫相同的表單嗎？]：** 選取 **是**，如果表單填寫者與第一個簽署者是同一個人。 如果選項設為 **否，** 則請勿在調適型表單中使用簽名步驟元件。 如果表單包含「簽名步驟」元件，則欄位會自動設定為「是」。
 
-   * **[!UICONTROL 簽署者電子郵件地址]：** 指定簽署者的電子郵件地址。 簽署者在指定的電子郵件地址上接收要簽署的檔案/表單。 您可以選擇使用表單欄位、登入使用者的AEM使用者設定檔中提供的電子郵件地址，或手動輸入電子郵件地址。 此為強制步驟。 確保第一個簽名者或唯一簽名者（若為單一簽名者）的電子郵件地址與 [!DNL Adobe Sign] 用來設定AEM雲端服務的帳戶。
+   * **[!UICONTROL 簽署者電子郵件地址]：** 指定簽署者的電子郵件地址。 簽署者在指定的電子郵件地址上接收要簽署的檔案/表單。 您可以選擇使用表單欄位、登入使用者的AEM使用者設定檔中提供的電子郵件地址，或手動輸入電子郵件地址。 此為強制步驟。 確認第一個簽署者或唯一簽署者（若有單一簽署者）的電子郵件地址與 [!DNL Adobe Sign] 用來設定AEM雲端服務的帳戶。
 
    * **[!UICONTROL 簽署者驗證方法]：** 指定在開啟表單以供簽署之前驗證使用者的方法。 您可以在電話、知識庫及以社交身分為基礎的驗證之間進行選擇。 政府用Adobe Acrobat Sign Solutions僅提供電話和知識型驗證選項。
 
@@ -355,7 +355,7 @@ ht-degree: 2%
 * 確定上的API應用程式 [!DNL Adobe Sign] 用於設定的伺服器 [!DNL Adobe Sign] Cloud Service有必要的許可權。
 * 如果您使用多個 [!DNL Adobe Sign] 雲端服務，指向 **[!UICONTROL oAuth URL]** 所有服務中的相同專案 **[!UICONTROL Adobe Sign Shard]**.
 
-* 使用個別的電子郵件地址進行設定 [!DNL Adobe Sign] 帳戶和第一個簽署者和單一簽署者。 第一個簽署者或唯一簽署者（若為單一簽署者）的電子郵件地址不能與 [!DNL Adobe Sign] 用來設定AEM雲端服務的帳戶。
+* 使用個別的電子郵件地址進行設定 [!DNL Adobe Sign] 帳戶和第一個簽署者和單一簽署者。 第一個簽署者或唯一簽署者（如果有單一簽署者）的電子郵件地址不能與 [!DNL Adobe Sign] 用來設定AEM雲端服務的帳戶。
 
 ### AEM [!DNL Forms] 為設定的工作流程 [!DNL Adobe Sign] 啟用的最適化表單未開始 {#adobe-sign-aem-form-workflow-failures}
 

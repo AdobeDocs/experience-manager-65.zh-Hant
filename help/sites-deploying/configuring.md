@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2113'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ AEM有許多方面可供設定：
 
 >[!NOTE]
 >
->直接設定AEM。 但是，請注意，某些變更可能會對應用程式造成重大影響。 因此，在開始設定AEM之前，請確定您具備必要的經驗和知識，並只進行您知道需要的變更。 透過OSGi主控台所做的任何變更包括 **立即** 套用至執行中的系統（不需要重新啟動）。
+>直接設定AEM。 不過，某些變更可能會對應用程式產生重大影響。 因此，在開始設定AEM之前，請確定您具備必要的經驗和知識，並只進行您知道需要的變更。 透過OSGi主控台所做的任何變更包括 **立即** 套用至執行中的系統（不需要重新啟動）。
 
 ## 主要設定考量事項 {#primary-configuration-considerations}
 

@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '745'
 ht-degree: 1%
 
 ---
@@ -71,9 +71,9 @@ ht-degree: 1%
 
 這些模式可讓您控制範例內容的使用。 範例內容是在建置快速入門之前定義，可包含套件、設定等：
 
-* 此 `samplecontent` 執行模式將會安裝此內容（預設模式）。
+* 此 `samplecontent` 執行模式會安裝此內容（預設模式）。
 
-* 此 `nosamplecontent` 模式將不會安裝範例內容。
+* 此 `nosamplecontent` 模式不會安裝範例內容。
 
 nosamplecontent執行模式是針對生產安裝所設計。
 

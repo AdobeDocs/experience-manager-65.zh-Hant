@@ -1,18 +1,14 @@
 ---
 title: 建立互動式通訊
-seo-title: Create an Interactive Communication
 description: 使用互動式通訊編輯器建立互動式通訊。 使用拖放功能來建立互動式通訊，並預覽不同裝置型別上的列印和Web輸出。
-seo-description: Create an Interactive Communication using the Interactive Communication editor. Use drag-and-drop functionality to build the Interactive Communication, and preview both print and web outputs on different device types.
-uuid: d524a3de-00b4-444f-b3c7-be443fa24ec8
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6168'
+source-wordcount: '6163'
 ht-degree: 1%
 
 ---
@@ -141,7 +137,7 @@ ht-degree: 1%
 
 此外，當您將滑鼠停留在這些元素上時，會顯示工具提示，其中包含「欄位」(Field) （未繫結）或「變數」(Variable) （未繫結）訊息。
 
-檔案片段中使用的未繫結變數有時可能不會顯示在編寫介面上。 這可能是由於檔案片段中的內嵌文字規則或條件片段所造成。 在這種情況下，以藍色反白顯示的工具提示會顯示為檔案片段的一部分。 工具提示會顯示檔案片段中使用的未繫結變數數目。
+檔案片段中使用的未繫結變數有時可能不會顯示在編寫介面上。 這可能是由於檔案片段中的內嵌文字規則或如果有條件片段所造成。 在這種情況下，以藍色反白顯示的工具提示會顯示為檔案片段的一部分。 工具提示會顯示檔案片段中使用的未繫結變數數目。
 
 ![未繫結變數](assets/df_unbound_variable_new.png)
 
@@ -562,7 +558,7 @@ ht-degree: 1%
 
 ### 同步 {#synchronize-1}
 
-如果您使用Print as Master for Web Channel並對Print channel進行變更，則可以同步內容以將新進行的變更帶到Web channel。
+如果您使用Print as Master for Web Channel並變更Print channel，則可以同步內容以將新進行的變更帶到Web channel。
 
 1. 若要將Web channel與Print channel同步，請切換至Web channel，然後點選「更多選項」圖示。
 

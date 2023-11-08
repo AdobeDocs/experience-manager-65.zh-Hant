@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '7144'
 ht-degree: 0%
@@ -159,7 +159,7 @@ ht-degree: 0%
 * **throttleOn （布林值）**：選取此選項時，會限制AEM Forms在任何指定時間處理的Watched資料夾工作數目。 最大作業數由「批次大小」值決定。 預設值為true。 (請參閱 [關於節流](../../forms/using/watched-folder-in-aem-forms.md#p-about-throttling-p).)
 
 * **overwriteDuplicateFilename （布林值）**：設為True時，會覆寫結果資料夾和保留資料夾中的檔案。 設定為False時，名稱會使用具有數值索引尾碼的檔案和資料夾。 預設值為False。
-* **preserveOnFailure （布林值）**：保留輸入檔案，以防無法對服務執行操作。 預設值為true。
+* **preserveOnFailure （布林值）**：如果服務無法執行操作，則保留輸入檔案。 預設值為true。
 * **inputFilePattern （字串）**：指定Watched資料夾的輸入檔案模式。 建立檔案的允許清單。
 * **非同步（布林值）**：識別非同步或同步叫用型別。 預設值為true （非同步）。 檔案處理是一項耗用資源的工作，請將非同步標幟的值保持為true以避免扼殺掃描作業的主要執行緒。 在叢集環境中，必須保持標幟為true，才能為跨可用伺服器處理的檔案啟用負載平衡。 如果標幟為false，則掃描作業會嘗試在其自己的執行緒內依序對每個頂層檔案/資料夾執行處理。 若無特定原因，請勿將標幟設為false，例如以單一伺服器設定為基礎的工作流程處理。
 

@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6e4b4dfa-3af5-4c21-a2a1-b90ef02d8514
 exl-id: bf69de86-2ca6-4d21-936c-07c1debacfa0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 0%
@@ -58,7 +58,7 @@ ht-degree: 0%
       * （可選）若要讓使用者變更工作區中的運算元值，請選取「允許使用者變更運算元」。
       * （選擇性）若要讓使用者變更關聯運運算元，請選取允許使用者選取其他關聯運運算元。 在出現的清單中，選取使用者可用的運運算元。
 
-     **秘訣**： *如果您選取「程式名稱」作為元素，可以按一下運算元欄位旁的圖示，以顯示清單，讓您選取表單伺服器上執行的程式。 選取流程後，該流程中定義的任何流程變數都可以在「條件」標籤頂端區段的「流程變數」下選取。*
+     **秘訣**： *如果您選取「程式名稱」作為元素，可以按一下運算元欄位旁的圖示，以顯示清單，讓您選取在Forms伺服器上執行的程式。 選取流程後，該流程中定義的任何流程變數都可以在「條件」標籤頂端區段的「流程變數」下選取。*
 
      **秘訣**： *您可以按一下元素搜尋條件旁的「刪除」圖示，從搜尋範本中刪除元素。*
 

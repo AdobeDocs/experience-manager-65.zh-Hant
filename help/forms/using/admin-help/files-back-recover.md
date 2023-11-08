@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '2065'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 全域檔案儲存目錄 {#global-document-storage-directory}
 
-GDS是用來儲存處理程式中所使用之長期檔案的目錄。 長效檔案的存留期旨在橫跨一或多個AEM表單系統的啟動，並可橫跨數天甚至數年。 這些長效檔案可以包含PDF、原則和表單範本。 長效檔案是許多AEM Forms部署整體狀態的重要部分。 如果部分或所有長期檔案遺失或損毀，表單伺服器可能會變得不穩定。
+GDS是用來儲存處理程式中所使用之長期檔案的目錄。 長效檔案的存留期旨在橫跨一或多個AEM表單系統的啟動，並可橫跨數天甚至數年。 這些長效檔案可以包含PDF、原則和表單範本。 長效檔案是許多AEM Forms部署整體狀態的重要部分。 如果部分或所有長期檔案遺失或損毀，Forms伺服器可能會變得不穩定。
 
 非同步作業引動的輸入檔案也儲存在GDS中，並且必須可用於處理請求。 因此，您必須考量裝載GDS的檔案系統的可靠性，並採用獨立磁碟備援陣列(RAID)或其他適合您品質和服務等級需求的技術。
 

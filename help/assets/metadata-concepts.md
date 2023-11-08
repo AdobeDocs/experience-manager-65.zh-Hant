@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2717'
 ht-degree: 9%
 
 ---
@@ -220,7 +220,7 @@ XMP透過提供資料模型、儲存模型和結構描述，將中繼資料的�
 
 來自EXIF、ID3或Microsoft Office的所有舊版中繼資料會自動轉譯為XMP，可延伸以支援客戶特定的中繼資料結構，例如產品目錄。
 
-XMP中的中繼資料包含一組屬性。 這些屬性一律與稱為資源的特定實體相關聯；也就是說，屬性是「關於」資源的。 在XMP中，資源一律為資產。
+XMP中的中繼資料包含一組屬性。 這些屬性一律與稱為資源的特定實體相關聯；也就是說，屬性是「關於」資源的。 如果有XMP，則資源一律為資產。
 
 ### XMP生態系統 {#xmp-ecosystem}
 

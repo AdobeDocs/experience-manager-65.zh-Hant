@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1105'
 ht-degree: 3%
 
 ---
@@ -152,7 +152,7 @@ ht-degree: 3%
 
    如果成功，AEM會確認您可以在ExactTarget或Silverpop Engage中檢視電子郵件。
 
-   若為ExactTarget，則按一下「 」即可檢視已發佈的電子郵件 **檢視發佈的電子郵件**. 這會將您直接導向至ExactTarget中已發佈的Newsletter ([https://members.exacttarget.com/](https://members.exacttarget.com/).)。
+   如果有ExactTarget，則按一下即可檢視已發佈的電子郵件 **檢視發佈的電子郵件**. 這會將您直接導向至ExactTarget中已發佈的Newsletter ([https://members.exacttarget.com/](https://members.exacttarget.com/).)。
 
 >[!NOTE]
 >

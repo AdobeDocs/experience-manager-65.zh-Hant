@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -157,7 +157,7 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM製作和發佈執行
 
 此外，強烈建議您在共用檔案系統或Amazon S3上設定資料存放區，好讓資產或二進位檔不會儲存在MongoDB中。 這將確保部署內的最佳效能。
 
-部署具有兩個或多個製作執行個體叢集的MongoDB復本集的額外優點之一，是在製作執行個體、MongoDB復本或完整資料中心故障的情況下，具有自動化復原案例，且停機時間最短。 儘管如此，選擇MongoMK而非TarMK不應完全由復原需求所驅動，因為TarMK也可以提供具備受控容錯移轉機制的最小停機時間解決方案。
+部署具有兩個或多個製作執行個體叢集的MongoDB復本集的額外優點之一，就是如果製作執行個體、MongoDB復本或資料中心完全失敗，便能以最小的停機時間自動復原案例。 儘管如此，選擇MongoMK而非TarMK不應完全由復原需求所驅動，因為TarMK也可以提供具備受控容錯移轉機制的最小停機時間解決方案。
 
 如果在部署的前18個月中不符合上述標準，建議先使用TarMK部署AEM，稍後當上述標準適用時，重新評估您的設定，最後決定是否留在TarMK上或移轉至MongoMK。
 

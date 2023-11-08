@@ -12,9 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3446'
+source-wordcount: '3447'
 ht-degree: 1%
 
 ---
@@ -181,7 +181,7 @@ newComponent (cq:Component)
             description
 ```
 
-自訂對話方塊類似於開發元件，因為對話方塊本身是元件（即由元件指令碼轉譯的標示，連同使用者端程式庫提供的行為/樣式）。
+自訂對話方塊類似於開發元件，因為對話方塊本身是元件（也就是說，由元件指令碼轉譯的標示連同使用者端程式庫提供的行為/樣式）。
 
 如需範例，請參閱：
 
@@ -228,7 +228,7 @@ newComponent (cq:Component)
 
 如果您想要定義元件的樣式和行為，可以建立專用的 [使用者端資料庫](/help/sites-developing/clientlibs.md) 會定義您的自訂CSS/LESS和JS。
 
-若要讓您的使用者端程式庫僅為您的元件對話方塊載入（即它不會為另一個元件載入），您需要設定屬性 `extraClientlibs` 對話方塊的類別名稱切換至您已建立的使用者端程式庫的類別名稱。 如果您的使用者端程式庫相當大和/或您的欄位專屬於該對話方塊，且不需要在其他對話方塊中使用，建議您這麼做。
+若要讓您的使用者端程式庫僅為您的元件對話方塊載入（也就是說，不會為另一個元件載入程式庫），您需要設定屬性 `extraClientlibs` 對話方塊的類別名稱切換至您已建立的使用者端程式庫的類別名稱。 如果您的使用者端程式庫相當大和/或您的欄位專屬於該對話方塊，且不需要在其他對話方塊中使用，建議您這麼做。
 
 若要讓您的使用者端程式庫載入所有對話方塊，請將使用者端程式庫的類別屬性設定為 `cq.authoring.dialog`. 這是呈現所有對話方塊時預設包含的使用者端程式庫的類別名稱。 如果您使用者端資料庫較小且/或您的欄位是通用的，且可在其他對話方塊中重複使用，則您想要執行此動作。
 
@@ -243,7 +243,7 @@ newComponent (cq:Component)
 視您的需求而定，您可以：
 
 * 透過元件繼承擴充指定的Granite UI欄位( `sling:resourceSuperType`)
-* 遵循Widget程式庫API （JS/CSS繼承），從基礎Widget程式庫（在Granite UI中，這是Coral UI）擴充指定Widget
+* 遵循Widget程式庫API （JS/CSS繼承），從基礎Widget程式庫（如果有Granite UI，則為Coral UI）擴充指定Widget
 
 #### 對話方塊欄位的存取權 {#access-to-dialog-fields}
 

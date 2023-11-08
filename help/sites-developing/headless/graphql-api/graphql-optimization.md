@@ -2,10 +2,10 @@
 title: 最佳化 GraphQL 查詢
 description: 瞭解如何在Adobe Experience Manager as a Cloud Service中篩選、分頁和排序內容片段時最佳化GraphQL查詢，以進行Headless內容傳送。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1966'
-ht-degree: 60%
+source-wordcount: '1964'
+ht-degree: 58%
 
 ---
 
@@ -177,10 +177,10 @@ AEM 提供兩種方式進行 GraphQL 查詢最佳化：
 
 透過使用GraphQL標準pagination將回應分割為區塊，可改善具有大型結果集的複雜查詢的回應時間。
 
-AEM 中的 GraphQL 支援兩種類型的分頁：
+AEM中的GraphQL支援兩種分頁型別：
 
-* [限制式/位移式分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
-這是用於列表查詢；這些結尾是`List`；例如 `articleList`。
+* [限制/以偏移量為基礎的分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
+這用於清單查詢；這些結尾為 `List`；例如， `articleList`.
 若要使用，您必須提供第一個要返回項目的位置 (`offset`) 和要返回的項目數 (`limit`，或頁面大小)。
 
 * [游標式分頁](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after) (以 `first` 和 `after` 表示)

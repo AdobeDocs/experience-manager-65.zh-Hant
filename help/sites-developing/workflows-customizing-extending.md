@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3589'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 1%
 >
 >設定和其他變更的建議方法是：
 >
->1. 重新建立所需專案（即該專案存在於中） `/libs` 在 `/apps`
+>1. 重新建立所需專案（即存在於中的專案） `/libs` 在 `/apps`
 >2. 進行任何變更 `/apps`
 
 此 `/libs/cq/workflow/components/model/step` component是 **程式步驟**， **參與者步驟**、和 **動態參與者步驟**，會繼承下列專案：

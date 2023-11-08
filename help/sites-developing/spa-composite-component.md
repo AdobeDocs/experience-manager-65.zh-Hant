@@ -2,9 +2,9 @@
 title: SPA 中的複合元件
 description: 瞭解如何建立自己的複合元件，也就是由AEM單頁應用程式(SPA)編輯器運作的其他元件所組成的元件。
 exl-id: 02b6c698-d169-467a-9168-9fa6181bed6c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '782'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 ### 您的AEM專案中不存在該元件。 {#component-does-not-exist}
 
-首先，建立將構成複合元件的元件，即影像及其文字的元件。
+首先，建立構成複合元件的元件，也就是影像及其文字的元件。
 
 1. 在您的AEM專案中建立文字元件。
 1. 新增對應的 `resourceType` 從元件的專案 `editConfig` 節點。

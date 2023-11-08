@@ -10,18 +10,18 @@ content-type: reference
 discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '461'
 ht-degree: 6%
 
 ---
 
 # 轉譯專用內容片段設定元件{#content-fragments-configuring-components-for-rendering}
 
-有數種 [進階服務](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration) 和內容片段的演算相關。 若要使用這些服務，內容片段架構必須瞭解這些元件的資源型別。
+有好幾個 [進階服務](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration) 和內容片段的演算相關。 若要使用這些服務，這類元件的資源型別必須在內容片段框架中讓使用者知道這些元件。
 
-這是透過設定 [OSGi服務 — 內容片段元件設定](#osgi-service-content-fragment-component-configuration).
+這可透過設定 [OSGi服務 — 內容片段元件設定](#osgi-service-content-fragment-component-configuration).
 
 >[!CAUTION]
 >
@@ -33,7 +33,7 @@ ht-degree: 6%
 
 >[!CAUTION]
 >
->您可以從頭開始撰寫只使用內容片段API （沒有進階服務）的元件。 但是，在這種情況下，您必須開發元件，以便處理適當的處理。
+>您可以從頭開始撰寫只使用內容片段API （不含進階服務）的元件。 但是，在這種情況下，您必須開發元件，以便處理適當的處理。
 >
 >因此，建議使用核心元件。
 
@@ -41,18 +41,18 @@ ht-degree: 6%
 
 需要註冊元件的服務包括：
 
-* 在發佈期間正確判斷相依性（亦即，如果片段和模型自上次發佈以來已變更，請確保片段和模型可隨頁面自動發佈）。
-* 支援全文檢索搜尋中的內容片段。
+* 在發佈期間正確判斷相依性（也就是說，如果片段和模型自上次發佈後有所變更，請確定片段和模型可以隨頁面自動發佈）。
+* 支援全文檢索搜尋的內容片段。
 * 管理/處理 *中間內容。*
 * 管理/處理 *混合媒體資產。*
 * 參考片段的Dispatcher排清（如果重新發佈包含片段的頁面）。
-* 使用段落式轉譯。
+* 使用段落式演算。
 
-如果您需要這些功能中的一個或多個功能，則（通常）使用現成功能會比較容易，而不是從頭開始開發。
+如果您需要這些功能中的一或多個，則（通常）會更易於使用現成功能，而不是從頭開始開發。
 
 ## OSGi服務 — 內容片段元件設定 {#osgi-service-content-fragment-component-configuration}
 
-設定需要繫結到OSGi服務 **內容片段元件設定**：
+設定需要繫結至OSGi服務 **內容片段元件設定**：
 
 `com.adobe.cq.dam.cfm.impl.component.ComponentConfigImpl`
 
@@ -64,7 +64,7 @@ ht-degree: 6%
 
 ![cfm-01](assets/cfm-01.png)
 
-OSGi設定為：
+OSGi設定是：
 
 <table>
  <tbody>
@@ -96,7 +96,7 @@ OSGi設定為：
  </tbody>
 </table>
 
-對於某些功能（例如，僅呈現段落範圍），您必須遵守一些慣例：
+對於某些功能（例如，僅呈現段落範圍），您必須遵循某些慣例：
 
 <table>
  <tbody>
@@ -106,7 +106,7 @@ OSGi設定為：
   </tr>
   <tr>
    <td><code>paragraphRange</code></td>
-   <td><p>字串屬性，定義要在下列情況下輸出的段落範圍： <em>單一元素轉譯模式</em>.</p> <p>格式:</p>
+   <td><p>字串屬性，定義段落範圍(若在 <em>單一元素轉譯模式</em>.</p> <p>格式:</p>
     <ul>
      <li><code>1</code> 或 <code>1-3</code> 或 <code>1-3;6;7-8</code> 或 <code>*-3;5-*</code></li>
      <li>只有在 <code>paragraphScope</code> 設為 <code>range</code></li>
@@ -114,7 +114,7 @@ OSGi設定為：
   </tr>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>字串屬性，定義段落在中的輸出方式 <em>單一元素轉譯模式</em>.</p> <p>值:</p>
+   <td><p>字串屬性，定義在中時如何輸出段落 <em>單一元素轉譯模式</em>.</p> <p>值:</p>
     <ul>
      <li><code>all</code> ：呈現所有段落</li>
      <li><code>range</code> ：呈現以下專案提供的段落範圍： <code>paragraphRange</code></li>
@@ -122,14 +122,14 @@ OSGi設定為：
   </tr>
   <tr>
    <td><code>paragraphHeadings</code></td>
-   <td>布林值屬性，定義標題(例如， <code>h1</code>， <code>h2</code>， <code>h3</code>)計算為段落(<code>true</code>)或不是(<code>false</code>)</td>
+   <td>布林值屬性，定義標題(例如 <code>h1</code>， <code>h2</code>， <code>h3</code>)均計算為段落(<code>true</code>)或不是(<code>false</code>)</td>
   </tr>
  </tbody>
 </table>
 
 >[!CAUTION]
 >
->這可能在6.5之後的里程碑之後變更。
+>這可能在6.5之後的里程碑中改變。
 
 ## 範例 {#example}
 

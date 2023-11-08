@@ -11,9 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3888'
+source-wordcount: '3887'
 ht-degree: 6%
 
 ---
@@ -117,7 +117,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
   <tr>
    <td><code>title</code></td>
    <td>指定檔案的標題。 它僅適用於使用者端應用程式。</td>
-   <td>它會傳回表單中HTML檔案的標題，而非如PDF forms中所示的表單中繼資料標題。</td>
+   <td>它會傳回表單中HTML檔案的標題，而不是像存在PDF forms一樣傳回表單中繼資料標題。</td>
   </tr>
   <tr>
    <td><code>version</code></td>

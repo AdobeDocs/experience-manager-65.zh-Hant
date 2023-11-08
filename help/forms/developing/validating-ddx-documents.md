@@ -12,7 +12,7 @@ topic-tags: operations
 discoiquuid: 693859b0-a0c3-43f1-95c0-be48a90d7d8d
 role: Developer
 exl-id: 1f5a2cf3-ef6b-45b4-8fa8-b300e492fee1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1525'
 ht-degree: 0%
@@ -156,7 +156,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >將localhost取代為forms伺服器的IP位址。
+   >以Forms伺服器的IP位址取代localhost。
 
 1. 建立PDF組合器使用者端。
 

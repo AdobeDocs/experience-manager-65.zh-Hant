@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3d2b7cfb-228c-4cc2-8fcd-d500f0010010
 exl-id: 0d9eb7fe-28a6-444e-957d-023687158c61
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '822'
 ht-degree: 1%
 
 ---
@@ -82,11 +82,11 @@ ht-degree: 1%
 **預設位置：** 這是預設選取範圍。 選取此選項時，會在從屬於您正在使用的應用程式伺服器的位置建立快取：
 
 * **JBoss：** [Jboss首頁]\server\[安裝型別]\svcdata\FormServer\Cache
-* **WebLogic：** [WebLogic首頁]\user_projects\domains\[aem-forms網域名稱]\adobe\[forms伺服器名稱]\FormServer\Cache
+* **WebLogic：** [WebLogic首頁]\user_projects\domains\[aem-forms網域名稱]\adobe\[Forms伺服器名稱]\FormServer\Cache
 * **WebSphere：** [IBM首頁]\WebSphere\AppServer\installedApps\adobe\server1\FormServer\Cache
 
 **LC暫存目錄：** 快取是在AEM forms暫存目錄的子目錄中建立的，該子目錄在「設定」>「核心系統設定」>「設定」>「暫存目錄位置」下的管理控制檯中指定。 該子目錄名為adobeform_[伺服器名稱].
 
 >[!NOTE]
 >
->如果您使用暫時清除公用程式，請注意，刪除這些目錄不會影響功能，但在建立新快取之前，可能會在短時間內大幅影響效能。 為避免此問題，在清除AEM表單臨時目錄時，請勿刪除這些目錄。
+>如果您使用暫時清除公用程式，雖然刪除這些目錄不會影響功能，但在建立新快取之前，可能會在短時間內大幅影響效能。 為避免此問題，在清除AEM表單臨時目錄時，請勿刪除這些目錄。

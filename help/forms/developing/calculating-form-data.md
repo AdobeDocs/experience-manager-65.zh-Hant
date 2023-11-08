@@ -1,20 +1,16 @@
 ---
 title: 計算表單資料
-seo-title: Calculating Form Data
 description: 使用Forms服務來計算使用者在表單中輸入的值並顯示結果。 Forms服務會使用Java API和Web服務API來計算值。
-seo-description: Use the Forms service to calculate values that a user enters into a form and display the results. Forms service calculates the values using the Java API and Web Service API.
-uuid: ccd85bc7-8ccc-44d9-9424-dfc1f603e688
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
-discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 role: Developer
 exl-id: 28abf044-6c8e-4578-ae2e-54cdbd694c5f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1876'
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ ht-degree: 0%
 
 Forms服務可以計算使用者在表單中輸入的值並顯示結果。 若要計算表單資料，您必須執行兩項工作。 首先，建立表單設計指令碼，以計算表單資料。 表單設計支援三種型別的指令碼。 一種指令碼型別在使用者端上執行，另一種在伺服器上執行，第三種型別同時在伺服器和使用者端上執行。 本主題中討論的指令碼型別會在伺服器上執行。 HTML、PDF和表單指南（已棄用）轉換支援伺服器端計算。
 
-在表單設計過程中，您可以利用計算和指令碼來提供更豐富的使用者體驗。 大多數的表單欄位和物件都可以新增計算與指令碼。 您必須建立表單設計指令碼，以針對使用者輸入互動式表單的資料執行計算操作。
+在表單設計過程中，您可以使用計算和指令碼來提供更豐富的使用者體驗。 大多數的表單欄位和物件都可以新增計算與指令碼。 您必須建立表單設計指令碼，以針對使用者輸入互動式表單的資料執行計算操作。
 
 使用者在表單中輸入值，然後按一下「計算」按鈕來檢視結果。 下列程式說明可讓使用者計算資料的範例應用程式：
 

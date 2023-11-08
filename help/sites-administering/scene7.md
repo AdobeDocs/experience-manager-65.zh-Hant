@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '5484'
+source-wordcount: '5483'
 ht-degree: 1%
 
 ---
@@ -383,7 +383,7 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
 
 1. 選取Experience Manager圖示並導覽至 **[!UICONTROL 部署]** > **[!UICONTROL Cloud Service]**.
 1. 在Dynamic Media標題下，在「可用配置」下，選擇 **[!UICONTROL dms7 (Dynamic Media]**)。
-1. 選取 **[!UICONTROL 進階]** 索引標籤中，選取 **[!UICONTROL 啟用自動上傳]** 核取方塊，然後選取 **[!UICONTROL 確定]**. 您現在必須設定DAM資產工作流程，以包含上傳至Dynamic Media Classic的內容。
+1. 選取 **[!UICONTROL 進階]** 索引標籤中，選取 **[!UICONTROL 啟用自動上傳]** 核取方塊，然後選取 **[!UICONTROL 確定]**. 您必須設定DAM資產工作流程，以包含上傳至Dynamic Media Classic的內容。
 
    >[!NOTE]
    >

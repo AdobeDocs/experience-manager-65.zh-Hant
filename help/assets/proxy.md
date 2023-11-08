@@ -4,9 +4,9 @@ description: Proxy是 [!DNL Experience Manager] 使用Proxy Worker處理工作�
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Manager Assets] 會使用Proxy來分配特定工作的處理作業。
 
-Proxy是一種特定（有時是獨立的）Experience Manager執行個體，它使用Proxy背景工作器作為負責處理工作和建立結果的處理器。 Proxy Worker可用於多種任務。 若是 [!DNL Assets] proxy這可用於載入資產，以便在資產內呈現。 例如， [IDS Proxy背景工作](indesign.md) 使用 [!DNL Adobe InDesign] 處理檔案以供在資產中使用的伺服器。
+Proxy是一種特定（有時是獨立的）Experience Manager執行個體，它使用Proxy背景工作器作為負責處理工作和建立結果的處理器。 Proxy Worker可用於多種任務。 如果有 [!DNL Assets] proxy這可用於載入資產，以便在資產內呈現。 例如， [IDS Proxy背景工作](indesign.md) 使用 [!DNL Adobe InDesign] 處理檔案以供在資產中使用的伺服器。
 
 當Proxy是獨立的 [!DNL Experience Manager] 執行個體這有助於減少 [!DNL Experience Manager] 製作執行個體。 根據預設， [!DNL Assets] 在同一JVM中執行資產處理工作（透過Proxy外部化），以減少 [!DNL Experience Manager] 製作例項。
 

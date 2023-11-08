@@ -1,5 +1,5 @@
 ---
-title: XDP型調適型表單中的XFA支援
+title: XDP型最適化表單中的XFA支援
 seo-title: XFA support in XDP-based adaptive forms
 description: 列出最適化表單中支援的XFA事件、屬性、指令碼和驗證。
 seo-description: Lists supported XFA events, properties, scripts, and validation in adaptive forms.
@@ -10,26 +10,26 @@ discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
 feature: Adaptive Forms
 exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 5%
+source-wordcount: '738'
+ht-degree: 12%
 
 ---
 
-# XDP型調適型表單中的XFA支援{#xfa-support-in-xdp-based-adaptive-forms}
+# XDP型最適化表單中的XFA支援{#xfa-support-in-xdp-based-adaptive-forms}
 
 ## 簡介 {#introduction}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
-調適型表單可支援XDP檔案中定義的多種XFA事件、屬性、指令碼和驗證，包括：
+調適型表單支援XDP檔案中定義的各種XFA事件、屬性、指令碼和驗證，包括：
 
 * 執行在XDP檔案中的事件上定義的指令碼。
 * 擷取XDP檔案中欄位的預設值和行為屬性。
 * 執行XDP檔案中定義的驗證指令碼。
 
-根據XDP檔案建立最適化表單時，屬性、事件和驗證會自動填入表單編寫UI中。 不過，表單作者可以覆寫其中某些元素來建立替代體驗。
+根據XDP檔案建立最適化表單時，屬性、事件和驗證會自動填入表單編寫UI中。 不過，表單作者可以覆寫其中某些元素，以建立替代體驗。
 
 本文列出適用性表單中支援的XFA事件、屬性和驗證，並說明如何在適用性表單中覆寫這些事件、屬性和驗證。
 
@@ -70,7 +70,7 @@ ht-degree: 5%
    <td><p>數值方塊</p> </td>
   </tr>
   <tr>
-   <td><p>小數欄位</p> </td>
+   <td><p>十進位欄位</p> </td>
    <td><p>數值方塊</p> </td>
   </tr>
   <tr>
@@ -106,7 +106,7 @@ ht-degree: 5%
 
 ### 屬性 {#properties}
 
-下表擷取XDP檔案中定義的各種XFA指令碼在最適化表單中的行為方式。
+下表擷取XDP檔案中定義的各種XFA指令碼在適用性表單中的行為。
 
 <table>
  <tbody>
@@ -120,11 +120,11 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>是否存在 </p> </td>
-   <td><p>對應至最適化表單中的可見屬性。 您可以使用「可見性」運算式來覆寫它。</p> </td>
+   <td><p>對應到最適化表單中的可見屬性。 您可以使用「可見性」運算式來覆寫它。</p> </td>
   </tr>
   <tr>
    <td><p>存取 </p> </td>
-   <td><p>對應至最適化表單中已啟用的屬性。 您可以使用Access運算式來覆寫它。</p> </td>
+   <td><p>對應至最適化表單中的已啟用屬性。 您可以使用Access運算式來覆寫它。</p> </td>
   </tr>
   <tr>
    <td><p>協助工具：角色 </p> </td>
@@ -132,7 +132,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>協助工具： speakPriority </p> </td>
-   <td><p>對應至最適化表單中的speakPriority屬性。</p> </td>
+   <td><p>對應到最適化表單中的speakPriority屬性。</p> </td>
   </tr>
   <tr>
    <td><p>協助工具： speakText</p> </td>
@@ -151,7 +151,7 @@ ht-degree: 5%
    <td><p>以最適化表單對應至顯示模式。</p> </td>
   </tr>
   <tr>
-   <td><p>rawValue<em> （所有欄位型別）</em></p> </td>
+   <td><p>原始值<em> （所有欄位型別）</em></p> </td>
    <td><p>對應至最適化表單中的值屬性。</p> </td>
   </tr>
   <tr>
@@ -160,7 +160,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>maxChar<em> （文字欄位）</em></p> </td>
-   <td><p>對應至最適化表單中允許的最大字元數屬性。</p> </td>
+   <td><p>對應到最適化表單中允許的最大字元數屬性。</p> </td>
   </tr>
   <tr>
    <td><p>多行<em> （文字欄位）</em></p> </td>
@@ -168,11 +168,11 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>fracDigit<em> （數值欄位，小數欄位）</em></p> </td>
-   <td><p>對應至最適化表單中的Frac數字屬性。</p> </td>
+   <td><p>對應到最適化表單中的Frac數字屬性。</p> </td>
   </tr>
   <tr>
    <td><p>leadDigit<em> （數值欄位，小數欄位）</em></p> </td>
-   <td><p>對應至最適化表單中的前導位數屬性。</p> </td>
+   <td><p>對應至最適化表單中的潛在客戶數字屬性。</p> </td>
   </tr>
   <tr>
    <td><p>multiSelect<em> （清單方塊）</em></p> </td>
@@ -183,7 +183,7 @@ ht-degree: 5%
 
 ### 指令碼 {#scripts}
 
-下表擷取XDP檔案中定義的各種XFA指令碼在最適化表單中的行為方式。
+下表擷取XDP檔案中定義的各種XFA指令碼在適用性表單中的行為。
 
 <table>
  <tbody>
@@ -253,8 +253,8 @@ ht-degree: 5%
    <td><p>強制 </p> </td>
   </tr>
   <tr>
-   <td><p>空訊息(nullTestMessage) </p> </td>
-   <td><p>mandatoryMessage</p> </td>
+   <td><p>清空訊息(nullTestMessage) </p> </td>
+   <td><p>message</p> </td>
   </tr>
   <tr>
    <td><p>驗證指令碼(scriptTest)</p> </td>
@@ -269,4 +269,4 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->您無法覆寫與XFA核取按鈕繫結的最適化表單選項按鈕和核取方塊群組的強制屬性。
+>您無法覆寫最適化表單選項按鈕的強制屬性，也無法覆寫繫結至XFA核取按鈕的核取方塊群組。

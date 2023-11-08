@@ -1,19 +1,15 @@
 ---
 title: 設定分段
-seo-title: Configuring Segmentation
 description: 瞭解如何設定AEM Campaign的分段。
-seo-description: Learn how to configure segmentation for AEM Campaign.
-uuid: 604ca34d-cdb9-49ff-8f75-02a44b60a8a2
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: c68d5853-684f-42f2-a215-c1eaee06f58a
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1129'
 ht-degree: 1%
 
 ---
@@ -110,7 +106,7 @@ AEM可讓您輕鬆建立和更新區段、Teaser和促銷活動。 它也可讓�
 
 您可以使用布林運運算元OR和AND來結合這些特徵(請參閱 [建立新區段](#creating-a-new-segment))，以定義選取此區段的確切案例。
 
-當整個陳述式評估為true時，表示此區段已解析。 在適用多個區段的情況下，則 **[提升](/help/sites-administering/campaign-segmentation.md#boost-factor)** 也會使用因數。
+當整個陳述式評估為true時，表示此區段已解析。 如果有多個適用區段，則 **[提升](/help/sites-administering/campaign-segmentation.md#boost-factor)** 也會使用因數。
 
 >[!CAUTION]
 >
@@ -149,7 +145,7 @@ AEM可讓您輕鬆建立和更新區段、Teaser和促銷活動。 它也可讓�
 
 您可以在AEM中建構複雜的區段。 瞭解一些基本要點會有所幫助：
 
-* 定義的最上層一律為最初建立的AND容器；這無法變更，但不會影響區段定義的其餘部分。
+* 定義的頂層一律為最初建立的AND容器；這無法變更，但不會影響區段定義的其餘部分。
 * 確定容器的巢狀內嵌有意義。 容器可視為布林運算式的括弧。
 
 下列範例可用來選取符合下列任一條件的訪客：

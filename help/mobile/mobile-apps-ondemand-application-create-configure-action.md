@@ -1,18 +1,14 @@
 ---
 title: 應用程式建立和設定動作
-seo-title: Application Create and Configuration Actions
 description: 建立應用程式通常是建立和管理AEM Mobile On-Demand內容的第一步。 請依照此頁面瞭解更多資訊。
-seo-description: Creating an app is often the first step towards creating and managing AEM Mobile On-Demand content. Follow this page to learn more.
-uuid: f6b41d9a-d896-479e-9f6c-e91a88f3e74d
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: ccafd49a-5c8a-44eb-9b0c-37070560bb52
 exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---

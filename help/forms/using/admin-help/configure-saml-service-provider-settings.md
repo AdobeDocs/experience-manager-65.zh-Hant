@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1169d0d1-cbfb-486b-acca-9b9de3d410dc
 exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 1. 在管理控制檯中，按一下「設定>使用者管理>設定> SAML服務提供者設定」。
 1. 在「服務提供者實體ID」方塊中，輸入唯一ID以用作AEM表單服務提供者實作的識別碼。 您也可以在設定IDP時指定此唯一ID (例如 `um.lc.com`.) 您也可以使用用來存取AEM表單的URL (例如 `https://AEMformsserver`)。
-1. 在「服務提供者基本URL」方塊中，輸入表單伺服器的基本URL (例如， `https://AEMformsserver:8080`)。
+1. 在「服務提供者基本URL」方塊中，輸入您Forms伺服器的基本URL (例如 `https://AEMformsserver:8080`)。
 1. （選擇性）若要讓AEM Forms傳送已簽署的驗證要求給IDP，請執行下列工作：
 
    * 使用信任管理員匯入PKCS #12格式的認證，並選取檔案簽署認證作為信任存放區型別。 (請參閱 [管理本機認證](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials).)

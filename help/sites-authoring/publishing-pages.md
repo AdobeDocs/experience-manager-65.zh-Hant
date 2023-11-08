@@ -2,9 +2,9 @@
 title: 發佈內容頁面
 description: 瞭解如何在Adobe Experience Manager 6.5中發佈內容頁面。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1662'
 ht-degree: 7%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->從編輯器發佈是淺層發佈，即只會發佈選定的一個或多個頁面，而不會發佈任何子頁面。
+>從編輯器發佈是淺層發佈，也就是說，僅發佈選定的一個或多個頁面，不發佈任何子頁面。
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->快速發佈是一種淺層發佈，即只會發佈選定的一個或多個頁面，而不會發佈任何子頁面。
+>快速發佈是淺層發佈，也就是說，只會發佈選取的頁面，而不會發佈任何子頁面。
 
 #### 管理發佈 {#manage-publication}
 

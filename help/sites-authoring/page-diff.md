@@ -1,19 +1,15 @@
 ---
 title: 頁面差異
-seo-title: Page Diff
 description: 頁面差異功能可方便的對兩個頁面進行並排比較，並反白顯示其差異。
-seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.
-uuid: 5af8b466-5922-4fe6-9eae-7bad99be23e0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
@@ -90,7 +86,7 @@ ht-degree: 1%
 
 在某些情況下，頁面差異可能不會如預期偵測到差異。
 
-* 不同版本和啟動時，差異不會考慮階層連結、功能表、產品清單或標誌（依賴網站結構呈現其內容的元件）等動態元件。
+* 不同版本和啟動時，差異不會考慮動態元件，例如階層連結、功能表、產品清單或標誌（依賴網站結構來呈現其內容的元件）。
 * 對於版本，差異不會重新建立存取控制原則與即時副本關係。
 * 如果頁面已移動，您將無法再執行與移動前所做的任何版本之間的差異。
 

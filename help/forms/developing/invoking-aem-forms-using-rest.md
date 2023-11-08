@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 991fbc56-f144-4ae6-b010-8d02f780d347
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2505'
+source-wordcount: '2503'
 ht-degree: 0%
 
 ---
@@ -117,9 +117,9 @@ AEM Forms服務可透過取代以非同步方式叫用 `services` 替換為 `asy
 
 ## 錯誤報告 {#error-reporting}
 
-如果因為伺服器上擲回例外狀況而無法完成同步或非同步呼叫要求，例外狀況會回報為HTTP回應訊息的一部分。 如果叫用URL (或 `async_result` URL （在非同步引動的情況下）沒有.xml尾碼，REST提供者會傳回HTTP程式碼 `500 Internal Server Error` 後面接著例外狀況訊息。
+如果因為伺服器上擲回例外狀況而無法完成同步或非同步呼叫要求，例外狀況會回報為HTTP回應訊息的一部分。 如果叫用URL (或 `async_result` URL （如果有非同步引動），沒有.xml尾碼，REST提供者會傳回HTTP程式碼 `500 Internal Server Error` 後面接著例外狀況訊息。
 
-如果叫用URL (或 `async_result` URL （在非同步呼叫的情況下）確實有.xml尾碼，則REST提供者會傳回HTTP程式碼 `200 OK`後面接著一個XML檔案，以下列格式說明例外狀況。
+如果叫用URL (或 `async_result` URL （如果有非同步引動）確實有.xml尾碼，則REST提供者會傳回HTTP程式碼 `200 OK`後面接著一個XML檔案，以下列格式說明例外狀況。
 
 ```xml
  <exception>
@@ -143,7 +143,7 @@ AEM Forms服務可透過取代以非同步方式叫用 `services` 替換為 `asy
 
 ## 安全性與驗證 {#security-and-authentication}
 
-為了提供REST呼叫的安全傳輸，AEM Forms管理員可以在裝載AEM Forms的J2EE應用程式伺服器上啟用HTTPS通訊協定。 此組態是J2EE應用程式伺服器專屬的組態；它不是Forms伺服器組態的一部分。
+為了提供REST呼叫的安全傳輸，AEM Forms管理員可以在裝載AEM Forms的J2EE應用程式伺服器上啟用HTTPS通訊協定。 此設定專用於J2EE應用程式伺服器；它不是Forms伺服器設定的一部分。
 
 >[!NOTE]
 >

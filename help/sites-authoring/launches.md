@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '843'
 ht-degree: 82%
 
 ---
@@ -74,10 +74,10 @@ ht-degree: 82%
       * 如果&#x200B;**生產就緒**&#x200B;標幟已設定，Launch 將於 **Launch** (**上線**) **日期**&#x200B;自動提升至生產頁面。提升後，生產頁面會自動發佈。\
         如果未設定日期，則該標幟將無效。
 
-* 並行更新來源頁面和 Launch 頁面：
+* 並行更新來源頁面和啟動頁面：
 
-   * 對來源頁面的變更會自動實作在 Launch 副本 (如果設定為繼承，即為 Live Copy)。
-   * 可以在不中斷這些自動更新或來源頁面的情況下，對 Launch 副本進行變更。
+   * 對來源頁面的變更會自動實作在啟動副本 (如果設定為繼承，即為 Live Copy)。
+   * 可以在不中斷這些自動更新或來源頁面的情況下，對啟動副本進行變更。
 
   ![更新概觀](assets/chlimage_1-112.png)
 

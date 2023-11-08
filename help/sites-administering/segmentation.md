@@ -1,18 +1,14 @@
 ---
 title: 使用 ContextHub 設定分段
-seo-title: Configuring Segmentation with ContextHub
 description: 瞭解如何使用Context Hub設定分段。
-seo-description: Learn how to configure segmentation with Context Hub.
-uuid: 196cfb18-317c-443d-b6f1-f559e4221baa
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1772'
 ht-degree: 4%
 
 ---
@@ -52,7 +48,7 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
 
 使用元件瀏覽器即可新增 **和** 和 **或** 容器來定義區段邏輯，然後新增其他元件以比較屬性和值，或參考指令碼和其他區段以定義選取條件(請參閱 [建立新區段](#creating-a-new-segment))，以定義選取區段的確切案例。
 
-當整個陳述式評估為true時，表示區段已解析。 在適用多個區段的情況下，則 **提升** 也會使用因數。 另請參閱 [建立新區段](#creating-a-new-segment) 以取得以下詳細資訊： [提升因數。](/help/sites-administering/campaign-segmentation.md#boost-factor)
+當整個陳述式評估為true時，表示區段已解析。 如果有多個適用區段，則 **提升** 也會使用因數。 另請參閱 [建立新區段](#creating-a-new-segment) 以取得以下詳細資訊： [提升因數。](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
@@ -164,7 +160,7 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
 
 您可以使用AND和OR容器元件，在AEM中建構複雜的區段。 在執行此操作時，瞭解一些基本要點會有所幫助：
 
-* 定義的最上層永遠是最初建立的AND容器。 這無法變更，但不會影響區段定義的其餘部分。
+* 定義的頂層一律為最初建立的AND容器。 這無法變更，但不會影響區段定義的其餘部分。
 * 確定容器的巢狀內嵌有意義。 容器可視為布林運算式的括弧。
 
 以下範例是用來選取主要年齡群組中的訪客：

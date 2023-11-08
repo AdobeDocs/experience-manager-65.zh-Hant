@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6818'
+source-wordcount: '6816'
 ht-degree: 1%
 
 ---
@@ -594,7 +594,7 @@ AEM 6.3之後的預設值，可防止下列主體受到CUG原則的影響：
 
 排除「管理員」群組可在的系統主控台的「 」設定區段中變更或展開 **Apache Jackrabbit Oak CUG排除清單**.
 
-或者，可以提供並部署CugExclude介面的自訂實作，以因應特殊需求調整排除的主體集。 請參閱以下檔案： [CUG可插拔性](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability) 以取得詳細資訊和實作範例。
+或者，可以提供並部署CugExclude介面的自訂實作，以在有特殊需求時調整排除的主體集。 請參閱以下檔案： [CUG可插拔性](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability) 以取得詳細資訊和實作範例。
 
 ### 驗證：設定與組態 {#authentication-setup-and-configuration}
 

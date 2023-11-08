@@ -1,19 +1,15 @@
 ---
 title: 互動式通訊編寫UI簡介
-seo-title: An introduction to the various user interface elements you can use to author Interactive Communication
 description: 介紹您可以用來編寫互動式通訊的各種使用者介面元素
-seo-description: An introduction to the various user interface elements you can use to author Interactive Communication
-uuid: e8c5b1e8-b2bb-46b4-b42e-1f343192641a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communications
-discoiquuid: 5855d21b-340c-4139-aabe-c3a534cedb98
 docset: aem65
 feature: Interactive Communication
 exl-id: 3d15a723-df6c-4b4a-992e-a6636f4cf3dc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1308'
 ht-degree: 14%
 
 ---
@@ -73,7 +69,7 @@ Channel瀏覽器可協助您在互動式通訊的列印與網頁通道之間切�
 | 面板 | - | ✓ | Panel元件是將其他元件分組在一起的預留位置，可控制一組元件在互動式通訊中的配置方式。 面板元件也可讓您讓一組元件可供一般使用者重複，例如在填寫教育憑證所需的多個專案中。 同時，在多重索引標籤的互動式通訊的索引標籤中，也應使用各面板。 |
 | 表格 | &#42; | ✓ | 新增表格以整理行和欄中的資料。 |
 | 目標區域 | &#42;&#42; | ✓ | 在Web Channel中插入目標區域，以整理Web Channel專用元件。 |
-| 文字 | - | ✓ | 新增文字至互動式通訊的Web channel。 文字可以使用表單資料模型物件來使內容動態化。 |
+| 文字 | - | ✓ | 新增文字至互動式通訊的Web channel。 文字可以使用表單資料模型物件，讓內容成為動態的。 |
 
 &#42; 在列印管道中使用版面片段來新增表格。
 

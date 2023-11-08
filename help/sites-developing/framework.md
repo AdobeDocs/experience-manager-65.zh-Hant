@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1641'
 ht-degree: 0%
 
 ---
@@ -76,11 +76,11 @@ TagID包含 [名稱空間](#tag-namespace) 後面接著本機標籤ID。 [容器
 
 ### 標籤名稱空間 {#tag-namespace}
 
-名稱空間可讓您將專案分組。 最典型的使用案例是每個網站的名稱空間（例如，公用、內部和入口網站）或大型應用程式（例如，WCM、Assets、Communities）。 但名稱空間可用於各種其他需求。 在使用者介面中使用名稱空間，以僅顯示適用於目前內容的標籤（即特定名稱空間的標籤）的子集。
+名稱空間可讓您將專案分組。 最典型的使用案例是每個網站的名稱空間（例如，公用、內部和入口網站）或大型應用程式（例如，WCM、Assets、Communities）。 但名稱空間可用於各種其他需求。 在使用者介面中使用名稱空間，以僅顯示適用於目前內容的標籤子集（即特定名稱空間的標籤）。
 
 標籤的名稱空間是分類子樹狀結構中的第一個層級，也就是緊接在 [分類根節點](#taxonomy-root-node). 名稱空間是型別的節點 `cq:Tag` 其父項不是 `cq:Tag` 節點型別。
 
-所有標籤都有名稱空間。 如果未指定名稱空間，則會將標籤指派給預設名稱空間TagID `default` 含標題 `Standard Tags`，即 `/content/cq:tags/default`.
+所有標籤都有名稱空間。 如果未指定名稱空間，則會將標籤指派給預設名稱空間TagID `default` 含標題 `Standard Tags`，也就是 `/content/cq:tags/default`.
 
 ### 容器標籤 {#container-tags}
 

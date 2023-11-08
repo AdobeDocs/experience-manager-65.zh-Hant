@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 feature: Forms Portal
 exl-id: b1300eeb-2653-4bb5-b2fd-88048c9c43b9
-source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 AEM Forms可讓您將表單儲存為草稿。 草稿功能可讓您維護進行中表單，您可稍後從任何裝置完成並提交此表單。
 
-根據預設，AEM Forms會將與表單草稿和提交相關聯的使用者資料儲存在 `/content/forms/fp` 節點。 此外，AEM Forms Portal元件也提供資料服務，您可透過這些服務自訂儲存草稿和提交之使用者資料的實作。 例如，您可以將使用者資料儲存在資料存放區中。
+依預設，AEM Forms會將與表單草稿和提交相關聯的使用者資料儲存在 `/content/forms/fp` 節點。 此外，AEM Forms Portal元件也提供資料服務，供您自訂儲存草稿及提交之使用者資料的實作。 例如，您可以將使用者資料儲存在資料存放區中。
 
-## 必備條件  {#prerequisites}
+## 先決條件  {#prerequisites}
 
 * 啟用 [Forms Portal元件](/help/forms/using/enabling-forms-portal-components.md)
 * 建立 [Forms入口網站頁面](/help/forms/using/creating-form-portal-page.md)
-* 啟用 [Forms入口網站適用性表單](/help/forms/using/draft-submission-component.md)
+* 啟用 [適用於Forms入口網站的最適化表單](/help/forms/using/draft-submission-component.md)
 * 瞭解 [自訂儲存的實作詳細資料](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## 草稿資料服務 {#draft-data-service}
@@ -40,7 +40,7 @@ AEM Forms可讓您將表單儲存為草稿。 草稿功能可讓您維護進行�
 public interface DraftDataService {
 
     /**
-     * To save/modify user data for this userDataID, it will be null in case of creation
+     * To save/modify user data for this userDataID, it will be null if there is creation
      * @param draftDataID: unique identifier associated with the form data
      * @param formName: name of the form whose draft is being saved
      * @param formData: user data associated with this draft
@@ -95,7 +95,7 @@ public interface DraftDataService {
 
 >[!NOTE]
 >
->草稿ID欄位長度的最小值是26個字元。 Adobe建議將草稿ID長度設定為26個或更多字元。
+>草稿ID欄位長度的最小值為26個字元。 Adobe建議將草稿ID長度設定為26個或更多字元。
 
 ## 提交資料服務 {#submission-data-service}
 
@@ -184,7 +184,7 @@ public interface SubmitDataService {
 }
 ```
 
-Forms入口網站使用通用唯一識別碼(UUID)概念，為每個草稿和提交的表單產生唯一識別碼。 您也可以產生自己的唯一ID。 您可以實作介面FPKeyGeneratorService、覆寫其方法，並開發自訂邏輯來為每個草稿和提交的表單產生自訂唯一ID。 此外，將自訂ID產生實作的服務排名設定為高於0。 這可確保使用自訂實作，而非預設實作。
+Forms Portal使用通用唯一識別碼(UUID)概念，為每個草稿和提交的表單產生唯一識別碼。 您也可以產生自己的唯一ID。 您可以實作介面FPKeyGeneratorService、覆寫其方法，並開發自訂邏輯以為每個草稿和提交的表單產生自訂唯一ID。 此外，將自訂ID產生實施的服務等級設定為高於0。 這可確保使用自訂實作，而非預設實作。
 
 ```java
 public interface FPKeyGeneratorService {
@@ -203,7 +203,7 @@ public interface FPKeyGeneratorService {
 
 `@Properties(value = { @Property(name = "service.ranking", intValue = 15) } )`
 
-若要使用上述註解，請將下列內容匯入您的專案：
+若要使用上述註解，請將下列專案匯入您的專案：
 
 ```java
 import org.apache.felix.scr.annotations.Properties;

@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '4840'
+source-wordcount: '4834'
 ht-degree: 9%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 9%
 
 * 建立範本需要共同作業。 因此， [角色](#roles) 會針對每項任務指定。
 
-* 根據您執行個體的設定方式，請注意AEM現在提供的 [兩種基本型別的範本](/help/sites-authoring/templates.md#editable-and-static-templates). 這並不會影響您實際的使用方式 [使用範本建立頁面](#using-a-template-to-create-a-page)，但會影響您可以建立的範本型別，以及頁面與其範本的關聯方式。
+* 視您執行個體的設定方式而定，AEM現在會提供 [兩種基本型別的範本](/help/sites-authoring/templates.md#editable-and-static-templates). 這並不會影響您實際的使用方式 [使用範本建立頁面](#using-a-template-to-create-a-page)，但會影響您可以建立的範本型別，以及頁面與其範本的關聯方式。
 
 ### 角色 {#roles}
 
@@ -97,7 +97,7 @@ AEM現在提供兩種基本型別的範本：
 
    * 可以是 [已建立](#creatinganewtemplate) 和 [已編輯](#editingatemplate) 由範本作者使用 **範本** 主控台與編輯器。 此 **範本** 可在中存取主控台 **一般** 的區段 **工具** 主控台。
 
-   * 建立新頁面後，頁面與範本之間會維持動態連線。 這表示對範本結構和/或鎖定內容的變更，將會反映在使用該範本建立的任何頁面上。 解除鎖定（即初始）內容的變更將不會反映出來。
+   * 建立新頁面後，頁面與範本之間會維持動態連線。 這表示對範本結構和/或鎖定內容的變更，將會反映在使用該範本建立的任何頁面上。 解除鎖定內容（即初始內容）的變更將不會反映出來。
    * 使用內容原則（您可以從範本編輯器定義這些原則）來儲存設計屬性。 頁面編輯器中的設計模式不再用於可編輯的範本。
 
 * 靜態範本

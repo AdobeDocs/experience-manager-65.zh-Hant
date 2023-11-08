@@ -2,7 +2,7 @@
 title: 了解如何在 AEM 中建立內容片段模型
 description: 了解使用內容片段模型建立 Headless CMS 內容模型的概念和機制。
 exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 92%
@@ -28,7 +28,7 @@ ht-degree: 92%
 <!--
 ## Enabling Content Fragment Models {#enabling-content-fragment-models}
 
-At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools -> General -> Configuration Browser. You can either select to configure the global entry, or create a configuration. For example:
+At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools > General > Configuration Browser. You can either select to configure the global entry, or create a configuration. For example:
 
 ![Define configuration](/help/assets/content-fragments/assets/cfm-conf-01.png)
 
@@ -39,7 +39,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ## 建立內容片段模型 {#creating-content-fragment-models}
 
-然後可以建立內容片段模型並定義結構。您可以在「工具 — >資產 — >內容片段模型」底下執行此操作。
+然後可以建立內容片段模型並定義結構。您可以在「工具>資產>內容片段模型」底下執行此操作。
 
 ![工具中的內容片段模型](assets/cfm-tools.png)
 

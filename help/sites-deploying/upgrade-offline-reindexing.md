@@ -7,9 +7,9 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1337'
 ht-degree: 1%
 
 ---
@@ -160,7 +160,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 的使用 `--doc-traversal-mode` 使用MongoMK安裝時，引數很實用，因為將存放庫內容多工緩衝到本機一般檔案，可大幅改善重新索引時間。 但是，它需要儲存庫大小兩倍的額外磁碟空間。
 
-在MongoMK的案例中，如果在更接近MongoDB執行個體的執行個體中執行此步驟，則可加速此程式。 如果在同一台電腦上執行，可以避免網路額外負荷。
+如果存在MongoMK，則在更接近MongoDB執行個體的執行個體中執行此步驟時，可加速此程式。 如果在同一台電腦上執行，可以避免網路額外負荷。
 
 如需其他技術詳細資訊，請參閱 [索引的Oak-run檔案](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html).
 

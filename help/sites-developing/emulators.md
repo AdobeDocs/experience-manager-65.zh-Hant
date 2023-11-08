@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ AEM模擬器架構：
 
   `deviceGroup.drawHead(pageContext);`
 
-* 方法 `DeviceGroup.drawHead(pageContext)` 包含模擬器的init元件，即呼叫 `init.html.jsp` 模擬器元件的。 如果模擬器元件沒有自己的 `init.html.jsp` 並仰賴行動裝置基礎模擬器( `wcm/mobile/components/emulators/base)`，行動基本模擬器的初始指令碼稱為( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
+* 方法 `DeviceGroup.drawHead(pageContext)` 包含模擬器的init元件，也就是呼叫 `init.html.jsp` 模擬器元件的。 如果模擬器元件沒有自己的 `init.html.jsp` 並仰賴行動裝置基礎模擬器( `wcm/mobile/components/emulators/base)`，行動基本模擬器的初始指令碼稱為( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
 
 * 行動基本模擬器的初始指令碼透過JavaScript定義：
 

@@ -2,9 +2,9 @@
 title: AEM Content and Commerce 2020年發行說明
 description: Adobe Experience Manager Content and Commerce 2020年發行說明。
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1352'
 ht-degree: 11%
 
 ---
@@ -143,7 +143,7 @@ ht-degree: 11%
 
 * 新增類別篩選作為Facet，可讓購物者根據類別進行篩選。
 
-* 在安全性要求中新增服務使用者對應，以確保透過服務使用者存取/conf，而不是透過直接操控ACL。 CIF核心元件現在必須使用服務使用者來存取設定。
+* 在安全性要求中新增服務使用者對應，以確保透過服務使用者存取/conf，而不是透過直接操控ACL。 CIF核心元件必須使用服務使用者來存取設定。
 
 ### 功能改善 {#what-is-improved-june}
 

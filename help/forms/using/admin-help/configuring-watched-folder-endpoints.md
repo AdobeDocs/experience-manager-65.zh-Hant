@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '7176'
+source-wordcount: '7174'
 ht-degree: 0%
 
 ---
@@ -225,7 +225,7 @@ Watched資料夾服務可處理端點的建立、更新及刪除。 管理員建
 
 **常值：** Watched資料夾會使用顯示的欄位中輸入的值。 支援所有基本Java型別。 例如，如果API使用字串、long、int和Boolean等輸入，則字串會轉換為正確型別並叫用服務。
 
-**變數：** 輸入的值是watched資料夾用來挑選輸入的檔案模式。 例如，在加密密碼服務的情況下，輸入檔案必須是PDF檔案，使用者可以使用&amp;ast；.pdf作為檔案模式。 Watched資料夾會擷取Watched資料夾中符合此模式的所有檔案，並叫用每個檔案的服務。 使用變數時，所有輸入檔案都會轉換為檔案。 僅支援使用Document作為輸入型別的API。
+**變數：** 輸入的值是watched資料夾用來挑選輸入的檔案模式。 例如，如果存在加密密碼服務，其中輸入檔案必須是PDF檔案，則使用者可以使用&amp;ast；.pdf作為檔案模式。 Watched資料夾會擷取Watched資料夾中符合此模式的所有檔案，並叫用每個檔案的服務。 使用變數時，所有輸入檔案都會轉換為檔案。 僅支援使用Document作為輸入型別的API。
 
 **輸出引數對應：** 用於設定服務和操作的輸出。 可用的設定視使用watched資料夾端點的服務而定。
 
@@ -271,7 +271,7 @@ Watched資料夾輸出可以是單一檔案、檔案清單或檔案地圖。 然
 
 ## 關於節流 {#about-throttling}
 
-為監看資料夾端點啟用節流時，會限制可在任何指定時間處理的監看資料夾工作數目。 作業的最大數量由「批次大小」值決定，此值也可在Watched資料夾端點中設定。 當達到節流限制時，不會輪詢watched資料夾輸入目錄中的傳入檔案。 檔案也會保留在輸入目錄中，直到其他watched資料夾工作完成且進行另一次輪詢嘗試為止。 在同步處理的情況下，單一輪詢中處理的所有工作都將計入節流限制，即使這些工作是在單一執行緒中連續處理。
+為監看資料夾端點啟用節流時，會限制可在任何指定時間處理的監看資料夾工作數目。 作業的最大數量由「批次大小」值決定，此值也可在Watched資料夾端點中設定。 當達到節流限制時，不會輪詢watched資料夾輸入目錄中的傳入檔案。 檔案也會保留在輸入目錄中，直到其他watched資料夾工作完成且進行另一次輪詢嘗試為止。 如果有同步處理，即使作業在單一執行緒中連續處理，在單一輪詢中處理的所有作業都將計入節流限制中。
 
 >[!NOTE]
 >
@@ -284,15 +284,15 @@ Watched Folder會以每一個「重複間隔」掃描輸入資料夾，擷取在
 節流可防止Watched資料夾在先前工作未完成時叫用新工作。 Watched資料夾會偵測進行中的工作，並根據批次大小減去進行中的工作來處理新工作。 例如，在第二個叫用中，如果完成的工作只有三個，而一個工作仍在進行中，則Watched資料夾只會叫用另外三個工作。
 
 * Watched資料夾取決於Stage資料夾中的檔案數目，以找出正在進行的工作數目。 如果stage資料夾中的檔案仍未處理，Watched資料夾將不會叫用任何其他工作。 例如，如果批次大小為四且三個工作已停止，則Watched Folder在後續呼叫中只會叫用一個工作。 有多個情況可能會導致stage資料夾中的檔案保持未處理狀態。 當工作停止時，管理員可以終止表單工作流程管理頁面上的程式，以便Watched Folder將檔案移出stage資料夾。
-* 如果表單伺服器在Watched Folder可以呼叫工作之前關閉，管理員可以將檔案移出stage資料夾。 如需詳細資訊，請參閱 [失敗點和復原](configuring-watched-folder-endpoints.md#failure-points-and-recovery).
-* 如果Forms伺服器正在執行，但Watched Folder在「工作管理員」服務回撥時未執行（當服務未依順序啟動時就會發生），則管理員可以將檔案移出stage資料夾。 如需詳細資訊，請參閱 [失敗點和復原](configuring-watched-folder-endpoints.md#failure-points-and-recovery).
+* 如果Forms伺服器在Watched Folder可以叫用工作之前關閉，管理員可以將檔案移出stage資料夾。 如需詳細資訊，請參閱 [失敗點和復原](configuring-watched-folder-endpoints.md#failure-points-and-recovery).
+* 如果「工作管理員」服務回撥時，Forms伺服器正在執行，但「監看資料夾」並未執行（當服務未依順序啟動時就會發生回撥），管理員可以將檔案移出stage資料夾。 如需詳細資訊，請參閱 [失敗點和復原](configuring-watched-folder-endpoints.md#failure-points-and-recovery).
 
 
 ## 效能與擴充性 {#performance-and-scalability}
 
-Watched資料夾可在單一節點上提供總計100個資料夾。 Watched資料夾的效能取決於表單伺服器的效能。 對於非同步叫用，效能更取決於系統載入和「作業管理員」佇列中的作業。
+Watched資料夾可在單一節點上提供總計100個資料夾。 Watched資料夾的效能取決於Forms伺服器的效能。 對於非同步叫用，效能更取決於系統載入和「作業管理員」佇列中的作業。
 
-Watched資料夾效能可藉由將節點新增至叢集來改善。 Watched資料夾工作會透過Quartz排程器散佈到叢集節點，並在非同步要求的情況下，由Job Manager服務散佈。 所有工作都會保留在資料庫中。
+Watched資料夾效能可藉由將節點新增至叢集來改善。 Watched資料夾工作會透過Quartz排程器散佈到叢集節點，而且如果有非同步要求，則由Job Manager服務散佈。 所有工作都會保留在資料庫中。
 
 Watched資料夾依賴排程器服務來排程、取消排程和重新排程工作。 其他服務，例如「事件管理」服務、「使用者管理員」服務，以及「電子郵件提供者」服務，都可共用排程器服務執行緒集區。 這可能會影響Watched資料夾的效能。 當所有服務都開始使用排程器服務執行緒集區時，將需要對其進行調整。
 
@@ -408,7 +408,7 @@ Watched Folder會在每次輪詢時執行以下三個主要工作：
 
 ## Watched資料夾的服務特定建議 {#service-specific-recommendations-for-watched-folders}
 
-對於所有服務，您應該調整watched資料夾的批次大小和重複間隔，以便Watched資料夾擷取新檔案和資料夾進行處理的速率，不會超過AEM表單伺服器可以處理的工作速率。 實際使用的引數可能會有所不同，這取決於設定的watched資料夾數目、使用之watched資料夾的服務，以及處理器上的工作強度。
+對於所有服務，您應該調整watched資料夾的批次大小和重複間隔，以便Watched資料夾擷取新檔案和資料夾進行處理的速率，不會超過AEM Forms伺服器可以處理的工作速率。 實際使用的引數可能會有所不同，這取決於設定的watched資料夾數目、使用之watched資料夾的服務，以及處理器上的工作強度。
 
 ### 產生PDF服務建議 {#generate-pdf-service-recommendations}
 

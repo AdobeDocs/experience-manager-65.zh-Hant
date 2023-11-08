@@ -1,20 +1,18 @@
 ---
 title: 如何建立或自訂最適化表單主題？
-seo-title: How to create a theme for Adaptive Forms Core Components?
 description: 瞭解如何使用BEM規格建立或自訂最適化Forms核心元件的主題
-seo-description: Learn to create or customize themes for Adaptive Forms Core Components using BEM specifications
 keywords: 建立最適化表單核心元件主題、建立新主題、自訂主題、上傳新主題、在表單中使用主題、刪除主題、在AEM 6.5表單中建立主題
 contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1971'
 ht-degree: 6%
 
 ---
-
 
 # 建立或自訂最適化表單主題 {#introduction-to-theme}
 
@@ -189,7 +187,7 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 若要將主題部署至AEM執行個體，必須將其轉換為使用者端資料庫。 請依照下列步驟，將主題轉換為使用者端資源庫：
 
 1. 開啟命令提示字元或終端機視窗。
-1. 導覽至 `<your-theme-sources>` 資料夾。 例如 `C:\aem-forms-theme-canvas`
+1. 導覽至 `<your-theme-sources>` 檔案夾。例如 `C:\aem-forms-theme-canvas`
 1. 執行以下命令：
 
    ```
@@ -339,4 +337,3 @@ The selected theme is applied to the Adaptive Form.
 * [建立核心元件型最適化Forms的範本](template-editor.md)
 * [建立最適化表單或新增最適化表單至AEM Sites頁面或體驗片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [範例主題範本和表單資料模型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
-

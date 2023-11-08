@@ -10,9 +10,9 @@ topic-tags: projects
 content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '980'
 ht-degree: 1%
 
 ---
@@ -151,7 +151,7 @@ ht-degree: 1%
 
 請依照下列步驟刪除專案。
 
-1. 導覽至頂層 **專案** 主控台。
+1. 導覽至 **專案** 主控台。
 1. 在主控台中選取您的專案。
 1. 點選或按一下 **刪除** （在工具列中）。
 1. 刪除專案時，AEM可以移除/修改關聯的專案資料。 選取您需要的選項 **刪除專案** 對話方塊。

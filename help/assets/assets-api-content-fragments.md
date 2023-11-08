@@ -5,9 +5,9 @@ feature: Content Fragments,Assets HTTP API
 role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1961'
 ht-degree: 24%
 
 ---
@@ -178,7 +178,7 @@ Assets REST API支援透過URL引數分頁(針對GET請求)：
 
 >[!NOTE]
 >
->分頁通常會套用至容器實體（即資料夾或具有轉譯的資產），因為它與請求實體的子項相關。
+>分頁通常會套用至容器實體（即資料夾或具有轉譯的資產），因為它與請求實體的子系相關。
 
 #### 範例：分頁 {#example-paging}
 
@@ -231,7 +231,7 @@ A [內容片段](/help/assets/content-fragments/content-fragments.md) 是一種�
 * 不要公開任何二進位資料。
 * 完全包含在JSON輸出中(在 `properties` 屬性)。
 
-* 也視為原子元素，即元素和變數會作為片段屬性的一部分公開，而不是作為連結或子實體公開。 這樣可讓您有效率地存取片段的裝載。
+* 也視為原子元素，也就是說，元素和變數會作為片段屬性的一部分公開，而不是作為連結或子實體公開。 這樣可讓您有效率地存取片段的裝載。
 
 #### 內容模型和內容片段 {#content-models-and-content-fragments}
 

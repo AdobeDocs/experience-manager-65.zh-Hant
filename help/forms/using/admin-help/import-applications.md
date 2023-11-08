@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: f17726c0-3591-4d25-a8b5-3a7024249a56
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 0%
@@ -51,7 +51,7 @@ ht-degree: 0%
 
    右側的屬性標籤會顯示所選CRX節點的屬性。
 
-   此 **syncState** 屬性指出AEM表單伺服器與CRX存放庫之間資料同步的狀態。 匯入程式一開始，此狀態就會設為0 （零）。 此狀態表示資料目前未同步。 資料同步時，狀態會設為1。
+   此 **syncState** 屬性指出AEM Forms伺服器與CRX存放庫之間資料同步的狀態。 匯入程式一開始，此狀態就會設為0 （零）。 此狀態表示資料目前未同步。 資料同步時，狀態會設為1。
 
 ## 部署應用程式 {#deploy-an-application}
 

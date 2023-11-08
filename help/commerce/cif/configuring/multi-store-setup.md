@@ -7,7 +7,7 @@ activity: setup
 audience: administrator
 feature: Commerce Integration Framework
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 2%
@@ -36,11 +36,11 @@ AEM CIF核心元件可用於多個AEM網站結構，而基礎的GraphQL使用者
 
 3. 依照下列步驟建立CIFCloud Service設定的子設定：
 
-   * 在AEM中，前往「工具」 — >「一般」 — > [設定瀏覽器](/help/sites-administering/configurations.md#using-configuration-browser)
+   * 在AEM中，前往「工具」 > 「一般」 > [設定瀏覽器](/help/sites-administering/configurations.md#using-configuration-browser)
    * 選取您建立的基本組態
    * 使用上述第2點所述的步驟建立設定
 
-   此新組態會建立為基底組態的子組態。 您現在可以前往「工具」 — >「一般」 — >「組態瀏覽器」並建立組態設定。
+   此新組態會建立為基底組態的子組態。 您現在可以前往「工具>一般>組態瀏覽器」並建立組態設定。
 
    >[!TIP]
    >

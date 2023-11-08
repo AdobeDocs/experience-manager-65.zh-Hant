@@ -9,7 +9,7 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 14%
@@ -64,7 +64,7 @@ ht-degree: 14%
 
    >[!NOTE]
    >
-   >若要將頁面和/或分支新增至啟動，這些頁面和/或分支必須位於網站內，亦即位於通用頂層根目錄下。
+   >若要將頁面和/或分支新增至啟動，這些頁面和/或分支必須位於網站內（即在通用頂層根目錄下）。
    >
    >如果網站在頂層底下包含語言根，則啟動項的頁面和分支必須在共同語言根底下。
    >

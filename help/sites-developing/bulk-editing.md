@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '414'
 ht-degree: 27%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 27%
    >
    >設定和其他變更的建議方法是：
    >
-   >    1. 重新建立所需專案（即該專案存在於中） `/libs`)下 `/apps`
+   >    1. 重新建立所需專案（即存在於中的專案） `/libs`)下 `/apps`
    >    1. 進行任何變更 `/apps`
 
 1. 選取「**儲存全部**」即可保留您的更新。
