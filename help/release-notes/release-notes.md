@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
-source-git-commit: 61f3079a88e39c02b29bfafc7b2b9d4d098cef6b
+source-git-commit: 31bc86f81620bdc6fe9877cdc96f4004a80d60f9
 workflow-type: tm+mt
-source-wordcount: '4640'
+source-wordcount: '4641'
 ht-degree: 4%
 
 ---
@@ -419,10 +419,19 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * GraphQL查詢可能使用 `damAssetLucene` 索引而非 `fragments` 索引。 此動作可能會導致GraphQL查詢失敗或需要很長時間才能執行。
 
-  若要修正問題， `damAssetLucene` 必須設定為包含下列兩個屬性：
+  若要修正問題， `damAssetLucene` 必須設定為包含下列兩個屬性： `/indexRules/dam:Asset/properties`：
 
    * `contentFragment`
+      * `jcr:primaryType="nt:unstructured"`
+      * `name="jcr:content/contentFragment"`
+      * `propertyIndex="{Boolean}true"`
+      * `type="Boolean"`
    * `model`
+      * `jcr:primaryType="nt:unstructured"`
+      * `name="jcr:content/data/cq:model"`
+      * `ordered="{Boolean}true"`
+      * `propertyIndex="{Boolean}true"`
+      * `type="String"`
 
   在索引定義變更後，需要重新索引(`reindex` = `true`)。
 
