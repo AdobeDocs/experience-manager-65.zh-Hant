@@ -1,15 +1,11 @@
 ---
 title: 從AEM工作流程啟動Document Services API
-seo-title: Initiate Document Services APIs from AEM Workflow
 description: 瞭解如何在DDX或提供的輸入上叫用AEM檔案服務。 另請參閱如何將PDF轉換為PDF/A
-seo-description: Learn how to invoke AEM Document services on DDX or supplied inputs. Also see hwo to convert PDF to PDF/A
-uuid: aacec2df-1ad6-4ff2-a99d-ef206efcdc09
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: 8b85bdc7-3864-49c9-81b0-cf15b8e986d9
 exl-id: 123087a2-9d09-4579-9185-2ccd7d25bf8d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -61,7 +57,7 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 根據輸入DDX，叫用API可以產生多個輸出檔案。 「輸出檔案」索引標籤可讓您選取將儲存輸出檔案的位置。
 
 1. *將輸出儲存在承載中*：將輸出檔案儲存在承載資料夾下，或如果承載是檔案則覆寫承載。
-1. *輸出檔案的地圖*：允許為每個輸出檔案新增一個專案，以明確指定儲存每個輸出檔案的位置。 每個專案都會指定檔案以及儲存的位置。 輸出檔案可能會覆寫承載或儲存在承載資料夾下。 有多個輸出檔案時，此功能會很有用。
+1. *輸出檔案的地圖*：可讓您明確指定每個輸出檔案的儲存位置，方法是在每個輸出檔案新增一個專案。 每個專案都會指定檔案以及儲存的位置。 輸出檔案可能會覆寫承載或儲存在承載資料夾下。 有多個輸出檔案時，此功能會很有用。
 
 1. *工作記錄檔*：指定工作記錄檔案的儲存位置，這有助於疑難排解失敗。
 

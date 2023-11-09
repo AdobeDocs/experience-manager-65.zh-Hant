@@ -7,7 +7,7 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: aed9247c-eb81-470c-9fa4-a98c3df2dcaa
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '2773'
 ht-degree: 1%
@@ -326,8 +326,8 @@ AEM Communities設定可擴充 [AdobeGranite OAuth應用程式與提供者](#ado
 
      儲存使用者資料的存放庫位置。 對於社群網站，為確保成員擁有檢視彼此設定檔的許可權，路徑應為預設值 `/home/users/community`.
 
-   * **[!UICONTROL 啟用引數]** 不要編輯
-   * **[!UICONTROL URL引數]** 不要編輯
+   * **[!UICONTROL 啟用引數]**  — 不要編輯
+   * **[!UICONTROL URL引數]**  — 不要編輯
    * **[!UICONTROL 更新使用者]**
 
      如果勾選，會在每次登入時重新整理存放庫中的使用者資料，以反映設定檔變更或請求的其他資料。 預設為取消選取。

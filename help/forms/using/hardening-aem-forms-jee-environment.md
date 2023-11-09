@@ -1,16 +1,12 @@
 ---
 title: 在JEE環境中強化AEM Forms
-seo-title: Hardening Your AEM Forms on JEE Environment
 description: 瞭解各種安全性強化設定，以增強在公司內部網路中執行的JEE上的AEM Forms安全性。
-seo-description: Learn a variety of security-hardening settings to enhance the security of AEM Forms on JEE running in a corporate intranet.
-uuid: f6c63690-6376-4fe1-9df2-a14fbfd62aff
 content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
-discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '7662'
 ht-degree: 1%
@@ -318,8 +314,8 @@ Web服務定義語言(WSDL)產生應該只針對開發環境啟用，在這些�
    https://[host name]:[port]/adminui
    ```
 
-1. 按一下 **設定>核心系統設定>設定**.
-1. 取消選取 **啟用WSDL** 並按一下 **確定**.
+1. 選取 **設定>核心系統設定>設定**.
+1. 取消選取 **啟用WSDL**，然後選取 **確定**.
 
 ### 應用程式伺服器安全性 {#application-server-security}
 

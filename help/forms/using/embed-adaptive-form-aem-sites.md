@@ -1,18 +1,14 @@
 ---
 title: 在AEM網站頁面中內嵌最適化表單或互動式通訊
-seo-title: Embed an adaptive form or interactive communication in AEM sites page
 description: 您可以在AEM網站頁面中內嵌調適型表單。 使用者無需離開網站頁面，即可填寫及提交表單。
-seo-description: You can embed adaptive forms in AEM sites pages. Users can fill and submit forms without leaving the site pages.
-uuid: 59b49e2f-6d95-42e5-b31e-fc40936c42d2
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author, interactive-communications
-discoiquuid: 43362643-69cd-4006-a613-f998c79eeddc
 feature: Adaptive Forms
 exl-id: 00ee7929-649f-4cbb-be79-ba13ac73a16d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1164'
 ht-degree: 6%
 
 ---
@@ -69,7 +65,7 @@ AEM Forms提供可新增至網站頁面的元件。 AEM Forms容器元件可讓�
 
       * **感謝訊息**：使用RTF編輯器撰寫訊息，以在表單提交時顯示。 只有當您選擇顯示感謝訊息時，才能使用此選項。
       * **感謝頁面**：瀏覽並選取表單提交時顯示的頁面。 只有當您選擇顯示感謝頁面時，才能使用此選項。
-      * **提交時重新整理頁面**：啟用以重新整理包含內嵌最適化表單的頁面，以顯示感謝頁面。 否則，感謝頁面會取代AEM Forms容器中的最適化表單，而不會重新整理頁面。 只有當您選擇顯示感謝頁面時，才能使用此選項。
+      * **提交時重新整理頁面**：啟用，這樣您就可以重新整理包含內嵌最適化表單的頁面，以顯示感謝頁面。 否則，感謝頁面會取代AEM Forms容器中的最適化表單，而不會重新整理頁面。 只有當您選擇顯示感謝頁面時，才能使用此選項。
 
    * **主題**：選取定義最適化表單或互動式通訊元件樣式的主題。 樣式包含外觀屬性，例如字型樣式、背景顏色、尺寸和對齊。
    * **高度**：指定容器的高度。 保留空白以自動調整容器大小。

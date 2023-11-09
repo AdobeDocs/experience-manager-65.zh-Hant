@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: 0b4aa1a4-449a-4882-8f7c-3ceea6ac7f83
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 1%
@@ -111,7 +111,7 @@ ht-degree: 1%
 
 1. 在Mobile中，從目錄選擇您的Mobile On-Demand應用程式。
 1. 選擇文章以刪除 **管理集合** 圖磚。
-1. 確定已在清單中選取它（視需要選取要刪除的其他專案）。
+1. 確定已在清單中選取它；視需要選取要刪除的其他專案。
 1. 按一下 **刪除** 從動作列移除。
 1. 檢查您是否要從AEM和Mobile On-Demand中刪除。
 1. 按一下&#x200B;**刪除**。

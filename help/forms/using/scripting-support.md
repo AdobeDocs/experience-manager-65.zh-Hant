@@ -1,19 +1,15 @@
 ---
 title: HTML5表單的指令碼支援
-seo-title: Scripting support for HTML5 forms
 description: HTML5 Forms支援的JavaScript、FormCalc屬性及其他方法。
-seo-description: JavaScript, FormCalc properties, and other methods that are supported in HTML5 Forms.
-uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '3887'
+source-wordcount: '3896'
 ht-degree: 6%
 
 ---
@@ -36,7 +32,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
    <td>指定欄位在回應使用者的動作而變更前的內容。 此值可以恢復，類似於恢復功能。</td>
    <td><p>下拉式清單和清單方塊無法運作。 <code>PrevText </code>在下列情況下無法正常運作：</p>
     <ul>
-     <li>在iPad的數值欄位中輸入一些特殊字元鍵(例如$、(、)、&amp;、@等)時，以及 </li>
+     <li>在iPad的數值欄位中輸入一些特殊字元鍵（例如$、、、或&amp;或@等等）時，以及 </li>
      <li>針對「日期」欄位（透過行事曆輸入日期時）。<br /> </li>
     </ul> <p>不支援透過指令碼設定值。</p> </td>
   </tr>
@@ -52,7 +48,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
     <ul>
      <li>在選取 — 取代文字時</li>
      <li>在刪除、複製和貼上文字時。</li>
-     <li>在數值欄位中輸入一些特殊字元鍵(例如$、(、)、&amp;、@等)時<br /> </li>
+     <li>在數值欄位中輸入一些特殊字元鍵時（例如，$或、&amp;或@等）<br /> </li>
      <li>使用Shift+英數字元組合時。 </li>
      <li>使用日期/時間欄位時。</li>
     </ul>
@@ -67,7 +63,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
     <ul>
      <li>在選取 — 取代文字時</li>
      <li>在刪除、複製和貼上文字時。</li>
-     <li>在數值欄位中輸入一些特殊字元鍵(例如$、(、)、&amp;、@等)時<br /> </li>
+     <li>在數值欄位中輸入一些特殊字元鍵時（例如，$或、&amp;或@等）<br /> </li>
      <li>使用Shift+英數字元組合時。 </li>
      <li>使用日期/時間欄位時。</li>
     </ul> <p>不支援透過指令碼設定值。</p> </td>
