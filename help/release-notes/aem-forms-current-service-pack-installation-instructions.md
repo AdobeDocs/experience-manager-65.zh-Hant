@@ -2,9 +2,9 @@
 title: 適用於AEM Forms的AEM Forms修補程式安裝指示
 description: OSGi和JEE環境的AEM Forms Service Pack安裝指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1767'
 ht-degree: 8%
 
 ---
@@ -34,6 +34,8 @@ Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能�
 >[!NOTE]
 >
 > Adobe會每六個Service Pack發行一次完整安裝程式。 AEM 6.5 Forms Service Pack 18 (6.5.18.0)是最新的JEE完整安裝程式。 完整版安裝程式支援新平台，而一般Service Pack安裝程式則包含新功能、錯誤修正和一般改善。 如果您在JEE環境中執行全新安裝或計畫使用最新軟體，AdobeAEM建議使用2023年8月31日發行的AEM Forms 6.5.18.0 Forms on JEE完整安裝程式，而非2019年4月8日發行的AEM 6.5 Forms安裝程式或2022年3月3日發行的AEM 6.5.12 Forms安裝程式。 使用完整安裝程式後，請安裝最新的Service Pack。
+> 
+> AEM 6.5 QuickStart提供的最適化Forms功能僅供探索和評估用途。 若為生產使用，您必須取得AEM Forms的有效授權，因為最適化Forms功能需要適當的授權。
 
 ## 在JEE環境的AEM表單上下載並安裝Service Pack {#download-and-install-for-jee-service-pack}
 

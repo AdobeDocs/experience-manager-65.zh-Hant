@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1803'
 ht-degree: 3%
 
 ---
@@ -73,7 +73,7 @@ Adobe Experience Manager是網頁式使用者端伺服器系統，用於建立�
 * **網站**
 * **行動應用計畫**
 * **數位出版物**
-* **Forms**
+* **表單與文件**
 * **數位資產**
 * **社群**
 * **線上商務**
@@ -81,6 +81,10 @@ Adobe Experience Manager是網頁式使用者端伺服器系統，用於建立�
 最後，客戶可以利用這些基礎結構和應用程式層級的建置組塊，透過建置自己的應用程式來建立自訂解決方案。
 
 AEM伺服器為 **Java式** 並會在大多數支援該平台的作業系統上執行。 所有使用者端與AEM的互動均透過 **網頁瀏覽器**.
+
+>[!NOTE]
+>
+>AEM 6.5 QuickStart提供的最適化Forms功能僅供探索和評估用途。 若為生產使用，您必須取得AEM Forms的有效授權，因為最適化Forms功能需要適當的授權。
 
 ### 典型部署案例 {#typical-deployment-scenarios}
 

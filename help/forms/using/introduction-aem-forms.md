@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '956'
 ht-degree: 11%
 
 ---
@@ -123,3 +123,7 @@ AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務�
 ![版面配置二](do-not-localize/layout-02.png)
 
 簡化個人化通訊工作流程
+
+>[!NOTE]
+>
+>AEM 6.5 QuickStart提供的最適化Forms功能僅供探索和評估用途。 若為生產使用，您必須取得AEM Forms的有效授權，因為最適化Forms功能需要適當的授權。
