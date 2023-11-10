@@ -62,7 +62,7 @@ AEM [!DNL Forms] 資料整合模組可讓您從不同的後端資料來源(例�
 
 1. 將資料庫配置為 [!DNL MySQL] 資料來源：
 
-   1. 前往位於 HTTPs://localhost:4502/system/console/configMgr AEM [ ](https://localhost:4502/system/console/configMgr) Web 主控台。
+   1. 前往位於 https://localhost:4502/system/console/configMgr AEM [ ](https://localhost:4502/system/console/configMgr) Web 主控台。
    1. 找到 **Apache Sling 連線的池資料來源** 設定。 點選以在編輯模式中開啟設定。
    1. 在設定對話方塊中，指定下列詳細資訊：
 
