@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
+source-git-commit: 6f45b0f8dad44e66570f6436a560060cbed56161
 workflow-type: tm+mt
-source-wordcount: '3429'
+source-wordcount: '3432'
 ht-degree: 1%
 
 ---
@@ -285,7 +285,8 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->AEM 6.5 QuickStart提供的最適化Forms功能僅供探索和評估用途。 若為生產使用，您必須取得AEM Forms的有效授權，因為最適化Forms功能需要適當的授權。
+>AEM Forms功能，例如最適化Forms，提供於 [AEM 6.5快速入門](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)，僅供探索及評估用途。 針對生產使用，取得AEM Forms的有效授權至關重要。
+
 
 ### 安裝Experience Manager內容片段的GraphQL索引套件{#install-aem-graphql-index-add-on-package}
 

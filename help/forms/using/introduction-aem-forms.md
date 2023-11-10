@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
+source-git-commit: 6f45b0f8dad44e66570f6436a560060cbed56161
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '952'
 ht-degree: 11%
 
 ---
@@ -36,6 +36,10 @@ AEM Forms結合表單製作、管理和發佈，以及通訊管理功能、檔�
 在大型企業中，表單通常是建立一次並透過複製到內容管理系統來重複使用。讓大型的表單資料庫保持最新狀態，並讓這些表單可供探索，是一項相當艱鉅的挑戰。 AEM 提供可自訂的表單入口網站，確保客戶可透過 Web 和行動管道找到並存取他們需要的表單。
 
 AEM Forms提供的表單管理工具不僅可讓您管理最適化表單，還可管理XFA表單、PDF forms和相關資產。 如需詳細資訊，請參閱 [管理表單簡介](../../forms/using/introduction-managing-forms.md).
+
+>[!NOTE]
+>
+>AEM Forms功能，例如最適化Forms，提供於 [AEM 6.5快速入門](/help/sites-deploying/deploy.md)，僅供探索及評估用途。 針對生產使用，取得AEM Forms的有效授權至關重要。
 
 ![AEM forms功能](do-not-localize/4th-draft.gif)
 
@@ -124,6 +128,3 @@ AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務�
 
 簡化個人化通訊工作流程
 
->[!NOTE]
->
->AEM 6.5 QuickStart提供的最適化Forms功能僅供探索和評估用途。 若為生產使用，您必須取得AEM Forms的有效授權，因為最適化Forms功能需要適當的授權。
