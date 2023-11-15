@@ -8,9 +8,9 @@ topic-tags: content
 content-type: reference
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '3568'
+source-wordcount: '3574'
 ht-degree: 2%
 
 ---
@@ -382,7 +382,7 @@ Package Share是一項集中式公用服務，可分發內容套件。 封裝共
 
 例如，假設在已有覆蓋 `/apps/sling/servlet/errorhandler/404.jsp`，此套件包含 `/libs/sling/servlet/errorhandler/404.jsp`，如此一來，它就會變更現有的檔案 `/libs/sling/servlet/errorhandler/404.jsp`.
 
-**如何報告**
+**如何彙報**
 
 任何此類覆蓋圖會在「封裝管理員」的「活動記錄」中說明。
 

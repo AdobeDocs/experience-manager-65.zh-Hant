@@ -1,20 +1,16 @@
 ---
 title: 操作控制面板
-seo-title: Operations Dashboard
 description: 瞭解如何使用Adobe Experience Manager中的操作控制面板。
-seo-description: Learn how to use the Operations Dashboard.
-uuid: ef24813f-a7a8-4b26-a496-6f2a0d9efef6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '6057'
+source-wordcount: '6061'
 ht-degree: 2%
 
 ---
@@ -231,8 +227,8 @@ A **複合健康狀態檢查** 是彙總來自數個個別檢查的資訊的檢�
      <li>檢查 <code>lastIndexedTime</code> 對於所有索引通道和：
       <ul>
        <li>如果超過2小時前，則傳回「嚴重」狀態 </li>
-       <li>如果時間介於2小時到45分鐘之間，則傳回警告狀態 </li>
-       <li>如果時間少於45分鐘前，則傳回「正常」狀態 </li>
+       <li>如果2小時到45分鐘前已發生警告狀況，則會傳回警告狀態 </li>
+       <li>如果小於45分鐘前，則傳回「正常」狀態 </li>
       </ul> </li>
      <li>如果不符合這些條件，則會傳回OK狀態</li>
     </ul> <p>「嚴重」和「警告」狀態臨界值均可設定。 此健康狀態檢查的Mbean為 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck：name=asyncIndexHealthCheck，type=HealthCheck</a>.</p> <p><strong>注意： </strong>此健康情況檢查可與AEM 6.4搭配使用，且已反向移植至AEM 6.3.0.1。</p> </td>

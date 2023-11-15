@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '3786'
+source-wordcount: '3787'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ AEM行動架構允許開發對發出請求的裝置敏感的元件。 下列程�
 **行動模擬器的主要特性**
 
 * 裝置群組由一個或多個模擬器組成：裝置群組設定頁面，例如/etc/mobile/groups/touch，包含 `emulators` 屬性位於 `jcr:content` 節點。
-注意：雖然相同的模擬器可能屬於數個裝置群組，但這不太合理。
+注意：雖然相同的模擬器可能屬於數個裝置群組，但是這不太合理。
 
 * 透過裝置群組的設定對話方塊， `emulators` 屬性會以所需模擬器的路徑設定。 例如：`/libs/wcm/mobile/components/emulators/iPhone4`。
 

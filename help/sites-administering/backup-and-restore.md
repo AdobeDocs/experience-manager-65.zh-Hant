@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 0%
@@ -217,7 +217,7 @@ AEM Online Backup由一系列內部動作組成，以確保要備份的資料與
 
      名為的空白檔案 `backupInProgress.txt` 會在備份啟動時，在目標目錄中建立。 備份完成時會刪除此檔案。
 
-1. 檔案會從來源目錄複製到目標目錄（或建立zip檔案時的暫存目錄）。 區段存放區會在資料存放區之前複製，以避免存放庫損毀。 建立備份時，會省略索引和快取資料。 因此，資料來自 `crx-quickstart/repository/cache` 和 `crx-quickstart/repository/index` 備份中未包含。 程式的進度列指標在建立zip檔案時介於0% - 70%之間，如果沒有建立zip檔案，則為0% - 100%。
+1. 檔案會從來源目錄複製到目標目錄（或建立zip檔案時的暫存目錄）。 區段存放區會在資料存放區之前複製，以避免存放庫損毀。 建立備份時，會省略索引和快取資料。 因此，資料來自 `crx-quickstart/repository/cache` 和 `crx-quickstart/repository/index` 備份中未包含。 建立zip檔案時，流程的進度列指標介於0%-70%之間，如果未建立zip檔案，則介於0%-100%之間。
 
 1. 如果備份是在預先存在的目錄中進行，則會刪除目標目錄中的「舊」檔案。 舊檔案是來源目錄中不存在的檔案。
 

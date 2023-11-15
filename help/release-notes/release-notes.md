@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 7c5d45788583cce3403b8beca0c122a9ddf1ca49
+source-git-commit: 746f34d394a072b133ca161c04585520c7ba6716
 workflow-type: tm+mt
-source-wordcount: '3613'
+source-wordcount: '3556'
 ht-degree: 3%
 
 ---
@@ -22,14 +22,14 @@ ht-degree: 3%
 
 | 產品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| 版本 | 6.5.19.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 版本 | 6.5.18.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 類型 | Service Pack發行 |
-| 日期 | 2023年11月23日（星期四） <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 日期 | 2023年8月24日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 下載 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
-## 包含的內容 [!DNL Experience Manager] 6.5.19.0 {#what-is-included-in-aem-6519}
+## 包含的內容 [!DNL Experience Manager] 6.5.18.0 {#what-is-included-in-aem-6519}
 
-[!DNL Experience Manager] 6.5.19.0包括自2019年4月6.5首次發行以來所推出的新功能、客戶要求的重要增強功能、錯誤修正，以及效能、穩定性和安全性改善專案。 [安裝此Service Pack](#install) 於 [!DNL Experience Manager] 6.5.
+[!DNL Experience Manager] 6.5.18.0包括自2019年4月6.5首次發行以來所推出的新功能、客戶要求的重要增強功能、錯誤修正，以及效能、穩定性和安全性改善專案。 [安裝此Service Pack](#install) 於 [!DNL Experience Manager] 6.5.
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -61,44 +61,44 @@ ht-degree: 3%
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-## 已修正Service Pack 19中的問題 {#fixed-issues}
+## 已修正Service Pack 18中的問題 {#fixed-issues}
 
 ### [!DNL Sites]{#sites-6519}
 
 
 #### 協助工具{#sites-accessibility-6519}
 
-* 在AEM Sites頁面上，當您放大頁面200%時，連結會 **[!UICONTROL 語言副本]** 和 **[!UICONTROL CSV報表]** 在參照邊欄中消失。 (SITES-11011)一般
+* 在AEM Sites頁面上，當您放大頁面200%時，連結會 **[!UICONTROL 語言副本]** 和 **[!UICONTROL CSV報表]** 在參照邊欄中消失。 (SITES-11011)
 
 #### 管理員使用者介面{#sites-adminui-6519}
 
-* AEM Screens頻道 **[!UICONTROL 預覽]** 功能無法運作或顯示在控制面板上。 (SITES-15730)嚴重
-* 在頁面移動作業期間，如果使用者介面無法顯示參照，但指出會自動重新發佈參照，則會顯示參照 *非* 已重新發佈。 (SITES-16435)主要
-* 在具有Service Pack 16或17的AEM 6.5中，當在已啟用「工作流程」欄的網站清單檢視中時，您無法根據該欄中的專案排序清單。 沒有排序。 (SITES-15385)主要
-* 對於重新導向頁面範本，重新導向欄位已設定為必填。 不過，必要欄位的驗證不適用於以下兩種情況：建立頁面時沒有強制重新導向值；無法建立重新導向頁面。 使用鍵盤快速鍵導覽時驗證無法運作，且當欄位被標籤為無效時，驗證無法繼續。 (SITES-15903)一般
-* 部分 **傳入連結** 未包括在「 」中顯示的計數 **引用** 面板。 例如，面板顯示 **傳入連結(6)** 但實際上有9個傳入連結。 (SITES-14816)一般
+* AEM Screens頻道 **[!UICONTROL 預覽]** 功能無法運作或顯示在控制面板上。 (SITES-15730)
+* 在頁面移動作業期間，如果使用者介面無法顯示參照，但指出會自動重新發佈參照，則會顯示參照 *非* 已重新發佈。 (SITES-16435)
+* 在具有Service Pack 16或17的AEM 6.5中，當在已啟用「工作流程」欄的網站清單檢視中時，您無法根據該欄中的專案排序清單。 沒有排序。 (SITES-15385)
+* 對於重新導向頁面範本，重新導向欄位已設定為必填。 不過，必要欄位的驗證不適用於以下兩種情況：建立頁面時沒有強制重新導向值；無法建立重新導向頁面。 使用鍵盤快速鍵導覽時驗證無法運作，且當欄位被標籤為無效時，驗證無法繼續。 (SITES-15903)
+* 部分 **傳入連結** 未包括在「 」中顯示的計數 **引用** 面板。 例如，面板顯示 **傳入連結(6)** 但實際上有9個傳入連結。 (SITES-14816)
 
 #### 傳統 UI{#sites-classicui-6519}
 
-* 在SITES-15827中安裝Hotfix後，單字之間有空白的對話方塊標題會取代為 `" "`. 也正在移除分行符號。 (SITES-16089)主要
-* 已編碼的對話方塊標題現在會導致標題的雙重編碼。 (SITES-15841)一般
-* 將AEM伺服器從Service Pack 6.5.16更新至6.5.17會導致傳統UI對話方塊標題編碼兩次。 (SITES-15634)一般
+* 在SITES-15827中安裝Hotfix後，單字之間有空白的對話方塊標題會取代為 `" "`. 也正在移除分行符號。 (SITES-16089)
+* 已編碼的對話方塊標題現在會導致標題的雙重編碼。 (SITES-15841)
+* 將AEM伺服器從Service Pack 6.5.16更新至6.5.17會導致傳統UI對話方塊標題編碼兩次。 (SITES-15634)
 
 #### [!DNL Content Fragments]{#sites-contentfragments-6519}
 
-* 內容片段編輯器中會顯示內部伺服器錯誤訊息。 (SITES-13550)嚴重
-* 更新 `org.json` 資料庫透過NPR-41291導致中的資料錯誤轉換 `DefaultDataTypeConverter` 的 `cfm-impl` 套件組合。 資料型別轉換必須更靈活。 (SITES-16473)一般
-* 收到錯誤快顯訊息：「由於內容不相容，此內容片段版本無法與目前版本比較。」 內容片段應該可以比較，但事實並非如此。 (SITES-16317)一般
+* 內容片段編輯器中會顯示內部伺服器錯誤訊息。 (SITES-13550)
+* 更新 `org.json` 資料庫透過NPR-41291導致中的資料錯誤轉換 `DefaultDataTypeConverter` 的 `cfm-impl` 套件組合。 資料型別轉換必須更靈活。 (SITES-16473)
+* 收到錯誤快顯訊息：「由於內容不相容，此內容片段版本無法與目前版本比較。」 內容片段應該可以比較，但事實並非如此。 (SITES-16317)
 * 將資產選擇器JS URL從
   `https://experience.adobe.com/solutions/CQ-assets-selectors/assets/resources/assets-selectors.js`
 至
-  `https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/assets-selectors.js` (SITES-16068)一般
-* 為CFM-Polaris整合調整新的Polaris中繼資料API回應結構。 (SITES-15166)一般
-* 應列出所有內容片段，其中參照了所選的內容片段。 內容片段參考面板中的資產參考會顯示0 （零）參考。 (SITES-15036)一般
+  `https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/assets-selectors.js` (SITES-16068)
+* 為CFM-Polaris整合調整新的Polaris中繼資料API回應結構。 (SITES-15166)
+* 應列出所有內容片段，其中參照了所選的內容片段。 內容片段參考面板中的資產參考會顯示0 （零）參考。 (SITES-15036)
 
 #### 核心後端{#sites-core-backend-6519}
 
-* 改進 `StyleImpl`. (SITES-15164)一般
+* 改進 `StyleImpl`. (SITES-15164)
 
 <!--#### Core Components{#sites-core-components-6519}
 
@@ -106,7 +106,7 @@ ht-degree: 3%
 
 #### Campaign整合{#sites-campaign-integration-6519}
 
-* 在簽章元件上(`/apps/fpl/components/campaign/signature`)，連結Externalizer無法運作。 如果影像標籤上方的HTML註解已移除，則不會將網域附加至影像來源。 此問題僅存在於生產環境中的簽名元件中，而非中繼環境中。 (SITES-16120)一般
+* 在簽章元件上(`/apps/fpl/components/campaign/signature`)，連結Externalizer無法運作。 如果影像標籤上方的HTML註解已移除，則不會將網域附加至影像來源。 此問題僅存在於生產環境中的簽名元件中，而非中繼環境中。 (SITES-16120)
 
 <!--#### Experience Fragments{#sites-experiencefragments-6519}
 
@@ -114,54 +114,53 @@ ht-degree: 3%
 
 #### 基礎元件（舊版）{#sites-foundation-components-legacy-6519}
 
-* Adobe Experience Manager (AEM) Sites Search元件損壞了使用者介面。 (SITES-15087)一般
+* Adobe Experience Manager (AEM) Sites Search元件損壞了使用者介面。 (SITES-15087)
 
 #### GraphQL 查詢編輯器{#sites-graphql-query-editor-6519}
 
-* 當查詢數量較多時（例如，超過25個），GraphQL編輯器使用者介面無法讓您捲動瀏覽所有持續存在的查詢。 (SITES-16008)主要
-* GraphQL編輯器沒有儲存持續查詢的發佈狀態。 取消發佈按鈕會出現在GraphQL編輯器中，但不顯示指示持久查詢已發佈的圖示。 重新整理頁面會顯示持續查詢甚至尚未發佈。 (SITES-15858)主要
+* 當查詢數量較多時（例如，超過25個），GraphQL編輯器使用者介面無法讓您捲動瀏覽所有持續存在的查詢。 (SITES-16008)
+* GraphQL編輯器沒有儲存持續查詢的發佈狀態。 取消發佈按鈕會出現在GraphQL編輯器中，但不顯示指示持久查詢已發佈的圖示。 重新整理頁面會顯示持續查詢甚至尚未發佈。 (SITES-15858)
 
 #### 啟動{#sites-launches-6519}
 
-* 存放庫中的變更未儲存，因為 `Oak0001` 正在編輯多個頁面或正在編寫內容時發生衝突。 在此類事件中執行重試是正常的，但不會發生這種情況。 (SITES-14840)主要
+* 存放庫中的變更未儲存，因為 `Oak0001` 正在編輯多個頁面或正在編寫內容時發生衝突。 在此類事件中執行重試是正常的，但不會發生這種情況。 (SITES-14840)
 
 #### MSM — 即時副本{#sites-msm-live-copies-6519}
 
-* MSM轉出按鈕在觸控式圖形使用者介面中無法運作。 (SITES-16991)主要
-* 建立即時副本或轉出體驗片段時，連結參考未在體驗片段內更新。 (SITES-15460)一般
+* MSM轉出按鈕在觸控式圖形使用者介面中無法運作。 (SITES-16991)
+* 建立即時副本或轉出體驗片段時，連結參考未在體驗片段內更新。 (SITES-15460)
 
 #### 頁面編輯器{#sites-pageeditor-6519}
 
-* 在資產型別篩選器上選取多個檔案檔案型別在頁面主控台上無法運作。 即使某個特定檔案型別的結果可用，也找不到任何結果。 因此，作者無法篩選多個檔案。 他們必須使用多種檔案型別，而且必須一次篩選一種。 (SITES-14047)主要
-* 從AEM 6.5.17和AEM 6.5.18升級執行個體後，從頁面編輯器內（如果您選取） **[!UICONTROL 發佈頁面]**，系統會將您重新導向至不存在的URL。 系統會將使用者重新導向至發佈精靈。 (SITES-15856)一般
-* (SITES-15704)一般
-* 在作業系統剪貼簿的貼上過程中，AEM剪貼簿中有多餘的復本。 (SITES-15704)一般
-* 在「資產」中，選取 **[!UICONTROL 檔案]**，然後在下方 **[!UICONTROL 篩選型別]**，選取 **[!UICONTROL Microsoft® Word]** 或 **[!UICONTROL Microsoft® Excel]** 即使兩種型別的檔案都存在，也不會顯示結果。 (SITES-14837)一般
+* 在資產型別篩選器上選取多個檔案檔案型別在頁面主控台上無法運作。 即使某個特定檔案型別的結果可用，也找不到任何結果。 因此，作者無法篩選多個檔案。 他們必須使用多種檔案型別，而且必須一次篩選一種。 (SITES-14047)
+* 從AEM 6.5.17和AEM 6.5.18升級執行個體後，從頁面編輯器內（如果您選取） **[!UICONTROL 發佈頁面]**，系統會將您重新導向至不存在的URL。 系統會將使用者重新導向至發佈精靈。 (SITES-15856)
+* 在作業系統剪貼簿的貼上過程中，AEM剪貼簿中有多餘的復本。 (SITES-15704)
+* 在「資產」中，選取 **[!UICONTROL 檔案]**，然後在下方 **[!UICONTROL 篩選型別]**，選取 **[!UICONTROL Microsoft® Word]** 或 **[!UICONTROL Microsoft® Excel]** 即使兩種型別的檔案都存在，也不會顯示結果。 (SITES-14837)
 
 ### [!DNL Assets]{#assets-6519}
 
-* 無法區分將資產發佈到Experience Manager或Brand Portal。 [NPR-41320]
-* 當您建立或儲存公用資料夾時，會在管理員控制面板中建立三個群組。 [ASSETS-26700]
-* 在搜尋面板中，當您選取核取方塊並取消選取其中任何一個核取方塊時，所有核取方塊都會取消勾選。 [ASSETS-26377]
+* 當您建立或儲存公用資料夾時，會在管理員控制面板中建立三個群組。 (ASSETS-26700)
+* 無法區分將資產發佈到Experience Manager或Brand Portal。 (NPR-41320)
+* 在搜尋面板中，當您選取核取方塊並取消選取其中任何一個核取方塊時，所有核取方塊都會取消勾選。 (ASSETS-26377)
 
 #### [!DNL Dynamic Media]{#assets-dm-6519}
 
-* 將資產上傳至AEM後， `update_asset` 工作流程已觸發。 工作流程永遠不會完成。 檢視工作流程例項，工作流程會完成至產品上傳步驟。 下一步是scene7批次上傳。 使用者可透過Dynamic Media Classic應用程式檢視資產是否位於Scene7中。 (ASSETS-30443)關鍵
-* 自訂Servlet （API端點）傳回錯誤的Dynamic Media (Scene7)檔案名稱。 刪除資產並取代為相同名稱的資產時，就會發生這種情況。 自訂servlet會傳回舊的Dynamic Media (Scene7)檔案名稱，而「jcr」API呼叫會傳回正確的檔案名稱。 (ASSETS-29476)主要
-* 即使在資料夾層級關閉同步之後，記錄檔仍會顯示「Scene7 ReplicateOnModifyListener」的觸發程式。 此 `ReplicateOnModifyListener/Worker` 應該略過非Dynamic Media資料夾資產和內容片段的處理。 (ASSETS-26705)主要
-* 如果焦點在高對比黑白模式下的下拉式元素（僅限內容、檢視、更多選項）中不可見，則弱視者會受到影響。 (ASSETS-25759)一般
-* 如果頁面上文字的明度對比率小於4.5:1，則會影響弱視者。 (ASSETS-25756)一般
-* 熒幕助讀程式在提交資料後，不會提供所顯示快顯訊息的旁白。 (ASSETS-25755)一般
-* 使用地標/區域捷徑鍵導覽時，熒幕助讀程式無法辨識頁面中的地標(Dynamic Media；建立視訊編碼設定檔) `D/R`. (ASSETS-25752)一般
-* 使用地標/區域捷徑鍵導覽時，熒幕助讀程式無法辨識頁面中的多個地標(Dynamic Media；建立互動式視訊) `D/R`. (ASSETS-25750)一般
-* 熒幕助讀程式（NVDA/JAWS/朗讀程式）無法辨識中的地標 **編輯資產** 使用快速鍵導覽時所在的頁面 `D/R`. (ASSETS-25744)一般
-* 使用者收到空白/錯誤的非同步作業訊息，但已成功發佈連線的資產。 (ASSETS-29342)一般
+* 將資產上傳至AEM後， `update_asset` 工作流程已觸發。 工作流程永遠不會完成。 檢視工作流程例項，工作流程會完成至產品上傳步驟。 下一步是scene7批次上傳。 使用者可透過Dynamic Media Classic應用程式檢視資產是否位於Scene7中。 (ASSETS-30443)
+* 自訂Servlet （API端點）傳回錯誤的Dynamic Media (Scene7)檔案名稱。 刪除資產並取代為相同名稱的資產時，就會發生這種情況。 自訂servlet會傳回舊的Dynamic Media (Scene7)檔案名稱，而「jcr」API呼叫會傳回正確的檔案名稱。 (ASSETS-29476)
+* 即使在資料夾層級關閉同步之後，記錄檔仍會顯示「Scene7 ReplicateOnModifyListener」的觸發程式。 此 `ReplicateOnModifyListener/Worker` 應該略過非Dynamic Media資料夾資產和內容片段的處理。 (ASSETS-26705)
+* 如果焦點在高對比黑白模式下的下拉式元素（僅限內容、檢視、更多選項）中不可見，則弱視者會受到影響。 (ASSETS-25759)
+* 如果頁面上文字的明度對比率小於4.5:1，則會影響弱視者。 (ASSETS-25756)
+* 熒幕助讀程式在提交資料後，不會提供所顯示快顯訊息的旁白。 (ASSETS-25755)
+* 使用地標/區域捷徑鍵導覽時，熒幕助讀程式無法辨識頁面中的地標(Dynamic Media；建立視訊編碼設定檔) `D/R`. (ASSETS-25752)
+* 使用地標/區域捷徑鍵導覽時，熒幕助讀程式無法辨識頁面中的多個地標(Dynamic Media；建立互動式視訊) `D/R`. (ASSETS-25750)
+* 熒幕助讀程式（NVDA/JAWS/朗讀程式）無法辨識中的地標 **編輯資產** 使用快速鍵導覽時所在的頁面 `D/R`. (ASSETS-25744)
+* 使用者收到空白/錯誤的非同步作業訊息，但已成功發佈連線的資產。 (ASSETS-29342)
 
 ### [!DNL Forms]{#forms-6519}
 
 中的修正 [!DNL Experience Manager] Forms會透過單獨的附加元件套件在排程一週後傳送 [!DNL Experience Manager] Service Pack發行日期。 在此案例中，AEM 6.5.19.0 Forms附加元件套件發行預計於2023年11月30日星期四推出。 此版本發行後，本節將新增Forms修正和增強功能的清單。
 
-* 新增存取控制清單 `fd-cloudservice` 使用者能夠讀取或更新下的Microsoft®設定 `cloudconfigs/microsoftoffice`. (FORMS-11142)一般
+* 新增存取控制清單 `fd-cloudservice` 使用者能夠讀取或更新下的Microsoft®設定 `cloudconfigs/microsoftoffice`. (FORMS-11142)
 
 <!--LEFT BULLET LIST HERE IN CASE OF REUSE BY FORMS IN THE FUTURE 
 * **Document Services**
@@ -179,13 +178,13 @@ ht-degree: 3%
 
 ### Foundation{#foundation-6519}
 
-* 在語言根層級建立語言復本時，不會調整頁面中的路徑。 若已建立語言副本（不是針對語言根，而是針對其下方的頁面），則路徑已正確變更。 (NPR-41364)主要
-* 按鍵盤上的Esc鍵只能關閉「相對日期顯示」工具提示。 工具提示應在使用者選取使用者介面的任何部分時關閉。 (NPR-41394)一般
-* 未當地語系化的字串 `Something went wrong while adding the private key.` 在中新增錯誤的私密金鑰檔案時 **編輯使用者** > **金鑰存放區**. (NPR-41366)一般
-* AEM 6.5環境中的Microsoft®SharePoint和Microsoft® One Drive需要圖示。 (NPR-41354)一般
-* 未當地語系化的「使用者ID/密碼不符」。 字串輸入 **安全性** > **使用者** > **建立** 對話方塊。 (NPR-41245)一般
-* 彈出視窗程式碼和事件處理常式會載入兩次，這會破壞使用者建立的Coral3型使用者介面。 (NPR-41171)一般
-* 在AEM Sites主控台中使用「全選」後，取消選取無法正常運作。 (NPR-41304)次要
+* 在語言根層級建立語言復本時，不會調整頁面中的路徑。 若已建立語言副本（不是針對語言根，而是針對其下方的頁面），則路徑已正確變更。 (NPR-41364)
+* 按鍵盤上的Esc鍵只能關閉「相對日期顯示」工具提示。 工具提示應在使用者選取使用者介面的任何部分時關閉。 (NPR-41394)
+* 未當地語系化的字串 `Something went wrong while adding the private key.` 在中新增錯誤的私密金鑰檔案時 **編輯使用者** > **金鑰存放區**. (NPR-41366)
+* AEM 6.5環境中的Microsoft®SharePoint和Microsoft® One Drive需要圖示。 (NPR-41354)
+* 未當地語系化的「使用者ID/密碼不符」。 字串輸入 **安全性** > **使用者** > **建立** 對話方塊。 (NPR-41245)
+* 彈出視窗程式碼和事件處理常式會載入兩次，這會破壞使用者建立的Coral3型使用者介面。 (NPR-41171)
+* 在AEM Sites主控台中使用「全選」後，取消選取無法正常運作。 (NPR-41304)
 
 <!--#### Content distribution{#foundation-content-distribution-6519}
 
@@ -193,18 +192,18 @@ ht-degree: 3%
 
 #### 整合{#integrations-6519}
 
-* AEM電子郵件行銷活動中的SMS連結未正確寫入；它們包含HTML錨點元素。 (NPR-41211)主要
-* 在帳戶設定畫面中使用的措辭不應使用新的認證型別。 (NPR-41210)一般
-* 正在移動Analytics報表匯入排程器 `ManagedPollConfig` 到sling jobs。 將兩個不同的分析架構附加至不同網站的不同報表套裝時， `ManagedPollConfig` 僅輪詢其中一項。 (NPR-41209)一般
-* 當此值重設為預設時，先前選取的時間範圍按鈕保持啟用狀態。 在AEM的內容深入分析控制面板中，預設時間範圍會設定為一週，並將內容深入分析顯示為每週資料。 現在，如果使用者選取其他時間範圍選項，例如小時、日、月和年，資料會根據選取的值而變更。 但是，如果重設值，預設情況下，可見的時間範圍為周，但仍會選取先前選取的時間範圍選項。 (NPR-41246)次要
+* AEM電子郵件行銷活動中的SMS連結未正確寫入；它們包含HTML錨點元素。 (NPR-41211)
+* 在帳戶設定畫面中使用的措辭不應使用新的認證型別。 (NPR-41210)
+* 正在移動Analytics報表匯入排程器 `ManagedPollConfig` 到sling jobs。 將兩個不同的分析架構附加至不同網站的不同報表套裝時， `ManagedPollConfig` 僅輪詢其中一項。 (NPR-41209)
+* 當此值重設為預設時，先前選取的時間範圍按鈕保持啟用狀態。 在AEM的內容深入分析控制面板中，預設時間範圍會設定為一週，並將內容深入分析顯示為每週資料。 現在，如果使用者選取其他時間範圍選項，例如小時、日、月和年，資料會根據選取的值而變更。 但是，如果重設值，預設情況下，可見的時間範圍為周，但仍會選取先前選取的時間範圍選項。 (NPR-41246)
 
 #### Oak{#oak-6519}
 
-* 反向連線公用程式，可在非同步索引延遲時限制寫入AEM的速率。 (NPR-40985)主要
+* 反向連線公用程式，可在非同步索引延遲時限制寫入AEM的速率。 (NPR-40985)
 
 #### Platform{#foundation-platform-6519}
 
-* 含方括弧的QueryBuilder查詢被錯誤轉譯為xpath 。 (NPR-41298)一般
+* 含方括弧的QueryBuilder查詢被錯誤轉譯為xpath 。 (NPR-41298)
 
 <!--#### Replication{#foundation-replication-6519}
 
@@ -216,7 +215,7 @@ ht-degree: 3%
 
 #### 翻譯專案{#foundation-translation-6519}
 
-* 建立頁面「A」的語言副本時，應自動建立參考頁面、體驗片段、內容片段和資產的語言副本。 此外，在新路徑新建立的頁面「A」語言副本應該會將其參考更新為頁面、體驗片段、內容片段和資產的個別新建立語言副本。 (NPR-41076)一般
+* 建立頁面「A」的語言副本時，應自動建立參考頁面、體驗片段、內容片段和資產的語言副本。 此外，在新路徑新建立的頁面「A」語言副本應該會將其參考更新為頁面、體驗片段、內容片段和資產的個別新建立語言副本。 (NPR-41076)
 
 <!--#### User interface{#foundation-ui-6519}
 
@@ -228,22 +227,22 @@ ht-degree: 3%
 
 #### 工作流程{#foundation-workflow-6519}
 
-* 無法完成收件匣中的工作。 嘗試完成工作並選取動作時，下拉式選單中只會顯示「未定義」值。 這表示使用者無法套用AEM 6.5.18 Service Pack。 (NPR-41402)主要
-* 無法完成收件匣中的工作。 嘗試完成zip檔案、資產報告、移動（成功或失敗）或資產到期的工作時，下拉式清單中沒有值（僅限「未定義」）。 (NPR-41305)主要
-* 當使用者選取 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** >執行個體，然後選取執行中的工作流程，再選取 **[!UICONTROL 檢視裝載]**，則會導致500錯誤頁面。 (NPR-41325)一般
+* 無法完成收件匣中的工作。 嘗試完成工作並選取動作時，下拉式選單中只會顯示「未定義」值。 這表示使用者無法套用AEM 6.5.18 Service Pack。 (NPR-41402)
+* 無法完成收件匣中的工作。 嘗試完成zip檔案、資產報告、移動（成功或失敗）或資產到期的工作時，下拉式清單中沒有值（僅限「未定義」）。 (NPR-41305)
+* 當使用者選取 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** >執行個體，然後選取執行中的工作流程，再選取 **[!UICONTROL 檢視裝載]**，則會導致500錯誤頁面。 (NPR-41325)
 
 
 ## 安裝 [!DNL Experience Manager] 6.5.18.0{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.19.0需要 [!DNL Experience Manager] 6.5.請參閱 [升級檔案](/help/sites-deploying/upgrade.md) 以取得詳細指示。 <!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.18.0需要 [!DNL Experience Manager] 6.5.請參閱 [升級檔案](/help/sites-deploying/upgrade.md) 以取得詳細指示。 <!-- UPDATE FOR EACH NEW RELEASE -->
 * 您可在Adobe上取得Service Pack下載 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip).
-* 在具有MongoDB和多個執行個體的部署上，安裝 [!DNL Experience Manager] 使用封裝管理程式的其中一個Author執行個體上的6.5.19.0 。<!-- UPDATE FOR EACH NEW RELEASE -->
+* 在具有MongoDB和多個執行個體的部署上，安裝 [!DNL Experience Manager] 使用封裝管理程式的其中一個Author執行個體上的6.5.18.0 。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> Adobe不建議您移除或解除安裝 [!DNL Experience Manager] 6.5.19.0套件。 因此，在安裝套件之前，您應該建立 `crx-repository` 以防您必須將其回覆。 <!-- UPDATE FOR EACH NEW RELEASE -->
+> Adobe不建議您移除或解除安裝 [!DNL Experience Manager] 6.5.18.0套件。 因此，在安裝套件之前，您應該建立 `crx-repository` 以防您必須將其回覆。 <!-- UPDATE FOR EACH NEW RELEASE -->
 <!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
@@ -267,20 +266,20 @@ ht-degree: 3%
 
 **自動安裝**
 
-您可以使用兩種不同的方法來自動安裝 [!DNL Experience Manager] 6.5.19.0。<!-- UPDATE FOR EACH NEW RELEASE -->
+您可以使用兩種不同的方法來自動安裝 [!DNL Experience Manager] 6.5.18.0。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 將套件置於 `../crx-quickstart/install` 資料夾（當伺服器線上上可用時）。 套件會自動安裝。
 * 使用 [來自封裝管理員的HTTP API](/help/sites-administering/package-manager.md#package-share). 使用 `cmd=install&recursive=true` 以便安裝巢狀套件。
 
 >[!NOTE]
 >
->Experience Manager6.5.19.0不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager6.5.18.0不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **驗證安裝**
 
 若要瞭解經過認證可搭配此版本使用的平台，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md).
 
-1. 產品資訊頁(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (6.5.19.0)` 在 [!UICONTROL 已安裝的產品]. <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 產品資訊頁(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (6.5.18.0)` 在 [!UICONTROL 已安裝的產品]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. 所有OSGi套件組合都是 **[!UICONTROL 作用中]** 或 **[!UICONTROL 片段]** 在OSGi主控台中(使用Web主控台： `/system/console/bundles`)。
 
@@ -310,7 +309,7 @@ ht-degree: 3%
 
 ### UberJar{#uber-jar}
 
-The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [Maven中央存放庫](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.18/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+The UberJar for [!DNL Experience Manager] 6.5.18.0可在以下網址取得： [Maven中央存放庫](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.18/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 若要在Maven專案中使用UberJar，請參閱 [如何使用UberJar](/help/sites-developing/ht-projects-maven.md) 並在專案POM中加入下列相依性： <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
@@ -318,7 +317,7 @@ The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [M
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.19</version>
+     <version>6.5.18</version>
      <scope>provided</scope>
 </dependency>
 ```
@@ -339,7 +338,7 @@ The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [M
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
 
-* **升級至Service Pack 18 (6.5.19.0)後，頁面發佈在頁面編輯器中無法運作**
+* **升級至Service Pack 18 (6.5.18.0)後，頁面發佈在頁面編輯器中無法運作**
 
   <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> 將AEM 6.5.0.0—6.5.17.0的例項升級為AEM 6.5.19.0之後，當您按一下 **發佈頁面** 在頁面編輯器中，系統會將您重新導向至不存在的URL。
 
@@ -479,10 +478,10 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 
-下列文字檔案列出中包含的OSGi套件組合和內容套件 [!DNL Experience Manager] 6.5.19.0： <!-- UPDATE FOR EACH NEW RELEASE -->
+下列文字檔案列出中包含的OSGi套件組合和內容套件 [!DNL Experience Manager] 6.5.18.0： <!-- UPDATE FOR EACH NEW RELEASE -->
 
-* [Experience Manager6.5.19.0中包含的OSGi套件組合清單](/help/release-notes/assets/65180_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
-* [Experience Manager6.5.19.0中包含的內容套件清單](/help/release-notes/assets/65180_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager6.5.18.0中包含的OSGi套件組合清單](/help/release-notes/assets/65180_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager6.5.18.0中包含的內容套件清單](/help/release-notes/assets/65180_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ## 受限制的網站{#restricted-sites}
 

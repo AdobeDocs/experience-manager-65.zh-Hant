@@ -8,9 +8,9 @@ content-type: reference
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2284'
+source-wordcount: '2285'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ orderby=path
 
 目的 `p.guessTotal` 引數是傳回適當數目的結果，這些結果可透過結合最小可行p.offset和p.limit值來顯示。 使用此引數的優點是在大型結果集中改善效能。 這樣可避免計算完整總計(例如，呼叫result.getSize())和讀取整個結果集，一直最佳化到Oak引擎和索引。 當有100,000個結果（包括執行時間和記憶體使用量）時，這可能有顯著差異。
 
-此引數的缺點是使用者看不到確切總計。 但是您可以設定最小值，例如p.guessTotal=1000，這樣它一律會讀取到1000，所以您可以取得較小結果集的精確總計，但是如果超過此值，您只能顯示「及其他」。
+此引數的缺點是使用者看不到確切總計。 但是您可以設定最小值，例如p.guessTotal=1000，這樣它一律會讀取到1000，所以您可以取得較小結果集的精確總計，但是如果超過此值，您只能顯示「等等」。
 
 新增 `p.guessTotal=true` 至下列查詢檢視其運作方式：
 

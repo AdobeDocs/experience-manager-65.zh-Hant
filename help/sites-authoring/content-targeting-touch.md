@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: personalization
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '5383'
+source-wordcount: '5374'
 ht-degree: 6%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->在Adobe Target中建立行銷活動時，會指派名為的屬性 `thirdPartyId`至每個行銷活動。 在Adobe Target中刪除行銷活動時，不會刪除thirdPartyId。 您無法重複使用 `thirdPartyId` 適用於不同型別(AB、XT)的行銷活動，且無法手動移除。 為避免此問題，請為每個行銷活動命名一個唯一的名稱；因此，行銷活動名稱不能在不同行銷活動型別中重複使用。
+>在Adobe Target中建立行銷活動時，會指派名為的屬性 `thirdPartyId`至每個行銷活動。 在Adobe Target中刪除行銷活動時，不會刪除thirdPartyId。 您無法重複使用 `thirdPartyId` 適用於不同型別(AB、XT)的行銷活動，且無法手動移除。 為避免此問題，請為每個行銷活動命名一個唯一的名稱；行銷活動名稱不能在不同行銷活動型別中重複使用。
 >
 >如果在相同的行銷活動型別中使用相同的名稱，則會覆寫現有的行銷活動。
 >
@@ -79,7 +79,7 @@ ht-degree: 6%
 
    >[!NOTE]
    >
-   >建議用於 [透過「活動」主控台建立品牌](/help/sites-authoring/activitylib.md#creating-a-brand-using-the-activities-console).
+   >Adobe建議您 [透過「活動」主控台建立品牌](/help/sites-authoring/activitylib.md#creating-a-brand-using-the-activities-console).
    >
    >
    >如果您以任何其他方式建立品牌，請確定節點 `/campaigns/<brand>/master` 存在，或當您嘗試建立活動時將產生錯誤。
@@ -251,7 +251,7 @@ ht-degree: 6%
 
    ![目標](do-not-localize/chlimage_1.png)
 
-   元件內容是預設體驗的選件。 鎖定元件為目標時，將會為每個體驗復寫其預設節點。 在體驗特定撰寫期間，需要此動作來編輯正確的內容節點。 對於這些非預設體驗，可以 [新增自訂選件](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer) 或 [新增資料庫選件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library).
+   元件內容是預設體驗的選件。 鎖定元件為目標時，會為每個體驗復寫其預設節點。 在體驗特定撰寫期間，需要此動作來編輯正確的內容節點。 對於這些非預設體驗，可以 [新增自訂選件](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer) 或 [新增資料庫選件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library).
 
 #### 透過新增Target元件建立選件 {#creating-an-offer-by-adding-a-target-component}
 
@@ -406,7 +406,7 @@ ht-degree: 6%
 
 如需鎖定目標引擎的詳細資訊，請參閱 [定位引擎](/help/sites-authoring/personalization.md#targeting-engine).
 
-對象不可由多個體驗使用。 當體驗對應至已對應至其他體驗的受眾時，其旁邊會出現警告符號。
+請勿使用多個體驗的對象。 當體驗對應至已對應至其他體驗的受眾時，其旁邊會出現警告符號。
 
 ![對應到已對應到其他體驗的受眾時的警告符號](do-not-localize/chlimage_1-6.png)
 
@@ -508,7 +508,7 @@ ht-degree: 6%
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>增加計數、釋出使用者以及允許重新進入</strong></td>
+   <td><strong>增加計數、釋出使用者並允許重新進入</strong></td>
    <td>選取如果訪客重新進入活動，他們會看到的體驗：
     <ul>
      <li>相同體驗</li>
@@ -517,7 +517,7 @@ ht-degree: 6%
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>增加計數、釋出使用者並禁止重新進入</strong></td>
+   <td><strong>增加計數、釋出使用者以及禁止重新進入</strong></td>
    <td>決定使用者會看到什麼而非活動內容：
     <ul>
      <li>相同的體驗，無追蹤</li>

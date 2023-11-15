@@ -1,17 +1,13 @@
 ---
 title: 建立或設定watched資料夾
-seo-title: Create or Configure a watched folder
 description: 瞭解如何建立或刪除watched資料夾，或修改現有watched資料夾的內容。
-seo-description: Learn how to create or delete a watched folder, or modify the properties of an existing watched folder.
-uuid: 659d4d8c-99b8-40dd-b884-bfee4d476fe1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 0ce7b338-6686-49b3-b58b-e7ab6b670708
 exl-id: b15d8d3b-5e47-4c33-95fe-440fcf96be83
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1819'
 ht-degree: 0%
 
 ---
@@ -95,7 +91,7 @@ ht-degree: 0%
       * %m =分鐘
       * %s =秒
       * %l =毫秒
-      * %R =隨機數字（介於0到9之間）
+      * %R =隨機數字（介於0-9之間）
       * %P =處理程式或工作識別碼
       * 例如，如果是2009年7月17日晚上8點，而您指定C：/Test/WF0/failure/%Y/%M/%D/%H/，則結果資料夾為C：/Test/WF0/failure/2009/07/17/20。
       * 如果路徑不是絕對路徑而是相對路徑，則會在watched資料夾內建立資料夾。 預設值為result/%Y/%M/%D/，這是watched資料夾內的Result資料夾。 如需檔案模式的詳細資訊，請參閱 [關於檔案模式](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns).

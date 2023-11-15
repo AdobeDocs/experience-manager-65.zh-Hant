@@ -7,9 +7,9 @@ topic-tags: adaptive_forms, author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '1992'
 ht-degree: 5%
 
 ---
@@ -64,7 +64,7 @@ AEM Forms使用者可以使用Google的reCAPTCHA服務，以最適化表單實�
    1. 點選 **[!UICONTROL reCAPTCHA]**. 「組態」頁面隨即開啟。 選取在上一步中建立的設定容器，然後點選 **[!UICONTROL 建立]**.
    1. 選取reCAPTCHA Enterprise版本並指定reCAPTCHA Enterprise服務的名稱；專案ID、網站金鑰和API金鑰（在步驟2和3中取得）。
    1. 選取金鑰型別，金鑰型別應與Google雲端專案中設定的網站金鑰相同，例如， **核取方塊網站索引鍵** 或 **以分數為基礎的網站金鑰**.
-   1. 指定介於0到1之間的臨界值分數([按一下以進一步瞭解分數](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores))。 分數大於或等於臨界值分數會識別人類互動，否則會被視為機器人互動。
+   1. 指定範圍為0-1的臨界值分數([按一下以進一步瞭解分數](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores))。 分數大於或等於臨界值分數會識別人類互動，否則會被視為機器人互動。
 
       > 注意：
       >

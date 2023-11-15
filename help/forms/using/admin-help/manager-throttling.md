@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ AEM Forms管理員可以使用「健康情況監視」來檢查Work Manager統�
  <tbody>
   <tr>
    <td><code> adobe.work-manager.queue-refill-interval</code></td>
-   <td><p>指定Work Manager檢查其佇列中新專案時使用的時間間隔（毫秒）。</p><p>此選項的值是整數。 預設值為 <code>1000</code> 毫秒（1秒）。 </p><p>如果非同步叫用的數量很低，您可以增加此值。 例如，您可以將其增加到2000到5000 （2到5秒）之間的某個值。 </p><p>如果非同步叫用的數量很高，預設值應該就足夠了，但您可以視需要使用較低的值。 過多地減少這個值（例如，低於50，會導致輪詢頻率為每秒20次）會導致系統產生大量的額外負荷。</p></td>
+   <td><p>指定Work Manager檢查其佇列中新專案時使用的時間間隔（毫秒）。</p><p>此選項的值是整數。 預設值為 <code>1000</code> 毫秒（1秒）。 </p><p>如果非同步叫用的數量很低，您可以增加此值。 例如，您可以將其增加到2000到5000 （2-5秒）之間的某個值。 </p><p>如果非同步叫用的數量很高，預設值應該就足夠了，但您可以視需要使用較低的值。 過多地減少這個值（例如，低於50，會導致輪詢頻率為每秒20次）會導致系統產生大量的額外負荷。</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.debug-mode-enabled</code></td>

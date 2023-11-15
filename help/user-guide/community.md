@@ -2,9 +2,9 @@
 title: AEM社群
 description: 探索並建立與Adobe Experience Manager社群的連線。
 exl-id: 2e73572c-78de-4c20-ada8-d95f7fd16dc9
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '324'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 AEM社群在世界各地有數千個成員。 其範圍涵蓋剛開始接觸Experience Manager的人，以及經驗豐富的專家開發人員和管理員。 社群可協助您從AEM功能問題到協助開發問題。 AEM社群定期與內部和外部專家使用者舉行專家會議。 它還有助於為您製作範例、文章和教學課程。
 
-[立即加入社群，取得最佳內容、人員和知識。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) 開放給每個人。 如果您對AEM感興趣，不客氣。 今天過來！
+[立即加入社群，取得最佳內容、人員和知識。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) 此網站向所有人開放。 如果您對AEM感興趣，不客氣。 今天過來！
 
 ## AEM社群成員有哪些活動？ {#events}
 

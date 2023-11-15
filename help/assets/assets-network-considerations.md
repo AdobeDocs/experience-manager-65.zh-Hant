@@ -5,7 +5,7 @@ contentOwner: AG
 role: Architect, Admin
 feature: Developer Tools
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -71,9 +71,9 @@ ht-degree: 0%
 
 範例情境包括具有五部伺服器的發佈陣列、一個S3二進位存放區以及已設定的Dynamic Media。
 
-Dispatcher會將其與兩個實體的100Mbps連線分享，也就是外部世界和 [!DNL Experience Manager] 部署。 對於同時上載和下載作業，您應該將此數字除以2。 附加的外部儲存裝置使用個別的連線。
+Dispatcher與兩個實體(外部世界和 [!DNL Experience Manager] 部署。 對於同時上載和下載作業，您應該將此數字除以2。 附加的外部儲存裝置使用個別的連線。
 
-此 [!DNL Experience Manager] 部署會將其的1Gbps連線與多項服務共用。 從網路拓撲的觀點來看，這等同於使用不同服務共用單一通道。
+此 [!DNL Experience Manager] 部署會與多項服務共用其1Gbps連線。 從網路拓撲的觀點來看，這等同於使用不同服務共用單一通道。
 
 檢閱從使用者端裝置到 [!DNL Experience Manager] 部署時，最小的瓶頸似乎是10 Mbit Enterprise防火牆限制。 您可以在下列大小計算程式中使用這些值： [Assets規模調整指南](assets-sizing-guide.md) 以判斷使用者體驗。
 

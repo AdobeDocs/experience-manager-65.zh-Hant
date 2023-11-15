@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '3493'
+source-wordcount: '3495'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 1. 建立TagHandler
 
-   * 標籤處理常式是處理特定型別HTML標籤的POJO。 您的TagHandler可以處理的HTML標籤「種類」是透過TagHandlerFactory的OSGi屬性「tagpattern.name」來定義。 此OSGi屬性基本上是規則運算式，應該符合您要處理的輸入html標籤。 所有巢狀標籤都會擲回標籤處理常式進行處理。 例如，如果您註冊的div包含巢狀 &lt;p> 標籤， &lt;p> 標籤也會擲回至您的TagHandler，由您決定要如何處理它。
+   * 標籤處理常式是處理特定型別HTML標籤的POJO。 您的TagHandler可以處理的HTML標籤「種類」是透過TagHandlerFactory的OSGi屬性「tagpattern.name」來定義。 此OSGi屬性基本上是規則運算式，應該符合您要處理的輸入html標籤。 所有巢狀標籤都會擲回標籤處理常式進行處理。 例如，如果您註冊的div包含巢狀 &lt;p> 標籤， &lt;p> 標籤也會擲回至您的TagHandler，而由您自行決定該如何處理。
    * 標籤處理常式介面類似於SAX內容處理常式介面。 它會接收每個html標籤的SAX事件。 作為標籤處理常式提供者，您需要實作設計匯入工具架構自動呼叫的特定生命週期方法。
 
 1. 建立其對應的TagHandlerFactory。

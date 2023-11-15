@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: f37f239f-065b-44f8-acb1-93485b713b49
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 0%
@@ -27,7 +27,7 @@ AEM Mobile專案涉及多樣化的內容型別集，包括頁面、JavaScript和
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-根據AEM慣例，應用程式的第一個頁面應為重新導向至其中一個子頁面，做為應用程式的預設語言(在Geometrixx和入門套件案例中均為「en」)。 頂級地區設定頁面通常會繼承自foundation「splash-page」元件(/libs/mobileapps/components/splash-page)，該元件會負責支援安裝Over-the-Air Content Sync更新所需的初始化(contentInit程式碼位於/etc/clientlibs/mobile/content-sync/js/contentInit.js)。
+根據AEM慣例，應用程式的第一個頁面應為重新導向至其子項之一，做為應用程式的預設語言(在Geometrixx和入門套件案例中均為「en」)。 頂級地區設定頁面通常會繼承自foundation「splash-page」元件(/libs/mobileapps/components/splash-page)，該元件會負責支援安裝Over-the-Air Content Sync更新所需的初始化(contentInit程式碼位於/etc/clientlibs/mobile/content-sync/js/contentInit.js)。
 
 ## 範本和元件 {#templates-and-components}
 
@@ -45,7 +45,7 @@ AEM Mobile專案涉及多樣化的內容型別集，包括頁面、JavaScript和
 
 如果您的使用者端程式碼可以獨立運作，而且與應用程式的特定元件無關（這表示它可以在其他應用程式中重複使用），Adobe建議將其儲存在/etc/clientlibs/&lt;brand name=&quot;&quot;>/&lt;lib name=&quot;&quot;>. 另一方面，如果clientlib是單一應用程式所特有，您可以將它巢狀內嵌，做為應用程式設計節點( /etc/designs/phonegap/)的子系&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>/clientlibs。 請勿將此clientlib的類別搭配其他程式庫使用；請視需要嵌入其他程式庫。 遵循此模式可讓開發人員無須在每次將使用者端程式庫新增至應用程式時都新增新的Content Sync設定，而只需更新應用程式設計clientlib的「embeds」屬性。 例如，檢視/content/phonegap/geometrixx-outdoors/en/jcr：content/pge-app/app-config/clientlibs-all中的Geometrixxclientlibs-all Content Sync設定節點。
 
-如果您的使用者端程式碼與特定元件緊密結合，請將該程式碼放置在巢狀內嵌於/apps/中元件位置下方的使用者端程式庫中，並將其類別嵌入應用程式的「設計」使用者端程式庫中。
+如果您的使用者端程式碼與特定元件緊密結合，請將該程式碼放置在巢狀內嵌於/apps/中元件位置下方的使用者端程式庫中，並將其類別內嵌至應用程式的「設計」clientlib。
 
 ## PhoneGap設定 {#phonegap-configuration}
 

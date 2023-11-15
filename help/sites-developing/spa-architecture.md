@@ -7,9 +7,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2055'
+source-wordcount: '2051'
 ht-degree: 6%
 
 ---
@@ -98,7 +98,7 @@ SPA應該僅依賴內容的動態呈現。 這是AEM擷取並轉譯內容結構�
 
 >[!NOTE]
 >
->雖然AEM支援所有模型，但僅實作第三種（並因而遵循建議的） [AEM中的SPA開發原則](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem))內容作者是否能夠在AEM中與自訂的SPA內容互動及編輯內容。
+>雖然AEM支援所有模型，但僅實作第三種（因此遵循建議） [AEM中的SPA開發原則](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem))內容作者可以與AEM中的SPA內容互動並加以編輯，因應其慣用程度。
 
 ## 將現有SPA移轉至AEM {#migrating-existing-spas-to-aem}
 

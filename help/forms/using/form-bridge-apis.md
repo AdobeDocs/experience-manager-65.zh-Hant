@@ -1,17 +1,13 @@
 ---
 title: 適用於HTML5表單的Form Bridge API
-seo-title: Form Bridge APIs for HTML5 forms
 description: 外部應用程式會使用FormBridge API連線至XFA行動表單。 API會在父視窗上排程FormBridgeInitialized事件。
-seo-description: External applications use the FormBridge API to connect to the XFA Mobile Form. The API dispatches a FormBridgeInitialized event on the parent window.
-uuid: 0db22649-522b-4857-9ffd-826c52381d15
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
-discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 exl-id: b598ef47-49ff-4806-8cc7-4394aa068eaa
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -20,7 +16,7 @@ ht-degree: 0%
 
 您可以使用Form Bridge API開啟XFA型HTML5表單與應用程式之間的通訊通道。 Form Bridge API提供 **connect** 用於建立連線的API。
 
-此 **connect** API接受處理常式作為引數。 在XFA型HTML5表單與Form Bridge之間建立成功連線後，就會叫用控制代碼。
+此 **connect** API接受處理常式作為引數。 在XFA型HTML5表單與Form Bridge之間成功建立連線後，就會叫用控制代碼。
 
 您可以使用以下範常式式碼來建立連線。
 

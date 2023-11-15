@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1068'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ QnA和論壇元件的預設值設為ADD動詞。
   預設值為216000小時（~24年）。
 
 * **評分成長率**
-這會指定介於0和評分範圍之間的分數，超過該分數後，成長速度會減慢，以限制專家數量。
+這會指定介於0分數範圍之間的分數，超過該分數範圍後，成長速度會減慢，以限制專家數量。
 
   預設值為 50。
 

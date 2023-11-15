@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2348'
 ht-degree: 3%
 
 ---
@@ -445,7 +445,7 @@ group.2_group.type=dam:Asset
 
 根述詞群組。 支援群組的所有特徵，並可讓您設定全域查詢引數。
 
-查詢中從未使用名稱「root」，這是隱含的名稱。
+查詢中從未使用過名稱「root」，這是隱含的名稱。
 
 #### 屬性 {#properties-18}
 

@@ -1,12 +1,10 @@
 ---
 title: 將服務與JMX主控台整合
-seo-title: Integrating Services with the JMX Console
-description: 透過建立和部署MBean來使用JMX主控台管理服務，以公開服務屬性和作業，讓管理工作得以執行
-seo-description: Expose service attributes and operations to enable administration tasks to be performed by creating and deploying MBeans to manage services using the JMX Console
+description: 透過建立和部署MBean以使用JMX主控台管理服務，公開服務屬性和作業，以啟用要執行的管理工作
 topic-tags: extending-aem
 content-type: reference
 exl-id: fe727406-09cb-4516-8278-806fd78cfc12
-source-git-commit: a2e5a5ae7585299de869dbf8744d7be4b86c5bf8
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '1659'
 ht-degree: 0%
@@ -19,15 +17,15 @@ ht-degree: 0%
 
 如需有關使用JMX主控台的資訊，請參閱 [使用JMX主控台監控伺服器資源](/help/sites-administering/jmx-console.md).
 
-## Felix和CQ5中的JMX架構 {#the-jmx-framework-in-felix-and-cq}
+## Felix和CQ5中的JMX框架 {#the-jmx-framework-in-felix-and-cq}
 
-在Apache Felix平台上，您可以將MBean部署為OSGi服務。 在OSGi Service Registry中註冊MBean服務時，Aries JMX Whiteboard模組會自動向MBean Server註冊MBean。 MBean即可供JMX主控台使用，主控台會公開公用屬性和作業。
+在Apache Felix平台上，您可以將MBean部署為OSGi服務。 在OSGi服務登入中註冊MBean服務時，Aries JMX白板模組會自動向MBean伺服器註冊MBean。 MBean即可供JMX主控台使用，主控台會公開公用屬性和作業。
 
 ![jmxwhiteboard](assets/jmxwhiteboard.png)
 
 ## 建立CQ5和CRX的MBean {#creating-mbeans-for-cq-and-crx}
 
-您為管理CQ5或CRX資源而建立的MBean是以javax.management.DynamicMBean介面為基礎。 要建立它們，請遵循JMX規格中規定的常規設計模式：
+您為管理CQ5或CRX資源而建立的MBean是以javax.management.DynamicMBean介面為基礎。 若要建立它們，請遵循JMX規格中概述的一般設計模式：
 
 * 建立管理介面，包括get、set和is定義屬性的方法，以及其他定義作業的方法。
 * 建立實作類別。 類別必須實作DynamicMBean，或擴充DynamicMBean的實作類別。
@@ -37,29 +35,29 @@ ht-degree: 0%
 
 ### 使用註解提供MBean資訊 {#using-annotations-to-provide-mbean-information}
 
-此 [com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html) 套件提供數個註解和類別，可輕鬆將MBean中繼資料提供至JMX主控台。 使用這些註解和類別，而不是直接將資訊新增到MBean的MBeanInfo物件。
+此 [com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html) package提供數個註解和類別，讓您輕鬆將MBean中繼資料提供至JMX主控台。 使用這些註解和類別，而非直接將資訊新增到MBean的MBeanInfo物件。
 
 **註解**
 
-將註解新增至管理介面以指定MBean中繼資料。 對於已部署的每個實作類別，資訊會顯示在JMX主控台中。 下列為可用的註解(如需完整資訊，請參閱 [com.adobe.granite.jmx.annotation JavaDocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html))：
+將註解新增至管理介面以指定MBean中繼資料。 該資訊會顯示在每個已部署的實作類別的JMX主控台中。 下列為可用的註解(如需完整資訊，請參閱 [com.adobe.granite.jmx.annotation JavaDocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html))：
 
 * **說明：** 提供MBean類別或方法的說明。 在類別宣告上使用時，說明會顯示在MBean的「JMX主控台」頁面上。 在方法上使用時，說明會顯示為對應屬性或作業的暫留文字。
-* **影響：** 方法的影響。 有效的引數值是由下列專案定義的欄位： [javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html).
+* **影響：** 方法的影響。 有效引數值是由定義的欄位 [javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html).
 
 * **名稱：** 指定作業引數的顯示名稱。 使用此註解來覆寫介面中使用之方法引數的實際名稱。
-* **OpenTypeInfo：** 指定用來在JMX主控台中表示複合資料或表格資料的類別。 與Open MBean一起使用
+* **OpenTypeInfo：** 指定用來在JMX主控台中表示複合資料或表格資料的類別。 與Open MBean搭配使用
 * **TabularTypeInfo：** 用於標註用來表示表格資料的類別。
 
 **類別**
 
-提供用來建立使用您新增至其介面的註解之動態MBean的類別：
+提供用來建立使用您新增至其介面的註解的動態MBean的類別：
 
-* **AnnotatedStandardMBean：** javax.management.StandardMBean類別的子類別，可自動向JMX主控台提供註解中繼資料。
+* **AnnotatedStandardMBean：** javax.management.StandardMBean類別的子類別，可自動為JMX主控台提供註解中繼資料。
 * **OpenAnnotatedStandardMBean：** AnnotatedStandardMBean類別的子類別，用於建立使用OpenTypeInfo註解的Open Mbean。
 
 ### 開發MBean {#developing-mbeans}
 
-通常，您的MBean反映了您要管理的OSGi服務。 在Felix平台上，您可以建立MBean，就像在其他Java伺服器平台上部署一樣。 主要差異在於您可以使用註解來指定MBean資訊：
+通常您的MBean會反映在您要管理的OSGi服務上。 在Felix平台上，您可以建立MBean，就像在其他Java伺服器平台上部署一樣。 主要差異在於您可以使用註解來指定MBean資訊：
 
 * 管理介面：使用getter、setter和is方法定義屬性。 使用任何其他公用方法定義作業。 使用註解來提供BeanInfo物件的中繼資料。
 * MBean類別：實作管理介面。 擴充AnnotatedStandardMBean類別，以便在介面上處理註解。
@@ -87,7 +85,7 @@ public interface ExampleMBean {
 }
 ```
 
-實作類別使用SlingRepository服務來擷取有關CRX存放庫的資訊。
+實作類別使用SlingRepository服務來擷取CRX存放庫的相關資訊。
 
 #### MBean實作類別 {#mbean-implementation-class}
 
@@ -130,19 +128,19 @@ public class ExampleMBeanImpl extends AnnotatedStandardMBean implements ExampleM
 
 ### 正在登入MBean {#registering-mbeans}
 
-當您將MBean註冊為OSGi服務時，它們會自動向MBean伺服器註冊。 若要在CQ5上安裝MBean，請將其包含在套件中，並像匯出任何其他OSGi服務一樣匯出MBean服務。
+當您將MBean註冊為OSGi服務時，它們會自動向MBean伺服器註冊。 若要在CQ5上安裝MBean，請將其納入套件組合中，並像匯出任何其他OSGi服務一樣匯出MBean服務。
 
-除了OSGi相關中繼資料外，您還必須提供Aries JMX白板模組在MBean伺服器註冊MBean時所需的中繼資料：
+除了OSGi相關的中繼資料之外，您還必須提供Aries JMX白板模組在MBean伺服器註冊MBean時所需的中繼資料：
 
 * **DynamicMBean介面的名稱：** 宣告MBean服務實作 `javax.management.DynamicMBea`n介面。 此宣告會通知Aries JMX Whiteboard模組，此服務是MBean服務。
 
-* **MBean網域和金鑰屬性：** 在Felix上，您提供此資訊作為MBean的OSGi服務的屬性。 此資訊與您通常在中提供給MBean伺服器的資訊相同， `javax.management.ObjectName` 物件。
+* **MBean網域和金鑰屬性：** 在Felix上，您將此資訊當作MBean的OSGi服務的屬性來提供。 此資訊與您通常在 `javax.management.ObjectName` 物件。
 
-當您的MBean反映為單一服務時，只需要單一MBean服務執行個體。 在這種情況下，如果您使用Felix SCR Maven外掛程式，則可以在MBean實作類別上使用Apache Felix Service Component Runtime (SCR)註解來指定與JMX相關的中繼資料。 若要例項化多個MBean執行個體，您可以建立另一個類別來執行MBean的OSGi服務註冊。 在此情況下，會在執行階段產生與JMX相關的中繼資料。
+當您的MBean反映為單一服務時，只需要單一MBean服務執行個體。 在這種情況下，如果您使用Felix SCR Maven外掛程式，則可以在MBean實作類別上使用Apache Felix Service Component Runtime (SCR)註解來指定JMX相關的中繼資料。 若要例項化多個MBean執行個體，您可以建立另一個類別來執行MBean的OSGi服務註冊。 在此情況下，會在執行階段產生與JMX相關的中繼資料。
 
 **單一MBean**
 
-您可以使用MBean實作類別中的SCR註解來部署您可以在設計時定義所有屬性和作業的MBean。 在以下範例中， `value` 的屬性 `Service` annotation宣告服務實作 `DynamicMBean` 介面。 此 `name` 的屬性 `Property` annotation會指定JMX網域和金鑰屬性。
+您可以在設計時定義所有屬性和作業的MBean，可以使用MBean實作類別中的SCR註解進行部署。 在以下範例中， `value` 的屬性 `Service` annotation宣告服務實作 `DynamicMBean` 介面。 此 `name` 的屬性 `Property` 註解指定JMX網域和金鑰屬性。
 
 #### 含SCR註解的MBean實作類別 {#mbean-implementation-class-with-scr-annotations}
 
@@ -184,11 +182,11 @@ public class ExampleMBeanImpl extends AnnotatedStandardMBean implements ExampleM
 
 **多個MBean服務執行個體**
 
-若要管理管理服務的多個執行個體，請建立對應MBean服務的多個執行個體。 此外，在啟動或停止受管理執行個體時，應建立或移除MBean服務執行個體。 您可以建立MBean管理員類別，在執行階段將MBean服務具現化，並管理服務生命週期。
+若要管理受管理服務的多個執行個體，請建立對應MBean服務的多個執行個體。 此外，啟動或停止Managed執行個體時，應建立或移除MBean服務執行個體。 您可以建立MBean管理員類別以在執行階段例項化MBean服務，並管理服務生命週期。
 
-使用BundleContext將MBean註冊為OSGi服務。 將與JMX相關的資訊包含在您用作BundleContext.registerService方法引數的Dictionary物件中。
+使用BundleContext將MBean註冊為OSGi服務。 在用作BundleContext.registerService方法引數的Dictionary物件中包含JMX相關資訊。
 
-在以下程式碼範例中，ExampleMBean服務是以程式設計方式註冊。 componentContext物件是ComponentContext，它提供對BundleContext的存取。
+在以下程式碼範例中，ExampleMBean服務是以程式設計方式註冊。 componentContext物件是ComponentContext，它提供BundleContext的存取權。
 
 #### 程式碼片段：程式化MBean服務註冊 {#code-snippet-programmatic-mbean-service-registration}
 
@@ -200,35 +198,35 @@ ServiceRegistration serviceregistration =
             componentContext.getBundleContext().registerService(DynamicMBean.class.getName(), mbean, mbeanProps);
 ```
 
-下一節中的範例MBean提供了更多詳細資訊。
+下一節中的範例MBean提供詳細資訊。
 
-當服務設定儲存在存放庫中時，MBean服務管理員會很有用。 管理員可以擷取服務資訊，並使用它來設定和建立對應的MBean。 管理員類別也可以接聽存放庫變更事件並相應地更新MBean服務。
+當服務設定儲存在存放庫時，MBean服務管理員會很有用。 管理員可以擷取服務資訊，並使用它來設定和建立對應的MBean。 管理員類別也可以監聽存放庫變更事件並相應地更新MBean服務。
 
 ## 範例：使用JMX監控工作流程模型 {#example-monitoring-workflow-models-using-jmx}
 
-此範例中的MBean提供儲存在存放庫中CQ5工作流程模型的相關資訊。 MBean管理員類別會根據儲存在存放庫中的工作流程模型建立MBean，並在執行階段註冊其OSGi服務。 此範例由包含下列成員的單一組合所組成：
+此範例中的MBean提供儲存在存放庫中CQ5工作流程模型的相關資訊。 MBean管理員類別會根據儲存在存放庫中的工作流程模型建立MBean，並在執行階段註冊其OSGi服務。 此範例由包含下列成員的單一組合組成：
 
-* WorkflowMBean：管理介面。
+* Workflowmbean：管理介面。
 * WorkflowMBeanImpl： MBean實作類別。
 * WorkflowMBeanManager： MBean管理員類別的介面。
 * WorkflowMBeanManagerImpl： MBean管理員的實作類別。
 
-**注意：** 為簡單起見，此範例中的程式碼不會執行記錄或對擲回的例外狀況做出反應。
+**注意：** 為簡化起見，此範例中的程式碼不會執行記錄或對擲回的例外狀況做出反應。
 
 WorkflowMBeanManagerImpl包含元件啟用方法。 啟動元件時，方法會執行下列工作：
 
 * 取得該組合的BundleContext。
-* 查詢存放庫以獲得現有工作流程模型的路徑。
-* 為每個Workflow模型建立MBean。
-* 向OSGi服務登入註冊MBean。
+* 查詢存放庫以取得現有工作流程模型的路徑。
+* 為每個工作流程模型建立MBean。
+* 向OSGi服務登入登入MBean。
 
-MBean中繼資料會顯示在JMX主控台中，具有com.adobe.example網域、workflow_model型別，而「屬性」是工作流程模型設定節點的路徑。
+MBean中繼資料會顯示在具有com.adobe.example網域、workflow_model型別的JMX主控台中，而「屬性」是工作流程模型設定節點的路徑。
 
 ![jmxworkflowmbean](assets/jmxworkflowmbean.png)
 
 ### 範例MBean {#the-example-mbean}
 
-此範例需要MBean介面和實作，此介面和實作會反映在 `com.day.cq.workflow.model.WorkflowModel` 介面。 MBean非常簡單，因此範例可以專注於設計的設定和部署方面。 MBean會顯示單一屬性，即模型名稱。
+此範例需要MBean介面和實作，以反映在 `com.day.cq.workflow.model.WorkflowModel` 介面。 MBean非常簡單，因此範例可以專注於設計的設定和部署方面。 MBean會顯示單一屬性，即模型名稱。
 
 #### WorkflowMBean介面 {#workflowmbean-interface}
 
@@ -276,13 +274,14 @@ public class WorkflowMBeanImpl extends AnnotatedStandardMBean implements Workflo
 
 WorkflowMBeanManager服務包含建立WorkflowMBean服務的元件啟用方法。 服務實作包括下列方法：
 
-* 啟動：元件啟動器。 建立JCR工作階段以讀取WorkflowModel設定節點。 儲存模型設定的根節點會定義在靜態欄位中。 設定節點的名稱也會在靜態欄位中定義。 此方法會呼叫取得節點模型路徑並建立模型WorkflowMBean的其他方法。
+* 啟動：元件啟動器。 建立JCR工作階段以讀取WorkflowModel設定節點。 儲存模型設定的根節點會定義在靜態欄位中。 設定節點的名稱也會在靜態欄位中定義。 此方法會呼叫取得節點模型路徑並建立模型WorkflowMBeans的其他方法。
 * getModelIds：周遊根節點下方的存放庫，並擷取每個模型節點的路徑。
 * makeMBean：使用模型路徑來建立WorkflowModel物件、為其建立WorkflowMBean並註冊其OSGi服務。
 
 >[!NOTE]
 >
->WorkflowMBeanManager實作只會為啟動元件時存在的模型設定建立MBean服務。 更強大的實作功能會監聽有關新模型組態以及現有模型組態變更或刪除的存放庫事件。 變更發生時，管理員可以建立、修改或移除對應的WorkflowMBean服務。
+>WorkflowMBeanManager實作只會為啟動元件時存在的模型設定建立MBean服務。 更強大的實作會監聽有關新模型組態以及現有模型組態變更或刪除的存放庫事件。 變更發生時，管理員可以建立、修改或移除對應的WorkflowMBean服務。
+>
 
 #### WorkflowMBeanManager介面 {#workflowmbeanmanager-interface}
 
@@ -427,9 +426,9 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
 
 * Apache Maven編譯器外掛程式：從原始程式碼編譯Java類別。
 * Apache Felix Maven套件組合外掛程式：建立套件組合和資訊清單
-* Apache Felix Maven SCR外掛程式：建立元件描述項檔案並設定服務元件資訊清單標頭。
+* Apache Felix Maven SCR外掛程式：建立元件描述元檔案並設定服務元件資訊清單標頭。
 
-**注意：** 在撰寫時，maven scr外掛程式與適用於Eclipse的m2e外掛程式不相容。 (請參閱 [Felix bug 3170](https://issues.apache.org/jira/browse/FELIX-3170).) 若要使用Eclipse IDE，請安裝Maven並使用命令列介面執行建置。
+**注意：** 在撰寫時，maven scr外掛程式與適用於Eclipse的m2e外掛程式不相容。 (請參閱 [Felix錯誤3170](https://issues.apache.org/jira/browse/FELIX-3170).) 若要使用Eclipse IDE，請安裝Maven並使用命令列介面執行建置。
 
 #### 範例POM檔案 {#example-pom-file}
 
@@ -542,7 +541,7 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
 </project>
 ```
 
-將以下設定檔新增至您的maven設定檔案，以使用公共Adobe存放庫。
+將以下設定檔新增到您的maven設定檔案，以使用公共Adobe存放庫。
 
 #### Maven設定檔 {#maven-profile}
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 8753aaab-959f-459b-bdb6-057cbe05d480
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1832'
 ht-degree: 2%
 
 ---
@@ -436,7 +436,7 @@ ht-degree: 2%
      <li>cellCls： css類別 </li>
      <li>readOnly： true表示無法變更值 </li>
      <li>核取方塊： true可將欄的所有儲存格定義為核取方塊（true/false值） </li>
-     <li>forcedPosition：整數值，指定欄必須置於格線中的位置（介於0和欄數–1之間）<p><br /> </p> </li>
+     <li>forcedPosition：整數值，指定資料行必須置於格線中的位置（介於0-colums-1之間）<p><br /> </p> </li>
     </ul> </td>
   </tr>
  </tbody>

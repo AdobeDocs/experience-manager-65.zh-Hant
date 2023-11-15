@@ -11,7 +11,7 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2567'
 ht-degree: 2%
@@ -430,7 +430,7 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫 [HTL指�
 
    >[!CAUTION]
    >
-   >如果Teaser中使用的產品沒有 `eco_friendly` 屬性，作為其屬性集的一部分。
+   >如果Teaser中使用的產品沒有 `eco_friendly` 屬性作為其屬性集的一部分。
 
 ## 新增環保徽章的樣式 {#add-styles}
 

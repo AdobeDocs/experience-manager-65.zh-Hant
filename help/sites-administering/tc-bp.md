@@ -3,9 +3,9 @@ title: 翻譯最佳做法
 description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，協助您啟動並執行翻譯專案。
 feature: Language Copy
 exl-id: 01a81c4b-cb30-4f7e-b281-7194ebb5fc70
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '837'
 ht-degree: 1%
 
 ---

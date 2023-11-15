@@ -7,9 +7,9 @@ role: User
 feature: Collections,Asset Management
 exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
 hide: true
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2204'
 ht-degree: 14%
 
 ---
@@ -222,7 +222,7 @@ ht-degree: 14%
 
 ## 建立巢狀集合 {#creating-nested-collections}
 
-您可以將集合新增至另一個集合，藉此建立巢狀集合。
+您可以將集合新增至另一個集合，以建立巢狀集合。
 
 1. 從集合控制檯中，選取所需的集合或集合群組，然後按一下 **[!UICONTROL 至集合]** （在工具列中）。
 

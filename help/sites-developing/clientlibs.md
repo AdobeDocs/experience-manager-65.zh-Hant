@@ -7,7 +7,7 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2853'
 ht-degree: 1%
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 雖然此方法可在AEM中運作，但當頁面及其組成元件變得複雜時，可能會導致問題。 在這種情況下，最終HTML輸出中可能會包含同一JS程式庫的多份副本，這是很危險的。 若要避免此問題，並允許AEM使用的使用者端程式庫的邏輯組織 **使用者端資料庫資料夾**.
 
-使用者端程式庫資料夾是型別的存放庫節點 `cq:ClientLibraryFolder`. 其定義位於 [CND標籤法](https://jackrabbit.apache.org/node-type-notation.html) 是
+使用者端程式庫資料夾是型別的存放庫節點 `cq:ClientLibraryFolder`. 其定義於 [CND標籤法](https://jackrabbit.apache.org/node-type-notation.html) 是
 
 ```shell
 [cq:ClientLibraryFolder] > sling:Folder

@@ -1,14 +1,12 @@
 ---
 title: ContextHub UI模組型別範例
-seo-title: Sample ContextHub UI Module Types
-description: ContextHub提供數個範例UI模組，供您在解決方案中使用
-seo-description: ContextHub provides several sample UI modules that you can use in your solutions
+description: ContextHub提供數個範例UI模組，供您在解決方案中使用。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: df28180f-7af4-437d-8e91-bfd305f73113
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 1%
@@ -57,7 +55,7 @@ contexthub.base UI模組型別是其他所有UI模組型別的基底型別。 �
    * title：為此專案顯示的文字
    * 影像： （選用）應在左側顯示的影像URL
    * 圖示： （選用）應在左側顯示的CUI圖示類別；如果已指定影像，則會忽略此類別
-   * selected： （選用）布林值，指定此專案是否應顯示為selected (true=selected)。 依預設，選取的專案會以粗體字型顯示。 使用 `listType` 屬性來設定其他外觀（請參閱下文）。
+   * selected： （選用）布林值，指定此專案是否應顯示為selected (true=selected)。 依預設，會使用粗體字型顯示選取的專案。 使用 `listType` 屬性來設定其他外觀（請參閱下文）。
 
 * **listType：** 用於彈出視窗清單專案的樣式。 使用下列其中一個值：
 

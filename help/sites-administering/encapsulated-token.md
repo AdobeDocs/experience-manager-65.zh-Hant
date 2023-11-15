@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 依預設，AEM會使用權杖驗證處理常式來驗證每個請求。 不過，若要處理驗證請求，「權杖驗證處理常式」需要存取每個請求的存放庫。 發生這種情況是因為會使用Cookie來維持驗證狀態。 邏輯上，狀態需要儲存在存放庫中，才能驗證後續請求。 實際上，這表示驗證機制是有狀態的。
 
-這對於水準擴充性特別重要。 在像下面描述的發佈伺服器陣列那樣的多重執行個體設定中，無法以最佳方式實現負載平衡。 透過狀態式驗證，持續驗證狀態將僅適用於使用者首次驗證的執行個體。
+這對於水準擴充性特別重要。 在像下面描述的發佈伺服器陣列這樣的多執行個體設定中，無法以最佳方式實現負載平衡。 透過狀態式驗證，持續驗證狀態將僅適用於使用者首次驗證的執行個體。
 
 ![chlimage_1-33](assets/chlimage_1-33a.png)
 
