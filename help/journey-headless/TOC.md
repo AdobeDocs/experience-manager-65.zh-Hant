@@ -2,13 +2,13 @@
 sub-product: AEM Headless Journeys
 user-guide-title: AEM Headless 歷程
 breadcrumb-title: AEM Headless 歷程
-user-guide-description: 從這裡開始，逐步引導您瞭解AEM強大且有彈性的無周邊功能、其功能，以及如何在您的專案中使用這些功能。
+user-guide-description: 從這裡開始，逐步引導您了解 AEM 強大且靈活的 Headless 功能特色、其功能用途，以及如何在您的專案中運用這些功能。
 feature: Developer Tools
 role: Developer, Architect
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
