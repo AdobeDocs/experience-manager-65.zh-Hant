@@ -2,10 +2,10 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 41ef1b05e4082bb50b93ff6511542ed56a77497c
+source-git-commit: 7c5d45788583cce3403b8beca0c122a9ddf1ca49
 workflow-type: tm+mt
-source-wordcount: '3433'
-ht-degree: 1%
+source-wordcount: '3613'
+ht-degree: 3%
 
 ---
 
@@ -41,11 +41,19 @@ ht-degree: 1%
 
 **重要功能**
 
-* A
+* 資產，Dynamic Media - [Dynamic Media中的影片支援多字幕與多音訊曲目](/help/assets/video.md#about-msma) — 您現在可以輕鬆地將多個字幕和多個音軌新增到主要視訊中。 此功能表示全球對象都可以存取您的影片。您可以以多種語言向全球對象自訂單一已發佈的主要影片，並遵守不同地理區域的輔助功能指南。作者還可以從使用者介面中的單個標籤管理字幕和音訊。
+
+* 資產 — 您現在可以從搜尋結果導覽至包含資產的檔案夾位置，以讓您執行各種資產管理任務。 (ASSETS-23182)
 
 **重要增強功能**
 
-* S
+* 內容片段中的Sites Polaris選取器已改善效能。 (SITES-14092)
+
+* 啟用Sites頁面編輯器/影像元件使用者從遠端資產Cloud Service參照資產。 (SITES-13448， SITES-13433)
+
+* 若要在清單檢視中快速找到系統中可能有多個專案的專案，Adobe現在支援伺服器端排序。 專案節點會在使用者介面中呈現之前，根據使用者選取的欄在後端排序。 (NPR-41027)
+
+* AEM 6.5.18.0支援MongoDB 5.0至6.0。
 
 **汰除功能**
 
@@ -57,7 +65,6 @@ ht-degree: 1%
 
 ### [!DNL Sites]{#sites-6519}
 
-* U
 
 #### 協助工具{#sites-accessibility-6519}
 
