@@ -3,10 +3,10 @@ title: 與內容片段搭配使用的 AEM GraphQL API
 description: 瞭解如何在Adobe Experience Manager (AEM)中使用內容片段搭配AEM GraphQL API來進行Headless內容傳送。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 5bfd8216c9d3540ac6d795d434dab5afb7bce309
 workflow-type: tm+mt
-source-wordcount: '4774'
-ht-degree: 61%
+source-wordcount: '4848'
+ht-degree: 59%
 
 ---
 
@@ -715,7 +715,28 @@ query {
 
 >[!NOTE]
 >
->為了符合 [Dispatcher 對可快取檔案的要求](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)，Dispatcher 會將後綴 `.json` 新增到所有持續性查詢 URL，以便快取結果。
+>當使用以下專案為持續查詢啟用Dispatcher快取時 `Define CACHE_GRAPHQL_PERSISTED_QUERIES` 一個 `ETag` 標頭會新增到Dispatcher的回應。
+>
+>根據預設 `ETag` 標頭是使用以下指令設定的：
+>
+>```
+>FileETag MTime Size 
+>```
+>
+>不過，此設定在用於持續查詢回應時可能會造成問題，因為它並未說明回應中的細微變更。
+>
+>若要取得個人 `ETag` 計算 *每個* 唯一回應 `FileETag Digest` 必須在Dispatcher設定中使用設定：
+>
+>```xml
+><Directory />    
+>   ...    
+>   FileETag Digest
+></Directory> 
+>```
+
+>[!NOTE]
+>
+>若要遵循 [Dispatcher對可快取檔案的需求](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)，Dispatcher會新增尾碼 `.json` 至所有儲存的查詢URL，以便可以快取結果。
 >
 >啟用持續性查詢快取後，就會重寫規則來新增此後綴。
 
