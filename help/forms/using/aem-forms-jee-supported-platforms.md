@@ -725,7 +725,7 @@ Adobe保留在任何指定時間點變更AEM Forms on JEE版本支援的第三�
 
 下列平台在2021年9月7日的AEM Forms 6.5.10.0版本中標示為已過時：
 
-- Adobe Acrobat 2017 - [Adobe Acrobat 2017的核心支援將於2022年6月6日終止](https://helpx.adobe.com/tw/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Adobe Acrobat 2017的核心支援將於2022年6月6日終止](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat® Enterprise Linux® 7 （核心3.x） （64位元）
 - Microsoft® Office 2016
 - OpenOffice 4.1.2

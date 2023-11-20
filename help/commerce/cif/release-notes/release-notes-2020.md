@@ -9,7 +9,7 @@ ht-degree: 11%
 
 ---
 
-# Commerce Integration Framework GitHub版本總覽
+# Commerce integration framework GitHub版本總覽
 
 ## 發行日期： 2020年11月
 

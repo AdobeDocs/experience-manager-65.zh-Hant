@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 31131af52ecb4f9c4caaf8e75e0a9213874b3a1e
+source-git-commit: c78d5f1d94ffb92a1e034b0ccb6131ac811d708f
 workflow-type: tm+mt
-source-wordcount: '3559'
+source-wordcount: '3530'
 ht-degree: 3%
 
 ---
@@ -462,17 +462,13 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * 發佈調適型表單時，其所有相依性（包括原則）都會重新發佈，即使未進行任何修改亦然。 (FORMS-10454)
 * 當使用者選擇在最適化表單中首次設定欄位時，儲存設定的選項未顯示在屬性瀏覽器中。 選擇在同一編輯器中設定最適化表單的其他欄位即可解決問題。
-* 在最適化表單的指南容器中設定重新導向URL時，內嵌簽署會停止運作。 (FORMS-10493)
-* 所有記錄檔案(DoR)範本都無法發佈。 僅發佈英文地區設定型DoR範本及其相關的Forms型DoR範本。 (FORMS-10535)
+* 在最適化表單的指南容器中設定重新導向URL時，內嵌簽署會停止運作。 (FORMS-10493)若要解決此問題，請下載並安裝 [6.5.18.0的Hotfix](/help/release-notes/aem-forms-hotfix.md).
+* 所有記錄檔案(DoR)範本都無法發佈。 只有以英文地區設定為基礎的DoR範本及其相關之Forms為基礎的DoR範本才會發佈。 (FORMS-10535)若要解決此問題，請下載並安裝 [6.5.18.0的Hotfix](/help/release-notes/aem-forms-hotfix.md).
+
 
 #### 互動式通訊
 
-* 升級至AEM Service Pack 18後，無法在編輯模式中開啟具有大型內嵌影像的互動式通訊。 (FORMS-10578)若要解決此問題，請執行以下步驟：
-
-   1. 下載 [Hotfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 從SD連結。
-   1. 解壓縮Hotfix封存檔案，以便取得Experience Manager套件(.zip)和套件(.jar)檔案。
-   1. 透過封裝管理員上傳並安裝封裝(.zip)。
-   1. 開啟Configuration Manager組合 `https://server:host/system/console/bundles`，上傳並安裝套件組合(.jar)。
+* 升級至AEM Service Pack 18後，無法在編輯模式中開啟具有大型內嵌影像的互動式通訊。 (FORMS-10578)若要解決此問題，請下載並安裝 [6.5.18.0的Hotfix](/help/release-notes/aem-forms-hotfix.md).
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 

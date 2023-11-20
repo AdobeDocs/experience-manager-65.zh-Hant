@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Adobe Dynamic Media Classic是託管式解決方案，可管理、增強和發佈多媒體資產，並將其遞送至網路、行動裝置、電子郵件和網際網路連線的顯示和列印。
 
-若要使用Dynamic Media Classic，您必須設定雲端設定，以便Dynamic Media Classic和Adobe Experience Manager資產可以相互互動。 本檔案說明如何設定Experience Manager和Dynamic Media Classic。
+若要使用Dynamic Media Classic，您必須設定雲端設定，以便Dynamic Media Classic和Adobe Experience Manager Assets可以相互互動。 本檔案說明如何設定Experience Manager和Dynamic Media Classic。
 
 如需在頁面上使用所有Dynamic Media Classic元件以及使用視訊的詳細資訊，請參閱 [使用Dynamic Media Classic](../assets/scene7.md).
 
