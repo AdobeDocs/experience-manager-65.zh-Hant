@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '10791'
 ht-degree: 0%
@@ -1235,7 +1235,7 @@ ht-degree: 0%
 
 使用Java API擷取端點聯結器資訊：
 
-1. 包含專案檔案。.
+1. 包含專案檔案。
 
    在您的Java專案的類別路徑中包含使用者端JAR檔案，例如adobe-livecycle-client.jar。
 

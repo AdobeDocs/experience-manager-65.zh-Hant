@@ -2,9 +2,9 @@
 title: 最佳化 GraphQL 查詢
 description: 瞭解如何在Adobe Experience Manager as a Cloud Service中篩選、分頁和排序內容片段時最佳化GraphQL查詢，以進行Headless內容傳送。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '1965'
 ht-degree: 58%
 
 ---
@@ -316,7 +316,7 @@ AEM中的GraphQL支援兩種分頁型別：
 
 ### 將內容片段巢狀最小化 {#minimize-content-fragment-nesting}
 
-巢狀內容片段是建立自訂內容結構模型的好方法。 您甚至可以有包含巢狀片段的片段、包含巢狀片段的片段、包含……等等。
+巢狀內容片段是建立自訂內容結構模型的好方法。 您甚至可以有含巢狀片段的片段，其中包含巢狀片段、具有……等等。
 
 但是，如果建立的結構包含太多層級，可能會增加GraphQL查詢的處理時間，因為GraphQL必須周遊所有巢狀內容片段的整個階層。
 

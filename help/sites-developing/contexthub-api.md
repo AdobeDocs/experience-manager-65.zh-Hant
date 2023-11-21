@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 feature: Context Hub
 exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '5002'
+source-wordcount: '5004'
 ht-degree: 2%
 
 ---
@@ -224,7 +224,7 @@ A `boolean` 值：
 
 **參數**
 
-* **includeinternals：** 值 `true` 結果中包含內部使用的索引鍵。 這些鍵以底線(「_」)字元開頭。 預設值為 `false`。
+* **includeinternals：** 值 `true` 在結果中包含內部使用的索引鍵。 這些鍵以底線(「_」)字元開頭。 預設值為 `false`。
 
 **傳回**
 
@@ -248,7 +248,7 @@ A `boolean` 值：
 
 **參數**
 
-* `includeInternals:` 值 `true` 結果中包含內部使用的索引鍵/值配對。 此資料的鍵值以底線(「_」)字元開頭。 預設值為 `false`。
+* `includeInternals:` 值 `true` 在結果中包含內部使用的索引鍵/值配對。 此資料的鍵值以底線(「_」)字元開頭。 預設值為 `false`。
 
 **傳回**
 

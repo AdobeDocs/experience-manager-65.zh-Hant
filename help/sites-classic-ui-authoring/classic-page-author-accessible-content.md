@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '9152'
+source-wordcount: '9151'
 ht-degree: 5%
 
 ---
@@ -606,7 +606,7 @@ ID屬性無法在現成安裝中使用。 可透過在RTE中設定HTML規則和�
 * 對比度（最小）：文字的視覺呈現和影像的對比度至少為4.5:1，以下除外：
 
    * 大型文字：大型文字和影像的對比率至少為3:1。
-   * 附屬專案：文字或文字影像若是非作用中使用者介面元件的一部分、純粹的裝飾、任何人都看不到，或屬於包含其他重要視覺內容的圖片的一部分，則沒有對比度要求。
+   * 附屬專案：文字或文字影像屬於非使用中使用者介面元件的一部分，且純粹為裝飾或任何人無法看見，或是屬於包含其他重要視覺內容的圖片的一部分，對於此類文字或文字影像沒有對比度要求。
    * 圖志型別：屬於圖志或品牌名稱的文字沒有最低對比要求。
 
 #### 用途 — 對比（最小） (1.4.3) {#purpose-contrast-minimum}

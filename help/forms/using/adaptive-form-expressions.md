@@ -1,16 +1,12 @@
 ---
 title: 最適化表單運算式
-seo-title: Adaptive Form Expressions
 description: 使用調適型表單運算式來新增自動驗證、計算，並開啟或關閉區段的可見度。
-seo-description: Use adaptive forms expressions to add automatic validation, calculation, and turn visibility of a section on or off.
-uuid: c274dce5-8b87-472f-bff5-53b246fa6584
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '2802'
 ht-degree: 2%
@@ -197,7 +193,7 @@ click運算式會處理對按鈕的點選事件執行的動作。 GuideBridge開
 
 ### 必填 {#required}
 
-若要將元件設為必要，請在 **編輯** 元件對話方塊中，您可以選取選項 **標題與文字>必填**. 您也可以新增適當的 **必要訊息** （選擇性）及。.
+若要將元件設為必要，請在 **編輯** 元件對話方塊中，您可以選取選項 **標題與文字>必填**. 您也可以新增適當的 **必要訊息** （選擇性）及。
 
 ### 驗證模式 {#validation-patterns}
 
