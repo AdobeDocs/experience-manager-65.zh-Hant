@@ -7,10 +7,10 @@ topic-tags: adaptive_forms, author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: f2d8fd17787e756e9ee5a8fc6eaea726de6b66ba
 workflow-type: tm+mt
-source-wordcount: '1992'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -303,11 +303,12 @@ if (slingRequest.getParameter("numericbox1614079614831").length() >= 5) {
 
 同樣地，您可以使用規則編輯器在適用性表單中包含驗證碼的自訂方法。
 
-### 新增自訂驗證碼服務 {#add-custom-captcha-service}
+<!--
+### Add custom CAPTCHA services {#add-custom-captcha-service}
 
-[!DNL Experience Manager Forms] 以CAPTCHA服務形式提供reCAPTCHA。 不過，您可以新增自訂服務以顯示於 **[!UICONTROL 驗證碼服務]** 下拉式清單。
+[!DNL Experience Manager Forms] provides reCAPTCHA as the CAPTCHA service. However, you can add a custom service to display in the **[!UICONTROL CAPTCHA Service]** drop-down list.  
 
-以下是將其他CAPTCHA服務新增至最適化表單的介面實作範例：
+The following is a sample implementation of the interface to add additional CAPTCHA service to your Adaptive Form:
 
 ```javascript
 package com.adobe.aemds.guide.service;
@@ -337,6 +338,6 @@ public interface GuideCaptchaValidator {
 }
 ```
 
-`captchaPropertyNodePath` 參考Sling存放庫中驗證碼元件的資源路徑。 此屬性用於包含特定於驗證碼元件的詳細資訊。 例如， `captchaPropertyNodePath` 包含在CAPTCHA元件上設定的reCAPTCHA雲端組態資訊。 雲端設定資訊提供 **[!UICONTROL 網站金鑰]** 和 **[!UICONTROL 秘密金鑰]** 實作reCAPTCHA服務的設定。
+`captchaPropertyNodePath` Refers to the resource path of the CAPTCHA component in the Sling repository. Use this property to include details specific to the CAPTCHA component. For example, `captchaPropertyNodePath` includes information for the reCAPTCHA cloud configuration configured on the CAPTCHA component. The cloud configuration information provides **[!UICONTROL Site Key]** and **[!UICONTROL Secret Key]** settings for implementing the reCAPTCHA service.
 
-`userResponseToken` 請參閱 `g_reCAPTCHA_response` 在表單中解決驗證碼後產生的驗證碼。
+`userResponseToken` Refers to the `g_reCAPTCHA_response` that gets generated after solving a CAPTCHA in a form. -->
