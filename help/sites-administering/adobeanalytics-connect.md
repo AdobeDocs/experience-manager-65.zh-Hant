@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: f525c8d159b8312184fc015b1151e93c9d46b3eb
+source-git-commit: bbd18486a77d7b46454aacff23147b38860bd895
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1523'
 ht-degree: 6%
 
 ---
@@ -193,36 +193,21 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 
 另請參閱 [檢視頁面分析資料](/help/sites-authoring/page-analytics-using.md) 以取得更多詳細資料。
 
-<!-- SP19
-### Configuring the Import Interval {#configuring-the-import-interval}
-
-Configure the appropriate instance of the **Adobe AEM Analytics Report Sling Importer** service:
-
-* **Fetch attempts**:
-  Number of attempts to fetch a queued report. 
-  The default is `6`.
-
-* **Fetch delay**:
-  The number of milliseconds between attempts to fetch a queued report. 
-  The default is `10000`. As this is in milliseconds it corresponds to 10 seconds.
-
-* **Fetch frequency**:
-  A `cron` expression to determine the frequency for fetching the Analytics Report. 
-  The default is `0 0 0/12 * * ?`; this corresponds to 12 fetches every hour.
-
-To configure this OSGi service, you can either use the [Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) or an [osgiConfig node in the repository](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (the service PID is `com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`).
--->
-
 ### 設定匯入間隔 {#configuring-the-import-interval}
 
-設定適當的例項 **AdobeAEM受管理的輪詢設定** 服務：
+設定適當的例項 **AdobeAEM Analytics報表Sling匯入工具** 服務：
 
-* **輪詢間隔**：服務從Adobe Analytics擷取頁面檢視資料的間隔，以秒為單位。
-預設間隔為43200000毫秒（12小時）。
+* **擷取嘗試**：嘗試擷取已加入佇列的報表的次數。
+預設為 `6`。
 
-* **啟用**：啟用或停用服務。 依預設，會啟用服務。
+* **擷取延遲**：嘗試擷取已排入佇列的報表之間的毫秒數。
+預設為 `10000`。
+由於是以毫秒為單位，因此會對10秒。
 
-若要設定此OSGi服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [存放庫中的osgiConfig節點](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (服務PID為 `com.day.cq.polling.importer.impl.ManagedPollConfigImpl`)。
+* **擷取頻率**：A `cron` 決定擷取Analytics報表頻率的運算式。
+預設值為 `0 0 0/12 * * ?`；這相當於每小時12次擷取。
+
+若要設定此OSGi服務，您可以使用 [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [存放庫中的osgiConfig節點](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (服務PID為 `com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`)。
 
 ## 編輯Adobe Analytics設定和/或架構 {#editing-adobe-analytics-configurations-and-or-frameworks}
 

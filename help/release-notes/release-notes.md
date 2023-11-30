@@ -2,10 +2,11 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: c78d5f1d94ffb92a1e034b0ccb6131ac811d708f
+exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
+source-git-commit: 8d06457241919095fd9802f69df426a1cc6851da
 workflow-type: tm+mt
-source-wordcount: '3530'
-ht-degree: 3%
+source-wordcount: '3675'
+ht-degree: 4%
 
 ---
 
@@ -22,14 +23,14 @@ ht-degree: 3%
 
 | 產品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| 版本 | 6.5.18.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 版本 | 6.5.19.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 類型 | Service Pack發行 |
-| 日期 | 2023年8月24日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| 下載 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 日期 | 2023年11月30日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 下載 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
-## 包含的內容 [!DNL Experience Manager] 6.5.18.0 {#what-is-included-in-aem-6519}
+## 包含的內容 [!DNL Experience Manager] 6.5.19.0 {#what-is-included-in-aem-6519}
 
-[!DNL Experience Manager] 6.5.18.0包括自2019年4月6.5首次發行以來所推出的新功能、客戶要求的重要增強功能、錯誤修正，以及效能、穩定性和安全性改善專案。 [安裝此Service Pack](#install) 於 [!DNL Experience Manager] 6.5.
+[!DNL Experience Manager] 6.5.19.0包括自2019年4月6.5首次發行以來所推出的新功能、客戶要求的重要增強功能、錯誤修正，以及效能、穩定性和安全性改善專案。 [安裝此Service Pack](#install) 於 [!DNL Experience Manager] 6.5.
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -53,7 +54,7 @@ ht-degree: 3%
 
 * 若要在清單檢視中快速找到系統中可能有多個專案的專案，Adobe現在支援伺服器端排序。 專案節點會在使用者介面中呈現之前，根據使用者選取的欄在後端排序。 (NPR-41027)
 
-* AEM 6.5.18.0支援MongoDB 5.0至6.0。
+* AEM 6.5.19.0支援MongoDB 5.0至6.0。
 
 **汰除功能**
 
@@ -61,10 +62,9 @@ ht-degree: 3%
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-## 已修正Service Pack 18中的問題 {#fixed-issues}
+## 已修正Service Pack 19中的問題 {#fixed-issues}
 
 ### [!DNL Sites]{#sites-6519}
-
 
 #### 協助工具{#sites-accessibility-6519}
 
@@ -99,6 +99,7 @@ ht-degree: 3%
 #### 核心後端{#sites-core-backend-6519}
 
 * 改進 `StyleImpl`. (SITES-15164)
+* 改進WCM管道的版本/650分支，以便能夠對其模組執行整合測試。 (SITES-12938)
 
 <!--#### Core Components{#sites-core-components-6519}
 
@@ -128,10 +129,11 @@ ht-degree: 3%
 #### MSM — 即時副本{#sites-msm-live-copies-6519}
 
 * MSM轉出按鈕在觸控式圖形使用者介面中無法運作。 (SITES-16991)
-* 建立即時副本或轉出體驗片段時，連結參考未在體驗片段內更新。 (SITES-15460)
+* 建立即時副本或轉出體驗片段時，體驗片段內的連結參考沒有更新。 (SITES-15460)
 
 #### 頁面編輯器{#sites-pageeditor-6519}
 
+* 在「Forms >主題」中，如果您在主題編輯器中開啟主題並進行一些變更並儲存，然後按一下「預覽」，則會顯示載入圖示，但未載入實際預覽。 (SITES-17164)
 * 在資產型別篩選器上選取多個檔案檔案型別在頁面主控台上無法運作。 即使某個特定檔案型別的結果可用，也找不到任何結果。 因此，作者無法篩選多個檔案。 他們必須使用多種檔案型別，而且必須一次篩選一種。 (SITES-14047)
 * 從AEM 6.5.17和AEM 6.5.18升級執行個體後，從頁面編輯器內（如果您選取） **[!UICONTROL 發佈頁面]**，系統會將您重新導向至不存在的URL。 系統會將使用者重新導向至發佈精靈。 (SITES-15856)
 * 在作業系統剪貼簿的貼上過程中，AEM剪貼簿中有多餘的復本。 (SITES-15704)
@@ -145,7 +147,7 @@ ht-degree: 3%
 
 #### [!DNL Dynamic Media]{#assets-dm-6519}
 
-* 將資產上傳至AEM後， `update_asset` 工作流程已觸發。 工作流程永遠不會完成。 檢視工作流程例項，工作流程會完成至產品上傳步驟。 下一步是scene7批次上傳。 使用者可透過Dynamic Media Classic應用程式檢視資產是否位於Scene7中。 (ASSETS-30443)
+* 將資產上傳至AEM後， `update_asset` 工作流程已觸發。 工作流程永遠不會完成。 檢視工作流程例項，工作流程會完成至產品上傳步驟。 下一步是Scene7批次上傳。 使用者可透過Dynamic Media Classic應用程式檢視資產是否位於Scene7中。 (ASSETS-30443)
 * 自訂Servlet （API端點）傳回錯誤的Dynamic Media (Scene7)檔案名稱。 刪除資產並取代為相同名稱的資產時，就會發生這種情況。 自訂servlet會傳回舊的Dynamic Media (Scene7)檔案名稱，而「jcr」API呼叫會傳回正確的檔案名稱。 (ASSETS-29476)
 * 即使在資料夾層級關閉同步之後，記錄檔仍會顯示「Scene7 ReplicateOnModifyListener」的觸發程式。 此 `ReplicateOnModifyListener/Worker` 應該略過非Dynamic Media資料夾資產和內容片段的處理。 (ASSETS-26705)
 * 如果焦點在高對比黑白模式下的下拉式元素（僅限內容、檢視、更多選項）中不可見，則弱視者會受到影響。 (ASSETS-25759)
@@ -227,22 +229,21 @@ ht-degree: 3%
 
 #### 工作流程{#foundation-workflow-6519}
 
-* 無法完成收件匣中的工作。 嘗試完成工作並選取動作時，下拉式選單中只會顯示「未定義」值。 這表示使用者無法套用AEM 6.5.18 Service Pack。 (NPR-41402)
+* 無法完成收件匣中的工作。 嘗試完成工作並選取動作時，下拉式選單中只會顯示「未定義」值。 這表示使用者無法套用AEM 6.5.18 Service Pack。 (NPR-41402和NPR-41473)
 * 無法完成收件匣中的工作。 嘗試完成zip檔案、資產報告、移動（成功或失敗）或資產到期的工作時，下拉式清單中沒有值（僅限「未定義」）。 (NPR-41305)
 * 當使用者選取 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** >執行個體，然後選取執行中的工作流程，再選取 **[!UICONTROL 檢視裝載]**，則會導致500錯誤頁面。 (NPR-41325)
 
-
-## 安裝 [!DNL Experience Manager] 6.5.18.0{#install}
+## 安裝 [!DNL Experience Manager] 6.5.19.0{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.18.0需要 [!DNL Experience Manager] 6.5.請參閱 [升級檔案](/help/sites-deploying/upgrade.md) 以取得詳細指示。 <!-- UPDATE FOR EACH NEW RELEASE -->
-* 您可在Adobe上取得Service Pack下載 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip).
-* 在具有MongoDB和多個執行個體的部署上，安裝 [!DNL Experience Manager] 使用封裝管理程式的其中一個Author執行個體上的6.5.18.0 。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.19.0需要 [!DNL Experience Manager] 6.5.請參閱 [升級檔案](/help/sites-deploying/upgrade.md) 以取得詳細指示。 <!-- UPDATE FOR EACH NEW RELEASE -->
+* 您可在Adobe上取得Service Pack下載 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip).
+* 在具有MongoDB和多個執行個體的部署上，安裝 [!DNL Experience Manager] 使用封裝管理程式的其中一個Author執行個體上的6.5.19.0 。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> Adobe不建議您移除或解除安裝 [!DNL Experience Manager] 6.5.18.0套件。 因此，在安裝套件之前，您應該建立 `crx-repository` 以防您必須將其回覆。 <!-- UPDATE FOR EACH NEW RELEASE -->
+> Adobe不建議您移除或解除安裝 [!DNL Experience Manager] 6.5.19.0套件。 因此，在安裝套件之前，您應該建立 `crx-repository` 以防您必須將其回覆。 <!-- UPDATE FOR EACH NEW RELEASE -->
 <!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
@@ -252,7 +253,7 @@ ht-degree: 3%
 
 1. 安裝之前，請拍攝快照或進行全新備份 [!DNL Experience Manager] 執行個體。
 
-1. 下載Service Pack，從 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 下載Service Pack，從 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. 開啟封裝管理員，然後選取 **[!UICONTROL 上傳套裝]** 以上傳套件。 若要瞭解更多，請參閱 [封裝管理員](/help/sites-administering/package-manager.md).
 
@@ -266,24 +267,24 @@ ht-degree: 3%
 
 **自動安裝**
 
-您可以使用兩種不同的方法來自動安裝 [!DNL Experience Manager] 6.5.18.0。<!-- UPDATE FOR EACH NEW RELEASE -->
+您可以使用兩種不同的方法來自動安裝 [!DNL Experience Manager] 6.5.19.0。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * 將套件置於 `../crx-quickstart/install` 資料夾（當伺服器線上上可用時）。 套件會自動安裝。
 * 使用 [來自封裝管理員的HTTP API](/help/sites-administering/package-manager.md#package-share). 使用 `cmd=install&recursive=true` 以便安裝巢狀套件。
 
 >[!NOTE]
 >
->Experience Manager6.5.18.0不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager6.5.19.0不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **驗證安裝**
 
 若要瞭解經過認證可搭配此版本使用的平台，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md).
 
-1. 產品資訊頁(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (6.5.18.0)` 在 [!UICONTROL 已安裝的產品]. <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 產品資訊頁(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (6.5.19.0)` 在 [!UICONTROL 已安裝的產品]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. 所有OSGi套件組合都是 **[!UICONTROL 作用中]** 或 **[!UICONTROL 片段]** 在OSGi主控台中(使用Web主控台： `/system/console/bundles`)。
 
-1. OSGi套件 `org.apache.jackrabbit.oak-core` 是1.22.16版或更新版本(使用Web主控台： `/system/console/bundles`)。 <!-- NPR-41010 for 6.5.18.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
+1. OSGi套件 `org.apache.jackrabbit.oak-core` 是1.22.17版或更新版本(使用Web主控台： `/system/console/bundles`)。 <!-- NPR-41292 for 6.5.19.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
 ### 安裝Service Pack for [!DNL Experience Manager] Forms{#install-aem-forms-add-on-package}
 
@@ -291,7 +292,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->最適化Forms功能，提供於 [AEM 6.5快速入門](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)，僅供探索與評估之用。 若為生產使用，您必須取得AEM Forms的有效授權，因為最適化Forms功能需要適當的授權。
+>調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
 
 ### 安裝Experience Manager內容片段的GraphQL索引套件{#install-aem-graphql-index-add-on-package}
 
@@ -307,7 +308,7 @@ ht-degree: 3%
 
 ### UberJar{#uber-jar}
 
-The UberJar for [!DNL Experience Manager] 6.5.18.0可在以下網址取得： [Maven中央存放庫](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.18/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [Maven中央存放庫](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.19/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 若要在Maven專案中使用UberJar，請參閱 [如何使用UberJar](/help/sites-developing/ht-projects-maven.md) 並在專案POM中加入下列相依性： <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
@@ -315,7 +316,7 @@ The UberJar for [!DNL Experience Manager] 6.5.18.0可在以下網址取得： [M
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.18</version>
+     <version>6.5.19</version>
      <scope>provided</scope>
 </dependency>
 ```
@@ -330,25 +331,22 @@ The UberJar for [!DNL Experience Manager] 6.5.18.0可在以下網址取得： [M
 
 ## 已知問題{#known-issues}
 
-<!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
- -->
-<!-- REMOVED AS PER CQDOC-20022, JANUARY 23, 2023 * If you install [!DNL Experience Manager] 6.5 Service Pack 10 or a previous service pack on [!DNL Experience Manager] 6.5, the runtime copy of your assets custom workflow model (created in `/var/workflow/models/dam`) is deleted.
-To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
-`<designModelPath>/jcr:content.generate.json`. -->
+<!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.-->
 
-* **升級至Service Pack 18 (6.5.18.0)後，頁面發佈在頁面編輯器中無法運作**
+<!-- * **Page publishing not working in Page Editor after upgrading to Service Pack 18 (6.5.18.0)** -->
 
-  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> 將AEM 6.5.0.0—6.5.17.0的例項升級為AEM 6.5.19.0之後，當您按一下 **發佈頁面** 在頁面編輯器中，系統會將您重新導向至不存在的URL。
+<!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0 -->
+<!-- After you upgrade an instance of AEM 6.5.0.0&mdash;6.5.17.0 to AEM 6.5.19.0, when you click **Publish Page** inside the Page Editor, you are redirected to a URL that does not exist.
 
-  若要解決此問題，請執行下列任一項作業：
+  To work around this issue, do one of the following:
 
-   * 移除下列「path」屬性。
+  * Remove the following "path" property.
 
-     `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
+       `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
 
-   * 將正確的URL直接貼到瀏覽器中。
+  * Paste the correct URL directly into the browser.
 
-     `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html`
+       `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html` -->
 
 
 
@@ -458,12 +456,30 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * 安裝AEM Service Pack 6.5.19.0完整安裝程式後，使用JBoss® Turnkey的JEE上EAR部署會失敗。
 若要解決問題，請找到 `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` 檔案和更新 `Adobe_Adobe_JAVA_HOME` 至 `Adobe_JAVA_HOME` 執行configuration manager之前的所有事件。 (CQDOC-20803)
 
+#### 安裝servlet片段(AEM Service Pack 6.5.14.0或更舊版本)
+
+* 如果您要升級至AEM Service Pack 6.5.15.0或更新版本，而您的AEM執行個體在Tomcat 8.5.88上運作，則必須安裝servlet片段 *早於* 請繼續安裝Service Pack 6.5.15.0或更新版本。
+* 您必須為所有應用程式伺服器(在JBoss® EAP 7.4.0上執行的除外)安裝servlet片段。
+
+**安裝servlet片段：**
+
+1. 下載servlet片段，從 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar).
+1. 啟動應用程式伺服器。
+1. 等待記錄檔穩定並檢查套件組合狀態。
+1. 開啟Web控制檯套件組合。 預設URL為 `http://[Server]:[Port]/system/console/bundles`.
+1. 選取 **[!UICONTROL 安裝]** 或 **[!UICONTROL 更新]**.
+1. 選取下載的片段
+   `org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`
+1. 選取 **[!UICONTROL 安裝]** 或 **[!UICONTROL 更新]**.
+1. 等待應用程式伺服器穩定下來。
+1. 停止應用程式伺服器。
+
 #### 最適化表單
 
 * 發佈調適型表單時，其所有相依性（包括原則）都會重新發佈，即使未進行任何修改亦然。 (FORMS-10454)
 * 當使用者選擇在最適化表單中首次設定欄位時，儲存設定的選項未顯示在屬性瀏覽器中。 選擇在同一編輯器中設定最適化表單的其他欄位即可解決問題。
 * 在最適化表單的指南容器中設定重新導向URL時，內嵌簽署會停止運作。 (FORMS-10493)若要解決此問題，請下載並安裝 [6.5.18.0的Hotfix](/help/release-notes/aem-forms-hotfix.md).
-* 所有記錄檔案(DoR)範本都無法發佈。 只有以英文地區設定為基礎的DoR範本及其相關之Forms為基礎的DoR範本才會發佈。 (FORMS-10535)若要解決此問題，請下載並安裝 [6.5.18.0的Hotfix](/help/release-notes/aem-forms-hotfix.md).
+* 所有記錄檔案(DoR)範本都無法發佈。 僅發佈英文地區設定型DoR範本及其相關的Forms型DoR範本。 (FORMS-10535)若要解決此問題，請下載並安裝 [6.5.18.0的Hotfix](/help/release-notes/aem-forms-hotfix.md).
 
 
 #### 互動式通訊
@@ -472,10 +488,10 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 
-下列文字檔案列出中包含的OSGi套件組合和內容套件 [!DNL Experience Manager] 6.5.18.0： <!-- UPDATE FOR EACH NEW RELEASE -->
+下列文字檔案列出中包含的OSGi套件組合和內容套件 [!DNL Experience Manager] 6.5.19.0： <!-- UPDATE FOR EACH NEW RELEASE -->
 
-* [Experience Manager6.5.18.0中包含的OSGi套件組合清單](/help/release-notes/assets/65180_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
-* [Experience Manager6.5.18.0中包含的內容套件清單](/help/release-notes/assets/65180_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager6.5.19.0中包含的OSGi套件組合清單](/help/release-notes/assets/65190_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager6.5.19.0中包含的內容套件清單](/help/release-notes/assets/65190_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ## 受限制的網站{#restricted-sites}
 
