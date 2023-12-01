@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '2287'
+source-wordcount: '2288'
 ht-degree: 0%
 
 ---
@@ -405,7 +405,7 @@ public class AxisFilter implements VariantFilter {
 
 * 該購物車屬於 `CommerceSession:`
 
-   * 此 `CommerceSession` 執行新增/移除/等等。
+   * 此 `CommerceSession` 執行新增或移除等動作。
    * 此 `CommerceSession` 也會在購物車上執行各種計算。&quot;
 
 * 雖然並非直接與購物車相關，但 `CommerceSession` 也必須提供型錄訂價資訊（因為它擁有訂價）

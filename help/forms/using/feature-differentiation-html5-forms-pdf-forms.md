@@ -8,7 +8,7 @@ topic-tags: hTML5_forms
 docset: aem65
 feature: Mobile Forms
 exl-id: 3150f95f-7150-4eee-b5a9-121422dec2a1
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 2%

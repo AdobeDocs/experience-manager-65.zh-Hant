@@ -7,7 +7,7 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '3495'
 ht-degree: 0%
@@ -249,7 +249,7 @@ HTML標示，可在設計封裝內的HTML中插入影像元件(foundation/compon
 * 目標URL，支援第三方和AEM URL
 * 頁面呈現選項（相同視窗、新視窗等）
 
-HTML標籤，以在匯入的zip檔案中包含點進元件。 此處href對應至目標URL，「檢視產品詳細資料」對應至標籤，以此類推。
+HTML標籤，以在匯入的zip檔案中包含點進元件。 此處href對應至目標URL、「檢視產品詳細資料」對應至標籤，以此類推。
 
 ```xml
 <div id="cqcanvas">
@@ -282,7 +282,7 @@ HTML標籤，以在匯入的zip檔案中包含點進元件。 此處href對應�
 * 目標URL，支援第三方和AEM URL
 * 頁面呈現選項（相同視窗、新視窗等）
 
-HTML標籤，在匯入的zip檔案中包含圖形連結元件。 此處href對應至目標url，img src是呈現影像，「title」是當作暫留文字等。
+HTML標籤，在匯入的zip檔案中包含圖形連結元件。 此處href對應至目標url，img src是呈現影像，「title」是當作暫留文字，以此類推。
 
 ```xml
 <div id="cqcanvas">

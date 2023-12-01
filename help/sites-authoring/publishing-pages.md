@@ -2,9 +2,9 @@
 title: 發佈內容頁面
 description: 瞭解如何在Adobe Experience Manager 6.5中發佈內容頁面。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1660'
 ht-degree: 7%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 7%
    * 如果沒有要發佈的引用，則會直接發佈頁面。
    * 如果頁面含有需要發佈的引用，這些引用將會列在 **發佈** 精靈，您可在其中執行以下其中一項作業：
 
-      * 指定要與頁面一起發佈的資產/標籤/等等，然後使用 **發佈** 以完成程式。
+      * 指定要與頁面一起發佈的資產或標籤，然後使用 **發佈** 以完成程式。
 
       * 使用 **取消** 以中止動作。
 

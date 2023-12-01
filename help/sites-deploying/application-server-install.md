@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 0%
@@ -44,7 +44,7 @@ AEM會以單一war檔案的形式進行部署。
 如果部署，預設將會發生下列情況：
 
 * 執行模式為 `author`
-* 執行個體（存放庫、Felix OSGI環境、套件組合等）已安裝在 `${user.dir}/crx-quickstart`位置 `${user.dir}` 是當前工作目錄，系統會呼叫crx-quickstart的此路徑 `sling.home`
+* 執行個體（存放庫、Felix OSGI環境、套件組合等）安裝於中 `${user.dir}/crx-quickstart`位置 `${user.dir}` 是當前工作目錄，系統會呼叫crx-quickstart的此路徑 `sling.home`
 
 * 前後關聯根目錄是war檔案名稱，例如，  `aem-6`
 

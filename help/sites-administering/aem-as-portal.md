@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '6087'
 ht-degree: 0%
@@ -149,7 +149,7 @@ Portlet可使用下列偏好設定進行設定：
 
 為了支援自動部署和組態布建，AEM內容Portlet內建組態支援，可嘗試從提供給Portlet應用程式的類別路徑讀取組態。
 
-啟動時，系統屬性 **com.day.cq.portet.config** 會讀取以偵測目前的環境。 通常，此屬性的值類似於 **開發**， **prod**， **測試** 等等。 如果未設定任何環境，則不會讀取任何設定。
+啟動時，系統屬性 **com.day.cq.portet.config** 會讀取以偵測目前的環境。 通常，此屬性的值類似於 **開發**， **prod**， **測試**、等等。 如果未設定任何環境，則不會讀取任何設定。
 
 如果設定了環境，則會在* *的類別路徑中搜尋設定檔案&#x200B;**com/day/cq/portlet/{env}.config** 位置 **環境** 會取代為環境的實際值。 此檔案應列出此環境的所有組態檔。 系統會根據組態檔的位置來搜尋這些檔案。 例如，如果檔案包含 `my.service.xml,` 從的類別路徑讀取此檔案 `com/day/cq/portlet/my.service.config.` 檔案名稱由服務的持續性ID組成，後面接著 **.config**. 在上一個範例中，持續性ID為 **my.service**. 設定檔案的格式為Apache Sling OSGi安裝程式所使用的格式。
 
@@ -501,7 +501,7 @@ Portlet的工具列基本上有兩個檢視狀態。 每個檢視和相關的按
 
 | 預留位置字串 | 說明 |
 |---|---|
-| {名稱} | 按鈕的名稱，例如**作者、上一步**重新整理等等。 |
+| {名稱} | 按鈕的名稱，例如，**作者，上一步，重新整理**、等等。 |
 | {id} | 按鈕的CSS ID。 |
 | {url} | 按鈕目標的URL。 |
 | {text} | 按鈕的標籤。 |
@@ -762,7 +762,7 @@ AEM Quickstart JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 
    >[!NOTE]
    >
-   >如果將Portlet設定為連線到在/**以外的內容路徑上執行的AEM製作和發佈執行個體**則需要啟用強制 **CQUrlInfo** 在這些AEM例項的Html資料庫管理員設定中（例如，透過Felix Webconsole），或編輯將無法運作，且不會顯示偏好設定對話方塊。
+   >如果將Portlet設定為連線至在不同於的內容路徑上執行的AEM作者和發佈執行個體 **/**，您必須啟用此力 **CQUrlInfo** 在這些AEM例項的Html資料庫管理員設定中（例如，透過Felix Webconsole），或編輯將無法運作，且不會顯示偏好設定對話方塊。
 
 1. 將設定變更儲存在應用程式伺服器中。
 

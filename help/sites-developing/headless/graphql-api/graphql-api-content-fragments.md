@@ -3,9 +3,9 @@ title: 與內容片段搭配使用的 AEM GraphQL API
 description: 瞭解如何在Adobe Experience Manager (AEM)中使用內容片段搭配AEM GraphQL API來進行Headless內容傳送。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 5bfd8216c9d3540ac6d795d434dab5afb7bce309
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '4848'
+source-wordcount: '4847'
 ht-degree: 59%
 
 ---
@@ -554,7 +554,7 @@ query GetAdventureByType($includePrice: Boolean!) {
    * 清單中的第一個欄位會定義主要排序順序
       * 如果主要排序標準的兩個值相等，則使用第二個欄位
       * 如果前兩個條件相等，則會使用第三個欄位，依此類推。
-   * 點狀記號，即field1.subfield.subfield等……
+   * 點狀記號，也就是， `field1.subfield.subfield`、等等。
 * 具有順序方向 (選擇性)
    * ASC (遞增) 或 DESC (遞減)；預設是套用 ASC
    * 方向可依欄位指定；此功能表示您可以依遞增順序排序一個欄位，依遞減順序排序另一個欄位（名稱、名字DESC）
