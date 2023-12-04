@@ -4,9 +4,9 @@ description: 安裝AEM Forms檔案服務，以建立、彙編、散佈、封存P
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 03ed3606e89d87bf2f95b56a1eeb6b7dc4bec13a
 workflow-type: tm+mt
-source-wordcount: '5512'
+source-wordcount: '5521'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ AEM Forms提供了一組OSGi服務，用於完成不同的檔案層級作業，�
 
   簽章服務會存取儲存在信任存放區中的憑證和認證。 如需詳細資訊，請參閱 [簽章服務](/help/forms/using/aem-document-services-programmatically.md).
 
-AEM Forms是功能強大的企業級平台，檔案服務只是AEM Forms的其中一項功能。 如需完整的功能清單，請參閱 [AEM Forms簡介](/help/forms/using/introduction-aem-forms.md).
+AEM Forms是功能強大的企業級平台，而document services只是AEM Forms的其中一項功能。 如需完整的功能清單，請參閱 [AEM Forms簡介](/help/forms/using/introduction-aem-forms.md).
 
 ## 部署拓撲 {#deployment-topology}
 
@@ -315,7 +315,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
    1. Microsoft®建議您在修改登入之前先備份登入。 如需詳細步驟，請參閱 [如何在Windows中備份及還原登入](https://support.microsoft.com/en-us/help/322756).
    1. 開啟Microsoft® Windows登入編輯器。 若要開啟登入編輯程式，請前往[開始] > [執行]，輸入regedit，然後按一下[確定]。
-   1. 導覽至 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`。請確定EnableLUA的值設為0 （零）。
+   1. 瀏覽至 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`. 請確定EnableLUA的值設為0 （零）。
    1. 確認值 **EnableLUA** 設為0 （零）。 如果值不是0，請將值變更為0。 關閉登錄編輯程式。
 
 1. 重新啟動電腦。
@@ -370,7 +370,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
    1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
    2. 選取封裝的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
 1. 點選作業系統適用的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
-1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
+1. 開啟 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  並按一下 **[!UICONTROL 上傳套裝]** 以上傳套件。
 1. 選取封裝，然後按一下 **[!UICONTROL 安裝]**.
 
    您也可以透過 [AEM Forms發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 文章。
@@ -445,12 +445,12 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
   <tr>
    <td>PDFG 清理掃描秒數</td>
    <td>執行轉換後作業所需的秒數。<br /> </td>
-   <td>3600 秒</td>
+   <td>3600秒</td>
   </tr>
   <tr>
    <td>工作逾期秒數</td>
    <td>允許PDF Generator服務執行轉換的持續時間。 請確定作業過期秒數的值大於PDFG清理掃描秒數的值。</td>
-   <td>7200 秒</td>
+   <td>7200秒</td>
   </tr>
  </tbody>
 </table>
@@ -503,7 +503,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
 * 憑證提供的私密金鑰密碼。
 
-* 私人金鑰別名. 您可以執行Java keytool指令來檢視「私密金鑰別名」：
+* 私密金鑰別名。 您可以執行Java keytool指令來檢視「私密金鑰別名」：
   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
 * 金鑰庫檔案密碼。 如果您使用Adobe的Reader延伸憑證，Keystore檔案密碼一律與「私密金鑰」密碼相同。
@@ -591,7 +591,7 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
    >
    * 如果系統整備工具報告Acrobat外掛程式資料夾中不提供pdfgen.api檔案，請從 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目錄到 `[Acrobat_root]\Acrobat\plug_ins` 目錄。
 
-1. 導覽至 `[Path_of_reports_folder]`。開啟SystemReadinessTool.html檔案。 驗證報告並修正上述問題。
+1. 瀏覽至 `[Path_of_reports_folder]`. 開啟SystemReadinessTool.html檔案。 驗證報告並修正上述問題。
 
 ### 設定SRT工具的選項 {#srt-configuration}
 
@@ -668,6 +668,10 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 * 如果安裝OpenOffice時發生問題，請確定 [32位元程式庫](#extrarequirements) 需要OpenOffice安裝。
 
 +++
+
++++Microsoft Office 2019未在Microsoft Windows Server 2019上執行
+
+* 確定您沒有任何與AEM伺服器的使用中遠端連線。
 
 +++HTML至PDF轉換問題
 
@@ -763,7 +767,6 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
          adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;leid>] [—regsuppress=ss] [—eulasuppress] [—locales=受限的xx_XX格式或ALL>語言環境清單] [—provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
          
          ```
-
      
    * 磁碟區序列化套件（使用prov.xml檔案和新的序列重新序列化現有的安裝）：以管理員身分從PRTK安裝資料夾執行下列命令，以序列化並啟動使用者端機器上已部署的套件：
 
@@ -771,7 +774,6 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
          adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
          
          ```
-
      
 * 若為大型安裝，請使用 [AcrobatCustomization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) 以移除舊版Reader和Acrobat。 自訂安裝程式，並將其部署至組織的所有電腦。
 
@@ -791,6 +793,21 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
 若要解決問題，請參閱 [無法在Windows Server上將Word或Excel檔案轉換為PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
 
++++ 無法在Windows Server 2019上將Excel檔案轉換為PDF
+
+當您在Microsoft Windows Server 2019上將Microsoft Excel 2019轉換為PDF時，必須確定以下事項：
+
+* 使用PDF Generator服務時，您的Windows電腦不應與AEM伺服器（Windows RDP工作階段）有任何作用中的遠端連線。
+* 預設印表機必須設定為Adobe PDF。
+
+>[!NOTE]
+* 若是Apple macOS和Ubuntu作業系統，您不需要設定上述設定。
+
++++ 無法將XPS檔案轉換為PDF
+
+若要解決問題， [在Windows上建立功能特定的登入機碼](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
+
++++
 
 ## 後續步驟 {#next-steps}
 
