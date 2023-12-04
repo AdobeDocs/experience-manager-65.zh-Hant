@@ -11,9 +11,9 @@ discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1666'
 ht-degree: 2%
 
 ---
@@ -58,18 +58,18 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 「清單」窗格是列出表單的區域。 Search &amp; Lister元件提供各種組態選項，可用來控制List窗格中表單的顯示。
 
-若要設定「清單」窗格，請點選「搜尋並製表器」元件，然後點選 ![settings_icon](assets/settings_icon.png). 此 **[!UICONTROL 編輯元件]** 對話方塊開啟。
+若要設定「清單」窗格，請選取「搜尋並製表器」元件，然後選取 ![settings_icon](assets/settings_icon.png). 此 **[!UICONTROL 編輯元件]** 對話方塊開啟。
 
 ![編輯模式中的清單窗格](assets/edit-list.png)
 
 編輯模式中的清單窗格
 
-此 **編輯** 對話方塊包含數個提供設定選項的標籤，如下表所述。 點選 **確定** 以儲存組態（完成時）。
+此 **編輯** 對話方塊包含數個提供設定選項的標籤，如下表所述。 選取 **確定** 以儲存組態（完成時）。
 
 <table>
  <tbody>
   <tr>
-   <th>定位字元</th>
+   <th>標籤</th>
    <th>設定</th>
    <th>說明</th>
   </tr>
@@ -177,7 +177,7 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 若要設定日期述詞元件：
 
-1. 點選元件，然後點選 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
+1. 選取元件，然後選取 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
 1. 指定下列專案：
 
    * **型別：** 唯一可用的選項是 **上次修改日期**
@@ -188,7 +188,7 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
    * **結束日期標籤：** 結束日期欄位的標籤或標題
    * **隱藏：** 若要強制預設日期篩選器以列出表單
 
-1. 點選 **確定**
+1. 選取 **確定**
 
 #### 全文檢索述詞 {#full-text-predicate}
 
@@ -196,9 +196,9 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 設定全文檢索述詞元件：
 
-1. 點選元件，然後點選 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
+1. 選取元件，然後選取 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
 1. 在中指定標題 **主要標題** 欄位。
-1. 點選 **確定**
+1. 選取 **確定**
 
 #### 屬性述詞 {#properties-predicate}
 
@@ -206,15 +206,15 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 若要設定「屬性述詞」元件：
 
-1. 點選元件，然後點選 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
+1. 選取元件，然後選取 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
 1. 在「一般」標籤中，指定搜尋標籤。 預設值為 **屬性**
 
-1. 在「選項」標籤中，點選 **新增專案。**
+1. 在「選項」標籤中，選取 **新增專案。**
 1. 從下拉式清單中選取屬性，並在下拉式清單下方的欄位中指定其搜尋標籤。
 1. 重複步驟4以新增更多屬性。 您也可以指定預設篩選值，以根據指定的條件列出表單，並隱藏屬性以供一般使用者搜尋。 選取屬性的「隱藏」核取方塊，並指定預設篩選值。
 例如，如果您想要顯示標題中包含「Travel」的表單，請選取「標題」屬性旁的「隱藏」。 此外，在預設篩選值文字方塊中指定「行進」。
 
-1. 點選 **確定**
+1. 選取 **確定**
 
 #### 標記述詞 {#tags-predicate}
 
@@ -222,10 +222,10 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
 
 若要設定「標籤述詞」元件：
 
-1. 點選元件，然後點選 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
-1. 點選「標籤」欄位旁的向下箭頭按鈕。
+1. 選取元件，然後選取 ![settings_icon](assets/settings_icon.png). 「編輯」對話方塊開啟。
+1. 選取「標籤」欄位旁的向下箭頭按鈕。
 1. 選取適當的標籤
-1. 點選 **確定**
+1. 選取 **確定**
 
 選取的標籤會與選取的核取方塊一起出現在「搜尋」窗格中。 使用者現在可以根據標籤縮小搜尋範圍。
 

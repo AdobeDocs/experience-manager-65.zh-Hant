@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 exl-id: bca4044a-18a9-4b97-92de-eff1e9a840f9
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 1. 在中開啟最適化表單 **[!UICONTROL 編輯]** 模式。
 
-1. 在 **[!UICONTROL 內容]** 標籤，點選 **[!UICONTROL 表單容器]** 然後點選 ![設定](assets/configure-icon.svg) 以檢視最適化表單屬性。
+1. 在 **[!UICONTROL 內容]** 索引標籤，選取 **[!UICONTROL 表單容器]** 並選取 ![設定](assets/configure-icon.svg) 以檢視最適化表單屬性。
 
 1. 在 **[!UICONTROL 提交]** 區段，選取 **[!UICONTROL 傳送電子郵件]** 從 **[!UICONTROL 提交動作]** 下拉式清單。
 

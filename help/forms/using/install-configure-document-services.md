@@ -4,7 +4,7 @@ description: 安裝AEM Forms檔案服務，以建立、彙編、散佈、封存P
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 2ad9cea10bcd152f4d2d874553bdbd3133dbe847
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '5499'
 ht-degree: 1%
@@ -365,11 +365,11 @@ PDF Generator服務提供將HTML檔案轉換為PDF檔案的WebKit、WebCapture�
 AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM Forms Document Services和其他AEM Forms功能。 執行以下步驟來安裝套件：
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
-1. 點一下頁首功能表中的 **[!UICONTROL Adobe Experience Manager]**。
+1. 選取 **[!UICONTROL Adobe Experience Manager]** 在頁首功能表中提供。
 1. 在 **[!UICONTROL 篩選器]** 區段：
    1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
    2. 選取封裝的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
-1. 點選作業系統適用的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
+1. 選取適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，並選取 **[!UICONTROL 下載]**.
 1. 開啟 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  並按一下 **[!UICONTROL 上傳套裝]** 以上傳套件。
 1. 選取封裝，然後按一下 **[!UICONTROL 安裝]**.
 
@@ -491,7 +491,7 @@ HTML至PDF轉換的預設主要路由為Webkit。 若要變更轉換路線：
 
 1. 以管理員身分登入AEM Forms執行個體。
 1. 前往  **[!UICONTROL 工具]** >  **[!UICONTROL 安全性]** >  **[!UICONTROL 信任存放區]**.
-1. 按一下  **[!UICONTROL 建立信任存放區]**. 設定密碼並點選 **[!UICONTROL 儲存]**.
+1. 按一下  **[!UICONTROL 建立信任存放區]**. 設定密碼並選取 **[!UICONTROL 儲存]**.
 
 ### 設定Reader延伸與加密服務的憑證 {#set-up-certificates-for-reader-extension-and-encryption-service}
 

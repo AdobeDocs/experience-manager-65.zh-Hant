@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 docset: aem65
 exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1558'
 ht-degree: 0%
 
 ---
@@ -84,9 +84,9 @@ AEM Forms與Adobe Experience Cloud解決方案Adobe Target整合，跨多個數�
 
 AEM可讓您建立對象，並將其用於A/B測試。 您在AEM中建立的對象可在AEM Forms中使用。 若要在AEM中建立對象，請執行下列動作：
 
-1. 在編寫執行個體中，點選 **Adobe Experience Manager** > **個人化** > **受眾**.
+1. 在編寫執行個體中，選取 **Adobe Experience Manager** > **個人化** > **受眾**.
 
-1. 在「對象」頁面中，點選「 」 **建立對象>建立目標對象**.
+1. 在「對象」頁面中，選取 **建立對象>建立目標對象**.
 1. 在Adobe Target設定對話方塊中，選取Target設定，然後按一下 **確定**.
 1. 在建立新對象頁面中，建立規則。 規則可讓您分類對象。 例如，您想要根據作業系統將對象分類。 您的對象A來自Windows，而對象B來自Linux®。
 

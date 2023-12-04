@@ -9,10 +9,10 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 5%
+source-wordcount: '1139'
+ht-degree: 4%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 5%
 
 ## 透過指令碼使用執行個體管理員  {#using-instance-manager-via-scripts-nbsp}
 
-1. 在編輯模式中，選取面板，然後點選 ![cmppr](assets/cmppr.png). 在側邊欄中的屬性下方，啟用 **讓面板可重複**. 指定 **[!UICONTROL 最大值]** 和 **[!UICONTROL 最小值]** 欄位。
+1. 在編輯模式中，選取面板，然後選取 ![cmppr](assets/cmppr.png). 在側邊欄中的屬性下方，啟用 **讓面板可重複**. 指定 **[!UICONTROL 最大值]** 和 **[!UICONTROL 最小值]** 欄位。
 
    「最大值」欄位會指定面板在頁面上可出現的最大次數。 您可以在「最大計數」欄位中指定–1，讓面板無限次出現。
 
@@ -40,7 +40,7 @@ ht-degree: 5%
 
 1. 面板的父項（即將重複）應包含新增和刪除按鈕，以管理可重複面板的例項。 執行以下步驟，將按鈕插入父項，並在按鈕上啟用指令碼：
 
-   1. 從側邊欄中，將按鈕元件拖放至面板的父面板。 選取元件並點選 ![edit-rules](assets/edit-rules.png). 按鈕的規則會在規則編輯器中開啟。
+   1. 從側邊欄中，將按鈕元件拖放至面板的父面板。 選取元件並選取 ![edit-rules](assets/edit-rules.png). 按鈕的規則會在規則編輯器中開啟。
    1. 在規則編輯器視窗中，按一下 **建立**.
 
       選取 **視覺化編輯器** 在「表單物件與函式」列中。
@@ -100,8 +100,8 @@ ht-degree: 5%
 
 面板有各種版面配置選項。 摺疊式設計的「版面配置」選項具有可重複面板的現成支援。 執行以下步驟，使用「Layout for accordian design」（摺疊式設計的配置）選項重複面板：
 
-1. 在要重複的面板的父項上，點選 ![cmppr](assets/cmppr.png). 您可以在側邊欄中檢視屬性。 在 **版面** 下拉式清單，選取 **摺疊面板**.
-1. 在要重複的面板上，點選 ![cmppr](assets/cmppr.png). 您可以在側邊欄中看到面板屬性。 啟用 **讓面板可重複** 標籤，並指定 **最大值** 和 **最小值** 欄位。
+1. 在要重複的面板的父項上，選取 ![cmppr](assets/cmppr.png). 您可以在側邊欄中檢視屬性。 在 **版面** 下拉式清單，選取 **摺疊面板**.
+1. 在要重複的面板上，選取 ![cmppr](assets/cmppr.png). 您可以在側邊欄中看到面板屬性。 啟用 **讓面板可重複** 標籤，並指定 **最大值** 和 **最小值** 欄位。
 
    現在，您可以使用加號(+)並刪除( ![delete-panel](assets/delete-panel.png))按鈕以新增和移除面板。
 

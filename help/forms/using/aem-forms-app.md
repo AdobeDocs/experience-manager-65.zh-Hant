@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: e18aa345-034c-473b-b4c2-01678bb10616
 exl-id: 171754a2-1ba5-42dc-b6d2-3d730807cc31
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2448'
-ht-degree: 1%
+source-wordcount: '2410'
+ht-degree: 0%
 
 ---
 
@@ -58,9 +58,9 @@ AEM Forms應用程式需要AEM Forms伺服器。 使用者可以轉譯您在AEM 
 1. 在作者執行個體中，選取表單並按一下 **[!UICONTROL 檢視屬性]**.
 
 1. 在屬性頁面中，按一下 **[!UICONTROL 進階]**.
-1. 在「進階」下，啟用選項： **[!UICONTROL 與AEM Forms應用程式同步]** 然後點選 **[!UICONTROL 儲存]**.
+1. 在「進階」下，啟用選項： **[!UICONTROL 與AEM Forms應用程式同步]** 並選取 **[!UICONTROL 儲存]**.
 
-表單發佈時，應用程式會與伺服器同步並擷取表單。 若要同步處理多個表單，請在作者執行個體中，於表單管理員中選取多個表單並點選 **[!UICONTROL 與AEM Forms應用程式同步]**.
+表單發佈時，應用程式會與伺服器同步並擷取表單。 若要同步多個表單，請在作者執行個體中，選取表單管理員中的多個表單，然後選取「 」 **[!UICONTROL 與AEM Forms應用程式同步]**.
 
 ## 行動裝置支援 {#mobile-device-support}
 
@@ -183,12 +183,12 @@ AEM Forms應用程式的原始程式碼可從 `adobe-lc-mobileworkspace-src.zip`
 若要取得AEM Forms應用程式來源，請執行以下步驟：
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
-1. 點一下頁首功能表中的 **[!UICONTROL Adobe Experience Manager]**。
+1. 選取 **[!UICONTROL Adobe Experience Manager]** 在頁首功能表中提供。
 1. 在 **[!UICONTROL 篩選器]** 區段：
    1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
    2. 選取封裝的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
-1. 點選作業系統適用的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
-1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
+1. 選取適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，並選取 **[!UICONTROL 下載]**.
+1. 開啟 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  並按一下 **[!UICONTROL 上傳套裝]** 以上傳套件。
 1. 選取封裝，然後按一下 **[!UICONTROL 安裝]**.
 
 **適用於iOS**：

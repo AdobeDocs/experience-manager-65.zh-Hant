@@ -10,10 +10,10 @@ discoiquuid: 2c971da0-5bd5-40d1-820d-4efc2a44b49d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 5ca850e3-30f0-4384-b615-356dc3c2ad0d
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 8%
+source-wordcount: '740'
+ht-degree: 7%
 
 ---
 
@@ -34,8 +34,8 @@ ht-degree: 8%
 執行以下步驟，在中繼資料中新增元素：
 
 1. 在編輯模式中開啟最適化表單。\
-   若要以編輯模式開啟您的表單，請在表單管理員中，選取您的表單並點選 **開啟**.
-1. 在編輯模式中，選取元件，點選 ![欄位層級](assets/field-level.png) > **最適化表單容器**，然後點選 ![cmppr](assets/cmppr.png).
+   若要以編輯模式開啟表單，請在表單管理員中，選取您的表單並選取 **開啟**.
+1. 在編輯模式中，選取元件，選取 ![欄位層級](assets/field-level.png) > **最適化表單容器**，然後選取 ![cmppr](assets/cmppr.png).
 1. 在側邊欄中，按一下 **中繼資料**.
 1. 在「中繼資料」段落中，按一下 **新增**.
 1. 使用「中繼資料」標籤的「值」欄位來新增指令碼。 您新增的指令碼會從表單上的元素收集資料，並計算饋送至中繼資料的值。

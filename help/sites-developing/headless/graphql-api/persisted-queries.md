@@ -2,10 +2,10 @@
 title: 持續性 GraphQL 查詢
 description: 瞭解如何在Adobe Experience Manager中保留GraphQL查詢，以將效能最佳化。 持久查詢可以由使用者端應用程式使用HTTPGET方法請求，響應可以快取在Dispatcher和CDN層，最終提高使用者端應用程式的效能。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 88%
+source-wordcount: '1401'
+ht-degree: 85%
 
 ---
 
@@ -262,7 +262,7 @@ query getAdventuresByActivity($activity: String!) {
 
 ## 快取持續性查詢 {#caching-persisted-queries}
 
-建議使用持續性查詢，因為可以在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 和內容傳遞網路 (CDN) 層進行快取，最終提升發出要求的用戶端應用程式效能。
+建議使用持續性查詢，因為可以在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) 和內容傳遞網路 (CDN) 層進行快取，最終提升發出要求的用戶端應用程式效能。
 
 依預設，AEM 將根據存留時間 (TTL) 定義使快取失效。這些 TTL 可以依照以下參數定義。這些參數可以透過各種方式存取，根據所使用的機制，名稱會有所不同：
 
@@ -350,7 +350,7 @@ curl -u admin:admin -X POST \
 
 ### 使用 OSGi 設定管理快取 {#cache-osgi-configration}
 
-若要全域管理快取，您可以為[持續性查詢服務設定](/help/sites-deploying/configuring-osgi.md)**進行 OSGi 設定**。否則，此OSGi設定會使用 [發佈執行個體的預設值](#publish-instances).
+若要全域管理快取，您可以 [設定OSGi設定](/help/sites-deploying/configuring-osgi.md) 針對 **持久查詢服務設定**. 否則，此OSGi設定會使用 [發佈執行個體的預設值](#publish-instances).
 
 >[!NOTE]
 >
@@ -401,8 +401,8 @@ URL 可以分解成以下幾個部分：
 1. 在套件定義對話框中，在 **一般**&#x200B;下輸入&#x200B;**名稱**，例如「wknd-persistent-queries」。
 1. 輸入版本號碼，例如「1.0」。
 1. 在&#x200B;**篩選器**&#x200B;下加入新&#x200B;**篩選器**。使用路徑尋找工具選取設定下方的 `persistentQueries` 資料夾。例如，對於 `wknd` 設定完整路徑 `/conf/wknd/settings/graphql/persistentQueries`.
-1. 點選&#x200B;**儲存**&#x200B;以儲存新的套件定義並關閉對話框。
-1. 點選新建立之套件定義中的&#x200B;**建置**&#x200B;按鈕。
+1. 選取 **儲存** 以儲存新的封裝定義並關閉對話方塊。
+1. 選取 **建置** 按鈕來定義新建立的封裝。
 
 建置套件後，您可以：
 

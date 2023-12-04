@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: d39b4b1d921fc93a4871b74469953f2dfc5c470b
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2112'
-ht-degree: 3%
+source-wordcount: '2073'
+ht-degree: 1%
 
 ---
 
@@ -38,7 +38,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 您可以使用「AEM Web主控台組態」來設定關聯式資料庫。 請執行下列動作：
 
 1. 前往AEM網頁主控台，位於 `https://server:host/system/console/configMgr`.
-1. 尋找 **[!UICONTROL Apache Sling連線集區資料來源]** 設定。 點選以在編輯模式中開啟設定。
+1. 尋找 **[!UICONTROL Apache Sling連線集區資料來源]** 設定。 選取以在編輯模式中開啟設定。
 1. 在設定對話方塊中，指定您要設定的資料庫詳細資訊，例如：
 
    * 資料來源的名稱
@@ -52,7 +52,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
    >在設定資料來源之前，請務必先加密機密資訊，例如密碼。 若要加密：
    >
    > 1. 前往https://&#39;[伺服器]：[連線埠]&#39;/system/console/crypto.
-   > 1. 在 **[!UICONTROL 純文字]** 欄位，指定要加密和點選的密碼或任何字串 **[!UICONTROL Protect]**.
+   > 1. 在 **[!UICONTROL 純文字]** 欄位，指定要加密的密碼或任何字串，然後選取 **[!UICONTROL Protect]**.
    >
    >加密的文字會顯示在「受保護的文字」欄位中，您可以在設定中指定該欄位。
 
@@ -62,7 +62,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
    * 選取1 （MySQL和MS SQL）
    * 選取1個(雙Oracle)
 
-1. 點選 **[!UICONTROL 儲存]** 以儲存組態。
+1. 選取 **[!UICONTROL 儲存]** 以儲存組態。
 
    >[!NOTE]
    >
@@ -73,7 +73,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 您可以使用AEM Web Console中的使用者設定檔聯結器組態來設定AEM使用者設定檔。 請執行下列動作：
 
 1. 前往AEM網頁主控台： https://&#39;[伺服器]：[連線埠]&#39;system/console/configMgr.
-1. 尋找 **[!UICONTROL AEM Forms資料整合 — 使用者設定檔聯結器設定]** 並點選以在編輯模式中開啟設定。
+1. 尋找 **[!UICONTROL AEM Forms資料整合 — 使用者設定檔聯結器設定]** 並選取以在編輯模式中開啟設定。
 1. 在「使用者設定檔聯結器組態」對話方塊中，您可以新增、移除或更新使用者設定檔屬性。 指定的屬性可用於表單資料模型。 使用下列格式指定使用者設定檔屬性：
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
@@ -87,7 +87,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
    >
    >此 **&#42;** 在上述範例中，代表 `profile/empLocation/` CRXDE結構的AEM使用者設定檔中的節點。 這表示表單資料模型可以存取 `city` 型別的屬性 `string` 出現在下的任何節點中 `profile/empLocation/` 節點。 不過，包含指定屬性的節點必須遵循一致結構。
 
-1. 點選 **[!UICONTROL 儲存]** 以儲存組態。
+1. 選取 **[!UICONTROL 儲存]** 以儲存組態。
 
 ## 設定雲端服務設定的資料夾 {#cloud-folder}
 
@@ -103,15 +103,15 @@ AEM中的所有雲端服務設定都會整合至 `/conf` AEM存放庫中的資�
    * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 檔案以取得詳細資訊。
 1. 請執行以下操作來啟用雲端設定的全域資料夾，或跳過此步驟來建立和設定雲端服務設定的另一個資料夾。
 
-   1. 在 **[!UICONTROL 設定瀏覽器]**，選取 `global` 資料夾並點選 **[!UICONTROL 屬性]**.
+   1. 在 **[!UICONTROL 設定瀏覽器]**，選取 `global` 資料夾並選取 **[!UICONTROL 屬性]**.
 
    1. 在 **[!UICONTROL 設定屬性]** 對話方塊，啟用 **[!UICONTROL 雲端設定]**.
 
-   1. 點選&#x200B;**[!UICONTROL 儲存並關閉]**&#x200B;以儲存設定並退出對話框。
+   1. 選取 **[!UICONTROL 儲存並關閉]** 以儲存組態並結束對話方塊。
 
-1. 在 **[!UICONTROL 設定瀏覽器]**，點選 **[!UICONTROL 建立]**.
+1. 在 **[!UICONTROL 設定瀏覽器]**，選取 **[!UICONTROL 建立]**.
 1. 在 **[!UICONTROL 建立設定]** 對話方塊，指定資料夾的標題並啟用 **[!UICONTROL 雲端設定]**.
-1. 點選 **[!UICONTROL 建立]** 以建立為雲端服務設定啟用的資料夾。
+1. 選取 **[!UICONTROL 建立]** 以建立為雲端服務設定啟用的資料夾。
 
 ## 設定RESTful Web服務 {#configure-restful-web-services}
 
@@ -119,11 +119,11 @@ RESTful Web服務可使用以下方式描述 [Swagger規格](https://swagger.io/
 
 執行下列操作以設定RESTful服務：
 
-1. 前往&#x200B;**[!UICONTROL 工具 > 雲端服務 > 資料來源]**。點選以選取您要建立雲端設定的資料夾。
+1. 前往 **[!UICONTROL 「工具>Cloud Service>資料來源」]**. 選取以選取您要建立雲端設定的資料夾。
 
    另請參閱 [設定雲端服務設定的資料夾](../../forms/using/configure-data-sources.md#cloud-folder) 以取得為雲端服務設定建立和設定資料夾的資訊。
 
-1. 點選 **[!UICONTROL 建立]** 以開啟 **[!UICONTROL 建立資料來源設定精靈]**. 指定設定的名稱及標題（選擇性），選取 **[!UICONTROL RESTful服務]** 從 **[!UICONTROL 服務型別]** 下拉式清單(可選擇瀏覽並選取設定的縮圖影像，然後點選 **[!UICONTROL 下一個]**.
+1. 選取 **[!UICONTROL 建立]** 以開啟 **[!UICONTROL 建立資料來源設定精靈]**. 指定設定的名稱及標題（選擇性），選取 **[!UICONTROL RESTful服務]** 從 **[!UICONTROL 服務型別]** 下拉式清單(可選擇瀏覽並選取設定的縮圖影像，然後選取 **[!UICONTROL 下一個]**.
 1. 指定RESTful服務的下列詳細資料：
 
    * 從「Swagger來源」下拉式清單中選取「URL」或「檔案」，並相應地指定Swagger URL至Swagger定義檔案或從本機檔案系統上傳Swagger檔案。
@@ -140,7 +140,7 @@ RESTful Web服務可使用以下方式描述 [Swagger規格](https://swagger.io/
 
    如果您選取 **[!UICONTROL 相互驗證]** 由於是驗證型別，請參閱 [RESTful和SOAP Web服務的憑證式相互驗證](#mutual-authentication).
 
-1. 點選 **[!UICONTROL 建立]** 以建立RESTful服務的雲端設定。
+1. 選取 **[!UICONTROL 建立]** 以建立RESTful服務的雲端設定。
 
 ### 表單資料模型HTTP使用者端設定可最佳化效能 {#fdm-http-client-configuration}
 
@@ -149,7 +149,7 @@ RESTful Web服務可使用以下方式描述 [Swagger規格](https://swagger.io/
 
 1. 登入 [!DNL Experience Manager Forms] 以管理員身分編寫執行個體並前往 [!DNL Experience Manager] Web控制檯套件組合。 預設URL為 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 
-1. 點選 **[!UICONTROL REST資料來源的表單資料模型Http使用者端設定]**.
+1. 選取 **[!UICONTROL REST資料來源的表單資料模型Http使用者端設定]**.
 
 1. 在 [!UICONTROL REST資料來源的表單資料模型Http使用者端設定] 對話方塊：
 
@@ -167,15 +167,15 @@ RESTful Web服務可使用以下方式描述 [Swagger規格](https://swagger.io/
 
 以下說明以SOAP為基礎的Web服務： [Web服務描述語言(WSDL)規格](https://www.w3.org/TR/wsdl). 若要在AEM雲端服務中設定以SOAP為基礎的Web服務，請確定您擁有Web服務的WSDL URL，並執行下列動作：
 
-1. 前往&#x200B;**[!UICONTROL 工具 > 雲端服務 > 資料來源]**。點選以選取您要建立雲端設定的資料夾。
+1. 前往 **[!UICONTROL 「工具>Cloud Service>資料來源」]**. 選取以選取您要建立雲端設定的資料夾。
 
    另請參閱 [設定雲端服務設定的資料夾](../../forms/using/configure-data-sources.md#cloud-folder) 以取得為雲端服務設定建立和設定資料夾的資訊。
 
-1. 點選 **[!UICONTROL 建立]** 以開啟 **[!UICONTROL 建立資料來源設定精靈]**. 指定設定的名稱及標題（選擇性），選取 **[!UICONTROL SOAP Web服務]** 從 **[!UICONTROL 服務型別]** 下拉式清單(可選擇瀏覽並選取設定的縮圖影像，然後點選 **[!UICONTROL 下一個]**.
+1. 選取 **[!UICONTROL 建立]** 以開啟 **[!UICONTROL 建立資料來源設定精靈]**. 指定設定的名稱及標題（選擇性），選取 **[!UICONTROL SOAP Web服務]** 從 **[!UICONTROL 服務型別]** 下拉式清單(可選擇瀏覽並選取設定的縮圖影像，然後選取 **[!UICONTROL 下一個]**.
 1. 為SOAP Web服務指定下列專案：
 
    * Web服務的WSDL URL。
-   * 服務端點. 在此欄位中指定值，以覆寫WSDL中提及的服務端點。
+   * 服務端點。 在此欄位中指定值，以覆寫WSDL中提及的服務端點。
    * 選取驗證型別 — 無、OAuth2.0([授權代碼](https://oauth.net/2/grant-types/authorization-code/)， [使用者端認證](https://oauth.net/2/grant-types/client-credentials/))、基本驗證、自訂驗證、X509權杖或相互驗證 — 存取SOAP服務，並相應地提供驗證的詳細資訊。
 
      如果您選取 **[!UICONTROL X509 Token]** 以「驗證」型別，請設定X509憑證。 如需詳細資訊，請參閱 [設定憑證](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
@@ -183,7 +183,7 @@ RESTful Web服務可使用以下方式描述 [Swagger規格](https://swagger.io/
 
      如果您選取 **[!UICONTROL 相互驗證]** 由於是驗證型別，請參閱 [RESTful和SOAP Web服務的憑證式相互驗證](#mutual-authentication).
 
-1. 點選 **[!UICONTROL 建立]** 以建立SOAP Web服務的雲端設定。
+1. 選取 **[!UICONTROL 建立]** 以建立SOAP Web服務的雲端設定。
 
 ## 設定OData服務 {#config-odata}
 
@@ -194,11 +194,11 @@ OData服務由其服務根URL識別。 若要在AEM雲端服務中設定OData服
 >表單資料模型支援 [OData版本4](https://www.odata.org/documentation/).
 >如需設定Microsoft Dynamics 365 （線上或內部部署）的逐步指南，請參閱 [Microsoft Dynamics OData設定](/help/forms/using/ms-dynamics-odata-configuration.md).
 
-1. 前往&#x200B;**[!UICONTROL 工具 > 雲端服務 > 資料來源]**。點選以選取您要建立雲端設定的資料夾。
+1. 前往 **[!UICONTROL 「工具>Cloud Service>資料來源」]**. 選取以選取您要建立雲端設定的資料夾。
 
    另請參閱 [設定雲端服務設定的資料夾](../../forms/using/configure-data-sources.md#cloud-folder) 以取得為雲端服務設定建立和設定資料夾的資訊。
 
-1. 點選 **[!UICONTROL 建立]** 以開啟 **[!UICONTROL 建立資料來源設定精靈]**. 指定設定的名稱及標題（選擇性），選取 **[!UICONTROL OData服務]** 從 **[!UICONTROL 服務型別]** 下拉式清單(可選擇瀏覽並選取設定的縮圖影像，然後點選 **[!UICONTROL 下一個]**.
+1. 選取 **[!UICONTROL 建立]** 以開啟 **[!UICONTROL 建立資料來源設定精靈]**. 指定設定的名稱及標題（選擇性），選取 **[!UICONTROL OData服務]** 從 **[!UICONTROL 服務型別]** 下拉式清單(可選擇瀏覽並選取設定的縮圖影像，然後選取 **[!UICONTROL 下一個]**.
 1. 指定OData服務的下列詳細資料：
 
    * 要設定之OData服務的服務根URL。
@@ -206,9 +206,9 @@ OData服務由其服務根URL識別。 若要在AEM雲端服務中設定OData服
 
    >[!NOTE]
    >
-   >您必須選取OAuth 2.0驗證型別，才能使用OData端點作為服務根來與Microsoft Dynamics服務連線。
+   >選取OAuth 2.0驗證型別，以使用OData端點作為服務根來與Microsoft Dynamics服務連線。
 
-1. 點選 **建立** 以建立OData服務的雲端設定。
+1. 選取 **建立** 以建立OData服務的雲端設定。
 
 ## RESTful和SOAP Web服務的憑證式相互驗證 {#mutual-authentication}
 
@@ -216,11 +216,11 @@ OData服務由其服務根URL識別。 若要在AEM雲端服務中設定OData服
 
 1. 上傳私密金鑰（憑證）至 [!DNL AEM Forms] 伺服器。 若要上傳私密金鑰：
    1. 登入您的 [!DNL AEM Forms] server作為管理員。
-   1. 瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 使用者]**. 選取 `fd-cloudservice` 使用者和點選 **[!UICONTROL 屬性]**.
-   1. 開啟 **[!UICONTROL 金鑰存放區]** 標籤，展開 **[!UICONTROL 從KeyStore檔案新增私人金鑰]** 選項，上傳KeyStore檔案，指定別名、密碼，然後點選 **[!UICONTROL 提交]**. 憑證已上傳。  私密金鑰別名會在憑證中提及，並在建立憑證時設定。
+   1. 瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 使用者]**. 選取 `fd-cloudservice` 使用者並選取 **[!UICONTROL 屬性]**.
+   1. 開啟 **[!UICONTROL 金鑰存放區]** 標籤，展開 **[!UICONTROL 從KeyStore檔案新增私人金鑰]** 選項，上傳KeyStore檔案，指定別名、密碼，然後選取 **[!UICONTROL 提交]**. 憑證已上傳。  私密金鑰別名會在憑證中提及，並在建立憑證時設定。
 1. 將信任憑證上傳至全域信任存放區。 若要上傳憑證：
    1. 瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 信任存放區]**.
-   1. 展開 **[!UICONTROL 從CER檔案新增憑證]** 選項，點選 **[!UICONTROL 選取憑證檔案]**，上傳憑證，然後點選 **[!UICONTROL 提交]**.
+   1. 展開 **[!UICONTROL 從CER檔案新增憑證]** 選項，選取 **[!UICONTROL 選取憑證檔案]**，上傳憑證，然後選取 **[!UICONTROL 提交]**.
 1. 設定 [SOAP](#configure-soap-web-services) 或 [RESTful](#configure-restful-web-services) 以網站服務作為資料來源，然後選取 **[!UICONTROL 相互驗證]** 做為驗證型別。 如果您設定多個自我簽署憑證 `fd-cloudservice` 使用者，指定憑證的金鑰別名。
 
 ## 後續步驟 {#next-steps}

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: 82282e2d-63a1-47e9-b2ec-f50a4bd32bd3
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## 在與AEM Forms工作流程伺服器(JEE上的AEM Forms)同步的表單中新增附件 {#adding-annotations}
 
-AEM Forms應用程式可讓您將影像、手寫筆記和文字筆記附加至與AEM Forms JEE伺服器同步的表單。 如果您的表單是從AEM Forms Workflow伺服器載入，您的附件就會新增至表單。 您可以點選附件按鈕 ![attachments-app](assets/attachments-app.png) 以一起檢視表單中的所有附件。 紅色通知會指定表單中的附件數量。 如果表單中沒有附件，您將看不到紅色通知按鈕。 如果表單中沒有附件，當您點選附件按鈕時 ![附加](assets/attch.png)，您就可以選擇附加像片或塗鴉。
+AEM Forms應用程式可讓您將影像、手寫筆記和文字筆記附加至與AEM Forms JEE伺服器同步的表單。 如果您的表單是從AEM Forms Workflow伺服器載入，您的附件就會新增至表單。 您可以選取附件按鈕 ![attachments-app](assets/attachments-app.png) 以一起檢視表單中的所有附件。 紅色通知會指定表單中的附件數量。 如果表單中沒有附件，您將看不到紅色通知按鈕。 如果表單中沒有附件，當您選取附件按鈕時 ![附加](assets/attch.png)，您就可以選擇附加像片或塗鴉。
 
 您的選項有：
 
@@ -34,7 +34,7 @@ AEM Forms應用程式可讓您將影像、手寫筆記和文字筆記附加至�
 
 ### 「附件」畫面 {#the-attachments-screen}
 
-若要檢視某個位置的所有附件，請點選 ![attachments-app](assets/attachments-app.png). 您可以在此新增、重新命名和刪除附件。
+若要檢視某個位置的所有附件，請選取 ![attachments-app](assets/attachments-app.png). 您可以在此新增、重新命名和刪除附件。
 
 ![一個位置中的所有附件](assets/attachments-screen.png)
 
@@ -44,26 +44,26 @@ AEM Forms應用程式可讓您將影像、手寫筆記和文字筆記附加至�
 
 您可以使用行動裝置的相機或裝置中已儲存的圖片，在表單中附加圖片。
 
-1. 點選附件按鈕 ![附加](assets/attch.png) 在視窗底部。
-1. 點選 **相簿** 或 **相機** 在出現的快顯視窗中。
+1. 選取附件按鈕 ![附加](assets/attch.png) 在視窗底部。
+1. 選取 **相簿** 或 **相機** 在出現的快顯視窗中。
 1. 根據您選取的選項，執行下列動作：
 
    1. 如果您選取 **相機**.
 
-      拍照。 然後點選 **使用** ![use-pic](assets/use-pic.png) 按鈕。
+      拍照。 然後選取 **使用** ![use-pic](assets/use-pic.png) 按鈕。
 
-      或點選 **重拍** ![重拍](assets/retake.png) 按鈕以重拍像片。
+      或選取 **重拍** ![重拍](assets/retake.png) 按鈕以重拍像片。
 
    1. 如果您選取 **相簿**.
 
-      裝置的影像瀏覽器隨即彈出。 在裝置的圖片瀏覽器中，點選您要附加的圖片。
+      裝置的影像瀏覽器隨即彈出。 在裝置的圖片瀏覽器中，選取您要附加的圖片。
 
 ### 新增附註 {#adding-a-note}
 
 此 **附註** 選項可讓您在表單中新增手繪文字和文字附件。
 
-1. 點選附件按鈕 ![附加](assets/attch.png) 在視窗底部。
-1. 點選 **附註** 在出現的快顯視窗中。
+1. 選取附件按鈕 ![附加](assets/attch.png) 在視窗底部。
+1. 選取 **附註** 在出現的快顯視窗中。
 1. 在啟動的Notes使用者介面中，擷取手繪文字。
 
    ![塗鴉介面](assets/scribble-ui.png)

@@ -8,9 +8,9 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '718'
 ht-degree: 9%
 
 ---
@@ -37,9 +37,9 @@ ht-degree: 9%
 * **C：** 按一下 **地理位置** 圖示以連同簽名一起新增地理位置。
 * **D：** 按一下 **鍵盤** 圖示在畫布上輸入您的名稱。
 
-點選「完成」後![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示在手寫簽名視窗中，您無法編輯簽名。 如果想要編輯簽名，則必須忽略目前的簽名，並使用上面的「繪圖筆刷/鍵盤」選項重新簽名。
+一旦您選取「完成」![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示在手寫簽名視窗中，您無法編輯簽名。 如果想要編輯簽名，則必須忽略目前的簽名，並使用上面的「繪圖筆刷/鍵盤」選項重新簽名。
 
-您可以點選 **設定** ![設定](assets/configure.png) 圖示來設定手寫簽名畫布的外觀比例。
+您可以選取 **設定** ![設定](assets/configure.png) 圖示來設定手寫簽名畫布的外觀比例。
 * 當「草寫簽名」畫布的外觀比例小於1時，地理位置資訊會新增至「草寫簽名」畫布底部。
 
 * 當Scribble Signature畫布的外觀比例大於1時，地理位置資訊會新增到Scribble Signature畫布的右側。
@@ -56,7 +56,7 @@ ht-degree: 9%
 
 1. 建立已啟用記錄檔案選項或表單範本式的最適化表單。 如需逐步資訊，請參閱 [建立最適化表單](../../forms/using/creating-adaptive-form.md).
 1. 拖放 **草寫簽名** 元件從元件瀏覽器轉換為最適化表單。
-1. 點選 **設定** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示草寫簽名元件的屬性。 設定手寫簽名元件的屬性。
+1. 選取 **設定** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示草寫簽名元件的屬性。 設定手寫簽名元件的屬性。
 1. 將簽章步驟元件從元件瀏覽器拖放至調適型表單。
 
    >[!NOTE]
@@ -64,14 +64,14 @@ ht-degree: 9%
    >簽章步驟元件會佔據表單可用的完整寬度。 建議在包含簽章步驟元件的區段上不要有任何其他元件。
    >
 
-1. 在「內容」瀏覽器中，點選 **表單容器**，然後點選 **設定** ![設定](/help/forms/using/assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示最適化表單容器屬性。 瀏覽至 **最適化表單容器** > **電子簽章** 並取消選取 **啟用Adobe Sign** 選項。 點選「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。
+1. 在內容瀏覽器中，選取 **表單容器**，然後選取 **設定** ![設定](/help/forms/using/assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示最適化表單容器屬性。 瀏覽至 **最適化表單容器** > **電子簽章** 並取消選取 **啟用Adobe Sign** 選項。 選取完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。
 
    >[!NOTE]
    >
    >將簽名步驟元件新增至最適化表單時，會自動選取「啟用Adobe Sign」選項。
    >
 
-1. 點選 **設定** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示簽章步驟屬性。 設定下列屬性：
+1. 選取 **設定** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示簽章步驟屬性。 設定下列屬性：
 
    * **元素名稱**：指定元件的名稱。
 
@@ -81,7 +81,7 @@ ht-degree: 9%
 
    * **CSS類別**：指定使用者端程式庫的CSS類別（如有）。 使用 [主題](../../forms/using/themes.md) 和 [內嵌樣式](../../forms/using/inline-style-adaptive-forms.md) 而非CSS類別。
 
-   點選「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。 簽章設定成功。
+   選取完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。 簽章設定成功。
 
    現在，當您填寫表單時，會顯示最適化表單的PDF版本，並提供簽署PDF檔案的選項。 如需詳細資訊，請參閱 [使用草寫簽名簽署調適型表單](../../forms/using/signing-forms-using-scribble.md#sign-an-adaptive-form-using-scribble-signature).
 

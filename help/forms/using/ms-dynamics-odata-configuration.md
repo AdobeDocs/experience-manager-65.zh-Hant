@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 90cc9452-e107-4e57-80a3-f44f0bde132e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1207'
 ht-degree: 1%
 
 ---
@@ -117,8 +117,8 @@ Microsoft Dynamics使用宣告式驗證，為外部使用者提供對Microsoft D
 
 此 **MS Dynamics ODataCloud Service（OData服務）** 設定隨附預設的OData設定。 若要將其設定為連線至您的Microsoft Dynamics服務，請執行下列動作。
 
-1. 瀏覽至 **[!UICONTROL 「工具>Cloud Service>資料來源」]**，然後點選 `global` 設定資料夾。
-1. 選取 **MS Dynamics ODataCloud Service（OData服務）** 設定並點選 **[!UICONTROL 屬性]**. 雲端服務設定屬性對話方塊隨即開啟。
+1. 瀏覽至 **[!UICONTROL 「工具>Cloud Service>資料來源」]**，然後選取 `global` 設定資料夾。
+1. 選取 **MS Dynamics ODataCloud Service（OData服務）** 設定並選取 **[!UICONTROL 屬性]**. 雲端服務設定屬性對話方塊隨即開啟。
 
    在 **驗證設定** 標籤：
 

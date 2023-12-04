@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Interactive Communication
 exl-id: bef1f05e-aea2-433e-b3d5-0b7ad8163fa7
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1819'
-ht-degree: 0%
+source-wordcount: '1790'
+ht-degree: 1%
 
 ---
 
@@ -57,7 +57,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 
 若要為列印管道建立XDP範本，請執行下列動作：
 
-1. 開啟Forms Designer，選取 **檔案** > **新增** > **使用空白表單，** 點選 **下一個**，然後點選 **完成** 開啟表單以建立範本。
+1. 開啟Forms Designer，選取 **檔案** > **新增** > **使用空白表單，** 選取 **下一個**，然後選取 **完成** 開啟表單以建立範本。
 
    確保 **物件庫** 和 **物件** 選項是從 **視窗** 功能表。
 
@@ -108,22 +108,22 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
    1. 導覽至可儲存檔案的位置，並將名稱指定為 **create_first_ic_print_template**.
    1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
 
-   1. 點選 **儲存**.
+   1. 選取&#x200B;**儲存**。
 
 ### 將XDP範本上傳至AEM Forms伺服器 {#upload-xdp-template-to-the-aem-forms-server}
 
 使用Forms Designer建立XDP範本後，您必須將其上傳到AEM Forms伺服器，以便該範本可在建立互動式通訊時使用。
 
 1. 選取 **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 點選 **建立** > **檔案上傳**.
+1. 選取 **建立** > **檔案上傳**.
 
-   導覽並選取 **create_first_ic_print_template** 範本(XDP)和點選 **開啟** 將XDP範本匯入AEM Forms伺服器。
+   導覽並選取 **create_first_ic_print_template** 範本(XDP)並選取 **開啟** 將XDP範本匯入AEM Forms伺服器。
 
 ### 為佈局片段建立XDP範本 {#create-xdp-template-for-layout-fragments}
 
 若要為互動式通訊的列印管道建立佈局片段，請使用Forms Designer建立XDP並將其上傳至AEM Forms伺服器。
 
-1. 開啟Forms Designer，選取 **檔案** > **新增** > **使用空白表單，** 點選 **下一個**，然後點選 **完成** 開啟表單以建立範本。
+1. 開啟Forms Designer，選取 **檔案** > **新增** > **使用空白表單，** 選取 **下一個**，然後選取 **完成** 開啟表單以建立範本。
 
    確保 **物件庫** 和 **物件** 選項是從 **視窗** 功能表。
 
@@ -135,7 +135,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
    1. 選取 **在表格中包含標題列** 核取方塊。
    1. 標籤 **確定**.
 
-1. 點選 **+** 在左窗格旁的 **表格** 1並按一下右鍵 **儲存格1** 並選取 **重新命名物件** 至 **日期**.
+1. 選取 **+** 在左窗格旁的 **表格** 1並按一下右鍵 **儲存格1** 並選取 **重新命名物件** 至 **日期**.
 
    同樣地，重新命名 **儲存格2**， **儲存格3**， **儲存格4**、和 **儲存格5** 至 **時間**， **數字**， **持續時間**、和 **費用** （分別）。
 
@@ -158,7 +158,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
    1. 導覽至可儲存檔案的位置，並將名稱指定為 **table_lf**.
    1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
 
-   1. 點選 **儲存**.
+   1. 選取&#x200B;**儲存**。
 
    使用Forms Designer為佈局片段建立XDP範本後，您必須 [上傳](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server) 並傳送至AEM Forms伺服器，以便建立佈局片段時可以使用範本。
 
@@ -177,10 +177,10 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 
 若要為可編輯的範本建立資料夾，請執行下列動作：
 
-1. 點選 **工具** ![槌子圖示](assets/hammer-icon.svg) > **設定瀏覽器**.
+1. 選取 **工具** ![槌子圖示](assets/hammer-icon.svg) > **設定瀏覽器**.
    * 請參閱 [設定瀏覽器](/help/sites-administering/configurations.md) 檔案以取得詳細資訊。
-1. 在「設定瀏覽器」頁面中，點選 **建立**.
-1. 在 **建立設定** 對話方塊，指定 **Create_First_IC_templates** 作為資料夾的標題，請核取 **可編輯的範本**，然後點選 **建立**.
+1. 在「組態瀏覽器」頁面中，選取 **建立**.
+1. 在 **建立設定** 對話方塊，指定 **Create_First_IC_templates** 作為資料夾的標題，請核取 **可編輯的範本**，並選取 **建立**.
 
    ![設定網頁範本](assets/create_first_ic_web_template_new.png)
 
@@ -205,31 +205,31 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 若要在中建立Web channel範本 **Create_First_IC_templates** 資料夾，請執行下列步驟：
 
 1. 選取「 」，導覽至適當的範本資料夾 **工具** > **範本** > **Create_First_IC_templates** 資料夾。
-1. 點選「**建立**」。
-1. 在 **挑選範本型別** 設定精靈，選取 **互動式通訊 — Web Channel** 然後點選 **下一個**.
-1. 在 **範本詳細資訊** 設定精靈，指定 **Create_First_IC_Web_Template** 作為範本標題。 指定選擇性說明並點選 **建立**.
+1. 選擇 **建立**。
+1. 在 **挑選範本型別** 設定精靈，選取 **互動式通訊 — Web Channel** 並選取 **下一個**.
+1. 在 **範本詳細資訊** 設定精靈，指定 **Create_First_IC_Web_Template** 作為範本標題。 指定選擇性說明，然後選取 **建立**.
 
    確認訊息，指明 **Create_First_IC_Web_Template** 隨即顯示。
 
-1. 點選 **開啟** 以在範本編輯器中開啟範本。
+1. 選取 **開啟** 以在範本編輯器中開啟範本。
 1. 選取 **初始內容** 從「 」旁的下拉式清單中 **預覽** 選項。
 
    ![範本編輯器](assets/template_editor_initial_content_new.png)
 
-1. 點選 **根面板** 然後點選 **+** 以檢視可新增至範本的元件清單。
+1. 選取 **根面板** 然後選取 **+** 以檢視可新增至範本的元件清單。
 1. 若要在上方新增面板 **根面板**，選取 **面板** 從清單中。
 1. 選取 **內容** 標籤。 在步驟8中新增的新面板會顯示在 **根面板** 在內容樹狀結構中。
 
    ![內容樹](assets/content_tree_root_panel_new.png)
 
-1. 選取面板並點選 ![configure_icon](assets/configure_icon.png) （設定）。
+1. 選取面板並選取 ![configure_icon](assets/configure_icon.png) （設定）。
 1. 在「屬性」窗格中：
 
    1. 指定 **帳單詳細資訊** 在「名稱」欄位中。
    1. 指定 **帳單詳細資訊** 在「標題」欄位中。
    1. 選取 **1** 從 **欄數** 下拉式清單。
 
-   1. 若要儲存屬性，請點選 ![儲存](/help/forms/using/assets/done_icon.png).
+   1. 若要儲存屬性，請選取 ![儲存](/help/forms/using/assets/done_icon.png).
 
    面板名稱會更新為 **帳單詳細資訊** 在內容樹狀結構中。
 
@@ -254,9 +254,9 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 
 若要啟用Web範本，請執行下列動作：
 
-1. 點選 **工具** ![槌子圖示](assets/hammer-icon.svg) > **範本**.
-1. 導覽至 **Create_First_IC_Web_Template** 範本，選取它，然後點選 **啟用**.
-1. 點選 **啟用** 再次確認。
+1. 選取 **工具** ![槌子圖示](assets/hammer-icon.svg) > **範本**.
+1. 導覽至 **Create_First_IC_Web_Template** 範本，選取它，然後選取 **啟用**.
+1. 選取 **啟用** 再次確認。
 
    範本已啟用，其狀態會顯示為「已啟用」。 建立Web channel的互動式通訊時，您可以使用此範本。
 
@@ -265,7 +265,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 根據使用案例，您必須包含 **立即付款** 和 **訂閱** 互動式通訊中的按鈕（最適化表單元件）。 若要在互動式通訊中啟用這些按鈕，請執行下列動作：
 
 1. 選取 **結構** 從「 」旁的下拉式清單中 **預覽** 選項。
-1. 選取 **檔案容器** 使用內容樹並點選根面板 **原則** 以選取可在互動式通訊中使用的元件。
+1. 選取 **檔案容器** 使用內容樹並選取的根面板 **原則** 以選取可在互動式通訊中使用的元件。
 
    ![設定原則](assets/structure_configure_policy_new.png)
 
@@ -273,4 +273,4 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 
    ![允許的元件](assets/allowed_components_af_new.png)
 
-1. 若要儲存屬性，請點選 ![儲存](assets/done_icon.png).
+1. 若要儲存屬性，請選取 ![儲存](assets/done_icon.png).

@@ -3,9 +3,9 @@ title: 「教學課程：建立最適化表單」
 description: 瞭解如何建立、佈局和預覽最適化表單。 另外，瞭解如何設定提交動作。
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1313'
 ht-degree: 8%
 
 ---
@@ -35,14 +35,14 @@ ht-degree: 8%
 ## 步驟1：建立最適化表單 {#step-create-the-adaptive-form}
 
 1. 登入AEM作者執行個體並導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**. 預設URL為 [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
-1. 點選 **[!UICONTROL 建立]** 並選取 **[!UICONTROL 最適化表單]**. 隨即顯示選取範本的選項。 點選 **[!UICONTROL 空白]** 範本以選取並點選 **[!UICONTROL 下一個]**.
+1. 選取 **[!UICONTROL 建立]** 並選取 **[!UICONTROL 最適化表單]**. 隨即顯示選取範本的選項。 選取 **[!UICONTROL 空白]** 範本以選取並選取 **[!UICONTROL 下一個]**.
 
 1. 選項至 **[!UICONTROL 新增屬性]** 隨即顯示。 此 **[!UICONTROL 標題]** 和 **[!UICONTROL 名稱]** 欄位為必填欄位：
 
    * **標題：** 指定 `Add new or update shipping address` 在 **[!UICONTROL 標題]** 欄位。 標題欄位指定表單的顯示名稱。 標題可協助您識別AEM中的表單 [!DNL Forms] 使用者介面。
    * **名稱：** 指定 `shipping-address-add-update-form` 在 **[!UICONTROL 名稱]** 欄位。 「名稱」欄位指定表單的名稱。 存放庫中會建立具有指定名稱的節點。您開始輸入標題時，就會自動產生名稱欄位的值。您可以變更建議的值。名稱欄位只能包含字母數字字元、連字號和底線。所有無效的輸入都會以連字號取代。
 
-1. 點選「**[!UICONTROL 建立]**」。系統隨即建立最適化表單，並顯示對話方塊以開啟表單進行編輯。 點選 **[!UICONTROL 開啟]** 以在新標籤中開啟新建立的表單。 隨即開啟表單進行編輯。 也會顯示側邊欄，以便您根據需求自訂新建立的表單。
+1. 選擇 **[!UICONTROL 建立]**。系統隨即建立最適化表單，並顯示對話方塊以開啟表單進行編輯。 選取 **[!UICONTROL 開啟]** 以在新標籤中開啟新建立的表單。 隨即開啟表單進行編輯。 也會顯示側邊欄，以便您根據需求自訂新建立的表單。
 
    如需關於最適化表單製作介面和可用元件的資訊，請參閱 [製作調適型表單簡介](/help/forms/using/creating-adaptive-form.md).
 
@@ -52,12 +52,12 @@ ht-degree: 8%
 
 AEM [!DNL Forms] 提供許多元件，以便在最適化表單上顯示資訊。 頁首與頁尾元件有助於提供一致的外觀與風格。 頁首通常包含公司的標誌、表單標題和摘要。 頁尾通常包含版權資訊和其他頁面的連結。
 
-1. 點選 ![切換側面板](assets/toggle-side-panel.png) > ![treeexpandall](assets/treeexpandall.png). 元件瀏覽器隨即開啟。 拖曳 **[!UICONTROL 頁首]** 元件從元件瀏覽器轉換為最適化表單。
-1. 點選 **[!UICONTROL 標誌]**. 工具列隨即顯示。 點選 ![aem_6_3_edit](assets/aem_6_3_edit.png) 在工具列上，輸入 **We.Retail**，然後點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 選取 ![切換側面板](assets/toggle-side-panel.png) > ![treeexpandall](assets/treeexpandall.png). 元件瀏覽器隨即開啟。 拖曳 **[!UICONTROL 頁首]** 元件從元件瀏覽器轉換為最適化表單。
+1. 選取 **[!UICONTROL 標誌]**. 工具列隨即顯示。 選取 ![aem_6_3_edit](assets/aem_6_3_edit.png) 在工具列上，輸入 **We.Retail**，並選取 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
-1. 點選「影像」。 工具列隨即顯示。 點選 ![cmppr](assets/cmppr.png). 屬性瀏覽器會在畫面左側開啟。 **[!UICONTROL 瀏覽]** 並上傳標誌影像。 點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png). 影像會顯示在頁首上。
+1. 選取影像。 工具列隨即顯示。 選取 ![cmppr](assets/cmppr.png). 屬性瀏覽器會在畫面左側開啟。 **[!UICONTROL 瀏覽]** 並上傳標誌影像。 選取 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png). 影像會顯示在頁首上。
 
-   如果沒有圖志，您可以點選[取得檔案]下載本文中使用的圖志。
+   如果您沒有圖志，可以選取[取得檔案]來下載本文中使用的圖志。
 
 [取得檔案](assets/logo.png)
 
@@ -69,7 +69,7 @@ AEM [!DNL Forms] 提供許多元件，以便在最適化表單上顯示資訊。
 
 元件為最適化表單的建置組塊。 AEM [!DNL Forms] 提供許多元件，好讓您以最適化表單擷取和顯示資訊。 您可以從以下位置拖曳元件： ![treeexpandall](assets/treeexpandall.png) 至表單。 若要瞭解可用的元件和對應的功能，請參閱 [製作調適型表單簡介](/help/forms/using/introduction-forms-authoring.md).
 
-1. 拖曳 **[!UICONTROL 數值方塊元件]** 至最適化表單。 將其放在頁尾元件之前。 開啟元件的屬性，變更 **[!UICONTROL 標題]** 至的元件 **`Customer ID`**，變更 **[!UICONTROL 元素名稱]** 至 **`customer_ID`**，啟用 **[!UICONTROL 必填欄位]** 選項，啟用 **[!UICONTROL 使用HTML5數字輸入型別]** 選項，然後點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 拖曳 **[!UICONTROL 數值方塊元件]** 至最適化表單。 將其放在頁尾元件之前。 開啟元件的屬性，變更 **[!UICONTROL 標題]** 至的元件 **`Customer ID`**，變更 **[!UICONTROL 元素名稱]** 至 **`customer_ID`**，啟用 **[!UICONTROL 必填欄位]** 選項，啟用 **[!UICONTROL 使用HTML5數字輸入型別]** 選項，然後選取 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 1. 將三個Text Box元件拖曳至最適化表單。 將這些專案放在頁尾元件之前。 為這些文字方塊設定下列屬性。：
 
    <table> 
@@ -107,7 +107,7 @@ AEM [!DNL Forms] 提供許多元件，以便在最適化表單上顯示資訊。
     </tbody> 
    </table>
 
-1. 拖曳 **[!UICONTROL 數值方塊]** 頁尾元件之前的元件。 開啟元件的屬性，設定下表列出的值，點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 拖曳 **[!UICONTROL 數值方塊]** 頁尾元件之前的元件。 開啟元件的屬性，設定下表列出的值，選取 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    | 屬性 | 值 |
    |---|---|
@@ -117,7 +117,7 @@ AEM [!DNL Forms] 提供許多元件，以便在最適化表單上顯示資訊。
    | 必填欄位 | 已啟用 |
    | 顯示圖樣型別 | 無模式 |
 
-1. 拖曳 **[!UICONTROL 電子郵件]** 頁尾元件之前的元件。 開啟元件的屬性，設定下表所列之值，然後點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 拖曳 **[!UICONTROL 電子郵件]** 頁尾元件之前的元件。 開啟元件的屬性，設定下表列出的值，然後選取 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    | 屬性 | 值 |
    |---|---|
@@ -125,7 +125,7 @@ AEM [!DNL Forms] 提供許多元件，以便在最適化表單上顯示資訊。
    | 元素名稱 | customer_Email |
    | 必填欄位 | 已啟用 |
 
-1. 拖曳 **[!UICONTROL 檔案附件]** 頁尾元件之前的元件。 開啟元件的屬性，設定下表所列之值，然後點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 拖曳 **[!UICONTROL 檔案附件]** 頁尾元件之前的元件。 開啟元件的屬性，設定下表列出的值，然後選取 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    <table> 
     <tbody> 
@@ -148,7 +148,7 @@ AEM [!DNL Forms] 提供許多元件，以便在最適化表單上顯示資訊。
     </tbody> 
    </table>
 
-1. 拖曳 **[!UICONTROL 提交按鈕]** 元件至最適化表單。 將其放在頁尾元件之前。 開啟元件的屬性，將元素名稱變更為 `address_addition_update_submit`，點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png). 表單版面配置完整，表單如下所示：
+1. 拖曳 **[!UICONTROL 提交按鈕]** 元件至最適化表單。 將其放在頁尾元件之前。 開啟元件的屬性，將元素名稱變更為 `address_addition_update_submit`，選取 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png). 表單版面配置完整，表單如下所示：
 
    ![adaptive-form-with-all-the-components](assets/adaptive-form-with-all-the-components.png)
 
@@ -161,8 +161,8 @@ AEM [!DNL Forms] 提供許多元件，以便在最適化表單上顯示資訊。
 1. 設定電子郵件伺服器。 如需詳細資訊，請參閱 [設定電子郵件通知](/help/sites-administering/notification.md).
 
 
-1. 點選 **[!UICONTROL 表單容器]** 在「內容」瀏覽器中，點選 ![cmppr](assets/cmppr.png). 屬性瀏覽器會在左側開啟。
-1. 前往 **[!UICONTROL 提交]** >  **[!UICONTROL 提交動作]**. 選取 **[!UICONTROL 傳送電子郵件]**. 指定下列值並點選 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 選取 **[!UICONTROL 表單容器]** 在內容瀏覽器中並選取 ![cmppr](assets/cmppr.png). 屬性瀏覽器會在左側開啟。
+1. 前往 **[!UICONTROL 提交]** >  **[!UICONTROL 提交動作]**. 選取 **[!UICONTROL 傳送電子郵件]**. 指定下列值並選取 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
    | 屬性 | 值 |
    |--- |--- |
@@ -180,8 +180,8 @@ AEM [!DNL Forms] 提供許多元件，以便在最適化表單上顯示資訊。
 
 調適型表單也提供模擬各種裝置表單體驗的選項。 例如，iPhone、iPad和案頭。 您可以使用兩者 **[!UICONTROL 預覽]** 和 **[!UICONTROL 模擬器]** ![尺標](assets/ruler.png) 多個選項搭配使用，為不同熒幕大小的裝置預覽表單。
 
-1. 點選 **[!UICONTROL 預覽]** 表單編輯器右側的選項。 表單會在預覽模式中開啟。 如果您使用教學課程中提到的名稱，則表單的預覽URL會是 [http://localhost:4502/content/dam/formsanddocuments/shipping-address-add-update-form/jcr:content?wcmmode=disabled](http://localhost:4502/content/dam/formsanddocuments/shipping-address-addition-updation-form/jcr:content?wcmmode=disabled)
+1. 選取 **[!UICONTROL 預覽]** 表單編輯器右側的選項。 表單會在預覽模式中開啟。 如果您使用教學課程中提到的名稱，則表單的預覽URL會是 [http://localhost:4502/content/dam/formsanddocuments/shipping-address-add-update-form/jcr:content?wcmmode=disabled](http://localhost:4502/content/dam/formsanddocuments/shipping-address-addition-updation-form/jcr:content?wcmmode=disabled)
 1. 使用 ![尺標](assets/ruler.png) 以檢視表單在各種裝置上的外觀。
-1. 填寫表單的欄位並點選 **[!UICONTROL 提交]**. 表單已提交，您被重新導向至預設值 **感謝您** 頁面。 您也可以指定自訂感謝頁面。 如需詳細資訊，請參閱 [設定重新導向頁面](/help/forms/using/configuring-redirect-page.md).
+1. 填寫表單欄位並選取 **[!UICONTROL 提交]**. 表單已提交，您被重新導向至預設值 **感謝您** 頁面。 您也可以指定自訂感謝頁面。 如需詳細資訊，請參閱 [設定重新導向頁面](/help/forms/using/configuring-redirect-page.md).
 
 新增位址的最適化表單已就緒。 如果您使用本教學課程中提到的名稱，並在執行AEM Forms伺服器的電腦上存取表單，則表單位於 [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html).

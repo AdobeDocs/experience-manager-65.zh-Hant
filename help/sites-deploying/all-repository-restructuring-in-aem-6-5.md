@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2694'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 2%
 
 ## 6.5版升級 {#with-upgrade}
 
-### ContextHub 組態 {#contexthub-6.5}
+### ContextHub設定 {#contexthub-6.5}
 
 從AEM 6.4開始，沒有預設的ContextHub設定。 因此，在網站的根層級上 `cq:contextHubPathproperty` 應設定以指出應使用哪個設定。
 
@@ -90,7 +90,7 @@ ht-degree: 2%
         </ul> </li>
       </ol> </li>
      <li>啟用「工作流程模型編輯器」中的「編輯」模式，將工作流程模型定義複製到/conf/global/workflow/models。</li>
-     <li>點選「同步」按鈕，將變更同步至/var/workflow/models下的「執行階段工作流程模型」。</li>
+     <li>選取「同步」按鈕，將變更同步至/var/workflow/models下的「執行階段工作流程模型」。</li>
      <li>匯出兩個工作流程模型(/conf/global/workflow/models/&lt;workflow-model&gt;)和執行階段工作流程模型(/var/workflow/models/&lt;workflow-model&gt;)並整合至AEM專案。
       <ol>
        <li>例如，匯出：

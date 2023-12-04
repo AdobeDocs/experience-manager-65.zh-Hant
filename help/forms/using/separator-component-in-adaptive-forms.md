@@ -6,10 +6,10 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 11cbf865-c8e2-4833-b0b8-a3cb5e42f5cd
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 12%
+source-wordcount: '361'
+ht-degree: 10%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 12%
 
 若要指定分隔符號元件的屬性：
 
-1. 選取分隔符號元件並點選 ![cmppr](assets/cmppr.png). 屬性會在側邊欄中開啟。
+1. 選取分隔符號元件並選取 ![cmppr](assets/cmppr.png). 屬性會在側邊欄中開啟。
 1. 按一下「內嵌CSS屬性」區段中的索引標籤，以便指定CSS屬性。 例如： a.在「欄位」標籤中，按一下 **新增專案**. 會新增包含兩個欄位的列。
 1. 在左側的第一個欄位中，指定您要套用的CSS3屬性。 例如， **邊框**. 您也可以按一下向下箭頭按鈕來選取屬性。 下拉式清單並非詳盡無遺，您可以在此欄位中指定任何支援的CSS3屬性名稱。
 1. 在相鄰的欄位中，指定指定CSS3屬性的有效值。 例如， **3-px實心黑**.

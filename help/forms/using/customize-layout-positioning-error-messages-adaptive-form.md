@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 5cb3ee55-f411-4692-84f7-89bf6ade729d
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%
@@ -30,8 +30,8 @@ ht-degree: 0%
 
 ### 自訂單一欄位的版面 {#customize-layout-of-a-single-field}
 
-1. 在中開啟表單 **樣式** 模式。 若要以樣式模式開啟表單，請在頁面工具列中點選 ![畫佈下拉式清單](assets/canvas-drop-down.png) > **樣式**.
-1. 在側邊欄中的下方 **表單物件**，選取欄位並點選編輯按鈕 ![編輯按鈕](assets/edit-button.png).
+1. 在中開啟表單 **樣式** 模式。 若要以樣式模式開啟表單，請在頁面工具列中選取 ![畫佈下拉式清單](assets/canvas-drop-down.png) > **樣式**.
+1. 在側邊欄中的下方 **表單物件**，選取欄位並選取編輯按鈕 ![編輯按鈕](assets/edit-button.png).
 1. 選取您要自訂的欄位狀態，並指定該狀態的樣式。
 
    ![指定欄位的內嵌樣式](assets/edit-error-state.png)
@@ -43,12 +43,12 @@ ht-degree: 0%
 使用主題編輯器建立主題，以自訂表單中所有欄位的版面。 建立主題後，請執行下列步驟以將其套用至表單：
 
 1. 在編輯模式中開啟您的表單。
-1. 在編輯模式中，選取元件，然後點選 ![欄位層級](assets/field-level.png) > **最適化表單容器**，然後點選 ![cmppr](assets/cmppr.png).
+1. 在編輯模式中，選取元件，然後選取 ![欄位層級](assets/field-level.png) > **最適化表單容器**，然後選取 ![cmppr](assets/cmppr.png).
 1. 在側邊欄中的「最適化表單主題」下方，選取您使用「主題編輯器」建立的主題。
 
 ## 建立自訂欄位佈局 {#create-a-custom-field-layout}
 
-1. 開啟 CRXDE Lite。預設URL為https://&#39;[伺服器]：[連線埠]&#39;/crx/de.
+1. 開啟CRXDE Lite。 預設URL為https://&#39;[伺服器]：[連線埠]&#39;/crx/de.
 1. 將欄位配置從/libs/fd/af/layouts/field節點（例如defaultFieldLayout）複製到/apps節點（例如/apps/af-field-layout）。
 1. 重新命名複製的節點和defaultFieldLayout.jsp檔案。 例如，errorOnRight.jsp。
 

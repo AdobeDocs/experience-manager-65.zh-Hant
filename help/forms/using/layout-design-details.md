@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: 9e1b0067-c7dc-4bbb-a209-d674592be858
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2170'
+source-wordcount: '2171'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ XDP的設計採用AdobeForms Designer。 本文提供如何設計您的XDP以建
 
 執行以下步驟以在XDP範本中使用子表單：
 
-1. 開啟Forms Designer，選取 **檔案** > **新增** > **使用空白表單**，點選 **下一個**，然後點選 **完成** 開啟表單以建立範本。
+1. 開啟Forms Designer，選取 **檔案** > **新增** > **使用空白表單**，選取 **下一個**，然後選取 **完成** 開啟表單以建立範本。
 
    確保 **物件庫** 和 **物件** 選項是從 **視窗** 功能表。
 
@@ -90,7 +90,7 @@ XDP的設計採用AdobeForms Designer。 本文提供如何設計您的XDP以建
    1. 瀏覽至儲存檔案的位置，並指定XDP範本的名稱。
    1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
 
-   1. 點選 **儲存**.
+   1. 選取&#x200B;**儲存**。
 
 ### 在XDP範本中使用影像欄位元件 {#use-image-field-component-in-an-xdp-template}
 
@@ -124,9 +124,9 @@ XDP的設計採用AdobeForms Designer。 本文提供如何設計您的XDP以建
 
    1. 指定表格的列數和欄數。
    1. 選取 **在表格中包含標題列** 核取方塊來包含表格標題的列。
-   1. 點選 **確定**.
+   1. 選取 **確定**.
 
-1. 點選 **+** 在表格名稱旁的左窗格中，以滑鼠右鍵按一下包含在標題與其他列中的儲存格名稱，然後選取 **重新命名物件** 重新命名表格儲存格。
+1. 選取 **+** 在表格名稱旁的左窗格中，以滑鼠右鍵按一下包含在標題與其他列中的儲存格名稱，然後選取 **重新命名物件** 重新命名表格儲存格。
 1. 按一下「 」中的「 」表格標題文字欄位 **設計檢視** 並重新命名。
 1. 拖放 **文字欄位** 元件來自 **物件庫** 至每個表格儲存格 **設計檢視**. 執行此步驟，以便在編寫互動式通訊時，能夠將表格儲存格與表單資料模型物件繫結。
 
@@ -141,15 +141,15 @@ XDP的設計採用AdobeForms Designer。 本文提供如何設計您的XDP以建
    1. 瀏覽至儲存檔案的位置，並指定XDP範本的名稱。
    1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
 
-   1. 點選 **儲存**.
+   1. 選取&#x200B;**儲存**。
 
 ### 將XDP範本上傳至AEM Forms伺服器 {#uploadxdptemplate}
 
 使用Forms Designer建立XDP範本後，您必須將其上傳到AEM Forms伺服器，以便該範本可在建立互動式通訊時使用。
 
 1. 選取 **Forms** > **Forms與檔案**.
-1. 點選 **建立** > **檔案上傳**.
-1. 導覽至本機檔案系統上XDP範本的位置，然後點選 **開啟** 將XDP範本匯入AEM Forms伺服器。
+1. 選取 **建立** > **檔案上傳**.
+1. 導覽至本機檔案系統上的XDP範本位置，然後選取 **開啟** 將XDP範本匯入AEM Forms伺服器。
 
 ## 使用結構描述 {#using-schema}
 

@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2080'
 ht-degree: 1%
 
 ---
@@ -56,8 +56,8 @@ ht-degree: 1%
 執行以下步驟來建立變數：
 
 1. 在AEM執行個體上，導覽至工具 ![工具](/help/forms/using/assets/hammer.png) >工作流程>模型。
-1. 點選 **[!UICONTROL 建立]** 並指定工作流程模型的標題和選用名稱。 選取模式並點選 **[!UICONTROL 編輯]**.
-1. 點選工作流程模型Sidekick中可用的變數圖示，然後點選 **[!UICONTROL 新增變數]**.
+1. 選取 **[!UICONTROL 建立]** 並指定工作流程模型的標題和選用名稱。 選取模型並選取 **[!UICONTROL 編輯]**.
+1. 選取工作流程模型Sidekick中可用的變數圖示，然後選取 **[!UICONTROL 新增變數]**.
 
    ![新增變數](assets/variables_add_variable_new.png)
 
@@ -69,7 +69,7 @@ ht-degree: 1%
    * 表單資料模型 — 指定表單資料模型路徑。
    * ArrayList — 指定集合的子型別。
 
-1. 指定變數的說明（選用），然後點選 ![完成圖示](assets/done_icon.png) 以儲存變更。 變數會顯示在左窗格中可用的清單中。
+1. 指定變數的說明（選擇性），然後選取 ![完成圖示](assets/done_icon.png) 以儲存變更。 變數會顯示在左窗格中可用的清單中。
 
 建立變數時，請考量下列作法：
 
@@ -102,11 +102,11 @@ ht-degree: 1%
 
 執行以下步驟來新增變數之間的對應：
 
-1. 在工作流程編輯頁面上，點選工作流程模型Sidekick中可用的「步驟」圖示。
-1. 拖放 **設定變數** 步驟到工作流程編輯器，點選該步驟並選取 ![configure_icon](assets/configure_icon.png) （設定）。
+1. 在工作流程編輯頁面上，選取工作流程模型Sidekick中可用的步驟圖示。
+1. 拖放 **設定變數** 步驟到工作流程編輯器，選取步驟並選取 ![configure_icon](assets/configure_icon.png) （設定）。
 1. 在設定變數對話方塊中，選取 **[!UICONTROL 對應]** > **[!UICONTROL 新增對應]**.
 1. 在 **對應變數** 區段，選取要儲存資料的變數、選取對應模式，然後指定要儲存在變數中的值。 對應模式會因變數型別而異。
-1. 對應更多變數，以產生有意義的運算式。 點選 ![完成圖示](assets/done_icon.png) 以儲存變更。
+1. 對應更多變數，以產生有意義的運算式。 選取 ![完成圖示](assets/done_icon.png) 以儲存變更。
 
 ### 範例1：查詢XML變數以設定字串變數的值 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -175,7 +175,7 @@ ht-degree: 1%
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
-同樣地，選取外部指令集路徑，或指定路由運算式的ECMA指令集以評估作用中分支。 點選 **[!UICONTROL 重新命名分支]** 指定分支的替代名稱。
+同樣地，選取外部指令集路徑，或指定路由運算式的ECMA指令集以評估作用中分支。 選取 **[!UICONTROL 重新命名分支]** 指定分支的替代名稱。
 
 如需更多範例，請參閱 [建立工作流程模型](../../forms/using/aem-forms-workflow.md#create-a-workflow-model).
 
@@ -210,7 +210,7 @@ ht-degree: 1%
 | 原始（長、雙、布林、日期和字串） | workItem.getWorkflowData()。getMetaDataMap()。get(variableName， type) |
 | 文件 | Packages.com.adobe.aemfd.docmanager.Document doc = workItem.getWorkflowData()。getMetaDataMap()。get(&quot;docVar&quot;， Packages.com.adobe.aemfd.docmanager.Document.class)； |
 | XML | Packages.org.w3c.dom.Document xmlObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.org.w3c.dom.Document.class)； |
-| 表單資料模式 | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class)； |
+| 表單資料模型 | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class)； |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.google.gson.JsonObject.class)； |
 
 您需要 [AEM Forms附加元件套件](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 適用於檔案和表單資料模型變數資料型別。
@@ -287,9 +287,9 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 ## 編輯變數 {#edit-a-variable}
 
-1. 在編輯工作流程頁面上，點選工作流程模型Sidekick中可用的「變數」圖示。 左窗格中的變數區段會顯示所有現有的變數。
-1. 點選 ![編輯](assets/edit.png) （編輯）圖示加以選取，並位於您要編輯的變數名稱旁。
-1. 編輯變數資訊並點選 ![完成圖示](assets/done_icon.png) 以儲存變更。 您無法編輯 **[!UICONTROL 名稱]** 和 **[!UICONTROL 型別]** 變數的欄位。
+1. 在編輯工作流程頁面上，選取工作流程模型Sidekick中可用的「變數」圖示。 左窗格中的變數區段會顯示所有現有的變數。
+1. 選取 ![編輯](assets/edit.png) （編輯）圖示加以選取，並位於您要編輯的變數名稱旁。
+1. 編輯變數資訊並選取 ![完成圖示](assets/done_icon.png) 以儲存變更。 您無法編輯 **[!UICONTROL 名稱]** 和 **[!UICONTROL 型別]** 變數的欄位。
 
 ## 刪除變數 {#delete-a-variable}
 
@@ -297,9 +297,9 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 執行以下步驟來刪除變數：
 
-1. 在編輯工作流程頁面上，點選工作流程模型Sidekick中可用的「變數」圖示。 左窗格中的變數區段會顯示所有現有的變數。
-1. 點選您要刪除之變數名稱旁的「刪除」圖示。
-1. 點選 ![完成圖示](assets/done_icon.png) 以確認並刪除變數。
+1. 在編輯工作流程頁面上，選取工作流程模型Sidekick中可用的「變數」圖示。 左窗格中的變數區段會顯示所有現有的變數。
+1. 選取您要刪除之變數名稱旁的刪除圖示。
+1. 選取 ![完成圖示](assets/done_icon.png) 以確認並刪除變數。
 
 ## 參考 {#references}
 

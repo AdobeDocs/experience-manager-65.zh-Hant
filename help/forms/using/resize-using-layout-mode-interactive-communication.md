@@ -3,10 +3,10 @@ title: 使用版面模式調整互動式通訊的元件大小
 description: 使用版面配置模式中可用的回應式格線來定義元件位置
 feature: Interactive Communication
 exl-id: 9534fcb2-4260-4dd0-9f7e-779b10fd3a22
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 1%
+source-wordcount: '878'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 ## 調整元件大小 {#resize-components}
 
-1. 在「版面」模式中，點選元件以調整大小。 藍點會顯示在回應式格線的開始和結尾。
+1. 在「版面」模式中，選取要調整大小的元件。 藍點會顯示在回應式格線的開始和結尾。
 1. 拖放藍點以定義元件在回應式格線中的位置。
 
    ![使用版面模式調整大小](assets/layout_mode_resize_new_updated.png)
@@ -42,7 +42,7 @@ ht-degree: 1%
    * **父系：** 選取元件的父項。
    * **浮動至新行：** 如果同一行中有多個元件，請將元件移至下一行。
 
-   您可以復原所有調整大小變更，並使用將預設版面套用至包含已調整大小元件的面板 **[!UICONTROL 還原中斷點配置]** ( ![還原中斷點](assets/reverttopreviouslypublishedversion.png))選項。 點選已調整大小元件的父元件以檢視選項。
+   您可以復原所有調整大小變更，並使用將預設版面套用至包含已調整大小元件的面板 **[!UICONTROL 還原中斷點配置]** ( ![還原中斷點](assets/reverttopreviouslypublishedversion.png))選項。 選取已調整大小元件的父元件以檢視選項。
 
    >[!NOTE]
    >
@@ -53,7 +53,7 @@ ht-degree: 1%
 **目標：** 您想要插入表格元件和影像元件，並在互動式通訊中將它們彼此平行放置。
 
 1. 在互動式通訊的Web channel中使用「編輯」模式插入表格和影像元件。 影像元件會顯示在表格元件之後。
-1. 切換至佈局模式，然後點選「表格」元件。 要調整元件大小的藍點會顯示在欄1和12。
+1. 切換到佈局模式並選取表格元件。 要調整元件大小的藍點會顯示在欄1和12。
 1. 將第12欄的藍色圓點拖放至回應式格線的第6欄。
 
    ![定義表格的端點](assets/layout_mode_end_point_table_new.png)
@@ -62,13 +62,13 @@ ht-degree: 1%
 
    ![在「版面」模式中同時顯示表格和影像](assets/table_image_parallel_new.png)
 
-   您可以選取影像元件，然後點選 **浮動至新行** 工具列中的可用選項，將影像元件移至下一行。
+   您可以選取「影像」元件，然後選取 **浮動至新行** 工具列中的可用選項，將影像元件移至下一行。
 
 ## 調整面板大小 {#resize-panels-layout-mode}
 
 如果您想要調整整個面板而非個別元件的大小，請執行下列步驟：
 
-1. 在面板中點選任何您想要調整大小的元件，選取 ![選取父系](assets/select_parent_icon.svg)，並選取下拉式清單中的第一個選項（如果面板為元件的直接父項）。
+1. 在面板中選取您要調整大小的任何元件，然後選取 ![選取父系](assets/select_parent_icon.svg)，並選取下拉式清單中的第一個選項（如果面板為元件的直接父項）。
 
    藍點會顯示在回應式格線的開始和結尾。
 
@@ -79,13 +79,13 @@ ht-degree: 1%
 
 執行以下步驟來定義面板的欄數：
 
-1. 在 **[!UICONTROL 編輯]** 模式，點選面板，選取 ![設定](assets/configure_icon.png)，並選取 **[!UICONTROL 回應式 — 頁面上的所有內容，無需導覽]** 選項來自 **[!UICONTROL 面板配置]** 下拉式清單。
+1. 在 **[!UICONTROL 編輯]** 模式，選取面板，選取 ![設定](assets/configure_icon.png)，並選取 **[!UICONTROL 回應式 — 頁面上的所有內容，無需導覽]** 選項來自 **[!UICONTROL 面板配置]** 下拉式清單。
 
-1. 點選![儲存](assets/save_icon.svg)以儲存屬性。
+1. 選取 ![儲存](assets/save_icon.svg) 以儲存屬性。
 
-1. 在 **[!UICONTROL 版面]** 模式，點選面板中的任何元件，然後選取 ![選取父系](assets/select_parent_icon.svg)，然後選取面板。
+1. 在 **[!UICONTROL 版面]** 模式，選取面板中的任何元件，然後選取 ![選取父系](assets/select_parent_icon.svg)，然後選取面板。
 
-1. 點選 ![多欄](assets/multi-column.svg) 並從下拉式清單中選取欄數。 欄數可以介於1到12之間。 面板會分成多欄配置。
+1. 選取 ![多欄](assets/multi-column.svg) 並從下拉式清單中選取欄數。 欄數可以介於1到12之間。 面板會分成多欄配置。
 
 ![佈局模式下的多欄](assets/multi-column-layout.png)
 
@@ -96,9 +96,9 @@ ht-degree: 1%
 執行以下步驟以停用「配置」模式：
 
 1. 選取 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 範本]** 然後開啟表單中使用的範本，位置在 **[!UICONTROL 編輯]** 模式。
-1. 在左窗格中選取檔案容器，然後點選 **[!UICONTROL 原則。]**
+1. 在左窗格中選取檔案容器，然後選取 **[!UICONTROL 原則。]**
 
    ![停用佈局模式](assets/policy_disable_layout_mode.png)
 
-1. 點選 **[!UICONTROL 版面設定]** 標籤並選取 **[!UICONTROL 停用佈局模式]**.
-1. 點選 ![儲存變更](assets/save_icon.png) 以儲存範本屬性。
+1. 選取 **[!UICONTROL 版面設定]** 標籤並選取 **[!UICONTROL 停用佈局模式]**.
+1. 選取 ![儲存變更](assets/save_icon.png) 以儲存範本屬性。

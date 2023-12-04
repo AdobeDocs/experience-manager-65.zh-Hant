@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: 6c6fb516-1b11-4da4-b638-4388a070e397
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -29,10 +29,10 @@ ht-degree: 0%
 
 ![home-screen-1-1](assets/home-screen-1-1.png)-->
 
-1. **功能表按鈕**：點選 **選單** 按鈕以瀏覽至「工作」、「Forms」、「寄件匣」和「設定」。 如果您的AEM Forms應用程式已連線至AEM Forms JEE伺服器，您會看到「工作」選項。 「工作」選項也會儲存從處理序中的工作建立的草稿。 若為AEM Forms OSGi伺服器，會隱藏工作選項。 Outbox會在與伺服器同步之前儲存已儲存的表單和草稿。 應用程式啟用時，「寄件匣」中所有儲存的表單和草稿都會上傳至AEM Forms伺服器 [與伺服器同步](../../forms/using/sync-app.md). 如需有關設定的詳細資訊，請參閱 [更新一般設定](../../forms/using/update-general-settings.md).
-1. **任務或表單**：點選列出的工作或您要使用的表單。
-1. **水準省略符號**：表示動作可用於表單。 點選省略符號會顯示作者提供的動作和說明。 此 **刪除草稿** 和 **完成** 點選省略符號時會顯示選項。
-1. **重新整理圖示**：點選重新整理圖示，即可將應用程式與AEM Forms伺服器同步。
+1. **功能表按鈕**：選取 **選單** 按鈕以瀏覽至「工作」、「Forms」、「寄件匣」和「設定」。 如果您的AEM Forms應用程式已連線至AEM Forms JEE伺服器，您會看到「工作」選項。 「工作」選項也會儲存從處理序中的工作建立的草稿。 若為AEM Forms OSGi伺服器，會隱藏工作選項。 Outbox會在與伺服器同步之前儲存已儲存的表單和草稿。 應用程式啟用時，「寄件匣」中所有儲存的表單和草稿都會上傳至AEM Forms伺服器 [與伺服器同步](../../forms/using/sync-app.md). 如需有關設定的詳細資訊，請參閱 [更新一般設定](../../forms/using/update-general-settings.md).
+1. **任務或表單**：選取列出的工作或您要使用的表單。
+1. **水準省略符號**：表示動作可用於表單。 點選省略符號會顯示作者提供的動作和說明。 此 **刪除草稿** 和 **完成** 當您選取省略符號時，選項是可見的。
+1. **重新整理圖示**：選取重新整理圖示，即可將應用程式與AEM Forms伺服器同步。
 
 ### 自訂首頁畫面 {#customizing-the-home-screen}
 

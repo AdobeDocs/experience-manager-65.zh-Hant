@@ -6,10 +6,10 @@ topic-tags: develop
 docset: aem65
 feature: Adaptive Forms
 exl-id: f7e3e2cd-0cbe-4b26-9e55-7afc6dc3af63
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 8%
+source-wordcount: '1070'
+ht-degree: 7%
 
 ---
 
@@ -52,8 +52,8 @@ Forms包含某些欄位和區段，不適用於所有使用者和所有條件。
 執行以下步驟，啟用最適化表單片段的延遲載入：
 
 1. 以製作模式開啟最適化表單，其中包含您要啟用以延遲載入的片段。
-1. 選取最適化表單片段並點選 ![cmppr](assets/cmppr.png).
-1. 在側邊欄中，啟用 **[!UICONTROL 緩慢地載入片段]** 然後點選 **完成**.
+1. 選取最適化表單片段，然後選取 ![cmppr](assets/cmppr.png).
+1. 在側邊欄中，啟用 **[!UICONTROL 緩慢地載入片段]** 並選取 **完成**.
 
    ![啟用最適化表單片段的延遲載入](assets/lazy-loading-fragment.png)
 
@@ -62,7 +62,7 @@ Forms包含某些欄位和區段，不適用於所有使用者和所有條件。
 您可以將延遲載入片段中物件的值標示為全域，以便在未載入包含片段時可以在指令碼中使用。 請執行下列動作：
 
 1. 在製作模式中開啟最適化表單片段。
-1. 點選您要標示為全域值的欄位，然後點選 ![cmppr](assets/cmppr.png).
+1. 選取您要將其值標示為全域值的欄位，然後選取 ![cmppr](assets/cmppr.png).
 1. 在側邊欄中，啟用 **在緩慢載入時使用值**.
 
    ![側欄中的延遲載入欄位](assets/enable-lazy-loading.png)

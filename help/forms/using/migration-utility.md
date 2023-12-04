@@ -9,10 +9,10 @@ content-strategy: max-2018
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 2%
+source-wordcount: '1736'
+ht-degree: 1%
 
 ---
 
@@ -35,13 +35,13 @@ ht-degree: 2%
 
 **如果有就地升級**
 
-如果您執行就地升級，則升級的執行個體已有資產和檔案。 不過，您必須先安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) （包含Correspondence Management相容性套件）
+如果您執行就地升級，則升級的執行個體已有資產和檔案。 不過，您必須先安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) （包含Correspondence Management相容性套件）
 
 然後，您必須透過以下方式更新資產和檔案 [執行移轉公用程式](#runningmigrationutility).
 
 **如果有異地安裝**
 
-如果是非適當（全新）安裝，您必須先安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) （包含通訊管理相容性套件）。
+如果是非適當（全新）安裝，您必須先安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) （包含通訊管理相容性套件）。
 
 然後，您必須在新設定上匯入資產套件（zip或cmp），然後透過以下方式更新資產和檔案 [執行移轉公用程式](#runningmigrationutility). Adobe建議，您必須先執行移轉公用程式，才能在新設定上建立資產。
 
@@ -91,7 +91,7 @@ ht-degree: 2%
 
 1. 請執行以下動作以執行移轉：
 
-   * 若要移轉 **資產**，點選「 AEM Forms資產移轉」，然後在下一個畫面中，點選「 」 **開始移轉**. 下列專案已移轉：
+   * 若要移轉 **資產**，請選取「AEM Forms資產移轉」 ，然後在下一個畫面中選取「 」 **開始移轉**. 下列專案已移轉：
 
       * 調適型表單
       * 檔案片段
@@ -103,18 +103,18 @@ ht-degree: 2%
    >
    >在資產移轉期間，您可能會發現警告訊息，例如「發現衝突……」。 這類訊息表示無法移轉適用性表單中部分元件的規則。 例如，如果元件有一個同時具有規則和指令碼的事件，如果規則發生在任何指令碼之後，則不會移轉元件的任何規則。 您可以 [透過開啟規則編輯器來移轉這類規則](#migrate-rules) 在最適化表單製作中。
 
-   * 若要移轉最適化表單自訂元件，請點選 **最適化Forms自訂元件移轉** 在「自訂元件移轉」頁面中，點選 **開始移轉**. 下列專案已移轉：
+   * 若要移轉最適化表單自訂元件，請選取 **最適化Forms自訂元件移轉** 在「自訂元件移轉」頁面中，選取 **開始移轉**. 下列專案已移轉：
 
       * 為最適化Forms撰寫的自訂元件
       * 元件覆蓋（如果有的話）。
 
-   * 若要移轉最適化表單範本，請點選 **最適化Forms範本移轉** 在「自訂元件移轉」頁面中，點選 **開始移轉**. 下列專案已移轉：
+   * 若要移轉最適化表單範本，請選取 **最適化Forms範本移轉** 在「自訂元件移轉」頁面中，選取 **開始移轉**. 下列專案已移轉：
 
       * 最適化表單範本建立於 `/apps` 或 `/conf` 使用AEM範本編輯器。
 
    * 移轉AEM Forms雲端設定服務，以使用新的內容感知雲端服務範例，包括已啟用觸控的UI (在 `/conf`)。 當您移轉AEM Forms雲端設定服務時，雲端服務位於 `/etc` 已移至 `/conf`. 如果您沒有任何相依於舊版路徑的雲端服務自訂(`/etc`)，Adobe建議您在升級至6.5後執行移轉公用程式；使用雲端設定觸控式UI進行任何其他工作。 如果您有任何現有的雲端服務自訂專案，請在升級設定時繼續使用傳統UI，直到自訂專案更新以符合移轉的路徑(`/conf`)，然後執行移轉公用程式。
 
-   若要移轉 **AEM Forms雲端服務**，其中包含以下專案，請點選「 AEM Forms雲端設定移轉」 （雲端設定移轉獨立於AEMFD相容性套件）。 點選「 AEM Forms Cloud Configurations Migration 」，然後在「 Configuration Migration 」頁面上，點選「 」 **開始移轉**：
+   若要移轉 **AEM Forms雲端服務**，其中包括以下專案，請選取「 AEM Forms雲端設定移轉」 （雲端設定移轉獨立於AEMFD相容性套件）。 選取「AEM Forms雲端組態移轉」，然後在「組態移轉」頁面上，選取「 」 **開始移轉**：
 
    * 表單資料模型雲端服務
 
@@ -152,13 +152,13 @@ ht-degree: 2%
 
 若要移轉這些元件，請在Adaptive Forms編輯器的「規則編輯器」中將其開啟。
 
-* 若要移轉自訂元件中的規則和指令碼（如果從6.3升級，則不需要移轉），請點選「最適化Forms自訂元件移轉」，然後在下一個畫面中點選「開始移轉」。 下列專案已移轉：
+* 若要移轉自訂元件中的規則和指令碼（從6.3升級時則為不需要），請選取「最適化Forms自訂元件移轉」 ，然後在下一個畫面中選取「開始移轉」 。 下列專案已移轉：
 
    * 使用規則編輯器（6.1 FP1和更新版本）建立的規則和指令碼
 
    * 使用6.1和更舊版本UI中的指令碼索引標籤建立的指令碼
 
-* 若要移轉範本（如果從6.3和6.4升級，則不需要），請點選「最適化Forms範本移轉」，然後在下一個畫面中，點選「開始移轉」。 下列專案已移轉：
+* 若要移轉範本（如果從6.3和6.4升級，則不需要），請選取「最適化Forms範本移轉」，然後在下一個畫面中選取「開始移轉」。 下列專案已移轉：
 
    * 舊範本 — 在/apps下使用AEM 6.1 Forms或更舊版本建立的最適化表單範本。 這包括範本元件中定義的指令碼。
 

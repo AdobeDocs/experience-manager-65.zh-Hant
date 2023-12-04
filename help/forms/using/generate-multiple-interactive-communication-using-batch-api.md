@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2206'
+source-wordcount: '2136'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 1%
 
 1. 建立 [Watched資料夾](/help/forms/using/creating-configure-watched-folder.md) 並將其設定為使用Batch API：
    1. 登入AEM Forms作者例項。
-   1. 瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 設定Watched資料夾]**. 點選 **[!UICONTROL 新增]**.
+   1. 瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 設定Watched資料夾]**. 選取 **[!UICONTROL 新增]**.
    1. 指定 **[!UICONTROL 名稱]** 和實體 **[!UICONTROL 路徑]** 檔案夾的。 例如，`c:\batchprocessing`。
    1. 選取 **[!UICONTROL 服務]** 中的選項 **[!UICONTROL 處理檔案，使用]** 欄位。
    1. 選取 **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** 中的服務 **[!UICONTROL 服務名稱]** 欄位。
@@ -97,7 +97,7 @@ ht-degree: 1%
       | batchType | 字串 | 將值設定為PRINT、WEB或WEB_AND_PRINT。 預設值為WEB_AND_PRINT。 |
       | 地區設定 | 字串 | 指定輸出互動式通訊的地區設定。 現成服務不使用地區設定選項，但您可以建立自訂服務，以產生本地化的互動式通訊。 預設值為en_US |
 
-   1. 點選 **[!UICONTROL 建立]** 已建立watched資料夾。
+   1. 選取 **[!UICONTROL 建立]** 已建立watched資料夾。
 1. 使用watched資料夾產生互動式通訊：
    1. 開啟Watched資料夾。 導覽至輸入資料夾。
    1. 在輸入資料夾中建立資料夾，並將JSON檔案放在新建立的資料夾中。
@@ -113,9 +113,9 @@ ht-degree: 1%
 
 1. 設定範本的表單資料模型：
    1. 開啟與互動式通訊範本關聯的表單資料模型。
-   1. 選取您的頂層模型物件，然後點選「編輯屬性」。
+   1. 選取頂層模型物件，然後選取編輯屬性。
    1. 從「編輯屬性」窗格下的「讀取服務」欄位選取擷取或取得服務。
-   1. 點選讀取服務引數的鉛筆圖示，以將引數繫結到要求屬性，並指定繫結值。 它會將服務引數繫結到指定的繫結屬性或常值中，該值會作為引數傳遞給服務，以從資料來源擷取與指定值相關聯的詳細資料。
+   1. 選取讀取服務引數的鉛筆圖示，以將引數繫結到要求屬性，並指定繫結值。 它會將服務引數繫結到指定的繫結屬性或常值中，該值會作為引數傳遞給服務，以從資料來源擷取與指定值相關聯的詳細資料。
 
       <br>
         在此範例中，id引數接受使用者設定檔的id屬性值，並將其作為引數傳給讀取服務。 它會從指定ID的員工資料模型物件讀取並傳回關聯屬性的值。 因此，如果您在表單的id欄位中指定00250，則讀取服務將讀取具有員工id00250員工的詳細資料。
@@ -143,7 +143,7 @@ ht-degree: 1%
 
 1. 建立 [Watched資料夾](/help/forms/using/creating-configure-watched-folder.md) 並將其設定為使用批次API服務：
    1. 登入AEM Forms作者例項。
-   1. 瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 設定Watched資料夾]**. 點選 **[!UICONTROL 新增]**.
+   1. 瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 設定Watched資料夾]**. 選取 **[!UICONTROL 新增]**.
    1. 指定 **[!UICONTROL 名稱]** 和實體 **[!UICONTROL 路徑]** 檔案夾的。 例如，`c:\batchprocessing`。
    1. 選取 **[!UICONTROL 服務]** 中的選項 **[!UICONTROL 處理檔案，使用]** 欄位。
    1. 選取 **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** 中的服務 **[!UICONTROL 服務名稱]** 欄位。
@@ -159,7 +159,7 @@ ht-degree: 1%
       | batchType | 字串 | 將值設定為PRINT、WEB或WEB_AND_PRINT。 預設值為WEB_AND_PRINT。 |
       | 地區設定 | 字串 | 指定輸出互動式通訊的地區設定。 現成服務不使用地區設定選項，但您可以建立自訂服務，以產生本地化的互動式通訊。 預設值為en_US。 |
 
-   1. 點選 **[!UICONTROL 建立]** 已建立watched資料夾。
+   1. 選取 **[!UICONTROL 建立]** 已建立watched資料夾。
 1. 使用watched資料夾產生互動式通訊：
    1. 開啟Watched資料夾。 導覽至輸入資料夾。
    1. 在輸入資料夾中建立資料夾。 將在步驟2中建立的JSON檔案置於新建立的資料夾中。

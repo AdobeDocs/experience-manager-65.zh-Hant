@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4520'
+source-wordcount: '4422'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 8%
 
 如需建立和自訂HTML5檢視器預設集的指示，請參閱AdobeDynamic Media *HTML5檢視器SDK API檔案*. SDK可在內嵌於SDK本身的IS發佈伺服器上使用。 每個程式庫版本都有各自的SDK檔案。
 
-路徑: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
+路徑： `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
 例如，3.10 SDK： [https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
 另請參閱 [Adobe Dynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
@@ -81,7 +81,7 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
 <table>
  <tbody>
   <tr>
-   <td><strong>輪播集</strong><br /> </td>
+   <td><strong>傳送集</strong><br /> </td>
    <td><p>將熱點或影像地圖（或兩者）新增到兩個或多個影像的序列。 客戶可以將影像向左或向右平移，然後在影像上選取熱點，以取得其他詳細資訊或直接從網站的類別、首頁或登陸頁面購買。</p> </td>
   </tr>
   <tr>
@@ -174,7 +174,7 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
   <tr>
    <td><strong>檢視器預設集標題</strong></td>
    <td><strong>類型</strong></td>
-   <td><strong>CSS 檔案名稱</strong><br /> </td>
+   <td><strong>CSS檔案名稱</strong><br /> </td>
   </tr>
   <tr>
    <td>Carousel_Dotted_dark</td>
@@ -354,7 +354,7 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
    <td><p>顯示或隱藏使用者介面</p> </td>
   </tr>
   <tr>
-   <td><p><strong>點兩下</strong></p> </td>
+   <td><p><strong>雙選</strong></p> </td>
    <td><p>不適用</p> </td>
    <td><p>放大或重設</p> </td>
    <td><p>放大或重設</p> </td>
@@ -532,9 +532,9 @@ Experience Manager在檢視資產時會顯示各種檢視器預設集 **[!UICONT
 
 | **視訊子區段** | **子區段時間（以秒為單位）** | **面板中可見的縮圖** |
 |---|---|---|
-| 1 | 0-10 | 1, 2, 3, 4 |
-| 2 | 10-20 | 4, 5, 6, 7 |
-| 3 | 20-30 | 6, 7, 8, 9 |
+| 1 | 0-10 | 1、2、3、4 |
+| 2 | 10-20 | 4， 5， 6， 7 |
+| 3 | 20-30 | 6、7、8、9 |
 
 視訊子區段3的延伸範圍不會超出指派給它的縮圖。 也請注意，在面板中顯示的縮圖4、6和7比其他縮圖長兩倍。
 

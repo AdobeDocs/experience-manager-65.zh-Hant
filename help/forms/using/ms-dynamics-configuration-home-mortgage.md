@@ -4,9 +4,9 @@ description: 瞭解如何透過最適化表單針對We.Finance參考網站的住
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: develop, Configuration
 exl-id: 2ac37dc5-d88d-4f98-8576-cd2ca6f0ea3a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -37,17 +37,17 @@ AEM Forms提供雲端服務，將Dynamics 365與整合 [Forms資料整合](/help
    `https://[server]:[port]/editor.html/content/we-finance/global/en/loan-landing-page.html`
 
 1. 向下捲動至「住房抵押貸款電腦」。
-1. 反白顯示右欄的（電腦）面板，然後點選以顯示快顯功能表。 在快顯功能表中，點選「設定」。 便會顯示「編輯AEM Forms容器」對話方塊。
+1. 反白右欄的（電腦）面板，並選取以顯示快顯功能表。 在躍現式選單中，選取「設定」。 便會顯示「編輯AEM Forms容器」對話方塊。
 
    ![calculatorconfigurepanel](assets/calculatorconfigurepanel.png)
 
-1. 在「編輯AEM Forms容器」對話方塊中，瀏覽資產路徑並在以下路徑選取home-mortgage-calculator ，然後點選 **確認**：
+1. 在「編輯AEM Forms容器」對話方塊中，瀏覽資產路徑並在以下路徑選取home-mortgage-calculator並選取 **確認**：
 
    formsanddocuments/We.Finance/MS Dynamics/
 
    ![selectassetpath](assets/selectassetpath.png)
 
-1. 點選 **完成**.
+1. 選取 **完成**.
 1. 發佈已編輯的頁面。
 
    >[!NOTE]
@@ -60,7 +60,7 @@ AEM Forms提供雲端服務，將Dynamics 365與整合 [Forms資料整合](/help
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
 
-   1. 將解決方案套件匯入至Microsoft® Dynamics執行個體。 在您的Microsoft® Dynamics執行個體中，前往 **設定** > **解決方案** 然後點選 **匯入**.
+   1. 將解決方案套件匯入至Microsoft® Dynamics執行個體。 在您的Microsoft® Dynamics執行個體中，前往 **設定** > **解決方案** 然後選取 **匯入**.
 
 1. 若要設定重新網站中使用的使用者聯絡詳細資訊，請將Sarah Rose Contact.CSV套件匯入您的Microsoft® Dynamics執行個體：
 
@@ -68,4 +68,4 @@ AEM Forms提供雲端服務，將Dynamics 365與整合 [Forms資料整合](/help
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
-   1. 將套件匯入您的Microsoft® Dynamics執行個體。 在您的Microsoft® Dynamics執行個體中，前往 **銷售** > **連絡人** 然後點選 **匯入資料**.
+   1. 將套件匯入您的Microsoft® Dynamics執行個體。 在您的Microsoft® Dynamics執行個體中，前往 **銷售** > **連絡人** 然後選取 **匯入資料**.

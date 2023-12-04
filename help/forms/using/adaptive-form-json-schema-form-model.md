@@ -5,10 +5,10 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: d0768679182567cc7cd618adaa78b6518f902f7c
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 8%
+source-wordcount: '1844'
+ht-degree: 7%
 
 ---
 
@@ -736,7 +736,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
 
 1. 前往Experience Manager網頁主控台，位於 `https://server:host/system/console/configMgr`.
 1. 尋找 **[!UICONTROL 最適化表單和互動式通訊Web通道設定]**.
-1. 點選以在編輯模式中開啟設定。
+1. 選取以在編輯模式中開啟設定。
 1. 選取 **[!UICONTROL 產生符合結構描述的資料]** 核取方塊。
 1. 儲存設定。
 

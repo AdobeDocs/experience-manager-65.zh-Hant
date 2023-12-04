@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '6163'
+source-wordcount: '6130'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 ## 建立互動式通訊 {#createic}
 
 1. 登入AEM作者執行個體並導覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 點選 **[!UICONTROL 建立]** 並選取 **[!UICONTROL 互動式通訊]**. 會顯示「建立互動式通訊」頁面。
+1. 選取 **[!UICONTROL 建立]** 並選取 **[!UICONTROL 互動式通訊]**. 會顯示「建立互動式通訊」頁面。
 
    ![create-interactive-communication](assets/create-interactive-communication.png)
 
@@ -51,7 +51,7 @@ ht-degree: 1%
    * **[!UICONTROL 發佈日期：]** 輸入發佈互動式通訊的日期。
    * **[!UICONTROL 取消發佈日期]**：輸入取消發佈互動式通訊的日期。
 
-1. 點選 **[!UICONTROL 下一個]**. 將會顯示指定列印和Web Channel詳細資訊的畫面。
+1. 選取 **[!UICONTROL 下一個]**. 將會顯示指定列印和Web Channel詳細資訊的畫面。
 1. 輸入下列內容：
 
    * **[!UICONTROL 列印]**：選取此選項可產生互動式通訊的列印通道。
@@ -60,7 +60,7 @@ ht-degree: 1%
    * **[!UICONTROL 互動式通訊Web範本]**：瀏覽並選取Web範本。
    * **[!UICONTROL 主題]** 和 **[!UICONTROL 選取主題]**：瀏覽並選取主題，以設定互動式通訊之Web channel的樣式。 如需詳細資訊，請參閱 [AEM Forms中的主題](/help/forms/using/themes.md).
 
-   * **[!UICONTROL 針對Web Channel使用「列印為主版」]**：選取此選項可建立與列印管道同步的Web Channel。 使用print channel做為web channel的主版，可確保從print channel衍生web channel的內容和資料繫結，當您點選「同步」時，在列印channel中所做的變更會反映在web channel中。 不過，作者可視需要中斷Web Channel中特定元件的繼承。 如需詳細資訊，請參閱 [將Web channel與Print channel同步](../../forms/using/create-interactive-communication.md#synchronize).
+   * **[!UICONTROL 針對Web Channel使用「列印為主版」]**：選取此選項可建立與列印管道同步的Web Channel。 使用print channel作為web channel的主版，可確保從print channel衍生web channel的內容和資料繫結，當您選取「同步」時，在web channel中進行的變更會反映在web channel中。 不過，作者可視需要中斷Web Channel中特定元件的繼承。 如需詳細資訊，請參閱 [將Web channel與Print channel同步](../../forms/using/create-interactive-communication.md#synchronize).
 如果您選取 **[!UICONTROL 針對Web Channel使用「列印為主版」]** 選項，您可以選取下列任何模式來產生Web channel：
 
       * **[!UICONTROL 自動配置]**：選取此模式可自動從列印管道產生Web管道的預留位置、內容和資料繫結。
@@ -68,7 +68,7 @@ ht-degree: 1%
 
    如需有關列印管道和網頁管道的詳細資訊，請參閱 [列印管道和網頁管道](/help/forms/using/web-channel-print-channel.md).
 
-1. 點選「**[!UICONTROL 建立]**」。隨即建立互動式通訊，並出現警示方塊。 點選 **[!UICONTROL 編輯]** 開始建置互動式通訊的內容，如中所述 [使用互動式通訊編寫使用者介面新增內容](#step2). 或者，您也可以點選 **[!UICONTROL 完成]** 並選擇稍後編輯互動式通訊。
+1. 選擇 **[!UICONTROL 建立]**。隨即建立互動式通訊，並出現警示方塊。 選取 **[!UICONTROL 編輯]** 開始建置互動式通訊的內容，如中所述 [使用互動式通訊編寫使用者介面新增內容](#step2). 或者，您可以選取 **[!UICONTROL 完成]** 並選擇稍後編輯互動式通訊。
 
 ## 新增內容至互動式通訊 {#step2}
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 
 如需互動式通訊編寫介面的詳細資訊，請參閱 [互動式通訊撰寫簡介](/help/forms/using/introduction-interactive-communication-authoring.md).
 
-1. 當您點選「編輯」時，會啟動互動式通訊編寫介面，如中所述 [建立互動式通訊](#createic). 或者，您可以導覽至AEM上現有的互動式通訊資產，選取該資產，然後點選 **[!UICONTROL 編輯]** 以啟動互動式通訊編寫介面。
+1. 當您選取「編輯」時，會啟動互動式通訊編寫介面，如中所述 [建立互動式通訊](#createic). 或者，您可以導覽至AEM上現有的互動式通訊資產，選取後再選取 **[!UICONTROL 編輯]** 以啟動互動式通訊編寫介面。
 
    依預設，除非互動式通訊是僅限Web-channel，否則互動式通訊的列印管道會出現。 互動式通訊的「列印」通道會顯示目標區域，如所選XDP/列印通道範本中所提供。 在這些目標區域和欄位中，您可以新增元件或資產。
 
@@ -141,9 +141,9 @@ ht-degree: 1%
 
 ![未繫結變數](assets/df_unbound_variable_new.png)
 
-點選檔案片段，點選 ![configure_icon](assets/configure_icon.png) （設定），然後點選 **[!UICONTROL 屬性]** 互動式通訊的副手。 此 **[!UICONTROL 變數和資料模型物件]** 區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用 ![編輯](assets/edit.svg) （編輯）圖示來編輯屬性。
+選擇檔案片段，選擇 ![configure_icon](assets/configure_icon.png) （設定），然後選取 **[!UICONTROL 屬性]** 互動式通訊的副手。 此 **[!UICONTROL 變數和資料模型物件]** 區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用 ![編輯](assets/edit.svg) （編輯）圖示來編輯屬性。
 
-1. 若要設定變數的繫結，請點選變數並選取 ![configure_icon](assets/configure_icon.png) （設定），然後在側邊欄的「屬性」面板中設定繫結屬性。
+1. 若要設定變數的繫結，請選取變數並選取 ![configure_icon](assets/configure_icon.png) （設定），然後在側邊欄的「屬性」面板中設定繫結屬性。
 
    * **無**：代理程式會填入變數的值。
    * **文字片段**：如果選取，您可以瀏覽並選取文字檔案片段，其內容會呈現在欄位中。 只有那些文字檔案片段可以繫結至內沒有變數的變數。
@@ -183,9 +183,9 @@ ht-degree: 1%
 
    ![webchannelassets](assets/webchannelassets.png)
 
-   點選檔案片段，點選 ![configure_icon](assets/configure_icon.png) （設定），然後點選 **[!UICONTROL 屬性]** 互動式通訊的副手。 此 **[!UICONTROL 變數和資料模型物件]** 區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用 ![編輯](assets/edit.svg) （編輯）圖示來編輯屬性。 此外，對於已經 [自動產生](#synchronize) 在使用Print channel的Web channel中，使用 ![取消繼承](assets/cancelinheritance.png) （取消繼承）圖示移至每個資料模型物件和變數旁的 [取消繼承](#cancelinheritance) 並且能夠進行編輯。
+   選擇檔案片段，選擇 ![configure_icon](assets/configure_icon.png) （設定），然後選取 **[!UICONTROL 屬性]** 互動式通訊的副手。 此 **[!UICONTROL 變數和資料模型物件]** 區段會列出變數，包括隱藏變數，以及檔案片段中使用的資料模型物件。 使用 ![編輯](assets/edit.svg) （編輯）圖示來編輯屬性。 此外，對於已經 [自動產生](#synchronize) 在使用Print channel的Web channel中，使用 ![取消繼承](assets/cancelinheritance.png) （取消繼承）圖示移至每個資料模型物件和變數旁的 [取消繼承](#cancelinheritance) 並且能夠進行編輯。
 
-1. 若要在Web channel中新增其他元件，並選取Web channel後，點選 **[!UICONTROL 元件]**. 視需要在互動式通訊的Web channel中拖放元件，並繼續加以設定。
+1. 若要在Web channel中新增其他元件，並選取「 Web channel 」 **[!UICONTROL 元件]**. 視需要在互動式通訊的Web channel中拖放元件，並繼續加以設定。
 
    | 元件 | 功能 |
    |---|---|
@@ -207,7 +207,7 @@ ht-degree: 1%
 
 您可以使用 **預覽選項** 評估互動式通訊的外觀。 互動式通訊的Web channel也提供模擬各種裝置互動式通訊體驗的選項。 例如，iPhone、iPad和案頭。 您可以使用兩者 **預覽** 和 **模擬器** ![尺標](assets/ruler.png) 選項可相互結合，以預覽不同熒幕大小之裝置的Web輸出。 預覽中的範例資料會從指定的表單資料模型中填入。
 
-1. 選取要預覽的（列印或網頁）管道，然後點選預覽。 此時會出現互動式通訊。
+1. 選取要預覽的（列印或網頁）管道，然後選取預覽。 此時會出現互動式通訊。
 
    >[!NOTE]
    >
@@ -225,7 +225,7 @@ ht-degree: 1%
 
 在Print channel中，您可以設定附件和檔案庫存取權，以允許Agent在互動式通訊的Agent UI中管理附件：
 
-1. 在列印管道中，反白檔案容器並點選 **屬性**.
+1. 在列印管道中，反白檔案容器並選取 **屬性**.
 
    ![documentcontainerproperties](assets/documentcontainerproperties.png)
 
@@ -238,14 +238,14 @@ ht-degree: 1%
    * **[!UICONTROL 允許程式庫存取]**：選取此選項可在Agent UI中啟用代理程式的程式庫存取權。 如果啟用，代理程式可以在準備互動式通訊時從資料庫新增檔案。
    * **[!UICONTROL 允許重新排序附件]**：選取以啟用代理程式，透過互動式通訊重新排序附件。
    * **[!UICONTROL 附件數量上限]**：指定互動式通訊允許的附件數目上限。
-   * **[!UICONTROL 要附加的檔案]**：點選 **[!UICONTROL 新增]** 並瀏覽以選取要附加的檔案，並指定下列專案：
+   * **[!UICONTROL 要附加的檔案]**：選取 **[!UICONTROL 新增]** 並瀏覽以選取要附加的檔案，並指定下列專案：
 
       * **[!UICONTROL 依預設將此檔案附加至檔案]**：如果只有附件不是強制性的，您可以變更此選項。
       * **[!UICONTROL 強制：]** 代理程式將無法移除代理程式UI中的附件。
 
    ![附加檔案](assets/attachfiles.png)
 
-1. 點選 **[!UICONTROL 完成]**.
+1. 選取 **[!UICONTROL 完成]**.
 
 ### XDP/佈局欄位屬性 {#xdplayoutfieldproperties}
 
@@ -274,13 +274,13 @@ ht-degree: 1%
    * **[!UICONTROL 必填]**：選取以使「代理程式」強制使用該欄位。 如果繫結型別是文字片段，則此設定不適用。
    * **[!UICONTROL 允許多行]**：選取此欄位可允許多行文字在欄位中輸入。 如果繫結型別是文字片段，則此設定不適用。
 
-1. 點選 ![完成圖示](assets/done_icon.png).
+1. 選取 ![完成圖示](assets/done_icon.png).
 
 ### 資料顯示模式 {#datadisplaypatterns}
 
 製作介面可讓您為欄位、變數和表單資料模型元素定義資料顯示模式，這些元素可在為列印和Web頻道建立互動式通訊時使用。
 
-若要設定資料顯示模式，請點選元素，然後選取 ![configure_icon](assets/configure_icon.png) （設定）並設定中的顯示模式 **[!UICONTROL 屬性]** 側欄中的面板。 從中選擇任何預先定義的選項 **[!UICONTROL 型別]** 下拉式清單，以檢視與所選型別相關聯的模式。 選取 **[!UICONTROL 自訂]** 從 **[!UICONTROL 型別]** 下拉式清單定義清單中不可用的模式。 編輯中的值 **[!UICONTROL 圖樣]** 欄位會自動將型別修改為 **[!UICONTROL 自訂]**.
+若要設定資料顯示模式，請選取元素，然後選取 ![configure_icon](assets/configure_icon.png) （設定）並設定中的顯示模式 **[!UICONTROL 屬性]** 側欄中的面板。 從中選擇任何預先定義的選項 **[!UICONTROL 型別]** 下拉式清單，以檢視與所選型別相關聯的模式。 選取 **[!UICONTROL 自訂]** 從 **[!UICONTROL 型別]** 下拉式清單定義清單中不可用的模式。 編輯中的值 **[!UICONTROL 圖樣]** 欄位會自動將型別修改為 **[!UICONTROL 自訂]**.
 
 若要套用顯示模式，在「模式」欄位中定義的字元或數字數目，必須符合或超過欄位、變數和表單資料模型元素值中定義的字元或數字。 如需詳細資訊，請參閱 [範例](../../forms/using/create-interactive-communication.md#greaternumberofdigits).
 
@@ -308,7 +308,7 @@ ht-degree: 1%
 
 ## 套用規則至互動式通訊元件 {#rules}
 
-若要在互動式通訊中條件化元件或內容，請點選元件/內容片段，然後選取 ![createruleicon](assets/createruleicon.png) （建立規則）以啟動規則編輯器。
+若要在互動式通訊中條件化元件或內容，請選取元件/內容片段，然後選取 ![createruleicon](assets/createruleicon.png) （建立規則）以啟動規則編輯器。
 
 如需詳細資訊，請參閱：
 
@@ -332,7 +332,7 @@ ht-degree: 1%
 
 1. 指定表格中每個儲存格的資料繫結。 若要建立可重複的列，請在屬於通用集合屬性的列中插入表單資料模型屬性。
 
-   1. 點選表格中的儲存格並選取 ![configure_icon](assets/configure_icon.png) （設定）。
+   1. 選取表格中的儲存格並選取 ![configure_icon](assets/configure_icon.png) （設定）。
 
       「屬性」對話方塊會顯示在側邊欄中。
 
@@ -352,7 +352,7 @@ ht-degree: 1%
 
       * **[!UICONTROL 可由Agent編輯]**：選取以允許代理程式編輯代理程式UI中欄位的值。
 
-   1. 點選 ![完成圖示](assets/done_icon.png).
+   1. 選取 ![完成圖示](assets/done_icon.png).
 
 1. 預覽互動式通訊，以檢視以資料呈現的表格。
 
@@ -360,20 +360,20 @@ ht-degree: 1%
 
 ### 僅限Web-channel表格 {#webchanneltables}
 
-點選Web範本中的根面板，然後點選 **+** 以新增 **表格** 元件至互動式通訊。 包含兩列的表格會插入互動式通訊中。 表格的第一列代表「表格」標頭。
+在Web範本中選取根面板，然後選取 **+** 以新增 **表格** 元件至互動式通訊。 包含兩列的表格會插入互動式通訊中。 表格的第一列代表「表格」標頭。
 
 #### 新增列和欄至表格 {#addrowscolumnstable}
 
 **若要新增或刪除欄：**
 
-1. 點選表格標頭列中的預設文字方塊，以檢視元件工具列。
+1. 選取表格標頭列中的預設文字方塊，以檢視元件工具列。
 1. 選取 **新增欄** 或 **刪除欄** 以分別新增或刪除表格欄。
 
 ![component_toolbar_table1](assets/component_toolbar_table1.png)
 
 **若要新增或刪除列：**
 
-1. 點選任何表格列可檢視元件工具列。 您也可以使用互動式通訊Sidekick中的內容瀏覽器來選取表格列。
+1. 選取任何表格列以檢視元件工具列。 您也可以使用互動式通訊Sidekick中的內容瀏覽器來選取表格列。
 1. 選取 **新增列** 或 **刪除列** 以分別新增或刪除表格列。 使用 **上移** 和 **下移** 工具列中的可用選項可重新排清單格中的列。
 
 ![元件工具列](assets/component_toolbar_table_row_new.png)
@@ -382,23 +382,23 @@ ht-degree: 1%
 
 #### 在表格儲存格中新增或編輯文字 {#addedittexttable}
 
-1. 在表格儲存格中選取預設文字方塊，然後點選 ![編輯](assets/edit.png) （編輯）。
-1. 在表格儲存格中輸入文字，然後點選 ![完成圖示](assets/done_icon.png) 以儲存。
+1. 在表格儲存格中選取預設文字方塊，然後選取 ![編輯](assets/edit.png) （編輯）。
+1. 在表格儲存格中輸入文字，然後選取 ![完成圖示](assets/done_icon.png) 以儲存。
 
 #### 在表格儲存格和資料模型物件元素之間建立繫結 {#createbindingtablecells}
 
-1. 選取表格列中的預設文字方塊，然後點選 ![編輯](assets/edit.png) （編輯）。
-1. 點選「資料模型物件」下拉式清單，然後選取屬性。
-1. 點選以儲存並建立表格儲存格與資料模型物件屬性之間的繫結。
+1. 選取表格列中的預設文字方塊，然後選取 ![編輯](assets/edit.png) （編輯）。
+1. 選取「資料模型物件」下拉式清單，然後選取屬性。
+1. 選取以儲存並建立表格儲存格與資料模型物件屬性之間的繫結。
 
 ![建立資料繫結](assets/create_data_binding_table_new.png)
 
 #### 為表格儲存格中的文字建立超連結 {#createhyperlinktable}
 
-1. 在表格儲存格中選取預設文字方塊，然後點選 ![編輯](assets/edit.svg) （編輯）。
-1. 選取表格儲存格中的文字，然後點選「超連結」圖示。
+1. 在表格儲存格中選取預設文字方塊，然後選取 ![編輯](assets/edit.svg) （編輯）。
+1. 選取表格儲存格中的文字，然後選取「超連結」圖示。
 1. 在「 」中指定URL **路徑** 欄位。
-1. 點選 ![完成圖示](assets/done_icon.png) 以儲存超連結屬性。
+1. 選取 ![完成圖示](assets/done_icon.png) 以儲存超連結屬性。
 
 ![建立超連結](assets/create_hyperlink_table_new.png)
 
@@ -422,9 +422,9 @@ ht-degree: 1%
 
 若要啟用排序：
 
-1. 選取表格並點選 ![configure_icon](assets/configure_icon.png) （設定）。 您也可以使用 **內容** 互動式通訊側邊欄中的瀏覽器。
+1. 選取表格並選取 ![configure_icon](assets/configure_icon.png) （設定）。 您也可以使用 **內容** 互動式通訊側邊欄中的瀏覽器。
 1. 選取 **啟用排序。**
-1. 點選 ![完成圖示](assets/done_icon.png) 以儲存表格屬性。 欄標題中的排序圖示（向上和向下箭頭）表示已啟用排序。
+1. 選取 ![完成圖示](assets/done_icon.png) 以儲存表格屬性。 欄標題中的排序圖示（向上和向下箭頭）表示已啟用排序。
 
    ![啟用排序](assets/enable_sorting_new-1.png)
 
@@ -454,7 +454,7 @@ ht-degree: 1%
 若要存取 **屬性** 頁面：
 
 1. 登入AEM作者執行個體並導覽至 **Adobe Experience Manager** > **Forms** > **Forms與檔案**.
-1. 選取互動式通訊並點選 **屬性**.
+1. 選取互動式通訊，然後選取 **屬性**.
 1. 選取 **一般** 標籤以編輯 **標題** 和 **說明** 欄位。
 
 ### 新增或刪除Web channel {#add-or-delete-the-web-channel}
@@ -464,18 +464,18 @@ ht-degree: 1%
 1. 在 **屬性** 頁面，選取 **頻道** 標籤。
 1. 選取 **Web** 核取方塊，並選取網路頻道的範本。
 1. 選取 **針對Web Channel使用「列印為主版」** 啟用Web頻道與列印頻道之間的同步化。
-1. 點選 **儲存並關閉** 以儲存變更。
+1. 選取 **儲存並關閉** 以儲存變更。
 
-   同樣地，您可以點選 **Web** 上的核取方塊 **頻道** 索引標籤以從互動式通訊中刪除Web channel。
+   同樣地，您可以選取 **Web** 上的核取方塊 **頻道** 索引標籤以從互動式通訊中刪除Web channel。
 
 ## 新增Button元件至Web channel {#add-button-component-to-the-web-channel}
 
-您可以將按鈕當做元件新增到互動式通訊的Web channel中。 使用定義規則 [規則編輯器](../../forms/using/rule-editor.md) 點選按鈕即可導覽至其他互動式通訊、最適化表單、影像或檔案片段等其他資產，或外部URL。
+您可以將按鈕當做元件新增到互動式通訊的Web channel中。 使用定義規則 [規則編輯器](../../forms/using/rule-editor.md) ，以便能夠導覽至其他互動式通訊、最適化表單、其他資產（例如影像或檔案片段）或按鈕上的外部URL。
 
 若要新增按鈕並定義其上的規則：
 
-1. 點選Web範本中的根面板，然後點選 **+** 新增 **按鈕** 元件至互動式通訊。
-1. 點選按鈕元件，然後點選 ![edit-rules](assets/edit-rules.png) 以定義點選按鈕上的規則。
+1. 在Web範本中選取根面板，然後選取 **+** 新增 **按鈕** 元件至互動式通訊。
+1. 選取按鈕元件並選取 ![edit-rules](assets/edit-rules.png) 以定義按鈕選取的規則。
 1. 在 **時間** 區段，選取 **已點按** 從按鈕下拉式清單的狀態中。
 1. 在 **則** 區段：
 
@@ -483,11 +483,11 @@ ht-degree: 1%
 
    1. 指定互動式通訊、最適化表單、資產或網頁的URL。 例如，以下列格式指定URL以導覽至其他互動式通訊： https://&lt;server-name>：&lt;port>/editor.html/content/forms/af/&lt;interactive communication=&quot;&quot; name=&quot;&quot;>/channels/&lt;channel name=&quot;&quot; print=&quot;&quot; or=&quot;&quot; web=&quot;&quot;>.html
    1. 指定可在相同標籤、新標籤或新視窗中開啟資產的選項。
-   1. 點選 **完成** 然後點選 **關閉** 以儲存規則。
+   1. 選取 **完成** 然後選取 **關閉** 以儲存規則。
 
    同樣地，您可以從動作型別下拉式清單中選取其他可用選項，例如「啟動服務」和「提交表單」。 如需詳細資訊，請參閱 [規則編輯器](../../forms/using/rule-editor.md).
 
-1. 預覽互動式通訊，然後點選按鈕以檢視互動式通訊、最適化表單、資產或步驟4(b)中指定的網頁。
+1. 預覽互動式通訊，並選取按鈕以檢視互動式通訊、最適化表單、資產或步驟4(b)中指定的網頁。
 
 ## 將面板元件新增至Web Channel {#add-panel-component-to-the-web-channel}
 
@@ -497,19 +497,19 @@ ht-degree: 1%
 
 1. 插入 **面板** 元件時，可使用下列任一選項：
 
-   * 點選元件，點選 **+** 並選取 **面板** 元件。
+   * 選取元件，選取 **+** 並選取 **面板** 元件。
 
    * 從 **元件** 瀏覽器面板，拖放 **面板** 互動式通訊上的元件。
 
-   * 點選 **面板** 在 **內容** 瀏覽器面板並點選 **新增子面板**. 選取 **新增子面板** 選項會顯示 **新增子面板** 對話方塊。 輸入面板元件的標題和選擇性說明及名稱。
+   * 選取 **面板** 在 **內容** 瀏覽器面板並選取 **新增子面板**. 選取 **新增子面板** 選項會顯示 **新增子面板** 對話方塊。 輸入面板元件的標題和選擇性說明及名稱。
 
-1. 從「 」點選面板 **內容** 瀏覽器在面板上執行其他動作，例如設定、編輯規則、複製、刪除和插入元件。
+1. 從中選擇面板 **內容** 瀏覽器在面板上執行其他動作，例如設定、編輯規則、複製、刪除和插入元件。
 
    您也可以拖放面板於 **內容** 瀏覽器，以反映右窗格中互動式通訊結構的變更。
 
 ## 將Web Channel與列印管道同步 {#synchronize}
 
-當您在建立互動式通訊時選取Web Channel的「列印為主版」時，Web channel會與Print channel同步建立，而Web channel的內容和資料繫結會衍生自print channel，而且當您點選「同步」時，在print channel中所做的變更會反映在web channel中。
+當您在建立互動式通訊時選取Web Channel的「列印為主版」時，Web channel會與Print channel同步建立，而Web channel的內容和資料繫結會衍生自print channel，而且當您選取「同步」時，在print channel中所做的變更會反映在web channel中。
 
 不過，作者可視需要中斷Web Channel中元件的繼承。
 
@@ -540,13 +540,13 @@ ht-degree: 1%
 
 在Web Channel中，元件會嵌入目標區域中。
 
-將滑鼠游標停留在Web Channel中的相關目標區域或變數上，然後選取 ![取消繼承](assets/cancelinheritance.png) （取消繼承），然後在「取消繼承」對話方塊中，點選 **[!UICONTROL 是]**.
+將滑鼠游標停留在Web Channel中的相關目標區域或變數上，然後選取 ![取消繼承](assets/cancelinheritance.png) （取消繼承），然後在「取消繼承」對話方塊中選取 **[!UICONTROL 是]**.
 
 會取消目標區域內元件的繼承，現在您可以視需要加以編輯。
 
 ### 重啟先前設定 {#re-enable-inheritance}
 
-在Web Channel中，如果您已取消元件的繼承，則可重新啟用它。 若要重新啟用繼承，請將游標停留在相關目標區域的邊界（包括元件）上，然後點選 ![reenableinheritance](assets/reenableinheritance.png).
+在Web Channel中，如果您已取消元件的繼承，則可重新啟用它。 若要重新啟用繼承，請將滑鼠停留在相關目標區域（包括元件）的邊界上，然後選取 ![reenableinheritance](assets/reenableinheritance.png).
 
 「回覆繼承」對話方塊隨即顯示。
 
@@ -554,17 +554,17 @@ ht-degree: 1%
 
 如有必要，請選取 **[!UICONTROL 在恢復繼承後同步頁面]**. 選取此選項可同步處理整個互動式通訊。 如果您未選取此選項，恢復繼承時只會同步相關的目標區域。
 
-點選 **[!UICONTROL 是]**.
+選取 **[!UICONTROL 是]**.
 
 ### 同步 {#synchronize-1}
 
 如果您使用Print as Master for Web Channel並變更Print channel，則可以同步內容以將新進行的變更帶到Web channel。
 
-1. 若要將Web channel與Print channel同步，請切換至Web channel，然後點選「更多選項」圖示。
+1. 若要將Web channel與Print channel同步，請切換至Web channel並選取「更多選項」圖示。
 
    ![自動同步選項](assets/auto_sync_options_new.png)
 
-1. 點選下列其中一項：
+1. 選取下列其中一項：
 
    * **[!UICONTROL 與列印同步]**：僅針對未取消繼承的目標區域同步內容。
    * **[!UICONTROL 重設]**：將Web channel內容與Print channel同步，並捨棄對Web channel所做的所有變更。
@@ -575,7 +575,7 @@ ht-degree: 1%
 
 ![元件工具列](assets/component_toolbar_inherited_web_new.png)
 
-點選元件以檢視下列選項：
+選取元件以檢視下列選項：
 
 * **複製：** 複製元件，並將其貼到互動式通訊中的其他位置。
 * **剪下：** 在互動式通訊中將元件從一個位置移動到另一個位置。
@@ -593,8 +593,8 @@ ht-degree: 1%
 
 Web Channel編寫介面有助於將面板中的元件分組，以便同時對這些元件執行操作。 此 **內容** tab會列出群組元件，作為內容樹中面板的子元素。
 
-1. 點選元件並選取群組( ![群組](assets/group.jpg))作業。
-1. 選取多個元件並點選 **面板中的群組物件**.
+1. 選取元件並選取群組( ![群組](assets/group.jpg))作業。
+1. 選取多個元件並選取 **面板中的群組物件**.
 
    ![群組物件](assets/component_toolbar_group_objects_new.png)
 

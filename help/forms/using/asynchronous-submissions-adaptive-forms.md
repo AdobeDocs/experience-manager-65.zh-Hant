@@ -7,10 +7,10 @@ topic-tags: develop
 docset: aem65
 feature: Adaptive Forms
 exl-id: bd0589e2-b15a-4f0e-869c-2da4760b1ff4
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 13%
+source-wordcount: '781'
+ht-degree: 11%
 
 ---
 
@@ -33,18 +33,18 @@ ht-degree: 13%
 
 若要設定最適化表單的非同步提交：
 
-1. 在調適型表單製作模式下，選取「表單容器」物件並點選 ![cmppr1](assets/cmppr1.png) 以開啟其屬性。
+1. 在調適型表單製作模式中，選取「表單容器」物件，然後選取「 」 ![cmppr1](assets/cmppr1.png) 以開啟其屬性。
 1. 在 **[!UICONTROL 提交]** 屬性區段，啟用 **[!UICONTROL 使用非同步提交]**.
 1. 在 **[!UICONTROL 提交時]** 區段，選取下列其中一個選項以在成功提交表單時執行。
 
    * **[!UICONTROL 重新導向至URL]**：在提交表單時重新導向至指定的URL或頁面。 您可以指定URL或瀏覽以選擇 **[!UICONTROL 重新導向URL/路徑]** 欄位。
    * **[!UICONTROL 顯示訊息]**：在提交表單時顯示訊息。 您可以在[顯示訊息]選項下方的文字欄位中寫入訊息。 文字欄位支援RTF格式。
 
-1. 點選 ![check-button1](assets/check-button1.png) 以儲存屬性。
+1. 選取 ![check-button1](assets/check-button1.png) 以儲存屬性。
 
 ## 非同步提交的運作方式 {#how-asynchronous-submission-works}
 
-AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。處理常式是根據伺服器回應執行的用戶端函數。提交表單時，資料會傳送至伺服器進行驗證，伺服器會傳回回應給使用者端，其中包含提交成功或錯誤事件的相關資訊。 這項資訊可以參數傳遞至相關處理常式以執行該函數。
+AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。處理常式是根據伺服器回應執行的用戶端函數。提交表單時，資料會傳送至伺服器進行驗證，伺服器會傳回回應給使用者端，其中包含提交成功或錯誤事件的相關資訊。 此資訊會以引數形式傳遞至相關處理常式，以執行函式。
 
 此外，表單作者和開發人員可在表單層級撰寫規則以覆寫預設處理常式。 如需詳細資訊，請參閱 [使用規則覆寫預設處理常式](#custom).
 
@@ -102,9 +102,9 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。處�
 
 執行以下步驟來在程式碼編輯器中撰寫規則，以處理成功和錯誤事件。
 
-1. 在撰寫模式中開啟最適化表單，選取任何表單物件，然後點選 ![edit-rules1](assets/edit-rules1.png) 以開啟規則編輯器。
-1. 選取 **[!UICONTROL 表單]** 在「表單物件」樹狀結構中，點選 **[!UICONTROL 建立]**.
+1. 在撰寫模式中開啟最適化表單，選取任何表單物件，然後選取 ![edit-rules1](assets/edit-rules1.png) 以開啟規則編輯器。
+1. 選取 **[!UICONTROL 表單]** 在「表單物件」樹狀結構中，選取 **[!UICONTROL 建立]**.
 1. 選取 **[!UICONTROL 代碼編輯器]** 從模式選取下拉式清單。
-1. 在程式碼編輯器中，點選 **[!UICONTROL 編輯程式碼]**. 點選 **[!UICONTROL 編輯]** 在確認對話方塊上。
+1. 在程式碼編輯器中，選取 **[!UICONTROL 編輯程式碼]**. 選取 **[!UICONTROL 編輯]** 在確認對話方塊上。
 1. 選擇 **[!UICONTROL 提交成功]** 或 **[!UICONTROL 提交時發生錯誤]** 從 **[!UICONTROL 事件]** 下拉式清單。
-1. 為選取的事件撰寫規則，然後點選 **[!UICONTROL 完成]** 以儲存規則。
+1. 為選取的事件撰寫規則，然後選取 **[!UICONTROL 完成]** 以儲存規則。

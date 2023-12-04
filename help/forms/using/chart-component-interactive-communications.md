@@ -11,10 +11,10 @@ discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2608'
-ht-degree: 2%
+source-wordcount: '2621'
+ht-degree: 1%
 
 ---
 
@@ -28,13 +28,13 @@ ht-degree: 2%
 
 執行以下步驟，在互動式通訊中新增及設定圖表：
 
-1. 點選 **元件** 互動式通訊的副手。
+1. 選取 **元件** 互動式通訊的副手。
 1. 拖放 **圖表** 元件至下列其中一個元件：
 
    * 列印管道：目標區域或影像欄位
    * Web channel：面板或目標區域
 
-1. 在互動式通訊編輯器中點選圖表元件，然後選取 **[!UICONTROL 設定(]** ![configure_icon](assets/configure_icon.png))。
+1. 在互動式通訊編輯器中選取圖表元件，然後選取 **[!UICONTROL 設定(]** ![configure_icon](assets/configure_icon.png))。
 
    圖表屬性會顯示在左窗格中。
 
@@ -47,13 +47,13 @@ ht-degree: 2%
    Web Channel中折線圖的基本屬性
 
 1. 設定 [圖表屬性](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties) 根據管道型別而定。
-1. （僅限列印管道）在 **[!UICONTROL 代理程式設定]**，指定代理程式是否需要使用此圖表。 如果 **[!UICONTROL 代理程式必須使用此圖表]** 選項未選取，代理程式可以點選中圖表的眼睛圖示 **[!UICONTROL 內容]** 座席UI的索引標籤以顯示或隱藏圖表。
+1. （僅限列印管道）在 **[!UICONTROL 代理程式設定]**，指定代理程式是否需要使用此圖表。 如果 **[!UICONTROL 代理程式必須使用此圖表]** 選項未選取，則代理程式可選取圖表的眼睛圖示 **[!UICONTROL 內容]** 座席UI的索引標籤以顯示或隱藏圖表。
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
-1. 點選 ![完成圖示](assets/done_icon.png) 以儲存圖表屬性。
+1. 選取 ![完成圖示](assets/done_icon.png) 以儲存圖表屬性。
 
-   點選 **[!UICONTROL 預覽]** 以檢視與圖表相關聯的外觀和資料。 點選 **[!UICONTROL 編輯]** 以重新設定圖表屬性。
+   選取 **[!UICONTROL 預覽]** 以檢視與圖表相關聯的外觀和資料。 選取 **[!UICONTROL 編輯]** 以重新設定圖表屬性。
 
 ## 設定圖表屬性 {#configure-chart-properties}
 
@@ -64,7 +64,7 @@ ht-degree: 2%
   <tr>
    <td>欄位</td>
    <td>說明</td>
-   <td>頻道類型</td>
+   <td>通道類型</td>
   </tr>
   <tr>
    <td>名稱</td>
@@ -169,7 +169,7 @@ ht-degree: 2%
      <li><strong>參考點&gt;繫結型別： </strong>可用於象限圖的<strong> </strong>指定參考點的繫結型別。 使用靜態文字或資料模型物件屬性來定義參考點的值。</li>
      <li><strong>參照點&gt; X軸： </strong>可用於象限圖（如果選取） <span class="uicontrol">靜態</code> 從「繫結型別」下拉式清單中，指定參照點的X軸值。</li>
      <li><strong>參照點&gt; Y軸： </strong>可用於象限圖（如果選取） <span class="uicontrol">靜態</code> 從「繫結型別」下拉式清單中，指定參照點的Y軸值。</li>
-     <li><strong>「參考點」&gt;「系列資料模型物件」： </strong>如果您選取「 」，則可用於多個數列象限圖表 <span class="uicontrol">資料模型物件</code> 從「繫結型別」下拉式清單。 定義表單資料模型物件屬性以確認參考點的系列. </li>
+     <li><strong>「參考點」&gt;「系列資料模型物件」： </strong>如果您選取「 」，則可用於多個數列象限圖表 <span class="uicontrol">資料模型物件</code> 從「繫結型別」下拉式清單。 定義表單資料模型物件屬性，以識別參考點的系列。 </li>
      <li><strong>「參考點&gt;系列資料模型物件值」： </strong>如果您選取「 」，則可用於多個數列象限圖表 <span class="uicontrol">資料模型物件</code> 從「繫結型別」下拉式清單。 使用系列表單資料模型物件屬性，以及此欄位中定義的值來識別參考點的系列。</li>
      <li><strong>參考點&gt;參考點的資料模型物件： </strong>可用於象限圖（如果選取） <span class="uicontrol">資料模型物件</code> 從「繫結型別」下拉式清單。 定義與X軸和Y軸上繪製的屬性同等的表單資料模型物件屬性。 此外，對於多個系列，定義資料模型物件屬性，該屬性是為系列定義的資料模型物件屬性的子實體。</li>
      <li><strong>參考點&gt;參考點的資料模型物件值： </strong>可用於象限圖（如果選取） <span class="uicontrol">資料模型物件</code> 從「繫結型別」下拉式清單。 使用表單資料模型物件屬性作為參考點，使用此欄位中定義的值來識別圖表的參考點。<br /> <strong>象限標籤&gt;左上方：</strong> 可用於象限圖表，以指定左上象限的名稱。</li>

@@ -5,9 +5,9 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2010'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 ## 使用Agent UI準備互動式通訊 {#prepare-interactive-communication-using-the-agent-ui}
 
 1. 選取 **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 選取適當的互動式通訊並點選 **[!UICONTROL 開啟Agent UI]**.
+1. 選取適當的互動式通訊，然後選取 **[!UICONTROL 開啟Agent UI]**.
 
    >[!NOTE]
    >
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 1. 在「資料」標籤中，視需要輸入變數、表單資料模型屬性和列印範本(XDP)欄位的資料。 填寫所有標有星號(&amp;ast；)的必要欄位，以啟用 **提交** 按鈕。
 
-   點選互動式通訊預覽中的資料欄位值，以反白顯示「資料」標籤中的對應資料欄位，反之亦然。
+   在互動式通訊預覽中選取資料欄位值，以反白顯示「資料」標籤中對應的資料欄位，反之亦然。
 
 ### 管理內容 {#manage-content}
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
    ![agentuicontenttab](assets/agentuicontenttab.png)
 
-1. 視需要在「內容」標籤中編輯檔案片段。 若要將焦點置於內容階層中的相關片段，您可以點選互動式通訊預覽中的相關行或段落，或直接點選內容階層中的片段。
+1. 視需要在「內容」標籤中編輯檔案片段。 若要將焦點置於內容階層中的相關片段，您可以在互動式通訊預覽中選取相關行或段落，或直接在內容階層中選取片段。
 
    例如，在下圖中的預覽中選取了行為「立即線上上付款……」的檔案片段，並在「內容」標籤中選取了相同的檔案片段。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
    在「內容」或「資料」標籤中，點選「內容」 ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，您可以停用或啟用在預覽中點選/選取相關文字、段落或資料欄位時，移至檔案片段的功能。
 
-   代理程式在建立互動式通訊時可以編輯的片段具有編輯選取的內容( ![iconeditselectedcontent](assets/iconeditselectedcontent.png))圖示。 點選「編輯選取的內容」圖示，在編輯模式中啟動片段並進行變更。 使用下列選項來格式化及管理文字：
+   代理程式在建立互動式通訊時可以編輯的片段具有編輯選取的內容( ![iconeditselectedcontent](assets/iconeditselectedcontent.png))圖示。 選取「編輯選取的內容」圖示，在編輯模式中啟動片段並進行變更。 使用下列選項來格式化及管理文字：
 
    * [格式化選項](#formattingtext)
 
@@ -89,11 +89,11 @@ ht-degree: 0%
 
 1. 選取 **[!UICONTROL 附件]**. 建立互動式通訊時，代理程式UI會依設定顯示可用的附件。
 
-   您可以點選檢檢視示，選擇不隨互動式通訊提交附件，也可以點選附件中的十字架將其從互動式通訊中刪除（如果允許代理程式刪除或隱藏附件）。 對於建立互動式通訊時指定為必要專案的附件，「檢視」和「刪除」圖示會停用。
+   您可以點選檢檢視示，選擇不隨互動式通訊提交附件，也可以選取附件中的十字形將其從互動式通訊中刪除（如果允許代理程式刪除或隱藏附件）。 對於建立互動式通訊時指定為必要專案的附件，「檢視」和「刪除」圖示會停用。
 
    ![隨附sagentui](assets/attachmentsagentui.png)
 
-1. 點選「資料庫存取」 ( ![程式庫存取](assets/libraryaccess.png))圖示以存取「內容資料庫」，將DAM資產插入為附件。
+1. 選取程式庫存取權( ![程式庫存取](assets/libraryaccess.png))圖示以存取「內容資料庫」，將DAM資產插入為附件。
 
    >[!NOTE]
    >
@@ -102,7 +102,7 @@ ht-degree: 0%
 1. 如果在建立互動式通訊時未鎖定附件的順序，您可以選取附件並點選向下和向上箭頭，以重新排序附件。
 1. 使用「Web預覽」和「列印預覽」，檢視這兩個輸出是否符合您的要求。
 
-   如果您覺得預覽令人滿意，請點選 **[!UICONTROL 提交]** 提交/傳送互動式通訊至貼文程式。 或者，若要進行變更，請退出預覽以返回進行變更。
+   如果您認為預覽令人滿意，請選取 **[!UICONTROL 提交]** 提交/傳送互動式通訊至貼文程式。 或者，若要進行變更，請退出預覽以返回進行變更。
 
 ## 格式化文字 {#formattingtext}
 
@@ -122,7 +122,7 @@ ht-degree: 0%
 
 ### 醒目提示/強調文字部分 {#highlightemphasize}
 
-若要醒目提示\強調可編輯片段中的部分文字，請選取文字並點選「醒目提示顏色」。
+若要醒目提示\強調可編輯片段中的部分文字，請選取文字並選取「醒目提示顏色」。
 
 ![highlighttextagentui](assets/highlighttextagentui.png)
 
@@ -183,22 +183,22 @@ Adobe建議依序執行這些指示，以成功將互動式通訊儲存為草稿
    SPI可讓您將互動式通訊的草稿版本儲存到資料庫，並將草稿ID儲存為唯一識別碼。 這些指示假設您擁有有關如何使用Maven專案建置OSGi套件的先前知識。
 
    如需實作範例，請參閱 [ccrDocumentInstance SPI實作範例](#sample-ccrDocumentInstance-spi).
-1. 開啟 `http://<hostname>:<port>/ system/console/bundles` 然後點選 **[!UICONTROL 安裝/更新]** 上傳OSGi套件組合。 確認上傳之封裝的狀態顯示為 **作用中**. 如果封裝的狀態未顯示為，請重新啟動伺服器 **作用中**.
+1. 開啟 `http://<hostname>:<port>/ system/console/bundles` 並選取 **[!UICONTROL 安裝/更新]** 上傳OSGi套件組合。 確認上傳之封裝的狀態顯示為 **作用中**. 如果封裝的狀態未顯示為，請重新啟動伺服器 **作用中**.
 1. 前往 `https://'[server]:[port]'/system/console/configMgr`。
-1. 點選 **[!UICONTROL 建立通訊設定]**.
-1. 選取 **[!UICONTROL 使用CCRDocumentInstanceService啟用儲存]** 然後點選 **[!UICONTROL 儲存]**.
+1. 選取 **[!UICONTROL 建立通訊設定]**.
+1. 選取 **[!UICONTROL 使用CCRDocumentInstanceService啟用儲存]** 並選取 **[!UICONTROL 儲存]**.
 
 ### 將互動式通訊儲存為草稿 {#save-as-draft-agent-ui}
 
 執行以下步驟，將互動式通訊儲存為草稿：
 
-1. 在Forms Manager中選取互動式通訊，然後點選 **[!UICONTROL 開啟Agent UI]**.
+1. 在Forms Manager中選取互動式通訊，然後選取 **[!UICONTROL 開啟Agent UI]**.
 
-1. 在Agent UI中進行適當的變更，然後點選 **[!UICONTROL 另存為草稿]**.
+1. 在Agent UI中進行適當的變更，然後選取 **[!UICONTROL 另存為草稿]**.
 
-1. 在「 」中指定草繪的名稱 **[!UICONTROL 名稱]** 欄位並點選 **[!UICONTROL 完成]**.
+1. 在「 」中指定草繪的名稱 **[!UICONTROL 名稱]** 欄位並選取 **[!UICONTROL 完成]**.
 
-將互動式通訊儲存為草稿後，點選 **[!UICONTROL 儲存變更]** 以儲存對草稿所做的任何進一步變更。
+將互動式通訊儲存為草稿後，選取 **[!UICONTROL 儲存變更]** 以儲存對草稿所做的任何進一步變更。
 
 ### 擷取互動式通訊的草稿 {#retrieve-draft}
 

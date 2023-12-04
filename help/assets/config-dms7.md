@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '6489'
+source-wordcount: '6508'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 3%
 >* [智慧型影像](/help/assets/imaging-faq.md)
 >* [快取失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 >* [直接連結保護](/help/assets/hotlink-protection.md)
->* [HTTP/2 內容傳送](/help/assets/http2.md)
+>* [HTTP/2內容傳送](/help/assets/http2.md)
 >* cdn層級的URL重新導向
 >* Akamai ChinaCDN （針對中國境內的最佳傳送方式）
 
@@ -142,7 +142,7 @@ Feature Pack 18912可讓您透過FTP大量擷取資產，或在Experience Manage
 
    * **[!UICONTROL 同步處理所有內容]** - <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->預設為選取。 如果您想要選擇性地在同步至Dynamic Media時包含或排除資產，請取消選取此選項。 取消選取此選項可讓您從下列兩種Dynamic Media同步模式中選擇：
 
-   * **[!UICONTROL Dynamic Media 同步處理模式]**
+   * **[!UICONTROL Dynamic Media同步模式]**
       * **[!UICONTROL 預設為啟用]**  — 除非您特別將資料夾標籤為排除，否則預設會將設定套用至所有資料夾。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL 預設為停用]**  — 除非您明確將選取的資料夾標示為同步至Dynamic Media，否則此設定不會套用至任何資料夾。
 若要將選取的資料夾標示為同步至Dynamic Media，請選取資產資料夾，然後在工具列上選取「 」 **[!UICONTROL 屬性]**. 在 **[!UICONTROL 詳細資料]** 標籤，在 **[!UICONTROL Dynamic Media同步模式]** 從下拉式清單中選擇下列三個選項。 完成後，選取 **[!UICONTROL 儲存]**. *請記住：如果您選取「 」，則無法使用這三個選項&#x200B;**[!UICONTROL 同步處理所有內容]**較早。* 另請參閱 [在Dynamic Media中使用資料夾層級的選擇性發佈](/help/assets/selective-publishing.md).
@@ -276,7 +276,7 @@ Dynamic Media中的密碼到期日設為目前系統日期起的100年。
 
    * 將上方路徑複製並貼到工具列下方的CRXDE Lite路徑欄位中，然後按下 `Enter`.
 
-1. 在左側邊欄中，以滑鼠右鍵按一下 `fileupload`，然後從彈出式選單中選取「 」 **[!UICONTROL 覆蓋節點]**.
+1. 在左側邊欄中，按一下右鍵 `fileupload`，然後從彈出式選單中選取「 」 **[!UICONTROL 覆蓋節點]**.
 
    ![覆蓋節點選項](/help/assets/assets-dm/uploadassets15gb_a.png)
 
@@ -388,7 +388,7 @@ Dynamic Media色彩管理可讓您校正資產的色彩。 透過色彩校正，
 
    * 按兩下 **[!UICONTROL 已啟用]** 欄位。 預設會啟用所有資產MIME型別(設為 **[!UICONTROL true]**)，這表示資產會同步至Dynamic Media以進行處理。 如果您不想處理此資產mime型別，請將此設定變更為 **[!UICONTROL false]**.
 
-   * 點兩下 **[!UICONTROL jobParam]** 以開啟其相關的文字欄位。 另請參閱 [支援的Mime型別](/help/assets/assets-formats.md#supported-mime-types) 取得可用於指定mime型別的允許處理引數值清單。
+   * 雙選 **[!UICONTROL jobParam]** 以開啟其相關的文字欄位。 另請參閱 [支援的Mime型別](/help/assets/assets-formats.md#supported-mime-types) 取得可用於指定mime型別的允許處理引數值清單。
 
 1. 執行下列任一項作業：
 
@@ -442,7 +442,7 @@ Dynamic Media色彩管理可讓您校正資產的色彩。 透過色彩校正，
 
    ![crxdelite_cqdoc-14627](assets/crxdelite_cqdoc-14627.png)
 
-1. 使用MIME型別 `image_vnd.dwg` 仍然選取，從 **[!UICONTROL 屬性]** 標籤，在 **[!UICONTROL 已啟用]** 列，在 **[!UICONTROL 值]** 欄標題，點兩下值以開啟 **[!UICONTROL 值]** 下拉式清單。
+1. 使用MIME型別 `image_vnd.dwg` 仍然選取，從 **[!UICONTROL 屬性]** 標籤，在 **[!UICONTROL 已啟用]** 列，在 **[!UICONTROL 值]** 欄標題，連按兩下值以開啟 **[!UICONTROL 值]** 下拉式清單。
 1. 型別 `false` 在欄位中(或選取 **[!UICONTROL false]** （從下拉式清單中選取）。
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)
@@ -698,7 +698,7 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 
 **若要更新Dynamic Media Classic上傳連線：**
 
-1. 瀏覽到 `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
+1. 瀏覽至 `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
 1. 在 **[!UICONTROL 連線數目]** 欄位和/或 **[!UICONTROL 作用中工作逾時]** 欄位，視需要變更數字。
 
    此 **[!UICONTROL 連線數目]** 設定可控制Experience Manager至Dynamic Media上傳時允許的最大HTTP連線數量；通常預先定義的10個連線值就足夠了。

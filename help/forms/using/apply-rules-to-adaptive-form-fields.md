@@ -8,9 +8,9 @@ uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 exl-id: 0202ca65-21ef-4477-b704-7b52314a7d7b
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1115'
 ht-degree: 0%
 
 ---
@@ -45,12 +45,12 @@ ht-degree: 0%
 
    [http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html](http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html)
 
-1. 點選 **[!UICONTROL 客戶ID]** 欄位並點選 **[!UICONTROL 編輯規則]** 圖示。 「規則編輯器」視窗隨即開啟。
-1. 點選 **[!UICONTROL +建立]** 圖示以新增規則。 這會開啟視覺化編輯器。
+1. 選取 **[!UICONTROL 客戶ID]** 欄位並選取 **[!UICONTROL 編輯規則]** 圖示。 「規則編輯器」視窗隨即開啟。
+1. 選取 **[!UICONTROL +建立]** 圖示以新增規則。 這會開啟視覺化編輯器。
 
    在視覺編輯器中， **[!UICONTROL 時間]** 陳述式預設為選取。 此外，表單物件(在此案例中， **[!UICONTROL 客戶ID]**)啟動規則編輯器的位置，則會在 **[!UICONTROL 時間]** 陳述式。
 
-1. 點選 **[!UICONTROL 選取狀態]** 下拉式清單並選取 **[!UICONTROL 已變更]**.
+1. 選取 **[!UICONTROL 選取狀態]** 下拉式清單並選取 **[!UICONTROL 已變更]**.
 
    ![whencustomeridischanged](assets/whencustomeridischanged.png)
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
    ![dropobjectstooutputfield-retrievedata](assets/dropobjectstooutputfield-retrievedata.png)
 
-   點選 **[!UICONTROL 完成]** 以儲存規則。 在規則編輯器視窗上，點選「 」 **[!UICONTROL 關閉]**.
+   選取 **[!UICONTROL 完成]** 以儲存規則。 在規則編輯器視窗中，選取 **[!UICONTROL 關閉]**.
 
 1. 預覽最適化表單。 在中輸入ID **[!UICONTROL 客戶ID]** 欄位。 該表單現在可以從資料庫擷取客戶詳細資訊。
 
@@ -74,8 +74,8 @@ ht-degree: 0%
 
 從資料庫擷取客戶詳細資料後，您可以更新送貨地址、州別和郵遞區號。 下列程式會叫用「表單資料模型」服務，將客戶資訊更新至資料庫：
 
-1. 選取 **[!UICONTROL 提交]** 欄位並點選 **[!UICONTROL 編輯規則]** 圖示。 「規則編輯器」視窗隨即開啟。
-1. 選取 **[!UICONTROL 提交 — 按一下]** 規則，然後點選 **[!UICONTROL 編輯]** 圖示。 編輯提交規則的選項隨即顯示。
+1. 選取 **[!UICONTROL 提交]** 欄位並選取 **[!UICONTROL 編輯規則]** 圖示。 「規則編輯器」視窗隨即開啟。
+1. 選取 **[!UICONTROL 提交 — 按一下]** 規則並選取 **[!UICONTROL 編輯]** 圖示。 編輯提交規則的選項隨即顯示。
 
    ![submit-rule](assets/submit-rule.png)
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
    ![已點按提交](assets/submit-is-clicked.png)
 
-1. 在 **[!UICONTROL 則]** 選項，點選 **[!UICONTROL +新增陳述式]** 選項。 選取 **[!UICONTROL 啟動服務]** 從 **[!UICONTROL 選取動作]** 下拉式清單。
+1. 在 **[!UICONTROL 則]** 選項，選取 **[!UICONTROL +新增陳述式]** 選項。 選取 **[!UICONTROL 啟動服務]** 從 **[!UICONTROL 選取動作]** 下拉式清單。
 1. 選取 **[!UICONTROL 更新送貨地址]** 來自的服務 **[!UICONTROL 選取]** 下拉式清單。
 
    ![update-shipping-address](assets/update-shipping-address.png)
@@ -97,7 +97,7 @@ ht-degree: 0%
    >請勿拖放 **[!UICONTROL 名稱]** 和 **[!UICONTROL 客戶ID]** 欄位至對應的tablename.property （例如customerdetails.name）。 它有助於避免錯誤地更新客戶的名稱和ID。
 
 1. 拖放 **[!UICONTROL 客戶ID]** 欄位來自 [!UICONTROL 表單物件] 標籤切換至中的id欄位 **[!UICONTROL 輸入]** 方塊。 沒有前置字元Tablename的欄位（例如，此使用案例中的Customerdetails）會作為更新服務的搜尋引數。 此 **[!UICONTROL id]** 此使用案例中的欄位可唯一識別  **customerdetails**  表格。
-1. 點選 **[!UICONTROL 完成]** 以儲存規則。 在規則編輯器視窗上，點選「 」 **[!UICONTROL 關閉]**.
+1. 選取 **[!UICONTROL 完成]** 以儲存規則。 在規則編輯器視窗中，選取 **[!UICONTROL 關閉]**.
 1. 預覽最適化表單。 擷取客戶的詳細資料、更新送貨地址並提交表單。 當您再次擷取相同客戶的詳細資料時，會顯示更新的送貨地址。
 
 ## 步驟3： （額外區段）使用程式碼編輯器執行驗證並顯示錯誤訊息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
@@ -108,12 +108,12 @@ ht-degree: 0%
 
 下列程式說明如果表單中輸入的客戶ID不存在於資料庫中，如何建立規則以顯示錯誤訊息。 此規則也會將焦點導向並重設 **[!UICONTROL 客戶ID]** 欄位。 規則使用 [表單資料模型服務的dataIntegrationUtils API](/help/forms/using/invoke-form-data-model-services.md) 檢查客戶ID是否存在於資料庫中。
 
-1. 點選 **[!UICONTROL 客戶ID]** 欄位並點選 `Edit Rules` 圖示。 此 [!UICONTROL 規則編輯器] 視窗會開啟。
-1. 點選 **[!UICONTROL +建立]** 圖示以新增規則。 這會開啟視覺化編輯器。
+1. 選取 **[!UICONTROL 客戶ID]** 欄位並選取 `Edit Rules` 圖示。 此 [!UICONTROL 規則編輯器] 視窗會開啟。
+1. 選取 **[!UICONTROL +建立]** 圖示以新增規則。 這會開啟視覺化編輯器。
 
    在視覺編輯器中， **[!UICONTROL 時間]** 陳述式預設為選取。 此外，表單物件(在此案例中， **[!UICONTROL 客戶ID]**)啟動規則編輯器的位置，則會在 **[!UICONTROL 時間]** 陳述式。
 
-1. 點選 **[!UICONTROL 選取狀態]** 下拉式清單並選取 **[!UICONTROL 已變更]**.
+1. 選取 **[!UICONTROL 選取狀態]** 下拉式清單並選取 **[!UICONTROL 已變更]**.
 
    ![whencustomeridischanged](assets/whencustomeridischanged.png)
 

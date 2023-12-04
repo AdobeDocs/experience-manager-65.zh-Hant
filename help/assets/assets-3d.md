@@ -8,7 +8,7 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '2354'
 ht-degree: 2%
@@ -79,7 +79,7 @@ Dynamic Media支援下列3D格式。
    * 使用3D資產中繼資料
 
       * [管理數位資產的中繼資料](/help/assets/metadata.md).
-      * [中繼資料結構描述](/help/assets/metadata-schemas.md).
+      * [中繼資料結構](/help/assets/metadata-schemas.md).
 
 1. **發佈3D資產**
 
@@ -127,7 +127,7 @@ Dynamic Media支援下列3D格式。
    | **轉動相機** | 使檢視畫面在 3D 場景和物件周圍環繞 | 按一下左鍵+拖曳。 | 單指按下+拖曳。 |
    | **平移相機** | 向左、向右、向上或向下平移檢視。 | 按一下滑鼠右鍵+拖曳。 | 雙指按下+拖曳。 |
    | **縮放相機** | 在3D場景中移入和移出區域。 | 滾輪。 | 兩指捏合。 |
-   | **重新將相機置中** | 將相機重新置中至3D場景中物件上的某個點。 | 按兩下。 | 點兩下。 |
+   | **重新將相機置中** | 將相機重新置中至3D場景中物件上的某個點。 | 按兩下。 | 連按兩下。 |
    | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點恢復到3D資產的中心。 重設也會將相機移到更近或更遠的位置，以合理的檢視大小完整顯示資產。 |   |   |
    | **全熒幕模式** | 若要進入全熒幕模式，請在頁面的右下角選取「全熒幕」圖示。 |   |   |
 
@@ -160,7 +160,7 @@ Dynamic Media支援下列3D格式。
    | **轉動相機** | 使檢視畫面在 3D 場景和物件周圍環繞 | 按一下左鍵+拖曳。 | 單指按下+拖曳。 |
    | **平移相機** | 向左、向右、向上或向下平移檢視。 | 按一下滑鼠右鍵+拖曳。 | 雙指按下+拖曳。 |
    | **縮放相機** | 在3D場景中移入和移出區域。 | 滾輪。 | 兩指捏合。 |
-   | **重新將相機置中** | 將相機重新置中至3D場景中物件上的某個點。 | 按兩下。 | 點兩下。 |
+   | **重新將相機置中** | 將相機重新置中至3D場景中物件上的某個點。 | 按兩下。 | 連按兩下。 |
    | **重設** | 在頁面的右下角附近，選取「重設」圖示，將檢視目標點恢復到3D資產的中心。 重設也會將相機移到更近或更遠的位置，以合理的檢視大小完整顯示資產。 |   |   |
    | **全熒幕模式** | 若要進入全熒幕模式，請在頁面的右下角選取「全熒幕」圖示。 |   |   |
 
@@ -206,7 +206,7 @@ Dynamic Media內含Dynamic Media 3D Media元件，您可以在Adobe Experience M
 
 1. 在側面板中，選取加號圖示以開啟 **[!UICONTROL 元件]** 清單。
 
-   ![3d-media-component-drag-drop](/help/assets/assets-dm/3d-assets-filter.png)
+   ![3d-media-component-drop](/help/assets/assets-dm/3d-assets-filter.png)
 
 1. 拖曳 **[!UICONTROL 3D媒體]** 元件來自 **[!UICONTROL 元件]** 列出到頁面上您希望3D檢視器出現的位置。
 
@@ -270,7 +270,7 @@ Dynamic Media接受以下支援的各種3D檔案格式 *靜態內容* 在Dynamic
 1. 選取 **[!UICONTROL 關閉]** 以結束對話方塊並返回資產詳細資訊頁面。
 1. 從3D資產檔案名稱左側的下拉式清單中，選取 **[!UICONTROL 轉譯]**.
 
-   ![3d-asset-renditions](/help/assets/assets-dm/3d-asset-renditions.png)
+   ![3d資產轉譯](/help/assets/assets-dm/3d-asset-renditions.png)
 
 1. 選取 **[!UICONTROL 原始]**. 發佈（或「啟動」）3D資產時， **[!UICONTROL URL]** 如果符合下列3D資產條件，按鈕會出現在頁面左下角附近：
    * 3D資產是支援的格式（GLB、OBJ、STL和USDZ）。

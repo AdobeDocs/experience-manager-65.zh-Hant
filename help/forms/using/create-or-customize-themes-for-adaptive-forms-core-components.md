@@ -7,10 +7,10 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1971'
-ht-degree: 6%
+source-wordcount: '1933'
+ht-degree: 4%
 
 ---
 
@@ -69,7 +69,7 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
 ### 自訂主題的先決條件 {#prerequisites}
 
-* [為您的環境啟用調適型表單核心元件.](/help/forms/using/enable-adaptive-forms-core-components.md)
+* [啟用最適化Forms核心元件](/help/forms/using/enable-adaptive-forms-core-components.md) 適合您的環境。
 
 * 安裝最新版本的 [Apache Maven。](https://maven.apache.org/download.cgi) Apache Maven是常用於Java™專案的組建自動化工具。 安裝最新版本可確保您擁有佈景主題自訂的必要相依性。
 
@@ -145,7 +145,7 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 
 此 `variable.scss` 檔案包含佈景主題的全域變數。 透過更新這些變數，您可以在主題層級進行樣式相關的變更。 若要套用佈景主題層級樣式，請依照下列步驟進行：
 
-1. 閇啟 `<your-theme-sources>/src/site/_variables.scss` 檔案進行編輯。
+1. 開啟 `<your-theme-sources>/src/site/_variables.scss` 檔案進行編輯。
 1. 變更任何屬性的值。 例如，預設的錯誤顏色為紅色。 若要將錯誤顏色從紅色變更為藍色，請將 `$error`變數中。 例如，`$error: #196ee5`。
 
    ![範例：錯誤顏色設定為藍色](/help/forms/using/assets/theme-level-changes.png)
@@ -187,7 +187,7 @@ AEM Forms 6.5提供下列核心元件型最適化Forms的主題。
 若要將主題部署至AEM執行個體，必須將其轉換為使用者端資料庫。 請依照下列步驟，將主題轉換為使用者端資源庫：
 
 1. 開啟命令提示字元或終端機視窗。
-1. 導覽至 `<your-theme-sources>` 檔案夾。例如 `C:\aem-forms-theme-canvas`
+1. 導覽至 `<your-theme-sources>` 資料夾。 例如 `C:\aem-forms-theme-canvas`
 1. 執行以下命令：
 
    ```
@@ -233,7 +233,7 @@ To apply and test the customized theme with an Adaptive Form:
 
 1. Log in to your AEM Forms author instance. 
 
-1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
+1. Select **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
 1. Click **Create** > **Adaptive Forms**. The wizard for creating Adaptive Form opens.
 
@@ -247,7 +247,7 @@ An Adaptive Form with the selected theme is created.
 
 1. Log in to your AEM Forms author instance. 
 
-1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
+1. Select **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
 1. Select an Adaptive Form and click Properties. 
 
@@ -271,7 +271,7 @@ The selected theme is applied to the Adaptive Form.
 
 安裝套件後，就可以選取主題。
 
-![主題用戶端程式庫](/help/forms/using/assets/themeclientlibrary.png)
+![主題使用者端資源庫](/help/forms/using/assets/themeclientlibrary.png)
 
 >[!NOTE]
 >
@@ -283,7 +283,7 @@ The selected theme is applied to the Adaptive Form.
 將主題套用至最適化表單的步驟如下：
 
 1. 登入您的本機AEM作者執行個體。
-1. 在 Experience Manager 登入頁面上輸入您的認證。點選 **Adobe Experience Manager** > **Forms** > **Forms與檔案**.
+1. 在 Experience Manager 登入頁面上輸入您的認證。選取 **Adobe Experience Manager** > **Forms** > **Forms與檔案**.
 1. 按一下 **建立** > **最適化Forms**.
 1. 選取最適化Forms核心元件範本，然後按一下 **下一個**. 此 **新增屬性** 出現
 1. 指定 **名稱** 最適化表單的預設值。

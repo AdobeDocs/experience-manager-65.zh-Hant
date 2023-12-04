@@ -10,9 +10,9 @@ discoiquuid: 87f5f9f5-2d03-4565-830e-eacc3757e542
 docset: aem65
 feature: Form Data Model
 exl-id: 9a73a643-7ad4-49aa-a971-08d52679158d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1268'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ AEM Forms資料整合可讓您使用不同的後端資料來源建立表單資�
 
    ![create-af-1-1](assets/create-af-1-1.png)
 
-1. 點選以展開 **[!UICONTROL 選取表單資料模型]**. 列出所有可用的表單資料模型。
+1. 選取以展開 **[!UICONTROL 選取表單資料模型]**. 列出所有可用的表單資料模型。
 
    從資料模型中選取。
 
@@ -93,19 +93,19 @@ AEM Forms資料整合可讓您使用不同的後端資料來源建立表單資�
 
 ## 使用範例資料預覽 {#preview-ic}
 
-表單資料模型編輯器可讓您為表單資料模型中的資料模型物件產生和編輯範例資料。 您可以使用此資料來預覽和測試互動式通訊和調適型表單。 您必須在預覽之前產生範例資料，如所述 [使用表單資料模型](../../forms/using/work-with-form-data-model.md#sample).
+表單資料模型編輯器可讓您為表單資料模型中的資料模型物件產生和編輯範例資料。 您可以使用此資料來預覽和測試互動式通訊和調適型表單。 在預覽之前產生範例資料，如所述 [使用表單資料模型](../../forms/using/work-with-form-data-model.md#sample).
 
 若要預覽包含範例表單資料模型資料的互動式通訊：
 
 1. 在AEM作者執行個體上，瀏覽至 **[!UICONTROL Forms > Forms與檔案]**.
-1. 選取互動式通訊並點選 **[!UICONTROL 預覽]** 在工具列中選取 **[!UICONTROL 網頁管道]**， **[!UICONTROL Print Channel]**，或 **[!UICONTROL Both Channel]** 以預覽互動式通訊。
-1. 在預覽中 [*頻道*] 對話方塊，確認 **[!UICONTROL 表單資料模型的測試資料]** 已選取並點選 **[!UICONTROL 預覽]**.
+1. 選取互動式通訊並選取 **[!UICONTROL 預覽]** 在工具列中選取 **[!UICONTROL 網頁管道]**， **[!UICONTROL Print Channel]**，或 **[!UICONTROL Both Channel]** 以預覽互動式通訊。
+1. 在預覽中 [*頻道*] 對話方塊，確認 **[!UICONTROL 表單資料模型的測試資料]** 已選取並選取 **[!UICONTROL 預覽]**.
 
 互動式通訊隨即開啟，並預填樣本資料。
 
 ![Web預覽](assets/web-preview.png)
 
-同樣地，若要預覽包含範例資料的最適化表單，請在作者模式中開啟最適化表單並點選 **[!UICONTROL 預覽]**.
+同樣地，若要預覽含有範例資料的最適化表單，請在作者模式中開啟最適化表單，然後選取 **[!UICONTROL 預覽]**.
 
 ## 使用表單資料模型服務預填 {#prefill}
 
@@ -135,10 +135,10 @@ AEM Forms提供立即可用的表單資料模型預填服務，可讓您啟用�
 
 1. 將包含二進位屬性的資料模型物件新增至表單資料模型。
 1. 在最適化表單中，拖放 **[!UICONTROL 檔案附件]** 元件從元件瀏覽器移至最適化表單。
-1. 點選以選取新增的元件，然後點選 ![settings_icon](assets/settings_icon.png) 以開啟元件的「屬性」瀏覽器。
-1. 在「繫結參考」欄位中，點選 ![foldersearch_18](assets/foldersearch_18.png) 並導覽以選取您在表單資料模型中新增的二進位屬性。 視需要設定其他屬性。
+1. 選取以選取新增的元件，然後選取 ![settings_icon](assets/settings_icon.png) 以開啟元件的「屬性」瀏覽器。
+1. 在「繫結參考」欄位中，選取 ![foldersearch_18](assets/foldersearch_18.png) 並導覽以選取您在表單資料模型中新增的二進位屬性。 視需要設定其他屬性。
 
-   點選 ![勾選按鈕](assets/check-button.png) 以儲存屬性。 附件欄位現在已繫結至表單資料模型的二進位屬性。
+   選取 ![勾選按鈕](assets/check-button.png) 以儲存屬性。 附件欄位現在已繫結至表單資料模型的二進位屬性。
 
 1. 在最適化表單容器屬性的提交區段中，啟用 **[!UICONTROL 提交表單附件]**. 它會在表單提交時，將二進位屬性欄位中的附件提交至資料來源。
 

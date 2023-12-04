@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3544'
-ht-degree: 5%
+source-wordcount: '3533'
+ht-degree: 3%
 
 ---
 
@@ -266,7 +266,7 @@ ht-degree: 5%
 
 1. 在AEM編寫執行個體中，按一下 **Forms > Forms和檔案。**
 1. 選取表單，然後按一下 **檢視屬性**.
-1. 在「屬性」視窗中，點選「 」 **表單模型**.
+1. 在「屬性」視窗中，選取 **表單模型**.
 您也可以在建立表單時選取表單模型。
 
    >[!NOTE]
@@ -302,8 +302,8 @@ ht-degree: 5%
 
 若要將您在「記錄檔案」標籤中輸入的品牌資訊當地語系化，您必須確保已正確設定瀏覽器的地區設定。 若要自訂記錄檔案的品牌資訊，請完成下列步驟：
 
-1. 在記錄檔案中選取面板（根面板），然後點選 ![設定](assets/configure.png).
-1. 點選 ![dortab](/help/forms/using/assets/dortab.png). 記錄檔案索引標籤隨即顯示。
+1. 在記錄檔案中選取面板（根面板），然後選取 ![設定](assets/configure.png).
+1. 選取 ![dortab](/help/forms/using/assets/dortab.png). 記錄檔案索引標籤隨即顯示。
 1. 選取呈現記錄檔案的預設範本或自訂範本。 如果您選取預設範本，記錄檔案的縮圖預覽會顯示在「範本」下拉式清單下方。
 
    ![brandingtemplate](/help/forms/using/assets/brandingtemplate.png)
@@ -315,16 +315,16 @@ ht-degree: 5%
    * **標誌影像**：您可以選取使用最適化表單中的標誌影像、從DAM中選擇影像，或從電腦上傳影像。
    * **表單標題**
    * **頁首文字**
-   * **免責聲明標籤**
-   * **免責聲明**
-   * **免責聲明文字**
+   * **免責宣告標籤**
+   * **免責宣告**
+   * **免責宣告文字**
    * **輔色**：在檔案或記錄PDF中呈現標頭文字和分隔線的色彩
    * **字型系列**：記錄檔案PDF中文字的字型系列
    * **對於核取方塊與選項按鈕元件，僅顯示選取的值**
    * **所選多個值的分隔符號**
    * **包含未繫結至資料模型的表單物件**
    * **從記錄檔案排除隱藏的欄位**
-   * **隱藏面板描述**
+   * **隱藏面板說明**
 
    如果您選取的自訂XDP範本包含多個主版頁面，則這些頁面的屬性會顯示在 **[!UICONTROL 內容]** 的區段 **[!UICONTROL 記錄檔案]** 標籤。
 
@@ -348,7 +348,7 @@ ht-degree: 5%
    </proto>
    ```
 
-1. 若要儲存品牌變更，請點選[完成]。
+1. 若要儲存品牌變更，請選取「完成」。
 
 ## 記錄檔案中面板的表格和欄配置 {#table-and-column-layouts-for-panels-in-document-of-record}
 
@@ -409,12 +409,12 @@ ht-degree: 5%
 
 若要將分頁套用至記錄檔案：
 
-1. 點選面板並選取 ![設定](/help/forms/using/assets/configure.png)
+1. 選取面板並選取 ![設定](/help/forms/using/assets/configure.png)
 1. 展開 **[!UICONTROL 記錄檔案]** 以檢視屬性。
 
-1. 在 **[!UICONTROL 分頁]** 區段，點選 ![資料夾](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 地標]** 欄位。
-1. 點選 **[!UICONTROL 下一頁頂端]** 然後點選 **[!UICONTROL 選取]**. 您也可以點選 **[!UICONTROL 頁面頂端]**，選取主版頁面，然後點選 **[!UICONTROL 選取]** 以套用分頁符號。
-1. 點選![儲存](/help/forms/using/assets/save_icon.png)以儲存屬性。
+1. 在 **[!UICONTROL 分頁]** 區段，選取 ![資料夾](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 地標]** 欄位。
+1. 選取 **[!UICONTROL 下一頁頂端]** 並選取 **[!UICONTROL 選取]**. 您也可以選取 **[!UICONTROL 頁面頂端]**，選取主版頁面，然後選取 **[!UICONTROL 選取]** 以套用分頁符號。
+1. 選取 ![儲存](/help/forms/using/assets/save_icon.png) 以儲存屬性。
 
 選取的面板會移至下一頁。
 
@@ -428,13 +428,14 @@ ht-degree: 5%
 
 若要將第二個主版頁面屬性套用至面板，並將第三個主版頁面屬性套用至後續面板，請執行下列步驟：
 
-1. 點選面板以套用第二個主版頁面，然後選取 ![設定](assets/cmppr.png).
-1. 在 **[!UICONTROL 分頁]** 區段，點選 ![資料夾](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 地標]** 欄位。
-1. 點選 **[!UICONTROL 在頁面上]**，選取第二個主版頁面並點選 **[!UICONTROL 選取]**.
+1. 選取要套用第二個主版頁面的面板，然後選取 ![設定](assets/cmppr.png).
+1. 在 **[!UICONTROL 分頁]** 區段，選取 ![資料夾](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 地標]** 欄位。
+1. 選取 **[!UICONTROL 在頁面上]**，選取第二個主版頁面並選取 **[!UICONTROL 選取]**.
 AEM Forms會套用第二個主版頁面至面板，以及最適化表單中的所有後續面板。
-1. 在 **[!UICONTROL 分頁]** 區段，點選 ![資料夾](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 晚於]** 欄位。
-1. 點選 **[!UICONTROL 移至頁面]**，選取第三個主版頁面並點選 **[!UICONTROL 選取]**.
-1. 點選![儲存](/help/forms/using/assets/save_icon.png)以儲存屬性。AEM Forms會套用第三個主版頁面至面板，以及最適化表單中的所有後續面板。
+1. 在 **[!UICONTROL 分頁]** 區段，選取 ![資料夾](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 晚於]** 欄位。
+1. 選取 **[!UICONTROL 移至頁面]**，選取第三個主版頁面，然後選取 **[!UICONTROL 選取]**.
+1. 選取 ![儲存](/help/forms/using/assets/save_icon.png) 以儲存屬性。
+AEM Forms會套用第三個主版頁面至面板，以及最適化表單中的所有後續面板。
 
 
 ## 使用記錄檔案時的主要考量事項 {#key-considerations-when-working-with-document-of-record}

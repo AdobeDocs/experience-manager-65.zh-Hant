@@ -1,18 +1,14 @@
 ---
 title: 建立和新增範本和元件
-seo-title: Creating and Adding Templates and Components
 description: 請依照本頁面的說明進行，瞭解如何建立範本和元件並新增至您的應用程式。 頁面使用Geometrixx Unlimited應用程式作為包含範例應用程式範本和頁面範本的應用程式。
-seo-description: Follow this page to learn about creating and adding templates and components to your app. The page uses Geometrixx Unlimited App as the app that contains a sample app template and page templates.
-uuid: 3a93017c-8094-413f-a01c-9b72025a2b20
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1154'
-ht-degree: 0%
+source-wordcount: '1151'
+ht-degree: 1%
 
 ---
 
@@ -45,7 +41,7 @@ We.Unlimited應用程式是範例範本，代表可完整設定及管理的AEM M
 根據應用程式範本建立應用程式的步驟：
 
 1. 導覽至AEM Mobile應用程式目錄： *&lt;server-url>/aem/apps.html/content/mobileapps*
-1. 選取 **建立** —> **應用程式** 如下所示
+1. 選取 **建立** -> **應用程式** 如下所示
 
 使用此範本建立應用程式後，您可以將文章、橫幅和集合新增至應用程式。 若要重新造訪、建立文章、橫幅和集合，請參閱 [內容管理動作](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
@@ -145,7 +141,7 @@ Unlimited文章是範例範本，代表典型的AEM Mobile隨選文章版面。
 **若要編輯現有元件，請執行下列動作：**
 
 1. 選擇該頁面，並確保您位於 **編輯** 模式並選取元件
-1. 點選扳手圖示以設定元件
+1. 選取扳手圖示以設定元件
 
 >[!NOTE]
 >

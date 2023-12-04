@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 5%
@@ -81,12 +81,12 @@ Forms Workflow步驟提供詳細的記錄檔，以便您輕鬆偵錯工作流程
    https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr
 
 1. 選取 **[!UICONTROL Sling]** > **[!UICONTROL 記錄檔支援]**.
-1. 點選 **[!UICONTROL 新增記錄器。]**
+1. 選取 **[!UICONTROL 新增記錄器。]**
 1. 選取 **[!UICONTROL 偵錯]** 作為 **[!UICONTROL 記錄層級]**.
 1. 指定記錄檔的位置。 記錄檔的預設位置為： *logs\error.log*
 1. 將封裝的名稱指定為 **com.adobe.granite.workflow.core** 在 **[!UICONTROL Logger]** 欄。
 
-   執行這些步驟可讓儲存的偵錯記錄 **com.adobe.granite.workflow.core** 封裝。 點選 **[!UICONTROL +]** 並將下列封裝名稱新增至清單：
+   執行這些步驟可讓儲存的偵錯記錄 **com.adobe.granite.workflow.core** 封裝。 選取 **[!UICONTROL +]** 並將下列封裝名稱新增至清單：
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace

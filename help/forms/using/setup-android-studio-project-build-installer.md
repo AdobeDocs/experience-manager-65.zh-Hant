@@ -1,35 +1,35 @@
 ---
 title: 設定Android&trade； Studio專案並建置Android&trade；應用程式
-description: 設定Android&trade； Studio專案和建置Adobe Experience Manager (AEM) Forms應用程式安裝程式的步驟
+description: 設定Android&trade； Studio專案及建置Adobe Experience Manager (AEM) Forms應用程式安裝程式的步驟
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: forms-app
 exl-id: 47d6af00-34d8-4e5d-8117-86fc1b6f58cb
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 6%
+source-wordcount: '584'
+ht-degree: 2%
 
 ---
 
 # 設定Android™ Studio專案並建置Android™應用程式 {#set-up-the-android-studio-project-and-build-the-android-app}
 
-本文章適用於建置AEM Forms應用程式6.3.1.1和更新版本。 若要從AEM Forms應用程式6.3的原始程式碼建立應用程式，請參閱 [設定Eclipse專案並建置Android™應用程式](/help/forms/using/setup-eclipse-project-build-installer.md).
+本文章適用於建置AEM Forms應用程式6.3.1.1及更新版本。 若要從AEM Forms應用程式6.3的原始程式碼建立應用程式，請參閱 [設定Eclipse專案並建置Android™應用程式](/help/forms/using/setup-eclipse-project-build-installer.md).
 
 AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自訂AEM Forms應用程式的所有元件。 原始程式碼封存， `adobe-lc-mobileworkspace-src-<version>.zip` 是 `adobe-aemfd-forms-app-src-pkg-<version>.zip` 軟體發佈上的套件。
 
-若要取得AEM Forms應用程式來源，請執行下列步驟：
+若要取得AEM Forms應用程式來源，請執行以下步驟：
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
-1. 點一下頁首功能表中的 **[!UICONTROL Adobe Experience Manager]**。
+1. 選取 **[!UICONTROL Adobe Experience Manager]** 在頁首功能表中提供。
 1. 在 **[!UICONTROL 篩選器]** 區段：
    1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
-   2. 選取套件的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
-1. 點選適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
-1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
-1. 選取套件並按一下 **[!UICONTROL 安裝]**.
+   2. 選取封裝的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
+1. 選取適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，並選取 **[!UICONTROL 下載]**.
+1. 開啟 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  並按一下 **[!UICONTROL 上傳套裝]** 以上傳套件。
+1. 選取封裝，然後按一下 **[!UICONTROL 安裝]**.
 
-下圖顯示擷取的 `adobe-lc-mobileworkspace-src-<version>.zip`.
+下圖顯示已擷取的 `adobe-lc-mobileworkspace-src-<version>.zip`.
 
 ![已擷取壓縮的Android™來源內容](assets/mws-content-1.png)
 
@@ -61,22 +61,22 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 
    >[!NOTE]
    >
-   建議您將擷取的Android專案匯入Android™ Studio之前，先保留在系統磁碟機中。
+   建議您將專案匯入Android™ Studio之前，先將擷取的Android專案保留在系統磁碟機中。
 
 1. 啟動Android™ Studio。
 
-   **適用於Mac使用者**：更新 `local.properties` 檔案存在於 `[User_Home]/Projects/[your-project]/android` 資料夾並指向 `sdk.dir` 變數至 `SDK` 在案頭上的位置。
+   **適用於Mac使用者**：更新 `local.properties` 中的檔案 `[User_Home]/Projects/[your-project]/android` 資料夾並指向 `sdk.dir` 變數至 `SDK` 案頭上的位置。
 
-   **針對Windows®使用者**：更新 `local.properties` 檔案存在於 `%HOMEPATH%\Projects\[your-project]\android` 資料夾並指向 `sdk.dir` 變數至 `SDK` 在案頭上的位置。
+   **針對Windows®使用者**：更新 `local.properties` 中的檔案 `%HOMEPATH%\Projects\[your-project]\android` 資料夾並指向 `sdk.dir` 變數至 `SDK` 案頭上的位置。
 
 1. 按一下 **[!UICONTROL 完成]** 以建置專案。
 
-   此專案可在ADT Project Explorer中使用。
+   您可以在ADT Project Explorer中取得專案。
 
-   ![建立應用程式後執行eclipse專案](assets/eclipsebuildmws.png)
+   ![建置應用程式後執行eclipse專案](assets/eclipsebuildmws.png)
 
 1. 在Android™ Studio中，選取 **[!UICONTROL 匯入專案（Eclipse ADT、Gradle等）]**.
-1. 在專案總管中，選取您想在中建立的專案根目錄 **根目錄** 文字方塊：
+1. 在專案總管中，選取您要在中建置的專案根目錄 **根目錄** 文字方塊：
 
    **若為Mac使用者：** [User_Home]/Projects/MobileWorkspace/src/android
 
@@ -86,7 +86,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 
    ![dontremindmeagainforthisproject](assets/dontremindmeagainforthisproject.png)
 
-1. 成功建置Gradle後，會出現下列畫面。 將適當的裝置或模擬器連線至系統，然後按一下 **[!UICONTROL 執行Android™]**.
+1. 成功建置Gradle後，畫面如下。 將適當的裝置或模擬器連線至系統，然後按一下 **[!UICONTROL 執行Android™]**.
 
    ![gradleconsole](assets/gradleconsole.png)
 
@@ -98,7 +98,7 @@ AEM Forms提供AEM Forms應用程式的完整原始碼。 來源包含建立自�
 
 ### 使用Android™ Debug Bridge {#andriod-debug-bridge}
 
-您可以在Android™裝置上安裝應用程式，方法是使用 [Android™ Debug Bridge](https://developer.android.com/tools/adb) 使用下列指令：
+您可以透過以下方式，在Android™裝置上安裝應用程式： [Android™ Debug Bridge](https://developer.android.com/tools/adb) 使用下列指令：
 
 **適用於Mac使用者**： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
 

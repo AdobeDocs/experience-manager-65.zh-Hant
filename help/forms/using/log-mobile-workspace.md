@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: d19cba33-0646-40d4-b4a3-b28d6db4a1f3
-source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 啟動應用程式的方式 {#to-start-the-app}
 
-1. 在行動裝置上點選AEM Forms應用程式圖示。
+1. 在行動裝置上選取AEM Forms應用程式圖示。
 1. 若要登入應用程式，請輸入使用者名稱、密碼和AEM Forms伺服器URL。
 
    >[!NOTE]
@@ -33,4 +33,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在離線模式中，只有上次登入的使用者才能登入應用程式。
+>在離線模式下，只有上次登入的使用者才能登入應用程式。

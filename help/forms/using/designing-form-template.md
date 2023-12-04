@@ -7,16 +7,16 @@ topic-tags: hTML5_forms
 docset: aem65
 feature: Mobile Forms
 exl-id: 7c8d501f-c953-495e-8bac-1f66fd99c783
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 2%
+source-wordcount: '480'
+ht-degree: 0%
 
 ---
 
 # 為HTML5表單設計表單範本{#designing-form-templates-for-html-forms}
 
-AEM中的HTML5表單元件可將XFA表單範本轉譯為HTML5格式。 表單設計人員可使用以下工具設計表單範本： [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_tw) 和使用HTML5轉譯功能。 這些表單範本及其資產可以存放在AEM存放庫、檔案系統中，或透過http公開。 不過，如果您打算使用Forms Manager管理表單，範本和資產應存放在AEM存放庫中。
+AEM中的HTML5表單元件可將XFA表單範本轉譯為HTML5格式。 表單設計人員可使用以下工具設計表單範本： [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) 和使用HTML5轉譯功能。 這些表單範本及其資產可以存放在AEM存放庫、檔案系統中，或透過http公開。 不過，如果您打算使用Forms Manager管理表單，範本和資產應存放在AEM存放庫中。
 
 雖然HTML5表單在很大程度上符合PDF forms的行為，但兩種格式都有部分功能不適用於其他格式。 例如，Adobe Reader中PDF表單上套用條碼的方式，會因行動表單而異，或是表單的數位簽署方式也會因格式而異。 如需這類變體的詳細資訊，請參閱 [HTML5表單與PDF forms之間的功能差異](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
@@ -40,4 +40,4 @@ HTML5表單的主要目標是觸控裝置。 因此，在AEM Forms Designer中�
 
 #### RTF格式 {#rich-text-format}
 
-您可以將文字欄位轉換為RTF文字欄位。 這會新增格式選項清單至文字欄位。 若要轉換，請開啟Forms Designer，點選中的文字欄位 **[!UICONTROL 設計檢視]**. 在 **[!UICONTROL 欄位]** 索引標籤，選取 **[!UICONTROL RTF文字]** 從 **[!UICONTROL 欄位格式]** 下拉式清單。 現在，當XFA表單呈現為HTML5表單時，該欄位會呈現為RTF文字欄位。 點選 ![最大化](assets/maximize_icon.svg) 以檢視其他格式選項。
+您可以將文字欄位轉換為RTF文字欄位。 這會新增格式選項清單至文字欄位。 若要轉換，請開啟Forms Designer，選取中的文字欄位 **[!UICONTROL 設計檢視]**. 在 **[!UICONTROL 欄位]** 索引標籤，選取 **[!UICONTROL RTF文字]** 從 **[!UICONTROL 欄位格式]** 下拉式清單。 現在，當XFA表單呈現為HTML5表單時，該欄位會呈現為RTF文字欄位。 選取 ![最大化](assets/maximize_icon.svg) 以檢視其他格式選項。

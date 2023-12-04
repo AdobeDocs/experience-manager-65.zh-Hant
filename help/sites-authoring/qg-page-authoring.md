@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 5%
+source-wordcount: '1540'
+ht-degree: 4%
 
 ---
 
@@ -100,19 +100,19 @@ ht-degree: 5%
 
 如何選取頁面取決於您在主控台中使用的檢視：
 
-1. 欄檢視:
+1. 欄檢視：
 
-   * 點選/按一下所需資源的縮圖 — 縮圖上將覆蓋一個勾號，表示已選取該縮圖。
+   * 按一下所需資源的縮圖 — 縮圖上將覆蓋一個勾號，表示已選取該縮圖。
 
-1. 清單檢視:
+1. 清單檢視：
 
-   * 點選/按一下所需資源的縮圖 — 縮圖上將覆蓋一個勾號，表示已選取該縮圖。
+   * 按一下所需資源的縮圖 — 縮圖上將覆蓋一個勾號，表示已選取該縮圖。
 
-1. 卡片檢視:
+1. 卡片檢視：
 
    * 進入選擇模式的方法有： [選取所需的資源](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) 替換為：
 
-      * 行動裝置：點選並按住
+      * 行動裝置：選取並保留
       * 桌上型電腦： [快速動作](/help/sites-authoring/basic-handling.md#quick-actions)  — 勾選圖示：
 
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
@@ -158,24 +158,24 @@ ht-degree: 5%
 
    * [編輯現有元件的內容](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 在頁面上：
 
-      * 使用點選或按一下來開啟元件工具列。 使用 **編輯** （鉛筆）圖示以開啟對話方塊。
-      * 使用點選並按住或按兩下滑鼠鍵開啟元件的就地編輯器。 會顯示可用的動作（對於某些元件而言，為有限的選取範圍）。
+      * 按一下以開啟元件工具列。 使用 **編輯** （鉛筆）圖示以開啟對話方塊。
+      * 使用select-and-hold或按兩下滑鼠鍵開啟元件的就地編輯器。 會顯示可用的動作（對於某些元件而言，為有限的選取範圍）。
       * 若要檢視所有可用動作，請使用以下方法進入全熒幕模式：
 
      ![全熒幕模式](do-not-localize/screen_shot_2018-03-21at160706.png)
 
    * [設定現有元件的屬性](/help/sites-authoring/editing-content.md#component-edit-dialog)
 
-      * 使用點選或按一下來開啟元件工具列。 使用 **設定** （扳手）圖示以開啟對話方塊。
+      * 按一下以開啟元件工具列。 使用 **設定** （扳手）圖示以開啟對話方塊。
 
    * [移動元件](/help/sites-authoring/editing-content.md#moving-a-component) 兩者之一：
 
       * 將所需元件拖曳至其新位置。
-      * 使用點選或按一下來開啟元件工具列。 使用 **剪下** 則 **貼上** 圖示視需要顯示。
+      * 按一下以開啟元件工具列。 使用 **剪下** 則 **貼上** 圖示視需要顯示。
 
    * [複製（和貼上）](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 元件：
 
-      * 使用點選或按一下來開啟元件工具列。 使用 **複製** 則 **貼上** 圖示視需要。
+      * 按一下以開啟元件工具列。 使用 **複製** 則 **貼上** 圖示視需要。
 
    >[!NOTE]
    >
@@ -183,13 +183,13 @@ ht-degree: 5%
 
    * [刪除](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 元件：
 
-      * 點選或按一下以開啟元件工具列，然後使用 **刪除** 圖示。
+      * 按一下以開啟元件工具列，然後使用 **刪除** 圖示。
 
    * [新增註解](/help/sites-authoring/annotations.md#annotations) 移至頁面：
 
       * 選取 **註解** 模式（語音泡泡圖示）。 使用新增附註 **新增註解** （加號）圖示。 使用右上方的X退出附註模式。
 
-     ![注釋](do-not-localize/screen_shot_2018-03-21at160813.png)
+     ![註解](do-not-localize/screen_shot_2018-03-21at160813.png)
 
    * [預覽頁面](/help/sites-authoring/editing-content.md#preview-mode) （檢視其顯示在發佈環境中的方式）
 
@@ -305,7 +305,7 @@ ht-degree: 5%
 
    ![screen-shot_2019-03-05at114412](assets/screen-shot_2019-03-05at114412.png)
 
-1. 點選/按一下所需的參考型別以顯示更多詳細資訊，並（在適當時）採取進一步動作。
+1. 按一下所需的參照型別以顯示更多詳細資訊，並（在適當時）採取進一步動作。
 
 ### 建立頁面的版本 {#creating-a-version-of-your-page}
 
@@ -315,7 +315,7 @@ ht-degree: 5%
 
    ![screen_shot_2018-03-21at161355](assets/screen_shot_2018-03-21at161355.png)
 
-1. 點選/按一下「時間軸」欄右下方的向上箭頭，以顯示其他按鈕，包括 **另存為版本**.
+1. 按一下「時間軸」欄右下方的向上箭頭以顯示其他按鈕，包括 **另存為版本**.
 
    ![screen-shot_2019-03-05at114600](assets/screen-shot_2019-03-05at114600.png)
 
@@ -331,7 +331,7 @@ ht-degree: 5%
 
    如果頁面的某個版本已儲存，則會列在時間軸中。
 
-1. 點選/按一下您要還原的版本 — 這會顯示其他動作按鈕：
+1. 按一下您要還原的版本 — 這會顯示其他動作按鈕：
 
    * **還原為此版本**
 

@@ -4,9 +4,9 @@ description: 請參閱We.Gov參考網站逐步說明，瞭解AEM Forms如何協�
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 57b5ce89-6b01-4087-a485-6d9696f06378
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ We.Gov是國家營運的組織，如果養父母領養孩子，可讓他們註�
 
 ### 親眼看看 {#see-it-yourself}
 
-在您的瀏覽器中，開啟 `https://<hostname>:<PublishPort>/wegov`. 在We.Gov網站中，點選「應用程式>所有應用程式」 。 在「所有應用程式」頁面中，點選「FOIA要求的應用程式」下的「套用」 。
+在您的瀏覽器中，開啟 `https://<hostname>:<PublishPort>/wegov`. 在We.Gov網站中，選取「應用程式」>「所有應用程式」。 在「所有應用程式」頁面中，選取「FOIA要求的應用程式」下的「套用」。
 
 ## Sarah開始申請FOIA下的資訊 {#sarah-starts-her-application-for-information-under-foia}
 
@@ -54,7 +54,7 @@ Sarah點按次數 **套用** 而在資訊自由法案申請表頁面中，Sarah�
 
 索取2013至2016會計年度「兒童與家庭管理」個案記錄的復本
 
-Sarah隨時都可以點選 **儲存** 以儲存表單草稿，稍後再回來填寫表單並提交它。 Sarah提交表單。
+Sarah隨時可以選擇 **儲存** 以儲存表單草稿，稍後再回來填寫表單並提交它。 Sarah提交表單。
 
 >[!NOTE]
 >

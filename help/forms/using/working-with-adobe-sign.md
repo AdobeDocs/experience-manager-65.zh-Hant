@@ -11,10 +11,10 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3936'
-ht-degree: 2%
+source-wordcount: '3875'
+ht-degree: 1%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 2%
 執行以下步驟來建立啟用簽署的調適型表單：
 
 1. 瀏覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 點選 **[!UICONTROL 建立]** 並選取 **[!UICONTROL 最適化表單]**. 範本清單隨即顯示。 選取範本並點選 **[!UICONTROL 下一個]**.
+1. 選取 **[!UICONTROL 建立]** 並選取 **[!UICONTROL 最適化表單]**. 範本清單隨即顯示。 選取範本並選取 **[!UICONTROL 下一個]**.
 1. 在 **[!UICONTROL 基本]** 標籤：
 
    1. 指定 **[!UICONTROL 名稱]** 和 **[!UICONTROL 標題]** 用於最適化表單。
@@ -97,14 +97,14 @@ ht-degree: 2%
 
    * 選取 **[!UICONTROL 產生記錄檔案]** 選項。 如果您使用已啟用最適化表單的記錄檔案選項，則傳送以供簽署的檔案會顯示最適化表單的所有欄位。
 
-1. 點選「**[!UICONTROL 建立」。]** 建立可啟用簽名的最適化表單，此表單可用於新增 [!DNL Adobe Sign] 欄位。
+1. 選取 **[!UICONTROL 建立。]** 建立可啟用簽名的最適化表單，此表單可用於新增 [!DNL Adobe Sign] 欄位。
 
 #### 編輯最適化表單 [!DNL Adobe Sign] {#editafsign}
 
 執行以下步驟以使用 [!DNL Adobe Sign] 在現有的最適化表單中：
 
 1. 瀏覽至 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
-1. 選取最適化表單並點選 **[!UICONTROL 屬性]**.
+1. 選取最適化表單並選取 **[!UICONTROL 屬性]**.
 1. 在 **[!UICONTROL 基本]** 索引標籤中，選取 [設定容器](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) 已在設定時建立 [!DNL Adobe Sign] 使用AEM [!DNL Forms].
 1. 在 **[!UICONTROL 表單模型]** 索引標籤中，選取下列其中一個選項：
 
@@ -112,7 +112,7 @@ ht-degree: 2%
 
    * 選取 **[!UICONTROL 產生記錄檔案]** 選項。 如果您使用已啟用最適化表單的記錄檔案選項，則傳送以供簽署的檔案會顯示最適化表單的所有欄位。
 
-1. 點選 **[!UICONTROL 儲存並關閉]**. 已啟用最適化表單 [!DNL Adobe Sign].
+1. 選取 **[!UICONTROL 儲存並關閉]**. 已啟用最適化表單 [!DNL Adobe Sign].
 
 ### 將Adobe Sign欄位新增至最適化表單 {#addadobesignfieldstoanadaptiveform}
 
@@ -133,15 +133,15 @@ ht-degree: 2%
    >
    >
 
-1. 選取 **[!UICONTROL Adobe Sign區塊]** 元件並點選 **編輯** ![aem_6_3_edit](assets/aem_6_3_edit.png) 圖示。 它會顯示新增欄位和格式化欄位外觀的選項。
+1. 選取 **[!UICONTROL Adobe Sign區塊]** 元件並選取 **編輯** ![aem_6_3_edit](assets/aem_6_3_edit.png) 圖示。 它會顯示新增欄位和格式化欄位外觀的選項。
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
    **答：** 選取並新增 [!DNL Adobe Sign] 欄位。 **B.** 展開 [!DNL Adobe Sign] 封鎖至全熒幕檢視
 
-1. 點選 **[!UICONTROL Adobe Sign] 欄位** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) 圖示。 它會顯示選取和新增的選項 [!DNL Adobe Sign] 欄位。
+1. 選取 **[!UICONTROL Adobe Sign] 欄位** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) 圖示。 它會顯示選取和新增的選項 [!DNL Adobe Sign] 欄位。
 
-   展開 **[!UICONTROL 型別]** 下拉式欄位以選取 [!DNL Adobe Sign] 欄位並點選「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以將選取的欄位新增至 [!DNL Adobe Sign] 區塊。 此 **[!UICONTROL 型別]** 下拉式欄位包含簽名、簽署者資訊和資料欄位型別。 [!DNL Adobe Sign] 與AEM整合 [!DNL Forms] 支援欄位列在 [!UICONTROL 型別] 僅限下拉式方塊。 有關詳細資訊 [!DNL Adobe Sign] 欄位，請參閱 [Adobe Sign檔案](https://helpx.adobe.com/sign/help/field-types.html).
+   展開 **[!UICONTROL 型別]** 下拉式欄位以選取 [!DNL Adobe Sign] 欄位並選取「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以將選取的欄位新增至 [!DNL Adobe Sign] 區塊。 此 **[!UICONTROL 型別]** 下拉式欄位包含簽名、簽署者資訊和資料欄位型別。 [!DNL Adobe Sign] 與AEM整合 [!DNL Forms] 支援欄位列在 [!UICONTROL 型別] 僅限下拉式方塊。 有關詳細資訊 [!DNL Adobe Sign] 欄位，請參閱 [Adobe Sign檔案](https://helpx.adobe.com/sign/help/field-types.html).
 
    ![adobe-sign-block-fields-options](assets/adobe-sign-block-fields-options.png)
 
@@ -156,7 +156,7 @@ ht-degree: 2%
 
 立即可用， [!DNL Adobe Sign] 未針對最適化表單啟用。 執行以下步驟來啟用它：
 
-1. 在「內容」瀏覽器中，點選 **[!UICONTROL 表單容器]**，然後點選 **[!UICONTROL 設定]** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示最適化表單容器屬性。
+1. 在內容瀏覽器中，選取 **[!UICONTROL 表單容器]**，然後選取 **[!UICONTROL 設定]** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示最適化表單容器屬性。
 1. 在屬性瀏覽器中，展開 **[!UICONTROL 電子簽章]** 摺疊式功能表，然後選取 **[!UICONTROL 啟用Adobe Sign]** 選項。 可啟用 [!DNL Adobe Sign] 最適化表單的開頭。
 
 ### 選取 [!DNL Adobe Sign] Cloud Service和簽署順序 {#selectadobesigncloudserviceforanadaptiveform}
@@ -169,7 +169,7 @@ ht-degree: 2%
 
 ![雲端服務](assets/cloud-service.png)
 
-1. 在「內容」瀏覽器中，點選 **[!UICONTROL 表單容器]**，然後點選 **[!UICONTROL 設定]** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示最適化表單容器屬性。
+1. 在內容瀏覽器中，選取 **[!UICONTROL 表單容器]**，然後選取 **[!UICONTROL 設定]** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示最適化表單容器屬性。
 1. 在屬性瀏覽器中，展開 **[!UICONTROL 電子簽章]** 摺疊式功能表，然後選取 **[!UICONTROL 啟用Adobe Sign]** 選項。 可啟用 [!DNL Adobe Sign] 最適化表單的開頭。
 1. 從已設定的清單中選取雲端服務 [!DNL Adobe Sign] Cloud Service。
 
@@ -183,23 +183,23 @@ ht-degree: 2%
 
    多個簽署者可同時以同步順序簽署表單。
 
-1. [將簽署者新增至最適化表單](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform) 然後點選「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。
+1. [將簽署者新增至最適化表單](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform) 並選取「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。
 
 
 ### 將簽署者新增至最適化表單 {#addsignerstoanadaptiveform}
 
 一個最適化表單只能有一個或多個簽署者。 當您新增簽署者時，也可以設定簽署者的驗證詳細資訊。 您也可以選取表單填寫者與歌手是否為同一人。 執行以下步驟來新增並提供簽署者的各種詳細資訊：
 
-1. 在「內容」瀏覽器中，點選 **[!UICONTROL 表單容器]**，然後點選 **[!UICONTROL 設定]** ![設定](assets/configure.png) 圖示。 它會以最適化表單容器屬性開啟屬性瀏覽器。
+1. 在內容瀏覽器中，選取 **[!UICONTROL 表單容器]**，然後選取 **[!UICONTROL 設定]** ![設定](assets/configure.png) 圖示。 它會以最適化表單容器屬性開啟屬性瀏覽器。
 1. 在屬性瀏覽器中，展開 **[!UICONTROL 電子簽章]** 摺疊式功能表，然後選取 **[!UICONTROL 啟用Adobe Sign]** 選項。 可啟用 [!DNL Adobe Sign] 最適化表單的開頭。
-1. 點選 **[!UICONTROL 新增簽署者]** 在 **[!UICONTROL 簽署者設定]**. 它會新增簽名者至最適化表單。 您可以新增多個 [!DNL Adobe Sign] 最適化表單的簽署者。
+1. 選取 **[!UICONTROL 新增簽署者]** 在 **[!UICONTROL 簽署者設定]**. 它會新增簽名者至最適化表單。 您可以新增多個 [!DNL Adobe Sign] 最適化表單的簽署者。
    ![phone-details](assets/phone-details.png)
 
 1. 按一下 **編輯** ![aem_6_3_edit](assets/aem_6_3_edit.png) 圖示以指定下列有關簽署者的資訊：
 
    * **[!UICONTROL 標題]：** 指定標題以唯一識別簽署者。
 
-   * **[!UICONTROL 簽署者和人員在填寫相同的表單嗎？]：** 選取 **是**，如果表單填寫者與第一個簽署者是同一個人。 如果選項設為 **否，** 則請勿在調適型表單中使用簽名步驟元件。 如果表單包含「簽名步驟」元件，則欄位會自動設定為「是」。
+   * **[!UICONTROL 簽署者和填表人是否相同？]：** 選取 **是**，如果表單填寫者與第一個簽署者是同一個人。 如果選項設為 **否，** 則請勿在調適型表單中使用簽名步驟元件。 如果表單包含「簽名步驟」元件，則欄位會自動設定為「是」。
 
    * **[!UICONTROL 簽署者電子郵件地址]：** 指定簽署者的電子郵件地址。 簽署者在指定的電子郵件地址上接收要簽署的檔案/表單。 您可以選擇使用表單欄位、登入使用者的AEM使用者設定檔中提供的電子郵件地址，或手動輸入電子郵件地址。 此為強制步驟。 確認第一個簽署者或唯一簽署者（若有單一簽署者）的電子郵件地址與 [!DNL Adobe Sign] 用來設定AEM雲端服務的帳戶。
 
@@ -217,7 +217,7 @@ ht-degree: 2%
 
    上圖有兩個範例 [!DNL Adobe Sign] 區塊：個人資訊和辦公室詳細資訊
 
-   點選「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示。 簽署者已新增並設定。
+   選取完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示。 簽署者已新增並設定。
 
 ### 選擇最適化表單的提交動作 {#selectsubmitactionforanadaptiveform}
 
@@ -243,15 +243,15 @@ ht-degree: 2%
 
    ![簽署區塊](assets/sign-block-new.png)
 
-1. 選取 **[!UICONTROL Adobe Sign區塊]** 元件並點選 **編輯** ![aem_6_3_edit](assets/aem_6_3_edit.png) 圖示。 它會顯示新增欄位和格式化欄位外觀的選項。
+1. 選取 **[!UICONTROL Adobe Sign區塊]** 元件並選取 **編輯** ![aem_6_3_edit](assets/aem_6_3_edit.png) 圖示。 它會顯示新增欄位和格式化欄位外觀的選項。
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
    **答：** 選取並新增 [!DNL Adobe Sign] 欄位。 **B.** 展開 [!DNL Adobe Sign] 封鎖至全熒幕檢視
 
-1. 點選 **[!UICONTROL Adobe Sign欄位]** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) 圖示。 它會顯示選取和新增的選項 [!DNL Adobe Sign] 欄位。
+1. 選取 **[!UICONTROL Adobe Sign欄位]** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) 圖示。 它會顯示選取和新增的選項 [!DNL Adobe Sign] 欄位。
 
-   展開 **[!UICONTROL 型別]** 要選取的下拉式欄位 **[!UICONTROL 數位簽名]** 然後點選 **完成** 圖示以將選取的欄位新增至 [!DNL Adobe Sign] 區塊。
+   展開 **[!UICONTROL 型別]** 要選取的下拉式欄位 **[!UICONTROL 數位簽名]** 並選取 **完成** 圖示以將選取的欄位新增至 [!DNL Adobe Sign] 區塊。
 
    ![數位簽名](assets/digital_signatures_new.png)
 
@@ -286,7 +286,7 @@ ht-degree: 2%
 執行以下步驟來設定「簽章步驟」元件：
 
 1. 拖放 **[!UICONTROL 簽章步驟]** 元件從元件瀏覽器移至表單。
-1. 選取新新增的簽名步驟元件，然後點選 **設定** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示簽章步驟屬性。 設定下列屬性：
+1. 選取新新增的簽章步驟元件，然後選取 **設定** ![設定](assets/configure.png) 圖示。 它會開啟屬性瀏覽器並顯示簽章步驟屬性。 設定下列屬性：
 
    * **[!UICONTROL 名稱]**：指定元件的名稱。
 
@@ -300,7 +300,7 @@ ht-degree: 2%
 
    * **[!UICONTROL CSS類別]**：指定元件的CSS類別。
 
-   點選「完成」 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。
+   選取完成 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 圖示以儲存變更。
 
    ![簽章步驟](assets/signature_step_new.png)
 

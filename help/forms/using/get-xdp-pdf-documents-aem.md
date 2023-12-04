@@ -11,7 +11,7 @@ discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 0%
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 1. 登入AEM Forms使用者介面，方法是存取 `https://'[server]:[port]'/aem/forms.html`.
 1. 導覽至您要上傳表單的資料夾或包含表單的資料夾。
-1. 在動作工具列中，點選 **建立>檔案上傳**.
+1. 在動作工具列中，選取 **建立>檔案上傳**.
 
    ![「建立」下的「來自本機儲存體的檔案」選項](assets/step.png)
 

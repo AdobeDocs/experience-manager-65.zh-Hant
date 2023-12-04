@@ -9,10 +9,10 @@ discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1381'
-ht-degree: 6%
+source-wordcount: '1349'
+ht-degree: 1%
 
 ---
 
@@ -50,7 +50,7 @@ AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作�
 
    * **發佈**：透過網際網路或內部網路向公眾提供已發佈內容的AEM執行個體。
 
-* 符合記憶體需求。 AEM Forms附加元件套件需要：
+* 滿足記憶體要求。 AEM Forms附加包需要：
 
    * 15 GB 的臨時空間，供基於 Microsoft® Windows 的安裝使用。
    * UNIX安裝需要6 GB的暫存空間。
@@ -67,7 +67,7 @@ AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作�
   </tr>
   <tr>
    <td>libSM</td>
-   <td>茲利布</td>
+   <td>zlib</td>
    <td>libICE</td>
    <td>libuuid</td>
   </tr>
@@ -91,15 +91,15 @@ AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作�
 AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM Forms互動式通訊、通訊管理和其他功能。 執行以下步驟來安裝附加套件：
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
-1. 點一下頁首功能表中的 **[!UICONTROL Adobe Experience Manager]**。
+1. 選擇 **[!UICONTROL 標題功能表中的可用Adobe Experience Manager]** 。
 1. 在「篩選器」 **** 部分中：
    1. 從解決方案 **** 下拉式清單中選擇 **[!UICONTROL Forms]** 。
    2. 選擇包的版本和類型。 您也可以使用「 **[!UICONTROL Search下載]** 」選項來篩選結果。
-1. 點擊適用于您的作業系統的套裝軟體名稱，選擇接受 **[!UICONTROL EULA 條款]** ，然後點擊 **[!UICONTROL 下載]** 。
-1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
+1. 選取適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，並選取 **[!UICONTROL 下載]**.
+1. 打開 [ 封裝管理員 ](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  然後按一下上傳 **[!UICONTROL 包]** 以上傳包。
 1. 選擇包，然後按一下安裝 **** 。
 
-   還可以通過AEM Forms版本 ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant) 一文中 [ 列出的直接連結下載包。
+   還可以通過AEM Forms版本 ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) 一文中 [ 列出的直接連結下載包。
 
 1. 安裝包後，系統會提示您重新開機AEM 執行個體。 **不要立即重新開機伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出現在 AEM-Installation-Directory ] /crx-quickstart/logs/error.記錄檔 中 [ ，並且日誌穩定。
 1. 對所有Author和Publish執行個體重複步驟1至7。
@@ -112,7 +112,7 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 #### 設定RSA和BouncyCastle資料庫  {#configure-rsa-and-bouncycastle-libraries}
 
-在所有作者和Publish實例上執行以下步驟以引導委派資料庫：
+在所有Author和Publish執行個體上執行下列步驟，以啟動並委派程式庫：
 
 1. 停止基礎AEM執行個體。
 1. 開啟 [AEM安裝目錄]\crx-quickstart\conf\sling.properties檔案進行編輯。
@@ -143,16 +143,16 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 互動式通訊是在AEM 6.5 Forms中建立客戶通訊的預設和建議方法。 如果您已從舊版升級或移轉，並計畫繼續使用信件（通訊管理），請安裝 [AEMFD相容性套件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en).
 
-AEMFD相容性套件可讓您在AEM 6.5 Forms上使用下列AEM 6.4 Forms、AEM 6.3 Forms和AEM 6.2 Forms中的資產：
+AEMFD 相容性套件可讓您在 AEM 6.5 Forms AEM 6.4 Forms、AEM 6.3 Forms 和 AEM 6.2 Forms使用以下資產：
 
-* 檔案片段
+* 檔片段
 * 字母
 * 資料字典
 * 最適化表單已棄用的範本和頁面
 
-#### 設定 Dispatcher {#configure-dispatcher}
+#### 設定Dispatcher {#configure-dispatcher}
 
-Dispatcher 是 Adobe Experience Manager 的快取及負載平衡工具，搭配企業級網頁伺服器使用。如果您使用 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)，然後針對AEM Forms執行下列設定：
+Dispatcher是Adobe Experience Manager的快取和負載平衡工具，用於企業級網頁伺服器。 如果您使用 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant)，然後針對AEM Forms執行下列設定：
 
 1. 設定AEM Forms的存取權：
 

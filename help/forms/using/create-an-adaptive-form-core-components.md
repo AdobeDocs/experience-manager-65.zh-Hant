@@ -10,10 +10,10 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 34%
+source-wordcount: '1743'
+ht-degree: 31%
 
 ---
 
@@ -64,24 +64,24 @@ ht-degree: 34%
 
 1. 登入您的本機 [AEM作者執行個體](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=en#author-and-publish-installs).
 
-1. 在 Experience Manager 登入頁面上輸入您的認證。登入之後，在左上角點選「**[!UICONTROL Adobe Experience Manager]**」>「**[!UICONTROL 表單]**」>「**[!UICONTROL 表單與文件]**」。
+1. 在 Experience Manager 登入頁面上輸入您的認證。登入後，在左上角選取「 」 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms與檔案]**.
 
-1. 點選 **[!UICONTROL 建立]**  > **[!UICONTROL 建立最適化Forms]**.
+1. 選取 **[!UICONTROL 建立]**  > **[!UICONTROL 建立最適化Forms]**.
 
 1. 選取最適化Forms核心元件範本，然後按一下 **[!UICONTROL 下一個]**.
 
 1. 此 **[!UICONTROL 新增屬性]** 隨即顯示。 指定下列屬性欄位的值。 「標題」和「名稱」欄位為必填欄位：
 
    * **[!UICONTROL 標題：]** 指定表單的顯示名稱。 標題有助於在 [!DNL Experience Manager Forms] 使用者介面中識別表單。
-   * **[!UICONTROL 名稱：]**&#x200B;指定表單的名稱。存放庫中會建立具有指定名稱的節點。您開始輸入標題時，就會自動產生名稱欄位的值。您可以變更建議的值。名稱欄位只能包含字母數字字元、連字號和底線。
+   * **[!UICONTROL 名稱：]**&#x200B;指定表單的名稱。存放庫中會建立具有指定名稱的節點。您開始輸入標題時，就會自動產生名稱欄位的值。您可以變更建議的值。名稱欄位只能包含英數字元、連字型大小和底線。
    * **[!UICONTROL 說明：]** 指定表單的詳細資訊。
    * **[!UICONTROL 主題使用者端資源庫]：** 指定最適化表單的主題。 根據預設， `adaptiveform.theme.canvas3` 已選取主題。 您也可以從中選擇不同的主題 **[!UICONTROL 主題使用者端資源庫]** 下拉式功能表。
    * **[!UICONTROL 設定容器：]**  定義最適化Forms設定檔的儲存位置。 這些組態檔包含與Adaptive Forms的行為和外觀相關的設定和屬性。
    * **[!UICONTROL 標籤：]** 指定可唯一識別最適化表單的標籤。 標籤有助於搜尋表單。 若要建立標籤，請在 **[!UICONTROL 標籤]** 方塊。
-1. 點選「**[!UICONTROL 建立]**」。系統隨即建立最適化表單，並顯示對話方塊以開啟表單進行編輯。
+1. 選擇 **[!UICONTROL 建立]**。系統隨即建立最適化表單，並顯示對話方塊以開啟表單進行編輯。
 
 
-1. 點選 **[!UICONTROL 編輯]** 以在新標籤中開啟新建立的表單。 表單會開啟以進行編輯，並顯示範本中可用的內容。 它也會顯示側邊欄以自訂新建立的表單。
+1. 選取 **[!UICONTROL 編輯]** 以在新標籤中開啟新建立的表單。 表單會開啟以進行編輯，並顯示範本中可用的內容。 它也會顯示側邊欄以自訂新建立的表單。
 
 
 ## 使用最適化Forms核心元件來建立您的表單
@@ -90,7 +90,7 @@ ht-degree: 34%
 
 ## 為最適化表單設定提交動作 {#configure-submit-action-for-form}
 
-提交動作讓您可選擇透過最適化表單擷取的資料目標。使用者按一下最適化表單上的「提交」按鈕時，就會加以觸發。調適型表單包含一些立即可用的提交動作。 您也可以擴充預設提交動作，以建立自己的自訂提交動作。 若要設定表單的提交動作：
+提交動作讓您可選擇透過最適化表單擷取的資料目標。當使用者按一下最適化表單上的提交按鈕時會觸發。 調適型表單包含一些立即可用的提交動作。 您也可以擴充預設提交動作，以建立自己的自訂提交動作。 若要設定表單的提交動作：
 
 1. 開啟內容瀏覽器，然後選取最適化表單的「**[!UICONTROL 指引容器]**」元件。
 1. 按一下「指引容器」屬性 ![指引屬性](/help/forms/using/assets/configure-icon.svg) 圖示。此時會開啟「最適化表單容器」對話框。
@@ -164,17 +164,17 @@ ht-degree: 34%
 1. 按一下「指引容器」屬性 ![指引屬性](/help/forms/using/assets/configure-icon.svg) 圖示。此時會開啟「最適化表單容器」對話框。
 1. 按一下最適化表單容器屬性 ![最適化表單容器屬性](/help/forms/using/assets/configure-icon.svg) 圖示。 用來設定資料模型的最適化表單容器對話方塊隨即開啟。
    ![按一下扳手圖示以開啟最適化表單容器對話方塊，以設定重新導向頁面或感謝訊息](/help/forms/using/assets/adaptive-forms-container-prefill-service.png)
-1. 選擇表單資料模型. 開啟 **[!UICONTROL 基本]** 標籤。 在預填服務中，選取 **[!UICONTROL 表單資料模型預填服務]**.
-1. 按一下&#x200B;**[!UICONTROL 「完成」]**。您的最適化表單現在已設定為使用表單資料模型預填。 您現在可以使用 [規則編輯器](rule-editor.md) 建立規則以預先填入表單的欄位。
+1. 選取表單資料模型。 開啟 **[!UICONTROL 基本]** 標籤。 在預填服務中，選取 **[!UICONTROL 表單資料模型預填服務]**.
+1. 按一下 **[!UICONTROL 完成]**. 您的最適化表單現在已設定為使用表單資料模型預填。 您現在可以使用 [規則編輯器](rule-editor.md) 建立規則以預先填入表單的欄位。
 
 <!--
 ## Edit Form Model properties of an Adaptive Form {#edit-form-model}
 
-1. Select the Adaptive Form and tap ![Page information](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL Open Properties]**. The Form Properties page opens. 
+1. Select the Adaptive Form and select ![Page information](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL Open Properties]**. The Form Properties page opens. 
 
 1. Go to the **[!UICONTROL Form Model]** tab and choose a form model. If the Adaptive Form is without a form model, you have the freedom to choose either a JSON schema or a form data model. On the other hand, if the Adaptive Form is already based on a form model, you have the option to switch to another form model of the same type. For instance, if the form is using a JSON schema, you can easily switch to another JSON schema, and similarly if the form is using a Form Data Model, you can switch to another Form Data Model. 
 
-1. Tap **[!UICONTROL Save]** to save the properties.
+1. Select **[!UICONTROL Save]** to save the properties.
 -->
 
 ## 下一步

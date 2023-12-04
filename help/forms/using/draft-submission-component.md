@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: ad71b423-02e1-4476-9c7c-f832cea6b0a6
 docset: aem65
 exl-id: f3f013a7-a399-4178-a901-d4a8c65ddbd3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '744'
 ht-degree: 0%
 
 ---
@@ -32,16 +32,16 @@ ht-degree: 0%
 執行以下步驟來新增及設定草稿和提交元件：
 
 1. 拖放 **草稿和提交** 在頁面上元件瀏覽器中的「檔案服務」類別下的元件。
-1. 點選元件，然後點選 ![settings_icon](assets/settings_icon.png) 以開啟元件的「編輯」對話方塊。
+1. 選取元件，然後選取 ![settings_icon](assets/settings_icon.png) 以開啟元件的「編輯」對話方塊。
 
    ![草稿和提交元件](assets/drafts-submissions-edit.png)
 
-1. 在「編輯」對話方塊中，指定下列詳細資料並點選 **完成** 以儲存設定。
+1. 在「編輯」對話方塊中，指定下列詳細資料並選取 **完成** 以儲存設定。
 
 <table>
  <tbody>
   <tr>
-   <th>定位字元</th>
+   <th>標籤</th>
    <th>設定</th>
    <th>說明</th>
   </tr>

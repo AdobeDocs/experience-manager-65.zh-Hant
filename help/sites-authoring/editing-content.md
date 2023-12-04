@@ -7,10 +7,10 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3016'
-ht-degree: 6%
+source-wordcount: '3015'
+ht-degree: 4%
 
 ---
 
@@ -84,11 +84,11 @@ ht-degree: 6%
 
   ![預覽模式](assets/chlimage_1-121.png)
 
-* **注釋**
+* **註解**
 
   它可讓您新增 [註解](/help/sites-authoring/annotations.md) 在檢閱頁面時移至頁面。 在第一個註解後，圖示會切換為數字，指出頁面上的註解數量。
 
-  ![注釋](do-not-localize/screen_shot_2018-03-22at111638.png)
+  ![註解](do-not-localize/screen_shot_2018-03-22at111638.png)
 
 ### 狀態通知 {#status-notification}
 
@@ -288,11 +288,11 @@ ht-degree: 6%
 
   ![父級](assets/screen_shot_2018-03-22at113028.png)
 
-* **配置**
+* **版面**
 
   這可讓您修改 [版面](/help/sites-authoring/editing-content.md#edit-component-layout) 所選元件的ID。 這僅適用於所選的元件，且不會啟動 [版面模式](/help/sites-authoring/author-environment-tools.md#page-modes) 整個頁面。
 
-  ![配置](do-not-localize/screen_shot_2018-03-22at113044.png)
+  ![版面](do-not-localize/screen_shot_2018-03-22at113044.png)
 
 * **轉換為體驗片段變數**
 
@@ -342,7 +342,7 @@ ht-degree: 6%
 
 對於特定元件型別，您可以直接從資產瀏覽器將資產拖放至元件，以更新內容：
 
-| **資產類型** | **元件類型** |
+| **資產型別** | **元件型別** |
 |---|---|
 | 影像 | 影像 |
 | 文件 | 下載 |
@@ -368,7 +368,7 @@ ht-degree: 6%
 
 若要移動段落元件：
 
-1. 使用點選並按住或點選並按住來選取要移動的段落。
+1. 選取要以選取並按住或按住來移動的段落。
 1. 將段落拖曳到新位置。 AEM會指出段落可以儲存的位置。 將其拖曳至所需位置。
 
    ![移動段落元件](assets/screen_shot_2018-03-22at121821.png)
@@ -387,7 +387,7 @@ ht-degree: 6%
 
    ![表單中的編輯模式](assets/screen_shot_2018-03-22at133756.png)
 
-   按一下或點選 **版面** 動作，讓您能夠調整元件的版面。
+   按一下 **版面** 動作，讓您能夠調整元件的版面。
 
    ![元件工具列](do-not-localize/chlimage_1-21.png)
 
@@ -421,11 +421,11 @@ ht-degree: 6%
 
 您可以取消（然後重新啟用）繼承。 此功能可從以下來源取得（視元件而定）：
 
-* **Live Copy**
+* **即時副本**
 
   元件工具列（如果元件位在屬於即時副本或啟動專案的頁面上，則根據即時副本）。 例如：
 
-  ![Live Copy](assets/screen_shot_2018-03-22at134339.png)
+  ![即時副本](assets/screen_shot_2018-03-22at134339.png)
 
   取消繼承選項可供使用：
 

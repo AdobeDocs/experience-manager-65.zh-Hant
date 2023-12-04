@@ -9,9 +9,9 @@ docset: aem65
 feature: Interactive Images
 role: User, Admin
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4275'
+source-wordcount: '4130'
 ht-degree: 1%
 
 ---
@@ -265,7 +265,7 @@ ht-degree: 1%
 
    * 選取影像，以便在「詳細資料檢視」頁面中開啟影像。 在工具列上，選取 **[!UICONTROL 編輯]**.
 
-1. 在頁面的左上角附近，選取 **[!UICONTROL 新增熱點]** （手指點選圖示）以開啟「熱點」管理頁面。
+1. 在頁面的左上角附近，選取 **[!UICONTROL 新增熱點]** （手指選取圖示）以開啟「熱點」管理頁面。
 1. 在頁面的左上角附近，選取 **[!UICONTROL 熱點]**.
 
    1. 在「熱點管理」頁面的左上角附近，選取「 」 **[!UICONTROL 熱點]**.

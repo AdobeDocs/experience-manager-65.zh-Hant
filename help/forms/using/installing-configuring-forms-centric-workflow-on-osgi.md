@@ -5,10 +5,10 @@ topic-tags: installing
 docset: aem65
 role: Admin
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1611'
-ht-degree: 6%
+source-wordcount: '1590'
+ht-degree: 3%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 6%
 
 ## 簡介 {#introduction}
 
-企業會從多個表單、後端系統和其他資料來源收集及處理資料。 資料的處理涉及稽核和核准程式、重複任務和資料封存。 例如，檢閱表單並將其轉換為PDF檔案。 當以手動方式完成時，重複性的工作會耗費大量的時間和資源。
+企業收集和處理來自多個表單、後端系統和其他數據源的數據。 資料的處理涉及稽核和核准程式、重複任務和資料封存。 例如，審閱表單並將其轉換為 PDF 檔。 手動完成時，重複性任務可能需要大量時間和大量資源。
 
-您可以在 [ OSGi ](../../forms/using/aem-forms-workflow.md) 上使用以Forms為中心的工作流程來快速版本編號基於自我調整表單的工作流程。 這些工作流程可以説明您自動執行審查和批准工作流程、業務流程 工作流程和其他重複性任務。 這些工作流程還有助於處理檔（創建、彙編、分發和存檔 PDF 檔，添加數位簽章以限制對檔的訪問，解碼條碼表單等），以及將Adobe Sign簽名工作流程與表單和檔一起使用。
+您可以在 [OSGi](../../forms/using/aem-forms-workflow.md) 上使用以Forms為中心的工作流程來快速版本編號基於自適應表單的工作流程。 這些工作流程可以幫助您自動執行審查和批准工作流程、業務流程 工作流程和其他重複性任務。 這些工作流程還有助於處理檔（創建、彙編、分發和存檔 PDF 檔，添加數位簽名以限制對文件的訪問，解碼條碼表單等），以及將Adobe Sign簽名工作流程與表單和檔一起使用。
 
 設置完成後，可以手動觸發這些工作流程以完成定義的流程，或者在使用者提交表單或互動式通信時以程式設計方式運行。 該功能包含在AEM Forms附加元件包中。
 
@@ -99,18 +99,18 @@ OSGi上的AEM Forms Forms中心工作流程會在AEM Forms的作者執行個體�
 AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含有關OSGi和其他功能的Forms中心工作流程。 執行以下步驟來安裝附加套件：
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
-1. 點一下頁首功能表中的 **[!UICONTROL Adobe Experience Manager]**。
+1. 選取 **[!UICONTROL Adobe Experience Manager]** 在頁首功能表中提供。
 1. 在 **[!UICONTROL 篩選器]** 區段：
    1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
    2. 選取封裝的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
-1. 點選作業系統適用的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
-1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
-1. 選取封裝，然後按一下 **[!UICONTROL 安裝]**.
+1. 選取適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，並選取 **[!UICONTROL 下載]**.
+1. 開啟 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  並按一下 **[!UICONTROL 上傳套裝]** 以上傳套件。
+1. 選擇包，然後按兩下安裝&#x200B;****。
 
-   您也可以透過 [AEM Forms發行版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章。
+   還可以通過AEM Forms版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)一文中[列出的直接連結下載包。
 
-1. 安裝包後，系統會提示您重新開機AEM 執行個體。 **不要立即重新開機伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出現在 AEM-Installation-Directory ] /crx-quickstart/logs/error.記錄檔 中 [ ，並且日誌穩定。
-1. 在所有 作者 和 Publish 實例上重複步驟 1-7。
+1. 安裝包后，系統會提示您重新啟動AEM 執行個體。 **不要立即重新啟動伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出現在 AEM-Installation-Directory]/crx-quickstart/logs/error.記錄檔 中[，並且日誌穩定。
+1. 在所有 作者和 Publish 實例上重複步驟 1-7。
 
 ## Post安裝配置 {#post-installation-configurations}
 
@@ -147,7 +147,7 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 ### 選用的安裝後設定 {#optional-post-installation-configurations}
 
-#### 設定 Dispatcher {#configure-dispatcher}
+#### 設定Dispatcher {#configure-dispatcher}
 
 Dispatcher是適用於AEM的快取與負載平衡工具。 AEM Dispatcher也有助於保護AEM伺服器不受攻擊。 您可以搭配使用Dispatcher與企業級網頁伺服器，以提高AEM執行個體的安全性。 如果您使用 [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)，然後針對AEM Forms執行下列設定：
 

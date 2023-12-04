@@ -2,10 +2,10 @@
 title: 了解 CMS Headless 開發
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解 Headless 技術和使用原因。
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1611'
-ht-degree: 88%
+source-wordcount: '1601'
+ht-degree: 84%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 88%
 
 ## 分離 {#decoupling}
 
-透過公開一組強大且靈活的應用程式開發介面 (API)，您的所有體驗都可以利用這些 API，使 Headless 傳遞成為可能。API 作為服務之間的共同語言，透過標準化內容傳遞在內容層級將服務繫結在一起，但允許它們靈活地實作自己的解決方案。
+公開一組強大且靈活的應用程式設計介面(API)，讓您的所有體驗都可選取這些API，以進行Headless傳送。 API 作為服務之間的共同語言，透過標準化內容傳遞在內容層級將服務繫結在一起，但允許它們靈活地實作自己的解決方案。
 
 Headless 是將內容與其展示分離的範例。或是更一般的說法，就是將前端與服務堆疊的後端分離。在 Headless 設定中，展示系統 (頭) 與內容管理 (尾) 分離。兩者僅透過 API 呼叫進行互動。
 
@@ -120,7 +120,7 @@ Headless 為傳遞數位體驗帶來了靈活性。但這種靈活性本身也�
 * 了解為何與何時需要 Headless 。
 * 概略了解 Headless 概念如何使用以及它們是如何相互關聯的。
 
-以這些知識為基礎，接下來查看文件 [AEM Headless 快速入門](getting-started.md)以繼續您的 AEM Headless 歷程，您將在此文件了解如何設定必要工具，並開始思考 AEM 如何處理 Headless 內容傳遞及其先決條件。
+在此基礎上繼續您的AEM Headless歷程，接下來檢閱檔案 [AEM Headless快速入門](getting-started.md) 在這裡，您將瞭解如何設定必要的工具，以及如何開始思考AEM如何進行headless內容傳送及其先決條件。
 
 ## 其他資源 {#additional-resources}
 

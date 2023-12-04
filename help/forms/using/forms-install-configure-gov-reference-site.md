@@ -4,10 +4,10 @@ description: 安裝、設定和自訂AEM Forms示範套件。
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4603'
-ht-degree: 2%
+source-wordcount: '4501'
+ht-degree: 1%
 
 ---
 
@@ -79,12 +79,12 @@ ht-degree: 2%
 ### 來自Software Distribution {#from-software-distribution}
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
-1. 點一下頁首功能表中的 **[!UICONTROL Adobe Experience Manager]**。
+1. 選取 **[!UICONTROL Adobe Experience Manager]** 在頁首功能表中提供。
 1. 在 **[!UICONTROL 篩選器]** 區段：
    1. 選取 **[!UICONTROL Forms]** 從 **[!UICONTROL 解決方案]** 下拉式清單。
    2. 選取封裝的版本和型別。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
-1. 點選 **we-gov-forms.pkg.all-&lt;version>.zip** 封裝名稱，選取 **[!UICONTROL 接受EULA條款]**，然後點選 **[!UICONTROL 下載]**.
-1. 開啟[套件管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，然後按一下&#x200B;**[!UICONTROL 「上傳套件」]**&#x200B;即可上傳套件。
+1. 選取 **we-gov-forms.pkg.all-&lt;version>.zip** 封裝名稱，選取 **[!UICONTROL 接受EULA條款]**，並選取 **[!UICONTROL 下載]**.
+1. 開啟 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  並按一下 **[!UICONTROL 上傳套裝]** 以上傳套件。
 1. 選取封裝，然後按一下 **[!UICONTROL 安裝]**.
 
    ![我們管理表單套件](assets/wegov_forms_package.jpg)
@@ -168,11 +168,11 @@ ht-degree: 2%
 
 本節包含在AEM執行個體上設定SSL，以便設定Adobe Sign雲端設定的詳細資訊。
 
-**參考:**
+**引用：**
 
 1. [SSL預設值](/help/sites-administering/ssl-by-default.md)
 
-**附註:**
+**附註：**
 
 1. 導覽至https://&lt;aemserver>：&lt;port>/aem/inbox ，您可在此完成上述參考檔案連結中說明的程式。
 1. 此 `we-gov-forms.pkg.all-[version].zip` 套件包含範例SSL金鑰和憑證，可透過解壓縮 `we-gov-forms.pkg.all-[version].zip/ssl` 屬於封裝一部分的資料夾。
@@ -192,7 +192,7 @@ ht-degree: 2%
 
 本節包含Adobe Sign雲端設定的詳細資訊和指示。
 
-**參考:**
+**引用：**
 
 1. [將Adobe Sign與AEM Forms整合](adobe-sign-integration-adaptive-forms.md)
 
@@ -219,7 +219,7 @@ ht-degree: 2%
 
 本節包含有關MS® Dynamics雲端設定的詳細資訊和指示。
 
-**參考:**
+**引用：**
 
 1. [Microsoft](/help/forms/using/ms-dynamics-odata-configuration.md)
 1. [設定Microsoft® Dynamics for AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html)
@@ -289,7 +289,7 @@ ht-degree: 2%
 
 雲端設定完成後，您可能會想要測試表單資料模型。
 
-1. 瀏覽到
+1. 導航到
 
    *https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments-fdm/we-gov*
 
@@ -330,7 +330,7 @@ ht-degree: 2%
 
    ![Dynamics CRM FDM的屬性](assets/aftia-update-data-source.jpg)
 
-1. 按一下&#x200B;**儲存並關閉**。
+1. 按一下 **儲存並關閉**.
 
 1. [測試服務](work-with-form-data-model.md#test-data-model-objects-and-services) 以確保他們成功連線至已設定的資料來源
 
@@ -340,7 +340,7 @@ ht-degree: 2%
 
 本節包含有關Adobe Analytics Cloud設定的詳細資訊和指示。
 
-**參考:**
+**引用：**
 
 * [整合 Adobe Analytics](../../sites-administering/adobeanalytics.md)
 
@@ -379,7 +379,7 @@ ht-degree: 2%
 1. 導覽至「管理員」標籤，並選取「使用者管理（舊版）」專案
    ![報告](assets/aftia-reports.jpg)
 1. 選取 **使用者** 標籤。
-   ![使用者管理](assets/aftia-user-management.jpg)
+   ![User Management](assets/aftia-user-management.jpg)
 1. 從使用者清單中選取所需的使用者。
 1. 捲動至頁面底部，使用者驗證資訊將顯示在頁面底部。
    ![管理存取權](assets/aftia-admin-user-access.jpg)
@@ -407,7 +407,7 @@ ht-degree: 2%
 
 1. 請確定所有許可權皆已對應至設定檔。
 
-   ![編輯權限](assets/aftia-admin-access-edit.jpg)
+   ![編輯許可權](assets/aftia-admin-access-edit.jpg)
 
 1. 一旦許可權對應完畢，使用者可能需要數小時才能登入。
 
@@ -448,7 +448,7 @@ AEM Forms Analytics資料可在離線時使用，或在不使用Adobe Analytics 
 >
 AEM Forms Analytics資料可在離線時使用，或在不使用Adobe Analytics Cloud設定的情況下使用，如果 `we-gov-forms.ui.analytics-<version>.zip` 已安裝套件，但AEM Sites資料需要主動式雲端設定。
 
-1. 瀏覽到
+1. 導航到
 
    *https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 
@@ -500,7 +500,7 @@ AEM Forms Analytics資料可在離線時使用，或在不使用Adobe Analytics 
 
 1. 導覽至 [Adobe I/O主控台](https://developer.adobe.com/console/).
 
-1. 按一下建立整合項目。
+1. 按一下建立整合專案。
 
 1. 選取「存取API」。
 

@@ -13,9 +13,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3837'
+source-wordcount: '3794'
 ht-degree: 8%
 
 ---
@@ -81,11 +81,11 @@ Adobe Illustrator的檔案格式是PDF的變體。 Experience Manager Assets內�
 * Adobe Illustrator檔案是由多層組成的單一頁面。 每個圖層都會擷取為Illustrator主資產下的PNG子資產。
 * PDF檔案包含一或多個頁面。 每個頁面都會擷取為主要多頁PDF檔案下的單一頁面PDF子資產。
 
-子資產由以下專案建立： `Create Sub Asset process` 整體中的元件 `DAM Update Asset` 工作流程。 若要在工作流程中檢視此程式元件，請點選 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新資產]** > **[!UICONTROL 編輯]**.
+子資產由以下專案建立： `Create Sub Asset process` 整體中的元件 `DAM Update Asset` 工作流程。 若要在工作流程中檢視此程式元件，請選取 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新資產]** > **[!UICONTROL 編輯]**.
 
 另請參閱 [檢視多頁檔案的頁面](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file).
 
-您可以在開啟資產、點選「內容」功能表，然後選取時檢視子資產或頁面 **[!UICONTROL 子資產]** 或 **[!UICONTROL 頁面]**. 子資產是真正的資產。 也就是說，系統會擷取PDF頁面， `Create Sub Asset` 工作流程元件。 然後會儲存為 `page1.pdf`， `page2.pdf`，依此類推，位於主要資產下方。 儲存之後， `DAM Update Asset` 工作流程會處理它們。
+您可以在開啟資產時檢視子資產或頁面，選取「內容」功能表，然後選取「 」 **[!UICONTROL 子資產]** 或 **[!UICONTROL 頁面]**. 子資產是真正的資產。 也就是說，系統會擷取PDF頁面， `Create Sub Asset` 工作流程元件。 然後會儲存為 `page1.pdf`， `page2.pdf`，依此類推，位於主要資產下方。 儲存之後， `DAM Update Asset` 工作流程會處理它們。
 
 若要使用Dynamic Media來預覽和產生AI、EPS或PDF檔案的動態轉譯，必須執行下列處理步驟：
 
@@ -106,7 +106,7 @@ Adobe Illustrator的檔案格式是PDF的變體。 Experience Manager Assets內�
 
 您的存取權 `Rasterize PDF/AI Image Preview Rendition` 處理元件選項的方式 `DAM Update Asset` 工作流程。
 
-點選左上方的Adobe Experience Manager，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**. 在工作流程模型頁面上，選擇 **[!UICONTROL DAM更新資產]**，然後在工具列點選 **[!UICONTROL 編輯]**. 在 [!UICONTROL DAM更新資產] 工作流程頁面，點兩下 `Rasterize PDF/AI Image Preview Rendition` 處理元件，以開啟其「步驟屬性」對話方塊。
+選取左上角的Adobe Experience Manager，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]**. 在工作流程模型頁面上，選擇 **[!UICONTROL DAM更新資產]**，然後在工具列上選取 **[!UICONTROL 編輯]**. 在 [!UICONTROL DAM更新資產] 工作流程頁面，按兩下 `Rasterize PDF/AI Image Preview Rendition` 處理元件，以開啟其「步驟屬性」對話方塊。
 
 #### 點陣化PDF/AI影像預覽轉譯選項 {#rasterize-pdf-ai-image-preview-rendition-options}
 
@@ -137,7 +137,7 @@ Adobe Illustrator的檔案格式是PDF的變體。 Experience Manager Assets內�
    <td>所產生預覽轉譯的最大高度（畫素）。<br /> </td>
   </tr>
   <tr>
-   <td>解析度</td>
+   <td>解決方法</td>
    <td>72</td>
    <td>點陣化第一頁的解析度，以ppi （每英吋畫素）為單位。</td>
   </tr>
@@ -208,18 +208,18 @@ Dynamic Media整合會使用下列指令碼：
 
 **若要設定影像縮圖大小：**
 
-1. 點選 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新資產]** > **[!UICONTROL 編輯]**.
-1. 點選 **[!UICONTROL Dynamic Media程式影像資產]** 逐步並點選或按一下 **[!UICONTROL 縮圖]** 標籤。 視需要變更縮圖大小，然後點選「 **[!UICONTROL 確定]**」。
+1. 選取 **[!UICONTROL 工具]** > **[!UICONTROL 工作流程]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新資產]** > **[!UICONTROL 編輯]**.
+1. 選取 **[!UICONTROL Dynamic Media程式影像資產]** 步驟並按一下 **[!UICONTROL 縮圖]** 標籤。 視需要變更縮圖大小，然後選取「 」 **[!UICONTROL 確定]**.
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
-1. 點選「處 **[!UICONTROL 理縮圖]** 」步驟，然後點選「縮 **[!UICONTROL 圖]** 」標籤。視需要變更縮圖大小，然後點選「 **[!UICONTROL 確定]**」。
+1. 選取 **[!UICONTROL 程式縮圖]** 步驟，然後選取 **[!UICONTROL 縮圖]** 標籤。 視需要變更縮圖大小，然後選取「 」 **[!UICONTROL 確定]**.
 
    >[!NOTE]
    >
    >「處理縮圖」步驟中縮圖引數中 **[!UICONTROL 的值必須與「動態媒體處理影像資產」]** 步驟中的縮圖引數相符 **** 。
 
-1. 點選 **[!UICONTROL 儲存]** 以儲存對工作流程所做的變更。
+1. 選取 **[!UICONTROL 儲存]** 以儲存對工作流程所做的變更。
 
 ### 增加或減少顯示的Dynamic Media影像預設集數目 {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
@@ -238,7 +238,7 @@ Dynamic Media整合會使用下列指令碼：
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
 1. 在limit屬性中，將數字變更為所需的數字，例如 `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. 點選 **[!UICONTROL 全部儲存]**.
+1. 選取 **[!UICONTROL 全部儲存]**.
 
 ## 建立Dynamic Media影像預設集 {#creating-image-presets}
 
@@ -260,7 +260,7 @@ Dynamic Media整合會使用下列指令碼：
 
 **若要建立Dynamic Media影像預設集：**
 
-1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台，然後點選 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**.
+1. 在Experience Manager中，選取Experience Manager標誌以存取全域導覽主控台，然後選取 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**.
 1. 按一下「**[!UICONTROL 建立]**」。此 **[!UICONTROL 編輯影像預設集]** 視窗會開啟。
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
@@ -412,7 +412,7 @@ Dynamic Media整合會使用下列指令碼：
    <td><strong>重新取樣模式</strong></td>
    <td>選取 <strong>重新取樣模式</strong> 選項。 這些選項會在縮減取樣影像時銳利化影像：
     <ul>
-     <li><strong>雙線性式</strong>  — 最快速的重新取樣方法。會產生某些明顯的鋸齒狀不自然感。</li>
+     <li><strong>雙線性式</strong>  — 最快速的重新取樣方法。 會產生某些明顯的鋸齒狀不自然感。</li>
      <li><strong>雙立方式</strong>  — 增加CPU使用量，但會產生較清晰的影像，且鋸齒狀不自然感較不明顯。</li>
      <li><strong>Sharp2</strong>  — 可以產生比兩次立方稍微銳利的結果，但耗用的CPU成本更高。</li>
      <li><strong>Bi-Sharp</strong>  — 選取Photoshop預設的重新取樣器以縮減影像大小，稱為 <strong>雙三次銳利化</strong> 在Adobe Photoshop中。</li>
@@ -492,7 +492,7 @@ Dynamic Media整合會使用下列指令碼：
 
 ## 編輯影像預設集 {#modifying-image-presets}
 
-1. 在Experience Manager中，點選Experience Manager標誌以存取全域導覽主控台，然後點選 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**.
+1. 在Experience Manager中，選取Experience Manager標誌以存取全域導覽主控台，然後選取 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**.
 
    ![6_5_imagepreset-editpreset](assets/6_5_imagepreset-editpreset.png)
 
@@ -507,14 +507,14 @@ Dynamic Media整合會使用下列指令碼：
 
 **若要在Dynamic Media — 混合模式中發佈影像預設集：**
 
-1. 在Experience Manager中，點選或按一下Experience Manager標誌以存取全域導覽主控台，然後點選或按一下「工具」圖示並導覽至 **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**.
-1. 從影像預設集清單中選取影像預設集或多個影像預設集，然後按一下或點選 **[!UICONTROL 發佈]**.
+1. 在Experience Manager中，按一下Experience Manager標誌以存取全域導覽主控台，然後按一下「工具」圖示並導覽至 **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**.
+1. 從影像預設集清單中選取影像預設集或多個影像預設集，然後按一下 **[!UICONTROL 發佈]**.
 1. 影像預設集發佈後，狀態會從未發佈變更為已發佈。
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
 ## 刪除Dynamic Media影像預設集 {#deleting-image-presets}
 
-1. 在Experience Manager中，點選或按一下Experience Manager標誌以存取全域導覽主控台。
-1. 點選 **[!UICONTROL 工具]** 圖示，然後導覽至 **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**.
-1. 選取預設集，然後按一下 **[!UICONTROL 刪除]**. Dynamic Media會確認您要刪除它。 點選 **[!UICONTROL 刪除]** 刪除或點選 **[!UICONTROL 取消]** 以中止。
+1. 在Experience Manager中，按一下Experience Manager標誌以存取全域導覽主控台。
+1. 選取 **[!UICONTROL 工具]** 圖示，然後導覽至 **[!UICONTROL 資產]** > **[!UICONTROL 影像預設集]**.
+1. 選取預設集，然後按一下 **[!UICONTROL 刪除]**. Dynamic Media會確認您要刪除它。 選取 **[!UICONTROL 刪除]** 刪除或選取 **[!UICONTROL 取消]** 以中止。

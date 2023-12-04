@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2475'
+source-wordcount: '2459'
 ht-degree: 2%
 
 ---
@@ -77,7 +77,7 @@ AEM Forms的側邊欄元件瀏覽器中提供表格元件，可讓您以最適�
 
 您可以新增表格的說明，以說明資訊的組織方式，讓熒幕朗讀程式可以解譯和閱讀。 若要新增說明：
 
-1. 選取表格並點選 ![cmppr](assets/cmppr.png) 以在側欄中檢視其屬性。
+1. 選取表格並選取 ![cmppr](assets/cmppr.png) 以在側欄中檢視其屬性。
 1. 在「協助工具」標籤中指定摘要。
 1. 按一下&#x200B;**「完成」**。
 
@@ -95,9 +95,9 @@ AEM Forms的側邊欄元件瀏覽器中提供表格元件，可讓您以最適�
 
 若要啟用排序：
 
-1. 選取表格並點選 ![configure_icon](assets/configure_icon.png) （設定）。 您也可以使用 **內容** 互動式通訊側邊欄中的瀏覽器。
+1. 選取表格並選取 ![configure_icon](assets/configure_icon.png) （設定）。 您也可以使用 **內容** 互動式通訊側邊欄中的瀏覽器。
 1. 選取 **啟用排序**.
-1. 點選 ![完成圖示](assets/done_icon.png) 以儲存表格屬性。 欄標題中的排序圖示（向上和向下箭頭）表示已啟用排序。
+1. 選取 ![完成圖示](assets/done_icon.png) 以儲存表格屬性。 欄標題中的排序圖示（向上和向下箭頭）表示已啟用排序。
 
    ![啟用排序](assets/enable_sorting_new.png)
 
@@ -116,7 +116,7 @@ AEM Forms的側邊欄元件瀏覽器中提供表格元件，可讓您以最適�
 
 執行以下步驟來設定表格的欄寬：
 
-1. 在 **[!UICONTROL 內容]** 標籤，點選 **[!UICONTROL 表格]** 元件並點選「設定」 (![設定](assets/configure-icon.svg))圖示。
+1. 在 **[!UICONTROL 內容]** 索引標籤中，選取 **[!UICONTROL 表格]** 元件並選取設定(![設定](assets/configure-icon.svg))圖示。
 
 1. 輸入中的逗號分隔值清單 **[!UICONTROL 欄寬]** 欄位以指定表格中每一欄的比例寬度。 例如，針對包含3個資料欄的表格，將2,4，6指定為 **[!UICONTROL 欄寬]** 欄位會導致將第一欄的寬度設為2/12、第二欄設為4/12、第三欄設為6/12。 2/12，因為第一欄的寬度是表格寬度的六分之一。 同樣地，「4/12」將第二個欄寬設為表格寬度的三分之一，而「6/12」將第三個欄寬設為表格寬度的一半。
 
@@ -124,9 +124,9 @@ AEM Forms的側邊欄元件瀏覽器中提供表格元件，可讓您以最適�
 
 您可以使用頁面工具列中的「樣式」模式來定義表格的樣式。 執行以下步驟以切換到樣式模式並編輯表格樣式
 
-1. 在頁面工具列中，在「預覽」之前，點選 ![畫佈下拉式清單](assets/canvas-drop-down.png) > **樣式**.
+1. 在頁面工具列中，在「預覽」前選取 ![畫佈下拉式清單](assets/canvas-drop-down.png) > **樣式**.
 
-1. 在側邊欄中選取表格並點選編輯按鈕 ![編輯按鈕](assets/edit-button.png).
+1. 在側邊欄中選取表格並選取編輯按鈕 ![編輯按鈕](assets/edit-button.png).
 您可以在側邊欄中看到樣式屬性。
 
 ![表格的樣式屬性](assets/style-table.png)
@@ -139,7 +139,7 @@ AEM Forms的側邊欄元件瀏覽器中提供表格元件，可讓您以最適�
 
 表格提供立即可用的支援，可在執行階段動態新增或刪除列。
 
-1. 選取表格列並點選 ![cmppr](assets/cmppr.png).
+1. 選取表格列並選取 ![cmppr](assets/cmppr.png).
 1. 在重複設定索引標籤中，指定最小和最大計數以限制表格中的列數。
 1. 按一下&#x200B;**「完成」**。
 

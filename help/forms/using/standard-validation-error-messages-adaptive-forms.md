@@ -11,10 +11,10 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
 exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2416'
-ht-degree: 87%
+source-wordcount: '2357'
+ht-degree: 86%
 
 ---
 
@@ -206,8 +206,8 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 如果錯誤回應是在標準結構描述中或是伺服器端驗證失敗，則系統會支援預設錯誤處理常式以顯示欄位的錯誤訊息。
 若要了解如何使用採用[規則編輯器調用服務](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)動作的預設錯誤處理常式，請以含有兩個欄位的簡單最適化表單為例 (**寵物 ID** 和&#x200B;**寵物名稱**)，並在「**寵物 ID**」欄位使用預設的錯誤處理常式，查看為調用外部服務所設定 REST 端點傳回的各種錯誤，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。要使用規則編輯器的調用服務操作添加默認錯誤處理程序，請執行以下步驟：
 
-1. 開啟編寫模式的最適化表單，選取表單元件並點選「**[!UICONTROL 規則編輯器]**」以開啟規則編輯器。
-1. 點選「**[!UICONTROL 建立]**」。
+1. 在撰寫模式中開啟最適化表單，選取表單元件，然後選取 **[!UICONTROL 規則編輯器]** 以開啟規則編輯器。
+1. 選擇 **[!UICONTROL 建立]**。
 1. 在「**何時**」規則部分中建立條件。例如，[寵物 ID 欄位名稱&#x200B;]****&#x200B;何時變更。「選取」從「**選取狀態**」下拉式清單變更「選取」。
 1. 在「**然後**」部分，從「**選取動作**」下拉式清單中選取「**[!UICONTROL 調用服務]**」。
 1. 選取「**郵遞服務**」，及其自「**輸入**」部分的對應資料綁定。例如，要驗證&#x200B;**寵物 ID**，選取「**郵遞服務**」作為&#x200B;**GET /pet/{petId}**，並選取「**寵物 ID**」(在「**輸入**」部分)。
@@ -231,8 +231,7 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 
 除了上述動作之外，自訂錯誤處理常式還可用於執行符合特定使用者要求的自訂函數。
 
-自訂錯誤處理常式是一個函數 (用戶端資料庫)，旨在回應外部服務傳回的錯誤並向一般使用者提供自訂回應。任何有附註 `@errorHandler` 的用戶端資料庫會被視為是自訂錯誤處理常式函數。該附註有助於識別 `.js` 檔案中指定的錯誤處理常式函數。
-
+自訂錯誤處理常式是一個函數 (用戶端資料庫)，旨在回應外部服務傳回的錯誤並向一般使用者提供自訂回應。任何有附註 `@errorHandler` 的用戶端資料庫會被視為是自訂錯誤處理常式函數。此註解有助於識別 `.js` 檔案。
 
 若要了解如何建立和使用採用[規則編輯器調用服務](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)動作的自訂錯誤處理常式，讓我們以含有兩個欄位的簡單最適化表單為例 (**寵物 ID** 和&#x200B;**寵物名稱**)，並在「**寵物 ID**」欄位使用自訂的錯誤處理程式，查看為調用外部服務所設定 REST 端點傳回的各種錯誤，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。
 
@@ -246,7 +245,7 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 若要建立自訂錯誤函數，請執行以下步驟：
 
 1. 登入 `http://server:port/crx/de/index.jsp#`.
-1. 在 `/apps` 檔案夾中建立一個檔案夾。例如，建立一個名為 `experience-league` 的檔案夾.
+1. 在 `/apps` 檔案夾中建立一個檔案夾。例如，建立名為的資料夾 `experience-league`.
 1. 儲存您的變更。
 1. 導覽至建立的資料夾並建立型別節點 `cq:ClientLibraryFolder` 作為 `clientlibs`.
 1. 導覽至新建立的 `clientlibs` 資料夾並新增 `allowProxy` 和 `categories` 屬性：
@@ -311,8 +310,8 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 
 若要使用自訂錯誤處理常式，請使用&#x200B;**[!UICONTROL 規則編輯器調用服務]**&#x200B;行動：
 
-1. 開啟編寫模式的最適化表單，選取表單元件並點選「**[!UICONTROL 規則編輯器]**」以開啟規則編輯器。
-1. 點選「**[!UICONTROL 建立]**」。
+1. 在撰寫模式中開啟最適化表單，選取表單元件，然後選取 **[!UICONTROL 規則編輯器]** 以開啟規則編輯器。
+1. 選擇 **[!UICONTROL 建立]**。
 1. 在「**何時**」規則部分中建立條件。例如，當&#x200B;**[寵物 ID 欄位名稱]**&#x200B;已變更，請從「**選擇狀態**」下拉式清單選取「**已變更**」。
 1. 在「**然後**」部分，從「**選取動作**」下拉式清單中選取「**[!UICONTROL 調用服務]**」。
 1. 選取「**郵遞服務**」，及其自「**輸入**」部分的對應資料綁定。例如，要驗證&#x200B;**寵物 ID**，選取「**郵遞服務**」作為&#x200B;**GET /pet/{petId}**，並選取「**寵物 ID**」(在「**輸入**」部分)。
@@ -320,7 +319,7 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 1. 選取「**[!UICONTROL 自訂錯誤處理程式]**」(來自「**[!UICONTROL 錯誤處理程式]**」部分)。
 1. 按一下&#x200B;**[!UICONTROL 「完成」]**。
 
-![在表單中新增自訂錯誤處理常式以處理錯誤回應](/help/forms/using/assets/custom-error-handler.png)
+![在表單中新增自訂錯誤處理常式，以處理錯誤回應](/help/forms/using/assets/custom-error-handler.png)
 
 根據此規則，您輸入的「**寵物 ID**」值會使用 REST 端點調用的外部服務檢查&#x200B;**寵物名稱**&#x200B;的驗證。如果根據資料來源的驗證標準失敗，欄位層級將顯示錯誤訊息。
 
@@ -340,7 +339,7 @@ If the server validation error message does not display in the standard format, 
 
 Before adding custom handler, you must configure the adaptive form for asynchronous submission. Execute the following steps:
 
-1. In adaptive form authoring mode, select the Form Container object and tap ![adaptive form properties](assets/configure_icon.png) to open its properties.
+1. In adaptive form authoring mode, select the Form Container object and select ![adaptive form properties](assets/configure_icon.png) to open its properties.
 1. In the **[!UICONTROL Submission]** properties section, enable **[!UICONTROL Use asynchronous submission]**.
 1. Select **[!UICONTROL Revalidate on server]** to validate the input field values on server before submission.
 1. Select the Submit Action:
@@ -350,7 +349,7 @@ Before adding custom handler, you must configure the adaptive form for asynchron
 
     ![adaptive form submission properties](assets/af_submission_properties.png)
 
-1. Tap ![Save](assets/save_icon.png) to save the properties.
+1. Select ![Save](assets/save_icon.png) to save the properties.
 
 ### Add custom error handler on Adaptive Form submission {#add-custom-error-handler-af-submission}
 
@@ -358,10 +357,10 @@ AEM Forms provides out-of-the-box success and error handlers for form submission
 
 Execute the following steps to add custom error handler on Adaptive Form submission:
 
-1. Open an Adaptive Form in authoring mode, select any form object, and tap  to open the rule editor.
-1. Select **[!UICONTROL Form]** in the Form Objects tree and tap **[!UICONTROL Create]**.
+1. Open an Adaptive Form in authoring mode, select any form object, and select  to open the rule editor.
+1. Select **[!UICONTROL Form]** in the Form Objects tree and select **[!UICONTROL Create]**.
 1. Select **[!UICONTROL Error in Submission]** from the Event drop-down list.
-1. Write a rule to convert custom error structure to the standard error structure and tap **[!UICONTROL Done]** to save the rule.
+1. Write a rule to convert custom error structure to the standard error structure and select **[!UICONTROL Done]** to save the rule.
 
 The following is a sample code to convert a custom error structure to the standard error structure:
 

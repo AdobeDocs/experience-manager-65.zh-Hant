@@ -11,9 +11,9 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1975'
+source-wordcount: '2004'
 ht-degree: 9%
 
 ---
@@ -149,9 +149,9 @@ ht-degree: 9%
 
    * 在「迴轉集編輯器」頁面的左上角附近，選取 **[!UICONTROL 新增資產]**.
 
-   * 在「迴轉集編輯器」頁面中間附近，選取 **[!UICONTROL 點選以開啟資產選擇器]**.
+   * 在「迴轉集編輯器」頁面中間附近，選取 **[!UICONTROL 選取以開啟資產選擇器]**.
 
-   點選以選取您要納入迴轉集的資產。 選取的資產上面有核取標籤圖示。完成後，在頁面的右上角附近，選取 **[!UICONTROL 選取]**.
+   選取以選取您要納入迴轉集的資產。 選取的資產上面有核取標籤圖示。完成後，在頁面的右上角附近，選取 **[!UICONTROL 選取]**.
 
    使用「資產選擇器」，您可以輸入關鍵字並點選「回報」來搜尋 **[!UICONTROL 資產]**。您也可以套用篩選條件來調整搜尋結果。您可以依路徑、系列、檔案類型和標籤來篩選。選取篩選，然後選取 **[!UICONTROL 篩選]** 圖示來切換工作流程。 點選「檢視」圖示並選取「欄檢視」、「卡片檢視」或「清 **[!UICONTROL 單檢視」]**, **[!UICONTROL 以變更]**&#x200B;檢視 ****。
 
