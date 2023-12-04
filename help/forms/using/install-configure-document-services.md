@@ -4,9 +4,9 @@ description: 安裝AEM Forms檔案服務，以建立、彙編、散佈、封存P
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 03ed3606e89d87bf2f95b56a1eeb6b7dc4bec13a
+source-git-commit: 2ad9cea10bcd152f4d2d874553bdbd3133dbe847
 workflow-type: tm+mt
-source-wordcount: '5521'
+source-wordcount: '5499'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ AEM Forms提供了一組OSGi服務，用於完成不同的檔案層級作業，�
 
   簽章服務會存取儲存在信任存放區中的憑證和認證。 如需詳細資訊，請參閱 [簽章服務](/help/forms/using/aem-document-services-programmatically.md).
 
-AEM Forms是功能強大的企業級平台，而document services只是AEM Forms的其中一項功能。 如需完整的功能清單，請參閱 [AEM Forms簡介](/help/forms/using/introduction-aem-forms.md).
+AEM Forms是功能強大的企業級平台，檔案服務只是AEM Forms的其中一項功能。 如需完整的功能清單，請參閱 [AEM Forms簡介](/help/forms/using/introduction-aem-forms.md).
 
 ## 部署拓撲 {#deployment-topology}
 
@@ -669,10 +669,6 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
 +++
 
-+++Microsoft Office 2019未在Microsoft Windows Server 2019上執行
-
-* 確定您沒有任何與AEM伺服器的使用中遠端連線。
-
 +++HTML至PDF轉換問題
 
 * 請確定已在PDF Generator設定UI中新增字型目錄。
@@ -793,6 +789,8 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 
 若要解決問題，請參閱 [無法在Windows Server上將Word或Excel檔案轉換為PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
 
++++
+
 +++ 無法在Windows Server 2019上將Excel檔案轉換為PDF
 
 當您在Microsoft Windows Server 2019上將Microsoft Excel 2019轉換為PDF時，必須確定以下事項：
@@ -800,14 +798,17 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
 * 使用PDF Generator服務時，您的Windows電腦不應與AEM伺服器（Windows RDP工作階段）有任何作用中的遠端連線。
 * 預設印表機必須設定為Adobe PDF。
 
->[!NOTE]
-* 若是Apple macOS和Ubuntu作業系統，您不需要設定上述設定。
+  >[!NOTE]
+  * 若是Apple macOS和Ubuntu作業系統，您不需要設定上述設定。
+
++++
 
 +++ 無法將XPS檔案轉換為PDF
 
 若要解決問題， [在Windows上建立功能特定的登入機碼](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
 
 +++
+
 
 ## 後續步驟 {#next-steps}
 
