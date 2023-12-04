@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 role: Developer
 exl-id: ff087084-fb1c-43a4-ae54-cc77eb862493
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3501'
+source-wordcount: '3478'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ XML資料來源可用來預先填入具有固定版面配置和可流動版面�
 
 **建立記憶體中的XML資料來源**
 
-您可以使用 `org.w3c.dom` 類別來建立記憶體中的XML資料來源，以預先填入具有流程配置的表單。 您必須將資料放入符合表單的XML資料來源中。 如需有關具有流程配置之表單與XML資料來源之間關係的資訊，請參閱 [瞭解資料子群組](#understanding-data-subgroups).
+您可以使用 `org.w3c.dom` 類別來建立記憶體中的XML資料來源，以預先填入具有流程配置的表單。 將資料放入符合表單的XML資料來源中。 如需有關具有流程配置之表單與XML資料來源之間關係的資訊，請參閱 [瞭解資料子群組](#understanding-data-subgroups).
 
 **轉換XML資料來源**
 

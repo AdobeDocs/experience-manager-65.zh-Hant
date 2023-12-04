@@ -2,10 +2,10 @@
 title: 非同步作業
 description: Adobe Experience Manager 能以非同步方式完成部分耗用大量資源的工作，實現效能最佳化。
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 91%
+source-wordcount: '791'
+ht-degree: 84%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 91%
 * 從 Experience Manager 的遠端部署作業中擷取高於臨界值限制設定的資產
 * 轉出即時副本
 
-您可以從&#x200B;**[!UICONTROL 「非同步作業狀態」]**&#x200B;儀表板的&#x200B;**「全域導覽** -> **工具** -> **操作** -> **作業」**，檢視非同步作業的狀態。
+您可以從以下網址檢視非同步作業的狀態： **[!UICONTROL 非同步工作狀態]** 儀表板位置 **全域導覽** > **工具** > **作業** > **工作**.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ ht-degree: 91%
 >
 >如需詳細資訊，請參閱[佇列設定](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations)。
 
-## 監控非同步操作狀態 {#monitor-the-status-of-asynchronous-operations}
+## 監控非同步操作的狀態 {#monitor-the-status-of-asynchronous-operations}
 
 AEM 以非同步方式處理操作時，您會透過[收件匣](/help/sites-authoring/inbox.md)和電子郵件 (如果已啟用) 收到通知。
 
@@ -69,7 +69,7 @@ AEM 以非同步方式處理操作時，您會透過[收件匣](/help/sites-auth
    >
    >狀態為&#x200B;**「執行中」**&#x200B;或&#x200B;**「已排入佇列」**&#x200B;的作業無法刪除。
 
-## 清除完成的作業 {#purging-completed-jobs}
+## 清除已完成的工作 {#purging-completed-jobs}
 
 AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作業刪除。
 
@@ -116,7 +116,7 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 1. 勾選&#x200B;**「啟用電子郵件通知」**&#x200B;選項，接收此作業狀態的電子郵件通知，例如，成功、失敗。
 1. 儲存變更。
 
-### 設定非同步 MSM 操作 {#configuring-asynchronous-msm-operations}
+### 設定非同步MSM操作 {#configuring-asynchronous-msm-operations}
 
 1. 在「全域導覽」中，按一下&#x200B;**[!UICONTROL 「工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web 主控台」]**。
 1. 在 Web 主控台中，開啟&#x200B;**[!UICONTROL 「非同步頁面移動操作作業處理設定」]**。
@@ -129,7 +129,7 @@ AEM 每天 01:00 會執行清除作業，將超過一天的已完成非同步作
 >[!MORELIKETHIS]
 >
 >* [建立及組織頁面](/help/sites-authoring/managing-pages.md)
->* [建立和同步 Live Copies](/help/sites-administering/msm-livecopy.md)
+>* [建立和同步化即時副本](/help/sites-administering/msm-livecopy.md)
 >* [在Experience Manager中設定電子郵件](/help/sites-administering/notification.md).
 >* [匯入資產中繼資料](/help/assets/metadata.md#import-metadata).
 >* [匯出資產中繼資料](/help/assets/metadata.md#export-metadata).

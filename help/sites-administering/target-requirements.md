@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,10 @@ ht-degree: 0%
 
 測試和目標 [復寫代理](/help/sites-deploying/replication.md) 必須在作者執行個體上啟用。 請注意，如果您使用 [nosamplecontent](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) 執行模式以安裝AEM。 如需保護生產環境的詳細資訊，請參閱 [安全性檢查清單](/help/sites-administering/security-checklist.md).
 
-1. 在AEM首頁上，按一下或點選 **工具** > **部署** > **復寫**.
-1. 按一下或點選 **作者上的代理程式**.
-1. 按一下或點選 **測試並鎖定目標（測試並鎖定目標）** 復寫代理，然後按一下或點選 **編輯**.
-1. 選取「已啟用」選項，然後按一下或點選 **確定**.
+1. 在AEM首頁上，按一下 **工具** > **部署** > **復寫**.
+1. 按一下 **作者上的代理程式**.
+1. 按一下 **測試並鎖定目標（測試並鎖定目標）** 復寫代理程式，然後按一下 **編輯**.
+1. 選取「已啟用」選項，然後按一下 **確定**.
 
    >[!NOTE]
    >
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## 保護活動設定節點 {#securing-the-activity-settings-node}
 
-您必須保護活動設定節點 **cq：ActivitySettings** ，讓一般使用者無法存取。 活動設定節點應該只能由處理與Adobe Target的活動同步的服務存取。
+保護活動設定節點 **cq：ActivitySettings** ，讓一般使用者無法存取。 活動設定節點應該只能由處理與Adobe Target的活動同步的服務存取。
 
 此 **cq：ActivitySettings** 節點可在CRXDE Lite中使用，位於 `/content/campaigns/*nameofbrand*`* *在活動jcr：content節點下；* *例如， `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. 此節點只有在您鎖定元件目標之後才會建立。
 

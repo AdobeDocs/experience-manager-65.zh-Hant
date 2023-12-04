@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2223'
+source-wordcount: '2194'
 ht-degree: 0%
 
 ---
@@ -117,12 +117,12 @@ ht-degree: 0%
 
 現在您已為體驗建立基本骨架，您必須根據體驗型別繼續下列動作：
 
-* [Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers):
+* [Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)：
 
    * [將Teaser頁面連結至訪客區段。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)
    * [為您的Teaser建立接觸點](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser) （將您的Teaser新增至內容頁面）。
 
-* [Newsletter](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters):
+* [電子報](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)：
 
    * [將內容新增至Newsletter。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
    * [個人化電子報。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
@@ -239,7 +239,7 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-21at123123pm](assets/screen_shot_2012-02-21at123123pm.png)
 
-   新潛在客戶會出現在「潛在客戶」窗格中。 如果按一下該專案，則所有輸入的資訊都會顯示在右窗格中。 建立銷售機會後，您可以將其新增至清單。
+   新潛在客戶會出現在「潛在客戶」窗格中。 如果按一下專案，所有輸入的資訊都會顯示在右窗格中。 建立銷售機會後，您可以將其新增至清單。
 
 ### 將銷售機會新增至清單 {#adding-leads-to-lists}
 

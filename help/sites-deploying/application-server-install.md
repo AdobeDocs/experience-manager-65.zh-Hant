@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -100,9 +100,9 @@ AEM會以單一war檔案的形式進行部署。
 
 * 讓基本驗證標題通過：
 
-   * 讓AEM驗證使用者身份的一種方法是停用WebSphere®伺服器的全域管理安全性，若要這麼做：請移至[安全性] -> [全域安全性]，然後取消勾選[啟用管理安全性]核取方塊，儲存並重新啟動伺服器。
+   * 讓AEM驗證使用者身份的一種方法是停用WebSphere®伺服器的全域管理安全性，若要這樣做：請移至[安全性] > [全域安全性]，然後取消勾選[啟用管理安全性]核取方塊，儲存並重新啟動伺服器。
 
-* set `"JAVA_OPTS= -Xmx2048m"`
+* 設定 `"JAVA_OPTS= -Xmx2048m"`
 * 如果您要使用內容根目錄= /安裝AEM，請變更現有預設Web應用程式的內容根目錄。
 
 **部署AEM Web應用程式**

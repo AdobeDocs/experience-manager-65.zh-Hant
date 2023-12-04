@@ -11,10 +11,10 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2567'
-ht-degree: 2%
+source-wordcount: '2306'
+ht-degree: 0%
 
 ---
 
@@ -490,7 +490,7 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫 [HTL指�
 
 ## 額外挑戰 {#bonus-challenge}
 
-檢閱的功能 **新增** 已在產品Teaser中實施的徽章。 嘗試新增額外的核取方塊讓作者控制 **環保型** 應顯示徽章。 您必須更新元件對話方塊： `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
+檢閱的功能 **新增** 已在產品Teaser中實施的徽章。 嘗試新增額外的核取方塊讓作者控制 **環保型** 應顯示徽章。 更新元件對話方塊於 `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
 
 ![新徽章實作挑戰](../assets/customize-cif-components/new-badge-implementation-challenge.png)
 

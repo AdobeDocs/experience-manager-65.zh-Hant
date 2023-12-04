@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2319'
+source-wordcount: '2320'
 ht-degree: 1%
 
 ---
@@ -160,7 +160,7 @@ AEM提供了一個主控台，用於管理元件UI中使用的各種文字翻譯
 使用以下程式，從字典中移除字串。
 
 1. 在「字典」下拉式功能表中，選取您要移除字串的字典。
-1. 按一下移除。
+1. 按一下「移除」。
 
    ![chlimage_1-213](assets/chlimage_1-213.png)
 
@@ -206,7 +206,7 @@ Translator工具底部的搜尋列提供字串選取選項：
 
 1. 若要編輯其中一個字串的翻譯文字，您可以：
 
-   * 按兩下所需字串的適當語言，即可編輯該單一文字：
+   * 連按兩下所需字串的適當語言，即可編輯該單一文字：
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 

@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ ht-degree: 0%
 
 此方法表示多個Oak執行個體可跨多個資料中心存取MongoDB復本集，實際為AEM製作環境建立主動 — 主動式叢集。 MongoDB復寫功能擁有多個資料中心，可提供相同的高可用性和備援能力，但現已具備處理資料中心中斷的能力。
 
-![oakclustermongofailover2datacenters](assets/oakclustermongofailover2datacenters.png)
+![oakclustermongofailover2資料中心](assets/oakclustermongofailover2datacenters.png)
 
 優點：
 
@@ -177,7 +177,7 @@ Adobe強烈建議TarMK作為客戶在所有部署案例(AEM製作和發佈執行
 1. 合作夥伴或客戶團隊必須具備MongoDB專業知識，才能有信心維持及維護現有或新的MongoDB環境；
 1. 您可以選擇部署商業或開放原始碼版本的MongoDB (AEM同時支援兩者)，但必須直接從MongoDB Inc購買MongoDB維護和支援合約；
 1. 整體AEM和MongoDB架構和基礎架構應由AdobeAEM架構師妥善定義和驗證；
-1. 您必須檢閱包含MongoDB的AEM部署的支援模型。
+1. 檢閱包含MongoDB的AEM部署的支援模型。
 
 **MongoDB部署的強大建議：**
 

@@ -2,10 +2,10 @@
 title: 使用內容頁面版本
 description: 在Adobe Experience Manager中建立、比較和還原頁面版本。
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1501'
-ht-degree: 3%
+source-wordcount: '1510'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 1. 瀏覽以顯示您要建立版本的頁面。
 1. 選取中的頁面 [選擇模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 1. 開啟 **時間表** 欄。
-1. 按一下/點選評論欄位旁的箭頭，以顯示選項：
+1. 按一下註解欄位旁的箭頭以顯示選項：
 
    ![時間軸 — 另存新版本](assets/screen-shot_2019-03-05at112335.png)
 
@@ -210,7 +210,7 @@ ht-degree: 3%
 
    ![在模式選取範圍中選取時間扭曲](assets/wwpv-01.png)
 
-1. 在對話方塊中，設定目標日期和時間，然後按一下或點選 **設定日期**. 如果您未選取時間，則會將目前時間設為預設值。
+1. 在對話方塊中，設定目標日期和時間，然後按一下 **設定日期**. 如果您未選取時間，則會將目前時間設為預設值。
 
    ![設定日期](assets/wwpv-02.png)
 

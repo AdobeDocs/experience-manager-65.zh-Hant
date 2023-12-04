@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2303'
 ht-degree: 0%
 
 ---
@@ -562,16 +562,16 @@ public class AxisFilter implements VariantFilter {
 
 AEM前端可放置在現有Hybris實作的前面。 您也可以將hybris引擎新增至現有的AEM安裝。 為此，系統必須能夠正確地處理任一系統中的現有使用者：
 
-* AEM -> hybris
+* AEM > hybris
 
    * 登入Hybris時，如果AEM使用者不存在：
 
       * 使用密碼編譯隨機密碼建立hybris使用者
       * 將hybris使用者名稱儲存在AEM使用者的使用者目錄中
 
-   * 請參閱: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
+   * 請參閱： `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
 
-* hybris -> AEM
+* hybris > AEM
 
    * 登入AEM時，如果系統辨識出使用者：
 
@@ -580,7 +580,7 @@ AEM前端可放置在現有Hybris實作的前面。 您也可以將hybris引擎�
 
    * 上述演演算法是在Sling中實作 `AuthenticationInfoPostProcessor`
 
-      * 請參閱: `com.adobe.cq.commerce.hybris.impl.user.LazyUserImporter.java`
+      * 請參閱： `com.adobe.cq.commerce.hybris.impl.user.LazyUserImporter.java`
 
 ### 自訂匯入程式 {#customizing-the-import-process}
 

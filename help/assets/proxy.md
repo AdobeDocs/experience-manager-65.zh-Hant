@@ -4,9 +4,9 @@ description: Proxy是 [!DNL Experience Manager] 使用Proxy Worker處理工作�
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Proxy和Proxy背景工作設定均可透過雲端服務設定取得，可從以�
 
    如需範例，請參閱 `IDSJob.IDS_EXTENDSCRIPT_JOB` 用於IDS Proxy Worker。
 
-1. 外部步驟會用於觸發事件，然後等待直到完成；這是透過輪詢ID來完成。 您必須開發自己的步驟來實作新功能。
+1. 外部步驟會用於觸發事件，然後等待直到完成；這是透過輪詢ID來完成。 開發您自己的步驟來實作新功能。
 
    實作 `WorkflowExternalProcess`，然後使用JobService API和您的工作主題來準備工作事件，並將其分派給JobService （OSGi服務）。
 

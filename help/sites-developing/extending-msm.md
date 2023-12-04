@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2582'
-ht-degree: 58%
+source-wordcount: '2444'
+ht-degree: 53%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 58%
 
 此頁面可協助您擴充「多網站管理員」的功能：
 
-* 了解 MSM Java API 的主要成員.
+* 瞭解MSM Java API的主要成員。
 * 建立可用於轉出設定的同步化動作。
-* 修改預設的語言和國家/地區代碼.
+* 修改預設語言和國家/地區代碼。
 
 <!-- * Remove the "Chapters" step in the Create Site wizard. -->
 
@@ -107,8 +107,8 @@ ht-degree: 58%
 
 * `LiveAction` 類別會包括以下方法：
 
-   * `getName`: 傳回動作的名稱. 此名稱是用來參照動作，例如在轉出設定中。
-   * `execute`: 執行動作的任務.
+   * `getName`：傳回動作名稱。 此名稱是用來參照動作，例如在轉出設定中。
+   * `execute`：執行動作的任務。
 
 * `LiveActionFactory` 類別會包括以下項目：
 
@@ -144,7 +144,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 * A [`Resource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html) 代表即時副本來源的物件。
 * A `Resource` 代表即時副本目標的物件。
-* Live Copy 的 [`LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) 物件.
+* 此 [`LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) 物件作為即時副本。
 * 此 `autoSave` 值會指出您的 `LiveAction` 應儲存對存放庫進行的變更。
 
 * 重設值表示轉出重設模式。
@@ -168,7 +168,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 當安裝的轉出設定不符合您的應用程式需求時，建立轉出設定：
 
 * [建立推出設定](#create-the-rollout-configuration)。
-* [將同步動作新增到推出設定中](#add-synchronization-actions-to-the-rollout-configuration).
+* [將同步動作新增到轉出設定](#add-synchronization-actions-to-the-rollout-configuration).
 
 然後，在藍圖或 Live Copy 頁面上設定推出設定時，您即可使用新的推出設定。
 
@@ -181,7 +181,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 1. 開啟CRXDE Lite；例如：
    [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
-1. 瀏覽到 :
+1. 導覽至：
    `/apps/msm/<your-project>/rolloutconfigs`
 
    >[!NOTE]
@@ -191,7 +191,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
    >[!NOTE]
    >
-   >您不得變更 `/libs` 路徑。
+   >請勿變更中的任何專案 `/libs` 路徑。
    >這是因為 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
    >設定和其他變更的建議方法是：
    >
@@ -212,7 +212,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
      **值**：選用的說明。
    * **名稱**：`cq:trigger`
      **類型**：`String`
-     **值**：所要使用的[推出觸發器. ](/help/sites-administering/msm-sync.md#rollout-triggers)選取自：
+     **值**：此 [轉出觸發器](/help/sites-administering/msm-sync.md#rollout-triggers) 以利使用。 選取自：
       * `rollout`
       * `modification`
       * `publish`
@@ -231,13 +231,13 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
    例如：
    `/apps/msm/myproject/rolloutconfigs/myrolloutconfig`
 
-1. **建立具有下列節點屬性的節點：**
+1. **建立** 具有下列節點屬性的節點：
 
-   * **名稱**：同步動作的節點名稱.
+   * **名稱**：同步動作的節點名稱。
 名稱必須與 **動作名稱** 在表格中的 [同步化動作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)例如， `contentCopy` 或 `workflow`.
    * **類型**：`cq:LiveSyncAction`
 
-1. 依您需要的數量新增並設定同步動作節點。重新排列動作節點，使其顯示的順序和您希望它們出現的順序相符。最頂端的動作節點會先出現。
+1. 新增並設定您所需的同步化動作節點數目。 重新排列動作節點，使其順序符合您要動作節點發生的順序。 最頂端的動作節點會先出現。
 
 ## 建立並使用簡單的 LiveActionFactory 類別 {#creating-and-using-a-simple-liveactionfactory-class}
 
@@ -249,7 +249,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 1. [建立推出設定](#create-the-example-rollout-configuration)。
 1. [建立 Live Copy](#create-the-live-copy)。
 
-Maven 專案和 Java 類別的原始碼可在公用 Git 存放庫中取得。
+公共Git存放庫中提供Maven專案和Java類別的原始碼。
 
 GITHUB上的程式碼
 
@@ -637,7 +637,7 @@ MSM 會使用儲存的語言和國家/地區代碼清單來確定和頁面語言
 
    命名新資料夾`wcm`。
 
-1. 重複上一個步驟以建立 `/apps/wcm/core` 資料夾樹狀結構。在稱之為 `sling:Folder` 的 `core` 中建立類型 `resources` 的節點。 <!-- ![Resources](assets/chlimage_1-77.png) -->
+1. 重複上一個步驟以建立 `/apps/wcm/core` 資料夾樹狀結構。建立型別節點 `sling:Folder` 在 `core` 已呼叫 `resources`. <!-- ![Resources](assets/chlimage_1-77.png) -->
 
 1. 在 `/libs/wcm/core/resources/languages` 節點上按一下右鍵，然後按一下「**複製**」。
 1. 在 `/apps/wcm/core/resources` 資料夾上按一下右鍵，然後按一下「**貼上**」。根據需要修改子節點。
@@ -647,7 +647,7 @@ MSM 會使用儲存的語言和國家/地區代碼清單來確定和頁面語言
 
    ![Day CQ WCM 語言管理員](assets/chlimage_1-78.png)
 
-## 在頁面屬性上設定 MSM 鎖 （觸控式UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
+## 在頁面屬性上設定MSM鎖定（觸控式UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 建立自訂頁面屬性時，您可能需要考慮新屬性是否適合推出到任何 Live Copy。
 

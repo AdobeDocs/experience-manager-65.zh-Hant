@@ -1,14 +1,14 @@
 ---
 title: SPA參考資料
-description: 單頁應用程式API參照和原始程式碼存放庫的概觀
+description: 單一頁面應用程式API參照和原始程式碼存放庫的概觀
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 exl-id: 3d66e861-aaf4-4227-b31a-3545bb3561d0
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->SPA編輯器是建議解決方案，供需要SPA架構使用者端轉譯(例如React或Angular)的專案使用。
+>對於需要以SPA框架為基礎的使用者端轉譯(例如React或Angular)專案，建議使用SPA編輯器解決方案。
 
 * [元件對應](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [頁面模型管理員](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 開放原始碼GitHub存放庫 {#github-repositories}
 
-以下是GitHub上適用於SPA程式庫的開放原始碼存放庫。
+以下是GitHub上SPA程式庫的開放原始碼存放庫。
 
 * [元件對應](https://github.com/adobe/aem-spa-component-mapping)
 * [頁面模型管理員](https://github.com/adobe/aem-spa-page-model-manager)

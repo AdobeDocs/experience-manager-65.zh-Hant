@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 2%
+source-wordcount: '428'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,7 @@ We.Retail是藉由全球化網站結構所建置，可提供語言母版，且�
 
 ## 正在試用中 {#trying-it-out}
 
-1. 從開啟網站主控台 **全域導覽 — >網站**.
+1. 從開啟網站主控台 **全域導覽>網站**.
 1. 切換到欄檢視（如果尚未啟用）並選取We.Retail。 請記下具有瑞士、美國、法國等的國家結構範例，以及Language Master。
 
    ![chlimage_1-87](assets/chlimage_1-87a.png)
@@ -46,7 +46,7 @@ We.Retail是藉由全球化網站結構所建置，可提供語言母版，且�
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. 系統會為每個語言翻譯建立一個專案。 在下檢視它們 **導覽 — >專案**.
+1. 系統會為每個語言翻譯建立一個專案。 在下檢視它們 **導覽>專案**.
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 

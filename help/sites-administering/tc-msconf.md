@@ -4,9 +4,9 @@ description: 瞭解如何將AEM連線至現成的Microsoft Translator，以自�
 feature: Language Copy
 role: Admin
 exl-id: ca575a30-fc3e-4f38-9aa7-dbecbc089f87
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '452'
 ht-degree: 4%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 4%
 
 下列程式會建立Microsoft Translator設定。
 
-1. 在 [導覽面板，](/help/sites-authoring/basic-handling.md#first-steps) 按一下或點選 **工具** -> **Cloud Service** -> **翻譯Cloud Service**.
+1. 在 [導覽面板，](/help/sites-authoring/basic-handling.md#first-steps) 按一下 **工具** > **Cloud Service** > **翻譯Cloud Service**.
 1. 導覽至您要建立設定的位置。 這通常位於您的網站根目錄中，或可為全域預設設定。
-1. 點選或按一下 **建立** 按鈕。
+1. 按一下 **建立** 按鈕。
 1. 定義您的設定。
    1. 選取 **Microsoft Translator** 位於下拉式清單中。
    1. 輸入設定的標題。 標題可識別Cloud Service控制檯和頁面屬性下拉式清單中的設定。
@@ -45,26 +45,26 @@ ht-degree: 4%
 
    ![編輯翻譯設定](assets/edit-translation-config.png)
 
-1. 點選或按一下 **連線** 以驗證連線。
-1. 點選或按一下&#x200B;**儲存並關閉**。
+1. 按一下 **連線** 以驗證連線。
+1. 按一下&#x200B;**「儲存並關閉」**。
 
 ## 升級Microsoft Translator試用授權設定 {#upgrading-the-microsoft-translator-trial-license-configuration}
 
 Microsoft翻譯設定頁面提供指向Microsoft網站的便利連結，以取得足以用於生產系統的帳戶訂閱。
 
-1. 在 [導覽面板，](/help/sites-authoring/basic-handling.md#first-steps) 點選或按一下 **工具** -> **Cloud Service** -> **翻譯Cloud Service**.
-1. 點選或按一下您現有的Microsoft Translator設定。
-1. 點選或按一下 **編輯**.
-1. 在 **編輯設定** 視窗，點選或按一下 **升級訂閱**. 隨即開啟一個包含服務詳細資訊的Microsoft網頁。
+1. 在 [導覽面板，](/help/sites-authoring/basic-handling.md#first-steps) 按一下 **工具** > **Cloud Service** > **翻譯Cloud Service**.
+1. 按一下您現有的Microsoft Translator設定。
+1. 按一下 **編輯**.
+1. 在 **編輯設定** 視窗，按一下 **升級訂閱**. 隨即開啟一個包含服務詳細資訊的Microsoft網頁。
 
 ## 自訂Microsoft Translator引擎 {#customizing-your-microsoft-translator-engine}
 
 Microsoft翻譯設定頁面提供Microsoft網站的便利連結，讓您自訂Microsoft Translator引擎。
 
-1. 在 [導覽面板，](/help/sites-authoring/basic-handling.md#first-steps) 點選或按一下 **工具** -> **Cloud Service** -> **翻譯Cloud Service**.
-1. 點選或按一下您現有的Microsoft Translator設定。
-1. 點選或按一下 **編輯**.
-1. 在 **編輯設定** 視窗，點選或按一下 **自訂Translator**. 使用開啟的Microsoft網頁來自訂您的服務。
+1. 在 [導覽面板，](/help/sites-authoring/basic-handling.md#first-steps) 按一下 **工具** > **Cloud Service** > **翻譯Cloud Service**.
+1. 按一下您現有的Microsoft Translator設定。
+1. 按一下 **編輯**.
+1. 在 **編輯設定** 視窗，按一下 **自訂Translator**. 使用開啟的Microsoft網頁來自訂您的服務。
 
 ## 啟用Translator服務設定 {#activating-the-translator-service-configurations}
 

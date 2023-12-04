@@ -6,10 +6,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2929'
-ht-degree: 2%
+source-wordcount: '2907'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 每個不同的產品型別都需要支架。 適當的支架可透過以下任一方式與產品相關聯：
 
-* path
+* 路徑
 * 產品可參考架構
 
 >[!NOTE]
@@ -113,7 +113,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
      `/etc/commerce/products/<*store name*>/`
 
-   * **商務提供程式**
+   * **商務提供者**
 
      您的匯入工具 [商業提供者](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)；預設Geometrixx。
 
@@ -194,7 +194,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    ![開啟參考資料的產品主控台](/help/sites-administering/assets/chlimage_1-88.png)
 
-1. 按一下/點選參考型別（例如「產品頁面」）以展開清單。
+1. 按一下參照型別（例如「產品頁面」）以展開清單。
 1. 選取特定參照，以便顯示選項：
 
    * 導覽至產品頁面
@@ -430,7 +430,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    ![設定圖示](/help/sites-administering/assets/chlimage_1-96.png)
 
-1. 向下捲動. 有一個 **加入購物車** 標籤。
+1. 向下捲動。 有一個 **加入購物車** 標籤。
 
    ![加入購物車索引標籤](/help/sites-administering/assets/chlimage_1-97.png)
 
@@ -463,7 +463,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
    ![建立目錄精靈](/help/sites-administering/assets/chlimage_1-99.png)
 
 1. 導覽至所需的目錄Blueprint。
-1. 選取 **選取** 按鈕並點選/按一下所需的目錄Blueprint。
+1. 選取 **選取** 按鈕並按一下所需的目錄Blueprint。
 1. 選取 **下一個**.
 
    ![目錄屬性精靈](/help/sites-administering/assets/chlimage_1-100.png)
@@ -524,7 +524,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    ![轉出](/help/sites-administering/do-not-localize/chlimage_1-24.png)
 
-1. 在精靈中，視需要設定轉出，然後點選/按一下 **轉出變更**.
+1. 在精靈中，視需要設定轉出，然後按一下 **轉出變更**.
 1. 對話方塊開啟。 選取 **完成** 程式完成時。
 
 #### 轉出目錄 — Classic UI {#rolling-out-a-catalog-classic-ui}
@@ -549,7 +549,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
    ![匯入Blueprint圖示](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
-1. 在精靈中，視需要選取來源，然後點選/按一下 **下一個**.
+1. 在精靈中，視需要選取來源並按一下 **下一個**.
 
    ![Blueprint精靈](/help/sites-administering/assets/chlimage_1-102.png)
 

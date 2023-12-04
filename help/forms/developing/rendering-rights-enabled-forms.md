@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: d4c2b2f0-613a-409d-b39b-8e37fdb96eea
 role: Developer
 exl-id: 012a3a9f-542c-4ed1-a092-572bfccbdf21
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Forms服務可轉譯已套用使用許可權的表單。 使用許可權與Acrob
 
 **設定使用許可權執行階段選項**
 
-設定使用許可權執行階段選項，以顯示啟用許可權的表單。 您也必須指定用來套用使用許可權至表單的認證別名。 指定別名值之後，您即可指定要套用至表單的每個使用許可權。
+設定使用許可權執行階段選項，以顯示啟用許可權的表單。 指定用來套用使用許可權至表單的認證別名。 指定別名值之後，您即可指定要套用至表單的每個使用許可權。
 
 **轉譯啟用許可權的表單**
 

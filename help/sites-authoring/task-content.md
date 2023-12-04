@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 exl-id: a0719745-8d67-44bc-92ba-9ab07f31f8d2
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 4%
+source-wordcount: '586'
+ht-degree: 3%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 4%
 
 #### 任務詳細資料 {#task-details}
 
-如需特定工作的詳細資訊，請在收件匣中，點選或按一下工作以選取它，然後點選或按一下 **開啟** （在工具列中）。
+如需特定工作的詳細資訊，請在收件匣中，按一下工作以選取它，然後按一下 **開啟** （在工具列中）。
 
 ![任務詳細資料](assets/project-task-detail.png)
 
@@ -70,12 +70,12 @@ ht-degree: 4%
 若要新增任務：
 
 1. 在專案中，找出 **任務** 圖磚
-1. 點選或按一下圖磚右上方的向下>形箭號，然後選取 **建立任務**.
+1. 按一下圖磚右上角的向下>形箭號，然後選取 **建立任務**.
 1. 在 **新增任務** 視窗，提供工作詳細資訊，例如，優先順序、受指派人和到期日。
 
    ![新增任務](assets/project-add-task.png)
 
-1. 點選或按一下「**提交**」。
+1. 按一下「**提交**」。
 
 ## 使用收件匣中的任務 {#working-with-tasks-in-the-inbox}
 

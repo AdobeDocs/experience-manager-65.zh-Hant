@@ -1,19 +1,15 @@
 ---
 title: 使用行銷活動管理員
-seo-title: Working with the Marketing Campaign Manager
 description: 行銷活動管理員(MCM)主控台可協助您管理多管道行銷活動。 使用此行銷自動化軟體，您可以管理所有品牌、行銷活動和體驗，以及相關區段、清單、銷售機會和報表。
-seo-description: The Marketing Campaign Manager (MCM) is a console that helps you manage multi-channel campaigns. With this marketing automation software you can manage all your brands, campaigns and experiences together with the related segments, lists, leads, and reports.
-uuid: 63b817e4-34b9-42b8-845b-e0b7d9af3a96
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 11ff8bb3-39eb-4f77-b3dc-720262fa7f3f
 docset: aem65
 exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1161'
 ht-degree: 0%
 
 ---
@@ -114,13 +110,10 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
 ![screen_shot_2012-02-21at11106pm](assets/screen_shot_2012-02-21at11106pm.png)
 
 * **在左窗格中**：此清單包含所有品牌和促銷活動。
-只要按一下品牌，兩者皆會：
-
-   * 展開清單以在左窗格中顯示所有相關行銷活動；此清單也會顯示每個行銷活動中存在的體驗數量。
-   * 開啟右側窗格中的品牌概觀。
+按一下品牌可展開清單，以在左側窗格中顯示所有相關行銷活動；此清單也會顯示每個行銷活動中存在的體驗數量。 它也會在右窗格中開啟品牌概觀。
 
 * **在右窗格中**：會為每個品牌顯示圖示（不會顯示歷史行銷活動）。
-您可以按兩下這些以開啟品牌概觀。
+您可以連按兩下以開啟品牌概觀。
 
 #### 品牌概觀 {#brand-overview}
 

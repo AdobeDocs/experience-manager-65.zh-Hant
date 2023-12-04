@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1954'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ OSGi 」*提供標準化的基本概念，允許使用小型、可重複使用�
 
 1. 存取 **設定** Web Console的索引標籤，方法是：
 
-   * 從上的連結開啟Web主控台 **工具 — >作業** 功能表。 登入主控台後，您可以使用下拉式功能表：
+   * 從上的連結開啟Web主控台 **工具>作業** 功能表。 登入主控台後，您可以使用下拉式功能表：
 
      **OSGi >**
 
@@ -197,7 +197,7 @@ Web主控台不會顯示存放庫中儲存變更的位置，但可以輕鬆找�
    * `config`  — 適用於所有執行模式
    * `config.author`  — 適用於作者環境
    * `config.publish`  — 適用於發佈環境
-   * `config.<run-mode>` - 依需要
+   * `config.<run-mode>`  — 視情況而定
 
 1. 是 **設定** 或 **工廠設定** 需要？
 1. 要設定的個別引數，包括必須重新建立的任何現有引數定義。

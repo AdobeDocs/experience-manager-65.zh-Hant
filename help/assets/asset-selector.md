@@ -1,14 +1,14 @@
 ---
 title: 資產選擇器
-description: 瞭解如何使用資產選擇器來搜尋、篩選、瀏覽及擷取Adobe Experience Manager資產內的資產中繼資料。 也會瞭解如何自訂資產選擇器介面。
+description: 瞭解如何使用資產選擇器來搜尋、篩選、瀏覽及擷取Adobe Experience Manager Assets中資產的中繼資料。 也會瞭解如何自訂資產選擇器介面。
 contentOwner: Adobe
 feature: Asset Management,Metadata,Search
 role: User
 exl-id: 4b518ac0-5b8b-4d61-ac31-269aa1f5abe4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 1%
+source-wordcount: '487'
+ht-degree: 2%
 
 ---
 
@@ -57,4 +57,4 @@ ht-degree: 1%
 
    ![chlimage_1-443](assets/chlimage_1-443.png)
 
-1. 點選/按一下 **[!UICONTROL 選取]** 工具列中的。
+1. 按一下 **[!UICONTROL 選取]** 工具列中的。

@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 5fa385a7-f030-4c0c-8938-0991d02ef361
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1682'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Forms服務會以無訊息方式剖析自訂CSS檔案。 也就是說，Forms服
 
 **呈現HTML表單**
 
-若要呈現HTML表單，您必須指定在Designer中建立並儲存為XDP檔案的表單設計。 您也必須選取HTML轉換型別。 例如，您可以指定轉譯Internet Explorer 5.0或更新版本動態HTML的HTML轉換型別。
+若要呈現HTML表單，請指定在Designer中建立並儲存為XDP檔案的表單設計。 選取HTML轉換型別。 例如，您可以指定轉譯Internet Explorer 5.0或更新版本動態HTML的HTML轉換型別。
 
 呈現HTML表單也需要值，例如呈現其他表單型別所需的URI值。
 

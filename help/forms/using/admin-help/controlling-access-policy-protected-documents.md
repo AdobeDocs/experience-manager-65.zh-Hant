@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f34058c3-384a-4b73-a386-5bc9125acbf8
 feature: Document Security
 exl-id: 0eb6e769-97c1-41ee-8d12-91bece984947
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2168'
+source-wordcount: '2167'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必須使用[檔案詳細資訊]頁面上的[原則名稱]連結，才能存取在Microsoft Outlook中為附加至電子郵件訊息之檔案的收件者自動產生的原則。 這些原則不會出現在原則頁面上。
+>使用[檔案詳細資訊]頁面上的[原則名稱]連結，存取在Microsoft Outlook中為附加至電子郵件訊息之檔案的收件者自動產生的原則。 這些原則不會出現在原則頁面上。
 
 **檔名稱：** 所選檔案的名稱。
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 **發行者：** 將原則附加至檔案的使用者名稱。
 
-**原則名稱：** 用來保護檔案的原則名稱。 您可以按一下名稱以開啟原則。 您必須使用此連結來存取Acrobat為Outlook中附加至電子郵件訊息之檔案的收件者產生的原則。 這些原則不會顯示在「原則」頁面上。
+**原則名稱：** 用來保護檔案的原則名稱。 您可以按一下名稱以開啟原則。 使用此連結來存取Acrobat為Outlook中附加至電子郵件訊息之檔案的收件者產生的原則。 這些原則不會顯示在「原則」頁面上。
 
 **原則型別：** 套用至檔案的原則型別。
 

@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4143'
+source-wordcount: '4102'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Forms服務會根據網頁瀏覽器的HTTP要求，將表單轉譯為HTML。 將
 
 ## 執行指令碼 {#running-scripts}
 
-表單作者會指定指令碼是在伺服器上還是在使用者端上執行。 Forms服務會建立分散式的事件處理環境，用於執行可在使用者端與伺服器之間分散的表單情報(透過使用 `runAt` 屬性。 如需此屬性或在表單設計中建立指令碼的相關資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_tw)
+表單作者會指定指令碼是在伺服器上還是在使用者端上執行。 Forms服務會建立分散式的事件處理環境，用於執行可在使用者端與伺服器之間分散的表單情報(透過使用 `runAt` 屬性。 如需此屬性或在表單設計中建立指令碼的相關資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 Forms服務可在表單轉譯時執行指令碼。 因此，您可以連線至資料庫或使用者端可能無法使用的Web服務，預先填入含有資料的表單。 您也可以設定按鈕的 `Click` 要在伺服器上執行的事件，讓使用者端將資料往返至伺服器。 這可讓使用者端在使用者與表單互動時，執行可能需要伺服器資源的指令碼，例如企業資料庫。 對於HTML表單，formcalc指令碼只能在伺服器上執行。 因此，您必須標籤這些指令碼以在 `server` 或 `both`.
 
@@ -99,7 +99,7 @@ form：ready事件形式的表單指令碼在表單的初始轉譯期間只會�
 
 您可以在提交表單前叫用自訂指令碼。 此功能適用於所有可用瀏覽器。 但是，它只能在使用者轉譯具有它的HTML表單時使用 `Output Type` 屬性設定為 `Form Body`. 當 `Output Type` 是 `Full HTML`. 如需設定此功能的步驟，請參閱管理說明中的設定表單。
 
-您必須先定義呼叫的回呼函式，再提交表單，其中函式名稱為 `_user_onsubmit`. 我們假設函式不會擲回任何例外狀況，或如果擲回了，則會忽略例外狀況。 建議將JavaScript函式放在html的head區段中；不過，您可以在指令碼標籤的結尾之前的任何位置宣告該函式，其中包括 `xfasubset.js`.
+首先，定義在提交表單前呼叫的回呼函式，其中函式名稱為 `_user_onsubmit`. 我們假設函式不會擲回任何例外狀況，或如果擲回了，則會忽略例外狀況。 建議將JavaScript函式放在html的head區段中；不過，您可以在指令碼標籤的結尾之前的任何位置宣告該函式，其中包括 `xfasubset.js`.
 
 表單伺服器轉譯含有下拉式清單的XDP時，除了建立下拉式清單外，還會建立兩個隱藏的文字欄位。 這些文字欄位儲存下拉式清單的資料（其中一個儲存選項的顯示名稱，另一個儲存選項的值）。 因此，每次使用者提交表單時，都會提交下拉式清單的整個資料。 假設您不想每次都提交那麼多的資料，您可以撰寫自訂指令碼來停用它。 例如：下拉式清單的名稱為 `drpOrderedByStateProv` 而且會包裝在子表單標題下。 HTML輸入元素的名稱將為 `header[0].drpOrderedByStateProv[0]`. 儲存及提交下拉式清單資料的隱藏欄位名稱如下： `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
 
@@ -123,11 +123,11 @@ var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature
 
 建立要呈現為HTML的表單設計時，您必須將指令碼限製為JavaScript語言中指令碼的XFA子集。
 
-在使用者端上執行或在使用者端和伺服器上執行的指令碼必須寫入XFA子集中。 在伺服器上執行的指令碼可以使用完整的XFA指令碼模型，也可以使用FormCalc。 如需使用JavaScript的相關資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_tw).
+在使用者端上執行或在使用者端和伺服器上執行的指令碼必須寫入XFA子集中。 在伺服器上執行的指令碼可以使用完整的XFA指令碼模型，也可以使用FormCalc。 如需使用JavaScript的相關資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 在使用者端上執行指令碼時，只有目前顯示的面板可以使用指令碼；例如，當面板B顯示時，您無法對面板A中的欄位執行指令碼。 在伺服器上執行指令碼時，可以存取所有面板。
 
-在使用者端執行的指令碼中使用指令碼物件模型(SOM)運算式時，也必須小心。 在使用者端執行的指令碼僅支援SOM運算式的簡化子集。
+在使用者端執行的指令碼中使用指令碼物件模型(SOM)運算式時，請務必小心。 在使用者端執行的指令碼僅支援SOM運算式的簡化子集。
 
 ## 事件計時 {#event-timing}
 
@@ -140,11 +140,11 @@ XFA子集會定義對應至HTML事件的XFA事件。 計算及驗證事件的時
 * 如果Null測試產生錯誤，而您結束欄位卻未指定值，則會顯示訊息方塊，而且您會在按一下「確定」後重新定位至欄位。
 * 如果Null測試產生警告，而您結束欄位時未指定值，系統會提示您按一下「確定」或「取消」，讓您選擇繼續但不指定值或返回欄位以輸入值。
 
-如需有關空值測試的詳細資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_tw).
+如需有關空值測試的詳細資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 ## 表單按鈕 {#form-buttons}
 
-按一下提交按鈕會將表單資料傳送至Forms服務，並代表表單處理的結尾。 此 `preSubmit` 事件可以設定為在使用者端或伺服器上執行。 此 `preSubmit` 如果設定要在使用者端上執行，則事件會在表單提交之前執行。 否則， `preSubmit` 事件會在表單提交期間在伺服器上執行。 如需關於的詳細資訊 `preSubmit` 事件，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_tw).
+按一下提交按鈕會將表單資料傳送至Forms服務，並代表表單處理的結尾。 此 `preSubmit` 事件可以設定為在使用者端或伺服器上執行。 此 `preSubmit` 如果設定要在使用者端上執行，則事件會在表單提交之前執行。 否則， `preSubmit` 事件會在表單提交期間在伺服器上執行。 如需關於的詳細資訊 `preSubmit` 事件，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 如果按鈕沒有關聯的使用者端指令碼，則會將資料提交至伺服器，在伺服器上執行計算，並重新產生HTML表單。 如果按鈕包含使用者端指令碼，資料不會傳送至伺服器，而使用者端指令碼會在網頁瀏覽器中執行。
 
@@ -236,7 +236,7 @@ XFA子集會定義對應至HTML事件的XFA事件。 計算及驗證事件的時
 
 **呈現HTML表單**
 
-若要呈現HTML表單，您必須指定在Designer中建立並儲存為XDP檔案的表單設計。 您也必須選取HTML轉換型別。 例如，您可以指定轉譯Internet Explorer 5.0或更新版本動態HTML的HTML轉換型別。
+若要呈現HTML表單，請指定在Designer中建立並儲存為XDP檔案的表單設計。 選取HTML轉換型別。 例如，您可以指定轉譯Internet Explorer 5.0或更新版本動態HTML的HTML轉換型別。
 
 呈現HTML表單也需要值，例如呈現其他表單型別所需的URI值。
 

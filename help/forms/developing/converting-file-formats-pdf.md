@@ -1,19 +1,15 @@
 ---
 title: 在檔案格式和PDF之間轉換
-seo-title: Converting Between File Formats and PDF
 description: 使用「產生PDF」服務將原生檔案格式轉換為PDF。 產生PDF服務也會將PDF轉換為其他檔案格式，並最佳化PDF檔案的大小。
-seo-description: Use the Generate PDF service to convert native file formats to PDF. Generate PDF service also converts PDF to other file formats and optimizes the size of PDF documents.
-uuid: f72ad603-c996-4d48-9bfc-bed7bf776af6
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '7847'
+source-wordcount: '7812'
 ht-degree: 0%
 
 ---
@@ -634,7 +630,7 @@ AppMon使用標準的Win32 API與協力廠商應用程式互動，以傳輸UI事
   <tr>
    <td><p>其他應用程式專用對話方塊指示 </p></td>
    <td><p>指定應用程式特定對話方塊指示的覆寫和新增專案。 區段會提供這類資訊的範例。 </p><p>包含此資訊的檔案為appmon。<i>'[appname]'</i>.addition.<i>'[locale]'</i>.xml。 例如appmon.addition.en_US.xml。</p></td>
-   <td><p>可以使用XML編輯應用程式來建立及修改此型別的檔案。 (請參閱 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">為原生應用程式建立或修改其他對話方塊XML檔案</a>.) </p><p><strong>重要</strong>：您必須針對伺服器將支援的每個原生應用程式，建立其他應用程式專用的對話方塊指示。 </p></td>
+   <td><p>可以使用XML編輯應用程式來建立及修改此型別的檔案。 (請參閱 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">為原生應用程式建立或修改其他對話方塊XML檔案</a>.) </p><p><strong>重要</strong>：針對伺服器將支援的每個原生應用程式，建立其他應用程式專屬對話方塊指示。 </p></td>
   </tr>
  </tbody>
 </table>
@@ -673,7 +669,7 @@ A *指令碼XML檔案* 指定一系列步驟，指示原生應用程式瀏覽至
 
 指令碼XML檔案中的步驟會依序執行，不會有任何分支機會。 唯一支援的條件式測試是逾時/重試，如果步驟在特定時間內未成功完成且在經過特定次數的重試之後，會導致指令碼終止。
 
-除了循序的步驟外，步驟中的指示也會依序執行。 您必須確保步驟和指示反映使用者執行這些相同步驟的順序。
+除了循序的步驟外，步驟中的指示也會依序執行。 確保步驟和指示反映使用者執行這些相同步驟的順序。
 
 指令碼XML檔案中的每個步驟都會識別在成功執行步驟指示時預期出現的視窗元素。 如果執行指令碼步驟時出現未預期的對話方塊，則產生PDF服務會依照下一節所述搜尋對話方塊XML檔案。
 
@@ -796,7 +792,7 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 #### 排序視窗和windowList元素 {#ordering-the-window-and-windowlist-elements}
 
-您必須訂購 `window` 和 `windowList` 元素如下所示：
+訂購 `window` 和 `windowList` 元素如下所示：
 
 * 當多個 `window` 元素會顯示為中的子項 `windowList` 或 `dialog` 元素，對其排序 `window` 元素以遞減順序排列，長度為 `caption` 表示位置在順序中的名稱。
 * 當多個 `windowList` 元素會出現在 `window` 元素，對其排序 `windowList` 元素以遞減順序排列，長度為 `caption` 第一個屬性 `indexes/`指示順序中位置的元素。
@@ -864,7 +860,7 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 >
 native2pdfconfig.xml組態檔中指定的泛型應用程式都沒有主要對話方塊XML檔案。 區段 [新增或修改對原生檔案格式的支援](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format) 說明這些規格。
 
-您必須訂購 `windowList` 在中顯示為子項的元素 `window` 元素。 (請參閱 [排序視窗和windowList元素](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements).)
+訂購 `windowList` 在中顯示為子項的元素 `window` 元素。 (請參閱 [排序視窗和windowList元素](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements).)
 
 ### 修改一般對話方塊XML檔案 {#modifying-the-general-dialog-xml-file}
 
@@ -1062,7 +1058,7 @@ AEM Forms包含範例XML檔案，可讓「產生PDF」服務使用「記事本�
         </expectedWindow>
     </step>
 
-    <!-- In this step, we acquire the Print dialog and click on the 'Preferences' button and the expected window in this case is the dialog with the caption '"Printing Preferences' -->
+    <!-- In this step, we acquire the Print dialog and click the 'Preferences' button and the expected window in this case is the dialog with the caption '"Printing Preferences' -->
     <step>
         <acquiredWindow>
             <window caption="Print">
@@ -1080,7 +1076,7 @@ AEM Forms包含範例XML檔案，可讓「產生PDF」服務使用「記事本�
         </expectedWindow>
     </step>
 
-    <!-- In this step, we acquire the dialog "Printing Preferences' and select the combo box which is the 10th child of window with caption '"Adobe PDF Settings' and select the first index. (Note: All indeces start with 0.) Besides this we uncheck the box which  has the caption '"View Adobe PDF results' and we click on the button OK. The expectation is that 'Printing Preferences' dialog disappears. -->
+    <!-- In this step, we acquire the dialog "Printing Preferences' and select the combo box which is the 10th child of window with caption '"Adobe PDF Settings' and select the first index. (Note: All indeces start with 0.) Besides this we uncheck the box which has the caption '"View Adobe PDF results' and we click the button OK. The expectation is that 'Printing Preferences' dialog disappears. -->
     <step>
         <acquiredWindow>
             <window caption="Printing Preferences">
@@ -1104,7 +1100,7 @@ AEM Forms包含範例XML檔案，可讓「產生PDF」服務使用「記事本�
         </expectedWindow>
     </step>
 
-    <!-- In this step, we acquire the 'Print' dialog and click on the Print button. The expectation is that the dialog with caption 'Print' disappears. In this case we use the regular expression '^Print$' for specifying the caption given there could be multiple dialogs with caption that includes the word Print. -->
+    <!-- In this step, we acquire the 'Print' dialog and click the Print button. The expectation is that the dialog with caption 'Print' disappears. In this case we use the regular expression '^Print$' for specifying the caption given there could be multiple dialogs with caption that includes the word Print. -->
     <step>
         <acquiredWindow>
             <window caption="Print">
@@ -1123,7 +1119,7 @@ AEM Forms包含範例XML檔案，可讓「產生PDF」服務使用「記事本�
             <window caption="Save PDF File As"/>
         </expectedWindow>
     </step>
-    <!-- Finally in this step, we acquire the dialog with caption "Save PDF File As" and in the Edit widget type the destination path for the output PDF file and click on the Save button. The expectation is that the dialog disappears-->
+    <!-- Finally in this step, we acquire the dialog with caption "Save PDF File As" and in the Edit widget type the destination path for the output PDF file and click the Save button. The expectation is that the dialog disappears-->
     <step>
         <acquiredWindow>
             <window caption="Save PDF File As">

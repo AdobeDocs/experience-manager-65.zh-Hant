@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '17027'
+source-wordcount: '16882'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 **關於簽名服務**
 
-簽名服務可讓貴組織保護所散發及接收之Adobe PDF檔案的安全性與隱私權。 這項服務使用數位簽名和認證來確保只有預期的收件人才能變更文件。因為安全功能會套用至檔案本身，所以檔案在其整個生命週期中都會保持安全及受控。 當檔案離線下載以及將它送回您的組織時，防火牆外仍會保持安全。
+簽名服務可讓貴組織保護所散發及接收之Adobe PDF檔案的安全性與隱私權。 此服務使用數位簽名和憑證，以確保只有預期的收件者才能變更檔案。 因為安全功能會套用至檔案本身，所以檔案在其整個生命週期中都會保持安全及受控。 當檔案離線下載以及將它送回您的組織時，防火牆外仍會保持安全。
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 **取得新增簽名欄位的PDF檔案**
 
-您必須取得已新增簽名欄位的PDF檔案。
+取得新增簽名欄位的PDF檔案。
 
 **新增簽名欄位**
 

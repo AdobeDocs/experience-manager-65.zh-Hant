@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3589'
+source-wordcount: '3499'
 ht-degree: 1%
 
 ---
@@ -190,9 +190,9 @@ ht-degree: 1%
 
 1. 新增 `String` 屬性至 `cq:formParameters` 節點。 元件超級型別會決定屬性的名稱：
 
-   * 程序步驟: `PROCESS`
-   * 參與者步驟: `PARTICIPANT`
-   * 動態參與者步驟: `DYNAMIC_PARTICIPANT`
+   * 程式步驟： `PROCESS`
+   * 參與者步驟： `PARTICIPANT`
+   * 動態參與者步驟： `DYNAMIC_PARTICIPANT`
 
 1. 指定屬性的值：
 
@@ -242,7 +242,7 @@ ht-degree: 1%
 * 名稱：`PROCESS_AUTO_ADVANCE`
 
    * 類型：`Boolean`
-   * 值:
+   * 值：
 
       * 當設定為 `true` 工作流程將執行該步驟並繼續 — 這是預設值，也建議使用
       * 當 `false`，工作流程將會執行並停止；這需要額外的處理，因此 `true` 建議使用
@@ -1042,4 +1042,4 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
 >
->  您不得修改中的任何專案 `/libs`，僅以範例使用。 如果要使用任何現有步驟，請將其複製到 `/apps` 並在那裡修改它們。
+>  不要編輯任何內容 `/libs`，僅以範例使用。 如果要使用任何現有步驟，請將其複製到 `/apps` 並在那裡編輯它們。

@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: personalization
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2834'
-ht-degree: 5%
+source-wordcount: '2859'
+ht-degree: 6%
 
 ---
 
@@ -79,7 +79,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->您必須在下列欄位中輸入資訊： **替代文字** 欄位，或無法儲存影像。
+>在 **替代文字** 欄位，或無法儲存影像。
 
 影像上傳後（不可上傳前），您可以使用 [就地編輯](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) 若要視需要裁切/旋轉影像：
 
@@ -127,7 +127,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->您必須在下列欄位中輸入資訊： **替代文字** 中的欄位 **進階** 標籤顯示，或影像無法儲存，而您會看到下列錯誤訊息：
+>在 **替代文字** 中的欄位 **進階** 標籤顯示，或影像無法儲存，而您會看到下列錯誤訊息：
 >
 >`Validation failed. Verify the values of the marked fields.`
 >
@@ -149,14 +149,14 @@ ht-degree: 5%
 新增如何使用連結的其他資訊。
 
 * **連結型別**
-在下拉式清單中，選取 **自訂URL** 和 **最適化檔案**. 此欄位為必填欄位. 如果您選取「自訂URL」，可提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
+在下拉式清單中，選取 **自訂URL** 和 **最適化檔案**. 此為必填欄位。 如果您選取「自訂URL」，可提供連結URL。 如果您選取「最適化檔案」，則可以提供檔案路徑。
 
 * **其他URL引數**
 新增任何其他URL引數。 按一下「新增專案」以新增多個專案。
 
 >[!NOTE]
 >
->您必須在下列欄位中輸入資訊： **連結型別** 中的欄位 **URL資訊** 標籤內，或元件無法儲存，而您會看到下列錯誤訊息：
+>在 **連結型別** 中的欄位 **URL資訊** 標籤內，或元件無法儲存，而您會看到下列錯誤訊息：
 >
 >`Validation failed. Verify the values of the marked fields.`
 >
@@ -274,7 +274,7 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
 * 日期欄位（行銷活動）和日期欄位/HTML5 （行銷活動）
 * 加密的主要金鑰 (行銷活動)
 * 錯誤顯示 (行銷活動)
-* 隱藏調解金鑰 (行銷活動)
+* 隱藏調和索引鍵 (行銷活動)
 * 數值欄位 (行銷活動)
 * 選項欄位 (行銷活動)
 * 訂閱檢查清單 (行銷活動)
@@ -300,7 +300,7 @@ Dynamic Media Classic (Scene7)影像範本為圖層式影像檔案，其中的�
   <tr>
    <td><p>核取方塊 (行銷活動)</p> </td>
    <td><p>布林值</p> </td>
-   <td><p>否 延長連絡時間（透過任何管道）</p> </td>
+   <td><p>不再聯絡（透過任何管道）</p> </td>
   </tr>
   <tr>
    <td><p>日期欄位 (行銷活動)</p> <p>日期欄位/HTML 5 (行銷活動)</p> </td>
@@ -421,7 +421,7 @@ Adobe Campaign元件具有所有元件中通用的設定（加密的主要金鑰
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
-### 隱藏調解金鑰 (行銷活動) {#hidden-reconciliation-key-campaign}
+### 隱藏調和索引鍵 (行銷活動) {#hidden-reconciliation-key-campaign}
 
 「隱藏調解金鑰（行銷活動）」元件可讓您新增隱藏欄位，作為調解金鑰的一部分，以至表單。
 

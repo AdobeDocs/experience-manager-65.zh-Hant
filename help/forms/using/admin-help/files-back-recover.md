@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2065'
+source-wordcount: '2017'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ GDS的位置是在AEM Forms安裝過程中或之後使用管理主控台確定�
 
 ### GDS位置 {#gds-location}
 
-如果您在安裝期間將位置設定保留為空白，則該位置會預設為應用程式伺服器安裝下的目錄。 您必須為應用程式伺服器備份下列目錄：
+如果您在安裝期間將位置設定保留為空白，則該位置會預設為應用程式伺服器安裝下的目錄。 備份應用程式伺服器的下列目錄：
 
 * (JBos) `[appserver root]/server/'server'/svcnative/DocumentStorage`
 * （網頁邏輯） `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage`

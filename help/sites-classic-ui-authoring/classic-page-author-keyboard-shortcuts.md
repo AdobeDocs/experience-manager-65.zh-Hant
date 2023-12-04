@@ -1,17 +1,15 @@
 ---
 title: 編輯頁面時的鍵盤快速鍵
 description: AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用於使用主控台。
-uuid: a1753e0b-5701-426c-b974-2e8b8d81a30d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 exl-id: 1c761aa7-a72f-46f0-8717-0b6e0d1cff55
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 4%
+source-wordcount: '307'
+ht-degree: 3%
 
 ---
 
@@ -25,10 +23,10 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
 
 >[!NOTE]
 >
->在桌上型電腦裝置上進行多選：
+>在桌上型電腦裝置上進行多重選取：
 >
 >* Windows：按住Ctrl鍵並按一下必要元件。
->* Mac：按住Cmd鍵並按一下必要元件。
+>* Mac：按一下「 」所需的元件。
 >
 
 ## 編輯鍵盤快速鍵 {#editing-keyboard-shortcuts}
@@ -73,7 +71,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-V</code></strong></td>
-   <td>從剪貼簿貼上段落。</td>
+   <td>貼上剪貼簿中的段落。</td>
   </tr>
   <tr>
    <td> </td>
@@ -118,7 +116,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
   <tr>
    <td>內容尋找器 — 搜尋方塊</td>
    <td><strong><code>down-arrow</code></strong></td>
-   <td>觸發建議清單。 輸入太少的字元以自動觸發清單時需要此專案（輸入2個或多個字元時會發生這種情況）。</td>
+   <td>觸發建議清單。 輸入太少的字元以自動觸發清單時需要（輸入2個或更多字元時會發生這種情況）。</td>
   </tr>
   <tr>
    <td> </td>
@@ -143,12 +141,12 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
   <tr>
    <td>內容尋找器<br /> </td>
    <td><strong><code>Alt+drag</code></strong></td>
-   <td><p>拖曳資產，拖放至目的地。</p> <p>放置動作會產生新段落，而不是取代目的地中的資產。</p> </td>
+   <td><p>拖曳資產，放置於目的地。</p> <p>下拉動作會產生新段落，而不是取代目的地中的資產。</p> </td>
   </tr>
  </tbody>
 </table>
 
-案頭使用者在使用時，也可以使用各種鍵盤快速鍵 [主控台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+案頭使用者在使用時，也可使用各種鍵盤快速鍵 [主控台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
 
 ## 用於開發的鍵盤快速鍵 {#keyboard-shortcuts-for-development}
 

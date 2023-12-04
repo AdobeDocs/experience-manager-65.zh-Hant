@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 1%
+source-wordcount: '964'
+ht-degree: 2%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 請依照下列步驟建立專案。
 
-1. 在 **專案** 主控台，點選或按一下 **建立** 以開啟 **建立專案** 精靈。
+1. 在 **專案** 主控台，按一下 **建立** 以開啟 **建立專案** 精靈。
 1. 選取範本並按一下 **下一個**. 您可以進一步瞭解標準專案範本 [此處。](/help/sites-authoring/projects.md#project-templates)
 
    ![建立專案精靈](assets/create-project-wizard.png)
@@ -43,7 +43,7 @@ ht-degree: 1%
 
    ![精靈的「屬性」步驟](assets/create-project-wizard-properties.png)
 
-1. 點選/按一下 **建立**. 確認會詢問您是要開啟新專案，還是返回主控台。
+1. 按一下「**建立**」。確認會詢問您是要開啟新專案，還是返回主控台。
 
 建立專案的程式與所有專案範本相同。 專案型別之間的差異與可用專案有關 [使用者角色](/help/sites-authoring/projects.md) 和 [工作流程。](/help/sites-authoring/projects-with-workflows.md)
 
@@ -54,11 +54,11 @@ ht-degree: 1%
 若要將資源與專案產生關聯，請執行下列動作：
 
 1. 從開啟您的專案 **專案** 主控台。
-1. 點選/按一下 **新增圖磚** 並選取您要連結至專案的圖磚。 您可以選取多種型別的圖磚。
+1. 按一下 **新增圖磚** 並選取您要連結至專案的圖磚。 您可以選取多種型別的圖磚。
 
    ![新增圖磚](assets/project-add-tile.png)
 
-1. 點選/按一下 **建立**. 您的資源已連結至專案，從現在開始，您就可以從專案存取該資源。
+1. 按一下「**建立**」。您的資源已連結至專案，從現在開始，您就可以從專案存取該資源。
 
 ### 將專案新增至圖磚 {#adding-items-to-a-tile}
 
@@ -84,7 +84,7 @@ ht-degree: 1%
 
 若要開啟圖磚，以便檢視或修改專案：
 
-1. 點選或按一下圖磚右下方的省略符號圖示。
+1. 按一下圖磚右下方的省略符號圖示。
 
    ![「任務」圖磚](assets/project-tile-tasks.png)
 
@@ -96,7 +96,7 @@ ht-degree: 1%
 
 專案時間表提供有關專案中資產上次使用時間的資訊。 若要檢視專案時間表，請按照下列步驟操作。
 
-1. 在 **專案** 主控台，按一下或點選 **時間表** 在主控台左上角的邊欄選擇器中。
+1. 在 **專案** 主控台，按一下 **時間表** 在主控台左上角的邊欄選擇器中。
    ![選取時間軸模式](assets/projects-timeline-rail.png)
 2. 在主控台中，選取您要檢視其時間軸的專案。
    ![專案時間表檢視](assets/project-timeline-view.png)
@@ -119,7 +119,7 @@ ht-degree: 1%
 
 您可以在中建立資料夾 **專案** 主控台，將類似的專案分組並加以組織。
 
-1. 在 **專案** 主控台點選或按一下 **建立** 然後 **建立資料夾**.
+1. 在 **專案** 主控台點按 **建立** 然後 **建立資料夾**.
 
    ![建立資料夾](assets/project-create-folder.png)
 
@@ -141,7 +141,7 @@ ht-degree: 1%
 
    ![屬性視窗中的專案狀態選取器](assets/project-status.png)
 
-1. 點選或按一下 **儲存並關閉** 以儲存變更。
+1. 按一下 **儲存並關閉** 以儲存變更。
 
 ### 刪除專案 {#deleting-a-project}
 
@@ -149,13 +149,13 @@ ht-degree: 1%
 
 1. 導覽至 **專案** 主控台。
 1. 在主控台中選取您的專案。
-1. 點選或按一下 **刪除** （在工具列中）。
+1. 按一下 **刪除** （在工具列中）。
 1. 刪除專案時，AEM可以移除/修改關聯的專案資料。 選取您需要的選項 **刪除專案** 對話方塊。
    * 移除專案群組和角色
    * 刪除專案資產資料夾
    * 終止專案工作流程
 
    ![專案刪除選項](assets/project-delete-options.png)
-1. 點選或按一下 **刪除** 刪除已選取選項的專案。
+1. 按一下 **刪除** 刪除已選取選項的專案。
 
 若要深入瞭解專案自動建立的群組，請參閱 [自動群組建立](/help/sites-authoring/projects.md#auto-group-creation) 以取得詳細資訊。

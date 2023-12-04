@@ -3,9 +3,9 @@ title: 建立邀請外部使用者處理常式
 description: 瞭解如何建立邀請外部使用者處理常式。 這可讓Rights Management服務邀請外部使用者成為Rights Management使用者。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 定義授權處理常式的元件XML檔案 {#define-component-xml-authorization-handler}
 
-您必須定義元件XML檔案，才能部署Invite外部使用者處理常式元件。 每個元件都有元件XML檔案，並提供有關元件的中繼資料。
+尋找元件XML檔案，以部署Invite外部使用者處理常式元件。 每個元件都有元件XML檔案，並提供有關元件的中繼資料。
 
 下列專案 `component.xml` 檔案用於「邀請外部使用者」處理常式。 請注意，服務名稱為 `InviteExternalUsersSample` 而此服務公開的作業已命名 `invitedUser`. 輸入引數為 `java.util.List` 例項，而輸出值為陣列 `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` 執行個體。
 
@@ -203,7 +203,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 正在封裝邀請外部使用者處理常式 {#packaging-invite-external-users-handler}
 
-若要將邀請外部使用者處理常式部署到AEM Forms，您必須將Java專案封裝到JAR檔案中。 您必須確定邀請外部使用者處理常式的商業邏輯所相依的外部JAR檔案，例如 `edc-server-spi.jar` 和 `adobe-rightsmanagement-client.jar` 檔案也包含在JAR檔案中。 此外，元件XML檔案也必須存在。 此 `component.xml` 檔案和外部JAR檔案必須位於JAR檔案的根目錄下。
+若要將邀請外部使用者處理常式部署到AEM Forms，您必須將Java專案封裝到JAR檔案中。 請確定邀請外部使用者處理常式的商業邏輯所相依的外部JAR檔案，例如 `edc-server-spi.jar` 和 `adobe-rightsmanagement-client.jar` 檔案也包含在JAR檔案中。 此外，元件XML檔案也必須存在。 此 `component.xml` 檔案和外部JAR檔案必須位於JAR檔案的根目錄下。
 
 >[!NOTE]
 >
@@ -215,7 +215,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 A.元件所需的外部JAR檔案B. JAVA檔案
 
-您必須將邀請外部使用者處理常式封裝到JAR檔案中。 在上圖中，請注意已列出.JAVA檔案。 封裝成JAR檔案後，也必須指定對應的.CLASS檔案。 如果沒有.CLASS檔案，授權處理常式將無法運作。
+將邀請外部使用者處理常式封裝到JAR檔案中。 在上圖中，請注意已列出.JAVA檔案。 封裝成JAR檔案後，也必須指定對應的.CLASS檔案。 如果沒有.CLASS檔案，授權處理常式將無法運作。
 
 >[!NOTE]
 >
@@ -239,7 +239,7 @@ A.元件所需的外部JAR檔案B. JAVA檔案
 1. 在管理控制檯首頁上，按一下 **[!UICONTROL 設定]** > **[!UICONTROL User Management]** > **[!UICONTROL 網域管理]**.
 1. 按一下 **[!UICONTROL 新增本機網域]**. 在下列頁面中，使用名稱和識別碼值建立網域 `EDC_EXTERNAL_REGISTERED`. 儲存您的變更。
 1. 在管理控制檯首頁上，按一下 **[!UICONTROL 服務]** > **[!UICONTROL Rights Management]** > **[!UICONTROL 受邀和本機使用者]**. 此 **[!UICONTROL 新增受邀使用者]** 頁面便會顯示。
-1. 輸入電子郵件地址（由於目前的邀請外部使用者處理常式並不會實際傳送電子郵件訊息，因此電子郵件地址不一定有效）。 按一下&#x200B;**[!UICONTROL 「確定」]**。使用者受邀加入系統。
+1. 輸入電子郵件地址（由於目前的邀請外部使用者處理常式並不會實際傳送電子郵件訊息，因此電子郵件地址不一定有效）。 按一下 **[!UICONTROL 確定]**. 使用者受邀加入系統。
 1. 在管理控制檯首頁上，按一下 **[!UICONTROL 設定]** > **[!UICONTROL User Management]** > **[!UICONTROL 使用者和群組]**.
 1. 在 **[!UICONTROL 尋找]** 欄位，輸入您指定的電子郵件地址。 按一下 **[!UICONTROL 尋找]**. 您邀請的使用者會顯示為本機 `EDC_EXTERNAL_REGISTERED` 網域。
 

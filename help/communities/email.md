@@ -8,10 +8,10 @@ content-type: reference
 pagetitle: Configuring Email
 role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 2%
+source-wordcount: '796'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +41,7 @@ AEM Communities將電子郵件用於：
 
 這是根據以下專案的檔案： [設定電子郵件通知](../../help/sites-administering/notification.md)，但不同之處在於此欄位 `"From" address` 是 *非* 必填，且應留空。
 
-例如（填入的值僅供說明用途）：
+例如，（填入的值僅供說明用途）：
 
 ![email-config](assets/email-config.png)
 
@@ -193,11 +193,11 @@ AEM Communities將電子郵件用於：
 
 * **[!UICONTROL 登入]**
 
-  *(選用)*
+  *（可選）*
 
 * **[!UICONTROL 密碼]**
 
-  *(選用)*
+  *（可選）*
 
 * 選取 **[!UICONTROL 確定]**.
 

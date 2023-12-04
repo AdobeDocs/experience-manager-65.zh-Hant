@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2749'
-ht-degree: 1%
+source-wordcount: '2770'
+ht-degree: 2%
 
 ---
 
@@ -102,7 +102,7 @@ ht-degree: 1%
 
    ![chlimage_1-19](assets/chlimage_1-19a.png)
 
-1. 選取 **雲端服務** 並按一下 **+** 以新增設定。 選取任何可見的設定（無論哪個設定）。 按一下或點選 **+** 登入以新增其他設定，然後選取 **Adobe Campaign**.
+1. 選取 **雲端服務** 並按一下 **+** 以新增設定。 選取任何可見的設定（無論哪個設定）。 按一下 **+** 登入以新增其他設定，然後選取 **Adobe Campaign**.
 
    >[!NOTE]
    >
@@ -201,7 +201,7 @@ ht-degree: 1%
 
    ![chlimage_1-29](assets/chlimage_1-29a.png)
 
-1. 您可以檢視來自Adobe Campaign且與目前所選角色相關聯的種子資料。 若要這麼做，請按一下/點選ContextHub列中的Adobe Campaign模組。 這會開啟一個對話方塊，顯示目前設定檔的所有種子資料。 同樣地，資料會在切換至不同角色時進行調整。
+1. 您可以檢視來自Adobe Campaign且與目前所選角色相關聯的種子資料。 若要這麼做，請按一下ContextHub列中的Adobe Campaign模組。 這會開啟一個對話方塊，顯示目前設定檔的所有種子資料。 同樣地，資料會在切換至不同角色時進行調整。
 
    ![chlimage_1-30](assets/chlimage_1-30a.png)
 

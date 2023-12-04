@@ -12,9 +12,9 @@ topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 role: Developer
 exl-id: 2b938410-f51b-420b-b5d4-2ed13ec29c5a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2558'
+source-wordcount: '2519'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ ht-degree: 0%
 
 **將PDF檔案和書籤XML檔案新增至地圖集合**
 
-您必須將新增書籤的PDF檔案與書籤XML檔案都新增到Map集合中。 因此，Map集合物件包含兩個元素：PDF檔案與書籤XML檔案。
+將新增書籤的PDF檔案與書籤XML檔案新增至地圖集合。 因此，Map集合物件包含兩個元素：PDF檔案與書籤XML檔案。
 
 **設定執行階段選項**
 
@@ -164,7 +164,7 @@ ht-degree: 0%
 
 **儲存包含書籤的PDF檔案**
 
-您必須從傳回的對應物件中擷取結果，並儲存對應的PDF檔案。 （請參閱中的「擷取結果」） [以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
+從傳回的地圖物件中擷取結果，並儲存對應的PDF檔案。 （請參閱中的「擷取結果」） [以程式設計方式組合PDF檔案](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
 
 **另請參閱**
 

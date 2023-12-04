@@ -2,10 +2,10 @@
 title: 如何建立內容模型
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解如何使用內容模型和內容片段模型及內容片段，建立您的內容模型用於 AEM Headless 傳遞。
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 80%
+source-wordcount: '1795'
+ht-degree: 78%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 80%
 
 ## 到目前為止 {#story-so-far}
 
-開始時， [瞭解CMS Headless開發](learn-about.md) 涵蓋headless內容傳遞以及應使用它的原因。 然後 [AEM Headless 快速入門](getting-started.md)以您自己的專案而言描述 AEM Headless 如何運作。
+開始時， [瞭解CMS Headless開發](learn-about.md) 涵蓋headless內容傳遞以及應使用它的原因。 則 [AEM Headless快速入門](getting-started.md) 在您自己的專案中說明AEM Headless。
 
 在 AEM Headless 歷程的上一個文件「[踏上首次使用 AEM Headless 之路](path-to-first-experience.md)」中，您接著了解實作第一個專案所需的步驟。閱讀本檔案後，您應該：
 
@@ -158,7 +158,7 @@ AEM 使用內容片段來提供將內容 Headless 傳遞到應用程式所需的
 內容片段模型描述一個實體。
 
 >[!NOTE]
->您必須在設定瀏覽器中啟用內容片段功能，才能建立模型。
+>在設定瀏覽器中啟用內容片段功能，以便您建立模式。
 
 >[!TIP]
 >
@@ -202,7 +202,7 @@ AEM 提供以下資料類型用於建立內容模型：
 此類型的參考用於建立巢狀內容，引入建立內容模型時所需的關係。
 可以設定此資料類型以允許片段作者：
    * 直接編輯參考的片段。
-   * 根據適當的模型建立內容片段.
+   * 根據適當的模式建立內容片段。
 
 ### 建立內容片段模型 {#creating-content-fragment-models}
 

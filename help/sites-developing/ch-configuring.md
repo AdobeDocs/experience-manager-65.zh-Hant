@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1726'
 ht-degree: 1%
 
 ---
@@ -28,10 +28,10 @@ There are two options to disable ContextHub:
 
 * Edit the ContextHub's configuration and check the option **Disable ContextHub**
 
-    1. In the rail click or tap **Tools &gt; Sites &gt; ContextHub**
-    1. Click or tap the appropriate **Configuration Container**
-    1. Select the **ContextHub Configuration** and click or tap **Edit Selected Element**
-    1. Click or tap **Disable ContextHub** and click or tap **Save**
+    1. In the rail click **Tools &gt; Sites &gt; ContextHub**
+    1. Click the appropriate **Configuration Container**
+    1. Select the **ContextHub Configuration** and click **Edit Selected Element**
+    1. Click **Disable ContextHub** and click **Save**
 
 or
 -->
@@ -74,10 +74,10 @@ UI模式會在工具列左側顯示為一系列圖示。 選取後，UI模式的
 
 新增UI模式至群組相關的ContextHub模組。 建立UI模式時，您會提供顯示在ContextHub工具列中的標題和圖示。
 
-1. 在Experience Manager邊欄上，按一下或點選「工具>網站>內容中心」。
-1. 按一下或點選預設的「設定容器」 。
-1. 按一下或點選「Context Hub設定」 。
-1. 按一下或點選「建立」按鈕，然後按一下或點選「Context Hub UI模式」。
+1. 在Experience Manager邊欄中，按一下「工具>網站>內容中心」 。
+1. 按一下預設的「組態容器」。
+1. 按一下Context Hub組態。
+1. 按一下「建立」按鈕，然後按一下「Context Hub UI模式」。
 
    ![chlimage_1-320](assets/chlimage_1-320.png)
 
@@ -87,7 +87,7 @@ UI模式會在工具列左側顯示為一系列圖示。 選取後，UI模式的
    * 模式圖示：的選取器 [Coral UI圖示](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) 例如，若要使用 `coral-Icon--user`
    * 啟用：選取此選項可在ContextHub工具列中顯示UI模式
 
-1. 按一下或點選「儲存」。
+1. 按一下「儲存」。
 
 ### 新增使用者介面模組 {#adding-a-ui-module}
 
@@ -108,11 +108,11 @@ UI模組屬性包含詳細設定，您可以在其中提供模組特定屬性的
 | [contexthub.tagcloud](/help/sites-developing/ch-samplemodules.md#contexthub-tagcloud-ui-module-type) | 顯示頁面標籤的相關統計資料 | tagcloud |
 | [granite.profile](/help/sites-developing/ch-samplemodules.md#granite-profile-ui-module-type) | 顯示目前使用者的設定檔資訊，包括authorizableID、displayName和familyName。 您可以變更displayName和familyName的值。 | 側面像 |
 
-1. 在Experience Manager邊欄上，按一下或點選「工具>網站> ContextHub」。
-1. 按一下或點選您要新增UI模組的設定容器。
+1. 在Experience Manager邊欄中，按一下「工具>網站> ContextHub」 。
+1. 按一下要新增UI模組的設定容器。
 1. 按一下或輸入您要新增UI模組的ContextHub組態。
-1. 按一下或點選您要新增UI模組的UI模式。
-1. 按一下或點選「建立」按鈕，然後按一下或點選「ContextHub UI模組（一般）」。
+1. 按一下要新增UI模組的UI模式。
+1. 按一下「建立」按鈕，然後按一下「ContextHub UI模組（一般）」。
 
    ![chlimage_1-321](assets/chlimage_1-321.png)
 
@@ -123,7 +123,7 @@ UI模組屬性包含詳細設定，您可以在其中提供模組特定屬性的
    * 啟用：選取以在ContextHub工具列中顯示UI模組
 
 1. （選用）若要覆寫預設存放區設定，請輸入JSON物件以設定UI模組。
-1. 按一下或點選「儲存」。
+1. 按一下「儲存」。
 
 ## 建立ContextHub存放區 {#creating-a-contexthub-store}
 
@@ -151,14 +151,14 @@ AEM提供下列範例商店候選者，您可以據以建立商店。
 | [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) | 儲存使用者端的相關資訊，例如裝置資訊、瀏覽器型別和視窗方向 |
 | [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) | 儲存頁面標籤和標籤計數 |
 
-1. 在Experience Manager邊欄上，按一下或點選「工具>網站> ContextHub」。
-1. 按一下或點選預設設定容器。
-1. 按一下或點選「 Contexthub設定」
-1. 若要新增存放區，請按一下或點選「建立」圖示，然後按一下或點選「 ContexHub存放區設定」。
+1. 在Experience Manager邊欄中，按一下「工具>網站> ContextHub」 。
+1. 按一下預設設定容器。
+1. 按一下Contexthub設定
+1. 若要新增存放區，請按一下「建立」圖示，然後按一下ContexHub存放區設定。
 
    ![chlimage_1-322](assets/chlimage_1-322.png)
 
-1. 提供基本設定屬性的值，然後按一下或點選「下一步」：
+1. 提供基本組態屬性的值，然後按下一步：
 
    * **設定標題：** 識別存放區的標題
    * **存放區型別：** 作為存放區基礎之存放區候選專案的storeType屬性值
@@ -166,7 +166,7 @@ AEM提供下列範例商店候選者，您可以據以建立商店。
    * **已啟用：** 選取以啟用存放區
 
 1. （選用）若要覆寫預設存放區設定，請在「詳細資料設定(JSON)」方塊中輸入JSON物件。
-1. 按一下或點選「儲存」。
+1. 按一下「儲存」。
 
 ## 範例：使用JSONP服務  {#example-using-a-jsonp-service}
 
@@ -193,7 +193,7 @@ contexthub.generic-jsonp範例存放區候選專案可讓您從JSONP服務或傳
 * **存放區型別：** contexthub.generic-jsonp
 * **必填：** 選取
 * **已啟用：** 選取
-* **詳細資料組態 (JSON):**
+* **詳細資料設定(JSON)：**
 
   ```xml
   {
@@ -221,7 +221,7 @@ contexthub.generic-jsonp範例存放區候選專案可讓您從JSONP服務或傳
 
 * **UI模組標題：** MD5
 * **模組型別：** contexthub.base
-* **詳細資料組態 (JSON):**
+* **詳細資料設定(JSON)：**
 
   ```xml
   {
@@ -241,10 +241,10 @@ contexthub.generic-jsonp範例存放區候選專案可讓您從JSONP服務或傳
 
 編輯ContextHub的設定並核取選項 **偵錯**
 
-1. 在導軌中，按一下或點選 **「工具」>「網站」>「ContextHub」**
-1. 按一下或點選預設值 **設定容器**
-1. 選取 **ContextHub設定** 然後按一下或點選 **編輯選取的元素**
-1. 按一下或點選 **偵錯** 然後按一下或點選 **儲存**
+1. 在邊欄中，按一下 **「工具」>「網站」>「ContextHub」**
+1. 按一下預設值 **設定容器**
+1. 選取 **ContextHub設定** 並按一下 **編輯選取的元素**
+1. 按一下 **偵錯** 並按一下 **儲存**
 
 ### 透過CRXDE {#via-crxde}
 

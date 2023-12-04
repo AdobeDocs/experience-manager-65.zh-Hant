@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2205'
-ht-degree: 1%
+source-wordcount: '2148'
+ht-degree: 2%
 
 ---
 
@@ -58,7 +58,7 @@ AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
 
 當AEM代管Dynamic Tag Management程式庫時，您可以使用Dynamic Tag Management部署勾點服務，自動將程式庫更新推播至AEM。 若對程式庫進行變更(例如編輯Dynamic Tag Management Web屬性屬性)，則會推送程式庫更新。
 
-若要使用部署勾點，動態Tag Management必須能夠連線至託管程式庫的AEM執行個體。 您必須 [啟用對AEM的存取權](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) 用於動態Tag Management伺服器。
+若要使用部署勾點，動態Tag Management必須能夠連線至託管程式庫的AEM執行個體。 [啟用對AEM的存取權](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) 用於動態Tag Management伺服器。
 
 在某些情況下，無法連線AEM，例如當AEM位於防火牆後面時。 在這些情況下，您可以使用AEM輪詢匯入工具選項，定期擷取程式庫。 cron作業運算式會指定程式庫下載的排程。
 
@@ -66,7 +66,7 @@ AEM支援在雲端中託管或在AEM上託管的動態Tag Management。
 
 啟用Dynamic Tag Management部署勾點服務以存取AEM，讓該服務可以更新AEM託管的程式庫。 指定視需要更新中繼及生產程式庫的動態Tag Management伺服器的IP位址：
 
-* 分段: `107.21.99.31`
+* 分段： `107.21.99.31`
 * 生產： `23.23.225.112` 和 `204.236.240.48`
 
 使用下列任一專案執行設定： [網頁主控台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [`sling:OsgiConfig`](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) 節點：

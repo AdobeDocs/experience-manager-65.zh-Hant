@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: e56986b2-397e-4802-992b-05a9ea7b2e36
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 若要建立具有目標內容的Newsletter：
 
-1. 建立具有目標內容的新聞稿：在Geometrixx Outdoors中的電子郵件行銷活動下方，按一下或點選 **建立** > **頁面**，並選取其中一個Adobe Campaign郵件範本。
+1. 建立具有目標內容的Newsletter：在Geometrixx Outdoors中的電子郵件促銷活動下方，按一下 **建立** > **頁面**，並選取其中一個Adobe Campaign郵件範本。
 
    >[!NOTE]
    >
@@ -84,7 +84,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >依預設，AEM隨附的電子郵件範例會使用Adobe Campaign作為目標定位引擎。 針對自訂電子報，您可能需要選取Adobe Campaign作為定位引擎。 鎖定目標時，點選或按一下工具列中的「+」，輸入新活動的標題，然後選取 **Adobe Campaign** 作為目標定位引擎。
+   >依預設，AEM隨附的電子郵件範例會使用Adobe Campaign作為目標定位引擎。 針對自訂電子報，您可能需要選取Adobe Campaign作為定位引擎。 鎖定目標時，按一下工具列中的+，輸入新活動的標題，然後選取 **Adobe Campaign** 作為目標定位引擎。
 
 1. 按一下 **預設** 然後是您新增的文字與個人化元件，您會看到裡面有箭頭的靶心。 按一下圖示以鎖定此元件。
 

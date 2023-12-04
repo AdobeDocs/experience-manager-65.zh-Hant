@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '220'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
 
 >[!NOTE]
 >
->&amp;ast；一旦使用者開始以預覽模式與頁面互動， `Ctrl-Shift-m` 捷徑已不再可用。 使用者必須按一下頂端編輯器列或返回「編輯」模式，捷徑才能再次使用。
+>&amp;ast；一旦使用者開始以預覽模式與頁面互動， `Ctrl-Shift-m` 捷徑已不再可用。 使用者必須按一下頂端編輯器列或返回「編輯」模式，才能再次使用捷徑。
 
 案頭使用者在使用時，也可使用各種鍵盤快速鍵 [主控台](/help/sites-authoring/keyboard-shortcuts.md).
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '5483'
+source-wordcount: '5425'
 ht-degree: 1%
 
 ---
@@ -377,17 +377,17 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
 
 >[!NOTE]
 >
->從Experience Manager Assets自動上傳到Dynamic Media Classic的檔案大小上限為500 MB。
+從Experience Manager Assets自動上傳到Dynamic Media Classic的檔案大小上限為500 MB。
 
 **若要從Experience Manager Assets自動上傳：**
 
 1. 選取Experience Manager圖示並導覽至 **[!UICONTROL 部署]** > **[!UICONTROL Cloud Service]**.
 1. 在Dynamic Media標題下，在「可用配置」下，選擇 **[!UICONTROL dms7 (Dynamic Media]**)。
-1. 選取 **[!UICONTROL 進階]** 索引標籤中，選取 **[!UICONTROL 啟用自動上傳]** 核取方塊，然後選取 **[!UICONTROL 確定]**. 您必須設定DAM資產工作流程，以包含上傳至Dynamic Media Classic的內容。
+1. 選取 **[!UICONTROL 進階]** 索引標籤中，選取 **[!UICONTROL 啟用自動上傳]** 核取方塊，然後選取 **[!UICONTROL 確定]**. 設定DAM資產工作流程，以包含上傳至Dynamic Media Classic的內容。
 
    >[!NOTE]
    >
-   >另請參閱 [設定推送至Dynamic Media Classic的資產狀態（已發佈/未發佈）](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene) 有關以未發佈狀態將資產推送到Dynamic Media Classic的資訊。
+   另請參閱 [設定推送至Dynamic Media Classic的資產狀態（已發佈/未發佈）](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene) 有關以未發佈狀態將資產推送到Dynamic Media Classic的資訊。
 
    ![screen_shot_2018-03-15at52501pm](assets/screen_shot_2018-03-15at52501pm.jpg)
 
@@ -398,8 +398,8 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
 
    >[!NOTE]
    >
-   >* 在自動化後新增資產時，如果這些資產未放置在CQ目標資料夾中，則不會上傳到Dynamic Media Classic。
-   >* Experience Manager會將所有中繼資料都內嵌為XMP，再上傳至Dynamic Media Classic，因此中繼資料節點上的所有屬性都可在Dynamic Media Classic as XMP中使用。
+   * 在自動化後新增資產時，如果這些資產未放置在CQ目標資料夾中，則不會上傳到Dynamic Media Classic。
+   * Experience Manager會將所有中繼資料都內嵌為XMP，再上傳至Dynamic Media Classic，因此中繼資料節點上的所有屬性都可在Dynamic Media Classic as XMP中使用。
 
 ### 設定推送至Dynamic Media Classic的資產狀態（已發佈/未發佈） {#configuring-the-state-published-unpublished-of-assets-pushed-to-scene}
 
@@ -424,7 +424,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 
 >[!NOTE]
 >
->如果您的安裝環境是UNIX® 64位元作業系統，請參閱 [https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html) 關於您必須設定的其他組態選項。
+如果您的安裝環境是UNIX® 64位元作業系統，請參閱 [https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html) 關於您必須設定的其他組態選項。
 
 #### 推送處於未發佈狀態之資產的已知限制  {#known-limitations-for-pushing-assets-in-unpublished-state}
 
@@ -435,13 +435,13 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 
 >[!NOTE]
 >
->如果您想要立即發佈資產，最佳實務是保留 **[!UICONTROL 啟用安全預覽]** 設為 **[!UICONTROL 立即]** 並使用 **[!UICONTROL 啟用自動上傳]** 功能。
+如果您想要立即發佈資產，最佳實務是保留 **[!UICONTROL 啟用安全預覽]** 設為 **[!UICONTROL 立即]** 並使用 **[!UICONTROL 啟用自動上傳]** 功能。
 
 ### 將推送至Dynamic Media Classic的資產狀態設為未發佈 {#setting-the-state-of-assets-pushed-to-scene-as-unpublished}
 
 >[!NOTE]
 >
->如果使用者在Experience Manager中發佈資產，則會自動將S7資產觸發至生產/即時資產（資產不再處於安全預覽/取消發佈狀態）。
+如果使用者在Experience Manager中發佈資產，則會自動將S7資產觸發至生產/即時資產（資產不再處於安全預覽/取消發佈狀態）。
 
 **若要將推送至Dynamic Media Classic的資產狀態設為未發佈：**
 
@@ -459,7 +459,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 
 啟用安全預覽表示您的資產會推送至安全預覽伺服器並取消發佈。
 
-若要檢視是否 **[!UICONTROL 安全預覽]** 已啟用，請導覽至Experience Manager中頁面上的Dynamic Media Classic元件。 選取&#x200B;**[!UICONTROL 編輯]**。該資產的URL中列出了安全預覽伺服器。 在Experience Manager中發佈後，檔案參考中的伺服器網域會從預覽URL更新為生產URL。
+若要檢視是否 **[!UICONTROL 安全預覽]** 已啟用，請導覽至Experience Manager中頁面上的Dynamic Media Classic元件。 選取 **[!UICONTROL 編輯]**. 該資產的URL中列出了安全預覽伺服器。 在Experience Manager中發佈後，檔案參考中的伺服器網域會從預覽URL更新為生產URL。
 
 ### 為WCM啟用Dynamic Media Classic {#enabling-scene-for-wcm}
 
@@ -513,7 +513,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 
    >[!NOTE]
    >
-   >如果只有一個組態，請選取 **[!UICONTROL 預設設定]** 核取方塊沒有作用。
+   如果只有一個組態，請選取 **[!UICONTROL 預設設定]** 核取方塊沒有作用。
 
 ### 設定臨機資料夾 {#configuring-the-ad-hoc-folder}
 
@@ -564,17 +564,17 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 1. 在CRXDE Lite頁面的右側，選取 **[!UICONTROL 屬性]** 標籤。
 1. 在中指定Dynamic Media Classic上傳工作引數 **[!UICONTROL jobParam]** 值欄位。
 
-   例如，`psprocess="rasterize"&psresolution=120`。
+   例如， `psprocess="rasterize"&psresolution=120` .
 
    請參閱 [Adobe Dynamic Media Classic Image Production System API](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/c-overview.html) 如需更多您可以使用的上載工作引數。
 
    >[!NOTE]
    >
-   >如果您要上傳PSD檔案，並想以圖層擷取的範本形式處理這些檔案，請在 **[!UICONTROL jobParam]** 值欄位：
+   如果您要上傳PSD檔案，並想以圖層擷取的範本形式處理這些檔案，請在 **[!UICONTROL jobParam]** 值欄位：
    >
-   >`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
+   `process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
    >
-   >請確定您的PSD檔案有「圖層」。 如果它嚴格是一個影像或含有遮色片的影像，則會處理為影像，因為沒有要處理的圖層。
+   請確定您的PSD檔案有「圖層」。 如果它嚴格是一個影像或含有遮色片的影像，則會處理為影像，因為沒有要處理的圖層。
 
 1. 在CRXDE Lite頁面的左上角，選取 **[!UICONTROL 全部儲存]**.
 
@@ -616,6 +616,6 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 
 >[!CAUTION]
 >
->從現有的Dynamic Media Classic公司帳戶匯入資產時，可能需要花很長時間才能在Experience Manager中顯示。 請務必在Dynamic Media Classic中指定沒有太多資產的資料夾。 例如，根資料夾通常有太多資產。
+從現有的Dynamic Media Classic公司帳戶匯入資產時，可能需要花很長時間才能在Experience Manager中顯示。 請務必在Dynamic Media Classic中指定沒有太多資產的資料夾。 例如，根資料夾通常有太多資產。
 >
->如果您想要測試整合，請讓根資料夾僅指向子資料夾，而不是整個公司。
+如果您想要測試整合，請讓根資料夾僅指向子資料夾，而不是整個公司。

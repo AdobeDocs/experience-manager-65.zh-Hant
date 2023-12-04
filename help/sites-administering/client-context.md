@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1961'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他
 
 >[!NOTE]
 >
->目前這是示範功能，依賴示範使用者設定檔節點上預先設定的資料集。 如需範例，請參閱:
+>目前這是示範功能，依賴示範使用者設定檔節點上預先設定的資料集。 例如，請參閱：
 >
 >`/home/users/geometrixx/aparker@geometrixx.info/profile` =>朋友屬性
 
@@ -190,7 +190,7 @@ JSONP存放區就像任何其他存放區一樣，但是它會載入來自其他
 
 ### 變更標籤選取範圍 {#changing-the-tag-selection}
 
-1. 連按兩下Client Context的Tag Cloud區段。 對話方塊隨即開啟，您可以在此處選取標籤：
+1. 連按兩下Client Context的「標籤雲」區段。 對話方塊隨即開啟，您可以在此處選取標籤：
 
    ![標籤雲對話方塊](assets/clientcontext_tagselection.png)
 

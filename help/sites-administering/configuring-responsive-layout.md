@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 1%
+source-wordcount: '1275'
+ht-degree: 0%
 
 ---
 
@@ -40,7 +40,7 @@ AEM使用一組機製為頁面實現回應式佈局：
 
       * 作為使用者可新增至頁面的元件。
       * 做為頁面的預設parsys。
-      * 兩者.
+      * 兩者。
 
         您可以將版面容器設為頁面的標準版面容器，同時允許使用者在此容器中新增更多版面容器；例如，實現欄控制。
 
@@ -63,7 +63,7 @@ AEM使用一組機製為頁面實現回應式佈局：
 
 >[!NOTE]
 >
->在現成可用的安裝中，已針對 [We.Retail參考網站](/help/sites-developing/we-retail.md). 您仍須要 [啟動配置容器元件](#enable-the-layout-container-component-for-page) 用於其他頁面。
+>在現成可用的安裝中，已針對 [We.Retail參考網站](/help/sites-developing/we-retail.md). [啟動配置容器元件](#enable-the-layout-container-component-for-page) 用於其他頁面。
 
 ## 設定回應式模擬器 {#configuring-the-responsive-emulator}
 
@@ -87,7 +87,7 @@ AEM使用一組機製為頁面實現回應式佈局：
 
 ### 設定中斷點 {#configure-the-breakpoints}
 
-[中斷點](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate):
+[中斷點](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)：
 
 * 用於回應式設計。
 * 可定義：
@@ -140,8 +140,8 @@ AEM使用一組機製為頁面實現回應式佈局：
 
    * 名稱：`<descriptive name>`
    * 類型：`nt:unstructured`
-   * 標題: `String` * `<descriptive title seen in Emulator>`*
-   * 寬度: `Decimal` * `<value of breakpoint>`*
+   * 標題： `String` * `<descriptive title seen in Emulator>`*
+   * 寬度： `Decimal` * `<value of breakpoint>`*
 
 #### 使用XML設定中斷點 {#configuring-breakpoints-using-xml}
 
@@ -185,7 +185,7 @@ AEM使用一組機製為頁面實現回應式佈局：
 
 以下兩個範例說明定義：
 
-* **HTL:**
+* **HTL：**
 
   ```xml
   <sly data-sly-resource="${'par' @ resourceType='wcm/foundation/components/responsivegrid'}/>
@@ -241,11 +241,11 @@ AEM使用LESS來產生必要CSS的部分，這些需要包含在您的專案中�
 
 例如：
 
-* 變更前:
+* 之前：
 
    * `width=100px`
 
-* 變更後:
+* 之後：
 
    * `max-width=100px`
 

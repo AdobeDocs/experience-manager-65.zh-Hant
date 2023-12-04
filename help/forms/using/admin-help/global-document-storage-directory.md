@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
 exl-id: 7a64a643-808b-4644-8fd3-0dafe83e8dd9
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '672'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ GDS目錄的位置可以在AEM Forms安裝過程中手動設定。 如果在安�
 
 ## 變更預設GDS位置 {#change-the-default-gds-location}
 
-AEM表單安裝完成後，您可以在管理主控台中變更GDS位置。 您必須手動重新定位資料，才能完成程式。
+AEM表單安裝完成後，您可以在管理主控台中變更GDS位置。 手動重新定位資料以完成此程式。
 
 >[!NOTE]
 >

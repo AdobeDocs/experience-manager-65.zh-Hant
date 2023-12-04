@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: d53ef3e2-14ca-4444-b563-be67be15c040
 exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ Adobe Campaign專用的Forms具有特定元件。 這些元件有選項可讓您
    * **Adobe Campaign：取消訂閱服務**：可讓您在Adobe Campaign中取消收件者的訂閱。
 
 1. 您必須擁有 **加密的主要金鑰** 元件。 此元件會定義哪個URL引數用於接受Adobe Campaign設定檔的加密主要金鑰。 在「元件」中選取Adobe Campaign ，只顯示元件。
-1. 拖曳元件 **加密的主要金鑰** 至表單（任何位置），然後按一下或點選 **設定** 圖示。 在 **Adobe Campaign** 標籤，指定URL引數的任何名稱。 按一下或點選核取記號以儲存變更。
+1. 拖曳元件 **加密的主要金鑰** 至表單（任何位置），然後按一下 **設定** 圖示。 在 **Adobe Campaign** 標籤，指定URL引數的任何名稱。 按一下核取記號以儲存變更。
 
    產生的此表單連結需要使用此URL引數，並指派給Adobe Campaign設定檔的加密主要金鑰。 加密的主要金鑰必須正確以URL （百分比）編碼。
 

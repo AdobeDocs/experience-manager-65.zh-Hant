@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '7687'
+source-wordcount: '7640'
 ht-degree: 0%
 
 ---
@@ -186,7 +186,7 @@ Forms Workflow步驟會在AEM工作流程中執行AEM Forms專屬的操作。 �
 
 **使用以下選項儲存產生的記錄檔案：** 指定保留記錄檔案檔案的位置。 您可以選擇覆寫裝載資料夾、將記錄檔案放在裝載目錄內的某個位置，或將記錄檔案儲存在Document資料型別的變數中。
 
-**地區設定**：指定記錄檔案的語言。 選取 **常值** 從下拉式清單中選取地區設定或選取 **變數** 以從儲存在字串資料型別變數中的值擷取地區設定。 將地區設定的值儲存在變數中時，您必須定義地區設定代碼。 例如，指定 **en_US** 英文版和 **fr_FR** 法文版。
+**地區設定**：指定記錄檔案的語言。 選取 **常值** 從下拉式清單中選取地區設定或選取 **變數** 以從儲存在字串資料型別變數中的值擷取地區設定。 在變數中儲存地區設定的值時，定義地區設定代碼。 例如，指定 **en_US** 英文版和 **fr_FR** 法文版。
 
 ## 啟動表單資料模型服務步驟 {#invoke-form-data-model-service-step}
 
@@ -279,7 +279,7 @@ Forms Workflow步驟會在AEM工作流程中執行AEM Forms專屬的操作。 �
 
 * **合約名稱：** 指定合約的標題。 協定名稱會成為傳送給收件者之電子郵件的主旨與內文的一部分。 您可以將名稱儲存在String資料型別的變數中，或選取 **常值** 以手動新增名稱。
 
-* **地區設定：** 指定電子郵件和驗證選項的語言。 您可以將地區設定儲存在String資料型別的變數中，或選取 **常值** 從可用選項清單中選擇地區。 將地區設定的值儲存在變數中時，您必須定義地區設定代碼。 例如，指定 **en_US** 英文版和 **fr_FR** 法文版。
+* **地區設定：** 指定電子郵件和驗證選項的語言。 您可以將地區設定儲存在String資料型別的變數中，或選取 **常值** 從可用選項清單中選擇地區。 在變數中儲存地區設定的值時，定義地區設定代碼。 例如，指定 **en_US** 英文版和 **fr_FR** 法文版。
 
 * **Adobe Sign雲端設定**：選擇Adobe Sign雲端設定。 如果您尚未設定適用於AEM Forms的Adobe Sign，請參閱 [將Adobe Sign與AEM Forms整合](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 

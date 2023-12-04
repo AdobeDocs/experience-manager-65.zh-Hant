@@ -9,10 +9,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 2%
+source-wordcount: '1293'
+ht-degree: 1%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 2%
 
    ![作者的樣式系統](assets/style-system-author.png)
 
-1. 點選或按一下 **樣式** 「 」工具列上的按鈕 **清單** 元件以開啟樣式選單並變更元件的外觀。
+1. 按一下 **樣式** 「 」工具列上的按鈕 **清單** 元件以開啟樣式選單並變更元件的外觀。
 
    ![選取樣式](assets/style-system-author2.png)
 
@@ -90,7 +90,7 @@ ht-degree: 2%
 
 ### 作為範本作者 {#as-a-template-author}
 
-1. 編輯WKND的英文主版首頁時 `http://<host>:<port>/sites.html/content/wknd/language-masters/en`，透過編輯頁面的範本 **頁面資訊 — >編輯範本**.
+1. 編輯WKND的英文主版首頁時 `http://<host>:<port>/sites.html/content/wknd/language-masters/en`，透過編輯頁面的範本 **頁面資訊>編輯範本**.
 
    ![編輯範本](assets/style-system-edit-template.png)
 

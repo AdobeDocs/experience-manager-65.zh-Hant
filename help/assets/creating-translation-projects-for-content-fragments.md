@@ -8,10 +8,10 @@ content-type: reference
 feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 2%
+source-wordcount: '984'
+ht-degree: 4%
 
 ---
 
@@ -56,12 +56,12 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
 為了能夠翻譯包含混合媒體的內容片段，請先編輯預設翻譯框架以啟用與內容片段關聯的內嵌資產和集合的翻譯。
 
-1. 按一下/點選AEM標誌，然後導覽至 **[!UICONTROL 「工具>部署>Cloud Service」]**.
-1. 尋找 **[!UICONTROL 翻譯整合]** 在 **[!UICONTROL Adobe Marketing Cloud]**，然後按一下/點選 **[!UICONTROL 顯示設定]**.
+1. 按一下AEM標誌，並導覽至 **[!UICONTROL 「工具>部署>Cloud Service」]**.
+1. 尋找 **[!UICONTROL 翻譯整合]** 在 **[!UICONTROL Adobe Marketing Cloud]**，然後按一下 **[!UICONTROL 顯示設定]**.
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
-1. 從可用設定的清單中，按一下/點選 **[!UICONTROL 預設設定（翻譯整合設定）]** 以開啟 **[!UICONTROL 預設設定]** 頁面。
+1. 在可用組態清單中，按一下 **[!UICONTROL 預設設定（翻譯整合設定）]** 以開啟 **[!UICONTROL 預設設定]** 頁面。
 
    ![chlimage_1-445](assets/chlimage_1-445.png)
 
@@ -69,7 +69,7 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
    ![chlimage_1-446](assets/chlimage_1-446.png)
 
-1. 導覽至 **[!UICONTROL 資產]** 標籤，然後選擇 **[!UICONTROL 內嵌媒體資產和相關的集合]** 從 **[!UICONTROL 翻譯內容片段資產]** 清單。 按一下/點選 **[!UICONTROL 確定]** 以儲存變更。
+1. 導覽至 **[!UICONTROL 資產]** 標籤，然後選擇 **[!UICONTROL 內嵌媒體資產和相關的集合]** 從 **[!UICONTROL 翻譯內容片段資產]** 清單。 按一下 **[!UICONTROL 確定]** 以儲存變更。
 
    ![chlimage_1-447](assets/chlimage_1-447.png)
 
@@ -77,7 +77,7 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
    ![chlimage_1-448](assets/chlimage_1-448.png)
 
-1. 按一下/點選 **[!UICONTROL 插入資產]** 圖示。
+1. 按一下 **[!UICONTROL 插入資產]** 圖示。
 
    ![chlimage_1-449](assets/chlimage_1-449.png)
 
@@ -85,28 +85,28 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
    ![將資產插入內容片段](assets/column-view.png)
 
-1. 按一下/點選 **[!UICONTROL 關聯內容]** 圖示。
+1. 按一下 **[!UICONTROL 關聯內容]** 圖示。
 
    ![chlimage_1-451](assets/chlimage_1-451.png)
 
-1. 按一下/點選 **[!UICONTROL 關聯內容]**.
+1. 按一下 **[!UICONTROL 關聯內容]**.
 
    ![chlimage_1-452](assets/chlimage_1-452.png)
 
-1. 選取收藏集並將其納入內容片段中。 按一下/點選 **[!UICONTROL 儲存]**.
+1. 選取收藏集並將其納入內容片段中。 按一下「**[!UICONTROL 儲存]**」。
 
    ![chlimage_1-453](assets/chlimage_1-453.png)
 
-1. 選取內容片段，然後按一下/點選 **[!UICONTROL GlobalNav]** 圖示。
+1. 選取內容片段，然後按一下 **[!UICONTROL GlobalNav]** 圖示。
 1. 選取 **[!UICONTROL 引用]** 以顯示 **[!UICONTROL 引用]** 窗格。
 
    ![chlimage_1-454](assets/chlimage_1-454.png)
 
-1. 按一下/點選 **[!UICONTROL 語言副本]** 在 **[!UICONTROL 份數]** 以顯示語言副本。
+1. 按一下 **[!UICONTROL 語言副本]** 在 **[!UICONTROL 份數]** 以顯示語言副本。
 
    ![chlimage_1-455](assets/chlimage_1-455.png)
 
-1. 按一下/點選 **[!UICONTROL 建立並翻譯]** 從面板底部以顯示 **[!UICONTROL 建立並翻譯]** 對話方塊。
+1. 按一下 **[!UICONTROL 建立並翻譯]** 從面板底部以顯示 **[!UICONTROL 建立並翻譯]** 對話方塊。
 
    ![chlimage_1-456](assets/chlimage_1-456.png)
 
@@ -118,7 +118,7 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
    ![chlimage_1-458](assets/chlimage_1-458.png)
 
-1. 在中指定專案標題 **[!UICONTROL 專案標題]** 方塊，然後按一下/點選 **建立**.
+1. 在中指定專案標題 **[!UICONTROL 專案標題]** 方塊，然後按一下 **建立**.
 
    ![chlimage_1-459](assets/chlimage_1-459.png)
 
@@ -126,7 +126,7 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
    ![chlimage_1-460](assets/chlimage_1-460.png)
 
-1. 按一下/點選專案拼貼，以開啟專案詳細資訊頁面。
+1. 按一下專案拼貼，開啟專案詳細資訊頁面。
 
    ![chlimage_1-461](assets/chlimage_1-461.png)
 
@@ -139,7 +139,7 @@ AEM可讓您翻譯包含各種媒體資產和集合型別的內容片段。 如�
 
    ![chlimage_1-463](assets/chlimage_1-463.png)
 
-1. 按一下/點選內容片段，以檢查已翻譯關聯資產的路徑。
+1. 按一下內容片段以檢查翻譯的相關資產的路徑。
 
    ![chlimage_1-464](assets/chlimage_1-464.png)
 

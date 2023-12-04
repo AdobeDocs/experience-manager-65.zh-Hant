@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 12%
+source-wordcount: '2037'
+ht-degree: 9%
 
 ---
 
@@ -289,7 +289,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 1. 開啟AEM Web Console，方法是前往 `http://serveraddress:serverport/system/console/configMgr`
 1. 尋找，然後按一下 **Day CQ郵件服務**
 1. 新增下列設定：
-   * SMTP 伺服器主機名稱: `smtp.gmail.com`
+   * SMTP伺服器主機名稱： `smtp.gmail.com`
    * SMTP伺服器連線埠： `25` 或 `587`，視需求而定
    * 勾選勾選方塊 **SMPT使用StarTLS** 和 **SMTP需要StarTLS**
    * 檢查 **OAuth流程** 並按一下 **儲存**.
@@ -303,7 +303,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
    * 權杖URL： `https://accounts.google.com/o/oauth2/token`
    * 範圍： `https://www.googleapis.com/auth/gmail.send` 和 `https://mail.google.com/`. 您可以按下 **+** 按鈕位於每個已設定範圍的右側。
    * 使用者端ID和使用者端密碼：使用您擷取的值（如上段所述）設定這些欄位。
-   * 重新整理記號 URL: `https://accounts.google.com/o/oauth2/token`
+   * 重新整理記號URL： `https://accounts.google.com/o/oauth2/token`
    * 重新整理Token到期日：永不
 1. 按一下「**儲存**」。
 
@@ -341,7 +341,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 
    ![設定Microsoft Outlook時的新註冊按鈕](assets/oauth-outlook1.png)
 
-1. 根據您的要求填寫資訊，然後按一下「**註冊**」
+1. 根據您的要求填寫資訊，然後按一下 **註冊**
 1. 前往新建的應用程式，然後選取「**API 權限**」
 1. 移至「**新增權限** - **Graph 權限** - **委派的權限**」
 1. 為您的應用程式選取以下權限，然後按一下「**新增權限**」：
@@ -354,7 +354,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
    * `http://localhost:4503/services/mailer/oauth2/token`
 1. 對每個發佈執行個體重複上述步驟
 1. 根據您的需求進行設定
-1. 接下來，移至「**憑證和密碼**」，按一下「**新增用戶端密碼**」，並按照畫面上的步驟建立密碼。請務必記下此密碼以備稍後使用
+1. 接著，前往 **憑證和密碼**，按一下 **新使用者端密碼** 並依照熒幕上的步驟建立密碼。 請務必記下此密碼以備稍後使用
 1. 在左側窗格中按「**概觀**」並複製「**應用程式 (用戶端) ID**」和「**目錄 (租用戶) ID**」的值以供稍後使用
 
 回顧一下，您必須擁有下列資訊才能為AEM端的郵件程式服務設定OAuth2：
@@ -372,7 +372,7 @@ AEM為其整合的郵件程式服務提供OAuth2支援，以允許組織遵守�
 1. 瀏覽至您本機執行個體的Web主控台 `http://serveraddress:serverport/system/console/configMgr`
 1. 尋找並按一下 **Day CQ郵件服務**
 1. 新增下列設定：
-   * SMTP 伺服器主機名稱: `smtp.office365.com`
+   * SMTP伺服器主機名稱： `smtp.office365.com`
    * SMTP使用者：您的使用者名稱（電子郵件格式）
    * 「寄件者」地址：郵件程式所傳送訊息的「寄件者：」欄位中使用的電子郵件地址
    * SMTP伺服器連線埠： `25` 或 `587` 視需求而定

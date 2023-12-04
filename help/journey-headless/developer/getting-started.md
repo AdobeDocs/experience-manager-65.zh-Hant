@@ -2,9 +2,9 @@
 title: AEM Headless 快速入門
 description: 在 AEM Headless 開發人員歷程的這一部分，了解 AEM Headless 先決條件。
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3032'
+source-wordcount: '2998'
 ht-degree: 94%
 
 ---
@@ -240,7 +240,7 @@ GraphQL 可作為 AEM 和 Headless 內容取用者之間的「黏著劑」。Gra
 
 任何專案要取得成功，在建立任何內容之前都必須考慮效能。
 
-您必須了解您的使用者/訪客的期望和相關設計。設定服務層級目標 (SLO)，並加以測量以了解您是否滿足使用者的期望。
+請確定您瞭解使用者/訪客的期望，並針對這些需求進行設計。 設定服務層級目標 (SLO)，並加以測量以了解您是否滿足使用者的期望。
 
 #### 流量模式 {#traffic-patterns}
 

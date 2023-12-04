@@ -2,10 +2,10 @@
 title: 設定和設定瀏覽器
 description: 瞭解AEM設定，以及這些設定如何管理AEM中的工作區設定。
 exl-id: 1be5849b-748c-48e8-afa8-35a9026c27b3
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1483'
-ht-degree: 5%
+source-wordcount: '1472'
+ht-degree: 4%
 
 ---
 
@@ -68,8 +68,8 @@ AEM管理員和作者可以將設定視為工作區。 藉由實作這些功能�
 
 使用設定瀏覽器，即可在AEM中輕鬆建立設定。
 
-1. 登入AEMas a Cloud Service，並從主功能表選取 **工具** -> **一般** -> **設定瀏覽器**.
-1. 點選或按一下&#x200B;**建立**。
+1. 登入AEMas a Cloud Service，並從主功能表選取 **工具** > **一般** > **設定瀏覽器**.
+1. 按一下&#x200B;**建立**。
 1. 提供設定的&#x200B;**標題**&#x200B;和&#x200B;**名稱**。
 
    ![建立設定](assets/configuration-create.png)
@@ -83,7 +83,7 @@ AEM管理員和作者可以將設定視為工作區。 藉由實作這些功能�
    * [上下文中心區段](/help/sites-administering/segmentation.md)
    * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
    * [可編輯的範本](/help/sites-authoring/templates.md)
-1. 點選或按一下&#x200B;**建立**。
+1. 按一下&#x200B;**建立**。
 
 >[!TIP]
 >
@@ -93,8 +93,8 @@ AEM管理員和作者可以將設定視為工作區。 藉由實作這些功能�
 
 如果您將設定視為工作區，則可以在這些設定上設定存取權，以強制實行誰可以存取這些工作區，誰不可以存取。
 
-1. 登入AEMas a Cloud Service，並從主功能表選取 **工具** -> **一般** -> **設定瀏覽器**.
-1. 選取您要修改的設定，然後點選或按一下 **屬性** 工具列中的。
+1. 登入AEMas a Cloud Service，並從主功能表選取 **工具** > **一般** > **設定瀏覽器**.
+1. 選取您要修改的組態，然後按一下 **屬性** 工具列中的。
 1. 選取您要新增至設定的任何其他功能。
 
    >[!NOTE]
@@ -209,7 +209,7 @@ AEM中的設定是根據Sling內容感知設定。 Sling套件組合提供的服
 只需提供：
 
 * **內容路徑**
-* **項目**
+* **專案**
 * **使用者**
 
 若要檢視已解析哪些設定並接收解析這些設定的範常式式碼，請選取 **解析**.

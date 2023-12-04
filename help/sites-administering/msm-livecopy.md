@@ -3,9 +3,9 @@ title: 建立和同步 Live Copies
 description: 瞭解如何在Adobe Experience Manager中建立和同步即時副本。
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4227'
+source-wordcount: '4194'
 ht-degree: 2%
 
 ---
@@ -99,11 +99,11 @@ Blueprint設定會識別您要當作一或多個即時副本頁面來源的現�
 
    ![建立即時副本](assets/chlimage_1-212.png)
 
-1. 選取來源頁面，然後按一下或點選 **下一個**. 例如：
+1. 選取來源頁面，然後按一下 **下一個**. 例如：
 
    ![選取來源頁面](assets/chlimage_1-213.png)
 
-1. 指定即時副本的目的地路徑（開啟即時副本的父資料夾/頁面），然後按一下或點選 **下一個**.
+1. 指定即時副本的目的地路徑（開啟即時副本的父資料夾/頁面），然後按一下 **下一個**.
 
    ![指定目的地](assets/chlimage_1-214.png)
 
@@ -124,7 +124,7 @@ Blueprint設定會識別您要當作一或多個即時副本頁面來源的現�
    * 未選取：建立包含所選頁面所有子系的即時副本（深層即時副本）
 
 1. （選用）若要指定用於LiveCopy的一或多個轉出設定，請使用 **轉出設定** 用於選取的下拉式清單；選取的設定會顯示在下拉式選取器下方。
-1. 按一下或點選 **建立**. 確認訊息隨即顯示，您可以從此處選取 **開啟** 或 **完成**.
+1. 按一下「**建立**」。確認訊息隨即顯示，您可以從此處選取 **開啟** 或 **完成**.
 
 ### 從Blueprint設定建立網站的即時副本 {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
 
@@ -156,7 +156,7 @@ Blueprint設定會識別您要當作一或多個即時副本頁面來源的現�
 
 1. 使用 **初始語言** 選取器，指定用於即時副本的Blueprint網站語言。
 
-   預設會選取所有可用語言。 若要移除語言，請按一下或點選 **X** 顯示在語言旁邊。
+   預設會選取所有可用語言。 若要移除語言，請按一下 **X** 顯示在語言旁邊。
 
    例如：
 
@@ -177,7 +177,7 @@ Blueprint設定會識別您要當作一或多個即時副本頁面來源的現�
 
 * **來源**：即時副本頁面的來源頁面。
 * **狀態**：即時副本的同步狀態。 狀態包括即時副本是否與來源保持同步、上次同步發生的時間以及同步的執行者。
-* **設定**:
+* **設定**：
 
    * 頁面是否仍受即時副本繼承的約束。
    * 設定是否繼承自父頁面。
@@ -231,7 +231,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
    ![轉出Blueprint](assets/rollout-blueprint.png)
 
-轉出會以非同步作業處理，並且可在以下位置檢視： [**非同步工作狀態** 儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全域導覽** -> **工具** -> **作業** -> **工作**
+轉出會以非同步作業處理，並且可在以下位置檢視： [**非同步工作狀態** 儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全域導覽** > **工具** > **作業** > **工作**
 
 >[!NOTE]
 >
@@ -242,14 +242,14 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 1. 在 **網站** 控制檯中，選取即時副本中的頁面，然後開啟 **[引用](/help/sites-authoring/basic-handling.md#references)** 面板（從工具列）。
 1. 選取 **Blueprint** 選項，以顯示與此頁面關聯的Blueprint。
 1. 從清單中選取所需的Blueprint。
-1. 按一下或點選 **轉出**.
+1. 按一下 **轉出**.
 1. 系統會要求您確認轉出的詳細資訊：
 
-   * **轉出範圍**:
+   * **轉出範圍**：
 
      指定範圍是僅針對所選頁面，還是應包含子頁面。
 
-   * **計劃**:
+   * **排程**：
 
      指定轉出工作是否應該立即執行(**現在**)或之後的日期/時間(**稍後**)。
 
@@ -257,7 +257,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 1. 確認這些詳細資料後，請選取 **轉出** 以執行該動作。
 
-轉出會以非同步作業處理，並且可在以下位置檢視： [**非同步工作狀態** 儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全域導覽** -> **工具** -> **作業** -> **工作**
+轉出會以非同步作業處理，並且可在以下位置檢視： [**非同步工作狀態** 儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全域導覽** > **工具** > **作業** > **工作**
 
 >[!NOTE]
 >
@@ -277,7 +277,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
    ![轉出Blueprint](assets/rollout-blueprint.png)
 
-轉出會以非同步作業處理，並且可在以下位置檢視： [**非同步工作狀態** 儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全域導覽** -> **工具** -> **作業** -> **工作**
+轉出會以非同步作業處理，並且可在以下位置檢視： [**非同步工作狀態** 儀表板](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) 在 **全域導覽** > **工具** > **作業** > **工作**
 
 >[!NOTE]
 >
@@ -297,7 +297,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 1. 在 **網站** 控制檯中，選取即時副本頁面並開啟屬性。
 1. 開啟 **即時副本** 標籤。
-1. 按一下或點選 **同步**.
+1. 按一下 **同步**.
 
    ![同步](assets/chlimage_1-224.png)
 
@@ -365,7 +365,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 若要暫停頁面上的繼承，請執行下列動作：
 
 1. 使用「 」開啟Live Copy頁面的屬性 **檢視屬性** 命令 **網站** 主控台或使用 **頁面資訊** ，位於頁面工具列上。
-1. 按一下或點選 **即時副本** 標籤。
+1. 按一下 **即時副本** 標籤。
 1. 選取 **暫停** 工具列中的。 然後，您可以選取：
 
    * **暫停**：僅目前頁面
@@ -382,7 +382,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 1. 從下列專案選取適當的選項：
 
    * **暫停**
-   * **暫停子項**
+   * **與子項一起暫停**
 
    ![選取適當的暫停選項](assets/chlimage_1-226.png)
 
@@ -446,7 +446,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 若要指定或變更深度，請執行下列動作：
 
 1. 使用「 」開啟Live Copy頁面的屬性 **檢視屬性** 命令 **網站** 主控台或使用 **頁面資訊** ，位於頁面工具列上。
-1. 按一下或點選 **即時副本** 標籤。
+1. 按一下 **即時副本** 標籤。
 1. 在 **設定** 部分，設定或清除 **即時副本繼承** 選項（視是否包含子頁面而定）：
 
    * 勾選 — 深層即時副本（包含子頁面）
@@ -458,7 +458,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
    >
    >另請參閱 [即時副本 — 構成](/help/sites-administering/msm.md#live-copies-composition) 以取得詳細資訊。
 
-1. 按一下或點選 **儲存** 以持續儲存您的更新。
+1. 按一下 **儲存** 以持續儲存您的更新。
 
 ### 取消元件的繼承 {#cancelling-inheritance-for-a-component}
 
@@ -474,11 +474,11 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 取消繼承以變更元件內容或刪除元件：
 
-1. 按一下或點選您要取消繼承的元件。
+1. 按一下要取消繼承的元件。
 
    ![選取取消繼承動作的元件](assets/chlimage_1-230.png)
 
-1. 在元件工具列上，按一下或點選 **取消繼承** 圖示。
+1. 在元件工具列上，按一下 **取消繼承** 圖示。
 
    ![取消繼承](do-not-localize/chlimage_1-8.png)
 
@@ -488,7 +488,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 ### 重新啟用元件的繼承 {#re-enabling-inheritance-for-a-component}
 
-若要啟用元件的繼承，請按一下或點選 **重新啟用繼承** 圖示來切換元件。
+若要啟用元件的繼承，請按一下 **重新啟用繼承** 圖示來切換元件。
 
 ![重新啟用繼承](do-not-localize/chlimage_1-9.png)
 
@@ -529,15 +529,15 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 >重新啟用繼承時，Live Copy 頁面屬性不會和來源屬性自動同步。如有需要，您可以手動要求同步。
 
 1. 使用下列任一專案開啟即時副本頁面的屬性： **檢視屬性** 的選項 **網站** 主控台或 **頁面資訊** 圖示加以檢視。
-1. 若要取消屬性的繼承，請按一下或點選屬性右側顯示的連結圖示。
+1. 若要取消屬性的繼承，請按一下屬性右側顯示的連結圖示。
 
    ![取消屬性的繼承](do-not-localize/chlimage_1-10.png)
 
-1. 在 **取消繼承** 確認對話方塊，按一下或點選 **是**.
+1. 在 **取消繼承** 確認對話方塊，按一下 **是**.
 
 ### 還原即時副本頁面的屬性 {#revert-properties-of-a-live-copy-page}
 
-若要啟用屬性的繼承，請按一下或點選 **還原繼承** 圖示顯示在屬性旁。
+若要啟用屬性的繼承，請按一下 **還原繼承** 圖示顯示在屬性旁。
 
 ![還原繼承](do-not-localize/chlimage_1-11.png)
 
@@ -634,7 +634,7 @@ Blueprint頁面（在Blueprint設定中參照）為您提供使用目前(Bluepri
 
 若要分離即時副本：
 
-1. 在 **網站** 主控台，選取即時副本頁面，然後按一下或點選 **檢視屬性**.
+1. 在 **網站** 主控台，選取即時副本頁面並按一下 **檢視屬性**.
 1. 開啟 **即時副本** 標籤。
 1. 在工具列上，選取 **分離**.
 

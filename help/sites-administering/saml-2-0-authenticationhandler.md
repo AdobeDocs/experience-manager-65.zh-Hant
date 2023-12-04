@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '840'
-ht-degree: 90%
+source-wordcount: '821'
+ht-degree: 86%
 
 ---
 
@@ -124,7 +124,7 @@ SAML 聲明已經過簽署，並可選擇進行加密。為了使其運作，您
 
    `openssl pkcs8 -topk8 -inform PEM -outform DER -in key.pem -out key.der -nocrypt`
 
-1. 按一下「**選取私密金鑰檔案**」，上傳私密金鑰檔案。
+1. 按一下以上傳私密金鑰檔案 **選取私密金鑰檔案**.
 1. 按一下「**選擇證書鏈檔案**」，上傳憑證檔案。
 1. 指派別名，如下所示：
 
@@ -135,7 +135,7 @@ SAML 聲明已經過簽署，並可選擇進行加密。為了使其運作，您
 您可以設定記錄器來偵錯任何可能因錯誤設定SAML而產生的問題。 您可以透過以下方式進行：
 
 1. 前往網頁主控台：*http://localhost:4502/system/console/configMgr*
-1. 搜尋並按一下稱為「**Apache Sling 記錄記錄器設定**」的項目
+1. 搜尋並按一下以下專案： **Apache Sling記錄記錄器設定**
 1. 使用下列設定來建立記錄器：
 
    * **記錄層級：** Debug

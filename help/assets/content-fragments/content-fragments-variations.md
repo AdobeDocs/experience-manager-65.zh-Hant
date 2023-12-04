@@ -4,10 +4,10 @@ description: 瞭解變數如何可讓您為片段編寫內容，然後根據用�
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2388'
-ht-degree: 7%
+source-wordcount: '2309'
+ht-degree: 6%
 
 ---
 
@@ -75,7 +75,7 @@ ht-degree: 7%
 
 ### 全熒幕編輯器 {#full-screen-editor}
 
-編輯多行文字欄位時，您可以開啟全熒幕編輯器；點選或按一下實際文字，然後選取以下動作圖示：
+編輯多行文字欄位時，您可以開啟全熒幕編輯器；按一下實際文字，然後選取下列動作圖示：
 
 ![全熒幕編輯器圖示](assets/cfm-variations-03.png)
 
@@ -210,7 +210,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 例如：
 
-![statistics](assets/cfm-variations-04.png)
+![統計資料](assets/cfm-variations-04.png)
 
 ### 上傳內容 {#uploading-content}
 
@@ -238,10 +238,10 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 >
 封裝共用提供其他語言作為語言模型封裝：
 >
-* [French(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
-* [German(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
-* [Italian(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
-* [Spanish(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+* [法文(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+* [德文(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+* [義大利文(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+* [西班牙文(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 >
 
 1. 選取 **主版** 或必要的變數。
@@ -304,7 +304,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 ### 檢視、編輯和刪除註解 {#viewing-editing-deleting-annotations}
 
-註解:
+註解：
 
 * 在編輯器的全熒幕和正常模式下，由文字上的反白顯示指示。 接著，您可以按一下反白文字，重新開啟對話方塊，以檢視、編輯和/或刪除註解的完整細節。
 

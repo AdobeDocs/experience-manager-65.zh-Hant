@@ -8,9 +8,9 @@ content-type: reference
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2285'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ REST API透過HTTP提供相同功能的存取權，且回應會以JSON傳送。
 
 這些範例以Java™屬性樣式標籤法提供。 若要搭配Java™ API使用，請使用Java™ `HashMap` 與下列API範例相同。
 
-對於 `QueryBuilder` JSON Servlet，每個範例都包含本機CQ安裝的連結(位於預設位置， `http://localhost:4502`)。 您必須先登入您的CQ執行個體，才能使用這些連結。
+對於 `QueryBuilder` JSON Servlet，每個範例都包含本機CQ安裝的連結(位於預設位置， `http://localhost:4502`)。 在使用這些連結之前，請登入您的CQ執行個體。
 
 >[!CAUTION]
 >

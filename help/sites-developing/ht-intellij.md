@@ -8,10 +8,10 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '638'
-ht-degree: 1%
+source-wordcount: '639'
+ht-degree: 2%
 
 ---
 
@@ -58,7 +58,7 @@ IntelliJ IDEA也支援使用JSP，例如：
 1. 開啟 **匯入** IntelliJ IDEA中的對話方塊，作者：
 
    * 選取 **匯入專案** 在歡迎畫面上（如果您尚未開啟任何專案）
-   * 選取 **檔案 — >匯入專案** 從主功能表
+   * 選取 **檔案>匯入專案** 從主功能表
 
 1. 在「匯入」對話方塊中，選取專案的POM檔案。
 
@@ -86,7 +86,7 @@ IntelliJ IDEA也支援使用JSP，例如：
 
 IntelliJ IDEA必須瞭解在哪裡可以找到JSP以進行偵錯。 因為IDEA無法解譯 `content-package-maven-plugin` 設定，則必須手動設定。
 
-1. 前往 **檔案 — >專案結構**
+1. 前往 **檔案>專案結構**
 1. 選取 **內容** 模組
 1. 按一下 **+** 在模組清單上方並選取 **Web**
 1. 以「Web資源目錄」形式選取 `content/src/main/content/jcr_root subdirectory` ，如下方熒幕擷圖所示。
@@ -104,7 +104,7 @@ IntelliJ IDEA必須瞭解在哪裡可以找到JSP以進行偵錯。 因為IDEA�
 
 #### 設定除錯設定檔 {#configure-a-debug-profile}
 
-1. 前往 **執行 — >編輯設定**
+1. 前往 **執行>編輯設定**
 1. 點選 **+** 並選取 **JSR45遠端**
 1. 在設定對話方塊中，選取 **設定** 旁邊 **應用程式伺服器** 並設定一般伺服器
 1. 如果您要在開始偵錯時開啟瀏覽器，請將起始頁面設定為適當的URL
@@ -141,7 +141,7 @@ CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,su
 
 您現在已準備好在AEM中偵錯JSP。
 
-1. 選取 **執行 — >偵錯 — >您的偵錯設定檔**
+1. 選取 **執行>除錯>您的除錯設定檔**
 1. 在元件程式碼中設定中斷點
 1. 存取瀏覽器中的頁面
 

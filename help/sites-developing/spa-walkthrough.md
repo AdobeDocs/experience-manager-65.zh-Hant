@@ -4,10 +4,10 @@ description: 本文章介紹 SPA 的概念，並逐步解說如何使用基本 S
 topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1950'
-ht-degree: 67%
+source-wordcount: '1945'
+ht-degree: 64%
 
 ---
 
@@ -103,13 +103,13 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
    `http://<host>:<port>/editor.html/content/wknd-spa-react/us/en/home.html`
 
-   ![步驟 1](assets/spa-walkthrough-step-1.png)
+   ![步驟1](assets/spa-walkthrough-step-1.png)
 
 1. 選取標題元件，並注意其他元件會出現類似的工具列。 選取&#x200B;**編輯**。
 
    ![步驟2](assets/spa-walkthrough-step-2.png)
 
-1. 在AEM中正常編輯內容。變更會持續存在。
+1. 在AEM中正常編輯內容。 變更會持續存在。
 
    ![步驟3](assets/spa-walkthrough-step-3.png)
 
@@ -125,7 +125,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
    ![步驟5](assets/spa-walkthrough-step-5.png)
 
-如同任何非 SPA 應用程式，支援其他編寫工具，例如在頁面上拖放其他元件、重新排列元件和修改版面。
+如同任何非SPA應用程式一樣，也支援其他撰寫工具，例如拖放頁面上的其他元件、重新排列元件及修改版面。
 
 >[!NOTE]
 >
@@ -143,7 +143,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
    `http://<host>:<port>/content/wknd-spa-react/us/en/home.html`
 
-   ![步驟 1](assets/spa-walkthrough-step-1-1.png)
+   ![步驟1](assets/spa-walkthrough-step-1-1.png)
 
    請注意頁面結構，包括導覽至子頁面、氣象Widget和文章。
 
@@ -169,7 +169,7 @@ SPA的主要構想是減少伺服器呼叫和相依性，以將伺服器呼叫�
 
    `http://<host>:<port>/content/wknd-spa-react/us/en/home.html`
 
-   ![步驟 1](assets/spa-walkthrough-step-1-1.png)
+   ![步驟1](assets/spa-walkthrough-step-1-1.png)
 
 1. 使用瀏覽器的內建工具檢視頁面的來源。
 1. 來源的內容極為有限。

@@ -6,10 +6,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2075'
-ht-degree: 1%
+source-wordcount: '2042'
+ht-degree: 0%
 
 ---
 
@@ -102,7 +102,7 @@ SPA元件必須和頁面模型同步，並更新以相應地變更其內容。 �
 
 npm模組： [@adobe/aem-react-editable-components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 
-#### Angular {#angular}
+#### angular {#angular}
 
 npm模組： [@adobe/aem-angular-editable-components](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
@@ -148,7 +148,7 @@ npm模組： [@adobe/aem-angular-editable-components](https://www.npmjs.com/pack
 
 容器會動態地從的存放區取得子元件 [`ComponentMapping`](/help/sites-developing/spa-blueprint.md#componentmapping) 資料庫。 容器接著會使用「模型提供者」功能擴充子元件，最後例項化它。
 
-### Page {#page}
+### 頁面 {#page}
 
 此 `Page` 元件延伸 `Container` 元件。 容器是用來包含和轉譯子元件（包括子頁面）的元件。 若要這麼做，容器會在 `:itemsOrder`， `:items`、和 `:children` 模型屬性。 此 `Page` 元件會從的存放區動態取得子元件 [元件對應](/help/sites-developing/spa-blueprint.md#componentmapping) 資料庫。 此 `Page` 負責具現化子元件。
 

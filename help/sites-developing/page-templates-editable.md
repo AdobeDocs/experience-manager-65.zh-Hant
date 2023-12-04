@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3219'
-ht-degree: 2%
+source-wordcount: '3186'
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 >
 >[靜態範本](/help/sites-developing/page-templates-static.md) 也可供使用。
 
-本文件:
+本檔案：
 
 * 提供建立可編輯範本的概觀
 
@@ -72,7 +72,7 @@ ht-degree: 2%
    * 結構可讓您定義範本的元件和內容。
    * 範本結構中定義的元件無法在產生的頁面上移動，也無法從任何產生的頁面中刪除。
 
-      * 如果您是在「 」之外的自訂資料夾中建立範本 `We.Retail` 範例內容，您可以選擇基礎元件或使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hant).
+      * 如果您是在「 」之外的自訂資料夾中建立範本 `We.Retail` 範例內容，您可以選擇基礎元件或使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=en).
 
    * 如果您希望頁面作者能夠新增和移除元件，請新增段落系統至範本。
    * 您可以解除鎖定元件，然後再將其鎖定，讓您可以定義初始內容。
@@ -102,7 +102,7 @@ ht-degree: 2%
 
    如需初始內容的技術細節，請參閱 [初始內容](/help/sites-developing/page-templates-editable.md#initial-content) （在此檔案中）。
 
-   **版面配置**
+   **版面**
 
    * 您可以為一系列裝置定義範本配置。
    * 範本的回應式版面運作方式與頁面製作相同。
@@ -216,7 +216,7 @@ ht-degree: 2%
 
 ### 使用設定瀏覽器 {#using-the-configuration-browser}
 
-1. 前往 **全域導覽** -> **工具** > **設定瀏覽器**.
+1. 前往 **全域導覽** > **工具** > **設定瀏覽器**.
 
    現有資料夾會列在左側，包括 **全域** 資料夾。
 
@@ -257,7 +257,7 @@ ht-degree: 2%
   <tr>
    <th>路徑</th>
    <th>角色/群組</th>
-   <th>權限<br /> </th>
+   <th>許可權<br /> </th>
    <th>說明</th>
   </tr>
   <tr>
@@ -317,7 +317,7 @@ ht-degree: 2%
   <tr>
    <th>路徑</th>
    <th>角色/群組</th>
-   <th>權限<br /> </th>
+   <th>許可權<br /> </th>
    <th>說明</th>
   </tr>
   <tr>
@@ -506,7 +506,7 @@ GITHUB上的程式碼
 
    * **類型**：`String`
 
-   * **值**：`draft`, `enabled`, 或 `disabled`
+   * **值**： `draft`， `enabled`，或 `disabled`
 
 ### 結構 {#structure}
 
@@ -585,7 +585,7 @@ GITHUB上的程式碼
 
          * 名稱：狀態
          * 型別：字串
-         * 值: `enabled`
+         * 值： `enabled`
 
 1. **允許的範本**
 
@@ -629,11 +629,11 @@ GITHUB上的程式碼
 
 轉譯頁面時：
 
-* **範本**:
+* **範本**：
 
    * 此 `cq:template` 屬性屬於 `jcr:content` 節點是用來存取對應至該頁面的範本。
 
-* **元件**:
+* **元件**：
 
    * 頁面元件會合併 `structure/jcr:content` 範本的樹狀結構 `jcr:content` 頁面的樹狀結構。
 

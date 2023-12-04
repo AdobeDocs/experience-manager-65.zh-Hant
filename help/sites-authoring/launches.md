@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 82%
+source-wordcount: '831'
+ht-degree: 81%
 
 ---
 
@@ -121,6 +121,6 @@ ht-degree: 82%
 
    ![參考標籤 — 啟動](assets/screen-shot_2019-03-05at121901-1.png)
 
-1. 點選/按一下適當的 Launch，將顯示可用動作清單：
+1. 按一下適當的啟動，畫面會顯示可執行的動作清單：
 
    ![選取啟動以顯示可能的動作](assets/screen-shot_2019-03-05at121952-1.png)

@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2685'
+source-wordcount: '2675'
 ht-degree: 1%
 
 ---
@@ -107,16 +107,16 @@ AEM Mobile提供Phonegap應用程式藍圖，供您建立行動應用程式。 �
 
 #### 變更標題、說明和圖示 {#change-the-title-description-and-icon}
 
-1. 在邊欄上，按一下或點選「應用程式」。
+1. 在邊欄上，按一下「應用程式」 。
 1. 選取要設定的應用程式，然後按一下「檢視頁面屬性」圖示。
 
    ![圓形內以字母I表示的「檢視頁面屬性」圖示。](do-not-localize/chlimage_1-8.png)
 
-1. 若要變更屬性值，請按一下或點選「編輯」圖示。
+1. 若要變更屬性值，請按一下「編輯」圖示。
 
    ![鉛筆所指示的編輯圖示。](do-not-localize/chlimage_1-9.png)
 
-1. 設定「基本」和「進階」屬性，然後按一下或點選「完成」圖示。
+1. 設定「基本」和「進階」屬性，然後按一下「完成」圖示。
 
    ![以核取記號符號表示的「完成」圖示。](do-not-localize/chlimage_1-10.png)
 
@@ -127,11 +127,11 @@ AEM Mobile提供Phonegap應用程式藍圖，供您建立行動應用程式。 �
 
    ![在圓圈內以字母I表示的「檢視應用程式屬性」圖示。](do-not-localize/chlimage_1-11.png)
 
-1. 若要變更屬性值，請按一下或點選「編輯」圖示。
+1. 若要變更屬性值，請按一下「編輯」圖示。
 
    ![鉛筆所指示的編輯圖示。](do-not-localize/chlimage_1-12.png)
 
-1. 在「基本」、「進階」、「建置」和「Analytics」標籤上設定屬性，然後按一下或點選「完成」圖示。
+1. 在「基本」、「進階」、「建置」和「Analytics」標籤上設定屬性，然後按一下「完成」圖示。
 
    ![以核取記號符號表示的「完成」圖示。](do-not-localize/chlimage_1-13.png)
 
@@ -139,8 +139,8 @@ AEM Mobile提供Phonegap應用程式藍圖，供您建立行動應用程式。 �
 
 建立行動應用程式後，請新增用作應用程式UI的內容。
 
-1. 在邊欄上，按一下或點選「應用程式」。
-1. 按一下或點選應用程式，然後按一下或點選「英文」。
+1. 在邊欄上，按一下「應用程式」 。
+1. 按一下應用程式，然後按一下英文。
 1. 編輯首頁，或視需要新增子頁面。
 
 ### 將內容移動至行動應用程式 {#moving-content-to-mobile-applications}
@@ -160,8 +160,8 @@ Content Sync也會追蹤更新何時發生。 有了這些資訊，Content Sync�
 
 在您要更新快取的執行處理上執行下列程式。 例如，如果您的應用程式要求更新發佈執行個體，請在發佈執行個體上執行程式。
 
-1. 在邊欄上，按一下或點選「應用程式」，然後按一下或點選您的應用程式。
-1. 選取啟動顯示頁面，然後按一下或點選「更新快取」圖示。
+1. 在邊欄上，按一下應用程式，然後按一下您的應用程式。
+1. 選取啟動顯示頁面，然後按一下「更新快取」圖示。
 
    ![更新快取圖示以帶有回收符號的條狀橫條圖示表示。](do-not-localize/chlimage_1-14.png)
 

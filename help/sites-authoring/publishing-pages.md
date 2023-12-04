@@ -2,9 +2,9 @@
 title: 發佈內容頁面
 description: 瞭解如何在Adobe Experience Manager 6.5中發佈內容頁面。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1673'
 ht-degree: 7%
 
 ---
@@ -152,9 +152,9 @@ ht-degree: 7%
 
    按一下 **包含子項** 開啟對話方塊，允許您：
 
-   * 僅包含直接子項.
-   * 僅包含修改過的頁面.
-   * 僅包含已發佈的頁面.
+   * 僅包含直接子項。
+   * 僅包含已修改的頁面。
+   * 僅包含已發佈的頁面。
 
    按一下 **新增** 根據選取選項，將子頁面新增至要發佈或取消發佈的頁面清單中。 按一下 **取消** 以取消選取範圍並返回精靈。
 

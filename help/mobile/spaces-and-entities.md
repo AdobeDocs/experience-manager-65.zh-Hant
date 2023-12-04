@@ -1,18 +1,14 @@
 ---
 title: 空間與實體
-seo-title: Developing AEM Mobile Content Services
 description: 此頁面是開發AEM Mobile Content Services的登陸頁面。
-seo-description: This page serves a landing page for developing AEM Mobile Content Services.
-uuid: eab5a61b-a9e8-4863-90a3-df1f18510cd8
 contentOwner: Jyotika Syal
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: ef568577-c74e-4fc2-b66e-eedac2948310
 exl-id: 44591900-b01b-4a33-9910-839564477e7d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 3%
+source-wordcount: '1206'
+ht-degree: 4%
 
 ---
 
@@ -111,7 +107,7 @@ ht-degree: 3%
 
 ### 新增語言副本 {#adding-language-copy}
 
-1. 建立空間後，按一下該空間以建立語言副本。
+1. 建立空間後，按一下該空間可建立語言副本。
 
    按一下 **建立** 並選擇 **語言副本**.
 
@@ -142,7 +138,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   >若要導覽至資料夾並檢視其內容或新增子資料夾或實體，請按一下空間內容清單中資料夾的標題。
+   >若要導覽至資料夾並檢視其內容或新增子資料夾或實體，請按一下空間內容清單中的資料夾標題。
 
 ## 使用空間中的實體 {#working-with-entities-in-a-space}
 
@@ -244,6 +240,6 @@ ht-degree: 3%
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
-   **或**,
+   **或**，
 
    按一下 **快速發佈** 以發佈該特定實體。

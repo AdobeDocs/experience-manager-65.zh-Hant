@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 2%
+source-wordcount: '1659'
+ht-degree: 1%
 
 ---
 
@@ -77,7 +77,7 @@ AEM必須知道可在何處擷取遠端呈現的內容。 不論 [您選擇為SS
 * **遠端端點URL**  — 負責產生內容的端點URL
    * 若不在本機網路中，請使用安全的HTTPS通訊協定。
 * **其他請求標頭**  — 要新增至傳送至遠端端點之要求的其他標頭
-   * 模式: `key=value`
+   * 模式： `key=value`
 * **請求逾時**  — 遠端主機要求逾時（毫秒）
 
 >[!NOTE]

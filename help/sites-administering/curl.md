@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 2%
+source-wordcount: '884'
+ht-degree: 3%
 
 ---
 
@@ -58,7 +58,7 @@ cURL命令可建置供AEM中的大部分作業使用，例如觸發工作流程�
    ![chlimage_1-67](assets/chlimage_1-67a.png)
 
 1. 按一下 **建立** 在 **建立頁面** 以實際建立工作流程。
-1. 以滑鼠右鍵按一下產生的POST動作，然後選取 **複製** -> **復製為cURL**.
+1. 以滑鼠右鍵按一下產生的POST動作，然後選取 **複製** > **復製為cURL**.
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 

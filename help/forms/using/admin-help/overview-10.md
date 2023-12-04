@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2d6f90bb-62f7-4805-9250-1b913fe7d2b3
 exl-id: da1224e4-566a-402f-9d8b-27fda5f3101b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '124'
 ht-degree: 0%
 
 ---
@@ -29,8 +29,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM Forms版本已棄用Flex Workspace。
+>AEM Forms版本已棄用Flex工作區。
 
 >[!NOTE]
 >
->您必須使用管理主控台中的導覽方法。 請勿使用網頁瀏覽器中的「上一步」、「前進」或「重新整理」按鈕。 使用這些按鈕可能會導致資料擷取和資料顯示問題。
+>使用管理主控台中的導覽方法。 請勿使用網頁瀏覽器中的「上一步」、「前進」或「重新整理」按鈕。 使用這些按鈕可能會導致資料擷取和資料顯示問題。

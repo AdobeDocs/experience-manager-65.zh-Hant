@@ -4,10 +4,10 @@ description: 「艱難日」測試可在所有作業同時進行的情況下，�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1822'
-ht-degree: 2%
+source-wordcount: '1824'
+ht-degree: 1%
 
 ---
 
@@ -70,7 +70,7 @@ java -jar toughday2.jar --help_full
    <td><strong>範例</strong></td>
   </tr>
   <tr>
-   <td>--說明</td>
+   <td> — 說明</td>
    <td>列印全域資訊，例如：可用的動作、預先定義的套裝、執行模式和全域引數。</td>
    <td> </td>
   </tr>
@@ -122,7 +122,7 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 
 您可以在下列清單中找到相關引數：
 
-| **參數** | **說明** | **預設值** | **可能的值** |
+| **引數** | **說明** | **預設值** | **可能的值** |
 |---|---|---|---|
 | `--installsamplecontent=<Val>` | 安裝或略過預設的「硬性第2天」內容套件。 | true | true或false |
 | `--protocol=<Val>` | 用於主機的通訊協定。 | http | http或https |
@@ -238,7 +238,7 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-指定套件中的現有測試也可以使用重新設定 `config`* *引數。 您也必須指定套件名稱和測試的實際名稱（而不是「測試類別」名稱）。 您可以在以下位置找到測試名稱： `name` 測試類別的屬性。 如需如何尋找測試屬性的詳細資訊，請參閱 [變更測試屬性](/help/sites-developing/tough-day.md#changing-the-test-properties) 區段。
+指定套件中的現有測試也可以使用重新設定 `config`* *引數。 同時指定套裝名稱和測試的實際名稱（而不是「測試類別」名稱）。 您可以在以下位置找到測試名稱： `name` 測試類別的屬性。 如需如何尋找測試屬性的詳細資訊，請參閱 [變更測試屬性](/help/sites-developing/tough-day.md#changing-the-test-properties) 區段。
 
 在以下範例中，的預設資產標題 `CreatePageTreeTest` (已命名 `UploadAsset`)變更為「NewAsset」。
 
@@ -260,7 +260,7 @@ tests:
       title : NewAsset
 ```
 
-此外，您也可以使用，從預設設定中移除預先定義的套裝或發佈程式測試。 `exclude` 引數。 您也必須指定套件名稱和測試的實際名稱（不是測試C） `lass` 名稱)。 您可以在以下位置找到測試名稱： `name` 測試類別的屬性。 在以下範例中， `CreatePageTreeTest` (已命名 `UploadAsset`)測試已從toughday套裝中移除。
+此外，您也可以使用，從預設設定中移除預先定義的套裝或發佈程式測試。 `exclude` 引數。 同時指定套裝名稱和測試的實際名稱（不是測試C） `lass` 名稱)。 您可以在以下位置找到測試名稱： `name` 測試類別的屬性。 在以下範例中， `CreatePageTreeTest` (已命名 `UploadAsset`)測試已從toughday套裝中移除。
 
 使用命令列引數：
 
@@ -354,13 +354,13 @@ java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTe
 | 已通過 | 成功執行的次數。 |
 | 已失敗 | 失敗的執行次數。 |
 | 最小值&#42; | 測試執行的最短持續時間。 |
-| 最大值&#42; | 測試執行的最長持續時間。 |
-| 中等&#42; | 計算的所有測試執行的中位數持續時間。 |
+| 最大&#42; | 測試執行的最長持續時間。 |
+| 中間值&#42; | 計算的所有測試執行的中位數持續時間。 |
 | 平均&#42; | 所有測試執行的計算平均持續時間。 |
 | StdDev&#42; | 標準差。 |
 | 90p&#42; | 第90個百分位數。 |
 | 99p&#42; | 第99個百分位數。 |
-| 99.9p&#42; | 99.9百分位數。 |
+| 99.9便士&#42; | 99.9百分位數。 |
 | 實際輸送量&#42; | 執行次數除以經過的執行時間。 |
 
 這些量度是在發行者的協助下撰寫，可透過以下方式新增： `add` 引數（與新增測試類似）。 目前有兩個選項：

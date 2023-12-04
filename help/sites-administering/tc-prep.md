@@ -4,10 +4,10 @@ description: 瞭解如何準備內容以在Adobe Experience Manager中翻譯。
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 1%
+source-wordcount: '669'
+ht-degree: 2%
 
 ---
 
@@ -56,20 +56,20 @@ ht-degree: 1%
 下列程式使用觸控最佳化UI來建立網站的語言副本。 如需使用傳統UI的說明，請參閱 [使用Classic UI建立語言根](/help/sites-administering/tc-lroot-classic.md).
 
 1. 導覽至「網站」。
-1. 按一下或點選您要建立語言副本的網站。
+1. 按一下要建立語言副本的網站。
 
-   例如，若要建立Geometrixx Outdoors網站的語言副本，您可以按一下或點選「Geometrixx Outdoors網站」。
+   例如，若要建立Geometrixx Outdoors網站的語言副本，您可以按一下「Geometrixx Outdoors網站」。
 
-1. 按一下或點選「建立」，然後按一下或點選「建立頁面」。
+1. 按一下建立，然後按一下建立頁面。
 
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
-1. 選取頁面範本，然後按一下或點選「下一步」。
+1. 選取頁面範本，然後按「下一步」。
 1. 在「名稱」欄位中，輸入國家/地區代碼，格式為 `<language-code>` 或 `<language-code>_<country-code>`例如， `en`， `en_US`， `en_us`， `en_GB`， `en_gb`. 輸入頁面的標題。
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
-1. 按一下或點選「建立」。 在確認對話方塊中，按一下或點選 **完成** 返回Sites主控台，或 **開啟** 以開啟語言副本。
+1. 按一下「建立」。 在確認對話方塊中，按一下 **完成** 返回Sites主控台，或 **開啟** 以開啟語言副本。
 
 ## 檢視語言根的狀態 {#seeing-the-status-of-language-roots}
 
@@ -79,8 +79,8 @@ ht-degree: 1%
 
 下列程式會使用觸控最佳化UI來開啟頁面的「參考」面板。
 
-1. 在網站主控台上，選取網站的頁面，然後按一下或點選 **引用**.
+1. 在網站主控台上，選取網站的頁面，然後按一下 **引用**.
 
    ![chlimage_1-24](assets/chlimage_1-24a.png)
 
-1. 在參照面板中，按一下或點選 **語言副本**. 「語言副本」面板會顯示網站的語言副本。
+1. 在參照面板中，按一下 **語言副本**. 「語言副本」面板會顯示網站的語言副本。

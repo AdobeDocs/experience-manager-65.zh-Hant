@@ -2,10 +2,10 @@
 title: 一般發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5版本注意事項概述版本資訊、新增功能、安裝方法以及詳細變更清單。」'
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4676'
-ht-degree: 5%
+source-wordcount: '4484'
+ht-degree: 2%
 
 ---
 
@@ -102,7 +102,7 @@ UI已進行各種增強功能，使其更有效率且更易於使用。
 
 * 快速入門發行版本使用Eclipse Jetty 9.4.15作為servlet引擎(AEM 6.4隨9.3.22提供)。
 
-### [!DNL Experience Manager] Sites {#experience-manager-sites}
+### [!DNL Experience Manager] 網站 {#experience-manager-sites}
 
 #### 受管理的單頁應用程式 {#managed-single-page-apps}
 
@@ -325,7 +325,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 請閱讀下文，瞭解的特定功能和整合 [!DNL Experience Manager] 6.5版，可供您用來最妥善支援content velocity使用案例。
 
-##### Adobe Asset Link {#aal}
+##### Adobe資產連結 {#aal}
 
 [!DNL Adobe Asset Link] 在內容建立過程中加強創意人員與行銷人員之間的協同合作。 創意人員可以存取中儲存的內容 [!DNL Experience Manager Assets]，而不需離開他們最熟悉的應用程式。 創意人員可以使用中的應用程式內面板順暢地瀏覽、搜尋、簽出和簽入資產 [!DNL Adobe Photoshop]， [!DNL Adobe Illustrator]、和 [!DNL Adobe InDesign] 應用程式。
 
@@ -363,7 +363,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 在大型企業中，可以分發建立網站所需的基礎架構。 有時，網站建立功能和所需的數位資產位於不同的獨立單位。
 
-[!DNL Experience Manager Sites] 提供建立網頁的功能，而 是可為網站提供必要資產的數位資產管理 (DAM) 系統。[!DNL Experience Manager Assets][!DNL Experience Manager] 現在整合併支援上述使用案例 [!DNL Sites] 和 [!DNL Assets]. 另請參閱 [如何設定及使用連線資產功能](/help/assets/use-assets-across-connected-assets-instances.md).
+[!DNL Experience Manager Sites] 提供建立網頁的功能，並且 [!DNL Experience Manager Assets] 是提供網站所需資產的數位資產管理(DAM)系統。 [!DNL Experience Manager] 現在整合併支援上述使用案例 [!DNL Sites] 和 [!DNL Assets]. 另請參閱 [如何設定及使用連線資產功能](/help/assets/use-assets-across-connected-assets-instances.md).
 
 ![從拖曳資產 [!DNL Experience Manager] 部署 [!DNL Sites] 其他頁面 [!DNL Experience Manager] 部署](/help/release-notes/assets/connected-assets-drag-and-drop-only.gif)
 
@@ -428,7 +428,7 @@ AEM 6.5 Forms提供數項新功能和增強功能。 重點包括：
 
 請參閱 [AEM 6.5 Forms新功能和增強功能摘要](/help/forms/using/whats-new.md) 以取得新功能和改善檔案資源的相關資訊。
 
-### 使用以客戶為中心的開發 {#leverage-customer-focused-development}
+### 使用以客戶為中心的開發 {#use-customer-focused-development}
 
 Adobe使用以客戶為中心的開發模型，允許客戶在規格、開發和測試期間對開發流程的所有階段作出貢獻。 在此感謝所有貢獻的客戶和合作夥伴。
 
@@ -448,7 +448,7 @@ Adobe已具備程式和流程，可以收集、優先順序化和追蹤以客戶
 * Brackets程式碼編輯器的副檔名([閱讀更多資訊並下載](/help/sites-developing/aem-brackets.md))
 * Maven/Gradle相依性([下載連](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/))
 
-**Sites**
+**網站**
 
 * 核心元件([github專案](https://github.com/adobe/aem-core-wcm-components))
 * We.Retail參考實作([閱讀全文](/help/sites-developing/we-retail.md))
@@ -468,7 +468,7 @@ Adobe已具備程式和流程，可以收集、優先順序化和追蹤以客戶
 
 * AEM現代化工具套裝，例如「對話方塊轉換工具」。 ([github專案](https://github.com/adobe/aem-modernize-tools))
 
-**Assets**
+**資產**
 
 * 可新增增強型PDF模擬轉譯器的套件([閱讀全文](/help/assets/aem-pdf-rasterizer.md))
 * 新增延伸RAW影像支援的套件([閱讀全文](/help/assets/camera-raw.md))

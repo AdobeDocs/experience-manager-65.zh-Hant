@@ -2,10 +2,10 @@
 title: 使用RTF編輯器創作內容
 description: 使用RTF編輯器在Adobe Experience Manager 6.5中編寫內容。
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 6%
+source-wordcount: '264'
+ht-degree: 1%
 
 ---
 
@@ -19,11 +19,11 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 
 ## 就地編輯 {#in-place-editing}
 
-只要點選或按一下，選取文字型元件就會顯示 [元件工具列](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 與任何元件一樣。
+只要按一下即可選取文字型元件，畫面就會顯示 [元件工具列](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 與任何元件一樣。
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
-再次點選/按一下，或最初以緩慢點選/按一下的方式選取元件，會開啟就地編輯，此編輯有其專屬的工具列。 您可以在此處編輯內容並進行基本格式變更。
+再次點選/按一下，或先以緩慢按兩下方式選取元件，隨即開啟就地編輯，此編輯有專屬的工具列。 您可以在此處編輯內容並進行基本格式變更。
 
 ![screen_shot_2018-03-21at163214](assets/screen_shot_2018-03-21at163214.png)
 
@@ -33,7 +33,7 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 * **清單**：您可以使用此功能建立專案符號或編號清單，或設定縮排。
 * **超連結**
 * **取消連結**
-* **全螢幕**
+* **全熒幕**
 * **關閉**
 * **儲存**
 
@@ -48,7 +48,7 @@ RTF編輯器(RTE)是將文字內容插入AEM的基本建置區塊。 它構成�
 其他RTF編輯器選項包括：
 
 * **錨點**：在文字中建立錨點，以便稍後連結或參照。
-* **向左對齊文字**
+* **靠左對齊文字**
 * **文字置中**
 * **向右對齊文字**
 

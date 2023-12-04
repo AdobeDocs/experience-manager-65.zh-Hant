@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 1%
+source-wordcount: '1185'
+ht-degree: 2%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >請務必點選/按一下 **確定** 或 **套用** 新增雲端服務之後。 如此可啟用 **Adobe Campaign** 標籤以正常運作。
+   >請務必按一下 **確定** 或 **套用** 新增雲端服務之後。 如此可啟用 **Adobe Campaign** 標籤以正常運作。
 
 1. 如果您想要套用預設以外的特定電子郵件傳遞範本(來自Adobe Campaign) **郵件** 範本，選取 **頁面屬性** 再來一次。 在 **Adobe Campaign** 索引標籤中，在相關的Adobe Campaign例項中輸入電子郵件傳遞範本的內部名稱。
 

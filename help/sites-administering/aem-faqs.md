@@ -2,9 +2,9 @@
 title: AEM常見問題集
 description: 使用這些常見問題集來瞭解、設定和疑難排解AEM中的常見工作流程或問題。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Adobe Experience Manager (AEM) 6.4隨附SSL精靈，並提供使用者介面以�
 
 #### 建立語言副本時，OOTB設定的預設設定為何？ {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
-當您透過Touch UI建立語言副本時(**引用** -> **更新語言副本**)，則會以新語言建立新的DAM資料夾，並從中參考資產。
+當您透過Touch UI建立語言副本時(**引用** > **更新語言副本**)，則會以新語言建立新的DAM資料夾，並從中參考資產。
 
 這是OOTB設定的預設設定。 您可以設定 **翻譯頁面資產** = **不翻譯** 位於翻譯設定中。
 對於AEM 6.4， **工具** > **Cloud Service** > **翻譯雲端服務**.

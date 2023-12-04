@@ -2,7 +2,7 @@
 title: 註冊為使用者
 seo-title: Registering as a User
 description: 瞭解如何使用您從Document Security使用者那裡收到的受原則保護檔案，即使您是該使用者組織的外部人員。
-seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user’s organization.
+seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user's organization.
 uuid: 4648b358-f545-434f-a3b2-2937e961dc64
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 feature: Document Security
 exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 6%
+source-wordcount: '695'
+ht-degree: 3%
 
 ---
 
@@ -41,18 +41,18 @@ ht-degree: 6%
 如果您是受邀使用者，並且收到來自Document Security的電子郵件註冊訊息，則可以使用訊息中的URL進行註冊，以開啟線上註冊頁面。 註冊後，您將收到關於啟用帳戶的第二次通知。
 
 1. 開啟Document Security註冊電子郵件。 該訊息包含的URL是Document Security中「外部使用者註冊」頁面的連結。
-1. 請按一下 URL，或將其複製貼到您的瀏覽器。將會顯示「外部使用者註冊」頁面。
+1. 按一下URL或將其複製並貼到瀏覽器中。 將會顯示「外部使用者註冊」頁面。
 1. 在適當的方塊中輸入您的姓名、電話號碼、地址、組織和密碼，然後在「確認密碼」方塊中重新輸入您的密碼。 您的密碼可以是八個字元的任意組合。
-1. 按一下「儲存」。系統會顯示感謝訊息，通知您檢視電子郵件中的啟用電子郵件訊息。 您現在必須啟用帳戶才能完成註冊程式。
+1. 按一下「儲存」。 系統會顯示感謝訊息，通知您檢視電子郵件中的啟用電子郵件訊息。 現在啟用您的帳戶以完成註冊程式。
 
 ## 啟用您的受邀使用者帳戶 {#activate-your-invited-user-account}
 
-註冊後，Document Security會傳送一封啟用電子郵件給您。 您必須使用郵件中的URL來啟用帳戶。 然後，您可以登入Document Security，以使用您有權存取的受原則保護檔案。 根據管理員為外部使用者啟用的功能，您可能擁有建立原則、將原則套用至檔案以及將其他外部使用者新增至您原則的許可權。
+註冊後，Document Security會傳送一封啟用電子郵件給您。 使用郵件中的URL啟用您的帳戶。 然後，您可以登入Document Security，以使用您有權存取的受原則保護檔案。 根據管理員為外部使用者啟用的功能，您可能擁有建立原則、將原則套用至檔案以及將其他外部使用者新增至您原則的許可權。
 
 在管理員停用或刪除您的帳戶之前，該帳戶會一直保持活動狀態。
 
 1. 開啟Document Security註冊確認電子郵件。
-1. 按一下訊息中顯示的 URL。此時會顯示Document Security啟用頁面。
+1. 按一下訊息中顯示的URL。 此時會顯示Document Security啟用頁面。
 1. 按一下這裡以移至登入頁面。
 1. 在「使用者名稱」方框中，輸入您在Document Security下已註冊的電子郵件地址。 此電子郵件地址是您預設的Document Security使用者名稱。
 1. 在「密碼」方塊中，輸入您註冊時建立的密碼，然後按一下「登入」。

@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 8%
+source-wordcount: '723'
+ht-degree: 6%
 
 ---
 
@@ -41,7 +41,7 @@ SPA的頁面元件不會透過JSP或HTL檔案和資源物件提供其子元件�
 
 HTML通訊資料型別是在AEM Page元件內使用 `data-cq-datatype` 屬性。 當通訊資料型別設為JSON時，GET請求會點選元件的Sling模型端點。 在頁面編輯器中完成更新後，已更新元件的 JSON 表示將傳送到頁面模型庫。然後，頁面模型庫會警告SPA有更新。
 
-**SPA 頁面元件 -`body.html`**
+**SPA頁面元件 —`body.html`**
 
 ```
 <div id="page"></div>
@@ -49,7 +49,7 @@ HTML通訊資料型別是在AEM Page元件內使用 `data-cq-datatype` 屬性。
 
 除了避免延遲DOM產生的良好做法外，SPA架構還要求將指令碼新增至內文結尾。
 
-**SPA 頁面元件 -`customfooterlibs.html`**
+**SPA頁面元件 —`customfooterlibs.html`**
 
 ```
 <sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"></sly>
@@ -60,7 +60,7 @@ HTML通訊資料型別是在AEM Page元件內使用 `data-cq-datatype` 屬性。
 
 說明SPA內容的中繼資源屬性：
 
-**SPA 頁面元件 -`customheaderlibs.html`**
+**SPA頁面元件 —`customheaderlibs.html`**
 
 ```
 <meta property="cq:datatype" data-sly-test="${wcmmode.edit || wcmmode.preview}" content="JSON"/>

@@ -7,10 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 1%
+source-wordcount: '1530'
+ht-degree: 3%
 
 ---
 
@@ -107,7 +107,7 @@ AEM與Salesforce之間的雙向及可擴充整合可啟用：
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
-1. 選取您要建立為潛在客戶的AEM使用者，作為 **裝載** 用於此工作流程（首頁 — >使用者）。 請務必選取使用者的設定檔節點，因為它包含如下資訊 **givenName**、和  **familyName**，對應至Salesforce潛在客戶的 **名字** 和 **姓氏** 欄位。
+1. 選取您要建立為潛在客戶的AEM使用者，作為 **裝載** 此工作流程的相關資訊（首頁>使用者）。 請務必選取使用者的設定檔節點，因為它包含如下資訊 **givenName**、和  **familyName**，對應至Salesforce潛在客戶的 **名字** 和 **姓氏** 欄位。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
@@ -115,7 +115,7 @@ AEM與Salesforce之間的雙向及可擴充整合可啟用：
    >
    >在開始此工作流程之前，AEM中的潛在客戶節點在發佈至Salesforce之前必須具備某些必填欄位。 這些是 **givenName**， **familyName**， **公司**、和 **電子郵件**. 若要檢視AEM使用者與Salesforce潛在客戶之間的完整對應清單，請參閱 [在AEM使用者和Salesforce潛在客戶之間對應設定。](#mapping-configuration-between-aem-user-and-salesforce-lead)
 
-1. 按一下&#x200B;**「確定」**。使用者資訊會匯出至salesforce.com。 您可透過salesforce.com驗證。
+1. 按一下 **確定**. 使用者資訊會匯出至salesforce.com。 您可透過salesforce.com驗證。
 
    >[!NOTE]
    >
@@ -127,7 +127,7 @@ AEM與Salesforce之間的雙向及可擴充整合可啟用：
 
 若要設定Salesforce.com匯出工作流程：
 
-1. 瀏覽到 `http://localhost:4502/cf#/etc/workflow/models/salesforce-com-export.html.`
+1. 瀏覽至 `http://localhost:4502/cf#/etc/workflow/models/salesforce-com-export.html.`
 
    ![chlimage_1-16](assets/chlimage_1-16.jpeg)
 

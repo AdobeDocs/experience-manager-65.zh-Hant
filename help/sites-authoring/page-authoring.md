@@ -2,7 +2,7 @@
 title: 在AEM中編寫內容頁面
 description: 在Adobe Experience Manager 6.5中編寫內容頁面時涉及的任務。
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -41,7 +41,7 @@ ht-degree: 0%
 在可編輯頁面的左側，可以開啟滑動瀏覽器；可以從這裡將資產拖曳到頁面上；例如，放置資產或建立其他頁面的連結。
 
 * **元件工具列**
-按一下或緩慢按兩下/點選都會顯示適當的工具列（按一下可放置編輯工具列，按一下滑鼠可放置完整工具列）。
+按一下或緩慢按兩下都會顯示適當的工具列（按一下可放置編輯工具列，按一下緩慢按兩下可放置完整工具列）。
 
 * **[回應式版面](/help/sites-authoring/responsive-layout.md)**
 如此可提供段落系統，讓您在回應式格線內放置元件。

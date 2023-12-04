@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1513'
 ht-degree: 1%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 1%
 >
 >本頁上的某些功能需要套用AEM 6.5.3.0 （或更新版本）。
 >
->6.5.3.0:
+>6.5.3.0：
 >
 >* **Externalizer網域** 現在可以選取。
 >  **注意：** Externalizer網域僅與傳送至Target的體驗片段內容相關，與檢視選件內容之類的中繼資料無關。
 >
->6.5.2.0:
+>6.5.2.0：
 >
 >* 體驗片段可以匯出至以下其中一個：
 >
@@ -152,19 +152,19 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
    >
    >它必須是體驗片段Web變數。
 
-1. 點選/按一下 **匯出至Adobe Target**.
+1. 按一下 **匯出至Adobe Target**.
 
    >[!NOTE]
    >
    >如果體驗片段已匯出，請選取「 」 **Adobe Target中的更新**.
 
-1. 點選/按一下 **不發佈即匯出** 或 **發佈** 視需要。
+1. 按一下 **不發佈即匯出** 或 **發佈** 視需要。
 
    >[!NOTE]
    >
    >選取 **發佈** 立即發佈體驗片段並將其傳送到Target。
 
-1. 點選/按一下 **確定** 在確認對話方塊中。
+1. 按一下 **確定** 在確認對話方塊中。
 
    您的體驗片段現在應該在Target中。
 

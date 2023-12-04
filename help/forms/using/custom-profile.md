@@ -10,9 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 feature: Mobile Forms
 exl-id: cf86c810-c466-4894-acc2-d4faf49754cc
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ footer.jsp模組是空的。 它可讓您新增僅用於使用者互動的指令
 建立自訂設定檔後，將轉譯器資訊新增到此設定檔。 在收到新設定檔的請求時，CRX會驗證/apps資料夾是否存在要轉譯的JSP頁面。 在/apps資料夾中建立JSP頁面。
 
 1. 在左窗格中，導覽至 `/apps` 資料夾。
-1. 以右鍵按一下 `/apps` 資料夾並選擇以名稱建立資料夾 **hrform**.
+1. 用滑鼠右鍵按一下 `/apps` 資料夾並選擇以名稱建立資料夾 **hrform**.
 1. 內部人員 **hrform** 資料夾建立名為的資料夾 **示範**.
 1. 按一下 **全部儲存** 按鈕。
 1. 瀏覽至 `/libs/xfaforms/profile/html.jsp` 並複製節點 **html.jsp**.

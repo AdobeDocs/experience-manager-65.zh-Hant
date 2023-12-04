@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1652'
-ht-degree: 85%
+source-wordcount: '1644'
+ht-degree: 84%
 
 ---
 
@@ -51,7 +51,8 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 * 或者使用 `customfooterlibs.html` 新增類別。
 
 對於匯出的模型中的每個資源，SPA 將對應到執行呈現的實際元件。
-然後，使用容器內的元件對應呈現以 JSON 表示的模型。![screen_shot_2018-08-20at144152](assets/screen_shot_2018-08-20at144152.png)
+然後使用容器中的元件對應來演算以JSON表示的模型。
+![screen_shot_2018-08-20at144152](assets/screen_shot_2018-08-20at144152.png)
 
 >[!CAUTION]
 >
@@ -78,7 +79,7 @@ SPA 的頁面元件不會透過 JSP 或 HTL 檔案提供其子元件的 HTML 元
 
 請記住 SPA 編輯器的關鍵元素，對作者而言，在 AEM 中編輯 SPA 的高階工作流程如下所示。
 
-![untitled1](assets/untitled1.gif)
+![未命名1](assets/untitled1.gif)
 
 1. SPA 編輯器載入。
 1. SPA 載入到單獨的框架中。

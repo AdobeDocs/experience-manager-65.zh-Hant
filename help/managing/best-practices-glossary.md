@@ -7,9 +7,9 @@ topic-tags: managing-checklist
 content-type: reference
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '6945'
+source-wordcount: '6922'
 ht-degree: 0%
 
 ---
@@ -553,7 +553,7 @@ AEM和高階解決方案設計的可行性研究結果。 這些指標應與KPI�
 
 ### 歷史績效與歷史績效KPI {#historical-performance-and-historical-performance-kpis}
 
-您必須從舊版系統收集並記錄效能統計資料和效能KPI。 然後這些會用作參考點，並用於設定新解決方案的基準。
+從舊版系統收集並記錄效能統計資料和效能KPI。 然後這些會用作參考點，並用於設定新解決方案的基準。
 
 ### 識別關鍵解決方案/功能 {#identify-critical-key-solutions-functionalities}
 

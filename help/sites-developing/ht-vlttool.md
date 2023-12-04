@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '2687'
 ht-degree: 1%
 
 ---
@@ -313,7 +313,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 | 命令 | 縮寫命令 | 說明 |
 | `export` |  | 從JCR儲存庫（Vault檔案系統）匯出至本機檔案系統，而不使用控制檔。 |
 | `import` |  | 將本機檔案系統匯入至JCR存放庫（儲存庫檔案系統）。 |
-| `checkout` | `co` | 出庫儲存庫檔案系統。 將此用於本機檔案系統的初始JCR存放庫。 （注意：您必須先取出subversion中的存放庫）。 |
+| `checkout` | `co` | 出庫儲存庫檔案系統。 將此用於本機檔案系統的初始JCR存放庫。 （注意：請先取出subversion中的存放庫。） |
 | `analyze` |  | 分析封裝。 |
 | `status` | `st` | 列印工作復本檔案和目錄的狀態。 |
 | `update` | `up` | 將變更從存放庫匯入到工作復本。 |
@@ -772,7 +772,7 @@ VLT使用的狀態代碼為：
 * &#39;M&#39;已修改
 * 已取代&#39;R&#39;
 * &#39;？&#39; 專案不受版本控制
-* &#39;!&#39; 專案遺失（由非svn命令移除）或不完整
+* &#39;！&#39; 專案遺失（由非svn命令移除）或不完整
 * &#39;~&#39;版本化專案被其他型別的專案所阻擋
 
 ## 設定FileVault同步 {#setting-up-filevault-sync}

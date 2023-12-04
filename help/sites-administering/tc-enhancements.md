@@ -5,9 +5,9 @@ topic-tags: site-features
 content-type: reference
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 已新增選項，以提升使用翻譯專案的生產力，例如自動提升和刪除翻譯啟動，以及排程翻譯專案的週期性執行。
 
-1. 在您的翻譯專案中，按一下或點選「 」底部的省略符號 **翻譯摘要** 圖磚。
+1. 在您的翻譯專案中，按一下 **翻譯摘要** 圖磚。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 您可以在翻譯專案中設定多種目標語言，以減少建立的翻譯專案總數。
 
-1. 在您的翻譯專案中，按一下或點選 **翻譯摘要** 圖磚。
+1. 在您的翻譯專案中，按一下 **翻譯摘要** 圖磚。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
@@ -110,11 +110,11 @@ AEM會更新已設定TMS的翻譯記憶庫中現有字串的翻譯。
 
    ![screen_shot_2018-04-23at130646](assets/screen_shot_2018-04-23at130646.jpg)
 
-1. 按一下或點選 **檢視設定**.
+1. 按一下 **檢視設定**.
 
    ![screen_shot_2018-04-23at130844](assets/screen_shot_2018-04-23at130844.jpg)
 
-1. 檢查 **已翻譯** 核取方塊於 **翻譯** 然後點選/按一下 **更新**.
+1. 檢查 **已翻譯** 核取方塊於 **翻譯** 並按一下 **更新**.
 
    ![screen_shot_2018-04-23at130955](assets/screen_shot_2018-04-23at130955.jpg)
 

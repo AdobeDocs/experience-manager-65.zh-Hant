@@ -9,9 +9,9 @@ docset: aem65
 role: User, Admin
 feature: Workflow,Asset Management,Renditions
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1392'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 * [影像設定檔](/help/assets/image-profiles.md)
 * [視訊設定檔](/help/assets/video-profiles.md)
 
-您必須擁有管理員許可權才能建立、編輯和刪除中繼資料、影像或視訊設定檔。
+您需要管理員許可權才能建立、編輯和刪除中繼資料、影像或視訊設定檔。
 
 建立中繼資料、影像或視訊設定檔後，請將其指派至一或多個資料夾，以作為新上傳資產的目的地。
 

@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3495'
+source-wordcount: '3443'
 ht-degree: 0%
 
 ---
@@ -58,10 +58,10 @@ ht-degree: 0%
 
 郵遞區號的範例配置如下：
 
-* /index.html ->登陸頁面HTML檔案
-* /css ->新增至CSS clientlib
-* /img ->所有影像和資產
-* /js ->新增至JS clientlib
+* /index.html >登陸頁面HTML檔案
+* /css >新增至CSS clientlib
+* /img >所有影像和資產
+* /js >新增至JS clientlib
 
 此配置是根據HTML5樣板最佳實務配置。 如需詳細資訊，請參閱 [https://html5boilerplate.com/](https://html5boilerplate.com/)
 

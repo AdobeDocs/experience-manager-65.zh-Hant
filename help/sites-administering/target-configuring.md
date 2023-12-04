@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2122'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 您也可以透過設定A4T Analytics Cloud設定，將Adobe Target設定為使用Adobe Target作為目標定位內容的報表來源。
 
-若要找到雲端設定和架構，請導覽至 **Cloud Service** via **工具** > **部署** > **雲端**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))在Adobe Target下方，按一下或點選 **顯示設定**.
+若要找到雲端設定和架構，請導覽至 **Cloud Service** via **工具** > **部署** > **雲端**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))在Adobe Target底下，按一下 **顯示設定**.
 
 ### 布建的目標組態特性 {#provisioned-target-configuration-properties}
 
@@ -90,7 +90,7 @@ ht-degree: 0%
    >1. 瀏覽至 **工具** > **一般** > **CRXDE Lite**.
    1. 導覽至 [A4T分析設定對話方塊](#a4t-analytics-config-dialog) （請參閱下文）
    1. 設定屬性 **disable** 至 **false**.
-   1. 點選或按一下 **全部儲存**.
+   1. 按一下&#x200B;**「儲存全部」**。
 
 #### A4T分析設定對話方塊 {#a4t-analytics-config-dialog}
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 ![AdobeTargetSettings](assets/adobe-target-settings.jpg)
 
-按一下&#x200B;**「確定」**。使用Adobe Target鎖定內容時，您可以 [選取您的報表來源](/help/sites-authoring/content-targeting-touch.md).
+按一下 **確定**. 使用Adobe Target鎖定內容時，您可以 [選取您的報表來源](/help/sites-authoring/content-targeting-touch.md).
 
 ## 手動與Adobe Target整合 {#manually-integrating-with-adobe-target}
 
@@ -153,7 +153,7 @@ AT.js對mbox.js資料庫提供數項改善專案：
    1. 瀏覽至 **工具** > **一般** > **CRXDE Lite**.
    1. 瀏覽至 **/libs/cq/analytics/components/testandtargetpage/dialog/items/tables/items/tab1_general/items/a4tAnalyticsConfig**
    1. 設定屬性 **disable** 至 **false**.
-   1. 點選或按一下 **全部儲存**.
+   1. 按一下&#x200B;**「儲存全部」**。
 
 1. 在對話方塊中，提供這些屬性的值。
 
@@ -243,8 +243,8 @@ AT.js對mbox.js資料庫提供數項改善專案：
 1. 在 **網站** 主控台，導覽至您要設定的網站。
 1. 使用 [快速動作](/help/sites-authoring/basic-handling.md#quick-actions) 或 [選擇模式](/help/sites-authoring/basic-handling.md)，選取 **檢視屬性。**
 1. 選取 **Cloud Service** 標籤。
-1. 點選/按一下 **編輯**.
-1. 點選/按一下 **新增設定** 在 **Cloud Service設定** 並選取 **Adobe Target**.
+1. 按一下 **編輯**.
+1. 按一下 **新增設定** 在 **Cloud Service設定** 並選取 **Adobe Target**.
 
    ![新增設定](assets/chlimage_1-165.png)
 
@@ -254,7 +254,7 @@ AT.js對mbox.js資料庫提供數項改善專案：
    >
    請務必選取 **框架** 不是您建立的Target雲端設定，而是在其中建立雲端設定。
 
-1. 點選/按一下 **完成**.
+1. 按一下&#x200B;**「完成」**。
 1. 啟動網站的根頁面，以便將其復寫至發佈伺服器。 (請參閱 [如何發佈頁面](/help/sites-authoring/publishing-pages.md).)
 
    >[!NOTE]

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1772'
+source-wordcount: '1745'
 ht-degree: 4%
 
 ---
@@ -52,7 +52,7 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
 
 >[!CAUTION]
 >
->區段編輯器不會檢查任何循環參照。 例如，區段A參照另一個區段B，而後者又參照區段A。您必須確保區段不包含任何循環參照。
+>區段編輯器不會檢查任何循環參照。 例如，區段A參考另一個區段B，而後者又參考區段A。請確認您的區段不含任何循環參考。
 
 ### 容器 {#containers}
 
@@ -61,11 +61,11 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
 <table>
  <tbody>
   <tr>
-   <td>容器 AND<br /> </td>
+   <td>容器AND<br /> </td>
    <td>布林值AND運運算元<br /> </td>
   </tr>
   <tr>
-   <td>容器 OR<br /> </td>
+   <td>容器OR<br /> </td>
    <td>布林值OR運運算元</td>
   </tr>
  </tbody>
@@ -133,11 +133,11 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
 
 1. 晚於 [存取區段](/help/sites-administering/segmentation.md#accessing-segments)， [導覽至資料夾](#organizing-segments) 您想要建立區段的位置。
 
-1. 按一下或點選「建立」按鈕並選取 **建立ContextHub區段**.
+1. 按一下建立按鈕並選取 **建立ContextHub區段**.
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
-1. 在 **新ContextHub區段**，輸入區段的標題及提升值（如有需要），然後點選或按一下 **建立**.
+1. 在 **新ContextHub區段**，輸入區段的標題及提升值（如有需要），然後按一下 **建立**.
 
    ![chlimage_1-312](assets/chlimage_1-312.png)
 
@@ -147,7 +147,7 @@ AEM可讓您輕鬆個人化使用者體驗。 它也可讓您驗證區段定義�
    * 最大值： `1000000`
 
 1. 將比較或參考拖曳至區段編輯器，該比較或參考會出現在預設的AND容器中。
-1. 按兩下或點選新參照或區段的「設定」選項，以編輯特定引數。 在此範例中，我們正在測試聖荷西的人員。
+1. 連按兩下新參照或區段的configure選項以編輯特定引數。 在此範例中，我們正在測試聖荷西的人員。
 
    ![screen_shot_2012-02-02at103135am](assets/screen_shot_2012-02-02at103135ama.png)
 
@@ -233,7 +233,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 ### 建立新資料夾 {#create-folder}
 
-1. 晚於 [存取區段](#accessing-segments)，按一下或點選 **建立** 按鈕並選取 **資料夾**.
+1. 晚於 [存取區段](#accessing-segments)，按一下 **建立** 按鈕並選取 **資料夾**.
 
    ![新增資料夾](assets/contexthub-create-segment.png)
 
@@ -245,24 +245,24 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
    ![建立資料夾](assets/contexthub-create-folder.png)
 
-1. 點選或按一下&#x200B;**建立**。
+1. 按一下&#x200B;**建立**。
 
    ![確認資料夾](assets/contexthub-confirm-folder.png)
 
 1. 資料夾會出現在區段清單中。
    * 排序欄的方式將影響新資料夾在清單中的顯示位置。
-   * 您可以點選或按一下欄標題來調整您的排序。
+   * 您可以按一下欄標題來調整您的排序。
      ![新資料夾](assets/contexthub-folder.png)
 
 ### 修改現有資料夾 {#modify-folders}
 
-1. 晚於 [存取區段](#accessing-segments)，按一下或點選您要修改的資料夾以將其選取。
+1. 晚於 [存取區段](#accessing-segments)，按一下您要修改的資料夾以選取它。
 
    ![選取資料夾](assets/contexthub-select-folder.png)
 
-1. 點選或按一下 **重新命名** ，以重新命名資料夾。
+1. 按一下 **重新命名** ，以重新命名資料夾。
 
-1. 提供新的 **資料夾標題** 然後點選或按一下 **儲存**.
+1. 提供新的 **資料夾標題** 並按一下 **儲存**.
 
    ![重新命名資料夾](assets/contexthub-rename-folder.png)
 
@@ -272,25 +272,25 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 ### 刪除資料夾
 
-1. 晚於 [存取區段](#accessing-segments)，按一下或點選您要修改的資料夾以將其選取。
+1. 晚於 [存取區段](#accessing-segments)，按一下您要修改的資料夾以選取它。
 
    ![選取資料夾](assets/contexthub-select-folder.png)
 
-1. 點選或按一下 **刪除** 以刪除資料夾。
+1. 按一下 **刪除** 以刪除資料夾。
 
 1. 對話方塊會顯示選取要刪除的資料夾清單。
 
    ![確認刪除](assets/contexthub-confirm-segment-delete.png)
 
-   * 點選或按一下 **刪除** 以確認。
-   * 點選或按一下 **取消** 以中止。
+   * 按一下 **刪除** 以確認。
+   * 按一下 **取消** 以中止。
 
 1. 如果任何選取的資料夾包含子資料夾或區段，則必須確認將其刪除。
 
    ![確認刪除子項](assets/contexthub-confirm-segment-child-delete.png)
 
-   * 點選或按一下 **強制刪除** 以確認。
-   * 點選或按一下 **取消** 以中止。
+   * 按一下 **強制刪除** 以確認。
+   * 按一下 **取消** 以中止。
 
 >[!NOTE]
 >

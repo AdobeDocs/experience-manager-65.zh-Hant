@@ -2,10 +2,10 @@
 title: 編寫Commerce體驗
 description: CIF附加元件以特定於Commerce的功能擴充Adobe Experience Manager的製作功能。
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '713'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,7 @@ CIF附加元件以特定於commerce的功能擴充AEM編寫功能。 這可讓�
 
 ![未選取的Teaser元件](/help/commerce/cif/assets/authoring/teaser_component_without_selection.png)
 
-此元件的設定對話方塊需要產品。 CIF會使用SKU作為產品識別碼。 作者可以手動輸入sku，或按一下資料夾圖示以開啟產品選擇器。 選取並關閉選擇器後，元件對話方塊會顯示所選產品的名稱
+此元件的設定對話方塊需要產品。 CIF會使用SKU作為產品識別碼。 作者可以手動輸入SKU或按一下資料夾圖示以開啟產品選擇器。 選取並關閉選擇器後，元件對話方塊會顯示所選產品的名稱
 
 ![具有選取範圍的Teaser元件](/help/commerce/cif/assets/authoring/teaser_component_with_selection.png)
 
@@ -85,7 +85,7 @@ CIF產品目錄頁面是即時轉譯的虛擬頁面。 因此，不可能內嵌�
 
 編輯器中的時間扭曲模式可讓作者根據時間扭曲日期，使用分階段產品目錄資料來預覽和瀏覽AEM體驗。
 
-![Timewarp](/help/commerce/cif/assets/authoring/timewarp.png)
+![時間扭曲](/help/commerce/cif/assets/authoring/timewarp.png)
 
 如果使用的日期已分段，元件會顯示視覺指示器。
 

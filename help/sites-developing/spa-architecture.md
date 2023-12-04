@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2051'
-ht-degree: 6%
+source-wordcount: '2037'
+ht-degree: 5%
 
 ---
 
@@ -192,7 +192,7 @@ AEM的一般架構（包括開發、編寫和發佈環境）在使用SPA時不�
    * NPM clientlib產生器會從SPA專案建立使用者端程式庫。
    * 該程式庫由Maven取得，並由Maven Build外掛程式與元件部署到AEM Author。
 
-* **AEM 作者**
+* **AEM作者**
 
   內容是在AEM作者上建立，包括編寫SPA。
 
@@ -204,7 +204,7 @@ AEM的一般架構（包括開發、編寫和發佈環境）在使用SPA時不�
    1. 執行SPA應用程式時，系統會要求JSON，允許應用程式建立頁面的DOM，包括 `cq-data` 屬性。
    1. 這個 `cq-data` 屬性可讓編輯器載入其他頁面資訊，以便知道元件有哪些編輯設定可用。
 
-* **AEM 發佈**
+* **AEM發佈**
 
   這是發佈編寫的內容和編譯的程式庫(包括SPA應用程式成品、clientlibs和元件)以供公眾使用的位置。
 

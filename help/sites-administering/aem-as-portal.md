@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '6087'
+source-wordcount: '6076'
 ht-degree: 0%
 
 ---
@@ -501,7 +501,7 @@ Portlet的工具列基本上有兩個檢視狀態。 每個檢視和相關的按
 
 | 預留位置字串 | 說明 |
 |---|---|
-| {名稱} | 按鈕的名稱，例如，**作者，上一步，重新整理**、等等。 |
+| {name} | 按鈕的名稱，例如，**作者，上一步，重新整理**、等等。 |
 | {id} | 按鈕的CSS ID。 |
 | {url} | 按鈕目標的URL。 |
 | {text} | 按鈕的標籤。 |
@@ -537,7 +537,7 @@ title="{text}"/>
 
 此外，入口網站DirectorHTML重寫程式可設定為定義的規則運算式清單，不包含連結重寫。 例如，如果您有外部系統的相對連結，您應該將它們新增至此排除清單。
 
-### 本地化 {#localization}
+### 本土化 {#localization}
 
 AEM內容Portlet有內建的本地化功能，可確保AEM中的內容使用正確的語言。
 
@@ -719,7 +719,7 @@ AEM Quickstart JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
    >
    >如果您打算在相同頁面上多次使用相同的Portlet，請為每個Portlet指定不同的視窗ID。
 
-1. 按一下&#x200B;**「確定」**。Portlet會顯示在AEM頁面上。
+1. 按一下 **確定**. Portlet會顯示在AEM頁面上。
 
    ![chlimage_1-136](assets/chlimage_1-136.png)
 
@@ -727,7 +727,7 @@ AEM Quickstart JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 
 若要存取AEM WCM提供的內容，入口網站伺服器必須安裝AEM入口網站Director Portlet。 若要這麼做，請使用本節提供的步驟，安裝、設定並新增Portlet至入口網站頁面。
 
-依預設，Portlet會連線至localhost：4503的發佈執行個體以及localhost：4502的製作執行個體。 這些值可在部署Portlet期間變更。 入口網站導向程式可在/libs/portal/directory下的存放庫中作為內容使用。 您必須先下載應用程式war檔案，才能加以使用。
+依預設，Portlet會連線至localhost：4503的發佈執行個體以及localhost：4502的製作執行個體。 這些值可在部署Portlet期間變更。 入口網站導向程式可在/libs/portal/directory下的存放庫中作為內容使用。 下載應用程式war檔案後再使用。
 
 ### 正在下載war檔案 {#downloading-the-war-file}
 
@@ -776,7 +776,7 @@ AEM Quickstart JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 
    ![chlimage_1-137](assets/chlimage_1-137.png)
 
-1. 按一下「**儲存**」。您現在可以將Portlet新增至入口網站頁面，並使用入口網站。
+1. 按一下 **儲存**. 您現在可以將Portlet新增至入口網站頁面，並使用入口網站。
 
 ### 內容URL {#content-urls}
 

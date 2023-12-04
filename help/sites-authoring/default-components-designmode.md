@@ -2,10 +2,10 @@
 title: 在設計模式中設定預設元件
 description: 在設計模式中設定Adobe Experience Manager元件。
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 1%
+source-wordcount: '905'
+ht-degree: 0%
 
 ---
 
@@ -56,11 +56,11 @@ ht-degree: 1%
 
    ![screen_shot_2018-03-22at103113](assets/screen_shot_2018-03-22at103113.png)
 
-1. 點選或按一下元件。 選取時，元件會有藍色邊框。
+1. 按一下元件。 選取時，元件會有藍色邊框。
 
    ![screen_shot_2018-03-22at103204](assets/screen_shot_2018-03-22at103204.png)
 
-1. 按一下或點選 **父級** 圖示。
+1. 按一下 **父級** 圖示。
 
    ![父級](do-not-localize/screen_shot_2018-03-22at103204.png)
 
@@ -109,7 +109,7 @@ ht-degree: 1%
 
    ![screen_shot_2018-03-22at103113-1](assets/screen_shot_2018-03-22at103113-1.png)
 
-1. 點選或按一下具有藍色邊框的元件。 在此範例中，已選取主圖影像元件。
+1. 按一下具有藍色邊框的元件。 在此範例中，已選取主圖影像元件。
 
    ![screen_shot_2018-03-22at103434](assets/screen_shot_2018-03-22at103434.png)
 
@@ -153,4 +153,4 @@ ht-degree: 1%
 
    ![移動](do-not-localize/screen_shot_2018-03-22at103816.png)
 
-1. 按一下或點選 **完成** 圖示以儲存並關閉對話方塊。
+1. 按一下 **完成** 圖示以儲存並關閉對話方塊。

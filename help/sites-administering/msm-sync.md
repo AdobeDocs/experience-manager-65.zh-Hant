@@ -12,10 +12,10 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2694'
-ht-degree: 5%
+source-wordcount: '2672'
+ht-degree: 4%
 
 ---
 
@@ -118,7 +118,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td>舊版(5.6.0)目錄轉出設定</td>
-   <td>已棄用。轉出目錄時不使用 MSM，並改用 Catalog Generator。</td>
+   <td>已棄用。 轉出目錄時不使用MSM，改用Catalog Generator。</td>
    <td>於轉出</td>
    <td>editProperties</td>
   </tr>
@@ -261,7 +261,7 @@ ht-degree: 5%
 您可以 [建立轉出設定](/help/sites-developing/extending-msm.md#creating-a-new-rollout-configuration) 當安裝的轉出設定不符合您的應用程式需求時：
 
 * [建立推出設定](/help/sites-developing/extending-msm.md#create-the-rollout-configuration)。
-* [將同步動作新增到推出設定中](/help/sites-developing/extending-msm.md#add-synchronization-actions-to-the-rollout-configuration).
+* [將同步動作新增到轉出設定](/help/sites-developing/extending-msm.md#add-synchronization-actions-to-the-rollout-configuration).
 
 然後，在藍圖或 Live Copy 頁面上設定推出設定時，您即可使用新的推出設定。
 
@@ -394,7 +394,7 @@ MSM可讓您指定一般使用的轉出設定集，並視需要覆寫特定即�
 
    ![選取的轉出設定](assets/chlimage_1-2.png)
 
-1. 按一下或點選 **儲存**.
+1. 按一下「**儲存**」。
 
 ### 設定Blueprint頁面的轉出設定 {#setting-the-rollout-configuration-for-a-blueprint-page}
 

@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '10692'
+source-wordcount: '10702'
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ Distiller服務( `DistillerService`)會將PostScript、封裝的PostScript (EPS)
 
 新設定可透過PDF Generator使用者介面建立。
 
-**安全性設定：** 預先設定的安全性設定，這些設定會套用至產生的PDF檔案。 預設值為No Security。 您必須使用PDF Generator建立安全性設定，然後在這裡輸入設定。
+**安全性設定：** 預先設定的安全性設定，這些設定會套用至產生的PDF檔案。 預設值為No Security。 使用PDF Generator建立安全性設定，然後在這裡輸入設定。
 
 **集區大小：** 集區的初始大小。 部署Distiller服務時，此數字可用來決定已建立並配置給等待呼叫要求之可用集區的服務實作執行個體數量。 然後，服務容器可以立即回應呼叫要求，而不需要先初始化服務執行個體。
 
@@ -332,7 +332,7 @@ macKeySeed值是用於產生安全URL的隨機數產生器的種子。 設定此
 
 需要重新整理安全URL時，請變更macKeySeed值。 重新整理安全URL取決於您的安全性原則，與變更伺服器主根密碼的重新整理原則類似。 macSeedValue類似於安全URL的主密碼，因為它用於產生新的唯一隨機數，以用於安全URL的產生和擷取。
 
-您必須重新啟動叢集，因為macSeedValue在系統啟動時是唯讀的。 所有節點都需要重新啟動才能讀取值，因為它們會單獨使用它，以種子值初始化其內部隨機數。
+重新啟動叢集，因為macSeedValue在系統啟動時是唯讀的。 所有節點都需要重新啟動才能讀取值，因為它們會單獨使用它，以種子值初始化其內部隨機數。
 
 ## JDBC服務設定 {#jdbc-service-settings}
 
@@ -684,7 +684,7 @@ Watched資料夾服務( `WatchedFolder`)設定所有watched資料夾端點通用
 
 **Cron運算式：** Quartz用來排程輪詢輸入目錄的cron運算式。
 
-**重複計數：** 輪詢輸入目錄的次數。 如果未在端點設定中指定此值，則使用預設的重複計數。 值為–1表示無限掃描目錄。 預設值為–1。
+**重複計數：** 輪詢輸入目錄的次數。 如果未在端點設定中指定此值，則使用預設的重複計數。 值為–1表示無限掃描目錄。 預設值為 -1。
 
 **重複間隔：** 每個輪詢之間的預設秒數。 除非在watched資料夾端點設定中指定不同的值，否則此值會用作重複間隔。 預設值為 5。如需詳細資訊，請參閱「批次大小」設定的說明。
 

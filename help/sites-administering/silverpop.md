@@ -1,20 +1,16 @@
 ---
 title: 與Silverpop Engage整合
-seo-title: Integrating with Silverpop Engage
 description: 瞭解如何將Adobe Experience Manager與Silverpop Engage整合。
-seo-description: Learn how to integrate AEM with Silverpop Engage
-uuid: e17deeb6-5339-4ead-9086-cbe2167cdec6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 01029a80-f80e-450c-9c73-16d0662af26d
 docset: aem65
 exl-id: 6c4b8aaa-bda0-4066-a3fc-d91a5ab1621c
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 2%
+source-wordcount: '593'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +19,7 @@ ht-degree: 2%
 <!-- THIS ENTIRE TOPIC APPEARS OBSOLETE BECAUSE SILVERPOP NO LONGER EXISTS AND THERE ARE NO REDIRECTS FOR THE DOWNLOAD URL BELOW THAT IS 404.
 >[!NOTE]
 >
->Silverpop integration is **not** available out of the box. You must download the Silverpop integration package `https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content` from Package Share and install it on your instance. After you have installed the package, you can configure it as described in this document. -->
+>Silverpop integration is **not** available out of the box. Download the Silverpop integration package `https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content` from Package Share and install it on your instance. After you have installed the package, you can configure it as described in this document. -->
 
 將AEM與Silverpop Engage整合可讓您透過Silverpop管理及傳送在AEM中建立的電子郵件。 它也可讓您透過AEM頁面上的AEM Forms使用Silverpop的潛在客戶管理功能。
 
@@ -42,7 +38,7 @@ ht-degree: 2%
 
 若要在Cloud Service中建立Silverpop設定：
 
-1. 在AEM中，點選或按一下 **工具** > **部署** > **Cloud Service**. (或直接存取 `https://<hostname>:<port>/etc/cloudservices.html`.)
+1. 在AEM中，按一下 **工具** > **部署** > **Cloud Service**. (或直接存取 `https://<hostname>:<port>/etc/cloudservices.html`.)
 1. 在協力廠商服務底下，按一下 **Silverop Engage** 然後 **設定**. Silverpop設定視窗隨即開啟。
 
    >[!NOTE]
@@ -61,7 +57,7 @@ ht-degree: 2%
 
 若要在工具中建立Silverpop設定：
 
-1. 在AEM中，點選或按一下 **工具** > **部署** > **Cloud Service**. 或直接前往該處導覽： `https://<hostname>:<port>/misadmin#/etc`.
+1. 在AEM中，按一下 **工具** > **部署** > **Cloud Service**. 或直接前往該處導覽： `https://<hostname>:<port>/misadmin#/etc`.
 1. 選取 **工具**，然後 **Cloud Service設定，** 則 **Silverpop Engage**.
 1. 按一下 **新增**.
 
@@ -113,6 +109,6 @@ ht-degree: 2%
    | sp-e5 | `https://api.engage5.silverpop.com/XMLAPI` | `https://api5.silverpop.com` |
    | sp-e6 | `https://api.pilot.silverpop.com/XMLAPI` | `https://api6.silverpop.com` |
 
-1. 按一下&#x200B;**「儲存全部」**。AEM現在已準備好透過安全的端點連線至Silverpop。
+1. 按一下 **全部儲存**. AEM現在已準備好透過安全的端點連線至Silverpop。
 
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)

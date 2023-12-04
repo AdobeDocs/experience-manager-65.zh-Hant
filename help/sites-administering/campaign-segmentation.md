@@ -7,10 +7,10 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1129'
-ht-degree: 1%
+source-wordcount: '1128'
+ht-degree: 0%
 
 ---
 
@@ -49,11 +49,11 @@ AEM可讓您輕鬆建立和更新區段、Teaser和促銷活動。 它也可讓�
 <table>
  <tbody>
   <tr>
-   <td> AND 容器<br /> </td>
+   <td> AND容器<br /> </td>
    <td> 布林值AND運運算元。<br /> </td>
   </tr>
   <tr>
-   <td> OR 容器<br /> </td>
+   <td> OR容器<br /> </td>
    <td> 布林值OR運運算元。</td>
   </tr>
  </tbody>
@@ -66,11 +66,11 @@ AEM可讓您輕鬆建立和更新區段、Teaser和促銷活動。 它也可讓�
 <table>
  <tbody>
   <tr>
-   <td> IP 範圍<br /> </td>
+   <td> IP範圍<br /> </td>
    <td>定義訪客可擁有的IP位址範圍。<br /> </td>
   </tr>
   <tr>
-   <td> 頁面點擊<br /> </td>
+   <td> 頁面點選<br /> </td>
    <td>要求頁面的頻率。 <br /> </td>
   </tr>
   <tr>
@@ -90,7 +90,7 @@ AEM可讓您輕鬆建立和更新區段、Teaser和促銷活動。 它也可讓�
    <td>參考其他區段定義。<br /> </td>
   </tr>
   <tr>
-   <td> 標記雲<br /> </td>
+   <td> 標籤雲<br /> </td>
    <td>與瀏覽頁面中的標籤進行比對的標籤。<br /> </td>
   </tr>
   <tr>
@@ -110,7 +110,7 @@ AEM可讓您輕鬆建立和更新區段、Teaser和促銷活動。 它也可讓�
 
 >[!CAUTION]
 >
->區段編輯器不會檢查任何循環參照。 例如，區段A參照另一個區段B，而後者又參照區段A。您必須確保區段不包含任何循環參照。
+>區段編輯器不會檢查任何循環參照。 例如，區段A參考另一個區段B，而後者又參考區段A。請確認您的區段不含任何循環參考。
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ AEM可讓您輕鬆建立和更新區段、Teaser和促銷活動。 它也可讓�
    ![在區段編輯器中建立區段的第一步](assets/screen_shot_2012-02-02at101726am.png)
 
 1. 使用sidekick或內容功能表(通常是按一下滑鼠右鍵，然後選取 **新增……** 以開啟「插入新元件」視窗)來尋找所需的區段特徵。 然後將其拖曳至 **區段編輯器** 它將顯示在預設值 **和** 容器。
-1. 按兩下新特徵以編輯特定引數；例如滑鼠位置：
+1. 按兩下新特徵以編輯特定引數；例如，滑鼠位置：
 
    ![在區段編輯器中編輯元件](assets/screen_shot_2012-02-02at103135am.png)
 

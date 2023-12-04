@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 4%
+source-wordcount: '951'
+ht-degree: 0%
 
 ---
 
@@ -74,7 +74,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
      密碼為必填。
 
-   * **重新鍵入密碼**
+   * **重新輸入密碼**
 
      這是強制性的，因為確認密碼需要它。
 
@@ -86,7 +86,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
    * **行動**
    * **城市**
    * **郵遞區號**
-   * **國家/地區**
+   * **國家**
    * **狀態**
    * **標題**
    * **性別**
@@ -96,11 +96,11 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
       * **狀態**
 您可以將帳戶標幟為 **主要** 或 **非使用中**.
 
-   * **相片**
+   * **像片**
 
      您可以在此處上傳像片，以作為顯示圖片。
 
-     接受的檔案類型: `.jpg .png .tif .gif`
+     接受的檔案型別： `.jpg .png .tif .gif`
 
      偏好大小： `240x240px`
 
@@ -194,7 +194,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
      群組的說明。
 
-   * **新增成員到群組**
+   * **新增成員至群組**
 
      使用選取下拉式清單來選取要新增至群組的使用者。 選取後，使用 **X** 儲存前取消選取的名稱。
 
@@ -222,7 +222,7 @@ Granite使用者和群組管理主控台都可從 **[工具](/help/sites-adminis
 
 1. 此 **編輯群組設定** 表單將會開啟。
 
-   群組ID將會與原始相同，但前置詞為 `Copy of`. 您必須編輯此專案，因為ID不可包含空格。 所有其他詳細資料將與原始資料相同。
+   群組ID將會與原始相同，但前置詞為 `Copy of`. 編輯此ID，因為它不能包含空格。 所有其他細節與原始細節相同。
 
    您現在可以在中編輯並儲存詳細資料 [新增群組](#adding-a-new-group).
 

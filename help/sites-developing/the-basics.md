@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3306'
-ht-degree: 1%
+source-wordcount: '3251'
+ht-degree: 0%
 
 ---
 
@@ -444,7 +444,7 @@ pageManager是頁面管理員物件，myResource是資源物件。 如需頁面�
 
 ## 排程程式 {#the-dispatcher}
 
-Dispatcher是Adobe的快取和/或負載平衡工具。 如需詳細資訊，請參閱 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant).
+Dispatcher是Adobe的快取和/或負載平衡工具。 如需詳細資訊，請參閱 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en).
 
 ## FileVault （來源修訂系統） {#filevault-source-revision-system}
 

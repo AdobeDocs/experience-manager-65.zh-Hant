@@ -1,19 +1,17 @@
 ---
 title: 提升啟動
 description: 您可以提升啟動頁面，以在發佈前將內容移回來源（生產環境）。
-uuid: 2dc41817-fcfb-4485-a085-7b57b9fe89ec
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '772'
-ht-degree: 6%
+ht-degree: 1%
 
 ---
 
@@ -50,7 +48,7 @@ ht-degree: 6%
 
 您可以透過以下任一專案提升啟動： **網站** 主控台或 **啟動** 主控台：
 
-1. 開啟:
+1. 開啟：
 
    * 此 **網站** 主控台：
 
@@ -62,21 +60,21 @@ ht-degree: 6%
 
    * 此 **啟動** 主控台：
 
-      1. 選取您的啟動項（點選/按一下縮圖）。
+      1. 選取您的啟動項（按一下縮圖）。
       1. 選取 **提升**.
 
 1. 在第一個步驟中，您可以指定：
 
-   * **目標**
+   * **Target**
 
-      * **刪除促銷活動後啟動**
+      * **促銷活動後刪除啟動**
 
    * **範圍**
 
       * **提升完整啟動項**
-      * **提升已修改頁面**
-      * **升級目前頁面**
-      * **升級目前頁面與子頁面**
+      * **提升已修改的頁面**
+      * **提升目前頁面**
+      * **提升目前頁面和子頁面**
 
    例如，當選取僅提升已修改的頁面時：
 
@@ -114,7 +112,7 @@ ht-degree: 6%
 
 1. 輸入必要的明細：
 
-   * **目標**
+   * **Target**
 
       * **促銷活動目標**
 您可以升級至任何來源。
@@ -126,9 +124,9 @@ ht-degree: 6%
 您可以在此處選擇是提升整個啟動，還是僅提升已實際編輯的頁面。 如果是後者，您就可以選取包含/排除子頁面。 預設設定為僅提升目前頁面的頁面變更：
 
       * **提升完整啟動項**
-      * **提升已修改頁面**
-      * **升級目前頁面**
-      * **升級目前頁面與子頁面**
+      * **提升已修改的頁面**
+      * **提升目前頁面**
+      * **提升目前頁面和子頁面**
 
    ![提升啟動的設定](assets/chlimage_1-105.png)
 

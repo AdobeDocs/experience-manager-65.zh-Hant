@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 15%
+source-wordcount: '647'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,8 @@ ht-degree: 15%
 
 套用工作流程時，請指定下列資訊：
 
-* 要套用的工作流程。您可以套用您有權存取的任何工作流程 (由AEM管理員指派)。
+* 要套用的工作流程。
+您可以套用您有權存取的任何工作流程 (由AEM管理員指派)。
 * （可選）有助於識別使用者收件匣中的工作流程例項的標題。
 * 工作流程裝載；這可以是一或多個頁面。
 
@@ -102,7 +103,7 @@ ht-degree: 15%
 
    >[!NOTE]
    >
-   >當為「 **** 多資源支援」配置了工作流且已選擇多個資源時，「保留工作流包」選項可用。[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
+   >此 **保留工作流程封裝** 為設定工作流程時，選項可供使用 [多重資源支援](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support) 且已選取多個資源。
 
    完成後，請使用 **下一個** 以繼續進行。
 
@@ -110,16 +111,16 @@ ht-degree: 15%
 
 1. 在 **範圍** 您可以選取的步驟：
 
-   * **新增內容** 以開啟 [路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) 並選取其他資源；在瀏覽器中，按一下/點選 **選取** 以將內容新增至工作流程例項。
+   * **新增內容** 以開啟 [路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) 並選取其他資源；在瀏覽器中時，按一下 **選取** 以將內容新增至工作流程例項。
 
    * 檢視其他動作的現有資源：
 
       * **包含子項** 以指定該資源的子項將包含在工作流程中。
 對話方塊隨即開啟，讓您根據下列條件調整選取範圍：
 
-         * 僅包含直接子項.
-         * 僅包含修改過的頁面.
-         * 僅包含已發佈的頁面.
+         * 僅包含直接子項。
+         * 僅包含已修改的頁面。
+         * 僅包含已發佈的頁面。
 
         任何指定的子項都會新增至將套用工作流程的資源清單中。
 
