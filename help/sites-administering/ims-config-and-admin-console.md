@@ -7,10 +7,10 @@ topic-tags: Security
 content-type: reference
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8c0c2d89fca7a5ba1a834108ae54fed524b3cbab
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 10%
+source-wordcount: '1604'
+ht-degree: 5%
 
 ---
 
@@ -19,10 +19,6 @@ ht-degree: 10%
 >[!NOTE]
 >
 >此功能僅適用於AdobeManaged Services客戶。
-
->[!NOTE]
->
->Adobe Experience Manager (AEM)目前不支援將群組指派給設定檔。 應單獨新增使用者。
 
 ## 簡介 {#introduction}
 
@@ -106,7 +102,7 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，客戶
 
 此工具可讓系統管理員將客戶目錄中的使用者群組，與中的產品設定和使用者群組相互對應。 [!DNL Admin Console]，新的UST版本也允許在中動態建立使用者群組 [!DNL Admin Console].
 
-若要設定「使用者同步」，組織需先透過與 [[!DNL User Management]  API](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/setup.html) 相同的使用方式，建立一組憑證。
+若要設定「使用者同步」，組織需先透過與 [[!DNL User Management] API](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/setup.html).
 
 ![image2018-9-23_13-36-56](assets/image2018-9-23_13-36-56.png)
 
@@ -129,7 +125,7 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，客戶
 >
 >使用者同步工具必須透過上述程式註冊為Adobe I/O使用者端UMAPI [此處](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 >
->Adobe I/O控制檯檔案可找到 [此處](https://developer.adobe.com/developer-console/檔案/指南/).
+>Adobe I/O控制檯檔案可找到 [此處](https://developer.adobe.com/developer-console/docs/guides/).
 >
 >
 >此 [!DNL User Management] 本頁介紹使用者同步工具使用的API [位置](https://adobe-apiplatform.github.io/umapi-documentation/en/).
@@ -170,7 +166,7 @@ AEM可繼續為管理員使用者支援本機登入，因為登入畫面具有�
 
 ![screen_shot_2018-09-18at121056am](assets/screen_shot_2018-09-18at121056am.png)
 
-#### IMS 登入 {#ims-based-login}
+#### IMS登入 {#ims-based-login}
 
 若是其他使用者，在執行個體上設定 IMS 後，即可使用 IMS 登入。使用者第一次點按 **使用Adobe登入** 如下所示：
 
