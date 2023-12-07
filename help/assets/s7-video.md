@@ -1,26 +1,24 @@
 ---
 title: 影片
-description: 瞭解集中式視訊資產管理Adobe Experience Manager資產，您可上傳視訊以進行自動編碼至Dynamic Media Classic，並直接從Experience Manager Assets存取Dynamic Media Classic視訊。 Dynamic Media Classic視訊整合可將最佳化的視訊延伸至所有熒幕。
-uuid: 8b3423f1-d96b-44d9-bdb7-e3b77875b25d
+description: 瞭解集中式視訊資產管理Adobe Experience Manager Assets ，您可上傳視訊以自動編碼至Dynamic Media Classic，並直接從Experience Manager Assets存取Dynamic Media Classic視訊。 Dynamic Media Classic視訊整合可將最佳化的視訊延伸至所有熒幕。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
-discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 role: User, Admin
 mini-toc-levels: 3
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: Video
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1551'
 ht-degree: 2%
 
 ---
 
 # 影片 {#video}
 
-Adobe Experience Manager Assets提供集中式視訊資產管理，讓您可以將視訊直接上傳至Assets自動編碼至Dynamic Media Classic，並直接從Assets存取Dynamic Media Classic視訊以進行頁面製作。
+Adobe Experience Manager Assets提供集中式視訊資產管理，讓您可以直接將視訊上傳至Assets，以自動編碼至Dynamic Media Classic，並直接從Assets存取Dynamic Media Classic視訊以進行頁面製作。
 
 Dynamic Media Classic視訊整合將最佳化視訊的範圍延伸至所有熒幕（自動裝置和頻寬偵測）。
 

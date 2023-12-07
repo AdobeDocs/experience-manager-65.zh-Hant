@@ -1,15 +1,13 @@
 ---
 title: 視訊轉譯
-description: 瞭解如何使用Adobe Experience Manager資產產生各種格式（包括OGG、FLV等）的視訊資產的視訊轉譯。
-uuid: a02f9ec1-30d9-4cbb-8746-8391ac614f0a
+description: 瞭解如何使用Adobe Experience Manager Assets產生各種格式（包括OGG、FLV等）的視訊資產的視訊轉譯。
 contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '246'
+ht-degree: 1%
 
 ---
 

@@ -1,19 +1,17 @@
 ---
 title: 將Dynamic Media視訊、影像檢視器或維度檢視器內嵌在網頁上
 description: 瞭解如何在網頁上內嵌Dynamic Media影片、影像或3D影像
-uuid: 6f786521-eb6c-4c80-8c15-9bf97b56818f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 feature: Viewers
 role: User, Admin
 exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 21%
+source-wordcount: '383'
+ht-degree: 20%
 
 ---
 
@@ -21,15 +19,15 @@ ht-degree: 21%
 
 當您想 **** 要播放視訊或檢視內嵌在網頁上的資產時，請使用「內嵌代碼」功能。您可將內嵌代碼複製到剪貼簿，以便貼到網頁中。「內嵌代碼」對話方塊中不允許編 **[!UICONTROL 輯代碼]** 。
 
-只有當您符合以下條件時，才可內嵌URL： *not* 使用Adobe Experience Manager做為WCM。 如果您使用Experience Manager做為WCM， [您直接在頁面上新增資產](adding-dynamic-media-assets-to-pages.md).
+只有當您符合以下條件時才內嵌URL： *非* 使用Adobe Experience Manager做為WCM。 如果您使用Experience Manager做為WCM， [您直接在頁面上新增資產](adding-dynamic-media-assets-to-pages.md).
 
 另請參閱 [將URL連結至您的網頁應用程式](linking-urls-to-yourwebapplication.md).
 
-另請參閱 [為回應式網站傳送最佳化的影像](responsive-site.md).
+另請參閱 [為回應式網站傳送最佳化影像](responsive-site.md).
 
 >[!NOTE]
 >
->您必須發佈選取的資產，才能複製內嵌程式碼。 此外，您也必須發佈檢視器預設集或影像預設集。
+>您必須先發佈選取的資產，才能複製內嵌程式碼。 此外，您也必須發佈檢視器預設集或影像預設集。
 >
 >另請參閱 [發佈資產](publishing-dynamicmedia-assets.md).
 >
@@ -57,6 +55,6 @@ ht-degree: 21%
 
 ## 使用HTTP/2傳遞您的Dynamic Media資產 {#using-http-to-deliver-your-dynamic-media-assets}
 
-HTTP/2是新的、更新的Web通訊協定，可改善瀏覽器和伺服器的通訊方式。 它提供更快速的資訊傳輸，並減少所需的處理能力。 Dynamic Media資產的傳送現在可透過HTTP/2進行，以提供更佳的回應和載入時間。
+HTTP/2是新的、更新的Web通訊協定，可改善瀏覽器和伺服器的通訊方式。 它提供更快速的資訊傳輸，並減少所需的處理能力。 Dynamic Media資產的傳送現在可透過HTTP/2進行，以提供更理想的回應和載入時間。
 
-另請參閱 [HTTP2傳送內容](http2.md) 以取得開始使用HTTP/2與Dynamic Media帳戶的完整詳細資訊。
+另請參閱 [HTTP2傳送內容](http2.md) 以取得有關開始使用HTTP/2和Dynamic Media帳戶的完整詳細資料。

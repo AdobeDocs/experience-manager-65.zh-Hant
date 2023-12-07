@@ -2,21 +2,19 @@
 title: 設定Dynamic Media — 混合模式
 description: 瞭解如何設定Dynamic Media — 混合模式。
 mini-toc-levels: 3
-uuid: 39ad7d83-d310-4baf-9d85-5532c2f201f3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '7791'
-ht-degree: 2%
+source-wordcount: '7684'
+ht-degree: 1%
 
 ---
 
@@ -63,7 +61,7 @@ Dynamic Media檢視器、網站頁面和靜態內容等其他內容會繼續從E
 
 後續的設定工作會參考下列詞語：
 
-| **術語** | **Dynamic Media已啟用** | **說明** |
+| **詞語** | **Dynamic Media已啟用** | **說明** |
 |---|---|---|
 | Experience Manager作者節點 | 綠色圓圈中的白色勾號 | 您部署至內部部署或透過Managed Services的作者節點。 |
 | Experience Manager發佈節點 | 紅色正方形中的白色「X」。 | 您部署至內部部署或透過Managed Services的發佈節點。 |
@@ -440,7 +438,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 02.08.2016 14:37:44 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1470173864834, userId='admin', revision='null'}. com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised key store for user dynamic-media-replication
 ```
 
-**解決方案:**
+**解決方案：**
 
 1. 切換作業選項至「使用者管理」頁面：
    `localhost:4502/libs/granite/security/content/useradmin.html`
@@ -469,7 +467,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 01.08.2016 18:42:59 - Error while replicating: com.day.cq.replication.ReplicationException: Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1470073379634, userId='admin', revision='null'}. java.io.IOException: Failed to execute request 'https://replicate-eu.assetsadobe2.com:443/is-publish/publish-receiver?Cmd=Test&RootId=rbroughstaging': Server returned status code 401 with message: Authorization required.
 ```
 
-**解決方案:**
+**解決方案：**
 
 1. 在Experience Manager中，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**.
 
@@ -668,8 +666,8 @@ Experience Manager 6.4和更新版本將此預設集儲存在 `/conf/global/sett
 除了復寫資產外，也會復寫下列非資產：
 
 * Dynamic Media傳遞設定： `/conf/global/settings/dam/dm/imageserver/jcr:content`
-* 影像預設集: `/conf/global/settings/dam/dm/presets/macros`
-* 檢視器預設集: `/conf/global/settings/dam/dm/presets/viewer`
+* 影像預設集： `/conf/global/settings/dam/dm/presets/macros`
+* 檢視器預設集： `/conf/global/settings/dam/dm/presets/viewer`
 
 這些篩選器提供的方法可讓您 *排除* 將資產從復寫到Experience Manager發佈節點。
 
@@ -845,7 +843,7 @@ Dynamic Media立即可用 [啟用後](#enabling-dynamic-media). 不過，您可�
    | `RandomAccessUrlTimeout` | 20 | 逾時值：影像伺服器等待JCR回應範圍磚要求的秒數。 |
    | `WorkerThreads` | 10 | 工作者執行緒的數量。 |
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 1. 在套件組合清單中，在Adobe CQ Scene7 PlatformServer的右側，選取 **[!UICONTROL 編輯]** 圖示。
 1. 在Adobe CQ Scene7 PlatformServer對話方塊中，設定下列預設值選項：
 
@@ -856,7 +854,7 @@ Dynamic Media立即可用 [啟用後](#enabling-dynamic-media). 不過，您可�
    | 屬性 | 預設值 | 說明 |
    |---|---|---|
    | 已啟用快取 | 已核取 | 回應快取是否已啟用 |
-   | 快取根目錄 | cache | 回應快取資料夾的一或多個路徑。 相對路徑會針對內部s7imaging組合資料夾進行解析。 |
+   | 快取根目錄 | 快取 | 回應快取資料夾的一或多個路徑。 相對路徑會針對內部s7imaging組合資料夾進行解析。 |
    | 快取大小上限 | 200000000 | 回應快取的大小上限（位元組）。 |
    | 快取最大專案數 | 100000 | 快取中允許的最大專案數。 |
 
@@ -882,13 +880,13 @@ Dynamic Media立即可用 [啟用後](#enabling-dynamic-media). 不過，您可�
 
 | 屬性 | 預設值 | 說明 |
 | --- | --- | --- |
-| `bkgcolor` | `FFFFFF` | 預設背景顏色. 用於填滿不包含實際影像資料之回覆影像的任何區域的RGB值。 另請參閱 [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api) 影像伺服API中。 |
-| `defaultpix` | `300,300` | 預設檢視大小. 如果要求未明確以wid=、hei=或scl=指定檢視大小，伺服器會將回覆影像限製為不得大於此寬度與高度。<br>指定為兩個大於或等於0的整數，以逗號分隔。 寬度和高度（畫素）。 任一或兩個值都可以設為0，以保持不受限制。 不適用於巢狀/內嵌請求。<br>另請參閱 [預設畫素](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api) 影像伺服API中。<br>不過，您通常是使用檢視器預設集或影像預設集來傳送資產。 Defaultpix僅適用於未使用檢視器預設集或影像預設集的資產。 |
-| `defaultthumbpix` | `100,100` | 預設縮圖大小. 用於縮圖請求(`req=tmb`)。<br>伺服器會將回覆影像限製為不得大於此寬度與高度。 如果縮圖要求(`req=tmb`)不會明確指定大小，也不會使用明確指定檢視大小 `wid=`， `hei=`，或 `scl=`.<br>指定為兩個大於或等於0的整數，以逗號分隔。 寬度和高度（畫素）。 任一或兩個值都可以設為0，以保持不受限制。<br>不適用於巢狀/內嵌請求。<br>另請參閱 [DefaultthumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) 影像伺服API中。 |
+| `bkgcolor` | `FFFFFF` | 預設背景顏色。 用於填滿不包含實際影像資料之回覆影像的任何區域的RGB值。 另請參閱 [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api) 影像伺服API中。 |
+| `defaultpix` | `300,300` | 預設檢視大小。 如果要求未明確以wid=、hei=或scl=指定檢視大小，伺服器會將回覆影像限製為不得大於此寬度與高度。<br>指定為兩個大於或等於0的整數，以逗號分隔。 寬度和高度（畫素）。 任一或兩個值都可以設為0，以保持不受限制。 不適用於巢狀/內嵌請求。<br>另請參閱 [預設畫素](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api) 影像伺服API中。<br>不過，您通常是使用檢視器預設集或影像預設集來傳送資產。 Defaultpix僅適用於未使用檢視器預設集或影像預設集的資產。 |
+| `defaultthumbpix` | `100,100` | 預設縮圖大小。 用於縮圖請求(`req=tmb`)。<br>伺服器會將回覆影像限製為不得大於此寬度與高度。 如果縮圖要求(`req=tmb`)不會明確指定大小，也不會使用明確指定檢視大小 `wid=`， `hei=`，或 `scl=`.<br>指定為兩個大於或等於0的整數，以逗號分隔。 寬度和高度（畫素）。 任一或兩個值都可以設為0，以保持不受限制。<br>不適用於巢狀/內嵌請求。<br>另請參閱 [DefaultthumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) 影像伺服API中。 |
 | `expiration` | `36000000` | 預設使用者端快取存留時間。 提供預設過期時間間隔，以防止特定目錄記錄未包含有效的目錄：：過期值。<br>實數，0或更大。 從產生回覆資料到到期為止的毫秒數。 設為0可一律使回覆影像立即過期，以有效停用使用者端快取。 預設情況下，此值會設為10小時，這表示如果發佈新影像，則舊影像需要10小時才能離開使用者的快取。 如果您需要及早清除快取，請聯絡客戶支援。<br>另請參閱 [有效期](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 影像伺服API中。 |
 | `jpegquality` | `80` | 預設JPEG編碼屬性。 指定JPEG回覆影像的預設屬性。<br>整數與標幟，以逗號分隔。 第一個值在1到100的範圍內，並定義品質。 第二個值可以是0 （代表正常行為），或1 (代表JPEG編碼器採用的RGB色度縮減取樣)以停用。<br>另請參閱 [Jpeg品質](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) 影像伺服API中。 |
-| `maxpix` | `2000,2000` | 回覆影像大小限制. 傳回給使用者端的最大回覆影像寬度和高度。<br>如果要求造成回覆影像的寬度或高度大於attribute：：MaxPix，伺服器會傳回錯誤。<br>另請參閱 [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) 影像伺服API中。 |
-| `resmode` | `SHARP2` | 預設重新取樣模式. 指定用來縮放影像資料的預設重新取樣與內插屬性。<br>使用時機 `resMode=` 要求中未指定。<br>允許的值包括 `BILIN`， `BICUB`，或 `SHARP2`.<br>列舉。 設為2 `bilin`， 3表示 `bicub`，或4個 `sharp2` 內插模式。 使用 `sharp2` 以取得最佳結果。<br>另請參閱 [解析模式](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) 影像伺服API中。 |
+| `maxpix` | `2000,2000` | 回覆影像大小限制。 傳回給使用者端的最大回覆影像寬度和高度。<br>如果要求造成回覆影像的寬度或高度大於attribute：：MaxPix，伺服器會傳回錯誤。<br>另請參閱 [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) 影像伺服API中。 |
+| `resmode` | `SHARP2` | 預設重新取樣模式。 指定用來縮放影像資料的預設重新取樣與內插屬性。<br>使用時機 `resMode=` 要求中未指定。<br>允許的值包括 `BILIN`， `BICUB`，或 `SHARP2`.<br>列舉。 設為2 `bilin`， 3表示 `bicub`，或4個 `sharp2` 內插模式。 使用 `sharp2` 以取得最佳結果。<br>另請參閱 [解析模式](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) 影像伺服API中。 |
 | `resolution` | `72` | 預設物件解析度。 提供預設的物件解析度，以防止特定目錄記錄未包含有效的catalog：：Resolution值。<br>大於0的實數。 通常以每英吋的畫素表示，但也可以使用其他單位，例如每米的畫素。<br>另請參閱 [解析度](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api) 影像伺服API中。 |
 | `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | 這些值代表視訊播放時間的快照，並傳遞至 [encoding.com](https://www.encoding.com/). 另請參閱 [關於視訊縮圖](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode) 以取得詳細資訊。 |
 
@@ -1121,12 +1119,12 @@ Adobe的色彩管理使用ICC （國際色彩聯盟）設定檔，這是由ICC�
    <td>ProPhotoRGB</td>
   </tr>
   <tr>
-   <td>PS4Default</td>
+   <td>PS4預設</td>
    <td>CMYK</td>
    <td>Photoshop 4預設CMYK</td>
   </tr>
   <tr>
-   <td>PS5Default</td>
+   <td>PS5預設</td>
    <td>CMYK</td>
    <td>Photoshop 5預設CMYK</td>
   </tr>

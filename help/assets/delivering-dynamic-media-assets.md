@@ -1,20 +1,18 @@
 ---
 title: 傳遞 Dynamic Media 資產
 description: 瞭解如何將Dynamic Media資產（例如視訊和影像）傳送至您的網頁。
-uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: Asset Management,Renditions
-source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 13%
+source-wordcount: '323'
+ht-degree: 9%
 
 ---
 
@@ -28,7 +26,7 @@ Dynamic Media提供幾個選項：
 * 如果您的網站不在Experience Manager上，您可以選擇以下任一選項：
 
    * 將您的影片或影像內嵌在網站上。
-   * 將 URL 連結至您的網頁應用程式. 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，請使用連結。
+   * 將URL連結至您的網頁應用程式。 當您想要以快顯視窗或強制回應視窗的形式傳送視訊播放器時，請使用連結。
    * 如果您的網站有回應，您可以 [傳遞最佳化的影像](/help/assets/responsive-site.md).
 
 >[!NOTE]
@@ -42,7 +40,7 @@ Dynamic Media提供幾個選項：
 * [在 Dynamic Media 中啟動直接連結保護](/help/assets/hotlink-protection.md)
 * [將 URL 連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md)
 * [為回應式網站傳遞最佳化影像](/help/assets/responsive-site.md)
-* [HTTP2 傳送內容](/help/assets/http2.md)
+* [HTTP2傳送內容](/help/assets/http2.md)
 * [透過Dynamic Media Classic使CDN快取失效](/help/assets/invalidate-cdn-cache-dm-classic.md)
 * [使用規則集轉換 URL](/help/assets/using-rulesets-to-transform-urls.md)
 

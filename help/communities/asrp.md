@@ -1,20 +1,16 @@
 ---
 title: ASRP -Adobe儲存資源提供者
-seo-title: ASRP - Adobe Storage Resource Provider
-description: 設定AEM Communities以使用關聯式資料庫作為其一般存放區
-seo-description: Set up AEM Communities to use a relational database as its common store
-uuid: abe47ad9-9f72-4dad-a5e9-6d621a9722d4
+description: 設定AEM Communities以使用關聯式資料庫作為其公用存放區
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 role: Admin
 exl-id: 6430ed96-5d96-41b6-866f-90b34ff84f7a
-source-git-commit: 42feafa381c129117dae5345255702f0b0951a17
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 
 ## 關於ASRP {#about-asrp}
 
-當AEM Communities設定為使用ASRP作為其通用存放區時，使用者產生的內容(UGC)可從所有製作和發佈執行個體存取，而不需要同步或復寫。
+當AEM Communities設定為使用ASRP作為其一般存放區時，使用者產生的內容(UGC)可從所有製作和發佈執行個體存取，而不需要同步或復寫。
 
 另請參閱 [SRP選項的特性](/help/communities/working-with-srp.md#characteristics-of-srp-options) 和 [建議的拓撲](/help/communities/topologies.md).
 
@@ -31,24 +27,24 @@ ht-degree: 0%
 
 使用ASRP需要額外的授權。
 
-若要設定您的AEM Communities網站以使用ASRP for UGC，請聯絡您的客戶代表：
+若要設定您的AEM Communities網站以使用ASRP進行UGC，請聯絡您的客戶代表：
 
 * 資料中心URL （ASRP端點的位址）
 * 消費者金鑰
 * 機密金鑰
 * 報表套裝ID
 
-消費者金鑰和秘密金鑰會在公司的所有報表套裝間共用。 每個租使用者有一個報表套裝。
+消費者金鑰和機密金鑰會在公司的所有報表套裝間共用。 每個租使用者有一個報告套裝。
 
 ## 設定 {#configuration}
 
 ### 選取ASRP {#select-asrp}
 
-此 [儲存設定主控台](/help/communities/srp-config.md) 允許選取預設儲存設定，以識別要使用的SRP實作。
+此 [儲存設定主控台](/help/communities/srp-config.md) 允許選取預設儲存體設定，以識別要使用的SRP實作。
 
-**在AEM作者執行個體上：**
+**在AEM編寫執行個體上：**
 
-* 從全域導覽，導覽至 **[!UICONTROL 「工具>社群>儲存設定」]** 並選取 **[!UICONTROL Adobe儲存資源提供者(ASRP)]**.
+* 從全域導覽，導覽至 **[!UICONTROL 工具>社群>儲存設定]** 並選取 **[!UICONTROL Adobe儲存資源提供者(ASRP)]**.
 
 ![asrp-default](assets/asrp-default.png)
 
@@ -69,7 +65,7 @@ ht-degree: 0%
 
 * 選取 **測試設定**.
 
-   對於每個製作和發佈執行個體，從「儲存設定」主控台測試與資料中心的連線。
+  對於每個製作和發佈執行個體，請測試「儲存設定」控制檯與資料中心的連線。
 
 * 確定設定檔資料的網站URL可從資料中心路由，方法是 [外部化連結](#externalize-links).
 
@@ -81,23 +77,23 @@ ht-degree: 0%
 
 ### 外部化連結 {#externalize-links}
 
-如需正確的設定檔和設定檔影像連結，請務必正確設定 [設定連結外部化程式](/help/sites-developing/externalizer.md).
+如需正確的設定檔和設定檔影像連結，請務必確定 [設定連結外部器](/help/sites-developing/externalizer.md).
 
-請務必將網域設定為可從資料中心URL （ASRP端點）路由的URL。
+請務必將網域設為可從資料中心URL （ASRP端點）路由的URL。
 
 ### 時間同步 {#time-synchronization}
 
-為了成功使用ASRP端點進行驗證，執行您託管AEM Communities的電腦必須經過時間同步，例如與 [網路時間通訊協定(NTP)](https://www.ntp.org/).
+為了成功與ASRP端點驗證，執行您託管AEM Communities的電腦必須經過時間同步，例如與 [網路時間通訊協定(NTP)](https://www.ntp.org/).
 
 ### 發佈設定 {#publishing-the-configuration}
 
-ASRP必須識別為所有製作和發佈執行個體上的通用存放區。
+ASRP必須識別為所有製作和發佈執行個體上的共同存放區。
 
-若要讓發佈環境中可使用相同的設定：
+若要在發佈環境中使用相同的設定：
 
-在AEM作者執行個體上：
+在AEM編寫執行個體上：
 
-* 從主要功能表瀏覽至 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]**
+* 從主功能表導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 復寫]**
 * 選取 **啟動樹狀結構**
 * **開始路徑**：瀏覽至 `/conf/global/settings/communities/srpc/`
 * 取消選取 **僅限已修改的專案**
@@ -107,15 +103,15 @@ ASRP必須識別為所有製作和發佈執行個體上的通用存放區。
 
 >[!CAUTION]
 >
->如果您在已發佈的社群網站上啟用ASRP，則任何UGC都會儲存在 [JCR](/help/communities/jsrp.md) 不再顯示，因為內部部署儲存和雲端儲存之間的資料未同步。
+>如果您在已發佈的社群網站上啟用ASRP，則任何UGC都會儲存在 [JCR](/help/communities/jsrp.md) 不再可見，因為內部部署儲存和雲端儲存之間沒有資料同步。
 
-**`AEM Communities Extension`** 之前在AEM 6.0 social communities as a cloud service中引入。 至於AEM 6.1 Communities，無需雲端設定，只要從中選擇ASRP [儲存設定主控台](/help/communities/srp-config.md).
+**`AEM Communities Extension`** 之前在AEM 6.0 social communities中引入了as a cloud service 。 至於AEM 6.1 Communities，不需進行雲端設定，只要從中選擇ASRP [儲存設定主控台](/help/communities/srp-config.md).
 
 由於新的儲存結構，必須遵循 [升級](/help/communities/upgrade.md#adobe-cloud-storage) 從社交社群升級至社群時的指示。
 
 ## 管理使用者資料 {#managing-user-data}
 
-有關以下專案的資訊： *使用者*， *使用者設定檔* 和 *使用者群組*，通常輸入發佈環境中，請造訪
+有關以下專案的資訊： *使用者*， *使用者設定檔* 和 *使用者群組*，通常進入發佈環境，造訪
 
 * [使用者同步](/help/communities/sync.md)
 * [管理使用者和使用者群組](/help/communities/users.md)
@@ -128,23 +124,23 @@ ASRP必須識別為所有製作和發佈執行個體上的通用存放區。
 
 ### 驗證錯誤 {#authentication-errors}
 
-如果收到資料中心URL的驗證錯誤，且AEM error.log包含有關過時時間戳記的訊息，請確認時間同步正在發生。
+如果收到資料中心URL的驗證錯誤，且AEM error.log包含有關過時時間戳記的訊息，請驗證時間同步是否正在進行。
 
-使用工具，例如 [網路時間通訊協定(NTP)](https://www.ntp.org/) 以時間同步所有AEM製作和發佈伺服器。
+使用工具，例如 [網路時間通訊協定(NTP)](https://www.ntp.org/) 以時間同步所有AEM作者和發佈伺服器。
 
 ### 新內容未出現在搜尋中 {#new-content-does-not-appear-in-searches}
 
-Adobe雲端儲存基礎建設使用 *最終一致性* 以達成其規模與效能目標。 因此，無法立即使用新內容，且需要幾秒鐘才能顯示在搜尋結果中。
+雲端儲存基礎建設使用的Adobe *最終一致性* 以達成其擴充能力和效能目標。 因此，新內容無法立即使用，且需要幾秒鐘才能顯示在搜尋結果中。
 
-在監控影響最終一致性的間隔時，如果新內容出現在搜尋中需要超過幾秒的時間，請聯絡您的客戶代表。
+在監視影響最終一致性的間隔時，如果新內容出現在搜尋中需要超過幾秒的時間，請聯絡您的客戶代表。
 
 ### ASRP中未顯示UGC {#ugc-not-visible-in-asrp}
 
-檢查儲存選項的設定，確定ASRP已設定為預設提供者。 依預設，儲存資源提供者是JSRP，而不是ASRP。
+檢查儲存選項的組態，確定ASRP已設定為預設提供者。 依預設，儲存資源提供者為JSRP，而非ASRP。
 
 在所有作者和發佈AEM執行個體上，重新造訪儲存設定主控台，或檢查AEM存放庫。
 
 在JCR中，如果 [/conf/global/settings/communities](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)：
 
 * 不包含 [srpc](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp) 節點，這表示儲存提供者為JSRP。
-* 如果srpc節點存在並包含 [default設定](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp/defaultconfiguration) 節點，defaultconfiguration的屬性會將ASRP定義為預設提供者。
+* 如果srpc節點存在並包含 [default設定](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp/defaultconfiguration) 節點，預設組態的屬性會將ASRP定義為預設提供者。

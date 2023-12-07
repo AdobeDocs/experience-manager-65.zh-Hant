@@ -6,10 +6,10 @@ role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '2416'
-ht-degree: 16%
+source-wordcount: '2411'
+ht-degree: 15%
 
 ---
 
@@ -113,7 +113,7 @@ ht-degree: 16%
 1. 按一下 [!DNL Experience Manager] 標誌，然後前往 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 搜尋Forms]**.
 1. 從 **[!UICONTROL 搜尋Forms]** 頁面，選取 **[!UICONTROL 資產管理搜尋邊欄]**，然後按一下 **[!UICONTROL 編輯]**.
 1. 在「編 **[!UICONTROL 輯搜索表單]** 」頁中，將「選 **[!UICONTROL 項謂詞」從]** 「選擇謂詞 **** 」頁籤拖到主窗格。
-1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如 **[!UICONTROL 檔案型別]**. 指定在屬性欄位中根據其執行搜索的屬性，例如, `jcr:content/metadata/dc:format.`
+1. 在「設 **[!UICONTROL 定]** 」標籤中，輸入屬性的標籤和名稱。例如，若要根據資產的格式來搜尋資產，請為標籤指定好記的名稱，例如 **[!UICONTROL 檔案型別]**. 指定在屬性欄位中根據其執行搜尋的屬性，例如， `jcr:content/metadata/dc:format.`
 1. 執行下列任一項作業：
 
    * 在 **[!UICONTROL 屬性名稱]** 欄位，提及JSON檔案的路徑，您可在此定義選項的節點，並指定對應的索引鍵值配對。
@@ -169,11 +169,11 @@ ht-degree: 16%
 | [!UICONTROL 路徑] | 用它來篩選位置結果。 您可以將不同的路徑指定為選項。 | <ul><li>標籤</li><li>路徑</li><li>說明</li></ul> |
 | [!UICONTROL 發佈狀態] | 搜尋述詞，以根據資產的發佈狀態進行搜尋 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
 | [!UICONTROL 相對日期] | 搜尋述詞，以根據資產的相對建立日期來搜尋資產。 例如，您可以設定2個月前、3週前等選項。 | <ul><li>標籤</li><li>屬性名稱</li><li>相對日期</li></ul> |
-| [!UICONTROL 範圍] | 搜尋述詞，以搜尋指定範圍內的資產。 在「搜尋」面板中，您可以指定範圍的最小值和最大值。 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
+| [!UICONTROL Range] | 搜尋述詞，以搜尋指定範圍內的資產。 在「搜尋」面板中，您可以指定範圍的最小值和最大值。 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
 | [!UICONTROL 日期範圍] | 搜尋述詞，針對日期屬性搜尋在指定範圍內建立的資產。 在「搜尋」面板中，您可以使用日期選擇器來指定開始和結束日期。 | <ul><li>標籤</li><li>預留位置</li><li>屬性名稱</li><li>範圍文字（從）</li><li>範圍文字（至）</li><li>說明</li></ul> |
 | [!UICONTROL 日期] | 根據日期屬性的資產滑桿式搜尋的搜尋述詞。 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
 | [!UICONTROL 檔案大小] | 搜尋述詞，以根據資產的大小進行搜尋。 這是以滑桿為基礎的述詞，您可以從可設定的節點選取滑桿選項。 預設選項定義於CRXDE存放庫中的/libs/dam/options/predicates/filesize。 檔案大小以位元組為單位。 | <ul><li>標籤</li><li>屬性名稱</li><li>路徑</li><li>說明</li></ul> |
-| [!UICONTROL 上次修改的資產] | 搜尋述詞以搜尋最近修改的資產 | <ul><li>屬性名稱</li><li>屬性值</li><li>說明</li></ul> |
+| [!UICONTROL 資產上次修改時間] | 搜尋述詞以搜尋最近修改的資產 | <ul><li>屬性名稱</li><li>屬性值</li><li>說明</li></ul> |
 | [!UICONTROL 發佈狀態] | 搜尋述詞，以根據資產的發佈狀態來搜尋資產 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |
 | [!UICONTROL 評等] | 根據資產的平均評等搜尋述詞 | <ul><li>標籤</li><li>屬性名稱</li><li>選項路徑</li><li>說明</li></ul> |
 | [!UICONTROL 到期狀態] | 根據資產的到期狀態搜尋資產的搜尋述詞 | <ul><li>標籤</li><li>屬性名稱</li><li>說明</li></ul> |

@@ -1,20 +1,18 @@
 ---
 title: 視訊設定檔
 description: Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔。 此現成可用設定檔中的設定已最佳化，讓您的客戶獲得最佳檢視體驗。 您也可以將智慧型裁切新增至視訊。
-uuid: 26a20984-db63-41e9-b16c-6e164b7596a0
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
 content-type: reference
-discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 feature: Video Profiles
 role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '3732'
+source-wordcount: '3770'
 ht-degree: 8%
 
 ---
@@ -389,7 +387,8 @@ Dynamic Media已隨附預先定義的自我調整視訊編碼設定檔 — 一�
 
 1. 選取Experience Manager標誌並導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 資產]** > **[!UICONTROL 視訊設定檔]**.
 1. 選取您要套用至一或多個資料夾的視訊設定檔。
-1. 選取 **[!UICONTROL 套用設定檔至資料夾]** 並選取您要用來接收新上傳資產的資料夾或多個資料夾，然後選取「 」 **[!UICONTROL 套用]**. 在「卡片檢視」中，資料夾名稱正下方會顯示資料夾名稱，以指出已指派給資料夾的 **[!UICONTROL 資料夾]**。您可以 [監視視訊設定檔處理工作的進度](#monitoring-the-progress-of-an-encoding-job).
+1. 選取 **[!UICONTROL 套用設定檔至資料夾]** 並選取您要用來接收新上傳資產的資料夾或多個資料夾，然後選取「 」 **[!UICONTROL 套用]**. 當資料夾處於中狀態時，資料夾名稱正下方會顯示資料夾名稱，以指出已指派給資料夾的資料夾 **[!UICONTROL 卡片檢視]**.
+您可以 [監視視訊設定檔處理工作的進度](#monitoring-the-progress-of-an-encoding-job).
 
 #### 從「屬性」將視訊設定檔套用至資料夾 {#applying-video-profiles-to-folders-from-properties}
 

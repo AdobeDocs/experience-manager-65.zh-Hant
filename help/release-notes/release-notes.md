@@ -3,10 +3,10 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: f8f82ad5805095f331432471b614225f761e645c
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '3530'
-ht-degree: 3%
+source-wordcount: '3552'
+ht-degree: 2%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 3%
 * 啟用Sites頁面編輯器/影像元件使用者從遠端資產Cloud Service參照資產。 (SITES-13448， SITES-13433)
 * AEM現在支援伺服器端排序，以便在「清單」檢視中更快速地導覽專案。 專案節點會在出現在介面之前，根據使用者選取的欄排序。
 
-**汰除功能**
+**已棄用的功能**
 
 * AEM中的ActiveMQ已過時。 ActiveMQ用於兩個AEM Publish執行個體之間的通訊。 Adobe建議客戶現在使用負載平衡器。
 
@@ -493,4 +493,4 @@ The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [M
 >
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
->* [訂閱 Adobe 優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
+>* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)

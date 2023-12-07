@@ -5,7 +5,7 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 1%
@@ -41,7 +41,7 @@ We.Unlimited應用程式是範例範本，代表可完整設定及管理的AEM M
 根據應用程式範本建立應用程式的步驟：
 
 1. 導覽至AEM Mobile應用程式目錄： *&lt;server-url>/aem/apps.html/content/mobileapps*
-1. 選取 **建立** -> **應用程式** 如下所示
+1. 選取 **建立** > **應用程式** 如下所示
 
 使用此範本建立應用程式後，您可以將文章、橫幅和集合新增至應用程式。 若要重新造訪、建立文章、橫幅和集合，請參閱 [內容管理動作](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 

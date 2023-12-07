@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 role: Admin
 exl-id: 4237085a-d70d-41de-975d-153f58336daa
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 群組的名稱是從指定網站名稱產生，在 [社群網站建立](sites-console.md#step13asitetemplate). 此唯一ID可避免相同伺服器上名稱相似之社群網站和社群群組的命名衝突。
 
-例如，如果網站名稱為&quot;*參與*&#x200B;若為名為「We.Retail Engage」的網站，則其中一個建立的使用者群組為：
+例如，如果網站名稱為&quot;*參與*&#x200B;若為名為「參與」的網站，則其中一個建立的使用者群組為：
 
 * 社群 *參與* 成員
 

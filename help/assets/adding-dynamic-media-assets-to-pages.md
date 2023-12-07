@@ -1,19 +1,17 @@
 ---
 title: 將Dynamic Media資產新增至頁面
 description: 如何將Dynamic Media元件新增至Adobe Experience Manager中的頁面。
-uuid: b5e982f5-fa1c-478a-bcb3-a1ef980df201
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '3263'
+source-wordcount: '3219'
 ht-degree: 5%
 
 ---
@@ -71,7 +69,7 @@ ht-degree: 5%
 
 1. 在靠近頁面頂端的工具列右側，從下拉式清單中選取 **[!UICONTROL 結構]**.
 
-   ![政策](/help/assets/assets-dm/structure-mode.png)
+   ![原則](/help/assets/assets-dm/structure-mode.png)
 
 1. 在頁面底部附近，選取 **[!UICONTROL 配置容器]** 若要開啟其工具列，請選取「原則」圖示。
 1. 在 **[!UICONTROL 配置容器]** 頁面，在 **[!UICONTROL 屬性]** 標題，確認 **[!UICONTROL 允許的元件]** 標籤已選取。
