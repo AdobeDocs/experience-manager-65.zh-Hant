@@ -1,18 +1,16 @@
 ---
 title: 資料保護和資料隱私權法規 — Adobe Experience Manager整備
 description: 瞭解Adobe Experience Manager對各種資料保護和資料隱私權法規的支援。 其中包括歐盟一般資料保護規範(GDPR)、加州消費者隱私法，以及在實施新的AEM專案時如何遵守。
-uuid: 9b0b8101-929c-4232-8c6e-1f9b8b2e0aa2
 contentOwner: AEM Docs
 topic-tags: introduction, grdp
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
-discoiquuid: 0bcd7ac4-3071-466d-bd11-701f35ccf5bd
 docset: aem65
 exl-id: 46c1ca14-78f6-4b33-9fdf-1b90a9875f66
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 39%
+source-wordcount: '890'
+ht-degree: 36%
 
 ---
 
@@ -110,8 +108,7 @@ Adobe提供各項程式，用於處理與Adobe Experience Manager的存取、刪
 
 ## AEM與Adobe Target和Adobe Analytics的整合 {#aem-integration-with-adobe-target-adobe-analytics}
 
-這些Adobe Experience Manager整合具有資料保護和隱私權（例如GDPR或CCPA）整備服務。 來自 Adobe Target 或 Adobe Analytics 與整合相關的個人資料不會儲存在 AEM 中。
-
+這些Adobe Experience Manager整合具有資料保護和隱私權（例如GDPR或CCPA）整備服務。 來自Adobe Target或Adobe Analytics與整合相關的個人資料不會儲存在AEM中。
 
 如需詳細資訊，請參閱下列內容：
 
@@ -129,7 +126,7 @@ AEM Communities賦予資料主體資料可攜性、存取許可權及被遺忘�
 
 AEM Forms包含可擷取、處理和儲存資料的元件和工作流程，以協調業務流程和完成數位交易。 不同的元件使用不同的資料存放區，並允許與自訂資料存放區整合。 以下檔案說明存取和處理使用者資料的程式和准則，以支援元件的資料保護和隱私權（例如GDPR或CCPA）工作流程。
 
-* [表單入口網站](/help/forms/using/forms-portal-handling-user-data.md)
+* [Forms入口網站](/help/forms/using/forms-portal-handling-user-data.md)
 * [通信管理](/help/forms/using/correspondence-management-handling-user-data.md)
 * [與Adobe Sign整合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
 * [OSGi上以Forms為中心的工作流程](/help/forms/using/forms-workflow-osgi-handling-user-data.md)

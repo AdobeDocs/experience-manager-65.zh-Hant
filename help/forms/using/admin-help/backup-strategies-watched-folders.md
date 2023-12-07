@@ -1,19 +1,15 @@
 ---
 title: 觀察資料夾的備份策略
-seo-title: Backup strategies for watched folders
 description: 本檔案說明不同的備份與復原案例如何影響watched資料夾、這些案例的限制與結果，以及如何將資料遺失降至最低。
-seo-description: This document describes how watched folders are affected by different backup and recovery scenarios, the limitations and outcomes of these scenarios, and how to minimize data loss.
-uuid: c61997b8-6c36-4bd9-90e5-411841a6c176
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 exl-id: 0d36160a-29fa-4cc4-a0ff-fc681d3e040e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1089'
-ht-degree: 2%
+source-wordcount: '1080'
+ht-degree: 0%
 
 ---
 
@@ -62,20 +58,20 @@ ht-degree: 2%
    <td><p>檔案1，檔案2，檔案3，檔案4</p></td>
    <td><p>檔案2，檔案3，檔案4</p></td>
    <td><p>檔案3，檔案4</p></td>
-   <td><p>file4</p></td>
+   <td><p>檔案4</p></td>
    <td><p>空白</p></td>
-   <td><p>file5</p></td>
+   <td><p>檔案5</p></td>
    <td><p>空白</p></td>
   </tr>
   <tr>
    <td><p>測試</p></td>
    <td><p>空白</p></td>
-   <td><p>file1</p></td>
+   <td><p>檔案1</p></td>
    <td><p>file2</p></td>
-   <td><p>file3</p></td>
-   <td><p>file4</p></td>
+   <td><p>檔案3</p></td>
+   <td><p>檔案4</p></td>
    <td><p>空白</p></td>
-   <td><p>file5</p></td>
+   <td><p>檔案5</p></td>
   </tr>
   <tr>
    <td><p>輸出</p></td>
@@ -101,7 +97,7 @@ ht-degree: 2%
    <td><p>保留</p></td>
    <td><p>空白</p></td>
    <td><p>空白</p></td>
-   <td><p>file1 </p></td>
+   <td><p>檔案1 </p></td>
    <td><p>檔案1，檔案2 </p></td>
    <td><p>檔案1，檔案2 </p></td>
    <td><p>檔案1，檔案2，檔案4 </p></td>

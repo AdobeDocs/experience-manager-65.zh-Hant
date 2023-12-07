@@ -1,16 +1,12 @@
 ---
 title: 建立最適化表單的自訂版面配置元件
-seo-title: Creating custom layout components for adaptive forms
-description: 建立最適化表單自訂版面元件的程式。
-seo-description: Procedure to create custom layout components for adaptive forms.
-uuid: f0bb5fcd-3938-4804-ad0c-d96d3083fd01
+description: 建立最適化表單自訂版面配置元件的程式。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: d4ae432d-557d-4e89-92b8-dca5f37cb6f8
 docset: aem65
 exl-id: 544b06f9-2456-4c05-88c2-b5349947742d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 1%
@@ -30,7 +26,7 @@ ht-degree: 1%
 ## 建立自訂面板配置 {#creating-a-custom-panel-layout}
 
 1. 導覽至該位置 `/crx/de`.
-1. 從位置複製面板版面 `/libs/fd/af/layouts/panel` (例如， `tabbedPanelLayout`)至 `/apps` (例如， `/apps/af-custom-layout`)。
+1. 從位置複製面板配置 `/libs/fd/af/layouts/panel` (例如， `tabbedPanelLayout`)至 `/apps` (例如， `/apps/af-custom-layout`)。
 1. 重新命名您複製到的版面 `customPanelLayout`. 變更節點的屬性 `qtip` 和 `jcr:description`. 例如，將其變更為 `Custom layout - Toggle tabs`.
 
 qtip
@@ -41,8 +37,8 @@ qtip
 >
 >設定屬性 `guideComponentType`至值 `fd/af/layouts/panel` 判斷配置是面板配置。
 
-1. 重新命名檔案 `tabbedPanelLayout.jsp` 在customPanelLayout.jsp的新版面下。
-1. 若要匯入新樣式和行為，請在 `etc` 節點。 例如，在/etc/af-custom-layout-clientlib位置，建立節點client-library。 讓節點具有categories屬性af.panel.custom。 它有下列.css和.js檔案：
+1. 重新命名檔案 `tabbedPanelLayout.jsp` 在customPanelLayout.jsp的新佈局下。
+1. 若要引進新樣式和行為，請在 `etc` 節點。 例如，在/etc/af-custom-layout-clientlib位置，建立節點client-library。 讓節點具有categories屬性af.panel.custom。 它有下列.css和.js檔案：
 
    ```css
    /** CSS defining new styles used by custom layout **/
@@ -116,7 +112,7 @@ qtip
 
 1. 若要增強外觀和行為，您可以包括 `client library`.
 
-   此外，請更新.jsp檔案中包含的指令碼路徑。 例如，更新 `customPanelLayout.jsp` 檔案如下所示：
+   此外，請更新.jsp檔案中所包含指令碼的路徑。 例如，更新 `customPanelLayout.jsp` 檔案如下所示：
 
    ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>
@@ -174,7 +170,7 @@ qtip
    </ul>
    ```
 
-   已更新 `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`：
+   更新的 `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`：
 
    ```html
    <%-- jsp governing the panel content --%>
@@ -201,10 +197,10 @@ qtip
    </div>
    ```
 
-1. 在撰寫模式中開啟最適化表單。 您定義的面板配置會新增至清單中，以設定面板配置。
+1. 在撰寫模式中開啟最適化表單。 您定義的面板配置圖會加入至配置面板配置圖的清單中。
 
-   ![自訂面板配置會顯示在面板配置清單中](assets/auth-layt.png) ![最適化表單的熒幕擷取畫面，使用自訂面板配置](assets/s1.png) ![熒幕擷圖示範自訂配置的切換功能](assets/s2.png)
+   ![自訂面板配置會顯示在面板配置清單中](assets/auth-layt.png) ![最適化表單的熒幕擷取畫面，使用自訂面板佈局](assets/s1.png) ![熒幕擷圖示範自訂配置的切換功能](assets/s2.png)
 
-自訂面板佈局的範例ZIP以及使用此範例的最適化表單。
+自訂面板配置的範例ZIP以及使用此範例的最適化表單。
 
 [取得檔案](assets/af-custom-layout.zip)

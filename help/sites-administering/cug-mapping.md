@@ -1,21 +1,17 @@
 ---
 title: AEM 6.5中的自訂使用者群組對應
-seo-title: Custom User Group Mapping in AEM 6.5
 description: 瞭解自訂使用者群組對應在Adobe Experience Manager中的運作方式。
-seo-description: Lear how Custom User Group Mapping works in AEM.
-uuid: 7520351a-ab71-4661-b214-a0ef012c0c93
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
 exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
 feature: Security
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 1%
+source-wordcount: '469'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +28,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><p>屬性：cq：cugEnabled</p> <p>宣告節點型別： N/A、剩餘屬性</p> </td>
-   <td><p>授權:</p> <p>節點：節點型別rep：CugPolicy的rep：cugPolicy</p> <p>宣告節點型別： rep：CugMixin</p> <p> </p> <p> </p> <p> </p> 驗證:</p> <p>Mixin型別： granite：AuthenticationRequired</p> </td>
+   <td><p>授權：</p> <p>節點：節點型別rep：CugPolicy的rep：cugPolicy</p> <p>宣告節點型別： rep：CugMixin</p> <p> </p> <p> </p> <p> </p> 驗證：</p> <p>Mixin型別： granite：AuthenticationRequired</p> </td>
    <td><p>為了限制讀取存取權，會將專用的CUG原則套用至目標節點。</p> <p>注意：原則只能套用在已設定的支援路徑。</p> <p>名稱rep：cugPolicy和型別rep：CugPolicy的節點受到保護，且無法使用一般JCR API呼叫進行寫入；請改用JCR存取控制管理。</p> <p>另請參閱 <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">此頁面</a> 以取得更多資訊。</p> <p>若要在節點上強制實施驗證要求，只需新增mixin型別granite：AuthenticationRequired即可。</p> <p>注意：僅在設定的支援路徑下方執行。</p> </td>
   </tr>
   <tr>
@@ -82,7 +78,7 @@ ht-degree: 1%
 
   ConfigurationPolicy =必要
 
-**評論**
+**註解**
 
 * 設定CUG授權及啟用/停用評估。
 此服務可設定不應受CUG授權影響的主參與者排除清單。

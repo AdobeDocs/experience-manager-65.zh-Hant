@@ -1,17 +1,13 @@
 ---
 title: 檢視與瞭解交易報表
-seo-title: Viewing and Understanding Transaction Reports
 description: 使用交易報告，針對產品使用情況和重新平衡軟硬體投資做出明智的決策。
-seo-description: Use transaction reports to make an informed decision about the product usage and rebalancing investments in hardware and software.
-uuid: 56d9f01d-4778-47c9-bbb2-6650a73a3f59
 topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: c04c488b-73f3-49ba-9e89-f97497965757
 docset: aem65
 exl-id: 3c7cbe1f-ac81-4df9-96b2-662cbc5f2075
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
@@ -66,7 +62,7 @@ ht-degree: 0%
 
 1. 以管理員身分登入作者執行個體。 前往 **工具** > **作業** > **網頁主控台**.
 1. 找到並開啟 **Forms交易存放庫儲存提供者** 服務。
-1. 指定自訂寄件匣的名稱， **寄件匣** 欄位。 按一下「**儲存**」。具有指定名稱的寄件匣會在所有製作執行個體上建立。
+1. 指定自訂寄件匣的名稱， **寄件匣** 欄位。 按一下 **儲存**. 具有指定名稱的寄件匣會在所有製作執行個體上建立。
 
 ## 檢視交易報告 {#viewing-the-transaction-report}
 

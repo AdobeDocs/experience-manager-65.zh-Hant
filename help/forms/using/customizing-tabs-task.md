@@ -1,15 +1,11 @@
 ---
 title: 自訂任務的標籤
-seo-title: Customizing tabs for a task
 description: 如何在LiveCycleAEM Forms工作區中自訂您工作的標簽名稱。
-seo-description: How-to customize the names of the tabs for your tasks, in LiveCycle AEM Forms workspace.
-uuid: 77eabb63-f8ea-4ec0-8a41-b51c65cdecc0
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: ac0a281f-f589-4a70-9bc7-1a23e054b02f
 exl-id: 8412cfec-bcab-40b7-9e5b-fcc211d43c0b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -25,7 +21,7 @@ ht-degree: 0%
 
    例如，變更 `/apps/ws/locales/en-US/translation.json` 英文譯成下列內容。
 
-   * 對於在啟動程式中啟動的任務，請使用以下來自的代碼片段 `"startprocess" : {}` 區塊。
+   * 對於在啟動程式中啟動的任務，請使用以下程式碼片段： `"startprocess" : {}` 區塊。
 
    ```json
    "tabname" : {
@@ -36,7 +32,7 @@ ht-degree: 0%
            }
    ```
 
-   * 對於待辦事項中的工作，使用以下檔案中的片段 `"todo" : {}` 區塊。
+   * 對於待辦事項中的工作，使用以下來源的程式碼片段： `"todo" : {}` 區塊。
 
    ```json
    "tabname" : {

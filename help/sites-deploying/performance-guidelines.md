@@ -1,20 +1,16 @@
 ---
 title: 效能准則
-seo-title: Performance Guidelines
 description: 本文提供如何最佳化AEM部署效能的一般准則。
-seo-description: This article provides general guidelines on how to optimize the performance of your AEM deployment.
-uuid: 38cf8044-9ff9-48df-a843-43f74b0c0133
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
-discoiquuid: 9ccbc39e-aea7-455e-8639-9193abc1552f
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2914'
-ht-degree: 6%
+source-wordcount: '2935'
+ht-degree: 5%
 
 ---
 
@@ -242,7 +238,7 @@ ht-degree: 6%
    <td><p> </p> </td>
   </tr>
   <tr>
-   <td><p>桌面應用程式</p> </td>
+   <td><p>案頭應用程式</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
@@ -375,7 +371,7 @@ AEM部署有三個重要的建置組塊。 此 **作者例項** 內容作者、�
 
 **單一產品情境**
 
-AEM Assets:
+AEM Assets：
 
 * 使用者互動：瀏覽資產/搜尋資產/下載資產/讀取資產中繼資料/更新資產中繼資料/上傳資產/執行上傳資產工作流程
 * 執行模式：同時存在的使用者，每個使用者的單一互動
@@ -390,7 +386,7 @@ AEM Sites +資產：
 
 **垂直使用案例情境**
 
-媒體:
+媒體：
 
 * `Read Article Page (27.4%), Read Page (10.9%), Create Session (2.6%), Activate Content Page (1.7%), Create Content Page (0.4%), Create Paragraph (4.3%), Edit Paragraph (0.9%), Image Component (0.9%), Browse Assets (20%), Read Asset Metadata (8.5%), Download Asset (4.2%), Search Asset (0.2%), Update Asset Metadata (2.4%), Upload Asset (1.2%), Browse Project (4.9%), Read Project (6.6%), Project Add Asset (1.2%), Project Add Site (1.2%), Create Project (0.1%), Author Search (0.4%)`
 * 執行模式：並行使用者，每個使用者的混合互動
@@ -431,7 +427,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 ### TarMK設定指引 {#tarmk-settings-guideline}
 
-為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明， [請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant).
+為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明， [請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
 
 <table>
  <tbody>
@@ -541,7 +537,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 ### MongoMK設定指南 {#mongomk-settings-guidelines}
 
-為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明， [請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant).
+為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明， [請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
 
 <table>
  <tbody>

@@ -1,19 +1,15 @@
 ---
 title: 自訂歡迎主控台（傳統UI）
-seo-title: Customizing the Welcome Console (Classic UI)
-description: 「歡迎」主控台提供AEM內各種主控台和功能的連結清單
-seo-description: The Welcome console provides a list of links to the various consoles and functionality within AEM
-uuid: 4ef20cef-2d7a-417d-b36b-ed4fa56cd511
+description: 「歡迎」主控台提供AEM中各種主控台和功能的連結清單
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
 exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 8%
+source-wordcount: '449'
+ht-degree: 6%
 
 ---
 
@@ -23,7 +19,7 @@ ht-degree: 8%
 >
 >本頁面說明傳統UI。
 >
->另請參閱 [自訂主控台](/help/sites-developing/customizing-consoles-touch.md) 標準觸控式UI的詳細資訊。
+>另請參閱 [自訂主控台](/help/sites-developing/customizing-consoles-touch.md) 以取得標準觸控式UI的詳細資訊。
 
 「歡迎」主控台提供AEM內各種主控台和功能的連結清單。
 
@@ -32,7 +28,7 @@ ht-degree: 8%
 您可以設定可見的連結。 這可為特定使用者和/或群組定義。 要採取的動作取決於目標型別（這與其所在的主控台區段相關）：
 
 * [主要主控台](#links-in-main-console-left-pane)  — 主主控台中的連結（左窗格）
-* [資源、檔案與參考資料、功能](#links-in-sidebar-right-pane)  — 側邊欄（右窗格）中的連結
+* [資源、檔案與參考資料、功能](#links-in-sidebar-right-pane)  — 側邊欄中的連結（右窗格）
 
 ## 主主控台中的連結（左窗格） {#links-in-main-console-left-pane}
 
@@ -40,13 +36,13 @@ ht-degree: 8%
 
 ![cq_welcomescreenmainconsole](assets/cq_welcomescreenmainconsole.png)
 
-### 設定主控台連結是否可見 {#configuring-whether-main-console-links-are-visible}
+### 設定是否顯示主要主控台連結 {#configuring-whether-main-console-links-are-visible}
 
-節點層級的許可權會決定是否顯示連結。 有問題的節點為：
+節點層級的許可權會決定是否顯示連結。 有問題的節點包括：
 
 * **網站：** `/libs/wcm/core/content/siteadmin`
 
-* **數位資產:** `/libs/wcm/core/content/damadmin`
+* **數位資產：** `/libs/wcm/core/content/damadmin`
 
 * **社群：** `/libs/collab/core/content/admin`
 
@@ -54,7 +50,7 @@ ht-degree: 8%
 
 * **收件匣：** `/libs/cq/workflow/content/inbox`
 
-* **使用者:** `/libs/cq/security/content/admin`
+* **使用者：** `/libs/cq/security/content/admin`
 
 * **工具：** `/libs/wcm/core/content/misc`
 
@@ -62,9 +58,9 @@ ht-degree: 8%
 
 例如：
 
-* 若要限制存取 **工具**，移除的讀取存取權
+* 若要限制以下專案的存取權： **工具**，移除讀取許可權
 
-   `/libs/wcm/core/content/misc`
+  `/libs/wcm/core/content/misc`
 
 請參閱 [安全性區段](/help/sites-administering/security.md) 有關如何設定所需許可權的詳細資訊。
 
@@ -153,7 +149,7 @@ ht-degree: 8%
    <td><code>/libs/cq/core/content/welcome/features/config</code></td>
   </tr>
   <tr>
-   <td> Web 控制台狀態傾印<br /> </td>
+   <td> Web控制檯狀態傾印<br /> </td>
    <td><code>/libs/cq/core/content/welcome/features/statusdump</code></td>
   </tr>
  </tbody>
@@ -161,37 +157,37 @@ ht-degree: 8%
 
 #### 設定是否顯示側欄連結 {#configuring-whether-sidebar-links-are-visible}
 
-您可以移除代表連結之節點的讀取存取許可權，以隱藏連結，不讓特定使用者或群組存取。
+您可以移除代表連結之節點的讀取存取權，以隱藏連結，不讓特定使用者或群組存取。
 
 * 資源 — 移除對下列專案的存取權：
 
-   `/libs/cq/core/content/welcome/resources/<link-target>`
+  `/libs/cq/core/content/welcome/resources/<link-target>`
 
 * 檔案 — 移除對下列專案的存取權：
 
-   `/libs/cq/core/content/welcome/docs/<link-target>`
+  `/libs/cq/core/content/welcome/docs/<link-target>`
 
 * 功能 — 移除對下列專案的存取權：
 
-   `/libs/cq/core/content/welcome/features/<link-target>`
+  `/libs/cq/core/content/welcome/features/<link-target>`
 
 例如：
 
-* 若要移除的連結 **報表**，移除的讀取存取權
+* 若要移除的連結 **報表**，移除讀取許可權
 
-   `/libs/cq/core/content/welcome/resources/reports`
+  `/libs/cq/core/content/welcome/resources/reports`
 
-* 若要移除的連結 **套件**，移除的讀取存取權
+* 若要移除的連結 **封裝**，移除讀取許可權
 
-   `/libs/cq/core/content/welcome/features/packages`
+  `/libs/cq/core/content/welcome/features/packages`
 
 請參閱 [安全性區段](/help/sites-administering/security.md) 有關如何設定所需許可權的詳細資訊。
 
 ### 連結選擇機制 {#link-selection-mechanism}
 
-在 `/libs/cq/core/components/welcome/welcome.jsp` 使用屬於 [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)，會在具有屬性的節點上執行查詢：
+在 `/libs/cq/core/components/welcome/welcome.jsp` 使用方式為 [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)，會在具有屬性的節點上執行查詢：
 
-* `jcr:mixinTypes` 值為: `cq:Console`
+* `jcr:mixinTypes` ，其值為： `cq:Console`
 
 >[!NOTE]
 >
@@ -200,13 +196,12 @@ ht-degree: 8%
 >* `select * from cq:Console`
 >
 
-
-當使用者或群組沒有使用mixin的節點的讀取許可權時 `cq:Console`，不會擷取該節點 `ConsoleUtil` 搜尋，因此不會列在主控台上。
+當使用者或群組沒有具有mixin的節點的讀取許可權時 `cq:Console`，不會擷取該節點 `ConsoleUtil` 搜尋，因此控制檯上並未列出該專案。
 
 ### 新增自訂專案 {#adding-a-custom-item}
 
-此 [連結選擇機制](#link-selection-mechanism) 可將您自己的自訂專案新增至連結清單。
+此 [連結選擇機制](#link-selection-mechanism) 可用來將您自己的自訂專案新增至連結清單。
 
-透過新增以下專案將您的自訂專案新增到清單 `cq:Console` mixin至您的widget或資源。 這可透過定義屬性來完成：
+將您的自訂專案新增到清單中，方法是 `cq:Console` mixin至您的widget或資源。 可透過定義屬性來完成：
 
-* `jcr:mixinTypes` 值為: `cq:Console`
+* `jcr:mixinTypes` ，其值為： `cq:Console`

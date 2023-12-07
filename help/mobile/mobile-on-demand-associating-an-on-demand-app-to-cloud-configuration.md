@@ -1,19 +1,15 @@
 ---
 title: 雲端設定
-seo-title: Cloud Configuration
 description: 將隨選應用程式關聯至雲端設定，可讓Adobe Experience Manager (AEM)建立雙向連結，直接與Mobile On-Demand代管專案通訊。 請依照此頁面瞭解更多資訊。
-seo-description: Associating an On-Demand App to a Cloud Configuration allows Adobe Experience Manager (AEM) to communicate directly with a Mobile On-Demand hosted project by establishing a two way link. Follow this page to learn more.
-uuid: f377f2af-864b-43df-9d42-4a5fd6cd70d5
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: d0d29b99-53d4-4b0d-947b-39d91b381de7
 exl-id: 37428543-c310-4712-a4ec-1f482579fb4b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 3%
+source-wordcount: '412'
+ht-degree: 5%
 
 ---
 

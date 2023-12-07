@@ -1,15 +1,11 @@
 ---
 title: 「教學課程：規劃互動式通訊」
-seo-title: Plan your Interactive Communication
 description: 規劃互動式通訊的結構
-seo-description: Plan the anatomy for your Interactive Communication
-uuid: 1c2b5c5b-c655-4559-8748-3e0b343779c2
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 feature: Interactive Communication
 exl-id: ea0c8971-56f4-4094-87e4-1b222b73951f
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 2%
@@ -94,7 +90,7 @@ ht-degree: 2%
      <li>州代碼</li>
      <li>連線數目</li>
     </ul> </td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>帳單摘要</td>
@@ -108,7 +104,7 @@ ht-degree: 2%
      <li>應付金額</li>
      <li>到期日期</li>
     </ul> </td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>費用摘要</td>
@@ -126,7 +122,7 @@ ht-degree: 2%
      <li>應付帳款總計（使用費用計算欄位）</li>
     </ul> <p>表格 — 用料表</p> </td>
    <td>無欄位</td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>分項通話 — 傳出</td>
@@ -140,20 +136,20 @@ ht-degree: 2%
     </ul> </td>
    <td><p>所有值</p> <p>表格 — 呼叫</p> </td>
    <td>無欄位</td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>立即付款</td>
-   <td>--</td>
-   <td>--</td>
-   <td>--</td>
+   <td>—</td>
+   <td>—</td>
+   <td>—</td>
    <td>Paynow</td>
   </tr>
   <tr>
    <td>增值服務</td>
-   <td>--</td>
-   <td>--</td>
-   <td>--</td>
+   <td>—</td>
+   <td>—</td>
+   <td>—</td>
    <td>ValueAddedServices</td>
   </tr>
  </tbody>

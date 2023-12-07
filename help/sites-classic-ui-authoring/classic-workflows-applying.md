@@ -1,16 +1,14 @@
 ---
 title: 將工作流程套用至頁面
-description: 工作流程可以從「網站」主控台啟動，或在編輯頁面時從Sidekick啟動。
-uuid: 55f6f1d7-da54-4732-b9ff-b7479622db51
+description: 工作流程可從「網站」主控台啟動，或編輯頁面時，也可從「Sidekick」啟動。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 22712b73-90f2-4329-b32f-dbb7ce802d1d
 exl-id: d8b604c5-a6da-47c4-9422-b519e224c7ca
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '249'
 ht-degree: 11%
 
 ---
@@ -21,10 +19,10 @@ ht-degree: 11%
 
 * 要套用的工作流程。
 
-   您可以套用您有權存取的任何工作流程 (由AEM管理員指派)。
+  您可以套用您有權存取的任何工作流程 (由AEM管理員指派)。
 * 選擇性：
 
-   * 提供啟動工作流程之原因相關資訊的註解。
+   * 提供啟動工作流程原因相關資訊的註解。
    * 有助於識別使用者收件匣中工作流程例項的標題。
 
 >[!NOTE]
@@ -33,16 +31,16 @@ ht-degree: 11%
 
 ## 套用工作流程 {#applying-workflows}
 
-工作流程可以從「網站」主控台啟動，或在編輯頁面時從Sidekick啟動。
+工作流程可從「網站」主控台啟動，或編輯頁面時，也可從「Sidekick」啟動。
 
-此 **狀態** 中的欄 **網站** console會指出工作流程是否已套用至頁面：
+此 **狀態** 中的欄 **網站** 控制檯會指出工作流程是否已套用至頁面：
 
 ![workflowstatus](assets/workflowstatus.png)
 
 ### 從網站主控台啟動工作流程 {#starting-a-workflow-from-the-websites-console}
 
 1. 開啟網站主控台。 ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))
-1. 在網站樹狀結構中，選取您要套用工作流程的頁面的父頁面。
+1. 在「網站」樹狀結構中，選取您要套用工作流程的頁面的父頁面。
 1. 在頁面清單中，選取頁面，然後按一下「工作流程」。
 1. 在「開始工作流程」對話方塊中，選取要套用的工作流程。 或者，輸入評論和標題。 然後，按一下「開始」。
 
@@ -55,4 +53,4 @@ ht-degree: 11%
 
    ![workflowstartsidekick](assets/workflowstartsidekick.png)
 
-1. 按一下 **開始工作流程** 以啟動新的工作流程例項，其中包含您設定的屬性以及目前頁面作為裝載。 現在工作流程正在執行中。
+1. 按一下 **開始工作流程** ，以啟動具有您所設定屬性且目前頁面為裝載的新工作流程例項。 現在工作流程正在執行中。

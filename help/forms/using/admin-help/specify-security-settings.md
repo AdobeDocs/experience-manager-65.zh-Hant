@@ -1,17 +1,15 @@
 ---
 title: 指定安全性設定
 description: 瞭解如何指定安全性設定以保護XML資料檔案。 安全性設定功能可控制XML輸入中的外部圖元。
-uuid: c86ba195-010d-40d6-9f9d-4cb4c364d104
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 3c017f9a-aa7f-4d12-ba8b-9fd92c029157
 exl-id: 1f544485-5a01-4a4a-ab0f-dcee67e1a38b
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '89'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 

@@ -1,18 +1,16 @@
 ---
 title: 製作 — 環境與工具
 description: 「網站」主控台可讓您管理和導覽您的網站。 使用兩個窗格，可以展開網站的結構並針對所需元素採取的動作。
-uuid: 0a9ce725-042a-4697-81fe-ac86cbab0398
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 3%
+source-wordcount: '892'
+ht-degree: 4%
 
 ---
 
@@ -206,7 +204,7 @@ Sidekick底部的圖示列可用來切換處理頁面的模式：
 >也可使用其他選項：
 >
 >* [支架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
->* [ClientContext](/help/sites-administering/client-context.md)
+>* [使用者端內容](/help/sites-administering/client-context.md)
 >* 網站 — 開啟網站主控台。
 >* 重新載入 — 將重新整理頁面。
 

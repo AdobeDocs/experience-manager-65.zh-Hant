@@ -1,16 +1,12 @@
 ---
 title: 註冊為使用者
-seo-title: Registering as a User
 description: 瞭解如何使用您從Document Security使用者那裡收到的受原則保護檔案，即使您是該使用者組織的外部人員。
-seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user's organization.
-uuid: 4648b358-f545-434f-a3b2-2937e961dc64
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
-discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 feature: Document Security
 exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 3%

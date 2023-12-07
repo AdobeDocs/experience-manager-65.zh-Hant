@@ -1,28 +1,24 @@
 ---
 title: 記錄自訂實作的交易
-seo-title: Record a transaction for custom implementations
-description: 使用TransactionRecorder API來記錄未自動入帳為交易的動作
-seo-description: Use the TransactionRecorder API to record actions which are not accounted as transactions automatically
-uuid: a22b1a0b-7553-4a17-8fb4-a3bee97b4a98
+description: 使用TransactionRecorder API來記錄未自動計入交易的動作
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
-discoiquuid: 0d961630-573b-4c8e-902f-996f1d1265b6
 exl-id: a1d97b15-14a6-4c3d-bdd3-6366f7acdfc8
-source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
 
 # 記錄自訂實作的交易 {#record-a-transaction-for-custom-implementations}
 
-使用TransactionRecorder API來記錄未自動入帳為交易的動作
+使用TransactionRecorder API來記錄未自動計入交易的動作
 
-您可以使用自訂程式碼來提交PDF表單，或將代理程式UI預覽URL傳送給一般使用者，以預覽互動式通訊。 或者，您也可使用自訂方法提交表單，而不使用AEM Forms隨附的提交方法。 AEM Forms API前面提到的所有動作和自訂實作都不會計為交易。 AEM Forms提供API、 [TransactionRecorder](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)，將這類動作記錄為交易。
+您可以使用自訂程式碼來提交PDF表單，或傳送代理程式UI預覽URL給一般使用者，以預覽互動式通訊。 或者，您也可使用自訂方法來提交表單，而不使用AEM Forms隨附的提交方法。 AEM Forms API前面提到的所有動作和自訂實作都不會計為交易。 AEM Forms提供API、 [TransactionRecorder](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)，將這類動作記錄為交易。
 
-若要記錄交易，請寫入 [標準sling servlet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=en) 並從使用者端呼叫servlet以記錄交易。 您可以使用AJAX或任何其他標準方法呼叫servlet。
+若要記錄交易，請寫入 [標準sling servlet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=en) 並從使用者端呼叫servlet來記錄交易。 您可以使用AJAX或任何其他標準方法呼叫servlet。
 
 ## 伺服器端程式碼範例 {#sample-server-sided-code}
 

@@ -1,17 +1,15 @@
 ---
 title: 使用PDF Generator轉換檔案
 description: PDF Generator服務會將原生檔案格式轉換為PDF。 它也會將PDF轉換為其他檔案格式，並最佳化PDF檔案的大小。
-uuid: 295afb8f-130a-44f5-b0ab-e4c93c0c9e52
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 feature: PDF Generator
 exl-id: 0e2c12b5-24c8-4aca-8826-cb661051ce4f
-source-git-commit: 22d9b22a0fc0bc5f753f2e11ca66e2627e1a8405
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -38,7 +36,7 @@ ht-degree: 0%
    * 如果您要上傳設定檔案，請在方塊中輸入其路徑和名稱，或按一下「瀏覽」以尋找並選取檔案。
 
 1. （選擇性）在「XMP中繼資料檔案」下，輸入XMP檔案的路徑和名稱，或按一下「瀏覽」尋找並選取檔案。 XMP檔案可用來包含標準中繼資料資訊。 (請參閱 [關於XMP檔案](converting-files-using-pdf-generator.md#about-xmp-files).)
-1. 按一下「建立」。建立檔案時，會出現指向該檔案的連結。 如果在轉換期間發生錯誤，則會出現警告。 如果您要建立Postscript檔案，警告也包含記錄檔的連結。
+1. 按一下「建立」。 建立檔案時，會出現指向該檔案的連結。 如果在轉換期間發生錯誤，則會出現警告。 如果您要建立Postscript檔案，警告也包含記錄檔的連結。
 1. 按一下PDF檔案的連結。 檔案會在Acrobat中開啟。
 
 ### 關於XMP檔案 {#about-xmp-files}
@@ -98,7 +96,7 @@ Adobe可延伸中繼資料平台(XMP)為Adobe應用程式提供通用XML架構�
    * 若要使用現有的設定檔案，請選取「上傳設定檔案」，然後按一下「瀏覽」移至檔案位置。
 
 1. 若要上傳XMP檔案，請按一下「瀏覽」並移至檔案位置。 XMP檔案可用來包含標準中繼資料資訊。 (請參閱 [關於XMP檔案](converting-files-using-pdf-generator.md#about-xmp-files).)
-1. 按一下「建立」。建立檔案時，會顯示PDF檔案的連結。
+1. 按一下「建立」。 建立檔案時，會顯示PDF檔案的連結。
 1. 按一下連結，即可在Acrobat中檢視PDF檔案。
 
 ## 將PDF檔案匯出為其他檔案格式（僅限Windows） {#export-a-pdf-file-to-another-file-format-windows-only}
@@ -110,7 +108,7 @@ Adobe可延伸中繼資料平台(XMP)為Adobe應用程式提供通用XML架構�
 1. 在要列出的Export PDF檔案中，選取要將PDF檔案匯出到的格式。
 1. 在指定逾時方塊中，輸入應用程式逾時前的等待時間。 預設值為270秒。
 
-   轉換檔案時顯示的轉換時間可能大於您在此指定的值。 「轉換時間」包括等候執行緒或程式所花的時間、轉換檔案所花的時間，以及遞補轉換器所花的時間（如果適用）。 time. 「指定逾時」值只是轉換檔案所花的時間。
+   轉換檔案時顯示的轉換時間可能大於您在此指定的值。 「轉換時間」包括等候執行緒或程式所花的時間、轉換檔案所花的時間，以及遞補轉換器所花的時間（如果適用）。 時間。 「指定逾時」值只是轉換檔案所花的時間。
 
 1. （選用）在 **指定自訂預檢設定檔** 選項，按一下瀏覽，然後選取 [自訂預檢設定檔](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). 將檔案轉換為PDF封存(PDF/A)格式時，才會使用預檢設定檔。
 1. 按一下「匯出」。 轉換完成後，會出現指向匯出檔案的連結。

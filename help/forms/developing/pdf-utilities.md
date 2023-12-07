@@ -1,19 +1,15 @@
 ---
 title: 使用PDF公用程式
-seo-title: Working with PDF Utilities
-description: 使用PDF公用程式服務在PDF和XDP檔案格式之間轉換、設定和擷取PDF檔案屬性，以及操作XMP中繼資料。
-seo-description: Use the PDF Utilities service to convert between PDF and XDP file formats, set and retrieve PDF document properties, and manipulate XMP metadata.
-uuid: a2ea2359-c547-4f1b-b6ca-f276f816e36a
+description: 使用「PDF公用程式」服務在PDF和XDP檔案格式之間轉換、設定和擷取PDF檔案屬性，以及操作XMP中繼資料。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: d816bf2e-5236-4084-b7c4-c32b72cdff97
 role: Developer
 exl-id: e4b204ee-7261-42b8-8db8-a92aa9fd0a28
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2579'
+source-wordcount: '2549'
 ht-degree: 1%
 
 ---
@@ -24,18 +20,18 @@ ht-degree: 1%
 
 **關於PDF公用程式服務**
 
-PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷取PDF檔案屬性，以及操作XMP中繼資料。 例如，在將PDF檔案轉換為另一種格式之前，檢查其屬性以決定要叫用哪個服務操作來進行轉換很有用。
+PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷取PDF檔案屬性，以及操作XMP中繼資料。 例如，在將PDF檔案轉換為另一種格式之前，檢查其屬性以判斷要為轉換叫用的服務操作會很有用。
 
 您可以使用「PDF公用程式」服務完成這些工作：
 
 * 將PDF檔案轉換為XDP檔案。
 * 將XDP檔案轉換為PDF檔案。 (請參閱 [將XDP檔案轉換為PDF檔案](pdf-utilities.md#converting-xdp-documents-into-pdf-documents).)
 * 擷取PDF檔案屬性。 (請參閱 [正在擷取PDF檔案屬性](pdf-utilities.md#retrieving-pdf-document-properties).)
-* 儲存PDF檔案並將其最佳化以快速檢視網頁。 (請參閱 [設定PDF檔案儲存模式](pdf-utilities.md#setting-pdf-document-save-modes).)
+* 儲存PDF檔案並加以最佳化，以快速檢視網頁。 (請參閱 [設定PDF檔案儲存模式](pdf-utilities.md#setting-pdf-document-save-modes).)
 
 >[!NOTE]
 >
->如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## 將PDF檔案轉換為XDP檔案 {#converting-pdf-documents-into-xdp-documents}
 
@@ -43,7 +39,7 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 >[!NOTE]
 >
->如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary-of-steps}
 
@@ -63,7 +59,7 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 **叫用PDF到XDP的轉換操作**
 
-建立服務使用者端後，您可以叫用PDF到XDP的轉換操作。
+建立服務使用者端後，您可以叫用PDF到XDP的轉換作業。
 
 **另請參閱**
 
@@ -85,11 +81,11 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 1. 建立PDFUtilityService客戶端
 
-   建立 `PDFUtilityServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+   建立 `PDFUtilityServiceClient` 物件，使用它的建構函式傳遞 `ServiceClientFactory` 包含連線屬性的物件。
 
 1. 叫用PDF到XDP的轉換操作
 
-   若要執行轉換，請叫用 `PDFUtilityServiceClient` 物件的 `convertPDFtoXDP` 方法並傳入 `com.adobe.idp.Document` 代表PDF檔案的物件。 方法會傳回 `com.adobe.idp.Document` 物件，代表新建立的XDP檔案。
+   若要執行轉換，請叫用 `PDFUtilityServiceClient` 物件的 `convertPDFtoXDP` 方法並傳入 `com.adobe.idp.Document` 代表PDF檔案的物件。 方法會傳回 `com.adobe.idp.Document` 代表新建立之XDP檔案的物件。
 
 **另請參閱**
 
@@ -110,11 +106,11 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 1. 建立PDFUtilityService客戶端
 
-   建立 `PDFUtilityServiceService` 物件（使用proxy類別建構函式）。
+   建立 `PDFUtilityServiceService` 物件，使用您的proxy類別建構函式。
 
 1. 叫用PDF到XDP的轉換操作
 
-   叫用 `PDFUtilityServiceService` 物件的 `convertPDFtoXDP` 方法並傳入 `BLOB` 代表PDF檔案的物件。 方法會傳回 `BLOB` 物件，代表新建立的XDP檔案。
+   叫用 `PDFUtilityServiceService` 物件的 `convertPDFtoXDP` 方法並傳入 `BLOB` 代表PDF檔案的物件。 方法會傳回 `BLOB` 代表新建立之XDP檔案的物件。
 
 **另請參閱**
 
@@ -130,7 +126,7 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 >[!NOTE]
 >
->如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary_of_steps-1}
 
@@ -156,7 +152,7 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 [使用Java API將XDP檔案轉換為PDF檔案](pdf-utilities.md#convert-xdp-documents-into-pdf-documents-using-the-java-api)
 
-[使用Web服務API將XDP檔案轉換為PDF檔案](pdf-utilities.md#converting-xdp-documents-into-pdf-documents-using-the-web-service-api)
+[使用網站服務API將XDP檔案轉換為PDF檔案](pdf-utilities.md#converting-xdp-documents-into-pdf-documents-using-the-web-service-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -172,11 +168,11 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 1. 建立PDFUtilityService客戶端
 
-   建立 `PDFUtilityServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+   建立 `PDFUtilityServiceClient` 物件，使用它的建構函式傳遞 `ServiceClientFactory` 包含連線屬性的物件。
 
 1. 叫用XDP以PDF轉換作業
 
-   若要執行轉換，請叫用 `PDFUtilityServiceClient` 物件的 `convertXDPtoPDF` 方法並傳入 `com.adobe.idp.Document` 代表XDP檔案的物件。 方法會傳回 `com.adobe.idp.Document` 物件，代表新建立的PDF檔案。
+   若要執行轉換，請叫用 `PDFUtilityServiceClient` 物件的 `convertXDPtoPDF` 方法並傳入 `com.adobe.idp.Document` 代表XDP檔案的物件。 方法會傳回 `com.adobe.idp.Document` 代表新建立PDF檔案的物件。
 
 **另請參閱**
 
@@ -186,7 +182,7 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服務API將XDP檔案轉換為PDF檔案 {#converting-xdp-documents-into-pdf-documents-using-the-web-service-api}
+### 使用網站服務API將XDP檔案轉換為PDF檔案 {#converting-xdp-documents-into-pdf-documents-using-the-web-service-api}
 
 使用PDF公用程式API （Web服務API）將XDP檔案轉換為PDF檔案：
 
@@ -197,11 +193,11 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 1. 建立PDFUtilityService客戶端
 
-   建立 `PDFUtilityServiceService` 物件（使用proxy類別建構函式）。
+   建立 `PDFUtilityServiceService` 物件，使用您的proxy類別建構函式。
 
 1. 叫用XDP以PDF轉換作業
 
-   若要執行轉換，請叫用 `PDFUtilityServiceService` 物件的 `convertXDPtoPDF` 方法並傳入 `BLOB` 代表XDP檔案的物件。 方法會傳回 `BLOB` 物件，代表新建立的PDF檔案。
+   若要執行轉換，請叫用 `PDFUtilityServiceService` 物件的 `convertXDPtoPDF` 方法並傳入 `BLOB` 代表XDP檔案的物件。 方法會傳回 `BLOB` 代表新建立PDF檔案的物件。
 
 **另請參閱**
 
@@ -213,11 +209,11 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 ## 正在擷取PDF檔案屬性 {#retrieving-pdf-document-properties}
 
-您可以使用PDF公用程式Java和Web服務API以程式設計方式擷取PDF檔案屬性，例如檔案是可填寫的表單還是讀取檔案所需的最低Acrobat版本。
+您可以使用PDF公用程式Java和Web服務API以程式設計方式擷取PDF檔案屬性，例如檔案是可填寫表單還是讀取檔案所需的最低Acrobat版本。
 
 >[!NOTE]
 >
->如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63)
+>如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63)
 
 ### 步驟摘要 {#summary_of_steps-2}
 
@@ -237,7 +233,7 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 **叫用屬性擷取作業**
 
-建立服務使用者端後，您可以叫用屬性擷取作業。
+建立服務使用者端之後，您可以叫用屬性擷取作業。
 
 **另請參閱**
 
@@ -259,7 +255,7 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 1. 建立PDFUtilityService客戶端
 
-   建立 `PDFUtilityServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+   建立 `PDFUtilityServiceClient` 物件，使用它的建構函式傳遞 `ServiceClientFactory` 包含連線屬性的物件。
 
 1. 叫用屬性擷取作業
 
@@ -289,7 +285,7 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 1. 建立PDFUtilityService客戶端
 
-   建立 `PDFUtilityServiceService` 物件（使用proxy類別建構函式）。
+   建立 `PDFUtilityServiceService` 物件，使用您的proxy類別建構函式。
 
 1. 叫用屬性擷取作業
 
@@ -310,11 +306,11 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 ## 設定PDF檔案儲存模式 {#setting-pdf-document-save-modes}
 
-您可以使用PDF公用程式服務Java和Web服務API，以程式設計方式設定PDF檔案的儲存模式。 使用「PDF公用程式」服務設定儲存模式時，「PDF公用程式」服務只會設定儲存模式，而不會實際儲存PDF檔案。 當PDF檔案傳遞至另一個服務作業時，就會儲存該檔案。 例如，您可以使用「PDF公用程式」服務來設定特定的儲存模式，並將其傳遞給「加密」服務，以實際儲存並加密PDF檔案。
+您可以使用PDF公用程式服務Java和Web服務API，以程式設計方式設定PDF檔案的儲存模式。 使用「PDF公用程式」服務設定儲存模式時，「PDF公用程式」服務只會設定儲存模式，實際上並不會儲存PDF檔案。 當PDF檔案傳遞給另一個服務作業時會儲存該檔案。 例如，您可以使用「PDF公用程式」服務來設定特定的儲存模式，並將其傳遞給「加密」服務，以實際儲存和加密PDF檔案。
 
 >[!NOTE]
 >
->如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary_of_steps-3}
 
@@ -338,21 +334,21 @@ PDF公用程式服務可以在PDF和XDP檔案格式之間轉換、設定和擷�
 
 您可以選擇下列其中一個儲存選項：
 
-* `INCREMENTAL`：以遞增方式儲存，減少儲存所需的時間
+* `INCREMENTAL`：以增量方式儲存，以減少儲存所需的時間
 * `FAST_WEB_VIEW`：儲存以供快速網頁檢視
 * `FULL`：使用完整儲存來儲存（沒有最佳化）
 
 **叫用儲存樣式作業**
 
-建立服務使用者端後，您可以叫用屬性擷取作業。
+建立服務使用者端之後，您可以叫用屬性擷取作業。
 
 **將PDF檔案傳遞至另一個AEM Forms作業**
 
-PDF公用程式服務設定指定的「儲存」模式後，請將PDF檔案傳遞給另一個AEM Forms作業。 從操作返回後，PDF檔案會以指定模式儲存。 例如，如果您使用「PDF公用程式」服務來設定 `FAST_WEB_VIEW` 模式，然後將PDF檔案傳遞至加密服務的 `encryptUsingPassword` 操作，傳回的PDF檔案會以密碼加密，並儲存在 `FAST_WEB_VIEW` 模式。
+一旦「PDF公用程式」服務設定指定的「儲存」模式後，請將PDF檔案傳遞給另一個AEM Forms作業。 從操作返回後，PDF檔案會以指定模式儲存。 例如，如果您使用「PDF公用程式」服務來設定 `FAST_WEB_VIEW` 模式，然後將PDF檔案傳遞至加密服務的 `encryptUsingPassword` 操作，傳回的PDF檔案會以密碼加密，並儲存在 `FAST_WEB_VIEW` 模式。
 
 >[!NOTE]
 >
->與此區段關聯的「快速入門」會設定 `FAST_WEB_VIEW` 模式，然後將PDF檔案傳遞至加密服務的 `encryptUsingPassword` 作業。
+>與此區段關聯的快速入門會設定 `FAST_WEB_VIEW` 模式，然後將PDF檔案傳遞至加密服務的 `encryptUsingPassword` 作業。
 
 **另請參閱**
 
@@ -376,12 +372,12 @@ PDF公用程式服務設定指定的「儲存」模式後，請將PDF檔案傳�
 
 1. 建立PDFUtilityService客戶端
 
-   建立 `PDFUtilityServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+   建立 `PDFUtilityServiceClient` 物件，使用它的建構函式傳遞 `ServiceClientFactory` 包含連線屬性的物件。
 
 1. 設定儲存模式
 
    * 建立 `PDFUtilitySaveMode` 物件（使用其建構函式）。
-   * 透過叫用 `PDFUtilitySaveMode` 物件的 `setSaveStyle` 方法並傳遞字串值，以指定儲存模式。 例如，若要儲存以快速檢視Web，請傳遞 `FAST_WEB_VIEW`.
+   * 透過叫用 `PDFUtilitySaveMode` 物件的 `setSaveStyle` 方法並傳遞字串值，該值會指定儲存模式。 例如，若要儲存以快速檢視Web，請傳遞 `FAST_WEB_VIEW`.
 
 1. 叫用儲存樣式作業
 
@@ -416,7 +412,7 @@ PDF公用程式服務設定指定的「儲存」模式後，請將PDF檔案傳�
 
 1. 建立PDFUtilityService客戶端
 
-   建立 `PDFUtilityServiceService` 物件（使用proxy類別建構函式）。
+   建立 `PDFUtilityServiceService` 物件，使用您的proxy類別建構函式。
 
 1. 設定儲存模式
 
@@ -451,7 +447,7 @@ PDF公用程式服務設定指定的「儲存」模式後，請將PDF檔案傳�
 
 >[!NOTE]
 >
->如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms的服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需「PDF公用程式」服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary_of_steps-4}
 
@@ -493,11 +489,11 @@ PDF公用程式服務設定指定的「儲存」模式後，請將PDF檔案傳�
 
 1. 建立PDFUtilityService客戶端
 
-   建立 `PDFUtilityServiceClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 包含連線屬性的物件。
+   建立 `PDFUtilityServiceClient` 物件，使用它的建構函式傳遞 `ServiceClientFactory` 包含連線屬性的物件。
 
 1. 叫用PDF到XDP的轉換操作
 
-   若要執行轉換，請叫用 `PDFUtilityServiceClient` 物件的 `convertPDFtoXDP` 方法並傳入 `com.adobe.idp.Document` 代表PDF檔案的物件。 方法會傳回 `com.adobe.idp.Document` 物件，代表新建立的XDP檔案。
+   若要執行轉換，請叫用 `PDFUtilityServiceClient` 物件的 `convertPDFtoXDP` 方法並傳入 `com.adobe.idp.Document` 代表PDF檔案的物件。 方法會傳回 `com.adobe.idp.Document` 代表新建立之XDP檔案的物件。
 
 **另請參閱**
 

@@ -1,18 +1,14 @@
 ---
 title: 新的轉譯與提交服務
-seo-title: New render and submit service
 description: 在Workbench中定義轉譯與提交服務，以根據從中存取XDP表單的裝置將XDP表單轉譯為HTML或PDF。
-seo-description: Define render and submit services in Workbench to render XDP form as HTML or PDF depending on the device it is accessed from.
-uuid: 7f8348a1-753c-4dab-87d5-4a4a301198dd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
 exl-id: 46de0101-9607-4429-84c3-7c1f34d2da27
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -65,11 +61,11 @@ public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profi
 
 呈現HTML的新程式（如同每個呈現程式）具有下列I/O引數 — 
 
-輸入 - `taskContext`
+輸入 —  `taskContext`
 
-輸出 - `runtimeMap`
+輸出 —  `runtimeMap`
 
-輸出 - `outFormDoc`
+輸出 —  `outFormDoc`
 
 此方法會模擬以下專案的確切行為： `renderHTMLForm` NewHTMLFormsService的API。 它會呼叫 `generateFormURL` 用於取得表單HTML轉譯之URL的API。 然後它會使用下列索引鍵或值填入runtimeMap：
 
@@ -81,11 +77,11 @@ newHTMLFormURL =呼叫後傳回的URL `generateFormURL` API。
 
 提交新HTML表單的這個程式與下列I/O引數搭配使用 — 
 
-輸入 - `taskContext`
+輸入 —  `taskContext`
 
-輸出 - `runtimeMap`
+輸出 —  `runtimeMap`
 
-輸出 - `outputDocument`
+輸出 —  `outputDocument`
 
 程式會設定 `outputDocument`至 `inputDocument`擷取自 `taskContext`.
 

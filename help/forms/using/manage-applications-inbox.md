@@ -1,16 +1,12 @@
 ---
 title: 管理AEM收件匣中的Forms應用程式和工作
-seo-title: Manage Forms applications and tasks in AEM Inbox
 description: AEM收件匣可讓您透過提交應用程式和管理工作來啟動以Forms為中心的工作流程。
-seo-description: AEM Inbox lets you launch Forms-centric workflows through submitting applications and manage tasks.
-uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
 topic-tags: document_services, publish
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 2%

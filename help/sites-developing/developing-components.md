@@ -1,21 +1,17 @@
 ---
 title: 開發AEM元件
-seo-title: Developing AEM Components
 description: AEM元件可用來保留、格式化及轉譯可在網頁上使用的內容。
-seo-description: AEM components are used to hold, format, and render the content made available on your webpages.
-uuid: 1f39daa6-7277-45a2-adcc-74b58c93b8e4
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3447'
-ht-degree: 1%
+source-wordcount: '3246'
+ht-degree: 0%
 
 ---
 
@@ -141,7 +137,7 @@ AEM元件可用來保留、格式化及轉譯可在網頁上使用的內容。
 
    * 跨所有雲端解決方案提供一致的UI
    * [AEM觸控式UI的概念 — Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Coral UI 指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
+   * [Coral UI指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
 
 * Granite UI
 
@@ -395,22 +391,22 @@ AEM可讓您在頁面上設定段落系統，以便 [當使用者將資產拖曳
       * 類型：`String`
       * 值：相關資產所屬的群組；例如， `media`
 
-   * `assetMimetype`:
+   * `assetMimetype`：
 
       * 類型：`String`
       * 值：相關資產的mime型別；例如， `image/*`
 
-   * `droptarget`:
+   * `droptarget`：
 
       * 類型：`String`
       * 值：放置目標；例如， `image`
 
-   * `resourceType`:
+   * `resourceType`：
 
       * 類型：`String`
       * 值：相關的元件資源；例如， `foundation/components/image`
 
-   * `type`:
+   * `type`：
 
       * 類型：`String`
       * 值：型別，例如， `Images`

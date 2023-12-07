@@ -1,20 +1,16 @@
 ---
 title: Client Context JavaScript API
-seo-title: Client Context JavaScript API
 description: 瞭解Adobe Experience Manager中適用於Client Context的JavaScript API。
-seo-description: The JavaScript API for Client Context
-uuid: be58998c-f23e-4768-8394-1f1ad3994c4c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 feature: Context Hub
 exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3157'
-ht-degree: 2%
+source-wordcount: '3106'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +28,7 @@ CQ_Analytics.ClientContextMgr物件是包含一組自我註冊工作階段存放
 
 傳回指定名稱的工作階段存放區。 另請參閱 [存取工作階段存放區](/help/sites-developing/client-context.md#accessing-session-stores).
 
-**參數**
+**引數**
 
 * name：字串。 工作階段存放區的名稱。
 
@@ -44,7 +40,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的工作階段存放區。 
 
 向Client Context註冊工作階段存放區。 完成時引發storeregister和storeupdate事件。
 
-**參數**
+**引數**
 
 * sessionstore： CQ_Analytics.SessionStore。 要註冊的工作階段存放區物件。
 
@@ -74,7 +70,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的工作階段存放區。 
 
 當延遲設定為 `true` 或幾毫秒後，方法會先等候再呼叫回呼方法。 如果在傳遞延遲之前觸發另一個初始化事件，則會等到超過延遲時間再觸發初始化事件。 這可讓等候觸發第二個初始化事件，並在最佳情況下呼叫回呼函式。
 
-**參數**
+**引數**
 
 * storeName：字串。 要新增監聽器的工作階段存放區名稱。
 * callback：函式。 在存放區初始化時要呼叫的函式。
@@ -88,7 +84,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的工作階段存放區。 
 
 註冊在註冊工作階段存放區時所呼叫的回呼函式。 註冊存放區時，會發生註冊事件 [CQ_Analytics.ClientContextMgr](#cq-analytics-clientcontextmgr).
 
-**參數**
+**引數**
 
 * storeName：字串。 要新增監聽器的工作階段存放區名稱。
 * callback：函式。 在存放區初始化時要呼叫的函式。
@@ -115,7 +111,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的工作階段存放區。 
 
 建立CQ_Analytics.JSONPStore物件。
 
-**參數**
+**引數**
 
 * storeName：字串。 用作STORENAME屬性的名稱。 STOREKEY屬性的值設為storeName （包含所有大寫字元）。 如果未提供storeName，方法會傳回null。
 * serviceURL：字串。 JSONP服務的URL
@@ -131,7 +127,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的工作階段存放區。 
 
 擷取此物件用於擷取JSON資料的JSONP服務URL。
 
-**參數**
+**引數**
 
 無。
 
@@ -143,7 +139,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的工作階段存放區。 
 
 呼叫JSONP服務。 JSONP URL是尾碼為給定回呼函式名稱的服務URL。
 
-**參數**
+**引數**
 
 * serviceURL： （選用）字串。 要呼叫的JSONP服務。 如果值為null，則會使用已設定的服務URL。 非null值會設定JSONP服務用於此物件。 （請參閱setServiceURL。）
 * dynamicData： （選用）物件。 JSON資料，用於在呼叫回呼函式之前附加至存放區的初始化資料。
@@ -157,7 +153,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的工作階段存放區。 
 
 建立CQ_Analytics.JSONPStore物件，並將存放區註冊到Client Context。
 
-**參數**
+**引數**
 
 * storeName：字串。 用作STORENAME屬性的名稱。 STOREKEY屬性的值設為storeName （包含所有大寫字元）。 如果未提供storeName，方法會傳回null。
 * serviceURL： （選用）字串。 JSONP服務的URL。
@@ -172,7 +168,7 @@ CQ_Analytics.SessionStore物件，代表指定名稱的工作階段存放區。 
 
 設定用於擷取JSON資料的JSONP服務URL。
 
-**參數**
+**引數**
 
 * serviceURL：字串。 提供JSON資料的JSONP服務的URL
 
@@ -204,11 +200,11 @@ JSON物件的容器。 建立此類別的例項，以建立包含JSON資料的�
 
 如需繼承的方法，另請參閱CQ_Analytics.SessionStore 。
 
-#### 清除() {#clear}
+#### clear() {#clear}
 
 移除工作階段存放區資料，並移除所有初始化屬性。
 
-**參數**
+**引數**
 
 無。
 
@@ -220,7 +216,7 @@ JSON物件的容器。 建立此類別的例項，以建立包含JSON資料的�
 
 以指定名稱建立CQ_Analytics.JSONStore物件，並以指定JSON資料初始化（呼叫initJSON方法）。
 
-**參數**
+**引數**
 
 * storeName：字串。 用作STORENAME屬性的名稱。 STOREKEY屬性的值設為storeName （包含所有大寫字元）。
 * jsonData：物件。 包含JSON資料的物件。
@@ -233,7 +229,7 @@ cq_Analytics.JSONStore物件。
 
 擷取工作階段存放區的JSON格式資料。
 
-**參數**
+**引數**
 
 無。
 
@@ -245,7 +241,7 @@ cq_Analytics.JSONStore物件。
 
 清除工作階段存放區，並使用初始化屬性將其初始化。 將初始化旗標設為 `true` 然後觸發 `initialize` 和 `update` 事件。
 
-**參數**
+**引數**
 
 無。
 
@@ -275,7 +271,7 @@ A: "valueA"
 B/B1: "valueBB1"
 ```
 
-**參數**
+**引數**
 
 * jsonData： JSON物件，包含要儲存的資料。
 * doNotClear： true值會保留現有的初始化屬性，並新增衍生自JSON物件的屬性。 若值為false，會先移除現有的初始化屬性，再新增衍生自JSON物件的屬性。
@@ -288,7 +284,7 @@ B/B1: "valueBB1"
 
 以指定名稱建立CQ_Analytics.JSONStore物件，並以指定JSON資料初始化（呼叫initJSON方法）。 新物件會自動向Clickstream Cloud Manager註冊。
 
-**參數**
+**引數**
 
 * storeName：字串。 用作STORENAME屬性的名稱。 STOREKEY屬性的值設為storeName （包含所有大寫字元）。
 * jsonData：物件。 包含JSON資料的物件。
@@ -307,7 +303,7 @@ cq_Analytics.JSONStore物件。
 
 註冊事件的監聽器。 另請參閱 [建立監聽器以回應工作階段存放區更新](/help/sites-developing/client-context.md#creating-a-listener-to-react-to-a-session-store-update).
 
-**參數**
+**引數**
 
 * 事件：字串。 要監聽的事件名稱。
 * fct：函式。 發生事件時所呼叫的函式。
@@ -321,7 +317,7 @@ cq_Analytics.JSONStore物件。
 
 移除事件的指定事件處理常式。
 
-**參數**
+**引數**
 
 * 事件：字串。 事件的名稱。
 * fct：函式。 事件處理常式。
@@ -344,7 +340,7 @@ cq_Analytics.JSONStore物件。
 
 建立CQ_Analytics.PersistedJSONPStore物件。
 
-**參數**
+**引數**
 
 * storeName：字串。 用作STORENAME屬性的名稱。 STOREKEY屬性的值設為storeName （包含所有大寫字元）。 如果未提供storeName，方法會傳回null。
 * serviceURL：字串。 JSONP服務的URL
@@ -360,7 +356,7 @@ cq_Analytics.JSONStore物件。
 
 擷取此物件用於擷取JSON資料的JSONP服務URL。
 
-**參數**
+**引數**
 
 無。
 
@@ -372,7 +368,7 @@ cq_Analytics.JSONStore物件。
 
 呼叫JSONP服務。 JSONP URL是尾碼為給定回呼函式名稱的服務URL。
 
-**參數**
+**引數**
 
 * serviceURL： （選用）字串。 要呼叫的JSONP服務。 如果值為null，則會使用已設定的服務URL。 非null值會設定JSONP服務用於此物件。 （請參閱setServiceURL。）
 * dynamicData： （選用）物件。 JSON資料，用於在呼叫回呼函式之前附加至存放區的初始化資料。
@@ -386,7 +382,7 @@ cq_Analytics.JSONStore物件。
 
 建立CQ_Analytics.PersistedJSONPStore物件，並將存放區註冊到Client Context。
 
-**參數**
+**引數**
 
 * storeName：字串。 用作STORENAME屬性的名稱。 STOREKEY屬性的值設為storeName （包含所有大寫字元）。 如果未提供storeName，方法會傳回null。
 * serviceURL： （選用）字串。 JSONP服務的URL。
@@ -401,7 +397,7 @@ cq_Analytics.JSONStore物件。
 
 設定用於擷取JSON資料的JSONP服務URL。
 
-**參數**
+**引數**
 
 * serviceURL：字串。 提供JSON資料的JSONP服務的URL
 
@@ -433,7 +429,7 @@ JSON物件的持續容器。
 
 以指定名稱建立CQ_Analytics.PersistedJSONStore物件，並以指定JSON資料初始化（呼叫initJSON方法）。
 
-**參數**
+**引數**
 
 * storeName：字串。 用作STORENAME屬性的名稱。 STOREKEY屬性的值設為storeName （包含所有大寫字元）。
 * jsonData：物件。 包含JSON資料的物件。
@@ -446,7 +442,7 @@ cq_Analytics.PersistedJSONStore物件。
 
 擷取工作階段存放區的JSON格式資料。
 
-**參數**
+**引數**
 
 無。
 
@@ -476,7 +472,7 @@ A: "valueA"
 B/B1: "valueBB1"
 ```
 
-**參數**
+**引數**
 
 * jsonData： JSON物件，包含要儲存的資料。
 * doNotClear： true值會保留現有的初始化屬性，並新增衍生自JSON物件的屬性。 若值為false，會先移除現有的初始化屬性，再新增衍生自JSON物件的屬性。
@@ -489,7 +485,7 @@ B/B1: "valueBB1"
 
 以指定名稱建立CQ_Analytics.PersistedJSONStore物件，並以指定JSON資料初始化（呼叫initJSON方法）。 新物件會自動註冊到Client Context Manager。
 
-**參數**
+**引數**
 
 * storeName：字串。 用作STORENAME屬性的名稱。 STOREKEY屬性的值設為storeName （包含所有大寫字元）。
 * jsonData：物件。 包含JSON資料的物件。
@@ -522,7 +518,7 @@ cq_Analytics.PersistedJSONStore物件。
 
 擷取 `STOREKEY` 屬性。
 
-**參數**
+**引數**
 
 無
 
@@ -534,7 +530,7 @@ cq_Analytics.PersistedJSONStore物件。
 
 決定是否保留資料屬性。
 
-**參數**
+**引數**
 
 * name：字串。 屬性的名稱。
 
@@ -550,7 +546,7 @@ cq_Analytics.PersistedJSONStore物件。
 
 觸發 `persist` 完成時的事件。
 
-**參數**
+**引數**
 
 無
 
@@ -562,7 +558,7 @@ cq_Analytics.PersistedJSONStore物件。
 
 從存放區移除所有資料屬性，並保留存放區。 選擇性地不觸發 `udpate` 完成時的事件。
 
-**參數**
+**引數**
 
 * deferevent： true值會防止 `update` 事件中防止觸發。 值 `false` 會導致更新事件引發。
 
@@ -574,7 +570,7 @@ cq_Analytics.PersistedJSONStore物件。
 
 將資料屬性標示為未保留。
 
-**參數**
+**引數**
 
 * name：字串。 不持續存在的屬性名稱。
 
@@ -604,7 +600,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 使用loadInitProperties以初始化值填入工作階段存放區資料。
 
-**參數**
+**引數**
 
 * name：字串。 要新增的屬性名稱。
 * 值：字串。 要新增的屬性值。
@@ -613,11 +609,11 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 沒有傳回值。
 
-#### 清除() {#clear-1}
+#### clear() {#clear-1}
 
 從存放區移除所有資料屬性。
 
-**參數**
+**引數**
 
 無。
 
@@ -629,7 +625,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 傳回存放區資料。 可選擇性地從資料中排除名稱屬性。 呼叫 `init` 方法（如果存放區的資料屬性不存在）。
 
-**參數**
+**引數**
 
 已排除： （選用）要從傳回資料排除的屬性名稱陣列。
 
@@ -641,7 +637,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 擷取資料屬性的值。
 
-**參數**
+**引數**
 
 * name：字串。 要擷取的資料屬性的名稱。
 
@@ -653,7 +649,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 傳回工作階段存放區的名稱。
 
-**參數**
+**引數**
 
 無。
 
@@ -665,7 +661,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 傳回屬性的值。 值會傳回為原始屬性或XSS篩選值。 呼叫 `init` 方法（如果存放區的資料屬性不存在）。
 
-**參數**
+**引數**
 
 * name：字串。 要擷取的資料屬性的名稱。
 * 原始：布林值。 true值會傳回原始屬性值。 false值會導致傳回的值經過XSS篩選。
@@ -678,7 +674,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 傳回工作階段存放區包含的屬性名稱。 呼叫 `init` 方法（如果存放區的資料屬性不存在）。
 
-**參數**
+**引數**
 
 已排除： （選用）要從結果中忽略的屬性名稱陣列。
 
@@ -690,7 +686,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 傳回附加到目前物件的工作階段存放區。
 
-**參數**
+**引數**
 
 無。
 
@@ -702,7 +698,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 將存放區標示為已初始化，並引發 `initialize` 事件。
 
-**參數**
+**引數**
 
 無。
 
@@ -714,7 +710,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 指出工作階段存放區是否已初始化。
 
-**參數**
+**引數**
 
 無。
 
@@ -726,7 +722,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 將指定物件的屬性新增至工作階段存放區的初始化資料。 也可以將物件資料新增至存放區資料。
 
-**參數**
+**引數**
 
 * 物件：包含可列舉屬性的物件。
 * setValues：為true時，如果存放區資料尚未包含相同名稱的屬性，則會將物件屬性新增至工作階段存放區資料。 為false時，不會將任何資料新增至工作階段存放區資料。
@@ -739,7 +735,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 從工作階段存放區移除屬性。 觸發 `update` 完成時的事件。 呼叫 `init` 方法（如果存放區的資料屬性不存在）。
 
-**參數**
+**引數**
 
 * name：字串。 要移除的屬性名稱。
 
@@ -747,11 +743,11 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 沒有傳回值。
 
-#### 重設() {#reset}
+#### reset() {#reset}
 
 還原資料存放區的初始值。 預設實施只會移除所有資料。 觸發 `update` 完成時的事件。
 
-**參數**
+**引數**
 
 無。
 
@@ -763,7 +759,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 設定多個屬性的值。 觸發 `update` 完成時的事件。 呼叫 `init` 方法（如果存放區的資料屬性不存在）。
 
-**參數**
+**引數**
 
 * 屬性：物件。 包含可列舉屬性的物件。 每個屬性名稱和值都會新增至存放區。
 
@@ -775,7 +771,7 @@ CQ_Analytics.SessionStore代表工作階段存放區。 建立此類別的執行
 
 設定屬性的值。 觸發 `update` 完成時的事件。 呼叫 `init` 方法（如果存放區的資料屬性不存在）。
 
-**參數**
+**引數**
 
 * name：字串。 屬性的名稱。
 * 值：字串。 屬性值。

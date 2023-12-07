@@ -1,15 +1,11 @@
 ---
 title: 最佳做法
-seo-title: Best Practices
 description: 撰寫最佳實務說明如何以最有效率和最有效率的方式使用AEM。 這份不斷增加的主題清單包括AEM中的各種領域。
-seo-description: Authoring best practices describe how to use AEM in the most efficient and most effective way possible. This growing list of topics includes a variety of areas in AEM.
-uuid: d1f58335-0aa6-4b35-bdcd-cf6051bd1439
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
-source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 3%
@@ -21,7 +17,7 @@ ht-degree: 3%
 
 撰寫最佳實務說明如何以最有效率和最有效率的方式使用AEM。 這份不斷增加的主題清單包括AEM中的各種領域。
 
-下列區域已提供有關最佳實務的檔案：
+下列區域有與最佳實務相關的檔案：
 
 * [Assets](#assets)
 * [Sites](#sites)
@@ -33,7 +29,7 @@ ht-degree: 3%
 * [開發最佳實務](/help/sites-developing/best-practices.md)
 * [部署最佳實務](/help/sites-deploying/best-practices.md)
 
-以下表格中會說明並連結特定檔案。
+以下表格會說明並連結特定檔案。
 
 ## Assets {#assets}
 
@@ -54,12 +50,12 @@ ht-degree: 3%
   <tr>
    <td>Dynamic Imaging</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging最佳實務</a></td>
-   <td><p>說明如何銳利化影像以獲得最佳效果，以及如果您使用Dynamic Media功能或正在與Dynamic Media Classic整合，最佳化影像品質的方法。 </p> </td>
+   <td><p>說明如何在使用Dynamic Media功能或與Dynamic Media Classic整合時銳利化影像以獲得最佳結果，以及最佳化影像品質的方法。 </p> </td>
   </tr>
   <tr>
    <td>多語言資產</td>
    <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">翻譯最佳實務</a></td>
-   <td>說明如何有效率地翻譯AEM資產的最佳實務。</td>
+   <td>說明有效翻譯AEM資產的最佳實務。</td>
   </tr>
  </tbody>
 </table>
@@ -68,7 +64,7 @@ ht-degree: 3%
 
 管理和編寫您的網站內容有一些最佳實務，概述如下：
 
-製作： [製作環境和工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md)  — 提供如何編寫頁面的概觀。
+製作： [製作環境和工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md)  — 提供如何撰寫頁面的概觀。
 
 ## Forms {#forms}
 

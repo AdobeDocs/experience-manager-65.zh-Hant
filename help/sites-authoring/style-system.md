@@ -1,15 +1,11 @@
 ---
 title: 樣式系統
-seo-title: Style System
 description: 樣式系統可讓範本作者在元件的內容原則中定義樣式類別，讓內容作者在編輯頁面上的元件時能夠選取這些類別。 這些樣式可作為元件的替代視覺變體，使其更靈活。
-seo-description: The Style System allows a template author to define style classes in the content policy of a component so that a content author is able to select them when editing the component on a page. These styles can be alternative visual variations of a component, making it more flexible.
-uuid: 0d857650-8738-49e6-b431-f69c088be74f
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1293'
 ht-degree: 1%
@@ -63,7 +59,7 @@ ht-degree: 1%
 
 ## 使用 {#use}
 
-為了示範此功能，我們將使用 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)核心元件的實施 [標題元件](https://www.adobe.com/go/aem_cmp_title_v2) 以為例。
+為了示範此功能，我們將使用 [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)核心元件的實施 [標題元件](https://www.adobe.com/go/aem_cmp_title_v2) 以為例。
 
 下列章節 [作為內容作者](#as-a-content-author) 和 [作為範本作者](#as-a-template-author) 說明如何使用WKND的樣式系統來測試樣式系統的功能。
 

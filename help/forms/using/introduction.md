@@ -1,13 +1,12 @@
 ---
 title: HTML5表單簡介
-seo-title: Introduction to HTML5 forms
 description: HTML5 forms是Adobe Experience Manager 6.0 (AEM 6.0)軟體中的新功能，可以轉譯HTML5格式的XFA表單範本。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 docset: aem65
 feature: Mobile Forms
 exl-id: 0facca18-ffa1-420c-859a-6f1f2c449d71
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%

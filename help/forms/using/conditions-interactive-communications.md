@@ -1,16 +1,12 @@
 ---
 title: 互動式通訊的條件
-seo-title: Conditions in Interactive Communications
 description: 建立和編輯用於互動式通訊的條件片段 — 條件是用於建立互動式通訊的四種檔案片段型別之一。 其他三個是文字、清單和佈局片段。
-seo-description: Creating and editing conditions to be used in Interactive Communications
-uuid: c98f02d5-1769-46dd-ab35-6e8145a24939
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: fe59d260-d392-4d6f-bb7e-2f2a1d701f51
 docset: aem65
 feature: Interactive Communication
 exl-id: 0c0dc6a2-b889-4516-8e08-1e9d31be2cce
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 1%
@@ -53,7 +49,7 @@ ht-degree: 1%
 
    * **[!UICONTROL 標籤]**：若要建立自訂標籤，請在文字欄位中輸入值，然後選取「輸入」。 儲存此條件時，會建立新新增的標籤。
 
-1. 選取 **[!UICONTROL 下一個]**.
+1. 選取&#x200B;**[!UICONTROL 「下一步」]**。
 
    便會顯示「建立條件」頁面。
 
@@ -99,7 +95,7 @@ ht-degree: 1%
    >
    >您可以在已套用規則或重複專案的條件中插入資產。
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
    條件已建立。 現在當您建立互動式通訊時，可以繼續使用條件作為建置區塊。
 
@@ -156,7 +152,7 @@ ht-degree: 1%
 
    * 您也可以在規則中建立多個條件。
 
-1. 選取 **[!UICONTROL 完成]**.
+1. 選取「**[!UICONTROL 完成]**」。
 
    該規則將套用至資產。
 
@@ -183,7 +179,7 @@ ht-degree: 1%
 
    ![expandeditrulevariables](assets/expandededitrulevariables.png)
 
-1. 選擇 **[!UICONTROL 建立]**。
+1. 選取「**[!UICONTROL 建立]**」。
 
    「建立變數」窗格隨即顯示。
 
@@ -194,7 +190,7 @@ ht-degree: 1%
    * **[!UICONTROL 型別]**：選取變數型別：字串、數字、布林值或日期。
    * **[!UICONTROL 僅允許特定值]**：針對字串和數字變數，您可以確保代理程式會從Agent UI中預留位置的一組特定值中選擇。 若要指定一組值，請選取此選項，然後指定允許在 **[!UICONTROL 值]** 欄位。
 
-1. 選擇 **[!UICONTROL 建立]**。
+1. 選取「**[!UICONTROL 建立]**」。
 
    變數隨即建立並列於「變數」窗格中。
 

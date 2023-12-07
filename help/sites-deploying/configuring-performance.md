@@ -1,18 +1,16 @@
 ---
 title: 效能最佳化
 description: 瞭解如何設定AEM的某些方面以最佳化效能。
-uuid: a4d9fde4-a4c7-4ee5-99b6-29b0ee7dc35b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
-discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '6503'
-ht-degree: 12%
+source-wordcount: '6469'
+ht-degree: 11%
 
 ---
 
@@ -24,7 +22,7 @@ ht-degree: 12%
 >
 >如需疑難排解和修正效能問題的詳細資訊，另請參閱 [效能樹狀結構](/help/sites-deploying/performance-tree.md).
 >
->您也可以檢閱知識庫文章，網址為 [效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant).
+>您也可以檢閱知識庫文章，網址為 [效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
 
 關鍵問題是您的網站回應訪客要求所需的時間。 雖然此值會因每個請求而有所不同，但您可以定義平均目標值。 一旦這個值被證實既可達到又可維持，就可用來監視網站的效能並指示潛在問題的發展。
 
@@ -41,7 +39,7 @@ ht-degree: 12%
 >[!NOTE]
 >
 >* 在設定效能最佳化後，請遵循下列程式： [艱苦的一天](/help/sites-developing/tough-day.md) 以測試高負載下的環境。
->* 另請參閱 [效能調校秘訣。](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant)
+>* 另請參閱 [效能調校秘訣。](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en)
 
 ## 效能最佳化方法 {#performance-optimization-methodology}
 
@@ -126,7 +124,7 @@ JVM和OS層級調整通常不會導致效能大幅提升，因此應該在最佳
 
 您最好的朋友在平常效能最佳化練習中會選擇：
 
-*  `request.log`
+* 此 `request.log`
 * 元件式計時
 * Java™效能分析工具。
 
@@ -203,7 +201,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 >[!NOTE]
 >
->另請參閱 [效能最佳化](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant).
+>另請參閱 [效能最佳化](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
 
 ### 搜尋索引 {#search-indexing}
 
@@ -383,7 +381,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 在這兩種情況下，當預先定義的使用者數量使用系統時，您都可以定義每秒的預期交易數量。
 
-| 元件 | 測試型別 | 否. 個使用者的 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
+| 元件 | 測試型別 | 不適用。 個使用者的 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
 |---|---|---|---|---|---|
 | 首頁單一使用者 | 平均 | 1 | 1 |  |  |
 |   | 尖峰 | 1 | 3 |  |  |
@@ -394,7 +392,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 組合測試元件可更密切地反映應用程式的行為。 必須再次測試平均值和尖峰狀況。
 
-| 情境 | 元件 | 否. 個使用者的 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
+| 情境 | 元件 | 不適用。 個使用者的 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
 |---|---|---|---|---|---|
 | 混合平均 | 首頁 | 10 | 1 |  |  |
 |   | 搜尋 | 10 | 1 |  |  |
@@ -411,7 +409,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 在您網站推出後的前幾天，興趣可能會增加。 此情境甚至大於您正在測試的峰值。 Adobe建議您測試「上線」情境，以確保系統能夠滿足此情況。
 
-| 情境 | 測試型別 | 否. 個使用者的 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
+| 情境 | 測試型別 | 不適用。 個使用者的 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
 |---|---|---|---|---|---|
 | 正在上線尖峰 | 首頁 | 200 | 20 |  |  |
 |   | 搜尋 | 100 | 10 |  |  |
@@ -428,7 +426,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 設計這些測試時，請記得並非所有案例都會定期發生。 但是，它們對整個系統的影響很重要。
 
-| 錯誤案例 | 錯誤類型 | 否. 個使用者的 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
+| 錯誤案例 | 錯誤類型 | 不適用。 個使用者的 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
 |---|---|---|---|---|---|
 | 搜尋元件超載 | 搜尋全域萬用字元（星號） | 10 | 1 |  | 只搜尋&amp;ast；&amp;ast；&amp;ast；。 |
 |   | 停用詞 | 20 | 2 |  | 搜尋停用詞。 |
@@ -439,7 +437,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 只有在系統持續執行一段時間（小時或天）後，才會發生某些問題。 耐力測試是用來測試一段所需時間內的恆定平均負載。 然後可以分析任何效能降低。
 
-| 情境 | 測試型別 | 否. 個使用者的 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
+| 情境 | 測試型別 | 不適用。 個使用者的 | Tx/秒（預期） | Tx/秒（已測試） | 說明 |
 |---|---|---|---|---|---|
 | 耐力測試（72小時） | 首頁 | 10 | 1 |  |  |
 |   | 搜尋 | 10 | 1 |  |  |
@@ -478,7 +476,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 ## 使用Dispatcher時最佳化效能 {#optimizing-performance-when-using-the-dispatcher}
 
-此 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 是Adobe的快取及/或負載平衡工具。 使用Dispatcher時，請考慮將您的網站快取效能最佳化。
+此 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) 是Adobe的快取及/或負載平衡工具。 使用Dispatcher時，請考慮將您的網站快取效能最佳化。
 
 >[!NOTE]
 >

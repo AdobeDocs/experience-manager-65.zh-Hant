@@ -1,19 +1,15 @@
 ---
 title: 叫用以人為中心的長期流程
-seo-title: Invoking Human-Centric Long-Lived Processes
 description: 使用使用叫用API的Java網頁型使用者端應用程式、使用Web服務的ASP.NET應用程式，以及使用使用Remoting的Flex建立的使用者端應用程式，以程式設計方式叫用Workbench中建立以人為中心的長期流程。
-seo-description: Programmatically invoke human-centric long-lived processes created in Workbench using a Java web-based client application that uses the Invocation API, an ASP.NET application that uses web services, and a client application built with Flex that uses Remoting.
-uuid: 42269d41-a90f-4ea1-aeb9-d61337bcfa54
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: 18a320b4-dce6-4c50-8864-644b0b2d6644
 role: Developer
 exl-id: c9ebad8b-b631-492d-99a3-094e892b2ddb
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3695'
+source-wordcount: '3674'
 ht-degree: 0%
 
 ---
@@ -545,7 +541,7 @@ ASP.NET應用程式會執行下列工作：
    <td><p>指定貸款金額。</p></td>
   </tr>
   <tr>
-   <td><p>Button1</p></td>
+   <td><p>按鈕1</p></td>
    <td><p>代表[提交應用程式]按鈕。</p></td>
   </tr>
   <tr>

@@ -1,19 +1,15 @@
 ---
 title: 擷取要轉譯的字串
-seo-title: Extracting Strings for Translating
 description: 使用xgettext-maven-plugin從您的原始程式碼中擷取需要翻譯的字串
-seo-description: Use xgettext-maven-plugin to extract strings from your source code that need translating
-uuid: 2c586ecb-8494-4f8f-b31a-1ed73644d611
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
-discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 exl-id: 4acc5f7f-0bcb-4b5a-8531-52e146cffeae
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 1%
+source-wordcount: '475'
+ht-degree: 0%
 
 ---
 
@@ -55,22 +51,22 @@ ht-degree: 1%
 
 ### 識別要剖析的檔案 {#identifying-the-files-to-parse}
 
-i18n.any檔案的/filter區段會識別xgettext-maven-plugin工具剖析的檔案。 新增數個包含和排除規則，分別識別已剖析和忽略的檔案。 您應該包含所有檔案，然後排除不想剖析的檔案。 通常，您會排除不貢獻UI的檔案型別，或定義UI但未翻譯的檔案。 包含和排除規則的格式如下：
+i18n.any檔案的/filter區段會識別xgettext-maven-plugin工具剖析的檔案。 新增數個包含和排除規則，分別識別經過剖析和忽略的檔案。 您應該包含所有檔案，然後排除不想剖析的檔案。 通常，您會排除不會貢獻UI的檔案型別，或定義UI但未翻譯的檔案。 包含和排除規則的格式如下：
 
 ```
 { /include "pattern" }
 { /exclude "pattern" }
 ```
 
-規則的陣列部分用於比對要包含或排除的檔案名稱。 陣列首碼表示您是匹配JCR節點（其在儲存庫中表示）還是檔案系統。
+規則的模式部分用於比對要包含或排除的檔案名稱。 陣列首碼表示您是匹配JCR節點（其在儲存庫中的表示）還是檔案系統。
 
 | 字首 | 效果 |
 |---|---|
 | / | 表示JCR路徑。 因此，此首碼會比對jcr_root目錄下的檔案。 |
 | &amp;ast； | 表示檔案系統上的一般檔案。 |
-| 無 | 無首碼或以資料夾或檔案名稱開頭的模式表示檔案系統上的一般檔案。 |
+| 無 | 沒有字首或以資料夾或檔案名稱開頭的模式，表示檔案系統上的一般檔案。 |
 
-當在模式中使用時，/字元表示子目錄，而&amp;ast；字元符合全部。 下表列出數個規則範例。
+當在模式中使用時，/字元表示子目錄，而&amp;ast；字元符合所有。 下表列出數個規則範例。
 
 <table>
  <tbody>
@@ -127,7 +123,7 @@ mvn -N com.adobe.granite.maven:xgettext-maven-plugin:1.2.2:extract  -Dxgettext.v
 </build>
 ```
 
-命令：
+指令：
 
 ```shell
 mvn xgettext:extract
@@ -136,9 +132,9 @@ mvn xgettext:extract
 ### 輸出檔案 {#output-files}
 
 * `raw.xliff`：擷取的字串
-* `warn.log`：警告（若有的話） `CQ.I18n.getMessage()` API使用不正確。 這些一律需要修正，然後再重新執行。
+* `warn.log`：警告（如果有的話） `CQ.I18n.getMessage()` API使用不正確。 這些一律需要修正，然後再重新執行。
 
-* `parserwarn.log`：剖析器警告（如有），例如js剖析器問題
+* `parserwarn.log`：剖析器警告（如果有的話），例如js剖析器問題
 * `potentials.xliff`：未擷取的「潛在」候選項，但可能是需要翻譯的可讀取字串（可以忽略，仍會產生大量誤判）
-* `strings.xliff`：平面化的xliff檔案，將匯入ALF中
+* `strings.xliff`：平面化xliff檔案，將匯入ALF
 * `backrefs.txt`：可讓您快速查詢指定字串的原始程式碼位置

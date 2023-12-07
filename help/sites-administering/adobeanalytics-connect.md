@@ -1,20 +1,16 @@
 ---
 title: 連線到Adobe Analytics並建立框架
-seo-title: Connecting to Adobe Analytics and Creating Frameworks
 description: 瞭解如何將AEM連線至SiteCatalyst及建立架構。
-seo-description: Learn about connecting AEM to SiteCatalyst and creating frameworks.
-uuid: 3820dd24-4193-42ea-aef2-4669ebfeaa9d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: bbd18486a77d7b46454aacff23147b38860bd895
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1523'
-ht-degree: 6%
+source-wordcount: '1484'
+ht-degree: 1%
 
 ---
 
@@ -85,7 +81,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 
 >[!CAUTION]
 >
->由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。
+>由於Adobe Analytics API中的安全性變更，AEM中包含的Activity Map版本已無法再使用。
 >
 >此 [Adobe Analytics提供的ActivityMap外掛程式](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。
 
@@ -93,7 +89,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 
 >[!CAUTION]
 >
->由於 Adobe Analytics API 中的安全性變更，AEM 中包含的 Activity Map 版本已無法再使用。
+>由於Adobe Analytics API中的安全性變更，AEM中包含的Activity Map版本已無法再使用。
 >
 >此 [Adobe Analytics提供的ActivityMap外掛程式](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 現在應該使用。
 
@@ -162,7 +158,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
    * 具有與追蹤伺服器相同的區段
    * 用於從安全頁面傳送資料(`https://`)
 
-* **訪客命名空間**
+* **訪客名稱空間**
 
    * 名稱空間會決定追蹤URL的第一部分。
    * 例如，將名稱空間變更為 **CNAME** 會導致呼叫Adobe Analytics時顯示如下 **CNAME.d1.omtrdc.net** 而不是預設值。
@@ -181,7 +177,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 
 1. 的下拉式選取器 **Adobe Analytics** 會附加至可用的選項。 選取所需的架構組態。
 
-1. 選取 **儲存並關閉**.
+1. 選取「**儲存並關閉**」。
 1. 若要啟動頁面及任何連線的組態/檔案， **[發佈](/help/sites-authoring/publishing-pages.md)** 頁面。
 1. 最後一個步驟是造訪發佈執行個體上的頁面，並使用搜尋關鍵字（例如，茄子） **搜尋** 元件。
 1. 您可以使用適當的工具來檢查對Adobe Analytics進行的呼叫；例如， [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html).
@@ -201,8 +197,7 @@ Adobe Analytics [資料中心](https://experienceleague.adobe.com/docs/analytics
 預設為 `6`。
 
 * **擷取延遲**：嘗試擷取已排入佇列的報表之間的毫秒數。
-預設為 `10000`。
-由於是以毫秒為單位，因此會對10秒。
+預設值為 `10000`. 由於是以毫秒為單位，因此會對10秒。
 
 * **擷取頻率**：A `cron` 決定擷取Analytics報表頻率的運算式。
 預設值為 `0 0 0/12 * * ?`；這相當於每小時12次擷取。

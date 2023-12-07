@@ -1,16 +1,12 @@
 ---
 title: Flex工作區中不提供AEM Forms工作區功能
-seo-title: Features of AEM Forms workspace not available in Flex workspace
 description: AEM Forms工作區在Flex工作區之外進行創新。 閱讀特性和功能的差異。
-seo-description: AEM Forms workspace innovates beyond Flex-based Workspace. Read about differences in features and capabilities.
-uuid: 2c22ce35-8383-4258-b6e3-3d823a453b27
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 66c3cdc4-0e4c-4597-a107-f457dd0cc166
 exl-id: 4235e0ce-f1c4-432e-b486-2d72c390f320
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%

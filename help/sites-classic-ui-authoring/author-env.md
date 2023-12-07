@@ -1,19 +1,15 @@
 ---
 title: 使用作者環境
-seo-title: Working with the Author Environment
 description: 製作環境可讓您執行與製作（包括頁面製作和管理資產）相關的任務，以及管理在網站上產生和維護內容時所需的任務。
-seo-description: The author environment lets you perform tasks related to authoring (including page authoring and managing assets) and administering tasks you need when generating and maintaining the content on your website.
-uuid: ebeaa2c3-05b0-4108-8e84-69b9ba48cfbe
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 8c747892-c5ba-4288-b5e7-75fd40d92f5c
 exl-id: 4486c503-21e6-493a-8994-b0f8cd34c85a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 2%
+source-wordcount: '252'
+ht-degree: 3%
 
 ---
 
@@ -48,7 +44,7 @@ ht-degree: 2%
    * 專為觸控和桌上型裝置所設計（針對觸控最佳化）。 不過，所有裝置上的外觀和感覺都相同 [檢視及選取您的資源](/help/sites-authoring/basic-handling.md) 稍微不同（點選與點按）。
    * 請參閱 [標準制作檔案](/help/sites-authoring/author.md) 以進一步瞭解如何使用觸控式UI進行撰寫。 以下檔案著重於傳統UI。
 
-   * 桌面:
+   * 案頭：
 
    ![chlimage_1-150](assets/chlimage_1-150.png)
 

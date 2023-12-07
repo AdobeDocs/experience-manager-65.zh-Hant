@@ -1,18 +1,14 @@
 ---
 title: 自訂追蹤表格
-seo-title: Customize tracking tables
 description: 如何在AEM Forms工作區的「追蹤」標籤中顯示的工作表格中，自訂顯示使用者程式詳細資訊的方式。
-seo-description: How-to customize the display of the details of user processes in the task table displayed in the tracking tab of AEM Forms workspace.
-uuid: 13d6ebf2-99d5-434f-85f9-b0cba5f5751a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 exl-id: 9ab657cc-fa8e-4168-8a68-e38ac5c51b29
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
@@ -21,12 +17,12 @@ ht-degree: 3%
 AEM Forms工作區中的追蹤索引標籤是用來顯示登入使用者涉及之程式執行個體的詳細資訊。 若要檢視追蹤表格，請先在左窗格中選取處理名稱，以在中間窗格中檢視其執行處理清單。 選取程式執行處理，在右窗格中檢視此執行處理產生的任務表格。 依照預設，表格欄會顯示下列工作屬性（工作模型中的對應屬性會以括弧指定）：
 
 * ID ( `taskId`)
-* 名稱 ( `stepName`)
-* 指示 ( `instructions`)
-* 選取的動作 ( `selectedRoute`)
+* 名稱( `stepName`)
+* 指示( `instructions`)
+* 選取的動作( `selectedRoute`)
 * 建立時間( `createTime`)
 * 完成時間( `completeTime`)
-* 所有者 ( `currentAssignment.queueOwner`)
+* 所有者( `currentAssignment.queueOwner`)
 
 任務模型中可顯示在任務表格中的其餘屬性包括：
 
@@ -78,7 +74,7 @@ AEM Forms工作區中的追蹤索引標籤是用來顯示登入使用者涉及�
    <td><p>狀態</p> </td>
   </tr>
   <tr>
-   <td><p>displayName</p> </td>
+   <td><p>顯示名稱</p> </td>
    <td><p>outOfOfficeUserId</p> </td>
    <td><p>summaryUrl</p> </td>
   </tr>

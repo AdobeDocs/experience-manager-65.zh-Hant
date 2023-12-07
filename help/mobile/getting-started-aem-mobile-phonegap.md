@@ -1,19 +1,15 @@
 ---
 title: AEM Adobe PhoneGap
-seo-title: AEM Adobe PhoneGap
 description: AEM已與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 請依照本頁面的說明開始使用Adobe PhoneGap Enterprise。
-seo-description: AEM integrates with PhoneGap so that you can easily create apps using AEM pages. Follow this page to get started with Adobe PhoneGap Enterprise.
-uuid: bdd90cda-2489-4763-a90a-9c409d6e68ae
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: introduction
 content-type: reference
-discoiquuid: fbcdea8a-72e9-431b-9c32-dc02d4cdb9c8
 exl-id: d989e235-5993-4738-8523-5b9a5f6bf712
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '486'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -41,7 +37,7 @@ AEM Mobile只是構成完整AEM平台的支柱之一。
 
 在使用AEM Mobile並按照本快速入門手冊中的步驟操作之前，使用者應該熟悉AEM和AEM Mobile控制中心。 請參閱：
 
-[AEM 快速入門](/help/sites-deploying/deploy.md)
+[AEM快速入門](/help/sites-deploying/deploy.md)
 
 [AEM Mobile控制中心逐步解說](/help/mobile/phonegap-authoring-apps.md)
 

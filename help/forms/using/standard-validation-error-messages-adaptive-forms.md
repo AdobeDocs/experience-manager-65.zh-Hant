@@ -1,17 +1,13 @@
 ---
 title: 適用性表單的標準驗證錯誤訊息
-seo-title: Standard validation error messages for adaptive forms
 description: 使用自訂錯誤處理常式，將適用性表單的驗證錯誤訊息轉換為標準格式
-seo-description: Transform the validation error messages for adaptive forms into standard format using custom error handlers
-uuid: 0d1f9835-3e28-41d3-a3b1-e36d95384328
 contentOwner: anujkapo
 content-type: reference
 keywords: 新增自訂錯誤處理常式、新增預設錯誤處理常式、在表單中新增錯誤處理常式、使用規則編輯器的調用服務來新增自訂的錯誤處理常式、設定規則編輯器以新增自訂錯誤處理常式、使用規則編輯器以新增自訂錯誤處理常式
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
-discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
 exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2357'
 ht-degree: 86%
@@ -207,7 +203,7 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 若要了解如何使用採用[規則編輯器調用服務](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)動作的預設錯誤處理常式，請以含有兩個欄位的簡單最適化表單為例 (**寵物 ID** 和&#x200B;**寵物名稱**)，並在「**寵物 ID**」欄位使用預設的錯誤處理常式，查看為調用外部服務所設定 REST 端點傳回的各種錯誤，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。要使用規則編輯器的調用服務操作添加默認錯誤處理程序，請執行以下步驟：
 
 1. 在撰寫模式中開啟最適化表單，選取表單元件，然後選取 **[!UICONTROL 規則編輯器]** 以開啟規則編輯器。
-1. 選擇 **[!UICONTROL 建立]**。
+1. 選取「**[!UICONTROL 建立]**」。
 1. 在「**何時**」規則部分中建立條件。例如，[寵物 ID 欄位名稱&#x200B;]****&#x200B;何時變更。「選取」從「**選取狀態**」下拉式清單變更「選取」。
 1. 在「**然後**」部分，從「**選取動作**」下拉式清單中選取「**[!UICONTROL 調用服務]**」。
 1. 選取「**郵遞服務**」，及其自「**輸入**」部分的對應資料綁定。例如，要驗證&#x200B;**寵物 ID**，選取「**郵遞服務**」作為&#x200B;**GET /pet/{petId}**，並選取「**寵物 ID**」(在「**輸入**」部分)。
@@ -311,7 +307,7 @@ AEM Forms 為表單提交提供現成可用的成功和錯誤處理常式。這�
 若要使用自訂錯誤處理常式，請使用&#x200B;**[!UICONTROL 規則編輯器調用服務]**&#x200B;行動：
 
 1. 在撰寫模式中開啟最適化表單，選取表單元件，然後選取 **[!UICONTROL 規則編輯器]** 以開啟規則編輯器。
-1. 選擇 **[!UICONTROL 建立]**。
+1. 選取「**[!UICONTROL 建立]**」。
 1. 在「**何時**」規則部分中建立條件。例如，當&#x200B;**[寵物 ID 欄位名稱]**&#x200B;已變更，請從「**選擇狀態**」下拉式清單選取「**已變更**」。
 1. 在「**然後**」部分，從「**選取動作**」下拉式清單中選取「**[!UICONTROL 調用服務]**」。
 1. 選取「**郵遞服務**」，及其自「**輸入**」部分的對應資料綁定。例如，要驗證&#x200B;**寵物 ID**，選取「**郵遞服務**」作為&#x200B;**GET /pet/{petId}**，並選取「**寵物 ID**」(在「**輸入**」部分)。

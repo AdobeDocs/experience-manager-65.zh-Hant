@@ -1,25 +1,21 @@
 ---
 title: 變更介面的色彩配置
-seo-title: Changing the color scheme of the interface
 description: 如何選擇性地修改AEM Forms工作區使用者介面部分的色彩配置。
-seo-description: How to modify the color scheme of AEM Forms workspace user interface portions selectively.
-uuid: 32c32f7a-8271-4d2c-8a1f-ad5ab3c90b83
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 18dab82a-badf-4c32-83a2-cd5cb04cae89
 exl-id: e0a261a2-518b-4984-a5b5-24f0b9222e24
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 3%
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
 # 變更介面的色彩配置 {#changing-the-color-scheme-of-the-interface}
 
-您可以修改AEM Forms工作區使用者介面部分的色彩配置，以符合您的需求。 以下是一些代表性色彩配置自訂的範例。 除了本文章所述的步驟外，另請參閱 [AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md).
+您可以修改AEM Forms工作區使用者介面部分的色彩配置以符合您的需求。 以下是一些代表性色彩配置自訂的範例。 除了本文章中討論的步驟之外，請參閱 [AEM Forms工作區自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md).
 
 ## 頂端導覽列 {#top-navigation-bar}
 
@@ -55,8 +51,8 @@ ht-degree: 3%
 
 ## 類別元件 {#category-component}
 
-類別元件會在左側面板中顯示您工作的各種類別。 若要變更其顏色，請定義背景顏色 `.category` CSS檔案的元素。
+類別元件會在左側面板中顯示您工作的各種類別。 若要變更其顏色，請在下列位置定義背景顏色： `.category` CSS檔案的元素。
 
 ## 任務元件 {#task-component}
 
-任務會顯示在稱為TaskList元件的中間面板中。 若要變更其顏色，請修改樣式表中與.task選取器關聯的樣式。
+工作會顯示在稱為TaskList元件的中間面板中。 若要變更其顏色，請修改樣式表中與.task選取器關聯的樣式。

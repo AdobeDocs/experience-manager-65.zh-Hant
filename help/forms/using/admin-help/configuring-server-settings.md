@@ -1,18 +1,14 @@
 ---
 title: 設定伺服器設定
-seo-title: Configuring Server Settings
 description: 「伺服器設定」頁面提供電子郵件、工作通知和管理員通知設定的存取權。
-seo-description: The Server Settings page provides access to email, task notification and administrator notification settings.
-uuid: 73b51ac0-56e5-4748-bb33-e3986c69eb2d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2623'
+source-wordcount: '2631'
 ht-degree: 0%
 
 ---

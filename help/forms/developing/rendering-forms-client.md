@@ -1,20 +1,16 @@
 ---
 title: 在使用者端轉譯Forms
-seo-title: Rendering Forms at the Client
 description: 最佳化PDF內容的傳送，並使用Forms或Adobe Reader的使用者端轉譯功能，改善Acrobat服務處理網路負載的能力
-seo-description: Optimize the delivery of PDF content and improve the Forms service’s ability to handle network load by using the client-side rendering capability of Acrobat or Adobe Reader
-uuid: 09bcc23d-28b0-473a-87f1-bc17e87620f4
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 08d36e9f-cafc-478e-9781-8fc29ac6262e
 role: Developer
 exl-id: e485980d-f200-46b7-9284-c9996003aa47
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1690'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 0%
 
 您可以最佳化PDF內容的傳送，並使用Forms或Adobe Reader的使用者端轉譯功能，改善Acrobat服務處理網路負載的能力。 此過程稱為在使用者端呈現表單。 若要在使用者端轉譯表單，使用者端裝置（通常為網頁瀏覽器）必須使用Acrobat 7.0或Adobe Reader 7.0或更新版本。
 
-伺服器端指令碼執行導致的表單變更，不會反映在使用者端轉譯的表單中，除非根子表單包含 `restoreState` 屬性已設為 `auto`. 如需有關這個屬性的詳細資訊，請參閱 [Forms Designer.](https://www.adobe.com/go/learn_aemforms_designer_63_tw)
+伺服器端指令碼執行導致的表單變更，不會反映在使用者端轉譯的表單中，除非根子表單包含 `restoreState` 屬性已設為 `auto`. 如需有關這個屬性的詳細資訊，請參閱 [Forms Designer.](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 >[!NOTE]
 >

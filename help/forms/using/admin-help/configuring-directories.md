@@ -1,18 +1,14 @@
 ---
 title: 設定目錄
-seo-title: Configuring directories
 description: 瞭解如何新增、編輯和刪除目錄，以及設定使用者管理以使用虛擬清單檢視。
-seo-description: Learn how to add, edit and delete directories and configure user management to use virtual list view.
-uuid: 0bf1a8a7-c917-4248-9937-d24e31c5ba17
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 1f15f028-aa81-478e-97eb-f83a4dc0418c
 exl-id: 30edcef2-e8fa-403a-9850-b8dfeeb9ac65
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3226'
+source-wordcount: '3229'
 ht-degree: 0%
 
 ---
@@ -39,7 +35,7 @@ ht-degree: 0%
    如果傳回使用者，結果會顯示根據屬性集指派給每個欄位的值。 如果測試因伺服器名稱不存在、授權資訊不正確或屬性不正確而失敗，則會出現下列錯誤訊息：「指定的搜尋條件未傳回任何結果」。 若要判斷失敗的根本原因，請檢閱應用程式伺服器記錄檔中的例外狀況。 按一下「關閉」，然後按一下「下一步」。
 
 1. 選取「群組設定」 ，並視需要設定設定。 (請參閱 [目錄設定](configuring-directories.md#directory-settings).)
-1. 若要確認基本DN和其他已設定的屬性是否收集正確的群組批次，請按一下[測試]。 如果傳回群組，結果會顯示根據屬性集指派給每個欄位的值。 按一下關閉。
+1. 若要確認基本DN和其他已設定的屬性是否收集正確的群組批次，請按一下[測試]。 如果傳回群組，結果會顯示根據屬性集指派給每個欄位的值。 按一下「關閉」。
 
 ### 新增自訂SPI {#add-a-custom-spi}
 

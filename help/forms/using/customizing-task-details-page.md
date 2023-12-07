@@ -1,15 +1,11 @@
 ---
 title: 自訂工作詳細資訊頁面
-seo-title: Customizing the task details page
 description: 如何在AEM Forms工作區中自訂任務詳細資訊頁面，以修改顯示的有關任務的預設資訊。
-seo-description: How-to customize the task details page in AEM Forms workspace to modify the default information displayed about a task.
-uuid: d85fae55-8e66-4595-8560-5485622b6841
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
 exl-id: 48c24442-22d2-4d1a-9462-0aba78340281
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%
@@ -18,7 +14,7 @@ ht-degree: 0%
 
 # 自訂工作詳細資訊頁面 {#customizing-the-task-details-page}
 
-任務詳細資訊頁面包含有關任務及其流程的資訊。 不過，您可以自訂工作詳細資訊頁面以新增或刪除資訊。
+作業詳細資訊頁面包含作業及其流程的資訊。 不過，您可以自訂工作詳細資訊頁面來新增或刪除資訊。
 
 您可以將下列資訊新增至工作詳細資訊頁面：
 
@@ -28,11 +24,11 @@ ht-degree: 0%
 若要自訂工作詳細資訊頁面，請執行下列動作：
 
 1. 追隨 [AEM Forms工作區自訂的一般步驟。](/help/forms/using/generic-steps-html-workspace-customization.md)
-1. 若要顯示任何其他資訊，請將對應的機碼值組新增至 `translation.json` 檔案位於 `todo`區塊> `details`區塊> `app`區塊> [ `required`區塊].
+1. 若要顯示任何其他資訊，請將對應的索引鍵/值組新增至 `translation.json` 檔案位於 `todo`區塊> `details`區塊> `app`區塊> [`required`區塊].
 
-   此 [ `required`區塊] 參考可用的區塊，例如工作資訊的工作區塊、處理資訊的處理區塊，以及擱置工作資訊的目前擱置的工作區塊。
+   此 [`required`區塊] 參考可用的區塊，例如工作資訊的工作區塊、處理資訊的處理區塊，以及擱置工作資訊的目前擱置工作區塊。
 
-   例如，若要在工作詳細資訊頁面中新增關於「需要路由選擇」的資訊，您可以在工作區塊中新增下列索引鍵/值組：
+   例如，若要在工作詳細資訊頁面中新增有關「需要路由選擇」的資訊，您可以在工作區塊中新增下列索引鍵/值組：
 
    ```json
    "todo" : {

@@ -1,18 +1,14 @@
 ---
 title: 為Analytics實作伺服器端頁面命名
-seo-title: Implementing Server-Side Page Naming for Analytics
 description: Adobe Analytics會使用s.pageName屬性來唯一識別頁面，並針對頁面收集資料建立關聯
-seo-description: Adobe Analytics uses the s.pageName property to uniquely identify pages and to associate the data that is collected for the pages
-uuid: 37b92099-0cce-4b2d-b55c-928f636dbd7e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: be2aa297-5b78-4b1d-8ff1-e6a585a177dd
 exl-id: 17a4e4dc-804e-44a9-9942-c37dbfc8016f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -60,7 +56,7 @@ Adobe Analytics使用 `s.pageName` 屬性可唯一識別頁面，並為頁面收
 
 為確保報告連續性，值 `s.pageName` 應該具備下列特性：
 
-* 唯一.
+* 獨特。
 * 穩定。
 * 人類看得懂的。
 

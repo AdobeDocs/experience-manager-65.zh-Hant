@@ -1,16 +1,12 @@
 ---
 title: 元件側載
-seo-title: Component Sideloading
-description: 當網頁設計成簡單的單頁應用程式時，Communities元件旁載會很有用，該應用程式會根據網站訪客的選取內容動態地變更顯示的內容
-seo-description: Communities component sideloading is useful when a web page is designed as a simple, single page app that dynamically alters what is displayed depending on what is selected by the site visitor
-uuid: 8c9a5fde-26a3-4610-bc14-f8b665059015
+description: 當網頁設計成簡單的單頁應用程式時，Communities元件旁載會很有用，該應用程式會根據網站訪客的選取內容來動態地變更顯示內容
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 exl-id: 960e132c-b370-43d1-bd8f-e7d0ded7c0b3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%
@@ -21,9 +17,9 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-當網頁設計成簡單的單頁應用程式時，Communities元件旁載會很有用，該應用程式會根據網站訪客的選取內容動態地變更顯示內容。
+當網頁設計成簡單的單頁應用程式時，Communities元件旁載會很有用，該應用程式會根據網站訪客的選取內容來動態地變更顯示內容。
 
-當Communities元件不存在於頁面範本中，而是隨著網站訪客的選擇而動態新增時，即可完成這項工作。
+當Communities元件不存在於頁面範本中，而是根據網站訪客的選擇以動態方式新增時，即可完成這項作業。
 
 由於社交元件架構(SCF)具有輕量型存在，因此只會註冊初始頁面載入時存在的SCF元件。 若要在頁面載入後註冊動態新增的SCF元件，必須叫用SCF來「側載」元件。
 
@@ -46,21 +42,21 @@ ht-degree: 0%
 
 ## 動態新增元件至DOM {#dynamically-add-component-to-dom}
 
-無論元件是以動態方式包含還是以動態方式載入，都必須先將其新增至DOM。
+無論元件是以動態方式包含或動態載入，必須先將其新增至DOM。
 
 新增SCF元件時，最常使用的標籤是DIV標籤，但也可能使用其他標籤。 因為SCF只會在頁面初次載入時檢查DOM，所以在明確叫用SCF之前，不會注意到DOM的這項新增。
 
-無論使用何種標籤，元素至少都必須包含下列兩個屬性，以符合一般的SCF根元素模式：
+無論使用何種標籤，元素至少都必須包含這兩個屬性，以符合一般的SCF根元素模式：
 
 * **data-component-id**
 
-   新增元件的有效路徑。
+  新增元件的有效路徑。
 
 * **data-scf-component**
 
-   元件的resourceType。
+  元件的resourceType。
 
-以下是新增註解元件的一個範例：
+以下是新增的註釋元件範例：
 
 ```xml
 <div
@@ -75,7 +71,7 @@ ht-degree: 0%
 
 ### 動態包含 {#dynamic-inclusion}
 
-動態包含使用啟動載入要求，該要求會導致SCF檢查DOM並啟動載入頁面上找到的所有SCF元件。
+動態包含使用啟動載入要求，導致SCF檢查DOM並啟動頁面上的所有SCF元件。
 
 若要在頁面載入後隨時初始化SCF元件，只需引發JQuery事件，如下所示：
 
@@ -83,9 +79,9 @@ ht-degree: 0%
 
 ### 動態載入 {#dynamic-loading}
 
-動態載入可讓您控制如何載入SCF元件。
+動態載入可讓您控制載入SCF元件。
 
-您可以使用JavaScript方法指定特定SCF元件來載入，而不需啟動載入在DOM中找到的所有SCF元件：
+您可以使用此JavaScript方法指定特定SCF元件來載入，而不需啟動載入在DOM中找到的所有SCF元件：
 
 `SCF.addComponent(document.getElementById(*someId*));`
 

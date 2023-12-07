@@ -1,20 +1,16 @@
 ---
 title: 內容片段範本
-seo-title: Content Fragment Templates
 description: 建立內容片段時會選取範本，並為新片段提供基本結構、元素和變數
-seo-description: Templates are selected when creating a content fragmen and provide the new fragment with the basic structure, element, and variation
-uuid: d147bac8-b710-40ed-9664-decb5ffcf8e7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
 exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 5%
+source-wordcount: '677'
+ht-degree: 3%
 
 ---
 
@@ -121,7 +117,7 @@ conf
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>必要<br /> </p> </td>
+     <td><p><code>String</code></p> <p>必填<br /> </p> </td>
      <td>範本的標題(顯示在 <strong>建立片段</strong> 精靈)。</td>
     </tr>
     <tr>
@@ -185,12 +181,12 @@ conf
     </tr>
     <tr>
      <td><code>defaultContent</code></td>
-     <td><p><code>String</code></p> <p>可選</p> <p>預設: ""</p> </td>
+     <td><p><code>String</code></p> <p>可選</p> <p>預設值：「」</p> </td>
      <td>元素的初始內容；僅用於 <code>precreateElements</code><i> = </i><code>true</code></td>
     </tr>
     <tr>
      <td><code>initialContentType</code></td>
-     <td><p><code>String</code></p> <p>可選</p> <p>預設: <code>text/html</code></p> </td>
+     <td><p><code>String</code></p> <p>可選</p> <p>預設： <code>text/html</code></p> </td>
      <td><p>元素的初始內容型別；僅用於 <code>precreateElements</code><i> = </i><code>true</code>；目前支援：</p>
       <ul>
        <li><code>text/html</code></li>
@@ -245,7 +241,7 @@ conf
     </tr>
     <tr>
      <td><code>jcr:desciption</code></td>
-     <td><p><code>String</code></p> <p>可選</p> <p>預設: ""</p> </td>
+     <td><p><code>String</code></p> <p>可選</p> <p>預設值：「」</p> </td>
      <td>提供變化描述的文字 <span>(顯示在片段編輯器的 <strong>變數</strong> 標籤（左側邊欄）。</code></td>
     </tr>
    </tbody>

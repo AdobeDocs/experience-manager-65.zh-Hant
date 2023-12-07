@@ -1,19 +1,15 @@
 ---
 title: AEM Forms的架構和部署拓撲
-seo-title: Architecture and deployment topologies for AEM Forms
 description: AEM Forms的架構詳細資料，以及建議新老的AEM客戶和從LiveCycleES4升級至AEM Forms的客戶使用的拓撲。
-seo-description: Architecture details for AEM Forms and recommended topologies for new and existing AEM customers and customers upgrading from LiveCycle ES4 to AEM Forms.
-uuid: 90baa57a-4785-4b49-844c-a44717d3c12d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
-discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
 role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2478'
+source-wordcount: '2469'
 ht-degree: 0%
 
 ---

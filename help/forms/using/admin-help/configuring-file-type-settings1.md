@@ -1,17 +1,13 @@
 ---
 title: 正在設定檔案型別設定
-seo-title: Configuring file type settings
 description: 瞭解如何設定檔案型別設定。
-seo-description: Learn how to configure file type settings.
-uuid: 58a05500-ffbb-4fa2-8ae1-8ac80ab2d099
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '6167'
+source-wordcount: '6161'
 ht-degree: 0%
 
 ---
@@ -253,7 +249,7 @@ PDF Generator支援縮小PDF檔案大小的功能。 是否使用這些設定或
 
    * 如有必要，請從 **字型來源** 下拉式功能表。 此下拉式功能表會列出中指定的字型目錄。 **首頁>設定>核心系統>核心設定**.
    * 從「 」中選取一個或多個字型 **可用的字型** 清單並按一下 **新增**. 這些字型會新增至 **要取消嵌入的字型** 清單。
-   * 如果要取消嵌入Forms伺服器上不存在的某些字型，請在 **新增字型以取消嵌入** 方塊。 按一下&#x200B;**「新增」**。
+   * 如果要取消嵌入Forms伺服器上不存在的某些字型，請在 **新增字型以取消嵌入** 方塊。 按一下 **新增**.
 
    >[!NOTE]
    >
@@ -412,8 +408,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **試用OpenOffice做為遞補轉換器**：選取此選項且使用Microsoft Excel的轉換失敗或達到指定的逾時限制時，PDF Generator會使用OpenOffice嘗試轉換。 如果使用OpenOffice的轉換失敗或達到指定的逾時限制，則會將例外寫入記錄檔。
 
-**副檔名**：指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設為 `xls,xlsx`。
-請勿在擴充功能前加上句點或空格。
+**副檔名**：指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設值為 `xls,xlsx`. 請勿在擴充功能前加上句點或空格。
 
 **建立PDF/A-1a相容的檔案**：強制使用PDF/A-1b：2005RGBAdobe PDF設定。
 
@@ -475,8 +470,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 這些選項決定Microsoft專案檔案的轉換方式。 如需有關存取這些選項的指示，請參閱 [建立或編輯檔案型別設定](#create-or-edit-file-type-settings).
 
-1. **[!UICONTROL 副檔名：]** 指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設為 `mpp`。
-請勿在擴充功能前加上句點或空格。
+1. **[!UICONTROL 副檔名：]** 指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設值為 `mpp`. 請勿在擴充功能前加上句點或空格。
 
 1. **[!UICONTROL 轉換檔案資訊]**：從來源檔案的「屬性」對話方塊新增檔案資訊，包括標題、主旨、作者、關鍵字、經理、公司、類別和註解。 依預設，會選取此選項。
 1. **[!UICONTROL 將來源檔案附加至Adobe PDF]**：將來源檔案作為附件新增至PDF檔案。
@@ -489,8 +483,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 試用OpenOffice做為遞補轉換器]**：選取此選項且使用Microsoft Word的轉換失敗或達到指定的逾時限制時，PDF Generator會嘗試使用OpenOffice進行轉換。 如果使用OpenOffice的轉換失敗或達到指定的逾時限制，則會將例外寫入記錄檔。
 
-**[!UICONTROL 副檔名]**：指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設為 `doc,docx,rtf,txt`。
-請勿在擴充功能前加上句點或空格。
+**[!UICONTROL 副檔名]**：指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設值為 `doc,docx,rtf,txt`. 請勿在擴充功能前加上句點或空格。
 
 **[!UICONTROL 轉換檔案資訊]**：從來源檔案的「屬性」對話方塊新增檔案資訊，包括標題、主旨、作者、關鍵字、經理、公司、類別和註解。 依預設，會選取此選項。
 
@@ -548,15 +541,13 @@ styleName1=level1[，styleName2=level2...]
 
 這些選項決定Microsoft Publisher檔案的轉換方式。 如需有關存取這些選項的指示，請參閱 [建立或編輯檔案型別設定](#create-or-edit-file-type-settings).
 
-**[!UICONTROL 副檔名]**：指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設為 `pub`。
-請勿在擴充功能前加上句點或空格。
+**[!UICONTROL 副檔名]**：指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設值為 `pub`. 請勿在擴充功能前加上句點或空格。
 
 ## AutoCAD設定（僅限Windows） {#autocad-settings-windows-only}
 
 這些選項決定AutoCAD檔案的轉換方式。 如需有關存取這些選項的指示，請參閱 [建立或編輯檔案型別設定](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings).
 
-**[!UICONTROL 副檔名]**：指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設為 `dwg`。
-請勿在擴充功能前加上句點或空格。
+**[!UICONTROL 副檔名]**：指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設值為 `dwg`. 請勿在擴充功能前加上句點或空格。
 
 **[!UICONTROL 轉換檔案資訊]**：從來源檔案的「屬性」對話方塊新增檔案資訊，包括標題、主旨、作者、關鍵字、經理、公司、類別和註解。 依預設，會選取此選項。
 
@@ -592,8 +583,7 @@ styleName1=level1[，styleName2=level2...]
 
 **試用PDFMaker做為遞補轉換器**：選取此選項且使用OpenOffice的轉換失敗或達到指定的逾時限制時，PDF Generator會嘗試使用PDFMaker進行轉換。 如果使用PDFMaker的轉換失敗或達到指定的逾時限制，則會將例外寫入記錄檔。
 
-**副檔名**：指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設為 `odt,odp,ods,odg,odf,sxw,sxi,sxd`。
-請勿在擴充功能前加上句點或空格。
+**副檔名**：指定此應用程式可接受的檔案型別副檔名（以逗號分隔）。 預設值為 `odt,odp,ods,odg,odf,sxw,sxi,sxd`. 請勿在擴充功能前加上句點或空格。
 
 **Range**：轉換所有頁面，或指定特定頁面或頁面範圍。 如果未定義頁面範圍，則會轉換所有頁面。 若要匯出一定範圍的頁面，請使用格式3-6。 若要匯出單一頁面，請使用格式7；9；11。 您可以使用3-6；8；10；12等格式匯出頁面範圍和單一頁面的組合。
 
@@ -627,7 +617,7 @@ styleName1=level1[，styleName2=level2...]
 * Corel WordPerfect： `wpd`
 * AdobePageMaker： `pmd, pm6, p65, pm`
 * Adobe FrameMaker： `fm`
-* Adobe Photoshop: `psd`
+* Adobe Photoshop： `psd`
 
 可能需要自訂對這些檔案型別的支援。 如需詳細資訊，請參閱以下主題中的「新增對其他原生檔案格式的支援」： [使用AEM表單進行程式設計](https://www.adobe.com/go/learn_aemforms_programming_62).
 

@@ -1,18 +1,16 @@
 ---
 title: 範本
 description: 建立作為新頁面基礎的頁面時，會使用範本。
-uuid: 6fa3dafc-dfa1-42d8-b296-d4be57449411
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 1%
+source-wordcount: '924'
+ht-degree: 0%
 
 ---
 
@@ -64,7 +62,7 @@ AEM現在提供兩種基本型別的範本以用於建立頁面：
 
 ### 靜態範本 {#static-templates}
 
-靜態範本:
+靜態範本：
 
 * 必須由您的開發人員定義和設定。
 * 已推出許多版本的AEM原始範本系統。

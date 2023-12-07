@@ -1,15 +1,11 @@
 ---
 title: 建立字母
-seo-title: Create Letter
 description: 此主題提供建立信件、新增資料模組及附件以及在「通訊管理」中預覽信件的步驟。
-seo-description: This topic gives you the steps to create a letter, add data modules and attachments to it, and preview it in Correspondence Management.
-uuid: b5cdbf01-db85-4ff8-9fda-1489542bffef
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
-discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '3982'
 ht-degree: 2%
@@ -307,7 +303,7 @@ ht-degree: 2%
    1. **刪除資產**：選取資產旁的「刪除」圖示即可刪除資產。
    1. **預覽資產**：選取顯示預覽圖示( ![showpreview](assets/showpreview.png))。
 
-1. 選取 **下一個**.
+1. 選取&#x200B;**「下一步」**。
 1. 「資料」頁面詳細說明範本中如何使用資料欄位和變數。 資料可以連結至資料來源，例如資料字典或使用者輸入。 每個欄位會定義資料字典對應資料的屬性，或使用者輸入欄位所顯示的標題。
 
    連結：

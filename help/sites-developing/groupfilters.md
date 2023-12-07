@@ -1,20 +1,16 @@
 ---
 title: 建立裝置群組篩選器
-seo-title: Creating Device Group Filters
 description: 建立裝置群組篩選器以定義一組裝置功能需求
-seo-description: Create a device group filter to define a set of device capability requirements
-uuid: 30c0699d-2388-41b5-a062-f5ea9d6f08bc
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: mobile-web
 content-type: reference
-discoiquuid: 9fef1f91-a222-424a-8e20-3599bedb8b41
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -177,13 +173,13 @@ getTitle和getDescription方法傳回的String值會包含在裝置群組摘要�
 
 如果您使用Maven建置應用程式，以下POM程式碼將相當實用。 POM會參照數個必要的外掛程式和相依性。
 
-**外掛程式:**
+**外掛程式：**
 
 * Apache Maven編譯器外掛程式：從原始程式碼編譯Java類別。
 * Apache Felix Maven套件組合外掛程式：建立套件組合和資訊清單
 * Apache Felix Maven SCR外掛程式：建立元件描述元檔案並設定服務元件資訊清單標頭。
 
-**相依性:**
+**相依性：**
 
 * `cq-wcm-mobile-api-5.5.2.jar`：提供DeviceGroup和DeviceGroupFilter介面。
 

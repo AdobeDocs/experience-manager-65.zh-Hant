@@ -1,17 +1,13 @@
 ---
 title: 互動式通訊概述
-seo-title: Interactive Communications Overview
 description: 本文包括概述、範例使用案例、建立工作流程，以及互動式通訊與信函之間的差異。
-seo-description: Interactive Communication key capabilities, sample use cases, creation workflow, and differences between Interactive Communication and Correspondence Management
-uuid: a06b4ac7-ca20-4d6d-b2b7-87b21e2f5cf9
 contentOwner: gtalwar
 topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '487'
 ht-degree: 7%
 
 ---
@@ -91,7 +87,7 @@ ht-degree: 7%
    <td>資料字典 </td>
   </tr>
   <tr>
-   <td>本地化</td>
+   <td>本土化</td>
    <td>不支援表單資料模型</td>
    <td>在資料字典中支援</td>
   </tr>

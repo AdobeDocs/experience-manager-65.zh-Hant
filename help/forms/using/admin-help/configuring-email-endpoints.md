@@ -1,16 +1,14 @@
 ---
 title: 設定電子郵件端點
 description: 瞭解如何設定電子郵件端點。 電子郵件端點可讓您透過傳送一或多個檔案至指定的電子郵件帳戶來叫用服務。
-uuid: d47bb45b-0e0e-43ca-9e25-e347d0e60206
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: dcf15c42-9ec6-4d1c-ad41-083aa0b8c7ae
 exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3775'
+source-wordcount: '3796'
 ht-degree: 0%
 
 ---
@@ -74,7 +72,7 @@ ht-degree: 0%
 
 **重複間隔：** 重複目錄輪詢的次數。 如果未在端點設定中指定此值，則預設的重複間隔為秒。 預設值為 10。此值不能小於10。
 
-**重複計數：** 輪詢輸入目錄的次數。 如果未在端點設定中指定此值，則使用預設的重複計數。 值為–1表示無限掃描目錄。 預設值為–1。
+**重複計數：** 輪詢輸入目錄的次數。 如果未在端點設定中指定此值，則使用預設的重複計數。 值為–1表示無限掃描目錄。 預設值為 -1。
 
 **工作開始時的延遲：** 預設值（以秒為單位），代表作業開始掃描端點前的延遲時間。 預設值為 0。
 
@@ -148,7 +146,7 @@ ht-degree: 0%
 
 **Cron運算式：** 如果電子郵件必須使用cron運算式排程，請輸入cron運算式。
 
-**重複計數：** 電子郵件端點掃描資料夾或目錄的次數。 值–1表示無限掃描。 預設值為–1。
+**重複計數：** 電子郵件端點掃描資料夾或目錄的次數。 值–1表示無限掃描。 預設值為 -1。
 
 **重複間隔：** 接收者用來檢查內送郵件的掃描速率。
 

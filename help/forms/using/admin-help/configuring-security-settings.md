@@ -1,17 +1,15 @@
 ---
 title: 正在設定安全性設定
 description: 瞭解如何設定安全性設定。 您可以透過限制存取來保護PDF檔案。 您可以加密、認證或密碼保護檔案。
-uuid: 9747f268-3551-4064-8dba-e1de4a577843
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: a89ab508-173f-4b1c-88d9-ef944af4d9ae
 feature: PDF Generator
 exl-id: be076477-2681-4570-953d-6c44d3c30843
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---

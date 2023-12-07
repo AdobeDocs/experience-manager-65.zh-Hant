@@ -1,19 +1,15 @@
 ---
 title: 變更介面的字型
-seo-title: Changing the font on the interface
 description: 如何選擇性地變更使用者介面上的字型。
-seo-description: How to change the fonts on the user interface selectively.
-uuid: 421fdd24-441a-4092-8c52-f3ed3d5d5671
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 9fcb80b4-cbc2-48a5-afd1-4f3bc50bc503
 docset: aem65
 exl-id: 226f70f0-8eb4-4724-b496-5801dc6b436f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '272'
 ht-degree: 1%
 
 ---
@@ -33,7 +29,7 @@ ht-degree: 1%
 1. 透過存取登入CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. 執行下列任一項作業：
 
-   1. 若要變更現有樣式中的font-family，請在/apps/ws/css的newStyle.css檔案中新增下列內容。
+   1. 若要變更現有樣式中的font-family，請在/apps/ws/css的newStyle.css檔案中新增下列專案。
 
       ```css
       #topnav a {
@@ -41,7 +37,7 @@ ht-degree: 1%
       }
       ```
 
-   1. 若要為HTML元素新增字型系列內嵌，請複製 `/libs/ws/js/runtime/templates/appnavigation.html` 檔案至 `/apps/ws/js/runtime/templates/appnavigation.html`.
+   1. 若要為HTML元素新增字型系列內嵌，請複製 `/libs/ws/js/runtime/templates/appnavigation.html` 檔案到 `/apps/ws/js/runtime/templates/appnavigation.html`.
 
       更新/apps/ws/js/runtime/templates/appnavigation.html檔案，如下所示：
 
@@ -62,7 +58,7 @@ ht-degree: 1%
       }
       ```
 
-      若要為HTML元素新增字型系列內嵌，請在/apps/ws/js/runtime/templates的appnavigation.html檔案中新增下列內容。
+      若要為HTML元素新增字型系列內嵌，請在/apps/ws/js/runtime/templates的appnavigation.html檔案中新增下列專案。
 
       ```jsp
       <div id="topnav" class="myNewFontStyle">

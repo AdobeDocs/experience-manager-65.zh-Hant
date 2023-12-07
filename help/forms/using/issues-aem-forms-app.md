@@ -1,29 +1,25 @@
 ---
 title: 疑難排解AEM Forms應用程式
-seo-title: Troubleshoot AEM Forms app
 description: 瞭解AEM Forms應用程式的常見問題以及如何疑難排解。
-seo-description: Learn about common issues with AEM Forms app and how to troubleshoot them.
-uuid: a5cc3065-0ebf-48c0-a8fe-f1061632ca90
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 2f45a965-590b-43b1-95c6-df4b74ad15b9
 exl-id: caec5fc3-db52-4bf5-8eb2-17e5189ab819
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 1%
+source-wordcount: '675'
+ht-degree: 0%
 
 ---
 
 # 疑難排解AEM Forms應用程式 {#troubleshoot-aem-forms-app}
 
-本文介紹建置AEM Forms應用程式時可能顯示的錯誤訊息，以及解決這些訊息的步驟。
+本文會說明建置AEM Forms應用程式時可能顯示的錯誤訊息，以及解決這些問題的步驟。
 
-本文章節包括：
+本文的章節包括：
 
 * [iOS使用者的附件遺失](/help/forms/using/issues-aem-forms-app.md#attachment-loss-for-ios-users)
-* [HTML5工作區使用者提交的表單草稿在入口網站上不可見](/help/forms/using/issues-aem-forms-app.md#html-form-drafts-submitted-by-workspace-users-are-not-visible-on-the-portal)
+* [Workspace使用者提交的HTML5表單草稿在入口網站上不可見](/help/forms/using/issues-aem-forms-app.md#html-form-drafts-submitted-by-workspace-users-are-not-visible-on-the-portal)
 * [HTML5表單（未快取）無法載入AEM Forms應用程式](/help/forms/using/issues-aem-forms-app.md#html-forms-not-cached-fail-to-load-in-aem-forms-app)
 * [AEM Forms無法在Windows上同步](/help/forms/using/issues-aem-forms-app.md#aem-forms-do-not-sync-on-windows)
 * [不支援的Gradle版本](/help/forms/using/issues-aem-forms-app.md#unsupported-version-of-gradle)
@@ -31,29 +27,29 @@ ht-degree: 1%
 
 ## iOS使用者的附件遺失 {#attachment-loss-for-ios-users}
 
-iOS適用的AEM Forms應用程式設定為在OSGi上與AEM Forms同步，僅支援欄位層級附件。 所有附件都必須有唯一的名稱。 如果多個附件具有相同的名稱，則只會保留一個附件，而其他具有相同名稱的所有附件都會遺失。 執行以下步驟，防止iOS裝置上的使用者發生資料遺失：
+iOS適用的AEM Forms應用程式設定為在OSGi上與AEM Forms同步，僅支援欄位層級附件。 所有附件必須具有唯一的名稱。 如果多個附件具有相同的名稱，則只會保留一個附件，而其他名稱相同的附件會遺失。 執行以下步驟，防止iOS裝置上的使用者發生資料遺失：
 
-1. 在連線的伺服器上，導覽至 **Adobe Experience Manager >工具>作業> Web Console**.
+1. 在連線的伺服器上，瀏覽至 **Adobe Experience Manager >工具>作業> Web主控台**.
 1. 尋找並按一下 **[!UICONTROL 最適化表單和互動式通訊Web頻道設定]**.
 1. 在 [!UICONTROL 最適化表單和互動式通訊Web頻道設定] 對話方塊，啟用 **將檔案名稱設為唯一**.
 
-   若 **將檔案名稱設為唯一** 設定已停用，如果使用者嘗試提交具有多個附件的調適型表單，將會遇到資料遺失。
+   如果 **將檔案名稱設為唯一** 設定已停用，如果使用者嘗試提交具有多個附件的調適型表單，將會遇到資料遺失的問題。
 
 1. 按一下「**儲存**」。
 
-## HTML5工作區使用者提交的表單草稿在入口網站上不可見 {#html-form-drafts-submitted-by-workspace-users-are-not-visible-on-the-portal}
+## Workspace使用者提交的HTML5表單草稿在入口網站上不可見 {#html-form-drafts-submitted-by-workspace-users-are-not-visible-on-the-portal}
 
-適用於AEM Forms應用程式中啟用的HTML5表單，具有 **另存為草稿** HTML呈現設定檔，工作區使用者看不到已儲存的草稿。 若要檢視工作區使用者在入口網站上提交的HTML5表單已儲存草稿，請執行下列步驟：
+適用於在AEM Forms應用程式中啟用的HTML5表單，具有 **另存為草稿** HTML轉譯器設定檔，工作區使用者看不到已儲存的草稿。 若要檢視由工作區使用者在入口網站上提交的HTML5表單已儲存草稿，請執行下列步驟：
 
 1. 開啟CRXDE並使用管理員憑證登入。
 
-   URL: `https://<server>:<port>/lc/crx/de/index.jsp`
+   URL： `https://<server>:<port>/lc/crx/de/index.jsp`
 
 1. 在CRXDE的根路徑中，按一下「存取控制」下的「存取控制清單」 **+**.
 1. 在 **新增專案** 對話方塊中，按一下「主參與者」欄位中的群組搜尋按鈕。
 1. 在「選取主參與者」對話方塊的「名稱」欄位中，輸入 `PERM_WORKSPACE_USER` 並按一下 **搜尋**.
 1. 選取 `PERM_WORKSPACE_USER` 群組，並按一下 **確定**.
-1. 在新增專案對話方塊中， `PERM_WORKSPACE_USER` 在「主體」欄位中選取了群組。
+1. 在新增專案對話方塊中， `PERM_WORKSPACE_USER` 在「主體」欄位中選取群組。
 
    啟用 `jcr:read` 使用者群組的許可權。
 
@@ -84,9 +80,9 @@ iOS適用的AEM Forms應用程式設定為在OSGi上與AEM Forms同步，僅支�
 
 **錯誤訊息：** 專案使用不支援的Gradle版本。
 
-當您在Android Studio中建置AEM Forms應用程式時，會顯示錯誤訊息。 發生此問題是因為系統支援不支援的Gradle版本。
+在Android Studio中建置AEM Forms應用程式時會顯示錯誤訊息。 發生此問題是因為系統支援不支援的Gradle版本。
 
-**解析度：** 按一下 **修正Gradle包裝並重新匯入專案** 以解決問題。
+**解析度：** 按一下 **修正Gradle包裝函式並重新匯入專案** 以解決問題。
 
 ![gradle_unsupported_version](assets/gradle_unsupported_version.png)
 

@@ -5,11 +5,10 @@ contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1609'
 ht-degree: 0%
 
 ---
@@ -201,10 +200,10 @@ analytics.sitecatalyst.js檔案中的程式碼(包括Adobe Analytics s_code.js�
 
 1. 用滑鼠右鍵按一下 `components` 資料夾，然後按一下「建立>建立元件」。 指定下列屬性值：
 
-   * 標籤: `sitecatalyst`
-   * 標題: `sitecatalyst`
-   * 超級類型: `/libs/cq/analytics/components/sitecatalyst`
-   * 群組: `hidden`
+   * 標籤： `sitecatalyst`
+   * 標題： `sitecatalyst`
+   * 超級型別： `/libs/cq/analytics/components/sitecatalyst`
+   * 群組： `hidden`
 
 1. 重複按「下一步」，直到啟用「確定」按鈕，然後按一下「確定」。
 

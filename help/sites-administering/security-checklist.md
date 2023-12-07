@@ -1,21 +1,17 @@
 ---
 title: 安全性檢查清單
-seo-title: Security Checklist
 description: 瞭解設定和部署AEM時的各種安全性考量事項。
-seo-description: Learn about the various security considerations when configuring and deploying AEM.
-uuid: 8e293316-4177-4271-87c6-9dc1a2e85a07
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3004'
-ht-degree: 1%
+source-wordcount: '2959'
+ht-degree: 0%
 
 ---
 
@@ -104,7 +100,7 @@ AEM管理員帳戶的密碼可透過以下方式變更： [Granite作業 — 使
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
-1. 選取&#x200B;**儲存**。
+1. 選取「**儲存**」。
 
 ### 實作自訂錯誤處理常式 {#implement-custom-error-handler}
 
@@ -257,7 +253,7 @@ AEM 6.1隨附有助於抵禦跨網站請求偽造攻擊的機制，稱為 **CSRF
 
 ### 減少阻斷服務(DoS)攻擊 {#mitigate-denial-of-service-dos-attacks}
 
-阻斷服務 (DoS) 攻擊指的是嘗試讓電腦資源無法提供給其目標使用者使用。此攻擊通常是透過資源超載完成的，例如：
+阻斷服務(DoS)攻擊是指嘗試讓電腦資源無法提供給其目標使用者使用。 此攻擊通常是透過資源超載完成的，例如：
 
 * 來自外部來源的大量請求。
 * 系統無法成功傳遞的資訊請求。

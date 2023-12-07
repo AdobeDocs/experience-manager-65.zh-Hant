@@ -1,21 +1,17 @@
 ---
 title: 社群功能
-seo-title: Community Functions
 description: 瞭解如何存取社群功能主控台
-seo-description: Learn how to access the Community Functions console
-uuid: d3d70134-f318-4709-a673-b01a3467d980
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 role: Admin
 exl-id: 2395c895-c611-43ac-abb6-c2bc4b4a41f4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2220'
-ht-degree: 6%
+source-wordcount: '2215'
+ht-degree: 2%
 
 ---
 
@@ -106,7 +102,7 @@ ht-degree: 6%
 
 * [標題和URL設定](#title-and-url-settings)
 
-* **允許有特殊權限的成員**
+* **允許有特殊許可權的成員**
 
   如果選取，則部落格僅允許擁有特殊許可權的成員透過選擇 [有特殊許可權的成員群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許建立所有社群成員。 預設為取消選取。
 
@@ -136,7 +132,7 @@ ht-degree: 6%
 
   如果選取，論壇允許將主題回覆釘選到評論清單的開頭。 預設為已選取。
 
-* **允許有特殊權限的成員**
+* **允許有特殊許可權的成員**
 
   如果選取，則部落格僅允許擁有特殊許可權的成員透過選擇 [有特殊許可權的成員群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許建立所有社群成員。 預設為取消選取。
 
@@ -174,7 +170,7 @@ ht-degree: 6%
 
 #### 設定功能詳細資料 {#configuration-function-details-2}
 
-![forum-component1](assets/forum-component1.png)
+![論壇 — 元件1](assets/forum-component1.png)
 
 * [標題和URL設定](#title-and-url-settings)
 
@@ -182,7 +178,7 @@ ht-degree: 6%
 
   如果選取，論壇允許將主題回覆釘選到評論清單的開頭。 預設為已選取。
 
-* **允許有特殊權限的成員**
+* **允許有特殊許可權的成員**
 
   如果選取，論壇僅允許有特殊許可權的成員透過選擇 [有特殊許可權的成員群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許所有社群成員張貼。 預設為取消選取。
 
@@ -224,7 +220,7 @@ ht-degree: 6%
 
   一個下拉式清單，可讓您選取一或多個已啟用的群組範本，新社群群組（在發佈環境中）的未來建立者可從中進行選擇。
 
-* **允許有特殊權限的成員**
+* **允許有特殊許可權的成員**
 
   如果選取，論壇僅允許有特殊許可權的成員透過選擇 [有特殊許可權的成員安全性群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許所有社群成員張貼。 預設為取消選取。
 
@@ -243,7 +239,7 @@ ht-degree: 6%
 
 * [標題和URL設定](#title-and-url-settings)
 
-* **允許有特殊權限的成員**
+* **允許有特殊許可權的成員**
 
   如果選取，論壇僅允許有特殊許可權的成員透過選擇 [有特殊許可權的成員安全性群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許所有社群成員張貼。 預設為取消選取。
 
@@ -306,7 +302,7 @@ QnA函式是具有 [QnA元件](/help/communities/working-with-qna.md) 針對標�
 
   如果選取，論壇允許將主題回覆釘選到評論清單的開頭。 預設為已選取。
 
-* **允許有特殊權限的成員**
+* **允許有特殊許可權的成員**
 
   如果選取，QnA論壇僅允許有特殊許可權的成員透過選擇 [有特殊許可權的成員群組](/help/communities/users.md#privileged-members-group). 如果未選取，則允許所有社群成員張貼。 預設為取消選取。
 

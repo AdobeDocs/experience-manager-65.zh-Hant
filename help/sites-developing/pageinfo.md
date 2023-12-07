@@ -1,18 +1,14 @@
 ---
 title: 取得JSON格式的頁面資訊
-seo-title: Obtaining Page Information in JSON Format
 description: 若要取得頁面資訊，請傳送要求至PageInfo servlet以取得JSON格式的頁面中繼資料
-seo-description: To obtain the page information, send a request to the PageInfo servlet to obtain the page metadata in JSON format
-uuid: fb4f56b9-55e2-4622-a0d1-a86d6f2cce86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 505bf3e3-ce3c-40aa-9619-e1b9f6634deb
 exl-id: 7c856e87-9f90-435d-aceb-994f10ea6f50
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '931'
 ht-degree: 1%
 
 ---
@@ -539,7 +535,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 建立自訂頁面資訊提供者服務，新增您的應用程式可輕鬆取得的頁面中繼資料。
 
-1. 實作 `com.day.cq.wcm.api.PageInfoProvider` 介面。 
+1. 實作 `com.day.cq.wcm.api.PageInfoProvider` 介面。
 1. 將類別捆綁並部署為OSGi服務。
 1. 在應用程式中建立頁面元件。 使用 `foundation/components/page` 作為 `sling:resourceSuperType` 屬性。
 

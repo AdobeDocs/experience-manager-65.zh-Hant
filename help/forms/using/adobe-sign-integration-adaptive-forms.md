@@ -1,16 +1,13 @@
 ---
 title: 將Adobe Sign與AEM Forms整合
-seo-title: Integrate Adobe Sign with AEM Adaptive Forms
 description: 瞭解如何為您的AEM Adaptive Forms設定Adobe Sign。 Adobe Sign可改善法律、銷售、薪資、人力資源管理及許多領域的工作流程與處理檔案。
-uuid: e5049775-fb6c-4228-9823-e6a2811460da
 contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1981'
 ht-degree: 17%

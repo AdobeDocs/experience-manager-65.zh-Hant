@@ -1,16 +1,12 @@
 ---
 title: 動態選取使用者或群組，以進行AEM Forms為中心的工作流程步驟
-seo-title: Dynamically select a user or group for AEM Forms-centric workflow steps
 description: 瞭解如何在執行階段為AEM Forms工作流程選取使用者或群組。
-seo-description: Learn how to select a user or group for an AEM Forms workflow at the runtime.
-uuid: 19dcbda4-61af-40b3-b10b-68a341373410
 content-type: troubleshooting
 topic-tags: publish
-discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 exl-id: 3c48660e-5e4f-4615-82d4-9f1f285c2a39
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '873'
 ht-degree: 1%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 1%
 
 ECMAScript是一種指令碼語言。 用於使用者端指令碼和伺服器應用程式。 執行下列步驟，使用ECMAScript動態選取使用者或群組：
 
-1. 開啟 CRXDE Lite。URL為 `https://'[server]:[port]'/crx/de/index.jsp`
+1. 開啟CRXDE Lite。 URL為 `https://'[server]:[port]'/crx/de/index.jsp`
 1. 在下列路徑建立副檔名為.ecma的檔案。 如果路徑（節點結構）不存在，請建立它：
 
    * （指派工作步驟的路徑） `/apps/fd/dashboard/scripts/participantChooser`
@@ -47,7 +43,7 @@ ECMAScript是一種指令碼語言。 用於使用者端指令碼和伺服器應
       |--- |--- |--- |
       | jcr:title | 字串 | 指定指令碼的名稱。 例如，選擇最近的欄位代理。 此名稱會顯示在指派任務和簽署檔案步驟中。 |
 
-   1. 按一下&#x200B;**「儲存全部」**。指令碼將可以在AEM Workflow的元件中選擇。
+   1. 按一下 **全部儲存**. 指令碼將可以在AEM Workflow的元件中選擇。
 
       ![指令碼](assets/script.png)
 

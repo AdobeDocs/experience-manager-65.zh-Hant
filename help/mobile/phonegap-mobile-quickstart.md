@@ -1,16 +1,12 @@
 ---
 title: 行動快速入門
-seo-title: Mobile Quickstart
-description: 請依照本頁面的說明了解AEM Verify應用程式。 AEM Verify應用程式可在任何iOS或Android行動裝置上快速輕鬆地執行AEM行動應用程式。
-seo-description: Follow this page to learn about AEM Verify app. The AEM Verify app is a quick and an easy way to run your AEM mobile applications on any iOS or Android mobile device.
-uuid: afae4b9d-f835-4d83-b758-39a0d7741510
+description: 請依照本頁面的說明了解AEM Verify應用程式。 AEM Verify應用程式可讓您在任何iOS或Android行動裝置上快速輕鬆地執行AEM行動應用程式。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
-discoiquuid: 2de6bafb-47cf-4aca-84a3-0cace2858d5c
 exl-id: a7cfe77b-c073-4bed-b81a-503fb4445c96
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 2%
@@ -21,7 +17,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
 
 ## AEM驗證應用程式 {#aem-verify-app}
 

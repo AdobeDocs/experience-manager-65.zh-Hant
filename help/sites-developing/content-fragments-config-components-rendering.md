@@ -1,18 +1,14 @@
 ---
 title: 轉譯專用內容片段設定元件
-seo-title: Content Fragments Configuring Components for Rendering
 description: 轉譯專用內容片段設定元件
-seo-description: Content Fragments Configuring Components for Rendering
-uuid: 3f5aaf36-e6a7-4a3c-b305-e35ebcc98d0d
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '463'
 ht-degree: 6%
 
 ---
@@ -106,7 +102,7 @@ OSGi設定是：
   </tr>
   <tr>
    <td><code>paragraphRange</code></td>
-   <td><p>字串屬性，定義段落範圍(若在 <em>單一元素轉譯模式</em>.</p> <p>格式:</p>
+   <td><p>字串屬性，定義段落範圍(若在 <em>單一元素轉譯模式</em>.</p> <p>格式：</p>
     <ul>
      <li><code>1</code> 或 <code>1-3</code> 或 <code>1-3;6;7-8</code> 或 <code>*-3;5-*</code></li>
      <li>只有在 <code>paragraphScope</code> 設為 <code>range</code></li>
@@ -114,7 +110,7 @@ OSGi設定是：
   </tr>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>字串屬性，定義在中時如何輸出段落 <em>單一元素轉譯模式</em>.</p> <p>值:</p>
+   <td><p>字串屬性，定義在中時如何輸出段落 <em>單一元素轉譯模式</em>.</p> <p>值：</p>
     <ul>
      <li><code>all</code> ：呈現所有段落</li>
      <li><code>range</code> ：呈現以下專案提供的段落範圍： <code>paragraphRange</code></li>

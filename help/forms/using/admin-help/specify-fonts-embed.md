@@ -1,14 +1,12 @@
 ---
 title: 指定要嵌入的字型
 description: 瞭解如何指定要嵌入最適化表單的字型。 您可以指定將哪些字型嵌入或絕不嵌入到Forms服務產生的表單中。
-uuid: 02da5c00-0467-4633-a076-c36725cbfbad
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 180f0448-d507-4b6d-bb8a-d12a434e1250
 exl-id: 02c28b2c-0cab-4431-9fab-fa332c96e092
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%

@@ -1,20 +1,16 @@
 ---
 title: 升級自訂搜尋Forms
-seo-title: Upgrading Custom Search Forms
 description: 本文詳細說明為了讓自訂搜尋表單正常運作，在升級後所需的調整。
-seo-description: This article details the adjustments that are required after an upgrade in order for the custom search forms to function.
-uuid: 35b8fbb9-5951-4e1c-bf04-4471a55b9cb0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
-discoiquuid: a08cee9c-e981-4483-8bdc-e6353977f854
 feature: Upgrading
 exl-id: 797bbdf9-917a-4537-a5f9-bf2682db968b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 3%
+source-wordcount: '1797'
+ht-degree: 2%
 
 ---
 
@@ -99,7 +95,7 @@ ht-degree: 3%
  <tbody>
   <tr>
    <td>6.1中預設搜尋表單中的節點<br /> <br /> </td>
-   <td>path</td>
+   <td>路徑</td>
   </tr>
   <tr>
    <td><p>6.1中的資源型別</p> </td>
@@ -156,7 +152,7 @@ ht-degree: 3%
 
 「頁面狀態」已被兩個「選項」屬性述詞取代，一個用於「發佈」，另一個用於「即時副本」狀態。
 
-**動作:**
+**動作：**
 
 * 移除 `pagestatuspredicate` 節點
 * 複製節點
@@ -422,7 +418,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/publishpredicate |
 | 6.2中的資源型別 | dam/gui/coral/components/admin/customsearch/searchpredicates/publishpredicate |
 
-**動作:**
+**動作：**
 
 * 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 
@@ -473,7 +469,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/tagsfilterpredicate |
 | 6.2中的資源型別 | cq/gui/components/coral/common/admin/customsearch/searchpredicates/tagspredicate |
 
-**動作:**
+**動作：**
 
 * 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 
@@ -490,7 +486,7 @@ ht-degree: 3%
 | 6.1中的資源型別 | dam/gui/components/admin/customsearch/searchpredicates/tagsfilterpredicate |
 | 6.2中的資源型別 | cq/gui/components/coral/common/admin/customsearch/searchpredicates/tagspredicate |
 
-**動作:**
+**動作：**
 
 * 調整 `resourceType` 屬性(新增&quot;**/coral**&quot;如上方所示的6.2位置)
 

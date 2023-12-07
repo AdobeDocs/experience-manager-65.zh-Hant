@@ -1,17 +1,15 @@
 ---
 title: 編輯頁面屬性
 description: 頁面的屬性可能會因頁面的性質而異。 例如，有些頁面可能已連線至即時副本，有些頁面則未連線，因此即時副本資訊將可酌情使用。
-uuid: 63d37d1b-52da-489d-b02b-e8b3d17571d1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '760'
-ht-degree: 9%
+ht-degree: 3%
 
 ---
 
@@ -31,7 +29,7 @@ ht-degree: 9%
 
   這是必要欄位。
 
-* **標記**
+* **標籤**
 
   您可以在此處更新選取方塊中的清單，在頁面中新增或移除標籤：
 
@@ -43,7 +41,7 @@ ht-degree: 9%
    * 使用下拉式功能，您可以從現有標籤中選取。
    * 當您將滑鼠移到選取方塊中的標籤專案上時，會出現x；這可用來為此頁面移除該標籤。
 
-* **於導覽中隱藏**
+* **隱藏導覽**
 
   切換開關可指出頁面在頁面導覽中顯示或隱藏。
 
@@ -63,7 +61,7 @@ ht-degree: 9%
 
   頁面的說明、用途或您要新增的任何其他詳細資訊。
 
-* **開啟時間**
+* **準時**
 
   啟動已發佈頁面的日期和時間。 發佈後，此頁面將保持休眠狀態，直到指定的時間。
 
@@ -75,7 +73,7 @@ ht-degree: 9%
 
   同樣地，請將這些欄位留空，以便您立即發佈頁面。
 
-* **虛名 URL**
+* **虛名URL**
 
   可讓您輸入此頁面的虛名URL。 如此可讓您擁有更短且更能表達需知的URL。
 
@@ -83,12 +81,12 @@ ht-degree: 9%
 
   >[!CAUTION]
   >
-  >虛名 URL:
+  >虛名URL：
   >
   >* 必須是唯一的，因此您應該注意該值尚未被其他頁面使用。
   >* 不支援規則運算式模式。
 
-* **重新導向虛名 URL**
+* **重新導向虛名URL**
 
   指示您是否希望頁面使用虛名URL。
 
@@ -146,7 +144,7 @@ ht-degree: 9%
 
 ### 雲端服務 {#cloud-services}
 
-* **雲端服務**
+* **Cloud Service**
 
   定義屬性 [雲端服務](/help/sites-developing/extending-cloud-config.md).
 

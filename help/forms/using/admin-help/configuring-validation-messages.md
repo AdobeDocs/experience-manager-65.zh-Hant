@@ -1,40 +1,36 @@
 ---
 title: 設定驗證訊息
-seo-title: Configuring validation messages
-description: 瞭解如何指定驗證訊息的顯示方式及其相對於網頁瀏覽器中傳回之表單的位置。
-seo-description: Learn how to specify how validation messages are displayed and their location relative to the form returned in the web browser.
-uuid: f6bff4fa-f90f-4135-ae40-7ab3d3613122
+description: 瞭解如何指定驗證訊息的顯示方式，以及相對於網頁瀏覽器中傳回之表單的位置。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 5f2f8129-e45e-4f3f-ae30-c09330d0e152
 exl-id: 14314383-5228-4904-98c1-586f48a1142c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 2%
+source-wordcount: '352'
+ht-degree: 1%
 
 ---
 
 # 設定驗證訊息 {#configuring-validation-messages}
 
-對於呈現為HTML的表單，會為使用者顯示發生的表單驗證錯誤。 您可以自訂驗證訊息的顯示方式。 根據驗證訊息的顯示位置，您也可以控制訊息在表單中的位置以及框架邊框的大小。
+對於轉譯為HTML的表單，會為使用者顯示發生的表單驗證錯誤。 您可以自訂驗證訊息的顯示方式。 視驗證訊息的顯示位置而定，您也可以控制訊息在表單中的位置以及框架邊框的大小。
 
 ## 指定驗證訊息的顯示方式 {#specify-how-validation-messages-are-displayed}
 
-1. 在Administration Console中，按一下Services > forms。
+1. 在Administration Console中，按一下「服務」 > 「表單」。
 1. 在「驗證輸出」下的「報表」清單中，選取下列其中一個選項：
 
    **訊息方塊：** 在個別的對話方塊中顯示驗證訊息。
 
-   **影格：** 在相同視窗的框架中顯示驗證訊息。
+   **框架：** 在相同視窗的框架中顯示驗證訊息。
 
    **無框架：** 若要在同一視窗中顯示驗證訊息，請執行下列步驟： 此值為預設值。
 
    **透過API （含資料）：** 透過API （包含資料）傳回驗證訊息的方式。 驗證訊息不會顯示在畫面上。
 
-   **透過API （透過表單）：** 透過API （連同表單）傳回驗證訊息的方式。 驗證訊息不會顯示在畫面上。
+   **透過API （含表單）：** 透過API （透過表單）傳回驗證訊息的方式。 驗證訊息不會顯示在畫面上。
 
    **無：** 不顯示驗證訊息。
 
@@ -42,7 +38,7 @@ ht-degree: 2%
 
 ## 指定相對於網頁瀏覽器中傳回之表單的驗證訊息位置 {#specify-the-location-of-validation-messages-relative-to-the-form-returned-in-the-web-browser}
 
-當「報告」設定為「框架」或「無框架」時，您可以指定驗證訊息的位置。
+當「報表」設定為「框架」或「無框架」時，您可以指定驗證訊息的位置。
 
 1. 在「驗證輸出」下的「位置」清單中，選取下列其中一個選項：
 

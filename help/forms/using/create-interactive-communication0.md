@@ -1,16 +1,12 @@
 ---
 title: 「教學課程：建立互動式通訊」
-seo-title: Create an Interactive Communication for Print and Web
 description: 使用所有建置區塊建立互動式通訊
-seo-description: Create an Interactive Communication using all building blocks
-uuid: 5ffaa86f-87c7-4673-8b41-63ec61421be2
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: ac5d8d4f-fc13-4e8d-819c-c5db07fa6870
 docset: aem65
 feature: Interactive Communication
 exl-id: aaacee66-6bbe-498b-91b1-3a9545ff1aeb
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1884'
 ht-degree: 0%
@@ -58,7 +54,7 @@ ht-degree: 0%
 
    1. 指定 **Create_First_IC_templates** 資料夾> **Create_First_IC_Web_Template** 作為Web範本，並選取 **選取**.
 
-   1. 選擇 **建立**。
+   1. 選取「**建立**」。
 
    系統會顯示確認訊息，指出已成功建立互動式通訊。
 
@@ -121,7 +117,7 @@ ht-degree: 0%
 
    1. 指定 **Create_First_IC_templates** 資料夾> **Create_First_IC_Web_Template** 作為Web範本，並選取 **選取**.
 
-   1. 選擇 **建立**。
+   1. 選取「**建立**」。
 
    系統會顯示確認訊息，指出已成功建立互動式通訊。
 
@@ -214,7 +210,7 @@ ht-degree: 0%
    1. 選取 **針對Web Channel使用「列印為主版」** 核取方塊。
    1. 指定 **Create_First_IC_templates** 資料夾> **Create_First_IC_Web_Template** 作為Web範本，並選取 **選取**.
 
-   1. 選擇 **建立**。
+   1. 選取「**建立**」。
 
    系統會顯示確認訊息，指出已成功建立互動式通訊。
 

@@ -1,20 +1,16 @@
 ---
 title: OSGi組態設定
-seo-title: OSGi Configuration Settings
 description: 本文會詳細說明與專案實作相關的OSGi組態設定（根據套件列示）。 此清單可作為指引，並非詳盡無遺。
-seo-description: This article details the OSGi configuration settings (listed according to bundle) that are relevant to project implementation. The list acts as a guideline and it is not exhaustive.
-uuid: 192d3287-ec99-403b-bab0-45721e4e3abd
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3429'
+source-wordcount: '3360'
 ht-degree: 0%
 
 ---
@@ -254,7 +250,7 @@ OSGi 」*提供標準化的基本概念，允許使用小型、可重複使用�
 **Day CQ Antispam** 設定使用的反垃圾郵件服務(Akismet)。 此功能需要您註冊下列專案：
 
 * **提供者**
-* **API 金鑰**
+* **API金鑰**
 * **已註冊的URL**
 
 **AdobeGraniteHTML庫管理員** 設定以控制使用者端資料庫（css或js）的處理，例如包括基礎結構的顯示方式。
@@ -356,7 +352,7 @@ OSGi框架服務排名值用於表示呼叫此服務所用的順序。 此值是
 對於選取的使用者，從HTTP請求擷取的使用者名稱可以憑證物件中的其他名稱取代。 對應會在此處定義。 若使用者名稱 `admin` 會顯示在地圖的任何一側，因此會忽略對應。 字元「=」必須以前導字元「\」逸出。
 
 * **格式**
-表示提供使用者ID的格式。 使用:
+表示提供使用者ID的格式。 使用：
 
    * `Basic` 如果使用者ID是以HTTP基本驗證格式編碼
    * `AsIs` 如果使用者ID以純文字提供，或任何套用的規則運算式值應按照原樣或任何規則運算式使用

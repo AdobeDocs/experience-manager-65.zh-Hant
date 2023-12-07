@@ -1,19 +1,15 @@
 ---
 title: 編輯應用程式中繼資料
-seo-title: Editing App Metadata
 description: 將應用程式發佈到廠商的商店時，需要應用程式中繼資料細節。 請依照本頁面的說明了解如何編輯應用程式資料。
-seo-description: App metadata is required details for releasing an application to a vendor's store. Follow this page to learn about editing app data.
-uuid: c140be0f-8403-416e-af0f-29072a2ab942
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
-discoiquuid: 07b38da6-2efa-4a43-9afa-7151a241a5ad
 exl-id: 897a04b9-e357-4f1c-8aa0-2c2528f8556d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 3%
+source-wordcount: '377'
+ht-degree: 5%
 
 ---
 
@@ -21,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
 
 此 **管理應用程式** 圖磚和「管理應用程式」頁面提供檢視和編輯應用程式中繼資料的方法。 將應用程式發佈到廠商的商店時，需要應用程式中繼資料細節。 這可能包括常見中繼資料、iOS中繼資料和熒幕擷取畫面。 請參閱 [管理應用程式動態磚](/help/mobile/phonegap-app-details-tile.md) 以進一步瞭解一般和iOS中繼資料。
 
@@ -35,15 +31,15 @@ ht-degree: 3%
 
 1. 若要檢視或編輯詳細資訊，請按一下 **管理應用程式** 圖磚。
 
-1. 在下列五個標籤中輸入或檢視詳細資訊，如下圖所示。
+1. 在下列五個標籤中，輸入或檢視任何細節，如下圖所示。
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-## 編輯一般和IOS中繼資料 {#editing-common-and-ios-metadata}
+## 編輯通用和IOS中繼資料 {#editing-common-and-ios-metadata}
 
 您可以編輯一般和IOS中繼資料：
 
-* 選取 **進階** 標籤中顯示的頁面說明。
+* 選取 **進階** 標籤中顯示的應用程式說明。
 * 編輯或檢視一般和IOS中繼資料。 如需更多詳細資訊，請參閱下圖。
 
 ![chlimage_1-31](assets/chlimage_1-31.png) ![chlimage_1-32](assets/chlimage_1-32.png)
@@ -79,7 +75,7 @@ ht-degree: 3%
 
 ## 後續步驟 {#the-next-steps}
 
-請參閱下列資源，深入瞭解其他撰寫角色：
+請參閱下列資源，以進一步瞭解其他撰寫角色：
 
 * [「管理應用程式」動態磚](/help/mobile/phonegap-app-details-tile.md)
 * [應用程式定義](/help/mobile/phonegap-app-definitions.md)

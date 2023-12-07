@@ -1,16 +1,14 @@
 ---
 title: 自訂和擴充內容片段
-seo-title: Customizing and Extending Content Fragments
 description: 內容片段可擴充標準資產。 瞭解如何自訂。
-seo-description: A content fragment extends a standard asset. Learn how you can customize them.
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2794'
-ht-degree: 2%
+source-wordcount: '2728'
+ht-degree: 1%
 
 ---
 
@@ -45,7 +43,7 @@ ht-degree: 2%
 >
 >內容片段範本現已棄用。 仍可用於建立片段，但建議改用內容片段模型。 片段範本不會新增任何新功能，未來版本中將移除這些功能。
 
-* 內容片段模型:
+* 內容片段模型：
 
    * 用於定義儲存結構化內容的內容片段。
    * 內容片段模型會在建立內容片段時定義其結構。
@@ -146,7 +144,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->**內容片段模型:**
+>**內容片段模型：**
 >
 >使用以頁面上的內容片段模型為基礎的內容片段時，會參考模型。 這表示，如果您在發佈頁面時尚未發佈模型，系統會標籤此模型，並將模型新增至要與頁面一起發佈的資源。
 >
@@ -227,7 +225,7 @@ ht-degree: 2%
   >
   >* 系統會複製範本來建立片段，因此這是隱含的。
 
-* **中繼資料結構描述**
+* **中繼資料結構**
 
    * 內容片段（重新）使用 [中繼資料結構](/help/assets/metadata-schemas.md)，可使用標準資產定義。
    * CFM提供專屬的結構描述：
@@ -511,7 +509,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 自動儲存間隔（以秒為測量單位）可使用組態管理員(ConfMgr)定義：
 
 * 節點： `<*conf-root*>/settings/dam/cfm/jcr:content`
-* 屬性名稱: `autoSaveInterval`
+* 屬性名稱： `autoSaveInterval`
 * 類型：`Long`
 
 * 預設： `600` （10分鐘）；此定義的日期為 `/libs/settings/dam/cfm/jcr:content`
@@ -519,7 +517,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 如果您想要設定5分鐘的自動儲存間隔，則必須在節點上定義屬性；例如：
 
 * 節點： `/conf/global/settings/dam/cfm/jcr:content`
-* 屬性名稱: `autoSaveInterval`
+* 屬性名稱： `autoSaveInterval`
 
 * 類型：`Long`
 

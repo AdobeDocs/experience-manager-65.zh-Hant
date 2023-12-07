@@ -1,18 +1,15 @@
 ---
 title: 設定提交動作
-seo-title: Configuring the Submit action
 description: Forms可讓您設定提交動作，以定義提交後處理最適化表單的方式。 您可以使用內建提交動作，或從頭開始編寫您自己的動作。
-uuid: 4368d648-88ea-4f84-a051-46296a1a084e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 53%
+source-wordcount: '2134'
+ht-degree: 51%
 
 ---
 
@@ -54,7 +51,7 @@ ht-degree: 53%
 >[!NOTE]
 >
 >確保 [AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM資料夾
->存在. 需要目錄才能暫時儲存附件。 如果目錄不存在，請建立目錄。
+>「 」已存在。 需要目錄才能暫時儲存附件。 如果目錄不存在，請建立目錄。
 
 >[!CAUTION]
 >
@@ -74,7 +71,7 @@ ht-degree: 53%
 
 ![設定 REST 端點提交動作](assets/action-config.png)
 
-設定 REST 端點提交動作
+設定Rest端點提交動作
 
 >[!NOTE]
 >
@@ -200,7 +197,7 @@ ht-degree: 53%
 
 ### 支援驗證運算式中的自訂函數 {#supporting-custom-functions-in-validation-expressions-br}
 
-有時候，如果有複雜的驗證規則，則確切的驗證指令碼會駐留在自訂函數中，且作者會從欄位驗證運算式中呼叫這些自訂函數。若要在執行伺服器端驗證時公開和提供此自訂函數程式庫，表單作者可以在「最適化表單容器」屬性的「**基礎**」標籤下方，設定 AEM 用戶端程式庫的名稱，如以下所示。
+有時，如果有複雜的驗證規則，確切的驗證指令碼會位於自訂函式中，且作者會從欄位驗證運算式呼叫這些自訂函式。 若要在執行伺服器端驗證時公開和提供此自訂函數程式庫，表單作者可以在「最適化表單容器」屬性的「**基礎**」標籤下方，設定 AEM 用戶端程式庫的名稱，如以下所示。
 
 ![支援驗證運算式中的自訂函數](assets/clientlib-cat.png)
 
@@ -210,6 +207,6 @@ ht-degree: 53%
 
 ## 提交動作的錯誤處理 {#error-handling-on-submit-action}
 
-在Experience Manager安全性和強化准則中，請設定自訂錯誤頁面，例如404.jsp和500.jsp。 提交表單時出現404或500錯誤時，會呼叫這些處理常式。 在發佈節點上觸發這些錯誤代碼時，也會呼叫處理常式。
+在Experience Manager安全性和強化准則中，請設定自訂錯誤頁面，例如404.jsp和500.jsp。 提交表單時出現404或500錯誤時，會呼叫這些處理常式。 在Publish節點上觸發這些錯誤碼時，也會呼叫處理常式。
 
 如需詳細資訊，請參閱 [自訂錯誤處理常式顯示的頁面](/help/sites-developing/customizing-errorhandler-pages.md).

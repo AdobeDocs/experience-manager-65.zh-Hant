@@ -1,19 +1,15 @@
 ---
 title: 為表單欄位編寫內容內說明
-seo-title: Authoring in-context help for form fields
 description: AEM Forms可讓您將內容說明新增至最適化表單欄位和面板，如文字或豐富媒體（包括影片）。
-seo-description: AEM Forms lets you add in-context help to adaptive form fields and panels, as text or rich media, including videos.
-uuid: 1865bf7b-66fc-4f89-bd98-904daa409320
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 78000342-a6a7-4c2e-acab-a88851b82c2a
 docset: aem65
 feature: Adaptive Forms
 exl-id: 6569bfba-9af5-4060-8640-e51d7af46614
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 13%
+source-wordcount: '416'
+ht-degree: 12%
 
 ---
 

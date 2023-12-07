@@ -1,18 +1,14 @@
 ---
 title: 在HTML5表單中使用手寫簽名
-seo-title: Using Scribble Signature in HTML5 forms
 description: HTML5表單越來越多地用於觸控裝置，常見的要求之一就是支援簽名。 在行動裝置上簽署檔案已成為在行動裝置上簽署表單的普遍方式。
-seo-description: HTML5 forms are increasingly used on touch devices, and one common requirement is to support signatures. Signing documents on mobile devices is becoming an accepted way of signing forms on mobile devices.
-uuid: 163dd55a-971a-4dd4-93a7-a14e80184d9b
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: designer
-discoiquuid: ecd7f538-9c24-48e7-8450-596851e99cff
 docset: aem65
 feature: Designer
 exl-id: 2025182f-195b-40d0-aee7-67669f55b964
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 0%

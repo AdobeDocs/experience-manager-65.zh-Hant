@@ -1,20 +1,16 @@
 ---
 title: 將檔案傳遞至FormsService
-seo-title: Passing Documents to the FormsService
 description: 將包含表單設計的com.adobe.idp.Document物件傳遞至Forms服務。 Forms服務會呈現com.adobe.idp.Document物件中的表單設計。
-seo-description: Pass a com.adobe.idp.Document object that contains the form design to the Forms service. The Forms service renders the form design in the com.adobe.idp.Document object.
-uuid: 841e97f3-ebb8-4340-81a9-b6db11f0ec82
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
 role: Developer
 exl-id: 29c7ebda-407a-464b-a9db-054163f5b737
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1677'
 ht-degree: 0%
 
 ---

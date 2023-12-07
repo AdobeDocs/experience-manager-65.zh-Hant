@@ -1,18 +1,16 @@
 ---
 title: 使用者管理與安全性
 description: 瞭解AEM中的使用者管理和安全性。
-uuid: 4512c0bf-71bf-4f64-99f6-f4fa5a61d572
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '5401'
+source-wordcount: '5398'
 ht-degree: 1%
 
 ---
@@ -407,7 +405,7 @@ AEM除了格線檢視外，也提供指定路徑所選使用者/群組的許可�
 
 <!-- ??? in table below. -->
 
-| 定位字元 | 說明 |
+| 標籤 | 說明 |
 |--- |--- |
 | 篩選方塊 | 篩選列出的使用者、群組或兩者的機制。 另請參閱 [篩選使用者和群組](#filtering-users-and-groups). |
 | 隱藏使用者 | 切換開關，隱藏所有列出的使用者，僅留下群組。 另請參閱 [隱藏使用者和群組](#hiding-users-and-groups). |

@@ -1,20 +1,16 @@
 ---
 title: 將自訂屬性新增至Correspondence Management資產
-seo-title: Add custom properties to Correspondence Management assets
 description: 瞭解如何將自訂屬性新增至通訊管理資產。
-seo-description: Learn how to add custom properties to Correspondence Management assets.
-uuid: 4716e181-d3ea-424b-9544-376cc649bce7
 content-type: reference
 topic-tags: correspondence-management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '4428'
-ht-degree: 5%
+source-wordcount: '4431'
+ht-degree: 4%
 
 ---
 
@@ -65,7 +61,7 @@ ht-degree: 5%
 
       ![覆蓋節點](assets/cmmetapropertiesoverlaynode.png)
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。
+   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
 
    1. 按一下&#x200B;**「儲存全部」**。
 
@@ -205,7 +201,7 @@ ht-degree: 5%
 
       **符合節點型別：** 已選取
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。
+   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
 
       ![在CRX中建立的覆蓋資料夾結構](assets/cmmetadatapropertiesappsfolder.png)
 
@@ -334,7 +330,7 @@ ht-degree: 5%
 
       **符合節點型別：** 已選取
 
-   1. 按一下&#x200B;**「確定」**。資料夾隨即建立。 按一下&#x200B;**「儲存全部」**。
+   1. 按一下 **確定**. 資料夾隨即建立。 按一下&#x200B;**「儲存全部」**。
 
 1. 在新建立的專案資料夾中，為資產中的自訂標籤新增節點（此處為mytab — 此名稱未顯示在使用者介面中），使用下列步驟：
 
@@ -356,7 +352,7 @@ ht-degree: 5%
            <td><strong>值</strong></td>
          </tr>
          <tr>
-           <td>path<br /> </td>
+           <td>路徑<br /> </td>
            <td>字串</td>
            <td>fd/cm/ma/gui/content/cmmetadataproperties/commontab<br /> </td>
          </tr>
@@ -420,7 +416,7 @@ ht-degree: 5%
 
       **符合節點型別：** 已選取
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。
+   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
 
       按一下&#x200B;**「儲存全部」**。
 
@@ -543,7 +539,7 @@ ht-degree: 5%
    | 片段 | /libs/fd/cm/ma/gui/content/createasset/createfragment/jcr：content/body/items/form/items/fragmentwizard/items/properties/items/properties/items/tabs2/items/tab1/items |
    | 字母 | /libs/fd/cm/ma/gui/content/createasset/createletter/jcr：content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items |
 
-1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。
+1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
 
 1. 在您建立的覆蓋專案節點下，建立名稱為col4 （或任何其他名稱）的節點，然後按一下 **全部儲存**.
 
@@ -561,7 +557,7 @@ ht-degree: 5%
    <td><strong>值</strong></td>
   </tr>
   <tr>
-   <td>path</td>
+   <td>路徑</td>
    <td>字串</td>
    <td><p>此路徑是指向在中建立的欄的指標：</p>
     <ul>
@@ -606,7 +602,7 @@ ht-degree: 5%
 
       **符合節點型別：** 已選取
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。
+   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
 
       按一下&#x200B;**「儲存全部」**。
 
@@ -664,7 +660,7 @@ ht-degree: 5%
 
       **符合節點型別：** 已選取
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。
+   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
 
       按一下&#x200B;**「儲存全部」**。
 
@@ -803,7 +799,7 @@ ht-degree: 5%
            <td><strong>值</strong></td>
          </tr>
          <tr>
-           <td>path</td>
+           <td>路徑</td>
            <td>字串</td>
            <td>extendedProperties<br /> </td>
          </tr>
@@ -860,7 +856,7 @@ ht-degree: 5%
 
       **符合節點型別：** 已選取
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。
+   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
 
    1. 按一下&#x200B;**「儲存全部」**。
 
@@ -906,7 +902,7 @@ ht-degree: 5%
 
       **符合節點型別：** 已選取
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。
+   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
 
    1. 按一下&#x200B;**「儲存全部」**。
 
@@ -944,7 +940,7 @@ ht-degree: 5%
       <td><strong>值</strong></td>
    </tr>
    <tr>
-      <td>sling:resourceType<br /> </td>
+      <td>sling：resourceType<br /> </td>
       <td>字串</td>
       <td>fd/cm/ma/gui/components/admin/assetsproperties/custompropertyconfig<br /> </td>
    </tr>

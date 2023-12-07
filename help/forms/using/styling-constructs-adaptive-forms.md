@@ -3,14 +3,13 @@ title: 調適型表單的樣式建構
 description: 使用LESS框架來自訂最適化表單的外觀。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2361'
-ht-degree: 6%
+source-wordcount: '2348'
+ht-degree: 5%
 
 ---
 
@@ -519,7 +518,7 @@ HTML元素 **標籤** 用於欄位包括類別 **左側** 或 **top** 標籤位�
   </tr>
   <tr>
    <td><p><code>table-header-bg-color</code></p> </td>
-   <td><p>標題列的背景顏色。 預設值為 <code>#333</code>。<br /> </p> </td>
+   <td><p>標題列的背景顏色。 預設值為 <code>#333</code>.<br /> </p> </td>
   </tr>
   <tr>
    <td><p><code>table-odd-row-bg-color</code></p> </td>

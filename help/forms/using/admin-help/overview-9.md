@@ -1,16 +1,12 @@
 ---
 title: Forms工作流程概觀
-seo-title: Overview of Forms workflow
 description: Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流程。 使用表單工作流程，使用者還可以管理連線系統和人員的自動化業務流程應用程式。
-seo-description: Forms workflow lets users design, manage, and optimize human-centric processes. Using forms workflow, users can also manage automated business-process applications that connect systems and people.
-uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
 exl-id: 68a9d95a-d51c-4a97-ae36-d4cb16c6fac0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 2%
@@ -21,12 +17,12 @@ ht-degree: 2%
 
 Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流程。 使用表單工作流程，使用者還可以管理連線系統和人員的自動化業務流程應用程式。
 
-在管理控制檯中的每個Forms工作流程頁面上，您可以執行一組不同的工作，如本表中所述。
+在管理控制檯中的每個Forms工作流程頁面上，您可以執行一組不同的工作，如本表所述。
 
 <table>
  <thead>
   <tr>
-   <th><p>Page</p></th>
+   <th><p>頁面</p></th>
    <th><p>任務</p></th>
    <th><p>請參閱</p></th>
   </tr>
@@ -41,15 +37,15 @@ Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流
      <li><p>設定管理員通知</p></li>
      <li><p>配置商務活動監視的組態設定 </p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/configuring-server-settings.md#configuring-server-settings">正在設定伺服器設定</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/configuring-server-settings.md#configuring-server-settings">設定伺服器設定</a></p></td>
   </tr>
   <tr>
    <td><p>表單工作流程</p></td>
    <td>
     <ul>
      <li><p>檢視作用中的處理序</p></li>
-     <li><p>檢視和處理處理序執行個體、作業及任務</p></li>
-     <li><p>暫停、終止及重試處理序執行個體、子處理序及作業</p></li>
+     <li><p>檢視及使用程式執行環境、作業及任務</p></li>
+     <li><p>暫停、終止和重試處理序執行個體、子處理序和作業</p></li>
     </ul></td>
    <td><p><a href="/help/forms/using/admin-help/processes.md#managing-processes">管理流程</a></p></td>
   </tr>
@@ -57,9 +53,9 @@ Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流
    <td><p>程式搜尋</p></td>
    <td>
     <ul>
-     <li><p>搜尋程式</p></li>
+     <li><p>搜尋流程</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/searching-process-instances.md#searching-for-process-instances">搜尋處理序執行個體</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/searching-process-instances.md#searching-for-process-instances">搜尋程式執行個體</a></p></td>
   </tr>
   <tr>
    <td><p>任務搜尋</p></td>
@@ -70,10 +66,10 @@ Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流
    <td><p><a href="/help/forms/using/admin-help/tasks.md#working-with-tasks">使用任務</a></p></td>
   </tr>
   <tr>
-   <td><p>已停止的作業錯誤</p></td>
+   <td><p>停止的操作錯誤</p></td>
    <td>
     <ul>
-     <li><p>檢視所有已停止的操作及其錯誤</p></li>
+     <li><p>檢視所有已停止的作業及其錯誤</p></li>
      <li><p>重試或終止已停止的作業</p></li>
     </ul></td>
    <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">使用停止的操作和分支</a></p></td>
@@ -82,7 +78,7 @@ Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流
    <td><p>停止的分支錯誤</p></td>
    <td>
     <ul>
-     <li><p>檢視所有停頓的分支及其錯誤</p></li>
+     <li><p>檢視所有停止的分支及其錯誤</p></li>
      <li><p>重試停止的分支</p></li>
     </ul></td>
    <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">使用停止的操作和分支</a></p></td>
@@ -92,11 +88,11 @@ Forms工作流程可讓使用者設計、管理和最佳化以人為中心的流
    <td>
     <ul>
      <li><p>檢視使用者的休假資訊</p></li>
-     <li><p>變更使用者的狀態（在辦公室內或辦公室外）</p></li>
-     <li><p>新增休假日期範圍 </p></li>
-     <li><p>指定使用者不在辦公室時如何處理任務</p></li>
+     <li><p>變更使用者的狀態（在辦公室內或外出）</p></li>
+     <li><p>新增「不在辦公室」日期範圍 </p></li>
+     <li><p>指定使用者不在辦公室時如何處理工作</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/configuring-out-office-settings.md#configuring-out-of-office-settings">正在設定「外出」設定</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/configuring-out-office-settings.md#configuring-out-of-office-settings">正在設定[外出]設定</a></p></td>
   </tr>
   <tr>
    <td><p>商務行事曆</p></td>

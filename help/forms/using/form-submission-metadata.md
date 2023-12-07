@@ -1,16 +1,12 @@
 ---
 title: 將使用者資料中的資訊新增至表單提交中繼資料
-seo-title: Adding information from user data to form submission metadata
 description: 瞭解如何使用使用者提供的資料，將資訊新增到已提交表單的中繼資料中。
-seo-description: Learn how to add information to metadata of a submitted form with user provided data.
-uuid: c3eea3c0-31f8-4bf8-b5cf-34f907bdbdba
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 2c971da0-5bd5-40d1-820d-4efc2a44b49d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 5ca850e3-30f0-4384-b615-356dc3c2ad0d
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 7%

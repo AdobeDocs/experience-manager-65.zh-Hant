@@ -1,16 +1,14 @@
 ---
 title: 監控和維護您的Adobe Experience Manager 執行個體
-description: 瞭解如何監視和維護您的Adobe Experience Manager 執行個體。
-uuid: 14466552-5c92-4730-a427-85675a2b121c
+description: 了解如何監視和維護您的Adobe Experience Manager 執行個體。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '5793'
 ht-degree: 0%
@@ -61,13 +59,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需有關備份效能的詳細資訊，請參閱 [備份效能](/help/sites-deploying/configuring-performance.md#backup-performance) 區段。
+>有關備份性能的更多資訊，請閱讀 [ 返回性能 ](/help/sites-deploying/configuring-performance.md#backup-performance) 部分。
 
-### 備份您的軟體安裝 {#backing-up-your-software-installation}
+### 備份軟體安裝 {#backing-up-your-software-installation}
 
-在安裝或組態重大變更後，建立軟體安裝的備份。
+安裝或對配置進行重大更改後，請創建軟體安裝備份。
 
-要完成此任務， [備份您的整個存放庫](#backing-up-your-repository) 然後：
+若要完成此任務， [ 請備份整個存放庫 ](#backing-up-your-repository) 然後：
 
 1. 停止 AEM。
 1. 備份整個 `<cq-installation-dir>` 從您的檔案系統。
@@ -84,7 +82,7 @@ ht-degree: 0%
 >
 >磁碟映象也可作為備份機制使用。
 
-### 備份您的存放庫 {#backing-up-your-repository}
+### 備份存放庫 {#backing-up-your-repository}
 
 此 [備份和還原](/help/sites-administering/backup-and-restore.md) CRX檔案的區段涵蓋所有與CRX存放庫備份相關的問題。
 
@@ -98,7 +96,7 @@ ht-degree: 0%
 
 ### 概觀 {#overview}
 
-此 **清除版本** 工具可作為每週維護任務使用。 在首次使用之前，必須先添加它，然後進行配置。 之後，可依請求或每週執行。
+清除 **版本** 工具可作為每周維護任務提供。 在首次使用之前，必須先添加它，然後進行配置。 之後，可依請求或每週執行。
 
 ### 清除網站的版本 {#purging-versions-of-a-web-site}
 
@@ -178,11 +176,11 @@ ht-degree: 0%
 此外，主控台還提供版本的實用資訊：
 
 * `V 1.0`：版本號碼。
-* `V 1.0.1`&#42;：星號表示版本為目前（基礎）版本，無法清除。
+* `V 1.0.1`&#42;：星號表示該版本是當前（基本）版本，無法清除。
 
 * `Thu Mar 15 2012 08:37:32 GMT+0100`：版本的日期。
 
-在下列範例中：
+在下一個範例中：
 
 * **[!DNL Shirts]**&#x200B;版本將被清除，因為其版本存在時間大於兩天。
 * 此 **[!DNL Tonga Fashions!]** 會清除版本，因為其版本數大於5。
@@ -191,7 +189,7 @@ ht-degree: 0%
 
 ## 使用稽核記錄和記錄檔 {#working-with-audit-records-and-log-files}
 
-可在各種位置找到與Adobe Experience Manager (AEM)相關的稽核記錄和記錄檔。 以下提供您可找到內容及位置的概觀。
+可在各種位置找到與Adobe Experience Manager (AEM)相關的稽核記錄和記錄檔。 以下內容旨在讓您大致瞭解可以找到的內容和位置。
 
 ### 使用記錄檔 {#working-with-logs}
 
@@ -207,11 +205,11 @@ AEM WCM會記錄詳細的記錄。 拆開包裝並開始快速入門後，您可
 
 * 此 `error.log` 檔案會根據模式重新命名 {original_filename} `.yyyy-MM-dd`. 例如，在2010年7月11日，目前的記錄檔已重新命名 `error.log-2010-07-10`，然後是新的 `error.og` 「 」已建立。
 
-* 上一個日誌檔不會被刪除，因此您有責任定期清理舊的日誌檔以限制磁片使用量。
+* 上一個日誌文件不會被刪除，因此您有責任定期清理舊的日誌文件以限制磁碟使用量。
 
 >[!NOTE]
 >
->如果升級 AEM 安裝，AEM不再使用的任何現有記錄檔都將保留在磁片上。 您可以毫無風險地刪除它們。 所有新的記錄專案都會寫入新的記錄檔中。
+>如果升級 AEM 安裝，AEM不再使用的任何現有記錄檔都將保留在磁碟上。 您可以毫無風險地刪除它們。 所有新的記錄專案都會寫入新的記錄檔中。
 
 ### 尋找記錄檔 {#finding-the-log-files}
 
@@ -292,7 +290,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 名稱：`org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
 
-     位置 `<identifier>` 會取代為您（必須）輸入以識別執行個體的任意文字（您無法忽略此資訊）。
+     其中 `<identifier>` 替換為您（必須）輸入以標識執行個體免費文本（不能省略此資訊）。
 
      例如 `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
@@ -314,7 +312,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
      型別：字串[] （字串+多個）
 
-     值：指定記錄器要記錄訊息的OSGi服務；例如，下列全部：
+     值：指定記錄器要記錄消息的OSGi服務;例如，以下所有內容：
 
       * `org.apache.sling`
       * `org.apache.felix`
@@ -433,11 +431,11 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >指示何時建立新檔案（以及根據名稱模式重新命名現有檔案）。
    >
    >* 可使用數字指定大小限制。 如果未指定大小指示器，則會將其視為位元組數，或者您可以新增其中一個大小指示器 —  `KB`， `MB`，或 `GB` （忽略大小寫）。
-   >* 時間/日期排程可指定為 `java.util.SimpleDateFormat` 模式。 它會定義檔案旋轉的時間段。 此外，尾碼也會附加至旋轉後的檔案（用於識別）。
+   >* 可以將時間/日期計畫指定為模式 `java.util.SimpleDateFormat` 。 它定義了檔旋轉之後的時段。 此外，附加在旋轉檔的尾碼（用於識別）。
    >
-   >預設值為&#39;.&#39;yyyy-MM-dd （用於每日記錄輪換）。
+   >預設值為「」。yyyy-MM-dd （用於每日日誌輪換）。
    >
-   >例如，在 2010 年 1 月 20 日午夜（或在此日期之後出現的第一條日誌消息精確時），../logs/error.log 已重新命名為 ../logs/error.log.2010-01-20. 1 月 21 日的日誌記錄輸出到（新的和空的）../logs/error.log，直到在下一個更改日期時滾動。
+   >例如，在 2010 年 1 月 20 日午夜（或在此日期之後出現的第一條日誌消息精確時）,../logs/error.log 已重新命名為 ../logs/error.log.2010-01-20. 1 月 21 日的日誌記錄輸出到（新的和空的）../logs/error.log，直到在下一個更改日期時滾動。
    >
    >| `'.'yyyy-MM` | 每月月初輪換 |
    >|---|---|
@@ -1039,7 +1037,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 要確定資料夾的總 `/var/dam` 大小，請執行以下操作：
 
-1. 使用 WebDAV 將存放庫映射到本地檔案系統。
+1. 使用 WebDAV 將存放庫映射到本地文件系統。
 
 1. 使用命令列：
 
@@ -1135,12 +1133,12 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
    * [Apache Sling JSP指令碼處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjspscripthandler)
    * [Apache Sling JavaScript處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
-   * [Apache Sling記錄設定](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
-   * [CQHTML庫管理員](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
-   * [CQ WCM偵錯篩選器](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
-   * [記錄器](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
+   * [Apache Sling 記錄組態](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
+   * [CQ HTML 庫管理員](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
+   * [CQ WCM Debug 篩選](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
+   * [伐木](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
 
-* 是否已以及如何配置 [ 版本清除](/help/sites-deploying/version-purging.md)
+* 是否已以及如何配置 [版本清除](/help/sites-deploying/version-purging.md)
 * 知識庫：
 
    * [開啟的檔案過多](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=en)
@@ -1148,7 +1146,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 ### 定期效能降低 {#regular-performance-degradation}
 
-如果您在每次重新開機後（有時是一週或以後）發現執行個體的效能惡化，則可以檢查下列專案：
+如果您在每次重新開機後（有時一周或更晚）看到執行個體的性能下降，則可以檢查以下內容：
 
 * [記憶體不足](#outofmemory)
 * 知識庫：

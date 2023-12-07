@@ -1,42 +1,38 @@
 ---
 title: Activity Stream Essentials
-seo-title: Activity Stream Essentials
-description: 成員最近執行的活動清單，或單一內容執行緒上最近活動的清單
-seo-description: List of recent activites performed by a member or a list of recent activities on a single thread of content
-uuid: 30c5ac08-0af0-4670-9d81-0beb5c93e00a
+description: 成員最近執行的活動清單，或內容單一執行緒上的最近活動清單
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 8714b456-527a-457b-82c4-21bd445dfd9c
 docset: aem65
 exl-id: d98bcbe4-3f80-49ec-b40c-417be0d97350
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '267'
 ht-degree: 2%
 
 ---
 
 # Activity Stream Essentials {#activity-stream-essentials}
 
-已登入社群成員的活動（例如張貼至論壇或部落格）會收集到資料流中，可透過活動資料流元件的設定以各種方式篩選和顯示。
+已登入社群成員的活動（例如張貼至論壇或部落格）會收集到資料流中，可透過活動資料流元件的設定以各種方式篩選及顯示。
 
-當社群成員關注感興趣的張貼或其他社群成員時，關注功能會新增另一組活動。
+當社群成員追蹤感興趣的張貼或其他社群成員時，追蹤功能會新增另一組活動。
 
 全部 [社群網站](/help/communities/overview.md#communitiessites) 加入已登入成員的使用者設定檔頁面，以相同方式顯示成員活動。
 
 ## 概念 {#concepts}
 
-一個 *活動資料流* 是成員最近執行的活動清單，或是單一內容對話串（例如論壇主題或部落格）上最近活動的清單。
+一個 *活動資料流* 是成員最近執行的活動清單，或是單一內容執行緒（例如論壇主題或部落格）上最近活動的清單。
 
-成員可以跟隨活動資料流，方法是跟隨其他個人或內容。
+成員可以追隨活動資料流，方法是追隨其他個人或內容。
 
-A *動態消息* 是活動串流後面跟著一個成員合併為單一串流的過程。
+A *動態消息* 是成員後續活動資料流合併成單一資料流的過程。
 
 A *[社交圖](/help/communities/essentials-socialgraph.md)* 擷取一個成員與另一個成員的下列關係。
 
-## 適用於使用者端的Essentials {#essentials-for-client-side}
+## 使用者端的Essentials {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -71,9 +67,9 @@ A *[社交圖](/help/communities/essentials-socialgraph.md)* 擷取一個成員�
 
 ## 伺服器端的Essentials {#essentials-for-server-side}
 
-* [活動串流API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
+* [活動資料流API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
 
-* [活動串流接聽程式API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/listener/api/package-frame.html)
+* [活動串流監聽器API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/listener/api/package-frame.html)
 
 * [伺服器端自訂](/help/communities/server-customize.md)
 

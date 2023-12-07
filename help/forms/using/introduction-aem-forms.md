@@ -1,20 +1,16 @@
 ---
 title: AEM Forms簡介
-seo-title: Introduction to AEM Forms
 description: 有了Adobe Experience Manager Forms，業務使用者可以將吸引人、回應式且最適化表單整合至網站和行動網站，進而簡化數位註冊程式，並提高客戶轉換率。
-seo-description: With Adobe Experience Manager Forms, business users can integrate engaging, responsive, and adaptive forms into web and mobile sites, simplifying the digital enrollment process and increasing customer conversion rates.
-uuid: a6564997-4227-4d5d-b27d-47a55a386238
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: introduction
-discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: f8f82ad5805095f331432471b614225f761e645c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 15%
+source-wordcount: '952'
+ht-degree: 12%
 
 ---
 
@@ -33,7 +29,7 @@ Adobe Experience Manager (AEM)提供易用的解決方案，用於建立、管�
 
 AEM Forms結合表單製作、管理和發佈，以及通訊管理功能、檔案安全性和整合式分析，以建立吸引人的端對端體驗。 AEM Forms可在網路和行動裝置通路間運作，因此可有效整合至您的業務流程，減少紙張流程和錯誤，同時提升效率。
 
-在大型企業中，表單通常是建立一次並透過複製到內容管理系統來重複使用。讓大型的表單資料庫保持最新狀態，並讓這些表單可供探索，是一項相當艱鉅的挑戰。 AEM 提供可自訂的表單入口網站，確保客戶可透過 Web 和行動管道找到並存取他們需要的表單。
+在大型企業中，表單通常是建立一次並透過複製到內容管理系統來重複使用。讓大型的表單資料庫保持最新狀態，並讓這些表單可供探索，是一項相當艱鉅的挑戰。 AEM提供可自訂的Forms入口網站，確保客戶可透過網頁和行動裝置管道找到並存取所需的表單。
 
 AEM Forms提供的表單管理工具不僅可讓您管理最適化表單，還可管理XFA表單、PDF forms和相關資產。 如需詳細資訊，請參閱 [管理表單簡介](../../forms/using/introduction-managing-forms.md).
 
@@ -115,7 +111,7 @@ AEM Forms提供Forms Workspace，此行動應用程式可將您的數位業務�
 
 個人化檔案，例如，收據、歡迎套件和陳述式，可以輕鬆地跨多個管道傳送。 組織可以將流量吸引到個人化的 Web 入口網站，進而讓使用者註冊或購買額外的服務。
 
-**重要功能**
+**主要功能**
 
 * 通訊製作環境，支援範本、內容區塊、商業規則等
 * 檔案轉換與組裝

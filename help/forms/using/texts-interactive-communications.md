@@ -1,16 +1,12 @@
 ---
 title: 互動式通訊中的文字
-seo-title: Text in Interactive Communications
 description: 建立和編輯用於互動式通訊的文字檔案片段 — 文字是用於建立互動式通訊的四種檔案片段型別之一。 其他三個是條件、清單和佈局片段。
-seo-description: Creating and editing text document fragments to be used in Interactive Communications
-uuid: fdac3dd8-c6d0-418e-b969-fc791b7bd509
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 feature: Interactive Communication
 exl-id: b8e84c5d-2ec8-4575-9eed-6b37b04e5d66
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2474'
 ht-degree: 1%

@@ -1,17 +1,15 @@
 ---
 title: 疑難排解Adobe Experience Manager
 description: 瞭解如何疑難排解Adobe Experience Manager可能會出現的一些問題。
-uuid: 72379531-915c-45d0-ba70-42b212665272
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6346cd93-1ca3-4510-9c31-a74c41017ddb
 docset: aem65
 exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '536'
 ht-degree: 2%
 
 ---
@@ -88,7 +86,7 @@ ht-degree: 2%
 
    例如，您可以使用 `ps -ef` 或 `jps`.
 
-1. 執行:
+1. 執行：
 
    `jstack <pid>`
 
@@ -118,7 +116,7 @@ OSGi套件組合的狀態也能及早指出可能的問題。
 
 1. 開啟 **AEM Web Console**；例如， `https://localhost:4502/system/console/`.
 1. 選取 **組合** 在 **OSGI** 標籤。
-1. 檢查:
+1. 檢查：
 
    * 套裝的狀態。 如果有任何是「非使用中」或「不滿意」，請嘗試停止並重新啟動該套件。 如果問題仍然存在，請使用其他方法進行進一步調查。
    * 是否有任何套件組合缺少相依性。 按一下個別套件名稱即可檢視這類詳細資訊，此為連結（以下範例沒有任何問題）：

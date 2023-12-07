@@ -1,25 +1,21 @@
 ---
 title: 自訂頁面屬性的檢視
-seo-title: Customizing Views of Page Properties
 description: 每個頁面都有一組屬性，您可以視需要加以編輯
-seo-description: Every page has a set of properties that you can edit as required
-uuid: cbfca6e6-cb9e-43b1-8889-09a7cc9f8a51
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 47%
+source-wordcount: '475'
+ht-degree: 43%
 
 ---
 
 # 自訂頁面屬性的檢視{#customizing-views-of-page-properties}
 
-每個頁面都有一組 [屬性](/help/sites-authoring/editing-page-properties.md) 使用者可以檢視和編輯的專案；建立頁面（建立檢視）時需要某些專案，其他專案可在稍後階段檢視和編輯（編輯檢視）。 這些頁面屬性由適當頁面元件的對話框 (`cq:dialog`) 定義和提供。
+每個頁面都有一組 [屬性](/help/sites-authoring/editing-page-properties.md) 使用者可以檢視和編輯的專案；建立頁面（建立檢視）時需要某些專案，其他專案可在稍後階段檢視和編輯（編輯檢視）。 這些頁面屬性會透過對話方塊( `cq:dialog`)。
 
 >[!CAUTION]
 >

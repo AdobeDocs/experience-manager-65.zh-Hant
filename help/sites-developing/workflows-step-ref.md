@@ -1,20 +1,16 @@
 ---
 title: 工作流程步驟參考
-seo-title: Workflow Step Reference
 description: 請參閱此步驟參考以瞭解Adobe Experience Manager的工作流程。
-seo-description: null
-uuid: 88bf6997-73a1-4639-82aa-5dff08d3ef86
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: e3afffd0-d90c-4bd0-b814-f7aeac6ceb6d
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3250'
-ht-degree: 2%
+source-wordcount: '3229'
+ht-degree: 1%
 
 ---
 
@@ -46,7 +42,7 @@ ht-degree: 2%
 * **說明**
 步驟的說明。
 
-* **工作流程分段**
+* **工作流程階段**
 
   要套用的下拉式選擇器 [階段](/help/sites-developing/workflows.md#workflow-stages) 跳到步驟。
 
@@ -129,7 +125,7 @@ ht-degree: 2%
 若要設定此步驟，請編輯並使用下列標籤：
 
 * [常見](#step-properties-common-tab)
-* **程序**
+* **程式**
 
    * **目標步驟**：選取評估路由運算式的條件後要執行的步驟。
    * **路由運算式**：選取規則定義、外部指令碼或決定是否執行 **目標步驟**.
@@ -199,7 +195,7 @@ function check(){
 
 * 編輯 **OR拆分屬性**：
 
-   * **常見**
+   * **通用**
 
       * 指定分割名稱。
 
@@ -577,9 +573,9 @@ A **程式步驟** 執行ECMAScript或呼叫OSGi服務以執行自動處理。
 若要設定此步驟，請編輯並使用下列標籤：
 
 * [常見](#step-properties-common-tab)
-* **程序**
+* **程式**
 
-   * **程式**：要執行的程式實作。 使用下拉式功能表選取ECMAScript或OSGi服務。 關於後述資訊：:
+   * **程式**：要執行的程式實作。 使用下拉式功能表選取ECMAScript或OSGi服務。 如需下列相關資訊：
 
       * 標準ECMAScripts和OSGi服務，請參閱 [內建的流程步驟流程](/help/sites-developing/workflows-process-ref.md).
       * 建立「處理」步驟的ECMAScript，請參閱 [使用ECMAScript實作流程步驟](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).
@@ -599,7 +595,7 @@ A **程式步驟** 執行ECMAScript或呼叫OSGi服務以執行自動處理。
 若要設定此步驟，請編輯並使用下列標籤：
 
 * [常見](/help/sites-developing/workflows-step-ref.md#step-properties-common-tab)
-* **映射**
+* **對應**
 
    * **選取變數：** 使用此選項可選取變數以設定其值。
    * **選取對應模式：**  若要設定變數的值，請選取對應模式。 視變數的資料型別而定，您可以使用下列選項來設定變數的值：

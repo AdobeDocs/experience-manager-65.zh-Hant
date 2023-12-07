@@ -1,20 +1,16 @@
 ---
 title: 自訂主控台
-seo-title: Customizing the Consoles
 description: AEM提供各種機制，讓您能夠自訂編寫執行個體的主控台
-seo-description: AEM provides various mechanisms to enable you to customize the consoles of your authoring instance
-uuid: 8ecce9ff-5907-41e1-af3b-a8646352d633
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 24%
+source-wordcount: '646'
+ht-degree: 22%
 
 ---
 
@@ -93,7 +89,7 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 
 ### 將動作新增至工具列 {#add-new-action-to-the-toolbar}
 
-1. 您可以建置自己的元件並包含相對應的用戶端資料庫，以用於自訂動作。例如， **提升至Twitter** 動作時間：
+1. 您可以建置自己的元件，並包含自訂動作對應的使用者端程式庫。 例如， **提升至Twitter** 動作時間：
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
@@ -150,7 +146,7 @@ AEM提供多種機制，讓您能夠自訂主控台(以及 [頁面製作功能](
 1. 選擇性：
 
    * 如果您想要插入其他資料，則需撰寫 [paginforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) 與
-     `pageInfoProviderType` 屬性.
+     `pageInfoProviderType` 屬性。
 
    例如，請參閱底下的附加類別/套件（來自GitHub）。
 

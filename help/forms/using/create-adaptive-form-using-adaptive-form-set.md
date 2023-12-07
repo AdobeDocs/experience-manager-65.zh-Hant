@@ -1,29 +1,25 @@
 ---
 title: 使用一組最適化表單建立最適化表單
-seo-title: Create an adaptive form using a set of adaptive forms
-description: 透過AEM Forms，將最適化表單集合在一起，以製作單一大型最適化表單，並瞭解其功能。
-seo-description: With AEM Forms, bring adaptive forms together to author a single large adaptive form, and understand its features.
-uuid: e52e4f90-8821-49ec-89ff-fbf07db69bd2
+description: 透過AEM Forms，將最適化表單集合在一起，以製作單一大型最適化表單並瞭解其功能。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 264aa8c0-ba64-4768-b3d1-1b9baa6b4d72
 docset: aem65
 feature: Adaptive Forms
 exl-id: 4254c2cb-66cc-4a46-b447-bc5e32def7a0
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 1%
+source-wordcount: '620'
+ht-degree: 8%
 
 ---
 
 # 使用一組最適化表單建立最適化表單{#create-an-adaptive-form-using-a-set-of-adaptive-forms}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 ## 概觀 {#overview}
 
-在工作流程中（例如開立銀行帳戶的應用程式），您的使用者會填寫多個表單。 與其要求他們填寫一組表格，您可以將表格棧疊在一起並建置大型表格（父級表格）。 將最適化表單新增至較大表單時，會新增為面板（子表單）。 新增一組子表單以建立父表單。 您可以根據使用者輸入顯示或隱藏面板。 父表單的按鈕（例如提交和重設）會覆寫子表單的按鈕。 若要在父表單中新增自適應表單，您可以從資產瀏覽器中拖放自適應表單（如自適應表單片段）。
+在工作流程中（例如開立銀行帳戶的應用程式），您的使用者會填寫多個表單。 與其要求他們填寫一組表格，您可以將表格棧疊在一起並建立大型表格（父級表格）。 將最適化表單新增至較大表單時，會將其新增為面板（子表單）。 新增一組子表單以建立父表單。 您可以根據使用者輸入顯示或隱藏面板。 父表單的按鈕（例如提交和重設）會覆寫子表單的按鈕。 若要在父表單中新增自適應表單，您可以從資產瀏覽器拖放自適應表單（如自適應表單片段）。
 
 可用的功能包括：
 
@@ -31,7 +27,7 @@ ht-degree: 1%
 * 顯示/隱藏適當的表單
 * 延遲載入
 
-與使用個別元件建立父項表單相比，獨立編寫和延遲載入等功能可提供效能改善。
+獨立編寫和延遲載入等功能，改善了使用個別元件建立父表單時的效能。
 
 >[!NOTE]
 >
@@ -39,7 +35,7 @@ ht-degree: 1%
 
 ## 幕後 {#behind-the-scenes}
 
-您可以在父表單中新增XSD型最適化表單和片段。 上層表單的結構與 [任何最適化表單](../../forms/using/prepopulate-adaptive-form-fields.md). 將最適化表單新增為子表單時，它會新增為父表單中的面板。 繫結子表單的資料儲存在 `data`的根目錄 `afBoundData` 上層表單XML結構描述的部分。
+您可以在上層表單中新增XSD型最適化表單和片段。 上層表單的結構與 [任何最適化表單](../../forms/using/prepopulate-adaptive-form-fields.md). 將最適化表單新增為子表單時，會將其新增為父表單中的面板。 繫結子表單的資料儲存在 `data`的根目錄 `afBoundData` 上層表單的XML結構描述區段。
 
 例如，您的客戶填寫申請表。 表單的前兩個欄位是名稱和身分。 其XML為：
 
@@ -57,7 +53,7 @@ ht-degree: 1%
 </afData>
 ```
 
-您在應用程式中新增另一個表單，讓您的客戶填寫其辦公室地址。 子表單的結構描述根目錄為 `officeAddress`. 套用 `bindref` `/application/officeAddress` 或 `/officeAddress`. 若 `bindref`未提供，則子表單將新增為 `officeAddress` 子樹。 請參閱下列格式的XML：
+您在應用程式中新增另一個表格，讓您的客戶填寫其辦公室地址。 子表單的結構描述根目錄為 `officeAddress`. 套用 `bindref` `/application/officeAddress` 或 `/officeAddress`. 如果 `bindref`未提供，則會新增子表單作為 `officeAddress` 子樹。 請參閱下列格式的XML：
 
 ```xml
 <afData>
@@ -77,7 +73,7 @@ ht-degree: 1%
 </afData>
 ```
 
-如果您插入其他可讓客戶提供住家地址的表單，請套用 `bindref` `/application/houseAddress or /houseAddress.`XML看起來像這樣：
+如果您插入另一個可讓客戶提供住址的表單，請套用 `bindref` `/application/houseAddress or /houseAddress.`XML看起來像這樣：
 
 ```xml
 <afData>
@@ -129,20 +125,20 @@ ht-degree: 1%
 
 您可以使用變更最適化表單/片段的預設子樹狀結構 `bindRef` 屬性。 此 `bindRef` 屬性可讓您指定指向XML結構描述樹狀結構中某個位置的路徑。
 
-如果子表單未繫結，其資料會儲存在 `data`的根目錄 `afUnboundData` 上層表單XML結構描述的部分。
+如果子表單未繫結，其資料會儲存在 `data`的根目錄 `afUnboundData` 上層表單的XML結構描述區段。
 
-您可以將最適化表單新增為子表單多次。 確保 `bindRef` 已適當修改，以便適用性表單的每個已使用例項指向資料根下的不同子根。
+您可以將最適化表單新增為子表單多次。 確保 `bindRef` 已適當修改，以便最適化表格的每個使用例項指向資料根下的不同子根。
 
 >[!NOTE]
 >
->如果不同的表單/片段對應到相同的子根，資料會被覆寫。
+>如果不同的表單/片段對應至相同的子根，資料會被覆寫。
 
-## 使用資產瀏覽器將最適化表單新增為子表單 {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
+## 使用資產瀏覽器將調適型表單新增為子表單 {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
 
 執行以下步驟，使用資產瀏覽器將最適化表單新增為子表單。
 
-1. 在編輯模式下開啟父表單。
-1. 在側邊欄中，按一下 **資產** ![資產 — 瀏覽器](assets/assets-browser.png). 在Assets下，選取 **最適化表單** 下拉式清單。
+1. 在編輯模式中開啟父表單。
+1. 在側邊欄中，按一下 **資產** ![資產 — 瀏覽器](assets/assets-browser.png). 在「資產」底下，選取 **最適化表單** 從下拉式清單。
    [![在Assets下選取最適化表單](assets/asset.png)](assets/asset-1.png)
 
 1. 拖放您要新增為子表單的最適化表單。

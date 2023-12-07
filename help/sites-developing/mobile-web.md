@@ -1,17 +1,13 @@
 ---
 title: 行動網頁
-seo-title: Mobile Web
 description: AEM提供數種工具，可讓您為行動裝置開發網站，並將您的內容整合到行動應用程式中
-seo-description: AEM provides several tools that enable you to develop sites for mobile devices and to integrate your content into mobile applications
-uuid: 283667fa-1891-4a93-b074-792a8e15efc1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: mobile-web
 content-type: reference
-discoiquuid: 20a0b2a8-7347-4875-a202-9cedd8e187ff
 legacypath: /content/docs/en/aem/6-0/develop/mobile
 exl-id: 309d256b-c67c-4df9-8851-b1ee3faa55ed
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 1%
@@ -22,11 +18,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
 
-AEM提供數種工具，可讓您開發行動裝置的網站，以及將您的內容整合到行動應用程式中。
+AEM提供數種工具，可讓您為行動裝置開發網站，並將您的內容整合到行動應用程式中。
 
-本頁應結合 [作者的行動裝置頁面](/help/sites-authoring/mobile.md).
+本頁應結合 [作者適用的行動頁面](/help/sites-authoring/mobile.md).
 
 ## 為行動裝置開發網站 {#developing-web-sites-for-mobile}
 
@@ -34,9 +30,9 @@ AEM提供數種工具，可讓您開發行動裝置的網站，以及將您的�
 
 * [建立裝置群組篩選器](/help/sites-developing/groupfilters.md)
 * [網頁的回應式設計](/help/sites-developing/responsive.md)
-* [建立行動裝置的網站](/help/sites-developing/mobile.md)
+* [建立行動裝置網站](/help/sites-developing/mobile.md)
 * [模擬器](/help/sites-developing/emulators.md)
 
 ## 開發行動應用程式 {#developing-mobile-apps}
 
-開發使用AEM頁面作為應用程式介面的行動應用程式。 AEM與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 內容同步可讓您建立頁面的版本化封存，以便與應用程式整合。 若要進一步瞭解Content Sync，請按一下 [此處](/help/mobile/phonegap-contentsync.md).
+開發使用AEM頁面作為應用程式介面的行動應用程式。 AEM已與PhoneGap整合，因此您可以使用AEM頁面輕鬆建立應用程式。 「內容同步」可讓您建立頁面的版本化封存，以便與應用程式整合。 若要深入瞭解Content Sync，請按一下 [此處](/help/mobile/phonegap-contentsync.md).

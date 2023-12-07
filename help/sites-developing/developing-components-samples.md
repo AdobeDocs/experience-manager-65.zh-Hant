@@ -1,20 +1,16 @@
 ---
 title: 開發AEM元件 — 程式碼範例
-seo-title: Developing AEM Components - Code Samples
 description: 本節提供一些範例，說明如何為AEM建立自己的元件。
-seo-description: This section provides some examples on how to create your own components for AEM.
-uuid: 764b5dad-d3bb-48c6-9e93-9dc4e3f623db
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 402c0d6b-2c26-490a-97c5-dfd4dea778e0
 legacypath: /content/docs/en/aem/6-2/develop/components/components-develop
 exl-id: 4059af12-49a7-489c-a2b8-d0481be57cc5
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 4%
+source-wordcount: '203'
+ht-degree: 5%
 
 ---
 
@@ -24,7 +20,7 @@ ht-degree: 4%
 
 如需基本概念，請參閱：
 
-* [AEM元件 — 基本知識](/help/sites-developing/components-basics.md)
+* [AEM元件 — 基本需知](/help/sites-developing/components-basics.md)
 * [開發AEM元件](/help/sites-developing/developing-components.md)
 
 如需傳統UI的詳細資訊，請參閱 [傳統UI的AEM元件](/help/sites-developing/developing-components-classic.md).
@@ -36,7 +32,6 @@ ht-degree: 4%
 >* [開發人員模式](/help/sites-developing/developer-mode.md)
 >* a [自動化測試的架構，以Hobbes.js資料庫為基礎](/help/sites-developing/hobbes.md)
 >
-
 
 ## 程式碼範例 — 如何自訂對話方塊欄位 {#code-sample-how-to-customize-dialog-fields}
 
@@ -53,11 +48,11 @@ GITHUB上的程式碼
 
 ## 相關資源 {#related-resources}
 
-### 將動作新增至元件工具列 {#add-new-action-to-a-component-toolbar}
+### 將新動作新增到元件工具列 {#add-new-action-to-a-component-toolbar}
 
 可以使用頁面編輯器的編輯層將新動作新增到元件工具列中。
 
-詳細資訊以及程式碼範例的連結位於 [將動作新增至元件工具列](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar).
+詳細資訊，以及程式碼範例的連結位於 [將動作新增至元件工具列](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar).
 
 ### 自訂和擴充內容片段 {#customizing-and-extending-content-fragments}
 

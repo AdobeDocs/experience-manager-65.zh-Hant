@@ -1,17 +1,13 @@
 ---
 title: 建立表單入口網站頁面
-seo-title: Creating a forms portal page
 description: Forms入口網站為網頁開發人員提供元件，以便在使用Adobe Experience Manager (AEM)編寫的網站上建立和自訂表單入口網站。
-seo-description: Forms Portal equips Web Developers with components to create and customize a forms portal on websites authored using Adobe Experience Manager (AEM).
-uuid: a5017de5-616c-4ce4-81aa-f28c741f8e8f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 2%

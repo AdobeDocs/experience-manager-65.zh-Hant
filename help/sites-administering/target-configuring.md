@@ -1,19 +1,15 @@
 ---
 title: 手動設定與Adobe Target的整合
-seo-title: Manually Configuring the Integration with Adobe Target
 description: 瞭解如何手動設定與Adobe Target的整合。
-seo-description: Learn how to manually configure the integration with Adobe Target.
-uuid: 0bb76a65-f981-4cc5-bee8-5feb3297137c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2122'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -242,7 +238,7 @@ AT.js對mbox.js資料庫提供數項改善專案：
 
 1. 在 **網站** 主控台，導覽至您要設定的網站。
 1. 使用 [快速動作](/help/sites-authoring/basic-handling.md#quick-actions) 或 [選擇模式](/help/sites-authoring/basic-handling.md)，選取 **檢視屬性。**
-1. 選取 **Cloud Service** 標籤。
+1. 選取「**雲端服務**」標籤。
 1. 按一下 **編輯**.
 1. 按一下 **新增設定** 在 **Cloud Service設定** 並選取 **Adobe Target**.
 

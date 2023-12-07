@@ -1,15 +1,11 @@
 ---
 title: 在AEM Forms中建立鎖定目標的體驗
-seo-title: Create targeted experiences in AEM Forms
 description: 在AEM Forms中使用Target來建立目標客戶的自訂體驗。
-seo-description: Use Target in AEM Forms to create customized experiences for targeted customers.
-uuid: 174b6054-8fe3-4ab2-8afd-435e5dff9044
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
-discoiquuid: 6cf54a08-d429-4a58-8429-a1cb784448d1
 exl-id: fdc91054-3f7e-4cbf-bdfa-7d7a621747f1
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '839'
 ht-degree: 0%
@@ -78,7 +74,7 @@ Adobe Target與AEM整合，可讓您建立針對目標受眾自訂的體驗。 �
    或者，當您將指標移到表單或互動式通訊圖示上而不選取它時，會出現四個按鈕。 您可以選取 **編輯** 按鈕，以在編輯模式中開啟表單。
 
 1. 在頁面工具列中，選取 **頁面資訊** ![theme-options](assets/theme-options.png) > **開啟屬性**.
-1. 在「一般」標籤中，選擇 **Adobe Target** 欄位。 選取 **儲存並關閉**.
+1. 在「一般」標籤中，選擇 **Adobe Target** 欄位。 選取「**儲存並關閉**」。
 
 ## 將建立的活動套用至最適化表單影像或互動式通訊影像 {#applying-created-activity-to-an-adaptive-form-image-or-an-interactive-communication-image}
 

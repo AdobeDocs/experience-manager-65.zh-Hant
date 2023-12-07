@@ -1,13 +1,11 @@
 ---
 title: 無法搭配特定版本的OracleJDK使用Experience Manager Forms
-seo-title: Unable to use Experience Manager Forms with certain versions of Oracle JDK
 description: 無法搭配特定版本的OracleJDK使用Experience Manager Forms
-seo-description: Unable to use Experience Manager Forms with certain versions of Oracle JDK
 exl-id: 6a8a7cb7-77d6-4bfc-82f3-82d0fddfc10a
-source-git-commit: 0142b46d087d34707b09a1f172910c8b287b839d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 4%
+source-wordcount: '160'
+ht-degree: 1%
 
 ---
 
@@ -26,13 +24,13 @@ ht-degree: 4%
 
 ## 原因 {#reason}
 
-當您執行Experience Manager Forms且其OracleJDK (Java Development Kit)版本大於或等於下列版本時，會發生例外狀況：
+當您執行Experience Manager Forms且其OracleJDK (Java Development Kit)版本大於或等於下列版本時，會發生例外情況：
 
 * [JDK7u341](https://www.oracle.com/java/technologies/javase/7u341-relnotes.html)
 * [JDK8u331](https://www.oracle.com/java/technologies/javase/8u331-relnotes.html)
 * [JDK11u15](https://www.oracle.com/java/technologies/javase/11-0-15-relnotes.html)
 
-上述及更新版本的Java包含JVM （Java虛擬機器器）中的新XML處理限制，這會造成某些Forms特定作業失敗。
+上述和更新版本的Java包括JVM （Java虛擬機器器）中的新XML處理限制，這會造成某些Forms特定作業失敗。
 
 ## 因應措施 {#workaround}
 
@@ -43,4 +41,4 @@ ht-degree: 4%
 
    它會將JVM中的系統屬性設定為相當高的值，這樣就不會達到預設限制。
 
-1. 啟動Experience Manager Forms伺服器。
+1. 啟動您的Experience Manager Forms伺服器。

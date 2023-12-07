@@ -1,16 +1,12 @@
 ---
 title: 資料字典
-seo-title: Data Dictionary
 description: 「通訊管理」中的資料字典可讓您將後端資料整合到信函中，作為用於客戶通訊的輸入。
-seo-description: Data dictionary in Correspondence Management lets you integrate back-end data to letters as inputs for use in customer correspondence.
-uuid: 178a285e-b4a4-4a36-a2aa-b43ecb0871ed
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
 feature: Correspondence Management
 exl-id: aaed75e6-8849-46a8-b986-896ad729adda
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '3842'
 ht-degree: 0%
@@ -71,7 +67,7 @@ ht-degree: 0%
    >
    >您可以略過上傳結構描述檔案，並使用使用者介面從頭開始建立資料字典。 要執行此操作，請略過此步驟，並繼續後續步驟。
 
-1. 選取 **下一個**.
+1. 選取&#x200B;**「下一步」**。
 1. 在新增屬性畫面中，將元素新增至資料字典。 如果您已上傳結構描述以取得資料字典的基本結構，您也可以新增/刪除元素及編輯其詳細資訊。
 
    您可以選取元素右側的三個點，並將元素新增至資料字典結構。
@@ -111,7 +107,7 @@ ht-degree: 0%
    >刪除具有子節點的複合/收集要素也會刪除其子節點。
 
 1. （選用）在「資料字典結構」窗格及「欄位與變數清單」面板中選取元素。 變更或新增與元素相關聯的任何必要屬性。
-1. 選取&#x200B;**儲存**。
+1. 選取「**儲存**」。
 
 ### 建立一或多個資料字典的復本 {#create-copies-of-one-or-more-data-dictionary}
 

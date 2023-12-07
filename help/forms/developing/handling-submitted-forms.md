@@ -1,20 +1,16 @@
 ---
 title: 處理已提交的Forms
-seo-title: Handling Submitted Forms
 description: 使用Forms服務來擷取以互動式表單輸入的提交資料。 使用者可以提交XML、PDF和URL UTF-16格式的表單資料。
-seo-description: Use the Forms service to retrieve the submitted data entered in an interactive form. The user can submit the form data in XML, PDF, and URL UTF-16 formats.
-uuid: 673b28f1-f023-4da8-a6a0-c5ff921c5f5d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 role: Developer
 exl-id: 419335b2-2aae-4e83-98ff-18e61b7efa9c
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2902'
+source-wordcount: '2894'
 ht-degree: 0%
 
 ---
@@ -70,7 +66,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->必須在Designer中正確設定表單設計，才能將資料作為XML資料提交。 若要正確設定表單設計以提交XML資料，請確保表單設計上的提交按鈕已設定為提交XML資料。 如需有關設定「提交」按鈕以提交XML資料的資訊，請參閱 [AEM Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_tw).
+>必須在Designer中正確設定表單設計，才能將資料作為XML資料提交。 若要正確設定表單設計以提交XML資料，請確保表單設計上的提交按鈕已設定為提交XML資料。 如需有關設定「提交」按鈕以提交XML資料的資訊，請參閱 [AEM Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 ## 處理提交的PDF資料 {#handling-submitted-pdf-data}
 

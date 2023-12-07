@@ -1,51 +1,47 @@
 ---
-title: 建立與使用解除安裝工單
-seo-title: Creating and Consuming Jobs for Offloading
-description: Apache Sling Discovery功能提供Java API，可讓您建立JobManager作業和使用這些作業的JobConsumer服務
-seo-description: The Apache Sling Discovery feature provides a Java API that enables you to create JobManager jobs and JobConsumer services that consume them
-uuid: d6a5beb0-0618-4b61-9b52-570862eac920
+title: 建立及使用解除安裝工作
+description: Apache Sling Discovery功能提供Java API，可讓您建立使用JobManager作業和JobConsumer服務
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: e7b6b9ee-d807-4eb0-8e96-75ca1e66a4e4
 exl-id: 4e6f452d-0251-46f3-ba29-1bd85cda73a6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 0%
 
 ---
 
-# 建立與使用解除安裝工單{#creating-and-consuming-jobs-for-offloading}
+# 建立及使用解除安裝工作{#creating-and-consuming-jobs-for-offloading}
 
-Apache Sling Discovery功能提供Java API，可讓您建立JobManager作業和使用這些作業的JobConsumer服務。
+Apache Sling Discovery功能提供Java API，可讓您建立使用JobManager作業和JobConsumer服務。
 
-如需建立解除安裝拓撲和設定主題使用量的相關資訊，請參閱 [正在解除安裝工作](/help/sites-deploying/offloading.md).
+如需有關建立解除安裝拓撲和設定主題沖銷的資訊，請參閱 [正在解除安裝工作](/help/sites-deploying/offloading.md).
 
-## 處理工作裝載 {#handling-job-payloads}
+## 處理工作承載 {#handling-job-payloads}
 
-解除安裝架構會定義兩個用於識別工作裝載的工作屬性。 解除安裝復寫代理程式會使用這些屬性來識別要復寫到拓撲中執行個體的資源：
+解除安裝架構會定義兩個用於識別工作裝載的工作屬性。 解除安裝復寫代理程式會使用這些特性來識別要復寫到拓撲中執行個體的資源：
 
 * `offloading.job.input.payload`：以逗號分隔的內容路徑清單。 內容會復寫到執行工作的執行處理。
-* `offloading.job.output.payload`：以逗號分隔的內容路徑清單。 當工作執行完成時，會將工作裝載復寫到建立工作的執行個體上的這些路徑。
+* `offloading.job.output.payload`：以逗號分隔的內容路徑清單。 當作業執行完成時，會將作業裝載復寫到建立作業的執行處理上的這些路徑。
 
 使用 `OffloadingJobProperties` 列舉以參照屬性名稱：
 
 * `OffloadingJobProperties.INPUT_PAYLOAD.propertyName()`
 * `OffloadingJobProperties.OUTPUT_PAYLOAD.propetyName()`
 
-工作不需要裝載。 不過，如果工作需要操作資源，且工作解除安裝至未建立工作的電腦，則裝載是必要的。
+作業不需要裝載。 不過，如果工作需要操作資源，而且工作已解除安裝至未建立工作的電腦，則必須裝載負載。
 
 ## 建立解除安裝工作 {#creating-jobs-for-offloading}
 
-建立呼叫JobManager.addJob方法的使用者端，以建立由自動選取的JobConsumer執行的工作。 提供下列資訊以建立工作：
+建立呼叫JobManager.addJob方法的使用者端，以建立自動選取的JobConsumer所執行的工作。 提供下列資訊以建立工作：
 
 * 主題：工作主題。
 * 名稱： （選擇性）
-* 屬性對應： A `Map<String, Object>` 包含任何數量屬性的物件，例如輸入裝載路徑和輸出裝載路徑。 執行工作的JobConsumer物件可使用此Map物件。
+* 屬性對應： A `Map<String, Object>` 包含任何數量屬性的物件，例如輸入裝載路徑和輸出裝載路徑。 執行工作的JobConsumer物件可以使用這個Map物件。
 
-以下範例服務會為指定主題和輸入裝載路徑建立作業。
+以下範例服務會為給定主題和輸入裝載路徑建立作業。
 
 ```java
 package com.adobe.example.offloading;
@@ -93,7 +89,7 @@ public class JobGeneratorImpl implements JobGenerator  {
 }
 ```
 
-為呼叫JobGeneratorImpl.createJob時，記錄會包含下列訊息 `com/adobe/example/offloading` 主題與 `/content/geometrixx/de/services` 裝載：
+為呼叫JobGeneratorImpl.createJob時，記錄會包含以下訊息 `com/adobe/example/offloading` 主題與 `/content/geometrixx/de/services` 裝載：
 
 ```shell
 10.06.2013 15:43:33.868 *INFO* [JobHandler: /etc/workflow/instances/2013-06-10/model_1554418768647484:/content/geometrixx/en/company] com.adobe.example.offloading.JobGeneratorImpl Received request to make job for topic com/adobe/example/offloading and payload /content/geometrixx/de/services
@@ -101,9 +97,9 @@ public class JobGeneratorImpl implements JobGenerator  {
 
 ## 開發工作消費者 {#developing-a-job-consumer}
 
-若要使用工作，請開發實作的OSGi服務 `org.apache.sling.event.jobs.consumer.JobConsumer` 介面。 使用要使用的主題來識別 `JobConsumer.PROPERTY_TOPICS` 屬性。
+若要使用工作，請開發實作的OSGi服務 `org.apache.sling.event.jobs.consumer.JobConsumer` 介面。 使用以要使用的主題來識別 `JobConsumer.PROPERTY_TOPICS` 屬性。
 
-以下範例JobConsumer實作會註冊 `com/adobe/example/offloading` 主題。 取用者只需將裝載內容節點的Consumed屬性設定為true即可。
+以下範例JobConsumer實作會註冊 `com/adobe/example/offloading` 主題。 取用者只會將裝載內容節點的Consumed屬性設定為true。
 
 ```java
 package com.adobe.example.offloading;
@@ -168,7 +164,7 @@ public class MyJobConsumer implements JobConsumer {
 }
 ```
 
-MyJobConsumer類別會為/content/geometrixx/de/services的輸入裝載產生下列記錄訊息：
+MyJobConsumer類別會針對/content/geometrixx/de/services的輸入裝載產生下列記錄訊息：
 
 ```shell
 10.06.2013 16:02:40.803 *INFO* [pool-7-thread-17-<main queue>(com/adobe/example/offloading)] com.adobe.example.offloading.MyJobConsumer Consuming job of topic: com/adobe/example/offloading
@@ -182,7 +178,7 @@ MyJobConsumer類別會為/content/geometrixx/de/services的輸入裝載產生下
 
 ## Maven相依性 {#maven-dependencies}
 
-將下列相依性定義新增至您的pom.xml檔案，以便Maven能夠解析解除安裝相關類別。
+將下列相依性定義新增至您的pom.xml檔案，讓Maven可以解析解除安裝相關類別。
 
 ```xml
 <dependency>

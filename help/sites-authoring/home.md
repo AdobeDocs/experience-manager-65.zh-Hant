@@ -1,19 +1,17 @@
 ---
 title: AEM 6.5 Authoring 使用指南
-seo-title: AEM 6.5 Authoring User Guide
 description: 探索在AEM 6.5中建立內容和編寫的重要概念。您也會找到使用標籤、範本和其他頁面功能的相關資訊。
-seo-description: Explains the concepts of authoring in AEM.
 exl-id: 38f229b4-10b2-4a67-9821-a03718b82215
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 28%
+source-wordcount: '298'
+ht-degree: 18%
 
 ---
 
 # AEM 6.5 Authoring 使用指南
 
-探索在AEM 6.5中建立內容和編寫的重要概念。您也可以找到使用標籤、範本和其他頁面功能的相關資訊。
+探索在AEM 6.5中建立內容和編寫的重要概念。您也會找到使用標籤、範本和其他頁面功能的相關資訊。
 
 ## AEM重要文章
 
@@ -30,20 +28,20 @@ ht-degree: 28%
 | [Assets 使用手冊](/help/assets/home.md) | 瞭解如何建立、管理、提供和最佳化數位資產。 |
 | [Forms使用手冊](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表格。 |
 | [Communities使用手冊](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
-| [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
-| [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
-| [Classic UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM中編寫的概念。 |
+| [Administering指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
+| [Authoring指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
+| [傳統UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM編寫的概念。 |
 | [Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解用於發佈動態和互動式數位體驗的數位看板解決方案。 |
 | [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南說明AEM的基本概念。 |
-| [開發使用手冊](/help/sites-developing/home.md) | 瞭解如何建置AEM執行個體。 |
+| [Developing使用手冊](/help/sites-developing/home.md) | 瞭解如何建置您的AEM執行個體。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
-| [Commerce 使用手冊](/help/commerce/home.md) | 瞭解AEM上的Commerce Integration Framework。 |
+| [Commerce 使用手冊](/help/commerce/home.md) | 瞭解AEM上的Commerce integration framework。 |
 | [Mobile使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
 
 ## 重要AEM資源
 
 * [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
+* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用手冊](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)

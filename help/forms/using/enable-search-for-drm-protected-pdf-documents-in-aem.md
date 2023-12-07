@@ -1,20 +1,16 @@
 ---
 title: 啟用AEM以搜尋受Document Security保護的PDF檔案
-seo-title: Enable AEM to search document security protected PDF documents
 description: 瞭解如何啟用原生AEM搜尋，以在受DRM保護的PDF檔案上執行全文搜尋。
-seo-description: Learn how to enable native AEM search to perform full-text search on DRM protected PDF documents.
-uuid: ec6e5d53-a74c-4958-a389-7937d073c083
 contentOwner: khsingh
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 geptopics: SG_AEMFORMS/categories/working_with_document_security
-discoiquuid: b79c147c-f846-4e48-bec0-8b658502bb6f
 docset: aem65
 feature: Document Security
 exl-id: 7cf17fb6-021a-473e-bc3b-27c317953002
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '684'
 ht-degree: 0%
 
 ---
@@ -64,7 +60,7 @@ AEM搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式(例如�
    * **使用者名稱：** 指定JEE帳戶上AEM Forms的使用者名稱，以用於從AEM伺服器起始呼叫。 指定的帳戶必須具有在JEE伺服器上的AEM Forms上啟動檔案服務的許可權。
    * **密碼**：指定使用者名稱欄位中提及的JEE帳戶AEM Forms密碼。
 
-   按一下「**儲存**」。AEM已啟用來搜尋受Document Security保護的PDF檔案。
+   按一下 **儲存**. AEM已啟用來搜尋受Document Security保護的PDF檔案。
 
 #### 使用相互驗證設定AdobeLiveCycle使用者端SDK套裝 {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
 
@@ -80,7 +76,7 @@ AEM搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式(例如�
    * **TrustStPassword**：指定Truststore檔案的密碼。
    * **服務名稱**：將RightsManagementService新增至指定服務的清單。
 
-   按一下「**儲存**」。AEM已啟用以搜尋受Document Security保護的PDF檔案
+   按一下 **儲存**. AEM已啟用以搜尋受Document Security保護的PDF檔案
 
 ### 為受原則保護的PDF範例檔案建立索引 {#index-a-sample-policy-protected-pdf-document}
 

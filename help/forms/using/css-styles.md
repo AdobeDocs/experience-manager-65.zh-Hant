@@ -1,20 +1,16 @@
 ---
 title: 建立HTML5表單的CSS樣式
-seo-title: Creating CSS styles for HTML5 forms
-description: 瞭解如何修改與HTML表單元素關聯的CSS類別，以變更HTML5表單的外觀。
-seo-description: Learn how to change the appearance of HTML5 forms by modifying the CSS class associated with the HTML form element.
-uuid: 43c689b4-243c-43de-a8be-1eef10d75295
+description: 瞭解如何修改與HTML表單元素相關的CSS類別，以變更HTML5表單的外觀。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 feature: Mobile Forms
 exl-id: 8cc90ff7-284e-41cd-bfda-7fa09371e270
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '812'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -24,7 +20,7 @@ XFA型表單範本的HTML5轉譯包含數個HTML元素。 這些元素會依順�
 
 >[!NOTE]
 >
->在CSS類別中，請勿變更width、height、border-thickness、top、left、right、bottom、padding、margin及其他位置與大小屬性的值。 位置和大小屬性的任何變更都會改變表單的版面。
+>在CSS類別中，請勿變更width、height、border-thickness、top、left、right、bottom、padding、margin及其他位置與大小屬性的值。 位置和大小屬性的任何變更都會對表單的版面配置造成變更。
 
 ## 元素的CSS類別  {#css-classes-nbsp-for-elements-nbsp}
 
@@ -36,9 +32,9 @@ XFA型表單範本的HTML5轉譯包含數個HTML元素。 這些元素會依順�
 
 >[!NOTE]
 >
->某些XFA元素沒有名稱。 若要變更這類元件的樣式，請修改該特定型別的所有元件。
+>有些XFA元素沒有名稱。 若要變更這類元件的樣式，請修改該特定型別的所有元件。
 
-對於AEM Forms Designer中未命名的頁面，HTML5表單中的頁面會以遞增的順序命名。 例如，對於具有兩個頁面的HTML5表單，這些頁面的名稱為Page1， Page2。
+對於AEM Forms Designer中未命名的頁面，HTML5表單中的頁面會依其編號的遞增順序命名。 例如，如果是具有兩個頁面的HTML5表單，這些頁面的名稱為Page1， Page2。
 
 ## 欄位元素 {#field-element}
 
@@ -69,19 +65,19 @@ widget元素包含用於與使用者互動的使用者介面元素。 它有三�
 </div>
 ```
 
-除了型別和名稱類別之外，欄位元件也包含其他名為的CSS類別 **子型別**. 子型別會識別其欄位型別，例如NumericField、DateField、TextField。 您可以覆寫子型別類別，以修改型別、子型別的所有欄位的樣式。
+除了型別和名稱類別外，欄位元件也包含其他名為的CSS類別 **子型別**. 子型別會識別其欄位型別，例如NumericField、DateField、TextField。 您可以覆寫子型別類別，以修改型別、子型別的所有欄位的樣式。
 
 ## 不同元件的CSS類別 {#css-classes-for-different-components}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>Component</strong></td>
+   <td><strong>元件</strong></td>
    <td><strong>類型</strong></td>
    <td><strong>名稱</strong></td>
   </tr>
   <tr>
-   <td>Page</td>
+   <td>頁面</td>
    <td>頁面</td>
    <td>使用者定義的名稱<br /> 或<br /> 頁面&lt;pagenumber&gt; （預設）</td>
   </tr>
@@ -97,7 +93,7 @@ widget元素包含用於與使用者互動的使用者介面元素。 它有三�
   </tr>
   <tr>
    <td>排除群組</td>
-   <td>排除群組</td>
+   <td>exclgroup</td>
    <td>使用者定義的名稱</td>
   </tr>
   <tr>
@@ -112,22 +108,22 @@ widget元素包含用於與使用者互動的使用者介面元素。 它有三�
   </tr>
   <tr>
    <td>插圖標題</td>
-   <td>caption</td>
+   <td>註解</td>
    <td>不適用</td>
   </tr>
   <tr>
    <td>Widget</td>
    <td>Widget</td>
-   <td>Widget開發人員會加以定義（使用者定義的Widget請參閱下節中的表格）</td>
+   <td>Widget開發人員會加以定義（若是使用者定義的Widget，請參閱下節中的表格）</td>
   </tr>
  </tbody>
 </table>
 
 ## 不同欄位的CSS類別 {#css-classes-for-different-fields}
 
-AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、DecimalField和Date Field。 HTML中的所有欄位都包含上述CSS類別。 視欄位型別而定，它們也包含一些額外的類別。
+AEM Forms Designer支援表單中不同型別的欄位，例如「數值欄位」、「十進位欄位」和「日期欄位」。 HTML中的所有欄位都包含上述CSS類別。 它們也包含一些額外的類別，視欄位型別而定。
 
-每個欄位都有一個代表UI元素的相關Widget。 每個欄位的類別以及與每個欄位關聯的Widget如下所列。
+每個欄位都有一個代表UI元素的關聯Widget。 以下列出每個欄位的類別以及與每個欄位相關聯的Widget。
 
 <table>
  <tbody>
@@ -146,10 +142,10 @@ AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、De
    <td>輸入型別=按鈕<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>檢查按鈕<br type="_moz" /> </td>
+   <td>核取按鈕<br type="_moz" /> </td>
    <td>核取方塊欄位<br /> </td>
    <td>XfaCheckBox<br type="_moz" /> </td>
-   <td>核取方塊欄位Widget<br type="_moz" /> </td>
+   <td>checkboxfieldwidget<br type="_moz" /> </td>
    <td>input type=checkbox<br type="_moz" /> </td>
   </tr>
   <tr>
@@ -157,21 +153,21 @@ AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、De
    <td>datefield<br type="_moz" /> </td>
    <td>dateField<br type="_moz" /> </td>
    <td>datefieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>輸入型別=文字<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>DateTimeField<br type="_moz" /> </td>
+   <td>日期時間欄位<br type="_moz" /> </td>
    <td>textfield<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
    <td>textfieldwidget</td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>輸入型別=文字<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>DecimalField<br type="_moz" /> </td>
    <td>numericfield<br type="_moz" /> </td>
    <td>數值輸入<br type="_moz" /> </td>
    <td>numericfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>輸入型別=文字<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>下拉式清單<br type="_moz" /> </td>
@@ -192,7 +188,7 @@ AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、De
    <td>numericfield<br type="_moz" /> </td>
    <td>數值輸入<br type="_moz" /> </td>
    <td>numericfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>輸入型別=文字<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>密碼欄位<br type="_moz" /> </td>
@@ -205,7 +201,7 @@ AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、De
    <td>RadioButton<br type="_moz" /> </td>
    <td>無線電場<br type="_moz" /> </td>
    <td>XfaCheckBox<br type="_moz" /> </td>
-   <td>radiofieldwidget<br type="_moz" /> </td>
+   <td>Radiofieldwidget<br type="_moz" /> </td>
    <td>input type=radio<br type="_moz" /> </td>
   </tr>
   <tr>
@@ -213,23 +209,23 @@ AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、De
    <td>textfield<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
    <td>textfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>輸入型別=文字<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>時間欄位<br type="_moz" /> </td>
    <td>textfield<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
    <td>textfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>輸入型別=文字<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
 
 ## 不同繪圖元素的CSS類別 {#css-classes-for-different-draw-elements}
 
-您可以使用AEM Forms Designer插入靜態繪圖元素，例如文字和影像。 對於每個繪圖元素，個別的CSS類別會與該元素相關聯。 以下列出繪製元素的CSS類別清單。 每個繪圖元素都有與其關聯的繪圖類別。
+您可以使用AEM Forms Designer插入靜態繪圖元素，例如文字和影像。 對於每個繪圖元素，個別的CSS類別會與該元素相關聯。 以下列出用於繪製元素的CSS類別清單。 每個繪圖元素都有與其關聯的繪圖類別。
 
-| **Draw Type** | **CSS 類別** |
+| **Draw Type** | **CSS類別** |
 |---|---|
 | 文字 | text |
 | 影像 | 影像 |
@@ -250,4 +246,4 @@ AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、De
 
 `Styling Fields with Validation Errors`
 
-當欄位驗證失敗時，Widget的樣式會變更。 此樣式變更是藉由套用CSS類別來完成 **widgetError** 在widget元件上。 若要修改預設樣式，請覆寫 **widgetError** 類別。
+當欄位驗證失敗時，Widget的樣式會變更。 此樣式變更是透過套用CSS類別來完成 **widgetError** 在widget元件上。 若要修改預設樣式，請覆寫 **widgetError** 類別。

@@ -1,17 +1,15 @@
 ---
 title: 疑難排解AEM中的編寫作業
 description: 使用AEM時可能會遇到的一些問題。
-uuid: 99af51ea-8628-4811-83f2-ab3f88f0279e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
 exl-id: 05586b17-35d4-496e-8f0e-293c755eb066
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '294'
-ht-degree: 8%
+ht-degree: 0%
 
 ---
 
@@ -29,15 +27,15 @@ ht-degree: 8%
 
 ## 發佈網站上仍顯示舊的頁面版本 {#old-page-version-still-on-published-site}
 
-* **問題**:
+* **問題**：
 
    * 您已變更頁面並將頁面復寫至發佈站台，但 *舊* 頁面版本仍顯示在發佈網站上。
 
-* **原因**:
+* **原因**：
 
    * 這可能有多種原因，通常是快取（本機瀏覽器或Dispatcher），不過有時復寫佇列可能會發生問題。
 
-* **解決方案**:
+* **解決方案**：
 
    * 這裡有多種可能性：
    * 確認已正確復寫頁面。 檢查頁面狀態，並視需要檢查復寫佇列的狀態。
@@ -51,14 +49,14 @@ ht-degree: 8%
 
 ## 元件動作在工具列上不可見 {#component-actions-not-visible-on-toolbar}
 
-* **問題**:
+* **問題**：
 
    * 在作者環境中編輯內容頁面時，看不到所有適用的元件動作。
 
-* **原因**:
+* **原因**：
 
    * 在極少數情況下，先前的動作可能會影響工具列。
 
-* **解決方案**:
+* **解決方案**：
 
    * 重新整理頁面。

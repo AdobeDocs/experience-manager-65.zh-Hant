@@ -1,17 +1,13 @@
 ---
 title: 在指派任務步驟中使用自訂電子郵件範本
-seo-title: Use custom email templates in an Assign Task step
 description: 表單工作流程電子郵件通知的自訂電子郵件範本
-seo-description: Custom email templates for forms workflow email notifications
-uuid: ba453d54-813f-4a4f-a82e-1a6a28b6939c
 topic-tags: publish
-discoiquuid: 2ad4b7b5-2162-4599-af3f-9476f1256de6
 docset: aem65
 exl-id: d4035c91-ee8d-4f12-bdac-e3912be732d7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 1%
+source-wordcount: '509'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +39,7 @@ AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任�
 
    電子郵件通知範本是 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 您可以使用自訂程式碼取代現有的html程式碼，以變更範本的外觀。
 
-1. 儲存檔案。現在，自訂範本已可供使用。
+1. 儲存檔案。 現在，自訂範本已可供使用。
 
 ## 建立電子郵件範本 {#create-an-email-template}
 
@@ -59,7 +55,7 @@ AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任�
 
    電子郵件通知範本是 [HTML電子郵件](https://en.wikipedia.org/wiki/HTML_email). 您可以將自訂HTML程式碼新增到檔案中來建立範本。
 
-1. 儲存檔案。範本已準備好用於指派工作步驟。
+1. 儲存檔案。 範本已準備好用於指派工作步驟。
 
 ## 在指派工作步驟中使用電子郵件範本 {#use-an-email-template-in-an-assign-task-step}
 
@@ -71,6 +67,6 @@ AEM Forms提供立即可用的電子郵件通知範本。 範本提供指派任�
 
 1. 選取新建立的HTML電子郵件範本。
 
-1. 按一下「確定」。範本已變更。
+1. 按一下「確定」。 範本已變更。
 
 電子郵件通知也會使用 [中繼資料](../../forms/using/use-metadata-in-email-notifications.md). 例如，到期日、優先順序、工作流程名稱等。 您也可以設定範本以使用 [自訂中繼資料](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).

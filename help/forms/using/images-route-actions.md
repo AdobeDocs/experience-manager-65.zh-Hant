@@ -1,28 +1,24 @@
 ---
 title: 自訂路由動作中使用的影像
-seo-title: Customize images used in route actions
-description: 如何在LiveCycleAEM Forms工作區中自訂路由動作使用的影像。
-seo-description: How-to customize the images used in route actions in LiveCycle AEM Forms workspace.
-uuid: 42608376-587e-4b57-a9d5-8f9ebd981426
+description: 如何在LiveCycleAEM Forms工作區中自訂路由動作所使用的影像。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 exl-id: 687c6569-7189-4039-9c7a-bc29658a7756
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 2%
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
 # 自訂路由動作中使用的影像 {#customize-images-used-in-route-actions}
 
-若要自訂路由動作中使用的影像，請執行中所述的步驟 [自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md) 然後執行本文中所述的步驟。
+若要自訂路由動作中使用的影像，請執行中所述的步驟 [自訂的一般步驟](/help/forms/using/generic-steps-html-workspace-customization.md) 然後進行本文所述的步驟。
 
 ## 路由動作的影像 {#images-for-route-actions}
 
-1. 針對新的繞線動作，在CSS的下列位置新增定義影像的樣式：
+1. 針對新的繞線動作，在CSS的下列位置加入定義影像的樣式：
 
    `/apps/ws/css/newStyle.css`
 
@@ -44,9 +40,9 @@ ht-degree: 2%
        }
    ```
 
-## 工作清單工作動作快顯視窗 {#task-list-task-action-popup}
+## 工作清單工作動作快顯功能表 {#task-list-task-action-popup}
 
-1. 建立工作清單動作快顯視窗，請參閱 [建立AEM Forms工作區程式碼](introduction-customizing-html-workspace.md#building-html-workspace-code). 它需要使用開發套件。
+1. 建立工作清單動作快顯功能表，請參閱 [建立AEM Forms工作區程式碼](introduction-customizing-html-workspace.md#building-html-workspace-code). 它需要使用開發套件。
 
 1. 複製 `/libs/ws/js/runtime/templates/task.html` 至 `/apps/ws/js/runtime/templates/task.html`.
 
@@ -80,7 +76,7 @@ ht-degree: 2%
                <%}%>
    ```
 
-1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱不同，請修改下列程式碼： `/apps/ws/js/runtime/templates/task.html`. 它會新增 `if-else` 用於對應帶有路由動作名稱之樣式的servlet條件。
+1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱不同，請修改下列程式碼： `/apps/ws/js/runtime/templates/task.html`. 它會新增 `if-else` servlet條件以對應具有路由動作名稱的樣式。
 
 ```jsp
 <%if(routeList == null){%>
@@ -116,7 +112,7 @@ To
             <%}%>
 ```
 
-## 任務詳細資料任務動作快顯視窗 {#task-details-task-action-popup}
+## 工作詳細資料工作動作快顯功能表 {#task-details-task-action-popup}
 
 1. 複製 `/libs/ws/js/runtime/templates/taskdetails.html` 至 `/apps/ws/js/runtime/templates/taskdetails.html`.
 
@@ -140,7 +136,7 @@ To
                        <%}%>
    ```
 
-1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱不同，請修改下列程式碼： `/apps/ws/js/runtime/templates/taskdetails.html`. 它會新增一個棧疊 `if-else` 用於對應帶有路由動作名稱之樣式的servlet條件。
+1. 如果CSS樣式的名稱與來自伺服器的路由動作名稱不同，請修改下列程式碼： `/apps/ws/js/runtime/templates/taskdetails.html`. 它會新增一個棧疊 `if-else` servlet條件以對應具有路由動作名稱的樣式。
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>

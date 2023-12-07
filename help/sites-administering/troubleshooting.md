@@ -1,17 +1,13 @@
 ---
 title: 使用記錄檔
-seo-title: Working with Logs
 description: 瞭解如何使用記錄檔來疑難排解AEM。
-seo-description: Learn how to troubleshoot AEM by working with logs.
-uuid: af8b7f50-c8d4-4760-9f00-3feb0b79ee4c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: da92d751-6f14-4512-9d77-7ecf098bd58e
 docset: aem65
 exl-id: ab4fc41f-e0e9-4577-aab2-f0b4298f9a59
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 3%

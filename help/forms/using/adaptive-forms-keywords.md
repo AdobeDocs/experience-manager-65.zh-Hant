@@ -1,24 +1,20 @@
 ---
 title: 最適化表單關鍵字
-seo-title: Adaptive forms keywords
-description: 您無法在最適化表單中將這些保留字作為識別碼使用。
-seo-description: You cannnot use these reserved words as identifiers in your adaptive forms.
-uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
+description: 您無法在最適化表單中將這些保留字當作識別碼使用。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 feature: Adaptive Forms
 exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 6%
+source-wordcount: '253'
+ht-degree: 24%
 
 ---
 
 # 最適化表單關鍵字 {#adaptive-forms-keywords}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 調適型表單關鍵字為預先定義的保留識別碼，對調適型表單具有特殊意義。 您無法在最適化表單中將這些關鍵字當作識別碼使用。 下表列出作為適用性表單的保留識別碼的所有關鍵字。
 
@@ -27,12 +23,12 @@ ht-degree: 6%
   <tr>
    <td><p>初始化</p> </td>
    <td><p>getonoffValues</p> </td>
-   <td><p>minOccurs</p> </td>
+   <td><p>minOccure</p> </td>
   </tr>
   <tr>
    <td><p>驗證</p> </td>
    <td><p>setGuideState</p> </td>
-   <td><p>maxOccurse</p> </td>
+   <td><p>maxOccure</p> </td>
   </tr>
   <tr>
    <td><p>forceElementFocusChange</p> </td>
@@ -66,7 +62,7 @@ ht-degree: 6%
   </tr>
   <tr>
    <td><p>valueCommitScript</p> </td>
-   <td><p>Autosavstart</p> </td>
+   <td><p>autoSaveStart</p> </td>
    <td><p>造訪</p> </td>
   </tr>
   <tr>
@@ -110,13 +106,13 @@ ht-degree: 6%
    <td><p>templateId</p> </td>
   </tr>
   <tr>
-   <td><p>mandatoryMessage</p> </td>
+   <td><p>message</p> </td>
    <td><p>multiSelect</p> </td>
    <td>&gt;<p>id</p> </td>
   </tr>
   <tr>
    <td><p>validateExpMessage</p> </td>
-   <td><p>optionsExp</p> </td>
+   <td><p>選項運算式</p> </td>
    <td><p>somexpression</p> </td>
   </tr>
   <tr>
@@ -150,7 +146,7 @@ ht-degree: 6%
    <td><p>enableLayoutOptimization</p> </td>
   </tr>
   <tr>
-   <td><p>navigationChangeExp</p> </td>
+   <td><p>導覽變更費用</p> </td>
    <td><p>handleEvent</p> </td>
    <td><p>資料型別</p> </td>
   </tr>
@@ -166,7 +162,7 @@ ht-degree: 6%
   </tr>
   <tr>
    <td><p>clickStatus</p> </td>
-   <td><p>removecinstance</p> </td>
+   <td><p>removeInstance</p> </td>
    <td><p>maxChars</p> </td>
   </tr>
   <tr>
@@ -180,18 +176,18 @@ ht-degree: 6%
    <td><p>executeExpression</p> </td>
   </tr>
   <tr>
-   <td><p>visibleexp</p> </td>
+   <td><p>visibleExp</p> </td>
    <td><p>initScript</p> </td>
    <td><p>enabledExp</p> </td>
   </tr>
   <tr>
    <td><p>execCompletion</p> </td>
    <td><p>sectionId</p> </td>
-   <td><p>設定焦點</p> </td>
+   <td><p>setFocus</p> </td>
   </tr>
   <tr>
    <td><p>completionExp</p> </td>
-   <td><p>sectionTitle</p> </td>
+   <td><p>章節標題</p> </td>
    <td><p>activeInstance</p> </td>
   </tr>
   <tr>
@@ -220,7 +216,7 @@ ht-degree: 6%
    <td><p>sectionName</p> </td>
   </tr>
   <tr>
-   <td><p>submitPassword</p> </td>
+   <td><p>submitpassword</p> </td>
    <td><p>initializeChildren</p> </td>
    <td><p>sectionFields</p> </td>
   </tr>
@@ -230,8 +226,8 @@ ht-degree: 6%
    <td><p>getSelectedIndex</p> </td>
   </tr>
   <tr>
-   <td><p>repeatablePanelPath</p> </td>
-   <td><p>getitemidentifier</p> </td>
+   <td><p>Repeatablepanelpath</p> </td>
+   <td><p>getItemIdentifier</p> </td>
    <td><p>mobileLayout</p> </td>
   </tr>
   <tr>
@@ -242,4 +238,4 @@ ht-degree: 6%
  </tbody>
 </table>
 
-除了上面列出的關鍵字外，請避免使用類似於 [適用性表單JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63).
+除了上面列出的關鍵字外，請避免使用類似下列的名稱 [調適型表單JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63).

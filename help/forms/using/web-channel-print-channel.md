@@ -1,16 +1,12 @@
 ---
 title: 列印管道和網頁管道
-seo-title: Print channel and web channel
 description: 匯入列印管道範本並建立及啟用網路管道範本
-seo-description: Importing print channel templates and creating and enabling web channel templates
-uuid: 2361b1ee-c789-4a5a-9575-8b62b603da1e
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 96d2b1cc-3252-4cc7-8b06-a897cbef8599
 docset: aem65
 feature: Interactive Communication
 exl-id: cd7dbdac-dc76-4a1f-b850-0a9f47ae08de
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 0%
@@ -61,7 +57,7 @@ ht-degree: 0%
 1. 導覽至適當的範本資料夾並建立網站範本。
 
    1. 選取「 」，導覽至適當的範本資料夾 **[!UICONTROL 工具]** > **[!UICONTROL 範本]** > **`[Folder]`**.
-   1. 選擇 **[!UICONTROL 建立]**。
+   1. 選取「**[!UICONTROL 建立]**」。
    1. 選取 **[!UICONTROL 互動式通訊 — Web Channel]** 並選取 **[!UICONTROL 下一個]**.
    1. 輸入範本標題和說明，然後選取 **[!UICONTROL 建立]**.
 

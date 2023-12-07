@@ -1,19 +1,15 @@
 ---
 title: DSRP的MySQL組態
-seo-title: MySQL Configuration for DSRP
 description: 如何連線至MySQL伺服器並建立UGC資料庫
-seo-description: How to connect to the MySQL server and establish the UGC database
-uuid: c058cc88-7ca2-4aed-9a36-b080e603f886
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 role: Admin
 exl-id: eafb60be-2963-4ac9-8618-50fd9bc6fe6c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '705'
 ht-degree: 0%
 
 ---
@@ -92,13 +88,13 @@ MySQL Workbench初次啟動時，除非已用於其他用途，否則不會顯�
    * 連線名稱： `Communities`
    * 連線方法： `Standard (TCP/IP)`
    * 主機名稱： `127.0.0.1`
-   * 使用者名稱: `root`
-   * 密碼: `no password by default`
+   * 使用者名稱： `root`
+   * 密碼： `no password by default`
    * 預設結構描述： `leave blank`
 
 1. 選取 `Test Connection` 驗證與執行中MySQL服務的連線
 
-**附註**:
+**附註**：
 
 * 預設連線埠為 `3306`
 * 所選取的連線名稱會作為資料來源名稱輸入 [JDBC OSGi設定](#configurejdbcconnections)
@@ -192,7 +188,7 @@ SQL指令碼是從AEM存放庫取得：
 
      或者輸入MySQL伺服器的設定使用者名稱（如果不是&#39;root&#39;）。
 
-   * **[!UICONTROL 密碼]**:
+   * **[!UICONTROL 密碼]**：
 
      如果沒有為MySQL設定密碼，請清除此欄位，
 

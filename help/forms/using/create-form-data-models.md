@@ -1,16 +1,12 @@
 ---
 title: 建立表單資料模型
-seo-title: Create form data model
 description: 瞭解如何使用或不使用已設定的資料來源建立表單資料模型。
-seo-description: Learn how to create form data models with or without configured data sources.
-uuid: 5a94f733-0c08-41bb-983f-e7d34816d8fb
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integration
-discoiquuid: 7c392909-ff84-4411-b44f-16f99dffac54
 docset: aem65
 feature: Form Data Model
 exl-id: 7f5978c3-6c9f-4ce4-b0fb-660ac1d49244
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '952'
 ht-degree: 1%
@@ -49,7 +45,7 @@ AEM Forms資料整合提供直覺式使用者介面，用於建立和使用表�
    * (**可選**)指定表單資料模型的標題、說明和標籤。
    * (**選填，且僅在已設定資料來源時適用**)選取「 」旁的勾選圖示 **[!UICONTROL 資料來源組態]** 欄位並選取您要使用之資料來源的雲端服務所在的設定節點。 它會將下一頁可供選取的資料來源清單，限制在所選設定節點中可供選取的資料來源。 不過，預設會列出任何JDBC資料庫和AEM使用者設定檔資料來源。 如果您未選取組態節點，則會列出所有組態節點的資料來源。
 
-   選取 **[!UICONTROL 下一個]**.
+   選取&#x200B;**[!UICONTROL 「下一步」]**。
 
 1. (**僅適用於已設定資料來源時**) **[!UICONTROL 選取資料來源]** 畫面會列出可用的資料來源（若有）。 選取您要在表單資料模型中使用的資料來源。
 1. 選取 **[!UICONTROL 建立]** 在確認對話方塊中，選取 **[!UICONTROL 開啟]** 以開啟表單資料模型編輯器。

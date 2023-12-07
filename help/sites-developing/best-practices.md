@@ -1,25 +1,23 @@
 ---
 title: AEM開發人員的最佳作法
-description: Adobe 工程和顧問團隊已經為 AEM 開發人員發展出一組完整的最佳做法。
-uuid: f962c31f-8140-482f-b189-16376e23bfed
+description: Adobe工程和顧問團隊已經為AEM開發人員發展出一組完整的最佳做法。
 contentOwner: Justin Edelson
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 13%
+source-wordcount: '445'
+ht-degree: 3%
 
 ---
 
 # 最佳做法{#best-practices}
 
-## 開發人員最佳實務 — 快速入門 {#best-practices-for-developers-getting-started}
+## 開發人員最佳作法 — 快速入門 {#best-practices-for-developers-getting-started}
 
-Adobe 工程和顧問團隊已經為 AEM 開發人員發展出一組完整的最佳做法。Adobe開發人員在開發核心AEM產品更新和客戶實作的客戶程式碼時，需遵守這些最佳實務。
+Adobe工程和顧問團隊已經為AEM開發人員發展出一組完整的最佳做法。 Adobe開發人員在開發適用於客戶實作的核心AEM產品更新和客戶程式碼時，會遵守這些最佳實務。
 
 在開始AEM開發專案之前，請先檢閱以下最佳實務：
 
@@ -34,13 +32,13 @@ Adobe 工程和顧問團隊已經為 AEM 開發人員發展出一組完整的最
 
 ### 其他最佳實務資訊 {#additional-best-practices-information}
 
-以下區域提供開發最佳實務的特定檔案：
+下列區域有開發最佳實務的特定檔案：
 
 * [Sites](#sites)
 * [社群](/help/sites-developing/best-practices.md#communities)
 * [工具/HTL](/help/sites-developing/best-practices.md#tooling-htl)
 
-以下表格中會說明並連結特定檔案。
+以下表格會說明並連結特定檔案。
 
 如需管理、部署和維護或編寫的最佳實務，請參閱下列其中一項：
 
@@ -62,17 +60,17 @@ Adobe 工程和顧問團隊已經為 AEM 開發人員發展出一組完整的最
   <tr>
    <td>觸控式UI：自訂主控台 </td>
    <td><a href="/help/sites-developing/customizing-consoles-touch.md">自訂觸控式UI主控台</a></td>
-   <td>本檔案說明擴充觸控式UI主控台的最佳方式。</td>
+   <td>本檔案說明為觸控式UI擴充主控台的最佳方式。</td>
   </tr>
   <tr>
-   <td>觸控式UI：自訂頁面編寫</td>
+   <td>觸控式UI：自訂頁面製作</td>
    <td><a href="/help/sites-developing/customizing-page-authoring-touch.md">自訂觸控式UI頁面編寫</a></td>
-   <td>說明如何延伸觸控式UI的頁面製作功能。</td>
+   <td>說明如何為觸控式UI擴充頁面編寫。</td>
   </tr>
   <tr>
    <td>工作流程</td>
    <td><a href="/help/sites-developing/workflows-best-practices.md">開發和延伸工作流程</a></td>
-   <td><p>工作流程可讓您自動化Adobe Experience Manager (AEM)活動，並可代表AEM環境中發生的大量處理，因此強烈建議您仔細規劃工作流程實施。</p> </td>
+   <td><p>工作流程可讓您自動化Adobe Experience Manager (AEM)活動，並可呈現AEM環境中發生的大量處理，因此強烈建議您仔細規劃工作流程實施。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -85,7 +83,7 @@ Adobe 工程和顧問團隊已經為 AEM 開發人員發展出一組完整的最
 
 |  |  |  |
 |---|---|---|
-| 使用使用者產生內容(UGC)的最佳實務 | [編碼准則](/help/communities/code-guide.md) | 為開發彈性、可攜式程式碼的准則 [社交元件框架](/help/communities/scf.md) (SCF)。 |
+| 使用使用者產生內容(UGC)的最佳實務 | [編碼准則](/help/communities/code-guide.md) | 針對以下專案開發彈性、可攜式程式碼的准則： [社交元件框架](/help/communities/scf.md) (SCF)。 |
 | Communities元件的使用範例 | [社群元件指南](/help/communities/components-guide.md) | 互動式開發工具。 |
 
 ## 工具/HTL {#tooling-htl}
@@ -99,5 +97,5 @@ HTML範本語言(HTL)是隨AEM 6.0推出的新HTML範本系統。它取代了JSP
 
 >[!NOTE]
 >
->以下多部分教學課程可能會是設定新AEM專案的最佳做法，其中會詳細說明核心元件、可編輯的範本、使用者端程式庫和元件開發：
->[AEM Sites - WKND 教學課程快速入門](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>以下多部分教學課程可能會是設定新AEM專案的最佳作法，其中會詳細說明核心元件、可編輯的範本、使用者端程式庫和元件開發：
+>[AEM Sites - WKND教學課程快速入門](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)

@@ -1,20 +1,16 @@
 ---
 title: AEM 6.5中的儲存元素
-seo-title: Storage Elements in AEM 6.5
 description: 瞭解AEM 6.5中可用的節點儲存實施以及如何維護存放庫。
-seo-description: Learn about the node storage implementations available in AEM 6.5 and how to maintain the repository.
-uuid: 3b018830-c42e-48e0-9b6f-cd230b02d914
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 0aa2c22f-32bb-4e50-8328-63ed73c0f19e
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/microkernels-in-aem-6-0
 exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 1%
+source-wordcount: '706'
+ht-degree: 0%
 
 ---
 
@@ -120,7 +116,7 @@ Red Hat® Linux®使用稱為Transparent Great Pages (THP)的記憶體管理演�
 >請參閱下列資源：
 >
 >* 如需Red Hat® Linux®上透明大型頁面的詳細資訊，請參閱此 [文章](https://access.redhat.com/solutions/46111).
-* 如需Linux®調整秘訣，請參閱以下內容 [文章](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=zh-Hant).
+* 如需Linux®調整秘訣，請參閱以下內容 [文章](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
 >
 
 ## 維護存放庫 {#maintaining-the-repository}

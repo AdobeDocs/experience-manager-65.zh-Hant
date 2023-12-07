@@ -1,14 +1,12 @@
 ---
 title: 「教學課程：在AEM Forms中建立表單資料模型」
 description: 建立互動式通訊的表單資料模型
-uuid: b56d3dac-be54-4812-b958-38a085686218
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 feature: Interactive Communication
 exl-id: c8a6037c-46bd-4058-8314-61cb925ba5a8
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2684'
 ht-degree: 0%
@@ -161,7 +159,7 @@ AEM Forms提供直覺式使用者介面，用於 [建立表單資料模式](http
 
 1. 在AEM編寫執行個體中，導覽至 **Forms** > **資料整合**.
 1. 選取 **建立** > **表單資料模型**.
-1. 在建立表單資料模型精靈中，指定 **名稱** 用於表單資料模型。 例如， **FDM_Create_First_IC**. 選取 **下一個**.
+1. 在建立表單資料模型精靈中，指定 **名稱** 用於表單資料模型。 例如， **FDM_Create_First_IC**. 選取&#x200B;**「下一步」**。
 1. 選取資料來源畫面會列出所有已設定的資料來源。 選取 **MySQL** 資料來源並選取 **建立**.
 
    ![MYSQL資料來源](assets/fdm_mysql_data_source_new.png)
@@ -281,7 +279,7 @@ AEM Forms提供直覺式使用者介面，用於 [建立表單資料模式](http
 
    * 選取 **mobilenum** 從 **繫結值** 下拉式清單。
 
-   * 選取 **新增**.
+   * 選取「**新增**」。
 
    ![新增引數的關聯](assets/add_association_argument_new.png)
 
@@ -342,7 +340,7 @@ AEM Forms提供直覺式使用者介面，用於 [建立表單資料模式](http
 
 1. 選取上方的核取方塊 **呼叫** 資料模型物件，以選取並選取 **編輯屬性**. 此 **編輯屬性** 窗格隨即開啟。
 1. 停用 **頂層模型物件** 的 **呼叫** 資料模型物件。
-1. 選取 **完成**.
+1. 選取「**完成**」。
 
    重複步驟8 - 10來設定屬性 **帳單** 資料模型物件。
 
@@ -365,7 +363,7 @@ AEM Forms提供直覺式使用者介面，用於 [建立表單資料模式](http
    * 輸入選用的標題和說明。
    * 選取 **客戶** 從 **輸入模型物件** 下拉式清單。
 
-   * 選取 **完成**.
+   * 選取「**完成**」。
    * 選取 **儲存** 以儲存表單資料模型。
 
    ![更新服務屬性](assets/update_service_properties_new.png)

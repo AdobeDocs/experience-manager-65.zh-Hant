@@ -1,33 +1,29 @@
 ---
 title: 調適型表單的版面配置功能
-seo-title: Layout capabilities of adaptive forms
-description: 調適型表單在各種裝置上的版面配置與外觀是由版面配置設定所控管。 瞭解各種版面以及如何套用它們。
-seo-description: Layout and appearances of adaptive forms on various devices are governed by the layout settings. Understand the various layouts and how to apply them.
-uuid: 79022ac2-1aa3-47c5-b094-cbe83334ea62
+description: 調適型表單在各種裝置上的版面配置與外觀是由版面配置設定所控制。 瞭解各種版面以及如何套用它們。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
 feature: Adaptive Forms
 exl-id: 3db623a4-f1ad-4b7f-97e8-0be138aa8b26
-source-git-commit: 498fb5f6f923710a907e1cf525f56f49850e16b2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 1%
+source-wordcount: '1193'
+ht-degree: 5%
 
 ---
 
 # 調適型表單的版面配置功能{#layout-capabilities-of-adaptive-forms}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/layout-capabilities-adaptive-forms.html) |
-| AEM 6.5 | 本文 |
+| AEM 6.5 | 本文章 |
 
 
-Adobe Experience Manager (AEM)可讓您建立易於使用的調適型表單，為使用者提供動態體驗。 表單版面配置會控制專案或元件在調適型表單中的顯示方式。
+Adobe Experience Manager (AEM)可讓您建立簡單易用的調適型表單，為使用者提供動態體驗。 表單版面配置會控制專案或元件在調適型表單中的顯示方式。
 
 ## 必備條件知識 {#prerequisite-knowledge}
 
@@ -43,23 +39,23 @@ Adobe Experience Manager (AEM)可讓您建立易於使用的調適型表單，�
 
 **面板配置** 控制面板內的專案或元件在裝置上的顯示方式。
 
-**行動佈局** 控制行動裝置上表單的導覽。 如果裝置寬度為768畫素或更高，此版面會被視為行動版面，並針對行動裝置進行最佳化。
+**行動佈局** 控制行動裝置上表單的導覽。 如果裝置寬度為768畫素或以上，則配置會視為行動裝置配置且已針對行動裝置最佳化。
 
-**工具列配置** 控制動作按鈕在表單中工具列或面板工具列中的位置。
+**工具列配置** 控制動作按鈕在表單工具列或面板工具列中的位置。
 
-所有這些面板配置都定義在下列位置：
+所有這些面板配置都在下列位置定義：
 
 `/libs/fd/af/layouts`。
 
 >[!NOTE]
 >
->若要變更最適化表單的版面，請使用AEM中的「撰寫模式」。
+>若要變更最適化表單的版面，請使用AEM中的「撰寫模式」 。
 
 ![CRX存放庫中的版面位置](assets/layouts_location_in_crx.png)
 
 ## 面板版面配置 {#panel-layout}
 
-表單作者可以將版面配置與最適化表單的每個面板相關聯，包括根面板。
+表單作者可以將版面配置與最適化表單的每個面板建立關聯，包括根面板。
 
 面板配置位於 `/libs/fd/af/layouts/panel` 位置。
 
@@ -69,23 +65,23 @@ Adobe Experience Manager (AEM)可讓您建立易於使用的調適型表單，�
 
 ### Responsive — 全部於單頁無需導覽 {#responsive-everything-on-one-page-without-navigation-br}
 
-使用此面板版面配置可建立回應式版面，此版面可依裝置的熒幕大小進行調整，而不需要任何專門的導覽。
+使用此面板佈局可建立回應式佈局，此佈局會根據裝置的熒幕大小進行調整，而無需任何專門的導覽。
 
-使用此版面，您可以放置多個 **[!UICONTROL 面板最適化表單]** 元件在面板中一個接一個。
+使用此版面，您可以放置多個 **[!UICONTROL 面板最適化表單]** 面板中的元件一個接一個。
 
 ![使用回應式版面的表單（如小熒幕所示）](assets/responsive_layout_seen_on_small_screen.png)
 
 使用回應式版面的表單（如小熒幕所示）
 
-![使用回應式版面的表單（如大熒幕所見）](assets/responsive_layout_seen_on_large_screen.png)
+![使用大熒幕上所見回應式版面的表單](assets/responsive_layout_seen_on_large_screen.png)
 
-使用回應式版面的表單（如大熒幕所見）
+使用大熒幕上所見回應式版面的表單
 
 ### 精靈 — 一次顯示一個步驟的多步驟表單 {#wizard-a-multi-step-form-showing-one-step-at-a-time}
 
-使用此面板版面配置在表單內提供引導式導覽。 例如，當您想要在表單中擷取必要資訊，同時逐步引導使用者時，請使用此版面。
+使用此面板配置在表單內提供引導式導覽。 例如，當您想要在表單中擷取必要資訊，同時逐步引導使用者時，請使用此版面。
 
-使用 `Panel adaptive form` 元件，在面板內提供逐步導覽。 使用此版面配置時，使用者只會在目前步驟完成後移至下一個步驟
+使用 `Panel adaptive form` 元件，在面板內提供逐步導覽。 使用此版面配置時，使用者只會在目前步驟完成後才移至下一個步驟
 
 ```javascript
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
@@ -101,11 +97,11 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### 摺疊式功能表設計的配置 {#layout-for-accordion-design}
 
-使用此版面，您可以放置 `Panel adaptive form` 面板中的元件，具有摺疊式功能表樣式導覽。 使用此版面，您也可以建立可重複的面板。 可重複面板可讓您視需要動態新增或移除面板。 您可以定義面板重複的最小和最大次數。 此外，面板的標題可以根據面板專案中提供的資訊動態確定。
+使用此版面，您可以放置 `Panel adaptive form` 具有摺疊式功能表樣式導覽的面板中的元件。 使用此版面，您也可以建立可重複的面板。 可重複面板可讓您視需要動態新增或移除面板。 您可以定義面板重複的最小和最大次數。 此外，面板的標題可以根據面板專案中提供的資訊動態決定。
 
 摘要運算式可用來顯示一般使用者在最小化面板標題中提供的值。
 
-![在最適化表單中使用摺疊式佈局的可重複面板](assets/repeatable_panels_using_accordion_layout.png)
+![在調適型表單中使用摺疊式功能表佈局的可重複面板](assets/repeatable_panels_using_accordion_layout.png)
 
 使用摺疊式佈局建立的可重複面板
 
@@ -113,7 +109,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 使用此版面，您可以放置 `Panel adaptive form` 具有索引標籤導覽的面板中的元件。 標籤會放置在面板內容的左側。
 
-![在「索引標籤」配置圖中，索引標籤會顯示在左側](assets/tabbed_layout_left.png)
+![在「標籤」配置圖中，標籤會顯示在左側](assets/tabbed_layout_left.png)
 
 出現在面板左側的索引標籤
 
@@ -121,13 +117,13 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 使用此版面，您可以放置 `Panel adaptive form` 具有索引標籤導覽的面板中的元件。 索引標籤會放置在面板內容的頂端。
 
-![最適化表單中有索引標籤的索引標籤版面](assets/tabbed_layout_top.png)
+![最適化表單中的索引標籤版面配置在頂端](assets/tabbed_layout_top.png)
 
 出現在面板頂端的索引標籤
 
 ## 行動版面配置 {#mobile-layouts}
 
-行動版面配置可在熒幕較小之行動裝置上進行方便好用的導覽。 行動版面會使用索引標籤或精靈樣式來進行表單導覽。 套用行動版面配置可為整個表單提供單一版面配置。
+行動版面配置可在熒幕較小之行動裝置上進行方便好用的導覽。 行動版面配置會使用索引標籤或精靈樣式來進行表單導覽。 套用行動版面配置可為整個表單提供單一版面配置。
 
 此版面配置會使用導覽列和導覽功能表來控制導覽。 導覽列隨即顯示 **&lt;** 和 **>** 圖示表示 **下一個** 和 **上一個** 表單中的導覽步驟。
 
@@ -137,29 +133,29 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 調適型表單中的行動版面配置清單
 
-使用行動版面時，可點選表單功能表來存取各種表單面板 ![aem6forms_form_menu](assets/aem6forms_form_menu.png) 圖示。
+使用行動版面配置時，可透過點選使用表單功能表來存取各種表單面板 ![aem6forms_form_menu](assets/aem6forms_form_menu.png) 圖示。
 
 ### 在表單標題中使用面板標題的佈局 {#layout-with-panel-titles-in-the-form-header}
 
-如名稱所示，此版面會顯示面板標題以及導覽功能表和導覽列。 此版面配置也提供用於導覽的「下一個」和「上一個」圖示。
+如名稱所建議，此版面會顯示面板標題以及導覽功能表和導覽列。 此版面配置也提供用於導覽的「下一個」和「上一個」圖示。
 
-![行動版面配置在表單標題中具有面板標題](assets/mobile_layout_with.png)
+![行動版面配置與表單標題中的面板標題](assets/mobile_layout_with.png)
 
-行動版面配置在表單標題中具有面板標題
+行動版面配置與表單標題中的面板標題
 
-### 版面配置中表單標題沒有面板標題 {#layout-without-panel-titles-in-the-form-header}
+### 在表單標題中不使用面板標題進行佈局 {#layout-without-panel-titles-in-the-form-header}
 
-如名稱所建議，此版面只會顯示導覽功能表和導覽列，而不會顯示面板標題。 此版面配置也提供用於導覽的「下一個」和「上一個」圖示。
+如名稱所建議，此版面只會顯示導覽功能表與導覽列，而不會顯示面板標題。 此版面配置也提供用於導覽的「下一個」和「上一個」圖示。
 
-![行動版面在表單標題中沒有面板標題](assets/mobile_layout_without.png)
+![行動版面沒有表單標題中的面板標題](assets/mobile_layout_without.png)
 
-行動版面在表單標題中沒有面板標題
+行動版面沒有表單標題中的面板標題
 
 ## 工具列配置 {#toolbar-layouts}
 
-工具列版面配置可控制您新增至最適化表單之任何動作按鈕的定位和顯示。 版面配置可在表單層級或面板層級新增。
+工具列版面配置可控制您新增至最適化表單之任何動作按鈕的位置和顯示。 版面配置可在表單層級或面板層級新增。
 
-![最適化表單中的工具列配置清單，可控制按鈕的配置](assets/toolbar-layouts.png)
+![最適化表單中控制按鈕配置的工具列配置清單](assets/toolbar-layouts.png)
 
 調適型表單中的工具列配置清單
 
@@ -167,7 +163,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### 工具列的預設配置 {#default-layout-for-toolbar}
 
-在調適型表單中新增任何動作按鈕時，此版面會選取為預設版面。 選取此配置時，桌上型電腦和行動裝置會顯示相同的配置。
+當您在調適型表單中新增任何動作按鈕時，此版面會選取為預設版面。 選取此配置時，桌上型電腦和行動裝置會顯示相同的配置。
 
 此外，您也可以新增多個工具列，其中包含使用此配置設定的動作按鈕。 動作按鈕與表單控制項相關聯。 您可以將工具列設定為面板之前或之後。
 
@@ -175,14 +171,14 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 工具列的預設檢視
 
-### 工具列的行動固定版面配置 {#mobile-fixed-layout-for-toolbar}
+### 行動工具列的固定版面配置 {#mobile-fixed-layout-for-toolbar}
 
 選取此配置以提供案頭和行動裝置的替代配置。
 
-對於案頭版面配置，您可以使用某些特定標籤來新增「動作」按鈕。 此配置只能設定一個工具列。 若有一個以上的工具列已設定此版面，行動裝置會出現重疊，且只會顯示一個工具列。 例如，您可以在表單底部或頂部有一個工具列，或者在表單中的面板之後或之前。
+對於案頭版面配置，您可以使用某些特定標籤來新增動作按鈕。 此配置只能設定一個工具列。 如果多個工具列已設定此版面，行動裝置會出現重疊，且只會顯示一個工具列。 例如，您可以在表單底部或頂部有一個工具列，或者在表單中的面板之後或之前。
 
-針對行動佈局，您可以使用圖示新增動作按鈕。
+對於行動版面配置，您可以使用圖示新增動作按鈕。
 
-![工具列的行動固定版面配置](assets/toolbar_layout_mobile_fixed.png)
+![行動工具列的固定版面配置](assets/toolbar_layout_mobile_fixed.png)
 
-工具列的行動固定版面配置
+行動工具列的固定版面配置

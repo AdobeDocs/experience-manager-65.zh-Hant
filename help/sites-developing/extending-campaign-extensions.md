@@ -1,17 +1,15 @@
 ---
 title: 建立自訂擴充功能
 description: 您可以在Adobe Campaign中從AEM或從AEM呼叫Adobe Campaign的自訂程式碼。
-uuid: 8392aa0d-06cd-4b37-bb20-f67e6a0550b1
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 exl-id: 0702858e-5e46-451f-9ac3-40a4fec68ca0
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 1%
+source-wordcount: '499'
+ht-degree: 2%
 
 ---
 

@@ -1,18 +1,14 @@
 ---
 title: 發佈電子郵件給電子郵件服務提供者
-seo-title: Publishing an Email to Email Service Providers
 description: 您可以將電子報發佈到電子郵件服務，例如ExactTarget和Silverpop Engage。
-seo-description: You can publish newsletters to e-mail services such as ExactTarget and Silverpop Engage.
-uuid: 1a7adcfe-8e52-49f4-9a00-99ac99881225
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1106'
 ht-degree: 3%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 3%
 
 若要將電子郵件發佈至電子郵件服務提供者，您必須執行下列步驟：
 
-1. 建立電子郵件.
+1. 建立電子郵件。
 1. 將電子郵件服務設定套用至電子郵件。
 1. 發佈電子郵件。
 
@@ -67,7 +63,7 @@ ht-degree: 3%
 <table>
  <tbody>
   <tr>
-   <td>郵寄地址 (必要)</td>
+   <td>郵寄地址（必要）</td>
    <td>此元件會在您的電子郵件中插入組織的實體郵寄地址。</td>
   </tr>
   <tr>

@@ -1,16 +1,12 @@
 ---
 title: AEM Forms應用程式
-seo-title: AEM Forms app
 description: AEM Forms應用程式可讓您的欄位工作者在其行動裝置上使用最適化表單。
-seo-description: AEM Forms app enables your field workers to use adaptive forms on their mobile devices.
-uuid: fac976c8-b713-4492-b153-f567e7a11ceb
 contentOwner: sashanka
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: e18aa345-034c-473b-b4c2-01678bb10616
 exl-id: 171754a2-1ba5-42dc-b6d2-3d730807cc31
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2410'
 ht-degree: 0%

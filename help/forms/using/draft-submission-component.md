@@ -1,16 +1,12 @@
 ---
 title: 草稿和提交元件
-seo-title: Drafts and submissions component
 description: 草稿和提交元件會列出處於草稿狀態且已提交的表單。 您可以自訂元件的外觀和樣式。
-seo-description: Drafts and submissions component lists forms that are in the draft state and are already submitted. You can customize appearance and style of the component.
-uuid: 42c205b5-3141-4b80-85d9-dad921e223a2
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: ad71b423-02e1-4476-9c7c-f832cea6b0a6
 docset: aem65
 exl-id: f3f013a7-a399-4178-a901-d4a8c65ddbd3
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 0%

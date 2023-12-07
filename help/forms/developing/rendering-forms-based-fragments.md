@@ -1,20 +1,16 @@
 ---
 title: 根據片段轉譯Forms
-seo-title: Rendering Forms Based on Fragments
 description: 使用Forms服務來轉譯以使用Designer建立的片段為基礎的表單。
-seo-description: Use the Forms service to render forms that are based on fragments created using Designer.
-uuid: 9c9a730d-f970-41f8-afed-4e6b6d3d393d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: a65c5303-0ebd-43a9-a777-401042d8fcad
 role: Developer
 exl-id: febf5350-3fc5-48c0-8bc5-198daff15936
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2189'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ ht-degree: 0%
 
 Forms服務可以轉譯以您使用Designer建立的片段為基礎的表單。 A *片段* 是可重複使用的表單部分，並另存為可插入多個表單設計的個別XDP檔案。 例如，片段可以包含位址區塊或合法文字。
 
-使用片段可簡化並加速大量表單的建立與維護。 建立表單時，插入所需片段的參考，片段就會顯示在表單中。 片段參考包含指向實體XDP檔案的子表單。 如需有關根據片段建立表單設計的資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_tw)
+使用片段可簡化並加速大量表單的建立與維護。 建立表單時，插入所需片段的參考，片段就會顯示在表單中。 片段參考包含指向實體XDP檔案的子表單。 如需有關根據片段建立表單設計的資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 片段可以包含數個包在選擇子表單集中的子表單。 選擇子表單集根據資料連線的資料流程控制子表單的顯示。 您可以使用條件陳述式來決定集合中哪個子表單會出現在傳遞的表單中。 例如，集合中的每個子表單可以包含特定地理位置的資訊，而顯示的子表單可以根據使用者的位置來決定。
 

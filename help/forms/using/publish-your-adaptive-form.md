@@ -1,16 +1,12 @@
 ---
 title: 「教學課程：發佈最適化表單」
-seo-title: "Tutorial: Publish your adaptive form"
 description: 將調適型表單發佈為AEM頁面、將表單內嵌至AEM Sites頁面，或將調適型表單內嵌至外部網頁
-seo-description: Publish the adaptive form as an AEM page, embed the form to an AEM Sites page, or embed the adaptive form in an external webpage
-uuid: 1b164376-e61a-40aa-9f16-c79d24a72e20
 contentOwner: khsingh
 topic-tags: introduction
-discoiquuid: e24dbd0e-4481-4f9d-9570-3a4046b3ef35
 docset: aem65
 feature: Adaptive Forms
 exl-id: c039faec-f832-43d5-8a86-22afa3bef2a4
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 2%

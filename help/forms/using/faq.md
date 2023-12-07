@@ -1,20 +1,16 @@
 ---
 title: HTML5表單常見問題集(FAQ)
-seo-title: Frequently asked questions (FAQ) for HTML5 forms
 description: 有關版面配置、指令碼支援和HTML5表單範圍的常見問題集(FAQ)。
-seo-description: Frequently Asked Questions (FAQ) about layout, scripting support, and scope of HTML5 forms.
-uuid: 398e31de-3e46-4288-b3cd-39d51fa17abc
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2003'
+source-wordcount: '2007'
 ht-degree: 0%
 
 ---
@@ -143,7 +139,7 @@ ht-degree: 0%
 
 1. 熒幕助讀程式的工具提示和註解閱讀順序為何？
 
-   答案:
+   回答：
    * 當註解與工具提示同時出現時，只會讀取註解。 如果註解無法使用，則會讀取工具提示。 您也可以使用表單設計工具來指定在XDP中讀取的優先順序
    * 當您將滑鼠懸停在元素上時，會顯示工具提示。 如果無法使用工具提示，則會顯示語音文字。 如果語音文字無法使用，則會顯示欄位名稱。
 
@@ -182,7 +178,7 @@ ht-degree: 0%
 
 1. HTML Forms的JavaScript實施是否有任何限制？
 
-   答案:
+   回答：
 
    * xfa.connectionSet指令碼的支援有限。 對於connectionSet，僅支援伺服器端對Web服務的呼叫。 如需詳細資訊，請參閱 [指令碼支援](/help/forms/using/scripting-support.md).
    * 使用者端指令碼中不支援$record和$data。 不過，如果指令碼是以formReady， layoutReady區塊撰寫，則這些指令碼仍然有效，因為這些事件會在伺服器端執行。
@@ -194,7 +190,7 @@ ht-degree: 0%
 
 1. 是否有任何建議的命名慣例，以及任何要避免的保留關鍵字？
 
-   答案:
+   回答：
    * 在AEM Forms Designer中，建議不要以底線(_)。 若要在名稱開頭使用底線，請在底線後加上首碼，_&lt;prefix>&lt;objectname>.
    * 所有HTML5 Forms API都是保留關鍵字。 對於自訂API/函式，請使用與不同的名稱 [HTML5 forms API](/help/forms/using/scripting-support.md).
 
@@ -208,7 +204,7 @@ ht-degree: 0%
 
    1. 開啟CRXde Lite並導覽至 `/content/xfaforms/profiles/default` 節點。
    1. 新增屬性 `mfDataDependentFloatingField`字串型別的屬性，並將屬性的值設為 `true`.
-   1. 按一下&#x200B;**「儲存全部」**。現在已使用更新後的轉譯設定檔，為HTMLForms啟用浮動欄位。
+   1. 按一下 **全部儲存**. 現在已使用更新後的轉譯設定檔，為HTMLForms啟用浮動欄位。
 
       >[!NOTE]
       >

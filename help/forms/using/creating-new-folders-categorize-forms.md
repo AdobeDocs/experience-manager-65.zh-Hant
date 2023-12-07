@@ -1,19 +1,15 @@
 ---
 title: 建立新資料夾以將表單分類
-seo-title: Create new folders to categorize forms
 description: 使用資料夾來組織您的表單範本、PDF、資源和調適型表單。
-seo-description: Use folders to organize your form templates, PDFs, resources, and adaptive forms.
-uuid: 63fcb807-c9cf-49ae-ad69-6b1187543470
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
-discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
 role: Admin
 exl-id: f8af1ac3-6a95-4f91-8979-6b41a7e02ca4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 1%
+source-wordcount: '386'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +40,7 @@ AEM Forms可讓您變更資料夾的標題。 標題與存放庫中儲存資料�
    >
    >依預設，名稱欄位的值會自動從標題填入。 名稱只能包含英數字元，或連字型大小(-)和底線(_)特殊字元。 在標題中輸入的任何其他特殊字元都會自動取代為連字型大小，並提示您確認新名稱。 您可以選擇繼續使用建議的名稱或進一步編輯。
 
-1. 按一下「**[!UICONTROL 提交]」。**
+1. 按一下 **[!UICONTROL 提交].**
 
    具有您定義標題的新資料夾會顯示在資產清單中的目前位置。
 
@@ -55,4 +51,4 @@ AEM Forms可讓您變更資料夾的標題。 標題與存放庫中儲存資料�
 1. 選取您要編輯其標題的資料夾。
 1. 按一下編輯 ![aem6forms_edit](assets/aem6forms_edit.png) 圖示加以儲存。
 1. 輸入新標題。 文字欄位會預先填入資料夾標題的目前值。 您可以將其變更為新值。
-1. 按一下「**[!UICONTROL 提交]」。**
+1. 按一下 **[!UICONTROL 提交].**

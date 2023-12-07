@@ -1,19 +1,15 @@
 ---
 title: XDP型最適化表單中的XFA支援
-seo-title: XFA support in XDP-based adaptive forms
 description: 列出最適化表單中支援的XFA事件、屬性、指令碼和驗證。
-seo-description: Lists supported XFA events, properties, scripts, and validation in adaptive forms.
-uuid: 75d3c292-cfed-438f-afdb-4071d95a08b7
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
 feature: Adaptive Forms
 exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 12%
+source-wordcount: '732'
+ht-degree: 11%
 
 ---
 

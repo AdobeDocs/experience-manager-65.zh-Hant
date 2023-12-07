@@ -1,19 +1,15 @@
 ---
 title: 自訂AEM表單工作區簡介
-seo-title: Introduction to Customizing AEM form workspace
 description: 快速介紹，其中包含概念和技術資訊，可自訂LiveCycleAEM Forms工作區的流程管理。
-seo-description: A quick introduction, with conceptual and technical information, to customize LiveCycle AEM Forms workspace for process management.
-uuid: 38759071-e6b8-4976-8b06-909ad7a786cd
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 021c6606-8cd3-472c-a80b-b1bcace7e87f
 docset: aem65
 exl-id: b183d42f-343c-4acb-bc73-f80ad72e54df
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1760'
+source-wordcount: '1752'
 ht-degree: 0%
 
 ---
@@ -53,7 +49,7 @@ AEM Forms工作區支援各種自訂，以更新使用者介面的版面、外�
    <th><p>使用者介面元件已修改</p> </th>
   </tr>
   <tr>
-   <td><p>#頁首</p> </td>
+   <td><p>#header</p> </td>
    <td><p>AEM Forms工作區的標頭</p> </td>
   </tr>
   <tr>
@@ -238,7 +234,7 @@ CRX套件可部署在CRX™存放庫上。 此頁面位於 `[LC root]\crx-reposi
 
 此套件可使用下述的三個設定檔來建置。
 
-| **設定檔** | **說明** | **使用狀況** |
+| **個人資料** | **說明** | **使用狀況** |
 |---|---|---|
 | 出貨設定檔 | 此設定檔會使用縮制來建立儘可能最小的CRX套件。 此套件最有效率。 所有JavaScript™檔案都會合併並縮製為單一JS檔案。 | 當JS檔案中不需要進一步語意變更時，使用此設定檔。 |
 | 偵錯設定檔 | 此設定檔會建立中等效率的CRX套件。 套件的大小略大於使用「出貨」設定檔建立的套件。 此套件已將大部分JavaScript檔案合併為單一JS檔案。 | 使用此設定檔進行偵錯。 |

@@ -1,16 +1,12 @@
 ---
 title: 可重複使用元件的說明
-seo-title: Description of reusable components
-description: 包含檔案名稱和相依性之可重複使用元件的完整清單，可協助您在網頁應用程式中整合AEM Forms工作區元件。
-seo-description: A complete list of reusable components with filenames and dependencies, to help you integrate AEM Forms workspace component in your web applications.
-uuid: 8e6accc7-0935-4d7b-b838-d23676df5cda
+description: 包含檔案名稱和相依性之可重複使用元件的完整清單，協助您在網頁應用程式中整合AEM Forms工作區元件。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: d3facd17-ceb0-4799-8cd9-ff9e81e09793
 exl-id: b8cb7233-3d9e-41d4-85c5-8e8c2481f89c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 9%
@@ -19,7 +15,7 @@ ht-degree: 9%
 
 # 可重複使用元件的說明 {#description-of-reusable-components}
 
-AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-components-web.md) 以特定方式組織的元件 [資料夾結構](/help/forms/using/folder-structure.md) 在CRX™中。 每個元件在資料夾結構中指定的位置都有模型、檢視和範本檔案、JavaScript™對其他元件檔案的相依性、元件偵聽的事件以及在AEM Forms工作區中觸發這些事件的JavaScript物件。 此處提供包含檔案名稱和相依性的可重複使用元件的完整清單。
+AEM Forms工作區是由 [可重複使用](/help/forms/using/integrating-html-ws-components-web.md) 以特定方式組織的元件 [資料夾結構](/help/forms/using/folder-structure.md) 在CRX™中。 每個元件在資料夾結構中所指定的位置都有模型、檢視和範本檔案、JavaScript™對其他元件檔案的相依性、由元件監聽的事件以及在AEM Forms工作區中觸發這些事件的JavaScript物件。 此處提供包含檔案名稱和相依性的可重複使用元件的完整清單。
 
 ## 任務清單 {#tasklist}
 
@@ -246,7 +242,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
    <td><p>JS相依性</p> </td>
    <td>
     <ul>
-     <li><p>延伸：篩選檢視</p> </li>
+     <li><p>擴充：篩選檢視</p> </li>
      <li><p>欄位：佇列：{ name， qid， isDefault， type }</p> </li>
      <li><p>欄位：查詢：字串</p> </li>
      <li><p>欄位：parentView ：篩選清單檢視</p> </li>
@@ -263,7 +259,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
 
 >[!NOTE]
 >
->TeamFilter會取得事件，指出已從TaskList元件中選取哪個任務。 雖然這些元件共用模型類別，但沒有其他相依性。
+>TeamFilter取得事件，指出已從TaskList元件中選取哪個工作。 雖然這些元件共用模型類別，但沒有其他相依性。
 
 ## 任務詳細資訊 {#taskdetails}
 
@@ -290,7 +286,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
    <td>
     <ul>
      <li><p>processinstancehistory.html</p> </li>
-     <li><p>表單演算公用程式</p> </li>
+     <li><p>formrendering公用程式</p> </li>
      <li><p>附註公用程式</p> </li>
      <li><p>附件公用程式</p> </li>
      <li><p>工作動作公用程式</p> </li>
@@ -306,7 +302,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
      <li><p>已諮詢 — 任務模型</p> </li>
      <li><p>已拒絕 — 任務模型</p> </li>
      <li><p>已放棄 — 任務模型</p> </li>
-     <li><p>unlocked — 任務模型</p> </li>
+     <li><p>已解鎖 — 任務模型</p> </li>
      <li><p>鎖定 — 任務模型</p> </li>
      <li><p>已申請 — 任務模型</p> </li>
      <li><p>變更：選取的工作 — 工作清單模型</p> </li>
@@ -390,7 +386,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
    <td><p>JS相依性</p></td>
    <td>
     <ul>
-     <li><p>categorylist模型</p></li>
+     <li><p>categorylist model</p></li>
      <li><p>startpointlist模型</p></li>
     </ul></td>
   </tr>
@@ -455,7 +451,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
 
 >[!NOTE]
 >
->StartPointList和CategoryList元件共用模型類別，因此前者取決於後者。 CategoryList會存取顯示哪些類別起點的相關資訊。 若要獨立使用StartPointList，請從CategoryList模擬事件觸發程式。
+>StartPointList和CategoryList元件共用模型類別，因此前者取決於後者。 CategoryList會存取顯示哪些類別開始點的相關資訊。 若要獨立使用StartPointList，請從CategoryList模擬事件觸發程式。
 
 ## 起點 {#startpoint}
 
@@ -519,7 +515,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
      <li><p>類別模型</p> </li>
      <li><p>favoritecategoryfactory模型</p> </li>
      <li><p>allcategoryfactory模型</p> </li>
-     <li><p>表單演算公用程式</p> </li>
+     <li><p>formrendering公用程式</p> </li>
      <li><p>附註公用程式</p> </li>
      <li><p>附件公用程式</p> </li>
      <li><p>工作動作公用程式</p> </li>
@@ -532,10 +528,10 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
      <li><p>category：selected - categorylist model</p> </li>
      <li><p>change：invokedTask - startpointlist模型</p> </li>
      <li><p>變更：formUrl — 任務模型</p> </li>
-     <li><p>起點：選取 — 起點清單模型</p> </li>
+     <li><p>起點：選取 — startpointlist模型</p> </li>
      <li><p>已轉送 — 任務模型</p> </li>
      <li><p>已放棄 — 任務模型</p> </li>
-     <li><p>unlocked — 任務模型</p> </li>
+     <li><p>已解鎖 — 任務模型</p> </li>
      <li><p>鎖定 — 任務模型</p> </li>
      <li>attachmentURLFetched — 任務模型</li>
      <li>newAttachment — 任務模型</li>
@@ -579,9 +575,9 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
    <td><p>已監聽的事件（事件名稱 — 觸發器）</p></td>
    <td>
     <ul>
-     <li><p>新增 — 程式名稱清單模型 </p></li>
+     <li><p>add - processnamelist model </p></li>
      <li><p>已擷取：processnames - processnamelist模型 </p></li>
-     <li><p>變更 — 程式名稱清單模型 </p></li>
+     <li><p>變更 — processnamelist model </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -589,9 +585,9 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
 
 >[!NOTE]
 >
->ProcessNameList不依存於其他元件。 但是，它在內部依賴於ProcessInstanceList模型類別，而模型類別又依賴其他元件。 因此，ProcessNameList使用許多模型類別，例如ProcessInstanceList、ProcessInstance、TaskList、Teamtask和Task。 除了這些相依性之外，ProcessNameList也可以單獨使用。
+>ProcessNameList不依存於其他元件。 但是，它在內部依賴於ProcessInstanceList模型類別，而模型類別又依賴其他元件。 因此，ProcessNameList使用許多模型類別，例如ProcessInstanceList、ProcessInstance、TaskList、Teamtask和Task。 除了這些相依性之外，ProcessNameList也可以獨立使用。
 
-## Processname {#processname}
+## 程式名稱 {#processname}
 
 <table>
  <tbody>
@@ -659,7 +655,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
 
 >[!NOTE]
 >
->ProcessInstanceList預期來自ProcessNameList的事件，指出擷取和顯示執行個體的程式名稱。 若要單獨使用ProcessInstanceList，請個別模擬事件觸發程式。
+>ProcessInstanceList預期來自ProcessNameList的事件，指出擷取和顯示執行個體的程式名稱。 若要單獨使用ProcessInstanceList，請分別模擬事件觸發程式。
 
 ## Processinstance {#processinstance}
 
@@ -725,7 +721,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
    <td>
     <ul>
      <li><p>processname：selected - processnamelist model </p></li>
-     <li><p>processinstance：selected - processinstancelist模型 </p></li>
+     <li><p>processinstance：selected - processinstancelist model </p></li>
      <li><p>tasksFetched - processinstance模型 </p></li>
     </ul></td>
   </tr>
@@ -734,7 +730,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
 
 >[!NOTE]
 >
->ProcessInstanceHistory預期來自ProcessInstanceList的事件，指出將顯示哪個程式執行個體的歷史記錄。 除了此相依性之外，元件也可獨立使用。
+>ProcessInstanceHistory需要ProcessInstanceList中的事件，指出要顯示哪個處理序執行個體的歷史記錄。 除了此相依性之外，元件也可獨立使用。
 
 ## 辦公室外 {#outofoffice}
 
@@ -766,8 +762,8 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
     <ul>
      <li><p>outOfOfficeSettingsFetched — 辦公室模型</p> </li>
      <li><p>outOfOfficeSettingsSaved — 辦公室模型</p> </li>
-     <li><p>processefetched — 辦公室模型</p> </li>
-     <li><p>principalSelected - principalSearch檢視</p> </li>
+     <li><p>processesFetched - outoffice模型</p> </li>
+     <li><p>principalSelected - principalsearch檢視</p> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -777,7 +773,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
 >
 >OutofOffice可獨立使用。
 
-## 共用佇列 {#sharequeue}
+## ShareQueue {#sharequeue}
 
 <table>
  <tbody>
@@ -811,7 +807,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
      <li>accessibleUsersFetched — 共用模型</li>
      <li><p>queueAccessRevoced — 共用模型</p> </li>
      <li><p>queueAccessRemoved — 共用模型</p> </li>
-     <li><p>principalSelected - principalSearch檢視</p> </li>
+     <li><p>principalSelected - principalsearch檢視</p> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -849,8 +845,8 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
    <td><p>已監聽的事件（事件名稱 — 觸發器）</p></td>
    <td>
     <ul>
-     <li><p>偏好設定已擷取 — 使用者設定模型 </p></li>
-     <li><p>settingUpdated — 設定模型 </p></li>
+     <li><p>preferencesFetched — 使用者模型 </p></li>
+     <li><p>settingUpdated — 安裝模型 </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -893,7 +889,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
 
 >[!NOTE]
 >
->AppNavigation可單獨使用。
+>AppNavigation可獨立使用。
 
 ## 使用者資訊 {#userinfo}
 
@@ -924,7 +920,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
    <td>
     <ul>
      <li>userImageUrlFetched - userinfo模型</li>
-     <li>sessionRevened — 使用者資訊模型 <br /> </li>
+     <li>sessionRevened - userinfo模型 <br /> </li>
      <li>sessionExpired — 使用者資訊模型 </li>
     </ul> </td>
   </tr>
@@ -1054,7 +1050,7 @@ AEM Forms工作區由 [可重複使用](/help/forms/using/integrating-html-ws-co
   </tr>
   <tr>
    <td><p>JS相依性</p> </td>
-   <td><p>searchtemplate model</p> </td>
+   <td><p>searchtemplate模型</p> </td>
   </tr>
   <tr>
    <td><p>已監聽的事件（事件名稱 — 觸發器）</p> </td>

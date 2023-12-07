@@ -1,18 +1,14 @@
 ---
 title: 在AEM中使用Sling Resource Merger
-seo-title: Using the Sling Resource Merger in AEM
 description: Sling Resource Merger提供存取及合併資源的服務
-seo-description: The Sling Resource Merger provides services to access and merge resources
-uuid: 0a28fdc9-caea-490b-8f07-7c4a6b802e09
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1247'
 ht-degree: 1%
 
 ---
@@ -200,8 +196,8 @@ Sling Resource Merger提供存取及合併資源的服務。 它為兩者提供�
    1. 在/apps下建立對應的節點
    1. 建立屬性 `sling:hideResource`
 
-      * 類型: `Boolean`
-      * 值: `true`
+      * 型別： `Boolean`
+      * 值： `true`
 
 * **隱藏節點的子系（同時保留節點的屬性）**
 
@@ -210,7 +206,7 @@ Sling Resource Merger提供存取及合併資源的服務。 它為兩者提供�
    1. 在下建立對應的節點 `/apps`
    1. 建立屬性 `sling:hideChildren`：
 
-      * 類型: `String[]`
+      * 型別： `String[]`
       * 值：子節點的清單（如中所定義） `/libs`)以隱藏/忽略
 
       您可以使用萬用字元&amp;ast；來隱藏/忽略所有子節點。
@@ -226,8 +222,8 @@ Sling Resource Merger提供存取及合併資源的服務。 它為兩者提供�
 
          這會指定節點(如 `/libs`)讓目前節點位於下列位置之前：
 
-         * 類型: `String`
-         * 值: `<before-SiblingName>`
+         * 型別： `String`
+         * 值： `<before-SiblingName>`
 
 ### 從您的程式碼叫用Sling Resource Merger {#invoking-the-sling-resource-merger-from-your-code}
 
@@ -239,7 +235,7 @@ Sling Resource Merger包含兩個自訂資源提供者，一個用於覆蓋，�
 >
 >這可確保叫用Sling資源合併，並傳回完全合併的資源（減少需要複製的結構） `/libs`)。
 
-* 覆蓋:
+* 覆蓋：
 
    * 用途：根據搜尋路徑合併資源
    * 掛接點： `/mnt/overlay`
@@ -248,7 +244,7 @@ Sling Resource Merger包含兩個自訂資源提供者，一個用於覆蓋，�
 
       * `getResource('/mnt/overlay' + '<relative-path-to-resource>');`
 
-* 覆寫:
+* 覆寫：
 
    * 用途：根據資源的超級型別合併資源
    * 掛接點： `/mnt/overide`
@@ -261,11 +257,11 @@ Sling Resource Merger包含兩個自訂資源提供者，一個用於覆蓋，�
 
 本文包含一些範例：
 
-* 覆蓋:
+* 覆蓋：
 
    * [自訂主控台](/help/sites-developing/customizing-consoles-touch.md)
    * [自訂頁面編寫](/help/sites-developing/customizing-page-authoring-touch.md)
 
-* 覆寫:
+* 覆寫：
 
    * [設定頁面屬性](/help/sites-developing/page-properties-views.md#configuring-your-page-properties)

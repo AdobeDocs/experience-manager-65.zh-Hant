@@ -1,13 +1,11 @@
 ---
 title: 為iOS建置安全的AEM Forms應用程式
 description: 瞭解如何透過封存Xcode專案，為iOS建置安全的AEM Forms應用程式。 這會建立安裝程式（.ipa檔案）和屬性清單（.plist檔案）檔案。
-uuid: 6c4b160f-4d0c-4976-9609-9196795b6c8e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 90cd8ba5-4f47-4074-bc54-6a7bb8afe256
 exl-id: 12cc2027-ae94-40c3-a7d1-553469426114
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 0%

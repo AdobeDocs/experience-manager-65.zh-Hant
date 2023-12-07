@@ -1,16 +1,12 @@
 ---
 title: 整合Adobe Dynamic Tag Management
-seo-title: Integrating with Adobe Dynamic Tag Management
 description: 瞭解如何與Adobe Dynamic Tag Management整合。
-seo-description: Learn about integration with Adobe Dynamic Tag Management.
-uuid: cbb9f942-44e3-4cd5-b07d-4298a7a08376
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2148'
 ht-degree: 2%

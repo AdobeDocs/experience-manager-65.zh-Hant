@@ -1,19 +1,15 @@
 ---
 title: 設定頁面編輯的復原
-seo-title: Configuring Undo for Page Editing
 description: 瞭解如何在AEM中設定頁面編輯的還原支援。
-seo-description: Learn how to configure Undo support for page editing in AEM.
-uuid: e5a49587-a2a6-41d5-b449-f7a8f7e4cee6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 3cc7efc5-bcb2-41c9-b78b-308f6b7a298e
 exl-id: 2cf3ac3f-ee17-480d-a32a-c57631502693
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '702'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -49,32 +45,32 @@ ht-degree: 2%
 ( `cq.wcm.undo.enabled`)
 
    * **說明**：決定頁面作者是否可以復原和重做變更。
-   * **預設**: `Selected`
+   * **預設**： `Selected`
    * **類型**：`Boolean`
 
 * **路徑**
 ( `cq.wcm.undo.path`)
 
    * **說明**：用於儲存二進位還原資料的存放庫路徑。 當作者變更二進位資料（例如影像）時，原始版本的資料會保留在這裡。 還原對二進位資料的變更時，此二進位還原資料會還原至頁面。
-   * **預設**: `/var/undo`
+   * **預設**： `/var/undo`
    * **類型**：`String`
 
   >[!NOTE]
   >
   >依預設，只有管理員可以存取 `/var/undo` 節點。 作者只有獲得存取二進位還原資料的許可權後，才能對二進位內容執行還原和重做操作。
 
-* **最小值. 有效性**
+* **最低 有效性**
 ( `cq.wcm.undo.validity`)
 
    * **說明**：二進位還原資料的儲存時間下限（小時）。 在此時段後，二進位資料即可刪除，以節省磁碟空間。
-   * **預設**: `10`
+   * **預設**： `10`
    * **類型**：`Integer`
 
 * **步驟**
 ( `cq.wcm.undo.steps`)
 
    * **說明**：儲存在還原記錄中的頁面動作數上限。
-   * **預設**: `20`
+   * **預設**： `20`
    * **類型**：`Integer`
 
 * **持續性**
@@ -85,7 +81,7 @@ ht-degree: 2%
       * `CQ.undo.persistence.WindowNamePersistence`：使用window.name屬性來儲存歷程記錄。
       * `CQ.undo.persistence.CookiePersistance`：使用Cookie保留歷史記錄。
 
-   * **預設**: `CQ.undo.persistence.WindowNamePersistence`
+   * **預設**： `CQ.undo.persistence.WindowNamePersistence`
    * **類型**：`String`
 
 * **持續性模式**
@@ -95,7 +91,7 @@ ht-degree: 2%
 
      保留復原歷史記錄會使用網頁瀏覽器資源。 如果您的使用者瀏覽器對頁面編輯的反應很慢，請嘗試在頁面重新載入時保留復原歷史記錄。
 
-   * **預設**: `Selected`
+   * **預設**： `Selected`
    * **類型**：`Boolean`
 
 * **標籤模式**
@@ -106,7 +102,7 @@ ht-degree: 2%
       * flash：段落的選取指示器會暫時閃爍。
       * select：段落被選取。
 
-   * **預設**: `flash`
+   * **預設**： `flash`
    * **類型**：`String`
 
 * **好元件**

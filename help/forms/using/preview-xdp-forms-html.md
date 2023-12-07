@@ -1,18 +1,14 @@
 ---
 title: 產生XDP表單的HTML5預覽
-seo-title: Generate HTML5 preview of an XDP form
 description: LiveCycle設計工具中的「預覽HTML」索引標籤可用來預覽表單在瀏覽器中顯示的效果。
-seo-description: Preview HTML tab in LiveCycle Designer can be used to preview forms as they appear in a browser.
-uuid: cbee956f-bf2d-40c5-8e03-58fce0fa215b
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 feature: Mobile Forms
 exl-id: 548f302b-57f0-4bdc-8a99-1a4967caa32f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -121,7 +117,7 @@ Designer可讓您使用範例XML資料預覽及測試表單。 建議您經常�
 
 1. 按一下 **預覽** 標籤，並在「資料檔案」方塊中，輸入測試資料檔案的完整路徑。 您也可以使用「瀏覽」按鈕來導覽至檔案。
 
-1. 按一下&#x200B;**「確定」**。下次您預覽表單時 **預覽HTML** 標籤，範例XML檔案中的資料值會顯示在個別物件中。
+1. 按一下 **確定**. 下次您預覽表單時 **預覽HTML** 標籤，範例XML檔案中的資料值會顯示在個別物件中。
 
 ## 在存放庫中預覽表單 {#html-preview-of-forms-in-forms-manager}
 

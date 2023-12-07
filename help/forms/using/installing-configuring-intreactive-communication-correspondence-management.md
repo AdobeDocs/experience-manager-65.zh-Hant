@@ -1,15 +1,11 @@
 ---
 title: 安裝和配置 互動式 通信
-seo-title: Install and configure Interactive Communications
 description: 安裝和配置 AEM Forms 互動式 通信以創建業務通信、檔、報表、福利通知、行銷郵件、帳單和歡迎工具組。
-seo-description: Install and configure AEM Forms Interactive Communications to create business correspondences, documents, statements, benefit notices, marketing mails, bills, and welcome kits.
-uuid: 8acb7f68-0b52-4acd-97e2-af31c9408e8d
 topic-tags: installing
-discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 1%

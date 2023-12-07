@@ -1,19 +1,15 @@
 ---
 title: 適用於Communities元件的OSGi事件
-seo-title: OSGi Events for Communities Components
 description: 會傳送可觸發非同步接聽程式的OSGi事件
-seo-description: OSGi events are sent that can trigger asynchronous listeners
-uuid: 317e2add-689d-4c99-ae38-0703b6649cb7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 exl-id: 8049d797-e758-44c2-a89b-51d2b2fca8dc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '665'
-ht-degree: 4%
+source-wordcount: '592'
+ht-degree: 5%
 
 ---
 
@@ -25,7 +21,7 @@ ht-degree: 4%
 
 元件的 [社交事件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) 執行個體會將事件記錄為 `actions` 發生於 `topic`. SocialEvent包含傳回 `verb` 與動作相關聯。 有一個 *n-1* 關係介於 `actions` 和 `verbs`.
 
-針對發行版本中提供的Communities元件，下表說明 `verbs` 已為每個專案定義 `topic` 可供使用。
+針對發行版本中傳送的Communities元件，下表說明 `verbs` 已針對每個專案定義 `topic` 可供使用。
 
 ## 主題和動詞 {#topics-and-verbs}
 
@@ -37,7 +33,7 @@ ht-degree: 4%
 | POST | 成員建立行事曆事件 |
 | 新增 | 行事曆事件的成員註解 |
 | 更新 | 編輯成員的行事曆事件或註解 |
-| 刪除 | 已刪除成員的行事曆事件或註解 |
+| 刪除 | 成員的行事曆事件或註解已刪除 |
 
 [註解元件](essentials-comments.md)
 社交事件 `topic`= com/adobe/cq/social/comment
@@ -65,8 +61,8 @@ ht-degree: 4%
 | **動詞** | **說明** |
 |---|---|
 | POST | 成員建立論壇主題 |
-| 新增 | 論壇主題的成員回覆 |
-| 更新 | 編輯成員的論壇主題或回覆 |
+| 新增 | 成員對論壇主題的回覆 |
+| 更新 | 成員的論壇主題或回覆已編輯 |
 | 刪除 | 已刪除成員的論壇主題或回覆 |
 
 [日誌元件](blog-developer-basics.md)
@@ -75,9 +71,9 @@ ht-degree: 4%
 | **動詞** | **說明** |
 |---|---|
 | POST | 成員建立部落格 |
-| 新增 | 成員對部落格的評論 |
+| 新增 | 部落格上的成員評論 |
 | 更新 | 編輯成員的部落格或評論 |
-| 刪除 | 已刪除成員的部落格或評論 |
+| 刪除 | 成員的部落格或評論已刪除 |
 
 [QnA元件](qna-essentials.md)
 社交事件 `topic` = com/adobe/cq/social/qna
@@ -91,13 +87,13 @@ ht-degree: 4%
 | 取消選取 | 已取消選取成員的答案 |
 | 刪除 | 已刪除成員的QnA問題或答案 |
 
-[檢閱元件](reviews-basics.md)
+[稽核元件](reviews-basics.md)
 社交事件 `topic`= com/adobe/cq/social/review
 
 | **動詞** | **說明** |
 |---|---|
 | POST | 成員建立稽核 |
-| 更新 | 已編輯成員的評論 |
+| 更新 | 成員的稽核已編輯 |
 | 刪除 | 已刪除成員的評論 |
 
 [評等元件](rating-basics.md)
@@ -105,7 +101,7 @@ ht-degree: 4%
 
 | **動詞** | **說明** |
 |---|---|
-| 新增評等 | 已對成員內容進行分級 |
+| 新增評等 | 已對成員內容進行升級 |
 | 移除評等 | 成員的內容已降級 |
 
 [投票元件](essentials-voting.md)
@@ -113,36 +109,36 @@ ht-degree: 4%
 
 | **動詞** | **說明** |
 |---|---|
-| 新增投票 | 會員內容已投票 |
-| 移除投票 | 會員的內容已被投票否決 |
+| 新增投票 | 成員內容已投贊成票 |
+| 移除投票 | 成員內容已被投票否決 |
 
 **啟用稽核的元件**
 社交事件 `topic`= com/adobe/cq/social/moderation
 
 | **動詞** | **說明** |
 |---|---|
-| 拒絕 | 成員的內容被拒絕 |
-| 標幟為不適當 | 已標幟成員的內容 |
-| 不適宜取消標幟 | 成員的內容未標幟 |
+| 拒絕 | 成員內容遭拒 |
+| 如有不當情形，加註旗標 | 成員內容已標幟 |
+| 如有不當情形，取消標幟 | 成員的內容未標幟 |
 | ACCEPT | 仲裁者已核准成員的內容 |
 | 關閉 | 成員關閉評論以進行編輯和回覆 |
-| OPEN | 成員重新開啟註解 |
+| 開啟 | 成員重新開啟註解 |
 
 ## 自訂元件的事件 {#events-for-custom-components}
 
-對於自訂元件， [SocialEvent抽象類別](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) 必須延伸d才能將元件的事件記錄為 `actions`發生於 `topic`.
+對於自訂元件， [SocialEvent抽象類別](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) 必須延伸以將元件的事件記錄為 `actions`發生於 `topic`.
 
-自訂事件會覆寫方法 `getVerb()` 以便適當的 `verb`會針對每個傳回 `action`. 此 `verb` 針對動作傳回的可能是常用的(例如 `POST`)或專用於元件的元件(例如 `ADD RATING`)。 有一個 *n-1* 關係介於 `actions`和 `verbs`.
+自訂事件會覆寫方法 `getVerb()` 因此適當的 `verb`針對每個屬性傳回 `action`. 此 `verb` 針對動作傳回的可能是常用的(例如 `POST`)或專用於元件的元件(例如 `ADD RATING`)。 有一個 *n-1* 關係介於 `actions`和 `verbs`.
 
 >[!NOTE]
 >
->確保自訂擴充功能註冊的排名低於產品中任何現有實作。
+>確保自訂擴充功能註冊的排名低於產品中任何現有實施。
 
-### 自訂元件事件的虛擬程式碼 {#pseudo-code-for-custom-component-event}
+### 自訂元件事件的偽程式碼 {#pseudo-code-for-custom-component-event}
 
 [org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html)；
 [com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)；
-[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html)；
+[com.adobe.granite.activitystreams.ObjectType](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html)；
 [com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html)；
 
 ```java
@@ -243,9 +239,9 @@ public class RecipeEvent extends SocialEvent<RecipeEvent.RecipeActions> {
 
 您可以監聽事件，以修改活動資料流中顯示的內容。
 
-下列虛擬程式碼範例將從活動資料流中移除Comments元件的DELETE事件。
+下列偽程式碼範例將從活動資料流中移除Comments元件的DELETE事件。
 
-### EventListener的虛擬碼 {#pseudo-code-for-eventlistener}
+### EventListener的偽程式碼 {#pseudo-code-for-eventlistener}
 
 需要 [最新feature pack](deploy-communities.md#latestfeaturepack).
 

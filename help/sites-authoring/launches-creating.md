@@ -1,15 +1,13 @@
 ---
 title: 建立啟動
 description: 您可以建立啟動項，以更新現有網頁的新版本，以供日後啟用。
-uuid: c1a32710-8189-4a2e-bf2f-428ab30d48c8
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 14%
@@ -38,11 +36,11 @@ ht-degree: 14%
 
 1. 根據您使用的主控台：
 
-   * **啟動**:
+   * **啟動**：
 
       1. 選取 **建立啟動項** 以開啟精靈。
 
-   * **Sites**:
+   * **網站**：
 
       1. 選取 **建立** 以開啟選取方塊。
       1. 從此選取 **建立啟動項** 以開啟精靈。
@@ -72,7 +70,7 @@ ht-degree: 14%
 
 1. 對於每個專案，您可以指定是否：
 
-   * **包含子頁面**:
+   * **包含子頁面**：
 
       * 指定您是否要建立具有或不具有子頁面的啟動。  預設會包含此子頁面。
 

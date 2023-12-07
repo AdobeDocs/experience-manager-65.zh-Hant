@@ -1,33 +1,31 @@
 ---
 title: 在表單中建立和管理稽核
-seo-title: Creating and managing reviews in forms
-description: 「稽核」是一種機制，可讓一個或多個稽核者在表單上進行評論。
-seo-description: A Review is a mechanism that allows one or more reviewers to comment on a form.
+description: 稽核是一種機制，可允許一個或多個稽核者在表單上進行評論。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9ca4fcd6-3eb0-4fc1-a09c-e4ad532bbed0
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 3%
+source-wordcount: '701'
+ht-degree: 9%
 
 ---
 
 # 建立和管理表單的稽核{#creating-and-managing-reviews-to-forms}
 
-<span class="preview"> Adobe建議使用現代化且可擴充的資料擷取 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) 的 [建立新的Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) 或 [將最適化Forms新增至AEM Sites頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). 這些元件代表最適化Forms建立工作取得重大進展，可確保提供令人驚歎的使用者體驗。 本文說明使用基礎元件製作最適化Forms的舊方法。 </span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-reviews-forms.html) |
-| AEM 6.5 | 本文 |
+| AEM 6.5 | 本文章 |
 
 ## 評論 {#review}
 
-稽核是一種機制，可讓一個或多個稽核者在表單上進行評論。
+稽核是一種機制，可讓一或多個稽核者在表單上加上註解。
 
 ## 設定稽核 {#setting-up-a-review}
 
@@ -36,16 +34,16 @@ ht-degree: 3%
 1. 輸入下列資訊：
 
    * **標題**：必要，可包含英數字元、連字型大小和底線。
-   * **說明**：選擇性，說明審閱的目的/內容。
-   * **期限**：選擇性，稽核結束的日期。 超過截止日期時，任務會顯示為「過期」。
-   * **檢閱者名稱**：至少必須有一個。 使用下拉式方塊新增稽核者，輸入所有相符名稱的名稱清單；選擇名稱並按一下 **新增**. 在的下一區段 **檢閱者** 索引標籤會顯示所有稽核者的名稱。
+   * **說明**：選用，說明用途/內容以供檢閱。
+   * **期限**：選擇性，稽核結束的日期。 超過截止日期時，任務顯示為「過期」。
+   * **檢閱者名稱**：至少必須有一個。 使用下拉式方塊新增稽核者，輸入所有相符名稱的名稱清單；選取名稱並按一下 **新增**. 在的下一區段 **檢閱者** 標籤會顯示所有稽核者的名稱。
 
 1. 按一下 **開始** 以開始稽核。
 
    >[!NOTE]
    >
    >* 管理員可以存取與表單使用者相關聯的任何群組。
-   >* 服務使用者群組無法供選取檢閱。
+   >* 服務使用者群組無法供您選取檢閱。
 
 ### 設定稽核時發生的動作 {#actions-that-occur-when-a-review-is-set-up}
 
@@ -58,14 +56,14 @@ ht-degree: 3%
 
    檢閱者通知警報
 
-1. 註解方塊可供表單的檢閱者使用。 其他人可以閱讀註解但不能新增自己的註解。
+1. 註解方塊可供表單的檢閱者使用。 其他人可以閱讀註解，但無法新增自己的註解。
 
 ## 管理評論 {#managing-a-review}
 
 >[!NOTE]
 >
->* 只能修改正在進行的稽核。
->* 無法修改已完成的稽核。
+>* 只能修改進行中的稽核。
+>* 無法修改完成的檢閱。
 
 1. 導覽至表單索引標籤並選取表單。
 
@@ -73,17 +71,17 @@ ht-degree: 3%
 
    按一下 **管理評論** ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)圖示。
 
-   對於啟動器以外的使用者，管理檢閱圖示會停用。
+   對於啟動器以外的使用者，「管理檢閱」圖示會停用。
 
-1. 現在您會看到顯示資訊的畫面：
+1. 現在您會看到一個顯示資訊的畫面：
 
    * **評論名稱**：無法編輯。
 
-   * **檢閱說明**：可供編輯。
+   * **檢閱說明**：可編輯。
 
-   * **檢閱期限**：可供編輯。 您可以將截止日期修改為目前日期及時間之後的任何日期及時間。
+   * **檢閱期限**：可編輯。 您可以將截止日期修改為目前日期和時間之後的任何日期和時間。
 
-   * **檢閱者**：可供編輯。 您可以新增或移除稽核者。 如果任務過期，您只能在截止日期延長至目前日期之後新增稽核者。
+   * **檢閱者**：可編輯。 您可以新增或移除稽核者。 如果任務過期，您只能在截止日期延長至目前日期之後新增稽核者。
 
 1. 若要結束檢閱，請按一下 **結束**.
 
@@ -91,8 +89,8 @@ ht-degree: 3%
 
 本節說明以下專案所發生的情況： **檢閱更新/結束**：
 
-1. 如果修改了稽核說明，稽核者和發起者的相應任務將會更新。
-1. 如果稽核截止日期被修改，稽核者的對應任務會以新日期更新。
+1. 如果修改了稽核說明，則稽核者和發起者的相應任務將會更新。
+1. 如果稽核截止日期已修改，則稽核者的對應任務會以新日期更新。
 
 1. 如果移除稽核者：
 
@@ -100,22 +98,22 @@ ht-degree: 3%
 
    移除稽核者
 
-   1. 如果未完成，則指派的任務會終止。
-   1. 稽核者無法再對表單發表評論。
+   1. 如果未完成，則會終止指派的工作。
+   1. 檢閱者無法再對表單發表評論。
 
 1. 如果新增稽核者：
 
-   ![新增稽核者](assets/addedreviewer.png)
+   ![新增檢閱者](assets/addedreviewer.png)
 
-   新增稽核者
+   新增檢閱者
 
    1. 稽核任務已建立並指派給新加入的稽核者。
-   1. 新加入的稽核者可新增表單相關註解。
+   1. 新加入的稽核者可新增有關表單的註解。
 
 1. 當稽核結束時：
 
-   1. **檢閱者**：對於每個稽核者，與稽核相關的未完成任務會終止。 任務在檢閱者的「通知」區段中不再顯示為「待定」。
+   1. **檢閱者**：對於每個檢閱者，與檢閱相關的未完成任務會終止。 任務不再在檢視者的通知區段顯示為「待定」。
    1. **發起人**：指派給檢閱發起人的任務已標籤為完成。 任務會從稽核發起人的Notification區段中移除。
-   1. **全部**：評論會顯示在「先前的評論」區段中。 無法新增更多註解。
+   1. **全部**：評論會顯示在「先前的評論」區段中。 無法新增其他註解。
 
    ![檢閱完成](assets/review-complete-imgg.png)

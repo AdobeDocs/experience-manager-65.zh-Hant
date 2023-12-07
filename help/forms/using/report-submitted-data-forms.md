@@ -1,29 +1,25 @@
 ---
-title: 用於處理表單入口網站上已提交表單的API
-seo-title: APIs to work with submitted forms on forms portal
-description: AEM Forms提供API，您可使用這些API來查詢表單入口網站中已提交的表單資料，並對其執行動作。
-seo-description: AEM Forms provides APIs that you can use to query and take actions on submitted forms data in forms portal.
-uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
+title: 用於處理Forms Portal上已提交表單的API
+description: AEM Forms提供API，供您查詢表單入口網站中的已提交表單資料，並對其採取動作。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish, developer-reference
-discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 feature: Forms Portal
 exl-id: a685889e-5d24-471c-926d-dbb096792bc8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '541'
-ht-degree: 7%
+source-wordcount: '538'
+ht-degree: 4%
 
 ---
 
-# 用於處理表單入口網站上已提交表單的API {#apis-to-work-with-submitted-forms-on-forms-portal}
+# 用於處理Forms Portal上已提交表單的API {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms提供API，您可用來查詢透過表單入口網站提交的表單資料。 此外，您可以使用本檔案說明的API張貼註解或更新已提交表單的屬性。
+AEM Forms提供API，供您查詢透過Forms Portal提交的表單資料。 此外，您可以使用本檔案說明的API張貼註釋或更新已提交表單的屬性。
 
 >[!NOTE]
 >
->必須依照中的說明，將叫用API的使用者新增到稽核者群組 [將提交稽核者與表單建立關聯](/help/forms/using/adding-reviewers-form.md).
+>必須依照所述將叫用API的使用者新增到稽核者群組 [將提交稽核者關聯至表單](/help/forms/using/adding-reviewers-form.md).
 
 ## GET/content/forms/portal/submission.review.json？func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
@@ -35,7 +31,7 @@ AEM Forms提供API，您可用來查詢透過表單入口網站提交的表單�
 
 ### 回應 {#response}
 
-回應物件包含JSON陣列，其中包含表單名稱及其存放庫路徑。 回應的結構如下：
+回應物件包含JSON陣列，內含表單名稱及其存放庫路徑。 回應的結構如下：
 
 ```json
 [
@@ -47,7 +43,7 @@ AEM Forms提供API，您可用來查詢透過表單入口網站提交的表單�
 
 ### 範例 {#example}
 
-**請求 URL**
+**請求URL**
 
 ```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsForSubmissionReview
@@ -78,16 +74,16 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
    <td>指定表單所在的CRX存放庫路徑。 如果您未指定表單路徑，則會傳回空白回應。<br /> </td>
   </tr>
   <tr>
-   <td><code>offset</code> (可選)</td>
+   <td><code>offset</code><br /> (可選)</td>
    <td>指定結果集索引中的起點。 預設值為 <strong>0</strong>.</td>
   </tr>
   <tr>
-   <td><code>limit</code> (可選)</td>
-   <td>限制結果數量。 預設值為 <strong>30</strong>.</td>
+   <td><code>limit</code><br /> (可選)</td>
+   <td>限制結果的數量。 預設值為 <strong>30</strong>.</td>
   </tr>
   <tr>
    <td><code>orderby</code> <br /> (可選)</td>
-   <td>指定排序結果的屬性。 預設值為 <strong>jcr：lastModified</strong>，會根據上次修改時間來排序結果。</td>
+   <td>指定排序結果的屬性。 預設值為 <strong>jcr：lastModified</strong>，會根據上次修改時間排序結果。</td>
   </tr>
   <tr>
    <td><code>sort</code> <br /> (可選)</td>
@@ -99,7 +95,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>search</code> <br /> (可選)</td>
-   <td>在表單屬性中搜尋指定的值，並傳回具有相符值的表單。 預設值為 <strong>""</strong>.</td>
+   <td>在表單屬性中搜尋指定的值並傳回具有相符值的表單。 預設值為 <strong>「」</strong>.</td>
   </tr>
  </tbody>
 </table>
@@ -117,7 +113,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 ### 範例 {#example-1}
 
-**請求 URL**
+**請求URL**
 
 ```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSubmissions&formPath=/content/dam/formsanddocuments/forms-review/form2
@@ -140,15 +136,15 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 | 參數 | 說明 |
 |---|---|
 | `submitID` | 指定與提交執行個體相關聯的中繼資料ID。 |
-| `Comment` | 指定要新增至指定提交執行個體的註解文字。 |
+| `Comment` | 指定要新增至指定之提交執行個體的註解文字。 |
 
 ### 回應 {#response-2}
 
-在評論成功張貼時傳回評論ID。
+傳回成功張貼評論時的評論ID。
 
 ### 範例 {#example-2}
 
-**請求 URL**
+**請求URL**
 
 ```http
 https://[host:'port'/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
@@ -162,11 +158,11 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 ## GET/content/forms/portal/submission.review.json？func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
 
-傳回在指定提交執行個體上張貼的所有註解。
+傳回指定提交執行個體上張貼的所有註解。
 
 ### URL引數 {#url-parameters-3}
 
-在請求URL中指定以下引數：
+在請求URL中指定下列引數：
 
 | 參數 | 說明 |
 |---|---|
@@ -186,7 +182,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 ### 範例 {#example-3}
 
-**請求 URL**
+**請求URL**
 
 ```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
@@ -214,11 +210,11 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 ### 回應 {#response-4}
 
-傳回JSON物件，其中包含已發佈更新的相關資訊。
+傳回JSON物件，內含所張貼更新資訊。
 
 ### 範例 {#example-4}
 
-**請求 URL**
+**請求URL**
 
 ```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop

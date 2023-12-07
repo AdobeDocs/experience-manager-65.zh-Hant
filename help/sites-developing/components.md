@@ -1,19 +1,15 @@
 ---
 title: 元件概觀
-seo-title: Components
 description: 元件是模組化單元，可實現特定功能以在您的網站上展示您的內容
-seo-description: Components are modular units which realize specific functionality to present your content on your website
-uuid: fb39aeb8-8f43-4091-8083-ebfab89e6e63
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 50%
+source-wordcount: '570'
+ht-degree: 44%
 
 ---
 
@@ -40,7 +36,7 @@ ht-degree: 50%
 * 在您的本機執行個體上開發新元件。
 * 將其部署到測試環境。
 * 將其部署到即時編寫環境，作者和/或管理員可以在其中新增和設定內容。
-* 將其部署到即時發佈環境，它們用於為您網站訪客呈現內容。某些元件（例如Communities）也接受使用者的輸入。
+* 將其部署到您的即時發佈環境，在那裡它們用於呈現網站訪客的內容。 某些元件（例如Communities）也接受使用者的輸入。
 
 每個 AEM 元件：
 
@@ -52,7 +48,7 @@ ht-degree: 50%
 
 AEM隨附多種多樣的 [現成可用的元件](/help/sites-authoring/default-components.md) 功能齊全，包括：
 
-* 段落系統 ( `parsys`)
+* 段落系統( `parsys`)
 * 頁面( `responsivegrid`  — 僅限觸控式UI)
 * 文字
 * 影像，含隨附文字
@@ -65,7 +61,7 @@ AEM隨附多種多樣的 [現成可用的元件](/help/sites-authoring/default-c
 有兩組Adobe提供的AEM元件可供使用：
 
 * [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Foundation 元件](/help/sites-authoring/default-components-foundation.md)
+* [基礎元件](/help/sites-authoring/default-components-foundation.md)
 
 **核心元件** 推出AEM 6.3，提供有彈性且功能豐富的撰寫功能。 此 [We.Retail參考網站](/help/sites-developing/we-retail.md) 說明如何使用核心元件，並代表元件開發的目前最佳實務。
 

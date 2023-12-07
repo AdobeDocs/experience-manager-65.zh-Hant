@@ -1,19 +1,15 @@
 ---
 title: 使用AEM Forms存放庫
-seo-title: Working with AEM Forms Repository
 description: 管理AEM Forms存放庫，以使用Java API和網站服務API建立資料夾、寫入、清單、讀取、更新和搜尋資源。 此外，瞭解如何建立資源關係、鎖定和刪除資源。
-seo-description: Manage AEM Forms repository to create folders, write, list, read, update resources, and search resources using the Java API and Web Service API. In addition, learn how to create resource relationships, lock and delete resources.
-uuid: 6ead49f9-ca0d-4ee4-86a6-0a9ced6ec4f8
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '9095'
+source-wordcount: '9036'
 ht-degree: 0%
 
 ---
@@ -58,7 +54,7 @@ AEM Forms存放庫中的資源路徑為：
 
 使用存放庫服務API，您可以完成下列工作：
 
-* 建立檔案夾. 另請參閱 [建立資料夾](aem-forms-repository.md#creating-folders).
+* 建立資料夾。 另請參閱 [建立資料夾](aem-forms-repository.md#creating-folders).
 * 寫入資源及其屬性。 另請參閱 [寫入資源](aem-forms-repository.md#writing-resources).
 * 列出指定集合中或其他資源相關的資源。 另請參閱 [列出資源](aem-forms-repository.md#listing-resources).
 * 讀取資源及其屬性。 另請參閱 [正在讀取資源](aem-forms-repository.md#reading-resources).
@@ -815,7 +811,7 @@ A *查詢* 包含一或多個邏輯上以條件聯結的陳述式。 A *陳述�
    * 包含用於搜尋屬性的條件的運運算元。 運運算元必須是中的靜態常數之一 `Query.Statement` 類別。 在此範例中，靜態值 `Query.Statement.OPERATOR_BEGINS_WITH` 已使用。
    * 包含進行搜尋之屬性值的右運算元。 在此範例中，name屬性， `String` 包含值 `"testResource"`，則會使用。
 
-   請叫用「 」，指定左運算元的名稱空間 `Query.Statement` 物件的 `setNamespace` 方法並傳入 `com.adobe.repository.infomodel.bean.ResourceProperty` 類別。 在此範例中， `ResourceProperty.RESERVED_NAMESPACE_REPOSITORY` 已使用。
+   請叫用「 」，指定左運算元的名稱空間 `Query.Statement` 物件的 `setNamespace` 方法並傳入 `com.adobe.repository.infomodel.bean.ResourceProperty` 類別。 這個例子使用 `ResourceProperty.RESERVED_NAMESPACE_REPOSITORY`。
 
    透過叫用 `Query` 物件的 `addStatement` 方法並傳入 `Query.Statement` 物件。
 

@@ -1,17 +1,13 @@
 ---
 title: 信函和互動式通訊的後處理
-seo-title: Post Processing of Letters
 description: 「通訊管理」中的信件後處理可讓您建立AEM和Forms後處理過程（例如列印和電子郵件），並將其與您的信件整合。
-seo-description: Post Processing of Letters in Correspondence Management lets you create AEM and Forms post processes, such as print and email, and integrate them with your letters.
-uuid: 40cb349d-6ba2-4794-9ec6-dcab15c35b8d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 9b06c394-8e26-429c-b78f-22afa271aeb3
 docset: aem65
 feature: Correspondence Management
 exl-id: 91ee4422-99c1-4907-a507-5968c6984f28
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '832'
 ht-degree: 0%
@@ -119,7 +115,7 @@ ht-degree: 0%
 1. 將滑鼠指標暫留在字母上並選取 **檢視屬性**.
 1. 選取&#x200B;**編輯**。
 1. 在「基本屬性」中，使用「後置處理」下拉式清單，選取要與信函關聯的後置處理。 AEM和Forms相關的發佈程式都會列在下拉式清單中。
-1. 選取&#x200B;**儲存**。
+1. 選取「**儲存**」。
 1. 使用後處理設定信函後，發佈信函，並選擇性地在發佈執行個體上指定AEM DS設定服務中的處理URL。 這可確保在處理執行個體上執行後續程式。
 
 ## 重新載入草稿字母例項  {#reloaddraft}

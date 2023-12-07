@@ -1,23 +1,21 @@
 ---
 title: 內容處置篩選
 description: 瞭解如何使用內容處置篩選器來防止XSS攻擊。
-uuid: 145a88e0-9fa8-42db-b189-eda507c33049
 contentOwner: trushton
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: Security
-discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 exl-id: 1c3d0d48-5c31-42a8-8698-922d7c2127e9
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
 # 內容處置篩選 {#content-disposition-filter}
 
-內容處置篩選器是抵禦SVG檔案XSS攻擊的安全功能。
+內容處置篩選器是一項安全性功能，可抵禦SVG檔案上的XSS攻擊。
 
 安裝後，篩選器會封鎖對所有資產的存取。 例如，您無法線上上檢視PDF。 本節說明如何根據您的需求設定篩選器。
 
@@ -25,9 +23,9 @@ ht-degree: 0%
 
 您可以檢視 [GitHub中的Apache Sling內容處置篩選器](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
 
-「內容處置篩選」選項提供下列功能：
+「內容配置篩選」選項提供下列功能：
 
-* **內容處置路徑：** 套用篩選的路徑清單，後面接著要排除在該路徑上的mime型別清單。 此路徑必須是絕對路徑，並且可以包含萬用字元(`*`)結尾處的「 」，以將每個資源路徑與給定的路徑前置詞相符。 例如： `/content/*:image/jpeg,image/svg+xml` 將篩選器套用至中的每個節點 `/content?` JPG和SVG影像除外。
+* **內容處置路徑：** 套用篩選的路徑清單，後面接著要排除在該路徑上的mime型別清單。 此路徑必須是絕對路徑，並且可以包含萬用字元(`*`)，以比對每個資源路徑與指定路徑首碼。 例如： `/content/*:image/jpeg,image/svg+xml` 將篩選器套用至中的每個節點 `/content?` JPG和SVG影像除外。
 
 * **排除的資源路徑：** 排除的資源的清單，每個資源路徑都必須提供為絕對和完全限定的路徑。 不支援字首比對/萬用字元。
 

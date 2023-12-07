@@ -1,25 +1,21 @@
 ---
 title: 在We.Retail中嘗試可編輯的範本
-seo-title: Trying out Editable Templates in We.Retail
 description: 瞭解如何使用We.Retail在Adobe Experience Manager中試用可編輯的範本。
-seo-description: null
-uuid: 0d4b97cb-efcc-4312-a783-eae3ecd6f889
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 10%
+source-wordcount: '467'
+ht-degree: 2%
 
 ---
 
 # 在We.Retail中嘗試可編輯的範本{#trying-out-editable-templates-in-we-retail}
 
-使用可編輯的範本，建立和維護範本不再是開發人員專屬的工作。 稱為範本作者的權力使用者現在可以建立範本。 開發人員仍需要設定環境、建立用戶端程式庫和建立要使用的元件，但是當這些基本功能準備就緒後，範本作者就可以彈性地建立和設定範本，而不需要開發專案。
+使用可編輯的範本，建立和維護範本不再是開發人員專屬的工作。 稱為範本作者的權力使用者現在可以建立範本。 開發人員仍需要設定環境、建立使用者端程式庫和建立要使用的元件，但是當這些基本功能準備就緒後，範本作者就可以彈性地建立和設定範本，而不需要開發專案。
 
 We.Retail中的所有頁面都是以可編輯的範本為基礎，讓非開發人員能調整及自訂範本。
 

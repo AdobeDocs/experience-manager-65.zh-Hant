@@ -1,18 +1,14 @@
 ---
 title: 交易報表可記帳API
-seo-title: Transaction Reports Billable APIs
 description: 作為交易入帳的所有API清單
-seo-description: List of all the APIs that are accounted as transactions
-uuid: d2f38ae4-75df-426f-af34-52ae6fb324f3
 topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 929a298d-7f22-487f-bf7d-8ab2556d0d81
 docset: aem65
 exl-id: 1bc99f3b-3f28-4e74-b259-6ebddc11ffc5
-source-git-commit: d636d987f5d62c9169bc4015d7ac50090e362faa
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2089'
-ht-degree: 6%
+source-wordcount: '1719'
+ht-degree: 7%
 
 ---
 
@@ -66,43 +62,43 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF</a></td>
    <td>將Adobe PDF轉換為支援的檔案型別。 </td>
-   <td>已處理的文件<br /> </td>
+   <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF2</a></td>
    <td>將Adobe PDF轉換為支援的檔案型別。 </td>
-   <td>已處理的文件<br /> </td>
+   <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF3</a></td>
    <td>將Adobe PDF轉換為支援的檔案型別。 </td>
-   <td>已處理的文件<br /> </td>
+   <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlFileToPdf-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-">htmlFileToPdf</a></td>
    <td><p>從HTML頁面建立PDF。</p> </td>
-   <td>已處理的文件<br /> </td>
+   <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf</a></td>
    <td>從指向PDF頁面的URL建立HTML。</td>
-   <td>已處理的文件<br /> </td>
+   <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf2-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf2</a></td>
    <td>從指向PDF頁面的URL建立HTML。</td>
-   <td>已處理的文件<br /> </td>
+   <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#optimizePDF-com.adobe.aemfd.docmanager.Document-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">optimizePDF</a></td>
    <td>最佳化PDF以移除不必要的中繼資料，進而降低檔案大小，而不會影響品質。</td>
-   <td>已處理的文件<br /> </td>
+   <td>已處理的檔案<br /> </td>
    <td> </td>
   </tr>
  </tbody>
