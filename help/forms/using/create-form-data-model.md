@@ -5,9 +5,9 @@ contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 4158315c28412bb9498c7d49d21b3f4d72681fc6
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1533'
 ht-degree: 1%
 
 ---
@@ -101,7 +101,7 @@ AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模�
 
 1. 在AEM編寫執行個體中，導覽至 **[!UICONTROL Forms]** > **[!UICONTROL 資料整合]**.
 1. 選取 **[!UICONTROL 建立]** > **[!UICONTROL 表單資料模型]**.
-1. 在建立表單資料模型對話方塊中，指定 **名稱** 用於表單資料模型。 例如， **customer-shipping-billing-details**. 選取 **[!UICONTROL 下一個]**.
+1. 在建立表單資料模型對話方塊中，指定 **名稱** 用於表單資料模型。 例如， **customer-shipping-billing-details**. 選取&#x200B;**[!UICONTROL 「下一步」]**。
 1. 選取資料來源畫面會列出所有已設定的資料來源。 選取 **WeRetailMySQL** 資料來源並選取 **[!UICONTROL 建立]**.
 
    ![data-source-selection](assets/data-source-selection.png)
@@ -236,3 +236,8 @@ AEM [!DNL Forms] 提供直覺式使用者介面，用於 [建立表單資料模�
    現在，如果您再次測試id 7107215的讀取模型服務，它會擷取並顯示更新的客戶詳細資訊，如下所示。
 
    ![已讀取 — 已更新](assets/read-updated.png)
+
+
+>[!NOTE]
+>
+> 您可以使用最適化表單中的表單資料模型來建立及使用SharePoint清單設定，以將資料或產生的記錄檔案儲存在SharePoint清單中。 請參閱 [將最適化表單連線至Microsoft® SharePoint清單](/help/forms/using/configuring-submit-actions.md#create-a-sharepoint-list-configuration)，以取得詳細步驟。

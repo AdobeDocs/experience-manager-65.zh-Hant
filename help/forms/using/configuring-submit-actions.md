@@ -6,10 +6,10 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: ab40115c373cc06a7600494288b2670deb914e1a
 workflow-type: tm+mt
-source-wordcount: '2134'
-ht-degree: 51%
+source-wordcount: '2595'
+ht-degree: 49%
 
 ---
 
@@ -166,6 +166,64 @@ ht-degree: 51%
 最適化表單編輯器提供&#x200B;**叫用 Microsoft® Power Automate 流程**&#x200B;提交動作，將最適化表單資料、附件和記錄文件發送到 Power Automate Cloud Flow。若要使用提交動作將擷取的資料傳送至Microsoft®Power Automate， [連線您的AEM Forms執行個體與Microsoft® Power Automate](/help/forms/using/forms-microsoft-power-automate-integration.md)
 
 在設定成功之後，使用[叫用 Microsoft® Power Automate 流程](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action)提交動作，將資料傳送到 Power Automate Flow。
+
+## 提交至Microsoft® SharePoint清單{#submit-to-sharedrive}
+
+<span class="preview">這是一項預先發佈功能，可透過我們的[預先發佈管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features)存取。</span>
+
+「**[!UICONTROL 提交到 SharePoint]**」提交動作會將最適化表單與 Microsoft® SharePoint 儲存空間建立連結。您可以將表單資料檔案、附件或記錄檔案提交至連線的Microsoft® Sharepoint儲存體。
+
+### 將最適化表單連線至Microsoft® SharePoint清單 {#connect-af-sharepoint-list}
+
+若要使用 [!UICONTROL 提交至SharePoint清單] 以最適化表單提交動作：
+
+1. [建立SharePoint清單設定](#create-sharepoint-list-configuration)：它會將AEM Forms連線至您的Microsoft® Sharepoint清單儲存空間。
+1. [在最適化表單中使用表單資料模型提交](#use-submit-using-fdm)：此動作會將您的最適化表單連線至設定的Microsoft® SharePoint。
+
+#### 建立SharePoint清單設定 {#create-sharepoint-list-configuration}
+
+若要將AEM Forms連線至您的Microsoft®Sharepoint清單：
+
+1. 前往 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** >  **[!UICONTROL Microsoft® SharePoint]**.
+1. 選取一個&#x200B;**設定容器**。設定會儲存在選取的設定容器中。
+1. 按一下 **[!UICONTROL 建立]** > **[!UICONTROL SharePoint清單]** 下拉式清單中的。 此時會顯示 SharePoint 設定精靈。
+1. 指定「**[!UICONTROL 標題]**」、「**[!UICONTROL 用戶端 ID]**」、「**[!UICONTROL 用戶端密碼]**」和「**[!UICONTROL OAuth URL]**」。如需有關如何擷取 OAuth URL 之用戶端 ID、用戶端密碼、租用戶 ID 的資訊，請參閱 [Microsoft® 文件](https://learn.microsoft.com/en-us/graph/auth-register-app-v2)。
+   * 您可以從 Microsoft® Azure 入口網站擷取應用程式的 `Client ID` 和 `Client Secret`。
+   * 在 Microsoft® Azure 入口網站中，將重新導向 URI 新增為 `https://[author-instance]/libs/cq/sharepointlist/content/configurations/wizard.html`。以作者執行個體的 URL 取代 `[author-instance]`。
+   * 新增API許可權 `offline_access` 和 `Sites.Manage.All` 在 **Microsoft® Graph** 索引標籤以提供讀取/寫入許可權。 新增 `AllSites.Manage` 中的許可權 **Sharepoint** 索引標籤以與SharePoint資料進行遠端互動。
+   * 使用 OAuth URL：`https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`。從 Microsoft® Azure 入口網站，以應用程式的 `tenant-id` 取代 `<tenant-id>`。
+
+     >[!NOTE]
+     >
+     **用戶端密碼**&#x200B;欄位為必填或選用，取決於您的 Azure Active Directory 應用程式設定。如果您的應用程式設定為使用用戶端密碼，就必須提供用戶端密碼。
+
+1. 按一下「**[!UICONTROL 連結]**」。連結成功後，就會顯示 `Connection Successful` 訊息。
+1. 選取 **[!UICONTROL SharePoint網站]** 和 **[!UICONTROL SharePoint清單]** 下拉式清單中的。
+1. 點選 **[!UICONTROL 建立]** 以建立Microsoft® SharePointList的雲端設定。
+
+#### 在最適化表單中使用表單資料模型提交 {#use-submit-using-fdm}
+
+您可以在調適型表單中使用已建立的SharePoint清單設定，以在SharePoint清單中儲存資料或產生的記錄檔案。 執行以下步驟，在最適化表單中使用SharePoint清單儲存體設定：
+
+1. [使用Microsoft® SharePoint清單設定建立表單資料模型](/help/forms/using/create-form-data-model.md)
+1. [設定表單資料模型以擷取及傳送資料](/help/forms/using/work-with-form-data-model.md#configure-services)
+1. [建立最適化表單](/help/forms/using/create-adaptive-form.md).
+1. [使用表單資料模型設定提交動作](/help/forms/using/configuring-submit-actions.md#submit-using-form-data-model-submit)
+
+提交表單時，資料會儲存在指定的Microsoft® Sharepoint清單儲存空間中。
+
+>[!NOTE]
+>
+Microsoft® SharePoint清單不支援下列欄型別：
+* 影像欄
+* 中繼資料欄
+* 人員欄
+* 外部資料欄
+
+
+>[!NOTE]
+>
+若要設定值，請[使用 AEM SDK 產生 OSGi 設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hant#generating-osgi-configurations-using-the-aem-sdk-quickstart)，並[將設定部署至](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=zh-Hant#deployment-process)您的 Cloud Service 執行個體。
 
 ## 最適化表單中的伺服器端重新驗證 {#server-side-revalidation-in-adaptive-form}
 

@@ -7,10 +7,10 @@ topic-tags: develop
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: ab40115c373cc06a7600494288b2670deb914e1a
 workflow-type: tm+mt
-source-wordcount: '1981'
-ht-degree: 17%
+source-wordcount: '2071'
+ht-degree: 16%
 
 ---
 
@@ -63,28 +63,38 @@ ht-degree: 17%
    >
    確認「Cloud Service設定」頁面的URL開頭為 **HTTPS**. 如果沒有， [啟用SSL](/help/sites-administering/ssl-by-default.md) 適用於AEM [!DNL Forms] 伺服器。
 
-1. 在設定頁面上，選取 **[!UICONTROL 建立]** 以建立 [!DNL Adobe Sign] AEM中的設定 [!DNL Forms].
-1. 在 **[!UICONTROL 一般]** 的標籤 **[!UICONTROL 建立Adobe Sign設定]** 頁面，指定 **[!UICONTROL 名稱]** ，然後選取「 」 **[!UICONTROL 下一個]**. 您可以選擇指定標題並瀏覽以選取設定的縮圖。
 
-1. 將您目前瀏覽器視窗中的 URL 複製到筆記本。需要設定 [!DNL Adobe Sign] 使用AEM的應用程式[!DNL Forms].
+1. 在設定頁面上，點選 **[!UICONTROL 建立]** 以建立 [!DNL Adobe Sign] AEM中的設定 [!DNL Forms].
+1. 在 **[!UICONTROL 一般]** 的標籤 **[!UICONTROL 建立Adobe Sign設定]** 頁面，指定 **[!UICONTROL 名稱]** 設定並點選 **[!UICONTROL 下一個]**. 您可以選擇指定標題並瀏覽以選取設定的縮圖。
+1. 現在您可以 **[!UICONTROL 選取解決方案]** 以選取 [!DNL Adobe Acrobat Sign].
 
-1. 在 **[!UICONTROL 設定]** 標籤， **[!UICONTROL OAuth URL]** 欄位包含預設URL。 URL 的格式是：
+   ![Adobe Acrobat Sign Solutions](/help/forms/using/assets/adobe-sign-solution.png)
 
-   `https://<shard>/public/oAuth/v2`
+1. 將您目前瀏覽器視窗中的URL複製到記事本並移除部分/`ui#/aem` 從URL. 接著需要修改過的URL才能進行設定 [!DNL Adobe Acrobat Sign] 應用程式搭配 [!DNL AEM Forms]，在稍後的步驟中。 點選 [!UICONTROL 下一個].
 
-   例如：
-   `https://secure.na1.echosign.com/public/oauth/v2`
+1. 在 **[!UICONTROL 設定]** 標籤，
+   * 此 **[!UICONTROL OAuth URL]** 欄位包含預設URL，其中包含Adobe Sign資料庫分片。 URL 的格式是：
+
+     `https://<shard>/public/oauth/v2`
+
+     例如：
+     `https://secure.na1.echosign.com/public/oauth/v2`
+
+   * 此 **[!UICONTROL 存取記號URL]** 欄位包含預設URL，其中包含Adobe Sign資料庫分片。 URL 的格式是：
+
+     `https://<shard>/oauth/v2/token`
+
+     例如：
+     `https://api.na1.echosign.com/oauth/v2/token`
 
    其中：
 
-   **na1** 是指預設的資料庫分片。您可以修改資料庫分片的值。確保[!DNL  Adobe Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
-
-   如果您建立 Adobe Experience Manager 功能或元件的另一個 [!DNL Adobe Sign] 設定請確保所有 [!DNL Adobe Sign] Cloud Configurations 都指向相同分片。
+   **na1** 是指預設的資料庫分片。您可以修改資料庫分片的值。確保[!DNL  Adobe Acrobat Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
 
    >[!NOTE]
    >
-   保留 **建立Adobe Sign設定** 頁面開啟。 不要關閉它。 您可以擷取 **使用者端ID** 和 **使用者端密碼** 為設定OAuth設定後 [!DNL Adobe Sign] 應用程式，如未來步驟所述。
-
+   * 保留 **建立Adobe Acrobat Sign設定** 頁面開啟。 不要關閉它。 您可以擷取 **使用者端ID** 和 **使用者端密碼** 為設定OAuth設定後 [!DNL Adobe Acrobat Sign] 應用程式，如未來步驟所述。
+   * 登入Adobe Sign帳戶後，請導覽至 **[!UICONTROL ACROBAT SIGN API]** > **[!UICONTROL API資訊]** > **[!UICONTROL REST API方法檔案]** > **[!UICONTROL OAuth存取權杖]** 以存取與Adobe Sign OAuth URL和存取記號URL相關的資訊。
 
 1. 設定 [!DNL Adobe Sign] 應用程式的 OAuth 設定：
 
@@ -104,22 +114,23 @@ ht-degree: 17%
 
    ![OAuth Config](assets/oauthconfig_new.png)
 
-1. 返回 **[!UICONTROL 建立Adobe Sign設定]** 頁面。 在 **[!UICONTROL 設定]** 標籤， **[!UICONTROL OAuth URL]** 欄位提及預設URL。 URL 的格式是：
+<!--
+1. Go back to the **[!UICONTROL Create Adobe Sign Configuration]** page. In the **[!UICONTROL Settings]** tab, the **[!UICONTROL OAuth URL]** field mentions the  default URL. The format of the URL is:
 
    `https://<shard>/public/oAuth/v2`
 
-   例如：
+   For example: 
    `https://secure.na1.echosign.com/public/oauth/v2`
 
-   其中：
+   where:
 
-   **na1** 是指預設的資料庫分片。
+   **na1** refers to the default database shard.
 
-   您可以修改資料庫分片的值。重新啟動伺服器，以便能夠使用資料庫分片的新值。
+   You can modify the value for the database shard. Restart the server to be able to use the new value for the database shard.
 
    >[!NOTE]
    >
-   確保您的作者和發佈執行個體設定指向相同分片。 如果您為組織建立多個Adobe Sign設定，請確定所有設定都使用相同分片。
+   >Ensure that your author and publish instance configurations point to the same shard. If you create multiple Adobe Sign configurations for an organization, ensure all the configurations utilize the same shard. -->
 
 1. 返回 **[!UICONTROL 建立Adobe Sign設定]** 頁面。 在 **[!UICONTROL 設定]** 索引標籤，指定 **使用者端ID** （也稱為應用程式ID）和 **使用者端密碼**. 使用 [Adobe Sign應用程式的使用者端ID和使用者端密碼](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret) 已為AEM Forms建立。
 
@@ -127,8 +138,9 @@ ht-degree: 17%
 
 1. 選取 **[!UICONTROL 連線至Adobe Sign]**. 在系統提示輸入認證時，請提供在建立時使用的帳戶使用者名稱和密碼 [!DNL Adobe Sign] 應用程式。
 
-1. 選取 **[!UICONTROL 建立]** 以建立 [!DNL Adobe Sign] 設定。
+   ![Adobe Acrobat Sign雲端設定成功](assets/adobe-sign-cloud-configuration-success.png)
 
+1. 點選 **[!UICONTROL 建立]** 以建立 [!DNL Adobe Sign] 設定。
 1. 開啟AEM Web Console。 URL為 `https://'[server]:[port]'/system/console/configMgr`
 1. 開啟 **[!UICONTROL Forms通用設定服務].**
 1. 在 **[!UICONTROL 允許]** 欄位， **選取** 所有使用者 — 所有使用者（匿名或登入）都可以預覽附件、驗證和簽署表單，然後按一下 **[!UICONTROL 儲存].** 編寫執行個體設定為使用 [!DNL Adobe Sign].
@@ -136,6 +148,10 @@ ht-degree: 17%
 1. 使用 [復寫](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html) 以在對應的發佈執行個體上建立相同的設定。
 
 現在， [!DNL Adobe Sign] 已與AEM整合 [!DNL Forms] 並準備用於調適型表單。 至 [在最適化表單中使用Adobe Sign服務](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，指定上述在最適化表單屬性中建立的設定容器。
+
+>[!NOTE]
+>
+若要設定Adobe Sign沙箱，您可以依照中說明的相同設定步驟操作 [Adobe Sign](#adobe-sign).
 
 ## 連線適用於政府的AEM Forms與Adobe Acrobat Sign Solutions {#adobe-acrobat-sign-for-government}
 
@@ -203,9 +219,30 @@ ht-degree: 17%
 
    ![適用於政府的Adobe Acrobat Sign Solutions](/help/forms/using/assets/adobe-sign-for-govt.png)
 
-1. 在 **[!UICONTROL 電子郵件]** 已歸檔，請為政府帳戶指定與您的Adobe Acrobat Sign Solutions相關聯的電子郵件地址。
+1. 在 **[!UICONTROL 電子郵件]** 欄位中，指定與您的Adobe Acrobat Sign Solutions政府帳戶關聯的電子郵件地址。
 
-1. 此 **[!UICONTROL OAuth URL]** 欄位會指定Adobe Sign資料庫分片。 欄位包含預設URL。 請勿變更URL。
+1. 在 **[!UICONTROL 設定]** 標籤，
+   * 此 **[!UICONTROL OAuth URL]** 欄位包含預設URL，其中包含Adobe Sign資料庫分片。 URL 的格式是：
+
+     `https://<shard>/api/gateway/adobesignauthservice/api/v1/authorize`
+
+     例如：
+     `https://secure.na1.adobesign.us/api/gateway/adobesignauthservice/api/v1/authorize`
+
+   * 此 **[!UICONTROL 存取記號URL]** 欄位包含預設URL，其中包含Adobe Sign資料庫分片。 URL 的格式是：
+
+     `https://<shard>/api/gateway/adobesignauthservice/api/v1/token`
+
+     例如：
+     `https://secure.na1.adobesign.us/api/gateway/adobesignauthservice/api/v1/token`
+
+   其中：
+
+   **na1** 是指預設的資料庫分片。您可以修改資料庫分片的值。確保[!DNL  Adobe Acrobat Sign] Cloud Configurations 指向[正確的分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
+
+   >[!NOTE]
+   >
+   * 登入Adobe Sign帳戶後，請導覽至 **[!UICONTROL ACROBAT SIGN API]** > **[!UICONTROL API資訊]** > **[!UICONTROL REST API方法檔案]** > **[!UICONTROL OAuth存取權杖]** 以存取與Adobe Sign oAuth URL和存取記號URL相關的資訊。
 
 1. 使用Adobe Acrobat Sign為政府解決方案代表共用的認證([Adobe Professional Services團隊成員])，在前一節中為[**[!UICONTROL 使用者端ID]** 和 **[!UICONTROL 使用者端密碼]**]。
 
