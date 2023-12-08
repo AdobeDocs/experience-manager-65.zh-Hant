@@ -4,9 +4,9 @@ description: 安裝AEM Forms檔案服務，以建立、彙編、散佈、封存P
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '5499'
+source-wordcount: '5599'
 ht-degree: 1%
 
 ---
@@ -556,6 +556,16 @@ DocAssurance服務可套用使用許可權至PDF檔案。 若要套用使用許�
   </tr>
  </tbody>
 </table>
+
+### （僅限Windows）設定Microsoft®專案的登入專案 {#configure-registry-entry-for-microsoft-project}
+
+在電腦上安裝AEM Forms附加元件和Microsoft® Project後，請在64位元位置註冊Microsoft® Project的專案。 它有助於執行Project到PDFG的轉換測試。 下列是列出登入輸入程式的步驟：
+
+1. 開啟Microsoft® Windows登入編輯器(regedit)，若要開啟登入編輯器，請前往[開始] > [執行]，輸入regedit，然後按一下[確定]。
+1. 瀏覽至 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Acrobat PDFMaker\<version>\Office\SupportedApp`，並建立一個新的 **二進位值** 登入，並將其重新命名為 **專案**.
+1. 將已建立之二進位登入的資料值修改成01，然後按一下確定。
+1. 關閉登入專案。
+
 
 ## 已知問題和疑難排解 {#known-issues-and-troubleshooting}
 

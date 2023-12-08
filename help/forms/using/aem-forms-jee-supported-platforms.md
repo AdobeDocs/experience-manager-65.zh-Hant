@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 1630805be43ce9bb52a8fe1bbe50b2b934d4922c
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3984'
 ht-degree: 0%
 
 ---
@@ -242,12 +242,12 @@ Adobe Experience Manager Forms需要由Java™開發套件(JDK)散發提供的Ja
    <td><p><strong>支援的修補程式定義</strong></p> </td>
   </tr>
   <tr>
-   <td>oracleWebLogic Server 12.2.1 (12c R2) （已棄用）</td>
+   <td>oracleWebLogic Server 12.2.1 (12c R2) （已棄用） <sup>[9]</sup></td>
    <td>答：支援</td>
    <td>Service Pack和重要更新</td>
   </tr>
   <tr>
-   <td>oracleWebLogic Server 14c </td>
+   <td>oracleWebLogic Server 14c <sup>[9]</sup></td>
    <td>答：支援</td>
    <td>Service Pack和重要更新</td>
   </tr>
@@ -355,6 +355,9 @@ IBM® WebSphere®叢集僅支援網路部署版本。
 1. JEE上的AEM Forms不支援CentOS上的WebSphere®應用程式伺服器。
 1. jee上的AEM Forms不支援JBoss®角色型存取控制(RBAC)。
 1. JEE上的AEM Forms支援OracleJava™ SE 11 （64位元） SDK (僅限應用程式伺服器JBoss® EAP 7.4)。
+1. WebLogic伺服器不支援高於1.8.0_281的JDK版本。 (FORMS-8498)
+1. [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL Experience Manager Forms 6.5.10.0 and later]. (CQDOC-18312)
+
 
 此外，選擇在JEE部署上AdobeAEM Forms的軟體時，請考量下列幾點：
 
@@ -566,7 +569,7 @@ PDF Generator僅支援英文、法文、德文和日文版本的支援作業系�
 - TCP/IPv4或TCP/IPv6網路連線至JEE伺服器上的AEM Forms
 - 您必須具有系統管理許可權，才能在Windows上安裝Workbench。 如果您使用非系統管理員帳戶進行安裝，安裝程式會提示您輸入適當帳戶的認證。
 
-### Designer {#designer}
+### 設計工具 {#designer}
 
 - Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server或Microsoft® Windows® 10
 - 1 GHz或更快的處理器，支援PAE、NX和SSE2。

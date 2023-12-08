@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
-source-git-commit: ab40115c373cc06a7600494288b2670deb914e1a
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '2291'
+source-wordcount: '2359'
 ht-degree: 3%
 
 ---
@@ -22,18 +22,18 @@ ht-degree: 3%
 
 <span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
 
-雖然每個表單都是為特定目的而設計的，但大多數表單中有一些常見的部分，例如提供個人詳細資訊按讚姓名和位址、家庭詳細資訊、收入詳細資訊等。 每次建立新表單時，表單開發人員都必須建立這些公用區段。
+雖然每個表單都是為特定目的而設計，但大多數表單中都有一些常見的區段，例如提供個人詳細資訊，例如姓名和地址、家庭詳細資訊、收入詳細資訊等。 每次建立新表單時，表單開發人員都必須建立這些通用區段。
 
-自我調整表單提供了一種方便的機制，只需區段 按讚面板或欄位群組創建表單一次，並在自我調整表單中重複使用它們。 這些可重複使用的獨立區段稱為最適化表單片段。
+調適型表單提供一種便利的機制，讓您只需建立一次表單區段（例如面板或欄位群組），即可在調適型表單中重複使用。 這些可重複使用的獨立區段稱為最適化表單片段。
 
 ## 建立片段 {#create-a-fragment}
 
-您可以從頭開始建立最適化表單片段，或將現有最適化表單中的面板儲存為片段。
+您可以從頭開始創建自我調整表單片段，也可以將現有自我調整表單中的面板另存為片段。
 
 ### 從頭開始建立片段 {#create-fragment-from-scratch}
 
-1. 在https://登入AEM Forms作者執行個體&#x200B;[*主機名稱*]：[*連線埠*]/aem/forms.html.
-1. 按一下 **建立>自適應表單片段**.
+1. 登入AEM Forms作者執行個體 HTTPs:// [*主機名稱*] ： [*連接埠*] /aem/forms.html。
+1. 按一下 **建立 >最適化表單片段** 」。
 1. 指定片段的標題、名稱、說明和標籤。
 
    >[!NOTE]
@@ -113,7 +113,7 @@ ht-degree: 3%
 
    面板會儲存在存放庫中的指定或預設位置。 在最適化表單中，面板會由片段的快照取代。 如下所示，「一般資訊」面板及其子面板「個人資訊和地址」會儲存為片段。
 
-   若要編輯片段，請按一下 **[!UICONTROL 編輯資產]** 在面板工具列中。 片段會在編輯模式的新標籤或視窗中開啟。
+   要編輯片段，請按一下 **[!UICONTROL 面板工具列中的編輯資產]** 」。 片段會在新標籤或新視窗的編輯模式中開啟。
 
    ![編輯片段](assets/edit-fragment.png)
 
@@ -121,16 +121,16 @@ ht-degree: 3%
 
 ### 設定片段外觀 {#configure-fragment-appearance}
 
-您在自我調整表單中插入的任何片段都會顯示為預留位置圖像。 預留位置顯示片段中最多十個子面板的標題。 您可以設定AEM Forms顯示完整的片段，而非預留位置影像。
+您在調適型表單中插入的任何片段都會顯示為預留位置影像。 預留位置最多可在片段中顯示十個子面板的標題。 您可以設定AEM Forms顯示完整的片段，而非預留位置影像。
 
-執行以下步驟，在表單中顯示完整的片段：
+執行以下步驟以在表單中顯示完整的片段：
 
-1. 前往AEM Web主控台設定頁面，網址為https：[*主機*]：[*連線埠*]/system/console/configMgr。
+1. 要前往 HTTPs： [*主機：[* 連接埠 *]*] /system/console/configMgr AEM Web 控制台設定頁面。
 
-1. 搜尋並按一下 **[!UICONTROL 最適化表單和互動式通訊Web頻道設定]** 以編輯模式開啟。
-1. 停用 **[!UICONTROL 啟用預留位置來取代片段]** 核取方塊以顯示完整的片段，而非預留位置影像。
+1. Search然後按一下 **[!UICONTROL 最適化表單和互動式通訊 Web 通道設定]** 」，以在編輯模式中開啟。
+1. 禁用 **[!UICONTROL 啟用預留位置代替片段核取方塊以顯示完整片段]** 而不是預留位置圖像。
 
-### 在最適化表單中插入片段 {#insert-a-fragment-in-an-adaptive-form}
+### 在自我調整表單中插入片段 {#insert-a-fragment-in-an-adaptive-form}
 
 您建立的自適應表單片段會顯示在AEM內容尋找器的「自適應表單片段」標籤中。 若要以最適化表單插入最適化表單片段：
 
@@ -164,6 +164,10 @@ ht-degree: 3%
 ### 變更片段 {#change-fragments}
 
 您可以使用來用其他片段取代或變更最適化表單片段 **選取片段資產** 最適化表單片段面板的「編輯元件」對話方塊中的屬性。
+
+### 產生最適化表單片段的記錄檔案 {#generate-DOR-for-fragments}
+
+記錄檔案(DOR)可協助您以列印或檔案格式保留表單資訊。 因此，這有助於您之後隨時追蹤有關客戶的資訊，您也可以使用記錄檔案以PDF格式將表單和內容一起封存。 [瞭解如何產生最適化表單片段的記錄檔案](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
 
 ### 在最適化表單中多次使用表單片段 {#using-form-fragment-mutiple-times-in-af}
 
@@ -221,7 +225,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>開始檢閱/管理檢閱</p> </td>
-   <td><p>允許啟動和管理所選片段的審查。 如需詳細資訊，請參閱 <a href="../../forms/using/create-reviews-forms.md" target="_blank">建立和管理稽核</a>.<br /> <br /> </p> </td>
+   <td><p>允許啟動和管理所選片段的審閱。 有關詳細資訊，請參閱 <a href="../../forms/using/create-reviews-forms.md" target="_blank"> 創建和管理評論 </a> 。 <br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>建立字典</p> </td>
@@ -229,7 +233,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>發佈/取消發佈</p> </td>
-   <td><p>發佈/取消發佈選取的片段。 <br /> <br /> </p> </td>
+   <td><p>發佈/取消發佈所選的片段。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>刪除</p> </td>
@@ -240,11 +244,11 @@ ht-degree: 3%
 
 ## 當地語系化包含片段的自我調整表單 {#localizing-adaptive-form-containing-fragments}
 
-若要將包含自適應表單片段的自適應表單本地化，您需要分別將片段和表單本地化。 其構想是將片段本地化一次，並在多個最適化表單中重複使用。
+要當地語系化包含自我調整表單片段的自我調整表單，您需要分別當地語系化片段和表單。 這個想法是將片段當地語系化一次，然後在多個自我調整表單中重複使用它。
 
 >[!NOTE]
 >
->片段中的本地化索引鍵不會出現在最適化表單的XLIFF檔案中。
+>片段中的當地語系化鍵不會出現在自我調整表單的 XLIFF 檔案中。
 
 ## 使用片段時要記住的關鍵點 {#key-points-to-remember-when-working-with-fragments}
 
@@ -255,12 +259,12 @@ ht-degree: 3%
 * 最適化表單片段可透過AEM內容尋找器中的最適化表單片段標籤使用。
 * 透過參考插入或嵌入自適應表單時，獨立自適應表單片段中的任何運算式、指令碼或樣式都會保留。
 * 您無法從最適化表單中編輯依參考插入的最適化表單片段。 若要編輯，請編輯獨立的自適應表單片段，或將片段嵌入自適應表單中。
-* 發佈自我調整表單時，需要發佈通過引用插入到自我調整表單中的獨立自我調整表單片段。
-* 當您重新發佈更新的自我調整表單片段時，更改會反映在使用片段的自我調整表單的已發佈實例中。
+* 發佈最適化表單時，您需要發佈在最適化表單中透過參考插入的獨立最適化表單片段。
+* 當您重新發佈更新的自適應表單片段時，變更會反映在使用片段的自適應表單的已發佈例項中。
 * 包含驗證元件的自我調整表單不支援匿名使用者。 此外，不建議在最適化表單片段中使用驗證元件。
 * （ **僅限** Mac）為了確保表單片段功能在所有場景中都能完美運行，請將以下內容添加到 /private/etc/hosts 檔中：
-  `127.0.0.1 <Host machine>` **主機**：部署AEM Forms的Apple Mac電腦。
+  `127.0.0.1 <Host machine>`**主機：** 部署AEM Forms的 Apple Mac 電腦。
 
-## 參考片段 {#reference-fragments}
+## 引用片段 {#reference-fragments}
 
 您可以使用參考的最適化表單片段來建立您的表單。 如需詳細資訊，請參閱 [參考片段](../../forms/using/reference-adaptive-form-fragments.md).

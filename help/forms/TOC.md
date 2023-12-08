@@ -9,9 +9,9 @@ breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
 feature: Forms Service
-source-git-commit: cf5da092fabbc7834108dc54d65eb97e160984ce
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '3752'
+source-wordcount: '3762'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 + [AEM 6.5 Forms指南](home.md)
 + 發行說明 {#release-notes-new-features}
    + [發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
-   + [新功能摘要](using/whats-new.md)
+   + [新增功能](/help/forms/using/whats-new.md)
    + [常見問題](/help/forms/using/frequently-asked-questions-faq.md)
    + [已棄用的功能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html)
 + 快速入門 {#getting-started}
@@ -699,11 +699,13 @@ ht-degree: 3%
    + [無法還原CRX存放庫](/help/forms/using/restore-crx-repository.md)
    + [安裝AEM 6.5.15.0 Service Pack後發生服務無法使用錯誤](/help/forms/using/aem-service-pack-installation-solution.md)
    + [JBoss Linux環境上的AEM Forms JEE 6.5.15.0 Service Pack安裝問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
+   + [即使AEM Forms尚未完全啟動，仍執行多項服務](/help/forms/using/executing-multiple-services-even-aem-forms-has-not-started.md)
+   + [無法使用輸出服務、Forms服務或記錄檔案(DoR)服務](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
 + 舊版檔案 {#legacy-documentation}
    + [使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料](developing/building-xml.md)
    + [在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案](developing/compressing-decompressing-custom-dsc.md)
    + [在JEE伺服器叢集上設定和疑難排解AEM Forms](developing/configure-server-cluster.md)
    + [在動態PDF forms中產生及使用雜湊](developing/hashing-forms.md)
    + [使用WS-Security標頭傳遞認證](developing/passing-credentials.md)
-   + [無法使用輸出服務、Forms服務或記錄檔案(DoR)服務](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
+
 

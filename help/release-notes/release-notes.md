@@ -3,10 +3,10 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '3552'
-ht-degree: 2%
+source-wordcount: '4233'
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 2%
 | -------- | ---------------------------- |
 | 版本 | 6.5.19.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 類型 | Service Pack發行 |
-| 日期 | 2023年11月30日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 日期 | 2023年12月7日星期四 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 下載 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
 ## 包含的內容 [!DNL Experience Manager] 6.5.19.0 {#what-is-included-in-aem-6519}
@@ -38,12 +38,30 @@ ht-degree: 2%
 
 * _REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
-**主要功能和增強功能**
+## 主要功能和增強功能
 
 此版本中的部分主要功能和增強功能包括：
 
 * 啟用Sites頁面編輯器/影像元件使用者從遠端資產Cloud Service參照資產。 (SITES-13448， SITES-13433)
 * AEM現在支援伺服器端排序，以便在「清單」檢視中更快速地導覽專案。 專案節點會在出現在介面之前，根據使用者選取的欄排序。
+
+### [!DNL Forms]
+
+* **全新最適化表單核心元件**：新增垂直標籤、條款與條件和核取方塊，以提升表單的擴充性。
+   * **[核取方塊元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**：以核心元件為主的最適化表單現在可以包含核取方塊元件。可讓使用者二選一，選取或取消選取特定選項。它通常為一個小方塊，可以按一下或點選以在兩種狀態之間切換：選取和取消選取。核取方塊是一種常見的表單元素，用來表示選擇是/否或真/假。
+
+   * **[條款與條件元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：以核心元件為主的最適化表單現在可以包含條款與條件元件。它允許表單作者在表單中引入特定區段，向使用者顯示與使用服務、產品或平台相關的條款、條件或法律協議。此元件的設計用意是在告知使用者他們透過提交表單同意的規則、法規和義務。
+
+     ![垂直標籤、條款與條件以及核取方塊元件](/help/forms/using/assets/forms-components.png)
+
+   * **[垂直標籤元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**：以核心元件為主的最適化表單現在可以將表單內容組織成垂直的標籤清單，提供結構化、可導覽的版面。在表單中使用垂直標籤可以簡化導覽和改進表單內容組織，進而提升使用者整體體驗，特別是在表單包含多個部分或複雜資訊時。
+
+* **[AEM Forms Designer 64位元版本](/help/forms/using/installing-configuring-designer.md)**： 64位元版本的AEM Forms Designer提供更優異的效能、擴充能力及記憶體管理，讓您更輕鬆地建立表單。 透過 64 位元架構，您可以輕鬆處理更大、更複雜的專案，確保設計工作流程流暢和最佳效率。透過這最先進的版本，提升您的表單設計能力並擁抱 AEM Forms Designer 的未來。
+
+* **[連線最適化Forms與Microsoft® SharePoint清單](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**： AEM Forms提供OOTB整合，可直接將表單資料提交至SharePoint清單，讓您使用SharePoint的清單功能。 您可以將Microsoft SharePoint清單設定為表單資料模型的資料來源，並使用使用表單資料模型提交動作來連線最適化表單與SharePoint清單。
+
+* **[支援為最適化表單片段設定記錄檔案屬性](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：您現在可以輕鬆自訂最適化表單編輯器中的最適化表單片段及其欄位。
+
 
 **已棄用的功能**
 
@@ -149,9 +167,11 @@ ht-degree: 2%
 
 ### [!DNL Forms]{#forms-6519}
 
-中的修正 [!DNL Experience Manager] Forms會透過單獨的附加元件套件在排程一週後傳送 [!DNL Experience Manager] Service Pack發行日期。 在此案例中，AEM 6.5.19.0 Forms附加元件套件發行預計於2023年11月30日星期四推出。 此版本發行後，本節將新增Forms修正和增強功能的清單。
+#### [!DNL Adaptive Forms]
 
-* 新增存取控制清單 `fd-cloudservice` 使用者能夠讀取或更新下的Microsoft®設定 `cloudconfigs/microsoftoffice`. (FORMS-11142)
+<!-- Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.19.0 Forms add-on package release is scheduled for Thursday, November 30, 2023. A list of Forms fixes and enhancements would be added to this section post the release.-->
+
+<!--* Adding Access Control List for `fd-cloudservice` user to be able to read or update the Microsoft&reg; configurations under `cloudconfigs/microsoftoffice`. (FORMS-11142) -->
 
 <!--LEFT BULLET LIST HERE IN CASE OF REUSE BY FORMS IN THE FUTURE 
 * **Document Services**
@@ -166,6 +186,32 @@ ht-degree: 2%
 <!--### Commerce{#commerce-6519}
 
 * A -->
+
+* 當使用者將工具列新增到最適化表單時，表單容器標籤顯示怪異行為，因為它未變更為作者為Forms所選的偏好語言。 (FORMS-11371)
+* 在AEM Forms工作區中，下拉式欄位會依預設選取UI上的第一個選項。 (FORMS-11346)
+* 如果您使用含有五個字元的區域設定，而且AEM中的語言設定沒有在信函中正確轉譯小數分隔符號，則不會顯示任何效果。 (FORMS-11344)
+* 當使用者使用Workbench程式產生XML輸出時，少數檔案會失敗。 (FORMS-11314)
+* 當使用者產生英文以外語言的記錄檔案(DOR)預覽時，該功能無法運作。 (FORMS-11106)
+* 當使用者在根據JDK11的Linux的OSGI執行個體上轉換某些含有PDFG的影像檔案時，它不會轉換。 (FORMS-11105)
+* 使用者安裝AEM Forms附加元件時，它會破壞AEM Sites中的內容樹狀面板。 (FORMS-10912)
+* 當使用者使用NVDA熒幕助讀程式從日期選擇器元件複製日期時，無法正確讀取。 (FORMS-10805) 
+* 在Forms規則編輯器中，當資料值型別為布林值時，使用者無法設定選項按鈕/核取方塊的值。 (FORMS-10713)
+* 當使用者在最適化表單中新增專案時，它會以相反順序新增到下拉式清單。 (FORMS-10456)
+* 使用規則編輯器清除下拉式清單時，即使已清除值，提供的第一個值仍會顯示。 (FORMS-9963) 
+* 使用者無法使用熒幕助讀程式（例如NVDA）存取表單標題。 (FORMS-8815) 
+* 使用者無法使用熒幕閱讀程式（例如NVDA）存取表單中的子標題。 (FORMS-8814) 
+* 在html表單的頁面來源中，存取索引鍵屬性是空的且無法運作。 (FORMS-5753) 
+* 在「關於工作區」對話方塊中，「Adobe Experience Manager - Forms」文字會顯示為文字。 (FORMS-5748)
+
+#### [!DNL Forms Designer]{#forms-designer-6519}
+
+* 當使用者嘗試透過熒幕閱讀器讀取非互動式PDF forms時，未讀取或略過某些清單專案。 (LC-3921645) 
+* 當使用者索引鍵瀏覽可編輯的欄位時，它未一致地瀏覽到所有PDF表單欄位。 (LC-3921631) 
+* 即使在Forms Designer中的標籤是正確的，標籤的PDF順序也會隨機變更。 (LC-3921313) 
+* 清單無法在Adobe Acrobat Reader或Adobe Acrobat DC的標籤中正確顯示。 (LC-3921306)
+* 在Forms Designer中正確指派的標題層級會隨機變更為 `<P>` Adobe Acrobat標籤之前是否有宣告。 (LC-3921305) 
+* 在表格中，任何物件的ID一經指派便無法修改。 (LC-3921134) 
+* 如果合併的儲存格在表格中，則沒有GUI可用於在AEM Forms Designer的複雜表格中設定範圍（列和欄）和範圍。 (LC-3919532) 
 
 ### Foundation{#foundation-6519}
 
@@ -418,8 +464,6 @@ The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [M
 
 #### 支援平台
 
-* WebLogic JEE伺服器不支援高於1.8.0_281的JDK版本。 (FORMS-8498、CQDOC-20383)
-* 作為 [!DNL Microsoft® Windows Server 2019] 不支援 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1]， [!DNL Microsoft® Windows Server 2019] 不支援全包安裝 [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
 * JDK 11.0.20不支援在JEE安裝程式上安裝AEM Forms。 僅支援JDK 11.0.19或較舊版本以在JEE安裝程式上安裝AEM Forms。 (FORMS-10659)
 
 #### 安裝
@@ -467,13 +511,10 @@ The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [M
 
 * 發佈調適型表單時，其所有相依性（包括原則）都會重新發佈，即使未進行任何修改亦然。 (FORMS-10454)
 * 當使用者選擇在最適化表單中首次設定欄位時，儲存設定的選項未顯示在屬性瀏覽器中。 選擇在同一編輯器中設定最適化表單的其他欄位即可解決問題。
-* 在最適化表單的指南容器中設定重新導向URL時，內嵌簽署會停止運作。 (FORMS-10493)若要解決此問題，請下載並安裝 [6.5.18.0的Hotfix](/help/release-notes/aem-forms-hotfix.md).
-* 所有記錄檔案(DoR)範本都無法發佈。 僅發佈英文地區設定型DoR範本及其相關的Forms型DoR範本。 (FORMS-10535)若要解決此問題，請下載並安裝 [6.5.18.0的Hotfix](/help/release-notes/aem-forms-hotfix.md).
+* 當使用者執行提交動作時，提交會失敗並出現錯誤：
+  ` javax.servlet.ServletException: java.lang.NoSuchMethodError`
+若要解決問題， [重新編譯Sling指令碼，例如JSP、Java和Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
 
-
-#### 互動式通訊
-
-* 升級至AEM Service Pack 18後，無法在編輯模式中開啟具有大型內嵌影像的互動式通訊。 (FORMS-10578)若要解決此問題，請安裝 [6.5.18.0的Hotfix](/help/release-notes/aem-forms-hotfix.md).
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 

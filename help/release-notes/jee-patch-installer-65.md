@@ -3,10 +3,10 @@ title: AEM Forms JEE修補程式安裝程式
 description: 瞭解如何使用AEM Forms JEE修補程式安裝程式來修正AEM 6.5 Forms元件中的問題。
 content-type: reference
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 19%
+source-wordcount: '528'
+ht-degree: 18%
 
 ---
 
@@ -53,7 +53,7 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
 1. **[僅適用於Windows]：** 執行下列動作：
    * 取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行 **組態管理員** 藉由使用 **ConfigurationManager.bat** 中的檔案 `[aem-forms root]\configurationManager\bin`.
 
-   * 或取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行前 **組態管理員** 使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，導覽至 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目錄和取代 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 檔案。
+   * 或取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行前 **組態管理員** 使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，導覽至 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目錄並取代 **ConfigurationManager.lax** 和 **ConfigurationManager_IPV6.lax** 使用最新 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 檔案、搜尋和取代 **axis-1.4.1.1.jar** 替換為 **axis-1.4.1.2.jar** 在這兩個檔案中。
 
    >[!NOTE]
    >
