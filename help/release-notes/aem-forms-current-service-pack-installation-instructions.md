@@ -1,11 +1,11 @@
 ---
 title: 適用於AEM Forms的AEM Forms修補程式安裝指示
-description: OSGi和JEE環境的AEM Forms Service Pack安裝指示
+description: 適用於OSGi和JEE環境的AEM Forms Service Pack安裝指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 74b4346c77a884878fb8409a773ef7651fb6348c
+source-git-commit: cf5da092fabbc7834108dc54d65eb97e160984ce
 workflow-type: tm+mt
-source-wordcount: '1771'
-ht-degree: 9%
+source-wordcount: '1711'
+ht-degree: 6%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 9%
 
 | 產品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| 版本 | 6.5.18.0 |
+| 版本 | 6.5.19.0 |
 | 類型 | Service Pack發行 |
-| 日期 | 2023 年 8 月 30 日 |
+| 日期 | 2023 年 12 月 07 日 |
 | 下載 URL | [最新AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -26,25 +26,32 @@ ht-degree: 9%
 
 ## Experience Manager Forms 6.5包含的內容
 
-Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能，例如客戶要求的重要增強功能、效能、穩定性和安全性改善專案。 AEM Forms會定期發行Service Pack，提供最新功能和改進專案。 根據您的棧疊，選擇下列其中一個路徑，以下載並在您的環境中安裝Service Pack：
+Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能，例如客戶要求的重要增強功能、效能、穩定性和安全性改善專案。 AEM Forms會定期發行Service Pack，提供最新功能和改進專案。 根據您的技術棧疊，選擇下列其中一個路徑，以下載並在您的環境中安裝Service Pack：
 
 * [在JEE環境的AEM表單上下載並安裝Service Pack](#download-and-install-for-jee-service-pack)
 * [在OSGi環境上的AEM表單上下載並安裝Service Pack](#download-and-install-for-osgi-service-pack)
 
 >[!NOTE]
 >
-> * Adobe會每六個Service Pack發行一次完整安裝程式。 AEM 6.5 Forms Service Pack 18 (6.5.18.0)是最新的JEE完整安裝程式。 完整版安裝程式支援新平台，而一般Service Pack安裝程式則包含新功能、錯誤修正和一般改善。 如果您在JEE環境中執行全新安裝或計畫使用最新軟體，AdobeAEM建議使用2023年8月31日發行的AEM Forms 6.5.18.0 Forms on JEE完整安裝程式，而非2019年4月8日發行的AEM 6.5 Forms安裝程式或2022年3月3日發行的AEM 6.5.12 Forms安裝程式。 使用完整安裝程式後，請安裝最新的Service Pack。
-> 
+> * Adobe會每六個Service Pack發行一次完整安裝程式。 AEM 6.5 Forms Service Pack 18 (6.5.18.0)是最新的JEE完整安裝程式。 完整版安裝程式支援新平台，而一般Service Pack安裝程式則包含新功能、錯誤修正和一般改善。 如果您在JEE環境中執行全新安裝或計畫使用最新軟體，AdobeAEM建議使用2023年8月31日發行的AEM Forms 6.5.18.0 Forms on JEE完整安裝程式，而非2019年4月8日發行的AEM 6.5 Forms安裝程式或2022年3月3日發行的AEM 6.5.12.0 Forms安裝程式。 使用完整安裝程式後，請安裝最新的Service Pack。
 > * AEM Forms功能，例如最適化Forms，提供於 [AEM 6.5快速入門](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)，僅供探索和評估之用。 若要用於生產，必須獲得 AEM Forms 有效授權。
 
+<!--
 
+## Prerequisites {#prerequisites}
 
+From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available in 64-bit only, therefore you require the latest [Microsoft Visual C++ Redistributable (2015-2022) 64-bit](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) to be installed on Windows Server prior to JEE or OSGi installation.
+
+>[!NOTE]
+> This prerequisite is required in addition to the already existing Microsoft Visual C++ Redistributable 32-bit.
+
+-->
 
 ## 在JEE環境的AEM表單上下載並安裝Service Pack {#download-and-install-for-jee-service-pack}
 
 ![JEE安裝](/help/forms/using/assets/jeeinstallation.png)
 
-+++1. 備份您的現有環境：
++++1. 備份您的現有環境
 
 1. 備份您的 [CRX存放庫、資料庫結構和GDS （全域檔案儲存）](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
 1. 備份&lt;*AEM_forms_root*>/deploy資料夾。
@@ -55,12 +62,22 @@ Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能�
 
 +++
 
-+++2.下載必要的軟體：
++++2. 下載必要的軟體
 
 * [JEE Service Pack上的AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 * [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
-* [Forms 附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+* [Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 * [片段Servlet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
+
++++
+
++++ 3.安裝Microsoft Visual C++可轉散發套件
+
+* 下載並安裝 [適用於Visual Studio 2015、2017、2019和2022的64位元版Microsoft Visual C++可轉散發套件](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) 在安裝AEM 6.5 Forms的電腦上。
+
+>[!NOTE]
+>
+> 請確定您安裝了可轉散發套件（即使已安裝舊版），以確保最新版本的可用性。
 
 +++
 
@@ -91,7 +108,7 @@ Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能�
 
    * 取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行 **組態管理員** 藉由使用 **ConfigurationManager.bat** 中的檔案 `[aem-forms root]\configurationManager\bin`.
 
-   * 或取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行前 **組態管理員** 使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，導覽至 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目錄和取代 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 檔案。
+   * 或取消選取 **啟動Configuration Manager** 選項，然後再按一下 **[!UICONTROL 完成]**. 執行前 **組態管理員** 使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，導覽至 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目錄並取代 **ConfigurationManager.lax** 和 **ConfigurationManager_IPV6.lax** 使用最新 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 檔案。
 
      >[!NOTE]
      >
@@ -137,7 +154,7 @@ Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能�
 
 +++
 
-+++5. 安裝 AEM Service Pack
++++5. 安裝AEM Service Pack
 
 1. 如果執行個體處於更新模式（從舊版更新執行個體時），請在安裝前重新啟動執行個體。 如果執行個體的目前運作時間很高，Adobe建議重新啟動。
 1. 安裝之前，請拍攝快照或進行全新備份 [!DNL Experience Manager] 執行個體。
@@ -164,7 +181,7 @@ Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能�
 
    1. 產品資訊頁(`/system/console/productinfo`)顯示更新的版本字串 `Adobe Experience Manager (spversion)` 在 [!UICONTROL 已安裝的產品].<!-- UPDATE FOR EACH NEW RELEASE -->
    1. 所有OSGi套件組合都是 **[!UICONTROL 作用中]** 或 **[!UICONTROL 片段]** 在OSGi主控台中(使用Web主控台： `/system/console/bundles`)。
-   1. OSGi套件 `org.apache.jackrabbit.oak-core` 為1.22.14版或更新版本(使用WebConsole： `/system/console/     bundles`)。
+   1. OSGi套件 `org.apache.jackrabbit.oak-core` 為1.22.14版或更新版本(使用WebConsole： `/system/console/bundles`)。
 
 +++
 
@@ -182,7 +199,7 @@ Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能�
 ![OSGi安裝步驟](/help/forms/using/assets/osgiinstallation.png)
 
 
-+++1. 備份您的現有環境：
++++1. 備份您的現有環境
 
 1. 備份您的 [CRX儲存庫和資料庫結構](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
 
@@ -192,14 +209,25 @@ Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能�
 
 +++
 
-+++2.下載必要的軟體：
++++2. 下載必要的軟體
 
 * [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
-* [Forms 附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+* [Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
 +++
 
-+++3. 安裝 AEM Service Pack
++++ 3.安裝Microsoft Visual C++可轉散發套件
+
+* 下載並安裝 [適用於Visual Studio 2015、2017、2019和2022的64位元版Microsoft Visual C++可轉散發套件](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) 在安裝AEM 6.5 Forms的電腦上。
+
+>[!NOTE]
+>
+>
+請確定您安裝了可轉散發套件（即使已安裝舊版），以確保最新版本的可用性。
+
++++
+
++++4. 安裝AEM Service Pack
 
 1. 如果執行個體處於更新模式（從舊版更新執行個體時），請在安裝前重新啟動執行個體。 如果執行個體的目前運作時間很高，Adobe建議重新啟動。
 1. 安裝之前，請拍攝快照或進行全新備份 [!DNL Experience Manager] 執行個體。
@@ -230,7 +258,7 @@ Adobe Experience Manager (AEM) Forms Service Pack包含新功能和升級功能�
 
 +++
 
-+++4. 安裝AEM Experience Manager Forms附加元件套件
++++4. 安裝Adobe Experience Manager Forms (AEM)附加元件套件
 
 1. 確認您已安裝 [!DNL Experience Manager] service pack。
 1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)所列出的對應 Forms 附加套件。

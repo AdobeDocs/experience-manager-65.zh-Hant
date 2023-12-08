@@ -9,10 +9,10 @@ breadcrumb-title: Forms 指南
 user-guide-description: 建立、管理、發佈和更新數位表單。
 role: User
 feature: Forms Service
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: cf5da092fabbc7834108dc54d65eb97e160984ce
 workflow-type: tm+mt
-source-wordcount: '3911'
-ht-degree: 4%
+source-wordcount: '3752'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 4%
    + [發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
    + [新功能摘要](using/whats-new.md)
    + [常見問題](/help/forms/using/frequently-asked-questions-faq.md)
-   + [過時的功能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html?lang=zh-Hant)
+   + [已棄用的功能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html)
 + 快速入門 {#getting-started}
    + [AEM Forms簡介](using/introduction-aem-forms.md)
    + [製作調適型表單簡介](using/introduction-forms-authoring.md)
@@ -73,12 +73,12 @@ ht-degree: 4%
       + [在JEE上安裝和部署Adobe Experience Manager Forms for WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
       + [在JEE for WebLogic上安裝和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_65)
       + [安裝AEM Forms Workbench](using/install-workbench.md)
-      + [安裝及設定 Designer](using/installing-configuring-designer.md)
+      + [安裝及設定設計工具](using/installing-configuring-designer.md)
       + [準備安裝AEM Forms （伺服器叢集）](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
       + [在JBoss叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
       + [在WebSphere叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
       + [在WebLogic叢集上的JEE上設定Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
-   + 設定 AEM Forms {#configure-aem-forms}
+   + 設定AEM Forms {#configure-aem-forms}
       + [AEM Forms 伺服器的效能調整](using/performance-tuning-aem-forms.md)
       + [設定最適化表單快取](using/configure-adaptive-forms-cache.md)
       + [正在設定AEM DS設定](using/configuring-the-processing-server-url-.md)
@@ -115,7 +115,7 @@ ht-degree: 4%
       + [OSGi上以Forms為中心的工作流程](using/forms-workflow-osgi-handling-user-data.md)
       + [Forms使用者管理](using/user-management-handling-user-data.md)
       + [Forms JEE工作流程](using/forms-workflow-jee-handling-user-data.md)
-      + [表單入口網站](using/forms-portal-handling-user-data.md)
+      + [Forms入口網站](using/forms-portal-handling-user-data.md)
       + [通信管理](using/correspondence-management-handling-user-data.md)
       + [與Adobe Sign整合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
       + [文件安全性](/help/forms/using/document-security-handling-user-data.md)
@@ -358,7 +358,7 @@ ht-degree: 4%
    + [建立或設定watched資料夾](using/creating-configure-watched-folder.md)
    + [在指派任務步驟中使用自訂電子郵件範本](using/use-custom-email-template-assign-task-step.md)
    + [在電子郵件通知中使用中繼資料](using/use-metadata-in-email-notifications.md)
-+ 表單入口網站 {#use-forms-portal}
++ Forms入口網站 {#use-forms-portal}
    + [自訂Forms Portal元件的範本](using/customizing-templates-forms-portal-components.md)
    + [啟用表單入口網站元件](using/enabling-forms-portal-components.md)
    + [建立表單入口網站頁面](using/creating-form-portal-page.md)
@@ -589,7 +589,7 @@ ht-degree: 4%
    + [疑難排解程式報告](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 開發人員參考資料 {#developer-reference}
    + [開發人員基本知識](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-   + [HTML 範本語言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+   + [HTML範本語言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
    + [用於偵錯最適化表單的AEM外掛程式](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
    + [JEE上的AEM Forms Java API參考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
@@ -705,4 +705,5 @@ ht-degree: 4%
    + [在JEE伺服器叢集上設定和疑難排解AEM Forms](developing/configure-server-cluster.md)
    + [在動態PDF forms中產生及使用雜湊](developing/hashing-forms.md)
    + [使用WS-Security標頭傳遞認證](developing/passing-credentials.md)
+   + [無法使用輸出服務、Forms服務或記錄檔案(DoR)服務](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
 
