@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: ab40115c373cc06a7600494288b2670deb914e1a
+source-git-commit: 302a76fb9470e2ef177f60aea10312d6091becb9
 workflow-type: tm+mt
-source-wordcount: '2595'
+source-wordcount: '2584'
 ht-degree: 49%
 
 ---
@@ -168,8 +168,6 @@ ht-degree: 49%
 在設定成功之後，使用[叫用 Microsoft® Power Automate 流程](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action)提交動作，將資料傳送到 Power Automate Flow。
 
 ## 提交至Microsoft® SharePoint清單{#submit-to-sharedrive}
-
-<span class="preview">這是一項預先發佈功能，可透過我們的[預先發佈管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features)存取。</span>
 
 「**[!UICONTROL 提交到 SharePoint]**」提交動作會將最適化表單與 Microsoft® SharePoint 儲存空間建立連結。您可以將表單資料檔案、附件或記錄檔案提交至連線的Microsoft® Sharepoint儲存體。
 
