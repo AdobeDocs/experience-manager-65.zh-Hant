@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 exl-id: 06ca4e6d-9ab7-4c5b-905c-07c448632f2b
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 25c444e2093d118259925034e0d630ab0effc473
 workflow-type: tm+mt
-source-wordcount: '6381'
+source-wordcount: '3865'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 0%
 
   任何的基底類別 [元件](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component) 使用寬度和高度，將大小調整為方塊。
 
-  BoxComponent提供自動的方塊模型調整，以調整大小及定位，並可在元件演算模型中正常運作。
+  BoxComponent提供自動的方塊模型調整，以調整大小及定位，並在元件演算模型中正確運作。
 
 * browsedialog
 
@@ -123,7 +123,7 @@ ht-degree: 0%
 
   [CQ.Ext.chart.Chart](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart)
 
-  CQ.Ext.chart套件提供以Flash為基礎的圖表功能，將資料視覺化。 每個圖表都直接繫結至CQ.Ext.data.Store，以啟用圖表的自動更新。 若要變更圖表的外觀，請參閱 [圖表樣式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) 和 [額外樣式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) 設定選項。
+  CQ.Ext.chart套件提供以Flash為基礎的圖表將資料視覺化的功能。 每個圖表都直接繫結至CQ.Ext.data.Store，以啟用圖表的自動更新。 若要變更圖表的外觀，請參閱 [圖表樣式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) 和 [額外樣式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) 設定選項。
 
 * 核取方塊
 
@@ -251,7 +251,7 @@ ht-degree: 0%
 
   [CQ.CustomContentPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.CustomContentPanel)
 
-  CustomContentPanel是一種特殊型別的面板，用於 [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)：其內容會從對話方塊中的其他欄位擷取並提交至不同的URL。
+  CustomContentPanel是用於的特殊面板 [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)：其內容會從對話方塊中的其他欄位擷取並提交至不同的URL。
 
 * 循環
 
@@ -293,7 +293,7 @@ ht-degree: 0%
 
   [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)
 
-  「對話方塊」是一種特殊視窗，其內文中有表單，頁尾中有按鈕群組。 它通常用於編輯內容，但也只能顯示資訊。
+  「對話方塊」是一個特殊視窗，內文中有表單，頁尾中有按鈕群組。 它通常用於編輯內容，但也只能顯示資訊。
 
 * dialogfieldset
 
@@ -413,7 +413,7 @@ ht-degree: 0%
 
   [CQ.Ext.form.HtmlEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor)
 
-  提供輕量HTML編輯器元件。 Safari不支援某些工具列功能，因此會在需要時自動隱藏。 這些會在適當的設定選項中註明。
+  提供輕量HTML編輯器元件。 Safari不支援某些工具列功能，這些功能會在需要時自動隱藏。 這些會在適當的設定選項中註明。
 
   編輯器的工具列按鈕在 [buttonTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor) 屬性。
 
@@ -463,7 +463,7 @@ ht-degree: 0%
 
   [CQ.Ext.list.ListView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.ListView)
 
-  CQ.Ext.list.ListView是快速且輕量型的 [格線](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) 喜歡檢視。
+  CQ.Ext.list.ListView是快速且輕量型的 [格線](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) 檢視。
 
 * livecopyproperties
 
@@ -789,11 +789,11 @@ ht-degree: 0%
 
   「靜態」可用來顯示任意文字或HTML。
 
-* statistics
+* 統計資料
 
   [CQ.wcm.Statistics](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Statistics)
 
-  統計資料會以圖表顯示頁面印象。 此Widget可讓您選取應顯示統計資料的期間。
+  統計資料會以圖表顯示頁面印象。 Widget可讓您選取應顯示統計資料的期間。
 
 * 儲存
 
