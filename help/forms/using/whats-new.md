@@ -5,10 +5,10 @@ topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 45%
+source-wordcount: '637'
+ht-degree: 38%
 
 ---
 
@@ -49,6 +49,11 @@ AEM Forms將OOTB整合至 [直接將表單資料提交至SharePoint清單](/help
 #### 支援為最適化表單片段設定記錄檔案屬性
 
 您現在可以輕鬆地 [在自適應表單編輯器中自訂您的自適應表單片段及其欄位](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+
+#### 包含64位元版本的XMLFM
+
+XMLFM的64位元版帶來更優異的效能、擴充能力，以及更精細的記憶體管理。 這是第一個在伺服器端部署的64位元原生服務。 XMLFM 64位元可利用其固有的功能，存取比32位元處理器大得多的記憶體資源，因此能夠順暢地處理較大的演算工作負載。 這個里程碑不僅代表效能的飛躍，也為AEM Forms伺服器內的原生服務架構引入重要增強功能。 此更新讓AEM Forms伺服器可順暢支援任何64位元原生服務。
+
 
 
 ## 錯誤修正

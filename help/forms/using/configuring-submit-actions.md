@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 302a76fb9470e2ef177f60aea10312d6091becb9
+source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2581'
 ht-degree: 49%
 
 ---
@@ -203,7 +203,7 @@ ht-degree: 49%
 
 您可以在調適型表單中使用已建立的SharePoint清單設定，以在SharePoint清單中儲存資料或產生的記錄檔案。 執行以下步驟，在最適化表單中使用SharePoint清單儲存體設定：
 
-1. [使用Microsoft® SharePoint清單設定建立表單資料模型](/help/forms/using/create-form-data-model.md)
+1. [使用Microsoft建立表單資料模型](/help/forms/using/create-form-data-model.md)
 1. [設定表單資料模型以擷取及傳送資料](/help/forms/using/work-with-form-data-model.md#configure-services)
 1. [建立最適化表單](/help/forms/using/create-adaptive-form.md).
 1. [使用表單資料模型設定提交動作](/help/forms/using/configuring-submit-actions.md#submit-using-form-data-model-submit)
