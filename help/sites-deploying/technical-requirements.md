@@ -3,9 +3,9 @@ title: 技術需求
 description: Adobe Experience Manager支援的使用者端和伺服器平台清單。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 6f2b16a51d4ad0f5c199ff41e8abe150c27ecc01
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3624'
 ht-degree: 0%
 
 ---
@@ -73,11 +73,11 @@ Adobe會推薦這些設定，並在標準軟體維護合約中提供完整支援
 |---|---|
 | **Z：不支援** | 不支援此設定。 Adobe不會陳述設定是否有效，也不支援此設定。 |
 
-## 支援的平臺 {#supported-platforms}
+## 支援平台 {#supported-platforms}
 
-### JAVA™ 虛擬機器 {#java-virtual-machines}
+### Java™虛擬機器器 {#java-virtual-machines}
 
-該應用程式需要 JAVA 虛擬機器才能運行，該虛擬機器由 JAVA™™ 開發工具組 （JDK） 發行版本提供。
+應用程式需要由Java™開發套件(JDK)散發提供的Java™虛擬機器器才能執行。
 
 Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 
@@ -112,10 +112,10 @@ Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 | **Platform** | **說明** | **支援等級** |
 |---|---|---|
 | **具有TAR檔案的檔案系統** `[1]` | 存放庫 | 答：支援 |
-| **具有資料存放區的檔案系統** `[1]` | 二進位檔案 | 答：支援 |
-| 將二進位檔案存儲在檔案系統上的 TAR 檔中 `[1]` | 二 進 制 檔 | Z：不支援生產 |
+| **具有資料存放區的檔案系統** `[1]` | 二 進 制 檔 | 答：支援 |
+| 將二進位檔案存儲在檔案系統上的 TAR 檔中 `[1]` | 二進位檔案 | Z：不支援用於生產 |
 | Amazon S3 | 二進位檔案 | 答：支援 |
-| Microsoft® Azure Blob儲存體 | 二進位檔案 | 答：支援 |
+| Microsoft® Azure Blob儲存體 | 二 進 制 檔 | 答：支援 |
 | MongoDB Enterprise 4.4 | 存放庫 | 答：支援 `[2, 3, 4]` |
 | MongoDB Enterprise 4.2 | 存放庫 | 答：支援 `[2, 3, 4]` |
 | MongoDB Enterprise 4.0 | 存放庫 | Z：不支援 |
@@ -158,23 +158,23 @@ Adobe客戶服務可協助解決與AEM搭配使用MongoDB相關的資格確認�
 >
 如上所列的支援關聯式資料庫是協力廠商軟體，未包含在AEM授權套件中。
 >
-若要使用支援的關聯式資料庫執行AEM 6.5，需要與資料庫廠商訂立個別的支援合約。 Adobe客戶服務可協助解決與AEM 6.5使用關聯式資料庫相關的資格確認問題。
+要使用受支援的關係資料庫運行 AEM 6.5，需要與資料庫供應商簽訂單獨的支援合同。 Adobe Systems Customer Care 協助符合 AEM 6.5 之關係資料庫使用的相關資格問題。
 >
-**目前，大部分關聯式資料庫都在AEM 6.5的Level-R中受到支援，該版本隨附支援標準和支援方案，如上述Level-R說明中所述。**
+**大多數關係資料庫目前在 AEM 6.5 的 Level-R 中受支援，它附帶支援標準和支援方案，如上面的 Level-R 描述中所述。**
 
 ### Servlet 引擎/應用程式伺服器 {#servlet-engines-application-servers}
 
-Adobe Experience Manager可以作為獨立伺服器（快速入門 JAR 檔）運行，也可以作為協力廠商 應用程式伺服器中的網站應用程式運行（WAR 檔）。
+Adobe Experience Manager能以獨立伺服器（快速入門JAR檔案）或協力廠商應用程式伺服器（WAR檔案）中的Web應用程式來執行。
 
 需要的最低Servlet API版本是Servlet 3.1
 
 | Platform | 支援程度 |
 |---|---|
 | **快速入門內建Servlet引擎(Jetty 9.4)** | 答：支援 |
-| oracleWebLogic Server 12.2 (12cR2) | Z：不支援 |
+| Oracle WebLogic Server 12.2 （12cR2） | Z：不支援 |
 | IBM® WebSphere® Application Server Continuous Delivery (LibertyProfile)，搭配Web Profile 7.0和IBM® JRE 1.8 | R：新合約的有限支援 `[2]` |
 | IBM® WebSphere® Application Server 9.0和IBM® JRE 1.8 | R：新合約的有限支援 `[1]` `[2]` |
-| Apache Tomcat 8.5.x | R：對新合同的有限支援 `[2]` |
+| Apache Tomcat 8.5.x | R：新合約的有限支援 `[2]` |
 | JBoss® EAP 7.2.x (含JBoss®應用程式伺服器) | Z：不支援 |
 | JBoss® EAP 7.1.4含JBoss®應用程式伺服器 | R：新合約的有限支援 `[1]` `[2]` |
 | JBoss® EAP 7.0.x (含JBoss®應用程式伺服器) | Z：不支援 |
@@ -203,21 +203,22 @@ Adobe Experience Manager可與下列伺服器平台搭配使用以用於生產�
 1. Ubuntu 20.04 LTS支援AEM Forms。
 1. Adobe Managed Services支援的Linux®發行版本。
 
-   >[注意！]
-對於以Linux為基礎的伺服器（OSGI和JEE棧疊），AEM Forms附加元件需要以下執行階段相依性：
+   >[!NOTE]
+   >
+   對於以Linux為基礎的伺服器（OSGI和JEE棧疊），AEM Forms附加元件需要以下執行階段相依性：
    * glibc.x86_64 (2.17-196)
    * libX11.x86_64 (1.6.7-4)
    * zlib.x86-64 (1.2.7-17)
    * libxcb.x86_64 (1.13-1.el7)
    * libXau.x86_64 (1.0.8-2.1.el7)
 
-1. Microsoft® Windows生產部署支援客戶升級至6.5版本及用於非生產用途。 AEM Sites和Assets會隨選新部署。
-1. Microsoft®視窗伺服器支援AEM Forms，但沒有支援層級R限制。
+1. 升級到 6.5 的客戶和非生產用途支援 Microsoft® Windows 生產部署。 新部署請求針對AEM Sites和Assets。
+1. Microsoft® Window Server 支援AEM Forms，沒有支援級別 R 限制。
 1. AEM Forms刪除了對 Microsoft® Windows Server 2016 的支援。
 
 >[!NOTE]
 >
-如果要安裝 AEM Forms 6.5，請確保已安裝以下 32 位 Microsoft® Visual C++ 可轉散發元件。
+如果您正在安裝AEM Forms 6.5，請確定您已安裝下列32位元Microsoft® Visual C++可轉散發套件。
 >
 * Microsoft® Visual C++ 2008可轉散發套件
 * Microsoft® Visual C++ 2010可轉散發套件
@@ -226,7 +227,7 @@ Adobe Experience Manager可與下列伺服器平台搭配使用以用於生產�
 * Microsoft® Visual C++ 2019 （VC14.28或更新版本）可轉散發套件
 
 
-### 虛擬與雲端運算環境 {#virtual-cloud-computing-environments}
+### 虛擬和雲計算環境 {#virtual-cloud-computing-environments}
 
 支援Adobe Experience Manager在雲端運算環境的虛擬機器器中執行。 這些環境包括Microsoft®Azure和Amazon Web Services (AWS)，依照本頁所列的技術要求和Adobe的標準支援條款執行。
 
@@ -234,9 +235,9 @@ Adobe Experience Manager可與下列伺服器平台搭配使用以用於生產�
 
 Adobe也提供Adobe Managed Services功能，以便在Azure或AWS上部署AEM。 Adobe Managed Services為專家提供在這些雲端運算環境中部署和操作AEM的經驗和技能。 另請參閱 [有關AdobeManaged Services的其他檔案](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
 
-在 Azure 或 AWS 或任何其他雲端運算 環境上部署AEM的所有其他情況下，來自Adobe Systems的支援包含在虛擬計算環境中。 該虛擬環境必須按照此頁面上列出的技術規範運行。 與在任何這些雲端環境中運行的AEM相關的任何報告問題都必須獨立于特定于雲端運算 環境的任何雲端服務進行重現。 也就是說，除非 雲端 服務作為此頁面上列出的技術要求的一部分得到支援，例如 Azure Blob 儲存 或 AWS S3。
+所有其他在Azure或AWS或任何其他雲端運算環境中部署AEM的情況下，虛擬運算環境都包含Adobe的支援。 該虛擬環境必須依照本頁所列的技術規格執行。 任何報告的問題與AEM在任一雲端環境中執行相關，必須可獨立於雲端運算環境特定的任何雲端服務重複產生。 換言之，除非本頁所列的技術需求(例如Azure Blob儲存或AWS S3)支援雲端服務，否則不會產生任何影響。
 
-有關如何在 Adobe Systems Managed Services 之外的 Azure 或 AWS 上部署 AEM的建議，Adobe Systems建議直接與雲端供應商合作。 或者，與Adobe合作夥伴合作，在您選擇的雲端環境中支援AEM的部署。 選取的雲端服務供應商或合作夥伴負責架構的規模規格、設計與實作，以符合您特定的效能、負載、擴充性與安全性需求。
+如需如何在AdobeManaged Services以外的Azure或AWS上部署AEM的建議，Adobe建議直接與雲端提供者合作。 或者，與Adobe合作夥伴合作，在您選擇的雲端環境中支援AEM的部署。 選取的雲端服務供應商或合作夥伴負責架構的規模規格、設計與實作，以符合您特定的效能、負載、擴充性與安全性需求。
 
 ### Dispatcher平台（網頁伺服器） {#dispatcher-platforms-web-servers}
 
@@ -250,16 +251,16 @@ Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](ht
 | Microsoft® IIS 10 (Internet Information Server) | 答：支援 |
 | Microsoft® IIS 8.5 （Internet Information Server） | Z：不支援 |
 
-1. 基於 Apache httpd 原始程式碼構建的 Web 伺服器具有與其所基於的 HTTPd 版本一樣多的支援。 如有疑問，請要求Adobe確認與個別伺服器產品相關的支援等級。 下列情況：
+1. 基於 Apache HTTPd 原始程式碼構建的 Web 服務器具有與其所基於的 HTTPd 版本一樣多的支援。 如有疑問，請Adobe Systems確認與相應伺服器產品相關的支援級別。 下列情況：
 
-   1. HTTP 伺服器僅使用官方 Apache 原始程式碼發行版構建，或者
-   1. HTTP 伺服器是作為運行它的作業系統的一部分提供的。 示例：IBM® HTTP Server、Oracle HTTP Server
+   1. HTTP伺服器是僅使用官方Apache來源發佈所建置，或
+   1. HTTP伺服器是作為執行伺服器之作業系統的一部分所提供。 示例：IBM® HTTP Server、Oracle HTTP Server
 
-1. Dispatcher 不適用於適用於 Windows 作業系統的 Apache 2.4.x。
+1. Dispatcher 不適用於適用于 Windows 作業系統的 Apache 2.4.x。
 
-## 支援的客戶端平臺 {#supported-client-platforms}
+## 支援的用戶端平臺 {#supported-client-platforms}
 
-### 創作使用者介面的支持瀏覽器 {#supported-browsers-for-authoring-user-interface}
+### 創作使用者介面的支援瀏覽器 {#supported-browsers-for-authoring-user-interface}
 
 Adobe Experience Manager使用者介面可與下列使用者端平台搭配使用。 所有瀏覽器都透過一組預設的外掛程式和附加元件進行測試。
 
@@ -299,7 +300,7 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
    <td>答：支援</td>
   </tr>
   <tr>
-   <td>Mozilla Firefox最後一個ESR [1]</td>
+   <td>Mozilla Firefox last ESR [1]</td>
    <td>答：支援</td>
    <td>答：支援</td>
   </tr>
@@ -315,7 +316,7 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
   </tr>
   <tr>
    <td>iOS 12.x上的Apple Safari</td>
-   <td>答：支援[2]</td>
+   <td>答：支援 [2]</td>
    <td>Z：不支援</td>
   </tr>
   <tr>
@@ -327,9 +328,9 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
 </table>
 
 1. Firefox的延伸支援版本 [進一步瞭解mozilla.org](https://www.mozilla.org/en-US/firefox/enterprise/)
-1. 支援 Apple iPad
+1. 支援Apple iPad
 
-### 網站支援的瀏覽器 {#supported-browsers-for-websites}
+### 支援的網站瀏覽器 {#supported-browsers-for-websites}
 
 一般而言，AEM Sites轉譯的網站瀏覽器支援取決於AEM頁面範本的實作、設計和元件輸出，因此由實作這些部分的當事方控制。
 
@@ -353,7 +354,7 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
 
 Adobe Experience Manager的所有元素（例項、Dispatcher）都可以安裝在IPv4和IPv6網路中。
 
-操作是無縫的，因為不需要特殊配置。 如有必要，請使用適合您的網路類型的格式指定IP位址。
+操作是無縫的，因為不需要特殊配置。 如有必要，請使用適合您的網路類型的格式指定 IP 位址。
 
 當必須指定 IP 位址時，您可以（根據需要）從以下選項中選擇：
 
@@ -363,11 +364,11 @@ Adobe Experience Manager的所有元素（例項、Dispatcher）都可以安裝�
 
 * 伺服器名稱。 例如 `https://www.yourserver.com:4502`
 
-* 對於 IPv4 和 IPv6 網路安裝，將解釋的預設 `localhost` 大小寫。 例如 `https://localhost:4502`
+* 對於 IPv4 和 IPv6 網路安裝，將解釋 的預設 `localhost` 大小寫。 例如 `https://localhost:4502`
 
 ### AEM 動態媒體附加元件的要求 {#requirements-for-aem-dynamic-media-add-on}
 
-AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
+AEM 動態媒體預設為停用。 請參閱此處 [啟用Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
 啟用Dynamic Media後，將適用下列其他技術要求。
 
@@ -407,9 +408,9 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/
 >
 **NUMA架構：** 處理器搭載AMD64和Intel® EM64T的系統通常設定為非統一記憶體架構(NUMA)平台。 也就是說，核心會在開機時建構多個記憶體節點，而不是建構單一記憶體節點。
 >
-多節點結構可能會導致一或多個節點的記憶體耗盡，之後其他節點就會耗盡。 當記憶體用盡時，即使有可用的記憶體，核心仍可以決定終止處理序（例如，影像伺服器或平台伺服器）。
+多節點構造可能會導致在其他節點耗盡之前一個或多個節點上的記憶體耗盡。 當記憶體耗盡發生時，內核可以決定終止進程（例如，影像伺服器或Platform伺服器），平均有可用記憶體。
 >
-因此，Adobe建議，如果您要執行這樣的系統以使用 **numa=off** 開機選項，以避免核心終止這些處理程式。
+因此，Adobe Systems建議，如果您正在運行這樣的系統，請使用 numa=off **引導選項關閉** NUMA，以避免內核終止這些進程。
 
 >[!NOTE]
 >
@@ -465,7 +466,7 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/
   </tr>
   <tr>
    <td>Microsoft® Office 2016 （已棄用）</td>
-   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
   </tr>
   <tr>
    <td>WordPerfect 2020<br /> </td>
