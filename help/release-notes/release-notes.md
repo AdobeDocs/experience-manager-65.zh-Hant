@@ -3,10 +3,10 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
+source-git-commit: d3f18320ca8a9a100e1aa6344a1c9424d0ff03ca
 workflow-type: tm+mt
-source-wordcount: '4232'
-ht-degree: 7%
+source-wordcount: '4225'
+ht-degree: 6%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 7%
 * **全新最適化表單核心元件**：新增垂直標籤、條款與條件和核取方塊，以提升表單的擴充性。
    * **[核取方塊元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**：以核心元件為主的最適化表單現在可以包含核取方塊元件。可讓使用者二選一，選取或取消選取特定選項。它通常為一個小方塊，可以按一下或點選以在兩種狀態之間切換：選取和取消選取。核取方塊是一種常見的表單元素，用來表示選擇是/否或真/假。
 
-   * **[條款與條件元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：以核心元件為主的最適化表單現在可以包含條款與條件元件。它允許表單作者在表單中引入特定區段，向使用者顯示與使用服務、產品或平台相關的條款、條件或法律協議。此元件的設計用意是在告知使用者他們透過提交表單同意的規則、法規和義務。
+   * **[條款與條件元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：以核心元件為主的最適化表單現在可以包含條款與條件元件。它可讓Forms作者在表單中推出特定區段，向使用者提供與服務、產品或平台使用相關的條款、條件或法律協定。 此元件的設計用意是在告知使用者他們透過提交表單同意的規則、法規和義務。
 
      ![垂直標籤、條款與條件以及核取方塊元件](/help/forms/using/assets/forms-components.png)
 
@@ -58,11 +58,11 @@ ht-degree: 7%
 
 * **[AEM Forms Designer 64位元版本](/help/forms/using/installing-configuring-designer.md)**： 64位元版本的AEM Forms Designer提供更優異的效能、擴充能力及記憶體管理，讓您更輕鬆地建立表單。 透過 64 位元架構，您可以輕鬆處理更大、更複雜的專案，確保設計工作流程流暢和最佳效率。透過這最先進的版本，提升您的表單設計能力並擁抱 AEM Forms Designer 的未來。
 
-* **[連線最適化Forms與Microsoft® SharePoint清單](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**： AEM Forms提供OOTB整合，可直接將表單資料提交至SharePoint清單，讓您使用SharePoint的清單功能。 您可以將Microsoft SharePoint清單設定為表單資料模型的資料來源，並使用使用表單資料模型提交動作來連線最適化表單與SharePoint清單。
+* **[連線最適化Forms與Microsoft® SharePoint清單](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**：AEM Forms提供OOTB整合，以便您將表單資料直接提交至SharePoint清單，讓您使用SharePoint的清單功能。 您可以將Microsoft® SharePoint清單設定為表單資料模型的資料來源，並使用使用表單資料模型提交動作來連線最適化表單與SharePoint清單。
 
 * **[支援為最適化表單片段設定記錄檔案屬性](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：您現在可以輕鬆自訂最適化表單編輯器中的最適化表單片段及其欄位。
 
-* **64位元XMLFM**： XMLFM的64位元版帶來更優異的效能、擴充能力，以及更精細的記憶體管理。 這是第一個在伺服器端部署的64位元原生服務。 XMLFM 64位元可利用其固有的功能，存取比32位元處理器大得多的記憶體資源，因此能夠順暢地處理較大的演算工作負載。 這個里程碑不僅代表效能的飛躍，也為AEM Forms伺服器內的原生服務架構引入重要增強功能。 此更新讓AEM Forms伺服器可順暢支援任何64位元原生服務。
+* **64位元XMLFM**： XMLFM的64位元版帶來更優異的效能、擴充能力，以及更精細的記憶體管理。 這是第一個在伺服器端部署的64位元原生服務。 XMLFM 64位元可利用其固有的功能，存取與32位元對應的記憶體資源相比更大的記憶體資源，因此能夠順暢處理更大的演算工作負載。 這個里程碑不僅代表效能的飛躍，也為AEM Forms伺服器內的原生服務架構引入重要增強功能。 此更新讓AEM Forms伺服器可順暢支援任何64位元原生服務。
 
 **已棄用的功能**
 
@@ -190,17 +190,17 @@ ht-degree: 7%
 
 * 當使用者將工具列新增到最適化表單時，表單容器標籤顯示怪異行為，因為它未變更為作者為Forms所選的偏好語言。 (FORMS-11371)
 * 在AEM Forms工作區中，下拉式欄位會依預設選取UI上的第一個選項。 (FORMS-11346)
-* 如果您使用含有五個字元的區域設定，而且AEM中的語言設定沒有在信函中正確轉譯小數分隔符號，則不會顯示任何效果。 (FORMS-11344)
+* 如果您使用含有五個字元的區域設定，而且信函中的小數分隔符號未正確轉譯，AEM中的語言設定不受影響。 (FORMS-11344)
 * 當使用者使用Workbench程式產生XML輸出時，少數檔案會失敗。 (FORMS-11314)
 * 當使用者產生英文以外語言的記錄檔案(DOR)預覽時，該功能無法運作。 (FORMS-11106)
-* 當使用者在根據JDK11的Linux的OSGI執行個體上轉換某些含有PDFG的影像檔案時，它不會轉換。 (FORMS-11105)
+* 當使用者在根據Linux®使用JDK11的OSGI執行個體上轉換某些含有PDFG的影像檔案時，它不會轉換。 (FORMS-11105)
 * 使用者安裝AEM Forms附加元件時，它會破壞AEM Sites中的內容樹狀面板。 (FORMS-10912)
 * 當使用者使用NVDA熒幕助讀程式從日期選擇器元件複製日期時，無法正確讀取。 (FORMS-10805) 
 * 在Forms規則編輯器中，當資料值型別為布林值時，使用者無法設定選項按鈕/核取方塊的值。 (FORMS-10713)
 * 當使用者在最適化表單中新增專案時，它會以相反順序新增到下拉式清單。 (FORMS-10456)
 * 使用規則編輯器清除下拉式清單時，即使已清除值，提供的第一個值仍會顯示。 (FORMS-9963) 
 * 使用者無法使用熒幕助讀程式（例如NVDA）存取表單標題。 (FORMS-8815) 
-* 使用者無法使用熒幕閱讀程式（例如NVDA）存取表單中的子標題。 (FORMS-8814) 
+* 使用者無法存取 `Sub Title` 使用熒幕助讀程式（例如NVDA）的表單中。 (FORMS-8814) 
 * 在html表單的頁面來源中，存取索引鍵屬性是空的且無法運作。 (FORMS-5753) 
 * 在「關於工作區」對話方塊中，「Adobe Experience Manager - Forms」文字會顯示為文字。 (FORMS-5748)
 
@@ -518,7 +518,7 @@ The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [M
 * 當使用者選擇在最適化表單中首次設定欄位時，儲存設定的選項未顯示在屬性瀏覽器中。 選擇在同一編輯器中設定最適化表單的其他欄位即可解決問題。
 * 當使用者執行提交動作時，提交會失敗並出現錯誤：
   ` javax.servlet.ServletException: java.lang.NoSuchMethodError`
-若要解決問題， [重新編譯Sling指令碼，例如JSP、Java和Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
+若要解決問題， [重新編譯Sling指令碼，例如JSP、Java™和Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
 
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
