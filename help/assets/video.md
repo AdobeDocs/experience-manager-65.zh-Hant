@@ -10,9 +10,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: c30630f0cd561256414a2883d29c9ee4be470ce1
 workflow-type: tm+mt
-source-wordcount: '11310'
+source-wordcount: '11187'
 ht-degree: 2%
 
 ---
@@ -149,7 +149,7 @@ Dynamic Media中的視訊是端對端解決方案，可讓您輕鬆發佈高品�
 
 各種iOS平台均支援最適化視訊串流。 另請參閱 [Dynamic Media檢視器參考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video).
 
-Dynamic Media支援MP4 H.264視訊的行動視訊播放。 您可以在下列位置找到支援此視訊格式的BlackBerry®裝置： [BlackBerry®支援的視訊格式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
+Dynamic Media支援MP4 H.264視訊的行動視訊播放。 <!-- LINK IS 404 WITH NO SUITABLE REPLACEMENT You can find BlackBerry&reg; devices that support this video format at the following: [Supported video formats on BlackBerry&reg;](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482). -->
 
 您可以在下列位置找到支援此視訊格式的Windows裝置： [Windows Phone 8支援的媒體轉碼器](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)
 
@@ -463,7 +463,7 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 
 1. 在名稱左側，選取核取方塊以啟用（開啟） DASH。
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 1. 現在 [使用Admin Console開始建立新的支援案例](https://helpx.adobe.com/tw/enterprise/using/support-for-experience-cloud.html).
 1. 若要建立支援案例，請遵循指示，同時確保您提供下列資訊：
@@ -876,15 +876,15 @@ Dynamic Media會將註解檔案轉換為JSON （JavaScript物件標籤法）格�
 
    另請參閱 [WebVTT：網頁視訊文字追蹤格式](https://w3c.github.io/webvtt/).
 
-   您可以利用免費和付費的工具與服務，在Dynamic Media外部撰寫註解/字幕檔案。 例如，若要建立不含樣式的簡單視訊註解檔案，您可以使用下列免費線上註解製作與編輯工具：
+   有許多網站提供免費和優質的工具與服務，讓您在Dynamic Media外部用來製作WebVTT標題/字幕檔案。 <!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
 
-   [WebVTT標題製作器](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
+   <!--[WebVTT Caption Maker](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
-   為達到最佳效果，請在Internet Explorer 9或更新版本、Google Chrome或Safari中使用工具。
+   For best results, use the tool in Internet Explorer 9 or above, Google Chrome, or Safari.
 
-   在工具中，在 **[!UICONTROL 輸入視訊檔案的URL]** 欄位，貼上視訊檔案的複製URL，然後按一下 **[!UICONTROL 載入]**. 另請參閱 [取得資產的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) 以取得視訊檔案本身的URL，然後您可將它貼入 **[!UICONTROL 輸入視訊檔案欄位的URL]**. 然後，Internet Explorer、Chrome或Safari就可以原生播放視訊。
+   In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then click **[!UICONTROL Load]**. See [Obtain a URL for an Asset](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) to get the URL to the video file itself which you can then paste into the **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome, or Safari can then natively play back the video. -->
 
-   現在，請依照網站上的熒幕指示來編寫和儲存您的WebVTT檔案。 完成後，複製註解檔案內容並貼到純文字編輯器中，然後儲存為 `.vtt` 副檔名。
+   依照網站上的熒幕指示製作及儲存您的WebVTT檔案。 完成後，複製註解檔案內容並貼到純文字編輯器中，然後儲存為 `.vtt` 副檔名。
 
    >[!NOTE]
    >

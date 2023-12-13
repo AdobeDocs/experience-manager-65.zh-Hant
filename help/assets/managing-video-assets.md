@@ -6,9 +6,9 @@ role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8a9ab052f649b1ee74b5b418ecbe2ebe70dddc26
 workflow-type: tm+mt
-source-wordcount: '5468'
+source-wordcount: '5467'
 ht-degree: 7%
 
 ---
@@ -114,8 +114,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 
 若要設定Google雲端設定：
 
-1. 建立Google帳戶。
-   [https://accounts.google.com/SignUp?service=mail](https://accounts.google.com/SignUp?service=mail)
+1. [建立Google帳戶](https://accounts.google.com/lifecycle/flows/signup?service=mail&amp;flowName=GlifWebSignIn&amp;flowEntry=SignUp&amp;dsh=S1828858835%3A1702491860449385&amp;theme=glif).
 
    如果您已有Google帳戶，請跳至下一步。
 
@@ -277,7 +276,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 
    如有需要，您可以選擇新增說明。
 
-1. 選取 **[!UICONTROL 新增]**.
+1. 選取「**[!UICONTROL 新增]**」。
 1. 隨即顯示YouTube/Google驗證。 如果您尚未登入Google Cloud帳戶，請略過此步驟。
 
    * 輸入與Google專案ID及上述JSON文字相關聯的Google使用者名稱和密碼。
@@ -305,7 +304,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 1. 在左上角選取Experience Manager標誌，然後在左側邊欄中選取 **[!UICONTROL 工具]** （槌子圖示） > **[!UICONTROL 部署]** > **[!UICONTROL Cloud Service]**.
 1. 在「協力廠商服務」標題下方的YouTube下方，選取「 」 **[!UICONTROL 立即設定]**.
 1. 在「建立組態」對話方塊的個別欄位中，輸入標題（必要）和名稱（選用）。
-1. 選擇 **[!UICONTROL 建立]**。
+1. 選取「**[!UICONTROL 建立]**」。
 1. 在「YouTube帳戶設定」對話方塊的「應用程式名 **[!UICONTROL 稱」欄位中]** ，輸入Google專案ID。
 
    您最初指定專案ID時 [已設定Google雲端設定](/help/assets/video.md#configuring-google-cloud-settings) 較早。
