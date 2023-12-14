@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: d3f18320ca8a9a100e1aa6344a1c9424d0ff03ca
+source-git-commit: 2118cecd8e66e41a1ce1c859cf62b1f18f7cb891
 workflow-type: tm+mt
-source-wordcount: '4225'
+source-wordcount: '4270'
 ht-degree: 6%
 
 ---
@@ -212,7 +212,8 @@ ht-degree: 6%
 * 清單無法在Adobe Acrobat Reader或Adobe Acrobat DC的標籤中正確顯示。 (LC-3921306)
 * 在Forms Designer中正確指派的標題層級會隨機變更為 `<P>` Adobe Acrobat標籤之前是否有宣告。 (LC-3921305) 
 * 在表格中，任何物件的ID一經指派便無法修改。 (LC-3921134) 
-* 如果合併的儲存格在表格中，則沒有GUI可用於在AEM Forms Designer的複雜表格中設定範圍（列和欄）和範圍。 (LC-3919532) 
+* 如果合併的儲存格在表格中，則沒有GUI可用於在AEM Forms Designer的複雜表格中設定範圍（列和欄）和範圍。 (LC-3919532)
+  <!--* After applying AEM Service Pack 6.5.15.0 patch installer, notice generation fails intermittently  . (LC-3921530)-->
 
 ### Foundation{#foundation-6519}
 
@@ -517,8 +518,9 @@ The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [M
 * 發佈調適型表單時，其所有相依性（包括原則）都會重新發佈，即使未進行任何修改亦然。 (FORMS-10454)
 * 當使用者選擇在最適化表單中首次設定欄位時，儲存設定的選項未顯示在屬性瀏覽器中。 選擇在同一編輯器中設定最適化表單的其他欄位即可解決問題。
 * 當使用者執行提交動作時，提交會失敗並出現錯誤：
-  ` javax.servlet.ServletException: java.lang.NoSuchMethodError`
-若要解決問題， [重新編譯Sling指令碼，例如JSP、Java™和Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
+  `javax.servlet.ServletException: java.lang.NoSuchMethodError`
+若要解決問題， [重新編譯Sling指令碼，例如JSP、Java和Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
+* 當使用者嘗試在Adminui中，於首頁>服務>PDF Generator> Adobe PDF設定下選擇其PDF檔案的字型時，字型清單顯示為空。 使用者無法將字型新增至「一律內嵌」和「永不內嵌」清單。 (FORMS-12095)
 
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
