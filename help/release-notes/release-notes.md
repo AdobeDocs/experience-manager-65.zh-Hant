@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: b5ecac71b07bfceb2708f20fe50965dec25e2194
+source-git-commit: e67d7aa9ab1dd00daad3518904bded258e31128c
 workflow-type: tm+mt
-source-wordcount: '4259'
+source-wordcount: '4288'
 ht-degree: 6%
 
 ---
@@ -213,7 +213,8 @@ ht-degree: 6%
 * 在Forms Designer中正確指派的標題層級會隨機變更為 `<P>` Adobe Acrobat標籤之前是否有宣告。 (LC-3921305) 
 * 在表格中，任何物件的ID一經指派便無法修改。 (LC-3921134) 
 * 如果合併的儲存格在表格中，則沒有GUI可用於在AEM Forms Designer的複雜表格中設定範圍（列和欄）和範圍。 (LC-3919532)
-  <!--* After applying AEM Service Pack 6.5.15.0 patch installer, notice generation fails intermittently  . (LC-3921530)-->
+* 當使用者嘗試在AEM Forms Service Pack 6.5.15.0上安裝表單附加元件套件後產生PDF檔案時，它會斷斷續續地失敗並顯示錯誤：
+   * `OutputServiceException AEM_OUT_001_003:Unexpected Exception: 0 Out of Memory Caused by: org.omg.CORBA.COMM_FAILURE: null` (LC-3921530)
 
 ### Foundation{#foundation-6519}
 
