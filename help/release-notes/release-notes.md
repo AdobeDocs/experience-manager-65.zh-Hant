@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 287717e39ff58396de6d63a89e2b3d8fef4e6888
+source-git-commit: 8fc35ac465240cafdce5346f2f7e9ba15c8d1fef
 workflow-type: tm+mt
-source-wordcount: '4288'
+source-wordcount: '4333'
 ht-degree: 6%
 
 ---
@@ -522,7 +522,13 @@ The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [M
   `javax.servlet.ServletException: java.lang.NoSuchMethodError`
 若要解決問題， [重新編譯Sling指令碼，例如JSP、Java™和Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). (FORMS-8542)
 * 安裝AEM Service Pack 6.5.14.0及更高版本後，使用者在導覽至時，無法從JEE管理員UI中選取用於PDF檔案的字型 `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`，因為字型清單顯示為空白。 (FORMS-12095)
-  <!--The font enumeration fails due to the missing Ps2Pdf service file.-->
+
+#### JEE上的AEM Forms
+
+* 已報告Struts 2 RCE的重大安全性漏洞，這是一個用於開發Java EE Web應用程式的常用且開放原始碼的Web應用程式架構。 Adobe已發行 [AEM 6.5 Service Pack 19.1 (6.5.19.1)](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md) 解決JEE上AEM Forms的弱點。
+
+
+<!--The font enumeration fails due to the missing Ps2Pdf service file.-->
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 
