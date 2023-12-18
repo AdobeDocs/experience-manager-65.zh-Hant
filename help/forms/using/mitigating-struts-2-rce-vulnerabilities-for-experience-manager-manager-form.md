@@ -1,20 +1,20 @@
 ---
-title: 緩解JEE上Experience Manager Forms的Struts 2 RCE漏洞
-description: 緩解JEE上Experience Manager Forms的Struts 2 RCE漏洞
+title: 緩解JEE上Experience Manager Forms的Struts 2漏洞
+description: 緩解JEE上Experience Manager Forms的Struts 2漏洞
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Security
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
-source-git-commit: 531eed9bb6d7792a6da0104b533a505738a64786
+source-git-commit: 5f5fcc10927d62cdfaeb0770c34052ceda02b2e8
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '479'
 ht-degree: 1%
 
 ---
 
 
-# 緩解Experience Manager Forms的Struts 2 RCE漏洞 {#mitigatin-struts2-rce-vulnerabilities-for-aem-forms}
+# 緩解Experience Manager Forms的Struts 2漏洞 {#mitigatin-struts2-rce-vulnerabilities-for-aem-forms}
 
 ## 問題
 
@@ -46,20 +46,22 @@ ht-degree: 1%
    * patch-archive.bat
    * patch-archive.sh
 1. 開啟終端機視窗，並導覽至包含解壓縮檔案的資料夾。
-1. 使用手動修補工具來搜尋、列出及取代所有struts2 jar檔案。 搜尋和取代struts2-core-2.5.30 jar檔案和struts2-core.jar：
+1. 使用手動修補工具來搜尋、列出及取代所有struts2 jar檔案。 工具需要網際網路連線，因為它在執行階段下載相依性。 因此，在執行工具之前，請確定您已連線至網際網路。
+
+搜尋和取代struts2-core-2.5.30 jar檔案和struts2-core.jar：
 
 
 >[!BEGINTABS]
 
 >[!TAB Windows]
 
-1. 執行以下命令以列出所有struts2 jar檔案。 在執行命令之前，請將上述命令中的路徑取代為AEM Form伺服器的路徑：
+1. 執行以下命令以列出所有struts2 jar檔案。 在執行命令之前，請將命令中的路徑取代為AEM Forms伺服器的路徑：
 
    ```
    patch-archive.bat -root=C:\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$
    ```
 
-1. 以列出的順序執行下列命令，以遞回就地取代。 執行命令之前。 將以上命令中的路徑取代為AEM Form伺服器的路徑，並且 `struts2-core-2.5.33.jar` 檔案。
+1. 以列出的順序執行下列命令，以遞回就地取代。 執行命令之前。 將命令中的路徑取代為AEM Forms伺服器的路徑，然後 `struts2-core-2.5.33.jar` 檔案。
 
 
    ```
@@ -74,13 +76,13 @@ ht-degree: 1%
 
 >[!TAB Linux]
 
-1. 執行以下命令以列出所有struts2 jar檔案。 在執行命令之前，請將上述命令中的路徑取代為AEM Form伺服器的路徑：
+1. 執行以下命令以列出所有struts2 jar檔案。 在執行命令之前，請將命令中的路徑取代為AEM Forms伺服器的路徑：
 
    ```
    patch-archive.sh -root=\Users\labuser\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$
    ```
 
-1. 以列出的順序執行下列命令，以遞回就地取代。 執行命令之前將以上命令中的路徑替換為AEM Form伺服器的路徑和 `struts2-core-2.5.33.jar` 檔案。
+1. 以列出的順序執行下列命令，以遞回就地取代。 在執行命令之前，請將命令中的路徑取代為AEM Forms伺服器的路徑，並 `struts2-core-2.5.33.jar` 檔案。
 
    ```
    patch-archive.sh -root=\Users\labuser\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$ -action=replace \temp\struts2-core-2.5.33.jar
