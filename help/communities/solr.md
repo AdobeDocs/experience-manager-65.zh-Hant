@@ -7,9 +7,9 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
-source-git-commit: 2a97935a81cf9c0a1a832dd27b62d388805863e0
+source-git-commit: 1f1deb4f5d2033420aa1cece95666894b2f56aad
 workflow-type: tm+mt
-source-wordcount: '1422'
+source-wordcount: '1423'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 2%
 ### JVM設定範例 {#jvm-configuration-example}
 
 ```shell
-JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xloggc:../logs/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Djava.awt.headless=true"
+JVM_OPTS="-server -Xmx2048m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xloggc:../logs/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Djava.awt.headless=true"
 ```
 
 ### SolrCloud設定命令 {#solrcloud-setup-commands}
@@ -80,8 +80,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 參考資料：
 [https://solr.apache.org/guide/6_6/solr-control-script-reference.html#SolrControlScriptReference-Create](https://solr.apache.org/guide/6_6/solr-control-script-reference.html#SolrControlScriptReference-Create)
 
-使用狀況:
-./bin/solr建立 \
+使用方式： 。/bin/solr建立 \
 -c *mycollection-name*\
 -d *config-dir* \
 -n *myconfig-name* \
@@ -298,7 +297,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 
      solr中的集合路徑
 
-   * --說明
+   *  — 說明
 
      列印命令列選項
 
@@ -314,7 +313,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 
    * Install.sh -v 5 -d /tmp/solr-5.4.0 -c /tmp/solr-5.4.0/server/solr/collection1
 
-**注意**:
+**注意**：
 
 * 安裝指令碼會先備份schema.xml和solrconfig.xml，再透過附加「.orig」安裝新版本
 
