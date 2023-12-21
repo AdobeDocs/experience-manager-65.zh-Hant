@@ -6,10 +6,10 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 9f88eeb6770c59f7a52db30f19f3a1a78cbc401b
+source-git-commit: 23dd80f0555ddec1ca422b13fbf0d45acf5ab6a8
 workflow-type: tm+mt
-source-wordcount: '2581'
-ht-degree: 49%
+source-wordcount: '2580'
+ht-degree: 48%
 
 ---
 
@@ -169,14 +169,14 @@ ht-degree: 49%
 
 ## 提交至Microsoft® SharePoint清單{#submit-to-sharedrive}
 
-「**[!UICONTROL 提交到 SharePoint]**」提交動作會將最適化表單與 Microsoft® SharePoint 儲存空間建立連結。您可以將表單資料檔案、附件或記錄檔案提交至連線的Microsoft® Sharepoint儲存體。
+此 **[!UICONTROL 提交至SharePoint]** 提交動作將最適化表單與Microsoft® SharePoint儲存空間連線起來。 您可以將表單資料檔案、附件或記錄檔案提交至連線的Microsoft® Sharepoint儲存體。
 
 ### 將最適化表單連線至Microsoft® SharePoint清單 {#connect-af-sharepoint-list}
 
-若要使用 [!UICONTROL 提交至SharePoint清單] 以最適化表單提交動作：
+若要將最適化表單連線至Microsoft® SharePoint清單：
 
 1. [建立SharePoint清單設定](#create-sharepoint-list-configuration)：它會將AEM Forms連線至您的Microsoft® Sharepoint清單儲存空間。
-1. [在最適化表單中使用表單資料模型提交](#use-submit-using-fdm)：此動作會將您的最適化表單連線至設定的Microsoft® SharePoint。
+1. [使用 **使用表單資料模型提交** 在最適化表單中提交動作](#use-submit-using-fdm)：它會傳送您的最適化表單資料至已設定的Microsoft® SharePoint。
 
 #### 建立SharePoint清單設定 {#create-sharepoint-list-configuration}
 
