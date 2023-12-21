@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 097bded5ed2d1db6426dcb9ac4fa9582cdc213bf
+source-git-commit: 4a4f464d4140cbb3882b57786b9003a89b7a9a43
 workflow-type: tm+mt
-source-wordcount: '7327'
+source-wordcount: '7328'
 ht-degree: 18%
 
 ---
@@ -154,7 +154,7 @@ ht-degree: 18%
    + 管理 {#administering}
       + [Administering使用手冊概覽](/help/sites-administering/home.md)
       + Sites功能 {#introduction}
-         + [網站管理](/help/sites-administering/msm-and-translation.md)
+         + [MSM 和翻譯](/help/sites-administering/msm-and-translation.md)
          + [非同步作業](/help/sites-administering/asynchronous-jobs.md)
          + [重複使用內容：多網站管理員和 Live Copy](/help/sites-administering/msm.md)
          + [Live Copy 概觀主控台](/help/sites-administering/msm-livecopy-overview.md)
