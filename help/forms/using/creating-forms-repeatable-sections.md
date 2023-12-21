@@ -3,9 +3,10 @@ title: 建立具有可重複區段的表單
 description: 可重複區段是可動態新增或移除至表單的面板。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms
+discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
+feature: Adaptive Forms, Foundation Components
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 4%

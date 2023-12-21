@@ -3,9 +3,8 @@ title: 自動儲存最適化表單
 description: 您可以設定最適化表單，以根據事件或預先定義的時間間隔自動開始儲存內容
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms
-exl-id: 948b2c12-895d-49e3-a943-d8fe87174fc4
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+feature: Adaptive Forms, Foundation Components
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 7%

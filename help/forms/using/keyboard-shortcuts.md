@@ -4,12 +4,12 @@ description: 本文列出可與Windows和Macintosh作業系統的最適化表單
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: author, correspondence-management
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 01f4fdd3-fd2a-4e90-9c91-c1b05bbc2c6a
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
+source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 5%
+source-wordcount: '1192'
+ht-degree: 4%
 
 ---
 

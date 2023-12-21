@@ -2,8 +2,9 @@
 title: 如何連線最適化表單資料並將其傳送到Microsoft&reg； Power Automate？
 description: 連線最適化表單資料並將其傳送到Microsoft&reg； Power Automate的逐步指南。
 keywords: 最適化Forms Microsoft Power Automate，將最適化Forms資料提交至Microsoft Power Automate
+feature: Adaptive Forms, Foundation Components
 exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 13%
@@ -91,7 +92,7 @@ ht-degree: 13%
 
    ![使用Microsoft Power Automate應用程式UI中的「端點」選項來尋找OAuth URL](assets/endpoints.png)
 
-1. 選取 **[!UICONTROL 連線]** . 如有要求，請登入您的Microsoft® Azure帳戶。 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取 **[!UICONTROL 連線]** . 如有要求，請登入您的Microsoft® Azure帳戶。 選取「**[!UICONTROL 儲存]**」。
 
 ### 建立Microsoft® Power Automate流程服務雲端設定 {#create-microsoft-power-automate-flow-cloud-configuration}
 
@@ -102,7 +103,7 @@ ht-degree: 13%
    建立最適化表單時，請在 **[!UICONTROL 設定容器]** 欄位。
 1. 在設定頁面上，選取 **[!UICONTROL 建立]** 以建立 [!DNL Microsoft®® Power Automate Flow Service] AEM Forms中的設定。
 1. 在 **[!UICONTROL 設定Microsoft®® Power Automate的Dataverse]** 頁面，指定 **[!UICONTROL 使用者端ID]** （也稱為應用程式ID）、 **[!UICONTROL 使用者端密碼]**， **[!UICONTROL OAuth URL]** 和 **[!UICONTROL 動態環境URL]**. 使用使用者端ID、使用者端密碼、OAuth URL和Dynamics環境ID。 在Microsoft® Azure Active Directory應用程式UI中使用端點選項來尋找OAuth URL。 開啟 [我的流程](https://us.flow.microsoft.com) 連結並選取「我的流程」，使用URL中列出的ID作為「動態環境ID」。
-1. 選取 **[!UICONTROL 連線]**. 如有要求，請登入您的Microsoft® Azure帳戶。 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取 **[!UICONTROL 連線]**. 如有要求，請登入您的Microsoft® Azure帳戶。 選取「**[!UICONTROL 儲存]**」。
 
 ### 發佈Microsoft® Power Automate Dataverse和Microsoft® Power Automate流程服務雲端設定 {#publish-microsoft-power-automate-dataverse-cloud-configuration}
 

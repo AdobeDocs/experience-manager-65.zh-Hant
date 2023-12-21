@@ -3,10 +3,11 @@ title: 最適化表單片段
 description: 調適型表單提供一種機制，可建立在任何調適型表單中使用的表單區段（例如面板或欄位群組）。 您也可以將現有面板儲存為片段。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
+feature: Adaptive Forms, Foundation Components
+discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
-feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '2359'
 ht-degree: 3%

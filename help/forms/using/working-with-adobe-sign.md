@@ -4,10 +4,11 @@ description: 啟用最適化表單的電子簽章(Adobe Sign)工作流程，以�
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
+feature: Adaptive Forms, Foundation Components, Acrobat Sign
+discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
-feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '3875'
 ht-degree: 1%

@@ -5,9 +5,9 @@ contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: d7287ee7-fb4e-4d47-b37e-0a9260344070
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '2029'
 ht-degree: 3%
@@ -193,7 +193,7 @@ ht-degree: 3%
    * 若要顯示或隱藏現成可用的最適化表單範本，請核取或取消核取 **包含立即可用的AF和AD範本** 選項。
    * 若要顯示或隱藏已在AEM 6.0 Forms或AEM 6.1 Forms發行版本中新增但現在已棄用的現成最適化表單範本，請核取或取消核取 **包含AEM 6.0 AF範本** 選項。 如果核取此選項，則需要 **包含立即可用的AF和AD範本** 要啟用的設定。
 
-1. 按一下 **儲存**. 現成範本的顯示選項已變更。
+1. 按一下「**儲存**」。現成範本的顯示選項已變更。
 
 ## 建議 {#recommendations}
 

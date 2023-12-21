@@ -3,11 +3,11 @@ title: 使用最適化表單的最佳作法
 description: 說明設定AEM Forms專案、開發最適化表單及最佳化AEM Forms系統效能的最佳實務。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
-source-wordcount: '4725'
+source-wordcount: '4666'
 ht-degree: 1%
 
 ---
@@ -98,7 +98,7 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
 
 您可以使用中啟用的表單範本來建立最適化表單 **設定瀏覽器**. 若要啟用表單範本，請參閱 [建立最適化表單範本](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=en).
 
-表單範本也可以從其他作者電腦上建立的最適化表單套件上傳。 可透過安裝使用表單範本 [aemforms-references-*套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hant). 建議的一些最佳實務如下：
+表單範本也可以從其他作者電腦上建立的最適化表單套件上傳。 可透過安裝使用表單範本 [aemforms-references-*套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). 建議的一些最佳實務如下：
 
 * 此 **nosamplecontent** 僅作者才建議使用執行模式，不建議發佈節點使用。
 * 製作資產（例如最適化表單、主題、範本或雲端設定）作業只會透過製作節點執行，其可在已設定的發佈節點發佈。

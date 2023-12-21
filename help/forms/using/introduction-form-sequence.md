@@ -5,12 +5,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 1333c6cb-15cc-429b-a13e-5d23afdee69a
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 37%
+source-wordcount: '575'
+ht-degree: 32%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 37%
       * Adobe Document Cloud 電子簽署服務
       * 手寫簽名
 
-   * **確認**：包含「**摘要**」元件，會在使用者簽署表單並到達序列中的「確認 (摘要)」步驟後，顯示確認表單提交的訊息。作者可以設定「摘要」元件的文字、顯示感謝訊息、顯示產生 PDF 的連結等等。
+   * **確認**：包含「**摘要**」元件，會在使用者簽署表單並到達序列中的「確認 (摘要)」步驟後，顯示確認表單提交的訊息。作者可以設定「摘要」元件的文字、顯示感謝訊息、顯示產生PDF的連結等。
 
 1. 選取根面板的版面做為「**[!UICONTROL 精靈]**」。
 1. 完成其餘步驟，以便建立表單範本。 另請參閱 [建立自訂最適化表單範本](../../forms/using/custom-adaptive-forms-templates.md).

@@ -1,9 +1,9 @@
 ---
 title: 使用版面模式調整最適化表單元件的大小
 description: 使用版面配置模式中可用的回應式格線來定義元件位置
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 6%

@@ -6,11 +6,12 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
+feature: Adaptive Forms, Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
-source-git-commit: 1da3abac8a7f09d41127818a5abacf29524f1365
+source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 18%
+source-wordcount: '965'
+ht-degree: 10%
 
 ---
 
@@ -155,10 +156,10 @@ ht-degree: 18%
 
 當為您的環境啟用調適型表單核心元件時，一個以核心元件為主的調適型表單空白範本和 Canvas 3.0 主題會新增至您的環境中。為您的環境啟用調適型表單核心元件後，您可以：
 
-* 建立以核心元件為主的調適型表單。
-* 建立以核心元件為主的調適型表單範本。
-* 為以核心元件為主的調適型表單範本建立自訂主題。
-* 將以核心元件為主的調適型表單的代表提供給一些管道，例如行動、網頁、本機應用程式和需要表單以 Headless 呈現的服務。。
+* 建立以最適化Forms為基礎的核心元件。
+* 建立以核心元件為基礎的最適化表單範本。
+* 建立核心元件型最適化表單範本的自訂主題。
+* 為行動、網路、原生應用程式等需要表單Headless呈現的管道和服務提供核心元件型最適化表單的JSON呈現。
 
 ## 下一步
 

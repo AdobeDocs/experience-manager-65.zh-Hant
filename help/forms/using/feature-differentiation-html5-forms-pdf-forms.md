@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 docset: aem65
-feature: Mobile Forms
+feature: HTML5 Forms
 exl-id: 3150f95f-7150-4eee-b5a9-121422dec2a1
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 2%
@@ -53,7 +53,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>頁首/頁尾 </td>
-   <td>支援. <br /> <br /> 由於HTML5行動表單不支援分頁，所以頁首和頁尾只會出現一次。 不過，您可以在版面中加以設定，使其顯示在行動表單預覽中的多個位置。<br /> </td>
+   <td>支援。 <br /> <br /> 由於HTML5行動表單不支援分頁，所以頁首和頁尾只會出現一次。 不過，您可以在版面中加以設定，使其顯示在行動表單預覽中的多個位置。<br /> </td>
    <td>支援。</td>
   </tr>
   <tr>

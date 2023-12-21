@@ -3,10 +3,11 @@ title: 調適型表單規則編輯器
 description: 調適型表單規則編輯器可讓您新增動態行為並將複雜邏輯建置到表單中，而不需要編碼或指令碼。
 topic-tags: develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
+feature: Adaptive Forms, Foundation Components
+discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
-feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '6940'
 ht-degree: 1%

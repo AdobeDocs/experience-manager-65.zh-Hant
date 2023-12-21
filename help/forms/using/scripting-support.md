@@ -5,11 +5,11 @@ contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-feature: Mobile Forms
+feature: HTML5 Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
 workflow-type: tm+mt
-source-wordcount: '3896'
+source-wordcount: '3916'
 ht-degree: 6%
 
 ---
@@ -81,7 +81,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
  </tbody>
 </table>
 
-### $主機 {#host}
+### $host {#host}
 
 <table>
  <tbody>
@@ -323,7 +323,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
    <td>無</td>
   </tr>
   <tr>
-   <td>caption</td>
+   <td>註解</td>
    <td>註解物件說明與表單設計物件關聯的描述性標籤。<br /> </td>
    <td>無</td>
   </tr>
@@ -513,7 +513,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
    <td>HTML中不允許使用指令碼設定名稱。</td>
   </tr>
   <tr>
-   <td>parent</td>
+   <td>父母</td>
    <td>取得此節點的父系。</td>
    <td>無</td>
   </tr>
@@ -716,7 +716,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
    <td> </td>
   </tr>
   <tr>
-   <td>caption</td>
+   <td>註解</td>
    <td>註解物件說明與表單設計物件關聯的描述性標籤。</td>
    <td> </td>
   </tr>
@@ -944,7 +944,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
    <td>無</td>
   </tr>
   <tr>
-   <td>caption</td>
+   <td>註解</td>
    <td>註解物件說明與表單設計物件關聯的描述性標籤。<br /> </td>
    <td>無</td>
   </tr>
@@ -1030,7 +1030,7 @@ HTML5表單中支援的JavaScript、FormCalc屬性和方法如下所示：
  </tbody>
 </table>
 
-## $配置 {#layout}
+## $layout {#layout}
 
 <table>
  <tbody>
@@ -1152,7 +1152,7 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
    <td>當(i lt 5) do i = i + 1 endwhile</td>
   </tr>
   <tr>
-   <td>代表</td>
+   <td>的</td>
    <td><br type="_moz" /> </td>
    <td>針對i = 100，向下至1 <br /> do s = s + i endfor</td>
   </tr>
@@ -1175,14 +1175,14 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
 
    1. Abs()
    1. Avg()
-   1. 向上取整()
-   1. 計數()
-   1. 向下取整()
-   1. 最大值()
-   1. 最小值()
+   1. Ceil()
+   1. Count()
+   1. Floor()
+   1. Max()
+   1. Min()
    1. Mod()
-   1. 四捨五入()
-   1. 總計()
+   1. Round()
+   1. Sum()
 
 1. **科學函式**
 
@@ -1192,9 +1192,9 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
    1. Atan2()
    1. Cos()
    1. Sin()
-   1. 棕褐色()
+   1. Tan()
    1. Exp()
-   1. 記錄檔()
+   1. Log()
    1. Pow()
    1. Sqrt()
    1. Deg2Rad()
@@ -1203,7 +1203,7 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
 
 1. **財務函式**
 
-   1. 4月()
+   1. 四月()
    1. Term()
    1. Fv()
    1. Ipmt()
@@ -1212,7 +1212,7 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
    1. Ppmt()
    1. Pv()
    1. Rate()
-   1. 術語()
+   1. Term()
 
 1. **邏輯函式**
 
@@ -1223,16 +1223,16 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
 
 1. **字串函式**
 
-   1. 於()
+   1. At()
    1. Concat()
-   1. 左()
+   1. Left()
    1. Len()
    1. Lower()
    1. Ltrim()
-   1. 取代()
-   1. 右()
+   1. Replace()
+   1. Right()
    1. Rtrim()
-   1. 空間()
+   1. Space()
    1. Stuff()
    1. Substr()
    1. Upper()
@@ -1240,7 +1240,7 @@ FormCalc是XFA專屬的語言，用於建立以電子錶單為中心的邏輯和
 
 1. **日期和時間**
 
-   1. 日期()
+   1. Date()
    1. num2date()
    1. DateFmt()
 

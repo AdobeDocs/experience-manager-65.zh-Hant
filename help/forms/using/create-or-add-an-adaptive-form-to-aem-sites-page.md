@@ -2,12 +2,12 @@
 title: 建立或新增調適型表單至 AEM Sites 頁面
 description: 探索如何輕鬆建立或無縫新增調適型表單至您的 AEM Sites 頁面。 了解整合動態和可自訂表單至網站中的步驟式技術和最佳實務，最佳化您的數位體驗以達到最大影響。
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: dcf023a1-8735-48cb-b3ea-d17357eeedaf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
 workflow-type: tm+mt
-source-wordcount: '2901'
-ht-degree: 24%
+source-wordcount: '2881'
+ht-degree: 23%
 
 ---
 
@@ -189,13 +189,13 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
 
 ## 設定表單的提交動作 {#configure-submit-action-for-form}
 
-提交動作讓您可選擇透過最適化表單擷取的資料目標。使用者按一下最適化表單上的「提交」按鈕時，就會加以觸發。調適型表單包含一些立即可用的提交動作。 您也可以擴充預設提交動作，以建立自己的自訂提交動作。 若要設定表單的提交動作：
+提交動作讓您可選擇透過最適化表單擷取的資料目標。當使用者按一下最適化表單上的提交按鈕時會觸發。 調適型表單包含一些立即可用的提交動作。 您也可以擴充預設提交動作，以建立自己的自訂提交動作。 若要設定表單的提交動作：
 
 1. 開啟包含最適化表單的AEM頁面編輯器或體驗片段。
 1. 開啟「內容樹」，然後選取 **[!UICONTROL 最適化Forms容器]** 託管您的最適化表單。 一個AEM Sites頁面可以託管多個最適化Forms。 因此，請仔細選取正確的最適化Forms容器。
 1. 按一下最適化表單容器屬性 ![最適化表單容器屬性](/help/forms/using/assets/configure-icon.svg) 圖示。 可設定提交動作的調適型表單容器對話方塊隨即開啟。
    ![調適型表單容器](/help/forms/using/assets/adaptive-forms-container.png)
-1. 根據您的要求選取和設定「提交動作」。如需「提交動作」的詳細資訊，請參閱 [最適化表單提交動作](configuring-submit-actions.md)
+1. 根據您的要求，選取並設定提交動作。 如需「提交動作」的詳細資訊，請參閱 [最適化表單提交動作](configuring-submit-actions.md)
 
 
 ## 設定表單的結構描述或表單資料模型 {#configure-schema-or-data-model-for-form}
@@ -235,7 +235,7 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
 1. 開啟「內容樹」，然後選取 **[!UICONTROL 最適化Forms容器]** 託管您的最適化表單。 一個AEM Sites頁面可以託管多個最適化Forms。 因此，請仔細選取正確的最適化Forms容器。
 1. 按一下最適化表單容器屬性 ![最適化表單容器屬性](/help/forms/using/assets/configure-icon.svg) 圖示。 用來設定資料模型的最適化表單容器對話方塊隨即開啟。
    ![預填服務fdm aem sites頁面編輯器](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
-1. 選擇表單資料模型. 開啟 **[!UICONTROL 基本]** 標籤。 在預填服務中，選取 **[!UICONTROL Forms入口網站草稿預填服務]**.
+1. 選取表單資料模型。 開啟 **[!UICONTROL 基本]** 標籤。 在預填服務中，選取 **[!UICONTROL Forms入口網站草稿預填服務]**.
 1. 按一下&#x200B;**[!UICONTROL 「完成」]**。
 
 ## 在表單提交時將使用者重新導向至新使用者，或顯示感謝訊息

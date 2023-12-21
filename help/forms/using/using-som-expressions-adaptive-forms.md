@@ -3,10 +3,11 @@ title: 在最適化表單中使用SOM運算式
 description: 瞭解如何擷取最適化表單面板的SOM運算式。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
+feature: Adaptive Forms, Foundation Components
+discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
-feature: Adaptive Forms
 exl-id: 6a158e18-b7d0-45fb-b4fc-4770e66982b4
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%

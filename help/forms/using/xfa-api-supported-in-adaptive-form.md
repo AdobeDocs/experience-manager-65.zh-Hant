@@ -4,9 +4,9 @@ description: 列出最適化表單中支援的XFA事件、屬性、指令碼和�
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 11%
