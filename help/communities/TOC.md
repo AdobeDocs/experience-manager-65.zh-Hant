@@ -7,10 +7,11 @@ breadcrumb-title: Communities 指南
 user-guide-description: 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。
 feature: Communities
 role: User
-source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
+hide: true
+source-git-commit: e0db340b4fd4e4f7fe7ed623fb2ee9f1b789e39e
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 10%
+source-wordcount: '423'
+ht-degree: 11%
 
 ---
 
@@ -21,7 +22,6 @@ ht-degree: 10%
 + AEM Communities簡介 {#introduction}
    + [社群網站](administer-landing.md)
    + [AEM Communities概觀](overview.md)
-   + [AEM Communities發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/communities-release-notes.html)
    + [AEM Communities快速入門](getting-started.md)
    + [初始設定](setup.md)
    + [編寫新社群網站](create-site.md)
@@ -34,7 +34,6 @@ ht-degree: 10%
    + [為社群設定Dispatcher](dispatcher.md)
 + 管理 {#administer}
    + [AEM Communities中的使用者和UGC管理服務](user-ugc-management-service.md)
-   + [社群網站](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html)
    + [社群主控台](consoles.md)
    + [社群功能的Analytics設定](analytics.md)
    + [設定傳訊](messaging.md)
@@ -130,7 +129,7 @@ ht-degree: 10%
    + [使用適用於社群的Maven](maven.md)
    + [命名慣例](naming-conventions.md)
    + [SocialUtils重構](socialutils.md)
-+ 編寫 {#authoring}
++ 製作 {#authoring}
    + [Communities元件](author-communities.md)
    + [Communities元件基本知識](basics.md)
    + [活動資料流功能](activities.md)
@@ -153,4 +152,3 @@ ht-degree: 10%
    + [活動趨勢](trends.md)
    + [使用社交標籤雲](tagcloud.md)
    + [使用投票](voting.md)
-   + [建立範例頁面](https://experienceleague.adobe.com/docs/experience-manager-65/communities/develop/create-sample-page.html)

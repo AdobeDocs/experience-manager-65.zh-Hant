@@ -2,10 +2,10 @@
 title: Adobe Experience Manager 6.5發行說明
 description: AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。
 exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 43%
+source-wordcount: '257'
+ht-degree: 35%
 
 ---
 
@@ -27,16 +27,14 @@ AEM 發行說明涵蓋有關最新版 AEM 的重要資訊，包括新功能、�
 |--- |---|
 | [Assets 使用手冊](/help/assets/home.md) | 建立、管理、提供和最佳化數位資產。 |
 | [Forms使用手冊](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表格。 |
-| [Communities使用手冊](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
-| [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
-| [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
+| [Administering指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
+| [Authoring指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
 | [傳統UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM編寫的概念。 |
 | [Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=zh-Hant) | 瞭解用於發佈動態和互動式數位體驗的數位看板解決方案。 |
 | [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南說明AEM的基本概念。 |
 | [Developing使用手冊](/help/sites-developing/home.md) | 瞭解如何建置您的AEM執行個體。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
-| [Commerce 使用手冊](/help/commerce/home.md) | 瞭解AEM上的Commerce Integration Framework。 |
-| [Mobile使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
+| [Commerce 使用手冊](/help/commerce/home.md) | 瞭解AEM上的Commerce integration framework。 |
 
 ## 重要AEM資源
 

@@ -2,7 +2,7 @@
 title: Headless快速入門手冊
 description: 使用本快速入門手冊，瞭解Adobe Experience Manager (AEM) 6.5強大的Headless功能的重要部分，例如內容模型、內容片段和GraphQL API。
 exl-id: 55ebd893-b3cc-47c5-ad84-46df984197fb
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: 487136be68e04fd74affe43790587b37d4c3d3ef
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 38%
@@ -23,7 +23,7 @@ Headless快速入門手冊透過五個步驟，為已熟悉AEM和Headless技術�
 >
 >此快速入門指南假定您已了解 AEM 和 Headless 技術。
 >
->如果您不熟悉AEM或Headless，請參閱 [Headless檔案歷程](/help/journey-headless/home.md) 以取得Headless的端對端簡介，並瞭解AEM如何支援該功能。
+>如果您不熟悉AEM或Headless，請參閱 [Headless檔案歷程](/help/journey-headless/overview.md) 以取得Headless的端對端簡介，並瞭解AEM如何支援該功能。
 
 ## 對象 {#audience}
 

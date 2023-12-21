@@ -1,19 +1,19 @@
 ---
 title: AEM 6.5 管理使用指南
-description: 瞭解如何管理AEM 6.5。這些指南涵蓋網站功能、部署作業、安全性功能、個人化、整合等。
+description: 瞭解如何管理AEM 6.5。這些指南涵蓋網站功能、部署操作、安全性功能、個人化、整合等。
 exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 30%
+source-wordcount: '251'
+ht-degree: 16%
 
 ---
 
 # AEM 6.5 管理使用指南
 
-瞭解如何管理AEM 6.5。這些指南涵蓋網站功能、部署作業、安全性功能、個人化、整合等。
+瞭解如何管理AEM 6.5。這些指南涵蓋網站功能、部署操作、安全性功能、個人化、整合等。
 
-## 重要  文章
+## 重要文章
 
 * [AEM快速入門](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
 * [AEM 6.5發行說明](/help/release-notes/home.md)
@@ -27,21 +27,19 @@ ht-degree: 30%
 | [發行說明](/help/release-notes/home.md) | 提供有關最新版AEM的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題。 |
 | [Assets 使用手冊](/help/assets/home.md) | 瞭解如何建立、管理、提供和最佳化數位資產。 |
 | [Forms使用手冊](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表格。 |
-| [Communities使用手冊](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
-| [Administering 指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
-| [Authoring 指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
-| [Classic UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM中編寫的概念。 |
+| [Administering指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
+| [Authoring指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
+| [傳統UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM編寫的概念。 |
 | [Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 瞭解用於發佈動態和互動式數位體驗的數位看板解決方案。 |
 | [Deploying使用手冊](/help/sites-deploying/home.md) | 本指南說明AEM的基本概念。 |
-| [開發使用手冊](/help/sites-developing/home.md) | 瞭解如何建置AEM執行個體。 |
+| [Developing使用手冊](/help/sites-developing/home.md) | 瞭解如何建置您的AEM執行個體。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
-| [Commerce 使用手冊](/help/commerce/home.md) | 瞭解AEM上的Commerce Integration Framework。 |
-| [Mobile使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
+| [Commerce 使用手冊](/help/commerce/home.md) | 瞭解AEM上的Commerce integration framework。 |
 
 ## 重要AEM資源
 
 * [AEM教學課程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)
+* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用手冊](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)

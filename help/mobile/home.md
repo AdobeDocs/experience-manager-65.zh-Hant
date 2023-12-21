@@ -2,10 +2,10 @@
 title: AEM 6.5 Mobile 使用指南
 description: 受益於AEM支援，為行動應用程式建立和管理內容。 取得On-Demand Services App和Adobe PhoneGap Enterprise的簡介，並瞭解如何編寫、開發及管理。
 exl-id: 3531d8ea-614d-465a-8b4a-e3e3f3461e94
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 17%
+source-wordcount: '282'
+ht-degree: 14%
 
 ---
 
@@ -27,7 +27,6 @@ ht-degree: 17%
 | [發行說明](/help/release-notes/home.md) | 提供有關最新版AEM的重要資訊，包括新功能、支援的平台、已過時和已移除的功能，以及已知問題 |
 | [Assets 使用手冊](/help/assets/home.md) | 瞭解如何建立、管理、提供和最佳化數位資產。 |
 | [Forms使用手冊](/help/forms/home.md) | 本指南說明如何建立、管理、發佈和更新數位表格。 |
-| [Communities使用手冊](/help/communities/home.md) | 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 |
 | [Administering指南](/help/sites-administering/home.md) | 瞭解如何管理AEM |
 | [Authoring指南](/help/sites-authoring/home.md) | 本指南說明在AEM中編寫的概念。 |
 | [傳統UI編寫指南](/help/sites-classic-ui-authoring/home.md) | 本指南說明在傳統使用者介面中在AEM編寫的概念。 |
@@ -36,7 +35,6 @@ ht-degree: 17%
 | [Developing使用手冊](/help/sites-developing/home.md) | 瞭解如何建置您的AEM執行個體。 |
 | [Managing使用手冊](/help/managing/home.md) | 本指南說明如何成功管理AEM專案。 |
 | [Commerce 使用手冊](/help/commerce/home.md) | 瞭解AEM上的Commerce integration framework。 |
-| [Mobile使用手冊](/help/mobile/home.md) | 本指南說明如何建立和管理行動應用程式的內容。 |
 
 ## 重要AEM資源
 
