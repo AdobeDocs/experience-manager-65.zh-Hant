@@ -4,10 +4,10 @@ description: 使用Adobe Experience Manager Forms ConvertPDF服務將PDF檔案�
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-exl-id: 575bab27-d973-47fa-a0da-fa889cec6f27
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+feature: Document Services
+source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---

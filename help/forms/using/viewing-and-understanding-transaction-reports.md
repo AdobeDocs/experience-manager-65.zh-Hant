@@ -4,8 +4,9 @@ description: 使用交易報告，針對產品使用情況和重新平衡軟硬�
 topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
+feature: Transaction Reports
 exl-id: 3c7cbe1f-ac81-4df9-96b2-662cbc5f2075
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 0%
@@ -62,7 +63,7 @@ ht-degree: 0%
 
 1. 以管理員身分登入作者執行個體。 前往 **工具** > **作業** > **網頁主控台**.
 1. 找到並開啟 **Forms交易存放庫儲存提供者** 服務。
-1. 指定自訂寄件匣的名稱， **寄件匣** 欄位。 按一下 **儲存**. 具有指定名稱的寄件匣會在所有製作執行個體上建立。
+1. 指定自訂寄件匣的名稱， **寄件匣** 欄位。 按一下「**儲存**」。具有指定名稱的寄件匣會在所有製作執行個體上建立。
 
 ## 檢視交易報告 {#viewing-the-transaction-report}
 

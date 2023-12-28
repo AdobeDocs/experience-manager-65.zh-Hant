@@ -5,11 +5,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 docset: aem65
-exl-id: edaf12be-473f-4175-b4e0-549b41159a55
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+feature: Document Services
+source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 1%
+source-wordcount: '1003'
+ht-degree: 0%
 
 ---
 
@@ -91,7 +91,7 @@ ht-degree: 1%
 
 ### 使用條碼式表單的工作流程 {#workflows-that-use-barcoded-forms}
 
-表單作者可使用Designer建立互動式條碼式表單。 (請參閱 [Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63_tw).) 當使用者使用Adobe Reader或Acrobat填寫條碼表單時，條碼會自動更新以編碼表單資料。
+表單作者可使用Designer建立互動式條碼式表單。 (請參閱 [Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63).) 當使用者使用Adobe Reader或Acrobat填寫條碼表單時，條碼會自動更新以編碼表單資料。
 
 條碼式Forms服務適合將紙張上的資料轉換為電子格式。 例如，當條碼式表單填寫並列印時，可掃描列印的復本並用作條碼式Forms服務的輸入。
 
@@ -124,7 +124,7 @@ Watched資料夾端點通常用於啟動使用條碼Forms服務的應用程式�
 * 此服務完全支援AcroForms和靜態表單，其中包含使用Adobe Reader或Acrobat儲存的2D條碼。 不過，對於1D條碼，可以平面化表單，或將其提供為掃描的PDF或TIFF檔案。
 * 尚未完全支援動態XFA表單。 若要正確解碼動態表單中的1D與2D條碼，請將表單平面化，或將其提供為掃描的PDF或TIFF檔案。
 
-此外，如果符合上述限制，該服務可解碼任何使用支援符號的條碼。 如需如何建立互動式條碼式表單的詳細資訊，請參閱 [Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63_tw).
+此外，如果符合上述限制，該服務可解碼任何使用支援符號的條碼。 如需如何建立互動式條碼式表單的詳細資訊，請參閱 [Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 ## 設定服務的屬性   {#configureproperties}
 
