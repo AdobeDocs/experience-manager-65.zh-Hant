@@ -1,11 +1,11 @@
 ---
 title: AEM 6.5 Authoring 使用指南
-description: 探索在AEM 6.5中建立內容和編寫的重要概念。您也會找到使用標籤、範本和其他頁面功能的相關資訊。
+description: 探索在 AEM 6.5 中建立內容和進行編寫的重要概念。您還會找到有關使用標記、範本和其他頁面功能的資訊。
 exl-id: 38f229b4-10b2-4a67-9821-a03718b82215
 source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 15%
+ht-degree: 24%
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: AEM Headless 歷程
-description: 說明如何使用Adobe Experience Manager作為Headless CMS的檔案歷程集合。
+description: 描述如何將 Adob​​e Experience Manager 用為 Headless CMS 的文件歷程系列。
 exl-id: 369f79ab-c8ae-4d49-9b0b-e3a2e423b40f
 source-git-commit: 719dd7b30c8ce3f02fe46c632b1589fcc74a1759
 workflow-type: tm+mt
 source-wordcount: '457'
-ht-degree: 59%
+ht-degree: 63%
 
 ---
 

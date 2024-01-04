@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Manager 6.5 Forms 指南
-description: 使用本AEM 6.5指南來建立、管理、發佈和更新數位表格。 尋找安裝、升級和設定說明，並瞭解如何撰寫最適化表單。
+description: 使用此 AEM 6.5 指南建立、管理、發佈和更新數位表單。尋找有關如何進行安裝、升級和設定的說明，並了解如何編寫最適化表單。
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
 source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
 source-wordcount: '286'
-ht-degree: 19%
+ht-degree: 38%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 19%
 | AEM 6.5 | 本文章 |
 
 
-使用本AEM 6.5指南來建立、管理、發佈和更新數位表格。 尋找安裝、升級和設定說明，並瞭解如何撰寫最適化表單。
+使用此 AEM 6.5 指南建立、管理、發佈和更新數位表單。尋找有關如何進行安裝、升級和設定的說明，並了解如何編寫最適化表單。
 
 ## AEM重要文章
 

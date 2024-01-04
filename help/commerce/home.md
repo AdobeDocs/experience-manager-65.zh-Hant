@@ -1,17 +1,17 @@
 ---
 title: AEM Content and Commerce
-description: 瞭解如何使用及管理AEM內容與商務，包含我們有關整合的實用文章，以及如何開始使用AEM Storefront。
+description: 透過我們有關整合以及如何開始使用 AEM Storefront 的實用文章，了解如何使用和管理 AEM Content and Commerce。
 exl-id: b5b074e7-6da7-49ed-9cdb-f7c37d08e08c
 source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
 source-wordcount: '259'
-ht-degree: 13%
+ht-degree: 31%
 
 ---
 
 # AEM Content and Commerce {#commerce-guide}
 
-瞭解如何使用及管理AEM內容與商務，包含我們有關整合的實用文章，以及如何開始使用AEM Storefront。
+透過我們有關整合以及如何開始使用 AEM Storefront 的實用文章，了解如何使用和管理 AEM Content and Commerce。
 
 >[!NOTE]
 >

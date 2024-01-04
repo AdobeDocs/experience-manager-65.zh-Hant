@@ -1,17 +1,17 @@
 ---
 title: AEM 6.5 Managing 使用指南
-description: 瞭解如何成功管理AEM專案，並取得關鍵資源的支援及完整的AEM 6.5使用手冊集合。
+description: 探索如何在關鍵資源和全系列 AEM 6.5 使用手冊的支援下成功管理 AEM 專案。
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
 source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 15%
+ht-degree: 32%
 
 ---
 
 # AEM 6.5 Managing 使用指南
 
-瞭解如何成功管理AEM專案，並取得關鍵資源的支援及完整的AEM 6.5使用手冊集合。
+探索如何在關鍵資源和全系列 AEM 6.5 使用手冊的支援下成功管理 AEM 專案。
 
 ## AEM重要文章
 

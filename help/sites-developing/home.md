@@ -1,17 +1,17 @@
 ---
 title: AEM 6.5 Developing 使用指南
-description: 瞭解如何建置您的AEM執行個體。 進一步瞭解平台和元件，並尋找有關開發工具和個人化的資訊。
+description: 了解如何建置您的 AEM 執行個體。深入了解平台和元件，並找尋有關開發工具和個人化的資訊。
 exl-id: 4413f5e8-7e52-4ea7-8be3-5717b780a6e2
 source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
 source-wordcount: '262'
-ht-degree: 15%
+ht-degree: 33%
 
 ---
 
 # AEM 6.5 Developing 使用指南
 
-瞭解如何建置您的AEM執行個體。 進一步瞭解平台和元件，並尋找有關開發工具和個人化的資訊。
+了解如何建置您的 AEM 執行個體。深入了解平台和元件，並找尋有關開發工具和個人化的資訊。
 
 ## AEM重要文章
 

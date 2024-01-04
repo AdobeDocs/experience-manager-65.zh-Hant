@@ -1,6 +1,6 @@
 ---
 title: Assets 指南
-description: 在Experience Manager中建立、管理、處理和分配數位資產。 這些指南說明最佳實務、協助工具功能，以及如何使用AEM 6.5資產。
+description: 在 Experience Manager 中建立、管理、處理和分配數位資產。這些指南會介紹最佳做法、協助工具功能以及如何使用 AEM 6.5 資產。
 user-guide-title: Assets 指南
 feature: Asset Management
 role: User, Architect, Admin
@@ -8,13 +8,13 @@ exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
 source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 12%
+ht-degree: 31%
 
 ---
 
 # Assets 指南
 
-在Experience Manager中建立、管理、處理和分配數位資產。 這些指南說明最佳實務、協助工具功能，以及如何使用AEM 6.5資產。
+在 Experience Manager 中建立、管理、處理和分配數位資產。這些指南會介紹最佳做法、協助工具功能以及如何使用 AEM 6.5 資產。
 
 ## 重要 [!DNL Experience Manager] 文章
 
