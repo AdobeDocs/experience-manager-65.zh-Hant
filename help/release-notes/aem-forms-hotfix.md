@@ -1,17 +1,17 @@
 ---
-title: AEM Form Service Pack的Hotfix
-description: 提供如何下載和安裝AEM Forms Service Pack的Hotfix的相關資訊
-source-git-commit: 169d407835098add0312b0d12c2c80035b525762
+title: AEM Forms的Hotfix
+description: 提供有關如何下載和安裝AEM Forms的Hotfix的資訊。
+exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
+source-git-commit: 276b0122fb3d88c584dd6b2b4c2c6f6eda9d0537
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 0%
+source-wordcount: '200'
+ht-degree: 1%
 
 ---
 
+# Adobe Experience Manager Forms Hotfix{#aem-form-hotfix}
 
-# Adobe Experience Manager Hotfix{#aem-form-hotfix}
-
-安裝最新版的 [AEM Service Pack](/help/release-notes/release-notes.md) 我們建議您使用，其中包括安全性、效能、穩定性，以及自Adobe Experience Manager 6.5正式發行以來累積的重要客戶修正和增強功能。
+本文列出為解決已知問題、改善系統穩定性及增強AEM Forms整體效能而實作的重大修正。
 
 ## 最適化Forms的Hotfix {#hotfix-for-adaptive-forms}
 
@@ -19,11 +19,11 @@ ht-degree: 0%
   <tbody>
   <tr>
     <td><strong>日期</strong></td>
-    <td><strong>Hotfix名稱</strong></td>
-    <td><strong>修正</strong></td>
+    <td><strong>Hotfix下載連結(AEM軟體發佈連結)</strong></td>
+    <td><strong>已修正的問題</strong></td>
    </tr>
    <tr>
-    <td>2023 年 11 月 20 日</td>
+    <td>2023年11月20日</td>
      <td>
      <ul>
      <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-linux-pkg-6.0.1016-002.zip">適用於Linux的AEM Service Pack 6.5.18.0的Hotfix</a> </li>
@@ -42,11 +42,11 @@ ht-degree: 0%
     <tbody>
      </table>
 
-## 下載和安裝Hotfix {#download-install-hotfix}
+## 下載並安裝Hotfix {#download-install-hotfix}
 
 執行以下步驟來下載及安裝Hotfix：
 
-1. 下載 [Hotfix](#hotfix-for-adaptive-forms) 從SD連結。
+1. 下載 [Hotfix](#hotfix-for-adaptive-forms) 從Software Distribution連結。
 1. 解壓縮Hotfix封存檔案，以便取得Experience Manager套件(.zip)和套件(.jar)檔案。
-1. 透過封裝管理員上傳並安裝封裝(.zip)。
-1. 開啟Configuration Manager組合 `https://server:host/system/console/bundles`，上傳並安裝套件組合(.jar)。
+1. 透過上傳並安裝套件(.zip) [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=es#accessing).
+1. 開啟Configuration Manager組合 `https://server:host/system/console/bundles`，上傳並安裝套件組合(.jar)。 已安裝Hotfix。
