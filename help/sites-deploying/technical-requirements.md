@@ -3,7 +3,7 @@ title: 技術需求
 description: Adobe Experience Manager支援的使用者端和伺服器平台清單。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 6f2b16a51d4ad0f5c199ff41e8abe150c27ecc01
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3624'
 ht-degree: 0%
@@ -112,10 +112,10 @@ Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 | **Platform** | **說明** | **支援等級** |
 |---|---|---|
 | **具有TAR檔案的檔案系統** `[1]` | 存放庫 | 答：支援 |
-| **具有資料存放區的檔案系統** `[1]` | 二 進 制 檔 | 答：支援 |
-| 將二進位檔案存儲在檔案系統上的 TAR 檔中 `[1]` | 二進位檔案 | Z：不支援用於生產 |
+| **具有資料存放區的檔案系統** `[1]` | 二進位 檔 | 答：支援 |
+| 將二進位檔存儲在檔案系統上的 TAR 檔中 `[1]` | 二進位檔案 | Z：不支援用於生產 |
 | Amazon S3 | 二進位檔案 | 答：支援 |
-| Microsoft® Azure Blob儲存體 | 二 進 制 檔 | 答：支援 |
+| Microsoft® Azure Blob儲存體 | 二進位 檔 | 答：支援 |
 | MongoDB Enterprise 4.4 | 存放庫 | 答：支援 `[2, 3, 4]` |
 | MongoDB Enterprise 4.2 | 存放庫 | 答：支援 `[2, 3, 4]` |
 | MongoDB Enterprise 4.0 | 存放庫 | Z：不支援 |
@@ -158,7 +158,7 @@ Adobe客戶服務可協助解決與AEM搭配使用MongoDB相關的資格確認�
 >
 如上所列的支援關聯式資料庫是協力廠商軟體，未包含在AEM授權套件中。
 >
-要使用受支援的關係資料庫運行 AEM 6.5，需要與資料庫供應商簽訂單獨的支援合同。 Adobe Systems Customer Care 協助符合 AEM 6.5 之關係資料庫使用的相關資格問題。
+要使用受支持的關係資料庫運行 AEM 6.5，需要與資料庫供應商簽訂單獨的支援合同。 Adobe Systems Customer Care 協助符合 AEM 6.5 之關係資料庫使用的相關資格問題。
 >
 **大多數關係資料庫目前在 AEM 6.5 的 Level-R 中受支援，它附帶支援標準和支援方案，如上面的 Level-R 描述中所述。**
 
@@ -213,7 +213,7 @@ Adobe Experience Manager可與下列伺服器平台搭配使用以用於生產�
    * libXau.x86_64 (1.0.8-2.1.el7)
 
 1. 升級到 6.5 的客戶和非生產用途支援 Microsoft® Windows 生產部署。 新部署請求針對AEM Sites和Assets。
-1. Microsoft® Window Server 支援AEM Forms，沒有支援級別 R 限制。
+1. Microsoft® Window Server 支援AEM Forms，沒有支持級別 R 限制。
 1. AEM Forms刪除了對 Microsoft® Windows Server 2016 的支援。
 
 >[!NOTE]
@@ -231,7 +231,7 @@ Adobe Experience Manager可與下列伺服器平台搭配使用以用於生產�
 
 支援Adobe Experience Manager在雲端運算環境的虛擬機器器中執行。 這些環境包括Microsoft®Azure和Amazon Web Services (AWS)，依照本頁所列的技術要求和Adobe的標準支援條款執行。
 
-對於雲端原生環境，請檢閱AEM產品線中的最新產品：Adobe Experience Manager as a Cloud Service。 另請參閱 [Adobe Experience Manager as a Cloud Service檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=en) 以取得詳細資訊。
+對於雲端原生環境，請檢閱AEM產品線中的最新產品：Adobe Experience Manager as a Cloud Service。 另請參閱 [Adobe Experience Manager as a Cloud Service檔案](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) 以取得詳細資訊。
 
 Adobe也提供Adobe Managed Services功能，以便在Azure或AWS上部署AEM。 Adobe Managed Services為專家提供在這些雲端運算環境中部署和操作AEM的經驗和技能。 另請參閱 [有關AdobeManaged Services的其他檔案](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
 
@@ -241,7 +241,7 @@ Adobe也提供Adobe Managed Services功能，以便在Azure或AWS上部署AEM。
 
 ### Dispatcher平台（網頁伺服器） {#dispatcher-platforms-web-servers}
 
-Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=en). Experience Manager6.5需要Dispatcher版本4.3.2或更高版本。
+Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html). Experience Manager6.5需要Dispatcher版本4.3.2或更高版本。
 
 下列Web伺服器支援與Dispatcher版本4.3.2搭配使用：
 
@@ -251,16 +251,16 @@ Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](ht
 | Microsoft® IIS 10 (Internet Information Server) | 答：支援 |
 | Microsoft® IIS 8.5 （Internet Information Server） | Z：不支援 |
 
-1. 基於 Apache HTTPd 原始程式碼構建的 Web 服務器具有與其所基於的 HTTPd 版本一樣多的支援。 如有疑問，請Adobe Systems確認與相應伺服器產品相關的支援級別。 下列情況：
+1. 基於 Apache httpd 原始程式碼構建的 Web 伺服器具有與其所基於的 HTTPd 版本一樣多的支援。 如有疑問，請Adobe Systems確認與相應伺服器產品相關的支持級別。 下列情況：
 
    1. HTTP伺服器是僅使用官方Apache來源發佈所建置，或
    1. HTTP伺服器是作為執行伺服器之作業系統的一部分所提供。 示例：IBM® HTTP Server、Oracle HTTP Server
 
-1. Dispatcher 不適用於適用于 Windows 作業系統的 Apache 2.4.x。
+1. Dispatcher 不適用於適用於 Windows 作業系統的 Apache 2.4.x。
 
-## 支援的用戶端平臺 {#supported-client-platforms}
+## 支援的客戶端平臺 {#supported-client-platforms}
 
-### 創作使用者介面的支援瀏覽器 {#supported-browsers-for-authoring-user-interface}
+### 創作使用者介面的支持瀏覽器 {#supported-browsers-for-authoring-user-interface}
 
 Adobe Experience Manager使用者介面可與下列使用者端平台搭配使用。 所有瀏覽器都透過一組預設的外掛程式和附加元件進行測試。
 
@@ -354,7 +354,7 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
 
 Adobe Experience Manager的所有元素（例項、Dispatcher）都可以安裝在IPv4和IPv6網路中。
 
-操作是無縫的，因為不需要特殊配置。 如有必要，請使用適合您的網路類型的格式指定 IP 位址。
+操作是無縫的，因為不需要特殊配置。 如有必要，請使用適合您的網路類型的格式指定IP位址。
 
 當必須指定 IP 位址時，您可以（根據需要）從以下選項中選擇：
 
@@ -364,7 +364,7 @@ Adobe Experience Manager的所有元素（例項、Dispatcher）都可以安裝�
 
 * 伺服器名稱。 例如 `https://www.yourserver.com:4502`
 
-* 對於 IPv4 和 IPv6 網路安裝，將解釋 的預設 `localhost` 大小寫。 例如 `https://localhost:4502`
+* 對於 IPv4 和 IPv6 網路安裝，將解釋的預設 `localhost` 大小寫。 例如 `https://localhost:4502`
 
 ### AEM 動態媒體附加元件的要求 {#requirements-for-aem-dynamic-media-add-on}
 
@@ -414,7 +414,7 @@ AEM 動態媒體預設為停用。 請參閱此處 [啟用Dynamic Media](/help/a
 
 >[!NOTE]
 >
-**伺服器主機名稱必須解析：** 確保伺服器的主機名稱可解析為 IP 位址。 如果無法做到這一點，請將完全限定的 主機 名稱和 IP 位址 **添加到 /etc/hosts** ：
+**伺服器主機名稱必須解析：** 確保伺服器的主機名稱可解析為 IP 地址。 如果無法做到這一點，請將完全限定的 主機 名稱和 IP 地址 **添加到 /etc/hosts**：
 >
 `<ip address> <fully qualified hostname>`
 

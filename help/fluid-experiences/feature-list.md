@@ -4,7 +4,7 @@ description: 流動體驗功能清單
 index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: 7c691e275208287250f3540158a5e9948097b277
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 4%
@@ -49,7 +49,7 @@ AEM Fluid Experiences可與Classic AEM區分開來，因為系統只會處理Hea
 |---|
 | [HTTP API](/help/assets/mac-api-assets.md) |
 | [結構化內容模型](/help/assets/content-fragments/content-fragments.md) |
-| [內容服務](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=en) |
+| [內容服務](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) |
 | [體驗片段](/help/sites-authoring/experience-fragments.md) |
 | 結構化內容的HTTP API （讀取） |
 | 結構化內容(CRUD)的HTTP API |
@@ -82,7 +82,7 @@ AEM Fluid Experiences可與Classic AEM區分開來，因為系統只會處理Hea
 
 ## 了解更多 {#learn-more}
 
-* [無領導者使用案例的流暢體驗](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=en)
-* [AEM Content Service：什麼、為什麼、如何？](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
-* [協力廠商存取常見問題集](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=en)
+* [無領導者使用案例的流暢體驗](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html)
+* [AEM Content Service：什麼、為什麼、如何？](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html)
+* [協力廠商存取常見問題集](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html)
 * [使用Sling API](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)

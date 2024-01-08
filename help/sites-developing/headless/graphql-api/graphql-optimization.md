@@ -2,9 +2,9 @@
 title: 最佳化 GraphQL 查詢
 description: 瞭解如何在Adobe Experience Manager as a Cloud Service中篩選、分頁和排序內容片段時最佳化GraphQL查詢，以進行Headless內容傳送。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '1949'
 ht-degree: 58%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 58%
 
 請參閱：
 
-* [持續性 GraphQL 查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md).
+* [持續的GraphQL查詢](/help/sites-developing/headless/graphql-api/persisted-queries.md).
 * [了解搭配使用 GraphQL 與 AEM - 範例內容和查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
 
 #### 安裝GraphQL索引套件 {#install-graphql-index-package}
@@ -81,7 +81,7 @@ ht-degree: 58%
 
 請參閱：
 
-* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant#using-dispatcher-with-a-cdn)
+* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
 
 #### 設定HTTP快取控制標題 {#set-http-cache-control-headers}
 

@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '5811'
+source-wordcount: '5752'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在AEM 6.3和更新版本中，已引入此功能的線上版本，稱為「線上修訂清除」。 相較於必須關閉AEM執行個體的離線修訂清除，在AEM執行個體上線時可以執行線上修訂清除。 線上修訂清除預設為開啟，建議使用此方式執行修訂清除。
 
-**注意**： [觀看影片](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html?lang=en) 瞭解如何使用「線上修訂清除」。
+**注意**： [觀看影片](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html) 瞭解如何使用「線上修訂清除」。
 
 修訂清除處理包含三個階段： **預估**， **壓縮**、和 **clean up**. 預估會根據可能收集到多少廢棄專案來決定是否執行下一個階段（壓縮）。 在壓縮階段期間，區段和tar檔案會被重寫，而遺漏任何未使用的內容。 然後，清理階段會移除舊區段，包括可能包含的任何垃圾。 離線模式通常可以回收更多空間，因為線上模式必須考慮AEM工作集，以免收集額外的區段。
 
@@ -173,7 +173,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>移轉時可避免停機嗎？</strong></td>
-   <td>否. 這是一次性工作，無法在執行中的執行個體上完成。</td>
+   <td>不適用。 這是一次性工作，無法在執行中的執行個體上完成。</td>
    <td> </td>
   </tr>
   <tr>
@@ -183,7 +183,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>是否需要重新索引搜尋索引？</strong></td>
-   <td>否. 從Oak-segment移轉至Oak-segment-tar會導致容器格式發生變更。 包含的資料不受影響，且不會修改。</td>
+   <td>不適用。 從Oak-segment移轉至Oak-segment-tar會導致容器格式發生變更。 包含的資料不受影響，且不會修改。</td>
    <td> </td>
   </tr>
   <tr>
@@ -210,7 +210,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>線上修訂清除應該多久執行一次？</strong></td>
-   <td>一天一次. 這是「操作控制面板」中的預設設定。</td>
+   <td>一天一次。 這是「操作控制面板」中的預設設定。</td>
    <td> </td>
   </tr>
   <tr>

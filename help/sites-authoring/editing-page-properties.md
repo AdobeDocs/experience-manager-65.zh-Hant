@@ -2,10 +2,10 @@
 title: 編輯內容頁面屬性
 description: 在Adobe Experience Manager中定義頁面的必要屬性。
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1871'
-ht-degree: 6%
+source-wordcount: '1855'
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 6%
 
   這是必要欄位。
 
-* **標記**
+* **標籤**
 
   您可以在此處更新選取方塊中的清單，在頁面中新增或移除標籤：
 
@@ -40,7 +40,7 @@ ht-degree: 6%
 
   如需關於標籤的詳細資訊，請參閱 [使用標籤](/help/sites-authoring/tags.md).
 
-* **於導覽中隱藏**
+* **隱藏導覽**
 
   指示在產生的網站頁面導覽中是顯示還是隱藏頁面。
 
@@ -51,7 +51,7 @@ ht-degree: 6%
    * **覆寫**  — 勾選以在此頁面上定義品牌概要。
       * 此值會由任何子頁面繼承，除非這些頁面同時具有 **覆寫** 值已設定。
    * **覆寫值**  — 要附加至頁面標題的品牌概要文字。
-      * 此值會附加至頁面標題後的垂直號字元，例如「騎行Tuscany」 |隨時準備迎接WKND」
+      * 此值會附加至頁面標題後的垂直號字元，例如「騎行Tuscany」 | 隨時準備使用WKND」
 * **頁面標題**
 
   要在頁面上使用的標題。 通常由標題元件使用。 如果為空， **標題** 已使用。
@@ -68,7 +68,7 @@ ht-degree: 6%
 
   頁面的說明、用途或您要新增的任何其他詳細資訊。
 
-* **開啟時間**
+* **準時**
 
   啟動已發佈頁面的日期和時間。 發佈後，此頁面在指定時間之前會一直處於休眠狀態。
 
@@ -80,7 +80,7 @@ ht-degree: 6%
 
   再次將這些欄位留空以便立即採取行動。
 
-* **虛名 URL**
+* **虛名URL**
 
   輸入此頁面的虛名URL，此URL可讓您使用較短和/或較具表現力的URL。
 
@@ -88,7 +88,7 @@ ht-degree: 6%
 
   >[!CAUTION]
   >
-  >虛名 URL:
+  >虛名URL：
   >
   >* 必須是唯一的。 確定其他頁面尚未使用值。
   >* 不支援規則運算式模式。
@@ -97,7 +97,7 @@ ht-degree: 6%
 
   設定Dispatcher以啟用對虛名URL的存取權。 另請參閱 [啟用對虛名URL的存取權](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 以取得更多詳細資料。
 
-* **重新導向虛名 URL**
+* **重新導向虛名URL**
 
   指示您是否希望頁面使用虛名URL。
 
@@ -179,15 +179,15 @@ ht-degree: 6%
 
   選取要當做縮圖使用的現有資產。
 
-* **回復**
+* **回覆**
 
   在您變更縮圖後，此選項即變為可用。 如果您不想保留變更，則可以在儲存前還原該變更。
 
 ### 社交媒體 {#social-media}
 
-* **社交媒體分享**
+* **社群媒體分享**
 
-  定義頁面上可用的共用選項。 公開可用的選項 [共用核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html?lang=en).
+  定義頁面上可用的共用選項。 公開可用的選項 [共用核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html).
 
    * **啟用Facebook的使用者共用**
    * **啟用Pinterest的使用者共用**
@@ -196,17 +196,17 @@ ht-degree: 6%
 
 ### 雲端服務 {#cloud-services}
 
-* **雲端服務**
+* **Cloud Service**
 
   定義屬性 [雲端服務](/help/sites-developing/extending-cloud-config.md).
 
 ### 個人化 {#personalization}
 
-* **ContextHub 組態**
+* **ContextHub設定**
 
   選取 [ContextHub設定](/help/sites-developing/ch-configuring.md) 和 [區段路徑](/help/sites-administering/segmentation.md).
 
-* **定位組態**
+* **目標設定**
 
   選取 [品牌以指定目標定位的範圍](/help/sites-authoring/target-adobe-campaign.md).
 
@@ -215,7 +215,7 @@ ht-degree: 6%
 
 ### 權限 {#permissions}
 
-* **權限**
+* **許可權**
 
   在此標籤中，您可以：
 

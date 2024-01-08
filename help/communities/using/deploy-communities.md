@@ -3,10 +3,10 @@ title: 部署社群
 description: 如何部署AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1761'
-ht-degree: 2%
+source-wordcount: '1705'
+ht-degree: 0%
 
 ---
 
@@ -102,7 +102,7 @@ AEM 6.5 Communities GA包含Communities套件。 進一步瞭解AEM 6.5的更新
 
    * 版本必須>= 5.1.38
 
-1. 提取 `mysql-connector-java-&lt;version&gt;-bin.jar (bundle) from the archive`
+1. Extract `mysql-connector-java-&lt;version&gt;-bin.jar (bundle) from the archive`
 1. 使用Web主控台安裝並啟動套件組合：
 
    * 例如， https://localhost:4502/system/console/bundles
@@ -356,8 +356,8 @@ AEM Communities有兩個功能，需要所有AEM伺服器執行個體使用相�
 
 如果使用Dispatcher，請參閱：
 
-* AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 檔案
-* [安裝 Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en)
+* AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 檔案
+* [安裝 Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)
 * [為社群設定Dispatcher](/help/communities/dispatcher.md)
 * [已知問題](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 

@@ -7,7 +7,7 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3186'
 ht-degree: 1%
@@ -46,7 +46,7 @@ ht-degree: 1%
 >[!NOTE]
 >
 >下列教學課程可能也適合在新專案中設定可編輯的頁面範本：
->[AEM Sites快速入門第2部分 — 建立基礎頁面和範本](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html?lang=en)
+>[AEM Sites快速入門第2部分 — 建立基礎頁面和範本](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html)
 
 ## 建立新範本 {#creating-a-new-template}
 
@@ -70,7 +70,7 @@ ht-degree: 1%
    * 結構可讓您定義範本的元件和內容。
    * 範本結構中定義的元件無法在產生的頁面上移動，也無法從任何產生的頁面中刪除。
 
-      * 如果您是在「 」之外的自訂資料夾中建立範本 `We.Retail` 範例內容，您可以選擇基礎元件或使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=en).
+      * 如果您是在「 」之外的自訂資料夾中建立範本 `We.Retail` 範例內容，您可以選擇基礎元件或使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html).
 
    * 如果您希望頁面作者能夠新增和移除元件，請新增段落系統至範本。
    * 您可以解除鎖定元件，然後再將其鎖定，讓您可以定義初始內容。

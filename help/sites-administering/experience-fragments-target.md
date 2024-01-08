@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 1%
@@ -102,7 +102,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
    >
    >如果您將雲端設定新增至體驗片段本身，該設定會由所有變數繼承。
 
-1. 選取 **Cloud Service** 標籤。
+1. 選取「**雲端服務**」標籤。
 
 1. 在 **Cloud Service設定**，選取 **Adobe Target** 下拉式清單中的。
 
@@ -182,7 +182,7 @@ AEM體驗片段可以匯出至Adobe Target中的預設工作區，或匯出至Ad
 
 ## 在Adobe Target中使用您的體驗片段 {#using-your-experience-fragments-in-adobe-target}
 
-執行先前的工作後，體驗片段會顯示在Adobe Target的「選件」頁面中。 檢視 [特定Target檔案](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=en) 以瞭解您能達成的目標。
+執行先前的工作後，體驗片段會顯示在Adobe Target的「選件」頁面中。 檢視 [特定Target檔案](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html) 以瞭解您能達成的目標。
 
 >[!NOTE]
 >

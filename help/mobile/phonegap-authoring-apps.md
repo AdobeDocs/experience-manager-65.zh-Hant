@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ AEM Mobile Dashboard可讓您建立、建置和部署行動應用程式、建立
 >
 >另請參閱 [設定您的Adobe Mobile ServicesCloud Service](/help/mobile/configure-adobe-mobile-cloud-service.md) 以取得詳細資訊。
 
-AEM Mobile透過與Adobe Analytics整合 [AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=en) (AMS)。
+AEM Mobile透過與Adobe Analytics整合 [AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html) (AMS)。
 
 控制中心 **量度圖磚** 顯示從AMS為您的應用程式提取的摘要分析。 您可以按一下右下方的「……」，深入分析控制面板。
 

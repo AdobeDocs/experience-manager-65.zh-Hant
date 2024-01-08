@@ -7,9 +7,9 @@ topic-tags: Security
 content-type: reference
 docset: aem65
 exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '706'
 ht-degree: 0%
 
 ---
@@ -114,13 +114,13 @@ ht-degree: 0%
 
 如果您使用Dispatcher，則需要使用以下屬性定義Dispatcher陣列：
 
-* [虛擬主機](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#identifying-virtual-hosts-virtualhosts)：比對CUG套用至的頁面路徑。
+* [虛擬主機](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#identifying-virtual-hosts-virtualhosts)：比對CUG套用至的頁面路徑。
 * \sessionmanagement：請參閱下文。
-* [快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)：專屬於CUG套用之檔案的快取目錄。
+* [快取](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)：專屬於CUG套用之檔案的快取目錄。
 
 ### 設定CUG的Dispatcher工作階段管理 {#configuring-dispatcher-session-management-for-cugs}
 
-設定 [dispatcher.any檔案中的工作階段管理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) 用於CUG。 要求CUG頁面的存取權時所使用的驗證處理常式，會決定您設定工作階段管理的方式。
+設定 [dispatcher.any檔案中的工作階段管理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) 用於CUG。 要求CUG頁面的存取權時所使用的驗證處理常式，會決定您設定工作階段管理的方式。
 
 ```xml
 /sessionmanagement
@@ -134,7 +134,7 @@ ht-degree: 0%
 >當Dispatcher陣列啟用工作階段管理時，不會快取陣列處理的所有頁面。 若要快取CUG以外的頁面，請在dispatcher.any中建立第二個陣列
 >處理非CUG頁面的即時通訊協定。
 
-1. 設定 [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) 透過定義 `/directory`；例如：
+1. 設定 [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) 透過定義 `/directory`；例如：
 
    ```xml
    /sessionmanagement
@@ -144,4 +144,4 @@ ht-degree: 0%
      }
    ```
 
-1. 設定 [/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-when-authentication-is-used) 至 `0`.
+1. 設定 [/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used) 至 `0`.

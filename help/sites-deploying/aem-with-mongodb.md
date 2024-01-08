@@ -7,7 +7,7 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: 70a39462-8584-4c76-a097-05ee436247b7
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '6184'
 ht-degree: 0%
@@ -592,7 +592,7 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 
 在沒有Dispatcher的情況下執行AEM需要由其他應用程式執行SSL終止和負載平衡。 這是必要操作，因為工作階段必須和建立工作階段的AEM執行個體有相關性，這個概念稱為粘性連線。 原因是為了確保內容的更新顯示最小的延遲。
 
-檢查 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) 以取得如何設定的詳細資訊。
+檢查 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 以取得如何設定的詳細資訊。
 
 ### 其他設定 {#additional-configuration}
 

@@ -7,7 +7,7 @@ topic-tags: platform
 content-type: reference
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
@@ -58,7 +58,7 @@ AEM現在提供兩種基本型別的範本以用於建立頁面：
 
 >[!NOTE]
 >
->另請參閱 [使用可編輯的頁面範本來開發Experience Manager網站](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en).
+>另請參閱 [使用可編輯的頁面範本來開發Experience Manager網站](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html).
 
 ### 靜態範本 {#static-templates}
 

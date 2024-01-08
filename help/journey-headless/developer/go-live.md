@@ -2,10 +2,10 @@
 title: 如何將 Headless 應用程式上線
 description: 在AEM Headless開發人員歷程的這一部分，瞭解如何即時部署Headless應用程式。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 51%
+source-wordcount: '1803'
+ht-degree: 53%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 51%
 
 * 了解 AEM Assets HTTP API。
 
-本文章以這些基本知識為基礎，以便您了解如何準備您自己的 AEM Headless 專案並計畫上線。
+本文章以這些基本知識為基礎，以便您了解如何準備您自己的 AEM Headless 專案並方案上線。
 
 ## 目標 {#objective}
 
@@ -94,7 +94,7 @@ Node.js是JavaScript執行階段環境，用來處理AEM專案的 `ui.frontend` 
 
 設定本機開發環境後，您可以透過在本機部署靜態Node伺服器來模擬提供給React應用程式的內容。
 
-若要更深入地瞭解如何設定本機開發環境以及內容預覽所需的所有相依性，請參閱 [生產部署檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html?lang=en).
+若要更深入地瞭解如何設定本機開發環境以及內容預覽所需的所有相依性，請參閱 [生產部署檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html).
 
 ## 準備您的AEM Headless應用程式以供上線 {#prepare-your-aem-headless-application-for-golive}
 
@@ -141,7 +141,7 @@ Node.js是JavaScript執行階段環境，用來處理AEM專案的 `ui.frontend` 
 
 ## 使用Maven部署至生產環境 {#deploy-to-production-maven}
 
-針對 *傳統* 使用Maven部署（非AMS），請參閱 [WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=en#build) 以取得概覽。
+針對 *傳統* 使用Maven部署（非AMS），請參閱 [WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html#build) 以取得概覽。
 
 ## 使用Cloud Manager部署到生產 {#deploy-to-production-cloud-manager}
 
@@ -167,7 +167,7 @@ You can start deploying your code by using the Cloud Manager CI/CD pipeline, whi
       * 檢查使用者、請求和載入的數量
 * 存取應用程式和空間特定的效能報表
    * 伺服器啟動後，檢查一般量度是否為綠色/橘色/紅色，然後識別特定的應用程式問題
-   * 開啟上方經篩選以至應用程式或空間的相同報表(例如Photoshop案頭版、付費牆版)
+   * 開啟上面篩選到應用程式或空間 (例如 Photoshop 桌面、付費牆) 的相同報告
    * 使用 Splunk log API 存取服務和應用程式效能
    * 如果還有其他問題，請聯絡客戶支援。
 
@@ -214,11 +214,11 @@ You can start deploying your code by using the Cloud Manager CI/CD pipeline, whi
 
 ## 其他資源 {#additional-resources}
 
-* [AEM Developing指南](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html?lang=en)
+* [AEM Developing指南](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html)
 
-* [WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en)
+* [WKND教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
-* [適用於AEM的Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hant)
+* [適用於AEM的Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 
 * CDN快取
 

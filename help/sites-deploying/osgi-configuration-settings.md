@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3360'
 ht-degree: 0%
@@ -35,7 +35,7 @@ OSGi 」*提供標準化的基本概念，允許使用小型、可重複使用�
 
 >[!NOTE]
 >
->OSGi設定差異工具，屬於 [AEM工具](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html?lang=en)，可用來列出預設OSGi設定。
+>OSGi設定差異工具，屬於 [AEM工具](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html)，可用來列出預設OSGi設定。
 
 >[!NOTE]
 >
@@ -271,7 +271,7 @@ OSGi 」*提供標準化的基本概念，允許使用小型、可重複使用�
 
 >[!CAUTION]
 >
->變更其中一項的設定時 **最小化** 或 **Gzip**，刪除clientlibs快取的內容。 另請參閱 [知識庫文章](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en) 以取得詳細資訊。
+>變更其中一項的設定時 **最小化** 或 **Gzip**，刪除clientlibs快取的內容。 另請參閱 [知識庫文章](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html) 以取得詳細資訊。
 
 >[!NOTE]
 >

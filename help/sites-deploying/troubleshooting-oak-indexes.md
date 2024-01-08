@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 85981463-189c-4f50-9d21-1d2f734b960a
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 1%
+source-wordcount: '1387'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +50,7 @@ AEM內部重新索引程式會收集存放庫資料並將其儲存在Oak索引�
 
 >[!NOTE]
 >
->對於AEM 6.1，請確保 [AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant) 已安裝。
+>對於AEM 6.1，請確保 [AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) 已安裝。
 
 在特殊情況下，用於管理非同步索引的對話串池可能會變得超載。 為了隔離索引過程，可以配置對話串池以防止其他AEM工作干擾Oak及時索引內容的能力。 在這種情況下，請執行以下操作：
 

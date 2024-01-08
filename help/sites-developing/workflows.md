@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 041b1767-8b6c-4887-a70d-abc96a116976
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1460'
 ht-degree: 3%
@@ -37,7 +37,7 @@ AEM提供了數種工具和資源，用於建立工作流程模型、開發工�
 >
 >* 參與工作流程，請參閱 [使用工作流程](/help/sites-authoring/workflows.md).
 >* 管理工作流程與工作流程例項，請參閱 [管理工作流程](/help/sites-administering/workflows.md).
->* 如需端對端社群文章，請參閱 [使用Adobe Experience Manager工作流程修改數位資產。](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=zh-Hant)
+>* 如需端對端社群文章，請參閱 [使用Adobe Experience Manager工作流程修改數位資產。](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html)
 >* 請參閱 [向AEM專家詢問工作流程網路研討會](https://communities.adobeconnect.com/p5s33iburd54/).
 >* 資訊位置的變更請參閱 [AEM 6.5中的存放庫重組](/help/sites-deploying/repository-restructuring.md) 和 [工作流程最佳實務 — 位置](/help/sites-developing/workflows-best-practices.md#locations).
 >
@@ -203,7 +203,7 @@ A `WorkItem` 是通過 `Workflow` 例項 `WorkflowModel`. 它包含 `WorkflowDat
 
 ### 工作流程和Forms {#workflows-and-forms}
 
-通常使用工作流程來處理AEM中的表單提交。 它可以與 [核心元件表單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=en) 可在標準AEM例項中使用，或透過 [AEM Forms解決方案](/help/forms/using/aem-forms-workflow.md).
+通常使用工作流程來處理AEM中的表單提交。 它可以與 [核心元件表單元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html) 可在標準AEM例項中使用，或透過 [AEM Forms解決方案](/help/forms/using/aem-forms-workflow.md).
 
 建立表單時，可輕鬆將表單提交與工作流程模型建立關聯。 例如，將內容儲存在存放庫的特定位置，或通知使用者表單提交及其內容。
 

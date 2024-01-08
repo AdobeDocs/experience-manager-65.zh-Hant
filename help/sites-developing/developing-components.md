@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3246'
 ht-degree: 0%
@@ -91,11 +91,11 @@ AEM元件可用來保留、格式化及轉譯可在網頁上使用的內容。
 
 ### 使用Java {#using-java}
 
-[HTL Java Use-API讓HTL檔案能夠存取自訂Java類別中的helper方法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=en). 這可讓您使用Java程式碼來實作選取和設定元件內容的邏輯。
+[HTL Java Use-API讓HTL檔案能夠存取自訂Java類別中的helper方法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html). 這可讓您使用Java程式碼來實作選取和設定元件內容的邏輯。
 
 ### 使用JavaScript {#using-javascript}
 
-[HTL JavaScript Use-API讓HTL檔案能夠存取以JavaScript撰寫的helper程式碼](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=en). 這可讓您使用JavaScript程式碼來實作選取和設定元件內容的邏輯。
+[HTL JavaScript Use-API讓HTL檔案能夠存取以JavaScript撰寫的helper程式碼](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html). 這可讓您使用JavaScript程式碼來實作選取和設定元件內容的邏輯。
 
 ### 使用使用者端HTML程式庫 {#using-client-side-html-libraries}
 
@@ -194,7 +194,7 @@ newComponent (cq:Component)
 >
 >請參閱：
 >
->* 上的AEM Gems研討會 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
+>* 上的AEM Gems研討會 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
 >* 下的相關範常式式碼 [程式碼範例 — 如何自訂對話方塊欄位](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields).
 >
 
@@ -460,9 +460,9 @@ GITHUB上的程式碼
    * 建立對話方塊以用於觸控式UI。 不過，為相容性目的，如果沒有為觸控式UI定義對話方塊，觸控式UI可以使用傳統UI對話方塊的定義。
    * 此 [AEM現代化工具](/help/sites-developing/modernization-tools.md) 提供來協助您擴充現有元件。
    * [將ExtJS對應至Granite UI元件](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components) 提供ExtJS xtypes和節點型別及其同等的Granite UI資源型別的便利概述。
-   * 自訂欄位，如需詳細資訊，請參閱上的AEM Gems研討會 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
+   * 自訂欄位，如需詳細資訊，請參閱上的AEM Gems研討會 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
    * 從vtype移轉至 [Granite UI驗證](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
-   * 使用JS監聽器，如需詳細資訊，請參閱 [處理欄位事件](#handling-field-events) 以及上的AEM Gems研討會 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
+   * 使用JS監聽器，如需詳細資訊，請參閱 [處理欄位事件](#handling-field-events) 以及上的AEM Gems研討會 [自訂對話方塊欄位](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
 
 ### 正在移轉cq：listener程式碼 {#migrating-cq-listener-code}
 

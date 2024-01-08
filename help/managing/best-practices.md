@@ -7,10 +7,10 @@ topic-tags: managing-checklist, introduction
 content-type: reference
 docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '3238'
-ht-degree: 1%
+source-wordcount: '3214'
+ht-degree: 0%
 
 ---
 
@@ -185,7 +185,7 @@ ht-degree: 1%
 
    * 每個環境的程式；例如，部署和維護需求
    * 維護活動（Datastore GC、TarPM最佳化等）
-   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 快取
+   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 快取
    * [叢集](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) 發佈/Authorshare
    * 使用者端的效能（JS精簡、concat、css指令集、http請求總數及其他）
 
@@ -244,7 +244,7 @@ ht-degree: 1%
 
 #### 里程碑 {#milestones-3}
 
-* **權限**
+* **許可權**
 
   您必須針對將使用此解決方案的所有使用者/群組規劃，然後實作角色和許可權概念。
 
@@ -449,7 +449,7 @@ ht-degree: 1%
 
   確保支援服務準備就緒。
 
-* **切換**
+* **轉變**
 
   規劃並執行轉換至您的生產環境和使用者。
 

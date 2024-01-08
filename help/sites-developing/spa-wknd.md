@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 exl-id: 59ada14e-3cb1-4f2c-b866-a2bb130db3fc
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 5%
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 如需建立您自己的單頁應用程式的端對端範例，這些應用程式可透過AEM從專案設定開始透過應用程式路由編輯，請參閱WKND SPATutorials：
 
-* [AEM SPA編輯器和Angular快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html?lang=en)
+* [AEM SPA編輯器和Angular快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
 * [AEM SPA Editor and React快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
 
 不過，在您開始自己的AEM SPA專案之前，也請務必檢閱 [為AEM開發SPA](/help/sites-developing/spa-architecture.md) 檔案。

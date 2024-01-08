@@ -7,10 +7,10 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '2113'
-ht-degree: 1%
+source-wordcount: '2092'
+ht-degree: 0%
 
 ---
 
@@ -178,7 +178,7 @@ LDAP驗證會在存放庫層級進行，因此會直接由存放庫處理。 如
 
 Dispatcher是Adobe Experience Manager的快取或/及負載平衡工具。 它可以搭配企業級網頁伺服器使用。
 
-另請參閱 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 以取得完整詳細資訊，特別是 [設定Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant) 以取得進一步的設定詳細資料。
+另請參閱 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 以取得完整詳細資訊，特別是 [設定Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html) 以取得進一步的設定詳細資料。
 
 ### 設定AEMLiveCycle聯結器 {#configuring-aem-livecycle-connector}
 

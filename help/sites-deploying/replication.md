@@ -8,10 +8,10 @@ topic-tags: configuring
 docset: aem65
 feature: Configuring
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '3389'
-ht-degree: 5%
+source-wordcount: '3363'
+ht-degree: 2%
 
 ---
 
@@ -69,7 +69,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 >[!NOTE]
 >
->預設為啟用 :
+>預設為啟用：
 >
 >* 作者上的代理程式：預設代理程式（發佈）
 >
@@ -105,7 +105,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 * [預設代理程式](#replication-author-to-publish)
 用於從Author復寫至Publish。
 
-* Dispatcher Flush這是用於管理Dispatcher快取。 另請參閱 [使編寫環境中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-the-authoring-environment) 和 [使發佈執行個體中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-a-publishing-instance) 以取得詳細資訊。
+* Dispatcher Flush這是用於管理Dispatcher快取。 另請參閱 [使編寫環境中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment) 和 [使發佈執行個體中的Dispatcher快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance) 以取得詳細資訊。
 
 * [反向復寫](#reverse-replication-publish-to-author)
 用於從發佈復寫至作者。 反向復寫不適用於Communities功能，例如論壇、部落格和評論。 由於未啟用寄件匣，因此此功能實際上已停用。 使用反向復寫需要自訂設定。
@@ -138,7 +138,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
    * **閒置** 當佇列為空時。
    * **已封鎖** 當專案在佇列中，但無法處理時；例如，當接收佇列停用時。
 
-* **序列化類型**
+* **序列化型別**
 
   序列化的型別：
 
@@ -149,9 +149,9 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   若發生問題，兩次重試之間的延遲（等待時間，以毫秒為單位）。
 
-  預設: `60000`
+  預設： `60000`
 
-* **代理使用者 ID**
+* **代理使用者ID**
 
   根據環境，代理程式會使用此使用者帳戶來：
 
@@ -180,9 +180,9 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
    * `Info`：記錄錯誤、警告和其他資訊訊息
    * `Debug`：訊息會使用高層次的詳細資料，主要用於偵錯
 
-  預設: `Info`
+  預設： `Info`
 
-* **用於反向複寫**
+* **用於反向復寫**
 
   指出此代理程式是否用於反向復寫；從發佈環境傳回使用者輸入至製作環境。
 
@@ -203,7 +203,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   此處指定的通訊協定（HTTP或HTTPS）會決定傳輸方法。
 
-  對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 鎖定第一個陣列，並使用 `/path2/invalidate.cache` 鎖定第二個陣列。 
+  對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用URL `/path1/invalidate.cache` 以第一個陣列為目標，並 `/path2/invalidate.cache` 以定位第二個陣列。
 
 * **使用者**
 
@@ -213,15 +213,15 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   用於存取目標的帳戶密碼。
 
-* **NTLM 網域**
+* **NTLM網域**
 
   NTML驗證的網域。
 
-* **NTLM 主機**
+* **NTLM主機**
 
   NTML驗證的主機。
 
-* **啟用寬鬆 SSL**
+* **啟用寬鬆SSL**
 
   如果您希望接受自我認證的SSL憑證，請啟用。
 
@@ -233,27 +233,27 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 只有在需要Proxy時，才需要下列設定：
 
-* **Proxy 主機**
+* **Proxy主機**
 
   用於傳輸的Proxy主機名稱。
 
-* **Proxy 連接埠**
+* **Proxy連線埠**
 
   Proxy的連線埠。
 
-* **Proxy 使用者**
+* **Proxy使用者**
 
   要使用的帳戶使用者名稱。
 
-* **Proxy 密碼**
+* **Proxy密碼**
 
   要使用的帳戶密碼。
 
-* **Proxy NTLM 網域**
+* **Proxy NTLM網域**
 
   代理NTLM網域。
 
-* **Proxy NTLM 主機**
+* **Proxy NTLM主機**
 
   代理NTLM網域。
 
@@ -265,13 +265,13 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   這會設定建立連線時要使用的本機位址。 如果未設定，則使用預設地址。 這對於指定要在多主伺服器或叢集化系統上使用的介面非常有用。
 
-* **HTTP 方法**
+* **HTTP方法**
 
   要使用的HTTP方法。
 
   對於Dispatcher Flush代理程式，這幾乎一律為GET且不應變更(POST是另一個可能的值)。
 
-* **HTTP 標頭**
+* **HTTP標題**
 
   這些用於Dispatcher Flush代理程式，並指定必須清除的元素。
 
@@ -318,11 +318,11 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
   如果勾選，代理將從預設復寫中排除；這意味著如果內容作者發出復寫動作，則不會使用代理。
 
-* **於修改**
+* **修改**
 
   在此，當頁面修改時，將自動觸發此代理程式的復寫。 用於Dispatcher Flush代理程式，也用於反向復寫。
 
-* **頁尾 (設計)**
+* **於散佈**
 
   如果勾選，代理程式會在修改內容時自動複製標籤為分發的任何內容。
 
@@ -352,7 +352,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
 
 >[!NOTE]
 >
->當Dispatcher處理製作或發佈執行個體的HTTP請求時，來自復寫代理程式的HTTP請求必須包含PATH標頭。 除了以下程式外，您必須將PATH標頭新增到Dispatcher的使用者端標頭清單。 另請參閱 [/clientheaders （使用者端標頭）](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders).
+>當Dispatcher處理製作或發佈執行個體的HTTP請求時，來自復寫代理程式的HTTP請求必須包含PATH標頭。 除了以下程式外，您必須將PATH標頭新增到Dispatcher的使用者端標頭清單。 另請參閱 [/clientheaders （使用者端標頭）](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders).
 >
 
 1. 存取 **工具** AEM索引標籤中的「 」。
@@ -477,7 +477,7 @@ AEM標準安裝中包含的We-Retail網站可用於說明復寫。
       * 輸入用於復寫的站台特定使用者帳戶。
       * 您可以視需要設定其他引數。
 
-   對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 鎖定第一個陣列，並使用 `/path2/invalidate.cache` 鎖定第二個陣列。 
+   對於Dispatcher Flush代理程式，只有當您使用以路徑為根據的虛擬主機專案來區分陣列時，才會使用URI屬性，而您會使用此欄位來鎖定要失效的陣列。 例如，陣列 #1 的虛擬主機為 `www.mysite.com/path1/*`，而陣列 #2 的虛擬主機為 `www.mysite.com/path2/*`。 您可以使用URL `/path1/invalidate.cache` 以第一個陣列為目標，並 `/path2/invalidate.cache` 以定位第二個陣列。
 
    >[!NOTE]
    >

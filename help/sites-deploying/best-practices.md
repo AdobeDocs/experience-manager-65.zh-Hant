@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 10%
+source-wordcount: '439'
+ht-degree: 3%
 
 ---
 
@@ -95,8 +95,8 @@ AEM目前有兩個UI：同版中的傳統和觸控最佳化UI。 因此，客戶
   </tr>
   <tr>
    <td>搭配 CDN 使用 Dispatcher</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant#using-dispatcher-with-a-cdn">搭配 CDN 使用 Dispatcher</a></td>
-   <td>內容傳遞網路 (CDN) (例如 Akamai Edge Delivery 或 Amazon Cloud Front) 會從接近使用者的位置傳遞內容。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">搭配 CDN 使用 Dispatcher</a></td>
+   <td>內容傳遞網路(CDN) (例如Akamai Edge Delivery或Amazon Cloud Front)會從接近使用者的位置傳遞內容。</td>
   </tr>
   <tr>
    <td>效能最佳化</td>

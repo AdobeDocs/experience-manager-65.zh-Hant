@@ -2,10 +2,10 @@
 title: Adobe Experience Manager 6.5 Communities指南
 description: 建立線上體驗，例如論壇、使用者群組、學習資源和其他社交功能。 瀏覽本指南，瞭解如何部署、管理、開發及編寫Communities。
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: 7c691e275208287250f3540158a5e9948097b277
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 10%
 
 * [AEM快速入門](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
 * [AEM 6.5發行說明](/help/release-notes/home.md)
-* [近期文件更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=zh-Hant)
+* [近期文件更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [AEM安全性檢查清單](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5使用手冊
@@ -39,10 +39,10 @@ ht-degree: 10%
 ## 重要AEM資源
 
 * [AEM教學課程](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
-* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en)
+* [Dispatcher使用手冊](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL使用手冊](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [核心元件使用手冊](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hant)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 * [GDPR 整備](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://experienceleague.adobe.com/#home)
 * [AEM 社群論壇](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)

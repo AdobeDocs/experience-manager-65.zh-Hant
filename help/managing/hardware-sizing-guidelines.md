@@ -7,10 +7,10 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: 5837ef4f-d4e0-49d7-a671-87d5547e0d98
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '2798'
-ht-degree: 1%
+source-wordcount: '2846'
+ht-degree: 0%
 
 ---
 
@@ -115,7 +115,7 @@ AEM在虛擬化環境中運作良好，但可能有CPU或I/O等因素無法直�
 預估需要多少叢集節點是根據基本需求及特定Web專案的特定使用案例而定：
 
 * 從故障安全的角度來看，必須根據叢集節點復原所需的時間，決定所有環境的嚴重故障以及故障補償時間。
-* 在擴充性方面，寫入作業的數目基本上是最重要的因素；請參閱 [同時工作的作者](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) （針對作者環境和） [Social Collaboration](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) 用於發佈環境。 可以針對僅存取系統的作業建立負載平衡，以處理讀取作業；請參閱 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant) 以取得詳細資訊。
+* 在擴充性方面，寫入作業的數目基本上是最重要的因素；請參閱 [同時工作的作者](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) （針對作者環境和） [Social Collaboration](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) 用於發佈環境。 可以針對僅存取系統的作業建立負載平衡，以處理讀取作業；請參閱 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 以取得詳細資訊。
 
 ## 作者環境特定的計算 {#author-environment-specific-calculations}
 

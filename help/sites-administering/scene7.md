@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '5425'
 ht-degree: 1%
@@ -308,7 +308,7 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
 
    ![chlimage_1-297](assets/chlimage_1-297.png)
 
-1. 在 **[!UICONTROL 標題]** 欄位，並可選擇在 **[!UICONTROL 名稱]** 欄位，輸入適當的資訊。 選擇 **[!UICONTROL 建立]**。
+1. 在 **[!UICONTROL 標題]** 欄位，並可選擇在 **[!UICONTROL 名稱]** 欄位，輸入適當的資訊。 選取「**[!UICONTROL 建立]**」。
 
    >[!NOTE]
    >
@@ -351,7 +351,7 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
 
    ![chlimage_1-299](assets/chlimage_1-299.png)
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 ### 將可設定的逾時新增至Dynamic Media Classic上傳工作流程 {#adding-configurable-timeout-to-scene-upload-workflow}
 
@@ -367,7 +367,7 @@ Adobe建議您讓根資料夾僅指向子資料夾，而非整個公司，以測
    >
    >最佳實務：大部分資產至多會在數分鐘內擷取（例如影像）。 但在某些情況下（例如較大的影片），請將逾時值增加到7200秒（兩個小時），以因應較長的處理時間。 否則，此Dynamic Media Classic上傳工作會標示為 **[!UICONTROL UploadFailed]** 在JCR (Java™內容存放庫)中繼資料中。
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 ### 從Experience Manager Assets自動上傳 {#autouploading-from-aem-assets}
 
@@ -418,7 +418,7 @@ Dynamic Media Classic資產仍可透過安全預覽使用。 只有當資產在E
 您必須先設定下列專案，才能在不發佈資產的情況下將資產推送至Dynamic Media Classic：
 
 1. [使用Admin Console建立支援案例](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). 在您的支援案例中，要求為您的Dynamic Media Classic帳戶啟用安全預覽。
-1. [為您的Dynamic Media Classic帳戶設定安全預覽](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=en).
+1. [為您的Dynamic Media Classic帳戶設定安全預覽](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html).
 
 這些步驟與您在Dynamic Media Classic中建立任何安全測試設定時所遵循的步驟相同。
 

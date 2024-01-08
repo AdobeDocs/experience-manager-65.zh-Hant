@@ -7,7 +7,7 @@ topic-tags: platform
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/microkernels-in-aem-6-0
 exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '706'
 ht-degree: 0%
@@ -116,7 +116,7 @@ Red Hat® Linux®使用稱為Transparent Great Pages (THP)的記憶體管理演�
 >請參閱下列資源：
 >
 >* 如需Red Hat® Linux®上透明大型頁面的詳細資訊，請參閱此 [文章](https://access.redhat.com/solutions/46111).
-* 如需Linux®調整秘訣，請參閱以下內容 [文章](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
+* 如需Linux®調整秘訣，請參閱以下內容 [文章](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
 >
 
 ## 維護存放庫 {#maintaining-the-repository}

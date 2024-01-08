@@ -2,9 +2,9 @@
 title: 如何透過 AEM Delivery API 存取您的內容
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解如何使用 GraphQL 查詢來存取您的內容片段內容。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1332'
+source-wordcount: '1301'
 ht-degree: 93%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 93%
 
 在 [AEM Headless 開發人員歷程](overview.md)的這一部分中，您可以了解如何使用 GraphQL 查詢來存取您的內容片段內容並提供給您的應用程式 ( Headless 傳遞)。
 
-## 到目前為止 {#story-so-far}
+## 目前進度 {#story-so-far}
 
 在 AEM Headless 歷程的上一個文件「[如何建立內容模型](model-your-content.md)」中，您已了解在 AEM 中建立內容模型的基本知識，所以現在您應該了解如何建立內容結構模型，然後使用 AEM 內容片段模型和內容片段實現該結構。
 
 * 認識內容模型相關的概念和術語。
 * 了解為什麼 Headless 內容傳遞需要內容模型。
-* 了解如何使用 AEM 內容片段模型實現此結構 (和使用內容片段編寫內容)。
+* 了解如何使用 AEM 內容片段模型實現此結構 (和使用內容片段製作內容)。
 * 了解如何建立內容模型；基本範例的原則。
 
 本文章以這些基本知識為基礎，以便您了解如何使用 AEM GraphQL API 在 AEM 存取您現有的 Headless 內容。
@@ -374,7 +374,7 @@ query {
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)
    * [內容片段模型](/help/assets/content-fragments/content-fragments-models.md)
    * [JSON 輸出](/help/assets/content-fragments/content-fragments-json-preview.md)
-* [了解跨原始資源共用 (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=zh-Hant#understand-cross-origin-resource-sharing-(cors))
+* [了解跨原始資源共用 (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html#understand-cross-origin-resource-sharing-(cors))
 * [AEM Headless 快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - 此為簡短的教學影片系列，概述如何使用 AEM 的 Headless 功能，包括內容模型和 GraphQL。
 
 <!--

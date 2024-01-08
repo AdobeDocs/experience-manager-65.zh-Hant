@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '2935'
 ht-degree: 5%
@@ -36,7 +36,7 @@ ht-degree: 5%
    <td><p><strong>安全性</strong></p> </td>
    <td><p><strong>微核心</strong></p> </td>
    <td><p><strong>資料存放區</strong></p> </td>
-   <td><p><strong>索引</strong></p> </td>
+   <td><p><strong>建立索引</strong></p> </td>
    <td><p><strong>網頁伺服器</strong></p> </td>
    <td><p><strong>瀏覽器</strong></p> </td>
    <td><p><strong>Experience Cloud</strong></p> </td>
@@ -84,7 +84,7 @@ ht-degree: 5%
    <td><p>行銷活動</p> </td>
   </tr>
   <tr>
-   <td><p>Forms</p> </td>
+   <td><p>表單</p> </td>
    <td><p>Author-Offload</p> </td>
    <td><p>HP-UX</p> </td>
    <td><p>Tomcat</p> </td>
@@ -427,7 +427,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 ### TarMK設定指引 {#tarmk-settings-guideline}
 
-為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明， [請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
+為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明， [請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
 
 <table>
  <tbody>
@@ -537,7 +537,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 
 ### MongoMK設定指南 {#mongomk-settings-guidelines}
 
-為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明， [請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
+為了獲得良好的效能，您應該遵循以下提供的設定准則。 如需如何變更設定的說明， [請參閱此頁面](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
 
 <table>
  <tbody>

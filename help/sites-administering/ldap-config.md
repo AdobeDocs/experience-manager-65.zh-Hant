@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1613'
 ht-degree: 0%
@@ -38,7 +38,7 @@ LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotoco
 
 >[!NOTE]
 >
->觀看 [Oak的外部登入模組 — 使用LDAP及其他進行驗證](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html?lang=en) 以深入探究外部登入模組。
+>觀看 [Oak的外部登入模組 — 使用LDAP及其他進行驗證](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html) 以深入探究外部登入模組。
 >
 >若要閱讀使用Apache DS設定Experience Manager的範例，請參閱 [正在設定Adobe Experience Manager 6.5以使用Apache目錄服務。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
 

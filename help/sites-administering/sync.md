@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '2502'
-ht-degree: 3%
+source-wordcount: '2434'
+ht-degree: 1%
 
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 3%
 
 1. 確認已安裝最新程式碼：
 
-* [AEM平台更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant)
+* [AEM平台更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)
 * [AEM Communities更新](/help/communities/deploy-communities.md#latestfeaturepack)
 
 ### 1. Apache Sling散發代理程式 — 同步代理程式處理站 {#apache-sling-distribution-agent-sync-agents-factory}
@@ -211,7 +211,7 @@ ht-degree: 3%
 
       * 若要開啟以進行編輯，請選取現有組態（鉛筆圖示）
 
-        驗證 `agent name`: `socialpubsync-reverse`
+        驗證 `agent name`： `socialpubsync-reverse`
 
       * 選取 `Enabled` 核取方塊
       * 選取 `Save`
@@ -235,7 +235,7 @@ ht-degree: 3%
 
       * 若要開啟以進行編輯，請選取現有組態（鉛筆圖示）
 
-         * 驗證 `Name`: `socialpubsync-scheduled-trigger`
+         * 驗證 `Name`： `socialpubsync-scheduled-trigger`
 
       * 設定 `Interval in Seconds` 至所需的間隔
       * 選取 `Save`
@@ -506,9 +506,9 @@ ht-degree: 3%
 
 | **path** | **jcr：all** | **rep：glob** |
 |---|---|---|
-| /home | X | &#42;/活動/&#42; |
-| /home/users | X | &#42;/活動/&#42; |
-| /home/groups | X | &#42;/活動/&#42; |
+| /home | X | &#42;/activities/&#42; |
+| /home/users | X | &#42;/activities/&#42; |
+| /home/groups | X | &#42;/activities/&#42; |
 
 身為 `administrators` 群組，則獲授權的使用者應在所有Publish執行個體上具有下列許可權：
 

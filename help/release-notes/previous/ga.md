@@ -2,7 +2,7 @@
 title: 一般發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5版本注意事項概述版本資訊、新增功能、安裝方法以及詳細變更清單。」'
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '4484'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 | 版本 | 6.5 |
 | 類型 | 主要版本 |
 | 正式發行日期 | 2019 年 4 月 8 日 |
-| 建議的更新 | 另請參閱 [AEM最近更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hant). |
+| 建議的更新 | 另請參閱 [AEM最近更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html). |
 
 ### Trivia {#trivia}
 
@@ -115,7 +115,7 @@ UI已進行各種增強功能，使其更有效率且更易於使用。
 
 #### Headless內容管理 {#headless-content-management}
 
-AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年起就開始使用 [SlingGET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) 和 [POSTServlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html). 內容服務([Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=en))已在AEM 6.3中推出，且為AEM SJ SDK用來對單頁應用程式進行水合化的方法。 此 [適用於資產的HTTP API](/help/assets/mac-api-assets.md) 是針對AEM 6.5擴充的CRUD API。
+AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年起就開始使用 [SlingGET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) 和 [POSTServlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html). 內容服務([Sling模型匯出工具](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html))已在AEM 6.3中推出，且為AEM SJ SDK用來對單頁應用程式進行水合化的方法。 此 [適用於資產的HTTP API](/help/assets/mac-api-assets.md) 是針對AEM 6.5擴充的CRUD API。
 
 新HTTP API功能：
 
@@ -137,7 +137,7 @@ AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年
 * 使用動態預留位置，依位置或資料觸發內容的設定進行個人化。
 * Adobe Analytics整合至AEM Screens Player所驅動的統一深入分析
 
-如需AEM Screens變更的詳細資訊 — 請參閱 [AEM Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=zh-Hant).
+如需AEM Screens變更的詳細資訊 — 請參閱 [AEM Screens使用手冊](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html).
 
 #### 元件與範本開發 {#component-amp-template-development}
 
@@ -357,7 +357,7 @@ AEM 6.5引進以下功能和增強功能，以提高AEM使用者、DAM角色和�
 
 [!DNL Experience Manager Assets Brand Portal] 協助您輕鬆取得、有效控制並安全地散佈核准的資產，給跨裝置的外部廠商/代理商及內部業務使用者。 它有助於提高資產共用的效率、加快資產上市時間，並消除不合規使用和未經授權存取的風險。
 
-如需詳細資訊，請參閱 [Brand Portal的新增功能](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=zh-Hant).
+如需詳細資訊，請參閱 [Brand Portal的新增功能](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
 
 #### 連接的資產 {#connectedassets}
 
@@ -558,7 +558,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 * **資料夾中繼資料結構**：新增選擇按鈕後，ID和值欄位未如預期轉譯，並且刪除功能無法運作。 (CQ-4261144)
 * 重新命名資產時，資產名稱中不可使用空白字元。 (CQ-4266403)
 
-### Forms {#forms}
+### 表單 {#forms}
 
 * 在Linux®作業系統上安裝AEM Forms時，使用硬體安全性模組的數位簽名無法運作。 (CQ-4266721)
 * (僅限WebSphere上的AEM Forms®) **Forms Workflow** > **任務搜尋** 如果您搜尋「 」，選項不會傳回任何結果 **管理員** 替換為 **使用者名稱** 作為搜尋條件。 (CQ-4266457)
@@ -596,4 +596,4 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 * 產品更新、修補程式及套件，適用於 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 
-* [透過Admin Console提供客戶支援](https://adminconsole.adobe.com/). 如需詳細資訊，請參閱 [新的Adobe客戶支援體驗](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=en).
+* [透過Admin Console提供客戶支援](https://adminconsole.adobe.com/). 如需詳細資訊，請參閱 [新的Adobe客戶支援體驗](https://experienceleague.adobe.com/docs/customer-one/using/home.html).

@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '6469'
 ht-degree: 11%
@@ -22,7 +22,7 @@ ht-degree: 11%
 >
 >如需疑難排解和修正效能問題的詳細資訊，另請參閱 [效能樹狀結構](/help/sites-deploying/performance-tree.md).
 >
->您也可以檢閱知識庫文章，網址為 [效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
+>您也可以檢閱知識庫文章，網址為 [效能調整秘訣](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
 
 關鍵問題是您的網站回應訪客要求所需的時間。 雖然此值會因每個請求而有所不同，但您可以定義平均目標值。 一旦這個值被證實既可達到又可維持，就可用來監視網站的效能並指示潛在問題的發展。
 
@@ -39,7 +39,7 @@ ht-degree: 11%
 >[!NOTE]
 >
 >* 在設定效能最佳化後，請遵循下列程式： [艱苦的一天](/help/sites-developing/tough-day.md) 以測試高負載下的環境。
->* 另請參閱 [效能調校秘訣。](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en)
+>* 另請參閱 [效能調校秘訣。](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
 
 ## 效能最佳化方法 {#performance-optimization-methodology}
 
@@ -201,7 +201,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 >[!NOTE]
 >
->另請參閱 [效能最佳化](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
+>另請參閱 [效能最佳化](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
 
 ### 搜尋索引 {#search-indexing}
 
@@ -476,7 +476,7 @@ AEM的某些層面（和/或基礎存放庫）可設定為最佳化效能。 以
 
 ## 使用Dispatcher時最佳化效能 {#optimizing-performance-when-using-the-dispatcher}
 
-此 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) 是Adobe的快取及/或負載平衡工具。 使用Dispatcher時，請考慮將您的網站快取效能最佳化。
+此 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 是Adobe的快取及/或負載平衡工具。 使用Dispatcher時，請考慮將您的網站快取效能最佳化。
 
 >[!NOTE]
 >
@@ -492,7 +492,7 @@ Dispatcher提供數個內建機制，方便您在網站使用時用來最佳化�
 >
 >一般而言，許多快取策略與選取良好URL且不依賴這些額外資料有關。
 >
->使用Dispatcher版本4.1.11時，您還可以快取回應標題，請參閱 [快取HTTP回應標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache).
+>使用Dispatcher版本4.1.11時，您還可以快取回應標題，請參閱 [快取HTTP回應標頭](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache).
 >
 
 ### 計算Dispatcher快取比率 {#calculating-the-dispatcher-cache-ratio}
@@ -528,7 +528,7 @@ Dispatcher提供數個內建機制，方便您在網站使用時用來最佳化�
 
 #### 避免 URL 參數 {#avoid-url-parameters}
 
-可能的話，請避免針對您想要快取的頁面使用 URL 參數。 例如，如果您有圖片庫，則絕對不會快取以下 URL (除非 Dispatcher [已適當地設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache))：
+可能的話，請避免針對您想要快取的頁面使用 URL 參數。 例如，如果您有圖片庫，則絕對不會快取以下 URL (除非 Dispatcher [已適當地設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache))：
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -616,7 +616,7 @@ www.myCompany.com/news/main.large.html
 
 #### 黏性連線 {#sticky-connections}
 
-[黏性連線](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en#the-benefits-of-load-balancing)可確保同一個使用者的文件都會在相同伺服器上編寫。 如果使用者離開此資料夾並於稍後返回，連線仍然保持不變。 若要保留所有需要網站的粘性連線的檔案，請定義一個資料夾。 試著不要將其他文件放在該資料夾中。 如果您使用個人化頁面和工作階段資料，此案例會影響負載平衡。
+[黏性連線](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#the-benefits-of-load-balancing)可確保同一個使用者的文件都會在相同伺服器上編寫。 如果使用者離開此資料夾並於稍後返回，連線仍然保持不變。 若要保留所有需要網站的粘性連線的檔案，請定義一個資料夾。 試著不要將其他文件放在該資料夾中。 如果您使用個人化頁面和工作階段資料，此案例會影響負載平衡。
 
 #### MIME 類型 {#mime-types}
 

@@ -1,15 +1,15 @@
 ---
-title: 編寫
+title: 製作
 description: Adobe Experience Manager 6.5中的製作和發佈概念。
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 2%
+source-wordcount: '547'
+ht-degree: 1%
 
 ---
 
-# 編寫{#authoring}
+# 製作{#authoring}
 
 ## 製作（和發佈）的概念 {#concept-of-authoring-and-publishing}
 
@@ -81,4 +81,4 @@ AEM提供您兩個環境：
 
 #### Dispatcher {#dispatcher}
 
-若要最佳化網站訪客的效能， **[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant)** 實作負載平衡和快取。
+若要最佳化網站訪客的效能， **[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)** 實作負載平衡和快取。

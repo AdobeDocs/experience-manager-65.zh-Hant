@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: personalization
 docset: aem65
 exl-id: 97e02986-049f-4747-a67a-6aa0677b281e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '903'
 ht-degree: 8%
@@ -79,7 +79,7 @@ ht-degree: 8%
 1. 按一 **下「新增規則** 」以新增其他規則。視需要輸入任意數量的規則。規則會與布林運算子AND結合，這表示對象必須符合每個規則的所有要求才能符合活動的資格。
 1. 按一下「**下一步**」。
 1. 輸入對象名稱，然後按一下 **儲存**.
-1. 按一下 **儲存**. 您的對象會列在「對象」清單中。
+1. 按一下「**儲存**」。您的對象會列在「對象」清單中。
 
 ### 屬性及其選項 {#attributes-and-their-options}
 
@@ -91,7 +91,7 @@ ht-degree: 8%
 | **自訂** | 自訂引數為mbox引數。 如果您將任何mbox引數傳遞至mbox，或使用targetPageParams函式，這些引數就會顯示在這裡，以供對象使用。 | 另請參閱 [自訂引數檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) 在Adobe Target。 |
 | **作業系統** | 您可以鎖定使用特定作業系統的訪客。 | 定位使用Linux®、Macintosh或Windows的使用者。 |
 | **網頁** | 定位位在某個特定頁面上的訪客或具有特定mbox引數的訪客。 | 另請參閱 [網頁檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) 在Adobe Target。 |
-| **瀏覽器** | 您可以鎖定造訪您的頁面時使用特定瀏覽器或特定瀏覽器選項的使用者。 | 另請參閱 [瀏覽器選項檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=en) 在Adobe Target。 |
+| **瀏覽器** | 您可以鎖定造訪您的頁面時使用特定瀏覽器或特定瀏覽器選項的使用者。 | 另請參閱 [瀏覽器選項檔案](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) 在Adobe Target。 |
 | **訪客資料** | 符合特定設定檔引數的目標訪客。 | 另請參閱 [訪客資料檔案](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile.html) 在Adobe Target。 |
 | **流量來源** | 根據參照至您網站的搜尋引擎或著陸頁面鎖定訪客。 | 另請參閱 [流量來原始檔](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) 在Adobe Target。 |
 

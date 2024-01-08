@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 11%
+source-wordcount: '601'
+ht-degree: 7%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 11%
 
 * 聯絡[客戶服務](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
 
-另請參閱主要的 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hant).
+另請參閱主要的 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html).
 
 ## Dispatcher快取 {#dispatcher-caching}
 
@@ -39,7 +39,7 @@ AEM Communities適用的Dispatcher快取可讓Dispatcher提供社群網站頁面
 
 ### 要求 {#requirements}
 
-* Dispatcher版本4.1.2或更新版本(請參閱 [安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en) （最新版本）
+* Dispatcher版本4.1.2或更新版本(請參閱 [安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) （最新版本）
 * [ACS AEM Commons套件](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * 版本3.3.2或更新版本
@@ -56,7 +56,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — 最長存留期*
 * 尋找 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * 選取「+」圖示，即可建立連線設定。
 
-  ![Dispatcher ](assets/dispatcher.png)
+  ![dispatcher](assets/dispatcher.png)
 
 * **篩選模式**
   *（必要）* 社群頁面的一或多個路徑。 例如，`/content/sites/engage/(.*)`。
@@ -66,7 +66,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — 最長存留期*
 
 ## Dispatcher篩選器 {#dispatcher-filters}
 
-的/filter區段 `dispatcher.any` 檔案記錄於 [設定對內容的存取權 — /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hant).
+的/filter區段 `dispatcher.any` 檔案記錄於 [設定對內容的存取權 — /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html).
 
 本節說明Communities功能正常運作可能需要的專案。
 
@@ -76,7 +76,7 @@ OSGi設定 **ACS AEM Commons - Dispatcher快取控制標頭 — 最長存留期*
 
 另請參閱：
 
-* [Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)
+* [Dispatcher安全性檢查清單](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)
 
 >[!NOTE]
 >

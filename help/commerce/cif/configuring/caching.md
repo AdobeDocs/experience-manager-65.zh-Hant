@@ -2,10 +2,10 @@
 title: 快取與效能
 description: 瞭解各種可用設定，以啟用GraphQL和內容快取，將您的Commerce實作效能最佳化。
 exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '849'
-ht-degree: 3%
+source-wordcount: '818'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +51,7 @@ venia/components/structure/navigation:true:10:600
 
 除了純AEM受管內容CIF之外，頁面通常還可以顯示透過GraphQL從Adobe Commerce動態擷取的商務資料。 雖然頁面結構本身可能不會變更，但如果部分產品資料（例如名稱或價格）在Adobe Commerce中有所變更，商業內容可能會有所不同。
 
-為了確保CIF頁面可以在AEM Dispatcher中的有限時間內進行快取，我們因此建議使用 [基於時間的快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-time-based-cache-invalidation-enablettl) （也稱為TTL型快取）在AEM Dispatcher中快取CIF頁面時。 此功能可在AEM中使用「 」額外的 [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) 封裝。
+為了確保CIF頁面可以在AEM Dispatcher中的有限時間內進行快取，我們因此建議使用 [基於時間的快取失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl) （也稱為TTL型快取）在AEM Dispatcher中快取CIF頁面時。 此功能可在AEM中使用「 」額外的 [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) 封裝。
 
 使用TTL型快取時，開發人員通常會為選取的AEM頁面定義一或多個快取持續時間。 這可確保在AEM Dispatcher中快取CIF頁面，直到設定的持續時間為止，並且內容將經常更新。
 
@@ -63,4 +63,4 @@ venia/components/structure/navigation:true:10:600
 
 - [Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)
 - [GraphQL快取設定](https://github.com/adobe/commerce-cif-graphql-client#caching)
-- [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
+- [AEM傳送器](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

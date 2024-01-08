@@ -2,7 +2,7 @@
 title: 持續性 GraphQL 查詢
 description: 瞭解如何在Adobe Experience Manager中保留GraphQL查詢，以將效能最佳化。 持久查詢可以由使用者端應用程式使用HTTPGET方法請求，響應可以快取在Dispatcher和CDN層，最終提高使用者端應用程式的效能。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 85%
@@ -262,7 +262,7 @@ query getAdventuresByActivity($activity: String!) {
 
 ## 快取持續性查詢 {#caching-persisted-queries}
 
-建議使用持續性查詢，因為可以在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) 和內容傳遞網路 (CDN) 層進行快取，最終提升發出要求的用戶端應用程式效能。
+建議使用持續性查詢，因為可以在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 和內容傳遞網路 (CDN) 層進行快取，最終提升發出要求的用戶端應用程式效能。
 
 依預設，AEM 將根據存留時間 (TTL) 定義使快取失效。這些 TTL 可以依照以下參數定義。這些參數可以透過各種方式存取，根據所使用的機制，名稱會有所不同：
 

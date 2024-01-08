@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '5793'
 ht-degree: 0%
@@ -59,13 +59,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有關備份性能的更多資訊，請閱讀 [ 返回性能 ](/help/sites-deploying/configuring-performance.md#backup-performance) 部分。
+>有關備份性能的更多信息，請閱讀 [返回性能](/help/sites-deploying/configuring-performance.md#backup-performance) 部分。
 
 ### 備份軟體安裝 {#backing-up-your-software-installation}
 
-安裝或對配置進行重大更改後，請創建軟體安裝備份。
+安裝或對配置進行重大更改后，請創建軟體安裝備份。
 
-若要完成此任務， [ 請備份整個存放庫 ](#backing-up-your-repository) 然後：
+若要完成此任務， [請備份整個存放庫](#backing-up-your-repository) 然後：
 
 1. 停止 AEM。
 1. 備份整個 `<cq-installation-dir>` 從您的檔案系統。
@@ -290,7 +290,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 名稱：`org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
 
-     其中 `<identifier>` 替換為您（必須）輸入以標識執行個體免費文本（不能省略此資訊）。
+     其中 `<identifier>` 替換為您（必須）輸入以標識執行個體免費文本（不能省略此信息）。
 
      例如 `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
@@ -431,11 +431,11 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >指示何時建立新檔案（以及根據名稱模式重新命名現有檔案）。
    >
    >* 可使用數字指定大小限制。 如果未指定大小指示器，則會將其視為位元組數，或者您可以新增其中一個大小指示器 —  `KB`， `MB`，或 `GB` （忽略大小寫）。
-   >* 可以將時間/日期計畫指定為模式 `java.util.SimpleDateFormat` 。 它定義了檔旋轉之後的時段。 此外，附加在旋轉檔的尾碼（用於識別）。
+   >* 可以將時間/日期計劃指定為模式 `java.util.SimpleDateFormat` 。 它定義了文件旋轉之後的時段。 此外，附加在旋轉檔的後綴（用於識別）。
    >
    >預設值為「」。yyyy-MM-dd （用於每日日誌輪換）。
    >
-   >例如，在 2010 年 1 月 20 日午夜（或在此日期之後出現的第一條日誌消息精確時）,../logs/error.log 已重新命名為 ../logs/error.log.2010-01-20. 1 月 21 日的日誌記錄輸出到（新的和空的）../logs/error.log，直到在下一個更改日期時滾動。
+   >例如，在 2010 年 1 月 20 日午夜（或在此日期之後出現的第一條日誌消息精確時）,../logs/error.log 已重新命名為 ../logs/error.log.2010-01-20. 1 月 21 日的記錄輸出到（新的和空的）../logs/error.log，直到在下一個更改日期時滾動。
    >
    >| `'.'yyyy-MM` | 每月月初輪換 |
    >|---|---|
@@ -1096,9 +1096,9 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 >
 另請參閱下列文章以取得詳細資訊：
 >
-* [執行緒傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=en)
-* [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=en)
-* [使用內建分析工具進行分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=en)
+* [執行緒傾印](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)
+* [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)
+* [使用內建分析工具進行分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html)
 * [分析緩慢和封鎖的流程](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 >
 
@@ -1123,7 +1123,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * 使用的JVM設定 [啟動AEM](/help/sites-deploying/deploy.md#getting-started)
 * 知識庫：
 
-   * [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=en)
+   * [分析記憶體問題](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)
 
 ### 磁碟I/O {#disk-i-o}
 
@@ -1132,7 +1132,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * 無論您是否已停用除錯資訊的收集，都可以在各種位置進行設定，包括：
 
    * [Apache Sling JSP指令碼處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjspscripthandler)
-   * [Apache Sling JavaScript處理常式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
+   * [Apache Sling JavaScript處理程式](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
    * [Apache Sling 記錄組態](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
    * [CQ HTML 庫管理員](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
    * [CQ WCM Debug 篩選](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
@@ -1141,12 +1141,12 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * 是否已以及如何配置 [版本清除](/help/sites-deploying/version-purging.md)
 * 知識庫：
 
-   * [開啟的檔案過多](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=en)
+   * [開啟的檔案過多](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html)
    * [日誌佔用太多磁碟空間](https://helpx.adobe.com/experience-manager/kb/JournalTooMuchDiskSpace.html)
 
 ### 定期效能降低 {#regular-performance-degradation}
 
-如果您在每次重新開機後（有時一周或更晚）看到執行個體的性能下降，則可以檢查以下內容：
+如果您在每次重新啟動後（有時一周或更晚）看到執行個體的性能下降，則可以檢查以下内容：
 
 * [記憶體不足](#outofmemory)
 * 知識庫：
