@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 3adf2b03ac4e227af2b33099c24ec177b8ea7e1b
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1227'
 ht-degree: 0%
 
 ---
@@ -73,13 +73,26 @@ CRX本身的記憶體空間不足。 如果在CRX內執行的應用程式有更�
 
 從命令列啟動AEM WCM時，請指定記憶體設定選項。 用於管理AEM WCM啟動的AEM WCM啟動/停止指令碼或自訂指令碼也可以修改，以定義所需的記憶體設定。
 
-如果您已經將棧大小定義為512 MB，您可以建立棧積傾印以進一步分析記憶體問題：
+如果您已經將棧大小定義為512 MB，您可以建立棧積傾印以進一步分析記憶體問題。
 
 若要在記憶體不足時自動建立棧積傾印，請使用以下命令：
 
 java -Xmx256m -XX：+HeapDumpOnOutOfMemoryError -jar &amp;ast；.jar
 
-此方法會產生棧積傾印檔案(**java_...hprof**)，只要處理序的記憶體不足即會進行。 產生棧積傾印後，該程式可能會繼續執行。 通常，一個棧積傾印檔案就足以分析問題。
+此方法會產生棧積傾印檔案(**java_...hprof**)，只要處理序的記憶體不足即會進行。 產生棧積傾印後，該程式可能會繼續執行。
+
+通常需要在一段時間內收集的三個棧積傾印檔案來分析問題：
+
+* 在失敗發生之前
+* 失敗期間1
+* 失敗期間2
+* *理想情況下，在事件解決後收集資訊也會有幫助*
+
+您可以比較這些變更以及物件使用記憶體的方式。
+
+>[!NOTE]
+>
+>如果您定期收集這類資訊，或曾經讀取棧積傾印，則一個棧積傾印檔案就足以分析問題。
 
 ### 按兩下AEM快速入門後，AEM歡迎畫面未顯示在瀏覽器中 {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
 
