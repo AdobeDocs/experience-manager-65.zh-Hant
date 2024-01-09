@@ -9,9 +9,9 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: 4a8155f754d1f71354717f5eb22511baab110916
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1731'
 ht-degree: 31%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 31%
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html) |
 | AEM 6.5 | 本文 |
 
-**套用至：** ✅最適化表單核心元件❎ [最適化表單基礎元件](/help/forms/using/create-adaptive-form.md).
+<!--**Applies to:** ✅ Adaptive Form Core Components ❎ [Adaptive Form Foundation Components](/help/forms/using/create-adaptive-form.md).-->
 
 最適化表單可讓您建立吸引人、回應式、動態且最適化的表單。AEM Forms提供方便企業使用者使用的UI，以便快速建立最適化Forms。 UI提供快速索引標籤導覽，以便輕鬆選取用於建立最適化表單的預先設定的範本、樣式、欄位和提交選項。
 
