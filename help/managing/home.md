@@ -2,16 +2,24 @@
 title: AEM 6.5 Managing 使用指南
 description: 探索如何在關鍵資源和全系列 AEM 6.5 使用手冊的支援下成功管理 AEM 專案。
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
-source-git-commit: 7c691e275208287250f3540158a5e9948097b277
+source-git-commit: 5a7729e1792bc5849682800781e31f41c6bb6e4a
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 32%
+source-wordcount: '294'
+ht-degree: 28%
 
 ---
 
 # AEM 6.5 Managing 使用指南
 
 探索如何在關鍵資源和全系列 AEM 6.5 使用手冊的支援下成功管理 AEM 專案。
+
+## 重要管理文章
+
+* [管理專案 — 最佳實務檢查清單](/help/managing/best-practices.md)
+* [硬體大小調整准則](/help/managing/hardware-sizing-guidelines.md)
+* [SEO和URL管理最佳作法](/help/managing/seo-and-url-management.md)
+* [AEM與網頁協助工具准則](/help/managing/web-accessibility.md)
+* [Adobe Experience Manager的資料保護與資料隱私權法規整備](/help/managing/data-protection-and-privacy.md)
 
 ## AEM重要文章
 
