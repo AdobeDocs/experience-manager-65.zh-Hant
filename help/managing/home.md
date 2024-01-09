@@ -2,10 +2,10 @@
 title: AEM 6.5 Managing 使用指南
 description: 探索如何在關鍵資源和全系列 AEM 6.5 使用手冊的支援下成功管理 AEM 專案。
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
-source-git-commit: 5ee9bc34128738967124855652c7b38c65d8779d
+source-git-commit: 02dd950111a45908f0a65deb9e5c28b4b119269f
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 38%
+source-wordcount: '90'
+ht-degree: 35%
 
 ---
 
@@ -14,6 +14,8 @@ ht-degree: 38%
 瞭解如何透過關鍵資源的支援以及最佳實務和准則，成功管理AEM專案。
 
 ## 重要文章
+
+本指南中的主要文章包括：
 
 * [管理專案 — 最佳實務檢查清單](/help/managing/best-practices.md)
 * [硬體大小調整准則](/help/managing/hardware-sizing-guidelines.md)
