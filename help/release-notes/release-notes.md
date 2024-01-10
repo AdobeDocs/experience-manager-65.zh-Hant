@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 2c5791e972deef5fe81768d10ad53acaf946332a
 workflow-type: tm+mt
-source-wordcount: '4333'
+source-wordcount: '4308'
 ht-degree: 6%
 
 ---
@@ -64,9 +64,6 @@ ht-degree: 6%
 
 * **64位元XMLFM**： XMLFM的64位元版帶來更優異的效能、擴充能力，以及更精細的記憶體管理。 這是第一個在伺服器端部署的64位元原生服務。 XMLFM 64位元可利用其固有的功能，存取與32位元對應的記憶體資源相比更大的記憶體資源，因此能夠順暢處理更大的演算工作負載。 這個里程碑不僅代表效能的飛躍，也為AEM Forms伺服器內的原生服務架構引入重要增強功能。 此更新讓AEM Forms伺服器可順暢支援任何64位元原生服務。
 
-**已棄用的功能**
-
-* AEM中的ActiveMQ已過時。 ActiveMQ用於兩個AEM Publish執行個體之間的通訊。 Adobe建議客戶現在使用負載平衡器。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
