@@ -5,9 +5,9 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 2cf980f643e1896ecd581fec44f963d7eb44766d
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1698'
 ht-degree: 1%
 
 ---
@@ -60,6 +60,7 @@ ht-degree: 1%
 1. 前往雲端服務中的專案連結資料夾索引標籤。
 1. 連結資料夾父路徑：在DAM中選取您想要建立連結資料夾的資料夾。 如果留空，其將預設為/content/dam。 請確定Workfront工具中繼資料結構和Workfront連結資料夾中繼資料結構已套用至選取的資料夾。
 1. 連結的資料夾結構：輸入逗號分隔值。 每個值都應 `DE:<some-project-custom-form-field>`、Portfolio、方案、年份、名稱或某些「常值字串值」（最後一項帶有引號）。 目前設為Portfolio、方案、年、DE：專案型別、名稱。
+1. 設定許可權：新增 `jcr:all permissions` 許可權： `/conf/workfront-tools/settings/cloudconfigs` 的 `wf-workfront-users` 群組。
 1. 如果Workfront中的資料夾標題應包含結構中的所有資料夾，則應核取使用資料夾結構名稱在Workfront中建立連結資料夾標題。 否則，這是最後一個資料夾的標題。
 1. 子資料夾多欄位可讓您指定應建立為連結資料夾的子資料夾的資料夾清單。
 1. 專案狀態：選取專案狀態以建立連結的資料夾。
