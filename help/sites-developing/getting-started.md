@@ -1,18 +1,19 @@
 ---
 title: 開發 AEM Sites 快速入門 - WKND 教學課程
-description: 第一次開發 AEM？需要複習最佳做法？這是開始的地方！這個由多個部分組成的教學課程的目標是指導 AEM 新手開發人員如何使用最新的標準和技術在 AEM 中實作網站。
+description: 了解如何建置您的 AEM 執行個體。深入了解平台和元件，並找尋有關開發工具和個人化的資訊。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
 docset: aem65
 exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 81%
+source-wordcount: '211'
+ht-degree: 80%
 
 ---
+
 
 # 開發 AEM Sites 快速入門 - WKND 教學課程{#getting-started-developing-aem-sites-wknd-tutorial}
 
@@ -26,7 +27,7 @@ ht-degree: 81%
 
 ![WKND](assets/screen_shot_2018-11-23at152453.png)
 
-[這裡提供 WKND 開發人員教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)，它會逐步指導您如何使用最新技術和最佳做法建立 AEM 專案。
+[這裡提供 WKND 開發人員教學課程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)，它會逐步指導您如何使用最新技術和最佳做法建立 AEM 專案。
 
 ## 核心概念 {#core-concepts}
 

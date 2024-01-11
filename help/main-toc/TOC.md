@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 241e39ae402744ac200cfd9220245b080aec33af
+source-git-commit: 4be8b14ca9af543cec89c85ec5750f2065033406
 workflow-type: tm+mt
-source-wordcount: '7328'
+source-wordcount: '7297'
 ht-degree: 18%
 
 ---
@@ -17,8 +17,7 @@ ht-degree: 18%
 # Adobe Experience Manager 6.5檔案 {#content}
 
 + 發行說明 {#release-notes}
-   + [AEM 6.5發行說明](/help/release-notes/home.md)
-   + [最新發行說明](/help/release-notes/release-notes.md)
+   + [發行說明](/help/release-notes/release-notes.md)
    + 舊版發行說明 {#service-pack}
       + [6.5.18](/help/release-notes/previous/6.5.18.md)
       + [6.5.17](/help/release-notes/previous/6.5.17.md)
@@ -74,7 +73,6 @@ ht-degree: 18%
    + [相同網站Cookie支援](/help/sites-administering/same-site-cookie-support.md)
 + Sites {#sites}
    + 製作 {#authoring}
-      + [製作使用手冊概覽](/help/sites-authoring/home.md)
       + AEM Authoring的基本工作、工具和概念 {#essentials}
          + [作者的首要步驟](/help/sites-authoring/first-steps.md)
          + [頁面製作](/help/sites-authoring/page-authoring.md)
@@ -270,7 +268,6 @@ ht-degree: 18%
          + [畫面內容管理](/help/sites-administering/content-management-screens.md)
          + [WebDAV存取](/help/sites-administering/webdav-access.md)
    + 傳統UI編寫 {#classic-ui}
-      + [傳統UI編寫指南總覽](/help/sites-classic-ui-authoring/home.md)
       + 傳統UI編寫簡介 {#introduction}
          + [作者的首要步驟](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)
          + [在傳統UI中製作](/help/sites-classic-ui-authoring/classicui.md)
@@ -340,7 +337,6 @@ ht-degree: 18%
          + [使用Dynamic Media](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
          + [資產測試的命名慣例](/help/sites-classic-ui-authoring/asset-naming-conventions.md)
 + 資產 {#assets}
-   + [[!DNL Assets] 使用手冊](/help/assets/home.md)
    + [關於DAM](/help/assets/assets.md)
    + [資產最佳實務](/help/assets/best-practices-for-assets.md)
    + [ [!DNL Assets] 中的協助工具](/help/assets/accessibility.md)
@@ -504,7 +500,6 @@ ht-degree: 18%
       + [安裝 [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-install.md)
       + [設定 [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-configure.md)
 + Forms {#forms}
-   + [AEM 6.5 Forms指南](/help/forms/home.md)
    + 發行說明 {#release-notes-new-features}
       + [新增功能](/help/forms/using/whats-new.md)
       + [常見問題](/help/forms/using/frequently-asked-questions-faq.md)
@@ -1192,9 +1187,8 @@ ht-degree: 18%
       + [在動態PDF forms中產生及使用雜湊](/help/forms/developing/hashing-forms.md)
       + [使用WS-Security標頭傳遞認證](/help/forms/developing/passing-credentials.md)
 + Content and Commerce {#commerce}
-   + [AEM Content and Commerce](/help/commerce/home.md)
-   + [AEM Content and Commerce重大變更](/help/commerce/cif/changes.md)
    + [簡介和概觀](/help/commerce/cif/introduction.md)
+   + [AEM Content and Commerce重大變更](/help/commerce/cif/changes.md)
    + 整合 {#integrations}
       + [Adobe Commerce](/help/commerce/cif/integrating/magento.md)
       + [第三方 Commerce 解決方案](/help/commerce/cif/integrating/third-party.md)
@@ -1276,7 +1270,6 @@ ht-degree: 18%
    + [什麼是檔案歷程？](/help/journey-documentation/home.md)
 + 實作 {#implementing}
    + 開發 {#developing}
-      + [開發使用手冊概覽](/help/sites-developing/home.md)
       + 開發人員簡介 {#introduction}
          + [開發 AEM Sites 快速入門 - WKND 教學課程](/help/sites-developing/getting-started.md)
          + [AEM核心概念](/help/sites-developing/the-basics.md)
@@ -1529,7 +1522,6 @@ ht-degree: 18%
          + [建立行動裝置網站](/help/sites-developing/mobile.md)
          + [模擬器](/help/sites-developing/emulators.md)
    + 部署 {#deploying}
-      + [Deploying使用手冊](/help/sites-deploying/home.md)
       + AEM平台簡介 {#introduction}
          + [AEM平台簡介](/help/sites-deploying/platform.md)
          + [技術需求](/help/sites-deploying/technical-requirements.md)

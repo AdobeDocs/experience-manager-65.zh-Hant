@@ -2,7 +2,7 @@
 title: 在AEM中編寫內容頁面
 description: 在Adobe Experience Manager 6.5中編寫內容頁面時涉及的任務。
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本節說明編寫內容頁面時涉及的作業。 有許多與頁面製作密切相關的其他功能，請參閱 [Authoring指南](/help/sites-authoring/home.md).
+>本節說明編寫內容頁面時涉及的作業。 有許多與頁面製作密切相關的其他功能，請參閱 [Authoring指南](/help/sites-authoring/first-steps.md).
 
 ## 製作頁面時所使用的功能快速概覽 {#quick-overview-of-features-used-for-authoring-pages}
 

@@ -7,10 +7,10 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 4b5b3ac41034bd4cc0f359b35cac0515b76ca64e
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 10%
+source-wordcount: '521'
+ht-degree: 5%
 
 ---
 
@@ -66,7 +66,7 @@ AEM提供您設定帳戶及製作環境某些方面的功能。
 
       * 頁面會在目前視窗中開啟。
 
-* **顯示資產桌面動態**
+* **顯示資產的案頭動作**
 
   此選項需要AEM案頭應用程式才能使用。
 
@@ -105,12 +105,12 @@ AEM提供您設定帳戶及製作環境某些方面的功能。
 
 * **使用傳統製作體驗**
 
-  此選項會啟用 [傳統UI](/help/sites-classic-ui-authoring/home.md)-based頁面製作。 依預設，會使用標準UI。
+  此選項會啟用 [傳統UI](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)-based頁面製作。 依預設，會使用標準UI。
 
 * **啟用資產首頁**
 
   只有在系統管理員已啟用整個組織的資產首頁體驗時，才可使用此選項。
 
-* **Stock 設定**
+* **Stock設定**
 
   此選項可讓您指定偏好的Adobe Stock設定，且僅在您的系統管理員已啟用時可用 [Adobe Stock整合](/help/assets/aem-assets-adobe-stock.md).

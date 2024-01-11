@@ -1,16 +1,16 @@
 ---
 title: AEM Forms簡介
-description: 有了Adobe Experience Manager Forms，業務使用者可以將吸引人、回應式且最適化表單整合至網站和行動網站，進而簡化數位註冊程式，並提高客戶轉換率。
+description: 使用此 AEM 6.5 指南建立、管理、發佈和更新數位表單。尋找有關如何進行安裝、升級和設定的說明，並了解如何編寫最適化表單。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: introduction
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 12%
+source-wordcount: '950'
+ht-degree: 15%
 
 ---
 

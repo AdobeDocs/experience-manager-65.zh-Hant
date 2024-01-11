@@ -2,7 +2,7 @@
 title: 基礎元件
 description: 瞭解Adobe Experience Manager 6.5中的基礎元件。
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '6872'
 ht-degree: 2%
@@ -973,7 +973,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!NOTE]
 >
->另請參閱 [AEM Forms說明](/help/forms/home.md) 以取得AEM Forms的相關資訊。
+>另請參閱 [AEM Forms說明](/help/forms/using/introduction-aem-forms.md) 以取得AEM Forms的相關資訊。
 
 Forms是由數個不同元件所建置：
 

@@ -7,7 +7,7 @@ role: User,Admin
 feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 hide: true
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '3595'
 ht-degree: 8%
@@ -55,7 +55,7 @@ ht-degree: 8%
 | | <ul><li>[!UICONTROL 視訊]</li></ul> | 具有MIME型別的視訊資產的結構表單，例如 `video/avi` 和 `video/mp4`. |
 | [!UICONTROL 集合] | | 集合的結構表單。 |
 | [!UICONTROL contentfragment] | | [內容片段的結構描述表單](/help/sites-developing/customizing-content-fragments.md). |
-| [!UICONTROL 表單] | | 此結構表單與 [Adobe Experience Manager Forms](/help/forms/home.md). |
+| [!UICONTROL 表單] | | 此結構表單與 [Adobe Experience Manager Forms](/help/forms/using/introduction-aem-forms.md). |
 | [!UICONTROL ugc_contentfragment] | | 使用者產生的內容片段和資產的結構描述表單，可從社群媒體整合至Experience Manager。 |
 
 >[!NOTE]
@@ -257,7 +257,7 @@ ht-degree: 8%
 
 1. 同樣地，在「資產型別」欄位中的「視訊」值與其他欄位（例如「轉碼器」和「持續時間」）之間建立相依性。
 1. 重複這些步驟，在「 」中建立檔案資產(PDF和Word)之間的相依性 [!UICONTROL 資產型別] 欄位和欄位，例如 [!UICONTROL 頁數] 和 [!UICONTROL 作者].
-1. 按一下 **[!UICONTROL 儲存]**. 將中繼資料結構套用至資料夾。
+1. 按一下「**[!UICONTROL 儲存]**」。將中繼資料結構套用至資料夾。
 
 1. 導覽至您套用中繼資料結構的資料夾，並開啟資產的屬性頁面。 視您在「資產型別」欄位中的選擇而定，會顯示相關的階層式中繼資料欄位。
 
@@ -340,7 +340,7 @@ ht-degree: 8%
 
    *圖：新增到中繼資料結構表單編輯器的文字欄位。*
 
-1. 按一下 **[!UICONTROL 儲存]**. 修改後的表單會列在 **[!UICONTROL 中繼資料結構Forms]** 頁面。
+1. 按一下「**[!UICONTROL 儲存]**」。修改後的表單會列在 **[!UICONTROL 中繼資料結構Forms]** 頁面。
 1. 按一下 **[!UICONTROL 套用至資料夾]** 將自訂中繼資料套用至資料夾。
 
 1. 選取要套用修改後之結構描述的資料夾，然後按一下 **[!UICONTROL 套用]**.
@@ -368,7 +368,7 @@ ht-degree: 8%
 
    *圖：中繼資料結構表單編輯器中的必填欄位。*
 
-1. 按一下 **[!UICONTROL 儲存]**. 修改後的表單會列在 **[!UICONTROL 中繼資料結構Forms]** 頁面。 選取表單，然後按一下 **[!UICONTROL 套用至資料夾]** 將自訂中繼資料套用至資料夾。
+1. 按一下「**[!UICONTROL 儲存]**」。修改後的表單會列在 **[!UICONTROL 中繼資料結構Forms]** 頁面。 選取表單，然後按一下 **[!UICONTROL 套用至資料夾]** 將自訂中繼資料套用至資料夾。
 
 1. 導覽至資料夾，然後上傳部分資產，其中遺失您新增至自訂表單之必要欄位的中繼資料。 資產卡片檢視中會顯示訊息，指出必填欄位缺少中繼資料。
 

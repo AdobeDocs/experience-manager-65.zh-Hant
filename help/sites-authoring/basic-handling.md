@@ -7,7 +7,7 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '2963'
 ht-degree: 4%
@@ -91,7 +91,7 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
   </tr>
   <tr>
    <td>資產<br /> </td>
-   <td>這些主控台可讓您匯入和 <a href="/help/assets/home.md">管理數位資產</a> 例如影像、影片、檔案和音訊檔案。 這些資產隨後便可由同一AEM例項上執行的任何網站使用。 </td>
+   <td>這些主控台可讓您匯入和 <a href="/help/assets/assets.md">管理數位資產</a> 例如影像、影片、檔案和音訊檔案。 這些資產隨後便可由同一AEM例項上執行的任何網站使用。 </td>
   </tr>
   <tr>
    <td>社群</td>
@@ -106,8 +106,8 @@ AEM使用者介面已啟用觸控功能。 觸控式介面可讓您使用觸控�
    <td>一個 <a href="/help/sites-authoring/experience-fragments.md">體驗片段</a> 是獨立的體驗，可以跨管道重複使用，也可以具有變數，省去反複複製和貼上體驗或體驗片段的麻煩。</td>
   </tr>
   <tr>
-   <td>Forms</td>
-   <td>此主控台可讓您建立、管理及處理 <a href="/help/forms/home.md">表單和檔案</a>.</td>
+   <td>表單</td>
+   <td>此主控台可讓您建立、管理及處理 <a href="/help/forms/using/introduction-aem-forms.md">表單和檔案</a>.</td>
   </tr>
   <tr>
    <td>個人化</td>

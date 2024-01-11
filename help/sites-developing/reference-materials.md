@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 docset: aem65
 exl-id: 8d8a7237-8e87-4730-be90-2a18144fc65a
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 3%
@@ -39,7 +39,7 @@ AEM傳遞與內容管理API：
 
    * [JSON匯出工具](/help/sites-developing/json-exporter.md)
    * [為元件啟用 JSON 匯出](/help/sites-developing/json-exporter-components.md)
-   * 請參閱 [開發使用手冊中的元件區段](/help/sites-developing/home.md) 以取得詳細資訊
+   * 請參閱 [開發使用手冊中的元件區段](/help/sites-developing/getting-started.md) 以取得詳細資訊
 
 * **資產**：Assets HTTP API允許對資產執行建立 — 讀取 — 更新 — 刪除(CRUD)作業，包括二進位、中繼資料、轉譯和註解。 另請參閱 [AEM ASSETS HTTP API](/help/assets/mac-api-assets.md)
 

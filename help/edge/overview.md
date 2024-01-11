@@ -1,10 +1,10 @@
 ---
 title: 開始使用 Edge Delivery Services
-description: 開始使用 Edge Delivery Services (EDS)。
+description: 開始使用 Edge Delivery Services
 exl-id: 8d2b2d6c-ae11-4829-842e-b186f5491713
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '834'
 ht-degree: 100%
 
 ---

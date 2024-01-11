@@ -1,11 +1,11 @@
 ---
 title: 使用 Edge Delivery Services
-description: 使用 Edge Delivery Services (EDS)
+description: 使用 Edge Delivery Services
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 93%
+source-wordcount: '586'
+ht-degree: 95%
 
 ---
 
@@ -28,7 +28,7 @@ Edge Delivery 能讓您建立快速開發的環境，作者可以在其中快速
 
 ## Edge Delivery Services 和 GitHub {#github-edge}
 
-Edge Delivery使用GitHub，因此客戶可以直接從其GitHub存放庫管理和部署程式碼。 例如，您可以在 Google Docs 或 Microsoft Word 中編寫內容，並使用 GitHub 中的 CSS 和 JavaScript 開發網站功能。系統會自動為您的每個分部建立網站，從內容預覽到生產都包括在內。您放入 GitHub 存放庫的每個資源都可以在您的網站上使用，無需任何建置程序。
+Edge Delivery 使用 GitHub，因此客戶可以直接從其 GitHub 存放庫管理和部署程式碼。例如，您可以在 Google Docs 或 Microsoft Word 中編寫內容，並使用 GitHub 中的 CSS 和 JavaScript 開發網站功能。系統會自動為您的每個分部建立網站，從內容預覽到生產都包括在內。您放入 GitHub 存放庫的每個資源都可以在您的網站上使用，無需任何建置程序。
 
 ## 使用 Sidekick {#using-sidekick}
 
@@ -57,4 +57,4 @@ AEM Assets 的 Sidekick 外掛程式支援存取：
 * 有關如何開始使用 Edge Delivery 詳細資訊，請參閱 Edge Delivery 文件中的「[建置](https://www.hlx.live/docs/#build)」部份。 
 * 若要了解如何使用 Edge Delivery 編寫和發佈內容，請參閱[「發佈」部份](https://www.hlx.live/docs/authoring)。
 * 若要了解如何使用 Sidekick 擴充功能，請參閱「[使用 Sidekick](https://www.hlx.live/docs/sidekick)」頁面。
-* 有關 AEM 編寫，請參閱[「編寫概念」頁面](/help/sites-authoring/author.md))
+* 如需AEM編寫的相關資訊，請參閱 [製作概念頁面](/help/sites-authoring/author.md))

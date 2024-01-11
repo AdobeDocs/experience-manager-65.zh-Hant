@@ -1,14 +1,15 @@
 ---
 title: 簡介和概觀
-description: Content and Commerce 簡介和概觀。在透過 Experience Cloud 整合和擴充 Adobe Commerce 和其他第三方商務解決方案的商務服務時，Adobe 建議使用 Experience Manager 商務整合框架 (CIF) 作為模式。
+description: 瞭解如何使用及管理AEM內容與商務，包含有關整合的實用文章，以及如何開始使用AEM Storefront。
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 92%
+source-wordcount: '838'
+ht-degree: 85%
 
 ---
+
 
 # Content and Commerce {#content-commerce}
 
@@ -16,7 +17,7 @@ ht-degree: 92%
 
 ## Content and Commerce 如何幫助客戶獲致成功
 
-隨著客戶對在線商務體驗的期望不斷提高，品牌被迫更快地提供差異化體驗和更多內容。然而，實作內容管理平台通常需要大量時間和預算投資來開發基礎元素，例如自訂元件和編寫工具，並且會增加維護和更新成本。Experience Manager Sites 提供 Content and Commerce 作為 Experience Manager 的附加模組，提供立即可用的商務核心元件、編寫工具和參考店面，以加速上線，實現團隊間的無縫協作，並推動轉換率。
+隨著客戶對在線商務體驗的期望不斷提高，品牌被迫更快地提供差異化體驗和更多內容。然而，實作內容管理平台通常需要大量時間和預算投資來開發基礎元素，例如自訂元件和編寫工具，並且會增加維護和更新成本。Experience Manager Sites提供「內容與商務」作為Experience Manager的附加模組，提供開箱即用的商務核心元件、製作工具和參考店面，以加速上線、實現跨團隊的順暢合作並促進轉換。
 
 品牌可以將 Experience Manager 與 Adobe Commerce (Adobe Experience Cloud 的一部分) 以及任何所選的商務引擎相整合。有了 Experience Manager Content and Commerce，品牌可以：
 

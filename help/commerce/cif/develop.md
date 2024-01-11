@@ -7,10 +7,10 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 exl-id: 48479725-8b52-4ff2-a599-d20958b26ee6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 10%
+source-wordcount: '797'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 10%
 
 根據Commerce integration framework (CIF)為AEM開發AEM Commerce專案會遵循與其他AEM專案相同的規則和最佳實務。 請先檢閱下列內容：
 
-- [AEM 6.5 Developing 使用指南](/help/sites-developing/home.md)
+- [AEM 6.5 Developing 使用指南](/help/sites-developing/getting-started.md)
 - [AEM核心概念](/help/sites-developing/the-basics.md)
 - [AEM開發 — 指導方針與最佳作法](/help/sites-developing/dev-guidelines-bestpractices.md)
 - [如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md)
@@ -164,5 +164,5 @@ CIF附加元件提供GraphQL Proxy servlet，位於 `/api/graphql`. 如果您不
 
 ## 其他資源
 
-- [AEM 專案原型](https://github.com/adobe/aem-project-archetype)
+- [AEM專案原型](https://github.com/adobe/aem-project-archetype)
 - [AEM Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)

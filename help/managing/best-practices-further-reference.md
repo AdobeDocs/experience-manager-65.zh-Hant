@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist
 content-type: reference
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '3699'
 ht-degree: 1%
@@ -34,7 +34,7 @@ ht-degree: 1%
 * [Assets](/help/assets/assets.md)
 * [標記](/help/sites-administering/tags.md)
 * [多網站管理與翻譯](/help/sites-administering/msm-and-translation.md)
-* [Forms](/help/forms/home.md)
+* [表單](/help/forms/using/introduction-aem-forms.md)
 * [社群](/help/communities/deploy-communities.md)
 
 此外，請檢視 [發行說明](/help/release-notes/release-notes.md)，以瞭解各種AEM版本何時新增了任何新功能。
@@ -575,7 +575,7 @@ AEM可與其他Adobe產品、協力廠商服務或兩者整合。 這些工作�
 Adobe為所有階段和受眾提供進一步的最佳實務：
 
 * [部署](/help/sites-deploying/best-practices.md)
-* [編寫](/help/sites-authoring/best-practices.md)
+* [製作](/help/sites-authoring/best-practices.md)
 * [管理](/help/sites-administering/administer-best-practices.md)
 * [開發](/help/sites-developing/best-practices.md)
 * [專案管理](/help/managing/best-practices.md)

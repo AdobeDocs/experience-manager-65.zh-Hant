@@ -1,18 +1,19 @@
 ---
 title: 作者在AEM中建立內容時的首要步驟
-description: 概述使用Adobe Experience Manager (AEM)編寫內容時使用的主要工作。
+description: 探索在 AEM 6.5 中建立內容和進行編寫的重要概念。您還會找到有關使用標記、範本和其他頁面功能的資訊。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 0%
+source-wordcount: '413'
+ht-degree: 7%
 
 ---
+
 
 # 作者的首要步驟{#first-steps-for-authors}
 

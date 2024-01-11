@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1792'
 ht-degree: 3%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 3%
 * [升級至AEM 6.5](/help/sites-deploying/upgrade.md)
 * [電子商務](/help/commerce/cif-classic/deploying/ecommerce.md)
 * [設定作法文章](/help/sites-deploying/ht-deploy.md)
-* [Web 主控台](/help/sites-deploying/web-console.md)
+* [Web 控制台](/help/sites-deploying/web-console.md)
 * [疑難排解復寫](/help/sites-deploying/troubleshoot-rep.md)
 * [最佳做法](/help/sites-deploying/best-practices.md)
 * [部署社群](/help/communities/deploy-communities.md)
@@ -73,9 +73,9 @@ Adobe Experience Manager是網頁式使用者端伺服器系統，用於建立�
 * **網站**
 * **行動應用計畫**
 * **數位出版物**
-* **表單與文件**
+* **Forms與檔案**
 * **數位資產**
-* **社群**
+* **Communities**
 * **線上商務**
 
 最後，客戶可以利用這些基礎結構和應用程式層級的建置組塊，透過建置自己的應用程式來建立自訂解決方案。
@@ -84,7 +84,7 @@ AEM伺服器為 **Java式** 並會在大多數支援該平台的作業系統上�
 
 >[!NOTE]
 >
->AEM 6.5 QuickStart提供的最適化Forms功能僅供探索和評估用途。 若為生產使用，您必須取得AEM Forms的有效授權，因為最適化Forms功能需要適當的授權。
+>AEM 6.5 QuickStart提供的最適化Forms功能僅供探索和評估用途。 若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
 
 ### 典型部署案例 {#typical-deployment-scenarios}
 
@@ -287,9 +287,9 @@ AEM會啟動，並自動將您的網頁瀏覽器重新導向適當的頁面，�
 
 登入後，您就能存取AEM。 如需詳細資訊，請參閱下列內容（視您的角色而定）：
 
-* [編寫](/help/sites-authoring/home.md)
+* [製作](/help/sites-authoring/first-steps.md)
 * [管理](/help/sites-administering/home.md)
-* [開發](/help/sites-developing/home.md)
+* [開發](/help/sites-developing/getting-started.md)
 * [管理](/help/managing/best-practices.md)
 
 ## 進階部署 {#advanced-deployment}
@@ -306,7 +306,7 @@ AEM會啟動，並自動將您的網頁瀏覽器重新導向適當的頁面，�
 * [升級至AEM 6.5](/help/sites-deploying/upgrade.md)
 * [電子商務](/help/commerce/cif-classic/deploying/ecommerce.md)
 * [設定作法文章](/help/sites-deploying/ht-deploy.md)
-* [Web 主控台](/help/sites-deploying/web-console.md)
+* [Web 控制台](/help/sites-deploying/web-console.md)
 * [疑難排解復寫](/help/sites-deploying/troubleshoot-rep.md)
 * [最佳做法](/help/sites-deploying/best-practices.md)
 * [部署社群](/help/communities/deploy-communities.md)

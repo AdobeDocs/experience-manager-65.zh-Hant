@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 4b5b3ac41034bd4cc0f359b35cac0515b76ca64e
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 10%
+source-wordcount: '727'
+ht-degree: 6%
 
 ---
 
@@ -32,7 +32,7 @@ We.Retail作為AEM標準參考實作，會展示AEM一些最強大的功能。
 | [全域化網站結構](/help/sites-administering/tc-bp.md) | We.Retail包含即時複製到特定國家/地區網站的語言主版。 | [試試看！](/help/sites-developing/we-retail-globalized-site-structure.md) |
 | [回應式版面](/help/sites-authoring/responsive-layout.md) | 所有頁面都具備回應式版面，可動態調整以符合熒幕和裝置大小。 | [試試看！](/help/sites-developing/we-retail-responsive-layout.md) |
 | [可編輯的範本](/help/sites-developing/page-templates-editable.md) | 所有頁面都以可編輯的範本為基礎，可讓非開發人員調整及自訂範本。 | [試試看！](/help/sites-developing/we-retail-editable-templates.md) |
-| [HTML 範本語言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 所有元件都以HTL為基礎 |  |
+| [HTML範本語言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 所有元件都以HTL為基礎 |  |
 | [電子商務功能](/help/commerce/cif-classic/developing/ecommerce.md) | 功能產品目錄 |  |
 | [社群網站](/help/communities/overview.md) | 允許訪客加入社群討論、閱讀部落格等 |  |
 | [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | 所有元件均以新的核心元件為基礎，且更易於使用及使用者設定 | [試試看！](/help/sites-developing/we-retail-core-components.md) |
@@ -49,7 +49,7 @@ We.Retail會以AEM範例內容的形式傳送。 若要使用，僅需以下步�
 
 >[!CAUTION]
 >
->We.Retail以最新的AEM技術為基礎，因此不支援 [傳統UI編寫](/help/sites-classic-ui-authoring/home.md).
+>We.Retail以最新的AEM技術為基礎，因此不支援 [傳統UI編寫](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md).
 
 ### 最新版本 {#latest-version}
 
@@ -89,7 +89,7 @@ We.Retail在技術上更健全，利用最新AEM技術更靈活、可擴充，�
 | 手稿 | 不可用 | 可用 |
 | 轉盤檢視器、下載和圖表元件 | 不可用 | 可用 |
 | 欄控制項 | 由版面容器取代 | 可用 |
-| Forms | 不可用 | 可用 |
+| 表單 | 不可用 | 可用 |
 | 行銷活動 | 無電子郵件範例 | 可用 |
 
 >[!NOTE]
@@ -102,7 +102,7 @@ We.Retail已發行開放原始碼專案，並可從GitHub下載最新版原始�
 
 GITHUB上的程式碼
 
-您可以在以下位置找到此頁面的程式碼：GitHub。
+您可以在GitHub上找到此頁面的程式碼。
 
 * [在GitHub上開啟aem-sample-we-retail專案](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
 * 將專案下載為 [ZIP檔案](https://codeload.github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/zip/refs/heads/master)

@@ -7,7 +7,7 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 5%
@@ -103,7 +103,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 ## 資產瀏覽器 {#assets-browser}
 
-資產瀏覽器會顯示全部 [資產](/help/assets/home.md) 這些檔案可直接在您目前頁面上使用。
+資產瀏覽器會顯示全部 [資產](/help/assets/assets.md) 這些檔案可直接在您目前頁面上使用。
 
 資產瀏覽器是側面板中的標籤，以及 [元件瀏覽](/help/sites-authoring/author-environment-tools.md#components-browser)r和 [內容樹狀結構](/help/sites-authoring/author-environment-tools.md#content-tree). 若要開啟或關閉側面板，請使用工具列左上角的圖示：
 
