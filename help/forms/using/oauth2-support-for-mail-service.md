@@ -2,10 +2,10 @@
 title: 設定Microsoft&reg； Office 365郵件伺服器通訊協定的OAuth2驗證
 description: 設定Microsoft&reg； Office 365郵件伺服器通訊協定的OAuth2驗證
 exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+source-git-commit: 020b92463371294706e9873e0d8962583d19ac52
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 7%
+source-wordcount: '980'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 1. 登入 [https://portal.azure.com/](https://portal.azure.com/) 並搜尋 **Azure Active Directory** ，然後按一下結果。
 或者，您可以直接瀏覽到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
-1. 按一下 **新增** > **應用程式註冊** > **新註冊**
+1. 按一下 **新增** > **應用程式註冊** > **新註冊**.
 
    ![應用程式註冊](/help/forms/using/assets/outh_outlook_microsoft_azure.png)
 
@@ -31,9 +31,9 @@ ht-degree: 7%
 
 1. 接下來，移至「**憑證和密碼**」，按一下「**新增用戶端密碼**」，並按照畫面上的步驟建立密碼。請務必記下此secret值以供稍後使用。
 
-   ![機密金鑰](/help/forms/using/assets/azure_secretkey.png)
+   ![秘密金鑰](/help/forms/using/assets/azure_secretkey.png)
 
-1. 若要新增許可權，請前往新建的應用程式，然後選取「 」 **API許可權** > **新增許可權** > **Microsoft® Graph** > **委派許可權**
+1. 若要新增許可權，請前往新建的應用程式，然後選取「 」 **API許可權** > **新增許可權** > **Microsoft® Graph** > **委派許可權**.
 1. 選取以下應用程式許可權的核取方塊，然後按一下 **新增許可權**：
 
    * `IMAP.AccessUser.All`
@@ -52,7 +52,7 @@ ht-degree: 7%
    在這種情況下， `https://login.microsoftonline.com/common/oauth2/nativeclient` 會作為重新導向URI使用。
 
 1. 按一下 **設定** 新增每個URL並根據您的要求進行設定後。
-   ![重新導向 URI](/help/forms/using/assets/azure_redirecturi.png)
+   ![重新導向URI](/help/forms/using/assets/azure_redirecturi.png)
 
    >[!NOTE]
    >
@@ -74,14 +74,14 @@ ht-degree: 7%
    >
    如果存在單一租使用者應用程式，請取代 `common` 與您的 `[tenantid]` 在下列產生授權代碼的URL中： `https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/authorize?client_id=[[clientid]]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20openid%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
 
-1. 輸入上述URL時，系統會將您重新導向登入畫面：
+1. 當您輸入上述URL時，您會被重新導向至登入畫面：
    ![登入畫面](/help/forms/using/assets/azure_loginscreen.png)
 
 1. 輸入電子郵件，按一下 **下一個** 「應用程式」許可權畫面隨即顯示：
 
    ![允許許可權](/help/forms/using/assets/azure_permission.png)
 
-1. 一旦您允許許可權，您就會被重新導向至新的URL，如下所示： `https://login.microsoftonline.com/common/oauth2/nativeclient?code=<code>&session_state=[session_id]`
+1. 當您允許許可權時，您會重新導向至新的URL，如下所示： `https://login.microsoftonline.com/common/oauth2/nativeclient?code=<code>&session_state=[session_id]`
 
 1. 複製值 `<code>` 從上面的URL從 `0.ASY...` 至 `&session_state` 在上述URL中。
 
@@ -134,7 +134,7 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   如果您想要將維護作業中特定處理作業的Auth 2.0驗證設定變更為基本驗證，您可以設定 **OAuth 2.0驗證** 值為&#39;False&#39;，在 **使用全域設定** 在 **連線設定** 標籤。
+   如有需要，您可以將Workbench中特定程式的Auth 2.0驗證設定變更為基本驗證。 若要這麼做，請設定 **OAuth 2.0驗證** 值為&#39;False&#39;，在 **使用全域設定** 在 **連線設定** 標籤。
 
 ## 啟用oAuth任務通知的方式 {#enable_oauth_task}
 
@@ -148,7 +148,7 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   若要瞭解更多與工作通知相關的資訊， [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service).
+   若要瞭解更多與工作通知相關的資訊， [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service).
 
 ## 設定電子郵件端點 {#configure_email_endpoint}
 
@@ -162,7 +162,7 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   若要瞭解有關設定電子郵件端點的詳細資訊，請按一下 [設定電子郵件端點](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-email-endpoints.html).
+   若要瞭解有關設定電子郵件端點的詳細資訊，請按一下 [設定電子郵件端點](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html).
 
 ## 疑難排解 {#troubleshooting}
 

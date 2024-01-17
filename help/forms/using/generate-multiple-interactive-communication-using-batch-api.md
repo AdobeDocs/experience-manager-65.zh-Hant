@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 020b92463371294706e9873e0d8962583d19ac52
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2134'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## 使用批次API {#using-the-batch-api}
 
-您可以將批次API與Watched資料夾搭配使用，或作為獨立的Rest API使用。 您可以設定範本、輸出型別(HTML、列印或兩者)、地區設定、預填服務和所產生互動式通訊的名稱，以使用批次API。
+您可以搭配Watched資料夾使用批次API，或作為獨立的Rest API。 您可以設定範本、輸出型別(HTML、列印或兩者)、地區設定、預填服務和所產生互動式通訊的名稱，以使用批次API。
 
 您可以將記錄與互動式通訊範本結合，以產生互動式通訊。 批次API可直接從JSON檔案或透過表單資料模型存取的外部資料來源讀取記錄（互動式通訊範本的資料）。 您可以將每個記錄儲存在單獨的JSON檔案中，也可以建立JSON陣列以將所有記錄儲存在單個檔案中。
 
@@ -68,12 +68,12 @@ ht-degree: 1%
 
 ### 搭配Watched資料夾使用批次API {#using-the-batch-api-watched-folders}
 
-為了讓您輕鬆體驗API，AEM Forms提供設定為立即使用批次API的Watched資料夾服務。 您可以透過AEM Forms UI存取此服務，以產生多種互動式通訊。 您也可以根據需求建立自訂服務。 您可以使用下列方法搭配Watched資料夾使用批次API：
+為了輕鬆體驗API，AEM Forms提供立即設定為使用批次API的Watched資料夾服務。 您可以透過AEM Forms UI存取此服務，以產生多種互動式通訊。 您也可以根據需求建立自訂服務。 您可以使用下列方法搭配Watched資料夾使用批次API：
 
-* 指定JSON檔案格式的輸入資料（記錄），以產生互動式通訊
-* 使用儲存在外部資料來源中並透過表單資料模型存取的輸入資料（記錄）來產生互動式通訊
+* 指定JSON檔案格式的輸入資料（記錄），以便產生互動式通訊。
+* 使用儲存在外部資料來源中並透過表單資料模型存取的輸入資料（記錄）來產生互動式通訊。
 
-#### 指定JSON檔案格式的輸入資料記錄，以產生互動式通訊 {#specify-input-data-in-JSON-file-format}
+#### 指定JSON檔案格式的輸入資料記錄，以便產生互動式通訊 {#specify-input-data-in-JSON-file-format}
 
 您可以將記錄與互動式通訊範本結合，以產生互動式通訊。 您可以為每個記錄建立個別的JSON檔案，或建立JSON陣列以將所有記錄儲存在單一檔案中：
 
@@ -85,24 +85,24 @@ ht-degree: 1%
    1. 指定 **[!UICONTROL 名稱]** 和實體 **[!UICONTROL 路徑]** 檔案夾的。 例如，`c:\batchprocessing`。
    1. 選取 **[!UICONTROL 服務]** 中的選項 **[!UICONTROL 處理檔案，使用]** 欄位。
    1. 選取 **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** 中的服務 **[!UICONTROL 服務名稱]** 欄位。
-   1. 指定 **[!UICONTROL 輸出檔案模式]**. 例如，%F/ [圖樣](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) 指定Watched資料夾可以在Watched資料夾\input資料夾的子資料夾中找到輸入檔案。
+   1. 指定 **[!UICONTROL 輸出檔案模式]**. 例如，%F/ [圖樣](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns) 指定Watched資料夾可以在Watched資料夾\input資料夾的子資料夾中找到輸入檔案。
 1. 設定進階引數：
    1. 開啟 **[!UICONTROL 進階]** 標籤並新增下列自訂屬性：
 
       | 屬性 | 類型 | 說明 |
       |--- |--- |--- |
-      | 範本路徑 | 字串 | 指定要使用的互動式通訊範本路徑。 例如，/content/dam/formsanddocuments/testsample/mediumic。 這是強制屬性。 |
-      | recordPath | 字串 | recordPath欄位的值有助於設定互動式通訊的名稱。 您可以將記錄欄位的路徑設定為recordPath欄位的值。 例如，若您指定/employee/Id，則id欄位的值會變成對應互動式通訊的名稱。 預設值為隨機 [隨機UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |
+      | 範本路徑 | 字串 | 指定要使用的互動式通訊範本路徑。 例如 `/content/dam/formsanddocuments/testsample/mediumic`。這是強制屬性。 |
+      | recordPath | 字串 | recordPath欄位的值有助於設定互動式通訊的名稱。 您可以將記錄欄位的路徑設定為recordPath欄位的值。 例如，若您指定/employee/Id，則id欄位的值會變成對應互動式通訊的名稱。 預設值為 [隨機UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |
       | usePrefillService | 布林值 | 將值設為False。 您可以使用usePrefillService引數來預填互動式通訊，其中包含從針對對應互動式通訊而設定的預填服務擷取的資料。 當usePrefillService設為true時，輸入JSON資料（每個記錄）會視為FDM引數。 預設值為false。 |
       | batchType | 字串 | 將值設定為PRINT、WEB或WEB_AND_PRINT。 預設值為WEB_AND_PRINT。 |
       | 地區設定 | 字串 | 指定輸出互動式通訊的地區設定。 現成服務不使用地區設定選項，但您可以建立自訂服務，以產生本地化的互動式通訊。 預設值為en_US |
 
-   1. 選取 **[!UICONTROL 建立]** 已建立watched資料夾。
-1. 使用watched資料夾產生互動式通訊：
+   1. 選取「**[!UICONTROL 建立]**」。
+1. 使用建立的watched資料夾產生互動式通訊：
    1. 開啟Watched資料夾。 導覽至輸入資料夾。
    1. 在輸入資料夾中建立資料夾，並將JSON檔案放在新建立的資料夾中。
    1. 等待Watched資料夾處理檔案。 處理開始時，輸入檔案和包含該檔案的子資料夾會移至暫存資料夾。
-   1. 開啟輸出資料夾以檢視輸出：
+   1. 開啟輸出資料夾，以便檢視輸出：
       * 當您在Watched資料夾組態中指定PRINT選項時，會產生互動式通訊的PDF輸出。
       * 當您在Watched資料夾組態中指定WEB選項時，會針對每筆記錄產生一個JSON檔案。 您可以使用JSON檔案來 [預先填入Web範本](#web-template).
       * 當您同時指定PRINT和WEB選項時，會產生PDF檔案以及每個記錄的JSON檔案。
@@ -118,7 +118,7 @@ ht-degree: 1%
    1. 選取讀取服務引數的鉛筆圖示，以將引數繫結到要求屬性，並指定繫結值。 它會將服務引數繫結到指定的繫結屬性或常值中，該值會作為引數傳遞給服務，以從資料來源擷取與指定值相關聯的詳細資料。
 
       <br>
-        在此範例中，id引數接受使用者設定檔的id屬性值，並將其作為引數傳給讀取服務。 它會從指定ID的員工資料模型物件讀取並傳回關聯屬性的值。 因此，如果您在表單的id欄位中指定00250，則讀取服務將讀取具有員工id00250員工的詳細資料。
+        在此範例中，id引數接受使用者設定檔的id屬性值，並將其作為引數傳給讀取服務。 它會從指定ID的員工資料模型物件讀取並傳回關聯屬性的值。 因此，如果您在表單的id欄位中指定00250，讀取服務會讀取具有員工id00250員工的詳細資訊。
         <br>
 
       ![設定請求屬性](assets/request-attribute.png)
@@ -126,7 +126,7 @@ ht-degree: 1%
    1. 儲存屬性和表單資料模型。
 1. 設定請求屬性的值：
    1. 在您的檔案系統上建立.json檔案，並開啟它進行編輯。
-   1. 建立JSON陣列並指定主要屬性，以從表單資料模型擷取資料。 例如，下列JSON要求FDM傳送id為27126或27127的記錄資料：
+   1. 建立JSON陣列並指定主要屬性，以便從表單資料模型擷取資料。 例如，下列JSON要求FDM傳送id為27126或27127的記錄資料：
 
       ```json
           [
@@ -147,37 +147,37 @@ ht-degree: 1%
    1. 指定 **[!UICONTROL 名稱]** 和實體 **[!UICONTROL 路徑]** 檔案夾的。 例如，`c:\batchprocessing`。
    1. 選取 **[!UICONTROL 服務]** 中的選項 **[!UICONTROL 處理檔案，使用]** 欄位。
    1. 選取 **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** 中的服務 **[!UICONTROL 服務名稱]** 欄位。
-   1. 指定 **[!UICONTROL 輸出檔案模式]**. 例如，%F/ [圖樣](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) 指定Watched資料夾可以在Watched資料夾\input資料夾的子資料夾中找到輸入檔案。
+   1. 指定 **[!UICONTROL 輸出檔案模式]**. 例如，%F/ [圖樣](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns) 指定Watched資料夾可以在Watched資料夾\input資料夾的子資料夾中找到輸入檔案。
 1. 設定進階引數：
    1. 開啟 **[!UICONTROL 進階]** 標籤並新增下列自訂屬性：
 
       | 屬性 | 類型 | 說明 |
       |--- |--- |--- |
       | 範本路徑 | 字串 | 指定要使用的互動式通訊範本路徑。 例如，/content/dam/formsanddocuments/testsample/mediumic。 這是強制屬性。 |
-      | recordPath | 字串 | recordPath欄位的值有助於設定互動式通訊的名稱。 您可以將記錄欄位的路徑設定為recordPath欄位的值。 例如，若您指定/employee/Id，則id欄位的值會變成對應互動式通訊的名稱。 預設值為隨機 [隨機UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |  |
-      | usePrefillService | 布林值 | 將值設為True。 預設值為false。  當值設為true時，批次API會從已設定的表單資料模型中讀取資料，並將其填入互動式通訊。 當usePrefillService設為true時，輸入JSON資料（每個記錄）會視為FDM引數。 |
+      | recordPath | 字串 | recordPath欄位的值有助於設定互動式通訊的名稱。 您可以將記錄欄位的路徑設定為recordPath欄位的值。 例如，若您指定/employee/Id，則id欄位的值會變成對應互動式通訊的名稱。 預設值為 [隨機UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |  |
+      | usePrefillService | 布林值 | 將值設為True。 預設值為false。 當值設為true時，批次API會從已設定的表單資料模型中讀取資料，並將其填入互動式通訊。 當usePrefillService設為true時，輸入JSON資料（每個記錄）會視為FDM引數。 |
       | batchType | 字串 | 將值設定為PRINT、WEB或WEB_AND_PRINT。 預設值為WEB_AND_PRINT。 |
       | 地區設定 | 字串 | 指定輸出互動式通訊的地區設定。 現成服務不使用地區設定選項，但您可以建立自訂服務，以產生本地化的互動式通訊。 預設值為en_US。 |
 
-   1. 選取 **[!UICONTROL 建立]** 已建立watched資料夾。
-1. 使用watched資料夾產生互動式通訊：
+   1. 選取「**[!UICONTROL 建立]**」。
+1. 使用建立的watched資料夾產生互動式通訊：
    1. 開啟Watched資料夾。 導覽至輸入資料夾。
    1. 在輸入資料夾中建立資料夾。 將在步驟2中建立的JSON檔案置於新建立的資料夾中。
    1. 等待Watched資料夾處理檔案。 處理開始時，輸入檔案和包含該檔案的子資料夾會移至暫存資料夾。
-   1. 開啟輸出資料夾以檢視輸出：
+   1. 開啟輸出資料夾，以便檢視輸出：
       * 當您在Watched資料夾組態中指定PRINT選項時，會產生互動式通訊的PDF輸出。
       * 當您在Watched資料夾組態中指定WEB選項時，會針對每筆記錄產生一個JSON檔案。 您可以使用JSON檔案來 [預先填入Web範本](#web-template).
       * 當您同時指定PRINT和WEB選項時，會產生PDF檔案以及每個記錄的JSON檔案。
 
 ## 使用REST請求叫用批次API
 
-您可以叫用 [批次API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) 透過代表性狀態轉移(REST)請求。 它可讓您提供REST端點給其他使用者以存取API，並設定您自己的方法來處理、儲存和自訂互動式通訊。 您可以開發自己的自訂Java servlet，以便在您的AEM執行個體上部署API。
+您可以叫用 [批次API](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html) 透過代表性狀態轉移(REST)請求。 它可讓您提供REST端點給其他使用者以存取API，並設定您自己的方法來處理、儲存和自訂互動式通訊。 您可以開發自己的自訂Java™ servlet，以便在您的AEM執行個體上部署API。
 
-部署Java servlet之前，請確保您已進行互動式通訊，且對應的資料檔案已準備就緒。 執行以下步驟來建立和部署Java servlet：
+部署Java™ Servlet之前，請確保您已進行互動式通訊，且對應的資料檔案已準備就緒。 執行以下步驟，以便您可以建立和部署Java™ Servlet：
 
 1. 登入您的AEM執行個體並建立互動式通訊。 若要使用下列範常式式碼中提及的互動式通訊， [按一下這裡](assets/SimpleMediumIC.zip).
-1. [使用Apache Maven建置和部署AEM專案](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) 在您的AEM執行個體上。
-1. 新增 [AEM Forms使用者端SDK 6.0.12版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) AEM專案POM檔案的相依性清單中設定或更新版本。 例如，
+1. [使用Apache Maven建置和部署AEM專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html) 在您的AEM執行個體上。
+1. 新增 [AEM Forms使用者端SDK 6.0.12版或更新版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 在AEM專案的POM檔案相依性清單中。 例如，
 
    ```xml
        <dependency>
@@ -187,7 +187,7 @@ ht-degree: 1%
        </dependency>
    ```
 
-1. 開啟Java專案，建立.java檔案，例如CCMBatchServlet.java。 將下列程式碼新增至檔案中：
+1. 開啟Java™專案，建立.java檔案，例如CCMBatchServlet.java。 將下列程式碼新增至檔案中：
 
    ```java
            package com.adobe.fd.ccm.multichannel.batch.integration;
@@ -323,12 +323,12 @@ ht-degree: 1%
    ```
 
 1. 在上述程式碼中，將範本路徑(setTemplatePath)取代為您範本的路徑，並設定setBatchType API的值：
-   * 當您指定互動式通訊的PRINT選項時，會產生PDF輸出。
-   * 當您指定WEB選項時，每個記錄都會產生JSON檔案。 您可以使用JSON檔案來 [預先填入Web範本](#web-template).
+   * 當您指定PRINT選項PDF時，會產生互動式通訊的輸出。
+   * 當您指定WEB選項時，系統會產生每個記錄的JSON檔案。 您可以使用JSON檔案來 [預先填入Web範本](#web-template).
    * 當您同時指定PRINT和WEB選項時，會產生PDF檔案以及每個記錄的JSON檔案。
 
-1. [使用maven將更新的程式碼部署至您的AEM執行個體](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven).
-1. 叫用批次API以產生互動式通訊。 批次API列印會根據記錄數量傳回PDF流和.json檔案。 您可以使用JSON檔案來 [預先填入Web範本](#web-template). 如果您使用上述程式碼，API會部署在 `http://localhost:4502/bin/batchServlet`. 程式碼會列印並傳回PDF的串流和JSON檔案。
+1. [使用maven將更新的程式碼部署至您的AEM執行個體](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html).
+1. 若要產生互動式通訊，請叫用批次API。 批次API列印會根據記錄數量傳回PDF流和.json檔案。 您可以使用JSON檔案來 [預先填入Web範本](#web-template). 如果您使用上述程式碼，API會部署在 `http://localhost:4502/bin/batchServlet`. 程式碼會列印並傳回PDF的串流和JSON檔案。
 
 ### 預先填入Web範本 {#web-template}
 
@@ -363,4 +363,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->預設只會啟用CRX通訊協定。 若要啟用其他支援的通訊協定，請參閱 [使用Configuration Manager設定預填服務](https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#ConfiguringprefillserviceusingConfigurationManager).
+>預設只會啟用CRX通訊協定。 若要啟用其他支援的通訊協定，請參閱 [使用Configuration Manager設定預填服務](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/prepopulate-adaptive-form-fields.html?lang=en).
