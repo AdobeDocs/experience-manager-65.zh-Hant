@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
+source-git-commit: 75139b4a951269aeacc689baec1da6bf72ce65bc
 workflow-type: tm+mt
-source-wordcount: '3976'
+source-wordcount: '4002'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,12 @@ Adobe Experience Manager Forms需要由Java™開發套件(JDK)散發提供的Ja
    <td><p>支援</p> </td>
   </tr>
   <tr>
-   <td><p> MongoDB Enterprise 4.4 </p> </td>
+   <td><p> MongoDB Enterprise 5.0</p> </td>
+   <td><p>存放庫微核心</p> </td>
+   <td><p>支援</p> </td>
+  </tr>
+    <tr>
+   <td><p> MongoDB Enterprise 6.0 </p> </td>
    <td><p>存放庫微核心</p> </td>
    <td><p>支援</p> </td>
   </tr>
@@ -827,6 +832,14 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 -->
 
+### 發行版本6.5.19.1 （2023年12月15日）
+
+| 新增的支援 | 移除的支援 | 已棄用的支援 |
+| -------------- | --------------- | ------------------- |
+| MongoDB Enterprise 6.0 | MongoDB Enterprise 4.4 |  |
+| MongoDB Enterprise 5.0 |  |  |
+|  | |  |
+
 ### 發行版本6.5.18.0 （2023年8月31日）
 
 | 新增的支援 | 移除的支援 | 已棄用的支援 |
@@ -913,5 +926,4 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
     - Changed supported version of iOS for AEM Forms App to iOS 12. The previous version was iOS 11.
 
     -->
-
 
