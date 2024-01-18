@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 2c5791e972deef5fe81768d10ad53acaf946332a
+source-git-commit: 5da11d1f1a8568c12cb9f6ccea9d71e61c1310c3
 workflow-type: tm+mt
-source-wordcount: '4308'
+source-wordcount: '4376'
 ht-degree: 6%
 
 ---
@@ -444,6 +444,39 @@ The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [M
       "visualSimilaritySearch"
     ]
   "refresh": true
+  ```
+
+* 使用選用變數執行GraphQL查詢時，如果特定值為 **非** 若為選用變數，則該變數的值會被視為隱含 `null`. 這表示篩選器僅相符 `null` 對應屬性的值。
+
+  例如，在下列查詢中，沒有指定屬性的值 `lastName`：
+
+  ```graphql
+  query getAuthorsFilteredByLastName($authorLastName: String) {
+  authorList(filter:
+    {
+      lastName: {_expressions: {value: $authorLastName}
+      }}) {
+    items {
+      lastName
+      }
+    }
+  }
+  ```
+
+  僅限擁有下列專案的作者： `lastName` 將傳回設定為null的屬性：
+
+  ```graphql
+  {
+  "data": {
+    "authorList": {
+      "items": [
+        {
+          "lastName": null
+        }
+      ]
+    }
+  }
+  }
   ```
 
 * 如果您升級您的 [!DNL Experience Manager] 從6.5.0 - 6.5.4執行個體到Java™ 11上最新的Service Pack，您會看到 `RRD4JReporter` 中的例外狀況 `error.log` 檔案。 若要停止例外，請重新啟動您的執行個體， [!DNL Experience Manager]. <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
