@@ -3,9 +3,9 @@ title: 技術需求
 description: Adobe Experience Manager支援的使用者端和伺服器平台清單。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: fbf056b6b7dcbfcaa27744672c45a87316c5f761
 workflow-type: tm+mt
-source-wordcount: '3624'
+source-wordcount: '3642'
 ht-degree: 0%
 
 ---
@@ -112,12 +112,14 @@ Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 | **Platform** | **說明** | **支援等級** |
 |---|---|---|
 | **具有TAR檔案的檔案系統** `[1]` | 存放庫 | 答：支援 |
-| **具有資料存放區的檔案系統** `[1]` | 二進位 檔 | 答：支援 |
-| 將二進位檔存儲在檔案系統上的 TAR 檔中 `[1]` | 二進位檔案 | Z：不支援用於生產 |
+| **具有資料存放區的檔案系統** `[1]` | 二進位檔案 | 答：支援 |
+| 將二進位檔案儲存在檔案系統的TAR檔案中 `[1]` | 二進位檔案 | Z：不支援用於生產 |
 | Amazon S3 | 二進位檔案 | 答：支援 |
-| Microsoft® Azure Blob儲存體 | 二進位 檔 | 答：支援 |
-| MongoDB Enterprise 4.4 | 存放庫 | 答：支援 `[2, 3, 4]` |
-| MongoDB Enterprise 4.2 | 存放庫 | 答：支援 `[2, 3, 4]` |
+| Microsoft® Azure Blob儲存體 | 二進位檔案 | 答：支援 |
+| MongoDB Enterprise 6.0 | 存放庫 | 答：支援 `[3, 4]` |
+| MongoDB Enterprise 5.0 | 存放庫 | 答：支援 `[3, 4]` |
+| MongoDB Enterprise 4.4 | 存放庫 | 答：支援 `[2, 3, 4, 7]` |
+| MongoDB Enterprise 4.2 | 存放庫 | 答：支援 `[2, 3, 4, 7]` |
 | MongoDB Enterprise 4.0 | 存放庫 | Z：不支援 |
 | MongoDB Enterprise 3.6 | 存放庫 | Z：不支援 |
 | MongoDB Enterprise 3.4 | 存放庫 | Z：不支援 |
@@ -132,9 +134,10 @@ Adobe Experience Manager可搭配下列版本的Java™虛擬機器器運作：
 1. AEM不支援MongoDB Sharding。
 1. 僅支援MongoDB Storage Engine WiredTiger。
 1. 支援AEM Forms升級客戶。 新安裝不支援。
-1. 僅適用AEM Forms：
+1. 僅適用於AEM Forms：
    * 移除對Oracle資料庫12c的支援，並新增對Oracle資料庫19c的支援。
    * 移除對Microsoft® SQL Server 2016的支援，並新增對Microsoft® SQL Server 2019的支援。
+1. AEM Forms不支援。
 
 >[!NOTE]
 >
@@ -152,17 +155,17 @@ MongoDB是協力廠商軟體程式，不包含在AEM授權套件中。 如需詳
 >
 Adobe客戶服務可協助解決與AEM搭配使用MongoDB相關的資格確認問題。
 >
-如需詳細資訊，請參閱 [適用於Adobe Experience Manager的MongoDB頁面](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
+有關更多信息，請参閱 [MongoDB for Adobe Experience Manager 頁面](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)。
 
 >[!NOTE]
 >
-如上所列的支援關聯式資料庫是協力廠商軟體，未包含在AEM授權套件中。
+上面列出的受支持的關係資料庫是協力廠商軟體，不包含在AEM許可包中。
 >
-要使用受支持的關係資料庫運行 AEM 6.5，需要與資料庫供應商簽訂單獨的支援合同。 Adobe Systems Customer Care 協助符合 AEM 6.5 之關係資料庫使用的相關資格問題。
+若要使用支援的關聯式資料庫執行AEM 6.5，需要與資料庫廠商訂立個別的支援合約。 Adobe客戶服務可協助解決與AEM 6.5使用關聯式資料庫相關的資格確認問題。
 >
-**大多數關係資料庫目前在 AEM 6.5 的 Level-R 中受支援，它附帶支援標準和支援方案，如上面的 Level-R 描述中所述。**
+**目前，大部分關聯式資料庫都在AEM 6.5的Level-R中受到支援，該版本隨附支援標準和支援方案，如上述Level-R說明中所述。**
 
-### Servlet 引擎/應用程式伺服器 {#servlet-engines-application-servers}
+### Servlet引擎/應用程式伺服器 {#servlet-engines-application-servers}
 
 Adobe Experience Manager能以獨立伺服器（快速入門JAR檔案）或協力廠商應用程式伺服器（WAR檔案）中的Web應用程式來執行。
 
@@ -171,7 +174,7 @@ Adobe Experience Manager能以獨立伺服器（快速入門JAR檔案）或協�
 | Platform | 支援程度 |
 |---|---|
 | **快速入門內建Servlet引擎(Jetty 9.4)** | 答：支援 |
-| Oracle WebLogic Server 12.2 （12cR2） | Z：不支援 |
+| oracleWebLogic Server 12.2 (12cR2) | Z：不支援 |
 | IBM® WebSphere® Application Server Continuous Delivery (LibertyProfile)，搭配Web Profile 7.0和IBM® JRE 1.8 | R：新合約的有限支援 `[2]` |
 | IBM® WebSphere® Application Server 9.0和IBM® JRE 1.8 | R：新合約的有限支援 `[1]` `[2]` |
 | Apache Tomcat 8.5.x | R：新合約的有限支援 `[2]` |
@@ -209,12 +212,12 @@ Adobe Experience Manager可與下列伺服器平台搭配使用以用於生產�
    * glibc.x86_64 (2.17-196)
    * libX11.x86_64 (1.6.7-4)
    * zlib.x86-64 (1.2.7-17)
-   * libxcb.x86_64 (1.13-1.el7)
-   * libXau.x86_64 (1.0.8-2.1.el7)
+   * libxcb.x86_64 （1.13-1.el7）
+   * libXau.x86_64 （1.0.8-2.1.el7）
 
-1. 升級到 6.5 的客戶和非生產用途支援 Microsoft® Windows 生產部署。 新部署請求針對AEM Sites和Assets。
-1. Microsoft® Window Server 支援AEM Forms，沒有支持級別 R 限制。
-1. AEM Forms刪除了對 Microsoft® Windows Server 2016 的支援。
+1. Microsoft® Windows生產部署支援客戶升級至6.5版本及用於非生產用途。 AEM Sites和Assets會隨選新部署。
+1. Microsoft®視窗伺服器支援AEM Forms，但沒有支援層級R限制。
+1. AEM Forms已移除對Microsoft® Windows Server 2016的支援。
 
 >[!NOTE]
 >
@@ -227,7 +230,7 @@ Adobe Experience Manager可與下列伺服器平台搭配使用以用於生產�
 * Microsoft® Visual C++ 2019 （VC14.28或更新版本）可轉散發套件
 
 
-### 虛擬和雲計算環境 {#virtual-cloud-computing-environments}
+### 虛擬與雲端運算環境 {#virtual-cloud-computing-environments}
 
 支援Adobe Experience Manager在雲端運算環境的虛擬機器器中執行。 這些環境包括Microsoft®Azure和Amazon Web Services (AWS)，依照本頁所列的技術要求和Adobe的標準支援條款執行。
 
@@ -248,19 +251,19 @@ Dispatcher是快取和負載平衡元件。 [下載最新的Dispatcher版本](ht
 | Platform | 支援程度 |
 |---|---|
 | **Apache httpd 2.4.x** `[1,2]` | 答：支援 |
-| Microsoft® IIS 10 (Internet Information Server) | 答：支援 |
+| Microsoft® IIS 10 （Internet Information Server） | 答：支援 |
 | Microsoft® IIS 8.5 （Internet Information Server） | Z：不支援 |
 
-1. 基於 Apache httpd 原始程式碼構建的 Web 伺服器具有與其所基於的 HTTPd 版本一樣多的支援。 如有疑問，請Adobe Systems確認與相應伺服器產品相關的支持級別。 下列情況：
+1. 基於 Apache httpd 原始程式碼構建的 Web 伺服器具有與其所基於的 HTTPd 版本一樣多的支援。 如有疑問，請要求Adobe確認與個別伺服器產品相關的支援等級。 下列情況：
 
    1. HTTP伺服器是僅使用官方Apache來源發佈所建置，或
-   1. HTTP伺服器是作為執行伺服器之作業系統的一部分所提供。 示例：IBM® HTTP Server、Oracle HTTP Server
+   1. HTTP伺服器是作為執行伺服器之作業系統的一部分所提供。 範例： IBM® HTTP伺服器、OracleHTTP伺服器
 
-1. Dispatcher 不適用於適用於 Windows 作業系統的 Apache 2.4.x。
+1. Dispatcher不適用於適用於Windows作業系統的Apache 2.4.x。
 
-## 支援的客戶端平臺 {#supported-client-platforms}
+## 支援的使用者端平台 {#supported-client-platforms}
 
-### 創作使用者介面的支持瀏覽器 {#supported-browsers-for-authoring-user-interface}
+### 編寫使用者介面的支援瀏覽器 {#supported-browsers-for-authoring-user-interface}
 
 Adobe Experience Manager使用者介面可與下列使用者端平台搭配使用。 所有瀏覽器都透過一組預設的外掛程式和附加元件進行測試。
 
@@ -305,7 +308,7 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
    <td>答：支援</td>
   </tr>
   <tr>
-   <td>macOS 上的 Apple Safari （Evergreen）</td>
+   <td>macOS上的Apple Safari （長青）</td>
    <td>答：支援</td>
    <td>答：支援</td>
   </tr>
@@ -316,7 +319,7 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
   </tr>
   <tr>
    <td>iOS 12.x上的Apple Safari</td>
-   <td>答：支援 [2]</td>
+   <td>答：支援[2]</td>
    <td>Z：不支援</td>
   </tr>
   <tr>
@@ -328,9 +331,9 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
 </table>
 
 1. Firefox的延伸支援版本 [進一步瞭解mozilla.org](https://www.mozilla.org/en-US/firefox/enterprise/)
-1. 支援Apple iPad
+1. 支援 Apple iPad
 
-### 支援的網站瀏覽器 {#supported-browsers-for-websites}
+### 網站支援的瀏覽器 {#supported-browsers-for-websites}
 
 一般而言，AEM Sites轉譯的網站瀏覽器支援取決於AEM頁面範本的實作、設計和元件輸出，因此由實作這些部分的當事方控制。
 
@@ -340,7 +343,7 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
 
 當使用Microsoft® Windows 7+連線到不受SSL保護的AEM執行個體時，必須在Windows中啟用透過不安全網路的基本驗證。 它需要在WebClient的Windows登入中進行變更：
 
-1. 找到登入子機碼：
+1. 找到註冊表子項：
 
    * HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
 
@@ -350,9 +353,9 @@ Mozilla Firefox、Google Chrome和Microsoft® Edge每隔幾個月會發佈一次
 
 本節提供執行Adobe Experience Manager及其附加元件相關的特殊附註和更多詳細資訊。
 
-### IPv4和IPv6 {#ipv-and-ipv}
+### IPv4 和 IPv6 {#ipv-and-ipv}
 
-Adobe Experience Manager的所有元素（例項、Dispatcher）都可以安裝在IPv4和IPv6網路中。
+Adobe Experience Manager的所有元素（實例、Dispatcher）都可以安裝在 IPv4 和 IPv6 網路中。
 
 操作是無縫的，因為不需要特殊配置。 如有必要，請使用適合您的網路類型的格式指定IP位址。
 
@@ -364,11 +367,11 @@ Adobe Experience Manager的所有元素（例項、Dispatcher）都可以安裝�
 
 * 伺服器名稱。 例如 `https://www.yourserver.com:4502`
 
-* 對於 IPv4 和 IPv6 網路安裝，將解釋的預設 `localhost` 大小寫。 例如 `https://localhost:4502`
+* 預設大小寫為 `localhost` 會解譯為IPv4和IPv6網路安裝。 例如 `https://localhost:4502`
 
-### AEM 動態媒體附加元件的要求 {#requirements-for-aem-dynamic-media-add-on}
+### AEM Dynamic Media附加元件的需求 {#requirements-for-aem-dynamic-media-add-on}
 
-AEM 動態媒體預設為停用。 請參閱此處 [啟用Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
+AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
 啟用Dynamic Media後，將適用下列其他技術要求。
 
@@ -406,11 +409,11 @@ AEM 動態媒體預設為停用。 請參閱此處 [啟用Dynamic Media](/help/a
 
 >[!NOTE]
 >
-**NUMA架構：** 處理器搭載AMD64和Intel® EM64T的系統通常設定為非統一記憶體架構(NUMA)平台。 也就是說，核心會在開機時建構多個記憶體節點，而不是建構單一記憶體節點。
+**NUMA 架構：** 具有採用 AMD64 和英特爾 ® EM64T 處理器的系統通常配置為非統一記憶體架構 （NUMA） 平臺。 也就是說，內核在引導時構造多個記憶體節點，而不是構造單個記憶體節點節點。
 >
-多節點構造可能會導致在其他節點耗盡之前一個或多個節點上的記憶體耗盡。 當記憶體耗盡發生時，內核可以決定終止進程（例如，影像伺服器或Platform伺服器），平均有可用記憶體。
+多節點構造可能會導致在其他節點耗盡之前一個或多個節點上的記憶體耗盡。 當記憶體用盡時，即使有可用的記憶體，核心仍可以決定終止處理序（例如，影像伺服器或平台伺服器）。
 >
-因此，Adobe Systems建議，如果您正在運行這樣的系統，請使用 numa=off **引導選項關閉** NUMA，以避免內核終止這些進程。
+因此，Adobe建議，如果您要執行這樣的系統以使用 **numa=off** 開機選項，以避免核心終止這些處理程式。
 
 >[!NOTE]
 >
@@ -421,15 +424,15 @@ AEM 動態媒體預設為停用。 請參閱此處 [啟用Dynamic Media](/help/a
 #### Windows {#windows}
 
 * Microsoft® Windows Server 2016
-* 交換空間至少相當於實體記憶體(RAM)容量的兩倍
+* 交換空間至少等於物理內存量 （RAM） 的兩倍
 
 若要在Windows上使用Dynamic Media，請安裝Microsoft®適用於x64和x86的Visual Studio 2010、2013和2015可轉散發套件。
 
-若是Windows x64：
+對於 Windows x64：
 
-* 取得Microsoft® Visual Studio 2010可轉散發套件，網址為 [https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
-* 若要取得Microsoft® Visual Studio 2013可轉散發套件，請前往 [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
-* 若要取得Microsoft® Visual Studio 2015可轉散發套件，請前往 [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+* 在 https://www.microsoft.com/en-us/download/details.aspx?id=26999 獲取 [Microsoft® Visual Studio 2010 可再發行元件](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
+* 在 https://www.microsoft.com/en-us/download/details.aspx?id=40784 獲取 [Microsoft® Visual Studio 2013 可再發行元件](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
+* 在 https://www.microsoft.com/en-us/download/details.aspx?id=48145 取得 [Microsoft® Visual Studio 2015 再發行元件](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
 若是Windows x86：
 
@@ -450,15 +453,15 @@ AEM 動態媒體預設為停用。 請參閱此處 [啟用Dynamic Media](/help/a
  <tbody>
   <tr>
    <th><p><strong>產品</strong></p> </th>
-   <th><p><strong>支援的轉換成PDF格式</strong></p> </th>
+   <th><p><strong>轉換為 PDF 的支援格式</strong></p> </th>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic路線</a> 最新版本</td>
    <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic路線</a> 最新版本（已棄用）</td>
-   <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 經典曲目</a> 最新版本（已棄用）</td>
+   <td>XPS、影像格式 （BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF 和 DWF</td>
   </tr>
   <tr>
    <td>Microsoft® Office 2019</td>
@@ -466,7 +469,7 @@ AEM 動態媒體預設為停用。 請參閱此處 [啟用Dynamic Media](/help/a
   </tr>
   <tr>
    <td>Microsoft® Office 2016 （已棄用）</td>
-   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
    <td>WordPerfect 2020<br /> </td>
@@ -477,8 +480,8 @@ AEM 動態媒體預設為停用。 請參閱此處 [啟用Dynamic Media](/help/a
    <td>VSD、VSDX</td>
   </tr>
   <tr>
-   <td>微軟®出版商 2019<br /> </td>
-   <td>酒吧</td>
+   <td>Microsoft® Publisher 2019<br /> </td>
+   <td>公共</td>
   </tr>
   <tr>
    <td>Microsoft® Publisher 2016 （已棄用）<br /> </td>
@@ -519,22 +522,22 @@ PDF Generator僅支援英文、法文、德文和日文版本的支援作業系�
 
 ### AEM Forms Designer的需求 {#requirements-for-aem-forms-designer}
 
-* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server或Microsoft® Windows® 10
-* 1 GHz或更快的處理器，支援PAE、NX和SSE2。
-* 32位元的1 GB RAM或64位元作業系統的2 GB RAM
-* 16 GB磁碟空間，適用於32位元或20 GB磁碟空間，適用於64位元作業系統
-* 顯示卡記憶體 — 128 MB的GPU （建議使用256 MB）
+* Microsoft Windows 2016 Server、Microsoft Windows 2019 Server 或 Microsoft®®® Windows®®® 10
+* 1 GHz 或更快的處理器，支援PAE、NX和SSE2。
+* 32 位為 1 GB RAM，64 位作業系統為 2 GB RAM
+* 32 位為 16 GB 磁碟空間，64 位作業系統為 20 GB 磁碟空間
+* 顯存 - 128 MB GPU（建議 256 MB）
 * 2.35 GB的可用硬碟空間
 * 1024 X 768畫素或更高的熒幕解析度
 * 視訊硬體加速（選購）
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC
-* 安裝設計工具的管理許可權
+* 安裝設計器的管理許可權
 * Microsoft Visual C++ 2019 （VC 14.28或更新版本） 32位元AEM Forms Designer的32位元執行階段
 * Microsoft Visual C++ 2019 （VC 14.28或更新版本）適用於64位元AEM Forms Designer的64位元執行階段（適用於OSGI和JEE棧疊）
 
 ### AEM Assets XMP中繼資料回寫的需求 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
-下列平台和檔案格式支援並啟用XMP回寫：
+以下平台和檔案格式支援並啟用了XMP回寫：
 
 * **作業系統：**
 
@@ -547,4 +550,4 @@ PDF Generator僅支援英文、法文、德文和日文版本的支援作業系�
 
 ### AEM Assets在Linux上處理中繼資料密集的資產的需求® {#assetsonlinux}
 
-XMPFilesProcessor處理需要程式庫GLIBC_2.14才能運作。 使用包含GLIBC_2.14的Linux®核心，例如Linux®核心版本3.1.x。它可改善處理包含大量中繼資料的資產(例如PSD檔案)的效能。 使用舊版GLIBC會導致以開頭的記錄中出現錯誤 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
+XMPFilesProcessor 進程需要 資料庫 GLIBC_2.14 才能工作。 使用包含 GLIBC_2.14 的Linux內核，例如Linux®®內核版本3.1.x。它提高了處理包含大量 中繼資料、按讚 PSD 文件的資產的性能。 使用以前版本的 GLIBC 會導致以 開頭 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`的日誌中出錯。
