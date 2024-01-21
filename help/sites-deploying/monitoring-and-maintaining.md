@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 783824ece92c12476505d695b961d782d7d70cb9
 workflow-type: tm+mt
-source-wordcount: '5793'
+source-wordcount: '5792'
 ht-degree: 0%
 
 ---
@@ -203,7 +203,7 @@ AEM WCM會記錄詳細的記錄。 拆開包裝並開始快速入門後，您可
 
 記錄檔案旋轉是指透過定期建立檔案來限制檔案增長的程式。 在AEM中，名為的記錄檔 `error.log` 會根據指定規則每天輪換一次：
 
-* 此 `error.log` 檔案會根據模式重新命名 {original_filename} `.yyyy-MM-dd`. 例如，在2010年7月11日，目前的記錄檔已重新命名 `error.log-2010-07-10`，然後是新的 `error.og` 「 」已建立。
+* 此 `error.log` 檔案會根據模式重新命名 `{original_filename}.yyyy-MM-dd`. 例如，在2010年7月11日，目前的記錄檔已重新命名 `error.log-2010-07-10`，然後是新的 `error.log` 「 」已建立。
 
 * 上一個日誌文件不會被刪除，因此您有責任定期清理舊的日誌文件以限制磁碟使用量。
 
@@ -435,7 +435,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >預設值為「」。yyyy-MM-dd （用於每日日誌輪換）。
    >
-   >例如，在 2010 年 1 月 20 日午夜（或在此日期之後出現的第一條日誌消息精確時）,../logs/error.log 已重新命名為 ../logs/error.log.2010-01-20. 1 月 21 日的記錄輸出到（新的和空的）../logs/error.log，直到在下一個更改日期時滾動。
+   >例如，在 2010 年 1 月 20 日午夜（或在此日期之後出現的第一條日誌消息精確時）,../logs/error.log 更名為 ../logs/error.log.2010-01-20. 1 月 21 日的記錄輸出到（新的和空的）../logs/error.log 直到在下一個日期更改時滾動。
    >
    >| `'.'yyyy-MM` | 每月月初輪換 |
    >|---|---|

@@ -4,9 +4,9 @@ description: 「艱難日」測試可在所有作業同時進行的情況下，�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 61c7955c5370b5341d097dc36d08b2b92b89517b
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1826'
 ht-degree: 1%
 
 ---
@@ -400,7 +400,7 @@ publishmode:
 * **toughday.log**：包含與應用程式狀態、偵錯資訊和全域訊息相關的訊息。
 * **toughday_&lt;testname>.log**：與指定測試相關的訊息。
 
-不會覆寫記錄，後續執行會將訊息附加至現有記錄。 記錄有數個層級，如需詳細資訊，請參閱 ` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`.
+不會覆寫記錄，後續執行會將訊息附加至現有記錄。 記錄有數個層級，如需詳細資訊，請參閱 [loglevel引數。](#global-parameters).
 
 <!--
 #### Example Usage {#example-usage}
