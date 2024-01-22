@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 75139b4a951269aeacc689baec1da6bf72ce65bc
+source-git-commit: 667125e9f7f9f5c9fa438e1d55c0a059ceae64c3
 workflow-type: tm+mt
-source-wordcount: '4002'
+source-wordcount: '3984'
 ht-degree: 0%
 
 ---
@@ -483,7 +483,6 @@ PDF Generator僅支援英文、法文、德文和日文版本的支援作業系�
 >
 此外：
 >
-- PDF Generator需要32位元版本的 [Acrobat 2020 classic追蹤20.004.30006版](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 執行轉換。
 - PDF Generator僅支援32位元零售版的Microsoft® Office Professional Plus，以及其他轉換所需的軟體。
 - PDF Generator不支援Microsoft® Office 365。
 - 只有Windows和Linux®才支援OpenOffice的PDF Generator轉換。
