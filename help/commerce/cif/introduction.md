@@ -1,12 +1,12 @@
 ---
 title: 簡介和概觀
-description: 瞭解如何使用及管理AEM內容與商務，包含有關整合的實用文章，以及如何開始使用AEM Storefront。
+description: 透過我們有關整合以及如何開始使用 AEM Storefront 的實用文章，了解如何使用和管理 AEM Content and Commerce。
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
 source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
 source-wordcount: '838'
-ht-degree: 85%
+ht-degree: 88%
 
 ---
 
