@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 4be8b14ca9af543cec89c85ec5750f2065033406
+source-git-commit: d232bfdad7b8413eb015f6fe5dd3442cebf1001d
 workflow-type: tm+mt
-source-wordcount: '7297'
+source-wordcount: '7312'
 ht-degree: 18%
 
 ---
@@ -623,7 +623,7 @@ ht-degree: 18%
       + [最適化表單片段](/help/forms/using/adaptive-form-fragments.md)
       + [設定提交動作](/help/forms/using/configuring-submit-actions.md)
       + [在最適化表單中使用驗證碼](/help/forms/using/captcha-adaptive-forms.md)
-      + [最適化表單關鍵字](/help/forms/using/adaptive-forms-keywords.md)
+      + [調適型表單關鍵字](/help/forms/using/adaptive-forms-keywords.md)
       + [調適型表單中的表格](/help/forms/using/adaptive-forms-tables.md)
       + [自動儲存最適化表單](/help/forms/using/auto-save-an-adaptive-form.md)
       + [設定重新導向頁面](/help/forms/using/configuring-redirect-page.md)
@@ -1180,6 +1180,7 @@ ht-degree: 18%
       + [即使AEM Forms伺服器未完全啟動且執行中，仍會處理檔案](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
       + [無法使用輸出服務、Forms服務或記錄檔案(DoR)服務](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
       + [緩解Experience Manager Forms的Struts 2 RCE漏洞](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
+      + [升級至AEM Forms Service Pack時無法備份資料庫。 6.5.12.0](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6.5.12.0.md)
    + 舊版檔案 {#legacy-documentation}
       + [使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料](/help/forms/developing/building-xml.md)
       + [在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案](/help/forms/developing/compressing-decompressing-custom-dsc.md)
