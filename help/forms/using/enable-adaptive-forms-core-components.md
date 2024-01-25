@@ -8,9 +8,9 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
-source-git-commit: 4a8155f754d1f71354717f5eb22511baab110916
+source-git-commit: 6cec9874bff54dea63562f7a880429d54e83ba79
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '969'
 ht-degree: 10%
 
 ---
@@ -105,12 +105,11 @@ ht-degree: 10%
 1. 更新專案以包含最新版Forms核心元件：
 
    1. 開啟 [AEM原型專案資料夾]/pom.xml進行編輯。
-   1. 設定版本 `core.forms.components.version` 和 `core.forms.components.af.version` 至 [最新Forms核心元件](https://github.com/adobe/aem-core-forms-components/tree/release/650#system-requirements) 版本，並確認兩者版本相同 **Forms核心元件** 在表格中提及，並設定版本 `core.wcm.components.version` 如中所述 **WCM核心元件**.
+   1. 設定版本 `core.forms.components.version` 和 `core.forms.components.af.version` 至 [最新Forms核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history) 版本，並確認兩者版本相同 **Forms核心元件** 在表格中提及，並設定版本 `core.wcm.components.version` 如中所述 [WCM核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html).
 
       >[!WARNING]
       >
-      >* 使用建立原型專案時 `version 45`，則 [AEM原型專案資料夾]/pom.xml一開始將forms核心元件版本設定為 `1.1.28`. 在建立或部署Archetype專案之前，請將Forms核心元件版本更新為 `1.1.26`.
-
+      >* 使用版本45建立Archetype專案時， `[AEM Archetype Project Folder]/pom.xml` 將forms核心元件版本初始設定為1.1.28。在建立或部署Archetype專案之前，請將Forms核心元件版本更新為1.1.26。您可以在以下連結中找到最新版本： [AEM 6.5 Forms版本記錄](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history).
 
       >[!NOTE]
       >
