@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: 05f54e451c72b0a1690ba4a2ca50db87711a8094
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3608'
 ht-degree: 3%
 
 ---
@@ -29,6 +29,11 @@ ht-degree: 3%
 提交表單後，您的客戶通常希望以列印或檔案格式來記錄他們在表單中填寫的資訊，以供日後參考。 這稱為記錄檔案。
 
 本文說明如何產生Adaptive Forms或Adaptive Form片段的記錄檔案。
+
+>[!NOTE]
+>
+> AEM 6.5 Forms Service Pack 19 (6.5.19.0)引進自訂最適化表單片段及其在最適化表單編輯器中欄位的支援。
+
 
 >[!NOTE]
 >

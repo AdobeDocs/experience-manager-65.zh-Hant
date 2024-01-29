@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 23dd80f0555ddec1ca422b13fbf0d45acf5ab6a8
+source-git-commit: 05f54e451c72b0a1690ba4a2ca50db87711a8094
 workflow-type: tm+mt
-source-wordcount: '2580'
+source-wordcount: '2597'
 ht-degree: 48%
 
 ---
@@ -168,6 +168,10 @@ ht-degree: 48%
 在設定成功之後，使用[叫用 Microsoft® Power Automate 流程](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action)提交動作，將資料傳送到 Power Automate Flow。
 
 ## 提交至Microsoft® SharePoint清單{#submit-to-sharedrive}
+
+>[!NOTE]
+>
+提交至Microsoft® SharePoint清單功能是在AEM 6.5 Forms Service Pack 19 (6.5.19.0)中引入。
 
 此 **[!UICONTROL 提交至SharePoint]** 提交動作將最適化表單與Microsoft® SharePoint儲存空間連線起來。 您可以將表單資料檔案、附件或記錄檔案提交至連線的Microsoft® Sharepoint儲存體。
 
