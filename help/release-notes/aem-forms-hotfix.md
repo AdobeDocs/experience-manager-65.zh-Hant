@@ -2,16 +2,20 @@
 title: AEM Forms的Hotfix
 description: 提供有關如何下載和安裝AEM Forms的Hotfix的資訊。
 exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
-source-git-commit: 4c47fc5d03732d206c9eb18feb6e44018e936472
+source-git-commit: 4685a4babbec07dc09fe19c9264b4141b9989fbb
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 1%
+source-wordcount: '320'
+ht-degree: 0%
 
 ---
 
 # Adobe Experience Manager Forms Hotfix{#aem-form-hotfix}
 
 本文列出為解決已知問題、改善系統穩定性及增強AEM Forms整體效能而實作的重大修正。
+
+>[!NOTE]
+>
+> 這些Hotfix的設計是累積性的，包含所有先前的修正。 將最新Hotfix套用至某個版本時，不僅可解決最近的問題，還可整合所有先前的錯誤修正和增強功能。
 
 ## 最適化Forms的Hotfix {#hotfix-for-adaptive-forms}
 
@@ -21,6 +25,34 @@ ht-degree: 1%
     <td><strong>日期</strong></td>
     <td><strong>Hotfix下載連結(AEM軟體發佈連結)</strong></td>
     <td><strong>已修正的問題</strong></td>
+  </tr>
+  <tr>
+    <td>2024年1月29日</td>
+     <td>
+     <ul>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2Fforms-foundation-qs-content-4.0.170-FORMS-12692-B0001.zip">JEE伺服器上Windows適用的AEM Service Pack 6.5.19.0 Hotfix</a> </li>
+     </ul>
+     </td>
+    <td>
+    <ul>
+    <li>在JEE伺服器上的AEM Forms上，使用內容路徑的HTML5 Forms無法轉譯。 (FORMS-12485)。</li>
+    </ul>
+    </td>    
+  </tr>
+  <tr>
+    <td>2024年1月29日</td>
+     <td>
+     <ul>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2Fadobe-aemfd-win-pkg-6.0.1016-004.zip">適用於Microsoft Windows的AEM Service Pack 6.5.18.0 Hotfix</a> </li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2Fadobe-aemfd-linux-pkg-6.0.1016-004.zip">適用於Linux的AEM Service Pack 6.5.18.0的Hotfix</a></li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2Fadobe-aemfd-osx-pkg-6.0.1016-004.zip">適用於Apple macOS的AEM Service Pack 6.5.18.0的Hotfix</a></li>
+     </ul>
+     </td>
+    <td>
+    <ul>
+    <li> OOTB手寫簽名元件無法以最適化表單呈現預覽。 (FORMS-12073)。</li>
+    </ul>
+    </td>    
    </tr>
    <tr>
     <td>2023年11月20日</td>
@@ -38,9 +70,9 @@ ht-degree: 1%
     <li>含有大型內嵌影像的互動式通訊無法在編輯模式中開啟。 (FORMS-10578)</li>
     </ul>
     </td>    
-    </tr>
-    <tbody>
-     </table>
+  </tr>
+  <tbody>
+</table>
 
 ## 下載並安裝Hotfix {#download-install-hotfix}
 
