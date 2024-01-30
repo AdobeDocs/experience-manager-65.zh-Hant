@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
-source-git-commit: 152b6078d6a19f8220564188d4d5d5a7bdee4146
+source-git-commit: ff9d054d0b08f5f98f5edb63975a0dbc8370d42f
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%
@@ -65,7 +65,7 @@ javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "ad
 Node root = session.getRootNode();
 ```
 
-一旦建立 `Node`例如，您可以執行建立其他節點及為其增加值等工作。 例如，下列程式碼會建立兩個節點，並將值新增至第二個節點。
+一旦建立 `Node` 例如，您可以執行建立其他節點及為其增加值等工作。 例如，下列程式碼會建立兩個節點，並將值新增至第二個節點。
 
 ```java
 // Store content
