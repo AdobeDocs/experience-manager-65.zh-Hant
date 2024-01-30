@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 152b6078d6a19f8220564188d4d5d5a7bdee4146
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 雖然有不同的方式可連線到存放庫並建立連線，但本開發文章使用屬於 `org.apache.jackrabbit.commons.JcrUtils` 類別。 方法的名稱為 `getRepository`. 此方法會採用代表Adobe CQ伺服器URL的字串引數。 例如，`http://localhost:4503/crx/server`。
 
-此 `getRepository`方法傳回 `Repository`執行個體，如下列程式碼範例所示。
+此 `getRepository` 方法傳回 `Repository` 執行個體，如下列程式碼範例所示。
 
 ```java
 //Create a connection to the AEM JCR repository running on local host
@@ -42,14 +42,14 @@ Repository repository = JcrUtils.getRepository("http://localhost:4503/crx/server
 
 ## 建立工作階段執行個體 {#create-a-session-instance}
 
-此 `Repository`執行個體代表CRX存放庫。 您使用 `Repository`執行個體以建立與存放庫的工作階段。 若要建立工作階段，請叫用 `Repository`執行個體的 `login`方法並傳遞 `javax.jcr.SimpleCredentials` 物件。 此 `login`方法傳回 `javax.jcr.Session` 執行個體。
+此 `Repository` 執行個體代表CRX存放庫。 您使用 `Repository` 執行個體以建立與存放庫的工作階段。 若要建立工作階段，請叫用 `Repository` 執行個體的 `login` 方法並傳遞 `javax.jcr.SimpleCredentials` 物件。 此 `login` 方法傳回 `javax.jcr.Session` 執行個體。
 
-您建立 `SimpleCredentials`物件，使用它的建構函式並傳遞下列字串值：
+您建立 `SimpleCredentials` 物件，使用它的建構函式並傳遞下列字串值：
 
 * 使用者名稱；
 * 對應的密碼
 
-傳遞第二個引數時，呼叫字串物件的 `toCharArray`方法。 下列程式碼會示範如何呼叫 `login`傳回 `javax.jcr.Sessioninstance`.
+傳遞第二個引數時，呼叫字串物件的 `toCharArray` 方法。 下列程式碼會示範如何呼叫 `login` 傳回 `javax.jcr.Sessioninstance`.
 
 ```java
 //Create a Session instance
@@ -58,7 +58,7 @@ javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "ad
 
 ## 建立節點例項 {#create-a-node-instance}
 
-使用 `Session`執行個體以建立 `javax.jcr.Node` 執行個體。 A `Node`執行個體可讓您執行節點作業。 例如，您可以建立節點。 若要建立代表根節點的節點，請叫用 `Session`執行個體的 `getRootNode` 方法，如下列程式碼行所示。
+使用 `Session` 執行個體以建立 `javax.jcr.Node` 執行個體。 A `Node` 執行個體可讓您執行節點作業。 例如，您可以建立節點。 若要建立代表根節點的節點，請叫用 `Session` 執行個體的 `getRootNode` 方法，如下列程式碼行所示。
 
 ```java
 //Create a Node
@@ -75,7 +75,7 @@ day.setProperty("message", "Adobe CQ is part of the Adobe Digital Marketing Suit
 
 ## 擷取節點值 {#retrieve-node-values}
 
-若要擷取節點及其值，請叫用 `Node`執行個體的 `getNode`方法，並傳遞代表完整路徑之節點的字串值。 考量在前一個程式碼範例中建立的節點結構。 若要擷取日期節點，請指定adobe/day，如下列程式碼所示：
+若要擷取節點及其值，請叫用 `Node` 執行個體的 `getNode` 方法，並傳遞代表完整路徑之節點的字串值。 考量在前一個程式碼範例中建立的節點結構。 若要擷取日期節點，請指定adobe/day，如下列程式碼所示：
 
 ```java
 // Retrieve content
@@ -86,7 +86,7 @@ System.out.println(node.getProperty("message").getString());
 
 ## 在Adobe CQ存放庫中建立節點 {#create-nodes-in-the-adobe-cq-repository}
 
-以下Java™程式碼範例代表連線至Adobe CQ的Java™類別，會建立 `Session`例項，並新增節點。 節點會獲派資料值，然後節點的值及其路徑會寫入主控台。 當您完成工作階段時，請務必登出。
+以下Java™程式碼範例代表連線至Adobe CQ的Java™類別，會建立 `Session` 例項，並新增節點。 節點會獲派資料值，然後節點的值及其路徑會寫入主控台。 當您完成工作階段時，請務必登出。
 
 ```java
 /*
