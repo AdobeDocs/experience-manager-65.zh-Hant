@@ -1,14 +1,14 @@
 ---
 title: 升級至MySQL適用的6.5.12.0期間無法備份資料庫。
 description: 當使用者升級至Experience Manager6.5.12.0並按一下「升級MySQL」時，設定管理員無法備份先前的Experience Manager Forms資料庫。
-source-git-commit: bf974331157e21b28c0daa5b878ac927ce5a2304
+source-git-commit: a6b1e97fd694f0fa1396697c42d84daaa9a6ac68
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
-# 升級至MySQL 6.5.12.0期間無法備份資料庫(#issue)
+# 升級至MySQL適用的6.5.12.0期間無法備份資料庫 {#issue}
 
 當使用者升級至Experience Manager6.5.12.0並按一下「升級MySQL」時，設定管理員無法備份先前的Experience Manager Forms資料庫，它會顯示錯誤：
 
