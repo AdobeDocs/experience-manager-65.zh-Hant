@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 07d44d8dea5bf27b831abd02bd42e53dd860133a
+source-git-commit: 26ffe17d1ddd116a749f7f02e84e91d5b9759ca8
 workflow-type: tm+mt
-source-wordcount: '7322'
+source-wordcount: '7329'
 ht-degree: 18%
 
 ---
@@ -1181,7 +1181,8 @@ ht-degree: 18%
       + [即使AEM Forms伺服器未完全啟動且執行中，仍會處理檔案](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
       + [無法使用輸出服務、Forms服務或記錄檔案(DoR)服務](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
       + [緩解Experience Manager Forms的Struts 2 RCE漏洞](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
-      + [升級至AEM Forms Service Pack時無法備份資料庫。 6.5.12.0](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6.5.12.0.md)
+      + [升級至MySQL適用的6.5.12.0期間無法備份資料庫](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6.5.12.0.md)
+      + [PDF產生無法在WorkBench上列印大量PDF](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
    + 舊版檔案 {#legacy-documentation}
       + [使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料](/help/forms/developing/building-xml.md)
       + [在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案](/help/forms/developing/compressing-decompressing-custom-dsc.md)

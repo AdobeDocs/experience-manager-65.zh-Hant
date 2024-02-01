@@ -1,14 +1,14 @@
 ---
-title: 無法在AEM Forms 6.5.12.0上備份先前的資料庫。
+title: 升級至MySQL適用的6.5.12.0期間無法備份資料庫。
 description: 當使用者升級至Experience Manager6.5.12.0並按一下「升級MySQL」時，設定管理員無法備份先前的Experience Manager Forms資料庫。
-source-git-commit: d232bfdad7b8413eb015f6fe5dd3442cebf1001d
+source-git-commit: bf974331157e21b28c0daa5b878ac927ce5a2304
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 1%
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
-# 問題(#issue)
+# 升級至MySQL 6.5.12.0期間無法備份資料庫(#issue)
 
 當使用者升級至Experience Manager6.5.12.0並按一下「升級MySQL」時，設定管理員無法備份先前的Experience Manager Forms資料庫，它會顯示錯誤：
 
