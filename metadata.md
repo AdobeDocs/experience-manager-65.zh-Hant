@@ -7,10 +7,11 @@ feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sit
 version: 6.5
 type: Documentation
 index: y
-source-git-commit: ee6e408668a523464632e53a01ba11eddec103f6
+recommendations: noDisplay
+source-git-commit: fc76dd7af48aa67380b0635589acf9322bff86fb
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 92%
+source-wordcount: '131'
+ht-degree: 80%
 
 ---
 
@@ -24,8 +25,8 @@ metadata.md 檔案包含存放庫層級中繼資料，這些中繼資料會傳�
 | solution-title | 在文章標題中作為連結使用。 |
 | solution-hub-url | 開啟學習與支援中心頁面。 |
 | solution-icon | 在解決方案標題旁顯示解決方案圖示。尚未實作。 |
-| getting-started-url | 連結到入門頁。 |
-| tutorials-url | 指向視頻教程的連結。 |
+| getting-started-url | 連結到開始使用頁面。 |
+| tutorials-url | 教學課程影片。 |
 | mini-toc-levels | 決定顯示在右側欄中的標題層數量。預設值為 2。 |
 | git-repo | 指定內部使用的主要存放庫位置。 |
 
