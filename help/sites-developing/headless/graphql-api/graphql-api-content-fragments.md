@@ -3,10 +3,10 @@ title: 與內容片段搭配使用的 AEM GraphQL API
 description: 瞭解如何在Adobe Experience Manager (AEM)中使用內容片段搭配AEM GraphQL API來進行Headless內容傳送。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 312e2477bb6a7cccab74cd4637d6a402f61052d7
 workflow-type: tm+mt
-source-wordcount: '4847'
-ht-degree: 59%
+source-wordcount: '4708'
+ht-degree: 57%
 
 ---
 
@@ -195,7 +195,7 @@ GraphQL 規格提供了一系列指南，說明如何建立健全的 API 來查�
 
    * 其中三個是由使用者控制： `author`， `main`、和 `referencearticle`.
 
-   * 其他欄位則由AEM自動新增，並代表提供特定內容片段相關資訊的實用方法。在此範例中， [協助程式欄位](#helper-fields)) `_path`， `_metadata`， `_variations`.
+   * 其他欄位則由AEM自動新增，並代表提供特定內容片段相關資訊的實用方法。 在此範例中， [協助程式欄位](#helper-fields)) `_path`， `_metadata`， `_variations`.
 
 1. 使用者根據文章模型建立內容片段後，就可以透過 GraphQL 對其進行查詢。例如，請參閱[範例查詢](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#graphql-sample-queries) (根據[與 GraphQL 搭配使用的範例內容片段結構](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql))。
 
@@ -252,13 +252,13 @@ GraphQL for AEM 支援類型清單。表示所有支援的內容片段模型資�
 | 內容片段模型 - 資料類型 | GraphQL 類型 | 說明 |
 |--- |--- |--- |
 | 單行文字 | `String`、`[String]` |  用於簡單字串，例如作者名稱和位置名稱。 |
-| 多行文字 | `String` |  用於輸出文字，例如文章正文 |
-| 數字 |  `Float`, `[Float]` | 用於顯示浮點數和正規數 |
-| 布林值 |  `Boolean` |  用於顯示核取方塊 → 簡單的 true/false 陳述式 |
+| 多行文字 | `String` |  用於輸出文字，例如文章內文 |
+| 數字 |  `Float`， `[Float]` | 用於顯示浮點數和正規數 |
+| 布林值 |  `Boolean` |  用於顯示核取方塊→簡單的true/false陳述式 |
 | 日期和時間 | `Calendar` |  用於以ISO 8086格式顯示日期和時間。 視所選類型而定，AEM GraphQL 中可使用三種風格：`onlyDate`、`onlyTime`、`dateTime` |
-| 列舉 |  `String` |  用於顯示模型建立時定義之選項清單中的選項 |
-|  標記 |  `[String]` |  用於顯示字串清單，字串代表 AEM 中使用的標記 |
-| 內容參考 |  `String` |  用於顯示 AEM 中另一個資產的路徑 |
+| 列舉 |  `String` |  用於顯示模型建立時定義的選項清單中的選項 |
+|  標籤 |  `[String]` |  用來顯示代表AEM中所使用標籤的字串清單 |
+| 內容參考 |  `String` |  用來顯示指向AEM中另一個資產的路徑 |
 | 片段參考 |  *模型類型* <br><br>單一欄位：`Model` - 模型類型，直接參考<br><br>多個欄位，具單一參考類型：`[Model]` - `Model` 類型陣列，從陣列直接參考<br><br>多個欄位，具多個參考類型：`[AllFragmentModels]` - 所有模型類型陣列，從聯合類型的陣列參考 | 用於參考特定模型類型的一個或多個內容片段，在建立模型時定義 |
 
 {style="table-layout:auto"}
@@ -659,7 +659,7 @@ query {
 * `first`：要傳回的前 `n` 個項目。
 預設為 `50`。
 最大值為 `100`。
-* `after`：決定請求頁面開頭的游標。游標所代表的專案不包含在結果集中。 專案的游標由下列專案決定 `cursor` 欄位屬於 `edges` 結構。
+* `after`：決定請求頁面開頭的游標。 游標所代表的專案不包含在結果集中。 專案的游標由下列專案決定 `cursor` 欄位屬於 `edges` 結構。
 
 例如，要輸出最多包含五篇文章的結果頁面，從&#x200B;*完整*&#x200B;結果清單中的特定游標項目開始：
 
@@ -705,40 +705,28 @@ query {
 
 ### 啟用持續性查詢的快取 {#enable-caching-persisted-queries}
 
-若要啟用持續性查詢的快取，請定義 Dispatcher 變數 `CACHE_GRAPHQL_PERSISTED_QUERIES`：
+若要啟用持續查詢的快取，需要對Dispatcher設定檔案進行以下更新：
 
-1. 將變數新增至 Dispatcher 檔案 `global.vars`：
+* `<conf.d/rewrites/base_rewrite.rules>`
 
-   ```xml
-   Define CACHE_GRAPHQL_PERSISTED_QUERIES
-   ```
+  ```xml
+  # Allow the dispatcher to be able to cache persisted queries - they need an extension for the cache file
+  RewriteCond %{REQUEST_URI} ^/graphql/execute.json
+  RewriteRule ^/(.*)$ /$1;.json [PT] 
+  ```
 
->[!NOTE]
->
->當使用以下專案為持續查詢啟用Dispatcher快取時 `Define CACHE_GRAPHQL_PERSISTED_QUERIES` 一個 `ETag` 標頭會新增到Dispatcher的回應。
->
->根據預設 `ETag` 標頭是使用以下指令設定的：
->
->```
->FileETag MTime Size 
->```
->
->不過，此設定在用於持續查詢回應時可能會造成問題，因為它並未說明回應中的細微變更。
->
->若要取得個人 `ETag` 計算 *每個* 唯一回應 `FileETag Digest` 必須在Dispatcher設定中使用設定：
->
->```xml
-><Directory />    
->   ...    
->   FileETag Digest
-></Directory> 
->```
+  >[!NOTE]
+  >
+  >Dispatcher新增尾碼 `.json` 至所有儲存的查詢URL，以便可以快取結果。
+  >
+  >這是為了確保查詢符合Dispatcher對可快取檔案的要求。 如需詳細資訊，請參閱 [Dispatcher如何傳回檔案？](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)
 
->[!NOTE]
->
->若要遵循 [Dispatcher對可快取檔案的需求](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)，Dispatcher會新增尾碼 `.json` 至所有儲存的查詢URL，以便可以快取結果。
->
->啟用持續性查詢快取後，就會重寫規則來新增此後綴。
+* `<conf.dispatcher.d/filters/ams_publish_filters.any>`
+
+  ```xml
+  # Allow GraphQL Persisted Queries & preflight requests
+  /0110 { /type "allow" /method '(GET|POST|OPTIONS)' /url "/graphql/execute.json*" }
+  ```
 
 ### Dispatcher 的 CORS 設定 {#cors-configuration-in-dispatcher}
 
@@ -927,7 +915,7 @@ query {
 
 此設定必須指定信任的網站來源 `alloworigin` 或 `alloworiginregexp` 必須授予其存取權。
 
-例如，若要授予 GraphQL 端點  和 `https://my.domain` 之持續性查詢端點的存取權，您可以使用：
+例如，若要授予GraphQL端點的存取權，以及下列專案的持續查詢端點 `https://my.domain` 您可以使用：
 
 ```xml
 {
