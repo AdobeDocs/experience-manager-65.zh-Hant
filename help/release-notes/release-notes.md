@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 040170454345df352ed259806193c41c23bf953d
+source-git-commit: 5ab1fd033af0d6d5595fe41de003455ab9ba28a6
 workflow-type: tm+mt
-source-wordcount: '4415'
+source-wordcount: '4417'
 ht-degree: 6%
 
 ---
@@ -553,7 +553,7 @@ The UberJar for [!DNL Experience Manager] 6.5.19.0可在以下網址取得： [M
 若要解決問題， [重新編譯Sling指令碼，例如JSP、Java™和Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html#resolution). (FORMS-8542)
 * 安裝AEM Service Pack 6.5.14.0及更高版本後，使用者在導覽至時，無法從JEE管理員UI中選取用於PDF檔案的字型 `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`，因為字型清單顯示為空白。 (FORMS-12095)
 <!-- When a form is signed using the OOTB Scribble Signature component, it appears in the image dialogue but does not preview and appears blank when you click on it. (FORMS-12073). A hotfix is available for this issue. To download and install the hotfix, see [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md) -->
-* 在JEE上的AEM Forms上，使用內容路徑的HTML5 Forms無法轉譯。 (FORMS-12485)。 已針對此問題提供Hotfix。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md).
+* 在JEE上的AEM Forms上，使用內容路徑的HTML5 Forms無法轉譯。 (FORMS-12485、FORMS-12691)。 已針對此問題提供Hotfix。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md).
 
 #### JEE上的AEM Forms
 
