@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: a9d59e00efe8f0c2cbfca51901c441a2d65b70f2
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1781'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 0%
 
 體驗片段主要和/或變體使用：
 
-* `sling:resourceType` : `/libs/cq/experience-fragments/components/xfpage`
+* `sling:resourceType` ： `/libs/cq/experience-fragments/components/xfpage`
 
 因為沒有 `/libs/cq/experience-fragments/components/xfpage/xfpage.html` 它恢復為
 
-* `sling:resourceSuperType` : `wcm/foundation/components/page`
+* `sling:resourceSuperType` ： `wcm/foundation/components/page`
 
 ## 純HTML轉譯 {#the-plain-html-rendition}
 
@@ -102,7 +102,7 @@ HTML轉譯是使用Sling重寫程式管道產生的。 管道定義於 `/libs/ex
 
 建立由偵測到的體驗片段範本： **建立體驗片段** 精靈，您必須遵循下列其中一個規則集：
 
-1. 兩者:
+1. 兩者：
 
    1. 範本的資源型別（初始節點）必須繼承自：
       `cq/experience-fragments/components/xfpage`
@@ -182,7 +182,7 @@ Link Externalizer可用來判斷建立Target選件的HTML版本時需要正確�
 
 >[!NOTE]
 >
->此介面已在中引入 [AEM 6.5 SP1 (6.5.1.0)](/help/release-notes/previous/6.5.1.md).
+>此介面已在中引入 [AEM 6.5 SP1 (6.5.1.0)](/help/release-notes/previous/6-5-1.md).
 
 對於更複雜的案例，不在 [預設](#default-link-rewriting)，AEM提供連結重寫器提供者介面。 這是 `ConsumerType` 介面，可在套件組合中實作為服務。 它會繞過AEM對HTML選件的內部連結執行的修改，如從體驗片段轉譯。 此介面可讓您自訂重寫內部HTML連結的程式，以符合您的業務需求。
 

@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 220e060de43758ce07e82bedcee8d26fb46a9a6f
+source-git-commit: a9d59e00efe8f0c2cbfca51901c441a2d65b70f2
 workflow-type: tm+mt
 source-wordcount: '7333'
 ht-degree: 18%
@@ -19,24 +19,24 @@ ht-degree: 18%
 + 發行說明 {#release-notes}
    + [發行說明](/help/release-notes/release-notes.md)
    + 舊版發行說明 {#service-pack}
-      + [6.5.18](/help/release-notes/previous/6.5.18.md)
-      + [6.5.17](/help/release-notes/previous/6.5.17.md)
-      + [6.5.16](/help/release-notes/previous/6.5.16.md)
-      + [6.5.15](/help/release-notes/previous/6.5.15.md)
-      + [6.5.14](/help/release-notes/previous/6.5.14.md)
-      + [6.5.13](/help/release-notes/previous/6.5.13.md)
-      + [6.5.12](/help/release-notes/previous/6.5.12.md)
-      + [6.5.11](/help/release-notes/previous/6.5.11.md)
-      + [6.5.10](/help/release-notes/previous/6.5.10.md)
-      + [6.5.9](/help/release-notes/previous/6.5.9.md)
-      + [6.5.8](/help/release-notes/previous/6.5.8.md)
-      + [6.5.7](/help/release-notes/previous/6.5.7.md)
-      + [6.5.6](/help/release-notes/previous/6.5.6.md)
-      + [6.5.5](/help/release-notes/previous/6.5.5.md)
-      + [6.5.4](/help/release-notes/previous/6.5.4.md)
-      + [6.5.3](/help/release-notes/previous/6.5.3.md)
-      + [6.5.2](/help/release-notes/previous/6.5.2.md)
-      + [6.5.1](/help/release-notes/previous/6.5.1.md)
+      + [6.5.18](/help/release-notes/previous/6-5-18.md)
+      + [6.5.17](/help/release-notes/previous/6-5-17.md)
+      + [6.5.16](/help/release-notes/previous/6-5-16.md)
+      + [6.5.15](/help/release-notes/previous/6-5-15.md)
+      + [6.5.14](/help/release-notes/previous/6-5-14.md)
+      + [6.5.13](/help/release-notes/previous/6-5-13.md)
+      + [6.5.12](/help/release-notes/previous/6-5-12.md)
+      + [6.5.11](/help/release-notes/previous/6-5-11.md)
+      + [6.5.10](/help/release-notes/previous/6-5-10.md)
+      + [6.5.9](/help/release-notes/previous/6-5-9.md)
+      + [6.5.8](/help/release-notes/previous/6-5-8.md)
+      + [6.5.7](/help/release-notes/previous/6-5-7.md)
+      + [6.5.6](/help/release-notes/previous/6-5-6.md)
+      + [6.5.5](/help/release-notes/previous/6-5-5.md)
+      + [6.5.4](/help/release-notes/previous/6-5-4.md)
+      + [6.5.3](/help/release-notes/previous/6-5-3.md)
+      + [6.5.2](/help/release-notes/previous/6-5-2.md)
+      + [6.5.1](/help/release-notes/previous/6-5-1.md)
       + [6.5.0](/help/release-notes/previous/ga.md)
    + [AEM Forms service pack安裝指示](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)
    + [AEM Forms JEE修補程式安裝程式](/help/release-notes/jee-patch-installer-65.md)
@@ -224,7 +224,7 @@ ht-degree: 18%
          + [使用Adobe Analytics屬性對應元件資料](/help/sites-administering/adobeanalytics-mapping.md)
          + [設定Adobe Analytics的視訊追蹤](/help/sites-administering/adobeanalytics-video.md)
          + [使用IMS與Adobe Analytics整合](/help/sites-administering/integration-analytics-ims.md)
-         + [HTTP2 傳送內容常見問答集](/help/sites-administering/scene7-http2faq.md)
+         + [HTTP2 傳送內容常見問題集](/help/sites-administering/scene7-http2faq.md)
          + [疑難排解Adobe Campaign的整合問題](/help/sites-administering/troubleshooting-campaignintegration.md)
          + [SharePoint聯結器授權、版權注意事項和免責宣告](/help/sites-administering/sharepoint-connector-licenses.md)
          + [DHTML檢視器生命週期結束常見問題集](/help/sites-administering/dhtml-viewer-endoflifefaqs.md)
@@ -1182,7 +1182,7 @@ ht-degree: 18%
       + [即使AEM Forms伺服器未完全啟動且執行中，仍會處理檔案](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
       + [無法使用輸出服務、Forms服務或記錄檔案(DoR)服務](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
       + [緩解Experience Manager Forms的Struts 2 RCE漏洞](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
-      + [升級至MySQL適用的6.5.12.0期間無法備份資料庫](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6.5.12.0.md)
+      + [升級至MySQL適用的6.5.12.0期間無法備份資料庫](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6-5-12-0.md)
       + [PDF產生無法在WorkBench上列印大量PDF](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
    + 舊版檔案 {#legacy-documentation}
       + [使用AEM Forms on JEE Workbench中的執行指令碼服務來建置XML資料](/help/forms/developing/building-xml.md)
