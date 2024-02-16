@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: f41cb88406db23c2af8988f7ee584db95184c6c4
+source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
 workflow-type: tm+mt
 source-wordcount: '7335'
 ht-degree: 18%
@@ -560,7 +560,7 @@ ht-degree: 18%
       + 設定AEM Forms {#configure-aem-forms}
          + [AEM Forms 伺服器的效能調整](/help/forms/using/performance-tuning-aem-forms.md)
          + [設定最適化表單快取](/help/forms/using/configure-adaptive-forms-cache.md)
-         + [正在設定AEM DS設定](/help/forms/using/configuring-the-processing-server-url-.md)
+         + [正在設定AEM DS設定](/help/forms/using/configuring-the-processing-server-url.md)
          + [設定同步排程器](/help/forms/using/configure-synchronization-scheduler.md)
          + [設定Microsoft SharePoint的聯結器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
          + [將AEM Forms與AdobeLiveCycle連線](/help/forms/using/aem-livecycle-connector.md)
@@ -636,7 +636,7 @@ ht-degree: 18%
       + [最適化表單元件的內嵌樣式](/help/forms/using/inline-style-adaptive-forms.md)
       + [多步驟表單序列簡介](/help/forms/using/introduction-form-sequence.md)
       + [調適型表單的版面配置功能](/help/forms/using/layout-capabilities-adaptive-forms.md)
-      + [AEM Forms中的預留位置文字](/help/forms/using/placeholder-text-in-aem-forms-.md)
+      + [AEM Forms中的預留位置文字](/help/forms/using/placeholder-text-in-aem-forms.md)
       + [預覽表單](/help/forms/using/previewing-forms.md)
       + [重複使用最適化表單](/help/forms/using/reusing-adaptive-forms.md)
       + [調適型表單中的分隔符號元件](/help/forms/using/separator-component-in-adaptive-forms.md)
@@ -886,11 +886,11 @@ ht-degree: 18%
       + [建立自訂工具列配置](/help/forms/using/creating-custom-toolbar-layout.md)
       + [根據使用的範本顯示元件](/help/forms/using/displaying-components-based-on-template.md)
       + [建立自訂最適化表單主題](/help/forms/using/creating-custom-adaptive-form-themes.md)
-   + 交易報告 {#transaction-reports}
+   + 交易報告{#transaction-reports}
       + [交易報表概觀](/help/forms/using/transaction-reports-overview.md)
       + [檢視與瞭解交易報表](/help/forms/using/viewing-and-understanding-transaction-reports.md)
-      + [交易報表可記帳API](/help/forms/using/transaction-reports-billable-apis.md)
-      + [記錄自訂實作的交易](/help/forms/using/record-transaction-custom-implementation.md)
+      + [交易報告計費 API](/help/forms/using/transaction-reports-billable-apis.md)
+      + [記錄自訂實施的交易](/help/forms/using/record-transaction-custom-implementation.md)
    + JEE上AEM Forms的管理員說明 {#administrator-help}
       + 立即開始 {#get-started}
          + [一般AEM Forms設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)

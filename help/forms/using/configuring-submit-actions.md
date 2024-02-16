@@ -6,7 +6,7 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 05f54e451c72b0a1690ba4a2ca50db87711a8094
+source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
 workflow-type: tm+mt
 source-wordcount: '2597'
 ht-degree: 48%
@@ -140,7 +140,7 @@ ht-degree: 48%
 
 「**[!UICONTROL 叫用 AEM 工作流程]**」提交動作會將最適化表單與 [AEM 工作流程](/help/sites-developing/workflows-models.md)建立關聯。提交表單後，相關聯的工作流程就會在作者執行個體上自動開始。您可以將資料檔案、附件和記錄檔案儲存至相對資料夾，或工作流程裝載下的資料夾，或儲存至變數。 如果工作流程標示為外部資料儲存，則變數選項可用，而不是裝載選項。 您可以從可用於工作流程模型的變數清單中選取。如果工作流程是在後續階段標記為外部資料儲存空間，而不是在建立工作流程時標記，則請確保已經具備所需的變數設定。
 
-使用之前 **叫用AEM工作流程** 提交動作， [設定Experience ManagerDS設定](../../forms/using/configuring-the-processing-server-url-.md). 如需建立AEM工作流程的詳細資訊，請參閱 [OSGi上以表單為中心的工作流程](../../forms/using/aem-forms-workflow.md).
+使用之前 **叫用AEM工作流程** 提交動作， [設定Experience ManagerDS設定](../../forms/using/configuring-the-processing-server-url.md). 如需建立AEM工作流程的詳細資訊，請參閱 [OSGi上以表單為中心的工作流程](../../forms/using/aem-forms-workflow.md).
 
 提交動作會將下列專案置於工作流程的裝載位置。 但請注意，如果工作流程模型標示為外部資料儲存，則只會顯示「變數」選項，而不會顯示「裝載」選項。
 

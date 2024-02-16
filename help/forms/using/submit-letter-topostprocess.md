@@ -7,7 +7,7 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 91ee4422-99c1-4907-a507-5968c6984f28
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
 workflow-type: tm+mt
 source-wordcount: '832'
 ht-degree: 0%
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 1. 登入 `https://localhost:publishport/aem/forms`.
 1. 瀏覽至 **[!UICONTROL 字母]** 以檢視發佈執行個體上可用的已發佈信件。
-1. 設定AEM DS設定。 另請參閱 [正在設定AEM DS設定](../../forms/using/configuring-the-processing-server-url-.md).
+1. 設定AEM DS設定。 另請參閱 [正在設定AEM DS設定](../../forms/using/configuring-the-processing-server-url.md).
 
 >[!NOTE]
 >
