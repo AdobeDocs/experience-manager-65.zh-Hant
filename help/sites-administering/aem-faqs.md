@@ -2,9 +2,9 @@
 title: AEM常見問題集
 description: 使用這些常見問題集來瞭解、設定和疑難排解AEM中的常見工作流程或問題。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 1a7805f063daf6f3dd07a2ff2d182e58fe7e63b8
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -25,12 +25,6 @@ ht-degree: 0%
 
 若要啟用無二進位檔的分發，請使用共用的blob存放區進行部署。
 檢查 `useBinaryReferences` OSGI設定中的屬性，具有原廠PID ( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)* 您的代理程式正在使用。
-
-#### 在AEM網站主控台中導覽頁面階層時，如何自訂錯誤訊息？ {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
-
-檢查Chrome瀏覽器的「網路」面板，其中個人設定（JS尚未縮制）。
-
-檢視 `Initiator` 欄，以判斷要求的發起者為何。 它會提供進行AJAX呼叫的來源檔案和行號。 稍後，您可以追蹤錯誤處理函式，並根據需求變更錯誤訊息。
 
 #### 如何在AEM中為內容作者建立語言副本時啟用許可權？ {#how-to-enable-permissions-while-creating-language-copy-for-content-authors-in-aem}
 
