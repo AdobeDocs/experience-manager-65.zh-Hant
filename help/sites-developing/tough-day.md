@@ -4,9 +4,9 @@ description: 「艱難日」測試可在所有作業同時進行的情況下，�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 61c7955c5370b5341d097dc36d08b2b92b89517b
+source-git-commit: b1012548630affd697edd27c90bdac4eeb35125f
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1825'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 ## 何謂艱難的第2天 {#what-is-tough-day}
 
-「艱難第2天」是一個應用程式，可讓您對AEM執行個體的限制進行壓力測試。 您可以立即使用預設的測試套件執行此檔案，也可以根據您的測試需求進行設定。 您可以觀看 [此錄製](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) 以取得應用程式的簡報。
+「艱難第2天」應用程式可讓您對AEM執行個體的限制進行壓力測試。 您可以立即使用預設的測試套件執行此檔案，也可以根據您的測試需求進行設定。 您可以觀看 [此錄製](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) 以取得應用程式的簡報。
 
 >[!CAUTION]
 >
@@ -49,7 +49,7 @@ java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  
 
 >[!NOTE]
 >
-「艱難第2天」沒有清理步驟。 因此，建議在複製的測試執行個體上執行「艱難第2天」，而不是在主要生產執行個體上執行。 測試後應該捨棄測試執行個體。
+>「艱難第2天」沒有清理步驟。 因此，建議在複製的測試執行個體上執行「艱難第2天」，而不是在主要生產執行個體上執行。 測試後應該捨棄測試執行個體。
 >
 
 ### 取得協助 {#getting-help}
@@ -330,9 +330,9 @@ java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --ad
 
 >[!NOTE]
 >
-由於平行執行，實際測試執行次數不會完全符合中設定的數量。 `count` 引數。 預期與執行中執行緒數量成比例的偏差(由 `concurrency parameter`)。
+>由於平行執行，實際測試執行次數不會完全符合中設定的數量。 `count` 引數。 預期與執行中執行緒數量成比例的偏差(由 `concurrency parameter`)。
 
-### 排練 {#dry-run}
+### 試執行 {#dry-run}
 
 試執行會剖析所有指定的輸入（命令列引數或組態檔），將其與預設值合併，然後輸出結果。 它不會執行任何測試。
 

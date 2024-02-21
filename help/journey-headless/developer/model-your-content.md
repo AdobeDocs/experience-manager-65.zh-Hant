@@ -2,10 +2,10 @@
 title: 如何建立內容模型
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解如何使用內容模型和內容片段模型及內容片段，建立您的內容模型用於 AEM Headless 傳遞。
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
 workflow-type: tm+mt
 source-wordcount: '1795'
-ht-degree: 78%
+ht-degree: 79%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 78%
 
 在 [AEM Headless 開發人員歷程](overview.md)的這一部分中，您可以了解如何建立內容結構模型。然後瞭解使用內容片段模型和內容片段的Adobe Experience Manager (AEM)結構，以便跨管道重複使用。
 
-## 到目前為止 {#story-so-far}
+## 目前進度 {#story-so-far}
 
 開始時， [瞭解CMS Headless開發](learn-about.md) 涵蓋headless內容傳遞以及應使用它的原因。 則 [AEM Headless快速入門](getting-started.md) 在您自己的專案中說明AEM Headless。
 
@@ -45,7 +45,7 @@ ht-degree: 78%
 
 *外面的世界很大很糟糕*。
 
-也許吧，也許不是，但肯定是很大的 ***複雜*** 外面的世界。 資料模型是用來定義非常（非常）小子區段的簡化表示，使用特定用途所需的特定資訊。
+也許是，但也許不是。這當然是件大事 ***複雜*** 外面的世界。 資料模型是用來定義非常（非常）小子區段的簡化表示，使用特定用途所需的特定資訊。
 
 >[!NOTE]
 >
@@ -228,7 +228,7 @@ AEM 提供以下資料類型用於建立內容模型：
 
 ### 選擇適當的模型 {#select-model}
 
-實際建立內容的第一步是建立內容片段。方法是使用「資產>檔案」底下所需資料夾中的「建立>內容片段」 。 精靈會引導您完成這些步驟。
+實際建立內容的第一步是建立內容片段。這是使用「建立 > 內容片段」在「資產 > 檔案」下的所需資料夾中完成的。精靈會引導您完成這些步驟。
 
 內容片段基於特定的內容片段模型 (建立流程第一步時選取的)。
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: 5cb906b6-6a3c-498c-94f5-27a9071ea934
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 7%
+source-wordcount: '444'
+ht-degree: 3%
 
 ---
 
@@ -28,9 +28,9 @@ ht-degree: 7%
 
    1. 複製內容資料夾：
 
-      從: `/libs/livecycle/core`
+      從： `/libs/livecycle/core`
 
-      至: `/apps/livecycle/core`.
+      至： `/apps/livecycle/core`.
 
    1. 刪除內容 `/apps/livecycle/core` 資料夾。
 
@@ -61,7 +61,7 @@ ht-degree: 7%
    >
    >如果locale是語言 — 國家/地區的代碼組合，例如， `ar-DZ`，然後將資料夾名稱和屬性值變更為 `ar-DZ`.
 
-1. 複製 `login.jsp`:
+1. 複製 `login.jsp`：
 
    * 從 `/libs/livecycle/core/components/login`
    * 至 `/apps/livecycle/core/components/login`
@@ -204,7 +204,7 @@ String browserLocale = "en";
 1. 若要新增索引鍵/值組，請執行下列動作。 請檢視下列熒幕擷圖中的範例。
 
    1. 建立型別節點 `sling:MessageEntry`，或複製現有節點並重新命名（在所有地區設定資料夾下）。
-   1. 複製 `login.jsp` :
+   1. 複製 `login.jsp` ：
 
       * 從 `/libs/livecycle/core/components/login`
 
@@ -290,7 +290,7 @@ css.newLoginContentArea {
 1. 在中新增影像 `/apps/livecycle/core/content/login`. 若要新增影像：
 
    1. 安裝WebDAV使用者端。
-   1. 瀏覽至 `/apps/livecycle/core/content/login` 資料夾，使用webDAV使用者端。 如需詳細資訊，請參閱： [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant).
+   1. 瀏覽至 `/apps/livecycle/core/content/login` 資料夾，使用webDAV使用者端。 如需詳細資訊，請參閱 [WebDAV存取](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en).
 
    1. 新增影像。
 

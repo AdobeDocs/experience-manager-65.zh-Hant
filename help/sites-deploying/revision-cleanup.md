@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: deploying
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: b1012548630affd697edd27c90bdac4eeb35125f
 workflow-type: tm+mt
 source-wordcount: '5752'
 ht-degree: 0%
@@ -529,7 +529,7 @@ TarMK GC: no base state available, running full compaction instead
   </td>
   </tr>
   <tr>
-    <td>N/A</td>
+    <td>不適用</td>
     <td>TarMK GC #2：估計已中斷： ${REASON}. 正在跳過壓縮。</td>
     <td>預估階段提前結束。 可能中斷估計階段的一些事件範例：主機系統上的記憶體或磁碟空間不足。</td>
     <td>取決於特定原因。</td>
@@ -543,16 +543,16 @@ TarMK GC: no base state available, running full compaction instead
   </td>
   </tr>
    <tr>
-    <td>N/A</td>
+    <td>不適用</td>
     <td>TarMK GC #2：壓縮已取消： ${REASON}.</td>
     <td>壓縮階段提前結束。 可能中斷壓縮階段的一些事件範例：主機系統上的記憶體或磁碟空間不足。 此外，也可以透過關閉系統或透過管理介面（例如作業儀表板內的維護視窗）明確取消壓縮來取消壓縮。</td>
     <td>取決於特定原因。</td>
   </td>
   </tr>
   <tr>
-    <td>N/A</td>
+    <td>不適用</td>
     <td>TarMK GC #2：5次循環後32.902分鐘(1974140毫秒)內壓實失敗。</td>
-    <td>此訊息並不表示發生無法復原的錯誤，只表示壓縮在嘗試一段時間後終止。 此外，請閱讀 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">在段落後面。</a></td>
+    <td>此訊息並不表示發生無法復原的錯誤，只表示某些嘗試後壓縮已終止。 此外，請閱讀 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">在段落後面。</a></td>
     <td>閱讀下列內容 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak檔案</a>，以及「執行中的線上修訂清除」區段的最後一個問題。</a></td>
   </td>
   </tr>

@@ -7,9 +7,9 @@ topic-tags: managing-checklist
 content-type: reference
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
 workflow-type: tm+mt
-source-wordcount: '6922'
+source-wordcount: '6926'
 ht-degree: 0%
 
 ---
@@ -1059,7 +1059,7 @@ Recommendations與軟體與硬體架構的安全性相關。
 
 涵蓋下列專案之安全性設定的高階大綱：
 
-* 應用計畫
+* 應用程式
 * 架構
 * 基礎結構
 
@@ -1127,11 +1127,11 @@ Recommendations與軟體與硬體架構的安全性相關。
 
 ### 為AEM管理員培訓選取的工作人員 {#staff-selected-for-aem-administrator-training}
 
-需要訓練以管理解決方案的內部員工。
+需要培訓以便管理解決方案的內部員工。
 
 ### 為作者和一般使用者訓練所選取的工作人員 {#staff-selected-for-author-and-end-user-training}
 
-需要培訓以撰寫解決方案的內部員工。
+需要培訓以便撰寫解決方案的內部員工。
 
 ### 利害關係人 {#stakeholders}
 

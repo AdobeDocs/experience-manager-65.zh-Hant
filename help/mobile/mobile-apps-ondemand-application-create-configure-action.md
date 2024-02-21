@@ -1,15 +1,15 @@
 ---
 title: 應用程式建立和設定動作
-description: 建立應用程式通常是建立和管理AEM Mobile On-Demand內容的第一步。 請依照此頁面瞭解更多資訊。
+description: 建立應用程式通常是建立和管理AEM Mobile On-Demand內容的第一步。 如果您想要瞭解更多，請依照本頁操作。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 建立隨選應用程式 {#creating-an-on-demand-application}
 
-建立應用程式通常是建立和管理AEM Mobile On-Demand內容的第一步，並且通常在AEM管理員層級執行。 它代表可在行動裝置上檢視的內容殼層，可隨時顯示作者建立的內容，例如文章、影像、集合等。
+建立應用程式通常是建立和管理AEM Mobile On-Demand內容的第一步，並且通常在AEM管理員層級執行。 它代表可在行動裝置上檢視的內容殼層，可隨時顯示作者建立的內容，例如文章、影像和集合。
 
 您可在控制面板或AEM Mobile控制中心中檢視應用程式的詳細資訊。
 
