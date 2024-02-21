@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版中已過時和已移除的功能。
 description: 特定於Adobe Experience Manager 6.5中已過時和已移除功能的發行說明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 3443d331815ffb462890282a49e658693f157af0
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1715'
 ht-degree: 10%
 
 ---
@@ -31,13 +31,15 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 
 | 區域 | 功能 | 替代方案 | 版本(SP) |
 |---|---|---|---|
+|   |   |   |   |
 | Sites | 此 **AdobeAEM受管理的輪詢設定** 服務： `com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | 此 **AdobeAEM Analytics報表Sling匯入工具** 服務。 請參閱連線Adobe Analytics與建立框架 —  [設定匯入間隔](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) | 6.5.19.0 |
-| [!DNL Sites] | **社交媒體狀態**&#x200B;的體驗片段屬性。 |   | 6.5.11.0 |
+| Screens | Adobe Experience Manager (AEM)中的ActiveMQ。 ActiveMQ用於兩個AEM Publish執行個體之間的通訊。 | Adobe建議客戶現在使用負載平衡器。 | 6.5.18.0 |
+| **社交媒體狀態**&#x200B;的體驗片段屬性。 |   | 6.5.11.0 |
 | [!DNL Sites] | 內容片段範本，用於建立簡單的內容片段。 | 現在[基於模型的結構化內容片段](/help/assets/content-fragments/content-fragments-models.md)。 | 6.5.11.0 |
 | Creative Cloud整合 | AEM 6.2引入了AEM至Creative Cloud資料夾共用功能。它提供一種方法，讓創意使用者可以存取AEM中的資產，以便在中開啟它們 [!DNL Creative Cloud] 應用程式並上傳新檔案或儲存變更至AEM。 Creative Cloud應用程式推出的新功能Adobe Asset Link提供更優異的使用者體驗，以及更強大的存取功能，可直接從Photoshop、InDesign和Illustrator內從AEM存取資產。 Adobe不打算進一步增強AEM的「Creative Cloud資料夾共用」整合。 雖然此功能包含在AEM中，但建議使用替代解決方案。 | 建議客戶改用新的Creative Cloud整合功能，包括Adobe資產連結或AEM案頭應用程式。 |  |
 | Assets | `AssetDownloadServlet` 發佈執行個體預設為停用。 如需詳細資訊，請參閱 [AEM安全性檢查清單](/help/sites-administering/security-checklist.md). | 設定說明於 [AEM安全性檢查清單](/help/sites-administering/security-checklist.md). |  |
 | 整合 | 畫面 **[!UICONTROL Experience Manager Cloud Service選擇加入]** 已過時，因為 [!DNL Experience Manager] 和 [!DNL Adobe Target] 整合已更新於 [!DNL Experience Manager] 6.5.整合支援Adobe Target Standard API。 API透過Adobe IMS和以下方式使用驗證 [!DNL Adobe I/O Runtime]. 它可支援AdobeLaunch在樂器方面日益增加的作用 [!DNL Experience Manager] 頁面對於analytics和個人化，選擇加入精靈在功能上無關。 | 設定系統連線、Adobe IMS驗證和 [!DNL Adobe I/O Runtime] 透過個別 [!DNL Experience Manager] 雲端服務。 | 6.5.7.0 |
-| 聯結器 | Microsoft®SharePoint 2010和Microsoft® SharePoint 2013的JCR ConnectorAdobe已遭取代 [!DNL Experience Manager] 6.5. | N/A |  |
+| 聯結器 | Microsoft®SharePoint 2010和Microsoft® SharePoint 2013的JCR ConnectorAdobe已遭取代 [!DNL Experience Manager] 6.5. | 不適用 |  |
 | 動態標籤管理員(DTM) | 不建議使用DTM整合。 | 切換以使用Adobe Experience Platform Launch作為標籤管理員。 |   |
 | Adobe Target | 新增AEM連線Adobe Target服務的功能，使用 [!DNL Adobe I/O] 以AEM 6.5中的Adobe Target Standard API (Rest API)為基礎，Target Classic API (XML)方式已過時。 | 將整合重新設定至 [使用新API](/help/sites-administering/target.md). |  |
 | Adobe Target | 使用 `mbox.js` 不建議使用AEM中與Adobe Target的整合方式。 | 切換以使用 `at.js` 1.x. |  |
