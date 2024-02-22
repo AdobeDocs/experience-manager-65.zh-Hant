@@ -3,10 +3,10 @@ title: 與內容片段搭配使用的 AEM GraphQL API
 description: 瞭解如何在Adobe Experience Manager (AEM)中使用內容片段搭配AEM GraphQL API來進行Headless內容傳送。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 312e2477bb6a7cccab74cd4637d6a402f61052d7
+source-git-commit: 452813cf50110b515c181dba1ecbde4527808cfb
 workflow-type: tm+mt
-source-wordcount: '4708'
-ht-degree: 57%
+source-wordcount: '4796'
+ht-degree: 56%
 
 ---
 
@@ -523,6 +523,53 @@ query GetAdventureByType($includePrice: Boolean!) {
     items {
       lastName
       firstName
+    }
+  }
+}
+```
+
+使用選用變數執行GraphQL查詢時，如果特定值為 **非** 若為選用變數，則篩選器評估中將忽略變數。 這表示，查詢結果將包含所有值，兩者皆有 `null` 而非 `null`，以取得與篩選變數相關的屬性。
+
+>[!NOTE]
+>
+>如果 `null` 值為 *明確* 指定給這類變數，則篩選器只會符合 `null` 對應屬性的值。
+
+例如，在下列查詢中，沒有指定屬性的值 `lastName`：
+
+```graphql
+query getAuthorsFilteredByLastName($authorLastName: String) {
+  authorList(filter:
+    {
+      lastName: {_expressions: {value: $authorLastName}
+      }}) {
+    items {
+      lastName
+    }
+  }
+}
+```
+
+將會傳回所有作者：
+
+```graphql
+{
+  "data": {
+    "authorList": {
+      "items": [
+        {
+          "lastName": "Hammer"
+        },
+        {
+          "lastName": "Provo"
+        },
+        {
+          "lastName": "Wester"
+        },
+        {
+          "lastName": null
+        },
+         ...
+      ]
     }
   }
 }

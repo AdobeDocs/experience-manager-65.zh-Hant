@@ -1,15 +1,15 @@
 ---
-title: "重複使用內容：多網站管理員和 Live Copy"
+title: 「重複使用內容：多網站管理員和即時副本」
 description: 瞭解如何透過即時副本和多網站管理員來重複使用內容。
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+source-git-commit: fd30e16274b6d5f971120f4e360fc9d65ae21bec
 workflow-type: tm+mt
-source-wordcount: '2642'
-ht-degree: 22%
+source-wordcount: '2665'
+ht-degree: 19%
 
 ---
 
@@ -117,7 +117,7 @@ MSM和即時副本有許多使用案例，某些案例包括：
 
 ## 從 UI 存取 MSM {#msm-from-the-ui}
 
-MSM 可以使用相關主控台的各種選項直接在 UI 中存取 MSM。為了提供簡介，以下列出主要位置：
+MSM可使用適當主控台中的各種選項直接在UI中存取。 為了提供簡介，以下列出主要位置：
 
 * **建立網站**(**Sites**)
 
@@ -151,6 +151,10 @@ MSM 可以使用相關主控台的各種選項直接在 UI 中存取 MSM。為�
 
 >[!NOTE]
 >
+>MSM可同時用於頁面和 [體驗片段](/help/sites-authoring/experience-fragments.md) 因為這些片段是體驗（頁面）的一部分，
+
+>[!NOTE]
+>
 >MSM功能的各方面可用於其他數個Adobe Experience Manager (AEM)功能（例如，啟動、目錄）；在這些情況下，即時副本由該功能管理。
 
 ### 使用的術語 {#terms-used}
@@ -167,11 +171,11 @@ MSM 可以使用相關主控台的各種選項直接在 UI 中存取 MSM。為�
   <tr>
    <td><strong>來源</strong></td>
    <td>原始頁面。</td>
-   <td>與藍圖和/或藍圖頁是同義字.</td>
+   <td>與Blueprint和/或Blueprint頁面同義。</td>
   </tr>
   <tr>
    <td><strong>Live Copy</strong></td>
-   <td>(來源的) 副本，由推出設定定義的同步動作進行維護. </td>
+   <td>（來源的）副本，由轉出設定所定義的同步化動作來維護。 </td>
    <td> </td>
   </tr>
   <tr>
@@ -186,12 +190,12 @@ MSM 可以使用相關主控台的各種選項直接在 UI 中存取 MSM。為�
   </tr>
   <tr>
    <td><strong>藍圖</strong></td>
-   <td>與來源是同義字.</td>
+   <td>與來源同義。</td>
    <td>可由Blueprint設定定義。</td>
   </tr>
   <tr>
    <td><strong>藍圖設定</strong></td>
-   <td>指定源路徑的預先定義設定.</td>
+   <td>指定來源路徑的預定義設定。</td>
    <td>在Blueprint設定中參考Blueprint頁面時，「轉出」命令將變為可用。</td>
   </tr>
   <tr>
@@ -281,7 +285,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 
 >[!NOTE]
 >
-本節中的圖表和說明代表潛在即時副本的快照。 提供的資訊並不全面，只是概要說明以強調特定的特性。
+>本節中的圖表和說明代表潛在即時副本的快照。 提供的資訊並不全面，只是概要說明以強調特定的特性。
 
 當您最初建立即時副本時，所選的來源頁面會以1:1的比例反映在即時副本中。 此後，新資源（頁面和/或段落）也可以直接在即時副本中建立，因此瞭解這些變體以及它們對同步的影響會很有用。 可能的組成項目包括：
 
@@ -308,7 +312,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 * 這類資源與來源/藍圖頁面沒有即時關係，並且不同步。
 * 可能會發生MSM以特殊情況處理的案例。 例如，當您（或程式）在來源/Blueprint和即時副本分支中建立具有相同位置和名稱的頁面時。 對於這類情況，請參閱 [MSM轉出衝突](/help/sites-administering/msm-rollout-conflicts.md) 以取得詳細資訊。
 
-![推出衝突](assets/chlimage_1-368.png)
+![轉出衝突](assets/chlimage_1-368.png)
 
 #### 巢狀 Live Copy {#nested-live-copies}
 
@@ -323,7 +327,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 
 >[!NOTE]
 >
-如果您在即時副本分支中移動/重新命名頁面，則（在內部）這會被視為巢狀即時副本，以讓AEM追蹤關係。
+>如果您在即時副本分支中移動/重新命名頁面，則（在內部）這會被視為巢狀即時副本，以讓AEM追蹤關係。
 
 #### 堆疊 Live Copy {#stacked-live-copies}
 
@@ -360,7 +364,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 * 可以定義[推出設定](#rollout-configurations)，以便特定的[事件](/help/sites-administering/msm-sync.md#rollout-triggers)可以促使推出自動發生。
 * 編寫Blueprint頁面時，您可以使用 [轉出](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) 將變更推送至即時副本的命令。
 
-  **可在藍圖設定所參考的藍圖頁面上使用推出**&#x200B;命令。
+  **轉出** 命令適用於Blueprint設定參考的Blueprint頁面。
 
   ![推出](assets/chlimage_1-370.png)
 
@@ -374,7 +378,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 
 轉出設定會定義即時副本與來源內容同步的時間和方式。 推出設定由觸發器和一個或多個同步動作組成：
 
-* **觸發器**
+* **觸發**
 
   觸發器是引發即時動作同步化的事件，例如來源頁面的啟動。 MSM 定義了您可以使用的觸發器。
 
@@ -384,7 +388,7 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 
   >[!NOTE]
   >
-  您可以使用Java™ API為您的執行個體建立自訂動作。
+  >您可以使用Java™ API為您的執行個體建立自訂動作。
 
 可以重複使用轉出設定，以便多個即時副本可以使用相同的轉出設定。 標準安裝中包含多個[推出設定](/help/sites-administering/msm-sync.md#installed-rollout-configurations)。
 
@@ -406,13 +410,13 @@ MSM即時副本是特定網站內容的副本，其維持與原始來源的即�
 
 >[!CAUTION]
 >
-分離動作是永久性且無法復原。
+>分離動作是永久性且無法復原。
 
 分離會永久移除即時副本與其Blueprint頁面之間的即時關係。 所有MSM相關屬性會從即時副本中移除，而即時副本頁面會成為獨立副本。
 
 >[!NOTE]
 >
-另請參閱 [分離即時副本](/help/sites-administering/msm-livecopy.md#detaching-a-live-copy) 以取得完整詳細資訊；包括對子頁面和父頁面的相關影響。
+>另請參閱 [分離即時副本](/help/sites-administering/msm-livecopy.md#detaching-a-live-copy) 以取得完整詳細資訊；包括對子頁面和父頁面的相關影響。
 
 ## MSM 標準使用步驟 {#standard-steps-for-using-msm}
 

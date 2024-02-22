@@ -2,7 +2,7 @@
 title: Adobe Experience Manager 6.5版中已過時和已移除的功能。
 description: 特定於Adobe Experience Manager 6.5中已過時和已移除功能的發行說明。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 3443d331815ffb462890282a49e658693f157af0
+source-git-commit: a9b8980a5e6f0488f10c408cd18b83f3ff225058
 workflow-type: tm+mt
 source-wordcount: '1715'
 ht-degree: 10%
@@ -55,7 +55,8 @@ Adobe 持續評估產品功能，以更新或替代的方式來改善或取代�
 | 開發人員 | `Granite.Sling.js` 使用者端資源庫。 Adobe不打算進一步增強做為發佈(Quickstart)一部分所提供的Granite.Sling.js使用者端資料庫。 | Adobe建議依賴程式庫功能的客戶將其程式碼重構為不再使用。 |  |
 | 開發人員 | 使用YUI壓縮/縮制JavaScript使用者端程式庫。 Adobe不打算進一步更新YUI資料庫。 直到AEM 6.4之前，YUI預設會使用切換至Google Closure Compiler (GCC)的選項來縮制JavaScript。 從AEM 6.5開始，預設為GCC。 | Adobe建議客戶升級至AEM 6.5，以切換至GCC進行實作 |  |
 | 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
-| 表單 | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替代專案。 |  | 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
+| 表單 | AEM Forms與AEM Mobile的整合已過時。 | 沒有可用的替代專案。 |
+| 開發人員 | CRXDE Lite中的傳統UI對話方塊編輯器。 Adobe不打算進一步增強傳統UI對話方塊編輯器(隨附於分送（快速入門）) | 沒有可用的替代專案。 |  |
 | 開發人員 | Lodash/underscore使用者端資源庫。 Adobe不打算進一步維護和更新隨分送（快速入門）提供的Lodash/underscore使用者端程式庫。 | Adobe建議仍需將程式碼加到底線的客戶，將其新增至專案程式碼基底。 |  |
 
 ## 已移除的功能 {#removed-features}
