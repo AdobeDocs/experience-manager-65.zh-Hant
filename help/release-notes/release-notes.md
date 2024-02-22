@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 19fe527ce44d8ec5be50ebd32b46f13df96c52cc
+source-git-commit: 2ffb77762af1969f3c93e7dd33cb3de9349375f8
 workflow-type: tm+mt
-source-wordcount: '2928'
+source-wordcount: '2889'
 ht-degree: 2%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 2%
 
 #### 管理員使用者介面{#sites-adminui-6520}
 
-* 此 `Workflow Title` 欄位標有 `*` 視需要，但沒有驗證。 (SITES-16491)一般
+* 此 `Workflow Title` 欄位標有 `*` 視需要，但沒有驗證。 (SITES-16491)
 
 <!--#### Classic UI{#sites-classicui-6520}
 
@@ -68,12 +68,12 @@ ht-degree: 2%
 #### [!DNL Content Fragments]{#sites-contentfragments-6520}
 
 * 升級到AEM 6.5.18或AEM 6.5.19後，不再支援巢狀設定資料夾，並且內容片段模型資料夾不再可見。 (SITES-18110)主要
-* 某些子資料夾無法從繼承的內容片段模型中挑選。 它必須支援資料夾，但不具備 `jcr:content` 屬性，即使透過使用者介面建立的DAM資料夾有這類節點。 (SITES-17943)一般
+* 某些子資料夾無法從繼承的內容片段模型中挑選。 它必須支援資料夾，但不具備 `jcr:content` 屬性，即使透過使用者介面建立的DAM資料夾有這類節點。 (SITES-17943)
 
 #### [!DNL Content Fragments] - GRAPHQL API {#sites-graphql-api-6520}
 
 <!-- REMOVED AS PER EMAIL FROM SAMEER DHAWAN FEBRUARY 19, 2024 * When upgrading AEM from 6.5.19.0 to 6.5.20.0, the path `/libs/cq/graphql/sites/graphiql` was getting deleted. (SITES-19530) CRITICAL -->
-* 執行GraphQL查詢時 [篩選結果](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#filtering) 使用選擇性變數(若特定值為 **非** 若為選用變數，則篩選器評估中會忽略變數。 (SITES-17051)一般
+* 執行GraphQL查詢時 [篩選結果](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#filtering) 使用選擇性變數(若特定值為 **非** 若為選用變數，則篩選器評估中會忽略變數。 (SITES-17051)
 
 <!--#### [!DNL Content Fragments] - GraphQL Query Editor{#sites-graphql-query-editor-6520}
 
@@ -81,24 +81,24 @@ ht-degree: 2%
 
 #### [!DNL Content Fragments] - REST API{#sites-restapi-6520}
 
-* 透過升級 `org.json` 程式庫中，小數點的還原序列化方式有所變更。 之前，它們「預設」轉換為雙面，現在則轉換為大十進位。 相反地，透過REST API儲存的中繼資料屬性值應該從BigDecimal轉換為Double。 (SITES-16857)一般
+* 透過升級 `org.json` 程式庫中，小數點的還原序列化方式有所變更。 之前，它們「預設」轉換為雙面，現在則轉換為大十進位。 相反地，透過REST API儲存的中繼資料屬性值應該從BigDecimal轉換為Double。 (SITES-16857)
 
 #### 核心後端{#sites-core-backend-6520}
 
-* 使用內容片段的快速發佈時，它會繼續載入且不會發佈。 也就是說，從AEM 6.5.7升級至AEM 6.5.17的Service Pack後，快速發佈無法用於內容片段。當使用者嘗試Managed發佈時，就成功了。 但是，當他們嘗試快速發佈時，它並未發佈。 具體來說， `com.day.cq.wcm.core.impl.reference.ActivationReferenceSearchBuilder` 導致系統崩潰。 (SITES-17311)主要
-* 無法使用Jackson匯出工具序列化內容片段：當頁面中有參照的內容片段（使用Jackson匯出工具程式碼）和任何標籤新增到內容片段時，頁面載入會中斷。 (SITES-18096)一般
+* 使用內容片段的快速發佈時，它會繼續載入且不會發佈。 也就是說，從AEM 6.5.7升級至AEM 6.5.17的Service Pack後，快速發佈無法用於內容片段。當使用者嘗試Managed發佈時，就成功了。 但是，當他們嘗試快速發佈時，它並未發佈。 具體來說， `com.day.cq.wcm.core.impl.reference.ActivationReferenceSearchBuilder` 導致系統崩潰。 (SITES-17311)
+* 無法使用Jackson匯出工具序列化內容片段：當頁面中有參照的內容片段（使用Jackson匯出工具程式碼）和任何標籤新增到內容片段時，頁面載入會中斷。 (SITES-18096)
 
 #### 核心元件{#sites-core-components-6520}
 
-* 在CIF上安裝AEM核心元件套件導致 `:type` 要變更的現有元件的值。 此變更表示這些變數不再於已新增至的頁面上呈現。 (SITES-17601)主要
+* 在CIF上安裝AEM核心元件套件導致 `:type` 要變更的現有元件的值。 此變更表示這些變數不再於已新增至的頁面上呈現。 (SITES-17601)
 
 #### Campaign整合{#sites-campaign-integration-6520}
 
-* AEM使用允許清單(也稱為 `whitelist` — 由於弱點報告。 允許清單導致客戶無法使用所需功能。 (SITES-16822)嚴重
+* AEM使用允許清單(也稱為 `whitelist` — 由於弱點報告。 允許清單導致客戶無法使用所需功能。 (SITES-16822)
 
 #### 體驗片段{#sites-experiencefragments-6520}
 
-* 體驗片段的MSM現在支援大量轉出至體驗片段的內容結構，包括資料夾和子資料夾。 (SITES-16004)主要
+* 體驗片段的MSM現在支援大量轉出至體驗片段的內容結構，包括資料夾和子資料夾。 (SITES-16004)
 
 <!--#### Foundation Components (Legacy){#sites-foundation-components-legacy-6520}
 
@@ -110,31 +110,31 @@ ht-degree: 2%
 
 #### MSM — 即時副本{#sites-msm-live-copies-6520}
 
-* 一個&quot;`Is not modifiable`轉出元件時擲回「例外狀況。 具體而言， `org.apache.sling.servlets.post.impl.operations.ModifyOperation` 在回應處理期間發生例外狀況。 (SITES-18809)主要
-* 無法將變更轉出至體驗片段的特定即時副本。 (SITES-17930)主要
-* 當使用者將註解新增到Blueprint頁面上的元件，然後轉出時，即時副本上的註解計數顯示不正確。 (SITES-17099)主要
-* 在觸控式圖形使用者介面中，從父頁面到子頁面的「MSM轉出」按鈕會損毀；選取時，會顯示下列錯誤： `Uncaught TypeError: _g.shared is undefined`. (SITES-16991)主要
+* 一個&quot;`Is not modifiable`轉出元件時擲回「例外狀況。 具體而言， `org.apache.sling.servlets.post.impl.operations.ModifyOperation` 在回應處理期間發生例外狀況。 (SITES-18809)
+* 無法將變更轉出至體驗片段的特定即時副本。 (SITES-17930)
+* 當使用者將註解新增到Blueprint頁面上的元件，然後轉出時，即時副本上的註解計數顯示不正確。 (SITES-17099)
+* 在觸控式圖形使用者介面中，從父頁面到子頁面的「MSM轉出」按鈕會損毀；選取時，會顯示下列錯誤： `Uncaught TypeError: _g.shared is undefined`. (SITES-16991)
 
 #### 頁面編輯器{#sites-pageeditor-6520}
 
-* Forms主題編輯器預覽已中斷。 選取「預覽」時，只會顯示載入圖示。 (SITES-17164)封鎖程式
+* Forms主題編輯器預覽已中斷。 選取「預覽」時，只會顯示載入圖示。 (SITES-17164)
 
 ### [!DNL Assets]{#assets-6520}
 
-* 無法驗證中繼資料編輯器協助程式中規則型欄位，且顯示錯誤訊息「缺少必填欄位」。 (ASSETS-31396)主要
-* 將PDF移至另一個位置後， **[!UICONTROL 檢視頁面]** 選項會消失。 (ASSETS-30538)主要
-* 無法選取具有讀取許可權的影像。 (ASSETS-32199)一般
-* 無法在檢視設定中變更卡片大小。 (ASSETS-31667)一般
-* 上傳.oft檔案型別時上傳失敗。 (ASSETS-30109)一般
-* 當您嘗試新增自訂中繼資料欄位作為報告的其他欄時，未選取核取方塊。 (ASSETS-31671)次要
-* 資產移動作業在Experience Manager Service Pack 16中無法正常運作。 (ASSETS-30598)次要
+* 無法驗證中繼資料編輯器協助程式中規則型欄位，且顯示錯誤訊息「缺少必填欄位」。 (ASSETS-31396)
+* 將PDF移至另一個位置後， **[!UICONTROL 檢視頁面]** 選項會消失。 (ASSETS-30538)
+* 無法選取具有讀取許可權的影像。 (ASSETS-32199)
+* 無法在檢視設定中變更卡片大小。 (ASSETS-31667)
+* 上傳.oft檔案型別時上傳失敗。 (ASSETS-30109)
+* 當您嘗試新增自訂中繼資料欄位作為報告的其他欄時，未選取核取方塊。 (ASSETS-31671)
+* 資產移動作業在Experience Manager Service Pack 16中無法正常運作。 (ASSETS-30598)
 
 #### [!DNL Dynamic Media]{#assets-dm-6520}
 
-* 將資產上傳至AEM時， `Update_asset` 工作流程已觸發。 不過，工作流程永遠不會完成。 工作流程最多只會在產品上傳步驟前完成。 下一個步驟是Scene7批次上傳，但該程式無法提取至AEM。 (ASSETS-30443)關鍵
-* 需要更好的方式在Dynamic Media元件中妥善處理非Dynamic Media影片。 此問題提供例外具現化 `dynamicmedia_sly.js`. (ASSETS-31301)主要
-* 預覽適用於所有資產、最適化視訊集和視訊。 但是，它會擲回403錯誤 `.m3u8` 檔案（順便說一下，這些檔案仍可透過公用連結運作）。 (ASSETS-31882)主要
-* 此 `scene7SmartCropProcessingStatus` 已更正狀態。 智慧型裁切視訊中繼資料即使成功也可用來顯示失敗。 (ASSETS-31255)次要
+* 將資產上傳至AEM時， `Update_asset` 工作流程已觸發。 不過，工作流程永遠不會完成。 工作流程最多只會在產品上傳步驟前完成。 下一個步驟是Scene7批次上傳，但該程式無法提取至AEM。 (ASSETS-30443)
+* 需要更好的方式在Dynamic Media元件中妥善處理非Dynamic Media影片。 此問題提供例外具現化 `dynamicmedia_sly.js`. (ASSETS-31301)
+* 預覽適用於所有資產、最適化視訊集和視訊。 但是，它會擲回403錯誤 `.m3u8` 檔案（順便說一下，這些檔案仍可透過公用連結運作）。 (ASSETS-31882)
+* 此 `scene7SmartCropProcessingStatus` 已更正狀態。 智慧型裁切視訊中繼資料即使成功也可用來顯示失敗。 (ASSETS-31255)
 
 ### [!DNL Forms]{#forms-6520}
 
@@ -166,7 +166,7 @@ ht-degree: 2%
 
 #### 社群 {#communities-6520}
 
-* 使用者同步診斷在成功設定使用者同步後失敗。 (NPR-41693)一般
+* 使用者同步診斷在成功設定使用者同步後失敗。 (NPR-41693)
 
 <!-- #### Content distribution{#foundation-content-distribution-6520}
 
@@ -174,12 +174,12 @@ ht-degree: 2%
 
 #### 整合{#integrations-6520}
 
-* 從AEM 6.5中移除AdobeSearch&amp;Promote的所有程式碼和相依性。 (NPR-40856)一般
+* 從AEM 6.5中移除AdobeSearch&amp;Promote的所有程式碼和相依性。 (NPR-40856)
 
 #### 本地化{#localization-6520}
 
-* Aria標籤「關閉」未在中本地化 **[!UICONTROL 資產]** > **[!UICONTROL 檔案]**，選取資料夾，然後在工具列上選取 **[!UICONTROL 屬性]** > **[!UICONTROL 許可權]** 標籤>成員名稱。 (NPR-41705)主要
-* 「 」的工具提示已截斷 **[!UICONTROL 金鑰庫密碼]** ENG、FRA、KOR、DEU和PTB語言環境的「SSL設定」頁面上的欄位。 (NPR-41367)一般
+* Aria標籤「關閉」未在中本地化 **[!UICONTROL 資產]** > **[!UICONTROL 檔案]**，選取資料夾，然後在工具列上選取 **[!UICONTROL 屬性]** > **[!UICONTROL 許可權]** 標籤>成員名稱。 (NPR-41705)
+* 「 」的工具提示已截斷 **[!UICONTROL 金鑰庫密碼]** ENG、FRA、KOR、DEU和PTB語言環境的「SSL設定」頁面上的欄位。 (NPR-41367)
 
 <!-- #### Oak{#oak-6520}
 
@@ -187,7 +187,7 @@ ht-degree: 2%
 
 #### Platform{#foundation-platform-6520}
 
-* 因/api servlet未在href json中傳回正確的配置而導致將Campaign與AEM整合的問題。 原因在於AEM未收到X-Forward-Proto標頭，該標頭會強制要求以HTTP配置而非HTTPS回應。 因此，應新增根據OSGI設定切換配置選擇的功能。 (GRANITE-48454)主要
+* 因/api servlet未在href json中傳回正確的配置而導致將Campaign與AEM整合的問題。 原因在於AEM未收到X-Forward-Proto標頭，該標頭會強制要求以HTTP配置而非HTTPS回應。 因此，應新增根據OSGI設定切換配置選擇的功能。 (GRANITE-48454)
 
 <!-- #### Replication{#foundation-replication-6520}
 
@@ -195,21 +195,21 @@ ht-degree: 2%
 
 #### Sling{#foundation-sling-6520}
 
-* 此 `org.apache.sling.resourceMerger` bundle 1.4.2從AEM 6.5、Service Pack 17及更新版本擲回例外狀況。 Service Pack 20應包含Sling resource merger 1.4.4。 (NPR-41630)一般
+* 此 `org.apache.sling.resourceMerger` bundle 1.4.2從AEM 6.5、Service Pack 17及更新版本擲回例外狀況。 Service Pack 20應包含Sling resource merger 1.4.4。 (NPR-41630)
 
 #### 轉換{#foundation-translation-6520}
 
-* 部署AEM 6.5 Service Pack 18後，翻譯規則編輯器中的篩選器索引標籤發生問題。 選取「前後關聯」時，按一下「編輯>儲存」，下次您開啟相同的「前後關聯」時，會出現一個雙引號作為HTML字元。 基本上，翻譯規則無法正確儲存。 (NPR-41624)主要
-* 與內容片段翻譯相關的問題，其中翻譯的字串從翻譯提供者傳回AEM，但卡在 `/content/projects` 層級，且不會更新內容片段。 (NPR-41516)主要
-* 建立語言副本時會顯示錯誤訊息。 其發生於具有使用內容片段模型的頁面屬性中所參考的內容片段的頁面上。 (NPR-41441)主要
-* 在語言複製期間，體驗片段中的連結未調整為正確的語言。 體驗片段會指向主要地區設定。 (NPR-41343)一般
+* 部署AEM 6.5 Service Pack 18後，翻譯規則編輯器中的篩選器索引標籤發生問題。 選取「前後關聯」時，按一下「編輯>儲存」，下次您開啟相同的「前後關聯」時，會出現一個雙引號作為HTML字元。 基本上，翻譯規則無法正確儲存。 (NPR-41624)
+* 與內容片段翻譯相關的問題，其中翻譯的字串從翻譯提供者傳回AEM，但卡在 `/content/projects` 層級，且不會更新內容片段。 (NPR-41516)
+* 建立語言副本時會顯示錯誤訊息。 其發生於具有使用內容片段模型的頁面屬性中所參考的內容片段的頁面上。 (NPR-41441)
+* 在語言複製期間，體驗片段中的連結未調整為正確的語言。 體驗片段會指向主要地區設定。 (NPR-41343)
 
 #### 使用者介面{#foundation-ui-6520}
 
-* 升級至AEM 6.5 Service Pack 18後出現主控台錯誤。 錯誤位於 `coralUI3.js` 檔案，當您在AEM中選取任何下拉式清單時，就會發生檔案。 更具體地說，這會發生在使用 `onOverlayToggle` 事件。 錯誤 `Uncaught TypeError: Cannot read properties of null (reading 'innerText')` 隨即顯示。 (NPR-41467)主要
-* 在AEM中 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 標籤]** > **[!UICONTROL 建立]** > **[!UICONTROL 建立標籤]**，在中輸入非拉丁字元 **標題** 欄位會導致 **名稱** 僅以連字型大小字元( `-` )。 (NPR-41623)一般
-* 中的版權年度不正確 `About Adobe Experience Manager` 對話方塊。 (NPR-41526)一般
-* 有未翻譯的 **[!UICONTROL 設定檔屬性]** 字串。 發生在所有地區設定中。 (NPR-41365)一般
+* 升級至AEM 6.5 Service Pack 18後出現主控台錯誤。 錯誤位於 `coralUI3.js` 檔案，當您在AEM中選取任何下拉式清單時，就會發生檔案。 更具體地說，這會發生在使用 `onOverlayToggle` 事件。 錯誤 `Uncaught TypeError: Cannot read properties of null (reading 'innerText')` 隨即顯示。 (NPR-41467)
+* 在AEM中 **[!UICONTROL 工具]** > **[!UICONTROL 一般]** > **[!UICONTROL 標籤]** > **[!UICONTROL 建立]** > **[!UICONTROL 建立標籤]**，在中輸入非拉丁字元 **標題** 欄位會導致 **名稱** 僅以連字型大小字元( `-` )。 (NPR-41623)
+* 中的版權年度不正確 `About Adobe Experience Manager` 對話方塊。 (NPR-41526)
+* 有未翻譯的 **[!UICONTROL 設定檔屬性]** 字串。 發生在所有地區設定中。 (NPR-41365)
 
 <!-- #### WCM{#wcm-6520}
 
