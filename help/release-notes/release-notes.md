@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 2ffb77762af1969f3c93e7dd33cb3de9349375f8
+source-git-commit: f48e77068f286ff107bb2511660bf540fea32474
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2888'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 #### [!DNL Content Fragments]{#sites-contentfragments-6520}
 
-* 升級到AEM 6.5.18或AEM 6.5.19後，不再支援巢狀設定資料夾，並且內容片段模型資料夾不再可見。 (SITES-18110)主要
+* 升級到AEM 6.5.18或AEM 6.5.19後，不再支援巢狀設定資料夾，並且內容片段模型資料夾不再可見。 (SITES-18110)
 * 某些子資料夾無法從繼承的內容片段模型中挑選。 它必須支援資料夾，但不具備 `jcr:content` 屬性，即使透過使用者介面建立的DAM資料夾有這類節點。 (SITES-17943)
 
 #### [!DNL Content Fragments] - GRAPHQL API {#sites-graphql-api-6520}
@@ -156,13 +156,7 @@ ht-degree: 2%
 
 * text -->
 
-#### [!DNL Forms Designer]{#forms-designer-6520}
-
-* text
-
-<!-- ### Foundation{#foundation-6520}
-
-* text -->
+### Foundation {#foundation-6520}
 
 #### 社群 {#communities-6520}
 
@@ -181,17 +175,9 @@ ht-degree: 2%
 * Aria標籤「關閉」未在中本地化 **[!UICONTROL 資產]** > **[!UICONTROL 檔案]**，選取資料夾，然後在工具列上選取 **[!UICONTROL 屬性]** > **[!UICONTROL 許可權]** 標籤>成員名稱。 (NPR-41705)
 * 「 」的工具提示已截斷 **[!UICONTROL 金鑰庫密碼]** ENG、FRA、KOR、DEU和PTB語言環境的「SSL設定」頁面上的欄位。 (NPR-41367)
 
-<!-- #### Oak{#oak-6520}
-
-* text -->
-
 #### Platform{#foundation-platform-6520}
 
 * 因/api servlet未在href json中傳回正確的配置而導致將Campaign與AEM整合的問題。 原因在於AEM未收到X-Forward-Proto標頭，該標頭會強制要求以HTTP配置而非HTTPS回應。 因此，應新增根據OSGI設定切換配置選擇的功能。 (GRANITE-48454)
-
-<!-- #### Replication{#foundation-replication-6520}
-
-* text -->
 
 #### Sling{#foundation-sling-6520}
 
