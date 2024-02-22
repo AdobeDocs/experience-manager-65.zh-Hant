@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 05f54e451c72b0a1690ba4a2ca50db87711a8094
+source-git-commit: 22235790b2bfefaa1a3bf71f888f8eb343d9e1b7
 workflow-type: tm+mt
-source-wordcount: '3608'
+source-wordcount: '4257'
 ht-degree: 3%
 
 ---
@@ -460,3 +460,57 @@ AEM Forms會套用第三個主版頁面至面板，以及最適化表單中的�
 * 最適化表單中的檔案片段未出現在記錄檔案中。 不過，也支援最適化表單片段。
 * 不支援根據XML結構描述的最適化表單產生的記錄檔案中的內容繫結。
 * 當使用者請求轉譯記錄檔案時，會根據地區設定的需求建立記錄檔案的當地語系化版本。 記錄檔案本地化與最適化表單本地化同時發生。 如需記錄檔案和調適型表單本地化的詳細資訊，請參閱 [使用AEM翻譯工作流程將最適化表單和記錄檔案本地化](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md).
+
+## 使用自訂XCI檔案
+
+XCI檔案可協助您設定檔案的各種屬性。 <!-- Forms as a Cloud Service has a master XCI file.--> 您可以使用自訂XCI檔案來覆寫在現有XCI檔案中指定的一個或多個預設屬性。 例如，您可以選擇將字型內嵌到檔案中，或是為所有檔案啟用標籤屬性。 下表指定XCI選項：
+
+| XCI選項 | 說明 |
+|--- |--- |
+| config/present/pdf/creator | 使用檔案資訊字典中的建立者專案來識別檔案建立者。 如需關於此字典的資訊，請參閱 [PDF參考指南](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). |
+| config/present/pdf/producer | 使用檔案資訊字典中的製作者專案來識別檔案製作者。 如需關於此字典的資訊，請參閱 [PDF參考指南](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). |
+| config/present/layout | 控制輸出是單一面板還是分頁。 |
+| config/present/pdf/compression/level | 指定產生PDF檔案時要使用的壓縮程度。 |
+| config/present/pdf/fontInfo/embed | 控制輸出檔案中的字型內嵌。 |
+| config/present/pdf/scriptModel | 控制輸出PDF檔案中是否包含XFA特定資訊。 |
+| config/present/common/data/adjustData | 控制XFA應用程式是否會在合併後調整資料。 |
+| config/present/pdf/renderPolicy | 控制頁面內容的產生是在伺服器上完成，還是延後至使用者端。 |
+| config/present/common/locale | 指定輸出檔案中使用的預設地區設定。 |
+| config/present/destination | 當由目前元素包含時，指定輸出格式。 當由openAction元素包含時，會指定在互動式使用者端中開啟檔案時要執行的動作。 |
+| config/present/output/type | 指定要套用至檔案的壓縮型別，或是要產生的輸出型別。 |
+| config/present/common/temp/uri | 指定表單URI。 |
+| config/present/common/template/base | 提供表單設計中基本的URI位置。 當此元素不存在或空白時，會使用表單設計的位置作為基礎。 |
+| config/present/common/log/to | 控制記錄資料或輸出資料寫入的位置。 |
+| config/present/output/to | 控制記錄資料或輸出資料寫入的位置。 |
+| config/present/script/currentPage | 指定開啟檔案時的初始頁面。 |
+| config/present/script/exclude | 通知Formsas a Cloud Service忽略哪些事件。 |
+| config/present/pdf/linearized | 控制是否將輸出PDF檔案線性化。 |
+| config/present/script/runScripts | 控制Formsas a Cloud Service執行的指令碼集。 |
+| config/present/pdf/tagged | 控制標籤在輸出PDF檔案中是否包含。 在PDF的內容中，標籤是包含在檔案中的其他資訊，用於公開檔案的邏輯結構。 標籤有助於協助協助工具及重新格式化。 例如，頁碼可能會被標籤為成品，這樣熒幕閱讀器就不會在文字中間朗讀它。 雖然標籤讓檔案變得更實用，但它們也會增加檔案的大小，以及建立檔案的處理時間。 |
+| config/present/pdf/fontInfo/alwaysEmbed | 指定內嵌在輸出檔案中的字型。 |
+| config/present/pdf/fontInfo/neverEmbed | 指定不得嵌入至輸出檔案的字型。 |
+| config/present/pdf/pdfa/part | 指定檔案符合的PDF/A規格的版本號碼。 |
+| config/present/pdf/pdfa/amd | 指定PDF/A規格的修訂層次。 |
+| config/present/pdf/pdfa/conformance | 指定符合PDF/A規格的等級。 |
+| config/present/pdf/version | 指定要產生的PDF檔案版本 |
+| config/present/pdf/version/map | 指定檔案的回覆字型 |
+
+
+<!--
+
+### Use a custom XCI file in your AEM Forms environment
+
+  1. Add the custom XCI file to your development project.
+  1. Specify the following inline property:(/help/implementing/deploying/configuring-osgi.md)
+  1. Deploy the project to your AEM Forms environment. <!--Cloud Service environment
+  
+-->
+
+### 在本機Forms開發環境中使用自訂XCI檔案
+
+1. 上傳XCI檔案至您的本機開發環境。
+1. 開啟 <!--Cloud Service SDK--> 組態管理員。 <!--The default URL is: <http://localhost:4502/system/console/configMgr>.-->
+1. 找到並開啟 **[!UICONTROL 最適化Forms和互動式通訊Web Channel]** 設定。
+1. 指定XCI檔案的路徑並按一下 **[!UICONTROL 儲存]**.
+
+
