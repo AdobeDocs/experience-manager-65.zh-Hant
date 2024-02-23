@@ -6,9 +6,9 @@ role: User, Admin
 feature: Asset Reports,Asset Management
 exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 93d0a38d13223a8580f54786bc4ffe149efe99f1
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1155'
 ht-degree: 8%
 
 ---
@@ -115,7 +115,8 @@ ht-degree: 8%
 1. 按一下 **[!UICONTROL 建立]** 工具列中的。 訊息會通知已啟動報表產生作業。
 1. 在 [!UICONTROL 資產報表] 頁面時，報表產生狀態會根據報表工作的目前狀態，例如 [!UICONTROL 成功]， [!UICONTROL 已失敗]， [!UICONTROL 已排入佇列]，或 [!UICONTROL 已排程]. 相同的狀態會顯示在通知收件匣中。若要檢視報告頁面，請按一下報告連結。 或者，選取報告，然後按一下 **[!UICONTROL 檢視]** 工具列中的。
 
-   ![產生的報告](assets/report_page.png)
+   <!--![A generated report](assets/report_page.png)-->
+   [報告狀態](assets/report-status.JPG)
 
    按一下 **[!UICONTROL 下載]** 從工具列下載CSV格式的報表。
 
