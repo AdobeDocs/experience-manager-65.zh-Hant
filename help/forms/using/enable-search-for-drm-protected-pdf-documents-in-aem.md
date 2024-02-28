@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 docset: aem65
 feature: Document Security
 exl-id: 7cf17fb6-021a-473e-bc3b-27c317953002
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ AEM搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式(例如�
    * **使用者名稱：** 指定JEE帳戶上AEM Forms的使用者名稱，以用於從AEM伺服器起始呼叫。 指定的帳戶必須具有在JEE伺服器上的AEM Forms上啟動檔案服務的許可權。
    * **密碼**：指定使用者名稱欄位中提及的JEE帳戶AEM Forms密碼。
 
-   按一下 **儲存**. AEM已啟用來搜尋受Document Security保護的PDF檔案。
+   按一下「**儲存**」。AEM已啟用來搜尋受Document Security保護的PDF檔案。
 
 #### 使用相互驗證設定AdobeLiveCycle使用者端SDK套裝 {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
 
@@ -76,7 +76,7 @@ AEM搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式(例如�
    * **TrustStPassword**：指定Truststore檔案的密碼。
    * **服務名稱**：將RightsManagementService新增至指定服務的清單。
 
-   按一下 **儲存**. AEM已啟用以搜尋受Document Security保護的PDF檔案
+   按一下「**儲存**」。AEM已啟用以搜尋受Document Security保護的PDF檔案
 
 ### 為受原則保護的PDF範例檔案建立索引 {#index-a-sample-policy-protected-pdf-document}
 
@@ -84,3 +84,7 @@ AEM搜尋可搜尋和找到AEM資產，並對各種常用的檔案格式(例如�
 1. 在AEM Digital Asset Manager中建立資料夾，並將受原則保護的PDF檔案上傳到新建立的資料夾。
 
    現在，您可以使用AEM搜尋來搜尋受原則保護的檔案。
+
+   >[!NOTE]
+   >
+   > 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。

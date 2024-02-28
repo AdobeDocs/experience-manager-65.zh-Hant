@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '4593'
+source-wordcount: '4604'
 ht-degree: 0%
 
 ---
@@ -619,7 +619,9 @@ AEM Forms支援名為的操作 `getFileUploadToken` 這會傳回傳遞至上傳s
 
 >[!NOTE]
 >
-若要設定AEM Forms以接受不安全的檔案，請選取「允許從Flex應用程式上傳不安全的檔案」選項。 然後重新啟動應用程式或服務，確保設定生效。
+* 若要設定AEM Forms以接受不安全的檔案，請選取「允許從Flex應用程式上傳不安全的檔案」選項。 然後重新啟動應用程式或服務，確保設定生效。
+* 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+
 
 ### 快速入門：透過使用Remoting傳遞安全檔案來叫用短期流程 {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
 

@@ -8,10 +8,10 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 2%
+source-wordcount: '355'
+ht-degree: 1%
 
 ---
 
@@ -42,6 +42,10 @@ AEMFD相容性套件也可讓您 [在AEM Forms 6.5上使用AEM Forms 6.4、6.3�
 
 1. 在記錄穩定後，請重新啟動伺服器。
 1. 使用移轉公用程式，讓您的資產相容於6.5。
+
+   >[!NOTE]
+   >
+   > 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
    如需詳細資訊，請參閱 [移轉公用程式](../../forms/using/migration-utility.md).
 

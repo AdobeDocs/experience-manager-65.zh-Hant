@@ -3,10 +3,10 @@ title: AEM Forms JEE修補程式安裝程式
 description: 瞭解如何使用AEM Forms JEE修補程式安裝程式來修正AEM 6.5 Forms元件中的問題。
 content-type: reference
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 18%
+source-wordcount: '562'
+ht-degree: 17%
 
 ---
 
@@ -81,6 +81,10 @@ AEM 6.5 Forms JEE修補程式安裝程式包含此修補程式發行前，AEM 6.
    `um.saml.enable.large.xml=true`
 1. 重新啟動伺服器。
 1. 刪除現有的SAML驗證提供者，並按照SAML設定中的說明，為現有的網域再次新增它們。
+
+>[!NOTE]
+>
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 ## 受影響的模組 {#impacted-modules}
 

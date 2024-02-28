@@ -3,9 +3,9 @@ title: 建立邀請外部使用者處理常式
 description: 瞭解如何建立邀請外部使用者處理常式。 這可讓Rights Management服務邀請外部使用者成為Rights Management使用者。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -233,6 +233,11 @@ A.元件所需的外部JAR檔案B. JAVA檔案
 
 1. 使用Workbench部署邀請外部使用者處理常式的JAR檔案。
 1. 重新啟動應用程式伺服器。
+
+   >[!NOTE]
+   >
+   > 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+
 1. 登入管理主控台。
 1. 按一下 **[!UICONTROL 服務]** > **[!UICONTROL Rights Management]** > **[!UICONTROL 設定]** >已邀請 **[!UICONTROL 使用者註冊]**.
 1. 啟用受邀使用者註冊，方法是核取 **[!UICONTROL 啟用受邀使用者註冊]** 方塊。 在 **[!UICONTROL 使用內建註冊系統]**，按一下 **[!UICONTROL 否]**. 儲存您的設定。

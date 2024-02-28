@@ -1,13 +1,13 @@
 ---
 title: 安裝和配置 互動式 通信
-description: 安裝和配置 AEM Forms 互動式 通信以創建業務通信、檔、報表、福利通知、行銷郵件、帳單和歡迎工具組。
+description: 安裝和配置 AEM Forms 互動式 通信以創建業務通信、文件、報表、福利通知、行銷郵件、帳單和歡迎工具包。
 topic-tags: installing
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1383'
 ht-degree: 1%
 
 ---
@@ -88,16 +88,21 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 
 1. 開啟 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登入 Software Distribution。
 1. 選擇 **[!UICONTROL 標題功能表中的可用Adobe Experience Manager]** 。
-1. 在「篩選器」 **** 部分中：
-   1. 從解決方案 **** 下拉式清單中選擇 **[!UICONTROL Forms]** 。
-   2. 選擇包的版本和類型。 您也可以使用「 **[!UICONTROL Search下載]** 」選項來篩選結果。
+1. 在「篩選器」****&#x200B;部分中：
+   1. 從解決方案&#x200B;****&#x200B;下拉式清單中選擇&#x200B;**[!UICONTROL Forms]**。
+   2. 選擇包的版本和類型。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
 1. 選取適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，並選取 **[!UICONTROL 下載]**.
-1. 打開 [ 封裝管理員 ](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  然後按一下上傳 **[!UICONTROL 包]** 以上傳包。
-1. 選擇包，然後按一下安裝 **** 。
+1. 打開 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  然後按兩下上傳 **[!UICONTROL 包]** 以上傳包。
+1. 選擇包，然後按兩下安裝&#x200B;****。
 
-   還可以通過AEM Forms版本 ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) 一文中 [ 列出的直接連結下載包。
+   還可以通過AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)一文中[列出的直接連結下載包。
 
-1. 安裝包後，系統會提示您重新開機AEM 執行個體。 **不要立即重新開機伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出現在 AEM-Installation-Directory ] /crx-quickstart/logs/error.記錄檔 中 [ ，並且日誌穩定。
+1. 安裝包后，系統會提示您重新啟動AEM 執行個體。 **不要立即重新啟動伺服器。**&#x200B;在停止 AEM Forms 伺服器之前，請等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出現在 AEM-Installation-Directory]/crx-quickstart/logs/error.記錄檔 中[，並且日誌穩定。
+
+   >[!NOTE]
+   >
+   > 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
+
 1. 對所有Author和Publish執行個體重複步驟1至7。
 
 ## 安裝後設定 {#post-installation-configurations}
@@ -176,7 +181,7 @@ AEM forms與Adobe Experience Cloud解決方案Adobe Target整合，跨多個數�
 
 ## 後續步驟 {#next-steps}
 
-您已將環境設定為使用互動式通訊和通訊管理功能。 現在，使用功能的步驟如下：
+您已將環境配置為使用交互式通信和通信管理功能。 現在，使用該功能的步驟如下：
 
 * [通信管理概述](/help/forms/using/interactive-communications-overview.md)
 

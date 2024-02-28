@@ -4,9 +4,9 @@ description: 安裝、設定和自訂AEM Forms示範套件。
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '4501'
+source-wordcount: '4535'
 ht-degree: 1%
 
 ---
@@ -289,7 +289,7 @@ ht-degree: 1%
 
 雲端設定完成後，您可能會想要測試表單資料模型。
 
-1. 導航到
+1. 瀏覽至
 
    *https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments-fdm/we-gov*
 
@@ -313,6 +313,10 @@ ht-degree: 1%
    >[!NOTE]
    >
    據報導，必須重新啟動AEM伺服器，資料來源才能成功繫結至FDM。
+
+   >[!NOTE]
+   >
+   建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 #### 測試Forms資料模型(Derby) {#test-fdm-derby}
 
@@ -448,7 +452,7 @@ AEM Forms Analytics資料可在離線時使用，或在不使用Adobe Analytics 
 >
 AEM Forms Analytics資料可在離線時使用，或在不使用Adobe Analytics Cloud設定的情況下使用，如果 `we-gov-forms.ui.analytics-<version>.zip` 已安裝套件，但AEM Sites資料需要主動式雲端設定。
 
-1. 導航到
+1. 瀏覽至
 
    *https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 

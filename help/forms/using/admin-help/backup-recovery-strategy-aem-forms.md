@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
@@ -87,6 +87,10 @@ AEM Forms備份策略包含兩種型別的備份：
 1. 在驗證系統的正常作業之前，請確定沒有從內部或外部來源（例如Web、SOAP或EJB處理啟動器）啟動任何處理。
 
 如果主要AEM表單資料庫已移動或變更，請檢閱與您的應用程式伺服器相關的安裝指南，以取得更新AEM表單資料來源IDP_DS和EDC_DS的資料庫連線資訊的相關資訊。
+
+>[!NOTE]
+> 
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 ### 變更AEM表單主機名稱或IP位址 {#changing-the-aem-forms-hostname-or-ip-address}
 

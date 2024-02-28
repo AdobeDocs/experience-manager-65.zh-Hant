@@ -5,13 +5,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 role: Admin
-source-git-commit: cf5da092fabbc7834108dc54d65eb97e160984ce
+exl-id: bd58099c-08cd-4056-afb6-a5935454429a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '168'
 ht-degree: 1%
 
 ---
-
 
 # 無法使用輸出服務、Forms服務或記錄檔案(DoR)服務 {#unable-to-use-output-service-forms-service-or-document-of-record-service}
 
@@ -26,6 +26,10 @@ ht-degree: 1%
 1. 停止AEM 6.5 Forms執行個體。
 1. 下載並安裝 [適用於Visual Studio 2015、2017、2019和2022的64位元版Microsoft Visual C++可轉散發套件](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) 在安裝AEM 6.5 Forms的電腦上。
 1. 重新啟動AEM Forms伺服器。
+
+   >[!NOTE]
+   >
+   > 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 
 >[!NOTE]

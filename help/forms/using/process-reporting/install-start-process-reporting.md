@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1710'
 ht-degree: 0%
 
 ---
@@ -95,6 +95,10 @@ Process Reporting服務會依排程從AEM Forms資料庫發佈資料至Process R
 1. 重新啟動AEM Forms伺服器執行個體。
 
 ![processdatapublisherservice](assets/processdatapublisherservice.png)
+
+>[!NOTE]
+>
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 ### ProcessDataStorage服務 {#processdatastorage-service}
 
@@ -275,3 +279,5 @@ AEM Forms環境包含設定環境時的資料。
 * **[!UICONTROL 同步]**：將內嵌的Process Reporting存放庫與AEM Forms資料庫同步。
 * **[!UICONTROL 說明]**：檢視程式報告的說明檔案。
 * **[!UICONTROL 登出]**：登出程式報告
+
+

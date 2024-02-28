@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: a054b60a-5e89-4c98-87bc-35669988d160
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,10 @@ ht-degree: 0%
 1. 前往「封裝管理員」。 預設URL為 `https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
 1. 搜尋並安裝 `adobe-lc-workspace-pkg-[version].zip` 封裝。
 1. 重新啟動應用程式伺服器。
+
+>[!NOTE]
+>
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 ## AEM Forms工作區記錄 {#aem-forms-workspace-nbsp-logging}
 

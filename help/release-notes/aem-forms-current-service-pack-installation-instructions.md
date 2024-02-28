@@ -2,9 +2,9 @@
 title: 適用於AEM Forms的AEM Forms修補程式安裝指示
 description: 適用於OSGi和JEE環境的AEM Forms Service Pack安裝指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 531eed9bb6d7792a6da0104b533a505738a64786
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1748'
 ht-degree: 6%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->檢視最新消息 [AEM Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html) 以取得已修正問題的完整清單。
+>檢視最新消息 [AEM Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant) 以取得已修正問題的完整清單。
 
 ## Experience Manager Forms 6.5包含的內容
 
@@ -65,7 +65,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 +++2. 下載必要的軟體
 
 * [JEE Service Pack上的AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
-* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
 * [Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 * [片段Servlet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
 
@@ -122,13 +122,14 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
    * [安裝和部署AEM forms for WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
    * [安裝和部署AEM Forms for WebLogic](https://www.adobe.com/go/learn_aemforms_installWebLogic_65)
    * [安裝和部署AEM forms for JBoss®叢集](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
-   * [安裝和部署AEM forms for WebSphere®叢集](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
+   * [安裝和部署AEM forms for WebSphere®叢集](https://helpx.adobe.com/tw/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
    * [安裝和部署適用於WebLogic叢集的AEM Forms](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
 
 
 >[!NOTE]
 >
-> 在JEE Service Pack上安裝AEM Forms後，您需要從移除Forms附加元件套件 `crx-repository\install` 資料夾，然後再重新啟動appserver。 從下載最新的Forms附加元件套件 [軟體發佈入口網站](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+>* 在JEE Service Pack上安裝AEM Forms後，您需要從移除Forms附加元件套件 `crx-repository\install` 資料夾，然後再重新啟動appserver。 從下載最新的Forms附加元件套件 [軟體發佈入口網站](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+>* 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 +++
 
@@ -173,7 +174,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
   >[!NOTE]
   >
-  Experience ManagerService Pack不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
+  >Experience ManagerService Pack不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
   **驗證安裝**
 
@@ -205,13 +206,13 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 >[!NOTE]
 >
-如果您安裝關聯式資料庫的AEM Forms Service Pack，則必須備份DB_schema。
+> 如果您安裝關聯式資料庫的AEM Forms Service Pack，則必須備份DB_schema。
 
 +++
 
 +++2. 下載必要的軟體
 
-* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
 * [Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
 +++
@@ -223,7 +224,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 >[!NOTE]
 >
 >
-請確定您安裝了可轉散發套件（即使已安裝舊版），以確保最新版本的可用性。
+> 請確定您安裝了可轉散發套件（即使已安裝舊版），以確保最新版本的可用性。
 
 +++
 
@@ -244,7 +245,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
   >[!NOTE]
   >
-  Experience ManagerService Pack不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
+  >Experience ManagerService Pack不支援Bootstrap安裝。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
   **驗證安裝**
 

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '16882'
+source-wordcount: '16917'
 ht-degree: 0%
 
 ---
@@ -594,6 +594,10 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 ```
 
 將這個組態值新增至cknfastrc檔案之後，便可以使用新的認證而不需重新啟動J2EE應用程式伺服器。
+
+    >[！NOTE]
+    >
+    >建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 **簽章不受信任**
 

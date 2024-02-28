@@ -2,9 +2,9 @@
 title: 取得含附件的電子郵件的其他步驟
 description: 瞭解當您無法在JEE平台上擷取AEM Forms的電子郵件附件時，如何修正錯誤。
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: 553aef43342a709dd8e645279999a71b9e0185f0
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -48,3 +48,7 @@ ht-degree: 0%
    * `sling.bootdelegation.activation=javax.activation.*`
 
 1. 重新啟動 **JBoss®**.
+
+>[!NOTE]
+>
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。

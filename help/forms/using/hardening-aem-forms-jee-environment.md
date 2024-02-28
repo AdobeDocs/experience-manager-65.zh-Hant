@@ -6,9 +6,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '7662'
+source-wordcount: '7608'
 ht-degree: 1%
 
 ---
@@ -464,6 +464,10 @@ AEM Forms on JEE通常會使用輕量型目錄存取協定(LDAP)目錄作為企�
 1. 將變數的值設為TRUE。
 
 1. 重新啟動AEM Forms執行個體。
+
+>[!NOTE]
+>
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 ## 設定JEE上的AEM Forms以取得企業以外的存取權 {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 

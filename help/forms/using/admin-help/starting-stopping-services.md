@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 55bf5196-22c6-4286-8c92-ff44d81dde49
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ AEM表單中有兩種型別的服務：
 ## 啟動或停止與AEM表單模組關聯的服務 {#start-or-stop-the-services-associated-with-aem-forms-modules}
 
 AEM表單模組(例如Forms、Rights Management、輸出)可作為服務運作。 有時您可能需要停止或啟動這些AEM表單模組的服務。 例如，在變更服務的設定後，您必須停止並重新啟動AEM表單服務。
+
+>[!NOTE]
+>
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 1. 在管理主控台中按一下 **服務** > **應用程式和服務** > **服務管理**.
 1. 在「服務管理」頁面中，選取要停止或啟動之服務旁的核取方塊，然後按一下停止或啟動。

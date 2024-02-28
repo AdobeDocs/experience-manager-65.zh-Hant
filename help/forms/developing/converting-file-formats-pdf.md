@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '7812'
+source-wordcount: '7848'
 ht-degree: 0%
 
 ---
@@ -36,13 +36,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-產生PDF服務不支援64位元版本的OpenOffice。
+>產生PDF服務不支援64位元版本的OpenOffice。
 
 * Adobe Photoshop® CS2轉換PSD（僅限Windows）
 
 >[!NOTE]
 >
-不支援Photoshop CS3和CS4，因為它們不支援Windows Server 2003或Windows Server 2008。
+>不支援Photoshop CS3和CS4，因為它們不支援Windows Server 2003或Windows Server 2008。
 
 * Adobe FrameMaker® 7.2和8可轉換FM （僅限Windows）
 * AdobePageMaker® 7.0可轉換PMD、PM6、P65及PM （僅限Windows）
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## 將Word檔案轉換為PDF檔案 {#converting-word-documents-to-pdf-documents}
 
@@ -90,11 +90,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-如需其他檔案格式的詳細資訊，請參閱 [新增對其他原生檔案格式的支援](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats).
+>如需其他檔案格式的詳細資訊，請參閱 [新增對其他原生檔案格式的支援](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats).
 
 >[!NOTE]
 >
-如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary-of-steps}
 
@@ -202,7 +202,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   取代 `localhost` 搭配託管AEM Forms之伺服器的IP位址。
+   >取代 `localhost` 搭配託管AEM Forms之伺服器的IP位址。
 
 1. 建立產生PDF使用者端。
 
@@ -260,7 +260,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary_of_steps-1}
 
@@ -359,7 +359,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   取代 `localhost` 搭配託管AEM Forms之伺服器的IP位址。
+   >取代 `localhost` 搭配託管AEM Forms之伺服器的IP位址。
 
 1. 建立產生PDF使用者端。
 
@@ -410,7 +410,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
+>如需有關產生PDF服務的詳細資訊，請參閱 [AEM Forms服務參考](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 步驟摘要 {#summary_of_steps-2}
 
@@ -510,7 +510,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   取代 `localhost` 搭配託管AEM Forms之伺服器的IP位址。
+   >取代 `localhost` 搭配託管AEM Forms之伺服器的IP位址。
 
 1. 建立「產生PDf」使用者端。
 
@@ -845,7 +845,7 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 >[!NOTE]
 >
-在此上下文中，其他一詞指的是 `appmon.[applicationname].addition.[locale].xml` 檔案。 這類檔案會指定對話方塊XML檔案的覆寫和新增專案。
+>在此上下文中，其他一詞指的是 `appmon.[applicationname].addition.[locale].xml` 檔案。 這類檔案會指定對話方塊XML檔案的覆寫和新增專案。
 
 您也可以針對下列用途修改原生應用程式的其他對話方塊XML檔案：
 
@@ -858,7 +858,7 @@ A *對話方塊XML檔案* 指定產生PDF服務如何回應系統或原生應用
 
 >[!NOTE]
 >
-native2pdfconfig.xml組態檔中指定的泛型應用程式都沒有主要對話方塊XML檔案。 區段 [新增或修改對原生檔案格式的支援](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format) 說明這些規格。
+>native2pdfconfig.xml組態檔中指定的泛型應用程式都沒有主要對話方塊XML檔案。 區段 [新增或修改對原生檔案格式的支援](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format) 說明這些規格。
 
 訂購 `windowList` 在中顯示為子項的元素 `window` 元素。 (請參閱 [排序視窗和windowList元素](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements).)
 
@@ -878,7 +878,7 @@ native2pdfconfig.xml組態檔中指定的泛型應用程式都沒有主要對話
 
 >[!NOTE]
 >
-應用程式的名稱指定為 `GenericApp` 元素的 `name` 屬性。 此值必須與您為該應用程式開發的指令碼中指定的對應名稱完全相符。 同樣地， `GenericApp` 元素的 `displayName` 屬性應該完全符合對應指令碼的 `expectedWindow` 視窗註解。 在解析中出現的任何規則運算式之後，會評估這種等同性 `displayName` 或 `caption` 屬性。
+>應用程式的名稱指定為 `GenericApp` 元素的 `name` 屬性。 此值必須與您為該應用程式開發的指令碼中指定的對應名稱完全相符。 同樣地， `GenericApp` 元素的 `displayName` 屬性應該完全符合對應指令碼的 `expectedWindow` 視窗註解。 在解析中出現的任何規則運算式之後，會評估這種等同性 `displayName` 或 `caption` 屬性。
 
 在此範例中，已修改產生PDF服務所提供的預設設定資料，以指定應使用記事本(而非Microsoft Word)來處理副檔名為.txt的檔案。 在此修改之前，Microsoft Word被指定為應該處理此類檔案的原生應用程式。
 
@@ -910,6 +910,10 @@ native2pdfconfig.xml組態檔中指定的泛型應用程式都沒有主要對話
 建立環境變數，指定原生應用程式可執行檔的位置。 變數必須使用格式 `[applicationname]_PATH`，其中 *applicationname* 必須與XML組態檔和指令碼中使用的應用程式名稱完全相符，而且路徑中包含以雙引號括住可執行檔的路徑。 此類環境變數的範例為 `Photoshop_PATH`.
 
 建立新的環境變數後，您必須重新啟動部署產生PDF服務的伺服器。
+
+>[!NOTE]
+>
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK伺服器。 使用替代方法重新啟動AEM SDK伺服器（例如停止Java程式）可能會導致AEM開發環境不一致。
 
 **在Windows XP環境中建立系統變數**
 

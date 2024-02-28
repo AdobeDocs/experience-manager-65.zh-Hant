@@ -5,9 +5,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1506'
 ht-degree: 1%
 
 ---
@@ -309,6 +309,10 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
 1. 按一下 **[!UICONTROL 選擇檔案]** 並瀏覽以選取mysql-connector-java-5.1.39-bin.jar檔案。 另外，選取 **[!UICONTROL 開始套件組合]** 和 **[!UICONTROL 重新整理封裝]** 核取方塊。
 1. 按一下 **[!UICONTROL 安裝或更新]**. 完成後，請重新啟動伺服器。
 1. (*僅限Windows*)關閉作業系統的系統防火牆。
+
+>[!NOTE]
+>
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 ## 表單入口網站資料和中繼資料服務的範常式式碼 {#sample-code-for-forms-portal-data-and-metadata-service}
 

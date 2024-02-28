@@ -7,9 +7,9 @@ topic-tags: manage
 noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -38,5 +38,9 @@ AEM案頭應用程式在Microsoft® Windows上使用WebDAV通訊協定，並在m
 1. 在「FormsManager附加元件組態」對話方塊中，取消選取 **[!UICONTROL 非同步同步資源]** 核取方塊，然後按一下 **[!UICONTROL 儲存]**.
 1. 重新啟動AEM Forms伺服器。 重新啟動後，AEM Forms伺服器會啟用，以接受內容並與AEM案頭應用程式共用。
 1. 開啟應用程式並連線至AEM Forms伺服器。
+
+   >[!NOTE]
+   >
+   > 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
    成功連線時，應用程式會填入 `content/dam` 和 `content/dam/formsanddocuments` 資料夾。 除了將檔案從上方資料夾移至本機資料夾外，您也可以使用應用程式在自動填入的資料夾之間移動內容。

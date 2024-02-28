@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1030'
 ht-degree: 1%
 
 ---
@@ -218,6 +218,10 @@ JBoss® Application Server使用8080作為預設HTTP連線埠。 JBoss®也有�
 
 1. 儲存並關閉檔案。
 1. 重新啟動JBoss®應用程式伺服器。
+
+>[!NOTE]
+>
+> 建議您使用&#39;Ctrl + C&#39;命令重新啟動SDK。 使用替代方法重新啟動AEM SDK （例如停止Java程式）可能會導致AEM開發環境不一致。
 
 ## JEE安全性考量事項上的AEM Forms {#aem-forms-on-jee-security-considerations}
 
