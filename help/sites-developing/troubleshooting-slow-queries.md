@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 4289c68feb51842b5649f7cff73c5c4bc38add6c
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2236'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ AEM中有三個主要分類為緩慢查詢，依嚴重程度列出：
 
 同樣地，不需為建立額外的索引規則 `cq:tags` 屬性，甚至是限製為的全文查詢 `cq:tags` 會表現不佳，因為來自索引的結果會傳回所有全文相符專案。 cq：tags上的限制會在之後被篩選。
 
-索引後篩選的另一個原因是存取控制清單，在開發期間經常會遺漏。 請嘗試確保查詢未傳回使用者可能無法存取的路徑。 若要這麼做，可透過更好的內容結構以及對查詢提供相關的路徑限制來完成。
+索引後篩選的另一個原因是存取控制清單，在開發期間經常會遺漏。 請嘗試確保查詢未傳回使用者可能無法存取的路徑。 若要這麼做，可改善內容結構，並在查詢上提供相關路徑限制。
 
 若要識別Lucene索引是否傳回許多結果以傳回小型子集作為查詢結果，一個有效方法是啟用DEBUG記錄 `org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex`. 這麼做可讓您檢視從索引載入的檔案數。 最終結果數量與載入檔案數量不應不成比例。 如需詳細資訊，請參閱 [記錄](/help/sites-deploying/configure-logging.md).
 
@@ -176,7 +176,7 @@ AEM支援下列查詢語言：
 * JCR-SQL2
 * XPath
 
-以下範例使用Query Builder作為AEM開發人員最常使用的查詢語言，但相同的原則適用於JCR-SQL2和XPath。
+以下範例使用查詢產生器，因為這是AEM開發人員最常使用的查詢語言，不過，相同的原則適用於JCR-SQL2和XPath。
 
 1. 新增節點型別限制，讓查詢解析為現有的Lucene屬性索引。
 
@@ -466,7 +466,7 @@ AEM支援下列查詢語言：
 
    * 從XPath或JCR-SQL2查詢陳述式產生最佳的Lucence屬性索引。
 
-* **[AEM Chrome外掛程式](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)**
+* **_AEM Chrome外掛程式_** <!-- For whatever reason, the URL to this extension was causing too many redirects when doing the request so it was removed entirely to get rid of the error; users can easily look up the extension in Google instead. DO NOT ADD THE URL AGAIN!-->
 
-   * Google Chrome網頁瀏覽器擴充功能會在瀏覽器的開發工具主控台中公開每個要求的記錄檔資料，包括已執行的查詢及其查詢計畫。
-   * 需要 [Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi) ，並會在AEM上安裝和啟用。
+   * 此 _AEM Chrome外掛程式_ 是Google Chrome網頁瀏覽器擴充功能，可在瀏覽器的開發工具主控台中公開每個要求的記錄資料，包括執行查詢及其查詢計畫。
+   * 需要您安裝和啟用 [Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi) 在AEM上。
