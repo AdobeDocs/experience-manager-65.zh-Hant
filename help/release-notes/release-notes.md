@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: c36ef1c1bd261864930039c4d60a930ead12482e
+source-git-commit: 21f39dc697a5aa3944834786a627e990e7f3ca7f
 workflow-type: tm+mt
-source-wordcount: '3390'
+source-wordcount: '3385'
 ht-degree: 2%
 
 ---
@@ -152,32 +152,32 @@ ht-degree: 2%
 
 #### [!DNL Adaptive Forms]
 
-* 當使用者嘗試將AEM Forms整合到具有AEM已發佈URL的郵寄平台時，AEM表單在轉譯頁面時不會新增「method=post」，即便在具有URL的提交動作中設定了POST。 這會導致郵寄平台無法將此識別為表單。 (FORMS-12614)
-* 當使用者在AEM Form Service Pack 6.5.18.0上選取具有顯示模式的日期欄位時，使用者無法使用鍵盤選取目前的日期。 (FORMS-12736)
+* 當使用者嘗試將AEM Forms整合到具有AEM已發佈URL的郵寄平台時，AEM Forms未新增 `method=post` 轉譯頁面時。 即使發生此問題 `POST` 在具有URL的提交動作中設定。 這會導致郵寄平台無法將此識別為表單。 (FORMS-12614)
+* 當使用者在AEM Form Service Pack 6.5.18.0上選取具有顯示模式的日期欄位時，使用者無法使用鍵盤選取目前日期。 (FORMS-12736)
 * 在AEM Forms Service Pack 6.5.17.0和Service Pack 6.5.18.0上，當使用者在行事曆Widget中的月份之間切換時，日期選擇器元件會顯示額外的列。 (FORMS-11869)
 * 當使用者在iOS裝置上的附件元件中使用「拍攝影片」按一下影像時，所有影像都會新增到具有相同名稱的資料夾中。 (FORMS-12224)
 * 當使用者更新單選按鈕群組中的現有選項時，會發佈不正確的翻譯值。 (FORMS-12575)
-* 當使用者在Android裝置上將字元新增到最適化表單時，允許使用者在Android裝置上聚焦時鍵入超過文字欄位中定義的最大字元數。 不過，當使用者選取HTML5輸入型別時，此功能就會運作。 (FORMS-12748)
-* 由於相符的標籤Arial labelledby和Arial label，熒幕助讀程式無法區分這兩者。 為了解決問題 — 表單欄位的「aria-labelledby」標籤已取代為「aria-describedby」。 (FORMS-12436)
-* 當作者使用「最適化Forms — 內嵌(v2)」元件將最適化表單嵌入其網站頁面，且內嵌表單包含驗證碼元件時（CAPTCHA服務 — > reCAPTCHA，設定 — > reCAPTCHA-v2），當使用者嘗試在作者執行個體上使用「檢視發佈版本」來檢視網站頁面時，網站頁面未轉譯，錯誤顯示為(FORMS-11859)：
+* 當使用者在Android™裝置上將字元新增到最適化表單時，使用者在Android™裝置上聚焦時可以在文字欄位中輸入超過定義的最大字元數。 但是，當使用者選取HTML5輸入型別時，它就會運作。 (FORMS-12748)
+* 由於相符的標籤Arial® labelledby和Arial® label，熒幕助讀程式無法區分這兩者。 為了解決問題 — 表單欄位的「aria-labelledby」標籤已取代為「aria-describedby」。 (FORMS-12436)
+* 當作者使用「最適化Forms — 內嵌(v2)」元件在其網站頁面中嵌入最適化表單，且內嵌表單包含驗證碼元件時（驗證碼服務 — > reCAPTCHA，設定 — > reCAPTCHA-v2），當使用者嘗試在作者執行個體上使用「以發佈的形式檢視」來檢視網站頁面時，網站頁面未轉譯。 下列錯誤顯示為(FORMS-11859)：
   `Failed to construct 'URL': Invalid base URL at Object.renderRecaptcha`
 
 * 當使用者嘗試使用日期選擇器元件選擇日期時，值未更新並顯示NULL。 (FORMS-12742， FORMS-12736)
 
-* 當使用者升級至AEM Form Service Pack 6.5.19.0，在將新語言更新至現有字典後，它沒有與「guideContainer」列合併以向表單新增地區設定。 (FORMS-12947)
+* 當使用者升級至AEM Form Service Pack 6.5.19.0，在將新語言更新到現有字典後，它沒有與「guideContainer」列合併以將地區設定新增到表單。 (FORMS-12947)
 
-* 在AEM Forms Service Pack 6.5.19.0上，在Java 11上叫用Web服務作業會失敗並出現錯誤(FORMS-12329)：
+* 在AEM Forms Service Pack 6.5.19.0上，在Java™ 11上叫用的Web服務操作會失敗並出現錯誤(FORMS-12329)：
   `java.lang.NoClassDefFoundError message:sun/misc/BASE64Decoder`
 
-* 當使用者在AEM Forms Service Pack 6.5.18.0上對「電子郵件服務」叫用「接收」作業時，會發生例外狀況(FORMS-12050)：
+* 當使用者在AEM Forms Service Pack 6.5.18.0上呼叫「EmailService」的「接收」作業時，會發生例外狀況(FORMS-12050)：
   `java.util.ServiceConfigurationError: javax.mail.Provider: Provider com.sun.mail.imap.IMAPProvider not a subtype`
 
-* 在AEM Forms Service Pack 6.5.18.0上啟用FIPS模式時，在預設DOM下建立新使用者會失敗並出現錯誤(FORMS-11857)：
+* 在AEM Forms Service Pack 6.5.18.0上啟用FIPS模式時，在預設DOM下建立使用者會失敗並出現錯誤(FORMS-11857)：
   `com.adobe.idp.cx.a: error seeding random number generator`
 
-* 當使用者在ADMINUI中選取路徑下的字型時 `Home>Services>PDF Generator>Adobe PDF Settings`，則不會加以選取。 此外，在標準或個人化設定檔中，可用的字型清單方塊是空的，因此無法個人化的子清單 **永遠內嵌** 或 **永不內嵌**，這會導致使用者無法使用PDF Generator設定其PDF的字型。 記錄檔不會顯示任何相關的錯誤訊息。 (FORMS-12095)
+* 當使用者在ADMINUI中選取路徑下的字型時 `Home>Services>PDF Generator>Adobe PDF Settings`，則不會加以選取。 此外，在標準或個人化設定檔中，可用的字型清單方塊是空的。 因此，無法個人化的 **永遠內嵌** 或 **永不內嵌**. 使用者無法使用PDF Generator設定其PDF的字型。 記錄檔不會顯示任何相關的錯誤訊息。 (FORMS-12095)
 
-* 在AEM Forms Service Pack 6.5.18.0上，使用者無法建立新的安全性設定，不會顯示錯誤或伺服器記錄，但畫面上會顯示快顯錯誤訊息。 (FORMS-12212)
+* 在AEM Forms Service Pack 6.5.18.0上，使用者無法建立安全性設定，不會顯示錯誤或伺服器記錄，但畫面上會顯示快顯錯誤訊息。 (FORMS-12212)
 
 * 當AEM Forms Service Pack 6.5.18.0的使用者在JEE工作流程提交最適化表單時，最適化表單中的附件未傳送到JEE程式，導致應用程式失敗。 (FORMS-12232， FORMS-12228)
 
@@ -198,7 +198,7 @@ ht-degree: 2%
 
 * 在AEM Forms 6.5.18.0上，發佈調適型表單時，其所有相依性（包括原則）都會重新發佈，即使未進行任何修改亦然。 (FORMS-10454)
 
-* 當使用者在具有JBoss Turnkey設定的AEM Forms 6.5.19.1上執行設定管理員時選取「Microsoft SharePoint」時，Livecycle Jboss EAR安裝會失敗，並顯示下列錯誤：(FORMS-12463)
+* 當使用者在具有JBoss® Turnkey設定的AEM Forms 6.5.19.1上執行設定管理員時選取「Microsoft SharePoint」時，LiveCycleJBoss® EAR安裝會失敗，並顯示以下錯誤：(FORMS-12463)
 
   ` Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEE0031: Unable to process modules in application.xml for EAR ["/C:/AEM/jboss/bin/content/ adobe-livecycle-jboss.ear "], module file adobe-connectorformssharepoint-config-ejb.jar not found.`
 
