@@ -2,7 +2,7 @@
 title: 適用於AEM Forms的AEM Forms修補程式安裝指示
 description: 適用於OSGi和JEE環境的AEM Forms Service Pack安裝指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 181d5ffcefcf55aa75cfaf29c42dbd8d8d665398
+source-git-commit: fbdeaeca3fa05181682f94e8f71bd9bb6605762a
 workflow-type: tm+mt
 source-wordcount: '1752'
 ht-degree: 5%
@@ -261,7 +261,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++4. 安裝Adobe Experience Manager Forms (AEM)附加元件套件
++++5. 安裝Adobe Experience Manager Forms (AEM)附加元件套件
 
 1. 確認您已安裝 [!DNL Experience Manager] service pack。
 1. 下載適用於您作業系統的 [AEM Forms 發行版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)所列出的對應 Forms 附加套件。

@@ -2,7 +2,7 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 60c9a1d9fb03975b70ed1d7d1d65b0bd4017c794
+source-git-commit: fbdeaeca3fa05181682f94e8f71bd9bb6605762a
 workflow-type: tm+mt
 source-wordcount: '3390'
 ht-degree: 2%
@@ -217,8 +217,6 @@ ht-degree: 2%
 
 * 當使用者在AEM Forms Designer上建立XDP時，當使用者導覽表單標籤時，也會在PDF輸出上標籤背景物件。 (LC-3921687)
 
-
-<!-- #### [!DNL Adaptive Forms] -->
 <!--LEFT BULLET LIST HERE IN CASE OF REUSE BY FORMS IN THE FUTURE 
 * **Document Services**
   * text
@@ -229,8 +227,6 @@ ht-degree: 2%
 * **Interactive Communications**
   * text -->
 <!--### Commerce{#commerce-6520} * text -->
-
-
 
 ### Foundation {#foundation-6520}
 
