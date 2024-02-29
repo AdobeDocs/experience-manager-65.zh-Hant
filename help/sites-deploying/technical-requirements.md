@@ -3,9 +3,9 @@ title: 技術需求
 description: Adobe Experience Manager支援的使用者端和伺服器平台清單。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: d5e7f0301259fdc12b507f9568befcc34ebe9408
+source-git-commit: 52969d5ab0975871c872195ab13649fb815cead8
 workflow-type: tm+mt
-source-wordcount: '3644'
+source-wordcount: '3650'
 ht-degree: 0%
 
 ---
@@ -213,7 +213,7 @@ Adobe Experience Manager可與下列伺服器平台搭配使用以用於生產�
    >* libX11.x86_64 (1.6.7-4)
    >* zlib.x86-64 (1.2.7-17)
    >* libxcb.x86_64 （1.13-1.el7）
-   >* libXau.x86_64 （1.0.8-2.1.el7）
+   >* libXau.x86_64 (1.0.8-2.1.el7)
 
 1. Microsoft® Windows生產部署支援客戶升級至6.5版本及用於非生產用途。 AEM Sites和Assets會隨選新部署。
 1. Microsoft®視窗伺服器支援AEM Forms，但沒有支援層級R限制。
@@ -456,7 +456,7 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/
    <th><p><strong>轉換為 PDF 的支援格式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic路線</a> 最新版本</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020經典曲目</a> 最新版本</td>
    <td>XPS、影像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
@@ -529,13 +529,15 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/
 * 顯存 - 128 MB GPU（建議 256 MB）
 * 2.35 GB的可用硬碟空間
 * 1024 X 768畫素或更高的熒幕解析度
-* 視訊硬體加速（選購）
+* 影片硬體加速（選擇）
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC
 * 安裝設計器的管理許可權
 * Microsoft Visual C++ 2019 （VC 14.28或更新版本） 32位元AEM Forms Designer的32位元執行階段
 * Microsoft Visual C++ 2019 （VC 14.28或更新版本）適用於64位元AEM Forms Designer的64位元執行階段（適用於OSGI和JEE棧疊）
 
-### AEM Assets XMP中繼資料回寫的需求 {#requirements-for-aem-assets-xmp-metadata-write-back}
+[安裝及設定AEM Forms designer](/help/forms/using/installing-configuring-designer.md)
+
+### AEM Assets XMP 中繼資料回寫的要求 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
 以下平台和檔案格式支援並啟用了XMP回寫：
 
@@ -548,6 +550,6 @@ AEM Dynamic Media預設為停用。 請參閱此處 [啟用Dynamic Media](/help/
 
 * **檔案格式**：JPEG、PNG、TIFF、PDF、INDD、AI和EPS。
 
-### AEM Assets在Linux上處理中繼資料密集的資產的需求® {#assetsonlinux}
+### 在 Linux® 上處理重中繼資料資產的AEM Assets需求 {#assetsonlinux}
 
-XMPFilesProcessor 進程需要 資料庫 GLIBC_2.14 才能工作。 使用包含 GLIBC_2.14 的Linux內核，例如Linux®®內核版本3.1.x。它提高了處理包含大量 中繼資料、按讚 PSD 文件的資產的性能。 使用以前版本的 GLIBC 會導致以 開頭 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`的日誌中出錯。
+XMPFilesProcessor 進程需要 資料庫 GLIBC_2.14 才能工作。 使用包含GLIBC_2.14的Linux®核心，例如Linux®核心版本3.1.x。它可改善處理包含大量中繼資料的資產(例如PSD檔案)的效能。 使用舊版GLIBC會導致以開頭的記錄中出現錯誤 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
