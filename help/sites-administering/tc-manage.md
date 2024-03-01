@@ -2,9 +2,9 @@
 title: 管理翻譯專案
 description: 瞭解如何在Adobe Experience Manager中管理翻譯專案。
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 219338b497dae6356a68429e9e8ab02c9cfcc3b4
 workflow-type: tm+mt
-source-wordcount: '3504'
+source-wordcount: '3506'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 在準備要翻譯的內容後，您需要透過建立遺漏的語言副本來完成語言結構，並建立翻譯專案。
 
-翻譯專案可讓您管理AEM內容的翻譯。 翻譯專案是AEM的型別 [專案](/help/sites-authoring/projects.md) 包含要翻譯成其他語言的資源。 這些資源是 [語言副本](/help/sites-administering/tc-prep.md) 從語言母版建立的。
+翻譯專案使您能夠管理 AEM 內容的翻譯。翻譯專案是AEM的型別 [專案](/help/sites-authoring/projects.md) 包含要翻譯成其他語言的資源。 這些資源是 [語言副本](/help/sites-administering/tc-prep.md) 從語言母版建立的。
 
 將資源新增至翻譯專案時，系統會為其建立翻譯工作。 工作會提供相關命令和狀態資訊，您可用來管理在資源上執行的人工翻譯和機器翻譯工作流程。
 
@@ -420,9 +420,15 @@ AEM會偵測是否正在為內容的初始翻譯建立翻譯專案，或更新�
 1. 選取 **語言副本**.
 1. 選取您要更新的目標語言。
 1. 選取 **更新語言副本**.
+
+   ![updating-language-copies](assets/translation-move-to.png)
+
 1. 按一下 **更新**. A [Launch](/help/sites-authoring/launches-promoting.md) 將會建立。
 1. 導覽至所需的語言根並加以選取。
 1. 使用 **引用** 面板，選取 **啟動**.
+
+   ![promote-launch-translation](assets/promote-launch-translation.png)
+
 1. 按一下已建立的Launch，然後按一下 **提升啟動**.
 
 現在，來源頁面已移動，且相關的語言副本也已移動。
