@@ -4,9 +4,9 @@ description: 瞭解如何建立自訂主題、設定個別元件的樣式，以�
 topic-tags: introduction
 feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: a361c194c238f0f2c999abfd77ca85e7697cb7bf
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '2038'
 ht-degree: 8%
 
 ---
@@ -442,16 +442,77 @@ ht-degree: 8%
 您可以使用各種字型來設計最適化表單。 所有在其中檢視最適化表單的裝置可能沒有用來設計最適化表單的字型。 您可以使用Web字型服務，將所需的字型傳送至目標裝置。
 
 [!DNL Adobe Fonts] 是Web Fonts服務。 您可以透過最適化表單來設定和使用服務。 使用 [!DNL Adobe Fonts] 在最適化表單中：
+1. 瀏覽 [Adobe字型資料庫](https://fonts.adobe.com/) 並選擇字型來設定表單的樣式。
+<!--
+>[!NOTE]
+>
+>![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] is now called Adobe Fonts and is included with Creative Cloud and other subscriptions. [Learn more](https://fonts.adobe.com/).-->
 
 >[!NOTE]
 >
->![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] 現在稱為Adobe Fonts，並包含在Creative Cloud和其他訂閱中。 [深入了解](https://fonts.adobe.com/)。
+> 您可以新增標籤或篩選器來調整字型清單。
 
-1. 建立 [Adobe Fonts](https://fonts.adobe.com/?ref=tk.com) 帳戶、建立套件、將字型Myriad Pro新增至套件、發佈套件並取得套件ID。 必須使用 [!DNL Adobe Fonts] (Web Fonts)的最適化表單。
-1. 在AEM中 [!DNL Forms] 伺服器，瀏覽至 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** ![錘子](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**. 現在，開啟設定資料夾。 如果已有組態可用，請按一下 **[!UICONTROL 建立]** 按鈕以建立例項。
+1. 按一下&lt;/>按鈕，將系列新增至Web專案，以備您找到想要的字型時使用。
 
-   在「建立組態」對話方塊中，指定 **標題** ，然後按一下 **[!UICONTROL 建立]**. 系統會將您重新導向至設定頁面。 在 [!UICONTROL 編輯元件] 對話方塊顯示，提供您的 **套件ID** 並按一下 **[!UICONTROL 確定]**.
+   ![select-font-from-font-library](assets/select-font-from-font-library.png)
 
-1. 設定您的主題以使用 [!DNL Adobe Fonts] 設定。 在作者執行個體上，開啟 **[!UICONTROL 全域主題]** 在主題編輯器中。 在主題編輯器中，導覽至 **[!UICONTROL 主題選項]** ![theme-options](assets/theme-options.png) > **[!UICONTROL 設定]**. 在 **[!UICONTROL Adobe Fonts設定]** 欄位，選取套件，然後按一下 **[!UICONTROL 儲存]**.
+   新增字型至Web專案對話方塊畫面隨即顯示。
 
-   新增至的字型 **[!UICONTROL Adobe Fonts]** 可供您選取 **[!UICONTROL 文字]** 所有元件的摺疊。
+   >[!NOTE]
+   >
+   > 只有在Web專案有&lt;/>按鈕可用時，您才能新增字型。
+
+2. 為您的Web專案命名。
+3. 選取核取方塊以選取要包含的字型粗細和樣式。
+
+   ![新增字型程式庫](assets/add-a-font-window.png)
+
+4. 選取 **按一下** 以建立專案。
+5. 從畫面複製內嵌程式碼和URL。
+   ![內嵌程式碼和URL](assets/font-add-url.png)
+
+6. 按一下 **完成** 以關閉web專案視窗。
+7. 登入您的AEM執行個體並前往URL `http://server:port/crx/de/index.jsp#`
+8. 例如，在CRXDE中建立資料夾結構 `/apps/[fontslibrary]/[customlibrary(clientlibrary)]`.
+9. 前往新建立的 `clientlibs` 資料夾並新增 `allowProxy` 和 `categories` 屬性。
+10. 瀏覽至 `/apps/[fontslibrary]/[customlibrary(clientlibrary)]` 和建立css資料夾。
+11. 移至已建立的CSS資料夾並建立檔案。 例如，建立檔案為 `fonts.css` 並貼上內嵌程式碼和URL。
+   ![檔案夾結構](/help/forms/using/assets/fonts-add-in-crxde.png)
+12. 儲存變更。
+
+>[!NOTE]
+>
+> 若要在最適化表單中使用新增的自訂字型，請確定使用者端資料庫名稱位於 **[!UICONTROL 使用者端資料庫類別]** 會與clientlib資料夾的「類別」選項中指定的名稱對齊。
+
+最適化表單現在可透過下列自訂字型使用者端資料庫存取包含的字型。
+
+
+<!--
+Create Adobe Fonts Configuration
+
+1. To create a API Token, go to **login** > **API Token** > **Make me a new API token**.
+
+   ![API token](/help/forms/using/assets/fonts-api-token.png)
+
+2. Once, you click **Make me a new API token**, a new token is generated. 
+3. Copy the generated token for future use.
+4. Now login to your AEM  author instance. On the author instance, go to **[!UICONTROL Tools]**>**[!UICONTROL Cloud Services]**> **[!UICONTROL Adobe Fonts]**.
+5. Select the configuration container and click **Create**. **[UICONTROL Create Adobe Fonts Configuration]** screen appears.
+    ![API token](/help/forms/using/adobe-font-configuration-screen.png)
+
+6. Spceify the name and paste the API token in the **[!UICONTROL Kit ID]** textbox.
+7. Click **Create**.
+
+
+
+The fonts added to the **[!UICONTROL Adobe Fonts]** are available for selection in the **[!UICONTROL Text]** accordion of all the components.
+1. In the theme editor, navigate to **[!UICONTROL Theme Options]** ![theme-options](assets/theme-options.png) > **[!UICONTROL Configure]**. 
+2. In the **[!UICONTROL Adobe Fonts Configuration]** field, select the kit, and click **[!UICONTROL Save]**.
+
+
+1. Create an [Adobe Fonts](https://fonts.adobe.com/?ref=tk.com) account, create a kit, add font Myriad Pro to the kit, publish the kit, and obtain the Kit ID. It is required to use [!DNL Adobe Fonts] (Web Fonts) in an adaptive form. 
+1. In the AEM [!DNL Forms] Server, navigate to ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**. Now, open a configuration folder. If a configuration is already available, click the **[!UICONTROL Create]** button to create an instance.
+
+   On the Create Configuration dialog, specify a **Title** for the configuration, and click **[!UICONTROL Create]**. You are redirected to the configuration page. In the [!UICONTROL Edit Component] dialog that appears, provide your **Kit ID** and click **[!UICONTROL OK]**. -->
+
+
