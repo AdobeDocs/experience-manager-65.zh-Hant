@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 348b82f0bd0d99eeb771aa4ed2719ee10d8cee68
+source-git-commit: 53bfd33a8bbb10d0ed82968a115ed316f63efecb
 workflow-type: tm+mt
-source-wordcount: '3464'
+source-wordcount: '3466'
 ht-degree: 2%
 
 ---
@@ -464,9 +464,10 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
 
 * 從AEM 6.5 Forms Service Pack 18 (6.5.18.0)或AEM 6.5 Forms Service Pack 19 (6.5.19.0)更新至AEM 6.5 Forms Service Pack 20 (6.5.20.0)後，使用者會遇到JSP編譯錯誤。 他們無法開啟或建立最適化表單，且其他AEM介面(如頁面編輯器、AEM Forms UI和AEM Workflow編輯器)發生錯誤。 出現類似以下內容的錯誤訊息：
 
-`Unable to compile class for JSP: An error occurred at line: 162 in the jsp file: /libs/granite/ui/components/coral/foundation/anchorbutton/anchorbutton.jsp The method transformLinkInUriIfExternal(String) is undefined for the type ComponentHelper`
+  `Unable to compile class for JSP: An error occurred at line: 162 in the jsp file: /libs/granite/ui/components/coral/foundation/anchorbutton/anchorbutton.jsp The method transformLinkInUriIfExternal(String) is undefined for the type ComponentHelper`
 
-您可以聯絡Adobe支援以解決問題。
+  您可以聯絡Adobe支援以尋求解決問題方面的協助。
+
 
 * 預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 (CQDOC-21355)
 
