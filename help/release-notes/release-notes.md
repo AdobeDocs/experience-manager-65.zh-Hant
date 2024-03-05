@@ -2,7 +2,7 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 7b920927fe400c05f6c7a744d4cb7366db0cae86
+source-git-commit: 70f52515fc877ad5f20e14c2a26a934d3dcdfe01
 workflow-type: tm+mt
 source-wordcount: '3486'
 ht-degree: 2%
@@ -381,7 +381,6 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
   * Paste the correct URL directly into the browser.
 
        `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html` -->
-
 
 
 * **與Oak相關**
