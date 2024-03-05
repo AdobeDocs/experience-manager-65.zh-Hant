@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 5f95281130f0f2cac6d115b59b828946c2f70d33
+source-git-commit: 015c36cad1e7da98888609622cf2150842d40c66
 workflow-type: tm+mt
-source-wordcount: '3462'
+source-wordcount: '3485'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 2%
    * 使用SHA384摘要演演算法的ECDSA橢圓曲線P384
    * 使用SHA512摘要演演算法的ECDSA橢圓曲線P512
 * **與Forms Designer適用的Windows 11緊密相容**：AEM Forms Designer現在支援Windows 11，確保順利安裝和操作。 使用者可以放心地升級至Windows 11，不必重新安裝Forms Designer，也不用擔心相容性問題，確保工作流程不會中斷。
-* **AEM Forms Designer中的自訂「Caption」角色可增強協助工具**： AEM Forms Designer現在包含名為「Caption」的自訂協助工具角色，以建立具有個人化字幕元素的XDP。 此功能可讓使用者將自訂字幕整合到其檔案設計中以改善包容性和使用者體驗，進而增強協助工具。
+* **AEM Forms Designer中的自訂「Caption」角色可增強協助工具**： AEM Forms Designer現在包含名為「Caption」的自訂協助工具角色，讓使用者能夠使用個人化的字幕元素建立XDP。 此功能可讓使用者將自訂註解整合到其檔案設計中，藉此增強協助工具，進而改善包容性和使用者體驗。
 
 <!-- ### [!DNL Forms]
 
@@ -466,8 +466,15 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
 
   `Unable to compile class for JSP: An error occurred at line: 162 in the jsp file: /libs/granite/ui/components/coral/foundation/anchorbutton/anchorbutton.jsp The method transformLinkInUriIfExternal(String) is undefined for the type ComponentHelper`
 
-  您可以聯絡Adobe支援以尋求解決問題方面的協助。
+  若要解決該問題：
 
+   1. 下載作業系統的Hotfix：
+
+   * [Microsoft Windows的Hotfix](/help/release-notes/assets/Hotfix-windows.zip)
+   * [Linux適用的Hotfix](/help/release-notes/assets/Hotfix-Linux.zip)
+   * [Apple macOS的Hotfix](/help/release-notes/assets/Hotfix-osx.zip)
+
+   1. 透過封裝管理員上傳並安裝封裝(.zip)。
 
 * 預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 (CQDOC-21355)
 
