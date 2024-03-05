@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+source-git-commit: e39c52bc658e3a286272d1c94106b17a2f5579ad
 workflow-type: tm+mt
-source-wordcount: '7348'
+source-wordcount: '7355'
 ht-degree: 18%
 
 ---
@@ -73,6 +73,7 @@ ht-degree: 18%
    + [內容處置篩選](/help/sites-administering/content-disposition-filter.md)
    + [AEM 6.5中的自訂使用者群組對應](/help/sites-administering/cug-mapping.md)
    + [相同網站Cookie支援](/help/sites-administering/same-site-cookie-support.md)
+   + [Adobe Developer Console 中的 JWT 憑證已被取代](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
 + Sites {#sites}
    + 製作 {#authoring}
       + AEM Authoring的基本工作、工具和概念 {#essentials}
@@ -510,7 +511,7 @@ ht-degree: 18%
       + [製作調適型表單簡介](/help/forms/using/introduction-forms-authoring.md)
       + [互動式通訊簡介](/help/forms/using/interactive-communications-overview.md)
       + [管理表單簡介](/help/forms/using/introduction-managing-forms.md)
-      + [自動表單轉換服務簡介](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html)
+      + [自動表單轉換服務簡介](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=zh-Hant)
       + 教學課程：建立第一個最適化表單 {#create-first-adaptive-form}
          + [教學課程：建立第一個最適化表單](/help/forms/using/create-your-first-adaptive-form.md)
          + [教學課程：建立最適化表單](/help/forms/using/create-adaptive-form.md)
@@ -1330,7 +1331,7 @@ ht-degree: 18%
          + [開發大量編輯器](/help/sites-developing/dev-bulk-editor.md)
          + [開發報表](/help/sites-developing/dev-reports.md)
       + 元件{#components}
-         + [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+         + [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
          + [樣式系統](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/authoring/siteandpage/style-system.html)
          + [元件概觀](/help/sites-developing/components.md)
          + [AEM元件 — 基本需知](/help/sites-developing/components-basics.md)
