@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 015c36cad1e7da98888609622cf2150842d40c66
+source-git-commit: 7b920927fe400c05f6c7a744d4cb7366db0cae86
 workflow-type: tm+mt
-source-wordcount: '3485'
+source-wordcount: '3486'
 ht-degree: 2%
 
 ---
@@ -470,11 +470,11 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
 
    1. 下載作業系統的Hotfix：
 
-   * [Microsoft Windows的Hotfix](/help/release-notes/assets/Hotfix-windows.zip)
-   * [Linux適用的Hotfix](/help/release-notes/assets/Hotfix-Linux.zip)
-   * [Apple macOS的Hotfix](/help/release-notes/assets/Hotfix-osx.zip)
+      * [Microsoft Windows的Hotfix](/help/release-notes/assets/Hotfix-windows.zip)
+      * [Linux適用的Hotfix](/help/release-notes/assets/Hotfix-Linux.zip)
+      * [Apple macOS的Hotfix](/help/release-notes/assets/Hotfix-osx.zip)
 
-   1. 透過封裝管理員上傳並安裝封裝(.zip)。
+   1. 透過上傳並安裝套件(.zip) [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=en#accessing).
 
 * 預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 (CQDOC-21355)
 
