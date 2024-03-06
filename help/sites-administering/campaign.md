@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: ab41e540-1d43-4fc2-99d4-621ff2290e77
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: dac156251ae48e9d83e84ba6a4685689def9e396
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 3%
+source-wordcount: '386'
+ht-degree: 2%
 
 ---
 
@@ -33,10 +33,8 @@ Adobe Campaign這一組解決方案可讓您跨所有線上及離線管道個人
 | ACC版本 | 與AEM 6.5整合 <br>內部部署 | 與AEM 6.5整合<br>AMS |
 |---|---|---|
 | [v7](https://experienceleague.adobe.com/docs/campaign-classic.html) | 支援 | 支援 |
-| [v8](https://experienceleague.adobe.com/docs/campaign-v8.html) | 支援 | 支援 |
-| Web UI* | 支援 | 支援 |
-
-*Adobe Campaign Classic的Web UI預計在2023年底前推出。
+| [v8使用者端主控台](https://experienceleague.adobe.com/docs/campaign-v8.html) | 支援 | 支援 |
+| [v8網頁使用者介面](https://experienceleague.adobe.com/docs/campaign-web/v8/campaign-web-home.html) | 支援 | 支援 |
 
 以下檔案說明如何將AEM與Adobe Campaign Classic整合。
 
@@ -46,6 +44,13 @@ Adobe Campaign這一組解決方案可讓您跨所有線上及離線管道個人
 
 * [電子郵件核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)  — 瞭解在AEM中可用來編寫Campaign內容的標準電子郵件元件。
 * [疑難排解您的Adobe Campaign Classic整合](/help/sites-administering/troubleshooting-campaignintegration.md)  — 瞭解如何修正AEM-ACC整合最常見的問題。
+
+
+以下檔案說明如何將AEMas a Cloud Service與Adobe Campaign v8網頁使用者介面整合。
+
+* [在Adobe Campaign v8網頁使用者介面中使用Adobe Experience Manager as a Cloud Service管理範本](https://experienceleague.adobe.com/docs/campaign-web/v8/integrations/aem-content.html)  — 瞭解設定和使用與AEM範本整合的逐步詳細資訊。
+* [在Adobe Campaign v8網頁使用者介面中使用Adobe Experience Manager as a Cloud Service管理資產](https://experienceleague.adobe.com/docs/campaign-web/v8/integrations/aem-assets.html)  — 瞭解設定及使用與AEM Assets整合的逐步詳細資料。
+
 
 ## 與Adobe Campaign Standard整合 {#acs}
 
