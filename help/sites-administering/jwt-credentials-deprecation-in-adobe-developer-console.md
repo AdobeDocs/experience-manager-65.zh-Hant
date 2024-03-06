@@ -1,10 +1,10 @@
 ---
 title: Adobe Developer Console 中的 JWT 憑證已被取代
 description: 了解 Adobe Developer Console 中已取代 JWT 憑證對 AEM 的影響
-source-git-commit: 18bee77ab6fcb2d635d389f929c1dd8e2bc25de5
+source-git-commit: 72974d27fecbd9c242f66e203b02463c22b93108
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 81%
+source-wordcount: '456'
+ht-degree: 80%
 
 ---
 
@@ -21,11 +21,6 @@ Adobe 客戶使用 [Adobe Developer Console](https://developer.adobe.com/console
 目前的主要要點是 AEM 功能尚未支援新的 OAuth 伺服器到伺服器憑證。我們即將提供支援 — 如果您執行的是最新的Service Pack 20或以下版本（Service Pack 21及更高版本會自動包含該版本），我們會在2024年4月中旬前透過特別相容性套件安裝至AEM 6.5。 您可能已收到說明移轉 JWT 憑證的電子郵件，但請放心，您可以而且應該推遲憑證移轉，直到 AEM 支援新的 OAuth 伺服器到伺服器憑證類型。
 
 以下區段列出了 AEM 在 4 月中旬支援憑證後，客戶必須 (或在某些情況下不得) 將其服務帳戶 (JWT) 憑證替換為 OAuth 伺服器到伺服器憑證的情境。[了解](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview)將來更換憑證的方法。
-
->[!NOTE]
->
->[**AEM** Developer Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#crxde-lite-and-developer-console) (請注意名稱中的 **AEM**，其與 **Adobe** Developer Console 並不相同) 提供了一個公用程式來產生用於伺服器到伺服器 API 的 [JWT 權杖](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html)。這些憑證並未被取代，可以繼續使用。
-
 
 ## 將 AEM 與其他 Adobe 解決方案整合 {#integrating-aem-with-other-adobe-solutions}
 
