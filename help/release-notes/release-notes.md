@@ -2,9 +2,9 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: 70f52515fc877ad5f20e14c2a26a934d3dcdfe01
+source-git-commit: f00d2c88ba6727f8f8597fefeb467b612b23dea3
 workflow-type: tm+mt
-source-wordcount: '3486'
+source-wordcount: '3524'
 ht-degree: 2%
 
 ---
@@ -474,6 +474,8 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
       * [Apple macOS的Hotfix](/help/release-notes/assets/Hotfix-osx.zip)
 
    1. 透過上傳並安裝套件(.zip) [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=en#accessing).
+
+   1. 重新啟動AEM伺服器，並在重新啟動程式完成後驗證所有套裝的啟用狀態。 您可以透過存取以下專案來監視套裝的狀態： `https://server:host/system/console/bundles`. 繼續進行進一步的工作之前，請確定所有套件組合皆為作用中。
 
 * 預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 (CQDOC-21355)
 
