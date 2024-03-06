@@ -2,7 +2,7 @@
 title: AEM Forms的Hotfix
 description: 提供有關如何下載和安裝AEM Forms的Hotfix的資訊。
 exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
-source-git-commit: 5ab1fd033af0d6d5595fe41de003455ab9ba28a6
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -50,7 +50,7 @@ ht-degree: 0%
      </td>
     <td>
     <ul>
-    <li> OOTB手寫簽名元件無法以最適化表單呈現預覽。 (FORMS-12073)。</li>
+    <li> 現成可用的手寫簽名元件無法以最適化表單呈現預覽。 (FORMS-12073)。</li>
     </ul>
     </td>    
    </tr>

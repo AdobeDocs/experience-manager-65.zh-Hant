@@ -1,7 +1,7 @@
 ---
 title: PDF產生無法使用WorkBench列印大量PDF
 description: 當客戶透過WorkBench實作的服務產生大量PDF時，列印服務會失敗。
-source-git-commit: 9cdf22918f08fe505c3efd0ce43235e3442165d5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Using the Designer, if we associate the template "BollatoRiservatiLandscape_tabl
 
 由於我們受到最大處理序記憶體的限制，而且處理序耗用的記憶體不僅取決於資料檔案的大小。 它與表單設計密切相關，在某種程度上也與表單中合併的實際資料量密切相關。
 
-如果表單中有許多小節點含有小資料，該程式會消耗更多的記憶體（因此會更快地用盡記憶體），而不是擁有較少節點數（甚至）含有大資料的表單。
+如果表單中有許多小節點且資料量小，該程式會消耗較多的記憶體（因此會更快地用盡記憶體），而不是節點數較少（甚至）且資料量大的表單。
 
 閱讀 [以下附錄](#appendix) 如需詳細資訊，其中測試結果是根據列印表單(非標籤PDF)。 使用標籤的PDF程式記憶體需求會增加。 這也取決於表單中的欄位數量 — 大約程式記憶體需求會比非標籤PDF的1.5倍稍多。
 
