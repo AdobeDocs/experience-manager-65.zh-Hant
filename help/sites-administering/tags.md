@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
 exl-id: ff041ef0-e566-4373-818e-76680ff668d8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1761'
-ht-degree: 12%
+source-wordcount: '1769'
+ht-degree: 9%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 12%
 
 AEM中的部分標籤功能包括：
 
-* 標記可分門別類至不同的命名空間。此類階層允許建立分類。 這些分類法在整個 AEM 中都適用。
+* 標籤可以分組到各種名稱空間中。 此類階層允許建立分類。 這些分類法在整個 AEM 中都適用。
 * 新建立標籤的主要限制是在特定名稱空間中必須是唯一的。
 * 標籤的標題不應包含標籤路徑分隔字元（如果存在的話，也不會顯示）
 
@@ -76,7 +76,7 @@ AEM中的部分標籤功能包括：
 
 若要建立名稱空間，請選取 **`Create Namespace`** 圖示。
 
-名稱空間本身是標籤，不需要包含任何子標籤。 不過，若要繼續建立分類法， [建立子標籤](#creating-tags)，這又可能是葉標籤或容器標籤。
+名稱空間本身是標籤，不會包含任何子標籤。 不過，若要繼續建立分類法， [建立子標籤](#creating-tags)，這又可能是葉標籤或容器標籤。
 
 ![chlimage_1-183](assets/chlimage_1-183a.png) ![creating_tags_andnamespaces](assets/creating_tags_andnamespacesa.png)
 
@@ -84,7 +84,7 @@ AEM中的部分標籤功能包括：
   *（必要）* 名稱空間的顯示標題。
 
 * **名稱**
-  *（選擇性）* 名稱空間的名稱。 如果未指定，則從標題建立有效的節點名稱。請參閱 [TagID](/help/sites-developing/framework.md#tagid)。
+  *（選擇性）* 名稱空間的名稱。 如果未指定，則會從標題建立有效的節點名稱。 請參閱 [TagID](/help/sites-developing/framework.md#tagid)。
 
 * **說明**
   *（選擇性）* 名稱空間的說明。
@@ -157,7 +157,7 @@ AEM中的部分標籤功能包括：
 *（必要） *標籤的顯示標題。
 
 * **名稱**
-*（選用） *標籤的名稱。 如果未指定，則從標題建立有效的節點名稱。請參閱 [TagID](/help/sites-developing/framework.md#tagid)。
+*（選用） *標籤的名稱。 如果未指定，則會從標題建立有效的節點名稱。 請參閱 [TagID](/help/sites-developing/framework.md#tagid)。
 
 * **說明**
 *（選用） *標籤的說明。
@@ -221,7 +221,7 @@ AEM中的部分標籤功能包括：
 >
 >合併後， **路徑** 原本選取的將（實際上）不再存在。
 >
->移動或合併參照的標記時，不會將該標記真的刪除，因此有可能維持參照。
+>移動或合併參照的標籤時，並不會實際刪除標籤，因此可以保留參照。
 
 ### 發佈標記 {#publishing-tags}
 
@@ -276,7 +276,7 @@ AEM中的部分標籤功能包括：
 
 ## 管理不同語言的標記 {#managing-tags-in-different-languages}
 
-可將標記的 `title` 屬性翻譯成多種語言。翻譯之後，適當的標籤 `title`可能會根據使用者語言或頁面語言而顯示。
+此 `title`標籤的屬性可翻譯成多種語言。 翻譯之後，適當的標籤 `title`可能會根據使用者語言或頁面語言而顯示。
 
 ### 定義多種語言的標籤標題 {#defining-tag-titles-in-multiple-languages}
 

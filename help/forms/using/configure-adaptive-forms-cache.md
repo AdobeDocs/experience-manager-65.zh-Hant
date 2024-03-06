@@ -7,9 +7,9 @@ topic-tags: Configuration
 docset: aem65
 role: Admin
 exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '857'
 ht-degree: 1%
 
 ---
@@ -97,17 +97,17 @@ ht-degree: 1%
             /glob "*"
             /type "allow"
       }
-      ## Don't cache csrf login tokens
+      ## Do not cache csrf login tokens
       /0001 {
             /glob "/libs/granite/csrf/token.json"
             /type "deny"
       }
-      ## Don't cache IC - print channel
+      ## Do not cache IC - print channel
       /0002 {
             /glob "/content/forms/**/channels/print.html"
             /type "deny"
       }
-      ## Don't cache IC - web channel
+      ## Do not cache IC - web channel
       /0003 {
             /glob "/content/forms/**/channels/web.html"
             /type "deny"
@@ -124,7 +124,7 @@ ht-degree: 1%
       }
    ```
 
-您的AEM環境已設定為快取最適化表單。 它會快取所有型別的調適型表單。 如果您需要在傳遞快取頁面之前檢查頁面的使用者存取許可權，請參閱 [快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-Hant).
+您的AEM環境已設定為快取最適化表單。 它會快取所有型別的調適型表單。 如果您需要在傳遞快取頁面之前檢查頁面的使用者存取許可權，請參閱 [快取安全內容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
 
 ## 疑難排解 {#troubleshooting}
 

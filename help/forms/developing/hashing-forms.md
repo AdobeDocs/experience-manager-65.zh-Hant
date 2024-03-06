@@ -2,9 +2,9 @@
 title: 如何在動態PDF forms中產生及使用雜湊？
 description: 在動態PDF forms中產生及使用雜湊。
 exl-id: 026f5686-39ea-4798-9d1f-031f15941060
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ JEE Designer上的AEM Forms可讓您以JavaScript的形式，在指令碼物件�
 
 請依照下列步驟嘗試第一個範例：
 
-1. 下載並解壓縮範例檔案後，在JEE Designer上使用AEM Forms開啟hashing_forms_sample1.pdf。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional來開啟和檢視範例，但將無法看到原始程式碼。
+1. 下載並解壓縮範例檔案後，在JEE Designer上使用AEM Forms開啟hashing_forms_sample1.pdf。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional開啟和檢視範例，但無法看到原始程式碼。
 1. 在標示為的文字欄位中 [!UICONTROL 清除文字] 輸入密碼或您要雜湊的任何其他訊息。
 1. 按一下四個按鈕之一，產生MD4、MD5、SHA-1或SHA-256雜湊。 根據您按下的按鈕，系統會呼叫產生十六進位輸出的四個雜湊函式之一，並對字串或訊息進行雜湊處理。
 
@@ -89,7 +89,7 @@ JEE Designer上的AEM Forms可讓您以JavaScript的形式，在指令碼物件�
 
 請依照下列步驟，嘗試第二個範例：
 
-1. 開啟 `hashing_forms_sample2.pdf` JEE Designer上的AEM Forms。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional來開啟和檢視範例，但將無法看到原始程式碼。
+1. 開啟 `hashing_forms_sample2.pdf` JEE Designer上的AEM Forms。 或者，您可以使用Adobe Reader或Adobe Acrobat Professional開啟和檢視範例，但無法看到原始程式碼。
 1. 從兩個標示為的密碼欄位中選擇一個 [!UICONTROL 密碼手冊] 或 [!UICONTROL 密碼女人] 並輸入密碼：
    1. 此人的密碼是 `bob`
    1. 該女人的密碼為 `alice`
@@ -109,7 +109,7 @@ if (soHASHING_SHA256.hex_sha256(this.rawValue) == passwd_man_hashed.rawValue){
 
 ## 從這裡前往何處 {#next-steps}
 
-在哪裡需要這樣的內容？ 假設有一個PDF表單，其中包含只有授權人員才應填寫的欄位。 透過使用密碼保護這些欄位（在Sample_2.pdf中無法以純文字方式在檔案中看到），您可以確保只有知道密碼的使用者才能存取這些欄位。
+在哪裡需要這樣的內容？ 假設有一個PDF表單，其中包含只有授權人員才應填寫的欄位。 透過使用密碼保護這些欄位（在檔案中任何位置都無法以Sample_2.pdf中的明文顯示），您可以確保只有知道密碼的使用者才能存取這些欄位。
 
 我鼓勵您繼續探索這兩個範例PDF檔案。  您可以使用Sample_1.pdf產生新的雜湊值，並使用產生的值來變更Sample_2.pdf中使用的密碼或雜湊函式。  「歸因」區段中列出的資源也提供雜湊和本文中所使用之特定JavaScript實作的額外資訊。
 

@@ -2,10 +2,10 @@
 title: 如何透過 AEM Assets API 更新您的內容
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解如何使用 REST API 存取和更新內容片段的內容。
 exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 88%
+source-wordcount: '1029'
+ht-degree: 87%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 88%
 
 在 [AEM Headless 開發人員歷程](overview.md)的這一部分中，了解如何使用 REST API 存取和更新內容片段的內容。
 
-## 到目前為止 {#story-so-far}
+## 目前進度 {#story-so-far}
 
-在 AEM 無周邊歷程的上一個文件「[如何透過 AEM Delivery API 存取您的內容](access-your-content.md)」中，您已了解如何透過 AEM GraphQL API 存取 AEM 中的無周邊內容，現在您應該：
+在 AEM Headless 歷程的上一個文件「[如何透過 AEM Delivery API 存取您的內容](access-your-content.md)」中，您已了解如何透過 AEM GraphQL API 存取 AEM 中的 Headless 內容，現在您應該：
 
 * 對 GraphQL 有概略的了解。
 * 了解 AEM GraphQL API 運作方式。
 * 了解一些實際的範例查詢。
 
-本文章以這些基本知識為基礎，以便您了解如何透過 REST API 在 AEM 更新您的現有無周邊內容。
+本文章以這些基本知識為基礎，以便您了解如何透過 REST API 在 AEM 更新您的現有 Headless 內容。
 
 ## 目標 {#objective}
 
@@ -43,7 +43,7 @@ ht-degree: 88%
 
 Assets HTTP API可讓您 **讀取** 您的內容，但也可讓您 **建立**， **更新** 和 **刪除** 內容 — GraphQL API無法執行的動作。
 
-Adobe Experience Manager 最新版本的每個開箱即用安裝中都有提供 Assets REST API。
+Assets REST API適用於最新版Adobe Experience Manager的每次現成安裝。
 
 ## Assets HTTP API {#assets-http-api}
 
@@ -180,7 +180,7 @@ Assets can have multiple renditions. These are typically exposed as child entiti
 
 ## Assets HTTP API 和內容片段 {#assets-http-api-content-fragments}
 
-內容片段用於無周邊傳遞，內容片段是一種特殊類型的資產。它們用於存取結構化資料，例如文字、數字、日期等。
+內容片段用於 Headless 傳遞，內容片段是一種特殊類型的資產。它們用於存取結構化資料，例如文字、數字、日期等。
 
 <!--
 As there are several differences to *standard* assets (such as images or audio), some additional rules apply to handling them.
@@ -313,7 +313,7 @@ API 參考文件中定義了受支援要求的確切格式。
 * Have experience with sample code and know how the API works in practice.
 -->
 
-<!-- The "How to put it all together" page isn't going to be published until the first public release of the Headless SDK. Temporarily commenting out the reference below. -->
+<!-- The "How to put it all together" page is not going to be published until the first public release of the Headless SDK. Temporarily commenting out the reference below. -->
 
 <!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
 

@@ -1,6 +1,6 @@
 ---
 title: 使用 Quickview 建立自訂快顯視窗
-description: 預設快速檢視用於電子商務體驗，其中顯示快顯視窗並附上產品資訊，以推動購買。 您可以觸發自訂內容以顯示於快顯視窗中。
+description: 預設快速檢視用於電子商務體驗，當中會顯示快顯視窗以及產品資訊，以促使購買。 您可以觸發自訂內容以顯示於快顯視窗中。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -8,16 +8,16 @@ content-type: reference
 feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '932'
 ht-degree: 2%
 
 ---
 
 # 使用 Quickview 建立自訂快顯視窗 {#using-quickviews-to-create-custom-pop-ups}
 
-預設快速檢視用於電子商務體驗，其中顯示快顯視窗並附上產品資訊，以推動購買。 不過，您可以觸發自訂內容以顯示於快顯視窗中。 此功能可讓使用者根據檢視器選取熱點、縮圖影像或影像地圖，以檢視資訊或相關內容。
+預設快速檢視用於電子商務體驗，當中會顯示快顯視窗以及產品資訊，以促使購買。 不過，您可以觸發自訂內容以顯示於快顯視窗中。 此功能可讓使用者根據檢視器選取熱點、縮圖影像或影像地圖，以檢視資訊或相關內容。
 
 Dynamic Media中的下列檢視器支援快速檢視：
 

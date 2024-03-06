@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 6ce6a204-db59-4ed2-8383-00c6afba82b4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1775'
 ht-degree: 0%
@@ -89,7 +89,7 @@ David是Day Software AG的聯合創始人和CTO，該公司是全球內容管理
 
 我認為顯而易見的一點是，內容結構是根據範例理解的，沒有任何進一步的解釋。
 
-一開始可能會出乎意料的原因是我不會將「註解」與「貼文」一起儲存，這是由於存取控制我想以合理的分層套用所致。
+一開始可能出乎意料的是，為什麼我不願意將「註解」與「貼文」一起儲存，這是因為我想以合理的分層式方式套用存取控制。
 
 使用上述內容模型，我可以輕鬆允許「匿名」使用者「建立」評論，但工作區其餘部分仍將以唯讀方式保留匿名使用者。
 
@@ -214,7 +214,7 @@ JCR引進了工作區的抽象概念，讓許多開發人員不知道如何處�
 
 #### 範例 {#example-7}
 
-使用:
+使用：
 
 ```xml
 /content/myblog/posts/iphone_shipping/attachments/front.jpg

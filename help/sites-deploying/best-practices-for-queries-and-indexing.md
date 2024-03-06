@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '4598'
+source-wordcount: '4518'
 ht-degree: 0%
 
 ---
@@ -140,7 +140,7 @@ Lucene會註冊一個JMX Bean，以提供索引內容的詳細資訊，包括每
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
 
-在AEM 6.3中，上述兩個引數是預先設定的OOTB，可透過OSGi QueryEngineSettings持續存在。
+在AEM 6.3中，上述兩個引數是現成可預先設定的，並可透過OSGi QueryEngineSettings持續存在。
 
 下的詳細資訊： [https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
 
@@ -248,7 +248,7 @@ Lucene索引的Oak檔案列出在設計索引時要考慮的幾個事項：
    * 所有Oak版本
    * 僅限 [屬性索引](https://jackrabbit.apache.org/oak/docs/query/property-index.html)
 
-* 症狀:
+* 症狀：
 
    * 結果中遺漏屬性索引的定義更新之前的節點
 
@@ -273,7 +273,7 @@ Lucene索引的Oak檔案列出在設計索引時要考慮的幾個事項：
    * 所有Oak版本
    * 僅限 [lucene索引](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
 
-* 症狀:
+* 症狀：
 
    * Lucene索引不包含預期的結果
    * 查詢結果未反映索引定義的預期行為
@@ -317,7 +317,7 @@ Lucene索引的Oak檔案列出在設計索引時要考慮的幾個事項：
    * 所有Oak版本
    * 僅限 [lucene索引](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
 
-* 症狀:
+* 症狀：
 
    * Lucene索引不包含預期的結果
 
@@ -348,7 +348,7 @@ Lucene索引的Oak檔案列出在設計索引時要考慮的幾個事項：
    * 所有Oak版本
    * 僅限 [lucene索引](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
 
-* 症狀:
+* 症狀：
 
    * Lucene索引不包含預期的結果
 
@@ -453,7 +453,7 @@ Lucene索引的Oak檔案列出在設計索引時要考慮的幾個事項：
 
 *在維護期間/低使用期間執行步驟1(a-b)，因為在此作業期間會周遊節點存放區，這可能會導致系統產生大量負載。*
 
-1a. 執行 `oak-run.jar --generate` 建立節點清單，預先擷取其文字。
+1a。 執行 `oak-run.jar --generate` 建立節點清單，預先擷取其文字。
 
 1b. 節點清單(1a)會以CSV檔案形式儲存至檔案系統
 
@@ -463,7 +463,7 @@ Lucene索引的Oak檔案列出在設計索引時要考慮的幾個事項：
 
 *在AEM的正常操作期間，可以執行步驟2(a-c)，因為它只會與資料存放區互動。*
 
-2a. 執行 `oak-run.jar --tika` 為(1b)中產生的CSV檔案中所列舉的二進位節點預先擷取文字
+2a。 執行 `oak-run.jar --tika` 為(1b)中產生的CSV檔案中所列舉的二進位節點預先擷取文字
 
 2b. 在(2a)中起始的程式會直接存取資料存放區中CSV定義的二進位節點，並擷取文字。
 
@@ -477,6 +477,6 @@ Lucene索引的Oak檔案列出在設計索引時要考慮的幾個事項：
 
 *在維護/低使用期間執行重新索引（步驟3a-b），在此操作期間遍歷節點存放區，這可能會導致系統承受大量負載。*
 
-3a. [重新索引](#how-to-re-index) AEM的Lucene索引。
+3a。 [重新索引](#how-to-re-index) AEM的Lucene索引。
 
 3b. Apache Jackrabbit Oak DataStore PreExtractedTextProvider OSGi設定（設定為透過檔案系統路徑指向擷取的文字）會指示Oak從擷取的檔案取得全文文字，並避免直接點選及處理儲存於存放庫中的資料。

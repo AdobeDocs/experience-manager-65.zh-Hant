@@ -7,9 +7,9 @@ topic-tags: Security
 content-type: reference
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1737'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 在AEM中取得管理工作階段或資源解析程式的主要方式是使用 `SlingRepository.loginAdministrative()` 和 `ResourceResolverFactory.getAdministrativeResourceResolver()` Sling提供的方法。
 
-然而，這兩種方法都不是圍繞 [最低許可權原則](https://en.wikipedia.org/wiki/Principle_of_least_privilege) 並且讓開發人員很容易不為內容規劃適當的結構和對應的存取控制層級(ACL)。 如果此類服務中存在漏洞，則通常會導致許可權提升至 `admin` 使用者，即使程式碼本身不需要管理許可權即可運作。
+然而，這兩種方法都不是圍繞 [最低許可權原則](https://en.wikipedia.org/wiki/Principle_of_least_privilege). 如此一來，開發人員就很容易無法及早針對內容規劃適當的結構和對應的存取控制層級(ACL)。 如果此類服務中存在漏洞，則通常會導致許可權提升至 `admin` 使用者，即使程式碼本身不需要管理許可權即可運作。
 
 ## 如何逐步淘汰管理員工作階段 {#how-to-phase-out-admin-sessions}
 
 ### 優先順序0：功能是否啟用/需要/已棄用？ {#priority-is-the-feature-active-needed-derelict}
 
-某些情況下可能未使用管理員工作階段，或功能完全停用。 如果您的實作是這種情況，請務必完全移除功能或適合它 [NOP代碼](https://en.wikipedia.org/wiki/NOP).
+某些情況下可能未使用管理員工作階段，或功能完全停用。 若是如此，請在實施時確認您已完全移除該功能，或符合 [NOP代碼](https://en.wikipedia.org/wiki/NOP).
 
 ### 優先順序1：使用請求工作階段 {#priority-use-the-request-session}
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 ## 服務使用者與對應 {#service-users-and-mappings}
 
-如果上述操作失敗，Sling 7提供服務使用者對應服務，可設定套件組合對使用者對應和兩個對應的API方法：
+如果上述操作失敗，Sling 7提供服務使用者對應服務，可讓您設定套件組合對使用者對應和兩個對應的API方法：
 
 * [`SlingRepository.loginService()`](https://sling.apache.org/apidocs/sling7/org/apache/sling/jcr/api/SlingRepository.html#loginService-java.lang.String-java.lang.String-)
 * [`ResourceResolverFactory.getServiceResourceResolver()`](https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolverFactory.html#getServiceResourceResolver-java.util.Map-)
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 ## 建立服務使用者 {#creating-a-new-service-user}
 
-在您確認AEM服務使用者清單中的任何使用者均不適用於您的使用案例，且對應的RTC問題已核准後，您可以繼續並將新使用者新增至預設內容。
+在您確認AEM服務使用者清單中的任何使用者都不適用於您的使用案例，且對應的RTC問題已核准之後，請將新使用者新增至預設內容。
 
 建議的方法是建立服務使用者，以在處使用存放庫總管 *https://&lt;server>：&lt;port>/crx/explorer/index.jsp*
 
@@ -190,13 +190,13 @@ ht-degree: 0%
 
    * 前往位於Web主控台 *https://serverhost:serveraddress/system/console/configMgr*
    * 搜尋 **Apache Sling Service使用者對應程式服務修正**
-   * 按一下連結，檢視是否已設定正確的設定。
+   * 按一下連結，您就能檢視是否有正確的設定。
 
 ## 在服務中處理共用工作階段 {#dealing-with-shared-sessions-in-services}
 
 呼叫目標 `loginAdministrative()` 經常與共用工作階段一起出現。 這些工作階段會在服務啟動時取得，並只會在服務停止後登出。 雖然這是常見做法，但會導致兩個問題：
 
-* **安全性：** 此類管理工作階段用於快取及傳回繫結至共用工作階段的資源或其他物件。 稍後在呼叫棧疊中，這些物件可以適應具有更高許可權的工作階段或資源解析器，並且呼叫者通常不清楚這是他們正在操作的管理員工作階段。
+* **安全性：** 此類管理工作階段用於快取及傳回繫結至共用工作階段的資源或其他物件。 稍後在呼叫棧疊中，這些物件可以適應具有更高許可權的工作階段或資源解析器。 呼叫者通常無法得知這是他們運作的管理員工作階段。
 * **效能：** 在Oak中，共用工作階段可能會導致效能問題，建議您不要使用。
 
 針對安全性風險，最顯而易見的解決方案是直接取代 `loginAdministrative()` 使用呼叫 `loginService()` 一對一給具有受限制許可權的使用者。 但是，這不會對任何潛在的效能降級造成任何影響。 降低這種問題的可能方式是，將所有要求的資訊包裝在與工作階段無關聯的物件中。 然後，隨選建立（或銷毀）工作階段。

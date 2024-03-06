@@ -2,9 +2,9 @@
 title: 如何在JEE伺服器叢集上設定AEM Forms並進行疑難排解
 description: 瞭解如何在JEE伺服器叢集上設定Adobe Experience Manager (AEM) Forms並進行疑難排解。
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3959'
+source-wordcount: '3945'
 ht-degree: 0%
 
 ---
@@ -219,7 +219,7 @@ Caused by: com.ibm.ejs.container.UnknownLocalException: nested exception is: com
 
 若要在JEE叢集上成功使用AEM Forms，應用程式伺服器必須設定並正確作為叢集運作。 在WebSphere®和WebLogic中，這是一個簡單明瞭的流程。 在JBoss®中，叢集設定比較容易操作，而確保節點被設定為充當叢集，並且確實會彼此尋找和通訊，可能比較困難。 JBoss®在內部依賴JGroups，後者使用UDP多點傳送來尋找及協調對等節點。 GemFire所提及的某些問題可能會發生，例如節點在應該找到彼此時無法找到，或在不應該找到彼此時無法找到。
 
-參考:
+引用：
 
 * [透過JBoss®叢集提供高可用性企業服務](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
 
@@ -273,7 +273,7 @@ and ones like:
 
 ```xml
 [1/20/11 10:40:57:584 EST] 00000035 ErrorLogger   E org.quartz.core.ErrorLogger schedulerError An error occured while marking executed job complete. job= 'Asynchronous.TaskFormDataSaved:12955380518320.5650479324757354'
- org.quartz.JobPersistenceException: Couldn't remove trigger: ORA-00060: deadlock detected while waiting for resource  [See nested exception: java.sql.SQLException: ORA-00060: deadlock detected while waiting for resource ]
+ org.quartz.JobPersistenceException: Could not remove trigger: ORA-00060: deadlock detected while waiting for resource  [See nested exception: java.sql.SQLException: ORA-00060: deadlock detected while waiting for resource ]
         at org.quartz.impl.jdbcjobstore.JobStoreSupport.removeTrigger(JobStoreSupport.java:1405)
         at org.quartz.impl.jdbcjobstore.JobStoreSupport.triggeredJobComplete(JobStoreSupport.java:2888)
         at org.quartz.impl.jdbcjobstore.JobStoreSupport$38.execute(JobStoreSupport.java:2872)

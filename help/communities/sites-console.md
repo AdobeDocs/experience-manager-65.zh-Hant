@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 426e3adf-3723-4d17-a988-6eb050939e68
-source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3089'
-ht-degree: 3%
+source-wordcount: '3084'
+ht-degree: 0%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 3%
 
 若要存取現有的社群網站以編寫、修改、發佈、匯出或新增巢狀群組，請選取網站的資料夾圖示。
 
-## 建立網站 {#site-creation}
+## 網站建立 {#site-creation}
 
 場地建立控制檯提供根據所選物件來組裝場地特徵的逐步方法 [社群網站範本](/help/communities/sites.md) 和設定。
 
@@ -97,7 +97,7 @@ ht-degree: 3%
 
   （單一語言則保持原樣：英文）使用下拉式功能表選擇一個語言 *或更多* 可用語言的基礎語言 — 德文、義大利文、法文、日文、西班牙文、葡萄牙文（巴西）、繁體中文，以及簡體中文。 會針對新增的每種語言建立一個社群網站，並遵循中所述的最佳實務存在於相同的網站資料夾中 [翻譯多語言網站的內容](/help/sites-administering/translation.md). 每個網站的根頁面都包含一個子頁面，該子頁面是以其中一個選取語言的語言代碼來命名，例如「en」代表英文，「fr」代表法文。
 
-* **社群網站名稱**:
+* **社群網站名稱**：
 
   顯示在URL中的網站根頁面名稱。
 
@@ -112,7 +112,7 @@ ht-degree: 3%
 
   使用下拉式功能表選擇可用的 [社群網站範本](/help/communities/tools.md).
 
-* 選取 **下一個**.
+* 選取&#x200B;**「下一步」**。
 
 ### 步驟2 ：設計 {#step-design}
 
@@ -145,7 +145,7 @@ ht-degree: 3%
    * 小於瀏覽器的寬度，影像會水準重複。
    * 大於瀏覽器的寬度，影像看起來會遭到裁切。
 
-* 選取 **下一個**.
+* 選取&#x200B;**「下一步」**。
 
 ### 步驟3：設定 {#step-settings}
 
@@ -192,13 +192,13 @@ ht-degree: 3%
 如果未勾選，則不會為社群設定訊息。
 預設為未勾選。
 
-* **允許社交登入: Facebook**
+* **允許社交登入：Facebook**
 
   如果勾選，可允許網站訪客使用其Facebook帳戶憑證登入。 選取的 [facebook雲端設定](/help/communities/social-login.md#create-a-facebook-connect-cloud-service) 建立社群網站後，應將使用者設定為新增社群網站的成員群組。
 如果未勾選，則不會顯示任何Facebook登入。
 保留為未勾選的 *私人* 社群網站。 預設為未勾選。
 
-* **允許社交登入: Twitter**
+* **允許社交登入：Twitter**
 
   如果勾選，可允許網站訪客使用其Twitter帳戶憑證登入。 選取的 [twitter雲端設定](/help/communities/social-login.md#create-a-twitter-connect-cloud-service) 建立社群網站後，應將使用者設定為新增社群網站的成員群組。
 如果未勾選，則不會顯示Twitter登入。
@@ -236,7 +236,7 @@ ht-degree: 3%
 
   開始輸入以選取一或多個要信任為使用者產生內容之版主的社群成員或成員群組。
 
-* **社群有特殊權限的成員**
+* **社群有特殊許可權的成員**
 
   開始輸入以選取一個或多個社群成員或成員群組，以便在下列情況下建立內容 `Allow Privileged Member` 已為 [社群功能](/help/communities/functions.md).
 
@@ -250,7 +250,7 @@ ht-degree: 3%
 
 用於仲裁使用者產生內容(UGC)的全域設定是由這些設定所控制。 個別元件有其他設定可控制調節。
 
-* **內容已預先審核**
+* **內容已預先稽核**
 
   如果勾選，張貼的社群內容在版主核准前不會顯示。 預設為未勾選。 如需詳細資訊，請參閱 [仲裁社群內容](/help/communities/moderate-ugc.md#premoderation).
 
@@ -262,14 +262,14 @@ ht-degree: 3%
 
 ![site-analytics](assets/site-analytics.png)
 
-* **啟動 Analytics**
+* **啟用Analytics**
 
   僅當Adobe Analytics已 [已設定](/help/communities/analytics.md) 社群功能專用。
 預設為未勾選。 勾選後，會出現另一個選取功能表：
 
 ![site-analytics-enable](assets/site-analytics-enable.png)
 
-* **雲端設定框架引用**
+* **雲端設定框架參考**
 
   從下拉式功能表中，選取為此社群網站設定的Analytics Cloud服務架構。
   `Communities` 是來自的架構範例 [社群功能的Analytics設定](/help/communities/analytics.md#aem-analytics-framework-configuration) 檔案。
@@ -308,12 +308,12 @@ ht-degree: 3%
 
      預設為 *未選取*.
 
-   * **只翻譯選取項目**
+   * **僅翻譯選取專案**
 
      如果選取，每個貼文旁都會顯示翻譯選項，可將個別貼文翻譯成頁面的基本語言。
 預設為 *已選取*.
 
-* **選取保留選項**
+* **選取持續性選項**
 
    * **翻譯使用者要求上的貢獻並於之後繼續保留**
 如果選取，內容在提出請求之前不會翻譯。 翻譯後，翻譯會儲存在存放庫中。
@@ -532,7 +532,7 @@ UGC未包含在網站套件中。
   例如：
   `/content/sites/engage/en/signin:/content/sites/engage/en`
 
-* 選取&#x200B;**儲存**。
+* 選取「**儲存**」。
 
 ![auth-error](assets/auth-error.png)
 

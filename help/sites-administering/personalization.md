@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 2%
@@ -44,7 +44,7 @@ ht-degree: 2%
 
 #### 明確 {#explicit}
 
-* 自訂：使用者可透過該自訂從多種內容來源中進行選擇。
+* 自訂：使用者從所選的內容來源中進行選擇。
 
 #### 隱含 {#implicit}
 

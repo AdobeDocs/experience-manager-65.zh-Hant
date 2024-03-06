@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: abd3fbb5abb339d5b019fd2d7cf325404fb079e8
 workflow-type: tm+mt
-source-wordcount: '2717'
-ht-degree: 9%
+source-wordcount: '2665'
+ht-degree: 7%
 
 ---
 
@@ -131,10 +131,10 @@ Exif定義的中繼資料欄位通常屬於技術性質，在描述性中繼資�
 
 ### Digital Rights Management(DRM)中繼資料 {#digital-rights-management-metadata}
 
-* CC - [!DNL Creative Commons].
+* 副本 —  [!DNL Creative Commons].
 * [!DNL XMPRights]。
 * 加 —  [圖片授權通用系統](https://www.useplus.com).
-* 稜鏡 —  [發佈產業標準中繼資料的需求](https://www.idealliance.org/prism-metadata).
+* 稜鏡 —  [發佈產業標準中繼資料的需求](https://www.w3.org/submissions/2020/SUBM-prism-20200910/Image_Guide.pdf).
 * PRL — 稜鏡許可權語言。
 * PUR - PRISM使用許可權。
 * `xmpPlus` - PLUS與XMP整合。
@@ -149,7 +149,7 @@ Exif定義的中繼資料欄位通常屬於技術性質，在描述性中繼資�
 ### 列印特定中繼資料 {#print-specific-metadata}
 
 * PDF與PDF/X - Adobe PDF和協力廠商應用程式。
-* 稜鏡 —  [發佈產業標準中繼資料的需求](https://www.idealliance.org/prism-metadata).
+* 稜鏡 —  [發佈產業標準中繼資料的需求](https://www.w3.org/submissions/2020/SUBM-prism-20200910/Image_Guide.pdf).
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG`  — 分頁文字的XMP中繼資料。
 
@@ -183,7 +183,7 @@ Dublin核心中繼資料提供一組標準化的慣例，用於說明資產，�
 | 發佈者 | 負責提供資產的使用者或公司。 |
 | 關係 | 相關資產。 |
 | 權利 | 關於誰擁有此資產之許可權的資訊。 |
-| source | 衍生資產的相關資產。 |
+| 來源 | 衍生資產的相關資產。 |
 | 主體 | 資產的主題。 |
 | 標題 | 資產的名稱。 |
 | 類型 | 資產的性質或型別。 |

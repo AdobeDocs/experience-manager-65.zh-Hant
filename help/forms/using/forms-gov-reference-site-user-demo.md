@@ -4,9 +4,9 @@ description: 使用虛構的使用者和群組，透過We.Gov和We.Finance示範
 contentOwner: anujkapo
 docset: aem65
 exl-id: 288d5459-bc69-4328-b6c9-4b4960bf4977
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2475'
+source-wordcount: '2478'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 * AEM Forms
 
    * 自動表單轉換
-   * 編寫
+   * 製作
    * 表單資料模型/資料來源
 
 * AEM Forms
@@ -506,7 +506,7 @@ George會核准Aya的申請，並且由於現有的自動化工作流程，也�
 
 ### Adobe Analytics Forms報告(Camila) {#camila-reviews-forms-reporting-we-gov-adobe-analytics}
 
-1. 瀏覽到
+1. 瀏覽至
 
    *https://&lt;aemserver>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 

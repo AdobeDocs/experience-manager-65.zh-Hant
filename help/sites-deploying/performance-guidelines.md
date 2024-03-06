@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2935'
+source-wordcount: '2939'
 ht-degree: 5%
 
 ---
@@ -452,7 +452,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
   <tr>
    <td>JVM引數</td>
    <td><p><code>Doak.queryLimitInMemory</code></p> <p><code>Doak.queryLimitReads</code></p> <p><code>Dupdate.limit</code></p> <p><code>Doak.fastQuerySize</code></p> </td>
-   <td><p>500000</p> <p>100000</p> <p>250000</p> <p>True</p> </td>
+   <td><p>500000</p> <p>100000</p> <p>250000</p> <p>真</p> </td>
    <td>若要防止擴充查詢讓系統過載，請在AEM啟動指令碼中新增這些JVM引數。</td>
   </tr>
   <tr>
@@ -470,13 +470,13 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
   <tr>
    <td>DAM更新資產工作流程</td>
    <td><code>Transient Workflow</code></td>
-   <td>已勾選</td>
+   <td>已核取</td>
    <td>此工作流程管理資產的更新。</td>
   </tr>
   <tr>
    <td>DAM中繼資料回寫</td>
    <td><code>Transient Workflow</code></td>
-   <td>已勾選</td>
+   <td>已核取</td>
    <td>此工作流程會管理XMP對原始二進位的回寫，並設定JCR中的上次修改日期。</td>
   </tr>
  </tbody>
@@ -562,7 +562,7 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
   <tr>
    <td>JVM引數</td>
    <td><p><code>Doak.queryLimitInMemory</code></p> <p><code>Doak.queryLimitReads</code></p> <p><code>Dupdate.limit</code></p> <p><code>Doak.fastQuerySize</code></p> <p><code>Doak.mongo.maxQueryTimeMS</code></p> </td>
-   <td><p>500000</p> <p>100000</p> <p>250000</p> <p>True</p> <p>60000</p> </td>
+   <td><p>500000</p> <p>100000</p> <p>250000</p> <p>真</p> <p>60000</p> </td>
    <td>若要防止擴充查詢讓系統過載，請在AEM啟動指令碼中新增這些JVM引數。</td>
   </tr>
   <tr>
@@ -605,11 +605,11 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
 | CPU /核心 | Intel(R) Xeon(R) CPU E5-2407 @2.40GHz，8核心 | Intel(R) Xeon(R) CPU E5-2407 @2.40GHz，8核心 |
 | RAM | 32 GB | 32 GB |
 | 磁碟 | 磁性 — >1k IOPS | 磁性 — >1k IOPS |
-| Java™ | oracleJRE版本8 | N/A |
-| JVM棧積 | 16 GB | N/A |
+| Java™ | oracleJRE版本8 | 不適用 |
+| JVM棧積 | 16 GB | 不適用 |
 | 產品 | AEM 6.2 | MongoDB 3.2 WiredTiger |
-| 節點存放區 | MongoMk | N/A |
-| 資料存放區 | 檔案DS | N/A |
+| 節點存放區 | MongoMk | 不適用 |
+| 資料存放區 | 檔案DS | 不適用 |
 | 情境 | 單一產品：資產/ 30個同時執行緒 | 單一產品：資產/ 30個同時執行緒 |
 
 ### 效能標竿結果 {#performance-benchmark-results-1}
@@ -695,13 +695,13 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
   <tr>
    <td>Java™</td>
    <td>oracleJRE版本8</td>
-   <td>N/A</td>
+   <td>不適用</td>
    <td> </td>
   </tr>
   <tr>
    <td>JVM棧積16GB</td>
    <td>16 GB</td>
-   <td>N/A</td>
+   <td>不適用</td>
    <td> </td>
   </tr>
   <tr>
@@ -713,13 +713,13 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
   <tr>
    <td>節點存放區</td>
    <td>tarmk或MongoMK</td>
-   <td>N/A</td>
+   <td>不適用</td>
    <td> </td>
   </tr>
   <tr>
    <td>資料存放區</td>
    <td>檔案DS </td>
-   <td>N/A</td>
+   <td>不適用</td>
    <td> </td>
   </tr>
   <tr>
@@ -783,13 +783,13 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
    <td>Java™</td>
    <td>oracleJRE版本8</td>
    <td><br /> oracleJRE版本8</td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
   <tr>
    <td>JVM棧積16GB</td>
    <td>30 GB</td>
    <td>30 GB</td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
   <tr>
    <td>產品 </td>
@@ -801,13 +801,13 @@ Adobe建議將TarMK設為客戶在所有部署案例中使用的預設持續性�
    <td>節點存放區</td>
    <td>tarmk </td>
    <td>MongoMk</td>
-   <td><br /> N/A</td>
+   <td><br /> 不適用</td>
   </tr>
   <tr>
    <td>資料存放區</td>
    <td>檔案DS </td>
    <td><br /> 檔案DS</td>
-   <td><br /> N/A</td>
+   <td><br /> 不適用</td>
   </tr>
   <tr>
    <td>情境</td>

@@ -7,9 +7,9 @@ topic-tags: customization
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1246'
 ht-degree: 0%
 
 ---
@@ -82,19 +82,19 @@ Forms入口網站可讓您在表單清單中使用自訂中繼資料。 為資�
 
 任何Forms Portal元件的自訂範本包含可重複及不可重複的專案。 可重複專案是基本列示實體。 可重複專案的範例為「搜尋與清單製作者」、「草稿與提交」以及「連結」元件。
 
-Forms Portal提供預留位置語法，可顯示自訂/OOTB中繼資料。 顯示表單、草稿或提交的結果之後，就會填入預留位置。
+Forms Portal提供預留位置語法，以顯示自訂/現成可用的中繼資料。 顯示表單、草稿或提交的結果之後，就會填入預留位置。
 
 若要包含可重複的專案，請設定屬性的值 **資料可重複** 至 **true**.
 
 *在所討論的範例中，自訂範本的頂端存在兩個Div元素。 第一個具有「__FP_boxes-container」CSS類別，可作為所清單單的容器元素。 第二個是「__FP_boxes」CSS類別，是基本實體的範本，在此例中為「表單」。 此&#x200B;**資料可重複**Div元素中存在的屬性具有值&#x200B;**true**.*
 
-每個預留位置都有一個專屬的OOTB中繼資料集。 若要在表單的特定位置顯示自訂中繼資料，請新增 **${metadata_prop} 屬性** 在那兒。
+每個預留位置都有一個專屬的現成可用中繼資料集。 若要在表單的特定位置顯示自訂中繼資料，請新增 **${metadata_prop} 屬性** 在那兒。
 
 *在此範例中，中繼資料屬性用於多個例項。 例如，它被用於&#x200B;**說明**，**名稱**，**formUrl**，**htmlStyle**，**pdfUrl**，**pdf樣式**、和&#x200B;**路徑**以規定的方式進行。*
 
 ## 現成可用的中繼資料 {#out-of-the-box-metadata}
 
-各種Forms Portal元件提供專屬OOTB中繼資料集，供您用於清單。
+各種Forms Portal元件提供專屬的開箱即用中繼資料集，供您用於清單。
 
 ### 搜尋與清單元件 {#search-amp-lister-component}
 

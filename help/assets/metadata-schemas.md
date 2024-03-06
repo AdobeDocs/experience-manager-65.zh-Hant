@@ -7,7 +7,7 @@ role: User,Admin
 feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 hide: true
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '3595'
 ht-degree: 8%
@@ -239,7 +239,7 @@ ht-degree: 8%
 
    >[!NOTE]
    >
-   >具有手動預先定義值的下拉式清單可與規則搭配使用。 包含已設定JSON路徑的下拉式功能表，無法搭配使用預先定義值來套用條件的規則使用。 如果值是在執行階段從JSON載入，則無法套用預先定義的規則。
+   >具有手動預先定義值的下拉式清單可與規則搭配使用。 已設定JSON路徑的下拉式功能表，無法搭配使用預先定義值來套用條件的規則使用。 如果值是在執行階段從JSON載入，則無法套用預先定義的規則。
 
 1. 在「可 **[!UICONTROL 見性]**」下，選擇「可 **[!UICONTROL 見」，根據新規則選項]** 。
 

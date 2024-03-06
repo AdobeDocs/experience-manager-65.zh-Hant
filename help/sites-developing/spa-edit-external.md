@@ -2,10 +2,10 @@
 title: 在Adobe Experience Manager中編輯外部SPA
 description: 本檔案說明將獨立SPA上傳到Adobe Experience Manager執行個體、新增內容的可編輯區段及啟用編寫的建議步驟。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2432'
-ht-degree: 1%
+source-wordcount: '2391'
+ht-degree: 0%
 
 ---
 
@@ -368,7 +368,7 @@ RemotePage元件預期實作會提供如下的資產資訊清單 [可在此處�
 
 * [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [wknd SPA專案](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html)
-* [開始在 AEM 中使用 React 建立 SPA](spa-getting-started-react.md)
+* [使用React在AEM中開始使用SPA](spa-getting-started-react.md)
 * [SPA參考資料（API參考）](spa-reference-materials.md)
 * [SPA Blueprint和PageModelManager](spa-blueprint.md#pagemodelmanager)
 * [SPA模型路由](spa-routing.md)

@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
@@ -210,7 +210,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 ## 偵測範圍 {#scope}
 
-目前的模式偵測器允許檢查：
+目前的模式偵測器可讓您檢查下列專案：
 
 * OSGi套件組合匯出和匯入不相符
 * Sling資源型別和超級型別（具有搜尋路徑內容覆蓋圖）使用量

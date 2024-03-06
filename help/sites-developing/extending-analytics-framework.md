@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1609'
 ht-degree: 0%
@@ -59,7 +59,7 @@ s.doPlugins=s_doPlugins;
 
 ## 設定Adobe Analytics屬性 {#configuring-adobe-analytics-properties}
 
-Adobe Analytics中有數個預先定義的變數，可在架構上設定。 此 **charset**， **cookieLifetime**， **currencyCode** 和 **trackInlineStats** 變數包含在 **一般Analytics設定** 依預設為清單。
+Adobe Analytics中有數個預先定義的變數，可在架構上設定。 此 **charset**， **cookieLifetime**， **currencyCode**、和 **trackInlineStats** 變數包含在 **一般Analytics設定** 依預設為清單。
 
 ![aa-22](assets/aa-22.png)
 
@@ -105,7 +105,7 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 >[!CAUTION]
 >
->此清單中的部分變數為 **強制** 讓Adobe Analytics呼叫正常運作(例如， **currencyCode**， **charSet**)
+>此清單中的部分變數為 **強制** 讓Adobe Analytics呼叫正確運作(例如， **currencyCode**， **charSet**)。
 >
 >因此，即使將它們從框架本身移除，當進行Adobe Analytics呼叫時，它們仍會附加預設值。
 

@@ -5,9 +5,9 @@ topic-tags: introduction
 docset: aem65
 feature: Adaptive Forms
 exl-id: 77a05f83-ac9a-4221-85ac-439e82623a28
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '913'
 ht-degree: 6%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 6%
 
 ## 簡介 {#introduction}
 
-您是否正在尋找適合行動裝置的產品 **表單體驗** 簡化註冊程式、增加參與度並縮短週轉時間， **調適型表單** 最適合您。 調適型表單提供適合行動、自動化和分析的表單體驗。 您可以輕鬆建立具有回應式互動性質的表單、使用自動化流程來減少管理和重複工作，並使用資料分析來改善客戶對表單的體驗並加以個人化。
+您是否正在尋找適合行動裝置的產品 **表單體驗** 可簡化註冊、增加參與度及縮短週轉時間， **調適型表單** 最適合您。 調適型表單提供適合行動、自動化和分析的表單體驗。 您可以輕鬆建立具有回應式互動性質的表單、使用自動化流程來減少管理和重複工作，並使用資料分析來改善客戶對表單的體驗並加以個人化。
 
-本教學課程提供建立最適化表單的端對端架構。 本教學課程可組織為一個使用案例和多個指南。 每份指南都可協助您學習，並將新功能新增至本教學課程中建立的最適化表單。 每本指南後，您都有運作中的最適化表單。 建立最適化表單的指南已推出。 後續的指南即將推出。 在本教學課程結束時，您將能夠：
+本教學課程提供建立最適化表單的端對端架構。 本教學課程可組織為一個使用案例和多個指南。 每份指南都可協助您學習，並將新功能新增至本教學課程中建立的最適化表單。 每本指南後，您都有運作中的最適化表單。 建立最適化表單的指南已推出。 後續指南即將推出。 在本教學課程結束時，您應該能夠進行下列操作：
 
 * 建立最適化表單和表單資料模型。
 * 設定最適化表單的樣式。
@@ -43,11 +43,11 @@ ht-degree: 6%
 
 ### 必備條件 {#prerequisite}
 
-* 設定 [AEM作者執行個體](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#author-and-publish-installs)
+* 設定 [AEM作者執行個體](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/deploy.html#author-and-publish-installs)
 * 安裝 [AEM Forms附加元件](../../forms/using/installing-configuring-aem-forms-osgi.md) 在作者執行個體上。
 * 從資料庫提供者取得JDBC資料庫驅動程式（JAR檔案）。 教學課程中的範例是根據 [!DNL MySQL] 資料庫與使用 [!DNL Oracle's] [Mysql JDBC資料庫驅動程式](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
-* 設定包含客戶資料的資料庫，其欄位顯示如下。 建立最適化表單不需要資料庫。 本教學課程使用資料庫來顯示AEM的表單資料模型和持續性功能 [!DNL Forms].
+* 使用下列顯示的欄位，設定包含客戶資料的資料庫。 建立最適化表單不需要資料庫。 本教學課程使用資料庫來顯示AEM的表單資料模型和持續性功能 [!DNL Forms].
 
 ![adaptiveformdata](assets/adaptiveformdata.png)
 
@@ -59,10 +59,10 @@ ht-degree: 6%
 
 目標：
 
-* 建立最適化表單，允許客戶新增送貨地址
-* 用於顯示和接受客戶資訊的最適化表單版面欄位
-* 建立提交動作以傳送包含表單內容的電子郵件
-* 預覽並提交最適化表單
+* 建立最適化表單，允許客戶新增送貨地址。
+* 最適化表單的版面配置欄位，用於顯示和接受來自客戶的資訊。
+* 建立提交動作，以傳送包含表單內容的電子郵件。
+* 預覽並提交最適化表單。
 
 [![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-adaptive-form.md)
 
@@ -70,15 +70,15 @@ ht-degree: 6%
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
-表單資料模型允許將最適化表單連線到不同的資料來源。 例如，AEM使用者設定檔、RESTful Web服務、以SOAP為基礎的Web服務、OData服務和關聯式資料庫。 表單資料模型是連線資料來源中可用的企業實體和服務的統一資料表示架構。 您可以搭配最適化表單使用表單資料模型，以擷取、更新、刪除資料，並將其新增至連線的資料來源。
+表單資料模型可讓您連線最適化表單至不同的資料來源。 例如，AEM使用者設定檔、RESTful Web服務、以SOAP為基礎的Web服務、OData服務和關聯式資料庫。 表單資料模型是連線資料來源中可用的企業實體和服務的統一資料表示架構。 您可以搭配最適化表單使用表單資料模型，以擷取、更新、刪除資料，並將其新增至連線的資料來源。
 
 目標：
 
-* 設定網站的資料庫執行個體([!DNL MySQL] 資料庫)作為資料來源
-* 建立表單資料模型，使用 [!DNL MySQL] 資料庫做為資料來源
-* 將資料模型物件新增至表單資料模型
-* 設定表單資料模型的讀寫服務
-* 測試表單資料模型和已設定的服務（包含測試資料）
+* 設定網站的資料庫執行個體([!DNL MySQL] 資料庫)作為資料來源。
+* 建立表單資料模型，使用 [!DNL MySQL] 資料庫做為資料來源。
+* 新增資料模型物件，以便您形成資料模型。
+* 設定表單資料模型的讀寫服務。
+* 測試表單資料模型和已設定服務的測試資料。
 
 [![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-form-data-model.md)
 
@@ -90,8 +90,8 @@ ht-degree: 6%
 
 目標：
 
-* 建立規則並套用至最適化表單欄位
-* 使用規則來觸發表單資料模型服務，以更新資料至資料庫
+* 建立規則並套用至最適化表單欄位。
+* 使用規則來觸發表單資料模型服務，以將資料更新至資料庫。
 
 [![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
 
@@ -103,9 +103,9 @@ ht-degree: 6%
 
 目標：
 
-* 將立即可用的主題套用至最適化表單
-* 使用主題編輯器建立最適化表單的主題
-* 在自訂主題中使用網頁字型
+* 將現成的主題套用至最適化表單。
+* 使用主題編輯器建立最適化表單的主題。
+* 在自訂主題中使用Web Fonts。
 
 [![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](style-your-adaptive-form.md)
 
@@ -117,8 +117,8 @@ ht-degree: 6%
 
 目標：
 
-* 將最適化表單發佈為AEM頁面
-* 將最適化表單內嵌到AEM中 [!DNL Sites] 頁面
-* 將最適化表單內嵌到外部網頁中(託管在AEM外部的非AEM網頁)
+* 將最適化表單發佈為AEM頁面。
+* 將最適化表單內嵌到AEM中 [!DNL Sites] 頁面。
+* 將最適化表單內嵌於外部網頁(託管在AEM外部的非AEM網頁)中。
 
 [![請參閱指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)

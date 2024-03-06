@@ -7,10 +7,10 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: aed9247c-eb81-470c-9fa4-a98c3df2dcaa
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2773'
-ht-degree: 1%
+source-wordcount: '2672'
+ht-degree: 0%
 
 ---
 
@@ -122,7 +122,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >群組可隨時新增或移除。 但現有使用者的成員資格不會受到影響。 自動成員資格僅適用於此欄位更新後建立的新使用者。 針對已停用匿名使用者的網站，選擇將使用者新增至針對該已關閉社群網站的對應社群成員群組。
+   >群組可隨時新增或移除。 但現有使用者的成員資格不受影響。 自動成員資格僅適用於此欄位更新後建立的新使用者。 針對已停用匿名使用者的網站，選擇將使用者新增至針對該已關閉社群網站的對應社群成員群組。
 
    * 選取 **[!UICONTROL 儲存]**.
    * **[!UICONTROL 發佈]**.
@@ -265,11 +265,11 @@ facebook和Twitter的後續步驟相同：
 
      (*必填*)輸入可識別Twitter應用程式的顯示標題。 使用與輸入的相同名稱 *顯示名稱* 用於Twitter應用程式。
 
-   * **[!UICONTROL 消費者金鑰]**
+   * **[!UICONTROL 使用者金鑰]**
 
      (*必填*)輸入 **消費者(API)金鑰** 用於Twitter應用程式。 這可識別 [AdobeGranite OAuth應用程式與提供者](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) 從對話方塊建立的例項。
 
-   * **[!UICONTROL 消費者機密]**
+   * **[!UICONTROL 使用者密碼]**
 
      (*必填*)輸入 ***Consumer(API)密碼*** 用於Twitter應用程式。
 
@@ -277,7 +277,7 @@ facebook和Twitter的後續步驟相同：
 
      如果勾選，使用Twitter帳戶登入將會建立AEM使用者專案，並將他們新增為所選使用者群組的成員。 預設為已核取（強烈建議）。
 
-   * **[!UICONTROL 隱藏使用者 ID]**
+   * **[!UICONTROL 隱藏使用者ID]**
 
      保持取消選取狀態。
 
@@ -287,7 +287,7 @@ facebook和Twitter的後續步驟相同：
 
    >[!NOTE]
    >
-   >群組可隨時新增或移除。 但現有使用者的成員資格不會受到影響。 自動成員資格僅適用於此欄位更新後建立的新使用者。 若是停用匿名使用者的網站，請將使用者新增至該已關閉社群網站的對應社群成員群組。
+   >群組可隨時新增或移除。 但現有使用者的成員資格不受影響。 自動成員資格僅適用於此欄位更新後建立的新使用者。 若是停用匿名使用者的網站，請將使用者新增至該已關閉社群網站的對應社群成員群組。
    >
 
 1. 選取 **[!UICONTROL 儲存]** 和 **[!UICONTROL 發佈]**.
@@ -320,7 +320,7 @@ AEM Communities設定可擴充 [AdobeGranite OAuth應用程式與提供者](#ado
 
    * **[!UICONTROL OAuth提供者服務設定]**
 
-     預設值為 `/apps/social/twitterprovider/config/`。請勿編輯。
+     預設值為 `/apps/social/twitterprovider/config/`. 請勿編輯。
 
    * **[!UICONTROL 使用者路徑]**
 
@@ -382,7 +382,7 @@ facebook和Twitter的後續步驟相同：
 例如， http://localhost:4503/system/console/configMgr
 * 尋找 `Adobe Granite OAuth Authentication Handler`.
 * 選取以開啟要編輯的設定。
-* 選取&#x200B;**[!UICONTROL 儲存]**。
+* 選取「**[!UICONTROL 儲存]**」。
 
 ![graniteoauth](assets/graniteoauth.png)
 
@@ -415,11 +415,11 @@ facebook和Twitter的後續步驟相同：
 
      (*必填*) OAuth設定ID必須是唯一的。 建立雲端服務時自動產生。
 
-   * **[!UICONTROL 用戶端識別碼]**
+   * **[!UICONTROL 使用者端ID]**
 
      (*必填*)建立雲端服務時提供的應用程式ID。
 
-   * **[!UICONTROL 用戶端密碼]**
+   * **[!UICONTROL 使用者端密碼]**
 
      (*必填*)建立雲端服務時提供的應用程式機密。
 
@@ -435,7 +435,7 @@ facebook和Twitter的後續步驟相同：
 
      (*建議*)新增已建立使用者的一或多個成員群組。 若為AEM Communities，建議列出社群網站的成員群組。
 
-   * **[!UICONTROL 回呼 URL]**
+   * **[!UICONTROL 回呼URL]**
 
      (*可選*)以OAuth提供者設定的URL，用於將使用者端重新導向。 使用相對URL以使用原始請求的主機。 留空將改用最初請求的URL。 尾碼&quot;/callback/j_security_check&quot;會自動附加至此url 。
 
@@ -491,6 +491,6 @@ facebook和Twitter的後續步驟相同：
 
 如需其他資訊和工具，請參閱 [Oak查詢和索引](../../help/sites-deploying/queries-and-indexing.md).
 
-## Dispatcher設定 {#dispatcher-configuration}
+## Dispatcher 設定 {#dispatcher-configuration}
 
 另請參閱 [為社群設定Dispatcher](dispatcher.md).

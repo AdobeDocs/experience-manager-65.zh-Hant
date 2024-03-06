@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '2099'
+source-wordcount: '2100'
 ht-degree: 2%
 
 ---
@@ -99,7 +99,7 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 元件的標籤或標題可識別表單元件代表的意義。 例如，「名字」文字會告訴使用者他們必須在文字欄位中輸入名字。 為了方便熒幕閱讀程式存取，標籤會以程式設計方式與表單元件相關聯。 或者，表單控制項會設定其他協助工具資訊。
 
-熒幕助讀程式感知到的標籤不一定與視覺註解相同。 在某些情況下，您可能會想要更明確說明控制項的用途。 對於表單中的每個欄位物件，協助工具選項可用於指定熒幕助讀程式為識別特定表單欄位所朗讀的內容。
+熒幕助讀程式感知到的標籤不需要與視覺註解相同。 在某些情況下，您可能會想要更明確說明控制項的用途。 對於表單中的每個欄位物件，協助工具選項可用於指定熒幕助讀程式為識別特定表單欄位所朗讀的內容。
 
 若要使用「協助工具」選項，請遵循下列步驟：
 

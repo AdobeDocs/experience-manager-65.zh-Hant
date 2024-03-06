@@ -1,6 +1,6 @@
 ---
 title: AEM 中的封閉使用者群組
-description: 了解封閉式使用者群組，以及這些群組為AEM的擴充性和安全性帶來的好處。
+description: 了解封閉式使用者群組，以及這些群組為AEM的擴充性和安全性帶來的優勢。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '6808'
-ht-degree: 1%
+source-wordcount: '6650'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 * 身份驗證和授權元素的明確分離，可單獨或組合使用；
 * 專屬授權模型，可反映已設定之CUG樹狀結構的受限讀取存取權，而不會干擾其他存取控制設定和許可權需求；
-* 將限制讀取存取的存取控制設定（通常在編寫執行個體上需要）與許可權評估（通常僅在發佈上需要）分開；
+* 將編寫執行個體所需的受限讀取存取權的存取控制設定，與僅發佈時所需的許可權評估分開；
 * 編輯受限制的讀取存取權而不提升許可權；
 * 專用的節點型別延伸以標示驗證需求；
 * 與驗證需求相關聯的選擇性登入路徑。
@@ -38,8 +38,8 @@ ht-degree: 1%
 
 在AEM環境中已知的CUG包含下列步驟：
 
-* 限制需要保護的樹狀結構上的讀取存取權，並只允許讀取隨指定CUG執行個體列出或完全從CUG評估中排除的主參與者。 這稱為 **authorization** 元素。
-* 強制驗證指定的樹狀結構，並選擇性地為該樹狀結構指定後續排除的專用登入頁面。 這稱為 **authentication** 元素。
+* 限制必須保護的樹狀結構上的讀取存取權，並只允許讀取在特定CUG執行個體中列出或完全從CUG評估中排除的主參與者。 這稱為 **authorization** 元素。
+* 強制驗證指定的樹狀結構，並選擇性地指定該樹狀結構的專用登入頁面，然後排除該頁面。 這稱為 **authentication** 元素。
 
 新實作的設計目的是在驗證和授權元素之間畫出一條線。 自AEM 6.3起，您可以限制讀取存取權，而不明確新增驗證需求。 例如，如果指定的執行處理完全需要驗證，或指定的樹狀結構已位於需要驗證的子樹狀結構中。
 
@@ -68,56 +68,56 @@ CUG的主要功能是限制內容存放庫中指定樹狀結構的讀取存取�
 
 這些CUG原則會透過名為oak-authorization-cug的個別授權模組部署至AEM執行個體。 此模組隨附自己的存取控制管理和許可權評估。 換言之，預設的AEM設定會提供結合了多個授權機制的Oak內容存放庫設定。 如需詳細資訊，請參閱 [Apache Oak檔案上的此頁面](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html).
 
-在此複合設定中，新的CUG不會取代附加至目標節點的現有存取控制內容，而是設計成一種補充，稍後也可以移除，而不會影響原始存取控制，預設情況下，AEM中的存取控制清單就是如此。
+在這個複合設定中，新的CUG不會取代附加到目標節點的現有存取控制內容。 相反地，這是一種補充資料，稍後也可以移除，而不會影響原始存取控制，預設情況下在AEM中會是一個存取控制清單。
 
-相較於之前的實施，新的CUG政策一律會被辨識及視為存取控制內容。 這表示它們是使用JCR存取控制管理API建立和編輯的。 如需詳細資訊，請參閱 [管理CUG政策](#managing-cug-policies) 區段。
+相較於前者，新的CUG政策一律會被辨識及視為存取控制內容。 這表示它們是使用JCR存取控制管理API建立和編輯的。 如需詳細資訊，請參閱 [管理CUG政策](#managing-cug-policies) 區段。
 
 #### CUG原則的許可權評估 {#permission-evaluation-of-cug-policies}
 
 除了CUG的專用存取控制管理外，新的授權模型可讓您有條件地啟用其原則的許可權評估。 這可讓您在中繼環境中設定CUG原則，並且只允許在複製到生產環境後評估有效許可權。
 
-CUG原則的許可權評估以及與預設或任何其他授權模型的互動，遵循為Apache Jackrabbit Oak中的多個授權機制設計的模式：若且唯若所有模型都授予存取權時，才會授予一組給定許可權。 另請參閱 [此頁面](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html) 以取得更多詳細資料。
+CUG原則的許可權評估以及與預設或任何其他授權模型的互動，遵循為Apache Jackrabbit Oak中的多個授權機制設計的模式。 也就是說，若且唯若所有模型都授予存取權時，才授予一組特定許可權。 另請參閱 [此頁面](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html) 以取得更多詳細資料。
 
 下列特性適用於與授權模型相關的許可權評估，這些授權模型設計用來處理和評估CUG原則：
 
 * 它只會處理一般節點和屬性的讀取許可權，不會讀取存取控制內容
-* 它不處理寫入許可權或修改受保護JCR內容所需的任何型別的許可權（存取控制、節點型別資訊、版本設定、鎖定或使用者管理等）；這些許可權不受CUG原則影響，也不會由關聯的授權模型評估。 這些許可權是否授予，取決於安全性設定中所設定的其他模式。
+* 它不處理寫入許可權或修改受保護JCR內容所需的任何型別的許可權（存取控制、節點型別資訊、版本設定、鎖定或使用者管理等等）。 這些許可權不受CUG原則影響，也不會由關聯的授權模型評估。 這些許可權是否授予，取決於安全性設定中所設定的其他模型。
 
 單一CUG原則對許可權評估的影響可概括如下：
 
 * 除了包含原則中所列排除的主體或主體之外的所有人，其讀取存取權都會遭到拒絕；
 * 此原則會在儲存原則及其屬性的存取控制節點上生效；
-* 該效果會沿階層向下繼承，即由存取控制節點定義的專案樹狀結構；
+* 該效果也會沿階層向下繼承，即由存取控制節點定義的專案樹狀結構；
 * 但是，它不會影響存取控制節點的同層級或祖項；
 * 指定CUG的繼承會在巢狀CUG停止。
 
 #### 最佳做法 {#best-practices}
 
-在透過CUG定義受限讀取存取權時，應考量下列最佳實務：
+下列最佳實務應說明如何定義透過CUG的限制讀取存取權：
 
 * 針對您對CUG的需求是否與限制讀取存取權或驗證需求相關，做出清醒的決定。 如果是後者，或同時需要兩者，請參閱最佳實務區段，以取得驗證需求的詳細資訊
-* 為需要保護的資料或內容建立威脅模型，以識別威脅邊界，並清楚瞭解資料的敏感度以及與授權存取相關的角色
+* 為必須保護的資料或內容建立威脅模型，以識別威脅範圍，並清楚瞭解資料的敏感度以及與授權存取相關的角色
 * 為存放庫內容和CUG建模，以掌握一般授權相關層面和最佳實務：
 
-   * 請記住，只有在特定CUG和設定授權中部署的其他模組評估允許特定主題讀取特定存放庫專案時，才會授予讀取許可權
+   * 請記住，只有在特定CUG以及設定授權中部署的其他模組評估允許特定主題讀取特定存放庫專案時，才會授予讀取許可權
    * 避免建立讀取存取權已受其他授權模組限制的備援CUG
    * 對巢狀CUG的過度需求可能會突顯內容設計中的問題
-   * 對CUG的需求過度（例如，在每個頁面上）可能表示需要自訂授權模式，可能更適合比對現有應用程式和內容的特定安全性需求。
+   * 對CUG的需求過度（例如，在每個頁面上）可能表示需要自訂授權模式，可能更適合應用程式和手頭內容的特定安全性需求。
 
 * 將CUG原則支援的路徑限制在存放庫中的幾個樹狀結構，以便獲得最佳效能。 例如，自AEM 6.3起，僅允許將/content節點底下的CUG作為預設值送出。
 * CUG原則的設計目的，是要授予一小部分主體的讀取存取權。 大量主體的需求可能會突顯內容或應用程式設計中的問題，因此應重新考慮。
 
 ### 驗證：定義驗證需求 {#authentication-defining-the-auth-requirement}
 
-CUG功能的認證相關部分可讓您標籤需要認證的樹狀結構，並選擇性地指定專用登入頁面。 根據舊版，新的實作可讓您在內容存放庫中標籤需要驗證的樹狀結構，並有條件地啟用與的同步化。 `Sling org.apache.sling.api.auth.Authenticator`負責最終強制此要求，並將重新導向至登入資源。
+CUG功能的認證相關部分可讓您標籤需要認證的樹狀結構，並選擇性地指定專用登入頁面。 根據舊版，新的實作可讓您在內容存放庫中標籤需要驗證的樹狀結構。 它也會有條件地啟用與 `Sling org.apache.sling.api.auth.Authenticator`負責最終強制此要求，並將重新導向至登入資源。
 
-這些需求會透過提供以下內容的OSGi服務向驗證者註冊 `sling.auth.requirements` 註冊屬性。 這些屬性接著可用來動態擴充驗證需求。 如需詳細資訊，請參閱 [Sling檔案](https://sling.apache.org/apidocs/sling7/org/apache/sling/auth/core/AuthConstants.html#AUTH_REQUIREMENTS).
+這些需求會透過驗證者註冊，由OSGi服務提供者 `sling.auth.requirements` 註冊屬性。 這些屬性接著可用來動態擴充驗證需求。 如需詳細資訊，請參閱 [Sling檔案](https://sling.apache.org/apidocs/sling7/org/apache/sling/auth/core/AuthConstants.html#AUTH_REQUIREMENTS).
 
 #### 使用專用的Mixin型別定義驗證需求 {#defining-the-authentication-requirement-with-a-dedicated-mixin-type}
 
-為安全起見，新實作會以名為的專用mixin型別取代剩餘JCR屬性的使用 `granite:AuthenticationRequired`，會為登入路徑定義STRING型別的單一選用屬性 `granite:loginPath`. 只有與此mixin型別相關的內容變更，才會導致更新向Apache Sling Authenticator註冊的需求。 在持續進行任何暫時性修改時會追蹤修改，因此需要 `javax.jcr.Session.save()` 呼叫以生效。
+為安全起見，新實作會以名為的專用mixin型別取代剩餘JCR屬性的使用 `granite:AuthenticationRequired`，會為登入路徑定義STRING型別的單一選用屬性 `granite:loginPath`. 只有與此mixin型別相關的內容變更，才會導致在Apache Sling Authenticator中註冊的要求更新。 在持續進行任何暫時性修改時會追蹤修改，因此需要 `javax.jcr.Session.save()` 呼叫以生效。
 
-同樣的情況適用於 `granite:loginPath` 屬性。 只有當它是由驗證需求相關的mixin型別定義時，才會被遵守。 在非結構化JCR節點中新增具有此名稱的剩餘屬性將不會顯示所需的效果，並且負責更新OSGi註冊的處理常式將忽略該屬性。
+同樣的情況適用於 `granite:loginPath` 屬性。 只有當它是由驗證需求相關的mixin型別定義時，才會被遵守。 在非結構化JCR節點中新增具有此名稱的剩餘屬性不會顯示所需的效果，並且負責更新OSGi註冊的處理常式會忽略該屬性。
 
 >[!NOTE]
 >
@@ -125,21 +125,21 @@ CUG功能的認證相關部分可讓您標籤需要認證的樹狀結構，並�
 
 #### 向Sling驗證者註冊驗證需求和登入路徑 {#registering-the-authentication-requirement-and-login-path-with-the-sling-authenticator}
 
-由於此型別的驗證需求應限製為某些執行模式，以及內容存放庫中的一小部分樹狀結構，因此對需求mixin型別和登入路徑屬性的追蹤會設定條件，並繫結至定義支援路徑的對應設定（請參閱下方的設定選項）。 因此，只有這些支援路徑範圍內的變更才會觸發OSGi註冊的更新，其他地方mixin型別和屬性都會被忽略。
+由於此型別的驗證需求應限製為某些執行模式，以及內容存放庫中的一小部分樹狀結構，因此追蹤需求mixin型別和登入路徑屬性是有條件的。 而且，它繫結到定義受支援路徑的對應配置（請參閱下面的配置選項）。 因此，只有這些支援路徑範圍內的變更才會觸發OSGi註冊的更新，其他地方mixin型別和屬性都會被忽略。
 
 預設AEM設定現在會使用此設定，允許以製作執行模式設定mixin，但只有在複製到發佈執行個體時才會生效。 另請參閱 [此頁面](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html) 以瞭解Sling如何執行驗證要求的詳細資訊。
 
-新增 `granite:AuthenticationRequired` 在設定的支援路徑中的mixin型別將導致負責處理常式的OSGi註冊被更新，包含新的附加專案，帶有 `sling.auth.requirements` 屬性。 如果指定的驗證需求指定了選擇性 `granite:loginPath` 屬性，則值會額外向驗證器註冊，且具有&#39;-&#39;前置詞，以排除在驗證需求之外。
+新增 `granite:AuthenticationRequired` 在設定的支援路徑中的mixin型別會導致負責處理常式的OSGi註冊被更新，包含新的、額外的專案，帶有 `sling.auth.requirements` 屬性。 如果指定的驗證需求指定了選擇性 `granite:loginPath` 屬性，則值也會向驗證器註冊，且前置詞為「 — 」，以排除在驗證需求之外。
 
 #### 驗證需求的評估與繼承 {#evaluation-and-inheritance-of-the-authentication-requirement}
 
-應透過頁面或節點階層繼承Apache Sling驗證需求。 繼承和評估驗證需求（例如順序和優先順序）的詳細資訊會被視為實施詳細資訊，而不會記錄在本文中。
+Apache Sling驗證需求會透過頁面或節點階層繼承。 繼承和評估驗證需求（例如順序和優先順序）的詳細資訊會被視為實施詳細資訊，而不會記錄在本文中。
 
 #### 登入路徑評估 {#evaluation-of-login-path}
 
-評估登入路徑並在驗證時重新導向至對應資源，目前是AdobeGranite登入選擇器驗證處理常式( `com.day.cq.auth.impl.LoginSelectorHandler`)，這是預設透過AEM設定的Apache Sling AuthenticationHandler。
+評估登入路徑並在驗證時重新導向至對應資源，是AdobeGranite登入選擇器驗證處理常式的實作詳細資料( `com.day.cq.auth.impl.LoginSelectorHandler`)，這是預設透過AEM設定的Apache Sling AuthenticationHandler。
 
-通話時 `AuthenticationHandler.requestCredentials` 此處理常式會嘗試判斷要將使用者重新導向的對應登入頁面。 此工作流程包含下列步驟：
+通話時 `AuthenticationHandler.requestCredentials` 此處理常式會嘗試判斷將使用者重新導向到的對應登入頁面。 此工作流程包含下列步驟：
 
 * 區分過期密碼和需要定期登入作為重新導向的原因；
 * 如果是定期登入，會測試是否可依下列順序取得登入路徑：
@@ -149,7 +149,7 @@ CUG功能的認證相關部分可讓您標籤需要認證的樹狀結構，並�
    * 從「登入頁面對應」，如 `LoginSelectorHandler`，
    * 最後，依與定義的方式，回覆至預設登入頁面。 `LoginSelectorHandler`.
 
-* 一旦透過上述呼叫取得有效的登入路徑，使用者的請求就會重新導向至該頁面。
+* 透過上述呼叫取得有效的登入路徑時，使用者的請求會重新導向至該頁面。
 
 本檔案的目標是評估內部公開的登入路徑 `LoginPathProvider` 介面。 自AEM 6.3以來出貨的實作行為如下：
 
@@ -161,9 +161,9 @@ CUG功能的認證相關部分可讓您標籤需要認證的樹狀結構，並�
    * 從「登入頁面對應」，如 `LoginSelectorHandler`，
    * 最後，會回覆至與一起定義的預設登入頁面。 `LoginSelectorHandler`.
 
-* 一旦透過上述呼叫取得有效的登入路徑，使用者的請求就會重新導向至該頁面。
+* 透過上述呼叫取得有效的登入路徑時，使用者的請求會重新導向至該頁面。
 
-此 `LoginPathProvider` 由Granite中新的驗證需求支援實作，會公開由定義的登入路徑 `granite:loginPath` 屬性，這些屬性又由mixin型別定義，如上所述。 儲存登入路徑的資源路徑與屬性值本身的對應會保留在記憶體中，並會進行評估以找出適合階層中其他節點的登入路徑。
+此 `LoginPathProvider` 由Granite中新的驗證需求支援實作，會公開由定義的登入路徑 `granite:loginPath` 屬性，這些屬性又由mixin型別定義，如上所述。 儲存登入路徑的資源路徑與屬性值本身的對應會保留在記憶體中，並會評估為階層中的其他節點尋找合適的登入路徑。
 
 >[!NOTE]
 >
@@ -173,9 +173,9 @@ CUG功能的認證相關部分可讓您標籤需要認證的樹狀結構，並�
 
 定義驗證需求時，應考量下列最佳實務：
 
-* 避免巢狀驗證需求：在樹狀結構開頭放置單一驗證需求標籤，應該就足夠了，而且會繼承至目標節點定義的整個子樹狀結構。 在評估Apache Sling中的驗證需求時，應該將該樹狀結構中的其他驗證需求視為備援，可能會導致效能問題。 透過將授權和驗證相關的CUG區域分離，可以透過CUG或其他型別的原則來限制讀取存取權，同時強制整個樹狀結構的驗證。
+* 避免巢狀驗證需求：在樹狀結構開頭放置單一驗證需求標籤，應該就足夠了，並且可以繼承至目標節點定義的整個子樹狀結構。 在評估Apache Sling中的驗證需求時，應該將該樹狀結構中的其他驗證需求視為備援，可能會導致效能問題。 透過將授權和驗證相關的CUG區域分離，可以限制CUG或其他型別原則的讀取存取權，同時強制整個樹狀結構的驗證。
 * 為存放庫內容建模，使得驗證需求適用於整個樹狀結構，而無需再次從需求中排除巢狀子樹狀結構。
-* 若要避免指定並隨後註冊多餘的登入路徑，請執行下列動作：
+* 若要避免指定，然後註冊多餘的登入路徑，請執行下列動作：
 
    * 依賴繼承並避免定義巢狀登入路徑
    * 請勿將選擇性登入路徑設為對應至預設值或繼承值的值，
@@ -191,7 +191,7 @@ Oak檔案說明新CUG政策在存放庫內容中的反映方式。 如需詳細�
 
 將專用mixin節點型別放置在目標節點的存放庫內容中，會反映需要單獨的驗證要求。 mixin型別會定義選擇性屬性，以指定目標節點所定義之樹狀結構的專用登入頁面。
 
-與登入路徑相關聯的頁面可能位於該樹狀結構內部或外部。 它將被排除在驗證需求之外。
+與登入路徑相關聯的頁面可能位於該樹狀結構內部或外部。 它被排除在驗證需求之外。
 
 ```java
 [granite:AuthenticationRequired]
@@ -203,11 +203,11 @@ Oak檔案說明新CUG政策在存放庫內容中的反映方式。 如需詳細�
 
 ### 管理CUG政策 {#managing-cug-policies}
 
-限制對CUG讀取存取的新型別的存取控制政策，是使用JCR存取控制管理API來管理，並遵循以下所述的機制： [JCR 2.0規格](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html).
+限制對CUG讀取存取的新型別的存取控制政策，是使用JCR存取控制管理API來管理，並遵循以下所述的機制： [JCR 2.0規格](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html).
 
 #### 設定新的CUG政策 {#set-a-new-cug-policy}
 
-此程式碼可在之前未設定CUG的節點套用新的CUG原則。 請注意 `getApplicablePolicies` 只傳回之前未設定的新原則。 最後，原則需要回寫，且變更需要保留。
+此程式碼可在之前未設定CUG的節點套用新的CUG原則。 請注意 `getApplicablePolicies` 只傳回之前未設定的新原則。 最後，必須回寫原則並保留變更。
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -243,7 +243,7 @@ session.save();
 
 #### 編輯現有的CUG原則 {#edit-an-existing-cug-policy}
 
-編輯現有CUG原則需要下列步驟。 修改的原則需要回寫，而變更需要透過保留 `javax.jcr.Session.save()`.
+編輯現有CUG原則需要下列步驟。 修改的原則必須回寫，且變更必須透過保留 `javax.jcr.Session.save()`.
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -349,7 +349,7 @@ session.save();
 
 #### 使用登入路徑新增驗證需求 {#add-a-new-auth-requirement-with-login-path}
 
-建立包含登入路徑的驗證要求的步驟。 請注意，如果符合以下條件，則登入路徑的要求和排除專案只會向Apache Sling驗證者註冊： `RequirementHandler` 已為包含目標節點的樹狀結構設定。
+建立包含登入路徑的驗證要求的步驟。 對於登入路徑的要求和排除，只有在符合以下條件時，才會向Apache Sling驗證器註冊： `RequirementHandler` 已為包含目標節點的樹狀結構設定。
 
 ```java
 Node targetNode = [...]
@@ -364,7 +364,7 @@ session.save();
 
 #### 修改現有登入路徑 {#modify-an-existing-login-path}
 
-變更現有登入路徑的步驟詳述如下。 只有在 `RequirementHandler` 已為包含目標節點的樹狀結構設定。 先前的登入路徑值將會從註冊中移除。 此修改不會影響與目標節點相關聯的驗證需求。
+變更現有登入路徑的步驟詳述如下。 只有在 `RequirementHandler` 已為包含目標節點的樹狀結構設定。 先前的登入路徑值會從註冊中移除。 此修改不會影響與目標節點相關聯的驗證需求。
 
 ```java
 Node targetNode = [...]
@@ -432,7 +432,7 @@ session.save();
 
 #### 擷取有效登入路徑 {#retrieve-the-effective-login-path}
 
-目前沒有公用API可擷取匿名存取需要驗證的資源時將生效的登入路徑。 如需如何擷取登入路徑的實作詳細資訊，請參閱登入路徑評估區段。
+目前沒有公用API可擷取匿名存取需要驗證的資源時生效的登入路徑。 如需如何擷取登入路徑的實作詳細資訊，請參閱登入路徑評估區段。
 
 不過，請注意，除了此功能定義的登入路徑之外，還有其他方法可指定重新導向至登入，在設計內容模型和特定AEM安裝的驗證需求時，應將這些方法列入考量。
 
@@ -468,15 +468,15 @@ while (isSupported(node)) {
 
 | **需要驗證** | **登入路徑** | **限制的讀取存取權** | **預期效果** |
 |---|---|---|---|
-| 是 | 是 | 是 | 如果有效的許可權評估授予存取權，特定使用者將只能檢視以CUG原則標籤的子樹狀結構。 系統會將未驗證的使用者重新導向至指定的登入頁面。 |
+| 是 | 是 | 是 | 如果有效的許可權評估授予存取權，特定使用者將只能檢視以CUG原則標籤的子樹狀結構。 未經驗證的使用者會重新導向至指定的登入頁面。 |
 | 是 | 否 | 是 | 如果有效的許可權評估授予存取權，特定使用者將只能檢視以CUG原則標籤的子樹狀結構。 未經驗證的使用者會重新導向至繼承的預設登入頁面。 |
-| 是 | 是 | 否 | 系統會將未驗證的使用者重新導向至指定的登入頁面。 是否允許檢視以驗證需求標示的樹狀結構，取決於該子樹狀結構中個別專案的有效許可權。 沒有專用的CUG限制讀取存取權。 |
-| 是 | 否 | 否 | 未經驗證的使用者會重新導向至繼承的預設登入頁面。 是否允許檢視以驗證需求標示的樹狀結構，取決於該子樹狀結構中個別專案的有效許可權。 沒有專用的CUG限制讀取存取權。 |
-| 否 | 否 | 是 | 如果有效的許可權評估授權存取，則指定的已驗證或未驗證使用者將只能檢視標示CUG原則的子樹狀結構。 系統會對未經驗證的使用者一視同仁，不會將他們重新導向以登入。 |
+| 是 | 是 | 否 | 未經驗證的使用者會重新導向至指定的登入頁面。 是否允許檢視以驗證需求標示的樹狀結構，取決於該子樹狀結構中個別專案的有效許可權。 沒有專用的CUG限制讀取存取權。 |
+| 是 | 否 | 否 | 未經驗證的使用者會重新導向至繼承的預設登入頁面。 是否允許檢視標示驗證需求的樹狀結構，取決於該子樹狀結構中個別專案的有效許可權。 沒有專用的CUG限制讀取存取權。 |
+| 否 | 否 | 是 | 如果有效的許可權評估授權存取，則指定的已驗證或未驗證使用者只能檢視以CUG原則標籤的子樹狀結構。 未驗證的使用者會得到同等對待，且不會重新導向以登入。 |
 
 >[!NOTE]
 >
->「驗證需求」=「否」和「登入路徑」=「是」的組合未列出，因為「登入路徑」是與驗證需求相關聯的選擇性屬性。 指定具有該名稱的JCR屬性而不新增定義mixin型別將沒有效果，且將被對應的處理常式忽略。
+>「驗證需求」=「否」和「登入路徑」=「是」的組合未列出，因為「登入路徑」是與驗證需求相關聯的選擇性屬性。 指定具有該名稱的JCR屬性而不新增定義mixin型別沒有效果，且會被對應的處理常式忽略。
 
 ## OSGi元件和設定 {#osgi-components-and-configuration}
 
@@ -494,7 +494,7 @@ while (isSupported(node)) {
 
 #### 設定反向連結篩選 {#configuring-the-referrer-filter}
 
-您也需要設定 [Sling查閱者篩選器](/help/sites-administering/security-checklist.md#the-sling-referrer-filter) 所有可用於存取AEM的主機名稱；例如，透過CDN、負載平衡器和任何其他工具。
+您也必須設定 [Sling查閱者篩選器](/help/sites-administering/security-checklist.md#the-sling-referrer-filter) 所有可用於存取AEM的主機名稱；例如，透過CDN、負載平衡器和任何其他工具。
 
 如果未設定反向連結篩選器，則當使用者嘗試登入CUG網站時，會看到類似下列的錯誤：
 
@@ -582,7 +582,7 @@ while (isSupported(node)) {
 
 #### 從CUG評估排除主體 {#excluding-principals-from-cug-evaluation}
 
-先前實作已採用免除個別主參與者進行CUG評估。 新的CUG授權透過名為CugExclude的專用介面來涵蓋此功能。 Apache Jackrabbit Oak 1.4隨附預設實施，其中排除一組固定的主體，以及允許設定個別主體名稱的延伸實施。 後者在AEM發佈執行個體中設定。
+先前實作已採用免除個別主參與者進行CUG評估。 新的CUG授權透過名為CugExclude的專用介面來涵蓋此功能。 Apache Jackrabbit Oak 1.4隨附預設實施，其中排除一組固定的主體，以及可讓您設定個別主體名稱的延伸實施。 後者在AEM發佈執行個體中設定。
 
 AEM 6.3之後的預設值，可防止下列主體受到CUG原則的影響：
 
@@ -682,7 +682,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 ### 作者執行個體 {#author-instances}
 
-| **「Apache Jackrabbit Oak CUG設定」** | **解釋** |
+| **「Apache Jackrabbit Oak CUG設定」** | **說明** |
 |---|---|
 | 支援的路徑 `/content` | CUGpolicies的存取控制管理已啟用。 |
 | CUG評估啟用FALSE | 已停用許可權評估。 CUG政策無效。 |
@@ -694,19 +694,19 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 ### 發佈執行個體 {#publish-instances}
 
-| **「Apache Jackrabbit Oak CUG設定」** | **解釋** |
+| **「Apache Jackrabbit Oak CUG設定」** | **說明** |
 |---|---|
 | 支援的路徑 `/content` | 在設定的路徑下方啟用CUG原則的存取控制管理。 |
 | CUG評估啟用TRUE | 已針對設定的路徑啟用許可權評估。 CUG政策生效日期 `Session.save()`. |
 | 等級 | 200 | 請參閱Oak檔案。 |
 
-| **「Apache Jackrabbit Oak CUG排除清單」** | **解釋** |
+| **「Apache Jackrabbit Oak CUG排除清單」** | **說明** |
 |---|---|
 | 主體名稱管理員 | 排除CUG評估中的管理員主體。 |
 
-| **「AdobeGranite驗證需求和登入路徑處理常式」** | **解釋** |
+| **「AdobeGranite驗證需求和登入路徑處理常式」** | **說明** |
 |---|---|
-| 支援的路徑  `/content` | 由以下方式在存放庫中定義的驗證需求： `granite:AuthenticationRequired` mixin型別將在以下生效 `/content` 於 `Session.save()`. Sling驗證器已更新。 在支援的路徑之外新增mixin型別會被忽略。 |
+| 支援的路徑  `/content` | 由定義的存放庫驗證需求 `granite:AuthenticationRequired` mixin型別將在以下生效 `/content` 於 `Session.save()`. Sling驗證器已更新。 在支援的路徑之外新增mixin型別會被忽略。 |
 
 ## 停用CUG授權與驗證需求 {#disabling-cug-authorization-and-authentication-requirement}
 
@@ -718,7 +718,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 ### 停用驗證需求 {#disable-the-authentication-requirement}
 
-若要停用對驗證需求的支援，請參閱 `granite.auth.authhandler` 模組足以移除與關聯的組態 **AdobeGranite驗證需求和登入路徑處理常式**.
+若要停用對驗證需求的支援，請參閱 `granite.auth.authhandler` 模組，移除與關聯的設定就足夠了 **AdobeGranite驗證需求和登入路徑處理常式**.
 
 >[!NOTE]
 >
@@ -761,7 +761,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 ### AEM LiveCopy {#aem-livecopy}
 
-在存放庫中結合LiveCopy設定CUG時，會額外增加一個節點和一個屬性，如下所示：
+使用LiveCopy設定CUG時，在存放庫中會以新增一個額外節點和一個額外屬性的方式表示，如下所示：
 
 * `/content/we-retail/us/en/blueprint/rep:cugPolicy`
 * `/content/we-retail/us/en/LiveCopy@granite:loginPath`
@@ -790,7 +790,7 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 在舊版實作中，預設授權模型用於操控發佈上的存取控制清單原則，以CUG強制執行的設定取代任何現有的ACE。 觸發此問題的原因是寫入了在發佈時解譯的規則剩餘JCR屬性。
 
-在新實作中，預設授權模型的存取控制設定不受任何建立、修改或移除的CUG影響。 而是名為的新原則型別 `PrincipalSetPolicy` 會套用為目標節點的額外存取控制內容。 此額外原則將位於目標節點的子節點中，而且如果存在，將成為預設原則節點的同層級。
+在新實作中，預設授權模型的存取控制設定不受任何建立、修改或移除的CUG影響。 而是名為的新原則型別 `PrincipalSetPolicy` 會套用為目標節點的額外存取控制內容。 此額外原則位於目標節點的子節點中，如果存在，則為預設原則節點的同層級。
 
 **在存取控制管理中編輯CUG原則**
 
@@ -800,22 +800,22 @@ AEM的新安裝預設會將新的實施用於CUG功能的授權和驗證相關�
 
 在JCR節點建立CUG原則，定義要接受受限讀取存取的子樹狀結構。 這可能是個AEM頁面，以防CUG可能影響整個樹狀結構。
 
-請注意，僅將CUG原則放在位於指定頁面下方的jcr：content節點上，只會限制對指定頁面內容s.str的存取，而不會對任何同級頁面或子頁面生效。 這可能是有效的使用案例，並且有可能使用允許套用微調存取內容的存放庫編輯器來達成。 然而，它與以前的實作不同，在以前的實作中，在jcr：content節點上放置cq：cugEnabled屬性會在內部重新對應至頁面節點。 不再執行此對應。
+將CUG原則僅置於指定頁面下方的jcr：content節點會限制對指定頁面內容s.str的存取，但不會影響任何同級頁面或子頁面。 這可能是有效的使用案例，並且可以使用存放庫編輯器來完成，該編輯器可讓您套用精細存取內容。 然而，它與以前的實作不同，在以前的實作中，在jcr：content節點上放置cq：cugEnabled屬性會在內部重新對應至頁面節點。 不再執行此對應。
 
 **使用CUG原則進行許可權評估**
 
 從舊的CUG支援移至其他授權模型，會變更有效讀取許可權的評估方式。 如 [Jackrabbit檔案](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html)，允許檢視的指定主體 `CUGcontent` 只有在Oak存放庫中設定的所有模型許可權評估都授予讀取存取權時，才會授予讀取存取權。
 
-換言之，為了評估有效許可權， `CUGPolicy` 而且會考量預設的存取控制專案，而且只有在這兩種原則都授與的情況下，才會授與CUG內容的讀取存取權。 在預設的AEM發佈安裝中，對完成的讀取存取權 `/content` 樹狀結構已授與給每個人，CUG政策的作用將與舊實作相同。
+換言之，為了評估有效許可權， `CUGPolicy` 而且會考量預設的存取控制專案，而且只有在這兩種原則都授與的情況下，才會授與CUG內容的讀取存取權。 在預設的AEM發佈安裝中，對完成的讀取存取權 `/content` 樹狀結構已授與給每個人，CUG政策的作用與舊實作相同。
 
 **隨選評估**
 
-CUG授權模型允許個別開啟存取控制管理和許可權評估：
+CUG授權模型可讓您個別開啟存取控制管理和許可權評估：
 
 * 如果模組有一或多個可建立CUG的支援路徑，則會啟用存取控制管理
-* 僅在選項為時啟用許可權評估 **CUG評估已啟用** 另外會核取。
+* 僅在選項為時啟用許可權評估 **CUG評估已啟用** 也會勾選。
 
-在新的AEM預設設定CUG原則評估中，它僅能以「發佈」執行模式啟用。 欲知詳情，請參閱 [自AEM 6.3以來的預設設定](#default-configuration-since-aem) 以取得更多詳細資料。 這可透過比較給定路徑的有效原則與內容中儲存的原則來驗證。 只有啟用CUG的許可權評估時，才會顯示有效原則。
+在CUG原則的新AEM預設設定評估中，它僅在「發佈」執行模式中啟用。 欲知詳情，請參閱 [自AEM 6.3以來的預設設定](#default-configuration-since-aem) 以取得更多詳細資料。 這可透過比較給定路徑的有效原則與內容中儲存的原則來驗證。 只有啟用CUG的許可權評估時，才會顯示有效原則。
 
 如上所述，CUG存取控制原則現在一律會儲存在內容中，但是只有在 **CUG評估已啟用** 在Apache Jackrabbit Oak的系統主控台中開啟 **CUG設定。** 預設情況下，僅在「發佈」執行模式中啟用它。
 
@@ -825,11 +825,11 @@ CUG授權模型允許個別開啟存取控制管理和許可權評估：
 
 #### 驗證需求的專用Mixin型別 {#dedicated-mixin-type-for-authentication-requirement}
 
-在之前的實作中，CUG的授權和驗證層面都是由單一JCR屬性( `cq:cugEnabled`)。 就驗證而言，這會產生與Apache Sling Authenticator實作儲存的驗證需求更新清單。 在新實施中，使用專用的mixin型別( `granite:AuthenticationRequired`)。
+在之前的實作中，CUG的授權和驗證層面都是由單一JCR屬性( `cq:cugEnabled`)。 就驗證而言，這會產生與Apache Sling Authenticator實作儲存的驗證需求更新清單。 在新實作中，使用專用的mixin型別( `granite:AuthenticationRequired`)。
 
 #### 排除登入路徑的屬性 {#property-for-excluding-login-path}
 
-mixin型別會定義單一、選用的屬性，稱為 `granite:loginPath`，基本上對應至 `cq:cugLoginPage` 屬性。 相較於先前的實施，只有當其宣告節點型別是上述的mixin時，才會考量登入路徑屬性。 新增具有該名稱的屬性而不設定mixin型別將沒有效果，並且不會向驗證者報告針對登入路徑的新要求或排除。
+mixin型別會定義單一、選用的屬性，稱為 `granite:loginPath`，基本上對應至 `cq:cugLoginPage` 屬性。 相較於先前的實作，只有當其宣告節點型別是上述的mixin時，才會考量登入路徑屬性。 在不設定mixin型別的情況下新增具有該名稱的屬性不會產生任何效果，並且不會向驗證者報告針對登入路徑的新要求或排除。
 
 #### 驗證要求的許可權 {#privilege-for-authentication-requirement}
 
@@ -839,11 +839,11 @@ mixin型別會定義單一、選用的屬性，稱為 `granite:loginPath`，基�
 
 #### 由Mixin型別定義的目標節點 {#target-node-defined-by-mixin-type}
 
-在JCR節點建立驗證需求，定義要強制登入的子樹狀結構。 這可能是個AEM頁面，以防CUG預計會影響整個樹狀結構，且新實作的UI隨後會在頁面節點上新增驗證需求mixin型別。
+在JCR節點建立驗證需求，定義要強制登入的子樹狀結構。 這可能是個AEM頁面，以防CUG預期會影響整個樹狀結構，以及新實作的UI，因此會在頁面節點上新增驗證需求mixin型別。
 
-將CUG原則僅放置在位於指定頁面下方的jcr：content節點會限制內容的存取權，但不會影響頁面節點本身或任何子頁面。
+將CUG原則僅放置在位於指定頁面下方的jcr：content節點上，只會限制對內容的存取。 但是，它不會影響頁面節點本身或任何子頁面。
 
-這可能是有效的案例，並且可在允許將mixin放置在任何節點的存放庫編輯器中進行。 不過，此行為與之前的實施相反，也就是在jcr：content節點上放置cq：cugEnabled或cq：cugLoginPage屬性最終會在內部重新對應至頁面節點。 不再執行此對應。
+這可能是有效的案例，並且可在存放庫編輯器中讓您將mixin放置在任何節點上。 不過，此行為與之前的實施相反，也就是在jcr：content節點上放置cq：cugEnabled或cq：cugLoginPage屬性最終會在內部重新對應至頁面節點。 不再執行此對應。
 
 #### 已設定的支援路徑 {#configured-supported-paths}
 
@@ -865,7 +865,7 @@ AEM 6.3之後的CUG對應
 
 對於升級的AEM安裝，請務必確保僅啟用一個CUG實作。 新的和舊的、已棄用的CUG支援組合未經測試，並可能會導致不良行為：
 
-* Sling驗證程式中與驗證需求相關的衝突
+* Sling驗證器中有關驗證需求的衝突
 * 當與舊CUG相關聯的ACL設定與新CUG原則衝突時，拒絕讀取存取權。
 
 ### 移轉現有的CUG內容 {#migrating-existing-cug-content}
@@ -873,7 +873,7 @@ AEM 6.3之後的CUG對應
 Adobe提供了移轉至新CUG實作的工具。 若要使用，請執行下列步驟：
 
 1. 前往 `https://<serveraddress>:<serverport>/system/console/cug-migration` 以存取工具。
-1. 輸入您要檢查CUG的根路徑，然後按 **執行試用** 按鈕。 這將會在選取的位置中掃描符合轉換資格的CUG。
+1. 輸入要檢查CUG的根路徑，然後按 **執行試用** 按鈕。 這會在選取的位置中掃描符合轉換條件的CUG。
 1. 在檢閱結果後，請按 **執行移轉** 按鈕，以移轉至新的實作。
 
 >[!NOTE]

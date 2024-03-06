@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 22235790b2bfefaa1a3bf71f888f8eb343d9e1b7
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '4257'
 ht-degree: 3%
@@ -450,7 +450,7 @@ AEM Forms會套用第三個主版頁面至面板，以及最適化表單中的�
 
 >[!NOTE]
 >
-> 您無法將多個主版頁面套用到最適化表單片段的記錄檔案。
+> 您無法將多個主版頁面套用至最適化表單片段的記錄檔案。
 
 ## 使用記錄檔案時的主要考量事項 {#key-considerations-when-working-with-document-of-record}
 

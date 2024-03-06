@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 970e0a97d531d4cbae76119960972e54ef65dda0
 workflow-type: tm+mt
-source-wordcount: '2348'
-ht-degree: 3%
+source-wordcount: '2313'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 3%
 >如需完整資訊，請參閱 **可用述詞** 在Query Builder Debugger主控台上；例如：
 >* [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
 >
->如需範例，請參閱:
+>例如，請參閱：
 >
 >* [http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29](http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29)
 
@@ -46,7 +46,7 @@ ht-degree: 3%
 * [memberOf](/help/sites-developing/querybuilder-predicate-reference.md#memberof)
 * [nodename](/help/sites-developing/querybuilder-predicate-reference.md#nodename)
 * [notexpired](/help/sites-developing/querybuilder-predicate-reference.md#notexpired)
-* [path](/help/sites-developing/querybuilder-predicate-reference.md#path)
+* [路徑](/help/sites-developing/querybuilder-predicate-reference.md#path)
 * [屬性](/help/sites-developing/querybuilder-predicate-reference.md#property)
 * [rangeproperty](/help/sites-developing/querybuilder-predicate-reference.md#rangeproperty)
 * [相對日期範圍](/help/sites-developing/querybuilder-predicate-reference.md#relativedaterange)
@@ -104,7 +104,7 @@ ht-degree: 3%
 
 * **操作**
 
-  &quot; `equals`&quot;，以取得完全相符的結果， &quot; `!=`「若為不相等比較， 」 `greater`&quot;，代表property1大於property2， &quot; `>=`&quot; （屬性1大於或等於property2）。 預設值為 &quot; `equals`&quot;.
+  &quot; `equals`&quot;，以取得完全相符的結果， &quot; `!=`「若為不相等比較， 」 `greater`&quot;，代表property1大於property2， &quot; `>=`&quot; （屬性1大於或等於property2）。 預設值為&quot; `equals`「。
 
 ### 日期範圍 {#daterange}
 
@@ -315,7 +315,7 @@ group.2_group.type=dam:Asset
 
   JCR屬性名稱由前導@表示，例如， `@jcr:lastModified` 或 `@jcr:content/jcr:title`，或查詢中的其他述詞，例如， `2_property`，依此排序。
 
-* **排序**
+* **sort**
 
   排序方向， 「 `desc`&quot;表示降序或&quot; `asc`&quot;以遞增方式顯示（預設）。
 
@@ -323,7 +323,7 @@ group.2_group.type=dam:Asset
 
   如果設為 `ignore`，因此排序不區分大小寫，表示「a」在「B」之前；如果為空白或省略，排序會區分大小寫，表示「B」在「a」之前
 
-### path {#path}
+### 路徑 {#path}
 
 在指定路徑內搜尋。
 
@@ -343,7 +343,7 @@ group.2_group.type=dam:Asset
 
   僅搜尋直接子項（如附加） `/*`在xpath中的「」) (僅用於「 `exact`&#39;不是true，是選擇性的)。
 
-* **self**
+* **自我**
 
   搜尋子樹狀結構，但包含指定作為路徑的基本節點（無萬用字元）。
 
@@ -469,15 +469,15 @@ group.2_group.type=dam:Asset
 
   （僅適用於JSON servlet）選取將點選寫入為JSON的方式，並使用這些標準點選（可透過ResultHitWriter服務擴充）：
 
-   * **簡單**:
+   * **簡單**：
 
      最小專案，例如 `path`， `title`， `lastmodified`， `excerpt` （若有設定）。
 
-   * **完整**:
+   * **完整**：
 
      節點的Sling JSON演算，使用 `jcr:path` 表示點選的路徑：預設情況下僅列出節點的直接屬性，包含更深入的樹狀結構， `p.nodedepth=N`，0表示整個、無限子樹；新增 `p.acls=true` 在指定的結果專案上包含目前工作階段的JCR許可權(對應： `create` = `add_node`， `modify` = `set_property`， `delete` = `remove`)。
 
-   * **選擇性**:
+   * **選擇性**：
 
      僅指定於 `p.properties`，以空格分隔（在URL中使用「+」）的相對路徑清單；如果相對路徑的深度> 1，則這些都會表示為子物件；特殊的jcr：path屬性包含點選的路徑
 
@@ -573,7 +573,7 @@ group.2_group.type=dam:Asset
 
 * **全部**
 
-  （布林值）搜尋整個標籤全文，也就是所有標題、說明等(優先於「l」 `ang`「)。
+  （布林值）搜尋整個標籤全文，也就是所有標題、說明等。 優先於「l」 `ang`「。
 
 ### 類型 {#type}
 
@@ -583,6 +583,6 @@ group.2_group.type=dam:Asset
 
 #### 屬性 {#Properties-2}
 
-* **類型**
+* **type**
 
   要搜尋的節點型別或mixin名稱，例如 `cq:Page`.

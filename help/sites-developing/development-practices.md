@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 65b2029e-03c9-4df4-8579-2b15dbee1035
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
@@ -64,4 +64,4 @@ ht-degree: 0%
 
 ### 避免實作YAGNI功能 {#avoid-implementing-yagni-features}
 
-YAGNI (You Won&#39;t Need It)功能是我們預期未來會需要某樣東西時所實作的功能，即使我們現在不需要。 在理想狀況下，我們應該實作目前最簡單的工作方式，並使用持續重構，以確保系統的架構會隨著需求演化。 這可讓我們專注於重要事項，並防止程式碼膨脹和特徵潛移。
+YAGNI （您不需要它）功能是我們預期未來會需要某樣東西時所實作的功能，即使我們現在不需要它。 在理想狀況下，我們應該實作目前最簡單的工作方式，並使用持續重構，以確保系統的架構會隨著需求演化。 這可讓我們專注於重要事項，並防止程式碼膨脹和特徵潛移。

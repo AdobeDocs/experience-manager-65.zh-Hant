@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 3fe9b3d4cf6ddf7d64dbece7d62d7f18dfa183f2
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '4054'
+source-wordcount: '4057'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ JEE伺服器上的AEM Forms可使用任何支援的作業系統、應用程式�
 
 #### 完整安裝程式
 
-- **完整安裝程式的升級支援**：完整安裝程式會隨第6個AEM Service Pack版本發行。 例如，有隨6.5.12.0和6.5.18.0 SP發行版本發行的完整安裝程式。 AEM Forms僅允許從最後兩個完整安裝程式直接升級。 例如，AEM Forms僅協助從最後兩個完整安裝程式（即6.5.12.0和6.5.6.0）直接升級至6.5.18.0版。如果您需要從舊版升級，可以使用多重躍點升級，先移至支援的完整安裝程式版本，然後再移至最新版本。
+- **完整安裝程式的升級支援**：每六個AEM Service Pack版本都會發行完整安裝程式。 例如，有隨6.5.12.0和6.5.18.0 SP發行版本發行的完整安裝程式。 AEM Forms僅允許從最後兩個完整安裝程式直接升級。 例如，AEM Forms僅協助從最後兩個完整安裝程式（即6.5.12.0和6.5.6.0）直接升級至6.5.18.0版。如果您需要從舊版升級，可以使用多重躍點升級，先移至支援的完整安裝程式版本，然後再移至最新版本。
 
 - **過時和移除**：每個完整安裝程式版本都會更新平台支援。 在完整安裝程式版本期間，平台矩陣中標示為過時的任何軟體，都有權在後續完整安裝程式版本中，從支援的平台矩陣中移除，這表示軟體的支援終止。
 
@@ -543,7 +543,7 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 - [JEE部署中單一伺服器AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65)
 - [JEE部署上叢集AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65)
 
-## JEE 上 AEM Forms 的支援用戶端 {#supported-clients-for-aem-forms-on-jee}
+## AEM Forms on JEE的支援使用者端 {#supported-clients-for-aem-forms-on-jee}
 
 ### Workbench {#workbench}
 
@@ -608,7 +608,7 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 
 >[!NOTE]
 >
->Acrobat直流產品系列為Acrobat和Reader引入了兩個軌道，它們是不同的產品：“經典”和“連續”。 有關兩個軌道的詳細資訊和比較，請參閱 [https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html)。
+>Acrobat DC產品系列為Acrobat和Reader引入兩種路徑，它們是不同的產品：「傳統」和「持續」。 如需詳細資訊和兩個曲目的比較，請參閱 [https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html).
 
 ### 瀏覽器 {#browsers}
 
@@ -619,15 +619,15 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
   <tr>
    <th><p><strong>瀏覽器（基底）</strong></p> </th>
    <th><p><strong>支援等級</strong></p> </th>
-   <th><p><strong>支援的修補程序定義</strong></p> </th>
+   <th><p><strong>支援的修補程式定義</strong></p> </th>
   </tr>
   <tr>
-   <td><p>Microsoft® Edge （Evergreen）</p> </td>
+   <td><p>Microsoft® Edge （長青）</p> </td>
    <td><p>答：支援</p> </td>
-   <td><p>Service Pack 和更新</p> </td>
+   <td><p>Service Pack和更新</p> </td>
   </tr>
   <tr>
-   <td><p>Mozilla Firefox （Evergreen）</p> </td>
+   <td><p>Mozilla Firefox (Evergreen)</p> </td>
    <td><p>答：支援</p> </td>
    <td>所有更新</td>
   </tr>
@@ -654,7 +654,7 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 >桌上型電腦的瀏覽器相關例外情況如下：
 >
 >- 只有Macintosh OS X支援Safari。
->- 工作環境 支持 Macintosh OS X 10.6 和 10.7 上的 Safari 5.1 以及 Acrobat DC 或更高版本。 如需有關Safari 5.1與Adobe Reader、Acrobat相容性的詳細資訊，請參閱 [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
+>- Workspace支援Macintosh OS X 10.6和10.7上的Safari 5.1 (含Acrobat DC或更新版本)。 如需有關Safari 5.1與Adobe Reader、Acrobat相容性的詳細資訊，請參閱 [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
 >- Safari不支援管理主控台。
 >- 「通訊管理」不支援AEM 6.1表單適用的Windows® Internet Explorer 9.0。
 >- Forms Portal支援Internet Explorer 11上的JAWS 14.0熒幕助讀程式軟體，以提供協助工具。
@@ -700,31 +700,31 @@ AEM Forms應用程式適用於下列平台：
 | ----------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Apple iOS | Apple iPhone、iPad、iPad Air和執行iOS 15.1及更高版本的iPad mini。 |
 | Google Android™ | Android™ 5.1和更新版本。 AEM Forms應用程式已通過7英吋和10英吋Samsung Galaxy平板電腦及熱門智慧型手機的認證。 |
-| Microsoft® Windows | 執行 Microsoft Windows 10 作業系統的 Microsoft®® Surface 裝置、平板電腦、筆記型電腦和台式機。 |
+| Microsoft® Windows | Microsoft®執行Microsoft® Windows 10作業系統的Surface裝置、平板電腦、筆記型電腦和桌上型電腦。 |
 
-### Adobe Systems Microsoft® Office 的文件安全性擴展 {#adobe-rights-management-extension-for-microsoft-office}
+### Microsoft® Office適用的AdobeDocument Security Extension {#adobe-rights-management-extension-for-microsoft-office}
 
-按兩下 [此處](https://www.adobe.com/products/livecycle/rightsmanagement/extension/downloads.html) 查看 Microsoft® Office Adobe Systems Document Security Extension 的系統要求。
+按一下 [此處](https://www.adobe.com/products/livecycle/rightsmanagement/extension/downloads.html) 若要檢視Microsoft® Office適用的Document Security ExtensionAdobe的系統需求。
 
-### 用戶端支援的例外情況 {#exceptions-to-client-support}
+### 使用者端支援的例外 {#exceptions-to-client-support}
 
-在受支持的軟體的指定主要和次要版本之上AEM Forms JEE 支援更新、修補程式和修訂包。 但是，除非指定，否則不支援更新到下一個主要版本或次要版本。
+除了指定的主要和次要支援軟體版本以外，JEE上的AEM Forms還支援更新、修補程式和修正套件。 不過，除非另有指定，否則不支援更新至下一個主要或次要版本。
 
-## 第三方修補程序支持原則 {#third-party-patch-support-policy}
+## 協力廠商修補支援政策 {#third-party-patch-support-policy}
 
-JEE 上AEM Forms的協力廠商軟體要求記錄在其各自產品文件的“系統需求”部分中。 從 https://adobe.com/go/learn_aemforms_documentation_65](https://adobe.com/go/learn_aemforms_documentation_65) 訪問[所有文件。
+JEE版AEM Forms的協力廠商軟體需求記錄在各自產品檔案的「系統需求」一節。 從存取所有檔案 [https://adobe.com/go/learn_aemforms_documentation_65](https://adobe.com/go/learn_aemforms_documentation_65) .
 
-JEE協力廠商參考平臺上的AEM Forms說明瞭在JEE上開發和發佈AEM Forms期間最新的協力廠商基礎架構的特定補丁級別，以及該版本的AEM Forms on JEE支援的基礎架構的最低補丁/服務包級別。
+JEE上的AEM Forms第三方參考平台會說明在JEE上AEM Forms開發和發行期間第三方基礎架構的特定修補程式層級，以及該JEE上AEM Forms版本支援之基礎架構的最低修補程式/Service Pack層級。
 
-Adobe Systems支持協力廠商供應商在發佈時發佈的緊急或推薦補丁，前提是協力廠商供應商保證與JEE支援AEM Forms的版本向後相容。 Adobe Systems僅支援在 JEE AEM Forms文檔中規定的最低補丁級別之後發佈的補丁。
+Adobe支援協力廠商在發行時發行的緊急或建議修補程式，前提是協力廠商保證回溯相容於AEM Forms on JEE支援的版本。 Adobe僅支援在AEM Forms on JEE檔案中所述的最低修補程式層級後發行的修補程式。
 
-有時，Adobe Systems不支持更改主要功能協力廠商更新，因此不支援完全向後相容性。 有關支援的更新的詳細資訊，請參閱 [特定供應商產品支援的修補程式定義](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) 以及Adobe Systems支援的修補程序類型。
+有時候，Adobe不支援變更主要功能的第三方更新，因此不支援完整的回溯相容性。 如需支援的更新詳細資訊，請參閱 [支援的修補程式定義](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) 適用於特定廠商產品及Adobe支援的修補程式型別。
 
-在 Adobe Systems 無法控制的情況下，聲稱向後兼容協力廠商修補程序可能會對Adobe Systems產品或客戶環境產生負面影響。 在這種情況下，Adobe建議客戶在將第三方提供的任何緊急修補程式應用於關鍵系統之前，先評估其影響。 Adobe會與第三方合作，透過正常的Adobe支援計畫或第三方修正修補程式中的問題，透過合理的業務努力來解決此類問題。 這並不保證Adobe支援的新發行協力廠商修補程式可如廠商記錄或在JEE上與AEM Forms搭配運作。
+在Adobe無法控制的情況下，聲稱回溯相容性的協力廠商修補程式可能會對Adobe產品或客戶環境造成負面影響。 在這種情況下，Adobe建議客戶在將第三方提供的任何緊急修補程式應用於關鍵系統之前，先評估其影響。 Adobe會與第三方合作，透過正常的Adobe支援計畫或第三方修正修補程式中的問題，透過合理的業務努力來解決此類問題。 這並不保證Adobe支援的新發行協力廠商修補程式可如廠商記錄或在JEE上與AEM Forms搭配運作。
 
-Adobe Systems保留在任何給定時間點更改 AEM Forms on JEE 版本支持的協力廠商參考平臺及其支援的修補程式定義的權利。
+Adobe保留在任何指定時間點變更AEM Forms on JEE版本支援的第三方參考平台及其支援之修補程式定義的權利。
 
-還可以通過搜索Adobe Systems企業支援網站查找與您的產品相關的知識庫文章，找到有關協力廠商修補程式的其他資訊。
+您也可在Adobe企業支援網站中搜尋與產品相關的知識庫文章，以找到協力廠商修補程式的其他資訊。
 
 <!--
 
@@ -832,9 +832,9 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 -->
 
-### 版本 6.5.19.1（2023 年 12 月 15 日）
+### 發行版本6.5.19.1 （2023年12月15日）
 
-| 新增支援 | 移除的支援 | 已棄用的支援 |
+| 新增的支援 | 移除的支援 | 已棄用的支援 |
 | -------------- | --------------- | ------------------- |
 | MongoDB Enterprise 6.0 | MongoDB Enterprise 4.4 |  |
 | MongoDB Enterprise 5.0 |  |  |
@@ -874,16 +874,16 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 ### 發行版本6.5.12.0 （2022年3月3日）
 
-| 新增支援 | 拿掉支援 | 不再提倡的支援 |
+| 新增的支援 | 移除的支援 | 已棄用的支援 |
 | -------------- | --------------- | ------------------- |
-|  | IBM® J9 虛擬機 （版本編號 2.8， JRE 1.8.0） | MongoDB Enterprise 4.0 |
-|  | Oracle Database 12c Release 1 | MongoDB Enterprise 4.2 |
-|  | Oracle Database 18c | IBM® DB2® 11.1 |
-|  | Oracle Unified Directory （OUD） 11g Release 2 | Oracle Database 12c Release 2 |
-|  | IBM® Lotus Domino 9.0 | MySQL 5.7.35 |
+|  | IBM® J9虛擬機器器（版本編號2.8、JRE 1.8.0） | MongoDB Enterprise 4.0 |
+|  | oracle資料庫12c版本1 | MongoDB Enterprise 4.2 |
+|  | oracle資料庫18c | IBM® DB2® 11.1 |
+|  | oracle Unified Directory (OUD) 11g版本2 | oracle資料庫12c版本2 |
+|  | IBM®蓮花多米諾9.0 | MySQL 5.7.35 |
 |  | IBM® FileNet 5.2 | Microsoft® SQL Server JDBC驅動程式6.2.1.0 |
-|  | Adobe Systems Flash Player | JBoss® Enterprise Application Platform （EAP） 7.1.4 |
-|  | | IBM® Content Manager Server 8.5 Fix pack 2 |
+|  | AdobeFlash Player | JBoss® Enterprise Application Platform (EAP) 7.1.4 |
+|  | | IBM® Content Manager Server 8.5 Fix Pack 2 |
 |  | | IBM® Content Manager Client 8.5 |
 |  | | Microsoft® SQL Server 2016 |
 |  | | Microsoft® Windows Server 2016 |

@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '2471'
-ht-degree: 2%
+source-wordcount: '2403'
+ht-degree: 0%
 
 ---
 
@@ -267,7 +267,7 @@ ht-degree: 2%
 
    `system`
 
-   `rep:cache` （由於我們使用粘性工作階段，因此不需要將此節點同步至不同的發佈者）。
+   `rep:cache` （因為已使用粘性工作階段，您不需要將此節點同步至不同的發佈者）。
 
    ![user-sync-listner](assets/user-sync-listner.png)
 

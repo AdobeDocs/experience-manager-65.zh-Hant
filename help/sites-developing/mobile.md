@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3720'
+source-wordcount: '3722'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ ht-degree: 0%
 
 #### 建立行動元件 {#creating-a-mobile-component}
 
-AEM行動架構允許開發對發出請求的裝置敏感的元件。 下列程式碼範例說明如何在元件jsp中使用AEM行動API，尤其是如何：
+AEM行動架構可讓您開發對發出請求的裝置敏感的元件。 下列程式碼範例說明如何在元件jsp中使用AEM行動API，尤其是如何：
 
 * 從要求取得裝置：
   `Device device = slingRequest.adaptTo(Device.class);`
@@ -355,7 +355,7 @@ AEM支援以裝置使用者端偵測為基礎 `BrowserMap`. `BrowserMap` 在AEM�
 
 >[!NOTE]
 >
-如需使用者端資料庫整合的詳細資訊，請參閱 [使用使用者端HTML程式庫](/help/sites-developing/clientlibs.md).
+>如需使用者端資料庫整合的詳細資訊，請參閱 [使用使用者端HTML程式庫](/help/sites-developing/clientlibs.md).
 
 ### 提供替代連結 {#providing-alternate-links}
 
@@ -374,7 +374,7 @@ AEM支援以裝置使用者端偵測為基礎 `BrowserMap`. `BrowserMap` 在AEM�
 
 >[!NOTE]
 >
-使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
+>使用AEM時，有數種方法可管理此類服務的組態設定；請參閱 [設定OSGi](/help/sites-deploying/configuring-osgi.md) 以取得詳細資訊和建議作法。
 
 ### 定義裝置群組特定URL {#defining-a-device-group-specific-url}
 
@@ -384,7 +384,7 @@ BrowserMap的設計方式可讓您透過建立相同名稱的裝置群組並新�
 
 >[!NOTE]
 >
-如需詳細資訊，請參閱 [自訂的瀏覽器地圖](#creatingacustomisedbrowsermap).
+>如需詳細資訊，請參閱 [自訂的瀏覽器地圖](#creatingacustomisedbrowsermap).
 
 ### 定義以選取器為基礎的URL {#defining-selector-based-urls}
 
@@ -410,7 +410,7 @@ BrowserMap的設計方式可讓您透過建立相同名稱的裝置群組並新�
 
 >[!NOTE]
 >
-如需使用者端資料庫整合的詳細資訊，請參閱 [使用使用者端HTML程式庫](/help/sites-developing/clientlibs.md).
+>如需使用者端資料庫整合的詳細資訊，請參閱 [使用使用者端HTML程式庫](/help/sites-developing/clientlibs.md).
 
 建立自訂後 `BrowserMap` Adobe建議使用下列方法：
 
@@ -520,7 +520,7 @@ request.setAttribute("browsermap.enabled", false);
 
 >[!NOTE]
 >
-此 `wcmmode` 引數已設為 `disabled` 以模擬發佈執行個體的行為。
+>此 `wcmmode` 引數已設為 `disabled` 以模擬發佈執行個體的行為。
 
 覆寫裝置值儲存在Cookie中，因此您不需要新增 `device` 引數至每個 `URL`.
 
@@ -528,7 +528,7 @@ request.setAttribute("browsermap.enabled", false);
 
 >[!NOTE]
 >
-BrowserMap會將覆寫裝置值儲存在名為的Cookie中 `BMAP_device`. 刪除此Cookie可確保CQ會根據您目前的裝置（例如桌上型電腦或行動裝置）提供適當版本的網站。
+>BrowserMap會將覆寫裝置值儲存在名為的Cookie中 `BMAP_device`. 刪除此Cookie可確保CQ會根據您目前的裝置（例如桌上型電腦或行動裝置）提供適當版本的網站。
 
 ## 行動請求處理 {#mobile-request-processing}
 
@@ -564,7 +564,7 @@ AEM會依下列方式處理屬於觸控裝置群組的行動裝置所發出的�
 
 >[!NOTE]
 >
-此 **統計資料** 頁面會在行動裝置首次存取AEM並偵測到時建立。 在此之前，無法使用。
+>此 **統計資料** 頁面會在行動裝置首次存取AEM並偵測到時建立。 在此之前，無法使用。
 
 如果您需要在統計資料中產生專案，可以依照下列步驟進行：
 

@@ -2,7 +2,7 @@
 title: 如何將 Headless 應用程式上線
 description: 在AEM Headless開發人員歷程的這一部分，瞭解如何即時部署Headless應用程式。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 53%
@@ -149,7 +149,7 @@ Node.js是JavaScript執行階段環境，用來處理AEM專案的 `ui.frontend` 
 
 將更新上傳到Cloud Manager後，使用將它們部署到AEM [Cloud Manager的CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html).
 
-<!-- Can't find a parallel link -->
+<!-- Cannot find a parallel link -->
 <!--
 You can start deploying your code by using the Cloud Manager CI/CD pipeline, which is covered extensively [here](/help/implementing/deploying/overview.md).
 -->

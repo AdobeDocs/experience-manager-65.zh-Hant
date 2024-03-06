@@ -7,9 +7,9 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3908'
+source-wordcount: '3909'
 ht-degree: 15%
 
 ---
@@ -249,7 +249,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線到多個Experien
 
 [!DNL Experience Manager] 在中顯示資產的已過期狀態視覺指示器 `Remote Assets Content Finder` 以阻止網站作者在網站上使用資產 [!DNL Sites] 頁面。 如果您使用的資產在 [!DNL Sites] 頁面上，資產無法顯示於 [!DNL Experience Manager] 發佈執行個體。
 
-## 常見問答 {#frequently-asked-questions}
+## 常見問題 {#frequently-asked-questions}
 
 +++**若您需要使用上可用的資產，您應設定「連線資產」。 [!DNL Sites] 部署？**
 
@@ -335,7 +335,7 @@ Experience Manager可讓您將遠端DAM部署作為來源連線到多個Experien
 * 的授權 [!DNL Assets] 必須使用遠端存放庫。
 * 的一或多個授權 [!DNL Sites] 需要以本機編寫部署方式運作。
 
-### 使用狀況 {#usage}
+### 使用情況 {#usage}
 
 * 使用者可在編寫時搜尋遠端資產，並將這些資產拖曳至本機頁面。 不支援其他功能。
 * 擷取作業會於 5 秒後逾時。如果有網路或其他方面的問題，作者擷取資產時就可能遇到問題。作者可從拖曳遠端資產重新嘗試 [!UICONTROL 內容尋找器] 至 [!UICONTROL 頁面編輯器].

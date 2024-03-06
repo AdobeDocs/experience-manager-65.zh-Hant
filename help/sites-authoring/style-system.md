@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1297'
 ht-degree: 1%
 
 ---
@@ -122,7 +122,7 @@ ht-degree: 1%
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
-在設定元件後，AEM會自動將頁面作者設定的樣式插入裝飾元素上，讓AEM自動包裝在每個可編輯元件周圍。 元件本身不需執行任何其他動作，即可讓此情況發生。
+在設定元件後，AEM會自動將頁面作者設定的樣式插入裝飾元素上，讓AEM自動包裝在每個可編輯元件周圍。 元件本身不需要執行任何其他動作，就能讓此動作發生。
 
 ### 在編輯對話方塊中啟用樣式索引標籤 {#enable-styles-tab-edit}
 

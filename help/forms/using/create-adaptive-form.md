@@ -3,9 +3,9 @@ title: 「教學課程：建立最適化表單」
 description: 瞭解如何建立、佈局和預覽最適化表單。 另外，瞭解如何設定提交動作。
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1314'
 ht-degree: 8%
 
 ---
@@ -100,9 +100,9 @@ AEM [!DNL Forms] 提供許多元件，以便在最適化表單上顯示資訊。
      </tr> 
      <tr> 
       <td>允許多行<br /> </td> 
-      <td>停用</td> 
+      <td>已停用</td> 
       <td>已啟用</td> 
-      <td>停用</td> 
+      <td>已停用</td> 
      </tr> 
     </tbody> 
    </table>
@@ -166,7 +166,7 @@ AEM [!DNL Forms] 提供許多元件，以便在最適化表單上顯示資訊。
 
    | 屬性 | 值 |
    |--- |--- |
-   | 從 | `donotreply@weretail.com` |
+   | 來自 | `donotreply@weretail.com` |
    | 至 | `${customer_Email}` |
    | 主旨 | 通知：您已在We.Retail網站上新增運送地址。 |
    | 電子郵件範本 | 您好 `${customer_Name}`，下列地址會新增為您的帳戶的運送地址： <br>`${customer_Name}`， `${customer_Shipping_Address}`， `${customer_State}`， `${customer_ZIPCode}`<br> 謹祝， We.Retail |

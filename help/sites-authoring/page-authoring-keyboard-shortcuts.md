@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 2%
@@ -30,7 +30,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
 |  | `Ctrl-y` | [重做最後一次變更](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | 選取多個段落 |
 |  | `Ctrl-c` | 複製所選段落 |
-|  | `Ctrl-x` | 剪下選取的段落，（剪下的段落在貼上之前不會在UI中消失） |
+|  | `Ctrl-x` | 剪下選取的段落（剪下段落在貼上之前不會在UI中消失） |
 |  | `Ctrl-v` | 貼上先前剪下或複製的段落 |
 |  | `Ctrl-Backspace` | 刪除選取的段落 |
 | **編輯** 模式 — RTF編輯器 | `Ctrl-b` | 粗體 |
@@ -45,7 +45,7 @@ AEM提供各種鍵盤快速鍵。 有些適用於編輯頁面，有些則適用�
 
 >[!NOTE]
 >
->編輯器鍵盤快速鍵一律為作用中 [主控台捷徑已停用](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
+編輯器鍵盤快速鍵一律為作用中 [主控台捷徑已停用](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
 
 ## 作業系統特定修飾元鍵 {#os-specific-modifier-keys}
 

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 0%
@@ -175,7 +175,7 @@ AEM會以單一war檔案的形式進行部署。
    * 取消註解sling.home初始引數並視需要設定此路徑（請參閱一般說明）
    * 重新封裝web.xml檔案
 
-* 將AEM war檔案部署為應用程式（其他設定則使用預設設定）
+* 將AEM war檔案部署為應用程式（對於其他設定，請使用預設設定）
 * 安裝可能需要一些時間……
 * 檢查安裝是否已如一般說明中所述完成（例如，追蹤error.log）
 * 您可以在WebLogic中Web應用程式的「組態」標籤中變更前後關聯根目錄 `/console`

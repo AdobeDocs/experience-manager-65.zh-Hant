@@ -7,9 +7,9 @@ topic-tags: Security
 content-type: reference
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1249'
 ht-degree: 1%
 
 ---
@@ -147,7 +147,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 * 使用者可見及可存取
 * 會為每個屬性定義兩種狀態
-* 允許在兩個已定義的狀態之間進行切換
+* 可讓您在定義的兩種狀態之間切換
 
 這是透過下列專案完成的：
 

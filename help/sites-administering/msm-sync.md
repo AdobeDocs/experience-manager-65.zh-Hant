@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '2672'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>標準轉出設定</td>
-   <td>標準轉出設定，允許於轉出觸發時開始轉出程序，並執行下列動作: 建立、更新、刪除內容以及排序子節點。</td>
+   <td>標準轉出設定，可讓您在轉出觸發時開始轉出程式，並執行下列動作：建立、更新、刪除內容以及排序子節點。</td>
    <td>於轉出</td>
    <td>contentupdate<br /> contentcopy<br /> contentDelete<br /> referencesupdate<br /> 產品更新<br /> orderChildren</td>
   </tr>
@@ -108,7 +108,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td>DPS 發佈轉出設定</td>
-   <td>DPS發佈轉出設定，允許在初始轉出時排除轉出時的FolioProducer繫結屬性，同時在轉出觸發時啟動轉出程式</td>
+   <td>DPS發佈轉出設定，可讓您在初始轉出時排除FolioProducer繫結屬性時，在轉出觸發器中開始轉出程式</td>
    <td>於轉出</td>
    <td>contentupdate<br /> contentcopy<br /> contentDelete<br /> referencesupdate<br /> orderChildren<br /> dpsMetadataFilter</td>
   </tr>

@@ -1,27 +1,27 @@
 ---
-title: 了解編寫基本知識
-description: 了解使用內容片段為 Headless CMS 編寫內容的概念和機制。
+title: 了解製作基本知識
+description: 了解使用內容片段為 Headless CMS 製作內容的概念和機制。
 exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 77%
+source-wordcount: '1694'
+ht-degree: 75%
 
 ---
 
-# AEM Headless 編寫基本知識 {#author-headless-basics}
+# AEM Headless 製作基本知識 {#author-headless-basics}
 
-## 到目前為止 {#story-so-far}
+## 目前進度 {#story-so-far}
 
-在 [AEM Headless 內容作者歷程](overview.md)的一開始，[簡介](introduction.md)部分介紹了和 Headless 內容編寫相關的基本概念和術語。
+在 [AEM Headless 內容作者歷程](overview.md)的一開始，[簡介](introduction.md)部分介紹了和 Headless 內容製作相關的基本概念和術語。
 
-本文以這些內容為基礎，以便您了解如何為 AEM Headless 專案編寫您自己的內容。
+本文以這些內容為基礎，以便您了解如何為 AEM Headless 專案製作您自己的內容。
 
 ## 目標 {#objective}
 
 * **對象**：初學者
-* **目標**：介紹 Headless CMS 編寫的基本知識：
-   * 使用 AEMaaCS 編寫簡介
+* **目標**：介紹 Headless CMS 製作的基本知識：
+   * 使用 AEMaaCS 製作簡介
    * 內容片段簡介
 
 ## 基本處理 {#basic-handling}
@@ -84,7 +84,7 @@ AEM 安裝通常至少包含兩個環境：
 
 您可以使用邊欄選擇器檢視有關專案的其他資訊。 這也能讓您存取其他動作。
 
-![左側邊欄](/help/journey-headless/author/assets/headless-journey-author-navigation-04.png)
+![左側欄](/help/journey-headless/author/assets/headless-journey-author-navigation-04.png)
 
 ## 編寫內容片段 {#authoring-content-fragments}
 
@@ -98,11 +98,11 @@ AEM 安裝通常至少包含兩個環境：
 
 #### 建立資料夾 {#creating-folder}
 
-為此，您可以在資產主控台的&#x200B;**檔案**&#x200B;區段內，建立一系列的資料夾。選擇&#x200B;**建立**&#x200B;選項 (右上角)，然後選擇&#x200B;**資料夾**：
+您可以透過在中建立一系列資料夾來執行此操作 **檔案** 區段建立關聯。 選擇&#x200B;**建立**&#x200B;選項 (右上角)，然後選擇&#x200B;**資料夾**：
 
 ![建立資料夾選項](/help/journey-headless/author/assets/headless-journey-author-folder-01.png)
 
-對話方塊隨即開啟，您可以在其中輸入詳細資料，然後使用確認 **建立**：
+對話框隨即開啟，您可以在其中輸入詳細資料，然後使用「**建立**」來確認：
 
 ![建立資料夾對話框](/help/journey-headless/author/assets/headless-journey-author-folder-02.png)
 
@@ -126,7 +126,7 @@ AEM 安裝通常至少包含兩個環境：
 
 以防萬一...
 
-您可能會得到一個初始資料夾，您可以在其中建立資料夾。這是因為一些設定細節必須套用 (通常由開發人員或系統管理員執行) 到根資料夾。您可能對此不感興趣，但如果有必要，您可以查看&#x200B;**屬性**&#x200B;資料夾中&#x200B;**雲端服務**&#x200B;的&#x200B;**設定**：
+您可能會得到一個初始資料夾，您可以在其中建立資料夾。這是因為一些設定細節必須套用 (通常由開發人員或系統管理員執行) 到根資料夾。您可能對此不感興趣，但如有需要，您可以檢查 **設定** 在 **Cloud Service** 檔案夾的 **屬性**：
 
 ![建立資料夾屬性 - 設定](/help/journey-headless/author/assets/headless-journey-author-folder-03.png)
 
@@ -182,7 +182,7 @@ AEM 安裝通常至少包含兩個環境：
 
 >[!NOTE]
 >
->如需更多詳細資訊，您可以閱讀「變化 - 編寫內容片段」。
+>如需更多詳細資訊，您可以閱讀「變化 - 製作內容片段」。
 
 #### 你 (可能) 不需要擔心的事情 {#what-you-probably-do-not-need-to-worry-about}
 
@@ -223,13 +223,13 @@ AEM 安裝通常至少包含兩個環境：
 
 ## 下一步 {#whats-next}
 
-現在您已經了解基本知識，下一步是[了解參考](references.md)。這將介紹和討論可用的各種參考，以及如何建立片段參考的結構階層，這是 Headless 內容編寫的關鍵部分。
+現在您已經了解基本知識，下一步是[了解參考](references.md)。這將介紹和討論可用的各種參考，以及如何建立片段參考的結構階層，這是 Headless 內容製作的關鍵部分。
 
 ## 其他資源 {#additional-resources}
 
-* [編寫概念](/help/sites-authoring/author.md)
+* [製作概念](/help/sites-authoring/author.md)
 
-* [基本處理](/help/sites-authoring/basic-handling.md) - 此頁面主要根據&#x200B;**Sites** 主控台，但許多/大部分功能也和編寫 **Assets** 主控台下的&#x200B;**內容片段**&#x200B;相關。
+* [基本處理](/help/sites-authoring/basic-handling.md) - 此頁面主要根據&#x200B;**Sites** 主控台，但許多/大部分功能也和製作 **Assets** 主控台下的&#x200B;**內容片段**&#x200B;相關。
 
    * [導覽面板](/help/sites-authoring/basic-handling.md#navigation-panel)
 

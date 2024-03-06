@@ -5,9 +5,9 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '574'
 ht-degree: 6%
 
 ---
@@ -74,42 +74,42 @@ Content Services Default Renderer可填補現成Sling預設和自訂開發之間
   </tr>
   <tr>
    <td>includeComponents</td>
-   <td>字串[]</td>
+   <td>String[]</td>
    <td>包含所有內容</td>
    <td>sling:resourceType</td>
    <td>從JSON匯出排除具有指定sling：resourceType的節點的詳細資料</td>
   </tr>
   <tr>
    <td>excludeComponents</td>
-   <td>字串[]</td>
+   <td>String[]</td>
    <td>不排除任何專案</td>
    <td>sling:resourceType</td>
    <td>僅包含具有來自JSON匯出之指定sling：resourceType的節點的詳細資料</td>
   </tr>
   <tr>
    <td>excludePropertyPrefix</td>
-   <td>字串[]</td>
+   <td>String[]</td>
    <td>不排除任何專案</td>
    <td>屬性首碼</td>
    <td>從JSON匯出排除以指定首碼開頭的屬性</td>
   </tr>
   <tr>
    <td>excludeproperties</td>
-   <td>字串[]</td>
+   <td>String[]</td>
    <td>不排除任何專案</td>
    <td>屬性名稱</td>
    <td>從JSON匯出排除指定的屬性</td>
   </tr>
   <tr>
    <td>includeProperties</td>
-   <td>字串[]</td>
+   <td>String[]</td>
    <td>包含所有內容</td>
    <td>屬性名稱</td>
    <td><p>如果設定了excludePropertyPrefixes<br /> 這包括指定的屬性，儘管前置詞已被排除，</p> <p>否則（忽略排除屬性）僅包含這些屬性</p> </td>
   </tr>
   <tr>
    <td>includeChildren</td>
-   <td>字串[]</td>
+   <td>String[]</td>
    <td>包含所有內容</td>
    <td>子名稱</td>
    <td>從JSON匯出排除指定的子系</td>
@@ -152,7 +152,7 @@ Content Services Default Renderer可填補現成Sling預設和自訂開發之間
   </tr>
   <tr>
    <td>&lt;SELECTOR_TO_INC&gt;</td>
-   <td>字串[] </td>
+   <td>String[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
    <td>對於下列sling資源型別，請勿傳回預設的CaaS json匯出。<br /> 將資源轉譯為，以傳回客戶json匯出；<br /> &lt;resource&gt;.&lt;selector_to_inc&gt;.json </td>

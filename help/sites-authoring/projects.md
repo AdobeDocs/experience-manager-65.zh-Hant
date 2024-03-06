@@ -1,11 +1,11 @@
 ---
 title: 專案
-description: 專案可讓您將資源群組到一個實體中，其共同的共用環境使您的專案容易管理.
+description: 專案可讓您將資源分組到一個實體中，其共用的共用環境可讓您輕鬆管理專案。
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 32%
+source-wordcount: '1360'
+ht-degree: 27%
 
 ---
 
@@ -78,7 +78,7 @@ ht-degree: 32%
 
 專案由您想要一起管理的不同資訊型別組成。 此資訊由不同的專案表示 **圖磚**.
 
-您可以將以下圖磚與您的專案相關聯。
+您可以擁有下列與專案關聯的圖磚。
 
 * [Assets](#assets)
 * [資產集合](#asset-collections)
@@ -102,7 +102,7 @@ ht-degree: 32%
 
 ![資產圖磚](assets/project-tile-assets.png)
 
-您直接將資產上傳到圖磚。
+您直接在圖磚中上傳資產。
 
 ### 資產集合 {#asset-collections}
 
@@ -221,9 +221,9 @@ ht-degree: 32%
 
 ### 自動群組建立 {#auto-group-creation}
 
-當您建立專案並將使用者新增至各種角色時，系統會自動建立與專案相關的群組，以管理相關的權限。
+當您建立專案並將使用者新增至各種角色時，系統會自動建立與專案關聯的群組以管理關聯的許可權。
 
-例如，名為Myproject的專案會有三個群組 **Myproject Owners**、 **Myproject Editors**、 **Myproject Obsertors**。
+例如，名為Myproject的專案將包含三個群組 **Myproject所有者**， **Myproject編輯器**， **Myproject觀察員**.
 
 如果刪除專案，則只有在您選取適當的選項時，才會刪除這些群組 [刪除專案時。](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) 管理員也可以手動刪除中的群組 **工具** > **安全性** > **群組**.
 

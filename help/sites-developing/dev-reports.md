@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 0f898fd81d2952b01eac7e6b8aa9970868009b15
 workflow-type: tm+mt
-source-wordcount: '5182'
+source-wordcount: '5177'
 ht-degree: 0%
 
 ---
@@ -51,14 +51,14 @@ Adobe Experience Manager (AEM)提供了一系列 [標準報表](/help/sites-admi
 >  `P:<name> = <value>` ：說明屬性 `<name>` 該值必須設定為 `<value>`.
 >
 >* 縮排顯示節點之間的階層式相依性。
->* 專案分隔方式 |代表可能專案的清單；例如，型別或名稱；例如， `String|String[]` 表示屬性可為字串或字串[].
+>* 專案分隔方式 | 代表可能專案的清單；例如，型別或名稱；例如， `String|String[]` 表示屬性可為字串或字串[].
 >
 >* `[]` 描繪陣列；例如String[] 或節點陣列，如 [查詢定義](#query-definition).
 >
 >除非另有說明，否則預設型別為：
 >
 >* 節點 —  `nt:unstructured`
->* 屬性 - `String`
+>* 屬性 —  `String`
 
 ## 報告框架 {#reporting-framework}
 
@@ -359,7 +359,7 @@ N:charting
          * `totals` ( `Boolean`)
 
            如果額外的一行顯示 **總計** 應該會顯示。
-預設: `false`
+預設： `false`
 
          * `series` ( `Long`)
 
@@ -679,7 +679,7 @@ N:definitions
 
 以下解析的常數值 `VersionCreated` 至字串 `New version created`.
 
-請參閱 `/libs/cq/reporting/components/auditreport/typecol/definitions/data`.
+另請參閱 `/libs/cq/reporting/components/auditreport/typecol/definitions/data`.
 
 ```xml
 N:data
@@ -692,7 +692,7 @@ N:data
 
 解析對應頁面之jcr：content （子項）節點上jcr：description屬性的路徑值。
 
-請參閱 `/libs/cq/reporting/components/compreport/pagecol/definitions/data`.
+另請參閱 `/libs/cq/reporting/components/compreport/pagecol/definitions/data`.
 
 ```xml
 N:data
@@ -705,7 +705,7 @@ N:data
 
 以下解析路徑 `/content/.../page` 至的內容 `jcr:title` 屬性，這表示頁面路徑會解析為頁面標題。
 
-請參閱 `/libs/cq/reporting/components/auditreport/pagecol/definitions/data`.
+另請參閱 `/libs/cq/reporting/components/auditreport/pagecol/definitions/data`.
 
 ```xml
 N:data
@@ -719,7 +719,7 @@ N:data
 
 下列在值前面加上 `de` 以路徑副檔名 `/libs/wcm/core/resources/languages`，則從屬性中取得值 `language`，解析國家/地區代碼 `de` 至語言說明 `German`.
 
-請參閱 `/libs/cq/reporting/components/userreport/languagecol/definitions/data`.
+另請參閱 `/libs/cq/reporting/components/userreport/languagecol/definitions/data`.
 
 ```xml
 N:data
@@ -1013,17 +1013,17 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 
 它們使用（標準）對話方塊，您可以針對個別類屬元件自訂該對話方塊。 此對話方塊可讓報告使用者定義報告頁面上一般欄的欄屬性（使用功能表選項） **欄屬性……**)。
 
-範例為 **通用** 的欄 **使用者報告**. 請參閱 `/libs/cq/reporting/components/userreport/genericcol`.
+範例為 **通用** 的欄 **使用者報告**. 另請參閱 `/libs/cq/reporting/components/userreport/genericcol`.
 
 若要將欄設為類屬：
 
 * 設定 `type` 欄的屬性 `definition` 節點至 `generic`.
 
-  請參閱 `/libs/cq/reporting/components/userreport/genericcol/definitions`
+  另請參閱 `/libs/cq/reporting/components/userreport/genericcol/definitions`
 
 * 在欄的「 」下指定（標準）對話方塊定義 `definition` 節點。
 
-  請參閱 `/libs/cq/reporting/components/userreport/genericcol/definitions/dialog`
+  另請參閱 `/libs/cq/reporting/components/userreport/genericcol/definitions/dialog`
 
    * 對話方塊的欄位必須參照與對應元件屬性相同的名稱，包括其路徑。
 
@@ -1033,7 +1033,7 @@ Generic欄是擴充功能，其中（大部分）欄定義儲存在欄節點的�
 
 * 定義編輯組態。
 
-  請參閱 `/libs/cq/reporting/components/userreport/genericcol/cq:editConfig`
+  另請參閱 `/libs/cq/reporting/components/userreport/genericcol/cq:editConfig`
 
 * 使用標準AEM方法來定義（其他）欄屬性。
 

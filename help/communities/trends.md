@@ -7,10 +7,10 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 2a4297e4-2d88-4fa6-8fea-3fea06753605
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 4%
+source-wordcount: '343'
+ht-degree: 0%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 4%
   要列出的專案數。
 預設值為10。
 
-* **活動類型**
+* **活動型別**
 
   選取下列其中一項：
 
@@ -84,7 +84,7 @@ ht-degree: 4%
 
   預設值為「檢視」。
 
-* **時間段**
+* **時段**
 
   選取下列其中一項：
 
@@ -92,7 +92,7 @@ ht-degree: 4%
    * `Last 7 days`
    * `Last 30 days`
    * `Last 90 days`
-   * `This year (since Jan 1st)`
+   * `This year (since Jan 1)`
    * `Total`
 
   預設為 `Total`.

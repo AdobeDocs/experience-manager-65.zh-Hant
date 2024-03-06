@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '4941'
+source-wordcount: '4920'
 ht-degree: 3%
 
 ---
@@ -220,7 +220,7 @@ static.css檔案與影像範例
 1. 在資料夾樹狀結構中，選取 **網站** 資料夾，然後按一下 **新增** > **新頁面**.
 1. 在 **建立頁面** 視窗，輸入下列內容：
 
-   * 標題: `My Website`
+   * 標題： `My Website`
    * 名稱：`mywebsite`
    * 選取 `My Website Content Page Template`
 
@@ -418,9 +418,9 @@ static.css檔案與影像範例
 
    * **標籤**： `topnav`
 
-   * **標題**: `My Top Navigation Component`
+   * **標題**： `My Top Navigation Component`
 
-   * **說明**: `This is My Top Navigation Component`
+   * **說明**： `This is My Top Navigation Component`
 
 1. 按一下 **下一個** 直到您進入最後一個按一下視窗為止 **確定**. 儲存您的變更。
 
@@ -461,7 +461,7 @@ static.css檔案與影像範例
    <div class="topnav">topnav</div>
    ```
 
-   替換為:
+   替換為：
 
    ```xml
    <cq:include path="topnav" resourceType="mywebsite/components/topnav" />
@@ -674,9 +674,9 @@ static.css檔案與影像範例
 
       * 名稱：`jcr:description`
       * 類型：`String`
-      * 值: `This is a description of the Product 1!.`
+      * 值： `This is a description of the Product 1!.`
 
-   1. 按一下&#x200B;**「新增」**。
+   1. 按一下 **新增**.
    1. 在 **屬性** 標籤，使用下列值建立另一個屬性：
 
       * 名稱：日期
@@ -695,7 +695,7 @@ static.css檔案與影像範例
       * 型別：字串
       * 值：這是產品2的說明！。
 
-   1. 按一下&#x200B;**「新增」**。
+   1. 按一下 **新增**.
    1. 在相同文字方塊中，將先前的值取代為下列值：
 
       * 名稱：日期
@@ -831,7 +831,7 @@ static.css檔案與影像範例
 
 1. ![chlimage_1-44](assets/chlimage_1-44.png)
 
-1. 作為清單根的路徑，請輸入： `/content/mywebsite/en`. 按一下「確定」。頁面上的listchildren元件現在看起來如下所示：
+1. 作為清單根的路徑，請輸入： `/content/mywebsite/en`. 按一下「確定」。 頁面上的listchildren元件現在看起來如下所示：
 
    ![chlimage_1-45](assets/chlimage_1-45.png)
 
@@ -859,9 +859,9 @@ static.css檔案與影像範例
 1. 在CRXDE Lite中，以滑鼠右鍵按一下/apps/mywebsite/components，然後選擇 **建立**，然後 **建立元件**.
 1. 在「建立元件」對話方塊中輸入下列屬性值，然後按一下「下一步」：
 
-   * 標籤: `logo`.
-   * 標題: `My Logo Component`.
-   * 說明: `This is My Logo Component`.
+   * 標籤： `logo`.
+   * 標題： `My Logo Component`.
+   * 說明： `This is My Logo Component`.
 
 1. 按一下「下一步」 ，直到到達對話方塊的最後一個面板為止，然後按一下 **確定**.
 
@@ -916,7 +916,7 @@ static.css檔案與影像範例
 
       * **標籤：** `design_dialog`
 
-      * **標題:** `Logo (Design)`
+      * **標題：** `Logo (Design)`
 
 1. 以滑鼠右鍵按一下design_dialog分支中的tab1節點，然後按一下「刪除」。 按一下「儲存全部」。
 1. 在 `design_dialog/items/items`節點，建立名為的節點 `img` 型別 `cq:Widget`. 新增下列屬性，然後按一下「儲存全部」：
@@ -925,7 +925,7 @@ static.css檔案與影像範例
    |---|---|---|
    | fileNameParameter | 字串 | ./imageName |
    | fileReferenceParameter | 字串 | ./imageReference |
-   | 名稱 | 字串 | ./影像 |
+   | 名稱 | 字串 | ./image |
    | 標題 | 字串 | 影像 |
    | xtype | 字串 | html5smartimage |
 
@@ -968,7 +968,7 @@ public class img_GET extends AbstractImageServlet {
 
     protected Layer createLayer(ImageContext c)
             throws RepositoryException, IOException {
-        /* don't create the layer yet. handle everything later */
+        /* do not create the layer yet. handle everything later */
         return null;
     }
 
@@ -1054,7 +1054,7 @@ public class img_GET extends AbstractImageServlet {
    <div>trail</div>
    ```
 
-   替換為:
+   替換為：
 
    ```xml
    <cq:include path="trail" resourceType="foundation/components/breadcrumb" />
@@ -1075,7 +1075,7 @@ public class img_GET extends AbstractImageServlet {
    <div>title</div>
    ```
 
-   替換為:
+   替換為：
 
    ```xml
    <cq:include path="title" resourceType="foundation/components/title" />
@@ -1120,7 +1120,7 @@ public class img_GET extends AbstractImageServlet {
 
 #### 建立影像元件 {#creating-the-image-component-1}
 
-1. 在 `/apps/mywebsite/components/logo` 節點上按一下右鍵，然後按一下「複製」。
+1. 用滑鼠右鍵按一下 `/apps/mywebsite/components/logo` 節點，然後按一下複製。
 1. 用滑鼠右鍵按一下 `/apps/mywebsite/components` 節點，然後按一下「貼上」。
 1. 用滑鼠右鍵按一下 `Copy of logo` 節點，按一下重新命名，刪除現有文字並鍵入 `image`.
 
@@ -1194,7 +1194,7 @@ public class img_GET extends AbstractImageServlet {
 
 | 名稱 | 類型 | 值 |
 |---|---|---|
-| 接受 | 字串 | image/(gif | jpeg | PNG) |
+| 接受 | 字串 | image/(gif | jpeg | png) |
 | 個群組 | 字串 | 媒體 |
 | propertyName | 字串 | ./imageReference |
 
@@ -1250,7 +1250,7 @@ public class img_GET extends AbstractImageServlet {
 1. 在工具列下，建立下列頁面：
 
    * 連絡人
-   * 意見反應
+   * 意見回饋
    * 登入
    * 搜尋
 
@@ -1520,7 +1520,7 @@ public class img_GET extends AbstractImageServlet {
    <div>iparsys</div>
    ```
 
-   替換為:
+   替換為：
 
    ```java
    <cq:include path="rightpar" resourceType="foundation/components/iparsys" />

@@ -5,9 +5,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1502'
 ht-degree: 1%
 
 ---
@@ -230,7 +230,7 @@ AEM Forms入口網站草稿和提交元件可讓使用者將其表單儲存為�
    `key` varchar(255) NOT NULL,
    `id` varchar(60) NOT NULL,
    PRIMARY KEY (`id`,`key`),
-   CONSTRAINT ‘additionalmetadatatable_fk’ FOREIGN KEY (`id`) REFERENCES `metadata` (`id`) ON DELETE CASCADE
+   CONSTRAINT 'additionalmetadatatable_fk' FOREIGN KEY (`id`) REFERENCES `metadata` (`id`) ON DELETE CASCADE
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
@@ -397,7 +397,7 @@ Forms Portal的資料庫實作會使用其他中繼資料表格。 表格具有�
 
    >[!NOTE]
    >
-   >此指令碼適用於現成(OOTB)附件Widget元件。 如果您已自訂OOTB附件Widget，請變更上述指令碼以納入個別變更。
+   >此指令碼適用於現成可用的附件Widget元件。 如果您已自訂立即可用的附件Widget，請變更上述指令碼以納入個別變更。
 
 1. 將下列屬性新增至步驟2中建立的資料夾，然後按一下 **[!UICONTROL 全部儲存]**.
 

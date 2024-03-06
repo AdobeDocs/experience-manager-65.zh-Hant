@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '913'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ AEM Brackets擴充功能支援Brackets 1.0或更新版本。
 
 ![chlimage_1-55](assets/chlimage_1-55a.png)
 
-專案設定允許定義：
+「專案設定」可讓您定義下列專案：
 
 1. 伺服器URL (例如， `http://localhost:4502`)
 1. 是否容忍沒有有效HTTPS憑證的伺服器（除非必要，否則請保持未勾選的狀態）
@@ -110,7 +110,7 @@ AEM Brackets擴充功能針對中定義的篩選規則所允許的檔案和資�
 
 ### 完整內容套件同步 {#full-content-package-synchronization}
 
-在 **AEM** 功能表， **匯出內容封裝** 或 **匯入內容封裝** 選項可讓整個專案與伺服器同步。
+在 **AEM** 功能表， **匯出內容封裝** 或 **匯入內容封裝** 選項可讓您將整個專案與伺服器同步。
 
 ![chlimage_1-57](assets/chlimage_1-57a.png)
 

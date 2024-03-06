@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 docset: aem65
 exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2957'
+source-wordcount: '2945'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ Day CQ Content Sync Manager服務可控制Content Sync的存取權。 設定此�
 * **路徑** - /content/dam下的資產資料夾路徑。
 * **轉譯**  — 型別是一組字串，可讓使用者指定要使用哪些轉譯，而不是預設影像。 下列清單總結列出一些現成的轉譯，但您也可以使用工作流程建立的任何轉譯：
 
-   * *原始文件*
+   * *原始*
    * *cq5dam.thumbnail.48.48.png*
    * *cq5dam.thumbnail.319.319.png*
    * *cq5dam.thumbnail.140.100.png*

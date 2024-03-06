@@ -8,9 +8,9 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
-source-git-commit: cc219931430ba571745e6ef254a034a689acd1cf
+source-git-commit: 886edbf0e98f5cdee176aaa0a7dffcf18b1a7cc2
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '347'
 ht-degree: 2%
 
 ---
@@ -31,11 +31,12 @@ ht-degree: 2%
 | 資產 — 限制型別 | 最佳實務 | 強加的限制 |
 | --- | --- | --- |
 | **影像**  — 每個影像的智慧型裁切數目 | 5 | 100 |
-| **所有集合**  — 每組重複資產數 | 無重複專案 | 20 |
+| **所有集合**  — 每組重複資產數 | 無重複專案 | 20‡ |
 | **所有集合**  — 每組資產數量上限 | 每組5至10個影像 | 1000 |
 | **迴轉集**  — 每個2D集的最大列/欄數 | 每組12至18個影像 | 1000 |
 | **PDF**  — 要考慮進行擷取的PDF最大頁數 |  | 100 (適用於所有PDF) |
 
+‡最佳實務是集合中不要有重複的資產。 單一資產的限製為20個重複專案。 如果您為該資產新增另一個重複專案（在該集合內），請求會傳回錯誤或忽略重複專案。
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 
 ## Dynamic Media不支援的網頁瀏覽器和作業系統組合 {#unsupported-browser-os}

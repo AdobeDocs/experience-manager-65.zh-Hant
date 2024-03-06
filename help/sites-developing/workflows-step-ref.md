@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '3229'
+source-wordcount: '3227'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 1%
 
 * **透過電子郵件通知使用者**
 
-   * 當工作流程到達步驟時，您可以透過傳送電子郵件通知參與者。
+   * 當工作流程到達步驟時，透過傳送電子郵件通知參與者來通知參與者。
    * 如果啟用，系統會傳送電子郵件給屬性定義的使用者 **使用者/群組**，或群組的每個成員（若已定義群組）。
 
 * **使用者/群組**
@@ -106,7 +106,7 @@ ht-degree: 1%
 
 若要設定此步驟，請編輯並使用下列標籤：
 
-* [常見](#step-properties-common-tab)
+* [一般](#step-properties-common-tab)
 * **容器**
 
    * **子工作流程**：選取要啟動的工作流程。
@@ -124,7 +124,7 @@ ht-degree: 1%
 
 若要設定此步驟，請編輯並使用下列標籤：
 
-* [常見](#step-properties-common-tab)
+* [一般](#step-properties-common-tab)
 * **程式**
 
    * **目標步驟**：選取評估路由運算式的條件後要執行的步驟。
@@ -235,7 +235,7 @@ A **參與者步驟** 可讓您指派特定動作的所有權。 只有在使用
 
 若要設定此步驟，請編輯並使用下列標籤：
 
-* [常見](#step-properties-common-tab)
+* [一般](#step-properties-common-tab)
 * [使用者/群組](#step-properties-user-group-tab)
 
 >[!NOTE]
@@ -262,7 +262,7 @@ A **參與者步驟** 可讓您指派特定動作的所有權。 只有在使用
 
 若要設定此步驟，請編輯並使用下列標籤：
 
-* [常見](#step-properties-common-tab)
+* [一般](#step-properties-common-tab)
 * [使用者/群組](#step-properties-user-group-tab)
 * **對話方塊**
 
@@ -379,7 +379,7 @@ A **參與者步驟** 可讓您指派特定動作的所有權。 只有在使用
 
 若要設定此步驟，請編輯並使用下列標籤：
 
-* [常見](#step-properties-common-tab)
+* [一般](#step-properties-common-tab)
 * **參與者選擇器**
 
    * **參與者選擇器**：的名稱 [您建立的參與者選擇器](#developingtheparticipantchooser).
@@ -507,7 +507,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 若要設定此步驟，請編輯並使用下列標籤：
 
-* [常見](#step-properties-common-tab)
+* [一般](#step-properties-common-tab)
 * [使用者/群組](#step-properties-user-group-tab)
 * **表單**
 
@@ -547,7 +547,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 若要設定此步驟，請編輯並使用下列標籤：
 
-* [常見](#step-properties-common-tab)
+* [一般](#step-properties-common-tab)
 * **引數**
 
    * **參與者**：指定可供選取的使用者清單。 若要新增使用者至清單，請按一下 **新增專案** 和輸入使用者節點的主目錄路徑或使用者ID。 使用者的順序不會影響被指派工作專案的可能性。
@@ -560,7 +560,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 若要設定此步驟，請使用下列標籤進行編輯：
 
-* [常見](#step-properties-common-tab)
+* [一般](#step-properties-common-tab)
 
 ## 程序步驟 {#process-step}
 
@@ -572,7 +572,7 @@ A **程式步驟** 執行ECMAScript或呼叫OSGi服務以執行自動處理。
 
 若要設定此步驟，請編輯並使用下列標籤：
 
-* [常見](#step-properties-common-tab)
+* [一般](#step-properties-common-tab)
 * **程式**
 
    * **程式**：要執行的程式實作。 使用下拉式功能表選取ECMAScript或OSGi服務。 如需下列相關資訊：
@@ -594,7 +594,7 @@ A **程式步驟** 執行ECMAScript或呼叫OSGi服務以執行自動處理。
 
 若要設定此步驟，請編輯並使用下列標籤：
 
-* [常見](/help/sites-developing/workflows-step-ref.md#step-properties-common-tab)
+* [一般](/help/sites-developing/workflows-step-ref.md#step-properties-common-tab)
 * **對應**
 
    * **選取變數：** 使用此選項可選取變數以設定其值。

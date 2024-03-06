@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 7c3d0dac-4e19-4eb3-a43d-909d526acd55
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1540'
+source-wordcount: '1543'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/custom-submit-action-form.html) |
 | AEM 6.5 | 本文章 |
 
-調適型表單需要提交動作來處理使用者指定的資料。 提交動作會決定使用最適化表單提交之資料所執行的工作。 Adobe Experience Manager (AEM)包含 [OOTB提交動作](../../forms/using/configuring-submit-actions.md) 會示範您可使用使用者提交的資料執行的自訂工作。 例如，您可以執行工作，例如傳送電子郵件或儲存資料。
+調適型表單需要提交動作來處理使用者指定的資料。 提交動作會決定使用最適化表單提交之資料所執行的工作。 Adobe Experience Manager (AEM)包含 [現成可用的提交動作](../../forms/using/configuring-submit-actions.md) 會示範您可使用使用者提交的資料執行的自訂工作。 例如，您可以執行工作，例如傳送電子郵件或儲存資料。
 
 ## 提交動作的工作流程 {#workflow-for-a-submit-action}
 
@@ -84,7 +84,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 >[!NOTE]
 >
->作者會提供重新導向URL （使用感謝頁面設定）。 [OOTB提交動作](../../forms/using/configuring-submit-actions.md) 使用重新導向URL，從轉送路徑參照的資源重新導向瀏覽器。
+>作者會提供重新導向URL （使用感謝頁面設定）。 [現成可用的提交動作](../../forms/using/configuring-submit-actions.md) 使用重新導向URL，從轉送路徑參照的資源重新導向瀏覽器。
 >
 >您可以編寫自訂Submit動作，將請求轉發到資源或servlet。 Adobe建議在處理完成時，為轉送路徑執行資源處理的指令碼會將要求重新導向至重新導向URL。
 
@@ -99,11 +99,11 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
    * **guideComponentType** 字串和值的型別 **fd/af/components/guidesubmittype**
    * **guideDataModel** 字串型別，指定適用於提交動作的最適化表單型別。 **xfa** 支援XFA型最適化表單，但 **xsd** 支援XSD型最適化表單。 **基本** 不使用XDP或XSD的最適化表單支援。 若要顯示多種最適化表單型別的動作，請新增對應的字串。 以逗號分隔每個字串。 例如，若要讓動作顯示在XFA和XSD型最適化表單上，請指定值 **xfa** 和 **xsd** （分別）。
 
-   * **jcr：description** 型別字串的。 此屬性的值會顯示在「最適化表單編輯」對話方塊之「提交動作」索引標籤的「提交」動作清單中。 OOTB動作會存在於該位置的CRX存放庫中 **/libs/fd/af/components/guidesubmittype**.
+   * **jcr：description** 型別字串的。 此屬性的值會顯示在「最適化表單編輯」對話方塊之「提交動作」索引標籤的「提交」動作清單中。 現成的動作會顯示在位置的CRX存放庫中 **/libs/fd/af/components/guidesubmittype**.
 
 ## 建立自訂提交動作 {#creating-a-custom-submit-action}
 
-執行以下步驟來建立自訂提交動作，將資料儲存在CRX存放庫中，然後傳送電子郵件給您。 最適化表單包含OOTB提交動作存放區內容（已棄用），可將資料儲存在CRX存放庫。 此外，CQ提供 [郵件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant) 可用於傳送電子郵件的API。 使用Mail API之前， [設定](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en&amp;wcmmode=disabled) 經由系統主控台的Day CQ Mail服務。 您可以重複使用「儲存內容（已棄用）」動作，將資料儲存在存放庫中。 存放區內容（已棄用）動作可在CRX存放庫中的/libs/fd/af/components/guidessubmittype/store位置取得。
+執行以下步驟來建立自訂提交動作，將資料儲存在CRX存放庫中，然後傳送電子郵件給您。 最適化表單包含現成的提交動作儲存內容（已棄用），可將資料儲存在CRX存放庫。 此外，CQ提供 [郵件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant) 可用於傳送電子郵件的API。 使用Mail API之前， [設定](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en&amp;wcmmode=disabled) 經由系統主控台的Day CQ Mail服務。 您可以重複使用「儲存內容（已棄用）」動作，將資料儲存在存放庫中。 存放區內容（已棄用）動作可在CRX存放庫中的/libs/fd/af/components/guidessubmittype/store位置取得。
 
 1. 在URL https://登入CRXDE Lite&lt;server>：&lt;port>/crx/de/index.jsp. 在/apps/custom_submit_action資料夾中建立具有sling：Folder屬性並命名為store_and_mail的節點。 建立custom_submit_action資料夾（如果尚未存在）。
 
@@ -139,7 +139,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
    將post.jsp.jspPOST碼新增至您的動作。 (/apps/custom_submit_action/store_and_mail/)。
 
-   執行OOTB存放區動作(post.javaScript.jspPOST碼)。 使用 [FormsHelper.runAction](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)(java.lang.String， java.lang.String， org.apache.sling.api.resource.Resource， org.apache.sling.api.SlingHttpServletRequest， org.apache.sling.api.SlingHttpServletResponse) CQ在您的程式碼中提供，以執行「儲存」動作的API。 在JSP檔案中新增下列程式碼：
+   執行現成可用的商店動作(post.space.jspPOST檔)。 使用 [FormsHelper.runAction](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hant)(java.lang.String， java.lang.String， org.apache.sling.api.resource.Resource， org.apache.sling.api.SlingHttpServletRequest， org.apache.sling.api.SlingHttpServletResponse) CQ在您的程式碼中提供，以執行「儲存」動作的API。 在JSP檔案中新增下列程式碼：
 
    `FormsHelper.runAction("/libs/fd/af/components/guidesubmittype/store", "post", resource, slingRequest, slingResponse);`
 

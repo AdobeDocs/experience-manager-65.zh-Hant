@@ -9,9 +9,9 @@ docset: aem65
 feature: Image Sets,Asset Management
 role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 886edbf0e98f5cdee176aaa0a7dffcf18b1a7cc2
 workflow-type: tm+mt
-source-wordcount: '2196'
+source-wordcount: '2274'
 ht-degree: 5%
 
 ---
@@ -38,8 +38,10 @@ ht-degree: 5%
 
 | 限制型別 | 最佳實務 | 強加的限制 |
 | --- | --- | --- |
-| 每個集的重複資產數 | 無重複專案 | 20 |
+| 每個集的重複資產數 | 無重複專案 | 20‡ |
 | 每組影像的最大數量 | 每組5至10個影像 | 1000 |
+
+‡最佳實務是集合中不要有重複的資產。 單一資產的限製為20個重複專案。 如果您為該資產新增另一個重複專案（在該集合內），請求會傳回錯誤或忽略重複專案。
 
 另請參閱 [Dynamic Media限制](/help/assets/limitations.md).
 
@@ -141,8 +143,10 @@ ht-degree: 5%
 
 | 限制型別 | 最佳實務 | 強加的限制 |
 | --- | --- | --- |
-| 每個集的重複資產數 | 無重複專案 | 20 |
+| 每個集的重複資產數 | 無重複專案 | 20‡ |
 | 每組影像的最大數量 | 每組5至10個影像 | 1000 |
+
+‡最佳實務是集合中不要有重複的資產。 單一資產的限製為20個重複專案。 如果您為該資產新增另一個重複專案（在該集合內），請求會傳回錯誤或忽略重複專案。
 
 另請參閱 [Dynamic Media限制](/help/assets/limitations.md).
 

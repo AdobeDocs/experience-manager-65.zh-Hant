@@ -3,7 +3,7 @@ title: 設定RTF編輯器外掛程式
 description: 瞭解如何設定Adobe Experience Manager RTF編輯器外掛程式，以啟用個別功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '4391'
 ht-degree: 1%

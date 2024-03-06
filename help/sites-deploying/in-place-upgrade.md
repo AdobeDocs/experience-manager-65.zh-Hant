@@ -4,9 +4,9 @@ description: 瞭解如何執行AEM 6.5的就地升級。
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1238'
+source-wordcount: '1214'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 如果您從6.3升級，請略過本節。雖然提供的crx2oak設定檔應符合大部分客戶的需求，但有時仍需要其他引數。 如果您在移轉期間發生錯誤，可能是環境的某些方面需要提供額外的設定選項。 若是如此，您可能會遇到下列錯誤：
 
-**將不會複製查核點，因為未指定外部資料存放區。 這將導致在第一次啟動時完整的存放庫重新索引。 使用 — skip-checkpoints強制移轉，或參閱https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migration以取得詳細資訊。**
+**不會複製查核點，因為未指定外部資料存放區。 這將導致在第一次啟動時完整的存放庫重新索引。 使用 — skip-checkpoints強制移轉，或參閱https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migration以取得詳細資訊。**
 
 由於某種原因，移轉程式需要存取資料存放區中的二進位檔案，但找不到該二進位檔案。 若要指定資料存放區組態，請在以下欄位中加入下列標幟： `<<ADDITIONAL_FLAGS>>` 移轉命令的一部分：
 

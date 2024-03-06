@@ -6,7 +6,7 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: aaed75e6-8849-46a8-b986-896ad729adda
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '3842'
 ht-degree: 0%
@@ -85,7 +85,7 @@ ht-degree: 0%
    * 資料字典中只允許使用複合型別作為頂層DDE。
    * 名稱、參考名稱和元素型別是資料字典和DDE的必要欄位。
    * 參照名稱必須是唯一的。
-   * 父項DDE （複合）不能有兩個同名的子項。
+   * 父DDE （複合）不能有兩個同名的子系。
    * 列舉僅包含基本字串型別。
 
    如需有關「複合」、「集合」和「基本」元素以及使用資料字典元素的詳細資訊，請參閱 [將資料字典元素對應至XML綱要](#mappingddetoschema).
@@ -298,7 +298,7 @@ ht-degree: 0%
    <td>DDE的子型別： ENUM。 僅允許用於STRING和NUMBER elementType。</td>
   </tr>
   <tr>
-   <td>金鑰</td>
+   <td>關鍵</td>
    <td>布林值</td>
    <td>表示DDE是否為關鍵元素的布林值欄位。</td>
   </tr>

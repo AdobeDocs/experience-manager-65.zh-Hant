@@ -5,9 +5,9 @@ contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -30,23 +30,23 @@ ht-degree: 1%
 * 控制文字的基本樣式，例如標籤層級的字型大小、樣式和文字。
 * 使用內容選擇器變更範本中的影像。
 * 預覽範本編輯。
-* 合併多個範本檔案以建立多頁成品。
+* 合併多個範本檔案，以便建立多頁成品。
 
 當您選擇附屬資料的範本時， [!DNL Experience Manager Assets] 建立可編輯的範本復本。 原始範本會保留，以確保您的全域招牌保持不變，且可重複使用以強制執行品牌一致性。
 
 您可以在父資料夾中以INDD、PDF或JPG格式匯出更新的檔案。 您也可以將這些格式的輸出下載到您的本機檔案系統。
 
-## 建立附屬資料 {#creating-a-collateral}
+## 建立附屬專案 {#creating-a-collateral}
 
-假設您要建立數位可列印的宣傳品，例如手冊、傳單和廣告，以用於即將推出的行銷活動，並與全球奧特萊斯商店分享。 根據範本建立宣傳品有助於跨管道提供統一的客戶體驗。 設計人員可使用創意解決方案（例如）建立行銷活動範本（單頁或多頁） [!DNL InDesign] 並上傳範本至 [!DNL Experience Manager Assets] 敬請參考使用： 在建立附屬資料之前，請上傳一或多個INDD範本並在中提供 [!DNL Experience Manager] 事前準備。
+假設您要建立數位可列印的宣傳品，例如手冊、傳單和廣告，以用於即將推出的行銷活動，並與全球奧特萊斯商店分享。 根據範本建立宣傳品有助於跨管道提供統一的客戶體驗。 設計人員可使用創意解決方案（例如）建立行銷活動範本（單頁或多頁） [!DNL InDesign] 並上傳範本至 [!DNL Experience Manager Assets] 敬請參考使用： 在建立附屬品之前，請上傳一或多個INDD範本並在中提供 [!DNL Experience Manager] 事前準備。
 
-1. 在 [!DNL Experience Manager] 介面點按 [!UICONTROL 資產].
+1. 在 [!DNL Experience Manager] 介面，選取 [!UICONTROL 資產].
 
 1. 從選項中，選擇 **[!UICONTROL 範本]**.
 
    ![chlimage_1-101](assets/chlimage_1-306.png)
 
-1. 按一下 **[!UICONTROL 建立]**，然後從功能表中選擇您要建立的附屬資料。 例如，選擇 **[!UICONTROL 手冊]**.
+1. 選取 **[!UICONTROL 建立]**，然後從功能表中選擇您要建立的附屬資料。 例如，選擇 **[!UICONTROL 手冊]**.
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
@@ -64,14 +64,14 @@ ht-degree: 1%
 
    ![chlimage_1-107](assets/chlimage_1-312.png)
 
-## 編輯附屬資料 {#editing-a-collateral}
+## 編輯附屬專案 {#editing-a-collateral}
 
-您可以在建立附屬資料後立即進行編輯。 或者，您也可從 [!UICONTROL 範本] 頁面或資產頁面。
+您可以在建立附屬專案後立即編輯附屬專案。 或者，您也可從 [!UICONTROL 範本] 頁面或資產頁面。
 
 1. 若要開啟要編輯的附屬資料，請執行下列任一項作業：
 
-   * 開啟您在步驟7中建立的附屬資料（在此案例中為手冊） [建立附屬資料](/help/assets/asset-templates.md#creating-a-collateral).
-   * 從「範本」頁面，瀏覽至您建立附屬資料的資料夾，然後按一下 [!UICONTROL 編輯] 附屬資料縮圖上的快速動作。
+   * 開啟您在步驟7中建立的附屬資料（在此案例中為手冊） [建立附屬專案](/help/assets/asset-templates.md#creating-a-collateral).
+   * 從「範本」頁面，瀏覽至您建立附屬資料的資料夾，然後按一下 [!UICONTROL 編輯] 在附屬資料片段的縮圖上快速動作。
    * 在附屬資產的頁面中，按一下 **[!UICONTROL 編輯]** 工具列中的。
    * 選取附屬資料，然後按一下 **[!UICONTROL 編輯]** 工具列中的。
 
@@ -79,13 +79,13 @@ ht-degree: 1%
 
    資產尋找器和文字編輯器會顯示在頁面左側。 文字編輯器預設為開啟。
 
-   您可以使用文字編輯器來修改您要顯示在文字欄位中的文字。 您可以在標籤層級修改字型大小、樣式、顏色和文字。
+   使用文字編輯器來修改您要顯示在文字欄位中的文字。 您可以在標籤層級修改字型大小、樣式、顏色和文字。
 
-   使用資產尋找器，您可以瀏覽或搜尋內的影像 [!DNL Experience Manager Assets] 和將範本中可編輯的影像取代為您選擇的影像。
+   若要使用資產尋找器，您可以瀏覽或搜尋內的影像 [!DNL Experience Manager Assets] 和將範本中可編輯的影像取代為您選擇的影像。
 
    ![chlimage_1-109](assets/chlimage_1-314.png)
 
-   可編輯內容會顯示在右側。 讓欄位可以在中編輯 [!DNL Experience Manager Assets]，範本中對應的欄位必須加標籤 [!DNL InDesign]. 換言之，它們應該在中標籤為可編輯 [!DNL InDesign].
+   可編輯的影像會顯示在右側。 讓欄位可以在中編輯 [!DNL Experience Manager Assets]，範本中對應的欄位必須加標籤 [!DNL InDesign]. 換言之，它們應該在中標籤為可編輯 [!DNL InDesign].
 
    >[!NOTE]
    >
@@ -97,9 +97,9 @@ ht-degree: 1%
 
    您可以使用提供的選項編輯文字屬性，例如字型樣式、顏色和大小。
 
-1. 按一下 **[!UICONTROL 預覽]** 以預覽文字變更。
+1. 選取 **[!UICONTROL 預覽]** 以便您預覽文字變更。
 
-1. 若要交換影像，請按一下 **[!UICONTROL 資產尋找器]** ![chlimage_1-113](assets/chlimage_1-318.png).
+1. 若要交換影像，請選取 **[!UICONTROL 資產尋找器]** ![chlimage_1-113](assets/chlimage_1-318.png).
 
 1. 從可編輯欄位清單中選取影像欄位，然後將所需的影像從資產選擇器拖曳至可編輯欄位。
 
@@ -109,10 +109,10 @@ ht-degree: 1%
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
-1. 按一下 **[!UICONTROL 預覽]** 以預覽影像。
+1. 選取 **[!UICONTROL 預覽]** 以便預覽影像。
 1. 若要編輯多頁附屬資料中的特定頁面，請使用底部的頁面導覽器。
 
-1. 按一下 **[!UICONTROL 預覽]** 以預覽所有變更。 按一下 **[!UICONTROL 完成]** 以儲存對宣傳品的編輯變更。
+1. 選取 **[!UICONTROL 預覽]** ，以便預覽所有變更。 選取 **[!UICONTROL 完成]** 以儲存對附屬品片段的編輯變更。
 
    >[!NOTE]
    >
@@ -129,27 +129,27 @@ ht-degree: 1%
    >如需有關使用的詳細資訊 [!DNL InDesign] 檔案，請參閱 [在Experience Manager中處理InDesign檔案的最佳實務](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html).
 
 1. 若要產生手冊的PDF轉譯，請在對話方塊中選取Acrobat選項，然後按一下 **[!UICONTROL 繼續]**.
-1. 附屬資料會在您開始使用的資料夾中建立。 若要檢視轉譯，請開啟宣傳品，然後選擇 **[!UICONTROL 轉譯]** 從GlobalNav清單。
+1. 附屬品片段會建立於您開始使用的資料夾中。 若要檢視轉譯，請開啟宣傳品，然後選擇 **[!UICONTROL 轉譯]** 從GlobalNav清單。
 
    ![chlimage_1-118](assets/chlimage_1-323.png)
 
-1. 按一下轉譯清單中的PDF轉譯，即可下載PDF檔案。 開啟PDF檔案以檢閱附屬資料。
+1. 從轉譯清單中選取PDF轉譯，以便下載PDF檔案。 開啟PDF檔案以檢閱附屬資料。
 
    ![chlimage_1-119](assets/chlimage_1-324.png)
 
 ## 合併附屬專案 {#merge-collateral}
 
-1. 在 [!DNL Experience Manager] 介面點按 [!UICONTROL 資產] ，位於導覽頁面。
+1. 在 [!DNL Experience Manager] 介面，選取 [!UICONTROL 資產] ，位於導覽頁面。
 
-1. 從選項中，選擇 **[!UICONTROL 範本]**.
+1. 從選項中選取 **[!UICONTROL 範本]**.
 
-1. 按一下 **[!UICONTROL 建立]** 和選擇 **[!UICONTROL 合併]** 功能表中。
+1. 選取 **[!UICONTROL 建立]**，然後從功能表中選取 **[!UICONTROL 合併]**.
 
    ![chlimage_1-120](assets/chlimage_1-325.png)
 
-1. 從 [!UICONTROL 範本合併] 頁面，按一下 **[!UICONTROL 合併]** ![新增資產](assets/do-not-localize/assets_add_icon.png).
+1. 從 [!UICONTROL 範本合併] 頁面，選取 **[!UICONTROL 合併]** ![新增資產](assets/do-not-localize/assets_add_icon.png).
 
-1. 切換作業選項至您要合併的附屬專案位置，按一下您要合併之附屬專案的縮圖，以選取它們。
+1. 切換作業選項至您要合併的附屬專案位置，選取您要合併的附屬專案縮圖，以選取它們。
 
    ![chlimage_1-122](assets/chlimage_1-327.png)
 
@@ -159,8 +159,8 @@ ht-degree: 1%
 
    您可以套用各種篩選器來搜尋所需的範本。 例如，您可以根據檔案型別或標籤來搜尋範本。
 
-1. 按一下 **[!UICONTROL 下一個]** 工具列中的。
-1. 在 **[!UICONTROL 預覽與重新排序]** 熒幕，視需要重新排列範本，並預覽要合併的範本選擇。 然後，按一下 **[!UICONTROL 下一個]** 工具列中的。
+1. 選取 **[!UICONTROL 下一個]** 工具列中的。
+1. 在 **[!UICONTROL 預覽與重新排序]** 熒幕，視需要重新排列範本，並預覽要合併的範本選擇。 從工具列中選取 **[!UICONTROL 下一個]**.
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
@@ -168,11 +168,11 @@ ht-degree: 1%
 
    ![chlimage_1-127](assets/chlimage_1-332.png)
 
-1. 按一下 **[!UICONTROL 儲存]** 然後按一下 **[!UICONTROL 確定]** 在對話方塊中關閉對話方塊。 多頁附屬資料會在您開始使用的資料夾中建立。
+1. 選取 **[!UICONTROL 儲存]**，然後選取以關閉對話方塊 **[!UICONTROL 確定]**. 多頁附屬資料會在您開始使用的資料夾中建立。
 
    >[!NOTE]
    >
-   >您稍後無法編輯合併的附屬資料，也無法用它來建立其他附屬資料。
+   >您稍後無法編輯合併的附屬專案，也無法用它來建立其他附屬專案。
 
 ## 最佳作法和限制 {#best-practices-limitations-tips}
 

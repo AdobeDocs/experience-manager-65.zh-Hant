@@ -5,9 +5,9 @@ content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 0%
 
    **較少的變數檔案**：這些是您定義或覆寫用於定義CSS樣式的變數的檔案。
 
-   調適型表單提供以下定義的OOTB變數 `.less` 檔案：
+   調適型表單提供下列定義的現成可用變數 `.less` 檔案：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
@@ -107,7 +107,7 @@ ht-degree: 0%
 
    **較少的mixin檔案：** 您可以定義接受變數作為引數的函式。 這些函式的輸出是產生的樣式。 請在不同的樣式中使用這些Mixin，以避免重複CSS樣式。
 
-   調適型表單提供中定義的OOTB Mixin：
+   調適型表單提供中定義的現成Mixin：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/adaptiveforms-mixins.less`
 

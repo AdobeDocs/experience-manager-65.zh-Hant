@@ -2,10 +2,10 @@
 title: 裝飾標記
 description: 轉譯網頁中的元件時可產生 HTML 元素，將轉譯的元件圍在其中。對於開發人員來說，AEM 提供簡單清晰的邏輯，可控制圍住所含元件的裝飾標記。
 exl-id: d049ebf1-7fa6-4d2c-86f9-b18e107092ea
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 10%
+source-wordcount: '879'
+ht-degree: 8%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 10%
    * 配置資訊
    * 樣式資訊
 
-對於開發人員來說，AEM 提供簡單清晰的邏輯，可控制圍住所含元件的裝飾標記。裝飾標籤是否及如何呈現取決於兩個因素的組合，此頁面將深入研究這兩個因素：
+對於開發人員而言，AEM提供簡單清晰的邏輯，可控制包住所含元件的裝飾標籤。 裝飾標籤是否及如何呈現取決於兩個因素的組合，此頁面將深入研究這兩個因素：
 
 * 元件本身可使用一組屬性來設定其裝飾標籤。
 * 包含元件（HTL、JSP、Dispatcher等）的指令碼可以使用包含引數來定義裝飾標籤的各個層面。

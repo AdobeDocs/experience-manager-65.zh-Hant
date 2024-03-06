@@ -2,23 +2,23 @@
 title: 為Adobe Experience Manager建立無障礙內容（符合WCAG 2.1）
 description: 使用AEM協助讓身心障礙人士存取及使用網路內容
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '13806'
+source-wordcount: '13636'
 ht-degree: 2%
 
 ---
 
 # 建立可存取的內容 (符合 WCAG 2.1) {#creating-accessible-content-wcag-conformance}
 
-此 [網頁內容可及性指引(WCAG) 2.1](https://www.w3.org/TR/WCAG/)，由下列人員撰寫： [全球資訊網協會的工作小組](https://www.w3.org/群組/#Accessibility_Guidelines_Working_Group)，包含一系列技術獨立指引和成功標準，協助身心障礙人士存取及使用網路內容。
+此 [網頁內容可及性指引(WCAG) 2.1](https://www.w3.org/TR/WCAG/)，由下列人員撰寫： [全球資訊網協會的工作小組](https://www.w3.org/groups/#Accessibility_Guidelines_Working_Group)，包含一系列技術獨立指引和成功標準，協助身心障礙人士存取及使用網路內容。
 
 作為介紹，聯盟提供了一系列區段和支援檔案：
 
 * [WCAG 2.1的新功能](https://www.w3.org/TR/WCAG/#new-features-in-wcag-2-1)
-* [How to Meet WCAG 2.1 (如何達成 WCAG 2.1) ](https://www.w3.org/WAI/WCAG21/quickref/)
-* [Understanding WCAG 2.1 (了解 WCAG 2.1) ](https://www.w3.org/WAI/WCAG21/Understanding/)
-* [Techniques for WCAG 2.1 (WCAG 2.1 的專用技術) ](https://www.w3.org/WAI/WCAG21/Techniques/)
+* [如何滿足WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
+* [瞭解WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/)
+* [適用於WCAG 2.1的技術](https://www.w3.org/WAI/WCAG21/Techniques/)
 * [WCAG檔案](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
 
 此外，請參閱：
@@ -1175,7 +1175,7 @@ John Smith's publications
 
 提供指示以幫助人們完成表單是介面可用性良好實務的基本部分。 這麼做有助於視障或認知障礙人士瞭解表單的版面以及在特定表單欄位中要提供的資料類別，否則他們可能會有困難。
 
-##### Forms
+##### 表單
 
 在AEM WKND示範專案中，當您新增表單元件(例如 **文字欄位**，移至頁面。 此預設標題取決於元件型別。 您可在下列欄位新增自己的標題： **標題與文字** 該欄位之「編輯」對話方塊的「 」索引標籤。 請務必確保標籤可協助使用者瞭解與每個表單元件相關聯的資料。
 
@@ -1250,7 +1250,7 @@ John Smith's publications
 
 身心障礙使用者可能更容易犯錯。 患有閱讀障礙的人可能會顛倒數字和字母，而患有運動障礙的人則可能會意外按錯按鍵。 提供還原動作的功能，讓使用者更正可能導致嚴重後果的錯誤。 提供檢閱和更正資訊的功能，讓使用者在採取造成嚴重後果的行動之前，有機會偵測錯誤。
 
-使用者可控制的資料是指使用者可檢視的資料，使用者可透過有意的動作變更和/或刪除這些資料。 使用者控制此類資料的範例是更新使用者帳戶的電話號碼和地址，或從網站刪除過去發票的記錄。 這並非指網際網路記錄檔和搜尋引擎監控資料，使用者無法直接檢視或互動的資料。
+使用者可控制的資料是指使用者可檢視的資料，使用者可透過有意的動作變更和/或刪除這些資料。 使用者控制此類資料的範例是更新使用者帳戶的電話號碼和地址，或從網站刪除過去發票的記錄。 它不是指使用者無法直接檢視或互動的網際網路記錄和搜尋引擎監控資料。
 
 #### 如何達到標準 — 錯誤預防（法律、金融、資料） (3.3.4) {#how-to-meet-error-prevention-legal-financial-data}
 

@@ -6,9 +6,9 @@ contentOwner: AG
 role: User
 feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2156'
+source-wordcount: '2136'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 下列媒體處理常式可用於 [!DNL Assets] 並處理最常見的MIME型別：
 
-<!-- TBD: Java versions shouldn't be set to 1.5. Must be updated.
+<!-- TBD: Java versions should not be set to 1.5. Must be updated.
 -->
 
 | 處理常式名稱 | 服務名稱（在系統主控台中） | 支援的MIME型別 |
@@ -163,7 +163,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
       * 產生的.class檔案相容性
       * 來源相容性
 
-   1. 按一下&#x200B;**[!UICONTROL 「確定」]**。在對話方塊視窗中，按一下 **[!UICONTROL 是]**.
+   1. 按一下 **[!UICONTROL 確定]**. 在對話方塊視窗中，按一下 **[!UICONTROL 是]**.
 
 1. 將中的程式碼取代 `pom.xml` 檔案，其程式碼如下：
 
@@ -412,7 +412,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
      * * @return the number of words in the string
      * */
     private long wordCount(String text) {
-     // We need to keep track of the last character, if we have two whitespaces in a row we don't want to double count.
+     // We need to keep track of the last character, if we have two whitespaces in a row we do not want to double count.
      // The starting of the document is always a whitespace.
      boolean prevWhiteSpace = true;
      boolean currentWhiteSpace = true;

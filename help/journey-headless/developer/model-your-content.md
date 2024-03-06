@@ -2,7 +2,7 @@
 title: 如何建立內容模型
 description: 在 AEM Headless 開發人員歷程的這一部分中，了解如何使用內容模型和內容片段模型及內容片段，建立您的內容模型用於 AEM Headless 傳遞。
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 79%
@@ -45,7 +45,7 @@ ht-degree: 79%
 
 *外面的世界很大很糟糕*。
 
-也許是，但也許不是。這當然是件大事 ***複雜*** 外面的世界。 資料模型是用來定義非常（非常）小子區段的簡化表示，使用特定用途所需的特定資訊。
+也許是，但也許不是。這當然是壓倒性的 ***複雜*** 外面的世界。 資料模型是用來定義非常（非常）小子區段的簡化表示，使用特定用途所需的特定資訊。
 
 >[!NOTE]
 >

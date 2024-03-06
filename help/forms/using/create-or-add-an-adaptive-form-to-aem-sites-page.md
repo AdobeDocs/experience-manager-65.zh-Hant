@@ -4,9 +4,9 @@ description: 探索如何輕鬆建立或無縫新增調適型表單至您的 AEM
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 feature: Adaptive Forms, Foundation Components
 exl-id: dcf023a1-8735-48cb-b3ea-d17357eeedaf
-source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2881'
+source-wordcount: '2882'
 ht-degree: 23%
 
 ---

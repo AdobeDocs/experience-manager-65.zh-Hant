@@ -7,9 +7,9 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '4907'
+source-wordcount: '4843'
 ht-degree: 1%
 
 ---
@@ -103,7 +103,7 @@ HTL和JSP都可用來開發傳統和觸控式UI的元件。 雖然我們可能�
 
 ### 從開始要注意的元件 {#components-to-be-aware-of-from-the-start}
 
-* Page:
+* 頁面:
 
    * AEM具有 *頁面* 元件( `cq:Page`)。
    * 這是對內容管理很重要的特定資源型別。
@@ -146,7 +146,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
 * AEM元件是根據 [Sling](https://sling.apache.org/documentation.html).
 * AEM元件（通常）位於以下位置：
 
-   * HTL: `/libs/wcm/foundation/components`
+   * HTL： `/libs/wcm/foundation/components`
    * JSP： `/libs/foundation/components`
 
 * 專案/網站特定元件（通常）位於下列位置：
@@ -159,11 +159,11 @@ AEM元件的結構既強大又靈活，主要考量事項為：
 
      jcr屬性清單；這些是變數，有些可能是選用的，但元件節點的基本結構、其屬性和子節點由定義。 `cq:Component` 定義
 
-   * 資源:
+   * 資源：
 
      這些會定義元件使用的靜態元素。
 
-   * 指令碼:
+   * 指令碼：
 
   用於實作元件之結果例項的行為。
 
@@ -175,7 +175,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
 
    * `jcr:title`  — 元件標題；例如，當元件列在元件瀏覽器或Sidekick中時作為標籤使用。
    * `jcr:description`  — 元件的說明；可在元件瀏覽器或Sidekick中作為滑鼠懸停提示使用。
-   * 傳統 UI:
+   * 傳統UI：
 
       * `icon.png`  — 此元件的圖示。
       * `thumbnail.png`  — 如果此元件列在段落系統中，則顯示影像。
@@ -196,7 +196,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
       * `cq:dialog` ( `nt:unstructured`) — 此元件的對話方塊。 定義允許使用者設定元件及/或編輯內容的介面。
       * `cq:design_dialog` ( `nt:unstructured`) — 此元件的設計編輯
 
-   * 傳統 UI:
+   * 傳統UI：
 
       * `dialog` ( `cq:Dialog`) — 此元件的對話方塊。 定義可讓使用者設定元件、編輯內容或兩者的介面。
       * `design_dialog` ( `cq:Dialog`) — 為此元件設計編輯。
@@ -261,7 +261,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
   <tr>
    <td>.<br /> </td>
    <td><code>cq:Component</code></td>
-   <td>目前元件. 元件屬於節點型別 <code>cq:Component</code>.<br /> </td>
+   <td>目前元件。 元件屬於節點型別 <code>cq:Component</code>.<br /> </td>
   </tr>
   <tr>
    <td><code>componentGroup</code></td>
@@ -409,7 +409,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
 * 觸控式UI：
    * `cq:dialog` ( `nt:unstructured`) — 定義用於編輯此元件內容的對話方塊
    * `cq:design_dialog` ( `nt:unstructured`) — 指定此元件的設計編輯選項
-* 傳統 UI:
+* 傳統UI：
    * `dialog` ( `cq:Dialog`) — 定義用於編輯此元件內容的對話方塊（專用於傳統UI）
    * `design_dialog` ( `cq:Dialog`) — 指定此元件的設計編輯選項
    * `icon.png`  — 圖形檔案，用作Sidekick中元件的圖示
@@ -483,7 +483,7 @@ AEM元件的結構既強大又靈活，主要考量事項為：
 
    `/etc/designs/<*yourProject*>/jcr:content/<*yourTemplate*>/par`
 
-   如需範例，請參閱:
+   例如，請參閱：
 
    `/etc/designs/geometrixx/jcr:content/contentpage/par`
 
@@ -602,7 +602,7 @@ AEM中的元件受到三個不同階層的限制：
 
 ### 元件預留位置 {#component-placeholders}
 
-元件必須一律呈現某些作者可見的HTML，即使元件沒有內容亦然。 否則，編輯器介面中可能會看不到它，使得它在技術上存在但不會顯示在頁面和編輯器中。 在這種情況下，作者將無法選取空白元件並與之互動。
+元件必須一律呈現某些作者可見的HTML，即使元件沒有內容亦然。 否則，編輯器介面中可能會看不到它，使得它在技術上存在但不會顯示在頁面和編輯器中。 在這種情況下，作者無法選取空白元件並與之互動。
 
 因此，只要元件在頁面編輯器中轉譯頁面時(當WCM模式為 `edit` 或 `preview`)。
 預留位置的一般HTML標示如下：
@@ -706,7 +706,7 @@ AEM中的元件受到三個不同階層的限制：
   </tr>
   <tr>
    <td><code>rollover</code></td>
-   <td>預設值. 元件版本可透過點按和/或內容功能表「在滑鼠懸停上」存取。<br /> 若為進階使用，對應的使用者端物件為： <code>CQ.wcm.EditRollover</code>.</td>
+   <td>預設值。 元件版本可透過點按和/或內容功能表「在滑鼠懸停上」存取。<br /> 若為進階使用，對應的使用者端物件為： <code>CQ.wcm.EditRollover</code>.</td>
   </tr>
   <tr>
    <td><code>editbar</code></td>
@@ -749,7 +749,7 @@ AEM中的元件受到三個不同階層的限制：
   </tr>
   <tr>
    <td><code>inline</code></td>
-   <td>(預設值). 對話方塊錨定在元件上。<br /> </td>
+   <td>（預設值）。 對話方塊錨定在元件上。<br /> </td>
   </tr>
   <tr>
    <td><code>auto</code></td>

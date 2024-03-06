@@ -1,8 +1,8 @@
 ---
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 52%
+source-wordcount: '506'
+ht-degree: 47%
 
 ---
 # 協助撰寫 Adobe Experience Manager 說明文件
@@ -34,7 +34,7 @@ ht-degree: 52%
 
 ### 建立問題 {#create-an-issue}
 
-您是否對目前的文件有建議或觀察發現，或是想針對描述內容的方式提出疑問？然後建立問題。 如果您希望貢獻內容，但不願意編輯文件或自行提出提取請求，也可以建立問題。
+您是否對目前的文件有建議或觀察發現，或是想針對描述內容的方式提出疑問？然後建立問題。 如果您想要協助撰寫，但不願意編輯檔案或自行提出提取請求，也可以建立問題。
 
 您可以透過建立問題輕鬆說明改善檔案的想法，並提供給AEM Docs團隊成員稽核。 只需按一下 **登入問題** 導覽面板右上方的連結可建立問題。
 

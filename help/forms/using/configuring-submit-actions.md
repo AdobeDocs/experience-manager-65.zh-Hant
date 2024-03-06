@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '2597'
+source-wordcount: '2593'
 ht-degree: 48%
 
 ---
@@ -235,7 +235,7 @@ Microsoft® SharePoint清單不支援下列欄型別：
 
 ### 伺服器上會進行哪些驗證？ {#what-to-validate-on-server-br}
 
-在伺服器上重新執行的所有適用性表單的現成可用(OOTB)欄位驗證包括：
+在伺服器上重新執行的所有適用性表單現成可用的欄位驗證包括：
 
 * 必填
 * 驗證圖片子句

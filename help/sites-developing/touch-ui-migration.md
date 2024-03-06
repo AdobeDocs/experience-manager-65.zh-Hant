@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: introduction
 docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '631'
 ht-degree: 3%
 
 ---
@@ -96,7 +96,7 @@ ht-degree: 3%
  </tbody>
 </table>
 
-換言之，將UI區段從傳統UI移轉至觸控式UI表示將 *ExtJS Widget* 至 *Sling元件*. 為方便起見，觸控式UI以Granite UI框架為基礎，該框架已為UI提供了一些Sling元件（稱為Granite UI元件）。
+換言之，將UI區段從傳統UI移轉至Touch UI意指將 *ExtJS Widget* 至 *Sling元件*. 為方便起見，觸控式UI以Granite UI框架為基礎，該框架已為UI提供了一些Sling元件（稱為Granite UI元件）。
 
 開始之前，請檢查狀態和相關建議：
 
@@ -133,7 +133,7 @@ ht-degree: 3%
 雖然移轉至Touch UI並無直接關係，但建議您同時考量下列相關問題，因為這也是建議做法：
 
 * [範本](/help/sites-developing/templates.md) - [可編輯的範本](/help/sites-developing/page-templates-editable.md)
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
 * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 >[!NOTE]

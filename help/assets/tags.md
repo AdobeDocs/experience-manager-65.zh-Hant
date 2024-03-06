@@ -1,5 +1,5 @@
 ---
-title: 整合 Dynamic Media 檢視器與 Analytics 和 Adobe Experience Platform 標記
+title: 整合Dynamic Media檢視器與Adobe Analytics和Experience Platform標籤
 description: 瞭解適用於Experience Platform標籤的Dynamic Media Viewers擴充功能和Dynamic Media Viewers 5.13。它可讓Adobe Analytics和Experience Platform標籤的客戶在其Experience Platform標籤設定中，使用特定於Dynamic Media檢視器的事件和資料。
 mini-toc-levels: 3
 contentOwner: Rick Brough
@@ -10,14 +10,14 @@ docset: aem65
 feature: Viewers
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '6618'
-ht-degree: 6%
+source-wordcount: '6664'
+ht-degree: 5%
 
 ---
 
-# 整合 Dynamic Media 檢視器與 Analytics 和 Adobe Experience Platform 標記 {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
+# 整合Dynamic Media檢視器與Adobe Analytics和Experience Platform標籤 {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
 
 ## 什麼是Dynamic Media Viewers與Adobe Analytics和Experience Platform標籤的整合？ {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
 
@@ -41,7 +41,7 @@ ht-degree: 6%
 
 ### 整合的使用案例 {#use-cases-for-the-integration}
 
-與Experience Platform標籤整合的主要使用案例是同時使用Adobe Experience Manager資產和Adobe Experience Manager Sites的客戶。 在這種情況下，您可以設定Experience Manager製作節點與Experience Platform標籤之間的標準整合，然後將您的Sites例項與Experience Platform標籤屬性建立關聯。 之後，新增至Sites頁面的任何Dynamic Media WCM元件都將追蹤檢視器的資料和事件。
+與Experience Platform標籤整合的主要使用案例是同時使用Adobe Experience Manager Assets和Adobe Experience Manager Sites的客戶。 在這種情況下，您可以設定Experience Manager製作節點與Experience Platform標籤之間的標準整合，然後將您的Sites例項與Experience Platform標籤屬性建立關聯。 之後，新增至Sites頁面的任何Dynamic Media WCM元件都將追蹤檢視器的資料和事件。
 
 另請參閱 [在Experience Manager Sites中追蹤Dynamic Media檢視器](#tracking-dynamic-media-viewers-in-aem-sites).
 
@@ -65,7 +65,7 @@ Adobe Analytics可讓您追蹤一般使用者在您網站上與Dynamic Media Vie
 
 Experience Platform標籤中的資料元素是一個已命名屬性，其值會以靜態方式定義，或根據網頁的狀態或Dynamic Media檢視器資料進行動態計算。
 
-資料元素定義可用的選項取決於Experience Platform標籤屬性中安裝的擴充功能清單。 「核心」擴充功能已預先安裝，並可立即用於任何設定。 此「核心」擴充功能可定義資料元素，其值來自Cookie、JavaScript程式碼、查詢字串和許多其他來源。
+資料元素定義可用的選項取決於Experience Platform標籤屬性中安裝的擴充功能清單。 「核心」擴充功能已預先安裝，並可立即用於任何設定。 此「核心」擴充功能可讓您定義資料元素，其值來自Cookie、JavaScript程式碼、查詢字串和許多其他來源。
 
 如所述，針對Adobe Analytics追蹤，必須安裝其他數個擴充功能 [擴充功能的安裝和設定](#installing-and-setup-of-extensions). Dynamic Media Viewers擴充功能新增定義「資料元素」的功能，而該值的引數為動態檢視器事件。 例如，它可以參照檢視器型別，或檢視器載入時報告的資產名稱、一般使用者縮放時報告的縮放等級等等。
 
@@ -524,7 +524,7 @@ Experience Platform標籤中的屬性是具名設定，可讓所有設定保持�
 
    ![image2019-7-8_16-3-47](assets/image2019-7-8_16-3-47.png)
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
    選取新建立的屬性，然後繼續前往 *擴充功能的安裝和設定*.
 
@@ -558,7 +558,7 @@ Experience Platform標籤中的屬性是具名設定，可讓所有設定保持�
 
 在 **[!UICONTROL 安裝擴充功能]** 頁面，展開 **[!UICONTROL 一般]**，然後指定追蹤伺服器。 追蹤伺服器會遵循範本 `<trackingNamespace>.sc.omtrdc.net`，其中 `<trackingNamespace>` 是在布建電子郵件中取得的資訊。
 
-選取&#x200B;**[!UICONTROL 儲存]**。
+選取「**[!UICONTROL 儲存]**」。
 
 另請參閱 [Adobe Analytics擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html).
 
@@ -660,7 +660,7 @@ Experience Platform標籤可能具有多個開發環境、一個測試環境及�
 
 ## 設定Adobe Experience Manager以進行整合 {#configuring-adobe-experience-manager-for-the-integration}
 
-先決條件:
+先決條件：
 
 * Experience Manager會執行作者和發佈執行個體。
 * Experience Manager作者節點設定於Dynamic Media - Scene7執行模式(dynamicmedia_s7)
@@ -756,7 +756,8 @@ Experience Manager設定包含下列兩個主要步驟：
    * **[!UICONTROL 標題]**  — 輸入描述性科目標題。
    * **[!UICONTROL 授權伺服器]**  — 返回您先前開啟的整合詳細資訊頁面。 選取 **[!UICONTROL JWT]** 標籤。 複製伺服器名稱（不含路徑），如下方反白所示。
 
-   返回「帳 **[!UICONTROL 戶]** 」頁面，然後將名稱貼到相應欄位。例如， `https://ims-na1.adobelogin.com/`
+   返回 **[!UICONTROL 帳戶]** 頁面，然後將名稱貼到個別欄位。
+例如， `https://ims-na1.adobelogin.com/`
 （伺服器名稱僅供範例使用）
 
    ![2019-07-25_15-01-53](assets/2019-07-25_15-01-53.png)
@@ -771,7 +772,7 @@ Experience Manager設定包含下列兩個主要步驟：
 
    整合詳細資訊頁面。
 
-1. **[!UICONTROL 用戶端密碼]**-返回「整合詳細資訊」頁面。從 **[!UICONTROL 概觀]** 索引標籤，選取 **[!UICONTROL 擷取使用者端密碼]**. 右側 **[!UICONTROL 使用者端密碼]** 欄位，選取 **[!UICONTROL 複製]**.
+1. **[!UICONTROL 使用者端密碼]**  — 返回「整合詳細資訊」頁面。 從 **[!UICONTROL 概觀]** 索引標籤，選取 **[!UICONTROL 擷取使用者端密碼]**. 右側 **[!UICONTROL 使用者端密碼]** 欄位，選取 **[!UICONTROL 複製]**.
 
    返回「帳 **[!UICONTROL 戶]** 」頁面，然後將金鑰貼入個別欄位。
 

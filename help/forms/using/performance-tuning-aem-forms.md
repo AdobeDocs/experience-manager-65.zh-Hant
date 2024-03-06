@@ -7,9 +7,9 @@ topic-tags: Configuration
 docset: aem65
 role: Admin
 exl-id: 22926757-9cdb-4f8a-9bd9-16ddbc3f954a
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些設定是使用HTTP進�
    <Location /content/xfaforms>
        <IfModule mod_deflate.c>
            SetOutputFilter DEFLATE
-           #Don't compress
+           #Do not compress
            SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
            SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
            #Dealing with proxy servers
@@ -123,7 +123,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些設定是使用HTTP進�
    <Location /content/forms/af>
        <IfModule mod_deflate.c>
            SetOutputFilter DEFLATE
-           #Don't compress
+           #Do not compress
            SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
            SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
            #Dealing with proxy servers
@@ -167,7 +167,7 @@ Apache可以使用HTTP通訊協定與CRX通訊。 這些設定是使用HTTP進�
 
 >[!NOTE]
 >
-* 如果您使用不同的GDS和暫存目錄位置，請開啟AdminUI，網址為 `https://'[server]:[port]'/adminui`，導覽至 **首頁>設定>核心系統設定>核心設定** 以確認使用中的位置。
+>* 如果您使用不同的GDS和暫存目錄位置，請開啟AdminUI，網址為 `https://'[server]:[port]'/adminui`，導覽至 **首頁>設定>核心系統設定>核心設定** 以確認使用中的位置。
 >
 * 如果排除建議的目錄後AEM Forms伺服器執行速度會很慢，則同時排除Java™可執行檔(java.exe)。
 >

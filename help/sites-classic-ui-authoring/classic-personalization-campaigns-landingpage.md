@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 0f1014a7-b0ba-4455-b3a4-5023bcd4c5a1
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '3323'
+source-wordcount: '3360'
 ht-degree: 2%
 
 ---
@@ -267,7 +267,7 @@ CTA銷售機會表單是由數個不同的元件所建置：
 
 新增潛在客戶表單後，您可以按一下「 」來設定表單的開頭或結尾 **編輯** 在對應列中。
 
-**銷售機會表單的開頭**
+**潛在客戶表單的開頭**
 
 有兩個索引標籤可供設定 **表單** 和 **進階**：
 
@@ -451,7 +451,7 @@ Adobe建議在中繼執行個體上使用設計匯入工具。 在測試執行�
 
 刪除登入頁面就像刪除一般AEM頁面。
 
-唯一的例外是當您刪除案頭登入頁面時，也會刪除對應的行動登入頁面（如果存在），但反之則否。
+唯一的例外是，當您刪除案頭登陸頁面時，也會刪除對應的行動登陸頁面（如果存在），但不會相反刪除。
 
 ### 發佈登入頁面 {#publishing-a-landing-page}
 

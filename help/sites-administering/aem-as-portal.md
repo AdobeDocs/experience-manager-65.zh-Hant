@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 970e0a97d531d4cbae76119960972e54ef65dda0
 workflow-type: tm+mt
-source-wordcount: '6076'
+source-wordcount: '6074'
 ht-degree: 0%
 
 ---
@@ -537,7 +537,7 @@ title="{text}"/>
 
 此外，入口網站DirectorHTML重寫程式可設定為定義的規則運算式清單，不包含連結重寫。 例如，如果您有外部系統的相對連結，您應該將它們新增至此排除清單。
 
-### 本土化 {#localization}
+### 本地化 {#localization}
 
 AEM內容Portlet有內建的本地化功能，可確保AEM中的內容使用正確的語言。
 
@@ -612,7 +612,7 @@ AEM內容Portlet有內建的本地化功能，可確保AEM中的內容使用正�
 | **名稱** | **說明** | **預設行為** |
 |---|---|---|
 | 驗證者 | 提供驗證資訊給AEM | 對作者和發佈使用可設定的技術使用者。 或使用SSO。 |
-| htmlrewriter | 重寫連結、影像等 | 將AEM連結重寫至入口網站連結，可由UrlMapper和TextMapper擴充 |
+| htmlrewriter | 重寫連結和影像 | 將AEM連結重寫至入口網站連結，可由UrlMapper和TextMapper擴充 |
 | HttpClientService | 處理所有http連線 | 標準實作 |
 | LocaleHandler | 處理地區設定資訊 | 重寫與地區設定相關的內容連結。 |
 | LocaleDetector | 偵測使用者的地區設定。 | 使用入口網站提供的地區設定。 |
@@ -776,7 +776,7 @@ AEM Quickstart JAR檔案包含Portlet元件檔案。 若要取得檔案(cq-portl
 
    ![chlimage_1-137](assets/chlimage_1-137.png)
 
-1. 按一下 **儲存**. 您現在可以將Portlet新增至入口網站頁面，並使用入口網站。
+1. 按一下「**儲存**」。您現在可以將Portlet新增至入口網站頁面，並使用入口網站。
 
 ### 內容URL {#content-urls}
 

@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 9c97f99e-d6ef-4817-8b2a-201ab22f2b38
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
 
 # 設定視訊元件 {#configure-the-video-component}
 
-此 [視訊元件](/help/sites-authoring/default-components-foundation.md#video) 可讓您在頁面上放置預先定義的現成可用視訊資產。
+此 [視訊元件](/help/sites-authoring/default-components-foundation.md#video) 可讓您在頁面上放置預先定義的現成視訊資產。
 
 為了進行適當的轉碼，管理員會單獨安裝FFmpeg。 另請參閱 [安裝FFmpeg並設定AEM](#install-ffmpeg). 管理員也 [設定視訊設定檔](#configure-video-profiles) 與HTML5元素搭配使用。
 
@@ -81,4 +81,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->升級AEM執行個體時，不會保留預設現成(OOTB)工作流程模型的變更。 Adobe建議您先複製修改過的工作流程模型，然後再進行編輯。 例如，複製OOTB [!UICONTROL DAM更新資產] 之前模型，以編輯 [!UICONTROL DAM更新資產] 模型以挑選升級前存在的視訊設定檔名稱。 接著，您可以覆蓋 `/apps` 節點，可讓AEM擷取對OOTB模型的自訂變更。
+>升級AEM執行個體時，不會保留預設現成工作流程模型的變更。 Adobe建議您先複製修改過的工作流程模型，然後再進行編輯。 例如，複製現成可用的 [!UICONTROL DAM更新資產] 之前模型，以編輯 [!UICONTROL DAM更新資產] 模型以挑選升級前存在的視訊設定檔名稱。 接著，您可以覆蓋 `/apps` 節點，可讓AEM擷取現成可用模型的自訂變更。

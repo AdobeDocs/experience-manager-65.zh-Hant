@@ -2,9 +2,9 @@
 title: 基礎元件
 description: 瞭解Adobe Experience Manager 6.5中的基礎元件。
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '6872'
+source-wordcount: '6873'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 >
 >大部分的基礎元件現在在AEM 6.5中已過時。請參閱 [發行說明](/help/release-notes/deprecated-removed-features.md) 以取得進一步資訊。
 >
->Adobe建議使用更現代化且更可擴充的 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 在AEM專案中。 這些元件是 [We.Retail範例內容](/help/sites-developing/we-retail.md) 也可以 [另外安裝並用於開發](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html) 由您的管理員執行。
+>Adobe建議使用更現代化且更可擴充的 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 在AEM專案中。 這些元件是 [We.Retail範例內容](/help/sites-developing/we-retail.md) 也可以 [另外安裝並用於開發](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html) 由您的管理員執行。
 >
 >您可以使用 [AEM Modernize Tools Suite](https://opensource.adobe.com/aem-modernize-tools/) ，將基礎元件型網站重構為使用核心元件。
 
@@ -105,7 +105,7 @@ ht-degree: 2%
 | 320 &lt;寬度&lt; 481 | 480 | 中 | 行動電話（橫向） |
 | 480 &lt;寬度&lt; 769 | 476 | 高 | 平板電腦（縱向） |
 | 768 &lt;寬度&lt; 1025 | 620 | 高 | 平板電腦（橫向） |
-| 寬度&lt;= 1025 | 完整（原始大小） | 高 | 桌面 |
+| 寬度&lt;= 1025 | 完整（原始大小） | 高 | 桌上型電腦 |
 
 #### 屬性 {#properties}
 
@@ -216,7 +216,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 圖表元件可讓您新增長條圖、折線圖或圓餅圖。 AEM會根據您提供的資料建立圖表。 您可以直接在「資料」標籤中輸入，或複製並貼上試算表來提供資料。
 
@@ -259,7 +259,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 此元件可讓您上傳儲存設計封裝的zip檔案。
 
@@ -267,7 +267,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 下載元件會在選取的網頁上建立連結，以下載特定檔案。 您可以從「內容尋找器」拖曳資產或上傳檔案。
 
@@ -287,7 +287,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 外部應用程式整合元件(**外部**)可讓您使用iframe將外部應用程式內嵌至AEM頁面。
 
@@ -317,7 +317,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 >[!CAUTION]
 >
@@ -531,7 +531,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 >[!CAUTION]
 >
@@ -967,7 +967,7 @@ Flash元件可讓您載入Flash影片。 您可以從內容尋找器將Flash資�
 
 >[!CAUTION]
 >
->已棄用基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 表單元件可用來建立表單，以供訪客提交輸入。 Forms和表單元件可用來收集包含使用者意見回饋（例如客戶滿意度問卷）和使用者資訊（例如使用者註冊）的資訊。
 
@@ -1097,7 +1097,7 @@ Forms是由數個不同元件所建置：
 
 >[!NOTE]
 >
->基礎元件表單元件僅支援使用其他基礎元件表單元件（按鈕、文字、隱藏等等）。 使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 不支援基礎元件表單中的表單元件（反之）。
+>基礎元件表單元件僅支援使用其他基礎元件表單元件（按鈕、文字、隱藏等等）。 使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 不支援基礎元件表單中的表單元件（反之）。
 
 #### 表單開始 {#start-of-form}
 
@@ -1184,7 +1184,7 @@ Forms是由數個不同元件所建置：
 
       * **建立內容**
 
-         * 內容路徑
+         * 内容路徑
 
            表單傾印的任何內容的內容路徑。 輸入以斜線結尾的路徑 `/`. 斜線表示對於每個表單連線埠，會在指定位置建立新節點；例如：
 
@@ -1337,7 +1337,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 >[!CAUTION]
 >
@@ -1371,7 +1371,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 可讓您提供輸入信用卡詳細資料所需的欄位。 您可以將其設定為指定接受的卡片型別和所需的資訊（例如安全碼）。
 
@@ -1399,7 +1399,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 檔案上傳元件為使用者提供了一種選擇和上傳檔案的機制。
 
@@ -1439,7 +1439,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 影像上傳元件為使用者提供選取和上傳影像檔案的機制。
 
@@ -1449,7 +1449,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 連結欄位可讓使用者指定URL：
 
@@ -1461,7 +1461,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 允許使用者輸入密碼：
 
@@ -1471,7 +1471,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 此元件為使用者提供以下兩個欄位：
 
@@ -1518,7 +1518,7 @@ Forms是由數個不同元件所建置：
 
 >[!CAUTION]
 >
->已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 而非。
+>已棄用此基礎元件。 Adobe建議使用 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 而非。
 
 此欄位可讓您選取標籤：
 

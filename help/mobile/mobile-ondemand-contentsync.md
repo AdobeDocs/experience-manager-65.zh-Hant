@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: a6e59334-09e2-4bb8-b445-1868035da556
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2973'
+source-wordcount: '2971'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Content Sync架構會建立包含網頁內容的封存檔案。 內容可以是�
 
 >[!NOTE]
 >
->啟用 *ContentSync偵錯記錄* 透過封裝上的OSGI記錄器設定 *com.day.cq.contentsync*. 如此可追蹤哪些處理常式已執行，以及它們是否已更新快取並回報更新快取。
+>啟用 *ContentSync偵錯記錄* 透過封裝上的OSGI記錄器設定 *com.day.cq.contentsync*. 這可讓您追蹤哪些處理常式已執行，以及它們是否更新快取並回報更新快取。
 
 ## 設定內容同步內容 {#configuring-the-content-sync-content}
 

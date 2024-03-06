@@ -3,9 +3,9 @@ title: 設定RTF編輯器以在Adobe Experience Manager中編寫內容。
 description: 瞭解如何設定Adobe Experience Manager RTF編輯器，以在Adobe Experience Manager中編寫內容。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '2883'
+source-wordcount: '2887'
 ht-degree: 0%
 
 ---
@@ -195,7 +195,7 @@ RTE功能可透過一系列外掛程式使用，每個外掛程式都具備功�
 
 ## 設定RTE工具列 {#dialogfullscreen}
 
-AEM可讓您針對不同的編輯模式，以不同方式設定RTF編輯器的介面。 預設設定如下。 您可以根據需求覆寫這些預設值。 您只需自訂要提供給作者的工具列功能。 您不需要指定所有的工具列設定。
+AEM可讓您針對不同的編輯模式，以不同方式設定RTF編輯器的介面。 預設設定如下。 您可以根據需求覆寫這些預設值。 您只需自訂要提供給作者的工具列功能。 您不需要指定所有工具列設定。
 
 若要設定的工具列 `dialogFullScreen`，使用下列範例設定。
 

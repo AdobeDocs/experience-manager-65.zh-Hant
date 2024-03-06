@@ -2,7 +2,7 @@
 title: AEM常見問題集
 description: 使用這些常見問題集來瞭解、設定和疑難排解AEM中的常見工作流程或問題。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 1a7805f063daf6f3dd07a2ff2d182e58fe7e63b8
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 0%
@@ -80,11 +80,11 @@ Adobe Experience Manager (AEM) 6.4隨附SSL精靈，並提供使用者介面以�
 
 如果使用者上傳影片檔案時沒有資產節點底下的刪除許可權，則刪除區塊節點會失敗，而上傳會重新啟動。
 
-#### 建立語言副本時，OOTB設定的預設設定為何？ {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
+#### 建立語言副本時，現成設定的預設設定為何？ {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
 當您透過Touch UI建立語言副本時(**引用** > **更新語言副本**)，則會以新語言建立新的DAM資料夾，並從中參考資產。
 
-這是OOTB設定的預設設定。 您可以設定 **翻譯頁面資產** = **不翻譯** 位於翻譯設定中。
+這是現成組態的預設設定。 您可以設定 **翻譯頁面資產** = **不翻譯** 位於翻譯設定中。
 對於AEM 6.4， **工具** > **Cloud Service** > **翻譯雲端服務**.
 
 #### 如何停用造成AEM SegmentStore (AEM 6.3.1.1)呈指數式增長的AEM元件？ {#how-to-disable-an-aem-component-causing-exponential-growth-for-the-aem-segmentstore-aem}

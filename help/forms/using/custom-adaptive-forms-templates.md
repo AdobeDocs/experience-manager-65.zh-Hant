@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 35b50573-0be8-469d-a1ac-f51b9aaa5fef
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 0%
@@ -121,7 +121,7 @@ AEM QuickStart提供下列最適化表單範本：
 
 1. 將複製的元件重新命名為 `enrollmentpage`.
 
-1. **（只有在您已擁有內容頁面時）** 如果您有現存的，請執行下列步驟(a-d) `contentpage`您網站的元件。 如果您沒有現有的 `contentpage`元件時，您可以將 `resourceSuperType`屬性以指向OOTB基本頁面。
+1. **（只有在您已擁有內容頁面時）** 如果您有現存的，請執行下列步驟(a-d) `contentpage`您網站的元件。 如果您沒有現有的 `contentpage`元件時，您可以將 `resourceSuperType`屬性以指向現成可用的基本頁面。
 
    1. 對於 `enrollmentpage` 節點，設定屬性的值 `sling:resourceSuperType` 至mycompany/components/page/contentpage。 此 `contentpage` 元件是您網站的基本頁面元件。 其他頁面元件可加以擴充。 移除下的指令碼檔案 `enrollmentpage`，除了 `head.jsp`， `content.jsp`、和 `library.jsp`. 此 `sling:resourceSuperType` 元件，即 `contentpage` 在此情況下，會包含所有這類指令碼。 頁首（包括導覽列和頁尾）繼承自 `contentpage` 元件。
 

@@ -7,10 +7,10 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 1%
+source-wordcount: '796'
+ht-degree: 0%
 
 ---
 
@@ -97,7 +97,7 @@ ht-degree: 1%
 
 在發佈上，以Boyd Larsen身分登入，並透過選取以下專案來存取對話串： `Forum`，然後 `Read more` 為蜂鳥貼文。
 
-注意:
+注意：
 
 * 博伊德尚未參與論壇。
 * Boyd無法刪除任何內容。
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 以管理員（管理員）身分登入，並選取「論壇」來存取對話串，然後選取貼文的「閱讀更多資訊」。
 
-注意:
+注意：
 
 * 管理員可以標幟、刪除、編輯、拒絕、剪下、關閉、釘選、功能。
 * 管理員可以選取「管理」以存取管理主控台。
@@ -126,7 +126,7 @@ ht-degree: 1%
 
 搜尋篩選是可切換開啟或關閉的側面板。
 
-登出.
+登出。
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
@@ -134,7 +134,7 @@ ht-degree: 1%
 
 以Aaron McDonald (`aaron.mcdonal@mailinator.com`)、社群版主，並透過選取「論壇」來存取對話串，然後選取「瞭解更多」以檢視蜂鳥貼文。
 
-注意:
+注意：
 
 * Aaron可以回覆、刪除、編輯或拒絕自己的貼文。
 * Aaron也可以標幟/允許、回覆、刪除、編輯、拒絕其他內容。
@@ -149,7 +149,7 @@ ht-degree: 1%
 
 請注意，社群版主的選項與管理員相同（影像已關閉搜尋側邊欄），但無法存取其他AEM主控台。
 
-登出.
+登出。
 
 ![版主 — 存取](assets/moderator-access.png)
 
@@ -157,7 +157,7 @@ ht-degree: 1%
 
 以Rebekah Larsen的身份登入(`rebekah.larsen@mailinator.com`)，此社群成員已開始執行緒，並選取「論壇」來存取執行緒，然後選取「瞭解更多」以取得蜂鳥貼文。
 
-注意:
+注意：
 
 * Rebekah可以刪除或編輯自己的貼文。
 * Rebekah也可以回覆或標幟其他內容。

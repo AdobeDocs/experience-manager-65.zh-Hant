@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1758'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 ### Oak叢集搭配MongoMK容錯移轉，可在單一資料中心提供高可用性 {#oak-cluster-with-mongomk-failover-for-high-availability-in-a-single-datacenter}
 
-此方法表示多個Oak執行個體存取單一資料中心內的MongoDB復本集，實際上就是為AEM製作環境建立主動 — 主動叢集。 MongoDB中的復本集用於在硬體或網路故障時提供高可用性和備援。
+此方法表示多個Oak執行個體存取單一資料中心內的MongoDB復本集，實際上就是為AEM製作環境建立主動 — 主動叢集。 MongoDB中的復本集可用於在硬體或網路故障時提供高可用性和備援。
 
 ![chlimage_1-18](assets/chlimage_1-18.png)
 

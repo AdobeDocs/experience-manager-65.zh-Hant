@@ -6,10 +6,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 1%
+source-wordcount: '494'
+ht-degree: 2%
 
 ---
 
@@ -95,7 +95,7 @@ app-admins群組的成員可以使用與應用程式作者相同的許可權來�
 
    >[!CAUTION]
    >
-   >/var/contentsync存取遭拒OOTB。
+   >/var/contentsync存取遭到立即拒絕。
    >
    >省略READ許可權可能會導致建置和復寫空白的更新套件。
 

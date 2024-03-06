@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3212'
+source-wordcount: '3156'
 ht-degree: 1%
 
 ---
@@ -158,7 +158,7 @@ AEM已設定為使用下列三個推送通知服務之一：
    1. 在頁面的右上方，按一下連結»*編輯身分識別集區」*. 此時會顯示身分識別集區ID。 儲存此文字以供稍後使用。
    1. 在同一頁面上，選擇「Unauthenticated role」旁的下拉式清單，並確定其角色為Cognito_&lt;pool name=&quot;&quot;>已選取UnauthRole。 儲存您的變更。
 
-1. **設定存取權限**
+1. **設定存取權**
 
    1. 登入 [識別與存取管理](https://console.aws.amazon.com/iam/home) (IAM)。
    1. 選取角色。
@@ -169,7 +169,7 @@ AEM已設定為使用下列三個推送通知服務之一：
    <table>
     <tbody>
      <tr>
-     <td><p> </p> <p>{</p> <p> 「版本」：「2012-10-17」，</p> <p> "陳述式": [</p> <p> {</p> <p> "動作": [</p> <p> "mobileanalytics：PutEvents"，</p> <p> "cognito-sync：*"，</p> <p> "SNS：CreatePlatformEndpoint"，</p> <p> "SNS：Subscribe"</p> <p> ],</p> <p> "Effect"： "Allow"，</p> <p> "資源": [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td>
+     <td><p> </p> <p>{</p> <p> 「版本」：「2012-10-17」，</p> <p> "Statement"： [</p> <p> {</p> <p> "Action"： [</p> <p> "mobileanalytics：PutEvents"，</p> <p> "cognito-sync：*"，</p> <p> "SNS：CreatePlatformEndpoint"，</p> <p> "SNS：Subscribe"</p> <p> ]，</p> <p> "Effect"： "Allow"，</p> <p> "Resource"： [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td>
      </tr>
     </tbody>
     </table>
@@ -288,7 +288,7 @@ CRXDE Lite：
 1. 傳送通知
 
    * 在應用程式控制面板中，找出「推播通知」圖磚。
-   * 選取通知，或按一下右下方的詳細資訊按鈕( )。..)，顯示通知清單。 此清單也會指出通知是否已準備好傳送、已傳送，或傳送期間是否發生錯誤。
+   * 選擇通知，或按一下右下方的詳細資訊按鈕(. ..)，顯示通知清單。 此清單也會指出通知是否已準備好傳送、已傳送，或傳送期間是否發生錯誤。
    * 勾選一個通知的核取方塊（僅限），然後按一下清單上方的「傳送通知」按鈕。 您有機會在出現的對話方塊上「取消」或「傳送」通知。
 
 1. 處理結果
@@ -368,7 +368,7 @@ CRXDE Lite：
 
 >[!NOTE]
 >
->**其他資訊**:
+>**其他資訊**：
 >
 >6.4版之後不支援Pushwoosh和Amazon SNS，並會以Package Share附加元件的形式提供。
 

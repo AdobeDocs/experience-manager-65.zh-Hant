@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Management
 role: User, Architect, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1924'
-ht-degree: 1%
+source-wordcount: '1898'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +36,7 @@ Possible topics to cover in this article are below.
 
 [!DNL Experience Manager] 為下列標準提供不同等級的支援：
 
-* [網頁內容可及性指引 (WCAG) 2.1](https://www.w3.org/TR/WCAG/).
+* [網頁內容可及性指引(WCAG) 2.1](https://www.w3.org/TR/WCAG/).
 * [修訂《康復法》第508條](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines).
 * [協助工具計畫 — 由W3C提供的協助工具多樣化網際網路應用程式(WAI-ARIA)](https://www.w3.org/WAI/standards-guidelines/aria/).
 * [EN 301 549](https://en.wikipedia.org/wiki/EN_301_549).
@@ -70,9 +70,9 @@ Possible topics to cover in this article are below.
 
 <!-- TBD items:
 
-* The option to toggle between list view and card view exposes relevant info to the screen readers. What about column view option? This info can go into ‘basic handling’ info aka article to ‘understand and use the workspace’.
-* How to open and browse through the profile popup dialog in [!DNL Experience Manager] UI using a keyboard? The navigation does not match the order of visual display of options on the UI. This info can go into ‘basic handling’ info aka article to ‘understand and use the workspace’. What about setting preferences and impersonating a user?
-* Using the [!DNL Experience Manager] tag browser and operating the options like delete tag? This info can go into ‘basic handling’ info aka article to ‘understand and use the workspace’.
+* The option to toggle between list view and card view exposes relevant info to the screen readers. What about column view option? This info can go into 'basic handling' info aka article to 'understand and use the workspace'.
+* How to open and browse through the profile popup dialog in [!DNL Experience Manager] UI using a keyboard? The navigation does not match the order of visual display of options on the UI. This info can go into 'basic handling' info aka article to 'understand and use the workspace'. What about setting preferences and impersonating a user?
+* Using the [!DNL Experience Manager] tag browser and operating the options like delete tag? This info can go into 'basic handling' info aka article to 'understand and use the workspace'.
 * Read-only form fields can be focused with the keyboard. Can users tab to these fields to understand the contents and are they able to copy text from the fields?
 -->
 
@@ -91,7 +91,7 @@ Possible topics to cover in this article are below.
 | [!DNL Assets] 主控台 | `Alt + 3` | 顯示 [!UICONTROL 時間表] 所選資產的ID。 |
 | [!DNL Assets] 主控台 | `Alt + 4` | 開啟所選資產的即時副本參考。 |
 | [!DNL Assets] 主控台 | `Alt + 5` | 在選取的資料夾中開始搜尋和搜尋。 |
-| 已選取資產或資料夾 | 退格字元 | 刪除選取的資產或資料夾。 |
+| 已選取資產或資料夾 | 退格鍵 | 刪除選取的資產或資料夾。 |
 | 已選取資產或資料夾 | `p` | 開啟所選資產的「屬性」頁面。 |
 | 已選取資產或資料夾 | `e` | 編輯選取的資產。 |
 | 已選取資產或資料夾 | `m` | 移動選取的資產。 |
@@ -131,7 +131,7 @@ In [!DNL Experience Manager] header section, when navigating in browse mode, scr
   * The Searching Help status message that is displayed when user enters a search string in Search for Help field under Help option
   * The error message if incorrect value is entered in Impersonate as field under User option and focus correctly moves to the text field (NPR-33804).
 
-Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessible through keyboard, due to which user cannot trigger close option through keyboard press in version preview dialog. After fix, user can close dialog through close option using keyboard.
+Review CQ-4282133 before adding - Close option in a coral-dialog was not accessible through keyboard, due to which user cannot trigger close option through keyboard press in version preview dialog. After fix, user can close dialog through close option using keyboard.
 
 * CQ-4273122 - Assets of video/audio type will have aria-label in format "Multimedia player: <Title>" so users relying on screen-reader will get to know that they are video/audio assets.
 -->
@@ -215,7 +215,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessib
 * 可以使用鍵盤導覽。
 * 對比率有助於強調說明檔案網站的某些部分。
 
-## 提供意見回饋 {#a11y-feedback}
+## 提供回饋意見 {#a11y-feedback}
 
 若要提供與協助工具相關的意見回饋、詢問問題並請求產品增強功能，請使用下列方法：
 
