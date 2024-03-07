@@ -2,9 +2,10 @@
 title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
-source-git-commit: f00d2c88ba6727f8f8597fefeb467b612b23dea3
+exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
+source-git-commit: 39261357c17ef565a39ebc441aed356d69b4d8f9
 workflow-type: tm+mt
-source-wordcount: '3524'
+source-wordcount: '3560'
 ht-degree: 2%
 
 ---
@@ -478,6 +479,7 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
    1. 重新啟動AEM伺服器，並在重新啟動程式完成後驗證所有套裝的啟用狀態。 您可以透過存取以下專案來監視套裝的狀態： `https://server:host/system/console/bundles`. 繼續進行進一步的工作之前，請確定所有套件組合皆為作用中。
 
 * 預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 (CQDOC-21355)
+* 最適化Forms可讓您搭配ECMAScript 5或更早版本使用自訂函式。 當自訂函式使用ECMAScript 6版或更新版本（例如「let」、「const」或箭頭函式）時，規則編輯器可能無法正確開啟。
 
 <!--Known issues in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.20.0 Forms add-on package release is scheduled for Thursday, February 29, 2024. A list of known issues for forms is added to this section post the release.-->
 
