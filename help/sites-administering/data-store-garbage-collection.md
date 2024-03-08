@@ -7,9 +7,9 @@ topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: bd3c3c2f833e4d7e763e7726c5c75597523605d7
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1892'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ AEM使用存放庫作為數個內部和內部管理活動的存放區：
 >
 >不同時執行的原因是，舊的（和未使用的）資料存放區檔案也會進行備份，因此如果需要復原為舊的修訂版本，二進位檔案仍會保留在備份中。
 
-如果您不想要使用作業儀表板中的每週維護視窗來執行資料存放區廢棄專案收集，也可以使用wget或curl HTTP使用者端將其自動化。 以下是如何使用curl自動化備份的範例：
+如果您不想要使用作業儀表板中的每週維護視窗來執行資料存放區廢棄專案收集，也可以使用wget或curl HTTP使用者端將其自動化。 以下是如何藉由使用curl來自動化記憶體回收的範例：
 
 >[!CAUTION]
 >
