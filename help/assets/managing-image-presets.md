@@ -11,16 +11,16 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '3794'
+source-wordcount: '3792'
 ht-degree: 8%
 
 ---
 
 # 管理Dynamic Media影像預設集{#managing-image-presets}
 
-影像預設集可讓Adobe Experience Manager資產動態傳送不同大小、不同格式或其他動態產生影像屬性的影像。 每個影像預設集代表預先定義的一組大小調整和格式指令，用於顯示影像。 建立影像預設集時，您可以選取影像傳送的大小。 您也可以選擇格式化指令，以便在傳送影像供檢視時最佳化影像外觀。
+影像預設集可讓Adobe Experience Manager Assets動態傳送不同大小、不同格式或其他動態產生影像屬性的影像。 每個影像預設集代表預先定義的一組大小調整和格式指令，用於顯示影像。 建立影像預設集時，您可以選取影像傳送的大小。 您也可以選擇格式化指令，以便在傳送影像供檢視時最佳化影像外觀。
 
 管理員可以建立預設集來匯出資產。 使用者可以在匯出影像時選擇預設集，這樣也會將影像重新格式化為管理員指定的規格。
 
@@ -125,12 +125,12 @@ Adobe Illustrator的檔案格式是PDF的變體。 Experience Manager Assets內�
    <td>視為PDF或Illustrator檔案的檔案mime型別清單。<br /> </td>
   </tr>
   <tr>
-   <td>寬度上限</td>
+   <td>最大寬度</td>
    <td>2048</td>
    <td>所產生預覽轉譯的最大寬度（畫素）。<br /> </td>
   </tr>
   <tr>
-   <td>高度上限</td>
+   <td>最大高度</td>
    <td>2048</td>
    <td>所產生預覽轉譯的最大高度（畫素）。<br /> </td>
   </tr>
@@ -195,7 +195,7 @@ Dynamic Media整合會使用下列指令碼：
 
 在「動 **[!UICONTROL 態媒體處理影像資產」步驟中]** ，影像伺服器會產生縮圖，此組態與套用至「處理縮圖」步驟的組態無關 **** 。透過「處理縮圖 **[!UICONTROL 」步驟產生縮圖]** ，是建立縮圖的最慢且記憶體最耗用的方式。
 
-縮圖大小會以下列格式定義： **[!UICONTROL 寬度:height:置中]**&#x200B;例如， `80:80:false`. 寬度和高度會決定縮圖的大小（以畫素為單位）。 中心值為false或true，若設為true，表示縮圖影像大小與設定中指定的大小完全相同。 如果調整大小的影像較小，它會在縮圖內建中。
+縮圖大小會以下列格式定義： **`width:height:center`**&#x200B;例如， `80:80:false`. 寬度和高度會決定縮圖的大小（以畫素為單位）。 中心值為false或true，若設為true，表示縮圖影像大小與設定中指定的大小完全相同。 如果調整大小的影像較小，它會在縮圖內建中。
 
 >[!NOTE]
 >
@@ -362,7 +362,7 @@ Dynamic Media整合會使用下列指令碼：
    <td><strong>說明</strong></td>
   </tr>
   <tr>
-   <td><strong>色域</strong></td>
+   <td><strong>色彩空間</strong></td>
    <td>選取 <strong>RGB、CMYK、</strong> 或 <strong>灰階</strong> 以代表色域。</td>
   </tr>
   <tr>

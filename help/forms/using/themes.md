@@ -7,7 +7,7 @@ content-strategy: max-2018
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 93c360a8-a9d9-4c4b-b7e2-2c44eaf4604c
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
 source-wordcount: '6084'
 ht-degree: 2%
@@ -119,7 +119,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>4.</td>
-   <td>建立日期</td>
+   <td>已建立</td>
    <td>否</td>
    <td>佈景主題建立日期</td>
   </tr>
@@ -178,7 +178,7 @@ ht-degree: 2%
      <li>「/etc」中儲存與此主題相對應的clientlibs的使用者定義存放庫路徑。</li>
      <li>預設值 — '/etc/clientlibs/fd/themes' +主題資產的相對路徑。</li>
      <li>如果該位置不存在，則會自動產生資料夾階層。</li>
-     <li>此值變更時，clientlib節點結構會移至輸入的新位置。<br /> <em><strong>注意：</strong> 如果您變更預設的clientlib位置，請在CRXDE存放庫指派中 <code>crx:replicate, rep:write, rep:glob:*, rep:itemNames:: js.txt, jcr:read </code>至 <code>forms-users</code> 和 <code>crx:replicate</code>， <code>jcr:read </code>至 <code>fd-service</code> 在新位置。 另外透過新增來附加另一個ACL <code>deny jcr:addChildNodes</code> 的 <code>forms-user</code></em></li>
+     <li>此值變更時，clientlib節點結構會移至輸入的新位置。<br /> <em><strong>注意：</strong> 如果您變更預設的clientlib位置，請在CRXDE存放庫指派中 <code>crx:replicate</code>， <code>rep:write</code>， <code>rep:glob:*</code>， <code>rep:itemNames::</code> <code>js.txt</code>， <code>jcr:read</code> 至 <code>forms-users</code> 和 <code>crx:replicate</code>， <code>jcr:read</code> 至 <code>fd-service</code> 在新位置。 另外透過新增來附加另一個ACL <code>deny jcr:addChildNodes</code> 的 <code>forms-user</code></em></li>
     </ul> </td>
   </tr>
   <tr>
@@ -231,7 +231,7 @@ AEM Forms隨附主題編輯器。 這是對業務使用者和網頁設計人員/
 
 [![反白顯示邊欄和畫布的主題編輯器。](assets/themes.png)](assets/themes-1.png) **答：** 側欄 **B.** 畫布
 
-### 樣式化元件 {#styling-components}
+### 設定元件樣式 {#styling-components}
 
 您可以在多個最適化表單和互動式通訊中使用主題，這會匯入您在主題中指定的元件格式。 您可以設定各種元件的樣式，例如標題、說明、面板、欄位、圖示和文字方塊。 使用Widget來設定主題中的元件屬性。 您不一定要具備CSS或LESS的先前知識，但是需要，不過CSS覆寫區段可讓您撰寫CSS程式碼或提供自訂選取器。 在側邊欄中選取元件時，CSS覆寫區段隨即顯示。
 
@@ -254,7 +254,7 @@ AEM Forms中的主題支援您的表單和互動式通訊中面板版面配置�
 * 左側的索引標籤
 * 頂端標籤
 * 折疊面板
-* 回應式
+* 反應
 * 精靈
 * 行動佈局
 

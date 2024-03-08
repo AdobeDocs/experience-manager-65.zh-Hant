@@ -7,9 +7,9 @@ topic-tags: customization
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1242'
 ht-degree: 0%
 
 ---
@@ -143,8 +143,8 @@ Forms Portal提供預留位置語法，以顯示自訂/現成可用的中繼資�
 * **diffTime**：目前時間和草稿的最後儲存動作之間的差異。 或者，也可以選擇目前時間與上次提交之提交動作之間的差異。
 * **iconclass**：用於顯示草稿/提交內容的第一字母的CSS類別。 Forms Portal包含下列類別，提供各種不同色彩的背景。
 * **所有者**：建立草稿/提交的使用者。
-* **今天**：在DD中建立草稿或提交的日期:MM:yyyy格式。
-* **TimeNow**：在HH中建立草稿或提交內容的時間:MM:SS 24小時格式
+* **今天**：在中建立草稿或提交的日期 `DD:MM:YYYY` 格式。
+* **TimeNow**：在中建立草稿或提交專案的時間 `HH:MM:SS` 24小時格式
 
 *注意：*
 

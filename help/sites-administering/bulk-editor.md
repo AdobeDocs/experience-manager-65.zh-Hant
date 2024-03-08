@@ -7,10 +7,10 @@ topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 1%
+source-wordcount: '1160'
+ht-degree: 0%
 
 ---
 
@@ -74,7 +74,7 @@ Geometrixx網站中提供了此使用案例的說明範例：
   </tr>
   <tr>
    <td>根路徑</td>
-   <td>表示大量編輯器搜尋的根路徑。<br />例如，<code>/content/geometrixx/en</code>。「大量編輯器」會搜尋所有子節點。</td>
+   <td>表示大量編輯器搜尋的根路徑。<br /> 例如， <code>/content/geometrixx/en</code>. 「大量編輯器」會搜尋所有子節點。</td>
   </tr>
   <tr>
    <td>查詢參數</td>
@@ -119,7 +119,8 @@ Geometrixx網站中提供了此使用案例的說明範例：
 * **路徑：** 僅搜尋此路徑下的節點。 如果您指定多個具有路徑首碼的字詞，則只會考慮最後一個字詞。
 * **型別：** 僅傳回給定節點型別的節點。 這包括主要和mixin型別。 您可以指定多個逗號分隔的節點型別。 GQL會傳回任何指定型別的節點。
 * **訂購：** 依指定的屬性排序結果。 您可以指定多個以逗號分隔的屬性名稱。 若要以遞減順序排序結果，只需在屬性名稱前面加上減號即可。 例如，order：-name。 使用加號會以遞增順序傳回結果，這也是預設值。
-* **限制：** 使用間隔來限制結果的數量。 例如，limit：10..20間隔以零為基準，開始為包含範圍，結束為排除範圍。 您也可以指定開啟間隔:limit:10.. 或限制：...20如果省略這些點並且只指定了一個值，則GQL最多會傳回此數量的結果。 例如，limit：10 （傳回前十個結果）。
+* **限制：** 使用間隔來限制結果的數量。 例如，limit：10..20間隔以零為基準，開始為包含範圍，結束為排除範圍。 您也可以指定開啟 `interval:limit:10..` 或 `limit:..20`
+如果省略點且只指定了一個值，GQL最多會傳回此數量的結果。 例如， `limit:10` （傳回前十個結果）。
 
 ### 匯出內容 {#exporting-content}
 

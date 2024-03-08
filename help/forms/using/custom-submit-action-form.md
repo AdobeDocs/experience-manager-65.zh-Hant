@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 7c3d0dac-4e19-4eb3-a43d-909d526acd55
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1542'
 ht-degree: 1%
 
 ---
@@ -94,7 +94,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 * **addfields.jsp**：此指令碼提供在轉譯期間新增至HTML檔案中的動作欄位。 使用此指令碼，在post.post.jsp.jsp指令碼中新增提交期間所需的隱藏POST引數。
 * **dialog.xml**：此指令碼類似於CQ元件對話方塊。 它提供作者自訂的設定資訊。 當您選取提交動作時，欄位會顯示在「最適化表單編輯」對話方塊的「提交動作」索引標籤中。
-* **post.POST.jsp**：提交servlet會呼叫此指令碼，其中包含您提交的資料以及前幾節中的其他資料。 在此頁面中只要提到要執行動作，就表示要執行post.post.jspPOST檔。 若要以最適化表單註冊提交動作以顯示於最適化表單編輯對話方塊中，請將這些屬性新增到Sling:Folder:
+* **post.POST.jsp**：提交servlet會呼叫此指令碼，其中包含您提交的資料以及前幾節中的其他資料。 在此頁面中只要提到要執行動作，就表示要執行post.post.jspPOST檔。 若要以最適化表單註冊提交動作以顯示於最適化表單編輯對話方塊中，請將這些屬性新增至 `sling:Folder`：
 
    * **guideComponentType** 字串和值的型別 **fd/af/components/guidesubmittype**
    * **guideDataModel** 字串型別，指定適用於提交動作的最適化表單型別。 **xfa** 支援XFA型最適化表單，但 **xsd** 支援XSD型最適化表單。 **基本** 不使用XDP或XSD的最適化表單支援。 若要顯示多種最適化表單型別的動作，請新增對應的字串。 以逗號分隔每個字串。 例如，若要讓動作顯示在XFA和XSD型最適化表單上，請指定值 **xfa** 和 **xsd** （分別）。

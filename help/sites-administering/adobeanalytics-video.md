@@ -7,10 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1745'
-ht-degree: 1%
+source-wordcount: '1754'
+ht-degree: 0%
 
 ---
 
@@ -117,7 +117,7 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.a.media.segment </td>
-   <td>包含已檢視區段的資訊，例如2:O:4-8 </td>
+   <td>包含已檢視區段的相關資訊，例如， <code>2:O:4-8</code> </td>
   </tr>
  </tbody>
 </table>
@@ -199,7 +199,7 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.a.contentType </td>
-   <td>eVar3</td>
+   <td>EVAR3</td>
   </tr>
   <tr>
    <td>eventdata.a.media.name </td>
@@ -207,7 +207,7 @@ XX尾碼是定義里程碑的軌跡位移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.a.media.segment </td>
-   <td>eVar2</td>
+   <td>EVAR2</td>
   </tr>
  </tbody>
 </table>
@@ -317,7 +317,7 @@ eventdata.events.milestoneXX
 
    **呼叫範例** 使用提供的範例前往Adobe Analytics，在使用DigitalPulse Debugger檢視時應該如下所示：
 
-   ![lmilestones1](assets/lmilestones1.png)
+   ![里程碑1](assets/lmilestones1.png)
 
    *此&#x200B;**pev3**呼叫中傳送的變數包含下列資訊：*
 

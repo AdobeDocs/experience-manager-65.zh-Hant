@@ -7,9 +7,9 @@ topic-tags: mobile-web
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '5375'
+source-wordcount: '5293'
 ht-degree: 0%
 
 ---
@@ -96,12 +96,12 @@ W3C群組提供 [媒體查詢](https://www.w3.org/TR/mediaqueries-3/) 說明此C
   <tr>
    <td>style.css</td>
    <td>通用樣式。</td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
   <tr>
    <td>bootstrap.css</td>
    <td>通用樣式，由TwitterBootstrap定義。</td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
   <tr>
    <td>responsive-1200px.css</td>
@@ -200,7 +200,7 @@ JSP指令碼會產生下列參考樣式表的HTML代碼：
 
   此 —  `*alias*` 需要字尾，因為MobileEmulatorProvider服務是工廠服務。 使用這個工廠唯一的任何別名。
 
-* jcr:primaryType: `sling:OsgiConfig`
+* `jcr:primaryType`: `sling:OsgiConfig`
 
 新增下列節點屬性：
 
@@ -225,7 +225,7 @@ JSP指令碼會產生下列參考樣式表的HTML代碼：
 
 * 名稱：`cq:deviceGroups`
 * 類型：`String[]`
-* 值: `/etc/mobile/groups/responsive`
+* 值： `/etc/mobile/groups/responsive`
 
 使用「工具」主控台： [建立和編輯裝置群組](/help/sites-developing/groupfilters.md).
 
@@ -343,10 +343,10 @@ W3C [圖片元素](https://html.spec.whatwg.org/multipage/embedded-content.html#
 
 瀏覽器載入頁面時，會使用src屬性的值做為URL來要求影像。 Sling會解壓縮URL：
 
-* 資源: `/content/mywebsite/en/_jcr_content/par/image_0`
+* 資源： `/content/mywebsite/en/_jcr_content/par/image_0`
 * 副檔名： `.jpg`
-* 選擇器: `img`
-* 字尾: `1358372073597.jpg`
+* 選取器： `img`
+* 字尾： `1358372073597.jpg`
 
 此 `image_0` 節點具有 `jcr:resourceType` 值 `foundation/components/image`，具有 `sling:resourceSuperType` 值 `foundation/components/parbase`. parbase元件包含img.java指令碼，此指令碼符合選取器和請求URL的副檔名GET。 CQ會使用此指令碼(servlet)來轉譯影像。
 

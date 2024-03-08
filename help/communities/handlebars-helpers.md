@@ -4,9 +4,9 @@ description: Handlebars Helper方法可加快處理SCF的速度
 topic-tags: developing
 content-type: reference
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: 787e5a87f13498006e2ce897e85ee12704b58f09
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1445'
 ht-degree: 2%
 
 ---
@@ -135,7 +135,7 @@ Then content-loadmore would return
 
 * **格式**：字串
 
-  （選用）要套用的日期格式。 預設值為&quot;YYYY-MM-DDTHH:mm:ss.sssZ」而結果會顯示為「2015-03-18T18」:17:13-07:00英吋
+  （選用）要套用的日期格式。 預設為&quot;`YYYY-MM-DDTHH:mm:ss.sssZ`&quot;，結果將顯示為&quot;`2015-03-18T18:17:13-07:00`&quot;
 
 ### 範例 {#examples-1}
 

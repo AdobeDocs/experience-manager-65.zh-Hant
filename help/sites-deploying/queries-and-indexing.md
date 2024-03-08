@@ -8,10 +8,10 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '3032'
-ht-degree: 2%
+source-wordcount: '3034'
+ht-degree: 1%
 
 ---
 
@@ -157,14 +157,14 @@ Lucene索引有下列設定選項：
 
 | <b>Token</b> | <b>檔案ID</b> |
 | --- | --- |
-| 194 | ..., 200,... |
-| 品牌 | ..., 100,... |
-| 立方體 | ..., 200, 300,... |
+| 194 | ...， 200，... |
+| 品牌 | ...， 100，... |
+| 立方體 | ...、200、300、... |
 | 維度 | 300 |
-| 完成 | ..., 100,... |
+| 完成 | ...， 100，... |
 | invent | 200 |
-| 物件 | ..., 300,... |
-| rubik | ..., 100, 200,... |
+| 物件 | ...， 300，... |
+| rubik | ...、100、200、... |
 
 檔案清單已排序。 這在查詢時很方便。
 
@@ -187,8 +187,8 @@ Lucene索引有下列設定選項：
 
 | <b>Token</b> | <b>檔案ID</b> |
 | --- | --- |
-| rubik | 10, 100, 200, 1000 |
-| 立方體 | 30, 200, 300, 2000 |
+| rubik | 10， 100， 200， 1000 |
+| 立方體 | 30、200、300、2000 |
 
 
 Lucene在兩個清單（或循環配置資源）之間來回切換 `n` 清單，搜尋 `n` 字數)：
@@ -222,20 +222,20 @@ Lucene在兩個清單（或循環配置資源）之間來回切換 `n` 清單，
 select * from [nt:base] where [alias] = '/admin'
 ```
 
-若要為上述查詢定義Lucene屬性索引，您可以在下建立節點來新增以下定義 **oak:index:**
+若要為上述查詢定義Lucene屬性索引，您可以在下建立節點來新增以下定義 **`oak:index`：**
 
-* **名稱:** `LucenePropertyIndex`
-* **類型：**`oak:QueryIndexDefinition`
+* **名稱：** `LucenePropertyIndex`
+* **型別：** `oak:QueryIndexDefinition`
 
 建立節點後，請新增下列屬性：
 
-* **類型:**
+* **型別：**
 
   ```xml
   lucene (of type String)
   ```
 
-* **非同步處理:**
+* **非同步：**
 
   ```xml
   async (of type String)
@@ -283,24 +283,24 @@ select * from [nt:base] where [alias] = '/admin'
 
 1. 將屬性新增至具有下列屬性的預設節點：
 
-   * **名稱:** `class`
-   * **類型：**`String`
-   * **值:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
+   * **名稱：** `class`
+   * **型別：** `String`
+   * **值：** `org.apache.lucene.analysis.standard.StandardAnalyzer`
 
    值是您要使用的分析器類別名稱。
 
    您也可以使用選填，將分析器設定為與特定lucene版本搭配使用 `luceneMatchVersion` 字串屬性。 搭配Lucene 4.7使用的有效語法為：
 
-   * **名稱:** `luceneMatchVersion`
-   * **類型：**`String`
-   * **值:** `LUCENE_47`
+   * **名稱：** `luceneMatchVersion`
+   * **型別：** `String`
+   * **值：** `LUCENE_47`
 
    如果 `luceneMatchVersion` 未提供，Oak會使用隨附的Lucene版本。
 
 1. 如果要將停用字檔案新增至分析器組態，可在 `default` 一個具有下列屬性：
 
-   * **名稱:** `stopwords`
-   * **類型：**`nt:file`
+   * **名稱：** `stopwords`
+   * **型別：** `nt:file`
 
 #### 透過構成建立分析器 {#creating-analyzers-via-composition}
 
@@ -308,41 +308,41 @@ select * from [nt:base] where [alias] = '/admin'
 
 以這個節點結構為例：
 
-* **名稱:** `analyzers`
+* **名稱：** `analyzers`
 
-   * **名稱:** `default`
+   * **名稱：** `default`
 
-      * **名稱:** `charFilters`
-      * **類型：**`nt:unstructured`
+      * **名稱：** `charFilters`
+      * **型別：** `nt:unstructured`
 
-         * **名稱:** `HTMLStrip`
-         * **名稱:** `Mapping`
+         * **名稱：** `HTMLStrip`
+         * **名稱：** `Mapping`
 
-      * **名稱:** `tokenizer`
+      * **名稱：** `tokenizer`
 
-         * **屬性名稱:** `name`
+         * **屬性名稱：** `name`
 
-            * **類型：**`String`
-            * **值:** `Standard`
+            * **型別：** `String`
+            * **值：** `Standard`
 
-      * **名稱:** `filters`
-      * **類型：**`nt:unstructured`
+      * **名稱：** `filters`
+      * **型別：** `nt:unstructured`
 
-         * **名稱:** `LowerCase`
-         * **名稱:** `Stop`
+         * **名稱：** `LowerCase`
+         * **名稱：** `Stop`
 
-            * **屬性名稱:** `words`
+            * **屬性名稱：** `words`
 
-               * **類型：**`String`
-               * **值:** `stop1.txt, stop2.txt`
+               * **型別：** `String`
+               * **值：** `stop1.txt, stop2.txt`
 
-            * **名稱:** `stop1.txt`
+            * **名稱：** `stop1.txt`
 
-               * **類型：**`nt:file`
+               * **型別：** `nt:file`
 
-            * **名稱:** `stop2.txt`
+            * **名稱：** `stop2.txt`
 
-               * **類型：**`nt:file`
+               * **型別：** `nt:file`
 
 濾鏡、charFilters和tokenizers的名稱是透過移除原廠尾碼所組成。 因此：
 

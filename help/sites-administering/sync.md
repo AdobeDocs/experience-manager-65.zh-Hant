@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '2434'
+source-wordcount: '2433'
 ht-degree: 1%
 
 ---
@@ -140,7 +140,7 @@ ht-degree: 1%
    * **主體**： *搜尋為使用者同步處理建立的使用者*
    * **類型**：`Allow`
    * **許可權**： `jcr:all`
-   * **限制** rep:glob: `*/activities/*`
+   * **限制** `rep:glob`： `*/activities/*`
    * 選取 **確定**
 
 * 選取 **全部儲存**

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 11b0023e-34bd-4dfe-8173-5466db9fbe34
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1078'
 ht-degree: 2%
 
 ---
@@ -98,10 +98,10 @@ sed -n "s/.*(aem-analytics-integration-.*).*target=\(.*\)\/jcr:content.*/\1/p" e
 * 檢查ACL `/etc/cloudservices`. ACL應為：
 
    * 允許； jcr：read； webservice-support-servicelibfinder
-   * 允許； jcr：read；所有人； rep:glob:&amp;ast；/defaults/&amp;ast；
-   * 允許； jcr：read；所有人； rep:glob:&amp;ast；/defaults
-   * 允許； jcr：read；所有人； rep:glob:&amp;ast；/public/&amp;ast；
-   * 允許； jcr：read；所有人； rep:glob:&amp;ast；/public
+   * 允許； jcr：read；所有人； `rep:glob:`&amp;ast；`/defaults/`&amp;ast；
+   * 允許； jcr：read；所有人； `rep:glob:`&amp;ast；`/defaults`
+   * 允許； jcr：read；所有人； `rep:glob:`&amp;ast；`/public/`&amp;ast；
+   * 允許； jcr：read；所有人； `rep:glob:`&amp;ast；`/public`
 
 如需有關管理ACL的詳細資訊，請參閱 [使用者管理與安全性](/help/sites-administering/security.md#permissions-in-aem) 頁面。
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1609'
 ht-degree: 0%
 
 ---
@@ -221,7 +221,7 @@ LDAP (此 **L** hightweight **D**&#x200B;目錄 **A**&#x200B;存取 **P** rotoco
 
 >[!NOTE]
 >
-如果您打算讓AEM執行個體擁有多個LDAP組態，則必須為每個組態建立個別的識別提供者與同步處理程式。
+>如果您打算讓AEM執行個體擁有多個LDAP組態，則必須為每個組態建立個別的識別提供者與同步處理程式。
 
 ## 透過SSL設定LDAP {#configure-ldap-over-ssl}
 
@@ -277,12 +277,12 @@ LDAP Identity Provider和外部登入模組皆可啟用除錯記錄，以疑難�
 
 * 記錄層級： Debug
 * 記錄檔logs/ldap.log
-* 訊息模式： {0，date，dd.MM.yyyy HH:mm:ss.SSS} &amp;ast；{4}&amp;ast； {2} {3} {5}
+* 訊息模式： {0，日期，`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast；{4}&amp;ast； {2} {3} {5}
 * 記錄器：org.apache.jackrabbit.oak.security.authentication.ldap
 
 * 記錄層級： Debug
 * 記錄檔：logs/external.log
-* 訊息模式： {0，date，dd.MM.yyyy HH:mm:ss.SSS} &amp;ast；{4}&amp;ast； {2} {3} {5}
+* 訊息模式： {0，日期，`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast；{4}&amp;ast； {2} {3} {5}
 * 記錄器： org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## 關於群組隸屬關係的一句話 {#a-word-on-group-affiliation}
