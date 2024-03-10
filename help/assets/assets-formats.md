@@ -7,10 +7,10 @@ role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
 hide: true
-source-git-commit: c99d6f3c67c97ea382ace2e102b2cacbbd2e5db5
+source-git-commit: a19f07bc42d2918338b07418bed56ac2bb73ba2d
 workflow-type: tm+mt
-source-wordcount: '1884'
-ht-degree: 26%
+source-wordcount: '1872'
+ht-degree: 25%
 
 ---
 
@@ -275,17 +275,17 @@ CRXDE Lite中有提供支援的MIME型別清單，請參閱 `/conf/global/settin
 
 | 格式 | 上傳（輸入格式） | 建立影像預設集（輸出格式） | 預覽動態轉譯 | 傳遞動態轉譯 | 下載動態轉譯 | 設定支援此格式的型別 |
 |---|:---:|:---:|:---:|:---:|:---:| --- |
-| AVIF | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| AVIF | − | − | − | ✓ | − | − |
 | BMP | ✓ | − | − | − | − | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − |
-| HEIC | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| HEIC | − | − | − | ✓ | − | − |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
 | PICT | ✓ | − | − | − | − | − |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
 | PSD‡ | ✓ | − | − | − | − | − |
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [影像](/help/assets/image-sets.md)， [混合媒體](/help/assets/mixed-media-sets.md)、和 [迴轉](/help/assets/spin-sets.md) |
-| WEBP | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| WEBP | − | − | − | ✓ | − | − |
 <!-- AVIF, HEIC, and WebP added to table above on March 4, 2024 based on CQDOC-21294 -->
 
 ‡合併的影像會從PSD檔案中擷取。 這是由Adobe Photoshop產生的影像，並包含在PSD檔案中。 視設定而定，合併的影像不一定是實際影像。
