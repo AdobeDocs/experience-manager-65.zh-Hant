@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '6061'
+source-wordcount: '5868'
 ht-degree: 2%
 
 ---
@@ -103,15 +103,15 @@ A **複合健康狀態檢查** 是彙總來自數個個別檢查的資訊的檢�
 
    應在新節點上設定下列屬性：
 
-   * **名稱:** `sling:resourceType`
+   * **名稱：** `sling:resourceType`
 
-      * **類型：**`String`
-      * **值:** `granite/operations/components/mbean`
+      * **型別：** `String`
+      * **值：** `granite/operations/components/mbean`
 
-   * **名稱:** `resource`
+   * **名稱：** `resource`
 
-      * **類型：**`String`
-      * **值:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
+      * **型別：** `String`
+      * **值：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
 
    >[!NOTE]
    >
@@ -160,21 +160,21 @@ A **複合健康狀態檢查** 是彙總來自數個個別檢查的資訊的檢�
 
    例如，如果您建立了組態並設定 **hc.mbean.name** 值至 **磁碟使用情況**，設定節點如下：
 
-   * **名稱:** `Composite Health Check`
+   * **名稱：** `Composite Health Check`
 
-      * **類型：**`nt:unstructured`
+      * **型別：** `nt:unstructured`
 
    具有以下屬性：
 
-   * **名稱:** `sling:resourceType`
+   * **名稱：** `sling:resourceType`
 
-      * **類型：**`String`
-      * **值:** `granite/operations/components/mbean`
+      * **型別：** `String`
+      * **值：** `granite/operations/components/mbean`
 
-   * **名稱:** `resource`
+   * **名稱：** `resource`
 
-      * **類型：**`String`
-      * **值:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
+      * **型別：** `String`
+      * **值：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
 
    >[!NOTE]
    >
@@ -199,7 +199,7 @@ A **複合健康狀態檢查** 是彙總來自數個個別檢查的資訊的檢�
    <td><p>「觀察佇列長度」會反複執行所有事件接聽程式和背景觀察程式，並比較其 <code>queueSize </code>至其 <code>maxQueueSize</code> 和：</p>
     <ul>
      <li>若符合下列條件，則會傳回「嚴重」狀態： <code>queueSize</code> 值超過 <code>maxQueueSize</code> 值（即事件會被捨棄的時間）</li>
-     <li>如果符合下列條件，則傳回Warn <code>queueSize</code> 值超過 <code>maxQueueSize * WARN_THRESHOLD</code> （預設值為0.75） </li>
+     <li>如果 <code>queueSize</code> 值超過 <code>maxQueueSize * WARN_THRESHOLD</code> （預設值為0.75） </li>
     </ul> <p>每個佇列的長度上限分別來自不同的設定(Oak和AEM)，且無法透過此健康狀態檢查設定。 此健康狀態檢查的MBean為 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DObservationQueueLengthHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck：name=ObservationQueueLengthHealthCheck，type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
@@ -223,11 +223,11 @@ A **複合健康狀態檢查** 是彙總來自數個個別檢查的資訊的檢�
    <td>非同步處理索引</td>
    <td><p>非同步索引檢查：</p>
     <ul>
-     <li>如果至少一個索引通道失敗，則傳回「嚴重」狀態</li>
+     <li>如果至少一個索引通道失敗，則傳回「關鍵」狀態</li>
      <li>檢查 <code>lastIndexedTime</code> 對於所有索引通道和：
       <ul>
        <li>如果超過2小時前，則傳回「嚴重」狀態 </li>
-       <li>如果2小時到45分鐘前已發生警告狀況，則會傳回警告狀態 </li>
+       <li>如果2小時到45分鐘前還處於警告狀態，則會傳回警告狀態 </li>
        <li>如果小於45分鐘前，則傳回「正常」狀態 </li>
       </ul> </li>
      <li>如果不符合這些條件，則會傳回OK狀態</li>
@@ -265,16 +265,16 @@ A **複合健康狀態檢查** 是彙總來自數個個別檢查的資訊的檢�
     </div>
     <ul>
      <li>若超過 <code>maxNumQueueJobs</code> 在佇列中</li>
-     <li>如果長期執行中的作用中工作超過1小時，則傳回Critical</li>
-     <li>如果有佇列的工作，而且最後完成的工作時間超過1小時，則傳回Critical</li>
+     <li>如果長期執行中的作用中工作早於1小時，則傳回「嚴重」</li>
+     <li>如果有佇列的工作，而且最後完成的工作時間超過1小時，則會傳回「嚴重」</li>
     </ul> <p>僅可設定佇列作業的最大數量引數，其預設值為1000。</p> <p>此健康狀態檢查的MBean為 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingJobs%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck：name=slingJobs，type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
    <td>要求效能</td>
    <td><p>此檢查會檢視 <code>granite.request.metrics.timer</code> <a href="http://localhost:4502/system/console/slingmetrics" target="_blank">Sling量度 </a>和：</p>
     <ul>
-     <li>如果第75個百分位值超過嚴重臨界值（預設值為500毫秒），則傳回Critical</li>
-     <li>如果第75個百分位值超過警告臨界值（預設值為200毫秒），則傳回Warn</li>
+     <li>如果第75個百分位值超過嚴重臨界值（預設值為500毫秒），則傳回「嚴重」</li>
+     <li>如果第75個百分位值超過警告臨界值（預設值為200毫秒），則傳回警告</li>
     </ul> <p>此健康狀態檢查的MBean為<em> </em><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DrequestsStatus%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck：name=requestsStatus，type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
@@ -285,7 +285,7 @@ A **複合健康狀態檢查** 是彙總來自數個個別檢查的資訊的檢�
    <td>磁碟空間</td>
    <td><p>磁碟空間檢查會檢視 <code>FileStoreStats</code> MBean，會擷取節點存放區的大小以及節點存放區分割區上可用的磁碟空間量，並且：</p>
     <ul>
-     <li>如果可用磁碟空間與存放庫大小的比率小於警告臨界值（預設值為10），則傳回Warn</li>
+     <li>如果可用磁碟空間與存放庫大小的比率小於警告臨界值（預設值為10），則傳回警告</li>
      <li>如果可用磁碟空間與存放庫大小的比率小於嚴重臨界值（預設值為2），則傳回「嚴重」</li>
     </ul> <p>這兩個臨界值都是可設定的。 此檢查僅適用於具有區段存放區的執行個體。</p> <p>此健康狀態檢查的MBean為 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DDiskSpaceHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck：name=DiskSpaceHealthCheck，type=HealthCheck</a>.</p> </td>
   </tr>
@@ -309,8 +309,8 @@ A **複合健康狀態檢查** 是彙總來自數個個別檢查的資訊的檢�
    <td>程式碼快取檢查</td>
    <td><p>健康情況檢查會驗證可能觸發Java™ 7中出現CodeCache錯誤的多個JVM條件：</p>
     <ul>
-     <li>如果執行個體在Java™ 7上執行，並啟用程式碼快取排清，則傳回Warn</li>
-     <li>如果執行個體在Java™ 7上執行，且保留的程式碼快取大小小於最小臨界值（預設值為90 MB），則傳回Warn</li>
+     <li>如果執行個體在Java™ 7上執行，並啟用程式碼快取排清，則會傳回Warn</li>
+     <li>如果執行個體在Java™ 7上執行，且保留的程式碼快取大小小於最小臨界值（預設值為90 MB），則會傳回「警告」</li>
     </ul> <p>此 <code>minimum.code.cache.size</code> 臨界值是可設定的。 如需有關錯誤的詳細資訊，請參閱 <a href="https://bugs.java.com/bugdatabase/"> 然後搜尋Bug ID 8012547</a>.</p> <p>此健康狀態檢查的MBean為 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck：name=codeCacheHealthCheck，type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
@@ -604,7 +604,7 @@ UI可用來篩選表格中的索引，方法是在畫面左上角的搜尋方塊
 
 您可以排定「版本永久刪除」維護作業，以自動刪除舊版本。 此動作將手動使用 [版本清除工具](/help/sites-deploying/version-purging.md). 您可以存取「 」，以排程並設定「版本永久刪除」工作 **工具>作業>維護>每週維護視窗** 並依照下列步驟進行：
 
-1. 按一下&#x200B;**「新增」**。
+1. 按一下 **新增**.
 1. 選擇 **版本清除** （從下拉式功能表）。
 
    ![version_purge_maintenancetask](assets/version_purge_maintenancetask.png)
@@ -876,7 +876,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
     <ul>
      <li>當有工作處於非預期狀態或具有高計數時，使用者應進行調查。</li>
     </ul> </td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
   <tr>
    <td>預估節點計數</td>
@@ -898,10 +898,10 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
    <td>N/A</td>
   </tr>
   <tr>
-   <td>索引</td>
-   <td><p>顯示:</p>
+   <td>建立索引</td>
+   <td><p>顯示：</p>
     <ul>
-     <li>"正在編制索引"</li>
+     <li>「正在編制索引」</li>
      <li>"正在進行查詢"</li>
     </ul> <p>如果索引或查詢對話串存在於對話串傾印中。</p> </td>
    <td>N/A</td>

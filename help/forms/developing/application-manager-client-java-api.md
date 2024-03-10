@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 659eb9b0-93a0-4bae-8836-d4bc9c3a8c77
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 0%
@@ -248,7 +248,7 @@ public class ExportLCA_SOAP {
 
 >[!NOTE]
 >
-Java™ API importApplication()會以較新的應用程式取代現有相同名稱的應用程式。 若要更新現有的應用程式，請使用API importApplication()來取代API updateApplication()。
+>Java™ API importApplication()會以較新的應用程式取代現有相同名稱的應用程式。 若要更新現有的應用程式，請使用API importApplication()來取代API updateApplication()。
 
 ```java
 /*

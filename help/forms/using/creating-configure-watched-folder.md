@@ -5,7 +5,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: b15d8d3b-5e47-4c33-95fe-440fcf96be83
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '1829'
 ht-degree: 0%
@@ -48,7 +48,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果您已選取 **服務** 針對 **處理檔案，使用** 欄位，服務名稱(inputProcessorType)欄位的值必須括在括弧中。 例如，(foo=bar)。
+   >如果您已選取 **服務** 針對 **處理檔案，使用** 欄位，服務名稱(inputProcessorType)欄位的值必須括在括弧中。 例如(foo=bar)。
 
    ```java
    @Component(metatype = true, immediate = true, label = "WF Test Service", description = "WF Test Service")

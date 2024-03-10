@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: e6c1258c-81d5-48e4-bdf1-90d7cc13a22d
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '1273'
-ht-degree: 1%
+source-wordcount: '1244'
+ht-degree: 0%
 
 ---
 
@@ -155,7 +155,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 將topnav元件複製到CQ應用程式。 此程式要求您的應用程式必須以CRXDE Lite設定。
 
-1. 在 `/libs/foundation/components/topnav` 節點上按一下右鍵，然後按一下「複製」。
+1. 用滑鼠右鍵按一下 `/libs/foundation/components/topnav` 節點，然後按一下複製。
 1. 以滑鼠右鍵按一下應用程式資料夾下方的「元件」資料夾，然後按一下「貼上」。
 1. 按一下「儲存全部」。
 
@@ -230,7 +230,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
   All Rights Reserved.
 
   This software is the confidential and proprietary information of
-  Day Management AG, ("Confidential Information"). You shall not
+  Day Management AG ("Confidential Information"). You shall not
   disclose such Confidential Information and shall use it only in
   accordance with the terms of the license agreement you entered into
   with Day.

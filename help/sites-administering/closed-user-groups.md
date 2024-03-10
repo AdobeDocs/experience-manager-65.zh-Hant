@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '6650'
 ht-degree: 0%
@@ -322,7 +322,7 @@ while (isSupportedPath(path)) {
 
 #### 依主體管理CUG原則 {#managing-cug-policies-by-pincipal}
 
-擴充功能定義自 `JackrabbitAccessControlManager` 允許依主體編輯存取控制原則的存取控制原則，不會使用CUG存取控制管理實作，因為根據定義，CUG原則一律會影響所有主體：以 `PrincipalSetPolicy` 正在被授與讀取存取權，而所有其他主體將禁止讀取目標節點所定義樹狀結構中的內容。
+擴充功能定義自 `JackrabbitAccessControlManager` 可讓您依主體編輯存取控制原則的方法並不會使用CUG存取控制管理來實作，因為根據定義，CUG原則一律會影響所有主體： `PrincipalSetPolicy` 正在被授與讀取存取權，而所有其他主體將禁止讀取目標節點所定義樹狀結構中的內容。
 
 對應方法一律會傳回空的原則陣列，但不會擲回例外狀況。
 

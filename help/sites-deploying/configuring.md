@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '2092'
+source-wordcount: '2093'
 ht-degree: 0%
 
 ---
@@ -188,7 +188,7 @@ Dispatcher是Adobe Experience Manager的快取或/及負載平衡工具。 它�
 
 [解除安裝](/help/sites-deploying/offloading.md) 在拓撲中的Experience Manager執行個體之間分配處理工作。 解除安裝時，您可以使用特定Experience Manager例項來執行特定型別的處理。 專業化的處理可讓您最大限度地使用可用的伺服器資源。
 
-拓撲是鬆散耦合的Experience Manager叢集，參與解除安裝。 叢集由一或多個Experience Manager伺服器執行處理組成（單一執行處理被視為叢集）。
+拓撲是參與解除安裝的鬆散耦合Experience Manager叢集。 叢集由一或多個Experience Manager伺服器執行處理組成（單一執行處理被視為叢集）。
 
 如需如何檢視或修改拓撲成員資格的詳細資訊，請參閱 [管理拓撲](/help/sites-deploying/offloading.md#administering-topologies) 區段。
 

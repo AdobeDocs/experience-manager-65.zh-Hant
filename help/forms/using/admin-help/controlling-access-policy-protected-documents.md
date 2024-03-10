@@ -7,7 +7,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: 0eb6e769-97c1-41ee-8d12-91bece984947
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '2167'
 ht-degree: 0%
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 * 如果檔案線上上並已關閉，則下次收件者透過開啟受原則保護的檔案與Document Security同步時，變更會生效。
 * 如果檔案線上上且已開啟，則變更會在收件者關閉檔案時生效。
-* 如果檔案是離線的（使用中且沒有網際網路連線，例如筆記型電腦），則變更會在下次收件者與Document Security同步時生效。
+* 如果檔案是離線的（亦即，在沒有網際網路連線的情況下使用，例如在筆記型電腦上），則變更會在下次收件者與Document Security同步時生效。
 
 **撤銷受原則保護檔案的存取權**
 

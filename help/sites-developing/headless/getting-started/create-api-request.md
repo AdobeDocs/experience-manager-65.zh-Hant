@@ -2,10 +2,10 @@
 title: 存取及傳遞內容片段Headless快速入門手冊
 description: 瞭解如何使用AEM Assets REST API來管理內容片段，以及如何使用GraphQL API無周邊式傳送內容片段內容。
 exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '555'
-ht-degree: 48%
+ht-degree: 42%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 48%
 
 [現在您已經建立一些內容片段，](create-content-fragment.md)您可以使用 AEM 的 API Headless 傳遞內容片段。
 
-* [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 可讓您建立存取和傳遞內容片段的要求。
+* [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 可讓您建立存取及傳遞內容片段的請求。
    * 若要使用此， [端點必須在AEM中定義和啟用](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)，如有必要， [已安裝GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface).
 * [Assets REST API](/help/assets/assets-api-content-fragments.md) 可讓您建立及修改內容片段 (和其他資產)。
 
@@ -25,12 +25,12 @@ ht-degree: 48%
 
 ## 如何使用GraphQL傳遞內容片段 {#how-to-deliver-a-content-fragment}
 
-資訊架構師必須為其通道端點設計查詢才能傳送內容。 每個模型的每個端點只需考慮一次這些查詢。 出於本快速入門指南的目的，您只需要建立一個。
+資訊架構師必須為其通道端點設計查詢才能傳送內容。 每個模型的每個端點只能考慮一次這些查詢。 針對此快速入門手冊，您只能建立一個快速入門手冊。
 
 1. 登入AEM並存取 [GraphiQL介面](/help/sites-developing/headless/graphql-api/graphiql-ide.md)：
    * 例如：`http://<host>:<port>/aem/graphiql.html`。
 
-1. GraphiQL 是 GraphQL 的瀏覽器內查詢編輯器。您可以使用它來建置查詢，以擷取內容片段，並以JSON格式輕鬆傳送。
+1. GraphiQL是GraphQL的瀏覽器內查詢編輯器。 您可以使用它來建置查詢，以擷取內容片段，並以JSON格式輕鬆傳送。
    * 左側面板可讓您建置查詢。
    * 右側面板會顯示結果。
    * 查詢編輯器具有程式碼完成和快速鍵功能，可輕鬆執行查詢。
@@ -60,7 +60,7 @@ ht-degree: 48%
 1. 按一下 **執行查詢** （向右鍵）圖示或使用 `Ctrl-Enter` 快速鍵和結果會在右側面板中顯示為JSON。
    ![GraphiQL 結果](assets/graphiql-results.png)
 
-1. 按一下:
+1. 按一下：
    * **檔案** 在頁面的右上方，顯示快顯檔案，協助您建立適合您自己模型的查詢。
    * **歷史記錄** 頂端工具列以顯示先前的查詢。
    * **另存為** 和 **儲存** 以儲存查詢，之後您可從 **持久查詢** 面板和 **發佈**.

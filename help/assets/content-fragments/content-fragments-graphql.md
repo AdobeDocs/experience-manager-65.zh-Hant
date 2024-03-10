@@ -4,10 +4,10 @@ description: 瞭解如何搭配GraphQL使用AEM內容片段來傳送Headless內�
 feature: Content Fragments
 role: User
 exl-id: 2debd678-2d73-41f2-b33c-c29d661f6a6b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 27%
+source-wordcount: '669'
+ht-degree: 25%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 27%
 
 Headless內容管理系統(CMS)是：
 
-* &quot;*Headless內容管理系統（或headless CMS）是從頭開始建立的僅後端內容管理系統(CMS)，可作為內容存放庫，透過API存取內容以在任何裝置上顯示。*
+* &quot;*Headless內容管理系統（或headless CMS）是從頭開始建立的僅後端內容管理系統(CMS)，作為內容存放庫，可透過API存取內容以在任何裝置上顯示。*
 
   另請參閱 [Wikipedia](https://en.wikipedia.org/wiki/Headless_content_management_system).
 
@@ -70,7 +70,7 @@ AEM GraphQL API實作是根據 [GraphQL Java程式庫](https://graphql.org/code/
 
 ### 內容片段 {#content-fragments}
 
-內容片段:
+內容片段：
 
 * 包含結構化內容。
 

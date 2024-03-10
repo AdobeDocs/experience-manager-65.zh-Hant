@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '6904'
+source-wordcount: '6905'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ ht-degree: 0%
 
 ## 清單 {#list}
 
-清單是一組檔案片段，包括文字、（其他）清單、條件和影像。 清單元素的順序可以固定或編輯。 建立信函時，您可以使用部分或全部清單元素來複製可重複使用的元素模式。 清單基本上是作為可以巢狀內嵌於其他目標的目標。
+清單是一組檔案片段，包括文字或（其他）清單、條件和影像。 清單元素的順序可以固定或編輯。 建立信函時，您可以使用部分或全部清單元素來複製可重複使用的元素模式。 清單基本上是作為可以巢狀內嵌於其他目標的目標。
 
 ### 實作清單 {#implementing-lists}
 

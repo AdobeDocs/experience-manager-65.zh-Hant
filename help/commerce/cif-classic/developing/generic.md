@@ -3,9 +3,9 @@ title: 開發（一般）
 description: 整合架構包含具有API的整合層，可讓您為電子商務功能建立AEM元件。
 contentOwner: Guillaume Carlino
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '1846'
+source-wordcount: '1856'
 ht-degree: 0%
 
 ---
@@ -421,7 +421,7 @@ public class AxisFilter implements VariantFilter {
 
 ### 開發促銷活動和憑單 {#developing-promotions-and-vouchers}
 
-* 憑單:
+* 憑單：
 
    * 憑單是使用Websites主控台建立/編輯並儲存在下的頁面型元件：
 
@@ -445,7 +445,7 @@ public class AxisFilter implements VariantFilter {
       * 用於管理（新增/移除）憑單的編輯對話方塊（表單）。
       * 在購物車中新增/移除憑單所需的動作。
 
-* 促銷活動:
+* 促銷活動：
 
    * 促銷活動是使用Websites主控台建立/編輯的頁面型元件，並儲存在下列位置：
 
@@ -471,7 +471,7 @@ public class AxisFilter implements VariantFilter {
 
    * ClientContext `SegmentMgr` 解析區段和ClientContext `CartMgr` 解析促銷活動。 至少會引發一個已解析區段的促銷活動。
 
-      * 已引發的促銷活動會透過AJAX呼叫傳回伺服器以重新計算購物車。
+      * 已引發的促銷活動會透過AJAX呼叫傳回至伺服器，以重新計算購物車。
       * 已引發的促銷活動（以及新增的憑單）也會顯示在「ClientContext」面板中。
 
 從購物車新增/移除憑單是透過以下方式完成： `CommerceSession` API：

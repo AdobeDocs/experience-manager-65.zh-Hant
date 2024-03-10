@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 985a6fc5-6675-4c25-80e4-34dcb658de72
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
-您不能使用Web服務來處理端點。
+>您不能使用Web服務來處理端點。
 
 ## 快速入門：使用Java™ API新增EJB端點 {#quickstart-adding-an-ejb-endpoint-using-the-java-api}
 
@@ -251,7 +251,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
-在您的專案中加入WatchedFolderEndpointConfigConstants.java檔案，以便編譯和執行下列快速入門。 (請參閱 [Watched資料夾組態值常數檔案](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
+>在您的專案中加入WatchedFolderEndpointConfigConstants.java檔案，以便編譯和執行下列快速入門。 (請參閱 [Watched資料夾組態值常數檔案](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
 
 ```java
  /*
@@ -386,7 +386,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
-在您的專案中加入EmailEndpointConfigConstants.java檔案，以便編譯和執行下列快速入門。 (請參閱 [電子郵件設定值常數檔案](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file).)
+>在您的專案中加入EmailEndpointConfigConstants.java檔案，以便編譯和執行下列快速入門。 (請參閱 [電子郵件設定值常數檔案](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file).)
 
 ```java
  /*

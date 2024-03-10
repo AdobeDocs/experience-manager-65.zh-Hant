@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop, development-tools
 role: Developer
 exl-id: 1d4062ef-fb24-4527-b899-896ce757beda
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -85,4 +85,4 @@ JAR檔案清單位於「快速入門」開頭的註解區段中。 例如，以�
 
 >[!NOTE]
 >
-大部分的Web服務快速入門都是以C#撰寫並使用.NET Framework。 不過，您可以建立使用者端應用程式邏輯，以便能夠在支援SOAP標準的任何開發環境中叫用AEM Forms服務。 (請參閱 [使用網站服務叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
+>大部分的Web服務快速入門都是以C#撰寫並使用.NET Framework。 不過，您可以建立使用者端應用程式邏輯，以便能夠在支援SOAP標準的任何開發環境中叫用AEM Forms服務。 (請參閱 [使用網站服務叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)

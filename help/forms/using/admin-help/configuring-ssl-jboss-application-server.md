@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 8eb4f691-a66b-498e-8114-307221f63718
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 0%
    `keytool -import -alias "AEMForms Cert" -file`*aemforms_cert* `.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
 
 1. 型別 `changeit` 作為密碼。 此密碼是Java安裝的預設密碼，系統管理員可能已變更此密碼。
-1. 提示輸入時 `Trust this certificate? [no]`：，型別 `yes`. 隨即顯示「憑證已新增至金鑰存放區」確認訊息。
+1. 提示輸入時 `Trust this certificate? [no]`，型別 `yes`. 隨即顯示「憑證已新增至金鑰存放區」確認訊息。
 1. 如果您是從Workbench透過SSL連線，請在Workbench電腦上安裝憑證。
 1. 在文字編輯器中，開啟下列檔案進行編輯：
 

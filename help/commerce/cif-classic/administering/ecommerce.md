@@ -5,9 +5,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '763'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 * [概念](/help/commerce/cif-classic/administering/concepts.md)
 * [管理（一般）](/help/commerce/cif-classic/administering/generic.md)
 
-Adobe提供兩個版本的Commerce Integration Framework：
+Adobe提供兩個版本的Commerce integration framework：
 
 <table>
  <tbody>
@@ -96,7 +96,7 @@ Adobe提供兩個版本的Commerce Integration Framework：
  </tbody>
 </table>
 
-電子商務與產品資訊管理(PIM)可處理透過線上商店銷售產品的網站活動：
+電子商務與產品資訊管理(PIM)可透過線上商店處理專注於銷售產品的網站活動：
 
 * 產品的建立、期限和過時
 * 價格管理

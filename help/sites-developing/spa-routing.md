@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 exl-id: eaef65ec-2e4d-490f-8158-d48d738e3409
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 0%
@@ -59,7 +59,7 @@ ht-degree: 0%
 <meta property="cq:pagemodel_router" content="disabled"\>
 ```
 
-請注意，SPA的每個路由都應對應至AEM中可存取的資源(例如，&quot; `/content/mysite/mypage"`)，因為 `PageModelManager` 選取路由後，將自動嘗試載入對應的頁面模型。 不過，如有需要，SPA也可定義路由的「封鎖清單」，應由 `PageModelManager`：
+請注意，SPA的每個路由都應對應至AEM中可存取的資源(例如」 `/content/mysite/mypage"`)，因為 `PageModelManager` 選取路由後，將自動嘗試載入對應的頁面模型。 不過，如有需要，SPA也可定義路由的「封鎖清單」，應由 `PageModelManager`：
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>

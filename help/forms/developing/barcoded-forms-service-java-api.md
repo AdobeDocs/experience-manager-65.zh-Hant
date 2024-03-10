@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 907c12be-dab4-48b5-9da1-a76b711f49f2
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -217,4 +217,4 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
-同時使用 `org.w3c.dom.Document` 物件與 `com.adobe.idp.Document` 物件在相同的應用程式邏輯中，完全限定兩個物件是很好的做法。
+>同時使用 `org.w3c.dom.Document` 物件與 `com.adobe.idp.Document` 物件在相同的應用程式邏輯中，完全限定兩個物件是很好的做法。

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '9887'
+source-wordcount: '9814'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ AEM Forms支援下列Web服務標準：
    <td><p><code>http://localhost:8080/soap/services/EncryptionService?wsdl</code></p></td>
   </tr>
   <tr>
-   <td><p>Forms</p></td>
+   <td><p>表單</p></td>
    <td><p><code>http://localhost:8080/soap/services/FormsService?wsdl</code></p></td>
   </tr>
   <tr>
@@ -1518,7 +1518,7 @@ WSE架構使用原則、判斷提示和SecurityToken資料型別。 簡而言之
 * `Roles`
 * `BLOB`
 
-若要避免此問題，建議您完全限定資料型別。 例如，假設一個.NET應用程式使用服務參照同時參照Forms服務和簽章服務。 兩個服務參考將包含 `BLOB` 類別。 若要使用 `BLOB` 執行個體，完整限定 `BLOB` 物件。 以下程式碼範例說明此方法。 如需此程式碼範例的相關資訊，請參閱 [數位簽署互動式Forms](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-interactive-forms).
+若要避免此問題，建議您完全限定資料型別。 例如，假設一個.NET應用程式使用服務參照同時參照Forms服務和簽章服務。 兩個服務參考將包含 `BLOB` 類別。 若要使用 `BLOB` 執行個體，完全符合 `BLOB` 物件。 以下程式碼範例說明此方法。 如需此程式碼範例的相關資訊，請參閱 [數位簽署互動式Forms](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-interactive-forms).
 
 以下C#程式碼範例對Forms服務轉譯的互動式表單加上簽名。 使用者端應用程式有兩個服務參考。 此 `BLOB` 與Forms服務相關聯的例項屬於 `SignInteractiveForm.ServiceReference2` 名稱空間。 同樣地， `BLOB` 與Signature service關聯的執行個體屬於 `SignInteractiveForm.ServiceReference1` 名稱空間。 已簽署的互動式表單會儲存為名為的PDF檔案 *LoanXFASigned.pdf*.
 
@@ -1553,7 +1553,7 @@ WSE架構使用原則、判斷提示和SecurityToken資料型別。 簡而言之
                 try
                 {
                     //Because BLOB objects are used in both service references
-                    //it is necessary to fully-qualify the BLOB objects
+                    //it is necessary to fully qualify the BLOB objects
  
                     //Retrieve the form -- invoke the Forms service
                     SignInteractiveForm.ServiceReference2.BLOB formData = GetForm();

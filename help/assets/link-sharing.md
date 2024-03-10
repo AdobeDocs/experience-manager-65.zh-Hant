@@ -6,10 +6,10 @@ role: User
 feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 hide: true
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 6%
+source-wordcount: '1026'
+ht-degree: 7%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 6%
 
 1. 若要讓使用者下載原始資產，請選取 **[!UICONTROL 允許下載原始檔案]**. 若要讓使用者僅下載共用資產的轉譯，請選取 **[!UICONTROL 允許下載檔案轉譯]**.
 
-1. 按一下 **[!UICONTROL 共用]**. 訊息會確認透過電子郵件與使用者共用連結。
+1. 按一下 **[!UICONTROL 共用]**. 系統會顯示訊息，確認會透過電子郵件將連結分享給使用者。
 
 1. 若要檢視共用資產，請按一下傳送給使用者之電子郵件中的連結。 若要產生資產的預覽，請按一下共用資產。 若要關閉預覽，請按一下 **[!UICONTROL 返回]**. 如果您已共用資料夾，請按一下 **[!UICONTROL 父資料夾]** 以返回父資料夾。
 
