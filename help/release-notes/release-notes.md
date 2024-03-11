@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 39261357c17ef565a39ebc441aed356d69b4d8f9
+source-git-commit: a0ad6c5d61a971c5210f7d6dd7ef85e5effab44a
 workflow-type: tm+mt
-source-wordcount: '3560'
+source-wordcount: '3765'
 ht-degree: 2%
 
 ---
@@ -469,17 +469,24 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
   若要解決該問題：
 
    1. 下載作業系統的Hotfix：
-
       * [Microsoft Windows的Hotfix](/help/release-notes/assets/Hotfix-windows.zip)
       * [Linux適用的Hotfix](/help/release-notes/assets/Hotfix-Linux.zip)
       * [Apple macOS的Hotfix](/help/release-notes/assets/Hotfix-osx.zip)
 
    1. 透過上傳並安裝套件(.zip) [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=en#accessing).
-
    1. 重新啟動AEM伺服器，並在重新啟動程式完成後驗證所有套裝的啟用狀態。 您可以透過存取以下專案來監視套裝的狀態： `https://server:host/system/console/bundles`. 繼續進行進一步的工作之前，請確定所有套件組合皆為作用中。
 
 * 預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 (CQDOC-21355)
 * 最適化Forms可讓您搭配ECMAScript 5或更早版本使用自訂函式。 當自訂函式使用ECMAScript 6版或更新版本（例如「let」、「const」或箭頭函式）時，規則編輯器可能無法正確開啟。
+* 使用者無法建立通訊管理信件。 當使用者建立信函時，出現一個說明「物件物件」的錯誤，並且信函未建立。 配置圖縮圖也無法載入字母建立畫面上。 (FORMS-13496)
+* 互動式通訊服務會建立PDF檔案，但使用者的資料不會自動填入表單欄位中。 預填服務未如預期運作。 (FORMS-13413， FORMS-13493)
+* 無法載入automated forms conversion服務的檢閱和修正(RnC)編輯器。 (FORMS-13491)
+* 從AEM 6.5 Forms Service Pack 18 (6.5.18.0)或AEM 6.5 Forms Service Pack 19 (6.5.19.0)更新至AEM 6.5 Forms Service Pack 20 (6.5.20.0)後，使用者會遇到JSP編譯錯誤。 他們無法開啟或建立最適化表單，且其他AEM介面(如頁面編輯器、AEM Forms UI和AEM Workflow編輯器)發生錯誤。 (FORMS-13492)
+
+客戶可安裝最新的AEM 6.5 Forms Service Pack以解決上述問題。  以下是支援作業系統的直接連結：
+* [適用於Apple macOS的AEM 6.5 Forms Service Pack 20](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-OSX-PKG-6.0.1192.zip)
+* [適用於Microsoft Windows的AEM 6.5 Forms Service Pack 20](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-WIN-PKG-6.0.1192.zip)
+* [適用於Linux的AEM 6.5 Forms Service Pack 20](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-LINUX-PKG-6.0.1192.zip)
 
 <!--Known issues in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.20.0 Forms add-on package release is scheduled for Thursday, February 29, 2024. A list of known issues for forms is added to this section post the release.-->
 
