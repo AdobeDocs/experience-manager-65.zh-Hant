@@ -1,18 +1,19 @@
 ---
-title: 交易報表可記帳API
+title: 交易報告計費 API
 description: 作為交易入帳的所有API清單
 topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Transaction Reports
-source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
+exl-id: e92f1b59-79ef-40fa-af9a-7380cd701a75
+source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1739'
 ht-degree: 7%
 
 ---
 
-# 交易報表可記帳API{#transaction-reports-billable-apis}
+# 透過OSGi為AEM Forms提供交易報表可記帳API {#transaction-reports-billable-apis}
 
 AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些API是以交易入帳，其他則可供自由使用。 本檔案提供在交易報表中作為交易入帳的所有API清單。 以下是一些使用計費API的常見案例：
 
@@ -500,6 +501,6 @@ AEM Forms提供多個API來提交表單、處理檔案和轉譯檔案。 有些A
 
 ## 相關文章 {#related-articles}
 
-* [交易報表概觀](../../forms/using/transaction-reports-overview.md)
-* [檢視與瞭解交易報表](../../forms/using/viewing-and-understanding-transaction-reports.md)
-* [記錄自訂實作的交易](/help/forms/using/record-transaction-custom-implementation.md)
+* [在OSGi上使用AEM Forms的交易報表概觀](../../forms/using/transaction-reports-overview.md)
+* [在OSGi上檢視和瞭解AEM Forms的交易報表](../../forms/using/viewing-and-understanding-transaction-reports.md)
+* [在OSGi上記錄AEM Forms的自訂實作交易](/help/forms/using/record-transaction-custom-implementation.md)

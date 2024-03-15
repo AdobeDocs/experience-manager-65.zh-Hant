@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: e39c52bc658e3a286272d1c94106b17a2f5579ad
+source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
 workflow-type: tm+mt
-source-wordcount: '7355'
+source-wordcount: '7397'
 ht-degree: 18%
 
 ---
@@ -890,10 +890,16 @@ ht-degree: 18%
       + [根據使用的範本顯示元件](/help/forms/using/displaying-components-based-on-template.md)
       + [建立自訂最適化表單主題](/help/forms/using/creating-custom-adaptive-form-themes.md)
    + 交易報告{#transaction-reports}
-      + [交易報表概觀](/help/forms/using/transaction-reports-overview.md)
-      + [檢視與瞭解交易報表](/help/forms/using/viewing-and-understanding-transaction-reports.md)
-      + [交易報告計費 API](/help/forms/using/transaction-reports-billable-apis.md)
-      + [記錄自訂實施的交易](/help/forms/using/record-transaction-custom-implementation.md)
+      + [交易報表概觀](/help/forms/using/transaction-reports-overview-jee-osgi.md)
+      + OSGi上AEM Forms的交易報告 {#transaction-reports-osgi}
+         + [交易報告](/help/forms/using/transaction-reports-overview.md)
+         + [檢視及瞭解交易報表](/help/forms/using/viewing-and-understanding-transaction-reports.md)
+         + [在OSGi上適用於AEM Forms的可記帳API清單](/help/forms/using/transaction-reports-billable-apis.md)
+         + [記錄自訂實施的交易](/help/forms/using/record-transaction-custom-implementation.md)
+      + JEE版AEM Forms的交易報告 {#transaction-reports-jee}
+         + [啟用與檢視交易報表](/help/forms/using/transaction-report-overview-jee.md)
+         + [適用於AEM Forms on JEE的計費API清單](/help/forms/using/transaction-reports-billable-apis-jee.md)
+         + [記錄自訂元件API的交易](/help/forms/using/record-transaction-custom-component-jee.md)
    + JEE上AEM Forms的管理員說明 {#administrator-help}
       + 立即開始 {#get-started}
          + [一般AEM Forms設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
