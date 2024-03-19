@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: 7f150219bce3036c0e330b7349e679fdf19797d1
 workflow-type: tm+mt
-source-wordcount: '4057'
+source-wordcount: '4011'
 ht-degree: 0%
 
 ---
@@ -490,11 +490,12 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 >- 只有Windows支援OCRPDF、Optimize PDF和Export PDF功能。
 >- Acrobat版本與AEM Forms搭配，可啟用PDF Generator功能。 套件版本僅可在AEM Forms授權期間，透過AEM Forms以程式設計方式存取，以與AEM Forms PDF Generator搭配使用。 如需詳細資訊，請參閱根據您的部署說明的AEM Forms產品說明([內部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))」
 >- PDF Generator服務不支援Microsoft® Windows 10。
->-PDF Generator無法使用Microsoft® Visio 2019轉換檔案。 您可繼續使用Microsoft® Visio 2016來轉換.VSD和.VSDX檔案。
->- PDF Generator無法使用Microsoft® Project 2019轉換檔案。 您可以繼續使用Microsoft® Project 2016來轉換.MPP檔案。
 >- PDF Generator無法使用Microsoft® Visio 2019轉換檔案。
 >- PDF Generator無法使用Microsoft® Project 2019轉換檔案。
 >- 如果Microsoft® Office安裝由於任何原因（例如磁碟區授權安裝無法在指定期間內找到KMS主機）而停用或取消授權，轉換可能會失敗，直到安裝重新授權並重新啟用。
+
+<!-- Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visio 2019. You can continue to use Microsoft&reg; Visio 2016 to convert .VSD and .VSDX files.
+>- PDF Generator fails to convert files using Microsoft&reg; Project 2019. You can continue to use Microsoft&reg; Project 2016 to convert .MPP files.-->
 
 ### 協助工具支援的例外情況 {#exceptions-to-accessibility-support}
 

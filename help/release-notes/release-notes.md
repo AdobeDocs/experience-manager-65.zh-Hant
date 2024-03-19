@@ -3,9 +3,9 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 31ad82fca920efcb1c5f4b56673928754a2d1763
+source-git-commit: 7f150219bce3036c0e330b7349e679fdf19797d1
 workflow-type: tm+mt
-source-wordcount: '3640'
+source-wordcount: '3688'
 ht-degree: 1%
 
 ---
@@ -202,6 +202,9 @@ ht-degree: 1%
 * 當使用者在具有JBoss® Turnkey設定的AEM Forms 6.5.19.1上執行設定管理員時選取「Microsoft SharePoint」時，LiveCycleJBoss® EAR安裝會失敗，並顯示以下錯誤：(FORMS-12463)
 
   ` Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEE0031: Unable to process modules in application.xml for EAR ["/C:/AEM/jboss/bin/content/ adobe-livecycle-jboss.ear "], module file adobe-connectorformssharepoint-config-ejb.jar not found.`
+
+* 當使用者使用AEM Forms Service Pack 6.5.19.0中的表單資料模型建立檔案片段時，變數名稱會出現在側面板上未定義，但是當變數名稱拖放到表單面板上或按一下變數名稱時，則會顯示變數名稱。 (FORMS-13238)
+
 
 #### [!DNL Forms Designer] {#forms-designer-6520}
 
