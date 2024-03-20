@@ -8,9 +8,9 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: af30cfed8f039207c0363d1ace5ac2b2a1cf84ba
 workflow-type: tm+mt
-source-wordcount: '6944'
+source-wordcount: '6607'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使用者和開發人員在調適型表單物件上編寫規則。 這些規則會根據預設條件、使用者輸入及使用者對表單的動作，定義要在表單物件上觸發的動作。 它有助於進一步簡化表單填寫體驗，確保準確性和速度。
 
-規則編輯器提供直覺式且簡化的使用者介面來撰寫規則。 規則編輯器為所有使用者提供一個視覺化編輯器。 此外，規則編輯器僅針對表單超級使用者提供程式碼編輯器，以便編寫規則和指令碼。
+規則編輯器提供直覺式且簡化的使用者介面來撰寫規則。 規則 編輯者 為所有使用者提供可視化編輯者。 此外，僅針對表單高級使用者，規則 編輯者 提供了用于編寫規則和腳本的代碼編輯者。
 <!-- Some of the key actions that you can perform on adaptive form objects using rules are:
 
 * Show or hide an object
@@ -39,7 +39,7 @@ Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使�
 * Invoke a form data model service and perform an operation
 * Set property of an object -->
 
-規則編輯器取代了AEM 6.1 Forms及舊版中的指令碼功能。 不過，您現有的指令碼會保留在新規則編輯器中。 如需在規則編輯器中使用現有指令碼的詳細資訊，請參閱 [規則編輯器對現有指令碼的影響](#impact-of-rule-editor-on-existing-scripts).
+規則 編輯者 取代 AEM 6.1 Forms 及更早版本中的 指令碼 功能。 但是，您現有的腳本會保留在新規則 編輯者中。 如需在規則編輯器中使用現有指令碼的詳細資訊，請參閱 [規則編輯器對現有指令碼的影響](#impact-of-rule-editor-on-existing-scripts).
 
 新增至表單超級使用者群組的使用者可以建立新指令碼並編輯現有指令碼。 表單 — 使用者群組中的使用者可以使用指令碼，但不能建立或編輯指令碼。
 
@@ -71,13 +71,13 @@ Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使�
 
 * 建立規則時，經驗法則的典型做法是思考您所撰寫規則的物件內容。 假設您要根據使用者在欄位A中指定的值隱藏或顯示欄位B。在此案例中，您評估欄位A的條件，並且根據它傳回的值，觸發欄位B的動作。
 
-  因此，如果要在欄位 B（要評估條件的物件）上編寫規則，請使用條件操作構造或 When 規則 類型。 同樣，在欄位 A 上使用操作條件構造或顯示或隱藏規則類型。
+  因此，如果您在欄位B （您評估條件的物件）上撰寫規則，請使用condition-action建構或When規則型別。 同樣地，使用動作條件建構或在欄位A上顯示或隱藏規則型別。
 
-* 有時候，您需要基於一個條件執行多個動作。 在這種情況下，建議使用條件操作結構。 在此構造中，您可以評估一次條件並指定多個操作語句。
+* 有時候，您需要根據一個條件執行多個動作。 在這種情況下，建議使用條件 — 動作建構。 在此建構中，您可以評估條件一次，並指定多個動作陳述式。
 
   例如，若要根據條件隱藏欄位B、C和D，以檢查使用者在欄位A中指定的值，請撰寫一個具有條件 — 動作建構的規則或欄位A上的規則型別時並指定動作來控制欄位B、C和D的可見性。否則，您需要在欄位B、C和D上設定三個個別規則，每個規則會檢查條件並顯示或隱藏個別欄位。 在此範例中，在一個物件上撰寫When規則型別比在三個物件上撰寫Show或Hide規則型別更有效率。
 
-* 若要根據多個條件來觸發動作，建議使用動作條件建構。 例如，要通過評估欄位 B、C 和 D 上的條件來顯示和隱藏欄位 A，請在欄位 A 上使用顯示或隱藏規則類型。
+* 若要根據多個條件來觸發動作，建議使用動作條件建構。 例如，若要藉由評估欄位B、C和D的條件來顯示和隱藏欄位A，請在欄位A上使用顯示或隱藏規則型別。
 * 如果規則包含適用於一個條件的一個動作，請使用條件 — 動作或動作條件建構。
 * 如果規則檢查條件，並在欄位中提供值或退出欄位時立即執行動作，則建議在評估條件的欄位上編寫具有條件 — 動作建構或When規則型別的規則。
 * 當使用者變更套用When規則的物件值時，會評估When規則中的條件。 不過，如果您希望動作在伺服器端變更時觸發（例如預先填入值），建議寫入在欄位初始化時觸發動作的When規則。
@@ -104,11 +104,11 @@ Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使�
 
 ### 時間 {#whenruletype}
 
-此 **時間** 規則型別會遵循 **condition-action-alternate action** 規則建構，或有時僅 **condition-action** 建構。 在此規則型別中，您必須先指定評估條件，接著在條件符合時觸發動作( `True`)。 使用When規則型別時，您可以使用多個AND和OR運運算元來建立 [巢狀運算式](#nestedexpressions).
+此 **時間** 規則型別會遵循 **condition-action-alternate action** 規則建構，或有時僅 **condition-action** 建構。 在此規則類型中，首先指定評估條件，然後在滿足條件時觸發操作 （ `True`）。 使用 When 規則 類型時，可以使用多個 AND 和 OR 運算符來創建 [嵌套表達式](#nestedexpressions)。
 
-使用When規則型別，您可以評估表單物件的條件，並對一或多個物件執行動作。
+使用 When 規則 類型，您可以評估表單對象的條件並對一個或多個物件執行操作。
 
-簡單地說，典型的When規則結構如下：
+簡而言之，典型的 When 規則 結構如下：
 
 `When on Object A:`
 
@@ -116,9 +116,7 @@ Adobe Experience Manager Forms中的規則編輯器功能可讓表單業務使�
 
 `Then, do the following:`
 
-關於物件B的行動2;
-和
-關於物件C的行動3;
+物件B上的動作2；以及物件C上的動作3；
 
 _
 
@@ -128,7 +126,7 @@ _
 
 ![multivaluefcdisplaysoptions](assets/multivaluefcdisplaysoptions.png)
 
-撰寫When規則時，您可以觸發「清除值」動作。 清除值動作會清除指定物件的值。 在When陳述式中將的清除值作為選項可讓您建立具有多個欄位的複雜條件。
+編寫 When 規則時，可以觸發清除值操作。 清除值操作將清除指定物件的值。 在 When 語句中使用「清除值」選項可以創建具有多個字段的複雜條件。
 
 ![clearvalueof](assets/clearvalueof.png)
 
@@ -201,21 +199,25 @@ _
 
 此 **[!UICONTROL 設定值]** 規則型別可讓您根據是否滿足指定的條件來設定表單物件的值。 值可以設定為另一個物件的值、常值字串、從數學運算式或函式衍生的值、另一個物件的屬性值，或表單資料模型服務的輸出。 同樣地，您可以檢查元件、字串、屬性或衍生自函式或數學運算式的值的條件。
 
-規則型別的「設定值」不適用於所有表單物件，例如面板和工具列按鈕。 標準的「設定值」規則具有以下結構：
+規則型別的「設定值」不適用於所有表單物件，例如面板和工具列按鈕。 標準的「規則集值」具有下列結構：
 
 
 
-將物件A的值設為：
+將物件 A 的值設定為：
 
-（字串ABC） OR （物件C的物件屬性X） OR （函式的值） OR （數學運算式的值） OR （資料模型服務或Web服務的輸出值）；
+（字串 ABC）或
+（物件 屬性 物件 C 的 X）或
+（來自函數的值）或
+（值來自數學運算式）或
+（數據模型服務或Web服務的輸出值）;
 
-當（選擇性）：
+時間（選擇）：
 
 （條件 1 和條件 2 和條件 3） 為 TRUE;
 
 
 
-以下範例將欄位中的值`dependentid`作為輸入，並將欄位的值`Relation`設置為表單數據模型服務參數`getDependent`的`Relation`輸出。
+以下範例接受值 `dependentid` 欄位作為輸入，並設定 `Relation` 欄位至的輸出 `Relation` 的引數 `getDependent` 表單資料模型服務。
 
 ![set-value-web-service](assets/set-value-web-service.png)
 
@@ -223,7 +225,7 @@ _
 
 >[!NOTE]
 >
->此外，您可以使用規則的「設定值」，從表單資料模型服務或Web服務的輸出，填入下拉式清單元件中的所有值。 不過，請確定您選擇的輸出引數屬於陣列型別。 陣列中傳回的所有值都可在指定的下拉式清單中使用。
+>此外，您可以使用 Set 值 of 規則 從表單數據模型服務或 Web 服務的輸出填充下拉清單元件中的所有值。 但是，請確保選擇的輸出參數是數位類型。 数組中返回的所有值都可在指定的下拉清單中使用。
 
 ### 顯示 {#show}
 
@@ -367,13 +369,13 @@ _
 
 規則編輯器使用者介面左側的窗格包含兩個標籤 —  **[!UICONTROL Forms物件]** 和 **[!UICONTROL 函式]**.
 
-「表單物件」標籤會顯示最適化表單中包含之所有物件的階層檢視。 它會顯示物件的標題和型別。 撰寫規則時，您可以將表單物件拖放至規則編輯器上。 將物件或函式拖放至預留位置時，在建立或編輯規則時，預留位置會自動採用適當的值型別。
+「表單物件」標籤會顯示最適化表單中包含之所有物件的階層檢視。 它會顯示物件的標題和型別。 撰寫規則時，您可以將表單物件拖放至規則編輯器上。 創建或编辑規則時，將物件或函數拖放到佔位符中時，佔位符元會自動採用適當的值類型。
 
-已套用一或多個有效規則的表單物件會以綠色圓點標示。 如果套用至表單物件的任何規則無效，則表單物件會標示為黃點。
+應用了一個或多個有效規則的表單物件用綠點標記。 如果無效應用於表單物件的任何規則，則表單對象將標有黃點。
 
-函數標籤包括一組內置函數，如總和、最小值、最大值、平均值、數量和驗證窗體。 您可以使用這些函數來計算可重複面板和表行中的值，並在編寫規則時在操作和條件語句中使用它們。 不過，您也可以建立 [自定義函數](#custom-functions) 。
+函數標籤包括一組內置函數，如總和、最小值、最大值、平均值、數量和驗證窗體。 您可以使用這些函數來計算可重複面板和表行中的值，並在編寫規則時在操作和條件語句中使用它們。 不過，您可以建立 [自訂函式](#custom-functions) 也是。
 
-![函数標籤](assets/functions.png)
+![函式標籤](assets/functions.png)
 
 >[!NOTE]
 >
@@ -637,35 +639,36 @@ AEM Forms會追蹤您上次用來撰寫規則的規則編輯器模式。 當您�
 >
 >使用自訂函式之前的註解作為摘要。 摘要可以延伸至多行，直到遇到標籤為止。 將大小限製為單一，以在規則產生器中提供簡要說明。
 
-**新增自訂函式**
+<!--
+**Adding a custom function**
 
-例如，您想要新增計算正方形區域的自訂函式。 側邊長度是自訂函式的使用者輸入，可使用表單中的數字方塊來接受。 計算的輸出會顯示在表單的另一個數值方塊中。 若要新增自訂函式，您必須先建立使用者端資料庫，然後將其新增到CRX存放庫。
+For example, you want to add a custom function which calculates area of a square. Side length is the user input to the custom function, which is accepted using a numeric box in your form. The calculated output is displayed in another numeric box in your form. To add a custom function, you have to first create a client library, and then add it to the CRX repository.
 
-執行以下步驟來建立使用者端程式庫，並將其新增到CRX存放庫中。
+Perform the following steps to create a client library and add it in the CRX repository.
 
-1. 建立使用者端資源庫。 如需詳細資訊，請參閱 [使用使用者端資料庫](/help/sites-developing/clientlibs.md).
-1. 在CRXDE中新增屬性 `categories`字串型別值為 `customfunction` 至 `clientlib` 資料夾。
+1. Create a client library. For more information, see [Using Client-Side Libraries](/help/sites-developing/clientlibs.md).
+2. In CRXDE, add a property `categories`with string type value as `customfunction` to the `clientlib` folder.
 
    >[!NOTE]
    >
-   >`customfunction`是範例類別。 您可以為在中建立的類別選擇任何名稱 `clientlib`資料夾。
+   >`customfunction`is an example category. You can choose any name for the category you create in the `clientlib`folder.
 
-在CRX存放庫中新增使用者端程式庫後，請將其用於最適化表單。 它可讓您使用自訂函式作為表單中的規則。 執行以下步驟，將使用者端程式庫新增至最適化表單中。
+After you have added your client library in the CRX repository, use it in your adaptive form. It lets you use your custom function as a rule in your form. Perform the following steps to add the client library in your adaptive form.
 
-1. 在編輯模式中開啟您的表單。
-若要以編輯模式開啟表單，請選取表單並選取 **開啟**.
-1. 在編輯模式中，選取元件，然後選取 ![欄位層級](assets/field-level.png) > **最適化表單容器**，然後選取 ![cmppr](assets/cmppr.png).
-1. 在側邊欄中的「使用者端資料庫名稱」下方，新增您的使用者端資料庫。 ( `customfunction` 在此範例中。)
+1. Open your form in edit mode.
+   To open a form in edit mode, select a form and select **Open**.
+1. In the edit mode, select a component, then select ![field-level](assets/field-level.png) &gt; **Adaptive Form Container**, and then select ![cmppr](assets/cmppr.png).
+1. In the sidebar, under Name of Client Library, add your client library. ( `customfunction` in the example.)
 
-   ![新增自訂函式使用者端程式庫](assets/clientlib.png)
+   ![Adding the custom function client library](assets/clientlib.png)
 
-1. 選取輸入數字方塊，然後選取 ![edit-rules](assets/edit-rules.png) 以開啟規則編輯器。
-1. 選取 **建立規則**. 使用下列選項，建立規則以將輸入的平方值儲存在表單的「輸出」欄位中。
-   [![使用自訂函式建立規則](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)選取 **完成**. 您的自訂函式已新增。
+1. Select the input numeric box, and select ![edit-rules](assets/edit-rules.png) to open the rule editor.
+1. Select **Create Rule**. Using options shown below, create a rule to save the squared value of the input in the Output field of your form.
+   [ ![Using custom functions to create a rule](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)Select **Done**. Your custom function is added.
 
-#### 函式宣告支援的型別 {#function-declaration-supported-types}
+#### Function declaration supported types {#function-declaration-supported-types}
 
-**函式陳述式**
+**Function Statement**
 
 ```javascript
 function area(len) {
@@ -673,9 +676,9 @@ function area(len) {
 }
 ```
 
-此函式包含但不包含 `jsdoc` 評論。
+This function is included without `jsdoc` comments.
 
-**函式運算式**
+**Function Expression**
 
 ```javascript
 var area;
@@ -686,7 +689,7 @@ area = function(len) {
 };
 ```
 
-**函式運算式和陳述式**
+**Function Expression and Statement**
 
 ```javascript
 var b={};
@@ -696,7 +699,7 @@ b.area = function(len) {
 }
 ```
 
-**函式宣告為變數**
+**Function Declaration as Variable**
 
 ```javascript
 /** */
@@ -707,9 +710,9 @@ var x1,
     x2 =5, x3 =true;
 ```
 
-限制：自訂函式只會從變數清單中挑選第一個函式宣告（如果同時挑選）。 您可以對每個宣告的函式使用函式運算式。
+Limitation: custom function picks only the first function declaration from the variable list, if together. You can use function expression for every function declared.
 
-**函式宣告為物件**
+**Function Declaration as Object**
 
 ```javascript
 var c = {
@@ -724,7 +727,10 @@ var c = {
 
 >[!NOTE]
 >
->請務必使用 `jsdoc` 每個自訂函式。 雖然 `jsdoc`建議加入註解，包含空白 `jsdoc`備註以將您的函式標示為自訂函式。 它會啟用自訂函式的預設處理。
+>Ensure that you use `jsdoc` for every custom function. Although `jsdoc`comments are encouraged, include an empty `jsdoc`comment to mark your function as custom function. It enables default handling of your custom function.
+-->
+
+您也可以在規則編輯器中使用自訂函式。 如需建立自訂函式的指示，請參閱文章 [最適化Forms中的自訂函式](/help/forms/using/create-and-use-custom-functions.md).
 
 ## 管理規則 {#manage-rules}
 
@@ -835,21 +841,21 @@ var c = {
 
 在貸款申請表單中，您想要擷取貸款申請人是否為現有客戶。 根據使用者提供的資訊，客戶ID欄位應顯示或隱藏。 此外，如果使用者是現有客戶，您想要將焦點設定在客戶ID欄位。 貸款申請表單包含下列元件：
 
-* 無線電按鈕， **您是現有的Geometrixx 客戶嗎？**，提供「是」與「否」選項。 “是”的值為 **0** ，“否”的值為 **1**。
+* 單選按鈕， **您是Geometrixx現有客戶嗎？**，會提供「是」和「否」選項。 「是」的值為 **0** 而否 **1**.
 
-* Geometrixx 客戶 ID **的**&#x200B;文字字段，用于指定 客戶 ID。
+* 文字欄位， **Geometrixx客戶ID**，以指定客戶ID。
 
-在無線電按鈕上編寫 When 規則 以實施此行為時，規則在可視規則 編輯者中如下所示。  ![when-規則-example](assets/when-rule-example.png)
+當您在選項按鈕上編寫實施此行為的When規則時，該規則在視覺規則編輯器中會顯示如下。  ![when-rule-example](assets/when-rule-example.png)
 
-視覺編輯者中的規則
+視覺化編輯器中的規則
 
-在示例規則中，When 部分中的語句是條件，當返回 True 時，將執行 Then 部分中指定的操作。
+在範例規則中，When區段中的陳述式是條件，當傳回True時，會執行Then區段中指定的動作。
 
-規則代碼編輯者中显示如下。
+此規則在程式碼編輯器中會顯示如下。
 
-![when-規則-example-code](assets/when-rule-example-code.png)
+![when-rule-example-code](assets/when-rule-example-code.png)
 
-代碼編輯者中的規則
+程式碼編輯器中的規則
 
 ### 在規則中使用函式輸出 {#using-a-function-output-in-a-rule}
 
