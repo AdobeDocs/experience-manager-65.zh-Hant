@@ -3,7 +3,8 @@ title: 電子商務概觀
 description: AEM一般電子商務是作為標準安裝的一部分提供，為您提供電子商務框架的完整功能。
 feature: Commerce Integration Framework
 exl-id: 3567bd28-73aa-401a-8aa9-a62a99d2a613
-source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 2%

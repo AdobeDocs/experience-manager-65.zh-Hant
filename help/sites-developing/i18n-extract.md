@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 exl-id: 4acc5f7f-0bcb-4b5a-8531-52e146cffeae
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%
@@ -60,7 +61,7 @@ i18n.any檔案的/filter區段會識別xgettext-maven-plugin工具剖析的檔�
 
 規則的模式部分用於比對要包含或排除的檔案名稱。 陣列首碼表示您是匹配JCR節點（其在儲存庫中的表示）還是檔案系統。
 
-| 字首 | 效果 |
+| 前綴 | 效果 |
 |---|---|
 | / | 表示JCR路徑。 因此，此首碼會比對jcr_root目錄下的檔案。 |
 | &amp;ast； | 表示檔案系統上的一般檔案。 |

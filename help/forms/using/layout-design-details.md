@@ -7,7 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: 9e1b0067-c7dc-4bbb-a209-d674592be858
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2171'
 ht-degree: 0%
@@ -90,7 +91,7 @@ XDP的設計採用AdobeForms Designer。 本文提供如何設計您的XDP以建
    1. 瀏覽至儲存檔案的位置，並指定XDP範本的名稱。
    1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
 
-   1. 選取&#x200B;**儲存**。
+   1. 選取「**儲存**」。
 
 ### 在XDP範本中使用影像欄位元件 {#use-image-field-component-in-an-xdp-template}
 
@@ -141,7 +142,7 @@ XDP的設計採用AdobeForms Designer。 本文提供如何設計您的XDP以建
    1. 瀏覽至儲存檔案的位置，並指定XDP範本的名稱。
    1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
 
-   1. 選取&#x200B;**儲存**。
+   1. 選取「**儲存**」。
 
 ### 將XDP範本上傳至AEM Forms伺服器 {#uploadxdptemplate}
 

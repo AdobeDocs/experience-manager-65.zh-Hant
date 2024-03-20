@@ -2,7 +2,8 @@
 title: 如何使用Apache Maven建置AEM專案
 description: 本檔案說明如何根據Apache Maven設定AEM專案
 exl-id: 451913bf-bb1e-4444-aee5-968ac30b5c9d
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 1%

@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Interactive Communication
 exl-id: 81429735-cd52-4621-8dc2-10dd89df3052
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1653'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -70,14 +71,14 @@ ht-degree: 2%
 
    1. 選取 **FDM_Create_First_IC** 作為表單資料模型，並選取 **選取**.
 
-   1. 選取 **下一個**.
+   1. 選取&#x200B;**「下一步」**。
 
 1. 選取 **變數** 標籤並選取「 」 **建立**.
 1. 在 **建立變數** 區段：
 
    1. 輸入 **發票號碼** 做為變數的名稱。
    1. 選取 **字串** 作為型別。
-   1. 選擇 **建立**。
+   1. 選取「**建立**」。
 
    ![建立字串型別的變數](assets/variable_create_string_new.png)
 
@@ -134,14 +135,14 @@ ht-degree: 2%
 
    1. 選取 **FDM_Create_First_IC** 作為表單資料模型，並選取 **選取**.
 
-   1. 選取 **下一個**.
+   1. 選取&#x200B;**「下一步」**。
 
 1. 選取 **變數** 標籤並選取「 」 **建立**.
 1. 在 **建立變數** 區段：
 
    1. 輸入 **Placesupply** 做為變數的名稱。
    1. 選取 **字串** 作為型別。
-   1. 選擇 **建立**。
+   1. 選取「**建立**」。
 
    重複步驟4和5以建立下列變數：
 
@@ -197,14 +198,14 @@ ht-degree: 2%
 
    1. 選取 **FDM_Create_First_IC** 作為表單資料模型，並選取 **選取**.
 
-   1. 選取 **下一個**.
+   1. 選取&#x200B;**「下一步」**。
 
 1. 選取 **變數** 標籤並選取「 」 **建立**.
 1. 在 **建立變數** 區段：
 
    1. 輸入 **先前平衡** 做為變數的名稱。
    1. 選取 **數字** 作為型別。
-   1. 選擇 **建立**。
+   1. 選取「**建立**」。
 
    重複步驟4和5以建立下列變數：
 
@@ -264,7 +265,7 @@ ht-degree: 2%
 
    1. 選取 **FDM_Create_First_IC** 作為表單資料模型，並選取 **選取**.
 
-   1. 選取 **下一個**.
+   1. 選取&#x200B;**「下一步」**。
 
 1. 使用右窗格為下列欄位建立靜態文字：
 

@@ -10,7 +10,8 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: c30630f0cd561256414a2883d29c9ee4be470ce1
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '11187'
 ht-degree: 2%
@@ -208,32 +209,32 @@ DASH是國際標準，HLS是Apple標準。 兩者都用於自我調整視訊串�
    <td><strong>視訊播放模式</strong></td>
   </tr>
   <tr>
-   <td>桌面</td>
+   <td>桌上型電腦</td>
    <td>Internet Explorer 9和10</td>
    <td>漸進式下載。</td>
   </tr>
   <tr>
-   <td>桌面</td>
+   <td>桌上型電腦</td>
    <td>Internet Explorer 11+</td>
    <td>在Windows 8和Windows 10上 — 只要要求DASH*或HLS，就強制使用HTTPS。 已知限制：DASH*或HLS上的HTTP在此瀏覽器/作業系統組合中無法運作<br /> <br /> Windows 7上 — 漸進式下載。 使用標準邏輯來選取HTTP與HTTPS通訊協定。</td>
   </tr>
   <tr>
-   <td>桌面</td>
+   <td>桌上型電腦</td>
    <td>Firefox 23-44</td>
    <td>漸進式下載。</td>
   </tr>
   <tr>
-   <td>桌面</td>
+   <td>桌上型電腦</td>
    <td>Firefox 45或更新版本</td>
    <td>DASH*或HLS最適化位元速率串流。</td>
   </tr>
   <tr>
-   <td>桌面</td>
+   <td>桌上型電腦</td>
    <td>鉻黃</td>
    <td>DASH*或HLS最適化位元速率串流。</td>
   </tr>
   <tr>
-   <td>桌面</td>
+   <td>桌上型電腦</td>
    <td>Safari (Mac)</td>
    <td>HLS最適化位元速率串流。</td>
   </tr>
@@ -744,7 +745,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 另請參
 >預設音訊的播放也取決於下列瀏覽器中的設定：
 >
 >* Chrome — 播放視訊中設定的預設音訊。
-* Safari — 如果在Safari中設定了預設語言，則會以設定的預設語言播放音訊（如果視訊資訊清單中有的話）。 否則，會播放設定為視訊屬性一部分的預設音訊。
+>* Safari — 如果在Safari中設定了預設語言，則會以設定的預設語言播放音訊（如果視訊資訊清單中有的話）。 否則，會播放設定為視訊屬性一部分的預設音訊。
 
 **若要為具有多個音軌的視訊設定預設音訊：**
 
@@ -773,7 +774,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 另請參
 
 >[!NOTE]
 >
-預設Experience Manager預覽索引標籤不會顯示多個字幕和音軌。 原因是這些曲目與Dynamic Media相關聯，而且只能使用Dynamic Media檢視器預覽來檢視。
+>預設Experience Manager預覽索引標籤不會顯示多個字幕和音軌。 原因是這些曲目與Dynamic Media相關聯，而且只能使用Dynamic Media檢視器預覽來檢視。
 
 **若要預覽具有多個字幕和音訊曲目的視訊：**
 
@@ -852,7 +853,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 另請參
 
 >[!IMPORTANT]
 >
-Adobe建議您 [啟用多重字幕與多重音訊追蹤功能](#enable-dash) (在您的Dynamic Media帳戶上)。 如此一來，您便可運用最新的Dynamic Media後端架構和簡化的工作流程，在視訊中新增標題、字幕和音訊曲目。
+>Adobe建議您 [啟用多重字幕與多重音訊追蹤功能](#enable-dash) (在您的Dynamic Media帳戶上)。 如此一來，您便可運用最新的Dynamic Media後端架構和簡化的工作流程，在視訊中新增標題、字幕和音訊曲目。
 
 您可以將隱藏式字幕新增至單一視訊或最適化視訊集，以將視訊觸及全球市場。 透過新增隱藏式字幕，您就不需要對音訊進行配音，或是使用母語者重新錄製每種語言的音訊。 視訊會以錄製的語言播放。 出現外語字幕，讓不同語言的人仍然可以瞭解音訊部分。
 
@@ -860,7 +861,7 @@ Adobe建議您 [啟用多重字幕與多重音訊追蹤功能](#enable-dash) (�
 
 >[!NOTE]
 >
-您使用的視訊播放器必須支援顯示註解。
+>您使用的視訊播放器必須支援顯示註解。
 
 另請參閱 [Dynamic Media中的協助工具](/help/assets/accessibility-dm.md).
 
@@ -888,7 +889,7 @@ Dynamic Media會將註解檔案轉換為JSON （JavaScript物件標籤法）格�
 
    >[!NOTE]
    >
-   為了在全球支援多種語言的視訊字幕，WebVTT標準要求您建立個別的.vtt檔案，並針對您想要支援的每種語言呼叫。
+   >為了在全球支援多種語言的視訊字幕，WebVTT標準要求您建立個別的.vtt檔案，並針對您想要支援的每種語言呼叫。
 
    一般來說，您會想要將註解VTT檔案的名稱與視訊檔案的名稱相同，並附加語言地區設定，例如 — EN、-FR或 — DE。 如此一來，即可協助您使用現有的網頁內容管理系統，自動化視訊URL的產生作業。
 
@@ -919,7 +920,7 @@ Dynamic Media會將註解檔案轉換為JSON （JavaScript物件標籤法）格�
 
 >[!NOTE]
 >
-使用的視訊播放器必須支援使用章節標籤。 Dynamic Media影片播放器不支援章節標籤，但使用協力廠商影片播放器可能不支援。
+>使用的視訊播放器必須支援使用章節標籤。 Dynamic Media影片播放器不支援章節標籤，但使用協力廠商影片播放器可能不支援。
 
 如有需要，您可以用章節來建立自訂視訊檢視器，並將其品牌化，而不使用視訊檢視器預設集。 如需使用章節導覽建立您自己的HTML5檢視器的指示，請在Adobe HTML5檢視器SDK API中，參考類別底下的「使用修飾元自訂行為」標題 `s7sdk.video.VideoPlayer` 和 `s7sdk.video.VideoScrubber`. 請參閱 [HTML5檢視器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) 檔案。
 

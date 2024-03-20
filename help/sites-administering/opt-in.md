@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 3603e929-2aa1-4c25-ad9a-b10ff52a59f4
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1298'
 ht-degree: 0%
@@ -73,7 +74,7 @@ AEM有一個選擇加入程式，可協助您整合Adobe Analytics和Adobe Targe
    1. 輸入Target的使用者帳戶資訊，然後按一下對應的 **新增** 按鈕。
    1. 已驗證適當的認證。 狀態已更新為 **已新增**.
 
-1. 選取 **下一個**.
+1. 選取&#x200B;**「下一步」**。
 1. 選取應使用Analytics和/或Target的網站。
 
 1. 選取 **完成** 完成。

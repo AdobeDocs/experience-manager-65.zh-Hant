@@ -6,10 +6,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: a31a496f-87b9-43c0-a98c-5f6ca5d11690
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1023'
-ht-degree: 1%
+source-wordcount: '1020'
+ht-degree: 0%
 
 ---
 
@@ -78,7 +79,7 @@ Documentum認證資訊用於AEM表單系統內容。 存放庫認證專屬於Doc
 ### 新增存放庫認證 {#add-a-repository-credential}
 
 1. 在管理控制檯中，按一下「服務」>「EMC Documentum聯結器」>「存放庫憑證設定」。
-1. 按一下「新增」。便會顯示「Documentum系統證明資訊」頁面。
+1. 按一下「新增」。 便會顯示「Documentum系統證明資訊」頁面。
 1. 輸入存放庫的名稱。
 1. 輸入使用者名稱和密碼。
 1. 按一下「儲存」。

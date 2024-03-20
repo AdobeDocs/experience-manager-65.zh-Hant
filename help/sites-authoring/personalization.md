@@ -2,10 +2,11 @@
 title: 個人化和內容目標鎖定
 description: 瞭解Adobe Experience Manager 6.5如何建立個人化內容。
 exl-id: be34760a-875b-419d-9fa4-2359b314a3b7
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 27%
+source-wordcount: '526'
+ht-degree: 23%
 
 ---
 
@@ -57,7 +58,7 @@ AEM提供內建的鎖定目標引擎，可處理頁面請求並決定要顯示�
 
 ### Adobe Target {#adobe-target}
 
-Adobe Target 目標定位引擎會使頁面被造訪時所收集的資訊在 Adobe Target 中被追蹤。
+Adobe Target鎖定目標引擎會使系統在Adobe Target中追蹤從頁面瀏覽收集到的資訊。
 
 * 使用此目標定位引擎時，您可以使用從 Adobe Target 匯入的區段來定義體驗的對象。
 * 使用 Adobe Target 引擎的活動[會同步到 Target](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target)。

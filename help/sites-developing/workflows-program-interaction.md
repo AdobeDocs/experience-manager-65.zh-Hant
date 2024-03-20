@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2007'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -151,7 +152,7 @@ REST API支援下列動作：
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>建立新工作流程模型. 若引數 <code>title</code> ，則會以指定標題建立新模型。 附加JSON模型定義作為引數 <code>model</code> 根據提供的定義建立新的工作流程模型。<br /> A <code>201</code> 回應(<code>CREATED</code>)會以包含新工作流程模型資源的URL的位置標頭傳回。<br /> 當模型定義附加為名為的檔案引數時，也會發生同樣的情況 <code>modelfile</code>.<br /> 在這兩種情況下 <code>model</code> 和 <code>modelfile</code> 引數，另一個引數稱為 <code>type</code> 是定義序列化格式所必需。 可使用OSGI API整合新的序列化格式。 標準JSON序列化程式會與工作流程引擎一併傳送。 其型別為JSON。 如需格式的範例，請參閱下文。</td>
+   <td>建立新的工作流程模型。 若引數 <code>title</code> ，則會以指定標題建立新模型。 附加JSON模型定義作為引數 <code>model</code> 根據提供的定義建立新的工作流程模型。<br /> A <code>201</code> 回應(<code>CREATED</code>)會以包含新工作流程模型資源的URL的位置標頭傳回。<br /> 當模型定義附加為名為的檔案引數時，也會發生同樣的情況 <code>modelfile</code>.<br /> 在這兩種情況下 <code>model</code> 和 <code>modelfile</code> 引數，另一個引數稱為 <code>type</code> 是定義序列化格式所必需。 可使用OSGI API整合新的序列化格式。 標準JSON序列化程式會與工作流程引擎一併傳送。 其型別為JSON。 如需格式的範例，請參閱下文。</td>
   </tr>
  </tbody>
 </table>
@@ -402,7 +403,7 @@ curl -u admin:admin http://localhost:4502/etc/workflow/instances.RUNNING.json
 
 若要變更 **工作流程標題** 顯示在 **例項** 索引標籤中，傳送 `POST` 命令：
 
-* 至: `http://localhost:4502/etc/workflow/instances/{id}`
+* 至： `http://localhost:4502/etc/workflow/instances/{id}`
 
 * ，並使用下列引數：
 

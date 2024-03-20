@@ -9,7 +9,8 @@ docset: aem65
 role: User, Admin
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
 feature: Publishing
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3000'
 ht-degree: 3%
@@ -232,7 +233,7 @@ ht-degree: 3%
 
    | 選取的排程 | 發生什麼情況 |
    | --- | --- |
-   | 立即 | 選取的動作會立即執行。 |
+   | 現在 | 選取的動作會立即執行。 |
    | 稍後 | 選取的動作會在選取的特定日期和時間執行。 |
 
 1. 在右上角 **[!UICONTROL 管理發布 — 選項]** 頁面，選取 **[!UICONTROL 下一個]**.

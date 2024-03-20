@@ -5,10 +5,11 @@ contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1764'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -192,7 +193,7 @@ AEM會保留目前元件中最後50個動作的記錄，且以時間順序保留
 
 ![chlimage_1-104](assets/chlimage_1-104.png)
 
-### 尋找和取代 {#find-and-replace}
+### 尋找並取代 {#find-and-replace}
 
 ![尋找和取代工具列](do-not-localize/cq55_rte_findreplace.png)
 

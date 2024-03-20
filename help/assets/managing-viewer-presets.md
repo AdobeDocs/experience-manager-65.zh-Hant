@@ -10,7 +10,8 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '4422'
 ht-degree: 8%
@@ -346,7 +347,7 @@ Dynamic Media隨附的所有現成可用的檢視器預設集都與下列系統�
    <td><p>Pans</p> </td>
   </tr>
   <tr>
-   <td><p><strong>選擇</strong></p> </td>
+   <td><p><strong>選取</strong></p> </td>
    <td><p>顯示彈出式視窗</p> </td>
    <td><p>顯示或隱藏使用者介面</p> </td>
    <td><p>顯示或隱藏使用者介面</p> </td>

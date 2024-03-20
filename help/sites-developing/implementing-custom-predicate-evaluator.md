@@ -7,10 +7,11 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: 72cbe589-14a1-40f5-a7cb-8960f02e0ebb
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 1%
+source-wordcount: '664'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +40,7 @@ ht-degree: 1%
 
 GITHUB上的程式碼
 
-您可以在以下位置找到此頁面的程式碼：GitHub。
+您可以在GitHub上找到此頁面的程式碼。
 
 * [在GitHub上開啟aem-search-custom-predicate-evaluator專案](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)
 * 將專案下載為 [ZIP檔案](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/archive/master.zip)
@@ -102,13 +103,13 @@ replic.action=Activate
 
 >[!NOTE]
 >
-以下說明使用maven設定新Adobe Experience Manager (AEM)專案的說明檔案： [如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md).
+>以下說明使用maven設定新Adobe Experience Manager (AEM)專案的說明檔案： [如何使用Apache Maven建置AEM專案](/help/sites-developing/ht-projects-maven.md).
 
 首先，更新專案的Maven相依性。 此 `PredicateEvaluator` 是 `cq-search` 成品，因此必須將其新增至您的Maven pom.xml檔案。
 
 >[!NOTE]
 >
-範圍 `cq-search` 相依性已設定為 `provided` 因為 `cq-search` 由 `OSGi` 容器。
+>範圍 `cq-search` 相依性已設定為 `provided` 因為 `cq-search` 由 `OSGi` 容器。
 
 pom.xml
 
@@ -137,7 +138,7 @@ pom.xml
 
 >[!NOTE]
 >
-下列程式說明如何建置 `Xpath` 篩選資料的運算式。 另一個選項是實作 `includes` 以列為基礎選取資料的方法。 請參閱 [Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29) 以取得詳細資訊。
+>下列程式說明如何建置 `Xpath` 篩選資料的運算式。 另一個選項是實作 `includes` 以列為基礎選取資料的方法。 請參閱 [Java™檔案](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29) 以取得詳細資訊。
 
 1. 建立可擴充的Java™類別 `com.day.cq.search.eval.AbstractPredicateEvaluator`
 1. 使用為課程加上註釋 `@Component` 如以下所示
@@ -165,13 +166,13 @@ pom.xml
 
 >[!NOTE]
 >
-此 `factory`必須是唯一的字串，開頭為 `com.day.cq.search.eval.PredicateEvaluator/`結尾為您的自訂名稱 `PredicateEvaluator`.
+>此 `factory`必須是唯一的字串，開頭為 `com.day.cq.search.eval.PredicateEvaluator/`結尾為您的自訂名稱 `PredicateEvaluator`.
 
 >[!NOTE]
 >
-的名稱 `PredicateEvaluator` 是建立查詢時使用的述詞名稱。
+>的名稱 `PredicateEvaluator` 是建立查詢時使用的述詞名稱。
 
-1. 覆寫:
+1. 覆寫：
 
    ```java
    public String getXPathExpression(Predicate predicate, EvaluationContext context)

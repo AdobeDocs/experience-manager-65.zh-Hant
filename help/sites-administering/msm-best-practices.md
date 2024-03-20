@@ -4,9 +4,10 @@ description: 尋找由Adobe工程和諮詢團隊編譯的最佳實務，協助�
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1599'
 ht-degree: 2%
 
 ---
@@ -37,7 +38,7 @@ MSM是可設定的架構，用於自動化內容部署。 實作通常涉及網�
 >您也可以使用 [參照元件](/help/sites-authoring/default-components-foundation.md#reference) 重複使用單一頁面或段落。 但請記住：
 >
 >* MSM的彈性更高，可讓您更精確地控制要同步的內容以及同步時間。
->* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 現在建議不要使用基礎元件。
+>* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 現在建議不要使用基礎元件。
 >
 
 ## 即時副本來源和Blueprint設定 {#live-copy-sources-and-blueprint-configurations}

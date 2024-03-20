@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Interactive Communication
 exl-id: bef1f05e-aea2-433e-b3d5-0b7ad8163fa7
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1790'
 ht-degree: 1%
@@ -108,7 +109,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
    1. 導覽至可儲存檔案的位置，並將名稱指定為 **create_first_ic_print_template**.
    1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
 
-   1. 選取&#x200B;**儲存**。
+   1. 選取「**儲存**」。
 
 ### 將XDP範本上傳至AEM Forms伺服器 {#upload-xdp-template-to-the-aem-forms-server}
 
@@ -158,7 +159,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
    1. 導覽至可儲存檔案的位置，並將名稱指定為 **table_lf**.
    1. 選取 **.xdp** 從 **另存為型別** 下拉式清單。
 
-   1. 選取&#x200B;**儲存**。
+   1. 選取「**儲存**」。
 
    使用Forms Designer為佈局片段建立XDP範本後，您必須 [上傳](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server) 並傳送至AEM Forms伺服器，以便建立佈局片段時可以使用範本。
 
@@ -205,7 +206,7 @@ Web channel的範本是在AEM中建立。 範本作者和管理員可以建立�
 若要在中建立Web channel範本 **Create_First_IC_templates** 資料夾，請執行下列步驟：
 
 1. 選取「 」，導覽至適當的範本資料夾 **工具** > **範本** > **Create_First_IC_templates** 資料夾。
-1. 選擇 **建立**。
+1. 選取「**建立**」。
 1. 在 **挑選範本型別** 設定精靈，選取 **互動式通訊 — Web Channel** 並選取 **下一個**.
 1. 在 **範本詳細資訊** 設定精靈，指定 **Create_First_IC_Web_Template** 作為範本標題。 指定選擇性說明，然後選取 **建立**.
 

@@ -2,10 +2,11 @@
 title: 使用IMS與Adobe Target整合
 description: 瞭解如何使用IMS整合AEM與Adobe Target。
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1556'
-ht-degree: 3%
+source-wordcount: '1533'
+ht-degree: 1%
 
 ---
 
@@ -163,7 +164,7 @@ ht-degree: 3%
 返回AEM時，您可以從Target的Adobe Developer主控台整合中新增必要值，以完成IMS設定：
 
 1. 返回 [在AEM中開啟的IMS設定](#configuring-an-ims-configuration-generating-a-public-key).
-1. 選取 **下一個**.
+1. 選取&#x200B;**「下一步」**。
 
 1. 在這裡，您可以使用 [Adobe Developer Console中專案設定的詳細資料](#details-stored-for-the-ims-integration-project)：
 
@@ -179,13 +180,13 @@ ht-degree: 3%
 
 1. 您的Adobe Target設定會顯示在AEM主控台中。
 
-   ![Adobe IMS 技術帳戶設定](assets/integrate-target-io-11.png)
+   ![Adobe IMS技術帳戶設定](assets/integrate-target-io-11.png)
 
 ## 確認IMS設定 {#confirming-the-ims-configuration}
 
 若要確認組態是否如預期般運作：
 
-1. 開啟:
+1. 開啟：
 
    * `https://localhost<port>/libs/cq/adobeims-configuration/content/configurations.html`
 
@@ -196,7 +197,7 @@ ht-degree: 3%
 1. 選取您的設定。
 1. 選取 **檢查健康狀態** ，接著再按 **檢查**.
 
-   ![Adobe IMS 設定](assets/integrate-target-io-12.png)
+   ![Adobe IMS設定](assets/integrate-target-io-12.png)
 
 1. 如果成功，您會看到訊息：
 

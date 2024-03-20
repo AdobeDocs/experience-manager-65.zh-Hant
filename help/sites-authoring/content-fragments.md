@@ -7,10 +7,11 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1132'
-ht-degree: 5%
+source-wordcount: '1138'
+ht-degree: 3%
 
 ---
 
@@ -102,9 +103,9 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
 
   指定要使用的片段。
 
-* **顯示模式**:
+* **顯示模式**：
 
-   * **單文字元素**
+   * **單一文字元素**
 
    * **多個元素**
 
@@ -127,9 +128,9 @@ Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影�
    * **全部**
    * **Range**：例如， `1`， `3-5`， `9-*`
 
-      * **將標題當作其段落的一部分來處理**
+      * **將標題處理為它們自己的段落**
 
-* **將標題當作其段落的一部分來處理**
+* **將標題處理為它們自己的段落**
 
 ### 快速連線到片段編輯器 {#quick-connection-to-fragment-editor}
 

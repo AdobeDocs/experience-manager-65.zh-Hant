@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 9fa3e531-11b3-4b8d-a87c-a08faf06f5b7
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 0%
@@ -165,7 +166,7 @@ s.linkTrackVars= 'prop4';
   <tr>
    <td>pagedata.title</td>
    <td>自訂eVar1 (eVar1)</td>
-   <td>eVar1</td>
+   <td>EVAR1</td>
   </tr>
   <tr>
    <td>eventdata.events.pageView</td>
@@ -187,12 +188,12 @@ s.linkTrackVars= 'prop4';
   <tr>
    <td>eventdata.keyword</td>
    <td>自訂eVar2 (eVar2)</td>
-   <td>eVar2</td>
+   <td>EVAR2</td>
   </tr>
   <tr>
    <td>eventdata.results</td>
    <td>自訂eVar3 (eVar3)</td>
-   <td>eVar3</td>
+   <td>EVAR3</td>
   </tr>
   <tr>
    <td>eventdata.events.search</td>

@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 exl-id: a0719745-8d67-44bc-92ba-9ab07f31f8d2
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 3%
@@ -50,7 +51,7 @@ ht-degree: 3%
 
 ![專案任務收件匣](assets/project-tasks.png)
 
-#### 任務詳細資料 {#task-details}
+#### 工作詳細資訊 {#task-details}
 
 如需特定工作的詳細資訊，請在收件匣中，按一下工作以選取它，然後按一下 **開啟** （在工具列中）。
 

@@ -7,16 +7,17 @@ activity: use
 audience: marketer
 feature: Commerce Integration Framework
 exl-id: 09e986c4-16b9-4ef5-a0b3-8d65b17a7f2c
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 4%
+source-wordcount: '91'
+ht-degree: 1%
 
 ---
 
 # 建立多個類別和產品頁面
 
-[AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) 讓內容作者能夠建立其他類別和產品頁面。 這些頁面可以包含其他行銷內容，並設定為鎖定特定類別和產品。 以下影片會逐步說明此功能的設定。
+[AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components) 讓內容作者能夠建立其他類別和產品頁面。 這些頁面可以包含其他行銷內容，並設定為鎖定特定類別和產品。 以下影片會逐步說明此功能的設定。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28969/?quality=12)
 

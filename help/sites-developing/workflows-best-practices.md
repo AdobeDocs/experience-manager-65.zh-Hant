@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1925'
 ht-degree: 1%
@@ -283,7 +284,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 另一個範例是處理數個節點的工作流程，建立工作流程封裝，然後啟動所述封裝。 與其建立封裝，然後以封裝作為裝載啟動單獨的工作流程，您可以在建立封裝的步驟中變更工作流程的裝載，然後呼叫步驟以在相同工作流程模型中啟動封裝。
 
-### 處理常式前進 {#handler-advance}
+### 處理常式推進 {#handler-advance}
 
 設計工作流程模型時，您可以選擇啟用工作流程步驟上的處理常式。 或者，您可以將程式碼新增至工作流程步驟，以決定下一個要執行的步驟，然後再執行它。
 

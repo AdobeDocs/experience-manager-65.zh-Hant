@@ -7,7 +7,8 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '4825'
 ht-degree: 8%
@@ -43,7 +44,7 @@ ht-degree: 8%
 >
 >使用建立的頁面和範本 **範本主控台** 不應與傳統UI搭配使用，且這類使用不受支援。
 
-## 開始之前 {#before-you-start}
+## 在您開始之前 {#before-you-start}
 
 >[!NOTE]
 >
@@ -509,7 +510,7 @@ AEM現在提供兩種基本型別的範本：
 
   在 **屬性** 標題您可以選擇哪些元件可用於版面容器並定義其設定。 標題有三個索引標籤：
 
-   * 允許的元件
+   * 已允許的元件
    * 預設元件
    * 回應式設定
 
@@ -654,7 +655,7 @@ AEM現在提供兩種基本型別的範本：
 
   ![chlimage_1-161](assets/chlimage_1-161.png)
 
-#### 頁面內容 {#page-properties}
+#### 頁面屬性 {#page-properties}
 
 使用頁面屬性，您可以使用來定義所需的使用者端程式庫 **頁面設計** 對話方塊。 這些使用者端程式庫包含要與範本及使用該範本建立的頁面一起載入的樣式表和JavaScript。
 

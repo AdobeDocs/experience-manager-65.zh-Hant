@@ -7,9 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '18956'
+source-wordcount: '18860'
 ht-degree: 0%
 
 ---
@@ -383,7 +384,7 @@ Output服務執行作業之後，會傳回各種資料專案，例如指定作�
 
 您可以使用Output服務來建立PDF/A檔案。 由於PDF/A是用於長期儲存檔案內容的封存格式，因此所有字型全都內嵌且檔案都未壓縮。 因此，PDF/A 文件通常比標準 PDF 文件大。此外，PDF/檔案不包含音訊和視訊內容。 如同其他輸出服務工作，您提供表單設計和資料以與表單設計合併，以建立PDF/A檔案。
 
-PDF/A-1規格包含兩個一致性層次，即a和b。兩者之間的主要差異在於邏輯結構（協助工具）支援，這是符合性層級b所不需要的。無論一致性等級為何，PDF/A-1會指定所有字型都內嵌在產生的PDF/A檔案中。
+PDF/A-1規格包含兩個一致性層次，即a和b。兩者之間的主要差異在於邏輯結構（協助工具）支援，這並非一致性層級b所需。無論一致性層級為何，PDF/A-1會指定所有字型都內嵌在產生的PDF/A檔案中。
 
 雖然PDF/A是封存PDF檔案的標準，但如果標準PDF檔案符合貴公司的需求，則不強制使用PDF/A進行封存。 PDF/A標準的目的是建立可長期儲存的PDF檔案，並符合檔案儲存要求。 例如，URL無法內嵌於PDF/A中，因為該URL可能會隨著時間變得無效。
 
@@ -1433,15 +1434,15 @@ Output服務執行作業之後，會傳回指定作業是否成功的各種資�
    <td><p>依預設或自訂xdc輸出資料流建立dpl203.xdc。</p></td>
   </tr>
   <tr>
-   <td><p>DPL 300 DPI </p></td>
+   <td><p>DPL300DPI </p></td>
    <td><p>建立DPL 300 DPI輸出資料流。</p></td>
   </tr>
   <tr>
-   <td><p>DPL 406 DPI </p></td>
+   <td><p>DPL406DPI </p></td>
    <td><p>建立DPL 400 DPI輸出資料流。</p></td>
   </tr>
   <tr>
-   <td><p>DPL 600 DPI </p></td>
+   <td><p>DPL600DPI </p></td>
    <td><p>建立DPL 600 DPI輸出資料流。</p></td>
   </tr>
   <tr>
@@ -1457,11 +1458,11 @@ Output服務執行作業之後，會傳回指定作業是否成功的各種資�
    <td><p>建立自訂IPL輸出資料流。</p></td>
   </tr>
   <tr>
-   <td><p>IPL 300 DPI </p></td>
+   <td><p>IPL300DPI </p></td>
    <td><p>建立IPL 300 DPI輸出資料流。</p></td>
   </tr>
   <tr>
-   <td><p>IPL 400 DPI </p></td>
+   <td><p>IPL400DPI </p></td>
    <td><p>建立IPL 400 DPI輸出資料流。</p></td>
   </tr>
   <tr>
@@ -1477,11 +1478,11 @@ Output服務執行作業之後，會傳回指定作業是否成功的各種資�
    <td><p>建立自訂TPCL輸出資料流。</p></td>
   </tr>
   <tr>
-   <td><p>TPCL 305 DPI </p></td>
+   <td><p>TPCL305DPI </p></td>
    <td><p>建立TPCL 305 DPI輸出資料流。</p></td>
   </tr>
   <tr>
-   <td><p>TPCL 600 DPI </p></td>
+   <td><p>TPCL600DPI </p></td>
    <td><p>建立TPCL 600 DPI輸出資料流。</p></td>
   </tr>
   <tr>
@@ -1489,7 +1490,7 @@ Output服務執行作業之後，會傳回指定作業是否成功的各種資�
    <td><p>建立ZPL 203 DPI輸出資料流。</p></td>
   </tr>
   <tr>
-   <td><p>ZPL 300 DPI </p></td>
+   <td><p>ZPL300DPI </p></td>
    <td><p>建立ZPL 300 DPI輸出資料流。</p></td>
   </tr>
  </tbody>

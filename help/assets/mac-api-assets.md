@@ -1,14 +1,15 @@
 ---
-title: "[!DNL Assets] HTTP API."
+title: '"[!DNL Assets] HTTP API。」'
 description: 在中使用HTTP API建立、讀取、更新、刪除及管理數位資產 [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 role: Developer
-feature: APIs,Assets HTTP API,Developer Tools
+feature: Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1775'
 ht-degree: 1%
 
 ---
@@ -55,7 +56,7 @@ A [內容片段](/help/assets/content-fragments/content-fragments.md) 是一種�
 
 **實體**：資料夾的實體是它的子元素，可以是資料夾和資產。
 
-**屬性**:
+**屬性**：
 
 * `name` 是資料夾的名稱。 這與URL路徑中沒有副檔名的最後一個區段相同。
 * `title` 是資料夾的選用標題，可顯示而非其名稱。
@@ -83,8 +84,8 @@ A [內容片段](/help/assets/content-fragments/content-fragments.md) 是一種�
 在 [!DNL Experience Manager] 資料夾包含下列元件：
 
 * 實體：資產的子系是其轉譯。
-* 屬性.
-* 連結.
+* 屬性。
+* 連結。
 
 此 [!DNL Assets] HTTP API包含下列功能：
 
@@ -132,7 +133,7 @@ API呼叫失敗，因為 `500` 回應代碼（如果所提供路徑的父節點�
 
 **引數**： `name` 是資料夾名稱。
 
-**要求**
+**請求**
 
 * `POST /api/assets/myFolder -H"Content-Type: application/json" -d '{"class":"assetFolder","properties":{"jcr:title":"My Folder"}}'`
 * `POST /api/assets/* -F"name=myfolder" -F"jcr:title=My Folder"`
@@ -150,7 +151,7 @@ API呼叫失敗，因為 `500` 回應代碼（如果所提供路徑的父節點�
 
 **引數**：引數為 `name` 資產名稱和 `file` 作為檔案參照。
 
-**要求**
+**請求**
 
 * `POST /api/assets/myFolder/myAsset.png -H"Content-Type: image/png" --data-binary "@myPicture.png"`
 * `POST /api/assets/myFolder/* -F"name=myAsset.png" -F"file=@myPicture.png"`
@@ -215,7 +216,7 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 
 **引數**：引數為 `name` 代表轉譯的名稱和 `file` 作為檔案參照。
 
-**要求**
+**請求**
 
 * `POST /api/assets/myfolder/myasset.png/renditions/web-rendition -H"Content-Type: image/png" --data-binary "@myRendition.png"`
 * `POST /api/assets/myfolder/myasset.png/renditions/* -F"name=web-rendition" -F"file=@myRendition.png"`
@@ -303,7 +304,7 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 
 在提供的路徑刪除資源(-tree)。
 
-**要求**
+**請求**
 
 * `DELETE /api/assets/myFolder`
 * `DELETE /api/assets/myFolder/myAsset.png`

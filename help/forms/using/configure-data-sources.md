@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2073'
 ht-degree: 1%
@@ -93,7 +94,7 @@ AEM Forms資料整合可讓您設定並連線至不同的資料來源。 下列�
 
 >[!NOTE]
 >
->設定RESTful、SOAP和OData服務的雲端服務時，需要設定雲端服務資料夾的設定。
+設定RESTful、SOAP和OData服務的雲端服務時，需要設定雲端服務資料夾的設定。
 
 AEM中的所有雲端服務設定都會整合至 `/conf` AEM存放庫中的資料夾。 根據預設， `conf` 資料夾包含 `global` 資料夾，您可在其中建立雲端服務設定。 不過，您需要為雲端設定手動啟用它。 您也可以在中建立其他資料夾 `conf` 建立和組織雲端服務組態。
 
@@ -191,8 +192,8 @@ OData服務由其服務根URL識別。 若要在AEM雲端服務中設定OData服
 
 >[!NOTE]
 >
->表單資料模型支援 [OData版本4](https://www.odata.org/documentation/).
->如需設定Microsoft Dynamics 365 （線上或內部部署）的逐步指南，請參閱 [Microsoft Dynamics OData設定](/help/forms/using/ms-dynamics-odata-configuration.md).
+表單資料模型支援 [OData版本4](https://www.odata.org/documentation/).
+如需設定Microsoft Dynamics 365 （線上或內部部署）的逐步指南，請參閱 [Microsoft Dynamics OData設定](/help/forms/using/ms-dynamics-odata-configuration.md).
 
 1. 前往 **[!UICONTROL 「工具>Cloud Service>資料來源」]**. 選取以選取您要建立雲端設定的資料夾。
 
@@ -206,7 +207,7 @@ OData服務由其服務根URL識別。 若要在AEM雲端服務中設定OData服
 
    >[!NOTE]
    >
-   >選取OAuth 2.0驗證型別，以使用OData端點作為服務根來與Microsoft Dynamics服務連線。
+   選取OAuth 2.0驗證型別，以使用OData端點作為服務根來與Microsoft Dynamics服務連線。
 
 1. 選取 **建立** 以建立OData服務的雲端設定。
 

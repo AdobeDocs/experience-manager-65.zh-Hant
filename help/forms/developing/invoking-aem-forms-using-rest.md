@@ -7,9 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 991fbc56-f144-4ae6-b010-8d02f780d347
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2503'
+source-wordcount: '2481'
 ht-degree: 0%
 
 ---
@@ -313,7 +314,7 @@ AEM Forms服務可透過取代以非同步方式叫用 `services` 替換為 `asy
 
 **從Acrobat叫用MyApplication/EncryptDocument程式** {#invoke-process-acrobat}
 
-您可以使用REST要求，從Acrobat叫用Forms程式。 例如，您可以叫用 *MyApplication/EncryptDocument* 程式。 若要從Acrobat叫用Forms程式，請在Designer內的XDP檔案上放置提交按鈕。 (請參閱 [Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63_tw).)
+您可以使用REST要求，從Acrobat叫用Forms程式。 例如，您可以叫用 *MyApplication/EncryptDocument* 程式。 若要從Acrobat叫用Forms程式，請在Designer內的XDP檔案上放置提交按鈕。 (請參閱 [Designer說明](https://www.adobe.com/go/learn_aemforms_designer_63).)
 
 指定在按鈕的 *提交至URL* 欄位，如下圖所示。
 

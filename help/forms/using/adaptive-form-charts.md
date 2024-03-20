@@ -4,7 +4,9 @@ description: 在最適化表單中使用圖表，讓您的表單更具資訊性�
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Adaptive Forms, Foundation Components
-source-git-commit: 53a6914792bb15773c8f91a2bb6295ab69b3b1bf
+exl-id: 973d5ddb-cbcc-454d-859f-144442828a1a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2005'
 ht-degree: 0%
@@ -190,5 +192,3 @@ chartType屬性指定圖表的型別。 可能的值包括圓餅圖、環圈圖�
 1. 按一下完成以儲存規則。
 
 現在，您可以從下拉式清單中選取圖表型別，然後按一下「重新整理」以重新繪製圖表。
-
-

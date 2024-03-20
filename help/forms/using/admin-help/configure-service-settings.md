@@ -6,7 +6,8 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '10702'
 ht-degree: 0%
@@ -221,7 +222,7 @@ Document Management服務可使用下列設定。
 
 >[!NOTE]
 >
-只有在透過SSL （使用LDAPS）保護連線時才使用簡單驗證（使用者名稱和密碼）。
+>只有在透過SSL （使用LDAPS）保護連線時才使用簡單驗證（使用者名稱和密碼）。
 
 **相容性模式：**
 
@@ -429,7 +430,7 @@ Microsoft SharePoint組態服務可使用下列設定：
 
 >[!NOTE]
 >
-如果已啟用離線支援，然後您將其停用，則使用者的布建設定檔會立即更新，或線上上時立即更新。 如果使用者一直在離線工作，所有擱置的任務都會傳回至其「任務」清單，而其「佇列」中的所有專案（包括擱置的表單、任務以及包含驗證錯誤的表單）都會從「佇列」中刪除。
+>如果已啟用離線支援，然後您將其停用，則使用者的布建設定檔會立即更新，或線上上時立即更新。 如果使用者一直在離線工作，所有擱置的任務都會傳回至其「任務」清單，而其「佇列」中的所有專案（包括擱置的表單、任務以及包含驗證錯誤的表單）都會從「佇列」中刪除。
 
 **Android：** 允許Android裝置連線至伺服器。
 
@@ -731,7 +732,7 @@ Watched資料夾服務( `WatchedFolder`)設定所有watched資料夾端點通用
 
 >[!NOTE]
 >
-結果資料夾的大小越小，Watched資料夾的效能就越好。 例如，如果watched資料夾的估計負載為每小時1000個檔案，請嘗試以下模式 `result/%Y%M%D%H` 因此每小時會建立一個新子資料夾。 如果負載較小（例如，每天1000個檔案），您可以使用以下模式 `result/%Y%M%D`.
+>結果資料夾的大小越小，Watched資料夾的效能就越好。 例如，如果watched資料夾的估計負載為每小時1000個檔案，請嘗試以下模式 `result/%Y%M%D%H` 因此每小時會建立一個新子資料夾。 如果負載較小（例如，每天1000個檔案），您可以使用以下模式 `result/%Y%M%D`.
 
 **階段資料夾：** Watched資料夾內舞台資料夾的預設名稱。
 
@@ -813,7 +814,7 @@ Forms Server可讓您為每個服務設定安全性設定，讓您逐個服務�
 
    >[!NOTE]
    >
-   與xfaForm、Document Form和Form變數搭配使用的轉譯和提交服務一律使用系統使用者帳戶執行。
+   >與xfaForm、Document Form和Form變數搭配使用的轉譯和提交服務一律使用系統使用者帳戶執行。
 
 1. 按一下「新增主體」，指定使用者和群組對此服務擁有的許可權。
 1. 「選取主參與者」畫面會顯示在「使用者管理」中設定的使用者和群組。 如果未顯示您想要的使用者或群組，請使用搜尋功能來尋找它。 按一下使用者或群組名稱。

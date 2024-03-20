@@ -7,7 +7,8 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2462'
 ht-degree: 2%
@@ -247,9 +248,9 @@ ht-degree: 2%
    |---|---|
    | 步驟 1 | 建立 |
    | 步驟 2 | 建立 |
-   | 步驟 3 | 評論 |
-   | 步驟 4 | 批准 |
-   | 步驟 5 | 批准 |
+   | 步驟 3 | 檢閱 |
+   | 步驟 4 | 核准 |
+   | 步驟 5 | 核准 |
    | 步驟 6 | 完成 |
 
 1. 透過確認變更 **同步** （編輯器工具列）以產生執行階段模型。

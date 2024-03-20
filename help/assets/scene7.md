@@ -9,7 +9,8 @@ feature: Dynamic Media Classic
 role: User, Admin
 mini-toc-levels: 3
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2851'
 ht-degree: 2%
@@ -331,7 +332,7 @@ Dynamic Media Classic內容瀏覽器可讓您直接在Experience Manager檢視Dy
 >* 在傳統UI中，您也可以搜尋 **Flash** 和 **FXG**. 不支援在觸控最佳化UI中篩選這些型別。
 >
 >* 搜尋視訊時，您會搜尋單一轉譯。 結果會傳回原始轉譯（僅限&amp;ast；.mp4）和編碼的轉譯。
->* 搜尋最適化視訊集時，您將會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子資料夾。
+* 搜尋最適化視訊集時，您將會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子資料夾。
 >
 
 **[!UICONTROL 發佈狀態]**  — 您可以根據發佈狀態來篩選資產： **[!UICONTROL 已取消發佈]** 或 **[!UICONTROL 已發佈]**. 如果您未選取任何 **[!UICONTROL 發佈狀態]**，Experience Manager預設會搜尋所有發佈狀態。

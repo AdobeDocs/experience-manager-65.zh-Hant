@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2460'
+source-wordcount: '2452'
 ht-degree: 0%
 
 ---
@@ -228,7 +229,7 @@ CQ標籤庫包含有用的函式。
 
 * 此布林值會控制是否應忽略元件階層以進行指令碼解析。 如果為true，則僅遵循搜尋路徑。
 
-**範例:**
+**範例：**
 
 ```xml
 <%@taglib prefix="cq" uri="https://www.day.com/taglibs/cq/1.0" %><%
@@ -472,7 +473,7 @@ CQ標籤庫包含有用的函式。
 
 * 要新增之引數的值
 
-**範例:**
+**範例：**
 
 ```xml
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
@@ -619,7 +620,7 @@ l **ogName resourceResolverName**
 
 **slingName**
 
-**範例:**
+**範例：**
 
 ```xml
 <%@page session="false" %><%

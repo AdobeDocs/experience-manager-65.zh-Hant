@@ -2,10 +2,11 @@
 title: 適用於AEM 6.5 Sites的Headless開發
 description: 瞭解AEM 6.5強大的Headless功能(例如內容模型、內容片段和GraphQL API)如何搭配運作，讓您集中管理您的體驗並跨管道提供這些體驗。
 exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 38%
+source-wordcount: '507'
+ht-degree: 35%
 
 ---
 
@@ -41,7 +42,7 @@ AEM 6.5是適用於Headless實作模式的彈性工具，提供三種強大的�
    * 內容片段是內容模型的例項化。
    * 這些是由內容作者使用AEM內容片段編輯器所建立。
    * 儲存在AEM Assets中，並在Assets管理員UI中進行管理。
-1. 用於傳遞的內容 API
+1. 傳送的內容API
    * AEM GraphQL API 支援內容片段傳遞。
    * AEM Assets REST API 支援內容片段 CRUD 作業。
    * 也可以使用直接內容傳送 [內容片段核心元件的JSON匯出。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)

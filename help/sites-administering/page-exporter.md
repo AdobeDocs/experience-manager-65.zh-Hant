@@ -2,9 +2,10 @@
 title: 頁面匯出工具
 description: 瞭解如何使用Adobe Experience Manager (AEM)頁面匯出工具。
 exl-id: 15d08758-cf75-43c0-9818-98a579d64183
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -136,7 +137,7 @@ Adobe Experience Manager (AEM)可讓您將頁面匯出為包含影像的完整�
 * `design`
 設計節點用於複製用於匯出頁面的設計。 它具有下列特性：
 
-   * 選用.
+   * 選填。
    * 位於下方 `/etc/contentsync/templates/<mysite>`.
    * 使用屬性定義 `Name` 設為 `design`.
    * 節點型別為 `nt:unstructured`.
@@ -150,7 +151,7 @@ Adobe Experience Manager (AEM)可讓您將頁面匯出為包含影像的完整�
 * `generic`
 一般節點用於複製clientlibs等資源 `.js` 或 `.css` 檔案壓縮至zip檔案。 它具有下列特性：
 
-   * 選用.
+   * 選填。
    * 位於下方 `/etc/contentsync/templates/<mysite>`.
    * 沒有特定名稱。
    * 節點型別為 `nt:unstructured`.

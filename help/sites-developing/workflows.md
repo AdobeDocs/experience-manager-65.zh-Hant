@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 041b1767-8b6c-4887-a70d-abc96a116976
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1460'
 ht-degree: 3%
@@ -88,7 +89,7 @@ A `WorkItem` 是通過 `Workflow` 例項 `WorkflowModel`. 它包含 `WorkflowDat
 * 此 `WorkItem` 參考工作流程例項。
 * 在存放庫中， `WorkItem` 會儲存在工作流程例項下方。
 
-### 裝載 {#payload}
+### 總額 {#payload}
 
 參考必須透過工作流程進行進階的資源。
 
@@ -194,8 +195,8 @@ A `WorkItem` 是通過 `Workflow` 例項 `WorkflowModel`. 它包含 `WorkflowDat
    |---|---|
    | 步驟 1 | 建立 |
    | 步驟 2 | 建立 |
-   | 步驟 3 | 評論 |
-   | 步驟 4 | 批准 |
+   | 步驟 3 | 檢閱 |
+   | 步驟 4 | 核准 |
    | 步驟 5 | 完成 |
    | 步驟 6 | 完成 |
 

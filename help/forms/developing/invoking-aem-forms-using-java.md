@@ -7,9 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '5393'
+source-wordcount: '5333'
 ht-degree: 0%
 
 ---
@@ -652,7 +653,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 **Weblogic**
 
-下面的示例演示用於連接到部署在 WebLogic 上的AEM Forms的 jndi.properties 檔的內容。
+下面的示例演示用於連接到部署在 WebLogic 上的AEM Forms的 jndi.properties 文件的內容。
 
 ```ini
  java.naming.factory.initial=weblogic.jndi.WLInitialContextFactory
@@ -661,7 +662,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 **Jboss**
 
-以下示例顯示了用於連接到部署在 JBoss 上的AEM Forms的 jndi.properties 檔的內容。
+以下示例顯示了用於連接到部署在 JBoss 上的AEM Forms的 jndi.properties 文件的內容。
 
 ```ini
  java.naming.factory.initial= org.jnp.interfaces.NamingContextFactory
@@ -675,13 +676,13 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 **另請參閱**
 
-[包括 AEM Forms JAVA 資料庫 檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括 AEM Forms Java 資料庫 檔案](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[使用 JAVA API 將資料傳遞至 AEM Forms 服務](invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)
+[使用 Java API 將數據傳遞至 AEM Forms 服務](invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)
 
-[使用 JAVA 客戶機資料庫叫用服務](invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)
+[使用 Java 客戶機資料庫叫用服務](invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)
 
-## 使用 JAVA API 將資料傳遞至 AEM Forms 服務 {#passing-data-to-aem-forms-services-using-the-java-api}
+## 使用 Java API 將數據傳遞至 AEM Forms 服務 {#passing-data-to-aem-forms-services-using-the-java-api}
 
 AEM Forms服務作業通常會消耗或產生PDF檔案。 當您叫用服務時，有時必須將PDF檔案（或其他檔案型別，例如XML資料）傳遞給服務。 同樣地，有時候，處理從服務傳回的PDF檔案也是必要的。 可讓您在AEM Forms服務之間傳遞資料的Java類別為 `com.adobe.idp.Document`.
 
@@ -825,9 +826,9 @@ A `com.adobe.idp.Document` 物件是Java可序列化型別，因此可透過RMI�
      Document doc = new Document(new java.net.URL("file:c:/temp/input.pdf"));
 ```
 
-c：/temp/input.pdf 檔案必須位於用戶端電腦上（而不是伺服器電腦上）。 用戶端電腦是讀取URL和 `com.adobe.idp.Document` 創建物件的位置。
+c：/temp/input.pdf 文件必須位於用戶端電腦上（而不是伺服器計算機上）。 用戶端電腦是讀取URL和 `com.adobe.idp.Document` 創建物件的位置。
 
-**根據可從URL存取內容建立檔**
+**根據可從URL存取內容建立文件**
 
 ```java
  //Create a Document object based on a java.net.URL object
@@ -845,10 +846,10 @@ c：/temp/input.pdf 檔案必須位於用戶端電腦上（而不是伺服器電
 
 ### 處理傳回的檔案 {#handling-returned-documents}
 
-返回 PDF 檔（或其他資料類型，如 XML 資料）作為輸出值的服務操作返回物件 `com.adobe.idp.Document` 。 收到 `com.adobe.idp.Document` 物件後，可以將其轉換為以下格式：
+返回 PDF 檔（或其他資料類型，如 XML 資料）作為輸出值的服務操作傳回物件 `com.adobe.idp.Document` 。 收到 `com.adobe.idp.Document` 物件后，可以將其轉換為以下格式：
 
-* 物件 `java.io.File`
-* 物件 `java.io.InputStream`
+* 物件`java.io.File`
+* 物件`java.io.InputStream`
 * 位元組陣列
 
 下列程式碼行會轉換 `com.adobe.idp.Document` 物件至 `java.io.InputStream` 物件。 假設 `myPDFDocument` 代表 `com.adobe.idp.Document` 物件：
@@ -968,16 +969,16 @@ AEM Forms服務作業可使用服務的強型別API （稱為Java使用者端程
 >
 >若要說明如何使用Java API叫用服務，存放庫服務的 `writeResource` 已叫用作業。 此操作會將新資源放入存放庫中。
 
-您可以通過使用 JAVA 客戶機資料庫並執行以下步驟來調用存儲庫服務：
+您可以使用 Java 客戶機資料庫並執行以下步驟來呼叫儲存庫服務：
 
-1. 將用戶端 JAR 檔案 （例如 adobe-存放庫-client.jar） 包含在 JAVA 專案的類別路徑中。 有關這些檔的位置的資訊，請參閱 [ 包括AEM Forms JAVA 資料庫檔 ](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files) 。
+1. 將用戶端 JAR 檔案 （例如 adobe-存放庫-client.jar） 包含在 Java 專案的類別路徑中。 有關這些檔的位置的資訊，請參閱 [包括AEM Forms Java 資料庫檔](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 1. 設置調用服務所需的連接屬性。
 1. 建立 `ServiceClientFactory` 物件(透過叫用 `ServiceClientFactory` 物件的靜態 `createInstance` 方法並傳遞 `java.util.Properties` 包含連線屬性的物件。
 1. 建立 `ResourceRepositoryClient` 物件，使用它的建構函式並傳遞 `ServiceClientFactory` 物件。 使用該 `ResourceRepositoryClient` 物件來調用存儲庫服務操作。
-1. `RepositoryInfomodelFactoryBean`使用物件的建構函式建立物件並傳遞 `null` .此物件允許您創建一個 `Resource` 表示添加到存放庫內容的物件。
-1. `Resource`通過調用 `RepositoryInfomodelFactoryBean` 物件的方法 `newImage` 並傳遞以下值來建立物件：
+1. `RepositoryInfomodelFactoryBean`使用物件的建構函數建立物件並傳遞 `null`.此物件允許您創建一個 `Resource` 表示添加到存放庫內容的物件。
+1. `Resource`通過調用`RepositoryInfomodelFactoryBean`物件的方法`newImage`並傳遞以下值來建立物件：
 
-   * 唯一 ID 值，方法是指定 `new Id()` .
+   * 唯一 ID 值，方法是指定 `new Id()`.
    * 唯一的UUID值，需指定 `new Lid()`.
    * 資源的名稱。 您可以指定XDP檔案的檔案名稱。
 

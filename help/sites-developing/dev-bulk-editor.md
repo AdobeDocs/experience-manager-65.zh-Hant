@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 8753aaab-959f-459b-bdb6-057cbe05d480
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1832'
-ht-degree: 2%
+source-wordcount: '1833'
+ht-degree: 1%
 
 ---
 
@@ -42,7 +43,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><p> 參數</p> <p>（長名稱/短名稱）<br /> </p> </td>
-   <td> 類型 <br /> </td>
+   <td> 型別 <br /> </td>
    <td> 說明 <br /> </td>
   </tr>
   <tr>
@@ -62,12 +63,12 @@ ht-degree: 2%
   </tr>
   <tr>
    <td> colsValue / cv<br /> </td>
-   <td> 字串[]</td>
+   <td> String[]</td>
    <td> 搜尋的屬性（colsSelection中的核取值會顯示為核取方塊）</td>
   </tr>
   <tr>
    <td> extraCols / ec<br /> </td>
-   <td> 字串[]</td>
+   <td> String[]</td>
    <td> 額外的搜尋屬性（以逗號分隔的文字欄位顯示）</td>
   </tr>
   <tr>
@@ -77,7 +78,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td> colsSelection / cs<br /> </td>
-   <td> 字串[]</td>
+   <td> String[]</td>
    <td> 搜尋的屬性選取範圍（顯示為核取方塊）</td>
   </tr>
   <tr>
@@ -273,7 +274,7 @@ ht-degree: 2%
    <td>定義</td>
   </tr>
   <tr>
-   <td>rootPath</td>
+   <td>根路徑</td>
    <td>搜尋根路徑</td>
   </tr>
   <tr>
@@ -514,7 +515,7 @@ CSS和唯讀欄
 
 **強制位置**
 
-強制位置中繼資料forcedPosition可讓您指定欄在格線中的放置位置：0是第一個位置，而 &lt;number of=&quot;&quot; columns=&quot;&quot;>-1是最後一個位置。 任何其他值會受到忽略。
+強制位置中繼資料forcedPosition可讓您指定欄在格線中的放置位置：0是第一個位置，而 &lt;number of=&quot;&quot; columns=&quot;&quot;>-1是最後一個位置。 任何其他值都會被忽略。
 
 在前一個範例中，選取欄是第一個欄，如forcedPosition=&quot;0&quot;。
 
@@ -564,7 +565,7 @@ CSS和唯讀欄
 
 * 值： &lt;value>
 
-  例如: 12123
+  範例： 12123
 
 此servlet需要知道catalogCode屬性的儲存位置。
 

@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: a9de8ec6-6948-4643-89c3-62d9b1f6293a
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -28,7 +29,7 @@ AEM提供了幾個可用於建立工作流程模型的流程步驟。 您也可�
 * 對於Java™類別處理程式，會提供完整類別名稱。
 * 對於ECMAScript程式，會提供指令碼的路徑。
 
-### 裝載 {#payload}
+### 總額 {#payload}
 
 裝載是工作流程例項作用所在的實體。 裝載是由啟動工作流程執行個體的內容隱含選取。
 
@@ -113,7 +114,7 @@ AEM提供了幾個可用於建立工作流程模型的流程步驟。 您也可�
 * **Java™類別**： `com.day.cq.workflow.impl.process.ProcessAssembler`
 
 * **裝載**：DAM資產、AEM頁面或無裝載（取決於子程式的需求）。
-* **引數**:
+* **引數**：
 
 ```
         args := arg [',' arg]

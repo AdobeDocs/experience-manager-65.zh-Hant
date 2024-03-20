@@ -7,7 +7,8 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 5%
@@ -166,7 +167,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 ![資產瀏覽器案頭裝置](do-not-localize/screen_shot_2018-03-22at142448.png)
 
-## 內容樹 {#content-tree}
+## 內容樹狀結構 {#content-tree}
 
 此 **內容樹狀結構** 會提供階層中頁面所有元件的概觀，讓您一眼即可檢視頁面的構成方式。
 
@@ -320,7 +321,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 >* 有一個 [鍵盤快速鍵](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) ( `Ctrl-Shift-M`)以在 **預覽** 和目前選取的模式(例如， **編輯**、和 **版面**)。
 >
 
-## 路徑選擇 {#path-selection}
+## 路徑選取 {#path-selection}
 
 通常在製作時，必須選取另一個資源，例如定義另一個頁面或資源的連結，或選取影像時。 若要輕鬆選取路徑， [路徑欄位](/help/sites-authoring/author-environment-tools.md#path-fields) 優惠自動完成和 [路徑瀏覽器](/help/sites-authoring/author-environment-tools.md#path-browser) 允許更強大的選取範圍。
 

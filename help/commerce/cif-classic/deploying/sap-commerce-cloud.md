@@ -5,10 +5,11 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 2%
+source-wordcount: '712'
+ht-degree: 1%
 
 ---
 
@@ -45,7 +46,7 @@ ht-degree: 2%
 >
 >* 支援18.11版及更新版本。
 >* 您需要Java™ 7才能執行 [hybris 5伺服器。](https://www.sap.com/products/crm.html)
-* hybris附加元件， [Telco加速器](https://www.sap.com/products/crm.html)AEM擴充功能不支援。
+>* hybris附加元件， [Telco加速器](https://www.sap.com/products/crm.html)AEM擴充功能不支援。
 >
 
 ### 具有hybris的電子商務所需的套件 {#packages-needed-for-ecommerce-with-hybris}
@@ -91,11 +92,11 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
-使用hybris伺服器需要個別的hybris授權。
+>使用hybris伺服器需要個別的hybris授權。
 
 >[!NOTE]
 >
-對於開發人員而言， [API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可下載。
+>對於開發人員而言， [API檔案](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) 也可下載。
 
 ### 下載並建置您的hybris伺服器 {#download-and-build-your-hybris-server}
 
@@ -103,17 +104,17 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
-不支援5.5.1之前的Hybris版本。
+>不支援5.5.1之前的Hybris版本。
 
 >[!NOTE]
 >
-若要完成此作業，您需要 [Groovy](https://groovy-lang.org/) 已安裝在您的系統上。
+>若要完成此作業，您需要 [Groovy](https://groovy-lang.org/) 已安裝在您的系統上。
 
 1. 下載 **hybris Commerce Suite** 從hybris下載網站發佈。
 
    >[!CAUTION]
    >
-   您需要帳戶（來自hybris）才能存取此專案。
+   >您需要帳戶（來自hybris）才能存取此專案。
 
 1. 將發佈檔案解壓縮至所需的位置(稱為 &lt;hybris-root-directory>)。
 1. 從命令列，執行下列動作：
@@ -127,11 +128,11 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   執行時：
+   >執行時：
    >
-   `ant clean all`
+   >`ant clean all`
    >
-   按下 `Return` 必要時。
+   >按下 `Return` 必要時。
 
 1. 將下列檔案下載到解壓縮的hybris散髮根資料夾，
 
@@ -144,7 +145,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   對於hybris 5.6.0和更新版本，請使用下列setup.groovy。
+   >對於hybris 5.6.0和更新版本，請使用下列setup.groovy。
 
    5.6.0和更新版本
 
@@ -165,7 +166,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   視您的系統而定，其中數個步驟可能需要幾分鐘才能完成。
+   >視您的系統而定，其中數個步驟可能需要幾分鐘才能完成。
 
 1. 在您的瀏覽器中，導覽至 **hybris管理主控台** 於：
 
@@ -177,7 +178,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   視您的系統而定，這可能需要幾分鐘才能完成。
+   >視您的系統而定，這可能需要幾分鐘才能完成。
 
 ### 設定Geometrixx Outdoors存放區 {#setup-the-geometrixx-outdoors-store}
 

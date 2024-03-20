@@ -2,7 +2,8 @@
 title: 基礎元件
 description: 瞭解Adobe Experience Manager 6.5中的基礎元件。
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '6873'
 ht-degree: 2%

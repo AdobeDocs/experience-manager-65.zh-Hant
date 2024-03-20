@@ -2,7 +2,8 @@
 title: 無法搭配特定版本的OracleJDK使用Experience Manager Forms
 description: 無法搭配特定版本的OracleJDK使用Experience Manager Forms
 exl-id: 6a8a7cb7-77d6-4bfc-82f3-82d0fddfc10a
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 1%

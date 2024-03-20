@@ -1,19 +1,20 @@
 ---
-title: Forms入口網站 |處理使用者資料
+title: Forms入口網站 | 處理使用者資料
 description: 瞭解如何管理AEM Forms Portal上的使用者資料，例如存取、刪除和資料存放區。
 contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin
 exl-id: 791524a4-a8bb-4632-a68d-e96864e139a9
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
 
 ---
 
-# Forms入口網站 |處理使用者資料 {#forms-portal-handling-user-data}
+# Forms入口網站 | 處理使用者資料 {#forms-portal-handling-user-data}
 
 [!DNL AEM Forms] Portal提供的元件可用於列出最適化表單、HTML5表單以及上的其他Forms資產 [!DNL AEM Sites] 頁面。 此外，您可以將其設定為顯示草稿並向登入使用者提交最適化表單和HTML5表單。 如需Forms入口網站的詳細資訊，請參閱 [在入口網站上發佈表單簡介](/help/forms/using/introduction-publishing-forms.md).
 

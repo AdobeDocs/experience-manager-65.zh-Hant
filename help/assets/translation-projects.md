@@ -5,9 +5,10 @@ contentOwner: AG
 role: Architect, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1889'
 ht-degree: 15%
 
 ---
@@ -29,9 +30,9 @@ ht-degree: 15%
 
 您可以使用建立和翻譯工作流程，首次產生特定語言的語言副本。 工作流程提供下列選項：
 
-* 僅建立結構.
-* 建立翻譯專案.
-* 新增至現有翻譯專案.
+* 僅建立結構。
+* 建立翻譯專案。
+* 新增至現有翻譯專案。
 
 ### 僅建立結構 {#create-structure-only}
 

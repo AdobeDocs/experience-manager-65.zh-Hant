@@ -1,14 +1,15 @@
 ---
 title: 雲端服務設定
-description: 您可以擴充現有執行個體以建立自己的設定
+description: 您可以擴充現有執行個體來建立自己的設定
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '552'
 ht-degree: 3%
 
 ---
@@ -21,14 +22,14 @@ ht-degree: 3%
 
 ## 概念 {#concepts}
 
-開發設定時採用的原則以以下概念為基礎：
+開發組態時採用的原則以下列概念為基礎：
 
 * 服務/介面卡用於擷取組態。
 * 設定（例如屬性/段落）繼承自父項。
 * 依路徑從Analytics節點參照。
-* 易於擴充。
-* 具備彈性以因應更複雜的設定，例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
-* 支援相依性(例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 外掛程式需要 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) configuration)。
+* 可輕鬆擴充。
+* 具備彈性以因應更複雜的組態，例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
+* 支援相依性(例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 外掛程式需要 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定)。
 
 ## 結構 {#structure}
 
@@ -36,11 +37,11 @@ ht-degree: 3%
 
 `/etc/cloudservices`。
 
-對於每種型別的設定，都會提供範本和元件。 如此一來，設定範本就能在自訂後滿足大部分的需求。
+對於每種設定型別，都會提供範本和元件。 如此一來，設定範本就能在客製化後滿足大部分的需求。
 
-若要提供新服務的設定，請執行下列動作：
+若要提供新服務的組態，請執行下列動作：
 
-* 在中建立服務區段
+* 在中建立服務範圍
 
   `/etc/cloudservices`
 
@@ -49,25 +50,25 @@ ht-degree: 3%
    * 設定範本
    * 設定元件
 
-範本和元件必須繼承 `sling:resourceSuperType` 從基本範本：
+範本和元件必須繼承 `sling:resourceSuperType` 從基礎範本：
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-或基本元件各自執行
+或基礎元件分別使用
 
 `cq/cloudserviceconfigs/components/configpage`
 
-服務提供者也應提供服務頁面：
+服務提供者也應該提供服務頁面：
 
 `/etc/cloudservices/<service-name>`
 
 ### 範本 {#template}
 
-您的範本會擴充基本範本：
+您的範本會擴充基礎範本：
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-並定義 `resourceType` 指向自訂元件。
+並定義 `resourceType` 會指向自訂元件。
 
 ```xml
 /libs/cq/analytics/templates/sitecatalyst
@@ -90,7 +91,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 ### 元件 {#components}
 
-您的元件應擴充基本元件：
+您的元件應擴充基礎元件：
 
 `cq/cloudserviceconfigs/templates/configpage`
 
@@ -100,7 +101,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /libs/cq/analytics/components/generictrackerpage
 ```
 
-設定範本和元件後，您可以在下方新增子頁面來新增設定：
+設定範本和元件後，您可以在下方新增子頁面以新增設定：
 
 `/etc/cloudservices/<service-name>`
 
@@ -117,7 +118,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /etc/cloudservices/service-name/config/inherited-config
 ```
 
-設定會儲存在子節點下 `jcr:content`.
+這些設定會儲存在子節點下 `jcr:content`.
 
 * 在對話方塊中定義的固定屬性應儲存在 `jcr:node` 直接。
 * 動態元素(使用 `parsys` 或 `iparsys`)使用子節點來儲存元件資料。
@@ -133,30 +134,30 @@ propertyname
 
 ### API {#api}
 
-如需API的參考檔案，請參閱 [com.day.cq.wcm.webservicesupport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
+如需有關API的參考檔案，請參閱 [com.day.cq.wcm.webservicesupport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
 
 ### AEM整合 {#aem-integration}
 
-可用的服務列於 **Cloud Services** 的標籤 **頁面屬性** 對話方塊（任何繼承自的頁面） `foundation/components/page` 或 `wcm/mobile/components/page`)。
+可用的服務列於 **Cloud Service** 的標籤 **頁面屬性** 對話方塊（任何繼承自的頁面） `foundation/components/page` 或 `wcm/mobile/components/page`)。
 
-索引標籤也提供：
+標籤也提供：
 
-* 您可以啟用服務之位置的連結
+* 您可啟用服務之位置的連結
 * 從路徑欄位選擇設定（服務的子節點）
 
 #### 密碼加密 {#password-encryption}
 
-儲存服務的使用者認證時，所有密碼都應加密。
+儲存服務的使用者認證時，所有密碼都應該加密。
 
 您可以新增隱藏的表單欄位來達成此目的。 此欄位應該有註解 `@Encrypted` 在屬性名稱中；亦即 `password` 欄位名稱將寫成：
 
 `password@Encrypted`
 
-然後，該屬性將自動加密(使用 `CryptoSupport` service)，由 `EncryptionPostProcessor`.
+接著會自動加密屬性(使用 `CryptoSupport` 服務)，由 `EncryptionPostProcessor`.
 
 >[!NOTE]
 >
->這類似標準 ` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)` 註解。
+>這類似於標準 ` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)` 註解。
 
 >[!NOTE]
 >
@@ -172,7 +173,7 @@ propertyname
   </tr>
   <tr>
    <td>componentreference</td>
-   <td>要自動包含在頁面中的元件的參照路徑。<br /> 這會用於其他功能和JS包含。<br /> 這包括頁面上的元件，其中<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 包含(通常早於 <code>body</code> 標籤)。<br /> 若是Adobe Analytics和Adobe Target，我們會使用這一點來包含其他功能，例如追蹤訪客行為的JavaScript呼叫。</td>
+   <td>要自動納入頁面中的元件的參照路徑。<br /> 這會用於其他功能和JS包含。<br /> 這包括頁面上的元件，其中<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 包含(通常在 <code>body</code> 標籤)。<br /> 若是Adobe Analytics和Adobe Target，我們會使用這一點來包含其他功能，例如追蹤訪客行為的JavaScript呼叫。</td>
   </tr>
   <tr>
    <td>說明</td>
@@ -195,7 +196,7 @@ propertyname
    <td>服務網站的URL。</td>
   </tr>
   <tr>
-   <td>serviceUrlLabel</td>
+   <td>serviceUrlLable</td>
    <td>服務URL標籤。</td>
   </tr>
   <tr>
@@ -204,7 +205,7 @@ propertyname
   </tr>
   <tr>
    <td>可見</td>
-   <td>頁面屬性對話方塊中的可見性；預設為可見（選擇性）</td>
+   <td>頁面屬性對話方塊中的可見度；預設為可見（選擇性）</td>
   </tr>
  </tbody>
 </table>
@@ -213,7 +214,7 @@ propertyname
 
 預設會提供下列服務：
 
-* [追蹤器代碼片段](/help/sites-administering/external-providers.md) (Google、WebTrends等)
+* [追蹤器程式碼片段](/help/sites-administering/external-providers.md) (Google、WebTrends等)
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
 <!-- Search&Promote is end of life as of September 1, 2022 * [Search&Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote) -->

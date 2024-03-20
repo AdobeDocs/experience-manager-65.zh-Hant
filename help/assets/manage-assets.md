@@ -7,7 +7,8 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '10038'
 ht-degree: 3%
@@ -317,7 +318,7 @@ Photoshop檔案(PSD)檔案最常用於建立影像範本。 上傳PSD檔案時�
 |---|---|---|
 | 自我調整視訊 | | 單一編碼預設集可與任何外觀比例搭配使用，建立視訊以傳送至行動裝置、平板電腦和案頭。 以此預設集編碼的已上傳來源視訊已設定為固定高度。 不過，寬度會自動調整比例，以保留視訊的外觀比例。 <br>最佳實務是使用最適化視訊編碼。 |
 | 單一編碼預設集 | 排序編碼預設集 | 選取 **[!UICONTROL 名稱]** 或 **[!UICONTROL 大小]** 如果您想要依名稱或解析度大小來排序「案頭」、「行動裝置」和「平板電腦」下列出的編碼預設集。 |
-| | 桌面 | 建立MP4檔案，為桌上型電腦提供串流或漸進式視訊體驗。 選取一或多個具有您想要的解析度大小和目標資料速率的外觀比例。 |
+| | 桌上型電腦 | 建立MP4檔案，為桌上型電腦提供串流或漸進式視訊體驗。 選取一或多個具有您想要的解析度大小和目標資料速率的外觀比例。 |
 | | 行動 | 建立MP4檔案，以在iPhone或Android™行動裝置上傳送。 選取一或多個具有您想要的解析度大小和目標資料速率的外觀比例。 |
 | | 平板電腦 | 建立MP4檔案，以在iPad或Android™平板電腦裝置上傳送。 選取一或多個具有您想要的解析度大小和目標資料速率的外觀比例。 |
 

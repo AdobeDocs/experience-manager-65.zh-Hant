@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 43%
@@ -68,14 +69,14 @@ ht-degree: 43%
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
    >
-   不過，您 ***必須*** 不會變更中的任何專案 `/libs` 路徑。
+   >不過，您 ***必須*** 不會變更中的任何專案 `/libs` 路徑。
    >
-   這是因為 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
+   >這是因為 `/libs` 下次升級執行個體時會被覆寫（當您套用hotfix或feature pack時，很可能會被覆寫）。
    >
-   設定和其他變更的建議方法是：
+   >設定和其他變更的建議方法是：
    >
-   1. 重新建立所需專案（即存在於中的專案） `/libs`)下 `/apps`
-   1. 進行任何變更 `/apps`
+   >1. 重新建立所需專案（即存在於中的專案） `/libs`)下 `/apps`
+   >1. 進行任何變更 `/apps`
 
 1. 在 `basic` 上設定 `path` 屬性，以指向基本索引標籤的覆寫 (另請參閱下一個步驟)。例如：
 
@@ -99,7 +100,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
-設定要與即時副本一起使用的頁面屬性時，請參閱 [在頁面屬性上設定MSM鎖定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) 以取得更多詳細資料。
+>設定要與即時副本一起使用的頁面屬性時，請參閱 [在頁面屬性上設定MSM鎖定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) 以取得更多詳細資料。
 
 ## 頁面屬性的設定範例 {#sample-configuration-of-page-properties}
 

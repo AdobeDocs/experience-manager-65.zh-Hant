@@ -7,7 +7,8 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: bc9c864b-8bc3-42b4-ba25-6c5108be4f65
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3545'
 ht-degree: 1%
@@ -392,7 +393,7 @@ Dynamic Media Classic (Scene7)內容瀏覽器可讓您直接在Experience Manage
 >* 在傳統UI中，您也可以搜尋 **Flash** 和 **FXG**. 不支援在觸控最佳化UI中篩選這兩個詞語。
 >
 >* 搜尋視訊時，您會搜尋單一轉譯。 結果會傳回原始轉譯(僅限 &#42;.mp4)和編碼的轉譯。
->* 搜尋最適化視訊集時，您會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子資料夾。
+* 搜尋最適化視訊集時，您會搜尋資料夾和所有子資料夾，但前提是您已新增關鍵字至搜尋。 如果您尚未新增關鍵字，Experience Manager不會搜尋子資料夾。
 >
 
 **發佈狀態**  — 您可以根據發佈狀態來篩選資產：未發佈或已發佈。 如果您未選取任何發佈狀態，Experience Manager預設會搜尋所有發佈狀態。

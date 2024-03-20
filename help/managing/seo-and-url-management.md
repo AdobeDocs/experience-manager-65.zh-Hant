@@ -5,10 +5,11 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager 6.5
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '3677'
-ht-degree: 67%
+source-wordcount: '3524'
+ht-degree: 65%
 
 ---
 
@@ -44,7 +45,7 @@ URL有一些公認的最佳作法。
    * 如果可用，請使用目錄結構來指示資訊架構。
    * 如果無法使用目錄結構，請在 URL 中使用 Sling 選擇器，而非查詢字串。除了可提供SEO值，Sling選擇器也會讓頁面可供Dispatcher進行快取。
 
-* URL越容易透過字面理解越好。在URL中加入關鍵字可提升值。
+* URL越容易透過字面理解越好。 在URL中加入關鍵字可提升值。
 
    * 在網頁上使用選擇器時，建議使用提供語意值的選取器。
    * 如果使用者無法透過字面理解您的 URL，則搜尋引擎也無法。
@@ -73,7 +74,7 @@ URL有一些公認的最佳作法。
 
    * 建議內容作者遵循這項作法。
 
-* 支援在 URL 請求中不區分大小寫。
+* 支援在 URL 要求中不區分大小寫。
 
    * 將 Dispatcher 設定為將所有傳入要求重新寫入為小寫字母。
    * 請訓練內容作者使用小寫字母來建立所有網頁。
@@ -228,7 +229,7 @@ Resource myPage = req.getResource();
 
 * 預設為 `/etc/map`。
 
-您可以在此位置新增對應定義，以便對應傳入請求、重新寫入 AEM 中的網頁 URL，或兩者皆執行。
+您可以在此位置新增對應定義，以便對應傳入要求、重新寫入 AEM 中的網頁 URL，或兩者皆執行。
 
 如要建立對應，則在此位置的 `sling:Mapping` 或 `/http` 之下建立 `/https` 節點。AEM 會根據設定在此節點上的 `sling:match` 和 `sling:internalRedirect` 屬性，將相符 URL 的所有流量重新導向至在 `internalRedirect` 屬性指定的值。
 
@@ -236,7 +237,7 @@ Resource myPage = req.getResource();
 
 以下是此問題發生的例子：
 
-1. 使用者造訪您的網站並請求 `https://www.mydomain.com/my-page.html`
+1. 使用者造訪您的網站並要求 `https://www.mydomain.com/my-page.html`
 1. Dispatcher 將此要求轉發到發佈伺服器。
 1. 發佈伺服器使用 `/etc/map` 將此要求解析到 `/content/my-brand/my-page`，並呈現網頁。
 

@@ -8,7 +8,8 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3246'
 ht-degree: 0%
@@ -426,7 +427,7 @@ GITHUB上的程式碼
 
 >[!NOTE]
 >
->使用時，現在可在UI中輕鬆設定自動建立元件例項 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 和可編輯的範本。 另請參閱 [建立頁面範本](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 以取得定義哪些元件會自動與特定媒體型別相關聯的詳細資訊。
+>使用時，現在可在UI中輕鬆設定自動建立元件例項 [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 和可編輯的範本。 另請參閱 [建立頁面範本](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 以取得定義哪些元件會自動與特定媒體型別相關聯的詳細資訊。
 
 ## 使用AEM Brackets擴充功能 {#using-the-aem-brackets-extension}
 

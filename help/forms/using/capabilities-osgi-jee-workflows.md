@@ -3,10 +3,11 @@ title: OSGi和AEM Forms JEE工作流程中表單中心AEM工作流程的動作�
 description: OSGi和AEM Forms JEE工作流程中表單中心AEM工作流程的動作和功能
 contentOwner: khsingh
 exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 22%
+source-wordcount: '933'
+ht-degree: 20%
 
 ---
 
@@ -120,12 +121,12 @@ OSGi和AEM Forms JEE Workflows (JEE流程管理上的AEM Forms)以表單為中�
   <tr>
    <td>草寫簽名</td>
    <td>支援</td>
-   <td>支援<br />。 </td>
+   <td>支援<br /> </td>
   </tr>
   <tr>
    <td>自訂電子郵件範本</td>
    <td>支援</td>
-   <td>支援<br />。 </td>
+   <td>支援<br /> </td>
   </tr>
   <tr>
    <td>定義任務優先順序</td>
@@ -170,7 +171,7 @@ OSGi和AEM Forms JEE Workflows (JEE流程管理上的AEM Forms)以表單為中�
   <tr>
    <td>將已完成的任務演算為最適化表單或PDF檔案</td>
    <td>支援</td>
-   <td>支援 [4]</td>
+   <td>支援[4]</td>
   </tr>
   <tr>
    <td>與通訊管理整合</td>
@@ -193,7 +194,7 @@ OSGi和AEM Forms JEE Workflows (JEE流程管理上的AEM Forms)以表單為中�
    <td>支援</td>
   </tr>
   <tr>
-   <td>使用者頭像</td>
+   <td>用戶頭像</td>
    <td>支援</td>
    <td>支援</td>
   </tr>

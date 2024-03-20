@@ -7,14 +7,15 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 9acbf61f-73a8-4998-9421-dd933f30ac8a
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 2%
+source-wordcount: '706'
+ht-degree: 1%
 
 ---
 
-# Web 主控台{#web-console}
+# Web 控制台{#web-console}
 
 Adobe Experience Manager (AEM)中的Web主控台是根據 [Apache Felix Web管理主控台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是社群努力實施OSGi R4服務平台，其中包括OSGi架構和標準服務。
 
@@ -157,7 +158,7 @@ Web主控台提供一系列用於維護OSGi套裝的標籤，包括：
 
 * 下拉式功能表：
 
-  **主要 >**
+  **主要>**
 
 * URL；例如：
 

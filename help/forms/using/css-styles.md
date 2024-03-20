@@ -8,7 +8,8 @@ topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 feature: HTML5 Forms
 exl-id: 8cc90ff7-284e-41cd-bfda-7fa09371e270
-source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 2%
@@ -108,7 +109,7 @@ widget元素包含用於與使用者互動的使用者介面元素。 它有三�
    <td>使用者定義的名稱</td>
   </tr>
   <tr>
-   <td>插圖標題</td>
+   <td>輔助字幕</td>
    <td>註解</td>
    <td>不適用</td>
   </tr>
@@ -231,7 +232,7 @@ AEM Forms Designer支援表單中不同型別的欄位，例如「數值欄位�
 | 文字 | text |
 | 影像 | 影像 |
 | 矩形 | 矩形 |
-| Line | 折線圖 |
+| 線條 | 折線圖 |
 
 ## 設定表單其他部分的樣式 {#styling-other-parts-of-the-form}
 

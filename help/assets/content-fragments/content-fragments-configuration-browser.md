@@ -4,7 +4,8 @@ description: 瞭解如何在設定瀏覽器中啟用某些內容片段功能，�
 feature: Content Fragments
 role: User
 exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
-source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 20%
@@ -17,16 +18,16 @@ ht-degree: 20%
 
 ## 為您的執行個體啟用內容片段功能 {#enable-content-fragment-functionality-instance}
 
-在使用內容片段之前，請使用 **設定瀏覽器** 若要啟用下列專案：
+在使用內容片段之前，請先使用 **設定瀏覽器** 若要啟用下列專案：
 
 * **內容片段模型**  — 必要
-* **GraphQL持續查詢**  — 選擇性
+* **GraphQL持續查詢**  — 選填
 
 >[!CAUTION]
 >
 >如果您未啟用 **內容片段模型**：
 >
->* 此 **建立** 選項將不可用於建立模型。
+>* 此 **建立** 選項無法用於建立模型。
 >* 您無法 [選取Sites設定以建立相關的端點](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint).
 
 若要啟用內容片段功能，您必須執行下列動作：

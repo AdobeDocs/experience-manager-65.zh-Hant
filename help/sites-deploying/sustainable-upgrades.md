@@ -8,9 +8,10 @@ topic-tags: upgrading
 docset: aem65
 feature: Upgrading
 exl-id: b777fdca-e7a5-427a-9e86-688dd7cac636
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -59,7 +60,7 @@ AEM一直使用覆蓋和Sling Resource Merger的原則來允許客戶擴充和�
 
 >[!NOTE]
 >
-這些政策僅針對Sling搜尋路徑型機制強制執行。 的其他領域 **/libs** 例如使用者端程式庫可能會標籤為 `Internal`，但仍可與標準clientlib包含搭配使用。 在這些情況下，客戶必須繼續遵守內部分類。
+>這些政策僅針對Sling搜尋路徑型機制強制執行。 的其他領域 **/libs** 例如使用者端程式庫可能會標籤為 `Internal`，但仍可與標準clientlib包含搭配使用。 在這些情況下，客戶必須繼續遵守內部分類。
 
 #### CRXDE Lite內容型別指標 {#crxde-lite-content-type-indicators}
 
@@ -81,9 +82,9 @@ CRXDE Lite中套用的Mixin會顯示標示為的內容節點和樹狀結構 `INT
 
 >[!NOTE]
 >
-自AEM 6.5起，Adobe建議使用模式偵測器來偵測內容存取違規。 模式偵測器報告更詳細，可偵測更多問題，並降低誤報的可能性。
+>自AEM 6.5起，Adobe建議使用模式偵測器來偵測內容存取違規。 模式偵測器報告更詳細，可偵測更多問題，並降低誤報的可能性。
 >
-如需詳細資訊，請參閱 [使用模式偵測器評估升級複雜性](/help/sites-deploying/pattern-detector.md).
+>如需詳細資訊，請參閱 [使用模式偵測器評估升級複雜性](/help/sites-deploying/pattern-detector.md).
 
 AEM 6.5隨附健康情況檢查，如果以與內容分類不一致的方式使用覆蓋或參考的內容，則會提醒客戶。
 

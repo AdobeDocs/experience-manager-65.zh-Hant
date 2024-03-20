@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -36,7 +37,7 @@ Proxy伺服器會作為中繼伺服器，在使用者端與伺服器之間轉送
 
 `java -jar proxy-2.1.jar <host> <remoteport> <localport> [options]`
 
-**參數**
+**引數**
 
 `<host>`
 

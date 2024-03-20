@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin, Architect
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1670'
-ht-degree: 1%
+source-wordcount: '1639'
+ht-degree: 0%
 
 ---
 
@@ -91,7 +92,7 @@ ht-degree: 1%
 記憶體
 
 * `MBean: lava.lang:type=Memory`
-* URL: `/system/console/jmx/java.lang:type=Memory`
+* URL： `/system/console/jmx/java.lang:type=Memory`
 * 執行個體：所有伺服器
 * 警報臨界值：當棧積或非棧積記憶體使用率超過對應最大記憶體的75%時。
 * 警報定義：可能是系統記憶體不足，或是程式碼中有記憶體流失。 分析執行緒傾印以得到定義。
@@ -103,7 +104,7 @@ ht-degree: 1%
 Threads
 
 * MBean： `java.lang:type=Threading`
-* URL: `/system/console/jmx/java.lang:type=Threading`
+* URL： `/system/console/jmx/java.lang:type=Threading`
 * 執行個體：所有伺服器
 * 警報臨界值：當執行緒的數目大於基準的150%時。
 * 警報定義：可能是因為有作用中的失控程式，或是低效的作業耗用大量資源。 分析執行緒傾印以得到定義。
@@ -117,7 +118,7 @@ Threads
 復寫代理
 
 * MBean： `com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
-* URL: `/system/console/jmx/com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
+* URL： `/system/console/jmx/com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
 * 執行個體：一個作者和所有發佈執行個體（適用於排清代理程式）
 * 警報臨界值：當 `QueueBlocked` 是 `true` 或的值 `QueueNumEntries` 大於基準的150%。
 
@@ -143,7 +144,7 @@ Threads
 
 * 系統檢查
    * MBean： `org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
-   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
+   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
    * 執行個體：一個作者，所有發佈伺服器
    * 警報臨界值：當狀態不是「正常」時
    * 警報定義：其中一個度量的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得問題原因的詳細資訊。
@@ -151,7 +152,7 @@ Threads
 * 復寫佇列
 
    * MBean： `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
-   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
+   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
    * 執行個體：一個作者，所有發佈伺服器
    * 警報臨界值：當狀態不是「正常」時
    * 警報定義：其中一個度量的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得造成問題之佇列的詳細資訊。
@@ -159,7 +160,7 @@ Threads
 * 回應效能
 
    * MBean： `org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
-   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
+   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
    * 執行個體：所有伺服器
    * 警示持續時間：當狀態不是「正常」時
    * 警報定義：其中一個度量的狀態為WARN或CRITICAL。 檢查記錄屬性，以取得造成問題之佇列的詳細資訊。
@@ -167,7 +168,7 @@ Threads
 * 查詢效能
 
    * MBean： `org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck`
-   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck`
+   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck`
    * 執行個體：一個作者，所有發佈伺服器
    * 警報臨界值：當狀態不是「正常」時
    * 警報定義：一或多個查詢在系統中執行緩慢。 檢查記錄屬性，以取得關於導致問題的查詢的詳細資訊。
@@ -175,7 +176,7 @@ Threads
 * 作用中組合
 
    * MBean： `org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
-   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
+   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
    * 執行個體：所有伺服器
    * 警報臨界值：當狀態不是「正常」時
    * 警報定義：系統上存在非使用中或未解析的OSGi組合。 檢查記錄屬性，以取得導致問題的套件組合的相關資訊。
@@ -183,7 +184,7 @@ Threads
 * 日誌錯誤
 
    * MBean： `org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
-   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
+   * URL： `/system/console/jmx/org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
    * 執行個體：所有伺服器
    * 警報臨界值：當狀態不是「正常」時
    * 警報定義：記錄檔中有錯誤。 檢查記錄屬性，以取得問題原因的詳細資訊。

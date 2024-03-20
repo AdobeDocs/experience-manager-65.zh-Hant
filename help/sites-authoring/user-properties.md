@@ -7,7 +7,8 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
-source-git-commit: 4b5b3ac41034bd4cc0f359b35cac0515b76ca64e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 5%
@@ -22,7 +23,7 @@ AEM提供您設定帳戶及製作環境某些方面的功能。
 
 首先，存取 [使用者](/help/sites-authoring/user-properties.md#user-settings) 選項來識別。
 
-## 使用者設定 {#user-settings}
+## 用戶設定 {#user-settings}
 
 此 **使用者** 設定對話方塊可讓您存取：
 

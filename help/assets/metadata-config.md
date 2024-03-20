@@ -6,10 +6,11 @@ role: User, Admin
 feature: Metadata
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2000'
-ht-degree: 5%
+source-wordcount: '1978'
+ht-degree: 3%
 
 ---
 
@@ -91,9 +92,9 @@ ht-degree: 5%
 | [!UICONTROL 多值文字] | 欄位標籤， <br> 對應至屬性， <br> 預設值 |
 | [!UICONTROL 數字] | 欄位標籤， <br> 對應至屬性， <br> 預設值 |
 | [!UICONTROL 日期] | 欄位標籤， <br> 對應至屬性， <br> 預設值 |
-| [!UICONTROL 標準標記] | 欄位標籤， <br> 對應至屬性， <br> 預設值， <br> 說明 |
+| [!UICONTROL 標準標籤] | 欄位標籤， <br> 對應至屬性， <br> 預設值， <br> 說明 |
 
-1. 按一下&#x200B;**[!UICONTROL 「完成」]**。中繼資料設定檔會新增至 **[!UICONTROL 中繼資料設定檔]** 頁面。<br>
+1. 按一下 **[!UICONTROL 完成]**. 中繼資料設定檔會新增至 **[!UICONTROL 中繼資料設定檔]** 頁面。<br>
 
    ![中繼資料設定檔頁面新增了中繼資料設定檔](assets/MetadataProfiles-page.png)
 
@@ -152,7 +153,7 @@ To apply a metadata profile globally, follow these steps:
 
 您可以編輯新新增或現有的中繼資料結構表單，其中包括：
 
-* 索引標籤
+* 標籤
 * 索引標籤中的表單專案。
 
 您可以將這些表單專案對應/設定到CRX存放庫中中繼資料節點內的欄位。 您可以將新的索引標籤或表單專案新增到中繼資料結構表單。
@@ -185,12 +186,12 @@ To apply a metadata profile globally, follow these steps:
 | 元件名稱 | 說明 |
 |---|---|
 | [!UICONTROL 區段標題] | 新增區段標題以取得常用元件清單。 |
-| [!UICONTROL 單行文字] | 新增單行文字屬性。它會儲存為字串。 |
-| [!UICONTROL 多值文字] | 新增多值文字屬性。它會儲存為字串陣列。 |
+| [!UICONTROL 單行文字] | 新增單行文字屬性。 它會儲存為字串。 |
+| [!UICONTROL 多值文字] | 新增多值文字屬性。 它會儲存為字串陣列。 |
 | [!UICONTROL 數字] | 新增數字元件。 |
 | [!UICONTROL 日期] | 新增日期元件。 |
-| [!UICONTROL 下拉式] | 新增下拉式清單。 |
-| [!UICONTROL 標準標記] | 新增標記. |
+| [!UICONTROL 下拉式清單] | 新增下拉式清單。 |
+| [!UICONTROL 標準標籤] | 新增標籤。 |
 | [!UICONTROL 隱藏欄位] | 新增隱藏欄位。 儲存資產時，會以POST引數的形式傳送。 |
 
 #### 編輯表單專案 {#editing-form-items}

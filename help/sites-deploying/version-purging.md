@@ -8,9 +8,10 @@ content-type: reference
 docset: aem65
 feature: Configuring
 exl-id: 6f0b1951-bdda-475f-b6c0-bc18de082b7c
-source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -83,7 +84,7 @@ AEM隨附多種機制，可協助您管理存放庫：
 
 例如，在定義要保留的版本數目上限以及要保留的最舊版本時：
 
-* 設定:
+* 設定：
 
    * `maxNumberVersions` = 7
 
@@ -100,7 +101,7 @@ AEM隨附多種機制，可協助您管理存放庫：
 
 例如，在定義要保留的最大AND最小版本數以及要保留的最舊版本時：
 
-* 設定:
+* 設定：
 
    * `maxNumberVersions` = 3
    * `maxAgeDays` = 30

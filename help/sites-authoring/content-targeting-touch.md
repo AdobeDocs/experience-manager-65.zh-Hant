@@ -1,5 +1,5 @@
 ---
-title: 使用定位模式編寫目標內容
+title: 使用定位模式製作目標內容
 description: 目標定位模式和Target元件提供建立體驗內容的工具
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -7,14 +7,15 @@ content-type: reference
 topic-tags: personalization
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '5284'
 ht-degree: 6%
 
 ---
 
-# 使用定位模式編寫目標內容{#authoring-targeted-content-using-targeting-mode}
+# 使用定位模式製作目標內容{#authoring-targeted-content-using-targeting-mode}
 
 使用AEM的鎖定模式製作鎖定內容。 目標定位模式和Target元件提供建立體驗內容的工具：
 

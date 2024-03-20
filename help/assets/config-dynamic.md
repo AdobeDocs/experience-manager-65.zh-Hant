@@ -11,7 +11,8 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: cc219931430ba571745e6ef254a034a689acd1cf
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '7738'
 ht-degree: 1%
@@ -709,7 +710,7 @@ Experience Manager 6.4和更新版本將此預設集儲存在 `/conf/global/sett
  <tbody>
   <tr>
    <td> </td>
-   <td><strong>篩選</strong></td>
+   <td><strong>篩選條件</strong></td>
    <td><strong>Mime型別</strong></td>
    <td><strong>轉譯</strong></td>
   </tr>
@@ -1020,7 +1021,7 @@ Adobe的色彩管理使用ICC （國際色彩聯盟）設定檔，這是由ICC�
   <tr>
    <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html">iccblackpointcompensation</a></td>
    <td>布林值</td>
-   <td>True</td>
+   <td>真</td>
    <td>指定在色彩校正期間是否進行黑點補償。 Adobe建議開啟此設定。</td>
   </tr>
   <tr>

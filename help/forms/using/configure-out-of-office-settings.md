@@ -2,7 +2,8 @@
 title: 設定「外出」設定
 description: 瞭解如何設定Adobe Experience Manager Forms執行個體的「外出」設定。
 exl-id: e4c9d74c-e08d-4675-91f2-4f9fc2f1bcea
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 2%

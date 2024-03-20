@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2694'
 ht-degree: 2%
@@ -231,7 +232,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -270,7 +271,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -309,7 +310,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -348,7 +349,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -387,7 +388,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -410,7 +411,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -433,7 +434,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -487,7 +488,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -730,7 +731,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>

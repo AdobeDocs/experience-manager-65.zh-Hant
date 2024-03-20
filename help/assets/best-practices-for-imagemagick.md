@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools
 exl-id: 6c149d31-1e64-4d29-a32a-58bd69e9fa98
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 1%
+source-wordcount: '680'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +23,7 @@ ImageMagick是用來建立、編輯、撰寫或轉換點陣圖影像的軟體外
 
 >[!NOTE]
 >
->如果您使用 [!DNL Experience Manager] 於 [!DNL Adobe Managed Services] (AMS)，如果您計畫處理許多高解析度PSD或PSB檔案，請聯絡Adobe客戶支援。 [!DNL Experience Manager] 可能無法處理超過 30000 x 23000 像素的極高解析度 PSB 檔案。
+>如果您使用 [!DNL Experience Manager] 於 [!DNL Adobe Managed Services] (AMS)，如果您計畫處理許多高解析度PSD或PSB檔案，請聯絡Adobe客戶支援。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000畫素的高解析度PSB檔案。
 
 ## 安裝ImageMagick {#installing-imagemagick}
 

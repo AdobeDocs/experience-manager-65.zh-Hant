@@ -1,17 +1,18 @@
 ---
-title: 變化 - 編寫片段內容
+title: 變化 - 製作片段內容
 description: 瞭解變數如何可讓您為片段編寫內容，然後根據用途建立該內容的變數，從而使您在AEM中的Headless內容更靈活。
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2309'
 ht-degree: 6%
 
 ---
 
-# 變化 - 編寫片段內容{#variations-authoring-fragment-content}
+# 變化 - 製作片段內容{#variations-authoring-fragment-content}
 
 [變數](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 是AEM內容片段的一項重要功能，因為它們可讓您建立和編輯主要內容的副本，以用於特定頻道和/或情境，使headless內容傳送更靈活。
 
@@ -234,14 +235,14 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
-英文是現成可用的。
+>英文是現成可用的。
 >
-封裝共用提供其他語言作為語言模型封裝：
+>封裝共用提供其他語言作為語言模型封裝：
 >
-* [法文(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
-* [德文(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
-* [義大利文(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
-* [西班牙文(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [法文(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+>* [德文(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+>* [義大利文(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+>* [西班牙文(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 >
 
 1. 選取 **主版** 或必要的變數。
@@ -296,7 +297,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 1. 關閉全熒幕編輯器時，註解仍會反白顯示。 如果選取，會開啟一個對話方塊，以便您進一步編輯註釋。
 
-1. 選取&#x200B;**儲存**。
+1. 選取「**儲存**」。
 
 1. 關閉全熒幕編輯器時，註解仍會反白顯示。 如果選取，會開啟一個對話方塊，以便您進一步編輯註釋。
 
@@ -310,7 +311,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
   >[!NOTE]
   >
-  如果有一段文字套用了多個註解，系統便會提供下拉式選取器。
+  >如果有一段文字套用了多個註解，系統便會提供下拉式選取器。
 
 * 當您刪除套用了註解的整個文字時，註解也會一併刪除。
 
@@ -328,13 +329,13 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
-無法在引用頁面上移動或刪除這些資產，這必須在片段編輯器中完成。
+>無法在引用頁面上移動或刪除這些資產，這必須在片段編輯器中完成。
 >
-不過，資產的格式（例如大小）必須在以下位置完成： [頁面編輯器](/help/sites-authoring/content-fragments.md). 資產在片段編輯器中的呈現方式僅供編寫內容流程之用。
+>不過，資產的格式（例如大小）必須在以下位置完成： [頁面編輯器](/help/sites-authoring/content-fragments.md). 資產在片段編輯器中的呈現方式僅供編寫內容流程之用。
 
 >[!NOTE]
 >
-有多種方法可新增 [影像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) 至片段和/或頁面。
+>有多種方法可新增 [影像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) 至片段和/或頁面。
 
 1. 將游標置於您要新增影像的位置。
 1. 使用「插 **入資產** 」圖示開啟搜尋對話方塊。
@@ -352,10 +353,10 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    >[!CAUTION]
    >
-   如果您在新增為資產至後變更格式：
+   >如果您在新增為資產至後變更格式：
    >
-   * **純文字**：資產從片段中遺失。
-   * **Markdown**：資產不可見，但當您返回時，資產仍會存在 **RTF文字**.
+   >* **純文字**：資產從片段中遺失。
+   >* **Markdown**：資產不可見，但當您返回時，資產仍會存在 **RTF文字**.
 
 ### 將內容片段插入片段 {#inserting-content-fragment-into-your-fragment}
 
@@ -365,17 +366,17 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!NOTE]
 >
-當您符合以下條件時，即可使用此選項： **多行文字** 已設定為 **允許片段參考**.
+>當您符合以下條件時，即可使用此選項： **多行文字** 已設定為 **允許片段參考**.
 
 >[!CAUTION]
 >
-無法在引用頁面上移動或刪除這些資產，這必須在片段編輯器中完成。
+>無法在引用頁面上移動或刪除這些資產，這必須在片段編輯器中完成。
 >
-不過，資產的格式（例如大小）必須在以下位置完成： [頁面編輯器](/help/sites-authoring/content-fragments.md). 資產在片段編輯器中的呈現方式僅供編寫內容流程之用。
+>不過，資產的格式（例如大小）必須在以下位置完成： [頁面編輯器](/help/sites-authoring/content-fragments.md). 資產在片段編輯器中的呈現方式僅供編寫內容流程之用。
 
 >[!NOTE]
 >
-有多種方法可新增 [影像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) 至片段和/或頁面。
+>有多種方法可新增 [影像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) 至片段和/或頁面。
 
 1. 將游標放在您要新增片段的位置。
 1. 使用 **插入內容片段** 圖示以開啟搜尋對話方塊。
@@ -393,10 +394,10 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    >[!CAUTION]
    >
-   如果您在新增對其他片段的參照後變更格式，請變更為：
+   >如果您在新增對其他片段的參照後變更格式，請變更為：
    >
-   * **純文字**：參考會從片段中遺失。
-   * **Markdown**：參考會保留。
+   >* **純文字**：參考會從片段中遺失。
+   >* **Markdown**：參考會保留。
 
 ## 管理變數 {#managing-variations}
 
@@ -414,11 +415,11 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    >[!NOTE]
    >
-   建立變數時，一律為 **主版** 「 」是複製的，而非開啟的變數。
+   >建立變數時，一律為 **主版** 「 」是複製的，而非開啟的變數。
 
    >[!NOTE]
    >
-   當您建立變數時，所有 **標籤** 目前已指派給 **主版** 變數會複製到您的新變數。
+   >當您建立變數時，所有 **標籤** 目前已指派給 **主版** 變數會複製到您的新變數。
 
 ### 編輯變數 {#editing-a-variation}
 
@@ -443,7 +444,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!NOTE]
 >
-這只會影響變數 **標題**.
+>這只會影響變數 **標題**.
 
 ### 刪除變數 {#deleting-a-variation}
 
@@ -457,7 +458,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!NOTE]
 >
-您無法刪除 **主版**.
+>您無法刪除 **主版**.
 
 ### 與主版同步 {#synchronizing-with-master}
 
@@ -467,13 +468,13 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
-同步僅可用於將更改從 *主&#x200B;**版複製**到變化*。
+>同步僅可用於將更改從 *主&#x200B;**版複製**到變化*。
 >
-只同步變數的目前元素。
+>只同步變數的目前元素。
 >
-同步僅適用於 **多行文字** 資料型別。
+>同步僅適用於 **多行文字** 資料型別。
 >
-將變 *更從變更傳輸&#x200B;**至Master*** ，不提供選項。
+>將變 *更從變更傳輸&#x200B;**至Master*** ，不提供選項。
 
 <!-- needs new screenshot for synchronize effect -->
 

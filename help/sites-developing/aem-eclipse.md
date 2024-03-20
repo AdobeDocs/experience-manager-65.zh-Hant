@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 00473769-c447-4966-a71e-117c669e0151
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '746'
 ht-degree: 4%
 
 ---
@@ -127,7 +128,7 @@ Eclipse適用的AEM開發工具隨附的透視功能可讓您完全控制AEM專�
 1. 選取所有已建立的專案。
 1. 按一下滑鼠右鍵。 在功能表中 **Maven**，選取 **更新專案**.
 1. 檢查 **強制更新快照/版本**.
-1. 按一下&#x200B;**「確定」**。Eclipse會嘗試下載必要的相依性。
+1. 按一下 **確定**. Eclipse會嘗試下載必要的相依性。
 
 ### 在JSP檔案中啟用標籤庫自動完成 {#enabling-tag-library-autocompletion-in-jsp-files}
 

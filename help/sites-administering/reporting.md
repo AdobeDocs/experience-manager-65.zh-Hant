@@ -7,10 +7,11 @@ topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: 2a0bf59d-8829-4142-9cb4-dcef90f53ae9
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2777'
-ht-degree: 4%
+source-wordcount: '2782'
+ht-degree: 3%
 
 ---
 
@@ -160,7 +161,7 @@ ht-degree: 4%
 
 當資料收集開始時，您可以選取：
 
-* **時段**
+* **期間**
 
   您可以選取報表資料顯示的開始日期和結束日期。
 
@@ -302,7 +303,7 @@ ht-degree: 4%
 * 元件路徑
 * 元件類型
 * 上次修改時間
-* Page
+* 頁面
 
 這表示您可以看到下列內容：
 
@@ -343,15 +344,15 @@ ht-degree: 4%
 
   要分析的時數（過去）。
 
-  預設: `24`
+  預設： `24`
 
-* **最大值. 結果**
+* **最大 結果**
 
   最大輸出行數。
 
-  預設: `50`
+  預設： `50`
 
-* **最大值. 請求**
+* **最大 請求**
 
   要分析的請求數上限。
 
@@ -377,7 +378,7 @@ ht-degree: 4%
 
 [資訊欄](#selecting-and-positioning-the-data-columns) 關於：
 
-* Page
+* 頁面
 * 時間
 * 類型
 * 使用者
@@ -402,7 +403,7 @@ ht-degree: 4%
 
 * 日期
 * IP 位址
-* Page
+* 頁面
 * 反向連結
 * 類型
 * 使用者識別碼
@@ -491,8 +492,8 @@ ht-degree: 4%
 * 持續時間
 * 發起人
 * 模型
-* 裝載
-* 已開始
+* 總額
+* 開始時間
 * 狀態
 
 這表示您可以：
@@ -542,7 +543,7 @@ ht-degree: 4%
 
 在標準AEM安裝中，報表會預設下列許可權：
 
-* **使用者報表**
+* **使用者報告**
 
   `user administrators`  — 讀取和寫入
 
@@ -558,7 +559,7 @@ ht-degree: 4%
 
   `contributors`  — 讀取和寫入
 
-* **工作流程例項報表**
+* **工作流程例項報告**
 
   `workflow-users`  — 讀取和寫入
 

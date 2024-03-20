@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: e562b289-5d8b-4fa8-ad1c-fff5f807a45e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 3%
+source-wordcount: '862'
+ht-degree: 4%
 
 ---
 
@@ -62,8 +63,8 @@ UI同時適用於行動裝置和桌上型裝置，不過Adobe已決定使用適�
 
 您可以視需要開啟/隱藏左側邊欄，以顯示：
 
-* **時間軸**
-* **參考**
+* **時間表**
+* **引用**
 * **篩選**
 
 預設值為 **僅限內容** （邊欄已隱藏）。

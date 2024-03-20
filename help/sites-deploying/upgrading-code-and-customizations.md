@@ -9,7 +9,8 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: a36a310d-5943-4ff5-8ba9-50eaedda98c5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2138'
 ht-degree: 0%
@@ -186,7 +187,7 @@ ContextHub設定會受升級影響。 您可以找到有關如何復原現有Con
    <td>在發佈層上測試AEM實作和相關程式碼<br /> 透過Dispatcher。 應包含頁面更新的條件和<br /> 快取失效。</td>
   </tr>
   <tr>
-   <td>編寫</td>
+   <td>製作</td>
    <td>在製作層級上測試AEM實作和相關程式碼。 應包括頁面、元件製作和對話方塊。</td>
   </tr>
   <tr>

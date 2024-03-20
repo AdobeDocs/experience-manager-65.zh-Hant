@@ -7,10 +7,11 @@ topic-tags: personalization
 content-type: reference
 feature: Context Hub
 exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '5004'
-ht-degree: 2%
+source-wordcount: '4913'
+ht-degree: 0%
 
 ---
 
@@ -96,7 +97,7 @@ var geoloc = allStores.geolocation
 
 擷取儲存區做為JavaScript物件。
 
-**參數**
+**引數**
 
 * **名稱：** 存放區登入的名稱。
 
@@ -169,7 +170,7 @@ contexthub.Utils.Persistence物件。 如需有關預設值和初始化的資訊
 
 請注意，值可以是物件。
 
-**參數**
+**引數**
 
 * **樹狀結構：** （物件或陣列）要新增至存放區的資料。
 * **選項：** （物件）傳遞至setItem函式之選項的選用物件。 如需詳細資訊，請參閱 `options` 引數： [setItem(key，value，options)](/help/sites-developing/contexthub-api.md#setitem-key-value-options).
@@ -185,7 +186,7 @@ A `boolean` 值：
 
 建立從一個索引鍵到另一個索引鍵的參照。 索引鍵不能參考自身。
 
-**參數**
+**引數**
 
 * **索引鍵：** 參考的金鑰 `anotherKey`.
 
@@ -210,7 +211,7 @@ A `boolean` 值：
 
 傳回與索引鍵相關聯的值。
 
-**參數**
+**引數**
 
 * **索引鍵：** （字串）要傳回值的索引鍵。
 
@@ -222,7 +223,7 @@ A `boolean` 值：
 
 從存放區擷取金鑰。 您可以選擇擷取ContextHub架構內部使用的金鑰。
 
-**參數**
+**引數**
 
 * **includeinternals：** 值 `true` 在結果中包含內部使用的索引鍵。 這些鍵以底線(「_」)字元開頭。 預設值為 `false`。
 
@@ -246,7 +247,7 @@ A `boolean` 值：
 
 從存放區擷取資料樹狀結構。 您可以選擇加入ContextHub架構在內部使用的索引鍵/值組。
 
-**參數**
+**引數**
 
 * `includeInternals:` 值 `true` 在結果中包含內部使用的索引鍵/值配對。 此資料的鍵值以底線(「_」)字元開頭。 預設值為 `false`。
 
@@ -264,7 +265,7 @@ A `boolean` 值：
 
 * storeDataKey為/store/*名稱*，其中 *名稱* 是存放區名稱。
 
-**參數**
+**引數**
 
 * **名稱：** 存放區的名稱。
 * **設定：** 包含組態屬性的物件：
@@ -296,7 +297,7 @@ A `boolean` 值：
 
 或者，您可以防止觸發 `data` 事件。
 
-**參數**
+**引數**
 
 * **索引鍵：** （字串）要移除的金鑰名稱。
 * **選項：** （物件）選項的物件。 下列物件屬性有效：
@@ -314,7 +315,7 @@ A `boolean` 值：
 
 從存放區移除參照。
 
-**參數**
+**引數**
 
 * **索引鍵：** 要移除的索引鍵參考。 此引數對應至 `key` 的引數 `addReference` 函式。
 
@@ -331,7 +332,7 @@ A `boolean` 值：
 
 初始值是在用來具現化存放區物件的設定物件的initialValues屬性中提供。
 
-**參數**
+**引數**
 
 * **keepRemainingData：** （布林值） true值會持續儲存非初始資料。 如果值為false，則會移除初始值以外的所有資料。
 
@@ -339,7 +340,7 @@ A `boolean` 值：
 
 初始值是在用來具現化存放區物件的設定物件的initialValues屬性中提供。
 
-**參數**
+**引數**
 
 * keepRemainingData： （布林值） true值會持續儲存非初始資料。 如果值為false，則會移除初始值以外的所有資料。
 
@@ -347,7 +348,7 @@ A `boolean` 值：
 
 擷取參照的索引鍵。 或者，您可以指定用於解析最佳比對的反複專案數。
 
-**參數**
+**引數**
 
 * **索引鍵：** （字串）要解析參考的索引鍵。 這個 `key` 引數對應至 `key` 的引數 `addReference` 函式。
 
@@ -369,7 +370,7 @@ A `string` 代表參考索引鍵的值。 如果未解析任何參照，則 `key
 
 事件資料包括商店名稱、金鑰、先前的值、新值和動作型別 `set`.
 
-**參數**
+**引數**
 
 * **索引鍵：** （字串）金鑰的名稱。
 * **選項：** （物件）選項的物件。 下列物件屬性有效：
@@ -399,7 +400,7 @@ ContextHub.Store.JSONPStore擴展 [ContextHub.Store.Core](/help/sites-developing
 
 設定連線至此物件所使用JSONP服務的詳細資訊。 您可以更新或取代現有設定。 函式不會傳回任何值。
 
-**參數**
+**引數**
 
 * **serviceConfig：** 包含下列屬性的物件：
 
@@ -410,7 +411,7 @@ ContextHub.Store.JSONPStore擴展 [ContextHub.Store.Core](/help/sites-developing
    * port： (Number)服務的連線埠號碼。
    * secure： （字串或布林值）決定用於服務URL的通訊協定：
 
-      * auto: //
+      * 自動： //
       * true： https://
       * false： https://
 
@@ -440,7 +441,7 @@ ContextHub.Store.JSONPStore擴展 [ContextHub.Store.Core](/help/sites-developing
 * **連線埠：** （號碼）服務的連線埠號碼。
 * **安全：** （字串或布林值）決定用於服務URL的通訊協定：
 
-   * auto: //
+   * 自動： //
    * true： https://
    * false： https://
 
@@ -448,7 +449,7 @@ ContextHub.Store.JSONPStore擴展 [ContextHub.Store.Core](/help/sites-developing
 
 擷取JSONP服務的URL。
 
-**參數**
+**引數**
 
 * **解析：** （布林值）決定是否在URL中包含解析的引數。 值 `true` 解析的引數，以及 `false` 不會。
 
@@ -460,7 +461,7 @@ A `string` 代表服務URL的值。
 
 初始化ContextHub.Store.JSONPStore物件。
 
-**參數**
+**引數**
 
 * **名稱：** （字串）存放區的名稱。
 * **設定：** （物件）包含服務屬性的物件。 JSONPStore物件使用 `service` 物件來建構JSONP服務的URL：
@@ -477,7 +478,7 @@ A `string` 代表服務URL的值。
       * port： (Number)服務的連線埠號碼。
       * secure： （字串或布林值）決定用於服務URL的通訊協定：
 
-         * auto: //
+         * 自動： //
          * true： https://
          * false： https://
 
@@ -490,7 +491,7 @@ A `string` 代表服務URL的值。
 
 查詢完成時觸發就緒事件。 如果未設定JSONP服務URL，則函式不會執行任何動作。
 
-**參數**
+**引數**
 
 * **重新載入：** （布林值） true值會移除快取回應，並強制呼叫JSONP服務。
 
@@ -500,7 +501,7 @@ A `string` 代表服務URL的值。
 
 初始值是在用來具現化存放區物件的設定物件的initialValues屬性中提供。
 
-**參數**
+**引數**
 
 * **keepRemainingData：** （布林值） true值會持續儲存非初始資料。 如果值為false，則會移除初始值以外的所有資料。
 
@@ -530,7 +531,7 @@ ContextHub.Store.SessionStore延伸 [ContextHub.Store.Core](/help/sites-developi
 
 向ContextHub註冊UI模組轉譯器。 註冊轉譯器後，它可用於 [建立使用者介面模組](ch-configuring.md#adding-a-ui-module). 請在以下情況下使用此函式： [擴充ContextHub.UI.BaseModuleRenderer](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types) 以建立自訂UI模組轉譯器。
 
-**參數**
+**引數**
 
 * **模組型別：** （字串） UI模組轉譯器的識別碼。 如果轉譯器已使用指定的值註冊，則在註冊此轉譯器之前會先取消註冊現有的轉譯器。
 * **轉譯器：** （字串）轉譯UI模組的類別名稱。
@@ -554,7 +555,7 @@ ContextHub.UI.registerRenderer('contexthub.browserinfo', new SurferinfoRenderer(
 
 判斷Cookie是否存在。
 
-**參數**
+**引數**
 
 * **索引鍵：** A `String` 包含您正在測試之Cookie的金鑰。
 
@@ -574,7 +575,7 @@ if (ContextHub.Utils.Cookie.exists("name")) {
 
 傳回索引鍵符合篩選器的所有Cookie。
 
-**參數**
+**引數**
 
 * （可選） **篩選：** 比對Cookie金鑰的條件。 若要傳回所有Cookie，請勿指定任何值。 支援的型別如下：
 
@@ -597,7 +598,7 @@ ContextHub.Utils.Cookie.getAllItems([/^cq-authoring/, /^cq-editor/])
 
 傳回Cookie值。
 
-**參數**
+**引數**
 
 * **索引鍵：** 您要取值的Cookie金鑰。
 
@@ -615,7 +616,7 @@ ContextHub.Utils.Cookie.getItem("name");
 
 傳回符合篩選條件的現有Cookie索引鍵陣列。
 
-**參數**
+**引數**
 
 * **篩選：** 比對Cookie金鑰的條件。 支援的型別如下：
 
@@ -638,7 +639,7 @@ ContextHub.Utils.Cookie.getKeys([/^cq-authoring/, /^cq-editor/])
 
 移除Cookie。 若要移除Cookie，此值會設為空字串，而到期日期會設為目前日期之前的日期。
 
-**參數**
+**引數**
 
 * **索引鍵：** A `String` 代表要移除之Cookie索引鍵的值。
 
@@ -658,7 +659,7 @@ ContextHub.Utils.Cookie.vanish([/^cq-authoring/, 'cq-scrollpos']);
 
 建立指定索引鍵和值的Cookie，並將Cookie新增至目前檔案。 您可以選擇指定用來設定Cookie屬性的選項。
 
-**參數**
+**引數**
 
 * **索引鍵：** 包含Cookie金鑰的字串。
 * **值：** 包含Cookie值的字串。
@@ -687,7 +688,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 移除符合指定篩選器的所有Cookie。 Cookie會使用getKeys函式來比對，並使用removeItem函式來移除。
 
-**參數**
+**引數**
 
 * **篩選：** 此 `filter` 要在呼叫中使用的引數 `[getKeys](/help/sites-developing/contexthub-api.md#getkeys-filter)` 函式。
 
@@ -707,7 +708,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 從事件中取消繫結函式。
 
-**參數**
+**引數**
 
 * **名稱：** 此 [事件的名稱](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 您正在解除繫結函式的連結。
 
@@ -721,7 +722,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 將函式繫結至事件。 每次事件發生時都會呼叫函式。 或者，可以為過去發生的事件（在建立繫結之前）呼叫函式。
 
-**參數**
+**引數**
 
 * **名稱：** （字串） [事件的名稱](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 您要將函式繫結到其中。
 
@@ -763,7 +764,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 將函式繫結至事件。 函式只會在第一次發生事件時呼叫一次。 您可以選擇在建立繫結之前，為過去發生的事件呼叫函式。
 
-**參數**
+**引數**
 
 * **名稱：** （字串） [事件的名稱](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 您要將函式繫結到其中。
 
@@ -791,7 +792,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 讓物件繼承另一個物件的屬性和方法。
 
-**參數**
+**引數**
 
 * **子項：** （物件）繼承的物件。
 * **父系：** （物件）定義繼承之屬性和方法的物件。
@@ -806,7 +807,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 將字串值剖析為JSON並將其轉換為Javascript物件。
 
-**參數**
+**引數**
 
 * **資料：** JSON格式的字串值。
 
@@ -830,7 +831,7 @@ Object {
 
 將JavaScript值和物件序列化為JSON格式的字串值。
 
-**參數**
+**引數**
 
 * **資料：** 要序列化的值或物件。 此函式支援布林值、陣列、數字、字串和日期值。
 
@@ -860,7 +861,7 @@ ContextHub.Utils.JSON.stringify({
 
 建立資料物件的復本，並從第二個物件將資料樹新增至該復本。 函式會傳回覆本，而不會修改任何原始物件。 當兩個物件的資料樹包含相同的索引鍵時，第二個物件的值會覆寫第一個物件的值。
 
-**參數**
+**引數**
 
 * **樹狀結構：** 複製的物件。
 * **secondTree：** 與的復本合併的物件 `tree` 物件。
@@ -873,7 +874,7 @@ ContextHub.Utils.JSON.stringify({
 
 建立物件的復本，尋找並移除資料樹狀結構中不含任何值、空值或未定義值的專案，然後傳回覆本。
 
-**參數**
+**引數**
 
 * **樹狀結構：** 要清除的物件。
 
@@ -885,7 +886,7 @@ ContextHub.Utils.JSON.stringify({
 
 從物件擷取索引鍵的值。
 
-**參數**
+**引數**
 
 * **樹狀結構：** 資料物件。
 * **索引鍵：** 您要擷取之值的索引鍵。
@@ -942,7 +943,7 @@ Object {
 
 從物件的資料樹狀結構中擷取所有索引鍵。 您可以選擇只擷取特定鍵的子系鍵。 您也可以選擇指定擷取之索引鍵的排序順序。
 
-**參數**
+**引數**
 
 * **樹狀結構：** 要從中擷取資料樹狀結構索引鍵的物件。
 * **父系：** （選擇性）資料樹狀結構中要擷取子專案索引鍵的專案索引鍵。
@@ -983,7 +984,7 @@ myObject {
 
 建立指定物件的復本，從資料樹狀結構中移除指定的分支，並傳回修改後的復本。
 
-**參數**
+**引數**
 
 * 樹：資料物件。
 * key：要移除的索引鍵。
@@ -1036,7 +1037,7 @@ myObject {
 * 移除字串開頭和結尾的空格。
 * 將結果分割成以斜線分隔的字串陣列。
 
-使用結果陣列建立可用的索引鍵。  **參數**
+使用結果陣列建立可用的索引鍵。  **引數**
 
 * **索引鍵：** 此 `string` 以整理。
 
@@ -1058,7 +1059,7 @@ ContextHub.Utils.JSON.tree.sanitizeKey(key)
 
 將索引鍵/值配對新增至物件復本的資料樹狀結構。 如需資料樹狀結構的相關資訊，請參閱 [持續性](/help/sites-developing/contexthub.md#persistence).
 
-**參數**
+**引數**
 
 * 樹：資料物件。
 * key：與要新增的值產生關聯的索引鍵。 索引鍵是資料樹狀結構中專案的路徑。 此函式呼叫 `ContextHub.Utils.JSON.tree.sanitize` 以在新增金鑰之前對其進行處理。
@@ -1103,7 +1104,7 @@ myObject物件具有下列值：
 
 傳回註冊為候選商店的商店型別。 擷取特定存放區型別或所有存放區型別的已註冊候選者。
 
-**參數**
+**引數**
 
 * **storeType：** （字串）存放區型別的名稱。 請參閱 `storeType` 的引數 [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) 函式。
 
@@ -1115,7 +1116,7 @@ myObject物件具有下列值：
 
 從註冊的候選者中傳回存放區型別。 如果登入了多個相同名稱的存放區型別，此函式會傳回具有最高優先順序的存放區型別。
 
-**參數**
+**引數**
 
 * storeType： （字串）存放區候選的名稱。 請參閱 `storeType` 的引數 [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) 函式。
 
@@ -1137,7 +1138,7 @@ myObject物件具有下列值：
 
 優先順序是指示同名存放區之重要性的數字。 當使用與已登入的候選商店相同的名稱登入候選商店時，會使用具有較高優先順序的候選商店。 註冊存放區候選時，只有當優先順序高於同名已註冊存放區候選時，才會註冊存放區。
 
-**參數**
+**引數**
 
 * **商店：** （物件）要註冊為存放區候選者的存放區物件。
 * **storeType：** （字串）候選商店的名稱。 在建立存放區候選的執行個體時，需要此值。

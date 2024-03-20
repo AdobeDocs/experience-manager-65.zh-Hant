@@ -6,9 +6,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 4282718a-41f1-411a-9cd7-8c470005107d
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -143,4 +144,4 @@ AEM表單可讓您匯出業務行事曆並將其匯入為XML檔案。 您可以�
 
 1. 在管理控制檯中，按一下「服務> Forms工作流程>企業行事曆」。
 1. 選取行事曆。
-1. 按一下刪除。
+1. 按一下「刪除」。

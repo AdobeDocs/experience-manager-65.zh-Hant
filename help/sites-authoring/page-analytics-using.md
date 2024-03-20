@@ -8,7 +8,8 @@ topic-tags: site-features
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 4%
@@ -26,7 +27,7 @@ ht-degree: 4%
 頁面分析資料顯示於 [清單檢視](/help/sites-authoring/basic-handling.md#list-view) Sites主控台的。 當頁面以清單格式顯示時，預設會提供下列欄：
 
 * 頁面檢視
-* 不重複訪客
+* 獨特訪客
 * 頁面逗留時間
 
 每一欄會顯示目前報告期間的值，也會指出值自上一個報告期間以來是否有所增減。 您看到的資料每12小時更新一次。

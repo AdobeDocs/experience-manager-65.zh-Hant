@@ -8,7 +8,8 @@ topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
 feature: HTML5 Forms
 exl-id: 7f9c77c6-447a-407f-ae58-6735176dc99c
-source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 HTML5表單支援XFA Picture子句，用於顯示日期、文字和數值符號的值及格式化值。 支援下列Picture子句運算式：
 
-* category(locale){picture-clause} |類別（地區設定）{picture-clause} |類別（地區設定）{picture-clause}
+* category(locale){picture-clause} | category(locale){picture-clause} | category(locale){picture-clause}
 * category.subcategory{}
 
 >[!NOTE]
@@ -56,7 +57,7 @@ Date Picture子句支援的運算式：
    <td>每月以零填入兩位數(01-31)的天數。<br /> </td>
   </tr>
   <tr>
-   <td>M</td>
+   <td>一</td>
    <td>一年中的1或2位數(1-12)月份。<br /> </td>
   </tr>
   <tr>

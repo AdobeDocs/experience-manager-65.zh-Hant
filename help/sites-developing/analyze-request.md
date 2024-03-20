@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 exl-id: e14a9cda-890f-46b7-9433-1b52eb91eae3
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 2%
@@ -35,7 +36,7 @@ ht-degree: 2%
 
 分析CQ `access.log` 推斷各種資訊並在上產生Markdown輸出 `stdout`.
 
-## 使用狀況 {#usage}
+## 使用情況 {#usage}
 
 `./analyse-access.sh access.log.2013-&ast;`
 

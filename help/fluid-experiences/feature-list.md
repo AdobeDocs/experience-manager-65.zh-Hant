@@ -4,7 +4,8 @@ description: 流動體驗功能清單
 index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager Sites,Experience Manager Assets
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 4%
@@ -53,7 +54,7 @@ AEM Fluid Experiences可與Classic AEM區分開來，因為系統只會處理Hea
 | [體驗片段](/help/sites-authoring/experience-fragments.md) |
 | 結構化內容的HTTP API （讀取） |
 | 結構化內容(CRUD)的HTTP API |
-| [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) |
+| [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) |
 | [Dynamic Media](/help/assets/dynamic-media.md) |
 
 ## 管理和整合功能 {#admin-and-integration-features}

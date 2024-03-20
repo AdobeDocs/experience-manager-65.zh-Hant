@@ -6,7 +6,8 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '2907'
 ht-degree: 1%
@@ -304,9 +305,9 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 1. 導覽至您的目錄。
 1. 選取 **檢視屬性**.
 1. 選取&#x200B;**編輯**。
-1. 選取 **資產** 標籤。
+1. 選取「**資產**」標籤。
 1. 輸入所需的 **產品資產類別**.
-1. 選取 **完成**.
+1. 選取「**完成**」。
 1. [轉出](#rolling-out-a-catalog) 您的變更。
 
 #### 產品主控台 {#products-console}
@@ -315,7 +316,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 1. 選取 **檢視產品資料**.
 1. 選取&#x200B;**編輯**。
 1. 輸入a **預設資產類別**.
-1. 選取 **完成**.
+1. 選取「**完成**」。
 1. [轉出](#rolling-out-a-catalog) 您的變更。
 
 ### 發佈/取消發佈產品資訊 {#publishing-unpublishing-product-information}
@@ -464,7 +465,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 1. 導覽至所需的目錄Blueprint。
 1. 選取 **選取** 按鈕並按一下所需的目錄Blueprint。
-1. 選取 **下一個**.
+1. 選取&#x200B;**「下一步」**。
 
    ![目錄屬性精靈](/help/sites-administering/assets/chlimage_1-100.png)
 

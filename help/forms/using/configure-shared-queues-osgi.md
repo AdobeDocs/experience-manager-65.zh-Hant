@@ -5,7 +5,8 @@ topic-tags: process
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 72cd0594-8b5e-4d14-bc6f-bca26bae50f2
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 1%
@@ -18,7 +19,7 @@ ht-degree: 1%
 
 您也可以與其他使用者共用您的收件匣專案。 一旦其他使用者擁有您收件匣專案的存取權，使用者就可以宣告共用專案並對之採取適當的動作。 同樣地，您可以向其他使用者要求收件匣專案的存取權。
 
-## 先決條件 {#pre-requisites}
+## 必要條件  {#pre-requisites}
 
 登入使用者必須是 `workflow-users` 群組。 使用者只能從登入使用者擁有讀取許可權的使用者或已啟用公開設定檔的使用者共用專案或要求專案存取權。
 

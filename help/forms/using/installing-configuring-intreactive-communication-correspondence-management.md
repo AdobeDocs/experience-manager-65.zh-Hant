@@ -5,7 +5,8 @@ topic-tags: installing
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1383'
 ht-degree: 1%
@@ -46,7 +47,7 @@ AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作�
 
    * **發佈**：透過網際網路或內部網路向公眾提供已發佈內容的AEM執行個體。
 
-* 滿足記憶體要求。 AEM Forms附加包需要：
+* 符合記憶體需求。 AEM Forms附加包需要：
 
    * 15 GB 的臨時空間，供基於 Microsoft® Windows 的安裝使用。
    * UNIX安裝需要6 GB的暫存空間。
@@ -90,7 +91,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 此套件包含AEM 
 1. 選擇 **[!UICONTROL 標題功能表中的可用Adobe Experience Manager]** 。
 1. 在「篩選器」****&#x200B;部分中：
    1. 從解決方案&#x200B;****&#x200B;下拉式清單中選擇&#x200B;**[!UICONTROL Forms]**。
-   2. 選擇包的版本和類型。 您也可以使用 **[!UICONTROL 搜尋下載]** 篩選結果的選項。
+   2. 選擇包的版本和類型。 您也可以使用「 **[!UICONTROL Search下載]** 」選項來篩選結果。
 1. 選取適用於您的作業系統的套件名稱，然後選取 **[!UICONTROL 接受EULA條款]**，並選取 **[!UICONTROL 下載]**.
 1. 打開 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  然後按兩下上傳 **[!UICONTROL 包]** 以上傳包。
 1. 選擇包，然後按兩下安裝&#x200B;****。

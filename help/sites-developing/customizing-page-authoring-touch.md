@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1339'
-ht-degree: 42%
+source-wordcount: '1257'
+ht-degree: 39%
 
 ---
 
@@ -104,7 +105,7 @@ GITHUB上的程式碼
 
 編寫頁面時，使用者通常必須從資源（例如頁面、元件和資產）中選取。 例如，這可採取清單的形式，作者必須從中選取專案。
 
-若要將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。例如，如果將 [`pathbrowser`Granite 元件用於讓使用者可選取特定資源的路徑，則可以透過以下方式篩選顯示的路徑：](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)[](/help/sites-developing/touch-ui-concepts.md#granite-ui)
+若要將清單保持為合理的大小並且和使用案例相關，可以以自訂述詞的形式實作篩選器。例如，如果 [`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) 元件是用來讓使用者選取特定資源的路徑，可依下列方式篩選顯示的路徑：
 
 * 透過實作 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) 介面實作自訂述詞。
 * 指定述詞的名稱，並在使用 `pathbrowser` 時參照該名稱。
@@ -157,7 +158,7 @@ GITHUB上的程式碼
 
 1. 編輯器的其他設定詳細資料可使用 `config` 包含設定和的節點 `plugin` 節點，以包含必要的外掛程式設定詳細資料。
 
-   以下是為影像元件的影像裁切外掛程式定義外觀比例的範例。由於熒幕大小有限的可能性，裁切外觀比例已移至全熒幕編輯器，並且僅能在該處看到。
+   以下範例是為影像元件的影像裁切外掛程式定義外觀比例。 由於熒幕大小有限的可能性，裁切外觀比例已移至全熒幕編輯器，並且僅能在該處看到。
 
    ```xml
    <cq:inplaceEditing
@@ -189,7 +190,7 @@ GITHUB上的程式碼
 
 >[!NOTE]
 >
->如需範例，請參閱:
+>例如，請參閱：
 >`/libs/cq/gui/components/authoring/editors/clientlibs/core/js/editors/editorExample.js`
 
 1. 實作：
@@ -243,7 +244,7 @@ GITHUB上的程式碼
 
 若要在這類啟動上自訂行為，您可以覆蓋「**要求啟動**」工作流程：
 
-1. 在 `/apps` 中，覆蓋 **Sites** 精靈:
+1. 在 `/apps` 覆蓋 **網站** 精靈：
 
    `/libs/wcm/core/content/common/managepublicationwizard`
 

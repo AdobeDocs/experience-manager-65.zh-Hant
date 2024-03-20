@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1882'
 ht-degree: 4%
@@ -154,7 +155,7 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 在所有Author和Publish執行個體上執行下列步驟，以啟動並委派程式庫：
 
 1. 停止基礎AEM執行個體。
-1. 閇啟 `[AEM installation directory]\crx-quickstart\conf\sling.properties` 檔案進行編輯。
+1. 開啟 `[AEM installation directory]\crx-quickstart\conf\sling.properties` 檔案進行編輯。
 
    如果您使用 `[AEM installation directory]\crx-quickstart\bin\start.bat` 若要啟動AEM，然後編輯位於的sling.properties `[AEM_root]\crx-quickstart\`.
 

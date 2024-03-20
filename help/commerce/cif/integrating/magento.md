@@ -3,10 +3,11 @@ title: 使用Commerce integration framework整合AEM和Adobe Commerce
 description: 使用Commerce integration framework (CIF)將AEM與Adobe Commerce緊密整合。 CIF可讓AEM存取Adobe Commerce執行個體，並透過GraphQL與Adobe Commerce通訊。 它也可讓AEM作者使用產品和類別選擇器以及產品主控台，來瀏覽隨選從Adobe Commerce擷取的產品和類別資料。 此外，CIF提供立即可用的店面，可加速商業專案。
 thumbnail: aem-magento-architecture.jpg
 exl-id: f843784c-5ff7-41d1-97c5-13facb8459b2
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 2%
+source-wordcount: '343'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +34,7 @@ CIF支援伺服器端和使用者端通訊模式。
 
 ![AEM CIF核心元件架構](../assets/cif-component-architecture.jpg)
 
-[AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) 遵循非常類似的設計模式和最佳實務作為 [AEM WCM核心元件](https://github.com/adobe/aem-core-wcm-components).
+[AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components) 遵循非常類似的設計模式和最佳實務作為 [AEM WCM核心元件](https://github.com/adobe/aem-core-wcm-components).
 
 在Sling模型中實作用於AEM CIF核心元件的商業邏輯和與Adobe Commerce的後端通訊。 萬一需要自訂此邏輯以滿足專案特定的要求，可以使用Sling模型的委派模式。
 

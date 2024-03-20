@@ -4,7 +4,8 @@ description: 瞭解內容片段模型如何作為AEM中Headless內容的基礎�
 feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2310'
 ht-degree: 5%
@@ -76,9 +77,9 @@ AEM中的內容片段模型為您的定義了內容結構 [內容片段，](/hel
 
         >[!CAUTION]
         >
-        >手動更新屬性時 **屬性名稱** 對於資料型別，名稱必須僅包含A-Z、a-z、0-9以及底線「_」作為特殊字元。
+        手動更新屬性時 **屬性名稱** 對於資料型別，名稱必須僅包含A-Z、a-z、0-9以及底線「_」作為特殊字元。
         >
-        >如果在舊版AEM中建立的模型包含非法字元，請移除或更新這些字元。
+        如果在舊版AEM中建立的模型包含非法字元，請移除或更新這些字元。
 
      例如：
 
@@ -134,7 +135,7 @@ AEM中的內容片段模型為您的定義了內容結構 [內容片段，](/hel
 
      >[!NOTE]
      >
-     >此資料型別僅用於格式設定，AEM GraphQL結構描述會忽略此資料型別。
+     此資料型別僅用於格式設定，AEM GraphQL結構描述會忽略此資料型別。
 
 ## 屬性 {#properties}
 
@@ -147,7 +148,7 @@ AEM中的內容片段模型為您的定義了內容結構 [內容片段，](/hel
 
   >[!CAUTION]
   >
-  >如果在舊版AEM中建立的模型包含非法字元，請移除或更新這些字元。
+  如果在舊版AEM中建立的模型包含非法字元，請移除或更新這些字元。
 
 * **呈現為**
 在片段中實現/轉譯欄位的各種選項。 這通常可讓您定義作者會看到欄位的單一例項，還是允許建立多個例項。
@@ -177,11 +178,11 @@ AEM中的內容片段模型為您的定義了內容結構 [內容片段，](/hel
 
   >[!NOTE]
   >
-  >確保每個語言根的唯一性。
+  確保每個語言根的唯一性。
 
   >[!NOTE]
   >
-  >變數可能具有相同的 *獨特* 值做為相同片段的變數，但與其他片段變數中使用的值不同。
+  變數可能具有相同的 *獨特* 值做為相同片段的變數，但與其他片段變數中使用的值不同。
 
 * 另請參閱 **[內容參考](#content-reference)** 以取得該特定資料型別及其屬性的詳細資訊。
 
@@ -224,18 +225,16 @@ AEM中的內容片段模型為您的定義了內容結構 [內容片段，](/hel
 
      >[!NOTE]
      >
-     >此方法尤其適用於 [搭配GraphQL使用內容片段的Headless內容傳送](/help/assets/content-fragments/content-fragments-graphql.md).
+     此方法尤其適用於 [搭配GraphQL使用內容片段的Headless內容傳送](/help/assets/content-fragments/content-fragments-graphql.md).
    * 它可以設定為一個參考或多個參考（在產生的片段中）。
 
 >[!NOTE]
 >
->AEM對下列專案具有週期性保護：
+AEM對下列專案具有週期性保護：
 >
->* 內容參考
->  這可防止使用者新增對目前片段的引用。 這可能會導致空的片段參考選擇器對話方塊。
+* 內容參考這可防止使用者新增對目前片段的參考。 這可能會導致空的片段參考選擇器對話方塊。
 >
->* GraphQL中的片段參考
->  如果您建立深層查詢，且該查詢傳回多個互相參照的內容片段，則該查詢在第一次出現時會傳回null。
+* GraphQL中的片段參考如果您建立深層查詢，並傳回彼此參照的多個內容片段，則它在第一次出現時會傳回null。
 
 ### 內容參考 {#content-reference}
 
@@ -277,7 +276,7 @@ type CompanyModel {
 
 >[!NOTE]
 >
->以下內容對此特別感興趣： [搭配GraphQL使用內容片段的Headless內容傳送](/help/assets/content-fragments/content-fragments-graphql.md).
+以下內容對此特別感興趣： [搭配GraphQL使用內容片段的Headless內容傳送](/help/assets/content-fragments/content-fragments-graphql.md).
 
 除了標準屬性之外，您還可以定義：
 
@@ -303,9 +302,9 @@ type CompanyModel {
 
 >[!NOTE]
 >
->已建立重複保護機制。 它禁止使用者在片段參考中選取目前的內容片段。 這可能會導致空的片段參考選擇器對話方塊。
+已建立重複保護機制。 它禁止使用者在片段參考中選取目前的內容片段。 這可能會導致空的片段參考選擇器對話方塊。
 >
->GraphQL中也有片段參考的週期性保護。 如果您在兩個互相參照的內容片段間建立深層查詢，則會傳回null。
+GraphQL中也有片段參考的週期性保護。 如果您在兩個互相參照的內容片段間建立深層查詢，則會傳回null。
 
 ## 啟用或停用內容片段模型 {#enabling-disabling-a-content-fragment-model}
 
@@ -354,7 +353,7 @@ type CompanyModel {
 
 >[!NOTE]
 >
->其機制類似於 [允許頁面範本](/help/sites-authoring/templates.md#allowing-a-template-author) 頁面及其子頁面（在頁面的進階屬性中）。
+其機制類似於 [允許頁面範本](/help/sites-authoring/templates.md#allowing-a-template-author) 頁面及其子頁面（在頁面的進階屬性中）。
 
 若要設定 **原則** 的 **允許的內容片段模型**：
 
@@ -389,7 +388,7 @@ type CompanyModel {
 
 >[!CAUTION]
 >
->刪除內容片段模型可能會影響相依片段。
+刪除內容片段模型可能會影響相依片段。
 
 若要刪除內容片段模型：
 
@@ -400,7 +399,7 @@ type CompanyModel {
 
    >[!NOTE]
    >
-   >如果參照模型，則會發出警告。 採取適當的動作。
+   如果參照模型，則會發出警告。 採取適當的動作。
 
 ## 發佈內容片段模型 {#publishing-a-content-fragment-model}
 
@@ -416,7 +415,7 @@ type CompanyModel {
 
    >[!NOTE]
    >
-   >如果您發佈的內容片段尚未發佈模型，選擇清單會指出這一點，模型會與片段一起發佈。
+   如果您發佈的內容片段尚未發佈模型，選擇清單會指出這一點，模型會與片段一起發佈。
 
 ## 取消發佈內容片段模型 {#unpublishing-a-content-fragment-model}
 

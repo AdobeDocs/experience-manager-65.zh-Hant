@@ -5,9 +5,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 exl-id: b598ef47-49ff-4806-8cc7-4394aa068eaa
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -54,7 +55,7 @@ window.addEventListener("FormBridgeInitialized",
 
 **connect(handler， context)** 連線至FormBridge，並在連線完成且表單狀態初始化後執行函式
 
-* **輸入**:
+* **輸入**：
 
    * **處理常式**：連線Form Bridge後要執行的函式
    * **內容**：此物件的前後關聯（這個） *處理常式* 函式已設定。
@@ -64,7 +65,7 @@ window.addEventListener("FormBridgeInitialized",
 
 **getdataxml(options)** 以XML格式傳回目前的表單資料
 
-* **輸入:**
+* **輸入：**
 
    * **選項：** 包含下列屬性的JavaScript物件：
 
@@ -79,7 +80,7 @@ window.addEventListener("FormBridgeInitialized",
 
 **registerConfig(configName， config)** 向FormBridge註冊使用者/入口網站的特定設定。 這些設定會覆寫預設設定。 支援的設定會在設定區段中指定。
 
-* **輸入:**
+* **輸入：**
 
    * **configName：** 要覆寫的設定名稱
 
@@ -124,7 +125,7 @@ window.addEventListener("FormBridgeInitialized",
 
 **hideFields(fieldArray)** 隱藏fieldArray中提供Som運算式的欄位。 將指定欄位的presence屬性設定為隱藏
 
-* **輸入:**
+* **輸入：**
 
    * **fieldArray：** 要隱藏之欄位的Som運算式陣列
 
@@ -133,7 +134,7 @@ window.addEventListener("FormBridgeInitialized",
 
 **showFields(fieldArray)** 顯示其Som運算式在fieldArray中提供的欄位。 將所提供欄位的presence屬性設定為可見
 
-* **輸入:**
+* **輸入：**
 
    * **fieldArray：** 要顯示之欄位的Som運算式陣列
 
@@ -155,7 +156,7 @@ window.addEventListener("FormBridgeInitialized",
 
 **restoreFormState(options)** 從選項物件中提供的JSON狀態還原表單狀態。 狀態已套用，並在作業完成後呼叫成功或錯誤處理常式
 
-* **輸入:**
+* **輸入：**
 
    * **選項：** 包含下列屬性的JavaScript物件：
 
@@ -175,7 +176,7 @@ window.addEventListener("FormBridgeInitialized",
 
 **setFieldValue (som， value)** 設定指定Som運算式的欄位值
 
-* **輸入:**
+* **輸入：**
 
    * **som：** 包含欄位Som運算式的陣列。 用來設定欄位值的som運算式。
    * **值：** 陣列包含對應至中提供的Som運算式的值 **som**&#x200B;陣列。 如果值的資料型別與fieldType不同，則不會修改值。
@@ -205,7 +206,7 @@ if(a.errors) {
 
 **getFieldProperties(som， property)** 擷取Som運算式中所指定欄位之指定屬性的值清單
 
-* **輸入:**
+* **輸入：**
 
    * **som：** 包含欄位Som運算式的陣列
    * **屬性**：需要其值的屬性名稱
@@ -216,7 +217,7 @@ if(a.errors) {
 
 **setFieldProperties（som，屬性，值）** 為Som運算式中指定的所有欄位設定給定屬性的值
 
-* **輸入:**
+* **輸入：**
 
    * **som：** 包含必須設定其值的欄位之Som運算式的陣列
    * **屬性**：必須設定值的屬性

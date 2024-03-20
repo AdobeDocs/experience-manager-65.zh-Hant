@@ -4,7 +4,9 @@ description: 最適化Forms提供一種機制，可建立在任何最適化表�
 topic-tags: author
 keywords: 新增最適化表單片段， 最適化表單片段， 建立表單片段， 新增片段至最適化表單， 管理片段
 feature: Adaptive Forms, Core Components
-source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
+exl-id: 4a1ba259-8eb5-408f-8ee7-4868f98cca03
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1840'
 ht-degree: 3%

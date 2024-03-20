@@ -4,9 +4,10 @@ description: 瞭解如何識別需要在Adobe Experience Manager中翻譯的內�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 8ca7bbcc-413a-49a8-a836-7083a9cadda1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1158'
 ht-degree: 2%
 
 ---
@@ -32,7 +33,7 @@ ht-degree: 2%
 規則包含下列資訊：
 
 * 規則套用的節點路徑。 此規則也會套用至節點的子代。
-* 包含要翻譯之內容的節點屬性名稱。 該屬性可專屬於特定資源類型或所有資源類型.
+* 包含要翻譯之內容的節點屬性名稱。 屬性可特定於特定資源型別或所有資源型別。
 
 例如，您可以建立規則來轉譯作者新增至您頁面上所有AEM Foundation文字元件的內容。 此規則可識別 `/content` 節點和 `text` 的屬性 `foundation/components/text` 元件。
 
@@ -152,7 +153,7 @@ translation_rules.xml檔案包含 `nodelist` 具有多個子項的元素 `node` 
 
    ![chlimage_1-55](assets/chlimage_1-55.jpeg)
 
-1. 選取 **翻譯設定**.
+1. 選取「**翻譯設定**」。
 
    ![chlimage_1-56](assets/chlimage_1-56.jpeg)
 

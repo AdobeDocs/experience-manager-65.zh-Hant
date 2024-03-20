@@ -8,7 +8,8 @@ content-type: reference
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2672'
 ht-degree: 3%
@@ -55,7 +56,7 @@ ht-degree: 3%
   <tr>
    <th>名稱</th>
    <th>說明</th>
-   <th>觸發器</th>
+   <th>觸發程序</th>
    <th>同步化動作<br /> <br /> 另請參閱 <a href="#installed-synchronization-actions">安裝的同步化動作</a></th>
   </tr>
   <tr>

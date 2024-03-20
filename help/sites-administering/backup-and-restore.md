@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2282'
+source-wordcount: '2314'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ ht-degree: 0%
 
 如需詳細資訊，請參閱 [封裝備份](/help/sites-administering/backup-and-restore.md#package-backup) 底下。
 
-## 時間 {#timing}
+## 時程 {#timing}
 
 請勿與資料存放區垃圾收藏集並行執行備份，因為這樣可能會損害兩個流程的結果。
 

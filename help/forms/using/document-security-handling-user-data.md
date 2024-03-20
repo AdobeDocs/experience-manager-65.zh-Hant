@@ -1,18 +1,19 @@
 ---
-title: Document Security |處理使用者資料
+title: Document Security | 處理使用者資料
 description: 瞭解AEM Forms Document Security如何讓您管理使用者資料和資料儲存，以及存取、刪除和匯出使用者資料。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin
 exl-id: 00c01a12-1180-4f35-9179-461bf177c787
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '923'
 ht-degree: 0%
 
 ---
 
-# Document Security |處理使用者資料 {#document-security-handling-user-data}
+# Document Security | 處理使用者資料 {#document-security-handling-user-data}
 
 AEM Forms document security可讓您建立、儲存及套用預先定義的安全性設定至您的檔案。 可確保只有授權的使用者才能使用檔案。 您可以使用原則來保護檔案。 原則是包含安全性設定和授權使用者清單的資訊集合。 您可以將原則套用至一或多個檔案，並授權新增至AEM Forms JEE使用者管理中的使用者。
 
@@ -123,7 +124,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
 >[!NOTE]
 >
-若要從匯出資料 `EdcAuditEntity` 表格，使用 [EventManager.exportEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) 需要的API [EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) 作為引數，匯出稽核資料，根據 `principalId`， `policyId`，或 `licenseId`.
+>若要從匯出資料 `EdcAuditEntity` 表格，使用 [EventManager.exportEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) 需要的API [EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) 作為引數，匯出稽核資料，根據 `principalId`， `policyId`，或 `licenseId`.
 
 若要取得系統中使用者的完整資料，您必須存取並匯出使用者管理資料庫中的資料。 如需詳細資訊，請參閱 [Forms使用者管理：處理使用者資料](/help/forms/using/user-management-handling-user-data.md).
 
@@ -148,7 +149,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
    >[!NOTE]
    >
-   若要刪除中的資料 `EdcAuditEntity` 表格，使用 [EventManager.deleteEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) 需要的API [EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) 作為刪除稽核資料的引數，根據 `principalId`， `policyId`，或 `licenseId`.
+   >若要刪除中的資料 `EdcAuditEntity` 表格，使用 [EventManager.deleteEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) 需要的API [EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) 作為刪除稽核資料的引數，根據 `principalId`， `policyId`，或 `licenseId`.
 
 1. 使用中及封存的原則XML檔案儲存在 `EdcPolicyXmlEntity` 和 `EdcPolicyArchiveEntity` 資料庫表格。 若要從這些表格中刪除使用者的資料，請執行下列動作：
 
@@ -158,7 +159,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
    >[!NOTE]
    >
-   移除內的完整blob `Principal` 主體ID或原則XML的標籤可能已損毀或無法使用。
+   >移除內的完整blob `Principal` 主體ID或原則XML的標籤可能已損毀或無法使用。
 
    ```xml
    <ns2:Principal PrincipalNameType="USER">
@@ -205,7 +206,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
    >[!NOTE]
    >
-   管理員可以搜尋、存取和刪除使用者資料，這些資料來自其他使用者的個人原則。 **[!UICONTROL 「服務」>「Document Security」>「我的原則」]** 使用管理主控台。
+   >管理員可以搜尋、存取和刪除使用者資料，這些資料來自其他使用者的個人原則。 **[!UICONTROL 「服務」>「Document Security」>「我的原則」]** 使用管理主控台。
 
-1. 從使用者管理資料庫刪除主體ID的資料。 如需詳細步驟，請參閱 [Forms使用者管理 |處理使用者資料](/help/forms/using/user-management-handling-user-data.md).
+1. 從使用者管理資料庫刪除主體ID的資料。 如需詳細步驟，請參閱 [Forms使用者管理 | 處理使用者資料](/help/forms/using/user-management-handling-user-data.md).
 1. 啟動AEM Forms伺服器。

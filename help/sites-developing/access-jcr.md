@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
-source-git-commit: ff9d054d0b08f5f98f5edb63975a0dbc8370d42f
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%
@@ -23,11 +24,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-若要使用JCR API，請新增 `jackrabbit-standalone-2.4.0.jar` 檔案至您的Java™應用程式的類別路徑。 您可以從Java™ JCR API網頁取得此JAR檔案，網址為 [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
+>若要使用JCR API，請新增 `jackrabbit-standalone-2.4.0.jar` 檔案至您的Java™應用程式的類別路徑。 您可以從Java™ JCR API網頁取得此JAR檔案，網址為 [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
 
 >[!NOTE]
 >
-若要瞭解如何使用JCR查詢API查詢Adobe CQ JCR，請參閱 [使用JCR API查詢Adobe Experience Manager資料](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
+>若要瞭解如何使用JCR查詢API查詢Adobe CQ JCR，請參閱 [使用JCR API查詢Adobe Experience Manager資料](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
 
 ## 建立存放庫執行個體 {#create-a-repository-instance}
 

@@ -2,10 +2,11 @@
 title: AEM Content and Commerce 2020年發行說明
 description: Adobe Experience Manager Content and Commerce 2020年發行說明。
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '1352'
-ht-degree: 11%
+source-wordcount: '1257'
+ht-degree: 8%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 11%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.6.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF核心元件 | 1.6.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Core Components | 1.6.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2020.12.01 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-november}
@@ -38,14 +39,14 @@ ht-degree: 11%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.5.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF核心元件 | 1.5.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Core Components | 1.5.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2020.10.27 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-october}
 
 * 已新增類別輪播元件，讓業務使用者可將此元件拖放至AEM內容頁面，以透過商業資料擴充內容頁面。
 
-* 已擴充的CIF核心元件可透過傳送商務資料來將Adobe使用者端資料層水合化。 Adobe使用者端資料層是收集資料並將資料通訊至Digital Analytics和報表伺服器的標準化方法。 如需詳細資訊，請參閱 [Adobe使用者端資料層](https://github.com/adobe/adobe-client-data-layer/wiki).
+* CIF核心元件已擴充為透過傳送商務資料將Adobe使用者端資料層水合化。 Adobe使用者端資料層是收集資料並將資料通訊至Digital Analytics和報表伺服器的標準化方法。 如需詳細資訊，請參閱 [Adobe使用者端資料層](https://github.com/adobe/adobe-client-data-layer/wiki).
 
 * 產品詳細資料和產品清單頁面已擴充，可自動填入Adobe Commerce管理UI中設定的SEO中繼資料（例如標題、中繼說明、中繼關鍵字）
 
@@ -56,7 +57,7 @@ ht-degree: 11%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.4.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF核心元件 | 1.4.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Core Components | 1.4.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2020.10.2 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-september}
@@ -82,14 +83,14 @@ ht-degree: 11%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.3.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF核心元件 | 1.3.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Core Components | 1.3.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2020.9.2 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-august}
 
 * 已新增階層連結元件以支援內容和商務頁面。
 
-* 在頁面屬性上新增了Commerce索引標籤，以顯示登陸頁面和體驗片段的CIF屬性。
+* 在頁面屬性上新增了Commerce索引標籤，以公開登陸頁面和體驗片段的CIF屬性。
 
 * 已改善Searchbar元件，以支援顯示預留位置文字的選項
 
@@ -106,7 +107,7 @@ ht-degree: 11%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.2.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF核心元件 | 1.2.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Core Components | 1.2.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venia參考網站 | 2020.8.14 | [發行說明](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-july}
@@ -132,7 +133,7 @@ ht-degree: 11%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.1.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF核心元件 | 1.1.1 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Core Components | 1.1.1 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.11.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### 新增功能 {#what-is-new-june}
@@ -160,7 +161,7 @@ ht-degree: 11%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 1.0.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF核心元件 | 1.0.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Core Components | 1.0.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.11.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### 新增功能 {#what-is-new-may}
@@ -184,7 +185,7 @@ ht-degree: 11%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 0.10.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF核心元件 | 0.10.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Core Components | 0.10.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.10.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### 新增功能 {#what-is-new-april}
@@ -208,7 +209,7 @@ ht-degree: 11%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 0.9.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF核心元件 | 0.9.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Core Components | 0.9.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.9.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### 新增功能 {#what-is-new-february}
@@ -234,7 +235,7 @@ ht-degree: 11%
 | GitHub | 版本 | 詳細的發行說明 |
 |:-------|:-----:|---------------------:|
 | CIF聯結器 | 0.8.0 | [發行說明](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIF核心元件 | 0.8.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Core Components | 0.8.0 | [發行說明](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF原型 | 0.7.0 | [發行說明](https://github.com/adobe/aem-cif-project-archetype/releases) |
 
 ### 新增功能 {#what-is-new-january}

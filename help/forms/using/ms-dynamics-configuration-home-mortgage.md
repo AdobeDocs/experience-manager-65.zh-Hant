@@ -4,7 +4,8 @@ description: 瞭解如何透過最適化表單針對We.Finance參考網站的住
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: develop, Configuration
 exl-id: 2ac37dc5-d88d-4f98-8576-cd2ca6f0ea3a
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -47,7 +48,7 @@ AEM Forms提供雲端服務，將Dynamics 365與整合 [Forms資料整合](/help
 
    ![selectassetpath](assets/selectassetpath.png)
 
-1. 選取 **完成**.
+1. 選取「**完成**」。
 1. 發佈已編輯的頁面。
 
    >[!NOTE]

@@ -9,7 +9,8 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2004'
 ht-degree: 9%
@@ -80,7 +81,7 @@ ht-degree: 9%
 
 1. [將URL連結至您的網頁應用程式](/help/assets/linking-urls-to-yourwebapplication.md) 或 [內嵌視訊或影像檢視器](/help/assets/embed-code.md).
 
-   Adobe Experience Manager資產會為迴轉集建立URL呼叫，並在您發佈迴轉集後啟用。 您可以在預覽資產時複製這些URL。 或者，您也可以將它們內嵌在您的網站上。
+   Adobe Experience Manager Assets會為迴轉集建立URL呼叫，並在您發佈迴轉集後啟用。 您可以在預覽資產時複製這些URL。 或者，您也可以將它們內嵌在您的網站上。
 
    選取「回轉集」，然後在左側導軌下拉式選單中選取「檢 **[!UICONTROL 視器]**」。
 

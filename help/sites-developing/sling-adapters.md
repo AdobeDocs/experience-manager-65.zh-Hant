@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 6465e2c4-28e5-4fc8-8cca-7b632f10ba5a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2150'
-ht-degree: 12%
+source-wordcount: '1317'
+ht-degree: 4%
 
 ---
 
@@ -100,7 +101,7 @@ Node node = resource.adaptTo(Node.class);
    <td>如果這是JCR節點型資源（或其他支援值的資源對應），則傳回屬性的對應</td>
   </tr>
   <tr>
-   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a></td>
+   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html">值圖</a></td>
    <td>如果這是JCR節點型資源（或其他支援值的資源對應），則傳回方便使用的屬性對應。 也可使用（更簡單）達成<br /> <code><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ResourceUtil.html">ResourceUtil.getValueMap(Resource)</a></code> （處理null大小寫等）</td>
   </tr>
   <tr>
@@ -140,7 +141,7 @@ Node node = resource.adaptTo(Node.class);
    <td>如果這是JCR節點型資源</td>
   </tr>
   <tr>
-   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/Page.html">Page</a></td>
+   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/Page.html">頁面</a></td>
    <td>如果這是JCR節點型資源，且節點為 <code>cq:Page</code> (或 <code>cq:PseudoPage</code>)</td>
   </tr>
   <tr>
@@ -227,7 +228,7 @@ Node node = resource.adaptTo(Node.class);
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/designer/Designer.html">Designer</a></td>
+   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/designer/Designer.html">設計工具</a></td>
    <td> </td>
   </tr>
   <tr>
@@ -244,7 +245,7 @@ Node node = resource.adaptTo(Node.class);
    </td>
   </tr>
   <tr>
-   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">可授權項目</a> </td>
+   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">可授權</a> </td>
    <td>目前使用者</td>
   </tr>
   <tr>
@@ -315,7 +316,7 @@ Node node = resource.adaptTo(Node.class);
 <table>
  <tbody>
   <tr>
-   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html">Resource</a><a href="https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html"><br /> </a></td>
+   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html">資源</a><a href="https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html"><br /> </a></td>
    <td>範本的資源</td>
   </tr>
   <tr>

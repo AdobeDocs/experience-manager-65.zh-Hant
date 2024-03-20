@@ -4,7 +4,9 @@ description: 瞭解如何使用Adobe Experience Manager Assets產生各種格式
 contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+feature: Video
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 1%
@@ -41,4 +43,4 @@ Experience Manager Assets在使用者端提供這些轉譯的播放支援。
 >
 >Microsoft® Internet Explorer 11上的OGG和WAV檔案無法播放音訊。 錯誤 `Invalid Source` 會在副檔名為OGG或WAV的資產詳細資訊頁面上顯示。
 >
-在MS® Edge和iPad上，OGG檔案不會播放並引發不支援的格式錯誤。
+>在MS® Edge和iPad上，OGG檔案不會播放並引發不支援的格式錯誤。

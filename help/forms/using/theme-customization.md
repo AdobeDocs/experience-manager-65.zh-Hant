@@ -6,7 +6,8 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 exl-id: 9b8c5933-b783-48f9-b463-15a01e06ee98
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 4%
@@ -35,7 +36,7 @@ ht-degree: 4%
    * 在Eclipse中，導覽至 **資產> www > wsmobile > js >執行階段>範本** 資料夾。
    * 在Visual Studio中，導覽至 **MWSWindows > www > wsmobile > js > runtime >範本** 資料夾。
 
-1. 閇啟 `template.html` 檔案進行編輯。
+1. 開啟 `template.html` 檔案進行編輯。
 1. 找出下列字串：
 
    ```jsp
@@ -74,7 +75,7 @@ ht-degree: 4%
    * 在Eclipse中，導覽至 **資產> www > wsmobile > css**.
    * 在Visual Studio中，瀏覽至 **MWSWindows > www > wsmobile > css**.
 
-1. 閇啟 `_style.css` 檔案進行編輯。
+1. 開啟 `_style.css` 檔案進行編輯。
 1. 背景影像，變更 `#323232` 至 `#fff`.
 1. 儲存變更並關閉 `_style.css` 檔案。
 1. 開啟AEM Forms應用程式

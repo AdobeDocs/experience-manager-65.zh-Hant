@@ -4,10 +4,11 @@ description: 瞭解如何使用Assets主控台來管理您的AEM內容片段，�
 feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 9%
+source-wordcount: '1712'
+ht-degree: 8%
 
 ---
 
@@ -68,11 +69,11 @@ ht-degree: 9%
 
         片段標題。
 
-        必要.
+        強制。
 
       * **說明**
 
-      * **標記**
+      * **標籤**
 
    * **進階**
 
@@ -103,7 +104,7 @@ ht-degree: 9%
    * 將片段儲存為ZIP檔案；您可以定義是否包含元素、變數、中繼資料。
 
 * **建立**
-* **結帳**
+* **簽出**
 * **屬性**
 
    * 可讓您檢視和/或編輯片段的中繼資料。
@@ -112,7 +113,7 @@ ht-degree: 9%
 
    * 可讓您 [開啟片段以編輯內容](/help/assets/content-fragments/content-fragments-variations.md) 及其元素、變數、關聯內容和中繼資料。
 
-* **管理標記**
+* **管理標籤**
 * **至集合**
 * **複製** (和 **貼上**)
 * **移動**
@@ -299,16 +300,16 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 >[!NOTE]
 >
-註解包括：
+>註解包括：
 >
-* 所有資產的標準功能
-* 在時間軸中製作
-* 與片段資產相關
+>* 所有資產的標準功能
+>* 在時間軸中製作
+>* 與片段資產相關
 >
-註解（適用於內容片段）包括：
+>註解（適用於內容片段）包括：
 >
-* 在片段編輯器中輸入
-* 特定於片段中選取的文字區段
+>* 在片段編輯器中輸入
+>* 特定於片段中選取的文字區段
 >
 
 例如：
@@ -339,7 +340,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 >[!NOTE]
 >
-比較片段時無法編輯片段內容。
+>比較片段時無法編輯片段內容。
 
 ![比較](assets/cfm-managing-06.png)
 
@@ -357,9 +358,9 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 >[!CAUTION]
 >
-如果您的片段以模型為基礎，則您應確保 [模型已發佈](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
+>如果您的片段以模型為基礎，則您應確保 [模型已發佈](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
 >
-如果您發佈的內容片段尚未發佈模式，選擇清單會指出這一點，模式會與片段一起發佈。
+>如果您發佈的內容片段尚未發佈模式，選擇清單會指出這一點，模式會與片段一起發佈。
 
 必須發佈內容片段才能在發佈環境中使用。 它們可以發佈：
 
@@ -369,7 +370,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 >[!CAUTION]
 >
-片段發佈和/或參考後，當作者再次開啟片段進行編輯時，AEM會顯示警告。 這是為了警告，片段的變更也會影響參照的頁面。
+>片段發佈和/或參考後，當作者再次開啟片段進行編輯時，AEM會顯示警告。 這是為了警告，片段的變更也會影響參照的頁面。
 
 ## 刪除片段 {#deleting-a-fragment}
 
@@ -380,11 +381,11 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
    >[!NOTE]
    >
-   此 **刪除** 動作無法當作快速動作使用。
+   >此 **刪除** 動作無法當作快速動作使用。
 
 3. 選取 **刪除** 工具列中的。
 4. 確認 **刪除** 動作。
 
    >[!CAUTION]
    >
-   如果片段已在頁面中參考，您會看到警告訊息，並需要確認您要繼續執行強制刪 **除**。片段及其內容片段元件將會從任何內容頁面中刪除。
+   >如果片段已在頁面中參考，您會看到警告訊息，並需要確認您要繼續執行強制刪 **除**。片段及其內容片段元件將會從任何內容頁面中刪除。

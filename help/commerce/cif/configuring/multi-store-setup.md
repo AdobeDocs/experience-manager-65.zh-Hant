@@ -7,16 +7,17 @@ activity: setup
 audience: administrator
 feature: Commerce Integration Framework
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '369'
 ht-degree: 2%
 
 ---
 
 # Commerce多商店設定 {#multi-store}
 
-AEM CIF核心元件可用於多個AEM網站結構，而基礎的GraphQL使用者端實作可連線至不同的Adobe Commerce存放區/存放區檢視。 如此一來，專案便可實作複雜的多商店/多網站設定。
+AEM CIF核心元件可用於多個AEM網站結構，而基礎GraphQL使用者端實作可連線至不同的Adobe Commerce存放區/存放區檢視。 如此一來，專案便可實作複雜的多商店/多網站設定。
 
 逐步解說影片，詳述將多個Adobe Commerce商店檢視與Adobe Experience Manager Sites整合的選項。
 

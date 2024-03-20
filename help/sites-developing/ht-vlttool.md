@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2687'
 ht-degree: 1%
@@ -526,7 +527,7 @@ commit -v|-q|--force|-N <file1> [<file2> ...]
 | `-N (--non-recursive)` | 在單一目錄中運作 |
 | `<file> [<file> ...]` | 要提交的檔案或目錄 |
 
-### 回復 {#revert}
+### 還原 {#revert}
 
 將工作復本檔案還原為原始狀態，並復原大部分的本機編輯。
 

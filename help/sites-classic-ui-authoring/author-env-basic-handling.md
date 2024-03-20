@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 4%
+source-wordcount: '1161'
+ht-degree: 3%
 
 ---
 
@@ -129,13 +130,13 @@ ht-degree: 4%
 >
 >設定屬性的值：
 >`treeAutoExpandMax`
->於:
+>於：
 >`/apps/wcm/core/content/siteadmin`
 >
 >或是全域佈景主題：
 >設定下列專案的值：
 >`TREE_AUTOEXPAND_MAX`
->in:
+>在：
 >`/apps/cq/ui/widgets/themes/default/widgets/wcm/SiteAdmin.js`
 >
 >另請參閱 [CQ Widget API中的網站管理員](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.SiteAdmin) 以取得更多詳細資料。
@@ -171,7 +172,7 @@ ht-degree: 4%
    <td>指出頁面是否已發佈，並提供發佈日期和時間。</td>
   </tr>
   <tr>
-   <td>修改時間</td>
+   <td>已修改</td>
    <td>指出頁面是否已修改，並提供修改日期和時間。 若要儲存任何修改，您必須啟動頁面。</td>
   </tr>
   <tr>
@@ -211,14 +212,14 @@ ht-degree: 4%
 
 中頁面旁的顏色 **已發佈** 和 **已修改** 欄指示發佈狀態：
 
-| **欄** | **彩色** | **說明** |
+| **欄** | **顏色** | **說明** |
 |---|---|---|
 | 已發佈 | 綠色 | 發佈成功。 內容已發佈。 |
 | 已發佈 | 黃色 | 正在等候發佈。 系統尚未收到發佈的確認。 |
-| 已發佈 | 紅色 | 發行失敗. 未與發佈執行個體建立連線。 這也表示內容已停用。 |
-| 已發佈 | *blank* | 此頁面未曾發佈。 |
-| 修改時間 | 藍色 | 自上次發佈後，頁面已修改。 |
-| 修改時間 | *blank* | 此頁面從未修改過，或自上次發佈後從未修改過。 |
+| 已發佈 | 紅色 | 發佈失敗。 未與發佈執行個體建立連線。 這也表示內容已停用。 |
+| 已發佈 | *空白* | 此頁面未曾發佈。 |
+| 已修改 | 藍色 | 自上次發佈後，頁面已修改。 |
+| 已修改 | *空白* | 此頁面從未修改過，或自上次發佈後從未修改過。 |
 
 ## 內容功能表 {#context-menus}
 

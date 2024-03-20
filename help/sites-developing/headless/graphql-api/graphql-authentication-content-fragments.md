@@ -1,22 +1,24 @@
 ---
 title: 對內容片段的遠端Adobe Experience Manager GraphQL查詢的驗證
-description: 瞭解遠端Adobe Experience Manager GraphQL查詢所需的驗證，以確保Headless內容傳送的安全。
+description: 了解必須對遠程 Adobe Experience Manager GraphQL 查詢執行的驗證，以確保 Headless 內容傳遞的安全。
 feature: Content Fragments,GraphQL API
 exl-id: 167f3318-7bc7-48fc-aaa9-73da43433f2f
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+solution: Experience Manager, Experience Manager Sites
+role: Developer
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '110'
-ht-degree: 0%
+ht-degree: 42%
 
 ---
 
 # 對內容片段的遠端Adobe Experience Manager GraphQL查詢的驗證 {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
 
-的主要使用案例 [用於內容片段傳送的Adobe Experience Manager (AEM) GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 是接受來自協力廠商應用程式或服務的遠端查詢。 這些遠端查詢可能需要經過驗證的API存取，以保護Headless內容傳送。
+的主要使用案例 [用於內容片段傳送的Adobe Experience Manager (AEM) GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) 是接受來自協力廠商應用程式或服務的遠端查詢。 這些遠端查詢可能需要經驗證的 API 存取權，以確保 Headless 內容傳遞的安全。
 
 >[!NOTE]
 >
->若要進行測試和開發，您也可以使用直接存取AEM GraphQL API [GraphiQL介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface).
+>對於測試和開發，您還可以使用 [GraphiQL 介面](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)直接存取 AEM GraphQL API。
 
 為了進行驗證，第三方服務需要使用AEM帳戶使用者名稱和密碼進行驗證。
 

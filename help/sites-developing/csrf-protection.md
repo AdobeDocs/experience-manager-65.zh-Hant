@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -41,4 +42,4 @@ ht-degree: 0%
 >
 >如果您將資訊清單快取搭配網頁應用程式使用，請務必新增&quot;**&amp;ast；**」至資訊清單，以確定權杖不會使CSRF權杖產生呼叫離線。 如需詳細資訊，請參閱此 [連結](https://www.w3.org/TR/offline-webapps/).
 >
->如需有關CSRF攻擊和緩解其方法的詳細資訊，請參閱 [跨網站請求偽造OWASP頁面](https://owasp.org/www-community/attacks/csrf).
+如需有關CSRF攻擊和緩解其方法的詳細資訊，請參閱 [跨網站請求偽造OWASP頁面](https://owasp.org/www-community/attacks/csrf).

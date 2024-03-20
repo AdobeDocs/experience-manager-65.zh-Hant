@@ -5,14 +5,15 @@ feature: Content Fragments,Assets HTTP API
 role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 24%
+source-wordcount: '1902'
+ht-degree: 23%
 
 ---
 
-# AEM Assets HTTP API 內容片段支援 {#content-fragments-support-in-aem-assets-http-api}
+# AEM Assets HTTP API中的內容片段支援 {#content-fragments-support-in-aem-assets-http-api}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
@@ -35,11 +36,11 @@ ht-degree: 24%
 
 此 [Assets REST API](/help/assets/mac-api-assets.md) 可讓Adobe Experience Manager的開發人員透過CRUD作業（建立、讀取、更新、刪除），直接透過HTTP API存取內容(儲存在AEM中)。
 
-此API可讓您藉由向JavaScript前端應用程式提供內容服務，將Adobe Experience Manager當作Headless CMS （內容管理系統）來運作。 或者任何其他可以執行 HTTP 要求並處理 JSON 回應的應用程式。
+此API可讓您藉由向JavaScript前端應用程式提供內容服務，將Adobe Experience Manager當作Headless CMS （內容管理系統）來運作。 或任何可執行HTTP要求及處理JSON回應的其他應用程式。
 
 例如，單頁應用程式(SPA)，以框架為基礎或自訂，需要透過HTTP API提供的內容，通常為JSON格式。
 
-當 [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 提供非常完整、彈性且可自訂的API，可為此用途提供所需的讀取作業，且可自訂其JSON輸出，實作時確實需要AEM WCM （Web內容管理）專門技術，因為它們必須託管在基於專用AEM範本的頁面中。 並非每個SPA開發組織都能直接存取這些知識。
+當 [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 提供非常完整、彈性且可自訂的API，可為此用途提供所需的讀取作業，且可自訂其JSON輸出，實作時確實需要AEM WCM （Web內容管理）專門技術，因為它們必須託管在基於專用AEM範本的頁面中。 並非每個SPA開發組織都能直接存取這些知識。
 
 此時可使用Assets REST API。 它可讓開發人員直接存取資產（例如影像和內容片段），而不需要先將資產內嵌在頁面中，並以序列化JSON格式傳送其內容。
 
@@ -116,7 +117,7 @@ HTTP 方法決定要執行的操作：
   <tr>
    <td>支援的作業</td>
    <td><p>建立、讀取、更新、刪除。</p> <p>根據圖元型別使用其他操作。</p> </td>
-   <td>唯讀.</td>
+   <td>唯讀。</td>
   </tr>
   <tr>
    <td>存取</td>

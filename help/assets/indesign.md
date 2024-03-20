@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 4%
+source-wordcount: '1555'
+ht-degree: 2%
 
 ---
 
@@ -120,7 +121,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 >[!CAUTION]
 >
->請 勿變更ExtendScript程式庫。此程式庫提供與Sling通訊所需的HTTP功能。 此設定會指定要傳送至的程式庫 [!DNL InDesign Server] 以便在該處使用。
+>請勿變更ExtendScript資料庫。 此程式庫提供與Sling通訊所需的HTTP功能。 此設定會指定要傳送至的程式庫 [!DNL InDesign Server] 以便在該處使用。
 
 此 `ThumbnailExport.jsx` 媒體提取工作流程步驟執行的指令碼會產生JPG格式的縮圖轉譯。 「處理縮圖」工作流程步驟使用此轉譯來產生所需的靜態轉譯， [!DNL Experience Manager].
 
@@ -134,8 +135,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
-* **頁面擷取處理常式**：從快顯清單中選取您要使用的處理常式。 擷取處理常式會針對由相關人員選擇的特定轉譯 `RenditionPicker` 進行操作(請參 `ExtractionHandler` 閱API)。
-在標準中 [!DNL Experience Manager] 安裝下列專案可供使用：
+* **頁面擷取處理常式**：從快顯清單中選取您要使用的處理常式。 擷取處理常式會針對由相關人員選擇的特定轉譯進行操作 `RenditionPicker` (請參閱 `ExtractionHandler` API)。 在標準中 [!DNL Experience Manager] 安裝下列專案可供使用：
    * IDML匯出擷取控制代碼：對下列專案執行： `IDML` 在MediaExtract步驟中產生的轉譯。
 
 * **頁面名稱**：指定您要指派給產生頁面的名稱。 如果保留為空白，則名稱為「page」（如果「page」已存在，則為衍生專案）。
@@ -192,7 +192,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 1. 選取「 IDS處理」佇列於 `Apache Sling Job Queue Configuration`.
 
-1. 設定:
+1. 設定：
 
    * **型別** - `Parallel`
    * **最大平行作業數** - `<*x*>` （如上計算）

@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media 影像設定檔
+title: Dynamic Media影像設定檔
 description: 建立包含遮色片銳利化設定和/或智慧型裁切或智慧型色票設定的影像設定檔，然後將設定檔套用至影像資產的資料夾。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,14 +8,15 @@ content-type: reference
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '3033'
-ht-degree: 6%
+source-wordcount: '3048'
+ht-degree: 5%
 
 ---
 
-# Dynamic Media 影像設定檔 {#image-profiles}
+# Dynamic Media影像設定檔 {#image-profiles}
 
 上傳影像時，您可以套用影像設定檔至資料夾，在上傳時自動裁切影像。
 
@@ -77,7 +78,7 @@ ht-degree: 6%
 | 選項 | 說明 |
 | --- | --- |
 | 數量 | 控制套用至邊緣畫素的對比量。 預設值為1.75。若是高解析度的影像，最高可增加至5。 將「數量」視為濾鏡強度的量度。 範圍為0到5。 |
-| 半徑 | 決定邊緣像素周圍會影響銳利化的像素數量。若是高解析度影像，輸入介於 1 到 2 之間的值。低數值只會銳利化邊緣的像素；高數值會銳利化較寬的像素範圍。正確的值取決於影像大小。預設值為0.2。範圍為0到250。 |
+| 半徑 | 決定邊緣畫素周圍影響銳利化的畫素數量。對於高解析度的影像，請輸入1到2。低值只會銳利化邊緣畫素；高值會銳利化較寬的畫素範圍。 正確的值取決於影像的大小。 預設值為0.2。範圍為0到250。 |
 | 臨界值 | 決定套用遮色片銳利化調整濾鏡時要忽略的對比範圍。換言之，此選項決定銳化畫素與周圍區域的差異程度，才會被視為邊緣畫素並予以銳化。 為避免引入雜訊，請嘗試使用0到255之間的值。 |
 
 銳利化的說明請參閱 [銳利化影像](/help/assets/assets/sharpening_images.pdf).

@@ -7,9 +7,10 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1099'
 ht-degree: 1%
 
 ---
@@ -63,7 +64,7 @@ ht-degree: 1%
 
       **路徑：** `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
-      **重疊位置:** `/apps/`
+      **覆蓋位置：** `/apps/`
 
       **符合節點型別：** 已核取
 
@@ -81,7 +82,7 @@ ht-degree: 1%
       >    
       >
 
-   1. 按一下&#x200B;**「確定」**。css資料夾是在指定的路徑中建立。
+   1. 按一下 **確定**. css資料夾是在指定的路徑中建立。
 
 1. 在應用程式資料夾中，建立名為的資料夾 `imgs` 路徑/結構類似於 `imgs` 資料夾（在ccrui資料夾中）。
 
@@ -112,7 +113,7 @@ ht-degree: 1%
 
 使用以下步驟，將自訂標誌檔案上傳至CRX：
 
-1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`。如有必要，請以管理員身分登入。
+1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，請以管理員身分登入。
 1. 在CRXDE中，以滑鼠右鍵按一下 **影像** 資料夾並選取「 」 **「建立」>「建立檔案」**：
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs/`
@@ -155,7 +156,7 @@ ht-degree: 1%
 
 使用下列步驟來建立樣式表，以透過UI呈現標誌：
 
-1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`。如有必要，請以管理員身分登入。
+1. 前往 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，請以管理員身分登入。
 1. 在下列位置建立名為customcss.css的檔案（不能使用不同的檔案名稱）：
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css/`

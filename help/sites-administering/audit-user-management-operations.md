@@ -8,9 +8,10 @@ content-type: reference
 docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
 feature: Operations
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '295'
 ht-degree: 1%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 1%
 
 AEM匯入了記錄許可權變更的功能，以便您稍後稽核這些變更。
 
-增強功能允許稽核CRUD （建立、讀取、更新、刪除）使用者許可權和群組指派的動作。 更具體地說，它會記錄：
+增強功能允許稽核使用者許可權和群組指派上的CRUD （建立、讀取、更新、刪除）動作。 更具體來說，它會記錄：
 
 * 已建立新使用者
 * 正在新增至群組的使用者
@@ -33,8 +34,8 @@ AEM匯入了記錄許可權變更的功能，以便您稍後稽核這些變更�
 
 若要將記錄輸出重新導向至個別的記錄檔，請建立 **Apache Sling記錄記錄器** 設定。 讓我們使用 `useraudit.log` 做為下方範例中個別檔案的名稱。
 
-1. 瀏覽至Web主控台 *https://serveraddress:serverport/system/console/configMgr*
-1. 搜尋 **Apache Sling記錄記錄器設定**. 然後，按專案右側的「+」以建立工廠設定。
+1. 瀏覽至，前往Web主控台 *https://serveraddress:serverport/system/console/configMgr*
+1. 搜尋 **Apache Sling記錄記錄器設定**. 然後，按專案右側的「+」以建立工廠組態。
 1. 建立下列設定：
 
    * **記錄層級：** 資訊
@@ -42,11 +43,11 @@ AEM匯入了記錄許可權變更的功能，以便您稍後稽核這些變更�
    * **訊息模式：** 層級預設
    * **記錄器：** com.adobe.granite.security.user.internal.audit， com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
-   若要將兩個記錄器都輸入到 **Logger** 欄位，您必須輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱，以建立另一個欄位。
+   若要將兩個記錄器輸入到 **Logger** 欄位，您必須輸入第一個記錄器的名稱，然後按「+」按鈕並輸入第二個記錄器的名稱，以建立另一個欄位。
 
 ## 範例輸出 {#example-output}
 
-如果設定正確，輸出應如下所示：
+如果已正確設定，輸出應該如下所示：
 
 ```xml
 19.05.2017 15:15:08.933 *INFO* [0:0:0:0:0:0:0:1 [1495196108932] POST /libs/granite/security/post/authorizables.html HTTP/1.1] com.adobe.granite.security.user.internal.servlets.AuthorizableServlet Create Group 'group1' operation initiated by User 'admin' (administrator)
@@ -80,7 +81,7 @@ AEM匯入了記錄許可權變更的功能，以便您稍後稽核這些變更�
 
 ## 傳統 UI {#classic-ui}
 
-在Classic UI中，稽核記錄中記錄的有關新增和刪除使用者的CRUD操作資訊會限製為受影響使用者的ID以及發生變更的時間。
+在傳統UI中，稽核記錄中記錄的有關新增和刪除使用者的CRUD作業資訊，會限製為受影響使用者的ID以及發生變更的時間。
 
 例如：
 

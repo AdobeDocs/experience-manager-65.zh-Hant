@@ -5,10 +5,11 @@ contentOwner: AG
 role: User, Admin
 feature: Developer Tools
 exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '687'
-ht-degree: 13%
+source-wordcount: '653'
+ht-degree: 12%
 
 ---
 
@@ -196,7 +197,7 @@ Asset Editor會使用「表單選擇器」，只要將表單選擇器和表單�
    </div>
    ```
 
-1. 若要讓元件可用，您必須能夠加以編輯。若要讓元件可編輯，請在CRXDE Lite中新增節點 `cq:editConfig` 主要型別的 `cq:EditConfig`. 為了能夠移除段落，請新增多值屬性 `cq:actions` ，其中單一值 `DELETE`為。
+1. 若要讓元件可用，您必須能夠加以編輯。若要讓元件可編輯，請在CRXDE Lite中新增節點 `cq:editConfig` 主要型別的 `cq:EditConfig`. 為了能夠移除段落，請新增多值屬性 `cq:actions` 單一值為 `DELETE`.
 
 1. 導覽至您的瀏覽器，並在範例頁面上(例如， `asseteditor.html`)切換至設計模式，並為段落系統啟用新元件。
 

@@ -4,9 +4,10 @@ description: 瞭解如何使用PWA Studio部署AEM Headless Content and Commerce
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: de7b8f05-b6b7-4105-84a5-940c16ebf2b4
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '722'
 ht-degree: 0%
 
 ---
@@ -61,7 +62,7 @@ ht-degree: 0%
 
    有關導覽元件自訂的詳細資訊，請參閱 [addBlogToNavigation.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/addBlogToNavigation.js) 和 [擴充性框架](https://developer.adobe.com/commerce/pwa-studio/guides/general-concepts/extensibility/) PWA Studio檔案。
 
-1. Apollo使用者端預期的AEM GraphQL端點位於 `<https://pwa-studio/endpoint.js>`. 若要將端點對應至此位置，請自訂PWA Studio應用程式的「向上」設定： a.至 `pwa-root/.env`，新增AEM_CFM_GRAPHQL變數，並將其調整為指向您的AEM內容片段GraphQL端點。
+1. Apollo使用者端預期的AEM GraphQL端點位於 `<https://pwa-studio/endpoint.js>`. 若要將端點對應至此位置，請自訂PWA Studio應用程式的UPPER設定： a.至 `pwa-root/.env`，新增AEM_CFM_GRAPHQL變數，並將其調整為指向您的AEM內容片段GraphQL端點。
 
    範例： AEM_CFM_GRAPHQL=<http://localhost:4503/content/graphql/global>
 
@@ -94,7 +95,7 @@ ht-degree: 0%
 
   設定 `allowedorigin` 屬性至您的PWA應用程式完整主機名稱。
 
-  例如:  `<https://pwa-studio-test-vflyn.local.pwadev:9366>`
+  範例：  `<https://pwa-studio-test-vflyn.local.pwadev:9366>`
 
 * Apache Sling反向連結篩選器(org.apache.sling.security.impl.ReferrerFilter.cfg.json)
 

@@ -2,9 +2,10 @@
 title: 連結檢查程式
 description: 連結檢查器可協助驗證內部和外部連結，並允許連結重寫。
 exl-id: 8ec4c399-b192-46fd-be77-3f49b83ce711
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---

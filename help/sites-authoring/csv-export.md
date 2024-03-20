@@ -7,7 +7,8 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 26%
@@ -31,7 +32,7 @@ ht-degree: 26%
 * 要匯出的屬性
    * 中繼資料
       * 名稱
-      * 修改時間
+      * 已修改
       * 已發佈
       * 範本
       * 工作流程
@@ -39,7 +40,7 @@ ht-degree: 26%
       * 已翻譯
    * 分析
       * 頁面檢視
-      * 不重複訪客
+      * 獨特訪客
       * 頁面逗留時間
 * 深度
    * 父路徑

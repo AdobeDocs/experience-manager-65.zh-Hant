@@ -4,9 +4,10 @@ description: 瞭解Adobe Experience Manager (AEM)中的內容片段如何讓您�
 feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1972'
+source-wordcount: '1966'
 ht-degree: 4%
 
 ---

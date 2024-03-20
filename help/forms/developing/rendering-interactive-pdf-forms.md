@@ -8,9 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2478'
+source-wordcount: '2455'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ Forms服務會將互動式PDF forms轉譯給使用者端裝置（通常是網頁
 
 >[!NOTE]
 >
->使用Forms服務轉譯表單前，請先建立表單設計。 通常，表單設計會在Designer中建立並儲存為XDP檔案。 如需關於建立表單設計的資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_tw).
+>使用Forms服務轉譯表單前，請先建立表單設計。 通常，表單設計會在Designer中建立並儲存為XDP檔案。 如需關於建立表單設計的資訊，請參閱 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 **貸款申請範例**
 

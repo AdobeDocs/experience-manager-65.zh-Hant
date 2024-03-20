@@ -6,10 +6,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: b0786b52-879e-4a24-9cc9-bd9dcb2473cc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1222'
-ht-degree: 1%
+source-wordcount: '1220'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +27,7 @@ ht-degree: 1%
 
 ### 為WebSphere建立Linux或UNIX使用者 {#create-a-linux-or-unix-user-for-websphere}
 
-1. 以根使用者用戶身分登入。
+1. 以根用戶用戶身分登入。
 1. 通過在命令提示符下輸入以下命令來建立用戶：
 
    * （Linux 和 Sun Solaris） `useradd`
@@ -37,9 +38,9 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >（Linux和Solaris）若要讓WebSphere Application Server本機作業系統安全性登入運作，陰影密碼檔案必須存在。 影子密碼檔通常名為 **/etc/shadow** ，並基於 /etc/passwd 檔。 如果影子密碼檔不存在，則在啟用全域安全性並將用戶註冊表配置為本地作業系統後會發生錯誤。
+   >（Linux 和 Solaris）要使 WebSphere Application Server Local OS 安全註冊表正常工作，必須存在影子密碼文件。 影子密碼文件通常名為 **/etc/shadow** ，並基於 /etc/passwd 文件。 如果影子密碼檔不存在，則在啟用全域安全性並將用戶註冊表配置為本地操作系統後會發生錯誤。
 
-1. 在文本編輯者中從 /etc 目錄中打開群組檔。
+1. 在文本編輯者中從 /etc 目錄中打開群組文件。
 1. 將您在步驟 2 `root` 中創建的用戶添加到群組。
 1. 儲存並關閉檔案。
 1. （啟用SSL的UNIX）以root使用者身分啟動和停止WebSphere。
@@ -102,19 +103,19 @@ ht-degree: 1%
 1. 按一下 **個人憑證**.
 1. 如果您已新增使用ikeyman建立的金鑰存放區，則會顯示您的憑證。 否則，您需要透過執行以下步驟來新增新的自我簽署憑證：
 
-   1. 選擇 **建立 >自簽章憑證** 」。
-   1. 在證書表單上指定適當的值。 確保將別名和公用名保留為電腦的完全限定功能變數名稱。
+   1. 選擇 **建立 >自簽名證書**」。
+   1. 在證書表單上指定適當的值。 確保將別名和公用名保留為計算機的完全限定功能變數名稱。
    1. 按一下「**套用**」。
 
 1. 重複步驟 2 到 10 以創建信任庫。
 
 ## 將自訂金鑰庫和信任庫套用到伺服器 {#apply-custom-keystore-and-truststore-to-the-server}
 
-1. 在 WebSphere 管理主控台中，選擇 **安全性> SSL 憑證和金鑰管理** 。
-1. 按一下管理 **端點安全配置** 。 將打開本地拓撲圖。
-1. 在「入站」下，選擇節點的直接子級。
-1. 在「相關項」下，選擇「 **SSL 配置** 」。
-1. 選擇 **NodeDeafultSSLSetting** 。
+1. 在 WebSphere 管理控制台中，選擇 **安全性> SSL 證書和密鑰管理**。
+1. 按兩下管理 **端點安全配置**。 將打開本地拓撲圖。
+1. 在“入站”下，選擇節點的直接子級。
+1. 在「相關項」下，選擇「 **SSL 配置**」。
+1. 選擇 **NodeDeafultSSLSetting**。
 1. 從信任存放區名稱和金鑰存放區名稱下拉式清單中，選取您建立的自訂信任存放區和金鑰存放區。
 1. 按一下「**套用**」。
 1. 儲存主組態。

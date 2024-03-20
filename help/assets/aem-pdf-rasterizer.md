@@ -5,9 +5,10 @@ contentOwner: AG
 role: Developer, Admin
 feature: Developer Tools,Renditions
 exl-id: 6f365d6b-3972-4885-8766-5889e24289f1
-source-git-commit: e6e0ad29bc5b3a644f74427d8d60233c9e26aa03
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -50,7 +51,7 @@ Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 1. 設定以下引數 **[!UICONTROL PDF模擬轉譯器處理常式]** 步驟：
 
    * MIME型別： `application/pdf` 或 `application/postscript`
-   * 命令: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
+   * 命令： `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
    * 新增縮圖大小：319:319、140:100、48:48。 如有必要，請新增自訂縮圖設定。
 
    的命令列引數 `PDFRasterizer` 命令可以包括下列內容：
@@ -63,7 +64,7 @@ Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
    * `-i`：輸入PDF的路徑。 此為必要引數。
 
-   * `-h`: 說明
+   * `-h`：說明
 
 1. 若要刪除中繼轉譯，請選取 **[!UICONTROL 刪除產生的轉譯]**.
 1. 若要讓PDF模擬轉譯器產生網頁轉譯，請選取「 」 **[!UICONTROL 產生Web轉譯]**.
@@ -80,7 +81,7 @@ Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 1. 設定以下引數 **[!UICONTROL PDF模擬轉譯器處理常式]** 步驟：
 
    * MIME型別： `application/pdf` 或 `application/postscript`
-   * 命令: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
+   * 命令： `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
    * 新增縮圖大小： `319:319`， `140:100`， `48:48`. 視需要新增自訂縮圖設定。
 
    的命令列引數 `PDFRasterizer` 命令可以包括下列內容：
@@ -93,7 +94,7 @@ Adobe建議針對下列專案使用PDF模擬轉譯器資料庫：
 
    * `-i`：輸入PDF的路徑。 此為必要引數。
 
-   * `-h`: 說明
+   * `-h`：說明
 
 1. 若要刪除中繼轉譯，請選取 **[!UICONTROL 刪除產生的轉譯]**.
 1. 若要讓PDF模擬轉譯器產生網頁轉譯，請選取「 」 **[!UICONTROL 產生Web轉譯]**.

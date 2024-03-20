@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 21%
@@ -59,7 +60,7 @@ ht-degree: 21%
 
    >[!NOTE]
    >
-   >此範例假設核心元件已安裝在例項上，若例項搭配We.Retail範例內容執行即是如此。 請參閱 [核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 以取得詳細資訊。
+   >此範例假設核心元件已安裝在例項上，若例項搭配We.Retail範例內容執行即是如此。 請參閱 [核心元件檔案](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 以取得詳細資訊。
 
 1. 導覽至 `cq:dialog` 定義內的所需欄位。
 1. 在欄位節點上定義以下屬性：

@@ -7,7 +7,8 @@ topic-tags: integration, best-practices
 content-type: reference
 docset: aem65
 exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 0%
@@ -53,7 +54,7 @@ AEM提供的示範行銷活動會遵循所有這些最佳實務。 每個最佳�
  <tbody>
   <tr>
    <td><strong>最佳實務</strong></td>
-   <td><strong>實施</strong></td>
+   <td><strong>實作</strong></td>
   </tr>
   <tr>
    <td><p>指定檔案型別，以確保轉譯的一致性。</p> <p>在開頭新增DOCTYPE (HTML或XHTML)</p> </td>
@@ -109,7 +110,7 @@ AEM提供的示範行銷活動會遵循所有這些最佳實務。 每個最佳�
  <tbody>
   <tr>
    <td><strong>最佳實務</strong></td>
-   <td><strong>實施</strong></td>
+   <td><strong>實作</strong></td>
   </tr>
   <tr>
    <td>在CSS (font-family)中使用html而非樣式</td>

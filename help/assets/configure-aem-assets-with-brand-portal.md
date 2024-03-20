@@ -1,5 +1,5 @@
 ---
-title: 使用 Brand Portal 設定 AEM Assets
+title: 使用Brand Portal設定AEM Assets
 description: 瞭解如何使用Brand Portal設定AEM Assets，以將資產和集合發佈到Brand Portal。
 topic-tags: brand-portal
 content-type: reference
@@ -9,22 +9,23 @@ feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2130'
-ht-degree: 8%
+source-wordcount: '2068'
+ht-degree: 4%
 
 ---
 
 
-# 使用 Brand Portal 設定 AEM Assets {#configure-integration-65}
+# 使用Brand Portal設定AEM Assets {#configure-integration-65}
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal.html?lang=zh-Hant) |
 | AEM 6.5 | 本文章 |
 
-Adobe Experience Manager Assets Brand Portal可讓您將核准的品牌資產從Adobe Experience Manager資產發佈到Brand Portal，並分發給Brand Portal使用者。
+Adobe Experience Manager Assets Brand Portal可讓您將核准的品牌資產從Adobe Experience Manager Assets發佈到Brand Portal，並分發給Brand Portal使用者。
 
 AEM Assets是透過Brand Portal主控台使用Adobe Developer設定的，這可取得AdobeIdentity Management Services (IMS)帳戶Token以授權Brand Portal租使用者。
 
@@ -77,7 +78,7 @@ AEM Assets是透過Brand Portal主控台使用Adobe Developer設定的，這可�
 
 ### 下載並安裝AEM最新Service Pack {#servicepack}
 
-如需詳細指示，請參閱目前的 [AEM 6.5 Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html).
+如需詳細指示，請參閱目前的 [AEM 6.5 Service Pack發行說明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant).
 
 **聯絡Adobe客戶支援** 如果您找不到最新的AEM套件或Service Pack。
 
@@ -105,7 +106,7 @@ AEM Assets是透過Brand Portal主控台使用Adobe Developer設定的，這可�
 1. [設定雲端服務](#configure-the-cloud-service)
 1. [測試設定](#test-integration)
 
-### 建立 IMS 設定 {#create-ims-configuration}
+### 建立IMS設定 {#create-ims-configuration}
 
 IMS設定會向AEM Assets租使用者驗證您的Brand Portal Author例項。
 
@@ -294,7 +295,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![Brand Portal設定視窗](assets/create-cloud-service.png)
 
-1. 按一下&#x200B;**[!UICONTROL 「儲存並關閉」]**。雲端設定此時已建立。
+1. 按一下 **[!UICONTROL 儲存並關閉]**. 雲端設定已建立。
 
    您的AEM Assets Author例項現在已透過Brand Portal租使用者完成設定。
 
@@ -341,9 +342,9 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 您現在可以：
 
-* [從 AEM Assets 發佈資產到 Brand Portal](../assets/brand-portal-publish-assets.md)
-* [從Brand Portal發佈資產到AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) - Brand Portal中的Asset Sourcing
-* [從 AEM Assets 發佈資料夾到 Brand Portal](../assets/brand-portal-publish-folder.md)
+* [從AEM Assets發佈資產到Brand Portal](../assets/brand-portal-publish-assets.md)
+* [從Brand Portal發佈資產到AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=zh-Hant) - Brand Portal中的Asset Sourcing
+* [從AEM Assets發佈資料夾到Brand Portal](../assets/brand-portal-publish-folder.md)
 * [從 AEM Assets 發佈集合到 Brand Portal](../assets/brand-portal-publish-collection.md)
 * [將預設集、結構和 Facet 發佈至 Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
 * [將標記發佈至 Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)

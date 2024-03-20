@@ -9,16 +9,17 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '2531'
-ht-degree: 2%
+source-wordcount: '2338'
+ht-degree: 0%
 
 ---
 
 # 建立AEM CIF核心元件的樣式 {#style-aem-cif-core-components}
 
-此 [CIF Venia專案](https://github.com/adobe/aem-cif-guides-venia) 是用於的參考程式碼基底 [CIF核心元件](https://github.com/adobe/aem-core-cif-components). 在本教學課程中，您需檢查Venia參考專案，瞭解AEM CIF核心元件所使用的CSS和JavaScript如何進行組織整理。 您也會使用CSS建立樣式，以更新 **產品Teaser** 元件。
+此 [CIF Venia專案](https://github.com/adobe/aem-cif-guides-venia) 是用於的參考程式碼基底 [CIF Core Components](https://github.com/adobe/aem-core-cif-components). 在本教學課程中，您需檢查Venia參考專案，瞭解AEM CIF核心元件所使用的CSS和JavaScript如何進行組織整理。 您也會使用CSS建立樣式，以更新 **產品Teaser** 元件。
 
 >[!TIP]
 >
@@ -176,9 +177,9 @@ ht-degree: 2%
 
    這些使用者端程式庫並非由管理 `ui.frontend` 模組。 這些使用者端資料庫會包含Adobe所提供的CSS和JavaScript相依性。 這些使用者端資料庫的定義位於 `.content.xml` 每個資料夾下方的檔案。
 
-   **clientlib-base**  — 這是空白的使用者端程式庫，僅內嵌來自的必要相依性 [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). 類別為 `venia.base`.
+   **clientlib-base**  — 這是空白的使用者端程式庫，僅內嵌來自的必要相依性 [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant). 類別為 `venia.base`.
 
-   **clientlib-cif**  — 這也是空白的使用者端程式庫，僅嵌入來自的必要相依性 [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components). 類別為 `venia.cif`.
+   **clientlib-cif**  — 這也是空白的使用者端程式庫，僅嵌入來自的必要相依性 [AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components). 類別為 `venia.cif`.
 
    **clientlib-grid**  — 這包括啟用AEM回應式格線功能所需的CSS。 使用AEM格線可啟用 [版面模式](/help/sites-authoring/responsive-layout.md) AEM並賦予內容作者重新調整元件大小的能力。 類別為 `venia.grid` 並內嵌於 `venia.base` 資料庫。
 
@@ -223,7 +224,7 @@ ht-degree: 2%
 
 1. 選取 **頁面資訊** 功能表並按一下 **以發佈的形式檢視**：
 
-   ![以已發佈狀態檢視](../assets/style-cif-component/view-as-published.png)
+   ![以發佈的形式檢視](../assets/style-cif-component/view-as-published.png)
 
    如此將可開啟頁面，而不載入任何AEM作者JavaScript，如發佈網站中所示。 請注意，url具有查詢引數 `?wcmmode=disabled` 已附加。 開發CSS和JavaScript時，最好使用此引數來簡化頁面，而無需AEM作者提供任何內容。
 
@@ -477,9 +478,9 @@ AEM也會嘗試快取使用者端程式庫以提高效能。 在程式碼部署�
 
 ## 其他資源 {#additional-resources}
 
-* [AEM 專案原型](https://github.com/adobe/aem-project-archetype)
-* [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components)
-* [設定本機AEM開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=zh-Hant)
+* [AEM專案原型](https://github.com/adobe/aem-project-archetype)
+* [AEM CIF核心元件](https://github.com/adobe/aem-core-cif-components)
+* [設定本機AEM開發環境](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 * [用戶端資源庫](/help/sites-developing/clientlibs.md)
-* [AEM Sites快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant)
+* [AEM Sites快速入門](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 * [使用樣式系統進行開發](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/style-system.html)

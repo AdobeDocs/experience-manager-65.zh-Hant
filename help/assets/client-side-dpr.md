@@ -1,28 +1,30 @@
 ---
 title: 搭配使用者端裝置畫素比使用智慧型影像
-description: 瞭解如何透過Dynamic Media在Adobe Experience Manager as a Cloud Service中將使用者端裝置畫素比與智慧型影像搭配使用。
+description: 瞭解如何在Adobe Experience Manager as a Cloud Service中搭配Dynamic Media使用使用者端裝置畫素比率和智慧型影像。
 role: Admin,User
 exl-id: e38f522a-242a-4ea9-a866-d8d129950831
-source-git-commit: c8682118f15132063073df5cdc2b576b6e62a0c8
+solution: Experience Manager, Experience Manager Assets
+feature: Smart Imaging
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
 # 關於使用使用者端裝置畫素比(DPR)的智慧型影像 {#client-side-dpr}
 
-目前的智慧型影像解決方案是使用使用者代理字串來判斷所使用的裝置型別（桌上型電腦、平板電腦、行動裝置等）。
+目前的智慧型影像處理解決方案是使用使用者代理字串來判斷所使用的裝置型別（桌上型電腦、平板電腦、行動裝置等）。
 
-裝置偵測功能（以使用者代理字串為基礎的DPR）通常不準確，尤其是對Apple裝置而言。 此外，每當新裝置啟動時，都必須驗證該裝置。
+裝置偵測功能（以使用者代理字串為基礎的DPR）通常不準確，尤其是對Apple裝置而言。 此外，新裝置無論何時啟動，都必須經過驗證。
 
-使用者端DPR可為您提供100%正確的值，且適用於任何裝置，不論是Apple或任何其他啟動的新裝置。
+使用者端DPR可為您提供100%正確的值，且適用於任何裝置，不論是Apple或任何其他已啟動的新裝置。
 
 ## 使用使用者端DPR代碼
 
 **伺服器端轉譯的應用程式**
 
-1. 載入服務背景工作程式初始(`srvinit.js`)在HTML頁面的標頭區段中加入下列指令碼：
+1. 載入Service Worker初始(`srvinit.js`)在HTML頁面的標頭區段中加入下列指令碼：
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
@@ -30,7 +32,7 @@ ht-degree: 0%
 
    Adobe建議您載入此指令碼 _早於_ 任何其他指令碼，以便service worker立即開始初始化。
 
-1. 在HTML頁面內文區段的頂端加入下列DPR影像標籤程式碼：
+1. 在HTML頁面內文區段頂端加入下列DPR影像標籤程式碼：
 
    ```html
    <img src="aem_dm_dpr_1x.jpg" style="width:1px;height:1px;display:none"
@@ -45,7 +47,7 @@ ht-degree: 0%
 
 **使用者端轉譯的應用程式**
 
-1. 在HTML頁面的標頭區段中加入下列DPR指令碼：
+1. 在HTML頁面的標頭區段中包含下列DPR指令碼：
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
@@ -54,12 +56,12 @@ ht-degree: 0%
 
    您可以將兩個DPR指令碼合併為一個，以避免多個網路請求。
 
-   Adobe建議您載入這些指令碼 _早於_ HTML頁面中的任何其他指令碼。
-Adobe也建議您將應用程式Bootstrap在diffHTML標籤下，而不是在body元素下。 原因在於 `dprImageInjection.js` 動態插入HTML頁面內文區段頂端的影像標籤。
+   Adobe建議您載入這些指令碼 _早於_ 「HTML」頁面中的任何其他指令碼。
+Adobe也建議您將應用程式Bootstrap在不同HTML標籤下，而非使用內文元素。 原因如下 `dprImageInjection.js` 動態插入HTML頁面內文區段上方的影像標籤。
 
 ## JavaScript檔案下載 {#client-side-dpr-script}
 
-下載中的下列JavaScript檔案僅供範例參考之用。 如果您打算在HTML頁面中使用這些檔案，請務必編輯每個檔案的程式碼，以符合您自己的需求。
+下載中的下列JavaScript檔案僅供範例參考之用。 如果您要在HTML頁面中使用這些檔案，請務必編輯每個檔案的程式碼以符合您自己的需求。
 
 * `dprImageInjection.js`
 * `srvinit.js`
@@ -70,4 +72,3 @@ Adobe也建議您將應用程式Bootstrap在diffHTML標籤下，而不是在body
 >[!MORELIKETHIS]
 >
 >* [智慧型影像](/help/assets/imaging-faq.md)
-

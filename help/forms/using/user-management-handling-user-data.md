@@ -1,18 +1,19 @@
 ---
-title: Forms使用者管理 |處理使用者資料
+title: Forms使用者管理 | 處理使用者資料
 description: 瞭解AEM Forms JEE使用者管理元件如何讓您建立、授權和管理需要存取AEM Forms的使用者。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin
 exl-id: eeeab5d1-073a-4e13-a781-391dfe70bb37
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 0%
 
 ---
 
-# Forms使用者管理 |處理使用者資料 {#forms-user-management-handling-user-data}
+# Forms使用者管理 | 處理使用者資料 {#forms-user-management-handling-user-data}
 
 使用者管理是AEM Forms JEE元件，可建立、管理和授權AEM Forms使用者存取AEM Forms。 使用者管理使用網域作為取得使用者資訊的目錄。 支援的網域型別如下：
 
@@ -111,13 +112,13 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 >
 >下列命令使用My SQL和IBM® DB2®資料庫中的資料庫表格名稱。 在Oracle和MS® SQL資料庫上執行這些命令時，請在命令中取代下清單格名稱：
 >
-* 取代 `EdcPrincipalLocalAccountEntity` 替換為 `EdcPrincipalLocalAccount`
+>* 取代 `EdcPrincipalLocalAccountEntity` 替換為 `EdcPrincipalLocalAccount`
 >
-* 取代 `EdcPrincipalEmailAliasEntity` 替換為 `EdcPrincipalEmailAliasEn`
+>* 取代 `EdcPrincipalEmailAliasEntity` 替換為 `EdcPrincipalEmailAliasEn`
 >
-* 取代 `EdcPrincipalMappingEntity` 替換為 `EdcPrincipalMappingEntit`
+>* 取代 `EdcPrincipalMappingEntity` 替換為 `EdcPrincipalMappingEntit`
 >
-* 取代 `EdcPrincipalGrpCtmntEntity` 替換為 `EdcPrincipalGrpCtmntEnti`
+>* 取代 `EdcPrincipalGrpCtmntEntity` 替換為 `EdcPrincipalGrpCtmntEnti`
 >
 
 ```sql

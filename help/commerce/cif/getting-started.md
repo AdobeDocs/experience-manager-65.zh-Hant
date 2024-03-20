@@ -4,10 +4,11 @@ description: 瞭解如何部署AEM內容與商務專案。
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 7%
+source-wordcount: '685'
+ht-degree: 3%
 
 ---
 
@@ -53,7 +54,7 @@ CIF附加元件提供GraphQL Proxy servlet，位於 `/api/graphql` 可選擇性�
 
 ## 設定存放區和目錄 {#catalog}
 
-附加元件和 [CIF核心元件](https://github.com/adobe/aem-core-cif-components) 可用於連線至不同商業商店（或商店檢視等）的多個AEM網站結構。 根據預設，CIF附加元件會以連線到Adobe Commerce預設存放區和目錄的預設設定進行部署。
+附加元件和 [CIF Core Components](https://github.com/adobe/aem-core-cif-components) 可用於連線至不同商業商店（或商店檢視等）的多個AEM網站結構。 根據預設，CIF附加元件會以連線到Adobe Commerce預設存放區和目錄的預設設定進行部署。
 
 您可以按照以下步驟，透過CIFCloud Service設定來針對專案調整此設定：
 
@@ -93,6 +94,6 @@ CIF附加元件提供GraphQL Proxy servlet，位於 `/api/graphql` 可選擇性�
 
 ## 其他資源 {#additional-resources}
 
-- [AEM 專案原型](https://github.com/adobe/aem-project-archetype)
+- [AEM專案原型](https://github.com/adobe/aem-project-archetype)
 - [AEM Venia參考存放區](https://github.com/adobe/aem-cif-guides-venia)
 - [Commerce多商店設定](configuring/multi-store-setup.md)

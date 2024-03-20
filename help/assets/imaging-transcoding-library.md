@@ -5,9 +5,10 @@ contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -40,7 +41,7 @@ Adobe的Imaging Transcoding Library是專屬的影像處理解決方案，可執
 >
 >不支援Mac OS和其他*nix發行版本（例如Debian和Ubuntu）。
 
-## 使用狀況 {#usage}
+## 使用情況 {#usage}
 
 「影像轉碼程式庫」的命令列引數可包含下列專案：
 

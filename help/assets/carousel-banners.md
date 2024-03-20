@@ -9,10 +9,11 @@ docset: aem65
 feature: Carousel Banners
 role: User, Admin
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '4722'
-ht-degree: 2%
+source-wordcount: '4680'
+ht-degree: 3%
 
 ---
 
@@ -50,7 +51,7 @@ ht-degree: 2%
 
 1. [識別熱點和影像地圖變數](#identifying-hotspot-and-image-map-variables) (僅適用於使用Experience Manager Assets + Dynamic Media的客戶)
 
-   首先，請識別現有Quickview實作所使用的動態變數，以便在Adobe Experience Manager資產中的轉盤橫幅建立程式期間，正確輸入熱點和影像地圖資料。
+   首先，請識別現有Quickview實作所使用的動態變數，以便在Adobe Experience Manager Assets中的轉盤橫幅建立程式期間正確輸入熱點和影像地圖資料。
 
    >[!NOTE]
    >
@@ -222,7 +223,7 @@ ht-degree: 2%
    >對於輪播橫幅，您可以調整下列專案：
    >
    >    * 影像顯示的持續時間。 依預設，每個影像會顯示9秒。
-   >    * 動畫. 依預設，每個幻燈片切換都是淡化。 您可以將其變更為幻燈片切換。
+   >    * 動畫。 依預設，每個幻燈片切換都是淡化。 您可以將其變更為幻燈片切換。
    >    * 按鈕的樣式。 使用者可以點選每個點或數字來旋轉橫幅。 您可以變更設定指示器按鈕出現的位置（如果是數值或虛線樣式），以及大小。
    >    * 變更影像地圖的醒目提示樣式或用於連結區的圖示。
    >    * 編輯檢視器預設集之前，請先選擇要讓預設集以哪個樣式為依據。 如果您未選擇樣式，當您開始編輯檢視器預設集時，如果您決定變更為其他預設集，則會遺失所有變更。
@@ -257,11 +258,11 @@ ht-degree: 2%
 >
 >當您新增熱點至中的影像時 [互動影像](/help/assets/interactive-images.md) 或是輪播橫幅，熱點資訊會儲存在相同的中繼資料位置。 該位置是相對於影像位置的相對位置，無論該影像是互動影像或輪播橫幅皆然。 這項功能表示您可以在任一檢視器中輕鬆重複使用相同的影像，以及其定義的熱點資料。
 >
-但是請注意，轉盤橫幅支援也可能包含熱點的影像上的影像地圖，互動式影像則否。 如果您打算建立使用相同影像的互動式影像或輪播橫幅，請記住此規則。 請考慮改用相同影像的個別復本來建立互動影像和輪播橫幅。
+>但是請注意，轉盤橫幅支援也可能包含熱點的影像上的影像地圖，互動式影像則否。 如果您打算建立使用相同影像的互動式影像或輪播橫幅，請記住此規則。 請考慮改用相同影像的個別復本來建立互動影像和輪播橫幅。
 
 >[!NOTE]
 >
-如果您使用熱點編輯互動式影像並裁切影像，則會移除您的熱點。
+>如果您使用熱點編輯互動式影像並裁切影像，則會移除您的熱點。
 
 另請參閱 [新增影像地圖](/help/assets/image-maps.md).
 
@@ -299,7 +300,7 @@ ht-degree: 2%
       * 如果您是Experience Manager Sites客戶，請選取「網站選擇器」圖示（資料夾）以導覽至URL。
         >[!NOTE]
         >
-        如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
+        >如果您的互動式內容有具有相對URL的連結，尤其是指向Experience Manager Sites頁面的連結，則無法採用URL型連結方法。
 
       * 如果您是獨立客戶，請在HREF文字欄位中指定連結網頁的完整URL路徑。
 
@@ -316,15 +317,15 @@ ht-degree: 2%
 
         >[!NOTE]
         >
-        將檢視器嵌入體驗片段時，不支援轉盤橫幅中的社群媒體分享工具。
+        >將檢視器嵌入體驗片段時，不支援轉盤橫幅中的社群媒體分享工具。
         >
-        若要解決此問題，請建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
+        >若要解決此問題，請建立沒有社群媒體分享工具的檢視器預設集。 這類檢視器預設集可讓您成功將其嵌入體驗片段中。
 
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
    您也可以預覽轉盤橫幅的顯示方式。 另請參閱 [（選用）預覽轉盤橫幅](#optional-previewing-carousel-banners).
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 1. 發佈轉盤集。 發佈作業會建立可在網站頁面上使用的內嵌程式碼或URL。 如果您是Experience Manager Sites客戶，可以將轉盤集直接新增至您的網頁。
 
    另請參閱 [發佈資產](/help/assets/publishing-dynamicmedia-assets.md).
@@ -335,7 +336,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-必須將非管理員使用者新增至 **[!UICONTROL dam-users]** 群組才能建立或編輯輪播橫幅。 如果您在建立或編輯時遇到問題，請洽詢您的系統管理員，以便將您新增至 **[!UICONTROL dam-users]** 群組。
+>必須將非管理員使用者新增至 **[!UICONTROL dam-users]** 群組才能建立或編輯輪播橫幅。 如果您在建立或編輯時遇到問題，請洽詢您的系統管理員，以便將您新增至 **[!UICONTROL dam-users]** 群組。
 
 您可以對轉盤集執行各種編輯任務，如下所示：
 
@@ -368,7 +369,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   如果您使用熱點編輯互動式影像並裁切影像，則會移除您的熱點。
+   >如果您使用熱點編輯互動式影像並裁切影像，則會移除您的熱點。
    >
    >
 
@@ -407,9 +408,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-如果您使用具有傳送橫幅之熱點的現有互動式影像，則必須在發佈傳送橫幅後個別發佈互動式影像。
+>如果您使用具有傳送橫幅之熱點的現有互動式影像，則必須在發佈傳送橫幅後個別發佈互動式影像。
 >
-此外，如果您修改轉盤橫幅中正在使用的預先存在已發佈互動影像，則必須先發佈互動影像，這些變更才會反映在轉盤橫幅中。
+>此外，如果您修改轉盤橫幅中正在使用的預先存在已發佈互動影像，則必須先發佈互動影像，這些變更才會反映在轉盤橫幅中。
 
 另請參閱 [發佈Dynamic Media資產](/help/assets/publishing-dynamicmedia-assets.md) 以取得如何發佈轉盤橫幅的資訊。
 
@@ -419,7 +420,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-如果您是Experience Manager Sites客戶，可以將互動媒體元件拖曳至頁面，直接將輪播橫幅新增至頁面。 另請參閱 [將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md).
+>如果您是Experience Manager Sites客戶，可以將互動媒體元件拖曳至頁面，直接將輪播橫幅新增至頁面。 另請參閱 [將Dynamic Media資產新增至頁面](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
 不過，如果您是獨立的Experience Manager資產客戶，可以手動將輪播橫幅新增至您的網站登陸頁面，如本節所述。
 
@@ -433,7 +434,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-此步驟僅適用於獨立Experience Manager Assets客戶。
+>此步驟僅適用於獨立Experience Manager Assets客戶。
 
 此程式的最後一步是將轉盤橫幅與網站上現有的快速檢視實作整合。 每個Quickview實作都是獨一無二，而且需要涉及前端IT人員協助的特定方法。
 

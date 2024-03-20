@@ -7,9 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -175,19 +176,19 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 
 1. 三個表格（流量、轉換、事件）列出所有可用的Adobe Analytics變數。 屬於選取的RSID。 此處顯示的對應應與AEM檢視中的對應相同：
 
-   * **流量**:
+   * **流量**：
 
       * 流量變數( `prop1`)對應至CQ變數( `eventdata.downloadLink`)
 
       * 當元件旁邊有掛鎖時，這表示它繼承自父框架，因此無法編輯
 
-   * **轉換**:
+   * **轉換**：
 
       * 轉換變數( `eVar1`)對應至CQ變數( `pagedata.title`)
 
       * 轉換變數( `eVar3`)對應至JavaScript運算式，方法是按兩下CQ變數欄位，然後手動輸入程式碼
 
-   * **事件**:
+   * **事件**：
 
       * 事件變數( `event1`)對應至CQ事件( `eventdata.events.pageView`)
 
@@ -197,9 +198,9 @@ AEM使用慣例來命名產品相關變數和事件，這些變數和事件會�
 >
 >例如，在 `prop3` 您可以新增：
 >     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
-以傳送 *標題* ，位於與其串連的頁面 *sitesection* 使用 *：* （冒號）和前置詞 *Adobe* 作為 `prop3`
+>以傳送 *標題* ，位於與其串連的頁面 *sitesection* 使用 *：* （冒號）和前置詞 *Adobe* 作為 `prop3`
 >
 
 >[!CAUTION]
 >
-在任何指定時間，都只能將一個CQ變數對應至Adobe Analytics變數。
+>在任何指定時間，都只能將一個CQ變數對應至Adobe Analytics變數。

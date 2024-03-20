@@ -1,19 +1,20 @@
 ---
-title: HTTP2 傳送內容常見問答集
+title: HTTP2 傳送內容常見問題集
 description: 瞭解HTTP2內容傳遞，以及如何提高網頁內容的整體效能。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 2428914c-5fb0-439e-a1ef-8ee30b890f58
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '773'
 ht-degree: 1%
 
 ---
 
-# HTTP2 傳送內容常見問答集{#http-delivery-of-content-faq}
+# HTTP2 傳送內容常見問題集{#http-delivery-of-content-faq}
 
 Adobe很高興宣佈推出HTTP/2內容傳送。 使用HTTP/2時，會注意到整體效能提升。
 

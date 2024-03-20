@@ -2,7 +2,8 @@
 title: 使用OAuth 2.0使用者端憑證流程與AEM Forms整合Salesforce
 description: 使用OAuth 2.0使用者端憑證流程整合Salesforce與AEM Forms的步驟
 exl-id: 4c356aa6-ebd4-40b9-89e3-bc4519e4a7c5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 68%

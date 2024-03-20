@@ -7,7 +7,8 @@ topic-tags: hTML5_forms
 docset: aem65
 feature: HTML5 Forms
 exl-id: 039afdf3-013b-41b2-8821-664d28617f61
-source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2804'
 ht-degree: 0%
@@ -368,7 +369,7 @@ AEM Forms應用程式可讓現場工作者將其行動裝置與AEM Forms伺服�
   </tr>
   <tr>
    <td>多個資料模式</td>
-   <td>num{zz，zzz} |數字{z，zzz，zzz}</td>
+   <td>num{zz，zzz} | num{z，zzz，zzz}</td>
   </tr>
   <tr>
    <td>速記模式 </td>

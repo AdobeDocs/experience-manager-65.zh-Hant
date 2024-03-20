@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1892'
+source-wordcount: '1895'
 ht-degree: 1%
 
 ---
@@ -74,12 +75,12 @@ ht-degree: 1%
 
 建立頁面時，有兩個索引鍵欄位：
 
-* **[標題](#title)**:
+* **[標題](#title)**：
 
    * 主控台會向使用者顯示這項資訊，並在編輯時顯示在頁面內容的頂端。
-   * 此欄位為必填.
+   * 此欄位為必填。
 
-* **[名稱](#name)**:
+* **[名稱](#name)**：
 
    * 這會用來產生URI。
    * 此欄位的使用者輸入為選用。 如果未指定，則會從標題衍生名稱。

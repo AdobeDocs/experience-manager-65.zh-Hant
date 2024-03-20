@@ -7,14 +7,15 @@ content-type: reference
 feature: Accessibility
 role: User, Admin
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
-source-git-commit: 29fb61f9fdcb72864068662d935bc01779b9e451
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 1%
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
-# [!DNL Dynamic Media] 中的協助工具 {#working-with-three-d-assets-dm}
+# 中的協助工具 [!DNL Dynamic Media] {#working-with-three-d-assets-dm}
 
 [!DNL Dynamic Media] 在編寫使用者介面中支援鍵盤控制和輔助技術，例如JAWS和NVDA熒幕閱讀器。
 
@@ -69,4 +70,4 @@ Dynamic Media支援以隱藏式字幕傳送視訊與最適化視訊集。 註解
 >[!MORELIKETHIS]
 >
 >* [Adobe解決方案的協助工具](https://www.adobe.com/accessibility.html)
->* [ [!DNL Experience Manager Assets]](/help/assets/accessibility.md) 中的協助工具
+>* [中的協助工具 [!DNL Experience Manager Assets]](/help/assets/accessibility.md)

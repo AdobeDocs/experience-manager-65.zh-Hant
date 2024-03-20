@@ -7,9 +7,10 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: PDF Generator
 exl-id: 402c1fd4-c6c8-494e-b452-b56a91c4a397
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ PDF Generator可讓您為特定型別的檔案啟用多執行緒檔案轉換。 
 
 >[!NOTE]
 >
-Microsoft® Excel、Microsoft® Visio、Microsoft® Project或Microsoft® Publisher不支援多執行緒檔案轉換。
+>Microsoft® Excel、Microsoft® Visio、Microsoft® Project或Microsoft® Publisher不支援多執行緒檔案轉換。
 
 OpenOffice或PDFMaker的每個例項都是使用個別的使用者帳戶啟動。 您新增的每個使用者帳戶都必須是Forms Server電腦上具有系統管理許可權的有效使用者。 在叢集環境中，叢集的所有節點都必須有相同的使用者集。
 
@@ -67,7 +68,7 @@ OpenOffice或PDFMaker的每個例項都是使用個別的使用者帳戶啟動�
 
    >[!NOTE]
    >
-   確保您已為「user1」和「user2」指派系統使用者和PDFG使用者角色。 若要將PDFG角色指派給使用者，請參閱 [新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account)
+   >確保您已為「user1」和「user2」指派系統使用者和PDFG使用者角色。 若要將PDFG角色指派給使用者，請參閱 [新增使用者帳戶](enabling-multi-threaded-file-conversions.md#add-a-user-account)
 
 1. 同樣在/etc/sudoers檔案中，找到並註解此行，方式是在行首新增數字元號(#)：
 
@@ -88,7 +89,7 @@ OpenOffice或PDFMaker的每個例項都是使用個別的使用者帳戶啟動�
 
 >[!NOTE]
 >
-OpenOffice必須安裝在所有PDFG使用者都能存取的目錄位置。 您可以以PDFG使用者身分登入，並檢查您是否可以在沒有問題的情況下啟動OpenOffice，以確認這點。
+>OpenOffice必須安裝在所有PDFG使用者都能存取的目錄位置。 您可以以PDFG使用者身分登入，並檢查您是否可以在沒有問題的情況下啟動OpenOffice，以確認這點。
 
 ### 新增使用者帳戶 {#add-a-user-account}
 
@@ -97,7 +98,7 @@ OpenOffice必須安裝在所有PDFG使用者都能存取的目錄位置。 您�
 
    >[!NOTE]
    >
-   如果您正在設定OpenOffice的使用者，OpenOffice的執行個體數目不能大於此步驟中指定的使用者帳戶數目。
+   >如果您正在設定OpenOffice的使用者，OpenOffice的執行個體數目不能大於此步驟中指定的使用者帳戶數目。
 
 1. 重新啟動Forms伺服器。
 

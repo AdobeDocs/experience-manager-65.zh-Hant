@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin
 feature: Asset Management,Developer Tools
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 3%
+source-wordcount: '470'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +21,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->如果您使用 [!DNL Experience Manager] 如果您打算處理大量大型PSD或PSB檔案，請在AdobeManaged Services (AMS)時聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，針對您的AMS部署實作這些最佳實務，並針對Adobe的專有格式選擇最佳可行的工具和模型。 [!DNL Experience Manager] 可能無法處理超過 30000 x 23000 像素的極高解析度 PSB 檔案。
+>如果您使用 [!DNL Experience Manager] 如果您打算處理大量大型PSD或PSB檔案，請在AdobeManaged Services (AMS)時聯絡Adobe客戶支援。 與Adobe客戶支援代表合作，針對您的AMS部署實作這些最佳實務，並針對Adobe的專有格式選擇最佳可行的工具和模型。 [!DNL Experience Manager] 可能無法處理超過30000 x 23000畫素的高解析度PSB檔案。
 
 ## [!DNL Adobe Camera Raw] 資料庫 {#adobe-camera-raw-library}
 

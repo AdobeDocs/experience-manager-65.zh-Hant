@@ -7,10 +7,11 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 1%
+source-wordcount: '1767'
+ht-degree: 0%
 
 ---
 
@@ -141,7 +142,7 @@ Newsletter的說明。
 >
 >依預設，引數的值為 `localhost:4502` 如果執行中執行個體的連線埠已變更，則無法完成和作業。
 
-在常用的電子郵件用戶端之間切換，可查看銷售機會端所看到的 Newsletter 外觀。依預設，您的Newsletter會開啟，但未選取任何電子郵件使用者端。
+在常用的電子郵件使用者端之間切換，可檢視潛在客戶所看到的Newsletter外觀。 依預設，您的Newsletter會開啟，但未選取任何電子郵件使用者端。
 
 目前，您可以在下列電子郵件使用者端中檢視電子報：
 

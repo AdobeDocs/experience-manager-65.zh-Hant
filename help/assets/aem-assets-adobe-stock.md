@@ -6,7 +6,8 @@ feature: Search, Adobe Stock
 role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 hide: true
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2446'
 ht-degree: 3%
@@ -313,7 +314,7 @@ IMS 設定包括兩個步驟：
 
 | 使用者 | 群組 | 權限 | 接受使用者偏好設定中的Stock設定 | 存取資產 | 存取Adobe Stock |
 | --- | --- | --- | --- | --- | --- |
-| 管理員 | N/A | 全部 | N/A | 是 | 是 |
+| 管理員 | 不適用 | 全部 | 不適用 | 是 | 是 |
 | test-doc1 | DAM 使用者 | /conf/global /settings/stock/cloud-config | 是 | 是 | 是 |
 | test-doc1 | DAM 使用者 | /conf/global /settings/stock/cloud-config | 否 | 錯誤：無法載入資料 | 否 |
 | test-doc1 | DAM 使用者 | **允許**： /conf/global /settings/stock     **拒絕**： /cloud-config | Stock設定不可見 | 是 | 否 |

@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 1%
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +51,7 @@ ht-degree: 1%
 
 1. 建立下列設定：
 
-   * **根路徑:** `/crx/server`
+   * **根路徑：** `/crx/server`
    * 勾選下方的方塊 **使用絕對URI**.
 
 1. 完成使用CRXDE Lite時，請確定您再次停用WebDAV。

@@ -6,7 +6,8 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2017'
 ht-degree: 0%
@@ -96,7 +97,7 @@ AEM Forms資料庫會儲存內容，例如表單人工因素、服務組態、�
 
 >[!NOTE]
 >
-如果您的AEM表單環境是從舊版AEM表單升級而來，並使用DB2，則不支援線上備份。 在這種情況下，您必須關閉AEM表單並執行離線備份。 未來版本的AEM表單將支援為升級客戶進行線上備份。
+>如果您的AEM表單環境是從舊版AEM表單升級而來，並使用DB2，則不支援線上備份。 在這種情況下，您必須關閉AEM表單並執行離線備份。 未來版本的AEM表單將支援為升級客戶進行線上備份。
 
 IBM有一套工具和協助系統，可協助資料庫管理員管理其備份和復原工作：
 
@@ -132,7 +133,7 @@ SQL Server還提供兩種備份與復原工具：
 
 >[!NOTE]
 >
-MySQL的預設二進位記錄模式為「陳述式」，與Content Services使用的表格不相容（已棄用）。 在此預設模式下使用二進位記錄會導致Content Services （已棄用）失敗。 如果您的系統包含Content Services （已棄用），請使用「混合」記錄模式。 若要啟用「混合」記錄，請將下列引數新增至my.ini檔案： `binlog_format=mixed log-bin=logname`
+>MySQL的預設二進位記錄模式為「陳述式」，與Content Services使用的表格不相容（已棄用）。 在此預設模式下使用二進位記錄會導致Content Services （已棄用）失敗。 如果您的系統包含Content Services （已棄用），請使用「混合」記錄模式。 若要啟用「混合」記錄，請將下列引數新增至my.ini檔案： `binlog_format=mixed log-bin=logname`
 
 您可以使用mysqldump公用程式來取得完整的資料庫備份。 需要完整備份，但並不總是方便的。 它們會產生大型備份檔案，並需要時間來產生。 若要執行增量備份，請確定您啟動伺服器的方式為 —  `log-bin` 選項，如上一節所述。 每當MySQL伺服器重新啟動時，它就會停止寫入目前的二進位記錄檔，建立新的記錄檔，從那時起，新的記錄檔就會變成目前的記錄檔。 您可以使用手動強制切換 `FLUSH LOGS SQL` 命令。 第一次完整備份後，後續的增量備份會使用mysqladmin公用程式搭配 `flush-logs` 指令，可建立下一個記錄檔。
 
@@ -193,6 +194,6 @@ log-bin=logname
 
 >[!NOTE]
 >
-依預設，隨AEM表單安裝的Adobe字型位於 `[aem-forms root]/fonts` 目錄。
+>依預設，隨AEM表單安裝的Adobe字型位於 `[aem-forms root]/fonts` 目錄。
 
 如果您正在重新初始化主機電腦上的作業系統，並且想要使用先前作業系統的字型，則系統字型目錄的內容也應進行備份。 （如需特定指示，請參閱作業系統的檔案）。

@@ -5,7 +5,8 @@ topic-tags: publish, document_services
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3667'
 ht-degree: 1%
@@ -65,7 +66,7 @@ AEM提供直覺式使用者介面，讓您使用提供的工作流程步驟建�
 
 1. 開啟「工作流程模型」主控台。 預設URL為 `https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
 1. 選取 **建立**，然後 **建立模型**. 「新增工作流程模型」對話方塊隨即顯示。
-1. 輸入 **標題** 和 **名稱** （選擇性）。 例如，抵押貸款應用程式。 選取 **完成**.
+1. 輸入 **標題** 和 **名稱** （選擇性）。 例如，抵押貸款應用程式。 選取「**完成**」。
 1. 選取新建立的工作流程模型並選取 **編輯**. 現在，您可以新增工作流程步驟以建立商業邏輯。 第一次建立工作流程模型時，模型會包含：
 
    * 步驟：流程開始與流程結束。 這些步驟代表工作流程的開始和結束。 這些步驟為必要步驟，無法編輯或移除。

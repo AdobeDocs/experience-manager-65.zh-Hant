@@ -6,7 +6,8 @@ content-type: reference
 topic-tags: author, correspondence-management
 feature: Adaptive Forms, Foundation Components
 exl-id: 01f4fdd3-fd2a-4e90-9c91-c1b05bbc2c6a
-source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 4%
@@ -46,10 +47,10 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->在桌上型電腦裝置上進行多重選取：
+在桌上型電腦裝置上進行多重選取：
 >
->* Windows：按住Ctrl鍵並按一下必要元件。
->* macOS： Command +按一下所需元件。
+* Windows：按住Ctrl鍵並按一下必要元件。
+* macOS： Command +按一下所需元件。
 >
 
 ## 主題編輯器  {#themeeditor}
@@ -64,7 +65,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->標示為&#39;&amp;ast；&#39;的捷徑可與macOS上的Ctrl和Command鍵搭配使用。
+標示為&#39;&amp;ast；&#39;的捷徑可與macOS上的Ctrl和Command鍵搭配使用。
 
 ## 內容瀏覽器  {#contentbrowser}
 
@@ -173,7 +174,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><p>將游標移至頁面結尾</p> </td> 
-   <td><p>向下翻頁</p> </td> 
+   <td><p>下一頁</p> </td> 
    <td>Fn+向下鍵</td> 
   </tr>
   <tr>
@@ -247,7 +248,7 @@ ht-degree: 4%
    <th><strong>macOS上的捷徑</strong><br /> </th> 
   </tr>
   <tr>
-   <td><p>復原 </p> </td> 
+   <td><p>還原 </p> </td> 
    <td><p>Ctrl+Z</p> </td> 
    <td>Command+Z / Ctrl+Command+Z</td> 
   </tr>

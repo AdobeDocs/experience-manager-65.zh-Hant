@@ -5,10 +5,11 @@ contentOwner: AG
 role: User, Admin
 feature: Developer Tools,Asset Management
 exl-id: 53e310a9-c511-447a-91bd-8c5b2760dc03
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2110'
-ht-degree: 1%
+source-wordcount: '2088'
+ht-degree: 0%
 
 ---
 
@@ -215,7 +216,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 若要自訂您的Asset Editor頁面，請使用sidekick中的元素。 可從存取的Asset Editor頁面 **Geometrixx新聞中心** 是根據此範本自訂的頁面版本：
 
-![assetshare6](assets/assetshare6.png)
+![資產共用6](assets/assetshare6.png)
 
 #### 設定Asset Editor以從Asset Share頁面開啟 {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
@@ -255,7 +256,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 |---|---|
 | **[!UICONTROL 中繼資料表單] 和 [!UICONTROL 中繼資料文字欄位]** | 可讓您新增其他中繼資料至資產，以及對該資產執行動作，例如提交。 |
 | **[!UICONTROL 子資產]** | 可讓您自訂子資產。 |
-| **標記** | 可讓使用者選取標籤並將其新增至資產。 |
+| **標籤** | 可讓使用者選取標籤並將其新增至資產。 |
 | **[!UICONTROL 縮圖]** | 顯示資產的縮圖及其檔案名稱，並可讓您新增替代文字。 您也可以在這裡新增Asset Editor動作。 |
 | **[!UICONTROL 標題]** | 顯示可自訂的資產標題。 |
 
@@ -379,7 +380,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 | [!UICONTROL 編輯] | 可讓使用者編輯影像（互動式編輯） |
 | [!UICONTROL Lightbox] | 將資產儲存至「燈箱」，讓您在其中執行其他動作。 這項功能可在處理多個頁面的資產時方便使用。 |
 | [!UICONTROL 鎖定] | 可讓使用者鎖定資產。 預設不會啟用此功能，且必須在元件清單中啟用。 |
-| [!UICONTROL 參考] | 按一下此以在使用資產的頁面上顯示。 |
+| [!UICONTROL 引用] | 按一下此以在使用資產的頁面上顯示。 |
 | [!UICONTROL 版本設定] | 可讓您建立和還原資產的版本。 |
 
 1. 將適當的動作拖曳至 **動作** 區域。 這會建立一個選項，用來執行在頁面上拖曳的動作。

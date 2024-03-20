@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 exl-id: ed662279-0679-4ba3-b744-6649fb8dda17
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 * [定義測試案例](/help/sites-developing/test-cases.md)
 * [測試 — 何時與誰？](/help/sites-developing/when-who.md)
 
-## 開始之前 {#before-you-start}
+## 在您開始之前 {#before-you-start}
 
 開始實際分析和定義測試之前，請先檢閱下列資訊：
 
@@ -71,7 +72,7 @@ ht-degree: 0%
 
 它們用於說明不同條件下的效能：
 
-* 普通
+* 一般
 
   網站在90%的時間內都會體驗的條件。 例如，當只有部分作者使用系統時。
 

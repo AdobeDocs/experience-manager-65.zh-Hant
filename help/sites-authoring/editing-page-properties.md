@@ -2,7 +2,8 @@
 title: 編輯內容頁面屬性
 description: 在Adobe Experience Manager中定義頁面的必要屬性。
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1855'
 ht-degree: 3%
@@ -13,7 +14,7 @@ ht-degree: 3%
 
 您可以定義頁面的必要屬性。 這些值可能會因頁面性質而異。 例如，有些頁面可能已連線至即時副本，有些頁面則未連線，因此即時副本資訊會適時提供。
 
-## 頁面內容 {#page-properties}
+## 頁面屬性 {#page-properties}
 
 屬性分佈於數個索引標籤中。
 
@@ -46,7 +47,7 @@ ht-degree: 3%
 
 * **品牌化**
 
-  藉由將品牌概要附加至每個頁面標題，跨頁面套用一致的品牌識別。 此功能需使用2.14.0版或更新版本的頁面元件， [核心元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+  藉由將品牌概要附加至每個頁面標題，跨頁面套用一致的品牌識別。 此功能需使用2.14.0版或更新版本的頁面元件， [核心元件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)
 
    * **覆寫**  — 勾選以在此頁面上定義品牌概要。
       * 此值會由任何子頁面繼承，除非這些頁面同時具有 **覆寫** 值已設定。
@@ -340,7 +341,7 @@ ht-degree: 3%
 
       * 您可以選取/取消選取（如有必要）
 
-   * 索引標籤
+   * 標籤
 
       * 和檢視單一頁面屬性時一樣，屬性會依索引標籤排序。
 

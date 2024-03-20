@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: add05d22-3a11-49e9-a554-2315962552d5
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '917'
 ht-degree: 1%
 
 ---
@@ -54,7 +55,7 @@ ht-degree: 1%
    >
    >視電子郵件服務提供者而定，您的對話方塊可能會有所不同。
 
-1. 在 **表單** 索引標籤中，選取使用者提交表單後要前往的感謝頁面（如果留白，表單會在提交時重新顯示）。 按一下&#x200B;**「確定」**。一個 **電子郵件ID** 元件會顯示在表單中，您可在此建立表單，讓使用者可在其中提交電子郵件地址以訂閱或取消訂閱郵寄清單。
+1. 在 **表單** 索引標籤中，選取使用者提交表單後要前往的感謝頁面（如果留白，表單會在提交時重新顯示）。 按一下 **確定**. 一個 **電子郵件ID** 元件會顯示在表單中，您可在此建立表單，讓使用者可在其中提交電子郵件地址以訂閱或取消訂閱郵寄清單。
 1. 新增 **提交** 按鈕元件 **表單** sidekick中的一節。
 
    表單已準備就緒。 發佈上述步驟中設定的頁面，以及 **感謝您** 頁面至發佈執行個體。 任何造訪頁面的潛在訂閱者都可以填寫表單並訂閱設定中提供的清單。

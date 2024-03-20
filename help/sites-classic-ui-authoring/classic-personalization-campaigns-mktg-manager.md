@@ -7,7 +7,8 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 0%
@@ -59,7 +60,7 @@ AEM提供不同的報表，協助您分析及監控執行個體的狀態。 此M
 * **[行銷活動](#campaigns)**
 您可以在此處管理您的品牌、行銷活動和體驗。
 
-## 控制面板 {#dashboard}
+## 儀表板 {#dashboard}
 
 儀表板會顯示四個窗格，為您提供清單（銷售機會）、區段、報表和行銷活動的概覽。 您也可以在此處存取這些工具的基本功能。
 

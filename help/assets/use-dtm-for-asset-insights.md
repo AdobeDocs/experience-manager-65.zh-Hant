@@ -5,10 +5,11 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 2%
+source-wordcount: '631'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +33,7 @@ AdobeDynamic Tag Management是可啟用您的數位行銷工具的工具。 Adob
 
    * 選取 **[!UICONTROL Web屬性]** 標籤，然後按一下 **[!UICONTROL 新增屬性]**.
 
-   * 視需要更新欄位，然後按一下 **[!UICONTROL 建立屬性]**. 另請參閱 [檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hant).
+   * 視需要更新欄位，然後按一下 **[!UICONTROL 建立屬性]**. 另請參閱 [檔案](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).
 
    ![建立編輯Web屬性](assets/Create-edit-web-property.png)
 

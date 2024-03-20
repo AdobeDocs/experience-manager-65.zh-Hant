@@ -2,9 +2,10 @@
 title: 使用IMS與Adobe Analytics整合
 description: 瞭解如何使用IMS整合AEM與Adobe Analytics
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1042'
 ht-degree: 2%
 
 ---
@@ -155,7 +156,7 @@ ht-degree: 2%
 返回AEM時，您可以新增Analytics整合專案中所需的值來完成IMS設定：
 
 1. 返回 [在AEM中開啟的IMS設定](#configuring-an-ims-configuration-generating-a-public-key).
-1. 選取 **下一個**.
+1. 選取&#x200B;**「下一步」**。
 
 1. 在這裡，您可以使用 [為Adobe Developer主控台整合專案儲存的詳細資訊](#details-stored-for-the-ims-integration-project)：
 
@@ -171,13 +172,13 @@ ht-degree: 2%
 
 1. 您的Adobe Analytics設定會顯示在AEM主控台中。
 
-   ![IMS 設定](assets/integrate-analytics-io-11.png)
+   ![IMS設定](assets/integrate-analytics-io-11.png)
 
 ## 確認IMS設定 {#confirming-the-ims-configuration}
 
 若要確認組態是否如預期般運作：
 
-1. 開啟:
+1. 開啟：
 
    * `https://localhost<port>/libs/cq/adobeims-configuration/content/configurations.html`
 

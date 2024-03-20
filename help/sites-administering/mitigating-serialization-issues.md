@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: 01e9ab67-15e2-4bc4-9b8f-0c84bcd56862
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 0%
@@ -73,9 +74,9 @@ NotSoSerial代理程式不包含在應用程式伺服器的AEM標準散發中。
 
    >[!NOTE]
    >
-   您也可以透過存取URL直接存取設定頁面：
+   >您也可以透過存取URL直接存取設定頁面：
    >
-   * `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
+   >* `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
 
 此設定包含允許清單、封鎖清單和反序列化記錄。
 
@@ -107,7 +108,7 @@ NotSoSerial代理程式不包含在應用程式伺服器的AEM標準散發中。
 
 >[!NOTE]
 >
-如果您新增 `org.apache.commons.collections.functors` 對於允許清單，健康狀態檢查一律會失敗。
+>如果您新增 `org.apache.commons.collections.functors` 對於允許清單，健康狀態檢查一律會失敗。
 
 ## 處理動態代理程式載入的錯誤 {#handling-errors-with-dynamic-agent-loading}
 
@@ -123,11 +124,11 @@ NotSoSerial代理程式不包含在應用程式伺服器的AEM標準散發中。
 
    >[!NOTE]
    >
-   您也必須使用 — nofork CQ/AEM選項以及適當的JVM記憶體設定，因為代理程式並未在分支JVM上啟用。
+   >您也必須使用 — nofork CQ/AEM選項以及適當的JVM記憶體設定，因為代理程式並未在分支JVM上啟用。
 
    >[!NOTE]
    >
-   NotSoSerial代理程式jar的Adobe分佈可在 `crx-quickstart/opt/notsoserial/` AEM檔案夾。
+   >NotSoSerial代理程式jar的Adobe分佈可在 `crx-quickstart/opt/notsoserial/` AEM檔案夾。
 
 1. 停止並重新啟動JVM；
 

@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '846'
 ht-degree: 3%
 
 ---
@@ -30,19 +31,19 @@ ht-degree: 3%
   <tr>
    <td><p>縮排</p> </td>
    <td>模組的縮排<p> </p> </td>
-   <td><p>12.7mm</p> </td>
+   <td><p>12.7毫米</p> </td>
    <td><p>任何數字</p> </td>
   </tr>
   <tr>
    <td>數字最小寬度</td>
    <td>使用羅馬數字以外的編號清單時，專案符號/數字欄位上要套用的最小寬度</td>
-   <td>8.0mm</td>
+   <td>8.0毫米</td>
    <td>任何數字</td>
   </tr>
   <tr>
    <td><p>羅馬數字最小寬度</p> </td>
    <td><p>使用羅馬數字時要套用到專案符號/數字欄位的最小寬度</p> </td>
-   <td><p>12.7mm</p> </td>
+   <td><p>12.7毫米</p> </td>
    <td><p>任何數字</p> </td>
   </tr>
   <tr>
@@ -66,7 +67,7 @@ ht-degree: 3%
   <tr>
    <td><p>目標反白顯示色彩</p> </td>
    <td><p>建立通訊應用程式中的目標反白顯示色彩</p> </td>
-   <td><p>90;155;245</p> </td>
+   <td><p>90；155；245</p> </td>
    <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
@@ -78,7 +79,7 @@ ht-degree: 3%
   <tr>
    <td><p>內容反白顯示色彩</p> </td>
    <td><p>建立通訊應用程式中的內容反白顯示顏色</p> </td>
-   <td><p>210;225;245</p> </td>
+   <td><p>210；225；245</p> </td>
    <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
@@ -90,7 +91,7 @@ ht-degree: 3%
   <tr>
    <td><p>欄位反白顯示色彩</p> </td>
    <td><p>建立通訊應用程式中的欄位反白顏色</p> </td>
-   <td><p>210;225;245</p> </td>
+   <td><p>210；225；245</p> </td>
    <td><p>R；G；B格式的任何RGB顏色</p> </td>
   </tr>
   <tr>
@@ -157,7 +158,7 @@ ht-degree: 3%
    <td><p>資料編輯格式</p> </td>
    <td><p>編輯資料格式。 將資料寫入字串或從字串剖析資料時，會使用此方法</p> </td>
    <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
-   <td>--<p> </p> </td>
+   <td>—<p> </p> </td>
   </tr>
   <tr>
    <td><p>管理發布時的信件例項</p> </td>
@@ -240,7 +241,7 @@ ht-degree: 3%
   <tr>
    <td><p>CM使用者根目錄</p> </td>
    <td><p>包含所有Correspondence Management使用者資產的資料夾URL</p> </td>
-   <td><p>--</p> </td>
+   <td><p>—</p> </td>
    <td><p>有效的資料夾位置</p> </td>
   </tr>
   <tr>

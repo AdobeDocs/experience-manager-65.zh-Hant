@@ -1,33 +1,34 @@
 ---
-title: 時間軸檢視中的數位資產活動資料流
+title: 時間軸檢視中數位資產的活動資料流
 description: 本文說明如何在時間軸上顯示資產的活動記錄。
 contentOwner: AG
 feature: Asset Management
 role: User, Admin
 exl-id: 28dc0aa5-f2be-4e27-b7d8-415569b7ecd4
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 21%
+source-wordcount: '204'
+ht-degree: 12%
 
 ---
 
 # 時間軸中的活動資料流 {#activity-stream-in-timeline}
 
-此功能會在時間軸上顯示資產的活動記錄。 如果您在中執行下列任何資產相關作業 [!DNL Adobe Experience Manager Assets]，活動資料流功能會更新時間軸以反映活動。
+此功能會顯示時間軸上資產的活動記錄。 如果您在中執行下列任何資產相關作業 [!DNL Adobe Experience Manager Assets]，活動資料流功能會更新時間軸以反映活動。
 
-活動資料流中會記錄下列作業：
+下列作業會記錄於活動資料流中：
 
 * 建立
 * 刪除
 * 下載（包括轉譯）
 * 發佈
 * 未發佈
-* 批准
+* 核准
 * 拒絕
 * 移動
 
-將從儲存日誌檔案的CRX位置提取要在時 `/var/audit/com.day.cq.dam/content/dam` 間軸中顯示的活動日誌。此外，上傳新資產或修改現有資產並簽入時，會記錄時間軸活動 [!DNL Experience Manager] 透過 [Adobe資產連結](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) 或 [Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
+將從位置擷取要在時間軸中顯示的活動記錄 `/var/audit/com.day.cq.dam/content/dam` 在CRX中儲存記錄檔。 此外，當上傳新資產或修改現有資產並簽入時，會記錄時間軸活動 [!DNL Experience Manager] via [Adobe資產連結](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) 或 [Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
 
 >[!NOTE]
 >
@@ -37,7 +38,7 @@ ht-degree: 21%
 
 ![時間軸–2](assets/timeline-2.png)
 
-時間軸會顯示您對資產執行之作業的活動資料流。
+時間軸會顯示您對資產執行之操作的活動資料流。
 
 ![activity_stream](assets/activity_stream.png)
 

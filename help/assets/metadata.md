@@ -7,10 +7,11 @@ feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2359'
-ht-degree: 11%
+source-wordcount: '2332'
+ht-degree: 10%
 
 ---
 
@@ -113,7 +114,7 @@ ht-degree: 11%
 
    | 中繼資料匯入引數 | 說明 |
    |:---|:---|
-   | [!UICONTROL 批次大小] | 批次中要匯入中繼資料的資產數量。 預設值為 50。最大值為100。 |
+   | [!UICONTROL 批次大小] | 批次中要匯入中繼資料的資產數量。 預設值為50。 最大值為100。 |
    | [!UICONTROL 欄位分隔符號] | 預設值為 `,` （逗號）。 您可以指定任何其他字元。 |
    | [!UICONTROL 多值分隔符號] | 中繼資料值的分隔符號。 預設值為 `|`. |
    | [!UICONTROL 啟動工作流程] | 預設為False。 當設定為 `true` 和預設設定對有效 [!UICONTROL DAM中繼資料回寫] 工作流程(將中繼資料寫入二進位XMP資料)。 啟用工作流程會拖慢系統速度。 |

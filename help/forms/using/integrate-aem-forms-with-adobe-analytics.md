@@ -3,7 +3,8 @@ title: 如何將AEM Forms與Adobe Analytics整合？
 description: AEM Forms與Adobe Analytics整合，以擷取及追蹤您已發佈表單的績效量度。
 docset: aem65
 exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1762'
 ht-degree: 0%
@@ -214,7 +215,7 @@ AEM Forms整合 [Adobe Analytics](https://experienceleague.adobe.com/docs/analyt
 
 1. 選取建立的屬性名稱，同時 [設定Adobe Analytics](#install-extensions).
 
-1. 選取 **[!UICONTROL 儲存並關閉]**.
+1. 選取「**[!UICONTROL 儲存並關閉]**」。
 
 1. 發佈設定。
 

@@ -4,7 +4,8 @@ description: 建立規則，將互動性、商業邏輯和智慧型驗證新增�
 page-status-flag: de-activated
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 exl-id: 0202ca65-21ef-4477-b704-7b52314a7d7b
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1115'
 ht-degree: 0%

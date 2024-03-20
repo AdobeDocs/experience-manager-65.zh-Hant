@@ -5,10 +5,11 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '1704'
-ht-degree: 2%
+source-wordcount: '1574'
+ht-degree: 1%
 
 ---
 
@@ -38,7 +39,7 @@ ht-degree: 2%
 1. **開啟編輯器** 針對 **clothescatalog的Solr設定範例**.
 
 1. 在 **目錄版本** 使用 **新增目錄版本** 以新增 `outdoors-Staged` 和 `outdoors-Online` 至清單。
-1. **儲存設定。**
+1. **儲存** 設定。
 1. 開啟 **SOLR專案型別** 以新增 **SOLR排序** 至 `ClothesVariantProduct`：
 
    * 關聯性（「關聯性」，分數）
@@ -83,7 +84,7 @@ ht-degree: 2%
 
    ![chlimage_1-39](/help/sites-administering/assets/chlimage_1-39a.png)
 
-1. **儲存變更。**
+1. **儲存** 變更。
 1. 再次從 **SOLR專案型別**，調整 `price` facet根據下列熒幕擷取畫面。 如同 `category`，按兩下 `price` 以開啟 **索引屬性** 標籤：
 
    ![chlimage_1-40](/help/sites-administering/assets/chlimage_1-40a.png)
@@ -92,7 +93,7 @@ ht-degree: 2%
 
    ![chlimage_1-41](/help/sites-administering/assets/chlimage_1-41a.png)
 
-1. **儲存變更。**
+1. **儲存** 變更。
 1. 開啟 **系統**， **Facet搜尋**，然後 **索引器操作精靈**. 啟動cronjob：
 
    * **索引器作業**： `full`
@@ -382,12 +383,12 @@ hybris套件隨附有目錄匯入工具，可用於設定初始頁面結構。
 
    例如：
 
-   * 開啟:
+   * 開啟：
 
      [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
 
    * 轉出 `Hybris Base` 目錄
-   * 開啟:
+   * 開啟：
 
      [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 

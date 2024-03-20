@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '7143'
+source-wordcount: '7164'
 ht-degree: 0%
 
 ---
@@ -51,7 +52,7 @@ ht-degree: 0%
 
    如需支援屬性的完整清單，請參閱 [Watched資料夾內容](#watchedfolderproperties).
 
-1. 按一下&#x200B;**「儲存全部」**。建立節點並儲存屬性之後。 此 `input`， `result`， `failure`， `preserve`、和 `stage`資料夾會建立於 `folderPath` 屬性。
+1. 按一下 **全部儲存**. 建立節點並儲存屬性之後。 此 `input`， `result`， `failure`， `preserve`、和 `stage`資料夾會建立於 `folderPath` 屬性。
 
    掃描作業會以定義的時間間隔開始掃描Watched資料夾。
 
@@ -73,7 +74,7 @@ ht-degree: 0%
 
    * 發佈
 
-   * author,publish
+   * 作者，發佈
 
    * 發佈，作者
 
@@ -120,7 +121,7 @@ ht-degree: 0%
 如需檔案模式的詳細資訊，請參閱 [關於檔案模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)
 
 * **waitTime （長）**：建立資料夾或檔案後，掃描資料夾或檔案前的等待時間（以毫秒為單位）。 例如，如果等待時間為3,600,000毫秒（一小時），且檔案是在一分鐘前建立的，則系統會在59分鐘或更長時間後擷取此檔案。 預設值為 0。此設定對於確保檔案或資料夾完全複製到輸入資料夾非常有用。 例如，如果您有大型檔案要處理，且檔案下載需要10分鐘，請將等待時間設為10&#42;60 &#42;1000毫秒。 這可防止Watched資料夾在檔案未滿十分鐘時掃描檔案。
-* **purgeDuration （長）**：結果資料夾中的檔案和資料夾早於此值時會遭到清除。 此值以天為單位測量。 此設定對於確保結果資料夾不會填滿非常有用。 值為–1天表示絕不刪除結果資料夾。 預設值為–1。
+* **purgeDuration （長）**：結果資料夾中的檔案和資料夾早於此值時會遭到清除。 此值以天為單位測量。 此設定對於確保結果資料夾不會填滿非常有用。 值為–1天表示絕不刪除結果資料夾。 預設值為 -1。
 * **resultFolderName （字串）**：儲儲存存結果的資料夾。 如果結果未出現在此資料夾中，請檢查失敗資料夾。 唯讀檔案不會處理並儲存在失敗資料夾中。 此值可以是具有以下檔案模式的絕對或相對路徑：
 
    * %F =檔案名稱前置詞

@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 49f95b31-92cd-4124-8c0f-c9802099fd0b
-source-git-commit: 27e5c7fea4e90873bf80f976e179b5af0088f550
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 4%
+ht-degree: 1%
 
 ---
 
@@ -41,7 +42,7 @@ ht-degree: 4%
 
 在作者環境中，作者可透過存取頁面屬性並在中輸入一或多個標籤來套用標籤 **標籤/關鍵字** 欄位。
 
-要套用 [預先定義的標籤](/help/sites-administering/tags.md)，在 **頁面屬性** 視窗使用 **標籤** 欄位和 **選取標籤** 視窗。 「標 **準標籤** 」標籤是預設的命名空間，這表示分類 `namespace-string:` 沒有前置詞。
+要套用 [預先定義的標籤](/help/sites-administering/tags.md)，在 **頁面屬性** 視窗使用 **標籤** 欄位和 **選取標籤** 視窗。 此 **標準標籤** tab是預設的名稱空間，這表示沒有 `namespace-string:` 在分類前面加上前置詞。
 
 ![選取標籤視窗；使用X按鈕取消選取目前選取的標籤](assets/chlimage_1-41.png)
 

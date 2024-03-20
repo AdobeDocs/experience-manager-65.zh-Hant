@@ -7,10 +7,11 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 1f46a57f-4966-4dd1-8c99-c0740718ae76
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -49,13 +50,13 @@ AEM的製作環境提供多種搜尋內容的機制，視資源型別而定。
 
 按一下以執行搜尋 **搜尋** 位於窗格底部。 按一下 **重設** 以清除搜尋條件。
 
-## 篩選 {#filter}
+## 篩選條件 {#filter}
 
 您可以在不同的位置設定（和清除）篩選器，以向下鑽研並調整您的檢視：
 
 ![chlimage_1-102](assets/chlimage_1-102.png)
 
-## 尋找和取代 {#find-and-replace}
+## 尋找並取代 {#find-and-replace}
 
 在 **網站** 主控台a **尋找和取代** 功能表選項可讓您在網站的某個區段中搜尋及取代字串的多個執行個體。
 

@@ -5,9 +5,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2242'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -119,7 +120,7 @@ Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended一起安�
   </tr>
   <tr>
    <td><p>Designer （獨立）</p> </td>
-   <td><p>無。<br />Workbench隨附的Designer版本僅限英文。 <br />Workbench安裝程式不會重新安裝新版的Designer。 而是會修補與Workbench安裝程式隨附的更新版本。 這也可讓您在Workbench中使用本地化版本的Designer。<br /> </p> </td>
+   <td><p>無。 <br />Workbench隨附的Designer版本僅限英文。 <br />Workbench安裝程式不會重新安裝新版的Designer。 而是會修補與Workbench安裝程式隨附的更新版本。 這也可讓您在Workbench中使用本地化版本的Designer。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -158,13 +159,13 @@ Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended一起安�
 
    >[!NOTE]
    >
-   您可以保持取消選取此選項，繼續使用隨Acrobat 10安裝的Designer。
+   >您可以保持取消選取此選項，繼續使用隨Acrobat 10安裝的Designer。
 
 1. 接受列出的預設目錄，或按一下「選擇」並導覽至您要安裝Workbench的目錄，然後按一下「下一步」。
 
    >[!NOTE]
    >
-   安裝目錄路徑不應包含# （井號）和$ （美元）字元。
+   >安裝目錄路徑不應包含# （井號）和$ （美元）字元。
 
 1. 檢閱安裝前摘要，然後按一下安裝。 安裝程式會顯示安裝進度。
 1. 檢閱安裝摘要。 選取「啟動AEM Forms Workbench」 ，以啟動Workbench，然後按一下「下一步」 。
@@ -184,7 +185,7 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
 >[!NOTE]
 >
-如果您已將AEM Forms設定為使用EMC Documentum®或IBM® FileNet Repository Provider ，而且您想登入儲存區域(AEM Forms管理主控台中設定為預設儲存區域以外的儲存區域)，請以username@Repository格式提供使用者名稱。
+>如果您已將AEM Forms設定為使用EMC Documentum®或IBM® FileNet Repository Provider ，而且您想登入儲存區域(AEM Forms管理主控台中設定為預設儲存區域以外的儲存區域)，請以username@Repository格式提供使用者名稱。
 
 ### 設定逾時設定 {#configuring-timeout-settings}
 
@@ -196,7 +197,7 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
 >[!NOTE]
 >
-[Workbench_HOME] 代表您安裝Workbench的目錄。 預設位置為C:\Program Files (x86)\Adobe Experience Manager Forms Workbench。
+>[Workbench_HOME] 代表您安裝Workbench的目錄。 預設位置為C:\Program Files (x86)\Adobe Experience Manager Forms Workbench。
 
 請確定您使用憑證中指定的名稱來連線至HTTPS。 此名稱通常是完整的主機名稱。
 
@@ -205,12 +206,13 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
    >[!NOTE]
    >
-   若要匯出憑證，請開啟網頁瀏覽器並登入管理主控台。 在瀏覽器中安裝憑證，然後從瀏覽器將憑證匯出至暫存位置(或直接匯出至 [Workbench_HOME]/workbench/jre/lib/security directory)。
+   >若要匯出憑證，請開啟網頁瀏覽器並登入管理主控台。 在瀏覽器中安裝憑證，然後從瀏覽器將憑證匯出至暫存位置(或直接匯出至 [Workbench_HOME]/workbench/jre/lib/security directory)。
 
 1. 將憑證複製到 [Workbench_HOME]/workbench/jre/lib/security目錄。
 
 1. 開啟命令提示視窗，瀏覽至 [Workbench_HOME]/workbench/jre/bin，然後輸入下列命令：
-   `keytool -import -storepass changeit -file [Workbench_HOME]\workbench\jre\lib\security\ssl_cert_for_certname.cer -keystore [Workbench_HOME]\workbench\jre\lib\security\cacerts -alias example`其中：
+   `keytool -import -storepass changeit -file [Workbench_HOME]\workbench\jre\lib\security\ssl_cert_for_certname.cer -keystore [Workbench_HOME]\workbench\jre\lib\security\cacerts -alias example`
+其中：
    * `changeit` 是cacerts金鑰存放區的預設密碼。
    * certname是您在步驟1中選取的憑證。
    * 範例是您為憑證選擇的別名。 此值可以變更。

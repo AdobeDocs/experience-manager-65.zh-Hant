@@ -5,7 +5,8 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 exl-id: 123087a2-9d09-4579-9185-2ccd7d25bf8d
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -98,7 +99,7 @@ AEM Forms提供自訂工作流程，可叫用下列Assembler服務API：
 * *PDFA檔案*：指定轉換PDF/檔案的儲存位置。 它可以覆寫裝載檔案或儲存在裝載資料夾下。
 * *轉換記錄*：指定轉換記錄的儲存位置。 它可以覆寫裝載檔案，或儲存在裝載資料夾下。
 
-## Forms {#forms}
+## 表單 {#forms}
 
 轉譯PDF表單工作流程是周圍的包裝函式 `renderPDFForm` Forms服務API可使用XDP範本和資料xml建立PDF表單。
 

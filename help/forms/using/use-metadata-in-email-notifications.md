@@ -4,10 +4,11 @@ description: 使用中繼資料在表單工作流程電子郵件通知中填入�
 topic-tags: publish
 docset: aem65
 exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 1%
+source-wordcount: '871'
+ht-degree: 0%
 
 ---
 
@@ -99,7 +100,7 @@ AEM Forms應用程式可立即提供數個中繼資料變數（機碼值組）�
 <table>
  <tbody> 
   <tr> 
-   <td>金鑰</td> 
+   <td>關鍵</td> 
    <td>說明</td> 
   </tr> 
   <tr> 
@@ -173,7 +174,7 @@ AEM Forms應用程式可立即提供數個中繼資料變數（機碼值組）�
    }
    ```
 
-1. 按一下「儲存全部」。現在，指令碼可在AEM工作流程模型中選取。
+1. 按一下「儲存全部」。 現在，指令碼可在AEM工作流程模型中選取。
 
    ![assigntask-metadata](assets/assigntask-metadata.png)
 

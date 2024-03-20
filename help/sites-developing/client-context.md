@@ -8,10 +8,11 @@ content-type: reference
 docset: aem65
 feature: Context Hub
 exl-id: 38b9a795-1c83-406c-ab13-b4456da938dd
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '3000'
-ht-degree: 1%
+source-wordcount: '2969'
+ht-degree: 0%
 
 ---
 
@@ -415,7 +416,7 @@ function getName(){
 
 若要防止屬性 `PersistedSessionStore` 不持續存在(即將其從 `sessionpersistence` cookie)，將屬性新增到持續工作階段存放區的非持續屬性清單中。
 
-請參閱 ` [CQ_Analytics.PersistedSessionStore.setNonPersisted(propertyName)](/help/sites-developing/ccjsapi.md#setnonpersisted-name)`
+另請參閱 ` [CQ_Analytics.PersistedSessionStore.setNonPersisted(propertyName)](/help/sites-developing/ccjsapi.md#setnonpersisted-name)`
 
 ```
 CQ_Analytics.ClientContextUtils.onStoreRegistered("surferinfo", function(store) {
@@ -503,7 +504,7 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
 
 內容存放區元件需要編輯對話方塊。 地理位置編輯對話方塊包含靜態訊息，指出沒有可設定的屬性。
 
-1. 在 `/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog` 節點上按一下右鍵，然後按一下「複製」。
+1. 用滑鼠右鍵按一下 `/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog` 節點，然後按一下複製。
 1. 用滑鼠右鍵按一下 `/apps/myapp/contextstores/geoloc` 節點，然後按一下「貼上」。
 1. 刪除/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items節點下的所有子節點：
 

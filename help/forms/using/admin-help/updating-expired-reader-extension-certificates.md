@@ -2,7 +2,8 @@
 title: Reader擴充功能憑證到期日及其影響
 description: Reader擴充功能憑證到期日及其影響
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -18,7 +19,7 @@ Adobe使用公開金鑰基礎架構(PKI)來核發數位憑證，以用於授權�
 
 新的憑證授權單位， **Adobe根CA G2**&#x200B;現在可以使用基於新憑證授權單位的、和憑證。 在2023年1月7日或之前，開始使用新憑證 — 這些憑證基於 **Adobe根CA G2** —Reader擴充新的PDF檔案。  您可以 [從Adobe授權網站取得新憑證](https://licensing.adobe.com/) 或Adobe支援。
 
-## 常見問答
+## 常見問題
 
 **問：Adobe根憑證與Acrobat Reader擴充功能憑證有何不同？ Adobe根憑證是否依存於Acrobat Reader擴充功能憑證？ 這兩個憑證都會在2023年1月到期嗎？**
 

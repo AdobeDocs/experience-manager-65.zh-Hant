@@ -7,7 +7,8 @@ topic-tags: publish
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 2%
@@ -75,7 +76,7 @@ Document Services元件類別底下提供的Search &amp; Lister元件可用來�
    <td>設定使用AEM Forms UI上傳資產的資料夾。 預設情況下，其中會列出所有上傳的資產。 如需AEM Forms UI的詳細資訊，請參閱 <a href="../../forms/using/introduction-managing-forms.md" target="_blank">管理表單簡介</a>.</td>
   </tr>
   <tr>
-   <td><p><span class="uicontrol"><strong>顯示</strong></code></p> </td>
+   <td><p><span class="uicontrol"><strong>顯示區</strong></code></p> </td>
    <td>標題文字</td>
    <td>搜尋與清單元件的標題。 預設標題為 <strong>Forms入口網站。</strong></td>
   </tr>

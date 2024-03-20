@@ -7,7 +7,8 @@ topic-tags: configuring, Security
 content-type: reference
 feature: Configuring
 exl-id: 7d2e4620-c3a5-4f5a-9eb6-42a706479d41
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '723'
 ht-degree: 0%
@@ -80,19 +81,20 @@ SSO驗證處理常式服務( `com.adobe.granite.auth.sso.impl.SsoAuthenticationH
 >
 >如果您也使用 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 若使用Microsoft® Internet Information Server (IIS)，則需要在中進行其他設定：
 >
-* `disp_iis.ini`
-* IIS
+>* `disp_iis.ini`
+>* IIS
 >
-在 `disp_iis.ini` 設定： (請參閱 [使用Microsoft® Internet Information Server安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) 以取得完整詳細資訊)
+>在 `disp_iis.ini` 設定：
+>(請參閱 [使用Microsoft® Internet Information Server安裝Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) 以取得完整詳細資訊)
 >
-* `servervariables=1` （將IIS伺服器變數作為請求標頭轉送給遠端執行個體）
-* `replaceauthorization=1` (將任何名為「Authorization」的標頭（「Basic」除外）取代為其「Basic」同等標頭)
+>* `servervariables=1` （將IIS伺服器變數作為請求標頭轉送給遠端執行個體）
+>* `replaceauthorization=1` (將任何名為「Authorization」的標頭（「Basic」除外）取代為其「Basic」同等標頭)
 >
-在IIS中：
+>在IIS中：
 >
-* disable **匿名存取**
+>* disable **匿名存取**
 >
-* 啟用 **整合式Windows驗證**
+>* 啟用 **整合式Windows驗證**
 >
 
 您可以使用來檢視將哪個驗證處理常式套用到內容樹的任何區段。 **驗證者** Felix主控台選項；例如：
@@ -151,7 +153,7 @@ Transfer-Encoding: chunked
 
 >[!NOTE]
 >
-在瀏覽器中使用請求引數時，您只會看到部分HTML — 沒有CSS。 這是因為來自HTML的所有請求都是在沒有請求引數的情況下進行的。
+>在瀏覽器中使用請求引數時，您只會看到部分HTML — 沒有CSS。 這是因為來自HTML的所有請求都是在沒有請求引數的情況下進行的。
 
 ## 移除AEM登出連結 {#removing-aem-sign-out-links}
 

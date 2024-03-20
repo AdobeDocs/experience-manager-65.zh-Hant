@@ -4,9 +4,10 @@ description: 透過建立和部署MBean以使用JMX主控台管理服務，公�
 topic-tags: extending-aem
 content-type: reference
 exl-id: fe727406-09cb-4516-8278-806fd78cfc12
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1621'
 ht-degree: 0%
 
 ---
@@ -422,7 +423,7 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
 
 為方便起見，您可以將下列XML程式碼複製並貼到專案pom.xml檔案中，以建立元件組合。 POM會參照數個必要的外掛程式和相依性。
 
-**外掛程式:**
+**外掛程式：**
 
 * Apache Maven編譯器外掛程式：從原始程式碼編譯Java類別。
 * Apache Felix Maven套件組合外掛程式：建立套件組合和資訊清單

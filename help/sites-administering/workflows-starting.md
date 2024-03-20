@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 84a1964c-4121-4763-b946-9eee6093747d
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '799'
-ht-degree: 4%
+source-wordcount: '790'
+ht-degree: 2%
 
 ---
 
@@ -102,7 +103,7 @@ ht-degree: 4%
 
      有助於識別此執行個體的選用標題。
 
-   * **評論**
+   * **註解**
 
      可協助指出此執行個體詳細資料的可選註解。
 
@@ -115,15 +116,15 @@ ht-degree: 4%
 
    ![wf-105](assets/wf-105.png)
 
-   * **事件類型**
+   * **事件型別**
 
      啟動工作流程的事件型別：
 
-      * 建立日期
-      * 修改時間
+      * 已建立
+      * 已修改
       * 已移除
 
-   * **節點類型**
+   * **節點型別**
 
      工作流程啟動器套用的節點型別。
 

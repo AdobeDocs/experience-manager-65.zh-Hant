@@ -7,9 +7,10 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2340'
 ht-degree: 1%
 
 ---
@@ -89,15 +90,15 @@ JSP指令碼檔案 `global.jsp` 可用來讓使用者快速存取用來呈現元
 
 * 透過 `currentPage` 在中引入的物件 `global.jsp`：
 
-  此 `currentPage` 物件是頁面的例項(請參閱 [AEM API](https://helpx.adobe.com/tw/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html))。 Page類別提供一些存取內容的方法。
+  此 `currentPage` 物件是頁面的例項(請參閱 [AEM API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html))。 Page類別提供一些存取內容的方法。
 
-  例如: `String pageTitle = currentPage.getTitle();`
+  範例： `String pageTitle = currentPage.getTitle();`
 
 * Via `currentNode` 在中引入的物件 `global.jsp`：
 
   此 `currentNode` 物件是節點的例項(請參閱 [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html))。 節點屬性可由以下專案存取： `getProperty()` 方法。
 
-  例如: `String pageTitle = currentNode.getProperty("jcr:title");`
+  範例： `String pageTitle = currentNode.getProperty("jcr:title");`
 
 ## JSP標籤庫 {#jsp-tag-libraries}
 
@@ -269,7 +270,7 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
    >對話方塊定義取決於UI：
    >
    >* 觸控式UI： `textimage/cq:dialog`
-   >* 傳統 UI: `textimage/dialog`
+   >* 傳統UI： `textimage/dialog`
 
 1. 編輯元件中繼資料：
 
@@ -386,7 +387,7 @@ CQ和Sling標籤庫可讓您存取特定函式，以便在範本和元件的JSP�
 
    ![chlimage_1-63](assets/chlimage_1-63a.png)
 
-1. 按一下&#x200B;**「儲存全部」**。元件已準備好進行測試。
+1. 按一下 **全部儲存**. 元件已準備好進行測試。
 1. 以Geometrixx（例如英文/公司）開啟頁面。
 1. 切換到設計模式並啟動影像（延伸）。
 1. 切換回編輯模式，並將其新增至段落系統。 在下一張圖片中，您可以看到原始影像元件與您建立的影像元件之間的差異。

@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 42e8d804-6b6a-432e-a651-940b9f45db4e
-source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 1%
+source-wordcount: '549'
+ht-degree: 0%
 
 ---
 
@@ -68,7 +69,7 @@ Granite.OptOutUtil可讓您判斷是否允許使用Cookie。
 
 Cookie的名稱，當出現時，表示使用者未同意使用Cookie。
 
-**參數**
+**引數**
 
 無。
 
@@ -80,7 +81,7 @@ Cookie名稱陣列。
 
 不論使用者同意為何，都可使用的Cookie名稱。
 
-**參數**
+**引數**
 
 無。
 
@@ -92,7 +93,7 @@ Cookie名稱陣列。
 
 判斷使用者的瀏覽器是否包含未表示同意使用Cookie的任何Cookie。
 
-**參數**
+**引數**
 
 無。
 
@@ -104,7 +105,7 @@ Cookie名稱陣列。
 
 決定特定Cookie是否可用於使用者的瀏覽器。 此函式等同於使用 `isOptedOut` 函式，可判斷指定的Cookie是否包含在要 `getWhitelistCookieNames` 函式傳回。
 
-**參數**
+**引數**
 
 * cookieName：字串。 Cookie的名稱。
 

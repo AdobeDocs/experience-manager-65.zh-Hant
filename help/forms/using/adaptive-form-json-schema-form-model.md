@@ -5,7 +5,8 @@ role: User, Developer
 level: Beginner, Intermediate
 feature: Adaptive Forms, Foundation Components
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1844'
 ht-degree: 7%
@@ -392,7 +393,7 @@ JavaScript是適用性表單的運算式語言。 所有運算式都是有效的
    <th><strong></strong>元件\事件</th>
    <th>初始化 <br /> </th>
    <td>計算</td>
-   <td>可見性</td>
+   <td>可見度</td>
    <td>驗證</td>
    <td>已啟用</td>
    <td>提交值</td>

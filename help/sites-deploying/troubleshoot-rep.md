@@ -8,9 +8,10 @@ topic-tags: configuring
 docset: aem65
 feature: Configuring
 exl-id: cfa822c8-f9a9-4122-9eac-0293d525f6b5
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1224'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 復寫（非反向復寫）由於某些原因而失敗。
 
-## 解析度 {#resolution}
+## 解決方法 {#resolution}
 
 復寫失敗的原因有很多。 本文會說明分析這些問題時可能會採取的方法。
 

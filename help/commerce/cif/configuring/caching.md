@@ -2,7 +2,8 @@
 title: 快取與效能
 description: 瞭解各種可用設定，以啟用GraphQL和內容快取，將您的Commerce實作效能最佳化。
 exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 0%

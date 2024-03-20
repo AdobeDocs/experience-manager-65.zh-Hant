@@ -7,9 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: 9a069486-02a8-4058-adfb-4e0e49d8c0cf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -52,7 +53,7 @@ AEM Forms工作區使用影像來顯示類別、佇列和程式的標題。 您�
 
 >[!NOTE]
 >
->尋找瀏覽器的瀏覽器語言地區設定代碼。 開啟 `https://'[server]:[port]'/lc/libs/ws/Locale.html`。
+>尋找瀏覽器的瀏覽器語言地區設定代碼。 開啟 `https://'[server]:[port]'/lc/libs/ws/Locale.html`.
 
 ![collapsing_panels_image](assets/collapsing_panels_image.png)
 

@@ -7,9 +7,10 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '746'
 ht-degree: 1%
 
 ---
@@ -63,7 +64,7 @@ ht-degree: 1%
 
 * `publish` + `intranet`
 
-* 視需要。..
+* 視需要。.
 
 每次啟動時也可以選取自訂的執行模式。
 

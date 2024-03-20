@@ -5,7 +5,8 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3982'
 ht-degree: 2%
@@ -418,7 +419,7 @@ ht-degree: 2%
    <td>是</td> 
    <td>是</td> 
    <td>是<br /> </td> 
-   <td>N/A</td> 
+   <td>不適用</td> 
    <td>不適用<br /> </td> 
   </tr> 
   <tr> 
@@ -458,7 +459,7 @@ ht-degree: 2%
    <td>否<br /> </td> 
    <td>是</td> 
    <td>否</td> 
-   <td>N/A</td> 
+   <td>不適用</td> 
    <td>不適用<br /> </td> 
   </tr> 
  </tbody> 

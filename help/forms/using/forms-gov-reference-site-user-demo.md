@@ -4,7 +4,8 @@ description: 使用虛構的使用者和群組，透過We.Gov和We.Finance示範
 contentOwner: anujkapo
 docset: aem65
 exl-id: 288d5459-bc69-4328-b6c9-4b4960bf4977
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2478'
 ht-degree: 1%
@@ -13,7 +14,7 @@ ht-degree: 1%
 
 # We.Gov和We.Finance參考網站逐步說明 {#we-gov-reference-site-walkthrough}
 
-## 先決條件 {#pre-requisites}
+## 必要條件  {#pre-requisites}
 
 設定參考網站，如所述 [設定We.Gov和We.Finance參考網站](../../forms/using/forms-install-configure-gov-reference-site.md).
 

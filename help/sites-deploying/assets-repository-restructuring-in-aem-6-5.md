@@ -6,9 +6,10 @@ content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: 28ddd23c-5907-4356-af56-ebc7589a2b5d
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1047'
 ht-degree: 2%
 
 ---
@@ -52,7 +53,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -87,7 +88,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A<br /> </td>
+   <td>不適用<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -117,7 +118,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A<br /> </td>
+   <td>不適用<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -160,8 +161,8 @@ ht-degree: 2%
 | **上一個位置** | `/etc/dam/drm/licenses/` |
 |---|---|
 | **新位置** | `/libs/settings/dam/drm` |
-| **重組指南** | N/A |
-| **附註** | N/A |
+| **重組指南** | 不適用 |
+| **附註** | 不適用 |
 
 ### 連結共用電子郵件通知範本 {#link-share-e-mail-notification-template}
 
@@ -252,7 +253,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -279,7 +280,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A</td>
+   <td>不適用</td>
   </tr>
  </tbody>
 </table>
@@ -302,7 +303,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>附註</strong></td>
-   <td>N/A<br /> </td>
+   <td>不適用<br /> </td>
   </tr>
  </tbody>
 </table>

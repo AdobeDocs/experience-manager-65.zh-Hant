@@ -1,18 +1,19 @@
 ---
-title: 通訊管理 |處理使用者資料
+title: 通訊管理 | 處理使用者資料
 description: 瞭解在Adobe Experience Manager Forms環境中通訊管理和處理使用者資料。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin
 exl-id: a0c6a02c-47a3-4e70-a14c-953ee016b8e4
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
 
-# 通訊管理 |處理使用者資料 {#correspondence-management-handling-user-data}
+# 通訊管理 | 處理使用者資料 {#correspondence-management-handling-user-data}
 
 AEM Forms Correspondence Management可讓您建立、管理及簡化安全且個人化的客戶信函。 它提供直覺式使用者介面，供商業使用者使用預先核准的內容區塊和媒體元素來建立對應。 如需建立對應的詳細資訊，請參閱 [建立對應](/help/forms/using/create-correspondence.md).
 

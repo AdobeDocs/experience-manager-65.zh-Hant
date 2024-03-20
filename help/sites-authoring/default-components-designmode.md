@@ -2,7 +2,8 @@
 title: 在設計模式中設定預設元件
 description: 在設計模式中設定Adobe Experience Manager元件。
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '905'
 ht-degree: 0%
@@ -78,7 +79,7 @@ ht-degree: 0%
 
    此對話方塊有兩個標籤：
 
-   * 允許的元件
+   * 已允許的元件
    * 設定
 
    **允許的元件**

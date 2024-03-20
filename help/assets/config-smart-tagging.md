@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2244'
-ht-degree: 24%
+source-wordcount: '2227'
+ht-degree: 20%
 
 ---
 
@@ -24,12 +25,12 @@ ht-degree: 24%
 
 在使用智慧內容服務之前，請先確定下列事項：
 
-* [使用 Adobe 開發人員控制台進行整合](#integrate-adobe-io).
+* [整合Adobe Developer主控台](#integrate-adobe-io).
 * [訓練智慧內容服務](#training-the-smart-content-service).
 
 * 安裝最新版本 [[!DNL Experience Manager] Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html).
 
-## 使用 Adobe 開發人員控制台進行整合 {#integrate-adobe-io}
+## 整合Adobe Developer主控台 {#integrate-adobe-io}
 
 當您整合Adobe Developer Console時， [!DNL Experience Manager] 伺服器會先透過Adobe Developer主控台閘道驗證您的服務認證，再將您的要求轉送至智慧內容服務。 若要整合，您需要具有組織管理員許可權的Adobe ID帳戶，以及為貴組織購買並啟用的Smart Content Service授權。
 
@@ -57,7 +58,7 @@ ht-degree: 24%
 
 1. 在 **[!UICONTROL AEM智慧內容服務]** 對話方塊，請使用下列值：
 
-   **[!UICONTROL 服務 URL]**: `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
+   **[!UICONTROL 服務URL]**： `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
 
    例如 `https://smartcontent.adobe.io/apac`。您可以指定 `na`， `emea`，或， `apac` 作為託管Experience Manager作者例項的地區。
 
@@ -66,7 +67,7 @@ ht-degree: 24%
    >如果Experience Manager託管服務在2022年9月1日之前布建，請使用以下服務URL：
    >`https://mc.adobe.io/marketingcloud/smartcontent`
 
-   **[!UICONTROL 授權伺服器]**: `https://ims-na1.adobelogin.com`
+   **[!UICONTROL 授權伺服器]**： `https://ims-na1.adobelogin.com`
 
    其他欄位暫時保留空白（稍後提供）。 按一下&#x200B;**[!UICONTROL 「確定」]**。
 
@@ -88,7 +89,7 @@ ht-degree: 24%
 
 #### 憑證過期時重新設定 {#certrenew}
 
-憑證過期後，即不再受信任。 您無法更新已過期的憑證。若要新增憑證，請按照以下步驟操作。
+憑證過期後，即不再受信任。 您無法更新過期的憑證。 若要新增憑證，請按照以下步驟操作。
 
 1. 以管理員身分登入您的 [!DNL Experience Manager] 部署。按一 **[!UICONTROL 下「工具]** >安 **[!UICONTROL 全性]** >使 **[!UICONTROL 用者]**」。
 
@@ -123,7 +124,7 @@ ht-degree: 24%
 
 1. 按一下&#x200B;**[!UICONTROL 下一步]**。
 
-1. 在&#x200B;**[!UICONTROL 選取產品設定檔]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL 「智慧內容服務」]**。按一下&#x200B;**[!UICONTROL 「儲存已設定的 API」]**。
+1. 在&#x200B;**[!UICONTROL 選取產品設定檔]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL 「智慧內容服務」]**。按一下 **[!UICONTROL 儲存已設定的API]**.
 
    此時會出現一個頁面，顯示更多關於設定的資訊。請保持此頁面開啟，以複製這些值，並將其新增至 [!UICONTROL 資產智慧標籤服務設定] 中的雲端設定 [!DNL Experience Manager] 以設定智慧標籤。
 
@@ -144,12 +145,12 @@ ht-degree: 24%
 
 1. 針對欄位 [!UICONTROL Api金鑰]， [!UICONTROL 技術帳戶ID]， [!UICONTROL 組織ID]、和 [!UICONTROL 使用者端密碼]，複製並使用中產生的下列值 [Adobe Developer主控台整合](#create-adobe-i-o-integration).
 
-   | [!UICONTROL 資產智慧標記服務設定] | [!DNL Adobe Developer Console] 整合欄位 |
+   | [!UICONTROL 資產智慧標籤服務設定] | [!DNL Adobe Developer Console] 整合欄位 |
    |--- |--- |
-   | [!UICONTROL API 金鑰] | [!UICONTROL 使用者端ID] |
-   | [!UICONTROL 技術帳戶 ID] | [!UICONTROL 技術帳戶ID] |
-   | [!UICONTROL 組織 ID] | [!UICONTROL 組織 ID] |
-   | [!UICONTROL 用戶端密碼] | [!UICONTROL 使用者端密碼] |
+   | [!UICONTROL Api金鑰] | [!UICONTROL 使用者端ID] |
+   | [!UICONTROL 技術帳戶ID] | [!UICONTROL 技術帳戶ID] |
+   | [!UICONTROL 組織ID] | [!UICONTROL 組織ID] |
+   | [!UICONTROL 使用者端密碼] | [!UICONTROL 使用者端密碼] |
 
 ### 驗證設定 {#validate-the-configuration}
 
@@ -177,7 +178,7 @@ ht-degree: 24%
 
    ![在「DAM 更新資產」工作流程中，在處理縮圖步驟之後新增智慧標記資產步驟](assets/smart-tag-in-dam-update-asset-workflow.png)
 
-   *圖：在「DAM 更新資產」工作流程中，在處理縮圖步驟之後新增智慧標記資產步驟。*
+   *圖：在的程式縮圖步驟之後新增智慧標籤資產步驟 [!UICONTROL DAM更新資產] 工作流程。*
 
 1. 在編輯模式中開啟步驟。在「 **[!UICONTROL 進階設定]**」下，確定已選取 **[!UICONTROL 「處理常式進階]** 」選項。
 
@@ -200,7 +201,7 @@ ht-degree: 24%
 
    *圖：設定DAM更新資產工作流程以新增智慧標籤步驟並選取忽略智慧標籤標幟。*
 
-1. 按一下&#x200B;**[!UICONTROL 「確定」]**&#x200B;關閉程序步驟，然後儲存工作流程。
+1. 按一下 **[!UICONTROL 確定]** 以關閉程式步驟，然後儲存工作流程。
 
 ## 訓練智慧內容服務 {#training-the-smart-content-service}
 

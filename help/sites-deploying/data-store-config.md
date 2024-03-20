@@ -6,10 +6,11 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '3549'
-ht-degree: 2%
+source-wordcount: '3476'
+ht-degree: 1%
 
 ---
 
@@ -232,28 +233,28 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 >
 >S3聯結器同時支援IAM使用者驗證和IAM角色驗證。 若要使用IAM角色驗證，請省略 `accessKey` 和 `secretKey` 值。 然後，S3聯結器會預設為 [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) 指派給執行個體。
 
-| 金鑰 | 說明 | 預設 | 必填 |
+| 關鍵 | 說明 | 預設 | 必填 |
 | --- | --- | --- | --- |
 | accessKey | 可存取貯體之IAM使用者的存取金鑰ID。 | | 是，當不使用IAM角色時。 |
 | secretKey | 可存取貯體的IAM使用者機密存取金鑰。 | | 是，當不使用IAM角色時。 |
-| cacheSize | 本機快取的大小（位元組）。 | 64GB | 否. |
-| connectionTimeout | 設定初始建立連線時逾時前的等待時間（毫秒）。 | 10000 | 否. |
-| maxCachedBinarySize | 大小小於或等於此值（位元組）的二進位檔儲存在記憶體快取中。 | 17408 (17 KB) | 否. |
-| maxConnections | 設定允許的開啟HTTP連線數目上限。 | 50 | 否. |
-| maxErrorRetry | 設定失敗（可重試）要求的重試次數上限。 | 3 | 否. |
-| minRecordLength | 應儲存在資料存放區中的物件大小下限（位元組）。 | 16384 | 否. |
-| path | AEM資料存放區的本機路徑。 | `crx-quickstart/repository/datastore` | 否. |
-| proxyHost | 設定使用者端連線時所使用的選用代理主機。 | | 否. |
-| proxyPort | 設定使用者端連線所透過的可選Proxy連線埠。 | | 否. |
+| cacheSize | 本機快取的大小（位元組）。 | 64GB | 不適用。 |
+| connectionTimeout | 設定初始建立連線時逾時前的等待時間（毫秒）。 | 10000 | 不適用。 |
+| maxCachedBinarySize | 大小小於或等於此值（位元組）的二進位檔儲存在記憶體快取中。 | 17408 (17 KB) | 不適用。 |
+| maxConnections | 設定允許的開啟HTTP連線數目上限。 | 50 | 不適用。 |
+| maxErrorRetry | 設定失敗（可重試）要求的重試次數上限。 | 3 | 不適用。 |
+| minRecordLength | 應儲存在資料存放區中的物件大小下限（位元組）。 | 16384 | 不適用。 |
+| 路徑 | AEM資料存放區的本機路徑。 | `crx-quickstart/repository/datastore` | 不適用。 |
+| proxyHost | 設定使用者端連線時所使用的選用代理主機。 | | 不適用。 |
+| proxyPort | 設定使用者端連線所透過的可選Proxy連線埠。 | | 不適用。 |
 | s3Bucket | S3儲存貯體的名稱。 | | 是 |
-| s3EndPoint | S3 REST API端點。 | | 否. |
-| s3Region | 貯體所在的區域。 檢視此 [頁面](https://docs.aws.amazon.com/general/latest/gr/s3.html) 以取得更多詳細資料。 | AWS執行個體執行所在的區域。 | 否. |
-| socketTimeout | 設定在連線逾時並關閉之前，透過已建立且開啟的連線傳輸資料所需的等待時間（毫秒）。 | 50000 | 否. |
-| stagingPurgeInterval | 從暫存快取中清除已完成的上傳的間隔（秒）。 | 300 | 否. |
-| stagingRetryInterval | 重試失敗的上傳間隔（以秒為單位）。 | 600 | 否. |
-| stagingSplitPercentage | 的百分比 `cacheSize` 用於中繼非同步上傳。 | 10 | 否. |
-| uploadThreads | 用於非同步上傳的上傳執行緒數量。 | 10 | 否. |
-| writeThreads | 透過S3 Transfer Manager寫入時使用的並行執行緒數目。 | 10 | 否. |
+| s3EndPoint | S3 REST API端點。 | | 不適用。 |
+| s3Region | 貯體所在的區域。 檢視此 [頁面](https://docs.aws.amazon.com/general/latest/gr/s3.html) 以取得更多詳細資料。 | AWS執行個體執行所在的區域。 | 不適用。 |
+| socketTimeout | 設定在連線逾時並關閉之前，透過已建立且開啟的連線傳輸資料所需的等待時間（毫秒）。 | 50000 | 不適用。 |
+| stagingPurgeInterval | 從暫存快取中清除已完成的上傳的間隔（秒）。 | 300 | 不適用。 |
+| stagingRetryInterval | 重試失敗的上傳間隔（以秒為單位）。 | 600 | 不適用。 |
+| stagingSplitPercentage | 的百分比 `cacheSize` 用於中繼非同步上傳。 | 10 | 不適用。 |
+| uploadThreads | 用於非同步上傳的上傳執行緒數量。 | 10 | 不適用。 |
+| writeThreads | 透過S3 Transfer Manager寫入時使用的並行執行緒數目。 | 10 | 不適用。 |
 
 <!---
 ### Bucket region options {#bucket-region-options}
@@ -347,9 +348,9 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 1. 在內建立這兩個檔案 `crx-quickstart` 資料夾：
 
-   * *org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService*.*config*
+   * *org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService*.*設定*
 
-   * *org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore*.*config*
+   * *org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore*.*設定*
 
    建立檔案後，視需要新增設定選項。
 

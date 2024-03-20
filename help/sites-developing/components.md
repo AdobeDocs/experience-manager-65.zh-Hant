@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 44%
@@ -69,7 +70,7 @@ AEM隨附多種多樣的 [現成可用的元件](/help/sites-authoring/default-c
 
 >[!NOTE]
 >
->[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 代表元件設計和開發的目前最佳實務，並作為參考實作。
+>[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant) 代表元件設計和開發的目前最佳實務，並作為參考實作。
 >
 >[AEM現代化工具](modernization-tools.md) 可協助移轉至核心元件。
 

@@ -3,7 +3,8 @@ title: 建立和同步 Live Copies
 description: 瞭解如何在Adobe Experience Manager中建立和同步即時副本。
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '4194'
 ht-degree: 2%
@@ -49,7 +50,7 @@ Blueprint設定會識別您要當作一或多個即時副本頁面來源的現�
 
    ![Blueprint設定](assets/blueprint-configurations.png)
 
-1. 選擇 **建立**。
+1. 選取「**建立**」。
 1. 選取Blueprint範本，然後 **下一個** 以繼續。
 1. 選取要用作Blueprint的來源頁面；然後 **下一個** 以繼續。
 1. 定義：

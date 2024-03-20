@@ -7,10 +7,11 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 4%
+source-wordcount: '1333'
+ht-degree: 3%
 
 ---
 
@@ -68,7 +69,7 @@ ht-degree: 4%
 
       ![覆蓋節點](assets/2_createnodedownloadflatpdf.png)
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。
+   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
 
       按一下&#x200B;**「儲存全部」**。
 
@@ -150,7 +151,7 @@ ht-degree: 4%
 
       **符合節點型別：** 已選取
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。 按一下&#x200B;**「儲存全部」**。
+   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。 按一下&#x200B;**「儲存全部」**。
 
 1. 在js資料夾中，建立名為formaction.js的檔案，其中包含按鈕的動作處理程式碼，使用下列步驟：
 
@@ -240,7 +241,7 @@ ht-degree: 4%
 
       **符合節點型別：** 已選取
 
-   1. 按一下&#x200B;**「確定」**。資料夾結構會在apps資料夾中建立。
+   1. 按一下 **確定**. 資料夾結構會在apps資料夾中建立。
 
    1. 按一下&#x200B;**「儲存全部」**。
 

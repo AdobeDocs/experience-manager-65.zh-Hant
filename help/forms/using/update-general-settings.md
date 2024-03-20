@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: 3e74cda2-ba3e-4ee9-b7d0-76a804232199
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 1%
@@ -47,7 +48,7 @@ AEM Forms應用程式的一般設定可讓您指定設定，例如擷取附件�
 * **登陸畫面**：若要設定開始位置([主畫面](../../forms/using/home-screen.md))時，退出該應用程式。
 可用選項：
 
-   * Forms
+   * 表單
    * 任務
    * 我的最愛
 

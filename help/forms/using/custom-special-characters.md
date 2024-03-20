@@ -7,10 +7,11 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 3e978c3e-12f2-4dc6-801d-8ab4c5df6700
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 3%
+source-wordcount: '656'
+ht-degree: 1%
 
 ---
 
@@ -88,7 +89,7 @@ ht-degree: 3%
 <table>
  <tbody>
   <tr>
-   <td><strong>至...</strong></td>
+   <td><strong>至……</strong></td>
    <td><strong>完成下列步驟</strong></td>
   </tr>
   <tr>

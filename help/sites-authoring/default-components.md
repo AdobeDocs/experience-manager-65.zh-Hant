@@ -2,10 +2,11 @@
 title: 預設元件
 description: Adobe Experience Manager隨附多種現成可用的元件，可為網站作者提供全方位功能。
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 1%
+source-wordcount: '420'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +50,7 @@ Adobe Experience Manager (AEM)隨附多種現成可用的元件，可為網站�
 
 下列頁面提供元件其他重要資訊的連結：
 
-* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)  — 核心元件提供有彈性且功能豐富的製作功能，可提供建立頁面所需的基本內容型別。
+* [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hant)  — 核心元件提供有彈性且功能豐富的製作功能，可提供建立頁面所需的基本內容型別。
 
 * [Communities](/help/communities/author-communities.md)  — 元件為網站提供互動功能，例如論壇和評論。 當符合以下條件時，其中許多元件都會納入 [社群網站](/help/communities/overview.md) 「 」已建立。
 

@@ -2,10 +2,11 @@
 title: 停用適用於JEE和OSGI之PDFG設定的UAC
 description: 瞭解如何針對PDFG設定停用UAC以修正Word到PDF轉換的步驟。
 exl-id: 785b7bb4-7158-45ea-a1e5-eebf3dc3ebc3
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 4%
+source-wordcount: '265'
+ht-degree: 3%
 
 ---
 
@@ -30,7 +31,7 @@ ht-degree: 4%
 
    1. Microsoft®建議您在修改登入之前先備份登入。 如需詳細步驟，請參閱 [如何在Windows中備份及還原登入](https://support.microsoft.com/en-us/help/322756).
    1. 開啟Microsoft® Windows登入編輯器。 若要開啟登入編輯程式，請前往[開始] > [執行]，輸入regedit，然後按一下[確定]。
-   1. 導覽至 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`。請確定EnableLUA的值設為0 （零）。
+   1. 瀏覽至 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`. 請確定EnableLUA的值設為0 （零）。
    1. 確認值 **EnableLUA** 設為0 （零）。 如果值不是0，請將值變更為0。 關閉登錄編輯程式。
 
 1. 重新啟動電腦。

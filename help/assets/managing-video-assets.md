@@ -6,7 +6,8 @@ role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
-source-git-commit: 0d30d42e606f1abcf20869c40ca87a78d496e2e7
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '5466'
 ht-degree: 7%
@@ -488,7 +489,7 @@ Google會定期變更其使用者介面。 因此，將視訊發佈至YouTube的
 
 1. 導覽至您要從YouTube頻道取消發佈的視訊資產。
 1. 在資產選擇模式中，選取一或多個已發佈的視訊資產。
-1. 在工具列上，按一下 **[!UICONTROL 管理發布]**. 選取三個點的圖示(...) 工具列上的，因此 **[!UICONTROL 管理發布]** 隨即開啟。
+1. 在工具列上，按一下 **[!UICONTROL 管理發布]**. 選取三個點的圖示(. ..) 工具列上的，因此 **[!UICONTROL 管理發布]** 隨即開啟。
 1. 在管理出版物頁面上，選擇 **[!UICONTROL 取消發佈]**.
 1. 在頁面的右上角，選取 **[!UICONTROL 下一個]**.
 1. 在頁面的右上角，選取 **[!UICONTROL 取消發佈]**.

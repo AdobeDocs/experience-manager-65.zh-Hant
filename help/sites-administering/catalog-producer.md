@@ -6,10 +6,11 @@ topic-tags: integration
 content-type: reference
 description: 目錄製作者
 exl-id: 76a46c62-d47d-4970-8a3a-d56015639548
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '847'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -43,7 +44,7 @@ ht-degree: 0%
 
    ![create_catalog](assets/create_catalog.png)
 
-1. 按一下 **儲存**. 確認對話方塊會通知目錄已建立。 按一下 **完成** 以關閉對話方塊。
+1. 按一下「**儲存**」。確認對話方塊會通知目錄已建立。 按一下 **完成** 以關閉對話方塊。
 1. 若要開啟您建立的目錄，請從 **目錄** 頁面。
 
    >[!NOTE]

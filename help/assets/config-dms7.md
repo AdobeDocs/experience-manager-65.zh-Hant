@@ -10,7 +10,8 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '6508'
 ht-degree: 3%
@@ -121,7 +122,7 @@ Feature Pack 18912可讓您透過FTP大量擷取資產，或在Experience Manage
    * **[!UICONTROL 公司]** - Dynamic Media帳戶的名稱。
      >[!IMPORTANT]
      >
-     Experience Manager的執行個體僅支援Cloud Service中的一個Dynamic Media設定；請勿新增多個設定。 一個Experience Manager執行個體上的多個Dynamic Media設定為 _非_ 受Adobe支援或建議。
+     >Experience Manager的執行個體僅支援Cloud Service中的一個Dynamic Media設定；請勿新增多個設定。 一個Experience Manager執行個體上的多個Dynamic Media設定為 _非_ 受Adobe支援或建議。
 
      <!-- CQDOC-19579 and CQDOC-19612 -->
 
@@ -152,11 +153,11 @@ Feature Pack 18912可讓您透過FTP大量擷取資產，或在Experience Manage
 
    >[!NOTE]
    >
-   Dynamic Media - Scene7模式中不支援版本設定。 此外，延遲啟動僅適用於在「編輯動態媒體設定」頁面中的「發佈資產 ********」設定為「啟動時」，然後只適用於在首次啟動資產時。
+   >Dynamic Media - Scene7模式中不支援版本設定。 此外，延遲啟動僅適用於在「編輯動態媒體設定」頁面中的「發佈資產 ********」設定為「啟動時」，然後只適用於在首次啟動資產時。
    >
-   資產啟動後，所有更新都會立即上線發佈至S7傳送。
+   >資產啟動後，所有更新都會立即上線發佈至S7傳送。
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 1. 為了在發佈Dynamic Media內容之前安全地預覽內容，Experience Manager Author會使用權杖型驗證，因此Experience Manager Author預設會預覽Dynamic Media內容。 不過，您可以「允許列出」更多IP，讓使用者存取安全地預覽內容。 若要在Experience Manager中設定此動作，請參閱 [設定影像伺服器的Dynamic Media發佈設定 — 安全性索引標籤](/help/assets/dm-publish-settings.md#security-tab).
 
 如果您想進一步自訂您的設定，例如啟用ACL （存取控制清單）許可權，您可以選擇完成下列任何工作 [（可選）在Dynamic Media - Scene7模式中設定進階設定](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
@@ -255,7 +256,7 @@ Dynamic Media中的密碼到期日設為目前系統日期起的100年。
 
   >[!NOTE]
   >
-  使用存取金鑰和機密金鑰設定Azure Blob儲存體，因為Blob儲存體設定中的AzureSas不支援此大型上傳功能。
+  >使用存取金鑰和機密金鑰設定Azure Blob儲存體，因為Blob儲存體設定中的AzureSas不支援此大型上傳功能。
 
 * Oak&#39;s [直接二進位存取下載](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) 已啟用(Oak) *直接二進位存取上傳* 非必要)。
 
@@ -361,7 +362,7 @@ Dynamic Media色彩管理可讓您校正資產的色彩。 透過色彩校正，
 
 >[!NOTE]
 >
-依預設，當您選取時，系統會顯示15個轉譯 **[!UICONTROL 轉譯]** 和15個檢視器預設集 **[!UICONTROL 檢視者]** 在資產的「詳細資訊」檢視中。 您可以提高此限制。另請參閱 [增加顯示的影像預設集數目](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) 或 [增加顯示的檢視器預設集數目](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+>依預設，當您選取時，系統會顯示15個轉譯 **[!UICONTROL 轉譯]** 和15個檢視器預設集 **[!UICONTROL 檢視者]** 在資產的「詳細資訊」檢視中。 您可以提高此限制。另請參閱 [增加顯示的影像預設集數目](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) 或 [增加顯示的檢視器預設集數目](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 #### 編輯支援格式的MIME型別 {#editing-mime-types-for-supported-formats}
 
@@ -480,7 +481,7 @@ Dynamic Media色彩管理可讓您校正資產的色彩。 透過色彩校正，
 
    >[!NOTE]
    >
-   停用的表單欄位不會驗證您的規則運算式是否正確。 您會看到針對「結果」行之後的每個元素所建置的規則運算式結果。 完整的規則運算式會顯示在頁面底部。
+   >停用的表單欄位不會驗證您的規則運算式是否正確。 您會看到針對「結果」行之後的每個元素所建置的規則運算式結果。 完整的規則運算式會顯示在頁面底部。
 
 1. 視需要展開每個元素，然後輸入要使用的命名慣例。
 1. 視需要執行下列任一項作業：
@@ -602,7 +603,7 @@ spin-01-01
 
    >[!NOTE]
    >
-   如果列和欄規則運算式的組合無法判斷資產在多維度迴轉集陣列中的位置，則資產不會新增到迴轉集內。 也會記錄錯誤。
+   >如果列和欄規則運算式的組合無法判斷資產在多維度迴轉集陣列中的位置，則資產不會新增到迴轉集內。 也會記錄錯誤。
 
 1. 在「設定命名與建立慣例」中，請為您在「資產命名慣例」中定義的基本名稱指定字尾或字首。
 
@@ -658,7 +659,7 @@ Granite傳輸工作流程佇列用於 **[!UICONTROL DAM更新資產]** 工作流
 
    >[!NOTE]
    >
-   必須進行文字搜尋，而非直接URL，因為OSGi PID是動態產生的。
+   >必須進行文字搜尋，而非直接URL，因為OSGi PID是動態產生的。
 
 1. 在 **[!UICONTROL 最大平行作業數]** 欄位，將數字變更為所需值。
 
@@ -670,7 +671,7 @@ Granite傳輸工作流程佇列用於 **[!UICONTROL DAM更新資產]** 工作流
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 #### 更新Granite工作流程佇列 {#updating-the-granite-workflow-queue}
 
@@ -682,7 +683,7 @@ Granite工作流程佇列用於非暫時性工作流程。 在Dynamic Media中�
 
    >[!NOTE]
    >
-   必須進行文字搜尋，而非直接URL，因為OSGi PID是動態產生的。
+   >必須進行文字搜尋，而非直接URL，因為OSGi PID是動態產生的。
 
 1. 在 **[!UICONTROL 最大平行作業數]** 欄位，將數字變更為所需值。
 
@@ -690,7 +691,7 @@ Granite工作流程佇列用於非暫時性工作流程。 在Dynamic Media中�
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 #### 更新Dynamic Media Classic上傳連線 {#updating-the-scene-upload-connection}
 
@@ -709,7 +710,7 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-1. 選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 ### （可選）篩選要複製的資產 {#optional-filtering-assets-for-replication}
 
@@ -723,14 +724,14 @@ Scene7上傳連線設定會將Experience Manager資產同步至Dynamic Media Cla
 
 如果您使用Dynamic Media進行影像處理或視訊，或兩者同時使用，則可以使用Adobe依現狀提供的預設濾鏡。 下列篩選器預設為作用中：
 
-|   | 篩選 | Mime型別 | 轉譯 |
+|   | 篩選條件 | Mime型別 | 轉譯 |
 | --- | --- | --- | --- |
 | Dynamic Media影像傳送 | filter-image<br>篩選集 | 開頭為 **image/**<br>&#x200B;包含 **應用程式/** 結尾為 **設定**. | 現成可用的「濾鏡影像」（適用於單一影像資產，包括互動式影像）和「濾鏡集」（適用於迴轉集、影像集、混合媒體集和轉盤集）將：<br>·從復寫中排除原始影像和靜態影像轉譯。 |
 | Dynamic Media視訊傳送 | 濾鏡 — 視訊 | 開頭為 **video/** | 現成的「濾鏡視訊」會：<br>·從復寫中排除原始視訊和靜態縮圖轉譯。 |
 
 >[!NOTE]
 >
-篩選器適用於MIME型別，且不得為路徑專用。
+>篩選器適用於MIME型別，且不得為路徑專用。
 
 #### 自訂用於復寫的資產篩選器 {#customizing-asset-filters-for-replication}
 

@@ -3,10 +3,11 @@ title: 處理Adobe Experience Manager Foundation的GDPR請求
 description: 處理Adobe Experience Manager Foundation的GDPR請求
 contentOwner: sarchiz
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 45%
+source-wordcount: '458'
+ht-degree: 40%
 
 ---
 

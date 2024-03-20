@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 4%
+source-wordcount: '400'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 4%
 
 內容片段可讓您建立頻道中性內容，以及各種（頻道特定的）變化。 **We.Retail** (如Adobe Experience Manager的現成可用例項中所提供)提供片段 **羅富登北極衝浪** 作為基本範例。 這說明：
 
-* Adobe Experience Manager(AEM)內容片段會建 [立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md)。它們可讓您建立管道中性內容，連同（可能特定於管道）變數。
+* Adobe Experience Manager (AEM)內容片段包括 [已建立並管理為不受頁面影響的資產](/help/assets/content-fragments/content-fragments.md). 它們可讓您建立管道中性內容，連同（可能特定於管道）變數。
 
    * 另請參閱 [在We.Retail中哪裡可以找到內容片段資產](#where-to-find-content-fragments-in-we-retail)
 

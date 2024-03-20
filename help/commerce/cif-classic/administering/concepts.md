@@ -3,10 +3,11 @@ title: 概念
 description: 透過Adobe Experience Manager瞭解電子商務的一般概念。
 contentOwner: Guillaume Carlino
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '4481'
-ht-degree: 2%
+source-wordcount: '4439'
+ht-degree: 1%
 
 ---
 
@@ -79,7 +80,7 @@ ht-degree: 2%
       * ERP （企業資源規劃）。
       * 搜尋產品資訊。
 
-   * 程序:
+   * 程式：
 
       * 購物車。
       * 結帳。
@@ -174,9 +175,9 @@ AEM目前提供兩個範例商業提供者：
 * 負責維護下列專案的作者/行銷經理：
 
    * 所有管道的行銷內容。
-   * 促銷活動.
-   * 憑單.
-   * 行銷活動.
+   * 促銷活動。
+   * 憑單。
+   * 行銷活動。
 
 * 瀏覽網路者/購物者：
 
@@ -250,7 +251,7 @@ AEM目前提供兩個範例商業提供者：
 
   產品的文字說明。
 
-* **標記**
+* **標籤**
 
   用於將相關產品分組的標籤。
 
@@ -258,7 +259,7 @@ AEM目前提供兩個範例商業提供者：
 
   資產的預設類別。
 
-* **ERP 資料**
+* **ERP資料**
 
   企業資源規劃(ERP)資訊。
 
@@ -266,7 +267,7 @@ AEM目前提供兩個範例商業提供者：
 
      庫存單位(SKU)資訊。
 
-   * **彩色**
+   * **顏色**
    * **大小**
    * **價格**
 
@@ -394,7 +395,7 @@ AEM支援多種語言的產品內容。 請求資料時，整合架構會從目�
    * Assets
    * 本地化的I18ned產品和SKU
 
-* 使用者活動:
+* 使用者活動：
 
    * 大量版本
    * 大量發佈
@@ -743,7 +744,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
 會儲存各種資訊，其中可能包括：
 
-* **訂單 ID**
+* **訂單ID**
 
   訂單的參考編號。
 
@@ -783,7 +784,7 @@ Proxy頁面使用雙節點結構( `cq:Page` 和 `jcr:content`)，不包含任何
 
   發票應傳送的地址。
 
-* **付款 Token**
+* **付款Token**
 
   付款方式。
 

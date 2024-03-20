@@ -7,10 +7,11 @@ topic-tags: development-tools
 content-type: reference
 docset: aem65
 exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2119'
-ht-degree: 2%
+source-wordcount: '2118'
+ht-degree: 1%
 
 ---
 
@@ -77,7 +78,7 @@ CRXDE Lite提供下列功能：
   </tr>
   <tr>
    <td>存取控制標籤</td>
-   <td><p>根據路徑、存放庫層級或主體顯示許可權。</p> <p>這些許可權會劃分為</p> <p>- <strong>適用的存取控制原則</strong>：可套用至選取範圍的原則。</p> <p>- <strong>本機存取控制原則</strong>：本機套用至選取範圍的原則。</p> <p>- <strong>有效的存取控制原則</strong>：套用於選取範圍的原則、可以在本機設定或從父節點繼承。</p> <p>注意. 若要能夠檢視存取控制資訊，登入CRXDE Lite的使用者必須擁有ACL專案的讀取許可權。 匿名使用者預設無法看到此資訊 — 例如，以管理員身分登入以檢視資訊。</p> </td>
+   <td><p>根據路徑、存放庫層級或主體顯示許可權。</p> <p>這些許可權會劃分為</p> <p>- <strong>適用的存取控制原則</strong>：可套用至選取範圍的原則。</p> <p>- <strong>本機存取控制原則</strong>：本機套用至選取範圍的原則。</p> <p>- <strong>有效的存取控制原則</strong>：套用於選取範圍的原則、可以在本機設定或從父節點繼承。</p> <p>注意。 若要能夠檢視存取控制資訊，登入CRXDE Lite的使用者必須擁有ACL專案的讀取許可權。 匿名使用者預設無法看到此資訊 — 例如，以管理員身分登入以檢視資訊。</p> </td>
   </tr>
   <tr>
    <td>「復寫」標籤</td>
@@ -85,7 +86,7 @@ CRXDE Lite提供下列功能：
   </tr>
   <tr>
    <td>主控台索引標籤<br /> </td>
-   <td><p><strong>伺服器日誌</strong>:</p> <p>顯示日誌訊息。 您可以設定記錄層級、清除主控台、釘選在選取的捲動位置，以及啟用或停用訊息顯示。<br /> </p> <p><strong>版本控制</strong>:</p> <p>顯示版本控制訊息。<br /> </p> </td>
+   <td><p><strong>伺服器記錄檔</strong>：</p> <p>顯示日誌訊息。 您可以設定記錄層級、清除主控台、釘選在選取的捲動位置，以及啟用或停用訊息顯示。<br /> </p> <p><strong>版本控制</strong>：</p> <p>顯示版本控制訊息。<br /> </p> </td>
   </tr>
   <tr>
    <td>「組建資訊」索引標籤<br /> </td>
@@ -97,10 +98,10 @@ CRXDE Lite提供下列功能：
   </tr>
   <tr>
    <td>儲存全部</td>
-   <td><p><strong>儲存全部</strong>:<br /> </p> <p>儲存您所做的所有變更。 在您按一下「儲存」之前，變更是暫時性的，當您退出主控台時便會遺失。</p> <p><strong>回復</strong>:</p> <p>捨棄您自上次儲存動作後對所選節點所做的所有變更，然後重新載入所選節點的存放庫狀態。</p> <p><strong>全部回復</strong>:</p> <p>捨棄您自上次儲存動作以來，在整個存放庫中所做的所有變更，然後重新載入存放庫的狀態。</p> </td>
+   <td><p><strong>全部儲存</strong>：<br /> </p> <p>儲存您所做的所有變更。 在您按一下「儲存」之前，變更是暫時性的，當您退出主控台時便會遺失。</p> <p><strong>回覆</strong>：</p> <p>捨棄您自上次儲存動作後對所選節點所做的所有變更，然後重新載入所選節點的存放庫狀態。</p> <p><strong>全部回覆</strong>：</p> <p>捨棄您自上次儲存動作以來，在整個存放庫中所做的所有變更，然後重新載入存放庫的狀態。</p> </td>
   </tr>
   <tr>
-   <td>建立 ...<br /> </td>
+   <td>建立……<br /> </td>
    <td><p>下拉式功能表可在選取的節點下建立下列專案：<br /> </p> <p>- <strong>節點</strong>：具有任意節點型別的節點<br /> </p> <p>- <strong>檔案</strong>： nt：file節點及其nt：resource子節點</p> <p>- <strong>資料夾</strong>： nt：folder節點</p> <p>- <strong>範本</strong>： AEM範本</p> <p>- <strong>元件</strong>： AEM元件</p> <p>- <strong>對話方塊</strong>： AEM對話方塊</p> </td>
   </tr>
   <tr>
@@ -116,11 +117,11 @@ CRXDE Lite提供下列功能：
    <td>將複製的節點貼在所選節點下。<br /> </td>
   </tr>
   <tr>
-   <td>移動 ...<br /> </td>
+   <td>移動……<br /> </td>
    <td>將選取的節點移至透過對話方塊設定的節點。</td>
   </tr>
   <tr>
-   <td>重新命名 ...<br /> </td>
+   <td>重新命名……<br /> </td>
    <td>重新命名選取的節點。<br /> </td>
   </tr>
   <tr>
@@ -241,7 +242,7 @@ CRXDE Lite提供下列功能：
 
 1. 在瀏覽器中開啟CRXDE Lite。
 1. 在「導覽」窗格中，選取您要新增屬性的節點。
-1. 在 **屬性** 標籤下，輸入 **名稱**，則 **型別**，以及 **值**. 按一下&#x200B;**「新增」**。
+1. 在 **屬性** 標籤下，輸入 **名稱**，則 **型別**，以及 **值**. 按一下 **新增**.
 
 1. 按一下 **全部儲存** 將變更儲存在伺服器上。
 

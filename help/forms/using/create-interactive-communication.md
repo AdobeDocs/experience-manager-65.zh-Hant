@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '6130'
 ht-degree: 1%
@@ -169,7 +170,7 @@ ht-degree: 1%
    * [使用列印管道同步Web Channel](../../forms/using/create-interactive-communication.md#synchronize)
 
       * 自動同步
-      * 取消繼承
+      * 取消先前設定
       * 重新啟用繼承
       * 同步
 
@@ -536,7 +537,7 @@ ht-degree: 1%
 
 ![主要內容](assets/master_content.png)
 
-### 取消繼承 {#cancelinheritance}
+### 取消先前設定 {#cancelinheritance}
 
 在Web Channel中，元件會嵌入目標區域中。
 
