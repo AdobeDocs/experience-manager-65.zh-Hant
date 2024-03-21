@@ -3,12 +3,12 @@ title: 使用最適化表單的最佳作法
 description: 說明設定AEM Forms專案、開發最適化表單及最佳化AEM Forms系統效能的最佳實務。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms, Foundation Components, Core Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 474a14a247afecdd8415f75997279d1ecd394cda
 workflow-type: tm+mt
-source-wordcount: '4668'
+source-wordcount: '5504'
 ht-degree: 1%
 
 ---
@@ -355,5 +355,66 @@ AEM提供翻譯工作流程，您可用來將最適化表單當地語系化。 �
 
 * 使用安全的外部儲存空間（如資料庫），儲存草稿和已提交表單的資料。 另請參閱 [為草稿和提交的表單資料設定外部儲存空間](/help/forms/using/adaptive-forms-best-practices.md#external-storage).
 * 在啟用自動儲存之前，使用條款與條件表單元件取得使用者的明確同意。 在此情況下，只有當使用者同意條款與條件元件中的條件時，才會啟用自動儲存。
+
+## 選擇最適化表單的規則編輯器、代碼編輯器或自訂使用者端程式庫 {#RuleEditor-CodeEditor-ClientLibs}
+
+### 規則編輯器 {#rule-editor}
+
+<!--The AEM Forms Rule Editor offers predefined functions for defining rules in adaptive forms without extensive programming. It facilitates the implementation of conditional logic, data validation, and integration with external sources. This visual interface is especially valuable for business users and form designers, enabling them to create dynamic and complex rules with ease, here we discusss few use cases where rule editor allows you to:-->
+
+AEM Forms規則編輯器提供建立和管理規則的視覺介面，減少大量編碼的需求。 對於可能沒有進階程式設計技能，但需要在表單中定義及維護商業規則的商務使用者或表單設計人員而言，此功能特別實用。這裡我們將討論一些使用案例，規則編輯器可讓您：
+
+* <!-- Allows you --> 為您的表單定義商業規則，而不需要大量的程式設計。
+* <!-- Use the Rule Editor when you need --> 若要在表單中實作條件式邏輯。 這包括顯示或隱藏表單元素、根據特定條件變更欄位值，或動態變更表單的行為。
+* <!--When you want --> 若要對表單提交強制執行資料驗證規則，可使用規則編輯器來定義驗證條件。
+* <!-- When you need --> 若要將表單與外部資料來源(FDM)或服務整合，規則編輯器可協助定義在表單互動期間擷取、顯示或操控資料的規則。
+* <!-- If you want -->若要建立回應使用者動作的動態與互動式表單，規則編輯器可讓您定義規則以即時控制表單元素的行為。
+
+規則編輯器適用於AEM Forms Foundation元件和核心元件。
+
+### 程式碼編輯器 {#code-editor}
+
+程式碼編輯器是Adobe Experience Manager (AEM) Forms中的工具，可讓您為表單中更複雜和進階的功能撰寫自訂指令碼和程式碼，以下我們將討論幾個使用案例：
+
+* 當您需要實作超出AEM Forms規則編輯器功能的自訂使用者端邏輯或行為時。 程式碼編輯器可讓您撰寫JavaScript程式碼，以處理複雜的互動、計算或驗證。
+* 如果您的表單需要伺服器端處理或與外部系統整合，您可以使用程式碼編輯器來撰寫自訂伺服器端指令碼。 您可以在程式碼編輯器中存取guideBridge API，以在表單事件和物件上實作任何複雜的邏輯。
+* 當您需要超過AEM Forms元件標準功能的高度自訂使用者介面時，程式碼編輯器可讓您實施自訂樣式、行為，或甚至建立自訂表單元件。
+* 如果您的表單涉及非同步作業（例如非同步資料載入），您可以使用程式碼編輯器透過自訂的非同步JavaScript程式碼管理這些作業。
+
+請務必注意，使用程式碼編輯器需要充分瞭解JavaScript和AEM Forms架構。 此外，在實作自訂程式碼時，請確保您遵循最佳實務、遵守安全性方針，並徹底測試您的程式碼以防止生產環境中的潛在問題。 您可以使用程式碼編輯器為FDM實施回呼。
+
+程式碼編輯器僅適用於AEM Forms Foundation元件。 對於最適化表單核心元件，您可以使用自訂函式來建立您自己的表單規則，如下節所述。
+
+### 自訂函式 {#custom-client-libs}
+
+在各種情況下，在AEM Forms (Adobe Experience Manager Forms)中使用自訂使用者端資料庫有助於增強表單的功能、樣式或行為。 以下是一些可能適合使用自訂使用者端程式庫的情況：
+
+* 如果您的表單需要實作獨特的設計或品牌，且超過AEM Forms提供的預設樣式選項的功能，您可以選擇建立自訂使用者端資料庫來控制外觀。
+* 當您需要自訂使用者端邏輯時，多個表單或行為中的方法無法透過標準AEM Forms功能達到可重複使用性。 這可能包括動態表單互動、自訂驗證，或與協力廠商程式庫的整合。
+* 透過最佳化及精簡使用者端資源來改善表單效能。 自訂使用者端程式庫可用來隨附並壓縮JavaScript和CSS檔案，減少整體的頁面載入時間。
+* 當您需要整合預設AEM Forms設定中未包含的其他JavaScript程式庫或架構時。 這可能是增強型日期選擇器、圖表或其他互動式元件等功能的必要專案。
+
+在決定使用自訂使用者端程式庫之前，請務必考量維護負荷、與未來更新的潛在衝突，以及是否遵守最佳實務。 確保您的自訂內容都經過妥善記錄和測試，以避免在升級期間或與其他開發人員合作時發生問題。
+
+>[!NOTE]
+> 自訂函式適用於AEM Forms基礎元件和核心元件。
+
+**自訂函式的優點：**
+
+**自訂函式** 提供明顯優於 **代碼編輯器** 因為它在內容和程式碼之間提供了清晰的區隔，而可加強共同作業並簡化工作流程。 建議您使用自訂函式，以獲得下列優點：
+
+* **順暢地使用版本控制功能，例如Git：**
+   * 從內容中隔離程式碼可大幅減少內容管理期間的Git衝突，並提升妥善組織的存放庫。
+   * 自訂函式對於有多位貢獻者同時運作的專案而言非常有用。
+
+* **技術優點：**
+   * 自訂函式提供模組化和封裝。
+   * 模組可以獨立開發、測試和維護。
+   * 增強程式碼的可重複使用性和可維護性。
+
+* **高效的開發程式：**
+   * 模組化可讓開發人員專注於特定功能。
+   * 降低整個程式碼基底的複雜性，以提升開發流程的效率，進而減輕開發人員的負擔。
+
 
 
