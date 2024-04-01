@@ -11,10 +11,10 @@ role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: cbf8a5ac22049b3372a8282b9c061d7abeacc5dc
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 41%
+source-wordcount: '415'
+ht-degree: 40%
 
 ---
 
@@ -78,3 +78,15 @@ ht-degree: 41%
 現在，請登入Brand Portal以檢視已發佈的資產在Brand Portal介面上是否可用。
 
 ![bp_landingpage](assets/bp_landingpage.png)
+
+## 檢視已發佈至Brand Portal的檔案或資料夾 {#view-published-file-folder}
+
+1. 登入 Brand Portal 介面可查看已發佈的資產 (視您安排的日期或時間而定)。
+
+   ![bp_landingpage](assets/bp_landingpage.png)
+
+1. 切換到清單檢視 ![清單檢視](assets/list-view.svg) 以檢視資產的目前發佈狀態。
+
+<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
+
+![產生的報告狀態](assets/report-status.JPG)
