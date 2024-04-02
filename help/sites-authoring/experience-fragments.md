@@ -3,9 +3,9 @@ title: 體驗片段
 description: Adobe Experience Manager Sites製作中的體驗片段。
 exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 5d37e4ec23bbbd838f4787622648aad7e1c1905b
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1489'
 ht-degree: 4%
 
 ---
@@ -225,6 +225,10 @@ WKND專案會根據以下規則建構一些體驗片段 `Contributors`. 使用�
 
    * **變異**
    * **變數為 [live-copy](/help/sites-administering/msm.md#live-copies)**.
+
+     >[!NOTE]
+     >
+     >將初始變數建立為Live Copy時，將會使用Live Copy來源做為主要變數來繼承標題。
 
 1. 定義必要的屬性：
 
