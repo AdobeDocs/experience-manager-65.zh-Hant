@@ -8,9 +8,9 @@ content-type: reference
 feature: Tagging
 exl-id: d885520d-d0ed-45fa-8511-faa2495d667a
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f22f51b4d65abf4cf1f6e04952f873eca5119727
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '868'
 ht-degree: 0%
 
 ---
@@ -199,4 +199,4 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
 
 >[!CAUTION]
 >
->安裝Service Pack會將/content/cq：tags節點的languages屬性重設為預設值。 因此，在安裝之前，必須從屬性新增它。
+>透過官方更新套件（包括Service Pack、Security Service Pack、Extended Feature Pack、Cumulative Feature Pack、修補程式等）安裝與標籤相關的現成可用內容，會重設 `/content/cq:tags` 節點預設為。 因此，在安裝之前，必須從屬性新增它。
