@@ -4,7 +4,9 @@ description: 瞭解在AEM Commerce中處理GDPR請求的程式以及如何使用
 contentOwner: carlino
 exl-id: 3a483b9d-627a-41d3-8ac1-66f9c5e89ad5
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Compliance
+role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -25,7 +27,7 @@ ht-degree: 0%
 
 ![screen_shot_2018-03-22at111606](assets/screen_shot_2018-03-22at111606.jpg)
 
-透過Adobe的開箱即用的Commerce整合，AEM成為體驗層，使用服務並傳送資料回以Headless模式執行的客戶商務平台。
+透過Adobe現成的Commerce整合，AEM成為體驗層，使用服務並將資料傳回至以Headless模式執行的客戶商務平台。
 
 對於某些商務平台，Adobe會儲存設定檔資訊( `/home/users`)和AEM中的商務權杖（以登入commerce平台）。 針對這些使用案例，請閱讀 [處理AEM平台的GDPR請求](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md).
 

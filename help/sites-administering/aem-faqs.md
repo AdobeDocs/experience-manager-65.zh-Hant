@@ -3,7 +3,9 @@ title: AEM常見問題集
 description: 使用這些常見問題集來瞭解、設定和疑難排解AEM中的常見工作流程或問題。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Configuring
+role: Admin
+source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 0%

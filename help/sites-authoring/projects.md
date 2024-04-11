@@ -3,7 +3,9 @@ title: 專案
 description: 專案可讓您將資源分組到一個實體中，其共用的共用環境可讓您輕鬆管理專案。
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring,Projects
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 27%

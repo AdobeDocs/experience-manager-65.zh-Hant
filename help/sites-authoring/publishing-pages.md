@@ -3,7 +3,9 @@ title: 發佈內容頁面
 description: 瞭解如何在Adobe Experience Manager 6.5中發佈內容頁面。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1673'
 ht-degree: 7%

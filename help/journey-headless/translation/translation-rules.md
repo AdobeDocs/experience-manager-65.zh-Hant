@@ -2,10 +2,13 @@
 title: 設定翻譯規則
 description: 了解如何定義翻譯規則以識別要翻譯的內容。
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments,Language Copy
+role: Admin, Architect,Data Architect,Developer,User,Leader
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '847'
-ht-degree: 77%
+ht-degree: 85%
 
 ---
 
@@ -13,7 +16,7 @@ ht-degree: 77%
 
 了解如何定義翻譯規則以識別要翻譯的內容。
 
-## 到目前為止 {#story-so-far}
+## 目前進度 {#story-so-far}
 
 在 AEM Headless 翻譯歷程的上一個文件「[設定翻譯整合](configure-connector.md)」中，您已了解如何安裝和設定翻譯整合，您現在應該：
 
@@ -31,7 +34,7 @@ ht-degree: 77%
 
 ## 翻譯規則 {#translation-rules}
 
-代表 Headless 內容的內容片段可以包含許多依照結構化欄位組織的資訊。根據您的專案需求，可能不需要翻譯內容片段中的所有欄位。
+代表 Headless 內容的內容片段可以包含許多依照結構化欄位組織的資訊。根據您的專案需要，可能並非內容片段中的所有欄位都必須翻譯。
 
 翻譯規則會識別翻譯專案包含的內容或排除的內容。翻譯內容時，AEM 會根據這些規則擷取或獲得內容。如此，只有必須翻譯的內容才會被傳送到翻譯服務。
 
@@ -56,10 +59,10 @@ ht-degree: 77%
 
 可使用&#x200B;**翻譯設定**&#x200B;主控台來設定翻譯規則。若要存取它：
 
-1. 瀏覽至 **工具** > **一般**.
+1. 導覽至「**工具**」>「**一般**」。
 1. 按一下 **翻譯設定**.
 
-在 **翻譯設定** UI中，有數個選項可供您的翻譯規則使用。 在這裡，我們強調基本 Headless 本地化設定所需的最必要和典型的步驟。
+在「**翻譯設定**」UI 中，有數個選項可用於您的翻譯規則。在這裡，我們強調基本 Headless 本地化設定所需的最需要和典型的步驟。
 
 1. 按一下 **新增內容**，可讓您新增路徑。 這是受規則影響的內容的路徑。
    ![新增內容](assets/add-translation-context.png)
@@ -73,7 +76,7 @@ ht-degree: 77%
    1. 在&#x200B;**新屬性**&#x200B;欄位中輸入屬性名稱。
    1. 選項&#x200B;**翻譯**&#x200B;和&#x200B;**繼承**&#x200B;會自動勾選。
    1. 按一下 **新增**.
-   1. 對您必須翻譯的所有欄位重複這些步驟。
+   1. 對必須翻譯的所有欄位重複這些步驟。
    1. 按一下「**儲存**」。
       ![新增屬性](assets/add-property.png)
 
@@ -81,7 +84,7 @@ ht-degree: 77%
 
 ## 進階用法 {#advanced-usage}
 
-您可在翻譯規則中設定數個其他屬性。 此外，您可以手動將您的規則指定為 XML，可提供更高的明確性和靈活性。
+有數個其他屬性可以設定為翻譯規則的一部分。此外，您可以手動將您的規則指定為 XML，可提供更高的明確性和靈活性。
 
 開始本地化 Headless 內容通常不需要此類功能，但如果您有興趣，可以在[其他資源](#additional-resources)章節深入了解。
 

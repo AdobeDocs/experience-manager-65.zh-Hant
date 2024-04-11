@@ -3,7 +3,9 @@ title: 適用於AEM 6.5 Sites的Headless開發
 description: 瞭解AEM 6.5強大的Headless功能(例如內容模型、內容片段和GraphQL API)如何搭配運作，讓您集中管理您的體驗並跨管道提供這些體驗。
 exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
+role: Admin,Architect,Data Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 35%

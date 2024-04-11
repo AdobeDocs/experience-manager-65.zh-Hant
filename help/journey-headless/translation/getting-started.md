@@ -2,10 +2,13 @@
 title: AEM Headless 翻譯快速入門
 description: 了解如何組織 Headless 內容以及 AEM 翻譯工具的運作原理。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments,Language Copy
+role: Admin, Architect,Data Architect,Developer,User,Leader
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 88%
+ht-degree: 89%
 
 ---
 
@@ -13,7 +16,7 @@ ht-degree: 88%
 
 了解如何組織 Headless 內容以及 AEM 翻譯工具的運作原理。
 
-## 到目前為止 {#story-so-far}
+## 目前進度 {#story-so-far}
 
 在 AEM Headless 翻譯歷程的上一個文件「[了解 Headless 內容以及如何在 AEM 中翻譯](learn-about.md)」中，您已了解 Headless CMS 的基本理論，現在您應該：
 
@@ -32,7 +35,7 @@ ht-degree: 88%
 
 ## 要求和先決條件 {#requirements-prerequisites}
 
-開始翻譯Headless AEM內容之前，有幾項需求。
+您必須先滿足數個要求，才能開始翻譯 Headless AEM 內容。
 
 ### 知識 {#knowledge}
 
@@ -54,7 +57,7 @@ ht-degree: 88%
 
 ## 結構是關鍵 {#content-structure}
 
-AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構驅動的。AEM 對內容結構的要求很少，但在規劃專案時請仔細考慮您的內容階層可以使翻譯變得更加簡單。
+AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構驅動的。AEM 對內容結構的要求很少，但在規劃專案時請仔細考慮您的內容階層，可使翻譯工作變得更簡單。
 
 >[!TIP]
 >
@@ -80,7 +83,7 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 
 1. 瀏覽至 **工具** > **資產** > **內容片段模型**.
 1. 內容片段模型通常儲存在資料夾結構中。按一下專案的資料夾。
-1. 模型隨即列出。按一下模型以檢視詳細資訊。
+1. 接著列出模型。按一下模型以檢視詳細資訊。
    ![內容片段模型](assets/content-fragment-models.png)
 1. **內容片段模型編輯器**&#x200B;開啟。
    1. 左欄包含模型的欄位。我們對此欄感興趣。
@@ -113,7 +116,7 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 /content/dam/<your-project>
 ```
 
-編寫內容所用的語言稱為語言根。我們的範例是使用英語，它應該位在此路徑下。
+製作內容所用的語言稱為語言根。我們的範例是使用英語，它應該位在此路徑下。
 
 ```text
 /content/dam/<your-project>/en
@@ -167,7 +170,7 @@ AEM 的內容，無論是 Headless 網頁還是傳統網頁，都是由其結構
 現在您了解了什麼是內容片段以及內容結構的重要性，我們可以看看如何翻譯這些內容。AEM 的翻譯工具非常強大，其大致概念很容易理解。
 
 * **翻譯連接器** - 連接器是 AEM 與您使用的翻譯服務之間的連結。
-* **翻譯規則**  — 規則會定義特定路徑下的應翻譯內容。
+* **翻譯規則** - 規則定義特定路徑下哪些內容應該翻譯。
 * **翻譯專案** - 翻譯專案收集由單一翻譯工作處理的內容並追蹤翻譯進度，與連接器連接以傳送要翻譯的內容並接收翻譯服務傳回的內容。
 
 您通常只會針對執行個體和每個Headless專案的規則設定一次聯結器。 然後，您使用翻譯專案來翻譯您的內容，並持續更新其翻譯。

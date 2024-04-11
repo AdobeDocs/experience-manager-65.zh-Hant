@@ -2,10 +2,12 @@
 title: AEM 文件歷程
 description: 檔案歷程透過將複雜和不同的功能繫結在一起，以最佳實務的方式解決業務目標，從而在AEM檔案中提供敘述結構。 專為 AEM 初學者而設計，該歷程介紹了從頭到尾實現目標的概念和功能。
 exl-id: bb0a26e2-5686-4fb7-bb6e-231dafc8268b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+role: Admin, Architect,Data Architect,Developer,User,Leader
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
-source-wordcount: '1223'
-ht-degree: 87%
+source-wordcount: '1222'
+ht-degree: 91%
 
 ---
 
@@ -76,17 +78,17 @@ AEM 文件歷程的主要目標是透過敘述的方式幫助 AEM 入門讀者�
 |---|---|---|---|---|---|---|
 | 文件歷程 | 歷程定義了 AEM 如何透過敘述來解決一般業務問題，引導讀者完成複雜、相互關聯的程序和功能。它說明了多個功能如何共同運作以最佳實務的方式解決業務需求。 | AEM 入門讀者 | 一般 CMS 熟悉度 | 詳細選項和設定 | 文字 | 約1 小時 |
 | 技術文件 | 技術文件側重於個別功能，詳細說明該功能的技術運作原理以及使用者可用的每個選項。 | 經驗豐富的 AEM 使用者 | AEM 經驗 | 內容和背景 | 文字 | 因情況而異 |
-| 教學課程 | 教學課程是深入探討一個主題，向開發人員或管理員展示如何逐步實現技術目標（通常是程式設計或系統設定），提供特定範例和範常式式碼，通常使用有限的功能集。 | AEM 開發人員或管理員 | AEM 經驗 | 背景與理論 | 影片 | >1 小時 |
+| 教學課程 | 教學課程會深入探討一個主題，向開發人員或管理員說明如何逐步達成技術目標 (通常是程式設計或系統設定)，提供具體範例和範例程式碼，通常會利用有限的功能集。 | AEM 開發人員或管理員 | AEM 經驗 | 背景與理論 | 影片 | >1 小時 |
 | 快速入門指南 | 快速入門指南是對特定新 AEM 功能的快速逐步解說。它是對單個功能的快速概觀，引導使用者完成重要的 (但不是全部) 步驟以設定和使用簡單的使用案例。 | AEM 管理員 | AEM 經驗 | 背景、理論、詳細選項 | 文字 | &lt;1 小時 |
 
 ## 有哪些歷程? {#journeys}
 
-您已經可以使用數個檔案歷程。 由於每個歷程都設計成一個敘述，請從簡介開始並通讀一遍，以便在AEM的背景下充分瞭解主題。
+您已經可以使用數個文件歷程。由於每個歷程都設計成一個敘述，請從簡介開始並通讀一遍，以便在AEM的背景下充分瞭解主題。
 
 | 歷程 | 說明 |
 |---|---|
 | [Headless 開發人員歷程](/help/journey-headless/developer/overview.md) | 從這裡開始，了解 AEM 如何支援 Headless 開發模型，以及如何開始您的專案，從規劃到實作，再到上線。 |
-| [Headless 編寫歷程](/help/journey-headless/author/overview.md) | 從這裡開始，逐步引導您了解 AEM 強大且有彈性的 Headless 功能、其功能，以及如何在您的第一個 Headless 專案中建立內容的模型。 |
+| [Headless 製作歷程](/help/journey-headless/author/overview.md) | 從這裡開始，逐步引導您了解 AEM 強大且有彈性的 Headless 功能、其功能，以及如何在您的第一個 Headless 專案中建立內容的模型。 |
 | [Headless 架構者歷程](/help/journey-headless/architect/overview.md)  | 從這裡開始瞭解Adobe Experience Manager強大且有彈性的無周邊功能，以及如何為您的專案建立內容的模型。 |
 | [Headless 翻譯歷程](/help/journey-headless/translation/overview.md) | 從這裡開始，了解如何在 AEM 中設定和管理您的 Headless 翻譯專案。 |
 

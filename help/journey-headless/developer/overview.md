@@ -2,7 +2,10 @@
 title: AEM Headless 開發人員歷程
 description: AEM Headless CMS 文件。從這裡開始，逐步引導您瞭解AEM強大且有彈性的無周邊功能、其功能，以及如何在您的第一個開發專案中使用這些功能。
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
-source-git-commit: 487136be68e04fd74affe43790587b37d4c3d3ef
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
+role: Admin, Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 74%
@@ -94,4 +97,4 @@ Headless 實作放棄了全堆疊解決方案中的傳統頁面和元件管理�
 
    * [AEM as a Headless CMS 簡介](/help/sites-developing/headless/introduction.md)
 
-* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM 開發人員入口網站](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hant)

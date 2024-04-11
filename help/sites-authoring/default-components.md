@@ -3,7 +3,9 @@ title: 預設元件
 description: Adobe Experience Manager隨附多種現成可用的元件，可為網站作者提供全方位功能。
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
@@ -38,7 +40,7 @@ Adobe Experience Manager (AEM)隨附多種現成可用的元件，可為網站�
 
 * **We.Retail**：包含可搭配使用的核心元件 [We.Retail參考實作](/help/sites-developing/we-retail.md).
 
-* **We.Retail商務**：包括購物車和產品格線之類的商務元件
+* **We.Retail Commerce**：包括購物車和產品格線之類的商務元件
 
 * **一般**：包括佈局容器和體驗片段
 

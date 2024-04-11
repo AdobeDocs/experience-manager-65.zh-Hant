@@ -2,20 +2,23 @@
 title: 了解內容模型的基本知識
 description: 了解使用內容片段進行 Headless CMS 內容模型的基本知識。
 exl-id: a53fef09-6495-4bb7-8df1-ba3c113d88f6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments
+role: Admin, Architect,Data Architect
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '896'
-ht-degree: 92%
+ht-degree: 94%
 
 ---
 
 # 了解 AEM Headless 內容模型基本知識 {#content-modeling-headless-basics}
 
-## 到目前為止 {#story-so-far}
+## 目前進度 {#story-so-far}
 
-在[AEM Headless 內容架構師歷程](overview.md)一開始，[簡介](introduction.md)部分介紹了和建立無周邊內容模型相關的基本概念和術語。
+在[AEM Headless 內容架構師歷程](overview.md)一開始，[簡介](introduction.md)部分介紹了和建立 Headless 內容模型相關的基本概念和術語。
 
-本文以這些基本知識為基礎，以便您了解如何為您的 AEM 無周邊專案建立內容模型。
+本文以這些基本知識為基礎，以便您了解如何為您的 AEM Headless 專案建立內容模型。
 
 ## 目標 {#objective}
 
@@ -115,7 +118,7 @@ AEM 提供以下資料類型用於建立內容模型：
 
 對於建立內容模型，**片段參考**&#x200B;資料類型可讓您建立多層結構和關係。
 
-使用此參考，您可以&#x200B;*連接*&#x200B;各種內容片段模型來表示相互關係。這可讓無周邊應用程式依照連接操作，並視需要存取內容。
+使用此參考，您可以&#x200B;*連接*&#x200B;各種內容片段模型來表示相互關係。這可讓 Headless 應用程式依照連接操作，並視需要存取內容。
 
 >[!NOTE]
 >
@@ -130,7 +133,7 @@ AEM 提供以下資料類型用於建立內容模型：
 * 人員
 * 獎項
 
-看似簡單明瞭，但公司同時有CEO和員工....這些都是人，每一個都被定義為人員。
+看起來很簡單，但一家公司既有執行長也有員工...這些都是人，每一個都被定義為人員。
 
 人員可以獲得一個獎項 (或兩個)。
 
@@ -141,11 +144,11 @@ AEM 提供以下資料類型用於建立內容模型：
 
 這只是供初學者了解。根據複雜程度，獎項可以是特定於公司的，或者公司可以在特定城市設有主要辦公室。
 
-可以使用片段參考來表示這些相互關係，因為您 (架構師)、您的內容作者和無周邊應用程式都可理解。
+可以使用片段參考來表示這些相互關係，因為您 (架構師)、您的內容作者和 Headless 應用程式都可理解。
 
 ## 下一步 {#whats-next}
 
-現在您已經了解了基本知識，下一步是[了解如何在 AEM 建立內容片段模型](model-structure.md)。這將介紹和討論各種可用的參考，以及如何使用片段參考建立結構階層，這是建立無周邊模型的關鍵部分。
+現在您已經了解了基本知識，下一步是[了解如何在 AEM 建立內容片段模型](model-structure.md)。這將介紹和討論各種可用的參考，以及如何使用片段參考建立結構階層，這是建立 Headless 模型的關鍵部分。
 
 ## 其他資源 {#additional-resources}
 
@@ -153,8 +156,8 @@ AEM 提供以下資料類型用於建立內容模型：
 
    * [內容片段模型 - 資料類型](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
-* [編寫概念](/help/sites-authoring/author.md)
+* [製作概念](/help/sites-authoring/author.md)
 
-* [基本處理](/help/sites-authoring/basic-handling.md) - 此頁面主要根據 **Sites** 主控台，但許多/大部分功能也和編寫 **Assets** 主控台下的&#x200B;**內容片段**&#x200B;相關。
+* [基本處理](/help/sites-authoring/basic-handling.md) - 此頁面主要根據 **Sites** 主控台，但許多/大部分功能也和製作 **Assets** 主控台下的&#x200B;**內容片段**&#x200B;相關。
 
 * [使用內容片段](/help/assets/content-fragments/content-fragments.md)

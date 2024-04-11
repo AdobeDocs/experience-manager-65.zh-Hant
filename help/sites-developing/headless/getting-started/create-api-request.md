@@ -3,7 +3,9 @@ title: 存取及傳遞內容片段Headless快速入門手冊
 description: 瞭解如何使用AEM Assets REST API來管理內容片段，以及如何使用GraphQL API無周邊式傳送內容片段內容。
 exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
+role: Admin,Architect,Data Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 42%

@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 5%
@@ -223,7 +225,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 * 語言副本
 * 導入連結
 * 參考元件的使用：借入和借出的內容
-* 產品頁面的參考（從「商務 — 產品」主控台）
+* 產品頁面的參考資料(來自Commerce — 產品主控台)
 
 開啟所需的主控台，然後導覽至所需的資源並開啟 **引用** 使用：
 
@@ -241,7 +243,7 @@ AEM的製作環境提供各種機制來組織和編輯您的內容。 提供的�
 
 * 借入和借出內容的例項，使用 **參考** 元件，您可從此處導覽至參照/參照頁面
 
-* [產品頁面的引用](/help/commerce/cif-classic/administering/generic.md#showing-product-references) （可從Commerce-Products控制檯取得）
+* [產品頁面的引用](/help/commerce/cif-classic/administering/generic.md#showing-product-references) (可從「Commerce產品」主控台取得)
 * [啟動](/help/sites-authoring/launches.md) 提供相關啟動項的存取權。
 * [即時副本](/help/sites-administering/msm.md) 顯示以所選資源為基礎之所有即時副本的路徑。
 * [Blueprint](/help/sites-administering/msm-best-practices.md) 提供詳細資訊和各種動作。

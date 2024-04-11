@@ -1,11 +1,11 @@
 ---
 title: 搭配GraphQL使用內容片段的Headless內容傳送
 description: 瞭解如何搭配GraphQL使用AEM內容片段來傳送Headless內容。
-feature: Content Fragments
-role: User
+feature: Content Fragments,Headless,GraphQL
+role: User,Developer
 exl-id: 2debd678-2d73-41f2-b33c-c29d661f6a6b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 25%

@@ -3,7 +3,9 @@ title: 使用AEM建立及組織頁面
 description: 瞭解如何使用Adobe Experience Manager建立和管理頁面。
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '2417'
 ht-degree: 2%
@@ -84,7 +86,7 @@ ht-degree: 2%
 * **[標題](#title)**：
 
    * 主控台會向使用者顯示這項資訊，並在編輯時顯示在頁面內容的頂端。
-   * 此欄位為必填。
+   * 此字段是必填字段。
 
 * **[名稱](#name)**：
 
