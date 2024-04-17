@@ -9,7 +9,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '3722'
 ht-degree: 0%
@@ -20,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 建立行動網站與建立標準網站類似，因為其中也涉及建立範本和元件。 如需建立範本和元件的詳細資訊，請參閱下列頁面： [範本](/help/sites-developing/templates.md)， [元件](/help/sites-developing/components.md)、和 [開始開發AEM Sites](/help/sites-developing/getting-started.md). 主要差異在於啟用網站內建的Adobe Experience Manager (AEM)行動裝置功能。 這可透過建立依賴行動頁面元件的範本來達成。
 

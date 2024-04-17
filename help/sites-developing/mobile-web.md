@@ -8,7 +8,9 @@ content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/mobile
 exl-id: 309d256b-c67c-4df9-8851-b1ee3faa55ed
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 1%
@@ -19,7 +21,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 AEM提供數種工具，可讓您為行動裝置開發網站，並將您的內容整合到行動應用程式中。
 

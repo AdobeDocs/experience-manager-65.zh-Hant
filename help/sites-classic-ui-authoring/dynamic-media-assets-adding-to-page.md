@@ -7,7 +7,9 @@ topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 2%
@@ -157,8 +159,8 @@ Dynamic Media元件是智慧型的 — 視您新增影像或視訊而定，您�
 
 您可以編輯下列 **[!UICONTROL 加入購物車]** 設定(按一下 **[!UICONTROL 編輯]** 在元件中。
 
-**[!UICONTROL 顯示產品資產]**  — 預設會選取此值。 產品資產會顯示產品影像，如商務模組中所定義。 清除核取記號即可不顯示產品資產。
+**[!UICONTROL 顯示產品資產]**  — 預設會選取此值。 產品資產會顯示產品影像，如Commerce模組中所定義。 清除核取記號即可不顯示產品資產。
 
-**[!UICONTROL 顯示產品價格]**  — 預設會選取此值。 產品價格會顯示在商務模組中定義的專案價格。 清除核取記號即可不顯示產品價格。
+**[!UICONTROL 顯示產品價格]**  — 預設會選取此值。 產品價格會顯示Commerce模組中定義的專案價格。 清除核取記號即可不顯示產品價格。
 
 **[!UICONTROL 顯示產品表單]**  — 預設不會選取此值。 產品表單包含任何產品變體，例如大小和顏色。 清除核取記號即可不顯示產品變體。
