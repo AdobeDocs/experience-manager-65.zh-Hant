@@ -5,15 +5,21 @@ keywords: 新增自訂函式、使用自訂函式、建立自訂函式，以及�
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
-source-git-commit: d1348a964e664cf502f6eded14a1054641ebc740
+exl-id: a328b4a8-e8dd-42a0-b73b-94e76c7692a8
+source-git-commit: 91ab786cd7e0dd75b9ad15058a125605245ec5bb
 workflow-type: tm+mt
-source-wordcount: '1104'
-ht-degree: 4%
+source-wordcount: '1119'
+ht-degree: 5%
 
 ---
 
 
 # 最適化Forms中的自訂函式（核心元件）
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/create-and-use-custom-functions) |
+| AEM 6.5 | 本文章 |
 
 ## 簡介
 
@@ -266,4 +272,3 @@ var c = {
 ![新增自訂函式使用者端程式庫](/help/forms/using//assets/calculateage-customfunction.png)
 
 現在，讓我們來瞭解如何使用 [AEM Forms中的規則編輯器的叫用服務](/help//forms/using/rule-editor.md).
-
