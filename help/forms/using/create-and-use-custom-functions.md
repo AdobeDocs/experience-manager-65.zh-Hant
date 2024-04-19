@@ -6,7 +6,7 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: a328b4a8-e8dd-42a0-b73b-94e76c7692a8
-source-git-commit: 91ab786cd7e0dd75b9ad15058a125605245ec5bb
+source-git-commit: a5b48f1f4072f3e10273ec90d6f505815fe584a3
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 5%
@@ -27,7 +27,6 @@ AEM Forms 6.5匯入定義JavaScript函式的功能，以在使用規則編輯器
 
 自訂函式可協助處理輸入的資料，以符合指定的需求，進而擴充表單的功能。 它們還可以根據預先定義的條件來啟用表單行為的動態變更。
 在調適型Forms中，您可以在中使用自訂函式 [最適化表單的規則編輯器](/help/forms/using/rule-editor.md) 以建立表單欄位的特定驗證規則。
-
 讓我們瞭解自訂功能的使用方式，使用者可在其中輸入電子郵件地址，而您想要確保輸入的電子郵件地址遵循特定格式（其中包含「@」符號和網域名稱）。 將自訂函式建立為「ValidateEmail」，此函式會以電子郵件地址作為輸入，並在有效時傳回true，否則傳回false。
 
 ```javascript
