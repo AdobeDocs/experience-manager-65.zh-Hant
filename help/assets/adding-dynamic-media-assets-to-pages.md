@@ -10,10 +10,10 @@ role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '3219'
-ht-degree: 5%
+source-wordcount: '3218'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 若要將Dynamic Media功能新增至您在網站上使用的資產，您可以新增 **Dynamic Media**， **互動媒體**， **全景媒體**，或 **360度影片媒體** 元件直接在頁面上。 若要新增元件，請進入「版面」模式並啟用Dynamic Media元件。 然後，您可以將這些元件新增至頁面，並新增資產至元件。動態媒體元件是智慧型的——他們知道您是新增影像還是視訊，而可用的設定選項也會隨之變更。
 
-如果您使用Dynamic Media做為WCM，請直接將Adobe Experience Manager資產新增至頁面。 如果您使用協力廠商來處理WCM，請 [連結](/help/assets/linking-urls-to-yourwebapplication.md) 或 [內嵌](/help/assets/embed-code.md) 您的資產。 如需多方互動網站，請參閱將最佳化 [的影像傳送至多方互動網站](/help/assets/responsive-site.md)。
+如果您使用Dynamic Media做為WCM，請直接將Adobe Experience Manager資產新增至頁面。 如果您使用協力廠商來處理WCM，請連結 [或](/help/assets/linking-urls-to-yourwebapplication.md)[內嵌資](/help/assets/embed-code.md) 產。如需多方互動網站，請參閱將最佳化 [的影像傳送至多方互動網站](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >
@@ -301,9 +301,9 @@ Dynamic Media元件可讓您新增動態影像，包括影像集、迴轉集及�
 
   您可以編輯下列 **[!UICONTROL 加入購物車]** 設定，方法是選取 **[!UICONTROL 編輯]** 在元件中。
 
-* **[!UICONTROL 顯示產品資產]**  — 預設會選取此值。 產品資產會顯示產品影像，如商務模組中所定義。 清除核取記號即可不顯示產品資產。
+* **[!UICONTROL 顯示產品資產]**  — 預設會選取此值。 產品資產會顯示產品影像，如Commerce模組中所定義。 清除核取記號即可不顯示產品資產。
 
-* **[!UICONTROL 顯示產品價格]**  — 預設會選取此值。 產品價格會顯示在商務模組中定義的專案價格。 清除核取記號即可不顯示產品價格。
+* **[!UICONTROL 顯示產品價格]**  — 預設會選取此值。 產品價格會顯示Commerce模組中定義的專案價格。 清除核取記號即可不顯示產品價格。
 
 * **[!UICONTROL 顯示產品表單]**  — 預設不會選取此值。 產品表單包含任何產品變體，例如大小和顏色。 清除核取記號即可不顯示產品變體。
 

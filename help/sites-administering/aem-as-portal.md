@@ -10,9 +10,9 @@ exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '6074'
+source-wordcount: '6073'
 ht-degree: 0%
 
 ---
@@ -140,7 +140,7 @@ Portlet可使用下列偏好設定進行設定：
 
 #### OSGi Web控制檯 {#osgi-web-console}
 
-假設入口網站伺服器執行於主機localhost、連線埠8080上，且AEM portlet web應用程式已掛載在web應用程式內容中 *cqportlet*，網頁主控台的url為 `https://localhost:8080/cqportlet/cqbridge/system/console`. 預設的使用者和密碼為 **管理員**.
+假設入口網站伺服器執行於主機localhost、連線埠8080上，且AEM portlet web應用程式已掛載在web應用程式內容中 *cqportlet*，網頁主控台的URL為 `https://localhost:8080/cqportlet/cqbridge/system/console`. 預設的使用者和密碼為 **管理員**.
 
 開啟 **設定** 標籤並選取 **入口網站目錄CQ伺服器設定**. 您可以在此處指定製作和發佈執行個體的基底URL。 此程式的說明請參閱 [設定Portlet](#configuring-the-portlet).
 

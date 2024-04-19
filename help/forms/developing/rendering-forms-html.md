@@ -1,6 +1,6 @@
 ---
 title: 將Forms轉譯為HTML
-description: 使用Forms服務將表單轉譯為HTML，以回應來自網頁瀏覽器的HTTP請求。 您可以使用Java API和Web服務API將表單轉譯為HTML。
+description: 使用Forms服務將表單轉譯為HTML，以回應來自網頁瀏覽器的HTTP請求。 您可以使用Java&trade； API和Web服務API將表單轉譯為HTML。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
@@ -9,9 +9,9 @@ topic-tags: operations
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '4104'
+source-wordcount: '4099'
 ht-degree: 0%
 
 ---
@@ -64,17 +64,17 @@ Forms服務會根據網頁瀏覽器的HTTP要求，將表單轉譯為HTML。 將
 >
 >如果您想要自訂HTML表單上「HTML數位簽名」按鈕的外觀，您必須在fscdigsig.css檔案（在adobe-forms-ds.ear > adobe-forms-ds.war檔案中）中變更下列屬性：
 
-**.fsc-ds-ssb**：此樣式表適用於空白符號欄位的情況。
+**`.fsc-ds-ssb`**：此樣式表適用於空白符號欄位的情況。
 
-**.fsc-ds-ssv**：此樣式表適用於有有效符號欄位的情況。
+**`.fsc-ds-ssv`**：此樣式表適用於有有效符號欄位的情況。
 
-**.fsc-ds-ssc**：此樣式表適用於有「有效符號」欄位但資料已變更的情況。
+**`.fsc-ds-ssc`**：此樣式表適用於有「有效符號」欄位但資料已變更的情況。
 
-**.fsc-ds-ssi**：此樣式表適用於有無效符號欄位的情況。
+**`.fsc-ds-ssi`**：此樣式表適用於有無效符號欄位的情況。
 
-**.fsc-ds-popup-bg**：未使用此樣式表屬性。
+**`.fsc-ds-popup-bg`**：未使用此樣式表屬性。
 
-**.fsc-ds-popup-btn**：未使用此樣式表屬性。
+**。`fsc-ds-popup-btn`**：未使用此樣式表屬性。
 
 ## 執行指令碼 {#running-scripts}
 

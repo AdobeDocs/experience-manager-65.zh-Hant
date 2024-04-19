@@ -10,7 +10,7 @@ exl-id: e47270e8-bace-4d0f-a088-7269b6356315
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 1%
@@ -173,7 +173,7 @@ ht-degree: 1%
 
 ### 對參與者步驟執行後退 {#performing-step-back-on-a-participant-step}
 
-如果您發現某個步驟或一系列步驟需要重複，您可以後退。 這可讓您選取工作流程中先前發生的步驟以進行重新處理。 工作流程會回到您指定的步驟，然後從那裡繼續。
+如果您發現某個步驟或一系列步驟需要重複，您可以後退。 這可讓您選取工作流程中先前發生的步驟，以便重新處理。 工作流程會回到您指定的步驟，然後從那裡繼續。
 
 在此動作中，您可以指出：
 

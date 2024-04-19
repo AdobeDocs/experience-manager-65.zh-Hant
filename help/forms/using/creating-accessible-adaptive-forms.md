@@ -7,20 +7,20 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '2100'
+source-wordcount: '2099'
 ht-degree: 2%
 
 ---
 
 # 建立無障礙的最適化表單{#creating-accessible-adaptive-forms}
 
-<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文會介紹使用基礎元件編寫最適化表單的舊方法。</span>
+<span class="preview">Adobe 建議使用新式且可擴充的資料擷取[核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)，用來[建立新的最適化表單](/help/forms/using/create-an-adaptive-form-core-components.md)或[將最適化表單新增到 AEM Sites 頁面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。這些元件代表最適化表單建立方面的重大進步，可確保令人印象深刻的使用者體驗。本文介紹使用基礎元件製作最適化Forms的舊方法。 </span>
 
 ## 簡介 {#introduction}
 
-可存取的表單是所有人都能使用的表單，包括有特殊需求的使用者。 最適化Forms包含多項功能，可提升不同功能使用者的可用性。 將協助工具建置到調適型表單中，不僅可讓內容有儘可能廣泛的閱聽眾，而且在必須遵循協助工具標準的地理位置提供檔案時，這也是必要條件。 AEM Forms可協助表單開發人員遵守協助工具標準。
+可存取的表單是所有人都能使用的表單，包括有特殊需求的使用者。 最適化Forms包含多項功能，可提升不同功能使用者的可用性。 在最適化表單中建立協助工具，不僅可讓內容有儘可能廣泛的閱聽眾，而且在必須遵循協助工具標準的地理位置提供檔案時，這也是必要條件。 AEM Forms可協助表單開發人員遵守協助工具標準。
 
 製作最適化表單時，作者應考量下列幾點，以建立無障礙的最適化表單：
 
@@ -36,14 +36,14 @@ ht-degree: 2%
 
 ### 下載並安裝協助工具測試工具
 
-可存取的名稱和說明檢查器(ANDI)工具可協助您識別和修正網頁內容中與協助工具相容相關的問題。 這是國土安全部的Trusted Tester v5指引下建議的工具。 它是由美國社會安全管理&#x200B;部所開發，用於檢查網頁內容的Section 508合規性。 工具：
+「可存取的名稱和說明檢測器」(ANDI)工具可協助您識別和修正網頁內容中與可存取性相容相關的問題。 這是國土安全部的Trusted Tester v5指引下建議的工具。 它是由美國社會安全管理&#x200B;部所開發，用於檢查網頁內容的Section 508合規性。 工具：
 
 * 協助偵測網頁&#x200B;上的協助工具問題
 * 提供改善協助工具的建議&#x200B;。
 * 偵測鍵盤協助工具及色彩對比問題
 * 清楚識別符合標準的熒幕助讀程式內容
 
-ANDI可與所有主要的網際網路瀏覽器搭配使用。 請參閱， [ANDI的檔案](https://www.ssa.gov/accessibility/andi/help/install.html) 以取得設定及使用此工具的詳細指示。
+ANDI可與所有主要的網際網路瀏覽器搭配使用。 另請參閱 [ANDI的檔案](https://www.ssa.gov/accessibility/andi/help/install.html) 以取得如何設定及使用此工具的詳細指示。
 
 ### 下載並安裝Ultraminary-Access主題
 
@@ -90,7 +90,7 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 1. 設定日期選擇器元件的自訂協助工具文字。 例如，輸入您的出生日期。 熒幕助讀程式會朗讀這些自訂協助工具文字。
 
-1. 針對最適化表單元件，請使用簡短說明，而非詳細說明。 冗長的說明會新增說明按鈕。 確認最適化沒有任何說明按鈕。
+1. 針對最適化表單元件，請使用簡短說明，而非詳細說明。 冗長的說明會新增說明按鈕。 請確定最適化沒有任何說明按鈕。
 
 1. 新增自訂協助工具文字至表格的所有唯讀儲存格。 此外，也會停用表格的所有唯讀儲存格。
 
@@ -123,7 +123,7 @@ Ultraminary-Accessible主題是參考主題。 它有助於示範如何以最適
 
 >[!NOTE]
 >
->* [Radio Button]和[Check-box]只能有兩個協助工具選項，即[Custom Text]和[Title]。
+>* Radio Button和Check-box只能有兩個協助工具選項，即Custom Text和Title。
 >* 對於XFA型調適型表單，協助工具選項繼承自XDP中設定的協助工具選項。 XDP的工具提示會對應至簡短說明，而標題會對應至標題。 其他選項則可正常運作。
 
 ### 3.提供影像的等效文字 {#provide-text-equivalents-for-images}
@@ -181,7 +181,7 @@ AEM Forms提供下列鍵盤快速鍵。
 
 ## 使用協助工具來尋找剩餘的協助工具問題
 
-可存取的名稱和說明檢查器(ANDI)可協助您在最適化表單中識別並修正可存取性法規遵循相關問題。 使用ANDI工具尋找最適化表單中的協助工具問題：
+可存取的名稱和說明檢查器(ANDI)可協助您在最適化表單中識別及修正可存取性法規遵循相關問題。 使用ANDI工具尋找最適化表單中的協助工具問題：
 
 1. 在預覽模式中開啟最適化表單。
 1. 按一下已建立書籤的ANDI工具圖示。 ANDI工具會分析最適化表單並顯示協助工具的問題。 如需有關如何使用此工具的詳細資訊，請參閱 [ANDI的檔案](https://www.ssa.gov/accessibility/andi/help/howtouse.html).

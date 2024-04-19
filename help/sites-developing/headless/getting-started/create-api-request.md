@@ -5,16 +5,16 @@ exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '548'
 ht-degree: 42%
 
 ---
 
 # 存取及傳遞內容片段Headless快速入門手冊 {#accessing-delivering-content-fragments}
 
-瞭解如何使用AEM Assets REST API來管理內容片段，以及如何使用GraphQL API無周邊式傳送內容片段內容。
+瞭解如何使用AEM Assets REST API來管理內容片段，以及如何使用GraphQL API無周邊方式傳送內容片段內容。
 
 ## 什麼是 GraphQL 和 Assets REST API？ {#what-are-the-apis}
 
@@ -28,7 +28,7 @@ ht-degree: 42%
 
 ## 如何使用GraphQL傳遞內容片段 {#how-to-deliver-a-content-fragment}
 
-資訊架構師必須為其通道端點設計查詢才能傳送內容。 每個模型的每個端點只能考慮一次這些查詢。 針對此快速入門手冊，您只能建立一個快速入門手冊。
+資訊架構師必須為其通道端點設計查詢才能傳送內容。 每個端點、每個模型只考慮這些查詢一次。 對於此快速入門手冊，請僅建立一個快速入門手冊。
 
 1. 登入AEM並存取 [GraphiQL介面](/help/sites-developing/headless/graphql-api/graphiql-ide.md)：
    * 例如：`http://<host>:<port>/aem/graphiql.html`。

@@ -10,9 +10,9 @@ exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '3442'
+source-wordcount: '3441'
 ht-degree: 0%
 
 ---
@@ -368,11 +368,11 @@ HTML標籤，在匯入的zip檔案中包含圖形連結元件。 這裡「firstN
 
 ### Parsys {#parsys}
 
-AEM parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的HTML中新增parsys元件。 這可讓使用者在登入頁面新增/刪除可編輯的AEM元件，即使頁面已匯入亦然。
+AEM Parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的HTML中新增Parsys元件。 這可讓使用者在登入頁面新增/刪除可編輯的AEM元件，即使頁面已匯入亦然。
 
 段落系統讓使用者能夠使用Sidekick新增元件。
 
-插入parsys元件的HTML標示( `foundation/components/parsys`)在設計封裝內的HTML中：
+插入Parsys元件的HTML標示( `foundation/components/parsys`)在設計封裝內的HTML中：
 
 ```xml
 <div data-cq-component="parsys">
@@ -383,9 +383,9 @@ AEM parsys元件是可包含其他AEM元件的容器元件。 可以在匯入的
 
 在HTML中包含上述標籤會執行下列動作：
 
-* 在匯入設計封裝後建立的登入頁面中插入AEM parsys元件(foundation/components/parsys)。
-* 使用預設元件初始化Sidekick。 將元件從sidekick拖曳至parsys元件上，可將新元件新增至登入頁面。
-* 兩個標題元件也是parsys的一部分。
+* 在匯入設計封裝後建立的登入頁面中插入AEM Parsys元件(foundation/components/parsys)。
+* 使用預設元件初始化Sidekick。 將元件從sidekick拖曳至Parsys元件上，可將新元件新增至登入頁面。
+* 兩個標題元件也是Parsys的一部分。
 
 ### 目標 {#target}
 
@@ -543,7 +543,7 @@ data-cq-component中的路徑應為元件的resourceType。
 
 ### 使用登陸頁面相關元件初始化Sidekick {#initialization-of-sidekick-with-landing-page-relevant-components}
 
-如果設計套件包含parsys元件標籤，則在匯入後，sidekick會開始顯示登陸頁面相關元件。 您可以將新元件拖放至登陸頁面內的parsys元件上。 您也可以前往設計模式並將新元件新增到Sidekick。
+如果設計套件包含Parsys元件標籤，則在匯入後，sidekick會開始顯示登陸頁面相關元件。 您可以將新元件拖放至登陸頁面內的Parsys元件上。 您也可以前往設計模式並將新元件新增到Sidekick。
 
 ### 匯入期間顯示的錯誤訊息 {#error-messages-displayed-during-import}
 

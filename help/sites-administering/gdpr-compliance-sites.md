@@ -9,9 +9,9 @@ exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
 role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '823'
 ht-degree: 54%
 
 ---
@@ -40,7 +40,7 @@ AEM Sites已準備好協助客戶履行GDPR法規遵循義務。 本頁將指導
 
 用於驗證網站訪客身分的使用者帳戶以及發佈伺服器上的UGC內容都包含在 [平台GDPR檔案](/help/managing/data-protection-and-privacy.md).
 
-預設情況下，AEM Sites 元件不會將訪客輸入的表單資料存放在發佈伺服器上。 建議將資料轉發給第三方系統或 Adobe Campaign 進行進一步處理。
+預設情況下，AEM Sites 元件不會將訪客輸入的表單資料存放在發佈伺服器上。建議將資料轉發給第三方系統或 Adobe Campaign 進行進一步處理。
 
 ## 選擇退出/選擇加入 {#opt-in-opt-out}
 

@@ -10,9 +10,9 @@ feature: Interactive Images
 role: User, Admin
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '4130'
+source-wordcount: '4132'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 1%
 
 首先，請識別您現有Quickview實作所使用的動態變數，以便您可以輸入熱點資料來建立互動式影像。
 
-當您在Experience Manager Assets中將熱點新增至橫幅影像時，必須將SKU （庫存單位）和選用的其他變數指派至每個熱點。 這類熱點變數稍後會用於比對熱點與Quickview內容。
+在Experience Manager Assets中將熱點新增至橫幅影像時，您必須指派SKU （庫存單位）和選用的額外變數至每個熱點。 這類熱點變數稍後會用於比對熱點與Quickview內容。
 
 請務必正確識別要與熱點資料產生關聯的變數數量和型別。 新增至橫幅影像的每個熱點都必須包含足夠的資訊，以明確識別現有後端系統中的產品。
 
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 最簡單的情況是，快速檢視URL中的唯一變數部分是產品SKU。 在此案例中，SKU值是您將熱點新增至橫幅影像時所需的唯一資料片段。
 
-不過，在複雜的情況下，除了SKU之外，快速檢視URL還有不同的變數元素，例如類別ID、顏色代碼和大小代碼。 在這種情況下，在Experience Manager Assets的可購物互動影像功能中，每個元素都是熱點資料定義中的個別變數。
+不過，在複雜的情況下，快速檢視URL會有與SKU不同的各種元素，例如類別ID、顏色代碼和大小代碼。 在這種情況下，在Experience Manager Assets的可購物互動影像功能中，每個元素都是熱點資料定義中的個別變數。
 
 請考量下列快速檢視URL範例及其產生的熱點變數：
 
@@ -271,7 +271,7 @@ ht-degree: 1%
 
    1. 在「熱點管理」頁面的左上角附近，選取「 」 **[!UICONTROL 熱點]**.
    1. 在影像上，選取您想要熱點出現的位置。 如有必要，請拖動熱點以調整其位置。
-   1. 重複步驟a和b，視需要新增其他熱點。
+   1. 重複步驟a和b，視需要新增額外的熱點。
    1. （可選）若要刪除熱點，請在影像上選取它，然後選取 **[!UICONTROL 刪除]** （垃圾桶圖示） **[!UICONTROL 熱點]** 標題。
 
 1. 在「名稱」文字欄位中，輸入連結區的名稱。 此名稱也會顯示在選取的熱點下拉式清單中。
@@ -375,9 +375,9 @@ ht-degree: 1%
 
 若要針對回應式環境將「裁切」套用至可購物互動影像，您可以包含互動影像設定屬性 `ZoomView.iscommand` 至路徑。 元件 `ZoomView` 稱為和 `iscommand` 是您套用的「裁切」影像伺服命令。
 
-另請參閱 [ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 組態屬性。
+另請參閱 [ZoomView.iscommand](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand) 組態屬性。
 
-另請參閱 [裁切](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) 影像伺服命令。
+另請參閱 [裁切](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop) 影像伺服命令。
 
 您現在已準備好將互動式影像與網站上現有的快速檢視整合。
 

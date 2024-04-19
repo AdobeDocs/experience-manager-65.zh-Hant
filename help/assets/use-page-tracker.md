@@ -6,7 +6,7 @@ role: Architect, Admin
 feature: Asset Reports
 exl-id: 14d02015-df00-4566-a098-de76eaf42605
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 頁面追蹤器是您包含在協力廠商網站程式碼中的JavaScript程式碼，可讓Adobe Analytics擷取周圍的使用資料 [!DNL Adobe Experience Manager Assets] 這些網站上的資訊。
 
-若要擷取資產特有的事件（例如點按），您也必須在協力廠商網站的程式碼中包含內嵌程式碼。
+若要擷取事件（例如特定於資產的點按），您還必須在協力廠商網站的程式碼中包含內嵌程式碼。
 
 下列範常式式碼顯示同時包含頁面追蹤器程式碼和內嵌程式碼的網頁外觀：
 

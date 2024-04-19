@@ -10,9 +10,9 @@ feature: Interactive Videos
 role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '5926'
+source-wordcount: '5927'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您在使用者選取縮圖影像時，建立互動視訊以啟動網頁，則某些裝置會封鎖快顯網頁的開啟。 在這種情況下，您必須變更裝置上的快顯封鎖程式設定。 例如，在Apple iPhone 6上，導覽至 **[!UICONTROL 設定]** > **Safari** > **封鎖快顯視窗**，然後將控制項滑動至 **[!UICONTROL 關閉]**. 現在，當您播放互動式視訊並選取縮圖時，如果您想要開啟快顯視窗，系統會提示您進行選擇。 如果您接受，網頁會開啟。
+>如果您在使用者選取縮圖影像時，建立互動視訊以啟動網頁，則某些裝置會封鎖快顯網頁的開啟。 在這種情況下，您必須變更裝置上的快顯封鎖程式設定。 例如，在Apple iPhone 6上，導覽至 **[!UICONTROL 設定]** > **Safari** > **封鎖快顯視窗**，然後將控制項滑動至 **[!UICONTROL 關閉]**. 現在，在播放互動式視訊並選取縮圖時，如果您想要開啟快顯視窗，系統會提示您輸入。 如果您接受，網頁會開啟。
 
 ### 觀看互動式視訊的建立方式 {#watch-how-interactive-videos-are-created}
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 ### Adobe客戶解決方案網路研討會 {#adobe-customer-success-webinar}
 
-「在Experience Manager Assets中使用互動式視訊、連結共用和YouTube共用」網路研討會會教導您如何使用互動式視訊和其他功能，將轉換驅動事件連結至視訊行銷內容。
+「在Experience Manager Assets中使用互動式視訊、連結共用和YouTube共用」網路研討會會教導您如何使用互動式視訊和其他功能，將轉換驅動的事件連結至視訊行銷內容。
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ ht-degree: 2%
 
 最簡單的情況是，快速檢視URL中的唯一變數部分是產品SKU。 在此情況下，將縮圖新增至Experience Manager互動視訊中的時間區段時，只需要產品SKU值即可。
 
-不過，在複雜的情況下，除了產品SKU之外，快速檢視URL還有不同的變數元素，例如類別ID、顏色代碼和大小代碼。 在這種情況下，每個這類元素在Experience Manager的縮圖資料定義中都會變成個別變數。
+不過，在複雜的情況下，快速檢視URL會有不同元素，以及產品SKU不同，例如類別ID、顏色代碼和大小代碼。 在這種情況下，每個這類元素在Experience Manager的縮圖資料定義中都會變成個別變數。
 
 請考量下列快速檢視URL範例及其產生的縮圖變數：
 
@@ -252,7 +252,7 @@ ht-degree: 2%
 
 若要上傳視訊及其相關縮圖資產：
 
-1. 將視訊和相關縮圖資產上傳至您想要的資料夾。
+1. 將視訊和相關聯的縮圖資產上傳到您想要的資料夾。
 
    另請參閱 [上傳資產](/help/assets/manage-assets.md).
 另請參閱 [使用FTP工作排程上傳資產](/help/assets/manage-assets.md).
@@ -300,7 +300,7 @@ ht-degree: 2%
 
      在您要新增區段的時間軸上的各個點繼續播放和暫停視訊，直到視訊結束。
 
-1. （可選）將列拖曳至 **[!UICONTROL 時間軸比例滑桿]** 向左放大或向右縮小，讓您控制您所新增區段的詳細程度。
+1. （可選）將列拖曳至 **[!UICONTROL 時間軸比例滑桿]** 向左鍵可放大或向右鍵可縮小，讓您可控制您所新增區段的詳細程度。
 
    ![chlimage_1-22](assets/chlimage_1-128.png)
 
@@ -335,7 +335,7 @@ ht-degree: 2%
       </tbody>
     </table>
 
-   視訊時間軸使用的熒幕空間量，不限其可用空間。 因此，當您調整瀏覽器大小時，您新增的區段會維持其正確寬度。
+   視訊時間軸使用的熒幕空間量，不限其可用空間。 因此，調整瀏覽器大小時，您新增的區段會維持其正確寬度。
 
    舉例來說，以下三個熒幕擷取畫面均使用相同影片。 請注意，每個區段的寬度會隨著「時間軸比例」設定而改變。
 
@@ -375,7 +375,7 @@ ht-degree: 2%
 
    * 若要刪除區段
 
-     選取時間軸上的最後一個區段，然後在工具列上選取「 」 **[!UICONTROL 刪除區段]**. 如果選取了兩個或多個區段，則會停用「刪除區段」功能。
+     選取時間軸上的最後一個區段，然後在工具列上選取「 」 **[!UICONTROL 刪除區段]**. 如果選取了兩個或多個區段， **[!UICONTROL 刪除區段]** 已停用。
 
      您只能刪除最後一個區段。 例如，如果您想要刪除時間軸上的所有區段，您必須一律選取最後一個區段，然後選取「 」 **[!UICONTROL 刪除區段]**.
 
@@ -414,7 +414,7 @@ ht-degree: 2%
       <td>若要將選取的縮圖影像與快速檢視產生關聯</td> 
       <td><p>在動作型別下，選取 <strong>快速檢視</strong>.</p> <p>如果您是Experience Manager Sites和電子商務客戶：</p> 
        <ul> 
-       <li>請注意，「SKU值」文字欄位已預先填入選取產品的SKU （庫存單位），這是您提供的每個不同產品或服務的唯一識別碼。 當影像與Experience Manager Commerce中的產品相關聯時，會自動填入此值。</li> 
+       <li>請注意，「SKU值」文字欄位已預先填入選取產品的SKU （庫存單位），這是您提供的每個不同產品或服務的唯一識別碼。 當影像與Experience ManagerCommerce中的產品相關聯時，會自動填入此值。</li> 
        <li>如果預先填入的SKU不正確，請選取「產品挑選器」圖示（放大鏡）以開啟「選取產品」頁面。 選取您要使用的產品，然後選取頁面右上角的核取記號，即可返回互動式視訊編輯器。</li> 
        </ul> <p> 如果您是 <em>非</em> Experience Manager Sites或電子商務客戶</p> 
        <ul> 
@@ -476,7 +476,7 @@ ht-degree: 2%
 
    將兩個選取的5秒區段合併為1個10秒區段。
 
-   * **[!UICONTROL 分割區段]**  — 您可以將單一區段劃分為兩個計時相等的區段。 如果已有產品縮圖指派給區段，則縮圖會合併至左側區段。
+   * **[!UICONTROL 分割區段]**  — 您可將單一區段劃分為兩個相等的時間區段。 如果已有產品縮圖指派給區段，則縮圖會合併至左側區段。
 
      在時間軸上，選取要分成兩半的區段，然後選取 **[!UICONTROL 分割區段]** （在工具列上）。
 
@@ -693,7 +693,7 @@ Experience Manager傳回的內嵌程式碼已有現成的事件處理常式。 �
 /datafeed/$CategoryId$-$SKU$.json
 ```
 
-在內輕鬆重建此URL `quickViewActivate` 處理常式使用 `categoryId` 和 `sku` 中的可用欄位 `inData` 物件透過檢視器的程式碼傳遞給處理常式，如下所示：
+在內輕鬆重建此URL `quickViewActivate` 處理常式，使用 `categoryId` 和 `sku` 中的可用欄位 `inData` 物件透過檢視器的程式碼傳遞給處理常式，如下所示：
 
 ```xml
 var sku=inData.sku;
@@ -707,7 +707,7 @@ var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
 loadQuickView(quickViewUrl);
 ```
 
-最後，請確定您的「快速檢視」對話方塊已附加至檢視器的容器元素。 預設內嵌程式碼提供實現此功能的範例步驟。 若要取得檢視器容器元素的參考，您可以使用下列幾行程式碼：
+最後，請確定您的「快速檢視」對話方塊已附加至檢視器的容器元素。 內嵌程式碼提供實現此功能的範例步驟。 若要取得檢視器容器元素的參考，您可以使用下列幾行程式碼：
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component

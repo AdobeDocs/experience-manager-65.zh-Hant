@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: b15d8d3b-5e47-4c33-95fe-440fcf96be83
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 設定watched資料夾之前，請先確定下列事項：
 
 * Watched資料夾是AEM表單的進階功能。 此功能需要AEM Forms附加元件套件才能運作。 確保已安裝並設定適當的AEM Forms附加元件套件。
-* 您可以在共用或本機存放區中建立watched資料夾。 確定設定為執行watched資料夾的AEM表單使用者擁有watched資料夾的讀寫許可權。
+* 您可以在共用存放區或本機存放區中建立watched資料夾。 確定設定為執行watched資料夾的AEM表單使用者擁有watched資料夾的讀寫許可權。
 * 您可以使用服務、工作流程或指令碼，自動執行watched資料夾的作業。 確保對應的服務、工作流程或指令碼已建立並準備執行。 如需有關建立服務、工作流程和指令碼的資訊，請參閱 [處理檔案的各種方法](/help/forms/using/watched-folder-in-aem-forms.md#various-methods-for-processing-files).
 * Watched資料夾有各種屬性，請參閱 [Watched資料夾內容](watched-folder-in-aem-forms.md#watchedfolderproperties).
 

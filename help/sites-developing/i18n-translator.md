@@ -9,9 +9,9 @@ exl-id: a8d50c09-72d0-406e-874e-50a985227a56
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '2320'
+source-wordcount: '2318'
 ht-degree: 2%
 
 ---
@@ -195,7 +195,7 @@ Translator工具底部的搜尋列提供字串選取選項：
 
 ### 編輯翻譯的字串 {#editing-translated-strings}
 
-將英文字串新增至字典後，可以新增字串的翻譯。 您也可以 [匯出字典](/help/sites-developing/i18n-translator.md#exporting-a-dictionary) 讓第三方翻譯。
+將英文字串新增至字典後，可以新增字串的翻譯。 您也可以 [匯出字典](/help/sites-developing/i18n-translator.md#exporting-a-dictionary) 讓第三方翻譯它。
 
 1. 選取 [您的專案特定字典](#creating-a-dictionary) 因為它會指定存放庫中包含翻譯的路徑。 例如，選取 **字典** 作為：
 

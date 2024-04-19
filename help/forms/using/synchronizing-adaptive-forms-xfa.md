@@ -7,9 +7,9 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: fed67c23-a9b7-403e-9199-dfd527d5f209
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1226'
 ht-degree: 4%
 
 ---
@@ -52,7 +52,7 @@ AEM Forms可協助您保持最適化表單的欄位與稍後對XDP檔案中對�
 
 1. `sample-form.xdp`：當作範例使用的XFA表單範本
 
-1. `sample-xfa-af`：根據sample-form.xdp檔案的最適化表單。 不過，此最適化表單不包含任何欄位。 在下一步中，我們將新增內容至此最適化表單。
+1. `sample-xfa-af`：根據sample-form.xdp檔案的最適化表單。 不過，此最適化表單不包含任何欄位。 在下一步中，您將內容新增至此最適化表單。
 
 ### 將內容新增至最適化表單 {#add-content-to-adaptive-form-br}
 
@@ -63,7 +63,7 @@ AEM Forms可協助您保持最適化表單的欄位與稍後對XDP檔案中對�
 
 >[!NOTE]
 >
->在上述步驟中，我們覆寫XDP檔案中欄位的屬性。 因此，如果稍後修改XDP檔案中的對應屬性，此屬性將不會同步。
+>在上述步驟中，您覆寫了XDP檔案中欄位的屬性。 因此，如果稍後再編輯XDP檔案中的對應屬性，此屬性就不會同步。
 
 ## 偵測XDP檔案中的變更 {#detecting-changes-in-xdp-file}
 
@@ -133,7 +133,7 @@ AEM Forms可協助您保持最適化表單的欄位與稍後對XDP檔案中對�
 
 >[!NOTE]
 >
->適用性表單中有不正確繫結（無效）的欄位 `bindRef` 值)，也會被視為已刪除欄位。 如果作者未修正這些錯誤並發佈調適型表單，則該欄位會被視為一般未繫結的調適型表單欄位，並包含在輸出XML檔案的未繫結區段中。
+>適用性表單中有不正確繫結（無效）的欄位 `bindRef` 值)，也會被視為已刪除欄位。 如果作者未修正這些錯誤並發佈調適型表單，則該欄位會被視為一般未繫結的調適型表單欄位，並被包含在輸出XML檔案的未繫結區段中。
 
 ## 下載 {#downloads}
 

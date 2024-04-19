@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1658'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 **對於 [社群功能](/help/communities/overview.md)**
 
-* 如果部署 [發佈陣列](/help/sites-deploying/recommended-deploys.md#tarmk-farm)， [識別主要發行者](#primary-publisher)
+* 如果部署 [發佈伺服器陣列](/help/sites-deploying/recommended-deploys.md#tarmk-farm)， [識別主要發行者](#primary-publisher)
 
 * [啟用通道服務](#tunnel-service-on-author)
 * [啟用社交登入](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
@@ -84,7 +84,7 @@ AEM 6.5 Communities GA包含Communities套件。 進一步瞭解AEM 6.5的更新
 
 從AEM 6.4開始，Communities的更新屬於AEM Cumulative Fix Pack和Service Pack的一部分。
 
-如需AEM 6.5的最新更新，請參閱 [Adobe Experience Manager 6.4 Cumulative Fix Pack和Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html).
+如需AEM 6.5的最新更新，請參閱 [Adobe Experience Manager 6.4 Cumulative Fix Pack和Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates).
 
 ### 版本記錄 {#version-history}
 
@@ -168,7 +168,7 @@ AEM 6.5 Communities GA包含Communities套件。 進一步瞭解AEM 6.5的更新
 
 在AEM Communities中，用來儲存UGC的通用存放區，通常稱為 [儲存資源提供者(SRP)](/help/communities/working-with-srp.md). 建議的部署著重於為通用存放區選擇SRP選項。
 
-通用存放區支援在發佈環境中稽核UGC並加以分析，同時消除了 [復寫](/help/communities/sync.md) /UGC.
+Common store支援在發佈環境中稽核UGC並進行分析，同時消除對 [復寫](/help/communities/sync.md) /UGC.
 
 * [社群內容存放區](/help/communities/working-with-srp.md) ：討論AEM Communities的SRP儲存選項
 
@@ -358,8 +358,8 @@ AEM Communities有兩個功能，需要所有AEM伺服器執行個體使用相�
 
 如果使用Dispatcher，請參閱：
 
-* AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 檔案
-* [安裝 Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)
+* AEM [Dispatcher](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates) 檔案
+* [安裝 Dispatcher](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install)
 * [為社群設定Dispatcher](/help/communities/dispatcher.md)
 * [已知問題](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 

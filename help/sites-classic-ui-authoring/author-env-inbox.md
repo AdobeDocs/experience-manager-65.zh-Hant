@@ -10,7 +10,7 @@ exl-id: 52ea2ca2-eb1c-4bed-b52d-feef37c6afd6
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 1%
@@ -106,8 +106,8 @@ ht-degree: 1%
 
 如果您已選擇在AEM收件匣中接收通知，則收件匣會填滿通知。 您可以 [檢視您的通知](#viewing-your-notifications)，然後選取需要的通知以：
 
-* 按一下以核准 **核准**：中的值 **讀取** 欄已設定為 **true**.
+* 按一下以接受它 **核准**：中的值 **讀取** 欄已設定為 **true**.
 
-* 按一下以刪除它 **刪除**.
+* 按一下「 」即可將其刪除 **刪除**.
 
 ![chlimage_1-5](assets/chlimage_1-5.jpeg)
