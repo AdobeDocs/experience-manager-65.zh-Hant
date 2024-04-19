@@ -10,9 +10,9 @@ exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: fde290e30335b0785d12ea9b5ab6081b1401d230
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1795'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,8 @@ HTML轉譯是使用Sling重寫程式管道產生的。 管道定義於 `/libs/ex
 >[!CAUTION]
 >
 >***僅限*** [可編輯的範本](/help/sites-developing/page-templates-editable.md) 支援體驗片段。
+>
+>體驗片段只能用於以可編輯範本為基礎的頁面。
 
 為體驗片段開發新範本時，您可以遵循的標準做法 [可編輯的範本](/help/sites-developing/page-templates-editable.md).
 

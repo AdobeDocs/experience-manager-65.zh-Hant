@@ -5,9 +5,9 @@ exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Experience Fragments
 role: User
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: fde290e30335b0785d12ea9b5ab6081b1401d230
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1504'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 體驗片段：
 
 * 是體驗（頁面）的一部分。
-* 可以跨多個頁面使用。
+* 可用於多個頁面（以可編輯的範本為基礎）。
 * 以範本為基礎（僅可編輯）以定義結構和元件。
 * 此範本用於建立 *根頁面* 體驗片段的URL。
 * 由段落系統中一或多個元件組成，具有版面。
@@ -251,6 +251,10 @@ WKND專案會根據以下規則建構一些體驗片段 `Contributors`. 使用�
 您現在可以在編寫頁面時使用您的體驗片段：
 
 1. 開啟任何頁面進行編輯。
+
+   >[!NOTE]
+   >
+   >頁面必須以可編輯的範本為基礎。
 
    例如： [https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html](https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html)
 
