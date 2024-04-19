@@ -1,14 +1,14 @@
 ---
 title: 管理應用程式動態磚
-description: 請詳閱本頁面，瞭解應用程式控制面板上的「管理應用程式標題」，該控制面板提供修改應用程式詳細資訊的功能。
+description: 進一步瞭解應用程式控制面板上的「管理應用程式」表徵圖，其可讓您編輯有關應用程式的詳細資訊。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1218'
 ht-degree: 2%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
-此 **管理應用程式** 「應用程式控制面板」上的圖磚可讓您修改應用程式的詳細資訊。 若要開啟「詳細資訊」頁面，請按一下「管理應用程式」圖磚的詳細資訊連結。 在「管理應用程式」頁面中，您可以編輯PhoneGap應用程式組態(config.xml)設定，並準備應用程式以提交至各種應用程式商店。
+此 **`Manage App`** 「應用程式控制面板」上的圖磚，可讓您編輯應用程式的詳細資訊。 若要開啟「詳細資訊」頁面，請按一下 **`Manage App`** 圖磚的詳細資訊連結。 從 **`Manage App`** 頁面中，您可以編輯PhoneGap應用程式組態(config.xml)設定，並準備應用程式以提交至各種應用程式存放區。
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
-## 瞭解「管理應用程式」標題 {#understanding-the-manage-app-tile}
+## 瞭解 `Manage App` 圖磚 {#understanding-the-manage-app-tile}
 
-您可以深入探討 **管理應用程式** 按一下右下角的「……」以檢視或編輯詳細資訊。
+您可以深入探討 **`Manage App`** 按一下右下角的「……」以檢視或編輯詳細資訊。
 
 ### 基本索引標籤 {#the-basic-tab}
 
@@ -46,11 +46,11 @@ ht-degree: 2%
 </widget>
 ```
 
-每個廠商應用程式商店(例如Apple App Store或Google Play Store)都需要一或多個行動應用程式的熒幕擷取畫面，才能向客戶顯示您的應用程式詳細資料。 這些熒幕擷取畫面可能會對維度和內容有嚴格的要求（基本上必須真正代表應用程式）。 AEM應用程式可支援針對支援的平台選取和管理這些熒幕擷取畫面，並依各供應商應用程式商店的需求檢視連線埠維度。
+每個廠商應用程式商店(例如Apple App Store或Google Play Store)都需要一或多個行動應用程式的熒幕擷取畫面，才能向客戶顯示您的應用程式詳細資料。 這些熒幕擷取畫面可能會對維度和內容有嚴格的要求（基本上必須真正代表應用程式）。 AEM應用程式可支援針對支援的平台選取和管理這些熒幕擷取畫面，並依各廠商應用程式商店的需求檢視連線埠維度。
 
 >[!NOTE]
 >
->AEM Verify應用程式可讓您在AEM中直接傳送熒幕擷取畫面至應用程式詳細資料。
+>AEM Verify應用程式可讓您直接將熒幕擷取畫面傳送至AEM中的應用程式詳細資訊。
 >
 >另請參閱 [AEM適用的Mobile Quickstart驗證](/help/mobile/phonegap-mobile-quickstart.md) 以取得更多詳細資料。
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->在您熟悉 **管理應用程式** 圖磚，請參閱 [編輯應用程式中繼資料](/help/mobile/phonegap-editmetadata.md) 以檢視和編輯中繼資料。
+>在您熟悉 **`Manage App`** 圖磚，請參閱 [編輯應用程式中繼資料](/help/mobile/phonegap-editmetadata.md) 以檢視和編輯中繼資料。
 
 #### 常見中繼資料 {#common-metadata}
 
@@ -68,7 +68,7 @@ ht-degree: 2%
 
 所有平台都有通用設定和中繼資料。
 
-在此區段中，您可以定義內容更新伺服器URL、行動應用程式的登陸頁面、要編譯的PhoneGap版本、應用程式版本、名稱、說明等。
+在此區段中，您可以定義「內容更新伺服器URL」、行動應用程式的登陸頁面、要編譯的PhoneGap版本、應用程式版本、名稱、說明等。
 
 **應用程式版本** 是您應用程式的有效版本。 常見的最佳實務是在首次發行前使用3位小數點標籤法，且開頭必須低於1.0.0。
 
@@ -88,23 +88,23 @@ ht-degree: 2%
 
 PhoneGap config.xml中定義的每個平台都可以包含自訂平台屬性。 AEM開發人員必須貢獻內容結構才能擷取這些屬性。 您可以找到iOS的平台特定屬性範例。
 
-「管理應用程式」圖磚的「進階」標籤上現在會同時顯示所有已設定平台的中繼資料。
+所有已設定平台的中繼資料現在會同時顯示在的「進階」標籤上 `Manage App` 圖磚。
 
 >[!NOTE]
 >
->PhoneGap在CLI或遠端PhoneGap Build期間不會使用平台中繼資料區段，而是AEM會嘗試擷取平台的中繼資料，以便稍後在提交至目標廠商的應用程式存放區時使用。
+>PhoneGap在CLI或遠端PhoneGap的建置期間不會使用平台中繼資料區段。 相反，AEM會嘗試擷取平台的中繼資料，以便稍後在提交至目標供應商的應用程式存放區時使用。
 
 對於AEM不瞭解的平台，AEM開發人員仍可以擴充UI，以擷取此中繼資料，以便稍後在應用程式提交流程中匯出和使用。
 
 #### iOS 中繼資料 {#ios-metadata}
 
-Apple AppStore需要其他中繼資料，才能提交您的應用程式以供分發。 iOS中繼資料區段會嘗試收集Apple的iTMSTransporter工具可用來將中繼資料發佈至相關Apple開發人員帳戶的所需資訊。
+Apple AppStore需要額外的中繼資料，才能提交您的應用程式以供分發。 iOS中繼資料區段會嘗試收集Apple的iTMSTransporter工具可用來將中繼資料發佈至相關Apple開發人員帳戶的所需資訊。
 
-若要取得Apple特定的中繼資料，您首先需要在其上建立應用程式 [https://itunesconnect.apple.com](https://itunesconnect.apple.com/). 如果您想要使用Apple iTMSTransporter工具來驗證中繼資料並上傳至itunesconnect.apple.com，建立應用程式後，Apple將會產生iOS中繼資料區段所需的中繼資料。 如果您只想取得要收集的中繼資料，則不必填寫iOS專屬的中繼資料。 您仍然可以匯出中繼資料，這些中繼資料會合併iOS和通用中繼資料，並將所有熒幕擷取畫面收集到可隨時下載的zip檔案中。
+若要取得Apple專屬的中繼資料，請於建立您的應用程式 [https://itunesconnect.apple.com](https://itunesconnect.apple.com/). 建立應用程式後，如果您希望使用Apple iTMSTransporter工具驗證中繼資料並上傳至itunesconnect.apple.com，iOS會產生Apple中繼資料區段所需的中繼資料。 如果您想要取得要收集的中繼資料，就不需要填寫iOS專屬的中繼資料。 您仍然可以匯出合併iOS和通用中繼資料的中繼資料，並將所有熒幕擷取畫面收集到可隨時下載的zip檔案中。
 
 下載的zip檔案包含可檢查metadata.xml的itmsp檔案。 itmsp檔案包含轉存的中繼資料（在metadata.xml檔案中），以及所有相關的熒幕擷取畫面。
 
-匯出功能是用來提供收集熒幕擷取畫面和中繼資料的便利方式，這些擷取畫面和中繼資料可以傳遞至應用程式發佈者，以輸入至廠商專屬的應用程式存放區。
+匯出功能是用來提供收集熒幕擷取畫面和中繼資料的便利方式，這些擷取畫面和中繼資料可以傳送給應用程式發佈者，以輸入至廠商專屬的應用程式存放區。
 
 ![chlimage_1-120](assets/chlimage_1-120.png)
 
@@ -112,7 +112,7 @@ Apple AppStore需要其他中繼資料，才能提交您的應用程式以供分
 
 選取Android™平台時，目前沒有可設定的自訂中繼資料。 按一下下載按鈕時，會產生zip檔案，其中包含所有中繼資料和相關熒幕擷取畫面的屬性檔案。
 
-匯出功能是用來提供收集熒幕擷取畫面和中繼資料的便利方式，這些擷取畫面和中繼資料可以傳遞至應用程式發佈者，以輸入至廠商專屬的應用程式存放區。
+匯出功能是用來提供收集熒幕擷取畫面和中繼資料的便利方式，這些擷取畫面和中繼資料可以傳送給應用程式發佈者，以輸入至廠商專屬的應用程式存放區。
 
 ![chlimage_1-121](assets/chlimage_1-121.png)
 
@@ -126,7 +126,7 @@ AEM應用程式的一項重要功能是可讓行動應用程式透過ContentSync
 
 >[!NOTE]
 >
->如果您的作者伺服器執行個體複製到多個發佈伺服器執行個體(AEM的共同架構)，則每個發佈伺服器將具有相同的更新內容，因為更新是建置在作者上並複製到所有發佈執行個體。 基本上完全支援負載平衡和容錯移轉。
+>如果您的作者伺服器例項複製到許多發佈伺服器例項(AEM的共同架構)，則每個發佈伺服器會有相同的更新內容。 原因是更新是建置在製作上並複製到所有發佈執行個體。 基本上完全支援負載平衡和容錯移轉。
 
 ### 外掛程式標籤 {#the-plugins-tab}
 

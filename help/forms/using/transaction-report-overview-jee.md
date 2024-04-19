@@ -1,8 +1,9 @@
 ---
 title: JEE版AEM Forms的交易報表概觀
-description: 保留所有提交、轉譯、轉換至其他格式的檔案等表單的計數
+description: 保留所有提交、轉譯、轉換至其他格式之檔案的計數，以及執行其他作業。
 feature: Transaction Reports
-source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
+exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
+source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -31,7 +32,7 @@ For more information on what is considered a transaction, see [Billable APIs](..
    ![sample-transaction-report-jee](assets/enable-transaction-jee.png)
 
 1. 重新啟動伺服器。
-1. 除了伺服器上的變更以外，您還需要在使用者端更新 `adobe-livecycle-client.jar` 檔案（如果您使用相同的檔案）。
+1. 除了伺服器上的變更以外，您必須在使用者端更新 `adobe-livecycle-client.jar` 檔案（如果您使用相同的檔案）。
 
 <!--
 * You can [enable transaction recording](../../forms/using/viewing-and-understanding-transaction-reports.md#setting-up-transaction-reports) from AEM Web Console. view transaction reports on author, processing, or publish instances. View transaction reports on author or processing instances for an aggregated sum of all transactions. View transaction reports on the publish instances for a count of all transactions that take place only on that publish instance from where the report is run.
@@ -74,7 +75,7 @@ For Jboss Cluster:
 ```
 
 範例交易記錄的範例：
-`[2024-02-28 06:11:27] [INFO] TransactionRecord{service=‘GeneratePDFService’, operation=‘HtmlFileToPDF’, internalService=‘GeneratePDFService’, internalOperation=‘HtmlFileToPDF’, transactionOperationType=‘CONVERT’, transactionCount=1, elapsedTime=1906, transactionDate=Wed Feb 28 06:11:25 UTC 2024}`
+`[2024-02-28 06:11:27] [INFO] TransactionRecord{service='GeneratePDFService', operation='HtmlFileToPDF', internalService='GeneratePDFService', internalOperation='HtmlFileToPDF', transactionOperationType='CONVERT', transactionCount=1, elapsedTime=1906, transactionDate=Wed Feb 28 06:11:25 UTC 2024}`
 
 #### 異動記錄 {#transaction-record-structure-jee}
 
@@ -96,8 +97,8 @@ TransactionRecord
 
 * **服務**：服務的名稱。
 * **操作**：作業名稱。
-* **internalService**：發生內部呼叫時的被呼叫者名稱，其他方面與服務名稱相同。
-* **internalOperation**：發生內部呼叫時的被呼叫者名稱，其他方面與作業名稱相同。
+* **internalService**：如果有內部呼叫，則為被呼叫者的名稱，否則與服務名稱相同。
+* **internalOperation**：有內部呼叫中被呼叫者的名稱，其他名稱則與作業名稱相同。
 * **transactionOperationType**：交易型別（提交、轉譯、轉換）。
 * **transactioncount**：交易總數。
 * **經過的時間**：呼叫起始與收到回應之間的時間。
@@ -125,7 +126,7 @@ TransactionRecord
 
 記錄交易的頻率取決於伺服器上針對成功提交、演算或轉換的每個表單進行的更新操作。
 
-* 在 **儀表板** 交易計數會定期更新，預設值設為1分鐘。 您可以在下列位置設定系統屬性以更新頻率 `"com.adobe.idp.dsc.transaction.recordFrequency"`. 例如，在JBoss®上適用於JEE的AEM Forms上，新增 `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` 在 `JAVA_OPTS` 將更新頻率設為5分鐘。
+* 在 **儀表板**，交易計數會定期更新，預設為1分鐘。 您可以在下列位置設定系統屬性以更新頻率 `"com.adobe.idp.dsc.transaction.recordFrequency"`. 例如，在JBoss®上適用於JEE的AEM Forms上，新增 `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` 在 `JAVA_OPTS` 將更新頻率設為5分鐘。
 
 * 在 **交易記錄**，則當表單成功提交、演算或轉換時，每個交易的更新都會立即發生。
 

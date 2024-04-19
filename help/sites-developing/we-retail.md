@@ -9,7 +9,7 @@ exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 6%
@@ -35,10 +35,10 @@ We.Retail作為AEM標準參考實作，會展示AEM一些最強大的功能。
 | [全域化網站結構](/help/sites-administering/tc-bp.md) | We.Retail包含即時複製到特定國家/地區網站的語言主版。 | [試試看！](/help/sites-developing/we-retail-globalized-site-structure.md) |
 | [回應式版面](/help/sites-authoring/responsive-layout.md) | 所有頁面都具備回應式版面，可動態調整以符合熒幕和裝置大小。 | [試試看！](/help/sites-developing/we-retail-responsive-layout.md) |
 | [可編輯的範本](/help/sites-developing/page-templates-editable.md) | 所有頁面都以可編輯的範本為基礎，可讓非開發人員調整及自訂範本。 | [試試看！](/help/sites-developing/we-retail-editable-templates.md) |
-| [HTML範本語言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 所有元件都以HTL為基礎 |  |
+| [HTML範本語言](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/overview) | 所有元件都以HTL為基礎 |  |
 | [電子商務功能](/help/commerce/cif-classic/developing/ecommerce.md) | 功能產品目錄 |  |
 | [社群網站](/help/communities/overview.md) | 允許訪客加入社群討論、閱讀部落格等 |  |
-| [核心元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | 所有元件均以新的核心元件為基礎，且更易於使用及使用者設定 | [試試看！](/help/sites-developing/we-retail-core-components.md) |
+| [核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction) | 所有元件均以新的核心元件為基礎，且更易於使用及使用者設定 | [試試看！](/help/sites-developing/we-retail-core-components.md) |
 | [內容片段](/help/assets/content-fragments/content-fragments.md) | We.Retail體驗區段會展示透過內容片段重複使用內容的強大功能。 | [試試看！](/help/sites-developing/we-retail-content-fragments.md) |
 | [體驗片段](/help/sites-authoring/experience-fragments.md) | 體驗片段是一組一或多個元件，包括可在頁面中參考的內容和版面。 | [試試看！](/help/sites-developing/we-retail-experience-fragments.md) |
 
