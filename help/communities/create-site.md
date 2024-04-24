@@ -7,10 +7,13 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1578'
-ht-degree: 2%
+source-wordcount: '1556'
+ht-degree: 0%
 
 ---
 
@@ -37,8 +40,8 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 在 [網站範本步驟](/help/communities/sites-console.md#step2013asitetemplate)，輸入URL的標題、說明和名稱，然後選取社群網站範本，例如：
 
-* **社群網站標題**: `Getting Started Tutorial`
-* **社群網站說明**: `A site for engaging with the community.`
+* **社群網站標題**： `Getting Started Tutorial`
+* **社群網站說明**： `A site for engaging with the community.`
 * **社群網站根目錄**：(預設根保留空白 `/content/sites`)
 * **雲端設定**：（若未指定雲端設定，則保留空白）提供指定雲端設定的路徑。
 * **社群網站基本語言**：（單一語言則保持原樣：英文）使用下拉式清單選擇一種 *或更多* 可用語言的基礎語言：德文、義大利文、法文、日文、西班牙文、葡萄牙文（巴西）、繁體中文，以及簡體中文。 會針對新增的每種語言建立一個社群網站，並遵循中所述的最佳實務存在於相同的網站資料夾中 [翻譯多語言網站的內容](/help/sites-administering/translation.md). 每個網站的根頁面都包含一個子頁面，該子頁面是以其中一個選取語言的語言代碼來命名，例如「en」代表英文，「fr」代表法文。
@@ -52,7 +55,7 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 * **範本**：下拉以選擇 `Reference Site`
 
-* 選取 **下一個**.
+* 選取&#x200B;**「下一步」**。
 
 ### 步驟2：設計 {#step-design}
 
@@ -70,7 +73,7 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 ![upload-image-site](assets/upload-image-site.png)
 
-選取 **下一個**.
+選取&#x200B;**「下一步」**。
 
 ### 步驟3：設定 {#step-settings}
 
@@ -98,7 +101,7 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 使用預先輸入搜尋可輕鬆尋找名稱空間。 例如，
 
-* 類型 `tut`
+* 型別 `tut`
 * 選取 `Tutorial`
 
 ![標籤](assets/tagging.png)
@@ -111,7 +114,7 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 例如，
 
-* 類型 `q`
+* 型別 `q`
 * 選取Quinn Harper
 
 >[!NOTE]
@@ -272,13 +275,13 @@ Communities Sites主控台會提供精靈，引導使用者完成建立社群網
 
 1. 含新建立的 `localhost.4503` 選取的節點：
 
-   * 新增屬性:
+   * 新增屬性：
 
    * **名稱** sling：match
       * **型別** 字串
       * **值** localhost.4503/$ （必須以「$」字元結尾）
 
-   * 新增屬性:
+   * 新增屬性：
 
       * **名稱** sling：internalRedirect
       * **型別** 字串

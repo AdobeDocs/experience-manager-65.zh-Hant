@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 exl-id: 56af5362-78de-4308-8958-63a45e8573cc
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '569'
-ht-degree: 4%
+ht-degree: 1%
 
 ---
 
@@ -59,7 +62,7 @@ ht-degree: 4%
 
   （若非必要，則為必要） `All tags)` 頁面的UGC路徑。 如果留白，預設為目前頁面。
 
-* **[!UICONTROL 標記上無連結]**
+* **[!UICONTROL 標籤上無連結]**
 
   如果勾選，標籤會在標籤雲中顯示為純文字。 如果取消勾選，標籤會顯示為作用中的連結，搜尋套用該標籤的所有內容。 預設為未勾選，且需要 **[!UICONTROL 搜尋結果路徑]** 即將設定。
 
@@ -81,14 +84,14 @@ ht-degree: 4%
 
   例如：
 
-   * 已核取: `Geometrixx Media: Gadgets / Cars`
-   * 未核取: `Cars`
+   * 已核取： `Geometrixx Media: Gadgets / Cars`
+   * 未勾選： `Cars`
 
   簡單標籤沒有差異。
 
   預設為未勾選。
 
-* **[!UICONTROL 僅顯示葉標記]**
+* **[!UICONTROL 僅顯示葉標籤]**
 
   如果勾選，僅顯示不包含其他標籤的已套用標籤。
 
@@ -98,7 +101,7 @@ ht-degree: 4%
 
   有三個可套用的標籤：
 
-  `Geometrixx Media (the namespace)`, `Gadgets`, 和 `Cars`
+  `Geometrixx Media (the namespace)`， `Gadgets`、和 `Cars`
 
    * 已核取：僅限 `Cars` 都會顯示（如果套用）。
    * 未勾選： `Geometrixx Media`， `Gadgets`、和 `Cars` 都會顯示（如果套用）。
@@ -111,7 +114,7 @@ ht-degree: 4%
 
   預設以外的範本，用於在透過元件編輯對話方塊啟用連結時，顯示標籤雲中的連結。
 
-* **[!UICONTROL 所有標記相同尺寸]**
+* **[!UICONTROL 所有標籤相同大小]**
 
   如果勾選，則標籤雲中的所有字詞的樣式都相同。 如果未勾選，則字詞的樣式會根據其使用情況而有所不同。 預設為未勾選。
 

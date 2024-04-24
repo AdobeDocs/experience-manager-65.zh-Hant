@@ -1,9 +1,11 @@
 ---
-title: AEM Content and Commerce 2019年發行說明
-description: Adobe Experience Manager Content and Commerce發行說明2019年。
+title: AEM內容與Commerce 2019年發行說明
+description: Adobe Experience Manager內容和Commerce發行說明2019年。
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 6%

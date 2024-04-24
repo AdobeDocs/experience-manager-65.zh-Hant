@@ -9,10 +9,12 @@ docset: aem65
 pagetitle: Community Groups Console
 role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1688'
-ht-degree: 2%
+source-wordcount: '1698'
+ht-degree: 1%
 
 ---
 
@@ -81,7 +83,7 @@ ht-degree: 2%
 
   群組的說明。
 
-* **社群群組根**
+* **社群群組根目錄**
 
   群組的根路徑。
 預設的根是父網站，但根可以移至網站內的任何位置。 不建議進行變更。
@@ -160,7 +162,7 @@ ht-degree: 2%
 
 ![community-group-membership](assets/community-group-membership.png)
 
-* **可選成員資格**
+* **選擇性會籍**
 
   如果選取，社群群組為公用群組。 網站成員可以加入群組及張貼，而無需明確加入群組。 預設為已選取。
 

@@ -1,20 +1,21 @@
 ---
-title: AEM 6.5中的電子商務存放庫重組
-description: 瞭解如何進行必要的變更，以移轉至適用於電子商務的AEM 6.5中的新存放庫結構。
+title: AEM 6.5中的E-Commerce存放庫重組
+description: 瞭解如何進行必要的變更，以移轉至AEM 6.5中適用於E-Commerce的新存放庫結構。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: 78b7c497-c474-4308-bfab-8f424b5f7268
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 1%
 
 ---
 
-# AEM 6.5中的電子商務存放庫重組{#e-commerce-repository-restructuring-in-aem}
+# AEM 6.5中的E-Commerce存放庫重組{#e-commerce-repository-restructuring-in-aem}
 
 如父項所述 [AEM 6.5中的存放庫重組](/help/sites-deploying/repository-restructuring.md) 頁面，升級至AEM 6.5的客戶應使用此頁面來評估與影響AEM電子商務解決方案的存放庫變更相關的工作量。 在AEM 6.5升級程式期間，有些變更需要投入大量精力，而其他變更則可能延遲到未來升級。
 
@@ -34,7 +35,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>重組指南</strong></td>
-   <td><p>您可以使用 <a href="/help/sites-deploying/lazy-content-migration.md" target="_blank">緩慢移轉</a> 移轉電子商務資料的工作。</p> <p>它會執行下列步驟：</p>
+   <td><p>您可以使用 <a href="/help/sites-deploying/lazy-content-migration.md" target="_blank">緩慢移轉</a> 移轉E-Commerce資料的工作。</p> <p>它會執行下列步驟：</p>
     <ul>
      <li>會調整對舊位置的參照，以指向新位置</li>
      <li>將內容從舊位置移動到新位置</li>

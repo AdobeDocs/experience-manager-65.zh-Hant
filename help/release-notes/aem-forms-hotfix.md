@@ -2,7 +2,10 @@
 title: AEM Forms的Hotfix
 description: 提供有關如何下載和安裝AEM Forms的Hotfix的資訊。
 exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+solution: Experience Manager
+feature: Release Information
+role: User,Admin,Architect,Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%

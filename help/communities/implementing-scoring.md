@@ -9,9 +9,11 @@ docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '2851'
+source-wordcount: '2856'
 ht-degree: 2%
 
 ---
@@ -212,7 +214,7 @@ AEM Communities評分和徽章功能提供識別及獎勵社群成員的能力�
   </tr>
   <tr>
    <td><i><code>VERB</code></i></td>
-   <td>長整數</td>
+   <td>長</td>
    <td>
     <ul>
      <li>必要；動詞會對應至事件動作</li>
@@ -278,7 +280,7 @@ AEM Communities評分和徽章功能提供識別及獎勵社群成員的能力�
 
    * subRules[] = /libs/settings/community/scoring/rules/sub-rules/member-forum-create /libs/settings/community/scoring/rules/sub-rules/member-receive-vote /libs/settings/community/scoring/rules/sub-note-vote /member/settings/community/scoring/rules/sub-rules/member-is-modered
 
-**附註:**
+**附註：**
 
 * 兩者 `rules` 和 `sub-rules` 節點的型別為cq：Page。
 
@@ -364,7 +366,7 @@ AEM Communities評分和徽章功能提供識別及獎勵社群成員的能力�
 
 * `/libs/settings/community/badging/rules/forums-badging`
 
-**附註:**
+**附註：**
 
 * `rules` 節點的型別為cq：Page。
 * `rules` 應該位在儲存庫位置，且每個人都有讀取許可權。

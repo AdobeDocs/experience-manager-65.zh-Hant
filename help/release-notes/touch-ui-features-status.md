@@ -2,10 +2,13 @@
 title: 觸控式 UI 功能狀態
 description: 特定版本注意事項 [!DNL Adobe Experience Manager] 觸控式UI。
 exl-id: 7b71e8db-e8c6-4470-bc22-db3d4600b7fc
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+solution: Experience Manager
+feature: Release Information
+role: User,Admin,Architect,Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 15%
+source-wordcount: '1076'
+ht-degree: 14%
 
 ---
 
@@ -53,7 +56,7 @@ Adobe Experience Manager (AEM) 6.4以後 [已棄用傳統UI](../release-notes/de
 | 顯示發佈狀態 | 完成 | 從AEM 6.5開始，工作流程狀態會顯示在清單檢視中。 |
 | 搜尋 | 完成 |  |
 | 複製並貼上頁面（複製） | 完成 |  |
-| 移動頁面 | 完成 |  |
+| 行動頁面 | 完成 |  |
 | 發佈頁面 | 完成 |  |
 | 發佈沒有復寫許可權的頁面 | 完成 |  |
 | 稍後發佈 | 完成 |  |
@@ -65,7 +68,7 @@ Adobe Experience Manager (AEM) 6.4以後 [已棄用傳統UI](../release-notes/de
 | 鎖定/解鎖 | 完成 |  |
 | 檢視/編輯屬性 | 完成 |  |
 | 設定頁面許可權 | 完成 |  |
-| 版本記錄 | 完成 |  |
+| 版本歷史記錄 | 完成 |  |
 | 還原版本 | 完成 |  |
 | 還原樹狀結構並還原已刪除的頁面 | 遺失 | 使用傳統UI。 |
 | 顯示舊版本和目前版本之間的差異 | 完成 |  |
@@ -105,7 +108,7 @@ Adobe Experience Manager (AEM) 6.4以後 [已棄用傳統UI](../release-notes/de
 | 複製頁面 | 已移除 | 使用網站管理員 [複製頁面](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page). |
 | 移動頁面 | 已移除 | 使用網站管理員 [移動頁面](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page). |
 | 刪除頁面 | 已移除 | 使用網站管理員 [刪除頁面](/help/sites-authoring/managing-pages.md#deleting-a-page). |
-| 顯示偏好設定 | 已移除 | 使用網站管理員來檢視 [詳細參考清單](/help/sites-authoring/author-environment-tools.md#references). |
+| 顯示引用 | 已移除 | 使用網站管理員來檢視 [詳細參考清單](/help/sites-authoring/author-environment-tools.md#references). |
 | 稽核記錄 | 已移除 | 使用網站管理員和 [開啟活動邊欄](/help/sites-authoring/author-environment-tools.md#events-timeline). |
 | 建立版本 | 已移除 | 使用網站管理員 [建立新版本](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version). |
 | 還原版本 | 已移除 | 使用網站管理員 [還原版本](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version). |
@@ -173,6 +176,6 @@ Adobe Experience Manager (AEM) 6.4以後 [已棄用傳統UI](../release-notes/de
 | 轉出設定UI | 遺失 | 使用傳統UI。 |
 | 使用者、群組和許可權UI | 大部分完成 | 如需進階許可權編輯，請使用傳統UI。 |
 | 清除版本(`/etc/versioning/purge.html`) | 遺失 | 使用傳統UI。 |
-| 外部連結檢查程式 (`/etc/linkchecker.html`) | 遺失 | 使用傳統UI。 |
+| 外部連結檢查程式(`/etc/linkchecker.html`) | 遺失 | 使用傳統UI。 |
 | 大量編輯器(`/etc/importers/bulkeditor.html`) | 遺失 | 使用傳統UI。 |
 | 上傳縮圖以新增或覆寫縮圖 | 遺失 | 使用傳統UI。 |

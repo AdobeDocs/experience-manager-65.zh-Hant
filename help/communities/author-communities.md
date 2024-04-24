@@ -7,10 +7,13 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
-source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '293'
-ht-degree: 25%
+ht-degree: 14%
 
 ---
 
@@ -44,25 +47,25 @@ ht-degree: 25%
 | 活動資料流 | [活動資料流](/help/communities/activities.md) |
 | 部落格 | [部落格](/help/communities/blog-feature.md) |
 | 部落格則欄 | [部落格](/help/communities/blog-feature.md) |
-| 日曆 | [日曆](/help/communities/calendar.md) |
-| 評論 | [評論](/help/communities/comments.md) |
+| 日曆 | [行事曆](/help/communities/calendar.md) |
+| 評論 | [註解](/help/communities/comments.md) |
 | 社群活動清單 | [活動趨勢](/help/communities/trends.md) |
 | 社群群組成員清單 | [社群群組](/help/communities/creating-groups.md) |
-| 撰寫訊息 | [傳送訊息](/help/communities/configure-messaging.md) |
+| 撰寫訊息 | [傳訊](/help/communities/configure-messaging.md) |
 | 主要內容 | [主要內容](/help/communities/featured.md) |
 | 檔案庫 | [檔案庫](/help/communities/file-library.md) |
 | 關注 | [社交圖](/help/communities/socialgraph.md) |
 | 關注 | [社交圖](/help/communities/socialgraph.md) |
 | 論壇 | [論壇](/help/communities/forum.md) |
-| 創意力 | [創意力](/help/communities/ideation-feature.md) |
+| 創意力 | [構思](/help/communities/ideation-feature.md) |
 | 排行榜 | [評分和徽章](/help/communities/enabling-leaderboard.md) |
-| 連結 | [連結](/help/communities/liking.md) |
-| 訊息 | [傳送訊息](/help/communities/configure-messaging.md) |
-| 訊息清單 | [傳送訊息](/help/communities/configure-messaging.md) |
-| QnA | [問題與答案](/help/communities/working-with-qna.md) |
+| 連結 | [按讚](/help/communities/liking.md) |
+| 訊息 | [傳訊](/help/communities/configure-messaging.md) |
+| 訊息清單 | [傳訊](/help/communities/configure-messaging.md) |
+| QnA | [問題與解答](/help/communities/working-with-qna.md) |
 | 快速搜尋 | [搜尋](/help/communities/search.md) |
 | 評等 | [評等](/help/communities/rating.md) |
-| 相關問題 | [問題與答案](/help/communities/working-with-qna.md) |
+| 相關問題 | [問題與解答](/help/communities/working-with-qna.md) |
 | 評論 | [評論](/help/communities/reviews.md) |
 | 審核摘要 (顯示) | [評論](/help/communities/reviews.md) |
 | 搜尋 | [搜尋](/help/communities/search.md) |

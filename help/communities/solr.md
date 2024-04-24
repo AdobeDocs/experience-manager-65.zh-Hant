@@ -7,7 +7,9 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
-source-git-commit: 1f1deb4f5d2033420aa1cece95666894b2f56aad
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '1423'
 ht-degree: 2%
@@ -126,13 +128,13 @@ JVM_OPTS="-server -Xmx2048m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnable
 |---|---|---|
 | 保加利亞文 | 希臘文 | 波蘭文 |
 | 中文 (簡體) | 海地克里奧爾語 | 葡萄牙文 |
-| 繁體中文 | 希伯來文 | 羅馬尼亞文 |
+| 正體中文 | 希伯來文 | 羅馬尼亞文 |
 | 捷克文 | 匈牙利文 | 俄文 |
-| 丹麥文 | 印尼語 | 斯洛伐克文 |
-| 荷蘭文 | 義大利文 | 斯洛文尼亞文 |
+| 丹麥文 | 印尼文 | 斯洛伐克文 |
+| 荷蘭文 | 義大利文 | 斯洛維尼亞文 |
 | 英文 | 日文 | 西班牙文 |
 | 愛沙尼亞文 | 韓文 | 瑞典文 |
-| 芬蘭文 | 拉脫維亞文 | 泰語 |
+| 芬蘭文 | 拉脫維亞文 | 泰文 |
 | 法文 | 立陶宛文 | 土耳其文 |
 
 #### AEM 6.1 Solr搜尋、標準MLS和進階MLS的比較 {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}

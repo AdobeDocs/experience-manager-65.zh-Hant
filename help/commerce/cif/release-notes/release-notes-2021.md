@@ -1,9 +1,11 @@
 ---
-title: Adobe Experience Manager Content and Commerce 2021年發行說明
-description: Adobe Experience Manager Content and Commerce 2021年發行說明。
+title: Adobe Experience Manager內容與Commerce 2021年發行說明
+description: Adobe Experience Manager內容和Commerce發行說明2021年。
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 9%
@@ -50,13 +52,13 @@ ht-degree: 9%
 
 ### 新增功能 {#what-is-new-october}
 
-* CIF附加元件支援具有新GraphQL API和結構描述的最新Commerce v2.4.3
+* CIF附加元件支援具有新Commerce API和結構描述的最新GraphQL v2.4.3
 
 * 作者可使用RTF編輯器(RTE)，在文字欄位中新增產品與目錄頁面的連結。 RTE工具列中新增了CIF圖示，可開啟選擇器，以便快速搜尋並選取產品或類別，而不需離開內容。
 
 * 現有的彈出式購物車和結帳頁面已替換為專用的AEM購物車和結帳頁面。 這些頁面上的元件是使用Adobe Commerce的可擴充Peregrine元件所建置
 
-* 商家可以使用Commerce後端隱藏導覽中的特定產品目錄類別。 CIF導覽核心元件依照商務後端設定「包含在功能表中」以在導覽中顯示/隱藏類別
+* 商家可使用Commerce後端，在導覽中隱藏特定產品目錄類別。 CIF導覽核心元件依照商務後端設定「包含在功能表中」以在導覽中顯示/隱藏類別
 
 * 如果找不到類別或產品頁面，AEM Storefront Venia會傳回HTTP 404錯誤
 
@@ -142,7 +144,7 @@ ht-degree: 9%
 ### 新增功能 {#what-is-new-june}
 
 * 內容片段的新增CIF產品和類別參考資料型別(包括 產品/類別選擇器UI支援)
-* 新Commerce內容片段核心元件
+* 全新Commerce內容片段核心元件
 * AEM後端支援全文檢索商務搜尋
 * Commerce核心元件支援Adobe Commerce Sensei Recs資料收集
 * 改善類別頁面的SEO易記URL
@@ -236,7 +238,7 @@ ht-degree: 9%
 
 ### 新增功能 {#what-is-new-january}
 
-* 產品體驗管理：資產和體驗片段的新「商務」屬性標籤。 此索引標籤可讓您將資產和體驗片段連結到產品和類別。 此索引標籤也會顯示連結的商務物件的即時資料，以及在產品主控台中顯示詳細資訊的連結。
+* 產品體驗管理：資產和體驗片段的新「Commerce」屬性標籤。 此索引標籤可讓您將資產和體驗片段連結到產品和類別。 此索引標籤也會顯示連結的商務物件的即時資料，以及在產品主控台中顯示詳細資訊的連結。
 
 ### 功能改善  {#what-is-improved-january}
 

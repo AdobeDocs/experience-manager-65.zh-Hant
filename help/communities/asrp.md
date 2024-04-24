@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 6430ed96-5d96-41b6-866f-90b34ff84f7a
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
@@ -31,7 +33,7 @@ ht-degree: 0%
 
 * 資料中心URL （ASRP端點的位址）
 * 消費者金鑰
-* 機密金鑰
+* 秘密金鑰
 * 報表套裝ID
 
 消費者金鑰和機密金鑰會在公司的所有報表套裝間共用。 每個租使用者有一個報告套裝。

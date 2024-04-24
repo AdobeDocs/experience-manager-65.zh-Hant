@@ -3,7 +3,9 @@ title: 編寫Commerce體驗
 description: CIF附加元件以特定於Commerce的功能擴充Adobe Experience Manager的製作功能。
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 0%
@@ -78,7 +80,7 @@ CIF產品目錄頁面是即時轉譯的虛擬頁面。 因此，不可能內嵌�
 
 ### 存取關聯產品內容 {#associated-content}
 
-如果通用編輯器辨識出頁面上的1：n產品，側面板會自動顯示「關聯的商務內容」索引標籤。 此索引標籤可讓作者快速存取已使用產品標籤的AEM內容(請參閱 [利用關聯AEM內容豐富產品資料](./enrich-product-associated-content.md) 以取得詳細資訊)。 如果頁面上有多個產品，此標籤會提供下拉式選單，以篩選內容型別和特定產品。 使用內容的運作方式與使用「資產」標籤中的內容完全相同。
+如果通用編輯器可辨識頁面上的1：n產品，側面板會自動顯示「關聯的Commerce內容」索引標籤。 此索引標籤可讓作者快速存取已使用產品標籤的AEM內容(請參閱 [利用關聯AEM內容豐富產品資料](./enrich-product-associated-content.md) 以取得詳細資訊)。 如果頁面上有多個產品，此標籤會提供下拉式選單，以篩選內容型別和特定產品。 使用內容的運作方式與使用「資產」標籤中的內容完全相同。
 
 ![產品資料側面板](/help/commerce/cif/assets/authoring/associated-commerce-content-tab.png)
 

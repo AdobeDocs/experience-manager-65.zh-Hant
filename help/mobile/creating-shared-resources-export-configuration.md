@@ -1,14 +1,17 @@
 ---
 title: 建立共用資源匯出設定
-description: 請依照本頁所述操作，瞭解如何從Adobe Experience Manager (AEM)匯出共用資源，以便上傳至AEM Mobile。
+description: 請依照本頁面的說明了解如何從Adobe Experience Manager (AEM)匯出共用資源，以便上傳至AEM Mobile。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: 576b4567-c7b6-4196-84e7-47e980637540
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '291'
 ht-degree: 1%
 
 ---
@@ -17,27 +20,27 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 >[!CAUTION]
 >
->**必備條件**:
+>**先決條件**：
 >
 >在瞭解如何建立和修改共用資源之前，請參閱 [內容同步](/help/mobile/mobile-ondemand-contentsync.md) 以瞭解基本概念。
 
-Adobe Experience Manager (AEM) Mobile使用者會使用Content Sync將即時內容匯出至靜態內容，以便在行動應用程式中使用，此匯出會在內容從AEM Mobile上傳至Mobile On-Demand Services時發生。
+Adobe Experience Manager (AEM) Mobile使用者會使用Content Sync將即時內容匯出至靜態內容，以供行動應用程式使用，此匯出作業會在內容從AEM Mobile上傳至Mobile On-Demand Services時發生。
 
-屬性 ***dps-exportTemplate*** 以上表格所述，會定義應用程式匯出設定的路徑。 設定此屬性以建立和修改共用資源。
+屬性 ***dps-exportTemplate*** 如上表所述，會定義應用程式匯出設定的路徑。 設定此屬性以建立和修改共用資源。
 
 下列資源說明如何從AEM匯出共用資源以上傳至AEM Mobile。
 
 共用HTML資源可讓文章共用原本會針對所有文章複製的HTML資源，並可包含圖示、字型、JavaScript和css。
 
-內容同步設定位於 **&lt;dps-exporttemplate>/dps-HTMLResources>** 應設定為匯出內容以及裝置上靜態呈現屬性所需的文章。
+在「 」找到「內容同步處理」設定 **&lt;dps-exporttemplate>/dps-HTMLResources>** 應設定為匯出裝置上屬性靜態呈現所需的所有內容和文章。
 
 >[!CAUTION]
 >
->只有具備下列條件時，您才可以執行下列步驟來檢視範例共用資源：
+>只有具備下列條件時，您才可以執行以下步驟來檢視範例共用資源：
 >
 >* 已安裝範例內容
 >* 執行AEM執行個體

@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '593'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -25,7 +28,7 @@ ht-degree: 5%
 
 第一個步驟是將資源超級型別屬性新增至 `/apps/an-scf-sandbox/components/playpage` 節點，以便繼承超級型別的指令碼和屬性。
 
-使用 CRXDE Lite:
+使用CRXDE Lite：
 
 1. 選取節點 `/apps/an-scf-sandbox/components/playpage`.
 1. 在屬性標籤中，輸入具有下列值的新屬性：
@@ -34,7 +37,7 @@ ht-degree: 5%
 
    類型：`String`
 
-   值: `foundation/components/page`
+   值： `foundation/components/page`
 
 1. 按一下綠色 **[!UICONTROL +新增]** 按鈕。
 1. 按一下&#x200B;**[!UICONTROL 「儲存全部」]**。
@@ -118,7 +121,7 @@ ht-degree: 5%
 
 **在瀏覽器中以編輯模式檢視頁面：**
 
-* 標準 UI: `http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html`
+* 標準UI： `http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html`
 
 您不應該只看到標題 **社群播放**，以及用於編輯頁面內容的UI。
 
@@ -126,7 +129,7 @@ ht-degree: 5%
 
 ![view-page](assets/view-page.png)
 
-* 傳統 UI: `http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html`
+* 傳統UI： `http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html`
 
 以下是「播放」頁面在傳統UI中的顯示方式，包括透過內容尋找器(cf)：
 

@@ -3,7 +3,9 @@ title: Commerce integration framework(CIF)附加元件的重大變更
 description: 與舊版CIF相比，Commerce integration framework (CIF)附加元件有重大變更。
 exl-id: 41dee21a-9ae2-4067-a32a-2d4633323fc4
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%

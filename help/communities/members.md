@@ -7,10 +7,12 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 3%
+source-wordcount: '959'
+ht-degree: 1%
 
 ---
 
@@ -96,7 +98,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
   (*必填*)登入密碼。
 
-* **[!UICONTROL 重新鍵入密碼]**
+* **[!UICONTROL 重新輸入密碼]**
 
   (*必填*)重新輸入密碼以進行驗證。
 
@@ -104,7 +106,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
   (*可選*)從現有的社群網站中選取，將成員新增至社群網站的成員群組。
 
-* **[!UICONTROL 將成員新增至群組]**
+* **[!UICONTROL 新增成員至群組]**
 
   (*可選*)從現有成員群組中選取，以將成員新增到該群組。
 
@@ -192,7 +194,7 @@ AEM Communities功能通常要求網站訪客先註冊並登入，才能參與�
 
   (*可選*)群組用途和許可權的說明。
 
-* **[!UICONTROL 將成員新增至群組]**
+* **[!UICONTROL 新增成員至群組]**
 
   (*可選*)選取要作為群組初始成員包含的發佈端成員。
 

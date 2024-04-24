@@ -1,5 +1,5 @@
 ---
-title: 開發AEM商務
+title: 開發AEM Commerce
 description: 瞭解如何使用AEM專案原型產生啟用AEM的商務專案。 瞭解如何建立專案並將其部署至本機開發環境。
 topics: Commerce, Development
 feature: Commerce Integration Framework
@@ -8,16 +8,17 @@ kt: 5826
 thumbnail: 39476.jpg
 exl-id: 48479725-8b52-4ff2-a599-d20958b26ee6
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 3%
 
 ---
 
-# 開發AEM商務 {#develop}
+# 開發AEM Commerce {#develop}
 
-根據Commerce integration framework (CIF)為AEM開發AEM Commerce專案會遵循與其他AEM專案相同的規則和最佳實務。 請先檢閱下列內容：
+根據Commerce integration framework(CIF)為AEM開發AEM Commerce專案會遵循與其他AEM專案相同的規則和最佳實務。 請先檢閱下列內容：
 
 - [AEM 6.5 Developing 使用指南](/help/sites-developing/getting-started.md)
 - [AEM核心概念](/help/sites-developing/the-basics.md)
@@ -30,7 +31,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->下列指示可協助您使用AEM並著重於AEM 6.5，為AEM Commerce設定本機CIF開發環境。 如果您使用AEMas a Cloud Service，請參閱 [AEM商務as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html) 檔案。
+>下列指示可協助您使用適用於AEM 6.5的CIF，為AEM Commerce設定本機AEM開發環境)。 如果您使用AEMas a Cloud Service，請參閱 [AEM Commerceas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html) 檔案。
 
 適用於AEM 6.5 aka的AEM Commerce附加元件。 CIF附加元件也可用於本機開發，並以AEM套件的形式提供。 您可從以下網址下載： [軟體發佈入口網站](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 作為Feature Pack。
 
@@ -80,7 +81,7 @@ CIF附加元件可從以下網址下載： [軟體發佈入口網站](https://ex
 
 ## 專案設定 {#project}
 
-有兩種方法可使用CIF啟動AEM Commerce專案。
+有兩種方式可使用CIF啟動AEM Commerce專案。
 
 ### 使用AEM專案原型
 

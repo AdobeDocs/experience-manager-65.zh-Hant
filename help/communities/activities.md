@@ -7,10 +7,13 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 2b2a5de0-e7c7-4417-a217-4b929bc7dcfb
-source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
@@ -55,19 +58,19 @@ ht-degree: 4%
 
   要顯示的活動數
 
-* **資料流資源路徑**
+* **串流資源路徑**
 
   留空則預設為社群網站或社群群組。 串流資源路徑可識別活動的來源。 預設為空白。
 
-* **顯示使用者活動視圖**
+* **顯示使用者活動檢視**
 
   如果勾選，活動頁面會包含標籤，以根據目前成員在社群內產生的活動來篩選活動。 預設為已核取。
 
-* **顯示所有活動視圖**
+* **顯示所有活動檢視**
 
   如果勾選，活動頁面會包含標籤，其中包含社群內產生且目前成員有權存取的所有活動。 預設為已核取。
 
-* **顯示以下檢視**
+* **顯示下列檢視**
 
   如果勾選，活動頁面會包含索引標籤，以根據目前成員所關注的活動來篩選活動。 預設為已核取。
 

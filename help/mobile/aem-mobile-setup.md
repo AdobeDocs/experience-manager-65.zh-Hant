@@ -6,9 +6,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 exl-id: 0ead982d-2315-4947-b762-596aa2aa42a1
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -17,7 +20,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 >[!CAUTION]
 >
@@ -80,8 +83,8 @@ AEM Mobile On-Demand聯結器可用來將AEM Mobile管理的內容與Adobe Exper
 
    1. **（必要）** 輸入必填欄位：
 
-      1. 用戶端識別碼.
-      1. 用戶端密碼.
+      1. 使用者端ID。
+      1. 使用者端密碼。
 
    1. **（可選）** 編輯現有值。
 

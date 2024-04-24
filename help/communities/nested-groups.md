@@ -7,10 +7,13 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '599'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
@@ -43,7 +46,7 @@ ht-degree: 3%
 
 * 選取 **[!UICONTROL 建立群組]**
 
-* **社群群組範本**:
+* **社群群組範本**：
 
    * **[!UICONTROL 社群群組標題]**：藝術
    * **[!UICONTROL 社群群組說明]**：各種藝術群組的父級群組
@@ -60,15 +63,15 @@ ht-degree: 3%
 * **[!UICONTROL Design]**
 
    * 變更設計或允許預設父網站的設計。
-   * 選取 **[!UICONTROL 下一個]**.
+   * 選取&#x200B;**[!UICONTROL 「下一步」]**。
 
 * **[!UICONTROL 設定]**
 
-   * **[!UICONTROL 審核]**
+   * **[!UICONTROL 稽核]**
 
       * 留空（繼承自父網站）。
 
-   * **[!UICONTROL 成員資格]**
+   * **[!UICONTROL 會籍]**
 
       * 使用預設 `Optional Membership.`
 
@@ -77,7 +80,7 @@ ht-degree: 3%
 
       * **[!UICONTROL 選擇下一步]**.
 
-* 選擇 **[!UICONTROL 建立]**。
+* 選取「**[!UICONTROL 建立]**」。
 
 ### Arts Group中的巢狀群組 {#nesting-groups-within-arts-group}
 
@@ -99,23 +102,23 @@ ht-degree: 3%
 
 1. **[!UICONTROL 視覺]**
 
-   * 標題: `Visual Arts`
+   * 標題： `Visual Arts`
    * 名稱：`visual`
-   * 範本: `Reference Group`
+   * 範本： `Reference Group`
    * 成員資格：選取 `Optional Membership`，公用群組，開放給所有成員使用。
 
 1. **[!UICONTROL 聽覺]**
 
-   * 標題: `Auditory Arts`
+   * 標題： `Auditory Arts`
    * 名稱：`auditory`
-   * 範本: `Reference Group`
+   * 範本： `Reference Group`
    * 成員資格：選取 `Required Membership`，開放群組，可供成員加入。
 
-1. **[!UICONTROL 歷史]**
+1. **[!UICONTROL 歷史記錄]**
 
-   * 標題: `Art History`
+   * 標題： `Art History`
    * 名稱：`history`
-   * 範本: `Reference Group`
+   * 範本： `Reference Group`
    * 成員資格：選取 `Restricted Membership`，機密群組，僅對受邀成員可見。 例如，邀請 [示範使用者](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`.
 
 重新整理頁面，以便檢視所有三個巢狀群組（子社群）。

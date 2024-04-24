@@ -7,10 +7,13 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: edcda6cb-df47-4afe-8a9a-82d8e386fe05
-source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 3%
+source-wordcount: '558'
+ht-degree: 1%
 
 ---
 
@@ -52,11 +55,11 @@ A [社群群組範本](/help/communities/tools-groups.md) 動態建立社群群�
 
   邀請加入群組的成員清單。 預先輸入搜尋可提供社群成員邀請的建議。
 
-* **群組 URL 名稱**
+* **群組URL**
 
   成為URL一部分的群組頁面名稱。
 
-* **開放群組**
+* **開啟群組**
 
   選取 `Open Group` 指出任何匿名網站訪客都可以檢視內容，並取消選取 `Member Only Group`.
 

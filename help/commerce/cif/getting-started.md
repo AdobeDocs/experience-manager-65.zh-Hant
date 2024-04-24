@@ -1,11 +1,12 @@
 ---
 title: AEM Content and Commerce 快速入門
-description: 瞭解如何部署AEM內容與商務專案。
+description: 瞭解如何部署AEM內容和Commerce專案。
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 3%
@@ -14,7 +15,7 @@ ht-degree: 3%
 
 # AEM Content and Commerce 快速入門 {#start}
 
-若要開始使用AEM Content and Commerce，您必須安裝適用於AEM 6.5的AEM Content and Commerce附加元件。
+若要開始使用AEM內容和Commerce，您必須安裝適用於AEM 6.5的AEM內容和Commerce附加元件。
 
 ## 最低軟體需求
 
@@ -22,7 +23,7 @@ ht-degree: 3%
 
 ## 上線 {#onboarding}
 
-AEM內容和商務的入門流程分為兩個步驟：
+AEM內容和Commerce的上線流程分為兩個步驟：
 
 1. 安裝適用於AEM 6.5的AEM Content and Commerce附加元件
 
@@ -48,7 +49,7 @@ AEM可連線至任何具有AEM適用的GraphQL端點可存取的商務系統。 
 
 取代 `url` 在 `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` 與商務系統的GraphQL端點整合。 此設定可透過OSGI主控台完成，或透過專案部署OSGI設定來完成。 使用不同的AEM執行模式支援中繼和生產系統的不同設定。
 
-AEM Content and Commerce附加元件和CIF核心元件同時使用AEM伺服器端和使用者端連線。 使用者端CIF核心元件和CIF附加撰寫工具預設會連線至 `/api/graphql`. 如有需要，可透過CIFCloud Service設定調整此專案（請參閱下文）。
+AEM內容和Commerce附加元件及CIF核心元件同時使用AEM伺服器端和使用者端連線。 使用者端CIF核心元件和CIF附加撰寫工具預設會連線至 `/api/graphql`. 如有需要，可透過CIFCloud Service設定調整此專案（請參閱下文）。
 
 CIF附加元件提供GraphQL Proxy servlet，位於 `/api/graphql` 可選擇性用於 [本機開發](develop.md). 對於生產部署，強烈建議透過AEM Dispatcher或其他網路層（例如CDN）設定商務GraphQL端點的反向Proxy。
 

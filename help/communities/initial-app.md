@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: cbf9ce36-53a2-4f4b-a96f-3b05743f6217
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '626'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -33,10 +36,10 @@ ht-degree: 2%
 
 1. 在「建立範本」對話方塊中，輸入下列值，然後按一下 **[!UICONTROL 下一個]**：
 
-   * 標籤: `playpage`
-   * 標題: `An SCF Sandbox Play Template`
-   * 說明: `An SCF Sandbox template for play pages`
-   * 資源類型: `an-scf-sandbox/components/playpage`
+   * 標籤： `playpage`
+   * 標題： `An SCF Sandbox Play Template`
+   * 說明： `An SCF Sandbox template for play pages`
+   * 資源型別： `an-scf-sandbox/components/playpage`
    * 排名： &lt;leave as=&quot;&quot; default=&quot;&quot;>
 
    標籤會用於節點名稱。

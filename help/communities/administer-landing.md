@@ -7,7 +7,9 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 4%
@@ -44,7 +46,7 @@ ht-degree: 4%
    * [網站範本](sites.md)
    * [群組範本](tools-groups.md)
    * [社群功能](functions.md)
-   * [儲存設定](srp-config.md)
+   * [儲存體設定](srp-config.md)
    * [元件指南](components-guide.md)
    * [徽章](badges.md)
 

@@ -8,10 +8,12 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
-source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '2038'
-ht-degree: 4%
+source-wordcount: '2028'
+ht-degree: 2%
 
 ---
 
@@ -126,7 +128,7 @@ ht-degree: 4%
 
 當篩選邊欄開啟時，搜尋圖示會切換關閉的側面板。 但若要關閉篩選邊欄並僅檢視使用者產生的內容，請按一下「搜尋」圖示，然後選取「僅限內容」選項。
 
-#### 內容路徑 {#content-path}
+#### 内容路徑 {#content-path}
 
 內容路徑將顯示的參考UGC限製為放置在指定內容存放庫中的帖子。
 
@@ -154,17 +156,17 @@ ht-degree: 4%
 
 內容型別將引用的UGC顯示限製為所選資源型別的帖子。 可以選取下列一或多種型別。 如果未選取任何型別，則會顯示所有型別。
 
-* **評論**
+* **註解**
 * **論壇主題**
 * **論壇回覆**
-* **QnA 問題**
-* **QnA 答案**
-* **部落格文章**
+* **QnA問題**
+* **QnA答案**
+* **部落格**
 * **部落格評論**
 * **日曆事件**
 * **行事曆評論**
-* **檔案資料庫資料夾**
-* **檔案資料庫文件**
+* **檔案庫資料夾**
+* **檔案庫檔案**
 * **創意**
 * **創意力評論**
 
@@ -186,7 +188,7 @@ ht-degree: 4%
 
   ![additional-contenttype](assets/additional-contenttype.png)
 
-* 選取儲存。
+* 選取「儲存」。
 * 重新整理「社群 — 稽核」主控台。
 
 結果會針對以下專案產生新的可選取篩選器 `Voting` 在 `Content Type` 篩選群組。

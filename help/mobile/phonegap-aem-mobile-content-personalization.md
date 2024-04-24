@@ -6,9 +6,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 70d7ee0d-2f6d-4f97-a6e2-b02d84a0ca42
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '2607'
+source-wordcount: '2571'
 ht-degree: 1%
 
 ---
@@ -17,7 +20,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 >[!NOTE]
 >
@@ -214,7 +217,7 @@ head.html和body.html的範例可以在 [AEM Mobile混合式參考應用程式](
   </tr>
   <tr>
    <td>includedPageTypes</td>
-   <td><p>"cq/personalization/components/teaserpage",</p> <p>"cq/personalization/components/offerproxy"</p> </td>
+   <td><p>"cq/personalization/components/teaserpage"，</p> <p>"cq/personalization/components/offerproxy"</p> </td>
    <td>includePageTypes屬性是選用屬性，預設為具有cq/personalization/components/teaserpage和cq/personalization/components/offerproxy資源型別的頁面。 鎖定內容時，系統會使用這兩種資源型別作為預設資源型別。 如果必須支援其他資源型別，請將它們新增至includePageTypes清單。</td>
   </tr>
   <tr>
@@ -248,7 +251,7 @@ head.html和body.html的範例可以在 [AEM Mobile混合式參考應用程式](
    <td>如果為True，則會轉譯選件中包含的任何影片。 若為false，則會略過視訊。</td>
   </tr>
   <tr>
-   <td>path</td>
+   <td>路徑</td>
    <td>/content/campaigns/&lt;brand&gt;</td>
    <td>指向優惠方案參與的行銷活動品牌。 目前所有優惠方案必須來自相同行銷活動。</td>
   </tr>
@@ -275,7 +278,7 @@ head.html和body.html的範例可以在 [AEM Mobile混合式參考應用程式](
 
 對於每個mbox，屬性為 **cq目標定位** 新增功能，讓應用程式開發人員可撰寫自訂程式碼，以便依需求使用及使用。 此 [AEM Mobile混合參考應用程式](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 有一個使用cq-targeting屬性的Angular指示詞範例。 內容取代的概念（何時及如何進行）由行動應用程式開發人員決定。 有一個透過AEM /etc/clientlibs/mobileapps/js/mobileapps.js傳遞的行動SDK，其提供呼叫Adobe鎖定目標服務的API。 應用程式開發人員可自行指定何時應根據應用程式的設計進行呼叫。
 
-## 下一步? {#what-s-next}
+## 接下來呢？ {#what-s-next}
 
 1. [開始我的AEM Mobile應用程式體驗](/help/mobile/starting-aem-phonegap-app.md)
 1. [管理我的應用程式內容](/help/mobile/phonegap-manage-app-content.md)

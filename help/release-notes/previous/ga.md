@@ -2,7 +2,10 @@
 title: 一般發行說明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5版本注意事項概述版本資訊、新增功能、安裝方法以及詳細變更清單。」'
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager
+feature: Release Information
+role: User,Admin,Architect,Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '4484'
 ht-degree: 2%
@@ -250,7 +253,7 @@ AEM能以各種格式和從棧疊的不同層級提供內容。 有些從2008年
 * `s_code.js` 包括H.27.5。 Adobe建議您將實作切換至 `AppMeasurement.js`
 * `AppMeasurement.js` 包括v1.8.0。 Adobe建議您使用 [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) 將AppMeasurement.js布建至網站。
 
-#### AEM與商務 {#aem-commerce}
+#### AEM和Commerce {#aem-commerce}
 
 自AEM 6.4起，Commerce integration framework的改良版週期較快。 [在此處瞭解更多](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html).
 

@@ -6,7 +6,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: daafc8b8-3c01-4c97-a14b-f1b706600249
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 4%
@@ -17,7 +20,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 您可以從AEM Mobile Application Dashboard或Control Center管理應用程式和行動應用程式內容。
 
@@ -41,7 +44,7 @@ ht-degree: 4%
 * 說明
 * 圖示
 * 上次修改時間
-* 上次修改者:
+* 上次修改者
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 

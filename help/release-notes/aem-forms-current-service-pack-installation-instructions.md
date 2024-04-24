@@ -2,10 +2,13 @@
 title: 適用於AEM Forms的AEM Forms修補程式安裝指示
 description: 適用於OSGi和JEE環境的AEM Forms Service Pack安裝指示
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: fbdeaeca3fa05181682f94e8f71bd9bb6605762a
+solution: Experience Manager
+feature: Release Information
+role: User,Admin,Architect,Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '1752'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -17,7 +20,7 @@ ht-degree: 5%
 |---|---|
 | 版本 | 6.5.20.0 |
 | 類型 | Service Pack發行 |
-| 日期 | 2024年2月29日 |
+| 日期 | 2024 年 2 月 29 日 |
 | 下載 URL | [最新AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]

@@ -1,17 +1,19 @@
 ---
-title: 使用Commerce integration framework的AEM與協力廠商商務整合
+title: 使用Commerce integration framework整合AEM和第三方Commerce
 description: 企業可能需要額外的協力廠商商業解決方案來強化店面。 Commerce integration framework(CIF)可用於這類整合案例，以使用I/O Runtime將協力廠商商務解決方案連線至Adobe Experience Manager。
 thumbnail: cif-third-party-architecture.jpg
 exl-id: e99899a4-df86-4108-991a-8b30d303a279
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
 
 ---
 
-# 使用Commerce integration framework的AEM與協力廠商商務整合 {#aem-third-party}
+# 使用Commerce integration framework整合AEM和第三方Commerce {#aem-third-party}
 
 CIF的常見案例是整合非Adobe Commerce解決方案。 具有不同API和結構描述的協力廠商解決方案會透過整合層進行連線。
 
@@ -57,7 +59,7 @@ Adobe建議使用 [Adobe I/O Runtime](https://developer.adobe.com/apis/experienc
 
 聯結器是專案的良好起點。 附隨商業解決方案特定的連線和預設API對應。 這些聯結器是由第三方建置，而非由Adobe維護。 如需相關資訊，請聯絡個別合作夥伴。
 
-* [SAP商務](https://github.com/diconium/commerce-cif-graphql-integration-hybris)，由Diconium建置
+* [SAP COMMERCE](https://github.com/diconium/commerce-cif-graphql-integration-hybris)，由Diconium建置
 * [Commercetools](https://github.com/diconium/commerce-cif-graphql-integration-commercetool)，由Diconium建置
 
 >[!TIP]

@@ -6,7 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 1f60a0d4-a272-45e8-9742-4b706be8502e
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 1%
@@ -39,8 +42,8 @@ ht-degree: 1%
 >* 節點名稱可以包含空格，但在URI中使用時，空格必須編碼為&#39;%20&#39;或&#39;+&#39;。
 >* 節點名稱可能包含連字型大小和底線，但若在Java™檔案中作為套件名稱參照，則必須加以編碼。 連字型大小和底線都會以底線逸出，後面跟著其Unicode值：
 >
-* 連字型大小會變成&#39;_002d&#39;
-* 底線會變成&#39;_005f&#39;
+>   * 連字型大小會變成&#39;_002d&#39;
+>   * 底線會變成&#39;_005f&#39;
 
 ## 設定應用程式目錄(/apps) {#setup-the-application-directory-apps}
 

@@ -1,15 +1,18 @@
 ---
 title: 存取裝置功能
-description: 請依照本頁所述操作，瞭解如何建置存取裝置功能的Adobe Experience Manager (AEM)元件。 AEM PhoneGap Kitchen Sink GitHub存放庫為開發人員提供功能性AEM應用程式，該應用程式可說明數個核心Cordova API的使用情況。
+description: 請依照本頁面的說明進行，瞭解如何建置可存取裝置功能的Adobe Experience Manager (AEM)元件。 AEM PhoneGap Kitchen Sink GitHub存放庫為開發人員提供具有功能的AEM應用程式，該應用程式可說明如何使用數個核心Cordova API。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 385f7924-e8ab-4dcb-83f0-7b81bead3dda
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 3%
+source-wordcount: '171'
+ht-degree: 4%
 
 ---
 
@@ -17,15 +20,15 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe建議對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md).
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 ## 建立存取裝置功能的Adobe Experience Manager (AEM)元件 {#building-aem-components-that-access-device-features}
 
-此 [AEM PhoneGap廚房水槽](https://github.com/blefebvre/aem-phonegap-kitchen-sink) GitHub存放庫為開發人員提供功能性AEM應用程式，說明如何使用數個核心Cordova API。 透過PhoneGap CLI在iOS或Android™上執行時，應用程式會開啟至下列頁面，其中包括其示範之每個裝置API的連結：
+此 [AEM PhoneGap廚房水槽](https://github.com/blefebvre/aem-phonegap-kitchen-sink) GitHub存放庫為開發人員提供了一個功能性的AEM應用程式，說明如何使用數個核心Cordova API。 透過PhoneGap CLI在iOS或Android™上執行時，應用程式會開啟至下列頁面，其中包括其示範的每個裝置API連結：
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-這些裝置API元件的原始碼都是 [適用於GitHub](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components).
+每個裝置API元件的原始碼為 [可在GitHub上取得](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components).
 
 如需每個API使用方式的詳細資訊，請參閱Cordova外掛程式檔案(`https://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html`)。
 

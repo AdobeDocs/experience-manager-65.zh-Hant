@@ -4,7 +4,9 @@ description: Adobe Experience Manager支援的使用者端和伺服器平台清�
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: d3822f4dee1b0d571aa06142f4a4f6e27874cf53
+feature: Deploying
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '3652'
 ht-degree: 0%

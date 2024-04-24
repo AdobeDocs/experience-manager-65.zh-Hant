@@ -7,10 +7,13 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 8b4d56d9-ba73-4eda-9773-3daaa9237abe
-source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 9%
+source-wordcount: '418'
+ht-degree: 2%
 
 ---
 
@@ -81,7 +84,7 @@ ht-degree: 9%
 
   （必要）設定評分/徽章規則的位置。
 
-* **得分規則**
+* **評分規則**
 
   （必要）產生分數以顯示的特定規則。
 
@@ -101,7 +104,7 @@ ht-degree: 9%
 
 * 設定標籤：
 
-   * 顯示名稱 = `Participation Board`
+   * 顯示名稱= `Participation Board`
    * `checked`：
 
       * 徽章
@@ -110,10 +113,10 @@ ht-degree: 9%
 
 * 規則標籤：
 
-   * 規則位置 = `/content/sites/<site name>/jcr:content`
-   * 得分規則 = `/libs/settings/community/scoring/rules/forums-scoring`
-   * 徽章規則 = `/libs/settings/community/badging/rules//reference-badging`
-   * 顯示限制 = `10`
+   * 規則位置= `/content/sites/<site name>/jcr:content`
+   * 評分規則= `/libs/settings/community/scoring/rules/forums-scoring`
+   * 徽章規則= `/libs/settings/community/badging/rules//reference-badging`
+   * 顯示限制= `10`
 
 ![參與者 — 排行榜](assets/participants-leaderboard.png)
 
@@ -125,18 +128,18 @@ ht-degree: 9%
 
 * 設定標籤：
 
-   * 顯示名稱 = `Expertise Board`
-   * `checked`:
+   * 顯示名稱= `Expertise Board`
+   * `checked`：
 
       * 徽章
       * 使用頭像
 
 * 規則標籤：
 
-   * 規則位置 = `/content/sites/<site name>/jcr:content`
-   * 得分規則 = `/libs/settings/community/scoring/rules/adv-forums-scoring`
-   * 徽章規則 = `/libs/settings/community/badging/rules/adv-forums-badging`
-   * 顯示限制 = `10`
+   * 規則位置= `/content/sites/<site name>/jcr:content`
+   * 評分規則= `/libs/settings/community/scoring/rules/adv-forums-scoring`
+   * 徽章規則= `/libs/settings/community/badging/rules/adv-forums-badging`
+   * 顯示限制= `10`
 
 ![experts-leaderboard](assets/experts-leaderboard.png)
 

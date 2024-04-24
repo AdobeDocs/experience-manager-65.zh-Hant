@@ -8,10 +8,12 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: aed2c3f2-1b5e-4065-8cec-433abb738ef5
-source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 3%
+source-wordcount: '545'
+ht-degree: 2%
 
 ---
 
@@ -33,7 +35,7 @@ ht-degree: 3%
 
 若要在AEM作者環境中存取群組範本主控台：
 
-* 選取 **工具 |社群 |群組範本，** 從全域導覽。
+* 選取 **工具 | Communities | 群組範本，** 從全域導覽。
 
 此主控台會顯示 [社群網站](/help/communities/sites-console.md) 可建立群組範本，並可建立新的群組範本。
 

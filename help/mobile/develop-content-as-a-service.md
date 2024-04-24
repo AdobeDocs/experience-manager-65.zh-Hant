@@ -5,9 +5,12 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '976'
 ht-degree: 1%
 
 ---
@@ -16,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 行動應用程式應該能夠視需要使用AEM中的所有內容，以提供鎖定目標的應用程式體驗。
 
@@ -28,7 +31,7 @@ ht-degree: 1%
 
 Content Services提供三種主要型別的資料：
 
-1. **Assets**
+1. **資產**
 1. **封裝的HTML內容(HTML/CSS/JS)**
 1. **獨立於管道的內容**
 

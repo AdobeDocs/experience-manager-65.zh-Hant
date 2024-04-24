@@ -6,9 +6,12 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 3ed3768a-1b3c-45a1-a34c-61694cd407d9
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '390'
 ht-degree: 5%
 
 ---
@@ -17,7 +20,7 @@ ht-degree: 5%
 
 ## 概觀 {#overview}
 
-Adobe Experience Manager (AEM) Communities可簡化社群功能的建立和自訂作業，例如論壇、使用者群組、部落格、Q&amp;A、行事曆、評論、評論、投票、評分和指派。 這些功能導致使用者產生的內容(UGC)被輸入發佈環境中。
+Adobe Experience Manager (AEM)社群可簡化社群功能（例如論壇、使用者群組、部落格、Q&amp;A、行事曆、評論、評論、投票、評分和指派）的建立和自訂。 這些功能會導致使用者產生的內容(UGC)進入發佈環境。
 
 的基礎 [社群網站](overview.md#communitiessites) 是 [社交元件框架](scf.md) (SCF)。 社群網站的建立從選擇開始 [社群網站範本](sites-console.md) 由下列專案組成 [社群功能](functions.md).
 
@@ -47,10 +50,10 @@ Adobe Experience Manager (AEM) Communities可簡化社群功能的建立和自�
 
 ## 元件、函式和Feature Essentials {#component-function-and-feature-essentials}
 
-AEM Communities元件、函式和功能提供建置區塊， [社群網站](sites-console.md).
+AEM Communities元件、函式和功能是下列專案的建置組塊： [社群網站](sites-console.md).
 
-* [元件、函式和Feature Essentials](essentials.md)
-* [Communities元件的Clientlibs](clientlibs.md)
+* [元件、功能和功能要點](essentials.md)
+* [適用於社群元件的Clientlibs](clientlibs.md)
 * [社群功能](functions.md)
 * [社群群組範本](tools-groups.md)
 * [社群網站範本](sites.md)
@@ -62,18 +65,18 @@ AEM Communities元件、函式和功能提供建置區塊， [社群網站](site
 
 ## 社群群組 {#community-groups}
 
-[社群群組](overview.md#communitygroups) 是允許社群成員在社群網站內建立子社群的構想。 您可以在發佈或作者環境中建立社群群組。
+[社群群組](overview.md#communitygroups) 是允許社群成員在社群網站內建立子社群的構想。 您可以在發佈或製作環境中建立社群群組。
 
-* [社群群組Essentials](essentials-groups.md)
+* [社群群組要點](essentials-groups.md)
 * [群組功能](functions.md#groups-function)
 * [社群群組範本](tools-groups.md)
 * [管理使用者和使用者群組](users.md)
-* [作者適用的社群群組](creating-groups.md)
+* [作者的社群群組](creating-groups.md)
 
 ## 管理資料 {#managing-data}
 
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP API公用程式方法與範例
-* [標籤Essentials](tag.md)  — 社群成員可標籤UGC和/或編目啟用資源
+* [srp和UGC Essentials](srp-and-ugc.md) - SRP API公用程式方法與範例
+* [標籤Essentials](tag.md)  — 社群成員可標籤UGC和/或目錄啟用資源
 
 ## 教學課程 {#tutorials}
 
@@ -86,10 +89,10 @@ AEM Communities元件、函式和功能提供建置區塊， [社群網站](site
 * [疑難排解](troubleshooting.md)
 * [已知問題](/help/release-notes/release-notes.md)
 
-## 相關Communities檔案 {#related-communities-documentation}
+## 相關社群檔案 {#related-communities-documentation}
 
 * 造訪 [部署社群](deploy-communities.md) 以瞭解建議的部署和Dispatcher設定。
 
-* 造訪 [管理社群網站](administer-landing.md) 瞭解有關建立社群網站、設定社群網站範本、仲裁社群內容、管理成員和設定傳訊功能的資訊。
+* 造訪 [管理社群網站](administer-landing.md) 瞭解有關建立社群網站、設定社群網站範本、仲裁社群內容、管理成員以及設定傳訊功能的資訊。
 
 * 造訪 [Authoring Communities元件](author-communities.md) 瞭解如何使用及設定Communities元件進行創作。

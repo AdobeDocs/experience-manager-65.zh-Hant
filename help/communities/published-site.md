@@ -7,10 +7,13 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 1%
+source-wordcount: '1195'
+ht-degree: 0%
 
 ---
 
@@ -128,9 +131,9 @@ ht-degree: 1%
 1. 選取 **新增群組**
 1. **設定標籤**
 
-   * 群組名稱 : `Sports`
-   * 說明 : `A parent group for various sporting groups`.
-   * 群組 URL 名稱 : `sports`
+   * 群組名稱： `Sports`
+   * 說明： `A parent group for various sporting groups`.
+   * 群組URL名稱： `sports`
    * 選取 `Open Group` （允許任何社群成員透過加入來參與）
 
 1. **範本索引標籤**
@@ -159,7 +162,7 @@ ht-degree: 1%
    * 將其設定變更為 `Member Only Group` （限制成員資格）。
    * 在範本索引標籤上，選取 `Conversational Group`.
 
-**注意**:
+**通知**：
 
 * 必須重新整理頁面才能顯示這兩個群組。
 * 此範本會 *非* 包含「群組」功能，因此不可能進一步巢狀化群組。
@@ -221,7 +224,7 @@ ht-degree: 1%
 
 登入後，第一個顯示的頁面為其 `Profile` 頁面進行個人化。
 
-![側面像](assets/profile.png)
+![設定檔](assets/profile.png)
 
 如果成員忘記其登入ID，則復原時可能會使用其電子郵件地址。
 

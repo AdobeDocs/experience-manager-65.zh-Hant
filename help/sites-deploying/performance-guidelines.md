@@ -8,7 +8,8 @@ topic-tags: configuring
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '2939'
 ht-degree: 5%
@@ -71,7 +72,7 @@ ht-degree: 5%
    <td><p>分析</p> </td>
   </tr>
   <tr>
-   <td><p>社群</p> </td>
+   <td><p>Communities</p> </td>
    <td><p>Author-CS</p> </td>
    <td><p>Red Hat®</p> </td>
    <td><p>WebSphere®</p> </td>

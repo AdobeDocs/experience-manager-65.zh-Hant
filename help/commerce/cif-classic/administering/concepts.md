@@ -4,7 +4,9 @@ description: 透過Adobe Experience Manager瞭解電子商務的一般概念。
 contentOwner: Guillaume Carlino
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '4439'
 ht-degree: 1%
@@ -128,7 +130,7 @@ AEM eCommerce是使用電子商務引擎實施：
 >
 >  標準AEM安裝包含 [通用電子商務實施](/help/commerce/cif-classic/administering/generic.md).
 
-### 商務提供者 {#commerce-providers}
+### Commerce提供者 {#commerce-providers}
 
 將資料從商務引擎匯入您的AEM電子商務網站時，會使用商務提供者為匯入者提供資料。 一個商務提供者可以支援多個匯入工具。
 
@@ -148,7 +150,7 @@ AEM目前提供兩個範例商業提供者：
 >
 >Geometrixx匯入工具使用CSV檔案；在其實作上方的註解中有接受的結構描述（允許自訂屬性）。
 
-此 [產品服務管理員](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) 維護(透過 [osgi](/help/sites-deploying/configuring.md#osgi-configuration-settings))的實施清單 [ProductImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html) 和 [CatalogBlueprintImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html) 介面。 這些專案會列於 **匯入工具/商務提供者** 匯入工具精靈的下拉式欄位(使用 `commerceProvider` 屬性作為名稱)。
+此 [產品服務管理員](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) 維護(透過 [osgi](/help/sites-deploying/configuring.md#osgi-configuration-settings))的實施清單 [ProductImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html) 和 [CatalogBlueprintImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html) 介面。 這些專案會列於 **匯入工具/Commerce提供者** 匯入工具精靈的下拉式欄位(使用 `commerceProvider` 屬性作為名稱)。
 
 當下拉式清單中提供特定的匯入工具/商務提供者時，您必須在以下任一位置定義所需的任何補充資料（視匯入工具型別而定）：
 
@@ -454,7 +456,7 @@ AEM支援多種語言的產品內容。 請求資料時，整合架構會從目�
 
 產品頁面提供個別產品的完整資訊。 來自的動態更新也會反映出來；例如，在電子商務引擎上註冊的價格變更。
 
-產品頁面為使用下列專案的AEM頁面： **產品** 元件；例如 **商業產品** 範本：
+產品頁面為使用下列專案的AEM頁面： **產品** 元件；例如 **Commerce產品** 範本：
 
 ![e-commerce_nairobirunnersgreen](/help/sites-administering/assets/ecommerce_nairobirunnersgreen.png)
 

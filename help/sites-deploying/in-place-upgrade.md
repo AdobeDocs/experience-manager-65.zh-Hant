@@ -5,7 +5,8 @@ topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 0%
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 <!--Finally, the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 
-## 移轉必要條件 {#migration-prerequisites}
+## 移轉先決條件 {#migration-prerequisites}
 
 * **最低必要Java版本：** 移轉工具僅適用於Java版本7及更高版本。 請注意，AEM 6.3及更高版本僅支援Oracle的JRE 8和IBM的JRE 7及8。
 

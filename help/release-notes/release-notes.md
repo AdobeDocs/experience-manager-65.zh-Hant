@@ -3,10 +3,13 @@ title: 版本注意事項 [!DNL Adobe Experience Manager] 6.5
 description: 尋找版本資訊、新增功能、安裝作法和詳細的變更清單 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 4
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: f22f51b4d65abf4cf1f6e04952f873eca5119727
+solution: Experience Manager
+feature: Release Information
+role: User,Admin,Architect,Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '3735'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -159,7 +162,7 @@ ht-degree: 1%
 * 當使用者在iOS裝置上的附件元件中使用「拍攝影片」按一下影像時，所有影像都會新增到具有相同名稱的資料夾中。 (FORMS-12224)
 * 當使用者更新單選按鈕群組中的現有選項時，會發佈不正確的翻譯值。 (FORMS-12575)
 * 當使用者在Android™裝置上將字元新增到最適化表單時，使用者在Android™裝置上聚焦時可以在文字欄位中輸入超過定義的最大字元數。 但是，當使用者選取HTML5輸入型別時，它就會運作。 (FORMS-12748)
-* 由於相符的標籤Arial® labelledby和Arial® label，熒幕助讀程式無法區分這兩者。 為了解決問題 — 表單欄位的「aria-labelledby」標籤已取代為「aria-describedby」。 (FORMS-12436)
+* 由於相符的標籤Arial® labelledby和Arial® label，熒幕助讀程式無法區分這兩者。 為了解決該問題 - 表單欄位的標籤 aria-labelledby 會換為 aria-descriptedby。(FORMS-12436)
 * 當作者使用「最適化Forms — 內嵌(v2)」元件在其網站頁面中嵌入最適化表單，且內嵌表單包含驗證碼元件時（驗證碼服務 — > reCAPTCHA，設定 — > reCAPTCHA-v2），當使用者嘗試在作者執行個體上使用「以發佈的形式檢視」來檢視網站頁面時，網站頁面未轉譯。 下列錯誤顯示為(FORMS-11859)：
   `Failed to construct 'URL': Invalid base URL at Object.renderRecaptcha`
 
@@ -223,7 +226,7 @@ ht-degree: 1%
 
 ### Foundation {#foundation-6520}
 
-#### 社群 {#communities-6520}
+#### Communities {#communities-6520}
 
 * 使用者同步診斷在成功設定使用者同步後失敗。 (NPR-41693)
 

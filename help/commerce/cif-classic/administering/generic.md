@@ -7,7 +7,9 @@ content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '2907'
 ht-degree: 1%
@@ -114,7 +116,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
      `/etc/commerce/products/<*store name*>/`
 
-   * **商務提供者**
+   * **Commerce提供者**
 
      您的匯入工具 [商業提供者](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)；預設Geometrixx。
 
@@ -633,7 +635,7 @@ Adobe Experience Manager (AEM)一般解決方案提供管理存放庫內所儲�
 
 ### 新增憑單至購物車 {#adding-vouchers-to-a-cart}
 
-若要讓使用者將憑單新增至購物車，您可以使用內建的 **憑單** 元件（商務類別）。 將此專案新增到顯示購物車的相同頁面（但這並非強制性）。 憑單元件只是使用者可在其中輸入憑單代碼的表單，它是實際顯示套用憑單清單及其折扣的購物車元件。
+若要讓使用者將憑單新增至購物車，您可以使用內建的 **憑單** 元件(Commerce類別)。 將此專案新增到顯示購物車的相同頁面（但這並非強制性）。 憑單元件只是使用者可在其中輸入憑單代碼的表單，它是實際顯示套用憑單清單及其折扣的購物車元件。
 
 在示範網站(Geometrixx Outdoors文 — 英文)中，您可以在購物車頁面上實際購物車下方看到憑單表單。
 

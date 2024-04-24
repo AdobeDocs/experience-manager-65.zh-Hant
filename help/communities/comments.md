@@ -7,10 +7,13 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 30baebd9-13c5-4fde-a494-85601abc32a5
-source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 4%
+source-wordcount: '983'
+ht-degree: 0%
 
 ---
 
@@ -71,7 +74,7 @@ ht-degree: 4%
 
   如果勾選，上傳檔案的選項會顯示文字輸入方塊。 預設為取消選取。
 
-* **最大檔案大小**
+* **檔案大小上限**
 
   只有在勾選「允許檔案上傳」時才相關。 此值會限制上傳的檔案大小。 預設限製為10 MB。
 
@@ -79,11 +82,11 @@ ht-degree: 4%
 
   可輸入文字方塊的最大字元數。 預設為4096個字元。
 
-* **允許的檔案類型**
+* **允許的檔案型別**
 
   只有在勾選「允許檔案上傳」時才相關。 以「點」分隔符號的副檔名清單（以逗號分隔）。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 預設為「無」，因此允許所有檔案型別。
 
-* **RTF 編輯器**
+* **RTF編輯器**
 
   如果勾選，則會以標示輸入註解。 預設為取消選取。
 
@@ -103,11 +106,11 @@ ht-degree: 4%
 
 在 **使用者稽核** 索引標籤，指定如何管理張貼的評論。 如需詳細資訊，請參閱 [稽核使用者產生的內容](/help/communities/moderate-ugc.md).
 
-* **事先審核**
+* **預先稽核**
 
   如果勾選，註解在發佈網站上出現之前必須先經過核准。 預設為取消選取。
 
-* **刪除注釋**
+* **刪除註解**
 
   如果勾選，發表評論的成員將獲得刪除評論的功能。 預設為取消選取。
 
@@ -161,13 +164,13 @@ ht-degree: 4%
 
 ![resource-type](assets/resource-type.png)
 
-* **評論資源類型**
+* **評論資源型別**
 
   導覽至擴充功能的resourceType `comment` /apps中的元件（單一註釋）。 例如 `/apps/social/commons/components/hbs/comments/comment`
 
   此資源可識別訪客發表評論時建立的UGC的resourceType。
 
-* **投票資源類型**
+* **投票資源型別**
 
   導覽至擴充功能的resourceType `voting` /apps中的元件。 例如 `/apps/social/components/hbs/voting`
 

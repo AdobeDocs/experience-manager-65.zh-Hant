@@ -5,9 +5,12 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 955ffb1c-4fa9-43bb-8e5b-2df7f2d17951
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+solution: Experience Manager
+feature: Mobile
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '313'
 ht-degree: 2%
 
 ---
@@ -16,7 +19,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 >[!CAUTION]
 >
@@ -34,7 +37,7 @@ Content Services可將內容以資產、封裝HTML(HTML/CSS/JS)或獨立於管�
 
 >[!CAUTION]
 >
->**必備條件:**
+>**先決條件：**
 >
 >開始使用內容服務前，請務必啟用「內容服務」標幟。 若要啟用應用程式中模型的建立和管理，請在設定瀏覽器中啟用資料模型。
 >

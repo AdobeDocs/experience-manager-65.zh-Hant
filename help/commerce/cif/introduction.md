@@ -4,7 +4,9 @@ description: 透過我們有關整合以及如何開始使用 AEM Storefront 的
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 88%
@@ -18,7 +20,7 @@ ht-degree: 88%
 
 ## Content and Commerce 如何幫助客戶獲致成功
 
-隨著客戶對在線商務體驗的期望不斷提高，品牌被迫更快地提供差異化體驗和更多內容。然而，實作內容管理平台通常需要大量時間和預算投資來開發基礎元素，例如自訂元件和編寫工具，並且會增加維護和更新成本。Experience Manager Sites提供「內容與商務」作為Experience Manager的附加模組，提供開箱即用的商務核心元件、製作工具和參考店面，以加速上線、實現跨團隊的順暢合作並促進轉換。
+隨著客戶對在線商務體驗的期望不斷提高，品牌被迫更快地提供差異化體驗和更多內容。然而，實作內容管理平台通常需要大量時間和預算投資來開發基礎元素，例如自訂元件和編寫工具，並且會增加維護和更新成本。Experience Manager Sites提供內容和Commerce作為Experience Manager的附加模組，提供開箱即用的商務核心元件、製作工具和參考店面，以加速上線、實現跨團隊的順暢合作並促進轉換。
 
 品牌可以將 Experience Manager 與 Adobe Commerce (Adobe Experience Cloud 的一部分) 以及任何所選的商務引擎相整合。有了 Experience Manager Content and Commerce，品牌可以：
 
@@ -60,7 +62,7 @@ CIF 附加元件將產品情境帶入 Experience Manager 並提供編寫工具 (
 
 ### 實現價值時間 (TTV)
 
-加速專案開發，使用 [AEM Core Components](https://www.aemcomponents.dev/)， [AEM Venia參考店面](https://github.com/adobe/aem-cif-guides-venia)， [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)和PWA（Headless內容和商務）的整合模式。
+加速專案開發，使用 [AEM Core Components](https://www.aemcomponents.dev/)， [AEM Venia參考店面](https://github.com/adobe/aem-cif-guides-venia)， [AEM專案原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hant)和PWA的整合模式(Headless內容和Commerce)。
 
 CIF 旨在透過始終保持最新的附加元件不斷創新，使客戶能夠存取新的和改進的功能。
 

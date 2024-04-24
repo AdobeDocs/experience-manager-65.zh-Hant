@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1188'
-ht-degree: 4%
+source-wordcount: '1158'
+ht-degree: 2%
 
 ---
 
@@ -101,20 +104,20 @@ ht-degree: 4%
 
 以下是供各種Communities功能使用的一些可搜尋屬性：
 
-| **屬性** | **資料類型** |
+| **屬性** | **資料型別** |
 |---|---|
 | isFlagged | *布林值* |
 | isSpam | *布林值* |
 | 讀取 | *布林值* |
 | 影響 | *布林值* |
 | 附件 | *布林值* |
-| 情緒 | *長整數* |
+| 情緒 | *長* |
 | 已標幟 | *布林值* |
 | 已新增 | *日期* |
 | modifieddate | *日期* |
-| 狀態 | *字串* |
+| 州別 | *字串* |
 | userId | *字串* |
-| 回覆 | *長整數* |
+| 回覆 | *長* |
 | jcr:title | *字串* |
 | jcr：description | *字串* |
 | sling:resourceType | *字串* |
@@ -142,16 +145,16 @@ ht-degree: 4%
 
 Solr是使用結構描述的查詢語言範例。
 
-| **字尾** | **資料類型** |
+| **字尾** | **資料型別** |
 |---|---|
 | _b | *布林值* |
-| _dt | *日曆* |
-| _d | *雙精度* |
-| _tl | *長整數* |
+| _dt | *行事曆* |
+| _d | *兩次* |
+| _tl | *長* |
 | _s | *字串* |
 | _t | *文字* |
 
-**附註:**
+**附註：**
 
 * *文字* 是標籤字串， *字串* 不是。 使用 *文字* 用於模糊（類似於）搜尋。
 

@@ -6,7 +6,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 exl-id: 897a04b9-e357-4f1c-8aa0-2c2528f8556d
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 5%
@@ -17,7 +20,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 此 **管理應用程式** 圖磚和「管理應用程式」頁面提供檢視和編輯應用程式中繼資料的方法。 將應用程式發佈到廠商的商店時，需要應用程式中繼資料細節。 這可能包括常見中繼資料、iOS中繼資料和熒幕擷取畫面。 請參閱 [管理應用程式動態磚](/help/mobile/phonegap-app-details-tile.md) 以進一步瞭解一般和iOS中繼資料。
 

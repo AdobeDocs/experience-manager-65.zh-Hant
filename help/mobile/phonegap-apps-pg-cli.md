@@ -6,9 +6,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '658'
 ht-degree: 2%
 
 ---
@@ -17,7 +20,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 在任何指定時間，身為開發人員，只要您已設定開發環境，就可以在裝置或模擬器內執行應用程式。
 
@@ -88,9 +91,9 @@ phonegap run ios
 >1. 執行 `phonegap create helloWorld`
 >1. 導覽至helloWorld (cd helloWorld)
 >1. 執行 `phonegap run android` (或以上述iOS取代Android™)。
-1. 模擬器會開啟執行您新建立的PhoneGap應用程式，如果JavaScript Bridge to native運作正常，系統會顯示「裝置就緒」。
+>1. 模擬器會開啟執行您新建立的PhoneGap應用程式，如果JavaScript Bridge to native運作正常，系統會顯示「裝置就緒」。
 >
-此疑難排解會驗證您的PhoneGap CLI開發環境是否正確執行。
+>此疑難排解會驗證您的PhoneGap CLI開發環境是否正確執行。
 
 ## 使用Safari和IOS除錯功能除錯JavaScript {#debug-javascripts-with-safari-and-ios-debug}
 
@@ -151,7 +154,7 @@ phonegap run <platform> --emulator
 
 >[!NOTE]
 >
-若要檢視目前方法中的變數值，請將滑鼠游標停留。
+>若要檢視目前方法中的變數值，請將滑鼠游標停留。
 
 ## 後續步驟 {#the-next-steps}
 

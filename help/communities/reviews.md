@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 exl-id: 170414a6-c40b-4ad2-9294-7c2266850c3d
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 2%
+source-wordcount: '1290'
+ht-degree: 0%
 
 ---
 
@@ -57,7 +60,7 @@ ht-degree: 2%
 
 ![required-rating](assets/configure-review2.png)
 
-* **[!UICONTROL 必要評等]**
+* **[!UICONTROL 必要的評等]**
 
   允許的評等子集，指出所需的評等。
 
@@ -85,7 +88,7 @@ ht-degree: 2%
 
   如果勾選，允許上傳檔案附件以供稽核。 預設為未勾選。
 
-* **最大檔案大小**
+* **檔案大小上限**
 
   只有在 **[!UICONTROL 允許檔案上傳]** 已勾選。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設為10 MB。
 
@@ -93,11 +96,11 @@ ht-degree: 2%
 
   可輸入文字方塊的最大字元數。 預設為4096個字元。
 
-* **[!UICONTROL 允許的檔案類型]**
+* **[!UICONTROL 允許的檔案型別]**
 
   只有在 **[!UICONTROL 允許檔案上傳]** 已勾選。 以「點」分隔符號的副檔名清單（以逗號分隔）。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則不允許未指定的檔案型別。 預設為「無」，因此允許所有檔案型別。
 
-* **[!UICONTROL RTF 編輯器]**
+* **[!UICONTROL RTF編輯器]**
 
   如果勾選，可輸入帶有標示的貼文。 預設為未勾選。
 
@@ -109,7 +112,7 @@ ht-degree: 2%
 
 ![使用者稽核](assets/configure-review4.png)
 
-* **[!UICONTROL 事先審核]**
+* **[!UICONTROL 預先稽核]**
 
   如果勾選，則必須先核准稽核，才能將其顯示在發佈網站上。 預設為未勾選。
 
@@ -195,13 +198,13 @@ ht-degree: 2%
 
 ![評論投票](assets/configure-review7.png)
 
-* **[!UICONTROL 評論資源類型]**
+* **[!UICONTROL 評論資源型別]**
 
   導覽至擴充功能的resourceType `comment`/apps中的元件（單一註釋）。 例如，`/apps/social/commons/components/hbs/comments/comment`。
 
   此資源可識別訪客發表評論時建立的UGC的resourceType。
 
-* **[!UICONTROL 投票資源類型]**
+* **[!UICONTROL 投票資源型別]**
 
   導覽至擴充功能的resourceType `voting`/apps中的元件。 例如，`/apps/social/components/hbs/voting`。
 

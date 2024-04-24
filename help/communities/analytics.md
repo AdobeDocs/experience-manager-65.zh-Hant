@@ -8,10 +8,12 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '2701'
-ht-degree: 4%
+source-wordcount: '2658'
+ht-degree: 0%
 
 ---
 
@@ -98,7 +100,7 @@ Adobe Analytics可針對AEM Communities進行設定，以便在成員與支援�
 
    * **`event1`** 到 **`event7`** 已啟用
 
-   * 類型 **`Counter`**
+   * type **`Counter`**
 
       * 非 **`Counter (no subrelations)`**
 
@@ -212,19 +214,19 @@ Video Heartbeat Analytics獲授權時， `Marketing Cloud Org Id` 已指派。
 
   選取託管報表套裝的Analytics資料中心。
 
-* **不要新增追蹤標記至頁面**
+* **請勿將追蹤標籤新增至頁面**
 
   保留為預設值（取消選取）。
 
-* **使用 AppMeasurement**
+* **使用AppMeasurement**
 
   保留為預設值（取消選取）。
 
-* **不要每晚匯入頁面印象 (作者)**
+* **不要每晚匯入頁面印象（作者）**
 
   保留為預設值（取消選取）。
 
-* **不要每晚匯入頁面印象 (發佈)**
+* **不要每晚匯入頁面印象（發佈）**
 
   保留為預設值（取消選取）。
 
@@ -262,7 +264,7 @@ Video Heartbeat Analytics獲授權時， `Marketing Cloud Org Id` 已指派。
 
   選取 `Adobe Analytics Framework`.
 
-* 選擇 **建立**。
+* 選取「**建立**」。
 
 建立Analytics框架會開啟框架以進行設定。
 
@@ -302,7 +304,7 @@ Sidekick不是必要專案，且可以最小化，這樣就不會阻礙報表套
 
 1. 選擇 `Run Mode`.
 
-1. 選取 **發佈**.
+1. 選取「**發佈**」。
 
 ![analytics-framework2](assets/analytics-framework2.png)
 
@@ -407,15 +409,15 @@ Analytics會自動用於數個Communities功能。
   </tr>
   <tr>
    <td><strong> </strong></td>
-   <td><strong>eVar1</strong></td>
-   <td><strong>eVar2</strong></td>
-   <td><strong>eVar3</strong></td>
-   <td><strong>eVar4</strong></td>
-   <td><strong>eVar5</strong></td>
-   <td><strong>eVar6</strong></td>
-   <td><strong>eVar7</strong></td>
-   <td><strong>eVar8</strong></td>
-   <td><strong>eVar9</strong></td>
+   <td><strong>EVAR1</strong></td>
+   <td><strong>EVAR2</strong></td>
+   <td><strong>EVAR3</strong></td>
+   <td><strong>EVAR4</strong></td>
+   <td><strong>EVAR5</strong></td>
+   <td><strong>EVAR6</strong></td>
+   <td><strong>EVAR7</strong></td>
+   <td><strong>EVAR8</strong></td>
+   <td><strong>EVAR9</strong></td>
    <td><strong>eVar10</strong></td>
   </tr>
   <tr>

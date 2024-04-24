@@ -7,10 +7,13 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: e130bab4-524d-4413-ba8b-53d0ed9e8623
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1122'
-ht-degree: 9%
+source-wordcount: '1132'
+ht-degree: 0%
 
 ---
 
@@ -60,8 +63,8 @@ ht-degree: 9%
 * **附加縮圖最大尺寸**
 * **最小縮圖影像大小**
 * **最大縮圖尺寸**
-* **允許有特殊權限的成員**
-* **允許擁有特殊權限的成員**
+* **允許有特殊許可權的成員**
+* **允許擁有特殊許可權的成員**
 * **封鎖使用者在作者編輯模式中產生的內容**
 * **創意力標題**
 
@@ -74,7 +77,7 @@ ht-degree: 9%
 
   定義每個頁面顯示的想法/貼文數。 預設值為10。
 
-* **已審核**
+* **已稽核**
 
   如果勾選，則必須先核准發佈想法和評論，才能將其顯示在發佈網站上。 預設為未勾選。
 
@@ -82,11 +85,11 @@ ht-degree: 9%
 
   如果勾選，創意力論壇將關閉以接受新的想法和評論。 預設為未勾選。
 
-* **RTF 編輯器**
+* **RTF編輯器**
 
   如果勾選，便可使用標籤輸入想法和評論。 預設為未勾選。
 
-* **允許標記**
+* **允許標籤**
 
   如果勾選，則允許成員將標籤新增至他們的貼文(請參閱 **[!UICONTROL 標籤欄位]** 標籤)。 預設為未勾選。
 
@@ -94,15 +97,15 @@ ht-degree: 9%
 
   如果勾選，允許將檔案附件新增至創意或註解中。 預設為未勾選。
 
-* **最大檔案大小**
+* **檔案大小上限**
 
   只有在 `Allow File Uploads` 已勾選。 此欄位會限制已上傳檔案的大小（以位元組為單位）。 預設值為104857600 (10 Mb)。
 
-* **允許的檔案類型**
+* **允許的檔案型別**
 
   只有在 `Allow File Uploads` 已勾選。 以「點」分隔符號的副檔名清單（以逗號分隔）。 例如，.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何檔案型別，則無法上傳未指定的檔案型別。 預設為「無」，因此允許所有檔案型別。
 
-* **附加影像檔案最大大小**
+* **附加影像檔案大小上限**
 
   只有在勾選「允許檔案上傳」時才相關。 已上傳影像檔案的最大位元組數。 預設值為2097152 (2 Mb)。
 
@@ -141,8 +144,8 @@ ht-degree: 9%
   如果勾選，該創意可識別為 [主要內容](/help/communities/featured.md). 預設為未勾選。
 
 * **啟用提及功能**
-* **最大提及數**
-* **UI 提及模式**
+* **最大提及次數**
+* **UI提及模式**
 
 #### 「使用者稽核」標籤 {#user-moderation-tab}
 
@@ -180,7 +183,7 @@ ht-degree: 9%
 
 在 **[!UICONTROL 標籤欄位]** 標籤中，如果允許的話，則會套用的標籤 **[!UICONTROL 設定]** 索引標籤中，會根據選取的名稱空間而有所限制。
 
-* **允許的命名空間**
+* **允許的名稱空間**
 
   相關條件 `Allow Tagging` 已勾選下方的 **[!UICONTROL 設定]** 標籤。 可套用的標籤僅限於已核取的名稱空間類別中的標籤。 名稱空間清單包含「標準標籤」（預設名稱空間）和「包含所有標籤」。 預設為未勾選，這表示允許所有名稱空間。
 
@@ -196,11 +199,11 @@ ht-degree: 9%
 
   檢查所有允許的排序選擇： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 預設為 `Newest, Oldest, Last Updated`.
 
-* **設為預設值**
+* **設定為預設**
 
   下拉式選單，選取其中一個核取的排序選項，以顯示為預設值。 預設為 `Newest`.
 
-* **選取 Analytics 排序的時間選項**
+* **選取Analytics排序的時間選項**
 
   下拉以選取其中一項 `All, Last 24 Hours, Last 7 Days, Last 30 Days`. 預設為 `All`.
 

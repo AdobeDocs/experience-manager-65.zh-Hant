@@ -7,10 +7,12 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: 15b3a594-efde-4702-9233-232ba1c7e5b0
-source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 2%
+source-wordcount: '589'
+ht-degree: 0%
 
 ---
 
@@ -71,9 +73,9 @@ MySQL安裝可以使用不同的資料庫（綱要）名稱以及不同的連線
   ![dsrp-config](assets/dsrp-config.png)
 
 * 選取 **[!UICONTROL 資料庫儲存資源提供者(DSRP)]**
-* **資料庫設定**
+* **資料庫組態**
 
-   * **[!UICONTROL JDBC 資料來源名稱]**
+   * **[!UICONTROL JDBC資料來源名稱]**
 
      指定給MySQL連線的名稱必須與中輸入的名稱相同 [JDBC OSGi設定](dsrp-mysql.md#configurejdbcconnections)
 
@@ -87,7 +89,7 @@ MySQL安裝可以使用不同的資料庫（綱要）名稱以及不同的連線
 
 * **SolrConfiguration**
 
-   * **[](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html)Zookeeper Host**
+   * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html) 主機**
 
      如果使用內部ZooKeeper執行Solr，則將此值保留空白。 否則，在中執行時 [SolrCloud模式](solr.md#solrcloud-mode) 使用外部ZooKeeper，將此值設定為ZooKeeper的URI，例如 *my.server.com:80*
 
@@ -97,7 +99,7 @@ MySQL安裝可以使用不同的資料庫（綱要）名稱以及不同的連線
 
      *預設*： https://127.0.0.1:8983/solr/
 
-   * **[!UICONTROL Solr 集合]**
+   * **[!UICONTROL Solr集合]**
 
      *預設*： collection1
 
@@ -123,7 +125,7 @@ DSRP必須識別為所有製作和發佈執行個體上的通用存放區。
 
    * 從主功能表導覽至 **[!UICONTROL 工具]** > **[!UICONTROL 作業]** > **[!UICONTROL 復寫]**
    * 按兩下 **[!UICONTROL 啟動樹狀結構]**
-   * **開始路徑**:
+   * **開始路徑**：
 
       * 瀏覽至 `/etc/socialconfig/srpc/`
 

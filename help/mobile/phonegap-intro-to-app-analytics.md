@@ -6,9 +6,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 7e358660-bc2f-4d8f-8d74-6cdb6c1ea7b5
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1054'
 ht-degree: 1%
 
 ---
@@ -17,7 +20,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [深入了解](/help/sites-developing/spa-overview.md)。
+>Adobe建議針對需要以單頁應用程式框架為基礎的使用者端轉譯（例如React）的專案，使用SPA編輯器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 您希望提高客戶轉換率和忠誠度。
 
@@ -104,7 +107,7 @@ Adobe Mobile Analytics SDK提供下列功能：
 
 行動應用程式現在已可存取ADBMobileConfig.json檔案，並已瞭解如何傳回Adobe Analytics及開始回報這些有助於促進應用程式成功的重要量度值。
 
-## 下一步? {#what-s-next}
+## 接下來呢？ {#what-s-next}
 
 1. [開始我的AEM Mobile應用程式體驗](/help/mobile/starting-aem-phonegap-app.md)
 1. [管理我的應用程式內容](/help/mobile/phonegap-manage-app-content.md)

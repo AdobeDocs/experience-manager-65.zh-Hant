@@ -7,10 +7,13 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: d121dc05-7d15-44ba-8d2d-b59d6c6480c8
-source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 3%
+source-wordcount: '952'
+ht-degree: 0%
 
 ---
 
@@ -115,7 +118,7 @@ ht-degree: 3%
 
   如果勾選，會顯示 **`Reply`**， **`Reply All`**， **`Forward`**、和 **`Delete`** 按鈕以重新傳送或刪除訊息。 複製刪除功能，如果 **`Delete Button`** 也會勾選。
 
-* **每頁的訊息**
+* **每頁的訊息數**
 
   指定的數字是分頁配置中每頁顯示的最大訊息數。 如果未指定數字（保留為空白），則會顯示所有訊息，而且沒有分頁。
 
@@ -149,7 +152,7 @@ ht-degree: 3%
 
   輸入在傳送訊息之後顯示之頁面的URL。 例如，`../messaging.html`。
 
-* **取消 URL**
+* **取消URL**
 
   輸入寄件者取消郵件時所顯示之頁面的URL。 例如，`../messaging.html`。
 
@@ -193,7 +196,7 @@ ht-degree: 3%
 
   輸入您要在旁邊顯示的文字 `Content` 欄位。 預設為 **`Body`**.
 
-* **具有 RTF 編輯器**
+* **使用RTF編輯器**
 
   如果勾選，表示使用具有自己RTF編輯器的自訂內容文字方塊。 未勾選預設值。
 

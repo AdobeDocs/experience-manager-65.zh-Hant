@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 3d72cbdf-5eb4-477d-aa61-035a846f7dcb
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 7%
+source-wordcount: '289'
+ht-degree: 1%
 
 ---
 
@@ -33,22 +36,22 @@ ht-degree: 7%
 1. 建立 `/apps/social` （如果尚未存在）
    * 選取 `/apps` 節點
    * **[!UICONTROL 建立>資料夾]**
-      * 輸入名稱: `social`
+      * 輸入名稱： `social`
 1. 選取 `social` 節點
    * **[!UICONTROL 建立]** > **[!UICONTROL 資料夾]**
-      * 輸入名稱: `commons`
+      * 輸入名稱： `commons`
 1. 選取 `commons` 節點
    * **[!UICONTROL 建立>資料夾]**
-      * 輸入名稱: `components`
+      * 輸入名稱： `components`
 1. 選取 `components` 節點
    * **[!UICONTROL 建立>資料夾]**.
-      * 輸入名稱: `hbs`
+      * 輸入名稱： `hbs`
 1. 選取 `hbs` 節點
    * **[!UICONTROL 建立]** > **[!UICONTROL 建立元件]**
       * 輸入標籤： `comments`
       * 輸入標題： `Comments`
-      * 輸入說明: `List of comments without showing avatars`
-      * 超級類型: `social/commons/components/comments`
+      * 輸入說明： `List of comments without showing avatars`
+      * 超級型別： `social/commons/components/comments`
       * 輸入群組： `Communities`
       * 按一下 **[!UICONTROL 下一個]** 直到 **[!UICONTROL 確定]**
 1. 選取 `comments` 節點
@@ -57,8 +60,8 @@ ht-degree: 7%
 
       * 輸入標籤： `comment`
       * 輸入標題： `Comment`
-      * 輸入說明: `A comment instance without avatars`
-      * 超級類型: `social/commons/components/comments/comment`
+      * 輸入說明： `A comment instance without avatars`
+      * 超級型別： `social/commons/components/comments/comment`
       * 輸入群組： `.hidden`
       * 按一下 **[!UICONTROL 下一個]** 直到 **[!UICONTROL 確定]**
    * 選取 **[!UICONTROL 全部儲存]**
@@ -80,12 +83,12 @@ ht-degree: 7%
 覆蓋圖自己的 `Type`(屬性 `sling:resourceType`)必須是相對自我參照，如此一來，在/apps中找不到的任何內容都會在/libs中尋找。
 * 名稱：`sling:resourceType`
 * 類型：`String`
-* 值: `social/commons/components/hbs/comments`
+* 值： `social/commons/components/hbs/comments`
 
 1. 選取綠色 `[+] Add`
    * 名稱：`sling:resourceType`
    * 類型：`String`
-   * 值: `social/commons/components/hbs/comments/comment`
+   * 值： `social/commons/components/hbs/comments/comment`
 1. 選取綠色 `[+] Add`
    * 選取 **[!UICONTROL 全部儲存]**
 

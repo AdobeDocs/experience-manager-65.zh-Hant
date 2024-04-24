@@ -1,5 +1,5 @@
 ---
-title: 儲存設定
+title: 儲存體設定
 description: 瞭解儲存設定主控台，用於識別為社群內容（也稱為使用者產生的內容）選擇的儲存空間。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -7,14 +7,16 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: 67de7e26-3f93-4034-9e3a-5c127f7447bc
-source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 3%
 
 ---
 
-# 儲存設定 {#storage-configuration}
+# 儲存體設定 {#storage-configuration}
 
 儲存體設定是識別為社群內容（也稱為使用者產生的內容，UGC）選擇的儲存體的方法。
 
@@ -35,7 +37,7 @@ ht-degree: 3%
 
 若要選取預設JCR以外的儲存選項：
 
-* 選擇選項
+* 選取一個選項
 * 正確設定
 
    * 檢視詳細資訊 [選取MSRP](msrp.md#select-msrp)

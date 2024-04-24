@@ -1,14 +1,17 @@
 ---
 title: 社群網站要點
-description: 匯出和刪除社群網站以及建立自訂網站範本
+description: 匯出和刪除社群網站並建立自訂網站範本
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '488'
 ht-degree: 1%
 
 ---
@@ -17,14 +20,14 @@ ht-degree: 1%
 
 ## 自訂網站範本 {#custom-site-template}
 
-可為社群網站的每個語言副本個別指定自訂網站範本。
+您可以為社群網站的每個語言復本個別指定自訂網站範本。
 
 若要這麼做：
 
 * 建立自訂範本。
 * 覆蓋預設的網站範本路徑。
 * 新增自訂範本至覆蓋路徑。
-* 透過新增以下專案來指定自訂範本： `page-template` 屬性至 `configuration` 節點。
+* 透過新增以下專案指定自訂範本： `page-template` 屬性至 `configuration` 節點。
 
 **預設範本**：
 
@@ -56,20 +59,20 @@ ht-degree: 1%
 
 ### 自訂網站範本範例 {#custom-site-template-example}
 
-例如， `vertical-sitepage.hbs` 是網站範本，可讓功能表連結垂直放置於頁面左下方，而非橫幅的水準下方。
+例如， `vertical-sitepage.hbs` 是網站範本，可讓功能表連結垂直向下放置於頁面左側，而非橫幅的水準下方。
 
 [取得檔案](assets/vertical-sitepage.hbs)
 將自訂網站範本放置在覆蓋資料夾中：
 
 `/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
 
-透過新增來識別自訂範本 `page-template` 屬性至設定節點：
+透過新增識別自訂範本 `page-template` 屬性至設定節點：
 
 `/content/sites/sample/en/configuration`
 
 ![crxde-siteconfiguration](assets/crxde-siteconfiguration.png)
 
-請確定 **全部儲存** 並將自訂程式碼復寫至所有Adobe Experience Manager (AEM)例項（從主控台發佈社群網站內容時未包含自訂程式碼）。
+請確定 **全部儲存** 並將自訂程式碼復寫至所有Adobe Experience Manager (AEM)例項（從主控台發佈社群網站內容時不含自訂程式碼）。
 
 復寫自訂程式碼的建議作法是 [建立套件](../../help/sites-administering/package-manager.md#creating-a-new-package) 並將其部署在所有執行個體上。
 
@@ -77,15 +80,15 @@ ht-degree: 1%
 
 社群網站建立後，即可將網站匯出為儲存在封裝管理員中的AEM套件，並可供下載和上傳。
 
-這可從以下網址取得： [社群網站主控台](sites-console.md#exporting-the-site).
+這可從以下位置取得： [社群網站主控台](sites-console.md#exporting-the-site).
 
 UGC和自訂程式碼未包含在社群網站套件中。
 
-若要匯出UGC，請使用 [AEM Communities UGC移轉工具](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration)，這是GitHub上提供的開放原始碼移轉工具。
+若要匯出UGC，請使用 [AEM Communities UGC移轉工具](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration)，這是GitHub提供的開放原始碼移轉工具。
 
 ## 刪除社群網站 {#deleting-a-community-site}
 
-自AEM Communities 6.3 Service Pack 1起，將游標暫留在的社群網站上時，會出現「刪除網站」圖示。 **[!UICONTROL Communities]** > **[!UICONTROL 網站]** 主控台。 在開發期間，如果想要刪除社群網站並重新開始，您可以使用此功能。 刪除社群網站時，會移除與該網站相關聯的下列專案：
+截至AEM Communities 6.3 Service Pack 1，將游標停留在上的社群網站上時，會出現「刪除網站」圖示，從 **[!UICONTROL Communities]** > **[!UICONTROL 網站]** 主控台。 在開發期間，如果想要刪除社群網站並重新開始，您可以使用此功能。 刪除社群網站時，會移除與該網站相關聯的下列專案：
 
 * [UGC](#user-generated-content)
 * [使用者群組](#community-user-groups)
@@ -105,7 +108,7 @@ UGC和自訂程式碼未包含在社群網站套件中。
 
    * **網站名稱** = *啟用*
    * **網站ID** = *nrh9h*
-   * **唯一網站ID** = *enable-nrh9h*
+   * **不重複網站識別碼** = *enable-nrh9h*
 
 ### 使用者產生的內容 {#user-generated-content}
 
@@ -115,7 +118,7 @@ UGC和自訂程式碼未包含在社群網站套件中。
 
 這包含一個servlet，可從任何SRP刪除所有UGC。
 
-所有UGC都可移除，或針對特定網站進行，例如：
+所有UGC都可移除，或針對特定網站移除，例如：
 
 * `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
@@ -126,6 +129,6 @@ UGC和自訂程式碼未包含在社群網站套件中。
 在所有作者和發佈執行個體上，從 [安全性主控台](../../help/sites-administering/security.md)，找到並移除 [使用者群組](users.md) 即：
 
 * 前置詞為 `community`
-* 後面接著 [唯一網站id](#community-unique-site-id)
+* 後面接著 [不重複網站id](#community-unique-site-id)
 
 例如，`community-engage-x0e11-members`。

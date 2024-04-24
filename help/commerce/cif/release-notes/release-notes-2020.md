@@ -1,9 +1,11 @@
 ---
-title: AEM Content and Commerce 2020年發行說明
-description: Adobe Experience Manager Content and Commerce 2020年發行說明。
+title: AEM內容與Commerce 2020年發行說明
+description: Adobe Experience Manager內容和Commerce 2020年發行說明。
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '1257'
 ht-degree: 8%
@@ -90,7 +92,7 @@ ht-degree: 8%
 
 * 已新增階層連結元件以支援內容和商務頁面。
 
-* 在頁面屬性上新增了Commerce索引標籤，以公開登陸頁面和體驗片段的CIF屬性。
+* 在頁面屬性上新增Commerce索引標籤，以顯示登陸頁面和體驗片段的CIF屬性。
 
 * 已改善Searchbar元件，以支援顯示預留位置文字的選項
 

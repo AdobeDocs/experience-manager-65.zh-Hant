@@ -8,9 +8,11 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1056'
 ht-degree: 1%
 
 ---
@@ -130,12 +132,12 @@ QnA和論壇元件的預設值設為ADD動詞。
   </tr>
   <tr>
    <td>badgingpath</td>
-   <td>字串[]</td>
+   <td>String[]</td>
    <td><em>（必要）</em> 徽章影像的多值字串，最多badgingLevels個數。 徽章影像路徑必須排序，才能將第一個授予最高的專家。 如果徽章數少於badgingLevels所指示的數目，則陣列中的最後一個徽章會填滿陣列的其餘部分。 範例專案：<br /> <code>/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
   </tr>
   <tr>
    <td>badgingLevels</td>
-   <td>長整數</td>
+   <td>長</td>
    <td><em>（可選）</em> 指定要授與的專業知識等級。 例如，如果應該有 <code>expert </code>和 <code>almost expert</code> （兩個徽章），則值應設為2。 badgingLevel應該與badgingPath屬性所列的專家相關徽章影像數量相對應。 預設值為1。</td>
   </tr>
   <tr>
@@ -145,7 +147,7 @@ QnA和論壇元件的預設值設為ADD動詞。
   </tr>
   <tr>
    <td>scoringRules</td>
-   <td>字串[]</td>
+   <td>String[]</td>
    <td><em>（可選）</em> 多值字串，用來將徽章規則限製為由列出的一或多個評分規則所識別的評分事件。<br /> 範例專案：<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 預設為無限制。</td>
   </tr>
  </tbody>
@@ -196,7 +198,7 @@ QnA和論壇元件的預設值設為ADD動詞。
    /libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner
    ```
 
-**附註:**
+**附註：**
 
 * 兩者 `rules` 和 `sub-rules` 節點屬於型別 `cq:Page`.
 * `subRules` 是String型別的屬性`[]` 在規則的 `jcr:content` 節點。
@@ -211,7 +213,7 @@ QnA和論壇元件的預設值設為ADD動詞。
 * `/libs/settings/community/badging/rules/adv-comments-badging`
 * `/libs/settings/community/badging/rules/adv-forums-badging`
 
-**附註:**
+**附註：**
 
 * `rules` 節點的型別為cq：Page。
 * `rules` 應該位在儲存庫位置，且每個人都有讀取許可權。

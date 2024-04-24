@@ -8,10 +8,12 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
-source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 9%
+source-wordcount: '411'
+ht-degree: 6%
 
 ---
 
@@ -23,7 +25,7 @@ ht-degree: 9%
 
 一般而言，各種報表包括：
 
-* [檢視報表](#views-report)
+* [檢視報告](#views-report)
 
   提供社群成員和網站訪客針對任何社群網站檢視內容的圖表。
 
@@ -49,7 +51,7 @@ ht-degree: 9%
 
       * 針對選取的社群網站、內容型別和時段產生報表。
 
-   * **[!UICONTROL 檢視報表]**
+   * **[!UICONTROL 檢視報告]**
 
       * 針對選取的社群網站、內容型別和時段產生報表。
 
@@ -67,7 +69,7 @@ ht-degree: 9%
 
   選取社群網站。
 
-* **[!UICONTROL 內容類型]**
+* **[!UICONTROL 內容型別]**
 
   可以選擇「所有內容」或選取網站上存在的其中一個功能。
 
@@ -96,7 +98,7 @@ ht-degree: 9%
 
   選取社群網站。
 
-* **[!UICONTROL 內容類型]**
+* **[!UICONTROL 內容型別]**
 
   可以選擇「所有內容」或選取網站上存在的其中一個功能。
 
