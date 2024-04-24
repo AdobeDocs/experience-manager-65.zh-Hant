@@ -1,6 +1,6 @@
 ---
 title: AEM平台簡介
-description: 了解 AEM 平台及其最重要的元件，包括安裝和部署 Adob​​e Experience Manager 6.5 及其架構 (包括 Adob​​e Managed Services cloud 部署)。
+description: 了解 AEM 平台及其最重要的元件，包括安裝和部署 Adobe Experience Manager 6.5 及其架構 (包括 Adobe Managed Services cloud 部署)。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
