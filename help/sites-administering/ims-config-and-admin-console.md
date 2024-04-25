@@ -9,9 +9,9 @@ exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1603'
 ht-degree: 5%
 
 ---
@@ -127,7 +127,7 @@ AEM Managed Services客戶應先布建組織，而在IMS布建過程中，客戶
 >
 >使用者同步工具必須透過上述程式註冊為Adobe I/O使用者端UMAPI [此處](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 >
->Adobe I/O控制檯檔案可找到 [此處](https://developer.adobe.com/developer-console/docs/guides/).
+>如需Adobe Developer主控台檔案，請前往 [此處](https://developer.adobe.com/developer-console/docs/guides/).
 >
 >
 >此 [!DNL User Management] 本頁介紹使用者同步工具使用的API [位置](https://adobe-apiplatform.github.io/umapi-documentation/en/).

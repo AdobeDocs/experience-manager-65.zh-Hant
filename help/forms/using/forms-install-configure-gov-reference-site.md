@@ -5,9 +5,9 @@ contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
 workflow-type: tm+mt
-source-wordcount: '4535'
+source-wordcount: '4534'
 ht-degree: 1%
 
 ---
@@ -503,7 +503,7 @@ AEM Forms Analytics資料可在離線時使用，或在不使用Adobe Analytics 
 
 如果您未連絡系統管理員，請確定您有能力在Adobe網域中建立整合。
 
-1. 導覽至 [Adobe I/O主控台](https://developer.adobe.com/console/).
+1. 導覽至 [Adobe Developer Console](https://developer.adobe.com/console/).
 
 1. 按一下建立整合專案。
 
