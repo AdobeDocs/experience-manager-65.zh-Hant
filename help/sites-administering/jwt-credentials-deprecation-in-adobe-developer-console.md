@@ -5,7 +5,7 @@ exl-id: f19a92de-ba6a-4f6d-9e12-60ad1bad2e74
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 36c95ea717a0abcb0b6ef9b0796a94d7b0f66329
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 58%
@@ -21,13 +21,13 @@ Adobe 客戶使用 [Adobe Developer Console](https://developer.adobe.com/console
 
 本文提供一些關於AEM 6.5客戶應如何處理棄用的其他內容。
 
-目前的主要要點是 AEM 功能尚未支援新的 OAuth 伺服器到伺服器憑證。即將提供支援 — 如果您執行的是最新的Service Pack 20或更低版本（Service Pack 21及更高版本會自動包含該版本），請在2024年4月底之前透過特別相容性套件安裝至AEM 6.5。 您可能已收到說明移轉 JWT 憑證的電子郵件，但請放心，您可以而且應該推遲憑證移轉，直到 AEM 支援新的 OAuth 伺服器到伺服器憑證類型。
+目前的主要要點是 AEM 功能尚未支援新的 OAuth 伺服器到伺服器憑證。我們即將提供支援 — 如果您執行的是最新的Service Pack 20或以下版本（Service Pack 21及更高版本會自動包含該版本），我們將會在2024年5月中旬之前透過特別相容性套件安裝至AEM 6.5。 您可能已收到說明移轉 JWT 憑證的電子郵件，但請放心，您可以而且應該推遲憑證移轉，直到 AEM 支援新的 OAuth 伺服器到伺服器憑證類型。
 
-以下各節列出客戶必須（或在某些情況下不得）在4月底獲得AEM支援後，使用OAuth伺服器對伺服器憑證取代其服務帳戶(JWT)憑證的案例。 [了解](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview)將來更換憑證的方法。
+以下各節列出客戶在5月中旬獲得AEM支援後，必須（或在某些情況下不得）使用OAuth伺服器對伺服器憑證取代其服務帳戶(JWT)憑證的案例。 [了解](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview)將來更換憑證的方法。
 
 ## 將 AEM 與其他 Adobe 解決方案整合 {#integrating-aem-with-other-adobe-solutions}
 
-**動作**：等候移轉，直到2024年4月下旬AEM支援時為止。
+**動作**：等候移轉，直到2024年5月中旬之後AEM支援。
 
 **相關AEM版本**：AdobeManaged Services （Service Pack 20及以下版本）。
 
@@ -36,11 +36,11 @@ AEM 客戶使用 AEM Author UI 設定所有與其他 Adobe 解決方案的整合
 
 ![將 AEM 與其他解決方案整合](/help/sites-administering/assets/jwt-deprecation.png)
 
-例如，以下是設定與 Adobe Target 整合的[說明](https://docs.mktossl.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html?lang=zh-Hant)。中的API金鑰 [在AEM中完成IMS設定](https://docs.mktossl.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html#completing-the-ims-configuration-in-aem) 四月底的AEM支援這些認證後，區段應該移轉至OAuth伺服器對伺服器認證型別。 這些指示將會在4月下旬更新，以幫助您套用新的OAuth伺服器對伺服器認證。
+例如，以下是設定與 Adobe Target 整合的[說明](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/integration/integration-target-ims)。中的API金鑰 [在AEM中完成IMS設定](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/integration/integration-target-ims#completing-the-ims-configuration-in-aem) 一節，只要AEM在5月中旬支援這些認證，應該移轉至OAuth伺服器對伺服器認證型別。 這些指示將會在5月中旬更新，以幫助您套用新的OAuth伺服器對伺服器認證。
 
 ## Cloud Manager API {#cloud-manager-apis}
 
-**動作**：等候移轉，直到2024年4月下旬AEM支援時為止。
+**動作**：等候移轉，直到2024年5月中旬之後AEM支援。
 
 **相關AEM版本**：AdobeManaged Services （Service Pack 20及以下版本）。
 
