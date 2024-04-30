@@ -6,9 +6,9 @@ exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 685d8016400570170dc02dc2be77651aea6e028c
 workflow-type: tm+mt
-source-wordcount: '3735'
+source-wordcount: '3783'
 ht-degree: 2%
 
 ---
@@ -43,8 +43,7 @@ ht-degree: 2%
 
 此版本中的部分主要功能和增強功能包括：
 
-* Dynamic Media現在支援Apple iOS/iPadOS的無損HEIC影像格式。 另請參閱 [fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html?lang=en) Dynamic Media影像提供與轉譯API中。
-
+* Dynamic Media現在支援Apple iOS/iPadOS的無損HEIC影像格式。 另請參閱 [fmt](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt) Dynamic Media影像提供與轉譯API中。
 * 多站台管理員(MSM)現在支援體驗片段結構，包括資料夾和子資料夾，以便有效地將體驗片段大量轉出到即時副本。
 
 ### [!DNL Forms]
@@ -145,6 +144,28 @@ ht-degree: 2%
 
 #### [!DNL Dynamic Media]{#assets-dm-6520}
 
+* 自2024年5月1日起，Adobe Dynamic Media將停止支援下列專案：
+
+   * SSL （安全通訊端層） 2.0
+   * SSL 3.0
+   * TLS （傳輸層安全性） 1.0和1.1
+   * TLS 1.2中的下列弱加密：
+      * TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+      * TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+      * TLS_RSA_WITH_AES_256_GCM_SHA384
+      * TLS_RSA_WITH_AES_256_CBC_SHA256
+      * TLS_RSA_WITH_AES_256_CBC_SHA
+      * TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+      * TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+      * TLS_RSA_WITH_AES_128_GCM_SHA256
+      * TLS_RSA_WITH_AES_128_CBC_SHA256
+      * TLS_RSA_WITH_AES_128_CBC_SHA
+      * TLS_RSA_WITH_CAMELLIA_256_CBC_SHA
+      * TLS_RSA_WITH_CAMELLIA_128_CBC_SHA
+      * TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA
+      * TLS_RSA_WITH_SDES_EDE_CBC_SHA
+
+  另請參閱 [Dynamic Media限制](/help/assets/limitations.md).
 * 將資產上傳至AEM時， `Update_asset` 工作流程已觸發。 不過，工作流程永遠不會完成。 工作流程最多只會在產品上傳步驟前完成。 下一個步驟是Scene7批次上傳，但該程式無法提取至AEM。 (ASSETS-30443)
 * 需要更好的方式在Dynamic Media元件中妥善處理非Dynamic Media影片。 此問題提供例外具現化 `dynamicmedia_sly.js`. (ASSETS-31301)
 * 預覽適用於所有資產、最適化視訊集和視訊。 但是，它會擲回403錯誤 `.m3u8` 檔案（順便說一下，這些檔案仍可透過公用連結運作）。 (ASSETS-31882)
@@ -163,7 +184,7 @@ ht-degree: 2%
 * 當使用者更新單選按鈕群組中的現有選項時，會發佈不正確的翻譯值。 (FORMS-12575)
 * 當使用者在Android™裝置上將字元新增到最適化表單時，使用者在Android™裝置上聚焦時可以在文字欄位中輸入超過定義的最大字元數。 但是，當使用者選取HTML5輸入型別時，它就會運作。 (FORMS-12748)
 * 由於相符的標籤Arial® labelledby和Arial® label，熒幕助讀程式無法區分這兩者。 為了解決該問題 - 表單欄位的標籤 aria-labelledby 會換為 aria-descriptedby。(FORMS-12436)
-* 當作者使用「最適化Forms — 內嵌(v2)」元件在其網站頁面中嵌入最適化表單，且內嵌表單包含驗證碼元件時（驗證碼服務 — > reCAPTCHA，設定 — > reCAPTCHA-v2），當使用者嘗試在作者執行個體上使用「以發佈的形式檢視」來檢視網站頁面時，網站頁面未轉譯。 下列錯誤顯示為(FORMS-11859)：
+* 作者使用「最適化Forms — 內嵌(v2)」元件，將最適化表單嵌入其Sites頁面。 當內嵌表單包含CAPTCHA元件時（CAPTCHA服務> reCAPTCHA，設定> reCAPTCHA-v2），網站頁面不會轉譯。 當使用者嘗試在製作執行個體上使用「以發佈的形式檢視」來檢視網站頁面時，就會發生這種情況。 下列錯誤顯示為(FORMS-11859)：
   `Failed to construct 'URL': Invalid base URL at Object.renderRecaptcha`
 
 * 當使用者嘗試使用日期選擇器元件選擇日期時，值未更新並顯示NULL。 (FORMS-12742， FORMS-12736)
@@ -202,11 +223,11 @@ ht-degree: 2%
 
 * 在AEM Forms 6.5.18.0上，發佈調適型表單時，其所有相依性（包括原則）都會重新發佈，即使未進行任何修改亦然。 (FORMS-10454)
 
-* 當使用者在具有JBoss® Turnkey設定的AEM Forms 6.5.19.1上執行設定管理員時選取「Microsoft SharePoint」時，LiveCycleJBoss® EAR安裝會失敗，並顯示以下錯誤：(FORMS-12463)
+* 當使用者在具有JBoss® Turnkey設定的AEM Forms 6.5.19.1上執行設定管理員時選取「Microsoft® SharePoint」時，LiveCycleJBoss® EAR安裝會失敗，並顯示以下錯誤：(FORMS-12463)
 
   ` Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEE0031: Unable to process modules in application.xml for EAR ["/C:/AEM/jboss/bin/content/ adobe-livecycle-jboss.ear "], module file adobe-connectorformssharepoint-config-ejb.jar not found.`
 
-* 當使用者使用AEM Forms Service Pack 6.5.19.0中的表單資料模型建立檔案片段時，變數名稱會出現在側面板上未定義，但是當變數名稱拖放到表單面板上或按一下變數名稱時，則會顯示變數名稱。 (FORMS-13238)
+* 當使用者使用AEM Forms Service Pack 6.5.19.0中的表單資料模型建立檔案片段時，變數名稱未定義會出現在側面板上。 不過，變數名稱在拖放到表單面板上或按一下時便會顯示。 (FORMS-13238)
 
 
 #### [!DNL Forms Designer] {#forms-designer-6520}
@@ -332,7 +353,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/deploy.html)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
+>調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
 
 ### 安裝Experience Manager內容片段的GraphQL索引套件{#install-aem-graphql-index-add-on-package}
 
@@ -471,10 +492,10 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
 
 * 預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 (CQDOC-21355)
 * 最適化Forms可讓您搭配ECMAScript 5或更早版本使用自訂函式。 當自訂函式使用ECMAScript 6版或更新版本（例如「let」、「const」或箭頭函式）時，規則編輯器可能無法正確開啟。
-* 使用者無法建立通訊管理信件。 當使用者建立信函時，出現一個說明「物件物件」的錯誤，並且信函未建立。 配置圖縮圖也無法載入字母建立畫面上。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 以解決問題。 (FORMS-13496)
-* 互動式通訊服務會建立PDF檔案，但使用者的資料不會自動填入表單欄位中。 預填服務未如預期運作。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 以解決問題。 (FORMS-13413， FORMS-13493)
-* 無法載入automated forms conversion服務的檢閱和修正(RnC)編輯器。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 以解決問題。 (FORMS-13491)
-* 從AEM 6.5 Forms Service Pack 18 (6.5.18.0)或AEM 6.5 Forms Service Pack 19 (6.5.19.0)更新至AEM 6.5 Forms Service Pack 20 (6.5.20.0)後，使用者會遇到JSP編譯錯誤。 他們無法開啟或建立最適化表單，且其他AEM介面(如頁面編輯器、AEM Forms UI和AEM Workflow編輯器)發生錯誤。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 以解決問題。 (FORMS-13492)
+* 使用者無法建立通訊管理信件。 當使用者建立字母時，出現說明錯誤&quot;`Object Object`「」出現，且字母未建立。 配置圖縮圖也無法載入字母建立畫面上。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) 以解決問題。 (FORMS-13496)
+* 互動式通訊服務會建立PDF檔案，但使用者的資料不會自動填入表單欄位中。 預填服務未如預期運作。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) 以解決問題。 (FORMS-13413， FORMS-13493)
+* 無法載入automated forms conversion服務的檢閱和修正(RnC)編輯器。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) 以解決問題。 (FORMS-13491)
+* 從AEM 6.5 Forms Service Pack 18 (6.5.18.0)或AEM 6.5 Forms Service Pack 19 (6.5.19.0)更新至AEM 6.5 Forms Service Pack 20 (6.5.20.0)後，使用者會遇到JSP編譯錯誤。 他們無法開啟或建立最適化表單，且其他AEM介面(如頁面編輯器、AEM Forms UI和AEM Workflow編輯器)發生錯誤。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) 以解決問題。 (FORMS-13492)
 
 <!--Customers can install the  latest AEM 6.5 Forms Service Pack to resolve the aforementioned issues.  Here are the direct links for the supported operating systems:
 * [AEM 6.5 Forms Service Pack 20 for Apple macOS](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-OSX-PKG-6.0.1192.zip)
@@ -517,10 +538,10 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
 這些網站僅供客戶使用。 如果您是客戶且需要存取權，請聯絡您的Adobe客戶經理。
 
 * [產品下載網址為licensing.adobe.com](https://licensing.adobe.com/)
-* [聯絡Adobe客戶支援](https://experienceleague.adobe.com/docs/customer-one/using/home.html).
+* [聯絡Adobe客戶支援](https://experienceleague.adobe.com/en/docs/customer-one/using/home).
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hant)
+>* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
