@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 exl-id: 3458471a-9815-463e-8044-68631073863c
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 2%
@@ -263,6 +264,6 @@ Forms (適用性表單和HTML5表單)使用 [j查詢](https://jquery.com/)， [B
 | 選項 | 說明 |
 |---|---|
 | 天 | 該欄位的本地化天數名稱。 |
-| 月 | 該欄位的本地化月份名稱。 |
+| 個月 | 該欄位的本地化月份名稱。 |
 | 零 | 數字0本地化文字。 |
 | 清除文字 | 清除按鈕的本地化文字。 |

@@ -3,7 +3,8 @@ title: AEM Forms伺服器甚至在所有服務啟動並執行之前就開始處�
 description: 在所有服務啟動並在JEE伺服器和OSGi伺服器上執行之前，AEM Forms伺服器就會開始處理檔案。
 exl-id: 1a1bc1cb-e0ce-49a0-9b05-ae59f900cfb2
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 3%

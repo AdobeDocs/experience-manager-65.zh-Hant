@@ -3,7 +3,8 @@ title: 為JEE上的AEM Forms記錄自訂元件API的交易。
 description: 瞭解如何使用TransactionRecorder API來記錄自訂元件的交易。
 feature: Transaction Reports
 exl-id: 33e1868a-2a7f-4785-8571-95651e661e21
-source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%

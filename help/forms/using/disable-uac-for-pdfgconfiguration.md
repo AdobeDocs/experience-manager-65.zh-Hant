@@ -3,7 +3,8 @@ title: 停用適用於JEE和OSGI之PDFG設定的UAC
 description: 瞭解如何針對PDFG設定停用UAC以修正Word到PDF轉換的步驟。
 exl-id: 785b7bb4-7158-45ea-a1e5-eebf3dc3ebc3
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 3%

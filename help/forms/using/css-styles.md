@@ -9,7 +9,8 @@ discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 feature: HTML5 Forms
 exl-id: 8cc90ff7-284e-41cd-bfda-7fa09371e270
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 2%
@@ -133,7 +134,7 @@ AEM Forms Designer支援表單中不同型別的欄位，例如「數值欄位�
    <td><strong>欄位型別</strong></td>
    <td><strong>子類型</strong></td>
    <td><strong>Widget名稱</strong></td>
-   <td><strong>Widget型別</strong></td>
+   <td><strong>Widget 類型</strong></td>
    <td><strong>HTMLUI標籤</strong></td>
   </tr>
   <tr>

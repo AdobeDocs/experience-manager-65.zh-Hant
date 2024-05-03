@@ -4,7 +4,8 @@ description: 瞭解如何建立、佈局和預覽最適化表單。 另外，瞭
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 8%

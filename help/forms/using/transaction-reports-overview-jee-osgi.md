@@ -3,7 +3,9 @@ title: 交易報表概述AEM Forms。
 description: 保持提交的所有表單、提交的檔案、演算的互動式通訊、轉換為另一種格式的檔案等內容的計數。
 topic-tags: forms-manager
 feature: Transaction Reports
-source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
+exl-id: 6e5e29ef-eb90-4573-8745-1966a238bc03
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
@@ -33,5 +35,3 @@ AEM Forms中的交易報告可讓您監視自AEM Forms部署上的指定日期�
 * [在OSGi上檢視和瞭解AEM Forms的交易報告](/help/forms/using/viewing-and-understanding-transaction-reports.md)
 * [在OSGi上適用於AEM Forms的可記帳API清單](/help/forms/using/transaction-reports-billable-apis.md)
 * [在OSGi上記錄AEM Forms的自訂實作交易](/help/forms/using/record-transaction-custom-implementation.md)
-
-
