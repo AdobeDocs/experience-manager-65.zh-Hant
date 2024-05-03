@@ -6,9 +6,9 @@ exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 685d8016400570170dc02dc2be77651aea6e028c
+source-git-commit: 4f4d5494d4e630e6f16f8a8e6a6a609925a91457
 workflow-type: tm+mt
-source-wordcount: '3783'
+source-wordcount: '3828'
 ht-degree: 2%
 
 ---
@@ -244,6 +244,12 @@ ht-degree: 2%
 * 當使用者在AEM Forms Designer上建立XDP時，在PDF輸出上，Button Form標籤未巢狀內嵌在父段落標籤(p-tag)中。 (LC-3921719)
 
 * 當使用者在AEM Forms Designer上建立XDP時，當使用者導覽表單標籤時，也會在PDF輸出上標籤背景物件。 (LC-3921687)
+
+#### [!DNL Document Services] {#forms-document-services-6520}
+
+* (僅限JEE上的AEM Forms)PDF Generator服務無法列舉伺服器上可用的字型。 因此，在PDFG管理UI中，「Adobe PDF設定」頁面上的「字型選取」面板會維持空白，有效防止（取消）內嵌選取的字型。 (FORMS-12095)
+
+
 
 ### Foundation {#foundation-6520}
 
