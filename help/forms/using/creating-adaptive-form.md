@@ -4,12 +4,11 @@ description: 瞭解如何使用建立最適化表單 [!DNL Experience Manager Fo
 role: User, Developer
 level: Beginner
 feature: Adaptive Forms, Foundation Components
-exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d2be8d93c64ca18352a0e811605c526a8dae488f
 workflow-type: tm+mt
-source-wordcount: '1923'
-ht-degree: 9%
+source-wordcount: '1984'
+ht-degree: 8%
 
 ---
 
@@ -210,3 +209,18 @@ XML和JSON結構描述代表組織中後端系統產生或使用資料的結構�
    >若要讓自動儲存選項適用於匿名使用者，請務必將Forms通用設定服務設定為允許所有使用者預覽、驗證及簽署表單。
    >
    >若要設定服務，請前往Adobe Experience Manager Web Console設定，位於 `https://'[server]:[port]'system/console/configMgr` 並編輯 **[!UICONTROL Forms通用設定服務]** 以選擇 **[!UICONTROL 所有使用者]** 中的選項 **[!UICONTROL 允許]** 欄位並儲存設定。
+
+
+## 如何重新命名AEM最適化表單？ {#rename-an-AEM-Adaptive-Form}
+
+若要重新命名最適化表單，請執行下列步驟：
+
+1. 在您的AEM Forms使用者介面中選取最適化表單。
+1. 按一下 **屬性** 位於上方邊欄上。
+
+   ![屬性](/help/forms/using/assets/rename-form-properties.png)
+
+1. 變更表單名稱，在 **標題** 標籤，如下圖所示。
+1. 按一下 **儲存並關閉**.
+
+   ![重新命名AEM最適化表單](/help/forms/using/assets/rename-form-title.png)

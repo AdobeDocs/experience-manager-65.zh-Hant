@@ -8,12 +8,11 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
-exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d2be8d93c64ca18352a0e811605c526a8dae488f
 workflow-type: tm+mt
-source-wordcount: '1733'
-ht-degree: 30%
+source-wordcount: '1794'
+ht-degree: 29%
 
 ---
 
@@ -166,6 +165,21 @@ ht-degree: 30%
    ![按一下扳手圖示以開啟最適化表單容器對話方塊，以設定重新導向頁面或感謝訊息](/help/forms/using/assets/adaptive-forms-container-prefill-service.png)
 1. 選取表單資料模型。 開啟 **[!UICONTROL 基本]** 標籤。 在預填服務中，選取 **[!UICONTROL 表單資料模型預填服務]**.
 1. 按一下 **[!UICONTROL 完成]**. 您的最適化表單現在已設定為使用表單資料模型預填。 您現在可以使用 [規則編輯器](rule-editor.md) 建立規則以預先填入表單的欄位。
+
+## 如何重新命名AEM最適化表單？{#rename-an-AEM-Adaptive-Form}
+
+若要重新命名最適化表單，請執行下列步驟：
+
+1. 在您的AEM Forms使用者介面中選取最適化表單。
+1. 按一下 **屬性** 位於上方邊欄上。
+
+   ![屬性](/help/forms/using/assets/rename-form-properties.png)
+
+1. 變更表單名稱，在 **標題** 標籤，如下圖所示。
+1. 按一下 **儲存並關閉**.
+
+   ![重新命名AEM最適化表單](/help/forms/using/assets/rename-form-title.png)
+
 
 <!--
 ## Edit Form Model properties of an Adaptive Form {#edit-form-model}
