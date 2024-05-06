@@ -5,10 +5,10 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: d6435255835d91729519f7822b9677608b6b9f1e
+source-git-commit: 14b52e7763c4d83a4dcce593f155cb1bb8f56b97
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 5%
+source-wordcount: '2356'
+ht-degree: 4%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 5%
 
 #### 親和力 {#sites-accessibility-6521}
 
-* 此 **[!UICONTROL 已儲存的搜尋]** 標籤不是永久性的。 預留位置是做為文字欄位的唯一視覺標籤。(SITES-3050)
+* 此 **[!UICONTROL 已儲存的搜尋]** 標籤不是永久性的。 預留位置是做為文字欄位的唯一視覺標籤。 (SITES-3050)
 
 #### 管理員使用者介面{#sites-adminui-6521}
 
@@ -69,7 +69,7 @@ ht-degree: 5%
 #### [!DNL Content Fragments]{#sites-contentfragments-6521}
 
 * 修正表單元素重複納入的問題。 (SITES-21109)封鎖程式
-* 建立內容片段時，「關閉」按鈕有時會停止回應，導致整個頁面凍結，並需要重新整理頁面來關閉內容片段。 至於版本建立問題，系統正在建立內容片段的新版本，即使使用者未進行任何變更，只要與RTE或文字欄位互動即可。 (SITES-21187)主要
+* 建立內容片段時，「關閉」按鈕有時會停止回應，導致整個頁面凍結，並需要重新整理頁面來關閉內容片段。 至於版本建立問題，系統正在建立內容片段的新版本。 即使使用者未進行任何變更，只要與RTE或文字欄位互動，就會發生這種情況。 (SITES-21187)主要
 
 
 #### [!DNL Content Fragments] - GRAPHQL API {#sites-graphql-api-6521}
@@ -101,7 +101,7 @@ ht-degree: 5%
 
 #### 體驗片段{#sites-experiencefragments-6521}
 
-* 從轉出體驗片段 `masters/language` 至 `country/language` 不會更新交叉引用。 (SITES-20559)封鎖程式
+* 從轉出體驗片段 `masters/language` 至 `country/language` 不會更新互動參照。 (SITES-20559)封鎖程式
 * 範本不僅指定於 `cq:allowedTemplates`，但範本具有 `allowedPaths` 在範本層級設定，在建立新的體驗片段時顯示為選項。 (SITES-20855)主要
 
 #### 基礎元件（舊版）{#sites-foundation-components-legacy-6521}
@@ -110,15 +110,15 @@ ht-degree: 5%
 
 #### 啟動{#sites-launches-6521}
 
-* 此 `sourceRootResource` 在CRXDE Lite內的Launch設定中設定，會指向已不存在的內容，導致嘗試刪除啟動時發生故障。 您應該能夠刪除啟動，即使頁面被刪除或路徑不相同。 (SITES-20750)
+* 此 `sourceRootResource` 在CRXDE Lite內的Launch設定中設定，會指向已不存在的內容，導致嘗試刪除啟動時發生故障。 刪除啟動，即使頁面被刪除或路徑不相同。 (SITES-20750)
 
 #### MSM — 即時副本{#sites-msm-live-copies-6521}
 
-* 覆蓋Page元件以在頁面屬性中新增索引標籤。 其中一個是頁面設定，並具有屬性以新增體驗片段URL。 在體驗片段的頁面屬性中設定的連結，不會為該頁面建立的任何語言副本變更。 設定的連結應該會隨著語言副本URL而變更。 (SITES-19580)主要
+* 覆蓋頁面元件以在頁面屬性中新增索引標籤。 其中一個是頁面設定，並具有屬性以新增體驗片段URL。 在體驗片段的頁面屬性中設定的連結，不會為該頁面建立的任何語言副本變更。 設定的連結應該會隨著語言副本URL而變更。 (SITES-19580)主要
 
 #### 頁面編輯器{#sites-pageeditor-6521}
 
-* 編輯模式套用的灰色背景不一致，無法符合WCAG （網頁內容可存取性指引）色彩對比標準。 (SITES-20060)
+* 編輯模式會以不一致的方式套用灰色背景，而無法符合WCAG （網頁內容可及性指引）色彩對比標準。 (SITES-20060)
 
 ### [!DNL Assets]{#assets-6521}
 
@@ -163,24 +163,36 @@ ht-degree: 5%
 
 ### Foundation {#foundation-6521}
 
-
-
 #### Apache Felix {#felix-6521}
 
 * AEM 6.5 Service Pack 19 (SP19)的升級問題，其中在SP19安裝後，對Apache Felix發出的未經授權請求遺失應用程式伺服器內容根路徑。 Apache Felix Web Management Console 4.9.8的更新。 (NPR-41933)
 
 * U
 
+#### 行銷活動{#campaign-6521}
+
+* AEM 6.5 Service Pack 15會產生持續性錯誤記錄，其中包含重要的專案。 已報告下列問題：
+
+   * 路徑中缺少資源時出現404 INFO錯誤 `/libs/granite/ui/content/shell/start.html`
+   * 由於下列原因，未攔截到SlingException的錯誤記錄專案 `NullPointerException` 在 `CampaignsDataSourceServlet.java:147`
+
+  錯誤記錄檔不應填入頻繁且大量的錯誤專案，AEM執行個體應可正常運作，而不會出現資源遺失或例外狀況的相關問題。 (CQ-4357064)
+
 #### Communities {#communities-6521}
 
-* 二
+* U
 
 #### 內容發佈{#foundation-content-distribution-6521}
 
 * 二
 
+#### Granite{#granite-6521}
+
+* **刪除** 或 **修改** 若無許可權則無法選取 **瀏覽** 設定瀏覽器中的許可權。 (GRANITE-51002)
+
 #### 整合{#integrations-6521}
 
+* 相關 `cq-target-integration`，需要移除Google Guava的非測試使用方式。 (CQ-4357101)
 * 以OAuth2伺服器對伺服器認證（也稱為服務主體）取代服務帳戶（JSON Web權杖或JWT）認證。(NPR-41994)主要
 * 建立對象請求因IMS (Identity Management系統)設定而失敗。 (NPR-41888)主要
 * 當客戶嘗試檢視裝載頁面時，由於URL格式錯誤，內容未正確顯示；顯示404錯誤。 此錯誤是由於URL中的查詢引數前缺少問號符號所導致。 此問題需要客戶手動插入問號符號，以正確檢視裝載頁面。 (NPR-41957)
@@ -190,6 +202,7 @@ ht-degree: 5%
 #### 本地化{#localization-6521}
 
 * 在範本編輯器中，文字字串 *`No video available.`* 未本地化。 (SITES-13190)
+* 啟用或停用使用者後的字串不會在中本地化 **工具** > **安全性** > **使用者** > *any_user_name* > **啟動** > **確定**，並選取 *any_user_name* > **停用** > **確定**. (NPR-41737)
 
 #### Platform{#foundation-platform-6521}
 
@@ -201,12 +214,17 @@ ht-degree: 5%
 
 #### 轉換{#foundation-translation-6521}
 
+* AEM 6.5.19現成可用翻譯狀態未依啟動預期更新的問題。 將已翻譯檔案匯入與AEM啟動相關聯的翻譯工作後，狀態應變更為 `Approved`. 相反地，狀態已變更為 `Ready for Review`，這不是預期行為。 (NPR-41756)主要
 * 建立多個設定並前往翻譯Cloud Service設定時，並非所有元素都會顯示在UI中。 只會顯示前40個元素/資料夾，並會觸發延遲載入，但不會新增更多內容。 (NPR-41829)
+* 在觸控使用者介面的「許可權」頁面上，若出現日文，則會出現亂碼字元。 (NPR-41794)
 
 #### 使用者介面{#foundation-ui-6521}
 
+* 在「工具>安全性>使用者」 > &lt;user_name> >設定檔，在 **編輯使用者設定** 對話方塊中，按一下「取消」並不會結束對話方塊。 (NPR-41793)主要
 * Granite `pathfield` 元件於 `/libs/granite/ui/components/coral/foundation/form/pathfield` 無法啟用 **[!UICONTROL 選取]** 按鈕。 彈出路徑欄位後，使用者選取資產核取方塊， **[!UICONTROL 選取]** 按鈕未啟用；它不會從灰色變更為藍色。 (NPR-41970)
 * AEM中的內容片段模型(CFM)參考欄位存在問題。 雖然CFM參考欄位已設為必要，系統仍可讓使用者按一下「儲存」 ，以在某些案例中使用非CFM值儲存內容。 「儲存」按鈕應該會變暗（無法使用）。 (NPR-41894)
+* 標準Coral使用者介面對話方塊，使用 `successresponse` 動作必須在動作之後觸發成功回應。 但在AEM 6.5 Service Pack 19中，不會叫用重新載入動作，且不會顯示任何訊息。 (NPR-41797)
+* AEM 6.5 Service Pack 18中的AEM通知連結無法運作。 升級至Service Pack 18時，透過通知按鈕選取訊息時，AEM通知連結無法運作。 (NPR-41792)
 
 #### WCM{#wcm-6521}
 
@@ -214,14 +232,14 @@ ht-degree: 5%
 
 #### 工作流程{#foundation-workflow-6521}
 
-* 二
+* 在AEM 6.5.18中，在清除期間從使用者中繼資料快取中移除時出現重複錯誤。 (NPR-41762)
 
 ## 安裝 [!DNL Experience Manager] 6.5.21.0{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
 * [!DNL Experience Manager] 6.5.21.0需要 [!DNL Experience Manager] 6.5.請參閱 [升級檔案](/help/sites-deploying/upgrade.md) 以取得詳細指示。 <!-- UPDATE FOR EACH NEW RELEASE -->
-* 您可在Adobe上取得Service Pack下載 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip).
+* Service Pack下載專案可在Adobe上取得 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip).
 * 在具有MongoDB和多個執行個體的部署上，安裝 [!DNL Experience Manager] 使用封裝管理程式的其中一個Author執行個體上的6.5.21.0 。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
@@ -230,13 +248,13 @@ ht-degree: 5%
 <!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
-### 在上安裝Service Pack [!DNL Experience Manager] 6.5{#install-service-pack}
+### 安裝Service Pack於 [!DNL Experience Manager] 6.5{#install-service-pack}
 
 1. 如果執行個體處於更新模式（從舊版更新執行個體時），請在安裝前重新啟動執行個體。 如果執行個體的目前運作時間很高，Adobe建議重新啟動。
 
 1. 安裝之前，請拍攝快照或進行全新備份 [!DNL Experience Manager] 執行個體。
 
-1. 下載Service Pack，從 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 從下載Service Sack [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. 開啟封裝管理員，然後選取 **[!UICONTROL 上傳套裝]** 以上傳套件。 若要瞭解更多，請參閱 [封裝管理員](/help/sites-administering/package-manager.md).
 
@@ -246,7 +264,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->在安裝Service Pack期間，套件管理員UI上的對話方塊有時會退出。 Adobe建議您先等待錯誤記錄穩定下來，再存取部署。 等待與更新程式套件組合解除安裝相關的特定記錄，再確認安裝成功。 此問題通常發生在 [!DNL Safari] 瀏覽器，但可能間歇性地在任何瀏覽器上發生。
+>Service Pack安裝期間，Package Manager UI上的對話方塊有時會退出。 Adobe建議您先等待錯誤記錄穩定下來，再存取部署。 等待與更新程式套件組合解除安裝相關的特定記錄，再確認安裝成功。 此問題通常發生在 [!DNL Safari] 瀏覽器，但可能間歇性地在任何瀏覽器上發生。
 
 **自動安裝**
 
