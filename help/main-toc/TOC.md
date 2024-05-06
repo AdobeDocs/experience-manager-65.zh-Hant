@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 52aa367a8d7ebff2f2e1355274ffe357979cac85
+source-git-commit: d5554718d663515d84878ff94555ac6cadcab891
 workflow-type: tm+mt
-source-wordcount: '7406'
+source-wordcount: '7408'
 ht-degree: 18%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 18%
 + 發行說明 {#release-notes}
    + [發行說明](/help/release-notes/release-notes.md)
    + 舊版發行說明 {#service-pack}
+      + [6.5.20](/help/release-notes/previous/6-5-20.md)
       + [6.5.19](/help/release-notes/previous/6-5-19.md)
       + [6.5.18](/help/release-notes/previous/6-5-18.md)
       + [6.5.17](/help/release-notes/previous/6-5-17.md)
@@ -479,7 +480,7 @@ ht-degree: 18%
       + [建立內容片段的翻譯專案](/help/assets/creating-translation-projects-for-content-fragments.md)
    + 管理資產 {#managing}
       + [管理數位資產](/help/assets/manage-assets.md)
-      + [管理收藏集](/help/assets/manage-collections.md)
+      + [管理集合](/help/assets/manage-collections.md)
       + [資產選擇器](/help/assets/asset-selector.md)
       + [啟用重複資料偵測](/help/assets/duplicate-detection.md)
       + [組織數位資產](/help/assets/organize-assets.md)
@@ -628,7 +629,7 @@ ht-degree: 18%
       + [最適化表單片段](/help/forms/using/adaptive-form-fragments.md)
       + [設定提交動作](/help/forms/using/configuring-submit-actions.md)
       + [在最適化表單中使用驗證碼](/help/forms/using/captcha-adaptive-forms.md)
-      + [調適型表單關鍵字](/help/forms/using/adaptive-forms-keywords.md)
+      + [最適化表單關鍵字](/help/forms/using/adaptive-forms-keywords.md)
       + [調適型表單中的表格](/help/forms/using/adaptive-forms-tables.md)
       + [調適型表單中的圖表](/help/forms/using/adaptive-form-charts.md)
       + [自動儲存最適化表單](/help/forms/using/auto-save-an-adaptive-form.md)
@@ -1203,7 +1204,7 @@ ht-degree: 18%
       + [使用WS-Security標頭傳遞認證](/help/forms/developing/passing-credentials.md)
 + Content and Commerce {#commerce}
    + [簡介和概觀](/help/commerce/cif/introduction.md)
-   + [AEM Content and Commerce重大變更](/help/commerce/cif/changes.md)
+   + [AEM內容和Commerce重大變更](/help/commerce/cif/changes.md)
    + 整合 {#integrations}
       + [Adobe Commerce](/help/commerce/cif/integrating/magento.md)
       + [第三方 Commerce 解決方案](/help/commerce/cif/integrating/third-party.md)
@@ -1285,7 +1286,7 @@ ht-degree: 18%
       + [翻譯內容](/help/journey-headless/translation/translate-content.md)
       + [發佈翻譯內容](/help/journey-headless/translation/publish-content.md)
    + [什麼是檔案歷程？](/help/journey-documentation/home.md)
-+ 實作 {#implementing}
++ 實施 {#implementing}
    + 開發 {#developing}
       + 開發人員簡介 {#introduction}
          + [開發 AEM Sites 快速入門 - WKND 教學課程](/help/sites-developing/getting-started.md)
@@ -1605,7 +1606,7 @@ ht-degree: 18%
          + [AEM 6.5中的資產存放庫重組](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md)
          + [AEM 6.5中的Dynamic Media存放庫重組](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md)
          + [AEM 6.5中的Forms存放庫重組](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)
-         + [AEM 6.5中的電子商務存放庫重組](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-5.md)
+         + [AEM 6.5中的E-Commerce存放庫重組](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-5.md)
          + [6.5中AEM Communities的存放庫重組](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md)
       + 最佳作法 {#practices}
          + [部署最佳實務](/help/sites-deploying/best-practices.md)

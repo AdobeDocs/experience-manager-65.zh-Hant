@@ -5,10 +5,10 @@ feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 47aac4b19bfbd29395fb09f3c27c981e7aa908f6
 workflow-type: tm+mt
-source-wordcount: '4796'
-ht-degree: 56%
+source-wordcount: '4984'
+ht-degree: 54%
 
 ---
 
@@ -1047,6 +1047,39 @@ query {
 >所有 GraphQL [結構描述](#schema-generation) (衍生自&#x200B;**已啟用**&#x200B;的內容片段模型) 都可透過 GraphQL 端點讀取。
 >
 >此功能表示您必須確保沒有可用的敏感資料，因為這樣可能會洩漏資料。 例如，其中包含可作為模型定義中的欄位名稱顯示的資訊。
+
+## 限制 {#limitations}
+
+為了防止潛在問題，您的查詢有預設限制：
+
+* 查詢不能包含超過1M (1024 * 1024)個字元
+* 查詢不能包含超過15000個權杖
+* 查詢不能包含超過200000個空白代號
+
+您也需要注意：
+
+* 當您的GraphQL查詢包含兩個（或更多）模型中具有相同名稱的欄位，並且符合以下條件時，將傳回欄位衝突錯誤：
+
+   * 因此，其中：
+
+      * 兩個（或多個模型）會作為可能的參照使用；當它們被定義為允許時 **模型型別** 在內容片段參考中。
+
+     和：
+
+      * 這兩個模型都有相同名稱的欄位；這表示兩個模型中有相同名稱。
+
+     和
+
+      * 這些欄位屬於不同的資料型別。
+
+   * 例如：
+
+      * 當兩個（或更多）片段具有不同模型(例如， `M1`， `M2`)作為其他片段的可能參考（內容參考或片段參考）使用；例如， `Fragment1` `MultiField/List`
+      * 而這兩個片段具有不同的模式(`M1`， `M2`)有相同名稱的欄位，但型別不同。
+舉例說明：
+         * `M1.Title` 作為 `Text`
+         * `M2.Title` 作為 `Text/MultiField`
+      * 如果GraphQL查詢包含 `Title` 欄位。
 
 ## 驗證 {#authentication}
 
