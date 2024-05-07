@@ -5,9 +5,9 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 8672eabadd50dfb5f243a162c205931704d8a6c7
+source-git-commit: 2e5754022fb40409500bb57b3b7576bf8ec9a605
 workflow-type: tm+mt
-source-wordcount: '3769'
+source-wordcount: '3770'
 ht-degree: 3%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 3%
 #### [!DNL Content Fragments]{#sites-contentfragments-6520}
 
 * 升級到AEM 6.5.18或AEM 6.5.19後，不再支援巢狀設定資料夾，並且內容片段模型資料夾不再可見。 (SITES-18110)
-* 某些子資料夾無法從繼承的內容片段模型中挑選。 它必須支援資料夾，但不具備 `jcr:content` 屬性，即使透過使用者介面建立的DAM資料夾有這類節點。 (SITES-17943)
+* 部分子資料夾無法從繼承的內容片段模式中進行選擇。 它必須支援資料夾，但不具備 `jcr:content` 屬性，即使透過使用者介面建立的DAM資料夾有這類節點。 (SITES-17943)
 
 #### [!DNL Content Fragments] - GRAPHQL API {#sites-graphql-api-6520}
 
@@ -98,7 +98,7 @@ ht-degree: 3%
 #### 核心後端{#sites-core-backend-6520}
 
 * 使用內容片段的快速發佈時，它會繼續載入且不會發佈。 也就是說，從AEM 6.5.7升級至AEM 6.5.17的Service Pack後，快速發佈無法用於內容片段。當使用者嘗試Managed發佈時，就成功了。 但是，當他們嘗試快速發佈時，它並未發佈。 具體來說， `com.day.cq.wcm.core.impl.reference.ActivationReferenceSearchBuilder` 導致系統崩潰。 (SITES-17311)
-* 無法使用Jackson匯出工具序列化內容片段：當頁面中有參照的內容片段（使用Jackson匯出工具程式碼）和任何標籤新增到內容片段時，頁面載入會中斷。 (SITES-18096)
+* 無法使用Jackson匯出工具序列化內容片段：當頁面中參照的內容片段（使用Jackson匯出工具程式碼）和任何標籤新增到內容片段時，頁面載入會中斷。 (SITES-18096)
 
 #### 核心元件{#sites-core-components-6520}
 
@@ -275,7 +275,7 @@ ht-degree: 3%
 
 * 部署AEM 6.5 Service Pack 18後，翻譯規則編輯器中的篩選器索引標籤發生問題。 選取「前後關聯」時，按一下「編輯>儲存」，下次您開啟相同的「前後關聯」時，會出現一個雙引號作為HTML字元。 基本上，翻譯規則無法正確儲存。 (NPR-41624)
 * 與內容片段翻譯相關的問題，其中翻譯的字串從翻譯提供者傳回AEM，但卡在 `/content/projects` 層級，且不會更新內容片段。 (NPR-41516)
-* 建立語言副本時會顯示錯誤訊息。 其發生於具有使用內容片段模型的頁面屬性中所參考的內容片段的頁面上。 (NPR-41441)
+* 建立語言副本時會顯示錯誤訊息。 它發生在具有使用內容片段模型的頁面屬性中參考的內容片段的頁面上。 (NPR-41441)
 * 在語言複製期間，體驗片段中的連結未調整為正確的語言。 體驗片段會指向主要地區設定。 (NPR-41343)
 
 #### 使用者介面{#foundation-ui-6520}
