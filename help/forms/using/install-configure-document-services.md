@@ -3,11 +3,10 @@ title: 安裝和設定檔案服務
 description: 安裝AEM Forms檔案服務，以建立、彙編、散佈、封存PDF檔案、新增數位簽名以限制對檔案的存取，以及解碼條碼式Forms。
 topic-tags: installing
 role: Admin, User, Developer
-exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: acb023caf0a7e64fea9cf5d9198d672ee14c8d88
 workflow-type: tm+mt
-source-wordcount: '5633'
+source-wordcount: '5703'
 ht-degree: 1%
 
 ---
@@ -298,6 +297,10 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 1. 開啟Microsoft® Windows的群組原則編輯器。 若要開啟群組原則編輯器，請按一下 **[!UICONTROL 開始]**，型別 **gpedit.msc** 在「開始搜尋」方塊中，然後按一下 **[!UICONTROL 群組原則編輯器]**.
 1. 瀏覽至 **[!UICONTROL 本機電腦原則]** > **[!UICONTROL 電腦設定]** > **[!UICONTROL Windows設定]** > **[!UICONTROL 安全性設定]** > **[!UICONTROL 本機原則]** > **[!UICONTROL 使用者許可權指派]** 並編輯 **[!UICONTROL 取代程式層級權杖]** 原則並包含管理員群組。
 1. 將使用者新增至「取代程式層級權杖」專案。
+
+>[!NOTE]
+>
+> 如果AEM伺服器是以LSA下的服務方式執行，則可能不需要明確指定此許可權給使用者，這表示除了VM上的PDFG所需的應用程式/元件外，沒有其他應用程式/元件安裝時，您就不需要授與任何其他帳戶 **向右取代程式層級權杖** 而且只有本機服務與網路服務帳戶才應該有此許可權。
 
 ### （僅限Windows）為非系統管理員啟用PDF Generator服務 {#enable-the-pdf-generator-service-for-non-administrators}
 
