@@ -1,19 +1,25 @@
 ---
 title: ' [!DNL Adobe Experience Manager Assets] 簡介'
 description: 在 Experience Manager 中建立、管理、處理和分配數位資產。這些指南會介紹最佳做法、協助工具功能以及如何使用 AEM 6.5 資產。
-contentOwner: AG
+hide: true
 feature: Asset Management
 role: Leader, Architect, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 347828d5bf3da01685f19fb43609505b24126c63
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 2%
+source-wordcount: '901'
+ht-degree: 4%
 
 ---
 
+
 # 關於 [!DNL Adobe Experience Manager Assets] 作為DAM解決方案 {#administering-assets}
+
+| 版本 | 文章連結 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-cloud-service/content/assets/overview) |
+| AEM 6.5 | 本文章 |
 
 AEM [!DNL Assets] 是數位資產管理(DAM)工具，屬於 [!DNL Experience Manager] 平台，讓您的企業能夠管理和散佈數位資產。 組織的使用者可以管理、儲存和存取許多型別的數位資產，例如影像、影片、檔案、音訊片段、3D檔案和豐富媒體，以用於網路、印刷品和數位發行。
 
