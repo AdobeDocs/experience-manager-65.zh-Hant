@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 72edd8d1-8573-4942-8ced-1a100af58d78
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 55421ab730382eb9aa603f898182865649f66349
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ### 根據電子郵件網域自動建立動態群組 {#automatically-create-dynamic-groups-based-on-email-domains}
 
-1. 在管理控制檯中，按一下「設定」>「使用者管理」>「組態」>「設定進階系統屬性」。
+1. 按一下「設定>使用者管理>組態>設定進階系統屬性」。
 1. 在「自動建立動態群組」下，選取核取方塊。
 1. 指定使用者管理員何時檢查新電子郵件網域。 這個時間應在網域同步時間之後，因為只有在網域同步完成時，建立動態群組才符合邏輯。
 
