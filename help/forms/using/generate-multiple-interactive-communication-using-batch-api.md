@@ -9,7 +9,7 @@ feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 066528bd9c2d7db9705a9d47ed6ea91a584129cb
 workflow-type: tm+mt
 source-wordcount: '2134'
 ht-degree: 1%
@@ -119,9 +119,7 @@ ht-degree: 1%
    1. 從「編輯屬性」窗格下的「讀取服務」欄位選取擷取或取得服務。
    1. 選取讀取服務引數的鉛筆圖示，以將引數繫結到要求屬性，並指定繫結值。 它會將服務引數繫結到指定的繫結屬性或常值中，該值會作為引數傳遞給服務，以從資料來源擷取與指定值相關聯的詳細資料。
 
-      <br>
-        在此範例中，id引數接受使用者設定檔的id屬性值，並將其作為引數傳給讀取服務。 它會從指定ID的員工資料模型物件讀取並傳回關聯屬性的值。 因此，如果您在表單的id欄位中指定00250，讀取服務會讀取具有員工id00250員工的詳細資訊。
-        <br>
+      在此範例中，id引數接受使用者設定檔的id屬性值，並將其作為引數傳給讀取服務。 它會從指定ID的員工資料模型物件讀取並傳回關聯屬性的值。 因此，如果您在表單的id欄位中指定00250，讀取服務會讀取具有員工id00250員工的詳細資訊。
 
       ![設定請求屬性](assets/request-attribute.png)
 
