@@ -4,13 +4,13 @@ description: 安裝AEM Forms檔案服務，以建立、彙編、散佈、封存P
 topic-tags: installing
 role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: acb023caf0a7e64fea9cf5d9198d672ee14c8d88
+exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
+source-git-commit: 0a1a0d8e3a2794bda247e7b07a2ef9d9fcac7c13
 workflow-type: tm+mt
-source-wordcount: '5703'
+source-wordcount: '5660'
 ht-degree: 1%
 
 ---
-
 
 # 安裝和設定檔案服務 {#installing-and-configuring-document-services}
 
@@ -300,7 +300,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 一般而言，您�
 
 >[!NOTE]
 >
-> 如果AEM伺服器是以LSA下的服務方式執行，則可能不需要明確指定此許可權給使用者，這表示除了VM上的PDFG所需的應用程式/元件外，沒有其他應用程式/元件安裝時，您就不需要授與任何其他帳戶 **向右取代程式層級權杖** 而且只有本機服務與網路服務帳戶才應該有此許可權。
+> 如上所示，如果AEM伺服器是以LocalSystem帳戶(LSA)下的服務方式執行，則不需要明確指定此許可權給使用者。
 
 ### （僅限Windows）為非系統管理員啟用PDF Generator服務 {#enable-the-pdf-generator-service-for-non-administrators}
 
