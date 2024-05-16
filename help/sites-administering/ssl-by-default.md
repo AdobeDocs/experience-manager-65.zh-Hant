@@ -10,7 +10,7 @@ exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 9b766fe6e253782be3bc47849b4857216274ae20
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -183,13 +183,13 @@ it for any subsequent updating of the private key or certificate.</dd>
    openssl x509 -req -days 365 -in localhost.csr -signkey localhostprivate.key -out localhost.crt
    ```
 
-將私密金鑰轉換為DER格式。 這是因為SSL精靈要求金鑰必須是DER格式：
+1. 將私密金鑰轉換為DER格式。 這是因為SSL精靈要求金鑰必須是DER格式：
 
-```shell
-openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
-```
+   ```shell
+   openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
+   ```
 
-最後，上傳 **localhostprivate.der** 作為私密金鑰和 **localhost.crt** 此頁面開頭說明的圖形SSL/TLS精靈步驟2中的SSL/TLS憑證。
+1. 最後，上傳 **localhostprivate.der** 作為私密金鑰和 **localhost.crt** 此頁面開頭說明的圖形SSL/TLS精靈步驟2中的SSL/TLS憑證。
 
 ### 透過cURL更新SSL/TLS設定 {#updating-the-ssl-tls-configuration-via-curl}
 
