@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: c165755c19ac64fdd253bff9163f48ddf4732623
+source-git-commit: 5e2799505bc6d69cd5898445a9300ad162ef74fd
 workflow-type: tm+mt
-source-wordcount: '4046'
-ht-degree: 2%
+source-wordcount: '3994'
+ht-degree: 3%
 
 ---
 
@@ -490,12 +490,12 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
 
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6520}
 
-* 在以XDP為基礎且核取方塊上有內嵌指令碼的最適化表單中，此類核取方塊之後的元素不會執行指令碼。 (FORMS-14244)
-* 在具有編輯/顯示模式的欄位中，在快顯Widget中瀏覽月份時，日期選擇器Widget中的列會被截斷。 (FORMS-13620)
-* 嘗試在後端使用DOR （記錄檔案）服務時，表單提交失敗。 遇到的錯誤訊息為：「提交動作無法完成，因為未正確指派表單資源。」 (FORMS-13798)
-* 從Adobe Experience Manager發佈執行個體提交最適化表單至Adobe Experience Manager Workflow時，工作流程無法儲存附件。 (FORMS-14209)
-* 安裝AEM 6.5 Forms Service Pack 20套件(適用於SP20的AEM Forms附加元件套件)時，AEM Sites使用者介面(UI)效能大幅降低。 (FORMS-13791)
-* 預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 (CQDOC-21355)
+* 在以XDP為基礎且核取方塊上有內嵌指令碼的最適化表單中，此類核取方塊之後的元素不會執行指令碼。 已針對此問題提供Hotfix。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md) (FORMS-14244)
+* 在具有編輯/顯示模式的欄位中，在快顯Widget中瀏覽月份時，日期選擇器Widget中的列會被截斷。 已針對此問題提供Hotfix。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md) (FORMS-13620)
+* 嘗試在後端使用DOR （記錄檔案）服務時，表單提交失敗。 遇到的錯誤訊息為：「提交動作無法完成，因為未正確指派表單資源。」 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md) (FORMS-13798)
+* 從Adobe Experience Manager發佈執行個體提交最適化表單至Adobe Experience Manager Workflow時，工作流程無法儲存附件。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md)  (FORMS-14209)
+* 安裝AEM 6.5 Forms Service Pack 20套件(適用於SP20的AEM Forms附加元件套件)時，AEM Sites使用者介面(UI)效能大幅降低。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md)  (FORMS-13791)
+* 預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md) (CQDOC-21355)
 * 最適化Forms可讓您搭配ECMAScript 5或更早版本使用自訂函式。 當自訂函式使用ECMAScript 6版或更新版本（例如「let」、「const」或箭頭函式）時，規則編輯器可能無法正確開啟。
 * 使用者無法建立通訊管理信件。 當使用者建立字母時，出現說明錯誤&quot;`Object Object`「」出現，且字母未建立。 配置圖縮圖也無法載入字母建立畫面上。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) 以解決問題。 (FORMS-13496)
 * 互動式通訊服務會建立PDF檔案，但使用者的資料不會自動填入表單欄位中。 預填服務未如預期運作。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) 以解決問題。 (FORMS-13413， FORMS-13493)
@@ -530,11 +530,6 @@ The UberJar for [!DNL Experience Manager] 6.5.20.0可在以下網址取得： [M
 1. Stop the application server.
 
 -->
-* 在以XDP為基礎且核取方塊上有內嵌指令碼的最適化表單中，此類核取方塊之後的元素不會執行指令碼。 (FORMS-14244)
-* 在具有編輯/顯示模式的欄位中，在快顯Widget中瀏覽月份時，日期選擇器Widget中的列會被截斷。 (FORMS-13620)
-* 嘗試在後端使用DOR （記錄檔案）服務時，表單提交失敗。 遇到的錯誤訊息為：「提交動作無法完成，因為未正確指派表單資源。」 (FORMS-13798)
-* 從Adobe Experience Manager發佈執行個體提交最適化表單至Adobe Experience Manager Workflow時，工作流程無法儲存附件。 (FORMS-14209)
-* 安裝AEM 6.5 Forms Service Pack 20套件(適用於SP20的AEM Forms附加元件套件)時，AEM Sites使用者介面(UI)效能大幅降低。 (FORMS-13791)
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 
