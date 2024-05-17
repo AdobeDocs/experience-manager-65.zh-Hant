@@ -9,20 +9,27 @@ exl-id: de5c634a-c0d7-4e69-b941-d2fbfe83117d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: ad8f849384e58511de97611d1b26c4fc96022062
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 3%
+source-wordcount: '313'
+ht-degree: 2%
 
 ---
 
 # 使用Adobe Campaign表單元件建立自訂AEM頁面範本{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-此頁面說明如何建置使用的自訂頁面範本 [Adobe Campaign表單](/help/sites-authoring/adobe-campaign-components.md) 藉由檢查Geometrixx — 戶外範本的方式( `/apps/geometrixx-outdoors/components/page_campaign_profile`)已實作，並導向到建立您自己的自訂範本時可能需要的重要資訊。
+此頁面說明如何建置使用的自訂頁面範本 [Adobe Campaign表單](/help/sites-authoring/adobe-campaign-components.md) 藉由檢查Geometrixx — 戶外範本的方式(`/apps/geometrixx-outdoors/components/page_campaign_profile`)已實作，並導向到建立您自己的自訂範本時可能需要的重要資訊。
 
 >[!NOTE]
 >
 >[電子郵件和表單範例僅適用於Geometrixx](/help/sites-developing/we-retail.md). 從封裝共用下載範例Geometrixx內容。
+
+>[!CAUTION]
+>
+>已棄用AEM電子郵件元件。 由於電子郵件結合了內容和樣式，因此由AEM提供的現成可用電子郵件元件對於客戶的重複使用有限，因為需要將自訂樣式實作到專案所需的任何元件中。
+>
+>電子郵件元件可在專案層級實作，而過時的AEM電子郵件元件會說明如何實作。 不過，請勿在專案上使用這些已棄用的元件。
+
 
 若要使用Adobe Campaign表單元件建立自訂AEM頁面範本，請確定您具備下列條件：
 
