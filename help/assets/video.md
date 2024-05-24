@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media 中的視訊
-description: 瞭解如何在Dynamic Media中使用視訊，例如編碼視訊、新增多音訊和多重註解到視訊和視訊縮圖的最佳實務。
+description: 瞭解如何在Dynamic Media中使用視訊，例如編碼視訊、新增多個音訊和標題曲目至視訊和視訊縮圖的最佳實務。
 mini-toc-levels: 3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,9 +11,9 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a49af471c5fc2f799687173bff6cdcb21505740a
 workflow-type: tm+mt
-source-wordcount: '11187'
+source-wordcount: '11213'
 ht-degree: 2%
 
 ---
@@ -425,7 +425,7 @@ VBR需要更長的時間來編碼，但會產生最有利的結果；媒體檔�
 
 Dynamic Media建議使用MP4 H.264視訊編碼預設集。 由於MP4檔案使用H.264視訊轉碼器，因此可提供高品質的視訊，但檔案大小必須經過壓縮。
 
-### 在您的Dynamic Media帳戶上啟用DASH、多字幕和多音訊曲目支援 {#enable-dash}
+### 在您的Dynamic Media帳戶上啟用DASH、多字幕和音訊追蹤支援 {#enable-dash}
 
 **關於在您的帳戶上啟用DASH**
 DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被廣泛採用於不同的視訊檢視器中。 當您的帳戶啟用DASH時，您可以選擇使用DASH或HLS進行最適化視訊串流。 或者，您也可以選擇同時使用這兩種方法，在播放器之間自動切換 **[!UICONTROL 自動]** 即會選取作為檢視器預設集中的播放型別。
@@ -444,13 +444,13 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 * 將Dynamic Media設定為使用DASH，方便您自行操作。
 * 將Experience Manager 6.5設定為使用DASH，這是透過您建立和提交的Adobe客戶支援案例完成的。
 
-**關於在您的帳戶上啟用多重字幕與多重音訊曲目支援**
+**關於在您的帳戶上啟用多重註解和音訊追蹤支援**
 
-在您建立Adobe支援案例以在帳戶上啟用DASH的同時，自動啟用多字幕和多音訊曲目支援也會讓您受益。 啟用後，您上傳的所有後續視訊都會以新的後端架構處理，包括支援在視訊中新增多字幕和多音訊曲目。
+在您建立Adobe支援案例以在帳戶上啟用DASH的同時，自動啟用多個註解和音訊追蹤支援也會讓您受益。 啟用後，您上傳的所有後續視訊都會透過新的後端架構進行處理，包括支援在視訊中新增多個註解和音訊曲目。
 
 >[!IMPORTANT]
 >
->您上傳的任何影片 *早於* 在您的Dynamic Media帳戶上啟用多重字幕與多重音訊曲目支援， [必須重新處理](/help/assets/processing-profiles.md#reprocessing-assets). 這個視訊重新處理步驟是必要的，因此使用者可以使用多字幕和多音訊曲目功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
+>您上傳的任何影片 *早於* 在您的Dynamic Media帳戶上啟用多重註解和音訊追蹤支援， [必須重新處理](/help/assets/processing-profiles.md#reprocessing-assets). 此視訊重新處理步驟是必要的，這樣使用者才能使用多個註解和音訊追蹤功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
 
 **若要在您的Dynamic Media帳戶上啟用DASH、多字幕和多音訊曲目支援：**
 
@@ -471,7 +471,7 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 
    * 主要連絡人姓名、電子郵件、電話。
    * 您的Dynamic Media帳戶名稱。
-   * 指定您想在Dynamic Media帳戶上，於Experience Manager6.5啟用DASH、多字幕和多音訊曲目支援。
+   * 在Experience Manager6.5中，指定您要在Dynamic Media帳戶上啟用DASH、多字幕和多音訊追蹤支援。
 
 1. 「Adobe客戶支援」會根據提交請求的順序，將您新增至「客戶等候清單」。
 1. 當Adobe準備好處理您的請求時，客戶支援聯絡您以協調並設定啟用的目標日期。
@@ -479,7 +479,7 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 1. 現在您可以執行下列任一項作業：
 
    * 建立您的 [視訊檢視器預設集](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) 一如既往。
-   * [新增多字幕和多音軌](#add-msma) 到您的視訊。
+   * [新增多個標題和音軌](#add-msma) 到您的視訊。
 
 ## 檢視視訊報表 {#viewing-video-reports}
 
@@ -593,13 +593,13 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 
 
 
-## 關於Dynamic Media中視訊的多字幕與多音訊曲目支援{#about-msma}
+## 關於Dynamic Media中視訊的多重註解和音訊追蹤支援{#about-msma}
 
-透過Dynamic Media的多重字幕與多重音訊曲目功能，您可以輕鬆將多重字幕與音訊曲目新增至主要視訊。 此功能表示全球對象都可以存取您的影片。您可以以多種語言向全球對象自訂單一已發佈的主要影片，並遵守不同地理區域的輔助功能指南。作者還可以從使用者介面中的單個標籤管理字幕和音訊。
+透過Dynamic Media中的多重字幕與音訊曲目功能，您可以輕鬆將多重字幕與音訊曲目新增至主要視訊。 此功能表示全球對象都可以存取您的影片。您可以以多種語言向全球對象自訂單一已發佈的主要影片，並遵守不同地理區域的輔助功能指南。作者還可以從使用者介面中的單個標籤管理字幕和音訊。
 
 ![Dynamic Media中的字幕和音訊曲目索引標籤，以及顯示已上傳視訊的.VTT字幕檔案和已上傳的.MP3音訊曲目檔案的表格。](assets-dm/msma-subtitle-audiotracks-tab.png)
 
-在主要影片中新增多字幕和多音訊曲目時應考慮的一些使用案例包括：
+在主要視訊中新增多個註解和音訊曲目時應考慮的一些使用案例包括：
 
 | 類型 | 使用案例 |
 |--- |--- |
@@ -609,28 +609,28 @@ DASH (Digital Adaptive Streaming over HTTP)是視訊串流的國際標準，被�
 |  | 註解追蹤 |
 |  | 描述性音訊 |
 
-全部 [Dynamic Media支援的視訊格式](/help/assets/assets-formats.md) 和所有Dynamic Media視訊檢視器(Dynamic Media除外) *Video_360* 檢視器 — 支援與多字幕和多音軌搭配使用。
+全部 [Dynamic Media支援的視訊格式](/help/assets/assets-formats.md) 和所有Dynamic Media視訊檢視器(Dynamic Media除外) *Video_360* 檢視器 — 支援與多個標題和音軌搭配使用。
 
-您的Dynamic Media帳戶可使用多字幕和多音訊追蹤功能，其方式為必須由Adobe客戶支援啟用（開啟）的功能切換。
+您的Dynamic Media帳戶可使用多重註解和音訊追蹤功能，其方式為必須由Adobe客戶支援啟用（開啟）的功能切換。
 
-### 在視訊中新增多字幕與多音效曲目 {#add-msma}
+### 在視訊中新增多個標題和音軌 {#add-msma}
 
-在您將多字幕和多音訊曲目新增到視訊之前，請確定您已經具備下列內容：
+在將多個註解和音訊曲目加入視訊之前，請確定您已具備下列內容：
 
 * Dynamic Media是在AEM環境中設定的。
 * A [Dynamic Media視訊設定檔已套用至您擷取視訊的資料夾](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
-* [已在您的Dynamic Media帳戶中啟用多字幕和多音訊曲目](#enable-dash).
+* [已在您的Dynamic Media帳戶中啟用多個註解和音軌](#enable-dash).
 
 WebVTT和Adobe VTT格式支援新增的字幕和註解。 此外，新增的音訊軌跡檔案也支援MP3格式。
 
 >[!IMPORTANT]
 >
->您上傳的任何影片 *早於* 在您的Dynamic Media帳戶上啟用多重字幕與多重音訊曲目支援， [必須重新處理](/help/assets/processing-profiles.md#reprocessing-assets). 這個視訊重新處理步驟是必要的，因此使用者可以使用多字幕和多音訊曲目功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
+>您上傳的任何影片 *早於* 在您的Dynamic Media帳戶上啟用多重註解和音訊追蹤支援， [必須重新處理](/help/assets/processing-profiles.md#reprocessing-assets). 此視訊重新處理步驟是必要的，這樣使用者才能使用多個註解和音訊追蹤功能。 重新處理之後，視訊URL仍可繼續如常運作和播放。
 
-**若要在視訊中加入多字幕和多音軌：**
+**若要在視訊中新增多個註解和音軌：**
 
 1. [將主要視訊上傳至資料夾](/help/assets/managing-video-assets.md#upload-and-preview-video-assets) 已為其指派視訊設定檔。
-1. 導覽至您要新增多字幕與多音訊曲目的上傳視訊資產。
+1. 導覽至您要新增多個標題和音訊曲目的上傳視訊資產。
 1. 在資產選取模式中，從「清單檢視」或「卡片檢視」中選取視訊資產。
 1. 在工具列上，選取「屬性」圖示（內有「i」的圓形）。
    ![在視訊縮圖影像上選取有核取記號的視訊資產，並在工具列上反白顯示「檢視屬性」 。](assets-dm/msma-selectedasset-propertiesbutton.png)*在卡片檢視中選取的視訊資產。*
@@ -853,7 +853,7 @@ Dynamic Media支援透過URL修飾元在視訊中新增單一標題。 另請參
 
 >[!IMPORTANT]
 >
->Adobe建議您 [啟用多重字幕與多重音訊追蹤功能](#enable-dash) (在您的Dynamic Media帳戶上)。 如此一來，您便可運用最新的Dynamic Media後端架構和簡化的工作流程，在視訊中新增標題、字幕和音訊曲目。
+>Adobe建議您 [啟用多重註解和音訊追蹤功能](#enable-dash) (在您的Dynamic Media帳戶上)。 如此一來，您便可運用最新的Dynamic Media後端架構和簡化的工作流程，在視訊中新增標題、字幕和音訊曲目。
 
 您可以將隱藏式字幕新增至單一視訊或最適化視訊集，以將視訊觸及全球市場。 透過新增隱藏式字幕，您就不需要對音訊進行配音，或是使用母語者重新錄製每種語言的音訊。 視訊會以錄製的語言播放。 出現外語字幕，讓不同語言的人仍然可以瞭解音訊部分。
 
