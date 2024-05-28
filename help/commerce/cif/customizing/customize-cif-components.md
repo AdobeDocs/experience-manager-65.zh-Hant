@@ -1,19 +1,11 @@
 ---
 title: 自訂CIF核心元件
 description: 瞭解如何自訂Adobe Experience Manager CIF核心元件。 本教學課程涵蓋如何安全地擴充CIF核心元件，以符合特定企業的需求。 瞭解如何延伸GraphQL查詢以傳回自訂屬性，並在CIF核心元件中顯示新屬性。
-sub-product: Commerce
-topics: Development
-version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
-feature: Commerce Integration Framework
-kt: 4279
-thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
+feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 54f2b7fda39f97c4f8a1d28ac51b7b998bf8e4a1
 workflow-type: tm+mt
 source-wordcount: '2302'
 ht-degree: 0%
@@ -58,7 +50,7 @@ Venia品牌最近開始使用永續性材料來製造某些產品，而企業想
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallSinglePackage,cloud
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic,cloud
    ```
 
 1. 新增必要的OSGi設定，以便將AEM執行個體連線至Adobe Commerce執行個體，或將設定新增至新建立的專案。
@@ -400,7 +392,7 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫 [HTL指�
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallSinglePackage,cloud
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic,cloud
    ```
 
 1. 開啟新的瀏覽器視窗，並導覽至AEM與 **OSGi控制檯** > **狀態** > **Sling模型**： [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
@@ -479,7 +471,7 @@ AEM元件的常見擴充功能是修改元件產生的標籤。 覆寫 [HTL指�
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallSinglePackage,cloud
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic,cloud
    ```
 
 1. 重新整理至 **Venia首頁** 在 [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html) 新增產品Teaser的位置。
