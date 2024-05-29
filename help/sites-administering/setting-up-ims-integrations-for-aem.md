@@ -1,19 +1,21 @@
 ---
 title: 設定AEM的IMS整合
 description: 瞭解如何設定AEM的IMS整合
-source-git-commit: ea7454fa57d503eb12efe5074c8a82ab3d8e280b
+source-git-commit: 8540b1af3c0779f692f829d4c61112d36bd81a00
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 80%
+source-wordcount: '354'
+ht-degree: 90%
 
 ---
 
 
 # 設定AEM的IMS整合 {#setting-up-ims-integrations-for-aem}
 
+<!--
+
 >[!NOTE]
 >
->Adobe 客戶使用 [Adobe Developer Console](https://developer.adobe.com/console) 來產生可存取各種 API 的憑證。客戶可以選擇各種憑證類型，包括 OAuth 伺服器到伺服器和單頁應用程式。其中一種認證型別，服務帳戶(JWT)認證已遭取代，傾向使用Service Pack 20的OAuth伺服器對伺服器認證。 此變更可重新移植到舊版Service Pack，從Service Pack 11到Service Pack 20，並使用您可在此處下載的Hotfix。
+>Adobe customers use [Adobe Developer Console](https://developer.adobe.com/console) to generate credentials that enable access to various APIs. Customers select from various credential types ranging from OAuth Server-to-Server to Single-Page App. One of those credential types, Service Account (JWT) credentials, has been deprecated in favor of the OAuth Server-to-Server credentials with Service Pack 20. This change can be back ported to older Service Packs, starting with Service Pack 11 up to Service Pack 20 with the use of a hotfix that you can download here. -->
 
 Adobe Experience Manager (AEM)可與許多其他Adobe解決方案整合。 例如 Adobe Target、Adobe Analytics 等。
 
