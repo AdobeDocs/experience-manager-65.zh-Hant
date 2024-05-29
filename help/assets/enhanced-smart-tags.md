@@ -7,9 +7,9 @@ role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 45452acf73adc76aacebff9aa0dd42565abbd358
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1575'
 ht-degree: 1%
 
 ---
@@ -194,3 +194,9 @@ ht-degree: 1%
 * 智慧內容服務的使用限製為每年最多200萬張標籤影像。 任何經過處理和標籤的重複影像都會計為標籤的影像。
 * 如果您從時間軸執行標籤工作流程，一次最多可以對15個資產套用標籤。
 * 智慧標籤僅適用於PNG和JPG影像格式。 因此，如果支援的資產擁有以這兩種格式建立的轉譯，則會使用智慧標籤標籤。
+
+>[!MORELIKETHIS]
+>
+>* [概述及如何訓練智慧標籤](enhanced-smart-tags.md)
+>* [設定智慧標籤](config-smart-tagging.md)
+>* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)

@@ -6,10 +6,10 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 45452acf73adc76aacebff9aa0dd42565abbd358
 workflow-type: tm+mt
-source-wordcount: '2227'
-ht-degree: 20%
+source-wordcount: '2415'
+ht-degree: 19%
 
 ---
 
@@ -135,6 +135,13 @@ ht-degree: 20%
 
 ### 設定智慧內容服務 {#configure-smart-content-service}
 
+>[!CAUTION]
+>
+>之前，使用JWT憑證進行的設定現在會在Adobe Developer Console中遭到淘汰。 2024年6月3日之後，您無法建立新的JWT憑證。 此類設定無法再建立或更新，但可以移轉至 OAuth 設定。
+> 另請參閱 [為AEM設定IMS整合](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+>另請參閱 [為內部部署使用者設定OAuth的步驟](#config-oauth-onprem)
+> 另請參閱 [針對OAuth憑證的智慧標籤進行疑難排解](#config-smart-tagging.md)
+
 若要設定整合，請使用 [!UICONTROL 技術帳戶ID]， [!UICONTROL 組織ID]， [!UICONTROL 使用者端密碼]、和 [!UICONTROL 使用者端ID] Adobe Developer主控台整合中的欄位。 建立智慧標籤雲端設定，可驗證來自的API請求 [!DNL Experience Manager] 部署。
 
 1. 在 [!DNL Experience Manager]，導覽至 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL 舊版Cloud Service]** 以開啟 [!UICONTROL Cloud Service] 主控台。
@@ -151,6 +158,37 @@ ht-degree: 20%
    | [!UICONTROL 技術帳戶ID] | [!UICONTROL 技術帳戶ID] |
    | [!UICONTROL 組織ID] | [!UICONTROL 組織ID] |
    | [!UICONTROL 使用者端密碼] | [!UICONTROL 使用者端密碼] |
+
+### 為內部部署使用者設定OAuth {#config-oauth-onprem}
+
+#### 先決條件 {#prereqs-config-oauth-onprem}
+
+授權範圍是包含以下先決條件的OAuth字串：
+
+* 在中建立新的OAuth整合 [開發人員主控台](https://developer.adobe.com/console/user/servicesandapis) 使用 `ClientID`， `ClientSecretID`、和 `OrgID`.
+* 在此路徑新增下列檔案 `/apps/system/config in crx/de`：
+   * `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`
+   * `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`
+
+#### 為內部部署使用者設定OAuth {#steps-config-oauth-onprem}
+
+1. 在中新增或更新以下屬性 `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`：
+
+   * `auth.token.provider.authorization.grants="client_credentials"`
+   * `auth.token.provider.orgId="<OrgID>"`
+   * `auth.token.provider.default.claims=("\"iss\"\ :\ \"<OrgID>\"")`
+   * `auth.token.provider.scope="read_pc.dma_smart_content,\ openid,\ AdobeID,\ additional_info.projectedProductContext"`
+     `auth.token.validator.type="adobe-ims-similaritysearch"`
+   * 更新 `auth.token.provider.client.id` 搭配新OAuth設定的使用者端ID。
+   * 更新 `auth.access.token.request` 至 `"https://ims-na1.adobelogin.com/ims/token/v3"`
+2. 將檔案重新命名為 `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config`.
+3. 請在中執行以下步驟 `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`：
+   * 透過新的OAuth整合，使用使用者端密碼更新auth.ims.client.secret屬性。
+   * 將檔案重新命名為 `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl-<randomnumber>.config`
+4. 儲存內容存放庫開發主控台中的所有變更，例如CRXDE。
+5. 瀏覽至 `/system/console/configMgr` 並從取代OSGi設定 `.<randomnumber>` 至 `-<randomnumber>`.
+6. 刪除的舊設定 `"Access Token provider name: adobe-ims-similaritysearch"` 在 `/system/console/configMgr`.
+7. 重新啟動主控台。
 
 ### 驗證設定 {#validate-the-configuration}
 
@@ -299,5 +337,6 @@ ht-degree: 20%
 
 >[!MORELIKETHIS]
 >
->* [智慧標籤的概觀及訓練方式](enhanced-smart-tags.md)
+>* [針對OAuth憑證的智慧標籤進行疑難排解](#config-smart-tagging.md)
+>* [概述及如何訓練智慧標籤](enhanced-smart-tags.md)
 >* [有關智慧標籤的教學影片](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
