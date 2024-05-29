@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 9bacc16657c83329ff7b02dc8b233908e9deb2e1
+source-git-commit: b274d150ccffb93858de6a3a8f7e05441776d0fb
 workflow-type: tm+mt
-source-wordcount: '7406'
+source-wordcount: '7400'
 ht-degree: 18%
 
 ---
@@ -74,6 +74,7 @@ ht-degree: 18%
    + [AEM 6.5中的自訂使用者群組對應](/help/sites-administering/cug-mapping.md)
    + [相同網站Cookie支援](/help/sites-administering/same-site-cookie-support.md)
    + [Adobe Developer Console 中的 JWT 憑證已被取代](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
+   + [設定AEM的IMS整合](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
 + Sites {#sites}
    + 製作 {#authoring}
       + AEM Authoring的基本工作、工具和概念 {#essentials}
@@ -226,7 +227,6 @@ ht-degree: 18%
          + [設定Adobe Analytics的連結追蹤](/help/sites-administering/adobeanalytics-link.md)
          + [使用Adobe Analytics屬性對應元件資料](/help/sites-administering/adobeanalytics-mapping.md)
          + [設定Adobe Analytics的視訊追蹤](/help/sites-administering/adobeanalytics-video.md)
-         + [使用IMS與Adobe Analytics整合](/help/sites-administering/integration-analytics-ims.md)
          + [HTTP2 傳送內容常見問題集](/help/sites-administering/scene7-http2faq.md)
          + [疑難排解Adobe Campaign的整合問題](/help/sites-administering/troubleshooting-campaignintegration.md)
          + [SharePoint聯結器授權、版權注意事項和免責宣告](/help/sites-administering/sharepoint-connector-licenses.md)
@@ -250,7 +250,6 @@ ht-degree: 18%
          + [與Adobe Marketing Cloud整合](/help/sites-administering/marketing-cloud.md)
          + [手動設定與Adobe Target的整合](/help/sites-administering/target-configuring.md)
          + [與Adobe Target整合的先決條件](/help/sites-administering/target-requirements.md)
-         + [使用IMS與Adobe Target整合](/help/sites-administering/integration-target-ims.md)
          + [Adobe分類](/help/sites-administering/adobeanalytics-classifications.md)
          + [解決方案整合](/help/sites-administering/integration.md)
          + [將體驗片段匯出到 Adobe Target](/help/sites-administering/experience-fragments-target.md)
@@ -1292,7 +1291,7 @@ ht-degree: 18%
          + [AEM核心概念](/help/sites-developing/the-basics.md)
          + [AEM觸控式UI的結構](/help/sites-developing/touch-ui-structure.md)
          + [AEM觸控式UI的概念](/help/sites-developing/touch-ui-concepts.md)
-         + [AEM開發 — 指導方針與最佳作法](/help/sites-developing/dev-guidelines-bestpractices.md)
+         + [AEM 開發 - 指導方針與最佳實務](/help/sites-developing/dev-guidelines-bestpractices.md)
          + [使用用戶端資料庫](/help/sites-developing/clientlibs.md)
          + [開發和頁面差異](/help/sites-developing/pagediff.md)
          + [編輯器限制](/help/sites-developing/editor-limitations.md)
