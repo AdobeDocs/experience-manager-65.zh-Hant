@@ -4,9 +4,9 @@ description: 瞭解如何在中設定智慧標籤和增強智慧標籤 [!DNL Ado
 role: Admin
 feature: Tagging,Smart Tags
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 109a608db0724050f6e505394da9138855ba992e
+source-git-commit: d8d821a64b39b312168733126de8929c04016ff1
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1034'
 ht-degree: 7%
 
 ---
@@ -41,7 +41,9 @@ OAuth設定需要下列先決條件：
    * `com.**adobe**.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`
    * `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`
 
-### 為內部部署使用者設定OAuth {#steps-config-oauth-onprem}
+### 現有AMS和On Prem使用者的OAuth設定 {#steps-config-oauth-onprem}
+
+以下步驟可由系統管理員執行。 AMS客戶可聯絡Adobe代表或提交支援票證，以遵循 [支援流程](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support).
 
 1. 在中新增或更新以下屬性 `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`：
 
@@ -52,14 +54,17 @@ OAuth設定需要下列先決條件：
      `auth.token.validator.type="adobe-ims-similaritysearch"`
    * 更新 `auth.token.provider.client.id` 搭配新OAuth設定的使用者端ID。
    * 更新 `auth.access.token.request` 至 `"https://ims-na1.adobelogin.com/ims/token/v3"`
-2. 將檔案重新命名為 `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config`.
-3. 請在中執行以下步驟 `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`：
+1. 將檔案重新命名為 `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config`.
+1. 請在中執行以下步驟 `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`：
    * 透過新的OAuth整合，使用使用者端密碼更新auth.ims.client.secret屬性。
    * 將檔案重新命名為 `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl-<randomnumber>.config`
-4. 儲存內容存放庫開發主控台中的所有變更，例如CRXDE。
-5. 瀏覽至 `/system/console/configMgr` 並從取代OSGi設定 `.<randomnumber>` 至 `-<randomnumber>`.
-6. 刪除的舊OSGi設定 `"Access Token provider name: adobe-ims-similaritysearch"` 在 `/system/console/configMgr`.
-7. 重新啟動主控台。
+1. 儲存內容存放庫開發主控台中的所有變更，例如CRXDE。
+<!--
+1. Navigate to `/system/console/configMgr` and replace the OSGi configuration from `.<randomnumber>` to `-<randomnumber>`.
+1. Delete the old OSGi configuration for `"Access Token provider name: adobe-ims-similaritysearch"` in `/system/console/configMgr`.
+-->
+1. 在 `System/console/configMgr`，刪除的舊組態 `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl` 和存取權杖提供者名稱 `adobe-ims-similaritysearch`.
+1. 重新啟動主控台。
 
 ## 驗證設定 {#validate-the-configuration}
 
