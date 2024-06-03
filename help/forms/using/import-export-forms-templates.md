@@ -8,9 +8,9 @@ docset: aem65
 role: Admin,User
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 0e2c9c911ae824c55d958180a84f23079bae8263
 workflow-type: tm+mt
-source-wordcount: '2509'
+source-wordcount: '2508'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ AEM Forms使用者介面可讓您將資產下載為AEM CRX封裝或二進位檔�
 
 若要上傳Forms &amp; Documents資產：
 
->[!VIDEO](https://vimeo.com/)
+<!--[!VIDEO](https://vimeo.com/)-->
 
 1. 登入AEM Forms執行個體。
 1. 選取Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) 圖示>導覽 ![指南針](assets/compass.png) 圖示> Forms> Forms與檔案。
