@@ -8,7 +8,7 @@ docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: c49bff425ccbd00480e5b17fa50ca8f25df80d2f
 workflow-type: tm+mt
 source-wordcount: '4010'
 ht-degree: 0%
@@ -545,6 +545,26 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 - [JEE部署中單一伺服器AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65)
 - [JEE部署上叢集AEM Forms的系統需求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65)
 
+### Adobe Acrobat和Adobe Reader {#adobe-acrobat-and-adobe-reader}
+
+<table>
+ <tbody>
+  <tr>
+   <th><p><strong>Acrobat和Adobe Reader （基礎版）</strong></p> </th>
+   <th><p><strong>支援的修補程式定義</strong></p> </th>
+  </tr>
+  <tr>
+   <td>Acrobat 2020 （傳統路線）</td>
+   <td>20.004.30006版或更新版本<br /> </td>
+  </tr>
+
+</tbody>
+</table>
+
+>[!NOTE]
+>
+>Acrobat DC產品系列為Acrobat和Reader引入兩種路徑，它們是不同的產品：「傳統」和「持續」。 如需詳細資訊和兩個曲目的比較，請參閱 [https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html).
+
 ## AEM Forms on JEE的支援使用者端 {#supported-clients-for-aem-forms-on-jee}
 
 ### Workbench {#workbench}
@@ -591,26 +611,6 @@ AEM Forms應用程式現在支援Apache Cordova。 以下是支援的平台特�
 - Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC
 - 安裝設計工具的管理許可權
 - Microsoft® Visual C++ 2019 （VC 14.28或更新版本） 32位元執行階段
-
-### Adobe Acrobat和Adobe Reader {#adobe-acrobat-and-adobe-reader}
-
-<table>
- <tbody>
-  <tr>
-   <th><p><strong>Acrobat和Adobe Reader （基礎版）</strong></p> </th>
-   <th><p><strong>支援的修補程式定義</strong></p> </th>
-  </tr>
-  <tr>
-   <td>Acrobat 2020 （傳統路線）</td>
-   <td>20.004.30006版或更新版本<br /> </td>
-  </tr>
-
-</tbody>
-</table>
-
->[!NOTE]
->
->Acrobat DC產品系列為Acrobat和Reader引入兩種路徑，它們是不同的產品：「傳統」和「持續」。 如需詳細資訊和兩個曲目的比較，請參閱 [https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html).
 
 ### 瀏覽器 {#browsers}
 
