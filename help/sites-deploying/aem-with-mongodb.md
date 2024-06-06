@@ -10,16 +10,16 @@ exl-id: 70a39462-8584-4c76-a097-05ee436247b7
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: a8203a6bccff821dd6ca3f63c196829379aabe55
 workflow-type: tm+mt
-source-wordcount: '6185'
+source-wordcount: '6192'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Manager與MongoDB{#aem-with-mongodb}
 
-本文旨在促進對於成功使用MongoDB部署AEM (Adobe Experience Manager)所需的工作和考量事項的瞭解。
+本文旨在進一步瞭解成功使用MongoDB部署AEM (Adobe Experience Manager)所需的任務和考量事項。
 
 如需與部署相關的詳細資訊，請參閱 [部署和維護](/help/sites-deploying/deploy.md) 一節。
 
@@ -32,7 +32,7 @@ MongoDB通常用於支援符合下列其中一項條件的AEM作者部署：
 * 大量頁面編輯；
 * 大型轉出或啟用。
 
-上述標準僅適用於作者執行個體，不適用於所有應以TarMK為基礎之發佈執行個體。 由於作者執行個體不允許未驗證的存取，因此使用者數會參照已驗證的使用者。
+上述標準僅適用於作者執行個體，不適用於所有應以TarMK為基礎的任何發佈執行個體。 由於作者執行個體不允許未驗證的存取，因此使用者數會參照已驗證的使用者。
 
 如果不符合條件，則建議使用TarMK活動/待命部署來解決可用性問題。 一般而言，在縮放需求超過單一硬體專案所能達到的需求時，應考慮MongoDB。
 
@@ -46,7 +46,7 @@ MongoDB通常用於支援符合下列其中一項條件的AEM作者部署：
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
-最低的部署需要三個 `mongod` 設定為復本集的執行個體。 一個執行個體被選為主要執行個體，而其他執行個體是次要執行個體，並由管理該選擇 `mongod`. 附加到每個執行個體是本機磁碟。 因此，叢集可以支援負載，建議在每秒超過3000個I/O作業(IOPS)的情況下，最低處理量為每秒12 MB。
+最低的部署需要三個 `mongod` 設定為復本集的執行個體。 一個執行個體被選為主要執行個體，而其他執行個體是次要執行個體，並由管理該選擇 `mongod`. 附加到每個執行個體是本機磁碟。 因此，叢集可以支援負載，建議使用至少每秒12 MB的輸送量，以及超過每秒3000個I/O作業(IOPS)。
 
 AEM作者已連線至 `mongod` 例項，讓每個AEM作者連線到全部三個 `mongod` 執行個體。 寫入操作會傳送到主要執行個體，而讀取操作可從任何執行個體讀取。 流量會根據Dispatcher的負載分配至任何一個使用中的AEM編寫執行個體。 Oak資料存放區是 `FileDataStore`和MongoDB監控由MMS或MongoDB Ops Manager提供，視部署位置而定。 作業系統層級和記錄檔監控由第三方解決方案提供，例如Splunk或Ganglia。
 
@@ -60,7 +60,7 @@ AEM作者已連線至 `mongod` 例項，讓每個AEM作者連線到全部三個 
 
 如果執行專案的不同技術團隊之間有良好的溝通，即可支援虛擬化環境。 這項支援包括執行AEM的團隊、擁有作業系統的團隊，以及管理虛擬化基礎建設的團隊。
 
-有些特定需求涵蓋MongoDB執行個體的I/O容量，這些需求必須由管理虛擬化環境的團隊來管理。 如果專案使用雲端部署(例如Amazon Web Services)，則必須布建具有足夠I/O容量和一致性的執行個體，以支援MongoDB執行個體。 否則，MongoDB流程和Oak存放庫會執行不可靠且不規則。
+有些特定需求涵蓋MongoDB執行個體的I/O容量，這些需求必須由管理虛擬化環境的團隊管理。 如果專案使用雲端部署(例如Amazon Web Services)，則必須布建具有足夠I/O容量和一致性的執行個體，以支援MongoDB執行個體。 否則，MongoDB流程和Oak存放庫會執行不可靠且不規則。
 
 在虛擬化環境中，MongoDB需要特定的I/O和VM設定，以確保MongoDB的儲存引擎不會受到VMWare資源配置原則的損害。 成功的實作可確保各個團隊之間沒有障礙，而且所有團隊都已註冊可提供所需的效能。
 
@@ -105,7 +105,7 @@ RAM不足會導致效能大幅降低。 工作集和資料庫的大小與應用�
 
 ### MongoDB Cloud Manager {#mongodb-cloud-manager}
 
-MongoDB Cloud Manager是MongoDB提供的免費服務，可監控和管理MongoDB執行個體。 它可即時檢視MongoDB叢集的效能和健康情況。 它同時管理雲端和私人託管的執行個體，前提是執行個體可以存取Cloud Manager監控伺服器。
+MongoDB Cloud Manager是MongoDB提供的免費服務，可監控和管理MongoDB執行個體。 它可即時檢視MongoDB叢集的效能和健康狀況。 它同時管理雲端和私人託管的執行個體，前提是執行個體可以存取Cloud Manager監控伺服器。
 
 它需要在MongoDB執行個體上安裝代理程式，以連線至監控伺服器。 代理程式有三個層級：
 
@@ -113,7 +113,7 @@ MongoDB Cloud Manager是MongoDB提供的免費服務，可監控和管理MongoDB
 * 可監視的監視代理程式 `mongod` 例項，
 * 備份代理程式，可執行資料的排程備份。
 
-雖然使用Cloud Manager來自動維護MongoDB叢集可讓許多例行工作變得更輕鬆，但這並非必要，而且也不會將其用於備份。 選擇Cloud Manager進行監視時，需要監視。
+雖然使用Cloud Manager來自動維護MongoDB叢集可讓許多例行工作變得更輕鬆，但這並非必要，而且也不會將其用於備份。 選擇監視Cloud Manager時，需要監視。
 
 如需MongoDB Cloud Manager的詳細資訊，請參閱 [MongoDB檔案](https://docs.cloud.mongodb.com/).
 
@@ -125,7 +125,7 @@ MongoDB Ops Manager與MongoDB Cloud Manager是相同的軟體。 註冊後，Ops
 
 執行AEM MongoDB叢集需要作業系統層級監視。
 
-Ganglia就是這類系統的好例子，它提供了超出基本健康狀態量度（例如CPU、平均負載和可用磁碟空間）所需的範圍與詳細資訊圖片。 若要診斷問題，需要較低層級的資訊，例如平均資訊量集區層級、CPU I/O等待、FIN_WAIT2狀態的通訊端。
+Ganglia就是這類系統的好例子，它提供了超越基本健康狀態量度（例如CPU、平均負載和可用磁碟空間）所需的資訊範圍和詳細資訊。 若要診斷問題，需要較低層級的資訊，例如平均資訊量集區層級、CPU I/O等待、FIN_WAIT2狀態的通訊端。
 
 ### 記錄彙總 {#log-aggregation}
 
@@ -233,7 +233,7 @@ cacheSizeInMB=128
 
 ### 作業系統支援 {#operating-system-support}
 
-MongoDB 2.6使用記憶體對應儲存引擎，對RAM和磁碟之間作業系統層級管理的某些方面很敏感。 MongoDB執行個體的查詢和讀取效能取決於避免或消除通常稱為頁面錯誤的緩慢I/O作業。 這些問題為套用至 `mongod` 特別處理。 不要與作業系統層級的頁面錯誤混淆。
+MongoDB 2.6使用記憶體對應儲存引擎，對RAM和磁碟之間作業系統層級管理的某些方面很敏感。 MongoDB執行個體的查詢和讀取效能取決於避免或消除通常稱為頁面錯誤的緩慢I/O作業。 這些問題為套用至 `mongod` 特別處理。 請勿將此與作業系統層級的頁面錯誤混為一談。
 
 為了快速作業，MongoDB資料庫應該只存取已經在RAM中的資料。 它必須存取的資料是由索引和資料所組成。 這個索引和資料的集合稱為工作集。 當工作集大於可用的RAM時，MongoDB必須從磁碟中分頁該資料，這會產生I/O成本，並逐出已在記憶體中的其他資料。 如果逐出造成資料從磁碟重新載入，頁面錯誤會占主導地位，效能會降低。 如果工作集是動態和可變的，則會產生更多頁面錯誤以支援操作。
 
@@ -342,7 +342,7 @@ WiredTiger日誌是使用 [貼齊](https://docs.mongodb.com/manual/core/journali
 
 WiredTiger內部快取與磁碟格式中的資料使用不同的表示方式：
 
-* 檔案系統快取中的資料與磁碟上的格式相同，包括資料檔案的任何壓縮優點。 作業系統使用檔案系統快取來減少磁碟I/O。
+* 檔案系統快取中的資料與磁碟上的格式相同，包括資料檔案壓縮的優點。 作業系統使用檔案系統快取來減少磁碟I/O。
 
 載入到WiredTiger內部快取的索引與磁碟上的格式具有不同的資料表示方式，但是仍然可以利用索引首碼壓縮來減少RAM使用量。
 
@@ -405,7 +405,7 @@ MongoDB程式在不同配置原則下的行為不同：
 
 #### 遠端檔案系統 {#remote-filesystems}
 
-不建議將NFS等遠端檔案系統用於MongoDB的內部資料檔案（Mongod處理資料庫檔案），因為它們會導致太多延遲。 請勿混淆Oak Blob (FileDataStore)儲存（建議使用NFS）所需的共用檔案系統。
+不建議將NFS等遠端檔案系統用於MongoDB的內部資料檔案（Mongod處理資料庫檔案），因為它們會引入太多延遲。 請勿混淆Oak Blob (FileDataStore)儲存（建議使用NFS）所需的共用檔案系統。
 
 #### 預先閱讀 {#read-ahead}
 
@@ -569,11 +569,11 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 1. 使用儲存I/O控制將足夠的I/O配置給 `mongod` 程式。
 1. 透過設定來保證主控MongoDB之機器的CPU資源 [CPU保留](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.hostclient.doc/GUID-6C9023B2-3A8F-48EB-8A36-44E3D14958F6.html?hWord=N4IghgNiBc4RB7AxmALgUwAQGEAKBVTAJ3QGcEBXIpMkAXyA)
 
-1. 請考慮使用ParaVirtual I/O驅動程式。 另請參閱 [知識庫文章](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1010398).
+1. 請考慮使用ParaVirtual I/O驅動程式。 <!-- URL is a 404 See [knowledgebase article](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1010398).-->
 
 ### Amazon Web Services {#amazon-web-services}
 
-如需有關如何使用Amazon Web Services設定MongoDB的檔案，請檢視 [設定AWS整合](https://docs.cloud.mongodb.com/tutorial/configure-aws-settings/) MongoDB網站上的文章。
+如需有關如何使用Amazon Web Services設定MongoDB的檔案，請檢視 [設定AWS整合](https://www.mongodb.com/docs/cloud-manager/tutorial/configure-aws-integration/) MongoDB網站上的文章。
 
 ## 部署前保護MongoDB {#securing-mongodb-before-deployment}
 
@@ -585,7 +585,7 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 
 為了適當地為您的MongoDB部署提供服務，託管Dispatcher的作業系統必須正在執行 **Apache httpd** **版本2.4或更新版本。**
 
-此外，請確定組建中使用的所有程式庫都是最新的，以將安全性影響降至最低。
+此外，請確定您組建中使用的所有程式庫都是最新的，以將安全性影響降至最低。
 
 ### Dispatcher 設定 {#dispatcher-configuration}
 
@@ -595,7 +595,7 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 
 在沒有Dispatcher的情況下執行AEM需要由其他應用程式執行SSL終止和負載平衡。 這是必要操作，因為工作階段必須和建立工作階段的AEM執行個體有相關性，這個概念稱為粘性連線。 原因是為了確保內容的更新顯示最小的延遲。
 
-檢查 [Dispatcher檔案](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 以取得如何設定的詳細資訊。
+檢查 [Dispatcher檔案](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/dispatcher) 以取得如何設定的詳細資訊。
 
 ### 其他設定 {#additional-configuration}
 

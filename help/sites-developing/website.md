@@ -10,7 +10,7 @@ exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: ed7183efa57db6d97941e3acc99d126c2fc0f6c5
 workflow-type: tm+mt
 source-wordcount: '4919'
 ht-degree: 3%
@@ -477,7 +477,7 @@ static.css檔案與影像範例
 
 #### 使用字幕增強頁面 {#enhancing-pages-with-subtitles}
 
-頁面元件會定義屬性，讓您為頁面提供字幕。 新增提供有關頁面內容資訊的字幕。
+頁面元件會定義屬性，好讓您為頁面提供標題。 新增提供有關頁面內容的註解。
 
 1. 在瀏覽器中，開啟 **產品** 頁面。
 1. 在Sidekick上 **頁面** 標籤，按一下 **頁面屬性**.
