@@ -5,9 +5,10 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 6bf2d6409a15be02a247fab84caa743e8542da13
+exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
+source-git-commit: 4035bfae6a525292ca71b182ebed2ac9839426b8
 workflow-type: tm+mt
-source-wordcount: '3032'
+source-wordcount: '3050'
 ht-degree: 3%
 
 ---
@@ -219,6 +220,12 @@ ht-degree: 3%
 
 * 在範本編輯器中，文字字串 *`No video available.`* 未本地化。 (SITES-13190)
 * 啟用或停用使用者後的字串不會在中本地化 **工具** > **安全性** > **使用者** > *any_user_name* > **啟動** > **確定**，並選取 *any_user_name* > **停用** > **確定**. (NPR-41737)
+
+#### Oak {#foundation-oak-6521}
+
+* 效能回歸修正 — 避免在類似條件上進行範圍查詢。 (OAK-9481)
+
+* 新Oak版本為1.22.20。
 
 #### Platform{#foundation-platform-6521}
 
@@ -484,4 +491,3 @@ The UberJar for [!DNL Experience Manager] 6.5.21.0可在以下網址取得： [M
 >* [[!DNL Experience Manager] 產品頁面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5檔案](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [訂閱Adobe優先產品更新](https://www.adobe.com/tw/subscription/priority-product-update.html)
-
