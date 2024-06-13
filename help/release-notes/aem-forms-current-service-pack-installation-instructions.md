@@ -1,13 +1,12 @@
 ---
 title: 適用於AEM Forms的AEM Forms修補程式安裝指示
 description: 適用於OSGi和JEE環境的AEM Forms Service Pack安裝指示
-exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
 solution: Experience Manager
 feature: Release Information
-role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+role: User, Admin, Architect, Developer
+source-git-commit: c3fd2b1198c7c856d6d68e9b9cfc711c941e657c
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1734'
 ht-degree: 6%
 
 ---
@@ -18,9 +17,9 @@ ht-degree: 6%
 
 | 產品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| 版本 | 6.5.20.0 |
+| 版本 | 6.5.21.0 |
 | 類型 | Service Pack發行 |
-| 日期 | 2024 年 2 月 29 日 |
+| 日期 | 2024年5月29日 |
 | 下載 URL | [最新AEM Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -69,9 +68,12 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 +++2. 下載必要的軟體
 
 * [JEE Service Pack上的AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+
+* [片段Servlet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
+
 * [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hant)
 * [Forms附加元件套件](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
-* [片段Servlet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
+
 
 +++
 
@@ -137,12 +139,11 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++5. 安裝servlet片段(AEM Service Pack 6.5.14.0或更舊版本)
++++5. 安裝servlet片段(AEM Service Pack 6.5.14.0或更舊版本) (**強制安裝**)
 
 >[!NOTE]
 >
-> * 如果您要從 **AEM Service Pack 6.5.15.0**，安裝 **servlet片段** 非必要。 針對版本 **AEM Service Pack 6.5.14.0** 或更早版本，必須安裝servlet片段。
-> * 您必須安裝 **servlet片段** 適用於所有應用程式伺服器，但不包括 **JBoss® EAP 7.4.0**.
+> * 如果您要從 **AEM Service Pack 6.5.15.0**，安裝 **servlet片段** 非必要。 針對版本 **AEM Service Pack 6.5.14.0** 或更早版本，這是 **必須安裝** servlet片段。
 
 
 若要下載並安裝servlet片段：

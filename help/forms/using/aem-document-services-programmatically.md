@@ -1,16 +1,15 @@
 ---
 title: 以程式設計方式使用AEM檔案服務
-description: 瞭解如何使用Document Services API對檔案執行數位簽署、加密和產生PDF檔案。
+description: 瞭解如何使用Document Services API進行數位簽署、加密、標籤及產生PDF檔案。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 feature: Document Services
-exl-id: f2e4f509-cca2-44a3-9231-e1954b0fefe3
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 341ad5a1f8c0e0cde95c97871da889c17868ef9b
 workflow-type: tm+mt
-source-wordcount: '6346'
+source-wordcount: '6409'
 ht-degree: 1%
 
 ---
@@ -5056,5 +5055,115 @@ File createPDF(File inputFile, String inputFilename, String pdfSettings, String 
    xmpDoc = null;
   }
  }
+}
+```
+
+### Doc公用程式服務 {#doc-utility-services}
+
+<!-- Document utilities with synchronous APIs help you <!--convert documents from PDF to XDP file format, Clone a PDF, Retrieve PDF properties (Redact), Multiclone PDF, Sanitise PDF for retrieving uninteneded hidden information, and tag PDF documents with lists and paragraphs. Details of each APIs are given below: -->
+
+#### 自動標籤PDF檔案 {#auto-tag-api}
+
+自動標籤PDFAPI可以透過新增標籤來協助存取PDF檔案。它支援以一個運運算元標籤文字區塊（段落）和專案符號清單。
+
+![自動標籤PDF檔案](assets/auto-tag-api.png)
+
+**語法**： `tag(Document inDoc)`
+
+**輸入引數**
+
+<table>
+ <tbody>
+  <tr>
+   <th>參數</th>
+   <th>說明</th>
+  </tr>
+  <tr>
+   <td><code>inDoc</code><br /> </td>
+   <td>包含PDF的檔案物件。<br /> </td>
+  </tr>
+ </tbody>
+</table>
+
+以下Java程式碼會使用清單和段落來標籤PDF檔案。
+
+```java
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * ___________________
+ *
+ * Copyright 2014 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+package com.adobe.fd.pdfutility.services.impl;
+import com.adobe.aem.transaction.core.ITransactionRecorder;
+import com.adobe.aemfd.docmanager.Document;
+import com.adobe.fd.jbig2.wrapper.api.JBIG2Wrapper;
+import com.adobe.fd.pdfutility.services.PDFUtilityService;
+import com.adobe.fd.pdfutility.services.client.*;
+import com.adobe.internal.pdftoolkit.core.exceptions.PDFIOException;
+import com.adobe.internal.pdftoolkit.core.exceptions.PDFInvalidDocumentException;
+import com.adobe.internal.pdftoolkit.core.exceptions.PDFSecurityException;
+import com.adobe.internal.pdftoolkit.pdf.document.*;
+import com.adobe.internal.pdftoolkit.services.pdftagging.structlib.StructLib;
+import com.adobe.internal.pdfutil.util.IOUtils;
+import com.adobe.internal.pdfutil.util.JBIG2CustomFilter;
+import com.day.cq.dam.handler.gibson.fontmanager.FontManagerService;
+import org.apache.felix.scr.annotations.Component;
+import org.apache.felix.scr.annotations.Reference;
+import org.apache.felix.scr.annotations.Service;
+import org.osgi.service.component.ComponentContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import java.io.IOException;
+import java.util.List;
+
+/**
+ * The following Java code example is used to tag the PDF document with lists and paragraphs.
+ */
+
+public PDFDocument tag(final Document inDoc) throws PDFUtilityException {
+        if (LOGGER.isTraceEnabled()) {
+            LOGGER.trace(pdfUtilService, "tag");
+}
+        if (inDoc == null) {
+            LOGGER.info(PDFUtilityMsgSet.UTL_S00_001_MISSING_DOCUMENT);
+            throw new PDFUtilityException(PDFUtilityMsgSet.getMessage(PDFUtilityMsgSet.UTL_S00_001_MISSING_DOCUMENT, null));
+}
+PDFDocument outDoc;
+        try {
+PDFOpenOptions openOptions = PDFOpenOptions.newInstance();
+            openOptions.setFontSet(fontManagerService.getPdfFontSet());
+            outDoc = IOUtils.toPDFDocument(inDoc, openOptions);
+StructLib.AutoTagDoc(outDoc);
+            LOGGER.info("Successfully tagged the PDF document.");
+} catch (PDFSecurityException e) {
+            LOGGER.error(PDFUtilityMsgSet.UTL_S00_015_PDF_SECURITY_ERROR);
+            throw new PDFUtilityException(PDFUtilityMsgSet.getMessage(PDFUtilityMsgSet.UTL_S00_015_PDF_SECURITY_ERROR, null), e);
+} catch (PDFIOException e) {
+            LOGGER.error(PDFUtilityMsgSet.UTL_S00_011_PDF_IO_ERROR);
+            throw new PDFUtilityException(PDFUtilityMsgSet.getMessage(PDFUtilityMsgSet.UTL_S00_011_PDF_IO_ERROR, null), e);
+} catch (PDFInvalidDocumentException e) {
+            LOGGER.info(PDFUtilityMsgSet.UTL_S00_003_INVALID_PDF_DOCUMENT);
+            throw new PDFUtilityException(PDFUtilityMsgSet.getMessage(PDFUtilityMsgSet.UTL_S00_003_INVALID_PDF_DOCUMENT, null), e);
+} catch (IOException e) {
+            LOGGER.error(PDFUtilityMsgSet.UTL_S00_016_PDF_GENERAL_ERROR);
+            throw new PDFUtilityException(PDFUtilityMsgSet.getMessage(PDFUtilityMsgSet.UTL_S00_016_PDF_GENERAL_ERROR, null), e);
+} finally {
+            if (LOGGER.isTraceEnabled()) {
+                LOGGER.trace(pdfUtilService, "tag");
+}
+}
+        return outDoc;
 }
 ```

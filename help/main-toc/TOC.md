@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5檔案瞭解其運作方式，以及軟體可為您做哪些事。
 breadcrumb-title: 使用手冊
 user-guide-title: AEM 6.5
-source-git-commit: 79ae35f35d33a072480bd9cde19274d89c8ef903
+source-git-commit: bd661b0a73046e7ccfb07a430983857f753ed442
 workflow-type: tm+mt
-source-wordcount: '7408'
+source-wordcount: '7421'
 ht-degree: 18%
 
 ---
@@ -621,6 +621,8 @@ ht-degree: 18%
       + [在最適化表單中建立和使用最適化Forms片段](/help/forms/using/adaptive-form-fragment-core-components.md)
       + [建立核心元件型最適化Forms的主題](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
       + [在最適化表單中建立和使用自訂函式](/help/forms/using/create-and-use-custom-functions.md)
+      + [規則編輯器](/help/forms/using/rule-editor-core-components.md)
+      + [在最適化表單核心元件中建立和使用自訂函式](/help/forms/using/create-and-use-custom-functions-core-components.md)
       + [針對以核心元件為基礎的最適化Forms建立並使用自訂錯誤處理常式](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
    + 最適化Forms — 基本製作 {#adaptive-forms-basic-authoring}
       + [使用最適化表單的最佳作法](/help/forms/using/adaptive-forms-best-practices.md)
@@ -903,7 +905,7 @@ ht-degree: 18%
          + [適用於AEM Forms on JEE的計費API清單](/help/forms/using/transaction-reports-billable-apis-jee.md)
          + [記錄自訂元件API的交易](/help/forms/using/record-transaction-custom-component-jee.md)
    + JEE上AEM Forms的管理員說明 {#administrator-help}
-      + 立即開始 {#get-started}
+      + 開始使用 {#get-started}
          + [一般AEM Forms設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
          + [更新部署的授權型別](/help/forms/using/admin-help/update-license-type-deployment.md)
       + 設定和管理網域 {#setup-manage-domains}

@@ -1,17 +1,16 @@
 ---
 title: 產生最適化表單的記錄檔案
-description: 說明如何為最適化表單的記錄檔案(DoR)產生範本。
+description: 說明如何為最適化表單產生記錄檔案(DoR)。
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms, Foundation Components
-exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: f8013aeedb79f900158df2291f7f641353bb4c05
 workflow-type: tm+mt
-source-wordcount: '4256'
+source-wordcount: '4308'
 ht-degree: 3%
 
 ---
@@ -315,47 +314,52 @@ ht-degree: 3%
 1. 選取 ![dortab](/help/forms/using/assets/dortab.png). 記錄檔案索引標籤隨即顯示。
 1. 選取呈現記錄檔案的預設範本或自訂範本。 如果您選取預設範本，記錄檔案的縮圖預覽會顯示在「範本」下拉式清單下方。
 
-   ![brandingtemplate](/help/forms/using/assets/brandingtemplate.png)
+   ![brandingtemplate](/help/forms/using/assets/brandingtemplateupdate.png)
 
    如果您選擇選取自訂範本，請在AEM Forms伺服器上瀏覽並選取XDP。 如果您想使用AEM Forms伺服器上尚未存在的範本，您必須先將XDP上傳至AEM Forms伺服器。
 
-1. 根據您選取預設或自訂範本，以下部分或全部屬性會出現在「記錄檔案」標籤中。 適當地指定下列專案：
+### 主版頁面屬性(#master-page-properties)
 
-   * **標誌影像**：您可以選取使用最適化表單中的標誌影像、從DAM中選擇影像，或從電腦上傳影像。
-   * **表單標題**
-   * **頁首文字**
-   * **免責宣告標籤**
-   * **免責宣告**
-   * **免責宣告文字**
-   * **輔色**：在檔案或記錄PDF中呈現標頭文字和分隔線的色彩
-   * **字型系列**：記錄檔案PDF中文字的字型系列
-   * **對於核取方塊與選項按鈕元件，僅顯示選取的值**
-   * **所選多個值的分隔符號**
-   * **包含未繫結至資料模型的表單物件**
-   * **從記錄檔案排除隱藏的欄位**
-   * **隱藏面板說明**
+根據您選取預設或自訂範本，下列部分或全部主版頁面屬性會顯示在「記錄檔案」標籤中，如上圖所示。 適當地指定下列專案：
 
-   如果您選取的自訂XDP範本包含多個主版頁面，則這些頁面的屬性會顯示在 **[!UICONTROL 內容]** 的區段 **[!UICONTROL 記錄檔案]** 標籤。
+* **標誌影像**：您可以選取使用最適化表單中的標誌影像、從DAM中選擇影像，或從電腦上傳影像。
+* **表單標題**
+* **頁首文字**
+* **免責宣告標籤**
+* **免責宣告**
+* **免責宣告文字**
 
-   ![主版頁面屬性](assets/master-page-properties.png)
+  <!--
+    * **Accent Color**: The color in which header text and separator lines are rendered in the document or record PDF
+    * **Font Family**: Font family of the text in the document of record PDF
+    * **For Check Box and Radio Button components, show only the selected values**
+    * **Separator for multiple selected value(s)**
+    * **Include form objects that are not bound to data model**
+    * **Exclude hidden fields from the document of record**
+    * **Hide description of panels**
+    -->
 
-   主版頁面的屬性包括標誌影像、頁首文字、表單標題、免責宣告標籤和免責宣告文字。 您可以將最適化表單或XDP範本屬性套用至記錄檔案。 AEM Forms預設會將範本屬性套用至記錄檔案。 您也可以定義主版頁面屬性的自訂值。 如需有關如何在記錄檔案中套用多個主版頁面的資訊，請參閱 [套用多個主版頁面至記錄檔案](#apply-multiple-master-pages-dor).
+  如果您選取的自訂XDP範本包含多個主版頁面，則這些頁面的屬性會顯示在 **[!UICONTROL 內容]** 的區段 **[!UICONTROL 記錄檔案]** 標籤。
 
-   >[!NOTE]
-   >
-   >如果您使用以6.3之前的Designer版本建立的調適型表單範本，為了使輔色和字型系列屬性發揮作用，請確定根子表單下的調適型表單範本中有以下內容：
+  ![主版頁面屬性](assets/master-page-properties.png)
 
-   ```xml
-   <proto>
-   <font typeface="Arial"/>
-   <fill>
-   <color value="4,166,203"/>
-   </fill>
-   <edge>
-   <color value="4,166,203"/>
-   </edge>
-   </proto>
-   ```
+  主版頁面的屬性包括標誌影像、頁首文字、表單標題、免責宣告標籤和免責宣告文字。 您可以將最適化表單或XDP範本屬性套用至記錄檔案。 AEM Forms預設會將範本屬性套用至記錄檔案。 您也可以定義主版頁面屬性的自訂值。 如需有關如何在記錄檔案中套用多個主版頁面的資訊，請參閱 [套用多個主版頁面至記錄檔案](#apply-multiple-master-pages-dor).
+
+  >[!NOTE]
+  >
+  >如果您使用以6.3之前的Designer版本建立的調適型表單範本，為了使輔色和字型系列屬性發揮作用，請確定根子表單下的調適型表單範本中有以下內容：
+
+  ```xml
+  <proto>
+  <font typeface="Arial"/>
+  <fill>
+  <color value="4,166,203"/>
+  </fill>
+  <edge>
+  <color value="4,166,203"/>
+  </edge>
+  </proto>
+  ```
 
 1. 若要儲存品牌變更，請選取「完成」。
 
@@ -413,8 +417,23 @@ ht-degree: 3%
 
 **表單層級設定**
 
-* **包括DoR中未繫結欄位：** 設定屬性時，記錄檔案中會包含來自結構描述型最適化表單的未繫結欄位。 預設為true。
-* **若隱藏自DoR排除欄位：** 設定屬性以排除隱藏欄位 [!UICONTROL 記錄檔案] 在提交表單時。 當您啟用時 [在伺服器上重新驗證](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)，伺服器會先重新計算隱藏欄位，然後再將這些欄位從 [!UICONTROL 記錄檔案].
+* **[!UICONTROL 基本]**
+   * **範本：** 您可以選取範本「預設」或「自訂」。
+     ![替代文字](image.png)
+   * **輔色：** 您可以預先定義 [!UICONTROL 記錄檔案].
+   * **字型系列：** 選取的字型型別 [!UICONTROL 記錄檔案] 文字。
+   * **包括DoR中未繫結欄位：** 設定屬性時，系統會將來自結構描述型最適化表單的未繫結欄位納入 [!UICONTROL 記錄檔案]. 預設為true。
+   * **若隱藏自DoR排除欄位：** 設定屬性以排除隱藏欄位 [!UICONTROL 記錄檔案] 在提交表單時。 當您啟用時 [在伺服器上重新驗證](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)，伺服器會先重新計算隱藏欄位，然後再將這些欄位從 [!UICONTROL 記錄檔案]
+* **[!UICONTROL 表單欄位屬性]**
+   * 如果勾選此選項 **對於核取方塊與選項按鈕元件，僅顯示選取的值**，只會產生含有選定值的DoR輸出。
+   * 您可以為多個選取的值選取「分隔符號」，也可以選擇任何其他分隔符號型別。
+   * 選項對齊方式
+      * 垂直
+      * 水平
+      * 與自適應表單相同
+     >[!NOTE]
+     > 「垂直」與「水準」對齊方式僅適用於「選項按鈕」與「核取方塊」
+* **[!UICONTROL 主版頁面屬性]** 按一下以取得以下專案的詳細資訊 [主版頁面屬性](#master-page-properties-master-page-properties)
 
 ## 在記錄檔案中套用分頁符號 {#apply-page-breaks-in-dor}
 

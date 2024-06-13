@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 004cf5b30fa3bd108a45a8b6322f2ee3d3085ee5
+source-git-commit: 371d325287c9d3d11d154c3121f001dad3f3b986
 workflow-type: tm+mt
-source-wordcount: '3050'
-ht-degree: 3%
+source-wordcount: '3842'
+ht-degree: 2%
 
 ---
 
@@ -44,6 +44,16 @@ ht-degree: 3%
 此版本中的部分主要功能和增強功能包括：
 
 * 新的、更易於使用伺服器對伺服器驗證的認證，取代現有的服務帳戶(JWT)認證。 (NPR-41994)
+
+* AEM Forms中的規則編輯器增強功能：
+   * 支援使用實作巢狀條件 `When-then-else` 功能。
+   * 驗證或重設面板和表單，包括欄位。
+   * 支援現代JavaScript功能，例如自訂函式中的let和箭頭函式（ES10支援）。
+* 適用於PDF協助工具的AutoTag API： OSGi上的AEM Forms現在支援新的AutoTag API，透過新增標籤（段落和清單）來增強協助工具標準的PDF。 它讓使用者更容易透過輔助技術存取PDF。
+* 16位元PNG支援：PDF Generator的ImageToPdf服務現在支援16位元色彩深度的PNG轉換。
+* 將成品套用至XDP中的個別文字區塊： Forms Designer中引進了一項新功能，可讓使用者在XDP檔案中的個別文字區塊上設定設定，以控制在產生的PDF中被視為成品的元素，例如頁首和頁尾，以便輔助技術可加以存取。 主要功能包括將文字區塊標示為成品，並將這些設定內嵌於XDP中繼資料。 Forms Output服務會在產生PDF期間套用這些設定，以確保正確的PDF/UA標籤。
+* AEM Forms Designer已通過認證 `GB18030:2022` 標準。 透過此認證，現在Forms Designer支援中文Unicode字元集，可在所有可編輯的欄位和對話方塊中輸入中文字元。
+
 
 ### [!DNL Assets]
 
@@ -121,7 +131,11 @@ ht-degree: 3%
 
 <!-- #### Launches{#sites-launches-6521} -->
 
+
+<!-- ### [!DNL Forms]-->
+
 <!-- DELETED MAY 22, 2024 FROM TOTAL RELEASE CANDIDATE ISSUES * The `sourceRootResource` configured in the Launch configuration within CRXDE Lite points to content that no longer exists, leading to a malfunction when attempts are made to delete launches. Delete launches even if the page is deleted or if the path is not the same. (SITES-20750) -->
+
 
 #### MSM — 即時副本{#sites-msm-live-copies-6521}
 
@@ -166,7 +180,54 @@ ht-degree: 3%
 
 ### [!DNL Forms]{#forms-6521}
 
-中的修正 [!DNL Experience Manager] Forms會透過單獨的附加元件套件在排程一週後傳送 [!DNL Experience Manager] Service Pack發行日期。 在此案例中，AEM 6.5.21.0 Forms附加元件套件發行預計於2024年6月13日（星期四）推出。 此部分會在發行後新增Forms修正和增強功能的清單。
+#### [!DNL Adaptive Forms] {#forms-6520}
+
+* 從Adobe Experience Manager發佈執行個體提交最適化表單至Adobe Experience Manager Workflow時，工作流程無法儲存附件。 (FORMS-14209)
+* 當使用者在OSGi上按一下AEM Forms Service Pack 15 (6.5.15.0)上的「列印至PDF」按鈕時，使用者端驗證會失敗，這由開發人員工具主控台視窗中顯示的錯誤訊息顯而易見。 (FORMS-14029)
+* 當使用者在AEM 6.5 Forms Service Pack 17 (6.5.17.0)、AEM 6.5 Forms Service Pack 18 (6.5.18.0)或AEM 6.5 Forms Service Pack 19 (6.5.19.0)上提交表單時，「感謝您」訊息的翻譯無法正常運作。 雖然在字典中正確轉譯了訊息。 (FORMS-13846)
+* 當使用者預覽具有日期選擇器元件的表單時，日期選擇器欄位與其他表單欄位不對齊。 (FORMS-13763)
+* 當環境AEM Forms Service Pack 19 (6.5.19.0)的使用者呼叫API以格式化數字時，格式化的數字未與各自的地區設定對齊，並且貨幣符號未正確顯示。 無論地區設定引數設定為&quot;de_DE&quot;或&quot;en_US&quot;，該問題都持續存在。 (FORMS-13759)
+* 當環境AEM Forms Service Pack 19 (6.5.19.0)上的使用者使用Img2Pdf PDFG服務將16位元PNG轉換為PDF時，它會失敗並且無法「使用Acrobat影像轉換」服務。 (FORMS-13754)
+* 在AEM Forms Service Pack 19 (6.5.19.1)上，當使用者在AEM forms JEE的管理網頁介面的服務/PDF Generator/Adobe PDF設定區段中上傳現有的JobOptions檔案時，上傳會失敗並顯示錯誤訊息(FORMS-13597)：
+  `"An error has occurred while processing your request. Please use the breadcrumb links to navigate to another page."`
+* 當使用者從AEM Forms Service Pack 15 (6.5.15.0)移轉到AEM Forms Service Pack (6.5.17.0)或AEM Forms Service Pack (6.5.19.0)時，FD金鑰會重複，導致表單無法正確翻譯。 (FORMS-13461)
+* 當使用者將Dispatcher置於AMS上的部署拓撲所支援的作者之前時，指派任務提交會擱置/失敗。 (FORMS-8010)
+* 協助工具相關修正：
+   * 「formsanddocuments」頁面上的圖示現在可根據ANDI標準存取。 (FORMS-13094)
+   * 使用者可以透過鍵盤存取工具列來儲存或編輯編輯頁面上的內容，工具列已根據ANDI標準而增強。 (FORMS-13102)
+   * 可依照ANDI標準存取「必要或必要」表單欄位。 (FORMS-13097)
+
+* 當使用者嘗試檢視頁面載入上的表單時，它無法呈現。 (FORMS-13594)
+* 在Internet Explorer相容模式下，日期輸入欄位元件在Microsoft Edge上無法正常運作。 (FORMS-13170)
+* 修正時已停止的電子郵件通知（含附件）無法傳送 [額外步驟以使用含附件的電子郵件](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) 會在伺服器上執行。 (FORMS-14227)
+* 在Service Pack 18 (6.5.18.0)上的AEM Forms Workspace上，當使用者對任何上傳的檔案發表評論時，會導致檔案檔案損毀。 (FORMS-13735)
+* 在AEM Forms Service Pack 18 (6.5.18.0)、AEM Forms Service Pack 19 (6.5.19.0)或AEM Forms Service Pack 20 (6.5.20.0)上，當使用者嘗試從側面板（透過切換）資產索引標籤在編輯介面中搜尋調適型表單時，搜尋失敗。 (FORMS-14117)
+* 當使用者編輯以德文建立並翻譯成英文的表單時，這會導致「預覽」和「編輯」模式之間的語言顯示不一致。 這會導致RadioButton和Checkbox元件在「編輯」模式期間以英文顯示，而在「預覽」模式期間以德文正確顯示。 (FORMS-13910)
+* 處理清除處理工具因錯誤而失敗 `NoClassDefFoundError: org/omg/CORBA/UserException`. (FORMS-13751)
+* 當使用者嘗試使用內嵌容器將調適型表單(AF)內嵌在網頁中(外部或在AEM Sites上)時，調適型表單指南容器會為內嵌表單引入具有role=&quot;main&quot;的ARIA LABEL。 根據ARIA准則，每個頁面應該只有一個角色=&quot;main&quot;。 因此，當使用者為其頁面的主要內容新增另一個role=&quot;main&quot;時，即會標示為協助工具問題。 (FORMS-13538)
+* 在AEM Forms Service Pack 19 (6.5.19.0)上，在最適化表單中使用下拉式清單時，包含預留位置文字的下拉式清單會保留id=&quot;emptyValue&quot;的值。 因此，如果表單有多個下拉式元件，每個元件的id=&quot;emptyValue&quot;會不符合ARIA准則。 (FORMS-13370)。
+* 當使用者在透過XML提交資料後重新載入互動式通訊時，產生的PDF中會出現文字區塊之間的空格。 (FORMS-13481)
+* 執行ConfigurationManager時遺失「準備DSC部署步驟」畫面的IPH。 (FORMS-10699)
+* 當使用者新增字典以翻譯包含現有字典的表單時，舊翻譯會失效。 發生下列問題：(FORMS-13576)
+   * 有些欄位無法填入轉譯的資料。
+   * 有些欄位不會翻譯成新語言，即使資料已成功儲存到字典中也是如此。
+
+#### [!DNL Forms Designer] {#forms-desgner-6520}
+
+* 當使用者在環境AEM Forms Service Pack 19 (6.5.19.0)上使用AEM Forms Designer將新表格新增到現有表單時，它會當機。 (LC-3921978)
+* 當使用者在Linux環境中呈現最適化表單時，欄位元件之間會出現額外的空間。 (LC-3921957)
+* 當使用者使用輸出服務將XTG檔案轉換為PostScript格式時，它會失敗並出現錯誤：           `(AEM_OUT_001_003:Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE)`. (LC-3921720)
+
+  若要解決此問題：檢查資料是否包含特殊字元，例如零寬度空格(0x200b)。 如果是，則透過新增標籤來使用標幟 `<behaviorOverride>patch-LC3921720:1</behaviorOverride>` XCI檔案中的 [custom_xfa.xci](/help/forms/using/assets/custom_xfa.xci) 檔案。
+
+* 在Linux環境中使用AEM Forms Service Pack 18 (6.5.18.0)時，XMLFM會在不支援AVX /AVX2指令的CPU （搭載AMD處理器）上當機。 (LC-3921718)
+* 當使用者使用Forms Output服務從XDP建立PDF時，使用者無法在XDP中的「個別文字區塊」上設定「設定」來控制什麼「成品」。 (LC-3921954)
+
+<!--
+Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.21.0 Forms add-on package release is scheduled for Thursday, June 13, 2024. A list of Forms fixes and enhancements is added to this section post the release.
+
+-->
+
 
 <!-- #### [!DNL Adaptive Forms]
 
@@ -181,12 +242,12 @@ ht-degree: 3%
 
 #### Apache Felix {#foundation-apachefelix-6521}
 
+
 * AEM 6.5 Service Pack 19 (SP19)的升級問題，其中在SP19安裝後，對Apache Felix發出的未經授權請求遺失應用程式伺服器內容根路徑。 Apache Felix Web Management Console 4.9.8的更新。 (NPR-41933)
 
 #### 行銷活動{#foundation-campaign-6521}
 
 * AEM 6.5 Service Pack 15會產生持續性錯誤記錄，其中包含重要的專案。 已報告下列問題：
-
    * 路徑中缺少資源時出現404 INFO錯誤 `/libs/granite/ui/content/shell/start.html`
    * 由於下列原因，未攔截到SlingException的錯誤記錄專案 `NullPointerException` 在 `CampaignsDataSourceServlet.java:147`
 
@@ -199,6 +260,7 @@ ht-degree: 3%
 <!-- #### Communities {#foundation-communities-6521}
 
 * U -->
+
 
 <!-- #### Content distribution{#foundation-content-distribution-6521}
 
@@ -457,19 +519,24 @@ The UberJar for [!DNL Experience Manager] 6.5.21.0可在以下網址取得： [M
 
 * SITES-17934 - 內容片段 - 大型片段樹有 DoS 保護，因此預覽失敗。請參閱 [有關預設GraphQL查詢執行器設定選項的知識庫文章](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-23945)
 
+<!--
+
+### Known issues for AEM Forms {#known-issues-aem-forms-6521}
+-->
+
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6521}
 
-* 在以XDP為基礎且核取方塊上有內嵌指令碼的最適化表單中，此類核取方塊之後的元素不會執行指令碼。 (FORMS-14244)
-* 使用者無法建立通訊管理信件。 當使用者建立字母時，出現說明錯誤&quot;`Object Object`「」出現，且字母未建立。 配置圖縮圖也無法載入字母建立畫面上。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) 以解決問題。 (FORMS-13496)
-* 互動式通訊服務會建立PDF檔案，但使用者的資料不會自動填入表單欄位中。 預填服務未如預期運作。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) 以解決問題。 (FORMS-13413， FORMS-13493)
-* 無法載入automated forms conversion服務的檢閱和修正(RnC)編輯器。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) 以解決問題。 (FORMS-13491)
-* 從AEM 6.5 Forms Service Pack 18 (6.5.18.0)或AEM 6.5 Forms Service Pack 19 (6.5.19.0)更新至AEM 6.5 Forms Service Pack 20 (6.5.20.0)後，使用者會遇到JSP編譯錯誤。 他們無法開啟或建立最適化表單，且其他AEM介面(如頁面編輯器、AEM Forms UI和AEM Workflow編輯器)發生錯誤。 您可以安裝 [最新AEM 6.5 Form Service Pack 20 (6.5.20.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) 以解決問題。 (FORMS-13492)
-* 在具有編輯/顯示模式的欄位中，在快顯Widget中瀏覽月份時，日期選擇器Widget中的列會被截斷。 (FORMS-13620)
-* 嘗試在後端使用DOR （記錄檔案）服務時，表單提交失敗。 遇到的錯誤訊息為：「提交動作無法完成，因為未正確指派表單資源。」 (FORMS-13798)
-* 從Adobe Experience Manager發佈執行個體提交最適化表單至Adobe Experience Manager Workflow時，工作流程無法儲存附件。 (FORMS-14209)
-* 安裝AEM 6.5 Forms Service Pack 20套件(適用於SP20的AEM Forms附加元件套件)時，AEM Sites使用者介面(UI)效能大幅降低。 (FORMS-13791)
-* 預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 (CQDOC-21355)
-* 最適化Forms可讓您搭配ECMAScript 5或更早版本使用自訂函式。 當自訂函式使用ECMAScript第6版或更新版本時，例如 `let`， `const`或箭頭功能，規則編輯器可能無法正確開啟。
+
+* 安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果您發現Geode JARs重複專案 `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` 在 `<AEM_Forms_Installation>/lib/caching/lib` 資料夾(FORMS-14926)。
+
+  執行以下步驟以解決問題：
+
+   1. 如果定位器與伺服器正在執行，請以指定的順序停止它們。
+   1. 在管理員模式下執行修補程式安裝程式來重新安裝修補程式（重要）。
+   1. 確認只有Geode jar具有 `version 1.15.1.2` 存在。
+
+  >[!NOTE]
+  > 如果只有Geode jar具有，則不需要採取任何動作 `version 1.15.1.2` 存在。
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 
