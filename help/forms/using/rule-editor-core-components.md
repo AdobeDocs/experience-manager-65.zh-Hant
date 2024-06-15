@@ -4,20 +4,19 @@ description: 最適化Forms規則編輯器可讓您新增動態行為並將複�
 feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
-source-git-commit: 7e9b4cc233d4040faf61241b3cbe52d26bfdba1e
+source-git-commit: f633fdfda531cc29ce6274e0367708cc4909a0cd
 workflow-type: tm+mt
-source-wordcount: '5599'
+source-wordcount: '5588'
 ht-degree: 0%
 
 ---
 
 # 將規則新增至最適化表單核心元件 {#adaptive-forms-rule-editor}
 
-<span class="preview"> 本文包含部分搶鮮版功能的內容。 這些搶鮮版功能只能透過我們的 [發行前通道](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/release-notes#forms). 搶鮮版計畫下的功能包括：
+本文包含最適化Forms核心元件的最新規則編輯器功能，包括：
 * 支援使用When-then-else功能實作巢狀條件
 * 驗證或重設面板和表單，包括欄位
 * 支援現代 JavaScript 功能，例如自訂函數中的 let 和 arrow 函數 (ES10 支援)。
-</span>
 
 規則編輯器功能可協助表單業務使用者和開發人員在調適型表單物件上編寫規則。 這些規則會根據表單上的預設條件、使用者輸入和使用者動作，定義要在表單物件上觸發的動作。 它有助於進一步簡化表單填寫體驗，確保準確性和速度。
 
@@ -269,27 +268,23 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
 
 將物件A的值設為：
 
-（字串 ABC）或
-（物件 屬性 物件 C 的 X）或
-（來自函數的值）或
-（值來自數學運算式）或
-（數據模型服務的輸出值）;
+（字串ABC） OR （物件C的物件屬性X） OR （函式的值） OR （數學運算式的值） OR （資料模型服務的輸出值）；
 
-時間（選擇）：
+當（選擇性）：
 
 （條件 1 和條件 2 和條件 3） 為 TRUE;
 
-下列範例會選取 `Question2` 作為 `True` 並設定 `Result` 作為 `correct`.
+下面的示例選擇 as `True` 的值`Question2`並設置 as `correct`的值`Result`。
 
 ![Set-value-web-service](assets/set-value-web-service.png)
 
-使用表單資料模型服務的設定值規則範例。
+使用表單數據模型服務設定值 規則的範例。
 
 ### [!UICONTROL 顯示] {#show}
 
 使用 **[!UICONTROL 顯示]** 規則型別，您可以撰寫規則來根據是否滿足條件來顯示或隱藏表單物件。 若條件未滿足或傳回，Show rule型別也會觸發Hide動作 `False`.
 
-典型的顯示 規則結構如下：
+典型的Show規則結構如下：
 
 `Show Object A;`
 
@@ -453,25 +448,25 @@ Users in the forms-power-users group can access code editor. For other users, co
 1. Click **[!UICONTROL Save]**.
 -->
 
-### E. 完成和取消按鈕 {#done-and-cancel-buttons}
+### E.完成和取消按鈕 {#done-and-cancel-buttons}
 
-**[!UICONTROL 完成]**&#x200B;按鈕用于儲存規則。您可以保存不完整的規則。 但是，不完整無效並且不會運行。 當您下次從同一表單物件啟動規則 編輯者時，會列出表單物件上已保存的規則。 您可以管理該視圖中的現有規則。 具體操作，請參見 [管理規則](rule-editor.md#p-manage-rules-p)。
+此 **[!UICONTROL 完成]** 按鈕可用來儲存規則。 您可以儲存不完整的規則。 但是，不完整無效並且不會運行。 當您下次從同一表單物件啟動規則 編輯者時，會列出表單物件上已保存的規則。 您可以管理該視圖中的現有規則。 具體操作，請參見 [管理規則](rule-editor.md#p-manage-rules-p)。
 
 **[!UICONTROL 取消]**&#x200B;按鈕會放棄您對規則所做的任何更改並關閉規則 編輯者。
 
-## 寫入規則 {#write-rules}
+## 編寫規則 {#write-rules}
 
-您可以使用視覺化規則編輯器來撰寫規則 <!-- or the code editor. When you launch the rule editor the first time, it opens in the visual editor mode. You can switch to the code editor mode and write rules. However, if you write or modify a rule in code editor, you cannot switch to the visual editor for that rule unless you clear the code editor. When you launch the rule editor next time, it opens in the mode that you used last to create rule. -->
+您可以使用可視化規則 編輯者編寫規則 <!-- or the code editor. When you launch the rule editor the first time, it opens in the visual editor mode. You can switch to the code editor mode and write rules. However, if you write or modify a rule in code editor, you cannot switch to the visual editor for that rule unless you clear the code editor. When you launch the rule editor next time, it opens in the mode that you used last to create rule. -->
 
 讓我們先來看看如何使用視覺化編輯器來撰寫規則。
 
 ### 使用視覺化編輯器 {#using-visual-editor}
 
-讓我們了解如何使用以下示例表單在可視化編輯者中創建規則。
+讓我們瞭解如何使用下列範例表單在視覺化編輯器中建立規則。
 
 ![Create-rule-example](assets/create-rule-example.png)
 
-範例貸款申請表單中的「貸款需求」區段要求申請人指定其婚姻狀況、薪資，如果已婚，則指定其配偶的薪資。 規則會根據使用者輸入來計算貸款資格金額，並顯示在「貸款資格」欄位中。 套用下列規則以實施情境：
+示例貸款應用程式表格中的「貸款要求」部分要求申請人指定其婚姻狀況、工資，如果已婚，則指定其配偶的工資。 規則會根據使用者輸入來計算貸款資格金額，並顯示在「貸款資格」欄位中。 套用下列規則以實施情境：
 
 * 配偶的「薪資」欄位僅在「婚姻狀況」為「已婚」時顯示。
 * 貸款資格金額為薪資總額的50%。
@@ -564,9 +559,9 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 1. 接著，在運算式欄位周圍反白的區域中選取，然後選取 **[!UICONTROL 延伸運算式]**.
 
-   ![write-rules-visual-編輯者-13](assets/write-rules-visual-editor-13-cc.png)
+   ![write-rules-visual-editor-13](assets/write-rules-visual-editor-13-cc.png)
 
-   在擴展運算式欄位中，從“選擇運算元&#x200B;]**”欄位中選擇“除以]****[!UICONTROL ”，從**[!UICONTROL “選擇選項&#x200B;]**”字段中選擇**[!UICONTROL **[!UICONTROL “數位]**”。然後，在數位欄位中指定 **[!UICONTROL 2]** 。
+   在延伸運算式欄位中，選取 **[!UICONTROL 除以]** 從 **[!UICONTROL 選取運運算元]** 欄位和 **[!UICONTROL 數字]** 從 **[!UICONTROL 選取選項]** 欄位。 然後，指定 **[!UICONTROL 2]** 在數字欄位中。
 
    ![write-rules-visual-編輯者-14](assets/write-rules-visual-editor-14-cc.png)
 
@@ -574,11 +569,11 @@ Users in the forms-power-users group can access code editor. For other users, co
    >
    >您可以使用“選擇選項”字段中的元件、函數、數學表達式和屬性值來創建複雜表達式。
 
-   接著，建立條件，當傳回True時，執行運算式。
+   下一個，創建一個條件，當返回 True 時，運算式將執行該條件。
 
-1. 選取 **[!UICONTROL 新增條件]** 新增When陳述式。
+1. 選擇「 **[!UICONTROL 添加條件]** 」以添加 When 語句。
 
-   ![write-rules-visual-editor-15](assets/write-rules-visual-editor-15-cc.png)
+   ![write-rules-visual-編輯者-15](assets/write-rules-visual-editor-15-cc.png)
 
    在When陳述式中：
 
@@ -588,7 +583,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 
    * 選取其他中的字串 **[!UICONTROL 將物件放下或選取這裡]** 欄位並指定 **[!UICONTROL 已婚]** 在 **[!UICONTROL 輸入字串]** 欄位。
 
-   規則最後會顯示在規則編輯器中，如下所示。  ![write-rules-visual-editor-16](assets/write-rules-visual-editor-16-cc.png)
+   規則最後會顯示在規則編輯器中，如下所示。  ![write-rules-visual-編輯者-16](assets/write-rules-visual-editor-16-cc.png)
 
 1. 選取 **[!UICONTROL 完成]**. 這會儲存規則。
 
@@ -856,7 +851,7 @@ var c = {
 
 ![複雜運算式](assets/complexexpression.png)
 
-您也可以拖放規則中的條件以進行編輯。 選取並將滑鼠懸停在控點上( ![控點](assets/drag-handle.svg))。 指標變為手形符號（如下所示）后，將條件拖放到規則內的任何位置。 規則結構將發生變化。
+您也可以拖放規則中的條件以進行編輯。 選取並將滑鼠懸停在控點上( ![控點](assets/drag-handle.svg))。 指標變成如下所示的手形符號後，請將條件拖放至規則內的任何位置。 規則結構會變更。
 
 ![拖放](assets/drag-and-drop.png)
 
@@ -866,7 +861,7 @@ var c = {
 
 下面是一個示例條件，如果房屋的抵押已經獲得，則顯示靜態文本物件，用戶通過填寫日期字段來表示。
 
-當使用者填寫的屬性按揭日期為過去時，最適化表單會顯示收入計算的相關備註。 下列規則會比較使用者填寫的日期與目前日期，如果使用者填寫的日期早於目前日期，則表單會顯示文字訊息（名為「收入」）。
+當用戶填寫的屬性的抵押日期是過去的日期時，自適應表格會顯示有關收入計算的註釋。 以下規則將用戶填寫的日期與當前日期進行比較，如果用戶填寫的日期早於當前日期，則表單將顯示文本消息（名為“收入”）。
 
 ![日期運算式條件](assets/dateexpressioncondition.png)
 
@@ -874,11 +869,11 @@ var c = {
 
 ![符合日期運算式條件](assets/dateexpressionconditionmet.png)
 
-## 數量比較條件 {#number-comparison-conditions}
+## 數字比較條件 {#number-comparison-conditions}
 
 規則編輯器可讓您建立比較兩個數字的條件。
 
-如果應徵者在目前地址停留的月數少於36，則會顯示靜態文字物件的範例條件如下。
+下面是一個示例條件，如果申請人在當前位址停留的月數少於 36，則顯示靜態文本物件。
 
 ![數字比較條件](assets/numbercomparisoncondition.png)
 

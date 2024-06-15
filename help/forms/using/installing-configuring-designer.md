@@ -10,9 +10,9 @@ role: Admin, User, Developer
 feature: Forms Designer
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 09eae6e3550e9e8505c042e23d6569971841d441
+source-git-commit: 6ef7e07f0b83b76981240533122aee8c3ee298c7
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -108,8 +108,11 @@ msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-***
 
 ## 常見問題 {#fandq}
 
-* **使用者可以直接升級至64位元嗎？**
-   * 是的，使用者可以直接升級至64位元設計工具。 若要升級，請安裝 [SP19](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/Designer-Patch/sp19_x64/aemforms_designer_6_5_0_wwe_win.zip) designer完整安裝程式，並套用後續的designer修補程式版本。
+* **使用者可以直接升級或安裝64位元設計工具嗎？**
+   * 是的，使用者可以直接升級或安裝64位元設計工具。 若要升級，請安裝 [SP19](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/Designer-Patch/sp19_x64/aemforms_designer_6_5_0_wwe_win.zip) designer完整安裝程式，並套用後續的designer修補程式版本。
+
+     >[!NOTE]
+     > 在升級為64位元設計工具之前，請先解除安裝32位元設計工具（如果存在）。
 
 * **使用者可以在系統上同時安裝32位元和64位元嗎？**
    * 否，32位元和64位元安裝無法在同一部電腦上運作。 使用者可以有32位元設計工具或64位元設計工具。
@@ -117,6 +120,6 @@ msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-***
 * **如何檢查使用者是否使用64位元設計工具或32位元設計工具？**
    * 檢查Forms Designer版本的方法有兩種：
 
-      1. 開啟「設計工具」，移至「說明」，按一下「關於設計工具」，您會看到設計工具版本資訊以及位元資訊，例如，您會看到64位元寫在結尾處，如下所示：
+      1. 開啟「設計工具」，移至「說明」，按一下「關於設計工具」，您會看到設計工具版本資訊以及位元資訊，例如，您會看到64位元寫入版本結尾處，如下所示：
          `6.5.21.20240522.1.161 | 64 bit`
-      1. 開啟設計工具，左上角會出現一個品牌圖示，其中包含產品名稱的64位元資訊。
+      1. 開啟Designer，左上角會顯示一個品牌圖示，其中包含產品名稱的64位元資訊。
