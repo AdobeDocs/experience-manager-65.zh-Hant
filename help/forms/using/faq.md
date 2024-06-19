@@ -10,7 +10,7 @@ feature: HTML5 Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
 workflow-type: tm+mt
 source-wordcount: '2007'
 ht-degree: 0%
@@ -173,7 +173,6 @@ ht-degree: 0%
    答案：HTML5表單不支援浮動欄位的顯示模式。
 
 1. HTML5 Forms中「日期」欄位的格式為何？
-
 答案：「日期」欄位接受ISO格式YYYY-MM-DD。 如果您以其他格式指定日期，在使用者以定位點移出欄位之前，「日期欄位」不接受格式。
 
 ### 指令碼 {#scripting}

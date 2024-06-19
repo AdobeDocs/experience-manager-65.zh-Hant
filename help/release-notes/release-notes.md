@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: e3219d57e069e546b177015e675666a8b927fb49
+source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
 workflow-type: tm+mt
-source-wordcount: '3825'
+source-wordcount: '3907'
 ht-degree: 2%
 
 ---
@@ -41,18 +41,22 @@ ht-degree: 2%
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
+### [!DNL Forms]
+
 此版本中的部分主要功能和增強功能包括：
 
-* 新的、更易於使用伺服器對伺服器驗證的認證，取代現有的服務帳戶(JWT)認證。 (NPR-41994)
-
-* AEM Forms中的規則編輯器增強功能：
+* **支援Oauth認證**：更易於使用伺服器對伺服器驗證的新認證，取代現有的服務帳戶(JWT)認證。 (NPR-41994)
+* **AEM Forms中的規則編輯器增強功能**：
    * 支援使用實作巢狀條件 `When-then-else` 功能。
    * 驗證或重設面板和表單，包括欄位。
    * 支援現代JavaScript功能，例如自訂函式中的let和箭頭函式（ES10支援）。
-* 適用於PDF協助工具的AutoTag API： OSGi上的AEM Forms現在支援新的AutoTag API，透過新增標籤（段落和清單）來增強協助工具標準的PDF。 它讓使用者更容易透過輔助技術存取PDF。
-* 16位元PNG支援：PDF Generator的ImageToPdf服務現在支援16位元色彩深度的PNG轉換。
-* 將成品套用至XDP中的個別文字區塊： Forms Designer現在可讓使用者在XDP檔案中的個別文字區塊上設定設定。 此功能可讓您控制在產生的PDF中被視為人工因素的元素。 這些元素（例如頁首和頁尾）可供輔助技術存取。 主要功能包括將文字區塊標示為成品，並將這些設定內嵌於XDP中繼資料。 Forms Output服務會在產生PDF期間套用這些設定，以確保正確的PDF/UA標籤。
-* AEM Forms Designer已通過認證 `GB18030:2022` 標準。 透過此認證，Forms Designer現在支援中文Unicode字元集，可讓您在所有可編輯的欄位和對話方塊中輸入中文字元。
+* **AutoTag API提供PDF協助工具**：OSGi上的AEM Forms現在支援新的AutoTag API，可新增標籤（段落和清單）來增強協助工具標準的PDF。 它讓使用者更容易透過輔助技術存取PDF。
+* **16位元PNG支援**：PDF Generator的ImageToPdf服務現在支援以16位元色彩深度轉換PNG。
+* **將成品套用至XDP中的個別文字區塊**：Forms Designer現在可讓使用者在XDP檔案中的個別文字區塊上設定設定。 此功能可讓您控制在產生的PDF中被視為人工因素的元素。 這些元素（例如頁首和頁尾）可供輔助技術存取。 主要功能包括將文字區塊標示為成品，並將這些設定內嵌於XDP中繼資料。 Forms Output服務會在產生PDF期間套用這些設定，以確保正確的PDF/UA標籤。
+* **AEM Forms Designer已通過認證 `GB18030:2022` 標準**：使用 `GB18030:2022` 認證，現在Forms Designer支援中文Unicode字元集，可讓您在所有可編輯的欄位和對話方塊中輸入中文字元。
+* **JEE伺服器支援WebToPDF路由**：除了Webkit和WebCapture （僅限Windows）路由外，PDF Generator服務現在還支援WebToPDF路由，以便將HTML檔案轉換為JEE上的PDF檔案。 雖然WebToPDF路由已經可在OSGi上使用，但現在已經擴充以同時包含在JEE中。 在JEE和OSGi平台上，PDF Generator服務支援跨不同作業系統的下列路由：
+   * **Windows**：Webkit、WebCapture、WebToPDF
+   * **Linux**：Webkit、WebToPDF
 
 
 ### [!DNL Assets]
@@ -527,16 +531,15 @@ The UberJar for [!DNL Experience Manager] 6.5.21.0可在以下網址取得： [M
 ### AEM Forms的已知問題 {#known-issues-aem-forms-6521}
 
 
-* 安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果您發現Geode jar有重複專案 `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` 在 `<AEM_Forms_Installation>/lib/caching/lib` 資料夾(FORMS-14926)。
+* 安裝AEM Forms JEE Service Pack 21 (6.5.21.0)後，如果您發現Geode jar有重複專案 `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` 在 `<AEM_Forms_Installation>/lib/caching/lib` 資料夾(FORMS-14926)，請執行以下步驟來解決問題：
 
-  執行以下步驟以解決問題：
+   1. 停止儲位（如果它們正在執行）。
+   1. 停止AEM伺服器。
+   1. 前往 `<AEM_Forms_Installation>/lib/caching/lib`.
+   1. 移除所有Geode修補程式檔案，但 `geode-*-1.15.1.2.jar`. 確認只有Geode jar具有 `version 1.15.1.2` 存在。
+   1. 在管理員模式中開啟命令提示字元。
+   1. 使用安裝Geode修補程式 `geode-*-1.15.1.2.jar` 檔案。
 
-   1. 如果定位器與伺服器正在執行，請以指定的順序停止它們。
-   1. 在管理員模式下執行修補程式安裝程式來重新安裝修補程式（重要）。
-   1. 確認只有Geode jar具有 `version 1.15.1.2` 存在。
-
-  >[!NOTE]
-  > 如果只有Geode jar具有，則不需要採取任何動作 `version 1.15.1.2` 存在。
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 

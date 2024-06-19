@@ -7,9 +7,9 @@ feature: Adaptive Forms, Foundation Components, Core Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
 workflow-type: tm+mt
-source-wordcount: '5504'
+source-wordcount: '5538'
 ht-degree: 1%
 
 ---
@@ -63,6 +63,7 @@ Adobe Experience Manager (AEM)表單可協助您將複雜的交易轉換為簡�
 設定AEM專案後，定義製作和自訂最適化表單範本和元件的策略。
 
 * 調適型表單範本是專門的AEM頁面，可定義調適型表單的結構和頁首頁尾資訊。 範本有預先設定的最適化表單版面、樣式和基本結構。 AEM Forms提供現成可用的範本和元件，供您製作調適型表單。 不過，您可以根據需求建立自訂範本和元件。 建議您收集最適化表單中所需其他範本和元件的需求。 如需詳細資訊，請參閱 [自訂最適化表單和元件](/help/forms/using/adaptive-forms-best-practices.md#customize-components).
+* 建議使用表單管理器使用者介面而不是CRX封裝管理器使用者介面上傳表單封裝，因為透過CRX封裝管理器上傳封裝有時可能會導致異常。
 * AEM Forms可讓您根據下清單單模型建立最適化表單。 表單模型可作為表單與AEM系統之間資料交換的介面，並為最適化表單內外資料流提供XML型結構。 此外，表單模型會以結構描述和XFA限制的形式對調適型表單施加規則和限制。
 
    * **無**：使用此選項建立的最適化表單不使用任何表單模型。 從此類表單產生的資料 XML 具有包含欄位和對應值的單層結構。
