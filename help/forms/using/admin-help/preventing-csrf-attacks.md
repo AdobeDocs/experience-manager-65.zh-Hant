@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: e17fc114-eba5-4e1b-8e70-ad6af7008018
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Security
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
@@ -31,8 +32,8 @@ ht-degree: 0%
 
 **Null查閱者：** 當您開啟新的瀏覽器視窗或Tab，然後輸入地址並按Enter鍵時，反向連結為Null。 此請求是全新請求，並非源自上層網頁；因此，此請求沒有反向連結。 Forms伺服器可以從以下位置接收Null反向連結：
 
-* 在Acrobat的SOAP或REST端點上提出的請求
-* 在AEM Forms SOAP或REST端點上提出HTTP請求的任何案頭使用者端
+* 在SOAP或Acrobat的REST端點上提出的請求
+* 在AEM forms SOAP或REST端點上提出HTTP請求的任何案頭使用者端
 * 開啟新的瀏覽器視窗並輸入任何AEM forms web應用程式登入頁面的URL時
 
 在SOAP和REST端點上允許Null反向連結。 在所有URI登入頁面（例如/adminui和/contentspace）及其對應的對應資源上也允許Null反向連結。 例如， /contentspace的對應servlet是/contentspace/faces/jsp/login.jsp，這應該是Null反向連結例外狀況。 只有在啟用Web應用程式的GET篩選時，才需要此例外。 您的應用程式可以指定是否允許空的反向連結。 請參閱以下主題中的「避免跨網站請求偽造攻擊」： [AEM表單的強化與安全性](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).

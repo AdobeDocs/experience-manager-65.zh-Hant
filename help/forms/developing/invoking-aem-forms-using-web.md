@@ -8,7 +8,7 @@ topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '9814'
 ht-degree: 0%
@@ -21,20 +21,20 @@ ht-degree: 0%
 
 服務容器中的大多數AEM Forms服務都設定為公開Web服務，並完整支援產生Web服務定義語言(WSDL)。 也就是說，您可以建立使用AEM Forms服務原生SOAP棧疊的Proxy物件。 因此，AEM Forms服務可以交換及處理下列SOAP訊息：
 
-* **SOAP請求**：由請求動作的使用者端應用程式傳送至Forms服務。
-* **SOAP回應**：在處理SOAP請求後，由Forms服務傳送至使用者端應用程式。
+* **SOAP要求**：由請求動作的使用者端應用程式傳送至Forms服務。
+* **SOAP回應**：在SOAP要求處理完畢後，由Forms服務傳送給使用者端應用程式。
 
 使用Web服務，您可以使用Java API執行與相同的AEM Forms服務操作。 使用Web服務來叫用AEM Forms服務的好處是，您可以在支援SOAP的開發環境中建立使用者端應用程式。 使用者端應用程式未繫結至特定的開發環境或程式設計語言。 例如，您可以使用Microsoft Visual Studio .NET和C#作為程式設計語言來建立使用者端應用程式。
 
-AEM Forms服務會透過SOAP通訊協定公開，且符合WSI Basic Profile 1.1規範。 Web Services Interoperability (WSI)是一個開放式標準組織，可促進跨平台的Web服務互通性。 如需詳細資訊，請參閱 [https://www.ws-i.org/](https://www.ws-i.org).
+AEM Forms服務會透過SOAP通訊協定公開，並符合WSI Basic Profile 1.1規範。 Web Services Interoperability (WSI)是一個開放式標準組織，可促進跨平台的Web服務互通性。 如需詳細資訊，請參閱 [https://www.ws-i.org/](https://www.ws-i.org).
 
 AEM Forms支援下列Web服務標準：
 
 * **編碼**：僅支援檔案和常值編碼（根據WSI基本設定檔，這是偏好的編碼）。 (請參閱 [使用Base64編碼叫用AEM Forms](#invoking-aem-forms-using-base64-encoding).)
 * **MTOM**：代表使用SOAP請求編碼附件的方式。 (請參閱 [使用MTOM叫用AEM Forms](#invoking-aem-forms-using-mtom).)
-* **SwaRef**：代表使用SOAP請求編碼附件的另一種方式。 (請參閱 [使用SwaRef叫用AEM Forms](#invoking-aem-forms-using-swaref).)
+* **SwaRef**：代表使用SOAP要求編碼附件的另一種方式。 (請參閱 [使用SwaRef叫用AEM Forms](#invoking-aem-forms-using-swaref).)
 * **具有附件的SOAP**：支援MIME和DIME （直接網際網路訊息封裝）。 這些通訊協定是透過SOAP傳送附件的標準方式。 Microsoft Visual Studio .NET應用程式使用DIME。 (請參閱 [使用Base64編碼叫用AEM Forms](#invoking-aem-forms-using-base64-encoding).)
-* **WS — 安全性**：支援使用者名稱密碼權杖設定檔，這是在WS安全性SOAP標頭中傳送使用者名稱和密碼的標準方式。 AEM Forms也支援HTTP基本驗證。 s
+* **WS — 安全性**：支援使用者名稱密碼權杖設定檔，這是在WS Security SOAP標頭中傳送使用者名稱和密碼的標準方式。 AEM Forms也支援HTTP基本驗證。 s
 
 若要使用Web服務來叫用AEM Forms服務，通常會建立使用服務WSDL的Proxy程式庫。 此 *使用網站服務叫用AEM Forms* section使用JAX-WS來建立Java Proxy類別以叫用服務。 (請參閱 [使用JAX-WS建立Java Proxy類別](#creating-java-proxy-classes-using-jax-ws).)
 
@@ -223,10 +223,10 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 
 傳回的傳輸通訊協定 `BLOB` 物件取決於數個因素，依下列順序考量，當滿足主要條件時停止：
 
-1. **目標URL指定傳輸通訊協定**. 如果在SOAP呼叫中指定的目標URL包含引數 `blob="`*BLOB_TYPE*&quot;，則 *BLOB_TYPE* 決定傳輸通訊協定。 *BLOB_TYPE* 是base64、dime、mime、http、mtom或swaref的預留位置。
+1. **目標URL指定傳輸通訊協定**. 如果於SOAP呼叫時指定的目標URL包含引數 `blob="`*BLOB_TYPE*&quot;，則 *BLOB_TYPE* 決定傳輸通訊協定。 *BLOB_TYPE* 是base64、dime、mime、http、mtom或swaref的預留位置。
 1. **服務SOAP端點為Smart**. 如果下列條件為true，則會使用與輸入檔案相同的傳輸通訊協定來傳回輸出檔案：
 
-   * 服務的SOAP端點引數「輸出Blob物件的預設通訊協定」設定為「智慧」。
+   * 服務的SOAP端點引數輸出Blob物件的預設通訊協定已設定為Smart。
 
      對於具有SOAP端點的每個服務，管理控制檯可讓您為任何傳回的blob指定傳輸通訊協定。 (請參閱 [管理說明](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
@@ -235,7 +235,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 1. **服務SOAP端點不是Smart**. 設定的通訊協定會決定檔案傳輸通訊協定，而資料會傳回至對應的通訊協定 `BLOB` 欄位。 例如，如果SOAP端點設定為DIME，則傳回的blob會位於 `blob.attachmentID` 欄位，無論任何輸入檔案的傳輸通訊協定為何。
 1. **否則**. 如果服務未以檔案型別作為輸入，則輸出檔案會傳回 `BLOB.remoteURL` HTTP通訊協定上的欄位。
 
-如第一個條件中所述，您可以藉由擴充尾碼為SOAP端點URL來確保任何傳回檔案的傳輸型別，如下所示：
+如第一個條件中所述，您可以藉由擴充尾碼如下的SOAP端點URL，確保任何傳回檔案的傳輸型別：
 
 ```java
      https://<your_serverhost>:<your_port>/soap/services/<service
@@ -245,7 +245,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 以下是傳輸型別與您從中取得資料的欄位之間的關聯性：
 
 * **Base64格式**：設定 `blob` 尾碼為 `base64` 若要傳回以下位置的資料： `BLOB.binaryData` 欄位。
-* **MIME或DIME附件**：設定 `blob` 尾碼為 `DIME` 或 `MIME` 將資料以對應的附件型別傳回，並在中傳回附件識別碼 `BLOB.attachmentID` 欄位。 使用SOAP框架的專屬API從附件讀取資料。
+* **MIME或DIME附件**：設定 `blob` 尾碼為 `DIME` 或 `MIME` 將資料以對應的附件型別傳回，並在中傳回附件識別碼 `BLOB.attachmentID` 欄位。 使用SOAP架構的專屬API從附件讀取資料。
 * **遠端網址**：設定 `blob` 尾碼為 `http` 將資料保留在應用程式伺服器上，並傳回指向 `BLOB.remoteURL` 欄位。
 * **MTOM或SwaRef**：設定 `blob` 尾碼為 `mtom` 或 `swaref` 將資料以對應的附件型別傳回，並在中傳回附件識別碼 `BLOB.MTOM` 或 `BLOB.swaRef` 欄位。 使用SOAP架構的原生API從附件讀取資料。
 
@@ -285,11 +285,11 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
   </tr>
   <tr>
    <td><p><code>java.util.Date</code></p></td>
-   <td><p>此 <code>DATE</code> 型別，其定義於服務WSDL中，如下所示：</p><p><code>&lt;complexType name="DATE"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="date" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="calendar" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服務操作需要 <code>java.util.Date</code> 值作為輸入，SOAP使用者端應用程式必須將日期傳入 <code>DATE.date</code> 欄位。 設定 <code>DATE.calendar</code> 欄位在此情況下會導致執行階段例外狀況。 如果服務傳回 <code>java.util.Date</code>，日期會傳回 <code>DATE.date</code> 欄位。</p></td>
+   <td><p>此 <code>DATE</code> 型別，其定義於服務WSDL中，如下所示：</p><p><code>&lt;complexType name="DATE"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="date" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="calendar" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服務操作需要 <code>java.util.Date</code> 值作為輸入，SOAP使用者端應用程式必須將日期 <code>DATE.date</code> 欄位。 設定 <code>DATE.calendar</code> 欄位在此情況下會導致執行階段例外狀況。 如果服務傳回 <code>java.util.Date</code>，日期會傳回 <code>DATE.date</code> 欄位。</p></td>
   </tr>
   <tr>
    <td><p><code>java.util.Calendar</code></p></td>
-   <td><p>此 <code>DATE</code> 型別，其定義於服務WSDL中，如下所示：</p><p><code>&lt;complexType name="DATE"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="date" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="calendar" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服務操作需要 <code>java.util.Calendar</code> 值作為輸入，SOAP使用者端應用程式必須將日期傳入 <code>DATE.caledendar</code> 欄位。 設定 <code>DATE.date</code> 欄位會發生執行階段例外狀況。 如果服務傳回 <code>java.util.Calendar</code>，則日期會傳回 <code>DATE.calendar</code> 欄位。 </p></td>
+   <td><p>此 <code>DATE</code> 型別，其定義於服務WSDL中，如下所示：</p><p><code>&lt;complexType name="DATE"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="date" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="calendar" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服務操作需要 <code>java.util.Calendar</code> 值作為輸入，SOAP使用者端應用程式必須將日期 <code>DATE.caledendar</code> 欄位。 設定 <code>DATE.date</code> 欄位會發生執行階段例外狀況。 如果服務傳回 <code>java.util.Calendar</code>，則日期會傳回 <code>DATE.calendar</code> 欄位。 </p></td>
   </tr>
   <tr>
    <td><p><code>java.math.BigDecimal</code></p></td>
@@ -715,7 +715,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 
 ## 使用MTOM叫用AEM Forms {#invoking-aem-forms-using-mtom}
 
-您可以使用Web服務標準MTOM來叫用AEM Forms服務。 此標準定義如何透過網際網路或內部網路傳輸二進位資料(例如PDF檔案)。 MTOM的一項功能是使用 `XOP:Include` 元素。 此元素是在XML二進位最佳化封裝(XOP)規格中定義，以參照SOAP訊息的二進位附件。
+您可以使用Web服務標準MTOM來叫用AEM Forms服務。 此標準定義如何透過網際網路或內部網路傳輸二進位資料(例如PDF檔案)。 MTOM的一項功能是使用 `XOP:Include` 元素。 此元素在XML二進位最佳化封裝(XOP)規格中定義，以參照SOAP訊息的二進位附件。
 
 此處的討論內容關於使用MTOM來叫用下列AEM Forms短期程式，命名為 `MyApplication/EncryptDocument`.
 
@@ -829,7 +829,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 
 ## 使用SwaRef叫用AEM Forms {#invoking-aem-forms-using-swaref}
 
-您可以使用SwaRef叫用AEM Forms服務。 的內容 `wsi:swaRef` XML元素會在SOAP主體內以附件的形式傳送，SOAP主體會儲存附件的參考。 使用SwaRef叫用Forms服務時，請使用適用於XML Web服務的Java API (JAX-WS)建立Java Proxy類別。 (請參閱 [適用於XML Web服務的Java API](https://jax-ws.dev.java.net/jax-ws-ea3/docs/mtom-swaref.html).)
+您可以使用SwaRef叫用AEM Forms服務。 的內容 `wsi:swaRef` XML元素會以附件的形式傳送到SOAP內文中，以儲存附件的參考。 使用SwaRef叫用Forms服務時，請使用適用於XML Web服務的Java API (JAX-WS)建立Java Proxy類別。 (請參閱 [適用於XML Web服務的Java API](https://jax-ws.dev.java.net/jax-ws-ea3/docs/mtom-swaref.html).)
 
 此處的討論內容關於叫用以下名為的Forms短期流程 `MyApplication/EncryptDocument` 藉由使用SwaRef。
 
@@ -929,7 +929,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 
 >[!NOTE]
 >
->建議您熟悉使用SOAP叫用AEM Forms 。 (請參閱 [使用網站服務叫用AEM Forms](#invoking-aem-forms-using-web-services).)
+>建議您先熟悉如何使用SOAP叫用AEM Forms 。 (請參閱 [使用網站服務叫用AEM Forms](#invoking-aem-forms-using-web-services).)
 
 ### 建立透過HTTP使用資料的.NET使用者端元件 {#creating-a-net-client-assembly-that-uses-data-over-http}
 
@@ -1027,7 +1027,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 
 ## 使用DIME叫用AEM Forms {#invoking-aem-forms-using-dime}
 
-您可以使用含有附件的SOAP來叫用AEM Forms服務。 AEM Forms支援MIME和DIME Web服務標準。 DIME可讓您傳送二進位附件(例如PDF檔案)以及叫用請求，而非編碼附件。 此 *使用DIME叫用AEM Forms* 一節討論叫用下列AEM Forms短期流程，命名為 `MyApplication/EncryptDocument` 使用DIME。
+您可以使用含有附件的SOAP叫用AEM Forms服務。 AEM Forms支援MIME和DIME Web服務標準。 DIME可讓您傳送二進位附件(例如PDF檔案)以及叫用請求，而非編碼附件。 此 *使用DIME叫用AEM Forms* 一節討論叫用下列AEM Forms短期流程，命名為 `MyApplication/EncryptDocument` 使用DIME。
 
 叫用此程式時，會執行下列動作：
 
@@ -1118,7 +1118,7 @@ A `BLOB` 物件會將二進位資料(例如PDF檔案、XML資料等)傳送至和
 
 您可以使用Apache Axis WSDL2Java工具將服務WSDL轉換為Java Proxy類別，以便呼叫服務作業。 使用Apache Ant，您可以從AEM Forms服務WSDL產生Axis程式庫檔案，讓您叫用該服務。 (請參閱 [使用Apache Axis建立Java Proxy類別](#creating-java-proxy-classes-using-apache-axis).)
 
-Apache Axis WSDL2Java工具會產生JAVA檔案，其中包含用來傳送SOAP要求至服務的方法。 服務收到的SOAP要求會由Axis產生的程式庫解碼，並傳回方法和引數。
+Apache Axis WSDL2Java工具會產生JAVA檔案，其中包含用來將SOAP要求傳送至服務的方法。 服務收到的SOAP要求會由Axis產生的程式庫解碼，並傳回方法和引數。
 
 叫用 `MyApplication/EncryptDocument` 服務（內建於Workbench）使用軸產生的程式庫檔案和DIME，請執行下列步驟：
 
@@ -1334,7 +1334,7 @@ AEM表單使用者可使用取得的SAML權杖進行驗證。 此SAML宣告（xm
 >
 >DIME區段使用WSE 2.0。若要使用SAML型驗證，請遵循在DIME主題中指定的相同指示。 不過，請將WSE 2.0取代為WSE 3.0。在開發電腦上安裝Web Services Enhancements 3.0，並將其與Microsoft Visual Studio .NET整合。 您可以從以下網站下載Web Services Enhancements 3.0： [Microsoft下載中心](https://www.microsoft.com/downloads/search.aspx).
 
-WSE架構使用原則、判斷提示和SecurityToken資料型別。 簡而言之，對於Web服務呼叫，請指定原則。 一個原則可以有多個判斷提示。 每個判斷提示都可以包含篩選器。 篩選器會在Web服務呼叫的特定階段叫用，且此時可以修改SOAP請求。 如需完整詳細資訊，請參閱Web服務增強功能3.0檔案。
+WSE架構使用原則、判斷提示和SecurityToken資料型別。 簡而言之，對於Web服務呼叫，請指定原則。 一個原則可以有多個判斷提示。 每個判斷提示都可以包含篩選器。 篩選器會在Web服務呼叫的特定階段叫用，而且他們當時可以修改SOAP請求。 如需完整詳細資訊，請參閱Web服務增強功能3.0檔案。
 
 **建立判斷提示和篩選**
 
@@ -1364,7 +1364,7 @@ WSE架構使用原則、判斷提示和SecurityToken資料型別。 簡而言之
 
 **建立SAML權杖**
 
-建立類別以代表SAML宣告。 此類別執行的主要工作是將資料值從字串轉換為xml並保留空格。 此判斷提示xml稍後會匯入SOAP請求中。
+建立類別以代表SAML宣告。 此類別執行的主要工作是將資料值從字串轉換為xml並保留空格。 此判斷提示xml稍後會匯入SOAP要求中。
 
 ```java
  class SamlToken : SecurityToken

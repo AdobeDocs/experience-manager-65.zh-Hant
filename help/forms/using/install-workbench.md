@@ -6,7 +6,8 @@ topic-tags: author
 role: Admin, User, Developer
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Workbench, Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 0%
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 # 安裝Workbench {#install-workbench}
 
-本檔案提供安裝和設定AEM Forms Workbench的說明。 安裝程式也會安裝Forms Designer。
+本檔案提供安裝和設定AEM Forms Workbench的說明。 此安裝程式也會安裝Forms Designer。
 
 ## 誰應該閱讀此檔案？ {#who-should-read-this-doc}
 
@@ -61,7 +62,7 @@ Workbench是整合式開發環境(IDE)，開發人員和表單作者可使用它
 
 下圖說明Workbench安裝，包括：
 * 使用Workbench的流程設計
-* 使用設計工具的表單設計
+* 使用Designer進行表單設計
 
 >[!NOTE]
 >
@@ -100,27 +101,27 @@ Workbench是整合式開發環境(IDE)，開發人員和表單作者可使用它
 
 若要檢視Workbench支援平台的完整清單，請前往 [AEM Forms支援的平台](https://www.adobe.com/go/learn_aemforms_supportedplatforms_65).
 
-## 設計工具安裝注意事項 {#designer-installation-considerations}
+## Designer安裝注意事項 {#designer-installation-considerations}
 
-依預設，Workbench安裝會包含對應的英文版Designer。 如果Workbench安裝應用程式在您的電腦上偵測到現有的Designer版本，安裝可能會終止，而且您必須先移除目前的Designer版本，才能繼續。
-下表列出您在安裝Workbench時可能會遇到的可能Designer安裝案例，以及您必須執行的任何動作。
+依預設，Workbench安裝包含對應的Designer英文版。 如果Workbench安裝應用程式在您的電腦上偵測到現有的Designer版本，安裝可能會終止，而且您必須移除目前版本的Designer，才能繼續。
+下表列出您在安裝Workbench時可能遇到的Designer安裝案例，以及您必須採取的所有動作。
 
 <table>
  <tbody>
   <tr>
-   <td><p><strong>目前安裝的設計工具版本</strong></p> </td>
+   <td><p><strong>目前安裝的Designer版本</strong></p> </td>
    <td><p><strong>必要動作</strong></p> </td>
   </tr>
   <tr>
-   <td><p>Acrobat Pro或Acrobat Pro Extended （包含設計工具）</p> </td>
+   <td><p>Acrobat Pro或Acrobat Pro Extended (包括Designer)</p> </td>
    <td><p>無。<br /> 
-Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended一起安裝的Designer例項。<br />
-不同版本的Designer可以並存於相同系統中，例如，適用於Workbench 6.4的Designer 6.4.x以及適用於Workbench 6.5的Designer 6.5.0.x。不需要解除安裝隨Acrobat 10 Pro或Acrobat 10 Pro Extended （含）以上版本安裝的Designer版本。
+Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended安裝的Designer例項。<br />
+不同版本的Designer可共存於相同系統上，例如，Designer 6.4.x （適用於Workbench 6.4）和Designer 6.5.0.x （適用於Workbench 6.5）。不需要解除安裝隨Acrobat 10 Pro或Acrobat 10 Pro Extended （含）以上版本安裝的Designer版本。
 <br /></p> </td>
   </tr>
   <tr>
    <td><p>Designer （獨立）</p> </td>
-   <td><p>無。 <br />Workbench隨附的Designer版本僅限英文。 <br />Workbench安裝程式不會重新安裝新版的Designer。 而是會修補與Workbench安裝程式隨附的更新版本。 這也可讓您在Workbench中使用本地化版本的Designer。<br /> </p> </td>
+   <td><p>無。 <br />Workbench隨附的Designer版本僅限英文。 <br />Workbench安裝程式不會重新安裝新版本的Designer。 而是會修補與Workbench安裝程式隨附的更新版本。 您也可以在Workbench中使用本地化版本的Designer。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -128,7 +129,7 @@ Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended一起安�
 ### 若要在Windows 10上解除安裝Designer （獨立） {#uninstall-designer-standalone-windows10}
 
 1. 前往 **「控制面板」 > 「程式」 > 「程式和功能」**
-1. 在「目前安裝的程式」清單中，選取 **Adobe設計工具**.
+1. 在「目前安裝的程式」清單中，選取 **AdobeDesigner**.
 1. 按一下 **解除安裝** 然後按一下 **是**.
 
 ## 安裝Workbench {#installing-workbench}
@@ -155,11 +156,11 @@ Workbench安裝會偵測電腦上隨Acrobat Pro或Acrobat Pro Extended一起安�
 
 1. 在「簡介」畫面上，按一下「下一步」。
 1. 閱讀「產品授權合約」，選取「我接受授權合約的條款」，然後按一下「下一步」。
-1. （選擇性）如果您需要此工具來建立和修改表單，請選取「安裝Adobe設計工具」。
+1. （選用）如果您需要此工具來建立和修改表單，請選取「安裝AdobeDesigner」 。
 
    >[!NOTE]
    >
-   >您可以保持取消選取此選項，繼續使用隨Acrobat 10安裝的Designer。
+   >您可以保持取消選取此選項，以繼續使用隨Acrobat 10安裝的Designer。
 
 1. 接受列出的預設目錄，或按一下「選擇」並導覽至您要安裝Workbench的目錄，然後按一下「下一步」。
 
@@ -229,7 +230,7 @@ JEE程式上的AEM Forms可使用升級精靈升級到AEM Forms應用程式。 �
 
 * **範本檔案名稱**：用作快取表單主要唯一識別碼的範本的位置和檔案名稱。
 * **時間戳記**：範本檔案包含用於判斷表單上次更新時間的時間戳記。
-* **範本UUID**：設計工具會在每個範本中插入表單及其版本的唯一識別碼(UUID)。 每次更新表單時，都會更新內嵌的UUID。 例如，XDP範本可能顯示下列內容：
+* **範本UUID**：Designer會在每個範本中插入表單及其版本的唯一識別碼(UUID)。 每次更新表單時，都會更新內嵌的UUID。 例如，XDP範本可能顯示下列內容：
 
   `<?xml version="1.0" encoding="UTF-8"?>`
   `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=https://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="https://www.xfa.org/schema/xfa-template/2.6/">`
@@ -261,7 +262,7 @@ Forms服務會參考檔案名稱或存放庫位置來接收範本，或是以記
 
 ### 解除安裝Workbench {#uninstalling-workbench}
 
-使用[控制檯]中的[新增或移除程式]功能，您可以啟動[解除安裝程式]。 Workbench和Designer應用程式有不同的解除安裝程式。
+使用[控制檯]中的[新增或移除程式]功能，您可以啟動[解除安裝程式]。 Workbench和Designer應用程式有各自的解除安裝程式。
 
 ## 設定AEM Forms XDC編輯器 {#configuring-aem-forms-xdc-editor}
 

@@ -7,8 +7,9 @@ topic-tags: forms-manager, introduction
 docset: aem65
 exl-id: 3e063456-7f96-483d-86a3-6a414746db8a
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: Admin, User
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 1%
@@ -98,7 +99,7 @@ Forms和「檔案」面板也提供以下選項：
   ![AEM Forms工具](assets/aem_forms_tools_new.png)
 
 * **設定PDF Generator：** 管理員可以設定AEM [!DNL Forms] PDF Generator設定、新增使用者帳戶，以及將設定匯入或匯出至PDF Generator。
-* **發佈對應管理資產：** AEM [!DNL Forms] 可讓您一次從製作執行個體發佈所有字母、檔案片段和資料字典及相關相依性。 發佈的資產包含所有「對應管理」資產和相關相依性。 如需詳細資訊，請參閱 [發佈和取消發佈表單與檔案](../../forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets).
+* **Publish通訊管理資產：** AEM [!DNL Forms] 可讓您一次從製作執行個體發佈所有字母、檔案片段和資料字典及相關相依性。 發佈的資產包含所有「對應管理」資產和相關相依性。 如需詳細資訊，請參閱 [發佈和取消發佈表單與檔案](../../forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets).
 * **匯出對應管理資產：** 您可以從AEM以套件形式下載所有Correspondence Management資產和相關相依性 [!DNL Forms] 執行個體。 如需詳細步驟，請參閱 [將資產匯入及匯出至AEM Forms](../../forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)
 
 ## 使用者介面的通用元素 {#commonelements}

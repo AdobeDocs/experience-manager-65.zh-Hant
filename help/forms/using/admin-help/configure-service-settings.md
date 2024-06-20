@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Workbench
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '10702'
 ht-degree: 0%
@@ -451,7 +452,7 @@ Microsoft SharePoint組態服務可使用下列設定：
 
 ## 輸出服務設定 {#output-service-settings}
 
-Output服務 `(OutputService)`可讓您將XML表單資料與AEM Forms Designer中建立的表單設計合併，以以下列格式之一建立檔案輸出資料流：
+Output服務 `(OutputService)`可讓您將XML表單資料與AEM forms Designer中建立的表單設計合併，以使用下列其中一種格式建立檔案輸出資料流：
 
 * PDF或PDF/檔案輸出資料流。
 * Adobe PostScript輸出資料流。

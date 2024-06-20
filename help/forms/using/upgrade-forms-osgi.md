@@ -8,7 +8,8 @@ geptopics: SG_AEMFORMS/categories/jee
 role: Admin,User
 exl-id: 1e39455e-f588-42a2-91f5-daefcfed82a0
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms, OSGI
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 1%
@@ -101,7 +102,7 @@ ht-degree: 1%
 1. 請確認伺服器已順利升級，所有資料也已成功移轉，而且伺服器可正常運作。
 
    * **驗證套裝的狀態：** 確認所有套件組合都處於作用中狀態。
-   * **驗證復寫與反向復寫：** 發佈、填寫和提交一些移轉的表單。 同時驗證提交的資料。
+   * **驗證復寫與反向復寫：** Publish、填寫並提交一些已移轉的表單。 同時驗證提交的資料。
    * **驗證對管理員和開發人員使用者介面的存取權：** 從管理員帳戶登入AEM執行個體，並確認您擁有下列URL的存取權：
 
       * `https://'[server]:[port]'/crx/packmgr`

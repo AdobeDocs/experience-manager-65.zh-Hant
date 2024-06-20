@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '16917'
 ht-degree: 0%
@@ -294,7 +294,7 @@ ht-degree: 0%
 
 [正在擷取簽章欄位名稱](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
 
-[快速入門（SOAP模式）：使用Java API擷取簽名欄位名稱](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API擷取簽名欄位名稱](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -608,7 +608,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 如果您嘗試使用簽名服務API簽署以XFA為基礎的表單，則可能遺漏以下專案中的資料： `View` `Signed` `Version` 在Acrobat中。 例如，請考量下列工作流程：
 
-* 使用使用Designer建立的XDP檔案，合併包含簽名欄位的表單設計以及包含表單資料的XML資料。 您可以使用Forms服務產生互動式PDF檔案。
+* 使用Designer建立的XDP檔案，合併包含簽名欄位的表單設計以及包含表單資料的XML資料。 您可以使用Forms服務產生互動式PDF檔案。
 * 您使用簽名服務API簽署PDF檔案。
 
 ### 步驟摘要 {#summary_of_steps-3}
@@ -639,7 +639,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 **取得要簽署的PDF檔案**
 
-若要簽署PDF檔案，您必須取得包含簽名欄位的PDF檔案。 如果PDF檔案不包含簽名欄位，則無法簽署。 簽名欄位可以使用「設計工具」或以程式設計方式新增。
+若要簽署PDF檔案，您必須取得包含簽名欄位的PDF檔案。 如果PDF檔案不包含簽名欄位，則無法簽署。 可使用Designer或以程式設計方式新增簽名欄位。
 
 **簽署PDF檔案**
 
@@ -743,7 +743,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 [數位簽署PDF檔案](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-[快速入門（SOAP模式）：使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -821,7 +821,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 您可以簽署Forms服務建立的互動式表單。 例如，請考量下列工作流程：
 
-* 您可以使用Designer建立的XFAPDF表單，與使用Forms服務在XML檔案中的表單資料合併。 Forms伺服器會呈現互動式表單。
+* 您可以使用Forms服務，在XML檔案中合併使用Designer建立的XFAPDF表單和表單資料。 Forms伺服器會呈現互動式表單。
 * 您可以使用Signature service API簽署互動式表單。
 
 結果會產生數位簽署的互動式PDF表單。 在簽署以XFA表單為基礎的PDF表單時，請確定您將PDF檔案儲存為Adobe靜態PDF表單。 如果您嘗試簽署儲存為「PDF動態PDF」表單的Adobe表單，會發生例外狀況。 由於您簽署的是從Forms服務傳回的表單，因此請確定表單包含簽名欄位。
@@ -963,7 +963,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 [數位簽署互動式Forms](digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)
 
-[快速入門（SOAP模式）：使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API數位簽署PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1122,13 +1122,13 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 **取得PDF檔案以認證**
 
-若要認證PDF檔案，您必須取得包含簽名欄位的PDF檔案。 如果PDF檔案不包含簽名欄位，則無法認證該檔案。 簽名欄位可以使用「設計工具」或以程式設計方式新增。 如需以程式設計方式新增簽名欄位的資訊，請參閱 [新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields).
+若要認證PDF檔案，您必須取得包含簽名欄位的PDF檔案。 如果PDF檔案不包含簽名欄位，則無法認證該檔案。 可使用Designer或以程式設計方式新增簽名欄位。 如需以程式設計方式新增簽名欄位的資訊，請參閱 [新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields).
 
 **認證PDF檔案**
 
 若要成功認證PDF檔案，您需要以下供簽名服務用來認證PDF檔案的輸入值：
 
-* **PDF檔案**：包含簽名欄位的PDF檔案，簽名欄位是包含已驗證簽名的圖形表示的表單欄位。 PDF檔案必須包含簽名欄位，才能加以認證。 簽名欄位可以使用「設計工具」或以程式設計方式新增。 (請參閱 [新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields).)
+* **PDF檔案**：包含簽名欄位的PDF檔案，簽名欄位是包含已驗證簽名的圖形表示的表單欄位。 PDF檔案必須包含簽名欄位，才能加以認證。 可使用Designer或以程式設計方式新增簽名欄位。 (請參閱 [新增簽名欄位](digitally-signing-certifying-documents.md#adding-signature-fields).)
 * **簽章欄位名稱**：已認證之簽名欄位的完整名稱。 下列值為範例： `form1[0].#subform[1].SignatureField3[3]`. 使用XFA表單欄位時，也可使用簽名欄位的部分名稱： `SignatureField3[3]`. 如果為欄位名稱傳遞null值，則會動態建立並認證不可見的簽章欄位。
 * **安全性認證**：用於認證PDF檔案的認證。 此安全性認證包含密碼和別名，必須與Credential服務內認證中顯示的別名相符。 別名是實際認證的參考，可能位於PKCS#12檔案（具有.pfx副檔名）或硬體安全模組(HSM)中。
 * **雜湊演演算法**：用於摘要PDF檔案的雜湊演演算法。
@@ -1207,7 +1207,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 [認證PDF檔案](digitally-signing-certifying-documents.md#certifying-pdf-documents)
 
-[快速入門（SOAP模式）：使用Java API認證PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API認證PDF檔案](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1444,7 +1444,7 @@ PDF檔案是以公開金鑰技術簽署。 簽署者有兩個金鑰：公開金�
 
 [驗證數位簽章](#verify-digital-signatures-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API驗證數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API驗證數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1657,7 +1657,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方法。 假設PDF檔案�
 
 [驗證多個數位簽名](#verifying-multiple-digital-signatures)
 
-[快速入門（SOAP模式）：使用Java API驗證多個數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API驗證多個數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1823,7 +1823,7 @@ AEM Forms提供驗證PDF檔案中所有數位簽名的方法。 假設PDF檔案�
 
 [移除數位簽章](digitally-signing-certifying-documents.md#removing-digital-signatures)
 
-[快速入門（SOAP模式）：使用Java API移除數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API移除數位簽名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

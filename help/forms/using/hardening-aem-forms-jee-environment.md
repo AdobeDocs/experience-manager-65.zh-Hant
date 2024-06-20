@@ -7,7 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.4
 role: Admin,User
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Security, Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '7608'
 ht-degree: 1%
@@ -264,7 +265,7 @@ Configuration Manager會使用部署在應用程式伺服器上的servlet，執�
 
 **鎖定對信任存放區的遠端存取**
 
-Configuration Manager可讓您將Acrobat Reader DC擴充功能認證上傳至JEE信任存放區上的AEM Forms。 這表示透過遠端通訊協定（SOAP和EJB）存取「信任存放區認證服務」已預設啟用。 使用Configuration Manager上傳許可權認證後，或決定稍後使用Administration Console管理認證後，不再需要此存取權。
+Configuration Manager可讓您將Acrobat Reader DC擴充功能認證上傳至JEE信任存放區上的AEM Forms。 這表示透過遠端通訊協定(SOAP和EJB)存取「信任存放區認證服務」已預設啟用。 使用Configuration Manager上傳許可權認證後，或決定稍後使用Administration Console管理認證後，不再需要此存取權。
 
 您可以依照一節中的步驟，停用所有信任存放區服務的遠端存取 [停用非必要的服務遠端存取](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services).
 
@@ -652,7 +653,7 @@ A *反向Proxy* 可用來確保外部和內部使用者均可使用JEE網頁應�
   </tr> 
   <tr> 
    <td><p>/DocumentManager/*</p> </td> 
-   <td><p>透過已啟用HTTP檔案的SOAP傳輸或EJB傳輸，在存取遠端端點、SOAP WSDL端點及Java SDK時，上傳及下載要處理的檔案。</p> </td> 
+   <td><p>在啟用HTTP檔案的情況下，透過SOAP傳輸或EJB傳輸來上傳及下載存取遠端端點、SOAP WSDL端點及Java SDK時要處理的檔案。</p> </td> 
    <td><p>是</p> </td> 
    <td><p>是</p> </td> 
   </tr> 
@@ -835,8 +836,8 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
    <td> 
     <ul> 
      <li><p>Web服務使用者端應用程式，例如.NET應用程式</p> </li> 
-     <li><p>Adobe Reader®針對JEE伺服器Web服務上的AEM Forms使用SOAP</p> </li> 
-     <li><p>AdobeFlash®應用程式使用SOAP進行Forms Server Web服務</p> </li> 
+     <li><p>Adobe Reader®在JEE伺服器Web服務上使用SOAP for AEM Forms</p> </li> 
+     <li><p>AdobeFlash®應用程式使用SOAP進行Forms伺服器Web服務</p> </li> 
      <li><p>在SOAP模式中使用時，針對JEE SDK呼叫進行AEM Forms</p> </li> 
      <li><p>Workbench設計環境</p> </li> 
     </ul> </td> 

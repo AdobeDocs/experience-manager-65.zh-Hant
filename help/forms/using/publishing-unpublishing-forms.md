@@ -8,8 +8,9 @@ content-strategy: max-2018
 docset: aem65
 exl-id: f26c4268-7885-4e61-a258-219d98288548
 solution: Experience Manager, Experience Manager Forms
+feature: Correspondence Management
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
 source-wordcount: '1402'
 ht-degree: 0%
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 AEM Forms可讓您輕鬆建立、發佈和取消發佈表單。 如需AEM Forms的詳細資訊，請參閱 [管理表單簡介](../../forms/using/introduction-managing-forms.md).
 
-AEM Forms伺服器提供兩個例項：「作者」和「發佈」。 製作例項用於建立及管理表單資產和資源。 發佈執行個體用於保留可供一般使用者使用的資產和相關資源。 您可以在作者模式中匯入XDP和PDF forms。 如需詳細資訊，請參閱 [在AEM Forms中取得XDP和PDF檔案](../../forms/using/get-xdp-pdf-documents-aem.md).
+AEM Forms伺服器提供兩個例項：作者和Publish。 製作例項用於建立及管理表單資產和資源。 Publish例項用來保留可供一般使用者使用的資產和相關資源。 您可以在作者模式中匯入XDP和PDF forms。 如需詳細資訊，請參閱 [在AEM Forms中取得XDP和PDF檔案](../../forms/using/get-xdp-pdf-documents-aem.md).
 
 ## 支援的資產   {#supported-assets-nbsp}
 
@@ -59,16 +60,16 @@ AEM Forms支援下列資產型別：
 資產可以有下列狀態：
 
 * **已取消發佈：** 從未發佈的資產(未發佈狀態僅適用於Forms資產)。 通訊管理資產沒有「未發佈」狀態。)
-* **已發佈**：已發佈且可在發佈執行個體上使用的資產
+* **已發佈**：已發佈且可在Publish例項上使用的資產
 * **已修改**：發佈後修改的資產
 
-## 發佈資產 {#publish-an-asset}
+## Publish資產 {#publish-an-asset}
 
 1. 登入AEM Forms伺服器。
 1. 使用下列其中一項，選取並發佈資產。
 
    1. 將指標移至資產上並選取 **[!UICONTROL 發佈]** ![aem6forms_globe](assets/aem6forms_globe.pngasset.png).
-   1. 執行下列任一項作業，然後選取「發佈」：
+   1. 執行下列任一項作業，然後選取「Publish」：
 
       * 如果您在卡片檢視中，請選取 **[!UICONTROL 輸入選取範圍]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)，然後選取資產。 已選取資產。
       * 如果您在清單檢視中，請選取資產的核取方塊。 已選取資產。
@@ -79,7 +80,7 @@ AEM Forms支援下列資產型別：
       >
       >請勿選取多個資產。 不支援一次發佈多個資產。
 
-1. 當發佈程式啟動時，確認對話方塊會出現，列出所有相關資產和資源。 在包含相關資產的對話方塊中，選取 **[!UICONTROL 發佈]**. 資產會發佈，且發佈資產成功對話方塊會出現。
+1. 當發佈程式啟動時，確認對話方塊會出現，列出所有相關資產和資源。 在包含相關資產的對話方塊中，選取 **[!UICONTROL 發佈]**. 資產隨即發佈，並顯示Publish資產成功對話方塊。
 
    >[!NOTE]
    >
@@ -91,13 +92,13 @@ AEM Forms支援下列資產型別：
 
    >[!NOTE]
    >
-   >對於Forms Manager，如果使用者沒有發佈所列資產的許可權，則會停用發佈動作。 需要額外許可權的資產會以紅色顯示。
+   >對於Forms Manager，如果使用者沒有發佈所列資產的許可權，則會停用Publish動作。 需要額外許可權的資產會以紅色顯示。
 
-   發佈資產後，資產的中繼資料屬性會複製到發佈執行個體，而資產的狀態會變更為已發佈。 已發佈的相依資產狀態也會變更為「已發佈」。
+   資產發佈後，資產的中繼資料屬性會複製到Publish執行個體，而資產的狀態會變更為已發佈。 已發佈的相依資產狀態也會變更為「已發佈」。
 
    發佈資產後，您可以使用Forms入口網站在網頁上顯示所有資產。 如需詳細資訊，請參閱 [在入口網站上發佈表單簡介](../../forms/using/introduction-publishing-forms.md).
 
-## 發佈所有對應管理資產 {#publish-all-the-correspondence-management-assets}
+## Publish所有通訊管理資產 {#publish-all-the-correspondence-management-assets}
 
 AEM Forms可讓您一次發佈伺服器上的所有Correspondence Management資產。 發佈的資產包含所有「對應管理」資產和相關相依性。
 
@@ -106,7 +107,7 @@ AEM Forms可讓您一次發佈伺服器上的所有Correspondence Management資�
 1. 登入AEM Forms伺服器。
 1. 選取 **Adobe Experience Manager** 於全域導覽列中。
 1. 選取 ![工具](assets/tools.png)，然後選取 **Forms**.
-1. 選取 **發佈對應管理資產**.
+1. 選取 **Publish通訊管理資產**.
 
    ![publish-cmp-assets](assets/publish-cmp-assets.png)
 
@@ -120,7 +121,7 @@ AEM Forms可讓您一次發佈伺服器上的所有Correspondence Management資�
 
    >[!NOTE]
    >
-   >發佈程式一經啟動便無法取消。 此外，在發佈作業進行時，請勿建立、刪除、修改或發佈任何資產，或啟動「匯出所有對應管理資產」作業。
+   >Publish程式一旦啟動即無法取消。 此外，在Publish作業進行中，請勿建立、刪除、修改或發佈任何資產，或啟動「匯出所有對應管理資產」作業。
 
 ## 自動發佈和取消發佈Forms和檔案 {#automate-publishing-and-unpublishing-for-forms-amp-documents}
 
@@ -130,7 +131,7 @@ AEM Forms可讓您為Forms和檔案排程資產發佈和取消發佈。 您可�
 
 1. 選取資產並選取 **[!UICONTROL 檢視屬性]**. 「中繼資料屬性」頁面隨即開啟。
 1. 在「中繼資料屬性」頁面中，選取 **[!UICONTROL 進階]**，然後選取 **[!UICONTROL 編輯]** ![illustratorcc_penciltool_cur_edit_2_17](assets/illustratorcc_penciltool_cur_edit_2_17.png).
-1. 在 **[!UICONTROL 準時發佈]** 和 **[!UICONTROL 發佈關閉時間]** 欄位中，選取日期和時間。\
+1. 在 **[!UICONTROL Publish準時]** 和 **[!UICONTROL Publish關閉時間]** 欄位中，選取日期和時間。\
    選取 **[!UICONTROL 完成]** ![aem6forms_check](assets/aem6forms_check.png).
 
 ## 取消發佈資產 {#unpublish-an-asset}

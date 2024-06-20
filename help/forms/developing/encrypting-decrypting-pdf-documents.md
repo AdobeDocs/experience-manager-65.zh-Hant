@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: d3cbca7f-9277-4d61-b198-abf4bb008f15
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 29cc7281e34487881ff9334f4cf00f3d013de11b
 workflow-type: tm+mt
 source-wordcount: '8133'
 ht-degree: 0%
@@ -162,9 +162,10 @@ ht-degree: 0%
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[快速入門（SOAP模式）：使用Java API加密PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API加密PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+
 
 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -377,7 +378,7 @@ ht-degree: 0%
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[快速入門（SOAP模式）：使用Java API使用憑證加密PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API使用憑證加密PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -558,7 +559,7 @@ ht-degree: 0%
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[快速入門（SOAP模式）：使用Java API移除憑證式加密](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API移除憑證式加密](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -711,7 +712,7 @@ ht-degree: 0%
 
 **另請參閱**
 
-[快速入門（SOAP模式）：使用Java API移除密碼式加密](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API移除密碼式加密](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
 
 ### 使用Web服務API移除密碼式加密 {#remove-password-based-encryption-using-the-web-service-api}
 
@@ -870,7 +871,7 @@ ht-degree: 0%
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[快速入門（SOAP模式）：使用Java API解除鎖定加密的PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api) （SOAP模式）
+[快速入門(SOAP模式)：使用Java API解除鎖定加密的PDF檔案](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api) (SOAP模式)
 
 [將使用許可權套用至PDF檔案](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
@@ -1028,7 +1029,7 @@ PDF檔案可受下列加密型別保護：
 
 [步驟摘要](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[快速入門（SOAP模式）：使用Java API決定加密型別](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API決定加密型別](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

@@ -7,7 +7,8 @@ docset: aem65
 role: Admin, User, Developer
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms, OSGI
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1882'
 ht-degree: 4%
@@ -18,7 +19,7 @@ ht-degree: 4%
 
 ## 簡介 {#introduction}
 
-AEM Forms提供一組表單，用於從一般使用者取得資料：調適型表單、HTML5 Forms和PDF forms。 它也提供工具，列出網頁上所有可用的表單、分析表單的使用情況，以及根據使用者的設定檔鎖定使用者。 這些功能包含在AEM Forms附加元件套件中。 附加元件套件部署在AEM的製作或發佈執行個體上。
+AEM Forms提供一組表單，用於從一般使用者取得資料：調適型表單、HTML5 Forms和PDF forms。 它也提供工具，列出網頁上所有可用的表單、分析表單的使用情況，以及根據使用者的設定檔鎖定使用者。 這些功能包含在AEM Forms附加元件套件中。 附加元件套件部署在AEM的作者或Publish執行個體上。
 
 **調適型表單：** 這些表單會根據裝置的熒幕大小變更外觀、吸引人且互動性質。 最適化Forms也可以整合Adobe Analytics、Adobe Sign和Adobe Target。 它可讓您根據使用者的人口統計和其他功能，提供個人化表單和程式導向的體驗給使用者。 您也可以將最適化表單與Adobe Sign整合。
 
@@ -30,7 +31,7 @@ AEM Forms是功能強大的企業級平台，而資料擷取(調適型表單、P
 
 ## 部署拓撲 {#deployment-topology}
 
-AEM Forms附加元件套件是部署至AEM的應用程式。 您只需要至少一個AEM製作和AEM發佈執行個體，即可執行AEM Forms資料擷取功能。 建議使用下列拓撲來執行AEM Forms AEM Forms資料擷取功能。 如需有關拓朴的詳細資訊，請參閱 [AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms附加元件套件是部署至AEM的應用程式。 您只需要至少一個AEM Author和AEM Publish執行個體，即可執行AEM Forms資料擷取功能。 建議使用下列拓撲來執行AEM Forms AEM Forms資料擷取功能。 如需有關拓朴的詳細資訊，請參閱 [AEM Forms的架構和部署拓撲](/help/forms/using/aem-forms-architecture-deployment.md).
 
 ![建議的拓朴](assets/recommended-topology.png)
 
@@ -41,7 +42,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 您只需要至少�
 * 硬體與軟體基礎架構已準備就緒。 如需支援的硬體和軟體的詳細清單，請參閱 [技術需求](/help/sites-deploying/technical-requirements.md).
 
 * AEM執行個體的安裝路徑未包含空格。
-* AEM執行個體已啟動且執行中。 對於Windows使用者，請在提升許可權的模式下安裝AEM執行個體。 在AEM術語中，「例項」是在伺服器上以製作或發佈模式執行的AEM的副本。 您至少需要兩個 [AEM例項（一個作者和一個發佈）](/help/sites-deploying/deploy.md) 若要執行AEM Forms資料擷取功能：
+* AEM執行個體已啟動且執行中。 對於Windows使用者，請在提升許可權的模式下安裝AEM執行個體。 在AEM術語中，「例項」是在伺服器上以製作或發佈模式執行的AEM的副本。 您至少需要兩個 [AEM例項(一個作者和一個Publish)](/help/sites-deploying/deploy.md) 若要執行AEM Forms資料擷取功能：
 
    * **作者**：用來建立、上傳和編輯內容以及管理網站的AEM執行個體。 一旦內容準備好上線，就會將其復寫到發佈執行個體。
    * **發佈**：透過網際網路或內部網路向公眾提供已發佈內容的AEM例項。
@@ -152,7 +153,7 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 #### 設定RSA和BouncyCastle資料庫  {#configure-rsa-and-bouncycastle-libraries}
 
-在所有Author和Publish執行個體上執行下列步驟，以啟動並委派程式庫：
+在所有Author和Publish執行個體上執行下列步驟，以啟動委派程式庫：
 
 1. 停止基礎AEM執行個體。
 1. 開啟 `[AEM installation directory]\crx-quickstart\conf\sling.properties` 檔案進行編輯。
@@ -166,11 +167,11 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
    ```
 
 1. 儲存並關閉檔案，然後啟動AEM執行個體。
-1. 在所有Author和Publish執行個體上重複步驟1-4。
+1. 對所有Author和Publish執行個體重複步驟1至4。
 
 #### 設定序列化代理程式 {#configure-the-serialization-agent}
 
-對所有Author和Publish執行個體執行以下步驟，將套件新增到允許清單：
+在所有Author和Publish執行個體上執行以下步驟，將套件新增至允許清單：
 
 1. 在瀏覽器視窗中開啟AEM Configuration Manager。 預設URL為 `https://'[server]:[port]'/system/console/configMgr`.
 1. 搜尋 **com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name** 並開啟設定。

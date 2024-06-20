@@ -6,7 +6,8 @@ docset: aem65
 role: Admin, User, Developer
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Interactive Communication
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -126,7 +127,7 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 #### 設定RSA和BouncyCastle資料庫  {#configure-rsa-and-bouncycastle-libraries}
 
-在所有Author和Publish執行個體上執行下列步驟，以啟動並委派程式庫：
+在所有Author和Publish執行個體上執行下列步驟，以啟動委派程式庫：
 
 1. 停止基礎AEM執行個體。
 1. 開啟 [AEM安裝目錄]\crx-quickstart\conf\sling.properties檔案進行編輯。
@@ -144,7 +145,7 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 #### 設定序列化代理程式 {#configure-the-serialization-agent}
 
-對所有Author和Publish執行個體執行以下步驟，將套件新增到允許清單：
+在所有Author和Publish執行個體上執行以下步驟，將套件新增至允許清單：
 
 1. 在瀏覽器視窗中開啟AEM Configuration Manager。 預設URL為https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr.
 1. 搜尋並開啟 **還原序列化防火牆設定**.

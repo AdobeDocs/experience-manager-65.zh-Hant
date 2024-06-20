@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 21a2317d-3542-4ccb-98db-3cedf20c89ea
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 0%
@@ -129,7 +130,7 @@ ht-degree: 0%
 
 **程式ID：** 此正整數，當程式例項化時（即當使用者或自動步驟啟動程式時），會形成工作流程指派的整數。 您可以使用此識別碼在整個生命週期中追蹤流程例項。
 
-**處理程式名稱 — 版本：** 在Designer中定義的程式名稱。
+**處理程式名稱 — 版本：** Designer中定義的程式名稱。
 
 **狀態：** 指出程式執行處理是否正常執行、變更狀態或停止。 （請參閱關於流程例證狀態。）
 

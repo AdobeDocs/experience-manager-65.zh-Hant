@@ -9,7 +9,8 @@ topic-tags: operations
 role: Developer
 exl-id: ec9ccf04-7cec-493a-91ab-0e399a905338
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+feature: Adaptive Forms
+source-git-commit: 939a2efa64c853928a9082aa30d7338e98deb695
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -28,7 +29,7 @@ Forms服務可讓您建立互動式資料擷取使用者端應用程式，以驗
 
 根據使用者端應用程式的型別，您可以將表單寫入使用者端網頁瀏覽器，或將表單儲存為PDF檔案。 網頁式應用程式可將表單寫入網頁瀏覽器。 案頭應用程式可將表單儲存為PDF檔案。 若要示範如何寫出至網頁瀏覽器和PDF檔案，快速入門課程包括 *呈現Forms* 區段會以下列方式組織：
 
-* Java API強型別（SOAP模式）範例為Java servlet。
+* Java API強型別(SOAP模式)範例為Java servlet。
 * Web服務(Java Base64)範例是Java servlet。
 * Web服務(MTOM)範例是主控台應用程式（並非所有快速啟動都有MTOM範例）。
 

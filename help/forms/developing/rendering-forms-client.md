@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: e485980d-f200-46b7-9284-c9996003aa47
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '1690'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 您可以最佳化PDF內容的傳送，並使用Forms或Adobe Reader的使用者端轉譯功能，改善Acrobat服務處理網路負載的能力。 此過程稱為在使用者端呈現表單。 若要在使用者端轉譯表單，使用者端裝置（通常為網頁瀏覽器）必須使用Acrobat 7.0或Adobe Reader 7.0或更新版本。
 
-伺服器端指令碼執行導致的表單變更，不會反映在使用者端轉譯的表單中，除非根子表單包含 `restoreState` 屬性已設為 `auto`. 如需有關這個屬性的詳細資訊，請參閱 [Forms Designer.](https://www.adobe.com/go/learn_aemforms_designer_63)
+伺服器端指令碼執行導致的表單變更，不會反映在使用者端轉譯的表單中，除非根子表單包含 `restoreState` 屬性已設為 `auto`. 如需有關這個屬性的詳細資訊，請參閱 [Forms Designer。](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 >[!NOTE]
 >
@@ -54,10 +54,10 @@ ht-degree: 0%
 
 您可以設定的選擇性執行階段選項為 `SeedPDF` 選項。 此 `SeedPDF` 選項會將PDF容器(種子PDF檔案)與表單設計和XML資料相結合。 表單設計和XML資料都會傳送到Acrobat或Adobe Reader，表單會在該處呈現。 此 `SeedPDF` 當使用者端電腦沒有表單中使用的字型時，例如當一般使用者未授權使用表單擁有者授權使用的字型時，可以使用選項。
 
-您可以使用Designer建立簡單的動態PDF檔案，以作為種子PDF檔案。 若要執行此工作，必須執行下列步驟：
+您可以使用Designer建立簡單的動態PDF檔案，以作為種子PDF檔案使用。 若要執行此工作，必須執行下列步驟：
 
-1. 決定是否需要在種子PDF檔案中嵌入任何字型。 種子PDF檔案必須包含正在呈現的表單所需的其他字型。 將字型嵌入種子PDF檔案時，請確定您沒有違反任何字型授權合約。 在Designer中，您可以決定您是否可合法嵌入字型。 儲存後，如果表單中有無法嵌入的字型，Designer會顯示一則訊息，列出無法嵌入的字型。 靜態PDF檔案的設計工具中不會顯示此訊息。
-1. 如果您是在Designer中建立種子PDF檔案，建議您至少新增包含訊息的文字欄位。 應該將訊息導向舊版Adobe Reader的使用者，告知他們需要Acrobat 7.0 （含）以上版本或Adobe Reader 7.0 （含）以上版本才能檢視檔案。
+1. 決定是否需要在種子PDF檔案中嵌入任何字型。 種子PDF檔案必須包含正在呈現的表單所需的其他字型。 將字型嵌入種子PDF檔案時，請確定您沒有違反任何字型授權合約。 在Designer中，您可以決定您是否可合法嵌入字型。 儲存後，如果表單中有無法嵌入的字型，Designer會顯示訊息，列出無法嵌入的字型。 靜態PDF檔案不會在Designer中顯示此訊息。
+1. 如果您在Designer中建立種子PDF檔案，建議您至少新增包含訊息的文字欄位。 應該將訊息導向舊版Adobe Reader的使用者，告知他們需要Acrobat 7.0 （含）以上版本或Adobe Reader 7.0 （含）以上版本才能檢視檔案。
 1. 將種子PDF檔案另存為動態PDF檔案，並以PDF檔案的副檔名命名。
 
 >[!NOTE]
@@ -130,7 +130,7 @@ Forms服務會建立您必須寫入使用者端網頁瀏覽器的表單資料流
 
 **另請參閱**
 
-[快速入門（SOAP模式）：使用Java API在使用者端轉譯表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API在使用者端轉譯表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

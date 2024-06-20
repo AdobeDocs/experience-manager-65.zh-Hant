@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2455'
 ht-degree: 0%
@@ -146,7 +146,7 @@ Forms應用程式中的資源路徑為：
 
 當您轉譯互動式表單時，可以定義URI值，例如將表單資料發佈到的目標URL。 目標URL可以下列其中一種方式定義：
 
-* 在Designer中設計表單設計時按一下「提交」按鈕
+* 在Designer中設計表單設計時按一下提交按鈕
 * 透過使用Forms服務使用者端API
 
 如果目標URL是在表單設計內定義，請勿使用Forms服務使用者端API加以覆寫。 也就是說，使用Forms API設定目標URL會將表單設計中指定的URL重設為使用API指定的URL。 如果您想要將PDF表單提交至表單設計中所指定的目標URL，則以程式設計方式將目標URL設為空字串。

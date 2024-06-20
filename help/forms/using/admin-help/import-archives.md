@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archiv
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 0c15677a-ee17-425e-a261-fb3ae8688eb2
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%
@@ -42,7 +43,7 @@ ht-degree: 0%
    * 若要加入Watched資料夾端點，請按一下[加入WatchedFolder]。 如需Watched資料夾設定的詳細資訊，請參閱 [Watched資料夾端點設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings).
    * 若要新增電子郵件端點，請按一下[新增電子郵件]。 如需電子郵件設定的詳細資訊，請參閱 [電子郵件端點設定](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings).
    * 若要新增EJB端點，請按一下新增EJB並指定端點的名稱和描述。
-   * 若要新增SOAP端點，請按一下新增SOAP並指定端點的名稱和描述。
+   * 若要新增SOAP端點，請按一下「新增SOAP」並指定端點的名稱和說明。
    * 若要新增遠端端點，請按一下[新增遠端]。 如需有關遠端設定的詳細資訊，請參閱 [遠端端點設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings).
    * 若要新增REST端點，請按一下新增REST並指定端點的名稱和描述。 請注意「新增REST端點」頁面上顯示的REST引動URL。
    * 若要移除端點，請選取其旁邊的核取方塊，然後按一下「移除」。
@@ -109,7 +110,7 @@ ht-degree: 0%
    * 若要加入Watched資料夾端點，請按一下[加入WatchedFolder]。 如需Watched資料夾設定的詳細資訊，請參閱 [Watched資料夾端點設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings).
    * 若要新增電子郵件端點，請按一下[新增電子郵件]。 如需電子郵件設定的詳細資訊，請參閱 [電子郵件端點設定](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings).
    * 若要新增EJB端點，請按一下新增EJB並指定端點的名稱和描述。
-   * 若要新增SOAP端點，請按一下新增SOAP並指定端點的名稱和描述。
+   * 若要新增SOAP端點，請按一下「新增SOAP」並指定端點的名稱和說明。
    * 若要新增遠端端點，請按一下[新增遠端]。 如需有關遠端設定的詳細資訊，請參閱 [遠端端點設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings).
    * 若要新增REST端點，請按一下新增REST並指定端點的名稱和描述。 請注意「新增REST端點」頁面上顯示的REST引動URL。
    * 若要移除端點，請選取其旁邊的核取方塊，然後按一下「移除」。

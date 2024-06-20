@@ -8,7 +8,7 @@ topic-tags: develop
 role: Developer
 exl-id: 699a7309-a976-480e-886f-2e466a477348
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 下列「快速啟動」適用於「XMP公用程式」服務。
 
-[快速入門（SOAP模式）：使用Java API匯出XMP中繼資料](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API匯出XMP中繼資料](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API匯入XMP中繼資料](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API匯入XMP中繼資料](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
 
 AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
@@ -29,7 +29,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 >
 >如果使用UNIX等其他作業系統，請將Windows專用的路徑取代為適用作業系統支援的路徑，則「使用AEM表單進行程式設計」中的快速入門是以Forms伺服器為基礎。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）：使用Java API匯出XMP中繼資料 {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API匯出XMP中繼資料 {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
 
 下列程式碼範例會擷取、檢查及儲存XMP中繼資料。 (請參閱 [從PDF檔案匯出中繼資料](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents).)
 
@@ -134,7 +134,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API匯入XMP中繼資料 {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API匯入XMP中繼資料 {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
 
 下列程式碼範例會匯入XMP中繼資料，並將新的PDF檔案儲存至磁碟。 PDF檔案是以名為Loan.pdf的PDF檔案為基礎。 包含要匯入至PDF檔案之中繼資料的XML檔案是以名為的XML檔案為基礎 *LoanMetaData.xml*. 如需有關此XML檔案的資訊，請參閱 [將中繼資料匯入PDF檔案](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
 

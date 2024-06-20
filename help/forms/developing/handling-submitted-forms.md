@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: 419335b2-2aae-4e83-98ff-18e61b7efa9c
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2894'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 讓使用者能夠填寫互動式表單的網頁式應用程式，需要資料提交回伺服器。 使用Forms服務，您可以擷取使用者在互動式表單中輸入的資料。 擷取資料後，您可以處理資料以符合業務需求。 例如，您可以將資料儲存在資料庫中、將資料傳送至其他應用程式、將資料傳送至其他服務、將資料合併至表單設計、在網頁瀏覽器中顯示資料等等。
 
-表單資料會以XML或PDF資料（在Designer中設定的選項）提交至Forms服務。 以XML形式提交的表單可讓您擷取個別欄位資料值。 也就是說，您可以擷取使用者在表單中輸入的每個表單欄位的值。 以PDF資料形式提交的表單是二進位資料，而非XML資料。 您可以將表單儲存為PDF檔案，或將表單傳送至其他服務。 如果您想要從以XML格式提交的表單中擷取資料，然後使用表單資料來建立PDF檔案，請叫用另一個AEM Forms作業。 (請參閱 [使用已提交的XML資料建立PDF檔案](/help/forms/developing/creating-pdf-documents-submitted-xml.md))
+表單資料會以XML或PDF資料(在Designer中設定的選項)提交至Forms服務。 以XML形式提交的表單可讓您擷取個別欄位資料值。 也就是說，您可以擷取使用者在表單中輸入的每個表單欄位的值。 以PDF資料形式提交的表單是二進位資料，而非XML資料。 您可以將表單儲存為PDF檔案，或將表單傳送至其他服務。 如果您想要從以XML格式提交的表單中擷取資料，然後使用表單資料來建立PDF檔案，請叫用另一個AEM Forms作業。 (請參閱 [使用已提交的XML資料建立PDF檔案](/help/forms/developing/creating-pdf-documents-submitted-xml.md))
 
 下圖顯示提交至名為的Java Servlet的資料 `HandleData` 從網頁瀏覽器中顯示的互動式表單。
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->必須在Designer中正確設定表單設計，才能將資料作為XML資料提交。 若要正確設定表單設計以提交XML資料，請確保表單設計上的提交按鈕已設定為提交XML資料。 如需有關設定「提交」按鈕以提交XML資料的資訊，請參閱 [AEM Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
+>在Designer中必須正確設定表單設計，資料才能以XML資料形式提交。 若要正確設定表單設計以提交XML資料，請確保表單設計上的提交按鈕已設定為提交XML資料。 如需有關設定「提交」按鈕以提交XML資料的資訊，請參閱 [AEM Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 ## 處理提交的PDF資料 {#handling-submitted-pdf-data}
 
@@ -251,11 +251,11 @@ Forms服務會傳回下列值，指出是否已完成資料處理：
 
 **另請參閱**
 
-[快速入門（SOAP模式）：使用Java API處理以XML格式提交的PDF forms](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API處理以XML格式提交的PDF forms](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API處理以XML格式提交的HTML表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API處理以XML格式提交的HTML表單](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API處理以PDF形式提交的PDF forms](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API處理以PDF形式提交的PDF forms](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

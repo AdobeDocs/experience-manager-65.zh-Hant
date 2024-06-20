@@ -6,7 +6,8 @@ docset: aem65
 role: Admin, User, Developer
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Interactive Communication
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1383'
 ht-degree: 1%
@@ -17,7 +18,7 @@ ht-degree: 1%
 
 ## 簡介 {#introduction}
 
-AEM Form可集中建立、組裝、管理和傳送安全、互動式檔案，例如商務通訊、檔案、對帳單、福利通知、行銷郵件、帳單和歡迎套件。 此功能稱為互動式通訊。 此功能包含在AEM Forms附加元件套件中。 附加元件套件部署在AEM的製作或發佈執行個體上。
+AEM Form可集中建立、組裝、管理和傳送安全、互動式檔案，例如商務通訊、檔案、對帳單、福利通知、行銷郵件、帳單和歡迎套件。 此功能稱為互動式通訊。 此功能包含在AEM Forms附加元件套件中。 附加元件套件部署在AEM的作者或Publish執行個體上。
 
 您可以使用互動式通訊功能，以多種格式產生通訊。 例如，Web和PDF。 您可以將互動式通訊與AEM Workflow整合，以透過客戶選擇的管道處理及傳遞組合通訊給客戶。 例如，透過電子郵件傳送通訊給一般使用者。
 
@@ -31,7 +32,7 @@ AEM Forms附加元件套件是部署至AEM的應用程式。 您只需要至少�
 
 ![建議的拓朴](assets/recommended-topology.png)
 
-AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作和代理程式使用者介面。 發佈執行個體會託管互動式通訊的最終版本，以供一般使用者使用。
+AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作和代理程式使用者介面。 Publish執行個體託管互動式通訊的最終版本，以供一般使用者使用。
 
 ## 系統需求 {#system-requirements}
 
@@ -49,7 +50,7 @@ AEM Forms互動式通訊會在AEM Forms的製作例項上執行管理、製作�
 
 * 符合記憶體需求。 AEM Forms附加包需要：
 
-   * 15 GB 的臨時空間，供基於 Microsoft® Windows 的安裝使用。
+   * 15 GB 的臨時空間，用於Microsoft® Windows 安裝。
    * UNIX安裝需要6 GB的暫存空間。
 
 * UNIX系統的額外需求：如果您使用的是UNIX作業系統，請從個別作業系統的安裝媒體安裝下列套件。
@@ -114,7 +115,7 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 #### 設定RSA和BouncyCastle資料庫  {#configure-rsa-and-bouncycastle-libraries}
 
-在所有Author和Publish執行個體上執行下列步驟，以啟動並委派程式庫：
+在所有Author和Publish執行個體上執行下列步驟，以啟動委派程式庫：
 
 1. 停止基礎AEM執行個體。
 1. 開啟 [AEM安裝目錄]\crx-quickstart\conf\sling.properties檔案進行編輯。
@@ -132,7 +133,7 @@ AEM Forms有一些必要和選用的設定。 強制設定包括設定BouncyCast
 
 #### 設定序列化代理程式 {#configure-the-serialization-agent}
 
-對所有Author和Publish執行個體執行以下步驟，將套件新增到允許清單：
+在所有Author和Publish執行個體上執行以下步驟，將套件新增至允許清單：
 
 1. 在瀏覽器視窗中開啟AEM Configuration Manager。 預設URL為https://&#39;[伺服器]：[連線埠]&#39;/system/console/configMgr.
 1. 搜尋並開啟 **還原序列化防火牆設定**.

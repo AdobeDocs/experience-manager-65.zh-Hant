@@ -3,8 +3,9 @@ title: 使用JEE自訂DSC上的AEM Forms壓縮和解壓縮檔案
 description: 瞭解如何在JEE自訂DSC上使用AEM Forms來壓縮和解壓縮檔案
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%

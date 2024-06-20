@@ -10,7 +10,8 @@ docset: aem65
 role: Admin,User
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 1%
@@ -58,7 +59,7 @@ ht-degree: 1%
 * 文字模組中的清單已改善，現在呈現方式也不同。 可能有視覺差異。 Adobe建議您轉譯並檢視您在文字模組中使用清單的字母。
 * 由於影像內容模組已轉換為DAM資產，並在移轉期間將版面和片段新增到表單，這些模組的「更新者」屬性將變更為「管理員」。
 * 資產的版本記錄未移轉，且在移轉後無法使用。 將會維護移轉後的後續版本記錄。
-* 自AEM 6.1 Forms起，準備發佈狀態即已過時，因此所有處於準備發佈狀態的資產都會變更為已修改狀態。
+* Publish就緒狀態自AEM 6.1 Forms之後已過時，因此所有處於Publish就緒狀態的資產都會變更為修改狀態。
 * 由於使用者介面在AEM Forms 6.3中更新，執行自訂的步驟也不同。 如果您要從6.3版之前的版本移轉，請重做自訂。
 * 佈局片段移自 `/content/apps/cm/layouts/fragmentlayouts/1001` 至 `/content/apps/cm/modules/fragmentlayouts`. 資產中的資料字典參考會顯示資料字典的路徑而非其名稱。
 * 文字模組中用於對齊的任何定位字元空格都必須重新調整。 如需詳細資訊，請參閱 [通訊管理 — 使用索引標籤間距來排列文字](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html).
@@ -173,9 +174,9 @@ ht-degree: 1%
 
    1. [將XFA下載為zip檔](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) 從Forms使用者介面。
    1. 擷取檔案。
-   1. 在最新的設計工具中開啟XFA檔案並儲存。 XFA的版本會更新至最新版本。
+   1. 在最新的Designer中開啟XFA檔案並儲存。 XFA的版本會更新至最新版本。
    1. 在Forms使用者介面中上傳XFA。
 
-1. 發佈移轉前已在先前系統中發佈的所有資產。 移轉公用程式只會更新作者例項上的資產，若要更新發佈例項上的資產，您必須發佈資產。
+1. Publish移轉前已在舊版系統中發佈的所有資產。 移轉公用程式只會更新作者例項上的資產，若要更新Publish例項上的資產，您必須發佈資產。
 
 1. 在AEM Forms 6.4和6.5中，使用者群組的某些表單許可權已變更。 如果您希望您的任何使用者能夠上傳包含指令碼的XDP和Adaptive Forms，或使用程式碼編輯器，您必須將它們新增至forms-power-users群組。 同樣地，範本作者無法在規則編輯器中再使用程式碼編輯器。 若要讓使用者能夠使用程式碼編輯器，請將他們新增至af-template-script-writers群組。 如需將使用者新增至群組的說明，請參閱 [管理使用者和使用者群組](/help/communities/users.md).

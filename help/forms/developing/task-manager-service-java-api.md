@@ -8,7 +8,7 @@ topic-tags: develop
 role: Developer
 exl-id: d61c20a9-27c6-4b57-ab00-dfaa77fe3f75
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
@@ -19,19 +19,19 @@ ht-degree: 0%
 
 下列「快速入門」適用於Task Manager服務。
 
-[快速入門（SOAP模式）：使用Java API指派工作](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API指派工作](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API鎖定工作](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API鎖定工作](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
 
-[快速入門（SOAP模式）：擷取使用Java API指派給使用者的任務](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
+[快速入門(SOAP模式)：擷取使用Java API指派給使用者的任務](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API從工作擷取表單資料](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API從工作中擷取表單資料](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API修改表單資料](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API修改表單資料](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API從工作擷取檔案附件](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API從工作擷取檔案附件](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API擷取任務資訊](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API擷取任務資訊](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
 
 AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
@@ -43,7 +43,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 >
 >使用AEM Forms進行程式設計的快速入門是以Forms伺服器作業系統為基礎。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）：使用Java API指派工作 {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API指派工作 {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
 以下Java程式碼範例將任務指派給名為Tony Blue的使用者。
 
@@ -176,7 +176,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API鎖定工作 {#quick-start-soap-mode-locking-tasks-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API鎖定工作 {#quick-start-soap-mode-locking-tasks-using-the-java-api}
 
 以下Java程式碼範例會鎖定與工作識別碼值2對應的工作。
 
@@ -265,7 +265,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：擷取使用Java API指派給使用者的任務 {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
+## 快速入門(SOAP模式)：擷取使用Java API指派給使用者的任務 {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
 以下Java程式碼範例會擷取指派給使用者名為的所有任務 *東尼藍*. 請注意，此使用者已在連線屬性中指定。 系統會顯示傳回工作的相關資訊，例如其識別碼值和說明。
 
@@ -391,7 +391,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API從工作擷取表單資料 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API從工作中擷取表單資料 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
 
 下列Java程式碼範例會從識別碼值為304的工作中擷取表單資料。 表單資料會寫入名為的XML檔案 *FormData.xml* 位在C:\Adobe。
 
@@ -497,7 +497,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API修改表單資料 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API修改表單資料 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
 以下Java程式碼範例會以 *FormData.xml* 檔案。
 
@@ -607,7 +607,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API從工作擷取檔案附件 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API從工作擷取檔案附件 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
 
 下列Java程式碼範例會擷取檔案附件。 每個檔案附件都會儲存為TXT檔案。
 
@@ -711,7 +711,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API擷取任務資訊 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API擷取任務資訊 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
 
 以下Java程式碼範例會擷取以名為的程式為基礎的所有任務 *MortgageLoan — 預先建立*. 系統會檢查每個傳回工作的狀態，以確保其為已完成工作。 擷取並顯示資訊，例如完成任務的使用者名稱以及完成任務的日期。
 

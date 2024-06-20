@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 380cab7f-e7f7-4cb7-bd20-ea530a349fac
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 0%
@@ -33,9 +34,9 @@ ht-degree: 0%
 
 **遠端：** 啟用以Flex建置的應用程式以使用(不建議用於AEM表單)AEM表單遠端功能來叫用服務。 系統會自動為每個啟用的服務建立遠端端點。 會建立與端點同名的Flex目的地，而Flex使用者端可建立指向此目的地的遠端物件，以叫用相關服務的作業。
 
-**SOAP：** 讓使用AEM表單程式設計API開發的使用者端應用程式能夠使用SOAP模式呼叫服務。 系統會自動為每個啟用的服務建立SOAP端點。
+**SOAP：** 讓使用AEM表單程式設計API開發的使用者端應用程式能夠使用SOAP模式叫用服務。 系統會自動為每個已啟用的服務建立SOAP端點。
 
-**注意**： *在Adobe Acrobat或Adobe Reader中檢視檔案時使用SOAP端點時，可從Document Security檔案中移除安全性。 如需有關如何在LCRM檔案上停用SOAP端點的詳細資訊，請參閱 [停用Document Security檔案的SOAP端點](/help/forms/using/admin-help/configuring-client-server-options.md#disable-soap-endpoints-for-document-security-documents)*
+**注意**： *在Adobe Acrobat或Adobe Reader中檢視檔案時使用SOAP端點時，可以從Document Security檔案中移除安全性。 如需有關如何在LCRM檔案上停用SOAP端點的詳細資訊，請參閱 [停用Document Security檔案的SOAP端點](/help/forms/using/admin-help/configuring-client-server-options.md#disable-soap-endpoints-for-document-security-documents)*
 
 **EJB：** 啟用使用AEM表單程式設計API開發的使用者端應用程式，以使用Enterprise JavaBeans (EJB)模式呼叫服務。 系統會自動為每個已啟動的服務建立EJB端點。
 

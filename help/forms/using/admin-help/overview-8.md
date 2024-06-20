@@ -1,14 +1,15 @@
 ---
 title: 輸出服務概觀
-description: 輸出可讓您將XML表單資料與在Designer中建立的表單設計合併，以建立各種格式的檔案輸出資料流。
+description: 輸出可讓您將XML表單資料與Designer中建立的表單設計合併，以建立多種格式的檔案輸出資料流。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: e99b72d0-fbd5-4150-a225-1a91ad4c5867
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 # 輸出服務概觀 {#overview-of-output-service}
 
-輸出可讓您將XML表單資料與在Designer中建立的表單設計合併，以建立各種格式的檔案輸出資料流。 輸出資料流可以傳送到網路印表機、本機印表機或磁碟檔案
+輸出可讓您將XML表單資料與Designer中建立的表單設計合併，以建立多種格式的檔案輸出資料流。 輸出資料流可以傳送到網路印表機、本機印表機或磁碟檔案
 
 您可以使用管理主控台中的「輸出」頁面來管理「輸出」服務。 若未透過AEM Forms API指定同等設定，則會在執行階段使用您設定的設定。 透過AEM Forms SDK完成的設定會覆寫使用管理控制檯設定的設定。
 

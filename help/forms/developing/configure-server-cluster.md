@@ -3,8 +3,9 @@ title: 如何在JEE伺服器叢集上設定AEM Forms並進行疑難排解
 description: 瞭解如何在JEE伺服器叢集上設定Adobe Experience Manager (AEM) Forms並進行疑難排解。
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '3945'
 ht-degree: 0%

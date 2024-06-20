@@ -7,7 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin,User
 exl-id: 791524a4-a8bb-4632-a68d-e96864e139a9
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
@@ -44,7 +45,7 @@ Forms入口網站會在下列情況下儲存草稿與已提交表單的資料：
   </tr>
   <tr>
    <td><p>預設</p> </td>
-   <td><p>製作和發佈執行個體的AEM存放庫</p> </td>
+   <td><p>作者和Publish例項的AEM存放庫</p> </td>
    <td><p><code>/content/forms/fp/</code></p> </td>
   </tr>
   <tr>

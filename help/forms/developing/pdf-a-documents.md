@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 1%
@@ -139,7 +139,7 @@ PDF/A-1規格包含兩個一致性層次，即A與B。兩者之間的主要差�
 
 [使用PDF/A檔案](pdf-a-documents.md#working-with-pdf-a-documents)
 
-[快速入門（SOAP模式）：使用Java API將檔案轉換為PDF/檔案](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API將檔案轉換為PDF/檔案](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -292,7 +292,7 @@ PDF/A-1規格包含兩個一致性層次，即A與B。兩者之間的主要差�
 
 [使用PDF/A檔案](pdf-a-documents.md#working-with-pdf-a-documents)
 
-[快速入門（SOAP模式）：使用Java API決定PDF/A合規性](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API判斷PDF/A合規性](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

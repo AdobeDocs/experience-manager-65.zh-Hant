@@ -7,8 +7,9 @@ topic-tags: publish
 docset: aem65
 exl-id: 240ed4d8-b21b-46eb-80a9-9e8093b77235
 solution: Experience Manager, Experience Manager Forms
+feature: Forms Portal
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 1%
@@ -80,7 +81,7 @@ Forms入口網站可讓您將表單從表單存放庫列出到您的入口網站
 1. **設定草稿與已提交表單資料的儲存空間：** 依預設，草稿和提交資料會儲存在AEM存放庫中。 在生產環境中，建議不要將草稿或提交的表單資料儲存在AEM存放庫中。 [設定Forms Portal元件，將資料儲存至安全位置](../../forms/using/draft-submission-component.md#customizing-the-storage).
 1. **（選用）自訂Forms Portal元件：** [自訂Forms Portal頁面範本](../../forms/using/customizing-templates-forms-portal-components.md) 為元件提供獨特的外觀。
 1. **（選用）新增自訂中繼資料至表單：** [新增自訂中繼資料至表單](../../forms/using/customizing-templates-forms-portal-components.md) 以改善清單和搜尋體驗。
-1. **發佈Forms Portal頁面：** 您的Forms入口網站頁面現已準備就緒。 發佈頁面。
+1. **Publish Forms Portal頁面：** 您的Forms入口網站頁面現已準備就緒。 發佈頁面。
 
 ## 相關的文章 {#related-articles}
 

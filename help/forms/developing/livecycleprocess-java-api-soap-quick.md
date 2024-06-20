@@ -1,6 +1,6 @@
 ---
 title: LiveCycleProcess Java API(SOAP)快速啟動
-description: 使用「LiveCycleProcess Java API (SOAP)快速入門」來搜尋處理作業執行處理、暫停處理作業執行處理、啟動暫停的處理作業執行處理、終止處理作業執行處理、清除處理作業資料，以及擷取工作的狀態。
+description: 使用「LiveCycleProcess Java API (SOAP)快速入門」來搜尋程式執行個體、暫停程式執行個體、啟動暫停的程式執行個體、終止程式執行個體、清除程式資料，以及擷取工作的狀態。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,7 +8,7 @@ topic-tags: develop
 role: Developer
 exl-id: 7b309743-10ea-4d10-adb6-be5ce9f03ce2
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '423'
 ht-degree: 0%
@@ -19,17 +19,17 @@ ht-degree: 0%
 
 Java API(SOAP)快速入門適用於程式。 A *程式執行個體* 是以叫用方法（例如Invocation API）或從Workspace內啟動的特定程式發生次數。
 
-[快速入門（SOAP模式）：使用Java API搜尋程式執行個體](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API搜尋程式執行個體](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API暫停處理序執行個體](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API暫停處理序執行個體](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API啟動暫停的處理程式執行個體](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API啟動已暫停的處理程式執行個體](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API終止程式執行個體](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API終止流程例項](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API清除程式資料](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-purging-process-data-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API清除程式資料](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-purging-process-data-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API擷取作業狀態](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API擷取作業狀態](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
 
 AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
@@ -37,7 +37,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 >
 >使用AEM Forms進行程式設計的快速入門是以Forms為基礎（如果您使用其他作業系統，例如Unix），請以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 (請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 
-## 快速入門（SOAP模式）：使用Java API搜尋程式執行個體 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API搜尋程式執行個體 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 
 以下Java程式碼範例會搜尋以 *MortgageLoan — 預先建立* 程式。
 
@@ -155,7 +155,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API暫停處理序執行個體 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API暫停處理序執行個體 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
 
 下列Java程式碼範例會暫停處理序例項。 若要成功暫停處理序執行個體，您需要在使用叫用API叫用長效處理序時可取得的處理序叫用識別碼。
 
@@ -247,7 +247,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API啟動暫停的處理程式執行個體 {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API啟動已暫停的處理程式執行個體 {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
 
 以下Java程式碼範例會啟動暫停的處理程式例項。
 
@@ -335,7 +335,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API終止程式執行個體 {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API終止流程例項 {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
 
 下列Java程式碼範例終止識別碼值為756c22860a242fb101ec7a5bc0977fd6的處理程式執行個體。
 
@@ -426,7 +426,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API清除程式資料 {#quick-start-soap-mode-purging-process-data-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API清除程式資料 {#quick-start-soap-mode-purging-process-data-using-the-java-api}
 
 以下Java程式碼會從名為的流程中清除資料 *安全檔案*. 篩選器用於指定永久刪除流程變數命名的那些流程例項的資料 *inValue* 大於200。
 
@@ -533,7 +533,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API擷取作業狀態 {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API擷取作業狀態 {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}
 
 下列程式碼範例會擷取10個AEM Forms工作的狀態。
 

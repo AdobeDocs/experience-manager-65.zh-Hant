@@ -7,8 +7,9 @@ topic-tags: forms-workspace
 docset: aem65
 exl-id: 15b9ae98-059f-4bf7-bfdd-9cfeb8eb30a4
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Workbench
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 JEE上的AEM Forms提供在HTML Workspace中使用最適化表單的功能。
 
-由於可以在流程設計期間選擇XDP，因此新增了從現有的最適化表單AEM存放庫瀏覽的功能。 此功能可讓流程設計人員在「起點」和「工作」中設定最適化表單。
+由於可以在流程設計期間選擇XDP，因此新增了從現有的最適化表單AEM存放庫瀏覽的功能。 此功能讓程式Designer能夠在「起點」和「任務」中設定最適化表單。
 
 ## 流程設計體驗 {#process-design-experience}
 
@@ -43,7 +44,7 @@ JEE上的AEM Forms提供在HTML Workspace中使用最適化表單的功能。
 
 1. 若要提交最適化表單，請使用 **提交** 按鈕或路由動作可使用，就像行動Forms中的情況。 最適化表單的任何提交型別按鈕都會隱藏。
 
-1. **最適化表單全域工具列可見性**：如果Process Designer隱藏全域/最上層工具列，工具列和按鈕不會顯示在調適型表單上。
+1. **最適化表單全域工具列可見性**：如果程式Designer隱藏全域/頂層工具列，工具列和按鈕不會出現在調適型表單上。
 
 1. **最適化Forms的工作區導覽控制項**：下一頁/上一頁按鈕與HTML Workspace中適用性表單的儲存、提交和路由動作按鈕一起提供。 按一下「下一步/上一個」按鈕，即可在HTML Workspace中導覽最適化表單的面板。 「下一個/上一個」按鈕提供深層導覽，類似於最適化表單之「行動」檢視中的導覽控制項。
 

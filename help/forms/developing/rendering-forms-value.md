@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: a3a6a06d-ec90-4147-a5f0-e776a086ee12
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '1822'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 **本檔案中的範例和範例僅適用於JEE環境上的AEM Forms 。**
 
-通常，在Designer中建立的表單設計會參考Forms服務來傳遞。 表單設計可能很大，因此參考傳遞它們會更有效率，不必依值封送表單設計位元組。 Forms服務也可以快取表單設計，以便在快取時不需要持續讀取表單設計。
+通常，在Designer中建立的表單設計會參考Forms服務傳遞。 表單設計可能很大，因此參考傳遞它們會更有效率，不必依值封送表單設計位元組。 Forms服務也可以快取表單設計，以便在快取時不需要持續讀取表單設計。
 
 如果表單設計包含UUID屬性，則會快取該屬性。 UUID值在所有表單設計中都是獨一無二的，可用來唯一識別表單。 依值呈現表單時，只有在表單重複使用時才應快取表單。 不過，如果表單未重複使用且必須是唯一的，您可以避免使用使用AEM Forms API設定的快取選項來快取表單。
 
@@ -143,7 +143,7 @@ Forms服務也可以解析表單設計內連結內容的位置。 例如，從�
 
 [依值呈現Forms](/help/forms/developing/rendering-forms.md)
 
-[快速入門（SOAP模式）：使用Java API依值轉譯](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API依值轉譯](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

@@ -6,8 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
 solution: Experience Manager, Experience Manager Forms
+feature: Release Information
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 39%
@@ -40,9 +41,9 @@ Experience Manager6.5.19.0包括自2019年4月6.5首次發行以來所推出的�
 
 * **[垂直標籤元件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**：以核心元件為主的最適化表單現在可以將表單內容組織成垂直的標籤清單，提供結構化、可導覽的版面。在表單中使用垂直標籤可以簡化導覽和改進表單內容組織，進而提升使用者整體體驗，特別是在表單包含多個部分或複雜資訊時。
 
-#### AEM Forms Designer 64位元版本
+#### 64位元版AEM Forms Designer
 
-此 [AEM Forms Designer 64位元版本](/help/forms/using/installing-configuring-designer.md) 提供更優異的效能、擴充能力及記憶體管理功能，讓您擁有更優異的表單建立體驗。 透過 64 位元架構，您可以輕鬆處理更大、更複雜的專案，確保設計工作流程流暢和最佳效率。透過這最先進的版本，提升您的表單設計能力並擁抱 AEM Forms Designer 的未來。
+此 [64位元版AEM Forms Designer](/help/forms/using/installing-configuring-designer.md) 提供更優異的效能、擴充能力及記憶體管理功能，讓您擁有更優異的表單建立體驗。 透過 64 位元架構，您可以輕鬆處理更大、更複雜的專案，確保設計工作流程流暢和最佳效率。透過這最先進的版本，提升您的表單設計能力並擁抱 AEM Forms Designer 的未來。
 
 #### 連線最適化Forms與Microsoft® SharePoint清單
 

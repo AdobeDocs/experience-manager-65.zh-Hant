@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 6b57d00e-5ba0-41ee-8497-49ecfec5b9ed
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 0%
@@ -93,7 +94,7 @@ Forms支援兩種快取模式：
 
 **快取檔案大小上限(KB)：** 可儲存在任何記憶體快取中的表單設計或其他資源大小上限（以KB為單位）。 此為全域設定，適用於所有記憶體中的快取。 如果資源大於此值，則不會在記憶體中快取。 預設值為1024 KB。 此設定不會影響磁碟快取。
 
-**表單轉譯快取已啟用：** 依預設，會選取此選項，這表示會快取呈現的表單以供後續擷取。 此設定可改善效能，因為Forms服務只需轉譯特定表單一次，然後使用快取版本。 此選項適用於表單設計的快取屬性。 如需有關在表單設計中設定此值的資訊，請參閱設計工具說明。
+**表單轉譯快取已啟用：** 依預設，會選取此選項，這表示會快取呈現的表單以供後續擷取。 此設定可改善效能，因為Forms服務只需轉譯特定表單一次，然後使用快取版本。 此選項適用於表單設計的快取屬性。 如需在表單設計中設定此值的相關資訊，請參閱Designer說明。
 
 ### 快取表單設計 {#caching-form-designs}
 

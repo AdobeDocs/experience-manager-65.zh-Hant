@@ -8,7 +8,8 @@ geptopics: SG_AEMFORMS/categories/jee
 role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms, Foundation Components
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '2469'
 ht-degree: 0%
@@ -38,7 +39,7 @@ AEM Forms的架構包括下列元件：
    * **表單轉譯和提交前端**：面向使用者的介面，可供AEM Forms的一般使用者（例如存取政府網站的公民）使用。 此功能提供表單轉譯（在網頁瀏覽器中顯示表單）和提交功能。
    * **REST API**：JSP和servlet會匯出表單服務的子集，以供以HTTP為基礎的使用者端（例如forms mobile SDK）從遠端使用。
 
-**OSGi上的AEM Forms：** OSGi環境上的AEM Forms是標準的AEM Author或部署有AEM Forms套件的AEM Publish 。 您可以在中的OSGi上執行AEM Forms [單一伺服器環境、伺服陣列和叢集設定](/help/sites-deploying/recommended-deploys.md). 叢集設定僅適用於AEM編寫執行個體。
+**OSGi上的AEM Forms：** OSGi環境上的AEM Forms是標準的AEM Author或上面部署了AEM Forms套件的AEM Publish 。 您可以在中的OSGi上執行AEM Forms [單一伺服器環境、伺服陣列和叢集設定](/help/sites-deploying/recommended-deploys.md). 叢集設定僅適用於AEM編寫執行個體。
 
 **JEE上的AEM Forms：** JEE上的AEM Forms是在JEE棧疊上執行的AEM Forms伺服器。 它的AEM Author搭配AEM Forms附加元件套件，以及其他AEM Forms JEE功能，可共同部署於應用程式伺服器上執行的單一JEE棧疊上。 您可以在單一伺服器和叢集設定中在JEE上執行AEM Forms 。 只有執行Document Security、程式管理，以及升級至AEM Forms的LiveCycle客戶時，才需要JEE上的AEM Forms。 以下是一些在JEE上使用AEM Forms的其他案例：
 
@@ -65,7 +66,7 @@ OSGi上的AEM Forms和JEE上的AEM Forms都有工作流程功能。 您可以在
 * **製作及管理表單和互動式通訊：** 設計人員和開發人員可以建立和編輯最適化表單和互動式通訊，上傳外部建立的其他型別表單，例如在AdobeForms Designer中建立的表單，並使用Forms Manager主控台管理這些資產。
 * **表單與互動式通訊發佈：** 在製作執行個體上託管的資產可發佈到發佈執行個體以執行執行階段作業。 資產發佈會使用AEM復寫功能。 Adobe建議您在所有author執行個體上設定復寫代理程式，以手動方式將發佈的表單推播到處理執行個體，並在處理執行個體上設定另一個復寫代理程式： *接收時* 觸發器已啟用，可自動將收到的表單復寫至發佈例項。
 
-**發佈：** 發佈執行個體是在標準發佈執行模式下執行的AEM Forms伺服器。 發佈例項適用於表單式應用程式的一般使用者，例如存取公開網站及提交表單的使用者。 可啟用下列功能：
+**發佈：** 發佈執行個體是在標準AEM Forms執行模式下執行的Publish伺服器。 Publish例項適用於表單式應用程式的一般使用者，例如存取公開網站及提交表單的使用者。 可啟用下列功能：
 
 * 呈現及提交一般使用者的Forms。
 * 將原始提交的表單資料傳輸至處理執行個體，以便在最終記錄系統中進一步處理和儲存。 AEM Forms中提供的預設實作可使用AEM的反向復寫功能來達成此目的。 您也可以使用替代實作，將表單資料直接推送至處理伺服器，而非先在本機儲存（後者是啟用反向復寫的先決條件）。 擔心發佈執行個體上儲存潛在敏感資料的客戶，可能會提出此問題 [替代實作](/help/forms/using/configuring-draft-submission-storage.md)，因為處理執行個體通常位在較安全的區域中。
@@ -73,21 +74,21 @@ OSGi上的AEM Forms和JEE上的AEM Forms都有工作流程功能。 您可以在
 
 **處理中：** AEM Forms的執行個體會在作者執行模式下執行，且未將使用者指派給表單管理員群組。 您可以在JEE上部署AEM Forms，或在OSGi上部署AEM Forms作為處理執行個體。 未指派使用者以確保表單製作和管理活動未在處理執行個體上執行並僅在製作執行個體上發生。 處理執行個體可啟用下列功能：
 
-* **處理從發佈執行個體到達的原始表單資料：** 這主要是透過AEM工作流程在處理執行個體上達成，當資料到達時會觸發。 工作流程可以使用現成可用的表單資料模型步驟，將資料或檔案封存至適當的資料存放區。
-* **安全儲存表單資料**：處理功能提供防火牆後的存放庫，用於存放與使用者隔離的原始表單資料。 無論是作者執行個體的表單設計人員或發佈執行個體的一般使用者都無法存取此存放庫。
+* **處理來自Publish例項的原始表單資料：** 這主要是透過AEM工作流程在處理執行個體上達成，當資料到達時會觸發。 工作流程可以使用現成可用的表單資料模型步驟，將資料或檔案封存至適當的資料存放區。
+* **安全儲存表單資料**：處理功能提供防火牆後的存放庫，用於存放與使用者隔離的原始表單資料。 無論是作者執行個體的表單設計人員還是Publish執行個體的一般使用者都無法存取此存放庫。
 
   >[!NOTE]
   >
   >Adobe建議使用協力廠商資料存放區來儲存最後處理的資料，而非使用AEM存放庫。
 
-* **對從發佈執行個體到達的信件資料進行儲存和後處理：** AEM工作流程會針對對應的字母定義執行選擇性後續處理。 這些工作流程可將最終處理的資料儲存至適當的外部資料存放區。
+* **對來自Publish執行個體的通訊資料進行儲存和後處理：** AEM工作流程會針對對應的字母定義執行選擇性後續處理。 這些工作流程可將最終處理的資料儲存至適當的外部資料存放區。
 
 * **HTML Workspace託管**：處理執行個體會託管HTML Workspace的前端。 HTML工作區為稽核和核准流程提供相關任務/群組指派的UI。
 
 處理執行個體設定為在作者執行模式中執行，因為：
 
-* 它可讓您從發佈執行個體反向復寫原始表單資料。 預設的資料儲存處理常式需要反向復寫功能。
-* AEM工作流程是處理從發佈執行個體到達的原始表單資料的主要方法，建議在作者樣式系統上執行。
+* 這可讓您從Publish執行個體反向復寫原始表單資料。 預設的資料儲存處理常式需要反向復寫功能。
+* AEM工作流程是處理來自Publish執行個體之原始表單資料的主要方法，建議在作者樣式系統上執行。
 
 ## JEE上AEM Forms的實體拓撲範例 {#sample-physical-topologies-for-aem-forms-on-jee}
 

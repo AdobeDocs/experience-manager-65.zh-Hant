@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1518'
 ht-degree: 0%
@@ -86,7 +87,7 @@ AEM Forms備份策略包含兩種型別的備份：
    1. 按一下 **開始** 從存放庫同步資產。
 
 1. 在叢集環境中，主要節點(相對於AEM)應在次要節點之前。
-1. 在驗證系統的正常作業之前，請確定沒有從內部或外部來源（例如Web、SOAP或EJB處理啟動器）啟動任何處理。
+1. 在驗證系統的正常作業之前，請確定沒有從內部或外部來源(例如Web、SOAP或EJB處理起始器)起始任何處理。
 
 如果主要AEM表單資料庫已移動或變更，請檢閱與您的應用程式伺服器相關的安裝指南，以取得更新AEM表單資料來源IDP_DS和EDC_DS的資料庫連線資訊的相關資訊。
 

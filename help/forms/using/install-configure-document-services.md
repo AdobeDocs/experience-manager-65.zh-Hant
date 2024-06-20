@@ -3,9 +3,10 @@ title: 安裝和設定檔案服務
 description: 安裝AEM Forms檔案服務，以建立、彙編、散佈、封存PDF檔案、新增數位簽名以限制對檔案的存取，以及解碼條碼式Forms。
 topic-tags: installing
 role: Admin, User, Developer
-solution: Experience Manager, Experience Manager Forms
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 7b0f8222408d43a298fa2036020963721cfbd1f9
+solution: Experience Manager, Experience Manager Forms
+feature: Interactive Communication
+source-git-commit: cf3247e437af7447fd6a6121c6a4e2ef750d06b7
 workflow-type: tm+mt
 source-wordcount: '5660'
 ht-degree: 1%

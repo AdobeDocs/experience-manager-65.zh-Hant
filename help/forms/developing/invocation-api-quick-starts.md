@@ -8,7 +8,7 @@ topic-tags: develop
 role: Developer
 exl-id: bee0eebb-c21d-472c-bbdf-28d8c3a5ed4a
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '1248'
 ht-degree: 3%
@@ -760,7 +760,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 以下Java程式碼範例會叫用名為的程式 `MyApplication/EncryptDocument` 透過HTTP使用資料。 (請參閱 [透過HTTP使用BLOB資料叫用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
 
-根據名為的PDF檔案的不安全PDF檔案 *Loan.pdf* 會使用SOAP over HTTP傳遞至AEM Forms處理序。 PDF檔案位於下列URL： `https://'[server]:[port]'/FormsQS`. 此程式會傳回密碼加密的PDF檔案，並儲存為名為的PDF檔案 *EncryptedDocument.pdf*.
+根據名為的PDF檔案的不安全PDF檔案 *Loan.pdf* 會透過HTTP使用SOAP傳遞至AEM Forms程式。 PDF檔案位於下列URL： `https://'[server]:[port]'/FormsQS`. 此程式會傳回密碼加密的PDF檔案，並儲存為名為的PDF檔案 *EncryptedDocument.pdf*.
 
 ```java
  /**

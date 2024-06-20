@@ -1,13 +1,13 @@
 ---
 title: 自訂草稿和提交資料服務
-description: 依預設，AEM Forms會將草稿和已提交的最適化表單儲存在發佈執行個體的預設節點中。 不過，您可以設定AEM Forms的草稿和提交資料服務，以自訂草稿和提交的最適化表單的儲存。
+description: 依預設，AEM Forms會將草稿和已提交的最適化表單儲存在Publish執行個體的預設節點中。 不過，您可以設定AEM Forms的草稿和提交資料服務，以自訂草稿和提交的最適化表單的儲存。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 exl-id: ed10ef8c-7b9c-43cf-bea8-7cf9742a8cac
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 AEM Forms可讓使用者將最適化表單儲存為草稿。 草稿功能為使用者提供了維護工作進行中表單的選項。 然後，使用者可以隨時從任何裝置完成並提交表單。
 
-依預設，AEM Forms會將與草稿和提交相關聯的使用者資料儲存在中的發佈執行個體上 `/content/forms/fp` 節點。
+依預設，AEM Forms會將與草稿和提交相關聯的使用者資料儲存在的Publish執行個體上 `/content/forms/fp` 節點。
 
 不過，AEM Forms Portal元件提供資料服務，可讓您自訂儲存草稿和提交之使用者資料的實作。 例如，您可以將資料儲存在組織目前實作的資料存放區中。
 

@@ -1,6 +1,6 @@
 ---
 title: 以程式管理端點
-description: 使用「端點登入」服務來新增EJB端點、新增SOAP端點、新增Watched資料夾端點、新增電子郵件端點、新增遠端端點、新增工作管理員端點、修改端點、移除端點，以及擷取端點聯結器資訊。
+description: 使用「端點登入」服務來新增EJB端點、新增SOAP端點、新增Watched Folder端點、新增電子郵件端點、新增遠端端點、新增工作管理員端點、修改端點、移除端點，以及擷取端點聯結器資訊。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '10800'
 ht-degree: 1%
@@ -157,15 +157,15 @@ ht-degree: 1%
 
 ## 新增SOAP端點 {#adding-soap-endpoints}
 
-您可以使用AEM Forms Java API，以程式設計方式將SOAP端點新增至服務。 透過新增SOAP端點，您可以讓使用者端應用程式使用SOAP模式來叫用服務。 也就是說，在設定呼叫AEM Forms所需的連線屬性時，您可以選取SOAP模式。
+您可以使用AEM Forms Java API，以程式設計方式將SOAP端點新增至服務。 透過新增SOAP端點，您可以讓使用者端應用程式使用SOAP模式叫用服務。 也就是說，在設定呼叫AEM Forms所需的連線屬性時，您可以選取SOAP模式。
 
 >[!NOTE]
 >
->您無法使用Web服務新增SOAP端點。
+>您無法使用網站服務新增SOAP端點。
 
 >[!NOTE]
 >
->通常，SOAP端點會依預設新增至服務。不過，SOAP端點可以新增至以程式設計方式部署的流程，或是在移除SOAP端點且必須再次新增時。
+>通常SOAP端點會依預設新增至服務。不過，SOAP端點可以新增至以程式設計方式部署的流程，或是SOAP端點移除後而必須重新新增的流程。
 
 ### 步驟摘要 {#summary_of_steps-1}
 
@@ -188,7 +188,7 @@ ht-degree: 1%
 * adobe-utilities.jar (如果將AEM Forms部署在JBoss Application Server上，則為必要)
 * jbossall-client.jar (如果AEM Forms部署在JBoss Application Server上，則為必要)
 
-需要這些JAR檔案才能建立SOAP端點。 不過，如果您使用SOAP端點來叫用服務，則需要額外的JAR檔案。 如需AEM Forms JAR檔案的相關資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+建立SOAP端點需要這些JAR檔案。 不過，如果您使用SOAP端點來叫用服務，則需要額外的JAR檔案。 如需AEM Forms JAR檔案的相關資訊，請參閱 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **建立EndpointRegistry使用者端物件**
 
@@ -206,7 +206,7 @@ ht-degree: 1%
 
 **建立SOAP端點**
 
-設定SOAP端點屬性之後，您可以建立SOAP端點。
+設定SOAP端點屬性後，即可建立SOAP端點。
 
 **啟用端點**
 
@@ -1083,7 +1083,7 @@ ht-degree: 1%
 
 ## 移除端點 {#removing-endpoints}
 
-您可以使用AEM Forms Java API，以程式設計方式從服務中移除端點。 移除端點後，無法使用啟用端點的叫用方法來叫用服務。 例如，如果您從服務中移除SOAP端點，就無法使用SOAP模式來叫用服務。
+您可以使用AEM Forms Java API，以程式設計方式從服務中移除端點。 移除端點後，無法使用啟用端點的叫用方法來叫用服務。 例如，如果您從服務中移除SOAP端點，則無法使用SOAP模式叫用服務。
 
 若要示範如何從服務移除端點，此段落會從名為的服務移除EJB端點 *Encryptdocument*.
 
@@ -1214,7 +1214,7 @@ ht-degree: 1%
 指定要從中擷取資訊的聯結器型別。 存在下列型別的聯結器：
 
 * **EJB**：讓使用者端應用程式能夠使用EJB模式叫用服務。
-* **SOAP**：讓使用者端應用程式能夠使用SOAP模式叫用服務。
+* **SOAP**：讓使用者端應用程式能使用SOAP模式叫用服務。
 * **Watched資料夾**：啟用watched資料夾以叫用服務。
 * **電子郵件**：啟用電子郵件訊息以叫用服務。
 * **遠端**：讓Flex使用者端應用程式能夠叫用服務。

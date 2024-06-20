@@ -8,7 +8,7 @@ topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '5333'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Java API支援下列功能：
 
 * 遠端呼叫的RMI傳輸通訊協定
 * 本機呼叫的VM傳輸
-* 遠端呼叫的SOAP
+* 用於遠端呼叫的SOAP
 * 不同的驗證，例如使用者名稱和密碼
 * 同步和非同步呼叫要求
 
@@ -415,7 +415,7 @@ Java API支援下列功能：
 
 使用Java API時，您可以設定連線屬性來叫用AEM Forms。 設定連線屬性時，請指定從遠端還是從本機叫用服務，同時指定連線模式和驗證值。 如果啟用了服務安全性，則需要驗證值。 但是，如果停用服務安全性，則不需要指定驗證值。
 
-連線模式可以是SOAP或EJB模式。 EJB模式使用RMI/IIOP通訊協定，而EJB模式的效能比SOAP模式的效能好。 SOAP模式可用來消除J2EE應用程式伺服器相依性，或當防火牆位於AEM Forms和使用者端應用程式之間時。 SOAP模式使用https通訊協定做為基礎傳輸，而且可以跨防火牆邊界通訊。 如果J2EE應用程式伺服器相依性或防火牆都不是問題，建議您使用EJB模式。
+連線模式可以是SOAP或EJB模式。 EJB模式使用RMI/IIOP通訊協定，而EJB模式的效能比SOAP模式的效能好。 SOAP模式用於消除J2EE應用程式伺服器相依性，或當防火牆位於AEM Forms和使用者端應用程式之間時。 SOAP模式使用https通訊協定做為基礎傳輸，而且可以跨防火牆邊界通訊。 如果J2EE應用程式伺服器相依性或防火牆都不是問題，建議您使用EJB模式。
 
 若要成功叫用AEM Forms服務，請設定下列連線屬性：
 
@@ -443,7 +443,7 @@ Java API支援下列功能：
 
 * **DSC_CREDENTIAL_USERNAME：** 指定AEM表單使用者名稱。 使用者若要成功叫用AEM Forms服務，他們需要服務使用者角色。 使用者也可以擁有其他包含「服務啟動」許可權的角色。 否則，當他們嘗試叫用服務時，會擲回例外狀況。 如果停用服務安全性，則不需要指定此連線屬性。
 * **DSC_CREDENTIAL_PASSWORD：** 指定對應的密碼值。 如果停用服務安全性，則不需要指定此連線屬性。
-* **DSC_REQUEST_TIMEOUT：** SOAP要求的預設要求逾時限製為1200000毫秒（20分鐘）。 有時候，要求可能需要更長的時間才能完成作業。 例如，擷取大量記錄的SOAP請求可能需要較長的逾時限制。 您可以使用 `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` 增加SOAP請求的請求呼叫逾時限制。
+* **DSC_REQUEST_TIMEOUT：** SOAP要求的預設要求逾時限製為1200000毫秒（20分鐘）。 有時候，要求可能需要更長的時間才能完成作業。 例如，擷取大量記錄的SOAP要求可能需要較長的逾時限制。 您可以使用 `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` 增加SOAP要求的要求呼叫逾時限制。
 
   **注意**：只有SOAP型呼叫支援DSC_REQUEST_TIMEOUT屬性。
 
@@ -525,7 +525,7 @@ Java API支援下列功能：
 
 **設定SOAP連線模式**
 
-以下Java程式碼範例會設定SOAP模式的連線屬性，以叫用部署在JBoss上的AEM Forms。
+以下Java程式碼範例會在SOAP模式下設定連線屬性，以叫用部署在JBoss上的AEM Forms。
 
 ```java
  Properties ConnectionProps = new Properties();
@@ -553,7 +553,7 @@ Java API支援下列功能：
 
 >[!NOTE]
 >
->與AEM Forms程式設計相關聯的所有Java快速入門都會顯示EJB和SOAP連線設定。
+>與「使用AEM Forms程式設計」相關聯的所有Java快速入門都會顯示EJB和SOAP連線設定。
 
 **使用自訂請求逾時限制設定SOAP連線模式**
 
@@ -651,7 +651,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
  java.naming.provider.url=corbaloc::appserver1:9810,:appserver2:9810
 ```
 
-**Weblogic**
+**WebLogic**
 
 下面的示例演示用於連接到部署在 WebLogic 上的AEM Forms的 jndi.properties 文件的內容。
 
@@ -660,7 +660,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
  java.naming.provider.url=t3://appserver1:8001, appserver2:8001
 ```
 
-**Jboss**
+**JBoss**
 
 以下示例顯示了用於連接到部署在 JBoss 上的AEM Forms的 jndi.properties 文件的內容。
 

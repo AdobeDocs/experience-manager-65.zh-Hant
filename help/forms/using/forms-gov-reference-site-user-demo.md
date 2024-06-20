@@ -5,8 +5,9 @@ contentOwner: anujkapo
 docset: aem65
 exl-id: 288d5459-bc69-4328-b6c9-4b4960bf4977
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Foundation Components
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '2478'
 ht-degree: 1%
@@ -15,7 +16,7 @@ ht-degree: 1%
 
 # We.Gov和We.Finance參考網站逐步說明 {#we-gov-reference-site-walkthrough}
 
-## 必要條件  {#pre-requisites}
+## 必要條件 {#pre-requisites}
 
 設定參考網站，如所述 [設定We.Gov和We.Finance參考網站](../../forms/using/forms-install-configure-gov-reference-site.md).
 

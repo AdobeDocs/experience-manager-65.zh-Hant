@@ -5,8 +5,9 @@ topic-tags: publish
 docset: aem65
 exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Workflow
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 0%
@@ -101,7 +102,7 @@ AEM Forms應用程式可立即提供數個中繼資料變數（機碼值組）�
 <table>
  <tbody> 
   <tr> 
-   <td>關鍵</td> 
+   <td>索引鍵</td> 
    <td>說明</td> 
   </tr> 
   <tr> 

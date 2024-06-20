@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: 31730c24-46c3-4111-9391-ccd4342740e9
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2774'
 ht-degree: 0%
@@ -138,7 +138,7 @@ ht-degree: 0%
 
 [步驟摘要](converting-pdf-postscript-image-files.md#summary-of-steps)
 
-[快速入門（SOAP模式）：使用Java API將PDF檔案轉換為PostScript](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API將PDF檔案轉換為PostScript](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -249,7 +249,7 @@ ht-degree: 0%
 
 **從集合擷取影像檔案**
 
-您可以從ConvertPDF服務傳回的集合物件擷取影像檔案。 集合中的每個元素都是 `com.adobe.idp.Document` 執行個體(或 `BLOB` 例如使用Web服務時的執行個體)，可以儲存為影像檔案，例如JPG檔案。
+您可以從ConvertPDF服務傳回的集合物件擷取影像檔案。 集合中的每個元素都是 `com.adobe.idp.Document` 執行個體(或 `BLOB` 例項（如果您使用Web服務），則可儲存為影像檔案，例如JPG檔案。
 
 影像檔案的格式取決於 `ImageConvertFormat` 執行階段選項。 也就是說，如果您將 `ImageConvertFormat` 執行階段選項至 `ImageConvertFormat.JPEG`，您可以將影像檔案儲存為JPG檔案。
 
@@ -303,7 +303,7 @@ ht-degree: 0%
 
 **另請參閱**
 
-[快速入門（SOAP模式）：使用Java API將PDF檔案轉換為JPEG檔案](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API將PDF檔案轉換為JPEG檔案](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
 ### 使用Web服務API將PDF檔案轉換為影像檔案 {#convert-a-pdf-document-to-image-files-using-the-web-service-api}
 

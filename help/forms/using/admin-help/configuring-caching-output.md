@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 1015f5c9-6ab8-4656-a5c8-40f82b9938b9
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
 source-wordcount: '1442'
 ht-degree: 0%
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 # 設定輸出的快取  {#configuring-caching-for-output}
 
-Output服務會合併XML表單資料與在Designer中建立的表單設計，以建立各種格式的檔案輸出資料流。
+輸出服務將XML表單資料與Designer中建立的表單設計合併，以建立各種格式的檔案輸出資料流。
 
 管理主控台中的「輸出」頁面包含控制輸出服務快取專案方式的設定。 您可以調整這些設定，以最佳化輸出服務的效能。
 

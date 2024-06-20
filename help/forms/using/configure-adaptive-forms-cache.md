@@ -8,7 +8,8 @@ docset: aem65
 role: Admin,User
 exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms, Foundation Components
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 1%
@@ -40,7 +41,7 @@ ht-degree: 1%
 
 您也可以在Dispatcher設定最適化表單快取，以獲得額外的效能提升。
 
-### 必要條件  {#pre-requisites}
+### 必要條件 {#pre-requisites}
 
 * 啟用 [在使用者端合併或預填資料](prepopulate-adaptive-form-fields.md#prefill-at-client) 選項。 它有助於合併預填表單的每個例項的唯一資料。
 

@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: 96310e0a-8e95-4a55-9508-5298b8d67f83
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2754'
 ht-degree: 0%
@@ -24,12 +24,12 @@ ht-degree: 0%
 表單資料整合服務可將資料匯入PDF表單，並從PDF表單匯出資料。 匯入和匯出作業支援兩種型別的PDF forms：
 
 * Acrobat表單(在Acrobat中建立)是包含表單欄位的PDF檔案。
-* AdobeXML表單（在Designer中建立）是符合XMLAdobeXML Forms架構(XFA)的PDF檔案。
+* AdobeXML表單(在Designer中建立)是符合XMLAdobeXML Forms架構(XFA)的PDF檔案。
 
 視PDF表單的型別而定，表單資料可以下列其中一種格式存在：
 
 * XFDF檔案，這是Acrobat表單資料格式的XML版本。
-* XDP檔案，此檔案是包含表單欄位定義的XML檔案。 其中也可能包含表單欄位資料和內嵌PDF檔案。 由Designer產生的XDP檔案只能在其攜帶內嵌Base-64編碼PDF檔案時使用。
+* XDP檔案，此檔案是包含表單欄位定義的XML檔案。 其中也可能包含表單欄位資料和內嵌PDF檔案。 Designer產生的XDP檔案必須攜帶內嵌的base-64編碼PDF檔案，才能使用。
 
 您可以使用表單資料整合服務完成這些工作：
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 您可以使用表單資料整合服務，將表單資料匯入互動式PDF forms中。 互動式PDF表單是一份PDF檔案，其中包含一或多個用於向使用者收集資訊或用於顯示自訂資訊的欄位。 表單資料整合服務不支援表單計算、驗證或指令碼。
 
-若要將資料匯入在Designer中建立的表單，您必須參考有效的XDP XML資料來源。 請考量下列範例抵押貸款申請表單。
+若要將資料匯入到Designer中建立的表單，您必須參考有效的XDP XML資料來源。 請考量下列範例抵押貸款申請表單。
 
 ![ie_ie_loanformdata](assets/ie_ie_loanformdata.png)
 
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 **參考PDF表單**
 
-若要將資料匯入PDF表單，您必須參考在Designer中建立的XML表單，或在Acrobat中建立的Acrobat表單。
+若要將資料匯入PDF表單，您必須參考在Designer中建立的XML表單或在Acrobat中建立的Acrobat表單。
 
 **參考XML資料來源**
 
@@ -185,7 +185,7 @@ ht-degree: 0%
 
 [步驟摘要](importing-exporting-data.md#summary-of-steps)
 
-[快速入門（SOAP模式）：使用Java API匯入表單資料](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API匯入表單資料](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -345,7 +345,7 @@ ht-degree: 0%
 
 [步驟摘要](importing-exporting-data.md#summary-of-steps)
 
-[快速入門（SOAP模式）：使用Java API匯出表單資料](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API匯出表單資料](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

@@ -7,7 +7,8 @@ topic-tags: forms-manager
 role: Admin,User
 exl-id: b31f9f56-dd33-4478-ad34-01ac7d5a1b40
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 您可以刪除表單和資產，以從存放庫移除這些資產。 刪除操作適用於所有資產型別和資料夾。
 
-如果您從製作例項中刪除資產，該資產也會從發佈例項中刪除。 AEM Forms伺服器包含作者和發佈執行個體。 製作例項用於建立及管理表單資產和資源。 發佈執行個體包含可供一般使用者使用的已發佈表單資產和相關資源。
+如果您從製作例項中刪除資產，該資產也會從Publish例項中刪除。 AEM Forms伺服器包含作者和Publish執行個體。 製作例項用於建立及管理表單資產和資源。 Publish執行個體包含可供一般使用者使用的已發佈表單資產和相關資源。
 
 ## 如何刪除表單 {#how-to-delete-a-form}
 

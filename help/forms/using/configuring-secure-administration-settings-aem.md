@@ -7,7 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.4
 role: Admin,User
 exl-id: 40bc01b4-a59e-4420-81d6-2887857bddce
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Security, Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 0%
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 ## 停用非必要的服務遠端存取 {#disabling-non-essential-remote-access-to-services}
 
-安裝及設定JEE上的AEM Forms後，許多服務都可透過SOAP和Enterprise JavaBeans™ (EJB)進行遠端呼叫。在此案例中，遠端一詞指的是任何擁有網路存取應用程式伺服器SOAP、EJB或Action Message Format (AMF)連線埠的呼叫者。
+安裝及設定JEE上的AEM Forms後，許多服務都可透過SOAP和Enterprise JavaBeans™ (EJB)進行遠端呼叫。在此案例中，remote一詞指的是任何擁有網路存取應用程式伺服器SOAP、EJB或Action Message Format (AMF)連線埠的呼叫者。
 
 雖然JEE服務上的AEM Forms需要向授權呼叫者傳遞有效的認證，但您應僅允許從遠端存取您需要存取的服務。 若要達到有限的協助功能，您應該儘可能減少可遠端存取的服務組合，以讓系統正常運作，然後啟用遠端呼叫功能，以呼叫您所需的其他服務。
 
@@ -61,7 +62,7 @@ JEE服務上的AEM Forms一律需要至少SOAP存取權。 這些服務通常是
    * WorkspaceSingleSignOn
    * 應用程式管理員
 
-1. 按一下 **下一個** 並重複上一步驟以找出不在上述清單中的SOAP端點。 在移除端點之前，請確定SOAP列在「提供者」欄中。
+1. 按一下 **下一個** 對不在上面清單中的SOAP端點重複上一步驟。 在移除端點之前，請確定SOAP列在「提供者」欄中。
 
 ## 停用對服務的非必要匿名存取 {#disabling-non-essential-anonymous-access-to-services}
 

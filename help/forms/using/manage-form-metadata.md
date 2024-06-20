@@ -8,7 +8,8 @@ docset: aem65
 role: Admin,User
 exl-id: f82bbd39-b655-47a9-bca9-21d7cd30c082
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1967'
 ht-degree: 2%
@@ -113,12 +114,12 @@ AEM Forms支援下列資產型別：
    <td>指定上次發佈表單時間的唯讀值。</td> 
   </tr> 
   <tr> 
-   <td>發佈開啟/關閉時間</td> 
+   <td>Publish開啟/關閉時間</td> 
    <td>除了資源以外的所有專案</td> 
    <td><p>排定自動發佈/取消發佈表單的時間。 使用者在編輯中繼資料時設定此值。</p> 
     <ul> 
-     <li>發佈開啟和關閉時間都應在目前日期以後。 </li> 
-     <li>發佈關閉時間應在發佈開啟時間之後。 </li> 
+     <li>Publish的開啟和關閉時間都應在目前日期以後。 </li> 
+     <li>Publish關閉時間應在發佈開啟時間之後。 </li> 
     </ul> </td> 
   </tr> 
   <tr> 

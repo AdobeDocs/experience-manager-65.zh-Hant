@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '18860'
 ht-degree: 0%
@@ -282,7 +282,7 @@ Output服務執行作業之後，會傳回各種資料專案，例如指定作�
 
 [快速入門（EJB模式）：使用Java API建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -540,7 +540,7 @@ Output服務執行作業之後，會傳回各種資料專案，例如指定作�
 
 [步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[快速入門（SOAP模式）：使用Java API建立PDF/檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API建立PDF/A檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -629,7 +629,7 @@ Output服務執行作業之後，會傳回各種資料專案，例如指定作�
 
 ## 將Content Services中的檔案傳遞（已棄用）至Output Service {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
-Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設計，呈現非互動式PDF表單。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的物件。 然後Output服務會在下列位置轉譯表單設計： `com.adobe.idp.Document` 物件。
+Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設計，轉譯非互動式PDF表單。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的物件。 然後Output服務會在下列位置轉譯表單設計： `com.adobe.idp.Document` 物件。
 
 傳遞的優點 `com.adobe.idp.Document` 物件至Output服務，表示其他AEM Forms服務作業會傳回 `com.adobe.idp.Document` 執行個體。 也就是說，您可以取得 `com.adobe.idp.Document` 執行個體，並加以呈現。 例如，假設XDP檔案儲存在名為的內容服務（已棄用）節點中 `/Company Home/Form Designs`，如下圖所示。
 
@@ -736,7 +736,7 @@ Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設
 
 [快速入門（EJB模式）：使用Java API將檔案傳遞至「輸出服務」](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API將檔案傳遞至輸出服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API將檔案傳遞至輸出服務](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -818,7 +818,7 @@ Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設
 
 ## 將存放庫中的檔案傳遞至輸出服務 {#passing-documents-located-in-the-repository-to-the-output-service}
 
-Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設計，呈現非互動式PDF表單。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的物件。 然後Output服務會在下列位置轉譯表單設計： `com.adobe.idp.Document` 物件。
+Output服務會根據通常儲存為XDP檔案並在Designer中建立的表單設計，轉譯非互動式PDF表單。 您可以傳遞 `com.adobe.idp.Document` 包含表單設計至Output服務的物件。 然後Output服務會在下列位置轉譯表單設計： `com.adobe.idp.Document` 物件。
 
 傳遞的優點 `com.adobe.idp.Document` 物件至Output服務，表示其他AEM Forms服務作業會傳回 `com.adobe.idp.Document` 執行個體。 也就是說，您可以取得 `com.adobe.idp.Document` 執行個體，並加以呈現。 例如，假設XDP檔案儲存在AEM Forms存放庫中，如下圖所示。
 
@@ -1052,7 +1052,7 @@ ResourceRepositoryClient
 
 [快速入門（EJB模式）：使用Java API根據片段建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API根據片段建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API根據片段建立PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1272,7 +1272,7 @@ Output服務執行作業之後，會傳回指定作業是否成功的各種資�
 
 [步驟摘要](creating-document-output-streams.md#summary-of-steps)
 
-[快速入門（SOAP模式）：使用Java API列印至檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API列印至檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -2085,7 +2085,7 @@ Output服務執行作業之後，會傳回指定作業是否成功的XML資料�
 
 [快速入門（EJB模式）：使用Java API建立搜尋規則](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API建立搜尋規則](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API建立搜尋規則](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -2299,7 +2299,7 @@ Output服務執行作業之後，會傳回指定作業是否成功的XML資料�
 
 [快速入門（EJB模式）：使用Java API轉換PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API轉換PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API轉換PDF檔案](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
 
 [包含AEM Forms Java程式庫檔案](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

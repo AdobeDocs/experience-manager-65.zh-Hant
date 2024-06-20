@@ -3,8 +3,9 @@ title: 如何在動態PDF forms中產生及使用雜湊？
 description: 在動態PDF forms中產生及使用雜湊。
 exl-id: 026f5686-39ea-4798-9d1f-031f15941060
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Document Security
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 0%
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 ## 必備條件知識 {#prerequisite-knowledge}
 
-您需要在JEE Designer上使用AEM Forms的體驗，以及存取和呼叫指令碼物件中函式的能力。
+您需要在JEE Designer上使用AEM Forms的體驗，以及存取和呼叫指令碼物件中函式的功能。
 
 ## 使用者層級 {#user-level}
 
@@ -27,7 +28,7 @@ ht-degree: 0%
 
 雜湊函式會以任何長度的長字串（或訊息）作為輸入，並產生固定長度的字串作為輸出，有時稱為訊息摘要或數位指紋。
 
-JEE Designer上的AEM Forms可讓您以JavaScript的形式，在指令碼物件中實作不同的雜湊函式，並在動態PDF檔案中執行。 本文範例檔案包含的範例PDF會使用下列雜湊函式的開放原始碼實作：
+JEE Designer上的AEM Forms可讓您以JavaScript的身分在指令碼物件中實作不同的雜湊函式，並在動態PDF檔案中執行。 本文範例檔案包含的範例PDF會使用下列雜湊函式的開放原始碼實作：
 
 * MD4和MD5 — 由Ronald Rivest設計
 
@@ -41,7 +42,7 @@ JEE Designer上的AEM Forms可讓您以JavaScript的形式，在指令碼物件�
 
 ## 檢查指令碼物件 {#examining-script-objects}
 
-當您在JEE設計工具的AEM Forms中開啟兩個提供的範例之一時，您會在「階層」浮動視窗中找到四個指令碼物件（請參閱下圖）。
+當您在JEE Designer上的AEM Forms中開啟兩個提供的範例之一時，您會在「階層」浮動視窗中找到四個指令碼物件（請參閱下圖）。
 
 ![變數](assets/variables.jpg)
 

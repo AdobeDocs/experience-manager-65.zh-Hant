@@ -5,8 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: develop, Configuration
 exl-id: 2ac37dc5-d88d-4f98-8576-cd2ca6f0ea3a
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Foundation Components
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -50,7 +51,7 @@ AEM Forms提供雲端服務，將Dynamics 365與整合 [Forms資料整合](/help
    ![selectassetpath](assets/selectassetpath.png)
 
 1. 選取「**完成**」。
-1. 發佈已編輯的頁面。
+1. 在編輯的頁面上Publish。
 
    >[!NOTE]
    >

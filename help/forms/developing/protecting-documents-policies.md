@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '15394'
 ht-degree: 0%
@@ -261,7 +261,7 @@ Document Security服務也會保護其他檔案型別，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱以下內容：
 
-* 「快速入門（SOAP模式）：使用Java API建立原則」
+* 「快速入門(SOAP模式)：使用Java API建立原則」
 
 ### 使用Web服務API建立原則 {#create-a-policy-using-the-web-service-api}
 
@@ -401,7 +401,7 @@ Document Security服務也會保護其他檔案型別，例如Microsoft Word檔�
 
 **程式碼範例**
 
-如需使用Document Security服務的程式碼範例，請參閱快速入門（SOAP模式）：使用Java API修改原則一節。
+如需使用Document Security服務的程式碼範例，請參閱快速入門(SOAP模式)：使用Java API修改原則一節。
 
 ### 使用Web服務API修改現有原則 {#modify-existing-policies-using-the-web-service-api}
 
@@ -504,7 +504,7 @@ Document Security服務也會保護其他檔案型別，例如Microsoft Word檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門（SOAP模式）：使用Java API刪除原則」
+* 「快速入門(SOAP模式)：使用Java API刪除原則」
 
 ### 使用Web服務API刪除原則 {#delete-policies-using-the-web-service-api}
 
@@ -640,7 +640,7 @@ Document Security服務將原則套用至PDF檔案後，您可以將受原則保
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
 * 「快速入門（EJB模式）：使用Java API將原則套用至PDF檔案」
-* 「快速入門（SOAP模式）：使用Java API將原則套用至PDF檔案」
+* 「快速入門(SOAP模式)：使用Java API將原則套用至PDF檔案」
 
 **另請參閱**
 
@@ -791,7 +791,7 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門（SOAP模式）：使用Java API從PDF檔案中移除原則」
+* 「快速入門(SOAP模式)：使用Java API從PDF檔案中移除原則」
 
 ### 使用Web服務API移除原則 {#remove-a-policy-using-the-web-service-api}
 
@@ -934,7 +934,7 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門（SOAP模式）：使用Java API撤銷檔案」
+* 「快速入門(SOAP模式)：使用Java API撤銷檔案」
 
 ### 使用Web服務API撤銷檔案的存取權 {#revoke-access-to-documents-using-the-web-service-api}
 
@@ -1066,7 +1066,7 @@ Document Security服務從PDF檔案中移除原則後，您可以將不安全的
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門（SOAP模式）：使用網站服務API恢復對已撤銷檔案的存取權」
+* 「快速入門(SOAP模式)：使用網站服務API恢復對已撤銷檔案的存取權」
 
 ### 使用網站服務API恢復對已撤銷檔案的存取 {#reinstate-access-to-revoked-documents-using-the-web-service-api}
 
@@ -1200,7 +1200,7 @@ Inspect使用Document Security Service API (Java)提供受原則保護的PDF檔�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門（SOAP模式）：使用Java API檢查受原則保護的PDF檔案」
+* 「快速入門(SOAP模式)：使用Java API檢查受原則保護的PDF檔案」
 
 ### 使用Web服務API的Inspect受原則保護的PDF檔案 {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
 
@@ -1420,7 +1420,7 @@ Inspect使用Document Security Service API （網頁服務）撰寫受原則保�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門（SOAP模式）：使用Java API建立浮水印」
+* 「快速入門(SOAP模式)：使用Java API建立浮水印」
 
 ### 使用網站服務API建立浮水印 {#create-watermarks-using-the-web-service-api}
 
@@ -1567,7 +1567,7 @@ Inspect使用Document Security Service API （網頁服務）撰寫受原則保�
 
 **程式碼範例**
 
-如需使用Document Security服務的程式碼範例，請參閱快速入門（SOAP模式）：使用Java API修改浮水印一節。
+如需使用Document Security服務的程式碼範例，請參閱快速入門(SOAP模式)：使用Java API修改浮水印一節。
 
 ### 使用網站服務API修改浮水印 {#modify-watermarks-using-the-web-service-api}
 
@@ -2039,7 +2039,7 @@ Document Security服務將原則套用至Word檔案後，您就可以將受原�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門（SOAP模式）：使用Java API將原則套用至Word檔案」
+* 「快速入門(SOAP模式)：使用Java API將原則套用至Word檔案」
 
 ### 使用網站服務API將原則套用至Word檔案 {#apply-a-policy-to-a-word-document-using-the-web-service-api}
 
@@ -2183,7 +2183,7 @@ Document Security服務將原則套用至Word檔案後，您就可以將受原�
 
 如需使用Document Security服務的程式碼範例，請參閱下列快速入門：
 
-* 「快速入門（SOAP模式）：使用Java API從Word檔案中移除原則」
+* 「快速入門(SOAP模式)：使用Java API從Word檔案中移除原則」
 
 ### 使用網站服務API從Word檔案中移除一項原則 {#remove-a-policy-from-a-word-document-using-the-web-service-api}
 

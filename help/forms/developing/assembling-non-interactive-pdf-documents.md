@@ -9,7 +9,8 @@ topic-tags: operations
 role: Developer
 exl-id: 4677b9e5-3811-4de3-b4f4-9574b5898486
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,  Document Services
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 0%
@@ -153,7 +154,7 @@ ht-degree: 0%
    * 建立 `java.io.File` 物件，並確認副檔名為.pdf。
    * 叫用 `Document` 物件的 `copyToFile` 複製目錄內容的方法 `Document` 物件至檔案。 確定您使用 `Document` 物件， `invokeOneDocument` 方法已傳回。
 
-* 「快速入門（SOAP模式）：使用Java API組合非互動式PDF檔案」
+* 「快速入門(SOAP模式)：使用Java API彙編非互動式PDF檔案」
 
 ## 使用網站服務API組合非互動式PDF檔案 {#assemble-a-non-interactive-pdf-document-using-the-web-service-api}
 
