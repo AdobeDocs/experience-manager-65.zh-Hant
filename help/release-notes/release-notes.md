@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
+source-git-commit: 2513ae7e193bdae3387210b07661b9c7a22b0156
 workflow-type: tm+mt
-source-wordcount: '3907'
+source-wordcount: '4006'
 ht-degree: 2%
 
 ---
@@ -540,6 +540,11 @@ The UberJar for [!DNL Experience Manager] 6.5.21.0可在以下網址取得： [M
    1. 在管理員模式中開啟命令提示字元。
    1. 使用安裝Geode修補程式 `geode-*-1.15.1.2.jar` 檔案。
 
+* 如果使用者嘗試預覽包含已儲存XML資料的草稿信件，則會卡在 `Loading` 部分特定字母的狀態。 (FORMS-14521)若要解決此問題，請執行以下步驟：
+   1. 下載 [hotfix](https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Fccm-ccr-content-10.0.206.zip&amp;data=05%7C02%7Cruchitas%40adobe.com%7C6fb8db1c81c84470d7ff08dc911c1e41%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638544797146701276%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=MhuthPPLjZcWuQsRAtSiwEZ2MljeNrpLumlWo6iolFI%3D&amp;reserved=0) 從軟體發佈入口網站。
+   1. 透過上傳並安裝套件(.zip) [CRX封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=es#accessing).
+
+* 升級至AEM Forms Service Pack 6.5.21.0後， `PaperCapture` 服務無法在PDF上執行OCR （光學字元辨識）作業。 此服務不會產生PDF或記錄檔形式的輸出。 若要解決問題，請參閱 [疑難排解](/help/forms/using/papercapture-service-resolution.md) 文章。 (CQDOC-21680)
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 
