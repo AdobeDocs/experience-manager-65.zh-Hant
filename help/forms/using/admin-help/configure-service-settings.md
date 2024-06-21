@@ -9,9 +9,9 @@ exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, Workbench
 role: User, Developer
-source-git-commit: 1e978cbece1401a18137ef98a3a9bf6cd666e48f
+source-git-commit: f1a18575e8b8f925f8adbe18e189f3916b5e353d
 workflow-type: tm+mt
-source-wordcount: '10828'
+source-wordcount: '10824'
 ht-degree: 0%
 
 ---
@@ -260,9 +260,9 @@ FTP服務可使用下列設定。
 
 **HTML至PDF轉換的遞補轉換器：** 指定主要轉換器失敗時用於HTML至PDF轉換的轉換器。 依預設，會選取WebCapture （僅限Windows）。
 
-**使用Acrobat影像轉換（僅限Windows）：** 當此設定為true時，產生PDF服務會使用Acrobat X Pro處理所有影像以PDF轉換。 只有當預設的純Java轉換機制無法成功轉換大部分的輸入影像時，此設定才有用。 預設值為false。
+**使用Acrobat影像轉換（僅限Windows）：** 當此設定為true時，產生PDF服務會對所有影像使用Acrobat來PDF轉換。 只有當預設的純Java轉換機制無法成功轉換大部分的輸入影像時，此設定才有用。 預設值為false。
 
-**啟用以Acrobat為基礎的AutoCAD轉換（僅限Windows）：** 當此設定為true時，「產生PDF」服務會對所有DWG使用Acrobat X Pro來PDF轉換。 只有當伺服器上未安裝AutoCAD或AutoCAD轉換機制無法成功轉換檔案時，此設定才有用。
+**啟用以Acrobat為基礎的AutoCAD轉換（僅限Windows）：** 當此設定為true時，產生PDF服務會針對所有DWG使用Acrobat來PDF轉換。 只有當伺服器上未安裝AutoCAD或AutoCAD轉換機制無法成功轉換檔案時，此設定才有用。
 
 **用於找出使用者名稱中禁止的特殊字元的規則運算式（僅限Windows）：** 指定當字元出現在使用者名稱中時，會干擾Export PDF和Optimize PDF作業的字元。
 
