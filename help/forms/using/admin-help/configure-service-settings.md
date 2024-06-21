@@ -9,9 +9,9 @@ exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, Workbench
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 1e978cbece1401a18137ef98a3a9bf6cd666e48f
 workflow-type: tm+mt
-source-wordcount: '10702'
+source-wordcount: '10828'
 ht-degree: 0%
 
 ---
@@ -226,7 +226,7 @@ Document Management服務可使用下列設定。
 >
 >只有在透過SSL （使用LDAPS）保護連線時才使用簡單驗證（使用者名稱和密碼）。
 
-**相容性模式：**
+<!-- **Compatibility Mode:**-->
 
 ## FTP服務設定 {#ftp-service-settings}
 
@@ -254,7 +254,11 @@ FTP服務可使用下列設定。
 
 **檔案型別設定：** 要套用至轉換作業的預先設定檔案型別設定的名稱（如果這些設定沒有指定為API叫用引數的一部分）。 按一下「服務>PDF Generator>檔案型別設定」，即可在Administration Console中設定檔案型別設定。
 
-**使用Acrobat WebCapture （僅限Windows）：** 當此設定為true時，產生PDF服務會針對所有HTML使用Acrobat X Pro來PDF轉換。 這可改善從HTML產生的PDF檔案品質，但效能可能會稍微降低。 預設值為false。
+**使用WebCapture （僅限Windows）：** 當此設定為true時，產生PDF服務會對所有HTML使用Acrobat來PDF轉換。 這可改善從HTML產生的PDF檔案品質，但效能可能會稍微降低。 預設值為false。
+
+**HTML至PDF轉換的主要轉換工具：** 「產生PDF」服務提供將HTML檔案轉換為PDF檔案的多種途徑：Webkit、WebCapture （僅限Windows）和WebToPDF。 此設定可讓使用者選取主要轉換器，將HTML轉換為PDF。 依預設，會選取WebToPDF。
+
+**HTML至PDF轉換的遞補轉換器：** 指定主要轉換器失敗時用於HTML至PDF轉換的轉換器。 依預設，會選取WebCapture （僅限Windows）。
 
 **使用Acrobat影像轉換（僅限Windows）：** 當此設定為true時，產生PDF服務會使用Acrobat X Pro處理所有影像以PDF轉換。 只有當預設的純Java轉換機制無法成功轉換大部分的輸入影像時，此設定才有用。 預設值為false。
 
@@ -268,21 +272,23 @@ FTP服務可使用下列設定。
 
 **OCR集區大小：** PDF Generator用於OCR的PaperCaptureService集區大小。 此設定的預設值（建議用於單處理器系統）為3，您可以在多處理器系統上增加此值。 此設定僅在Windows系統上有效。
 
+**記憶體中的ImageToPDF最大頁數用於TIFF轉換：** 此設定決定了TIFF映像在轉換為PDF期間可保留在記憶體中的最大頁數。 此設定的預設值為500，如果為ImageToPDF轉換程式配置額外的記憶體，則會增加此值。
+
 **HTML至PDF轉換的遞補字型系列：** 當AEM Forms伺服器無法使用原始PDF中使用的字型時，用於HTML檔案的字型系列名稱。 如果要轉換使用無法使用字型的HTML頁面，請指定字型系列。 例如，以地區語言撰寫的頁面可能會使用無法使用的字型。
 
 **重試原生轉換的邏輯** 管理PDF產生重試（如果第一次嘗試轉換失敗）：
 
-**無重試**
+* **無重試**
 
-如果首次轉換嘗試失敗，請勿重試PDF轉換
+  如果首次轉換嘗試失敗，請勿重試PDF轉換
 
-**重試**
+* **重試**
 
-無論是否已達到逾時臨界值，都請重試PDF轉換。 第一次嘗試的預設逾時期間為270秒。
+  無論是否已達到逾時臨界值，都請重試PDF轉換。 第一次嘗試的預設逾時期間為270秒。
 
-**若時間允許再試一次**
+* **若時間允許再試一次**
 
-如果首次轉換嘗試所花費的時間小於指定的逾時期間，請重試PDF轉換。 例如，如果逾時期間為270秒，而第一次嘗試耗用200秒，則PDF Generator將重新嘗試轉換。 如果首次嘗試本身耗用270秒，則不會重試轉換。
+  如果首次轉換嘗試所花費的時間小於指定的逾時期間，請重試PDF轉換。 例如，如果逾時期間為270秒，而第一次嘗試耗用200秒，則PDF Generator將重新嘗試轉換。 如果首次嘗試本身耗用270秒，則不會重試轉換。
 
 ## 指南ES4公用程式服務設定 {#guides-es4-utilities-service-settings}
 
