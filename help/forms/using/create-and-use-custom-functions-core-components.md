@@ -4,7 +4,9 @@ description: AEM Forms支援自訂函式，可讓使用者在規則編輯器中�
 keywords: 新增自訂函式、使用自訂函式、建立自訂函式，以及在規則編輯器中使用自訂函式。
 content-type: reference
 feature: Adaptive Forms, Core Components
-source-git-commit: f633fdfda531cc29ce6274e0367708cc4909a0cd
+roles: Admin, Developer
+exl-id: 00073e3a-f1b5-4c42-9fea-4a14b8a22c81
+source-git-commit: 6c902ca08b7689e428facdc4150f443dad089bff
 workflow-type: tm+mt
 source-wordcount: '3385'
 ht-degree: 2%
@@ -14,6 +16,7 @@ ht-degree: 2%
 # 最適化Forms核心元件中的自訂函式
 
 本文介紹如何使用最新最適化表單核心元件建立自訂函式，這些元件具有最新功能，例如：
+
 * 自訂函式的快取功能
 * 自訂函式的全域範圍物件和欄位物件支援
 * 支援現代JavaScript功能，例如左鍵和箭頭函式（ES10支援）
@@ -1003,5 +1006,3 @@ Adaptive Forms會在規則編輯器中擷取自訂函式清單時，實作自訂
    * 類別方法
    * 預設引數
    * Rest引數
-
-
