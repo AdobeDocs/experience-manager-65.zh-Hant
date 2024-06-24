@@ -5,11 +5,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop, interactive-communications
 content-strategy: max-2018
 docset: aem65
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 exl-id: 93c360a8-a9d9-4c4b-b7e2-2c44eaf4604c
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '6086'
 ht-degree: 2%
@@ -145,13 +145,13 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>8.</td>
-   <td>準時發佈</td>
+   <td>Publish準時</td>
    <td>是</td>
    <td>自動發佈佈景主題的時間。</td>
   </tr>
   <tr>
    <td>9.</td>
-   <td>發佈關閉時間</td>
+   <td>Publish關閉時間</td>
    <td>是</td>
    <td>自動取消發佈佈景主題的時間。</td>
   </tr>
@@ -604,7 +604,7 @@ AEM Forms中的主題支援您的表單和互動式通訊中面板版面配置�
 
 ## 對其他最適化表單使用案例的影響 {#impact-on-other-adaptive-form-use-cases}
 
-* **發佈/取消發佈表單：** 發佈表單時，也會發佈套用至的主題（如果尚未發佈）
+* **Publish/取消發佈表單：** 發佈表單時，也會發佈套用至的主題（如果尚未發佈）
 * **匯入/匯出表單：** 匯入或匯出表單時，也會自動匯入或匯出與其關聯的主題。
 * **表單的參照：** 表單參照中的「參照」區段包含主題的額外專案。
 * **表單的上次修改時間：** 當關聯的主題變更時更新。

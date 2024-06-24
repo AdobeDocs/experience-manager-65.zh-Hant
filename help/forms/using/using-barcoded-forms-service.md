@@ -5,11 +5,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 docset: aem65
-feature: Document Services
+feature: Document Services,Assembler,Barcoded Forms
 exl-id: d4b5cacd-0bac-48b5-a8a6-0f58883136d7
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
@@ -102,7 +102,7 @@ Watched資料夾端點通常用於啟動使用條碼Forms服務的應用程式�
 
 ### 建議的編碼和解碼格式 {#recommended-encoding-and-decoding-formats}
 
-條碼格式的作者在編碼條碼中的資料時，建議使用簡易的分隔格式（例如以Tab分隔）。 此外，請避免使用歸位作為欄位分隔符號。 Designer提供分隔編碼選項，這些編碼會自動產生JavaScript指令碼來編碼條碼。 解碼的資料在第一行上有欄位名稱，在第二行上有其值，每個欄位之間有索引標籤。
+條碼格式的作者在編碼條碼中的資料時，建議使用簡易的分隔格式（例如以Tab分隔）。 此外，請避免使用歸位作為欄位分隔符號。 Designer提供一系列分隔編碼，會自動產生JavaScript指令碼來編碼條碼。 解碼的資料在第一行上有欄位名稱，在第二行上有其值，每個欄位之間有索引標籤。
 
 解碼條碼時，請指定用來分隔欄位的字元。 為解碼指定的字元必須與用來編碼條碼的字元相同。 例如，在使用建議的Tab字元分隔格式時，「擷取至XML」作業必須使用欄位分隔符號的預設值Tab。
 

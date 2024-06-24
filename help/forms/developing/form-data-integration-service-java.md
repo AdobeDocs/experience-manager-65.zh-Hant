@@ -8,7 +8,8 @@ topic-tags: develop
 role: Developer
 exl-id: a2560c87-ae95-4d65-869a-8cba177a1cd6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -19,9 +20,9 @@ ht-degree: 0%
 
 下列快速入門適用於表單資料整合服務。
 
-[快速入門（SOAP模式）：使用Java API匯入表單資料](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API匯入表單資料](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API匯出表單資料](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API匯出表單資料](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
 AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
@@ -29,7 +30,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 >
 >「使用AEM表單進行程式設計」中的「快速入門」是以部署在JBoss Application Server和Microsoft Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統（例如UNIX），請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）：使用Java API匯入表單資料 {#quick-start-soap-mode-importing-form-data-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API匯入表單資料 {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
 以下Java程式碼範例將資料匯入PDF表單。 資料位於名為的XML檔案中 *Loan_data.xml* 而且PDF表單會儲存為名為的PDF檔案 *ResultLoanForm.pdf*. (請參閱 [匯入表單資料](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
 
@@ -131,7 +132,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API匯出表單資料 {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API匯出表單資料 {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
 以下Java程式碼範例會從PDF表單匯出資料。 表單資料會儲存為名為的XML檔案 *Loan_data.xml*. (請參閱 [匯出表單資料](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
 

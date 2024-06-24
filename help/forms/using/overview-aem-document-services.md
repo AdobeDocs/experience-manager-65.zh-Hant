@@ -5,11 +5,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 docset: aem65
-feature: Document Services
+feature: Document Services,Reader Extensions, Forms Service,PDF Generator
 exl-id: 4c8a3877-1a3c-410d-ad1f-69c73ba4fcc1
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1413'
 ht-degree: 1%
@@ -39,7 +39,7 @@ AEM Document Services是一組OSGi服務，用於建立、彙編和保護PDF檔�
 
 >[!NOTE]
 >
->通常使用Designer建立表單設計。 如需有關為Output服務建立表單設計的資訊，請參閱設計工具說明。
+>表單設計通常使用Designer來建立。 如需有關為Output服務建立表單設計的資訊，請參閱Designer說明。
 
 使用Output服務將XML資料與表單設計合併時，結果會產生非互動式PDF檔案。 非互動式PDF檔案不允許使用者在其欄位中輸入資料。 相反地，您可以使用Forms服務建立互動式PDF表單，讓使用者在其欄位中輸入資料。
 
@@ -58,7 +58,7 @@ AEM Document Services是一組OSGi服務，用於建立、彙編和保護PDF檔�
 除了上述功能以外，組裝程式服務也提供：
 
 * 將PDF檔案轉換為PDF/A標準。
-* 將PDF forms、XML表單（在Designer中建立）和PDF forms(在Acrobat中建立)轉換為PDF/A-1b、PDF/A-2b和PDFA/A-3b。
+* 將PDF forms、XML表單(在Designer中建立)和PDF forms(在Acrobat中建立)轉換為PDF/A-1b、PDF/A-2b和PDFA/A-3b。
 * 轉換已簽署或未簽署的PDF檔案（需要數位簽名）。
 * 驗證PDF/A檔案的合規性，並視需要轉換它。
 

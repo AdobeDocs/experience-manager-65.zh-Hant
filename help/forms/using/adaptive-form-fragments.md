@@ -3,13 +3,13 @@ title: 最適化表單片段
 description: 調適型表單提供一種機制，可建立在任何調適型表單中使用的表單區段（例如面板或欄位群組）。 您也可以將現有面板儲存為片段。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '2372'
 ht-degree: 3%
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 雖然每個表單都是為特定目的而設計，但大多數表單中都有一些常見的區段，例如提供個人詳細資訊，例如姓名和地址、家庭詳細資訊和收入詳細資訊。 每次建立新表單時，表單開發人員都必須建立這些通用區段。
 
-自適應表單提供了一種方便的機制，只需區段 按讚面板或字段群組創建一次表單，並在自適應表單中重複使用它們。 這些可重複使用的獨立區段稱為最適化表單片段。
+調適型表單提供一種便利的機制，讓您只需建立一次表單區段（例如面板或欄位群組），即可在調適型表單中重複使用。 這些可重複使用的獨立區段稱為最適化表單片段。
 
 >[!NOTE]
 >
@@ -118,7 +118,7 @@ ht-degree: 3%
 
 1. 按一下&#x200B;**「確定」**。
 
-   面板會儲存在存放庫 中的指定位置或預設位置。 在自適應表單中，面板被片段快照取代。 如下所示，「一般資訊」面板及其子面板「個人資訊和地址」會儲存為片段。
+   面板會儲存在存放庫 中的指定位置或預設位置。 在自適應表單中，面板被片段快照取代。 如下所示，「常規資訊」面板及其子面板「個人資訊」和「位址」將另存為片段。
 
    若要編輯片段，請按一下 **[!UICONTROL 編輯資產]** 在面板工具列中。 片段會在編輯模式的新標籤或視窗中開啟。
 

@@ -1,12 +1,12 @@
 ---
 title: 如何使用XML結構描述建立最適化Forms？
 description: 瞭解如何在最適化表單中將XML結構描述用作表單模型。 您可以套用現有的XSD範本來建立調適型表單，並從XSD將結構描述元素拖放至您的調適型表單上。 深入瞭解XML結構描述範例，使用XML結構描述將特殊屬性新增至欄位，並限制適用性表單元件的可接受值。
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1121'
 ht-degree: 9%

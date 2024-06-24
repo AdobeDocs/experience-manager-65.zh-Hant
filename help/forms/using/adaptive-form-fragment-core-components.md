@@ -3,11 +3,11 @@ title: 什麼是最適化表單片段？
 description: 最適化Forms提供一種機制，可建立在任何最適化表單中使用的表單區段（例如面板或欄位群組）。 您也可以將現有面板另存為片段。
 topic-tags: author
 keywords: 新增最適化表單片段， 最適化表單片段， 建立表單片段， 新增片段至最適化表單， 管理片段
-feature: Adaptive Forms, Core Components
+feature: Adaptive Forms,Core Components
 exl-id: 4a1ba259-8eb5-408f-8ee7-4868f98cca03
 solution: Experience Manager, Experience Manager Forms
 role: Admin, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1840'
 ht-degree: 3%

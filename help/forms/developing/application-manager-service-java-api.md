@@ -8,7 +8,8 @@ topic-tags: develop
 role: Developer
 exl-id: 1d2d6d64-f16e-4381-8691-f3c2744481ea
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -31,9 +32,9 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 
 >[!NOTE]
 >
->使用AEM表單進行程式設計中的Java API(SOAP) Quick Start是以Forms為基礎（如果您使用其他作業系統，例如Unix），以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>使用AEM表單進行程式設計中的Java API(SOAP)快速入門會以Forms為基礎（如果您使用其他作業系統，例如Unix），並以適用作業系統支援的路徑取代Windows特定路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）：使用Java API部署應用程式 {#quick-start-soap-mode-deploying-applications-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API部署應用程式 {#quick-start-soap-mode-deploying-applications-using-the-java-api}
 
 以下Java程式碼範例會根據名為的現有LCA檔案匯入應用程式 *EncryptDocument.lca*.
 
@@ -135,7 +136,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API移除應用程式 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API移除應用程式 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
 
 以下Java程式碼範例會移除名為的應用程式 *Encryptdocument*.
 

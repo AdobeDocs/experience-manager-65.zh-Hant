@@ -2,11 +2,11 @@
 title: 如何連線最適化表單資料並將其傳送到Microsoft&reg； Power Automate？
 description: 連線最適化表單資料並將其傳送到Microsoft&reg； Power Automate的逐步指南。
 keywords: 最適化Forms Microsoft Power Automate，將最適化Forms資料提交至Microsoft Power Automate
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 exl-id: 3fd26ddb-d247-462f-a0f6-8af6166516c1
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 13%
@@ -41,7 +41,7 @@ ht-degree: 13%
 1. [建立Microsoft](#ms-power-automate-application)
 1. [建立Microsoft](#microsoft-power-automate-dataverse-cloud-configuration)
 1. [建立Microsoft](#create-microsoft-power-automate-flow-cloud-configuration)
-1. [發佈Microsoft](#publish-microsoft-power-automate-dataverse-cloud-configuration)
+1. [Publish Microsoft](#publish-microsoft-power-automate-dataverse-cloud-configuration)
 
 ### 建立Microsoft® Azure Active Directory應用程式 {#ms-power-automate-application}
 
@@ -106,11 +106,11 @@ ht-degree: 13%
 1. 在 **[!UICONTROL 設定Microsoft®® Power Automate的Dataverse]** 頁面，指定 **[!UICONTROL 使用者端ID]** （也稱為應用程式ID）、 **[!UICONTROL 使用者端密碼]**， **[!UICONTROL OAuth URL]** 和 **[!UICONTROL 動態環境URL]**. 使用使用者端ID、使用者端密碼、OAuth URL和Dynamics環境ID。 在Microsoft® Azure Active Directory應用程式UI中使用端點選項來尋找OAuth URL。 開啟 [我的流程](https://us.flow.microsoft.com) 連結並選取「我的流程」，使用URL中列出的ID作為「動態環境ID」。
 1. 選取 **[!UICONTROL 連線]**. 如有要求，請登入您的Microsoft® Azure帳戶。 選取「**[!UICONTROL 儲存]**」。
 
-### 發佈Microsoft® Power Automate Dataverse和Microsoft® Power Automate流程服務雲端設定 {#publish-microsoft-power-automate-dataverse-cloud-configuration}
+### Publish包含Microsoft®Power Automate Dataverse和Microsoft® Power Automate Flow Service雲端設定 {#publish-microsoft-power-automate-dataverse-cloud-configuration}
 
 1. 瀏覽至 **[!UICONTROL 工具]** ![錘子](assets/hammer.png) > **[!UICONTROL Cloud Service]** > **[!UICONTROL Microsoft®® Power Automate Dataverse]** 並開啟您之前建立的設定容器 [建立Microsoft® Power Automate Dataverse雲端設定](#microsoft-power-automate-dataverse-cloud-configuration) 區段。
 1. 選取 `dataverse` 設定並選取 **[!UICONTROL 發佈]**.
-1. 在發佈頁面上，選取 **[!UICONTROL 所有設定]** 並選取 **[!UICONTROL 發佈]**. 發佈Power Automate Dataverse和Power Automate流程服務雲端設定。
+1. 在Publish頁面上，選取 **[!UICONTROL 所有設定]** 並選取 **[!UICONTROL 發佈]**. Publish包含Power Automate Dataverse和Power Automate流程服務雲端設定。
 
 您的AEM Forms作者執行個體現在已與Microsoft® Power Automate連線。 您現在可以將最適化Forms資料傳送到Power Automate流程。
 

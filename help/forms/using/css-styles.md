@@ -6,11 +6,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
-feature: HTML5 Forms
+feature: HTML5 Forms,Mobile Forms
 exl-id: 8cc90ff7-284e-41cd-bfda-7fa09371e270
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 2%
@@ -124,7 +124,7 @@ widget元素包含用於與使用者互動的使用者介面元素。 它有三�
 
 ## 不同欄位的CSS類別 {#css-classes-for-different-fields}
 
-AEM Forms Designer支援表單中不同型別的欄位，例如「數值欄位」、「十進位欄位」和「日期欄位」。 HTML中的所有欄位都包含上述CSS類別。 它們也包含一些額外的類別，視欄位型別而定。
+AEM Forms Designer支援表單中不同型別的欄位，例如NumericField、DecimalField和Date Field。 HTML中的所有欄位都包含上述CSS類別。 它們也包含一些額外的類別，視欄位型別而定。
 
 每個欄位都有一個代表UI元素的關聯Widget。 以下列出每個欄位的類別以及與每個欄位相關聯的Widget。
 

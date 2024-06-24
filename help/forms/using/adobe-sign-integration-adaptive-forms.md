@@ -5,11 +5,11 @@ contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 docset: aem65
-feature: Adaptive Forms, Foundation Components, Acrobat Sign
+feature: Adaptive Forms,Foundation Components,Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '2071'
 ht-degree: 16%
@@ -34,7 +34,7 @@ ht-degree: 16%
 
 ## 連結AEM Forms與Adobe Acrobat Sign {#adobe-sign}
 
-若要連線 **[!DNL AEM Forms]** 替換為 **[!DNL Adobe Acrobat Sign]**，設定先決條件區段中列出的軟體和帳戶，並將Adobe Sign連線至您的所有AEM Forms作者和發佈執行個體：
+若要連線 **[!DNL AEM Forms]** 替換為 **[!DNL Adobe Acrobat Sign]**，設定「先決條件」區段中列出的軟體和帳戶，並將Adobe Sign連線至您的所有AEM Forms作者和Publish執行個體：
 
 ## 先決條件 {#prerequisites}
 
@@ -146,7 +146,7 @@ ht-degree: 16%
 1. 開啟AEM Web Console。 URL為 `https://'[server]:[port]'/system/console/configMgr`
 1. 開啟 **[!UICONTROL Forms通用設定服務].**
 1. 在 **[!UICONTROL 允許]** 欄位， **選取** 所有使用者 — 所有使用者（匿名或登入）都可以預覽附件、驗證和簽署表單，然後按一下 **[!UICONTROL 儲存].** 編寫執行個體設定為使用 [!DNL Adobe Sign].
-1. 發佈設定。
+1. Publish設定。
 1. 使用 [復寫](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html) 以在對應的發佈執行個體上建立相同的設定。
 
 現在， [!DNL Adobe Sign] 已與AEM整合 [!DNL Forms] 並準備用於調適型表單。 至 [在最適化表單中使用Adobe Sign服務](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，指定上述在最適化表單屬性中建立的設定容器。
@@ -261,7 +261,7 @@ ht-degree: 16%
 1. 開啟 **[!UICONTROL Forms通用設定服務].**
 1. 在 **[!UICONTROL 允許]** 欄位， **選取** 所有使用者 — 所有使用者（匿名或登入）都可以預覽附件、驗證和簽署表單，然後按一下 **[!UICONTROL 儲存].** 編寫執行個體設定為使用 [!DNL Adobe Sign].
 
-1. 發佈設定。
+1. Publish設定。
 1. 使用 [復寫](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html) 以在對應的發佈執行個體上建立相同的設定。
 
 現在，您可以 [在最適化表單中使用新增Adobe Acrobat Sign欄位](working-with-adobe-sign.md) 或 [AEM工作流程](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step). 請確定您將用於Cloud Service設定的設定容器新增至啟用的所有最適化Forms [!DNL Adobe Acrobat Sign]. 您可以從最適化表單的屬性指定設定容器。

@@ -8,7 +8,8 @@ topic-tags: develop
 role: Developer
 exl-id: 306cd40b-1831-45aa-9f58-3ab1983a68c5
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -19,27 +20,27 @@ ht-degree: 0%
 
 Java API快速入門(SOAP)適用於組合器服務
 
-[快速入門（SOAP模式）：使用Java API組合PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API組合PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API分解PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API分解PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API組合已加密的PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API彙編加密的PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API組合Bates編號的PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API組合Bates編號的PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API組合非互動式PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API組合非互動式PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API判斷檔案是否符合PDF/A標準](assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API判斷檔案是否符合PDF/A標準](assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API驗證DDX檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API驗證DDX檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API以書籤組合PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API以書籤組合PDF檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API動態建立DDX檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API動態建立DDX檔案](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API組合PDFPortfolio](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API組合PDFPortfolio](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java API組裝多個XDP片段](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
+[快速入門(SOAP模式)：使用Java API組合多個XDP片段](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 
 AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
@@ -47,7 +48,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 >
 >使用AEM Forms進行程式設計的快速入門是以部署在JBoss®應用程式伺服器和Microsoft® Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統(例如UNIX®)，請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 快速入門（SOAP模式）：使用Java API組合PDF檔案 {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API組合PDF檔案 {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
 以下Java程式碼範例合併兩個名為的PDF來原始檔 *map.pdf* 和 *directions.pdf* 放入單一PDF檔案中。 單一PDF檔案的名稱為 *AssemblerResultPDF.pdf*. DDX檔案的名稱為 *shell.xml*. (請參閱 [以程式設計方式組合PDF檔案](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents).)
 
@@ -191,7 +192,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API分解PDF檔案 {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API分解PDF檔案 {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
 
 以下Java程式碼範例將名為的PDF檔案拆解 *AssemblerResultPDF.pdf*. 請注意，DDX檔案的名稱為 *shell_disassemble.xml*. 每個已拆解的PDF檔案都命名為 `ResultPDF[Number].pdf`. 亦即，第一個解譯的PDF檔案已命名 *ResultPDF1.pdf。* 如需關於的資訊， *shell_disassemble.xml* 此程式碼範例中使用的DDX檔案，請參閱 [以程式分解的PDF檔案](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents).
 
@@ -330,7 +331,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API組合已加密的PDF檔案 {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API彙編加密的PDF檔案 {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}
 
 以下Java程式碼範例會組合以密碼加密的PDF檔案。 不安全的PDF檔案已命名 *Loan.pdf*. 請注意，DDX檔案的名稱為 *shell_Encrypt.xml*. 已加密的PDF檔案已命名 *AssemblerEncryptedPDF.pdf*. (請參閱 [組合加密的PDF檔案](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents).)
 
@@ -453,7 +454,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API組合Bates編號的PDF檔案 {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API組合Bates編號的PDF檔案 {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
 
 以下Java程式碼範例將具有唯一頁面識別碼（bates編號）的PDF檔案組合在一起。 請注意，DDX檔案的名稱為 *shell_Bates.xml*. 從組合器服務傳回的PDF檔案會儲存為名為的PDF檔案 *AssemblerResultBatesPDF.pdf*. (請參閱 [使用Bates編號來組合檔案](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering).)
 
@@ -611,7 +612,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API組合非互動式PDF檔案 {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API組合非互動式PDF檔案 {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}
 
 以下Java程式碼範例會組合非互動式PDF檔案。 傳遞至Assembler服務的互動式PDF檔案已命名 *Loan.pdf*. 請注意，DDX檔案的名稱為 *shell_XFA.xml*. 非互動式PDF檔案會儲存為名為的PDF檔案 *AssembleNonInteractivePDF.pdf*. (請參閱 [組合非互動式PDF檔案](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents).)
 
@@ -735,7 +736,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API判斷檔案是否符合PDF/A標準 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API判斷檔案是否符合PDF/A標準 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
 下列Java程式碼範例會判斷輸入PDF檔案是否符合PDF/A規範。 傳遞至組合器服務的輸入PDF檔案已命名 *Loan.pdf*. DDX檔案的名稱為shell_PDFA.xml。 從Assembler服務傳回並指定輸入PDF檔案是否符合PDF/A標準的XML檔案，會儲存為名為result.xml的XML檔案。 如需關於的資訊， *shell_PDFA.xml* 此程式碼範例中使用的DDX檔案，請參閱 [判斷檔案是否符合PDF/A規範](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
 
@@ -881,7 +882,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API驗證DDX檔案 {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API驗證DDX檔案 {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}
 
 以下Java程式碼範例會根據名為的檔案來驗證DDX檔案 *bookmarkDDX.xml*. (請參閱 [驗證DDX檔案](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents).)
 
@@ -1012,7 +1013,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API以書籤組合PDF檔案 {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API以書籤組合PDF檔案 {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
 
 以下Java程式碼範例會組合包含書籤的PDF檔案。 DDX檔案的名稱為 *bookmarkDDX.xml*. 書籤XML檔案的名稱描述要新增至PDF檔案的書籤，其名稱為bookmarks.xml。 結果PDF檔案會儲存為名為AssemblerResultBookmarks.pdf的PDF檔案。 (請參閱 [組合含書籤的PDF檔案](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks).)
 
@@ -1182,7 +1183,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API動態建立DDX檔案 {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API動態建立DDX檔案 {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
 
 下列Java程式碼範例會動態建立可解散PDF檔案的DDX檔案。 會針對輸入PDF檔案中的每個1級書籤建立新的PDF檔案。 此程式碼範例包含兩個使用者定義的方法：
 
@@ -1378,7 +1379,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 }
 ```
 
-## 快速入門（SOAP模式）：使用Java API組合PDFPortfolio {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API組合PDFPortfolio {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
 
 以下Java程式碼範例會建立PDF投資組合。 PDF產品組合會儲存為名為的PDF檔案 *AssemblerResultPortfolio.pdf*. (請參閱 [組合PDFPortfolio](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios).)
 
@@ -1529,7 +1530,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
  
 ```
 
-## 快速入門（SOAP模式）：使用Java API組裝多個XDP片段 {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API組合多個XDP片段 {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
 
 以下Java程式碼範例將基於以下XDP檔案的XDP片段組合在一起： *tuc018_template_flowed.xdp*， *tuc018_contact.xdp*，和* tuc018_patient.xdp*。 包含所有片段的組合XDP檔案會儲存為名為的XDP檔案 *AssemblerResultXDP.xdp*. (請參閱 [組合多個XDP片段](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments).)
 
@@ -1682,7 +1683,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
  }
 ```
 
-## 快速入門（SOAP模式）：使用Java API編輯PDF檔案 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java API編輯PDF檔案 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
 
 PDF下列程式碼範例會使用 `PDFUtility`.
 

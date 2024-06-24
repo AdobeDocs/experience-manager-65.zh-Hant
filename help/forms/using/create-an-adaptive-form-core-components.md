@@ -7,9 +7,10 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-feature: Adaptive Forms, Core Components
+feature: Adaptive Forms,Core Components
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d2be8d93c64ca18352a0e811605c526a8dae488f
+exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1794'
 ht-degree: 29%
@@ -36,7 +37,7 @@ ht-degree: 29%
 
 * [最適化表單基礎元件](creating-adaptive-form.md)：這些是經典 (舊) 的資料擷取元件。您可以繼續使用這些元件來編輯以現有基礎元件為主的最適化表單。如果您要建立表單，Adobe建議使用  [最適化Forms核心元件](/help/forms/using/create-adaptive-form.md) 以建立最適化Forms。
 
-## 必要條件 
+## 必要條件
 
 您必須符合以下條件才能建立最適化表單：
 

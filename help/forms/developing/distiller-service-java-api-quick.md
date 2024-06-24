@@ -8,7 +8,8 @@ topic-tags: develop
 role: Developer
 exl-id: c5bf9184-a837-4033-9962-7b3052498e75
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%
@@ -17,9 +18,9 @@ ht-degree: 0%
 
 # Distiller服務Java™ API快速入門(SOAP) {#distiller-service-java-api-quickstart-soap}
 
-Distiller™服務可使用Java® API快速入門(SOAP)：
+Java™ API快速入門(SOAP)適用於Distiller®服務：
 
-[快速入門（SOAP模式）：使用Java將PostScript檔案轉換為PDF檔案](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
+[快速入門(SOAP模式)：使用Java將PostScript檔案轉換為PDF檔案](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
 AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
@@ -27,7 +28,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 >
 >使用AEM表單進行程式設計的快速入門是以部署在JBoss®應用程式伺服器和Microsoft® Windows作業系統上的Forms伺服器為基礎。 不過，如果您使用其他作業系統(例如UNIX®)，請將Windows特定路徑取代為適用作業系統支援的路徑。 同樣地，如果您使用其他J2EE應用程式伺服器，請確定您指定有效的連線屬性。 另請參閱 [設定連線屬性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## 快速入門（SOAP模式）：使用Java™ API將PostScript檔案轉換為PDF檔案 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java™ API將PostScript檔案轉換為PDF檔案 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
 下列程式碼範例會轉換名為的PostScript檔案 *Loan.ps* 至名為的PDF檔案 *Loan.pdf*. (請參閱 [將PostScript轉換為PDF檔案](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents).)
 

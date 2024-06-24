@@ -6,10 +6,10 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-feature: Adaptive Forms, Core Components
+feature: Adaptive Forms,Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 10%
@@ -27,7 +27,7 @@ ht-degree: 10%
 
 啟用最適化Forms核心元件可讓您開始建立、發佈和傳遞 [Core Components based Adaptive Forms](create-an-adaptive-form-core-components.md) 和 [Headless最適化Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 從您的AEM 6.5 Forms環境。
 
-若要在您的AEM 6.5 Forms環境中啟用最適化Forms核心元件，請設定並部署 [AEM Archetype 41或更新版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 根據您所有作者和發佈執行個體上的專案（已啟用表單選項）。
+若要在您的AEM 6.5 Forms環境中啟用最適化Forms核心元件，請設定並部署 [AEM Archetype 41或更新版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 根據您所有作者和Publish執行個體上的專案（已啟用表單選項）。
 
 本文提供在您的AEM 6.5 Forms環境中設定和部署AEM Archetype 41或更新版本專案，以啟用最適化Forms核心元件的詳細指示。 您可以參閱下列清單，以瞭解 **AEM 6.5** 啟用Forms核心元件的相容版本：
 
@@ -43,7 +43,7 @@ ht-degree: 10%
 
 ## 建立及部署最新的AEM原型專案
 
-若要建立AEM Archetype 41或 [稍後](https://github.com/adobe/aem-project-archetype) 根據專案並將其部署至所有作者和發佈執行個體：
+若要建立AEM Archetype 41或 [稍後](https://github.com/adobe/aem-project-archetype) 根據專案並將其部署至所有作者和Publish執行個體：
 
 1. 以管理員身分登入電腦，託管並執行AEM 6.5 Forms執行個體。
 1. 開啟命令提示字元或終端機，然後執行下列命令以建立AEM Archetype專案（並啟用表單選項）：
@@ -134,13 +134,13 @@ ht-degree: 10%
 
    成功建置AEM Archetype專案後，會產生AEM套件。 您可以在下列位置找到此套件： [AEM原型專案資料夾]\all\target\[appid].all-[版本].zip
 
-1. 使用 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant) 以部署 [AEM原型專案資料夾]\all\target\[appid].all-[版本].zip套件。
+1. 使用 [封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=zh-Hant) 以部署 [AEM原型專案資料夾]\all\target\[appid].all-[版本].zip套件(在所有作者和Publish執行個體上)。
 
 >[!NOTE]
 >
 >
 >
-> * 如果您在存取發佈執行個體的登入對話方塊時遇到困難，若要透過封裝管理員安裝套件，請嘗試使用URL： `http://[Publish Server URL]:[PORT]/system/console` 以登入。 這可讓您存取發佈執行個體的登入頁面，讓您繼續安裝程式。
+> * 如果您在存取發佈執行個體的登入對話方塊時遇到困難，若要透過封裝管理員安裝套件，請嘗試使用URL： `http://[Publish Server URL]:[PORT]/system/console` 以登入。 這可讓您存取Publish執行個體的登入頁面，讓您繼續安裝程式。
 > * 將原型專案部署到您的環境後，請勿刪除或捨棄該專案。 Archetype專案需要將自訂和新的最適化Forms核心元件主題新增到您的環境。
 
 核心元件已針對您的環境啟用。 將空白的Core Components型最適化表單範本和畫布3.0主題部署到您的環境，讓您能夠 [建立以核心元件為基礎的最適化Forms](create-an-adaptive-form-core-components.md).

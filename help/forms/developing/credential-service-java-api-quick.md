@@ -8,7 +8,8 @@ topic-tags: develop
 role: Developer
 exl-id: 0ea00ef5-9923-4c03-a724-32f9ebdc650f
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
@@ -17,11 +18,11 @@ ht-degree: 0%
 
 # 認證服務Java™ API快速入門(SOAP) {#credential-service-java-api-quickstart-soap}
 
-認證服務可使用Java™ API快速入門(SOAP)。
+Java™ API快速入門(SOAP)可用於認證服務。
 
-[快速入門（SOAP模式）：使用Java匯入認證](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
+[快速入門(SOAP模式)：使用Java匯入認證](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
 
-[快速入門（SOAP模式）：使用Java刪除認證](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
+[快速入門(SOAP模式)：使用Java刪除認證](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
 
 AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定為SOAP。
 
@@ -33,7 +34,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
 >
 >您無法使用Web服務執行認證服務作業。
 
-## 快速入門（SOAP模式）：使用Java™ API匯入認證 {#quick-start-soap-mode-importing-credentials-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java™ API匯入認證 {#quick-start-soap-mode-importing-credentials-using-the-java-api}
 
 以下程式碼範例會根據名為的檔案匯入認證 *cred.p12*. 用來匯入認證的別名值為 `Secure`. (請參閱 [使用信任管理員API匯入認證](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api).)
 
@@ -134,7 +135,7 @@ AEM Forms作業可使用AEM Forms強型別API執行，且連線模式應設定�
  
 ```
 
-## 快速入門（SOAP模式）：使用Java™ API刪除認證 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
+## 快速入門(SOAP模式)：使用Java™ API刪除認證 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
 
 下列程式碼範例會根據別名值刪除認證 *secure*. (請參閱 [使用信任管理員API刪除認證](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api).)
 

@@ -5,11 +5,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 docset: aem65
-feature: Document Services
+feature: Document Services,Output Service
 exl-id: 82b0293a-711f-4769-9b11-b4cff4fec021
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 5%
@@ -37,7 +37,7 @@ Output 服務可讓您建立以下用途的應用程式：
 
 ![usingoutput_modified](assets/usingoutput_modified.png)
 
-通常使用AEM Forms Designer建立範本。 此 `generatePDFOutput` 和 `generatePrintedOutput` Output服務的API可讓您直接將這些範本轉換為各種格式，包括PDF、PostScript、ZPL和PCL。
+通常使用AEM Forms Designer來建立範本。 此 `generatePDFOutput` 和 `generatePrintedOutput` Output服務的API可讓您直接將這些範本轉換為各種格式，包括PDF、PostScript、ZPL和PCL。
 
 此 `generatePDFOutput` 作業會產生PDF，而 `generatePrintedOutput` 作業會產生PostScript、ZPL和PCL格式。 這兩個操作的第一個引數都接受範本檔案的名稱(例如， `ExpenseClaim.xdp`)或包含範本的Document物件。 當您指定範本檔案的名稱時，請將內容根目錄指定為包含範本的資料夾的路徑。 您可以使用以下任一專案指定內容根： `PDFOutputOptions` 或 `PrintedOutputOptions` 引數。 請參閱Javadoc以取得您可以使用這些引數指定之其他選項的詳細資訊。
 

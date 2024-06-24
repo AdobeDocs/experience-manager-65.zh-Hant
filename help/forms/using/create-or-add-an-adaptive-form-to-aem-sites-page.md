@@ -2,11 +2,11 @@
 title: 建立或新增調適型表單至 AEM Sites 頁面
 description: 探索如何輕鬆建立或無縫新增調適型表單至您的 AEM Sites 頁面。 了解整合動態和可自訂表單至網站中的步驟式技術和最佳實務，最佳化您的數位體驗以達到最大影響。
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 exl-id: dcf023a1-8735-48cb-b3ea-d17357eeedaf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '2884'
 ht-degree: 23%
@@ -116,7 +116,7 @@ AEM Forms 會提供調適型表單內容和調適型表單 – 內嵌元件。 �
        </sly> 
    ```
 
-1. 在您的環境中重複上述所有製作和發佈執行個體的步驟。
+1. 在您的環境中重複上述所有作者和Publish執行個體的步驟。
 
 +++
 

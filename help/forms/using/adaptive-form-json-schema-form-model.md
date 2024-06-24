@@ -3,10 +3,10 @@ title: 如何使用JSON結構描述建立最適化Forms？
 description: 瞭解如何使用JSON結構描述作為表單模型建立調適型表單。 您可以使用現有的JSON結構描述來建立調適型表單。 深入瞭解JSON結構描述範例、預先設定JSON結構描述定義中的欄位、限制最適化表單元件的可接受值，並瞭解不支援的建構。
 role: User, Developer
 level: Beginner, Intermediate
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1844'
 ht-degree: 7%

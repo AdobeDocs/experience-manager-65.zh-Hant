@@ -4,11 +4,11 @@ description: 了解如何在外部網頁中嵌入調適型表單
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
 docset: aem65
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 53%
@@ -25,7 +25,7 @@ ht-degree: 53%
 
 將調適型表單嵌入外部網站之前執行以下步驟
 
-* 發佈要內嵌至AEM Forms伺服器發佈例項的最適化表單。
+* Publish此最適化表單將內嵌至AEM Forms伺服器的Publish執行個體。
 * 在您的網站上建立或識別可託管最適化表單的網頁。 確保網頁可以 [從CDN讀取jQuery檔案](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) 或內嵌jQuery的本機副本。 必須有 jQuery 才可呈現調適型表單。
 * 當AEM伺服器和網頁位於不同的網域時，請執行區段中列出的步驟， [讓AEM Forms能夠為跨網域網站提供最適化表單](#cross-site).
 

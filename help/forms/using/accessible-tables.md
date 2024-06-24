@@ -5,11 +5,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
-feature: HTML5 Forms
+feature: HTML5 Forms,Mobile Forms
 exl-id: 3b8e3323-9ac4-4f5c-8c52-e2186e9169ea
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 HTML5 Forms中表格的預設實作使用HTMLDIV元素來轉譯表格。 轉譯涉及使用ARIA角色來滿足協助工具需求。
 
-為了避免熒幕助讀程式無法完整支援資料表格所用ARIA角色的協助工具問題，HTML5 Forms提供表格的替代轉譯。 這些表格是以Designer引入的新表格格式為基礎，該格式也支援：
+為了避免熒幕助讀程式無法完整支援資料表格所用ARIA角色的協助工具問題，HTML5 Forms提供表格的替代轉譯。 這些表格是根據Designer中推出的新表格格式，該格式也支援：
 
 * 列標題
 * 列範圍

@@ -4,11 +4,11 @@ description: AEM Forms 會使用為調用外部服務所設定的 REST 端點，
 keywords: 新增自訂錯誤處理常式、新增預設錯誤處理常式、在表單中新增錯誤處理常式、使用規則編輯器的調用服務來新增自訂的錯誤處理常式、設定規則編輯器以新增自訂錯誤處理常式、使用規則編輯器以新增自訂錯誤處理常式
 contentOwner: Ruchita Srivastav
 content-type: reference
-feature: Adaptive Forms, Core Components
+feature: Adaptive Forms,Core Components
 exl-id: 2118d77f-1314-48f1-88e3-e27dd8e9f17b
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '2278'
 ht-degree: 89%

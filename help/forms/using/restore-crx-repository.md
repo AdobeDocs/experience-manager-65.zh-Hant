@@ -3,9 +3,9 @@ title: 無法還原適用於JEE叢集伺服器的損毀CRX存放庫
 description: 瞭解如何還原已損壞的CRX存放庫的步驟。
 exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, Troubleshooting
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 1%

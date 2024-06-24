@@ -5,11 +5,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 docset: aem65
-feature: HTML5 Forms
+feature: HTML5 Forms,Mobile Forms
 exl-id: fca2f9b2-11a2-4db0-a370-c4046f32be63
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 0%
@@ -22,7 +22,7 @@ HTML5表單使用ARIAHTML5協助工具標準來產生無障礙的HTML表單。 �
 
 *附註：標籤式導覽不會涵蓋受保護欄位，例如顯示值總和的計算欄位。 若要讓熒幕助讀程式讀取受保護欄位的值，請在受保護欄位的頂端或旁邊，放置空白的唯讀欄位。 將受保護欄位的值指派給新的唯讀欄位。 熒幕助讀程式或索引標籤導覽可挑選此唯讀欄位，並將其朗讀為受保護欄位的值。*
 
-AEM Forms Designer包含數個可傳遞給熒幕閱讀程式的「說話文字」選項。 對於表單中的每個物件，使用者可以為熒幕助讀程式文字指定下列其中一個設定：
+AEM Forms Designer包含數個可傳遞給熒幕助讀程式的說話文字選項。 對於表單中的每個物件，使用者可以為熒幕助讀程式文字指定下列其中一個設定：
 
 * 自訂熒幕助讀程式文字，可使用「協助工具」浮動視窗進行設定。 作者可以標註按鈕和欄位的名稱及其用途。
 * 工具提示，可在「協助工具」浮動視窗中設定。

@@ -1,14 +1,14 @@
 ---
 title: 產生XDP表單的HTML5預覽
-description: LiveCycle設計工具中的「預覽HTML」索引標籤可用來預覽表單在瀏覽器中顯示的效果。
+description: LiveCycleDesigner中的預覽HTML索引標籤可用於預覽表單在瀏覽器中顯示的效果。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
-feature: HTML5 Forms
+feature: HTML5 Forms,Mobile Forms
 exl-id: 548f302b-57f0-4bdc-8a99-1a4967caa32f
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 在Designer中啟用XDP表單的HTML預覽 {#html-preview-of-forms-in-forms-designer}
 
-若要讓Designer產生XDP表單的HTML預覽，請執行下列設定：
+若要讓Designer產生XDP表單的HTML預覽，請執行以下設定：
 
 * 設定Apache Sling驗證服務
 * 停用保護模式
@@ -72,7 +72,7 @@ ht-degree: 0%
    * **伺服器URL**：AEM Forms伺服器URL。
 
    * **HTTP連線埠號碼**：AEM伺服器連線埠。 預設值為 4502。
-   * **HTML預覽內容：** 呈現XFA表單的設定檔路徑。 下列預設設定檔可用來在Designer中預覽表單。 不過，您也可以指定自訂設定檔的路徑。
+   * **HTML預覽內容：** 呈現XFA表單的設定檔路徑。 下列預設設定檔是用來在Designer中預覽表單。 不過，您也可以指定自訂設定檔的路徑。
 
       * `/content/xfaforms/profiles/default.html` (OSGi上的AEM Forms)
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 
    >[!CAUTION]
    >
-   >若要測試真實的一般使用者體驗，請在外部瀏覽器(Google Chrome、Microsoft Edge、Mozilla Firefox等)中預覽您的表單。 每個瀏覽器使用不同的引擎來呈現HTML，因此在Designer和外部瀏覽器中的表單預覽方式可能有一些差異。
+   >若要測試真實的一般使用者體驗，請在外部瀏覽器(Google Chrome、Microsoft Edge、Mozilla Firefox等)中預覽您的表單。 每個瀏覽器使用不同的引擎來轉譯HTML，因此Designer中的表單預覽方式與外部瀏覽器之間可能有一些差異。
 
 ## 若要使用範例資料預覽表單 {#to-preview-a-form-using-sample-data}
 
