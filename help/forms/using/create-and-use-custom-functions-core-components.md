@@ -4,9 +4,9 @@ description: AEM Forms支援自訂函式，可讓使用者在規則編輯器中�
 keywords: 新增自訂函式、使用自訂函式、建立自訂函式，以及在規則編輯器中使用自訂函式。
 content-type: reference
 feature: Adaptive Forms, Core Components
-roles: Admin, Developer
+role: Admin, User, Developer
 exl-id: 00073e3a-f1b5-4c42-9fea-4a14b8a22c81
-source-git-commit: 6c902ca08b7689e428facdc4150f443dad089bff
+source-git-commit: 7f1283898cbeebdedb7bdea6f0a8d9db567617ee
 workflow-type: tm+mt
 source-wordcount: '3385'
 ht-degree: 2%
