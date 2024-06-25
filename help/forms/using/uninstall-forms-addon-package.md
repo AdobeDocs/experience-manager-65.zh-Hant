@@ -6,9 +6,9 @@ feature: Adaptive Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 975f1f580404ea1f2940aec5981f5668dced4b95
+source-git-commit: 2755e414ea23ebc1472e9c08d832eca93f28311b
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '228'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 1%
 
 本文概述從AEM Forms SDK執行個體正確解除安裝AEM Forms附加元件套件所需的步驟。 請依照這些步驟操作，以確保移除Forms附加元件套件，防止您的AEM環境發生潛在問題。
 
-## 必要條件
+## 先決條件
 
-請務必備份表單和資料，以避免任何資料遺失。
+請務必進行備份，以避免任何資料遺失。
 
 ## 若要解除安裝AEM Forms附加元件套件
 
