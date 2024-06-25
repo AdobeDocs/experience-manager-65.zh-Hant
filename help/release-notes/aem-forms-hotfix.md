@@ -5,9 +5,9 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: f9e98d7de24d516eab163d42f6c1c3155915856e
+source-git-commit: ad71f1c92bba90000f72319536fffd255fb4db6e
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
      </td>
     <td>
     <ul>
-    <li> 升級至AEM Forms Service Pack 6.5.21.0後，PaperCapture服務無法在PDF上執行OCR （光學字元辨識）作業。 若要解決問題，請參閱 <a href="/help/forms/using/papercapture-service-resolution.md"> 疑難排解</a> 文章。(CQDOC-21680) </li>
+    <li> 升級至AEM Forms Service Pack 6.5.21.0後，PaperCapture服務無法在PDF上執行OCR （光學字元辨識）作業。 如需安裝指示，請參閱 <a href="/help/forms/using/papercapture-service-resolution.md"> 疑難排解</a> 文章。(CQDOC-21680) </li>
     </ul>
     </td>    
   </tr>
@@ -54,7 +54,7 @@ ht-degree: 0%
      </td>
     <td>
     <ul>
-    <li>預覽期間，含XML資料的草稿字母卡在載入狀態。 若要下載及安裝Hotfix，請參閱<a href="#install-hotfix"> 下載並安裝草稿字母問題的Hotfix</a> 區段。(FORMS-14521)</li>
+    <li>預覽期間，含XML資料的草稿字母卡在載入狀態。 如需Hotfix的下載和安裝指示，請參閱<a href="#install-hotfix"> 下載並安裝草稿字母問題的Hotfix</a> 區段。(FORMS-14521)</li>
     </ul>
     </td>    
   </tr>
