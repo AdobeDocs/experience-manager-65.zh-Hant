@@ -9,9 +9,9 @@ content-type: reference
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: c705667e60ccfbc4612ef3212dbe549e6bea66a9
 workflow-type: tm+mt
-source-wordcount: '3565'
+source-wordcount: '3568'
 ht-degree: 1%
 
 ---
@@ -168,18 +168,22 @@ Official Service Pack
 
 ![篩選器索引標籤](assets/edit-filter.png)
 
-建立篩選時，您可以定義路徑或使用規則運算式來指定您要包含或排除的所有節點。
+建立規則時，您可以定義規則運算式（也稱為regex、regexp或rational運算式），以指定要包含或排除的所有節點。
 
 | 規則型別 | 說明 |
 |---|---|
-| include | 包括目錄將會包括該目錄以及該目錄中的所有檔案和資料夾（即整個子樹狀結構），但是 **不會** 包括指定根路徑下的其他檔案或資料夾。 |
-| 排除 | 排除目錄會排除該目錄以及該目錄中的所有檔案和資料夾（即整個子樹狀結構）。 |
+| include | 包含將包含指定目錄中符合規則運算式的所有檔案和資料夾。 包含 **不會** 包括指定根路徑下的其他檔案或資料夾。 |
+| 排除 | 排除將排除符合規則運算式的所有檔案和資料夾。 |
 
 套件篩選器最常在您初次使用時定義 [建立套件。](#creating-a-new-package) 不過，它們也可在稍後進行編輯，之後應重新建置套件，以根據新的篩選定義更新其內容。
 
 >[!TIP]
 >
 >一個封裝可以包含多個篩選定義，以便來自不同位置的節點可以輕鬆合併到一個封裝中。
+
+>[!TIP]
+>
+>如需背景資訊，請參閱 [Apache Jackrabbit — 工作區篩選器](https://jackrabbit.apache.org/filevault/filter.html) 檔案。
 
 ### 相依性 {#dependencies}
 
