@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 8f5b6aee8a48690f1ac2706f25d45e7e9424e219
+source-git-commit: b24a1b225b2d798db26be1533e2e74bf08fdaa5d
 workflow-type: tm+mt
-source-wordcount: '3999'
+source-wordcount: '4070'
 ht-degree: 2%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 2%
 * **AutoTag API提供PDF協助工具**：OSGi上的AEM Forms現在支援新的AutoTag API，可新增標籤（段落和清單）來增強協助工具標準的PDF。 它讓使用者更容易透過輔助技術存取PDF。
 * **16位元PNG支援**：PDF Generator的ImageToPdf服務現在支援以16位元色彩深度轉換PNG。
 * **將成品套用至XDP中的個別文字區塊**：Forms Designer現在可讓使用者在XDP檔案中的個別文字區塊上設定設定。 此功能可讓您控制在產生的PDF中被視為人工因素的元素。 這些元素（例如頁首和頁尾）可供輔助技術存取。 主要功能包括將文字區塊標示為成品，並將這些設定內嵌於XDP中繼資料。 Forms Output服務會在產生PDF期間套用這些設定，以確保正確的PDF/UA標籤。
-* **AEM Forms Designer已通過認證 `GB18030:2022` 標準**：使用 `GB18030:2022` 認證，現在Forms Designer支援中文Unicode字元集，可讓您在所有可編輯的欄位和對話方塊中輸入中文字元。
+* **AEM Forms Designer已認證為 `GB18030:2022` 標準**：使用 `GB18030:2022` 認證，Forms Designer現在支援中文Unicode字元集，可讓您在所有可編輯的欄位和對話方塊中輸入中文字元。
 * **JEE伺服器支援WebToPDF路由**：除了Webkit和WebCapture （僅限Windows）路由外，PDF Generator服務現在還支援WebToPDF路由，以便將HTML檔案轉換為JEE上的PDF檔案。 雖然WebToPDF路由已經可在OSGi上使用，但現在已經擴充以同時包含在JEE中。 在JEE和OSGi平台上，PDF Generator服務支援跨不同作業系統的下列路由：
    * **Windows**：Webkit、WebCapture、WebToPDF
    * **Linux**：Webkit、WebToPDF
@@ -152,7 +152,7 @@ ht-degree: 2%
 ### [!DNL Assets]{#assets-6521}
 
 * 如果資產發佈至Brand Portal，發佈狀態仍會不一致。 (ASSETS-36807)
-* 使用API呼叫從例項中刪除資產時，不會刪除資產。 (ASSETS-35131)
+* 當您使用API呼叫從例項中刪除Assets時，系統不會刪除它們。 (ASSETS-35131)
 * 當您嘗試匯入中繼資料時， `question mark (?)` 會取代以英語以外的任何語言插入的字元。  (ASSETS-35091)
 * 時間 `dc:title` 屬性會與資料型別字串搭配使用，安裝Service Pack 6.5.19後，資產內容樹狀結構無法正常運作。 (ASSETS-34684)
 * 如果資產名稱中有任何特殊字元，便會顯示錯誤。 (ASSETS-33248)
@@ -161,7 +161,7 @@ ht-degree: 2%
 
 * 在AEM 6.5.18中，當您編輯熱點時，不會顯示新增至資產的所有熱點。 不過，所有熱點都可在已發佈的資產中運作，但如有需要，您稍後無法加以編輯。 (ASSETS-33609)
 * 上傳的最新EPS檔案在重新處理後不會產生縮圖。 (ASSETS-32617)
-* 在「工具」 > 「資產」 > 「Dynamic Media發佈設定」 > 「請求屬性」標籤中，輸入專案 `Width(px)` 和 `Height(px)` 西班牙文、義大利文和葡萄牙文的外觀會有所不同。 這些位置彼此不對齊。 (ASSETS-31896)
+* 在「工具> Assets > Dynamic Media Publish設定>請求屬性」標籤中，輸入 `Width(px)` 和 `Height(px)` 西班牙文、義大利文和葡萄牙文的外觀會有所不同。 這些位置彼此不對齊。 (ASSETS-31896)
 * 自2024年5月1日起，Adobe Dynamic Media停止支援下列專案：
    * SSL (安全通訊端層) 2.0
    * SSL 3.0
@@ -186,7 +186,7 @@ ht-degree: 2%
 
 #### [!DNL Adaptive Forms] {#forms-6520}
 
-* 從Adobe Experience Manager發佈執行個體提交最適化表單至Adobe Experience Manager Workflow時，工作流程無法儲存附件。 (FORMS-14209)
+* 從Adobe Experience Manager Publish執行個體提交最適化表單至Adobe Experience Manager Workflow時，工作流程無法儲存附件。 (FORMS-14209)
 * 當使用者按一下 **列印至PDF** 在OSGi上的AEM Forms Service Pack 15 (6.5.15.0)上，使用者端驗證會失敗，這由開發人員工具主控台視窗中顯示的錯誤訊息所證明。 (FORMS-14029)
 * 當使用者在AEM 6.5 Forms Service Pack 17 (6.5.17.0)或Service Pack 18 (6.5.18.0)、Service Pack 19 (6.5.19.0)上提交表單時，「感謝您」訊息的翻譯無法正常運作。 不過，訊息會在字典中正確轉譯。 (FORMS-13846)
 * 當使用者預覽具有日期選擇器元件的表單時，日期選擇器欄位與其他表單欄位不對齊。 (FORMS-13763)
@@ -204,7 +204,7 @@ ht-degree: 2%
 * 當使用者嘗試檢視頁面載入上的表單時，它無法呈現。 (FORMS-13594)
 * 在Internet Explorer相容模式下，日期輸入欄位元件在Microsoft Edge上無法正常運作。 (FORMS-13170)
 * 修正時已停止的電子郵件通知（含附件）無法傳送 [使用含附件的電子郵件的其他步驟](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) 會在伺服器上執行。 (FORMS-14227)
-* 在Service Pack 18 (6.5.18.0)上的AEM Forms Workspace上，當使用者對任何上傳的檔案發表評論時，會導致檔案檔案損毀。 (FORMS-13735)
+* 在AEM Forms Workspace Service Pack 18 (6.5.18.0)上，當使用者對任何上傳的檔案發表評論時，會導致檔案檔案損毀。 (FORMS-13735)
 * 在AEM Forms Service Pack 18 (6.5.18.0)、Service Pack 19 (6.5.19.0)或Service Pack 20 (6.5.20.0)上，當使用者嘗試從側面板搜尋調適型表單時，搜尋失敗。 (FORMS-14117)
 * 當使用者編輯以德文建立並翻譯成英文的表單時，這會導致「預覽」和「編輯」模式之間的語言顯示不一致。 這會導致RadioButton和Checkbox元件在「編輯」模式期間以英文顯示，而在「預覽」模式期間以德文正確顯示。 (FORMS-13910)
 * 處理清除處理工具因錯誤而失敗 `NoClassDefFoundError: org/omg/CORBA/UserException`. (FORMS-13751)
@@ -290,7 +290,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 #### Oak {#foundation-oak-6521}
 
 * 效能回歸修正 — 避免在類似條件下進行範圍查詢。 (OAK-9481)
-* 新的Oak版本是1.22.20。
+* 新的Oak版本為1.22.20。
 
 #### Platform{#foundation-platform-6521}
 
@@ -384,7 +384,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 >[!NOTE]
 >
->調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
+>調適型表單功能 (適用於 [AEM 6.5 QuickStart](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/implementing/deploying/deploying/deploy)) 僅用於探索和評估目的。若要供生產使用，必須獲得 AEM Forms 的有效許可；調適型表單的功能需要適當許可才可使用。
 
 ### 安裝Experience Manager內容片段的GraphQL索引套件{#install-aem-graphql-index-add-on-package}
 
@@ -543,6 +543,10 @@ The UberJar for [!DNL Experience Manager] 6.5.21.0可在以下網址取得： [M
 * 如果使用者嘗試預覽包含已儲存XML資料的草稿信件，則會卡在 `Loading` 部分特定字母的狀態。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 文章。 (FORMS-14521)
 
 * 升級至AEM Forms Service Pack 6.5.21.0後， `PaperCapture` 服務無法在PDF上執行OCR （光學字元辨識）作業。 此服務不會產生PDF或記錄檔形式的輸出。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 文章。 (CQDOC-21680)
+
+* 當使用者從AEM 6.5 Forms Service Pack 18 (6.5.18.0)或AEM 6.5 Forms Service Pack 19 (6.5.19.0)更新為AEM 6.5 Forms Service Pack 20 (6.5.20.0)或AEM 6.5 Forms Service Pack 21 (6.5.21.0)時，使用者會遇到JSP編譯錯誤，這會阻止他們開啟或建立調適型表單，也會導致其他AEM介面(例如頁面編輯器、AEM Forms UI和AEM工作流程編輯器)發生錯誤。 (FORMS-15256)
+
+
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 
