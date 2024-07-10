@@ -9,9 +9,9 @@ exl-id: a7281ca0-461f-4762-a631-6bb539596200
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 6fb844ea428c15adab71503dde6138e46eabf0a3
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1564'
 ht-degree: 1%
 
 ---
@@ -89,6 +89,10 @@ AEM與Campaign的整合需要在這兩個解決方案中執行數個步驟。
 
 1. 選取適當的安全區域，並視需要定義信任的IP遮罩。
 
+   >[!CAUTION]
+   >
+   >要設定的安全性區域為 **私人公司網路(VPN+LAN)**.
+
 1. 按一下「**儲存**」。
 
 1. 登出Adobe Campaign使用者端。
@@ -155,7 +159,7 @@ AEM現在可以與Adobe Campaign通訊。
 >
 >請確定您的Adobe Campaign伺服器可透過網際網路連線。 AEM無法存取私人網路。
 
-## 設定復寫至AEM發佈執行個體 {#replication}
+## 設定復寫至AEM Publish執行個體的設定 {#replication}
 
 Campaign內容是由內容作者在AEM編寫執行個體上建立。 此例項通常僅供貴組織內部使用。 為了讓行銷活動的收件者可存取影像和資產等內容，您需要發佈該內容。
 
