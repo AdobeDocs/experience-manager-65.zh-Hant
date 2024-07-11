@@ -8,7 +8,7 @@ feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a144f7cc75b1a5cdb45d2aaf90e87013ac68a431
 workflow-type: tm+mt
 source-wordcount: '3173'
 ht-degree: 11%
@@ -19,7 +19,7 @@ ht-degree: 11%
 
 | 版本 | 文章連結 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/aem-cc-integration-best-practices.html?lang=en) |
+| AEM as a Cloud Service  | [按一下這裡](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/aem-cc-integration-best-practices) |
 | AEM 6.5 | 本文章 |
 
 [!DNL Adobe Experience Manager Assets] 是可整合的數位資產管理(DAM)解決方案， [!DNL Adobe Creative Cloud] 為協助DAM使用者與創意團隊合作，簡化內容建立過程中的共同作業。
@@ -32,7 +32,7 @@ ht-degree: 11%
 >
 >[!DNL Experience Manager] 至 [!DNL Creative Cloud] 資料夾共用功能已過時，本指南不再涵蓋此功能。 Adobe建議使用較新的功能，例如 [Adobe資產連結](https://helpx.adobe.com/tw/enterprise/using/adobe-asset-link.html) 或 [Experience Manager案頭應用程式](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html) 為創意使用者提供在中受管理資產的存取權， [!DNL Experience Manager].
 
-## 創意工作者、行銷人員和DAM使用者的共同作業需求 {#collaboration-needs-of-creatives-marketers-and-dam-users}
+## 創意工作者、行銷人員和DAM使用者的Collaboration需求 {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
 | 要求 | 使用案例 | 相關曲面 |
 |---|---|---|
@@ -71,7 +71,7 @@ ht-degree: 11%
 | 上傳 — 多個檔案/階層資料夾結構 | 否 | 是 | [透過網頁介面上傳](manage-assets.md#uploading-assets) 或透過自訂指令碼或工具。 |
 | 其他 — 使用者和登入 | 可辨識登入Creative Cloud案頭應用程式的Creative Cloud使用者(SSO) | [!DNL Experience Manager] 使用者和認證 | 兩種解決方案的使用者都會計入 [!DNL Experience Manager] 使用者配額。 |
 | 雜項 — 網路與存取 | 需要從使用者案頭存取至 [!DNL Experience Manager] 透過網路部署 | 需要從使用者案頭存取至 [!DNL Experience Manager] 透過網路部署 | [!DNL Adobe Asset Link] 不共用網路Proxy環境。 |
-| 雜項 — 移轉大量資產 | 否 | 否 | [資產移轉指南](assets-migration-guide.md) |
+| 雜項 — 移轉大量資產 | 否 | 否 | [Assets移轉指南](assets-migration-guide.md) |
 
 若要支援資產散佈使用案例，應考慮其他解決方案：
 
@@ -144,14 +144,14 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 創意團隊（和組織）通常對儲存資產生命週期每個階段的資產不感興趣。 例如，他們會避免在下列情況下儲存資產：
 
-* 尚未完成或有待實驗的資產。
-* 未通過創意/內部團隊稽核週期的資產。
+* 尚未完成或有待實驗的Assets。
+* 未通過創意/內部團隊稽核週期的Assets。
 * 相較於相關資產，團隊擁有更好的候選人來向外部團隊代表其工作。
 
 通常，以下類別資產會儲存在DAM中：
 
-* 達到特定到期日且被視為可共用的資產。
-* 創意團隊預先選取的資產。
+* 已達特定成熟度並被視為已準備好共用的Assets。
+* 創意團隊預先選取的Assets。
 * 行銷可用的或請求的特定資產格式，取決於特定合約或協定(例如，從RAW檔案轉換的JPG檔案、來自PSD原始資料的TIFF/影像)。
 
 #### 當資產的更新儲存在DAM中時 {#when-updates-to-assets-are-stored-in-dam}
