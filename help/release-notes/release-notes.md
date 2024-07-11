@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 4883ed159b945093b8530e6ec2c2217d4f3c2409
+source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
 workflow-type: tm+mt
-source-wordcount: '4099'
+source-wordcount: '4332'
 ht-degree: 2%
 
 ---
@@ -46,18 +46,17 @@ ht-degree: 2%
 此版本中的部分主要功能和增強功能包括：
 
 * **支援Oauth認證**：更易於使用伺服器對伺服器驗證的新認證，取代現有的服務帳戶(JWT)認證。 (NPR-41994)
-* **AEM Forms中的規則編輯器增強功能**：
+* [AEM Forms中的規則編輯器增強功能](/help/forms/using/rule-editor-core-components.md)：
    * 支援使用實作巢狀條件 `When-then-else` 功能。
    * 驗證或重設面板和表單，包括欄位。
-   * 支援現代JavaScript功能，例如自訂函式中的let和箭頭函式（ES10支援）。
-* **AutoTag API提供PDF協助工具**：OSGi上的AEM Forms現在支援新的AutoTag API，可新增標籤（段落和清單）來增強協助工具標準的PDF。 它讓使用者更容易透過輔助技術存取PDF。
+   * 支援現代JavaScript功能，例如「自訂函式」中的let和arrow函式（ES10支援）。
+* [AutoTag API提供PDF協助工具](/help/forms/using/aem-document-services-programmatically.md#doc-utility-services-doc-utility-services)：OSGi上的AEM Forms現在支援新的AutoTag API，可新增標籤（段落和清單）來增強協助工具標準的PDF。 它讓使用者更容易透過輔助技術存取PDF。
 * **16位元PNG支援**：PDF Generator的ImageToPdf服務現在支援以16位元色彩深度轉換PNG。
 * **將成品套用至XDP中的個別文字區塊**：Forms Designer現在可讓使用者在XDP檔案中的個別文字區塊上設定設定。 此功能可讓您控制在產生的PDF中被視為人工因素的元素。 這些元素（例如頁首和頁尾）可供輔助技術存取。 主要功能包括將文字區塊標示為成品，並將這些設定內嵌於XDP中繼資料。 Forms Output服務會在產生PDF期間套用這些設定，以確保正確的PDF/UA標籤。
 * **AEM Forms Designer已認證為 `GB18030:2022` 標準**：使用 `GB18030:2022` 認證，Forms Designer現在支援中文Unicode字元集，可讓您在所有可編輯的欄位和對話方塊中輸入中文字元。
-* **JEE伺服器支援WebToPDF路由**：除了Webkit和WebCapture （僅限Windows）路由外，PDF Generator服務現在還支援WebToPDF路由，以便將HTML檔案轉換為JEE上的PDF檔案。 雖然WebToPDF路由已經可在OSGi上使用，但現在已經擴充以同時包含在JEE中。 在JEE和OSGi平台上，PDF Generator服務支援跨不同作業系統的下列路由：
+* [JEE伺服器支援WebToPDF路由](/help/forms/using/admin-help/configure-service-settings.md#generate-pdf-service-settings-generate-pdf-service-settings) 除了現有的Webkit和WebCapture （僅限Windows）路徑外，現在使用PDF Generator服務可支援WebToPDF路徑，以將HTML檔案轉換為JEE上的PDF檔案。 雖然WebToPDF路由可在OSGi上取得並延伸至JEE。 現在，在JEE和OSGi平台上，PDF Generator服務支援跨不同作業系統的下列路由：
    * **Windows**：Webkit、WebCapture、WebToPDF
-   * **Linux**：Webkit、WebToPDF
-
+   * **Linux®**：Webkit、WebToPDF
 
 ### [!DNL Assets]
 
@@ -550,6 +549,13 @@ The UberJar for [!DNL Experience Manager] 6.5.21.0可在以下網址取得： [M
    1. 導覽至目錄 `/libs/fd/aemforms/install/` 在CRXDE中。
    1. 刪除名稱為的束 `com.adobe.granite.ui.commons-5.10.26.jar`.
    1. 重新啟動AEM伺服器。
+
+* 當使用者在JEE伺服器上更新至AEM Forms Service Pack 20 (6.5.20.0)，並使用輸出服務產生PDF時，PDF會出現協助工具問題。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 文章。 (LC-3922112)
+* 當使用者使用JEE上的輸出服務產生標籤PDF時，會顯示「不適當的結構警告」。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 文章。 (LC-3922038)
+* 在AEM Forms JEE上提交表單時，會從資料中移除重複的XML元素例項。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 文章。 (LC-3922017)
+* 當Linux環境中的使用者在HTML中轉譯最適化表單（在JEE上）時，它將無法正確轉譯。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 文章。 (LC-3921957)
+* 當使用者使用AEM Forms JEE上的輸出服務將XTG檔案轉換為PostScript格式時，它會失敗並出現錯誤： `AEM_OUT_001_003: Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE`. 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 文章。 (LC-3921720)
+* 在JEE伺服器上升級至AEM Forms Service Pack 18 (6.5.18.0)後，當使用者提交表單時，將無法轉譯HTML5或PDF forms，並且XMLFM會當機。 若要下載及安裝Hotfix，請參閱 [Adobe Experience Manager Forms Hotfix](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 文章。 (LC-3921718)
 
 ## 包含的OSGi套件組合和內容套件{#osgi-bundles-and-content-packages-included}
 

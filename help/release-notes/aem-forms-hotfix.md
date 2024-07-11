@@ -5,9 +5,9 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: ad71f1c92bba90000f72319536fffd255fb4db6e
+source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '903'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,23 @@ ht-degree: 0%
     <td><strong>日期</strong></td>
     <td><strong>Hotfix下載連結(AEM軟體發佈連結)</strong></td>
     <td><strong>已修正的問題</strong></td>
+  </tr>
+  <tr>
+    <td>2024年7月10日</td>
+     <td>
+     <ul>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/jboss/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-jboss.zip.zip">適用於JBoss JEE伺服器的Windows上AEM Service Pack 6.5.21.0的Hotfix </a> </li>
+      <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/jboss/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-jboss.tar.gz">Linux上適用於JBoss JEE伺服器的AEM Service Pack 6.5.21.0的Hotfix </a> </li>
+       <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/websphere/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-websphere.zip.zip">Windows上Webshpere JEE伺服器專用AEM Service Pack 6.5.21.0的Hotfix </a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/websphere/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-websphere.tar.gz">Linux上適用於Webshpere JEE伺服器的AEM Service Pack 6.5.21.0 Hotfix</a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/weblogic/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-weblogic.zip.zip">Windows上Weblogic JEE伺服器專用AEM Service Pack 6.5.21.0的Hotfix </a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/weblogic/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-weblogic.tar.gz">Linux上適用於Weblogic JEE伺服器的AEM Service Pack 6.5.21.0 Hotfix</a> </li>
+     </ul>
+     </td>
+    <td>
+    <ul><li>當使用者在JEE伺服器上更新至AEM Forms Service Pack 20 (6.5.20.0)，並使用輸出服務產生PDF時，PDF會出現協助工具問題。 (LC-3922112)</li><li>在AEM Forms JEE上使用輸出服務產生的已標籤PDF會顯示「不適當的結構警告」。 (LC-3922038)</li><li>在AEM Forms JEE上提交表單時，會從資料中移除重複的XML元素例項。 (LC-3922017)</li><li>當Linux環境中的使用者在HTML中轉譯最適化表單（在JEE上）時，它將無法正確轉譯。 (LC-3921957)</li><li>當使用者使用AEM Forms JEE上的輸出服務將XTG檔案轉換為PostScript格式時，它會失敗並出現錯誤：AEM_OUT_001_003：未預期的例外：PAExecute失敗：XFA_RENDER_FAILURE。 (LC-3921720)</li><li>在JEE伺服器上升級至AEM Forms Service Pack 18 (6.5.18.0)後，當使用者提交表單時，將無法轉譯HTML5或PDF forms，並且XMLFM會當機。 (LC-3921718)
+    </ul>
+    </td>    
   </tr>
   <tr>
     <td>2024年6月21日</td>
@@ -72,7 +89,7 @@ ht-degree: 0%
     <li>在以XDP為基礎且核取方塊上有內嵌指令碼的最適化表單中，此類核取方塊之後的元素不會執行指令碼。 已針對此問題提供Hotfix。 (FORMS-14244) </li>
      <li> 在具有編輯/顯示模式的欄位中，在快顯Widget中瀏覽月份時，日期選擇器Widget中的列會被截斷。 已針對此問題提供Hotfix。 (FORMS-13620) </li>
      <li>嘗試在後端使用DOR （記錄檔案）服務時，表單提交失敗。 遇到的錯誤訊息為：「提交動作無法完成，因為未正確指派表單資源。」 (FORMS-13798) </li>
-     <li>從Adobe Experience Manager發佈執行個體提交最適化表單至Adobe Experience Manager Workflow時，工作流程無法儲存附件。  (FORMS-14209) </li>
+     <li>從Adobe Experience Manager Publish執行個體提交最適化表單至Adobe Experience Manager Workflow時，工作流程無法儲存附件。  (FORMS-14209) </li>
      <li> 安裝AEM 6.5 Forms Service Pack 20套件(適用於SP20的AEM Forms附加元件套件)時，AEM Sites使用者介面(UI)效能大幅降低。  (FORMS-13791) </li>
      <li>預填服務在互動式通訊中失敗，並出現Null指標例外狀況。 (CQDOC-21355)</li>
     </ul>
@@ -141,4 +158,4 @@ ht-degree: 0%
 若要解決此問題，請執行以下步驟：
 
 1. 下載 [hotfix](#hotfix-for-adaptive-forms) 從軟體發佈入口網站。
-2. 使用上傳並安裝套件(.zip) [CRX封裝管理員](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=es#accessing).
+2. 使用上傳並安裝套件(.zip) [CRX Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=es#accessing).
